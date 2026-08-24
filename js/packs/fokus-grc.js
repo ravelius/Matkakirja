@@ -4,13 +4,19 @@
  * Raamatun osio "Fokusmoodi": *"Laatan lisäksi maan muita kaupunkeja
  * (ei pelattavia), jokia, järviä, vuoria."*
  *
- * MIKSI NÄMÄ OVAT PELISSÄ EIVÄTKÄ KUVASSA. Esirenderöity maastopohja
- * (tools/tee-fokuskartta.mjs) on tarkoituksella TÄYSIN NIMETÖN: kuva
- * skaalautuu zoomin mukana, joten siihen poltettu teksti sumenisi
- * lähikuvassa ja kutistuisi lukukelvottomaksi yleiskuvassa — ja se
- * olisi kreikaksi tai englanniksi sen mukaan, mitä aineistossa sattuu
- * lukemaan. Peli piirtää nimet SVG:nä: ne pysyvät terävinä joka
- * zoomilla ja ovat suomeksi, kuten kaikki muukin pelissä.
+ * === NÄMÄ NIMET OVAT NYT POIS KÄYTÖSTÄ (FOKUS_SVG_NIMET) ===
+ *
+ * Omistajan pelitestipalaute v1095:stä oli, että fokusnäkymän on
+ * näytettävä TÄSMÄLLEEN hyväksytyltä prototyyppikuvalta. Prototyypissä
+ * nimet ovat osa lehteä — samaa mustetta, samassa harvennuksessa, meren
+ * nimi kaartuvana kursiivina ulapalla — eikä sitä saa SVG-tekstillä
+ * laudan päällä. Siksi nimet POLTETAAN NYT KUVAAN
+ * (tools/fokuskartta/maat.mjs), ja tämä taulu jää lipun taakse.
+ *
+ * Koodia ei poistettu: jos kuvaan poltetut nimet osoittautuvat
+ * lähizoomissa liian epätarkoiksi, lippu käännetään takaisin ja nimet
+ * palaavat SVG:nä. Silloin on muistettava karsia samat nimet kuvasta,
+ * tai ne tulevat kahteen kertaan.
  *
  * KURATOITU KÄSIN, EI POIMITTU AINEISTOSTA. Nämä ovat isoisän atlaksen
  * harvoja merkintöjä eivätkä täydellinen luettelo: neljä kaupunkia,
@@ -41,14 +47,43 @@
  * suoraan tools/tee-fokuskartta.mjs:n kirjoittamasta
  * GRC.json-tiedostosta (tasaus todennettu: Ateena 0,7 lautayksikköä).
  * Uusi maa = uusi rivi tähän samalla kun kuva viedään ämpäriin.
+ *
+ * === KAKSI LAATIKKOA (v2, omistajan pelitestipalaute v1095:stä) ===
+ *
+ *   bbox    Mihin KUVA asetetaan. Kuva on kokonainen atlaksen lehti ja
+ *           OPAAKKI: se peittää laudan oman grafiikan alueellaan.
+ *
+ *   rajaus  LEHDEN IKKUNA eli se, mitä kehysviiva rajaa — tähän peli
+ *           ajaa kameran. Kuvan ja ikkunan väliin jää vuotoa (15 % joka
+ *           reunalla), koska ruudun kuvasuhde ei ole koskaan lehden
+ *           kuvasuhde: kamera-ajo sovittaa ikkunan ruutuun ja näyttää
+ *           yli menevässä suunnassa aina hitusen enemmän. Vuoto estää
+ *           sauman laudan grafiikkaan kaikissa vaakakuvasuhteissa
+ *           (1,23–2,08); pystyssä kuvan häivytetty uloin reuna sulattaa
+ *           sauman lautaan.
+ *
+ * Kuva on 9600 x 6000 eli neljä kertaa entistä useampi pikseli
+ * (omistaja: *"taustakartan resoluutio ylös — kuva pikselöityy
+ * fokuszoomilla"*), noin 16 pikseliä lautayksikköä kohti.
  */
 export const FOKUS_POHJAT = {
   GRC: {
     lauta: 'maailmankartta',
-    bbox: { x: 6488.94, y: 1722.84, w: 241.91, h: 285.01 },
+    bbox: { x: 6329.2, y: 1681.71, w: 608.26, h: 380.16 },
+    rajaus: { x: 6399.39, y: 1725.58, w: 467.89, h: 292.43 },
     tiedosto: 'GRC.webp',
   },
 };
+
+/*
+ * Piirtääkö peli lisänimet SVG:nä kuvan päälle?
+ *
+ * EI PIIRRÄ. Nimet ovat nyt kuvassa (ks. tiedoston alku), ja SVG-nimet
+ * olisivat niiden päällä tuplana. Lippu on olemassa, jotta paluu on
+ * yhden rivin mittainen, jos kuvaan poltetut nimet eivät kestä
+ * lähizoomia.
+ */
+export const FOKUS_SVG_NIMET = false;
 
 export const FOKUS_LISANIMET = {
   GRC: {

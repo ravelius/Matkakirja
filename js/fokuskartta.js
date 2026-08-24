@@ -20,14 +20,26 @@
  *
  * 2. KUVA ON TAITEEN PÄÄLLÄ MUTTA PELITILAN ALLA. Kerros on laudan
  *    bittikartan (js/mapart.js pilkoTaide) päällä ja kaupunkien,
- *    nimien, laattojen ja nappuloiden alla. Reitit ovat poikkeus: ne
- *    kuuluvat bittikarttaan eli jäisivät kuvan alle, joten rajaukseen
- *    osuvat reitit piirretään uudelleen kuvan päälle
- *    (ui.piirraReittiViivat). Pelitila ei jää kuvituksen alle.
+ *    nimien, laattojen ja nappuloiden alla.
+ *
+ *    REITTEJÄ EI PIIRRETÄ UUDELLEEN KUVAN PÄÄLLE (omistaja 24.8.2026,
+ *    pelitestipalaute v1095:stä: *"pelilaudan pisteet (reittien ympyrät
+ *    ja katkoviivat) pois näkyvistä, jotta karttaan voi keskittyä"*).
+ *    Aiemmin rajaukseen osuvat reitit vedettiin kuvan päälle, jottei
+ *    pelitila jäisi kuvituksen alle; nyt lehti saa olla lehti. Liikkuminen
+ *    ei kärsi: kohderenkaat (targetLayer) ovat oma kerroksensa kuvan
+ *    PÄÄLLÄ, joten matkakohteet näkyvät ja ovat napautettavissa kuten
+ *    ennenkin.
  *
  * 3. EI SUODATTIMIA. Sama iOS-sääntö kuin muillakin kartan kerroksilla
  *    (tests/rules.test.mjs): suodatettu kerros palaa taustalta tyhjänä.
  *    Kuva on <image>, ei mitään muuta.
+ *
+ * 4. KUVA ON OPAAKKI JA VIE ALUEENSA. Lehti peittää laudan oman
+ *    grafiikan rajauksessaan, joten kaikki, mikä kuuluisi näkyä sen
+ *    päällä, on nostettava kuvan päälle tai piilotettava. Peli
+ *    piilottaa maan punaisen korostusrenkaan, sumuverhon ja kuvan
+ *    alueelle osuvat maastonimet (ui.paivitaFokusPohja).
  *
  * Kuvat välimuistittuvat palvelutyöntekijän tavallista reittiä pitkin
  * (sw.js ämpärikori) — niitä EI esiladata, koska pelaaja käy vain
@@ -35,7 +47,7 @@
  */
 import { el } from './mapart.js';
 import { fokuskarttaUrl, peiliKaytossa } from './media.js';
-import { FOKUS_LISANIMET, FOKUS_POHJAT } from './packs/fokus-grc.js';
+import { FOKUS_LISANIMET, FOKUS_POHJAT, FOKUS_SVG_NIMET } from './packs/fokus-grc.js';
 
 /*
  * Maakohtaiset pohjat käynnin ajan muistissa: 'lauta:ISO' ->
@@ -124,7 +136,13 @@ async function haePohja(iso, lauta) {
        * koordinaateilla maailmankartalle.
        */
       if (tiedot.lauta && tiedot.lauta !== lauta) throw new Error('eri lauta');
-      const pohja = { bbox: b, kuva: fokuskarttaUrl(tiedot.tiedosto ?? `${iso}.webp`) };
+      const pohja = {
+        bbox: b,
+        // Ikkuna, johon kamera ajaa; vanhemmilla pohjilla sitä ei ole,
+        // jolloin koko kuva on ikkuna kuten ennen.
+        rajaus: tiedot.rajaus ?? b,
+        kuva: fokuskarttaUrl(tiedot.tiedosto ?? `${iso}.webp`),
+      };
       if (!await lataaKuva(pohja.kuva)) throw new Error('kuva ei lataudu');
       VARASTO.set(avain, pohja);
       return pohja;
@@ -139,14 +157,6 @@ async function haePohja(iso, lauta) {
   })();
   HAUT.set(avain, haku);
   return haku;
-}
-
-/** Osuuko reitti kuvan rajaukseen? Karkea laatikkotesti riittää. */
-function reittiOsuu(reitti, b) {
-  for (const [x, y] of reitti.poly ?? []) {
-    if (x >= b.x && x <= b.x + b.w && y >= b.y && y <= b.y + b.h) return true;
-  }
-  return false;
 }
 
 /*
@@ -193,6 +203,8 @@ function nimi(sailio, teksti, x, y, {
  * nimet ulapalle.
  */
 function piirraLisanimet(ui, iso, sailio) {
+  // Nimet ovat nykyään kuvassa (js/packs/fokus-grc.js FOKUS_SVG_NIMET).
+  if (!FOKUS_SVG_NIMET) return null;
   const tiedot = FOKUS_LISANIMET[iso];
   if (!tiedot || tiedot.lauta !== ui.game.pack.id) return null;
   const g = el('g', { class: 'fokus-nimet', 'pointer-events': 'none' }, sailio);
@@ -254,7 +266,7 @@ export function paivitaFokusNimet(ui) {
   g.classList.toggle('fokus-nimet-piilossa', NIMEN_KOKO * skaala < FOKUS_NIMI_LUETTAVA_PX);
 }
 
-/** Piirtää kuvan, sen päälle rajaukseen osuvat reitit ja lisänimet. */
+/** Piirtää lehden ja kertoo kartalle, että sen alue on nyt kuvan alla. */
 function piirra(ui, iso, pohja) {
   const kerros = ui.fokuskarttaKerros;
   kerros.textContent = '';
@@ -270,19 +282,12 @@ function piirra(ui, iso, pohja) {
     preserveAspectRatio: 'none',
     class: 'fokuskartta-kuva',
   }, kerros);
-  /*
-   * Reitit takaisin näkyviin kuvan päälle (ks. tiedoston sääntö 2).
-   * Vain rajaukseen osuvat: muualla lauta on koskematon.
-   */
-  const reitit = (ui.game.board?.edges ?? []).filter((e) => reittiOsuu(e, bbox));
-  if (reitit.length) {
-    const g = el('g', { class: 'routes fokuskartta-reitit' }, kerros);
-    ui.piirraReittiViivat(g, reitit);
-  }
   // Nimet päällimmäisenä tässä kerroksessa — mutta yhä kaupunkien ja
-  // laattojen alla, koska koko kerros on niiden alla.
+  // laattojen alla, koska koko kerros on niiden alla. Nykyisellä
+  // lipulla (FOKUS_SVG_NIMET) tämä ei tee mitään: nimet ovat kuvassa.
   piirraLisanimet(ui, iso, kerros);
   paivitaFokusNimet(ui);
+  ui.paivitaFokusPohja?.(bbox);
 }
 
 /**
@@ -304,6 +309,7 @@ export function paivitaFokuskartta(ui) {
   const ensimmainen = ui.fokuskarttaAvain == null;
   ui.fokuskarttaAvain = avain;
   kerros.textContent = '';
+  ui.paivitaFokusPohja?.(null);
   if (!iso) return;
 
   const nayta = (pohja) => {
@@ -311,7 +317,15 @@ export function paivitaFokuskartta(ui) {
     if (ui.dead || !pohja || ui.fokuskarttaAvain !== iso || !ui.fokuskarttaKerros) return;
     piirra(ui, iso, pohja);
     if (!ensimmainen) {
-      ui.kartta.ajaKamera({ bbox: pohja.bbox });
+      /*
+       * KAMERA AJAA LEHDEN IKKUNAAN, EI KOKO KUVAAN. Kuvassa on
+       * ikkunan ympärillä vuotoa, jonka tehtävä on jäädä ruudun
+       * ulkopuolelle — jos kamera sovittaisi koko kuvan, pelaaja
+       * näkisi lehden pienenä ruudun keskellä ja vuodon reunat
+       * ympärillä. Marginaali on nolla, koska ikkunassa on jo oma
+       * ilmansa (kehyksen ja rannikon väli).
+       */
+      ui.kartta.ajaKamera({ bbox: pohja.rajaus ?? pohja.bbox, marginaali: 0 });
     }
   };
 
@@ -327,4 +341,5 @@ export function paivitaFokuskartta(ui) {
 export function nollaaFokuskartta(ui) {
   ui.fokuskarttaAvain = null;
   if (ui.fokuskarttaKerros) ui.fokuskarttaKerros.textContent = '';
+  ui.paivitaFokusPohja?.(null);
 }

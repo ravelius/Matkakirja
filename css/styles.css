@@ -4232,6 +4232,11 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
 .maastonimi-harson-alla .maastonimi-teksti { fill: rgba(70, 51, 31, 0.2); }
 .maastonimi-harson-alla .maastonimi-i { display: none; }
 
+/* Fokuspohjan lehden alueella laudan omia maastonimiä ei ole lainkaan:
+   lehdessä on omat nimensä, ja päällekkäin ne olisivat kaksi karttaa
+   yhtä aikaa (js/ui.js himmennaMaastonimet). */
+.maastonimi-kuvan-alla { display: none; }
+
 
 /*
  * LÄHIKUVAN VESI.
@@ -4383,6 +4388,21 @@ body.radio-tila .actions {
   stroke: none;
 }
 
+/*
+ * FOKUSPOHJAN PÄÄLLÄ MAATA EI KOROSTETA (omistajan pelitestipalaute
+ * v1095:stä: *"punainen maan ääriviiva on epätarkka → OTETAAN POIS
+ * fokusnäkymässä"*).
+ *
+ * Korostuskerros (countryLayer) luodaan fokuskarttakerroksen JÄLKEEN eli
+ * se on kuvan päällä: punainen rengas piirtyisi keskelle valmista
+ * atlaksen lehteä, ja laudan karkeasta 50m-rannikosta piirretty viiva
+ * osuu eri kohtaan kuin lehden tarkka 10m-rantaviiva. Kerrosta ei
+ * tyhjennetä vaan piilotetaan, jotta korostus palaa itsestään heti kun
+ * lehti häviää (js/ui.js paivitaFokusPohja).
+ */
+body.fokuspohja .country-tint,
+body.fokuspohja .country-korostus { display: none; }
+
 .country-korostus {
   fill: none;
   /* Lepotila on LÄHES piirron loppuvoima (omistaja 13.8.2026 ilta:
@@ -4431,10 +4451,12 @@ body.radio-tila .actions {
    FOKUSKARTTA: nykyisen maan esirenderöity topografia (js/fokuskartta.js,
    kuvat tools/tee-fokuskartta.mjs).
 
-   Kuva on läpinäkyvätaustainen PNG, joka asetetaan laudan omiin
-   koordinaatteihin. Sävyt on maalattu valmiiksi, joten CSS:llä ei
-   säädetä mitään — ei suodatinta (iOS, ks. yllä), ei läpikuultavuutta,
-   ei sekoitustilaa. Ainoa sääntö on, ettei kerros syö napautuksia:
+   Kuva on OPAAKKI atlaksen lehti, joka asetetaan laudan omiin
+   koordinaatteihin ja peittää laudan grafiikan alueellaan (vain uloin
+   reuna on häivytetty läpinäkyväksi, jotta sauma sulaa lautaan). Sävyt
+   on maalattu valmiiksi, joten CSS:llä ei säädetä mitään — ei
+   suodatinta (iOS, ks. yllä), ei läpikuultavuutta, ei sekoitustilaa.
+   Ainoa sääntö on, ettei kerros syö napautuksia:
    kaupungit ja kohderenkaat ovat sen päällä, mutta sormi osuu kuvan
    reunoilla myös suoraan karttaan.
 
