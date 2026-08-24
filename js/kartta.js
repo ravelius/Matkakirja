@@ -1544,6 +1544,46 @@ export class Kartta {
     let liikkui = false;
 
     /*
+     * --- KARTAN PÄÄLLÄ KELLUVA UI EI OLE KARTTA ----------------------
+     *
+     * Omistajan pelitestipalaute 24.8.2026 (v1098, puhelin): *"Kartta
+     * liikkuu kun Pöllön tekstiä vierittää."*
+     *
+     * Fokusvirran kortti on .map-panen SUORA LAPSI (js/fokusvirta.js
+     * piirraKehys: `koti = document.querySelector('.map-pane')`), joten
+     * jokainen sen päällä alkava osoitin-, kosketus- ja rullatapahtuma
+     * kuplii tänne paneelin kuuntelijoille. Ne eivät katsoneet
+     * lainkaan, mistä ele alkoi — sormen liike kortin tekstissä oli
+     * niille tavallinen raahaus, ja kartta valui tekstin alta pois.
+     * Sama vika kolmella kanavalla:
+     *   - yksi sormi  → panorointi (pointerdown/-move)
+     *   - kaksi sormea → nipistyszoomi (touchstart/touchmove)
+     *   - hiiren rulla → kartan zoomi JA preventDefault, joten pitkä
+     *     kortti ei edes vierittynyt työpöydällä.
+     *
+     * Korjaus on pidättäytyminen eikä uusi mekaniikka: kortin oma
+     * vieritys hoituu selaimen puolella (.fokusvirta-sisalto:
+     * overflow-y + overscroll-behavior: contain, css/fokusvirta.css),
+     * joten kartan käsittelijöiden riittää tunnistaa kelluva pinta ja
+     * jättää ele rauhaan. Kartan omat eleet — suoraan laudalta tai
+     * paneelin pergamenttitaustalta — kulkevat entiseen tapaan, ja
+     * kaappausvaiheen elevahdit (osoitinKartalla, kamera-ajon
+     * keskeytys) jätetään tarkoituksella koskematta: ne eivät liikuta
+     * karttaa, ja pelaajan kosketus on niille aito merkki siitä, että
+     * animaation pitää väistää.
+     *
+     * Matkakirjakortti (.fact-card) ei tarvitse suojaa: se asuu
+     * .rail-elementissä eikä paneelin sisällä (index.html), joten sen
+     * eleet eivät kuplineet kartalle alun perinkään. Pöllön kupla ja
+     * kuvan suurennos ovat bodyssa, mutta ne ovat listassa mukana,
+     * koska kupla siirtyy kiinnityskohteensa mukana (js/pollo.js
+     * kiinnitysKohde) eikä sijainti saa ratkaista, toimiiko vieritys.
+     */
+    const KELLUVA_UI = '.fokusvirta-kortti, .fokusvirta-kupla, .fokuszoom';
+    /** Alkaako ele kartan päällä kelluvalta pinnalta? */
+    const kelluvaltaPinnalta = (e) => Boolean(e?.target?.closest?.(KELLUVA_UI));
+
+    /*
      * ELEVAHTI TARKKUUSTARKISTUSTA VARTEN.
      *
      * Rasterointi vie satoja millisekunteja pääsäikeessä, eikä se saa
@@ -1922,6 +1962,9 @@ export class Kartta {
     this.ui.nipistysKuuntelijat = [
       ['touchstart', (e) => {
         if (e.touches.length !== 2) return;
+        // Kortin päältä alkava kahden sormen ele ei ole kartan nipistys
+        // (ks. KELLUVA_UI): preventDefault veisi eleen myös selaimelta.
+        if (kelluvaltaPinnalta(e)) return;
         e.preventDefault();
         aloitaNipistys(e);
       }],
@@ -1939,6 +1982,7 @@ export class Kartta {
          * etäällä — ele alkaa siitä asennosta, ei alkuperäisestä.
          */
         if (!nipistys && e.touches.length === 2) {
+          if (kelluvaltaPinnalta(e)) return;
           e.preventDefault();
           aloitaNipistys(e);
           return;
@@ -1974,6 +2018,8 @@ export class Kartta {
        */
       ['wheel', (e) => {
         if (nipistys) return;
+        // Rulla kortin päällä vierittää korttia, ei zoomaa karttaa.
+        if (kelluvaltaPinnalta(e)) return;
         if (this.avausNakymassa() || this.ui.radioPaalla()) return;
         e.preventDefault();
         /*
@@ -2110,6 +2156,9 @@ export class Kartta {
 
     pane.addEventListener('pointerdown', (e) => {
       if (nipistetaan()) return;
+      // Kortin, kuplan tai suurennoksen päältä alkava veto jää kortin
+      // omaksi vieritykseksi — kartta ei liiku (ks. KELLUVA_UI).
+      if (kelluvaltaPinnalta(e)) return;
       if (!this.ui.aloitusZoom && !this.ui.mannerZoom) return;
       if (!this.ui.panVara && !this.ui.panVaraY && !this.ui.panJakso) return;
       alku = {

@@ -115,19 +115,17 @@ peli.phase = 'action';
 const tallenne = JSON.stringify(peli.toJSON());
 
 const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
-const ctx = await selain.newContext({
-  viewport: { width: 834, height: 1112 },
-  reducedMotion: 'reduce',
-});
-await ctx.addInitScript((data) => {
+
+/** Sama alkutila joka kontekstiin: peli tallenteesta, fokusmoodi päällä. */
+const istuta = (data) => {
   try {
     localStorage.setItem('matkakirja-save-v1', data);
     // Fokusmoodi on oletuksena päällä; varmistetaan silti, ettei
     // kehittäjän kytkin ole jäänyt profiiliin pois päältä.
     localStorage.removeItem('matkakirja-fokusmoodi');
   } catch { /* yksityinen tila — savuke kaatuu myöhemmin selvemmin */ }
-}, tallenne);
-const sivu = await ctx.newPage();
+};
+
 /*
  * KUVAPALVELIN KORVATAAN PIKSELILLÄ. Kontin selain ei pääse ämpäriin
  * eikä Commonsiin, ja fokusvirta poistaa kartalta vinjetin, jonka kuvaa
@@ -139,13 +137,23 @@ const PIKSELI = Buffer.from(
   'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==',
   'base64',
 );
-await sivu.route(/r2\.dev|wikimedia\.org/, (route) => route.fulfill({
-  status: 200, contentType: 'image/png', body: PIKSELI,
-}));
-// Luentapalvelin katkaistaan: savuke ei saa kuluttaa generointikiintiötä.
-await sivu.route('**samireivinen.workers.dev/**', (route) => route.abort());
-await sivu.goto(osoite, { waitUntil: 'load' });
-await sivu.waitForTimeout(2500);
+
+/** Uusi sivu samalla alkutilalla ja samoilla verkkokatkoilla. */
+const avaaSivu = async (asetukset) => {
+  const konteksti = await selain.newContext({ reducedMotion: 'reduce', ...asetukset });
+  await konteksti.addInitScript(istuta, tallenne);
+  const uusi = await konteksti.newPage();
+  await uusi.route(/r2\.dev|wikimedia\.org/, (route) => route.fulfill({
+    status: 200, contentType: 'image/png', body: PIKSELI,
+  }));
+  // Luentapalvelin katkaistaan: savuke ei saa kuluttaa generointikiintiötä.
+  await uusi.route('**samireivinen.workers.dev/**', (route) => route.abort());
+  await uusi.goto(osoite, { waitUntil: 'load' });
+  await uusi.waitForTimeout(2500);
+  return { konteksti, sivu: uusi };
+};
+
+const { sivu } = await avaaSivu({ viewport: { width: 834, height: 1112 } });
 
 /** Virran näkyvä pinta: kortti tai kupla, kumpi niistä on ruudulla. */
 const kortti = () => sivu.evaluate(() => {
@@ -272,14 +280,19 @@ const suurennos = () => sivu.evaluate(() => {
   };
 });
 
-/** Painaa virran pinnalta napin, jonka teksti täsmää. */
-const paina = async (osuma, mista = '.fokusvirta-napit') => {
-  await sivu.evaluate(([teksti, valitsin]) => {
+/**
+ * Painaa virran pinnalta napin, jonka teksti täsmää.
+ *
+ * Sivu on parametri, jotta kosketusosio (osio 12) voi ajaa saman virran
+ * omassa puhelinkontekstissaan ilman toista kopiota tästä.
+ */
+const paina = async (osuma, mista = '.fokusvirta-napit', kohde = sivu) => {
+  await kohde.evaluate(([teksti, valitsin]) => {
     const juuri = document.querySelector('.fokusvirta-kortti, .fokusvirta-kupla');
     const napit = [...(juuri?.querySelectorAll(`${valitsin} button`) ?? [])];
     napit.find((b) => b.textContent.includes(teksti))?.click();
   }, [osuma, mista]);
-  await sivu.waitForTimeout(350);
+  await kohde.waitForTimeout(350);
 };
 
 /* --- 1: Tutki avaa virran, ei saapumiskorttia --- */
@@ -605,6 +618,202 @@ const luovutus = await sivu.evaluate(() => ({
 vaadi('virta luovuttaa nykyiselle laattamekaniikalle',
   luovutus.vaihe === 'quiz' && luovutus.visa && !luovutus.kortti
   && luovutus.virranVaihe === 'valmis', JSON.stringify(luovutus));
+
+/* --- 12: KORTIN VIERITYS EI PANOROI KARTTAA (puhelin, kosketus) ------
+ *
+ * Omistajan pelitestipalaute 24.8.2026 (v1098, puhelin): *"Kartta
+ * liikkuu kun Pöllön tekstiä vierittää."* Fokusvirran kortti on
+ * .map-panen lapsi, joten sen kosketustapahtumat kuplivat kartan
+ * panorointikäsittelijöille — tekstin vieritys raahasi karttaa.
+ *
+ * Vartio vaatii OIKEAT kosketustapahtumat: JS:llä lähetetty TouchEvent
+ * ei synnytä osoitintapahtumia lainkaan, joten se ei koskisi
+ * panorointia eikä todistaisi mitään. Siksi oma konteksti
+ * (hasTouch) ja CDP:n Input.dispatchTouchEvent.
+ */
+const { sivu: puhelin } = await avaaSivu({
+  viewport: { width: 390, height: 844 },
+  hasTouch: true,
+});
+const cdp = await puhelin.context().newCDPSession(puhelin);
+const kosketa = (tyyppi, x, y) => cdp.send('Input.dispatchTouchEvent', {
+  type: tyyppi,
+  touchPoints: tyyppi === 'touchEnd'
+    ? []
+    : [{ x, y, radiusX: 6, radiusY: 6, force: 1, id: 1 }],
+});
+/** Yhden sormen veto: aloitus, portaittainen liike, irrotus. */
+const veto = async (x, y, dx, dy, askelia = 10) => {
+  await kosketa('touchStart', x, y);
+  for (let i = 1; i <= askelia; i += 1) {
+    await kosketa('touchMove', x + (dx * i) / askelia, y + (dy * i) / askelia);
+    await puhelin.waitForTimeout(20);
+  }
+  await kosketa('touchEnd', x + dx, y + dy);
+  // reducedMotion sammuttaa liu'un, joten asento on heti lopullinen.
+  await puhelin.waitForTimeout(300);
+};
+/** Kartan siirtotila: pan-luvut, muunnos ja viewBox yhtenä sormenjälkenä. */
+const kartanTila = () => puhelin.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  return {
+    panX: Math.round((ui.panX ?? 0) * 10) / 10,
+    panY: Math.round((ui.panY ?? 0) * 10) / 10,
+    muunnos: ui.svg.style.transform,
+    viewBox: ui.svg.getAttribute('viewBox'),
+    vara: Math.round(ui.panVara ?? 0),
+    varaY: Math.round(ui.panVaraY ?? 0),
+    lahikuva: Boolean(ui.mannerZoom || ui.aloitusZoom),
+  };
+});
+const samaKartta = (a, b) => Boolean(a) && Boolean(b)
+  && a.panX === b.panX && a.panY === b.panY
+  && a.muunnos === b.muunnos && a.viewBox === b.viewBox;
+
+// Virta samaan vaiheeseen kuin osiossa 2: merkintä ensin, sitten pöllö.
+await puhelin.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  ui.openArrival(ui.game.cityOf());
+});
+await puhelin.waitForTimeout(500);
+await puhelin.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  delete ui.game.fokusvirrat['europe:ateena'];
+  ui.fokusvirtaKortti?.remove();
+  ui.fokusvirtaKortti = null;
+  ui.factKey = null;
+  ui.render();
+});
+await puhelin.waitForTimeout(MERKINNAN_TAUKO_MS + 1400);
+
+// Lähikuva päälle, jotta kartalla on oikeasti panorointivaraa: ilman
+// varaa mikä tahansa veto jättäisi kartan paikalleen ja vartio olisi
+// tyhjä.
+await puhelin.evaluate(() => window.matkakirja.ui.kartta.zoomaaPainikkeella(1));
+await puhelin.waitForTimeout(2500);
+/*
+ * KARTTA KESKELLE VARAANSA ENNEN JOKAISTA VETOA. Lähikuva asettuu
+ * tyypillisesti laitaan, ja laidassa asetaPan rajaa siirron pois —
+ * väärään suuntaan vedetty ele jättäisi kartan paikalleen, ja vartio
+ * läpäisisi myös rikkinäisellä koodilla (mitattu: näin kävi, kun
+ * suoja poistettiin kokeeksi). Keskeltä liike näkyy joka suuntaan.
+ */
+const keskita = async () => {
+  await puhelin.evaluate(() => {
+    const ui = window.matkakirja.ui;
+    ui.kartta.asetaPan(-(ui.panVara ?? 0) / 2, -(ui.panVaraY ?? 0) / 2);
+  });
+  await puhelin.waitForTimeout(200);
+};
+await keskita();
+const alkuTila = await kartanTila();
+vaadi('kosketusvartio: kartalla on panorointivaraa joka suuntaan',
+  alkuTila.lahikuva && alkuTila.vara > 60 && alkuTila.varaY > 60
+  && alkuTila.panX < -20 && alkuTila.panX > -alkuTila.vara + 20
+  && alkuTila.panY < -20 && alkuTila.panY > -alkuTila.varaY + 20,
+  JSON.stringify(alkuTila));
+
+/** Pinnan (kortti tai kupla) sisuksen keskikohta ruudulla. */
+const pinnanKohta = () => puhelin.evaluate(() => {
+  const el = document.querySelector('.fokusvirta-kortti, .fokusvirta-kupla');
+  const sisus = el?.querySelector('.fokusvirta-sisalto');
+  if (!sisus) return null;
+  const r = sisus.getBoundingClientRect();
+  return {
+    x: Math.round(r.left + r.width / 2),
+    y: Math.round(r.top + r.height / 2),
+    kupla: el.classList.contains('fokusvirta-kupla'),
+    vieritettava: sisus.scrollHeight > sisus.clientHeight + 2,
+    vieritys: Math.round(sisus.scrollTop),
+  };
+});
+
+/* 12a: pöllön kupla — veto tekstin päällä ei liikuta karttaa. */
+let kohta = await pinnanKohta();
+await keskita();
+let ennen = await kartanTila();
+if (kohta) await veto(kohta.x, kohta.y, 0, -140);
+vaadi('kuplan tekstin veto ei panoroi karttaa',
+  Boolean(kohta?.kupla) && samaKartta(ennen, await kartanTila()),
+  JSON.stringify({ kohta, ennen, jalkeen: await kartanTila() }));
+
+/* 12b: täkykortti — pysty- ja vaakaveto jäävät kortin sisään. */
+await puhelin.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  ui.openArrival(ui.game.cityOf());
+});
+await puhelin.waitForTimeout(500);
+await paina('Jatka', '.fokusvirta-napit', puhelin);
+await paina('Filosofi', '.fokusvirta-napit', puhelin);
+await puhelin.waitForTimeout(400);
+kohta = await pinnanKohta();
+const kortinPinta = await puhelin.evaluate(() => {
+  const el = document.querySelector('.fokusvirta-kortti');
+  return Boolean(el) && Boolean(el.closest('.map-pane'));
+});
+vaadi('täkykortti on kartan päällä ja sen sisältö on vieritettävä',
+  kortinPinta && kohta?.kupla === false && kohta.vieritettava === true,
+  JSON.stringify({ kortinPinta, kohta }));
+
+await keskita();
+ennen = await kartanTila();
+await veto(kohta.x, kohta.y, 0, -150);
+let jalkeen = await kartanTila();
+const vierityksenJalkeen = (await pinnanKohta())?.vieritys ?? 0;
+vaadi('kortin tekstin pystyveto EI panoroi karttaa',
+  samaKartta(ennen, jalkeen), JSON.stringify({ ennen, jalkeen }));
+vaadi('kortin tekstin pystyveto vierittää KORTTIA',
+  vierityksenJalkeen > 0, JSON.stringify({ vieritys: vierityksenJalkeen }));
+
+await keskita();
+ennen = await kartanTila();
+await veto(kohta.x, kohta.y, -150, 0);
+jalkeen = await kartanTila();
+vaadi('kortin vaakaveto EI panoroi karttaa',
+  samaKartta(ennen, jalkeen), JSON.stringify({ ennen, jalkeen }));
+
+/* 12c: kartan oma panorointi toimii yhä — kortin ULKOPUOLELTA.
+ *
+ * Matkakirjakortti kutistetaan ensin yhden rivin lapuksi (sama kuin
+ * kartan napautus tekee), muuten se ja täkykortti peittävät puhelimen
+ * kapean kartan kokonaan eikä vapaata kohtaa ole. */
+await puhelin.evaluate(() => window.matkakirja.ui.asetaPaivakirjanKoko(true));
+await puhelin.waitForTimeout(500);
+const kartanKohta = await puhelin.evaluate(() => {
+  const pane = document.querySelector('.map-pane')?.getBoundingClientRect();
+  if (!pane) return null;
+  const paalla = '.fokusvirta-kortti, .fokusvirta-kupla, .fokuszoom, .fact-card';
+  for (let y = pane.top + 24; y < pane.bottom - 24; y += 8) {
+    for (let x = pane.left + 40; x < pane.right - 40; x += 16) {
+      const el = document.elementFromPoint(x, y);
+      if (el?.closest('svg') && !el.closest(paalla)) {
+        return { x: Math.round(x), y: Math.round(y) };
+      }
+    }
+  }
+  return null;
+});
+await keskita();
+ennen = await kartanTila();
+if (kartanKohta) {
+  /*
+   * Suunta valitaan sen mukaan, kummalla puolella on vielä varaa:
+   * panX/panY ovat välillä [-vara, 0], ja tässä kohtaa lähikuva on
+   * usein jo laidassa. Väärään suuntaan vedetty ele ei liikuttaisi
+   * karttaa lainkaan — eikä vartio erottaisi sitä viasta.
+   */
+  const vaakaan = ennen.vara >= ennen.varaY;
+  const paikka = vaakaan ? ennen.panX : ennen.panY;
+  const varaa = vaakaan ? ennen.vara : ennen.varaY;
+  // Kohti nollaa, jos sinne on matkaa; muuten kohti alarajaa.
+  const matka = -paikka > varaa / 2 ? 140 : -140;
+  await veto(kartanKohta.x, kartanKohta.y,
+    vaakaan ? matka : 0, vaakaan ? 0 : matka);
+}
+jalkeen = await kartanTila();
+vaadi('kartan oma panorointi toimii yhä kortin ulkopuolelta',
+  Boolean(kartanKohta) && !samaKartta(ennen, jalkeen),
+  JSON.stringify({ kohta: kartanKohta, ennen, jalkeen }));
 
 await selain.close();
 palvelin.close();

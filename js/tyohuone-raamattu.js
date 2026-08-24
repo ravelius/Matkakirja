@@ -250,6 +250,13 @@ export const RAAMATTU = {
         'PÖLLÖ-CHAT: ensisijaisesti kuratoitua sisältöä (lehdet, '
           + 'tarkistetut faktat); mallin oma selittely selvästi '
           + 'kehystettynä. Sonnet nyt, Haiku 5 kun julkaistaan.',
+        'JATKUVA KARTTA JA DYNAAMISET MITAT (omistaja 24.8.2026, '
+          + 'illan pelitesti): fokuskartta on JATKUVA pinta — ei '
+          + 'lehden kehystä, maasto jatkuu reunoille ja naapureihin '
+          + 'saumatta. Mittataulukot (mittajana, asteet, maan nimi) '
+          + 'ovat DYNAAMISIA pelin piirtämiä elementtejä, jotka '
+          + 'elävät zoomin ja sijainnin mukana — eivät kuvaan '
+          + 'poltettuja.',
         'KUVAT KARTALLE (omistaja 24.8.2026): fokusvirran kuvat '
           + 'piirtyvät PIENENÄ kartalle kohteen päälle (Ateenan kuva '
           + 'Ateenan sijaintiin), ja pelaaja klikkaa ne auki isoksi '
