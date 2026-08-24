@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1081 — NELJA KORJATTUA HEROKUVAA: silmatarkistus vertasi 54 generoitua kuvaa oikeisiin Commons-valokuviin ja loysi nelja vaaraa. Kasgarin mausoleumi, Mekan Jabal al-Nour, Petran kuningashaudat ja Damaskos (kohde vaihdettu suqista linnoitukseen) generoitu uusiksi viitekuvilla. Tarkista: naiden neljan kaupungin etusivukarusellit',
   'v1080 — TAMPEREEN HEROT VIITEKUVILLA: Nasilinna, Metso ja Vanha kirkko generoitu uusiksi kohteen omasta Commons-kategoriasta haetuilla valokuvilla, ja neljantena uusi Nasinneula. Myos Helsingin Oodi uusiksi. Tarkista: Tampereen ja Helsingin etusivukarusellit',
   'v1079 — VIITEKUVAT HEROGENEROINTIIN: kohde tunnistetaan sen omasta Commons-kategoriasta ja generointi ankkuroidaan 2-4 vapaaseen nykyvalokuvaan. Generointiportti estaa kuvan jos viitteita on alle kaksi tai tunnistus jaa epavarmaksi. Ei nakyva muutos pelissa; ensimmainen koe-era on Tampere',
   'v1078 — MATKAKIRJAN TEKSTI kayttaa taas koko leveyden: piilotetun pienoiskuvan kellutusvaraus jai voimaan ja teksti kiersi tyhjaa kolkkaa. Tarkista: matkakirjamerkinta kaupunkiin saavuttaessa',

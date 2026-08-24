@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1081, teksti: 'Neljä korjattua herokuvaa viitekuvilla' },
   { v: 1080, teksti: 'Tampereen herot viitekuvilla ja Oodi uusiksi' },
   { v: 1079, teksti: 'Viitekuvat herokuvien generointiin' },
   { v: 1078, teksti: 'Matkakirjan tekstille koko leveys takaisin' },
