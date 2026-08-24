@@ -241,6 +241,8 @@ import { MAASTON_VARJOSTUS } from './packs/maailmankartta-varjostus.js';
 import { INTRO_SPACE, Kartta } from './kartta.js';
 // Fokusmoodin maakohtainen topografiapohja (paketti 2).
 import { paivitaFokuskartta, paivitaFokusNimet, nollaaFokuskartta } from './fokuskartta.js';
+// Fokuslehden klikattavat karttakohteet ja niiden pop-up (js/fokuskohteet.js).
+import { paivitaFokuskohteet, nollaaFokuskohteet } from './fokuskohteet.js';
 
 const DIE_FACES = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 const BOT_DELAY = 650;
@@ -3636,6 +3638,8 @@ export class UI {
      * — samasta syystä ja samasta kohdasta kuin lisänimien näkyvyys.
      */
     paivitaFokuskuvat(this);
+    // Kartan kohdemerkit ovat samoin kiinteän kokoisia ruudulla.
+    paivitaFokuskohteet(this);
     if (!this.maastonimiKerros) return;
     if (!this.maastonimet) return;
     const nakyva = this.nakyvaAlue();
@@ -4453,6 +4457,7 @@ export class UI {
     // Kerroksen rakentaa js/fokusvirta.js paivitaFokuskuvat.
     this.fokuskuvatKerros = null;
     nollaaFokuskuvat(this);
+    nollaaFokuskohteet(this);
     // Uusi lauta, tyhjä kerros: muistettu näkymätunniste ei saa jäädä
     // voimaan, tai nimet jäisivät piirtymättä kun sama näkymä palaa.
     this.maastonimiTunniste = null;
@@ -5131,6 +5136,8 @@ export class UI {
     // Neljäs kerros: pelimerkit (ks. doc yllä ja paivitaFokusPallot).
     // Kutsu on tässä, koska pohja saapuu verkosta vasta piirron jälkeen.
     this.paivitaFokusPallot();
+    // Viides kerros: lehden klikattavat karttakohteet (js/fokuskohteet.js).
+    paivitaFokuskohteet(this);
   }
 
   /**

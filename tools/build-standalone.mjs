@@ -318,6 +318,10 @@ const MODULES = [
   // se itse tuo mapartin, median ja lisänimet, jotka ovat yllä).
   'js/packs/fokus-grc.js',
   'js/fokuskartta.js',
+  // Fokuslehden klikattavat karttakohteet ennen ui:ta (ui tuo sen
+  // päivitys- ja nollauskutsun; kohteiden lista, mapart, media,
+  // ui-apurit, valokuvat ja äänet ovat kaikki jo yllä).
+  'js/fokuskohteet.js',
   'js/ui.js',
 
   'js/muutokset.js',
@@ -359,7 +363,8 @@ const bundle = MODULES.map((file) => `// ===== ${file} =====\n${stripModuleSynta
  * linkkiä ei ole eikä verkkoa oleteta, joten tyyli liitetään tähän
  * samaan <style>-lohkoon.
  */
-const css = `${read('css/styles.css')}\n\n${read('css/fokusvirta.css')}`;
+const css = `${read('css/styles.css')}\n\n${read('css/fokusvirta.css')}`
+  + `\n\n${read('css/fokuskohteet.css')}`;
 const indexHtml = read('index.html');
 
 const body = indexHtml
