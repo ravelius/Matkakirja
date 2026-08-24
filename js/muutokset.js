@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1092, teksti: 'Fokusvirta: Ateenan annostelu' },
   { v: 1091, teksti: 'Kreikan fokuskartta ja kamera-ajot' },
   { v: 1090, teksti: 'Fokusmoodi: kytkimet, kelluva pollo' },
   { v: 1089, teksti: 'Herokuvat 15 uuteen kaupunkiin' },
