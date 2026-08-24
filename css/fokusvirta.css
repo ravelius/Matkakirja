@@ -1,0 +1,187 @@
+/*
+ * FOKUSMOODIN ANNOSTELUKORTTI (js/fokusvirta.js).
+ *
+ * OMA TIEDOSTO, EI styles.css: css/styles.css on toisen työvaiheen
+ * hallussa (fokuskarttakerros ja kamera), eikä yhteen tiedostoon
+ * kirjoita kaksi tekijää yhtä aikaa. Sama ratkaisu kuin
+ * radiosoittimella (css/radio.css). Muuttujat ovat styles.css:n
+ * :root-muuttujia, joten kortti puhuu samaa väri- ja kirjasinkieltä
+ * kuin muu peli.
+ *
+ * KORTTI EI OLE MODAALI. Se kelluu karttapinnan alareunassa
+ * (.map-pane on position: relative), kartta näkyy sen ylä- ja
+ * sivupuolelta, eikä mitään taustaverhoa ole: fokusmoodin idea on
+ * kartta näkymänä ja teksti annoksena sen päällä.
+ */
+
+.fokusvirta-kortti {
+  position: absolute;
+  left: 0.6rem;
+  right: 0.6rem;
+  bottom: 0.6rem;
+  z-index: 6;
+  max-height: 72%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem 0.8rem 0.75rem;
+  border-radius: 14px;
+  border: 1px solid var(--overlay-line);
+  background: linear-gradient(180deg, rgba(46, 33, 20, 0.96), rgba(30, 21, 12, 0.97));
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+  color: var(--ink-light);
+  font-family: var(--font-type);
+  /* Kartta ottaa eleet itselleen (.map-pane touch-action: none); kortin
+     sisällä pystyvieritys on saatava takaisin, tai pitkä syvennysteksti
+     jää kosketuslaitteella lukukelvottomaksi. */
+  touch-action: pan-y;
+  animation: fokusvirta-esiin 0.24s ease-out;
+}
+
+@keyframes fokusvirta-esiin {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fokusvirta-kortti { animation: none; }
+}
+
+/* Leveällä ruudulla kortti ei leviä koko kartan poikki: pitkä rivi on
+   raskas lukea, ja kartan pitää näkyä sen vierestä. */
+@media (min-width: 900px) {
+  .fokusvirta-kortti { right: auto; width: min(34rem, 52%); }
+}
+
+.fokusvirta-sisalto {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  min-height: 0;
+  padding-right: 0.2rem;
+}
+
+.fokusvirta-sulje {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.4rem;
+  min-height: 30px;
+  padding: 0.1rem 0.45rem;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.fokusvirta-sulje:hover { background: transparent; color: var(--ink-light); }
+
+.fokusvirta-ylarivi {
+  margin: 0 2rem 0.15rem 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.fokusvirta-otsikko {
+  margin: 0 2rem 0.45rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* --- kuva --- */
+
+.fokusvirta-kuva {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid rgba(217, 161, 59, 0.35);
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.25);
+  min-height: 0;
+}
+
+.fokusvirta-kuva img {
+  display: block;
+  width: 100%;
+  max-height: 34vh;
+  object-fit: cover;
+}
+
+.fokusvirta-kuvateksti {
+  margin: 0.3rem 0 0.55rem;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.fokusvirta-kuvalahde { display: block; font-size: 0.72rem; opacity: 0.85; }
+
+/* --- teksti --- */
+
+.fokusvirta-teksti p {
+  margin: 0 0 0.55rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.fokusvirta-teksti p:last-child { margin-bottom: 0; }
+
+/* --- minivisa --- */
+
+.fokusvirta-visa {
+  margin-top: 0.7rem;
+  padding: 0.55rem 0.6rem;
+  border: 1px dashed rgba(217, 161, 59, 0.45);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.fokusvirta-visa-kysymys {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.fokusvirta-vaihtoehdot {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.fokusvirta-vaihtoehdot button {
+  text-align: left;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  min-height: 38px;
+}
+
+.fokusvirta-visa-tulos {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.fokusvirta-visa-tulos:empty { display: none; }
+.fokusvirta-visa-tulos.oikein-tulos { color: #9fd6a0; }
+.fokusvirta-visa-tulos.vaarin-tulos { color: var(--danger); }
+
+/* --- napit --- */
+
+.fokusvirta-napit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.7rem;
+}
+
+.fokusvirta-napit button {
+  width: 100%;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.fokusvirta-napit button.primary { text-align: center; }

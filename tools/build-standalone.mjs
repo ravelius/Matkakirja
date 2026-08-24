@@ -59,6 +59,10 @@ const MODULES = [
   'js/packs/henkilot.js',
   'js/packs/saatiedot.js',
   'js/packs/kohtaamiset.js',
+  // Fokusmoodin annostelusisältö: sisältöpaketti ennen rekisteriään
+  // (fokusvirrat.js lukee FOKUSVIRTA_ATEENAn moduulitasolla).
+  'js/packs/fokusvirta-ateena.js',
+  'js/packs/fokusvirrat.js',
   'js/packs/uutislahteet.js',
   // uutiset vasta lähteidensä jälkeen (tuo uutislahteet.js:n).
   'js/uutiset.js',
@@ -297,6 +301,13 @@ const MODULES = [
   'js/maalehti.js',
   // M5a: lehden sivukoneisto (tuo nähtävyydet ja lukijan).
   'js/lehti.js',
+  /*
+   * Fokusmoodin annosteluvirta ennen ui.js:ää (ui tuo siitä kaksi
+   * kytkentäfunktiota staattisesti). Sen omat riippuvuudet — ui-apurit,
+   * media, africa-valokuvat, julisteet, fokusvirrat, natiivi ja äänet —
+   * ovat kaikki jo yllä.
+   */
+  'js/fokusvirta.js',
   // M7a: laudan kamera ennen ui:ta (ui tuo Kartan; kartta tuo äänet ja
   // luennan, jotka ovat yllä).
   'js/kartta.js',
@@ -338,7 +349,14 @@ checkModuleList();
 const bundle = MODULES.map((file) => `// ===== ${file} =====\n${stripModuleSyntax(read(file))}`)
   .join('\n\n');
 
-const css = read('css/styles.css');
+/*
+ * Fokusmoodin annostelukortilla on oma tyylitiedostonsa (css/styles.css
+ * on toisen työvaiheen hallussa, ks. js/fokusvirta.js). Selaimessa
+ * moduuli lataa sen itse <link>-elementillä; yhden tiedoston versiossa
+ * linkkiä ei ole eikä verkkoa oleteta, joten tyyli liitetään tähän
+ * samaan <style>-lohkoon.
+ */
+const css = `${read('css/styles.css')}\n\n${read('css/fokusvirta.css')}`;
 const indexHtml = read('index.html');
 
 const body = indexHtml
