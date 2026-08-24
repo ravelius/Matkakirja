@@ -250,6 +250,10 @@ export const RAAMATTU = {
         'PÖLLÖ-CHAT: ensisijaisesti kuratoitua sisältöä (lehdet, '
           + 'tarkistetut faktat); mallin oma selittely selvästi '
           + 'kehystettynä. Sonnet nyt, Haiku 5 kun julkaistaan.',
+        'KUVAT KARTALLE (omistaja 24.8.2026): fokusvirran kuvat '
+          + 'piirtyvät PIENENÄ kartalle kohteen päälle (Ateenan kuva '
+          + 'Ateenan sijaintiin), ja pelaaja klikkaa ne auki isoksi '
+          + '(zoomaus pop-up-näkymään).',
         'ASETTELU (omistaja 24.8.2026): isoisän teksti näytetään '
           + 'PERINTEISESSÄ matkakirjakortissa YLÄVASEMMALLA (sama '
           + 'kortti kuin saapumisteksteillä), ja pöllön huomio '
