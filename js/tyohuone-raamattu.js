@@ -250,6 +250,14 @@ export const RAAMATTU = {
         'PÖLLÖ-CHAT: ensisijaisesti kuratoitua sisältöä (lehdet, '
           + 'tarkistetut faktat); mallin oma selittely selvästi '
           + 'kehystettynä. Sonnet nyt, Haiku 5 kun julkaistaan.',
+        'FOKUSNAPIT (omistaja 24.8.2026, illan pelitesti): '
+          + 'vasemman alareunan maannimi (KREIKKA-kartuutsi) on '
+          + 'jatkossa MAALEHDEN NAPPI dynaamisella sijainnilla; '
+          + 'oikean yläkulman maakyltti poistetaan. Kaupungin laatta '
+          + 'palaa fokusnäkymään PALJON PIENEMPÄNÄ dynaamisella '
+          + 'koolla, ja TUTKI-NAPPI poistetaan alariviltä — sen '
+          + 'toiminto siirtyy kaupungin nappiin. Pöllön '
+          + 'valmiskysymykset otetaan toistaiseksi pois.',
         'JATKUVA KARTTA JA DYNAAMISET MITAT (omistaja 24.8.2026, '
           + 'illan pelitesti): fokuskartta on JATKUVA pinta — ei '
           + 'lehden kehystä, maasto jatkuu reunoille ja naapureihin '
