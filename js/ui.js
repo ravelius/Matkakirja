@@ -5456,11 +5456,23 @@ export class UI {
   }
 
   /**
-   * ALANAPPIRIVI: kolme paikkaa (omistajan linjaus 12.8.2026).
+   * ALANAPPIRIVI: KAKSI PAIKKAA (omistajan linjaus 24.8.2026).
    *
-   *   vasen   monitoiminappi — avaa matkustusnapit
-   *   keski   Viisas Pöllö   — js/pollo.js siirtää nappinsa tähän
-   *   oikea   suurennuslasi  — Tutki, ennallaan
+   *   vasen   Liiku  — monitoiminappi, avaa matkustusnapit
+   *   oikea   Tutki  — suurennuslasi, ennallaan
+   *
+   * MIKSI KAKSI EIKÄ KOLME. Rivissä oli 12.8.2026 alkaen kolme paikkaa
+   * ja keskimmäisenä Viisas Pöllö. Raamatun osio "Fokusmoodi"
+   * (omistaja 24.8.2026) siirsi pöllön pysyvästi kelluvaksi
+   * sivuelementiksi kaikissa tiloissa, ja alariville jäi *"vain Liiku-
+   * ja Tutki-napit"*. Vanha kolmen napin linjaus on siis kumottu, ei
+   * unohtunut: pöllön paikan mekanismi on tallella js/pollo.js:n
+   * POLLO_ALANAPPIRIVISSA-lipun takana.
+   *
+   * VASEN NAPPI ON "LIIKU". Kompassikuvake säilyy, mutta nimi on nyt
+   * pelaajan teko eikä valikon otsikko: kahden napin rivi lukee
+   * "Liiku · Tutki", ja se on koko pelin perusvalinta yhdellä
+   * silmäyksellä. Nimi näkyy napin tekstinä, titlenä ja aria-labelina.
    *
    * Matkustusnapit eivät levitä riviä: ne LIUKUVAT koko rivin päälle,
    * joten rivi on aina täsmälleen kolmen napin levyinen. Liu'un ollessa
@@ -5484,7 +5496,16 @@ export class UI {
     const rivi = html('div', 'toimintorivi');
     const perus = html('div', 'toimintorivi-perus');
 
-    const monitoimi = this.iconButton('kompassi', 'Matkustustavat');
+    /*
+     * "LIIKU" EIKÄ "MATKUSTUSTAVAT" (omistajan linjaus 24.8.2026).
+     * Kompassikuvake säilyy, mutta nimi kertoo teon eikä valikon
+     * sisältöä — kahden napin rivi on "Liiku · Tutki". iconButton
+     * asettaa saman tekstin näkyväksi nimeksi, titleksi ja
+     * aria-labeliksi, joten ruudunlukija ja hiiren kärki saavat sen
+     * yhtä aikaa. Matkustustapojen valinta on liu'un omien nappien
+     * aria-label-teksteissä (jalan, laiva, lento).
+     */
+    const monitoimi = this.iconButton('kompassi', 'Liiku');
     monitoimi.classList.add('monitoimi-nappi');
     /*
      * Ilman matkustusvaihtoehtoja nappi on estetty — sama harmaus kuin
@@ -5500,11 +5521,14 @@ export class UI {
     });
     perus.appendChild(monitoimi);
 
-    // Pöllön paikka. Nappi asuu js/pollo.js:ssä, koska sen pitää siirtyä
-    // lehden sisään lehtinäkymässä — tässä annetaan vain paikka.
-    const polloPaikka = html('div', 'pollo-paikka');
-    perus.appendChild(polloPaikka);
-
+    /*
+     * PÖLLÖLLÄ EI OLE ENÄÄ PAIKKAA RIVISSÄ (omistajan linjaus
+     * 24.8.2026): nappi kelluu sivuelementtinä kaikissa tiloissa, myös
+     * pelinäkymässä ja myös fokusmoodin ollessa kytkettynä pois.
+     * Ankkurointi ilmoitetaan silti joka piirrolla (polloAnkkuri
+     * alempana) — js/pollo.js ohittaa sen lipullaan ja kiinnittää napin
+     * bodyyn, joten rivipaikan palauttaminen ei vaadi muutosta tänne.
+     */
     perus.appendChild(tutkiNappi ?? html('div', 'rivi-tyhja'));
     rivi.appendChild(perus);
 
@@ -5522,7 +5546,9 @@ export class UI {
 
     this.actionsEl.appendChild(rivi);
     this.toimintoRivi = rivi;
-    polloAnkkuri(polloPaikka);
+    // Rivissä ei ole pöllön paikkaa (ks. yllä): ilmoitetaan tyhjä
+    // ankkuri, jolloin vanhan piirron paikka ei jää roikkumaan.
+    polloAnkkuri(null);
     this.kytkeLiukuSulku();
   }
 

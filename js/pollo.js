@@ -570,6 +570,24 @@ export function vastauskuvanAihe(teksti, kysymys = '') {
 /* Käyttöliittymä                                                      */
 /* ------------------------------------------------------------------ */
 
+/*
+ * ASUUKO PÖLLÖ ALANAPPIRIVISSÄ? (omistajan linjaus 24.8.2026)
+ *
+ * EI ENÄÄ. Raamatun osio "Fokusmoodi": *"pöllö pysyvästi leijuvana
+ * sivuelementtinä kaikissa tiloissa (pois alanapeista, kuten nyt lehtiä
+ * luettaessa)"* — ja alarivillä on siitä lähtien kaksi nappia, Liiku ja
+ * Tutki. Kellunta on voimassa AINA, myös fokusmoodin ollessa kytkettynä
+ * pois: se on omistajan ohje UI:sta eikä fokusmoodin osa.
+ *
+ * LIPPU EIKÄ POISTO. Ankkurointi rivin keskipaikkaan (ankkuroi,
+ * kiinnitysKohde) ja sen CSS (.pollo-paikka) ovat tallella
+ * kokonaisuudessaan; tämä vakio vain ohittaa ne. Jos rivipaikka
+ * halutaan joskus takaisin, tästä tulee true ja js/ui.js
+ * piirraToimintorivi palauttaa .pollo-paikka-elementin — muuta ei
+ * tarvita.
+ */
+const POLLO_ALANAPPIRIVISSA = false;
+
 /**
  * Seepiapöllö. Viivapiirros samaan tapaan kuin pelin muut kuvakkeet
  * (.viiva-ikoni): pelkkä ääriviiva, täyttö vain silmäterissä, jotta se
@@ -1489,9 +1507,21 @@ class Pollo {
     return this.ankkuri?.isConnected ? this.ankkuri : this.doc.body;
   }
 
-  /** Alanappirivi ilmoittaa paikkansa joka piirrolla (js/ui.js). */
+  /**
+   * Alanappirivi ilmoittaa paikkansa joka piirrolla (js/ui.js).
+   *
+   * PÖLLÖ KELLUU NYT AINA (omistajan nimenomainen ohje 24.8.2026,
+   * Raamatun osio "Fokusmoodi": *"pöllö pysyvästi leijuvana
+   * sivuelementtinä kaikissa tiloissa"*). Ankkuri jätetään siis
+   * ottamatta vastaan, ja nappi kiinnittyy bodyyn kelluvana myös
+   * pelinäkymässä — myös silloin kun fokusmoodi on kytketty pois.
+   *
+   * Rivipaikan mekanismi jää kokonaisuudessaan tähän: kun
+   * POLLO_ALANAPPIRIVISSA kytketään takaisin todeksi, ankkurointi
+   * toimii kuten ennenkin eikä mitään tarvitse kirjoittaa uudestaan.
+   */
   ankkuroi(el) {
-    this.ankkuri = el ?? null;
+    this.ankkuri = POLLO_ALANAPPIRIVISSA ? (el ?? null) : null;
     this.kiinnita();
   }
 
@@ -1502,6 +1532,19 @@ class Pollo {
     const kelluu = kohde !== this.ankkuri;
     this.nappi.classList.toggle('pollo-kelluu', kelluu);
     this.paneeli.classList.toggle('pollo-paneeli-kelluu', kelluu);
+    /*
+     * KARTALLA KELLUVA PÖLLÖ EI OLE SAMASSA PAIKASSA KUIN LEHDESSÄ.
+     *
+     * Lehti on modaali, jonka alalaita on tyhjä — siellä nappi mahtuu
+     * ruudun oikeaan alakulmaan. Pelinäkymässä samassa kulmassa ovat
+     * alanapit (.turn-card, bottom 0.9rem) ja kartan zoomiportaat, ja
+     * omistajan ohje on nimenomaan ettei kelluva pöllö saa peittää
+     * kumpaakaan. Erottava luokka annetaan tässä, koska vain kiinnitys
+     * tietää kumpaan kohteeseen nappi meni; sijainnin kertoo CSS.
+     */
+    const kartalla = kelluu && kohde === this.doc.body;
+    this.nappi.classList.toggle('pollo-kelluu-kartalla', kartalla);
+    this.paneeli.classList.toggle('pollo-paneeli-kartalla', kartalla);
     if (this.nappi.parentNode !== kohde) kohde.appendChild(this.nappi);
     if (this.paneeli.parentNode !== kohde) kohde.appendChild(this.paneeli);
   }
@@ -3850,9 +3893,15 @@ export function asennaPollo(haeUi, asetukset = {}) {
    * Paikka luetaan siis suoraan DOMista, jos se on jo olemassa — sama
    * lopputulos kuin kaupunginvaihdon piirrossa, ilman että
    * käynnistysjärjestykseen tarvitsee koskea.
+   *
+   * OMISTAJAN LINJAUS 24.8.2026 teki tästä toistaiseksi turhan: pöllö
+   * kelluu aina eikä rivissä ole enää sen paikkaa
+   * (POLLO_ALANAPPIRIVISSA). Haku jää lipun taakse yhdessä muun
+   * ankkurointikoneiston kanssa, jotta rivipaikan palauttaminen on
+   * yhden vakion muutos.
    */
   const doc = asetukset.doc ?? document;
-  const paikka = doc.querySelector('.pollo-paikka');
+  const paikka = POLLO_ALANAPPIRIVISSA ? doc.querySelector('.pollo-paikka') : null;
   if (paikka) nykyinenPollo.ankkuroi(paikka);
   // Savukkeet ja kehitys tarvitsevat kahvan; peli itse ei käytä tätä.
   window.matkakirjaPollo = nykyinenPollo;
