@@ -329,6 +329,18 @@
   color: #16130f;
 }
 
+/*
+ * KOHDENOSTON PAINIKE (js/fokusvirta.js piirraValinta) erottuu täyistä
+ * hillityllä nuolella: valinta vie katseen pois kaupungista, ja se saa
+ * näkyä listassa ennen kuin pelaaja painaa. Ei omaa väriä eikä
+ * kehystä — kupla on yhtä pergamenttia, ja kolmas laatikkotyyppi
+ * samassa listassa olisi meteliä.
+ */
+.fokusvirta-napit button.fokusvirta-kohdenappi::before {
+  content: '↗ ';
+  opacity: 0.6;
+}
+
 /* ===================================================================
    KUVAVINJETIT KARTALLA (js/fokusvirta.js paivitaFokuskuvat)
    -------------------------------------------------------------------
@@ -371,3 +383,155 @@
 }
 
 .fokuskuva-pinni:focus-visible { outline: none; }
+
+/*
+ * KOHDENOSTON VINJETTI KASVAA PAIKALLEEN (omistajan tilaus 24.8.2026:
+ * *"kartalle ilmestyy vinjettikuva kohteen omaan sijaintiin"* … *"pelkkä
+ * kupla + kartalle kasvava kuva"*).
+ *
+ * Kasvu lähtee pinnin omasta alareunasta eli siitä kohdasta, jossa nuora
+ * koskettaa karttaa — kuin kuva nousisi paikan päältä. `fill-box` on
+ * pakollinen: SVG:n oletusarvoinen `view-box` laskisi origon koko kartan
+ * nurkasta, jolloin vinjetti lentäisi ruudun poikki. Animaatio koskee
+ * vain `transform`- ja `opacity`-ominaisuuksia, eikä siinä ole
+ * suodattimia (ks. sääntö yllä).
+ */
+@keyframes fokuskuva-kasvaa {
+  from { transform: scale(0.12); opacity: 0; }
+  60% { opacity: 1; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.fokuskuva-kasvaa {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: fokuskuva-kasvaa 480ms cubic-bezier(0.22, 0.9, 0.24, 1);
+}
+
+/* ===================================================================
+   KUVAN SUURENNOS KARTAN PÄÄLLE (js/fokusvirta.js avaaSuurennos)
+   -------------------------------------------------------------------
+   Omistajan tilaus 24.8.2026: kuvan pitää KASVAA ANIMOIDUSTI suureksi
+   niin, että KARTTA NÄKYY YHÄ TAUSTALLA.
+
+   Kaksi eroa lehtien katselimeen (css/styles.css .lightbox), ja
+   molemmat ovat tilauksesta: tausta himmenee vain kevyesti eikä
+   sumennu — sumennus on suodatin, ja kartan päällä suodatin on iOS:llä
+   sama vaara kuin kartalla itsellään — ja kuva mitoitetaan ruudun
+   PIENEMMÄN sivun mukaan, jolloin kartta jää joka reunalta näkyviin.
+   =================================================================== */
+
+.fokuszoom {
+  position: fixed;
+  inset: 0;
+  /* Kortin (6) ja pöllön kuplan (41) päällä, mutta pelin omien
+     modaalien alla: suurennos on kartan ele, ei näkymän vaihto. */
+  z-index: 46;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(18, 12, 4, 0);
+  transition: background-color 320ms ease-out;
+  cursor: zoom-out;
+  touch-action: none;
+}
+
+/* Kevyt himmennys: kartta erottuu yhä kuvan takaa. */
+.fokuszoom-auki { background: rgba(18, 12, 4, 0.32); }
+
+.fokuszoom-kehys {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: min(92vw, 82vmin);
+  pointer-events: none;
+}
+
+/*
+ * MITAT TULEVAT JS:STÄ (avaaSuurennos mitoita). Pelkkä `max-width`
+ * jättäisi kuvan sen luonnolliseen kokoon, ja koska suurennos näyttää
+ * ENSIN vinjetin pikkukuvan ja vasta sitten ison version, kuva
+ * hyppäisi keskellä animaatiota isommaksi. JS laskee laatikon ruudun
+ * pienemmästä sivusta ja kuvan omasta kuvasuhteesta, jolloin koko on
+ * sama molemmilla versioilla. Nämä ovat varmistus, jos mitoitus ei
+ * ehdi ajoissa.
+ */
+.fokuszoom-kuva {
+  display: block;
+  max-width: min(92vw, 82vmin);
+  max-height: min(78vh, 82vmin);
+  object-fit: contain;
+  border: 2px solid rgba(214, 188, 140, 0.55);
+  border-radius: 6px;
+  background: rgba(20, 14, 6, 0.5);
+  box-shadow: 0 12px 44px rgba(0, 0, 0, 0.5);
+  /* FLIP: muunnos lasketaan kuvan vasemmasta yläkulmasta (js). */
+  transform-origin: top left;
+}
+
+/* Viuhkassa selattaessa kuva vaihtuu paikallaan pienellä häivähdyksellä
+   — kasvuanimaatio kuuluu vain avaukseen ja sulkuun. */
+@keyframes fokuszoom-vaihtuu {
+  from { opacity: 0.25; }
+  to { opacity: 1; }
+}
+
+.fokuszoom-vaihtuu { animation: fokuszoom-vaihtuu 180ms ease-out; }
+
+.fokuszoom-teksti {
+  max-width: min(92vw, 82vmin);
+  text-align: center;
+  font-family: var(--font-luku);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #f1e6d0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+  transition: opacity 320ms ease-out;
+}
+
+.fokuszoom-selite { display: block; }
+
+.fokuszoom-lahde,
+.fokuszoom-laskuri {
+  display: block;
+  font-size: 0.78rem;
+  opacity: 0.82;
+}
+
+.fokuszoom-laskuri:empty { display: none; }
+
+.fokuszoom-nuoli {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  min-width: 46px;
+  min-height: 64px;
+  border: 1px solid rgba(214, 188, 140, 0.3);
+  border-radius: 8px;
+  background: rgba(20, 14, 6, 0.45);
+  color: #f1e6d0;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.fokuszoom-nuoli.vasen { left: 0.5rem; }
+.fokuszoom-nuoli.oikea { right: 0.5rem; }
+
+.fokuszoom-nuoli:hover,
+.fokuszoom-nuoli:focus-visible { background: rgba(40, 28, 12, 0.7); }
+
+/*
+ * LIIKEHERKKYYS. JS jättää kasvumuunnoksen tekemättä kokonaan
+ * (liikeVahennetty), mutta myös CSS:n omat animaatiot vaimennetaan
+ * täällä — sama sääntö kuin kortilla ja kuplalla ylempänä.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .fokuszoom,
+  .fokuszoom-teksti { transition: none; }
+  .fokuszoom-vaihtuu,
+  .fokuskuva-kasvaa { animation: none; }
+}

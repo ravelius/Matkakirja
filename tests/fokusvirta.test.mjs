@@ -22,9 +22,11 @@ import assert from 'node:assert/strict';
 
 import {
   FOKUSVIRRAN_VAIHEET, asetaFokusvirtaTila, fokusvirtaAlkutila, fokusvirtaJaljella,
+  fokusvirtaKohteetJaljella, fokusvirtaNahdytKohteet,
   fokusvirtaPorttiAuki, fokusvirtaSiirto, fokusvirtaSiivoa, fokusvirtaTila,
 } from '../js/fokusvirta.js';
 import { FOKUSVIRRAT, fokusvirtaKaupungille } from '../js/packs/fokusvirrat.js';
+import { FOKUSKOHTEET_GRC, fokuskohteet } from '../js/packs/fokuskohteet-grc.js';
 import { Game } from '../js/game.js';
 import { packById } from '../js/pack.js';
 
@@ -38,6 +40,9 @@ const KOE = {
   takyt: [
     { id: 'yksi', nappi: 'Yksi', teksti: 'x', visa: { kysymys: 'k', vaihtoehdot: ['a', 'b'], oikea: 0 } },
     { id: 'kaksi', nappi: 'Kaksi', teksti: 'y', visa: { kysymys: 'k', vaihtoehdot: ['a', 'b'], oikea: 1 } },
+  ],
+  kohteet: [
+    { id: 'kanava', nimi: 'Kanava', nappi: 'Kanava', teksti: 'z', laudat: { europe: { x: 1, y: 2 } } },
   ],
   oppitunti: { teksti: 'd' },
   kohtaaminen: { hahmo: 'Nikos', nappi: 'Tapaa Nikos', teksti: 'e' },
@@ -124,19 +129,56 @@ test('vapaaehtoiset täyt ovat yhä valittavissa portin auettua', () => {
   assert.equal(jalkeen.taky, 'kaksi');
 });
 
+/* ---------- 2b. kohdenosto ---------- */
+
+test('kohdenosto on valinnan sivupolku, ei uusi vaihe jonoon', () => {
+  let tila = { vaihe: 'valinta', taky: null, tehdyt: [], kohde: null, kohteet: [] };
+  tila = fokusvirtaSiirto(tila, { tyyppi: 'kohde', id: 'kanava' }, KOE);
+  assert.equal(tila.vaihe, 'kohde');
+  assert.equal(tila.kohde, 'kanava');
+  assert.deepEqual(tila.kohteet, ['kanava'], 'kohde merkitään nähdyksi heti avattaessa');
+
+  tila = fokusvirtaSiirto(tila, 'jatka', KOE);
+  assert.equal(tila.vaihe, 'valinta', 'kohteesta palataan valintaan');
+  assert.equal(tila.kohde, null);
+  assert.deepEqual(tila.kohteet, ['kanava'], 'vinjetti jää kartalle paluun jälkeenkin');
+  assert.deepEqual(fokusvirtaKohteetJaljella(tila, KOE), [], 'nähtyä ei tarjota uudelleen');
+  assert.deepEqual(fokusvirtaNahdytKohteet(tila, KOE).map((k) => k.id), ['kanava']);
+});
+
+test('kohdenosto EI avaa aarreporttia — portin mitta on täky', () => {
+  const tila = fokusvirtaSiirto(
+    { vaihe: 'valinta', taky: null, tehdyt: [], kohde: null, kohteet: [] },
+    { tyyppi: 'kohde', id: 'kanava' }, KOE,
+  );
+  const palattu = fokusvirtaSiirto(tila, 'jatka', KOE);
+  assert.equal(fokusvirtaPorttiAuki(palattu, KOE), false);
+  assert.equal(fokusvirtaSiirto(palattu, 'aarteelle', KOE).vaihe, 'valinta');
+});
+
+test('tuntematonta kohdetta ei voi avata', () => {
+  const tila = { vaihe: 'valinta', taky: null, tehdyt: [], kohde: null, kohteet: [] };
+  assert.equal(fokusvirtaSiirto(tila, { tyyppi: 'kohde', id: 'ei-ole' }, KOE).vaihe, 'valinta');
+});
+
 /* ---------- 3. siivous ---------- */
 
 test('kelvoton tallennettu tila siivotaan turvalliseksi', () => {
-  assert.deepEqual(fokusvirtaSiivoa(null, KOE), { vaihe: 'matkakirja', taky: null, tehdyt: [] });
+  assert.deepEqual(fokusvirtaSiivoa(null, KOE), fokusvirtaAlkutila());
   assert.deepEqual(
     fokusvirtaSiivoa({ vaihe: 'olematon', taky: 'poistettu', tehdyt: ['yksi', 'poistettu'] }, KOE),
-    { vaihe: 'matkakirja', taky: null, tehdyt: ['yksi'] },
+    { vaihe: 'matkakirja', taky: null, tehdyt: ['yksi'], kohde: null, kohteet: [] },
   );
   // Avoin täky, jonka sisältö on poistettu: palataan valintaan eikä
   // jäädä vaiheeseen, jolle ei ole mitään piirrettävää.
   assert.deepEqual(
     fokusvirtaSiivoa({ vaihe: 'taky', taky: 'poistettu', tehdyt: [] }, KOE),
-    { vaihe: 'valinta', taky: null, tehdyt: [] },
+    { vaihe: 'valinta', taky: null, tehdyt: [], kohde: null, kohteet: [] },
+  );
+  // Sama sääntö kohdenostolle: poistettu kohde ei jätä virtaa roikkumaan.
+  assert.deepEqual(
+    fokusvirtaSiivoa({ vaihe: 'kohde', kohde: 'poistettu', kohteet: ['poistettu'] }, KOE),
+    { vaihe: 'valinta', taky: null, tehdyt: [], kohde: null, kohteet: [] },
   );
 });
 
@@ -160,7 +202,9 @@ test('virran tila kulkee pelitallenteen mukana', () => {
   assert.deepEqual(fokusvirtaTila(game, city, ATEENA), fokusvirtaAlkutila(),
     'tuntematon kaupunki alkaa alusta');
 
-  const kesken = { vaihe: 'valinta', taky: null, tehdyt: ['diogenes'] };
+  const kesken = {
+    vaihe: 'valinta', taky: null, tehdyt: ['diogenes'], kohde: null, kohteet: ['korintin-kanava'],
+  };
   asetaFokusvirtaTila(game, city, kesken);
   assert.deepEqual(game.fokusvirrat['europe:ateena'], kesken);
 
@@ -221,11 +265,43 @@ test('Ateenan fokusvirta on rakenteeltaan ehjä', () => {
   }
 });
 
+/* ---------- 6. kohdenostojen sisältö ---------- */
+
+test('Kreikan fokuskohteet ovat rakenteeltaan ehjiä', () => {
+  assert.ok(FOKUSKOHTEET_GRC.length >= 1, 'pilottikohde puuttuu');
+  const tunnukset = FOKUSKOHTEET_GRC.map((k) => k.id);
+  assert.equal(new Set(tunnukset).size, tunnukset.length, 'kohdetunnusten on oltava uniikkeja');
+  for (const kohde of FOKUSKOHTEET_GRC) {
+    assert.ok(kohde.nimi && kohde.nappi, `${kohde.id}: nimi tai painike puuttuu`);
+    assert.ok(kohde.teksti?.length > 120, `${kohde.id}: pop-up-teksti puuttuu`);
+    // Kohdenostossa EI ole visaa: se on tarjouksen ydin (ks. tilaus).
+    assert.equal(kohde.visa, undefined, `${kohde.id}: kohdenostoon ei kuulu minivisaa`);
+    // Koordinaatit molemmille laudoille, joilla Ateena on pelattavissa.
+    for (const lauta of ['maailmankartta', 'europe']) {
+      const paikka = kohde.laudat?.[lauta];
+      assert.ok(Number.isFinite(paikka?.x) && Number.isFinite(paikka?.y),
+        `${kohde.id}: ${lauta}-koordinaatit puuttuvat`);
+    }
+    assert.ok(kohde.kuva?.tiedosto || kohde.kuva?.ampari, `${kohde.id}: kuva puuttuu`);
+    assert.ok(kohde.kuva.selite?.length > 20, `${kohde.id}: kuvaselite puuttuu`);
+    assert.ok(kohde.kuva.lahde?.length > 10, `${kohde.id}: kuvan lähde puuttuu`);
+  }
+});
+
+test('kaupungin virta poimii kohteet tunnuksilla eikä kaadu kirjoitusvirheeseen', () => {
+  assert.deepEqual(fokuskohteet(['korintin-kanava']).map((k) => k.id), ['korintin-kanava']);
+  assert.deepEqual(fokuskohteet(['ei-tallaista']), []);
+  assert.deepEqual(fokuskohteet(undefined), []);
+  assert.ok((ATEENA.kohteet ?? []).some((k) => k.id === 'korintin-kanava'),
+    'Ateenan virrassa on oltava Korintin kanavan kohdenosto');
+});
+
 test('jokaisella fokusvirran kuvalla on selite ja lähde', () => {
   for (const [kaupunki, virta] of Object.entries(FOKUSVIRRAT)) {
     const kuvat = [
       virta.matkakirja?.kuva, virta.pollo?.kuva, virta.oppitunti?.kuva,
       ...(virta.takyt ?? []).map((t) => t.kuva),
+      ...(virta.kohteet ?? []).map((k) => k.kuva),
     ].filter(Boolean);
     assert.ok(kuvat.length >= 4, `${kaupunki}: kuvia on liian vähän`);
     for (const kuva of kuvat) {

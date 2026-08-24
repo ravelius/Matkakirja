@@ -60,7 +60,10 @@ const MODULES = [
   'js/packs/saatiedot.js',
   'js/packs/kohtaamiset.js',
   // Fokusmoodin annostelusisältö: sisältöpaketti ennen rekisteriään
-  // (fokusvirrat.js lukee FOKUSVIRTA_ATEENAn moduulitasolla).
+  // (fokusvirrat.js lukee FOKUSVIRTA_ATEENAn moduulitasolla). Maan
+  // yhteiset kohdenostot vielä ennen sitä — Ateenan paketti poimii
+  // niistä omansa moduulitasolla (fokuskohteet).
+  'js/packs/fokuskohteet-grc.js',
   'js/packs/fokusvirta-ateena.js',
   'js/packs/fokusvirrat.js',
   'js/packs/uutislahteet.js',
