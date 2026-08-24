@@ -167,14 +167,34 @@ function mannerkohtaisetTahdet(pack, w) {
   return [[manner, city]];
 }
 
+/*
+ * ONKO PÖLLÖ AARRE? — EI TOISTAISEKSI (omistaja 24.8.2026).
+ *
+ * Raamatun osio "Viisas Pöllö": *"kehitysvaiheessa pöllö on pelissä
+ * heti alusta — fokusmoodin esittely tarvitsee sen. 'Pöllö on aarre'
+ * -idea säästetään ja voidaan tuoda takaisin myöhemmin"*.
+ *
+ * Vakio on koko kytkin: `true` palauttaa 18.8.2026 rakennetun
+ * mekaniikan sellaisenaan (peli alkaa ilman pöllöä, ensimmäinen laatta
+ * paljastaa sen aarteenaan). Yksikään rivi mekaniikan koodia ei ole
+ * poistettu, ja sen omat testit ajavat sen läpi pyytämällä
+ * `polloAarteena: true` pelin luonnissa.
+ */
+const POLLO_ON_AARRE = false;
+
 export class Game {
   /**
-   * @param {{players: Array<{name, color, isBot, start}>, pack?: object, roaming?: boolean, rng?: () => number}} opts
+   * @param {{players: Array<{name, color, isBot, start}>, pack?: object, roaming?: boolean, rng?: () => number, polloAarteena?: boolean}} opts
    *   pack = aloituslauta; oletuksena Afrikka.
    *   roaming = vaellustila: ei voittoehtoa, ja porttikaupungeista pääsee
    *   toisille laudoille. Yksin pelattaessa vaellus on aina päällä.
    */
-  constructor({ players, pack = packById('africa'), roaming, seed = Math.floor(Math.random() * 2 ** 32), rng }) {
+  constructor({
+    players, pack = packById('africa'), roaming,
+    seed = Math.floor(Math.random() * 2 ** 32), rng,
+    // Pöllö aarteena — nyt tauolla, ks. this.polloAarteena alempana.
+    polloAarteena = POLLO_ON_AARRE,
+  }) {
     if (players.length < 1 || players.length > 4) {
       throw new Error('Pelaajia pitää olla 1–4');
     }
@@ -294,20 +314,39 @@ export class Game {
      */
     this.tietajaNousut = [];
     /*
-     * VIISAS PÖLLÖ ON AARRE (omistajan tilaus 18.8.2026).
+     * VIISAS PÖLLÖ ON AARRE (omistajan tilaus 18.8.2026) — TAUOLLA.
      *
-     * Pelin alussa pöllöä ei ole: nappi on piilossa eikä pöllö puhu
-     * mitään. Se löytyy OMANA AARTEENAAN ensimmäisen käännetyn laatan
-     * alta (revealToken) ja KORVAA sen laatan aarteen kokonaan
-     * (omistaja 18.8.2026): laatan omaa sisältöä ei näytetä eikä
-     * anneta, eikä pöllö tuo pisteitä, rahaa eikä tavaraa.
+     * Alkuperäinen mekaniikka: pelin alussa pöllöä ei ole, nappi on
+     * piilossa eikä pöllö puhu mitään. Se löytyy OMANA AARTEENAAN
+     * ensimmäisen käännetyn laatan alta (revealToken) ja KORVAA sen
+     * laatan aarteen kokonaan (omistaja 18.8.2026): laatan omaa
+     * sisältöä ei näytetä eikä anneta, eikä pöllö tuo pisteitä, rahaa
+     * eikä tavaraa.
+     *
+     * PÖLLÖ ON MUKANA ALUSTA (omistaja 24.8.2026, Raamatun osio "Viisas
+     * Pöllö"): fokusmoodin esittely tarvitsee pöllön heti ensimmäisestä
+     * kaupungista alkaen, joten aarremekaniikka on toistaiseksi pois
+     * päältä. Idea on tallessa ja voidaan tuoda takaisin, kun
+     * ensimmäisen maan erikoisjärjestelyt on mietitty.
+     *
+     * KYTKIN ON PELIKOHTAINEN EIKÄ VAIN MODUULIVAKIO. Vakio
+     * POLLO_ON_AARRE antaa oletuksen (nyt false), mutta kutsuja voi
+     * pyytää mekaniikan päälle yhdelle pelille (`polloAarteena: true`).
+     * Juuri siitä syystä sitä ei poistettu: mekaniikan omat testit
+     * ajavat sen edelleen läpi, joten palauttaminen on yhden vakion
+     * muutos eikä uudelleenkirjoitus.
      *
      * Lippu tallennetaan (toJSON), koska se on pelaajan etenemistä.
      * `polloPaljastus` sen sijaan on istunnon hetkellinen viesti
      * käyttöliittymälle ("näytä paljastusanimaatio nyt"), joka
      * poimitaan takePolloPaljastuksella eikä koskaan päädy levylle.
+     *
+     * polloAarteena EI kulje tallennuksessa: se on kehitysvaiheen
+     * kytkin eikä pelitilanteen osa, ja fromJSON antaa vanhalle
+     * tallennukselle pöllön joka tapauksessa.
      */
-    this.polloLoydetty = false;
+    this.polloAarteena = polloAarteena;
+    this.polloLoydetty = !polloAarteena;
     this.polloPaljastus = false;
     // Avaus on pelkkää kerrontaa: sääntöasiat ovat Säännöt-dialogissa eivätkä
     // lokirivejä. Laudan intro-teksti jää pakkoihin muuta käyttöä varten.
@@ -2306,8 +2345,14 @@ export class Game {
      * botin kääntämä laatta ei vie löytöhetkeä pelaajalta. Vanhoissa
      * tallennuksissa polloLoydetty on jo tosi, joten tämä haara ei
      * kosketa niitä.
+     *
+     * KOKO HAARA ON TAUOLLA (omistaja 24.8.2026): polloAarteena on
+     * oletuksena false, jolloin pöllö on mukana alusta eikä yksikään
+     * laatta korvaudu. Ehto on ensimmäisenä, jotta mekaniikka on
+     * yhdellä silmäyksellä nähtävissä kytketyksi pois — ei
+     * kommentoituna eikä puolittain purettuna.
      */
-    if (!this.polloLoydetty && !p.isBot) {
+    if (this.polloAarteena && !this.polloLoydetty && !p.isBot) {
       let korvaa = true;
       if (type === 'star') {
         const manner = this.mannerOf(cityId);
@@ -2502,6 +2547,14 @@ export class Game {
       recordNoted: this.recordNoted,
       recordMark: this.recordMark,
       polloLoydetty: this.polloLoydetty,
+      /*
+       * Onko tässä pelissä pöllö aarteena? Kytkin on kehitysvaiheen
+       * valinta (POLLO_ON_AARRE, nyt false), mutta se kulkee mukana
+       * tallennuksessa: kesken oleva peli on pelattava loppuun samoilla
+       * säännöillä, joilla se aloitettiin. Puuttuva kenttä = vanha
+       * tallennus, joka lukee oletuksen (ks. fromJSON).
+       */
+      polloAarteena: this.polloAarteena,
       winnerId: this.winner ? this.winner.id : null,
       turnCount: this.turnCount,
       log: this.log,
@@ -2634,8 +2687,16 @@ export class Game {
      * kenttä luetaan aina todeksi. Uusi peli kirjoittaa kenttään
      * epätoden, joten heti alussa tallennettu ja ladattu peli ei
      * vahingossa saa pöllöä (lippu on tallennuksessa mukana).
+     *
+     * MEKANIIKAN OLLESSA TAUOLLA LIPPU ON AINA TOSI (omistaja
+     * 24.8.2026). Ilman tätä 18.–24.8. aloitettu kesken oleva matka
+     * jäisi ansaan: tallennuksessa lukee `false`, mutta löytöhaara on
+     * kytketty pois (revealToken), joten pöllöä ei enää koskaan
+     * löytyisi eikä nappia näkyisi. Tallennuksesta luetaan siis vain
+     * silloin, kun mekaniikka on päällä.
      */
-    game.polloLoydetty = data.polloLoydetty ?? true;
+    game.polloAarteena = data.polloAarteena ?? POLLO_ON_AARRE;
+    game.polloLoydetty = game.polloAarteena ? (data.polloLoydetty ?? true) : true;
     game.polloPaljastus = false;
     game.lastPath = null;
     game.winner = data.winnerId === null ? null : game.players[data.winnerId] ?? null;
