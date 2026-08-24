@@ -538,6 +538,13 @@ export const RAAMATTU = {
       otsikko: 'Kuvat ja lähteet',
       tila: 'luonnos',
       kohdat: [
+        'HEROGENEROINTI TAUOLLA (omistaja 24.8.2026): uusia '
+          + 'herokuvia ei generoida toistaiseksi — tekotavassa voi '
+          + 'olla vielä virheitä (kierrosten 22–25 katselmointi: '
+          + 'viitteettömät yleisnäkymät keksivät maamerkkejä). '
+          + 'Valmiit, katselmoidut kuvat kytketään loppuun; '
+          + 'hylättyjen uusinta-ajot ja uudet kierrokset vasta '
+          + 'omistajan luvalla. Työ keskittyy nyt fokusmoodiin.',
         'Kaikki kuvat PD/CC (Commons, Finna, LoC, Flickr — lisenssi '
           + 'aina rajapinnasta), silmin tarkistettuina; tekijä ja '
           + 'lisenssi näkyvissä.',
