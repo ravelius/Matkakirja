@@ -3,7 +3,10 @@
 import { MUUTOKSET } from './muutokset.js';
 import { Game } from './game.js';
 import { UI } from './ui.js';
-import { kehittajaTilaPaalla, asetaKehittajaTila } from './ui-apurit.js';
+import {
+  asetaFokusSumennus, asetaFokusmoodi, asetaKehittajaTila,
+  fokusSumennusPaalla, fokusmoodiPaalla, kehittajaTilaPaalla,
+} from './ui-apurit.js';
 import { sfx } from './sound.js';
 import { packById } from './pack.js';
 import { startQuizMusic, stopPlaceStream, stopQuizMusic } from './ambience-stream.js';
@@ -44,7 +47,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1089';
+const APP_VERSION = '2026-08-09.1090';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1106,7 +1109,66 @@ function paivitaPuheSaadin() {
   // nyt Tilastot-lehden Kiintiöt-sivulla (omistaja 21.8.2026).
   const kehittajaKotelo = document.getElementById('kehittaja-kotelo');
   if (kehittajaKotelo) kehittajaKotelo.hidden = !kehittajaTilaPaalla();
+  // Fokusmoodin kytkimet ovat samaa lajia: näkyvissä vain vivun takana.
+  paivitaFokusKytkimet();
 }
+
+/* --- Fokusmoodin kytkimet (omistajan linjaus 24.8.2026) ------------------ */
+
+/*
+ * KAKSI KEHITTÄJÄNAPPIA MATKALAUKUN OIKEALLA PUOLELLA (index.html
+ * #fokus-kytkimet).
+ *
+ * Fokusmoodi on pelin oletustila, ja tavalliselle pelaajalle se on AINA
+ * päällä: kotelo on piilossa ilman kehittäjätilaa, joten kytkintä ei ole
+ * olemassa eikä asetusta voi vahingossa sammuttaa. Kehittäjä tarvitsee
+ * molemmat suunnat nähdäkseen, mitä fokusmoodi muutti.
+ *
+ * TILA PÄIVITTYY ILMAN SIVULATAUSTA. Fokuskerros elää valmiiksi
+ * piirretyn kartan päällä (js/ui.js paivitaFokusKerros), joten kytkin
+ * riittää: karttaa ei tarvitse rakentaa uusiksi eikä peliä ladata.
+ * Pöllön pysyvä kellunta ja alanappirivin kaksi nappia eivät ole
+ * kytkimen takana lainkaan — ne ovat omistajan nimenomaisen ohjeen
+ * mukaan voimassa aina.
+ */
+const fokusKotelo = document.getElementById('fokus-kytkimet');
+const fokusNappi = document.getElementById('fokus-btn');
+const fokusSumennusNappi = document.getElementById('fokus-sumennus-btn');
+
+function paivitaFokusKytkimet() {
+  if (!fokusKotelo) return;
+  fokusKotelo.hidden = !kehittajaTilaPaalla();
+  const fokus = fokusmoodiPaalla();
+  const sumennus = fokusSumennusPaalla();
+  if (fokusNappi) {
+    fokusNappi.setAttribute('aria-pressed', String(fokus));
+    fokusNappi.title = fokus
+      ? 'Fokusmoodi on päällä — kytke pois nähdäksesi vanhan näkymän'
+      : 'Fokusmoodi on pois päältä — kytke päälle';
+  }
+  if (fokusSumennusNappi) {
+    fokusSumennusNappi.setAttribute('aria-pressed', String(sumennus));
+    // Sumennus vaikuttaa vain fokusmoodin ollessa päällä, ja se sanotaan
+    // suoraan: muuten napin painaminen näyttäisi rikkinäiseltä.
+    fokusSumennusNappi.title = sumennus
+      ? `Fokusmoodin sumennukset ovat päällä${fokus ? '' : ' (fokusmoodi on pois, joten mitään ei sumenneta)'}`
+      : 'Fokusmoodin sumennukset ovat pois päältä — kytke päälle';
+  }
+}
+
+fokusNappi?.addEventListener('click', () => {
+  asetaFokusmoodi(!fokusmoodiPaalla());
+  paivitaFokusKytkimet();
+  ui?.paivitaFokusmoodi();
+});
+
+fokusSumennusNappi?.addEventListener('click', () => {
+  asetaFokusSumennus(!fokusSumennusPaalla());
+  paivitaFokusKytkimet();
+  ui?.paivitaFokusmoodi();
+});
+
+paivitaFokusKytkimet();
 
 document.getElementById('raamattu-lehti-btn')?.addEventListener('click', () => {
   window.matkakirja?.ui?.avaaRaamattuLehti();

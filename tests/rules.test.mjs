@@ -1374,7 +1374,18 @@ test('version 1 tallennus kääntyy mannerkohtaiseksi', () => {
   assert.equal(puhdas.starFound, false);
 });
 
-// --- Viisas Pöllö on löydettävä aarre (omistajan tilaus 18.8.2026) --------
+/* --- Viisas Pöllö on löydettävä aarre (omistajan tilaus 18.8.2026) --------
+ *
+ * MEKANIIKKA ON TAUOLLA (omistaja 24.8.2026): pöllö on pelissä heti
+ * alusta, koska fokusmoodin esittely tarvitsee sen (Raamatun osio
+ * "Viisas Pöllö"). Kytkin on js/game.js POLLO_ON_AARRE, ja pelikohtainen
+ * ohitus on `polloAarteena: true` — juuri sitä nämä testit käyttävät.
+ *
+ * TESTIT JÄÄVÄT AJOON SELLAISENAAN. Tauko on kehitysvaiheen valinta eikä
+ * mekaniikan poisto, ja palautus on yhden vakion muutos: jos testit
+ * poistettaisiin nyt, kukaan ei huomaisi mekaniikan hajonneen sillä
+ * välin. Oletustilalla on oma testinsä lohkon lopussa.
+ */
 
 test('pöllö korvaa ensimmäisen laatan aarteen kokonaan', () => {
   const pack = packById('maailmankartta');
@@ -1382,6 +1393,7 @@ test('pöllö korvaa ensimmäisen laatan aarteen kokonaan', () => {
     players: [{ name: 'Yksin', color: '#f00', start: null }],
     pack,
     seed: 31,
+    polloAarteena: true,
   });
   assert.equal(game.polloLoydetty, false, 'peli alkoi pöllö mukanaan');
   assert.equal(game.takePolloPaljastus(), false, 'paljastus odotti ilman löytöä');
@@ -1423,6 +1435,7 @@ test('ensimmäisen laatan tähti siirtyy toisen laatan alle eikä katoa', () => 
     players: [{ name: 'Yksin', color: '#f00', start: null }],
     pack,
     seed: 31,
+    polloAarteena: true,
   });
   game.player.pos = { type: 'city', city: 'lima' };
   game.world.tokens.set('lima', 'star');
@@ -1447,6 +1460,7 @@ test('pöllön löytö kulkee tallennuksen läpi ja vanha tallennus saa pöllön
     players: [{ name: 'Yksin', color: '#f00', start: null }],
     pack,
     seed: 31,
+    polloAarteena: true,
   });
 
   // Löytämätön peli säilyy löytämättömänä myös tallennuksen yli.
@@ -1479,6 +1493,7 @@ test('botin kääntämä laatta ei vie pöllön löytöhetkeä pelaajalta', () =
     ],
     pack,
     seed: 31,
+    polloAarteena: true,
   });
   assert.ok(game.player.isBot, 'testin oletus: botti aloittaa');
   game.player.pos = { type: 'city', city: 'lima' };
@@ -1491,6 +1506,50 @@ test('botin kääntämä laatta ei vie pöllön löytöhetkeä pelaajalta', () =
   game.world.tokens.set('kairo', 'emerald');
   game.revealToken('kairo');
   assert.equal(game.polloLoydetty, true, 'pelaaja ei löytänyt pöllöä');
+});
+
+// --- Pöllö on mukana alusta (omistajan linjaus 24.8.2026) -----------------
+
+test('oletuspelissä pöllö on mukana alusta eikä laatta korvaudu', () => {
+  const pack = packById('maailmankartta');
+  const game = new Game({
+    players: [{ name: 'Yksin', color: '#f00', start: null }],
+    pack,
+    seed: 31,
+  });
+  assert.equal(game.polloAarteena, false, 'aarremekaniikka oli oletuksena päällä');
+  assert.equal(game.polloLoydetty, true, 'peli alkoi ilman pöllöä');
+
+  // Ensimmäinen laatta antaa oman aarteensa: mikään ei korvaudu pöllöllä.
+  game.player.pos = { type: 'city', city: 'lima' };
+  game.world.tokens.set('lima', 'ruby');
+  const rahaEnnen = game.player.money;
+  assert.equal(game.revealToken('lima'), 'ruby', 'ensimmäinen laatta korvautui pöllöllä');
+  assert.ok(game.player.money > rahaEnnen, 'jalokivi ei tuonut rahaa');
+  assert.equal(game.takePolloPaljastus(), false, 'pöllö paljastui vaikka se oli jo mukana');
+});
+
+test('kesken jäänyt aarrepeli ei jää ilman pöllöä kun mekaniikka on tauolla', () => {
+  const pack = packById('maailmankartta');
+  const aarrepeli = new Game({
+    players: [{ name: 'Yksin', color: '#f00', start: null }],
+    pack,
+    seed: 31,
+    polloAarteena: true,
+  });
+  // Sama tallennus kuin 18.–24.8.2026 aloitetulla matkalla: pöllöä ei ole
+  // vielä löydetty. Kytkin kulkee mukana, joten peli jatkuu omilla
+  // säännöillään eikä lippu vaihdu kesken matkan.
+  const kesken = JSON.parse(JSON.stringify(aarrepeli.toJSON()));
+  assert.equal(kesken.polloAarteena, true, 'kytkin ei kulkenut tallennukseen');
+  assert.equal(Game.fromJSON(kesken).polloLoydetty, false, 'kesken oleva löytö katosi');
+
+  // Kytkintä tuntematon vanha tallennus lukee nykyisen oletuksen, ja
+  // silloin pöllön on oltava mukana — muuten sitä ei enää koskaan löytyisi.
+  delete kesken.polloAarteena;
+  const vanha = Game.fromJSON(kesken);
+  assert.equal(vanha.polloAarteena, false);
+  assert.equal(vanha.polloLoydetty, true, 'vanha tallennus jäi ilman pöllöä');
 });
 
 test('tuntematon tallennusversio hylätään yhä', () => {

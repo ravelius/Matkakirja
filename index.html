@@ -121,6 +121,33 @@
            napauttamalla se aukeaa. -->
       <button id="turn-pill" class="turn-pill" type="button"
               title="Isoisän matkalaukku: passi, leimat ja tavarat"></button>
+      <!--
+        FOKUSMOODIN KYTKIMET — MATKALAUKUN OIKEALLA PUOLELLA, VAIN
+        KEHITTÄJÄTILASSA (omistajan linjaus 24.8.2026, Raamatun osio
+        "Fokusmoodi").
+
+        Fokusmoodi on pelin oletustila, joten tavallinen pelaaja ei näe
+        näitä koskaan: kotelo on piilossa, kunnes kehittäjätila on
+        päällä (js/main.js paivitaFokusKytkimet). Kytkin on siis
+        kehittäjän vertailukeino eikä pelaajan asetus — peliin ei tule
+        asetusnäkymää, jossa fokusmoodin voisi vahingossa sammuttaa.
+
+        KAKSI NAPPIA EIKÄ YKSI. Vasen kytkee koko fokusmoodin, oikea
+        pelkät sumennukset. Ennen–jälkeen-vertailussa halutaan usein
+        nähdä juuri sumennuksen osuus muun fokusmoodin pysyessä
+        paikallaan, ja yhdellä napilla se vaatisi kaksi latausta.
+
+        Paikka on matkalaukun JA .topbar-actionsin välissä: laukku on
+        pelin tavaraa, hampurilainen on pelin ympäryksiä, ja nämä ovat
+        kolmas laji — kehittäjän mittatikku. Nimet ovat pieniä
+        tekstinappeja, koska kuvake ei kerro kumpi kytkin on kumpi.
+      -->
+      <div id="fokus-kytkimet" class="fokus-kytkimet" hidden>
+        <button id="fokus-btn" class="fokus-kytkin" type="button"
+                aria-pressed="true">fokus</button>
+        <button id="fokus-sumennus-btn" class="fokus-kytkin" type="button"
+                aria-pressed="true">sumennus</button>
+      </div>
       <div class="topbar-actions">
         <!-- Varusteet: kartan linssivalitsin. Kotelo on piilossa, kunnes
              pelaaja löytää ensimmäisen linssin — löytämätöntä ei näytetä

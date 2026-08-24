@@ -4,7 +4,9 @@
  * Yksikkötestit näkevät kontekstinkeruun ja haun, mutta eivät sitä mitä
  * oikea selain oikeasta DOMista lähettää. Tämä ajaa koko ketjun läpi:
  *
- *   1. alanappirivi: kolme paikkaa, monitoiminapin liuku auki/kiinni,
+ *   1. alanappirivi: KAKSI paikkaa (Liiku ja Tutki; pöllö kelluu
+ *      omistajan linjauksen 24.8.2026 mukaan aina sivussa),
+ *      monitoiminapin liuku auki/kiinni,
  *      liu'ussa kolme nappia (jalan, laiva, lento) jotka peittävät koko
  *      rivin, laiva- ja lentovalikon suodatus, estotilat, kartan
  *      napautus sulkee
@@ -596,14 +598,21 @@ const rivi = await sivu.evaluate(() => {
   return {
     paikkoja: perus.children.length,
     monitoimi: Boolean(perus.querySelector('.monitoimi-nappi')),
-    pollo: Boolean(perus.querySelector('.pollo-paikka .pollo-nappi')),
+    liiku: perus.querySelector('.monitoimi-nappi')?.getAttribute('aria-label') ?? '',
+    // Pöllö EI ole enää rivissä (omistaja 24.8.2026): se kelluu
+    // sivuelementtinä myös pelinäkymässä.
+    polloRivissa: Boolean(perus.querySelector('.pollo-paikka, .pollo-nappi')),
+    polloKelluu: document.querySelector('.pollo-nappi')?.classList
+      .contains('pollo-kelluu-kartalla') ?? false,
     tutki: perus.lastElementChild?.getAttribute('aria-label') ?? '',
     liukuNapit: document.querySelectorAll('.toimintorivi-liuku button').length,
   };
 });
-vaadi('alanappirivissä on kolme paikkaa', rivi.paikkoja === 3, JSON.stringify(rivi));
+vaadi('alanappirivissä on kaksi paikkaa', rivi.paikkoja === 2, JSON.stringify(rivi));
 vaadi('vasemmalla monitoiminappi', rivi.monitoimi === true);
-vaadi('keskellä pöllö', rivi.pollo === true);
+vaadi('vasen nappi on nimeltään Liiku', /^liiku$/i.test(rivi.liiku), rivi.liiku);
+vaadi('pöllö ei ole alanappirivissä', rivi.polloRivissa === false, JSON.stringify(rivi));
+vaadi('pöllö kelluu myös pelinäkymässä', rivi.polloKelluu === true, JSON.stringify(rivi));
 vaadi('oikealla suurennuslasi (Tutki)', /tutki/i.test(rivi.tutki), rivi.tutki);
 vaadi('matkustusnapit ovat liu\'ussa', rivi.liukuNapit >= 1, `${rivi.liukuNapit} kpl`);
 
@@ -2650,12 +2659,14 @@ vaadi('liuku seuraa kavennettua riviä', rivinLeveys.liukuSamalla === true,
 await sumennusSivu.screenshot({ path: join(ULOS, 'alanapit-kapeat-390.png') });
 
 /*
- * LADATTU PELI: kartta ei jää sumeaksi eikä pöllö kellumaan.
+ * LADATTU PELI: kartta ei jää sumeaksi ja pöllö on oikeassa paikassa.
  *
- * Kesken jäänyt peli palautetaan ennen kuin pöllö asennetaan, joten
- * alanappirivin pöllöpaikka jäi ennen tyhjäksi ja nappi kiinnittyi
- * bodyyn kelluvana (omistajan havainto työpöydällä: nappi väärässä
- * kohdassa päivityksen jälkeen, korjautui vasta kaupunginvaihdossa).
+ * Kesken jäänyt peli palautetaan ennen kuin pöllö asennetaan, ja ennen
+ * omistajan 24.8.2026 linjausta se tarkoitti napin jäämistä väärään
+ * kohtaan ruutua (korjautui vasta kaupunginvaihdossa). Nyt kellunta on
+ * oikea lopputulos kaikissa tiloissa, ja tarkistettava asia on se, että
+ * nappi saa myös PELINÄKYMÄN sijainnin (.pollo-kelluu-kartalla) eikä
+ * jää lehtinäkymän kulmaan alanappien päälle.
  * Samalla latauksella mitataan rasteroinnin tarkkuus.
  */
 await sumennusSivu.evaluate(() => {
@@ -2671,7 +2682,7 @@ const palautettu = await sumennusSivu.evaluate(`(() => {
   const nappi = document.querySelector('.pollo-nappi');
   return {
     kerroksia: ${SUMENNUSKERROKSET}.length,
-    rivissa: nappi?.parentElement?.classList.contains('pollo-paikka') ?? false,
+    kartalla: nappi?.classList.contains('pollo-kelluu-kartalla') ?? false,
     kelluu: nappi?.classList.contains('pollo-kelluu') ?? null,
     suhde: nakyva && ui?.taideSkaala ? nakyva.skaala / ui.taideSkaala : null,
   };
@@ -2681,8 +2692,8 @@ vaadi('päivityksen jälkeen kartalla ei ole sumennusta', palautettu.kerroksia =
 vaadi('kartan bittikartta on näkymän tarkkuudessa',
   palautettu.suhde !== null && Math.abs(palautettu.suhde - 1) <= 0.02,
   String(palautettu.suhde));
-vaadi('pöllönappi palaa alanappiriviin ladatussa pelissä',
-  palautettu.rivissa === true && palautettu.kelluu === false, JSON.stringify(palautettu));
+vaadi('pöllönappi kelluu kartalla myös ladatussa pelissä',
+  palautettu.kelluu === true && palautettu.kartalla === true, JSON.stringify(palautettu));
 vaadi('sumennuskoe ei kirjoita konsoliin', sumennusVirheet.length === 0,
   sumennusVirheet.slice(0, 3).join(' | '));
 await sumennusCtx.close();

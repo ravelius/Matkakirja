@@ -595,6 +595,47 @@ button, .brand, .turn-pill, .fact-card h2 {
   flex: 0 0 auto;
 }
 
+/*
+ * FOKUSMOODIN KYTKIMET YLÄRIVILLÄ (omistaja 24.8.2026, index.html
+ * #fokus-kytkimet). Kotelo näkyy vain kehittäjätilassa, joten se ei saa
+ * varata ylärivistä tilaa muilta: `hidden` piilottaa sen kokonaan, ja
+ * `flex: 0 0 auto` estää sitä venymästä kun se on näkyvissä.
+ *
+ * Ulkoasu on tarkoituksella vaatimaton — pieni kirjasin, ohut kehys,
+ * sama pillerin muoto kuin matkalaukulla. Nämä ovat mittatikkuja eivätkä
+ * pelin nappeja, eivätkä ne saa kilpailla logon tai laukun kanssa.
+ * Päällä oleva kytkin erottuu kullalla (aria-pressed="true"), pois
+ * kytketty jää himmeäksi: tila luetaan yhdellä vilkaisulla.
+ */
+.fokus-kytkimet {
+  display: flex;
+  gap: 0.3rem;
+  flex: 0 0 auto;
+}
+
+.fokus-kytkimet[hidden] { display: none; }
+
+.fokus-kytkin {
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fokus-kytkin[aria-pressed='true'] {
+  color: var(--kulta, #eab84e);
+  border-color: var(--kulta, #eab84e);
+}
+
+.fokus-kytkin:hover,
+.fokus-kytkin:focus-visible { border-color: var(--kulta, #eab84e); }
+
 
 /*
  * Muutoslokin omat toiminnot: päivitys ja kehittäjätila.
@@ -4338,6 +4379,37 @@ body.radio-tila .actions {
   stroke-width: 5;
   stroke-linejoin: round;
   stroke-linecap: round;
+}
+
+/* ===========================================================================
+   FOKUSMOODI KARTALLA (omistajan linjaus 24.8.2026, js/ui.js
+   paivitaFokusKerros / paivitaFokusSumu)
+   ---------------------------------------------------------------------------
+   Kaksi sääntöä, ei enempää:
+
+   1. KÄYMÄTTÖMÄN MAAN DATA KATOAA. Laatta, rantarengas, porttikehä,
+      lentokoneen merkki ja kaupungin nimi saavat luokan .fokus-piilossa.
+      `display: none` eikä opacity: piilossa oleva laatta ei saa jäädä
+      napautettavaksi eikä maksaa piirtoa panoroinnissa.
+
+   2. KÄYMÄTÖN MAAILMA HIMMENEE. Harso on pergamentin omaa vaaleaa,
+      ei harmaata eikä mustaa: kartta on paperia, ja paperin päälle
+      laskeutuu sumu eikä varjo. Läpikuultavuus on mitoitettu niin, että
+      mantereiden ääriviivat erottuvat yhä — pelaajan pitää nähdä, että
+      maailmaa on olemassa, muttei mitä siellä on.
+
+   MAAPOHJAN AITO EPÄTERÄVYYS EI OLE TÄSSÄ. Kartan raskas osa on
+   bittikartaksi rasteroitua taidetta (js/mapart.js pilkoTaide), eikä
+   siitä voi sumentaa yhtä maata naapurin pysyessä tarkkana. Verhon
+   reuna pehmenee maskin omassa suodattimessa; oikea maakohtainen
+   topografian tarkentuminen tulee esirenderöityjen karttojen kanssa.
+   =========================================================================== */
+
+.fokus-piilossa { display: none; }
+
+.fokus-sumu-harso {
+  fill: rgba(238, 225, 196, 0.62);
+  stroke: none;
 }
 
 /*
@@ -15511,39 +15583,50 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
 }
 
 /* ===========================================================================
-   ALANAPPIRIVI — kolme paikkaa (js/ui.js piirraToimintorivi)
+   ALANAPPIRIVI — KAKSI PAIKKAA (js/ui.js piirraToimintorivi)
    ---------------------------------------------------------------------------
-   Vasemmalla monitoiminappi, keskellä Viisas Pöllö, oikealla suurennuslasi.
+   Vasemmalla Liiku (monitoiminappi, kompassi), oikealla Tutki
+   (suurennuslasi). Paikkoja oli kolme 12.8.2026 alkaen ja keskimmäisenä
+   Viisas Pöllö; omistajan linjaus 24.8.2026 (Raamatun osio "Fokusmoodi")
+   siirsi pöllön pysyvästi kelluvaksi sivuelementiksi ja jätti riville
+   *"vain Liiku- ja Tutki-napit"*. Pöllön paikan tyylit (.pollo-paikka)
+   jäävät alle, koska rivipaikka on palautettavissa yhdellä lipulla
+   (js/pollo.js POLLO_ALANAPPIRIVISSA).
+
    Matkustusnapit eivät levitä riviä vaan LIUKUVAT koko rivin päälle, joten
-   rivi on aina täsmälleen kolmen napin levyinen (omistajan linjaus
-   12.8.2026). Liu'un ollessa auki KAIKKI kolme perusnappia väistyvät —
-   myös monitoiminappi, joka liu'un avasi (omistajan havainto v589,
-   iPhone: rivissä näkyi neljä nappia kolmen sijaan).
+   rivi on aina täsmälleen kahden napin levyinen. Liu'un ollessa auki
+   MOLEMMAT perusnapit väistyvät — myös monitoiminappi, joka liu'un avasi
+   (omistajan havainto v589, iPhone: rivissä näkyi neljä nappia kolmen
+   sijaan).
    =========================================================================== */
 
 .toimintorivi { position: relative; }
 
 .toimintorivi-perus {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
   justify-items: stretch;
 }
 
-/* Tyhjä paikka pitää ruudukon kolmena, vaikka Tutki ei olisi tarjolla. */
+/* Tyhjä paikka pitää ruudukon kaksiosaisena, vaikka Tutki ei olisi
+   tarjolla — Liiku ei saa venyä yksin koko rivin levyiseksi. */
 .rivi-tyhja { visibility: hidden; }
 
-/* Pöllön paikka: nappi asuu js/pollo.js:ssä ja siirtyy tänne joka
-   piirrolla. Grid-venytys pitää sen samankokoisena kuin naapurinsa. */
+/* Pöllön paikka: nappi asuu js/pollo.js:ssä ja siirtyi tänne joka
+   piirrolla, kunnes omistajan linjaus 24.8.2026 teki kellunnasta
+   pysyvän. Tyylit jäävät lipun (POLLO_ALANAPPIRIVISSA) varalle;
+   grid-venytys pitäisi napin samankokoisena kuin naapurinsa. */
 .pollo-paikka { display: grid; }
 .pollo-paikka > .pollo-nappi { width: 100%; }
 
 /*
- * Liuku peittää koko rivin: kolme matkanappia asettuu täsmälleen kolmen
- * peruspaikan päälle, joten mikään nappi ei jää niiden viereen näkyviin.
- * Sama väli kuin ruudukossa (0.5rem) pitää napit samoissa sarakkeissa.
+ * Liuku peittää koko rivin: kolme matkanappia (jalan, laiva, lento)
+ * jakaa rivin tasan keskenään, joten kumpikaan perusnapeista ei jää
+ * niiden viereen näkyviin. Matkanappeja on yhä kolme, vaikka rivissä on
+ * kaksi paikkaa: liuku on oma flex-rivinsä eikä noudata ruudukkoa.
  * Kiinni ollessaan liuku on sekä läpinäkyvä että napautuksille
- * läpäisemätön — muuten se söisi pöllön ja Tutkin napautukset.
+ * läpäisemätön — muuten se söisi Liiku- ja Tutki-nappien napautukset.
  *
  * Liuku suljetaan napauttamalla rivin ulkopuolelta (kartta) tai
  * valitsemalla jokin matkanapeista; monitoiminappi on auki-tilassa
@@ -15617,11 +15700,17 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
 /* ===========================================================================
    VIISAS PÖLLÖ — chat-paneeli (js/pollo.js)
    ---------------------------------------------------------------------------
-   Nappi elää kahdessa paikassa. Kartalla se on alanappirivin keskimmäinen
-   paikka ja perii .icon-btn-tyylin, jolloin se näyttää naapureiltaan.
-   Lehtinäkymässä se siirtyy lehden <dialog>-elementin sisään ja saa
-   lisäluokan .pollo-kelluu — modaali elää selaimen ylimmässä kerroksessa,
-   eikä rivissä oleva nappi olisi sen alla napautettavissa.
+   PÖLLÖ KELLUU AINA (omistajan linjaus 24.8.2026). Ennen nappi eli
+   kahdessa paikassa: kartalla alanappirivin keskimmäisenä ja lehdessä
+   kelluvana. Nyt se on kelluva molemmissa — Raamatun osio "Fokusmoodi":
+   *"pöllö pysyvästi leijuvana sivuelementtinä kaikissa tiloissa"*.
+   Alanappirivin paikka (.pollo-paikka alempana) on tallella lipun takana
+   (js/pollo.js POLLO_ALANAPPIRIVISSA), mutta sitä ei enää käytetä.
+
+   KELLUNNALLA ON KAKSI KOTIA. Lehtinäkymässä nappi siirtyy modaalin
+   sisään ja ruudun oikeaan alakulmaan, jossa on tyhjää. Pelinäkymässä
+   samassa kulmassa ovat alanapit ja kartan zoomiportaat, joten siellä
+   nappi nousee alanappirivin yläpuolelle (.pollo-kelluu-kartalla).
 
    PANEELI ON PAPERIA (omistajan linjaus 12.8.2026). Tumma laatikko vaihtui
    samaan painopaperiin kuin kaupunkilehden arkki (.dialog.arkki
@@ -15659,6 +15748,45 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
 .pollo-nappi.pollo-kelluu .icon-label { display: none; }
 .pollo-nappi.pollo-kelluu .viiva-ikoni svg { width: 1.7rem; height: 1.7rem; }
 .pollo-nappi.auki { color: var(--accent); }
+
+/*
+ * KELLUNTA PELINÄKYMÄSSÄ (omistajan ohje 24.8.2026: kelluva pöllö ei saa
+ * peittää zoom-nappeja eikä alanappeja).
+ *
+ * KORKEUS. Alanappirivi (.turn-card) on kartan pohjalla: bottom 0.9rem,
+ * pehmuste 0.2rem ja napin oma korkeus noin 2,6rem — eli sen yläreuna on
+ * runsaat 3,7rem ruudun alalaidasta. Pöllö nousee sen yläpuolelle 5rem
+ * korkeuteen, jolloin Liiku- ja Tutki-nappien väliin jää selvä rako
+ * myös silloin kun rivi on kapea ja napit ovat lähellä oikeaa reunaa.
+ *
+ * SIVUSUUNTA. Kartan zoomiportaat (.zoomi) ovat kartan oikeassa
+ * reunassa PYSTYSUUNNASSA KESKELLÄ, joten ne eivät ole tämän tiellä —
+ * ja kosketuslaitteilta ne on piilotettu kokonaan. Sama 0.7rem kuin
+ * lehtinäkymässä pitää napin samalla pystylinjalla molemmissa tiloissa,
+ * jolloin se ei hypi sivusuunnassa lehteä avattaessa.
+ *
+ * Turva-alue lasketaan mukaan molempiin suuntiin: iPhonen alapalkki ei
+ * saa syödä nappia (viewport-fit=cover on index.html:n metassa).
+ */
+.pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla {
+  bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+}
+
+/*
+ * Paneeli avautuu napin yläpuolelle, joten sekin nousee saman verran —
+ * muuten napin ja paneelin väliin ei jäisi rakoa lainkaan.
+ *
+ * VAIN TABLETILLA JA TYÖPÖYDÄLLÄ. Kapealla ruudulla (max-width: 560px
+ * -lohko alempana) paneeli venyy laidasta laitaan ja alanappirivi
+ * piilotetaan koko keskustelun ajaksi, joten siellä sen alalaita on
+ * tarkkaan viritetty ruudun reunaan eikä siihen kosketa. Ilman tätä
+ * mediaehtoa kolmen luokan valitsin jyräisi puhelimen mitat.
+ */
+@media (min-width: 561px) {
+  .pollo-paneeli.pollo-paneeli-kelluu.pollo-paneeli-kartalla {
+    bottom: calc(8.8rem + env(safe-area-inset-bottom, 0px));
+  }
+}
 
 /*
  * PÖLLÖ ILMESTYY LÖYTYESSÄÄN (omistajan tilaus 18.8.2026). Peli alkaa
