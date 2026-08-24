@@ -163,9 +163,39 @@ const RULLAN_VALI_MS = 220;
 // Aloituskartan lähikuvan suurennos yleiskuvaan nähden.
 const ALOITUS_ZOOM = 3.1;
 
+/*
+ * KAMERA-AJON OLETUKSET (ks. ajaKamera).
+ *
+ * Kesto on lyhyempi kuin vanhassa saapumisliu'ussa (ZOOM_MS 3400):
+ * tuo oli pelin avausele, jonka piti tuntua matkalta, kun taas
+ * kamera-ajo tapahtuu kesken pelin ja toistuu joka kaupungissa.
+ * Kahdessa sekunnissa ehtii nähdä mistä mihin siirryttiin ilman että
+ * odottaa.
+ */
+const AJO_MS = 2000;
+/*
+ * Rajauslaatikkoon ajettaessa jätettävä reunavara osuutena laatikon
+ * koosta. Ilman varaa maan rantaviiva koskettaisi ruudun laitaa, eikä
+ * silloin näe onko maa loppu vai jatkuuko se ruudun ulkopuolelle.
+ */
+const AJON_MARGINAALI = 0.12;
+
+/**
+ * Kiihtyy alussa, jarruttaa lopussa (omistajan sanoin "zoomi kiihtyy ja
+ * hidastuu luontevasti"). Sama kaari kuin ZOOM_PEHMENNYS-bezierissä,
+ * mutta funktiona: kamera-ajo lasketaan kehys kerrallaan
+ * requestAnimationFramessa, eikä CSS:n siirtymäkäyrä ole silloin
+ * käytettävissä.
+ */
+function pehmennysKaari(t) {
+  return t < 0.5 ? 4 * t * t * t : 1 - ((-2 * t + 2) ** 3) / 2;
+}
+
 export class Kartta {
   constructor(ui) {
     this.ui = ui;
+    // Kesken oleva kamera-ajo (ks. ajaKamera); null kun kamera on levossa.
+    this.kameraAjo = null;
   }
 
   /**
@@ -608,6 +638,9 @@ export class Kartta {
     // sormeneleen jälkeen (ks. tarkistaTarkkuus). Liukuva kartta
     // pysähtyy, ettei liuku kirjoita siirtoa uuden näkymän päälle.
     this.ui.pysaytaLiuku?.(true);
+    // Painike on käyttäjän oma tahto: kesken oleva kamera-ajo väistyy
+    // ja jättää kartan siihen mihin ehti (ks. pysaytaKameraAjo).
+    this.pysaytaKameraAjo();
     this.ui.merkitseKartanEle();
     // Avausnäkymässä kartalla on oma lähikuvansa ja avausteksti; sinne
     // painikkeet eivät kuulu. Katselutila (?lauta=) näyttää laudan kuin
@@ -726,8 +759,10 @@ export class Kartta {
   /** Palauttaa kartan tavalliseen kokoonsa (uusi peli, laudan vaihto). */
   nollaaAloitusZoom() {
     // Liukuva kartta ei saa jäädä kirjoittamaan siirtoa nollatun
-    // näkymän päälle.
+    // näkymän päälle. Sama kamera-ajolle: se puretaan KIRJAAMATTA
+    // välivaihetta, koska koko lähikuvatila on juuri katoamassa.
     this.ui.pysaytaLiuku?.(true);
+    this.pysaytaKameraAjo(false);
     this.ui.aloitusZoom = false;
     this.ui.mannerZoom = false;
     // Porras oletukselle: seuraava lähikuva alkaa taas saapumistasolta.
@@ -1068,6 +1103,281 @@ export class Kartta {
     this.ui.taydennaTaide?.({ heti: true });
   }
 
+  /*
+   * ==================================================================
+   * KAMERA-AJO (omistajan linjaus 24.8.2026, Raamatun osio
+   * "Karttalinssit" / KAMERA-AJOT: *"piirtomoottoriin kehitetään
+   * sulavat zoomausanimaatiot sisään ja ulos — zoomi kiihtyy ja
+   * hidastuu luontevasti alussa ja lopussa (easing). Tarvitaan paljon
+   * jatkossa: linssien animaatiot, joissa kartta liikkuu itsestään ja
+   * zoomautuu tarvittaessa."*)
+   * ==================================================================
+   *
+   * YKSI FUNKTIO KAIKKIIN AJOIHIN: `ajaKamera(kohde)`. Kohde on joko
+   * keskipiste ja zoomitaso tai rajauslaatikko:
+   *
+   *   kartta.ajaKamera({ x: 667, y: 895, kerroin: 3 })
+   *   kartta.ajaKamera({ x: 667, y: 895, leveys: 240 })   // näkyvä leveys
+   *   kartta.ajaKamera({ bbox: { x, y, w, h }, marginaali: 0.12 })
+   *
+   * Kutsujia on tulossa kolme, ja API on tehty niitä kaikkia varten:
+   * fokusnäkymään saapuminen (maan bbox, js/fokuskartta.js),
+   * ALOITUSLENTO (lähtömaan ja kohdemaan YHTEIS-bbox — `maidenBbox`
+   * antaa sen suoraan laudan maamuodoista) ja linssien omat ajot,
+   * joissa kamera seuraa animaatiota paikasta toiseen.
+   *
+   * MITEN LIIKE PIIRRETÄÄN. Lopullinen näkymä asetetaan HETI
+   * (fitViewBox), ja ajo piirretään sen päälle CSS-muunnoksena, jonka
+   * requestAnimationFrame päivittää joka kehyksellä. Sama oppi kuin
+   * nipistyksessä ja vanhassa zoomiliu'ussa: kartan rasterointi vie
+   * satoja millisekunteja pääsäikeessä, joten sitä ei tehdä kesken
+   * liikkeen — kompositori venyttää valmista kuvaa, ja lopussa ruudulla
+   * on täysi tarkkuus. Mittakaavaa interpoloidaan LOGARITMISESTI:
+   * lineaarinen kerroin näyttää siltä kuin ajo jarruttaisi kesken
+   * matkan, koska silmä lukee zoomista suhteen eikä erotusta.
+   *
+   * ELE KESKEYTTÄÄ. Sormi kartalle, nipistys, rulla tai zoomipainike
+   * pysäyttää ajon siihen paikkaan mihin se ehti (pysaytaKameraAjo), ja
+   * välivaihe kirjataan oikeaksi kameratilaksi täsmälleen kuten
+   * nipistyksen lopetus tekee — kartta ei nykäise takaisin eikä hyppää
+   * eteenpäin.
+   */
+
+  /** Onko kamera-ajo juuri nyt käynnissä? */
+  kameraAjossa() {
+    return Boolean(this.kameraAjo);
+  }
+
+  /**
+   * Näkymän tila juuri nyt: keskipiste laudan koordinaateissa ja
+   * mittakaava (pikseliä laudan yksikköä kohti).
+   *
+   * Luetaan RUUDULTA (ui.nakyvaAlue) eikä zoomimuuttujista, koska
+   * yleiskuvassa this.ui.zoomSkaala on nolla ja ajo voi alkaa kummasta
+   * tahansa tilasta.
+   */
+  kameranTila() {
+    const n = this.ui.nakyvaAlue?.();
+    if (!n?.skaala) return null;
+    return { x: n.x + n.w / 2, y: n.y + n.h / 2, skaala: n.skaala };
+  }
+
+  /** Yleiskuvan mittakaava: se, johon zoomikerroin 1 viittaa. */
+  yleiskuvanSkaala(paneW, paneH) {
+    const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
+    return Math.min(paneW / box.w, paneH / box.h);
+  }
+
+  /**
+   * Kohdekuvauksesta keskipiste ja zoomikerroin.
+   *
+   * Kerroin rajataan aina portaikon päihin (zoomiRajat), jottei ajo vie
+   * näkymää kauemmas kuin loitonnusnappi tai lähemmäs kuin lähin porras
+   * — ja kiertävällä kartalla sitä paitsi saumavaran taakse.
+   */
+  kameranKohde(kohde, paneW, paneH) {
+    if (!kohde) return null;
+    const yleis = this.yleiskuvanSkaala(paneW, paneH);
+    if (!yleis) return null;
+    const { pienin, suurin } = this.zoomiRajat();
+    const rajaa = (k) => Math.min(suurin, Math.max(pienin, k));
+    if (kohde.bbox) {
+      const b = kohde.bbox;
+      if (!(b.w > 0) || !(b.h > 0)) return null;
+      // Marginaali on osuus laatikon koosta joka reunaan: 0,12 jättää
+      // maan ympärille sen verran merta ja naapuria, että muoto erottuu
+      // eikä rantaviiva kosketa ruudun laitaa.
+      const vara = 1 + 2 * (kohde.marginaali ?? AJON_MARGINAALI);
+      const skaala = Math.min(paneW / (b.w * vara), paneH / (b.h * vara));
+      return {
+        x: b.x + b.w / 2,
+        y: b.y + b.h / 2,
+        kerroin: rajaa(skaala / yleis),
+      };
+    }
+    if (!Number.isFinite(kohde.x) || !Number.isFinite(kohde.y)) return null;
+    const kerroin = kohde.leveys > 0
+      ? (paneW / kohde.leveys) / yleis
+      : (kohde.kerroin ?? this.zoomiKerroin);
+    return { x: kohde.x, y: kohde.y, kerroin: rajaa(kerroin) };
+  }
+
+  /**
+   * Maajoukon yhteinen rajauslaatikko laudan koordinaateissa.
+   *
+   * Tästä saa sekä yhden maan fokusrajauksen että ALOITUSLENNON
+   * kahden maan yhteisrajauksen (Britannia + kohdemaa) yhdellä
+   * kutsulla. Palauttaa null, jos laudalla ei ole maamuotoja.
+   */
+  maidenBbox(isot) {
+    const muodot = this.ui.game?.pack?.map?.countryShapes;
+    if (!muodot || !isot?.length) return null;
+    let x0 = Infinity; let y0 = Infinity; let x1 = -Infinity; let y1 = -Infinity;
+    for (const iso of isot) {
+      for (const rengas of muodot[iso]?.renkaat ?? []) {
+        for (const [x, y] of rengas) {
+          if (x < x0) x0 = x;
+          if (x > x1) x1 = x;
+          if (y < y0) y0 = y;
+          if (y > y1) y1 = y;
+        }
+      }
+    }
+    if (!Number.isFinite(x0) || x1 <= x0 || y1 <= y0) return null;
+    return { x: x0, y: y0, w: x1 - x0, h: y1 - y0 };
+  }
+
+  /**
+   * Ajaa kameran nykyisestä näkymästä kohteeseen pehmeästi.
+   *
+   * Palauttaa lupauksen, joka täyttyy arvolla true kun ajo pääsi perille
+   * ja false jos se keskeytyi tai jäi tekemättä. Liikeherkkyys
+   * (reducedMotion) hyppää suoraan perille — se on sama sääntö kuin
+   * muillakin kartan liikkeillä.
+   */
+  ajaKamera(kohde, { kesto = AJO_MS, pehmennys = pehmennysKaari } = {}) {
+    const pane = this.ui.svg?.parentElement;
+    if (this.ui.dead || !pane) return Promise.resolve(false);
+    const paneW = pane.clientWidth;
+    const paneH = pane.clientHeight;
+    if (!paneW || !paneH) return Promise.resolve(false);
+    // Avausnäkymässä kartalla on oma lähikuvansa ja avausteksti; sinne
+    // ajo ei kuulu (sama raja kuin zoomipainikkeilla).
+    if (this.avausNakymassa()) return Promise.resolve(false);
+    const maali = this.kameranKohde(kohde, paneW, paneH);
+    if (!maali) return Promise.resolve(false);
+    const alku = this.kameranTila();
+
+    // Edellinen ajo pois alta ILMAN välivaiheen kirjausta: uusi ajo
+    // asettaa näkymän joka tapauksessa itse.
+    this.pysaytaKameraAjo(false);
+
+    // Lopullinen näkymä paikalleen heti. Sen päälle piirretään liike.
+    this.ui.zoomiVapaa = maali.kerroin;
+    this.ui.zoomKohde = { x: maali.x, y: maali.y };
+    this.ui.panX = null;
+    this.ui.panY = null;
+    if (!this.ui.mannerZoom) {
+      this.ui.mannerZoom = true;
+      document.body.classList.add('manner-zoom');
+    }
+    this.fitViewBox();
+    this.paivitaZoomiNapit();
+
+    const loppu = this.kameranTila();
+    if (this.ui.reducedMotion || !alku || !loppu || kesto <= 0) {
+      this.ui.taydennaTaide?.({ heti: true });
+      return Promise.resolve(true);
+    }
+    // Ajo, joka ei liikuta mitään, on turha: pieni ero on sekä
+    // näkymätön että altis pyöristysvirheelle.
+    const matka = Math.hypot(loppu.x - alku.x, loppu.y - alku.y) * loppu.skaala;
+    const suhde = Math.abs(Math.log(loppu.skaala / alku.skaala));
+    if (matka < 8 && suhde < 0.02) {
+      this.ui.taydennaTaide?.({ heti: true });
+      return Promise.resolve(true);
+    }
+
+    const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
+    const ylaReuna = this.ui.zoomYlaReuna ?? box.y;
+    const loppuSkaala = this.ui.zoomSkaala || loppu.skaala;
+    const svg = this.ui.svg;
+    document.body.classList.add('zoom-kaynnissa');
+    svg.style.transition = 'none';
+
+    /** Välivaihe ruudulle: keskipiste `x,y` mittakaavassa `s`. */
+    const piirra = (x, y, s) => {
+      const k = s / loppuSkaala;
+      const ex = (x - box.x) * loppuSkaala;
+      const ey = (y - ylaReuna) * loppuSkaala;
+      const tx = paneW / 2 - k * ex;
+      const ty = paneH / 2 - k * ey;
+      if (!Number.isFinite(tx) || !Number.isFinite(ty) || !Number.isFinite(k)) return;
+      svg.style.transform =
+        `translate3d(${tx.toFixed(1)}px, ${ty.toFixed(1)}px, 0) scale(${k.toFixed(4)})`;
+    };
+
+    return new Promise((valmis) => {
+      const ajo = {
+        alku,
+        loppu,
+        alkuhetki: performance.now(),
+        kesto,
+        piirra,
+        valmis,
+        kehys: 0,
+        // Missä ajo on juuri nyt: pysäytys lukee tämän ja kirjaa sen
+        // oikeaksi kameratilaksi.
+        nyt: { ...alku },
+      };
+      this.kameraAjo = ajo;
+      piirra(alku.x, alku.y, alku.skaala);
+      const askel = (hetki) => {
+        if (this.kameraAjo !== ajo) return;
+        if (this.ui.dead) { this.pysaytaKameraAjo(false); return; }
+        const t = Math.min(1, (hetki - ajo.alkuhetki) / ajo.kesto);
+        const e = pehmennys(t);
+        const s = Math.exp(Math.log(alku.skaala)
+          + (Math.log(loppu.skaala) - Math.log(alku.skaala)) * e);
+        const x = alku.x + (loppu.x - alku.x) * e;
+        const y = alku.y + (loppu.y - alku.y) * e;
+        ajo.nyt = { x, y, skaala: s };
+        if (t < 1) {
+          piirra(x, y, s);
+          ajo.kehys = requestAnimationFrame(askel);
+          return;
+        }
+        // Perillä: muunnos pois, jolloin ruudulla on lopullinen näkymä
+        // täydellä tarkkuudella.
+        this.kameraAjo = null;
+        svg.style.transform = '';
+        svg.style.transition = '';
+        document.body.classList.remove('zoom-kaynnissa');
+        this.asetaPan(this.ui.panX, this.ui.panY);
+        this.ui.taydennaTaide?.({ heti: true });
+        valmis(true);
+      };
+      ajo.kehys = requestAnimationFrame(askel);
+    });
+  }
+
+  /**
+   * Pysäyttää kesken olevan ajon.
+   *
+   * `kirjaa` (oletus) jättää kartan siihen näkymään, mihin ajo ehti:
+   * välivaiheen mittakaava ja keskipiste kirjataan oikeaksi
+   * kameratilaksi samalla tavalla kuin nipistyksen lopetuksessa. Ilman
+   * sitä muunnos vain pyyhitään ja kartta jää ajon MAALIIN — juuri se
+   * hyppy, jota ele ei saa aiheuttaa.
+   */
+  pysaytaKameraAjo(kirjaa = true) {
+    const ajo = this.kameraAjo;
+    if (!ajo) return false;
+    this.kameraAjo = null;
+    cancelAnimationFrame(ajo.kehys);
+    const svg = this.ui.svg;
+    if (svg) {
+      svg.style.transform = '';
+      svg.style.transition = '';
+    }
+    document.body.classList.remove('zoom-kaynnissa');
+    if (kirjaa && svg && !this.ui.dead) {
+      const pane = svg.parentElement;
+      const yleis = pane ? this.yleiskuvanSkaala(pane.clientWidth, pane.clientHeight) : 0;
+      const { pienin, suurin } = this.zoomiRajat();
+      if (yleis) {
+        this.ui.zoomiVapaa = Math.min(suurin, Math.max(pienin, ajo.nyt.skaala / yleis));
+        this.ui.zoomKohde = { x: ajo.nyt.x, y: ajo.nyt.y };
+        this.ui.panX = null;
+        this.ui.panY = null;
+        this.fitViewBox();
+        this.paivitaZoomiNapit();
+      }
+    }
+    ajo.valmis(false);
+    return true;
+  }
+
   /**
    * Zoomausäänen tieltä raivataan hetki hiljaisuutta (omistajan toive):
    * lukuääni lopetetaan kokonaan ja taustaäänimaisema vaimennetaan, ja
@@ -1241,6 +1551,9 @@ export class Kartta {
       this.ui.merkitseKartanEle();
       // Sormi kartalle = liukuva kartta pysähtyy siihen paikkaan.
       pysaytaLiuku(true);
+      // Sama koskee kamera-ajoa: ele keskeyttää sen aina (Raamattu
+      // "Karttalinssit" / AIKAJANA-AJO: pelaajan ele voittaa animaation).
+      this.pysaytaKameraAjo();
       // Pöllön vihjekupla katoaa heti, kun kartalla tapahtuu jotain.
       this.ui.kartallaKosketettu();
     }, paalla);
@@ -1288,8 +1601,9 @@ export class Kartta {
       this.ui.osoitinKartalla = true;
       this.ui.merkitseKartanEle();
       // iOS voi perua osoitintapahtumat (ks. yllä), joten liuku
-      // pysäytetään myös kosketuksesta.
+      // ja kamera-ajo pysäytetään myös kosketuksesta.
       pysaytaLiuku(true);
+      this.pysaytaKameraAjo();
       this.ui.kartallaKosketettu();
     }, paalla);
     pane.addEventListener('touchmove', () => this.ui.merkitseKartanEle(), paalla);

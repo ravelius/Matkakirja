@@ -26,7 +26,7 @@ import {
   MERKKI_SOITA, REVEAL_SUB, VIIVA_IKONIT, aarreIkoni, aarrekuvanOsoitteet,
   alkuKehykset, arvoHuudahdus, ekaLause, esilataaKuvat, html, jaaKappaleiksi,
   jaljenKehykset, kierraKehykset, kuvitukseton, lahdemerkinta, liuskaIkoniSvg,
-  onVanhaKuva, pehmeaPolku, piirraLeipateksti, polunPituus,
+  onVanhaKuva, pehmeaPolku, piirraLeipateksti, pisteMonikulmiossa, polunPituus,
   cachedImage, cachedSummary, fokusSumennusPaalla, fokusmoodiPaalla, kehittajaTilaPaalla,
   shortIntro, suojaa, tallennaLinssi, tallennettuLinssi, viivaIkoni,
 } from './ui-apurit.js';
@@ -232,6 +232,8 @@ import { MERISYVYYS } from './packs/maailmankartta-syvyys.js';
 import { MAASTON_VARJOSTUS } from './packs/maailmankartta-varjostus.js';
 // Remontin M7a: laudan kamera ja koordinaatit (malli B).
 import { INTRO_SPACE, Kartta } from './kartta.js';
+// Fokusmoodin maakohtainen topografiapohja (paketti 2).
+import { paivitaFokuskartta, paivitaFokusNimet, nollaaFokuskartta } from './fokuskartta.js';
 
 const DIE_FACES = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 const BOT_DELAY = 650;
@@ -3556,6 +3558,13 @@ export class UI {
   }
 
   paivitaMaastonimet() {
+    /*
+     * Fokusnäkymän lisänimet tahdistetaan ENNEN varhaisia paluita:
+     * ne elävät omassa kerroksessaan eivätkä riipu nimipaketista,
+     * mutta niiden näkyvyys riippuu samasta asiasta kuin maastonimien
+     * — siitä, kuinka isona kirjain piirtyy ruudulle.
+     */
+    paivitaFokusNimet(this);
     if (!this.maastonimiKerros) return;
     if (!this.maastonimet) return;
     const nakyva = this.nakyvaAlue();
@@ -3585,6 +3594,50 @@ export class UI {
       avaa: (kohde) => this.avaaMaastonimi(kohde),
       joet,
     });
+    this.himmennaMaastonimet();
+  }
+
+  /**
+   * Fokusmoodi: muiden alueiden maastonimet harson taakse.
+   *
+   * Omistajan lista paketille 2: *"muiden alueiden maastonimet (Alpit,
+   * Apenniinit…) himmeiksi/piiloon harson alla; nykyisen maan alueen
+   * nimet saavat jäädä."*
+   *
+   * MIKSI TÄSSÄ EIKÄ HARSON ALLA. Nimikerros on this.svg:n suora lapsi
+   * juuriryhmän ULKOPUOLELLA (ks. maastonimiKerros), koska kiertävä
+   * kartta ei saa kirjoittaa samaa nimeä kahdesti. Sumuverho on
+   * juuriryhmän sisällä, joten se ei yllä nimiin — eikä kerrosta voi
+   * siirtää verhon alle menettämättä sitä syytä, jonka takia se on
+   * siellä. Himmennys tehdään siis nimikohtaisesti.
+   *
+   * MAA PÄÄTELLÄÄN PAIKASTA, koska nimipaketissa ei ole maatietoa:
+   * ankkuri (data-x/data-y, js/mapart.js drawMaastonimet) testataan
+   * tarkkojen maiden monikulmioita vasten. Nimiä on ruudulla
+   * korkeintaan parikymmentä, joten testi on halpa.
+   */
+  himmennaMaastonimet() {
+    const kerros = this.maastonimiKerros;
+    if (!kerros) return;
+    const nimet = kerros.querySelectorAll('.maastonimi');
+    if (!nimet.length) return;
+    const maat = this.fokusSumuPaalla() ? this.fokusMaat() : null;
+    const muodot = this.game.pack.map?.countryShapes;
+    if (!maat || !muodot) {
+      for (const n of nimet) n.classList.remove('maastonimi-harson-alla');
+      return;
+    }
+    const renkaat = [];
+    for (const iso of maat) {
+      for (const r of muodot[iso]?.renkaat ?? []) renkaat.push(r);
+    }
+    for (const n of nimet) {
+      const x = Number(n.dataset.x);
+      const y = Number(n.dataset.y);
+      const sisalla = Number.isFinite(x) && Number.isFinite(y)
+        && renkaat.some((r) => pisteMonikulmiossa(x, y, r));
+      n.classList.toggle('maastonimi-harson-alla', !sisalla);
+    }
   }
 
   /**
@@ -4150,6 +4203,21 @@ export class UI {
     }, root);
 
     /*
+     * FOKUSKARTTA: nykyisen maan esirenderöity topografia (paketti 2,
+     * js/fokuskartta.js). Kerros on TYHJÄ kunnes fokusmoodi tarvitsee
+     * sen — sama malli kuin linssillä ja sumuverholla.
+     *
+     * TÄHÄN KOHTAAN eli linssin päälle mutta maan korostuksen,
+     * sumuverhon, nimien ja kaupunkien alle: kuva on maastoa, ei
+     * pelitilaa. Juuriryhmän sisään, jotta kiertävän kartan <use>-kopio
+     * saa sen mukanaan.
+     */
+    this.fokuskarttaKerros = el('g', {
+      class: 'fokuskartta', 'pointer-events': 'none',
+    }, root);
+    nollaaFokuskartta(this);
+
+    /*
      * Etusivun kulkevat valopisteet. Vain aloituslaudalla; render()
      * irrottaa kerroksen puusta heti kun peli alkaa.
      *
@@ -4338,32 +4406,7 @@ export class UI {
      * tieltä: niitä on askelpisteineen noin tuhat elementtiä.
      */
     const routes = el('g', { class: 'routes' }, staattinen);
-    for (const e of board.edges) {
-      const d = kasinPiirretty(e.poly, 2)
-        .map(([x, y], i) => `${i ? 'L' : 'M'}${x.toFixed(1)},${y.toFixed(1)}`).join(' ');
-      el('path', {
-        d,
-        class: `route route-${e.type}`,
-        opacity: (0.82 + hash01(`route:${e.id}`) * 0.36).toFixed(2),
-      }, routes);
-
-      for (let i = 1; i < e.steps; i++) {
-        const key = `${e.id}:${i}`;
-        // Askelmat eivät ole tasavälein eivätkä täysin samankokoisia.
-        const t = (i + vary(`${key}:t`, 0.09)) / e.steps;
-        const { x, y } = pointAlong(e.poly, Math.min(Math.max(t, 0.04), 0.96));
-        const r = 5.3 + hash01(`${key}:r`) * 1.5;
-        el('ellipse', {
-          cx: x + vary(`${key}:x`, 1.6),
-          cy: y + vary(`${key}:y`, 1.6),
-          rx: r,
-          ry: r * (0.86 + hash01(`${key}:ry`) * 0.24),
-          transform: `rotate(${vary(`${key}:rot`, 40).toFixed(1)} ${x.toFixed(1)} ${y.toFixed(1)})`,
-          opacity: (0.72 + hash01(`${key}:o`) * 0.5).toFixed(2),
-          class: `step step-${e.type}`,
-        }, routes);
-      }
-    }
+    this.piirraReittiViivat(routes, board.edges);
 
     // Vakiohinta kerrotaan kerran kartan selitteessä; reitille merkitään
     // hinta vain, jos se poikkeaa vakiosta. Näin meri pysyy siistinä.
@@ -4666,6 +4709,49 @@ export class UI {
     if (uusiMaa) this.animoiMaanAariviiva(polut, key);
   }
 
+  /**
+   * Reittiviivat ja askelpisteet annettuun säiliöön.
+   *
+   * OMANA METODINAAN, koska reitit piirretään kahteen paikkaan: laudan
+   * kuvaan (drawBoard, koko lauta kerralla) ja fokuskartan päälle
+   * (js/fokuskartta.js, vain rajaukseen osuvat reitit). Jälkimmäinen
+   * tarvitaan siksi, että esirenderöity maastokuva liimataan laudan
+   * bittikartan päälle ja peittäisi muuten alleen jäävät tiet — reitit
+   * ovat pelitilaa, eikä pelitila saa jäädä kuvituksen alle.
+   *
+   * Yksi kopio piirtosäännöistä: heilunta, läpikuultavuus ja
+   * askelpisteiden hajonta lasketaan reitin tunnuksesta, joten sama
+   * reitti näyttää molemmissa kerroksissa täsmälleen samalta.
+   */
+  piirraReittiViivat(sailio, reitit) {
+    for (const e of reitit) {
+      const d = kasinPiirretty(e.poly, 2)
+        .map(([x, y], i) => `${i ? 'L' : 'M'}${x.toFixed(1)},${y.toFixed(1)}`).join(' ');
+      el('path', {
+        d,
+        class: `route route-${e.type}`,
+        opacity: (0.82 + hash01(`route:${e.id}`) * 0.36).toFixed(2),
+      }, sailio);
+
+      for (let i = 1; i < e.steps; i++) {
+        const key = `${e.id}:${i}`;
+        // Askelmat eivät ole tasavälein eivätkä täysin samankokoisia.
+        const t = (i + vary(`${key}:t`, 0.09)) / e.steps;
+        const { x, y } = pointAlong(e.poly, Math.min(Math.max(t, 0.04), 0.96));
+        const r = 5.3 + hash01(`${key}:r`) * 1.5;
+        el('ellipse', {
+          cx: x + vary(`${key}:x`, 1.6),
+          cy: y + vary(`${key}:y`, 1.6),
+          rx: r,
+          ry: r * (0.86 + hash01(`${key}:ry`) * 0.24),
+          transform: `rotate(${vary(`${key}:rot`, 40).toFixed(1)} ${x.toFixed(1)} ${y.toFixed(1)})`,
+          opacity: (0.72 + hash01(`${key}:o`) * 0.5).toFixed(2),
+          class: `step step-${e.type}`,
+        }, sailio);
+      }
+    }
+  }
+
   /* --- FOKUSMOODI (omistajan linjaus 24.8.2026) --------------------- */
 
   /**
@@ -4751,6 +4837,14 @@ export class UI {
       osa.classList.toggle('fokus-piilossa', ulkona);
     }
     this.paivitaFokusSumu(maat);
+    // Maastonimet myös tässä eikä vain nimien piirrossa: maa vaihtuu
+    // ilman että näkymä muuttuu (ja piirto ohittaa muuttumattoman
+    // näkymän tunnisteellaan), joten muuten Alpit jäisivät kirkkaiksi
+    // siihen asti kun karttaa seuraavan kerran liikutetaan.
+    this.himmennaMaastonimet();
+    // Maakohtainen topografiapohja ämpäristä (paketti 2). Puuttuva kuva
+    // ei muuta mitään: kerros jää tyhjäksi.
+    paivitaFokuskartta(this);
   }
 
   /**
@@ -4852,8 +4946,10 @@ export class UI {
     this.fokusmoodi = fokusmoodiPaalla();
     this.fokusSumennus = fokusSumennusPaalla();
     // Verho on saatettava rakentaa uusiksi, vaikka maajoukko olisi sama:
-    // kytkin muuttaa tilaa eikä joukkoa.
+    // kytkin muuttaa tilaa eikä joukkoa. Sama fokuskartalle — mutta
+    // ilman kamera-ajoa, koska kytkimen napautus ei ole saapuminen.
     this.fokusAvain = null;
+    nollaaFokuskartta(this);
     this.paivitaFokusKerros();
   }
 

@@ -379,6 +379,29 @@ function pehmeatJaksot(pisteet) {
   return jaksot;
 }
 
+/**
+ * Onko piste monikulmion sisällä? Säteenheitto vaakasuoraan.
+ *
+ * Klassinen algoritmi lyhimmässä muodossaan: lasketaan monta kertaa
+ * pisteestä oikealle lähtevä säde ylittää monikulmion sivun. Pariton
+ * määrä = sisällä. Reunatapaus (piste tasan sivulla) ei ole tässä
+ * merkityksellinen — kutsuja kysyy "missä maassa tämä nimi on", eikä
+ * rannikon pikselintarkka puoli ratkaise mitään.
+ *
+ * Rengas on lista [x, y] -pareja pelilaudan koordinaateissa.
+ */
+export function pisteMonikulmiossa(x, y, rengas) {
+  let sisalla = false;
+  for (let i = 0, j = rengas.length - 1; i < rengas.length; j = i, i += 1) {
+    const [xi, yi] = rengas[i];
+    const [xj, yj] = rengas[j];
+    if ((yi > y) !== (yj > y) && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) {
+      sisalla = !sisalla;
+    }
+  }
+  return sisalla;
+}
+
 export function pehmeaPolku(pisteet) {
   if (pisteet.length < 2) return '';
   const jaksot = pehmeatJaksot(pisteet);

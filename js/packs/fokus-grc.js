@@ -1,0 +1,78 @@
+/*
+ * FOKUSNÄKYMÄN LISÄNIMET — KREIKKA (pilotti, omistaja 24.8.2026).
+ *
+ * Raamatun osio "Fokusmoodi": *"Laatan lisäksi maan muita kaupunkeja
+ * (ei pelattavia), jokia, järviä, vuoria."*
+ *
+ * MIKSI NÄMÄ OVAT PELISSÄ EIVÄTKÄ KUVASSA. Esirenderöity maastopohja
+ * (tools/tee-fokuskartta.mjs) on tarkoituksella TÄYSIN NIMETÖN: kuva
+ * skaalautuu zoomin mukana, joten siihen poltettu teksti sumenisi
+ * lähikuvassa ja kutistuisi lukukelvottomaksi yleiskuvassa — ja se
+ * olisi kreikaksi tai englanniksi sen mukaan, mitä aineistossa sattuu
+ * lukemaan. Peli piirtää nimet SVG:nä: ne pysyvät terävinä joka
+ * zoomilla ja ovat suomeksi, kuten kaikki muukin pelissä.
+ *
+ * KURATOITU KÄSIN, EI POIMITTU AINEISTOSTA. Nämä ovat isoisän atlaksen
+ * harvoja merkintöjä eivätkä täydellinen luettelo: neljä kaupunkia,
+ * kolme vuorta ja kolme merta. Vähemmän on tässä tarkoitus — fokusmoodi
+ * on annostelua.
+ *
+ * KOORDINAATIT OVAT PELILAUDAN OMIA (maailmankartta, Millerin lieriö
+ * LEVEYS 12000 / LON0 -175 / POHJOINEN 76). Ne on laskettu kerran
+ * asteista laudan kaavalla — sama kaava, jolla fokuskartan kuva
+ * renderöidään (tools/fokuskartta/piirto.js laudanProjektio) — eikä
+ * pelissä ole projektiokoodia lainkaan. Asteet ovat mukana
+ * kommentissa, jotta luvut voi laskea uudelleen jos lauta joskus
+ * vaihtaa projektiota.
+ *
+ * Sijainnit: Wikipedia / Natural Earth 10m. Merten nimien paikat ovat
+ * karttatypografiaa eivätkä paikkatietoa — ne on aseteltu silmällä
+ * sinne, missä nimi mahtuu ulapalle.
+ */
+
+export const FOKUS_LISANIMET = {
+  GRC: {
+    lauta: 'maailmankartta',
+    /*
+     * Muut kaupungit: EI pelattavia laattoja vaan pieniä pisteitä.
+     * Nafplio on mukana tarinan takia (Kreikan ensimmäinen pääkaupunki,
+     * 1829–1834 — isoisän matkan aikaan tuore muisto), vaikka se on
+     * näistä pienin.
+     */
+    kaupungit: [
+      // 22,9444 E / 40,6401 N
+      { nimi: 'Thessaloniki', x: 6598.1, y: 1777.7 },
+      // 21,7346 E / 38,2466 N
+      { nimi: 'Patras', x: 6557.8, y: 1871.3, ank: 'end' },
+      // 20,8537 E / 39,6650 N
+      { nimi: 'Ioannina', x: 6528.5, y: 1816, ank: 'end' },
+      // 22,8069 E / 37,5675 N
+      { nimi: 'Nafplio', x: 6593.6, y: 1897.5 },
+    ],
+    /*
+     * Vuoret: kolmio ja korkeus metreinä. Olympos on ainoa, jonka
+     * kaikki tuntevat, mutta Parnassos on Delfoin vuori ja Taÿgetos
+     * Spartan — kolmella saa Kreikan selkärangan näkyviin.
+     */
+    vuoret: [
+      // 22,3586 E / 40,0853 N
+      { nimi: 'Olympos', x: 6578.6, y: 1799.5, m: 2918, iso: true },
+      // 22,6231 E / 38,5367 N
+      { nimi: 'Parnassos', x: 6587.4, y: 1860.1, m: 2457 },
+      // 22,3528 E / 36,9564 N
+      { nimi: 'Taÿgetos', x: 6578.4, y: 1921, m: 2404 },
+    ],
+    /*
+     * Meret: harvaan harvennettua kursiivia ulapalle, 1873-atlaksen
+     * tapaan. Kulma seuraa meren muotoa.
+     */
+    meret: [
+      // 25,15 E / 39,05 N
+      { nimi: 'Egeanmeri', x: 6671.7, y: 1840.1, kulma: -7 },
+      // 19,7 E / 37,9 N
+      { nimi: 'Joonianmeri', x: 6490, y: 1884.7, kulma: -18 },
+      // 24,6 E / 35,9 N
+      { nimi: 'Kreetanmeri', x: 6653.3, y: 1961.3, koko: 0.8 },
+    ],
+  },
+};
