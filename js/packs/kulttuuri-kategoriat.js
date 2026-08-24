@@ -49240,6 +49240,35 @@ export const KULTTUURI_KATEGORIAT = {
        * vuorenrinteille noussut asutus).
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 21 (24.8.2026, viitekuvilla
+         * ankkuroituna: kohde tunnistettiin sen omasta Commons-
+         * kategoriasta ja generointi nojasi neljaan vapaaseen
+         * valokuvaan. tools/hero-tyolista-kabul.mjs). */
+        {
+          ampari: 'herokoe/hero-kabul-aamu.png',
+          selite: 'Karte Sakhin kaupunginosassa Asamayi-vuoren juurella '
+            + 'seisovan Sakhin pyhäkön eli sinisen moskeijan julkisivut '
+            + 'on päällystetty uussafavidiseen persialaiseen tapaan '
+            + 'lasitetuilla laatoilla, joihin on kirjoitettu '
+            + 'omistuskirjoituksia ja runoutta.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-kabul-keskipaiva.png',
+          selite: 'Kabulin yliopisto perustettiin 1931 kuningas Mohammed '
+            + 'Nadir Shahin aikana, se on yksi Afganistanin vanhimmista '
+            + 'korkeakouluista, ja siellä opiskelee noin 22 000 '
+            + 'opiskelijaa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-kabul-ilta.png',
+          selite: 'Abdul Rahmanin moskeija eli Kabulin suuri moskeija seisoo '
+            + 'Deh Afghananin kauppakorttelissa Zarnegar-puiston '
+            + 'vieressä, se on kolmikerroksinen ja peittää 1,4 hehtaarin '
+            + 'tontin, ja yksi sen kerroksista on varattu naisille.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'باغ بابر.jpg',
           selite: 'Baburin puutarha on 11,5 hehtaaria ja yli viisisataa vuotta '
@@ -57967,6 +57996,34 @@ export const KULTTUURI_KATEGORIAT = {
        * aiheena samalla tiedostolla.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 21 (24.8.2026, viitekuvilla
+         * ankkuroituna: kohde tunnistettiin sen omasta Commons-
+         * kategoriasta ja generointi nojasi neljaan vapaaseen
+         * valokuvaan. tools/hero-tyolista-melbourne.mjs). */
+        {
+          ampari: 'herokoe/hero-melbourne-aamu.png',
+          selite: 'State Library Victoria perustettiin 1854 nimellä Melbourne '
+            + 'Public Library, ja se on Australian vanhin yleinen '
+            + 'kirjasto; sen yli viiden miljoonan esineen kokoelmiin '
+            + 'kuuluu myös Ned Kellyn haarniska.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-melbourne-keskipaiva.png',
+          selite: 'Nykyinen Princes-silta valmistui 1888 kaupungin '
+            + 'vanhimmalle jokiylitykselle ja yhdistää Swanston Streetin '
+            + 'St Kilda Roadiin; se merkittiin Victorian '
+            + 'rakennusperintörekisteriin 20. elokuuta 1982.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-melbourne-ilta.png',
+          selite: 'Luna Park Melbourne avattiin St Kildan rannalla 13. '
+            + 'joulukuuta 1912, ja sen puinen Great Scenic Railway on '
+            + 'maailman vanhin yhä toiminnassa oleva vuoristorata, jonka '
+            + 'vaunussa seisoo edelleen jarrumies.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Aerial panorama of Melbourne city taken from Flagstaff Gardens.jpg',
           selite: 'Flagstaff Gardens on yksi niistä alueista, jotka '
@@ -58699,6 +58756,33 @@ export const KULTTUURI_KATEGORIAT = {
        * ei ole minkään noston aiheena.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 21 (24.8.2026, viitekuvilla
+         * ankkuroituna: kohde tunnistettiin sen omasta Commons-
+         * kategoriasta ja generointi nojasi neljaan vapaaseen
+         * valokuvaan. tools/hero-tyolista-vancouver.mjs). */
+        {
+          ampari: 'herokoe/hero-vancouver-aamu.png',
+          selite: 'Lions Gate -silta avattiin 1938 ja on virallisesti '
+            + 'nimeltään First Narrows Bridge; sen pylonit ovat 111 '
+            + 'metriä korkeat ja päähänjänne 473 metriä, ja kolmesta '
+            + 'kaistasta keskimmäisen suunta vaihtuu liikenteen mukaan.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-vancouver-keskipaiva.png',
+          selite: 'Science Worldin geodeettinen kupoli rakennettiin Expo '
+            + 'Centreksi vuoden 1986 maailmannäyttelyyn, ja tiedekeskus '
+            + 'avattiin siinä 6. toukokuuta 1989 False Creekin itäpäässä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-vancouver-ilta.png',
+          selite: 'Marine Building valmistui Burrard Streetille 1930 ja oli '
+            + 'silloin Vancouverin korkein rakennus; se on saanut nimensä '
+            + 'runsaista meriaiheisista koristeistaan, ja se luetaan '
+            + 'maailman parhaiden art deco -rakennusten joukkoon.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Vista de Vancouver desde el parque Stanley, Canadá, 2017-08-14, DD 02-03 PAN.jpg',
           selite: 'Coal Harbourin venesatama ja sen takana kohoava '
@@ -59320,6 +59404,35 @@ export const KULTTUURI_KATEGORIAT = {
        * ole minkään noston aiheena.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 21 (24.8.2026, viitekuvilla
+         * ankkuroituna: kohde tunnistettiin sen omasta Commons-
+         * kategoriasta ja generointi nojasi neljaan vapaaseen
+         * valokuvaan. tools/hero-tyolista-brisbane.mjs). */
+        {
+          ampari: 'herokoe/hero-brisbane-aamu.png',
+          selite: 'Story Bridge avattiin 1940, se on Australian pisin '
+            + 'ulokepalkkisilta ja siitä perittiin tiemaksua vuoteen 1947 '
+            + 'asti; nimensä silta sai virkamies John Douglas Storyn '
+            + 'mukaan.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-brisbane-keskipaiva.png',
+          selite: 'Pyhän Johanneksen anglikaaninen katedraali Ann Streetillä '
+            + 'rakennettiin John Loughborough Pearsonin piirustusten '
+            + 'mukaan kolmessa vaiheessa vuosina 1906–2009, ja viimeisen '
+            + 'vaiheen hiekkakivi louhittiin sadan kilometrin päässä '
+            + 'Helidonissa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-brisbane-ilta.png',
+          selite: 'South Bankin 60 metriä korkea maailmanpyörä pystytettiin '
+            + '2008 vuoden 1988 maailmannäyttelyn alueelle näyttelyn '
+            + '20-vuotisjuhlaan, ja sen 42 ilmastoituun gondoliin mahtuu '
+            + 'kerralla 336 matkustajaa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Brisbane CBD seen from Kangaroo Point, 2024, 02.jpg',
           selite: 'Keskusta seisoo niemekkeellä, jonka ympäri Brisbane-joki '
@@ -60042,6 +60155,36 @@ export const KULTTUURI_KATEGORIAT = {
        * ei ole minkään noston aiheena.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 21 (24.8.2026, viitekuvilla
+         * ankkuroituna: kohde tunnistettiin sen omasta Commons-
+         * kategoriasta ja generointi nojasi neljaan vapaaseen
+         * valokuvaan. tools/hero-tyolista-chicago.mjs). */
+        {
+          ampari: 'herokoe/hero-chicago-aamu.png',
+          selite: 'Wrigley Building rakennettiin 1920–1924 purukumiyhtiö '
+            + 'Wrigleyn pääkonttoriksi Michigan Avenuen varrelle, ja sen '
+            + 'kirkkaanvalkoinen julkisivu on päällystetty '
+            + 'terrakottalaatoilla.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-chicago-keskipaiva.png',
+          selite: 'Bertrand Goldbergin suunnitteleman Marina Cityn kaksi '
+            + '179-metristä ja 65-kerroksista asuintornia avattiin '
+            + 'Chicagojoen pohjoisrannalla 1963, ja korokkeen alla joen '
+            + 'tasossa on pieni huvivenesatama, josta korttelin nimi '
+            + 'tulee.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-chicago-ilta.png',
+          selite: 'Grant Parkin keskellä seisova Buckinghamin suihkulähde '
+            + 'vihittiin 1927 Kate S. Buckinghamin lahjoituksena, se '
+            + 'tehtiin Versailles’n Latona-lähteen malliin, ja sen '
+            + 'vesisuihkut ovat käytössä huhtikuun puolivälistä lokakuun '
+            + 'puoliväliin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Chicago sunrise 1.jpg',
           selite: 'Loopin tornit seisovat Michiganjärven rannalla samalla '
@@ -60595,6 +60738,37 @@ export const KULTTUURI_KATEGORIAT = {
        * aiheena.
        */
       avauskuvat: [
+        /* GENEROIDUT HEROT, KIERROS 21 (24.8.2026, viitekuvilla
+         * ankkuroituna: kohde tunnistettiin sen omasta Commons-
+         * kategoriasta ja generointi nojasi neljaan vapaaseen
+         * valokuvaan. tools/hero-tyolista-perth.mjs). */
+        {
+          ampari: 'herokoe/hero-perth-aamu.png',
+          selite: 'Perthin Pyhän Marian katedraalin peruskivi laskettiin 8. '
+            + 'helmikuuta 1863 ja ensimmäinen vaihe valmistui 1865, mutta '
+            + '1920-luvulla aloitettu laajennus jäi lamaan kesken ja '
+            + 'seitsemänkymmenen vuoden jälkeen valmistunut kaareva jatke '
+            + 'vihittiin käyttöön vasta joulukuussa 2009.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-perth-keskipaiva.png',
+          selite: 'Matagarup-silta avattiin jalankulkijoille 14. heinäkuuta '
+            + '2018, ja se sai nimensä 2017 nyungarinkielisestä '
+            + 'paikannimestä Matagarup, joka tarkoittaa kohtaa, jossa '
+            + 'joki on vain sääreen asti ja jonka voi kahlata yli.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-perth-ilta.png',
+          selite: 'Howlett and Bailey Architectsin suunnitteleman Council '
+            + 'Housen vihki käyttöön kuningatar Elisabet II vuonna 1963, '
+            + 'vuotta Perthin isännöimien Kansainyhteisön kisojen '
+            + 'jälkeen; 13-kerroksinen ja 49,8 metriä korkea talo '
+            + 'säästettiin purku-aikeilta ja vietiin lopulta osavaltion '
+            + 'rakennusperintörekisteriin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Perth skyline.jpg',
           selite: 'Keskustan tornit näkyvät Kings Parkin nurmikentältä, '
@@ -69872,6 +70046,613 @@ export const KULTTUURI_KATEGORIAT = {
             + 'seisoo museon nurmella Waiganissa runko paljaana.',
           lahde: 'Bauple58, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Papua New Guinea National Museum and Art Gallery',
+        },
+      ],
+    },
+  ],
+  /*
+   * VALPARAÍSO (24.8.2026). Lauta southamerica, kaupunki-id valparaiso,
+   * wiki-nimi "Valparaíso" (js/packs/southamerica.js rivi 149).
+   * Lähdeaineisto: docs/mantereet-tyoaineisto/faktapohja-valparaiso.md ja
+   * sen RIIPPUMATON TARKISTUS (tarkistus-valparaiso.md, commit e193fd8b),
+   * joka voittaa ristiriidassa. Jokainen tekstiin mennyt väite on lisäksi
+   * luettu itse en-Wikipedian raakatekstistä (action=raw) 24.8.2026:
+   * "Valparaíso", "1906 Valparaíso earthquake", "Iglesia de la Matriz",
+   * "Santiago Severín Library", "National Congress of Chile",
+   * "Pablo Neruda".
+   *
+   * TARKISTUKSEN PAKOLLISET KORJAUKSET, KAIKKI TOTEUTETTU:
+   * 1. Faktapohjan ehdottama sivun `kaupunki` johdanto vuoti kaksi visan
+   *    vastausta sanatarkasti ("vinohissit", "maailmanperintöä"). Johdanto
+   *    on kirjoitettu kokonaan uusiksi: se puhuu kukkuloista, purjelaivojen
+   *    pysähdyspaikasta ja lempinimestä Pikku-San Francisco. Kumpaakaan
+   *    visan sanaa ei esiinny lehden johdannoissa.
+   * 2. Faktapohjan jakso 3 (trolleybussit) väitti leipätekstissä, että
+   *    vuoden 1952 Pullman-vaunut korvattiin Luzernin sveitsiläisbusseilla.
+   *    Oikein on: Luzernin 1989 rakennetut vaunut korvasivat vuoteen 2019
+   *    mennessä 1990-luvulla hankitun ERI sveitsiläiserän, ja
+   *    Pullman-vaunut poistuivat liikenteestä omana tapahtumanaan vasta
+   *    maaliskuussa 2023. Jakso 3 on kirjoitettu tämän mukaisesti ja
+   *    sanoo eron ääneen. Samalla tarkentui, että osa Pullman-vaunuista
+   *    oli vieläkin vanhempia (1946–1948, ostettu käytettyinä Santiagosta
+   *    1970-luvulla) — en-Wikipedia "Valparaíso", Transport.
+   * 3. Koodikorjaus js/packs/southamerica-questions.js:ään: isoisän
+   *    1873-repliikki sanoi kaupungin olevan "täynnä portaita ja hissejä",
+   *    vaikka ensimmäinen ascensor avattiin vasta 1.12.1883. Repliikki
+   *    kuuluu nyt "portaita ja jyrkkiä rinnepolkuja".
+   *
+   * AIKAKEHYS (faktapohjan alkuhuomautus ja tarkistuksen kohta 3):
+   * ascensorit ovat kymmenen vuotta isoisän matkaa nuorempia. Nosto
+   * "Kiskoilla nousevat hissit" ja artikkelin intro sanovat vuosiluvun
+   * 1883 auki, eikä missään väitetä hissejä olleen 1873. Sen sijaan
+   * isoisän matkavuosi 1873 kantaa kirjallisuussivun nostoa: Chilen
+   * ensimmäinen valtion luvalla perustettu yleinen kirjasto avattiin
+   * Valparaísossa 27.2.1873 ("Santiago Severín Library").
+   *
+   * WIKIPEDIAN SISÄISET RISTIRIIDAT, KERROTTU LUKIJALLE AUKI:
+   * - 1906-järistyksen uhriluku: pääartikkeli "Valparaíso" sanoo 3 000
+   *   kuollutta, dedikoitu artikkeli "1906 Valparaíso earthquake" antaa
+   *   Chilen yliopiston tarkemman luvun 3 882. Nosto sanoo molemmat ja
+   *   kertoo mistä ero tulee (tarkistus vahvisti ristiriidan aidoksi).
+   * - Middletonin ennustuskirje: "1906 Valparaíso earthquake" sanoo
+   *   yhtäältä "one week before" ja toisaalta julkaisupäiväksi 6.8.,
+   *   kun järistys oli 16.8. Lehti kertoo vain päivämäärät eikä toista
+   *   ristiriitaista "viikkoa ennen" -muotoilua.
+   * - Ilmastoluvut: Punta Ángelesin majakan ja Rodelillon kentän
+   *   1991–2020-taulukot eroavat (sademäärä 363,2 vs. 523,9 mm).
+   *   Oppaan jakso 5 kertoo molemmat ja sanoo kumpi on rannikolla.
+   *
+   * KULTTUURIVISA (js/packs/southamerica-questions.js, avain valparaiso)
+   * kysyy viisi asiaa: maa jonka satamakaupunki tämä on, kulkuväline
+   * jyrkille rinteille, vanhankaupungin tunnustus, runoilija joka asui
+   * rinteessä, ja valtion toiminto joka ei ole pääkaupungissa. Kaikkien
+   * vastaukset LÖYTYVÄT lehdestä mutta EI visan omalla sanamuodolla:
+   * hissit kuvataan sanalla ascensor ja vaijerivetoisina vaunuina,
+   * Unescon suojelu vuosiluvulla ja pinta-aloilla, Neruda kolmen talon ja
+   * Nobel-puheen kautta, parlamentti kongressin muuttotarinana oppaan
+   * jaksossa 4. Kumpikaan minitehtävä ei toista visaa: historian tehtävä
+   * kysyy 1856 asennettujen kaasulyhtyjen määrää ja kirjallisuuden
+   * tehtävä El Mercurion perustamisvuotta, ja molempien vastaus on
+   * samalla sivulla.
+   *
+   * KUVAT: 23 kuvaa, haettu Commonsin rajapinnasta kategorioilla (Views
+   * of Valparaíso, Plaza Sotomayor, Port of Valparaíso, Funiculars in
+   * Valparaíso — tarkistuksen vahvistama oikea nimi, ei "Ascensores de
+   * Valparaíso" —, Murals in Valparaíso, Museo a Cielo Abierto de
+   * Valparaíso, Iglesia de la Matriz, Cerro Concepción, La Sebastiana,
+   * El Mercurio de Valparaíso, 1906 Valparaíso earthquake, National
+   * Congress of Chile). Lisenssi ja tekijä on luettu rajapinnan
+   * extmetadatasta, ja JOKAINEN kuva on katsottu silmin 900 pikselin
+   * esikatseluna. Avauskuvat ovat kolme laveaa yleiskuvaa eri suunnista:
+   * koko lahti ilmasta, alakaupungin plan ja satama kattojen yli, ja
+   * rinnekortteli aamuvalossa. Kansikuvat ovat kolme tunnettua kohtaa
+   * ympäristöineen: Plaza Sotomayor ylhäältä, värikäs kukkulanrinne ja
+   * sataman laituri. Matkailijalle-kuva on tuore pystykuva (4000×6000,
+   * suhde 0,67) Calle Papudon maalatuista portaista.
+   *
+   * KUVAHYLKÄYKSET (syyt): "Overlooking Valparaiso, Chile (38530946744)"
+   * ja "Valparaiso is built across 42 hills and has a major port
+   * (38362456435)" ovat molemmat teknisesti hienoja yleiskuvia, mutta
+   * niiden vasempaan alakulmaan on painettu vesileima "© Winniepix";
+   * "Valparaíso Y Sus Cerros (52831584)" kantaa pystysuoran vesileiman
+   * "David Vega Regollo" oikeassa reunassa; "Harbor of Valparaiso, Chile
+   * LCCN2016821516" on sisällöltään täydellinen 1900-luvun alun
+   * satamakuva mutta siinä on lasilevyn mustat reunat ja negatiiviin
+   * kirjoitettu arkistonumero; "Valparaiso, Chile, 1870 (14222925915)"
+   * on albumin pahvikehykseen liimattu vedos, jonka kehys ja tahra
+   * näkyvät kuvassa; "Terremoto de Valparaíso 1906.JPG" ja käytännössä
+   * koko 1906-kategorian valokuva-aineisto jää alle 1200 pikselin
+   * (957×693 ja pienempiä), samoin "Plaza sotomayor en 1874" (1042×688)
+   * ja "Valpo3.JPG" eli El Mercurion talo (1045×1568); "Muelle Prat"
+   * -kategorian mustavalkoinen "Puerto de Valparaiso, Chile" on
+   * etualaltaan täynnä lähellä kameraa käveleviä ihmisiä; "Terminal
+   * Pacífico Sur, Valparaíso 20200207 71" on kuva satamayhtiön
+   * toimistorakennuksesta eikä kerro satamasta; "Grafiti Valpo 49" eli
+   * Santiago Wanderersin seinämaalaus on käytännössä kuva urheiluseuran
+   * vaakunasta; "Paseo gervasoni - Valparaíso" on sama Calle Papudon
+   * porras kuin valittu matkailijalle-kuva, vain alempaa kuvattuna.
+   *
+   * KUVAPOIKKEUKSET: nosto "Pysähdyspaikka Kap Hornin kiertäjille"
+   * käyttää 1860-luvun puupiirrosta, jonka alareunaan on painettu
+   * julkaisijan oma kuvateksti, ja historia-sivun 1906-nosto käyttää
+   * aikalaiskarttaa, jossa on tekijöiden oma punainen merkintäselite.
+   * Molemmat selitetään kuvatekstissä — sama poikkeus kuin Vancouverin
+   * palokartassa ja Liman 1744-kartassa.
+   *
+   * AIHETOISTO: Plaza Sotomayor esiintyy kahdesti (kansikuva ylhäältä ja
+   * oppaan jakson 3 trolleybussikuva katutasolta) — eri tiedostot, eri
+   * kuvakulma ja eri juttu. Satama näkyy neljässä kuvassa (kansikuva,
+   * avauskuva, nosto "Kanava joka vei aseman", oppaan jakso 1), mikä on
+   * satamakaupungissa tarkoituksellista: jokainen näyttää sen eri
+   * puolelta ja eri asian vuoksi. Cerro Concepción on sekä
+   * matkailijalle-kuvassa (portaat) että kirjallisuussivun
+   * Ampuero-nostossa (kukkula ja lahti).
+   *
+   * SISÄLTÖLINJAUS (pilarit 3 ja 4): 1906 ja 1822 järistykset kerrotaan
+   * tapahtumina neutraalisti, uhriluvut mainitaan toteavasti eikä
+   * dramatisoiden, eikä 1906-artikkelin ryöstäjien teloituksia ole otettu
+   * mukaan. Katutaide ja muraalit kuvataan elävänä nykykulttuurina, ei
+   * kurjuuskuvastona. Siirtomaa-aika ja kaapparien ryöstöt kerrotaan
+   * päivämäärineen ilman raakuuksien yksityiskohtia. Vuoden 1973
+   * vallankaappausta, sotilashallintoa ja Nerudan kuolemaan liittyviä
+   * myöhempiä epäilyjä EI käsitellä missään; kongressin paluu 1990
+   * kerrotaan neutraalina päivämäärätietona ilman osapuolikehystä.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä (Open-Meteon normaaleja ei haettu, eikä lukuja keksitty).
+   * Oppaan jakso 5 nojaa siis en-Wikipedian Climate-osioon ja SANOO SEN
+   * ÄÄNEEN (Samarkandin, Vancouverin, Liman ja Quiton malli).
+   * Mittauspiste olisi rannikko 33,0461 S / 71,6197 W.
+   *
+   * KUVATEKSTIT: selite kertoo kohteesta yhdellä virkkeellä.
+   */
+  valparaiso: [
+    {
+      id: 'kaupunki',
+      nimi: 'Valparaíso',
+      johdanto: 'Kymmenien kukkuloiden rinteille rakennettu '
+        + 'satamakaupunki oli purjelaivojen aikaan Tyynenmeren vilkkaimpia '
+        + 'pysähdyspaikkoja. Merimiehet ristivät sen Pikku-San Franciscoksi, '
+        + 'ja vanhankaupungin kirjava sokkelo on yhä tallella.',
+      kansikuvat: [
+        {
+          tiedosto: 'Plaza Sotomayor, Valparaíso (39181374915).jpg',
+          selite: 'Plaza Sotomayorin kivetyllä aukiolla seisoo Iquiquen '
+            + 'sankarien muistomerkki, ja sen takana kohoaa laivaston '
+            + 'päämajan vaaleansininen palatsi.',
+          lahde: 'Deensel, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Valparaíso Color Patrimonial.jpg',
+          selite: 'Kukkulan rinne on täynnä eri väreillä maalattuja '
+            + 'peltikattoisia taloja, jotka nousevat portaittain harjanteelle '
+            + 'asti.',
+          lahde: 'TaniaRuiz, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'El Puerto de Valparaíso. Región de Valparaíso, Chile.jpg',
+          selite: 'Sataman laiturin edessä keinuu rivi pieniä lauttaveneitä, '
+            + 'ja takana lastataan rahtilaivaa konttinosturien alla.',
+          lahde: 'CARLOS TEIXIDOR CADENAS, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Vista aerea Valparaíso, Chile.jpg',
+          selite: 'Ilmasta katsottuna kaupunki täyttää koko lahden ympärille '
+            + 'kohoavan kukkulakehän, ja satama jää sen kainaloon.',
+          lahde: 'Marca Chile, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Vista panoramica del plan de Valparaíso y Sotomayor.jpg',
+          selite: 'Kattojen yli avautuu tasainen alakaupunki eli plan, ja sen '
+            + 'takana näkyvät sataman nosturit ja laivat.',
+          lahde: 'Jhoncrispapo, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Valparaiso 2018.jpg',
+          selite: 'Aamuaurinko osuu rinnekortteliin, jonka talot on '
+            + 'rakennettu kiinni toisiinsa jyrkän notkon molemmin puolin.',
+          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Pysähdyspaikka Kap Hornin kiertäjille',
+          tiedosto: 'Harbor at Valparaiso, Chile c1860.jpg',
+          teksti: 'Kun laivat kulkivat Atlantilta Tyynellemerelle Magalhaesin '
+            + 'salmen kautta, Valparaíso oli luonteva paikka täydentää '
+            + 'varastot. Vuonna 1848 alkanut Kalifornian kultaryntäys teki '
+            + 'siitä välttämättömän: merimiehet ristivät kaupungin '
+            + 'Pikku-San Franciscoksi ja Tyynenmeren jalokiveksi. Vuosina '
+            + '1880–1930 se kilpaili Perun Callaon kanssa mantereen '
+            + 'länsirannikon johtavan sataman asemasta. Eurooppalaiset '
+            + 'siirtolaiset perustivat tänne Latinalaisen Amerikan vanhimman '
+            + 'pörssin ja mantereen ensimmäisen vapaaehtoisen palokunnan.',
+          selite: 'Vanhassa puupiirroksessa lahti on täynnä purjelaivojen '
+            + 'mastoja, ja kuvan alareunaan on painettu julkaisijan oma '
+            + 'kuvateksti "Harbor of Valparaiso, Chili".',
+          lahde: 'Sarah S. Cornell, Wikimedia Commons (PD)',
+          wiki: 'Valparaíso',
+        },
+        {
+          otsikko: 'Kiskoilla nousevat hissit',
+          tiedosto: 'Ascensor Artillería y barrio Puerto.jpg',
+          teksti: 'Rinteet ovat paikoin niin jyrkkiä, ettei sinne pääse '
+            + 'bussilla lainkaan. Siksi kaupunkia palvelevat ascensorit: '
+            + 'vaijerivetoiset vaunut, jotka kiipeävät omia kiskojaan '
+            + 'alakaupungin ja kukkuloiden väliä. Vanhin niistä, Concepciónin '
+            + 'eli Turrin ascensor, avattiin 1. joulukuuta 1883 '
+            + 'höyryvoimalla ja kulkee yhä. Laitteita on ollut aikojen '
+            + 'saatossa jopa 28; vuonna 1992 toiminnassa oli 14 ja 2010 noin '
+            + '12. Viisitoista on kansallismonumentteja, ja World Monuments '
+            + 'Fund otti koko järjestelmän 1996 sadan uhanalaisimman '
+            + 'kohteensa listalle.',
+          selite: 'Artillería-radan vanha puuvaunu odottaa ylemmällä '
+            + 'asemalla, ja alapuolella levittäytyy satama konttikenttineen.',
+          lahde: 'Elboina, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Valparaíso',
+        },
+        {
+          otsikko: 'Kaupunki joka maalattiin takaisin',
+          tiedosto: 'Murales del Cerro Panteón.jpg',
+          teksti: '1990-luvun alkuun mennessä suuri osa kaupungin '
+            + 'rakennusperinnöstä oli menetetty ja moni chileläinen oli '
+            + 'luopunut koko kaupungista. Vuosikymmenen puolivälissä syntyi '
+            + 'ruohonjuuritason säilytysliike, ja 1998 aktivistit saivat '
+            + 'valtion ja paikallisviranomaiset hakemaan vanhallekaupungille '
+            + 'Unescon suojelustatusta. Se myönnettiin 2003, ja suojeltua '
+            + 'aluetta on 23,2 hehtaaria, suoja-aluetta 44,5. Samaan aikaan '
+            + 'kaduille, kujille ja portaisiin ilmestyi satoja '
+            + 'graffititaiteilijoiden muraaleja, ja Cerro Bellavistalla '
+            + 'toimii ulkoilmamuseo Museo a Cielo Abierto.',
+          selite: 'Cerro Panteónin mukulakivikadun päädyssä kokonainen '
+            + 'talonpääty on maalattu lapsen muotokuvaksi.',
+          lahde: 'Cris.tbl, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Valparaíso',
+        },
+        {
+          otsikko: 'Kanava joka vei aseman',
+          tiedosto: 'La ciudad de Valparaíso desde el Cerro Artillería, Chile 2019.jpg',
+          teksti: 'Panaman kanavan avaaminen 1914 käänsi kaiken: laivat '
+            + 'alkoivat suosia kanavaa Magalhaesin salmen riskien sijaan, '
+            + 'sataman liikenne väheni ja kaupungin talous taantui. '
+            + '1900-luku oli Valparaísolle epäsuotuisa, ja monet varakkaat '
+            + 'perheet muuttivat pois. 2000-luvulla San Antonion satama '
+            + 'ohitti sen käsitellyssä konttimäärässä. Laituri on silti '
+            + 'vilkas: satama välittää noin kymmenen miljoonaa tonnia rahtia '
+            + 'vuodessa – kontteja, kuparia ja hedelmiä – ja ottaa vastaan '
+            + 'noin 50 risteilyalusta ja 150 000 matkustajaa kaudessa.',
+          selite: 'Cerro Artillérian rinteeltä näkyy konttiterminaali '
+            + 'nostureineen, sen takana risteilyalus ja koko lahden ympäri '
+            + 'kiertävä kaupunki.',
+          lahde: 'CARLOS TEIXIDOR CADENAS, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Valparaíso',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Escala calle Papudo, Cerro Concepción, Valparaíso 20201102 145.jpg',
+          selite: 'Calle Papudon portaat on maalattu askelma kerrallaan, ja '
+            + 'niiden reunoilla kasvaa kukkia ruukuissa.',
+          lahde: 'Carlos Figueroa Rojas, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Valparaíso jakautuu matkailijan kannalta kahteen kerrokseen. '
+          + 'Alhaalla on plan, kapea tasainen kaistale sataman ja rinteiden '
+          + 'välissä, jossa ovat aukiot, virastot ja rautatie. Ylhäällä ovat '
+          + 'cerrot eli kukkulat, joilla ihmiset asuvat ja joille noustaan '
+          + 'portaita, mutkittelevia katuja tai kiskoilla kulkevia hissejä '
+          + 'pitkin. Vanhimmat kukkulat Cerro Alegre ja Cerro Concepción ovat '
+          + 'kävelymatkan päässä keskustasta, ja niiden mukulakivikujilta '
+          + 'aukeaa näkymiä suoraan satamaan. Kartta auttaa täällä vähemmän '
+          + 'kuin muualla: sama katu voi olla portaat, ja oikoreitti voi '
+          + 'päättyä pihaan. Kannattaa varata aikaa eksymiselle.',
+        artikkeli: {
+          nimi: 'Matkailijan Valparaíso',
+          taitto: 'opas',
+          teksti: 'Satamakaupunki, jossa alakaupungin aukiot ja kukkuloiden '
+            + 'värikkäät talot ovat eri maailmoja – ja niiden välillä '
+            + 'kuljetaan portaita ja kiskoja pitkin.',
+          nosto: 'Kaupungin sisällä liikkuu kolme rinnakkaista '
+            + 'joukkoliikennettä: bussit, sähköbussit ja kiskoilla kiipeävät '
+            + 'hissit.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Valtaosa ulkomaisista vierailijoista saapuu Santiagon '
+                + 'kautta tai risteilyaluksella; kotimaan lentoliikenne '
+                + 'kulkee jonkin matkan päässä sijaitsevan Quinteron kentän '
+                + 'kautta, ja Santiagoon on maksullista moottoritietä pitkin '
+                + 'noin 80 minuuttia. Lähijunayhteys Valparaíso Metro '
+                + 'avautui yleisölle 24. marraskuuta 2005, ja sen '
+                + 'rakentamisessa uudistettiin osia alun perin 1863 '
+                + 'valmistuneesta Valparaíso–Santiago-radasta. Rata yhdistää '
+                + 'keskustan naapurikaupunkiin Viña del Mariin, ja koska osa '
+                + 'reitistä kulkee tunnelissa Viñan kauppakortteleiden alla, '
+                + 'se on Santiagon jälkeen maan toinen maanalainen '
+                + 'kaupunkirata. Kaupungin sisällä liikennettä hoitavat '
+                + 'bussit, sähköbussit ja hissit.',
+              kuva: {
+                tiedosto: 'Muelle Prat, Puerto de Valparaíso 1.jpg',
+                selite: 'Muelle Pratin laiturissa odottaa rivi pieniä '
+                  + 'kierrosveneitä, ja takana lastataan rahtilaivaa '
+                  + 'konttikentän nostureiden vieressä.',
+                lahde: 'Dario Alpern, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki on rakennettu kymmenien jyrkkien kukkuloiden '
+                + 'rinteille suoraan Tyynenmeren rannalta, ja sen '
+                + 'tavaramerkki on mutkittelevien katujen ja '
+                + 'mukulakivikujien sokkelo. Vanhimmat kukkulat ovat Cerro '
+                + 'Alegre ja Cerro Concepción: niillä kävelijä näkee '
+                + 'siirtomaa-ajan englantilaista arkkitehtuuria, 1800-luvun '
+                + 'kirkkoja sekä museoita, puutarhoja ja pikkuaukioita. '
+                + 'Näköalapaikkoja on moneen makuun – Portalesin, '
+                + 'Esperanzan, O\'Higginsin ja Marina Mercanten miradorit – '
+                + 'ja kävelykaduista tunnetuimmat ovat 21 de Mayo, '
+                + 'Yugoslavo, Gervasoni, Atkinson ja Dimalow. '
+                + 'Uudenvuodenaattona samat paikat täyttyvät ihmisistä, '
+                + 'jotka etsivät parasta näkymää lahdelle.',
+              kuva: {
+                tiedosto: 'Pasaje Guimera.jpg',
+                selite: 'Pasaje Guimeran kivetyn kujan reunassa on rivi '
+                  + 'mosaiikilla päällystettyjä istuinkiviä sinisen '
+                  + 'peltitalon vierellä.',
+                lahde: 'Rodrigo Fernández, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: sähköbussit vuodesta 1952',
+              teksti: 'Valparaíson trolleybussijärjestelmä on ollut käytössä '
+                + 'vuodesta 1952, ja pitkään sen kalustossa kulki rinnakkain '
+                + 'kolme sukupolvea. Vanhimmat olivat Pullman-Standardin '
+                + 'vaunuja: osa vuodelta 1952, osa vielä vanhempia vuosilta '
+                + '1946–1948, jotka ostettiin käytettyinä Santiagosta '
+                + '1970-luvulla. 1990-luvulle tultaessa juuri nämä '
+                + 'Pullman-vaunut olivat maailman vanhimpia yhä tavallisessa '
+                + 'linjaliikenteessä olevia trolleybusseja, ja 2003 Chilen '
+                + 'valtio julisti ne yhdessä kansallismonumenteiksi. '
+                + '2010-luvun puolivälissä kaupunkiin saapui käytettyjä, '
+                + '1989 rakennettuja vaunuja Sveitsin Luzernista; vuoteen '
+                + '2019 mennessä ne olivat korvanneet 1990-luvulla hankitun '
+                + 'vanhemman sveitsiläiserän – eivät Pullman-vaunuja. '
+                + 'Viimeiset Pullmanit jäivät pois liikenteestä vasta '
+                + 'maaliskuussa 2023.',
+              kuva: {
+                tiedosto: '1948 Valparaíso Pullman trolleybus 888 southbound at Plaza Sotomayor (2017).jpg',
+                selite: 'Vihreä-kermainen Pullman-trolleybussi numero 888 '
+                  + 'ajaa laivaston päämajan vaaleansinisen julkisivun ohi '
+                  + 'Plaza Sotomayorilla.',
+                lahde: 'NovoaR, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kongressi muutti satamaan',
+              teksti: 'Laivaston päämaja on ollut Valparaísossa vuodesta '
+                + '1817, mutta 1990 kaupunkiin siirtyi toinenkin valtion '
+                + 'ydinlaitos: kansalliskongressi eli maan parlamentti, '
+                + 'vaikka hallitus ja presidentti jäivät Santiagoon. Laki '
+                + 'uudesta istuntopaikasta hyväksyttiin 18. joulukuuta 1987, '
+                + 'ja rakennustyöt alkoivat 20. lokakuuta 1988 tontilla, '
+                + 'jolla oli aiemmin seissyt Enrique Deformesin sairaala – '
+                + 'se purettiin 3. maaliskuuta 1985 maanjäristysvaurioiden '
+                + 'takia. Arkkitehdit Juan Cárdenas, José Covacevic ja Raúl '
+                + 'Farrú valittiin 539 kilpailuehdotuksen ja 38 finalistin '
+                + 'joukosta, ja valmis rakennus on 60 000 neliömetriä. '
+                + 'Kongressin toiminta oli ollut keskeytyksissä yli '
+                + 'kuudentoista vuoden ajan, ja se käynnistyi uudelleen '
+                + 'täällä 11. maaliskuuta 1990.',
+              kuva: {
+                tiedosto: 'Edificio del Congreso Nacional de Chile (Valparaíso).jpg',
+                selite: 'Kongressirakennuksen vaalea betonijulkisivu on '
+                  + 'avattu keskeltä suureksi porttiaukoksi, ja sen edessä '
+                  + 'kukkivat jakarandat ja palmut.',
+                lahde: 'ShootingStarMax, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Valparaísosta puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian Valparaíso-artikkelin Climate-osiosta '
+                + 'eivätkä samasta lähteestä kuin lehtien vuosigraafit. '
+                + 'Ilmasto on hyvin leutoa lämpimän kesän Välimeren tyyppiä '
+                + '(Köppen: Csb): kesä on käytännössä kuiva, mutta Humboldtin '
+                + 'virran sumut peittävät kaupungin suuren osan vuodesta. '
+                + 'Kuukausikeskiarvot vaihtelevat vain noin kuusi astetta, '
+                + 'tammikuun 17 asteesta heinäkuun 11,4 asteeseen. Rannikon '
+                + 'mittausasemalla Punta Ángelesin majakalla sataa vuodessa '
+                + '363 millimetriä, mutta ylempänä sisämaassa Rodelillon '
+                + 'kentällä jo 524 – ero näkyy selvimmin kesäkuussa, joka on '
+                + 'molemmilla asemilla sateisin kuukausi. Talvella yksittäinen '
+                + 'rintama voi tuoda hyvin rankkoja sateita, ja kova tuuli '
+                + 'painaa tuntuvan lämpötilan pakkasen puolelle.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kylä nimeltä Alimapu kasvoi espanjalaisten, brittien ja '
+        + 'monen muun siirtolaisyhteisön kauppapaikaksi, jota koettelivat '
+        + 'sekä toistuvat maanjäristykset että maailmankaupan reittien '
+        + 'mullistukset.',
+      tehtava: {
+        kysymys: 'Kuinka monta kaasulyhtyä kaupungin kaduille asennettiin '
+          + '1850-luvulla?',
+        vaihtoehdot: [
+          '700',
+          '70',
+          '7 000',
+          '17',
+        ],
+        oikea: 0,
+        fakta: 'Katulyhdyt tulivat 1856, neljä vuotta juoksevan veden ja '
+          + 'lennättimen jälkeen. Kaupunki kokeili tällaisia uutuuksia '
+          + 'ennen muuta Chileä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Alimapu, kylä ennen Valparaísoa',
+          tiedosto: 'Iglesia de La Matriz - Valparaíso.jpg',
+          teksti: 'Lahden ensimmäinen tunnistettu väestö olivat '
+            + 'maanviljelystään tunnetut picunchet. Espanjalaiset saapuivat '
+            + '1536 Santiaguillo-huoltolaivalla, jonka Diego de Almagro '
+            + 'lähetti retkikuntaansa varten; laivaa komentanut Juan de '
+            + 'Saavedra nimesi paikan kotikylänsä Valparaíso de Arriban '
+            + 'mukaan Espanjan Cuencassa. Kylän oma nimi oli Alimapu tai '
+            + 'Quintil, ja siirtomaa-aikana täällä oli vain muutama talo ja '
+            + 'kirkko. Piispa Rodrigo Marmolejo perusti ensimmäisen kappelin '
+            + '1559, ja kun englantilainen kaappari Francis Drake ryösti '
+            + 'sataman 1578, hän vei kappelista hopeisen kalkin.',
+          selite: 'Iglesia de la Matrizin kellotorni ja sen eteen '
+            + 'laskeutuvat leveät kiviportaat valaistuvat iltahämärässä '
+            + 'satamakortteleiden keskellä.',
+          lahde: 'Urbaguilera, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Iglesia de la Matriz',
+        },
+        {
+          otsikko: 'Britit Cerro Alegren rinteellä',
+          tiedosto: 'Arco Británico.jpg',
+          teksti: 'Brittiläinen kauppayhteisö La Colonia Britanica kukoisti '
+            + 'Valparaísossa 1820-luvulta 1920-luvulle. Yhtiöt kuten Antony '
+            + 'Gibbs & Sons, Duncan Fox ja Williamson-Balfour tekivät '
+            + 'kauppaa kaupungista, jonka satamassa ankkuroi vuoteen 1840 '
+            + 'mennessä 166 brittiläistä laivaa kaikkiaan 287:stä. Britit '
+            + 'asettuivat Cerro Alegren ja Cerro Concepciónin kukkuloille, '
+            + 'perustivat British Hospitalin 1897 ja pystyttivät British '
+            + 'Arch -muistomerkin 1911. Yhteisö kuitenkin kutistui: jo 1895 '
+            + 'italialaisia oli enemmän kuin brittejä, ja 1920 mennessä myös '
+            + 'espanjalaiset olivat heitä lukuisampia.',
+          selite: 'British Arch -muistomerkin kaaren päällä lepää '
+            + 'pronssileijona, ja otsapintaan on kaiverrettu omistuskirjoitus '
+            + 'Valparaíson kaupungille.',
+          lahde: 'Beatrice Murch, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'British Arch',
+        },
+        {
+          otsikko: 'Kaupunki jossa kaikki kokeiltiin ensin',
+          tiedosto: 'Valparaíso (39369326624).jpg',
+          teksti: 'Isoisän matkavuoteen mennessä Valparaíso oli maansa '
+            + 'moderneinta kaupunkia. Chilen ensimmäinen palokunta '
+            + 'perustettiin 1851 vapaaehtoisvoimin, ja jo 1852 kaupungissa '
+            + 'oli juokseva vesijohto sekä Latinalaisen Amerikan ensimmäinen '
+            + 'lennätinyhteys, joka kulki Santiagoon. Neljä vuotta myöhemmin '
+            + 'kaduille asennettiin 700 kaasulyhtyä, ja 1861 perustettiin '
+            + 'ensimmäinen raitiovaunuyhtiö, jonka vaunuja vetivät hevoset '
+            + 'ja muulit. Chilen ensimmäinen puhelinyhtiö syntyi 1880. '
+            + 'Asukkaita oli vuosisadan lopulla yli 160 000, ja taloja oli '
+            + 'pakko rakentaa yhä ylemmäs rinteille.',
+          selite: 'Iltahämärässä vanhankaupungin korttelit, palmuaukio ja '
+            + 'rinteeseen kiipeävä hissirata erottuvat kukkuloiden juurella.',
+          lahde: 'Deensel, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Valparaíso',
+        },
+        {
+          otsikko: 'Maanjäristys joka piirsi kadut uusiksi',
+          tiedosto: 'Plano de Valparaíso-Terremoto 1906.jpg',
+          teksti: '16. elokuuta 1906 kello 19.55 kaupunkia järisytti '
+            + 'maanjäristys, jonka voimakkuudeksi on laskettu 8,2 ja jonka '
+            + 'keskus oli edustan merellä. Uhriluvusta on kaksi lukemaa: '
+            + 'kaupungin yleisesitys sanoo 3 000 kuollutta ja yli 20 000 '
+            + 'loukkaantunutta, kun järistyksen oma artikkeli antaa Chilen '
+            + 'yliopiston tarkemman luvun 3 882. Jälleenrakennuksessa katuja '
+            + 'levennettiin, Jaimen ja Deliciasin purot katettiin '
+            + 'bulevardeiksi ja Pedro Montt -pääkatu linjattiin. Jo '
+            + '19. marraskuuta 1822 järistys oli jättänyt 16 000 asukkaan '
+            + 'kaupungin raunioiksi.',
+          selite: 'Aikalaiskartassa tekijät ovat merkinneet vaaleanpunaisella '
+            + 'järistyksessä pahiten kärsineet korttelit ja kirkkaanpunaisella '
+            + 'palaneen alueen.',
+          lahde: 'Rodríguez Rozas, Alfredo, y Carlos Gajardo Cruzat, '
+            + 'Wikimedia Commons (PD)',
+          wiki: '1906 Valparaíso earthquake',
+        },
+      ],
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjallisuus',
+      johdanto: 'Valparaíson kujat ja kukkulat ovat inspiroineet '
+        + 'sanomalehtimiehiä, Nobel-runoilijaa ja dekkarikirjailijaa – ja '
+        + 'kaupunki sai myös maansa ensimmäisen yleisen kirjaston.',
+      tehtava: {
+        kysymys: 'Minä vuonna El Mercurio de Valparaíso ilmestyi '
+          + 'ensimmäisen kerran?',
+        vaihtoehdot: [
+          '1827',
+          '1727',
+          '1898',
+          '1906',
+        ],
+        oikea: 0,
+        fakta: 'Lehti perustettiin yhdeksän vuotta Chilen itsenäistymisen '
+          + 'jälkeen, ja se ilmestyy yhä. Sen kilpailijat maailmalla ovat '
+          + 'kaikki nuorempia.',
+      },
+      nostot: [
+        {
+          otsikko: 'Maailman vanhin espanjankielinen sanomalehti',
+          tiedosto: 'El Mercurio de Valparaíso Nº 1 (12.09.1827).png',
+          teksti: 'El Mercurio de Valparaíso ilmestyi ensimmäisen kerran '
+            + '12. syyskuuta 1827, ja se on maailman vanhin yhtäjaksoisesti '
+            + 'ilmestynyt espanjankielinen sanomalehti. Kultakautenaan '
+            + '1848–1914 kaupunki oli niin monikielinen, että saksalaiset, '
+            + 'ranskalaiset, italialaiset ja englantilaiset yhteisöt '
+            + 'perustivat omakielisiä lehtiään espanjankielisten rinnalle. '
+            + 'Elokuun 6. päivänä 1906 lehti julkaisi kapteeni Arturo '
+            + 'Middletonin kirjeen, jossa Chilen armeijan sääpalvelun '
+            + 'päällikkö ennusti tulevaa maanjäristystä; kirjoittajaa '
+            + 'arvosteltiin ankarasti, ja kymmenen päivää myöhemmin maa '
+            + 'järisi.',
+          selite: 'Ensimmäisen numeron etusivulla lehden nimi on ladottu '
+            + 'isoin kirjaimin ja päiväykseksi on painettu 12. syyskuuta '
+            + '1827.',
+          lahde: 'Imprenta "El Mercurio de Valparaíso", Wikimedia Commons (PD)',
+          wiki: 'El Mercurio de Valparaíso',
+        },
+        {
+          otsikko: 'Kolme taloa ja yksi Nobel',
+          tiedosto: 'Casa Museo La Sebastiana 01.jpg',
+          teksti: 'Pablo Neruda omisti Chilessä kolme taloa, ja kaikki '
+            + 'kolme ovat nykyään museoita: La Chascona Santiagossa, Isla '
+            + 'Negran talo rannikolla ja La Sebastiana Valparaíson '
+            + 'rinteessä. Isla Negraan on haudattu sekä runoilija että '
+            + 'hänen vaimonsa Matilde Urrutia. Neruda sai kirjallisuuden '
+            + 'Nobelin 1971; päätös ei ollut komitealle helppo, sillä osa '
+            + 'jäsenistä muisti yhä hänen aiemman ylistyksensä Stalinin '
+            + 'hallintoa kohtaan. Tukholman puheessaan hän kiteytti '
+            + 'runoilijan tehtävän: tämä on samaan aikaan yhteisöllisyyden '
+            + 'ja yksinäisyyden voima. Kaupungissa ovat asuneet myös '
+            + 'nicaragualainen Rubén Darío ja yhdysvaltalainen Marion '
+            + 'Manville Pope.',
+          selite: 'La Sebastianan viisi kerrosta on maalattu sinisen, '
+            + 'oranssin ja valkoisen kaistaleiksi, ja talon edessä kasvaa '
+            + 'violetiksi kukkiva puu.',
+          lahde: 'Marcelo Ois Lagarde, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Pablo Neruda',
+        },
+        {
+          otsikko: 'Etsivä joka asuu Paseo Gervasonilla',
+          tiedosto: 'Cerro Concepción, Valparaíso 20201102 127.jpg',
+          teksti: 'Valparaísossa syntynyt Roberto Ampuero on kirjoittanut '
+            + 'kansainvälisesti julkaistun romaanisarjan yksityisetsivä '
+            + 'Cayetano Brulésta. Brulé asuu kirjoissa viktoriaanisessa '
+            + 'talossa Cerro Concepciónin kuvauksellisella Paseo '
+            + 'Gervasonilla, ja romaaneja luetaan myös elävänä opaskirjana '
+            + 'kaupungin kujille ja kukkuloille. Kaupunki on nimittänyt '
+            + 'Ampueron kunniakansalaisekseen – arvonimi kuuluu espanjaksi '
+            + 'Hijo Ilustre – ja hän on toiminut myöhemmin myös Chilen '
+            + 'ulkoministerinä. Kirjojen näyttämö on yhä paikallaan: samat '
+            + 'kävelykadut Gervasoni, Atkinson ja Dimalow kiertävät '
+            + 'kukkulan reunaa.',
+          selite: 'Cerro Concepciónin rinteellä värikkäiden peltitalojen '
+            + 'keskeltä nousee kirkontorni, ja rinteen takana avautuu lahti.',
+          lahde: 'Carlos Figueroa Rojas, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Roberto Ampuero',
+        },
+        {
+          otsikko: 'Kirjasto isoisän matkavuodelta',
+          tiedosto: 'Biblioteca Santiago Severín, Valparaíso 20230901 01.jpg',
+          teksti: 'Chilen ensimmäinen valtion luvalla perustettu yleinen '
+            + 'kirjasto avattiin Valparaísossa 27. helmikuuta 1873 – samana '
+            + 'vuonna, jolta isoisän matkapäiväkirja on. Ensimmäisinä '
+            + 'vuosinaan kokoelma asui oikeustalon vapaissa huoneissa. '
+            + 'Nykyinen rakennus nousi 1912–1919 arkkitehtien Arnaldo '
+            + 'Barisonin ja Renato Schiavonin piirustuksista, ja se '
+            + 'nimettiin lahjoittajansa, liikemies Santiago Severínin '
+            + 'mukaan. Kokoelmassa on 80 000 nidettä. Rakennus julistettiin '
+            + 'kansallismonumentiksi 1998, ja vuoden 2010 maanjäristyksen '
+            + 'vaurioiden jälkeen se oli suljettuna seuraavaan vuoteen '
+            + 'asti.',
+          selite: 'Santiago Severínin kirjaston pitkä uusklassinen '
+            + 'julkisivu pylväineen täyttää kokonaisen korttelinsivun '
+            + 'puiston laidalla.',
+          lahde: 'Carlos Figueroa Rojas, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Santiago Severín Library',
         },
       ],
     },

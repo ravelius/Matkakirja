@@ -477,4 +477,72 @@ export const SOUTHAMERICA_ARTIKKELIT = {
       + 'pyöräilijöille ja kävelijöille, ja lentoasema kantaa El '
       + 'Doradon legendan nimeä.',
   },
+  /*
+   * VALPARAÍSO (24.8.2026). Avain on wiki-otsikko 'Valparaíso', jonka
+   * js/packs/southamerica.js antaa kaupungille sekä wiki- että
+   * näyttönimeksi (rivi 149). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain valparaiso): jokainen väite
+   * on luettu en-Wikipedian raakatekstistä 24.8.2026, ja lähdeaineistona
+   * ovat docs/mantereet-tyoaineisto/faktapohja-valparaiso.md ja sen
+   * riippumaton tarkistus (tarkistus-valparaiso.md), joka voittaa
+   * ristiriidassa. Väkiluku 284 938 on "Valparaíso"-artikkelin
+   * infoboxista ja vuoden 2024 väestölaskennasta; etäisyys Santiagoon
+   * (~120 km maanteitse) ja Suur-Valparaíson asema maan toiseksi
+   * väkirikkaimpana kaupunkiseutuna ovat saman artikkelin johdannosta.
+   *
+   * VUODEN 1873 KULMA ON KIRJOITETTU AUKI KAHTEEN SUUNTAAN: isoisän
+   * matkavuonna kaupungissa oli jo lennätin (1852, Latinalaisen Amerikan
+   * ensimmäinen), 700 kaasulyhtyä (1856) ja hevosvetoiset raitiovaunut
+   * (1861), ja samana vuonna 27.2.1873 avattiin maan ensimmäinen yleinen
+   * kirjasto ("Santiago Severín Library"). Sen sijaan kaupungin
+   * tunnusmerkkejä, kiskoilla kiipeäviä ascensoreita, EI vielä ollut:
+   * ensimmäinen avattiin 1.12.1883. Tämä sanotaan introssa suoraan,
+   * koska faktapohja ja tarkistus varoittavat juuri tästä ajoitusvirheestä
+   * — sama virhe korjattiin tässä erässä myös isoisän repliikistä
+   * js/packs/southamerica-questions.js:ssä.
+   */
+  'Valparaíso': {
+    intro: 'Valparaíso on Chilen rannikolla noin 120 kilometriä Santiagosta '
+      + 'luoteeseen, kymmenien jyrkkien kukkuloiden rinteillä Tyynenmeren '
+      + 'rannalla. Kapea tasainen alakaupunki eli plan mahtuu sataman ja '
+      + 'rinteiden väliin; kaikki muu kiipeää ylöspäin portaita ja '
+      + 'kiskoilla kulkevia hissejä pitkin. Asukkaita on runsaat 280 000.'
+      + '\n\n'
+      + 'Kun espanjalaiset saapuivat 1536, lahden rannalla asui '
+      + 'picunche-kansaa ja kylän nimi oli Alimapu. **Purjelaivojen aikaan '
+      + 'Valparaísosta tuli Kap Hornin kiertäjien tärkein pysähdyspaikka**, '
+      + 'ja siirtolaiset perustivat tänne Latinalaisen Amerikan vanhimman '
+      + 'pörssin ja maailman vanhimman yhä ilmestyvän espanjankielisen '
+      + 'sanomalehden. Panaman kanava vei 1914 satamalta suuren osan '
+      + 'merkityksestä, mutta vanhakaupunki pääsi 2003 Unescon '
+      + 'suojelukseen.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 kaupunki oli jo moderni: lennätin oli '
+      + 'kulkenut Santiagoon parikymmentä vuotta, kaduilla paloi 700 '
+      + 'kaasulyhtyä ja hevoset vetivät raitiovaunuja. **Samana vuonna '
+      + 'avattiin maan ensimmäinen yleinen kirjasto.** Kukkuloiden '
+      + 'tunnusmerkkiä, kiskoilla kiipeäviä hissejä, ei vielä ollut: '
+      + 'ensimmäinen aloitti vasta 1883.',
+    teksti: 'Valparaíso on Chilen keskiosan rannikolla, Tyynellemerelle '
+      + 'avautuvan lahden ympärillä. Kaupunki on kahdessa kerroksessa: '
+      + 'alhaalla kapea plan aukioineen ja satamineen, ylhäällä kymmeniä '
+      + 'cerroja eli kukkuloita, joilla ihmiset asuvat. Vanhimmat kukkulat '
+      + 'ovat Cerro Alegre ja Cerro Concepción.'
+      + '\n\n'
+      + 'Espanjalaiset saapuivat 1536, mutta pitkään paikka pysyi pienenä '
+      + 'kylänä, jota englantilaiset kaapparit kävivät ryöstämässä. '
+      + 'Itsenäistymisen jälkeen satama avautui maailmankaupalle, ja 1848 '
+      + 'alkanut Kalifornian kultaryntäys teki siitä välttämättömän '
+      + 'pysähdyspaikan. Vuoden 1906 maanjäristys vaurioitti suurta osaa '
+      + 'keskustasta; jälleenrakennuksessa katuja levennettiin ja purot '
+      + 'katettiin bulevardeiksi.'
+      + '\n\n'
+      + 'Nykyään satama välittää noin kymmenen miljoonaa tonnia rahtia '
+      + 'vuodessa – kontteja, kuparia ja hedelmiä – ja ottaa vastaan '
+      + 'risteilyaluksia kesäkaudella. Vanhaakaupunkia on kunnostettu '
+      + '1990-luvun puolivälissä syntyneen säilytysliikkeen jälkeen, ja '
+      + 'portaat ja kujat ovat täynnä muraaleja. Laivaston päämaja on '
+      + 'toiminut kaupungissa vuodesta 1817 ja kansalliskongressi vuodesta '
+      + '1990.',
+  },
 };

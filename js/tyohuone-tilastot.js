@@ -494,6 +494,38 @@ export function laskeTilastot() {
  * PIIRTO
  * ------------------------------------------------------------------ */
 
+/*
+ * VIITEKUVILLA ANKKUROIDUT HEROT (omistajan tilaus 24.8.2026:
+ * "merkkaa oranssilla kaupungit joissa hero kuvat generoitu
+ * referenssien avulla").
+ *
+ * Miksi tämä erottelu on olemassa. Kašgarin herokuva esitti
+ * Samarkandin timuridimausoleumia, vaikka kuvateksti lupasi Yusuf
+ * Balasagunin mausoleumia — malli ei tuntenut kohdetta ja täytti aukon
+ * alueen arkkityypillä. Sen jälkeen generointi ankkuroidaan kohteen
+ * omasta Commons-kategoriasta haettuihin oikeisiin valokuviin
+ * (tools/hae-viitekuvat.mjs). Ankkuroitu kuva on siis eri luokan
+ * väite kuin ankkuroimaton, ja taulun pitää näyttää kumpi on kyseessä.
+ *
+ * Luku on ANKKUROITUJEN kuvien määrä, ei kaikkien. Osa kaupungeista on
+ * välitilassa: niissä yksi kuva on tehty uusiksi viitteillä ja loput
+ * ovat vanhoja. Solu näyttää sen suhteena, eikä väitä enempää.
+ *
+ * Ylläpito: kun uusi viitekuvallinen erä kytketään, lisää kaupunki
+ * tänne. Työlistat tools/hero-tyolista-*.mjs kertovat mitkä erät on
+ * tehty viitteillä — ne tuovat kuvakulman tools/hero-kuvakulmat.mjs:stä.
+ */
+const VIITEKUVA_HEROT = new Map([
+  // Koko erä viitekuvilla (24.8.2026, kierros 21).
+  ['melbourne', 3], ['vancouver', 3], ['brisbane', 3],
+  ['chicago', 3], ['perth', 3], ['kabul', 3],
+  // Tampere: neljä kuvaa, ensimmäinen viitekuvallinen erä (23.8.2026).
+  ['tampere', 4],
+  // Yksittäinen korjattu kuva, muut kaupungin herot ovat vanhoja.
+  ['helsinki', 1], ['kashgar', 1], ['mekka', 1], ['petra', 1],
+  ['damaskos', 1],
+]);
+
 const SARAKKEET = [
   ...KAUPUNGIN_OSAT.map((o) => ({ ...o, taso: 'kaupunki' })),
   ...MAAN_OSAT.map((o) => ({ ...o, taso: 'maa' })),
@@ -698,7 +730,23 @@ function piirraTaulu(kohde, mantereet, jarjestys, nakyma = 'kaikki') {
         for (const s of SARAKKEET) {
           if (s.taso === 'maa') { rivi.appendChild(html('td', 'tk-num tk-tyhja', '·')); continue; }
           const tieto = kaupunki.solut[s.avain];
-          rivi.appendChild(solu(tieto.pari, { teksti: tieto.teksti, luku: tieto.luku }));
+          const td = solu(tieto.pari, { teksti: tieto.teksti, luku: tieto.luku });
+          /*
+           * Oranssi kertoo, että kaupungin herokuvat on ankkuroitu
+           * oikeisiin valokuviin. Täysi oranssi = koko erä, ääriviiva =
+           * osa kuvista. Ks. VIITEKUVA_HEROT yllä.
+           */
+          if (s.avain === 'herot') {
+            const ankkuroitu = VIITEKUVA_HEROT.get(kaupunki.id) ?? 0;
+            if (ankkuroitu) {
+              const kaikki = tieto.luku ?? 0;
+              const taysi = kaikki > 0 && ankkuroitu >= kaikki;
+              td.classList.add(taysi ? 'tk-viite-taysi' : 'tk-viite-osa');
+              td.title = `${ankkuroitu}/${kaikki || '?'} herokuvaa ankkuroitu`
+                + ' kohteen omiin Commons-valokuviin';
+            }
+          }
+          rivi.appendChild(td);
         }
         runko.appendChild(rivi);
         kaupunkiRivit.push(rivi);

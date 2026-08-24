@@ -12004,6 +12004,23 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
  * Sävyt ovat samat kuin solujen valmis/kesken-luokissa, jotta taulu
  * pysyy yhtenä palettina.
  */
+/*
+ * VIITEKUVILLA ANKKUROIDUT HEROT (omistajan tilaus 24.8.2026).
+ * Oranssi erottuu valmiusasteikon vihreästä ja harmaasta, koska se ei
+ * kerro valmiudesta vaan siitä, MITEN kuva on tehty: onko generointi
+ * ankkuroitu kohteen omiin Commons-valokuviin. Täysi tausta = koko erä
+ * ankkuroitu, pelkkä ääriviiva = osa kuvista. Sävy on samaa hillittyä
+ * sarjaa kuin muut (omistaja 18.8.2026: "ei kirkuvia liikennevaloja").
+ */
+.tk-taulu td.tk-viite-taysi {
+  background: #f6e0c4;
+  box-shadow: inset 0 0 0 1px rgba(160, 96, 24, 0.35);
+}
+
+.tk-taulu td.tk-viite-osa {
+  box-shadow: inset 0 0 0 1px rgba(160, 96, 24, 0.5);
+}
+
 .tk-nimi.tk-tuore-valmis { background: #e2efdc; }
 .tk-nimi.tk-tuore-tyossa { background: #f7ecd2; }
 .tk-tuore-merkki {
