@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1083, teksti: 'Montevideon kaupunkilehti' },
   { v: 1082, teksti: 'Lisaa kuvia -galleria seitsemasta lahteesta' },
   { v: 1081, teksti: 'Neljä korjattua herokuvaa viitekuvilla' },
   { v: 1080, teksti: 'Tampereen herot viitekuvilla ja Oodi uusiksi' },

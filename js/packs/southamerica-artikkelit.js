@@ -351,4 +351,63 @@ export const SOUTHAMERICA_ARTIKKELIT = {
       + 'kaupungin ulkopuolelle, ja köysirata vie keskustasta Pichinchan '
       + 'rinteelle noin 4 100 metriin.',
   },
+  /*
+   * MONTEVIDEO (24.8.2026). Avain on wiki-otsikko 'Montevideo', jonka
+   * js/packs/southamerica.js antaa kaupungille sekä wiki- että
+   * näyttönimeksi. Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain montevideo): jokainen väite
+   * tulee samasta lähdeaineistosta eli
+   * docs/mantereet-tyoaineisto/faktapohja-montevideo.md:stä ja sen
+   * riippumattomasta tarkistuksesta (tarkistus-montevideo.md), joka
+   * voittaa ristiriidassa. Piirityksen kesto kerrotaan tässä
+   * vuosilukuvälinä 1843–1851, koska "Montevideo"-artikkeli lainaa juuri
+   * sen; lehden historia-sivu selittää, miksi toinen artikkeli päätyy
+   * yli yhdeksään vuoteen (saarto alkoi joulukuussa 1842 ja purkautui
+   * helmikuussa 1852). Perustamisvuotta ei valita yhdeksi, koska
+   * perustamisasiakirjaa ei ole. Vuoden 1873 kulma kantaa koko lehden:
+   * isoisän matkavuonna Montevideo oli juuri saanut lennättimen,
+   * hevosraitiotien, satamatorin ja ensimmäisen rautatiensä.
+   */
+  Montevideo: {
+    intro: 'Montevideo on Uruguayn pääkaupunki. '
+      + 'Se on rakennettu Río de la Platan pohjoisrannalle niemelle, jonka '
+      + 'toisella puolella on suojaisa lahti ja toisella avoin suistovesi. '
+      + 'Portugalilaiset pystyttivät niemelle varustuksen marraskuussa 1723, '
+      + 'mutta espanjalaiset karkottivat heidät jo tammikuussa 1724 ja '
+      + 'aloittivat asuttamisen.'
+      + '\n\n'
+      + 'Muurien sisään syntyi siirtomaakaupunki, josta tuli Espanjan '
+      + 'Etelä-Atlantin laivastotukikohta ja Buenos Airesin kilpailija. '
+      + '**Vuosina 1843–1851 kaupunki kesti piirityksen**, jonka aikana sen '
+      + 'puolustus lepäsi vapautettujen orjien joukko-osaston ja Euroopasta '
+      + 'tulleiden pakolaisten varassa. Sodan jälkeen kasvu oli nopeaa: '
+      + 'kaasukatuvalot 1853, Teatro Solís 1856, lennätinkaapeli Buenos '
+      + 'Airesiin 1866, hevosraitiotie ja Mercado del Puerto 1868, '
+      + 'ensimmäinen rautatie 1869.'
+      + '\n\n'
+      + '**Isoisän matkavuonna 1873** kaupunki oli siis juuri saanut '
+      + 'nykyaikaiset yhteytensä ja oli Etelä-Amerikan vakiintuneimpia '
+      + 'satamakaupunkeja. Nykyään sama niemi jatkuu kymmenien kilometrien '
+      + 'rantabulevardiksi itään, ja kaupungin katukuvassa elää candombe, '
+      + 'afrouruguaylaisten kortteleiden rumpuperinne.',
+    teksti: 'Montevideo sijaitsee Río de la Platan pohjoisrannalla, siinä '
+      + 'kohdassa jossa suisto alkaa avautua Atlantiksi. Vanhakaupunki on '
+      + 'niemellä sataman ja lahden suojassa, ja lahden toisella puolella '
+      + 'kohoaa Cerron kukkula. Vastarantaa ei näy: suistoa on suulla '
+      + 'leveyttä noin 220 kilometriä.'
+      + '\n\n'
+      + 'Kaupunki perustettiin 1720-luvulla portugalilaisten ja '
+      + 'espanjalaisten kiistan seurauksena, ja 1776 siitä tuli Espanjan '
+      + 'Etelä-Atlantin laivastotukikohta. Britit pitivät kaupunkia hallussaan '
+      + 'seitsemän kuukautta vuonna 1807. Guerra Granden aikana Montevideo '
+      + 'kesti pitkän piirityksen, jonka aikana molemmat osapuolet '
+      + 'lakkauttivat orjuuden vahvistaakseen joukkojaan.'
+      + '\n\n'
+      + 'Nykyinen Montevideo on satama-, hallinto- ja kulttuurikaupunki, jonka '
+      + 'rantabulevardi rambla seuraa rantaviivaa laidasta laitaan. Estadio '
+      + 'Centenario, jalkapallon ensimmäisten maailmanmestaruuskisojen '
+      + 'päänäyttämö vuodelta 1930, on yhä maajoukkueen kotikenttä. Helmikuun '
+      + 'karnevaali on vuoden suurin juhla, ja sen näkyvin osa on candombe-'
+      + 'rumpuryhmien llamadas-kulkue.',
+  },
 };
