@@ -198,9 +198,11 @@
 }
 
 /*
- * KUVA ON PIENI. Fokusvirran kortissa kuva on pääasia; tässä se on
- * viite: pop-up on kartalla kelluva tietoruutu, ja iso kuva peittäisi
- * juuri sen kohteen, josta se kertoo.
+ * KUVA ON PIENI — JA KLIKKAAMALLA ISO (Raamattu, kohta KUVAT KARTALLE:
+ * *"pienenä, klik isoksi"*). Fokusvirran kortissa kuva on pääasia; tässä
+ * se on viite: pop-up on kartalla kelluva tietoruutu, ja iso kuva
+ * peittäisi juuri sen kohteen, josta se kertoo. Suurennos on siksi oma
+ * eleensä (js/fokuskohteet.js avaaKohdeSuurennos).
  */
 .fokuskohde-kuva {
   display: block;
@@ -211,11 +213,53 @@
   background: #ded5c2;
 }
 
+/*
+ * KUVA ON PAINIKE. Napin oletusulkoasu riisutaan kokonaan, jotta viite
+ * näyttää edelleen kuvalta eikä lomakekentältä — `zoom-in` on ainoa
+ * merkki, ja se on juuri se affordanssi, jota omistaja jäi kaipaamaan
+ * iPad-pelitestissä 24.8.2026.
+ */
+.fokuskohde-kuvanappi {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  cursor: zoom-in;
+  /* Kartta ottaa eleet itselleen; napautuksen on silti tultava perille. */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fokuskohde-kuvanappi:focus { outline: none; }
+
+.fokuskohde-kuvanappi:focus-visible {
+  outline: 2px solid #9c6b17;
+  outline-offset: -2px;
+}
+
 .fokuskohde-kuva img {
   display: block;
   width: 100%;
   height: 7.5rem;
   object-fit: cover;
+  /*
+   * EI `filter`-KOROSTUSTA hiiren alla, vaikka tämä on HTML-kortti eikä
+   * kartan SVG-kerros: suodatin kartan päällä on iOS:llä sama vaara kuin
+   * kartalla itsellään (js/fokuskartta.js sääntö 3). Läpinäkyvyys riittää
+   * vihjeeksi, ja `zoom-in` kertoo lopun.
+   */
+  transition: opacity 160ms ease-out;
+}
+
+.fokuskohde-kuvanappi:hover img,
+.fokuskohde-kuvanappi:focus-visible img { opacity: 0.88; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fokuskohde-kuva img { transition: none; }
 }
 
 .fokuskohde-kuvateksti {
@@ -244,4 +288,146 @@
   font-size: 0.68rem;
   line-height: 1.35;
   color: rgba(33, 29, 24, 0.58);
+}
+
+/* ===================================================================
+   KUVAN SUURENNOS KARTAN PÄÄLLE (js/fokuskohteet.js avaaKohdeSuurennos)
+   -------------------------------------------------------------------
+   Raamatun osio "Fokusmoodi", kohta KUVAT KARTALLE: kuva on kartalla
+   pienenä ja pelaaja *"klikkaa sen auki isoksi"*.
+
+   ULKOASU ON TARKOITUKSELLA SAMA kuin fokusvirran suurennoksella
+   (css/fokusvirta.css .fokuszoom): pelaajalle tämä on yksi ja sama ele
+   riippumatta siitä, avaako hän kuvan pöllön kortista vai kartan
+   tietoruudusta. Luokat ovat silti omat — fokusvirran `.fokuszoom`:n
+   ilmestyminen on tälle moduulille merkki sulkea tietoruutu
+   (js/fokuskohteet.js kuunteleKohdetta), joten sen luokan lainaaminen
+   veisi suurennokselta oman ankkurinsa.
+
+   Kaksi eroa lehtien katselimeen (css/styles.css .lightbox), ja
+   molemmat ovat omistajan tilauksesta: tausta himmenee vain kevyesti
+   eikä sumennu — sumennus on suodatin, ja kartan päällä suodatin on
+   iOS:llä sama vaara kuin kartalla itsellään — ja kuva mitoitetaan
+   ruudun PIENEMMÄN sivun mukaan, jolloin kartta jää joka reunalta
+   näkyviin.
+   =================================================================== */
+
+.fokuskohde-zoom {
+  position: fixed;
+  inset: 0;
+  /* Tietoruudun (6) ja pöllön kuplan (41) päällä, mutta pelin omien
+     modaalien alla: suurennos on kartan ele, ei näkymän vaihto. Sama
+     kerrosluku kuin fokusvirran suurennoksella. */
+  z-index: 46;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Kapea marginaali: kuva täyttää ruudun selvästi, ja kehyksen oma
+     tila on jo vähennetty JS:ssä (mitoita). */
+  padding: 0.5rem;
+  background: rgba(18, 12, 4, 0);
+  transition: background-color 320ms ease-out;
+  cursor: zoom-out;
+  touch-action: none;
+}
+
+/* Kevyt himmennys: kartta erottuu yhä kuvan takaa. */
+.fokuskohde-zoom-auki { background: rgba(18, 12, 4, 0.32); }
+
+/*
+ * PAPERIKEHYS PELIN OMAA KIELTÄ: pergamentinvaalea paperi, kapea reunus,
+ * pehmeä varjo — ja kuvan ympärille ohut mustereunus. Ei suodattimia.
+ *
+ * KEHYS ON YKSI KAPPALE. Kuvateksti asuu paperilla kuvan alla, joten
+ * kortti on aina täsmälleen kuvan levyinen (leveyden asettaa JS) eikä
+ * teksti voi valua kartan päälle.
+ */
+.fokuskohde-zoomkehys {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.45rem;
+  max-width: min(94vw, 94vmin);
+  padding: 0.55rem 0.55rem 0.45rem;
+  background: #f8f3e6;
+  border: 1px solid rgba(58, 38, 16, 0.35);
+  border-radius: 2px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.5);
+  /* Napautus kehyksen päällä on sulku siinä missä taustallakin: eleet
+     menevät kerrokselle, ei kortille. */
+  pointer-events: none;
+  /* FLIP: muunnos lasketaan kehyksen vasemmasta yläkulmasta (js). */
+  transform-origin: top left;
+}
+
+/*
+ * MITAT TULEVAT JS:STÄ (avaaKohdeSuurennos mitoita). Pelkkä `max-width`
+ * jättäisi kuvan sen luonnolliseen kokoon, ja koska suurennos näyttää
+ * ENSIN välimuistissa olevan pikkukuvan ja vasta sitten ison version,
+ * kuva hyppäisi keskellä animaatiota isommaksi. Nämä ovat varmistus,
+ * jos mitoitus ei ehdi ajoissa.
+ */
+.fokuskohde-zoomkuva {
+  display: block;
+  max-width: 100%;
+  max-height: min(88vh, 94vmin);
+  object-fit: contain;
+  /* Ohut mustereunus kuvan ympäri — sama kuin postikortin kuvalla. */
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  background: #ded5c2;
+}
+
+/*
+ * KUVATEKSTIPALKKI KEHYKSEN SISÄLLÄ: mustetta paperilla, ei irtotekstiä
+ * kartan päällä. Kartta on itsekin vaaleaa pergamenttia, joten kelluvan
+ * tekstin kontrasti katoaisi (omistajan pelitestipalaute 24.8.2026).
+ */
+.fokuskohde-zoomteksti {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.15rem 0.1rem 0;
+  text-align: center;
+  font-family: var(--font-luku);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #3a2610;
+  text-shadow: none;
+  transition: opacity 320ms ease-out;
+}
+
+.fokuskohde-zoomselite { display: block; }
+
+.fokuskohde-zoomlahde {
+  display: block;
+  font-size: 0.74rem;
+  color: rgba(58, 38, 16, 0.72);
+}
+
+.fokuskohde-zoomlahde:empty { display: none; }
+
+/*
+ * TIETORUUTU POIS SUURENNOKSEN AJAKSI (sama sopimus kuin fokusvirralla:
+ * suurennos on kartan ele, ja sen ajaksi ruudulla saa olla vain kartta
+ * ja kuva). Luokan asettaa js/fokuskohteet.js avaaKohdeSuurennos ja
+ * poistaa poista(), joten kortti palaa myös silloin, kun suurennos
+ * revitään pois ilman animaatiota.
+ *
+ * HÄIVYTYS EIKÄ `display: none`: kortin kuvapainike on suurennoksen
+ * ankkuri, ja piilotettuna sillä ei olisi ruutupaikkaa, johon kutistua.
+ */
+body.fokuskohde-zoom-paalla .fokuskohde-popup {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease-out;
+}
+
+/*
+ * LIIKEHERKKYYS. JS jättää kasvumuunnoksen tekemättä kokonaan
+ * (kohdeLiikeVahennetty), ja CSS:n omat siirtymät vaimennetaan täällä.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .fokuskohde-zoom,
+  .fokuskohde-zoomteksti,
+  body.fokuskohde-zoom-paalla .fokuskohde-popup { transition: none; }
 }

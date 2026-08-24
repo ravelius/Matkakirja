@@ -39,13 +39,25 @@
  *    ruudun pikseleitä — sama tekniikka kuin vinjeteillä. Osuma-alueen
  *    r = 22 on siis 44 px läpimitta joka zoomilla.
  *
- * === MITÄ TÄSSÄ EI OLE ===
+ * === KUVA PIENENÄ, KLIK ISOKSI ===
  *
- * KUVAN SUURENNOS. Fokusvirran `avaaSuurennos` ei ole vientilistalla
- * (js/fokusvirta.js: funktio on moduulin sisäinen), eikä tämä paketti
- * saanut muokata sitä tiedostoa. Pop-upin kuva on siksi katsottava
- * pienenä; suurennos on yhden rivin päässä sinä päivänä kun
- * avaaSuurennos viedään ulos.
+ * Raamatun osio "Fokusmoodi", kohta KUVAT KARTALLE: kuvat ovat kartalla
+ * PIENENÄ ja pelaaja *"klikkaa ne auki isoksi"*. Omistajan pelitesti
+ * iPadilla 24.8.2026 (kuvakaappaus Iraklionin tietoruudusta) osoitti,
+ * ettei pop-upin kuvaviite totellut sitä: sitä saattoi vain katsoa
+ * postimerkin kokoisena. Nyt viite on painike, ja napautus kasvattaa
+ * kuvan kartan päälle (avaaKohdeSuurennos).
+ *
+ * OMA SUURENNOS EIKÄ FOKUSVIRRAN. Fokusvirran `avaaSuurennos` ei ole
+ * vientilistalla (js/fokusvirta.js: funktio on moduulin sisäinen), eikä
+ * tämä paketti saanut muokata sitä tiedostoa. Kopio olisi silti väärin
+ * kahdesta muustakin syystä: fokusvirran kerros on luokaltaan
+ * `.fokuszoom`, ja juuri sen ilmestyminen on tälle moduulille merkki
+ * sulkea tietoruutu (ks. kuunteleKohdetta) — suurennos veisi mennessään
+ * oman ankkurinsa. Siksi täällä on oma kevyt suurennos omalla luokallaan
+ * ja SAMALLA ULKOASULLA (css/fokuskohteet.css peilaa .fokuszoom-tyylit).
+ *
+ * === MITÄ TÄSSÄ EI OLE ===
  *
  * TÄYSI NIUKKA-KARTTA-KOROSTUS. Raamatun KOHDEKOROSTUS lupaa kartan
  * piirtyvän muuten niukkana ja nostavan yhden kohteen esiin. Tässä
@@ -54,7 +66,7 @@
 import { el } from './mapart.js';
 import { asetaKuva } from './media.js';
 import { html, jaaKappaleiksi } from './ui-apurit.js';
-import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
+import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { FOKUSKOHTEET_GRC } from './packs/fokuskohteet-grc.js';
 import { sfx } from './sound.js';
 
@@ -75,6 +87,9 @@ const KOHDE_RAKO = 12;
 
 /** Pop-upin kuvan pyyntöleveys: pieni viite, ei kortin iso kuva. */
 const KOHDE_KUVAN_PX = 480;
+
+/** Suurennoksen pyyntöleveys: sama mitta kuin muualla pelissä. */
+const KOHDE_ZOOM_PX = 1600;
 
 /** Tyyppien ylärivit. Tuntematon tyyppi saa yleisen otsikon. */
 const KOHDE_TYYPIT = {
@@ -292,6 +307,9 @@ export function nollaaFokuskohteet(ui) {
 
 /** Sulkee auki olevan tietoruudun ja purkaa sen kuuntelijat. */
 export function suljeFokuskohde(ui) {
+  // Suurennos on tietoruudun kuvan jatke: kortin lähtiessä sen ankkuri
+  // katoaa, joten se ei saa jäädä yksin kartan päälle.
+  suljeKohdeSuurennos(ui);
   const auki = ui?.fokuskohdeAuki;
   if (!auki) return;
   ui.fokuskohdeAuki = null;
@@ -343,7 +361,17 @@ function asetaKohteenPaikka(ui) {
 }
 
 /**
- * Kortin kuva: pieni viite, ei kortin täysleveä kuva.
+ * Kortin kuva: pieni viite, jota NAPAUTTAMALLA SE KASVAA ISOKSI.
+ *
+ * Raamatun KUVAT KARTALLE -linjaus (*"pienenä, klik isoksi"*) ja
+ * omistajan iPad-pelitesti 24.8.2026. Kuva on siksi <button>-painikkeen
+ * sisällä eikä paljaana kuvana — kahdesta syystä:
+ *
+ *   1. NAPPI ON NÄPPÄIMISTÖLLÄ SAAVUTETTAVISSA, paljas <img> ei.
+ *   2. KORTIN OMA SULKUSOPIMUS TOTTELEE SITÄ. Pop-upin päällä napautus
+ *      on sulku, mutta painikkeen tai linkin päällä valinta (ks.
+ *      avaaFokuskohde). Painikkeena kuva saa napautuksensa itselleen
+ *      ilman että kortti katoaa sen alta.
  *
  * PUUTTUVA KUVA POISTAA KUVAPAIKAN kokonaan, kuten fokusvirran kortilla:
  * tyhjä kehys ja sitä selittävä kuvateksti olisi pahempi kuin pelkkä
@@ -351,16 +379,25 @@ function asetaKohteenPaikka(ui) {
  * asettajassa (js/media.js asetaKuva), joten sitä ei kirjoiteta tähän
  * uudestaan.
  */
-function piirraKohdeKuva(sisalto, kuva) {
+function piirraKohdeKuva(ui, sisalto, kuva) {
   if (!kuva?.tiedosto) return;
   const kehys = html('figure', 'fokuskohde-kuva');
+  const nappi = html('button', 'fokuskohde-kuvanappi');
+  nappi.type = 'button';
+  nappi.title = 'Katso kuva suurempana';
+  nappi.setAttribute('aria-label', 'Katso kuva suurempana');
   const img = document.createElement('img');
   img.decoding = 'async';
   img.draggable = false;
   img.alt = kuva.selite ?? '';
   asetaKuva(img, valokuvaUrl(kuva.tiedosto, KOHDE_KUVAN_PX),
     valokuvaVara(kuva.tiedosto, KOHDE_KUVAN_PX), () => kehys.remove());
-  kehys.appendChild(img);
+  nappi.appendChild(img);
+  nappi.addEventListener('click', (tapahtuma) => {
+    tapahtuma.stopPropagation();
+    avaaKohdeSuurennos(ui, kuva, () => nappi);
+  });
+  kehys.appendChild(nappi);
   if (kuva.selite || kuva.lahde) {
     const teksti = html('figcaption', 'fokuskohde-kuvateksti', kuva.selite ?? '');
     // CC BY vaatii tekijän maininnan: lähde on aina kuvan vieressä.
@@ -368,6 +405,247 @@ function piirraKohdeKuva(sisalto, kuva) {
     kehys.appendChild(teksti);
   }
   sisalto.appendChild(kehys);
+}
+
+/* ==================== KUVAN SUURENNOS KARTAN PÄÄLLE ==================
+ *
+ * Sama ele ja sama ulkoasu kuin fokusvirran kuvilla: kuva KASVAA
+ * paikaltaan suureksi niin, että KARTTA NÄKYY YHÄ TAUSTALLA (omistajan
+ * tilaus 24.8.2026). Ei pelin omaa katselinta (ui.openLightbox): se on
+ * koko ruudun modaali, joka tummentaa ja sumentaa kaiken alleen — oikein
+ * lehdessä, väärin fokusmoodissa, jonka koko idea on kartta näkymänä.
+ *
+ * MIKSI OMA EIKÄ FOKUSVIRRAN: ks. tiedoston alku, "OMA SUURENNOS EIKÄ
+ * FOKUSVIRRAN". Ulkoasu on peilattu tarkoituksella samaksi
+ * (css/fokuskohteet.css), jotta pelaaja näkee yhden ja saman eleen
+ * riippumatta siitä, mistä kuvasta hän sen avaa.
+ *
+ * LIIKE ON FLIP. Kuva ladotaan HETI lopulliseen kokoonsa, ja sen päälle
+ * asetetaan muunnos, joka kutistaa KEHYKSEN takaisin pikkukuvan
+ * ruutupaikkaan; seuraavana kehyksenä muunnos poistetaan siirtymän
+ * kanssa. Vain `transform` ja `opacity` liikkuvat, joten animaatio ei
+ * kilpaile kartan rasteroinnin kanssa — sama oppi kuin kartan
+ * kamera-ajossa (js/kartta.js ajaKamera).
+ *
+ * EI SUODATTIMIA: tausta himmenee kevyesti, ei sumennu. Sumennus olisi
+ * suodatin, ja suodatin kartan päällä on iOS:llä sama vaara kuin
+ * kartalla itsellään.
+ */
+
+/** Kasvun ja kutistuksen kesto; sama tuntuma kuin fokusvirralla. */
+const KOHDE_ZOOM_MS = 320;
+/** Suuren kuvan osuus ruudun PIENEMMÄSTÄ sivusta (kartta jää reunoille). */
+const KOHDE_ZOOM_OSUUS = 0.94;
+/** Katot leveydelle ja korkeudelle, ettei kuva puske reunaan asti. */
+const KOHDE_ZOOM_LEVEIN = 0.94;
+const KOHDE_ZOOM_KORKEIN = 0.88;
+/** Kuvatekstipalkille varattava pystytila pikseleinä (palkki on kehyksen
+ *  sisällä, joten sen tila on vähennettävä kuvan korkeudesta). */
+const KOHDE_ZOOM_TEKSTIPALKKI = 120;
+/** Paperikehyksen oma tila pikseleinä (reunus + sisennys molemmin puolin). */
+const KOHDE_ZOOM_KEHYS_PX = 26;
+/** Kuvasuhde, jota käytetään ennen kuin kuvan omat mitat tiedetään. */
+const KOHDE_ZOOM_OLETUSSUHDE = 4 / 3;
+/** Kiihtyy alussa, jarruttaa lopussa — kartan kamera-ajon sukulainen. */
+const KOHDE_ZOOM_PEHMENNYS = 'cubic-bezier(0.22, 0.9, 0.24, 1)';
+
+/** Onko käyttäjä pyytänyt vähemmän liikettä? */
+function kohdeLiikeVahennetty() {
+  return Boolean(globalThis.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches);
+}
+
+/*
+ * Sulkee auki olevan suurennoksen ilman animaatiota (kortti sulkeutuu).
+ * EI VIENTILISTALLE: ainoa tie ulos on suljeFokuskohde, joka kutsuu tätä
+ * — niin kortti ja sen kuva katoavat aina yhdessä eikä kutsujan tarvitse
+ * muistaa kahta sulkua.
+ */
+function suljeKohdeSuurennos(ui) {
+  ui?.fokuskohdeZoom?.heti?.();
+  if (ui) ui.fokuskohdeZoom = null;
+}
+
+/**
+ * Kuva suureksi kartan päälle, pikkukuvan paikalta kasvattaen.
+ *
+ * @param {object} ui
+ * @param {{tiedosto:string, selite?:string, lahde?:string}} kuva
+ * @param {() => Element|null} ankkuri mistä ruudun kohdasta kuva kasvaa
+ *   ja mihin se kutistuu. Funktio eikä valmis elementti, koska kortti voi
+ *   liikkua kartan mukana suurennoksen ollessa auki.
+ */
+function avaaKohdeSuurennos(ui, kuva, ankkuri) {
+  if (typeof document === 'undefined' || !kuva?.tiedosto) return;
+  suljeKohdeSuurennos(ui);
+  lataaKohdeTyyli();
+  let suljettu = false;
+
+  const kerros = html('div', 'fokuskohde-zoom');
+  kerros.setAttribute('role', 'dialog');
+  kerros.setAttribute('aria-modal', 'true');
+  kerros.setAttribute('aria-label', 'Kuva suurennettuna');
+  const kehys = html('figure', 'fokuskohde-zoomkehys');
+  const img = document.createElement('img');
+  img.className = 'fokuskohde-zoomkuva';
+  img.draggable = false;
+  img.alt = kuva.selite ?? '';
+  const teksti = html('figcaption', 'fokuskohde-zoomteksti');
+  teksti.append(
+    html('span', 'fokuskohde-zoomselite', kuva.selite ?? ''),
+    // CC BY vaatii tekijän maininnan myös suurennoksessa.
+    html('span', 'fokuskohde-zoomlahde', kuva.lahde ?? ''),
+  );
+  kehys.append(img, teksti);
+  kerros.appendChild(kehys);
+
+  /*
+   * PIKKUKUVA ENSIN, ISO PERÄSSÄ. Kortin pikkukuva on jo selaimen
+   * välimuistissa, joten se on ruudulla samassa kehyksessä — ja mikä
+   * tärkeämpää, sillä on oikeat mittasuhteet heti, jolloin kasvun lähtö-
+   * ja maalilaatikko voidaan mitata odottamatta verkkoa.
+   */
+  asetaKuva(img, valokuvaUrl(kuva.tiedosto, KOHDE_KUVAN_PX),
+    valokuvaVara(kuva.tiedosto, KOHDE_KUVAN_PX), null);
+  const iso = new Image();
+  iso.decoding = 'async';
+  iso.addEventListener('load', () => {
+    if (kerros.isConnected) img.src = iso.src;
+  }, { once: true });
+  iso.src = valokuvaSuurennos(kuva.tiedosto, KOHDE_ZOOM_PX);
+
+  /**
+   * Kuvan laatikko pikseleinä. Leveys ruudun PIENEMMÄSTÄ sivusta, jotta
+   * kartta erottuu kuvan sivuilta; korkeus ruudun omasta korkeudesta,
+   * tai pystykuva jäisi tabletilla puolityhjäksi. Sama luku kummallakin
+   * versiolla, joten pikkukuvan vaihtuminen isoksi ei liikuta mitään.
+   */
+  const mitoita = () => {
+    const leveys = globalThis.innerWidth || 0;
+    const korkeus = globalThis.innerHeight || 0;
+    if (!leveys || !korkeus) return;
+    const pienempi = Math.min(leveys, korkeus);
+    const enintaanW = Math.min(leveys * KOHDE_ZOOM_LEVEIN, pienempi * KOHDE_ZOOM_OSUUS)
+      - KOHDE_ZOOM_KEHYS_PX;
+    const enintaanH = Math.max(
+      korkeus * KOHDE_ZOOM_KORKEIN - KOHDE_ZOOM_TEKSTIPALKKI,
+      korkeus * 0.3,
+    );
+    const suhde = (img.naturalWidth && img.naturalHeight)
+      ? img.naturalWidth / img.naturalHeight : KOHDE_ZOOM_OLETUSSUHDE;
+    let w = enintaanW;
+    let h = w / suhde;
+    if (h > enintaanH) { h = enintaanH; w = h * suhde; }
+    img.style.width = `${Math.round(w)}px`;
+    img.style.height = `${Math.round(h)}px`;
+    // Palkki on täsmälleen kuvan levyinen: teksti taittuu kehyksen sisään
+    // eikä kartan päälle.
+    kehys.style.width = `${Math.round(w)}px`;
+  };
+
+  /**
+   * Muunnos, joka vie ladotun KEHYKSEN ankkurin ruutupaikkaan. Muunnos on
+   * kehyksellä eikä kuvalla: muuten näyttäisi siltä, että valmis kortti
+   * on jo ruudulla ja kuva vasta hakee paikkaansa sen sisällä.
+   */
+  const ankkuriMuunnos = () => {
+    const alkuun = ankkuri?.()?.getBoundingClientRect?.();
+    const nyt = kehys.getBoundingClientRect();
+    if (!alkuun?.width || !nyt.width || kohdeLiikeVahennetty()) return null;
+    return `translate(${(alkuun.left - nyt.left).toFixed(1)}px, `
+      + `${(alkuun.top - nyt.top).toFixed(1)}px) `
+      + `scale(${(alkuun.width / nyt.width).toFixed(4)}, `
+      + `${(alkuun.height / nyt.height).toFixed(4)})`;
+  };
+
+  const poista = () => {
+    globalThis.removeEventListener?.('resize', mitoita);
+    document.removeEventListener('keydown', nappain, true);
+    /*
+     * Tietoruutu palaa näkyviin (ks. body-luokka alempana). Poisto on
+     * tässä eikä sulkemisessa, jotta kortti pysyy häivytettynä myös
+     * kutistumisen ajan — ja palaa varmasti silloinkin, kun suurennos
+     * revitään pois ilman animaatiota.
+     */
+    document.body.classList.remove('fokuskohde-zoom-paalla');
+    kerros.remove();
+  };
+
+  const sulje = () => {
+    if (suljettu) return;
+    suljettu = true;
+    if (ui?.fokuskohdeZoom?.kerros === kerros) ui.fokuskohdeZoom = null;
+    kerros.classList.remove('fokuskohde-zoom-auki');
+    const takaisin = ankkuriMuunnos();
+    if (!takaisin) { poista(); return; }
+    void kerros.offsetWidth;
+    kehys.style.transition = `transform ${KOHDE_ZOOM_MS}ms ${KOHDE_ZOOM_PEHMENNYS}`;
+    kehys.style.transform = takaisin;
+    teksti.style.opacity = '0';
+    setTimeout(poista, KOHDE_ZOOM_MS + 60);
+  };
+
+  /*
+   * ESC SULKEE SUURENNOKSEN, EI TIETORUUTUA. Kortin oma Esc-kuuntelija
+   * on rekisteröity ennen tätä ja ehtisi siis ensin; se väistää niin
+   * kauan kuin ui.fokuskohdeZoom on olemassa (ks. kuunteleKohdetta).
+   */
+  function nappain(tapahtuma) {
+    if (tapahtuma.key !== 'Escape') return;
+    tapahtuma.stopPropagation();
+    sulje();
+  }
+  document.addEventListener('keydown', nappain, true);
+  kerros.addEventListener('click', (tapahtuma) => {
+    tapahtuma.stopPropagation();
+    sulje();
+  });
+
+  /*
+   * TIETORUUTU POIS SUURENNOKSEN AJAKSI. Suurennos on kartan ele, ja sen
+   * ajaksi ruudulla saa olla vain kartta ja kuva.
+   *
+   * HÄIVYTYS EIKÄ `display: none` (css/fokuskohteet.css): kortin
+   * kuvapainike on suurennoksen ANKKURI, ja piilotettuna sillä ei olisi
+   * enää ruutupaikkaa — kutistuminen takaisin jäisi tekemättä.
+   */
+  document.body.classList.add('fokuskohde-zoom-paalla');
+  document.body.appendChild(kerros);
+  if (ui) ui.fokuskohdeZoom = { kerros, sulje, heti: poista };
+
+  /*
+   * KASVU ALKAA VASTA KUN KUVALLA ON MITAT. Ladottu <img> ilman ladattua
+   * tiedostoa on nollan levyinen, ja nollasta laskettu mittakaava olisi
+   * ääretön. Varmistus ajastimella pitää huolen siitä, ettei suurennos
+   * jää muunnokseen jumiin, jos lataus epäonnistuu.
+   */
+  let aloitettu = false;
+  const aloita = () => {
+    if (aloitettu || suljettu || !kerros.isConnected) return;
+    aloitettu = true;
+    mitoita();
+    const alusta = ankkuriMuunnos();
+    if (alusta) {
+      kehys.style.transition = 'none';
+      kehys.style.transform = alusta;
+      teksti.style.opacity = '0';
+    }
+    /*
+     * PAKOTETTU TYYLIN LASKENTA ENNEN KÄÄNNÖSTÄ: ilman tätä selain
+     * niputtaa lähtö- ja maalitilan samaan kehykseen eikä näe niiden
+     * välillä eroa — kuva ilmestyisi suoraan lopulliseen kokoonsa.
+     */
+    void kerros.offsetWidth;
+    if (alusta) {
+      kehys.style.transition = `transform ${KOHDE_ZOOM_MS}ms ${KOHDE_ZOOM_PEHMENNYS}`;
+      kehys.style.transform = 'none';
+      teksti.style.opacity = '';
+    }
+    kerros.classList.add('fokuskohde-zoom-auki');
+  };
+  img.addEventListener('load', () => { mitoita(); aloita(); });
+  globalThis.addEventListener?.('resize', mitoita);
+  if (img.complete && img.naturalWidth) aloita();
+  setTimeout(aloita, 400);
 }
 
 /**
@@ -411,7 +689,7 @@ export function avaaFokuskohde(ui, kohde) {
   sisalto.appendChild(html('p', 'fokuskohde-ylarivi',
     KOHDE_TYYPIT[kohde.tyyppi] ?? KOHDE_TYYPIT.muu));
   sisalto.appendChild(html('h3', 'fokuskohde-otsikko', kohde.nimi));
-  piirraKohdeKuva(sisalto, kohde.kuva);
+  piirraKohdeKuva(ui, sisalto, kohde.kuva);
   const teksti = html('div', 'fokuskohde-teksti');
   for (const kappale of jaaKappaleiksi(kohde.teksti)) {
     teksti.appendChild(html('p', '', kappale));
@@ -442,6 +720,8 @@ export function avaaFokuskohde(ui, kohde) {
 function kuunteleKohdetta(ui, popup) {
   const nappain = (tapahtuma) => {
     if (tapahtuma.key === 'Escape') {
+      // Suurennos kuoritaan ensin: Esc sulkee sen, ei koko tietoruutua.
+      if (ui?.fokuskohdeZoom) return;
       tapahtuma.stopPropagation();
       suljeFokuskohde(ui);
     }
@@ -450,6 +730,13 @@ function kuunteleKohdetta(ui, popup) {
     if (popup.contains(tapahtuma.target)) return;
     // Toisen merkin napautus vaihtaa kohdetta; merkki hoitaa sulun itse.
     if (tapahtuma.target?.closest?.('.fokuskohde')) return;
+    /*
+     * Suurennos on tämän kortin oma jatke, vaikka se asuu bodyssa
+     * (js/kartta.js KELLUVA_UI: kelluvat pinnat ovat siellä samasta
+     * syystä). Ilman tätä napautus suurennoksen päällä sulkisi kortin, ja
+     * kuva kutistuisi paikkaan, jota ei enää ole.
+     */
+    if (tapahtuma.target?.closest?.('.fokuskohde-zoom')) return;
     suljeFokuskohde(ui);
   };
   const asemoi = () => asetaKohteenPaikka(ui);
