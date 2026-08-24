@@ -683,4 +683,62 @@ export const SOUTHAMERICA_ARTIKKELIT = {
       + 'Musiikinopetusohjelma El Sistema ja siitä noussut Simón Bolívar '
       + '-sinfoniaorkesteri toimivat kaupungissa, ja arkiruoka on arepa.',
   },
+  /*
+   * SALVADOR (24.8.2026). Avain on laudan wiki-nimi
+   * js/packs/southamerica.js:ssä eli 'Salvador (Brasilia)' — pelkkä
+   * "Salvador" on suomeksi täsmennyssivu, josta ei saa tiivistelmää.
+   * Jokainen väite tulee samasta erästä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain salvador), ja ne on
+   * tarkistettu en-Wikipedian raakateksteistä 24.8.2026: "Salvador,
+   * Bahia", "Slavery in Brazil", "Candomblé", "Elevador Lacerda",
+   * "Historic Center of Salvador", "Timeline of Salvador, Bahia".
+   * Sisältölinjaus on spec-mantereet.md:n E-Amerikka-osio ja Raamatun
+   * pilarit 3 ja 4: orjakauppa kerrotaan tapahtumina, vuosilukuina ja
+   * lukuina, kaunistelematta ja dramatisoimatta, ja afrobrasilialainen
+   * kulttuuri elävänä nykykulttuurina. Vuoden 1873 kulma on introssa,
+   * koska se on koko lehden kantava aihe: isoisän matkavuonna
+   * Salvadoriin valmistui Brasilian ensimmäinen hissi ja orjuus oli
+   * yhä laillista.
+   */
+  'Salvador (Brasilia)': {
+    intro: 'Salvador on Bahian osavaltion pääkaupunki Brasilian '
+      + 'koillisrannikolla, niemellä joka erottaa Kaikkien pyhien lahden '
+      + 'Atlantista. Kaupunki on kahdessa kerroksessa: noin 85 metrin '
+      + 'jyrkänteen päällä on Cidade Alta kirkkoineen ja hallintoineen, '
+      + 'alhaalla lahden rannassa Cidade Baixa satamineen. Asukkaita on '
+      + 'noin 2,4 miljoonaa.'
+      + '\n\n'
+      + '**Tomé de Sousa perusti kaupungin 1549, ja se oli Portugalin '
+      + 'Brasilian ensimmäinen pääkaupunki vuoteen 1763.** Sokeri ja '
+      + 'tupakka tekivät satamasta rikkaan, ja samasta satamasta tuli maan '
+      + 'suurin orjien tuontisatama: Brasiliaan tuotiin noin neljä '
+      + 'miljoonaa orjuutettua afrikkalaista, suurin osa heistä '
+      + 'Bahiaan. Siitä juontuu kaupungin nykyinen kulttuuri, jossa '
+      + 'candomblé, capoeira ja bahialainen keittiö ovat tavallista arkea. '
+      + 'Vanha keskusta Pelourinho on Unescon maailmanperintökohde.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 kaupungissa asui 129 109 ihmistä ja '
+      + 'orjuus oli yhä laillista – Brasilia lakkautti sen viimeisenä '
+      + 'Amerikan mantereen maista 1888. **Samana vuonna valmistui '
+      + 'Brasilian ensimmäinen hissi, Elevador Lacerda**, joka yhdistää '
+      + 'kaupungin kaksi kerrosta ja kulkee yhä.',
+    teksti: 'Salvador on Brasilian koillisrannikolla, Bahian osavaltion '
+      + 'pääkaupunki. Se seisoo kapealla niemellä, joka erottaa Kaikkien '
+      + 'pyhien lahden – maan suurimman lahden – Atlantista. Kaupunki on '
+      + 'kahdessa tasossa, ja tasojen väliä kulkee Lacerdan hissi.'
+      + '\n\n'
+      + 'Portugalilaiset perustivat kaupungin 1549 siirtomaansa '
+      + 'pääkaupungiksi, ja täällä toimi myös Brasilian ensimmäinen '
+      + 'hiippakunta. Sokeriruoko ja tupakka tekivät siitä varakkaan, ja '
+      + 'satama oli maan suurin orjien tuontisatama. Hallinto siirtyi '
+      + 'Rio de Janeiroon 1763, orjakauppa kiellettiin 1850 ja orjuus '
+      + 'lakkautettiin 1888.'
+      + '\n\n'
+      + 'Nykyään Salvador on afrobrasilialaisen kulttuurin keskus. '
+      + 'Candomblén temppeleitä on kaupungissa yli tuhat, capoeira-ringit '
+      + 'kokoontuvat kaduilla ja kouluissa, ja Bahian karnevaali on '
+      + 'Guinnessin ennätyskirjan mukaan maailman suurin katujuhla. '
+      + 'Pelourinhon värikkäitä kortteleita on kunnostettu 1990-luvulta '
+      + 'alkaen, ja entisöityjä rakennuksia on yli 800.',
+  },
 };

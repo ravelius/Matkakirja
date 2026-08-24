@@ -72756,4 +72756,781 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * SALVADOR (lauta southamerica, kaupunki-id salvador, maa BRA) —
+   * kaupunkilehti 24.8.2026.
+   *
+   * LÄHTEET. Työpohjana docs/mantereet-tyoaineisto/faktapohja-salvador.md.
+   * Sen riippumatonta tarkistusta (tarkistus-salvador.md) EI OLE tässä
+   * työpuussa; tarkistuksen kolme pakollista korjausta ja seitsemän
+   * huomiota tulivat tehtävänannon mukana, ja ne on kaikki tehty (ks.
+   * alla). Jokainen tähän lohkoon menevä väite on lisäksi haettu
+   * uudestaan en-Wikipedian raakateksteistä 24.8.2026 (action=raw,
+   * NODE_USE_ENV_PROXY=1, uusinnat kasvavalla viiveellä — MediaWiki
+   * vastasi toistuvasti 429): Salvador Bahia, Barra Lighthouse,
+   * Malê revolt, Elevador Lacerda, Candomblé, Akara, Lavagem do Bonfim,
+   * Church of Nosso Senhor do Bonfim Salvador, Timeline of Salvador
+   * Bahia, Historic Center of Salvador, Porto da Barra Beach, Slavery
+   * in Brazil, Eusébio de Queirós Law.
+   *
+   * TARKISTUKSEN KOLME PAKOLLISTA KORJAUSTA ON TEHTY.
+   *
+   *   (1) ORJAKAUPAN LAKKAUTTAMISVUOSI ON 1850, EI 1851. Faktapohjan
+   *       nosto H3 sanoi leipätekstissä 1850 mutta omassa lähde-
+   *       viittauksessaan "(toteutui 1851)". Ristiriita on peräisin
+   *       en-Wikipediasta itsestään: "Malê revolt" (Aftermath) sanoo
+   *       "the slave trade was abolished in 1851", kun taas aiheen oma
+   *       artikkeli "Eusébio de Queirós Law" antaa tarkan päivämäärän
+   *       ("Law No. 581 of 4 September 1850 ... to abolish international
+   *       slave trade in the country") ja "Candomblé" (History) toistaa
+   *       saman ("Brazil abolished the slave trade in 1850"). Tarkempi
+   *       lähde voittaa: nosto H3 sanoo 1850 ja nimeää lain (Eusébio de
+   *       Queirósin laki, 4. syyskuuta 1850).
+   *
+   *   (2) LIBERDADE — "YKSI SUURIMMISTA", EI "SUURIN". Faktapohjan
+   *       jakso 2 väitti, että Liberdadessa asuisi suhteessa enemmän
+   *       afrobrasilialaisia kuin missään muualla Salvadorissa tai
+   *       Brasiliassa. Lähde on varauksellisempi: "The neighborhood of
+   *       Liberdade has one of the largest proportions of Afro-Brazilians
+   *       of Salvador and Brazil" (Salvador, Bahia — Neighborhoods).
+   *       Oppaan jakso 2 sanoo nyt "yksi suurimmista".
+   *
+   *   (3) COMMONS-KATEGORIA. Faktapohjan ehdottamaa kategoriaa
+   *       `Category:Historic Centre of Salvador de Bahia` EI OLE
+   *       OLEMASSA. Commonsin oma haku (srnamespace=14) antaa
+   *       pääkategoriaksi `Category:Historic center of Salvador (Bahia)`
+   *       — ja Commonsin epäjohdonmukaisuutena sen ALAKATEGORIAT
+   *       käyttävät silti "de Bahia" -muotoa ja ovat olemassa
+   *       (`Squares in the Historic Centre of Salvador de Bahia`,
+   *       `Aerial photographs of Centro Histórico de Salvador`). Jokainen
+   *       tässä käytetty kategoria on todennettu itse rajapinnasta.
+   *
+   * TARKISTUKSEN HUOMIOT ON MYÖS HOIDETTU.
+   *   (a) "Viimeisenä Amerikan mantereella" on nyt merkitty lähteeseen,
+   *       joka sen todella sanoo: en-Wikipedia "Slavery in Brazil"
+   *       ("Brazil was the last country in the Americas to abolish
+   *       slavery, on 13 May 1888"). Nosto H2 käyttää tätä muotoilua.
+   *   (b) Capoeira Regional / Capoeira Angola -erottelulle EI löytynyt
+   *       lähdeviitettä "Salvador, Bahia" -artikkelista, joka sanoo vain
+   *       "Salvador-born masters Mestre Bimba and Mestre Pastinha founded
+   *       capoeira schools and helped standardize and popularize the art".
+   *       Haaraerottelu on siksi JÄTETTY POIS nostosta M2, joka nimeää
+   *       mestarit ja heidän koulunsa mutta ei koulukuntien nimiä.
+   *   (c) Merkkimäärät on mitattu koneellisesti tästä tiedostosta, ei
+   *       faktapohjasta: nostot 474–589 merkkiä, sivujen johdannot
+   *       188–230 merkkiä, kuvatekstit yhden virkkeen mittaisia.
+   *
+   * ISOISÄN MATKAVUOSI 1873 ON LEHDEN ANKKURI. Elevador Lacerda,
+   * Brasilian ensimmäinen hissi, avattiin juuri 1873 ("Timeline of
+   * Salvador, Bahia": "1873 - Elevador Lacerda begins operating";
+   * "Salvador, Bahia": "In 1873, Brazil's first elevator ... was
+   * constructed"). Edellisessä väestönlaskennassa 1872 kaupungissa oli
+   * 129 109 asukasta, ja orjuus oli Brasiliassa yhä laillista.
+   *
+   * WIKIPEDIAN SISÄISET RISTIRIIDAT, JOTKA RATKAISTIIN AUKI KIRJOITTAEN.
+   *   (a) HISSIN VALMISTUMISVUOSI. "Elevador Lacerda" -artikkelin
+   *       infobox sanoo completion_date 1869, leipäteksti "built between
+   *       1869 and 1873". Pääartikkeli, Timeline ja Commonsin kategoria
+   *       "1873 establishments in Brazil" sanovat 1873. Nosto H4 kertoo
+   *       molemmat: rakennettiin 1869–1873, avattiin 1873.
+   *   (b) HISSIN KAPASITEETTI. "Salvador, Bahia" sanoo 128 henkeä 22
+   *       sekunnissa, "Elevador Lacerda" taas neljä hissiä à 27 henkeä
+   *       30 sekunnissa. Kumpaakaan EI käytetä; nosto käyttää
+   *       riidatonta lukua (yli 33 000 matkustajaa vuorokaudessa 2019)
+   *       ja korkeuseroa 72 m, jotka molemmat artikkelit antavat samoin.
+   *   (c) IPHAN-SUOJELUN VUOSI. "Elevador Lacerda" -infobox sanoo 2002,
+   *       leipäteksti 7.12.2006 lähdeviitteen kanssa. Käytetään 2006,
+   *       koska sillä on lähde.
+   *
+   * SISÄLTÖLINJAUS (Raamatun pilarit 3 ja 4, tehtävänannon oma tilaus).
+   * ORJAKAUPPA ON KÄSITELTY, koska se on tämän kaupungin ydinaihe:
+   * tapahtumina, vuosilukuina ja lukuina, toteavasti. Ei kärsimyksen
+   * kuvailua, ei kaunistelua, ei dramatisointia. Häpeäpaalu kerrotaan
+   * sanan merkityksenä ja kaupunginosan nimen alkuperänä (H1), satama
+   * lukuina ja vientitavaroina (H2), Malê-kapina kapinallisten oman
+   * lukutaidon ja järjestäytymisen kautta (H3) — kapinan uhrilukuja
+   * (infoboxissa n. 7 + 80 kuollutta, 300 vangittua, 5 teloitettua) EI
+   * käytetä. Candomblé käsitellään USKONTONA, ei folklorena, ja
+   * capoeira, karnevaali ja bahialainen keittiö elävänä
+   * nykykulttuurina: toimivat temppelit ja niiden papittaret, joka
+   * tammikuinen kulkue, yhä soivat blocos afro -ryhmät ja yli 500
+   * acarajé-myyjää. Pelourinhon 1990-luvun peruskorjaukseen liittyvä
+   * afrobrasilialaisen väestön häätökeskustelu, Salvadorin
+   * väkivaltatilastot ja Magalhães-suvun "carlismo" on jätetty pois
+   * (ei nykypolitiikkaa, ei nykyrikollisuutta). Myöskään
+   * 2000-luvun uskonnollisia yhteenottoja ei käsitellä.
+   *
+   * KULTTUURIVISA (js/packs/southamerica-questions.js, avain salvador,
+   * viisi kysymystä) — vastaus LÖYTYY lehdestä mutta EI VISAN OMALLA
+   * SANAMUODOLLA:
+   *   1. pääkaupunki vuoteen 1763 -> nosto K1 antaa tarkat vuodet 1549
+   *      ja 1763 sekä nimen synnyn (Vespucci 1502); historia-sivun
+   *      johdanto toistaa aseman toisesta näkökulmasta.
+   *   2. capoeira -> nosto M2 (Bimba ja Pastinha, rodat kaduilla).
+   *      Visan fakta puhuu naamioinnista tanssiksi; lehti ei toista sitä.
+   *   3. Pelourinho -> nosto H1 kertoo nimen merkityksen (häpeäpaalu) ja
+   *      Unesco-vuoden 1985, joita visa ei mainitse.
+   *   4. acarajé -> nosto R1 (baianojen ammatti, vapauden osto,
+   *      IPHAN 2004, nimen etymologia). Visan fakta kuvailee reseptin;
+   *      R1 ei kuvaile reseptiä lainkaan, R2 kertoo rituaalikäytön.
+   *   5. candomblé -> nosto M1 (Casa Branca 1830, mãe de santo,
+   *      1 144 temppeliä 1997). Visan yleinen "säilytti uskomuksia" ei
+   *      toistu.
+   * SOUTHAMERICA_FACTS-kohdan `salvador` kolmea saapumiskorttifaktaa
+   * (pääkaupunki 1549–1763, Pelourinho maailmanperintönä, capoeira
+   * Bahiassa) ei toisteta sanamuodoltaan: lehti kertoo samat asiat
+   * nimen synnyn, häpeäpaalun merkityksen ja mestarien kautta.
+   * MINITEHTÄVÄT (kolme, yksi per teemasivu) eivät toista visaa ja
+   * jokaisen vastaus on SAMAN SIVUN nostotekstissä: hissin korkeusero
+   * H4:ssä, kulkueen pituus M3:ssa ja acarajé-sanan alkuperä R1:ssä.
+   *
+   * SIVU-ID:T. Kolme neljästä (`kaupunki`, `historia`, `ruoka`) ovat
+   * talon vakioaiheita (js/ui-apurit.js, AIHE_IKONIT). Neljäs,
+   * `mustarooma`, on taulun ulkopuolella ja piirtyy yleiskuvakkeella —
+   * sama perusteltu poikkeus kuin Adelaiden `saksalaisperinne`- ja
+   * Chicagon `arkkitehtuuri`-sivuilla. Nimi "Musta Rooma" on kaupungin
+   * oma lempinimi, ei ulkopuolisen keksimä: en-Wikipedia "Candomblé"
+   * (Demographics) sanoo Salvadorista "sometimes referred to as 'Black
+   * Rome'", ja se on myös pääartikkelin infoboxin lempinimilistalla.
+   * Vakioaihe `musiikki` olisi ollut saatavilla mutta harhaanjohtava:
+   * sivu on ennen muuta uskonnosta.
+   *
+   * KUVAT: 26 kuvaa, kaikki Wikimedia Commonsista. Lisenssi ja tekijä on
+   * luettu rajapinnan extmetadatasta (LicenseShortName, Artist,
+   * Restrictions) ja JOKAINEN valittu kuva on katsottu silmin 900
+   * pikselin esikatseluna. Kaikki ovat vähintään 1200 px leveitä,
+   * lisenssit ovat PD, CC0, CC BY tai CC BY-SA, eikä yhdelläkään ole
+   * Restrictions-merkintää. Kategoriat, joista haettiin (kaikki
+   * todennettu itse): Historic center of Salvador (Bahia), Largo do
+   * Pelourinho (Salvador), Aerial photographs of Centro Histórico de
+   * Salvador, Aerial photographs of Salvador (Bahia), Skylines of
+   * Salvador (Bahia), Elevador Lacerda, Farol da Barra, Mercado Modelo,
+   * Port of Salvador, Praça Tomé de Souza, Terreiro de Jesus,
+   * Cathedral-Basilica of Salvador, Igreja Nosso Senhor do Bonfim,
+   * Festa do Bonfim 2018, Candomblé in Bahia, Berimbau, Olodum,
+   * Akara in Brazil, Moqueca baiana, Old maps of Salvador (Bahia),
+   * Salvador (Bahia) in the 19th century.
+   *
+   * KUVAHYLKÄYKSET SYINEEN. TUNNISTETTAVAT KASVOT: "Cores no
+   * Pelourinho" (etualan mies oikeassa reunassa), "Baianas do Acarajé"
+   * (istuva myyjä keskellä), "Acarajes" (lavastettu sisäkuva lipun
+   * edessä), "Capoeristas do Terreiro de Jesus" ja "Bloco da Capoeira,
+   * Circuito Campo Grande 2008" (koko rinki kasvot kameraan), "Bloco de
+   * berimbau", "Saida do Olodum (Carnaval de 2010)", "Salvador
+   * (44573726072)", ferry-kuvat "Saindo do Terminal do Ferry-Boat de
+   * São Joaquim" ja "Ferry Zumbi dos Palmares". KUVAN PÄÄLLE LISÄTTY
+   * MERKINTÄ: "Palacio do Governo - Bahia ... Museu Paulista da USP"
+   * (museon värikalibrointipalkki ja postikortin kehys), "St. Salvador
+   * capitale ... btv1b53122061q" (Bibliothèque nationalen punainen
+   * arkistoleima), "Cidade da Bahia (The City of Bahia)" ja sen cropped-
+   * versio (albumipahvin reunat, taitteet ja painettu kuvateksti sekä
+   * kokoelmaleima; kuva on lisäksi hyvin haalistunut), "BAAG-StAAG
+   * Bahia-1885" (albumipahvin reunat). ALLE 1200 px: "Bahia - vista"
+   * (902), "Na Baía de Todos os Santos" (800), "Giuseppe Leone Righini —
+   * Vista do Porto de Salvador no século XIX" (640), "Elevador Lacerda e
+   * Forte São Marcelo" (1080), "Centro Histórico Pelourinho Bahia"
+   * (1080), koko "Festa do Bonfim 2023" -kategorian kuvasto (1024),
+   * "Procissão senhor do Bonfim" (1146), "Baiana do acaraje" (246),
+   * "Capoeira! Brazil" (604), "Capoeira Bahia" (640),
+   * "CapoeiraEdited OriginalBy-Turismo Bahia" (640), "Salvador visto de
+   * cima" (600). RESTRICTIONS-MERKINTÄ: "Candomblé in Salvador de
+   * Bahia" (extmetadata: personality). MUU SYY: "Salvador Bahia Skyline
+   * 2018-0901" ja "Salvador de Bahia vue panoramique 04" (kaupunki
+   * hukkuu — pelkkää merta ja harmaata pilveä), "View over the
+   * Pelourinho District - Salvador - Brazil 02" (kuvan hallitseva aihe
+   * on yksittäisen liikkeen kyltti), "Centro Histórico de Salvador
+   * Terreiro de Jesus ... 2019-6587" (kuva on pelkkä rakennuslaatta),
+   * "Centro Histórico de Salvador Bahia Largo Terreiro de Jesus
+   * 2021-5726" ja "... Largo do Pelourinho 2019-6500" (yksityiskohta-
+   * kuvia, eivät kerro kohteesta), "Linha elevada do Metrô de Salvador"
+   * (ilmakuva tiiviistä pientaloalueesta lukisi köyhyyskuvastona),
+   * "Marc Ferrez — Bay Todos os Santos, Paqueta" (ei esitä Salvadoria),
+   * "Catedral Basílica de Salvador - ft. Lazaro Menezes" (yökuva, jossa
+   * etualan täyttävät autot ja liikennekartiot).
+   *
+   * KUVAPOIKKEUS, JOKA SELITETÄÄN KUVATEKSTISSÄ: nosto K1 käyttää
+   * Frézier'n vuoden 1714 kuparipiirrosta, jonka reunassa on kaivertajan
+   * oma kirjain- ja numeroluettelo ja jonka yläreunaan on painettu
+   * julkaisijan kuvateksti. Sama poikkeus kuin Valparaíson 1860-luvun
+   * puupiirroksessa ja Liman 1744-kartassa.
+   *
+   * AIHETOISTO ON HARKITTU JA PERUSTELTU. (1) Elevador Lacerda näkyy
+   * kolmessa kuvassa eri roolissa: kansikuvassa maamerkkinä lahden ja
+   * Mercado Modelon kanssa, nostossa K2 mittatikkuna, joka näyttää
+   * 85 metrin jyrkänteen kaupungin kahden kerroksen välissä, ja
+   * nostossa H4 lähikuvana tornin nimikilvestä. (2) Acarajé näkyy
+   * kahdesti ruokasivulla: R1:ssä paistumassa dendê-öljyssä (baianojen
+   * työ) ja R2:ssa tarjoiltuna (rituaali- ja arkiruoka). (3) Mercado
+   * Modelo näkyy kansikuvassa ja avauskuvassa kaukaa sekä nostossa R4
+   * julkisivuna. Yksikään tiedostonimi ei toistu, eikä yksikään ole
+   * sama kuin js/packs/southamerica-valokuvat.js:n salvador-lohkossa
+   * (Salvador bahia panorama 1870, Baiana-acarajé-Salvador, Largo do
+   * Pelourinho ... DSC05452, Elevador Lacerda ... 2019-0359,
+   * Salvador 01).
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä (Open-Meteon normaaleja ei haettu, eikä lukuja keksitty).
+   * Oppaan jakso 5 nojaa siis en-Wikipedian Climate-osioon ja sen
+   * 1991–2020-sääruutuun ja SANOO SEN ÄÄNEEN — Samarkandin,
+   * Vancouverin, Liman, Quiton ja Valparaíson malli.
+   *
+   * KUVATEKSTIT: selite kertoo kohteesta yhdellä virkkeellä.
+   * Matkailijalle-etusivukuva on tuore ja MALTILLINEN PYSTY
+   * (3941x5911, w/h 0,67).
+   */
+  salvador: [
+    {
+      id: 'kaupunki',
+      nimi: 'Salvador',
+      johdanto: 'Kaikkien pyhien lahden niemellä kohoava Salvador oli '
+        + 'Portugalin Brasilian ensimmäinen pääkaupunki ja sen tärkein '
+        + 'satama. Kaupunki on rakennettu kahteen kerrokseen jyrkänteen '
+        + 'ylle, ja sen nykykulttuuri on Brasilian afrikkalaisinta.',
+      kansikuvat: [
+        {
+          tiedosto: 'Raul Golinelli Elevador Lacerda Mercado Modelo Salvador Bahia Brasil.jpg',
+          selite: 'Lacerdan hissin torni erottaa Yläkaupungin '
+            + 'Alakaupungista, ja sen takana avautuu Kaikkien pyhien lahti '
+            + 'venesatamineen, Mercado Modelon keltainen tullitalo ja '
+            + 'merellä seisova São Marcelon pyöreä linnake.',
+          lahde: 'Raul Golinelli, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Panorama Salvador com Farol da Barra (52620265937).jpg',
+          selite: 'Barran niemen kärjessä seisoo Santo Antônion linnake '
+            + 'majakkoineen, ja sen takaa alkaa kaupungin tornirivi, joka '
+            + 'jatkuu koko rannikon suuntaisesti.',
+          lahde: 'Marinha do Brasil, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'MARCIO FILHO PELOURINHO SALVADOR BAHIA (40369900734).jpg',
+          selite: 'Largo do Pelourinhon vinolla mukulakiviaukiolla '
+            + 'siirtomaa-ajan talot on maalattu vihreiksi, sinisiksi ja '
+            + 'vaaleanpunaisiksi, ja aukion päästä katu laskee kohti merta.',
+          lahde: 'MTur Destinos, Wikimedia Commons (PD)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Centro Histórico Salvador Vista Aérea 2021-0933.jpg',
+          selite: 'Historiallisen keskustan tiilikatot peittävät koko '
+            + 'jyrkänteen laen, ja niiden takana näkyvät sataman aallonmurtaja '
+            + 'ja Kaikkien pyhien lahti.',
+          lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Vista de Salvador da ponta da Barra.jpg',
+          selite: 'Mereltä katsottuna kaupunki täyttää koko kolmion '
+            + 'muotoisen niemen, jonka kärjessä Barran majakka erottaa lahden '
+            + 'Atlantista.',
+          lahde: 'Fotos GOVBA from Bahia/Brasil, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Webysther 20150907165153 - Mercado modelo e baia de todos os santos.jpg',
+          selite: 'Yläkaupungin reunalta katsottuna Alakaupunki jää suoraan '
+            + 'alapuolelle, ja lahdella näkyvät venesatama, rahtilaivat ja '
+            + 'São Marcelon linnake.',
+          lahde: 'Webysther, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Nimi joka syntyi pyhäinpäivänä',
+          tiedosto: 'Frezier Voyage St Salvador.jpg',
+          teksti: 'Kaupungin nimi tulee juhlapäivästä. Italialainen '
+            + 'purjehtija Amerigo Vespucci näki lahden pyhäinpäivänä '
+            + '1. marraskuuta 1502 ja nimesi sen kotiseurakuntansa mukaan '
+            + 'Firenzessä: Kaikkien pyhien lahdeksi. Portugalilaiset '
+            + 'asettuivat niemelle 1549 Tomé de Sousan johdolla ja antoivat '
+            + 'linnoitukselleen nimen São Salvador da Bahia de Todos os '
+            + 'Santos, Kaikkien pyhien lahden pyhä Vapahtaja. Täältä '
+            + 'hallittiin koko Portugalin Brasiliaa vuoteen 1763, jolloin '
+            + 'hallinto siirrettiin Rio de Janeiroon, josta tuli samalla '
+            + 'varakuningaskunnan pääkaupunki.',
+          selite: 'Amédée François Frézier\'n vuoden 1714 kuparipiirroksessa '
+            + 'on ylhäällä näkymä kaupunkiin lahdelta ja alhaalla '
+            + 'asemakaava, jonka kirjaimet ja numerot viittaavat reunaan '
+            + 'painettuun kaivertajan omaan luetteloon.',
+          lahde: 'Amédée François Frézier, Wikimedia Commons (PD)',
+          wiki: 'Salvador, Bahia',
+        },
+        {
+          otsikko: 'Kaksi kaupunkia samalla kalliolla',
+          tiedosto: 'Salvador Historic Center - Sea View.jpg',
+          teksti: 'Salvador on rakennettu kahteen kerrokseen. Noin 85 metriä '
+            + 'korkea jyrkänne erottaa Yläkaupungin, jossa ovat hallinto, '
+            + 'kirkot ja asuinkorttelit, Alakaupungista, joka on aina ollut '
+            + 'sataman ja torien aluetta. Rantaviivaa kaupungilla on 80 '
+            + 'kilometriä. Yläkaupungin rannat avautuvat Atlantille ja '
+            + 'Alakaupungin rannat lahdelle; ainoa poikkeus on Porto da '
+            + 'Barran ranta, joka on Yläkaupungin puolella mutta katsoo '
+            + 'silti lahdelle. Brittilehti The Guardian valitsi sen 2007 '
+            + 'maailman kolmanneksi parhaaksi rannaksi.',
+          selite: 'Mereltä katsottuna jyrkänne erottaa selvästi Alakaupungin '
+            + 'venesataman ja Mercado Modelon ylhäällä olevasta '
+            + 'vanhastakaupungista, jonne noustaan Lacerdan hissillä.',
+          lahde: 'Fernando Hidalgo Molina, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Salvador, Bahia',
+        },
+        {
+          otsikko: 'Lahti joka antoi kaupungille elannon',
+          tiedosto: 'Baía de Todos-os- Santos e Solar do Unhão - Foto Tereza Torres- Setur) (16253451116).jpg',
+          teksti: 'Kaikkien pyhien lahti on Brasilian suurin lahti, ja '
+            + 'Salvador seisoo kolmion muotoisella niemellä, joka erottaa '
+            + 'sen Atlantista. Lahden yli on kuljettu viisi vuosisataa: '
+            + 'suurelle Itaparican saarelle mennään yhä lautalla, joka '
+            + 'lähtee Mercado Modelon läheltä. Koska valaat käyttivät '
+            + 'lahtea pariutumisalueenaan, kaupungista kasvoi 1800-luvulla '
+            + 'yksi eteläisen pallonpuoliskon suurista '
+            + 'valaanpyyntisatamista – '
+            + 'mutta pyynti oli jo hiipumassa 1870-luvulle tultaessa, juuri '
+            + 'isoisän matka-aikoihin.',
+          selite: 'Solar do Unhãon vanha kartano kappeleineen seisoo lahden '
+            + 'rannassa, ja sen edessä levittäytyy venesatama, jonka takana '
+            + 'näkyvät sataman nosturit.',
+          lahde: 'Turismo Bahia, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Salvador, Bahia',
+        },
+        {
+          otsikko: 'Majakka jonka kauppa teki välttämättömäksi',
+          tiedosto: 'Barra Lighthouse, Salvador.jpg',
+          teksti: 'Barran niemen kärkeen rakennettiin 1600-luvulla majakka, '
+            + 'koska kaupan ja orjakaupan kasvu vaati opastetta lahden '
+            + 'suulle. Se tehtiin savesta ja se oli toinen koko Amerikan '
+            + 'mantereelle rakennettu majakka. Vuonna 1668 galjooni '
+            + 'Santíssimo Sacramento haaksirikkoutui hiekkasärkälle, ja '
+            + 'englantilainen kaappari William Dampier kirjasi lokikirjaansa '
+            + '1699 nähneensä linnoituksen lyhtyjen opastavan laivoja yöllä. '
+            + 'Nykyinen 22-metrinen torni tilattiin Englannista, ja '
+            + 'Pedro II vihki sen käyttöön 2. joulukuuta 1839.',
+          selite: 'Mustavalkoraidallinen majakkatorni nousee Santo Antônion '
+            + 'linnakkeen keskeltä, ja sen juurella lepää vanha '
+            + 'tykinputki.',
+          lahde: 'Thiago Alexandre, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Barra Lighthouse',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Igreja de Nossa Senhora do Rosário dos Pretos Salvador 2018-1153.jpg',
+          selite: 'Rosário dos Pretosin vaaleansininen kirkko Pelourinhon '
+            + 'laidalla rakennettiin mustien veljeskunnan omin varoin, ja '
+            + 'siellä pidetään messuja joruban kielellä.',
+          lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Salvador on helpointa hahmottaa kahtena kerroksena. '
+          + 'Alhaalla lahden rannassa on Cidade Baixa, jossa ovat satama, '
+          + 'Mercado Modelo ja Comércion vanhat kauppakorttelit. Ylhäällä '
+          + 'jyrkänteen päällä on Cidade Alta, jonne mahtuvat Pelourinho, '
+          + 'aukiot ja suurin osa kirkoista. Kerrosten väliä kuljetaan '
+          + 'Lacerdan hissillä, ja niin kauan kuin näet sen tornin, tiedät '
+          + 'missä olet. Vanhankaupungin mukulakivikadut ovat jyrkkiä ja '
+          + 'lämpötila pysyy 25 asteen tuntumassa ympäri vuoden, joten '
+          + 'kävelymatkat kannattaa mitoittaa lyhyemmiksi kuin kartalta '
+          + 'näyttää. Matka-aikaa taas kannattaa miettiä sateen eikä lämmön '
+          + 'mukaan: kuivinta on joulukuusta tammikuuhun.',
+        artikkeli: {
+          nimi: 'Matkailijan Salvador',
+          taitto: 'opas',
+          teksti: 'Kaksikerroksinen satamakaupunki, jossa siirtomaa-ajan '
+            + 'kirkot, candomblén temppelit ja maailman suurin katukarnevaali '
+            + 'mahtuvat samalle niemelle.',
+          nosto: 'Kaupunki on kahdessa kerroksessa: jos suunta katoaa, etsi '
+            + 'Lacerdan hissin torni.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Salvadoriin saavutaan Deputado Luís Eduardo '
+                + 'Magalhãesin kansainväliselle lentoasemalle, joka on 28 '
+                + 'kilometriä keskustasta pohjoiseen dyynien ja Atlantin '
+                + 'metsän keskellä; kentälle vievästä tiestä on tullut yksi '
+                + 'kaupungin omista nähtävyyksistä. Metro on kulkenut '
+                + 'vuodesta 2014, ja sen ensimmäinen linja Lapasta Pirajálle '
+                + 'oli 2018 mennessä 32 kilometriä pitkä ja siinä oli 20 '
+                + 'asemaa; toinen linja yhdistää lentoaseman keskustaan ja '
+                + 'Fonte Novan stadionille. Bussit hoitavat loput: niitä on '
+                + 'noin 2 500 ja matkustajia päivässä kaksi miljoonaa. '
+                + 'Lahden yli Itaparican saarelle päästään lautalla, joka '
+                + 'lähtee Alakaupungista.',
+              kuva: {
+                tiedosto: 'Estação da linha 1 do metrô de Salvador.jpg',
+                selite: 'Metron ykköslinjan keltainen putkiasema kaartuu '
+                  + 'moottoritien yli, ja sen ympärillä kaupunki jatkuu '
+                  + 'rinteitä pitkin joka suuntaan.',
+                lahde: 'Portal da Copa/ME (victoria.camara), Wikimedia '
+                  + 'Commons (CC BY 3.0 br)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki jakautuu kolmeen vyöhykkeeseen. '
+                + 'Länsivyöhykkeellä ovat tunnetuimmat korttelit: '
+                + 'Pelourinho, Comércio ja vanha keskusta. Etelävyöhykkeellä '
+                + 'ovat rantakaupunginosat: Barra rantoineen ja '
+                + 'karnevaalireitteineen, tornitalojen Vitória, Campo Granden aukio '
+                + 'itsenäisyysmuistomerkkeineen sekä Graça ja Ondina. '
+                + 'Itävyöhykkeellä ovat kaupungin varakkaimmat asuinalueet, '
+                + 'muun muassa Pituba, Itaigara ja Stella Maris. Lahden '
+                + 'puoleinen luoteisosa tunnetaan nimellä Cidade Baixa, ja '
+                + 'siihen kuuluu Liberdaden kaupunginosa, jonka '
+                + 'afrobrasilialaisten osuus on yksi suurimmista sekä '
+                + 'Salvadorissa että koko Brasiliassa. Kaupunginosien tarkkaa '
+                + 'määrää ei tiedetä, koska kasvu oli vuosisatojen ajan '
+                + 'täysin suunnittelematonta.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: käsityö ja onnennauhat',
+              teksti: 'Bahian käsityö tehdään yksinkertaisista '
+                + 'raaka-aineista – oljesta, nahasta, savesta, puusta, '
+                + 'simpukankuorista ja helmistä – ja aiheet ovat useimmiten '
+                + 'uskonnollisia. Samoissa töissä kulkevat rinnakkain '
+                + 'katoliset pyhimykset ja candomblén jumaluudet, ja '
+                + 'musiikki näkyy atabaque-rumpuina, sadekapuloina ja '
+                + 'berimbau-jousina. Tunnetuin muisto on kuitenkin halvin: '
+                + 'Bonfimin nauha, kapea värillinen kangassuikale, joka '
+                + 'sidotaan ranteeseen kolmella solmulla ja jokaisella '
+                + 'solmulla toivotaan yksi toive. Nauhoja on solmittu '
+                + 'tuhansittain Bonfim-kirkon aidan pylväisiin. Suurin '
+                + 'käsityökeskittymä on Mercado Modelo, joka on koko '
+                + 'Latinalaisen Amerikan suurin.',
+              kuva: {
+                tiedosto: 'Fitas senhor do bonfim salvador.jpg',
+                selite: 'Bonfim-kirkon aidan pylväisiin on solmittu satoja '
+                  + 'värillisiä nauhoja, joihin on painettu kirkon nimi.',
+                lahde: 'Py4nf, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: katedraali joka oli jesuiittakirkko',
+              teksti: 'Salvadorista tehtiin 1551 koko Brasilian ensimmäisen '
+                + 'hiippakunnan keskus, ja ensimmäinen piispa saapui '
+                + 'seuraavana vuonna. Jesuiitat rakensivat ensin '
+                + 'savi- ja olkikirkon ja saivat 1553 valmiiksi kivisen '
+                + 'kirkon Terreiro de Jesusin aukiolle. Nykyinen katedraali '
+                + 'on sen seuraaja, rakennettu 1657–1679, ja se on yksi '
+                + 'Brasilian hienoimmista manierismin ajan rakennuksista. '
+                + 'Kuningas Pedro II:n pyynnöstä Salvadorin piispa '
+                + 'irrotettiin 1676 Lissabonin arkkihiippakunnasta, ja hän '
+                + 'toimi Kongon ja Angolan primaksena vuoteen 1844 asti. '
+                + 'Titteli on yhä voimassa: kaupungin arkkipiispa on '
+                + 'Brasilian primas.',
+              kuva: {
+                tiedosto: 'Catedral Basílica de Salvador 2019-6525.jpg',
+                selite: 'Katedraalin vaalea kivijulkisivu Terreiro de '
+                  + 'Jesusin laidalla on hillityn manieristinen, ja sen '
+                  + 'päätykolmiossa lukee jesuiittojen tunnus IHS.',
+                lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Salvadorista puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian Salvador-artikkelin Climate-osiosta ja '
+                + 'sen 1991–2020-sääruudusta eivätkä samasta lähteestä kuin '
+                + 'lehtien vuosigraafit. Ilmasto on kauppatuulten '
+                + 'trooppinen sademetsäilmasto (Köppen: Af), ja lämpötila '
+                + 'vaihtelee vähän: vuoden keskiarvo on 25,6 astetta, '
+                + 'lämpimin kuukausi maaliskuu 27,1 ja viilein elokuu 23,6. '
+                + 'Päivän ylin on keskimäärin 29,0 ja yön alin 22,7 astetta. '
+                + 'Sadetta kertyy vuodessa noin 1 833 millimetriä, mutta se '
+                + 'jakautuu hyvin epätasaisesti: joulukuussa 63 ja '
+                + 'tammikuussa 77 millimetriä, kun taas huhtikuussa 285, '
+                + 'toukokuussa 302 ja kesäkuussa 238. Kuivin aika on siis '
+                + 'joulukuusta tammikuuhun, sateisin huhtikuusta kesäkuuhun.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Salvador oli Portugalin Brasilian hallinnollinen keskus yli '
+        + 'kaksisataa vuotta ja maan suurin orjien tuontisatama. Isoisän '
+        + 'matkavuonna 1873 kaupunkiin valmistui Brasilian ensimmäinen '
+        + 'hissi.',
+      tehtava: {
+        kysymys: 'Kuinka suuren korkeuseron Elevador Lacerda kulkee?',
+        vaihtoehdot: [
+          '72 metriä',
+          '22 metriä',
+          '128 metriä',
+          '7 metriä',
+        ],
+        oikea: 0,
+        fakta: 'Hissi nousee Alakaupungin Cayrún aukiolta Yläkaupungin Tomé '
+          + 'de Sousan aukiolle. Ilman sitä sama matka on jyrkkää '
+          + 'rinnekatua.',
+      },
+      nostot: [
+        {
+          otsikko: 'Häpeäpaalun mukaan nimetty kaupunginosa',
+          tiedosto: 'Salvador Piedade XIX.jpg',
+          teksti: 'Pelourinho tarkoittaa portugaliksi häpeäpaalua. '
+            + 'Ensimmäisenä pääkaupunkina Salvador käytti orjatyövoimaa, ja '
+            + 'häpeäpaaluja pystytettiin avoimille paikoille – Terreiro de '
+            + 'Jesusille sekä aukioille, jotka tunnetaan nykyään Tomé de '
+            + 'Sousan ja Castro Alvesin aukioina. Paalu oli joillekin '
+            + 'auktoriteetin ja oikeuden vertauskuva, useimmille ruoskimisen '
+            + 'ja vääryyden. Yksi paaluista siirrettiin myöhemmin '
+            + 'nykyiselle Praça da Piedadelle, mutta nimi jäi elämään koko '
+            + 'historiallisen keskustan nimenä. Alue on ollut Unescon '
+            + 'maailmanperintökohde vuodesta 1985.',
+          selite: 'Praça da Piedaden aukio 1800-luvulla kuvattuna: kirkon '
+            + 'kupoli ja kellotorni kohoavat matalien talojen takaa, ja '
+            + 'aukion poikki ajaa ratsastaja.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+          wiki: 'Historic Center of Salvador',
+        },
+        {
+          otsikko: 'Brasilian suurin orjasatama',
+          tiedosto: 'Porto de Salvador Bahia Vista Aérea 2021-0005.jpg',
+          teksti: 'Salvadorin satama oli Brasilian suurin orjien '
+            + 'tuontisatama ja koko maan atlanttisen orjakaupan '
+            + 'pääasiallinen kohde; vastasuuntaan täältä vietiin Eurooppaan '
+            + 'sokeria, puuvillaa, tupakkaa ja puutavaraa. Brasiliaan '
+            + 'tuotiin kaikkiaan noin neljä miljoonaa orjuutettua '
+            + 'afrikkalaista, enemmän kuin mihinkään muualle Amerikan '
+            + 'mantereelle, ja heistä suurin osa päätyi Bahiaan. Kun isoisä '
+            + 'matkusti 1873, orjuus oli Brasiliassa yhä laillista: se '
+            + 'lakkautettiin vasta 13. toukokuuta 1888, viimeisenä Amerikan '
+            + 'mantereen maista.',
+          selite: 'Salvadorin satamassa on nykyään konttiterminaali '
+            + 'nostureineen, ja sen takana avautuu Kaikkien pyhien lahti.',
+          lahde: 'Paul R. Burley, Wikimedia Commons (CC0)',
+          wiki: 'Slavery in Brazil',
+        },
+        {
+          otsikko: 'Kapinaan nousseet oppineet',
+          tiedosto: 'Praça Tomé de Souza.jpg',
+          teksti: 'Tammikuussa 1835 Salvadorissa nousi kapinaan joukko '
+            + 'orjuutettuja ja vapautettuja muslimeja, joita kutsuttiin '
+            + 'Bahiassa nimellä malê. He osasivat lukea ja kirjoittaa '
+            + 'arabiaa ja opettivat taitoa toisilleen kadunkulmissa ja '
+            + 'vuokraamissaan rukoushuoneissa. Kapina ajoitettiin '
+            + 'juhlapäivän yöhön, jolloin viranomaiset olivat Bonfimissa, '
+            + 'mutta se paljastui etukäteen ja kukistettiin saman yön '
+            + 'aikana; taistelu eteni Palatsiaukiolle, nykyiselle Praça '
+            + 'Municipalille. Noin kaksisataa selvinnyttä karkotettiin '
+            + 'takaisin Länsi-Afrikkaan, ja heidän jälkeläisiään on yhä '
+            + 'muun muassa Lagosissa ja Ghanassa.',
+          selite: 'Praça Municipalin laajalla mukulakiviaukiolla seisoo '
+            + 'Rio Brancon palatsi, ja aukion toisella laidalla on '
+            + 'siirtomaa-ajan kaupungintalo.',
+          lahde: 'Portal da Copa/ME (victoria.camara), Wikimedia Commons '
+            + '(CC BY 3.0 br)',
+          wiki: 'Malê revolt',
+        },
+        {
+          otsikko: 'Hissi joka nosti kaupungin 1873',
+          tiedosto: 'Elevador Lacerda Salvador Bahia 20211003-6721.jpg',
+          teksti: 'Elevador Lacerda rakennettiin 1869–1873 ja avattiin '
+            + 'liikenteelle 1873 – samana vuonna, jolta isoisän '
+            + 'matkapäiväkirja on. Se oli Brasilian ensimmäinen hissi ja se '
+            + 'kulkee 72 metrin korkeuseron Alakaupungin ja Yläkaupungin '
+            + 'väliä. Nimi tulee liikemies Antônio de Lacerdalta, joka '
+            + 'johti Bahian kauppayhdistystä. Alun perin hissi toimi '
+            + 'vesivoimalla, sähköistettiin 1906 ja sai nykyiset '
+            + 'art déco -torninsa 1930. Kansallisperinnöksi se listattiin '
+            + 'vasta 7. joulukuuta 2006, ja vuonna 2019 sillä kulki yli '
+            + '33 000 matkustajaa vuorokaudessa.',
+          selite: 'Tornin päädyssä lukee kohokirjaimin LACERDA, ja sen '
+            + 'yläpuolella on kaupungin kultainen vaakuna.',
+          lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Elevador Lacerda',
+        },
+      ],
+    },
+    {
+      id: 'mustarooma',
+      nimi: 'Musta Rooma',
+      johdanto: 'Salvadoria kutsutaan Mustaksi Roomaksi, koska candomblé, '
+        + 'capoeira ja karnevaali eivät ole täällä museoesineitä vaan '
+        + 'arkea. Temppelit toimivat, mestarit opettavat ja kadut täyttyvät '
+        + 'joka vuosi uudelleen.',
+      tehtava: {
+        kysymys: 'Kuinka pitkän matkan baianojen kulkue kävelee Bonfimin '
+          + 'kukkulalle?',
+        vaihtoehdot: [
+          'kahdeksan kilometriä',
+          'kahdeksansataa metriä',
+          'kaksikymmentäviisi kilometriä',
+          'kahdeksankymmentä kilometriä',
+        ],
+        oikea: 0,
+        fakta: 'Kulkue lähtee Conceiçãon basilikalta Alakaupungista ja '
+          + 'päättyy Bonfimin kirkon portaille. Kaikki kulkevat valkoisissa '
+          + 'vaatteissa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Temppeli joka on vanhempi kuin uskonnon nimi',
+          tiedosto: 'Orixás du dique do Tororó à Salvador (Bahia), Brésil (focus).jpg',
+          teksti: 'Candomblé on afrobrasilialainen uskonto, joka syntyi '
+            + 'Bahiassa 1800-luvun alussa, kun Länsi-Afrikasta tuotujen '
+            + 'ihmisten perinteet järjestäytyivät yhdeksi jumalanpalvelus'
+            + 'käytännöksi. Vanhin temppeli, Ilê Axé Iyá Nassô Oká eli Casa '
+            + 'Branca, perustettiin Salvadorissa 1830, ja siitä polveutuu '
+            + 'uskonnon suurin haara nagô. Temppeleitä johtavat Bahiassa '
+            + 'useimmiten naiset, papittaret joita kutsutaan nimellä mãe de '
+            + 'santo. Kaupunki on uskonnon keskus: vuoden 1997 laskennassa '
+            + 'Salvadorissa oli 1 144 toimivaa temppeliä.',
+          selite: 'Dique do Tororón tekojärvessä seisoo kahdeksan '
+            + 'suurikokoista orixá-veistosta, joista kukin kantaa oman '
+            + 'jumaluutensa tunnusesinettä.',
+          lahde: 'Pierre André Leclercq, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Candomblé',
+        },
+        {
+          otsikko: 'Kamppailulaji joka kasvoi aikuiseksi Salvadorissa',
+          tiedosto: 'Berimbau being sold on the street in Salvador, state of Bahia, Brazil.jpg',
+          teksti: 'Capoeira yhdistää kamppailun, tanssin ja musiikin. Laji '
+            + 'sai alkunsa Palmaresin pakolaisyhteisössä Pernambucossa, '
+            + 'mutta Salvadoria pidetään sen nykyisten koulukuntien kotina: '
+            + '1900-luvun alkupuoliskolla täällä syntyneet mestarit Mestre '
+            + 'Bimba ja Mestre Pastinha perustivat omat koulunsa ja '
+            + 'vakiinnuttivat lajin muodon. Heidän työnsä teki capoeirasta '
+            + 'tunnustetun taidemuodon ensin Brasiliassa ja sitten '
+            + 'maailmalla. Musiikin johtaa berimbau, yksikielinen '
+            + 'jousisoitin, jonka ääni määrää rinkiin pelin nopeuden.',
+          selite: 'Kadulle pystytetyssä telineessä riippuu rivi myytäviä '
+            + 'berimbaueja, joiden kalebassikaikupohjat on maalattu '
+            + 'kirkkain värein.',
+          lahde: 'Wmpearl, Wikimedia Commons (CC0)',
+          wiki: 'Capoeira',
+        },
+        {
+          otsikko: 'Pakkotyöstä alkanut juhla',
+          tiedosto: 'Lavagem do Bonfim 2018. Foto- Tatiana Azeviche (39634974501).jpg',
+          teksti: 'Lavagem do Bonfim alkoi 1773, kun kirkon maallikko'
+            + 'veljeskunta pakotti orjuutetut pesemään ja koristelemaan '
+            + 'Bonfim-kirkon ennen sen juhlaa. Candomblén harjoittajille '
+            + 'pesusta tuli myöhemmin osa Oxalán vesien seremoniaa, ja '
+            + 'arkkihiippakunta siirsi rituaalin kirkon sisältä portaille ja '
+            + 'kirkkopihalle. Nykyään noin kaksisataa valkopukuista baianaa '
+            + 'kävelee tammikuussa kahdeksan kilometriä Conceiçãon '
+            + 'basilikalta Bonfimin kukkulalle ja kaataa tuoksuvettä '
+            + 'portaille joruban kielisten laulujen ja rumpujen tahtiin.',
+          selite: 'Valkopukuinen baiana nojaa Bonfim-kirkon vihreään oveen, '
+            + 'ja hänen vierellään roikkuu tuhansia toivenauhoja.',
+          lahde: 'Turismo Bahia, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Lavagem do Bonfim',
+        },
+        {
+          otsikko: 'Katujuhla joka soi Afrikan rytmiä',
+          tiedosto: 'Carnaval 2018. Foto- Tatiana Azeviche.jpg',
+          teksti: 'Bahian karnevaali on Guinnessin ennätyskirjan mukaan '
+            + 'maailman suurin katujuhla: viikon ajan lähes neljä miljoonaa '
+            + 'ihmistä juhlii 25 kilometrin matkalla katuja ja aukioita, ja '
+            + 'pelkkä järjestäminen työllistää yli satatuhatta. Juhlan '
+            + 'sydämessä soivat blocos afro -ryhmät – Ilê Aiyê, Olodum, '
+            + 'Timbalada ja Filhos de Gandhy – jotka syntyivät nostamaan '
+            + 'afrobrasilialaisen kulttuurin esiin karnevaalin '
+            + 'valtavirrasta. Niiden luoma axé ja samba-reggae soivat '
+            + 'nykyään koko Brasiliassa.',
+          selite: 'Blocon rummuttajat kantavat olkahihnoissaan suuria '
+            + 'surdo-rumpuja, joiden kalvoihin on maalattu ryhmän omat '
+            + 'värit.',
+          lahde: 'Turismo Bahia, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Bahian Carnival',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Bahian keittiö on Brasilian afrikkalaisin: dendê-palmuöljy, '
+        + 'äyriäiset ja mausteet kertovat samaa tarinaa kuin kaupungin '
+        + 'väestö. Moni resepti kulki Länsi-Afrikasta merten yli '
+        + 'orjuutettujen mukana.',
+      tehtava: {
+        kysymys: 'Mitä sana acarajé alun perin tarkoittaa joruban kielellä?',
+        vaihtoehdot: [
+          '"tule syömään akaraa"',
+          '"pyhä öljy"',
+          '"papujen juhla"',
+          '"valkoinen puku"',
+        ],
+        oikea: 0,
+        fakta: 'Sanonta oli myyntihuuto, jolla kadulla työskentelevät naiset '
+          + 'kutsuivat ohikulkijoita. Ruoan oma nimi on joruban kielessä '
+          + 'àkàrà.',
+      },
+      nostot: [
+        {
+          otsikko: 'Naiset jotka ostivat vapautensa myyntitulolla',
+          tiedosto: 'MARCIO FILHO ACARAJE DA CIRA SALVADOR BAHIA (41036436112).jpg',
+          teksti: 'Acarajéta on myyty Salvadorin kaduilla 1800-luvulta '
+            + 'lähtien, ja myyjät – valkopukuiset baianat – tunnistaa jo '
+            + 'kaukaa. Nimikin syntyi kaupankäynnistä: brasilianportugalin '
+            + 'acarajé tulee joruban ilmauksesta àkàrà n\'jẹ, "tule syömään '
+            + 'akaraa", jolla myyjät kutsuivat ohikulkijoita. Myyntitulot '
+            + 'eivät olleet pelkkää arjen leipärahaa vaan monelle naiselle '
+            + 'ainoa keino koota summa, jolla osti orjuutetun '
+            + 'perheenjäsenensä vapaaksi. Kaupungissa toimii yhä yli 500 '
+            + 'myyjää, ja kulttuuriperintövirasto IPHAN listasi 2004 sekä '
+            + 'ruoan että baianojen ammatin kansallisperinnöksi.',
+          selite: 'Myyntikojun leveässä pannussa kohoaa parikymmentä '
+            + 'acarajéta kiehuvassa oranssissa dendê-palmuöljyssä.',
+          lahde: 'MTur Destinos, Wikimedia Commons (PD)',
+          wiki: 'Akara',
+        },
+        {
+          otsikko: 'Ruoka joka on myös uhrilahja',
+          tiedosto: 'Acarajé - Bahia 2011 (7290756706).jpg',
+          teksti: 'Candomblén rituaaleissa acarajé ei ole katuruokaa vaan '
+            + 'uhrilahja. Ensimmäinen tarjotaan aina jumaluus Exulle, ja '
+            + 'loput muotoillaan sen mukaan, kenelle ne on tarkoitettu: '
+            + 'suuret ja pyöreät Xangôlle, pienemmät Iansãlle ja aivan '
+            + 'pikkuruiset lapsihengille. Osalle jumaluuksista palmuöljy on '
+            + 'kielletty, ja heille paistetaan oma versio muussa öljyssä. '
+            + 'Paistoöljy dendê on itsessään merkityksellinen: sen '
+            + 'katsotaan olevan axén, elinvoiman, aineellistunut muoto – ja '
+            + 'sama öljy on bahialaisen arkikeittiön tärkein raaka-aine.',
+          selite: 'Lautasella acarajé on halkaistu ja täytetty vatapálla, '
+            + 'carurulla ja kokonaisilla katkaravuilla.',
+          lahde: 'Ben Tavener from Curitiba, Brazil, Wikimedia Commons '
+            + '(CC BY 2.0)',
+          wiki: 'Akara',
+        },
+        {
+          otsikko: 'Kolmen mantereen keittiö',
+          tiedosto: 'Moqueca- Ilha de Maré. Foto Tatiana Azeviche Setur (31969364150).jpg',
+          teksti: 'Bahian keittiö kertoo samaa tarinaa kuin kaupungin '
+            + 'väestö: viiden vuosisadan sekoittumista. Afrikkalaista perua '
+            + 'ovat mausteiset äyriäisruoat, kuten kookosmaitoon keitetty '
+            + 'moqueca ja tahnamainen vatapá. Portugalilaisesta '
+            + 'lihapadasta jäänyt kastike sekoitettiin maniokkijauhoon, ja '
+            + 'siitä syntyi puuro, joka jatkaa alkuperäiskansojen '
+            + 'perinnettä. Sokeriruo\'on puristusjätteestä, melassista ja '
+            + 'rapadura-sokerista tehtiin kookosmakeiset cocada branca ja '
+            + 'cocada preta. Kaikki kolme perinnettä ovat yhä samalla '
+            + 'lautasella.',
+          selite: 'Savipadassa höyryävässä moquecassa on katkarapuja, '
+            + 'kalmaria, paprikaa ja tomaattia, ja vieressä odottaa '
+            + 'maniokkijauhosta tehty farofa.',
+          lahde: 'Turismo Bahia, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Salvador, Bahia',
+        },
+        {
+          otsikko: 'Torit jotka ruokkivat kaupunkia yhä',
+          tiedosto: 'Mercado Modelo - Wiki Encontros Salvador em 2024 05.jpg',
+          teksti: 'Salvadorin vanhat torit ruokkivat kaupunkia samalla '
+            + 'tavalla kuin vuosikymmeniä sitten. Sete Portasin torilla on '
+            + 'syöty mocotóa, hidasta härän sorkkapataa, perjantai-iltaisin '
+            + '1940-luvulta lähtien, jolloin tori avattiin. Mercado Modelon '
+            + 'ravintoloissa tarjoillaan sarapatelia ja muhennoksia; talo '
+            + 'itse on vanha tullirakennus, joka nousi Cayrún aukiolle 1861 '
+            + 'laivojen purkupaikaksi. São Joaquimin, Santa Bárbaran ja São '
+            + 'Miguelin toreilla myydään perinneruokia kojuilta, ja '
+            + 'rannoilla myyntipöydiltä saa rapumuhennosta ja ostereita.',
+          selite: 'Mercado Modelon keltainen uusklassinen tullitalo seisoo '
+            + 'Cayrún aukion laidalla, ja sen edessä on mustavalkoinen '
+            + 'aaltokuvioinen mosaiikkipäällyste.',
+          lahde: 'SouDiana, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Salvador, Bahia',
+        },
+      ],
+    },
+  ],
 };
