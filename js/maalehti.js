@@ -9,6 +9,7 @@
  * lehti.js:n kanssa synny tuontikehää (lehti tuo tämän moduulin).
  */
 
+import { piirraSivunTehtava } from './fokustehtavat.js';
 import { avaaLippuikkuna } from './liput.js';
 import { asetaKuva } from './media.js';
 import { avaaKarttaSuurennos } from './nahtavyydet.js';
@@ -903,7 +904,9 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
     }
     piirraVinkkilista(ui, kohde, kategoria.lista);
     piirraAiheenPoiminnat(ui, kohde, kategoria, otsikko);
-    if (kategoria.tehtava) ui.piirraMinitehtava(kohde, kategoria);
+    // Kevyen kulun nimetty tehtävä voittaa sivun oman; ilman kumpaakaan
+    // ei piirretä mitään (js/fokustehtavat.js piirraSivunTehtava).
+    piirraSivunTehtava(ui, kohde, kategoria);
     return;
   }
   /*
@@ -1092,8 +1095,9 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
   // 23.8.2026): tehtävälaatikko erottaa luettavan sivun pelitoiminnosta,
   // ja pillerit kuuluvat luettavan puolelle.
   piirraAiheenPoiminnat(ui, kohde, kategoria, otsikko);
-  // Lehden minitehtävä sivun loppuun (omistajan toive 5.8.2026).
-  if (kategoria.tehtava) ui.piirraMinitehtava(kohde, kategoria);
+  // Lehden minitehtävä sivun loppuun (omistajan toive 5.8.2026) — tai
+  // kevyen kulun nimetty tehtävä, jos sivulla on sellainen.
+  piirraSivunTehtava(ui, kohde, kategoria);
   // Kohdekartta EI ole enää täällä kaupunkisivun pohjalla: omistajan
   // tarkennus 7.8.2026 "kartta pitäisi olla jo ihan ensimmäisellä
   // sivulla" siirsi sen lehden etusivulle (naytaTutkiSivu), eikä

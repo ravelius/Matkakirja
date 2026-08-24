@@ -1,6 +1,6 @@
 /*
- * FOKUSNÄKYMÄN DYNAAMISET MITAT — mittajana, maan kartuutsi ja sen
- * takaa avautuva maataulu.
+ * FOKUSNÄKYMÄN DYNAAMISET MITAT — mittajana, maan kartuutsi, sen päältä
+ * nouseva maataulu ja kartan reunojen asteviivaimet.
  *
  * Omistajan tilaus 25.8.2026 (Raamatun osio "JATKUVA KARTTA JA
  * DYNAAMISET MITAT"): fokuskartasta JATKUVA pinta ja mittataulukoista
@@ -115,6 +115,7 @@ function projektionKaavat(p) {
     const skaala = p.leveys / (2 * Math.PI);
     const millerY = (lat) => -1.25 * Math.log(Math.tan(Math.PI / 4 + 0.4 * lat * RAD));
     const yPohjoinen = millerY(p.pohjoinen);
+    const kierros = 2 * Math.PI;
     return {
       // Koko kierros mahtuu laudan leveyteen, joten aste on leveys/360.
       yksikkoaAsteessa: p.leveys / 360,
@@ -122,11 +123,20 @@ function projektionKaavat(p) {
         const my = y / skaala + yPohjoinen;
         return (Math.atan(Math.exp(-my / 1.25)) - Math.PI / 4) / 0.4 / RAD;
       },
+      lon: (x) => p.lon0 + (x / skaala) / RAD,
+      x: (lon) => {
+        const d = (lon - p.lon0) * RAD;
+        return (((d % kierros) + kierros) % kierros) * skaala;
+      },
+      y: (lat) => (millerY(lat) - yPohjoinen) * skaala,
     };
   }
   return {
     yksikkoaAsteessa: Math.abs(p.lonA),
     lat: (y) => (y - p.latB) / p.latA,
+    lon: (x) => (x - p.lonB) / p.lonA,
+    x: (lon) => p.lonA * lon + p.lonB,
+    y: (lat) => p.latA * lat + p.latB,
   };
 }
 
@@ -275,16 +285,20 @@ const luo = (tagi, luokka, teksti) => {
 /**
  * Rakentaa elementit kerran ja panee ne karttaruutuun.
  *
- * Säiliö on yksi: leveällä ruudulla se venyy laidasta laitaan ja
- * asettaa kartuutsin vasempaan ja janan oikeaan alanurkkaan, kapealla
- * se kutistuu vasempaan laitaan ja pinoaa ne päällekkäin (CSS).
+ * Säiliö on yksi ja se on ruudun alalaidan levyinen: kartuutsi
+ * vasempaan alanurkkaan ja mittajana oikeaan. Pieni Liiku-neliö
+ * asettuu kartuutsin RINNALLE (css: .toimintorivi-perus saa
+ * vasemmalle pehmusteen `--fokus-nappipaikka`, joka lasketaan
+ * kartuutsin mitatusta leveydestä — ks. paivitaNappipaikka).
  * Säiliö ei ota napautuksia vastaan (pointer-events: none), joten
  * kartta ja alanapit toimivat sen läpi; vain kartuutsi ja maataulu
  * ovat napautettavia.
  */
 function rakenna(ui) {
   // Varmistus kaksoiskappaleita vastaan, kuten maapillerillä.
-  for (const vanha of ui.mapPane.querySelectorAll('.fokusmitat, .fokus-maataulu')) {
+  for (const vanha of ui.mapPane.querySelectorAll(
+    '.fokusmitat, .fokus-maataulu, .fokus-viivaimet',
+  )) {
     vanha.remove();
   }
 
@@ -333,28 +347,36 @@ function rakenna(ui) {
   ui.fokusKartuutsi = kartuutsi;
   ui.fokusJana = jana;
   ui.fokusMaataulu = rakennaMaataulu(ui);
+  ui.fokusViivaimet = rakennaViivaimet(ui);
   return sailio;
 }
 
 /*
- * MAATAULU: alhaalta liukuva, kevyesti läpinäkyvä taulu maan
- * perustiedoista (omistaja 25.8.2026).
+ * MAATAULU: KARTUUTSIN YLÄPUOLELLE nouseva, läpikuultava taulu maan
+ * perustiedoista (omistaja 25.8.2026, viimeistely pelitestissä
+ * 26.8.2026).
  *
- * KOLME SÄÄNTÖÄ:
+ * VIISI SÄÄNTÖÄ:
  *
- * 1. TAULU EI PEITÄ ALANAPPEJA. Sen alareuna on alanappirivin
- *    yläpuolella (CSS `bottom`), joten Liiku ja Tutki ovat käytössä
- *    koko ajan. Kartta jää näkyviin taustalle, koska taulu on
- *    läpikuultava.
- * 2. VIERITYS EI PANOROI KARTTAA. Taulu asuu karttaruudun sisällä,
+ * 1. TAULU NOUSEE KARTUUTSIN KOHDALTA, EI KOKO RUUDUN LEVYISENÄ
+ *    ALALEVYNÄ (omistajan pelitestitilaus). Se on ankkuroitu samaan
+ *    vasempaan laitaan kuin kartuutsi ja alkaa heti sen yläpuolelta —
+ *    kartuutsi jää näkyviin taulun alle, ja juuri siksi taulussa EI OLE
+ *    OTSIKKOA: maan nimi lukee jo kartuutsissa.
+ * 2. TAULU EI PEITÄ ALANAPPEJA. Sen alareuna on alanappirivin
+ *    yläpuolella (CSS `bottom`), joten Liiku on käytössä koko ajan.
+ * 3. SULKUNAPPIA EI OLE. Taulu sulkeutuu napauttamalla karttaa, samaa
+ *    kartuutsia uudelleen tai Escistä — ristin paikka meni taulun
+ *    ainoalle kalusteelle, plussalle.
+ * 4. VIERITYS EI PANOROI KARTTAA. Taulu asuu karttaruudun sisällä,
  *    jonka oma kuuntelija ottaisi sormen panoroinniksi. Elementti
  *    pysäyttää osoitin-, kosketus- ja rullaustapahtumat itseensä ja
  *    sallii pystyvierityksen (`touch-action: pan-y`). Jos
  *    js/kartta.js:ään tulee KELLUVA_UI-valitsinlista, tämän luokan
  *    nimi on `fokus-maataulu`.
- * 3. LIIKE ON TRANSFORM JA OPACITY, EI SUODATIN. Sama iOS-sääntö kuin
+ * 5. LIIKE ON TRANSFORM JA OPACITY, EI SUODATIN. Sama iOS-sääntö kuin
  *    kartan kerroksilla; lisäksi prefers-reduced-motion sammuttaa
- *    siirtymän kokonaan (CSS).
+ *    siirtymän ja plussan sykkeen kokonaan (CSS).
  */
 function rakennaMaataulu(ui) {
   const taulu = luo('div', 'fokus-maataulu');
@@ -364,8 +386,11 @@ function rakennaMaataulu(ui) {
   // katkaisisi siirtymän, inert pitää sen pois kohdistusjärjestyksestä.
   taulu.inert = true;
 
-  const ylarivi = luo('div', 'fokus-maataulu-ylarivi');
-  ylarivi.appendChild(luo('h2', 'fokus-maataulu-nimi', ''));
+  /*
+   * PLUS OIKEAAN YLÄREUNAAN. Se on taulun ainoa nappi ja samalla ainoa
+   * kutsu eteenpäin (maan lehteen), joten se saa kevyen sykkeen —
+   * transform ja opacity, ei suodatinta eikä varjoanimaatiota.
+   */
   const lehti = luo('button', 'fokus-maataulu-lehti', '+');
   lehti.type = 'button';
   lehti.title = 'Avaa maan lehti';
@@ -375,16 +400,7 @@ function rakennaMaataulu(ui) {
     avaaMaataulu(ui, false);
     if (iso) ui.avaaMaalehti?.(iso);
   });
-  ylarivi.appendChild(lehti);
-  const sulje = luo('button', 'fokus-maataulu-sulje', '×');
-  sulje.type = 'button';
-  sulje.setAttribute('aria-label', 'Sulje maan tiedot');
-  sulje.addEventListener('click', (e) => {
-    e.stopPropagation();
-    avaaMaataulu(ui, false);
-  });
-  ylarivi.appendChild(sulje);
-  taulu.appendChild(ylarivi);
+  taulu.appendChild(lehti);
 
   taulu.appendChild(luo('dl', 'fokus-maataulu-rivit'));
   /*
@@ -420,9 +436,15 @@ export function avaaMaataulu(ui, auki) {
   taulu.classList.toggle('auki', ui.fokusMaatauluAuki);
   taulu.inert = !ui.fokusMaatauluAuki;
   ui.fokusKartuutsi?.setAttribute('aria-expanded', String(ui.fokusMaatauluAuki));
-  // Kartuutsi ja jana väistyvät auki olevan taulun alta, jottei
-  // kapealla ruudulla synny päällekkäisyyttä.
-  ui.fokusmitatSailio?.classList.toggle('taulun-alla', ui.fokusMaatauluAuki);
+  /*
+   * KARTUUTSI JÄÄ NÄKYVIIN TAULUN ALLE (omistajan pelitestitilaus
+   * 26.8.2026). Ennen koko mittasäiliö häivytettiin taulun tieltä
+   * (.taulun-alla), koska taulu oli ruudun levyinen alalevy ja peitti
+   * molemmat. Nyt taulu nousee kartuutsin kohdalta sen YLÄPUOLELLE ja
+   * on itse taulun otsikko: jos kartuutsi katoaisi, tauluun jäisi
+   * kertomatta minkä maan luvut siinä ovat. Mittajana on ruudun
+   * toisessa laidassa eikä taulu yllä sinne.
+   */
 
   if (ui.fokusMaatauluKuuntelijat) {
     for (const [kohde, laji, kasittele] of ui.fokusMaatauluKuuntelijat) {
@@ -457,7 +479,12 @@ function taytaMaataulu(ui, iso) {
   if (!taulu) return;
   ui.fokusMaatauluIso = iso;
   const nimi = maanNimi(ui, iso);
-  taulu.querySelector('.fokus-maataulu-nimi').textContent = nimi;
+  /*
+   * NIMI ON ARIASSA, EI OTSIKKOSOLMUSSA. Näkyvä otsikko poistui
+   * (kartuutsi on taulun alla ja kertoo maan), mutta ruudunlukijalle
+   * dialogi ei saa jäädä nimettömäksi — se saa nimensä tästä.
+   */
+  taulu.setAttribute('aria-label', `${nimi}: maan perustiedot`);
   taulu.querySelector('.fokus-maataulu-lehti')
     .setAttribute('aria-label', `Avaa ${nimi}-lehti`);
   const lista = taulu.querySelector('.fokus-maataulu-rivit');
@@ -482,6 +509,194 @@ function taytaMaataulu(ui, iso) {
   }
 }
 
+/* ---------------------------------------------------- asteviivaimet */
+
+/*
+ * KARTAN REUNAVIIVAIMET (omistajan pelitestitilaus 26.8.2026:
+ * *"dynaamiset asteviivaimet ruudun reunoihin ... laskettuna näkyvästä
+ * alueesta samalla projektiokaavalla kuin mittajana"*).
+ *
+ * MIKSI REUNAAN EIKÄ RUUDUKKONA. 1873-atlaksessa asteverkko piirretään
+ * lehden marginaaliin: lukemat kertovat, missä ollaan, mutta viivasto ei
+ * sotke maastoa. Sama pätee tässä kahdesti — pinta on JATKUVA (ei
+ * lehteä, ei marginaalia), joten viivaimet ovat ruudun reunassa, ja
+ * kartan päällä on jo kaupunkien laatat, fokusvirran kortit ja
+ * alanapit. Reunanauha on muutaman pikselin levyinen eikä siksi osu
+ * mihinkään niistä.
+ *
+ * KAAVA ON SAMA KUIN MITTAJANALLA (FOKUS_LAUTAPROJEKTIOT,
+ * projektionKaavat). Jos viivaimet käyttäisivät omaa kaavaansa, sama
+ * ruutu väittäisi kahta eri leveysastetta.
+ *
+ * ASKEL VALITAAN RUUDULTA, EI ZOOMITASOSTA. Sarja on atlaksen oma
+ * (30–20–10–5–2–1–½–¼–⅒ astetta), ja siitä otetaan TIHEIN, jonka väli
+ * on ruudulla vielä vähintään VALIN_MIN pikseliä (ks. valitseAskel).
+ * Sama kartta on eri kokoinen puhelimessa ja työpöydällä, joten pelkkä
+ * mittakaava ei riittäisi: kapealla ruudulla lukemat menisivät
+ * päällekkäin.
+ */
+const ASTEASKELEET = [30, 20, 10, 5, 2, 1, 0.5, 0.25, 0.1];
+const VALIN_MIN = 78;
+/* Nurkka on kahden viivaimen risteys: pystyviivaimen ylin lukema
+ * jätetään pois, jottei se osu vaakaviivaimen numeroriviin. */
+const NURKKA_PX = 30;
+
+/**
+ * PIENIN askel, jonka väli on ruudulla vielä luettava.
+ *
+ * SARJA ON LASKEVA, JOTEN `find` OLISI VÄÄRIN. Ensimmäinen ehdon
+ * täyttävä on aina 30°, koska 30 asteen väli on leveämpi kuin mikään
+ * muu — ja juuri niin kävi ensimmäisessä mittauksessa: Kreikan
+ * ikkunassa (17°…31° ruudun leveydellä) viivaimeen jäi yksi ainoa
+ * merkki. Oikea valinta on sarjan VIIMEINEN ehdon täyttävä eli tihein
+ * väli, joka vielä mahtuu; jos yksikään ei mahdu (yleiskuva), otetaan
+ * harvin.
+ */
+function valitseAskel(pxAsteessa) {
+  const mahtuvat = ASTEASKELEET.filter((a) => a * pxAsteessa >= VALIN_MIN);
+  return mahtuvat.length ? mahtuvat[mahtuvat.length - 1] : ASTEASKELEET[0];
+}
+
+/** Reunaviivainten säiliö: kaksi nauhaa, ylä ja vasen. */
+function rakennaViivaimet(ui) {
+  const sailio = luo('div', 'fokus-viivaimet');
+  sailio.setAttribute('aria-hidden', 'true');
+  sailio.hidden = true;
+  sailio.appendChild(luo('div', 'fokus-viivain fokus-viivain-yla'));
+  sailio.appendChild(luo('div', 'fokus-viivain fokus-viivain-vasen'));
+  ui.mapPane.appendChild(sailio);
+  return sailio;
+}
+
+/**
+ * Laudan koordinaatti ruudun pikseleiksi karttaruudun sisällä.
+ *
+ * Miksi omat kaavat eikä ui.nakyvaAlue: nakyvaAlue kertoo NÄKYVÄN
+ * laatikon laudan yksiköissä, mutta ei sitä, mihin kohtaan ruutua
+ * laudan origo osuu. Kun lauta on ruutua kapeampi (loitonnettu
+ * yleiskuva), sen vasen reuna ei ole ruudun vasen reuna, ja pelkällä
+ * näkyvällä laatikolla laskettu piste heittäisi juuri sen verran.
+ */
+function ruutuKaavat(ui) {
+  const pane = ui.mapPane;
+  const svg = ui.svg;
+  const vb = svg?.viewBox?.baseVal;
+  if (!pane || !vb?.width) return null;
+  const l = svg.getBoundingClientRect();
+  const p = pane.getBoundingClientRect();
+  const skaala = l.width / vb.width;
+  if (!(skaala > 0) || !(p.width > 0)) return null;
+  return {
+    skaala,
+    leveys: p.width,
+    korkeus: p.height,
+    px: (bx) => (l.left - p.left) + (bx - vb.x) * skaala,
+    py: (by) => (l.top - p.top) + (by - vb.y) * skaala,
+    // Käänteissuunta: ruudun reuna laudan yksiköiksi.
+    lautaX: (sx) => vb.x + (sx - (l.left - p.left)) / skaala,
+    lautaY: (sy) => vb.y + (sy - (l.top - p.top)) / skaala,
+  };
+}
+
+/** Lukema atlaksen asussa: "22°", "37,5°" ja pallonpuolisko kirjaimena. */
+function asteTeksti(arvo, [plus, miinus]) {
+  const luku = Math.abs(Math.round(arvo * 1000) / 1000);
+  const teksti = String(Number(luku.toFixed(3))).replace('.', ',');
+  if (Math.abs(arvo) < 1e-9) return `${teksti}°`;
+  return `${teksti}°${arvo > 0 ? plus : miinus}`;
+}
+
+/** Yksi viivainmerkki: viiva reunasta ja sen vieressä lukema. */
+function viivainMerkki(nauha, paikka, teksti, pysty) {
+  const merkki = luo('span', 'fokus-viivain-merkki');
+  merkki.style[pysty ? 'top' : 'left'] = `${Math.round(paikka)}px`;
+  merkki.appendChild(luo('i', 'fokus-viivain-viiva'));
+  merkki.appendChild(luo('b', 'fokus-viivain-luku', teksti));
+  nauha.appendChild(merkki);
+}
+
+/**
+ * Piirtää viivaimet nykyiseen näkymään.
+ *
+ * Kutsutaan samasta paikasta kuin mittajana eli VASTA KUN NÄKYMÄ ON
+ * ASETTUNUT — merkit eivät siis liiku panoroinnin aikana vaan
+ * asettuvat kerran sen päätteeksi, kuten maastonimetkin.
+ */
+function paivitaViivaimet(ui) {
+  const sailio = ui.fokusViivaimet;
+  if (!sailio?.isConnected) return;
+  const kaavat = projektionKaavat(FOKUS_LAUTAPROJEKTIOT[ui.game?.pack?.id]);
+  const ruutu = ruutuKaavat(ui);
+  const yla = sailio.querySelector('.fokus-viivain-yla');
+  const vasen = sailio.querySelector('.fokus-viivain-vasen');
+  yla.textContent = '';
+  vasen.textContent = '';
+  if (!kaavat || !ruutu) { sailio.hidden = true; return; }
+  sailio.hidden = false;
+
+  /* --- pituusasteet yläreunaan --- */
+  const lonAlku = kaavat.lon(ruutu.lautaX(0));
+  const lonLoppu = kaavat.lon(ruutu.lautaX(ruutu.leveys));
+  const pxAsteessa = Math.abs(ruutu.leveys / (lonLoppu - lonAlku));
+  if (Number.isFinite(pxAsteessa) && pxAsteessa > 0) {
+    const askel = valitseAskel(pxAsteessa);
+    const alku = Math.ceil(Math.min(lonAlku, lonLoppu) / askel) * askel;
+    const loppu = Math.max(lonAlku, lonLoppu);
+    for (let lon = alku; lon <= loppu + 1e-9; lon += askel) {
+      const x = ruutu.px(kaavat.x(lon));
+      if (x < 8 || x > ruutu.leveys - 8) continue;
+      viivainMerkki(yla, x, asteTeksti(lon, ['I', 'L']), false);
+    }
+  }
+
+  /* --- leveysasteet vasempaan reunaan --- */
+  const latYla = kaavat.lat(ruutu.lautaY(0));
+  const latAla = kaavat.lat(ruutu.lautaY(ruutu.korkeus));
+  const pxLeveysasteessa = Math.abs(ruutu.korkeus / (latYla - latAla));
+  if (Number.isFinite(pxLeveysasteessa) && pxLeveysasteessa > 0) {
+    const askel = valitseAskel(pxLeveysasteessa);
+    const alku = Math.ceil(Math.min(latYla, latAla) / askel) * askel;
+    const loppu = Math.max(latYla, latAla);
+    for (let lat = alku; lat <= loppu + 1e-9; lat += askel) {
+      const y = ruutu.py(kaavat.y(lat));
+      // Nurkka kuuluu yläviivaimelle, alanurkka kartuutsille.
+      if (y < NURKKA_PX || y > ruutu.korkeus - 64) continue;
+      viivainMerkki(vasen, y, asteTeksti(lat, ['P', 'E']), true);
+    }
+  }
+}
+
+/**
+ * PIENEN LIIKU-NELIÖN PAIKKA KARTUUTSIN RINNALLA.
+ *
+ * Alanappirivi (js/ui.js piirraToimintorivi) on oma elementtinsä eikä
+ * tiedä kartuutsista mitään, ja kartuutsin leveys riippuu maan nimestä
+ * — "KREIKKA" ja "ΕΛΛΑΣ · Hellas · kuningaskunta v. 1873" latoutuvat
+ * eri levyisiksi kuin minkä tahansa muun maan vastineet. Leveys siis
+ * MITATAAN ja välitetään CSS-muuttujana; tyylitiedosto tekee siitä
+ * rivin vasemman pehmusteen. Näin neliö asettuu kartuutsin viereen
+ * ilman, että kummankaan mitat on kirjoitettu käsin.
+ *
+ * MUUTTUJA ASETETAAN BODYYN EIKÄ KARTTARUUTUUN. Alanappirivi ei ole
+ * karttaruudun lapsi vaan asuu sen rinnalla kelluvassa .rail-kerroksessa
+ * (index.html), joten karttaruutuun kirjoitettu muuttuja ei periytyisi
+ * sinne lainkaan — mitattu: pehmuste jäi nollaksi ja neliö kartuutsin
+ * päälle. Body on molempien yhteinen esi-isä.
+ *
+ * KARTUUTSI JA RIVI ALKAVAT SAMASTA KOHDASTA. Kartuutsi on
+ * .fokusmitat-säiliössä (left: 0.7rem karttaruudusta) ja rivi
+ * .turn-cardissa (left: 0.7rem samasta reunasta fokusnäkymässä), joten
+ * pehmusteeksi riittää kartuutsin leveys ja pieni rako — kahden eri
+ * ankkurin erotusta ei tarvitse laskea.
+ */
+function paivitaNappipaikka(ui) {
+  const kartuutsi = ui.fokusKartuutsi;
+  if (!kartuutsi) return;
+  const leveys = kartuutsi.getBoundingClientRect().width;
+  if (!(leveys > 0)) return;
+  document.body.style.setProperty('--fokus-nappipaikka', `${Math.round(leveys + 8)}px`);
+}
+
 /* ------------------------------------------------------- päivitys */
 
 /**
@@ -504,6 +719,8 @@ export function paivitaFokusmitat(ui) {
   if (!nakyy) {
     if (!sailio.hidden) {
       sailio.hidden = true;
+      if (ui.fokusViivaimet) ui.fokusViivaimet.hidden = true;
+      document.body.style.removeProperty('--fokus-nappipaikka');
       avaaMaataulu(ui, false);
       ui.fokusMitatAvain = null;
     }
@@ -531,6 +748,11 @@ export function paivitaFokusmitat(ui) {
     taytaMaataulu(ui, iso);
   }
 
+  // Neliönapin paikka mitataan joka päivityksellä: ruudun leveys (ja
+  // sen myötä kartuutsin kirjasinkoko) voi vaihtua kesken pelin.
+  paivitaNappipaikka(ui);
+  paivitaViivaimet(ui);
+
   const jana = laskeMittajana(ui);
   if (!jana) { ui.fokusJana.hidden = true; return; }
   ui.fokusJana.hidden = false;
@@ -544,10 +766,13 @@ export function nollaaFokusmitat(ui) {
   avaaMaataulu(ui, false);
   ui.fokusmitatSailio?.remove();
   ui.fokusMaataulu?.remove();
+  ui.fokusViivaimet?.remove();
+  document.body.style.removeProperty('--fokus-nappipaikka');
   ui.fokusmitatSailio = null;
   ui.fokusKartuutsi = null;
   ui.fokusJana = null;
   ui.fokusMaataulu = null;
+  ui.fokusViivaimet = null;
   ui.fokusMitatAvain = null;
   ui.fokusMaatauluIso = null;
 }

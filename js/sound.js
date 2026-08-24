@@ -12,6 +12,7 @@ const STORAGE_KEY = 'matkakirja-aani';
 const VANHA_STORAGE_KEY = 'afrikan-tahti-sound';
 
 import { valittuAani, jaaAlku } from './aani-ehdokkaat.js';
+import { lisaaTaustaVaimennus } from './aani-tausta.js';
 import { haeAani } from './media.js';
 
 // Ambienssin ristihäivytys ja tapahtumien väli. Väli on tarkoituksella pitkä
@@ -143,6 +144,14 @@ let aaniIstunnonLuokka = null;
  * koska myös eleen kuuntelija tarvitsee sen.
  */
 let saneluKaynnissa = false;
+
+/*
+ * Sama lippu taustalle siirtyneelle pelille (js/aani-tausta.js).
+ * Mediakanavaa ei oteta eikä ankkuria herätetä taustalla: hiljainenkin
+ * silmukka pitäisi sovelluksen "toistavana" Ohjauskeskuksen silmissä ja
+ * estäisi toista sovellusta saamasta ääntä itselleen.
+ */
+let taustalla = false;
 
 /** Asettaa äänisession luokan; palauttaa true jos se muuttui. */
 function asetaAaniIstunto(tyyppi) {
@@ -287,7 +296,7 @@ let eleNahty = false;
  * asetetaan kerran ja soiva ankkuri jätetään rauhaan.
  */
 export function varmistaAaniIstunto() {
-  if (saneluKaynnissa || !eleNahty) return false;
+  if (saneluKaynnissa || taustalla || !eleNahty) return false;
   const muuttui = asetaAaniIstunto(ISTUNNON_LUOKKA);
   soitaAnkkuri();
   return muuttui;
@@ -349,6 +358,14 @@ class Sound {
     // soimaan täydellä voimalla näytteen ja kertojan päälle (omistajan
     // havainto: "Kuuntele kieltä kohdassa muut äänet voisi vaimentaa").
     this.ambienssiVaisto = 1;
+    /*
+     * Kova tauko, kun peli ei ole päällimmäisenä (js/aani-tausta.js).
+     * Erillään sanelun tauosta, koska ne voivat olla voimassa
+     * yhtä aikaa: sanelu voi jäädä kesken juuri siihen, että pelaaja
+     * vaihtaa sovellusta. Kumpi tahansa lipuista pitää kontekstin
+     * nukkumassa, ja vain oma jatkonsa nostaa oman lippunsa.
+     */
+    this.taustaTauko = false;
     this.enabled = this.loadSetting();
   }
 
@@ -413,7 +430,7 @@ class Sound {
      * niitäkin. Sanelun aikana ei kosketa — silloin sessio kuuluu
      * mikrofonille.
      */
-    if (!this.saneluTauko) varmistaAaniIstunto();
+    if (!this.saneluTauko && !this.taustaTauko) varmistaAaniIstunto();
     if (!this.enabled && !pakota) return null;
     if (!this.ctx) {
       const Ctx = window.AudioContext || window.webkitAudioContext;
@@ -460,7 +477,9 @@ class Sound {
       // Oikeat äänitteet (noppa, kynä) latautuvat taustalla.
       this.loadRealSamples();
     }
-    if (!this.saneluTauko && this.ctx.state === 'suspended') this.ctx.resume().catch(() => {});
+    if (!this.saneluTauko && !this.taustaTauko && this.ctx.state === 'suspended') {
+      this.ctx.resume().catch(() => {});
+    }
     return this.ctx;
   }
 
@@ -499,6 +518,51 @@ class Sound {
     saneluKaynnissa = false;
     // Mediakanava takaisin, jotta Ohjauskeskuksen säädin ja kyljen
     // napit hallitsevat taas peliä.
+    varmistaAaniIstunto();
+    // Taustalla oleva peli pysyy hiljaa, vaikka sanelu päättyisi juuri
+    // siihen: taustavahdin oma jatko herättää kontekstin (jatkaEtualalle).
+    if (this.taustaTauko) return;
+    try {
+      if (this.ctx?.state === 'suspended') this.ctx.resume().catch(() => {});
+    } catch {
+      /* konteksti syntyy seuraavasta äänestä */
+    }
+  }
+
+  /*
+   * ── TAUSTALLE MENEVÄ PELI (omistajan tilaus 24.8.2026) ────────────
+   *
+   * Sama kaksikko kuin sanelun tauolla, mutta eri syystä: sanelu
+   * tarvitsee äänisession mikrofonille, tausta ei tarvitse sitä
+   * kenellekään. Molemmat purkavat mediakanavan (ankkuri kiinni,
+   * luokka takaisin selaimen omaan päättelyyn) ja nukuttavat
+   * kontekstin — mediakanava on prosessikohtainen, ja taustalle jäänyt
+   * peli pitäisi sen turhaan itsellään toisten sovellusten tieltä.
+   *
+   * Tehosteet eivät myöskään SYNNY taustalla (ks. play). Pysäytetyssä
+   * kontekstissa aikataulutus jäätyy: minuutin taustalla kertyneet
+   * tehosteet purskahtaisivat kaikki yhtä aikaa paluuhetkellä.
+   */
+  taukoaTaustalle() {
+    if (this.taustaTauko) return;
+    this.taustaTauko = true;
+    taustalla = true;
+    asetaAaniIstunto('auto');
+    pysaytaAnkkuri();
+    try {
+      this.ctx?.suspend?.().catch?.(() => {});
+    } catch {
+      /* konteksti ei ollut käynnissä */
+    }
+  }
+
+  jatkaEtualalle() {
+    if (!this.taustaTauko) return;
+    this.taustaTauko = false;
+    taustalla = false;
+    // Sanelu jatkuu omasta jatkostaan: se pitää sekä mediakanavan että
+    // kontekstin kiinni niin kauan kuin mikrofoni on käytössä.
+    if (this.saneluTauko) return;
     varmistaAaniIstunto();
     try {
       if (this.ctx?.state === 'suspended') this.ctx.resume().catch(() => {});
@@ -910,7 +974,9 @@ class Sound {
     const viive = AMBIENCE_EVENT_MIN + Math.random() * (AMBIENCE_EVENT_MAX - AMBIENCE_EVENT_MIN);
     maisema.timer = setTimeout(() => {
       if (maisema.loppuu || this.ambience !== maisema) return;
-      const tapahtuma = AMBIENCE_EVENTS[maisema.type];
+      // Taustalla vain rytmi jatkuu, ei ääni: pysäytettyyn kontekstiin
+      // aikataulutetut tapahtumat soisivat kaikki yhtä aikaa paluussa.
+      const tapahtuma = this.taustaTauko ? null : AMBIENCE_EVENTS[maisema.type];
       if (tapahtuma) {
         try { tapahtuma(this, maisema); } catch { /* ei saa kaataa peliä */ }
       }
@@ -964,7 +1030,9 @@ class Sound {
 
 
   play(name, asetukset = undefined) {
-    if (!this.enabled) return;
+    // Taustalla ei synny tehosteita lainkaan: pysäytetyssä
+    // kontekstissa ne jäisivät jonoon ja purskahtaisivat paluussa.
+    if (!this.enabled || this.taustaTauko) return;
     // Oikea äänite ensin, jos se on ladattu; muuten syntetisoitu versio.
     const real = REAL_PLAYERS[name];
     if (real && real(this, asetukset)) return;
@@ -1576,6 +1644,16 @@ const SOUNDS = {
 };
 
 export const sfx = new Sound();
+
+/*
+ * Tehosteet, syntetisoitu äänimaisema ja mediakanavan ankkuri liittyvät
+ * taustavahtiin (js/aani-tausta.js). Rekisteröinti on tässä eikä
+ * rakentimessa, jotta luokan voi yhä luoda testissä ilman vahtia.
+ */
+lisaaTaustaVaimennus({
+  hiljenna: () => sfx.taukoaTaustalle(),
+  palauta: () => sfx.jatkaEtualalle(),
+});
 
 /** Aarteen paljastuksen ääni laattatyypin mukaan. */
 export function treasureSound(type) {

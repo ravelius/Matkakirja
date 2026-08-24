@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1101, teksti: 'Kevyt kulku, aanet, Eurooppa, hionta' },
   { v: 1100, teksti: 'Fokusnakyma: mitat, kohteet, napit' },
   { v: 1099, teksti: 'Kortin vieritys ei panoroi karttaa' },
   { v: 1098, teksti: 'Pallot piiloon, suurennos ja kortit' },

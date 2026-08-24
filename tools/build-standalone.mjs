@@ -211,6 +211,13 @@ const MODULES = [
   // Pelkkää dataa, jonka js/ui.js tuo staattisesti.
   'js/lahteet.js',
   'js/aani-ehdokkaat.js',
+  /*
+   * Taustavahti ENNEN kaikkea ääntä: jokainen äänimoduuli (sound,
+   * puhe, ambience-stream, lukija, luenta, linssit/radio) rekisteröi
+   * sille taustavaimennuksensa moduulitasolla, eikä vahti itse tuo
+   * mitään — se on riippuvuuspuun pohjalla.
+   */
+  'js/aani-tausta.js',
   'js/sound.js',
   /*
    * Lukijaääni (js/puhe.js) ENNEN ambience-streamia: sanelun kova
@@ -300,6 +307,13 @@ const MODULES = [
   // laskenta tapahtuu vasta kun liite avataan.
   'js/viitekuva-herot.js',
   'js/tyohuone-tilastot.js',
+  /*
+   * Kevyen kulun nimetyt lehtitehtävät ENNEN maalehteä (maalehti tuo
+   * sivun tehtäväpiirron staattisesti). Moduulin omat riippuvuudet —
+   * ui-apurit, julisteet, fokusvirrat, natiivi ja äänet — ovat kaikki
+   * jo yllä, eikä se tunne fokusvirtaa: riippuvuus kulkee toisin päin.
+   */
+  'js/fokustehtavat.js',
   // M5c: maalehden koneisto ennen lehteä (lehti tuo sen piirtäjät).
   'js/maalehti.js',
   // M5a: lehden sivukoneisto (tuo nähtävyydet ja lukijan).
@@ -322,6 +336,12 @@ const MODULES = [
   // päivitys- ja nollauskutsun; kohteiden lista, mapart, media,
   // ui-apurit, valokuvat ja äänet ovat kaikki jo yllä).
   'js/fokuskohteet.js',
+  /*
+   * Kevyen kulun vihreä kohtaamispiste ennen ui:ta (ui tuo sen päivitys-
+   * ja nollauskutsun). Se tuo fokusvirran kohtaamiskortin ja mapartin,
+   * jotka ovat molemmat jo yllä.
+   */
+  'js/fokuspiste.js',
   /*
    * Fokusnäkymän ruutuun ankkuroidut mitat ennen ui:ta (ui tuo ne
    * staattisesti). Se lukee laudan projektion fokus-grc.js:stä ja maan

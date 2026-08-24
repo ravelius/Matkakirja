@@ -3401,7 +3401,14 @@ const ohje = await vihjeSivu.evaluate(async () => {
   await new Promise((r) => setTimeout(r, 300));
   return {
     vaihe: game.phase,
-    kohteita: document.querySelectorAll('.targets .target-ring').length,
+    /*
+     * KOHDEMERKKI ON KAHTA KIELTÄ (omistajan pelitestitilaus 26.8.2026).
+     * Laudan yleiskuvassa se on punainen katkoviivarengas (.target-ring),
+     * fokusnäkymässä pieni pyöreä laatta (.target-piste, js/ui.js
+     * fokusKohdeMerkki). Väite koskee sitä, että valittavat kohteet
+     * NÄKYVÄT kartalla — ei sitä, kumpi merkki niistä piirtyy.
+     */
+    kohteita: document.querySelectorAll('.targets .target-ring, .targets .target-piste').length,
     tilarivi: Boolean(document.getElementById('turn-status')),
     ohjerivi: Boolean(document.getElementById('board-hint')),
     // Poistetut kehotukset kokonaisuudessaan: yksikin osuma tarkoittaa,

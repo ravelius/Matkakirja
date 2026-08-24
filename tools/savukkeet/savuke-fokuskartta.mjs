@@ -68,6 +68,22 @@
  *   - UUSI OSIO 7 mittaa laatan RUUTUKOON, napautusalueen sormimitan ja
  *     alarivin (vain Liiku), sekä sen että napautus avaa virran.
  */
+/*
+ * KEVYT KULKU -KOKEILUN OHITUSVAHTI (Fable 24.8.2026): tama savuke
+ * mittaa korttiannostelua ja lehtinakymaa, jotka ovat kokeilun ajan
+ * lipun takana (js/fokusvirta.js FOKUSVIRTA_KORTIT = false). Lipun
+ * ollessa pois savuke ohitetaan; kun vanha virta palautetaan, vahti
+ * paastaa savukkeen ajoon sellaisenaan. Kokeilutilan oma kattavuus:
+ * tools/savuke-fokusvirta.mjs ja tools/savuke-fokuskartta.mjs.
+ */
+{
+  const { readFileSync } = await import('node:fs');
+  const virta = readFileSync(new URL('../../js/fokusvirta.js', import.meta.url), 'utf8');
+  if (/FOKUSVIRTA_KORTIT\s*=\s*false/.test(virta)) {
+    console.log('OHITETTU: kevyt kulku -kokeilu paalla (FOKUSVIRTA_KORTIT=false)');
+    process.exit(0);
+  }
+}
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
@@ -425,13 +441,20 @@ const mittaaPallot = () => sivu.evaluate(() => {
    */
   const nimet = lehdella.filter((osa) => osa.classList.contains('city-label')
     && !osa.classList.contains('fokus-piilossa'));
-  const renkaat = [...document.querySelectorAll('#board .targets .target-ring')];
+  // Nimen kirjasinkoko LAUDAN yksiköissä: fokusnäkymässä sen kuuluu olla
+  // murto-osa laudan omasta 18 yksiköstä (omistaja 26.8.2026).
+  const nimiKoot = nimet.map((osa) => parseFloat(getComputedStyle(osa).fontSize));
+  // Kohdemerkit: fokusnäkymässä pieni piste, muualla katkoviivarengas.
+  const renkaat = [...document.querySelectorAll(
+    '#board .targets .target-ring, #board .targets .target-piste',
+  )];
   return {
     pohja: Boolean(ui.fokusPohjaBbox),
     pisteita: pisteet.length,
     nakyviaPisteita: pisteet.filter(nakyy).length,
     nimia: nimet.length,
     nakyviaNimia: nimet.filter(nakyy).length,
+    nimiKoot,
     // Yksikään nimi ei saa saada pallonpiilotuksen luokkaa.
     pallotettujaNimia: lehdella.filter((osa) => osa.classList.contains('city-label')
       && osa.classList.contains('fokus-lehden-alla')).length,
@@ -455,6 +478,17 @@ vaadi('6c kaupunkien nimet JÄÄVÄT lehteen (ATEENA, Kreeta)',
   && piilossa.pallotettujaNimia === 0,
   `${piilossa.nakyviaNimia}/${piilossa.nimia} näkyvissä, `
   + `${piilossa.pallotettujaNimia} pallotettuna`);
+/*
+ * ATEENA JA KREETA PALJON PIENEMMÄLLÄ (omistajan pelitestitilaus
+ * 26.8.2026). Laudan oma kaupunkinimi on 18 yksikköä ja lähtökaupungin
+ * 21; fokusnäkymässä molemmat kutistuvat noin 40–50 prosenttiin, eli
+ * enintään 9 yksikköön. Mitta on LAUDAN yksiköissä, koska juuri se on
+ * se, mitä CSS asettaa — ruutumitta riippuisi zoomista.
+ */
+vaadi('6c2 lehden kaupunkinimet ovat fokusnäkymässä paljon pienempiä',
+  piilossa.nimiKoot.length > 0
+  && piilossa.nimiKoot.every((koko) => koko > 0 && koko <= 9),
+  `${piilossa.nimiKoot.join(', ')} yksikköä (laudan oma 18 / 21)`);
 vaadi('6d pelinappula on piilossa ennen aarrevaihetta',
   piilossa.nappuloita > 0 && piilossa.nakyviaNappuloita === 0,
   `${piilossa.nakyviaNappuloita}/${piilossa.nappuloita} näkyvissä`);
@@ -500,6 +534,19 @@ vaadi('6e kehittäjätilan napautusalueet ovat elossa piilotetun laatan pääll�
  * se palaa kartalle valinnan ajaksi, jotta pelaaja näkee mistä
  * lähdetään.
  */
+/*
+ * MITTAUS TEHDÄÄN LEHDEN IKKUNASSA, EI PUOLIVÄLIIN JÄÄNEESSÄ AJOSSA.
+ * Osio 4 keskeytti kamera-ajon tahallaan, ja siinä zoomissa koko lauta
+ * on pieni: kohdemerkin ruutukoko ja napautusalueen sormimitta ovat
+ * silloin eri lukuja kuin siinä näkymässä, josta omistajan palaute
+ * tuli. Sama ajo kuin osiossa 3.
+ */
+await sivu.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  ui.kartta.ajaKamera({ bbox: ui.fokusPohjaBbox, marginaali: 0 });
+});
+await sivu.waitForTimeout(2600);
+
 const valinta = await sivu.evaluate(async () => {
   const ui = window.matkakirja.ui;
   const vaihe = ui.game.phase;
@@ -507,12 +554,33 @@ const valinta = await sivu.evaluate(async () => {
   ui.travelExpanded = true;
   ui.render();
   await new Promise((s) => setTimeout(s, 400));
+  ui.paivitaMaastonimet();
+  await new Promise((s) => setTimeout(s, 200));
   const nakyy = (osa) => getComputedStyle(osa).display !== 'none';
-  const renkaat = [...document.querySelectorAll('#board .targets .target-ring')];
+  const merkit = [...document.querySelectorAll('#board .targets .target-piste')];
+  const nimet = [...document.querySelectorAll('#board .targets .target-nimi')];
+  const osumat = [...document.querySelectorAll('#board .targets .target-hit')];
+  const leveys = (osa) => Math.round(osa.getBoundingClientRect().width);
   const tulos = {
     auki: ui.fokusMatkavalintaAuki(),
-    renkaita: renkaat.length,
-    piilotettujaRenkaita: renkaat.filter((r) => !nakyy(r)).length,
+    // Vanha kieli (punaiset katkoviivarenkaat) ei saa olla kartalla.
+    renkaita: document.querySelectorAll('#board .targets .target-ring').length,
+    haloja: document.querySelectorAll('#board .targets .target-halo').length,
+    merkkeja: merkit.length,
+    piilotettujaMerkkeja: merkit.filter((r) => !nakyy(r)).length,
+    merkkiPx: merkit.map(leveys),
+    nimia: nimet.length,
+    nimiTekstit: nimet.map((e) => e.textContent),
+    // Kohdenimen kirjainkoko RUUDULLA (fontti on laudan yksiköissä).
+    nimiPx: nimet.map((e) => Math.round(
+      parseFloat(getComputedStyle(e).fontSize) * (ui.nakyvaAlue()?.skaala ?? 0),
+    )),
+    kaupunkiNimiPx: [...document.querySelectorAll('#board .cities .city-label')]
+      .filter(nakyy)
+      .map((e) => Math.round(
+        parseFloat(getComputedStyle(e).fontSize) * (ui.nakyvaAlue()?.skaala ?? 0),
+      )),
+    osumaPx: osumat.map(leveys),
     nakyviaNappuloita: [...document.querySelectorAll('#board .pawns .pawn')].filter(nakyy).length,
   };
   ui.travelExpanded = false;
@@ -521,9 +589,39 @@ const valinta = await sivu.evaluate(async () => {
   await new Promise((s) => setTimeout(s, 300));
   return tulos;
 });
-vaadi('6f matkustusvalinta tuo kohderenkaat ja nappulan takaisin',
-  valinta.auki === true && valinta.piilotettujaRenkaita === 0
+vaadi('6f matkustusvalinta tuo kohdemerkit ja nappulan takaisin',
+  valinta.auki === true && valinta.merkkeja > 0
+  && valinta.piilotettujaMerkkeja === 0
   && valinta.nakyviaNappuloita > 0, JSON.stringify(valinta));
+
+/*
+ * KOHDEMERKIT OVAT PISTEITÄ, EIVÄT RENKAITA (omistajan pelitestitilaus
+ * 26.8.2026, iPad-kuvakaappaus Liiku-tilasta).
+ *
+ * Kolme väitettä, jotka yhdessä sanovat "Ateenan tavalla":
+ *
+ *   6k VANHA KIELI ON POISSA. Fokusnäkymässä ei ole yhtään punaista
+ *      katkoviivarengasta eikä kultahaloa.
+ *   6l MERKKI ON PIENI JA RUUDULLA LÄHES VAKIOKOKOINEN — sama mitta
+ *      kuin nykyisen kaupungin laatalla (js/ui.js FOKUS_KOHDE_PX = 18),
+ *      ja napautusalue silti sormenkokoinen.
+ *   6m JOKAISELLA KOHTEELLA ON NIMI, ja se on ISOMPI kuin lehden omat
+ *      kaupunkinimet — mutta ei otsikko.
+ */
+vaadi('6k fokusnäkymässä ei ole punaisia kohderenkaita eikä haloja',
+  valinta.renkaita === 0 && valinta.haloja === 0,
+  `${valinta.renkaita} rengasta, ${valinta.haloja} haloa`);
+vaadi('6l kohdemerkki on pieni piste ruudulla ja osuma sormenkokoinen',
+  valinta.merkkiPx.every((px) => px >= 10 && px <= 30)
+  && valinta.osumaPx.every((px) => px >= 44),
+  `merkit ${valinta.merkkiPx.join(',')} px, osumat ${valinta.osumaPx.join(',')} px`);
+vaadi('6m jokaisella kohteella on nimi, isompi kuin lehden kaupunkinimet',
+  valinta.nimia === valinta.merkkeja
+  && valinta.nimiPx.every((px) => px >= 11 && px <= 20)
+  && valinta.kaupunkiNimiPx.every((px) => px <= 14)
+  && Math.min(...valinta.nimiPx) > Math.max(...valinta.kaupunkiNimiPx),
+  `kohdenimet ${valinta.nimiPx.join(',')} px (${valinta.nimiTekstit.join(', ')}), `
+  + `kaupunkinimet ${valinta.kaupunkiNimiPx.join(',')} px`);
 
 const suljettu = await mittaaPallot();
 vaadi('6g valinnan sulkeuduttua pallot katoavat taas',
@@ -620,10 +718,27 @@ const mittaaMitat = () => sivu.evaluate(() => {
     paneLeveys: pane?.getBoundingClientRect().width ?? 0,
     pilleriNakyy: nakyy(pilleri),
     pohjaLuokka: document.body.classList.contains('fokuspohja'),
-    // Alanapit ja kelluva pöllö: mitat eivät saa osua niiden päälle.
-    napit: laatikko(document.querySelector('.turn-card')),
+    /*
+     * ALANAPPI ON NYT PIENI NELIÖ KARTUUTSIN RINNALLA (omistajan
+     * pelitestitilaus 26.8.2026), joten mitataan NAPPI eikä sitä
+     * ympäröivää .turn-cardia: kortti venyy fokusnäkymässä laidasta
+     * laitaan ilman omaa taustaa, ja kartuutsi asuu tarkoituksella sen
+     * laatikon sisällä. Päällekkäisyys tarkoittaa täällä sitä, että
+     * jokin peittää itse NAPIN.
+     */
+    napit: laatikko(document.querySelector('.toimintorivi .monitoimi-nappi')),
+    kortti: laatikko(document.querySelector('.turn-card')),
+    yksiRivi: Boolean(document.querySelector('.toimintorivi')?.classList.contains('rivi-yksi')),
     pollo: laatikko(document.querySelector('.pollo-nappi.pollo-kelluu')),
     tauluAuki: document.querySelector('.fokus-maataulu')?.classList.contains('auki') ?? null,
+    // Reunaviivaimet: montako merkkiä ja mitä lukemat sanovat.
+    viivainYla: [...document.querySelectorAll('.fokus-viivain-yla .fokus-viivain-luku')]
+      .map((e) => e.textContent),
+    viivainVasen: [...document.querySelectorAll('.fokus-viivain-vasen .fokus-viivain-luku')]
+      .map((e) => e.textContent),
+    viivainLaatikot: [...document.querySelectorAll('.fokus-viivain-merkki')].map(laatikko),
+    viivaimetOsuvat: getComputedStyle(document.querySelector('.fokus-viivaimet'))
+      .pointerEvents,
   };
 });
 
@@ -673,13 +788,62 @@ const janaLaatikko = await sivu.evaluate(() => {
     x: r.x, y: r.y, oikea: r.right, ala: r.bottom,
   } : null;
 });
-vaadi('7i kartuutsi ja jana eivät peitä alanappeja',
+vaadi('7i kartuutsi ja jana eivät peitä Liiku-nappia',
   !osuvat(mitat.kartuutsiLaatikko, mitat.napit) && !osuvat(janaLaatikko, mitat.napit),
   JSON.stringify({ kartuutsi: mitat.kartuutsiLaatikko, jana: janaLaatikko, napit: mitat.napit }));
 vaadi('7j kartuutsi ja jana eivät peitä kelluvaa pöllöä',
   !mitat.pollo
   || (!osuvat(mitat.kartuutsiLaatikko, mitat.pollo) && !osuvat(janaLaatikko, mitat.pollo)),
   JSON.stringify({ pollo: mitat.pollo }));
+
+/*
+ * ALALAIDAN UUSI JÄRJESTYS (omistajan pelitestitilaus 26.8.2026):
+ * vasemmalla kartuutsi, sen RINNALLA pieni Liiku-neliö ja oikeassa
+ * nurkassa mittajana. Kolme väitettä, jotka yhdessä sanovat juuri sen:
+ *
+ *   7m NELIÖ ON NELIÖ ja sormenkokoinen — ei leveä tekstipalkki.
+ *   7n NELIÖ ON KARTUUTSIN OIKEALLA PUOLELLA ja samalla viivalla:
+ *      pystysuunnassa ne menevät päällekkäin (sama alalaita), mutta
+ *      vaakasuunnassa neliö alkaa vasta kartuutsin jälkeen.
+ *   7o KARTUUTSI EI OLE ENÄÄ NAPPIRIVIN YLÄPUOLELLA vaan sen tasolla:
+ *      alareunat ovat samassa kohdassa muutaman pikselin tarkkuudella.
+ */
+const nelio = mitat.napit;
+vaadi('7m Liiku on pieni neliö (≥44 px, leveys ≈ korkeus)',
+  Boolean(nelio) && nelio.w >= 44 && nelio.h >= 44
+  && Math.abs(nelio.w - nelio.h) <= 2 && nelio.w <= 64,
+  JSON.stringify(nelio));
+vaadi('7n neliö on kartuutsin oikealla puolella eikä sen päällä',
+  Boolean(nelio) && nelio.x >= mitat.kartuutsiLaatikko.oikea - 1,
+  JSON.stringify({ kartuutsi: mitat.kartuutsiLaatikko, nelio }));
+vaadi('7o kartuutsi ja neliö ovat samassa alalaidassa',
+  Boolean(nelio) && Math.abs(nelio.ala - mitat.kartuutsiLaatikko.ala) <= 12,
+  `kartuutsi ${mitat.kartuutsiLaatikko.ala}, neliö ${nelio?.ala}`);
+
+/*
+ * REUNAVIIVAIMET (omistajan pelitestitilaus 26.8.2026): asteviivat ja
+ * lukemat ruudun reunoihin, laskettuna näkyvästä alueesta samalla
+ * projektiokaavalla kuin mittajana.
+ *
+ * Väitteet ovat samat kolme kuin mittajanalla, koska kyse on samasta
+ * lupauksesta: merkkejä on useita (ei yhtä ainoaa), lukemat ovat
+ * uskottavia Kreikan ikkunassa, ja ne MUUTTUVAT zoomatessa.
+ */
+const asteluku = (t) => Number(String(t).replace(',', '.').replace(/[^\d.-]/g, ''));
+vaadi('7p yläreunassa on pituusasteviivain (useita merkkejä)',
+  mitat.viivainYla.length >= 2, mitat.viivainYla.join(' '));
+vaadi('7q vasemmassa reunassa on leveysasteviivain',
+  mitat.viivainVasen.length >= 2, mitat.viivainVasen.join(' '));
+vaadi('7r lukemat ovat Kreikan ikkunan asteita ja itä/pohjoinen-puolella',
+  mitat.viivainYla.every((t) => /°I$/.test(t) && asteluku(t) >= 10 && asteluku(t) <= 40)
+  && mitat.viivainVasen.every((t) => /°P$/.test(t) && asteluku(t) >= 20 && asteluku(t) <= 60),
+  `${mitat.viivainYla.join(' ')} | ${mitat.viivainVasen.join(' ')}`);
+vaadi('7s viivaimet eivät ota napautuksia vastaan',
+  mitat.viivaimetOsuvat === 'none', mitat.viivaimetOsuvat);
+vaadi('7t viivainmerkit eivät osu Liiku-nappiin, kartuutsiin eivätkä janaan',
+  mitat.viivainLaatikot.every((r) => !osuvat(r, nelio)
+    && !osuvat(r, mitat.kartuutsiLaatikko) && !osuvat(r, janaLaatikko)),
+  JSON.stringify(mitat.viivainLaatikot.slice(0, 3)));
 
 /*
  * DYNAAMISUUS: zoomaus lyhentää janan kilometrimäärää. Tämä on koko
@@ -702,21 +866,38 @@ vaadi('7l lähennettykin jana pysyy vakiosarjassa ja järkevän kokoisena',
   && (lahella.janaLeveys / lahella.paneLeveys) * 100 <= 25,
   `${lahella.km} km, ${((lahella.janaLeveys / lahella.paneLeveys) * 100).toFixed(1)} %`);
 
-/* ------------------------------- 8. liukuva maataulu (v1099) */
+/* ------------------------------- 8. maataulu kartuutsin päällä */
 
 /*
- * Kartuutsin kertapainallus nostaa alhaalta liukuvan taulun, jossa
- * ovat maan perustiedot SAMASTA lähteestä kuin maalehdessä
- * (MAATIEDOT) ja plus-nappi itse lehteen. Sulku: X, Esc tai napautus
- * taulun ulkopuolelle.
+ * Kartuutsin kertapainallus nostaa taulun, jossa ovat maan perustiedot
+ * SAMASTA lähteestä kuin maalehdessä (MAATIEDOT) ja plus-nappi itse
+ * lehteen.
+ *
+ * === MIKÄ MUUTTUI OMISTAJAN PELITESTISSÄ 26.8.2026 ===
+ *
+ * Taulu oli ruudun levyinen alalevy, jossa oli otsikko (maan nimi),
+ * plus ja ×-sulkunappi. Kaikki kolme muuttuivat:
+ *
+ *   TAULU NOUSEE KARTUUTSIN KOHDALTA sen YLÄPUOLELLE, ei ruudun
+ *   alalaidasta — ja kartuutsi JÄÄ NÄKYVIIN sen alle. Väitteet 8j ja 8k.
+ *   EI OTSIKKOA: maan nimi on kartuutsissa. Väite 8l.
+ *   EI SULKUNAPPIA: sulku tulee kartasta, kartuutsista tai Escistä.
+ *   Väite 8m (ja vanhat 8h/8i, jotka mittaavat juuri ne sulut).
+ *   PLUS OIKEAAN YLÄREUNAAN ja LÄPINÄKYVÄMPI paperi. Väitteet 8n ja 8b.
  */
 const auki = await sivu.evaluate(async () => {
   document.querySelector('.fokus-kartuutsi').click();
-  await new Promise((r) => setTimeout(r, 450));
+  // Liuku on 0.26 s, mutta headless-Chromium käynnistää siirtymän
+  // laiskasti: lyhyt odotus mittaisi taulun kesken matkan.
+  await new Promise((r) => setTimeout(r, 1400));
   const taulu = document.querySelector('.fokus-maataulu');
   const pane = document.querySelector('.map-pane').getBoundingClientRect();
   const r = taulu.getBoundingClientRect();
-  const napit = document.querySelector('.turn-card')?.getBoundingClientRect() ?? null;
+  const nappi = document.querySelector('.toimintorivi .monitoimi-nappi')
+    ?.getBoundingClientRect() ?? null;
+  const kartuutsi = document.querySelector('.fokus-kartuutsi').getBoundingClientRect();
+  const plus = taulu.querySelector('.fokus-maataulu-lehti');
+  const plusLaatikko = plus?.getBoundingClientRect() ?? null;
   const otsikot = [...taulu.querySelectorAll('.fokus-maataulu-otsikko')].map((e) => e.textContent);
   return {
     auki: taulu.classList.contains('auki'),
@@ -724,23 +905,41 @@ const auki = await sivu.evaluate(async () => {
     lapinakyva: getComputedStyle(taulu).backgroundColor,
     // Kartta jää näkyviin: taulu ei täytä koko karttaruutua.
     korkeusOsuus: r.height / pane.height,
-    // Alanapit jäävät taulun alapuolelle kokonaan.
-    nappienPaalla: Boolean(napit) && r.bottom > napit.top,
+    leveysOsuus: r.width / pane.width,
+    // Liiku-neliö jää taulun alapuolelle kokonaan.
+    nappienPaalla: Boolean(nappi) && r.bottom > nappi.top,
+    // Taulu on kartuutsin YLÄPUOLELLA ja samassa laidassa.
+    kartuutsinYlla: Math.round(kartuutsi.top - r.bottom),
+    samaLaita: Math.abs(kartuutsi.left - r.left) <= 14,
+    kartuutsiNakyy: getComputedStyle(document.querySelector('.fokusmitat')).opacity,
     otsikot,
+    // Otsikkoa ja sulkunappia ei ole enää lainkaan.
+    otsikkosolmuja: taulu.querySelectorAll('h2, .fokus-maataulu-nimi, .fokus-maataulu-ylarivi').length,
+    sulkunappeja: taulu.querySelectorAll('.fokus-maataulu-sulje').length,
+    nappeja: taulu.querySelectorAll('button').length,
     vakiluku: taulu.querySelector('.fokus-maataulu-arvo')?.textContent ?? '',
     kielia: taulu.querySelectorAll('.fokus-maataulu-kielet .tervehdys').length,
     lippuja: taulu.querySelectorAll('.fokus-maataulu-kielet img').length,
     // Vieritys ei saa vuotaa kartan panorointiin.
     kosketus: getComputedStyle(taulu).touchAction,
-    plus: Boolean(taulu.querySelector('.fokus-maataulu-lehti')),
+    plus: Boolean(plus),
+    // Plus oikeaan yläreunaan: lähellä molempia reunoja.
+    plusOikealla: plusLaatikko ? Math.round(r.right - plusLaatikko.right) : null,
+    plusYlhaalla: plusLaatikko ? Math.round(plusLaatikko.top - r.top) : null,
+    plusLapinakyva: plus ? getComputedStyle(plus).backgroundColor : '',
+    plusAnimaatio: plus ? getComputedStyle(plus).animationName : '',
+    plusSuodatin: plus ? getComputedStyle(plus).filter : '',
     aria: document.querySelector('.fokus-kartuutsi').getAttribute('aria-expanded'),
+    ariaNimi: taulu.getAttribute('aria-label'),
   };
 });
 vaadi('8a kartuutsin painallus avaa maataulun', auki.auki && auki.nakyy, JSON.stringify(auki));
 vaadi('8b taulu on läpikuultava ja kartta jää näkyviin',
-  /rgba\(/.test(auki.lapinakyva) && auki.korkeusOsuus < 0.6,
+  /rgba\(/.test(auki.lapinakyva)
+  && Number(auki.lapinakyva.match(/[\d.]+\)$/)?.[0].replace(')', '')) <= 0.65
+  && auki.korkeusOsuus < 0.6,
   `${auki.lapinakyva}, korkeus ${(auki.korkeusOsuus * 100).toFixed(0)} % kartasta`);
-vaadi('8c taulu ei peitä alanappeja', !auki.nappienPaalla);
+vaadi('8c taulu ei peitä Liiku-nappia', !auki.nappienPaalla);
 vaadi('8d taulussa ovat maalehden omat luvut',
   auki.otsikot.includes('Väkiluku') && auki.otsikot.includes('Pinta-ala')
   && /milj\./.test(auki.vakiluku),
@@ -752,13 +951,39 @@ vaadi('8f taulun vieritys ei panoroi karttaa (touch-action)',
 vaadi('8g plus-nappi maalehteen on olemassa ja aria kertoo tilan',
   auki.plus && auki.aria === 'true', JSON.stringify({ plus: auki.plus, aria: auki.aria }));
 
+/* --- omistajan pelitestitilaus 26.8.2026 --- */
+
+vaadi('8j taulu nousee kartuutsin yläpuolelle samaan laitaan',
+  auki.kartuutsinYlla >= 0 && auki.kartuutsinYlla <= 60 && auki.samaLaita,
+  `rako ${auki.kartuutsinYlla} px, sama laita ${auki.samaLaita}`);
+vaadi('8k kartuutsi jää näkyviin taulun alle (maan nimi luettavissa)',
+  Number(auki.kartuutsiNakyy) > 0.9, `opacity ${auki.kartuutsiNakyy}`);
+vaadi('8l taulussa ei ole otsikkoa — nimi on kartuutsissa ja ariassa',
+  auki.otsikkosolmuja === 0 && /KREIKKA/i.test(auki.ariaNimi ?? ''),
+  `${auki.otsikkosolmuja} otsikkosolmua, aria "${auki.ariaNimi}"`);
+vaadi('8m taulussa ei ole sulkunappia — plus on sen ainoa nappi',
+  auki.sulkunappeja === 0 && auki.nappeja === 1,
+  `${auki.sulkunappeja} sulkua, ${auki.nappeja} nappia`);
+vaadi('8n plus on oikeassa yläreunassa, läpikuultava ja kevyesti animoitu',
+  auki.plusOikealla !== null && auki.plusOikealla >= 0 && auki.plusOikealla <= 24
+  && auki.plusYlhaalla >= 0 && auki.plusYlhaalla <= 24
+  && /rgba\(/.test(auki.plusLapinakyva)
+  && auki.plusAnimaatio !== 'none' && auki.plusSuodatin === 'none',
+  JSON.stringify({
+    oikealla: auki.plusOikealla,
+    ylhaalla: auki.plusYlhaalla,
+    pohja: auki.plusLapinakyva,
+    animaatio: auki.plusAnimaatio,
+    suodatin: auki.plusSuodatin,
+  }));
+
 // Esc sulkee.
 await sivu.keyboard.press('Escape');
 await sivu.waitForTimeout(450);
 const escJalkeen = await mittaaMitat();
 vaadi('8h Esc sulkee taulun', escJalkeen.tauluAuki === false, String(escJalkeen.tauluAuki));
 
-// Napautus taulun ulkopuolelle sulkee.
+// Napautus KARTALLE sulkee — se on nyt taulun varsinainen sulku.
 const ulkoa = await sivu.evaluate(async () => {
   document.querySelector('.fokus-kartuutsi').click();
   await new Promise((r) => setTimeout(r, 400));
@@ -767,10 +992,24 @@ const ulkoa = await sivu.evaluate(async () => {
     bubbles: true, pointerId: 7, clientX: 20, clientY: 20,
   }));
   await new Promise((r) => setTimeout(r, 400));
-  return { kesken, jalkeen: document.querySelector('.fokus-maataulu').classList.contains('auki') };
+  const kartalta = document.querySelector('.fokus-maataulu').classList.contains('auki');
+  // Ja sama kartuutsista: toinen painallus sulkee.
+  document.querySelector('.fokus-kartuutsi').click();
+  await new Promise((r) => setTimeout(r, 300));
+  const uudestaan = document.querySelector('.fokus-maataulu').classList.contains('auki');
+  document.querySelector('.fokus-kartuutsi').click();
+  await new Promise((r) => setTimeout(r, 300));
+  return {
+    kesken,
+    jalkeen: kartalta,
+    uudestaan,
+    kartuutsista: document.querySelector('.fokus-maataulu').classList.contains('auki'),
+  };
 });
-vaadi('8i napautus taulun ulkopuolelle sulkee sen',
+vaadi('8i napautus kartalle sulkee taulun',
   ulkoa.kesken && !ulkoa.jalkeen, JSON.stringify(ulkoa));
+vaadi('8o kartuutsin toinen painallus sulkee taulun',
+  ulkoa.uudestaan && !ulkoa.kartuutsista, JSON.stringify(ulkoa));
 /* ------------------------------- 7. laatta on fokusnäkymän Tutki-nappi */
 
 /*

@@ -39,8 +39,9 @@ kirjoita `import ... from '../../node_modules/...'`.
 | savuke-lippuikkuna | Lippuikkunan pikselit (ison lipun terävyys, tarkennettu vaakuna kortin sisällä) |
 | savuke-fokusvirta | Fokusmoodin annosteluvirta Ateenassa: lehtilukko, kortti kartan päällä, vaiheet 1–6, minivisan palkkio, portti (≥1 täky) ja luovutus laattamekaniikalle |
 | savuke-dist | Yhden tiedoston versio käynnistyy (aja build ensin) |
+| savuke-aanet-tausta | Taustalle mennyt peli on täysin hiljaa: ankkuri, tehostekonteksti, lukijaäänen piiri ja omistajattomat soittimet vaikenevat, paluussa silmukat ja radio jatkavat mutta kesken jäänyt luenta ei — ja syntetisaattori perutaan, ei tauoteta |
 | savuke-mediakanava | Pelin äänet mediakanavassa (hiljainen ankkuri + audioSession, sanelun tauko) ja pelin oma mykistys myös striimatulla lukijaäänellä |
-| savuke-fokuskartta | Fokusmoodin maakohtainen topografiapohja: puuttuva kuva ei riko mitään, olemassa oleva osuu JSONin rajaukseen, reitit sen päällä, kamera-ajo maan rajaukseen ja eleen keskeytys, väärän laudan rajaus hylätään |
+| savuke-fokuskartta | Fokusmoodin maakohtainen topografiapohja: puuttuva kuva ei riko mitään, olemassa oleva osuu JSONin rajaukseen, reitit sen päällä, kamera-ajo maan rajaukseen ja eleen keskeytys, väärän laudan rajaus hylätään. Lisäksi alalaidan kalusteet: dynaaminen mittajana ja kartuutsi, pieni Liiku-neliö kartuutsin rinnalla, reunojen asteviivaimet, kartuutsin päältä nouseva maataulu (ei otsikkoa, ei sulkunappia, plus oikeassa yläkulmassa) sekä kohdemerkit pisteinä nimineen ja pienennetyt kaupunkinimet |
 | savuke-fokuskohteet | Fokuslehden klikattavat karttakohteet: merkit lehden päällä (myös kierron kopiokohdassa), ≥44 px osuma joka zoomilla, yleiskuvassa piilossa, pop-upin sisältö ja paikka, kohdekorostus, sulku rastista/Escistä/napautuksesta, fokusvirran pinta sulkee tietoruudun |
 
 **Savukevartija** (`node tools/tarkista-savukkeet.mjs`, CI:ssä joka

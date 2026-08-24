@@ -11,6 +11,7 @@ import { sfx } from './sound.js';
 import {
   valittuTaiOletus, jaaAlku, tyyppiKori, kaupunkiKori, maaKori,
 } from './aani-ehdokkaat.js';
+import { lisaaTaustaVaimennus } from './aani-tausta.js';
 import { aaniOsoite, onPeilista, peiliPetti } from './media.js';
 // Lukijaäänen piiri kuuluu samaan sanelun kovaan taukoon kuin
 // tehosteet ja maisema (ks. taukoaSanelunAjaksi).
@@ -288,6 +289,9 @@ function vapautaSoitin(audio) {
   audio.aaniSolmut = null;
   audio.aaniVahvistin = null;
   audio.aaniMittari = null;
+  // Taustavahdin kahva pois: purettua soitinta ei käynnistetä paluussa
+  // eikä sen sulkeuma saa jäädä pitämään maisemaa muistissa.
+  audio.jatka = null;
 }
 
 /*
@@ -517,6 +521,17 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
    * ohitetaan; nykyisen yrityksen AbortError jää vahdin varaan.
    */
   const soi = () => {
+    /*
+     * TAUSTALLA EI ALOITETA. Piilossa oleva välilehti voi yhä
+     * renderöidä (ajastin, tallennuksen palautus), ja uusi maisema
+     * lähtisi soimaan sinne, missä kukaan ei kuuntele. Soitin jää
+     * odottamaan: paluu käynnistää sen samaa reittiä (jatkaTaustalta
+     * kutsuu tätä samaa funktiota audio.jatka-kahvasta).
+     */
+    if (maisemaTaustalla) {
+      oma.taustaTauolla = true;
+      return Promise.resolve();
+    }
     const yritys = (audio.soiYritys = (audio.soiYritys ?? 0) + 1);
     return audio.play().then(() => {
       if (audio.soiYritys !== yritys) return;
@@ -711,12 +726,17 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
     if (nykyinen !== oma || oma.audio !== audio) return;
     // Sanelun kova tauko on tahallinen: elvytys ei saa kumota sitä
     // (ks. taukoaSanelunAjaksi) — jatko tulee sanelun päättyessä.
-    if (sanelunTauko) return;
+    // Sama koskee taustalle mennyttä peliä (ks. taukoaTaustanAjaksi):
+    // ilman lippua maisema käynnistyisi heti uudelleen taustalla.
+    if (sanelunTauko || maisemaTaustalla) return;
     if (!audio.soinut || audio.ended || audio.jatkoPyynto) return;
     audio.jatkoPyynto = true;
     soi();
   });
   viritaVahti();
+  // Kahva taustavahdille: paluu etualalle käynnistää soittimen samaa
+  // reittiä kuin ulkopuolinen keskeytys (ks. jatkaTaustalta).
+  audio.jatka = soi;
   soi();
   return audio;
 }
@@ -1041,6 +1061,81 @@ export function jatkaSanelunJalkeen() {
 export function sanelunTaukoPaalla() {
   return sanelunTauko;
 }
+
+/*
+ * ── TAUSTALLE MENEVÄ PELI (omistajan tilaus 24.8.2026) ──────────────
+ *
+ * *"Pelin äänet pitäisi hiljentyä kaikki jos sovellus ei ole
+ * iOS-laitteella auki päällimmäisenä."* Nauhoitettu äänimaisema ja
+ * visamusiikki ovat <audio>-elementtejä, ja iOS jatkaa niitä taustalla
+ * niin kauan kuin sivun äänisessio on toistoluokassa (js/sound.js) —
+ * eli aina, kun peliä on kertaakaan koskettu.
+ *
+ * Tauko on sama koneisto kuin sanelulla, ja SAMASTA syystä myös sama
+ * lippu pause-kuuntelijassa: keskeytyneen soittimen elvytys (ks.
+ * "KESKEYTYNYT SOITIN EI KÄYNNISTY ITSESTÄÄN") käynnistäisi maiseman
+ * heti uudelleen, koska se ei erota tahallista taukoa järjestelmän
+ * omasta keskeytyksestä.
+ *
+ * MAISEMA JA MUSIIKKI JATKAVAT PALUUSSA. Ne ovat tilaa eivätkä
+ * tapahtumia: pelaaja on samassa kaupungissa ja samassa kysymyksessä
+ * kuin lähtiessään. Luenta on eri asia (js/lukija.js).
+ */
+let maisemaTaustalla = false;
+
+/** Äänimaisema ja visamusiikki kiinni, kun peli ei ole päällimmäisenä. */
+export function taukoaTaustanAjaksi() {
+  if (maisemaTaustalla) return;
+  maisemaTaustalla = true;
+  for (const [oma, audio] of taustanSoittimet()) {
+    if (!audio || audio.paused) continue;
+    oma.taustaTauolla = true;
+    try {
+      audio.pause();
+    } catch {
+      /* soitin oli jo pysähtynyt */
+    }
+  }
+}
+
+/** Peli takaisin etualalle: tauolle jääneet raidat jatkavat. */
+export function jatkaTaustalta() {
+  if (!maisemaTaustalla) return;
+  maisemaTaustalla = false;
+  for (const [oma, audio] of taustanSoittimet()) {
+    if (!oma.taustaTauolla) continue;
+    oma.taustaTauolla = false;
+    // Sanelu on oma taukonsa: se jatkaa vasta mikrofonin sulkeuduttua.
+    if (sanelunTauko || !audio) continue;
+    try {
+      // Maiseman soittimella on oma käynnistyksensä (varareitit,
+      // eleen odotus); musiikilla ei, joten sille riittää play().
+      if (typeof audio.jatka === 'function') audio.jatka();
+      else audio.play()?.catch?.(() => { /* seuraava kysymys yrittää */ });
+    } catch {
+      /* jatko epäonnistui — maisemanvaihto rakentaa uuden soittimen */
+    }
+  }
+}
+
+/**
+ * Taustalla vaiennettavat raidat pareina [kirjanpito, elementti].
+ *
+ * Kirjanpito on se olio, johon taukolippu talletetaan. Maisemalla se on
+ * `nykyinen` (ristihäivytyksen väistyvä puoli kulkee samassa oliossa),
+ * musiikilla elementti itse — sillä ei ole muuta kirjanpitoa.
+ */
+function taustanSoittimet() {
+  const parit = [];
+  if (nykyinen) {
+    parit.push([nykyinen, nykyinen.audio]);
+    if (nykyinen.vaistyva) parit.push([nykyinen.vaistyva, nykyinen.vaistyva]);
+  }
+  if (musiikki) parit.push([musiikki, musiikki]);
+  return parit;
+}
+
+lisaaTaustaVaimennus({ hiljenna: taukoaTaustanAjaksi, palauta: jatkaTaustalta });
 
 /**
  * Voimassa oleva kerroin: syvin voittaa.

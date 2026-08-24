@@ -265,11 +265,16 @@ export const RAAMATTU = {
           + '(kehyskertomus). KOKEILU: katsotaan riittääkö tämä '
           + 'pelkkä karttafokus — omistaja pelaa ja iteroi; '
           + 'raskaampi korttiannostelu lipun taakse, ei poisteta.',
-        'KAMERA PELIN KÄSISSÄ (omistaja 24.8.2026, ilta): '
-          + 'normaalissa pelitilassa kartan käsin vieritys/panorointi '
-          + 'POIS KOKONAAN — peli siirtää karttaa itse pelin '
-          + 'edetessä (kamera-ajot). Kehittäjätilassa panorointi '
-          + 'säilyy.',
+        'KAMERA PELIN KÄSISSÄ (omistaja 24.8.2026, ilta; '
+          + 'tarkennettu samana iltana): peli siirtää karttaa itse '
+          + 'pelin edetessä (kamera-ajot), mutta käsin liikuttelu '
+          + 'SALLITAAN VALLOITETULLA ALUEELLA JA SEN LÄHEISYYDESSÄ '
+          + '(käytyjen maiden alue + marginaali). Kehittäjätilassa '
+          + 'vapaa panorointi säilyy. Liiku-tilan matkakohteet '
+          + 'piirretään pieninä pisteinä Ateenan laatan tapaan '
+          + '(ei isoja renkaita) ja kohteiden nimet näkyvät '
+          + 'valittaessa; valittavien nimet hieman isommalla, '
+          + 'nykyisen sijainnin nimet paljon pienemmällä.',
         'FOKUSNAPIT (omistaja 24.8.2026, illan pelitesti): '
           + 'vasemman alareunan maannimi (KREIKKA-kartuutsi) on '
           + 'jatkossa MAALEHDEN NAPPI dynaamisella sijainnilla: '

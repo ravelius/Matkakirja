@@ -727,6 +727,49 @@ export function piirra(canvas, aineisto, asetukset) {
    * rajalle. Leikkuri on maan renkaat, ei aineiston karsinta — sama
    * temppu toimii millä tahansa maalla ilman esikäsittelyä.
    */
+  /*
+   * 6a. VEDET KOHDEMAAN ULKOPUOLELLA (jatkuva pinta, yleinen reitti).
+   *
+   * Kreikan pilotissa joet katkesivat rajaviivaan, koska naapurista ei
+   * ollut mitään dataa. Nyt aineisto kattaa koko kuvan, ja katkaisu
+   * olisi pelkkä valinta — juuri sellainen viiva, jonka omistaja halusi
+   * pois (*"jotta rajat häviää"*). Tonava ei lopu Unkarin rajalla.
+   *
+   * Leikkuri on kuva MIINUS kohdemaa (evenodd, sama temppu kuin
+   * rantavyöhykkeillä osiossa 4), joten sama uoma ei piirry kahteen
+   * kertaan: kohdemaan sisällä se vedetään heti perään täydellä
+   * musteella. Peitto on naapurin maaston tuntumassa — vesi haalistuu
+   * samaa tahtia kuin maa, jonka päällä se virtaa.
+   */
+  if (jatkuva && tyyli.jatkuvatVedet) {
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(0, 0, W, H);
+    polku(ctx, aineisto.maa.renkaat, 0, 1, true);
+    ctx.clip('evenodd');
+    ctx.globalAlpha = 0.3;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    for (const j of aineisto.jarvet) {
+      ctx.fillStyle = 'rgba(203,200,182,0.9)';
+      polku(ctx, j.renkaat, 0.8, (j.nimi.length + 11) * 17);
+      ctx.fill('evenodd');
+      ctx.strokeStyle = 'rgba(118,107,80,0.8)';
+      ctx.lineWidth = 1.2 * S;
+      ctx.stroke();
+    }
+    for (const j of aineisto.joet) {
+      const paino = j.luokka <= 7 ? 1 : 0.78;
+      ctx.strokeStyle = 'rgba(120,109,82,0.42)';
+      ctx.lineWidth = 4.4 * paino * S;
+      viivaPolku(ctx, j.osat); ctx.stroke();
+      ctx.strokeStyle = 'rgba(88,78,56,1)';
+      ctx.lineWidth = 1.7 * paino * S;
+      viivaPolku(ctx, j.osat); ctx.stroke();
+    }
+    ctx.restore();
+  }
+
   ctx.save();
   polku(ctx, aineisto.maa.renkaat);
   ctx.clip('evenodd');
@@ -933,6 +976,44 @@ export function piirra(canvas, aineisto, asetukset) {
     ctx.restore();
     teksti(k.nimi, x + (k.dx ?? 9) * S, y + (k.dy ?? 0) * S, {
       koko: 13.5, ank: k.ank || 'left', vali: 0.5,
+    });
+  }
+
+  /*
+   * 8g. AINEISTOSTA POIMITUT KAUPUNGIT (yleinen reitti).
+   *
+   * Sama merkintä kuin 8f:n käsin asetelluilla — pieni rengas ja nimi —
+   * mutta paikka ja valinta tulevat Natural Earthistä (aineisto.mjs
+   * `paikat`), koska neljäänkymmeneen maahan ei asetella nimiä käsin.
+   * Pelilaattojen kaupungit on jo karsittu poimintavaiheessa: peli
+   * piirtää ne itse, ja kuvaan poltettu toisinto ei liikkuisi laatan
+   * mukana.
+   *
+   * NIMI EI TIEDÄ, KUMMALLE PUOLELLE SE MAHTUU, joten se asetellaan
+   * pisteen oikealle puolelle paitsi kuvan oikeassa laidassa. Enempää
+   * sommittelua ei yritetä — nimiä on korkeintaan kymmenen, ja ne on
+   * valittu vähintään puolen asteen päähän toisistaan.
+   */
+  for (const k of aineisto.paikat ?? []) {
+    const x = kuvaX(k.lon); const y = kuvaY(k.lat);
+    if (x < 0 || x > W || y < 0 || y > H) continue;
+    const iso = (k.luokka ?? 9) <= 4;
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(x, y, (iso ? 4.6 : 3.6) * S, 0, Math.PI * 2);
+    ctx.fillStyle = '#f5ebd4';
+    ctx.fill();
+    ctx.strokeStyle = '#4a3421';
+    ctx.lineWidth = 1.5 * S;
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(x, y, 1.3 * S, 0, Math.PI * 2);
+    ctx.fillStyle = '#4a3421';
+    ctx.fill();
+    ctx.restore();
+    const oikealle = x < W * 0.82;
+    teksti(k.nimi, x + (oikealle ? 9 : -9) * S, y - 1 * S, {
+      koko: iso ? 14 : 12.5, ank: oikealle ? 'left' : 'right', vali: 0.5,
     });
   }
 

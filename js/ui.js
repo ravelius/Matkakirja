@@ -128,6 +128,7 @@ import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
 import {
   fokusvirtaOhittaaLehden, fokusvirtaSaapuminen, fokusvirtaLukitseeLehden,
   fokusvirtaMatkakirja, fokusvirtaMerkintaLuettu, fokusvirtaLaattaNakyy,
+  fokusvirtaKohtaaminenPisteessa, fokusvirtaLehtivinkki,
   paivitaFokuskuvat, nollaaFokuskuvat,
 } from './fokusvirta.js';
 
@@ -243,6 +244,12 @@ import { INTRO_SPACE, Kartta } from './kartta.js';
 import { paivitaFokuskartta, paivitaFokusNimet, nollaaFokuskartta } from './fokuskartta.js';
 // Fokuslehden klikattavat karttakohteet ja niiden pop-up (js/fokuskohteet.js).
 import { paivitaFokuskohteet, nollaaFokuskohteet } from './fokuskohteet.js';
+/*
+ * Kevyen kulun vihreä kohtaamispiste (js/fokuspiste.js). Sama kytkentä
+ * kuin kohdemerkeillä: päivitys aina kun näkymä on asettunut, nollaus
+ * laudan vaihdossa.
+ */
+import { paivitaFokuspiste, nollaaFokuspiste } from './fokuspiste.js';
 /*
  * Fokusnäkymän RUUTUUN ankkuroidut atlas-elementit: mittajana, maan
  * kartuutsi ja sen takaa liukuva maataulu (omistaja 25.8.2026). Ne
@@ -441,6 +448,39 @@ const FOKUS_LAATTA_OSUMA_PX = 48;
  * kehittäjätilan omilla napautusalueilla (drawTargets).
  */
 const FOKUS_LAATTA_OSUMA_LAUDALLA = 34;
+/*
+ * VALITTAVAN KOHTEEN MERKKI FOKUSNÄKYMÄSSÄ (omistajan pelitestitilaus
+ * 26.8.2026, iPad-kuvakaappaus Liiku-tilasta).
+ *
+ * VIKA: matkakohteet piirtyivät fokuslehden päälle laudan omalla
+ * kielellä eli isoina punaisina katkoviivarenkaina (.target-ring, säde
+ * 22 laudan yksikköä) ja kultahaloineen. Fokusnäkymän zoomilla se on
+ * ruudulla yli 60 pikselin rengas keskellä hienovaraista atlaslehteä —
+ * omistajan sanoin *"ruma"*.
+ *
+ * KORJAUS: sama kieli kuin nykyisen kaupungin laatalla (ks.
+ * FOKUS_LAATTA_PX yllä) eli PIENI PYÖREÄ MERKKI, jonka koko mitataan
+ * RUUDULTA eikä laudalta. Merkki on hiukan pienempi kuin oma laatta
+ * (18 px vs. 26 px): valittava kohde on ehdotus, oma sijainti on
+ * kiinnekohta.
+ *
+ * NIMI KUULUU MERKKIIN. Fokuslehden ulkopuolella olevan kohteen
+ * (Sofia, Istanbul) laatta ja nimi ovat lehden vieressä laudan
+ * yleiskuvassa niin pieninä, ettei pelaaja tiedä mihin on
+ * lähdössä. Nimi ladotaan siksi merkin viereen kohdekerrokseen, jolloin
+ * se on olemassa riippumatta siitä, mitä laudan omalle nimelle tapahtuu.
+ *
+ * NIMI ON ISOMPI KUIN LEHDEN OMAT KAUPUNKINIMET (css .city-label
+ * fokusnäkymässä ~7,5 laudan yksikköä eli noin 10 px ruudulla): valinta
+ * saa erottua siitä, mikä on jo paikallaan. 13 px on maltillinen ero,
+ * ei otsikko.
+ */
+const FOKUS_KOHDE_PX = 18;
+const FOKUS_KOHDE_NIMI_PX = 13;
+/* Askelpiste ilman kaupunkia on pelkkä reitin nasta — puolet merkistä. */
+const FOKUS_KOHDE_PISTE_PX = 10;
+/* Napautusalue: sama sormisääntö kuin laatalla, sama katto laudalla. */
+const FOKUS_KOHDE_OSUMA_PX = 48;
 /*
  * NÄKYMÄN KOKOVAHDIN RAJAT (ks. UI vahdiNakymanKokoa).
  *
@@ -3675,6 +3715,8 @@ export class UI {
     paivitaFokuskuvat(this);
     // Kartan kohdemerkit ovat samoin kiinteän kokoisia ruudulla.
     paivitaFokuskohteet(this);
+    // Sama koskee kevyen kulun vihreää kohtaamispistettä.
+    paivitaFokuspiste(this);
     /*
      * Mittajana on ruudun ominaisuus eikä kuvan: se on laskettava
      * uudelleen aina kun zoomi tai panorointi on ASETTUNUT. Tämä on
@@ -3686,6 +3728,8 @@ export class UI {
     // päällä kiinteän kokoinen RUUDULLA (paivitaFokusLaatta), joten sen
     // mittakaava ja napautusalue lasketaan uudelleen jokaisesta zoomista.
     this.paivitaFokusLaatta();
+    // Sama koskee valittavien kohteiden merkkejä ja niiden nimiä.
+    this.paivitaFokusKohdeMitat();
     if (!this.maastonimiKerros) return;
     if (!this.maastonimet) return;
     const nakyva = this.nakyvaAlue();
@@ -4511,6 +4555,7 @@ export class UI {
     this.fokuskuvatKerros = null;
     nollaaFokuskuvat(this);
     nollaaFokuskohteet(this);
+    nollaaFokuspiste(this);
     // Uusi lauta, tyhjä kerros: muistettu näkymätunniste ei saa jäädä
     // voimaan, tai nimet jäisivät piirtymättä kun sama näkymä palaa.
     this.maastonimiTunniste = null;
@@ -5157,7 +5202,11 @@ export class UI {
         && this.fokusPohjanAlla(Number(osuma?.getAttribute('cx')),
           Number(osuma?.getAttribute('cy')));
       // Vain koristeet piiloon — osuma-alue jää aktiiviseksi.
-      for (const koriste of kohde.querySelectorAll('.target-ring, .target-halo, .lento-kohde-merkki')) {
+      // Fokusnäkymän piste ja nimi kuuluvat samaan joukkoon: ne ovat
+      // kohteen merkki, eivät napautusalue (fokusKohdeMerkki).
+      for (const koriste of kohde.querySelectorAll(
+        '.target-ring, .target-halo, .lento-kohde-merkki, .target-piste, .target-nimi',
+      )) {
         koriste.classList.toggle('fokus-lehden-alla', piiloon);
       }
     }
@@ -5165,6 +5214,9 @@ export class UI {
     // Näkyvyys on nyt ratkaistu; jäljellä on nykyisen laatan KOKO ja sen
     // napautusalue (oma metodinsa, koska sitä kutsutaan myös zoomista).
     this.paivitaFokusLaatta();
+    // Samoin valittavien kohteiden merkit: pieni piste ja nimi, molemmat
+    // mitattuina ruudulta eikä laudalta (omistaja 26.8.2026).
+    this.paivitaFokusKohdeMitat();
   }
 
   /* --- LAATTA ON FOKUSNÄKYMÄN TUTKI-NAPPI (omistaja 24.8.2026) ------- */
@@ -5390,6 +5442,8 @@ export class UI {
     this.paivitaFokusPallot();
     // Viides kerros: lehden klikattavat karttakohteet (js/fokuskohteet.js).
     paivitaFokuskohteet(this);
+    // Kuudes kerros: kevyen kulun vihreä kohtaamispiste (js/fokuspiste.js).
+    paivitaFokuspiste(this);
     /*
      * Viides kerros: ruutuun ankkuroidut mitat (mittajana ja
      * kartuutsi). Kutsu on tässä samasta syystä kuin pallojen: pohja
@@ -5793,13 +5847,16 @@ export class UI {
         kohdeKaupungit.add(c.id);
         for (const x of this.kiertoKohdat(c.x)) {
           const g = el('g', { class: 'target' }, this.targetLayer);
-          el('circle', { cx: x, cy: c.y, r: 34, class: 'target-hit' }, g);
-          el('circle', {
-            cx: x,
-            cy: c.y,
-            r: c.start ? 27 : 22,
-            class: 'target-ring pick',
-          }, g);
+          this.kohdeOsuma(g, x, c.y, 34);
+          if (this.fokusKohdeMerkit()) this.fokusKohdeMerkki(g, x, c.y, c);
+          else {
+            el('circle', {
+              cx: x,
+              cy: c.y,
+              r: c.start ? 27 : 22,
+              class: 'target-ring pick',
+            }, g);
+          }
           g.addEventListener('click', () => {
             if (!zoomaa) this.doPickStart(c);
           });
@@ -5820,12 +5877,18 @@ export class UI {
         kohdeKaupungit.add(city.id);
         for (const x of this.kiertoKohdat(city.x)) {
           const g = el('g', { class: 'target' }, this.targetLayer);
-          el('circle', { cx: x, cy: city.y, r: 34, class: 'target-hit' }, g);
-          el('circle', { cx: x, cy: city.y, r: 25, class: 'target-ring lento' }, g);
-          const merkki = el('text', {
-            x, y: city.y - 33, class: 'lento-kohde-merkki', 'text-anchor': 'middle',
-          }, g);
-          merkki.textContent = '✈';
+          this.kohdeOsuma(g, x, city.y, 34);
+          if (this.fokusKohdeMerkit()) {
+            // Lentokohteessa kone kulkee nimen edessä: sama pieni merkki
+            // kuin muillakin kohteilla, mutta valinta on eri.
+            this.fokusKohdeMerkki(g, x, city.y, city, '✈ ');
+          } else {
+            el('circle', { cx: x, cy: city.y, r: 25, class: 'target-ring lento' }, g);
+            const merkki = el('text', {
+              x, y: city.y - 33, class: 'lento-kohde-merkki', 'text-anchor': 'middle',
+            }, g);
+            merkki.textContent = '✈';
+          }
           g.addEventListener('click', () => this.doFly(dest));
         }
       }
@@ -5838,26 +5901,144 @@ export class UI {
       if (opt.city?.id) kohdeKaupungit.add(opt.city.id);
       for (const kx of this.kiertoKohdat(x)) {
         const g = el('g', { class: 'target' }, this.targetLayer);
-        el('circle', { cx: kx, cy: y, r: 30, class: 'target-hit' }, g);
-        /*
-         * Pelkkä koriste renkaan alla: pehmeästi laajeneva kultahalo,
-         * jolla valittavat kohteet erottuvat kartasta (omistajan
-         * havainto 18.8.2026). Ei osu klikkauksiin (pointer-events:
-         * none CSS:ssä) — osuma-alue on yllä oleva target-hit.
-         */
-        el('circle', {
-          cx: kx,
-          cy: y,
-          r: opt.city ? 22 : 14,
-          class: 'target-halo',
-        }, g);
-        el('circle', {
-          cx: kx,
-          cy: y,
-          r: opt.city ? 22 : 14,
-          class: opt.city ? 'target-ring' : 'target-ring far',
-        }, g);
+        this.kohdeOsuma(g, kx, y, 30);
+        if (this.fokusKohdeMerkit()) this.fokusKohdeMerkki(g, kx, y, opt.city ?? null);
+        else {
+          /*
+           * Pelkkä koriste renkaan alla: pehmeästi laajeneva kultahalo,
+           * jolla valittavat kohteet erottuvat kartasta (omistajan
+           * havainto 18.8.2026). Ei osu klikkauksiin (pointer-events:
+           * none CSS:ssä) — osuma-alue on yllä oleva target-hit.
+           */
+          el('circle', {
+            cx: kx,
+            cy: y,
+            r: opt.city ? 22 : 14,
+            class: 'target-halo',
+          }, g);
+          el('circle', {
+            cx: kx,
+            cy: y,
+            r: opt.city ? 22 : 14,
+            class: opt.city ? 'target-ring' : 'target-ring far',
+          }, g);
+        }
         g.addEventListener('click', () => this.doMove(opt.key));
+      }
+    }
+  }
+
+  /* --- KOHDEMERKIT FOKUSNÄKYMÄSSÄ (omistaja 26.8.2026) -------------- */
+
+  /**
+   * Piirretäänkö kohteet fokusnäkymän kielellä (pieni piste + nimi)?
+   *
+   * EHTO ON FOKUSMOODI, EI LEHTI. Sama valinta kuin kaupungin laatalla
+   * (fokusLaattaTutkii): lehti saapuu verkosta kesken pelin ja on
+   * toistaiseksi vain Kreikassa, joten lehteen sidottu ehto vaihtaisi
+   * merkkien kielen kesken vuoron. Omistajan tilaus koskee myös lehden
+   * ULKOPUOLELLA olevia kohteita (Sofia), joten ehdon on kannettava
+   * koko kartan yli.
+   *
+   * LÄHTÖPISTEEN VALINTA ON POIKKEUS. Siinä KAIKKI laudan kaupungit ovat
+   * kohteita — Euroopassa kymmeniä — ja jokainen saisi nimen merkkinsä
+   * viereen, vaikka sama nimi on jo kaupungin omassa laatassa. Sama raja
+   * on fokusmoodin muillakin kerroksilla (paivitaFokusKerros,
+   * fokusSumuPaalla): pickstart-vaiheessa fokusmoodi ei ole vielä
+   * käynnissä.
+   */
+  fokusKohdeMerkit() {
+    if (!this.fokusmoodi || this.katselu) return false;
+    return this.game.phase !== 'pickstart';
+  }
+
+  /**
+   * Kohteen napautusalue. Säde talletetaan data-määreeseen, koska
+   * fokusnäkymässä sitä kasvatetaan zoomin mukaan sormenkokoiseksi
+   * (paivitaFokusKohdeMitat) eikä alkuperäistä saa arvata takaisin.
+   */
+  kohdeOsuma(g, x, y, r) {
+    const osuma = el('circle', {
+      cx: x, cy: y, r, class: 'target-hit',
+    }, g);
+    osuma.dataset.perusR = String(r);
+    return osuma;
+  }
+
+  /**
+   * Valittavan kohteen merkki fokusnäkymässä: pieni pyöreä laatta ja
+   * sen yläpuolella kohteen nimi.
+   *
+   * MITAT ANNETAAN LAUDAN YKSIKÖISSÄ MUTTA TARKOITETAAN RUUDULLE.
+   * Tässä piirretään karkea alkuarvo, ja paivitaFokusKohdeMitat asettaa
+   * lopullisen säteen ja kirjasinkoon nykyisestä zoomista — sama kaava
+   * kuin nykyisen kaupungin laatalla ja fokusvirran kuvavinjeteillä.
+   * Alkuperäinen keskipiste jää data-määreisiin, jotta nimen etäisyys
+   * merkistä voidaan laskea uudelleen joka zoomilla.
+   *
+   * NIMETÖN KOHDE on askelpiste reitin varrella (nopanheiton väliruutu),
+   * ei kaupunki: se saa pienemmän pisteen eikä nimeä lainkaan.
+   */
+  fokusKohdeMerkki(g, x, y, city = null, etuliite = '') {
+    const px = city ? FOKUS_KOHDE_PX : FOKUS_KOHDE_PISTE_PX;
+    const piste = el('circle', {
+      cx: x,
+      cy: y,
+      r: px / 2,
+      class: city ? 'target-piste' : 'target-piste far',
+    }, g);
+    piste.dataset.px = String(px);
+    if (!city) return;
+    const nimi = el('text', {
+      x,
+      y: y - px,
+      class: 'target-nimi',
+      'text-anchor': 'middle',
+      'font-size': FOKUS_KOHDE_NIMI_PX,
+    }, g);
+    nimi.dataset.ky = String(y);
+    nimi.textContent = `${etuliite}${city.name}`;
+  }
+
+  /**
+   * Kohdemerkkien koko RUUDULLA: pisteet, nimet ja napautusalueet.
+   *
+   * Kutsutaan samoista kahdesta paikasta kuin nykyisen kaupungin laatan
+   * mitat (paivitaFokusPallot joka piirrossa, paivitaMaastonimet kun
+   * näkymä on asettunut), jotta merkki ei kasva eikä kutistu zoomin
+   * mukana.
+   */
+  paivitaFokusKohdeMitat() {
+    if (!this.targetLayer || !this.fokusKohdeMerkit()) return;
+    const osat = this.targetLayer.querySelectorAll(
+      '.target-piste, .target-nimi, .target-hit',
+    );
+    if (!osat.length) return;
+    const skaala = this.nakyvaAlue()?.skaala;
+    // Ilman mitattavaa näkymää entinen koko on parempi kuin väärä.
+    if (!Number.isFinite(skaala) || skaala <= 0) return;
+    for (const osa of osat) {
+      if (osa.classList.contains('target-piste')) {
+        const px = Number(osa.dataset.px) || FOKUS_KOHDE_PX;
+        osa.setAttribute('r', ((px / 2) / skaala).toFixed(2));
+      } else if (osa.classList.contains('target-nimi')) {
+        osa.setAttribute('font-size', (FOKUS_KOHDE_NIMI_PX / skaala).toFixed(2));
+        const y = Number(osa.dataset.ky);
+        if (Number.isFinite(y)) {
+          // Nimi merkin yläpuolelle: puolikas merkkiä ja pieni rako.
+          osa.setAttribute('y', (y - (FOKUS_KOHDE_PX / 2 + 6) / skaala).toFixed(2));
+        }
+      } else {
+        /*
+         * Napautusalue: sormenkokoinen ruudulla, mutta ei koskaan
+         * pienempi kuin laudan oma alue eikä suurempi kuin naapurien
+         * väli (sama katto kuin laatalla).
+         */
+        const perus = Number(osa.dataset.perusR) || 0;
+        osa.setAttribute('r', Math.max(
+          perus,
+          Math.min((FOKUS_KOHDE_OSUMA_PX / 2) / skaala, FOKUS_LAATTA_OSUMA_LAUDALLA),
+        ).toFixed(2));
       }
     }
   }
@@ -7760,6 +7941,14 @@ export class UI {
    */
   tehtavaNapinTila(city) {
     const { game } = this;
+    /*
+     * KEVYT KULKU: kohtaaminen tavataan kartalta, ei lehden pohjalta
+     * (Raamattu, KEVYT KULKU -KOKEILU: *"kaupunkilehden ALIN KOHTA
+     * (josta pääsi tapaamaan henkilön) POIS"*). Perustelu ja umpikujan
+     * esto ovat yhdessä paikassa: js/fokusvirta.js
+     * fokusvirtaKohtaaminenPisteessa.
+     */
+    if (fokusvirtaKohtaaminenPisteessa(this, city)) return null;
     const kaari = game.kaariTilanne?.(city.id);
     const tapaa = KOHTAAMISET[city.id]?.nappi
       ?? (kaari?.kohde?.nimi ? `Tapaa ${kaari.kohde.nimi}` : 'Etsi kätkö');
@@ -7922,6 +8111,19 @@ export class UI {
     const arkki = this.arrivalDialog.querySelector('.dialog-card');
     // Sivujen selaus pyyhkäisyllä ja nuolinäppäimillä.
     if (arkki) kytkeTutkiSelaus(this, arkki);
+    /*
+     * PÖLLÖN VINKKI LEHDEN AVAUTUESSA (kevyt kulku -kokeilu, Raamattu:
+     * *"kun kaupunkilehti AUKEAA, pöllö vinkkaa MAHDOLLISIMMAN
+     * LYHYESTI minitehtävästä"*). Kupla mitoitetaan kelluvan pöllönapin
+     * todellisesta paikasta, ja nappi siirtyy modaalin sisään vasta kun
+     * lehti on auki (js/pollo.js kiinnitysKohde) — siksi kutsu odottaa
+     * seuraavaa kehystä eikä lähde tästä samasta.
+     */
+    globalThis.requestAnimationFrame?.(() => {
+      if (this.dead || !this.arrivalDialog.open) return;
+      if (this.lehtitila.arrivalShownFor !== city.id) return;
+      fokusvirtaLehtivinkki(this, city);
+    });
     if (!city.wiki) return;
 
     Promise.all([cachedSummary(city.wiki), cachedImage(city.wiki)]).then(([summary, image]) => {
@@ -8907,6 +9109,15 @@ export class UI {
    * ui-olion kautta — suora tuonti js/lehti.js:stä tekisi
    * tuontisyklin (lehti tuo lukijan, ja pöllö/lukija saavat ui:n).
    */
+  /*
+   * Ohut delegaattori: kevyen kulun lehtitehtävä (js/fokustehtavat.js)
+   * sytyttää vihreän pisteen heti oikeasta vastauksesta, ja se elää
+   * kartalla eikä lehdessä. Suora tuonti fokustehtavat.js:stä tekisi
+   * tuontisyklin (fokuspiste tuo fokusvirran, fokusvirta fokustehtävät),
+   * joten kutsu kulkee ui-olion kautta kuten lehden muutkin.
+   */
+  paivitaFokuspiste() { return paivitaFokuspiste(this); }
+
   naytaTutkiSivu(indeksi, asetukset) { return naytaTutkiSivu(this, indeksi, asetukset); }
 
   avaaMaalehti(iso, asetukset) { return avaaMaalehti(this, iso, asetukset); }

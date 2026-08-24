@@ -9,6 +9,7 @@
  */
 
 import { kertojaTila, puheVoima } from './aani-ehdokkaat.js';
+import { lisaaTaustaVaimennus } from './aani-tausta.js';
 import { puheAlkoi, puheLoppui } from './ambience-stream.js';
 import {
   lueAaneen, lukijaLukee, lukijaTuettu, pysaytaLukija,
@@ -118,6 +119,15 @@ export function haivytaJaSiivoa(ui, audio, kesto = 600) {
   askel();
 }
 
+/*
+ * Soivat äänitepohjaiset luennat isäntineen (avaus, päiväkirja,
+ * hihkaisu). Kirjanpito on tässä eikä ui-oliossa kahdesta syystä:
+ * taustavahti (js/aani-tausta.js) ei näe ui-oliota, ja sama luenta voi
+ * olla käynnissä ilman että se on enää `ui.diaryVoice`. Elinkaari
+ * seuraa puhujan roolia: merkitsePuhuja lisää, vapautaPuhuja poistaa.
+ */
+const soivatLuennat = new Map(); // audio → ui
+
 /**
  * Merkitsee äänen puhujaksi: tausta väistyy niin kauan kuin yksikin
  * puhuu. Vapautus tapahtuu kerran ja vain kerran — 'ended' ja
@@ -127,6 +137,7 @@ export function haivytaJaSiivoa(ui, audio, kesto = 600) {
 export function merkitsePuhuja(ui, audio) {
   if (!audio || audio.puhujaMerkitty) return;
   audio.puhujaMerkitty = true;
+  soivatLuennat.set(audio, ui);
   puheAlkoi();
   const lopeta = () => vapautaPuhuja(ui, audio);
   audio.addEventListener('ended', lopeta);
@@ -137,9 +148,45 @@ export function merkitsePuhuja(ui, audio) {
 export function vapautaPuhuja(ui, audio) {
   if (!audio?.puhujaMerkitty) return;
   audio.puhujaMerkitty = false;
-  ui.luennat?.delete(audio);
+  soivatLuennat.delete(audio);
+  // Isäntä voi puuttua taustavahdin siivouksessa (js/aani-tausta.js):
+  // puhujan rooli on silti vapautettava, muuten tausta jää väistöön.
+  ui?.luennat?.delete(audio);
   puheLoppui();
 }
+
+/*
+ * ── TAUSTALLE MENEVÄ PELI (omistajan tilaus 24.8.2026) ──────────────
+ *
+ * Äänitteenä soiva kertoja EI JÄÄ TAUOLLE vaan päättyy: nauhoitus on
+ * yksi yhtenäinen luenta, ja sen jatkaminen minuuttien päästä keskeltä
+ * lausetta olisi oudompaa kuin hiljaisuus. Sama linjaus kuin
+ * lukijaäänellä (js/lukija.js): pelaaja käynnistää luennan uudelleen
+ * kuuntelunapista.
+ *
+ * Puhujan rooli on pakko vapauttaa samalla. Pysäytetty äänite ei
+ * laukaise enää 'ended'- eikä 'error'-tapahtumaa, ja ilman vapautusta
+ * taustan väistö jäisi pysyvästi päälle — sama vika, joka löytyi
+ * haivytaLuennasta (ks. sen kommentti).
+ */
+export function taustaHiljennaLuennat() {
+  for (const [audio, isanta] of [...soivatLuennat]) {
+    try {
+      audio.pause();
+      audio.removeAttribute('src');
+    } catch {
+      /* soitin oli jo purettu */
+    }
+    if (isanta) {
+      if (isanta.diaryVoice === audio) isanta.diaryVoice = null;
+      if (isanta.introVoice === audio) isanta.introVoice = null;
+      if (isanta.luentaTauolla === audio) isanta.luentaTauolla = null;
+    }
+    vapautaPuhuja(isanta, audio);
+  }
+}
+
+lisaaTaustaVaimennus({ hiljenna: taustaHiljennaLuennat });
 
 /**
  * Saapumismerkinnän lukuääni. Soi kerran kun merkintä ilmestyy ja

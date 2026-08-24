@@ -4592,6 +4592,42 @@ body.fokuspohja .country-korostus { display: none; }
    kirjain on ruudulla luettava (js/fokuskartta.js paivitaFokusNimet). */
 .fokus-nimet-piilossa { display: none; }
 
+/* ---------------------------------------------------------------------------
+   PELILAATTOJEN KAUPUNKINIMET FOKUSNÄKYMÄSSÄ — PALJON PIENEMMÄLLÄ
+   ---------------------------------------------------------------------------
+   Omistajan pelitestitilaus 26.8.2026: *"Ateena ja Kreeta paljon
+   pienemmällä"* — ja tarkennus iPad-kuvakaappauksen jälkeen: *"nykyisen
+   sijainnin ja lehden kaupunkinimet PALJON pienemmällä"*.
+
+   MIKSI. Fokusnäkymässä kartta on zoomattu yhden maan ikkunaan, ja
+   laudan oma 18 yksikön nimikoko piirtyy silloin ruudulle 25 pikselin
+   otsikoksi. Se on yleiskuvan mitta väärässä paikassa: lehden päällä
+   kaupungin nimi on kartan tekstiä muun tekstin joukossa, ei otsikko.
+   Uusi koko on noin 42 % entisestä (7,5 / 18 ja 8,5 / 21).
+
+   HALO KUTISTUU MUKANA. .city-labelin pergamenttireunus on 4 px, mikä
+   on 18 pikselin kirjaimelle ohut kehys mutta 7,5 pikselin kirjaimelle
+   pehmuste, joka täyttäisi kirjainten sisukset. 1,6 px on sama suhde.
+
+   RAJAUS. Sääntö on body.fokuspohjassa eli täsmälleen siinä tilassa,
+   jossa maan lehti on ruudulla (js/ui.js paivitaFokusPohja) — laudan
+   yleiskuvassa nimet ovat entisen kokoisia.
+
+   VALINTATILAN KOHDENIMET OVAT ISOMPIA (.target-nimi, js/ui.js
+   drawTargets): valittava kohde saa erottua siitä, mikä on jo paikallaan.
+   --------------------------------------------------------------------------- */
+
+body.fokuspohja .cities .city-label {
+  font-size: 7.5px;
+  letter-spacing: 0.02em;
+  stroke-width: 1.6px;
+}
+
+body.fokuspohja .cities .city-label.start-label {
+  font-size: 8.5px;
+  letter-spacing: 0.06em;
+}
+
 /*
  * UUTEEN MAAHAN SAAVUTAAN NÄYTTÄVÄSTI: ääriviiva piirtyy parissa
  * sekunnissa ja paisuu piirtyessään täyteen voimaansa (js/ui.js
@@ -5721,6 +5757,70 @@ body[data-pack='suomi'] .gem-topaz { fill: #4a6fb3; }
   stroke-width: 4px;
 }
 .target-cost { fill: var(--mark); font-size: 17px; font-weight: 700; }
+
+/* ---------------------------------------------------------------------------
+   KOHDEMERKKI FOKUSNÄKYMÄSSÄ — PIENI LAATTA JA NIMI (js/ui.js drawTargets)
+   ---------------------------------------------------------------------------
+   Omistajan pelitestitilaus 26.8.2026 (iPad-kuvakaappaus Liiku-tilasta):
+   *"kohderenkaat pisteiksi Ateenan tavalla kaikissa tilanteissa"*.
+
+   Yllä olevat renkaat ovat LAUDAN kieltä: ne on mitoitettu yleiskuvaan,
+   jossa koko maanosa on ruudulla ja kohde saa huutaa. Fokusnäkymässä
+   sama rengas piirtyy hienovaraisen atlaslehden päälle yli 60 pikselin
+   punaisena kehänä. Siksi fokusnäkymässä kohde piirretään samalla
+   kielellä kuin nykyisen kaupungin laatta: PIENI PYÖREÄ LAATTA, sama
+   pergamentti ja sama muste.
+
+   KOKO TULEE JS:STÄ, EI TÄSTÄ. Säde ja nimen kirjasinkoko lasketaan
+   zoomista (paivitaFokusKohdeMitat), koska ne ovat ruudun mittoja
+   laudan yksiköissä. Täällä on vain väri ja viivan paksuus.
+
+   EI SUODATTIMIA EIKÄ HALOA. Sama iOS-sääntö kuin muullakin kartalla,
+   ja lehden päällä hehku olisi muutenkin väärä ele.
+   --------------------------------------------------------------------------- */
+
+.target-piste {
+  fill: #f7ecd2;
+  stroke: var(--mark);
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+  /* Sama hento sykähdys kuin muillakin valittavilla kohteilla: pelkkä
+     peitto, ei muotoa eikä suodinta. */
+  animation: kohde-syke 2.6s ease-in-out infinite;
+}
+
+/* Askelpiste ilman kaupunkia: samaa mustetta, kevyempi täyttö. */
+.target-piste.far { fill: rgba(247, 236, 210, 0.72); }
+
+.target:hover .target-piste { fill: #fff6e2; }
+
+@media (prefers-reduced-motion: reduce) {
+  .target-piste { animation: none; opacity: 1; }
+}
+
+/*
+ * KOHTEEN NIMI. Se on kohdekerroksessa eikä kaupunkikerroksessa, joten
+ * se näkyy myös silloin kun kaupungin oma datakerros on fokusmoodissa
+ * piilotettu (.fokus-piilossa) — juuri se oli omistajan toive: *"myös
+ * fokuslehden ulkopuolella oleville (Sofia ym.)"*.
+ *
+ * ISOMPI KUIN LEHDEN OMAT KAUPUNKINIMET (body.fokuspohja .city-label),
+ * koska valinta on kehotus toimia ja lehden nimet ovat taustaa. Ero
+ * pidetään pienenä: nimi on merkintä kartalla, ei otsikko.
+ */
+.target-nimi {
+  fill: var(--map-ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  paint-order: stroke;
+  stroke: rgba(247, 237, 216, 0.92);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+}
 
 @keyframes target-spin {
   to { transform: rotate(360deg); }
@@ -16001,11 +16101,23 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
    ja kirjasinkoot on nostettu puhelinluettaviksi.
    =========================================================================== */
 
-/* Kelluva muoto: pyöreä nappi lehden oikeassa alalaidassa. */
+/*
+ * Kelluva muoto: pyöreä nappi lehden oikeassa alalaidassa.
+ *
+ * IRTI REUNASTA (omistajan pelitestitilaus 26.8.2026). Nappi oli
+ * 0.7rem päässä ruudun laidasta ja näytti liimatulta kiinni kulmaan;
+ * 1.1rem antaa sille oman ilmansa. Muutos koskee molempia kelluntoja,
+ * jotta nappi ei hypi sivusuunnassa lehteä avattaessa.
+ *
+ * VÄRI ON KAHDENLAINEN, ks. .pollo-kelluu-kartalla alempana: lehdessä
+ * nappi on tumma peitelaatta vaalean paperin päällä, kartalla vaalea
+ * pergamentti — molemmissa se erottuu alustastaan, mikä on koko värin
+ * tehtävä.
+ */
 .pollo-nappi.pollo-kelluu {
   position: fixed;
-  right: calc(0.7rem + env(safe-area-inset-right, 0px));
-  bottom: calc(3.4rem + env(safe-area-inset-bottom, 0px));
+  right: calc(1.1rem + env(safe-area-inset-right, 0px));
+  bottom: calc(3.6rem + env(safe-area-inset-bottom, 0px));
   z-index: 40;
   width: 2.9rem;
   height: 2.9rem;
@@ -16029,21 +16141,42 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
  *
  * KORKEUS. Alanappirivi (.turn-card) on kartan pohjalla: bottom 0.9rem,
  * pehmuste 0.2rem ja napin oma korkeus noin 2,6rem — eli sen yläreuna on
- * runsaat 3,7rem ruudun alalaidasta. Pöllö nousee sen yläpuolelle 5rem
- * korkeuteen, jolloin Liiku- ja Tutki-nappien väliin jää selvä rako
- * myös silloin kun rivi on kapea ja napit ovat lähellä oikeaa reunaa.
+ * runsaat 3,7rem ruudun alalaidasta. Pöllö nousee sen yläpuolelle
+ * 5,3rem korkeuteen, jolloin Liiku- ja Tutki-nappien väliin jää selvä
+ * rako myös silloin kun rivi on kapea ja napit ovat lähellä oikeaa
+ * reunaa. Fokusnäkymässä alalaidassa on lisäksi mittajana (oikea
+ * alanurkka), ja pöllö on sen yläpuolella samasta syystä.
  *
  * SIVUSUUNTA. Kartan zoomiportaat (.zoomi) ovat kartan oikeassa
  * reunassa PYSTYSUUNNASSA KESKELLÄ, joten ne eivät ole tämän tiellä —
- * ja kosketuslaitteilta ne on piilotettu kokonaan. Sama 0.7rem kuin
+ * ja kosketuslaitteilta ne on piilotettu kokonaan. Sama 1.1rem kuin
  * lehtinäkymässä pitää napin samalla pystylinjalla molemmissa tiloissa,
  * jolloin se ei hypi sivusuunnassa lehteä avattaessa.
  *
  * Turva-alue lasketaan mukaan molempiin suuntiin: iPhonen alapalkki ei
  * saa syödä nappia (viewport-fit=cover on index.html:n metassa).
  */
+/*
+ * VÄRI: KARTALLA VAALEA PERGAMENTTI (omistajan pelitestitilaus
+ * 26.8.2026: *"tee siitä vaaleampi, ikoni erottuu silti"*).
+ *
+ * Pelin tumma peiteväri (--overlay-card) luki kartan seepiapinnalla
+ * mustana täplänä — se on lehden modaalin väri, ja lehdessä se on
+ * oikein, koska siellä alusta on vaaleaa paperia. Kartalla alusta on jo
+ * pergamenttia, joten nappi saa saman paperin kuin alanapit
+ * (body[data-mode] .actions button): vaalea pohja, ohut mustekehys ja
+ * tumma muste, jolloin pöllö on kartan kaluste eikä sen päälle liimattu
+ * painike. Muste tummuu samalla, tai ikoni katoaisi vaaleaan pohjaan.
+ *
+ * Sääntö on VAIN kartalla: lehdessä vaalea nappi vaalealla paperilla
+ * jäisi näkymättömäksi.
+ */
 .pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla {
-  bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+  bottom: calc(5.3rem + env(safe-area-inset-bottom, 0px));
+  border-color: rgba(122, 85, 20, 0.42);
+  background: rgba(250, 243, 226, 0.82);
+  color: var(--map-ink);
+  box-shadow: 0 2px 8px rgba(46, 30, 14, 0.22);
 }
 
 /*
@@ -17770,13 +17903,15 @@ button.pollo-poimintanappi:disabled { opacity: 0.5; cursor: default; }
    fonttiskaalaus.
 
    PAIKAT. Kartuutsi vasempaan alanurkkaan, mittajana oikeaan — kuten
-   1873-atlaksen lehdessä. Kumpikaan ei saa peittää alanappeja
-   (.turn-card, kartan pohjalla keskellä) eikä kelluvaa pöllöä
-   (.pollo-kelluu-kartalla: oikea reuna, 5rem korkeudella). Leveällä
-   ruudulla alanappirivi on keskitetty 560 pikselin kortti, joten
-   alanurkat ovat vapaat; kapealla se venyy laidasta laitaan, ja silloin
-   molemmat nousevat sen yläpuolelle vasempaan laitaan pinoon — pöllö on
-   oikealla, joten vasen laita on ainoa vapaa.
+   1873-atlaksen lehdessä. Kumpikaan ei saa peittää kelluvaa pöllöä
+   (.pollo-kelluu-kartalla: oikea reuna, 5rem korkeudella).
+
+   ALANAPPIRIVI EI OLE ENÄÄ ESTE (omistajan pelitestitilaus 26.8.2026).
+   Fokusnäkymässä rivissä on vain Liiku, ja se on nyt pieni NELIÖ, joka
+   asettuu kartuutsin RINNALLE samaan alalaitaan (ks. "FOKUSNÄKYMÄN
+   ALANAPPIRIVI" alempana). Siksi kartuutsi saa jäädä alanurkkaan joka
+   ruudulla eikä nouse enää nappirivin yläpuolelle pinoon, kuten se teki
+   niin kauan kuin rivi oli 560 pikselin levyinen kortti.
 
    EI SUODATTIMIA. Sama iOS-sääntö kuin kartan kerroksilla
    (tests/rules.test.mjs); text-shadow ei ole suodatin eikä varaa omaa
@@ -17807,15 +17942,22 @@ button.pollo-poimintanappi:disabled { opacity: 0.5; cursor: default; }
 
 .fokusmitat[hidden] { display: none; }
 
-/* Maataulun ollessa auki mitat väistyvät sen alta (js/fokusmitat.js). */
-.fokusmitat.taulun-alla { opacity: 0; pointer-events: none; }
+/*
+ * KARTUUTSI JÄÄ NÄKYVIIN TAULUN AUETESSA (omistaja 26.8.2026). Tässä
+ * oli `.fokusmitat.taulun-alla { opacity: 0 }`, koska taulu oli ruudun
+ * levyinen alalevy ja peitti sekä kartuutsin että janan. Nyt taulu
+ * nousee kartuutsin kohdalta SEN YLÄPUOLELLE ja kartuutsi on taulun
+ * otsikko — häivytys veisi tauluun jääneiltä luvuilta maan nimen.
+ */
 
 /* Lennon ja kartta-ajon ajaksi pois, samoin kuin muutkin kartan
    kelluvat merkinnät (vrt. .maa-pilleri ja .turn-card). */
 body.flight-active .fokusmitat,
 body.kartalento .fokusmitat,
 body.flight-active .fokus-maataulu,
-body.kartalento .fokus-maataulu { opacity: 0; pointer-events: none; }
+body.kartalento .fokus-maataulu,
+body.flight-active .fokus-viivaimet,
+body.kartalento .fokus-viivaimet { opacity: 0; pointer-events: none; }
 
 /*
  * KARTUUTSI on tekstiä paperilla, ei nappilaatikko (omistajan tarkennus
@@ -17932,38 +18074,148 @@ body.kartalento .fokus-maataulu { opacity: 0; pointer-events: none; }
 .fokus-jana-maksimi { transform: translateX(50%); }
 
 /*
- * MILLOIN ALANURKAT OVAT VAPAAT? Alanappirivi on keskitetty kortti,
- * jonka leveys on min(560px, 100 % - 1.2rem). Sen viereen jää siis
- * (ruutu - 560) / 2 kummallekin puolelle, ja kartuutsi tarvitsee noin
- * 290 px, jana runsaat 120 px. Alanurkkiin mahtuu siis vasta kun ruutu
- * on noin 1140 px leveä.
+ * ALANURKKA ON AINA VAPAA — MITAT EIVÄT PINOUDU (omistajan
+ * pelitestitilaus 26.8.2026).
  *
- * SITÄ KAPEAMMALLA mitat nousevat alanappirivin YLÄPUOLELLE vasempaan
- * laitaan ja pinoutuvat — jana ylimmäksi, kartuutsi alimmaksi
- * (column-reverse). Vasen laita siksi, että kelluva pöllö on samalla
- * korkeudella oikeassa reunassa.
+ * Tässä oli mediakysely (max-width: 1140px), joka nosti kartuutsin ja
+ * janan alanappirivin YLÄPUOLELLE pinoon. Sen syy oli rivi itse:
+ * 560 pikselin kortti täytti kapean ruudun alalaidan, eikä kartuutsi
+ * mahtunut sen viereen. Fokusnäkymässä rivi on nyt yksi pieni neliö
+ * kartuutsin rinnalla, joten estettä ei ole ja mitat pysyvät siellä,
+ * minne ne kuuluvat: kartuutsi vasemmassa, jana oikeassa alanurkassa.
  *
- * Raja mitattiin savukkeella: 834 px levyisellä iPadilla kartuutsi
- * (282 px) meni 560 px:n kortin päälle, vaikka mediakysely oli
- * aiemmin 700 px.
+ * Turva-alue lasketaan mukaan samalla kaavalla kuin alanappirivillä
+ * (body[data-mode] .turn-card, max-width: 640px), jotta neliö ja
+ * kartuutsi ovat iPhonella samalla viivalla eivätkä kotipalkin alla.
  */
-@media (max-width: 1140px) {
-  .fokusmitat {
-    right: auto;
-    bottom: calc(5.6rem + env(safe-area-inset-bottom, 0px));
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    gap: 0.35rem;
-  }
+@media (max-width: 640px) {
+  .fokusmitat { bottom: calc(0.9rem + env(safe-area-inset-bottom, 0px)); }
 }
 
-/* Puhelimessa myös pienemmällä: kartuutsi ei saa viedä puolta kartasta. */
+/*
+ * Puhelimessa pienemmällä: kartuutsi ei saa viedä puolta kartasta —
+ * eikä varsinkaan tunkea neliönappia mittajanan päälle, koska kaikki
+ * kolme ovat nyt samassa alalaidassa. Mitattu 390 px:n ruudulla.
+ */
 @media (max-width: 700px) {
   .fokus-kartuutsi-nimi { font-size: 1.05rem; letter-spacing: 0.18em; }
   .fokus-kartuutsi-paikallinen { font-size: 0.7rem; }
   .fokus-kartuutsi-aika { font-size: 0.6rem; }
   .fokus-kartuutsi-viiva { max-width: 11rem; }
   .fokus-jana-luvut { font-size: 0.6rem; }
+}
+
+/*
+ * KAPEIMMALLA PUHELIMELLA ALALAITAAN MAHTUU KOLME ASIAA VAIN NIUKASTI:
+ * kartuutsi, Liiku-neliö ja mittajana. Mitattu 320 px:n ruudulla
+ * (iPhone SE): täysimittainen kartuutsi työnsi neliön janan päälle.
+ *
+ * AIKAKAUDEN VALTIOMUOTO JÄÄ POIS, EI MITÄÄN MUUTA. Se on kartuutsin
+ * alarivin pisin ja vähäarvoisin pala ("· kuningaskunta v. 1873"); maan
+ * oma nimi (ΕΛΛΑΣ · Hellas) ja suomenkielinen nimi jäävät. Rivi ei siis
+ * typisty kesken sanan — pala jätetään pois kokonaisena, kuten se
+ * jätettäisiin pois datastakin (js/packs/fokus-grc.js).
+ */
+@media (max-width: 460px) {
+  .fokus-kartuutsi-nimi { font-size: 0.92rem; letter-spacing: 0.14em; }
+  .fokus-kartuutsi-paikallinen { font-size: 0.6rem; letter-spacing: 0.04em; }
+  .fokus-kartuutsi-aika { font-size: 0.52rem; }
+  .fokus-kartuutsi-viiva { max-width: 8.5rem; }
+}
+
+/*
+ * Raja on mitattu eikä arvattu: 430 px:n puhelimella kartuutsi (217 px)
+ * ja neliö mahtuivat janan viereen 34 pikselin raolla, 390 px:llä rako
+ * oli nolla ja 320 px:llä neliö nousi janan päälle. Valtiomuoto jää
+ * siis pois vasta siitä alaspäin.
+ */
+@media (max-width: 415px) {
+  .fokus-kartuutsi-aika { display: none; }
+}
+
+/* ===========================================================================
+   FOKUSNÄKYMÄN ALANAPPIRIVI — LIIKU ON PIENI NELIÖ KARTUUTSIN RINNALLA
+   ---------------------------------------------------------------------------
+   Omistajan pelitestitilaus 26.8.2026: *"Liiku pieneksi neliöksi
+   (kompassi-ikoni, ei leveää tekstipalkkia) ja maan nimi -kartuutsi
+   pudotetaan sen tasolle vasempaan alareunaan"*.
+
+   KOLME MUUTOSTA, KAIKKI RAJATTU body.fokuspohjaan eli täsmälleen siihen
+   tilaan, jossa kartuutsi on ruudulla (js/ui.js paivitaFokusPohja).
+   Fokusmoodin ulkopuolella rivi on pikselilleen entisensä.
+
+     1. KORTTI VASEMPAAN LAITAAN. .turn-card on muualla keskitetty
+        560 pikselin kortti; täällä se venyy laidasta laitaan ilman
+        omaa pehmustetta, jotta sen vasen reuna on täsmälleen samassa
+        kohdassa kuin kartuutsin (.fokusmitat left: 0.7rem) ja napin
+        alareuna samalla viivalla kartuutsin kanssa.
+     2. NAPPI SIIRTYY KARTUUTSIN OHI. Kartuutsin leveys riippuu maan
+        nimestä, joten se MITATAAN (js/fokusmitat.js paivitaNappipaikka)
+        ja tulee tänne muuttujana --fokus-nappipaikka. Pehmuste on
+        .toimintorivi-peruksessa eikä rivissä: matkanappien liuku on
+        rivin absoluuttinen lapsi (inset: 0) ja ankkuroituu rivin
+        PEHMUSTELAATIKKOON, joten rivin pehmuste kaventaisi liukua.
+     3. NELIÖ ON NELIÖ. Leveys ja korkeus 3rem = 48 px, eli yli Applen
+        44 pisteen kosketusrajan, eikä ikonin viereen ladota tekstiä
+        (.icon-label pois) — muuten nappi olisi taas palkki.
+
+   MATKANAPPIEN LIUKU EI KUTISTU. Se peittää rivin entiseen tapaan ja
+   saa keskitetyn enimmäisleveyden, jotta kolme nappia eivät veny
+   työpöydällä laidasta laitaan.
+   =========================================================================== */
+
+body.fokuspohja[data-mode] .turn-card {
+  left: 0.7rem;
+  right: 0.7rem;
+  width: auto;
+  margin-inline: 0;
+  padding: 0;
+}
+
+/*
+ * Kahden napin rivi (Liiku + Tutki) on fokusnäkymässä käytännössä
+ * tavoittamaton — Tutki on siellä kaupungin laatassa — mutta jos se
+ * joskus piirtyy, se pysyy keskitettynä ja entisen levyisenä eikä veny
+ * laidasta laitaan sen myötä, että kortti leveni.
+ */
+body.fokuspohja .toimintorivi { width: min(100%, 20rem); margin-inline: auto; }
+
+body.fokuspohja .toimintorivi.rivi-yksi { width: 100%; margin-inline: 0; }
+
+body.fokuspohja .toimintorivi.rivi-yksi .toimintorivi-perus {
+  padding-left: var(--fokus-nappipaikka, 0px);
+  justify-items: start;
+}
+
+body.fokuspohja .toimintorivi.rivi-yksi .monitoimi-nappi {
+  width: 3rem;
+  min-width: 3rem;
+  max-width: 3rem;
+  height: 3rem;
+  min-height: 3rem;
+  margin-inline: 0;
+  padding: 0;
+}
+
+body.fokuspohja .toimintorivi.rivi-yksi .monitoimi-nappi .icon-label { display: none; }
+
+body.fokuspohja .toimintorivi-liuku {
+  left: 0;
+  right: 0;
+  width: min(100%, 21rem);
+  margin-inline: auto;
+}
+
+/* Kapeimmalla puhelimella neliö on täsmälleen sormen mitta eikä
+   pikselia enempää: alalaidassa on myös kartuutsi ja mittajana. */
+@media (max-width: 460px) {
+  body.fokuspohja .toimintorivi.rivi-yksi .monitoimi-nappi {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    height: 44px;
+    min-height: 44px;
+  }
 }
 
 /*
@@ -17976,16 +18228,31 @@ body.kartalento .fokus-maataulu { opacity: 0; pointer-events: none; }
 body.fokuspohja .maa-pilleri { display: none; }
 
 /* ===========================================================================
-   MAATAULU — alhaalta liukuva maan perustietotaulu (js/fokusmitat.js)
+   MAATAULU — kartuutsin päältä nouseva maan perustietotaulu
+   (js/fokusmitat.js)
    ---------------------------------------------------------------------------
-   Omistajan tilaus 25.8.2026: kartuutsin kertapainallus nostaa alhaalta
-   liukuvan, kevyesti läpinäkyvän taulun, jossa maan perustiedot uuden
-   atlaskartan tyyliin ja plus-nappi varsinaiseen maalehteen. Luvut ovat
-   SAMASTA lähteestä kuin maalehdessä (MAATIEDOT).
+   Omistajan tilaus 25.8.2026: kartuutsin kertapainallus nostaa
+   läpikuultavan taulun, jossa maan perustiedot uuden atlaskartan tyyliin
+   ja plus-nappi varsinaiseen maalehteen. Luvut ovat SAMASTA lähteestä
+   kuin maalehdessä (MAATIEDOT).
 
-   ALAREUNA ON ALANAPPIRIVIN YLÄPUOLELLA: Liiku ja Tutki jäävät
-   kokonaan näkyviin ja käyttöön. Kartta näkyy taulun läpi, koska tausta
-   on läpikuultava.
+   VIIMEISTELY PELITESTISSÄ 26.8.2026 — kolme muutosta:
+
+     1. TAULU NOUSEE KARTUUTSIN KOHDALTA, ei ruudun levyisenä alalevynä.
+        Se on ankkuroitu samaan vasempaan laitaan (left: 0.7rem, sama
+        kuin .fokusmitat) ja sen alareuna on heti kartuutsin yläpuolella,
+        joten se näyttää nousevan KREIKKA-sanan takaa. Enimmäisleveys on
+        maltillinen: taulu ei saa peittää kartan oikeaa laitaa.
+     2. LÄPINÄKYVÄMPI. Tausta oli 0.86; kartta kuulsi läpi vain
+        aavistuksen. Nyt 0.58, ja luettavuus tulee musteesta ja ohuesta
+        kehyksestä eikä paperin peittävyydestä.
+     3. EI OTSIKKOA EIKÄ SULKUNAPPIA. Maan nimi lukee kartuutsissa
+        taulun alla, ja taulu sulkeutuu kartasta, kartuutsista tai
+        Escistä (js/fokusmitat.js). Jäljelle jää yksi kaluste: plus
+        oikeassa yläkulmassa.
+
+   ALAREUNA ON ALANAPPIRIVIN YLÄPUOLELLA: Liiku-neliö jää kokonaan
+   näkyviin ja käyttöön.
 
    LIIKE ON TRANSFORM + OPACITY, ei suodatin (iOS-sääntö), ja
    prefers-reduced-motion sammuttaa sen kokonaan.
@@ -17994,32 +18261,46 @@ body.fokuspohja .maa-pilleri { display: none; }
 .fokus-maataulu {
   position: absolute;
   left: 0.7rem;
-  right: 0.7rem;
-  bottom: calc(5.2rem + env(safe-area-inset-bottom, 0px));
+  /*
+   * ALAREUNA ON SEKÄ KARTUUTSIN ETTÄ LIIKU-NELIÖN YLÄPUOLELLA.
+   * Kartuutsi alkaa 0.9rem korkeudelta ja on noin 3rem korkea, mutta
+   * neliö on ylempänä: alanappirivi asuu .rail-kerroksessa, joka on
+   * itse --gapin verran irti reunasta, joten neliön yläreuna on
+   * tabletilla runsaat 4,5rem ruudun alalaidasta (mitattu 768 px:n
+   * ruudulla: 4.4rem jätti napin päälle 1,6 pikseliä). 4.9rem jättää
+   * molempiin selvän raon. Turva-alue kuten muillakin alalaidan
+   * kalusteilla.
+   */
+  bottom: calc(4.9rem + env(safe-area-inset-bottom, 0px));
   z-index: 5;
-  max-width: 34rem;
-  margin-inline: auto;
+  width: min(26rem, calc(100% - 1.4rem));
   max-height: min(46%, 22rem);
   overflow-y: auto;
-  padding: 0.7rem 0.9rem 0.6rem;
-  border: 1px solid rgba(74, 52, 33, 0.5);
+  padding: 0.65rem 2.6rem 0.55rem 0.85rem;
+  border: 1px solid rgba(74, 52, 33, 0.42);
   border-radius: 6px;
-  background: rgba(243, 230, 201, 0.86);
-  box-shadow: 0 6px 18px rgba(46, 30, 14, 0.28);
+  background: rgba(243, 230, 201, 0.58);
+  box-shadow: 0 4px 14px rgba(46, 30, 14, 0.18);
   color: rgba(52, 36, 21, 0.95);
   font-family: var(--font-type);
+  /* Läpikuultavan paperin päällä muste tarvitsee saman vaalean halon
+     kuin kartuutsi, tai maasto sotkisi lukuja. */
+  text-shadow: 0 0 4px rgba(244, 232, 205, 0.9);
   /* Pystyvieritys sormella; kartan panorointi ei saa käynnistyä
      (js/fokusmitat.js pysäyttää tapahtumat, tämä sallii vierityksen). */
   touch-action: pan-y;
   opacity: 0;
-  transform: translateY(115%);
+  /* Nousee kartuutsin takaa, ei ruudun alalaidasta: matka on taulun
+     oma korkeus, joten se on piilossa kartuutsin kohdalla. */
+  transform: translateY(18%) scaleY(0.94);
+  transform-origin: bottom left;
   visibility: hidden;
   transition: transform 0.26s ease, opacity 0.2s ease, visibility 0s linear 0.26s;
 }
 
 .fokus-maataulu.auki {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scaleY(1);
   visibility: visible;
   transition: transform 0.26s ease, opacity 0.2s ease, visibility 0s;
 }
@@ -18029,49 +18310,64 @@ body.fokuspohja .maa-pilleri { display: none; }
   .fokus-maataulu.auki { transition: none; }
 }
 
-.fokus-maataulu-ylarivi {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.fokus-maataulu-nimi {
-  flex: 1 1 auto;
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-/* Plus ja sulku: pyöreät musteympyrät, kosketusala 44 px. */
-.fokus-maataulu-lehti,
-.fokus-maataulu-sulje {
-  flex: 0 0 auto;
-  width: 2rem;
-  height: 2rem;
+/*
+ * PLUS OIKEAAN YLÄKULMAAN — taulun ainoa nappi (omistaja 26.8.2026).
+ *
+ * Se on absoluuttisesti kulmassa eikä otsikkorivillä, koska otsikkoa ei
+ * enää ole; taulun sisällön oikea pehmuste (2.6rem) pitää lukurivit
+ * poissa sen alta. Nappi on itsekin läpikuultava — kartta kuultaa myös
+ * sen läpi — ja SYKKII hitaasti, jotta se erottuu kutsuna eikä jää
+ * koristeeksi.
+ *
+ * SYKE ON TRANSFORM JA OPACITY. Sama iOS-sääntö kuin kaikella muullakin
+ * (tests/rules.test.mjs): ei suodattimia, ei box-shadow-animaatiota.
+ * prefers-reduced-motion sammuttaa sen ja jättää napin täyteen
+ * peittävyyteen, jottei se jää pysyvästi haaleaksi.
+ *
+ * Kosketusala on 44 px, vaikka piirretty ympyrä on pienempi.
+ */
+.fokus-maataulu-lehti {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.35rem;
+  width: 2.1rem;
+  height: 2.1rem;
   min-width: 44px;
   min-height: 44px;
   display: grid;
   place-items: center;
   padding: 0;
-  border: 1px solid rgba(74, 52, 33, 0.5);
+  border: 1px solid rgba(74, 52, 33, 0.45);
   border-radius: 50%;
-  background: rgba(252, 244, 224, 0.8);
+  background: rgba(252, 244, 224, 0.42);
   color: rgba(58, 40, 25, 0.95);
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   line-height: 1;
   cursor: pointer;
+  animation: fokus-plus-syke 3.2s ease-in-out infinite;
+}
+
+@keyframes fokus-plus-syke {
+  0%, 100% { transform: scale(1); opacity: 0.72; }
+  50% { transform: scale(1.12); opacity: 1; }
 }
 
 .fokus-maataulu-lehti:hover,
-.fokus-maataulu-sulje:hover { background: rgba(255, 249, 232, 0.95); }
+.fokus-maataulu-lehti:focus-visible {
+  background: rgba(255, 249, 232, 0.85);
+  animation-play-state: paused;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fokus-maataulu-lehti { animation: none; opacity: 1; }
+}
 
 .fokus-maataulu-rivit {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.28rem 0.8rem;
-  margin: 0.55rem 0 0;
+  margin: 0;
   font-size: 0.84rem;
 }
 
@@ -18113,11 +18409,85 @@ body.fokuspohja .maa-pilleri { display: none; }
 
 /*
  * KAPEALLA RUUDULLA TAULU YLTÄÄ OIKEAAN LAITAAN, jossa kelluva pöllö
- * leijuu (.pollo-kelluu-kartalla: right 0.7rem, leveys 2.9rem). Pöllö
- * on taulun päällä (z-index 40), joten viimeinen rivi jäi sen alle —
- * mitattu 390 px:n ruudulla. Alarivi väistää pöllön leveyden verran;
- * leveämmällä ruudulla taulu on keskitetty eikä yllä sinne asti.
+ * leijuu (.pollo-kelluu-kartalla). Pöllö on taulun päällä (z-index 40),
+ * joten viimeinen rivi jäi sen alle — mitattu 390 px:n ruudulla.
+ * Alarivi väistää pöllön leveyden verran; leveämmällä ruudulla taulu
+ * loppuu ennen sitä.
  */
 @media (max-width: 620px) {
-  .fokus-maataulu-lahde { padding-right: 3.4rem; }
+  .fokus-maataulu-lahde { padding-right: 4.2rem; }
 }
+
+/* ===========================================================================
+   KARTAN REUNAVIIVAIMET — dynaamiset asteviivat (js/fokusmitat.js)
+   ---------------------------------------------------------------------------
+   Omistajan pelitestitilaus 26.8.2026: *"ohuet viivainmerkinnät
+   (asteviivat + lukemat) reunoihin atlas-tyyliin, laskettuna näkyvästä
+   alueesta samalla projektiokaavalla kuin mittajana"*.
+
+   HIENOVARAISUUS ON SÄÄNTÖ, EI TYYLIVALINTA. Merkit ovat kartan päällä,
+   jossa on jo kaupunkien laatat, fokusvirran kortit ja alanapit. Siksi:
+   nauha on kapea (reunan ohut kaista), muste on haalea, lukema on pieni
+   ja koko kerros on napautuksille läpinäkyvä (pointer-events: none).
+   z-index on 2 eli mittojen (3), taulun (5) ja alanappien alla — jos
+   jokin niistä osuu päälle, viivain jää alle eikä toisin päin.
+
+   PAIKAT: pituusasteet yläreunaan, leveysasteet vasempaan. Alareuna on
+   kartuutsin, neliönapin ja mittajanan, oikea reuna kelluvan pöllön.
+   =========================================================================== */
+
+.fokus-viivaimet {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  font-family: var(--font-type);
+  color: rgba(74, 52, 33, 0.62);
+}
+
+.fokus-viivaimet[hidden] { display: none; }
+
+.fokus-viivain { position: absolute; }
+.fokus-viivain-yla { top: 0; left: 0; right: 0; height: 1.4rem; }
+.fokus-viivain-vasen { top: 0; bottom: 0; left: 0; width: 2.6rem; }
+
+.fokus-viivain-merkki {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.fokus-viivain-viiva {
+  display: block;
+  background: rgba(74, 52, 33, 0.5);
+}
+
+.fokus-viivain-luku {
+  font-size: 0.58rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  /* Sama vaalea halo kuin kartuutsilla: lukema pysyy luettavana sekä
+     maaston että ulapan päällä. Ei suodatin. */
+  text-shadow: 0 0 4px rgba(244, 232, 205, 0.95), 0 0 8px rgba(244, 232, 205, 0.7);
+}
+
+/* Yläviivain: pystyviiva reunasta alas, lukema sen alla ja keskitettynä
+   viivan kohdalle (kuten mittajanan päätylukemat). */
+.fokus-viivain-yla .fokus-viivain-merkki {
+  top: 0;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(-50%);
+}
+
+.fokus-viivain-yla .fokus-viivain-viiva { width: 1px; height: 6px; }
+
+/* Vasen viivain: vaakaviiva reunasta oikealle, lukema sen perässä. */
+.fokus-viivain-vasen .fokus-viivain-merkki {
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.fokus-viivain-vasen .fokus-viivain-viiva { width: 6px; height: 1px; }

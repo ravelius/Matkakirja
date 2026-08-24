@@ -167,8 +167,8 @@ test('mediakanavaa ei oteta ilman käyttäjän elettä', () => {
   const kohta = lahde.indexOf('export function varmistaAaniIstunto()');
   assert.ok(kohta > 0, 'varmistaAaniIstunto puuttuu');
   const runko = lahde.slice(kohta, kohta + 300);
-  assert.match(runko, /if \(saneluKaynnissa \|\| !eleNahty\) return false;/,
-    'mediakanavan voi ottaa ilman elettä tai kesken sanelun');
+  assert.match(runko, /if \(saneluKaynnissa \|\| taustalla \|\| !eleNahty\) return false;/,
+    'mediakanavan voi ottaa ilman elettä, kesken sanelun tai taustalla');
   // Ele nostaa lipun; kuuntelija ei saa olla kertaluonteinen, koska
   // ankkuri voi pysähtyä ulkopuolelta (Ohjauskeskus, puhelu).
   assert.match(lahde, /eleNahty = true;/);
@@ -775,4 +775,90 @@ test('musiikkinäytteet ovat suoria mp3-osoitteita ja kertovat lisenssin', async
     }
   }
   assert.ok(maara >= 15, `musiikkinäytteitä vain ${maara}`);
+});
+
+/* ------------------------------------------------------------------ */
+/* Taustavahti — kaikki äänet vaikenevat taustalla                     */
+/* ------------------------------------------------------------------ */
+
+/*
+ * Omistajan tilaus 24.8.2026: "Pelin äänet pitäisi hiljentyä kaikki jos
+ * sovellus ei ole iOS-laitteella auki päällimmäisenä." Vahdin oma
+ * kirjanpito (js/aani-tausta.js) testataan tässä; oikeat soittimet ja
+ * äänikontekstit mittaa tools/savukkeet/savuke-aanet-tausta.mjs.
+ */
+
+test('taustavahti kertoo tilan jokaiselle vaimentajalle kerran', async () => {
+  const vahti = await import('../js/aani-tausta.js');
+  const jaljet = [];
+  const irrota = vahti.lisaaTaustaVaimennus({
+    hiljenna: () => jaljet.push('hiljenna'),
+    palauta: () => jaljet.push('palauta'),
+  });
+  assert.equal(vahti.taustallaNyt(), false);
+  assert.equal(vahti.hiljennaTaustalle(), true);
+  assert.equal(vahti.taustallaNyt(), true);
+  // Toinen "taustalle" on tyhjä kutsu: neljä eri tapahtumalähdettä
+  // (visibilitychange, pagehide, freeze, iOS-kuori) voi kertoa samasta.
+  assert.equal(vahti.hiljennaTaustalle(), false);
+  assert.equal(vahti.palautaEtualalle(), true);
+  assert.equal(vahti.palautaEtualalle(), false);
+  assert.deepEqual(jaljet, ['hiljenna', 'palauta']);
+  irrota();
+  vahti.hiljennaTaustalle();
+  vahti.palautaEtualalle();
+  assert.deepEqual(jaljet, ['hiljenna', 'palauta'], 'irrotettu vaimentaja sai vielä kutsun');
+});
+
+test('yhden vaimentajan virhe ei jätä muita soimaan', async () => {
+  const vahti = await import('../js/aani-tausta.js');
+  const jaljet = [];
+  const irrotaRikki = vahti.lisaaTaustaVaimennus({
+    hiljenna: () => { throw new Error('rikki'); },
+  });
+  const irrotaEhja = vahti.lisaaTaustaVaimennus({ hiljenna: () => jaljet.push('ehja') });
+  vahti.hiljennaTaustalle();
+  vahti.palautaEtualalle();
+  assert.deepEqual(jaljet, ['ehja']);
+  irrotaRikki();
+  irrotaEhja();
+});
+
+test('taustalla rekisteröity vaimentaja vaikenee heti', async () => {
+  const vahti = await import('../js/aani-tausta.js');
+  vahti.hiljennaTaustalle();
+  let hiljennetty = 0;
+  const irrota = vahti.lisaaTaustaVaimennus({ hiljenna: () => { hiljennetty += 1; } });
+  assert.equal(hiljennetty, 1, 'taustalla syntynyt äänilähde jäisi ainoana soimaan');
+  vahti.palautaEtualalle();
+  irrota();
+});
+
+test('taustavahti ei tuo mitään — se on riippuvuuspuun pohjalla', () => {
+  const lahde = readFileSync(new URL('../js/aani-tausta.js', import.meta.url), 'utf8');
+  assert.doesNotMatch(lahde, /^import\s/m,
+    'vahdin tuonti kääntyisi kehäksi niputuksessa (tools/build-standalone.mjs)');
+});
+
+test('jokainen äänilähde rekisteröi taustavaimennuksensa', () => {
+  const moduulit = [
+    'js/sound.js', 'js/puhe.js', 'js/ambience-stream.js',
+    'js/lukija.js', 'js/luenta.js', 'js/linssit/radio.js',
+  ];
+  for (const polku of moduulit) {
+    const lahde = readFileSync(new URL(`../${polku}`, import.meta.url), 'utf8');
+    assert.match(lahde, /lisaaTaustaVaimennus\(/,
+      `${polku} ei liity taustavahtiin — sen ääni jäisi soimaan taustalle`);
+  }
+});
+
+test('kesken jäänyt luenta ei ala itsestään paluussa', () => {
+  const puhe = readFileSync(new URL('../js/puhe.js', import.meta.url), 'utf8');
+  const jatko = puhe.slice(puhe.indexOf('export function jatkaPuheEtualalla()'));
+  const runko = jatko.slice(0, jatko.indexOf('}') + 1);
+  assert.doesNotMatch(runko, /resume/,
+    'lukijaäänen piirin herätys jatkaisi kertojaa keskeltä lausetta');
+  const lukija = readFileSync(new URL('../js/lukija.js', import.meta.url), 'utf8');
+  assert.match(lukija, /lisaaTaustaVaimennus\(\{ hiljenna: taustaHiljennaLukija \}\)/,
+    'lukijalle ei saa antaa automaattista paluuta');
 });

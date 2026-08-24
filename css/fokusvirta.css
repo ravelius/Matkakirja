@@ -693,3 +693,114 @@ body.fokuszoom-paalla .fokusvirta-kortti {
   .fokuszoom-vaihtuu,
   .fokuskuva-kasvaa { animation: none; }
 }
+
+/* ================= KEVYT KULKU -KOKEILU (24.8.2026, ilta) ==========
+ *
+ * Raamatun osio "Fokusmoodi", kohta KEVYT KULKU -KOKEILU. Kaksi uutta
+ * pintaa: pöllön lyhyt vinkki lehden avautuessa ja kartan vihreä
+ * kohtaamispiste. Kummankin markup on js:ssä (js/fokusvirta.js
+ * fokusvirtaLehtivinkki, js/fokuspiste.js).
+ */
+
+/* ---------- pöllön vinkki lehden päällä ---------- */
+
+/*
+ * Sama kupla kuin virran omilla vaiheilla, mutta kapeampi: vinkissä on
+ * yksi lause, eikä sen pidä näyttää kortilta. Kupla asuu lehtinäkymässä
+ * modaalin sisällä (pöllönapin vanhempi), joten se ei tarvitse omaa
+ * z-indexiä — se on jo dialogin oma kerros.
+ */
+.fokusvirta-kupla.fokusvirta-vinkki { max-width: min(20rem, 82vw); }
+
+.fokusvirta-vinkkiteksti {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.35;
+}
+
+/*
+ * RUKSI ON PIENI JA HILJAINEN: se on asetus, ei valinta pelissä.
+ * Kosketusalaksi jää silti koko rivi (label), joten sormi osuu.
+ */
+.fokusvirta-vinkkiruksi {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.55rem;
+  font-size: 0.8rem;
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.fokusvirta-vinkkiruksi input { margin: 0; }
+
+/* ---------- vihreä hehkuva kohtaamispiste ---------- */
+
+/*
+ * NÄKYMÄTÖN OSUMA-ALUE, VÄHINTÄÄN 44 px. Merkki itse on pieni, koska
+ * kartta on lehteä eikä pelilautaa; sormi ei kuitenkaan osu kolmen
+ * pikselin ympyrään. Ryhmä skaalataan ruudun pikseleihin
+ * (js/fokuspiste.js), joten r = 22 on 44 px läpimitta joka zoomilla.
+ */
+.fokuspiste-osuma {
+  fill: none;
+  /* `fill: none` ei ota napautuksia ilman tätä. */
+  pointer-events: all;
+  cursor: pointer;
+}
+
+/*
+ * HEHKU ON KOLME YMPYRÄÄ, EI SUODATIN. Suodatettu kerros palaa iOS:n
+ * taustalta tyhjänä (js/fokuskartta.js sääntö 3), joten sumeaa reunaa
+ * ei ole: uloin kehä on läpikuultava ja sykkii, keskimmäinen pitää
+ * muodon ja ydin on kirkas piste. Sykkeessä liikkuvat vain `opacity` ja
+ * `transform`, jotka kompositori hoitaa ilman uudelleenmaalausta.
+ *
+ * MITTAKAAVA, EI `r`. SVG:n geometriamääreiden animointi CSS:llä
+ * (`r`) ei ole kaikissa selaimissa tuettua, ja tukemattomassa selaimessa
+ * piste jäisi sykkimättä. `transform: scale()` toimii kaikkialla, ja
+ * koska ympyrän keskipiste on ryhmän origossa, oletusarvoinen
+ * transform-origin (bbox 50 % 50 %) osuu täsmälleen samaan pisteeseen.
+ *
+ * VÄRI on lämmin lehtivihreä, joka erottuu 1873-atlaksen okrasta ja
+ * merten viileästä paperista ilman että se huutaa neonilla.
+ */
+.fokuspiste-hehku {
+  fill: #4f9d3a;
+  opacity: 0.28;
+  animation: fokuspiste-syke 2200ms ease-in-out infinite;
+}
+
+.fokuspiste-keha {
+  fill: #5aad42;
+  opacity: 0.55;
+}
+
+.fokuspiste-ydin {
+  fill: #eaf7de;
+  stroke: #2f6b21;
+  stroke-width: 0.8;
+}
+
+.fokuspiste:hover .fokuspiste-keha,
+.fokuspiste:focus-visible .fokuspiste-keha { opacity: 0.85; }
+
+/*
+ * Selaimen oma tarkennuslaatikko pois, oma merkki tilalle — sama
+ * havainto ja sama ratkaisu kuin fokuskohteiden merkeillä.
+ */
+.fokuspiste:focus { outline: none; }
+.fokuspiste:focus-visible .fokuspiste-hehku { opacity: 0.5; }
+
+@keyframes fokuspiste-syke {
+  0%, 100% { opacity: 0.22; transform: scale(0.88); }
+  50% { opacity: 0.42; transform: scale(1.22); }
+}
+
+/*
+ * LIIKEHERKKYYS: syke on huomiokeino, ei tieto. Piste pysyy paikallaan
+ * ja näkyvänä myös silloin kun liikettä on pyydetty vähemmän.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .fokuspiste-hehku { animation: none; opacity: 0.35; }
+}
