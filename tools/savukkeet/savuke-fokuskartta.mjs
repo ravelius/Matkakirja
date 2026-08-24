@@ -56,6 +56,17 @@
  *   janan pituus on 15–25 % ruudusta, se MUUTTUU zoomatessa, kartuutsi
  *   kertoo maan nimen ja sen oman nimen, se avaa liukuvan maataulun, ja
  *   oikean yläkulman maakyltti väistyy sen tieltä.
+ * === MIKÄ MUUTTUI OMISTAJAN PELITESTIN JÄLKEEN (v1099:n jälkeen) ===
+ *
+ * *"Laatta takaisin, mutta paljon pienempänä"* ja *"Tutki pois
+ * alariviltä"*. NYKYISEN kaupungin laatta on lehden päällä AINA — pieni
+ * ja ruudulla lähes vakiokokoinen — ja se on samalla fokusnäkymän
+ * Tutki-nappi. Kaksi seurausta tälle savukkeelle:
+ *
+ *   - OSION 6 PIILOTUSVÄITTEET KOSKEVAT NYT MUITA KAUPUNKEJA (6b, 6e).
+ *     Oma laatta rajataan mittauksesta pois, koska sen kuuluukin näkyä.
+ *   - UUSI OSIO 7 mittaa laatan RUUTUKOON, napautusalueen sormimitan ja
+ *     alarivin (vain Liiku), sekä sen että napautus avaa virran.
  */
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
@@ -391,12 +402,20 @@ await sivu.evaluate(async () => {
 const mittaaPallot = () => sivu.evaluate(() => {
   const ui = window.matkakirja.ui;
   const nakyy = (osa) => getComputedStyle(osa).display !== 'none';
+  const oma = ui.game.cityOf()?.id;
   const osat = [...document.querySelectorAll('#board .cities [data-kaupunki]')];
   const lehdella = osat.filter((osa) => ui.fokusPohjanAlla(
     Number(osa.getAttribute('cx') ?? osa.getAttribute('x')),
     Number(osa.getAttribute('cy') ?? osa.getAttribute('y')),
   ));
-  const pisteet = lehdella.filter((osa) => !osa.classList.contains('city-label'));
+  /*
+   * NYKYISEN KAUPUNGIN LAATTA ON OMA TAPAUKSENSA (omistajan pelitesti
+   * 24.8.2026): se jää lehden päälle aina, pienennettynä. Piilotus
+   * koskee siis MUIDEN kaupunkien pisteitä, ja oma laatta mitataan
+   * erikseen (osio 7).
+   */
+  const pisteet = lehdella.filter((osa) => !osa.classList.contains('city-label')
+    && osa.dataset.kaupunki !== oma);
   /*
    * NIMISTÄ MITATAAN VAIN KÄYDYN MAAN NIMET. Lehden laatikkoon osuu
    * myös naapurimaiden kaupunkeja, ja niiden koko datakerros — nimi
@@ -428,7 +447,7 @@ const mittaaPallot = () => sivu.evaluate(() => {
 
 const piilossa = await mittaaPallot();
 vaadi('6a lehti on yhä paikallaan mittausta varten', piilossa.pohja);
-vaadi('6b kaupunkien pisteet ja laatat ovat piilossa lehden päältä',
+vaadi('6b MUIDEN kaupunkien pisteet ja laatat ovat piilossa lehden päältä',
   piilossa.pisteita > 0 && piilossa.nakyviaPisteita === 0,
   `${piilossa.nakyviaPisteita}/${piilossa.pisteita} näkyvissä`);
 vaadi('6c kaupunkien nimet JÄÄVÄT lehteen (ATEENA, Kreeta)',
@@ -452,11 +471,14 @@ const dev = await sivu.evaluate(async () => {
   await new Promise((s) => setTimeout(s, 400));
   const nakyy = (osa) => getComputedStyle(osa).display !== 'none';
   const alueet = [...document.querySelectorAll('#board .targets .target-hit')];
+  const oma = ui.game.cityOf()?.id;
   const laatat = [...document.querySelectorAll('#board .cities [data-kaupunki]')]
-    .filter((osa) => !osa.classList.contains('city-label') && ui.fokusPohjanAlla(
-      Number(osa.getAttribute('cx') ?? osa.getAttribute('x')),
-      Number(osa.getAttribute('cy') ?? osa.getAttribute('y')),
-    ));
+    .filter((osa) => !osa.classList.contains('city-label')
+      && osa.dataset.kaupunki !== oma
+      && ui.fokusPohjanAlla(
+        Number(osa.getAttribute('cx') ?? osa.getAttribute('x')),
+        Number(osa.getAttribute('cy') ?? osa.getAttribute('y')),
+      ));
   const tulos = {
     alueita: alueet.length,
     nakyviaAlueita: alueet.filter(nakyy).length,
@@ -749,6 +771,90 @@ const ulkoa = await sivu.evaluate(async () => {
 });
 vaadi('8i napautus taulun ulkopuolelle sulkee sen',
   ulkoa.kesken && !ulkoa.jalkeen, JSON.stringify(ulkoa));
+/* ------------------------------- 7. laatta on fokusnäkymän Tutki-nappi */
+
+/*
+ * OMISTAJAN PELITESTITILAUS 24.8.2026 (v1099:n jälkeen), kolme väitettä
+ * samasta muutoksesta:
+ *
+ *   1. NYKYISEN KAUPUNGIN LAATTA NÄKYY LEHDELLÄ AINA — mutta pienenä ja
+ *      ruudulla lähes vakiokokoisena (js/ui.js FOKUS_LAATTA_PX = 26).
+ *      Mitta otetaan RUUDULTA (getBoundingClientRect), koska juuri se on
+ *      luvattu: laudan yksiköissä sama laatta on eri kokoinen joka
+ *      zoomilla.
+ *   2. NAPAUTUSALUE ON SORMENKOKOINEN vaikka laatta piirtyy pienenä
+ *      (.fokuslaatta-osuma, vähintään 44 px).
+ *   3. ALARIVILLÄ ON VAIN LIIKU: Tutki-nappia ei ole, ja sen toiminto
+ *      tulee laatan napautuksesta.
+ *
+ * Aarrevaiheen tila jäi osiosta 6 voimaan, joten napautuksen kuuluu
+ * avata fokusvirta eikä saapumiskorttia (lehtilukko).
+ *
+ * MITTAUS TEHDÄÄN FOKUSNÄKYMÄSSÄ, EI YLEISKUVASSA. Osio 4 jätti kartan
+ * puoliväliin keskeytettyä ajoa, ja siinä zoomissa lehti on vain osa
+ * ruutua — laatta on jo luonnostaan pieni eikä kutistus tee mitään.
+ * Kamera ajetaan siksi ensin lehden ikkunaan (sama ajo kuin osiossa 3),
+ * jolloin mitataan se näkymä, josta omistajan palaute tuli.
+ */
+await sivu.evaluate((b) => window.matkakirja.ui.kartta.ajaKamera({ bbox: b }), RAJAUS);
+await sivu.waitForTimeout(2600);
+
+const laatta = await sivu.evaluate(async () => {
+  const ui = window.matkakirja.ui;
+  ui.game.phase = 'action';
+  ui.render();
+  await new Promise((s) => setTimeout(s, 400));
+  const city = ui.game.cityOf();
+  const laattaOsa = document.querySelector(
+    `#board .cities .city[data-kaupunki="${city.id}"], `
+    + `#board .cities .city-start[data-kaupunki="${city.id}"]`,
+  );
+  const osuma = document.querySelector('#board .fokuslaatta-osuma');
+  const rivi = document.querySelector('.toimintorivi');
+  const napit = [...(rivi?.querySelectorAll('.toimintorivi-perus button') ?? [])]
+    .map((b) => b.getAttribute('aria-label'));
+  const kuva = laattaOsa?.getBoundingClientRect();
+  return {
+    kaupunki: city.id,
+    skaala: Number((ui.nakyvaAlue()?.skaala ?? 0).toFixed(3)),
+    rx: Number(laattaOsa?.getAttribute('rx')),
+    osumaR: Number(osuma?.getAttribute('r')),
+    lehdella: ui.fokusPohjanAlla(city.x, city.y),
+    laattaNakyy: laattaOsa ? getComputedStyle(laattaOsa).display !== 'none' : false,
+    halkaisija: kuva ? Math.round(Math.max(kuva.width, kuva.height)) : -1,
+    osumaLeveys: osuma ? Math.round(osuma.getBoundingClientRect().width) : -1,
+    napit,
+    yksiRivi: Boolean(rivi?.classList.contains('rivi-yksi')),
+  };
+});
+console.log(`      (zoom ${laatta.skaala} px/yksikkö, laatan rx ${laatta.rx?.toFixed(1)} `
+  + `→ ruudulla ${laatta.halkaisija} px, osuma-alue ${laatta.osumaLeveys} px)`);
+vaadi('7a nykyisen kaupungin laatta NÄKYY lehden päällä',
+  laatta.lehdella === true && laatta.laattaNakyy === true, JSON.stringify(laatta));
+vaadi('7b laatta on ruudulla pieni (24–32 px, varaa mittaan)',
+  laatta.halkaisija >= 20 && laatta.halkaisija <= 40,
+  `halkaisija ${laatta.halkaisija} px`);
+vaadi('7c napautusalue on sormenkokoinen (≥ 44 px)',
+  laatta.osumaLeveys >= 44, `${laatta.osumaLeveys} px — ${JSON.stringify(laatta)}`);
+vaadi('7d alarivillä on vain Liiku — Tutki muutti laattaan',
+  laatta.yksiRivi === true && laatta.napit.length === 1
+  && laatta.napit[0] === 'Liiku', JSON.stringify(laatta.napit));
+
+const napautus = await sivu.evaluate(async () => {
+  const ui = window.matkakirja.ui;
+  ui.fokusvirtaKortti?.remove();
+  ui.fokusvirtaKortti = null;
+  document.querySelector('#board .fokuslaatta-osuma').dispatchEvent(
+    new MouseEvent('click', { bubbles: true }),
+  );
+  await new Promise((s) => setTimeout(s, 700));
+  return {
+    virta: Boolean(document.querySelector('.fokusvirta-kortti, .fokusvirta-kupla')),
+    saapuminen: document.getElementById('arrival-dialog')?.open === true,
+  };
+});
+vaadi('7e laatan napautus avaa fokusvirran (ei saapumiskorttia)',
+  napautus.virta === true && napautus.saapuminen === false, JSON.stringify(napautus));
 
 await selain.close();
 palvelin.close();

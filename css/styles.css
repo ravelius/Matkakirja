@@ -4466,6 +4466,20 @@ body.fokuspohja .country-korostus { display: none; }
 .fokus-lehden-alla { display: none; }
 
 /*
+ * LAATTA ON FOKUSNÄKYMÄN TUTKI-NAPPI (omistajan pelitestitilaus
+ * 24.8.2026): alarivillä on vain Liiku, ja tutkiminen alkaa nykyisen
+ * kaupungin laatan napautuksesta. Laatta piirtyy lehden päällä pienenä
+ * (js/ui.js paivitaFokusLaatta), joten napautusalue on erillinen
+ * näkymätön ympyrä — sama ratkaisu ja sama syy kuin kohderenkaiden
+ * .target-hit-alueella. Osoitin kertoo hiirellä, että tästä pääsee
+ * eteenpäin; kosketuksella alue vain on riittävän iso.
+ */
+.fokuslaatta-osuma {
+  fill: transparent;
+  cursor: pointer;
+}
+
+/*
  * PÖLLÖ OSOITTAA LAATTAA. Kun laatta ilmestyy aarrevaiheessa lehden
  * päälle, se saa kevyen huomioeleen: kaksi rauhallista sykähdystä ja
  * sitten hiljaisuus. Vain `opacity` liikkuu — ei suodattimia (iOS) eikä
@@ -15851,6 +15865,27 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
 /* Tyhjä paikka pitää ruudukon kaksiosaisena, vaikka Tutki ei olisi
    tarjolla — Liiku ei saa venyä yksin koko rivin levyiseksi. */
 .rivi-tyhja { visibility: hidden; }
+
+/*
+ * FOKUSNÄKYMÄN YHDEN NAPIN RIVI (omistajan pelitestitilaus 24.8.2026).
+ *
+ * Tutki muutti kaupungin laattaan, ja alariville jää vain Liiku. Tyhjää
+ * paikkaa EI jätetä: silloin nappi jäisi riippumaan vasempaan reunaan
+ * kuin toinen olisi unohtunut. Nappi keskitetään ja saa väljyyttä, mutta
+ * ei veny leveällä ruudulla laidasta laitaan — 20rem on suunnilleen sama
+ * mitta kuin kahden napin rivi puhelimella, joten kortti näyttää samalta
+ * eikä rivin korkeus muutu. Liuku (matkustusnapit) on absoluuttinen ja
+ * peittää rivin entiseen tapaan, joten se ei tarvitse omaa sääntöä.
+ */
+.toimintorivi.rivi-yksi .toimintorivi-perus {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.toimintorivi.rivi-yksi .monitoimi-nappi {
+  width: 100%;
+  max-width: 20rem;
+  margin-inline: auto;
+}
 
 /* Pöllön paikka: nappi asuu js/pollo.js:ssä ja siirtyi tänne joka
    piirrolla, kunnes omistajan linjaus 24.8.2026 teki kellunnasta

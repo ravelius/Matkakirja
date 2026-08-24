@@ -676,6 +676,25 @@ const NAPPAIMISTO_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
 /** Valmiskysymyksiä per tilanne (js/packs/pollo-kysymykset.js). */
 const VALMIITA_ENINTAAN = 5;
 
+/*
+ * VALMISKYSYMYKSET POIS TOISTAISEKSI (omistajan pelitestitilaus
+ * 24.8.2026: *"pöllön valmiskysymykset hetkeksi pois"*).
+ *
+ * LIPPU EIKÄ POISTO — sama ratkaisu ja sama syy kuin
+ * POLLO_ALANAPPIRIVISSA-vakiolla: omistaja sanoi "hetkeksi", joten
+ * käsin kirjoitettu pakka (js/packs/pollo-kysymykset.js), sen haku ja
+ * kuplien piirto jäävät koodiin kokonaisina. Tästä tulee true, ja
+ * avauskysymykset palaavat pinnaan ilman muita muutoksia.
+ *
+ * MITÄ TILALLE. Chat toimii muuten ennallaan: kun valmiita ei näytetä,
+ * avaus hakee palvelimen dynaamiset ehdotukset kuten kaikissa niissä
+ * kaupungeissa, joille valmiita ei koskaan kirjoitettukaan (avaa:
+ * `if (!this.naytaValmiit(avain)) this.haeEhdotukset();`). Kirjoitettu
+ * ja saneltu kysymys, vastaus, jatkokysymykset ja luenta ovat
+ * koskemattomia.
+ */
+const VALMISKYSYMYKSET_KAYTOSSA = false;
+
 /**
  * Kaiutin samalla viivakynällä kuin muutkin pöllön kuvakkeet.
  *
@@ -1221,6 +1240,10 @@ class Pollo {
    * @returns {boolean} ovatko valmiskysymykset pinnassa
    */
   naytaValmiit(avain = this.kysymysAvain()) {
+    // Lippu alhaalla (omistaja 24.8.2026: "hetkeksi pois"): pinta jää
+    // alkutekstiin ja keskusteluun, ja kutsuja hakee palvelimen
+    // ehdotukset kuten kaupungeissa ilman valmista pakkaa.
+    if (!VALMISKYSYMYKSET_KAYTOSSA) return false;
     // Tässä kontekstissa on jo kysytty: valmiit koskevat vain
     // keskustelun alkua, dynaamiset jatkokysymykset hoitavat loput.
     if (this.kaytetytTarjonnat.has(avain)) return false;
