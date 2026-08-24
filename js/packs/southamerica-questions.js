@@ -2273,7 +2273,13 @@ export const SOUTHAMERICA_FACTS = {
     'Kaupungin jyrkille rinteille noustaan vinohisseillä, joita rakennettiin 1880-luvulta alkaen kymmeniä.',
     'Panaman kanavan avaaminen 1914 vei satamalta suuren osan sen merkityksestä.',
     {
-      text: 'Rinteille kiipeävä satamakaupunki on täynnä portaita ja hissejä. Kaikki Kap Hornin kiertäneet laivat pysähtyvät täällä; sanotaan että kanava Panamaan lopettaisi sen, mutta sellaista kanavaa ei ole.',
+      // Isoisän ääni on vuodelta 1873, eikä yhtään vinohissiä ollut vielä
+      // olemassa: ensimmäinen (Ascensor Concepción) avattiin 1.12.1883,
+      // kymmenen vuotta myöhemmin (en-Wikipedia "Valparaíso", Funiculars,
+      // luettu 23.8.2026). Aiempi repliikki väitti kaupungin olevan "täynnä
+      // portaita ja hissejä"; hissit vaihdettu rinnepolkuihin. Panaman kanava
+      // -osuus on sen sijaan oikein — kanavaa ei todella ollut 1873.
+      text: 'Rinteille kiipeävä satamakaupunki on täynnä portaita ja rinnepolkuja. Kaikki Kap Hornin kiertäneet laivat pysähtyvät täällä; sanotaan että kanava Panamaan lopettaisi sen, mutta sellaista kanavaa ei ole.',
       voice: 'isoisa',
     },
   ],
