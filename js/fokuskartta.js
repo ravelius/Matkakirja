@@ -35,7 +35,7 @@
  */
 import { el } from './mapart.js';
 import { fokuskarttaUrl, peiliKaytossa } from './media.js';
-import { FOKUS_LISANIMET } from './packs/fokus-grc.js';
+import { FOKUS_LISANIMET, FOKUS_POHJAT } from './packs/fokus-grc.js';
 
 /*
  * Maakohtaiset pohjat käynnin ajan muistissa: 'lauta:ISO' ->
@@ -102,13 +102,18 @@ async function haePohja(iso, lauta) {
   if (HAUT.has(avain)) return HAUT.get(avain);
   const haku = (async () => {
     try {
-      // Katkaisijan sammuttamana ämpäriä ei kysellä lainkaan: pohjalle
-      // ei ole repokopiota, joten muuta reittiä ei ole.
+      // Katkaisijan sammuttamana ämpäriä ei kysellä lainkaan.
       if (!peiliKaytossa('kuvat')) throw new Error('peili pois');
-      const vastaus = await fetch(fokuskarttaUrl(`${iso}.json`), { cache: 'default' });
-      if (!vastaus.ok) throw new Error(String(vastaus.status));
-      const tiedot = await vastaus.json();
-      const b = tiedot?.bbox;
+      /*
+       * RAJAUS LUETAAN REPOSTA (FOKUS_POHJAT), EI ÄMPÄRISTÄ. Ämpärin
+       * r2.dev-osoite ei lähetä CORS-otsakkeita, joten fetch() kaatuisi
+       * selaimessa vaikka kuva latautuu <img>-elementillä — mitattu
+       * tuotannossa 24.8.2026. Kuva pysyy ämpärissä (iso), rajaus
+       * repossa (pieni ja muuttumaton).
+       */
+      const tiedot = FOKUS_POHJAT[iso];
+      if (!tiedot) throw new Error('ei pohjaa');
+      const b = tiedot.bbox;
       if (!(b?.w > 0) || !(b?.h > 0)) throw new Error('rajaus puuttuu');
       /*
        * LAUTA ON TARKISTETTAVA. Rajaus on laudan koordinaateissa, ja
