@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1084 — NELJA UUTTA KAUPUNKILEHTEA: Havanna, Mexico City, New Orleans ja Bogota. Jokaisen faktapohja oli kaynyt lapi riippumattoman tarkistuksen, ja tarkistuksen pakolliset korjaukset on tehty. Tarkista: neljan uuden lehden sivut kannesta matkaoppaaseen',
   'v1083 — MONTEVIDEON KAUPUNKILEHTI: kaupunki, historia ja musiikki; 12 nostoa ja 22 kuvaa. Candombe elavana nykykulttuurina omalla sivullaan. Tarkista: Montevideon lehti ja musiikkisivu',
   'v1082 — LISAA KUVIA -GALLERIA: nahtavyysjutun ja kohdekartan alta aukeaa erillinen galleria, joka hakee kohteesta lisaa AITOJA kuvia seitsemasta avoimesta lahteesta (Commons kategoriahaulla ja geohaulla, Openverse, Library of Congress, kolme museota). Vain PD ja CC BY/BY-SA, tekija ja lisenssi nakyvat. Ilman verkkoa nappia ei ole. Tarkista: nahtavyysjutun Lisaa kuvia -nappi, kohdekartan vastaava, ja etta lehden omat kuvat toimivat ennallaan',
   'v1081 — NELJA KORJATTUA HEROKUVAA: silmatarkistus vertasi 54 generoitua kuvaa oikeisiin Commons-valokuviin ja loysi nelja vaaraa. Kasgarin mausoleumi, Mekan Jabal al-Nour, Petran kuningashaudat ja Damaskos (kohde vaihdettu suqista linnoitukseen) generoitu uusiksi viitekuvilla. Tarkista: naiden neljan kaupungin etusivukarusellit',
@@ -450,6 +451,10 @@ export const TESTATTAVAA = [
 export const TUOREET = {
   paivitetty: '23.8.2026 ilta',
   valmiit: [
+    { id: 'havanna', nimi: 'Havanna', versio: 'v1084' },
+    { id: 'mexico', nimi: 'Mexico City', versio: 'v1084' },
+    { id: 'neworleans', nimi: 'New Orleans', versio: 'v1084' },
+    { id: 'bogota', nimi: 'Bogotá', versio: 'v1084' },
     { id: 'montevideo', nimi: 'Montevideo', versio: 'v1083' },
     { id: 'quito', nimi: 'Quito', versio: 'v1077' },
     { id: 'losangeles', nimi: 'Los Angeles', versio: 'v1077' },

@@ -46,7 +46,13 @@ const sulku = avaus === '[' ? ']' : '}';
 let kommenttiAlku = alkuRivi;
 for (let i = alkuRivi - 1; i >= 0; i -= 1) {
   const r = lahde[i];
-  if (r.startsWith('   *') || r === '  /*') { kommenttiAlku = i; if (r === '  /*') break; continue; }
+  /*
+   * Kommenttilohko voi alkaa joko rivilla '  /*' yksin TAI muodossa
+   * '  /* HAVANNA (24.8.2026). ...' eli tekstin kanssa samalla rivilla.
+   * Vain edellinen tunnistettiin aiemmin, jolloin poimittu lohko alkoi
+   * kesken kommentin ja tuotti syntaksivirheen. Molemmat kelpaavat nyt.
+   */
+  if (r.startsWith('   *') || r.startsWith('  /*')) { kommenttiAlku = i; if (r.startsWith('  /*')) break; continue; }
   break;
 }
 const loppuRivi = laske(lahde, alkuRivi, avaus, sulku);
