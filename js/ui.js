@@ -128,6 +128,7 @@ import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
 import {
   fokusvirtaOhittaaLehden, fokusvirtaSaapuminen, fokusvirtaLukitseeLehden,
   fokusvirtaMatkakirja, fokusvirtaMerkintaLuettu, fokusvirtaLaattaNakyy,
+  fokusvirtaKohtaaminenPisteessa, fokusvirtaLehtivinkki,
   paivitaFokuskuvat, nollaaFokuskuvat,
 } from './fokusvirta.js';
 
@@ -243,6 +244,12 @@ import { INTRO_SPACE, Kartta } from './kartta.js';
 import { paivitaFokuskartta, paivitaFokusNimet, nollaaFokuskartta } from './fokuskartta.js';
 // Fokuslehden klikattavat karttakohteet ja niiden pop-up (js/fokuskohteet.js).
 import { paivitaFokuskohteet, nollaaFokuskohteet } from './fokuskohteet.js';
+/*
+ * Kevyen kulun vihreä kohtaamispiste (js/fokuspiste.js). Sama kytkentä
+ * kuin kohdemerkeillä: päivitys aina kun näkymä on asettunut, nollaus
+ * laudan vaihdossa.
+ */
+import { paivitaFokuspiste, nollaaFokuspiste } from './fokuspiste.js';
 /*
  * Fokusnäkymän RUUTUUN ankkuroidut atlas-elementit: mittajana, maan
  * kartuutsi ja sen takaa liukuva maataulu (omistaja 25.8.2026). Ne
@@ -3675,6 +3682,8 @@ export class UI {
     paivitaFokuskuvat(this);
     // Kartan kohdemerkit ovat samoin kiinteän kokoisia ruudulla.
     paivitaFokuskohteet(this);
+    // Sama koskee kevyen kulun vihreää kohtaamispistettä.
+    paivitaFokuspiste(this);
     /*
      * Mittajana on ruudun ominaisuus eikä kuvan: se on laskettava
      * uudelleen aina kun zoomi tai panorointi on ASETTUNUT. Tämä on
@@ -4511,6 +4520,7 @@ export class UI {
     this.fokuskuvatKerros = null;
     nollaaFokuskuvat(this);
     nollaaFokuskohteet(this);
+    nollaaFokuspiste(this);
     // Uusi lauta, tyhjä kerros: muistettu näkymätunniste ei saa jäädä
     // voimaan, tai nimet jäisivät piirtymättä kun sama näkymä palaa.
     this.maastonimiTunniste = null;
@@ -5390,6 +5400,8 @@ export class UI {
     this.paivitaFokusPallot();
     // Viides kerros: lehden klikattavat karttakohteet (js/fokuskohteet.js).
     paivitaFokuskohteet(this);
+    // Kuudes kerros: kevyen kulun vihreä kohtaamispiste (js/fokuspiste.js).
+    paivitaFokuspiste(this);
     /*
      * Viides kerros: ruutuun ankkuroidut mitat (mittajana ja
      * kartuutsi). Kutsu on tässä samasta syystä kuin pallojen: pohja
@@ -7760,6 +7772,14 @@ export class UI {
    */
   tehtavaNapinTila(city) {
     const { game } = this;
+    /*
+     * KEVYT KULKU: kohtaaminen tavataan kartalta, ei lehden pohjalta
+     * (Raamattu, KEVYT KULKU -KOKEILU: *"kaupunkilehden ALIN KOHTA
+     * (josta pääsi tapaamaan henkilön) POIS"*). Perustelu ja umpikujan
+     * esto ovat yhdessä paikassa: js/fokusvirta.js
+     * fokusvirtaKohtaaminenPisteessa.
+     */
+    if (fokusvirtaKohtaaminenPisteessa(this, city)) return null;
     const kaari = game.kaariTilanne?.(city.id);
     const tapaa = KOHTAAMISET[city.id]?.nappi
       ?? (kaari?.kohde?.nimi ? `Tapaa ${kaari.kohde.nimi}` : 'Etsi kätkö');
@@ -7922,6 +7942,19 @@ export class UI {
     const arkki = this.arrivalDialog.querySelector('.dialog-card');
     // Sivujen selaus pyyhkäisyllä ja nuolinäppäimillä.
     if (arkki) kytkeTutkiSelaus(this, arkki);
+    /*
+     * PÖLLÖN VINKKI LEHDEN AVAUTUESSA (kevyt kulku -kokeilu, Raamattu:
+     * *"kun kaupunkilehti AUKEAA, pöllö vinkkaa MAHDOLLISIMMAN
+     * LYHYESTI minitehtävästä"*). Kupla mitoitetaan kelluvan pöllönapin
+     * todellisesta paikasta, ja nappi siirtyy modaalin sisään vasta kun
+     * lehti on auki (js/pollo.js kiinnitysKohde) — siksi kutsu odottaa
+     * seuraavaa kehystä eikä lähde tästä samasta.
+     */
+    globalThis.requestAnimationFrame?.(() => {
+      if (this.dead || !this.arrivalDialog.open) return;
+      if (this.lehtitila.arrivalShownFor !== city.id) return;
+      fokusvirtaLehtivinkki(this, city);
+    });
     if (!city.wiki) return;
 
     Promise.all([cachedSummary(city.wiki), cachedImage(city.wiki)]).then(([summary, image]) => {
@@ -8907,6 +8940,15 @@ export class UI {
    * ui-olion kautta — suora tuonti js/lehti.js:stä tekisi
    * tuontisyklin (lehti tuo lukijan, ja pöllö/lukija saavat ui:n).
    */
+  /*
+   * Ohut delegaattori: kevyen kulun lehtitehtävä (js/fokustehtavat.js)
+   * sytyttää vihreän pisteen heti oikeasta vastauksesta, ja se elää
+   * kartalla eikä lehdessä. Suora tuonti fokustehtavat.js:stä tekisi
+   * tuontisyklin (fokuspiste tuo fokusvirran, fokusvirta fokustehtävät),
+   * joten kutsu kulkee ui-olion kautta kuten lehden muutkin.
+   */
+  paivitaFokuspiste() { return paivitaFokuspiste(this); }
+
   naytaTutkiSivu(indeksi, asetukset) { return naytaTutkiSivu(this, indeksi, asetukset); }
 
   avaaMaalehti(iso, asetukset) { return avaaMaalehti(this, iso, asetukset); }
