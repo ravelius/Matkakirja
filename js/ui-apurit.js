@@ -838,6 +838,73 @@ export function asetaKehittajaTila(paalla) {
   }
 }
 
+/*
+ * FOKUSMOODI (omistajan linjaus 24.8.2026, Raamatun osio "Fokusmoodi").
+ *
+ * Fokusmoodi on PELIN OLETUSTILA: tietoa, kysymyksiä ja valintoja
+ * niukasti kerrallaan, ja kartalla vain se maa, jossa matka juuri on.
+ * Siksi puuttuva avain tarkoittaa PÄÄLLÄ — tavallinen pelaaja ei
+ * koskaan näe kytkintä eikä siis koskaan kirjoita avainta.
+ *
+ * Poiskytkentä on kehittäjän vertailukeino ("miltä vanha peli näytti"),
+ * ja se kirjoittaa avaimeen nimenomaan '0'. Arvo on siis kolmiarvoinen
+ * vain näennäisesti: kaikki muu kuin '0' on päällä, joten kelvoton tai
+ * vanha arvo palauttaa oletuksen eikä jätä peliä puolitilaan.
+ *
+ * Sama kaava kuin KEHITTAJA_AVAIMELLA yllä: oma avain, try/catch ja ei
+ * riviäkään pelitallennuksessa. Fokusmoodi on laitteen esitystapa eikä
+ * pelitilanteen osa, eikä sen pidä matkustaa tallennuksen mukana.
+ */
+const FOKUSMOODI_AVAIN = 'matkakirja-fokusmoodi';
+
+export function fokusmoodiPaalla() {
+  try {
+    return localStorage.getItem(FOKUSMOODI_AVAIN) !== '0';
+  } catch {
+    return true; // yksityinen selaus: oletus on päällä
+  }
+}
+
+export function asetaFokusmoodi(paalla) {
+  try {
+    if (paalla) localStorage.removeItem(FOKUSMOODI_AVAIN);
+    else localStorage.setItem(FOKUSMOODI_AVAIN, '0');
+  } catch {
+    /* yksityinen selaus: tila jää vain tälle istunnolle */
+  }
+}
+
+/*
+ * SUMENNUSTEN PIKAKYTKIN (kehittäjäasetus, omistaja 24.8.2026).
+ *
+ * Fokusmoodissa on kaksi erillistä asiaa: MITÄ kartalta näytetään
+ * (käymättömien maiden datakerros pois) ja MILTÄ loppu näyttää
+ * (himmennys ja epäterävyys). Ennen–jälkeen-vertailua varten
+ * jälkimmäinen tarvitsee oman kytkimensä: sumennus pois, muu
+ * fokusmoodi ennallaan.
+ *
+ * Oletus on päällä samoin perustein kuin fokusmoodilla itselläänkin,
+ * ja arvo '0' tarkoittaa pois. Kytkin näkyy vain kehittäjätilassa.
+ */
+const FOKUSSUMENNUS_AVAIN = 'matkakirja-fokussumennus';
+
+export function fokusSumennusPaalla() {
+  try {
+    return localStorage.getItem(FOKUSSUMENNUS_AVAIN) !== '0';
+  } catch {
+    return true; // yksityinen selaus: oletus on päällä
+  }
+}
+
+export function asetaFokusSumennus(paalla) {
+  try {
+    if (paalla) localStorage.removeItem(FOKUSSUMENNUS_AVAIN);
+    else localStorage.setItem(FOKUSSUMENNUS_AVAIN, '0');
+  } catch {
+    /* yksityinen selaus: tila jää vain tälle istunnolle */
+  }
+}
+
 // Tiivistelmät ja kuvat haetaan kerran per artikkeli: sama kuva näkyy
 // sekä saapumiskortissa että Lue lisää -dialogissa ilman uutta hakua.
 const wikiSummaryCache = new Map();

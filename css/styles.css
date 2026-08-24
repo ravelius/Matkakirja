@@ -595,6 +595,47 @@ button, .brand, .turn-pill, .fact-card h2 {
   flex: 0 0 auto;
 }
 
+/*
+ * FOKUSMOODIN KYTKIMET YLÄRIVILLÄ (omistaja 24.8.2026, index.html
+ * #fokus-kytkimet). Kotelo näkyy vain kehittäjätilassa, joten se ei saa
+ * varata ylärivistä tilaa muilta: `hidden` piilottaa sen kokonaan, ja
+ * `flex: 0 0 auto` estää sitä venymästä kun se on näkyvissä.
+ *
+ * Ulkoasu on tarkoituksella vaatimaton — pieni kirjasin, ohut kehys,
+ * sama pillerin muoto kuin matkalaukulla. Nämä ovat mittatikkuja eivätkä
+ * pelin nappeja, eivätkä ne saa kilpailla logon tai laukun kanssa.
+ * Päällä oleva kytkin erottuu kullalla (aria-pressed="true"), pois
+ * kytketty jää himmeäksi: tila luetaan yhdellä vilkaisulla.
+ */
+.fokus-kytkimet {
+  display: flex;
+  gap: 0.3rem;
+  flex: 0 0 auto;
+}
+
+.fokus-kytkimet[hidden] { display: none; }
+
+.fokus-kytkin {
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fokus-kytkin[aria-pressed='true'] {
+  color: var(--kulta, #eab84e);
+  border-color: var(--kulta, #eab84e);
+}
+
+.fokus-kytkin:hover,
+.fokus-kytkin:focus-visible { border-color: var(--kulta, #eab84e); }
+
 
 /*
  * Muutoslokin omat toiminnot: päivitys ja kehittäjätila.
