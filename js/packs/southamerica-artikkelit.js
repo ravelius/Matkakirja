@@ -410,4 +410,71 @@ export const SOUTHAMERICA_ARTIKKELIT = {
       + 'karnevaali on vuoden suurin juhla, ja sen näkyvin osa on candombe-'
       + 'rumpuryhmien llamadas-kulkue.',
   },
+  /*
+   * BOGOTÁ (24.8.2026). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain bogota). Lähdeaineistona
+   * ovat docs/mantereet-tyoaineisto/faktapohja-bogota.md ja sen
+   * RIIPPUMATON TARKISTUS docs/mantereet-tyoaineisto/tarkistus-bogota.md,
+   * joka voittaa ristiriidassa; lisäksi jokainen väite on luettu itse
+   * en-Wikipedian raakatekstistä ("Bogotá", "Plaza de Bolívar",
+   * "National Museum of Colombia", "TransMilenio", "Ciclovía").
+   * Avain on wiki-otsikko 'Bogotá', sama jonka js/packs/southamerica.js
+   * antaa kaupungille sekä wiki- että näyttönimeksi.
+   * Väkiluvut ovat "Bogotá"-artikkelin infoboxista (population_total
+   * 8 034 649 vuodelta 2022, population_metro 11 658 211). Korkeus
+   * 2 640 m on infoboxin ja Geography-osion yhtenevä luku; johdannon
+   * "kolmanneksi korkein pääkaupunki" on artikkelin johdannosta ja
+   * "suurin kaupunki omalla korkeudellaan" Geography-osiosta — nämä
+   * eivät ole ristiriidassa, koska La Paz ja Quito ovat korkeammalla
+   * mutta pienempiä. Vuoden 1873 kulma kantaa koko lehden: isoisän
+   * matka-aikaan Kansallismuseon nykyinen rakennus (Panóptico-vankila)
+   * oli juuri valmistunut ja kaupunki eli vielä eristyksissä.
+   * Sisältölinjaus on spec-mantereet.md:n E-Amerikka-osio: ei
+   * nykypolitiikkaa, ei huumekauppaa, ei väkivaltaa.
+   */
+  'Bogotá': {
+    intro: 'Bogotá on Kolumbian pääkaupunki ja maan suurin kaupunki. Se '
+      + 'makaa Andien Itäisen Kordilleerin ylätasangolla keskimäärin '
+      + '2 640 metrin korkeudessa ja on maailman kolmanneksi korkein '
+      + 'pääkaupunki. Yhtään kaupunkia, joka olisi samalla sekä '
+      + 'korkeammalla että väkirikkaampi, ei ole. Idässä kaupunkia '
+      + 'rajaavat jyrkät Itäkukkulat, joiden harjalla kohoavat '
+      + 'Monserrate ja Guadalupe.'
+      + '\n\n'
+      + 'Ylätasanko oli muiscojen maata, ja espanjalaisten saapuessa '
+      + 'täällä arvioidaan asuneen puoli miljoonaa ihmistä. **Gonzalo '
+      + 'Jiménez de Quesada leiriytyi paikalle elokuussa 1538, mutta '
+      + 'virallinen perustaminen tehtiin vasta huhtikuussa 1539.** '
+      + 'Kaupunki kantoi nimeä Santa Fé lähes kolmesataa vuotta, kunnes '
+      + 'Simón Bolívar kastoi sen 1819 uudelleen Bogotáksi muiscojen '
+      + 'kunniaksi.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Bogotá oli yhä pieni ja eristynyt '
+      + 'vuoristopääkaupunki. **Kunnollinen yhteys Magdalena-joelle ja '
+      + 'sieltä Karibialle syntyi vasta vuosisadan lopulla**, ja '
+      + 'väkiluku jäi kauas sadastatuhannesta. Kansallismuseon nykyinen '
+      + 'rakennus oli valmistunut vuotta aiemmin – vankilaksi.',
+    teksti: 'Bogotá on Kolumbian keskiosassa, Andien Itäisen Kordilleerin '
+      + 'ylätasangolla eli Bogotán savannilla. Kaupunki peittää 1 587 '
+      + 'neliökilometriä ja jakautuu kahteenkymmeneen kaupunginosaan. '
+      + 'Idässä nousevat Itäkukkulat, etelässä leviää maailman laajin '
+      + 'yhtenäinen páramo-ylänkö Sumapaz, ja Bogotá-joki halkoo '
+      + 'tasankoa koillisesta lounaaseen.'
+      + '\n\n'
+      + 'Espanjalaiset perustivat kaupungin muiscojen maille 1538–1539, '
+      + 'ja vuoden 1717 jälkeen siitä tuli Uuden Granadan '
+      + 'varakuninkuuden pääkaupunki. Tasavallan aikana kaupunki sai '
+      + 'omat laitoksensa: Kansallismuseo perustettiin 1823, katedraali '
+      + 'valmistui samana vuonna ja Bolívarin patsas pystytettiin 1846. '
+      + 'Kasvu kiihtyi vasta 1870-luvulta lähtien: vuonna 1793 lasketut '
+      + '20 000 asukasta olivat 1912 kasvaneet noin 117 000:een.'
+      + '\n\n'
+      + 'Nykyään kaupungissa asuu noin kahdeksan miljoonaa ja '
+      + 'metropolialueella lähes kaksitoista miljoonaa ihmistä. '
+      + 'Joukkoliikenne nojaa vuonna 2000 avattuun '
+      + 'TransMilenio-pikabussijärjestelmään, jossa on 143 asemaa. '
+      + 'Sunnuntaisin yli 120 kilometriä katuja suljetaan autoilta '
+      + 'pyöräilijöille ja kävelijöille, ja lentoasema kantaa El '
+      + 'Doradon legendan nimeä.',
+  },
 };

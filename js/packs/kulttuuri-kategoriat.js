@@ -64607,4 +64607,2413 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * HAVANNA (24.8.2026). Lauta northamerica, kaupunki-id havanna,
+   * wiki-nimi "Havanna" (js/packs/northamerica.js rivi 153).
+   * Lähdeaineisto: docs/mantereet-tyoaineisto/faktapohja-havanna.md ja
+   * sen RIIPPUMATON TARKISTUS tarkistus-havanna.md (commit cac64b34),
+   * joka voittaa ristiriidassa. Jokainen tekstiin mennyt väite on
+   * lisäksi luettu itse en-Wikipedian raakatekstistä (action=raw:
+   * "Havana", "Old Havana", "La Cabaña", "Castillo de los Tres Reyes
+   * Del Morro", "Castillo de la Real Fuerza", "Castillo San Salvador
+   * de la Punta", "Malecón, Havana", "National Railway Company of
+   * Cuba", "Son cubano", "Yank tank") 23.–24.8.2026.
+   *
+   * TARKISTUKSEN PAKOLLISET KORJAUKSET, MOLEMMAT TOTEUTETTU:
+   * 1. VIITTAUSVIRHE L2-nostossa. Faktapohja lähetti lukijan osioon 7
+   *    kohtaan 4 selvittämään "La Cabañan vuosilukuristiriitaa", mutta
+   *    se kohta käsittelee rautatien pituutta eikä mikään osion kohta
+   *    selitä La Cabañan asiaa. Ristiriita on todellinen ja se on nyt
+   *    selvitetty tässä: "Havana"-artikkelin Arkkitehtuuri-osio antaa
+   *    La Cabañan vuosiksi 1558–1577 ja liittää siihen Battista
+   *    Antonellin nimen, mutta ne vuodet kuuluvat CASTILLO DE LA REAL
+   *    FUERZALLE (sama kappale alkaa kuvatekstillä "Castle of la Real
+   *    Fuerza, 1577", ja Real Fuerzan oma artikkeli antaa
+   *    groundbreaking 1558 / completion 1577). La Cabañan rakentaminen
+   *    alkoi vasta 1763 ja päättyi 1774 (Havana-artikkelin Seven
+   *    Years' War -osio sekä La Cabañan oma infobox). Lehti käyttää
+   *    siis vuosia 1558–1577 vain Real Fuerzasta (nosto H1) ja La
+   *    Cabañasta vuosia 1763–1774 (nosto L3); virheellistä yhdistelmää
+   *    ei toisteta missään. Antonelli mainitaan Morron ja Puntan
+   *    yhteydessä, jonne hän lähteiden mukaan kuuluu.
+   * 2. L3-NOSTON KOKOLUOKKAVÄITE on kirjoitettu auki lukijalle, koska
+   *    lähdeartikkeli antaa kaksi keskenään ristiriitaista väitettä.
+   *    "Havana" sanoo La Cabañan olleen Uuden maailman kolmanneksi
+   *    suurin espanjalainen linnoitus San Juanin Castillo San
+   *    Cristóbalin ja Castillo San Felipe del Morron jälkeen; La
+   *    Cabañan OMA artikkeli sanoo ingressissään "the third-largest in
+   *    the Americas" mutta historiaosiossaan "the second-largest
+   *    colonial military installation in the New World ... after the
+   *    St. Felipe de Barajas fortification at Cartagena, Colombia".
+   *    Nosto L3 kertoo molemmat sijaluvut ja molemmat vertailukohteet
+   *    eikä valitse puolta.
+   *
+   * MUUT WIKIPEDIAN SISÄISET RISTIRIIDAT, KERROTTU LUKIJALLE AUKI:
+   * - Kaupunginmuurin valmistumisvuosi: Historia-osio (17th century)
+   *   sanoo "completed by 1740", Arkkitehtuuri-osio "completed in
+   *   1767". Nosto HAV3 antaa molemmat vuodet.
+   * - Havanna–Bejucal-radan pituus: "Havana" sanoo 51 km, "National
+   *   Railway Company of Cuba" 27,5 km ja 17 km:n jatke Güinesiin
+   *   1839. Nosto HAV4 antaa molemmat luvut.
+   * - Morron valmistumisvuosi: Morron oma infobox antaa 1589,
+   *   "Havana"-artikkelin Arkkitehtuuri-osio välin 1589–1630 ja
+   *   Morron artikkelin karttakuvateksti alkuvuoden 1585. Nosto L2
+   *   sanoo työn alkaneen 1500-luvun lopulla ja jatkuneen 1600-luvun
+   *   puolelle eikä väitä yhtä vuotta ainoaksi.
+   * - Antonellin etunimi: "Castillo San Salvador de la Punta" sanoo
+   *   Puntan työt aloittaneen insinöörin olleen "Giovanni Battista
+   *   Antonelli", mutta se on nimisekaannus. Oma artikkeli "Battista
+   *   Antonelli" kertoo, että Havannan linnoitukset suunnitteli
+   *   Battista Antonelli (1547–1616) ja että hänen veljensä Giovanni
+   *   Battista Antonelli kuoli Toledossa jo 1588 eikä siis voinut olla
+   *   Havannassa 1590. Lehti nimeää Antonellin vain nostossa L2 ja
+   *   käyttää muotoa "Battista Antonelli"; L1 kertoo Puntan vaiheet
+   *   ilman insinöörin nimeä.
+   * - 2019 tornadon uhriluvut ja päivämäärä ovat artikkelin sisällä
+   *   ristiriitaiset (History vs. Climate). Tapahtumaa EI käytetä
+   *   missään, kuten faktapohjakin päätti.
+   *
+   * KULTTUURIVISA (js/packs/northamerica-questions.js, avain havanna)
+   * kysyy viisi asiaa: Kuuba pääkaupunkina, 1950-luvun amerikanautot,
+   * Malecón rantabulevardina, kuubalainen son/salsa ja satamaa
+   * vartioivat linnoitukset. Päätoimittajan linjaus: vastausten PITÄÄ
+   * löytyä lehdestä, mutta EI visan omalla sanamuodolla. Siksi jokainen
+   * viidestä on käsitelty eri näkökulmasta ja tarkemmilla luvuilla:
+   * (a) pääkaupunkius tulee vuosilukujen kautta (saaren pääkaupunki
+   * 1552, itsenäisen tasavallan pääkaupunki 1902, nosto H4 ja etusivun
+   * intro); (b) autot paikallisilla nimillään almendrón ja máquina,
+   * arviomäärä ja moottorinvaihdot, oppaan jakso 1; (c) Malecón
+   * virallisella nimellään Avenida de Maceo, pituus, rakennusvuodet ja
+   * tehtävä merta vastaan, oppaan jakso 2 — sanaa "rantabulevardi" ei
+   * käytetä; (d) son itäisen Kuuban ylängöiltä, saapuminen Havannaan
+   * 1909, ensilevytykset 1917 ja tie salsaan New Yorkissa 1960-luvulla,
+   * oppaan jakso 3; (e) linnoitukset nimillä, vuosiluvuilla ja
+   * rakentajilla omalla sivullaan, ei ympäripyöreänä "linnoituksia".
+   * Kumpikaan minitehtävä ei toista visaa: historian tehtävä kysyy
+   * Floridan luovutusta (vastaus nostossa H3) ja linnoitusten tehtävä
+   * satamansuun poikki 1630 vedettyä kupariketjua (vastaus nostossa
+   * L2). Molempien vastaus on samalla sivulla.
+   *
+   * SUDENKUOPPA SEURAAVALLE (löytyi testiajossa): linnoituksen nimi
+   * PUNTA osuu tests/lehdet.test.mjs:n palkkiovahtiin, joka kieltää
+   * sanan "punta" minitehtävän teksteissä — pelin valuutta on punta.
+   * Nostoissa nimi saa olla, mutta minitehtävän kysymys kiertää sen
+   * ("kahden vartiolinnan välille").
+   *
+   * SISÄLTÖLINJAUS (Raamattu, pilarit 3 ja 4; spec-mantereet.md):
+   * Havannalle EI tehdä uutisosiota (sama ryhmä kuin Venäjän kaupungit
+   * ja Kabul). Nykypolitiikka ja -sota on jätetty kokonaan pois;
+   * autojen kohdalla sanotaan vain neutraali kauppahistoria ilman
+   * osapuolikehystä. Orjuutta ei käsitellä nostoissa, koska aihe
+   * vaatisi oman huolellisen käsittelynsä eikä sitä ollut tarkistettu
+   * faktapohjassa sen tarkemmin; sitä ei myöskään piilotella —
+   * siirtomaa-ajan väkivalta (merirosvojen polttamat kaupungit,
+   * piiritys 1762, USS Mainen uppoaminen) kerrotaan tapahtumina
+   * neutraalisti ilman yksityiskohtien korostusta. La Cabañan
+   * 1900-luvun käyttö vankilana on jätetty pois nykypolitiikkana.
+   *
+   * KUVAT: 22 kuvaa, haettu Commonsin rajapinnasta kategorioista
+   * (Views of Havana from Castillo del Morro, Views of Havana from San
+   * Carlos de la Cabaña, Skylines of Havana, El Malecón, Fortaleza de
+   * San Carlos de la Cabaña, Castillo de los Tres Reyes del Morro,
+   * Castillo de San Salvador de la Punta, Plaza Vieja Havana,
+   * Historical images of Havana, Rail transport in Cuba in the 19th
+   * century, Automobiles in Cuba). Lisenssi ja tekijä on luettu
+   * rajapinnan extmetadatasta, ja JOKAINEN kuva on katsottu silmin 900
+   * pikselin esikatseluna. Avauskuvat ovat kolme laajaa yleiskuvaa eri
+   * puolilta: Morron valleilta lahden suun yli (itä), La Cabañan
+   * kukkulalta koko rantaviivan yli (kaakko) ja Malecónin kallioilta
+   * auringonlaskuun Vedadon siluettia kohti (länsi).
+   *
+   * EI KÖYHYYDEN ESTETISOINTIA EIKÄ RAPISTUMISROMANTIIKKAA (toimeksi-
+   * annon nimenomainen ehto; Havannasta on Commonsissa runsaasti juuri
+   * sitä kuvastoa). Hylätyt: "A street in Centro Habana ... 03-16-2019
+   * 120" (kuvan pääsanoma on sortuvat julkisivut); "Castillo de San
+   * Carlos de la Cabaña, Havana, Cuba (Unsplash)" (lahonnut ikkunan-
+   * luukku, ei linnoitusta).
+   *
+   * MUUT KUVAHYLKÄYKSET (syyt): "Fortaleza La Cabana (25805355418)"
+   * ja "La Habana (33637312010)" — kuvaajan vesileima "© 2017 by
+   * Antonio Schubert" ja lisätty kehys (saman kuvaajan kansikuva
+   * "Centro Habana y Malecón" tarkistettiin erikseen: siinä ei ole
+   * vesileimaa eikä kehystä); "View from National Hotel of Cuba -
+   * panoramio" — kuvan päälle lisätty musta kehys ja voimakas
+   * HDR-käsittely; "La havane plaza vieja" — aukiolla on kymmeniä
+   * koulupukuisia lapsia tunnistettavine kasvoineen; "Plaza de la
+   * Catedral of Havana (Jan 2014)" ja "Plaza de la Catedral, Habana
+   * Vieja ... Agosto de 2016 01" — etualalla iso joukko ihmisiä kasvot
+   * kameraan; "Obispo Street Old Havana" — muusikot istuvat lähellä
+   * kameraa kasvot näkyvissä (olisi ollut oppaan musiikkijakson
+   * luontevin kuva); "Havanna Zentrum 07" — lapsen kasvot vasemmassa
+   * laidassa; "El Capitolio de La Habana (Dome and front view, Jan
+   * 2014)" — alalaidassa rivi ihmisiä lähietäisyydellä (tilalle sama
+   * kuvaaja, pelkkä kupoli); "Castillo de los Tres Santos Reyes Magnos
+   * del Morro 01" — kuusi ihmistä etualan kalliolla; "Fortaleza de San
+   * Carlos de la Cabaña desde el malecón 01" — kuvattu lasin läpi,
+   * kohde jää pieneksi kahvilaterassin taakse; "A prospect of the Moro
+   * Castle taken within the entrance of the harbour LCCN2003670607" —
+   * marginaalissa kirjaston leima "OCT 23 1907 Library of Congress" ja
+   * lyijykynämerkintöjä eli arkistomerkintöjä kuvan päällä;
+   * "Jacquesdesores" (de Soresin hyökkäys 1555) — vain 265 × 214 px.
+   *
+   * KUVAPOIKKEUS: kolmessa vanhassa painetussa teoksessa on niiden OMA
+   * litera, joka selitetään kuvatekstissä — 1671 kuparipiirroksen
+   * koristeltu nimikirjoitus HAVANA, Vingboonsin näkymän hollannin-
+   * kielinen otsikkorivi ja 1896 lehtikuvan alle painettu lehden oma
+   * kuvateksti valokuvaajan nimineen. Sama poikkeus kuin Quiton
+   * aikalaismaalauksessa ja Liman 1744-kartassa.
+   *
+   * AIHETOISTO (perusteltu ja kirjattu): Malecón näkyy neljässä
+   * kuvassa (kansikuva hämärässä ylhäältä, avauskuva La Cabañan
+   * suunnasta, oppaan jakson 1 auto ja jakson 2 aalto) — eri
+   * tiedostot, eri kuvakulmat ja eri jutut, ja se on kaupungin
+   * tunnetuin näkymä. Morron linna esiintyy kahdesti: avauskuvassa se
+   * on kuvauspaikka ja nostossa L2 kohde. 1600-luvun satamanäkymiä on
+   * kaksi (1671 kuparipiirros nostossa HAV2 ja Vingboonsin vesiväri
+   * nostossa H2) — eri tekniikka, eri kuvakulma ja eri juttu, ja
+   * kummallekin vuosisadalle löytyi vain nämä riittävän suuret
+   * PD-vedokset. Yksikään tiedostonimi ei toistu.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä (Open-Meteon normaaleja ei haettu, eikä lukuja keksitty).
+   * Oppaan jakso 5 nojaa siis en-Wikipedian Havana-artikkelin
+   * Climate-osioon ja Casa Blancan aseman 1991–2020-taulukkoon ja
+   * SANOO SEN ÄÄNEEN (Samarkandin, Quiton ja Liman malli).
+   * Mittauspiste olisi keskusta 23,1367 N / 82,3589 W.
+   *
+   * KUVATEKSTIT: selite kertoo kohteesta yhdellä virkkeellä.
+   */
+  havanna: [
+    {
+      id: 'kaupunki',
+      nimi: 'Havanna',
+      johdanto: 'Kuuban pääkaupunki nousi kapean satamansuun rannalle '
+        + '1519, ja Espanjan aarrelaivastot kokoontuivat sen lahdelle. '
+        + 'Isoisän matkan aikaan kaupunginmuurit oli juuri purettu ja '
+        + 'hevosraitiovaunu kulki kaduilla.',
+      kansikuvat: [
+        {
+          tiedosto: 'Centro Habana y Malecón (33618061061).jpg',
+          selite: 'Malecónin rantaväylä kaartaa Centro Habanan tiiviiden '
+            + 'korttelien editse kohti sataman suuta.',
+          lahde: 'Antonio Schubert from Rio de Janeiro, Brasil, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Havanna Zentrum 01.jpg',
+          selite: 'Plaza Viejan laidalla seisoo siirtomaa-ajan palatseja, '
+            + 'joiden holvikäytävät ja parvekkeet reunustavat mukulakivistä '
+            + 'aukiota.',
+          lahde: 'Burkhard Mücke, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Puerto de la habana. - panoramio.jpg',
+          selite: 'La Cabañan valleilta katsottuna Havannan sisäsatama '
+            + 'jatkuu laitureineen syvälle lahden pohjukkaan.',
+          lahde: 'carlos adan, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Skyline Havanna von Castillo del Morro Havanna.jpg',
+          selite: 'Morron linnan valleilta lahden suun yli näkyy kaupungin '
+            + 'siluetti vastarannalla.',
+          lahde: 'Herbert wie, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Vista Havana Fortalesa de San Carlos de la Cabaña.JPG',
+          selite: 'La Cabañan kukkulalta avautuu koko rantaviiva Máximo '
+            + 'Gómezin muistomerkiltä Puntan linnoituksen ohi avomerelle.',
+          lahde: 'Mmoyaq, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Havana - Cuba - 2894.jpg',
+          selite: 'Auringonlaskun aikaan Vedadon tornitalot ja Hotel '
+            + 'Nacional piirtyvät Malecónin takana meren yli.',
+          lahde: 'Jorge Royan, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaupunki joka siirrettiin kahdesti',
+          tiedosto: '2012-El Templete Havanna anagoria.JPG',
+          teksti: 'Diego Velázquez perusti Havannan 1514 Kuuban '
+            + 'etelärannikolle Mayabeque-joen suulle, 69 kilometriä '
+            + 'nykyisestä paikasta. Asutus epäonnistui, koska maa oli '
+            + 'matalaa ja soista. Vuosina 1514–1519 espanjalaiset '
+            + 'kokeilivat myös pohjoisrannikkoa, muun muassa La Chorreraa '
+            + 'Almendares-joen suulla – siitä kasvoivat myöhemmin Vedado ja '
+            + 'Miramar. Lopulta kaupunki siirtyi 16. marraskuuta 1519 '
+            + 'Puerto de Carenasin rannalle, ja ratkaiseva syy oli sataman '
+            + 'laatu. Pánfilo de Narváez antoi kuudenneksi Kuubaan '
+            + 'perustetulle kaupungille nimen San Cristóbal de la Habana.',
+          selite: 'El Templeten pieni pylvästemppeli seisoo Plaza de '
+            + 'Armasin laidalla sillä paikalla, jolta kaupungin nykyinen '
+            + 'sijainti sai alkunsa.',
+          lahde: 'Anagoria, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'El Templete',
+        },
+        {
+          otsikko: 'Uuden maailman avain',
+          tiedosto: 'Atlas Van der Hagen-KW1049B13 081-Panorama van- HAVANA.jpeg',
+          teksti: 'Havanna ohitti Santiagon jo 1500-luvun puolivälissä '
+            + 'satamansa ansiosta ja nousi saaren pääkaupungiksi 1552. '
+            + 'Kuningas Filip II myönsi sille kaupungin arvonimen 20. '
+            + 'joulukuuta 1592, ja myöhemmin kruunu nimesi sen virallisesti '
+            + '"Uuden maailman avaimeksi ja Länsi-Intian muuriksi". Nimitys '
+            + 'ei ollut liioittelua: kaikkialta Uudesta maailmasta tulleet '
+            + 'laivat toivat lastinsa ensin Havannaan, josta laivasto vei '
+            + 'sen Espanjaan. Lahdella odottaneet tuhannet alukset '
+            + 'tarvitsivat ruokaa ja vettä, ja se ruokki kaupungin '
+            + 'maataloutta ja käsityötä.',
+          selite: 'Vuoden 1671 käsin väritetyssä kuparipiirroksessa '
+            + 'satamansuuta vartioi torni ja poikki vedetty puomi, lahdella '
+            + 'odottaa laivoja, ja teoksen oma koristeltu nimikirjoitus '
+            + 'HAVANA on ylälaidassa.',
+          lahde: 'Dirk Jansz van Santen, Wikimedia Commons (PD)',
+          wiki: 'Havana',
+        },
+        {
+          otsikko: 'Muurit jotka purettiin kasvun tieltä',
+          tiedosto: '1851 View of Habana.jpg',
+          teksti: 'Kaupunginmuurin rakentaminen alkoi 1674, ja '
+            + 'valmistumisvuodesta on kaksi tietoa: Havannan historiaa '
+            + 'kuvaava osio sanoo muurin olleen valmis vuoteen 1740 '
+            + 'mennessä, arkkitehtuuria kuvaava osio vasta 1767. Sama osio '
+            + 'huomauttaa, että kaupunki oli kasvanut muurin yli jo ennen '
+            + 'kuin se valmistui. Vuonna 1863 muurit purettiin kokonaan, '
+            + 'jotta Havanna pääsisi laajenemaan, ja niiden paikalle '
+            + 'jääneestä leveästä kaistaleesta kasvoi uusi kaupunginosa '
+            + 'Centro Habana.',
+          selite: 'Käsin väritetty litografia vuodelta 1851 esittää '
+            + 'Havannan lahden ja kaupungin runsaat kymmenen vuotta ennen '
+            + 'muurien purkamista.',
+          lahde: 'London: Smith Hermanos & Co., Wikimedia Commons (PD)',
+          wiki: 'Havana',
+        },
+        {
+          otsikko: 'Rautatie joka teki Kuubasta edelläkävijän',
+          tiedosto: '1896-03-21, Blanco y Negro, Curva de los puentes en el ferrocarril de Guanajay, Gómez Carrera.jpg',
+          teksti: 'Havannan ja Bejucalin välinen rata avattiin 19. '
+            + 'marraskuuta 1837, ja sinä päivänä Espanjalla itsellään ei '
+            + 'ollut vielä yhtään rautatietä. Kuubasta tuli maailman '
+            + 'seitsemäs rautatiemaa ja Latinalaisen Amerikan ensimmäinen. '
+            + 'Radan pituudesta on kaksi lukua: Havannan artikkeli antaa 51 '
+            + 'kilometriä, rautatieyhtiön oma artikkeli 27,5 kilometriä ja '
+            + 'sen lisäksi 17 kilometrin jatkeen Güinesiin 1839. Rata '
+            + 'kuljetti sokeria satamaan. Isoisän matka-aikaan se oli jo '
+            + 'yli kolmenkymmenen vuoden ikäinen, ja kaduilla oli kulkenut '
+            + 'hevosraitiovaunu vuodesta 1858.',
+          selite: 'Vuoden 1896 lehtikuvassa juna ylittää siltakaarteen '
+            + 'Guanajayn radalla, ja kuvan alle on painettu lehden oma '
+            + 'kuvateksti valokuvaajan nimineen.',
+          lahde: 'José Gómez de la Carrera, Wikimedia Commons (PD)',
+          wiki: 'National Railway Company of Cuba',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'El Capitolio de La Habana (Dome, Jan 2014).jpg',
+          selite: 'El Capitolion kupoli kohoaa entisen parlamenttitalon '
+            + 'yllä keskellä kaupunkia.',
+          lahde: 'Gorupdebesanez, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Havannaa on tapana kuvata kolmeksi kaupungiksi yhdessä. '
+          + 'Vanha Havanna kapeine katuineen ja ulkonevine parvekkeineen '
+          + 'on samalla asuinalue ja kaupan, teollisuuden ja viihteen '
+          + 'keskus. Lännempänä Vedado kilpailee sen kanssa liike-elämässä '
+          + 'ja yöelämässä, ja niiden välissä El Capitolion kupoli merkitsee '
+          + 'työläiskaupunginosa Centro Habanan alkua. Kolmatta osaa ovat '
+          + 'uudemmat esikaupungit. Kaupunki leviää lahdelta enimmäkseen '
+          + 'länteen ja etelään, ja Almendares-joki halkoo sen etelästä '
+          + 'pohjoiseen. Lyhyet välimatkat pettävät: vanhankaupungin '
+          + 'aukiot ovat kävelymatkan päässä toisistaan, mutta Vedadoon ja '
+          + 'Colónin hautausmaalle on jo useita kilometrejä.',
+        artikkeli: {
+          nimi: 'Matkailijan Havanna',
+          taitto: 'opas',
+          teksti: 'Karibian suurin kaupunki, jossa siirtomaa-ajan aukiot, '
+            + 'kahdeksan kilometrin rantamuuri ja 1950-luvun autot ovat '
+            + 'saman päivän matkan varrella.',
+          nosto: 'Malecónin muuri rakennettiin pysäyttämään meri – ja '
+            + 'myrskyllä aallot lyövät sen yli kadulle asti.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Havannaan saavutaan José Martín kansainvälisen '
+                + 'lentoaseman kautta, joka on noin 11 kilometriä keskustasta '
+                + 'etelään Boyerosin kunnassa ja toimii Cubana de Aviaciónin '
+                + 'tukikohtana. Valtionrautatiet FFCC yhdistävät Havannan '
+                + 'kaikkiin maakuntiin; vuonna 2004 junilla matkusti noin 11 '
+                + 'miljoonaa ihmistä, ja kysynnän on arvioitu olleen kaksi ja '
+                + 'puoli tai kolme kertaa suurempi. Vilkkain väli on '
+                + 'Havannasta Santiago de Cubaan, rautateitse 836 kilometriä. '
+                + 'Katukuvan tunnistaa kuitenkin autoista: 1950-luvun '
+                + 'amerikkalaisia autoja kutsutaan Kuubassa nimillä '
+                + 'almendrón eli "iso manteli" ja máquina, ja niitä arvioidaan '
+                + 'olevan teillä yhä noin 60 000. Uusia amerikkalaisautoja ei '
+                + 'ole tuotu maahan 1960-luvun alun jälkeen, joten vanhat on '
+                + 'pidetty ajossa itse tehdyin osin, ja moneen taksiin on '
+                + 'vaihdettu neuvostovalmisteinen dieselmoottori.',
+              kuva: {
+                tiedosto: 'Blue Car on the Malecon (48981733782).jpg',
+                selite: 'Sininen 1950-luvun amerikanauto ajaa Malecónia '
+                  + 'pitkin juuri ennen auringonlaskua.',
+                lahde: 'kuhnmi, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kahdeksan kilometriä merta vasten',
+              teksti: 'Malecón – virallisesti Avenida de Maceo – on '
+                + 'kahdeksan kilometrin mittainen ajoväylän, kävelytien ja '
+                + 'aallonmurtajan yhdistelmä. Se alkaa Vanhan Havannan '
+                + 'kohdalta sataman suulta, kulkee Centro Habanan ja Vedadon '
+                + 'pohjoisreunaa ja päättyy Almendares-joen suulle. Se '
+                + 'rakennettiin suojaamaan kaupunkia mereltä ja erityisesti '
+                + 'niiltä kylmiltä rintamilta, jotka ajoivat aallot San '
+                + 'Lázaron talojen julkisivuja vasten. Työ alkoi 1901, '
+                + 'ensimmäinen pätkä Paseo del Pradolta Calle Crespolle '
+                + 'valmistui 1901–1902, ja vasta vuosina 1948–1952 väylä '
+                + 'ulottui Almendaresille asti. Vuosina 1957 ja 1958 samalla '
+                + 'kadulla ajettiin Kuuban Grand Prix. Myrskypäivänä '
+                + 'kannattaa varautua siihen, että ajorata on veden peitossa.',
+              kuva: {
+                tiedosto: '20240214 Malecon de Habana.jpg',
+                selite: 'Malecónin muurin yli lyövä aalto nousee talon '
+                  + 'korkuiseksi tyhjän ajoradan viereen.',
+                lahde: 'Matthias Bethke, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: son ja sen perilliset',
+              teksti: 'Kuuban tunnetuin musiikkilaji syntyi saaren '
+                + 'itäosan ylängöillä 1800-luvun lopulla. Son yhdistää '
+                + 'espanjalaisen laulutavan, runomitan ja espanjalaisesta '
+                + 'kitarasta kehittyneen tres-soittimen sekä bantuperinteestä '
+                + 'tulevan clave-rytmin, vuorolaulun ja lyömäsoittimet, '
+                + 'bongot ja marakassit. Havannaan se tuli noin 1909, ja '
+                + 'ensimmäiset levytykset tehtiin 1917 – siitä alkoi sen '
+                + 'leviäminen ympäri saarta. Kokoonpano kasvoi vuosikymmen '
+                + 'kerrallaan: 1920-luvulla vakiintui kuusikko, 1930-luvulla '
+                + 'mukaan tuli trumpetti ja 1940-luvulla congat ja piano. '
+                + '1960-luvulla New Yorkin musiikkielämä yhdisti sonin muihin '
+                + 'latinalaisamerikkalaisiin tyyleihin, ja siitä tuli salsa. '
+                + 'Unesco kirjasi kuubalaisen sonin aineettoman '
+                + 'kulttuuriperinnön luetteloon 2025.',
+            },
+            {
+              otsikko: 'Historian käännekohta: vanhankaupungin kunnostus',
+              teksti: 'Vanhan Havannan pelastusohjelma käynnistyi vuotta '
+                + 'maailmanperintöluetteloon pääsyn jälkeen, ja se on '
+                + 'jatkunut siitä lähtien. Pääaukiot Plaza Vieja, Plaza de '
+                + 'la Catedral, Plaza de San Francisco ja Plaza de Armas '
+                + 'sekä tärkeimmät kadut Obispo ja Mercaderes on kunnostettu '
+                + 'lähes valmiiksi, joten kävelijä näkee ne suunnilleen '
+                + 'siinä asussa, jossa ne olivat siirtomaa-aikana. Työ '
+                + 'kuuluu myös katukuvaan: telineitä ja työmaita on '
+                + 'kortteleittain. Matkailijan kannattaa muistaa, että '
+                + 'kunnostettu ydin on pieni osa kaupunkia – sen ulkopuolella '
+                + 'Havanna on tavallinen, tiheään asuttu suurkaupunki.',
+              kuva: {
+                tiedosto: 'CUBA - panoramio (2).jpg',
+                selite: 'Keskustan puiston penkkien takana kohoaa '
+                  + 'rakennusteline, jollaisia vanhankaupungin '
+                  + 'kunnostustyömailla riittää.',
+                lahde: 'Андрей Бобровский, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Havannasta puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian Havana-artikkelin Climate-osiosta ja '
+                + 'Casa Blancan aseman vuosien 1991–2020 taulukosta eivätkä '
+                + 'samasta lähteestä kuin lehtien vuosigraafit. Ilmasto on '
+                + 'trooppinen savanni-ilmasto (Köppen: Aw), joka rajautuu '
+                + 'lähes sademetsäilmastoon. Vuoden keskilämpötila on 25,2 '
+                + 'astetta: tammikuussa 22,2 ja elokuussa 27,9. Päivän ylin '
+                + 'on tammikuussa keskimäärin 26,5 ja elokuussa 32,4 '
+                + 'astetta, ja yön alinkin pysyy elokuussa 24,5 asteessa. '
+                + 'Alle kymmenen asteen mennään harvoin; aseman koko '
+                + 'mittaushistorian alin on 6,0 astetta tammikuussa ja ylin '
+                + '39,6 astetta lokakuussa. Sadetta kertyy noin 1 200 '
+                + 'millimetriä vuodessa, eniten kesä- ja lokakuussa ja '
+                + 'vähiten joulukuun ja huhtikuun välillä. Hirmumyrskyt '
+                + 'osuvat tavallisesti saaren etelärannikolle, ja Havannan '
+                + 'vahingot ovat jääneet muuta maata pienemmiksi.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Havannan neljä ja puoli vuosisataa espanjalaisena '
+        + 'kaupunkina ovat merirosvojen, kuninkaiden ja laivastojen '
+        + 'kirjoittamia. Kaupunki poltettiin, linnoitettiin, vallattiin ja '
+        + 'lopulta menetettiin.',
+      tehtava: {
+        kysymys: 'Minkä alueen Espanja luovutti briteille saadakseen Havannan takaisin 1763?',
+        vaihtoehdot: [
+          'Floridan',
+          'Jamaikan',
+          'Louisianan',
+          'Puerto Ricon',
+        ],
+        oikea: 0,
+        fakta: 'Pariisin rauha 1763 päätti seitsenvuotisen sodan. Espanja '
+          + 'sai Havannan takaisin alle vuoden miehityksen jälkeen ja antoi '
+          + 'vastineeksi Floridan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Linnoitus jonka merirosvot pakottivat rakentamaan',
+          tiedosto: 'Castillo de la Real Fuerza and La Giraldilla (Jan 2014).jpg',
+          teksti: 'Kauppasatamana Havanna kärsi jatkuvista merirosvojen ja '
+            + 'ranskalaisten kaappareiden hyökkäyksistä. Kaapparikapteeni '
+            + 'Jacques de Sores ryösti ja poltti kaupungin 1555 ja vaurioitti '
+            + 'sen vanhaa linnaketta. Filip II:n lähettämä insinööri '
+            + 'Bartolomé Sánchez aloitti uuden linnoituksen 1558, mutta '
+            + 'ensimmäiset kivet ladottiin vasta 1562 ja työ valmistui 1577. '
+            + 'Rantakalliosta louhitun Real Fuerzan vinot muurit, vallihauta '
+            + 'ja nostosilta olivat kunnossa – mutta linna oli liian syvällä '
+            + 'lahdessa puolustaakseen satamansuuta, joten siitä tuli '
+            + 'kuvernöörin asunto.',
+          selite: 'Real Fuerzan vallien yllä kohoaa tornikko, jonka huipulla '
+            + 'kääntyy naishahmoinen Giraldilla-tuuliviiri, kaupungin tunnus.',
+          lahde: 'Gorupdebesanez, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Castillo de la Real Fuerza',
+        },
+        {
+          otsikko: 'Amerikan kolmanneksi suurin kaupunki',
+          tiedosto: 'AMH-6757-NA View of Havana.jpg',
+          teksti: '1700-luvun puolivälissä Havannassa asui yli 70 000 '
+            + 'ihmistä. Se teki siitä koko Amerikan mantereen kolmanneksi '
+            + 'suurimman kaupungin Liman ja Meksikon kaupungin jälkeen – '
+            + 'mutta Bostonia ja New Yorkia suuremman. Havanna oli Espanjan '
+            + 'Länsi-Intian tärkein satama, jossa laivat kunnostettiin ennen '
+            + 'jatkomatkaa. Vuoteen 1740 mennessä siellä oli Espanjan suurin '
+            + 'ja vilkkain telakka ja Uuden maailman ainoa kuivatelakka, ja '
+            + '1700-luvun kuluessa sen telakalla rakennettiin lähes puolet '
+            + 'enemmän linjalaivoja kuin millään muulla Espanjan telakalla.',
+          selite: 'Johannes Vingboonsin noin vuonna 1665 maalaamassa '
+            + 'näkymässä Havanna levittäytyy lahden rannalle linnoitetun '
+            + 'niemen taakse, ja teoksen oma hollanninkielinen otsikkorivi on '
+            + 'kirjoitettu yläreunaan.',
+          lahde: 'Johannes Vingboons, Wikimedia Commons (PD)',
+          wiki: 'Havana',
+        },
+        {
+          otsikko: 'Britit valtasivat Havannan – ja Espanja osti sen takaisin',
+          tiedosto: 'British ships in the Seven Years War before Havana.jpg',
+          teksti: 'Seitsenvuotinen sota tuli Karibialle kesällä 1762. '
+            + 'Kesäkuun 6. päivän aamunkoitteessa yli 50 aluksen ja yli '
+            + '11 000 miehen brittijoukko nousi maihin Havannan itäpuolelle, '
+            + 'ja piiritys päättyi kaupungin antautumiseen elokuussa. '
+            + 'Miehityksen aikana britit avasivat Havannan kaupalle '
+            + 'Pohjois-Amerikan ja Karibian siirtokuntiensa kanssa, mikä '
+            + 'muutti Kuuban taloutta nopeasti. Alle vuosi valtauksesta '
+            + 'solmittu Pariisin rauha palautti Havannan Espanjalle – '
+            + 'vastineeksi Espanja luovutti Floridan briteille.',
+          selite: 'Rafael Monleónin maalaus esittää brittilaivaston Havannan '
+            + 'edustalla kesällä 1762.',
+          lahde: 'Rafael Monleón, Wikimedia Commons (PD)',
+          wiki: 'Havana',
+        },
+        {
+          otsikko: 'USS Mainen tuho ja Espanjan vallan loppu',
+          tiedosto: 'USS Maine Monument - Havana - 01.jpg',
+          teksti: 'Yhdysvaltain taistelulaiva USS Maine upposi Havannan '
+            + 'satamassa 1898, ja siitä tuli Espanjan ja Yhdysvaltain '
+            + 'välisen sodan välitön syy. Kuubassa sota oli huipennus jo '
+            + 'kolme vuotta käynnissä olleelle itsenäisyyssodalle. Espanja '
+            + 'luopui Kuuban ylivallasta 12. elokuuta 1898, ja sen neljä '
+            + 'vuosisataa kestänyt läsnäolo Amerikan mantereella päättyi. '
+            + 'Kuuban tasavalta syntyi kuitenkin vasta 1902, ja silloin '
+            + 'Havannasta tuli sen pääkaupunki: kaupunki isännöi maan '
+            + 'ensimmäisen presidentin Tomás Estrada Palman '
+            + 'virkaanastujaisia.',
+          selite: 'Malecónin varrella seisova muistomerkki on omistettu USS '
+            + 'Mainen uppoamisessa menehtyneille.',
+          lahde: 'Maesi64, Wikimedia Commons (CC0)',
+          wiki: 'Havana',
+        },
+      ],
+    },
+    {
+      id: 'linnoitukset',
+      nimi: 'Linnoitukset',
+      johdanto: 'Unesco kirjasi vanhankaupungin luetteloonsa nimenomaan '
+        + 'linnoitusjärjestelmänsä kanssa. Kolme linnaa vartioi yhä '
+        + 'satamansuuta, ja niitä kaikkia vanhempi neljäs seisoo syvemmällä '
+        + 'lahden rannalla.',
+      tehtava: {
+        kysymys: 'Mitä satamansuun poikki vedettiin 1630 kahden vartiolinnan välille?',
+        vaihtoehdot: [
+          'raskas kupariketju',
+          'kivinen aallonmurtaja',
+          'puinen ponttonisilta',
+          'köysilossi',
+        ],
+        oikea: 0,
+        fakta: 'Linnat ovat niin lähellä toisiaan, että niiden väliin '
+          + 'saatiin viritettyä este. Vuoden 1762 piirityksen aikana ketju '
+          + 'korvattiin useaan suuntaan haarautuvalla, raskaiden puupalkkien '
+          + 'varassa olleella puomilla.',
+      },
+      nostot: [
+        {
+          otsikko: 'Vaakunan kolme linnaa',
+          tiedosto: 'San Salvador de la Puntas.JPG',
+          teksti: 'Havannan vaakunassa on kolme linnaa: Real Fuerza, Morro '
+            + 'ja Punta, kaupunkia puolustanut kolmikko. Keskellä oleva avain '
+            + 'kertoo, että Havanna oli portti Uuteen maailmaan, ja kilpeä '
+            + 'kannattelevat tammenoksa ja laakeriseppele – edellinen '
+            + 'voimana, jälkimmäinen kunniana ja maineena. Nuorin kolmesta on '
+            + 'Punta: vartiomiehiä asetettiin paikalle 1559, mutta muurien '
+            + 'rakentaminen alkoi vasta 1590 ja edistyi hitaasti. Vuoden 1595 '
+            + 'hirmumyrsky repi liian ohuet muurit niin pahoin, että ne '
+            + 'tehtiin uudestaan paksummiksi, ja 1602 mennessä työ oli niin '
+            + 'myöhässä, että linnasta tehtiin pelkkä tykkitorni.',
+          selite: 'Puntan matala linnoitus vartioi satamansuun länsipuolta '
+            + 'Malecónin päässä.',
+          lahde: 'Mmoyaq, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Castillo San Salvador de la Punta',
+        },
+        {
+          otsikko: 'Morro ja ketju satamansuun poikki',
+          tiedosto: 'Castillo de los Tres Reyes del Morro 01.jpg',
+          teksti: 'Morron linna kohoaa kalliolla sataman suuaukolla, ja sen '
+            + 'suunnitteli italialainen sotilasinsinööri Battista Antonelli '
+            + '(1547–1616). Työ alkoi 1500-luvun lopulla ja jatkui '
+            + '1600-luvun puolelle; lähteet antavat valmistumisvuodeksi 1589 '
+            + 'ja työn päättymisvuodeksi 1630. Espanjan sana morro '
+            + 'tarkoittaa merelle näkyvää kalliota, joka toimii merimiesten '
+            + 'maamerkkinä. Satamansuu suljettiin vetämällä este Morrosta '
+            + 'Puntaan, ja 1630 linnojen väliin laskettiin raskas '
+            + 'kupariketju. Morro oli sataman pääpuolustus siihen asti, '
+            + 'kunnes La Cabaña valmistui 1774.',
+          selite: 'Morron linnan kalliosta louhittu valli ja sen kulmassa '
+            + 'oleva vartiotorni kohoavat suoraan satamansuun yläpuolelle.',
+          lahde: 'Luis Alvaz, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Castillo de los Tres Reyes Del Morro',
+        },
+        {
+          otsikko: 'La Cabaña – tappion jälkeen rakennettu jättiläinen',
+          tiedosto: 'Fortaleza de San Carlos de la Cabaña (38843543412).jpg',
+          teksti: 'Brittien valtaus paljasti, että Morro oli haavoittuva '
+            + 'maan puolelta. Kun Espanja sai kaupungin takaisin, kuningas '
+            + 'Kaarle III aloitti 1763 lahden itärannan kukkulalle San '
+            + 'Carlos de la Cabañan linnoituksen, joka valmistui 1774 '
+            + 'insinöörieverstin Silvestre Abarca y Aznarin johdolla. Koosta '
+            + 'lähteet ovat eri mieltä: Havannan artikkeli sanoo sitä Uuden '
+            + 'maailman kolmanneksi suurimmaksi espanjalaislinnoitukseksi '
+            + 'San Juanin kahden linnan jälkeen, kun taas linnoituksen oma '
+            + 'artikkeli sanoo yhdessä kohdassa samaa ja toisessa toiseksi '
+            + 'suurimmaksi Cartagenan San Felipe de Barajasin jälkeen.',
+          selite: 'La Cabañan muurien välissä kulkeva kivikatu johtaa '
+            + 'kasarmien holviovien ohi merelle.',
+          lahde: 'Rob Oo from NL, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'La Cabaña',
+        },
+        {
+          otsikko: 'Vanhakaupunki maailmanperintönä',
+          tiedosto: 'Havanna - Plaza de la Catedral 1.jpg',
+          teksti: 'Unesco lisäsi Vanhan Havannan ja sen '
+            + 'linnoitusjärjestelmän maailmanperintöluetteloon 1982 '
+            + 'kuudennessa istunnossaan kohdenumerolla 204. Perusteina '
+            + 'olivat ainutlaatuinen barokki- ja uusklassinen arkkitehtuuri, '
+            + 'linnoitukset ja alueen historiallinen merkitys Uuden maailman '
+            + 'reitin pysäkkinä. Vuotta myöhemmin käynnistyi kampanja, jonka '
+            + 'tehtävä oli palauttaa rakennuksille niiden alkuperäinen '
+            + 'luonne. Työtä johti kaupunginhistorioitsijan virasto Eusebio '
+            + 'Lealin johdolla, ja hänestä tuli restauroinnin myötä alueen '
+            + 'tunnustettu epävirallinen pormestari.',
+          selite: 'Plaza de la Catedralin laidalla seisova Marqués de '
+            + 'Arcosin palatsi holvikäytävineen kuuluu vanhankaupungin '
+            + 'kunnostettuun ytimeen.',
+          lahde: 'Wolfgang Sauber, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Old Havana',
+        },
+      ],
+    },
+  ],
+  /*
+   * MEXICO CITY (24.8.2026). Pohjois-Amerikan laudan kaupunkilehti,
+   * kolme sivua: kansi `kaupunki` sekä teemasivut `historia` ja
+   * `atsteekkiperinto`. Kolmas sivu ei ole AIHE_IKONIT-vakioaihe (se
+   * saa yleiskuvakkeen) — sama perusteltu poikkeus kuin Vancouverin ja
+   * Los Angelesin `alkuperaiskansat`: Raamatun pilari 3 edellyttää,
+   * että mexicat ja nahuatl näkyvät elävänä nykykulttuurina eivätkä
+   * vain menneisyytenä.
+   *
+   * LÄHTEET. Pohjana docs/mantereet-tyoaineisto/faktapohja-mexico.md ja
+   * tarkistus-mexico.md; jälkimmäinen ei ole mainissa vaan commitissa
+   * f40fd042. TARKISTUS VOITTAA FAKTAPOHJAN. Jokainen väite on luettu
+   * itse en-Wikipedian raakatekstistä (action=raw, NODE_USE_ENV_PROXY=1)
+   * 23.–24.8.2026: "Mexico City", "Zócalo", "Templo Mayor",
+   * "Chapultepec Castle", "Paseo de la Reforma", "Alameda Central",
+   * "Chinampa", "Xochimilco", "Mexica", "Nahuatl", "Mexico City Metro",
+   * "Basilica of Our Lady of Guadalupe", "Palacio de Bellas Artes".
+   *
+   * TARKISTUKSEN VIISI PAKOLLISTA KORJAUSTA ON TEHTY.
+   * (1) Tacubaya. Faktapohjan väite, että 19,4333°N/99,1333°W olisi
+   * Tacubayan sääaseman piste, on väärä: se on kaupungin oma
+   * infobox-koordinaatti (Tacubaya on n. 19,40°N/99,19°W). Tämä erä ei
+   * tee kohdekarttaa eikä säärivistöä, joten koordinaattia ei käytetä
+   * missään; oppaan sääjakso puhuu Tacubayasta vain mittausasemana,
+   * kuten en-Wikipedian sääruutu tekee.
+   * (2) Katedraalin etäisyys Zócalolta on ~180 m, ei 120 m
+   * (19,43439°N − 19,43278°N = 0,00161° × 111,32 km ≈ 180 m). Luku
+   * esiintyy matkailijalle-kappaleessa muodossa "parisataa metriä".
+   * (3) Zócalo-nimen alkuperä. Faktapohja sekoitti kaksi nimeämistä.
+   * Virallinen nimi Plaza de la Constitución tulee Cádizin 1812
+   * perustuslaista (vala aukiolla 22.5.1813); arkinimi Zócalo tulee
+   * Santa Annan kesken jääneen itsenäisyyspatsaan JALUSTASTA, joka jäi
+   * paikoilleen vuosikymmeniksi. Nosto K4 kertoo molemmat oikein.
+   * (4) Chapultepecin sotakoulu: en-Wikipedia on itsensä kanssa
+   * ristiriidassa (johdanto 1841, Independence-osio 1833). Ristiriita
+   * on KIRJOITETTU AUKI lukijalle nostossa H2 reseptin säännön mukaan.
+   * (5) Wereldmuseum-sitaatti on JÄTETTY KOKONAAN POIS. En-Wikipedian
+   * leipäteksti sanoo Rotterdam, mutta saman lauseen oma viite osoittaa
+   * osoitteeseen leiden.wereldmuseum.nl ja nimeää julkaisijaksi
+   * Wereldmuseum Leidenin. Kaupunkia ei voi ratkaista en-Wikipediasta,
+   * ja irrallaan sitaatti olisi myös pilari 3:n kannalta harhaanjohtava
+   * (yksi museolausunto vastaan väestölaskentojen luvut). A4 nojaa
+   * lukuihin.
+   *
+   * OMA LISÄHAVAINTO, JOKA EI OLE TARKISTUKSESSA. En-Wikipedian
+   * "Mexico City" antaa luvun 18,74 % kahdesti: kerran vuoden 1921
+   * väestönlaskennan alkuperäisväestön osuutena (merkitty
+   * {{failed verification}}) ja kerran Ethnic groups -osiossa nykyisenä
+   * osuutena. Sama luku kahdessa eri merkityksessä on niin
+   * epäluotettava, ettei sitä käytetä lehdessä lainkaan; A4 nojaa
+   * kielilukuihin (1,6 milj. / 37 450 / 387 122), jotka on tarkistettu
+   * erikseen. Samoin A4 sanoo vain, että nahuatl on YKSI eniten
+   * puhutuista alkuperäiskielistä — lähde luettelee viisi kieltä
+   * järjestystä ilmoittamatta.
+   *
+   * SPOILERISUOJA. Visa (js/packs/northamerica-questions.js, avain
+   * mexico) kysyy viittä asiaa: Tenochtitlánin kansa, vajoamisen syy,
+   * korkeus 2 240 m, chinampat ja Zócalo. Päätoimittajan linjaus on,
+   * että vastaus TÄYTYY löytyä lehden teksteistä mutta EI visan omalla
+   * sanamuodolla — niin on tehty: K1 kertoo perustamislegendan (visan
+   * fact-kentän "1500-luvun yksi maailman suurimmista kaupungeista"
+   * puuttuu), K3 käyttää tarkkoja lukuja 9 m ja ~50 cm/v visan
+   * pyöristetyn "yli kymmenen metriä sadassa vuodessa" sijaan, A3
+   * välttää visan ilmauksen "kelluvat puutarhat" ja kuvaa rakennustavan,
+   * ja K4 kertoo Zócalon nimihistorian, jota visa ei käsittele.
+   *
+   * MINITEHTÄVÄT (2 kpl) eivät osu visaan: historian tehtävä kysyy
+   * Paseo de la Reforman teettäjää ja atsteekkiperinnön tehtävä
+   * Chapultepec-nimen merkitystä. Kummankin vastaus on SAMAN SIVUN
+   * nostossa (H3 ja A2).
+   *
+   * PILARI 3. Valloitus (K2) kerrotaan tapahtumana: piiritys, nälkä,
+   * isorokko, antautuminen — en-Wikipedian yksityiskohtaiset kuvaukset
+   * verilöylyistä ja siirtomaa-ajan väkivallasta on jätetty pois.
+   * Alameda-noston inkvisition roviopaikka mainitaan yhdellä
+   * sivulauseella ilman yksityiskohtia. Mexicat ja nahuatl ovat oma
+   * sivunsa, jossa kieli, paikannimet, viljely ja nykyiset luvut
+   * kantavat — ei "kadonnut kansa" -kehystä. Ei nykypolitiikkaa: 1968,
+   * 1985 ja 2000-luvun tapahtumat on rajattu ulos.
+   *
+   * KUVAT: 22 kappaletta, kaikki haettu Commonsin rajapinnalla,
+   * lisenssi ja tekijä luettu extmetadatasta ja JOKAINEN katsottu
+   * silmin 900 pikselin esikatseluna. HYLKÄYKSET: W. H. Jacksonin
+   * Cuitláhuac-patsaskuva (negatiiviin kirjoitettu "08565" ja "DETROIT
+   * PHOTOGRAPHIC CO."), N. Currierin Alameda-litografia (painettu
+   * otsikko ja "LITH. & PUB. BY N. CURRIER" kuvan alalaidassa),
+   * Casa de los Azulejosin patiokuva 1901 (vedoksen oma valkoinen
+   * paspartuu kehyksenä), Chapultepecin linnan terassikuva ja
+   * Torre Latinoamericana Alamedalta (molemmissa tunnistettavia kasvoja
+   * etualalla), Zócalon lippukuva 2019 (etualalla kymmenkunta
+   * tunnistettavaa ihmistä), Alameda Centralin poliisikolonna ja
+   * "Alameda Central, CDMX" (jälkimmäisessä lisäksi vinjettisuodatin),
+   * Xochimilcon "trajinera"-kuva (osoittautui pulque-myyntiveneeksi
+   * tölkkimainoksineen), Bellas Artesin yökuva puhelimella (epätarkka)
+   * ja Chapultepecin vastavalokuva (siluetteja).
+   *
+   * ENNEN JA NYT -PARIA EI TEHDÄ tässä erässä: kaupungin valokuvataulun
+   * (northamerica-valokuvat.js) vanha vedos on Jacksonin photochrom
+   * pyykkäreistä, jossa etualan ihmiset ovat tunnistettavia. Jää
+   * jatkotyöksi.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä. Matkaoppaan jakso 5
+   * nojaa siis en-Wikipedian Climate-osioon ja SANOO SEN ÄÄNEEN
+   * (Samarkandin, Vancouverin ja Los Angelesin malli).
+   *
+   * KUVATEKSTIT: yksi virke, ja se kertoo KOHTEESTA eikä kuvaile kuvaa
+   * (omistajan linjaus 22.8.2026).
+   */
+  mexico: [
+    {
+      id: 'kaupunki',
+      nimi: 'Mexico City',
+      johdanto: 'Atsteekit perustivat 1325 saarikaupungin keskelle järveä, '
+        + 'espanjalaiset rakensivat sen raunioille oman pääkaupunkinsa, ja '
+        + 'sama kaupunki painuu yhä syvemmälle kuivatun järven savipohjaan.',
+      kansikuvat: [
+        {
+          tiedosto: 'Zocalo - West Side - Mexico 2024.jpg',
+          selite: 'Zócalo on 240 metriä kertaa 240 metriä avointa kiveystä, ja '
+            + 'sen pohjoislaidalla kohoaa katedraali.',
+          lahde: 'José Luiz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Ciudad.de.Mexico.City.Distrito.Federal.DF.Paseo.Reforma.Skyline.jpg',
+          selite: 'Paseo de la Reforman varrelle noussut tornirivistö on '
+            + 'kaupungin nykyinen liikekeskusta, ja sen takana laakso päättyy '
+            + 'vuoriin.',
+          lahde: 'Alejandro Islas Photograph AC, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Chapultepec Castle 2014.jpg',
+          selite: 'Chapultepecin linna seisoo kaupungin suurimman puiston '
+            + 'kallioisella kukkulalla ja on Amerikan mantereen ainoa '
+            + 'hallitsijaparin asuttama linna Iturbiden palatsin ohella.',
+          lahde: 'Raystormxc, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleiskuvaa eri suunnista — keskusta
+       * kattojen yli, kaupunki tulivuorten alla ja koko laakso
+       * Torre Latinoamericanan huipulta. Yksikään ei ole noston aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Ciudad de Mexico.jpg',
+          selite: 'Keskustan yllä kohoaa 1950-luvun Torre Latinoamericana, ja '
+            + 'talomeri jatkuu yhtenäisenä laakson reunavuorille asti.',
+          lahde: 'Eneas, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Mexico City volcanos.jpg',
+          selite: 'Laaksoa reunustavat tulivuoret Iztaccíhuatl ja Popocatépetl '
+            + 'näkyvät kirkkaalla säällä keskeltä kaupunkia.',
+          lahde: 'Jorge Altamirano, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Vista desde la Torre Latinoamericana.jpg',
+          selite: 'Meksikon laakson pohja on vähintään 2 200 metrissä, ja '
+            + 'kaupunki täyttää sen laidasta laitaan.',
+          lahde: 'The Cosmonaut, Wikimedia Commons (CC BY-SA 2.5 ca)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kotka, käärme ja kaktus keskellä järveä',
+          tiedosto: 'Map of Tenochtitlan and Gulf of Mexico, 1524.jpg',
+          teksti: 'Mexicat eli atsteekit saapuivat Meksikon laaksoon '
+            + 'viimeisenä nahuaa puhuvista kansoista ja etsivät merkkiä, jonka '
+            + 'heidän jumalansa Huitzilopochtli oli luvannut: kotkaa, joka '
+            + 'istuu opuntiakaktuksen päällä käärme nokassaan. Merkki löytyi '
+            + 'saarelta keskeltä Texcoco-järveä, ja sinne nousi Tenochtitlan – '
+            + 'perustamisvuodeksi annetaan yleensä 1325, mutta osa tutkijoista '
+            + 'pitää oikeana vuotta 1345. Kaupunki laajeni pengerteiden '
+            + 'varassa yli veden ja hallitsi kahdessa vuosisadassa muita '
+            + 'järven kaupunkivaltioita; espanjalaisten saapuessa sen valta '
+            + 'ylsi Meksikonlahdelta Tyynellemerelle.',
+          selite: 'Vuoden 1524 painettu kartta esittää Tenochtitlanin '
+            + 'saarikaupunkina, jonne johtaa neljä pengertietä, ja sen '
+            + 'vieressä Meksikonlahden rannikon.',
+          lahde: 'Hernán Cortés, Wikimedia Commons (PD)',
+          wiki: 'Tenochtitlan',
+        },
+        {
+          otsikko: 'Piiritys, joka kesti kolme kuukautta',
+          tiedosto: 'Malinche Tlaxcala cropped.jpg',
+          teksti: 'Hernán Cortés saapui Tenochtitlaniin 8. marraskuuta 1519 '
+            + 'monien muiden kansojen tukemana, ja hallitsija Moctezuma II '
+            + 'otti vieraat vastaan lahjoin – mutta sopu ei kestänyt kauaa. '
+            + 'Kesäkuun 30. päivän vastaisena yönä 1520 kaupunkilaiset ajoivat '
+            + 'espanjalaiset ja heidän tlaxcalalaiset liittolaisensa ulos. '
+            + 'Cortés kokosi joukkonsa uudelleen Tlaxcalassa ja aloitti '
+            + 'piirityksen toukokuussa 1521; kolme kuukautta kestivät ruoan ja '
+            + 'veden puute sekä tulokkaiden mukanaan tuoma isorokko, ja '
+            + 'elokuussa Cuauhtémoc antautui. Voittajat säilyttivät kaupungin '
+            + 'peruskaavan mutta rakensivat kirkkonsa temppelien päälle.',
+          selite: 'Tulkki Malintzin seisoo Cortésin vieressä 1500-luvun '
+            + 'tlaxcalalaisessa kuvakäsikirjoituksessa, jossa paikalliset '
+            + 'tuovat espanjalaisille ruokaa.',
+          lahde: 'Unknown author Unknown author, Wikimedia Commons (PD)',
+          wiki: 'La Malinche',
+        },
+        {
+          otsikko: 'Kaupunki, joka painuu omaa vauhtiaan',
+          tiedosto: 'Ciudad de México (CDMX) - Palacio de Bellas Artes, Torre Latinoamericana y Edificio La Nacional.jpg',
+          teksti: 'Kaupunki lepää 2 240 metrin korkeudessa entisen '
+            + 'Texcoco-järven pohjalla, ja pohja on savea, joka on yhä '
+            + 'läpimärkää. Kun sitä vettä pumpataan juomavedeksi, savi '
+            + 'tiivistyy ja maanpinta laskee: 1900-luvun alusta lähtien osa '
+            + 'kaupungista on painunut jopa yhdeksän metriä, ja vauhti on nyt '
+            + 'lähes puoli metriä vuodessa. Laaksosta ei ole vesille '
+            + 'luonnollista purkautumistietä, ja painuva maa vaikeuttaa sade- '
+            + 'ja jäteveden johtamista pois; kanavia ja tunneleita on kaivettu '
+            + 'jo 1600-luvulta lähtien. Sama pehmeä pohja hidasti aikanaan '
+            + 'Palacio de Bellas Artesin rakentamista, kun raskas '
+            + 'marmoripalatsi alkoi vajota.',
+          selite: 'Palacio de Bellas Artes valmistui vasta 1934, koska raskas '
+            + 'marmorirakennus vajosi pehmeään maaperään jo työn aikana.',
+          lahde: 'Juan Carlos Fonseca Mata, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Palacio de Bellas Artes',
+        },
+        {
+          otsikko: 'Aukio, jonka nimi jäi jalustasta',
+          tiedosto: 'Catedral y Parroquia del Sagrario.jpg',
+          teksti: 'Zócalo on 240 metriä kertaa 240 metriä eli 57 600 '
+            + 'neliömetriä, ja se on ollut kaupungin keskus lähes '
+            + 'seitsemänsataa vuotta: atsteekkien aikaan aukiota rajasivat '
+            + 'hallitsijoiden palatsit ja pyhä piiri, espanjalaisten jälkeen '
+            + 'katedraali ja kansallispalatsi. Virallinen nimi Plaza de la '
+            + 'Constitución on peräisin 22. toukokuuta 1813, jolloin '
+            + 'varakuningas ja muut viranomaiset vannoivat täällä '
+            + 'uskollisuutta Cádizin vuoden 1812 perustuslaille. Arkinen nimi '
+            + 'tuli myöhemmin ja muualta: presidentti Santa Anna aikoi '
+            + 'pystyttää keskelle itsenäisyyspatsaan, mutta valmiiksi saatiin '
+            + 'vain jalusta – zócalo – joka jäi paikoilleen vuosikymmeniksi.',
+          selite: 'Katedraali ja sen vieressä oleva Sagrario Metropolitano '
+            + 'rajaavat aukion pohjoislaidan.',
+          lahde: 'Covadongino, Wikimedia Commons (CC0)',
+          wiki: 'Zócalo',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'West tower at old Basilica of Our Lady of Guadulupe, Mexico City.jpg',
+          selite: 'Vanhan Guadalupen basilikan tornit ovat vuodelta 1709, ja '
+            + 'kirkko on rakennettu punaisesta tezontle-kivestä.',
+          lahde: 'Daniel Case, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Mexico City on ollut saman aukion ympärillä lähes '
+          + 'seitsemänsataa vuotta, ja historiallinen keskusta on siksi '
+          + 'tiivis: Zócalolta on parisataa metriä katedraalille, korttelin '
+          + 'verran Templo Mayorin kaivausalueelle ja reilu kilometri länteen '
+          + 'Alameda Centralin puistoon. Sieltä alkaa Paseo de la Reforma, '
+          + 'joka vie viitisen kilometriä lisää länteen Chapultepecin '
+          + 'puistoon, kukkulalinnaan ja kansallisen antropologian museoon. '
+          + 'Pohjoisessa, kuuden kilometrin päässä, on Tepeyacin kukkula '
+          + 'basilikoineen, ja etelässä runsaan tunnin matkan päässä '
+          + 'Xochimilcon kanavat ja niiden viljelysaaret. Kaupunki on 2 240 '
+          + 'metrissä, joten ensimmäisinä päivinä portaat tuntuvat jyrkemmiltä '
+          + 'kuin ne ovat, ja illat ovat viileitä ympäri vuoden.',
+        artikkeli: {
+          nimi: 'Matkailijan Mexico City',
+          taitto: 'opas',
+          teksti: 'Kahden kilometrin korkeudessa oleva laaksokaupunki, jossa '
+            + 'atsteekkien pääkaupunki, siirtomaa-ajan palatsit ja nykyinen '
+            + 'suurkaupunki ovat päällekkäin samalla tontilla.',
+          nosto: 'Metron rakentaminen paljasti niin paljon muinaisjäännöksiä, '
+            + 'että yksi niistä jäi paikoilleen asemalaiturin viereen.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kansainväliseltä lentoasemalta on keskustaan noin viisi '
+                + 'kilometriä länteen, ja perillä ollaan heti kahden kilometrin '
+                + 'korkeudessa. Kaupungissa liikutaan metrolla: ensimmäinen '
+                + 'linja avattiin 4. syyskuuta 1969, ja verkko on nyt New '
+                + 'Yorkin jälkeen Pohjois-Amerikan toiseksi suurin – '
+                + 'kaksitoista linjaa, 195 asemaa ja runsaat 200 kilometriä '
+                + 'rataa. Kymmenellä linjalla junat kulkevat kumipyörillä, '
+                + 'osaksi juuri siksi, että maaperä on pehmeää ja liikkuvaa. '
+                + 'Jokaisella asemalla on nimen lisäksi oma kuvatunnuksensa, '
+                + 'jonka Lance Wyman suunnitteli samaan aikaan kuin vuoden '
+                + '1968 olympialaisten grafiikan; tunnukset tehtiin siksi, '
+                + 'että asema löytyisi myös lukutaidottomalta.',
+              kuva: {
+                tiedosto: 'MetroTacubaya-Linea9.JPG',
+                selite: 'Tacubayan asema palvelee linjaa 9, joka on yksi '
+                  + 'kaupungin kahdestatoista metrolinjasta.',
+                lahde: 'ProtoplasmaKid, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki täyttää Meksikon laakson, jonka pohja on '
+                + 'vähintään 2 200 metrissä ja jota ympäröivät vuoret ja '
+                + 'tulivuoret nousevat yli 5 000 metriin. Laaksosta ei ole '
+                + 'luonnollista uomaa mereen, joten vedet on aina jouduttu '
+                + 'johtamaan pois keinotekoisesti – ensin atsteekkien '
+                + 'padoilla, sitten siirtomaa-ajan kanavilla ja lopulta '
+                + 'tunneleilla. Alkuperäinen järvi on kuivunut lähes '
+                + 'kokonaan; siitä on jäljellä vain pieni osa kaupungin '
+                + 'ulkopuolella Atencon kunnassa. Kaupungin metsäisimmät osat '
+                + 'ovat etelässä Milpa Altan, Tlalpanin ja Xochimilcon '
+                + 'kaupunginosissa.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: taco päätyi virastojen papereihin',
+              teksti: 'Tacoa pidettiin pitkään rahvaan ruokana, mutta '
+                + '1800-luvulla siitä oli tullut kaupungin arkiruokaa. '
+                + 'Tiedämme siitä yllättävän tarkasti, koska viranomaiset '
+                + 'yrittivät verottaa taquerioita ja kirjasivat samalla ylös, '
+                + 'mitä niissä myytiin: useimmin mainittiin barbacoa-taco, '
+                + 'sen jälkeen enchiladat, tacos de minero ja gorditat, ja '
+                + 'listalla oli myös ostereita ja paistettua kalaa. Kalaa '
+                + 'saadaan yhä: La Nueva Vigan tori on Tokion Tsukijin '
+                + 'jälkeen maailman toiseksi suurin kalatori. Tuoreet '
+                + 'kasvikset tulevat Central de Abaston tukkutorilta, joka '
+                + 'täyttää yksinään usean korttelin alan.',
+              kuva: {
+                tiedosto: 'Tacos al pastor - Taquería Tizne 02.jpg',
+                selite: 'Taco al pastor kootaan sinisestä maissitortillasta, '
+                  + 'pystyvartaalta leikatusta lihasta ja ananaksesta.',
+                lahde: 'ProtoplasmaKid, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kirkko, jonka alta maa petti',
+              teksti: 'Tepeyacin kukkulan juurella on kaupungin toinen pyhä '
+                + 'paikka. Perimätiedon mukaan Guadalupen Neitsyt ilmestyi '
+                + 'siellä 1531, ja vanhin säilynyt kertomus tapahtumasta on '
+                + 'nahuatlinkielinen käsikirjoitus Nican Mopohua. Arkkitehti '
+                + 'Pedro de Arrieta alkoi rakentaa paikalle kirkkoa maaliskuussa '
+                + '1695, ja se vihittiin 1709. Sitten tuli sama ongelma kuin '
+                + 'muuallakin kaupungissa: maa painui, rakennus kävi '
+                + 'epävakaaksi eikä kestänyt enää kasvavia kävijämääriä. '
+                + 'Viereen rakennettiin 1974–1976 uusi pyöreä basilika, jonne '
+                + 'kuva siirrettiin 12. lokakuuta 1976. Kävijöitä lasketaan '
+                + 'noin kaksikymmentä miljoonaa vuodessa, joista yhdeksän '
+                + 'miljoonaa joulukuun 12. päivän tienoilla.',
+              kuva: {
+                tiedosto: 'Views of the Sanctuary of Guadalupe from Cerro de Tepeyac - Mexico 2024.jpg',
+                selite: 'Vanha basilika kupoleineen ja vuosina 1974–1976 '
+                  + 'rakennettu pyöreä uusi basilika seisovat vierekkäin '
+                  + 'Tepeyacin kukkulan juurella.',
+                lahde: 'José Luiz, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Mexico Citystä puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian Mexico City -artikkelin Climate-osiosta '
+                + 'eivätkä samasta lähteestä kuin lehden vuosigraafit. '
+                + 'Ilmasto on korkeuden takia lauhkeaa ylänköilmastoa '
+                + '(Köppen: Cwb), ja vuosi jakautuu kahtia: sateinen kesä '
+                + 'touko–lokakuussa, kuiva ja aurinkoinen talvi '
+                + 'marras–huhtikuussa. Sadetta kertyy noin 820 millimetriä '
+                + 'vuodessa, sateisin kuukausi on heinäkuu ja kuivin '
+                + 'joulukuu. Vuosikeskilämpötila on kaupunginosan korkeudesta '
+                + 'riippuen 12–16 astetta, ja lämpötila käy harvoin alle '
+                + 'kolmen tai yli kolmenkymmenen asteen; Tacubayan '
+                + 'mittausasemalla ennätykset ovat 34,7 astetta 25. '
+                + 'toukokuuta 2024 ja −4,4 astetta 13. helmikuuta 1960. Lunta '
+                + 'on vuoden 1908 jälkeen satanut kolmesti, viimeksi 12. '
+                + 'tammikuuta 1967, jolloin kaupunkiin tuli kahdeksan senttiä '
+                + 'lunta.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Siirtomaakaupunki kasvoi palatsien kaupungiksi, ja 1800-luku '
+        + 'toi sille keisarillisen bulevardin, kaasuvalaistun puiston ja '
+        + 'kukkulan laelle linnan – kaikki isoisän matkavuoden tienoilla.',
+      tehtava: {
+        kysymys: 'Kuka teetti Paseo de la Reforman ja nimesi sen puolisonsa mukaan?',
+        vaihtoehdot: [
+          'keisari Maximilian I',
+          'presidentti Benito Juárez',
+          'varakuningas Bernardo de Gálvez',
+          'presidentti Porfirio Díaz',
+        ],
+        oikea: 0,
+        fakta: 'Bulevardin ensimmäinen nimi oli Paseo de la Emperatriz eli '
+          + 'keisarinnan kuja. Tasavallan palattua se nimettiin ensin '
+          + 'kenraali Santos Degolladon mukaan ja 1872 uudistusliikkeen '
+          + 'mukaan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Palatsien kaupunki, joka nousi pakkotyöllä',
+          tiedosto: 'Historia de la conquista de Méjico, 1851 426031 (3965049905).jpg',
+          teksti: 'Cortés päätti rakentaa uuden kaupungin juuri vanhan päälle, '
+            + 'ja työ tehtiin ympäröivän alkuperäisväestön voimin. '
+            + 'Fransiskaaniveli Toribio de Benavente Motolinía luetteli '
+            + 'jälleenrakennuksen aikansa vitsauksiin: väkeä oli kaduilla ja '
+            + 'pengerteillä niin paljon, ettei niillä päässyt kulkemaan, ja '
+            + 'moni kuoli palkkien alle tai putosi purettavilta seiniltä. '
+            + 'Laakso ei laske vesiään mereen, joten tulvat toistuivat, ja '
+            + 'niitä vastaan koottiin vuosisatojen ajan desagüe-nimistä '
+            + 'pakkotyötä. 1700-luvun lopulla aateliston palatsit olivat niin '
+            + 'komeita, että Alexander von Humboldtin antama lisänimi '
+            + '"palatsien kaupunki" jäi elämään.',
+          selite: 'Vuoden 1851 kirjan kuvassa siirtomaa-ajan kaupunki on yhä '
+            + 'matala ja kirkontornien hallitsema, ja taustalla kohoavat '
+            + 'lumihuippuiset tulivuoret.',
+          lahde: 'Fondo Antiguo de la Biblioteca de la Universidad de Sevilla '
+            + 'from Sevilla, España, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Mexico City',
+        },
+        {
+          otsikko: 'Kesähuvilasta keisarin linnaksi',
+          tiedosto: 'Wmm256-CHAPULTEPEC.jpg',
+          teksti: 'Varakuningas Bernardo de Gálvez käski vuonna 1785 rakentaa '
+            + 'Chapultepecin kukkulan laelle itselleen kesäasunnon, ja työt '
+            + 'alkoivat saman vuoden elokuussa. '
+            + 'Rahoitus takkusi, ja rakennus ehti olla muun muassa '
+            + 'ruutivarasto ennen kuin siitä tuli sotilasakatemia – vuodesta '
+            + 'lähde on eri mieltä itsensä kanssa, sillä artikkelin johdanto '
+            + 'sanoo 1841 ja sen tarkempi historiaosuus 1833. Vuonna 1864 '
+            + 'linnaan muutti keisari Maximilian I puolisonsa Carlotan kanssa: '
+            + 'eurooppalaiset arkkitehdit sisustivat huoneet uusiksi ja '
+            + 'puutarhuri Wilhelm Knechtel teki katolle puutarhan. '
+            + 'Keisarikunta kaatui 1867, ja 1882 linnasta tuli presidentin '
+            + 'virka-asunto aina vuoteen 1934 asti.',
+          selite: 'Brantz Mayerin 1840-luvun kaiverruksessa Chapultepecin '
+            + 'kukkula kohoaa yksinään tasangolta, ja sen laella on '
+            + 'sotilasakatemiaksi muutettu rakennus.',
+          lahde: 'Brantz Mayer, Wikimedia Commons (PD)',
+          wiki: 'Chapultepec Castle',
+        },
+        {
+          otsikko: 'Keisarinnan bulevardi sai uudistuksen nimen',
+          tiedosto: "'Paisaje del Valle de Mexico visto desde el Castillo de Chapultepec', Francisco de Paula Mendoza (1880) - Museo Foro Valparaíso - Mexico 2024.jpg",
+          teksti: 'Koska linna oli tuolloin kaupungin laidalla, Maximilian '
+            + 'teetti sinne keskustasta suoran bulevardin – mallina Wienin '
+            + 'Ringstrasse ja Pariisin Champs-Élysées – ja nimesi sen Paseo de '
+            + 'la Emperatriziksi Carlotan kunniaksi. Katu avattiin yleisölle '
+            + '17. helmikuuta 1867 työn vielä jatkuessa, ja tasavallan '
+            + 'palattua se sai nimekseen ensin Calzada Degollado ja 1872 Paseo '
+            + 'de la Reforma. Vuonna 1873 rautatiemagnaatti Antonio Escandón '
+            + 'tilasi kadulle sen ensimmäisen suuren muistomerkin, '
+            + 'Kolumbus-patsaan, jonka ranskalainen kuvanveistäjä Charles '
+            + 'Cordier veisti Ranskassa; se pystytettiin 1877.',
+          selite: 'Francisco de Paula Mendozan maalaus vuodelta 1880 näyttää '
+            + 'Meksikon laakson Chapultepecin linnasta: suora puukuja johtaa '
+            + 'kaupunkiin, ja horisontissa ovat lumihuippuiset tulivuoret.',
+          lahde: 'Jbribeiro1, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Paseo de la Reforma',
+        },
+        {
+          otsikko: 'Vanhin puisto sai kaasulyhdyt',
+          tiedosto: 'Alameda Central - Ciudad de México - 2026 - 02.jpg',
+          teksti: 'Alameda Central on Amerikan mantereen vanhin julkinen '
+            + 'puisto. Paikalla oli ollut atsteekkien tori, kun varakuningas '
+            + 'Luis de Velasco II käski 11. tammikuuta 1592 perustaa '
+            + 'kaupunkilaisille vihreän oleskelualueen; nimi tulee poppelia '
+            + 'tarkoittavasta sanasta álamo. Puiston nykyinen länsipää oli '
+            + 'aiemmin inkvisition teloituspaikka, ja se purettiin 1770 '
+            + 'laajennuksen tieltä. 1800-luvulla puistoon tuli '
+            + 'ranskalaistyylisiä suihkulähteitä ja patsaita, ja vuonna 1868 – '
+            + 'viisi vuotta ennen isoisän matkaa – siihen asennettiin '
+            + 'kaasulyhdyt, jotka vaihtuivat sähkövaloon 1892.',
+          selite: 'Alameda Centralin käytävät kulkevat yhä samassa '
+            + 'tähtikuviossa, joka puistoon muotoiltiin 1800-luvun lopulla.',
+          lahde: 'ProtoplasmaKid, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Alameda Central',
+        },
+      ],
+    },
+    {
+      id: 'atsteekkiperinto',
+      nimi: 'Atsteekkien perintö',
+      johdanto: 'Tenochtitlanin kivet ovat yhä katujen alla, mutta perintö ei '
+        + 'ole pelkkää arkeologiaa: nahuatlin kieli, paikannimet ja '
+        + 'Xochimilcon viljelysaaret ovat osa nykyistä kaupunkia.',
+      tehtava: {
+        kysymys: 'Mitä Chapultepec tarkoittaa nahuatliksi?',
+        vaihtoehdot: [
+          'heinäsirkkakukkulaa',
+          'kaksoisvuorta',
+          'kotkan pesää',
+          'suolaista järveä',
+        ],
+        oikea: 0,
+        fakta: 'Sama kieli näkyy kymmenissä paikannimissä: Xochimilco on '
+          + 'kukkapelto ja Mēxihco tarkoitti alun perin mexica-kansan '
+          + 'asuttamaa järviseutua.',
+      },
+      nostot: [
+        {
+          otsikko: 'Temppeli, jonka sähkömiehet löysivät',
+          tiedosto: 'Templo Mayor y Catedral.jpg',
+          teksti: 'Espanjalaiset purkivat atsteekkien pääpyhäkön Templo '
+            + 'Mayorin ja käyttivät kivet uuden kaupungin rakennusaineeksi, ja '
+            + 'tarkka paikka unohtui vuosisadoiksi. Sähköyhtiön työntekijät '
+            + 'kaivoivat 21. helmikuuta 1978 katua alueella, jota kutsuttiin '
+            + 'koirien saareksi, ja osuivat runsaan kahden metrin syvyydessä '
+            + 'kivilaattaan: halkaisijaa yli 3,25 metriä, paksuutta 30 '
+            + 'senttiä, painoa 8,5 tonnia ja reliefissä paloiteltu jumalatar '
+            + 'Coyolxauhqui. Presidentin asetuksella käynnistetyt kaivaukset '
+            + 'kestivät vuoteen 1982 ja tuottivat yli 7 000 esinettä. '
+            + 'Kaivausalue ja sen museo ovat auki aivan aukion kupeessa.',
+          selite: 'Templo Mayorin perustukset ovat esillä katutasoa '
+            + 'alempana aivan katedraalin vieressä.',
+          lahde: 'Mdialuna95, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Templo Mayor',
+        },
+        {
+          otsikko: 'Kieli, joka ei kadonnut',
+          tiedosto: 'Nawatlahkwilolmachiyotl.png',
+          teksti: 'Nahuatlista tuli atsteekkivallan laajetessa Mesoamerikan '
+            + 'yhteinen kieli, ja se elää yhä: vuonna 2020 puhujia arvioitiin '
+            + 'Meksikossa yli 1,6 miljoonaa, ja heistä lähes seitsemän '
+            + 'prosenttia ei puhu espanjaa lainkaan. Pelkästään pääkaupungissa '
+            + 'puhujia laskettiin vuoden 2000 väestönlaskennassa 37 450. Kieli '
+            + 'näkyy myös kartalla: Mēxihco tarkoitti alun perin '
+            + 'mexica-kansan asuttamaa järviseutua, Xochimilco on kukkapelto '
+            + 'ja Chapultepec heinäsirkkakukkula. Siirtomaa-aikana '
+            + 'esikristilliset nimet olivat epäsuosiossa, mutta '
+            + 'itsenäistymisen jälkeen Cuauhtémocin ja Moctezuman kaltaiset '
+            + 'nimet palasivat käyttöön.',
+          selite: 'Meksikon alkuperäiskielten instituutin julkaisema '
+            + 'nahuatlin aakkostaulu antaa jokaiselle kirjaimelle '
+            + 'esimerkkisanan, kuten axolotl ja xochitl.',
+          lahde: 'Instituto Nacional de Lenguas Indígenas, Wikimedia Commons '
+            + '(CC BY-SA 2.5 mx)',
+          wiki: 'Nahuatl',
+        },
+        {
+          otsikko: 'Viljelysaaret, jotka ruokkivat imperiumin',
+          tiedosto: 'Chinampa con cultivo de rábano en el Lago de Xochimilco.jpg',
+          teksti: 'Chinampa tarkoittaa nahuatliksi ruokoaidan sisällä olevaa. '
+            + 'Matalikkoon lyötiin paaluja, väliin punottiin aitaa ja sisus '
+            + 'täytettiin järvimudalla ja kasvijätteellä, kunnes saareke nousi '
+            + 'vedenpinnan yläpuolelle; kulmiin istutetut pajut sitoivat sen '
+            + 'paikoilleen. Ravinteikas muta nostettiin kanavien pohjasta '
+            + 'pelloille yhä uudelleen, ja satoja saatiin jopa seitsemän '
+            + 'vuodessa. Ensimmäiset tällaiset pellot rakennettiin noin vuonna '
+            + '1100, ja Xochimilcossa niitä viljellään yhä: keskustan alueella '
+            + 'niitä on noin 200 ja kanavia 170 kilometriä. Yhdistyneet '
+            + 'kansakunnat nimesi järjestelmän tärkeäksi maatalousperinnöksi '
+            + '2018.',
+          selite: 'Xochimilcon chinampalla kasvaa retiisiä mustassa '
+            + 'järvimudassa, ja saarekkeen reunoja sitovat pajut.',
+          lahde: 'David Arqueas, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Chinampa',
+        },
+        {
+          otsikko: 'Kansa, jota ei lasketa syntyperän mukaan',
+          tiedosto: 'Adoratorio de Ehecatl Metro Pino Suárez.jpg',
+          teksti: 'Meksikon valtio ei tilastoi alkuperäiskansaan kuulumista '
+            + 'syntyperän vaan puhutun kielen perusteella, joten '
+            + 'mexica-jälkeläisten tarkkaa määrää ei voi sanoa. Nahuatl on '
+            + 'silti Mexico Cityssä yksi eniten puhutuista alkuperäiskielistä '
+            + 'otomin, mixteekin, zapoteekin ja mazahuan rinnalla, ja perintö '
+            + 'ylittää rajatkin: Yhdysvaltain vuoden 2020 väestönlaskennassa '
+            + '387 122 ihmistä ilmoitti etnisyydekseen atsteekki. Menneisyys '
+            + 'tulee vastaan myös kadulla. Metron rakennustöissä on tehty yli '
+            + '20 000 arkeologista löytöä, ja Pino Suárezin asemalla seisoo '
+            + 'tuulenjumala Ehécatlin alttari, jota arkeologiavirasto kutsuu '
+            + 'maan pienimmäksi muinaisjäännökseksi.',
+          selite: 'Ehécatlin pyöreäpäätyinen alttari jäi paikoilleen Pino '
+            + 'Suárezin metroaseman käytävien väliin.',
+          lahde: 'ProtoplasmaKid, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ehecatl',
+        },
+      ],
+    },
+  ],
+  /*
+   * NEW ORLEANS (24.8.2026). Pohjois-Amerikan laudan kaupunkilehti,
+   * kolme sivua: kansi `kaupunki` sekä teemasivut `historia` ja
+   * `musiikki`. Molemmat teemat ovat AIHE_IKONIT-vakioaiheita, joten
+   * kuvakkeet tulevat ilman koodimuutosta.
+   *
+   * LÄHTEET. Pohjana ovat docs/mantereet-tyoaineisto/
+   * faktapohja-neworleans.md ja tarkistus-neworleans.md; jälkimmäinen ei
+   * ole mainissa vaan commitissa 18f76bf3. TARKISTUS VOITTAA
+   * FAKTAPOHJAN. Kaikki tekstiin menevät väitteet on luettu uudelleen
+   * en-Wikipedian raakateksteistä (action=raw, NODE_USE_ENV_PROXY=1)
+   * 24.8.2026: "New Orleans", "Louisiana Purchase", "Congo Square",
+   * "Mardi Gras in New Orleans", "Mardi Gras Indians", "French Quarter",
+   * "P. B. S. Pinchback", "Preservation Hall", "Natchez (boat)",
+   * "IHNC Lake Borgne Surge Barrier", "Steamboats of the Mississippi".
+   *
+   * TARKISTUSRAPORTIN KOLME PAKOLLISTA KORJAUSTA ON TEHTY (neljä
+   * tekstikohtaa).
+   * (1) Louisianan kaupan hinta EI ole "alle 18 dollaria
+   * neliömaililta": lähde sanoo "approximately eighteen dollars per
+   * square mile" ja 15 000 000 / 828 000 = 18,12 eli hieman YLI 18.
+   * Nosto NO2 sanoo "noin kahdeksantoista dollaria neliömaililta".
+   * (2) Zulu-seuran kookospähkinöitä EI heitetä: kaupunki kielsi
+   * heittämisen 1988 loukkaantumisvaaran vuoksi, ja pähkinät
+   * OJENNETAAN katsojille. Nosto M4 sanoo tämän ääneen, ja helmet on
+   * erotettu pähkinöistä omaksi asiakseen.
+   * (3) Congo Squaren "katkeamaton perinne" oli väärin KAHDESSA
+   * kohdassa (faktapohjan johdanto ja nosto M1). Wikipedia sanoo
+   * suoraan, että tanssit loppuivat kokonaan eikä viimeisestä ole
+   * päivämäärää: "the practice seems to have stopped more than a decade
+   * before the end of slavery with the American Civil War" — siis
+   * viimeistään 1850-luvun puolivälissä, kaksi vuosikymmentä ENNEN
+   * isoisän 1873-matkaa. Nykyinen sunnuntain rumpupiiri on 1900-luvun
+   * lopun tietoinen elvytys (lyömäsoittaja Luther Grayn Congo Square
+   * Preservation Society). M1 kertoo tämän katkoksen ja elvytyksen
+   * suoraan. Tämä kaataa myös faktapohjan perustelun sille, miksi
+   * Congo Square laskettaisiin 1873-AIKAISEKSI eläväksi käytännöksi:
+   * aukio oli 1873 olemassa ja sen menneisyys tunnettiin, mutta
+   * kokoontumiset olivat jo loppuneet. Siksi musiikkisivun johdanto ja
+   * lehden 1873-kulma nojaavat höyrylaivakauteen ja jälleenrakennukseen
+   * (northamerica-artikkelit.js), eivät Congo Squaren rumpuihin.
+   *
+   * VISASUOJA. js/packs/northamerica-questions.js:n neworleans-kohdassa
+   * on VIISI kysymystä (jazzin synty, Louisianan osto Ranskalta 1803,
+   * Mississippi-joki, Mardi Gras, Katrina 2005) — faktapohja puhui
+   * neljästä. Kaikkien viiden VASTAUS löytyy lehden teksteistä, mutta
+   * yhtäkään visan fact-kentän sanamuotoa ei toisteta:
+   * visan "kaksinkertaisti Yhdysvaltain pinta-alan yhdellä sopimuksella"
+   * tilalla NO2 kertoo hinnan neliömailia kohti ja sen, että Ranska
+   * hallitsi todellisuudessa vain pientä osaa alueesta; visan "padot ja
+   * pumput pitävät veden loitolla" tilalla NO3 puhuu penkereiden ja
+   * joen tulvakorkeuden suhteesta metreinä; visan "kulkueiden vaunuja
+   * rakentavat yhdistykset ympäri vuoden, ja katsojille heitetään
+   * helminauhoja" tilalla M4 kertoo Comuksen, Rexin ja värien
+   * historian; visan "padot pettivät ja suuri osa kaupungista jäi veden
+   * alle" tilalla NO4 antaa luvut 80 prosenttia ja yli 1 500.
+   *
+   * MINITEHTÄVÄT (2 kpl) eivät osu visaan: historian tehtävä kysyy,
+   * kenen hallinto kielsi puujulkisivut (vastaus H1:ssä), musiikin
+   * tehtävä karnevaalipuvun ompeluaikaa (vastaus M3:ssa). Molempien
+   * vastaus on SAMALLA sivulla eikä kumpikaan toista visaa.
+   *
+   * PILARI 3. Afroamerikkalainen kulttuuri on elävää nykykulttuuria,
+   * ei alaviite: M1 päättyy nykyiseen sunnuntain rumpupiiriin, M2
+   * Preservation Halliin, M3 pukuihin jotka ommellaan joka vuosi
+   * uudestaan, ja oppaan kaupunginosajakso kertoo Tremésta
+   * nykynaapurustona. Orjuus ja orjakauppa kerrotaan H3:ssa toteavasti
+   * lukuina ja seurauksina, ilman raakuuksien yksityiskohtia; H4 nostaa
+   * jälleenrakennuskauden ja Pinchbackin sekä sanoo auki, että
+   * "ensimmäinen" on kiistanalainen (Oscar Dunn 1871). Katrina on
+   * NO4:ssä tapahtuma lukuineen ja jälleenrakennus nykytilana
+   * (Lake Borgnen tulvapato, Superdomen paluu) — ei kärsimyskuvausta.
+   *
+   * KUVAT: 23 kpl, kaikki haettu Commonsin rajapinnalla, lisenssi ja
+   * tekijä luettu extmetadatasta ja JOKAINEN katsottu silmin 900
+   * pikselin esikatseluna. Lähderivin tekijä on täsmälleen
+   * extmetadata.Artist-muodossa; ainoa poikkeus on Espanjan
+   * puolustusministeriön kirjastosta peräisin oleva kaupunkisuunnitelma,
+   * jolla ei ole tekijää lainkaan (Commonsin Artist-kenttä toistaa
+   * teoksen nimen), joten se on merkitty "Tuntematon tekijä".
+   * HYLKÄYKSET: "Aerial - New Orleans Skyline 2013 - panoramio"
+   * (vesileima "XEON ©"), "Jackson Square Aerial Photo" (vesileima
+   * "K2KIDD.COM"), Detroit Photographic Companyn photochrom
+   * "Levee at New Orleans" ja W. M. Chasen stereokortti "Cotton
+   * traffic" (kumpaankin painettu julkaisijan nimiö ja korttikehys),
+   * "A New Orleans streetcar" ja Preservation Hallin sisäkuva
+   * (tunnistettavia kasvoja), Mardi Gras Indianin pukunäyttely
+   * Algiersissa (tunnistettavat kasvot ja käsinkirjoitettu kyltti),
+   * "Vieux Carré View from Canal Place Westin" (hotellin kalusteet
+   * täyttävät etualan), "Buddy Bolden 001" (875 px, alle rajan),
+   * "Make It Right Foundation House" (1000 px), Cabildon HABS-kuvat
+   * (arkistoliterat), "Garden District New Orleans (3)"
+   * (opastekyltti hallitsee kuvaa) ja "New Orleans - Down in the Treme
+   * on a Monday Afternoon 03" (rakennusliikkeen mainoskyltti).
+   *
+   * HISTORIALLISEN PAINATTEEN POIKKEUS: H2:n vuoden 1852 litografiassa
+   * on alalaidassa teoksen oma painettu nimiö. Se on julkaisijan oma
+   * merkintä eikä jälkikäteen lisätty leima, ja kuvateksti kertoo siitä
+   * lukijalle — sama ratkaisu kuin Quiton 1809-maalauksen kirjainluettelossa.
+   *
+   * ENNEN JA NYT -PARIA EI OLE. Kaupungille ei ole valokuvataulua
+   * northamerica-valokuvat.js:ssä, eikä Commonsista löytynyt kuvasäännöt
+   * täyttävää vanhaa yleisnäkymää: 1900-luvun alun rantakuvat ovat
+   * photochrom- tai stereokortteja, joissa on painettu julkaisijan
+   * nimiö. Pari jää jatkotyöksi kuten Los Angelesissa.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä. Matkaoppaan jakso 5
+   * nojaa siis en-Wikipedian Climate-osioon ja SANOO SEN ÄÄNEEN
+   * (Samarkandin, Vancouverin ja Los Angelesin malli). Mittauspiste
+   * olisi Jackson Square 29,9575 / -90,06306.
+   *
+   * KOHDEKARTTAA EI TEHDÄ tässä erässä (kuten Los Angelesissa);
+   * faktapohjan yhdeksän pistettä jäävät odottamaan omaa karttaeräänsä.
+   *
+   * KUVATEKSTIT: yksi virke, ja se kertoo KOHTEESTA eikä kuvaile kuvaa
+   * (omistajan linjaus 22.8.2026).
+   */
+  neworleans: [
+    {
+      id: 'kaupunki',
+      nimi: 'New Orleans',
+      johdanto: 'Mississippin viimeinen suuri mutka kiertää kaupungin, jonka '
+        + 'ranskalaiset perustivat 1718 ja Napoleon myi Yhdysvalloille 1803. '
+        + 'Puolet New Orleansista jää merenpinnan tasolle tai sen alle, ja '
+        + 'penkereet pitävät joen aisoissa.',
+      kansikuvat: [
+        {
+          tiedosto: 'New Orleans skyline from the Mississippi River.JPG',
+          selite: 'Keskustan tornitalot ja niiden edessä kulkeva jokiranta '
+            + 'nousevat suoraan Mississippin penkereeltä.',
+          lahde: 'MusikAnimal, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Jackson Square New Orleans Feb 2023.jpg',
+          selite: 'Jackson Squaren laidalla seisovat St. Louis -katedraali ja '
+            + 'sen molemmin puolin Cabildo ja Presbytère.',
+          lahde: 'Mussi Katz, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'FQHotelRoof1.jpg',
+          selite: 'Ranskan Korttelin matalat katot jatkuvat katedraalin '
+            + 'tornien ohi Mississippin rantaan asti.',
+          lahde: 'Infrogmation, Wikimedia Commons (CC BY 2.5)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Aerial photograph of Jackson Square, New Orleans, Louisiana.jpg',
+          selite: 'Jackson Square on Ranskan Korttelin ainoa avoin aukio, ja '
+            + 'sitä reunustavat Pontalba-talot kahdelta sivulta.',
+          lahde: 'Mark Westguard, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'New Orleans from the Air September 2019 - French Quarter and CBD - River to Lake.jpg',
+          selite: 'Kaupunki levittäytyy Mississippin penkereeltä pohjoiseen '
+            + 'kohti Lake Pontchartrainia matalana ja tasaisena.',
+          lahde: 'George Bannister, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Steamboat Natchez. New Orleans. (48759732042).jpg',
+          selite: 'Siipiratasalus Natchez rakennettiin 1975, ja se kuljettaa '
+            + 'matkustajia Mississippillä Toulouse Streetin laiturista.',
+          lahde: 'Bernard Spragg. NZ from Christchurch, New Zealand, Wikimedia Commons (CC0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaupunki puolikuun muotoisessa mutkassa',
+          tiedosto: 'Plano de la ciudad de Nueva Orleans.jpg',
+          teksti: 'Ranskalainen Mississippi-yhtiö perusti kaupungin keväällä '
+            + '1718 Jean-Baptiste Le Moyne de Bienvillen johdolla maalle, '
+            + 'jota chitimacha-kansa oli perinteisesti asuttanut. Nimi La '
+            + 'Nouvelle-Orléans annettiin Orléansin herttuan Philippe II:n '
+            + 'mukaan; hän hoiti Ranskan valtionhoitajan tehtäviä Ludvig '
+            + 'XV:n puolesta 1715–1723. Lempinimi Crescent City tulee '
+            + 'joesta: alempi Mississippi kaartaa täällä niin jyrkästi '
+            + 'kaupungin ympäri ja läpi, että kartalla asutus näyttää '
+            + 'puolikuulta veden sylissä. Ensimmäinen ruutukaava piirrettiin '
+            + 'suoraan joen luonnolliselle penkereelle, joka oli seudun '
+            + 'korkeinta maata.',
+          selite: 'Espanjankielisessä kaupunkisuunnitelmassa 1800-luvun '
+            + 'alusta vanhan kaupungin ruutukaava ja sen kulmalinnakkeet '
+            + 'kiertyvät joen mutkan mukaan.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+          wiki: 'New Orleans',
+        },
+        {
+          otsikko: 'Kauppa joka mitattiin neliömaileissa',
+          tiedosto: 'Cabildo New Orleans May 1936.jpg',
+          teksti: 'Vuoden 1800 salainen sopimus palautti Louisianan '
+            + 'Espanjalta Ranskalle, mutta Napoleon myi koko alueen '
+            + 'Yhdysvalloille jo 1803 rahoittaakseen sotiaan Euroopassa. '
+            + 'Presidentti Jefferson tavoitteli ennen muuta New Orleansin '
+            + 'satamaa. Hinnaksi sovittiin viisitoista miljoonaa dollaria '
+            + 'noin 828 000 neliömailista, siis noin kahdeksantoista '
+            + 'dollaria neliömaililta. Ranska hallitsi todellisuudessa vain '
+            + 'pientä osaa alueesta: valtaosalla asui alkuperäiskansoja, ja '
+            + 'käytännössä Yhdysvallat osti etuoikeuden hankkia heidän '
+            + 'maansa sopimuksin tai valloittamalla. Vallanvaihto '
+            + 'vahvistettiin 20. joulukuuta 1803 Place d\'Armesin laidalla.',
+          selite: 'Cabildo oli Espanjan siirtomaahallinnon talo, ja sen '
+            + 'salissa Louisiana siirtyi Yhdysvalloille joulukuussa 1803.',
+          lahde: 'Richard Koch, Wikimedia Commons (PD)',
+          wiki: 'Louisiana Purchase',
+        },
+        {
+          otsikko: 'Puolet kaupungista meren tasolla tai sen alla',
+          tiedosto: 'Mississippi River at New Orleans 11 Feb 2019.jpg',
+          teksti: 'Kaupunki syntyi joen luonnollisille penkereille, ja vasta '
+            + 'A. Baldwin Woodin suunnittelemat pumput tekivät ympäröivistä '
+            + 'soista ja marskimaista rakennuskelpoisia. Nykyään puolet '
+            + 'New Orleansista on merenpinnan tasolla tai sen alapuolella: '
+            + 'korkeimmillaan noin kuusi metriä sen yläpuolella joen '
+            + 'penkereellä Uptownissa, alimmillaan runsaat kaksi metriä sen '
+            + 'alapuolella kaupungin itäosissa. Joen vuotuinen tulvakorkeus '
+            + 'yltää noin neljään metriin merenpinnan yläpuolelle, ja '
+            + 'penkereitä on korotettu seitsemään metriin. Maa myös painuu, '
+            + 'koska pengerrykset estävät tulvia tuomasta uutta lietettä '
+            + 'vanhan tilalle.',
+          selite: 'Ranskan Korttelin kohdalla Mississippi kulkee penkereen '
+            + 'takana, ja tulva-aikaan sen pinta on kaupunkia ylempänä.',
+          lahde: 'Infrogmation of New Orleans, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'New Orleans',
+        },
+        {
+          otsikko: 'Elokuu 2005 ja se mitä sen jälkeen rakennettiin',
+          tiedosto: 'Lake Borgne surge barrier - USACE-p15141coll5-536.jpeg',
+          teksti: 'Hurrikaani Katrinan aikana 29. elokuuta 2005 liittovaltion '
+            + 'penkereet ja tulvamuurit pettivät suunnitteluarvojaan '
+            + 'heikommin, ja vesi peitti 80 prosenttia kaupungista. Insinööri '
+            + 'Raymond B. Seed kutsui tapahtunutta maailman pahimmaksi '
+            + 'tekniseksi katastrofiksi Tšernobylin jälkeen. Louisianassa '
+            + 'kirjattiin yli 1 500 kuollutta, useimmat New Orleansissa. '
+            + 'Kesällä 2007 asukkaita oli noin 60 prosenttia myrskyä '
+            + 'edeltäneestä määrästä ja kymmenen vuoden kuluttua 80 '
+            + 'prosenttia vuoden 2000 laskennasta. Mardi Gras\'ta, Jazz & '
+            + 'Heritage -festivaalia eikä Voodoo Experiencea ole silti '
+            + 'kertaakaan peruttu.',
+          selite: 'Lake Borgnen myrskytulvapato sulkee kaupungin itäisen '
+            + 'vesireitin lähes kolmen kilometrin mittaisella muurilla.',
+          lahde: 'United States. Army. Corps of Engineers. New Orleans District, Wikimedia Commons (PD)',
+          wiki: 'Hurricane Katrina',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Garden District, New Orleans in deep summer.jpg',
+          selite: 'Garden Districtin jalkakäytävät on ladottu tiilestä, ja '
+            + 'kesällä pensasaidat ja kukkivat puut kaartuvat niiden yli.',
+          lahde: 'Andrew, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Matkailijalle New Orleans on pieni kaupunki. Ranskan '
+          + 'Kortteli on kolmentoista korttelin mittainen Canal Streetin ja '
+          + 'Esplanade Avenuen välissä ja seitsemästä yhdeksään korttelia '
+          + 'syvä, ja sen laidalta pääsee kävellen Congo Squarelle ja '
+          + 'jokipenkereelle. Suunnat kerrotaan veden mukaan: lakewards '
+          + 'tarkoittaa Lake Pontchartrainiin päin eli pohjoiseen, koska '
+          + 'mutkitteleva joki tekee ilmansuunnista hankalia. Pisimmät matkat '
+          + 'kannattaa tehdä raitiovaunulla, sillä St. Charles Avenuen linja '
+          + 'vie Garden Districtin läpi tammikujaa pitkin. Kesä on kuuma ja '
+          + 'kostea ja hurrikaanikausi kestää kesäkuusta marraskuuhun — sen '
+          + 'ulkopuolella sää on leudompi ja kaupunki täynnä tapahtumia.',
+        artikkeli: {
+          nimi: 'Matkailijan New Orleans',
+          taitto: 'opas',
+          teksti: 'Jokikaupunki, jossa vanhin kortteli on espanjalaista '
+            + 'tiiltä, kadut kulkevat joelle ja järvelle päin ja musiikki '
+            + 'kuuluu ulos ovista arkenakin.',
+          nosto: 'Kompassi ei auta: paikallinen neuvoo tien sanomalla '
+            + 'lakewards, järvelle päin.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kaupunkiin saavutaan Louis Armstrongin '
+                + 'kansainvälisen lentoaseman kautta, joka sijaitsee '
+                + 'Kennerin esikaupungissa. Perillä paras '
+                + 'kulkuneuvo on raitiovaunu. St. Charles Avenuen linja on '
+                + 'Yhdysvaltain vanhin yhtäjaksoisesti liikennöity '
+                + 'raitiotielinja: se aloitti 1835 Carrolltonin ja '
+                + 'keskustan välillä, vaunuja veti tuolloin höyryveturi ja '
+                + 'yhdensuuntainen lippu maksoi 25 senttiä. Nykyiset '
+                + 'puuvaunut on suojeltu kansallisina maamerkkeinä. Joen yli '
+                + 'pääsee lautalla, ja lauttaliikenne on ollut käynnissä '
+                + 'keskeytyksettä vuodesta 1827; Canal Streetin lautta vie '
+                + 'Algiers Pointiin joen vastarannalle.',
+              kuva: {
+                tiedosto: '20080622 St. Charles St. Trolley behind tree with Mardi Gras beads.JPG',
+                selite: 'St. Charles Avenuen vihreä raitiovaunu kulkee '
+                  + 'nurmikaistaa pitkin tammien ja kukkivan '
+                  + 'kesäsyreenin välissä.',
+                lahde: 'TonyTheTiger, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: ruokakulttuuri',
+              teksti: 'New Orleansin keittiö on ranskalaisen, espanjalaisen, '
+                + 'italialaisen, afrikkalaisen ja alkuperäiskansojen '
+                + 'vaikutteiden risteytys, ja siitä ovat syntyneet gumbo, '
+                + 'jambalaya, étouffée ja po\'boy-voileipä. Ranskan '
+                + 'Korttelin torin laidalla toimiva Café du Monde on '
+                + 'paistanut beignet-munkkejaan ja tarjoillut sikurilla '
+                + 'maustettua café au laitia vuodesta 1862. Maanantain '
+                + 'ruokana ovat perinteisesti punaiset pavut ja riisi — '
+                + 'Louis Armstrong allekirjoitti kirjeitään usein sanoilla '
+                + '"Red beans and ricely yours".',
+              kuva: {
+                tiedosto: 'Beignet and Cafe au lait (30116730573).jpg',
+                selite: 'Beignet on hiivataikinasta uppopaistettu munkku, '
+                  + 'joka tarjoillaan paksun tomusokerikerroksen alla '
+                  + 'sikurikahvin kanssa.',
+                lahde: 'pelican from Tokyo, Japan, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kaupunginosat tänään',
+              teksti: 'Canal Street jakaa kaupungin historiallisesti kahtia: '
+                + 'toisella puolella on downtown, jossa ovat Ranskan '
+                + 'Kortteli ja Tremé, toisella uptown ja sen Garden '
+                + 'District. Tremé on Congo Squaren kupeessa, ja sitä '
+                + 'pidetään Yhdysvaltain vanhimpana mustien '
+                + 'kaupunginosana: 1700- ja 1800-luvuilla arviolta '
+                + 'kahdeksankymmentä prosenttia kaupunginosan kiinteistöistä '
+                + 'oli mustien omistuksessa. Garden District taas kasvoi '
+                + '1800-luvulla amerikkalaiskaupungin vaurauden ympärille, '
+                + 'ja sen puutarhat, pylväskuistit ja valurauta-aidat ovat '
+                + 'yhä paikoillaan.',
+              kuva: {
+                tiedosto: 'Marais Street, Treme, New Orleans, 10 Aug 2021 - 02.jpg',
+                selite: 'Tremén kadut ovat täynnä matalia puutaloja, jotka '
+                  + 'on maalattu keltaiseksi, vaaleanpunaiseksi ja '
+                  + 'siniseksi.',
+                lahde: 'Infrogmation of New Orleans, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: jälleenrakennus nykytilana',
+              teksti: 'Katrinan jälkeinen jälleenrakennus näkyy matkailijalle '
+                + 'kahdella tavalla. Toisaalta kaupungin ympärille on '
+                + 'rakennettu uusi tulvasuojausjärjestelmä patoineen ja '
+                + 'sulkuineen, toisaalta suuret tapahtumat palasivat '
+                + 'nopeasti. Caesars Superdome, joka toimi myrskyn aikana '
+                + 'viimeisen turvan suojana kymmenilletuhansille '
+                + 'asukkaille, kunnostettiin ja on isännöinyt Super Bowlia '
+                + 'ennätykselliset kahdeksan kertaa, viimeksi 2025. '
+                + 'Kaikissa kaupunginosissa toipuminen ei ole ollut yhtä '
+                + 'nopeaa, ja se näkyy yhä tyhjinä tontteina itäisillä '
+                + 'alueilla.',
+              kuva: {
+                tiedosto: 'Poydras Street, New Orleans CBD, 24 August 2021 - 09.jpg',
+                selite: 'Caesars Superdome on keskustan laidalla oleva '
+                  + 'kupolihalli ja New Orleans Saintsin kotikenttä.',
+                lahde: 'Infrogmation of New Orleans, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi New Orleansista puuttuu, joten nämä '
+                + 'luvut ovat en-Wikipedian New Orleans -artikkelin '
+                + 'Climate-osiosta eivätkä samasta lähteestä kuin lehtien '
+                + 'vuosigraafit. Ilmasto on lauhkean kosteaa (Köppen: Cfa): '
+                + 'talvet ovat lyhyitä ja leutoja, kesät kuumia ja kosteita. '
+                + 'Kuukausikeskiarvo on tammikuussa noin 12,4 astetta ja '
+                + 'elokuussa noin 28,9. Sadetta kertyy vuodessa noin '
+                + '1 590 millimetriä, kesä on sateisin ja lokakuu kuivin. '
+                + 'Yli 32 asteen päiviä on mediaanivuonna enemmän kuin '
+                + 'kahdeksankymmentä. Lunta sataa harvoin, mutta '
+                + '21. tammikuuta 2025 kaupunki sai 20–25 senttimetriä, '
+                + 'viimeisimmän merkittävän lumisateen. Hurrikaanikausi '
+                + 'kestää kesäkuusta marraskuuhun.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Espanjalaiset rakensivat Ranskan Korttelin uudelleen kahden '
+        + 'suurpalon jäljiltä, höyrylaiva avasi joen kaupalle kahteen '
+        + 'suuntaan, ja kaupungissa eli samaan aikaan maan suurin vapaiden '
+        + 'värillisten yhteisö ja maan suurin orjamarkkina.',
+      tehtava: {
+        kysymys: 'Kenen hallinto määräsi Ranskan Korttelin palomääräykset, jotka kielsivät puujulkisivut?',
+        vaihtoehdot: [
+          'Espanjan',
+          'Ranskan',
+          'Britannian',
+          'Yhdysvaltain',
+        ],
+        oikea: 0,
+        fakta: 'Kaupunki kuului Espanjalle, kun toinen suurpalo tuhosi sen '
+          + '1794. Uudet määräykset kielsivät puujulkisivut, ja siksi '
+          + 'Vieux Carrén vanhat talot ovat tiiltä ja stukkia.',
+      },
+      nostot: [
+        {
+          otsikko: 'Ranskalainen nimi, espanjalainen tiili',
+          tiedosto: 'Lower Pontalba Building, New Orleans French Quarter, Feb 2017.jpg',
+          teksti: 'Ranskan aikakauden puiset talot paloivat kahdessa '
+            + 'suurpalossa 1788 ja 1794, jotka yhdessä tuhosivat 80 '
+            + 'prosenttia kaupungin rakennuksista. Jälkimmäisen jälkeen '
+            + 'Espanjan hallinto sääti palomääräykset, jotka kielsivät '
+            + 'puujulkisivut, ja Vieux Carré nousi uudelleen tiilestä ja '
+            + 'stukista. Siksi lähes koko säilynyt 1700-luvun arkkitehtuuri '
+            + 'on espanjalaiskaudelta, vaikka aluetta kutsutaan yhä Ranskan '
+            + 'Kortteliksi. Koristeelliset valurautaparvekkeet ovat vielä '
+            + 'nuorempia: ensimmäiset kaksikerroksiset valmistuivat '
+            + 'Pontalba-taloihin 1849–1851 ja loivat muodin, jota muut '
+            + 'alkoivat seurata.',
+          selite: 'Pontalba-talot valmistuivat Jackson Squaren molemmille '
+            + 'sivuille 1851, ja ne rakennutti paronitar Micaela '
+            + 'Almonester Pontalba.',
+          lahde: 'Pedro de Carvalho Ponchio from Atlanta, United States of America, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'French Quarter',
+        },
+        {
+          otsikko: 'Höyrylaiva joka avasi joen ylävirtaan',
+          tiedosto: 'LowerCottenPressViewLitho.jpg',
+          teksti: 'Ennen höyryä Mississippiä pystyi kulkemaan käytännössä '
+            + 'vain myötävirtaan; ylävirtaan noustiin soutamalla tai '
+            + 'hinaamalla rannalta. Sen muutti laiva nimeltä New Orleans, '
+            + 'joen ensimmäinen höyrylaiva, joka lähti Pittsburghista '
+            + 'lokakuussa 1811. Matkalla se selvisi vahingoittumattomana '
+            + 'New Madridin maanjäristyssarjasta ja saapui perille 10. '
+            + 'tammikuuta 1812. Pian se aloitti säännölliset vuorot '
+            + 'Natcheziin. Vuoteen 1860 mennessä joen kauppa oli tehnyt '
+            + 'New Orleansista maan kolmanneksi suurimman tuontisataman '
+            + 'lastimäärällä mitattuna ja nostanut sen asukaskohtaisen '
+            + 'tulotason maan toiseksi korkeimmaksi.',
+          selite: 'Vuoden 1852 näkymässä kaupungin ranta on täynnä '
+            + 'purjelaivoja ja höyrylaivoja, ja alalaitaan on painettu '
+            + 'litografian oma nimiö.',
+          lahde: 'J.W. Hill & Smith, D. W. Moody, Wikimedia Commons (PD)',
+          wiki: 'New Orleans (steamboat)',
+        },
+        {
+          otsikko: 'Vapaiden kaupunki ja orjakaupan pääkaupunki',
+          tiedosto: 'Fleischbein, A Free Woman of Color (History Collection of New Orleans 1985.212).jpg',
+          teksti: 'New Orleansissa eli 1800-luvun alkupuolella maan suurin ja '
+            + 'vaurain vapaiden värillisten yhteisö, gens de couleur libres '
+            + '— pääosin ranskankielisiä käsityöläisiä ja ammatinharjoittajia '
+            + 'omine kouluineen ja omaisuuksineen. Samaan aikaan kaupunki oli '
+            + 'maan suurin orjamarkkina, erityisesti sen jälkeen kun '
+            + 'kansainvälinen orjakauppa kiellettiin 1808 ja kotimainen '
+            + 'kauppa kasvoi: yli miljoonasta pakolla siirretystä '
+            + 'orjuutetusta ihmisestä kaksi kolmasosaa vietiin syvään '
+            + 'etelään. Vuoteen 1840 mennessä New Orleans oli '
+            + 'maan rikkain ja kolmanneksi väkirikkain kaupunki.',
+          selite: 'François Fleischbeinin noin 1837 maalaama muotokuva '
+            + 'esittää vapaan värillisen naisen tignon-päähineessä ja '
+            + 'pitsikauluksessa.',
+          lahde: 'François Fleischbein, Wikimedia Commons (PD)',
+          wiki: 'New Orleans',
+        },
+        {
+          otsikko: 'Kuvernööri joka istui viisineljättä päivää',
+          tiedosto: 'P. B. S. Pinchback - Brady-Handy (cropped).jpg',
+          teksti: 'Louisiana otettiin takaisin unioniin 1868 uudella '
+            + 'perustuslailla, joka takasi miehille yleisen äänioikeuden '
+            + 'rodusta riippumatta ja perusti julkisen koulujärjestelmän. '
+            + 'Kun kuvernööri Henry C. Warmoth asetettiin syytteeseen, '
+            + 'varakuvernööri P. B. S. Pinchback hoiti virkaa 9. joulukuuta '
+            + '1872 alkaen 13. tammikuuta 1873 asti eli 35 päivää, joiden '
+            + 'aikana kymmenen lakia vahvistettiin. Häntä kutsutaan yleensä '
+            + 'Yhdysvaltain ensimmäiseksi afrikkalaista syntyperää olevaksi '
+            + 'kuvernööriksi, joskin asiasta kiistellään: Oscar Dunn oli '
+            + 'hoitanut samaa virkaa 39 päivää jo 1871.',
+          selite: 'P. B. S. Pinchback toimi Louisianan kuvernöörinä '
+            + 'talvella 1872–1873 ja oli sitä ennen osavaltion '
+            + 'varakuvernööri.',
+          lahde: 'Mathew Benjamin Brady / Levin Corbin Handy, Wikimedia Commons (PD)',
+          wiki: 'P. B. S. Pinchback',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Congo Squarella soineet rummut, hautajaissaattueiden '
+        + 'puhallinorkesterit ja karnevaalin helmipuvut tekivät New '
+        + 'Orleansista jazzin syntykaupungin — eivät museoesineenä vaan '
+        + 'viikoittain soivana nykykulttuurina.',
+      tehtava: {
+        kysymys: 'Kuinka kauan Black Masking Indianin puvun suunnittelu ja ompelu tavallisesti kestää?',
+        vaihtoehdot: [
+          'kuudesta yhdeksään kuukautta',
+          'kuudesta yhdeksään päivää',
+          'kaksi viikkoa',
+          'kuusi vuotta',
+        ],
+        oikea: 0,
+        fakta: 'Puku ommellaan käsin ja aloitetaan alusta joka vuosi. '
+          + 'Materiaalit maksavat tuhansia dollareita, ja valmis asu voi '
+          + 'painaa yli neljäkymmentä kiloa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Aukio jonka rummut vaikenivat ja palasivat',
+          tiedosto: 'New Orleans 2024-02-08 - Congo Square.jpg',
+          teksti: 'Siirtomaa-aikana orjuutetut saivat sunnuntain vapaaksi, ja '
+            + '1817 kaupunginjohtajan määräys rajasi heidän kokoontumisensa '
+            + 'yhteen paikkaan, josta tuli Congo Square. Arkkitehti Benjamin '
+            + 'Latrobe hämmästyi 1819 nähdessään aukiolla 500–600 ihmistä '
+            + 'tanssimassa bamboulaa ja calindaa afrikkalaisin rytmein. '
+            + 'Kokoontumiset kuitenkin loppuivat kokonaan: viimeisestä '
+            + 'tanssista ei ole päivämäärää, mutta tapa näyttää '
+            + 'hiipuneen jo yli vuosikymmen ennen orjuuden loppua. Nykyinen '
+            + 'sunnuntain rumpupiiri on tietoinen elvytys, jota ylläpitää '
+            + 'lyömäsoittaja Luther Grayn perustama Congo Square '
+            + 'Preservation Society.',
+          selite: 'Congo Square on kivetty aukio Louis Armstrong Parkissa, ja '
+            + 'sen päällyste on ladottu suuriksi samankeskisiksi ympyröiksi.',
+          lahde: 'Miguel Discart (Photos Vrac), Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Congo Square',
+        },
+        {
+          otsikko: 'Kaupunki jossa jazz opetteli kävelemään',
+          tiedosto: 'Preservation Hall Bass Drum.jpg',
+          teksti: 'Jazz syntyi 1900-luvun alun New Orleansissa mustien '
+            + 'yhteisöjen musiikista: hautajaissaattueiden '
+            + 'puhallinorkestereista, kirkkolaulusta ja Congo Squaren '
+            + 'rytmiperinnöstä. Kornetisti Buddy Bolden soitti kaupungissa '
+            + '1895–1906, ja hänen yhtyeensä loi big fourin, ensimmäisen '
+            + 'synkopoidun rumpukuvion, joka irtosi tasajakoisesta '
+            + 'marssirytmistä. Pianisti Jelly Roll Morton aloitti uransa '
+            + 'Storyvillen saleissa. Louis Armstrong syntyi kaupungissa 4. '
+            + 'elokuuta 1901, vaikka hän itse vakuutti usein syntyneensä '
+            + '4. heinäkuuta 1900.',
+          selite: 'Preservation Hall on Ranskan Korttelin klubi, jossa '
+            + 'perinteistä New Orleans -jazzia on soitettu vuodesta 1961.',
+          lahde: 'Infrogmation of New Orleans, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Jazz',
+        },
+        {
+          otsikko: 'Puku joka ommellaan uudestaan joka vuosi',
+          tiedosto: 'New Orleans, Fauborg Tremé, Backstreet Cultural Museum 22214.jpg',
+          teksti: 'Mardi Gras Indianit eli Black Masking Indianit ovat mustia '
+            + 'kaupunginosayhteisöjä, jotka pukeutuvat karnevaaliin itse '
+            + 'käsin ompelemiinsa helmi- ja sulkapukuihin. Perinne juontaa '
+            + '1880-luvulle, jolloin afrikkalaista, ranskalaista ja '
+            + 'choctaw-syntyperää ollut Becate Batiste perusti Seventh '
+            + 'Wardiin ryhmän nimeltä Creole Wild West. Puvun suunnittelu ja '
+            + 'ompelu kestää tavallisesti kuudesta yhdeksään kuukautta, '
+            + 'materiaalit maksavat tuhansia dollareita ja valmis asu voi '
+            + 'painaa yli neljäkymmentä kiloa. Puvut paljastetaan Super '
+            + 'Sunday -paraatissa, ja seuraavan vuoden työ alkaa alusta.',
+          selite: 'Tremén Backstreet Cultural Museum säilyttää kokonaisia '
+            + 'karnevaalipukuja, joiden helmityö on kokonaan käsin tehtyä.',
+          lahde: 'Barry Solow, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Mardi Gras Indians',
+        },
+        {
+          otsikko: 'Karnevaali jonka värit valittiin 1872',
+          tiedosto: 'Ornate Mardi Gras Float - Canal Street, New Orleans, 1982.jpg',
+          teksti: 'Ensimmäinen tunnettu Mardi Gras -juhla Louisianassa '
+            + 'pidettiin 2. maaliskuuta 1699 Mississippin suulla, mutta '
+            + 'järjestäytynyt katukarnevaali alkoi vasta 1856, kun '
+            + 'kaksikymmentäyksi liikemiestä perusti Mistick Krewe of '
+            + 'Comuksen; sen ensimmäinen soihtukulkue nähtiin 1857. Rex '
+            + 'perustettiin 1872 venäläisen suurruhtinaan Aleksei '
+            + 'Aleksandrovitšin vierailun kunniaksi, ja se kehotti jo '
+            + 'ensimmäisen kulkueensa alla verhoamaan parvekkeet violettiin, '
+            + 'vihreään ja kultaan — samat värit ovat yhä karnevaalin '
+            + 'tunnusvärit. Zulu-seuran kultamaalatut '
+            + 'kookospähkinät ojennetaan katsojille kädestä: heittäminen '
+            + 'kiellettiin loukkaantumisvaaran vuoksi 1988.',
+          selite: 'Kulkueen kuninkaanvaunu ylitti Canal Streetin 1982, ja '
+            + 'sen naamioidut kulkijat kuuluvat karnevaaliseuraan eli '
+            + 'kreween.',
+          lahde: 'Sydney Byrd, for US National Park Service, Wikimedia Commons (PD)',
+          wiki: 'Mardi Gras in New Orleans',
+        },
+      ],
+    },
+  ],
+  /*
+   * BOGOTÁ (24.8.2026). Lauta southamerica, kaupunki-id bogota,
+   * wiki-nimi "Bogotá" (js/packs/southamerica.js rivi 110).
+   * Lähdeaineisto: docs/mantereet-tyoaineisto/faktapohja-bogota.md ja
+   * sen RIIPPUMATON TARKISTUS docs/mantereet-tyoaineisto/
+   * tarkistus-bogota.md, joka voittaa ristiriidassa. Jokainen tekstiin
+   * mennyt väite on lisäksi luettu itse en-Wikipedian raakatekstistä
+   * (action=raw): "Bogotá", "History of Bogotá", "Plaza de Bolívar",
+   * "Primatial Cathedral of Bogotá", "National Museum of Colombia",
+   * "Muisca", "Muisca raft", "Muisca economy", "Gold Museum, Bogotá",
+   * "Lake Guatavita", "La Lechuga", "Emerald", "Colombian emeralds",
+   * "Ciclovía", "TransMilenio", "El Dorado International Airport",
+   * "Salt Cathedral of Zipaquirá", "La Candelaria, Bogotá",
+   * "Monserrate".
+   *
+   * TARKISTUKSEN PAKOLLINEN KORJAUS ON TEHTY. Faktapohjan nosto M3
+   * väitti, että kaksi kultaista muisca-uhrilauttaa olisi löytynyt
+   * Guatavita-järven pohjalta. Väite on väärä ja ristiriidassa
+   * faktapohjan oman noston M2 kanssa. "Muisca raft" -artikkelin
+   * mukaan vuoden 1969 Pasca-lautan löysi talonpoika Cruz María
+   * Dimaté LUOLASTA Pascan kunnassa, ja vuoden 1856 Siecha-lautan
+   * löysivät veljekset Joaquín ja Bernardino Tovar osittain
+   * tyhjentämästään LAMMIKOSTA Siechan alueella; se myytiin Saksaan
+   * ja tuhoutui tulipalossa Bremenin satamassa. Kumpikaan ei ole
+   * Guatavitasta. Lehti kertoo tämän suoraan (nostot M2 ja M3), koska
+   * virheellinen versio vahvistaisi juuri sitä aarteenetsintäkehystä,
+   * jota pilari 3 kieltää.
+   *
+   * TARKISTUKSEN MUUT RATKAISUT: TransMilenion asemaluku on 143
+   * (infoboxin ja "Transmilenio en cifras diciembre 2025" -lähteen
+   * luku), EI leipätekstin vanhentunutta 152:ta, jonka oma
+   * linjaluettelokaan ei täsmää (summa 151). Nosto H3:n
+   * "Pariisiin lähettämä tiedekunta" on kirjoitettu selkeämmin:
+   * Bolívar jätti rekrytoinnin Pariisissa toimineelle ministerilleen
+   * Francisco Antonio Zealle, ja ryhmä tuli Bogotáan.
+   *
+   * SISÄLTÖLINJAUS (pilarit 3 ja 4): muiscat esiintyvät elävänä
+   * nykykansana omalla sivullaan — viisi toimivaa neuvostoa (Suba,
+   * Bosa, Cota, Chía, Sesquilé) ja niiden 2002 perustama Cabildo
+   * Mayor del Pueblo Muisca, kvinoan viljelyn elvytys Cotassa,
+   * kosteikon puolustus Subassa ja chicha-festivaali. Tämä on
+   * tarkistuksen mukaan koko faktapohjan luotettavin kohta, ja se on
+   * tarkistettu vielä kerran "Muisca"-artikkelin 21st century
+   * -osiosta. Kullan merkitys kerrotaan muiscojen omasta
+   * uskonnollisesta näkökulmasta (Kultamuseon oma muotoilu: kulta ei
+   * ollut monille alkuperäiskansoille rikkauden mitta vaan
+   * symbolisesti ja uskonnollisesti latautunut pyhä aine) — EI
+   * aarteenetsintänä. Nykypolitiikkaa, huumekauppaa eikä väkivaltaa
+   * ei käsitellä missään: 1900-luvun levottomuudet ja "Colombian
+   * emeralds" -artikkelin konfliktiosiot on jätetty tietoisesti pois.
+   *
+   * KULTTUURIVISA (js/packs/southamerica-questions.js, avain bogota)
+   * kysyy kuusi asiaa: Kolumbian pääkaupunki, smaragdit, El Dorado /
+   * Guatavita, korkeus noin 2 600 m, ciclovía ja Zipaquirán
+   * suolakatedraali. Päätoimittajan sääntö on, että vastausten TÄYTYY
+   * löytyä lehden teksteistä mutta EI visan omalla sanamuodolla:
+   * (1) Kolumbian pääkaupunki sanotaan etusivun leipätekstissä
+   * (southamerica-artikkelit.js) ja nostoissa H3 ja H4;
+   * (2) smaragdit tulevat nostossa H4 (La Lechugan 1 485 Muzon
+   * smaragdia ja maan asema historiallisesti maailman suurimpana
+   * smaragdintuottajana) ja nostossa M1 (muzot smaragdikansana) —
+   * faktapohja oli jättänyt aiheen kokonaan pois, joten se on tässä
+   * lisätty; (3) El Dorado ja Guatavita ovat nostossa M3 mutta
+   * muiscojen omasta näkökulmasta, ei "eurooppalaiset kuolivat
+   * sademetsässä" -tarinana; (4) korkeus on nostossa B2 tarkkana
+   * lukuna 2 640 m ja eri näkökulmasta (suurin kaupunki omalla
+   * korkeudellaan); (5) ciclovía on nostossa B3 tarkkoine lukuineen ja
+   * syntyhistorioineen; (6) suolakatedraali on oppaan jaksossa 4
+   * paljon visaa syvemmin. Kumpikaan minitehtävä ei toista visaa:
+   * historian tehtävä kysyy Kansallismuseon rakennuksen aiempaa
+   * käyttöä (vastaus nostossa H3) ja muiscojen tehtävä kultalautan
+   * löytöpaikkaa (vastaus nostossa M2) — molempien vastaus on samalla
+   * sivulla.
+   *
+   * KUVAT: 22 kuvaa, haettu Commonsin rajapinnasta kategorioilla
+   * (Plaza de Bolívar, La Candelaria, Chorro de Quevedo, Monserrate,
+   * Views from Monserrate, Panoramics in Bogotá, Aerial photographs of
+   * Bogotá, Bogotá in the 19th century, Museo del Oro Bogotá, Muisca
+   * raft, Muisca tunjos, Laguna de Guatavita, Fachada del Museo
+   * Nacional de Colombia, Catedral de Sal, Bikeways in Bogotá,
+   * TransMilenio, Humedal Tibabuyes, Ajiaco santafereño). Lisenssi ja
+   * tekijä on luettu rajapinnan extmetadatasta, ja JOKAINEN kuva on
+   * katsottu silmin 900 pikselin esikatseluna. Kansikuvat ovat kolme
+   * laajaa yleiskuvaa eri puolilta: Plaza de Bolívar patsaineen,
+   * Centro Internacionalin tornirykelmä rinteeltä nähtynä ja
+   * Itäkukkuloiden harjanne Monserraten laelta. Avauskuvat ovat
+   * kolme laveaa yleiskuvaa kaupungin eri osista: keskusta
+   * Monserratelta iltavalossa, pohjoinen Bogotá ilmasta ja
+   * kaakkoinen Bogotá ilmasta.
+   *
+   * KUVAHYLKÄYKSET (syineen): "Plaza de Bolivar, Bogota, Colombia
+   * (5770632336)" on kaunein löytämäni aukiokuva, mutta sen ympäri on
+   * lisätty musta kehysviiva — lisätty kehys on kielletty;
+   * "Plaza de Bolivar 3" (Capitolion pylväikkö ja kyyhkyt),
+   * "Plaza de Bolivar - panoramio (1)" (iltakuva), "Chicheria"
+   * (chicha-festivaalin myyjä), "BOG Museo del Oro", "Bogotá,
+   * ciclovía carrera 7 calle 27", "BOG Av cra 7 calle 26 Ciclovía en
+   * Bogotá" ja "Estacion Calle 72 TransMilenio" hylättiin kaikki
+   * samasta syystä: etualalla on ihmisiä, joiden kasvot ovat
+   * täydessä koossa luettavissa; "Vista panorámica del centro de
+   * Bogotá desde el Santuario del Señor Caído" on täynnä
+   * näköalatasanteen väkeä ja opastepylväs; "Fachada museo nacional"
+   * ja "Museo Nacional de Colombia" hylättiin, koska julkisivua
+   * peittävät sponsorin mainoslakanat; "Bog vista desde oeste" on
+   * muuten hyvä idänpuoleinen näkymä, mutta etualan täyttävät
+   * liikkeiden mainoskyltit; "WLE2026 CO - Altiplano cundiboyacense
+   * cerca de la Laguna de Guatavita (5)" osoittautui kuvaksi
+   * opastetaulusta; "Cerro Monserrate 01" on kuva polun opastekyltistä
+   * ja "Cerros Monserrate peregrinación" epäterävä katunäkymä;
+   * "Vista de Bogotá desde cerro de Monserrate" ja "Hail in Bogota"
+   * (603 px) eivät täyttäneet laatu- ja kokovaatimuksia;
+   * "A street carnival in Bogotá ... Wellcome L0025947" on aiheeltaan
+   * osuva 1820-luvun akvarelli, mutta extmetadatan Artist-kenttä on
+   * tyhjä, joten tekijää ei voi merkitä sääntöjen vaatimalla tavalla.
+   *
+   * KUVAPOIKKEUS: nosto B4 käyttää vuoden 1869 puupiirrosta Calle
+   * Realista, ja sen oikeassa alakulmassa on kaivertajan oma
+   * signeeraus painolaatassa. Sama poikkeus kuin Quiton
+   * aikalaismaalauksessa ja Vancouverin palokartassa: teoksen oma,
+   * alkuperäinen merkintä kelpaa, kun se on osa teosta eikä
+   * jälkikäteen lisätty arkisto- tai studioleima. Nosto B1 käyttää
+   * Codazzin vuoden 1890 atlaslehteä, jonka otsikko, selitetaulukot
+   * ja reunapiirrosten kuvatekstit ovat samalla tavalla painolaatan
+   * omaa sisältöä.
+   *
+   * AIHETOISTO (tietoinen, kirjattu): Plaza de Bolívar esiintyy
+   * kahdesti — kansikuvassa maantasosta patsaineen ja nostossa H2
+   * laajana panoraamana katedraalin puolelta. Aukio on kaupungin ydin
+   * ja oman nostonsa aihe, ja kuvakulmat ovat eri. Monserrate näkyy
+   * kolmessa kuvassa (kansikuvan harjanne laelta, oppaan pystykuva
+   * vuoresta pilvissä, avauskuva laelta otettuna) — eri tiedostot,
+   * eri suunnat ja eri jutut. Kansallismuseon rakennus näkyy sekä
+   * nostossa B3 (ciclovían taustalla) että nostossa H3 (oma aihe);
+   * tämä on tarkoituksellinen linkki sivujen välillä ja sanottu
+   * kuvateksteissä.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä (Open-Meteon normaaleja ei haettu, eikä lukuja keksitty).
+   * Oppaan jakso 5 nojaa siis en-Wikipedian Bogotá-artikkelin
+   * Climate-osion kahteen säälaatikkoon ja SANOO SEN ÄÄNEEN
+   * (Samarkandin, Vancouverin, Liman ja Quiton malli). Mittauspisteet
+   * ovat Kansallinen meteorologinen observatorio (2 556 m, 1971–2000)
+   * ja El Doradon lentoasema (2 547 m, 1991–2020), ja niiden ero
+   * selitetään lukijalle.
+   *
+   * KUVATEKSTIT: selite kertoo kohteesta yhdellä virkkeellä.
+   */
+  bogota: [
+    {
+      id: 'kaupunki',
+      nimi: 'Bogotá',
+      johdanto: 'Andien ylätasangolla 2 640 metrissä makaava Bogotá on '
+        + 'maailman kolmanneksi korkein pääkaupunki. Muiscojen mailta '
+        + 'kasvoi espanjalaisten pikkukaupunki, sitten eristetty '
+        + 'vuoristopääkaupunki – ja vasta 1900-luvulla miljoonakaupunki.',
+      kansikuvat: [
+        {
+          tiedosto: 'Plaza de Bolívar Bogotá.jpg',
+          selite: 'Plaza de Bolívarin keskellä seisoo Simón Bolívarin '
+            + 'patsas, ja aukion laitoja reunustavat katedraali, '
+            + 'Sagrarion kappeli ja siirtomaa-ajan hallintorakennukset.',
+          lahde: 'Guaiquerí, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Bogotá D.C.jpg',
+          selite: 'Centro Internacionalin tornirykelmä nousee keskeltä '
+            + 'kaupunkia, ja sen ympärillä matalat korttelit jatkuvat '
+            + 'näkyvyyden rajalle asti.',
+          lahde: 'Omar Monroy, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'MonserrateBogotá7.jpg',
+          selite: 'Monserraten laelta katsottuna Itäkukkuloiden metsäinen '
+            + 'harjanne jatkuu eteenpäin ja kaupunki leviää oikealle '
+            + 'laakson pohjalle.',
+          lahde: 'Kreuzberger, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Bogotá, Monserrate, 2023-06 CN-02.jpg',
+          selite: 'Sadekuuron jälkeisessä iltavalossa keskustan tornit '
+            + 'erottuvat ylätasangon keskeltä ja kaupunki jatkuu '
+            + 'horisontin vuoriin asti.',
+          lahde: 'Steffen Schmitz ( more photos ), Wikimedia Commons '
+            + '(CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Aero Norte de Bogotá nov 2019.jpg',
+          selite: 'Pohjoisen Bogotán ruutukaava, puistot ja '
+            + 'kerrostalokorttelit päättyvät Itäkukkuloiden rinteisiin.',
+          lahde: 'EEIM, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '2018 vista aérea del suroriente de Bogotá, localidades de Bosa, Ciudad Bolívar y Tunjuelito.jpg',
+          selite: 'Kaakkoisen Bogotán korttelit peittävät ylätasangon '
+            + 'reunakukkulat niin pitkälle kuin lentokoneesta näkee.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaupunki jolla oli kolme nimeä',
+          tiedosto: 'AGHRC (1890) - Plano de Bogotá.jpg',
+          teksti: 'Kaupungin nimi on vaihtunut kolmesti. Muiscojen '
+            + 'hallitsija zipa asui kylässä nimeltä Bacatá lähellä '
+            + 'nykyistä Funzaa, ja siitä espanjalaiset väänsivät nimen '
+            + 'Bogotá. Gonzalo Jiménez de Quesada kastoi perustamansa '
+            + 'leirin Nuestra Señora de la Esperanzaksi 6. elokuuta 1538, '
+            + 'mutta keisari Kaarle V muutti nimen 27. heinäkuuta 1540 '
+            + 'Santa Féksi sen Granadan lähellä sijaitsevan kaupungin '
+            + 'mukaan, jossa Quesada oli kasvanut. Vasta kun Simón '
+            + 'Bolívar saapui voittajana 10. elokuuta 1819, hän kastoi '
+            + 'kaupungin Bogotáksi kunnioittaakseen muiscoja ja '
+            + 'korostaakseen eroa Espanjaan.',
+          selite: 'Agustín Codazzin vuoden 1890 atlaslehdellä kaupungin '
+            + 'ruutukaava on vaaleanpunaisena, ja reunoja kiertävät '
+            + 'piirrokset kaduista, katedraalista ja pääaukiosta.',
+          lahde: 'Agostino Codazzi, Wikimedia Commons (PD)',
+          wiki: 'Bogotá',
+        },
+        {
+          otsikko: 'Suurin kaupunki omalla korkeudellaan',
+          tiedosto: 'Cerros a la altura de la calle Setenta.JPG',
+          teksti: 'Bogotá makaa Andien ylätasangolla keskimäärin 2 640 '
+            + 'metrin korkeudessa. Maailmassa ei ole yhtään kaupunkia, '
+            + 'joka olisi samalla sekä korkeammalla että väkirikkaampi. '
+            + 'Korkeus pitää lämmön tasaisena ympäri vuoden: keskiarvo on '
+            + '14,5 astetta, lämpimin kuukausi maaliskuu yltää '
+            + 'keskimäärin 19,7 asteeseen ja viileimmät yöt tulevat '
+            + 'tammikuussa, keskimäärin 7,6 asteessa. Aamusumu on '
+            + 'tavallista 220 päivänä vuodessa, ja raekuuroja tulee '
+            + 'keskimäärin kolmesti vuodessa – niitä kirjattiin 231 '
+            + 'kappaletta vuosina 1939–2008.',
+          selite: 'Itäkukkuloiden metsäinen rinne nousee suoraan Calle '
+            + '70:n punatiilisten kerrostalojen takaa.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Bogotá',
+        },
+        {
+          otsikko: 'Pyöräkatu joka valloitti maailman',
+          tiedosto: '2017 Bogotá ciclovía frente al Museo Nacional.jpg',
+          teksti: 'Joka sunnuntai ja pyhäpäivä kello seitsemästä kahteen '
+            + 'yli 120 kilometriä Bogotán pääkatuja suljetaan autoilta. '
+            + 'Kadut täyttyvät juoksijoista, luistelijoista ja '
+            + 'pyöräilijöistä, ja puistoihin nousee lavoja jumppa- ja '
+            + 'joogaohjaajille. Tapa alkoi joulukuussa 1974 '
+            + 'pyöräilyharrastajien järjestämänä, ja kaupunki teki siitä '
+            + 'virallisen ohjelman 1976; vuodesta 1995 sitä on '
+            + 'hallinnoinut kaupungin liikunta- ja virkistyslaitos. '
+            + 'Käyttäjiä on viikoittain noin kaksi miljoonaa eli '
+            + 'viidennes kaupunkilaisista, ja idea on levinnyt '
+            + 'kymmeniin kaupunkeihin muualla maailmassa.',
+          selite: 'Autoilta suljettu leveä väylä kulkee Kansallismuseon '
+            + 'ohi, ja pyöräilijät ajavat keskellä ajorataa.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ciclovía',
+        },
+        {
+          otsikko: 'Pääkaupunki joka eli eristyksissä',
+          tiedosto: 'Calle real de Bogotá en 1869 dibujo de Therond.jpg',
+          teksti: 'Vielä 1870-luvulla Bogotá oli poikkeuksellisen '
+            + 'eristyksissä: kunnollinen yhteys Magdalena-jokea pitkin '
+            + 'Karibialle syntyi vasta vuosisadan lopulla rautateiden ja '
+            + 'teiden myötä. Silti juuri noina vuosina kaupunki alkoi '
+            + 'muuttua. Väestö kasvoi nopeasti itäisiltä ylängöiltä '
+            + 'muuttaneiden myötä, vuosina 1870–1883 avattiin neljä '
+            + 'ensimmäistä pankkia, ja 1875 kaupunki sai ensimmäisen '
+            + 'rakennusjärjestyksensä. Vuonna 1793 Bogotássa asui noin '
+            + '20 000 ihmistä; vuoteen 1912 mennessä luku oli kasvanut '
+            + 'noin 117 000:een.',
+          selite: 'Vuoden 1869 puupiirros esittää Calle Realin eli '
+            + 'nykyisen Carrera Séptiman parvekkeineen, öljylyhtyineen ja '
+            + 'ruanaan pukeutuneine kulkijoineen.',
+          lahde: 'Einer3088, Wikimedia Commons (PD)',
+          wiki: 'History of Bogotá',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Monserrate in clouds.jpg',
+          selite: 'Monserraten valkoinen pyhäkkö nousee pilvien lomasta '
+            + 'metsäisen jyrkänteen laella.',
+          lahde: 'JoranL, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Bogotá on helppo hahmottaa, koska maasto tekee sen '
+          + 'puolestasi: Itäkukkulat kohoavat aina idässä, joten suunta '
+          + 'ei pääse katoamaan. Vanha keskusta La Candelaria on '
+          + 'kukkuloiden juurella etelässä, ja sieltä kaupunki jatkuu '
+          + 'pohjoiseen kymmeniä kilometrejä ylätasangon suuntaisesti. '
+          + 'Katujen numerointi seuraa samaa logiikkaa: calle-kadut '
+          + 'kulkevat lännestä itään ja niiden numerot kasvavat '
+          + 'pohjoiseen, carrera-kadut pohjoisesta etelään ja niiden '
+          + 'numerot kasvavat idästä länteen. Ensimmäisinä päivinä '
+          + 'kannattaa varautua korkeuteen: 2 640 metrissä vanhankaupungin '
+          + 'mäet tuntuvat jyrkemmiltä kuin ne ovat. Aamut ovat usein '
+          + 'sumuisia ja sadetta voi tulla mihin aikaan vuodesta tahansa, '
+          + 'joten sadetakki kuuluu reppuun ympäri vuoden.',
+        artikkeli: {
+          nimi: 'Matkailijan Bogotá',
+          taitto: 'opas',
+          teksti: 'Vuoristopääkaupunki, jossa siirtomaa-ajan korttelit, '
+            + 'muiscojen kultakokoelma ja autoton sunnuntai mahtuvat '
+            + 'samalle kävelymatkalle.',
+          nosto: 'Itäkukkulat ovat aina idässä: niin kauan kuin näet '
+            + 'Monserraten, tiedät missä olet.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Bogotáan saavutaan El Doradon kansainväliselle '
+                + 'lentoasemalle, joka valmistui lokakuussa 1959 ja '
+                + 'vihittiin käyttöön 10. joulukuuta samana vuonna. '
+                + 'Nimeä etsittiin pitkään: haluttiin lyhyt, helposti '
+                + 'lausuttava ja seudun alkuperäiskulttuuriin viittaava '
+                + 'sana, ja valinnaksi tuli El Dorado – sama legenda, '
+                + 'joka lähti liikkeelle muiscojen omista '
+                + 'valtaanastujaisseremonioista. Kaupungissa liikutaan '
+                + 'nykyään pääosin TransMileniolla, joulukuussa 2000 '
+                + 'avatulla pikabussijärjestelmällä, jossa on 143 asemaa '
+                + 'ja kaksitoista runkolinjaa reilun sadan kilometrin '
+                + 'matkalla. Arkisin matkustajia on noin kaksi '
+                + 'miljoonaa, ja vuonna 2022 kaupungilla oli 1 485 '
+                + 'sähköbussin kalusto – yksi kolmesta suurimmasta '
+                + 'Kiinan ulkopuolella.',
+              kuva: {
+                tiedosto: 'Ave Caracas TransMilenio BOG 03 2018 8526.jpg',
+                selite: 'Punakeltaiset nivelbussit kulkevat Avenida '
+                  + 'Caracasilla omilla kaistoillaan muusta liikenteestä '
+                  + 'erotettuina.',
+                lahde: 'Mariordo (Mario Roberto Durán Ortiz), Wikimedia '
+                  + 'Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Bogotá makaa laakealla ylätasangolla, jota '
+                + 'reunustaa idässä Andien Itäinen Kordilleeri ja sen '
+                + 'jyrkät Itäkukkulat; niiden harjalla kohoavat '
+                + 'Monserrate 3 152 metriin ja sen naapuri Guadalupe. '
+                + 'Kukkulat rajoittavat kaupungin kasvua idässä, ja '
+                + 'lännessä rajana on Bogotá-joki, joka virtaa '
+                + 'koillisesta lounaaseen halki tasangon ja muodostaa '
+                + 'kaupungin eteläpuolella Tequendaman putoukset. Aivan '
+                + 'etelässä, Sumapazin kaupunginosassa, on maailman '
+                + 'laajin yhtenäinen páramo eli korkean vuoriston '
+                + 'kosteikkoylänkö. Kaupunki peittää 1 587 '
+                + 'neliökilometriä ja jakautuu kahteenkymmeneen '
+                + 'kaupunginosaan; pohjoisessa se jatkuu ylätasangolla '
+                + 'aina Chían ja Sopón kuntiin asti.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: suklaata ja tamaleja',
+              teksti: 'Aivan presidentinpalatsin vieressä La Candelariassa '
+                + 'toimii La Puerta Falsa, yli kaksisataa vuotta vanha '
+                + 'puoti, joka on erikoistunut suklaajuomaan ja '
+                + 'tamaleihin. Pari on vanhempi kuin puoti itse: '
+                + '1800-luvun illanistujaisissa tarjottiin lähes '
+                + 'poikkeuksetta suklaata kotitekoisten keksien kanssa, '
+                + 'joku soitti pianolla paikallisten säveltäjien '
+                + 'musiikkia ja väki tanssi pasilloa, nopeaa ja '
+                + 'lyhytaskelista valssia. Samalta ajalta on peräisin '
+                + 'kaupungin tunnusruoka ajiaco: kanasta, useasta '
+                + 'perunalajikkeesta, maissintähkästä ja guasca-yrtistä '
+                + 'keitetty rokka, joka tarjoillaan hapankerman ja '
+                + 'kapristen kanssa ja jonka lisukkeina ovat avokado ja '
+                + 'riisi.',
+              kuva: {
+                tiedosto: 'Ajiaco la puerta falsa.jpg',
+                selite: 'La Puerta Falsassa ajiaco tarjoillaan mustassa '
+                  + 'saviastiassa, ja lisukkeiksi tulevat kerma, '
+                  + 'kaprikset, riisi ja avokado.',
+                lahde: 'Cesar.cely, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: Zipaquirán suolakatedraali',
+              teksti: 'Noin viidenkymmenen kilometrin päässä pohjoisessa '
+                + 'on suolavuori, joka oli arvokas jo kauan ennen '
+                + 'espanjalaisia: muiscat louhivat siitä halitiittia jo '
+                + '400-luvulla eaa., ja suola oli heidän tärkeimpiä '
+                + 'elinkeinojaan. Luonnontieteilijä Alexander von '
+                + 'Humboldt kävi kaivoksella 1801 ja piti sitä '
+                + 'suurempana kuin ajan espanjalaisia, sveitsiläisiä, '
+                + 'puolalaisia tai tirolilaisia suolakaivoksia. '
+                + 'Noin 1932 kaivosmiehet veistivät käytäviin oman '
+                + 'rukoushuoneensa, ja siitä kasvoi 15. elokuuta 1954 '
+                + 'vihitty kirkko vanhoihin louhoskäytäviin. Rakennelma '
+                + 'suljettiin turvallisuussyistä syyskuussa 1992, ja '
+                + 'nykyinen, kuutisenkymmentä metriä syvemmälle louhittu '
+                + 'katedraali vihittiin 16. joulukuuta 1995 kahdensadan '
+                + 'metrin syvyyteen.',
+              kuva: {
+                tiedosto: 'Catedral de Sal (Salt Cathedral).JPG',
+                selite: 'Suolakatedraalin pääsalissa kallioseinään '
+                  + 'veistetty risti on valaistu siniseksi, ja '
+                  + 'suolakivipinnat hohtavat violettina käytävän '
+                  + 'molemmin puolin.',
+                lahde: 'BCSmith, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Bogotásta puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian Bogotá-artikkelin Climate-osiosta '
+                + 'eivätkä samasta lähteestä kuin lehtien vuosigraafit. '
+                + 'Lämpötila pysyy lähes samana ympäri vuoden, joten '
+                + 'matka-aikaa kannattaa miettiä sateen eikä lämmön '
+                + 'mukaan: kuivimmat kuukaudet ovat joulukuu, tammikuu, '
+                + 'heinäkuu ja elokuu, sateisimmat huhti-toukokuu sekä '
+                + 'syys-marraskuu. Kansallisen meteorologisen '
+                + 'observatorion asemalla keskustassa (2 556 m, '
+                + '1971–2000) vuoden keskilämpötila on 14,5 astetta, '
+                + 'päivän ylin keskimäärin 19,6 ja yön alin 9,0, ja '
+                + 'sadetta kertyy noin 1 012 millimetriä 181 '
+                + 'sadepäivänä. El Doradon lentoasemalla (2 547 m, '
+                + '1991–2020) on hieman viileämpää ja kuivempaa, '
+                + '13,9 astetta ja 877 millimetriä – asemat ovat eri '
+                + 'puolilla tasankoa suhteessa itäisiin vuoriin.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Bogotá perustettiin kahdesti ja nimettiin kolmesti, mutta '
+        + 'kasvoi hitaasti. Isoisän matka-aikaan 1870-luvulla keskustan '
+        + 'ydin oli jo pitkälti se, mikä se on tänäänkin.',
+      tehtava: {
+        kysymys: 'Mikä laitos toimi Kansallismuseon nykyisessä '
+          + 'rakennuksessa ennen museota?',
+        vaihtoehdot: [
+          'Vankila',
+          'Rautatieasema',
+          'Sokeritehdas',
+          'Sotilassairaala',
+        ],
+        oikea: 0,
+        fakta: 'Panóptico valmistui 1872 ja oli Kolumbian suurin ja '
+          + 'tärkein vankila vuoteen 1946 asti. Museoksi rakennus '
+          + 'avattiin vasta 1948, vaikka itse kokoelma oli perustettu jo '
+          + '1823.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaupunki perustettiin kahdesti',
+          tiedosto: 'Plaza del Chorro de Quevedo.JPG',
+          teksti: 'Espanjalaiset perustivat kaupungin käytännössä kahdesti. '
+            + 'Gonzalo Jiménez de Quesada leiriytyi elokuussa 1538 '
+            + 'paikkaan, jota muiscojen zipa oli käyttänyt '
+            + 'levähdyspaikkanaan ja joka tunnetaan nykyään Chorro de '
+            + 'Quevedon aukiona; hän pystytti kaksitoista ruokomajaa '
+            + 'kahdentoista apostolin muistoksi ja rakennutti niiden '
+            + 'viereen ruokokirkon. Perustaminen oli kuitenkin '
+            + 'muodollisesti puutteellinen, sillä kaupunginhallintoa ei '
+            + 'nimitetty. Virallinen perustaminen tehtiin vasta 27. '
+            + 'huhtikuuta 1539, ja paikalla olivat silloin myös '
+            + 'valloittajatoverit Sebastián de Belalcázar ja Nikolaus '
+            + 'Federmann.',
+          selite: 'Chorro de Quevedon pieni aukio kivipintoineen ja '
+            + 'tiilikattoineen on La Candelarian vanhinta osaa, ja '
+            + 'taustalla näkyvät keskustan tornitalot.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Chorro de Quevedo',
+        },
+        {
+          otsikko: 'Aukio joka sai patsaansa vasta vuosikymmeniä myöhemmin',
+          tiedosto: 'Plaza de Bolívar en Bogotá (Colombia).jpg',
+          teksti: 'Kaupungin pääaukio on kantanut kolmea nimeä. '
+            + 'Siirtomaa-aikana se oli Plaza Mayor, itsenäistymisen '
+            + 'jälkeen vuodesta 1821 Plaza de la Constitución, ja Plaza '
+            + 'de Bolívar siitä tuli vasta 1846, kun aukiolle '
+            + 'paljastettiin italialaisen Pietro Teneranin veistämä '
+            + 'Simón Bolívarin patsas – kaupungin ensimmäinen julkinen '
+            + 'muistomerkki. Aukion katedraali on lähes yhtä nuori: sen '
+            + 'rakentaminen aloitettiin 11. helmikuuta 1807 munkki '
+            + 'Domingo de Petrésin uusklassisten piirustusten mukaan ja '
+            + 'saatiin päätökseen 19. huhtikuuta 1823.',
+          selite: 'Plaza de Bolívarin laitaa kiertävät katedraali '
+            + 'kellotorneineen, arkkipiispanpalatsi ja Capitolio '
+            + 'Nacionalin pylväikkö.',
+          lahde: 'Javierleiva, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Plaza de Bolívar',
+        },
+        {
+          otsikko: 'Museo joka syntyi ennen taloaan',
+          tiedosto: 'Bogotá Museo Nacional.JPG',
+          teksti: 'Kansallismuseo on Kolumbian vanhin museo ja yksi '
+            + 'Amerikan mantereen vanhimmista: kongressi perusti sen 28. '
+            + 'heinäkuuta 1823 samalla lailla kuin kaivoskoulun. '
+            + 'Henkilökunta koottiin Euroopasta – Simón Bolívar jätti '
+            + 'rekrytoinnin Pariisissa toimineelle ministerilleen '
+            + 'Francisco Antonio Zealle, ja Bogotáan saapunutta ryhmää '
+            + 'johti perulainen mineralogi Mariano Eduardo de Rivero, '
+            + 'mukanaan ranskalainen kemisti Jean-Baptiste Boussingault. '
+            + 'Museon nykyinen rakennus on kokoelmaa paljon nuorempi: '
+            + 'tanskalaisen Thomas Reedin 1850 suunnittelema '
+            + 'Panóptico-vankila rakennettiin vasta 1872, ja se palveli '
+            + 'vankilana vuoteen 1946.',
+          selite: 'Panóptico-vankilan massiivinen kiviseinä tukipilareineen '
+            + 'ja kulmatorneineen on säilynyt sellaisenaan museon '
+            + 'julkisivuna.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'National Museum of Colombia',
+        },
+        {
+          otsikko: 'Salaatinkerä jossa on 1 485 smaragdia',
+          tiedosto: '"La Lechuga".jpg',
+          teksti: 'Kolumbia on historiallisesti maailman suurin '
+            + 'smaragdintuottaja, ja sen kolme päälouhosta Muzo, Coscuez '
+            + 'ja Chivor ovat Itäisessä Kordilleerissa Boyacán ja '
+            + 'Cundinamarcan rajamailla. Bogotássa kivet päätyivät '
+            + 'kultaseppien käsiin: La Lechuga eli salaatinkerä on '
+            + 'monstranssi, jonka José de Galaz teki 1700–1707 kaupungin '
+            + 'San Ignacion kirkolle. Siihen on upotettu 1 485 Muzon '
+            + 'smaragdia, ja niiden vihreä antoi esineelle nimen; mukana '
+            + 'on lisäksi 168 ametistia, 62 barokkihelmeä, 28 timanttia '
+            + 'ja 13 rubiinia. Kun kruunu määräsi 1767 espanjalaiset '
+            + 'omaisuudet palautettaviksi, monstranssi kätkettiin – eikä '
+            + 'sitä nähty julkisesti ennen vuotta 1985.',
+          selite: 'La Lechugan kultaisessa sädekehässä on neljä kerrosta '
+            + 'nelikulmaisiksi hiottuja smaragdeja, ja koko esinettä '
+            + 'kannattelee emaloitu enkelihahmo.',
+          lahde: 'Banco de la República (banco central de Colombia), '
+            + 'Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'La Lechuga',
+        },
+      ],
+    },
+    {
+      id: 'alkuperaiskansat',
+      nimi: 'Muiscat',
+      johdanto: 'Bogotá seisoo muiscojen mailla, ja muiscat elävät yhä – '
+        + 'omine neuvostoineen, juhlineen ja elinkeinoineen. Kulta ei '
+        + 'ollut heille rikkautta vaan pyhää ainetta.',
+      tehtava: {
+        kysymys: 'Mistä Kultamuseon kuuluisa kultainen lautta löydettiin '
+          + 'vuonna 1969?',
+        vaihtoehdot: [
+          'Luolasta Pascan kunnasta',
+          'Guatavita-järven pohjasta',
+          'Zipaquirán suolakaivoksesta',
+          'Bogotá-joen uomasta',
+        ],
+        oikea: 0,
+        fakta: 'Talonpoika Cruz María Dimaté löysi lautan luolasta Pascan '
+          + 'kunnassa. Vanhempi, vuonna 1856 löydetty lautta tuli Siechan '
+          + 'lammikosta ja tuhoutui tulipalossa Bremenin satamassa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Suolakansa ja smaragdikansa',
+          tiedosto: 'Ofrendatario.jpg',
+          teksti: 'Kun espanjalaiset saapuivat 1530-luvulla, Bogotán '
+            + 'ylätasangolla asui arviolta puoli miljoonaa muiscaa ja '
+            + 'koko konfederaation alueella jopa kaksi miljoonaa. He '
+            + 'viljelivät maissia kohotetuilla, kastelluilla penkereillä '
+            + 'ja kävivät kauppaa markkinoilla, jotka pidettiin neljän '
+            + 'päivän välein. Naapurit tunsivat heidät suolakansana, '
+            + 'koska he louhivat suolaa Zipaquirássa, Nemocónissa ja '
+            + 'Tausassa; läntisiä naapureitaan muzoja kutsuttiin '
+            + 'vastaavasti smaragdikansaksi. Aikalaiskronikoitsija Juan '
+            + 'de Castellanos tiivisti asian toteamalla, että muiscat '
+            + 'olivat enemmän kauppiaita kuin sotureita.',
+          selite: 'Ihmisen muotoiseen muisca-uhriastiaan on ladottu pieniä '
+            + 'smaragdeja, ja sen vieressä seisoo kaksi kultaista '
+            + 'tunjo-hahmoa.',
+          lahde: 'Anfecaro, Wikimedia Commons (CC0)',
+          wiki: 'Muisca',
+        },
+        {
+          otsikko: 'Kulta ei ollut rahaa vaan pyhää ainetta',
+          tiedosto: 'Balsa Muisca BOG 03 2018 8506.jpg',
+          teksti: 'Bogotán Kultamuseossa on maailman suurin '
+            + 'esikolumbiaanisen kultatyön kokoelma: 55 000 esinettä, '
+            + 'joista 6 000 on esillä. Museo sanoo asian itse suoraan: '
+            + 'monille alkuperäiskansoille kulta ei ollut rikkauden mitta '
+            + 'vaan symbolisesti ja uskonnollisesti latautunut pyhä aine. '
+            + 'Kokoelman kuuluisin esine on pieni kultainen lautta, jossa '
+            + 'hallitsija seisoo kultaan ja höyheniin puettujen '
+            + 'päälliköiden ympäröimänä. Talonpoika Cruz María Dimaté '
+            + 'löysi sen 1969 luolasta Pascan kunnassa – ei järvestä, '
+            + 'kuten usein luullaan.',
+          selite: 'Kultaisen lautan keskellä seisoo hallitsija, ja hänen '
+            + 'ympärillään on pienempiä päähineellisiä hahmoja punotun '
+            + 'lautan reunoilla.',
+          lahde: 'Mariordo (Mario Roberto Durán Ortiz), Wikimedia Commons '
+            + '(CC BY-SA 4.0)',
+          wiki: 'Muisca raft',
+        },
+        {
+          otsikko: 'Järvi joka synnytti El Doradon',
+          tiedosto: 'Laguna de Guatavita centro de la leyenda del Dorado.jpg',
+          teksti: 'Guatavita-järvi on lähes ympyränmuotoinen, noin 20 '
+            + 'hehtaarin laajuinen vesi 3 000 metrin korkeudessa, noin 57 '
+            + 'kilometriä Bogotásta koilliseen. Muiscoille se oli pyhä '
+            + 'paikka, ei aarrearkku: uuden zipan astuessa valtaan hänet '
+            + 'peitettiin kultapölyllä, hänet vietiin lautalla järven '
+            + 'keskelle ja hän sukelsi veteen pesten kullan pois, kun '
+            + 'väki heitti uhrilahjoja järveen. Toinen tunnettu '
+            + 'kultalautta löytyi 1856 Siechan lammikosta, ei tästä '
+            + 'järvestä; se myytiin Saksaan ja tuhoutui tulipalossa '
+            + 'Bremenin satamassa.',
+          selite: 'Guatavita-järven pyöreä vesi lepää vihreän kraatterin '
+            + 'pohjalla, ja rinteitä peittää päiväntasaajan '
+            + 'vuoristokasvillisuus.',
+          lahde: 'Camilo.Errante, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Lake Guatavita',
+        },
+        {
+          otsikko: 'Kansa joka on yhä olemassa',
+          tiedosto: 'Laguna Tibabuyes de Bogotá, Cund - Col.jpg',
+          teksti: 'Muiscat eivät ole kadonnut kansa. Neuvostojen '
+            + 'jälleenrakennus alkoi 1989, ja tänään toimivia '
+            + 'muisca-neuvostoja on viisi: Suba, Bosa, Cota, Chía ja '
+            + 'Sesquilé. Ne kokoontuivat Bosassa 20.–22. syyskuuta 2002 '
+            + 'ensimmäiseen muiscojen yleiskongressiin ja perustivat '
+            + 'yhteisen Cabildo Mayor del Pueblo Muiscan. Cotan yhteisö '
+            + 'on ottanut kvinoan uudestaan viljelyyn ja käy tuotteillaan '
+            + 'säännöllisesti vaihtokauppaa, ja Suban muiscat ovat '
+            + 'vastustaneet Tibabuyesin kosteikon kuivattamista. '
+            + 'Maissiolut chicha kiellettiin 1948, mutta kielto kumottiin '
+            + '1991 – ja siitä lähtien La Perseverancian korttelissa on '
+            + 'juhlittu vuosittain chichan, maissin, elämän ja ilon '
+            + 'festivaalia.',
+          selite: 'Tibabuyesin kosteikon avovesi ulottuu Suban laidalta '
+            + 'kaupungin rakennuksiin ja niiden takaisiin vuoriin asti.',
+          lahde: 'EEIM, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Muisca',
+        },
+      ],
+    },
+  ],
 };
