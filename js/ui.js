@@ -125,7 +125,7 @@ import { KOHTAAMISET } from './packs/kohtaamiset.js';
 import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
 // Fokusmoodin annosteluvirta (js/fokusvirta.js). Kytkentä on kaksi
 // kutsua: saapumisen laukaisin renderissä ja lehtilukko openArrivalissa.
-import { fokusvirtaOhittaaLehden, fokusvirtaSaapuminen } from './fokusvirta.js';
+import { fokusvirtaOhittaaLehden, fokusvirtaSaapuminen, fokusvirtaLukitseeLehden } from './fokusvirta.js';
 
 const wikiGalleryCache = new Map();
 
@@ -6496,6 +6496,30 @@ export class UI {
      * yksinkertainen.
      */
     if (game.player.pos.type === 'edge' && this.factKey) return;
+
+    /*
+     * Fokusvirta korvaa saapumiskortin (omistajan havainto 24.8.2026:
+     * kaksi matkakirjaa aukesi yhtä aikaa ja vanha alkoi puhua).
+     * Kaupungissa, jossa annostelu on kesken (virtadataa on ja laatta
+     * kääntämättä), matkakirjan ääni kuuluu virran omasta kortista
+     * (js/fokusvirta.js) — vanha havainto piilotetaan ja sen luenta
+     * vaiennetaan. Laatan käännyttyä kortti palaa ennalleen.
+     */
+    if (game.player.pos.type === 'city') {
+      const virtaKaupunki = game.board.cityById.get(game.player.pos.city);
+      if (virtaKaupunki && fokusvirtaLukitseeLehden(this, virtaKaupunki)) {
+        this.factCard.hidden = true;
+        this.uusiFactKey(null);
+        this.factVoiceEl.textContent = '';
+        this.factPlace.textContent = '';
+        this.factText.textContent = '';
+        this.factImage.hidden = true;
+        this.factKuuntele.hidden = true;
+        this.naytaFactValokuva(null);
+        stopDiaryVoice(this);
+        return;
+      }
+    }
 
     // Matkakirjan merkintä voittaa aina (omistajan havainto Gaossa:
     // aikataulurivi peitti uuden saapumistekstin koko käynnin ajaksi).
