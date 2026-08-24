@@ -101,3 +101,26 @@ tarkistus (sonnet, eri agentti) → kirjoitus (opus) → Fablen pistokoe.)*
    mahdollinen päällekkäisyys tulevien nähtävyysjuttujen kanssa
    ratkaistaan siinä vaiheessa (maalehti kertoo maasta, juttu
    kohteesta — eri mittakaava).
+
+## Fablen päätökset 24.8.2026 (siirtoraportin avoimet kysymykset)
+
+1. **Suvan Kai Colo -sodat 1873: MUKAAN, faktapohjan tiivistetyllä
+   versiolla.** Perustelu: 1873-osuma on Suvan synnyn ydintä (sotien
+   jälkeen pääkaupunki siirtyi ja siirtomaakausi alkoi 1874), ja
+   Uuden-Seelannin sotien sekä Waikato-konfiskaatioiden
+   ennakkotapaukset osoittavat mallin: tapahtumat kerrotaan suoraan,
+   ilman julmuuksien yksityiskohtia. Pois jättäminen olisi pilarin 4
+   vastaista kaunistelua. SITOVAT RAJAT kirjoittajalle: käytetään
+   faktapohjan H2-tiivistelmää sellaisenaan — EI tarkkoja surmalukuja,
+   EI dynamiittia, EI vankien orjamyyntiä; maanomistus- ja
+   uskontokonteksti kerrotaan; kansa kuvataan elävänä nykypäivän
+   toimijana, ei kukistettuna jäänteenä.
+2. **Panaman lauta: YKSI yhteinen lehti, kirjanpidossa
+   northamerica.** Kaupunki-id 'panama' on sama molemmilla laudoilla,
+   joten KULTTUURI_KATEGORIAT-lohko palvelee molempia automaattisesti
+   (Borneo/Sumatra-ennakkotapaus: yksi lehti, monta lautaa).
+   Tuotantokirjanpidossa ja faktapohjan kehyksessä Panama lasketaan
+   P-Amerikkaan (maantieteellinen vakiintunut jako; NA-laudalla se on
+   lähtökohde). Sisällössä huomioidaan molemmat roolit: 1873-kulman
+   ydin on Panaman rautatie (1855) valtamerten välisenä oikotienä —
+   kanaalia ei vielä ole, ranskalaisyritys alkaa vasta 1881.
