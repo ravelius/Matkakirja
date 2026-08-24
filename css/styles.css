@@ -5209,6 +5209,21 @@ body.flight-active .fact-card {
 .city-start.city-lahes { fill: #fdfcf7; stroke: #3a3128; stroke-width: 3.4; }
 .city.city-kesken,
 .city-start.city-kesken { fill: #c9c4bb; stroke: #78736b; }
+
+/*
+ * ORANSSI LAATTA (vain kehittäjätilassa): kaupungin herokuvat on
+ * generoitu kohteen omista Commons-valokuvista viitteinä.
+ * Täysi oranssi = koko erä ankkuroitu, haalea = vain osa.
+ * Ks. js/viitekuva-herot.js ja js/ui.js (viiteLuokka).
+ *
+ * Näissä säädetään VAIN fill. Valmiusluokkien ääriviiva jää siksi
+ * voimaan, ja laatan reunasta näkee yhä lehden valmiusasteen — muuten
+ * oranssi peittäisi toisen asteikon kokonaan.
+ */
+.city.city-viite-taysi,
+.city-start.city-viite-taysi { fill: #e08a2e; }
+.city.city-viite-osa,
+.city-start.city-viite-osa { fill: #f2c48a; }
 .airport { font-size: 14px; fill: #8d3a2c; }
 
 /* Porttikaupunki: katkoviivakehä kertoo, että täältä lähtee lento toiselle laudalle. */

@@ -62,6 +62,7 @@ import { RADIOT } from './packs/radiot.js';
 import { TARINAKAARI } from './packs/tarinakaari.js';
 import { PELIT as KATKOPELIT } from './tyohuone-pelit.js';
 import { TUOREET } from './tyohuone-tilanne.js';
+import { viitekuvaTila } from './viitekuva-herot.js';
 import {
   SAAPUMISTEKSTIT, MAATIEDOT, KAIKKI_VALOKUVAT, ARTIKKELIT,
   KIELET, SAAPUMISLUENNAT, luentaLauta,
@@ -515,17 +516,6 @@ export function laskeTilastot() {
  * tänne. Työlistat tools/hero-tyolista-*.mjs kertovat mitkä erät on
  * tehty viitteillä — ne tuovat kuvakulman tools/hero-kuvakulmat.mjs:stä.
  */
-const VIITEKUVA_HEROT = new Map([
-  // Koko erä viitekuvilla (24.8.2026, kierros 21).
-  ['melbourne', 3], ['vancouver', 3], ['brisbane', 3],
-  ['chicago', 3], ['perth', 3], ['kabul', 3],
-  // Tampere: neljä kuvaa, ensimmäinen viitekuvallinen erä (23.8.2026).
-  ['tampere', 4],
-  // Yksittäinen korjattu kuva, muut kaupungin herot ovat vanhoja.
-  ['helsinki', 1], ['kashgar', 1], ['mekka', 1], ['petra', 1],
-  ['damaskos', 1],
-]);
-
 const SARAKKEET = [
   ...KAUPUNGIN_OSAT.map((o) => ({ ...o, taso: 'kaupunki' })),
   ...MAAN_OSAT.map((o) => ({ ...o, taso: 'maa' })),
@@ -734,16 +724,16 @@ function piirraTaulu(kohde, mantereet, jarjestys, nakyma = 'kaikki') {
           /*
            * Oranssi kertoo, että kaupungin herokuvat on ankkuroitu
            * oikeisiin valokuviin. Täysi oranssi = koko erä, ääriviiva =
-           * osa kuvista. Ks. VIITEKUVA_HEROT yllä.
+           * osa kuvista. Sama lista värjää laatan maailmankartalla
+           * kehittäjätilassa — ks. js/viitekuva-herot.js.
            */
           if (s.avain === 'herot') {
-            const ankkuroitu = VIITEKUVA_HEROT.get(kaupunki.id) ?? 0;
-            if (ankkuroitu) {
-              const kaikki = tieto.luku ?? 0;
-              const taysi = kaikki > 0 && ankkuroitu >= kaikki;
-              td.classList.add(taysi ? 'tk-viite-taysi' : 'tk-viite-osa');
-              td.title = `${ankkuroitu}/${kaikki || '?'} herokuvaa ankkuroitu`
-                + ' kohteen omiin Commons-valokuviin';
+            const kaikki = tieto.luku ?? 0;
+            const tila = viitekuvaTila(kaupunki.id, kaikki);
+            if (tila) {
+              td.classList.add(tila.taysi ? 'tk-viite-taysi' : 'tk-viite-osa');
+              td.title = `${tila.ankkuroitu}/${kaikki || '?'} herokuvaa`
+                + ' ankkuroitu kohteen omiin Commons-valokuviin';
             }
           }
           rivi.appendChild(td);
