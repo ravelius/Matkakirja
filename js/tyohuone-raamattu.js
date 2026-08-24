@@ -252,7 +252,12 @@ export const RAAMATTU = {
           + 'kehystettynä. Sonnet nyt, Haiku 5 kun julkaistaan.',
         'FOKUSNAPIT (omistaja 24.8.2026, illan pelitesti): '
           + 'vasemman alareunan maannimi (KREIKKA-kartuutsi) on '
-          + 'jatkossa MAALEHDEN NAPPI dynaamisella sijainnilla; '
+          + 'jatkossa MAALEHDEN NAPPI dynaamisella sijainnilla: '
+          + 'kertapainallus nostaa alhaalta liukuvan, kevyesti '
+          + 'läpinäkyvän taulun (pinta-ala, väkiluku ym. perustiedot '
+          + 'uuden kartan tyyliin) ja taulun plus-nappi avaa '
+          + 'varsinaisen maalehden; avautuminen ja sulku '
+          + 'animoidaan; '
           + 'oikean yläkulman maakyltti poistetaan. Kaupungin laatta '
           + 'palaa fokusnäkymään PALJON PIENEMPÄNÄ dynaamisella '
           + 'koolla, ja TUTKI-NAPPI poistetaan alariviltä — sen '
