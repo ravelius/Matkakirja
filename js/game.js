@@ -284,6 +284,19 @@ export class Game {
      * laudasta — sama kaupunki eri laudalla on sama juliste.
      */
     this.julisteet = new Set();
+    /*
+     * FOKUSMOODIN ANNOSTELUVIRTA (Raamatun osio "Fokusmoodi",
+     * ANNOSTELU): mihin vaiheeseen kaupungin esittely on edennyt.
+     * Avaimena 'pakka:kaupunki' ja arvona virran oma tila-olio
+     * (js/fokusvirta.js) — moottori omistaa muodon, peli vain
+     * säilöö sen tallennukseen, jottei virta ala alusta joka kerta
+     * kun kortti avataan uudelleen.
+     *
+     * Tavallinen olio eikä Map: tila menee sellaisenaan JSONiin, eikä
+     * pelimoottori lue siitä yhtään kenttää. Kaupunki, jolla ei ole
+     * fokusvirtaa, ei saa tänne riviä lainkaan.
+     */
+    this.fokusvirrat = {};
     // Pulmat avautuvat kerran pelissä: avaimena 'pakka:kaupunki'.
     this.puzzlesSeen = new Set();
     this.explored = new Set(); // tutkitut laatattomat kaupungit (pack:city)
@@ -2541,6 +2554,7 @@ export class Game {
       minitehtavatVastatut: [...this.minitehtavatVastatut],
       minitehtavatOikein: [...this.minitehtavatOikein],
       julisteet: [...this.julisteet],
+      fokusvirrat: this.fokusvirrat,
       explored: [...this.explored],
       scheduleNote: this.scheduleNote,
       scheduleShown: [...this.scheduleShown],
@@ -2661,6 +2675,12 @@ export class Game {
     // täyttyy takautuvasti, kun pelaaja avaa ratkaisemansa lehtisivun
     // uudelleen (js/ui.js piirraMinitehtava).
     game.julisteet = new Set(data.julisteet ?? []);
+    /*
+     * Vanha tallennus ei tunne fokusvirtaa: taulu alkaa tyhjänä, jolloin
+     * kesken oleva matka näkee Ateenan esittelyn alusta. Se on oikea
+     * oletus — virtaa ei ollut olemassa, joten sitä ei ole nähtykään.
+     */
+    game.fokusvirrat = data.fokusvirrat ?? {};
     game.explored = new Set(data.explored ?? []);
     /*
      * Istuntokohtaiset kentät on silti ALUSTETTAVA: fromJSON ohittaa
