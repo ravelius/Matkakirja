@@ -524,8 +524,24 @@ async function kytkeRajapinta(sivu, rungot) {
   await sivu.route(POLLO_URL, (route) => route.fallback());
 }
 
+/*
+ * LUKIJAÄÄNI POIS (js/puhe.js puheTuettu).
+ *
+ * Lennossa generoitu lukijaääni on luennan ensisijainen polku, mutta se
+ * hakee jokaisen palan verkosta ja soittaa sen Web Audiolla — headless-
+ * selaimessa siitä ei näe MITÄ luettiin, ja se ohittaisi savukkeen
+ * puhesyntetisaattorimockin kokonaan. `navigator.onLine = false` on
+ * pelin oma, dokumentoitu portti samaan asiaan ("lentokoneessa ei
+ * yritetä"): laite putoaa laitteen omaan ääneen, jonka mock kirjaa.
+ * Näin mitataan täsmälleen se varapolku, joka oikeallakin laitteella on
+ * käytössä ilman verkkoa.
+ */
+const OFFLINE_MOCK = `
+Object.defineProperty(window.navigator, 'onLine', { configurable: true, get: () => false });
+`;
+
 /** Avaa pelin, käynnistää sen ja vie pelaajan Lontooseen. */
-async function avaaPeli(ctx, { sanelu = true, silta = false } = {}) {
+async function avaaPeli(ctx, { sanelu = true, silta = false, lukijaAani = true } = {}) {
   const sivu = await ctx.newPage();
   const virheet = [];
   sivu.on('pageerror', (e) => virheet.push(String(e)));
@@ -555,6 +571,7 @@ async function avaaPeli(ctx, { sanelu = true, silta = false } = {}) {
   if (!silta) await sivu.addInitScript(PUHE_MOCK);
   // Natiivisilta ruiskutetaan ennen pelin skriptejä, kuten oikea kuorikin.
   if (silta) await sivu.addInitScript(SILTA_MOCK);
+  if (!lukijaAani) await sivu.addInitScript(OFFLINE_MOCK);
   await sivu.route((url) => !/127\.0\.0\.1|localhost|pollo\.testi\.invalid/.test(url.href),
     (route) => route.abort());
   await sivu.goto('http://127.0.0.1:8734/index.html', { waitUntil: 'load' });
@@ -860,6 +877,7 @@ const avaus = await sivu.evaluate(async () => {
   return {
     nakyy: !paneeli.hidden,
     ehdotuksia: paneeli.querySelectorAll('.pollo-ehdotus').length,
+    valmiita: paneeli.querySelectorAll('.pollo-valmiit .pollo-valmis').length,
     tervehdys: Boolean(paneeli.querySelector('.pollo-pollo')),
     mikki: Boolean(paneeli.querySelector('.pollo-mikki')),
     // Näppäimistö ei saa avautua itsestään: kenttä on piilossa saneltaessa.
@@ -867,7 +885,20 @@ const avaus = await sivu.evaluate(async () => {
   };
 });
 vaadi('paneeli aukeaa napautuksesta', avaus.nakyy === true);
-vaadi('ehdotukset renderöityvät', avaus.ehdotuksia === 2, `${avaus.ehdotuksia} kpl`);
+/*
+ * VALMISKYSYMYKSET AVAUKSESSA (omistajan tilaus 18.8.2026: "pöllön
+ * alkuteksti ja sen alla kaksi kysymystä, ja vierittämällä saisi vielä
+ * kolme kysymystä lisää näkyviin").
+ *
+ * Tuore keskustelu ei enää odota palvelimen ehdotushakua, vaan pinnassa
+ * on heti käsin kirjoitettu pakka (js/packs/pollo-kysymykset.js) samassa
+ * vierityspinnassa kuin muukin keskustelu. Kiintiö on js/pollo.js
+ * VALMIITA_ENINTAAN = 5, ja Lontoon laattapakassa on täsmälleen viisi —
+ * eli kaikki näkyvät kuplina. Palvelimen dynaamiset ehdotukset (2 kpl)
+ * tulevat vasta ensimmäisen vastauksen alle, ja niitä mitataan alempana.
+ */
+vaadi('valmiskysymykset renderöityvät avattaessa', avaus.ehdotuksia === 5
+  && avaus.valmiita === 5, `${avaus.ehdotuksia} kpl (valmiita ${avaus.valmiita})`);
 vaadi('sanelunappi on ensisijainen syöte', avaus.mikki === true && avaus.kenttaPiilossa === true,
   JSON.stringify(avaus));
 
@@ -2232,6 +2263,13 @@ await siltaSivu.screenshot({ path: join(ULOS, 'pollo-natiivisanelu-390.png') });
 /*
  * Sama sivu todistaa vielä lukijan: kaiutinnappi lukee lehden sivun
  * sillan kautta eikä selaimen puhesyntetisaattorilla.
+ *
+ * NAPIN PAIKKA EI OLE DIALOGIN SUORA LAPSI. liitaLukija luo napin
+ * dialogiin, mutta lehti siirtää sen sivukohtaiseen tarttuvaan
+ * otsikkoon (js/lehti.js sijoitaLehtiKaiutin: etusivulla #arrival-city,
+ * muilla sivuilla .aihe-nimi), jotta kaiutin ei vieri tekstin mukana
+ * pois ruudulta. Siksi valinta on koko dialogin puusta — suora-lapsi-
+ * haku löysi napin vain ennen tuota siirtoa.
  */
 const lukija = await siltaSivu.evaluate(async () => {
   window.matkakirjaPollo.sulje();
@@ -2240,11 +2278,29 @@ const lukija = await siltaSivu.evaluate(async () => {
   await new Promise((r) => setTimeout(r, 900));
   ui.naytaTutkiSivu(1);
   await new Promise((r) => setTimeout(r, 400));
-  const nappi = document.querySelector('#arrival-dialog > .lukija-nappi');
+  const nappi = document.querySelector('#arrival-dialog .lukija-nappi');
   if (!nappi) return { onNappi: false };
   const piilossa = nappi.hidden;
+  /*
+   * Aiemmat osiot ovat jo lukeneet sillan kautta, joten sekä
+   * __luettuTeksti että __kutsut on nollattava — muuten tämä mittaus
+   * lukisi edellisen luennan jäljen ja menisi läpi vaikka nappi ei
+   * tekisi mitään.
+   */
+  window.__luettuTeksti = '';
+  window.matkakirjaNatiivi.__kutsut.length = 0;
   nappi.click();
-  await new Promise((r) => setTimeout(r, 200));
+  /*
+   * Luenta yrittää ensin lukijaääntä (js/puhe.js): pyyntö menee
+   * mockattuun rajapintaan, jonka vastaus ei ole ääntä, ja vasta
+   * ensimmäisen palan virheen jälkeen luenta putoaa laitteen omalle
+   * äänelle eli natiivisillalle (js/lukija.js aloitaPuheLuenta →
+   * lueLaitteella). Odotus on siksi reilu: mitattava asia on
+   * lopputulos, ei nopeus.
+   */
+  for (let i = 0; i < 40 && !window.__luettuTeksti; i += 1) {
+    await new Promise((r) => setTimeout(r, 100));
+  }
   const teksti = window.__luettuTeksti ?? '';
   return {
     onNappi: true,
@@ -2993,11 +3049,20 @@ await striimiCtx.close();
  * valmis, luettavassa ei ole koskaan hakasulkeita eikä JATKOT-lohkoa,
  * ja kaiuttimen sammutus tyhjentää jonon kesken kaiken. Naputus ei soi
  * puheen päällä.
+ *
+ * SIVU AVATAAN ILMAN LUKIJAÄÄNTÄ (lukijaAani: false). Virtaluenta
+ * valitsee ensin lennossa generoidun lukijaäänen (js/lukija.js
+ * puheVirtana) ja vasta sen puuttuessa selaimen puhesyntetisaattorin —
+ * ja vain jälkimmäisestä näkee headless-selaimessa, mitä luettavaksi
+ * meni. Mitattava ketju (paloittelu virkkeiksi, hakasulkeiden siivous,
+ * jonon tyhjennys kaiuttimen sammuessa) on molemmilla polulla sama
+ * js/pollo.js:n koodi, joten mittaus ei menetä mitään.
  */
 const luentaCtx = await selain.newContext({
   viewport: { width: 390, height: 900 }, serviceWorkers: 'block',
 });
-const { sivu: luentaSivu, virheet: luentaVirheet } = await avaaPeli(luentaCtx);
+const { sivu: luentaSivu, virheet: luentaVirheet } = await avaaPeli(luentaCtx,
+  { lukijaAani: false });
 await vakoileAanet(luentaSivu);
 
 const luenta = await luentaSivu.evaluate(async () => {
@@ -3122,6 +3187,15 @@ polloOsoite = POLLO_URL;
  * tabletilla napit näkyvät koko ajan, ja paneelin oma syöterivi mahtuu
  * kokonaan paneelin sisään (kiinteä korkeus + iso varattu tyhjä
  * leikkasi sen kerran puoliksi).
+ *
+ * MISTÄ TÄYSI KORKEUS ALKAA (omistajan tilaus 18.8.2026, css
+ * .pollo-paneeli.pollo-alku): tuore keskustelu aukeaa SISÄLLÖN
+ * korkuisena, jotta alkutekstin ja valmiskysymysten alle ei jäisi isoa
+ * tyhjää paperia. Kiinteä täysi korkeus astuu voimaan ensimmäisestä
+ * kysymyksestä, kerralla eikä vähitellen — omistajan lause kuuluikin
+ * "heti aueta täyteen korkeuteensa, KUN ENSIMMÄINEN KYSYMYS TULEE".
+ * Siksi vertailupari on kysymyshetki ja vastauksen loppu, ei avaus ja
+ * vastauksen loppu.
  */
 async function paneelinMitat(leveys, korkeus) {
   const oma = await selain.newContext({
@@ -3143,11 +3217,20 @@ async function paneelinMitat(leveys, korkeus) {
     await odota(150);
     document.querySelector('.pollo-kentta').value = 'Kerro pitkä tarina Thamesista';
     document.querySelector('.pollo-rivi').dispatchEvent(new Event('submit', { cancelable: true }));
+    /*
+     * Korkeus HETI kysymyksen jälkeen, ennen kuin vastauksesta on
+     * ruudulla riviäkään: js/pollo.js kysy poistaa .pollo-alku-luokan
+     * yhtenä liikkeenä, joten paneelin on oltava tässä jo täydessä
+     * mitassaan. Kaikki myöhempi kasvu olisi juuri sitä vähittäistä
+     * venymistä, jonka omistaja kielsi 13.8.2026.
+     */
+    const kysyttaessa = paneeli.getBoundingClientRect().height;
     await odota(900);
     const p = paneeli.getBoundingClientRect();
     const syote = document.querySelector('.pollo-syote').getBoundingClientRect();
     const mitat = {
       avattuna: Math.round(avattuna),
+      kysyttaessa: Math.round(kysyttaessa),
       vastauksessa: Math.round(p.height),
       leveys: Math.round(p.width),
       // Reunavälit ruudusta, eivät esivanhemmasta: juuri tämä paljasti
@@ -3195,8 +3278,9 @@ async function paneelinMitat(leveys, korkeus) {
 }
 
 const puhelin = await paneelinMitat(390, 844);
-vaadi('puhelimen paneeli on koko korkeutensa jo avattaessa',
-  puhelin.tulos.avattuna === puhelin.tulos.vastauksessa,
+vaadi('puhelimen paneeli on koko korkeutensa jo ensimmäisestä kysymyksestä',
+  puhelin.tulos.kysyttaessa === puhelin.tulos.vastauksessa
+  && puhelin.tulos.avattuna < puhelin.tulos.vastauksessa,
   JSON.stringify(puhelin.tulos));
 vaadi('puhelimen paneeli on selvästi entistä korkeampi (yli 500 px)',
   puhelin.tulos.vastauksessa > 500, JSON.stringify(puhelin.tulos));
@@ -3222,8 +3306,9 @@ vaadi('puhelinmittaus ei kirjoita konsoliin', puhelin.virheet.length === 0,
   puhelin.virheet.slice(0, 3).join(' | '));
 
 const tabletti = await paneelinMitat(834, 1194);
-vaadi('tabletin paneeli on koko korkeutensa jo avattaessa',
-  tabletti.tulos.avattuna === tabletti.tulos.vastauksessa,
+vaadi('tabletin paneeli on koko korkeutensa jo ensimmäisestä kysymyksestä',
+  tabletti.tulos.kysyttaessa === tabletti.tulos.vastauksessa
+  && tabletti.tulos.avattuna < tabletti.tulos.vastauksessa,
   JSON.stringify(tabletti.tulos));
 vaadi('tabletin paneeli on korkeampi ja leveämpi kuin ennen (432 × 336)',
   tabletti.tulos.vastauksessa > 432 && tabletti.tulos.leveys > 336,
@@ -3310,8 +3395,6 @@ const kupla = await vihjeSivu.evaluate(async () => {
     // Kupla istuu napin yläpuolella eikä valu ruudun ulkopuolelle.
     valiNappiin: laatikko && nappi ? Math.round(nappi.top - laatikko.bottom) : null,
     ruudulla: Boolean(laatikko) && laatikko.left >= 0 && laatikko.right <= window.innerWidth,
-    // Vihje ei saa varastaa kartalta napautuksia.
-    lapinapautettava: vihje ? getComputedStyle(vihje).pointerEvents === 'none' : null,
   };
 });
 vaadi('vihjeen oletusviive on 15 sekuntia', kupla.oletusViive === 15000,
@@ -3324,10 +3407,42 @@ vaadi('kupla on pöllönapin yläpuolella',
   kupla.valiNappiin !== null && kupla.valiNappiin >= 0 && kupla.valiNappiin < 40,
   JSON.stringify(kupla));
 vaadi('kupla pysyy ruudun sisällä', kupla.ruudulla === true, JSON.stringify(kupla));
-vaadi('napautus menee kuplan läpi kartalle', kupla.lapinapautettava === true,
-  String(kupla.lapinapautettava));
 
 await vihjeSivu.screenshot({ path: join(ULOS, 'pollo-vihjekupla-390.png') });
+
+/*
+ * KUPLA OTTAA NAPAUTUKSEN JA HÄIPYY (omistaja 18.8.2026: "Pöllön
+ * puhekuplia pitää häipyä jos sitä koskettaa").
+ *
+ * Aiemmin kuplalla oli `pointer-events: none`, jolloin kosketus meni
+ * sen läpi kartalle — mutta silloin kuplaa ei saanut pois tieltä.
+ * Nyt kupla itse on napautettava (css .pollo-vihje cursor: pointer,
+ * js/pollo.js varmistaKupla pointerdown → piilotaVihje).
+ *
+ * Napautus ei nollaa vuoron vihjelippua, joten kupla ei palaa itsestään
+ * — se viritetään tässä uudelleen, jotta seuraava mittaus (kartan
+ * kosketus vie kuplan) pääsee alkamaan samasta tilanteesta.
+ */
+const kuplanNapautus = await vihjeSivu.evaluate(async () => {
+  const ui = window.matkakirja.ui;
+  const vihje = document.querySelector('.pollo-vihje');
+  const osoitin = getComputedStyle(vihje).pointerEvents;
+  vihje.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, pointerId: 9 }));
+  await new Promise((r) => setTimeout(r, 120));
+  const haipyi = Boolean(document.querySelector('.pollo-vihje')?.hidden);
+  // Sama vuoro alusta: kupla takaisin kartan kosketuskoetta varten.
+  ui.valintavihjeVaihe = false;
+  ui.paivitaValintavihje();
+  await new Promise((r) => setTimeout(r, 700));
+  return {
+    osoitin,
+    haipyi,
+    uudestaan: Boolean(document.querySelector('.pollo-vihje:not([hidden])')),
+  };
+});
+vaadi('napautus häivyttää kuplan tieltä',
+  kuplanNapautus.osoitin !== 'none' && kuplanNapautus.haipyi === true
+  && kuplanNapautus.uudestaan === true, JSON.stringify(kuplanNapautus));
 
 const kuplanKato = await vihjeSivu.evaluate(async () => {
   const ui = window.matkakirja.ui;
