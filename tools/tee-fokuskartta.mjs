@@ -52,6 +52,20 @@
  * molemmat: `bbox` on kuvan paikka, `rajaus` on se laatikko, johon peli
  * ajaa kameran.
  *
+ * === KAKSI REITTIÄ: KURATOITU JA YLEINEN ===
+ *
+ * Kreikka on KURATOITU lehti: sen ikkuna, merten nimet ja vuoret ovat
+ * käsin aseteltuja (tools/fokuskartta/maat.mjs FOKUSMAAT). Kaikki muut
+ * Euroopan maat menevät YLEISTÄ REITTIÄ, jossa ikkuna johdetaan
+ * Natural Earthin geometriasta ja kuvaan tulee maasto, vedet ja
+ * aineistosta poimitut kaupunkipisteet — ei yhtään käsin kirjoitettua
+ * riviä. Kuratoidun osion voi lisätä yhdellekin maalle jälkikäteen, ja
+ * se voittaa aina yleisen reitin.
+ *
+ * Korkeusaineisto tulee koko Euroopan yhteiseltä ETOPO-levyltä
+ * (tools/fokuskartta/etopo.mjs, haku tools/hae-etopo-eurooppa.mjs).
+ * Kreikan pilotin CSV-kaistat kelpaavat yhä.
+ *
  * Aineisto ja lähteet: tools/fokuskartta/aineisto.mjs.
  * Lehden käsin aseteltavat asiat: tools/fokuskartta/maat.mjs.
  * Piirtomoottori (ajetaan selaimessa): tools/fokuskartta/piirto.js.
@@ -62,8 +76,10 @@ import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { keraaAineisto } from './fokuskartta/aineisto.mjs';
-import { FOKUSMAAT } from './fokuskartta/maat.mjs';
+import { keraaAineisto, maanLaatikko } from './fokuskartta/aineisto.mjs';
+import {
+  FOKUSMAAT, YLEINEN, yleinenIkkuna, yleinenLeveys, yleinenTyyli,
+} from './fokuskartta/maat.mjs';
 // Sama projektio kuin piirtomoottorilla — yksi kaava, ei kahta kopiota.
 import { laudanProjektio } from './fokuskartta/piirto.js';
 
@@ -138,6 +154,42 @@ const TARKISTUSPISTEET = {
  */
 const TASAUKSEN_RAJA = 2;
 
+/*
+ * TIEDOSSA OLEVAT KÄSIN SIIRRETYT LAATAT.
+ *
+ * Ehdoton raja on olemassa VÄÄRÄN KAAVAN varalta, ja väärä kaava
+ * siirtäisi laudan kaikkia laattoja — ei yhtä. Kun yksi kohdemaan
+ * laatta on siirretty käsin, raja hälyttäisi turhaan ja estäisi maan
+ * kuvan kokonaan, vaikka kuva osuisi kaikkeen muuhun.
+ *
+ * Poikkeus on siksi kirjattava tänne NIMELTÄ ja perusteluineen — ei
+ * nostamalla yleistä rajaa, joka on koko tarkistuksen arvo.
+ */
+const LAATTAPOIKKEUKSET = {
+  /*
+   * Helsinki on tämän tiedoston oman kommentin mukaan siirretty käsin,
+   * jotta laatta osuu piirretylle rannikolle (ks. TASAUKSEN_RAJA yllä).
+   * Maailmankartalla ero on 15,8 yksikköä eli 0,34 astetta pohjoiseen.
+   * Suomen lehdellä se on noin 90 kuvapikseliä 6400 pikselin leveydellä:
+   * laatta istuu hitusen sisämaan puolella, mutta lehti itse on
+   * mittatarkka — ja ilman poikkeusta Suomi jäisi kokonaan ilman lehteä.
+   */
+  helsinki: {
+    raja: 17,
+    syy: 'Laudan Helsinki-laatta on siirretty käsin piirretylle rannikolle '
+      + '(0,34 astetta pohjoiseen). Laudan mediaaniero on 0,7 yksikköä, joten '
+      + 'kyse ei ole projektiosta.',
+  },
+  istanbul: {
+    raja: 3.2,
+    syy: 'Laatta on laudalla 0,08 astetta (2,8 yksikköä) todellisesta '
+      + 'paikastaan länteen. Ero on laudan käsityötä eikä projektiota: laudan '
+      + 'yksitoista muuta tarkistuspistettä osuvat alle 1,7 yksikköön, ja väärä '
+      + 'kaava siirtäisi niitä kaikkia. Turkin lehdellä 2,8 yksikköä on noin 20 '
+      + 'kuvapikseliä 6400 pikselin leveydellä.',
+  },
+};
+
 /* ------------------------------------------------------------ argumentit */
 
 const argv = process.argv.slice(2);
@@ -184,7 +236,7 @@ const dataKansio = resolve(valitsin('data',
  * 9600` on yhden valitsimen päässä — mutta se on mitattava iPadilla
  * ennen kuin se jää päälle.
  */
-const kuvaLeveys = Number(valitsin('leveys', 6400));
+const leveysValitsin = valitsin('leveys', null);
 
 /*
  * TALLENNUSMUOTO: WebP, läpinäkyvyys mukana.
@@ -228,17 +280,25 @@ if (!lauta) {
 
 const renkaat = muodot[iso].renkaat;
 
-const tyyli = FOKUSMAAT[iso];
-if (!tyyli) {
-  console.error(`Maalle ${iso} ei ole lehden tyyliä (tools/fokuskartta/maat.mjs).\n`
-    + 'Lehti on kokonainen atlaksen sivu — merten nimet, kartuutsi ja ikkuna\n'
-    + 'ovat karttatypografiaa, joita ei saa aineistosta. Lisää maalle oma\n'
-    + 'osio FOKUSMAAT-tauluun ja aja uudestaan.');
-  process.exit(1);
-}
-
 const { projektio } = lauta;
 const kaava = laudanProjektio(projektio);
+
+/*
+ * KAKSI REITTIÄ SAMAAN KUVAAN.
+ *
+ * KURATOITU (FOKUSMAAT): ikkuna, merten nimet, vuoret ja vesileima on
+ * aseteltu käsin. Kreikan pilotti on tällainen, ja se voittaa aina.
+ *
+ * YLEINEN: ikkuna johdetaan Natural Earthin geometriasta ja kuvaan
+ * tulee maasto, vedet ja aineistosta poimitut kaupunkipisteet. Näin
+ * koko Euroopan saa läpi ilman käsityötä (maat.mjs "YLEINEN REITTI"),
+ * ja kuratoidun osion voi lisätä myöhemmin yhdellekin maalle.
+ */
+const maanRajat = FOKUSMAAT[iso]
+  ? null
+  : maanLaatikko(dataKansio, iso, { etaisyys: YLEINEN.saarenEtaisyys });
+const tyyli = FOKUSMAAT[iso]
+  ?? yleinenTyyli(iso, yleinenIkkuna(iso, maanRajat, kaava));
 
 /*
  * LEHTI (rajaus) ja KUVA (bbox).
@@ -257,13 +317,37 @@ const { laudanRajaus, laudanBbox } = (() => {
   const h = kaava.lautaY(lat0) - y0;
   const w = h * kuvasuhde;
   const rajausLaatikko = { x: kaava.lautaX(lonKeski) - w / 2, y: y0, w, h };
+  /*
+   * KUVAN KOKO: vuoto joka reunalle — ja yleisellä reitillä sen lisäksi
+   * se, mitä RUUTU vaatii.
+   *
+   * Kreikan lehti on kuvasuhteessa 1,6, ja sille 15 % vuotoa riittää
+   * kaikkiin vaakaruutuihin (1,23–2,08). Yleisellä reitillä ikkuna on
+   * maan muotoinen eikä 1,6, ja silloin pelkkä suhteellinen vuoto
+   * jättäisi kapeaan päähän sauman: kamera sovittaa ikkunan ruutuun ja
+   * näyttää leveällä ruudulla `ikkunanKorkeus * 2,08` verran leveyttä
+   * riippumatta siitä, kuinka kapea ikkuna on. Kuvan on siis oltava
+   * vähintään sen levyinen — ja vastaavasti kapeimmalla vaakaruudulla
+   * vähintään `ikkunanLeveys / 1,23` korkuinen.
+   *
+   * Kreikan luvuilla molemmat ehdot osuvat samaan pisteeseen kuin
+   * pelkkä 15 % vuoto, joten pilottikuvan rajaus ei muutu. Ehto on
+   * silti yleisen reitin takana, jottei hyväksyttyä kuvaa lasketa
+   * uudestaan hivenen eri luvuilla.
+   */
+  const bw = tyyli.yleinen
+    ? Math.max(w * (1 + 2 * vuoto), h * YLEINEN.ruutuLevein)
+    : w * (1 + 2 * vuoto);
+  const bh = tyyli.yleinen
+    ? Math.max(h * (1 + 2 * vuoto), w / YLEINEN.ruutuKapein)
+    : h * (1 + 2 * vuoto);
   return {
     laudanRajaus: rajausLaatikko,
     laudanBbox: {
-      x: rajausLaatikko.x - w * vuoto,
-      y: rajausLaatikko.y - h * vuoto,
-      w: w * (1 + 2 * vuoto),
-      h: h * (1 + 2 * vuoto),
+      x: rajausLaatikko.x + w / 2 - bw / 2,
+      y: rajausLaatikko.y + h / 2 - bh / 2,
+      w: bw,
+      h: bh,
     },
   };
 })();
@@ -275,6 +359,21 @@ const laatikko = {
   lat0: kaava.lautaLat(laudanBbox.y + laudanBbox.h) - 0.5,
   lat1: kaava.lautaLat(laudanBbox.y) + 0.5,
 };
+
+/*
+ * Kuvan leveys pikseleinä.
+ *
+ * Kuratoitu reitti pitää Kreikan hyväksytyn 6400 pikseliä. Yleisellä
+ * reitillä leveys lasketaan kuvan koosta (maat.mjs `yleinenLeveys`):
+ * pikkumaan lehti ei tarvitse yhtä montaa pikseliä kuin Ranskan, koska
+ * kamera zoomaa sen joka tapauksessa lähemmäs — ja korkeusaineiston
+ * kaariminuutti asettaa oman kattonsa.
+ */
+const kuvaLeveys = leveysValitsin != null
+  ? Number(leveysValitsin)
+  : (tyyli.yleinen
+    ? yleinenLeveys(laudanBbox, laatikko.lon1 - laatikko.lon0 - 1)
+    : 6400);
 
 /* ------------------------------------------------------------ tasaus */
 
@@ -304,9 +403,16 @@ function tarkistaProjektio() {
   if (!rivit.length) throw new Error('Yhtään tarkistuspistettä ei löytynyt laudalta.');
   // 1. Kohdemaan omat kaupungit: näiden ON osuttava maastoon.
   for (const r of rivit.filter((v) => v.kohdemaassa)) {
-    if (r.ero > TASAUKSEN_RAJA) {
+    const poikkeus = LAATTAPOIKKEUKSET[r.id];
+    const raja = poikkeus?.raja ?? TASAUKSEN_RAJA;
+    if (r.ero > raja) {
       throw new Error(`Tasaus pettää: ${r.nimi} on ${r.ero} lautayksikköä sivussa `
-        + `(raja ${TASAUKSEN_RAJA}). Kuva ei osuisi laattaan.`);
+        + `(raja ${raja}). Kuva ei osuisi laattaan.`);
+    }
+    if (poikkeus && r.ero > TASAUKSEN_RAJA) {
+      r.poikkeus = poikkeus.syy;
+      console.warn(`  HUOM: ${r.nimi} ylittää yleisen rajan (${r.ero} > `
+        + `${TASAUKSEN_RAJA}) mutta on kirjattu poikkeus. ${poikkeus.syy}`);
     }
   }
   if (!rivit.some((r) => r.kohdemaassa)) {
@@ -325,6 +431,41 @@ function tarkistaProjektio() {
 
 const tasaus = tarkistaProjektio();
 
+/*
+ * TOINEN TASAUSMITTA: OSUUKO KUVA LAUDAN PIIRRETTYYN MAAHAN?
+ *
+ * Tarkistuspisteet kertovat projektion kaavasta, mutta eivät siitä,
+ * onko laudan oma maamuoto piirretty oikeaan paikkaan. Ero on
+ * mitattava, koska laudan grafiikka on piirrosta: maailmankartan
+ * Islanti on parikymmentä astetta pohjoisemmassa ja idempänä kuin
+ * todellinen Islanti (Reykjavíkin laatta sen sijaan on oikein).
+ * Sellaisella maalla kuva ja laudan piirros eivät voi osua yhteen, ja
+ * se on tiedettävä ennen kuin kuva viedään ämpäriin.
+ *
+ * Mitta on maamuodon keskipisteiden ero lautayksikköinä: laudan omat
+ * renkaat vastaan Natural Earthin renkaat samalla kaavalla.
+ */
+function muodonEro() {
+  const laudanKulmat = (rengasLista) => {
+    let x0 = Infinity; let x1 = -Infinity; let y0 = Infinity; let y1 = -Infinity;
+    for (const r of rengasLista) {
+      for (const [x, y] of r) {
+        if (x < x0) x0 = x; if (x > x1) x1 = x;
+        if (y < y0) y0 = y; if (y > y1) y1 = y;
+      }
+    }
+    return { x: (x0 + x1) / 2, y: (y0 + y1) / 2 };
+  };
+  const lauta1 = laudanKulmat(renkaat);
+  const ne = maanRajat ?? maanLaatikko(dataKansio, iso, { etaisyys: YLEINEN.saarenEtaisyys });
+  const ne1 = {
+    x: (kaava.lautaX(ne.lon0) + kaava.lautaX(ne.lon1)) / 2,
+    y: (kaava.lautaY(ne.lat0) + kaava.lautaY(ne.lat1)) / 2,
+  };
+  return Math.round(Math.hypot(lauta1.x - ne1.x, lauta1.y - ne1.y) * 10) / 10;
+}
+const maamuodonEro = muodonEro();
+
 /* ------------------------------------------------------------ aineisto */
 
 console.log(`Fokuskartta ${iso} — lauta ${lauta.id}`);
@@ -336,14 +477,27 @@ console.log(`  asteina         lon ${laatikko.lon0.toFixed(2)}..${laatikko.lon1.
   + `lat ${laatikko.lat0.toFixed(2)}..${laatikko.lat1.toFixed(2)}`);
 console.log(`  aineisto        ${dataKansio}`);
 
+/*
+ * PELILAATTOJEN PAIKAT ASTEINA. Aineistosta poimittu kaupunkipiste ei
+ * saa osua laatan päälle: peli piirtää laatan nimineen kuvan päälle, ja
+ * kaksi Ateenaa vierekkäin olisi pahin mahdollinen virhe. Laatat
+ * lasketaan takaisin asteiksi laudan omalla kaavalla — sama kaava, jolla
+ * kuva piirretään, joten ero on vain laatan käsin siirretty verran.
+ */
+const laudanKaupungitAsteina = pack.cities.map((c) => ({
+  lon: kaava.lautaLon(c.x), lat: kaava.lautaLat(c.y),
+}));
+
 const aineisto = keraaAineisto({
   kansio: dataKansio,
   iso,
   laatikko,
   naapurit: (tyyli.naapurit ?? []).map((n) => n.iso),
+  paikkoja: tyyli.paikat ? { poisLahelta: laudanKaupungitAsteina } : null,
 });
 console.log(`  renkaat ${aineisto.maa.renkaat.length} · joet ${aineisto.joet.length} `
-  + `· järvet ${aineisto.jarvet.length} · naapurit `
+  + `· järvet ${aineisto.jarvet.length} · paikat `
+  + `${aineisto.paikat.map((p) => p.nimi).join(', ') || '–'} · naapurit `
   + `${Object.keys(aineisto.naapurit).join(' ') || '–'} · korkeusruudukko `
   + `${aineisto.korkeus.w}x${aineisto.korkeus.h} `
   + `(lon ${aineisto.korkeus.lon0}..${aineisto.korkeus.lon1} `
@@ -362,6 +516,8 @@ if (aineisto.korkeus.lon0 > laatikko.lon0 + 0.5
     + 'voi jäädä sauma. Hae leveämmät etopo-kaistat.');
 }
 
+console.log(`  maamuodon ero   ${maamuodonEro} lautayksikköä `
+  + '(laudan piirros vs. Natural Earth)');
 for (const r of tasaus) {
   console.log(`  tasaus ${r.nimi.padEnd(10)} lauta ${r.lauta.join(',')} `
     + `→ projektio ${r.projektio.join(',')} (ero ${r.ero})`
@@ -471,6 +627,12 @@ writeFileSync(jsonPolku, `${JSON.stringify({
   kuva: mitat,
   tiedosto: `${iso}.${MUOTO}`,
   tehty: new Date().toISOString().slice(0, 10),
+  yleinen: Boolean(tyyli.yleinen),
+  ikkuna: tyyli.ikkuna,
+  // Laudan piirretyn maamuodon ja Natural Earthin geometrian
+  // keskipisteiden ero lautayksikköinä — ks. muodonEro().
+  maamuodonEro,
+  paikat: aineisto.paikat.map((p) => p.nimi),
   tasaus,
   lahteet: [
     'Natural Earth 10m (Kelso & Patterson) — public domain',
