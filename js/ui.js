@@ -449,6 +449,39 @@ const FOKUS_LAATTA_OSUMA_PX = 48;
  */
 const FOKUS_LAATTA_OSUMA_LAUDALLA = 34;
 /*
+ * VALITTAVAN KOHTEEN MERKKI FOKUSNÄKYMÄSSÄ (omistajan pelitestitilaus
+ * 26.8.2026, iPad-kuvakaappaus Liiku-tilasta).
+ *
+ * VIKA: matkakohteet piirtyivät fokuslehden päälle laudan omalla
+ * kielellä eli isoina punaisina katkoviivarenkaina (.target-ring, säde
+ * 22 laudan yksikköä) ja kultahaloineen. Fokusnäkymän zoomilla se on
+ * ruudulla yli 60 pikselin rengas keskellä hienovaraista atlaslehteä —
+ * omistajan sanoin *"ruma"*.
+ *
+ * KORJAUS: sama kieli kuin nykyisen kaupungin laatalla (ks.
+ * FOKUS_LAATTA_PX yllä) eli PIENI PYÖREÄ MERKKI, jonka koko mitataan
+ * RUUDULTA eikä laudalta. Merkki on hiukan pienempi kuin oma laatta
+ * (18 px vs. 26 px): valittava kohde on ehdotus, oma sijainti on
+ * kiinnekohta.
+ *
+ * NIMI KUULUU MERKKIIN. Fokuslehden ulkopuolella olevan kohteen
+ * (Sofia, Istanbul) laatta ja nimi ovat lehden vieressä laudan
+ * yleiskuvassa niin pieninä, ettei pelaaja tiedä mihin on
+ * lähdössä. Nimi ladotaan siksi merkin viereen kohdekerrokseen, jolloin
+ * se on olemassa riippumatta siitä, mitä laudan omalle nimelle tapahtuu.
+ *
+ * NIMI ON ISOMPI KUIN LEHDEN OMAT KAUPUNKINIMET (css .city-label
+ * fokusnäkymässä ~7,5 laudan yksikköä eli noin 10 px ruudulla): valinta
+ * saa erottua siitä, mikä on jo paikallaan. 13 px on maltillinen ero,
+ * ei otsikko.
+ */
+const FOKUS_KOHDE_PX = 18;
+const FOKUS_KOHDE_NIMI_PX = 13;
+/* Askelpiste ilman kaupunkia on pelkkä reitin nasta — puolet merkistä. */
+const FOKUS_KOHDE_PISTE_PX = 10;
+/* Napautusalue: sama sormisääntö kuin laatalla, sama katto laudalla. */
+const FOKUS_KOHDE_OSUMA_PX = 48;
+/*
  * NÄKYMÄN KOKOVAHDIN RAJAT (ks. UI vahdiNakymanKokoa).
  *
  * Alle 240 pikselin leveys ei ole mikään laite vaan mittausvirhe —
@@ -3695,6 +3728,8 @@ export class UI {
     // päällä kiinteän kokoinen RUUDULLA (paivitaFokusLaatta), joten sen
     // mittakaava ja napautusalue lasketaan uudelleen jokaisesta zoomista.
     this.paivitaFokusLaatta();
+    // Sama koskee valittavien kohteiden merkkejä ja niiden nimiä.
+    this.paivitaFokusKohdeMitat();
     if (!this.maastonimiKerros) return;
     if (!this.maastonimet) return;
     const nakyva = this.nakyvaAlue();
@@ -5167,7 +5202,11 @@ export class UI {
         && this.fokusPohjanAlla(Number(osuma?.getAttribute('cx')),
           Number(osuma?.getAttribute('cy')));
       // Vain koristeet piiloon — osuma-alue jää aktiiviseksi.
-      for (const koriste of kohde.querySelectorAll('.target-ring, .target-halo, .lento-kohde-merkki')) {
+      // Fokusnäkymän piste ja nimi kuuluvat samaan joukkoon: ne ovat
+      // kohteen merkki, eivät napautusalue (fokusKohdeMerkki).
+      for (const koriste of kohde.querySelectorAll(
+        '.target-ring, .target-halo, .lento-kohde-merkki, .target-piste, .target-nimi',
+      )) {
         koriste.classList.toggle('fokus-lehden-alla', piiloon);
       }
     }
@@ -5175,6 +5214,9 @@ export class UI {
     // Näkyvyys on nyt ratkaistu; jäljellä on nykyisen laatan KOKO ja sen
     // napautusalue (oma metodinsa, koska sitä kutsutaan myös zoomista).
     this.paivitaFokusLaatta();
+    // Samoin valittavien kohteiden merkit: pieni piste ja nimi, molemmat
+    // mitattuina ruudulta eikä laudalta (omistaja 26.8.2026).
+    this.paivitaFokusKohdeMitat();
   }
 
   /* --- LAATTA ON FOKUSNÄKYMÄN TUTKI-NAPPI (omistaja 24.8.2026) ------- */
@@ -5805,13 +5847,16 @@ export class UI {
         kohdeKaupungit.add(c.id);
         for (const x of this.kiertoKohdat(c.x)) {
           const g = el('g', { class: 'target' }, this.targetLayer);
-          el('circle', { cx: x, cy: c.y, r: 34, class: 'target-hit' }, g);
-          el('circle', {
-            cx: x,
-            cy: c.y,
-            r: c.start ? 27 : 22,
-            class: 'target-ring pick',
-          }, g);
+          this.kohdeOsuma(g, x, c.y, 34);
+          if (this.fokusKohdeMerkit()) this.fokusKohdeMerkki(g, x, c.y, c);
+          else {
+            el('circle', {
+              cx: x,
+              cy: c.y,
+              r: c.start ? 27 : 22,
+              class: 'target-ring pick',
+            }, g);
+          }
           g.addEventListener('click', () => {
             if (!zoomaa) this.doPickStart(c);
           });
@@ -5832,12 +5877,18 @@ export class UI {
         kohdeKaupungit.add(city.id);
         for (const x of this.kiertoKohdat(city.x)) {
           const g = el('g', { class: 'target' }, this.targetLayer);
-          el('circle', { cx: x, cy: city.y, r: 34, class: 'target-hit' }, g);
-          el('circle', { cx: x, cy: city.y, r: 25, class: 'target-ring lento' }, g);
-          const merkki = el('text', {
-            x, y: city.y - 33, class: 'lento-kohde-merkki', 'text-anchor': 'middle',
-          }, g);
-          merkki.textContent = '✈';
+          this.kohdeOsuma(g, x, city.y, 34);
+          if (this.fokusKohdeMerkit()) {
+            // Lentokohteessa kone kulkee nimen edessä: sama pieni merkki
+            // kuin muillakin kohteilla, mutta valinta on eri.
+            this.fokusKohdeMerkki(g, x, city.y, city, '✈ ');
+          } else {
+            el('circle', { cx: x, cy: city.y, r: 25, class: 'target-ring lento' }, g);
+            const merkki = el('text', {
+              x, y: city.y - 33, class: 'lento-kohde-merkki', 'text-anchor': 'middle',
+            }, g);
+            merkki.textContent = '✈';
+          }
           g.addEventListener('click', () => this.doFly(dest));
         }
       }
@@ -5850,26 +5901,144 @@ export class UI {
       if (opt.city?.id) kohdeKaupungit.add(opt.city.id);
       for (const kx of this.kiertoKohdat(x)) {
         const g = el('g', { class: 'target' }, this.targetLayer);
-        el('circle', { cx: kx, cy: y, r: 30, class: 'target-hit' }, g);
-        /*
-         * Pelkkä koriste renkaan alla: pehmeästi laajeneva kultahalo,
-         * jolla valittavat kohteet erottuvat kartasta (omistajan
-         * havainto 18.8.2026). Ei osu klikkauksiin (pointer-events:
-         * none CSS:ssä) — osuma-alue on yllä oleva target-hit.
-         */
-        el('circle', {
-          cx: kx,
-          cy: y,
-          r: opt.city ? 22 : 14,
-          class: 'target-halo',
-        }, g);
-        el('circle', {
-          cx: kx,
-          cy: y,
-          r: opt.city ? 22 : 14,
-          class: opt.city ? 'target-ring' : 'target-ring far',
-        }, g);
+        this.kohdeOsuma(g, kx, y, 30);
+        if (this.fokusKohdeMerkit()) this.fokusKohdeMerkki(g, kx, y, opt.city ?? null);
+        else {
+          /*
+           * Pelkkä koriste renkaan alla: pehmeästi laajeneva kultahalo,
+           * jolla valittavat kohteet erottuvat kartasta (omistajan
+           * havainto 18.8.2026). Ei osu klikkauksiin (pointer-events:
+           * none CSS:ssä) — osuma-alue on yllä oleva target-hit.
+           */
+          el('circle', {
+            cx: kx,
+            cy: y,
+            r: opt.city ? 22 : 14,
+            class: 'target-halo',
+          }, g);
+          el('circle', {
+            cx: kx,
+            cy: y,
+            r: opt.city ? 22 : 14,
+            class: opt.city ? 'target-ring' : 'target-ring far',
+          }, g);
+        }
         g.addEventListener('click', () => this.doMove(opt.key));
+      }
+    }
+  }
+
+  /* --- KOHDEMERKIT FOKUSNÄKYMÄSSÄ (omistaja 26.8.2026) -------------- */
+
+  /**
+   * Piirretäänkö kohteet fokusnäkymän kielellä (pieni piste + nimi)?
+   *
+   * EHTO ON FOKUSMOODI, EI LEHTI. Sama valinta kuin kaupungin laatalla
+   * (fokusLaattaTutkii): lehti saapuu verkosta kesken pelin ja on
+   * toistaiseksi vain Kreikassa, joten lehteen sidottu ehto vaihtaisi
+   * merkkien kielen kesken vuoron. Omistajan tilaus koskee myös lehden
+   * ULKOPUOLELLA olevia kohteita (Sofia), joten ehdon on kannettava
+   * koko kartan yli.
+   *
+   * LÄHTÖPISTEEN VALINTA ON POIKKEUS. Siinä KAIKKI laudan kaupungit ovat
+   * kohteita — Euroopassa kymmeniä — ja jokainen saisi nimen merkkinsä
+   * viereen, vaikka sama nimi on jo kaupungin omassa laatassa. Sama raja
+   * on fokusmoodin muillakin kerroksilla (paivitaFokusKerros,
+   * fokusSumuPaalla): pickstart-vaiheessa fokusmoodi ei ole vielä
+   * käynnissä.
+   */
+  fokusKohdeMerkit() {
+    if (!this.fokusmoodi || this.katselu) return false;
+    return this.game.phase !== 'pickstart';
+  }
+
+  /**
+   * Kohteen napautusalue. Säde talletetaan data-määreeseen, koska
+   * fokusnäkymässä sitä kasvatetaan zoomin mukaan sormenkokoiseksi
+   * (paivitaFokusKohdeMitat) eikä alkuperäistä saa arvata takaisin.
+   */
+  kohdeOsuma(g, x, y, r) {
+    const osuma = el('circle', {
+      cx: x, cy: y, r, class: 'target-hit',
+    }, g);
+    osuma.dataset.perusR = String(r);
+    return osuma;
+  }
+
+  /**
+   * Valittavan kohteen merkki fokusnäkymässä: pieni pyöreä laatta ja
+   * sen yläpuolella kohteen nimi.
+   *
+   * MITAT ANNETAAN LAUDAN YKSIKÖISSÄ MUTTA TARKOITETAAN RUUDULLE.
+   * Tässä piirretään karkea alkuarvo, ja paivitaFokusKohdeMitat asettaa
+   * lopullisen säteen ja kirjasinkoon nykyisestä zoomista — sama kaava
+   * kuin nykyisen kaupungin laatalla ja fokusvirran kuvavinjeteillä.
+   * Alkuperäinen keskipiste jää data-määreisiin, jotta nimen etäisyys
+   * merkistä voidaan laskea uudelleen joka zoomilla.
+   *
+   * NIMETÖN KOHDE on askelpiste reitin varrella (nopanheiton väliruutu),
+   * ei kaupunki: se saa pienemmän pisteen eikä nimeä lainkaan.
+   */
+  fokusKohdeMerkki(g, x, y, city = null, etuliite = '') {
+    const px = city ? FOKUS_KOHDE_PX : FOKUS_KOHDE_PISTE_PX;
+    const piste = el('circle', {
+      cx: x,
+      cy: y,
+      r: px / 2,
+      class: city ? 'target-piste' : 'target-piste far',
+    }, g);
+    piste.dataset.px = String(px);
+    if (!city) return;
+    const nimi = el('text', {
+      x,
+      y: y - px,
+      class: 'target-nimi',
+      'text-anchor': 'middle',
+      'font-size': FOKUS_KOHDE_NIMI_PX,
+    }, g);
+    nimi.dataset.ky = String(y);
+    nimi.textContent = `${etuliite}${city.name}`;
+  }
+
+  /**
+   * Kohdemerkkien koko RUUDULLA: pisteet, nimet ja napautusalueet.
+   *
+   * Kutsutaan samoista kahdesta paikasta kuin nykyisen kaupungin laatan
+   * mitat (paivitaFokusPallot joka piirrossa, paivitaMaastonimet kun
+   * näkymä on asettunut), jotta merkki ei kasva eikä kutistu zoomin
+   * mukana.
+   */
+  paivitaFokusKohdeMitat() {
+    if (!this.targetLayer || !this.fokusKohdeMerkit()) return;
+    const osat = this.targetLayer.querySelectorAll(
+      '.target-piste, .target-nimi, .target-hit',
+    );
+    if (!osat.length) return;
+    const skaala = this.nakyvaAlue()?.skaala;
+    // Ilman mitattavaa näkymää entinen koko on parempi kuin väärä.
+    if (!Number.isFinite(skaala) || skaala <= 0) return;
+    for (const osa of osat) {
+      if (osa.classList.contains('target-piste')) {
+        const px = Number(osa.dataset.px) || FOKUS_KOHDE_PX;
+        osa.setAttribute('r', ((px / 2) / skaala).toFixed(2));
+      } else if (osa.classList.contains('target-nimi')) {
+        osa.setAttribute('font-size', (FOKUS_KOHDE_NIMI_PX / skaala).toFixed(2));
+        const y = Number(osa.dataset.ky);
+        if (Number.isFinite(y)) {
+          // Nimi merkin yläpuolelle: puolikas merkkiä ja pieni rako.
+          osa.setAttribute('y', (y - (FOKUS_KOHDE_PX / 2 + 6) / skaala).toFixed(2));
+        }
+      } else {
+        /*
+         * Napautusalue: sormenkokoinen ruudulla, mutta ei koskaan
+         * pienempi kuin laudan oma alue eikä suurempi kuin naapurien
+         * väli (sama katto kuin laatalla).
+         */
+        const perus = Number(osa.dataset.perusR) || 0;
+        osa.setAttribute('r', Math.max(
+          perus,
+          Math.min((FOKUS_KOHDE_OSUMA_PX / 2) / skaala, FOKUS_LAATTA_OSUMA_LAUDALLA),
+        ).toFixed(2));
       }
     }
   }
