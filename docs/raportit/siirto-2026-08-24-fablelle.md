@@ -23,33 +23,33 @@ paikallisessa työpuussa.
 - **Googlen laskutusasetukset** julkaisuputkeen
   (`.github/workflows/pollo-julkaisu.yml`).
 
-**Herokuvat**: kierrokset 22, 23 ja 24 valmiit (36 kuvaa) ja viety
-ämpäriin `herokoe/`-kansioon. Yksikään ei kaatunut generointiporttiin.
-Kierros 25 (Hobart, Darwin, Port Moresby, 9 kuvaa) oli vielä ajossa
-session päättyessä.
+**Herokuvat**: kierrokset 22, 23, 24 ja 25 KAIKKI VALMIIT — 45 kuvaa,
+kaikki viety ämpäriin `herokoe/`-kansioon. Yksikään ei kaatunut
+generointiporttiin. Kaksi kuvaa generoitiin ilman viitteitä, koska ne
+ovat työlistoissa tarkoituksella yleisnäkymiä (Mexico City / Xochimilco
+ja Port Moresby / Boroko).
 
 **Pöllö-worker julkaistu uudelleen**, joten `OPENAI_ADMIN_KEY` on nyt
 workerin käytössä.
 
 ## KESKEN — tee nämä ensin
 
-1. **Herokierros 25 ja kuvien kytkentä peliin.** 36 valmista kuvaa on
-   ämpärissä mutta **EI VIELÄ KYTKETTY** lehtiin. Kytkentä:
+1. **Kuvien kytkentä peliin.** 45 valmista kuvaa on ämpärissä mutta
+   **EI VIELÄ KYTKETTY** lehtiin. Tämä on session tärkein keskeneräinen
+   asia. Kytkentä:
    `avauskuvat`-taulukon kärkeen, `ampari: 'herokoe/hero-<id>-<aika>.png'`.
-   Kaupungit: São Paulo, Toronto, Lima, Quito, Los Angeles, Montevideo,
-   Havanna, Mexico City, New Orleans, Bogotá, Valparaíso, Adelaide
-   (+ Hobart, Darwin, Port Moresby kun 25 valmistuu).
+   Kaupungit (15, kolme kuvaa kussakin): São Paulo, Toronto, Lima,
+   Quito, Los Angeles, Montevideo, Havanna, Mexico City, New Orleans,
+   Bogotá, Valparaíso, Adelaide, Hobart, Darwin, Port Moresby.
    **SAMASSA VERSIOSSA on lisättävä ne `js/viitekuva-herot.js`-listaan**,
    muuten oranssi merkintä ja kuvat eriytyvät. Se on koko moduulin
    olemassaolon syy.
-   Ajo jatkuu tarvittaessa:
-   `bash /tmp/.../scratchpad/aja-herot.sh` (ohittaa valmiit).
    Vienti: kopioi PNG:t `/tmp/vienti/julisteet/herokoe/`, **rebase ennen
    pushia**, pushaa `claude/julisteet-vienti`, aja `vie-julisteet.yml`.
 
 2. **Katso kierrosten 22–25 kuvat läpi.** Ehdin katsoa vain Valparaíson
    Ascensor Concepciónin (kelpaa varauksin: hammastangot oikein, mutta
-   vaunuja kolme kahden sijaan ja värit vaihtaneet paikkaa). Loput 35
+   vaunuja kolme kahden sijaan ja värit vaihtaneet paikkaa). Loput 44
    ovat katsomatta. Omistajan sääntö: vertaa kahteen aitoon
    Commons-kuvaan ja tarkista, ettei kohde näytä epäilyttävän isolta.
 
@@ -130,3 +130,9 @@ OpenAI-palkki: avain on workerissa ja rajapinta vastaa, mutta elokuun
 summa oli 0 dollaria. Joko kulurajapinta laahaa päivän tai kuvat
 laskutetaan projektille, jota admin-avain ei kata. Jos luku on yhä
 nolla, syy on jälkimmäinen.
+
+## AGENTTIVAHTI SAMMUTETTU
+
+Tuntivälein toistuva `Agenttivahti`-ajastus on kytketty pois päältä
+(ei poistettu), koska työ siirtyi sinulle eikä sen pidä herätellä
+päättynyttä sessiota. Se on palautettavissa /routines-näkymästä.
