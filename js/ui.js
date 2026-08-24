@@ -3636,6 +3636,24 @@ export class UI {
     if (!nimet.length) return;
     const maat = this.fokusSumuPaalla() ? this.fokusMaat() : null;
     const muodot = this.game.pack.map?.countryShapes;
+    /*
+     * FOKUSPOHJAN ALUEELLA NIMIÄ EI OLE LAINKAAN (omistaja 24.8.2026:
+     * *"vieraiden alueiden maastonimet (Balkanvuoret ym.) ja muut laudan
+     * tekstit pois fokuspohjan alueelta"*). Lehdessä on omat nimensä
+     * omalla kirjasimellaan, ja laudan maastonimet jäisivät sen päälle
+     * kellumaan toisella tyylillä — kaksi karttaa päällekkäin. Piilotus
+     * on eri asia kuin harson alle himmentäminen, joten sillä on oma
+     * luokkansa.
+     */
+    const pohja = this.fokusPohjaBbox ?? null;
+    for (const n of nimet) {
+      const x = Number(n.dataset.x);
+      const y = Number(n.dataset.y);
+      const kuvanAlla = Boolean(pohja) && Number.isFinite(x) && Number.isFinite(y)
+        && x >= pohja.x && x <= pohja.x + pohja.w
+        && y >= pohja.y && y <= pohja.y + pohja.h;
+      n.classList.toggle('maastonimi-kuvan-alla', kuvanAlla);
+    }
     if (!maat || !muodot) {
       for (const n of nimet) n.classList.remove('maastonimi-harson-alla');
       return;
@@ -4866,6 +4884,55 @@ export class UI {
   }
 
   /**
+   * Fokuspohja tuli tai lähti: mitä kartalla on tehtävä sen takia.
+   *
+   * Kutsuu js/fokuskartta.js aina kun lehti piirretään tai kerros
+   * tyhjennetään; `bbox` on lehden paikka laudan koordinaateissa tai
+   * null.
+   *
+   * === MIKSI TÄMÄ ON OLEMASSA (omistajan pelitesti v1095) ===
+   *
+   * Lehti on OPAAKKI ja kokonainen atlaksen sivu. Kaikki, mitä laudalla
+   * on sen alueella, joko katoaa kuvan alle tai jää päälle riitelemään
+   * sen kanssa — ja omistajan lista oli yksiselitteinen: punainen maan
+   * ääriviiva pois, reittien pisteet ja katkoviivat pois, vieraiden
+   * alueiden maastonimet pois. Kolme eri kerrosta, kolme eri keinoa:
+   *
+   *   1. MAAN KOROSTUS (.country-tint, .country-korostus) on kuvan
+   *      PÄÄLLÄ (countryLayer luodaan fokuskarttaKerroksen jälkeen), ja
+   *      punainen rengas piirtyisi keskelle lehteä. Piilotus luokalla
+   *      body.fokuspohja — kerrosta ei tyhjennetä, koska maa on yhä
+   *      korostettu ja rengas palaa heti kun lehti häviää.
+   *
+   *   2. SUMUVERHO on myös kuvan päällä ja sävyttäisi lehden kaikkialta
+   *      paitsi Kreikan kohdalta — lehti näyttäisi kahdella eri
+   *      paperilla painetulta. Verhoon leikataan reikä lehden kohdalle
+   *      (paivitaFokusSumu).
+   *
+   *   3. MAASTONIMET ovat SVG:tä koko kartan päällä (maastonimiKerros
+   *      on svg:n suora lapsi), joten ne jäisivät lehden päälle
+   *      kellumaan. Lehden alueelle osuvat piilotetaan
+   *      (himmennaMaastonimet).
+   *
+   * Reitit hoituvat ilman koodia: ne ovat laudan bittikartassa ja
+   * jäävät opaakin kuvan alle itsestään.
+   */
+  paivitaFokusPohja(bbox) {
+    const ennen = this.fokusPohjaBbox ?? null;
+    const uusi = bbox && bbox.w > 0 && bbox.h > 0 ? bbox : null;
+    const sama = (!ennen && !uusi)
+      || (ennen && uusi && ennen.x === uusi.x && ennen.y === uusi.y
+        && ennen.w === uusi.w && ennen.h === uusi.h);
+    if (sama) return;
+    this.fokusPohjaBbox = uusi;
+    document.body.classList.toggle('fokuspohja', Boolean(uusi));
+    // Verho on rakennettava uusiksi: reikä tuli tai lähti.
+    this.fokusAvain = null;
+    this.paivitaFokusSumu(this.fokusMaat());
+    this.himmennaMaastonimet();
+  }
+
+  /**
    * Sumuverho: pergamentinvärinen harso koko laudan päälle, käydyt maat
    * verhosta pois leikattuina.
    *
@@ -4902,9 +4969,17 @@ export class UI {
     const map = this.game.pack.map;
     const muodot = map?.countryShapes;
     const paalla = this.fokusSumuPaalla() && maat && muodot;
+    /*
+     * Fokuspohjan alue leikataan verhosta pois: lehti on valmis kuva,
+     * jonka päälle harso maalaisi toisen sävyn kaikkialle paitsi
+     * kohdemaan kohdalle (ks. paivitaFokusPohja).
+     */
+    const pohja = this.fokusPohjaBbox ?? null;
     // Avain kertoo, onko mitään muuttunut: sama joukko samassa tilassa
     // piirretään uudestaan turhaan joka vuorolla.
-    const avain = paalla ? [...maat].sort().join(',') : 'pois';
+    const avain = paalla
+      ? `${[...maat].sort().join(',')}|${pohja ? `${pohja.x},${pohja.y},${pohja.w},${pohja.h}` : ''}`
+      : 'pois';
     if (this.fokusAvain === avain) return;
     this.fokusAvain = avain;
     kerros.textContent = '';
@@ -4942,6 +5017,12 @@ export class UI {
       }
     }
     for (const d of polut) el('path', { d, fill: '#000' }, maski);
+    // Fokuspohjan lehti kokonaan verhon ulkopuolelle (musta = kirkas).
+    if (pohja) {
+      el('rect', {
+        x: pohja.x, y: pohja.y, width: pohja.w, height: pohja.h, fill: '#000',
+      }, maski);
+    }
     el('rect', {
       x: 0,
       y: 0,

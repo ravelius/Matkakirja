@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1096 — FOKUSKARTTA PROTOTYYPIN LEHDEKSI: opaakki atlaksen lehti kehyksineen, kartuutteineen ja mittajanoineen (6400 px), naapurit himmeina nimineen, suomenkieliset merinimet kuvassa; punainen rengas, reittipisteet ja tuplanimet pois fokusnakymasta. Tarkista: Ateenan fokusnakyma iPadilla — vastaako prototyyppikuvaa, riittaako resoluutio',
   'v1095 — KORJAUS: fokuskartan osoite oli amparin juuressa (404) vaikka vientiputki vie kaiken julisteet-kansion alle — polku korjattu, Kreikan akvarellimaaston pitaisi nyt oikeasti nakya. Tarkista: Ateenassa topografia nakyvissa',
   'v1094 — FOKUSVIRRAN ASETTELU OMISTAJAN PALAUTTEEN MUKAAN: isoisan merkinta perinteisessa ylavasemmassa matkakirjakortissa (Sophia-kuva, ei luentaa viela), pollon huomio ja valinnat puhekuplassa joka lahtee kelluvasta pollosta, luettavampi leipafontti, lyhyempi huomioteksti, kuvat pienina vinjetteina kartalla Ateenan paalla (klikista isoksi katselimeen). Tarkista: koko virta puhelimella ja tyopoydalla',
   'v1093 — KAKSI KORJAUSTA: (1) fokusvirta korvaa vanhan saapumiskortin — kaksi matkakirjaa ei aukea yhta aikaa eika vanha puhu virran paalle; palaa kun laatta kaannetty. (2) Fokuskartan bbox luetaan repossa olevasta taulusta — amparin r2.dev ei laheta CORS-otsakkeita ja fetch kaatui, siksi Kreikan maasto ei nakynyt. Tarkista: Ateenassa vain virran kortti JA akvarellimaasto nakyvissa',

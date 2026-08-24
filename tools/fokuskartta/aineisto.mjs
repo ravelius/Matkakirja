@@ -31,6 +31,17 @@
  * tiheämpänä. Molemmat luetaan, ja päällekkäiset uomat karsitaan
  * nimen perusteella — maailmanjoki voittaa, koska sillä on luokitus
  * (scalerank), jonka mukaan uoman leveys piirretään.
+ *
+ * --- korkeusruudukon on katettava KOKO KUVA ---
+ *
+ * Ruudukon ulkopuolella `korkeus` palauttaa NaN, ja piirtomoottori
+ * lukee sen avomereksi. Jos ruudukko loppuu kesken kuvan, meren
+ * syvyysporrastus vaihtuu tasaiseksi sävyksi keskellä ulappaa ja
+ * kuvaan jää suora pystysauma. Kaistat on siis haettava kuvan
+ * rajauksen mukaan — Kreikan v2-lehdelle lon 13,9–34,1 / lat
+ * 32,4–43,8, kun aiempi tiukka rajaus tuli toimeen välillä 17–31 /
+ * 33–43. Ajo kertoo ruudukon kulmat lokissa; vertaa niitä
+ * työkalun tulostamaan `asteina`-riviin.
  */
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
@@ -160,11 +171,25 @@ function korkeusruudukko(kansio) {
  *
  * `laatikko` on { lon0, lon1, lat0, lat1 } ja saa olla lopullista
  * kuvarajausta väljempi: piirtomoottori leikkaa ylimääräisen pois.
+ *
+ * `naapurit` on lista ISO-tunnuksia, joiden ääriviivat kerätään mukaan.
+ * Ne piirretään haaleina ja sumenevina (piirto.js), eikä niistä
+ * tarvita kuin renkaat — ei korkeutta, ei vesiä. Tyhjä lista on
+ * kelvollinen: silloin lehdessä on vain kohdemaa ja merta.
  */
-export function keraaAineisto({ kansio, iso, laatikko }) {
+export function keraaAineisto({ kansio, iso, laatikko, naapurit = [] }) {
   const maat = lue(kansio, 'ne_10m_admin_0_countries.geojson');
-  const kohde = maat.features.find((f) => (f.properties.ADM0_A3 ?? f.properties.ISO_A3) === iso);
+  const tunnus = (f) => f.properties.ADM0_A3 ?? f.properties.ISO_A3;
+  const kohde = maat.features.find((f) => tunnus(f) === iso);
   if (!kohde) throw new Error(`Maata ${iso} ei löydy Natural Earthin aineistosta.`);
+
+  const naapuriMuodot = {};
+  for (const a3 of naapurit) {
+    const f = maat.features.find((g) => tunnus(g) === a3);
+    if (!f) throw new Error(`Naapurimaata ${a3} ei löydy Natural Earthin aineistosta.`);
+    const r = renkaat(f.geometry, laatikko);
+    if (r.length) naapuriMuodot[a3] = { renkaat: r };
+  }
 
   const joet = [];
   const nimetyt = new Set();
@@ -198,6 +223,7 @@ export function keraaAineisto({ kansio, iso, laatikko }) {
     iso,
     laatikko,
     maa: { renkaat: renkaat(kohde.geometry, laatikko) },
+    naapurit: naapuriMuodot,
     joet,
     jarvet,
     korkeus: korkeusruudukko(kansio),

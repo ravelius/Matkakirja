@@ -11,9 +11,23 @@
  *     kartta paikoillaan. Tämä on se polku, jolla peli on kaikissa
  *     muissa maissa kuin Kreikassa.
  *  2. OLEMASSA OLEVA POHJA. Kuva ilmestyy laudan koordinaatteihin
- *     TÄSMÄLLEEN JSONin rajaukseen, reitit piirtyvät sen päälle, ja
- *     maasta toiseen siirryttäessä kamera ajaa rajaukseen pehmeästi.
- *     Ele keskeyttää ajon eikä kartta hyppää maaliin.
+ *     TÄSMÄLLEEN FOKUS_POHJAT-taulun rajaukseen, ja maasta toiseen
+ *     siirryttäessä kamera ajaa LEHDEN IKKUNAAN pehmeästi. Ele
+ *     keskeyttää ajon eikä kartta hyppää maaliin.
+ *
+ * === MIKÄ MUUTTUI OMISTAJAN PELITESTIN JÄLKEEN (v1095) ===
+ *
+ * Kuva on nyt kokonainen OPAAKKI atlaksen lehti, ja sen mukana lähti
+ * kolme asiaa, joita savuke ennen vaati:
+ *
+ *   - REITTIVÄITE POISTUI. Ennen savuke vaati, että rajaukseen osuvat
+ *     reitit piirretään uudelleen kuvan päälle. Omistaja halusi
+ *     pisteet ja katkoviivat pois näkyvistä, joten nyt vaaditaan
+ *     päinvastoin: kuvan päällä EI ole reittikerrosta.
+ *   - KAKSI LAATIKKOA. Kuva asetetaan `bbox`iin, mutta kamera ajaa
+ *     `rajaus`-ikkunaan; ne eivät ole sama laatikko, ja vuoto niiden
+ *     välissä on koko sauman esto.
+ *   - PUNAINEN KOROSTUS JA MAASTONIMET POIS. Uudet väitteet 2f ja 2g.
  */
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
@@ -45,13 +59,17 @@ const vaadi = (nimi, ehto, lisa = '') => {
   if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`);
 };
 
-// Kreikan oikea rajaus pelilaudalla (tools/tee-fokuskartta.mjs,
-// GRC.json 24.8.2026 — maailmankartta, Millerin lieriö).
+// Kreikan oikeat laatikot pelilaudalla (tools/tee-fokuskartta.mjs,
+// GRC.json 24.8.2026 v2 — maailmankartta, Millerin lieriö).
+// Täsmälleen js/packs/fokus-grc.js FOKUS_POHJAT.GRC — rajaus luetaan
+// nykyään reposta, ei ämpärin JSONista (CORS-korjaus 24.8.2026), joten
+// savukkeen on verrattava samoihin lukuihin.
 const BBOX = {
-  // Täsmälleen js/packs/fokus-grc.js FOKUS_POHJAT.GRC.bbox — rajaus
-  // luetaan nykyään repsta, ei ämpärin JSONista (CORS-korjaus
-  // 24.8.2026), joten savukkeen on verrattava samoihin lukuihin.
-  x: 6488.94, y: 1722.84, w: 241.91, h: 285.01,
+  x: 6329.2, y: 1681.71, w: 608.26, h: 380.16,
+};
+// Lehden ikkuna: tähän kamera ajaa, tämä on pelaajan näkymä.
+const RAJAUS = {
+  x: 6399.39, y: 1725.58, w: 467.89, h: 292.43,
 };
 // Pienin mahdollinen kelvollinen PNG: savuke tutkii sijoittelua, ei
 // kuvan sisältöä.
@@ -87,6 +105,7 @@ await sivu.route('**/fokus/**', (route) => {
         // projektion koordinaateissa: peli ei saa käyttää sitä.
         lauta: vaihe === 'vaara-lauta' ? 'europe' : 'maailmankartta',
         bbox: BBOX,
+        rajaus: RAJAUS,
         tiedosto: 'GRC.png',
       }),
     });
@@ -162,6 +181,13 @@ const kuva = await sivu.evaluate(() => {
     ennenKaupunkeja: Boolean(document.querySelector('#board .fokuskartta')
       ?.compareDocumentPosition(document.querySelector('#board .cities'))
       & Node.DOCUMENT_POSITION_FOLLOWING),
+    // Punainen maan ääriviiva ja laudan maastonimet pois lehden päältä.
+    korostusNakyy: [...document.querySelectorAll('#board .country-korostus')]
+      .some((p) => getComputedStyle(p).display !== 'none'),
+    pohjaLuokka: document.body.classList.contains('fokuspohja'),
+    // Kohderenkaat ovat liikkumisen ainoa kartalta tehtävä valinta:
+    // niiden kerros ei saa kadota lehden mukana.
+    kohdekerros: Boolean(document.querySelector('#board .targets')),
   };
 });
 vaadi('2a kuva ilmestyy laudalle', Boolean(kuva));
@@ -169,9 +195,14 @@ if (kuva) {
   const osuu = Math.abs(kuva.x - BBOX.x) < 0.01 && Math.abs(kuva.y - BBOX.y) < 0.01
     && Math.abs(kuva.w - BBOX.w) < 0.01 && Math.abs(kuva.h - BBOX.h) < 0.01;
   vaadi('2b kuva on täsmälleen JSONin rajauksessa', osuu, JSON.stringify(kuva));
-  vaadi('2c reitit piirtyvät kuvan päälle', kuva.reitteja > 0, `${kuva.reitteja} reittiä`);
+  vaadi('2c reittejä EI piirretä kuvan päälle', kuva.reitteja === 0,
+    `${kuva.reitteja} reittiä`);
   vaadi('2d kuvalla ei ole suodatinta (iOS)', !kuva.suodatin, String(kuva.suodatin));
   vaadi('2e kuva on kaupunkikerroksen alla', kuva.ennenKaupunkeja);
+  vaadi('2f punainen maan korostus on piilossa lehden päältä',
+    kuva.pohjaLuokka && !kuva.korostusNakyy,
+    `luokka ${kuva.pohjaLuokka}, korostus näkyy ${kuva.korostusNakyy}`);
+  vaadi('2g kohderenkaiden kerros on tallella', kuva.kohdekerros);
 }
 
 /* ------------------------------------------------- 3. kamera-ajo maahan */
@@ -195,18 +226,55 @@ const perilla = await sivu.evaluate(() => {
     ajossa: ui.kartta.kameraAjossa(),
     keskiX: n.x + n.w / 2,
     keskiY: n.y + n.h / 2,
+    x: n.x,
     leveys: n.w,
     muunnos: ui.svg.style.transform,
   };
 });
 vaadi('3b ajo päättyy', !perilla.ajossa);
-vaadi('3c näkymä keskittyy maan rajaukseen',
-  Math.abs(perilla.keskiX - (BBOX.x + BBOX.w / 2)) < BBOX.w * 0.2
-  && Math.abs(perilla.keskiY - (BBOX.y + BBOX.h / 2)) < BBOX.h * 0.25,
+vaadi('3c näkymä keskittyy lehden ikkunaan',
+  Math.abs(perilla.keskiX - (RAJAUS.x + RAJAUS.w / 2)) < RAJAUS.w * 0.2
+  && Math.abs(perilla.keskiY - (RAJAUS.y + RAJAUS.h / 2)) < RAJAUS.h * 0.25,
   `keski ${perilla.keskiX.toFixed(0)},${perilla.keskiY.toFixed(0)}`);
-vaadi('3d rajaus mahtuu näkymään', perilla.leveys > BBOX.w,
+vaadi('3d lehden ikkuna mahtuu näkymään', perilla.leveys >= RAJAUS.w * 0.99,
   `näkyvä leveys ${perilla.leveys.toFixed(0)}`);
+/*
+ * SAUMA EI SAA NÄKYÄ: kamera näyttää lehden ikkunan ja kuvasuhteen
+ * vaatiman ylimäärän, ja sen ylimäärän on mahduttava kuvan sisään.
+ * Juuri tätä varten kuvassa on vuotoa (js/packs/fokus-grc.js).
+ */
+vaadi('3f näkyvä alue pysyy kuvan sisällä (ei saumaa)',
+  perilla.x >= BBOX.x - 0.5 && perilla.x + perilla.leveys <= BBOX.x + BBOX.w + 0.5,
+  `näkyvä x ${perilla.x.toFixed(0)}..${(perilla.x + perilla.leveys).toFixed(0)}, `
+  + `kuva ${BBOX.x}..${(BBOX.x + BBOX.w).toFixed(0)}`);
 vaadi('3e ajon muunnos on siivottu', !/scale/.test(perilla.muunnos), perilla.muunnos);
+
+/*
+ * Laudan omat maastonimet (Balkanvuoret ym.) eivät saa jäädä lehden
+ * päälle kellumaan: lehdessä on omat nimensä omalla kirjasimellaan
+ * (omistaja 24.8.2026). Testi tehdään VASTA KAMERA-AJON JÄLKEEN, koska
+ * maastonimet piirretään vain näkyvälle alueelle ja riittävällä
+ * zoomilla — yleiskuvassa niitä ei ole olemassa yhtään.
+ */
+await sivu.evaluate(() => window.matkakirja.ui.paivitaMaastonimet());
+await sivu.waitForTimeout(400);
+const nimet = await sivu.evaluate((b) => {
+  const kaikki = [...document.querySelectorAll('.maastonimi')];
+  const laatikossa = kaikki.filter((n) => {
+    const x = Number(n.dataset.x); const y = Number(n.dataset.y);
+    return Number.isFinite(x) && Number.isFinite(y)
+      && x >= b.x && x <= b.x + b.w && y >= b.y && y <= b.y + b.h;
+  });
+  return {
+    kaikki: kaikki.length,
+    laatikossa: laatikossa.length,
+    nakyvia: laatikossa.filter((n) => getComputedStyle(n).display !== 'none').length,
+  };
+}, BBOX);
+console.log(`      (maastonimiä ${nimet.kaikki}, lehden alueella ${nimet.laatikossa})`);
+vaadi('3g laudan maastonimet eivät näy lehden alueella', nimet.nakyvia === 0,
+  `${nimet.nakyvia} näkyvissä (${nimet.laatikossa} lehden alueella, `
+  + `${nimet.kaikki} kaikkiaan)`);
 
 /* --------------------------------------------------- 4. ele keskeyttää */
 
@@ -237,7 +305,7 @@ const ele = await sivu.evaluate(async () => {
 });
 vaadi('4a ele pysäyttää ajon', !ele.ajossa);
 vaadi('4b kartta jää siihen mihin ajo ehti, ei hyppää maaliin',
-  ele.jalkeenLeveys < ele.alkuLeveys && ele.jalkeenLeveys > BBOX.w * 1.05,
+  ele.jalkeenLeveys < ele.alkuLeveys && ele.jalkeenLeveys > RAJAUS.w * 1.05,
   `alku ${ele.alkuLeveys.toFixed(0)} → kesken ${ele.keskenLeveys.toFixed(0)} `
   + `→ jäi ${ele.jalkeenLeveys.toFixed(0)}`);
 
