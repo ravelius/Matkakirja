@@ -53,12 +53,22 @@ export const FOKUSVIRTA_ATEENA = {
     },
   },
 
-  /* ---------- 2. Pöllön nykypäivän huomio (+ herokuva) ---------- */
+  /*
+   * ---------- 2. Pöllön nykypäivän huomio (+ herokuva) ----------
+   *
+   * TEKSTI ON LYHENNETTY (päätoimittaja 24.8.2026, omistajan
+   * pelitestipalaute v1092/v1093: *"myös teksti pitäisi olla
+   * lyhyempi"*). Vaihe esitetään nyt puhekuplana, joka lähtee
+   * kelluvasta pöllönapista (js/fokusvirta.js piirraKupla), eikä
+   * kuplaan mahdu — eikä siihen kuulu — korttimittainen kappale.
+   * Yksikään faktaväite ei muuttunut: kulta oli aitoa mutta ei
+   * Priamoksen, löytäjä rakensi palatsinsa kadun varteen, ja sen
+   * friisissä hän kaivaa yhä.
+   */
   pollo: {
-    teksti: '"Isoisäsi ei koskaan saanut tietää, miten siinä kävi. Se '
-      + 'kulta oli aitoa — mutta ei Priamoksen. Ja se mies rakensi '
-      + 'palatsin tuonne kadun varteen; sen friisissä hän kaivaa yhä, '
-      + 'marmorissa. Mutta katso ensin tuonne ylös."',
+    teksti: 'Isoisäsi ei koskaan saanut tietää, miten kullan kävi. Se oli '
+      + 'aitoa — mutta ei Priamoksen. Ja löytäjä rakensi palatsinsa tuonne '
+      + 'kadun varteen; sen friisissä hän kaivaa yhä. Katso ensin tuonne ylös.',
     kuva: {
       ampari: 'herokoe/hero-ateena-aamu.png',
       selite: 'Parthenon aamuvalossa. Temppeli rakennettiin Athena '

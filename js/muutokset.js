@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1094, teksti: 'Pollon kuplat, kuvat kartalle' },
   { v: 1093, teksti: 'Fokusvirran tuplakortti ja fokuskartta korjattu' },
   { v: 1092, teksti: 'Fokusvirta: Ateenan annostelu' },
   { v: 1091, teksti: 'Kreikan fokuskartta ja kamera-ajot' },
