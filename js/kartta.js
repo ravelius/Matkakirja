@@ -1234,10 +1234,23 @@ export class Kartta {
    * ja false jos se keskeytyi tai jäi tekemättä. Liikeherkkyys
    * (reducedMotion) hyppää suoraan perille — se on sama sääntö kuin
    * muillakin kartan liikkeillä.
+   *
+   * `pakota` ohittaa aloituslennon kameravarauksen (ks. alla). Sitä
+   * käyttää vain lento itse.
    */
-  ajaKamera(kohde, { kesto = AJO_MS, pehmennys = pehmennysKaari } = {}) {
+  ajaKamera(kohde, { kesto = AJO_MS, pehmennys = pehmennysKaari, pakota = false } = {}) {
     const pane = this.ui.svg?.parentElement;
     if (this.ui.dead || !pane) return Promise.resolve(false);
+    /*
+     * ALOITUSLENTO OMISTAA KAMERAN (omistaja 24.8.2026, Raamattu:
+     * ALOITUSLENTO UUSIKSI). Lennon aikana kartalla on rajaus, johon
+     * lähtömaa ja kohdemaa mahtuvat molemmat, ja kone lentää sen poikki.
+     * Muut ajot — ennen kaikkea fokuskartan maanvaihto, joka laukeaa
+     * samasta piirrosta — veisivät näkymän kesken lennon kohdemaahan ja
+     * kone jatkaisi lentoaan ruudun ulkopuolella. Ne eivät jää jonoon
+     * vaan raukeavat: lento ajaa itse kohdemaan rajaukseen perillä.
+     */
+    if (this.ui.aloituslentoKesken && !pakota) return Promise.resolve(false);
     const paneW = pane.clientWidth;
     const paneH = pane.clientHeight;
     if (!paneW || !paneH) return Promise.resolve(false);

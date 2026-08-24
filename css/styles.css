@@ -8076,6 +8076,79 @@ body.katselu #newgame-btn { display: none; }
 .flight-trail { will-change: stroke-dashoffset; }
 
 /*
+ * ALOITUSLENTO KARTALLA (omistaja 24.8.2026, Raamattu: ALOITUSLENTO
+ * UUSIKSI — js/ui.js aloituslentoSisalla).
+ *
+ * Avauslento ei ole enää oma piirretty kohtauksensa kalvon päällä vaan
+ * tapahtuu pelin omalla kartalla. Kalvosta jää jäljelle pelkkä repliikin
+ * ja napin pino, joten sen tausta, sumennus ja pystykeskitys puretaan:
+ * kartta näkyy sellaisenaan, ja teksti asettuu ruudun alalaitaan sinne,
+ * missä lentoreitti ei kulje.
+ */
+.flight-overlay.kartalla {
+  background: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  justify-content: flex-end;
+}
+
+/* Reitin lähtömerkki Lontoon kohdalla: sama punainen kuin viivalla.
+   Britannia on käymättömänä maana sumun alla, joten ilman merkkiä
+   reitin alkupää katoaisi harsoon. */
+.aloituslento-piste {
+  fill: #c2452f;
+  opacity: 0.9;
+}
+
+/*
+ * NIUKKA KARTTA LENNON AJAKSI (Raamattu: *"kartta on tällöin jo
+ * fokusmoodin tapaan niukka"*). Sumuverhon hoitaa fokusmoodi itse;
+ * tässä piiloutuu se pelitila, jonka peli on jo ehtinyt siirtää perille
+ * — nappula, kohderenkaat ja laatat olisivat kohdekaupungissa vastassa
+ * ennen kuin kone on edes lähtenyt. Häivytys eikä display, jotta ne
+ * palaavat pehmeästi kun lippu poistuu.
+ */
+body.kartalento .pawns,
+body.kartalento .targets,
+body.kartalento .tokens,
+body.kartalento .fokuskuvat {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Maakyltti kertoo, missä maassa MATKAAJA on — ja peli on siirtänyt hänet
+   perille jo lennon alussa. Kyltti paljastaisi siis määränpään ennen kuin
+   kone on siellä. Se palaa itsestään, kun lippu poistuu. */
+body.kartalento .maa-pilleri {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.pawns,
+.targets,
+.tokens,
+.fokuskuvat {
+  transition: opacity 0.5s ease;
+}
+
+/*
+ * Lauta vaihtuu lennon alussa aloitusnäytöstä maailmankartalle, ja se on
+ * väistämättä leikkaus: kaksi eri karttaa, ei mitään mistä toiseen
+ * liu'uttaisiin. Lyhyt häivähdys pehmentää sen niin, ettei uusi lauta
+ * pompahda ruudulle — kamera-ajo alkaa saman tien ja vie katseen
+ * eteenpäin.
+ */
+body.kartalento #board { animation: kartalento-sisaan 0.55s ease; }
+
+@keyframes kartalento-sisaan { from { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .pawns, .targets, .tokens, .fokuskuvat { transition: none; }
+  body.kartalento #board { animation: none; }
+}
+
+/*
  * Nuoren herran repliikki kartan alla.
  *
  * EI TAUSTALAATIKKOA (omistajan tilaus 12.8.2026). Tumma planssi oli
