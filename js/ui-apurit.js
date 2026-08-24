@@ -928,6 +928,39 @@ export function asetaFokusSumennus(paalla) {
   }
 }
 
+/*
+ * PÖLLÖN LEHTIVINKKI (kevyt kulku -kokeilu, omistaja 24.8.2026, ilta).
+ *
+ * Raamatun KEVYT KULKU -KOKEILU: kun kaupunkilehti aukeaa, pöllö
+ * vinkkaa lyhyesti minitehtävästä, ja *"vinkissä ruksi 'älä näytä
+ * jatkossa'"*. Ruksi on lukijan asetus eikä pelitilanteen osa — sama
+ * kaava kuin kehittäjätilalla ja fokusmoodilla yllä: oma avain,
+ * try/catch ja ei riviäkään pelitallennuksessa.
+ *
+ * OLETUS ON NÄYTETÄÄN: puuttuva avain tarkoittaa, ettei ruksia ole
+ * koskaan painettu. Piilotus kirjoittaa arvon '1', ja mikä tahansa muu
+ * arvo palauttaa oletuksen — vanha tai kelvoton arvo ei jätä vinkkiä
+ * puolitilaan.
+ */
+const LEHTIVINKKI_AVAIN = 'matkakirja-lehtivinkki-pois';
+
+export function lehtivinkkiPiilotettu() {
+  try {
+    return localStorage.getItem(LEHTIVINKKI_AVAIN) === '1';
+  } catch {
+    return false; // yksityinen selaus: vinkki näytetään
+  }
+}
+
+export function piilotaLehtivinkki(piiloon) {
+  try {
+    if (piiloon) localStorage.setItem(LEHTIVINKKI_AVAIN, '1');
+    else localStorage.removeItem(LEHTIVINKKI_AVAIN);
+  } catch {
+    /* yksityinen selaus: valinta jää vain tälle istunnolle */
+  }
+}
+
 // Tiivistelmät ja kuvat haetaan kerran per artikkeli: sama kuva näkyy
 // sekä saapumiskortissa että Lue lisää -dialogissa ilman uutta hakua.
 const wikiSummaryCache = new Map();

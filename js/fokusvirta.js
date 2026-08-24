@@ -79,7 +79,10 @@
  * (js/linssit/radiosoitin.js lataaTyyli).
  */
 
-import { fokusmoodiPaalla, html, jaaKappaleiksi, TOAST_MS } from './ui-apurit.js';
+import {
+  fokusmoodiPaalla, html, jaaKappaleiksi, lehtivinkkiPiilotettu, piilotaLehtivinkki, TOAST_MS,
+} from './ui-apurit.js';
+import { fokusAarreAvattu, fokusAarreVastattu } from './fokustehtavat.js';
 import { asetaKuva, julisteUrl } from './media.js';
 import { el } from './mapart.js';
 import { valokuvaUrl, valokuvaVara, valokuvaSuurennos } from './packs/africa-valokuvat.js';
@@ -96,6 +99,48 @@ import { sfx } from './sound.js';
  * vakiona, jotta annostelun tasoa voi säätää yhdestä paikasta.
  */
 export const TAKY_PALKKIO = 50;
+
+/**
+ * ============ KEVYT KULKU -KOKEILU (omistaja 24.8.2026, ilta) ========
+ *
+ * Raamatun osio "Fokusmoodi", kohta KEVYT KULKU -KOKEILU: *"raskaampi
+ * korttiannostelu lipun taakse, ei poisteta"*. Omistaja kokeilee,
+ * riittääkö kaupunkilehti pelin annostelijaksi:
+ *
+ *   kaupunkilehti aukeaa suoraan → lehden nimetyt minitehtävät →
+ *   vihreä piste kartalle → kohtaaminen → aarre
+ *
+ * TÄMÄ LIPPU KYTKEE KORTTIANNOSTELUN. Kun se on `false`:
+ *
+ *   - pöllön kupla- ja korttivaiheet (huomio, täkyvalinta, syvennykset
+ *     minivisoineen, kohdenostot, oppitunti ja Tapaa-portti) EIVÄT
+ *     käynnisty missään: ei saapumisesta, ei Tutki-napista, ei laatan
+ *     napautuksesta;
+ *   - LEHTILUKKO on auki: openArrival avaa kaupunkilehden suoraan myös
+ *     fokusmoodissa (fokusvirtaOhittaaLehden palauttaa aina false);
+ *   - kartan kuvavinjetit jäävät piirtämättä (ks. alla).
+ *
+ * MIKÄ SÄILYY: isoisän merkintä ylävasemmassa matkakirjakortissa
+ * (fokusvirtaMatkakirja + Sophian kuva) on kirjaa eikä korttiannostelua
+ * — se jää kokeiluun sellaisenaan. Samoin säilyy kaikki tämän tiedoston
+ * koodi: lipun kääntäminen takaisin `true`ksi palauttaa vanhan virran
+ * kokonaan.
+ *
+ * KUVAVINJETIT JÄÄVÄT POIS (valinta perusteltuna, koska Raamattu
+ * salli kumman tahansa). Viuhka kartalla on virran KERTYMÄ: herokuva
+ * tulee pöllön vaiheesta, täkyjen kuvat avatuista täyistä, oppitunnin
+ * kuva oppitunnista. Ilman kortteja yksikään näistä vaiheista ei tule
+ * koskaan, joten viuhkaan ei kertyisi mitään — ja mikä tärkeämpää,
+ * kokeilun ainoa asia kartalla pitää olla VIHREÄ PISTE. Kaksi
+ * kilpailevaa napautuskohdetta saman laatan yllä olisi juuri sitä
+ * raskautta, jota kokeilu purkaa.
+ *
+ * KAKSI LIPPUA, YKSI KOKEILU. Kevyen kulun oma puoli — lehden nimetyt
+ * minitehtävät — on js/fokustehtavat.js:n FOKUS_LEHTITEHTAVAT. Liput
+ * ovat toistensa vastakohdat: vanha virta palautetaan kääntämällä tämä
+ * `true`ksi ja se `false`ksi.
+ */
+export const FOKUSVIRTA_KORTIT = false;
 
 /**
  * Virran vaiheet. Viimeinen on "virta pelattu läpi".
@@ -306,6 +351,14 @@ export function fokusvirtaLaattaNakyy(ui, city) {
   if (!fokusvirtaLukitseeLehden(ui, city)) return true;
   const data = fokusvirtaSisalto(ui, city);
   if (!data) return true;
+  /*
+   * KEVYT KULKU: aarrevaihe alkaa vihreästä pisteestä. Kortteja ei ole,
+   * joten virran vaihe jää ikuisesti ensimmäiseen — ja ilman tätä
+   * haaraa pelinappula ei palaisi lehden päälle koskaan. Piste syttyy
+   * lehden AARTEEN AVAUS -tehtävästä, ja juuri se on tämän kokeilun
+   * "aarrevaihe": paikallinen odottaa jo kartalla.
+   */
+  if (!FOKUSVIRTA_KORTIT) return fokusAarreAvattu(ui, city);
   const vaihe = fokusvirtaTila(ui.game, city, data).vaihe;
   return vaihe === 'kohtaaminen' || vaihe === 'valmis';
 }
@@ -326,6 +379,13 @@ export function fokusvirtaLaattaNakyy(ui, city) {
  * (fokusvirtaMerkintaLuettu).
  */
 export function fokusvirtaOhittaaLehden(ui, city) {
+  /*
+   * LEHTILUKKO POIS KEVYESSÄ KULUSSA. Kokeilun koko idea on, että
+   * kaupunkilehti AUKEAA SUORAAN myös fokusmoodissa: lehti on nyt se
+   * pinta, joka annostelee (nimetyt minitehtävät sivuilla 2 ja 3), eikä
+   * sitä vastaan ole enää mitään lukittavaa.
+   */
+  if (!FOKUSVIRTA_KORTIT) return false;
   if (!fokusvirtaLukitseeLehden(ui, city)) return false;
   const data = fokusvirtaSisalto(ui, city);
   const tila = fokusvirtaTila(ui.game, city, data);
@@ -382,6 +442,10 @@ export const MERKINNAN_TAUKO_MS = 1400;
  * siirron), lähteä kaupungista tai aloittaa uuden pelin.
  */
 export function fokusvirtaMerkintaLuettu(ui, city) {
+  // Kevyessä kulussa merkinnän loppu ei päästä pöllöä ääneen: kuplaa
+  // ei ole, ja vinkki lehden minitehtävästä tulee vasta lehden
+  // avautuessa (fokusvirtaLehtivinkki).
+  if (!FOKUSVIRTA_KORTIT) return;
   const data = fokusvirtaSisalto(ui, city);
   if (!data) return;
   if (fokusvirtaTila(ui.game, city, data).vaihe !== 'matkakirja') return;
@@ -406,6 +470,9 @@ export function fokusvirtaMerkintaLuettu(ui, city) {
  * ilmestyy takaisin joka piirrossa.
  */
 export function fokusvirtaSaapuminen(ui) {
+  // Kevyessä kulussa saapuminen ei ponnahduta mitään: isoisän merkintä
+  // kirjoittuu matkakirjakorttiin, ja loput odottaa lehdessä.
+  if (!FOKUSVIRTA_KORTIT) return;
   const city = ui?.game?.cityOf?.();
   if (!city || !fokusvirtaLukitseeLehden(ui, city)) return;
   const avain = `${ui.game.pack.id}:${city.id}`;
@@ -480,6 +547,9 @@ function suljeKasin(ui) {
  * tilasta, joten sama kutsu sekä avaa että piirtää uudelleen.
  */
 export function avaaFokusvirta(ui, city) {
+  // Kevyessä kulussa korttipintaa ei avata mistään: kohtaaminen tulee
+  // vihreästä pisteestä omalla kutsullaan (avaaFokusKohtaaminen).
+  if (!FOKUSVIRTA_KORTIT) return false;
   const data = fokusvirtaSisalto(ui, city);
   if (!data) return false;
   lataaTyyli();
@@ -1318,7 +1388,9 @@ function piirraKohtaaminen(ui, city, data, kohde) {
   piirraTeksti(kohde, kohtaaminen.teksti ?? '');
   piirraNapit(kohde, [nappi(kohtaaminen.nappi ?? 'Tapaa paikallinen', 'primary', () => {
     sfx.play('paper');
-    siirry(ui, city, data, 'kysymys');
+    // Kevyessä kulussa virran vaihetta ei ole eikä siihen kirjoiteta:
+    // kortti on tässä vain esittely, ja laattamekaniikka jatkaa siitä.
+    if (FOKUSVIRTA_KORTIT) siirry(ui, city, data, 'kysymys');
     suljeFokusvirta(ui);
     /*
      * Tästä eteenpäin peli on ennallaan: sama kutsu kuin saapumiskortin
@@ -1328,6 +1400,167 @@ function piirraKohtaaminen(ui, city, data, kohde) {
     const pulmaOdottaa = ui.game.pendingPuzzle?.();
     ui.doAction(() => ui.game.actionQuiz(pulmaOdottaa ? {} : { form: 'quiz' }));
   })]);
+}
+
+/* ============ KEVYEN KULUN OMAT PINNAT (kokeilu 24.8.2026) ==========
+ *
+ * Kaksi kutsua, joita raskaassa virrassa ei ole:
+ *
+ *   1. fokusvirtaKohtaamispiste — MISSÄ paikallinen odottaa kartalla ja
+ *      saako piste juuri nyt palaa. Piirron hoitaa js/fokuspiste.js.
+ *   2. avaaFokusKohtaaminen — pisteen napautus avaa kohtaamiskortin,
+ *      josta jatketaan tismalleen samaan laattakysymykseen kuin ennen.
+ *
+ * Lisäksi lehden avautuessa näytettävä pöllön vinkki (alempana).
+ */
+
+/**
+ * KOHTAAMISPAIKKA KARTALLA — ja saako piste palaa juuri nyt.
+ *
+ * Raamattu (KEVYT KULKU -KOKEILU): *"Aarteen avaus -tehtävän suoritus
+ * sytyttää kartalle PIENEN VIHREÄNÄ HEHKUVAN PISTEEN, jota klikkaamalla
+ * tapaa henkilön ja yrittää aarteen avausta … Kohtaamisen paikan voi
+ * sitoa muuhunkin kuin kaupunkipisteeseen (kehyskertomus)."*
+ *
+ * Paikka on siis oma datakenttänsä (`kohtaamispiste`, js/packs/
+ * fokusvirta-ateena.js) eikä kaupungin laattakoordinaatti: Ateenassa
+ * Nikos on Akropoliilla, ei torilla. Kenttä on laudoittain sama malli
+ * kuin kohdenostoilla — lauta, jolta koordinaatteja ei ole, ei saa
+ * pistettä (mieluummin piirtämättä kuin väärään paikkaan).
+ *
+ * NELJÄ EHTOA, KAIKKI PAKOLLISET:
+ *   1. kevyt kulku päällä (raskaassa virrassa kohtaaminen on kortissa),
+ *   2. kaupungilla on virtasisältö ja kohtaamispiste tälle laudalle,
+ *   3. laatta on yhä kääntämättä (piste sammuu kun aarre on avattu),
+ *   4. lehden AARTEEN AVAUS -tehtävä on ratkaistu oikein.
+ *
+ * @returns {{x:number,y:number,nimi:string}|null}
+ */
+export function fokusvirtaKohtaamispiste(ui, city) {
+  if (!fokusvirtaKohtaaminenPisteessa(ui, city)) return null;
+  if (!fokusAarreAvattu(ui, city)) return null;
+  const data = fokusvirtaSisalto(ui, city);
+  const paikka = data.kohtaamispiste?.laudat?.[ui.game?.pack?.id];
+  return { x: paikka.x, y: paikka.y, nimi: data.kohtaamispiste?.nimi ?? city.name };
+}
+
+/**
+ * OMISTAAKO VIHREÄ PISTE TÄMÄN KAUPUNGIN KOHTAAMISEN?
+ *
+ * Raamattu (KEVYT KULKU -KOKEILU): *"kaupunkilehden ALIN KOHTA (josta
+ * pääsi tapaamaan henkilön) POIS"*. Kun kohtaaminen tavataan kartalta,
+ * lehden alanappi olisi toinen ovi samaan huoneeseen — ja se ohittaisi
+ * koko kokeilun: AARTEEN AVAUS -tehtävää ei tarvitsisi tehdä lainkaan.
+ * Lehden alanappi luetaan siksi tästä (js/ui.js tehtavaNapinTila).
+ *
+ * UMPIKUJAN ESTO. Minitehtävään vastataan kerran, joten VÄÄRIN
+ * vastannut ei voi enää sytyttää pistettä. Silloin — ja vain silloin —
+ * lehden alanappi palaa, jottei yksi väärä vastaus jättäisi aarretta
+ * ikuisesti tavoittamattomiin. Sama oppi kuin raskaan virran
+ * täkyportilla (ks. fokusvirtaSiirto, "MIKSI 'visa' MERKITSEE TÄYN
+ * TEHDYKSI RIIPPUMATTA VASTAUKSESTA").
+ */
+export function fokusvirtaKohtaaminenPisteessa(ui, city) {
+  if (FOKUSVIRTA_KORTIT) return false;
+  const data = fokusvirtaSisalto(ui, city);
+  if (!data?.kohtaaminen) return false;
+  // Laatta käännetty → kohtaaminen on ohi, piste sammuu.
+  if (!fokusvirtaLukitseeLehden(ui, city)) return false;
+  const paikka = data.kohtaamispiste?.laudat?.[ui.game?.pack?.id];
+  if (!Number.isFinite(paikka?.x) || !Number.isFinite(paikka?.y)) return false;
+  return fokusAarreAvattu(ui, city) || !fokusAarreVastattu(ui, city);
+}
+
+/**
+ * Vihreän pisteen napautus: kohtaamiskortti kartan päälle.
+ *
+ * Sama kortti ja sama sisältö kuin raskaan virran kuudennessa vaiheessa
+ * (piirraKohtaaminen) — vain reitti sinne on toinen. Kortti piirretään
+ * suoraan vaiheella, koska kevyessä kulussa virran tilakonetta ei
+ * ajeta lainkaan.
+ */
+export function avaaFokusKohtaaminen(ui, city) {
+  if (typeof document === 'undefined') return false;
+  const data = fokusvirtaSisalto(ui, city);
+  if (!data?.kohtaaminen) return false;
+  lataaTyyli();
+  piirraKortti(ui, city, data, { vaihe: 'kohtaaminen', taky: null, tehdyt: [] });
+  return true;
+}
+
+/* ---------- pöllön vinkki lehden avautuessa ---------- */
+
+/**
+ * MAHDOLLISIMMAN LYHYT VINKKI (Raamattu, KEVYT KULKU -KOKEILU: *"kun
+ * kaupunkilehti AUKEAA, pöllö vinkkaa MAHDOLLISIMMAN LYHYESTI
+ * minitehtävästä (vinkissä ruksi 'älä näytä jatkossa')"*).
+ *
+ * Yksi lause, ei otsikkoa, ei jatkonappia: kupla katoaa napautuksesta
+ * kuten pöllön kuplat aina. Ruksi kirjoittaa laitteen oman muistiavaimen
+ * (js/ui-apurit.js lehtivinkkiPiilotettu) — sama try/catch-kaava kuin
+ * kehittäjätilalla ja fokusmoodilla, eikä riviäkään pelitallennukseen:
+ * tämä on lukijan asetus, ei pelitilanne.
+ */
+const LEHTIVINKKI_TEKSTI = 'Tee lehden minitehtävä — se avaa tien aarteelle.';
+
+/** Vinkki näkyy kerran per saapuminen; avain on sama kuin virralla. */
+function vinkkiAvain(ui, city) {
+  return `${ui.game.pack.id}:${city.id}`;
+}
+
+export function fokusvirtaLehtivinkki(ui, city) {
+  if (FOKUSVIRTA_KORTIT || typeof document === 'undefined') return false;
+  if (!city || !fokusvirtaSisalto(ui, city)) return false;
+  // Aarre jo löytynyt: lehti on vapaata tutkintaa eikä vinkattavaa ole.
+  if (!fokusvirtaLukitseeLehden(ui, city)) return false;
+  if (lehtivinkkiPiilotettu()) return false;
+  ui.fokusvinkkiNaytetty ??= new Set();
+  const avain = vinkkiAvain(ui, city);
+  if (ui.fokusvinkkiNaytetty.has(avain)) return false;
+  const nappi = polloNappi();
+  // Ilman kelluvaa pöllöä kuplalla ei ole kärkeä eikä paikkaa; vinkki
+  // jää silloin väliin — se on vihje, ei pelin portti.
+  if (!nappi) return false;
+  ui.fokusvinkkiNaytetty.add(avain);
+  const tyyliKesken = lataaTyyli();
+  suljeFokusvirta(ui);
+
+  const koti = nappi.parentNode ?? document.body;
+  const kupla = html('div', 'fokusvirta-kupla fokusvirta-vinkki');
+  kupla.setAttribute('role', 'note');
+  kupla.setAttribute('aria-label', 'Viisas Pöllö vinkkaa');
+  kupla.addEventListener('pointerdown', (tapahtuma) => {
+    if (tapahtuma.target?.closest?.('label, input')) return;
+    sfx.play('paper');
+    suljeFokusvirta(ui);
+  });
+
+  const sisalto = html('div', 'fokusvirta-sisalto');
+  sisalto.appendChild(html('p', 'fokusvirta-vinkkiteksti', LEHTIVINKKI_TEKSTI));
+  const rivi = html('label', 'fokusvirta-vinkkiruksi');
+  const ruksi = document.createElement('input');
+  ruksi.type = 'checkbox';
+  ruksi.addEventListener('change', () => {
+    piilotaLehtivinkki(ruksi.checked);
+    if (ruksi.checked) suljeFokusvirta(ui);
+  });
+  rivi.append(ruksi, html('span', '', 'Älä näytä jatkossa'));
+  sisalto.appendChild(rivi);
+  kupla.appendChild(sisalto);
+  koti.appendChild(kupla);
+  ui.fokusvirtaKortti = kupla;
+
+  const asemoi = () => {
+    if (kupla.isConnected) asetaKuplanPaikka(kupla, nappi);
+  };
+  asemoi();
+  globalThis.requestAnimationFrame?.(asemoi);
+  setTimeout(asemoi, 200);
+  tyyliKesken?.addEventListener('load', asemoi, { once: true });
+  ui.fokusvirtaAsemointi = asemoi;
+  globalThis.addEventListener?.('resize', asemoi);
+  globalThis.addEventListener?.('orientationchange', asemoi);
+  return true;
 }
 
 /* ==================== KUVAT KARTALLA ==================== */
@@ -1411,6 +1644,9 @@ const PINNI_ENINTAAN = 5;
  * asuu ylävasemmassa matkakirjakortissa, kuten omistaja linjasi.
  */
 export function fokusvirtaKuvatKartalle(ui, city) {
+  // Kevyt kulku: viuhkaa ei kerry, koska sen ruokkivia vaiheita ei ole
+  // (ks. lipun perustelu tiedoston alussa).
+  if (!FOKUSVIRTA_KORTIT) return [];
   const data = fokusvirtaSisalto(ui, city);
   if (!data || !fokusvirtaLukitseeLehden(ui, city)) return [];
   const tila = fokusvirtaTila(ui.game, city, data);
@@ -1437,6 +1673,9 @@ export function fokusvirtaKuvatKartalle(ui, city) {
  * toimii yhä.
  */
 export function fokusvirtaKohteetKartalle(ui, city) {
+  // Sama kuin kuvaviuhkalla: kohdenosto avataan valintakuplasta, jota
+  // kevyessä kulussa ei ole.
+  if (!FOKUSVIRTA_KORTIT) return [];
   const data = fokusvirtaSisalto(ui, city);
   if (!data || !fokusvirtaLukitseeLehden(ui, city)) return [];
   const lauta = ui.game?.pack?.id;
