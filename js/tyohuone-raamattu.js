@@ -250,6 +250,12 @@ export const RAAMATTU = {
         'PÖLLÖ-CHAT: ensisijaisesti kuratoitua sisältöä (lehdet, '
           + 'tarkistetut faktat); mallin oma selittely selvästi '
           + 'kehystettynä. Sonnet nyt, Haiku 5 kun julkaistaan.',
+        'ASETTELU (omistaja 24.8.2026): isoisän teksti näytetään '
+          + 'PERINTEISESSÄ matkakirjakortissa YLÄVASEMMALLA (sama '
+          + 'kortti kuin saapumisteksteillä), ja pöllön huomio '
+          + 'PUHEKUPLASSA OIKEALLA ALHAALLA niin, että kupla lähtee '
+          + 'kelluvasta pöllöstä. Fontti luettava, pöllön tekstit '
+          + 'lyhyitä.',
         'UI: pöllö pysyvästi leijuvana sivuelementtinä kaikissa '
           + 'tiloissa (pois alanapeista, kuten nyt lehtiä '
           + 'luettaessa). Fokusmoodissa alhaalla vain Liiku- ja '
