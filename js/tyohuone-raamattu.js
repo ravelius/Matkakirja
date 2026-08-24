@@ -221,9 +221,13 @@ export const RAAMATTU = {
           + 'kaupunki- ja maalehdet aukeavat, ja kartan '
           + 'erityiskohteista (vuoret, joet, muut kaupungit) aukeaa '
           + 'pienet pop-up-tietoruudut — tai pelaaja jatkaa matkaa.',
-        'NOPPA (omistaja 24.8.2026): nykyinen tapa säilyy (iso luku '
-          + '= matka kuluu nopeammin); LISÄYS: pienellä luvulla '
-          + 'joutuu tekemään yhden väliheiton.',
+        'NOPPA JA REITIT (omistaja 24.8.2026): nykyinen noppa ja '
+          + 'reittien viivat/pisteet säilyvät ennallaan — pienellä '
+          + 'luvulla aika kuluu jo nyt hitaammin, kun heittoja '
+          + 'tarvitaan useampi. EHTO: reittipisteiden on istuttava '
+          + 'fokusnäkymän grafiikkaan; tarkistetaan Kreikka-pilotin '
+          + 'kuvasta. Erillinen väliheitto-idea jää harkintaan '
+          + 'siihen asti.',
         'TÄKY: uusi sisältötyyppi — tarkistettu uteliaisuuskoukku '
           + 'kaupungin yksityiskohdasta (tyyliä "lukonreiästä näkyy '
           + 'täydellisesti rajautuva rakennus"). Pöllö tarjoaa '
