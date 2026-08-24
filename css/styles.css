@@ -4381,6 +4381,37 @@ body.radio-tila .actions {
   stroke-linecap: round;
 }
 
+/* ===========================================================================
+   FOKUSMOODI KARTALLA (omistajan linjaus 24.8.2026, js/ui.js
+   paivitaFokusKerros / paivitaFokusSumu)
+   ---------------------------------------------------------------------------
+   Kaksi sääntöä, ei enempää:
+
+   1. KÄYMÄTTÖMÄN MAAN DATA KATOAA. Laatta, rantarengas, porttikehä,
+      lentokoneen merkki ja kaupungin nimi saavat luokan .fokus-piilossa.
+      `display: none` eikä opacity: piilossa oleva laatta ei saa jäädä
+      napautettavaksi eikä maksaa piirtoa panoroinnissa.
+
+   2. KÄYMÄTÖN MAAILMA HIMMENEE. Harso on pergamentin omaa vaaleaa,
+      ei harmaata eikä mustaa: kartta on paperia, ja paperin päälle
+      laskeutuu sumu eikä varjo. Läpikuultavuus on mitoitettu niin, että
+      mantereiden ääriviivat erottuvat yhä — pelaajan pitää nähdä, että
+      maailmaa on olemassa, muttei mitä siellä on.
+
+   MAAPOHJAN AITO EPÄTERÄVYYS EI OLE TÄSSÄ. Kartan raskas osa on
+   bittikartaksi rasteroitua taidetta (js/mapart.js pilkoTaide), eikä
+   siitä voi sumentaa yhtä maata naapurin pysyessä tarkkana. Verhon
+   reuna pehmenee maskin omassa suodattimessa; oikea maakohtainen
+   topografian tarkentuminen tulee esirenderöityjen karttojen kanssa.
+   =========================================================================== */
+
+.fokus-piilossa { display: none; }
+
+.fokus-sumu-harso {
+  fill: rgba(238, 225, 196, 0.62);
+  stroke: none;
+}
+
 /*
  * UUTEEN MAAHAN SAAVUTAAN NÄYTTÄVÄSTI: ääriviiva piirtyy parissa
  * sekunnissa ja paisuu piirtyessään täyteen voimaansa (js/ui.js

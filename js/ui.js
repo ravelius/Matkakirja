@@ -27,7 +27,7 @@ import {
   alkuKehykset, arvoHuudahdus, ekaLause, esilataaKuvat, html, jaaKappaleiksi,
   jaljenKehykset, kierraKehykset, kuvitukseton, lahdemerkinta, liuskaIkoniSvg,
   onVanhaKuva, pehmeaPolku, piirraLeipateksti, polunPituus,
-  cachedImage, cachedSummary, kehittajaTilaPaalla,
+  cachedImage, cachedSummary, fokusSumennusPaalla, fokusmoodiPaalla, kehittajaTilaPaalla,
   shortIntro, suojaa, tallennaLinssi, tallennettuLinssi, viivaIkoni,
 } from './ui-apurit.js';
 // Remontin M5a: lehden sivukoneisto.
@@ -333,6 +333,24 @@ const TIETAJAKUPLA_MS = 4200;
  */
 const AARIVIIVAN_PIIRTO_MS = 2000;
 const AARIVIIVAN_ASETTUMIS_MS = 750;
+/*
+ * Fokusmoodin sumuverhon reunan pehmennys laudan yksikköinä
+ * (js/ui.js paivitaFokusSumu). Maailmankartta on 12000 yksikköä leveä ja
+ * yksi maa kymmeniä satoja, joten 26 on rajan yli levittyvä haalistuma —
+ * ei pelkkä pehmennetty viiva eikä koko naapurimaata nielevä pilvi.
+ */
+const FOKUS_REUNAN_PEHMENNYS = 26;
+/*
+ * Haalistuman portaat: kerroin pehmennykselle ja viivan peittävyys.
+ * Leveimmästä kapeimpaan, jolloin päällekkäin ladottuina ne tekevät
+ * neljä askelta harsosta kirkkaaseen maahan. Suodatinta ei käytetä (ks.
+ * paivitaFokusSumu) — nämä ovat tavallisia ääriviivoja maskin sisällä.
+ */
+const FOKUS_REUNAN_PORTAAT = [
+  { leveys: 3, peitto: 0.25 },
+  { leveys: 2, peitto: 0.45 },
+  { leveys: 1, peitto: 0.7 },
+];
 /*
  * NÄKYMÄN KOKOVAHDIN RAJAT (ks. UI vahdiNakymanKokoa).
  *
@@ -1604,6 +1622,19 @@ export class UI {
     this.travelExpanded = false; // matkavalinnan toinen vaihe auki
     this.travelSuodatin = null; // 'sea' | 'air' | null — kumpi lista näytetään
     this.kehittajaTila = kehittajaTilaPaalla();
+    /*
+     * FOKUSMOODI (omistajan linjaus 24.8.2026, Raamatun osio
+     * "Fokusmoodi"). Luetaan kerran tässä kuten kehittäjätilakin;
+     * kytkin päivittää kentät paivitaFokusmoodilla ilman sivulatausta.
+     *
+     * fokusSumennus on erillinen kehittäjäasetus eikä oma tilansa: se
+     * vaikuttaa vain fokusmoodin ollessa päällä (ks. fokusSumuPaalla).
+     */
+    this.fokusmoodi = fokusmoodiPaalla();
+    this.fokusSumennus = fokusSumennusPaalla();
+    // Fokuskerroksen viimeksi piirretty maajoukko: sumuverho rakennetaan
+    // uusiksi vain kun käytyjen maiden joukko oikeasti muuttuu.
+    this.fokusAvain = null;
     this.autoRollTimer = null;
     this.movingPlayerId = null;
     this.revealShownFor = null;
@@ -4145,6 +4176,27 @@ export class UI {
     }
     this.countryLayer = el('g', { class: 'country-borders', 'clip-path': 'url(#maa-rajaus)' }, root);
     /*
+     * FOKUSMOODIN SUMUVERHO (omistaja 24.8.2026, Raamatun osio
+     * "Fokusmoodi": *"nykyinen maa tarkkana topografioineen; käymättömät
+     * maat himmeinä ja epäterävinä"*).
+     *
+     * KERROS ON TYHJÄ, KUNNES FOKUSMOODI TARVITSEE SEN — sama malli kuin
+     * linssikerroksella yllä. Sisällön rakentaa paivitaFokusSumu, ja se
+     * tekee työn vain kun käytyjen maiden joukko muuttuu.
+     *
+     * TÄHÄN KOHTAAN, koska verho kuuluu maan korostuksen päälle mutta
+     * kaupunkien, laattojen, kohderenkaiden ja nappuloiden ALLE: se
+     * himmentää maailmaa, se ei saa peittää pelitilaa eikä syödä
+     * kohderenkaiden napautuksia. Siksi myös pointer-events: none.
+     *
+     * JUURIRYHMÄN SISÄÄN, jotta kiertävän kartan <use>-kopio saa verhon
+     * mukanaan — muuten sauman toisella puolella ei sumentuisi mikään.
+     * Verho on tarkalleen laudan kokoinen (0..width, 0..height) eikä
+     * vuoda reunan yli, joten kopio ja alkuperäinen eivät mene
+     * päällekkäin (ks. linssikerroksen rajausperustelu yllä).
+     */
+    this.fokusKerros = el('g', { class: 'fokus-sumu', 'pointer-events': 'none' }, root);
+    /*
      * MERENPOHJAN RAJAUS ON POISTETTU YHDESSÄ SYVYYSVYÖHYKKEIDEN KANSSA.
      *
      * Rajaus oli laudan kokoinen `evenodd`-polku, johon koottiin koko
@@ -4243,6 +4295,9 @@ export class UI {
     // voimaan, tai nimet jäisivät piirtymättä kun sama näkymä palaa.
     this.maastonimiTunniste = null;
     this.countryKey = null;
+    // Sama syy kuin countryKeyllä: uusi lauta, tyhjä sumukerros — muistettu
+    // maajoukko jättäisi verhon rakentamatta uudelle laudalle.
+    this.fokusAvain = null;
     drawWaves(taide, pack.map, [
       { x: decor.compass.x, y: decor.compass.y, r: decor.compass.r + 45 },
       ...decor.waveSkip,
@@ -4371,6 +4426,34 @@ export class UI {
     // Kaupunkilaudalla solmut ovat pienempiä: mittakaava on kortteleissa.
     const nodeScale = pack.style === 'city' ? 0.82 : 1;
     /*
+     * FOKUSMOODIN MAATUNNISTE JOKAISEEN KAUPUNGIN OSAAN (omistaja
+     * 24.8.2026). Fokusmoodissa käymättömän maan datakerros katoaa
+     * kartalta kokonaan, ja "datakerros" on tässä juuri se, mitä
+     * kaupungista piirretään: laatta, rantarengas, porttikehä,
+     * lentokoneen merkki ja nimi.
+     *
+     * TUNNISTE ON MÄÄRE EIKÄ LUOKKA, koska luokka on jo varattu
+     * ulkoasulle (city, city-start, city-label, kehittäjän
+     * valmiusvärit) eikä siihen mahdu maakoodia sotkematta olemassa
+     * olevia valitsimia. Määreellä fokuskerros löytää joka osan yhdellä
+     * querySelectorAllilla ja jättää tyylit rauhaan.
+     *
+     * PIIRTO EI PÄÄTÄ NÄKYVYYTTÄ. Merkintä tehdään aina, myös
+     * fokusmoodin ollessa pois päältä: kartta piirretään kerran laudan
+     * vaihtuessa, mutta käytyjen maiden joukko kasvaa joka
+     * kaupungissa. Näkyvyyden ratkaisee paivitaFokusKerros joka
+     * piirrossa — ilman tätä uusi maa tarkentuisi vasta seuraavassa
+     * laudanvaihdossa.
+     *
+     * Laudoilla ilman cityCountry-taulua määre jää pois ja koko
+     * fokuskerros on hiljaa tekemättä mitään.
+     */
+    const fokusMaat = pack.map.cityCountry ?? null;
+    const fokusMaare = (c) => {
+      const iso = fokusMaat?.[c.id];
+      return iso ? { 'data-fokus-maa': iso } : {};
+    };
+    /*
      * LEHTIVALMIUS VÄREINÄ — VAIN KEHITTÄJÄTILASSA (omistajan tilaus
      * 23.8.2026: kartan värit ovat nyt neliportainen valmiusasteikko).
      *
@@ -4447,12 +4530,15 @@ export class UI {
       const base = (c.start ? 20 : 11.6) * nodeScale;
       const rx = base + vary(`city:rx:${c.id}`, 0.7);
       const ry = base + vary(`city:ry:${c.id}`, 0.7);
+      const fokus = fokusMaare(c);
       if (c.start) {
         el('ellipse', {
           cx: c.x, cy: c.y, rx, ry, transform: wobble, class: `city-start${laatanLuokat(c)}`,
+          ...fokus,
         }, cities);
         el('ellipse', {
           cx: c.x, cy: c.y, rx: rx * 0.6, ry: ry * 0.6, transform: wobble, class: 'coast-soft',
+          ...fokus,
         }, cities);
       } else {
         el('ellipse', {
@@ -4463,6 +4549,7 @@ export class UI {
           transform: wobble,
           'stroke-width': (2.2 + hash01(`city:sw:${c.id}`) * 0.7).toFixed(2),
           class: `city${laatanLuokat(c)}`,
+          ...fokus,
         }, cities);
       }
       // Porttikaupungista lähtee pitkä lento toiselle laudalle: kaksoiskehä
@@ -4476,11 +4563,12 @@ export class UI {
           ry: gr + vary(`gate:ry:${c.id}`, 1.1),
           transform: wobble,
           class: 'city-gate',
+          ...fokus,
         }, cities);
       }
       if (c.airport) {
         el('text', {
-          x: c.x, y: c.y + 5, class: 'airport', 'text-anchor': 'middle',
+          x: c.x, y: c.y + 5, class: 'airport', 'text-anchor': 'middle', ...fokus,
         }, cities).textContent = '✈';
       }
       const anchor = c.la ?? 'middle';
@@ -4495,6 +4583,7 @@ export class UI {
         'text-anchor': anchor,
         transform: `rotate(${vary(`label:rot:${c.id}`, 1.1).toFixed(2)} ${lx.toFixed(1)} ${ly.toFixed(1)})`,
         opacity: (0.92 + hash01(`label:o:${c.id}`) * 0.08).toFixed(2),
+        ...fokus,
       }, cities);
       label.textContent = c.name;
     }
@@ -4575,6 +4664,197 @@ export class UI {
     const polut = renkaat.map((d) => el('path', { d, class: 'country-korostus' },
       this.countryLayer));
     if (uusiMaa) this.animoiMaanAariviiva(polut, key);
+  }
+
+  /* --- FOKUSMOODI (omistajan linjaus 24.8.2026) --------------------- */
+
+  /**
+   * Mitkä maat ovat kartalla tarkkoja?
+   *
+   * KÄYDYT KAUPUNGIT RATKAISEVAT, EI PASSI. Passin leimat (js/passport.js)
+   * ovat lautatasoisia ja säilyvät pelikertojen yli, joten niistä
+   * johdettu fokus olisi heti koko maailman laajuinen. Kartoituksen
+   * suositus on siksi pelitallenteen `world.visited`: fokus seuraa juuri
+   * tätä matkaa, kuten isoisän päiväkirjakin.
+   *
+   * NYKYINEN SIJAINTI ON AINA MUKANA, vaikka kaupunkia ei olisi vielä
+   * kirjattu käydyksi (visitCity ehtii kirjata vasta saapumisen
+   * jälkeen). Ilman tätä pelaaja seisoisi hetken sumun sisällä.
+   *
+   * Palauttaa null, jos laudalla ei ole maataulukkoa — silloin koko
+   * fokuskerros jää tekemättä eikä vanhoille laudoille tapahdu mitään.
+   */
+  fokusMaat() {
+    const map = this.game.pack.map;
+    const cityCountry = map?.cityCountry;
+    /*
+     * MOLEMMAT TAULUT TAI EI KUMPAAKAAN. Kaupunki–maa-taulu riittäisi
+     * datakerroksen piilottamiseen, mutta ilman maiden muotoja
+     * (countryShapes) sumuverhoa ei voi rakentaa — ja silloin kartalta
+     * vain katoaisi kaupunkeja ilman että mikään kertoisi miksi. Osa
+     * laudoista on yhä ilman muotoja (kirjattu inventaarioon), joten
+     * ehto ei ole teoreettinen. Ne jäävät fokusmoodissa ennalleen.
+     */
+    if (!cityCountry || !map.countryShapes) return null;
+    const maat = new Set();
+    for (const cityId of this.game.world?.visited ?? []) {
+      const iso = cityCountry[cityId];
+      if (iso) maat.add(iso);
+    }
+    const city = this.game.cityOf();
+    const nyt = city ? cityCountry[city.id] : null;
+    if (nyt) maat.add(nyt);
+    return maat;
+  }
+
+  /**
+   * Onko sumuverho päällä juuri nyt?
+   *
+   * KOLME EHTOA. Fokusmoodi päällä, kehittäjän sumennuskytkin päällä ja
+   * peli oikeasti käynnissä. Kolmas on tärkein: aloitusruudulla
+   * (phase 'pickstart') maailmaa vielä katsellaan kokonaisuutena eikä
+   * yhtään kaupunkia ole valittu, joten verho peittäisi koko kartan
+   * juuri silloin kun siitä pitää valita lähtöpaikka. Katselutila
+   * (?lauta=) on samaa lajia: se on laudan esittelyä eikä matkaa.
+   */
+  fokusSumuPaalla() {
+    return Boolean(this.fokusmoodi && this.fokusSumennus
+      && !this.katselu && this.game.phase !== 'pickstart');
+  }
+
+  /**
+   * Fokuskerroksen tahdistus: näkyvyys kaupungeille, verho maailmalle.
+   *
+   * Kutsutaan joka piirrossa (render). Työ on kevyttä: määrejoukon
+   * läpikäynti on yksi querySelectorAll, ja verho rakennetaan uusiksi
+   * vain kun maajoukko tai kytkinten tila oikeasti muuttui.
+   */
+  paivitaFokusKerros() {
+    if (!this.svg) return;
+    const maat = this.fokusMaat();
+    /*
+     * KÄYMÄTTÖMÄN MAAN DATAKERROS POIS KOKONAAN (Raamatun linjaus: "ilman
+     * dataa — ei reittejä, kaupunkeja, kohteita"). Piilotus tehdään
+     * luokalla eikä hidden-määreellä, jotta sama sääntö kattaa yhdellä
+     * rivillä CSS:ää kaikki kaupungin osat.
+     *
+     * KOHDERENKAAT (targetLayer) JÄÄVÄT NÄKYVIIN. Ne ovat pelin ainoa
+     * kartalta tehtävä valinta: jos ne katoaisivat, fokusmoodissa ei
+     * pääsisi ensimmäisestä maasta koskaan pois. Reittien ja renkaiden
+     * piilotus kuuluu pakettiin 2 yhdessä Liiku-napin uuden
+     * matkustusvalinnan kanssa.
+     */
+    const piilota = Boolean(this.fokusmoodi && maat && !this.katselu
+      && this.game.phase !== 'pickstart');
+    for (const osa of this.svg.querySelectorAll('[data-fokus-maa]')) {
+      const ulkona = piilota && !maat.has(osa.dataset.fokusMaa);
+      osa.classList.toggle('fokus-piilossa', ulkona);
+    }
+    this.paivitaFokusSumu(maat);
+  }
+
+  /**
+   * Sumuverho: pergamentinvärinen harso koko laudan päälle, käydyt maat
+   * verhosta pois leikattuina.
+   *
+   * MIKSI VERHO EIKÄ SUMENNUS? Kartan raskas osa (pergamentti,
+   * mantereet, maasto) rasteroidaan bittikartaksi suorituskyvyn takia
+   * (js/mapart.js pilkoTaide), eikä valmiista bittikartasta voi enää
+   * sumentaa yhtä maata ja jättää naapuria tarkaksi. Aito maapohjan
+   * epäterävyys tulee vasta paketissa 2 maakohtaisten esirenderöityjen
+   * topografiakuvien kanssa; tässä paketissa käymätön maailma
+   * HIMMENEE ja sen datakerros katoaa.
+   *
+   * REUNA PORTAILEE, EI SUODATA. Harso ei lopu terävään viivaan vaan
+   * haalistuu rajan yli — mutta feGaussianBlurilla sitä ei tehdä.
+   * Kartan kerroksissa ei saa olla suodattimia lainkaan (ks.
+   * tests/rules.test.mjs "kartan kerroksilla ei ole suodattimia"): iOS
+   * vapauttaa taustalle jääneen sovelluksen piirtopuskurit eikä saa
+   * isointa enää varattua, jolloin suodatettu kerros palaa TYHJÄNÄ.
+   * v159:ssä katosi meri ja v169:ssä tiet juuri tällä tavalla, eikä
+   * laudan levyinen maski ole yhtään pienempi puskuri.
+   *
+   * Pehmennys tehdään siksi PORTAINA: maan ääriviiva vedetään ensin
+   * leveinä, läpikuultavan mustina viivoina ja vasta lopuksi täytenä
+   * mustana. Maskissa se on neljä askelta harsosta kirkkaaseen, ja
+   * silmä lukee sen liukumana. Ei suodatinta, ei omaa puskuria, ei
+   * mitään mikä voisi kadota taustalle jäämisen jälkeen.
+   *
+   * TUNNISTE ON LAUTAKOHTAINEN (fokus-sumu-maski). Kartta rakennetaan
+   * uusiksi laudan vaihtuessa ja koko kerros syntyy silloin tyhjänä,
+   * joten kahta samannimistä maskia ei ole olemassa yhtä aikaa.
+   */
+  paivitaFokusSumu(maat) {
+    const kerros = this.fokusKerros;
+    if (!kerros) return;
+    const map = this.game.pack.map;
+    const muodot = map?.countryShapes;
+    const paalla = this.fokusSumuPaalla() && maat && muodot;
+    // Avain kertoo, onko mitään muuttunut: sama joukko samassa tilassa
+    // piirretään uudestaan turhaan joka vuorolla.
+    const avain = paalla ? [...maat].sort().join(',') : 'pois';
+    if (this.fokusAvain === avain) return;
+    this.fokusAvain = avain;
+    kerros.textContent = '';
+    if (!paalla) return;
+
+    const maski = el('mask', { id: 'fokus-sumu-maski', maskUnits: 'userSpaceOnUse' }, kerros);
+    // Valkoinen pohja = harso näkyy; mustat aukot = maa jää tarkaksi.
+    el('rect', {
+      x: 0, y: 0, width: map.width, height: map.height, fill: '#fff',
+    }, maski);
+    const polut = [];
+    for (const iso of maat) {
+      const renkaat = muodot[iso]?.renkaat;
+      if (!renkaat) continue;
+      polut.push(renkaat.map((r) => `M${r.map(([x, y]) => `${x},${y}`).join(' L')}Z`).join(' '));
+    }
+    /*
+     * Portaat leveimmästä kapeimpaan: jokainen viiva vetää maan rajan
+     * yli oman levyisensä kaistan, ja päällekkäin ne muodostavat
+     * haalistuman. Viivat ovat ääriviivalla, joten kaista jakautuu tasan
+     * rajan molemmin puolin — harso ei siis leikkaa maasta palaa pois
+     * vaan pehmenee sitä lähestyessään. Täysi musta tulee vasta
+     * lopuksi, jotta maa itse jää varmasti kokonaan kirkkaaksi.
+     */
+    for (const { leveys, peitto } of FOKUS_REUNAN_PORTAAT) {
+      for (const d of polut) {
+        el('path', {
+          d,
+          fill: 'none',
+          stroke: '#000',
+          'stroke-opacity': peitto,
+          'stroke-width': FOKUS_REUNAN_PEHMENNYS * leveys,
+          'stroke-linejoin': 'round',
+        }, maski);
+      }
+    }
+    for (const d of polut) el('path', { d, fill: '#000' }, maski);
+    el('rect', {
+      x: 0,
+      y: 0,
+      width: map.width,
+      height: map.height,
+      class: 'fokus-sumu-harso',
+      mask: 'url(#fokus-sumu-maski)',
+    }, kerros);
+  }
+
+  /**
+   * Fokusmoodin kytkin (js/main.js #fokus-btn ja #fokus-sumennus-btn).
+   *
+   * Sama kaava kuin paivitaKehittajaTilalla: asetus luetaan uudestaan
+   * levyltä ja näkymä tahdistetaan heti. Sivulatausta ei tarvita —
+   * fokuskerros elää valmiiksi piirretyn kartan päällä, eikä laudan
+   * uudelleenpiirto ole tarpeen.
+   */
+  paivitaFokusmoodi() {
+    this.fokusmoodi = fokusmoodiPaalla();
+    this.fokusSumennus = fokusSumennusPaalla();
+    // Verho on saatettava rakentaa uusiksi, vaikka maajoukko olisi sama:
+    // kytkin muuttaa tilaa eikä joukkoa.
+    this.fokusAvain = null;
+    this.paivitaFokusKerros();
   }
 
   /**
@@ -6559,6 +6839,13 @@ export class UI {
     this.drawTokens();
     this.drawTargets();
     this.drawPawns();
+    /*
+     * Fokuskerros vasta kaupunkien ja laattojen jälkeen: se lukee
+     * kartalta valmiit data-fokus-maa -osat ja piilottaa käymättömien
+     * maiden datan. Tässä kohdassa myös uusi kaupunki on jo kirjattu
+     * käydyksi, joten maa tarkentuu samassa piirrossa kuin saavutaan.
+     */
+    this.paivitaFokusKerros();
     this.renderTurnPill();
     // Ennen nappien latomista: syke luetaan napin luonnissa.
     this.paivitaTutkiSyke();
