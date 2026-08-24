@@ -292,7 +292,13 @@ export const RAAMATTU = {
           + 'palaa fokusnäkymään PALJON PIENEMPÄNÄ dynaamisella '
           + 'koolla, ja TUTKI-NAPPI poistetaan alariviltä — sen '
           + 'toiminto siirtyy kaupungin nappiin. Pöllön '
-          + 'valmiskysymykset otetaan toistaiseksi pois.',
+          + 'valmiskysymykset otetaan toistaiseksi pois. '
+          + 'TARKENNUS (omistaja 24.8.2026, myöhäisilta): maataulu '
+          + 'on KOKONAAN läpinäkyvällä pohjalla (ei taustalaattaa, '
+          + 'teksti suoraan kartan päälle) ja se sijoitetaan '
+          + 'LÄHELLE kartuutsia yhtenäiseksi kokonaisuudeksi; '
+          + 'kielten tarkenteet (esim. "turkki · Länsi-Traakia") '
+          + 'näytetään, jotta vähemmistökieli ei näytä virheeltä.',
         'JATKUVA KARTTA JA DYNAAMISET MITAT (omistaja 24.8.2026, '
           + 'illan pelitesti): fokuskartta on JATKUVA pinta — ei '
           + 'lehden kehystä, maasto jatkuu reunoille ja naapureihin '
