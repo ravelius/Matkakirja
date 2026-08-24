@@ -1,0 +1,371 @@
+/*
+ * SELAINSAVUKE: FOKUSMOODIN KEVYT KULKU (kokeilu, omistaja 24.8.2026).
+ *
+ *   node tools/savuke-fokusvirta.mjs
+ *
+ * Raamatun osio "Fokusmoodi", kohta KEVYT KULKU -KOKEILU. Kokeilun
+ * kulku on: kaupunkilehti aukeaa suoraan → lehden nimetyt minitehtävät
+ * → vihreä piste kartalle → kohtaaminen → aarre. Yksikkötestit näkevät
+ * tilakoneen ja datan, mutta EIVÄT sitä, avautuuko lehti, syttyykö piste
+ * ja aukeaako kohtaaminen oikeasta DOMista. Juuri ne mitataan tässä.
+ *
+ * VÄITTEET (kokeilutila):
+ *   1. Ateenaan saavuttaessa pöllön KUPLA EI AUKEA eikä korttia tule:
+ *      korttiannostelu on lipun takana (FOKUSVIRTA_KORTIT = false).
+ *   2. Isoisän merkintä on silti ylävasemmassa matkakirjakortissa —
+ *      se on kirjaa eikä korttiannostelua, ja se jäi kokeiluun.
+ *   3. Tutki (kaupungin laatta) avaa KAUPUNKILEHDEN SUORAAN, vaikka
+ *      laatta on kääntämättä: lehtilukko on auki.
+ *   4. Pöllö vinkkaa lehden avautuessa lyhyesti, ja vinkissä on ruksi
+ *      "Älä näytä jatkossa" — ruksi jää laitteen muistiin.
+ *   5. Sivulla 2 on nimilaatta AARTEEN AVAUS ja sivulla 3 JULISTE.
+ *   6. AARTEEN AVAUS -tehtävän OIKEA vastaus sytyttää kartalle vihreän
+ *      pisteen; ennen sitä pistettä ei ole.
+ *   7. Pisteen napautus avaa kohtaamisen (Vartija Nikos) ja sen nappi
+ *      vie samaan laattakysymykseen kuin ennenkin.
+ *   8. JULISTE-tehtävän oikea vastaus myöntää Ateenan julisteen ja
+ *      tarjoaa Lunasta juliste -napin.
+ *
+ * LIPPUTESTI (vanha virta palaa): palvelin kääntää lennossa molemmat
+ * liput päinvastoin (FOKUSVIRTA_KORTIT = true, FOKUS_LEHTITEHTAVAT =
+ * false), sivu ladataan uudestaan ja mitataan, että Tutki avaa taas
+ * PÖLLÖN KUPLAN eikä lehteä. Näin kokeilun voi perua yhdellä rivillä,
+ * ja savuke todistaa sen — muuten "helppo palauttaa" olisi lupaus,
+ * jota kukaan ei ole kokeillut.
+ *
+ * serviceWorkers: 'block' on pakollinen — muuten sw sieppaa pyynnöt ja
+ * ajo mittaa välimuistia eikä koodia. Ulkopuoliset osoitteet (kuvat)
+ * katkaistaan, jotta ajo ei riipu verkosta; peli piirtyy ilman niitä.
+ */
+
+import { createServer } from 'node:http';
+import { readFileSync, existsSync, mkdirSync } from 'node:fs';
+import { join, extname, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
+const ULOS = process.env.KAAPPAUSKANSIO ?? '/tmp/matkakirja-kaappaukset';
+mkdirSync(ULOS, { recursive: true });
+
+const MIME = {
+  '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css',
+  '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg',
+  '.svg': 'image/svg+xml', '.webp': 'image/webp', '.mp3': 'audio/mpeg',
+  '.webmanifest': 'application/manifest+json',
+};
+
+/*
+ * LIPUT KÄÄNNETÄÄN PALVELIMELLA, EI TIEDOSTOSSA. Savuke ei saa muokata
+ * repoa, ja liput ovat tavallisia moduulivakioita — ainoa tapa nähdä
+ * molemmat tilat samassa ajossa on tarjoilla lähdetiedosto kahdesti eri
+ * arvolla. Korvaus on täsmällinen: jos rivi ei enää täsmää, ajo kaatuu
+ * eikä vaikene (ks. korvaaLippu).
+ */
+let vanhaVirta = false;
+
+function korvaaLippu(lahde, etsi, tilalle) {
+  if (!lahde.includes(etsi)) {
+    throw new Error(`Lippuriviä ei löydy lähteestä: ${etsi}`);
+  }
+  return lahde.replace(etsi, tilalle);
+}
+
+const palvelin = createServer((req, res) => {
+  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html';
+  const polku = join(JUURI, suhteellinen);
+  if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
+  let sisalto = readFileSync(polku);
+  if (vanhaVirta && suhteellinen === 'js/fokusvirta.js') {
+    sisalto = korvaaLippu(String(sisalto),
+      'export const FOKUSVIRTA_KORTIT = false;',
+      'export const FOKUSVIRTA_KORTIT = true;');
+  }
+  if (vanhaVirta && suhteellinen === 'js/fokustehtavat.js') {
+    sisalto = korvaaLippu(String(sisalto),
+      'export const FOKUS_LEHTITEHTAVAT = true;',
+      'export const FOKUS_LEHTITEHTAVAT = false;');
+  }
+  res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
+  res.end(sisalto);
+});
+await new Promise((r) => palvelin.listen(8739, r));
+
+const paketti = await import(process.env.PLAYWRIGHT_JS
+  ?? '/opt/node22/lib/node_modules/playwright/index.js');
+const chromium = paketti.chromium ?? paketti.default?.chromium;
+const selain = await chromium.launch({
+  executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
+});
+const ctx = await selain.newContext({ viewport: { width: 430, height: 930 }, serviceWorkers: 'block' });
+const sivu = await ctx.newPage();
+await sivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
+
+const virheet = [];
+sivu.on('pageerror', (e) => virheet.push(String(e)));
+
+const tulokset = [];
+const vaadi = (nimi, ok, lisa = '') => {
+  tulokset.push({ nimi, ok, lisa });
+  console.log(`${ok ? 'OK  ' : 'FAIL'}  ${nimi}${lisa ? ` — ${lisa}` : ''}`);
+};
+
+/** Peli käyntiin ja nappula Ateenaan, laatta kääntämättä. */
+async function ateenaan() {
+  await sivu.goto('http://127.0.0.1:8739/index.html', { waitUntil: 'load' });
+  await sivu.waitForTimeout(2500);
+  await sivu.evaluate(() => {
+    [...document.querySelectorAll('button')]
+      .find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
+  });
+  await sivu.waitForTimeout(2500);
+  const tila = await sivu.evaluate(() => {
+    const { game, ui } = window.matkakirja;
+    if (game.phase === 'pickstart') {
+      game.actionPickStart(game.pack.cities.find((c) => c.links?.length).id, 0);
+    }
+    game.player.pos = { type: 'city', city: 'ateena' };
+    game.world.visited.add('ateena');
+    game.phase = 'action';
+    // Laatta kääntämättä = kohtaaminen on yhä edessä.
+    if (!game.tokens.has('ateena')) game.world.tokens.set('ateena', 'coin');
+    const kaupunki = game.cityOf();
+    // Saapumisen merkki, jolla fokusvirta avaisi korttinsa vanhassa
+    // virrassa: kokeilussa sen EI pidä avata mitään.
+    ui.lehtitila.tutkiSyke = ui.kaupunkiAvain(kaupunki);
+    ui.render();
+    return { kaupunki: kaupunki?.id, laatta: game.tokens.has('ateena'), lauta: game.pack.id };
+  });
+  await sivu.waitForTimeout(1500);
+  return tila;
+}
+
+/* ==================== 1. KOKEILUTILA ==================== */
+
+const alku = await ateenaan();
+vaadi('nappula on Ateenassa ja laatta kääntämättä',
+  alku.kaupunki === 'ateena' && alku.laatta === true, JSON.stringify(alku));
+
+const saapuminen = await sivu.evaluate(() => ({
+  kupla: document.querySelectorAll('.fokusvirta-kupla').length,
+  kortti: document.querySelectorAll('.fokusvirta-kortti').length,
+  merkinta: document.querySelector('.fact-card')?.hidden === false
+    ? (document.getElementById('fact-text')?.textContent ?? '').slice(0, 40)
+    : '(kortti piilossa)',
+}));
+vaadi('saapuminen ei avaa kuplaa eikä korttia',
+  saapuminen.kupla === 0 && saapuminen.kortti === 0, JSON.stringify(saapuminen));
+vaadi('isoisän merkintä on matkakirjakortissa',
+  /torilla/i.test(saapuminen.merkinta), saapuminen.merkinta);
+
+await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-saapuminen.png') });
+
+// Tutki avaa lehden suoraan (lehtilukko auki).
+const lehti = await sivu.evaluate(async () => {
+  const { ui, game } = window.matkakirja;
+  ui.avaaTutkinta(game.cityOf());
+  await new Promise((r) => setTimeout(r, 700));
+  const dialogi = document.getElementById('arrival-dialog');
+  return {
+    auki: Boolean(dialogi?.open),
+    lehti: Boolean(dialogi?.classList.contains('lehti')),
+    kupla: document.querySelectorAll('.fokusvirta-kupla').length,
+    otsikko: document.getElementById('arrival-city')?.textContent ?? '',
+  };
+});
+vaadi('kaupunkilehti aukeaa suoraan fokusmoodissa',
+  lehti.auki && lehti.lehti && /ateena/i.test(lehti.otsikko), JSON.stringify(lehti));
+
+// Lehden ALIN KOHTA — "Tapaa Nikos" — on poissa: kohtaaminen tavataan
+// kartalta (Raamattu, KEVYT KULKU -KOKEILU).
+const alanappi = await sivu.evaluate(() => {
+  const nappi = document.getElementById('arrival-yes');
+  return { piilossa: Boolean(nappi?.hidden), teksti: nappi?.textContent ?? '' };
+});
+vaadi('lehden alin "tapaa henkilö" -kohta on poissa',
+  alanappi.piilossa, JSON.stringify(alanappi));
+
+// Pöllön vinkki lehden päällä + ruksi.
+await sivu.waitForTimeout(600);
+const vinkki = await sivu.evaluate(() => {
+  const kupla = document.querySelector('.fokusvirta-vinkki');
+  return {
+    teksti: kupla?.querySelector('.fokusvirta-vinkkiteksti')?.textContent ?? '',
+    ruksi: Boolean(kupla?.querySelector('.fokusvirta-vinkkiruksi input')),
+  };
+});
+vaadi('pöllö vinkkaa lyhyesti lehden avautuessa',
+  vinkki.teksti.length > 0 && vinkki.teksti.length <= 70 && /minitehtäv/i.test(vinkki.teksti),
+  `${vinkki.teksti.length} mrk: ${vinkki.teksti}`);
+vaadi('vinkissä on "Älä näytä jatkossa" -ruksi', vinkki.ruksi);
+
+await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-lehtivinkki.png') });
+
+const ruksittu = await sivu.evaluate(() => {
+  document.querySelector('.fokusvirta-vinkkiruksi input')?.click();
+  return {
+    muistissa: localStorage.getItem('matkakirja-lehtivinkki-pois'),
+    kuplia: document.querySelectorAll('.fokusvirta-vinkki').length,
+  };
+});
+vaadi('ruksi kirjoittaa laitteen muistiin ja sulkee vinkin',
+  ruksittu.muistissa === '1' && ruksittu.kuplia === 0, JSON.stringify(ruksittu));
+
+/* ---------- nimetyt minitehtävät sivuilla 2 ja 3 ---------- */
+
+/** Sivun nimilaatta ja tehtävän kysymys. */
+async function sivunTehtava(numero) {
+  return sivu.evaluate(async (n) => {
+    window.matkakirja.ui.naytaTutkiSivu(n, { heti: true });
+    await new Promise((r) => setTimeout(r, 500));
+    const laatikko = document.querySelector('#arrival-dialog .minitehtava');
+    return {
+      sivu: window.matkakirja.ui.lehtitila.tutkiSivu,
+      otsake: laatikko?.querySelector('.minitehtava-otsikko')?.textContent ?? '',
+      kysymys: laatikko?.querySelector('.minitehtava-kysymys')?.textContent ?? '',
+      vaihtoehtoja: laatikko?.querySelectorAll('.kulttuuri-vaihtoehdot button').length ?? 0,
+      laatikoita: document.querySelectorAll('#arrival-dialog .minitehtava').length,
+    };
+  }, numero);
+}
+
+const sivu2 = await sivunTehtava(2);
+vaadi('sivulla 2 on AARTEEN AVAUS -nimilaatta',
+  sivu2.otsake === 'AARTEEN AVAUS' && sivu2.vaihtoehtoja >= 2, JSON.stringify(sivu2));
+vaadi('sivulla 2 on täsmälleen yksi minitehtävä', sivu2.laatikoita === 1, String(sivu2.laatikoita));
+
+const sivu3 = await sivunTehtava(3);
+vaadi('sivulla 3 on JULISTE-nimilaatta',
+  sivu3.otsake === 'JULISTE' && sivu3.vaihtoehtoja >= 2, JSON.stringify(sivu3));
+vaadi('sivulla 3 on täsmälleen yksi minitehtävä', sivu3.laatikoita === 1, String(sivu3.laatikoita));
+
+await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-juliste-tehtava.png') });
+
+// JULISTE: oikea vastaus myöntää julisteen ja tarjoaa lunastusnapin.
+const juliste = await sivu.evaluate(async () => {
+  const napit = [...document.querySelectorAll('#arrival-dialog .kulttuuri-vaihtoehdot button')];
+  const oikea = napit.find((b) => /ei voisi koskaan lentää pois/i.test(b.textContent));
+  if (!oikea) return { virhe: napit.map((b) => b.textContent) };
+  oikea.click();
+  await new Promise((r) => setTimeout(r, 400));
+  return {
+    tulos: document.querySelector('#arrival-dialog .kulttuuri-tulos')?.textContent ?? '',
+    lunasta: Boolean([...document.querySelectorAll('#arrival-dialog button')]
+      .find((b) => /lunasta juliste/i.test(b.textContent))),
+    kokoelmassa: window.matkakirja.game.julisteet?.has('ateena') ?? false,
+  };
+});
+vaadi('JULISTE-tehtävästä saa julisteen ja Lunasta-napin',
+  juliste.kokoelmassa === true && juliste.lunasta === true && /oikein/i.test(juliste.tulos),
+  JSON.stringify(juliste));
+
+// Ennen aarteen avausta pistettä EI ole.
+const ennenPistetta = await sivu.evaluate(() => document.querySelectorAll('.fokuspiste').length);
+vaadi('vihreää pistettä ei ole ennen aarteen avausta', ennenPistetta === 0, String(ennenPistetta));
+
+// AARTEEN AVAUS: oikea vastaus sytyttää pisteen.
+const aarre = await sivu.evaluate(async () => {
+  const { ui } = window.matkakirja;
+  ui.naytaTutkiSivu(2, { heti: true });
+  await new Promise((r) => setTimeout(r, 500));
+  const napit = [...document.querySelectorAll('#arrival-dialog .kulttuuri-vaihtoehdot button')];
+  const oikea = napit.find((b) => /kuka tahansa vapaa kansalainen/i.test(b.textContent));
+  if (!oikea) return { virhe: napit.map((b) => b.textContent) };
+  oikea.click();
+  await new Promise((r) => setTimeout(r, 500));
+  return {
+    tulos: document.querySelector('#arrival-dialog .kulttuuri-tulos')?.textContent ?? '',
+    pisteita: document.querySelectorAll('.fokuspiste').length,
+  };
+});
+vaadi('AARTEEN AVAUS sytyttää vihreän pisteen kartalle',
+  /oikein/i.test(aarre.tulos) && aarre.pisteita >= 1, JSON.stringify(aarre));
+
+// Lehti kiinni, piste jää palamaan kartalle.
+const kartalla = await sivu.evaluate(async () => {
+  document.getElementById('arrival-dialog')?.close();
+  window.matkakirja.ui.render();
+  await new Promise((r) => setTimeout(r, 700));
+  const piste = document.querySelector('.fokuspiste');
+  const osuma = piste?.querySelector('.fokuspiste-osuma');
+  return {
+    pisteita: document.querySelectorAll('.fokuspiste').length,
+    osumasade: Number(osuma?.getAttribute('r')),
+    nimi: piste?.getAttribute('aria-label') ?? '',
+  };
+});
+vaadi('piste on kartalla sormenkokoisella osuma-alueella',
+  kartalla.pisteita >= 1 && kartalla.osumasade >= 22 && /akropolis/i.test(kartalla.nimi),
+  JSON.stringify(kartalla));
+
+await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-vihrea-piste.png') });
+
+// Pisteen napautus avaa kohtaamisen.
+const kohtaaminen = await sivu.evaluate(async () => {
+  window.matkakirja.ui.busy = false;
+  document.querySelector('.fokuspiste')
+    ?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 500));
+  const kortti = document.querySelector('.fokusvirta-kortti');
+  return {
+    kortti: Boolean(kortti),
+    otsikko: kortti?.querySelector('.fokusvirta-otsikko')?.textContent ?? '',
+    nappi: [...(kortti?.querySelectorAll('button') ?? [])]
+      .map((b) => b.textContent.trim()).find((t) => /tapaa/i.test(t)) ?? '',
+  };
+});
+vaadi('pisteen napautus avaa Vartija Nikoksen kohtaamisen',
+  kohtaaminen.kortti && /nikos/i.test(kohtaaminen.otsikko) && /tapaa nikos/i.test(kohtaaminen.nappi),
+  JSON.stringify(kohtaaminen));
+
+await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-kohtaaminen.png') });
+
+// Kohtaamisen nappi vie laattakysymykseen (sama actionQuiz kuin ennen).
+const kysymys = await sivu.evaluate(async () => {
+  const { game } = window.matkakirja;
+  game.phase = 'action';
+  [...document.querySelectorAll('.fokusvirta-kortti button')]
+    .find((b) => /tapaa nikos/i.test(b.textContent))?.click();
+  await new Promise((r) => setTimeout(r, 900));
+  return {
+    kortti: document.querySelectorAll('.fokusvirta-kortti').length,
+    vaihe: game.phase,
+    kysymys: Boolean(game.quiz),
+  };
+});
+vaadi('Tapaa Nikos avaa laattakysymyksen ja sulkee kortin',
+  kysymys.kortti === 0 && (kysymys.kysymys || kysymys.vaihe === 'quiz'), JSON.stringify(kysymys));
+
+vaadi('ei sivuvirheitä kokeilutilassa', virheet.length === 0, virheet.join(' | '));
+
+/* ==================== 2. LIPPUTESTI: VANHA VIRTA ==================== */
+
+vanhaVirta = true;
+virheet.length = 0;
+await sivu.evaluate(() => localStorage.clear());
+const vanha = await ateenaan();
+vaadi('vanha virta: nappula Ateenassa', vanha.kaupunki === 'ateena', JSON.stringify(vanha));
+
+const vanhaTutki = await sivu.evaluate(async () => {
+  const { ui, game } = window.matkakirja;
+  ui.avaaTutkinta(game.cityOf());
+  await new Promise((r) => setTimeout(r, 900));
+  const dialogi = document.getElementById('arrival-dialog');
+  const pinta = document.querySelector('.fokusvirta-kupla, .fokusvirta-kortti');
+  return {
+    lehtiAuki: Boolean(dialogi?.open),
+    virranPinta: Boolean(pinta),
+    teksti: (pinta?.textContent ?? '').slice(0, 60),
+  };
+});
+vaadi('lippu palauttaa korttiannostelun: Tutki avaa virran, ei lehteä',
+  vanhaTutki.virranPinta && !vanhaTutki.lehtiAuki, JSON.stringify(vanhaTutki));
+
+await sivu.screenshot({ path: join(ULOS, 'savuke-vanha-virta.png') });
+vaadi('ei sivuvirheitä vanhassa virrassa', virheet.length === 0, virheet.join(' | '));
+
+await selain.close();
+palvelin.close();
+
+const kaatui = tulokset.filter((t) => !t.ok);
+console.log(`\n${tulokset.length - kaatui.length}/${tulokset.length} läpi. Kaappaukset: ${ULOS}`);
+process.exit(kaatui.length ? 1 : 0);
