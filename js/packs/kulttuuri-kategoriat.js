@@ -64041,4 +64041,570 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * MONTEVIDEO (24.8.2026). Lauta southamerica, kaupunki-id montevideo,
+   * wiki-nimi 'Montevideo' (js/packs/southamerica.js rivi 153).
+   * Lähdeaineisto: docs/mantereet-tyoaineisto/faktapohja-montevideo.md ja
+   * sen riippumaton tarkistus tarkistus-montevideo.md, joka voittaa
+   * ristiriidassa. Jokainen tekstiin mennyt väite on faktapohjan
+   * en-Wikipedia-lainauksista (Montevideo, Ciudad Vieja Montevideo,
+   * Montevideo Cabildo, Uruguayan Civil War, Solís Theatre, Palacio
+   * Salvo, Estadio Centenario, Rambla of Montevideo, Río de la Plata,
+   * Mate (drink), Candombe, Afro-Uruguayans; haettu 23.8.2026).
+   *
+   * TARKISTUKSEN KOLME PAKOLLISTA KORJAUSTA ON TEHTY:
+   * 1) K1 sanoo nyt "yli tuhat pääosin guaraníkansaan kuuluvaa
+   *    asukasta" — Wikipedia kirjoittaa "more than 1000 indigenous
+   *    people, mostly Guaraní", eikä kategorinen muoto käy.
+   * 2) Kolme visavuotoa kirjoitettu kokonaan uusiksi. Mate-jakso ei
+   *    enää vertaa kansoja toisiinsa vaan antaa kulutusluvun (19 l/hlö),
+   *    Estadio Centenario -jakso ei sano stadionin olevan "yhä
+   *    käytössä" vaan luettelee mitä siellä pelataan, ja K4 ei toista
+   *    visan superlatiivia rantakaduista vaan avaa kaksi eri
+   *    pituuslukua. Visan fact-kentät (southamerica-questions.js,
+   *    avain montevideo) luettiin rivi riviltä ennen kirjoittamista.
+   * 3) Solís-teatterin Commons-kategoria on
+   *    Category:Teatro Solís (Montevideo) — sulkeissa, ei pilkulla;
+   *    kuvahaku tehtiin sen kautta.
+   *
+   * RISTIRIIDAT, JOTKA ON KIRJOITETTU AUKI LUKIJALLE (resepti:
+   * Wikipedian sisäinen ristiriita kerrotaan, ei piiloteta):
+   * - Piirityksen kesto: "Montevideo"-artikkeli sanoo kahdeksan vuotta
+   *   1843–1851, "Uruguayan Civil War" -artikkelin päivämäärien mukaan
+   *   saarto alkoi 6.12.1842 ja purkautui helmikuussa 1852 Caserosin
+   *   taistelun jälkeen. H3 kertoo molemmat laskutavat.
+   * - Ramblan pituus: 27 km ("Montevideo") vs. 22,2 km yhtäjaksoista
+   *   ("Rambla of Montevideo"). K4 kertoo molemmat.
+   * - Estadio Centenarion rakennusaika: infoboxi sanoo kahdeksan
+   *   kuukautta, saman artikkelin leipäteksti yhdeksän (lähdemerkinnällä
+   *   citation needed). Oppaan jakso 4 kertoo molemmat.
+   * - Ilmasto: leipäteksti 16,7 °C / n. 950 mm, weatherbox
+   *   (Prado, 1991–2020) 17,3 °C / 1 142,7 mm. Oppaan jakso 5 käyttää
+   *   tuoreempaa taulukkoa ja sanoo eron ääneen. Artikkelissa on myös
+   *   toinen sääruutu (Carrasco), jonka luvut poikkeavat hieman; sitä
+   *   ei käytetty, koska Prado on faktapohjan mittauspiste.
+   * - Perustamispäivää ei valittu yhdeksi: K1 luettelee kaikki kolme
+   *   (1724 karkotus, 24.12.1726 Zabalan päiväkirja, 1.1.1730
+   *   itsenäisyys Buenos Airesista), koska perustamisasiakirjaa ei ole.
+   *
+   * SISÄLTÖLINJAUS. Pilari 3: candombe ja afrouruguaylainen kulttuuri
+   * kuvataan ELÄVÄNÄ nykykulttuurina — Unesco 2009, mestarirumpalisuvut,
+   * Barrio Sur ja Palermo toimivina kortteleina, nuoremmat sukupolvet
+   * mukana — ei 1800-luvun kuriositeettina. Vuosien 1973–1985
+   * sotilasdiktatuuria ja siihen liittyvää poliittista väkivaltaa EI
+   * käsitellä lainkaan (ei nykypolitiikkaa). Orjuus, piiritykset ja
+   * brittimiehitys kerrotaan tapahtumina neutraalisti, ilman
+   * yksityiskohtien korostusta (pilari 4).
+   *
+   * KULTTUURIVISA kysyy viisi asiaa: Uruguayn pääkaupunki (K2 sanoo
+   * "Uruguayn pääkaupungin satama"), Río de la Plata (oppaan jakso 2),
+   * 1930 MM-kisat ja Estadio Centenario (jakso 4), mate (jakso 3) ja
+   * rambla (K4). Kaikkien vastaus siis löytyy lehdestä, mutta jokainen
+   * kerrotaan eri sanoin ja tarkemmilla luvuilla kuin visan oma
+   * fact-kenttä. Kumpikaan minitehtävä ei koske visan aiheita:
+   * historian tehtävä kysyy italialaisen legioonan johtajaa (vastaus
+   * H3:ssa) ja musiikin tehtävä candomben kolmea rumpua (vastaus
+   * M1:ssä) — molempien vastaus on samalla sivulla.
+   *
+   * KUVAT: 22 kuvaa, haettu Commonsin rajapinnasta kategorioilla
+   * (Aerial views of Montevideo, Skylines of Montevideo, Views of
+   * Montevideo, Ciudad Vieja Montevideo, Rambla of Montevideo, Port of
+   * Montevideo, Cabildo de Montevideo, Teatro Solís (Montevideo),
+   * Palacio Salvo, Estadio Centenario, Mercado del Puerto, Candombe,
+   * Desfile de llamadas, History of Montevideo, Montevideo in art,
+   * Museo del Carnaval). Lisenssi ja tekijä on luettu rajapinnan
+   * extmetadatasta ja kirjoitettu tähän täsmälleen siinä muodossa,
+   * ja JOKAINEN kuva on katsottu silmin 900 pikselin esikatseluna.
+   * Kansikuvat ja avauskuvat ovat kuusi laajaa yleiskuvaa kaupungin eri
+   * puolilta: vanhakaupunki ilmasta, keskusta rambalta, sisäkaupunki
+   * ilmasta, koko kaupunki Cerron mäeltä, koko niemi ja lahti korkealta
+   * sekä rantaviiva idästä.
+   *
+   * KUVAHYLKÄYKSET (syyt): "Chute & Brooks - Teatro Solis.jpg" on
+   * hieno 1800-luvun albumiinivedos, mutta sen alalaitaan on painettu
+   * studion oma kuvateksti TEATRO SOLIS — kuvan päälle lisätty
+   * merkintä, jota resepti ei salli; "Journal historique ... (Pl. VI)"
+   * on vuoden 1770 kaiverrus Montevideon kartasta ja näkymästä, mutta
+   * samassa taulussa on hahmokuva nimilapulla "Sauvage de Montevideo",
+   * eikä sitä voi selittää yhdellä kuvatekstivirkkeellä (pilari 3);
+   * "Candombe voorbereiding.JPG" ja "Desfile de Llamadas - afg5402/
+   * afg6198.jpg" hylättiin tunnistettavien kasvojen vuoksi, ja
+   * "Desfile de Llamadas - afg5936.jpg" lisäksi siksi, että
+   * esiintyjien kasvomaalausta ei voi selittää yhdessä virkkeessä ja
+   * taustalla on iso mainoskyltti; "Cuerda de tambores. Comparsa ECMA"
+   * ja kymmenkunta muuta llamadas-kuvaa kantavat rajapinnassa
+   * Restrictions-kentän "personality" (henkilökuvaoikeus);
+   * "Cabildo y Reales Cárceles.JPG" ja "Mercado del Puerto (4).JPG"
+   * hylättiin etualan tunnistettavien ohikulkijoiden takia;
+   * "Peatonal Sarandí - panoramio.jpg" on katutaiteilijakuva, jonka
+   * yleisön kasvot näkyvät; "Montevideo from Punta Carretas.JPG",
+   * "Bahía Montevideo.jpg" ja "Desde la rambla.JPG" ovat kaksi
+   * kolmasosaa tyhjää vettä ja taivasta; "Montevideo Skyline Panorama
+   * 110828--jikatu.jpg" ja "Montevideo pkindsvater 08.jpg" ovat
+   * yökuvia, joissa kaupunki jää mustaksi juovaksi; "2016 Cityskape de
+   * Montevido.jpg" hylättiin hallitsevien hotellimainosten takia;
+   * "Cultura del mate en Uruguay.jpg" on museon näyttelyjuliste ja
+   * roskaista pöytää, ei mate-kuva.
+   *
+   * AIHETOISTO: Palacio Salvon torni näkyy sekä M3:n omassa kuvassa
+   * että kansikuvassa "2016 centro de Montevideo desde la Rambla del
+   * presidente Wilson" (eri tiedosto, eri kuvakulma, eri juttu), ja
+   * rambla esiintyy sekä K4:n ilmakuvassa että avauskuvassa
+   * "Montevideo 2017 008" — edellinen etelärannan kaarena illalla,
+   * jälkimmäinen itärannan suorana päivällä.
+   *
+   * KUVIEN KOHDEPAIKAT: candomben rumpukuva on Duraznon llamadas-
+   * kulkueesta ja lippukuva Montevideon Isla de Flores -kadulta;
+   * molemmat sanotaan kuvatekstissä, koska rumpukuvaa vastaavaa
+   * montevideolaista kuvaa ei löytynyt kuvasääntöjen puitteissa.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä (Open-Meteon normaaleja ei haettu, eikä lukuja keksitty).
+   * Oppaan jakso 5 nojaa siis en-Wikipedian Climate-osioon ja SANOO SEN
+   * ÄÄNEEN (Samarkandin, Vancouverin, Liman ja Quiton malli).
+   * Mittauspiste olisi keskusta 34,90556 S / 56,18417 W.
+   *
+   * KUVATEKSTIT: selite kertoo kohteesta yhdellä virkkeellä.
+   */
+  montevideo: [
+    {
+      id: 'kaupunki',
+      nimi: 'Montevideo',
+      johdanto: 'Espanjalaiset karkottivat portugalilaiset Montevideon '
+        + 'niemeltä 1724, ja muurien sisään nousi satamakaupunki. Sellaisena, '
+        + 'Río de la Platan pohjoisrannan tärkeimpänä kauppapaikkana, isoisä '
+        + 'sen näki 1873.',
+      kansikuvat: [
+        {
+          tiedosto: 'Ciudad Vieja de Montevideo aéreo.jpg',
+          selite: 'Vanhankaupungin matalat korttelit jatkuvat ilmasta '
+            + 'katsottuna keskustan tornitaloihin, ja oikealla kulkee rambla '
+            + 'Río de la Platan rantaa.',
+          lahde: 'Fedaro, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '2016 centro de Montevideo desde la Rambla del presidente Wilson.jpg',
+          selite: 'Keskustan siluetti näkyy rannan yli, ja rakennusten '
+            + 'takaa erottuu Palacio Salvon kupolitorni.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Montevideo desde arriba.jpg',
+          selite: 'Keskustan ulkopuolinen Montevideo on ilmasta katsottuna '
+            + 'matalaa, puiden pilkkomaa korttelistoa, ja Río de la Plata jää '
+            + 'taivaanrannaksi.',
+          lahde: 'Marcelo Campi, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Mirador desde el Cerro.JPG',
+          selite: 'Cerron näköalapaikalta katsottuna koko kaupunki levittäytyy '
+            + 'lahden toiselle puolelle, ja edessä ovat sataman laiturit ja '
+            + 'laivat.',
+          lahde: 'Fermasa206, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Montevideo aerial.jpg',
+          selite: 'Korkealta kuvattuna näkyy koko asetelma: niemi, sen '
+            + 'suojaama lahti, satama aallonmurtajineen ja ruutukaava, joka '
+            + 'jatkuu horisonttiin.',
+          lahde: 'Rabble, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Montevideo 2017 008.jpg',
+          selite: 'Itärannalla rambla kulkee suorana kerrostalorivistön ja '
+            + 'veden välissä, ja kaukana taustalla näkyvät sataman nostokurjet.',
+          lahde: 'Photograph by Mike Peel (www.mikepeel.net)., Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Niemi jota kaksi kruunua tavoitteli',
+          tiedosto: 'PlanoMVD1862.jpg',
+          teksti: 'Portugalilainen kenraalimajuri Manuel de Freitas da Fonseca '
+            + 'pystytti marraskuussa 1723 varustuksen Montevideon lahden '
+            + 'rannalle. Buenos Airesin kuvernööri Bruno Mauricio de Zabala '
+            + 'karkotti portugalilaiset jo tammikuussa 1724 ja aloitti '
+            + 'asuttamisen kuudella Buenos Airesista tulleella perheellä; pian '
+            + 'perässä saapui kanariansaarelaisia. Vuoden 1724 väestölaskenta '
+            + 'kirjasi yli sata galicialais- ja kanarialaisperhettä, yli tuhat '
+            + 'pääosin guaraníkansaan kuuluvaa asukasta sekä orjuutettuja '
+            + 'bantutaustaisia ihmisiä. Perustamisesta ei ole asiakirjaa: '
+            + 'Zabalan päiväkirja mainitsee 24. joulukuuta 1726, ja omaksi '
+            + 'kaupungikseen Buenos Airesista se erkani 1.1.1730.',
+          selite: 'Vuoden 1862 kivipiirroskartan keskellä on niemelle '
+            + 'rakennettu ruutukaava, ja reunuksen pienoiskuvissa kaupungin '
+            + 'silloiset päärakennukset.',
+          lahde: 'Fedaro, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Montevideo',
+        },
+        {
+          otsikko: 'Luonnonsatama joka nousi Buenos Airesin rinnalle',
+          tiedosto: 'Carlos Corsetti Blick auf Montevideo 1892.jpg',
+          teksti: 'Montevideon lahti antaa laivoille luonnollisen suojan, ja '
+            + 'satama oli yksi syy koko kaupungin perustamiseen. Uruguayn '
+            + 'pääkaupungin satama kasvoi nopeasti Buenos Airesin '
+            + 'kilpailijaksi Río de la Platan meriliikenteen hallinnasta. '
+            + 'Vuonna 1776 Espanja teki Montevideosta Etelä-Atlantin '
+            + 'pääasiallisen laivastotukikohtansa, Real Apostadero de '
+            + 'Marinan, jonka toimivalta ulottui Argentiinan rannikolta '
+            + 'Falklandinsaarille ja Länsi-Afrikan Fernando Poohon asti. Koko '
+            + '1700-luvun lopun kaupunki pysyi linnoitettuna alueena niemen '
+            + 'kärjessä — juuri sitä aluetta kutsutaan nykyään Ciudad '
+            + 'Viejaksi, vanhaksikaupungiksi.',
+          selite: 'Carlos Corsettin vuoden 1892 akvarellissa kaupunki näkyy '
+            + 'lahden takaa, ja etualan hiekalla lahoaa puisen aluksen runko.',
+          lahde: 'Carlos Corsetti, Wikimedia Commons (PD)',
+          wiki: 'Port of Montevideo',
+        },
+        {
+          otsikko: 'Vuosikymmen ennen isoisää',
+          tiedosto: 'Cerro de Montevideo desde la ciudad. Año 1865 (no watermark).jpg',
+          teksti: 'Kun isoisä olisi kävellyt Montevideon kaduilla 1873, '
+            + 'kaupunki oli juuri käynyt läpi nopean tekniikkaharppauksen. '
+            + 'Vedenalainen lennätinkaapeli yhdisti sen Buenos Airesiin 1866. '
+            + 'Vuonna 1867 Plaza Caganchalle pystytettiin Rauhan patsas ja '
+            + 'valmistuivat postitalo sekä Paso Molinon silta. Vuonna 1868 '
+            + 'hevosvetoinen raitiotieyhtiö avasi ensimmäiset linjansa, ja '
+            + 'samana vuonna avattiin Mercado del Puerto, satamatori, joka '
+            + 'palvelee yhä ruokakojuineen. Ensimmäinen rautatie Bella '
+            + 'Vistasta Las Piedrasiin valmistui 1869 — neljä vuotta ennen '
+            + 'isoisän matkavuotta.',
+          selite: 'Vuonna 1865 otetussa valokuvassa vanhankaupungin tasakatot '
+            + 'jatkuvat lahdelle, jonka redillä on kymmeniä purjelaivoja, ja '
+            + 'horisontissa kohoaa Cerron kukkula.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+          wiki: 'Montevideo',
+        },
+        {
+          otsikko: 'Rantabulevardi joka kiertää koko kaupungin',
+          tiedosto: 'Rambla Sur (44352265861).jpg',
+          teksti: 'Montevideon rambla on rantabulevardi, joka seuraa kaupungin '
+            + 'rantaviivaa lähes yhtäjaksoisena laidasta laitaan. Pituudesta '
+            + 'on kaksi lukua: kaupungin oma Wikipedia-artikkeli mittaa 27 '
+            + 'kilometriä, ramblalle omistettu artikkeli 22,2 kilometriä '
+            + 'keskeytymätöntä reittiä. Pääosa siitä rakennettiin vuosien 1870 '
+            + 'ja 1930 välillä samaan aikaan kuin satamaan pystytettiin '
+            + 'ensimmäinen puinen laituri ja ruopattiin jokiallas. Uruguay on '
+            + 'esittänyt ramblaa Unescon maailmanperinnön esisijaislistalle, '
+            + 'mutta virallista statusta sillä ei vielä ole.',
+          selite: 'Rambla Sur kaartaa illan valossa rantaviivaa pitkin, ja '
+            + 'kaukana taustalla erottuvat sataman nostokurjet.',
+          lahde: 'Marcelo Campi from Costa de Oro, Uruguay, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Rambla of Montevideo',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: '2016 Montevideo calle Piedras en la Ciudad Vieja.jpg',
+          selite: 'Vanhankaupungin Calle Piedrasilla 1800-luvun julkisivut, '
+            + 'kahviloiden aurinkovarjot ja matkapuhelinmasto ovat samassa '
+            + 'katukuvassa.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Montevideo on matkailijalle helppo kaupunki, koska lähes '
+          + 'kaikki vanha on kävelymatkan päässä. Ciudad Vieja, entinen '
+          + 'muurikaupunki, mahtuu niemelle sataman ja Plaza Independencian '
+          + 'väliin, ja sen halki kulkee kävelykatu Sarandí. Aukioita on '
+          + 'kaksi: Plaza Matriz katedraaleineen ja Cabildoineen keskellä '
+          + 'vanhaakaupunkia, Plaza Independencia sen itälaidalla. Sieltä '
+          + 'alkaa rambla, joka vie rantaa pitkin uimarannoille asti — sitä '
+          + 'kannattaa kävellä ainakin osa. Estadio Centenario on runsaat '
+          + 'neljä kilometriä keskustasta itään Parque Batllen puistossa. '
+          + 'Helmikuun karnevaaliaikaan kaupunki hidastuu: useimmat kaupat '
+          + 'ovat kiinni koko viikon, vaikka virallisia vapaapäiviä on vain '
+          + 'kaksi.',
+        artikkeli: {
+          nimi: 'Matkailijan Montevideo',
+          taitto: 'opas',
+          teksti: 'Satamakaupunki Río de la Platan pohjoisrannalla, jossa '
+            + 'muurikaupungin ruutukaava, 1900-luvun alun palatsit ja '
+            + 'kilometrien rantabulevardi ovat kaikki kävelymatkan päässä '
+            + 'toisistaan.',
+          nosto: 'Vanhankaupungin ruutukaava on yhä sama, jonka espanjalaiset '
+            + 'mittasivat niemelle 1720-luvulla.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Montevideoon saavutaan nykyään yleensä Carrasco-'
+                + 'lentokentän kautta, mutta kaupungin oma reitti '
+                + 'naapurimaahan kulkee yhä vettä pitkin. Buquebus-'
+                + 'lauttayhtiö kuljettaa yli 2,2 miljoonaa matkustajaa '
+                + 'vuodessa Montevideon ja Buenos Airesin väliä, ja osa '
+                + 'aluksista on katamaraaneja, joiden huippunopeus on noin '
+                + '80 kilometriä tunnissa. Samaan satamaan tulevat myös '
+                + 'risteilijät. Satamansuuta suojaa nykyään kaksi '
+                + 'aallonmurtajaa, ja rahtiliikenne jatkuu matkustajalaiturin '
+                + 'vieressä — satama on ollut kaupungin elinehto '
+                + 'perustamisesta asti.',
+              kuva: {
+                tiedosto: 'Cruise ship (24891581246).jpg',
+                selite: 'Kaksi risteilyalusta on kiinnittynyt Montevideon '
+                  + 'satamaan, ja niiden takana näkyvät konttinosturit ja '
+                  + 'vanhankaupungin julkisivut.',
+                lahde: 'Marcelo Campi from Costa de Oro, Uruguay, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Meri jota kutsuttiin makeaksi',
+              teksti: 'Montevideo ei ole meren vaan suiston rannalla. Río de '
+                + 'la Plata syntyy Paranán ja Uruguayn jokien yhtymäkohdasta '
+                + 'ja levenee matkallaan Atlantille: yläpäässä leveyttä on '
+                + 'pari kilometriä, suulla noin 220. Vastarantaa ei siis näy, '
+                + 'ja vesi on savenruskeaa aina rantaan asti. Espanjalainen '
+                + 'tutkimusmatkailija Juan Díaz de Solís purjehti suistoon '
+                + '1516 etsiessään väylää Atlantilta Tyynellemerelle ja antoi '
+                + 'sille nimen Mar Dulce, makea meri. Hänen mukaansa on '
+                + 'nimetty myös kaupungin teatteri, Teatro Solís.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: mate',
+              teksti: 'Yerba maten kulutus on Uruguayssa noin 19 litraa '
+                + 'asukasta kohti vuodessa, ja se on maailman suurin lukema '
+                + 'henkeä kohti. Juoma valmistetaan kuivatuista lehdistä '
+                + 'kurpitsakuppiin ja imetään metallipillillä. Uruguaylainen '
+                + 'kurpitsa on perinteisesti argentiinalaista suurempi ja sen '
+                + 'suuaukko leveämpi, eikä sokeria yleensä lisätä. Kuumaa '
+                + 'vettä kulkee mukana termospullossa, joten juoma ei ole '
+                + 'sidottu keittiöön: sitä juodaan siellä missä kulloinkin '
+                + 'ollaan.',
+              kuva: {
+                tiedosto: 'Mate uruguayo.jpg',
+                selite: 'Kurpitsasta koverrettu mate-kuppi metallipilleineen '
+                  + 'seisoo telineessään termospullon vieressä.',
+                lahde: 'No machine-readable author provided. Góngora assumed (based on copyright claims)., Wikimedia Commons (CC BY 2.5)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: Estadio Centenario',
+              teksti: 'Estadio Centenario nousi Parque Batllen puistoon '
+                + '1929–1930 arkkitehti Juan Antonio Scasson piirustusten '
+                + 'mukaan. Rakennusaika oli poikkeuksellisen lyhyt: '
+                + 'Wikipedian infoboksi sanoo kahdeksan kuukautta, saman '
+                + 'artikkelin leipäteksti yhdeksän. Nimi tulee Uruguayn '
+                + 'ensimmäisen perustuslain satavuotisjuhlasta, ja stadion '
+                + 'rakennettiin varta vasten jalkapallon ensimmäisiä '
+                + 'maailmanmestaruuskisoja varten, jotka pelattiin '
+                + 'Montevideossa 1930. Rakennus ei jäänyt muistomerkiksi: '
+                + 'Uruguayn maajoukkue pelaa siellä kotiottelunsa, ja 2021 '
+                + 'kentällä ratkaistiin sekä Copa Libertadoresin että Copa '
+                + 'Sudamericanan loppuottelu. Katsomon alla toimii '
+                + 'jalkapallomuseo, joka avattiin 1975.',
+              kuva: {
+                tiedosto: 'Estadio Centenario (Montevideo) Tribuna Olimpica with Torre de los Homenajes.jpg',
+                selite: 'Olympiakatsomon vaaleansiniset penkkirivit ovat '
+                  + 'tyhjillään, ja kentän takana kohoaa betoninen Torre de '
+                  + 'los Homenajes.',
+                lahde: 'Uwebart, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Montevideosta puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian Montevideo-artikkelin Climate-osiosta '
+                + 'eivätkä samasta lähteestä kuin lehtien vuosigraafit. '
+                + 'Ilmasto on lauhkean kostea (Köppen: Cfa) ja vuodenajat '
+                + 'erottuvat selvästi: kesä joulukuusta helmikuuhun on '
+                + 'lämmin, talvi kesäkuusta elokuuhun viileä ja sateinen. '
+                + 'Prado-aseman vuosien 1991–2020 normaali antaa vuoden '
+                + 'keskilämpötilaksi 17,3 astetta ja sademääräksi 1 142,7 '
+                + 'millimetriä; saman artikkelin leipäteksti puhuu 16,7 '
+                + 'asteesta ja noin 950 millimetristä, ja tuoreempi taulukko '
+                + 'on tässä valittu. Ääripäät ovat 42,8 ja −5,6 astetta. '
+                + 'Lunta on kirjattu vain neljä kertaa, viimeksi 13. '
+                + 'heinäkuuta 1930 — samana päivänä kun ensimmäiset MM-kisat '
+                + 'avattiin.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Muurien sisällä kasvoi ensin siirtomaakaupunki, sitten '
+        + 'piiritetty linnoitus. 1840-luvun saarron jälkeen kaupungissa asui '
+        + 'enemmän tulijoita kuin syntyperäisiä uruguaylaisia.',
+      tehtava: {
+        kysymys: 'Kuka johti Montevideota puolustanutta italialaista legioonaa piirityksen aikana?',
+        vaihtoehdot: [
+          'Giuseppe Garibaldi',
+          'Manuel Oribe',
+          'Juan Manuel de Rosas',
+          'Bruno Mauricio de Zabala',
+        ],
+        oikea: 0,
+        fakta: 'Kaupungin puolustus lepäsi ulkomaisten pakolaisten varassa: '
+          + 'italialaista legioonaa johti Garibaldi, ja rinnalla toimivat '
+          + 'ranskalainen ja baskilaisten legioona.',
+      },
+      nostot: [
+        {
+          otsikko: 'Muurien sisällä',
+          tiedosto: 'Plaza Constitución con la Iglesia Matriz detrás.JPG',
+          teksti: 'Ciudad Vieja oli vuoteen 1829 asti muurien ympäröimä '
+            + 'linnoitus niemellä sataman suulla. Muurien sisään rakennettiin '
+            + 'vuosina 1804–1812 Cabildo, siirtomaahallinnon virallinen '
+            + 'istuin, Plaza de la Constitución -aukion laidalle; aukiota '
+            + 'kutsutaan yhä Plaza Matriziksi. Samalla aukiolla seisoo '
+            + 'Montevideon katedraali, jonka kryptaan on haudattu kolme '
+            + 'presidenttiä: Fructuoso Rivera, Juan Antonio Lavalleja ja '
+            + 'Venancio Flores. Muurit purettiin 1829, ja niiden ulkopuolelle '
+            + 'suunniteltiin heti uusi kaupunginosa Ciudad Nueva — se kasvoi '
+            + 'kuitenkin hitaasti, koska sodat tulivat väliin.',
+          selite: 'Plaza Matrizin veistoksellinen suihkulähde on valaistu '
+            + 'iltahämärässä, ja vasemmalla kohoaa katedraalin kellotorni.',
+          lahde: 'Quelo73, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Ciudad Vieja, Montevideo',
+        },
+        {
+          otsikko: 'Kaksi lippua seitsemässä kuukaudessa',
+          tiedosto: 'Puerta de la Ciudadela - 20230613dicimouysm17884.jpg',
+          teksti: 'Helmikuun 3. päivänä 1807 brittijoukot valtasivat '
+            + 'Montevideon kenraali Samuel Auchmutyn ja amiraali Charles '
+            + 'Stirlingin johdolla. Miehitys jäi lyhyeksi: 2. syyskuuta samana '
+            + 'vuonna espanjalaiset criollo-joukot pakottivat kenraali John '
+            + 'Whitelocken antautumaan, ja kaupunki palasi Espanjan hallintaan. '
+            + 'Jälkiselvittelyt jatkuivat vuosia. Kun Espanjassa syttyi '
+            + 'Napoleonin-vastainen sota 1808, Montevideon kuvernööri '
+            + 'Francisco Javier de Elío asettui vastustamaan uutta '
+            + 'varakuningasta Santiago de Linersiä ja perusti kaupunkiin oman '
+            + 'hallintojuntansa.',
+          selite: 'Ciudadelan portti on ainoa säilynyt osa kaupunginmuurista, '
+            + 'ja se seisoo nykyään yksinään Plaza Independencian laidalla.',
+          lahde: 'Santiago Mazzarovich, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Montevideo',
+        },
+        {
+          otsikko: 'Saarto jonka kestoa lasketaan kahdella tavalla',
+          tiedosto: 'Plan Ville Montevideo durant le siège.jpg',
+          teksti: 'Manuel Oriben joukot piirittivät Montevideota Guerra '
+            + 'Granden aikana, ja kaupungin puolustus lepäsi vasta '
+            + 'vapautettujen orjien 5 000 hengen joukko-osaston ja ulkomaisten '
+            + 'pakolaisten varassa: italialaista legioonaa johti Giuseppe '
+            + 'Garibaldi, ja rinnalla toimivat ranskalainen ja baskilaisten '
+            + 'legioona sekä brittiläis-ranskalainen laivastotuki. Vuonna 1843 '
+            + 'kaupungin 30 000 asukkaasta uruguaylaisia oli vain kolmasosa. '
+            + 'Saarron kesto riippuu laskutavasta: Montevideo-artikkeli puhuu '
+            + 'kahdeksan vuoden piirityksestä 1843–1851, mutta päivämäärien '
+            + 'mukaan saarto alkoi jo joulukuussa 1842 ja purkautui vasta '
+            + 'helmikuussa 1852.',
+          selite: 'Ranskalaisessa piirityskartassa näkyvät muurikaupunki '
+            + 'niemellä, Ranskan legioonan leiri ja puolustajien linja.',
+          lahde: 'Charly75, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Uruguayan Civil War',
+        },
+        {
+          otsikko: 'Orjuuden loppu ja kaasuvalot',
+          tiedosto: '2016 fachada del Teatro Solís de Montevideo.jpg',
+          teksti: 'Molemmat sotivat osapuolet lakkauttivat orjuuden sodan '
+            + 'aikana vahvistaakseen omia joukkojaan, ja muutos jäi pysyväksi. '
+            + 'Sodan päätyttyä 1851 Montevideon hallitus solmi Brasilian kanssa '
+            + 'viisi sopimusta, jotka takasivat maiden pysyvän liiton. Kasvun '
+            + 'kausi alkoi saman tien: ensimmäiset kaasukatuvalot syttyivät '
+            + '1853, ensimmäiset julkiset viemärit rakennettiin 1854–1861, ja '
+            + 'Teatro Solís valmistui 1856, viisitoista vuotta rakennustöiden '
+            + 'alkamisen jälkeen. Vasta nyt myös muurien ulkopuolelle '
+            + 'kaavailtu Ciudad Nueva pääsi kunnolla kasvamaan.',
+          selite: 'Teatro Solísin päätykolmiossa on kiveen veistetyt '
+            + 'auringonkasvot, ja niiden alla lukee teatterin nimi.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Solís Theatre',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Candomben rummut ovat soineet Montevideon kortteleissa '
+        + 'parisataa vuotta. Samasta kaupungista on lähtöisin myös maailman '
+        + 'tunnetuin tango, ja karnevaali on vuoden suurin juhla.',
+      tehtava: {
+        kysymys: 'Mitkä kolme rumpua muodostavat candomben cuerdan?',
+        vaihtoehdot: [
+          'chico, repique ja piano',
+          'chico, bombo ja timbal',
+          'repique, conga ja bongo',
+          'piano, tambora ja pandeiro',
+        ],
+        oikea: 0,
+        fakta: 'Chico on pienin ja pitää nopeaa perusrytmiä, repique '
+          + 'koristelee sitä improvisoiden, ja piano on suurin ja hoitaa '
+          + 'basson osan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Rummut jotka tulivat yli meren',
+          tiedosto: 'Cuerda de tambores de la comparsa Lonjas de San Marcos.jpg',
+          teksti: 'Sana candombe juontuu kikongon ilmauksesta, joka tarkoittaa '
+            + 'mustiin kuuluvaa. Perinne saapui Río de la Platan alueelle '
+            + 'orjakaupan mukana Angolan ja Kongon suunnalta, ja siitä kehittyi '
+            + 'Montevideossa oma tanssi- ja rumpuperinteensä. Soittimia on '
+            + 'kolme: pieni chico, keskikokoinen repique ja suurin, piano. '
+            + 'Yhdessä ne muodostavat cuerdan, jossa on vähintään kolme rumpua '
+            + 'ja parhaimmillaan 50–100 rumpalia. Candombe on yksi tangon ja '
+            + 'milongan yhteisistä juurista: kaikki kolme polveutuvat samasta '
+            + 'afrikkalaisesta perinnöstä, mutta kehittyivät eri suuntiin.',
+          selite: 'Etualalla soi chico, candomben kolmesta rummusta pienin; '
+            + 'kuva on Duraznon llamadas-kulkueesta.',
+          lahde: 'Martuldl Fotografia, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Candombe',
+        },
+        {
+          otsikko: 'Kaksisataa vuotta ilman taukoa',
+          tiedosto: 'Banderas apertura desfile.jpg',
+          teksti: 'Unesco merkitsi candomben ihmiskunnan aineettoman '
+            + 'kulttuuriperinnön listalle 2009. Perinne ei ole museotavaraa: '
+            + 'sitä ovat pitäneet yllä katkeamatta kaksisataa vuotta useat '
+            + 'mestarirumpalisuvut Barrio Surin ja Palermon kortteleissa, '
+            + 'joissa afrouruguaylaista väestöä on eniten, ja nuoremmat '
+            + 'sukupolvet ovat ottaneet sen omakseen. Näkyvin hetki on '
+            + 'helmikuun karnevaalin llamadas-paraati, jossa comparsat kulkevat '
+            + 'kaduilla rumpujen tahtiin. Afrikkalaista syntyperää oleville '
+            + 'montevideolaisyhteisöille candombe on ylpeyden ja identiteetin '
+            + 'lähde.',
+          selite: 'Comparsa Cenceribón liput avaavat llamadas-kulkueen Isla de '
+            + 'Flores -kadulla helmikuisena iltana.',
+          lahde: 'Manzanita2203, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Candombe',
+        },
+        {
+          otsikko: 'Tango joka syntyi konditoriassa',
+          tiedosto: '2016 Edificio Palacio Salvo de Montevideo.jpg',
+          teksti: 'Gerardo Matos Rodríguez sävelsi tangonsa La Cumparsita 1917 '
+            + 'ja soitti sen ensimmäisen kerran Confitería La Giraldassa, '
+            + 'montevideolaisessa konditoriassa Plaza Independencian laidalla. '
+            + 'Kymmenisen vuotta myöhemmin samalle tontille valmistui Palacio '
+            + 'Salvo: 27-kerroksinen, antenneineen 105 metriä korkea rakennus, '
+            + 'joka oli valmistuessaan 1928 maailman korkein raudoitetusta '
+            + 'betonista tehty talo ja hetken myös Latinalaisen Amerikan '
+            + 'korkein. Nykyään palatsissa toimii tangomuseo, joka kertoo '
+            + 'kappaleen ja uruguaylaisen tangon vaiheet.',
+          selite: 'Palacio Salvon porrastettu torni nousee Plaza '
+            + 'Independencian kulmasta, ja katutasossa on yhä liiketiloja.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Palacio Salvo',
+        },
+        {
+          otsikko: 'Kaksi vapaapäivää, koko viikko kiinni',
+          tiedosto: 'Exposción de máscaras en el Museo del Carnaval.jpg',
+          teksti: 'Montevideon karnevaali on virallisesti vain kaksi '
+            + 'vapaapäivää, karnevaalimaanantai ja laskiaistiistai, mutta '
+            + 'juhlan suosio on niin suuri, että useimmat kaupat ja yritykset '
+            + 'sulkevat ovensa koko viikoksi. Kaduille ja taloihin '
+            + 'pystytetään tabladoja, väliaikaisia esiintymislavoja. '
+            + 'Valmistelut alkavat jo joulukuussa alueellisten '
+            + 'kauneuskuningatarten valinnalla, ja suurin kulkueista, Desfile '
+            + 'de las Llamadas, kulkee keskustan eteläpuolisten kortteleiden '
+            + 'halki. Kaupunki järjestää lisäksi oman gaucho-juhlansa, jossa '
+            + 'ratsastetaan kaduilla perinteisissä asuissa.',
+          selite: 'Montevideon karnevaalimuseossa esillä olleet naamiot on '
+            + 'tehty puusta ja kasvikuiduista.',
+          lahde: 'Fernando da Rosa (Fedaro), Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Montevideo',
+        },
+      ],
+    },
+  ],
 };
