@@ -71931,4 +71931,829 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * CARACAS (lauta southamerica, kaupunki-id caracas) — kaupunkilehti
+   * 24.8.2026.
+   *
+   * LÄHTEET. Työpohjana docs/mantereet-tyoaineisto/faktapohja-caracas.md
+   * ja sen riippumaton tarkistus docs/mantereet-tyoaineisto/
+   * tarkistus-caracas.md, joka EI OLE työpuussa vaan haettiin
+   * committista 5e31d2cf ("Riippumattomat tarkistukset: Manaus ja
+   * Caracas"). Tarkistus voittaa faktapohjan aina, kun ne ovat
+   * ristiriidassa. Jokainen tähän lohkoon menevä väite on lisäksi
+   * luettu uudestaan en-Wikipedian raakatekstistä 24.8.2026
+   * (action=raw, NODE_USE_ENV_PROXY=1, uusinnat kasvavalla viiveellä):
+   * Caracas, Caracas Metro, Caracas-La Guaira highway, Simón Bolívar
+   * International Airport (Venezuela), El Ávila National Park,
+   * Teleférico de Caracas, Guaicaipuro, Diego de Losada, 1812 Caracas
+   * earthquake, Caracas Cathedral, Simón Bolívar, Bolívar Square
+   * (Caracas), Palacio Federal Legislativo, National Pantheon of
+   * Venezuela, Antonio Guzmán Blanco, Auyán-tepui, Angel Falls,
+   * Catatumbo lightning, History of the Venezuelan oil industry,
+   * El Sistema, Simón Bolívar Symphony Orchestra, University City of
+   * Caracas, Floating Clouds (artwork), Joropo, Alma Llanera, Arepa,
+   * Pabellón criollo.
+   *
+   * TARKISTUKSEN NELJÄ PAKOLLISTA KORJAUSTA, ja miten ne on tehty:
+   *
+   * (1) K2 rikkoi visasääntöä ja käytti väärää lukua. Faktapohjan
+   *     avausvirke ("Caracas makaa kapeassa laaksossa noin 900 metrin
+   *     korkeudessa, vaikka Karibianmeri on vain reilun kymmenen
+   *     kilometrin päässä") toisti lähes sanasta sanaan visan
+   *     kysymyksen 1 fakta-kentän ja käytti etäisyytenä "reilua
+   *     kymmentä kilometriä". En-Wikipedian "Caracas"-artikkelin
+   *     johdanto sanoo "separated from the Caribbean coast by a
+   *     roughly 15 km expanse of El Ávila National Park" eli noin 15
+   *     kilometriä — poikkeama olisi ollut lähes 50 %. Nosto on
+   *     kirjoitettu kokonaan uusiksi: se lähtee liikkeelle merestä ja
+   *     vuoresta, käyttää lukua viisitoista kilometriä eikä mainitse
+   *     900 metrin ja etäisyyden paria lainkaan samassa virkkeessä.
+   *     Laakson korkeusluvut (870–1 043 m, ydin n. 900 m) kerrotaan
+   *     erikseen oppaan jaksossa 2 ja etusivun leipätekstissä, jossa
+   *     ne ovat omassa yhteydessään eivätkä visan sanamuodossa.
+   *
+   * (2) L1:n luvut olivat ristiriidassa oman lähteensä kanssa
+   *     molempiin suuntiin. Faktapohja kirjoitti "satoja perhoslajeja"
+   *     ja "lähes 1 800 kasvilajia"; en-Wikipedian "El Ávila National
+   *     Park" (Biodiversity) sanoo "More than 100 butterfly species...
+   *     More than 1,800 plant species". Nostossa lukee nyt yli sata
+   *     perhoslajia ja yli 1 800 kasvilajia, ja lisäksi lähteen omat
+   *     luvut 120 nisäkäslajia ja 500 lintulajia (36 % maan
+   *     linnustosta).
+   *
+   * (3) Teleféricon uudelleenavausvuosi 2002 EI ole "Teleférico de
+   *     Caracas" -artikkelissa — tarkistin koko artikkelin, eikä
+   *     merkkijonoa 2002 esiinny siinä kertaakaan. Vuosiluku on silti
+   *     olemassa lähteessä, vain toisessa artikkelissa: "El Ávila
+   *     National Park" (History) sanoo "After being out of service for
+   *     20 years, this cable car was reopened in February 2002".
+   *     Korvasin siis lähteettömän luvun lähteestä varmennetulla ja
+   *     kerron oppaassa myös kunnostuksen alun (konsessio ja
+   *     rakennustyöt 2000, "Teleférico de Caracas", History).
+   *     HUOM: samat kaksi artikkelia ovat ristiriidassa radan
+   *     avausvuodesta — Teleférico-artikkeli antaa täsmäpäivän
+   *     2.12.1955, Ávila-artikkeli sanoo "1956". Käytin täsmällisempää
+   *     päivämäärälähdettä eli vuotta 1955.
+   *
+   * (4) H4:n "viisitoista vuotta kestänyt kautensa" oli ristiriidassa
+   *     sivun oman seitsenvuotisen kehyksen kanssa. Guzmán Blancon
+   *     infoboksi antaa kolme erillistä kautta: 27.4.1870–27.2.1877,
+   *     26.2.1879–26.4.1884 ja 15.9.1886–8.8.1887 — Wikipedian "In 15
+   *     years from 1870" laskee ne yhteen. Nosto kirjoittaa kaudet
+   *     auki sellaisina kuin ne olivat ja sanoo suoraan, että
+   *     koululuku kertyi kolmelta kaudelta eikä yhdeltä. Isoisän
+   *     matkavuosi 1873 osuu ensimmäiselle, seitsenvuotiselle
+   *     kaudelle, ja se on koko historia-sivun ankkuri.
+   *
+   * VIIDES POIKKEAMA, jota kumpikaan lähdedokumentti ei ennakoinut:
+   * en-Wikipedian "Caracas Cathedral" -artikkeli EI ENÄÄ sisällä niitä
+   * väitteitä, jotka faktapohja siihen viittasi ja jotka tarkistus
+   * merkitsi vahvistetuiksi. Hain artikkelin 24.8.2026 (13 886 tavua
+   * eli tarkistuksen mainitsema oikea koko, ja sisältö on varmasti
+   * Caracasin katedraalista), ja siinä ei puhuta katedraalin
+   * romahtamisesta kesken messun, pappien Miranda-tulkinnasta,
+   * Bolívarin rauhoittelusta eikä kastemaljan siirtämisestä
+   * synnyintalon pihalle. Kirjoitin siksi nostot K3 ja K4 uusiksi
+   * niin, että jokainen väite on nyt luettavissa artikkeleista, jotka
+   * todella sisältävät sen: "1812 Caracas earthquake" (kiirastorstai
+   * 26.3.1812 kello 16.37 — EI pitkäperjantai kuten faktapohjassa;
+   * 7,7 tai kaksi sysäystä Mw 7,4 ja 7,1; uhrilukujen kiista
+   * 1 000–20 000 ja arkkipiispa Narciso Coll y Pratin 10 000–12 000;
+   * kuninkaanpuoluelaisten tulkinta jumalan rangaistuksena),
+   * "Caracas Cathedral" (tornin madaltaminen järistyksen jälkeen),
+   * "Simón Bolívar" (syntymä 24.7.1783, kaste 30.7., El Libertador
+   * Méridalta 23.5.1813 ja Caracasin kaupunginvaltuustolta 14.10.1813)
+   * ja "Birthplace of Simón Bolívar" (talo 1640-luvulta, Guzmán Blanco
+   * osti sen 1876). Kastemalja jäi pois kokonaan, koska sille ei
+   * löytynyt lähdettä.
+   *
+   * TARKISTUKSEN HUOMIOT, ja miten ne on ratkaistu:
+   *
+   * - METRON LINJAMÄÄRÄ. "Caracas"-artikkelin sisällä on ristiriita:
+   *   Transportation-osio sanoo "four lines, 47 stations", saman
+   *   otsikon alaosio "has five lines". Ratkaisin sen oman artikkelin
+   *   hyväksi: "Caracas Metro" -artikkelin infoboksi sanoo neljä
+   *   linjaa, ja sen Lines-taulukossa on nimenomaan linjat 1–4;
+   *   "linja 5" esiintyy artikkelissa vain linjan 2 jatkeen
+   *   rakennusaikaisena nimenä ja pitkän tähtäimen suunnitelmana.
+   *   Lehti sanoo siis neljä linjaa. Asemamäärää EI mainita
+   *   lainkaan, koska siitä on kolme eri lukua (infoboksi 46,
+   *   johdanto 48, "Caracas"-artikkeli 47) eikä mikään niistä ole
+   *   muita vahvempi; samasta syystä radan pituusluku on jätetty pois
+   *   (54,1 km, 106,5 km ja 71 km samoissa lähteissä).
+   *
+   * - PILARI 3:N PUUTTUVAT ESIMERKIT. Tarkistus huomautti, ettei
+   *   faktapohjassa ollut sanaakaan El Sistemasta, Simón Bolívar
+   *   -orkesterista eikä Ávilan nykyisestä virkistyskäytöstä, vaikka
+   *   ne oli tilattu. Ne ovat nyt lehden runkoa: Musiikki on oma
+   *   sivunsa (El Sistema, Simón Bolívar -sinfoniaorkesteri, Aula
+   *   Magna ja joropo), ja Ávilan virkistyskäyttö on nostossa L1
+   *   omana asianaan ("These mountains now serve as both a
+   *   recreational area and as a buffer to pollution and urban
+   *   expansion", en-Wikipedia "El Ávila National Park", History;
+   *   juoksu, pyöräily, kalliokiipeily, telttailu ja vaijeriliuku
+   *   saman artikkelin Culture & traditions -osiosta). Ciudad
+   *   Universitarian Unesco-status on nostossa M3.
+   *
+   * - L3:N JA L4:N VISAKAIUT. Faktapohjan L3 avautui sanoilla
+   *   "Merenkulkijat käyttivät ilmiötä vuosisatoja majakkana" (visa:
+   *   "Merimiehet käyttivät sitä majakkana") ja L4 päättyi lauseeseen
+   *   maailman suurimmista todetuista öljyvaroista (visa: "Maalla on
+   *   maailman suurimpia todettuja öljyvarantoja"). Molemmat on
+   *   kirjoitettu uusiksi: L3 lähtee barí-kansan nimestä ja
+   *   Humboldtin ja Codazzin aikalaiskuvauksista, L4 esikolumbiaanisesta
+   *   menestä ja keisari Kaarle V:n tynnyristä. Varantoluku on jätetty
+   *   pois kokonaan, ja visan vastaus (öljy tärkeimpänä
+   *   vientituotteena) sanotaan lehden omin sanoin.
+   *
+   * KULTTUURIVISA (js/packs/southamerica-questions.js, avain caracas)
+   * kysyy kuusi asiaa. Päätoimittajan sääntö on, että vastausten
+   * TÄYTYY löytyä lehden teksteistä mutta EI visan omalla
+   * sanamuodolla. Kävin jokaisen kysymyksen läpi myös sivujen
+   * johdantoja vasten, en vain nostoja vasten:
+   * (1) Venezuelan pääkaupunki — etusivun leipäteksti
+   *     (southamerica-artikkelit.js) ja kaupunki-sivun johdanto;
+   * (2) Simón Bolívar / El Libertador — nosto K4, joka kertoo
+   *     arvonimen SAAMISEN tarinan (Mérida ensin toukokuussa 1813,
+   *     Caracasin kaupunginvaltuusto vasta lokakuussa) eikä totea
+   *     visan tapaan "hän on El Libertador";
+   * (3) Angelin putous — nosto L2 löytö- ja mittaustarinana;
+   * (4) Karibianmeri — nosto K2 ja oppaan jakso 2, meri vuoren
+   *     takaisena naapurina eikä luettelotietona;
+   * (5) öljy vientituotteena — nosto L4, painopiste 1500-luvussa ja
+   *     esikolumbiaanisessa käytössä;
+   * (6) Catatumbon salamointi — nosto L3, painopiste nimessä ja
+   *     1800-luvun aikalaiskuvauksissa.
+   * Yksikään kolmesta minitehtävästä ei toista visaa, ja jokaisen
+   * vastaus on samalla sivulla: Panteónin paikalla ollut luhistunut
+   * kirkko (vastaus nostossa H3, ja saman sivun H2 tarjoaa
+   * houkuttelevan harhavaihtoehdon eli luostarin), Auyán-tepuin
+   * merkitys pemonien kielellä (L2) ja El Sisteman perustaja (M1,
+   * jonka kaikki kolme harhavaihtoehtoa esiintyvät samalla sivulla).
+   *
+   * VISAN OMISSA FAKTAKENTISSÄ on kaksi virhettä, joita lehti EI
+   * toista (kumpikaan ei ole faktapohjan syytä): Catatumbo-kentän
+   * "ukkostaa noin 250 yönä vuodessa" sekoittaa salamatiheyden
+   * (250 salamaa neliökilometrille vuodessa) ja öiden määrän
+   * (140–160 yötä); Bolívar-kentän "viiden maan itsenäistyminen" on
+   * Simón Bolívar -artikkelin mukaan kuusi maata (Bolivia, Kolumbia,
+   * Ecuador, Panama, Peru, Venezuela); ja pääkaupunkikysymyksen
+   * fakta-kenttä sanoo meren olevan "vain kymmenen kilometrin
+   * päässä", kun lähde sanoo noin viisitoista. Lehti käyttää lähteen
+   * lukuja. Samat virheet ovat myös js/packs/southamerica-questions.js:n
+   * SOUTHAMERICA_FACTS-rivillä caracas ("noin 900 metrin korkeudessa,
+   * vaikka Karibianmeri on vain kymmenen kilometrin päässä") — niitä
+   * ei korjattu tässä erässä, koska visan ja tiesitkö-rivien
+   * korjaaminen ei kuulunut tähän tilaukseen; Fablen kannattaa
+   * tietää siitä.
+   *
+   * SISÄLTÖLINJAUS. EI NYKYPOLITIIKKAA — tämä on Caracasin kohdalla
+   * tiukin rajaus. Venezuelan nykyinen poliittinen ja taloudellinen
+   * tilanne, siirtolaisuus, hallinto ja kriisi on jätetty kokonaan
+   * pois, samoin Chávez ja Maduro, vaikka en-Wikipedian
+   * "Caracas"-artikkeli ja "El Sistema" -artikkeli käsittelevät niitä
+   * laajasti. Pois on jätetty myös artikkelien rikollisuus-, mielen-
+   * osoitus- ja väkivalta-aineisto sekä Urbanism-osion
+   * rancho-kuvaus: kaupunki kuvataan arvokkaana nykyisenä
+   * suurkaupunkina, ei ongelmaluettelona. Simón Bolívar käsitellään
+   * historiallisena henkilönä. Guaicaipuron 1500-luvun tarina
+   * kerrotaan tapahtumana neutraalisti ilman nykypoliittista käyttöä.
+   *
+   * KUVAT: 26 kuvaa, kaikki haettu Commonsin rajapinnasta
+   * (categorymembers ja generator=search) yhtenä peräkkäisenä jonona.
+   * Lisenssi ja tekijä on luettu rajapinnan extmetadatasta
+   * (LicenseShortName, UsageTerms, Restrictions, Artist), ja NC- ja
+   * ND-ehdot tarkistettiin ensin — yhtään ei osunut valintoihin.
+   * JOKAINEN valittu kuva on katsottu silmin 900 pikselin
+   * esikatseluna. Kansikuvat ovat kolme laajaa yleiskuvaa: Ávila
+   * kaupungin yllä laaksosta nähtynä, kaupunki vuorelta nähtynä ja
+   * koko vuorijono laakson eteläpuolelta. Avauskuvat ovat kolme
+   * laveaa näkymää kaupungin eri osista ja eri vuorokaudenaikoina:
+   * keskustan siluetti yliopiston mailta, Ávila pilvissä San
+   * Bernardinon yllä ja keskusta yöllä.
+   *
+   * KUVAHYLKÄYKSET (syineen): "Catedral de Caracas.JPG" on paras
+   * katedraalin julkisivukuva, mutta sen etualalla kulkee väkeä,
+   * jonka kasvot ovat luettavissa — tilalle vaihtui saman kuvaajan
+   * sisäkuva; "Plaza Bolivar de Caracas.jpg" ja "Plaza Bolivar de
+   * Caracas en la celebracion del Bicentenario.JPG" hylättiin samasta
+   * syystä (penkeillä istuvien kasvot täydessä koossa);
+   * "Palacio de las Academias.JPG" on aiheeltaan täsmälleen oikea
+   * (Guzmán Blancon 1876 uusgoottilaiseksi puettu yliopistotalo),
+   * mutta jalkakäytävällä on tunnistettavia kulkijoita;
+   * "Centro de Acción Social por la Música ... 3.jpg" näyttää salin
+   * värikkäät istuimet kauniisti, mutta etualalla istuu mies kasvot
+   * kameraan; "Vista PlazaVenezuela.jpg" on hieno ilmakuva, mutta
+   * kuvan täyttävät jättimäiset Nescafé- ja Pepsi-mainokset;
+   * "Teatro Teresa Carreño en Caracas Venezuela.jpg" on otettu
+   * ikkunan läpi, ja lasin heijastukset ja karmi näkyvät;
+   * "Teleferico de Caracas Warairarepano cablecar Avila Venezuela
+   * 1.jpg" on kuvattu hytin lasin läpi ja etualalla on kuvaajan oma
+   * pää; "Caracas desde la Montaña.JPG" ja "Vista de Caracas 2.jpg"
+   * ovat teknisesti kelvollisia mutta toinen hämärä ja utuinen ja
+   * toisessa etualan täyttää rinneasutus; "The land of Bolivar; or,
+   * War, peace and adventure in the republic of Venezuela (1878)
+   * (14764399645).jpg" olisi ollut täsmälleen isoisän vuosikymmenen
+   * kuvitusta Plaza Bolívarista, mutta sen extmetadata-lisenssi on
+   * "No known copyright restrictions", joka ei ole PD/CC0/CC BY/
+   * CC BY-SA — talon sääntö ei salli sitä, joten se jäi pois.
+   *
+   * KUVAPOIKKEUS: nosto H3 käyttää Ferdinand Bellermannin noin
+   * 1842–1845 tekemää piirrosta Santísima Trinidad -kirkon raunioista
+   * — juuri sen paikalle Panteón Nacional nousi 1874. Piirroksen
+   * vasemmassa alakulmassa on tekijän oma kynämerkintä. Sama poikkeus
+   * kuin Bogotán vuoden 1869 puupiirroksessa ja Quiton
+   * aikalaismaalauksessa: teoksen oma alkuperäinen merkintä kelpaa,
+   * kun se on osa teosta eikä jälkikäteen lisätty arkisto- tai
+   * studioleima. Nosto M1:n kuvassa näkyy talon oma juhlavuoden
+   * lakana parvekkeen kaiteessa; se on paikan päällä oleva kyltti,
+   * ei kuvan päälle lisätty merkintä, eikä se ole mainos.
+   *
+   * AIHETOISTO (tietoinen, kirjattu): Ávila esiintyy neljässä
+   * kuvassa — kansikuvissa kahdesti (laaksosta ylös ja huipulta
+   * alas), nostossa K2 laajana panoraamana ja nostossa L1
+   * lähikuvana sammalten ja bromelioiden tasolla. Vuori on
+   * kaupungin ainoa todellinen maamerkki, ja kuvakulmat ovat eri.
+   * Köysirata näkyy sekä matkaoppaan pystykuvassa että jaksossa 1
+   * mainittuna; jakson 1 kuva on kuitenkin moottoritie ja sen
+   * viadukti, jotta sama aihe ei toistu kahdessa kuvassa.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä (Open-Meteon normaaleja ei haettu, eikä lukuja keksitty).
+   * Oppaan jakso 5 nojaa siis en-Wikipedian "Caracas"-artikkelin
+   * Climate-osion säälaatikkoon ja SANOO SEN ÄÄNEEN (Bogotán,
+   * Samarkandin ja Liman malli). Mittauspiste on La Carlotan
+   * lentokenttä laakson pohjalla, normaalit 1991–2020 ja ennätykset
+   * 1964–2020, ja se kerrotaan lukijalle — huipulla on useita
+   * asteita viileämpää kuin mittauspisteellä. Tarkistuksen huomio
+   * kuivasta kaudesta on otettu huomioon: joulukuu (107,4 mm) on
+   * sateinen kuukausi, joten kuivaksi kaudeksi sanotaan
+   * tammi–huhtikuu eikä joulu–maaliskuu.
+   *
+   * KUVATEKSTIT: selite kertoo kohteesta yhdellä virkkeellä.
+   */
+  caracas: [
+    {
+      id: 'kaupunki',
+      nimi: 'Caracas',
+      johdanto: 'Vuoren ja meren väliin puristuneessa laaksossa makaava '
+        + 'Caracas on Venezuelan pääkaupunki ja Simón Bolívarin '
+        + 'synnyinkaupunki. Espanjalaisesta siirtomaakylästä kasvoi '
+        + 'miljoonakaupunki, jota vihreä Ávila yhä vartioi merta vasten.',
+      kansikuvat: [
+        {
+          tiedosto: 'Caracas y mi Ávila desde su valle.jpg',
+          selite: 'Ávilan metsäinen rinne nousee suoraan kaupungin '
+            + 'kerrostalokortteleiden takaa ja sulkee laakson pohjoisreunan.',
+          lahde: 'WILLIAM REYNA, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Caracas from the Avila National Park in 2016.jpg',
+          selite: 'Vuoren rinteeltä katsottuna keskustan tornit erottuvat '
+            + 'laakson keskeltä ja kaupunki jatkuu ympäröiville kukkuloille.',
+          lahde: 'Oscar Costero, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Ciudad de Caracas City, Venezuela 1.jpg',
+          selite: 'Laakson eteläpuolelta avautuu koko rannikkovuoriston '
+            + 'harjanne, ja kaupunki jää sen juurelle kapeaksi nauhaksi.',
+          lahde: 'Warairarepano&Guaicaipuro, Wikimedia Commons (CC0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Caracas view from UCV grounds towards the east 2012.jpg',
+          selite: 'Yliopiston mailta itään katsottuna iltapäivän valo osuu '
+            + 'keskustan torneihin ja Ávila kohoaa niiden takana.',
+          lahde: 'JCFG1989, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Cerro El Ávila desde San Bernardino.jpg',
+          selite: 'San Bernardinon kaupunginosan yllä pilvet valuvat '
+            + 'harjanteen yli laakson puolelle.',
+          lahde: 'Robert Marcano, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Caracas DownTown Night.jpeg',
+          selite: 'Yöllä valot piirtävät laakson muodon: rinteet nousevat '
+            + 'valopisteinä pimeän vuoren reunaan asti.',
+          lahde: 'Walter Vargas from San Cristobal, Venezuela., Wikimedia '
+            + 'Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Päällikkö joka ei antautunut',
+          tiedosto: 'Cacique Guaicaipuro..jpg',
+          teksti: 'Kun espanjalaiset saapuivat laaksoon, sen asukkaat eivät '
+            + 'antautuneet taisteluitta. Teques- ja Caracas-heimojen '
+            + 'päällikkö Guaicaipuro kokosi liiton, joka löi useita '
+            + 'retkikuntia – muun muassa Luis Narváezin joukot 1562 – ja '
+            + 'piti valloittajat poissa vuosikausia. Vasta kun Diego de '
+            + 'Losada saapui suurella joukolla ja perusti kaupungin nimellä '
+            + 'Santiago de León de Caracas heinäkuussa 1567, espanjalaiset '
+            + 'saivat pysyvän jalansijan. Guaicaipuro kaatui seuraavana '
+            + 'vuonna: pormestari Francisco de Infante sai käskyn vangita '
+            + 'hänet, ja miehet sytyttivät hänen majansa tuleen saadakseen '
+            + 'hänet ulos.',
+          selite: 'Pronssinen Guaicaipuro seisoo keihäs koholla kivijalustan '
+            + 'päällä, ja jalustaan on kiinnitetty päällikön muistolaatta.',
+          lahde: 'Ramyz18, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Guaicaipuro',
+        },
+        {
+          otsikko: 'Vuori joka erottaa kaksi maailmaa',
+          tiedosto: 'Cerro El Ávila - Caracas.jpg',
+          teksti: 'Karibianmeri on keskustasta vain viidentoista kilometrin '
+            + 'päässä, mutta sitä ei kaupungista näe: väliin nousee lähes '
+            + '2 200 metriä korkea rannikkovuoristo, jonka kaupunkilaiset '
+            + 'tuntevat Ávilana. Vuori pitää ilman leutona. Vuoden '
+            + 'keskilämpötila on 23,4 astetta, ja lämpimimmän ja kylmimmän '
+            + 'kuukauden ero jää 2,8 asteeseen – tropiikissa se on '
+            + 'poikkeuksellisen vähän. Joulu- ja tammikuussa laaksoon valuu '
+            + 'sumua ja yö voi viiletä kahdeksaan asteeseen. Silloin '
+            + 'caracasilaiset sanovat toisilleen, että Pacheco on tullut.',
+          selite: 'Ávilan harjanne kulkee laakson poikki koko kuvan leveydeltä '
+            + 'ja erottaa kaupungin merestä.',
+          lahde: 'Periodismodepaz, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Caracas',
+        },
+        {
+          otsikko: 'Järistys joka selitettiin rangaistukseksi',
+          tiedosto: 'Catedral Caracas.JPG',
+          teksti: 'Kiirastorstaina 26. maaliskuuta 1812 kello 16.37 maa '
+            + 'järkkyi. Voimakkuudeksi on arvioitu 7,7, mutta uudemman '
+            + 'tulkinnan mukaan kyse oli kahdesta erillisestä sysäyksestä, '
+            + 'joista ensimmäinen tuhosi Caracasin ja toinen Méridan. '
+            + 'Katedraalin toinen torni vaurioitui niin pahoin, että se '
+            + 'jouduttiin madaltamaan. Kuolonuhrien määrästä ei ole '
+            + 'yksimielisyyttä: arviot vaihtelevat tuhannesta '
+            + 'kahteenkymmeneentuhanteen, ja arkkipiispa Narciso Coll y '
+            + 'Prat päätyi hiippakuntansa pappien luvuista laskien '
+            + '10 000–12 000:een. Itsenäisyyssota oli käynnissä, ja '
+            + 'kuninkaan puolta pitäneet selittivät tuhon jumalan '
+            + 'rangaistukseksi kapinasta.',
+          selite: 'Katedraalin sivukappelissa kultainen barokkialttari on '
+            + 'valaistu violetiksi, ja sen edessä seisovat Venezuelan ja '
+            + 'Vatikaanin liput.',
+          lahde: 'AlexisCarmona, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: '1812 Caracas earthquake',
+        },
+        {
+          otsikko: 'Poika joka sai arvonimensä kahdesti',
+          tiedosto: 'Casa Natal del Libertador Patio Caracas Centro.JPG',
+          teksti: 'San Jacinton kadun varrella olevassa 1640-luvun talossa '
+            + 'syntyi 24. heinäkuuta 1783 varakkaan kreolisuvun neljäs '
+            + 'lapsi, ja kuusi päivää myöhemmin hänet kastettiin nimellä '
+            + 'Simón José Antonio de la Santísima Trinidad Bolívar y '
+            + 'Palacios. Kunnianimen hän sai vasta kolmekymmentä vuotta '
+            + 'myöhemmin, eikä kotikaupungissaan: ensin Méridan asukkaat '
+            + 'antoivat hänelle nimen El Libertador 23. toukokuuta 1813, ja '
+            + 'vasta kun hän palasi voittajana Caracasiin 14. lokakuuta, '
+            + 'myös kaupunginvaltuusto vahvisti sen. Synnyintalon osti 1876 '
+            + 'presidentti Guzmán Blanco – sama mies, joka oli pystyttänyt '
+            + 'hänen patsaansa pääaukiolle.',
+          selite: 'Bolívarin synnyintalon valkoiseksi kalkittu holvikaari '
+            + 'avautuu pihalle, jonka nurmikolla kasvaa kaksi pientä puuta.',
+          lahde: 'Ricardo Juliao, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Birthplace of Simón Bolívar',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: '02teleferico.jpg',
+          selite: 'Köysiradan vaijeri nousee tiheän vuorimetsän yli '
+            + 'harjanteelle, jossa asema ja mastot erottuvat taivasta '
+            + 'vasten.',
+          lahde: 'Luis Jaimes, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Caracas on helppo hahmottaa, koska laakso tekee sen '
+          + 'puolestasi: Ávila on aina pohjoisessa, ja sen huippu on '
+          + 'kaupungin kompassi. Laakso kulkee lännestä itään, ja niin '
+          + 'kulkevat myös pääväylät, metro ja Guaire-joki. Vanha keskusta '
+          + 'ruutukaavoineen on lännessä, Plaza Bolívar sen keskusruutuna; '
+          + 'itään päin mentäessä korttelit muuttuvat 1900-luvun '
+          + 'lähiöiksi ja toimistotorneiksi, ja kaakossa on yliopiston '
+          + 'kampus. Etäisyydet ovat lyhyitä, mutta laakso on kapea ja '
+          + 'liikenne ruuhkautuu helposti, joten metro on usein nopein. '
+          + 'Sää ei ratkaise matka-ajankohtaa – lämpötila on lähes sama '
+          + 'ympäri vuoden – mutta sade ratkaisee, ja iltaisin kannattaa '
+          + 'varautua siihen, että laaksoon laskeutuu viileä ilma vuorelta.',
+        artikkeli: {
+          nimi: 'Matkailijan Caracas',
+          taitto: 'opas',
+          teksti: 'Miljoonakaupunki kapeassa laaksossa: siirtomaa-ajan '
+            + 'ruutukaava lännessä, modernistinen yliopistokampus '
+            + 'kaakossa ja köysirata vuoren yli merelle päin.',
+          nosto: 'Ávila on aina pohjoisessa: niin kauan kuin näet vuoren, '
+            + 'tiedät missä olet.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kansainväliset lennot laskeutuvat Maiquetíaan, '
+                + 'vuoren toiselle puolelle rannikolle noin 21 kilometrin '
+                + 'päähän keskustasta. Kenttä avattiin 1945, ja sinne '
+                + 'ajetaan moottoritietä, joka rakennettiin 1950–1953 ja '
+                + 'lyhensi matkan tunnista kahteenkymmeneen minuuttiin: '
+                + 'kaksi tunnelia, joista toinen on yli 1 900 metriä pitkä, '
+                + 'ja kolme betonisiltaa vievät vuoriston läpi. Kaupungissa '
+                + 'liikutaan metrolla, joka avattiin 1983 ja jolla on '
+                + 'neljä linjaa; vuonna 2010 sen jatkeeksi avattiin '
+                + 'Metrocable, rinteille nouseva köysiratalinja. Vuoren '
+                + 'harjalle pääsee omalla köysiradallaan: Teleférico de '
+                + 'Caracas avattiin 2. joulukuuta 1955, suljettiin '
+                + '1970-luvun lopulla ja avattiin laajan kunnostuksen '
+                + 'jälkeen uudelleen helmikuussa 2002. Matka on noin 3,5 '
+                + 'kilometriä ja kestää vartin.',
+              kuva: {
+                tiedosto: 'Autopista Caracas-La Guaira.JPG',
+                selite: 'Rannikolle vievä moottoritie ylittää jyrkän laakson '
+                  + 'kaarisillalla keskellä vuoristoa.',
+                lahde: 'Enzo861, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Caracas on kokonaan rannikkovuoriston sisällä olevassa '
+                + 'laaksossa, joka on kapea ja epäsäännöllinen. Laakson '
+                + 'pohja on 870 ja 1 043 metrin välillä merenpinnasta, ja '
+                + 'historiallinen keskusta noin 900 metrissä; pääkaupunki'
+                + 'piirin korkein kohta Pico El Ávila kohoaa 2 159 metriin '
+                + 'ja koko puiston korkein huippu Pico Naiguatá 2 765 '
+                + 'metriin. Pohjoisessa vuori erottaa kaupungin '
+                + 'Karibianmerestä, etelässä nousee toinen kukkularivi. '
+                + 'Guaire-joki virtaa laakson halki lännestä itään ja laskee '
+                + 'Tuy-jokeen; sitä ruokkivat Ávilan rinteiltä laskevat '
+                + 'purot. Koska tasaista maata on vähän, kaupunki on '
+                + 'kasvanut pystysuoraan ja levinnyt naapurikuntiin – '
+                + 'yhdessä ne muodostavat Suur-Caracasin.',
+              kuva: {
+                tiedosto: 'ISS027-E-9881 - View of Venezuela - Caracas - Catia La Mar - La Guaira - Caraballeda - Venezuelan Coastal Range - Caribbean Sea (cropped).jpg',
+                selite: 'Avaruusaseman kuvassa näkyy koko asetelma kerralla: '
+                  + 'rannikko lentokenttineen ja satamineen ylhäällä, '
+                  + 'vuoristo keskellä ja Caracasin laakso alavasemmalla.',
+                lahde: 'Earth Science and Remote Sensing Unit, Lyndon B. '
+                  + 'Johnson Space Center, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: arepa',
+              teksti: 'Venezuelalaisen päivän mitta on arepa: maissijauhosta '
+                + 'vaivattu pyöreä leipä, joka paistetaan tai grillataan ja '
+                + 'halkaistaan täytettä varten. Se on esikolumbiaaninen '
+                + 'ruoka, ja nimikin tulee cumanagoto-kielen sanasta erepa, '
+                + 'maissileipä. Vuoden 2015 kyselyssä lähes 70 prosenttia '
+                + 'venezuelalaisista söi arepoja säännöllisesti. Ratkaiseva '
+                + 'keksintö tehtiin 1950-luvulla, kun insinööri Luis '
+                + 'Caballero Mejías kehitti esikypsennetyn arepajauhon – '
+                + 'sitä ennen maissi jauhettiin kotona. Täytteet vaihtelevat '
+                + 'juustosta ja avokadosta lihaan ja papuihin. Maan '
+                + 'kansallisruoka on kuitenkin pabellón criollo, lautasellinen '
+                + 'riisiä, mustapapuja ja haudutettua repimälihaa, usein '
+                + 'paistettujen banaaniviipaleiden kanssa.',
+              kuva: {
+                tiedosto: 'Arepas (32187739776).jpg',
+                selite: 'Halkaistut arepat on täytetty lihalla ja juustolla, '
+                  + 'ja jauhoinen kuori on paistettu kevyesti ruskeaksi.',
+                lahde: 'Luca Nebuloni, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kun kaupunki rakennettiin uusiksi',
+              teksti: '1900-luvun alun öljyvuodet muuttivat Caracasin '
+                + 'kokoluokkaa, ja 1950-luvulla siitä tehtiin tietoisesti '
+                + 'moderni pääkaupunki. Silloin syntyi Suur-Caracasin '
+                + 'kaupunkiseutu, rakennettiin julkisia rakennuksia, '
+                + 'moottoritie rannikolle ja yliopiston uusi kampus, ja '
+                + 'ohjelma jatkui 1960-luvun yli. Vanhaa keskustaa se '
+                + 'kavensi: nykyään ydinkeskusta on alle neljännes '
+                + 'kaupungin pinta-alasta, ja loput on levinnyt laakson '
+                + 'suuntaisesti ja rinteille. Kaupungissa asuu nykyään yli '
+                + 'kolme miljoonaa ihmistä ja koko kaupunkiseudulla yli '
+                + 'viisi miljoonaa. Vanhan ytimen tunnistaa yhä '
+                + 'ruutukaavasta ja aukioista, joita 1870-luvulla '
+                + 'uudistettiin.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Caracasista puuttuu, joten nämä luvut '
+                + 'ovat en-Wikipedian Caracas-artikkelin Climate-osiosta '
+                + 'eivätkä samasta lähteestä kuin lehtien vuosigraafit. '
+                + 'Mittauspiste on La Carlotan lentokenttä laakson pohjalla '
+                + '(normaalit 1991–2020, ennätykset 1964–2020) – vuoren '
+                + 'harjalla on useita asteita viileämpää. Lämpötila pysyy '
+                + 'lähes samana ympäri vuoden, joten matka-aikaa kannattaa '
+                + 'miettiä sateen mukaan: kuivinta on tammi–huhtikuussa '
+                + '(maaliskuu 20,7 mm) ja sateisinta kesäkuun ja marraskuun '
+                + 'välillä (lokakuu 144,3 mm). Vuodessa sataa noin 1 104 '
+                + 'millimetriä 92 sadepäivänä. Päivän ylin on keskimäärin '
+                + '28,3 astetta ja yön alin 19,8; ennätykset ovat 37,1 '
+                + 'astetta syyskuussa ja 5,1 astetta maaliskuussa.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Isoisän matkavuonna 1873 Caracasin pääaukio oli työmaa: '
+        + 'presidentti Guzmán Blanco rakensi pääkaupunkia uusiksi '
+        + 'patsaiden ja palatsien varaan.',
+      tehtava: {
+        kysymys: 'Minkä rakennuksen paikalle Panteón Nacional pystytettiin?',
+        vaihtoehdot: [
+          'Luhistuneen kirkon',
+          'Entisen luostarin',
+          'Vanhan tullihuoneen',
+          'Puretun teatterin',
+        ],
+        oikea: 0,
+        fakta: 'Santísima Trinidad -kirkko oli vuodelta 1744, ja sen '
+          + 'raunioiden paikalle perustettiin 1874 kansallissankarien '
+          + 'hautaholvi. Luostarin paikalle nousi sen sijaan Capitolio.',
+      },
+      nostot: [
+        {
+          otsikko: 'Aukio joka sai patsaansa tykinlaukauksin',
+          tiedosto: 'Nuestro Libertador.jpg',
+          teksti: 'Kaupungin pääaukiota reunustivat vuodesta 1754 '
+            + 'kauppiaiden holvikäytävät. Guzmán Blanco purätti ne 1865 ja '
+            + 'aloitti 1872 aukion muuttamisen ranskalaistyyliseksi '
+            + 'puistoksi: istutuksia, neljä vuodenaikaa esittävää '
+            + 'valurautaista suihkulähdettä kulmiin ja noin sata '
+            + 'koristepylvästä. Marraskuun 7. päivänä 1874 aukiolle '
+            + 'paljastettiin Simón Bolívarin nelimetrinen ratsastajapatsas '
+            + 'kellojen soidessa ja 21 kunnialaukauksen kajahtaessa. Se on '
+            + 'jäljennös Adamo Tadolinin Liman patsaasta – ja täsmälleen se '
+            + 'patsas, joka seisoo aukiolla yhä.',
+          selite: 'Bolívarin ratsastajapatsas nousee puiden lomasta, ja sen '
+            + 'takana liehuu Venezuelan lippu.',
+          lahde: 'Carlos E. Perez S.L, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bolívar Square (Caracas)',
+        },
+        {
+          otsikko: 'Rautainen palatsi jossa Vapauttaja katsoo yhä alas',
+          tiedosto: 'Palacio Legislativo de Caracas.jpg',
+          teksti: 'Plaza Bolívarin länsipuolelle Guzmán Blanco rakennutti '
+            + 'vuodesta 1872 uuden kongressirakennuksen entisen luostarin '
+            + 'paikalle. Palacio Federal Legislativo eli Capitolio nousi '
+            + 'valurautarunkoisena ja valkoiseksi maalattuna arkkitehti '
+            + 'Juan Hurtado Manriquen suunnitelmien mukaan, insinööreinä '
+            + 'Luciano Urdaneta ja Roberto García. Kullatun soikean kupolin '
+            + 'alle jäi Elliptinen sali, jonka kattoon Martín Tovar y Tovar '
+            + 'maalasi Carabobon taistelun. Julkisivun päätykolmiossa on '
+            + 'Simón Bolívarin ja Guzmán Blancon rintakuvat vierekkäin: '
+            + 'presidentti asetti itsensä muistomerkkiin samalle tasolle '
+            + 'vapauttajan kanssa.',
+          selite: 'Capitolion kolmiopäädyssä lepäävät allegoriset hahmot '
+            + 'vaakunan molemmin puolin, ja päädyn reunoilla seisoo '
+            + 'jalustoillaan kaksi rintakuvaa.',
+          lahde: 'Wilfredor, Wikimedia Commons (CC0)',
+          wiki: 'Palacio Federal Legislativo',
+        },
+        {
+          otsikko: 'Hautaholvi joka nousi raunioiden päälle',
+          tiedosto: 'Ruinas de la iglesia de la Santísima Trinidad en Caracas - Ferdinand Bellermann.JPG',
+          teksti: 'Vanhan kaupungin pohjoislaidalla seisoivat vuodelta 1744 '
+            + 'peräisin olevan Santísima Trinidad -kirkon rauniot. Niiden '
+            + 'paikalle perustettiin 27. maaliskuuta 1874 Panteón Nacional, '
+            + 'kansallissankarien hautaholvi – yksi Guzmán Blancon '
+            + 'hallinnon suurista julkisista töistä Capitolion ja '
+            + 'kaupunginteatterin rinnalla. Vuoden 1876 aikana sinne '
+            + 'siirrettiin kymmenittäin itsenäisyyssodan upseereita ja '
+            + 'siviilejä, ja 28. lokakuuta myös Simón Bolívar. Nykyään '
+            + 'keskilaivan hallitsee yksin hänen pronssinen sarkofaginsa, '
+            + 'ja katossa loistaa kristallikruunu, joka asennettiin 1883 '
+            + 'hänen syntymänsä satavuotispäivänä.',
+          selite: 'Ferdinand Bellermann piirsi 1840-luvulla Santísima '
+            + 'Trinidad -kirkon rauniot, joiden paikalle Panteón Nacional '
+            + 'myöhemmin rakennettiin.',
+          lahde: 'Ferdinand Bellerman (1814-1889), Wikimedia Commons (PD)',
+          wiki: 'National Pantheon of Venezuela',
+        },
+        {
+          otsikko: 'Presidentti joka rakensi koko kaupungin uusiksi',
+          tiedosto: 'Guzmán Blanco, 1875.jpg',
+          teksti: 'Antonio Guzmán Blanco nousi valtaan huhtikuussa 1870, ja '
+            + 'hänen ensimmäinen kautensa kesti seitsemän vuotta, vuoteen '
+            + '1877 – juuri sille osuu isoisän matkavuosi. Myöhemmin hän '
+            + 'palasi vielä kahdesti, 1879–1884 ja 1886–1887. Näiden '
+            + 'kausien aikana Caracas sai rautatien rannikolle, '
+            + 'puhelinyhteyden La Guairaan ja oman valuutan, bolívarin, ja '
+            + '1876 maan vanhin yliopisto siirrettiin Palacio de las '
+            + 'Academiasiin, jonka siirtomaa-ajan julkisivu puettiin '
+            + 'uusgoottilaiseksi. Vuodesta 1870 laskien viidessätoista '
+            + 'vuodessa kansakoulujen määrä nelinkertaistui lähes kahteen '
+            + 'tuhanteen – mutta ne vuodet jakautuivat kolmelle erilliselle '
+            + 'kaudelle, eivät yhdelle.',
+          selite: 'Vuoden 1875 muotokuvassa Guzmán Blanco seisoo '
+            + 'kirjaillussa univormussa kirjapinon vieressä.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+          wiki: 'Antonio Guzmán Blanco',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Caracasin yllä kohoava Ávila on vasta esimakua. Venezuelassa '
+        + 'on maailman korkein vesiputous ja järvenselkä, jonka yllä '
+        + 'salamoi lähes joka yö.',
+      tehtava: {
+        kysymys: 'Mitä pöytävuoren nimi Auyán-tepui tarkoittaa pemonien '
+          + 'kielellä?',
+        vaihtoehdot: [
+          'Jumalten taloa',
+          'Sateen äitiä',
+          'Mustaa jokea',
+          'Kadonnutta polkua',
+        ],
+        oikea: 0,
+        fakta: 'Pöytävuoria kutsutaan Guayanan ylängöllä tepuiksi, ja niiden '
+          + 'nimet ovat pemon-kieltä. Auyán-tepui on niistä laajimpia.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaupungin keuhkot',
+          tiedosto: 'Abundante diversidad vegetal en la fila del Ávila.jpg',
+          teksti: 'Caracasilaiset kutsuvat Ávilaa kaupungin keuhkoiksi. '
+            + 'Vuori suojaa laaksoa saasteilta ja rakentamiselta, ja sen '
+            + 'huippu on kaupungin pohjoisviitta – mutta ennen kaikkea se '
+            + 'on kaupunkilaisten virkistysalue: rinteillä juostaan, '
+            + 'pyöräillään, kiivetään kallioille, telttaillaan ja '
+            + 'liu’utaan vaijereilla. Alkuperäiskielellä vuori on '
+            + 'Waraira Repano, ja korkein kohta Pico Naiguatá kohoaa 2 765 '
+            + 'metriin. Suojelualueella on dokumentoitu yli 500 lintulajia '
+            + '– runsas kolmannes koko maan linnustosta – noin 120 '
+            + 'nisäkäslajia, yli sata perhoslajia ja yli 1 800 kasvilajia.',
+          selite: 'Sammalten, saniaisten ja bromelioiden peittämät oksat '
+            + 'kertovat, että harjanteen läpi kulkevat pilvet kastelevat '
+            + 'metsän päivittäin.',
+          lahde: 'Arnaldo Noguera Sifontes, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'El Ávila National Park',
+        },
+        {
+          otsikko: 'Lentäjä joka etsi kultaa ja löysi putouksen',
+          tiedosto: 'KerepakupaiVená.jpg',
+          teksti: 'Guayanan ylängöllä kohoaa Auyán-tepui, pöytävuori, jonka '
+            + 'nimi tarkoittaa pemonien kielellä jumalten taloa. Sen '
+            + 'reunalta vesi putoaa 979 metriä, josta 807 metriä '
+            + 'yhtäjaksoisesti – lähes yhdeksäntoista kertaa Niagaran '
+            + 'putouksen korkeus. Paikalliset tunsivat putouksen kauan, '
+            + 'mutta ulkomaailma sai siitä tiedon vasta 16. marraskuuta '
+            + '1933, kun yhdysvaltalainen lentäjä Jimmie Angel lensi sen '
+            + 'yli kultamalmia etsiessään; putous nimettiin hänen mukaansa '
+            + 'Angelin putoukseksi. Tarkka korkeus mitattiin vasta '
+            + '13. toukokuuta 1949 yhdysvaltalaisen toimittajan Ruth '
+            + 'Robertsonin rahoittamalla retkikunnalla.',
+          selite: 'Vesipatsas syöksyy pöytävuoren punaruskealta seinämältä ja '
+            + 'sumuuntuu jo puolimatkassa kallion edessä.',
+          lahde: 'Stratokumulus, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Angel Falls',
+        },
+        {
+          otsikko: 'Taivas joka palaa ilman ukkosenjyrinää',
+          tiedosto: 'Catatumbo Lightning - Rayo del Catatumbo.jpg',
+          teksti: 'Barí-kansan kielessä Catatumbo tarkoittaa ukkosen taloa, '
+            + 'ja nimi on ansaittu: Maracaibo-järven länsipuolella '
+            + 'salamoi 140–160 yönä vuodessa, yhdeksän tuntia kerrallaan '
+            + 'ja parhaimmillaan neljäkymmentä kertaa minuutissa. Tiheys, '
+            + 'noin 250 salamaa neliökilometrille vuodessa, on maailman '
+            + 'suurin. Ilmiö on ollut tiedossa kauan: luonnontutkija '
+            + 'Alexander von Humboldt kuvaili sitä 1826, ja maantieteilijä '
+            + 'Agustín Codazzi kirjoitti 1841 sen ohjaavan merenkulkijoita '
+            + 'kuin majakka. Kaukaa katsottuna välähdykset näkyvät ilman '
+            + 'ääntä, koska matkaa on kymmeniä kilometrejä.',
+          selite: 'Kaksi salamaa iskee samaan aikaan järven takaiseen '
+            + 'metsänreunaan, ja vesi heijastaa niiden valon.',
+          lahde: 'Fernando Flores from Caracas, Venezuela, Wikimedia Commons '
+            + '(CC BY-SA 2.0)',
+          wiki: 'Catatumbo lightning',
+        },
+        {
+          otsikko: 'Musta lääke keisarin kihtiin',
+          tiedosto: 'Lago de Maracaibo. Pozos petroleros.jpg',
+          teksti: 'Kauan ennen porauslauttoja alkuperäiskansat keräsivät '
+            + 'maan pinnalle pursuavaa mustaa mene-tervaa lääkkeeksi, '
+            + 'valaistukseen ja kanoottien tiivistämiseen. Espanjalaiset '
+            + 'oppivat saman tempun: vuonna 1539 Venezuelasta laivattiin '
+            + 'Espanjaan yksi tynnyri öljyä keisari Kaarle V:n kihdin '
+            + 'hoitoon. Teollinen poraus alkoi 1910-luvulla, ja sen keskus '
+            + 'olivat Maracaibo-järven ympärillä ja alla olevat kentät, '
+            + 'joiden matalaan veteen nousi metsä poraustorneja. Vuoteen '
+            + '1928 mennessä Venezuela oli maailman suurin öljynviejä, ja '
+            + 'öljystä tuli maan tärkein vientituote. Valtion öljy-yhtiön '
+            + 'pääkonttori on Caracasissa.',
+          selite: 'Vanhassa valokuvassa Maracaibo-järven matalikolla seisoo '
+            + 'rivi ristikkorakenteisia poraustorneja puulaitureineen.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+          wiki: 'History of the Venezuelan oil industry',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Caracasissa musiikinopetus on julkinen laitos: valtion '
+        + 'rahoittama ohjelma on opettanut satojatuhansia lapsia '
+        + 'soittamaan orkesterissa.',
+      tehtava: {
+        kysymys: 'Kuka perusti El Sisteman vuonna 1975?',
+        vaihtoehdot: [
+          'José Antonio Abreu',
+          'Gustavo Dudamel',
+          'Teresa Carreño',
+          'Carlos Raúl Villanueva',
+        ],
+        oikea: 0,
+        fakta: 'Dudamel on ohjelmasta noussut kapellimestari, Carreño '
+          + '1800-luvun pianisti ja Villanueva arkkitehti – kaikki kolme '
+          + 'liittyvät kaupungin musiikkielämään, mutta perustaja oli '
+          + 'Abreu.',
+      },
+      nostot: [
+        {
+          otsikko: 'Yksitoista oppilasta parkkihallissa',
+          tiedosto: 'Centro de Acción Social por la Música de Fundamusical Simón Bolívar Caracas Venezuela 5.jpg',
+          teksti: 'Vuonna 1975 José Antonio Abreu aloitti yhdentoista '
+            + 'oppilaan kanssa maanalaisessa parkkihallissa. Ajatus oli '
+            + 'yksinkertainen: lapsi ei opettele ensin soittamaan ja mene '
+            + 'sitten orkesteriin, vaan aloittaa orkesterissa heti '
+            + 'ensimmäisestä päivästä. Yhdessä soittaminen opettaa '
+            + 'kurinalaisuutta, ryhmätyötä ja kuulumista. Ohjelman '
+            + 'tunnuslause on ollut alusta asti Tocar y Luchar, soita ja '
+            + 'taistele. Virallisilta luvuiltaan El Sistemassa oli 2015 '
+            + 'yli 400 musiikkikeskusta ja 700 000 nuorta soittajaa, ja '
+            + 'sen esimerkin mukaan on perustettu ohjelmia yli '
+            + 'kuudessakymmenessä maassa.',
+          selite: 'Musiikin kansallisen keskuksen betonijulkisivulta riippuu '
+            + 'keltainen kineettinen pallo, joka on koottu tuhansista '
+            + 'ohuista tangoista.',
+          lahde: 'Warairarepano&Guaicaipuro, Wikimedia Commons (CC0)',
+          wiki: 'El Sistema',
+        },
+        {
+          otsikko: 'Orkesteri joka lähti Caracasista maailmalle',
+          tiedosto: 'Teatro Teresa Carreño, vista frontal del conjunto arquitectónico.JPG',
+          teksti: 'Ohjelman huipulle syntyi 12. helmikuuta 1978 Simón '
+            + 'Bolívar -sinfoniaorkesteri. Sen taiteellisena johtajana on '
+            + 'vuodesta 1999 toiminut Gustavo Dudamel, ja sen edessä ovat '
+            + 'seisoneet muun muassa Claudio Abbado, Simon Rattle ja Daniel '
+            + 'Barenboim. Elokuussa 2007 orkesteri debytoi Lontoon BBC '
+            + 'Promsissa ja esiintyi samana vuonna Carnegie Hallissa; '
+            + 'ylimääräisenä soitetusta Bernsteinin Mambosta tuli sen '
+            + 'tunnusnumero. Kotinsa orkesteri vaihtoi 2007 Teresa Carreño '
+            + '-kulttuurikeskuksesta viereiseen musiikin keskukseen. '
+            + 'Soittajia on 180, eikä se ole enää nuoriso-orkesteri: '
+            + 'vuoteen 2011 mennessä keski-ikä oli noussut yli '
+            + 'kahdenkymmenen.',
+          selite: 'Teresa Carreño -kulttuurikeskuksen betoniset kattolevyt '
+            + 'kelluvat pilarien varassa kuin päällekkäiset laatat.',
+          lahde: 'Angel Castillo, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Simón Bolívar Symphony Orchestra',
+        },
+        {
+          otsikko: 'Sali jonka katossa kelluu pilviä',
+          tiedosto: 'UCV 2015-080a Aula Magna.jpg',
+          teksti: 'Kaupungin kuuluisin konserttisali on yliopiston Aula '
+            + 'Magna, joka vihittiin 2. maaliskuuta 1954. Sen akustiikka '
+            + 'oli aluksi huono, ja ratkaisu löytyi taiteesta: Alexander '
+            + 'Calderin suunnittelemat kaarevat levyt, Nubes eli pilvet, '
+            + 'siirrettiin ulkotilasta salin kattoon, jossa ne sekä '
+            + 'koristavat että ohjaavat ääntä. Suurin niistä on 80 '
+            + 'neliömetriä. Sali kuuluu Ciudad Universitaria de Caracasiin, '
+            + 'jonka Carlos Raúl Villanueva suunnitteli ja jota '
+            + 'rakennettiin 1944–1967; Unesco otti kampuksen '
+            + 'maailmanperintöluetteloon vuonna 2000 ja nimesi pilvet '
+            + 'erikseen.',
+          selite: 'Aula Magnan kattoon on ripustettu kymmeniä värillisiä '
+            + 'kaarevia levyjä, jotka kelluvat katsomon yllä kuin pilvet.',
+          lahde: 'GermanX, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'University City of Caracas',
+        },
+        {
+          otsikko: 'Kansallistanssi jota soitetaan harpulla',
+          tiedosto: 'Músicos tocando instrumentos nativos.jpg',
+          teksti: 'Konserttisalien rinnalla elää vanhempi musiikki. Joropo '
+            + 'syntyi Venezuelan ja Kolumbian llanos-tasangoilla noin '
+            + 'kolmesataa vuotta sitten, ja siinä yhdistyvät afrikkalaiset, '
+            + 'eurooppalaiset ja alkuperäiskansojen ainekset. Sitä '
+            + 'soitetaan harpulla, nelikielisellä cuatrolla ja maracaseilla, '
+            + 'ja se on sekä tanssi että sävellaji. Venezuelan viralliseksi '
+            + 'kansallistanssiksi ja -musiikiksi joropo julistettiin 1882 – '
+            + 'yhdeksän vuotta isoisän vierailun jälkeen. Sen tunnetuin '
+            + 'kappale Alma Llanera sai ensiesityksensä Caracasissa '
+            + '19. syyskuuta 1914, ja sitä kutsutaan maan toiseksi '
+            + 'kansallislauluksi. Unesco otti joropon aineettoman '
+            + 'kulttuuriperinnön luetteloon 2025.',
+          selite: '1800-luvun kaiverruksessa katumuusikot soittavat harppua '
+            + 'ja rumpua talon kuistin edessä ohikulkijoiden pysähtyessä '
+            + 'kuuntelemaan.',
+          lahde: 'Ramón Bolet Peraza / Antón Goering, Wikimedia Commons (PD)',
+          wiki: 'Joropo',
+        },
+      ],
+    },
+  ],
 };

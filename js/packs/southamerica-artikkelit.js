@@ -614,4 +614,73 @@ export const SOUTHAMERICA_ARTIKKELIT = {
       + 'kohtaamiseen, jokisaaristoon tai rannalle, joka on olemassa vain '
       + 'elo-marraskuussa.',
   },
+  /*
+   * CARACAS (24.8.2026). Avain on wiki-otsikko 'Caracas', jonka
+   * js/packs/southamerica.js antaa kaupungille sekä wiki- että
+   * näyttönimeksi (rivi 109). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain caracas): lähdeaineistona
+   * docs/mantereet-tyoaineisto/faktapohja-caracas.md ja sen riippumaton
+   * tarkistus (tarkistus-caracas.md, haettu committista 5e31d2cf), joka
+   * voittaa ristiriidassa, ja jokainen väite on luettu uudestaan
+   * en-Wikipedian raakatekstistä 24.8.2026.
+   *
+   * ETÄISYYS MERELLE on tässä 15 km, ei "reilu kymmenen": tarkistuksen
+   * pakollinen korjaus 1. "Caracas"-artikkelin johdanto sanoo "separated
+   * from the Caribbean coast by a roughly 15 km expanse of El Ávila
+   * National Park". Korkeusluvut (870–1 043 m, ydin n. 900 m) ovat
+   * saman artikkelin Geography-osiosta, ja ne kerrotaan tässä omassa
+   * yhteydessään — eivät visan kysymyksen 1 fakta-kentän sanamuodossa,
+   * jossa 900 metriä ja meren etäisyys ovat samassa virkkeessä.
+   *
+   * VUODEN 1873 KULMA: matkavuosi osuu Antonio Guzmán Blancon
+   * ENSIMMÄISELLE, seitsenvuotiselle kaudelle (27.4.1870–27.2.1877,
+   * infoboksi term_start2/term_end2). Bolívarin ratsastajapatsasta ei
+   * vielä ollut — se paljastettiin 7.11.1874 — ja tämä sanotaan
+   * introssa suoraan, koska se on lehden historia-sivun ankkuri.
+   * Nykypolitiikka, talouskriisi ja väkivalta on jätetty kokonaan pois
+   * (tilauksen tiukin rajaus); Bolívar on historiallinen henkilö.
+   */
+  Caracas: {
+    intro: 'Caracas on Venezuelan pääkaupunki ja maan suurin kaupunki. Se on '
+      + 'ahtautunut kapeaan laaksoon rannikkovuoriston sisään, 870 ja '
+      + '1 043 metrin välille; historiallinen keskusta on noin 900 '
+      + 'metrissä. Karibianmeri on vain viidentoista kilometrin '
+      + 'päässä, mutta väliin nousee lähes 2 200 metriä korkea vuorimuuri, '
+      + 'jota kaupunkilaiset kutsuvat Ávilaksi ja kaupungin keuhkoiksi.'
+      + '\n\n'
+      + 'Diego de Losada perusti kaupungin nimellä Santiago de León de '
+      + 'Caracas heinäkuussa 1567, kun päällikkö Guaicaipuron vastarinta '
+      + 'oli pitänyt espanjalaiset poissa laaksosta vuosia. **Täällä '
+      + 'syntyi 1783 Simón Bolívar**, joka johti itsenäistymissodat '
+      + 'Espanjaa vastaan. Vuoden 1812 maanjäristys tuhosi kaupungin '
+      + 'lähes kokonaan, ja 1900-luvun öljyvuosina se kasvoi laakson '
+      + 'täydeltä ja levisi rinteille.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Caracas oli työmaa: presidentti Antonio '
+      + 'Guzmán Blancon ensimmäisellä kaudella pääaukiosta tehtiin '
+      + 'ranskalaistyylinen puisto, kongressipalatsin rakentaminen alkoi '
+      + 'ja kansallinen hautaholvi perustettiin. **Bolívarin '
+      + 'ratsastajapatsasta ei vielä ollut** – se paljastettiin aukiolla '
+      + 'vasta marraskuussa 1874.',
+    teksti: 'Caracas on Venezuelan pohjoisosassa, rannikkovuoriston sisään '
+      + 'jäävässä laaksossa. Kaupungin halki virtaa Guaire-joki lännestä '
+      + 'itään, ja pohjoisreunaa vartioi Ávila eli Waraira Repano, jonka '
+      + 'korkein huippu kohoaa 2 765 metriin. Asukkaita on yli kolme '
+      + 'miljoonaa ja koko kaupunkiseudulla yli viisi miljoonaa.'
+      + '\n\n'
+      + 'Espanjalaiset perustivat kaupungin 1567. Kiirastorstaina 1812 '
+      + 'maanjäristys tuhosi kaupungin niin laajalti, että uuden '
+      + 'pääkaupungin perustamista ehdotettiin. Itsenäistymisen jälkeen '
+      + 'kaupunki sai '
+      + 'nykyilmeensä ytimen 1870-luvulla, kun Guzmán Blanco rakennutti '
+      + 'Capitolion, Panteón Nacionalin ja uuden pääaukion. Öljyn '
+      + 'löytyminen 1900-luvun alussa teki siitä miljoonakaupungin.'
+      + '\n\n'
+      + 'Nykyään kaupungissa kulkee 1983 avattu metro, ja vuoren harjalle '
+      + 'nousee köysirata, joka avattiin 1955 ja kunnostettiin 2000-luvun '
+      + 'alussa. Kaakossa on Carlos Raúl Villanuevan suunnittelema Ciudad '
+      + 'Universitaria, Unescon maailmanperintökohde vuodesta 2000. '
+      + 'Musiikinopetusohjelma El Sistema ja siitä noussut Simón Bolívar '
+      + '-sinfoniaorkesteri toimivat kaupungissa, ja arkiruoka on arepa.',
+  },
 };
