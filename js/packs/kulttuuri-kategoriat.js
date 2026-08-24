@@ -70657,4 +70657,1278 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * CHRISTCHURCH (lauta oceania, kaupunki-id christchurch) — kaupunki-
+   * lehti 24.8.2026.
+   *
+   * LÄHTEET. Työpohjana docs/mantereet-tyoaineisto/faktapohja-
+   * christchurch.md ja sen rinnalla RIIPPUMATON TARKISTUS docs/
+   * mantereet-tyoaineisto/tarkistus-christchurch.md, joka VOITTAA
+   * faktapohjan ristiriidoissa. Jokainen tähän lohkoon menevä väite on
+   * lisäksi haettu uudestaan en-Wikipedian raakateksteistä 24.8.2026
+   * (action=raw, NODE_USE_ENV_PROXY=1): Christchurch, 2010 Canterbury
+   * earthquake, 2011 Christchurch earthquake, Christ Church Cathedral
+   * Christchurch, Cardboard Cathedral, Canterbury Association, Ngāi
+   * Tahu, Ngāi Tahu Claims Settlement Act 1998, Hagley Park
+   * Christchurch, Christchurch Botanic Gardens, Avon River / Ōtākaro,
+   * Riccarton New Zealand, Southern Alps, Canterbury Plains,
+   * Christchurch Arts Centre.
+   *
+   * TARKISTUKSEN KOLME PAKOLLISTA KORJAUSTA ON TEHTY, KAIKKI H2:EEN.
+   *
+   *   (1) JÄRISTYKSEN KESTO. Faktapohjan H2 otsikoitiin "Kolmetoista
+   *       sekuntia joka muutti kaiken". Lukua kolmetoista ei ole
+   *       lähteessä. En-Wikipedia "2011 Christchurch earthquake":
+   *       "While the initial quake only lasted for approximately 10
+   *       seconds, the damage was severe because of the location and
+   *       shallowness of the earthquake's focus". Otsikko on nyt
+   *       "Kymmenen sekuntia joka muutti kaiken" ja leipäteksti sanoo
+   *       "noin kymmenen sekuntia" — lähteen oma varaus mukana.
+   *
+   *   (2) EPISENTRUMIN SIJAINTI. Faktapohjan H2 sanoi järistyksen
+   *       osuneen "keskikaupungin alle". Sama artikkeli sanoo:
+   *       "centred {{convert|6.7|km}} south-east of the central
+   *       business district". Nosto sanoo nyt "keskustasta 6,7
+   *       kilometriä kaakkoon". Faktapohja oli tässä myös itsensä
+   *       kanssa ristiriidassa: sen oma Faktat-rivi sanoi oikein
+   *       "keskikaupungin lähellä". Keskustan ALLA oli eri tapahtuma,
+   *       joulukuun 2010 jälkijäristysparvi, ja se kerrotaan omana
+   *       asianaan nostossa H1 ("2010 Canterbury earthquake": 26.12.
+   *       2010 parvi, "many centred directly under the city").
+   *
+   *   (3) 1 240 PURKUA. Faktapohjan H2 kutsui niitä "historiallisiksi
+   *       rakennuksiksi". Lähde sanoo vain: "As of February 2015,
+   *       there had been 1240 demolitions within the bounds of the
+   *       Four Avenues since the September 2010 earthquakes" — luku
+   *       kattaa kaikki purut eikä erittele suojeltujen osuutta.
+   *       Nosto kertoo luvun niin kuin lähde sen sanoo ja sanoo
+   *       lukijalle ääneen, ettei erittelyä ole.
+   *
+   * TARKISTUKSEN HUOMIOT (ei pakollisia) KÄSITELTIIN NÄIN.
+   *   (4) "Canterburyn tasanko on maan laajin ja tärkein
+   *       maatalousalue" EI löydy lähteistä, ja väite on POISTETTU.
+   *       En-Wikipedia "Canterbury Plains" kertoo vain geologian
+   *       (jäätiköiden kuljettama sora, punokset jokiuomissa) ja
+   *       "Christchurch" sanoo Canterburyn viljelystä vain: "Cropping
+   *       has always been important in the Canterbury Region. Wheat
+   *       and barley and various strains of clover and other grasses
+   *       for seed exporting have been the main crops." Oppaan jakso 2
+   *       käyttää täsmälleen tätä. Faktapohjan mainitsemat vuoden 2002
+   *       viljaosuudet (60,7 % vehnästä jne.) eivät ole enää
+   *       artikkelissa, joten niitä ei käytetä.
+   *   (5) KĀTI MĀMOEN SULAUTUMINEN. Tarkistus epäili muotoilua, mutta
+   *       en-Wikipedia "Christchurch" -artikkelin JOHDANTO sanoo sen
+   *       suoraan: waitaha "were invaded by Kāti Māmoe in the
+   *       sixteenth century, and then were absorbed by Kāi Tahu a
+   *       century later". Nosto K2 käyttää tätä lausetta ja lisää
+   *       lähteen omat tarkennukset (waitaha 1200-luvun puolivälistä,
+   *       suoseudun asutus, Kaiapoi Pā kauppakeskuksena).
+   *   (6) ETELÄSAARI. Tarkistus oli oikeassa: maininta on jo olemassa,
+   *       eikä sitä toisteta. Eteläsaari sanotaan kerran ARTIKKELIT-
+   *       introssa ja kerran Matkailijalle-kappaleessa, ei useammin.
+   *
+   * OMAT LÖYDÖT, JOISSA FAKTAPOHJA ON VANHENTUNUT (lähde luettiin
+   * uudestaan 24.8.2026 ja lehti seuraa lähdettä):
+   *   - "Cyclopolis"-noston 25 prosentin osuus maan pyöräilevistä
+   *     työmatkalaisista EI OLE enää Christchurch-artikkelissa. Se on
+   *     jätetty pois; 30 prosentin kasvu 2016–2023, yli 3,6 miljoonaa
+   *     havaittua pyöräilijää ja Major Cycle Routen 100 km löytyvät
+   *     yhä ja ovat mukana.
+   *   - Pahvikatedraalin "96 pahviputkea", "700 istumapaikkaa" ja "50
+   *     vuoden käyttöikä" EIVÄT ole enää artikkelissa. Lähde sanoo nyt
+   *     "over 90 large cardboard tubes", halkaisija 60 cm, katto
+   *     polykarbonaattia, kahdeksan merikonttia, korkeus 21 m alttarin
+   *     yläpuolella, hinta NZ$5 milj., avautui yleisölle 6.8.2013 ja
+   *     vihittiin 15.8.2013. Nosto H4 käyttää näitä.
+   *   - Katedraalin synodin "55 prosentin äänestys 2017" EI OLE enää
+   *     artikkelissa. H3 ei siis mainitse äänestystä; kustannusten
+   *     nousu 104 miljoonasta (2017) 248 miljoonaan (2024) ja
+   *     Re:Opening-vaiheistus (rakentaminen alkoi 2026, valmis 2030)
+   *     ovat, koska ne ovat.
+   *   - Sään pakkasluvut ovat muuttuneet: faktapohjan "50 pakkasyötä
+   *     lentokentällä, 23 keskustassa" ei ole enää tekstissä, vaan
+   *     "There are on average 80 days of ground frost per year".
+   *     Oppaan jakso 5 käyttää lukua 80.
+   *   - Kāi tahun aluenimi "Karaitiana" EI OLE enää artikkelissa.
+   *     Se on jätetty pois K2:sta.
+   *   - Te Rūnanga o Ngāi Tahun kotipaikaksi lähde sanoo vain
+   *     "Christchurch and Invercargill", ei Addingtonia. Kaupungin-
+   *     osaa ei siis mainita.
+   *   - Tammikuun 22,6 astetta ja heinäkuun 10,9 astetta ovat lähteen
+   *     mukaan keskimääräisiä YLIMPIÄ päivälämpötiloja, eivät
+   *     keskilämpötiloja. Opas sanoo sen niin.
+   *
+   * WIKIPEDIAN SISÄINEN RISTIRIITA, JOKA KIRJOITETTIIN AUKI:
+   * helmikuun 2011 järistyksen magnitudi. "2011 Christchurch
+   * earthquake" merkitsee sen johdantoon muodossa {{M|w|6.2}}
+   * ({{M|l|6.3}}) eli momenttimagnitudi 6,2 ja paikallismagnitudi
+   * 6,3, kun taas leipäteksti ja "Christ Church Cathedral,
+   * Christchurch" puhuvat toistuvasti 6,3 magnitudin järistyksestä.
+   * Nosto H2 kertoo lukijalle molemmat luvut ja sen, kumpi on kumpi,
+   * eikä valitse puolestaan (v925/v932/v937 -ennakkotapaus).
+   * Syyskuun 2010 järistyksen uhriluvusta käytetään dedikoidun
+   * artikkelin tarkempaa lukua (2 kuollutta, yli 1 700
+   * loukkaantunutta), koska Christchurch-pääartikkelin "no direct
+   * fatalities" on samasta tapahtumasta epätarkempi.
+   *
+   * SISÄLTÖLINJAUS. Kohderyhmä on 13 vuotta täyttäneet ja aikuiset.
+   * 15.3.2019 moskeija-isku on JÄTETTY KOKONAAN POIS, vaikka
+   * en-Wikipedia käsittelee sitä laajasti sekä Christchurch- että
+   * Riccarton-artikkelissa; poisjättö on tietoinen ja koskee myös
+   * kuvavalintoja (Hagley Parkin kukkakuvat Deans Avenuen varrelta
+   * hylättiin tästä syystä). Maanjäristykset kerrotaan tapahtumina ja
+   * lukuina toteavasti ilman uhrien kärsimyksen kuvailua, ja
+   * painopiste on jälleenrakennuksessa ja siinä, mitä kaupungissa on
+   * nyt: Pahvikatedraali, Te Kaha, punaisen vyöhykkeen puistohanke,
+   * pyörätiet, Ōtākaro-jokivyöhyke. Kāi tahu (Ngāi Tahu) esiintyy
+   * elävänä nykykansana omalla nimellään (pilari 3): Te Rūnanga o
+   * Ngāi Tahu on nykyinen hallintoelin, Canterburyssa on yhdeksän
+   * rūnangaa, ja sekä Ōnukun että Wairewan marae ovat kuvissa
+   * nykyisinä paikkoina. Ei nykysotaa, ei nykypolitiikkaa.
+   *
+   * VUOSI 1873 ON LEHDEN HELMI. ChristChurch-katedraalin rakennustyö
+   * käynnistyi uudelleen juuri 1873, kun Benjamin Mountfort otti
+   * hankkeen johtoonsa kahdeksan vuoden rahapulakatkon jälkeen. Tämä
+   * on historia-sivun nosto H3, ja se sanotaan ääneen isoisän matkan
+   * vuodeksi.
+   *
+   * KULTTUURIVISA (js/packs/oceania-questions.js, kohta christchurch,
+   * viisi kysymystä) — PÄÄTOIMITTAJAN SÄÄNTÖ: vastaus LÖYTYY lehden
+   * teksteistä mutta EI VISAN OMALLA SANAMUODOLLA. Kysymykset käytiin
+   * läpi myös sivujen johdantoja vasten, ei vain nostoja vasten.
+   *   1. saari -> "Eteläsaaren suurin kaupunki" (ARTIKKELIT-intro ja
+   *      Matkailijalle-kappale).
+   *   2. Eteläiset Alpit -> oppaan jakso 2. Visan fakta sanoo
+   *      "läntinen rinne on maailman sateisimpia paikkoja, itäinen
+   *      taas kuivaa lakeutta"; opas kertoo saman lähteen omilla
+   *      millimetreillä (3 000 / 15 000 / 1 000 mm) eikä toista
+   *      sanamuotoa.
+   *   3. Canterburyn tasanko -> oppaan jakso 2 ja kaupunki-sivun
+   *      johdanto. Visan fakta kutsuu tasankoa maan tärkeimmäksi
+   *      maatalousalueeksi; lehti EI toista sitä, koska lähde ei tue
+   *      sitä (ks. huomio 4 yllä), vaan kertoo viljasta ja
+   *      siemenheinistä.
+   *   4. vuoden 2011 järistys -> nostot H2, H3 ja H4. Visan fakta
+   *      sanoo kaupunkia rakennetun uudelleen "matalammaksi ja
+   *      joustavammaksi"; lehti käyttää eri kulmaa (purkuluvut,
+   *      pahviputket, uusi stadion).
+   *   5. puutarhakaupunki -> nosto L1 ja luonto-sivun johdanto.
+   * MINITEHTÄVÄT (kaksi, yksi per teemasivu) eivät toista visaa, ja
+   * kummankin vastaus on SAMAN SIVUN nostotekstissä: katedraalin
+   * kahdeksan vuoden katko H3:ssa ja Ōtākaron merkitys L2:ssa.
+   *
+   * OCEANIA_FACTS-KOHDAN `christchurch` NELJÄÄ RIVIÄ EI TOISTETA
+   * SANAMUODOLTAAN: saapumiskortti sanoo Eteläsaaren suurimman
+   * kaupungin kärsineen järistyksissä, Eteläisten Alppien kohoavan
+   * lännessä satoine jäätikköineen, Canterburyn lakeuden olevan maan
+   * laajin tasanko ja isoisän ihmettelevän englantilaista kaupunkia
+   * vuorten alla. Lehti kertoo samat asiat toista kautta: tarkat
+   * päivämäärät ja purkuluvut, Aoraki 3 724 m ja yli 3 000 jäätikköä
+   * inventaarin mukaan, tasangon soraperäinen synty ja punokselliset
+   * joet, ja Canterbury-yhdistyksen ihannesiirtokunnan tarina.
+   * HUOM: faktarivi väittää Canterburyn lakeutta maan LAAJIMMAKSI
+   * tasangoksi; en-Wikipedia "Canterbury Plains" ei sano niin, joten
+   * lehti ei toista väitettä missään.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty tässä
+   * erässä. Oppaan jakso 5 nojaa siis en-Wikipedian Christchurch-
+   * artikkelin Climate-osioon ja SANOO SEN ÄÄNEEN — Samarkandin,
+   * Perthin, Vancouverin ja Adelaiden malli.
+   *
+   * ENNEN JA NYT -PARIA EI LISÄTTY: js/packs/oceania-valokuvat.js:n
+   * christchurch-lohkossa on jo valmis pari (Katedraalitori 1905 ja
+   * sama tori 2023), ja ennenNyt korvaisi etusivun kansikuvat, jotka
+   * on tässä lehdessä valittu juuri siihen paikkaan. Samasta syystä
+   * yhtään valokuvataulun tiedostonimeä (Cathedral Square, 1905.jpg;
+   * Cardboard Cathedral, Christchurch, New Zealand.jpg; Punting on
+   * the Avon. Christchurch NZ (52897685952).jpg; Riverside Market,
+   * Christchurch City, New Zealand.jpg; Christchurch Cathedral
+   * Square.jpg) ei käytetä täällä uudestaan.
+   *
+   * SIVU-ID:T ovat kaikki talon vakioaiheita: `kaupunki`, `historia`
+   * ja `luonto`. Historia-sivun näkyvä nimi on "Maanjäristykset ja
+   * jälleenrakennus", koska AIHE_IKONIT-taulussa ei ole järistys-
+   * ikonia ja `historia` on lähin vakioaihe (kaupunkilehti.md:
+   * teemasivu näyttää kategoriatason nimen).
+   *
+   * KUVAT: 23 kuvaa, kaikki Wikimedia Commonsista. Lisenssi, tekijä
+   * ja Restrictions luettiin rajapinnan extmetadatasta, ja jokainen
+   * valittu kuva KATSOTTIIN SILMIN 900 pikselin esikatseluna. Kaikki
+   * ovat vähintään 1 200 px leveitä, lisenssit ovat PD, CC0, CC BY
+   * tai CC BY-SA, eikä yhdelläkään ole Restrictions-merkintää.
+   *
+   * KUVAHYLKÄYKSET SYINEEN: "Ōnuku Marae 1305.jpg" (Willem van
+   * Valkenburg) — muuten paras Ōnuku-kuva, mutta oikeassa alareunassa
+   * on kuvaan poltettu vesileima "CC-BY Willem van Valkenburg";
+   * "Black Map, Christchurch.jpg" (13 631 px) — hylättiin
+   * repeytyneen ja tahraisen kuntonsa takia toisen, luettavan
+   * Jollie-kopion hyväksi; "Cherry Blossoms Christchurch NZ - Flickr
+   * - Bernard Spragg.jpg" — Harper Avenuen kirsikkakuja on kaunis,
+   * mutta polulla kävelevän ryhmän kasvot voisivat olla luettavissa
+   * täydessä 3 048 pikselin koossa; "Cathedral Square in 2024.jpg" —
+   * harmaa sää, tyhjä kiveys eikä katedraalia näy lainkaan;
+   * "Christchurch City Mall Red Zone Demolition.jpg" — etualan
+   * aitarivin takana on ihmisiä, joista yhden kasvot erottuvat;
+   * "Chch Wikicon 2025 Friday Photowalk PA25.jpg" (New Regent Street
+   * yöllä) — etualan pöydässä istuvan miehen kasvot ovat
+   * luettavissa; "Deloitte Building and River Avon and sculpture
+   * Stay" — Gormleyn veistos näkyy, mutta kuvan hallitsevin elementti
+   * on vuokralaisen logo koko julkisivun levyisenä; "Avon River -
+   * Christchurch, NZ - DSC02337.jpg" — rannalle heitetty
+   * sähköpotkulauta; "Christchurch, city centre, New Zealand
+   * (23).JPG" — pelkkiä kaivinkoneita taivasta vasten, ei kaupunkia;
+   * "Tūranga Christchurch Library.jpg" — sisäänkäynnin edessä seisoo
+   * yksittäinen ihminen liian lähellä kameraa.
+   *
+   * AIHETOISTO ON HARKITTU JA PERUSTELTU, YKSI KOKONAISUUS: Avon-
+   * joki esiintyy neljässä kuvassa. Se on kaupungin selkäranka ja
+   * kulkee jokaisen tässä lehdessä käsitellyn paikan läpi, ja
+   * kuvat ovat neljä eri jokiosuutta neljästä eri syystä —
+   * avauskuvana syksyinen Hagley Park (puisto), nostossa L2
+   * keskustan jälleenrakennettu jokivyöhyke (nimen tarina), nostossa
+   * L4 punaisen vyöhykkeen tyhjä nauha (tuhon jälkeinen puisto) ja
+   * nostossa L1 kasvitieteellinen puutarha joen mutkassa (1863).
+   * Yksikään tiedostonimi ei toistu.
+   *
+   * KUVATEKSTIT NOUDATTAVAT OMISTAJAN 20.8.2026 LINJAUSTA: selite
+   * kertoo KOHTEESTA eikä kuvaile kuvaa, ja se on YHDEN VIRKKEEN
+   * mittainen. Nosto K1:n kartassa näkyvä arkistonumero B.M. 273
+   * selitetään kuvatekstissä reseptin sallimalla tavalla.
+   * Matkailijalle-etusivukuva on tuore (toukokuu 2025) ja MALTILLINEN
+   * PYSTY (3060x4080, w/h 0,75).
+   */
+  christchurch: [
+    {
+      id: 'kaupunki',
+      nimi: 'Christchurch',
+      johdanto: 'Canterbury-yhdistys piirsi Christchurchin Lontoossa jo '
+        + 'ennen kuin kukaan asui täällä: katedraali keskelle, korkeakoulu '
+        + 'viereen, ruutukaava Canterburyn tasangolle. Isoisän matkan '
+        + 'aikoihin asukkaita oli reilut 14 000.',
+      kansikuvat: [
+        {
+          tiedosto: 'Christchurch viewed from the Port Hills, 2025.jpg',
+          selite: 'Port Hillsin Summit Road on ainoa paikka, josta koko '
+            + 'kaupungin näkee kerralla tasangon päällä.',
+          lahde: 'Christchurch City Council, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: '02-01-2025-Central Christchurch and Tūranga library.jpg',
+          selite: 'Keskustan uusi kortteliluonne syntyi jälleenrakennuksessa, '
+            + 'ja sen tunnetuin talo on kirjasto Tūranga.',
+          lahde: 'ZNDave, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Christchurch Skyline 2015.jpg',
+          selite: 'Christchurchin siluetti oli 2010-luvun puolivälissä '
+            + 'enemmän nostureita kuin taloja.',
+          lahde: 'Francis Vallance (Heritage Warrior), Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleiskuvaa kolmesta eri suunnasta —
+       * puistosta joen tasalta, ilmasta idästä aamuhämärässä ja
+       * keskustan jokivarresta syksyllä. Yksikään ei ole minkään noston
+       * aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Autumn Hagley Park. (50652045977).jpg',
+          selite: 'Hagley Park on 164,6 hehtaarin kokoinen ja kaupungin '
+            + 'suurin yhtenäinen viheralue.',
+          lahde: 'Bernard Spragg. NZ from Christchurch, New Zealand, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Aerial of Christchurch, New Zealand.jpg',
+          selite: 'Eteläiset Alpit sulkevat horisontin Christchurchin '
+            + 'takana koko lännen laajuudelta.',
+          lahde: 'jnimmo, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Avon River with Christchurch Convention Centre Precinct, Christchurch, New Zealand.jpg',
+          selite: 'Christchurchin kongressikortteli on Avon-joen varrella '
+            + 'keskustassa.',
+          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaupunki joka piirrettiin ennen kuin se oli olemassa',
+          tiedosto: 'Black Map Christchurch 1850.jpg',
+          teksti: 'Canterbury-yhdistys perustettiin Lontoossa 27. maaliskuuta '
+            + '1848. Sen jäseninä oli parlamentaarikkoja, aatelisia ja '
+            + 'anglikaanikirkon johtajia, ja moottoreina Edward Gibbon '
+            + 'Wakefield ja John Robert Godley. Tarkoitus oli pystyttää '
+            + 'Uuteen-Seelantiin kokonainen siirtokunta kerralla: maakunnan '
+            + 'nimeksi Canterbury, pääkaupungin nimeksi Christchurch. '
+            + 'Charlotte Jane ja Randolph laskivat ankkurin Lyttelton '
+            + 'Harbouriin 16. joulukuuta 1850, Sir George Seymour seuraavana '
+            + 'päivänä ja Cressy 27. joulukuuta — noin 750 siirtolaista. '
+            + 'Kuninkaallinen patenttikirje teki Christchurchistä kaupungin '
+            + '31. heinäkuuta 1856, maan ensimmäisen.',
+          selite: 'Edward Jollien maaliskuussa 1850 mittaama Plot of '
+            + 'Christchurch on kaupungin alkuperäinen ruutukaava, ja sen '
+            + 'kulman merkintä B.M. 273 on arkiston oma numero Black Map '
+            + '-kokoelmassa.',
+          lahde: 'Edward Jollie, Wikimedia Commons (PD)',
+          wiki: 'Canterbury Association',
+        },
+        {
+          otsikko: 'Kolme kansaa ennen ensimmäistä laivaa',
+          tiedosto: 'Tāngatahara statue at Wairewa Marae.jpg',
+          teksti: 'Nykyisen Christchurchin seutu oli 1200-luvun puolivälistä '
+            + 'waitahan maata; he asuttivat suoseutua ja sen soiden '
+            + 'tilkkutäkkiä. Kāti māmoe valtasi alueen 1500-luvulla, ja kāi '
+            + 'tahu sulautti heidät sata vuotta myöhemmin itseensä. Ōtautahi '
+            + 'oli kausiasuttu paikka, ja seudun suuri kauppakeskus oli '
+            + 'Kaiapoi Pā pohjoisempana. Nimi Ōtautahi tarkoittaa Tautahin '
+            + 'paikkaa ja viittaa täsmälleen yhteen kohtaan Avon-joen '
+            + 'varrella keskustassa; koko kaupungin māorinkieliseksi nimeksi '
+            + 'se otettiin vasta 1930-luvulla.',
+          selite: 'Wairewan marae Banks Peninsulalla on yksi kāi tahun '
+            + 'yhdeksästä Canterburyn rūnangasta, ja sen pihalla seisoo '
+            + 'vuonna 1900 paljastettu muistopatsas päällikkö '
+            + 'Tāngataharalle.',
+          lahde: 'Herewhy, Wikimedia Commons (CC0)',
+          wiki: 'Christchurch',
+        },
+        {
+          otsikko: 'Cyclopolis, kaupunki joka polki',
+          tiedosto: 'Christchurch estuary on the Rapanui Shag Rock cycleway.jpg',
+          teksti: 'Tasainen maasto teki Christchurchistä pyöräilykaupungin '
+            + 'heti alusta, ja 1900-luvun taitteessa sillä oli lempinimi '
+            + 'Cyclopolis. Mark Twain kuvasi kaupunkia vuonna 1895 paikaksi, '
+            + 'jossa puolet väestä ajaa polkupyörällä ja toinen puoli on '
+            + 'kiireisenä väistelemässä heitä. Perintö palasi maanjäristysten '
+            + 'jälkeen: Major Cycle Route -ohjelma tähtää sataan kilometriin '
+            + 'uusia pyöräteitä, pyörämatkat kasvoivat 30 prosenttia vuosina '
+            + '2016–2023, ja laskentapisteet havaitsivat kahdentoista '
+            + 'kuukauden aikana yli 3,6 miljoonaa pyöräilijää.',
+          selite: 'Rapanui–Shag Rock -pyöräreitti seuraa Christchurchin '
+            + 'suiston rantaa Redcliffsin kohdalla.',
+          lahde: 'TinaVerschoor, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Christchurch',
+        },
+        {
+          otsikko: 'Anteeksipyyntö joka luettiin Akaroan lähellä',
+          tiedosto: 'Onuku - Noho Marae (1).jpg',
+          teksti: 'Vuosina 1844–1864 kāi tahu luovutti Kruunulle yli 34,5 '
+            + 'miljoonaa eekkeriä maata 14 750 punnalla — kuusi sadasosaa '
+            + 'penniä eekkeriltä. Suurin yksittäinen kauppa oli Kempin '
+            + 'sopimus 1848. Uuden-Seelannin parlamentti sääti Ngāi Tahu '
+            + 'Claims Settlement Act -lain 1998; se kirjasi Kruunun '
+            + 'anteeksipyynnön ja 170 miljoonan dollarin taloudellisen '
+            + 'hyvityksen, ja se palautti kymmenille paikoille kaksikieliset '
+            + 'nimet. Kuninkaallinen hyväksyntä tuli 1. lokakuuta 1998, ja '
+            + 'pääministeri Jenny Shipley luki anteeksipyynnön itse '
+            + 'marraskuussa Ōnukun maraella Akaroan lähellä.',
+          selite: 'Ōnukun marae Akaroan lähellä on Te Rūnanga o Ōnukun '
+            + 'kokoontumispaikka, ja sen kokoustalon nimi on Karaweko.',
+          lahde: 'Remi Jouan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ngāi Tahu Claims Settlement Act 1998',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Christchurch Arts Centre tower May 2025.jpg',
+          selite: 'Arts Centren uusgoottilainen kellotorni kuuluu Canterbury '
+            + 'Collegen vanhoihin rakennuksiin, ja korkeakoulusta kasvoi '
+            + 'myöhemmin Canterburyn yliopisto.',
+          lahde: 'Heidi Meudt, Wikimedia Commons (CC BY 4.0)',
+        },
+        kappale: 'Christchurch on Eteläsaaren suurin kaupunki, ja vuoden '
+          + '2023 väestönlaskennassa siellä asui 391 383 ihmistä. '
+          + 'Matkailijalle kaupunki on helppo: ruutukaava on tasainen, '
+          + 'keskusta kävelymatkan mittainen ja Hagley Park sen länsilaidalla '
+          + 'niin suuri, ettei siltä eksy. Katedraalitori on yhä kaupungin '
+          + 'keskipiste, mutta itse katedraali on ollut aidattuna työmaana '
+          + 'vuoden 2011 järistyksestä lähtien — ensimmäisen vaiheen on '
+          + 'määrä valmistua vuoteen 2030 mennessä, joten sisään ei pääse. '
+          + 'Pahvikatedraali Latimer Squaren vieressä on avoinna ja toimii '
+          + 'sekä kirkkona että konserttitilana. Arts Centre, Canterbury '
+          + 'Museum ja kasvitieteellinen puutarha ovat kaikki samalla '
+          + 'kulttuurikaistaleella keskustan länsipäässä, ja niiden ohi '
+          + 'kulkee vanha raitiovaunu.',
+        artikkeli: {
+          nimi: 'Matkailijan Christchurch',
+          taitto: 'opas',
+          teksti: 'Englantilaiseksi suunniteltu kaupunki tasangolla, jonka '
+            + 'takana kohoavat lumihuippuiset vuoret — ja jonka keskusta on '
+            + 'rakennettu kahdesti.',
+          nosto: 'Christchurch on ollut Etelämantereen porttikaupunki '
+            + 'vuodesta 1901, jolloin Discovery lähti Lyttelton Harbourista.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Christchurch Airport on Harewoodissa kahdentoista '
+                + 'kilometrin päässä keskustasta luoteeseen. Se on maan '
+                + 'toiseksi vilkkain lentokenttä, ja sieltä on säännöllisiä '
+                + 'reittejä kuuteentoista kotimaan ja seitsemään ulkomaan '
+                + 'kohteeseen. Kaupunki on ollut Etelämantereen porttina '
+                + 'vuodesta 1901 ja on nykyään yksi viidestä maailman '
+                + 'antarktisesta porttikaupungista, joissa on useiden maiden '
+                + 'tukikohtia. Rautateitse tärkein matka on TranzAlpine: se '
+                + 'kulkee Main South Linea Rollestoniin, kääntyy Midland '
+                + 'Linelle, läpäisee Eteläiset Alpit Otiran tunnelissa ja '
+                + 'päättyy Greymouthiin länsirannikolle.',
+              kuva: {
+                tiedosto: 'KiwiRail DXC 5039 with TranzAlpine Cass - Cora Lynn.jpg',
+                selite: 'TranzAlpine ylittää Waimakaririn sivujoen Cassin ja '
+                  + 'Cora Lynnin välillä Arthurin solan tuntumassa.',
+                lahde: 'Kabelleger, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki lepää lähes tasaisena Canterburyn tasangolla, '
+                + 'jonka kāi tahun nimi on Kā Pākihi-whakatekateka-a-Waitaha. '
+                + 'Tasanko syntyi Eteläisten Alppien jäätiköiden kuljettamasta '
+                + 'sorasta jääkausien aikana, ja sen joet — Waimakariri, '
+                + 'Rakaia, Selwyn ja Rangitata — juoksevat leveissä '
+                + 'punoksissa. Viljely on aina ollut Canterburyn ydin: vehnä, '
+                + 'ohra sekä apila ja siemenheinät vientiin. Lännessä '
+                + 'kohoavat Eteläiset Alpit eli Kā Tiritiri o te Moana, noin '
+                + '500 kilometriä pitkänä; korkein huippu Aoraki / Mount Cook '
+                + 'on 3 724 metriä, ja 1970-luvun inventaarissa laskettiin yli '
+                + '3 000 hehtaaria suurempaa jäätikköä.',
+              kuva: {
+                tiedosto: 'Canterbury Plains from Mt Hutt.JPG',
+                selite: 'Canterburyn tasanko leviää Mount Huttin rinteiltä '
+                  + 'katsottuna peltoruutuina merelle asti.',
+                lahde: 'Mw12310 (talk), Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: vanha vaunu tyhjien tonttien lomassa',
+              teksti: 'Christchurchin raitiotiet sähköistettiin 1905 ja '
+                + 'lakkautettiin 1954. Vuonna 1995 osa verkosta herätettiin '
+                + 'henkiin matkailunähtävyytenä, ja vaunu kiertää nyt lyhyttä '
+                + 'silmukkaa keskustan katuja pysähtyen muun muassa '
+                + 'Katedraalitorilla, Arts Centrellä, Canterbury Museumilla ja '
+                + 'Victoria Squarella. Radan jatke High Streetille rakennettiin '
+                + '2022, mutta se jouduttiin laskemaan uudelleen, koska vaunu '
+                + 'suistui kiskoilta. Tyhjiksi jääneet tontit taas synnyttivät '
+                + 'oman kulttuurinsa: Festival of Transitional Architecture '
+                + 'järjestettiin 2012–2018, ja vuodesta 2019 sen perillinen on '
+                + 'Open Christchurch.',
+              kuva: {
+                tiedosto: 'Christchurch Tram 01.jpg',
+                selite: 'Christchurchin museoraitiovaunu ajaa keskustan '
+                  + 'silmukkaa, jonka pysäkit ovat kaupungin kulttuurikohteilla.',
+                lahde: 'Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: pelloista tehtaisiin',
+              teksti: '1900-luvun alussa maatalouskaupunki muuttui '
+                + 'teollisuuskaupungiksi. Asukasluku ylitti 100 000 '
+                + 'ensimmäisen kerran vuonna 1919, ja tehtaat vetivät '
+                + 'työläisperheitä lähiöihin. Christchurch rakensi myös maan '
+                + 'varhaisimpia valtion vuokra-asuntoja: Sydenhamiin nousi '
+                + 'taloja 1900-luvun ensimmäisellä vuosikymmenellä lähitehtaiden '
+                + 'väelle, ja 1909 lisää Addingtonin rautatiepajojen '
+                + 'kupeeseen. Pajat olivat oma maailmansa — niissä rakennettiin '
+                + 'vetureita, ei vain korjattu niitä.',
+              kuva: {
+                tiedosto: 'Steam locomotive W192 by the New Zealand Government Railways; October 2010.jpg',
+                selite: 'Höyryveturi W192 rakennettiin 1889 Addingtonin '
+                  + 'rautatiepajoissa, ja se on nykyään Ferrymead Heritage '
+                  + 'Parkin liikennekalustoa.',
+                lahde: 'Bernard Spragg. NZ, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Christchurchistä puuttuu, joten nämä '
+                + 'luvut ovat en-Wikipedian Christchurch-artikkelin '
+                + 'ilmasto-osiosta eivätkä samasta lähteestä kuin lehden '
+                + 'vuosigraafit. Ilmasto on lauhkeaa merellistä (Köppenin '
+                + 'Cfb): kesät ovat leutoja, talvet viileitä ja sademäärä '
+                + 'kohtalainen. Keskimääräinen ylin päivälämpötila on '
+                + 'tammikuussa 22,6 astetta ja heinäkuussa 10,9 astetta. '
+                + 'Maanpinnan pakkasta on keskimäärin 80 päivänä vuodessa ja '
+                + 'lunta sataa noin kolmesti. Luoteinen nor’wester on '
+                + 'föhn-tuuli, joka yltää ajoittain myrskyyn. Tyyninä '
+                + 'talviöinä kukkuloiden pitämä inversio kerää savusumua, ja '
+                + 'siksi avotulet kiellettiin kaupungissa 2006.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Maanjäristykset ja jälleenrakennus',
+      johdanto: 'Christchurch rakennettiin kirkon unelmaksi englantilaisesta '
+        + 'kaupungista eteläisellä pallonpuoliskolla. Vuosina 2010 ja 2011 '
+        + 'kaupunki koki jotain, mihin perustajat eivät olleet varautuneet.',
+      tehtava: {
+        kysymys: 'Kuinka kauan katedraalin rakennustyö seisoi rahapulan takia ennen kuin Benjamin Mountfort otti sen johtoonsa?',
+        vaihtoehdot: [
+          'Kahdeksan vuotta',
+          'Kaksi vuotta',
+          'Kaksikymmentä vuotta',
+          'Neljäkymmentä vuotta',
+        ],
+        oikea: 0,
+        fakta: 'Anthony Trollope näki aukion vuonna 1872 ja kutsui tyhjiä '
+          + 'perustuksia valtavaksi epäonnistumisen muistomerkiksi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Järistys jonka kellonaika pehmensi',
+          tiedosto: 'Lateral.spread.christchurch.JPG',
+          teksti: 'Lauantaina 4. syyskuuta 2010 kello 4.35 aamuyöllä '
+            + 'Canterburya ravisteli magnitudin 7,1 järistys. Episentrumi oli '
+            + 'neljänkymmenen kilometrin päässä Christchurchistä länteen '
+            + 'Darfieldin kylän lähellä, kymmenen kilometrin syvyydessä, ja '
+            + 'se paljasti tasangon alta siirroksen, jota kukaan ei tiennyt '
+            + 'olevan olemassa: maanpinta siirtyi paikoin neljä metriä. Kaksi '
+            + 'ihmistä kuoli ja yli 1 700 loukkaantui. Vakuutusvaateita '
+            + 'kertyi 2,75–3,5 miljardia dollaria. Tapaninpäivänä 2010 '
+            + 'jälkijäristysten parvi osui suoraan keskustan alle.',
+          selite: 'Nesteytynyt maaperä levisi syyskuussa 2010 sivusuunnassa '
+            + 'ja rikkoi jalkakäytäviä ja ajoratoja Christchurchin '
+            + 'esikaupungeissa.',
+          lahde: 'Cataclasite, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: '2010 Canterbury earthquake',
+        },
+        {
+          otsikko: 'Kymmenen sekuntia joka muutti kaiken',
+          tiedosto: 'View from Oxford Terrace towards the city center, Christchurch, New Zealand 02.jpg',
+          teksti: 'Tiistaina 22. helmikuuta 2011 kello 12.51 keskustasta 6,7 '
+            + 'kilometriä kaakkoon osunut järistys kesti lähteen mukaan vain '
+            + 'noin kymmenen sekuntia. Momenttimagnitudi oli 6,2 ja '
+            + 'paikallismagnitudi 6,3, mutta pesäkkeen mataluus ja läheisyys '
+            + 'tekivät vahingosta valtavan: 185 ihmistä kuoli. Nesteytynyt '
+            + 'maaperä työnsi itäisiin lähiöihin noin 400 000 tonnia silttiä, '
+            + 'ja Kruunu ja vakuutusyhtiöt purkivat tai siirsivät yli 8 000 '
+            + 'kotia punaiselta vyöhykkeeltä. Helmikuuhun 2015 mennessä '
+            + 'Neljän Avenuen sisällä oli tehty 1 240 purkua — lähde laskee '
+            + 'niihin kaikki talot eikä erittele suojeltujen osuutta.',
+          selite: 'Keskustan ruutukaavaan jäi purkujen jälkeen tyhjiä '
+            + 'tontteja, joita täytetään yhä uudisrakennuksilla.',
+          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: '2011 Christchurch earthquake',
+        },
+        {
+          otsikko: 'Katedraali joka odotti isoisää — ja odottaa yhä',
+          tiedosto: 'Christ Church Cathedral in October 2021.jpg',
+          teksti: 'Peruskivi laskettiin 16. joulukuuta 1864, ja perustukset '
+            + 'olivat valmiit huhtikuuhun 1865 mennessä, mutta rahat '
+            + 'loppuivat ja aukio kasvoi ruohoa kahdeksan vuotta. Anthony '
+            + 'Trollope kävi 1872 ja kirjoitti, ettei aukiolla ollut yhtään '
+            + 'tiiltä eikä kiveä maanpinnan yläpuolella. Vuonna 1873 — '
+            + 'isoisän matkan vuonna — työ käynnistyi uudelleen, kun '
+            + 'uusiseelantilainen Benjamin Mountfort otti hankkeen '
+            + 'johtoonsa. Hän muokkasi George Gilbert Scottin piirustuksia '
+            + 'parvekkein, huippukoristein ja pidemmin pilaririvein. Pääsali '
+            + 'ja torni vihittiin 1. marraskuuta 1881.',
+          selite: 'ChristChurch-katedraalin torni menetti huippunsa helmikuun '
+            + '2011 järistyksessä, ja rakennus on ollut siitä lähtien '
+            + 'aidattuna työmaana.',
+          lahde: 'Wiremu Stadtwald Demchick, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Christ Church Cathedral, Christchurch',
+        },
+        {
+          otsikko: 'Pahvista, ja pysyvämpää kuin luultiin',
+          tiedosto: 'Cardboard Cathedral and Te Kaha May 2025 02.jpg',
+          teksti: 'Katedraalin kohtalon jäätyä auki seurakunta tarvitsi '
+            + 'väliaikaisen kirkon. Japanilainen Shigeru Ban suunnitteli sen '
+            + 'ilmaiseksi yhdessä christchurchiläisen Warren and Mahoneyn '
+            + 'kanssa. Pahvikatedraali nousi Latimer Squaren viereen '
+            + 'tontille, joka oli varattu anglikaaniselle kirkolle jo vuoden '
+            + '1850 alkuperäisessä mittauksessa. Rakennuksessa on yli '
+            + 'yhdeksänkymmentä halkaisijaltaan 60-senttistä pahviputkea, '
+            + 'puuta ja terästä, katto on polykarbonaattia ja seinustoina on '
+            + 'kahdeksan merikonttia; sisätila kohoaa 21 metriin alttarin '
+            + 'yläpuolelle. Ovet avautuivat yleisölle 6. elokuuta 2013.',
+          selite: 'Pahvikatedraalin takana kohoaa Te Kaha; 30 000 katsojan '
+            + 'katettu stadion avattiin huhtikuussa 2026.',
+          lahde: 'Tom Ackroyd, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Cardboard Cathedral',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Puutarhakaupungin nimi ei ole markkinointia: Hagley Park ja '
+        + 'kasvitieteellinen puutarha syntyivät 1850–60-luvuilla. Avon-joki '
+        + 'kantaa kahta nimeä ja kahta historiaa.',
+      tehtava: {
+        kysymys: 'Mitä kāi tahun nimi Ōtākaro tarkoittaa?',
+        vaihtoehdot: [
+          'Leikkipaikkaa',
+          'Suurta jokea',
+          'Valkoista kiveä',
+          'Ankeriaiden vettä',
+        ],
+        oikea: 0,
+        fakta: 'Varhaiset eurooppalaislähteet antavat joelle myös toisen '
+          + 'māorinkielisen nimen, Putare Kamutu.',
+      },
+      nostot: [
+        {
+          otsikko: 'Puutarhakaupunki joka ansaitsi nimensä',
+          tiedosto: 'Christchurch Botanic Gardens 13.jpg',
+          teksti: 'Lempinimi puutarhakaupunki ei ole matkailumainos vaan '
+            + '1800-luvun vierailijan huomio: brittiläinen lakimies John '
+            + 'Eldon Gorst sanoi Christchurchin muistuttaneen häntä Englannin '
+            + 'puutarhakaupungeista. Maakunnan hallitus varasi Hagley Parkin '
+            + '1855 määräyksellä, jonka mukaan puisto on ikuisiksi ajoiksi '
+            + 'varattu yleiseksi puistoksi ja avoin kaikkien virkistykseksi. '
+            + 'Nimi tulee Canterbury-yhdistyksen puheenjohtajan lordi '
+            + 'Lyttletonin kotitilalta Worcestershirestä. Kasvitieteellinen '
+            + 'puutarha perustettiin puiston sisään 1863, kun sinne '
+            + 'istutettiin englantilainen tammi.',
+          selite: 'Kasvitieteellinen puutarha on 21 hehtaarin alue Hagley '
+            + 'Parkin sisällä Avon-joen mutkan kupeessa.',
+          lahde: 'Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Christchurch Botanic Gardens',
+        },
+        {
+          otsikko: 'Joki jolla oli melkein Shakespearen nimi',
+          tiedosto: 'Avon River, Christchurch, New Zealand 01.jpg',
+          teksti: 'Joen ensimmäinen nimi on kāi tahun Ōtākaro, leikkipaikka: '
+            + 'lapset leikkivät rannalla aikuisten kerätessä ruokaa. '
+            + 'Canterbury-yhdistys aikoi nimetä joen Shakespereksi, mutta '
+            + 'skotlantilainen uudisasukas John Deans ehti ensin ja antoi '
+            + 'sille 1848 nimen Avon isoisiensä tilan lähellä virranneen '
+            + 'Ayrshiren Avonin mukaan. Yhtäläisyys Stratford-upon-Avoniin on '
+            + 'siis sattumaa, vaikka paikallinen perimätieto uskoo toisin. '
+            + 'Vuoden 1998 sopimuslaki teki nimestä virallisesti '
+            + 'kaksikielisen: Avon River / Ōtākaro.',
+          selite: 'Avon River / Ōtākaro kiertää keskustan halki loivana '
+            + 'mutkana, ja sen rannoilta nousee jälleenrakennetun kaupungin '
+            + 'uusi siluetti.',
+          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Avon River / Ōtākaro',
+        },
+        {
+          otsikko: 'Metsä jonka nimi tarkoittaa katkaistua korvaa',
+          tiedosto: 'Riccarton Bush 353.jpg',
+          teksti: 'Riccartonin esikaupungissa kasvaa 6,4 hehtaaria '
+            + 'alkuperäistä kahikatea-metsää. Kāi tahu kutsui paikkaa '
+            + 'nimellä Pūtaringamotu, joka tarkoittaa joko kaiun paikkaa tai '
+            + 'katkaistua korvaa — jälkimmäinen on kuvaannollinen ilmaus '
+            + 'muusta metsästä eristetylle saarekkeelle. Se on yksi vain '
+            + 'neljästä Canterburyn tasangon alkuperäisen metsän jäänteestä, '
+            + 'jotka säästyivät moanmetsästyskauden paloilta. John ja William '
+            + 'Deans sopivat 1848 New Zealand Companyn kanssa noin 22 '
+            + 'hehtaarin suojelusta, ja Riccarton Bush Act 1914 teki '
+            + 'suojelusta pysyvän.',
+          selite: 'Riccarton Bushin kahikateat kohoavat suorina runkoina, ja '
+            + 'metsikköä kiertää petoaita, jonka turvin kiivi on tarkoitus '
+            + 'palauttaa alueelle.',
+          lahde: 'Schwede66, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Riccarton, New Zealand',
+        },
+        {
+          otsikko: 'Punainen vyöhyke joka muuttuu puistoksi',
+          tiedosto: 'Avon River at the Red Zone, Christchurch, New Zealand.jpg',
+          teksti: 'Keskustan alapuolella Avonin varren maa vaurioitui vuosien '
+            + '2010 ja 2011 järistyksissä niin pahoin, että Canterbury '
+            + 'Earthquake Recovery Authority merkitsi sen punaiseksi '
+            + 'vyöhykkeeksi. Yli 8 000 kotia purettiin tai siirrettiin, ja '
+            + 'viimeinen purku valmistui lokakuussa 2021. Tyhjentyneelle '
+            + 'nauhalle on ajettu ajatusta yhtenäisestä puistosta, joka '
+            + 'yhdistäisi keskustan suistoon asti. Syyskuussa 2015 kaupunki '
+            + 'ja Recovery Authority ostivat englantilaiselta kuvanveistäjä '
+            + 'Antony Gormleylta kaksi Stay-veistosta; toinen seisoo '
+            + 'jokivedessä, toinen Arts Centrellä.',
+          selite: 'Punaisella vyöhykkeellä Avonin ranta on nyt avointa '
+            + 'nurmea siellä, missä ennen järistyksiä oli asuinkortteleita.',
+          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Avon River / Ōtākaro',
+        },
+      ],
+    },
+  ],
+  /*
+   * MANAUS (24.8.2026). Lauta southamerica, kaupunki-id `manaus`,
+   * en-Wikipedian pääartikkeli "Manaus" (pelin wiki-nimi on
+   * fi-Wikipedian "Manaus (kaupunki)", js/packs/southamerica.js rivi 116).
+   *
+   * MISTÄ TIEDOT. Lähdeaineistona docs/mantereet-tyoaineisto/
+   * faktapohja-manaus.md ja sen riippumaton tarkistus tarkistus-manaus.md,
+   * joka VOITTAA faktapohjan ristiriidassa. Jokainen tekstiin mennyt
+   * väite on luettu uudelleen en-Wikipedian raakatekstistä 24.8.2026
+   * (artikkelit "Manaus", "History of Manaus", "Amazonas (Brazilian
+   * state)", "Grande Seca", "Customs House, Manaus", "Amazon Theatre",
+   * "Amazon rubber cycle", "Baré people", "Ajuricaba (chief)",
+   * "Palácio Rio Negro, Manaus", "Metropolitan Cathedral of Our Lady of
+   * the Conception, Manaus", "Meeting of Waters").
+   *
+   * TARKISTUKSEN VIISI PAKOLLISTA KORJAUSTA on tehty näin:
+   *  1. GRANDE SECA EI OLE 1873-ANKKURI. Faktapohja väitti kuivuuden
+   *     osuneen "samaan aikaan" vuoden 1872 väestönlaskennan kanssa.
+   *     Kuivuuden oma artikkeli ajoittaa sen vuosiin 1877–1878, eli
+   *     4–5 vuotta isoisän matkan JÄLKEEN. Nosto K3 sanoo ajoituksen
+   *     nyt ääneen ("tuli vasta 1877–1878") eikä sido sitä 1872/1873:een.
+   *     Kumivuodet 1879–1912 ja kulta-aika 1890–1910 ovat sen sijaan
+   *     lähteessä suoraan ja säilyvät.
+   *  2. ETÄISYYS MERESTÄ ON 1 500 KM, ei 1 000. "Amazonas (Brazilian
+   *     state)" sanoo suoraan "1,500 km upstream from the Atlantic
+   *     Ocean". Luku on oppaan jaksossa "Perille ja liikkeelle" ja
+   *     ARTIKKELIT-introssa; pelin oma paikkatietoteksti käytti jo
+   *     oikeaa lukua, visan Q4-fakta väärää.
+   *  3. VISASÄÄNTÖ KOSKEE MYÖS JOHDANTOJA. Faktapohjan ehdottamat
+   *     johdannot mukailivat visan Q1-, Q3- ja Q4-faktojen rakennetta
+   *     (js/packs/southamerica-questions.js, kohta `manaus`). Kaikki
+   *     kolme johdantoa on kirjoitettu tässä uudelleen niin, ettei
+   *     yksikään toista visan sanamuotoa. Vastaukset LÖYTYVÄT silti:
+   *     kumi K3:sta ja koko Kumibuumi-sivulta, Encontro das Águas ja
+   *     sekoittumattomuuden syy K2:sta, oopperatalo R1:stä, kaupunkiin
+   *     pääsy oppaan jaksosta 1.
+   *  4. TULLITALON TIILILLE EI KEKSITÄ SYYTÄ. Faktapohja väitti, ettei
+   *     Amazonasista löytynyt sopivaa rakennusmateriaalia. Lähde ei
+   *     sano tästä mitään: se sanoo esivalmistettujen tiilien
+   *     jäljitelleen Lontoon rakennuksia. Nosto R3 kertoo vain sen.
+   *  5. MINDÚ, EI "MINDÚN". Puiston nimi on Parque do Mindú / Mindu
+   *     Park; oppaan jakso 2 käyttää muotoa Mindú.
+   *
+   * HUOMIOT, JOTKA TARKISTUS NOSTI ESIIN:
+   *  - Cabanagem-nosto A4 nimeää kapinallisiksi mustat, alkuperäiskansat
+   *     JA mestitsit, kuten lähde ("blacks, Native Americans, and
+   *     mestizos") — faktapohjan nostolainaus pudotti mustat pois.
+   *  - "a member of the local House of Representatives" on käännetty
+   *     "provinssin edustajakokouksen jäsen", ei kaupunginvaltuutetuksi.
+   *  - Ponta Negran etäisyydestä keskustaan "Manaus" antaa kaksi lukua,
+   *     18 km ja 13 km. Kumpaakaan ei ole valittu: oppaan jakso 5
+   *     sanoo epävarmuuden ääneen.
+   *  - Amazon-teatterin heinäkuun 2026 Unesco-merkintä (osana kohdetta
+   *     "Amazonia Theaters" yhdessä Teatro da Pazin kanssa) on otettu
+   *     mukaan yhtenä virkkeenä nostossa R1; se on infoboxissa ja
+   *     leipätekstissä eikä ole nykypolitiikkaa.
+   *
+   * MUUT WIKIPEDIAN SISÄISET RISTIRIIDAT KIRJOITETTU AUKI LUKIJALLE:
+   * vuoden 1832 nimi (K1), Encontro das Águasin 6 km vs. 9 km ja
+   * lämpötilan merkitys (K2), Mindú-puiston perustamisvuosi 1989 vs.
+   * 1992 (oppaan jakso 2), Ponta Negran etäisyys (jakso 5).
+   *
+   * KUMIBUUMIN VARJOPUOLI on omana kappaleenaan nostossa R4 ja
+   * teemasivun johdannossa. Manausiin sidottuja lukuja lähteessä ei
+   * ole (tarkistuksen osio 7), joten se kerrotaan sillä tarkkuudella
+   * kuin lähteet antavat: kumialueiden pakkotyö ja velkaorjuus
+   * yleisesti ("Amazon rubber cycle") ja baré-kansan kohdalla suoraan
+   * ("Baré people": "forced to work as debt slaves"). Ei kärsimyksen
+   * kuvailua, ei kaunistelua.
+   *
+   * KUVAT (23 kpl, jokainen haettu ja KATSOTTU 24.8.2026, lisenssi
+   * Commonsin extmetadatasta, leveys >= 1200 px):
+   *  - Hylätyt ja syyt: "Mapa de Manaus (1852).jpg" ja "Cidade e
+   *    arrabaldes de Manaus Ribas 1892" (arkistoleimat ja Arquivo
+   *    Nacional -palkki kuvan päällä); "Catedral Metropolitana de
+   *    Manaus - 1890.jpg" (IMS-vesileima); "CATEDRAL DA MATRIZ 02.jpg"
+   *    (©periclesdias-vesileima); "Construção das canoas ao modo dos
+   *    índios" (Biblioteca Nacional -leima); "Construction of canoes in
+   *    the Indian way.jpg" (1138 px); "Forte de São José da Barra do
+   *    Rio Negro.jpg" (1197 px); "Praça de São Sebastião ... Am42537"
+   *    (postikorttiin painettua tekstiä, heikko laatu); "Inner-city
+   *    architecture, Manaus, Brazil 01.jpg" (liikkeen mainoskyltit
+   *    hallitsevat); "Manaus commercial port, Brazil 02.jpg"
+   *    (roskaantunut ranta, köyhyysestetiikkaa); "Rubber tapping
+   *    pots.jpg" (kaksi ämpäriä nurmikolla, ei kerro kumin keruusta);
+   *    "Porto flutuante com barcos ... panoramio.jpg" (ihmisiä
+   *    ponttonilla lähietäisyydellä); Zoológico do CIGS -kategorian
+   *    kaikki 105 kuvaa (varapresidentin vierailusarja ja
+   *    toimittajaryhmä — tunnistettavia kasvoja), minkä vuoksi oppaan
+   *    jakso 3 jää kuvattomaksi (Tukholma-ennakkotapaus).
+   *  - Kaksi selitettyä poikkeusta: K3:n kuva on taikalyhtylasi, jonka
+   *    oma musta maski kehystää kuvan — se on esineen oma muoto, ei
+   *    päälle lisätty kehys, ja kuvateksti sanoo sen ääneen. Saman
+   *    kuvan tekijäkenttä on Commonsissa pitkä roolikuvaus
+   *    ("Coudreau, Henri (1859-1899). Auteur de la conférence. Chef de
+   *    la mission Molteni. Photographe"); lähderiviin on otettu nimi
+   *    ja elinvuodet.
+   *  - Aihetoisto: oopperatalo on kannessa ulkoa (aukio ympärillään)
+   *    ja nostossa R1 sisältä — eri tiedosto, eri näkökulma, tietoinen
+   *    valinta. Satama esiintyy kannessa yleiskuvana ja R2:ssa
+   *    kelluvana laiturina, joka on nimenomaan noston aihe.
+   *
+   * SÄÄRIVI: tämä lohko ei koske js/packs/saatiedot.js:ää. Oppaan
+   * sääjakso nojaa en-Wikipedian Climate-osioon ja sanoo sen ääneen.
+   */
+  manaus: [
+    {
+      id: 'kaupunki',
+      nimi: 'Manaus',
+      johdanto: 'Amazonasin pääkaupunki kasvoi 1600-luvun linnoituksesta '
+        + 'kahden miljoonan asukkaan teollisuuskaupungiksi keskelle '
+        + 'sademetsää. Sen historiassa on yksi lyhyt jakso, jolloin '
+        + 'täällä liikkui enemmän rahaa kuin missään muualla Brasiliassa.',
+      kansikuvat: [
+        {
+          tiedosto: 'Largo de São Sebastião, Manaus, Brazil 01.jpg',
+          selite: 'Largo de São Sebastiãon aaltokuvioidun kiveyksen takana '
+            + 'kohoavat oopperatalon kupoli ja satamien avaamista '
+            + 'juhlistava muistomerkki.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Ponte Rio Negro, Estado do Amazonas.jpg',
+          selite: 'Rio Negron ylittävä vinoköysisilta jatkuu pilarien '
+            + 'varassa vastarannalle asti, ja sen alla kulkee tummaa '
+            + 'jokivettä.',
+          lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Manaus harbor.jpg',
+          selite: 'Iltavalossa sataman poukamaan on ahtautunut kymmeniä '
+            + 'monikerroksisia jokilaivoja, ja niiden takana nousee '
+            + 'keskustan kortteleita.',
+          lahde: 'Arne Müseler, Wikimedia Commons (CC BY-SA 3.0 de)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Manaus aerial view.jpg',
+          selite: 'Korkealta katsottuna tornirivistön takana kimaltaa joki '
+            + 'ja etualalla kaupunkia rajaa leveä metsäkaistale.',
+          lahde: 'CIAT, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Vista do Centro de Manaus.jpg',
+          selite: 'Satamasta katsottuna katedraalin kaksi tornia jäävät '
+            + 'toimistotornien ja markkinahallin peltikaton väliin.',
+          lahde: 'Christian Almeida Campos, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Entre nuvem e floresta.jpg',
+          selite: 'Lentokoneesta kuvattuna pilvenhattarat lipuvat '
+            + 'sademetsän ja mutkittelevan joen yllä Manausin lähellä.',
+          lahde: 'Sharlene Melanie, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Nimi joka vaihtui kolmesti',
+          tiedosto: 'Catedral Metropolitana de Manaus (Igreja Matriz).jpg',
+          teksti: 'Portugalilaiset rakensivat Rio Negron rannalle '
+            + 'linnoituksen 1669, ja paikalla asuneet manaó-, baré-, '
+            + 'baniwa- ja passé-kansat auttoivat työssä. Vuonna 1695 '
+            + 'lähetyssaarnaajat pystyttivät viereen kappelin Nossa '
+            + 'Senhora da Conceiçãolle, josta tuli kaupungin '
+            + 'suojeluspyhimys. Asutus korotettiin kyläksi 1832 ja '
+            + 'kaupungiksi 24. lokakuuta 1848 nimellä Cidade da Barra do '
+            + 'Rio Negro. Vasta 4. syyskuuta 1856 kuvernööri '
+            + 'Herculano Ferreira Pena antoi sille lailla 68 nykyisen '
+            + 'nimen manaó-kansan kunniaksi. Vuoden 1832 nimestä '
+            + 'Wikipedian artikkelit ovat eri mieltä: toisen mukaan se oli '
+            + 'jo Manaus, toisen mukaan Nossa Senhora da Conceição da '
+            + 'Barra do Rio Negro.',
+          selite: 'Katedraalin valkokeltainen julkisivu ja kaksi '
+            + 'kellotornia nousevat leveiden portaiden päästä keskustan '
+            + 'laidalla.',
+          lahde: 'Naldo_Arruda, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Manaus (kaupunki)',
+        },
+        {
+          otsikko: 'Vedet jotka eivät sekoitu',
+          tiedosto: 'EncontroDasAguas.jpg',
+          teksti: 'Kaupungin alapuolella tumma Rio Negro ja savenvärinen '
+            + 'Solimões kulkevat samassa uomassa rinnakkain sekoittumatta. '
+            + 'Rio Negro virtaa noin kahta kilometriä tunnissa '
+            + '28-asteisena, Solimões neljästä kuuteen kilometriä tunnissa '
+            + '22-asteisena, ja vesien tiheys eroaa: vaalea kantaa '
+            + 'Andeilta huuhtoutunutta lietettä, musta saa värinsä '
+            + 'lahonneista lehdistä ja on lähes lietteetön. Wikipedia '
+            + 'riitelee tästä itsensä kanssa kahdesti. Rinnakkaisen matkan '
+            + 'pituudeksi annetaan sekä kuusi että yhdeksän kilometriä, ja '
+            + 'lämpötilan merkityksestä kaksi artikkelia sanoo '
+            + 'päinvastoin. Ilmiön nimi on Encontro das Águas.',
+          selite: 'Veneestä katsottuna savenvärinen ja musta vesi kulkevat '
+            + 'vierekkäin niin, että raja erottuu aallonharjoja myöten.',
+          lahde: 'Roberto Ravanini, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Meeting of Waters',
+        },
+        {
+          otsikko: 'Kaupunki kumibuumin kynnyksellä',
+          tiedosto: 'Guyane. 15, Quais de Manaos - (mission) H. Coudreau ; (photogr.?) ; (photogr. reprod. par Molténi? pour la conférence donnée par) H. Coudreau - btv1b59657876.jpg',
+          teksti: 'Isoisän matkavuonna 1873 Manaus oli yhä pieni '
+            + 'jokisatama: vuonna 1849 asukkaita oli 5 000, ja '
+            + 'vuosisadan loppuun mennessä luku nousi 70 000:een. '
+            + 'Varsinainen kumibuumi ajoitetaan vasta vuosiin 1879–1912 ja '
+            + 'sen kulta-aika vuosiin 1890–1910. Vuoden 1872 '
+            + 'väestönlaskennan mukaan osavaltioon oli muuttanut 2 199 '
+            + 'ulkomaalaista kumin perässä, suurin osa heistä Manausiin. '
+            + 'Koillisen suuri kuivuus, joka siirsi noin 120 000 ihmistä '
+            + 'Amazonin alueelle, tuli vasta 1877–1878 – ei siis vielä '
+            + 'isoisän aikaan. Katedraali oli rakenteilla: edellinen '
+            + 'kirkko oli palanut 1850 ja uusi avattiin 1878. '
+            + 'Oopperataloa ei ollut vielä edes ehdotettu.',
+          selite: 'Vuoden 1883 taikalyhtylasilla, jonka oma musta maski '
+            + 'kehystää kuvan, Manausin ranta on matalien tiilikattoisten '
+            + 'talojen rivi ja sen päässä rautainen silta.',
+          lahde: 'Coudreau, Henri (1859-1899), Wikimedia Commons (PD)',
+          wiki: 'Amazon rubber cycle',
+        },
+        {
+          otsikko: 'Vapaakauppa-alue joka herätti kaupungin',
+          tiedosto: 'Zona-Centro-Sul-Manaus.jpg',
+          teksti: 'Kumin jälkeen kaupunki vaipui hiljaisuuteen '
+            + 'vuosikymmeniksi. Sotilashallitus perusti 28. helmikuuta '
+            + '1967 asetuksella 288 Manausin vapaakauppa-alueen, ja '
+            + 'verohelpotukset toivat sademetsän keskelle tehtaita: '
+            + 'matkapuhelimia ovat koonneet täällä muun muassa LG, Nokia, '
+            + 'Samsung ja Siemens. Väkiluku ylitti miljoonan 1991 ja kaksi '
+            + 'miljoonaa 2014 – kaksinkertaistuminen kesti 23 vuotta, ja '
+            + 'nykyään Manausissa asuu lähes puolet koko osavaltion '
+            + 'väestöstä. Eduardo Gomesin lentoasema on rahtimäärältään '
+            + 'Brasilian kolmanneksi suurin, koska teollisuusalueen '
+            + 'tuotteet lähtevät ilmateitse.',
+          selite: 'Ilmakuvassa keskustan eteläpuoliset korttelit '
+            + 'levittäytyvät kerrostaloineen ja peltikattoineen '
+            + 'mustavetisen puron molemmin puolin.',
+          lahde: 'Portal da Copa, Wikimedia Commons (CC BY 3.0 br)',
+          wiki: 'Manaus (kaupunki)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Mercado Municipal Adolpho Lisboa - 12.jpg',
+          selite: 'Markkinahallin vihreään valurautakaareen on valettu '
+            + 'kultakirjaimin teksti Mercado Publico ja vuosiluku 1882.',
+          lahde: 'Ajmcbarreto, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Manaus on kaupunki, johon saavutaan aina joko ylhäältä '
+          + 'tai vedeltä. Historiallinen keskusta on pieni ja kävellen '
+          + 'kierrettävä: oopperatalo aukioineen, katedraali, tullitalo '
+          + 'majakkatorneineen ja 1882 valmistunut markkinahalli ovat '
+          + 'kaikki noin kilometrin säteellä toisistaan, ja niiden '
+          + 'alapuolella on satama, josta jokilaivat lähtevät päiväkausien '
+          + 'matkoille. Muu kaupunki on laaja ja matala: kaksi miljoonaa '
+          + 'ihmistä asuu tornitalojen, peltikattoisten kortteleiden ja '
+          + 'igarapé-purojen sekamelskassa, ja etäisyydet taittuvat '
+          + 'bussilla tai taksilla. Retket suuntautuvat vedelle – vesien '
+          + 'kohtaamiseen, Anavilhanasin jokisaaristoon tai jollekin '
+          + 'rannalle, jonka olemassaolo riippuu vuodenajasta.',
+        artikkeli: {
+          nimi: 'Matkailijan Manaus',
+          taitto: 'opas',
+          teksti: 'Sademetsän keskellä oleva miljoonakaupunki, johon ei '
+            + 'tule tietä muusta Brasiliasta – mutta jonne valtamerialus '
+            + 'pääsee jokea pitkin.',
+          nosto: 'Kaupungin rannat syntyvät vasta elo-marraskuussa, kun '
+            + 'joen pinta laskee; joulukuusta alkaen vesi peittää hiekat '
+            + 'jälleen.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Amazon kantaa valtamerialuksia 1 500 kilometriä '
+                + 'Atlantilta sisämaahan asti – juuri niin kauas kuin '
+                + 'Manausiin. Maateitse '
+                + 'kaupunki on käytännössä saari: pohjoiseen vie '
+                + 'päällystetty BR-174 Boa Vistaan ja Venezuelaan, mutta '
+                + 'etelään johtava BR-319 vaatii ensin noin 40 minuutin '
+                + 'lauttamatkan Careiroon ja on päällystetty vain noin '
+                + 'sadan kilometrin matkalta; sen jälkeen tie ei ole '
+                + 'ajokelpoinen. The Independent totesi vielä 2014, ettei '
+                + 'Manausiin ole teitä muusta maasta. Käytännössä kaikki '
+                + 'liikenne kulkee ilmassa tai vedessä: Eduardo Gomesin '
+                + 'kansainvälisen lentoaseman kautta tai jokilaivoilla, '
+                + 'joiden matkat Belémiin kestävät päiviä.',
+              kuva: {
+                tiedosto: 'Cruise ship in Manaus, Brazil.jpg',
+                selite: 'Valtamerialus lipuu leveällä Rio Negrolla kohti '
+                  + 'Manausia, ja takana horisontin täyttää matala '
+                  + 'metsäraja.',
+                lahde: 'Ivo Brasil, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Luonto keskellä kaupunkia',
+              teksti: 'Sademetsän keskellä olevassa Manausissa on '
+                + 'yllättävän vähän vihreää: kaupunki on rakennettu '
+                + 'tiiviisti, ja suurimmat viheralueet ovat pienehköjä '
+                + 'puistoja. Mindú-puisto keskustan eteläpuolella on '
+                + 'niistä käydyimpiä, ja sen 330 000 neliömetriä metsää '
+                + 'on yksi viimeisistä elinympäristöistä uhanalaiselle '
+                + 'kaksivärisille tamariinille, apinalle jota tavataan '
+                + 'luonnossa vain Manausin seudulla. Puiston '
+                + 'perustamisvuodesta Wikipedia antaa kaksi lukua, 1989 '
+                + 'ja 1992, samasta artikkelista. Kaupungin ulkopuolella '
+                + 'ovat Adolpho Ducken kasvitieteellinen puutarha ja '
+                + 'Anavilhanasin kansallispuisto, yksi maailman '
+                + 'suurimmista jokisaaristoista.',
+              kuva: {
+                tiedosto: 'Saguinus bicolor Parque do Mindu.jpg',
+                selite: 'Mustanaamainen, valkorintainen tamariini istuu '
+                  + 'oksalla pitkä ruskea häntä riippuen suoraan alas.',
+                lahde: 'Whaldener Endo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: armeijan eläintarha',
+              teksti: 'Manausin julkinen eläintarha on Brasilian armeijan '
+                + 'ylläpitämä. CIGS-eläintarha kuuluu viidakkosodankäynnin '
+                + 'koulutuskeskukseen, ja siellä on noin 300 lajia '
+                + 'Amazonin eläimistöä. Tarha on avoinna yleisölle. '
+                + 'Yhdistelmä kuulostaa oudolta vasta muualta tulleen '
+                + 'korvaan: kaupungissa, jonne ei tule tietä ja jonka '
+                + 'ympärillä on tuhansia kilometrejä metsää, armeija on '
+                + 'yksi harvoista organisaatioista, joilla on varaa pitää '
+                + 'yllä pysyvää eläinkokoelmaa – ja hyvä syy tuntea '
+                + 'alueen eläimet. Tästä kohteesta ei löytynyt Commonsista '
+                + 'kuvasäännöt täyttävää kuvaa, joten jakso on kuvaton.',
+            },
+            {
+              otsikko: 'Historian käännekohta: kumiparonin talo',
+              teksti: 'Saksalainen kumikauppias Karl Waldemar Scholz '
+                + 'rakennutti 1903 keskustaan eklektisen huvilan, joka '
+                + 'valmistui 1911 – juuri kun Aasian viljelmien kilpailu '
+                + 'alkoi purra. Ensimmäinen maailmansota katkaisi '
+                + 'laivayhteyden Manausin ja Hampurin välillä, ja Scholz '
+                + 'joutui kiinnittämään talonsa 400 miljoonasta reisistä. '
+                + 'Talo huutokaupattiin, ja osavaltio osti sen 1918 '
+                + 'kahdellasadalla miljoonalla reisillä ja antoi sille '
+                + 'nimen Palácio Rio Negro. Se toimi osavaltion hallinnon '
+                + 'päämajana vuoteen 1995, jolloin siitä tehtiin museo, '
+                + 'joka kertoo nimenomaan kumin tarinan. Scholzin perhe '
+                + 'palasi Saksaan.',
+              kuva: {
+                tiedosto: 'Palácio Rio Negro (Manaus) 489530.jpg',
+                selite: 'Palácio Rio Negron keltavalkoinen julkisivu '
+                  + 'pylväineen ja kaidekoristeineen kaartuu kadunkulmassa '
+                  + 'kahden lipputangon takana.',
+                lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Manaus-artikkelin '
+                + 'Climate-osiosta eivätkä samasta lähteestä kuin lehtien '
+                + 'vuosigraafit. Ilmasto on trooppista monsuuni-ilmastoa '
+                + '(Köppen: Am) – juuri niin kuiva kuivimpana kuukautena, '
+                + 'ettei se luokitu sademetsäilmastoksi. Vuoden '
+                + 'keskilämpötila on 27,4 astetta, eikä lämpötila jaa '
+                + 'vuotta vuodenaikoihin; sade tekee sen. Heinä-syyskuu on '
+                + 'suhteellisen kuiva, joulu-toukokuu hyvin sateinen, ja '
+                + 'sadetta kertyy noin 2 300 millimetriä vuodessa. '
+                + 'Kaupungin rannat, kuten Ponta Negra, syntyvät '
+                + 'elo-marraskuussa veden laskiessa. Ponta Negran '
+                + 'etäisyydeksi keskustasta sama artikkeli antaa kahdessa '
+                + 'kohdassa 18 ja 13 kilometriä; kumpaakaan ei ole '
+                + 'valittu tässä oikeaksi.',
+              kuva: {
+                tiedosto: 'Ponta-Negra-Manaus3.jpg',
+                selite: 'Ponta Negran kaartuvalla hiekkarannalla on '
+                  + 'rivissä valkoisia päivävarjoja, ja taustalla häämöttää '
+                  + 'Rio Negron silta.',
+                lahde: 'Portal da Copa/ME, Wikimedia Commons (CC BY 3.0 br)',
+              },
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'kumibuumi',
+      nimi: 'Kumibuumi',
+      johdanto: 'Kolmenkymmenen vuoden ajan Amazonas myi maailmalle '
+        + 'ainetta, jota ei saanut mistään muualta. Vauraus rakensi '
+        + 'Manausin uudelleen, mutta sen keräsivät toiset ihmiset kaukana '
+        + 'kaupungin aukioilta.',
+      tehtava: {
+        kysymys: 'Mistä maasta Manausin tullitalon esivalmistetut '
+          + 'tiilielementit tuotiin?',
+        vaihtoehdot: [
+          'Englannista',
+          'Portugalista',
+          'Italiasta',
+          'Ranskasta',
+        ],
+        oikea: 0,
+        fakta: 'Tiilet tulivat laivalla Englannista, ja niillä jäljiteltiin '
+          + '1900-luvun alun Lontoon rakennuksia. Urakoitsija oli '
+          + 'englantilainen Manaos Harbour Limited.',
+      },
+      nostot: [
+        {
+          otsikko: 'Jalokivi keskellä sademetsää',
+          tiedosto: 'Interior of Teatro Amazonas, Manaus, Brazil 02.jpg',
+          teksti: 'Oopperatalon idean esitti 1881 provinssin '
+            + 'edustajakokouksen jäsen Antonio José Fernandes Júnior, joka '
+            + 'halusi jalokiven keskelle sademetsää. Provinssin presidentti '
+            + 'José Lustosa Paranaguá hyväksyi riittävän rahoituksen 1882 '
+            + 'ja järjesti suunnittelukilpailun, jonka voitti lissabonilainen '
+            + 'toimisto. Työt alkoivat 1884 italialaisen Celestial '
+            + 'Sacardimin johdolla ja etenivät pysähdyksin 1885–1892. '
+            + 'Kattotiilet tuotiin Alsacesta, teräsrakenteet Glasgow\'sta '
+            + 'ja Carrara-marmori Italiasta; kupolissa on 36 000 kaakelia '
+            + 'Brasilian lipun väreissä ja salissa 198 kruunua. Talo '
+            + 'vihittiin 31. joulukuuta 1896. Heinäkuussa 2026 se liitettiin '
+            + 'Unescon maailmanperintöluetteloon.',
+          selite: 'Salin kolme parvikerrosta kaartuvat kullattujen '
+            + 'kaiteiden ja pylväiden riveinä, ja jokaisen kaaren alla palaa '
+            + 'oma valaisimensa.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+          wiki: 'Amazon Theatre',
+        },
+        {
+          otsikko: 'Sähköä ennen monia Euroopan kaupunkeja',
+          tiedosto: 'Porto Flutuante de Manaus Construção Inglesa - panoramio.jpg',
+          teksti: 'Manaus oli Brasilian toinen kaupunki, jonka kaduille '
+            + 'saatiin sähkövalot – ensimmäinen oli Campos dos Goytacazes '
+            + 'Rio de Janeiron osavaltiossa. Kuvernööri Eduardo Ribeiron '
+            + 'kaudella vuodesta 1892 kaupunki sai sähköraitiovaunut, '
+            + 'puhelimet, vesijohdot ja kelluvan sataman, jonka laiturit '
+            + 'nousevat ja laskevat joen mukana. Kadut kivettiin '
+            + 'Portugalista tuodulla graniitilla ja lioz-kalkkikivellä. '
+            + 'Kun kumin hinta romahti, generaattoreiden käyttö kävi liian '
+            + 'kalliiksi, eikä kaupunki kyennyt tuottamaan sähköä uudelleen '
+            + 'vuosiin.',
+          selite: 'Kelluvan sataman ponttonilaiturit kaartuvat ulos '
+            + 'rannasta, ja niihin on kiinnitetty rivi valkoisia '
+            + 'kaksikerroksisia jokilaivoja.',
+          lahde: 'James Martins, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Manaus (kaupunki)',
+        },
+        {
+          otsikko: 'Tullitalo joka jäljitteli Lontoota',
+          tiedosto: 'Alfândega de Manaus.jpg',
+          teksti: 'Sataman uudistus alkoi 1899, ja 1900 liittovaltio '
+            + 'siirsi urakan englantilaiselle Manaos Harbour Limitedille. '
+            + 'Sopimus velvoitti yhtiön rakentamaan myös tullitalon. '
+            + 'Piirustukset olivat valmiit 1903, työt alkoivat 1906, ja '
+            + 'Edmund Fisherin, H. M. Fletcherin ja G. Pinkertonin '
+            + 'suunnittelema rakennus tehtiin eklektiseen tyyliin '
+            + 'keskiaikaisin ja renessanssiaiheisin yksityiskohdin. '
+            + 'Esivalmistetut tiilielementit tuotiin Englannista, koska '
+            + 'niillä jäljiteltiin 1900-luvun alun Lontoon rakennuksia. '
+            + 'Viereinen vartiotalo Guardamoria sai torniinsa teräksisen '
+            + 'majakan ja avattiin 17. tammikuuta 1909.',
+          selite: 'Tullitalon punatiilinen ja vaalea julkisivu jatkuu '
+            + 'kaarikkeiden rivinä koko korttelin mitalta, ja oikealla '
+            + 'kohoaa Guardamorian torni.',
+          lahde: 'Ajmcbarreto, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Customs House, Manaus',
+        },
+        {
+          otsikko: 'Siemenet jotka päättivät kaiken',
+          tiedosto: 'Rubber tree and latex cup.jpg',
+          teksti: 'Englantilainen Henry Wickham salakuljetti 1876 '
+            + 'Brasiliasta noin 70 000 kumipuun siementä, ja niistä '
+            + 'kasvatetut puut istutettiin Britannian siirtomaihin '
+            + 'Malesiaan, Ceyloniin ja tropiikin Afrikkaan. Viljelmillä '
+            + 'puut kasvoivat riveissä, kun Amazonilla jokainen puu piti '
+            + 'etsiä metsästä erikseen; halvempi tuotanto siirsi '
+            + 'maailmanmarkkinan Britannian imperiumille. Buumi loppui '
+            + 'äkisti ja Manaus vaipui köyhyyteen. Hinnan oli maksanut '
+            + 'joku muu jo aiemmin: kumialueilla alkuperäiskansoja '
+            + 'pakotettiin keräämään maitiaisnestettä ja velkaan sidottu '
+            + 'työ oli tavallista; baré-kansaa portugalilaiset ja '
+            + 'espanjalaiset kauppiaat pitivät velkaorjina '
+            + 'vuosikymmenten ajan.',
+          selite: 'Kumipuun kuoreen viilletty kierteinen ura ohjaa valkoista '
+            + 'maitiaisnestettä rungon juurella olevaan kuppiin.',
+          lahde: 'Wee Hong, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Amazon rubber cycle',
+        },
+      ],
+    },
+    {
+      id: 'alkuperaiskansat',
+      nimi: 'Alkuperäiskansat',
+      johdanto: 'Kaupungin nimi tulee manaó-kansalta, ja Rio Negron '
+        + 'varrella asuu yhä kymmeniätuhansia alkuperäiskansoihin kuuluvia '
+        + 'ihmisiä. Tällä sivulla heistä puhutaan myös nykyajassa.',
+      tehtava: {
+        kysymys: 'Mitä yhteiskieltä baré-yhteisöt puhuvat nykyään?',
+        vaihtoehdot: [
+          'nheengatua',
+          'guaramia',
+          'ketšuaa',
+          'aimaraa',
+        ],
+        oikea: 0,
+        fakta: 'Karmeliittalähetys levitti nheengatua siirtomaa-aikana koko '
+          + 'Rio Negron varrelle. Alkuperäistä baré-kieltä osasi vuonna '
+          + '2012 enää kaksi ihmistä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kansat jotka olivat täällä ensin',
+          tiedosto: 'Amanhecer no Rio Negro.jpg',
+          teksti: 'Ennen portugalilaisia Rio Negron alajuoksulla asui '
+            + 'manaó-, baré-, baniwa- ja passé-kansaa. Kun linnoitus '
+            + 'rakennettiin 1669, juuri nämä kansat auttoivat työssä ja '
+            + 'asettuivat sen liepeille. Samaan aikaan rannikolla riehunut '
+            + 'isorokko oli harventanut väestöä niin, että orjatyön '
+            + 'tarvitsijat suuntasivat yhä syvemmälle sisämaahan '
+            + 'descimento-retkille. Manaót kieltäytyivät alistumasta ja '
+            + 'ajautuivat yhteenottoihin siirtomaaherrojen kanssa; '
+            + 'taistelut laantuivat vasta kun portugalilaiset alkoivat '
+            + 'solmia avioliittoja kasiikkien tyttärien kanssa, mistä sai '
+            + 'alkunsa alueen caboclo-väestö.',
+          selite: 'Aamu sarastaa Rio Negrolla: pilvet kaartuvat matalan '
+            + 'metsärajan yllä ja tyyni vesi heijastaa ne takaisin.',
+          lahde: 'Isabelle Allet-Coche, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Rio Negro (Amazon)',
+        },
+        {
+          otsikko: 'Päällikkö joka ei antautunut',
+          tiedosto: 'Vila de Barcelos, Rio Negro.jpg',
+          teksti: 'Ajuricaba syntyi Rio Negron varrella Mariuán kylässä, '
+            + 'nykyisessä Barcelosissa, ja johti 1720-luvulla '
+            + 'manaó-kansaa. Hän kieltäytyi alistumasta orjatyöhön ja '
+            + 'liittoutui Alankomaiden kanssa, joka oli tuolloin '
+            + 'Portugalin vihollinen; kertomusten mukaan hän kuljetti '
+            + 'kanootissaan Alankomaiden lippua. Portugalilaiset pelkäsivät '
+            + 'esimerkin innostavan sekä muita alkuperäiskansoja että '
+            + 'orjuutettuja afrikkalaisia, ja käynnistivät sotaretken '
+            + 'nimeltä guerra justa. Vangittuna ja matkalla oikeuden eteen '
+            + 'Ajuricaba hyppäsi jokeen noin vuonna 1728. Hänen nimensä '
+            + 'merkitsee mehiläisparvea.',
+          selite: '1700-luvun lopun piirroksessa Barcelosin kylä on matala '
+            + 'valkoisten talojen rivi Rio Negron rannalla, ja edustalla '
+            + 'keinuu muutama purjevene.',
+          lahde: 'Alexandre Rodrigues Ferreira, Wikimedia Commons (PD)',
+          wiki: 'Ajuricaba (chief)',
+        },
+        {
+          otsikko: 'Kansa joka elää yhä Rio Negron varrella',
+          tiedosto: 'AssuncaodoIcana.jpg',
+          teksti: 'Baré-kansaan kuului Amazonasin osavaltiossa 11 472 '
+            + 'ihmistä vuonna 2014 ja Venezuelassa runsaat 5 000. '
+            + 'Kotiseutuja ovat Xié-joki ja Rio Negron yläjuoksu, ja '
+            + 'elanto tulee maanviljelystä, metsästyksestä, kalastuksesta '
+            + 'ja piassava-kuidun keruusta. Kylät ovat hirsitaloja puhtaan '
+            + 'hiekkakentän ympärillä, ja suurimmissa on kappeli, koulu ja '
+            + 'joskus terveysasema. Alkuperäistä baré-kieltä osasi 2012 '
+            + 'enää kaksi ihmistä; yhteiskielenä on nheengatu, jota '
+            + 'karmeliitat levittivät siirtomaa-aikana. Cumati-putouksen '
+            + 'alapuolella yhteisöt ovat protestanttisia ja yläpuolella '
+            + 'katolisia, ja molemmissa parantajina toimivat yhä šamaanit.',
+          selite: 'Ilmakuvassa Assunção do Içanan kylä levittäytyy '
+            + 'joenmutkan niemekkeelle, ja rantahiekan edessä on rivi '
+            + 'veneitä.',
+          lahde: 'Marcelo Camargo/Agência Brasil, Wikimedia Commons (CC BY 3.0 br)',
+          wiki: 'Baré people',
+        },
+        {
+          otsikko: 'Kapina joka synnytti osavaltion',
+          tiedosto: 'Belém by Spix & Martius excerto.jpg',
+          teksti: 'Cabanagem oli 1835–1840 käyty kapina, jossa mustat, '
+            + 'alkuperäiskansat ja mestitsit nousivat Grão-Parán valkoista '
+            + 'poliittista eliittiä vastaan ja ottivat vallan 1835. '
+            + 'Kapinallisia kutsuttiin cabanoiksi jokivarren mökkien '
+            + 'mukaan. Alto Amazonasin eli nykyisen Manausin seudun '
+            + 'cabanot kiersivät alueella ja valtasivat kaupungin kahdesti, '
+            + 'ja useimmissa asutuksissa ei-valkoinen väestö liittyi '
+            + 'heihin oma-aloitteisesti. Juuri tämä laaja osallistuminen '
+            + 'oli ratkaisevaa nykyisen Amazonasin osavaltion synnylle. '
+            + 'Kapina vähensi silloisen Grão-Parán väkiluvun noin '
+            + '100 000:sta 60 000:een.',
+          selite: '1800-luvun alun kaiverruksessa purjelaiva ja soutuvene '
+            + 'kulkevat Belémin edustalla, ja rannalla jatkuu matala '
+            + 'talorivi kirkon kaksine torneineen.',
+          lahde: 'Johann Baptist von Spix & Carl Friedrich Philipp von Martius, '
+            + 'Wikimedia Commons (PD)',
+          wiki: 'Cabanagem',
+        },
+      ],
+    },
+  ],
 };

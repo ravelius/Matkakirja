@@ -545,4 +545,73 @@ export const SOUTHAMERICA_ARTIKKELIT = {
       + 'toiminut kaupungissa vuodesta 1817 ja kansalliskongressi vuodesta '
       + '1990.',
   },
+  /*
+   * MANAUS (24.8.2026). Avain on 'Manaus (kaupunki)', koska
+   * js/packs/southamerica.js (rivi 116) antaa kaupungille wiki-nimeksi
+   * fi-Wikipedian täsmennetyn otsikon — ui.js hakee introa juuri
+   * kentällä `city.wiki ?? city.name`. Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain manaus): väitteet on luettu
+   * en-Wikipedian raakateksteistä 24.8.2026, lähdeaineistona
+   * docs/mantereet-tyoaineisto/faktapohja-manaus.md ja sen riippumaton
+   * tarkistus tarkistus-manaus.md, joka voittaa ristiriidassa.
+   *
+   * ETÄISYYS MERESTÄ ON TÄSSÄ 1 500 KM. Tarkistuksen pakollinen korjaus
+   * 2: "Amazonas (Brazilian state)" sanoo "1,500 km upstream from the
+   * Atlantic Ocean". Pelissä oli sekä oikea luku (paikkatietoteksti)
+   * että väärä tuhat kilometriä (visan Q4-fakta,
+   * js/packs/southamerica-questions.js) — tämä intro käyttää oikeaa.
+   *
+   * VUODEN 1873 KULMA: isoisän matkavuonna kaupungissa ei ollut vielä
+   * mitään siitä, mistä se tunnetaan. Kumibuumi ajoitetaan vasta
+   * vuosiin 1879–1912, katedraali avattiin 1878 ja oopperataloa ei
+   * ollut ehdotettukaan ennen vuotta 1881. Koillisen suuri kuivuus
+   * (Grande Seca) EI ole 1873-ankkuri: se oli 1877–1878, ja
+   * faktapohjan virheellinen "samaan aikaan" on korjattu sekä täällä
+   * että lehden nostossa K3.
+   */
+  'Manaus (kaupunki)': {
+    intro: 'Manaus on Amazonasin osavaltion pääkaupunki ja Brasilian '
+      + 'pohjoisosan suurin kaupunki: kaksi miljoonaa asukasta keskellä '
+      + 'sademetsää, Rio Negron ja Amazonin yhtymäkohdassa. **Amazon on '
+      + 'täällä yhä niin syvä, että valtamerialus voi nousta jokea pitkin '
+      + '1 500 kilometriä Atlantilta sisämaahan.** Käyttökelpoista '
+      + 'maantietä muuhun Brasiliaan ei ole, joten liikenne kulkee '
+      + 'ilmassa ja vedessä.'
+      + '\n\n'
+      + 'Portugalilaiset rakensivat paikalle linnoituksen 1669, ja '
+      + 'manaó-, baré-, baniwa- ja passé-kansat auttoivat työssä. '
+      + 'Nykyisen nimensä kaupunki sai vasta 1856 manaó-kansan mukaan. '
+      + 'Sen tunnetuin jakso on kumibuumi 1879–1912, joka rakensi '
+      + 'keskustaan oopperatalon, tullitalon ja kelluvan sataman ja toi '
+      + 'kaduille sähkövalot ennen monia Euroopan kaupunkeja.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 mitään tästä ei vielä ollut. **Manaus '
+      + 'oli pieni jokisatama, jonka katedraali oli yhä rakenteilla ja '
+      + 'jonka väkiluku oli murto-osa vuosisadan lopun 70 000:sta.** '
+      + 'Kumin jälkeen kaupunki vaipui vuosikymmeniksi hiljaisuuteen, '
+      + 'kunnes vuonna 1967 perustettu vapaakauppa-alue teki siitä '
+      + 'elektroniikkateollisuuden keskuksen.',
+    teksti: 'Manaus on Brasilian luoteisosassa, Rio Negron ja Solimõesin '
+      + 'yhtymäkohdan tuntumassa keskellä Amazonin sademetsää. Kaupungin '
+      + 'alapuolella tumma ja savenvärinen joki kulkevat kilometrien '
+      + 'matkan sekoittumatta – ilmiön nimi on Encontro das Águas. '
+      + 'Historiallinen keskusta on tiivis ja kävelymatkan kokoinen, '
+      + 'mutta kaupunki itse levittäytyy laajalle.'
+      + '\n\n'
+      + 'Vuoden 1669 linnoitus korotettiin kyläksi 1832 ja kaupungiksi '
+      + '1848. Kumibuumi teki 1800-luvun lopulla Manausista Amazonin '
+      + 'rikkaimman kaupungin: oopperatalo vihittiin 1896, tullitalo '
+      + 'nousi englantilaisen yhtiön käsissä 1900-luvun alussa, ja '
+      + 'satamaan rakennettiin kelluvat laiturit. Kun kumipuun siemenet '
+      + 'päätyivät Aasian '
+      + 'viljelmille, buumi loppui yhtä äkkiä kuin oli alkanutkin.'
+      + '\n\n'
+      + 'Nykyään Manausissa asuu lähes puolet osavaltion väestöstä, ja '
+      + 'talous nojaa vuoden 1967 vapaakauppa-alueeseen: '
+      + 'teollisuusalueella kootaan elektroniikkaa, ja lentoasema on '
+      + 'rahtimäärältään Brasilian kolmanneksi suurin. Matkailija saapuu '
+      + 'lentäen tai jokilaivalla ja lähtee retkille vedelle: vesien '
+      + 'kohtaamiseen, jokisaaristoon tai rannalle, joka on olemassa vain '
+      + 'elo-marraskuussa.',
+  },
 };
