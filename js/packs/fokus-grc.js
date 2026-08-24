@@ -62,9 +62,12 @@
  *           (1,23–2,08); pystyssä kuvan häivytetty uloin reuna sulattaa
  *           sauman lautaan.
  *
- * Kuva on 9600 x 6000 eli neljä kertaa entistä useampi pikseli
+ * Kuva on 6400 x 4000 eli lähes neljä kertaa entistä useampi pikseli
  * (omistaja: *"taustakartan resoluutio ylös — kuva pikselöityy
- * fokuszoomilla"*), noin 16 pikseliä lautayksikköä kohti.
+ * fokuszoomilla"*). Fokusrajauksessa lehti näkyy kokonaan eikä sitä
+ * suurenneta lainkaan: iPadin verkkokalvonäytöllä kuvaa on noin
+ * kaksinkertaisesti yli tarpeen. Ylärajan asettaa iOS:n purettu kuva
+ * eikä tiedostokoko — ks. tools/tee-fokuskartta.mjs.
  */
 export const FOKUS_POHJAT = {
   GRC: {

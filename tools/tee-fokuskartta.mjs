@@ -163,12 +163,26 @@ const dataKansio = resolve(valitsin('data',
  *
  * Omistajan iPad-havainto v1095:stä: *"taustakartan resoluutio ylös —
  * kuva pikselöityy fokuszoomilla"*, ja ohje oli vähintään kaksinkertainen
- * entiseen 2400 pikseliin nähden. 6400 on 2,7-kertainen, ja koska lehti
- * kattaa nyt myös 2,7-kertaisen alueen, PIKSELITIHEYS pysyy entisenä
- * (noin 10 pikseliä lautayksikköä kohti) — mutta ratkaiseva ero on, että
- * fokusrajauksessa lehti näkyy KOKONAAN eikä sitä enää suurenneta:
- * iPadin verkkokalvonäytöllä kuvaa on tällöin noin kaksinkertaisesti
- * yli tarpeen. Tätä leveämpi kaataisi WebPin nelimegatavun budjetin.
+ * entiseen 2400 pikseliin nähden. 6400 on 2,7-kertainen leveys ja
+ * 3,8-kertainen pikselimäärä.
+ *
+ * MIKSI EI VIELÄ ISOMPI, vaikka tiedosto mahtuisi budjettiin (6400 on
+ * 1,5 Mt ja 9600 olisi 2,8 Mt eli yhä alle neljän)? Koska rajoite ei ole
+ * tiedostokoko vaan iOS:n PURETTU kuva. 6400 x 4000 on 25,6
+ * megapikseliä eli noin 100 Mt muistia; 9600 x 6000 olisi 230 Mt.
+ * Suurin kuva, jonka peli on tähän asti vienyt läpi omistajan iPadilla,
+ * on 6,8 megapikseliä (edellinen fokuspohja), ja repon muut suurimmat
+ * ovat 5–6 megapikseliä. Kahdeksankertainen loikka tunnetun rajan yli
+ * on juuri se tapa, jolla iOS jättää kuvan lataamatta — ja silloin
+ * pelaaja ei näkisi karttaa lainkaan, mikä on paljon pahempi vika kuin
+ * pehmeys lähimmällä zoomiportaalla.
+ *
+ * Ratkaiseva ero entiseen on joka tapauksessa se, että fokusrajauksessa
+ * lehti näkyy KOKONAAN eikä sitä enää suurenneta: iPadin
+ * verkkokalvonäytöllä kuvaa on tällöin noin kaksinkertaisesti yli
+ * tarpeen. Jos lähin zoomiporras osoittautuu silti pehmeäksi, `--leveys
+ * 9600` on yhden valitsimen päässä — mutta se on mitattava iPadilla
+ * ennen kuin se jää päälle.
  */
 const kuvaLeveys = Number(valitsin('leveys', 6400));
 
