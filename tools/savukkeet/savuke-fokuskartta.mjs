@@ -28,6 +28,13 @@
  *     `rajaus`-ikkunaan; ne eivät ole sama laatikko, ja vuoto niiden
  *     välissä on koko sauman esto.
  *   - PUNAINEN KOROSTUS JA MAASTONIMET POIS. Uudet väitteet 2f ja 2g.
+ *
+ * === MIKÄ MUUTTUI OMISTAJAN PELITESTIN JÄLKEEN (v1097) ===
+ *
+ * *"Ota pallot pois"*: lehden päällä ei saa olla laudan pyöreitä
+ * pelimerkkejä. Osio 6 on kokonaan uusi eikä kumoa yhtään vanhaa
+ * väitettä — 1c ja 5b tarkistavat, että laatta on OLEMASSA (peli ei
+ * hajonnut), eivät että se näkyy, joten ne pätevät ennallaan.
  */
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
@@ -336,6 +343,190 @@ const vaara = await sivu.evaluate(async () => {
 });
 vaadi('5a toisen laudan rajausta ei käytetä', vaara.kuvia === 0, `${vaara.kuvia} kuvaa`);
 vaadi('5b peli toimii silti', vaara.laatta);
+
+/* ------------------------------------------- 6. pallot pois lehdeltä */
+
+/*
+ * OMISTAJAN PELITESTIPALAUTE v1097 (iPad): *"Ota pallot pois"*.
+ *
+ * Lehden päällä näkyivät Ateenan laatta ja pelaajan nappula
+ * päällekkäin sekä Kreetan valkoinen rengas — pyöreää pelilautaa
+ * keskellä 1873-atlaksen sivua. MITKÄ VÄITTEET MUUTTUIVAT: mikään
+ * vanha väite ei kääntynyt päinvastaiseksi (1c ja 5b tarkistavat vain
+ * että laatta on OLEMASSA, eivät että se näkyy), vaan tämä on kokonaan
+ * uusi osio. Se on tässä eikä osiossa 2, koska kamera-ajo (3) tuo
+ * lehden ruudulle ja tekee mittauksesta samalla realistisen.
+ *
+ * Neljä väitettä: piilotus, nimien säilyminen, kehittäjänapautuksen
+ * elossapysyminen ja paluu matkustusvalinnan sekä aarrevaiheen aikana.
+ */
+await sivu.evaluate(async () => {
+  const ui = window.matkakirja.ui;
+  ui.render();
+  await new Promise((s) => setTimeout(s, 600));
+});
+
+/** Yhden mittauksen apuri selaimessa: mikä lehden päällä näkyy? */
+const mittaaPallot = () => sivu.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  const nakyy = (osa) => getComputedStyle(osa).display !== 'none';
+  const osat = [...document.querySelectorAll('#board .cities [data-kaupunki]')];
+  const lehdella = osat.filter((osa) => ui.fokusPohjanAlla(
+    Number(osa.getAttribute('cx') ?? osa.getAttribute('x')),
+    Number(osa.getAttribute('cy') ?? osa.getAttribute('y')),
+  ));
+  const pisteet = lehdella.filter((osa) => !osa.classList.contains('city-label'));
+  /*
+   * NIMISTÄ MITATAAN VAIN KÄYDYN MAAN NIMET. Lehden laatikkoon osuu
+   * myös naapurimaiden kaupunkeja, ja niiden koko datakerros — nimi
+   * mukaan lukien — on piilossa jo fokusmoodin vanhalla säännöllä
+   * (.fokus-piilossa). Se on oikein eikä liity palloihin, joten
+   * mittaus rajataan niihin nimiin, joiden kuuluukin näkyä.
+   */
+  const nimet = lehdella.filter((osa) => osa.classList.contains('city-label')
+    && !osa.classList.contains('fokus-piilossa'));
+  const renkaat = [...document.querySelectorAll('#board .targets .target-ring')];
+  return {
+    pohja: Boolean(ui.fokusPohjaBbox),
+    pisteita: pisteet.length,
+    nakyviaPisteita: pisteet.filter(nakyy).length,
+    nimia: nimet.length,
+    nakyviaNimia: nimet.filter(nakyy).length,
+    // Yksikään nimi ei saa saada pallonpiilotuksen luokkaa.
+    pallotettujaNimia: lehdella.filter((osa) => osa.classList.contains('city-label')
+      && osa.classList.contains('fokus-lehden-alla')).length,
+    nappuloita: [...document.querySelectorAll('#board .pawns .pawn')].length,
+    nakyviaNappuloita: [...document.querySelectorAll('#board .pawns .pawn')].filter(nakyy).length,
+    renkaita: renkaat.length,
+    nakyviaRenkaita: renkaat.filter(nakyy).length,
+    osumaAlueita: [...document.querySelectorAll('#board .targets .target-hit')].length,
+    nakyviaOsumaAlueita: [...document.querySelectorAll('#board .targets .target-hit')]
+      .filter(nakyy).length,
+  };
+});
+
+const piilossa = await mittaaPallot();
+vaadi('6a lehti on yhä paikallaan mittausta varten', piilossa.pohja);
+vaadi('6b kaupunkien pisteet ja laatat ovat piilossa lehden päältä',
+  piilossa.pisteita > 0 && piilossa.nakyviaPisteita === 0,
+  `${piilossa.nakyviaPisteita}/${piilossa.pisteita} näkyvissä`);
+vaadi('6c kaupunkien nimet JÄÄVÄT lehteen (ATEENA, Kreeta)',
+  piilossa.nimia > 0 && piilossa.nakyviaNimia === piilossa.nimia
+  && piilossa.pallotettujaNimia === 0,
+  `${piilossa.nakyviaNimia}/${piilossa.nimia} näkyvissä, `
+  + `${piilossa.pallotettujaNimia} pallotettuna`);
+vaadi('6d pelinappula on piilossa ennen aarrevaihetta',
+  piilossa.nappuloita > 0 && piilossa.nakyviaNappuloita === 0,
+  `${piilossa.nakyviaNappuloita}/${piilossa.nappuloita} näkyvissä`);
+
+/*
+ * KEHITTÄJÄTILAN NAPAUTUS EI SAA LAKATA TOIMIMASTA: näkymätön
+ * osuma-alue (.target-hit) on eri asia kuin piilotettu laatta, ja
+ * dev-siirron on onnistuttava vaikka laatta on lehden alla.
+ */
+const dev = await sivu.evaluate(async () => {
+  const ui = window.matkakirja.ui;
+  ui.kehittajaTila = true;
+  ui.render();
+  await new Promise((s) => setTimeout(s, 400));
+  const nakyy = (osa) => getComputedStyle(osa).display !== 'none';
+  const alueet = [...document.querySelectorAll('#board .targets .target-hit')];
+  const laatat = [...document.querySelectorAll('#board .cities [data-kaupunki]')]
+    .filter((osa) => !osa.classList.contains('city-label') && ui.fokusPohjanAlla(
+      Number(osa.getAttribute('cx') ?? osa.getAttribute('x')),
+      Number(osa.getAttribute('cy') ?? osa.getAttribute('y')),
+    ));
+  const tulos = {
+    alueita: alueet.length,
+    nakyviaAlueita: alueet.filter(nakyy).length,
+    laattojaLehdella: laatat.length,
+    nakyviaLaattoja: laatat.filter(nakyy).length,
+  };
+  ui.kehittajaTila = false;
+  ui.render();
+  await new Promise((s) => setTimeout(s, 300));
+  return tulos;
+});
+vaadi('6e kehittäjätilan napautusalueet ovat elossa piilotetun laatan päällä',
+  dev.alueita > 0 && dev.nakyviaAlueita === dev.alueita && dev.nakyviaLaattoja === 0,
+  JSON.stringify(dev));
+
+/*
+ * MATKUSTUSVALINTA TUO KOHTEET TAKAISIN. Valinta avataan samalla
+ * lipulla kuin Liiku-nappi (ui.travelExpanded), ja mittari on nappula:
+ * se palaa kartalle valinnan ajaksi, jotta pelaaja näkee mistä
+ * lähdetään.
+ */
+const valinta = await sivu.evaluate(async () => {
+  const ui = window.matkakirja.ui;
+  const vaihe = ui.game.phase;
+  ui.game.phase = 'action';
+  ui.travelExpanded = true;
+  ui.render();
+  await new Promise((s) => setTimeout(s, 400));
+  const nakyy = (osa) => getComputedStyle(osa).display !== 'none';
+  const renkaat = [...document.querySelectorAll('#board .targets .target-ring')];
+  const tulos = {
+    auki: ui.fokusMatkavalintaAuki(),
+    renkaita: renkaat.length,
+    piilotettujaRenkaita: renkaat.filter((r) => !nakyy(r)).length,
+    nakyviaNappuloita: [...document.querySelectorAll('#board .pawns .pawn')].filter(nakyy).length,
+  };
+  ui.travelExpanded = false;
+  ui.game.phase = vaihe;
+  ui.render();
+  await new Promise((s) => setTimeout(s, 300));
+  return tulos;
+});
+vaadi('6f matkustusvalinta tuo kohderenkaat ja nappulan takaisin',
+  valinta.auki === true && valinta.piilotettujaRenkaita === 0
+  && valinta.nakyviaNappuloita > 0, JSON.stringify(valinta));
+
+const suljettu = await mittaaPallot();
+vaadi('6g valinnan sulkeuduttua pallot katoavat taas',
+  suljettu.nakyviaPisteita === 0 && suljettu.nakyviaNappuloita === 0,
+  JSON.stringify(suljettu));
+
+/*
+ * AARREVAIHE TUO LAATAN. Fokusvirta kirjataan kohtaamisvaiheeseen
+ * ("Tapaa Nikos" → varsinainen laattakysymys) samalla avaimella kuin
+ * peli sen tallentaa, ja laatan on ilmestyttävä.
+ */
+const aarre = await sivu.evaluate(async () => {
+  const ui = window.matkakirja.ui;
+  const kaupunki = ui.game.cityOf();
+  const avain = `${ui.game.pack.id}:${kaupunki.id}`;
+  (ui.game.fokusvirrat ??= {})[avain] = {
+    vaihe: 'kohtaaminen', taky: null, tehdyt: [], kohde: null, kohteet: [],
+  };
+  ui.render();
+  await new Promise((s) => setTimeout(s, 400));
+  const nakyy = (osa) => getComputedStyle(osa).display !== 'none';
+  const omat = [...document.querySelectorAll(`#board .cities [data-kaupunki="${kaupunki.id}"]`)]
+    .filter((osa) => !osa.classList.contains('city-label'));
+  const muut = [...document.querySelectorAll('#board .cities [data-kaupunki]')]
+    .filter((osa) => !osa.classList.contains('city-label')
+      && osa.dataset.kaupunki !== kaupunki.id
+      && ui.fokusPohjanAlla(
+        Number(osa.getAttribute('cx') ?? osa.getAttribute('x')),
+        Number(osa.getAttribute('cy') ?? osa.getAttribute('y')),
+      ));
+  return {
+    kaupunki: kaupunki.id,
+    omia: omat.length,
+    nakyviaOmia: omat.filter(nakyy).length,
+    huomioele: omat.some((osa) => osa.classList.contains('fokus-laatta-esiin')),
+    muitaLehdella: muut.length,
+    nakyviaMuita: muut.filter(nakyy).length,
+    nakyviaNappuloita: [...document.querySelectorAll('#board .pawns .pawn')].filter(nakyy).length,
+  };
+});
+vaadi('6h aarrevaihe tuo nykyisen kaupungin laatan takaisin',
+  aarre.omia > 0 && aarre.nakyviaOmia === aarre.omia && aarre.nakyviaNappuloita > 0,
+  JSON.stringify(aarre));
+vaadi('6i pöllön huomioele on laatan päällä', aarre.huomioele, JSON.stringify(aarre));
+vaadi('6j muiden kaupunkien pallot pysyvät piilossa',
+  aarre.muitaLehdella > 0 && aarre.nakyviaMuita === 0, JSON.stringify(aarre));
 
 await selain.close();
 palvelin.close();

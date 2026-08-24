@@ -26,8 +26,12 @@
  *   4. Valintavaihe on samassa kuplassa painikkeineen; portti on kiinni
  *      ennen ensimmäistä täkyä ja aukeaa sen jälkeen (Raamattu,
  *      ETENEMINEN).
- *   5. Täky on KORTTI: kuvaviite, minivisa ja raha oikeasta vastauksesta.
- *      Kortti ei yllä matkakirjakortin päälle.
+ *   5. Täky on KORTTI: iso kuva heti kortin yläosassa, minivisa ja raha
+ *      oikeasta vastauksesta. Kortti on VAALEAA PAPERIA eikä tumma
+ *      massa (omistajan pelitestipalaute 24.8.2026: *"Liian raskaan
+ *      oloinen visuaalisesti. Kuva saisi tässä näkyä heti isolla."*),
+ *      ja se saa kasvaa kuvan takia ylävasemman matkakirjakortin
+ *      päälle — mutta ei koko ruudun modaaliksi.
  *   6. Leipäteksti on lukukirjasimella, ei kirjoituskoneella
  *      (omistajan palaute: *"fontti saisi olla luettavampi"*).
  *   7. Kartan kuvavinjetit ilmestyvät Ateenan ylle, kertyvät virran
@@ -35,7 +39,10 @@
  *   8. KUVAN SUURENNOS (omistajan tilaus 24.8.2026): napautus KASVATTAA
  *      kuvan vinjetin paikalta suureksi kartan päälle — ei koko ruudun
  *      katselinta, ei täyttä pimennystä, kartta näkyy yhä taustalla.
- *      Selite ja lähde ovat kuvan ALLA, ja napautus sulkee.
+ *      Pelitestin jälkeen kolme lisävaatimusta: kuva täyttää ruudun
+ *      selvästi, selite ja lähde ovat PAPERIKEHYKSEN sisällä kuvan
+ *      levyisenä palkkina (ennen ne valuivat irtotekstinä kartan
+ *      päälle), ja pöllön kupla häviää suurennoksen ajaksi.
  *   9. KOHDENOSTO (omistajan tilaus 24.8.2026): valintakuplan neljäs
  *      valinta kertoo MUUSTA paikasta kuin pelikaupungista — kupla
  *      ilman visaa, ja vinjetti kartalle KOHTEEN OMAAN sijaintiin eikä
@@ -79,6 +86,22 @@ const osoite = `http://localhost:${palvelin.address().port}/`;
 
 let lapi = 0; let kaikki = 0;
 const vaadi = (nimi, ehto, lisa = '') => { kaikki += 1; if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`); };
+
+/**
+ * Onko `rgb(...)`-väri vaaleaa paperia?
+ *
+ * Kortin ja suurennoksen kuvatekstipalkin on oltava pergamenttia eikä
+ * tummaa massaa (omistajan pelitestipalaute 24.8.2026). Raja on karkea
+ * kirkkaus: pelin pergamentit ovat yli 200, entinen tumma kortti oli
+ * alle 50.
+ */
+const vaalea = (vari) => {
+  const osat = String(vari ?? '').match(/[\d.]+/g)?.map(Number) ?? [];
+  if (osat.length < 3) return false;
+  // Läpinäkyvä tausta ei ole paperia.
+  if (osat.length > 3 && osat[3] < 0.5) return false;
+  return (osat[0] * 0.299 + osat[1] * 0.587 + osat[2] * 0.114) > 190;
+};
 
 /* Valmis peli: Herra Fogg seisoo Ateenassa, laatta kääntämättä. */
 const peli = new Game({
@@ -138,6 +161,25 @@ const kortti = () => sivu.evaluate(() => {
     leipafontti: leipa ? getComputedStyle(leipa).fontFamily : '',
     leipakoko: leipa ? parseFloat(getComputedStyle(leipa).fontSize) : 0,
     kuvia: el.querySelectorAll('.fokusvirta-kuva img').length,
+    /*
+     * Kortin pinta ja kuvan leveys (omistajan pelitestipalaute
+     * 24.8.2026): kortti on vaaleaa paperia, ei tummaa massaa, ja kuva
+     * näkyy heti isona koko kortin levyisenä.
+     */
+    pohja: getComputedStyle(el).backgroundColor,
+    kuvanLeveys: Math.round(
+      el.querySelector('.fokusvirta-kuva img')?.getBoundingClientRect().width ?? 0,
+    ),
+    kuvanKorkeus: Math.round(
+      el.querySelector('.fokusvirta-kuva img')?.getBoundingClientRect().height ?? 0,
+    ),
+    // Onko kuva kortin ENSIMMÄINEN asia — ylempänä kuin leipäteksti?
+    kuvaEnsin: (() => {
+      const kuva = el.querySelector('.fokusvirta-viite');
+      return Boolean(kuva && leipa
+        && kuva.getBoundingClientRect().top < leipa.getBoundingClientRect().top);
+    })(),
+    sisus: Math.round(el.querySelector('.fokusvirta-sisalto')?.getBoundingClientRect().width ?? 0),
     napit: [...el.querySelectorAll('.fokusvirta-napit button')]
       .map((b) => ({ teksti: b.textContent, pois: b.disabled })),
     vaihtoehdot: [...el.querySelectorAll('.fokusvirta-vaihtoehdot button')]
@@ -201,16 +243,29 @@ const suurennos = () => sivu.evaluate(() => {
   const teksti = kerros.querySelector('.fokuszoom-teksti');
   const tyyli = getComputedStyle(kerros);
   const alfa = (tyyli.backgroundColor.match(/rgba?\([^)]*?([\d.]+)\)$/) ?? [])[1];
+  const kehys = kerros.querySelector('.fokuszoom-kehys');
   const k = img?.getBoundingClientRect();
   const t = teksti?.getBoundingClientRect();
+  const ke = kehys?.getBoundingClientRect();
+  // Kupla ja kortti häivytetään suurennoksen ajaksi (ne jäivät ennen
+  // kuvan viereen ja kuvateksti valui niiden päälle).
+  const pinta = document.querySelector('.fokusvirta-kupla, .fokusvirta-kortti');
   return {
     kuva: k ? { w: Math.round(k.width), h: Math.round(k.height), ylin: Math.round(k.top), alin: Math.round(k.bottom) } : null,
+    kehys: ke ? { w: Math.round(ke.width), h: Math.round(ke.height), alin: Math.round(ke.bottom) } : null,
     tekstinYlin: t ? Math.round(t.top) : null,
+    tekstinLeveys: t ? Math.round(t.width) : 0,
+    // Kuvatekstipalkin oma pinta: paperia kehyksen sisällä, ei
+    // irtotekstiä kartan päällä (peritty tausta luetaan kehykseltä).
+    tekstipalkki: kehys ? getComputedStyle(kehys).backgroundColor : '',
+    tekstivari: teksti ? getComputedStyle(teksti).color : '',
+    tekstiKehyksessa: Boolean(t && ke && t.bottom <= ke.bottom + 1 && t.top >= ke.top),
     selite: kerros.querySelector('.fokuszoom-selite')?.textContent ?? '',
     lahde: kerros.querySelector('.fokuszoom-lahde')?.textContent ?? '',
     laskuri: kerros.querySelector('.fokuszoom-laskuri')?.textContent ?? '',
     taustanAlfa: alfa === undefined ? 1 : Number(alfa),
     sumennus: `${tyyli.backdropFilter ?? ''}${tyyli.webkitBackdropFilter ?? ''}`,
+    kuplaNakyy: pinta ? Number(getComputedStyle(pinta).opacity) > 0.05 : false,
     lehtikatselin: Boolean(document.querySelector('.lightbox')),
     kartta: Boolean(document.querySelector('.map-pane svg')),
     ikkuna: { w: window.innerWidth, h: window.innerHeight },
@@ -323,13 +378,38 @@ const rahatEnnen = tila.rahat;
 await paina('Filosofi');
 tila = await kortti();
 kirja = await matkakirja();
-vaadi('vaihe 4 on KORTTI kuvaviitteineen ja minivisoineen',
+vaadi('vaihe 4 on KORTTI kuvineen ja minivisoineen',
   tila?.vaihe === 'taky' && tila.kupla === false && tila.karttapinnassa === true
   && tila.dialogissa === false && tila.kuvia === 1 && tila.vaihtoehdot.length === 3,
   JSON.stringify(tila));
-vaadi('kortti ei peitä ylävasenta matkakirjakorttia',
-  Boolean(kirja) && tila?.laatikko.ylin > kirja.alin,
-  JSON.stringify({ kortti: tila?.laatikko, kirja }));
+/*
+ * OMISTAJAN PELITESTIPALAUTE 24.8.2026 (iPad): *"Liian raskaan oloinen
+ * visuaalisesti. Kuva saisi tässä näkyä heti isolla."* Kaksi väitettä
+ * korvaa entisen "kuvaviite"-väitteen:
+ *   - kuva on kortin ensimmäinen asia ja lähes kortin sisuksen levyinen
+ *     (ennen 5,6 rem pikkuviite tekstin vieressä),
+ *   - kortin pinta on vaaleaa paperia eikä tummaa massaa.
+ */
+vaadi('kortin kuva näkyy heti isona, koko kortin levyisenä',
+  tila?.kuvaEnsin === true && tila.kuvanLeveys >= tila.sisus * 0.9
+  && tila.kuvanKorkeus >= 90,
+  JSON.stringify({
+    ensin: tila?.kuvaEnsin, leveys: tila?.kuvanLeveys,
+    korkeus: tila?.kuvanKorkeus, sisus: tila?.sisus,
+  }));
+vaadi('kortti on vaalealla paperipohjalla, ei tummalla massalla',
+  vaalea(tila?.pohja), JSON.stringify(tila?.pohja));
+/*
+ * ENTINEN VÄITE "kortti ei peitä ylävasenta matkakirjakorttia" ON
+ * POISTETTU. Omistaja päinvastoin sallii peiton: *"Kortin korkeus saa
+ * kasvaa kuvan takia … matkakirjakortti ylävasemmalla saa jäädä kortin
+ * alle tässä vaiheessa jos tila ei muuten riitä (kuva on nyt pääasia)"*.
+ * Tilalle jää fokusmoodin oma perussääntö: kortti EI ole koko ruudun
+ * modaali, vaan kartta näkyy sen ylälaidan yli.
+ */
+vaadi('kortti ei ole koko ruudun modaali: kartta näkyy sen yli',
+  Boolean(kirja) && tila?.laatikko.ylin > tila.ikkuna.h * 0.1,
+  JSON.stringify({ kortti: tila?.laatikko, ikkuna: tila?.ikkuna }));
 vaadi('täyn kuva liittyi kartan viuhkaan', (await vinjetit()).maara === 2);
 
 await paina('lyhty', '.fokusvirta-vaihtoehdot');
@@ -369,17 +449,49 @@ await sivu.waitForTimeout(700);
 let zoom = await suurennos();
 vaadi('vinjetin napautus avaa oman suurennoksen, ei lehtien katselinta',
   Boolean(zoom) && zoom.lehtikatselin === false, JSON.stringify(zoom));
-vaadi('kuva kasvoi vinjetistä suureksi (~ruudun pienempi sivu)',
+/*
+ * KUVA ISOMMAKSI (omistajan pelitestipalaute 24.8.2026, iPad: *"KUVA
+ * ISOMMAKSI … kasvata niin että kuva täyttää ruudun selvästi"*). Entinen
+ * mitta oli ~0,82 ruudun pienemmästä sivusta; nyt vaaditaan vähintään
+ * 0,82 mutta kartta jää yhä joka reunalta näkyviin (kehys ei täytä
+ * ruutua kokonaan).
+ */
+vaadi('kuva kasvoi vinjetistä suureksi ja täyttää ruudun selvästi',
   Boolean(zoom?.kuva) && zoom.kuva.w > vinjetinKoko.w * 3
+  && zoom.kuva.w >= Math.min(zoom.ikkuna.w, zoom.ikkuna.h) * 0.82
   && zoom.kuva.w <= Math.min(zoom.ikkuna.w, zoom.ikkuna.h),
   JSON.stringify({ vinjetti: vinjetinKoko, suuri: zoom?.kuva, ikkuna: zoom?.ikkuna }));
 vaadi('kartta näkyy yhä taustalla: kevyt himmennys, ei sumennusta',
   zoom?.kartta === true && zoom.taustanAlfa <= 0.6 && !/blur/.test(zoom.sumennus),
   JSON.stringify({ alfa: zoom?.taustanAlfa, sumennus: zoom?.sumennus }));
+vaadi('kehys mahtuu ruutuun eikä kartta katoa kokonaan',
+  Boolean(zoom?.kehys) && zoom.kehys.w <= zoom.ikkuna.w
+  && zoom.kehys.h <= zoom.ikkuna.h,
+  JSON.stringify({ kehys: zoom?.kehys, ikkuna: zoom?.ikkuna }));
 vaadi('selite ja lähde ovat kuvan ALLA (CC BY vaatii tekijän)',
   zoom?.selite.length > 10 && zoom.lahde.length > 10
   && zoom.tekstinYlin >= zoom.kuva.alin,
   JSON.stringify({ selite: zoom?.selite, lahde: zoom?.lahde }));
+/*
+ * KUVATEKSTI PALKKIIN, EI IRTOTEKSTIKSI (omistajan pelitestipalaute
+ * 24.8.2026: *"selite + lähderivi valuvat irtotekstinä kartan ja pöllön
+ * kuplan päälle (lukukelvoton)"*). Kolme väitettä:
+ *   - teksti on paperikehyksen SISÄLLÄ eikä sen alapuolella kartan
+ *     päällä,
+ *   - kehyksellä on vaalea paperitausta (atlas-/postikorttikehys),
+ *   - palkki on täsmälleen kuvan levyinen.
+ */
+vaadi('kuvateksti on paperikehyksen sisällä, ei kartan päällä irrallaan',
+  zoom?.tekstiKehyksessa === true, JSON.stringify({
+    teksti: zoom?.tekstinYlin, kehys: zoom?.kehys,
+  }));
+vaadi('suurennoksella on vaalea paperikehys (atlas/postikortti)',
+  vaalea(zoom?.tekstipalkki), JSON.stringify(zoom?.tekstipalkki));
+vaadi('kuvatekstipalkki on kuvan levyinen',
+  Math.abs((zoom?.tekstinLeveys ?? 0) - (zoom?.kuva?.w ?? 0)) <= 4,
+  JSON.stringify({ palkki: zoom?.tekstinLeveys, kuva: zoom?.kuva?.w }));
+vaadi('pöllön kupla ja kortti häviävät suurennoksen ajaksi',
+  zoom?.kuplaNakyy === false, JSON.stringify(zoom?.kuplaNakyy));
 vaadi('viuhkaa voi selata suurennoksessa', zoom?.laskuri.includes('/'),
   JSON.stringify(zoom?.laskuri));
 
@@ -389,6 +501,12 @@ await sivu.evaluate(() => document.querySelector('.fokuszoom-kuva')?.dispatchEve
 ));
 await sivu.waitForTimeout(700);
 vaadi('napautus kuvaan sulkee suurennoksen', (await suurennos()) === null);
+vaadi('kortti palaa näkyviin suurennoksen sulkeuduttua',
+  await sivu.evaluate(() => {
+    const pinta = document.querySelector('.fokusvirta-kortti, .fokusvirta-kupla');
+    return Boolean(pinta) && Number(getComputedStyle(pinta).opacity) > 0.9
+      && !document.body.classList.contains('fokuszoom-paalla');
+  }));
 
 /* --- 9: portti aukeaa --- */
 await paina('Takaisin');

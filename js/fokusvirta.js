@@ -280,6 +280,37 @@ export function fokusvirtaLukitseeLehden(ui, city) {
 }
 
 /**
+ * ONKO KAUPUNGIN LAATTA JO ANSAINNUT PAIKKANSA LEHDEN PÄÄLLÄ?
+ *
+ * Omistajan pelitestipalaute v1097 (iPad): *"Ota pallot pois"* —
+ * fokusnäkymässä laudan pyöreät pelimerkit (laatat, nappula,
+ * kohderenkaat) rikkovat atlaksen lehden tunnelman. Ne piilotetaan
+ * lehden alueelta (js/ui.js paivitaFokusPallot), ja laatta tuodaan
+ * takaisin vasta kun se on pelin kannalta oleellinen:
+ *
+ *   1. AARREVAIHE. Virta on edennyt kohtaamiseen ("Tapaa Nikos" →
+ *      varsinainen laattakysymys). Silloin laatta ilmestyy kartalle ja
+ *      pöllö osoittaa sitä.
+ *   2. KÄÄNNETTY LAATTA. Aarteen jälkeen alkaa vapaa tutkinta ja peli
+ *      jatkuu ennallaan — laatta ja nappula näkyvät kuten aina.
+ *   3. EI VIRTAA. Kaupunki ilman fokusvirtasisältöä (tai botti, tai
+ *      fokusmoodi pois) ei annostele mitään, joten sen laatta ei saa
+ *      jäädä piiloon odottamaan vaihetta, jota ei koskaan tule.
+ *
+ * Väärä vastaus jättää laatan paikalleen ja vaiheen 'valmis'-tilaan,
+ * jolloin laatta pysyy näkyvissä uusintayritystä varten.
+ */
+export function fokusvirtaLaattaNakyy(ui, city) {
+  if (!city) return false;
+  // Laatta on käännetty (tai virtaa ei ole): peli näyttää sen itse.
+  if (!fokusvirtaLukitseeLehden(ui, city)) return true;
+  const data = fokusvirtaSisalto(ui, city);
+  if (!data) return true;
+  const vaihe = fokusvirtaTila(ui.game, city, data).vaihe;
+  return vaihe === 'kohtaaminen' || vaihe === 'valmis';
+}
+
+/**
  * KYTKENTÄKOHTA js/ui.js:n openArrivalissa.
  *
  * Palauttaa true, kun fokusvirta ottaa lehden paikan: silloin
@@ -647,27 +678,42 @@ function kuvanOsoite(kuva, koko) {
   return kuva.ampari ? julisteUrl(kuva.ampari) : valokuvaUrl(kuva.tiedosto, koko);
 }
 
+/**
+ * Kortin ison kuvan leveys pikseleinä. Kortti on kartan levyinen ja
+ * kuva sen levyinen, joten 320 px (entinen pikkuviite) näkyisi
+ * tabletilla sumeana; 800 riittää retinallekin ilman että se on
+ * suurennoksen kokoinen lataus.
+ */
+const KORTIN_KUVA_PX = 800;
+
 /** Sama kuva suurennoksena, pelin omaan katselimeen. */
 function kuvanSuurennos(kuva) {
   return kuva.ampari ? julisteUrl(kuva.ampari) : valokuvaSuurennos(kuva.tiedosto, 1600);
 }
 
 /**
- * KUVAVIITE KORTILLE (omistajan tarkennus 24.8.2026: *"syvennys- ja
- * oppituntikorteissa kuvaa ei tarvitse näyttää isona kortin sisällä —
- * kortti voi näyttää tekstin ja pienen viitteen, ja itse kuva ilmestyy
- * karttaan pienenä sen vaiheen aikana"*).
+ * KORTIN KUVA — HETI ISONA (omistajan pelitestipalaute 24.8.2026,
+ * iPad-kuvakaappaus syvennyskortista: *"Liian raskaan oloinen
+ * visuaalisesti. Kuva saisi tässä näkyä heti isolla."*).
  *
- * Viite on pieni kelluva pikkukuva selitteineen, ja napautus avaa
- * saman suurennoksen kuin kartan vinjetti (avaaSuurennos) — kuva kasvaa
- * paikaltaan kartan päälle, ja selite ja lähde tulevat sen alle (CC BY
- * vaatii tekijän maininnan myös suurennoksessa). Iso kuva ei enää syö
- * kortin korkeutta, joten leipäteksti mahtuu suuremmalla kirjasimella.
+ * === MIKSI TÄMÄ ON MUUTTUNUT KAHDESTI ===
+ *
+ * Kuva oli ensin koko kortin levyinen ja 34vh korkea. Sitten se
+ * kutistettiin 5,6 rem:n pikkuviitteeksi, koska kartalle ilmestyivät
+ * omat vinjetit eikä kortin haluttu syövän ruudun korkeutta. Omistajan
+ * pelitesti osoitti kutistuksen menneen liian pitkälle: kortti oli
+ * pelkkää tekstiä, ja pikkuviite jäi merkitsemättömäksi tarraksi
+ * tekstimassan reunaan. Nyt kuva on taas kortin ensimmäinen asia ja
+ * koko kortin levyinen — kortin oma ulkoasu on samalla kevennetty
+ * paperiksi (css/fokusvirta.css), joten iso kuva ei enää istu tumman
+ * massan päällä.
+ *
+ * Selite ja lähde ovat ohuena rivinä kuvan alla (CC BY vaatii tekijän
+ * maininnan), ja napautus avaa saman suurennoksen kuin ennenkin
+ * (avaaSuurennos) — kuva kasvaa paikaltaan kartan päälle.
  */
 function piirraKuva(ui, kohde, kuva) {
   if (!kuva) return;
-  // Viite on yksi rivi: pikkukuva vasemmalla, selite ja lähde oikealla.
-  // Ennen kuva oli koko kortin levyinen ja 34vh korkea.
   const viite = html('div', 'fokusvirta-viite');
   const nappi = html('button', 'fokusvirta-kuva');
   nappi.type = 'button';
@@ -675,7 +721,9 @@ function piirraKuva(ui, kohde, kuva) {
   const kuvateksti = html('p', 'fokusvirta-kuvateksti');
   const img = document.createElement('img');
   img.alt = kuva.selite ?? '';
-  img.loading = 'lazy';
+  // EI `lazy`: kuva on kortin ensimmäinen asia ja näkyvissä heti, joten
+  // laiska lataus vain viivyttäisi sitä.
+  img.decoding = 'async';
   img.draggable = false;
   /*
    * PUUTTUVA KUVA PIILOTTAA KUVAPAIKAN kokonaan, kuten julisteilla
@@ -685,9 +733,10 @@ function piirraKuva(ui, kohde, kuva) {
    */
   const piilota = () => { viite.hidden = true; };
   if (kuva.ampari) {
-    asetaKuva(img, kuvanOsoite(kuva, 320), null, piilota);
+    asetaKuva(img, kuvanOsoite(kuva, KORTIN_KUVA_PX), null, piilota);
   } else {
-    asetaKuva(img, kuvanOsoite(kuva, 320), valokuvaVara(kuva.tiedosto, 320), piilota);
+    asetaKuva(img, kuvanOsoite(kuva, KORTIN_KUVA_PX),
+      valokuvaVara(kuva.tiedosto, KORTIN_KUVA_PX), piilota);
   }
   nappi.appendChild(img);
   nappi.addEventListener('click', () => avaaSuurennos(ui, [kuva], 0, () => nappi));
@@ -731,14 +780,37 @@ function piirraKuva(ui, kohde, kuva) {
 /** Suurennoksen kasvun ja kutistuksen kesto. */
 const SUURENNOS_MS = 320;
 /**
- * Suuren kuvan osuus ruudun PIENEMMÄSTÄ sivusta (omistajan tilaus
- * 24.8.2026: *"~80 % ruudun pienemmästä sivusta"*). Pienempi sivu on
- * mitta juuri siksi, että kartta jää joka reunalta näkyviin.
+ * Suuren kuvan osuus ruudun PIENEMMÄSTÄ sivusta.
+ *
+ * ALKUPERÄINEN MITTA OLI 0,82 (*"~80 % ruudun pienemmästä sivusta"*),
+ * mutta omistajan pelitesti iPadilla 24.8.2026 osoitti sen liian
+ * vaatimattomaksi: *"KUVA ISOMMAKSI … kasvata niin että kuva täyttää
+ * ruudun selvästi"*. Kartta jää yhä joka reunalta näkyviin — juuri se
+ * on pienemmän sivun mittaamisen syy — mutta marginaalit ovat nyt
+ * kapeat.
  */
-const SUURENNOS_OSUUS = 0.82;
+const SUURENNOS_OSUUS = 0.94;
 /** Katot leveydelle ja korkeudelle, ettei kuva puske reunaan asti. */
-const SUURENNOS_LEVEIN = 0.92;
-const SUURENNOS_KORKEIN = 0.74;
+const SUURENNOS_LEVEIN = 0.94;
+const SUURENNOS_KORKEIN = 0.88;
+/**
+ * Kuvatekstipalkille varattava pystytila pikseleinä.
+ *
+ * Selite ja lähderivi asuvat KEHYKSEN SISÄLLÄ kuvan alla omalla
+ * paperitaustallaan (omistajan pelitestipalaute 24.8.2026: teksti
+ * valui irtotekstinä kartan ja pöllön kuplan päälle eikä sitä voinut
+ * lukea). Palkki on osa kehystä, joten sen tila on vähennettävä kuvan
+ * korkeudesta — muuten kortti kasvaisi ruutua korkeammaksi ja teksti
+ * jäisi alareunan ulkopuolelle.
+ */
+const SUURENNOS_TEKSTIPALKKI = 120;
+/**
+ * Paperikehyksen oma tila pikseleinä (reunus + sisennys molemmilta
+ * puolilta). Kuva mitoitetaan sen verran kapeammaksi, jottei kortti
+ * kasva ruudun laitaa leveämmäksi ja jää flexin kutistettavaksi —
+ * kutistettu kortti antaisi FLIP-animaatiolle väärän maalilaatikon.
+ */
+const SUURENNOS_KEHYS_PX = 26;
 /** Kuvasuhde, jota käytetään ennen kuin kuvan omat mitat tiedetään. */
 const SUURENNOS_OLETUSSUHDE = 4 / 3;
 /** Kiihtyy alussa, jarruttaa lopussa — kartan kamera-ajon sukulainen. */
@@ -824,8 +896,25 @@ function avaaSuurennos(ui, lista, alku, ankkuri) {
     const korkeus = globalThis.innerHeight || 0;
     if (!leveys || !korkeus) return;
     const pienempi = Math.min(leveys, korkeus);
-    const enintaanW = Math.min(leveys * SUURENNOS_LEVEIN, pienempi * SUURENNOS_OSUUS);
-    const enintaanH = Math.min(korkeus * SUURENNOS_KORKEIN, pienempi * SUURENNOS_OSUUS);
+    const enintaanW = Math.min(leveys * SUURENNOS_LEVEIN, pienempi * SUURENNOS_OSUUS)
+      - SUURENNOS_KEHYS_PX;
+    /*
+     * KORKEUS MITATAAN RUUDUN KORKEUDESTA, EI PIENEMMÄSTÄ SIVUSTA.
+     * Ennen molemmat sivut rajattiin pienempään sivuun, jolloin PYSTY
+     * kuva jäi puhelimella ja tabletilla puolityhjäksi: leveyttä olisi
+     * ollut, mutta korkeuskatto tuli lyhyemmästä sivusta. Omistajan
+     * pelitesti 24.8.2026 osoitti juuri tämän (*"KUVA ISOMMAKSI"*).
+     * Leveys pysyy pienemmän sivun mitassa, joten kartta erottuu yhä
+     * kuvan sivuilta.
+     *
+     * Kuvatekstipalkki on kehyksen sisällä: sen tila varataan ennen kuin
+     * kuvalle jaetaan korkeutta. Alaraja pitää huolen siitä, ettei
+     * hyvin matalalla ruudulla jää pelkkää palkkia.
+     */
+    const enintaanH = Math.max(
+      korkeus * SUURENNOS_KORKEIN - SUURENNOS_TEKSTIPALKKI,
+      korkeus * 0.3,
+    );
     const suhde = (img.naturalWidth && img.naturalHeight)
       ? img.naturalWidth / img.naturalHeight : SUURENNOS_OLETUSSUHDE;
     let w = enintaanW;
@@ -833,12 +922,23 @@ function avaaSuurennos(ui, lista, alku, ankkuri) {
     if (h > enintaanH) { h = enintaanH; w = h * suhde; }
     img.style.width = `${Math.round(w)}px`;
     img.style.height = `${Math.round(h)}px`;
+    // Palkki on täsmälleen kuvan levyinen: kehys kutistuu kuvan
+    // mittoihin, ja teksti taittuu sen sisään eikä kartan päälle.
+    kehys.style.width = `${Math.round(w)}px`;
   };
 
-  /** Muunnos, joka vie ladotun kuvan ankkurin ruutupaikkaan. */
+  /**
+   * Muunnos, joka vie ladotun KEHYKSEN ankkurin ruutupaikkaan.
+   *
+   * MUUNNOS ON KEHYKSELLÄ EIKÄ KUVALLA (24.8.2026). Kun suurennos sai
+   * postikortin paperikehyksen ja kuvatekstipalkin, pelkän kuvan
+   * kutistaminen olisi näyttänyt siltä, että valmis kortti on jo
+   * ruudulla ja kuva vasta hakee paikkaansa sen sisällä. Nyt koko
+   * kortti kasvaa vinjetin paikalta — yksi liike, yksi kappale.
+   */
   const ankkuriMuunnos = () => {
     const alkuun = ankkuri?.(i)?.getBoundingClientRect?.();
-    const nyt = img.getBoundingClientRect();
+    const nyt = kehys.getBoundingClientRect();
     if (!alkuun?.width || !nyt.width || liikeVahennetty()) return null;
     return `translate(${(alkuun.left - nyt.left).toFixed(1)}px, `
       + `${(alkuun.top - nyt.top).toFixed(1)}px) `
@@ -848,6 +948,13 @@ function avaaSuurennos(ui, lista, alku, ankkuri) {
 
   const poista = () => {
     kerros.dispatchEvent(new CustomEvent('fokuszoom-poistuu'));
+    /*
+     * Kupla ja kortti palaavat ennalleen (ks. body-luokka avauksessa).
+     * Poisto on tässä eikä sulkemisessa, jotta ne pysyvät poissa myös
+     * kutistumisanimaation ajan — ja palaavat varmasti silloinkin, kun
+     * suurennos revitään pois ilman animaatiota (laudan vaihto).
+     */
+    document.body.classList.remove('fokuszoom-paalla');
     kerros.remove();
   };
 
@@ -860,8 +967,8 @@ function avaaSuurennos(ui, lista, alku, ankkuri) {
     const takaisin = ankkuriMuunnos();
     if (!takaisin) { poista(); return; }
     void kerros.offsetWidth;
-    img.style.transition = `transform ${SUURENNOS_MS}ms ${SUURENNOS_PEHMENNYS}`;
-    img.style.transform = takaisin;
+    kehys.style.transition = `transform ${SUURENNOS_MS}ms ${SUURENNOS_PEHMENNYS}`;
+    kehys.style.transform = takaisin;
     teksti.style.opacity = '0';
     setTimeout(poista, SUURENNOS_MS + 60);
   };
@@ -921,6 +1028,19 @@ function avaaSuurennos(ui, lista, alku, ankkuri) {
     sulje();
   });
 
+  /*
+   * PÖLLÖN KUPLA JA KORTIT POIS SUURENNOKSEN AJAKSI (omistajan
+   * pelitestipalaute 24.8.2026, iPad-kuvakaappaus): kupla jäi
+   * suurennoksen viereen näkyviin ja kuvateksti valui sen päälle.
+   * Suurennos on kartan ele, ja sen ajaksi ruudulla saa olla vain
+   * kartta ja kuva.
+   *
+   * HÄIVYTYS EIKÄ `display: none` (css/fokusvirta.css): kortin
+   * kuvaviite on suurennoksen ANKKURI, ja piilotettuna sillä ei olisi
+   * enää ruutupaikkaa — kutistuminen takaisin paikalleen jäisi
+   * tekemättä. Häivytetty kortti pysyy mitattavana.
+   */
+  document.body.classList.add('fokuszoom-paalla');
   document.body.appendChild(kerros);
   ui.fokusSuurennos = { kerros, sulje, heti: poista };
 
@@ -938,8 +1058,8 @@ function avaaSuurennos(ui, lista, alku, ankkuri) {
     mitoita();
     const alusta = ankkuriMuunnos();
     if (alusta) {
-      img.style.transition = 'none';
-      img.style.transform = alusta;
+      kehys.style.transition = 'none';
+      kehys.style.transform = alusta;
       teksti.style.opacity = '0';
     }
     /*
@@ -951,8 +1071,8 @@ function avaaSuurennos(ui, lista, alku, ankkuri) {
      */
     void kerros.offsetWidth;
     if (alusta) {
-      img.style.transition = `transform ${SUURENNOS_MS}ms ${SUURENNOS_PEHMENNYS}`;
-      img.style.transform = 'none';
+      kehys.style.transition = `transform ${SUURENNOS_MS}ms ${SUURENNOS_PEHMENNYS}`;
+      kehys.style.transform = 'none';
       teksti.style.opacity = '';
     }
     kerros.classList.add('fokuszoom-auki');
