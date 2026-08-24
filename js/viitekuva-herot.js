@@ -33,6 +33,20 @@ export const VIITEKUVA_HEROT = new Map([
   ['chicago', 3], ['perth', 3], ['kabul', 3],
   // Tampere: neljä kuvaa, ensimmäinen viitekuvallinen erä (23.8.2026).
   ['tampere', 4],
+  /*
+   * Kierrokset 22–25 (24.8.2026): 42 kytkettyä kuvaa 15 kaupungissa.
+   * Kymmenessä kaupungissa KOKO kytketty erä on viitekuvallinen; niissä
+   * viidessä, joissa luku jää erän alle, ero on aina yksi viitteetön
+   * yleisnäkymä (Beco do Batman, La Punta, Xochimilco, Frenchmen
+   * Street, Boroko) — sellaiselle katunäkymälle ei ole yhtä nimettyä
+   * kohdetta eikä siis omaa Commons-kategoriaa.
+   */
+  ['toronto', 2], ['quito', 2],
+  ['losangeles', 3], ['montevideo', 3], ['havanna', 3], ['bogota', 3],
+  ['valparaiso', 3], ['adelaide', 3], ['hobart', 3], ['darwin', 3],
+  // Erä sisältää yhden viitteettömän yleisnäkymän — osittainen merkintä.
+  ['saopaulo', 1], ['lima', 2], ['mexico', 2], ['neworleans', 2],
+  ['portmoresby', 2],
   // Yksittäinen korjattu kuva, muut kaupungin herot ovat vanhoja.
   ['helsinki', 1], ['kashgar', 1], ['mekka', 1], ['petra', 1],
   ['damaskos', 1],
