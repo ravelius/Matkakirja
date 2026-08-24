@@ -142,7 +142,13 @@ export function julisteUrl(tiedosto) {
  * sitä, ettei maalle ole vielä tehty pohjaa, ja peli piirtää kartan
  * silloin kuten ennenkin (js/fokuskartta.js).
  */
-const FOKUS_ALIPOLKU = 'fokus/';
+/*
+ * HUOM: polku on julisteet/-kansion ALLA, koska vie-julisteet.yml vie
+ * ämpäriin vain sen kansion — juuritason fokus/ ei koskaan synny
+ * (mitattu 24.8.2026: juuri antoi 404, julisteet/fokus 200, ja
+ * Kreikan pohja jäi siksi näkymättä).
+ */
+const FOKUS_ALIPOLKU = 'julisteet/fokus/';
 
 /** Fokuskartan osoite ämpärissä (esim. 'GRC.png' tai 'GRC.json'). */
 export function fokuskarttaUrl(tiedosto) {
