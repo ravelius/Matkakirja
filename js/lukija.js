@@ -83,6 +83,7 @@
  * sulkeutuminen pysäyttävät edellisen.
  */
 
+import { lisaaTaustaVaimennus } from './aani-tausta.js';
 import {
   esihaePala, kappaleenPalat, luoPuheSoitin, puheTuettu,
 } from './puhe.js';
@@ -1069,6 +1070,48 @@ if (typeof document !== 'undefined' && typeof document.addEventListener === 'fun
     if (tapahtuma?.detail?.enabled === false) pysaytaLukija();
   });
 }
+
+/*
+ * ── TAUSTALLE MENEVÄ PELI VAIENTAA MYÖS LUKIJAN ─────────────────────
+ *
+ * OMISTAJAN TILAUS 24.8.2026: *"Pelin äänet pitäisi hiljentyä kaikki
+ * jos sovellus ei ole iOS-laitteella auki päällimmäisenä."* Luenta on
+ * pisin yhtäjaksoinen ääni, jonka peli tuottaa — minuutteja — ja siksi
+ * juuri se jäi kuulumaan taskuun.
+ *
+ * KAKSI ERI KOHTELUA, KOSKA TAUSTAJÄRJESTELMIÄ ON KAKSI:
+ *
+ *  1. LUKIJAÄÄNI (puhesoitin, js/puhe.js) menee TAUOLLE. Tauko
+ *     pysäyttää koko WebAudio-piirin, joten se vaikenee näytteen
+ *     tarkkuudella, ja luentasoittimen paneeli näyttää jatkonapin.
+ *     Pelaaja jatkaa siitä mihin jäi — tai ei jatka, ja se on hänen
+ *     valintansa. AUTOMAATTISTA JATKOA EI TULE: kertoja jatkaisi
+ *     keskeltä lausetta, jonka alkua kukaan ei kuullut.
+ *
+ *  2. SELAIMEN SYNTETISAATTORI JA KUOREN LUENTA PYSÄYTETÄÄN kokonaan
+ *     (pysaytaLukija). Kummallakaan ei ole taukoa, joka kelpaisi:
+ *     speechSynthesis.pause() jättää WebKitissä lausuman soimaan
+ *     loppuun (sama havainto kuin vaimennaSynthin kommentissa —
+ *     tauolla oleva jono ei tyhjene ennen herätystä), ja iOS-kuoren
+ *     AVSpeechSynthesizer jatkaa taustalla omaa elämäänsä. cancel on
+ *     ainoa, joka OIKEASTI vaientaa, ja se maksaa luennan alusta.
+ *
+ * Varmistuksena syntetisaattori vaiennetaan aina, myös silloin kun
+ * lukija ei omasta mielestään lue mitään: WebKitiin voi jäädä
+ * lausuma, jonka onend jäi tulematta.
+ */
+export function taustaHiljennaLukija() {
+  const nyt = ajossa;
+  vaimennaSynth(selainPuhe(), true);
+  if (!nyt) return;
+  if (nyt.soitin) {
+    if (!nyt.soitin.tauolla?.()) nyt.soitin.tauko?.();
+    return;
+  }
+  pysaytaLukija();
+}
+
+lisaaTaustaVaimennus({ hiljenna: taustaHiljennaLukija });
 
 /** Kääre, joka takaa että loppukoukku laukeaa korkeintaan kerran. */
 function kerran(fn) {

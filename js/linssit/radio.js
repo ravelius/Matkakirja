@@ -59,6 +59,7 @@ import { teeRadiosoitin, VIRITYKSEN_VAIHEET } from './radiosoitin.js';
 import { teePistenaytto, merkinRivit, FONTTI } from './pistenaytto.js';
 import { teeViritysaani, esilataaViritysaanet, unohdaViritysaanet } from './viritin.js';
 import { sfx } from '../sound.js';
+import { lisaaTaustaVaimennus } from '../aani-tausta.js';
 import { lisaaVaistaja, stopPlaceStream } from '../ambience-stream.js';
 
 /*
@@ -1403,6 +1404,63 @@ export function asetaTauko(paalle) {
   return tauolla;
 }
 
+/*
+ * ── TAUSTALLE MENEVÄ PELI (omistajan tilaus 24.8.2026) ──────────────
+ *
+ * *"Pelin äänet pitäisi hiljentyä kaikki jos sovellus ei ole
+ * iOS-laitteella auki päällimmäisenä."* Suora lähetys on niistä
+ * itsepäisin: se soi <audio>-elementistä eikä kysy pelin äänivalintaa
+ * mitään (ks. ensureContextin `pakota`-kommentti js/sound.js:ssä),
+ * joten mikään muu pelin mykistys ei koske siihen.
+ *
+ * TAUKO EI OLE PELAAJAN TAUKO. Merkkivalon tauko (`tauolla`) on
+ * pelaajan oma valinta, ja se pitää säilyä taustareissun yli: jos
+ * lähetys oli tauolla lähdettäessä, se on tauolla myös palatessa.
+ * Siksi taustalla on oma lippunsa ja oma muistinsa siitä, minkä se
+ * itse pysäytti.
+ *
+ * PAUSE EIKÄ MYKISTYS, samasta syystä kuin merkkivalon tauolla:
+ * mykistetty suora lähetys jatkaisi juoksemistaan taustalla ja söisi
+ * dataa koko ajan, kun peli on taskussa.
+ */
+let radioTaustalla = false;
+
+/** Lähetys ja viritysääni kiinni, kun peli ei ole päällimmäisenä. */
+export function taustalleRadio() {
+  if (radioTaustalla) return;
+  radioTaustalla = true;
+  viritin?.asetaVoimakkuus(0);
+  for (const virta of [soiva, vaistyva]) {
+    const audio = virta?.audio;
+    if (!audio || audio.paused) continue;
+    virta.taustaTauolla = true;
+    try {
+      audio.pause();
+    } catch (syy) {
+      console.warn('Radion taustatauko epäonnistui.', syy);
+    }
+  }
+}
+
+/** Peli takaisin etualalle: lähetys jatkaa, ellei pelaaja itse pysäyttänyt sitä. */
+export function etualalleRadio() {
+  if (!radioTaustalla) return;
+  radioTaustalla = false;
+  viritin?.asetaVoimakkuus(tauolla ? 0 : tehollinenAani());
+  for (const virta of [soiva, vaistyva]) {
+    if (!virta?.taustaTauolla) continue;
+    virta.taustaTauolla = false;
+    if (tauolla) continue; // pelaajan oma tauko voittaa
+    try {
+      virta.audio?.play()?.catch?.(() => { /* seuraava napautus yrittää */ });
+    } catch (syy) {
+      console.warn('Radion paluu etualalle epäonnistui.', syy);
+    }
+  }
+}
+
+lisaaTaustaVaimennus({ hiljenna: taustalleRadio, palauta: etualalleRadio });
+
 /**
  * KYTKEE RADIOTILAN PÄÄLLE.
  *
@@ -1599,9 +1657,20 @@ export function paalle({
  * avautuessa, koska irrottamiselle ei ole paikkaa, jonka varmasti
  * ajetaan — ja tila === null tekee siitä muulloin tyhjän kutsun.
  */
+/*
+ * TAUSTALLE SIIRTYMINEN ON ERI ASIA KUIN POISTUMINEN (24.8.2026).
+ * `persisted` erottaa ne: tosi tarkoittaa sivua, joka voi vielä palata
+ * (bfcache, taustalle siirtynyt sovellus), ja silloin lähetys vain
+ * vaikenee taustavahdin taukoon ja jatkaa paluussa siitä mihin jäi
+ * (ks. taustalleRadio). Lopullisessa poistumisessa laite sammutetaan
+ * kuten ennenkin: palaava pelaaja ei löydä radiota virittämässä
+ * asemaa, jota ei enää haeta.
+ */
 if (typeof window !== 'undefined' && typeof window.addEventListener === 'function') {
-  window.addEventListener('pagehide', () => {
-    if (tila) pysayta();
+  window.addEventListener('pagehide', (tapahtuma) => {
+    if (!tila) return;
+    if (tapahtuma?.persisted) taustalleRadio();
+    else pysayta();
   });
 }
 

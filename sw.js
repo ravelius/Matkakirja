@@ -184,6 +184,7 @@ const SHELL = [
   './js/tokens.js',
   './js/mapart.js',
   './js/aani-ehdokkaat.js',
+  './js/aani-tausta.js',
   './js/sound.js',
   './js/ambience-stream.js',
   './js/die.js',

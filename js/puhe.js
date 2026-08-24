@@ -33,6 +33,7 @@
  * lähtien laitteen oman äänen. Verkoton laite ei edes yritä.
  */
 
+import { lisaaTaustaVaimennus } from './aani-tausta.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
 
 /** Persoonat, jotka worker tuntee. Muu arvo lukee kertojan äänellä. */
@@ -330,10 +331,42 @@ export function taukoaPuhePiiri() {
 /** Sanelu ohi — piiri takaisin hereille. */
 export function jatkaPuhePiiri() {
   saneluTauko = false;
+  if (taustaTauko) return; // taustalla piiri pysyy nukkumassa
   try {
     if (piiri?.state === 'suspended') piiri.resume?.()?.catch?.(() => {});
   } catch { /* piiri syntyy seuraavasta luennasta */ }
 }
+
+/*
+ * ── TAUSTALLE MENEVÄ PELI (omistajan tilaus 24.8.2026) ──────────────
+ *
+ * Sama kova tauko kuin sanelulla, mutta EPÄSYMMETRINEN: piiri
+ * nukutetaan taustalle mentäessä, mutta sitä EI herätetä paluussa.
+ *
+ * Syy on luennan luonteessa. Piirin herättäminen jatkaisi kesken
+ * jäänyttä lausetta siitä hiljaisuudesta, johon se katkesi — kukaan ei
+ * kuullut lauseen alkua eikä pyytänyt sen loppua. Kesken jäänyt luenta
+ * jää siis tauolle (js/lukija.js taustaHiljennaLukija panee soittimen
+ * tauolle ja luentasoittimen paneeli näyttää jatkonapin), ja piiri
+ * herää vasta siitä, että pelaaja jatkaa tai aloittaa uuden luennan —
+ * kummassakin tapauksessa omalla resume-kutsullaan.
+ */
+let taustaTauko = false;
+
+/** Lukijaäänen piiri nukkumaan, kun peli ei ole päällimmäisenä. */
+export function taukoaPuheTaustalle() {
+  taustaTauko = true;
+  try {
+    piiri?.suspend?.()?.catch?.(() => {});
+  } catch { /* piiri ei ollut käynnissä */ }
+}
+
+/** Peli takaisin etualalle: lippu pois, piiri jää nukkumaan (ks. yllä). */
+export function jatkaPuheEtualalla() {
+  taustaTauko = false;
+}
+
+lisaaTaustaVaimennus({ hiljenna: taukoaPuheTaustalle, palauta: jatkaPuheEtualalla });
 
 /** Lukijaäänen voimakkuus (1 = elementin täysi voima). */
 export function puheenVoima() {
@@ -516,6 +549,9 @@ if (typeof document !== 'undefined' && typeof document.addEventListener === 'fun
     // Sanelun kova tauko voittaa elvytyksen: mikrofonin ollessa auki
     // piiriä ei herätetä (ks. taukoaPuhePiiri).
     if (saneluTauko) return;
+    // Sama koskee taustalla olevaa peliä: taustan napautus (esim.
+    // ilmoituksen kuittaus jaetulla näytöllä) ei saa herättää piiriä.
+    if (taustaTauko) return;
     if (!piiri || piiri.state === 'running') return;
     try {
       piiri.resume?.().catch(() => { /* seuraava ele yrittää taas */ });

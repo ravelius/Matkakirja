@@ -211,6 +211,13 @@ const MODULES = [
   // Pelkkää dataa, jonka js/ui.js tuo staattisesti.
   'js/lahteet.js',
   'js/aani-ehdokkaat.js',
+  /*
+   * Taustavahti ENNEN kaikkea ääntä: jokainen äänimoduuli (sound,
+   * puhe, ambience-stream, lukija, luenta, linssit/radio) rekisteröi
+   * sille taustavaimennuksensa moduulitasolla, eikä vahti itse tuo
+   * mitään — se on riippuvuuspuun pohjalla.
+   */
+  'js/aani-tausta.js',
   'js/sound.js',
   /*
    * Lukijaääni (js/puhe.js) ENNEN ambience-streamia: sanelun kova
