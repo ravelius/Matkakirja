@@ -41,6 +41,7 @@ kirjoita `import ... from '../../node_modules/...'`.
 | savuke-dist | Yhden tiedoston versio käynnistyy (aja build ensin) |
 | savuke-mediakanava | Pelin äänet mediakanavassa (hiljainen ankkuri + audioSession, sanelun tauko) ja pelin oma mykistys myös striimatulla lukijaäänellä |
 | savuke-fokuskartta | Fokusmoodin maakohtainen topografiapohja: puuttuva kuva ei riko mitään, olemassa oleva osuu JSONin rajaukseen, reitit sen päällä, kamera-ajo maan rajaukseen ja eleen keskeytys, väärän laudan rajaus hylätään |
+| savuke-fokuskohteet | Fokuslehden klikattavat karttakohteet: merkit lehden päällä (myös kierron kopiokohdassa), ≥44 px osuma joka zoomilla, yleiskuvassa piilossa, pop-upin sisältö ja paikka, kohdekorostus, sulku rastista/Escistä/napautuksesta, fokusvirran pinta sulkee tietoruudun |
 
 **Savukevartija** (`node tools/tarkista-savukkeet.mjs`, CI:ssä joka
 PR:lle): vertaa kaikkien savukkeiden `ui.X`-kutsut ja -luvut UI:n

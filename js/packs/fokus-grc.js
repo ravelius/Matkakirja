@@ -79,6 +79,60 @@ export const FOKUS_POHJAT = {
 };
 
 /*
+ * LAUTOJEN PROJEKTIOT — vain mittajanaa varten (js/fokusmitat.js).
+ *
+ * Fokusnäkymän mittajana on RUUTUUN ankkuroitu ja laskee pituutensa
+ * siitä, mitä ruudulla oikeasti näkyy. Siihen tarvitaan kaksi asiaa,
+ * joita pelissä ei muuten ole: montako lautayksikköä pituusaste on, ja
+ * mikä leveysaste on laudan y-koordinaatilla — Millerin lieriössä
+ * kilometri on eri määrä yksiköitä Kreetalla kuin Thessalonikissa.
+ *
+ * LUVUT OVAT SAMAT KUIN KUVAN RENDERÖINNISSÄ
+ * (tools/tee-fokuskartta.mjs LAUDAT). Maailmankartan omat vakiot ovat
+ * tools/tee-maailmankartta.mjs:ssä (LEVEYS 12000, LON0 -175, POHJOINEN
+ * 76) ja kaava tools/vanha-maailma.mjs sovitaMaailma; Eurooppa on
+ * mukana katselutilaa varten (x = (lon + 11) · 19,2).
+ *
+ * Jos lauta joskus vaihtaa projektiota, tämän ja työkalun on
+ * muututtava yhdessä — muuten jana väittäisi eri kilometrejä kuin se
+ * kuva, jonka päällä se piirretään.
+ */
+export const FOKUS_LAUTAPROJEKTIOT = {
+  maailmankartta: {
+    tyyppi: 'miller', leveys: 12000, lon0: -175, pohjoinen: 76,
+  },
+  europe: {
+    tyyppi: 'tasavali', lonA: 19.2, lonB: 11 * 19.2, latA: -26.3, latB: 72 * 26.3,
+  },
+};
+
+/*
+ * MAAN NIMI MAAN OMALLA KIELELLÄ — fokusnäkymän kartuutsin alarivi
+ * (omistaja 25.8.2026).
+ *
+ * Kartuutsissa on suomenkielinen nimi (KREIKKA, laudan omasta
+ * countryShapes-taulusta) ja sen alla viivan takana maan oma nimi.
+ * Kreikan muoto on ΕΛΛΑΣ eikä nykykreikan Ελλάδα: se on
+ * katharevousa-asu, jota 1873-atlakset käyttivät — ja täsmälleen sama
+ * kuin kuvan vesileima (tools/fokuskartta/maat.mjs `vesileima`).
+ * Latinalainen rinnakkaismuoto on perässä, koska kreikkalaiset
+ * kirjaimet eivät kerro kaikille pelaajille miltä nimi kuulostaa.
+ *
+ * `valtiomuoto` on aikakauden hallintomuoto isoisän matkan aikaan
+ * (Kreikka oli 1832–1924 ja 1935–1973 kuningaskunta). Se on
+ * VAPAAEHTOINEN lisä: se ladotaan samalle riville pienenä kursiivina,
+ * ja jos rivi ei mahdu, kenttä jätetään pois maasta eikä katkaista
+ * CSS:llä.
+ *
+ * EI MUISTINVARAISIA KÄÄNNÖKSIÄ. Taulussa on vain Kreikka; uusi maa on
+ * yksi rivi lisää, ja sen nimimuoto on tarkistettava samasta
+ * lähteestä kuin muukin sisältö.
+ */
+export const FOKUS_MAANIMET = {
+  GRC: { paikallinen: 'ΕΛΛΑΣ · Hellas', valtiomuoto: 'kuningaskunta v. 1873' },
+};
+
+/*
  * Piirtääkö peli lisänimet SVG:nä kuvan päälle?
  *
  * EI PIIRRÄ. Nimet ovat nyt kuvassa (ks. tiedoston alku), ja SVG-nimet

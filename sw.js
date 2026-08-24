@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1099';
+const CACHE = 'matkakirja-2026-08-09.1100';
 const SHELL = [
   './',
   './index.html',
@@ -7,11 +7,13 @@ const SHELL = [
   './css/styles.css',
   // Fokusmoodin annostelukortti lataa oman tyylinsä itse (js/fokusvirta.js).
   './css/fokusvirta.css',
+  './css/fokuskohteet.css',
   './js/muutokset.js',
   './js/main.js',
   './js/ui.js',
   './js/kartta.js',
   './js/fokuskartta.js',
+  './js/fokusmitat.js',
   './js/packs/fokus-grc.js',
   './js/sisaltotaulut.js',
   './js/ui-apurit.js',
@@ -27,6 +29,7 @@ const SHELL = [
   './js/luenta.js',
   './js/visa.js',
   './js/fokusvirta.js',
+  './js/fokuskohteet.js',
   './js/maalehti.js',
   './js/lukija.js',
   './js/pollo.js',

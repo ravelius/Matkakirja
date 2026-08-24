@@ -1,11 +1,15 @@
 /*
  * FOKUSKARTAN MAAKOHTAINEN TYYLITIEDOSTO.
  *
- * Esirenderöity fokuspohja ei ole pelkkä maastorasteri vaan KOKONAINEN
- * 1873-atlaksen lehti: kehys, asteverkko, mittajana, kartuutsi, merten
- * ja vuorten nimet, naapurimaat haaleina ääriviivoina. Omistaja hyväksyi
- * ulkoasun prototyypistä 24.8.2026 ja vaati 24.8.2026 illalla, että
- * pelissä näkyvä kuva on TÄSMÄLLEEN sen näköinen — mittajanaa myöten.
+ * Esirenderöity fokuspohja ei ole pelkkä maastorasteri vaan 1873-atlaksen
+ * karttapinta: meri syvyysporrastettuna, akvarellihypsometria, merten ja
+ * vuorten nimet, naapurimaat haaleina. Omistaja hyväksyi ulkoasun
+ * prototyypistä 24.8.2026.
+ *
+ * JATKUVA PINTA (omistaja 25.8.2026): lehden KALUSTEET — kehys,
+ * kartuutsi, mittajana ja asteverkon reunalukemat — eivät ole enää
+ * kuvassa. Ne ovat sivua eivätkä karttaa, ja peli piirtää tarvittavat
+ * ruutuun ankkuroituina (js/fokusmitat.js). Kytkin on `jatkuva`.
  *
  * Kaikki lehden käsin aseteltavat asiat asuvat tässä tiedostossa yhtenä
  * oliona maata kohti, koska ne EIVÄT OLE PAIKKATIETOA vaan
@@ -61,6 +65,21 @@ export const FOKUSMAAT = {
     ikkuna: { lonKeski: 24.0, lat0: 34.4, lat1: 41.95, kuvasuhde: 1.6 },
     vuoto: 0.15,
 
+    /*
+     * JATKUVA PINTA (omistaja 25.8.2026). Kuvaan ei polteta kehystä,
+     * kartuutsia, mittajanaa eikä reunalukemia, ja naapurit saavat
+     * oman haalean topografiansa — ks. tools/fokuskartta/piirto.js.
+     * Kytkin on maakohtainen, jotta vanha lehtiasu on yhden rivin
+     * päässä, jos jatkuva pinta joskus osoittautuu vääräksi.
+     */
+    jatkuva: true,
+
+    /*
+     * Kartuutsin teksti. Jatkuvassa pinnassa TÄTÄ EI KÄYTETÄ: peli
+     * piirtää kartuutsin itse ruutuun ankkuroituna (js/fokusmitat.js)
+     * ja ottaa maan nimen laudan omasta taulusta. Luvut jäävät tänne
+     * lehtiasua varten.
+     */
     otsikko: 'KREIKKA',
     alaotsikko: 'isoisän matkakirjan mukaan · 1873',
 

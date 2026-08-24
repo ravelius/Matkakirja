@@ -614,6 +614,8 @@ const rivi = await sivu.evaluate(() => {
   if (!perus) return { virhe: 'alanappiriviä ei löydy' };
   return {
     paikkoja: perus.children.length,
+    yksiRivi: Boolean(document.querySelector('.toimintorivi')?.classList
+      .contains('rivi-yksi')),
     monitoimi: Boolean(perus.querySelector('.monitoimi-nappi')),
     liiku: perus.querySelector('.monitoimi-nappi')?.getAttribute('aria-label') ?? '',
     // Pöllö EI ole enää rivissä (omistaja 24.8.2026): se kelluu
@@ -625,13 +627,49 @@ const rivi = await sivu.evaluate(() => {
     liukuNapit: document.querySelectorAll('.toimintorivi-liuku button').length,
   };
 });
-vaadi('alanappirivissä on kaksi paikkaa', rivi.paikkoja === 2, JSON.stringify(rivi));
+/*
+ * ALANAPPIRIVI FOKUSNÄKYMÄSSÄ: VAIN LIIKU (omistajan pelitestitilaus
+ * 24.8.2026). Tutki-napin toiminto siirtyi kaupungin laatan
+ * napautukseen (js/ui.js fokusLaattaTutkii, paivitaFokusLaatta), ja
+ * rivi on siksi yhden keskitetyn napin levyinen. Fokusmoodi on
+ * oletuksena päällä, joten tämä on se rivi, jonka pelaaja näkee —
+ * kytkimen takainen vanha kahden napin rivi mitataan heti alla.
+ */
+vaadi('fokusnäkymässä alanappirivissä on vain Liiku',
+  rivi.paikkoja === 1 && rivi.yksiRivi === true, JSON.stringify(rivi));
 vaadi('vasemmalla monitoiminappi', rivi.monitoimi === true);
 vaadi('vasen nappi on nimeltään Liiku', /^liiku$/i.test(rivi.liiku), rivi.liiku);
 vaadi('pöllö ei ole alanappirivissä', rivi.polloRivissa === false, JSON.stringify(rivi));
 vaadi('pöllö kelluu myös pelinäkymässä', rivi.polloKelluu === true, JSON.stringify(rivi));
-vaadi('oikealla suurennuslasi (Tutki)', /tutki/i.test(rivi.tutki), rivi.tutki);
 vaadi('matkustusnapit ovat liu\'ussa', rivi.liukuNapit >= 1, `${rivi.liukuNapit} kpl`);
+
+/*
+ * FOKUSMOODIN OLLESSA POIS RIVI ON ENTISENSÄ: kaksi paikkaa ja oikealla
+ * suurennuslasi. Kytkin luetaan levyltä (js/ui-apurit.js), joten koe on
+ * sama kuin kehittäjätilan napilla — ja tila palautetaan heti, ettei
+ * loppu savukkeesta aja poikkeustilassa.
+ */
+const ilmanFokusta = await sivu.evaluate(async () => {
+  const { asetaFokusmoodi } = await import('/js/ui-apurit.js');
+  const ui = window.matkakirja.ui;
+  asetaFokusmoodi(false);
+  ui.paivitaFokusmoodi();
+  ui.render();
+  await new Promise((r) => setTimeout(r, 300));
+  const perus = document.querySelector('.toimintorivi-perus');
+  const tulos = {
+    paikkoja: perus?.children.length ?? -1,
+    tutki: perus?.lastElementChild?.getAttribute('aria-label') ?? '',
+  };
+  asetaFokusmoodi(true);
+  ui.paivitaFokusmoodi();
+  ui.render();
+  await new Promise((r) => setTimeout(r, 300));
+  return tulos;
+});
+vaadi('fokusmoodin ollessa pois rivi on entisensä (Liiku · Tutki)',
+  ilmanFokusta.paikkoja === 2 && /tutki/i.test(ilmanFokusta.tutki),
+  JSON.stringify(ilmanFokusta));
 
 await sivu.screenshot({ path: join(ULOS, 'pollo-rivi-kiinni-390.png') });
 
@@ -886,19 +924,26 @@ const avaus = await sivu.evaluate(async () => {
 });
 vaadi('paneeli aukeaa napautuksesta', avaus.nakyy === true);
 /*
- * VALMISKYSYMYKSET AVAUKSESSA (omistajan tilaus 18.8.2026: "pöllön
- * alkuteksti ja sen alla kaksi kysymystä, ja vierittämällä saisi vielä
- * kolme kysymystä lisää näkyviin").
+ * VALMISKYSYMYKSET OVAT TOISTAISEKSI POIS (omistajan pelitestitilaus
+ * 24.8.2026: *"pöllön valmiskysymykset hetkeksi pois"*).
  *
- * Tuore keskustelu ei enää odota palvelimen ehdotushakua, vaan pinnassa
- * on heti käsin kirjoitettu pakka (js/packs/pollo-kysymykset.js) samassa
- * vierityspinnassa kuin muukin keskustelu. Kiintiö on js/pollo.js
- * VALMIITA_ENINTAAN = 5, ja Lontoon laattapakassa on täsmälleen viisi —
- * eli kaikki näkyvät kuplina. Palvelimen dynaamiset ehdotukset (2 kpl)
- * tulevat vasta ensimmäisen vastauksen alle, ja niitä mitataan alempana.
+ * VÄITE KÄÄNTYI, EI KADONNUT. Ennen tässä vaadittiin, että avaus latoo
+ * pinnaan käsin kirjoitetun pakan (js/packs/pollo-kysymykset.js) viisi
+ * kuplaa. Nyt vaaditaan päinvastoin: kuplia EI ole yhtään, koska
+ * js/pollo.js VALMISKYSYMYKSET_KAYTOSSA on alhaalla. Väite mittaa siis
+ * lipun tilaa — kun se joskus nostetaan, tämä kaatuu ja muistuttaa
+ * palauttamaan vanhan luvun (5).
+ *
+ * TILALLE TULEVAT PALVELIMEN EHDOTUKSET. Ilman valmiita avaus hakee
+ * dynaamiset ehdotukset kuten kaupungeissa, joille valmiita ei ole
+ * kirjoitettu; mock antaa kolme ja js/pollo.js naytaEhdotukset näyttää
+ * niistä kaksi. Se on juuri se "chat toimii muuten ennallaan", joka
+ * tilauksessa vaadittiin.
  */
-vaadi('valmiskysymykset renderöityvät avattaessa', avaus.ehdotuksia === 5
-  && avaus.valmiita === 5, `${avaus.ehdotuksia} kpl (valmiita ${avaus.valmiita})`);
+vaadi('valmiskysymykset ovat lipun takana (VALMISKYSYMYKSET_KAYTOSSA=false)',
+  avaus.valmiita === 0, `valmiita ${avaus.valmiita}`);
+vaadi('avaus tarjoaa palvelimen ehdotukset valmiiden tilalla',
+  avaus.ehdotuksia === 2, `${avaus.ehdotuksia} kpl`);
 vaadi('sanelunappi on ensisijainen syöte', avaus.mikki === true && avaus.kenttaPiilossa === true,
   JSON.stringify(avaus));
 

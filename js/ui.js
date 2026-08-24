@@ -241,6 +241,15 @@ import { MAASTON_VARJOSTUS } from './packs/maailmankartta-varjostus.js';
 import { INTRO_SPACE, Kartta } from './kartta.js';
 // Fokusmoodin maakohtainen topografiapohja (paketti 2).
 import { paivitaFokuskartta, paivitaFokusNimet, nollaaFokuskartta } from './fokuskartta.js';
+// Fokuslehden klikattavat karttakohteet ja niiden pop-up (js/fokuskohteet.js).
+import { paivitaFokuskohteet, nollaaFokuskohteet } from './fokuskohteet.js';
+/*
+ * Fokusnäkymän RUUTUUN ankkuroidut atlas-elementit: mittajana, maan
+ * kartuutsi ja sen takaa liukuva maataulu (omistaja 25.8.2026). Ne
+ * eivät ole laudalla vaan kartan päällä HTML:nä, koska ne eivät saa
+ * skaalautua zoomissa — ks. js/fokusmitat.js.
+ */
+import { nollaaFokusmitat, paivitaFokusmitat } from './fokusmitat.js';
 
 const DIE_FACES = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 const BOT_DELAY = 650;
@@ -404,6 +413,34 @@ const FOKUS_REUNAN_PORTAAT = [
   { leveys: 2, peitto: 0.45 },
   { leveys: 1, peitto: 0.7 },
 ];
+/*
+ * NYKYISEN KAUPUNGIN LAATTA FOKUSLEHDEN PÄÄLLÄ (omistajan pelitesti
+ * 24.8.2026: laatta takaisin, mutta paljon pienempänä).
+ *
+ * MITTA ON RUUDULLA, EI LAUDALLA. Fokusmoodin zoomiväli on valtava —
+ * yleiskuvassa koko Eurooppa, fokusajon jälkeen yksi maa — ja laudan
+ * yksiköissä mitoitettu laatta olisi lehdellä joko täplä tai kiekko
+ * puoli ruutua. Laatta skaalataan siksi käänteisellä zoomikertoimella
+ * kuten fokusvirran kuvavinjetitkin (js/fokusvirta.js PINNI_LEVEYS):
+ * halkaisija on ruudulla aina noin 26 px, jolloin se ei hallitse
+ * lehteä muttei myöskään katoa. Skaalaus on VAIN pienennys — jos laatta
+ * on jo luonnostaan tätä pienempi (kaukainen yleiskuva), se jätetään
+ * rauhaan.
+ */
+const FOKUS_LAATTA_PX = 26;
+/*
+ * Napautusalue on suurempi kuin piirretty laatta: laatta on
+ * fokusnäkymässä Tutki-napin paikka (alarivillä on vain Liiku), ja
+ * sormenpään vähimmäismitta on 44 px. 48 px antaa siihen varan.
+ */
+const FOKUS_LAATTA_OSUMA_PX = 48;
+/*
+ * Osuma-alueen katto LAUDAN yksiköissä. Ruutumitta muuttuu laudan
+ * yksiköiksi jakamalla zoomilla, ja yleiskuvassa (pieni zoom) jakolasku
+ * kasvattaisi alueen naapurikaupunkien päälle — 34 on sama säde kuin
+ * kehittäjätilan omilla napautusalueilla (drawTargets).
+ */
+const FOKUS_LAATTA_OSUMA_LAUDALLA = 34;
 /*
  * NÄKYMÄN KOKOVAHDIN RAJAT (ks. UI vahdiNakymanKokoa).
  *
@@ -3636,6 +3673,19 @@ export class UI {
      * — samasta syystä ja samasta kohdasta kuin lisänimien näkyvyys.
      */
     paivitaFokuskuvat(this);
+    // Kartan kohdemerkit ovat samoin kiinteän kokoisia ruudulla.
+    paivitaFokuskohteet(this);
+    /*
+     * Mittajana on ruudun ominaisuus eikä kuvan: se on laskettava
+     * uudelleen aina kun zoomi tai panorointi on ASETTUNUT. Tämä on
+     * juuri se kohta — samasta syystä kuin lisänimet ja kuvavinjetit
+     * yllä — eikä siis joka kehyksessä.
+     */
+    paivitaFokusmitat(this);
+    // Sama syy kuin yllä: nykyisen kaupungin laatta on fokuslehden
+    // päällä kiinteän kokoinen RUUDULLA (paivitaFokusLaatta), joten sen
+    // mittakaava ja napautusalue lasketaan uudelleen jokaisesta zoomista.
+    this.paivitaFokusLaatta();
     if (!this.maastonimiKerros) return;
     if (!this.maastonimet) return;
     const nakyva = this.nakyvaAlue();
@@ -4305,6 +4355,13 @@ export class UI {
       class: 'fokuskartta', 'pointer-events': 'none',
     }, root);
     nollaaFokuskartta(this);
+    /*
+     * Ruutuun ankkuroidut mitat nollille laudan mukana: kartuutsin
+     * teksti ja mittajanan pituus riippuvat laudasta, ja vanhat
+     * elementit jäisivät muuten .map-paneen roikkumaan uuden laudan
+     * päälle. Ne rakennetaan uudelleen ensimmäisellä päivityksellä.
+     */
+    nollaaFokusmitat(this);
 
     /*
      * Etusivun kulkevat valopisteet. Vain aloituslaudalla; render()
@@ -4453,6 +4510,7 @@ export class UI {
     // Kerroksen rakentaa js/fokusvirta.js paivitaFokuskuvat.
     this.fokuskuvatKerros = null;
     nollaaFokuskuvat(this);
+    nollaaFokuskohteet(this);
     // Uusi lauta, tyhjä kerros: muistettu näkymätunniste ei saa jäädä
     // voimaan, tai nimet jäisivät piirtymättä kun sama näkymä palaa.
     this.maastonimiTunniste = null;
@@ -4592,10 +4650,20 @@ export class UI {
      * nykyisen kaupungin laatta tuodaan takaisin aarrevaiheessa —
      * molempiin tarvitaan tieto siitä, KENEN osa tämä on. Sama määre
      * kuin maakoodi, samasta syystä (luokat ovat varattuja ulkoasulle).
+     *
+     * KAUPUNGIN KESKIPISTE MYÖS MÄÄREENÄ. Fokusnäkymässä nykyisen
+     * kaupungin osat kutistetaan ruudulla vakiokokoisiksi
+     * (paivitaFokusLaatta), ja kutistus on skaalaus KESKIPISTEEN
+     * ympäri. Piste ei löydy osista itsestään: laatalla on cx/cy,
+     * lentokoneen merkillä x/y viisi yksikköä alempana, ja jokaisella
+     * on lisäksi oma heilunta-muunnoksensa. Yksi määre kertoo sen
+     * kaikille samalla tavalla.
      */
     const fokusMaare = (c) => {
       const iso = fokusMaat?.[c.id];
-      return iso ? { 'data-fokus-maa': iso, 'data-kaupunki': c.id } : {};
+      return iso
+        ? { 'data-fokus-maa': iso, 'data-kaupunki': c.id, 'data-kx': c.x, 'data-ky': c.y }
+        : {};
     };
     /*
      * LEHTIVALMIUS VÄREINÄ — VAIN KEHITTÄJÄTILASSA (omistajan tilaus
@@ -4753,6 +4821,17 @@ export class UI {
     this.tokenLayer = el('g', { class: 'tokens' }, root);
     this.targetLayer = el('g', { class: 'targets' }, root);
     this.pawnLayer = el('g', { class: 'pawns' }, root);
+    /*
+     * NÄKYMÄTÖN NAPAUTUSALUE NYKYISEN KAUPUNGIN LAATALLE. Fokusmoodissa
+     * Tutki poistui alariviltä ja sen toiminto on laatan napautuksessa
+     * (paivitaFokusLaatta), mutta laatta piirtyy pienenä — alue on siksi
+     * oma ympyränsä eikä laatta itse. Kohderenkaiden PÄÄLLÄ, jotta
+     * napautus osuu siihen eikä alla olevaan kehittäjätilan hyppyyn;
+     * muiden kaupunkien alueet jäävät koskematta.
+     */
+    this.fokusLaattaKerros = el('g', { class: 'fokuslaatta' }, root);
+    this.fokusLaattaAvain = null;
+    this.fokusLaattaOsat = [];
     // Lentoanimaatio piirtyy kaiken päälle: kone ja sen perässä kulkeva viiva.
     this.flightLayer = el('g', { class: 'flight' }, root);
   }
@@ -4948,6 +5027,8 @@ export class UI {
     paivitaFokuskartta(this);
     // Lehden päällä olevat pelimerkit (v1097: "Ota pallot pois").
     this.paivitaFokusPallot();
+    // Ruutuun ankkuroidut mitat (v1099: mittajana ja kartuutsi).
+    paivitaFokusmitat(this);
   }
 
   /* --- PALLOT POIS LEHDEN PÄÄLTÄ (omistaja 24.8.2026, v1097) -------- */
@@ -5006,10 +5087,14 @@ export class UI {
    *      kaupunkien pisteet syttyvät valinnan ajaksi
    *      (fokusMatkavalintaAuki + drawTargetsin kokoama joukko).
    *
-   *   3. AARREVAIHE TUO LAATAN. Kun fokusvirta on edennyt kohtaamiseen,
-   *      nykyisen kaupungin laatta ilmestyy pienellä huomioeleellä ja
-   *      jää näkyviin kunnes se on käännetty. Käännetyn laatan jälkeen
-   *      peli jatkuu täsmälleen ennallaan (fokusvirtaLaattaNakyy).
+   *   3. NYKYISEN KAUPUNGIN LAATTA JÄÄ AINA (omistajan pelitesti
+   *      24.8.2026, v1099:n jälkeen). v1098 piilotti senkin, ja lehdeltä
+   *      katosi ainoa merkki siitä, missä matkaaja seisoo. Laatta on
+   *      siis lehden päällä koko ajan — mutta PIENENÄ ja ruudulla lähes
+   *      vakiokokoisena (paivitaFokusLaatta). Aarrevaiheen huomioele
+   *      (fokusvirtaLaattaNakyy → .fokus-laatta-esiin) säilyy
+   *      ennallaan: se on yhä se hetki, jolloin pöllö osoittaa laattaa,
+   *      ja samalla hetkellä myös pelinappula palaa lehden päälle.
    *
    * KEHITTÄJÄTILAN NAPAUTUS EI SAA LAKATA TOIMIMASTA. Piilotus koskee
    * vain näkyviä koristeita (.target-ring, .target-halo, kohdemerkki);
@@ -5025,12 +5110,15 @@ export class UI {
     const nykyinen = pohja ? this.game.cityOf?.() : null;
     const valinta = pohja ? this.fokusMatkavalintaAuki() : false;
     const kohteet = valinta ? (this.fokusKohdeKaupungit ?? new Set()) : null;
-    // Aarrevaihe (tai käännetty laatta) päästää nykyisen kaupungin
-    // pisteen takaisin lehden päälle.
+    /*
+     * Aarrevaihe (tai käännetty laatta): pöllön huomioele ja pelinappula.
+     * EI ENÄÄ laatan näkyvyys — laatta jää lehden päälle aina (sääntö 3
+     * yllä), ja tämä kertoo vain, onko se juuri nyt se hetki, jolloin
+     * laattaa osoitetaan ja nappula palaa kartalle.
+     */
     const omaNakyy = Boolean(nykyinen) && fokusvirtaLaattaNakyy(this, nykyinen);
     /** Saako tämän kaupungin piste näkyä lehden päällä? */
-    const kaupunkiNakyy = (id) => (id === nykyinen?.id && omaNakyy)
-      || Boolean(kohteet?.has(id));
+    const kaupunkiNakyy = (id) => id === nykyinen?.id || Boolean(kohteet?.has(id));
 
     for (const osa of this.svg.querySelectorAll('.cities [data-kaupunki]')) {
       // Nimi jää aina: se on lehden tekstiä, ei pelimerkki.
@@ -5073,6 +5161,175 @@ export class UI {
         koriste.classList.toggle('fokus-lehden-alla', piiloon);
       }
     }
+
+    // Näkyvyys on nyt ratkaistu; jäljellä on nykyisen laatan KOKO ja sen
+    // napautusalue (oma metodinsa, koska sitä kutsutaan myös zoomista).
+    this.paivitaFokusLaatta();
+  }
+
+  /* --- LAATTA ON FOKUSNÄKYMÄN TUTKI-NAPPI (omistaja 24.8.2026) ------- */
+
+  /**
+   * Onko Tutki juuri nyt kaupungin laatassa eikä alarivissä?
+   *
+   * Omistajan pelitestitilaus: fokusnäkymässä alariville jää VAIN Liiku,
+   * ja Tutki-napin toiminto siirtyy nykyisen kaupungin laatan
+   * napautukseen. Yksi ehto ratkaisee molemmat puolet — napin poisjäännin
+   * (tutkiNappi) ja napautusalueen syntymisen (paivitaFokusLaatta) —
+   * jotta toiminto ei voi kadota kummastakaan paikasta yhtä aikaa.
+   *
+   * EHTO EI OLE LEHTI VAAN FOKUSMOODI. Fokuskartan lehti saapuu verkosta
+   * kesken pelin ja on toistaiseksi olemassa vain Kreikassa; jos alarivi
+   * riippuisi siitä, Tutki katoaisi lehden saapuessa ja palaisi sen
+   * lähtiessä — ja lehden ja alarivin välissä olisi hetki, jolloin
+   * kumpaakaan ei ole. Fokusmoodin kytkin ei värähdä kesken vuoron.
+   *
+   * VAIHE RATKAISEE LOPUN. Tutki on alarivissä vain vuoron kahdessa
+   * vaiheessa ('action' ja 'roll'); siirtovaiheessa, tapahtumassa ja
+   * tietovisassa koko rivi on tyhjä. Napautusalue noudattaa samaa
+   * rajaa, eikä siis voi joutua siirtovaiheessa nopanheiton
+   * kohdealueiden päälle — lähin askelpiste on laudalla vain kymmeniä
+   * yksiköitä sivussa, ja sormenkokoinen alue ylettyisi sen päälle.
+   */
+  fokusLaattaTutkii() {
+    if (!this.fokusmoodi || this.katselu) return false;
+    if (this.game.player?.isBot) return false;
+    if (this.game.phase !== 'action' && this.game.phase !== 'roll') return false;
+    return Boolean(this.game.cityOf?.());
+  }
+
+  /**
+   * NYKYISEN KAUPUNGIN LAATTA: pieni koko ja sormenkokoinen napautusalue.
+   *
+   * KAKSI TYÖTÄ, YKSI PAIKKA:
+   *
+   *   1. KOKO. Lehden päällä laatta skaalataan käänteisellä
+   *      zoomikertoimella niin, että sen halkaisija on ruudulla noin
+   *      FOKUS_LAATTA_PX. Skaalaus tehdään laatan omien osien
+   *      transform-määreisiin kaupungin keskipisteen ympäri, jolloin
+   *      heilunta (rotate) ja porttikehä säilyvät suhteessa toisiinsa.
+   *      Alkuperäinen muunnos talletetaan data-määreeseen, joten
+   *      palautus on tarkka eikä arvattu.
+   *   2. NAPAUTUS. Laatan päälle piirretään näkymätön ympyrä, jonka
+   *      halkaisija on ruudulla vähintään FOKUS_LAATTA_OSUMA_PX (44 px:n
+   *      sormisääntö). Napautus tekee saman kuin vanha Tutki-nappi.
+   *
+   * KAKSI EHTOA, EI YHTÄ. Koko koskee koko fokusnäkymää: laatta pysyy
+   * pienenä myös siirtovaiheessa ja tietovisan aikana, koska se on
+   * lehden ulkoasua eikä nappi. Napautusalue syntyy vain silloin, kun
+   * Tutki olisi muutenkin tarjolla (fokusLaattaTutkii) — muuten se
+   * peittäisi siirtovaiheen kohdealueita.
+   *
+   * KIINTEÄ RUUTUKOKO PÄIVITTYY ZOOMISTA. Kutsu tulee sekä
+   * paivitaFokusPallotin kautta joka piirrossa että
+   * paivitaMaastonimistä, joka ajetaan aina kun näkymä on asettunut —
+   * sama kytkentäkohta kuin fokusvirran kuvavinjeteillä.
+   */
+  paivitaFokusLaatta() {
+    if (!this.svg || !this.fokusLaattaKerros) return;
+    const city = this.fokusmoodi && !this.katselu ? this.game.cityOf?.() : null;
+    if (!city) { this.tyhjennaFokusLaatta(); return; }
+    const skaala = this.nakyvaAlue()?.skaala;
+    // Ilman mitattavaa näkymää mittakaava jäisi arvaukseksi: entinen
+    // koko on parempi kuin väärä (sama sääntö kuin kuvavinjeteillä).
+    if (!Number.isFinite(skaala) || skaala <= 0) return;
+
+    const osat = [...this.svg.querySelectorAll('.cities [data-kaupunki]')]
+      .filter((osa) => osa.dataset.kaupunki === city.id
+        && !osa.classList.contains('city-label'));
+    const laatta = osat.find((osa) => osa.classList.contains('city')
+      || osa.classList.contains('city-start'));
+    const rx = Number(laatta?.getAttribute('rx'));
+    /*
+     * Kutistus koskee vain LEHDEN päällä olevaa laattaa: muualla kartta
+     * on tavallinen lauta, jossa laatta on omassa mitassaan.
+     */
+    const lehdella = this.fokusPohjanAlla(city.x, city.y);
+    const kerroin = lehdella && Number.isFinite(rx) && rx > 0
+      ? Math.min(1, (FOKUS_LAATTA_PX / 2) / (rx * skaala))
+      : 1;
+    // Edellisen kaupungin osat takaisin omaan kokoonsa.
+    for (const vanha of this.fokusLaattaOsat ?? []) {
+      if (!osat.includes(vanha)) this.asetaLaatanKoko(vanha, 1);
+    }
+    for (const osa of osat) this.asetaLaatanKoko(osa, kerroin);
+    this.fokusLaattaOsat = kerroin < 1 ? osat : [];
+
+    /*
+     * NAPAUTUSALUE VAIN KUN TUTKI OLISI TARJOLLA. Ks. fokusLaattaTutkii:
+     * siirtovaiheessa alue peittäisi nopanheiton lähimmät kohdealueet,
+     * eikä Tutkia ole silloin alarivissäkään.
+     */
+    if (!this.fokusLaattaTutkii()) {
+      if (this.fokusLaattaKerros.firstChild) this.fokusLaattaKerros.textContent = '';
+      this.fokusLaattaAvain = null;
+      return;
+    }
+    /*
+     * Napautusalue laudan yksiköinä: ruutumitta jaettuna zoomilla, mutta
+     * korkeintaan FOKUS_LAATTA_OSUMA_LAUDALLA (ettei alue yleiskuvassa
+     * peitä naapureita) ja vähintään laatan oma säde (ettei näkyvän
+     * laatan reuna jää alueen ulkopuolelle).
+     */
+    const r = Math.max(
+      Number.isFinite(rx) ? rx : 0,
+      Math.min((FOKUS_LAATTA_OSUMA_PX / 2) / skaala, FOKUS_LAATTA_OSUMA_LAUDALLA),
+    );
+    const kohdat = this.kiertoKohdat(city.x);
+    const avain = `${this.game.pack.id}:${city.id}:${kohdat.length}`;
+    if (this.fokusLaattaAvain !== avain) {
+      this.fokusLaattaAvain = avain;
+      this.fokusLaattaKerros.textContent = '';
+      for (const x of kohdat) {
+        const osuma = el('circle', {
+          cx: x, cy: city.y, r, class: 'fokuslaatta-osuma',
+        }, this.fokusLaattaKerros);
+        // Kesken animaation (nopan pyörähdys, siirtymä) kartta ottaa yhä
+        // napautuksia vastaan toisin kuin alarivin napit, jotka ovat
+        // silloin poissa — siksi kiireen esto on tässä eikä
+        // avaaTutkinnassa (napin polku pysyy ennallaan).
+        osuma.addEventListener('click', () => {
+          if (!this.busy) this.avaaTutkinta(city);
+        });
+      }
+      return;
+    }
+    // Sama kaupunki, uusi zoom: pelkkä säde riittää — kuuntelijaa ei
+    // kytketä uudelleen, jottei napautus katoaisi sormen alta.
+    for (const osuma of this.fokusLaattaKerros.children) osuma.setAttribute('r', r);
+  }
+
+  /**
+   * Yhden laatan osan koko: skaalaus keskipisteen ympäri tai palautus.
+   *
+   * Alkuperäinen muunnos (heilunta) talletetaan ensimmäisellä kerralla
+   * data-määreeseen. Ilman sitä palautus joutuisi rakentamaan heilunnan
+   * uudelleen samasta siemenestä — kaksi kopiota samasta säännöstä.
+   */
+  asetaLaatanKoko(osa, kerroin) {
+    if (osa.dataset.laattaMuunnos === undefined) {
+      osa.dataset.laattaMuunnos = osa.getAttribute('transform') ?? '';
+    }
+    const perus = osa.dataset.laattaMuunnos;
+    if (!(kerroin < 1)) {
+      if (perus) osa.setAttribute('transform', perus);
+      else osa.removeAttribute('transform');
+      return;
+    }
+    const x = Number(osa.dataset.kx);
+    const y = Number(osa.dataset.ky);
+    if (!Number.isFinite(x) || !Number.isFinite(y)) return;
+    osa.setAttribute('transform', `translate(${x} ${y}) scale(${kerroin.toFixed(4)}) `
+      + `translate(${-x} ${-y}) ${perus}`.trimEnd());
+  }
+
+  /** Fokusnäkymä loppui: laatta omaan kokoonsa ja napautusalue pois. */
+  tyhjennaFokusLaatta() {
+    if (this.fokusLaattaKerros?.firstChild) this.fokusLaattaKerros.textContent = '';
+    this.fokusLaattaAvain = null;
+    if (!this.fokusLaattaOsat?.length) return;
+    for (const osa of this.fokusLaattaOsat) this.asetaLaatanKoko(osa, 1);
+    this.fokusLaattaOsat = [];
   }
 
   /**
@@ -5131,6 +5388,15 @@ export class UI {
     // Neljäs kerros: pelimerkit (ks. doc yllä ja paivitaFokusPallot).
     // Kutsu on tässä, koska pohja saapuu verkosta vasta piirron jälkeen.
     this.paivitaFokusPallot();
+    // Viides kerros: lehden klikattavat karttakohteet (js/fokuskohteet.js).
+    paivitaFokuskohteet(this);
+    /*
+     * Viides kerros: ruutuun ankkuroidut mitat (mittajana ja
+     * kartuutsi). Kutsu on tässä samasta syystä kuin pallojen: pohja
+     * saapuu verkosta vasta piirron jälkeen, eikä paivitaFokusKerros
+     * enää aja itseään uudelleen sen takia.
+     */
+    paivitaFokusmitat(this);
   }
 
   /**
@@ -6145,6 +6411,13 @@ export class UI {
     const { game } = this;
     const city = game.cityOf();
     if (!city) return null;
+    /*
+     * FOKUSNÄKYMÄSSÄ NAPPIA EI OLE (omistajan pelitestitilaus
+     * 24.8.2026): alariville jää vain Liiku, ja tutkiminen alkaa
+     * kaupungin laatan napautuksesta (paivitaFokusLaatta). Sama ehto
+     * molemmissa päissä, ks. fokusLaattaTutkii.
+     */
+    if (this.fokusLaattaTutkii()) return null;
     const stayBtn = this.iconButton('suurennuslasi', 'Tutki',
       game.travelModes().includes('stay') ? 'primary' : '');
     // Uudessa kaupungissa nappi sykkii, kunnes sitä on painettu kerran.
@@ -6152,14 +6425,28 @@ export class UI {
       stayBtn.classList.add('tutki-syke');
     }
     stayBtn.addEventListener('click', () => {
-      sfx.play('paper');
-      this.lehtitila.tutkiSyke = null;
       stayBtn.classList.remove('tutki-syke');
-      // Tutki avaa ensin saapumiskortin (esittely, kuva ja Lue lisää) —
-      // peliin siirrytään vasta kortin omasta Tutki paikka -napista.
-      this.openArrival(city);
+      this.avaaTutkinta(city);
     });
     return stayBtn;
+  }
+
+  /**
+   * TUTKI-TOIMINTO YHTENÄ KAPPALEENA.
+   *
+   * Sama teko kahdesta paikasta: alarivin Tutki-nappi (fokusmoodin
+   * ollessa pois) ja fokusnäkymän kaupunkilaatan napautus. openArrival
+   * ratkaisee lopun — fokusvirran avaus tai paluu nykyvaiheeseen, ja
+   * virran ohitettua saapumiskortti, josta laatan kääntö alkaa
+   * (fokusvirtaOhittaaLehden).
+   */
+  avaaTutkinta(city = this.game.cityOf()) {
+    if (!city) return;
+    sfx.play('paper');
+    this.lehtitila.tutkiSyke = null;
+    // Tutki avaa ensin saapumiskortin (esittely, kuva ja Lue lisää) —
+    // peliin siirrytään vasta kortin omasta Tutki paikka -napista.
+    this.openArrival(city);
   }
 
   /**
@@ -6167,6 +6454,12 @@ export class UI {
    *
    *   vasen   Liiku  — monitoiminappi, avaa matkustusnapit
    *   oikea   Tutki  — suurennuslasi, ennallaan
+   *
+   * FOKUSNÄKYMÄSSÄ VAIN LIIKU (omistajan pelitestitilaus 24.8.2026
+   * illalla). Tutki-napin toiminto siirtyi kaupungin laatan
+   * napautukseen (fokusLaattaTutkii, paivitaFokusLaatta), joten rivissä
+   * on yksi keskitetty nappi. Fokusmoodin ollessa pois rivi on
+   * täsmälleen entisensä.
    *
    * MIKSI KAKSI EIKÄ KOLME. Rivissä oli 12.8.2026 alkaen kolme paikkaa
    * ja keskimmäisenä Viisas Pöllö. Raamatun osio "Fokusmoodi"
@@ -6236,7 +6529,17 @@ export class UI {
      * alempana) — js/pollo.js ohittaa sen lipullaan ja kiinnittää napin
      * bodyyn, joten rivipaikan palauttaminen ei vaadi muutosta tänne.
      */
-    perus.appendChild(tutkiNappi ?? html('div', 'rivi-tyhja'));
+    /*
+     * FOKUSNÄKYMÄSSÄ RIVI ON YHDEN NAPIN LEVYINEN (omistajan
+     * pelitestitilaus 24.8.2026). Tutki muutti kaupungin laattaan, eikä
+     * sen tilalle jätetä tyhjää paikkaa: kahden paikan ruudukossa Liiku
+     * jäisi puoliksi riviä roikkumaan vasempaan reunaan. Muualla tyhjä
+     * paikka säilyy — siellä Tutki vain puuttuu hetkellisesti (matkalla
+     * kaupunkien välissä), ja rivin on pysyttävä samanlevyisenä.
+     */
+    const yksin = !tutkiNappi && this.fokusLaattaTutkii();
+    if (yksin) rivi.classList.add('rivi-yksi');
+    else perus.appendChild(tutkiNappi ?? html('div', 'rivi-tyhja'));
     rivi.appendChild(perus);
 
     const liuku = html('div', 'toimintorivi-liuku');

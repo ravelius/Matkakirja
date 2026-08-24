@@ -35,6 +35,38 @@
  * pelimerkkejä. Osio 6 on kokonaan uusi eikä kumoa yhtään vanhaa
  * väitettä — 1c ja 5b tarkistavat, että laatta on OLEMASSA (peli ei
  * hajonnut), eivät että se näkyy, joten ne pätevät ennallaan.
+ *
+ * === MIKÄ MUUTTUI JATKUVAN PINNAN MYÖTÄ (v1099) ===
+ *
+ * Omistajan tilaus 25.8.2026 (Raamatun osio "JATKUVA KARTTA JA
+ * DYNAAMISET MITAT") purki "lehden" kahtia:
+ *
+ *   KUVASTA LÄHTIVÄT KALUSTEET. Kehysviiva, KREIKKA-kartuutsi,
+ *   "200 km" -mittajana ja asteverkon reunalukemat eivät ole enää
+ *   esirenderöidyssä kuvassa (tools/fokuskartta/piirto.js `jatkuva`).
+ *   Savuke EI siis enää saa vaatia kuvalta mitään kehykseen liittyvää
+ *   — ja koska kuva on tässä testissä yhden pikselin PNG, sen sisältöä
+ *   ei voi eikä tarvitse tutkia. Vanhoista väitteistä yksikään ei
+ *   koskenut kehystä, joten mikään ei kumoutunut; sanasto vain
+ *   muuttui: "lehti" on nyt IKKUNA (rajaus) jatkuvalla pinnalla.
+ *
+ *   PELI PIIRTÄÄ MITAT (uusi osio 7). Mittajana ja maan kartuutsi ovat
+ *   ruutuun ankkuroituja HTML-elementtejä (js/fokusmitat.js), ja juuri
+ *   siksi niistä voi vaatia asioita, joita poltetusta kuvasta ei voisi:
+ *   janan pituus on 15–25 % ruudusta, se MUUTTUU zoomatessa, kartuutsi
+ *   kertoo maan nimen ja sen oman nimen, se avaa liukuvan maataulun, ja
+ *   oikean yläkulman maakyltti väistyy sen tieltä.
+ * === MIKÄ MUUTTUI OMISTAJAN PELITESTIN JÄLKEEN (v1099:n jälkeen) ===
+ *
+ * *"Laatta takaisin, mutta paljon pienempänä"* ja *"Tutki pois
+ * alariviltä"*. NYKYISEN kaupungin laatta on lehden päällä AINA — pieni
+ * ja ruudulla lähes vakiokokoinen — ja se on samalla fokusnäkymän
+ * Tutki-nappi. Kaksi seurausta tälle savukkeelle:
+ *
+ *   - OSION 6 PIILOTUSVÄITTEET KOSKEVAT NYT MUITA KAUPUNKEJA (6b, 6e).
+ *     Oma laatta rajataan mittauksesta pois, koska sen kuuluukin näkyä.
+ *   - UUSI OSIO 7 mittaa laatan RUUTUKOON, napautusalueen sormimitan ja
+ *     alarivin (vain Liiku), sekä sen että napautus avaa virran.
  */
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
@@ -370,12 +402,20 @@ await sivu.evaluate(async () => {
 const mittaaPallot = () => sivu.evaluate(() => {
   const ui = window.matkakirja.ui;
   const nakyy = (osa) => getComputedStyle(osa).display !== 'none';
+  const oma = ui.game.cityOf()?.id;
   const osat = [...document.querySelectorAll('#board .cities [data-kaupunki]')];
   const lehdella = osat.filter((osa) => ui.fokusPohjanAlla(
     Number(osa.getAttribute('cx') ?? osa.getAttribute('x')),
     Number(osa.getAttribute('cy') ?? osa.getAttribute('y')),
   ));
-  const pisteet = lehdella.filter((osa) => !osa.classList.contains('city-label'));
+  /*
+   * NYKYISEN KAUPUNGIN LAATTA ON OMA TAPAUKSENSA (omistajan pelitesti
+   * 24.8.2026): se jää lehden päälle aina, pienennettynä. Piilotus
+   * koskee siis MUIDEN kaupunkien pisteitä, ja oma laatta mitataan
+   * erikseen (osio 7).
+   */
+  const pisteet = lehdella.filter((osa) => !osa.classList.contains('city-label')
+    && osa.dataset.kaupunki !== oma);
   /*
    * NIMISTÄ MITATAAN VAIN KÄYDYN MAAN NIMET. Lehden laatikkoon osuu
    * myös naapurimaiden kaupunkeja, ja niiden koko datakerros — nimi
@@ -407,7 +447,7 @@ const mittaaPallot = () => sivu.evaluate(() => {
 
 const piilossa = await mittaaPallot();
 vaadi('6a lehti on yhä paikallaan mittausta varten', piilossa.pohja);
-vaadi('6b kaupunkien pisteet ja laatat ovat piilossa lehden päältä',
+vaadi('6b MUIDEN kaupunkien pisteet ja laatat ovat piilossa lehden päältä',
   piilossa.pisteita > 0 && piilossa.nakyviaPisteita === 0,
   `${piilossa.nakyviaPisteita}/${piilossa.pisteita} näkyvissä`);
 vaadi('6c kaupunkien nimet JÄÄVÄT lehteen (ATEENA, Kreeta)',
@@ -431,11 +471,14 @@ const dev = await sivu.evaluate(async () => {
   await new Promise((s) => setTimeout(s, 400));
   const nakyy = (osa) => getComputedStyle(osa).display !== 'none';
   const alueet = [...document.querySelectorAll('#board .targets .target-hit')];
+  const oma = ui.game.cityOf()?.id;
   const laatat = [...document.querySelectorAll('#board .cities [data-kaupunki]')]
-    .filter((osa) => !osa.classList.contains('city-label') && ui.fokusPohjanAlla(
-      Number(osa.getAttribute('cx') ?? osa.getAttribute('x')),
-      Number(osa.getAttribute('cy') ?? osa.getAttribute('y')),
-    ));
+    .filter((osa) => !osa.classList.contains('city-label')
+      && osa.dataset.kaupunki !== oma
+      && ui.fokusPohjanAlla(
+        Number(osa.getAttribute('cx') ?? osa.getAttribute('x')),
+        Number(osa.getAttribute('cy') ?? osa.getAttribute('y')),
+      ));
   const tulos = {
     alueita: alueet.length,
     nakyviaAlueita: alueet.filter(nakyy).length,
@@ -527,6 +570,291 @@ vaadi('6h aarrevaihe tuo nykyisen kaupungin laatan takaisin',
 vaadi('6i pöllön huomioele on laatan päällä', aarre.huomioele, JSON.stringify(aarre));
 vaadi('6j muiden kaupunkien pallot pysyvät piilossa',
   aarre.muitaLehdella > 0 && aarre.nakyviaMuita === 0, JSON.stringify(aarre));
+
+/* ------------------------------- 7. dynaamiset mitat (v1099) */
+
+/*
+ * MITTAJANA JA KARTUUTSI OVAT PELIN PIIRTÄMIÄ (js/fokusmitat.js).
+ *
+ * Nämä väitteet korvaavat sen, mitä ennen ei voinut testata lainkaan:
+ * kuvaan poltettu mittajana oli osa bittikarttaa, ja sen ainoa
+ * "tarkistus" oli silmä. Nyt jana on DOM:issa, ja siitä voi vaatia
+ * kolme asiaa, joita poltettu jana ei olisi koskaan täyttänyt:
+ * järkevä koko ruudulla, vakiosarjan pyöreä pituus ja se, että luku
+ * MUUTTUU kun karttaa zoomataan.
+ */
+
+// Sarja on js/fokusmitat.js PITUUDET. Muu luku olisi merkki siitä,
+// että jana laskee vapaita kilometrejä eikä valitse siistiä pituutta.
+const SALLITUT_KM = new Set([
+  0.5, 1, 2, 2.5, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000, 2000, 2500, 5000,
+]);
+
+/** Yksi mittaus: kartuutsin ja janan tila ruudulla. */
+const mittaaMitat = () => sivu.evaluate(() => {
+  const nakyy = (osa) => osa && getComputedStyle(osa).display !== 'none'
+    && getComputedStyle(osa).visibility !== 'hidden';
+  const kartuutsi = document.querySelector('.fokus-kartuutsi');
+  const jana = document.querySelector('.fokus-jana');
+  const palkki = document.querySelector('.fokus-jana-palkki');
+  const pilleri = document.querySelector('.maa-pilleri');
+  const pane = document.querySelector('.map-pane');
+  const laatikko = (osa) => {
+    if (!osa) return null;
+    const r = osa.getBoundingClientRect();
+    return {
+      x: r.x, y: r.y, w: r.width, h: r.height, oikea: r.right, ala: r.bottom,
+    };
+  };
+  return {
+    sailio: nakyy(document.querySelector('.fokusmitat')),
+    kartuutsiNakyy: nakyy(kartuutsi),
+    nimi: document.querySelector('.fokus-kartuutsi-nimi')?.textContent ?? '',
+    paikallinen: document.querySelector('.fokus-kartuutsi-paikallinen')?.textContent ?? '',
+    aika: document.querySelector('.fokus-kartuutsi-aika')?.textContent ?? '',
+    kartuutsiLaatikko: laatikko(kartuutsi),
+    janaNakyy: nakyy(jana),
+    km: Number(jana?.dataset.km),
+    janaTeksti: document.querySelector('.fokus-jana-maksimi')?.textContent ?? '',
+    janaLeveys: palkki?.getBoundingClientRect().width ?? 0,
+    paneLeveys: pane?.getBoundingClientRect().width ?? 0,
+    pilleriNakyy: nakyy(pilleri),
+    pohjaLuokka: document.body.classList.contains('fokuspohja'),
+    // Alanapit ja kelluva pöllö: mitat eivät saa osua niiden päälle.
+    napit: laatikko(document.querySelector('.turn-card')),
+    pollo: laatikko(document.querySelector('.pollo-nappi.pollo-kelluu')),
+    tauluAuki: document.querySelector('.fokus-maataulu')?.classList.contains('auki') ?? null,
+  };
+});
+
+// Näkymä takaisin lehden ikkunaan, jotta mittaus tehdään siinä
+// tilassa, jossa pelaaja lehteä katsoo.
+await sivu.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  ui.kartta.ajaKamera({ bbox: ui.fokusPohjaBbox, marginaali: 0 });
+});
+await sivu.waitForTimeout(2600);
+await sivu.evaluate(() => window.matkakirja.ui.paivitaMaastonimet());
+await sivu.waitForTimeout(300);
+
+const mitat = await mittaaMitat();
+vaadi('7a mitat näkyvät fokuspohjan päällä', mitat.sailio && mitat.pohjaLuokka,
+  JSON.stringify({ sailio: mitat.sailio, pohja: mitat.pohjaLuokka }));
+vaadi('7b kartuutsissa on maan nimi suomeksi', mitat.nimi === 'KREIKKA', mitat.nimi);
+vaadi('7c kartuutsin alarivi on maan oma nimi (1873-asussa)',
+  mitat.paikallinen.includes('ΕΛΛΑΣ') && /kuningaskunta/.test(mitat.aika),
+  `${mitat.paikallinen} | ${mitat.aika}`);
+/*
+ * ISOISÄN RIVI EI OLE MISSÄÄN (omistaja 25.8.2026): kartta on
+ * sisällöltään nykyaikainen, vaikka tyyliltään aikakauden mukainen.
+ */
+const isoisaRivi = await sivu.evaluate(() => document.body.innerText.includes('isoisän matkakirjan mukaan'));
+vaadi('7d "isoisän matkakirjan mukaan · 1873" ei ole näkyvissä', !isoisaRivi);
+
+vaadi('7e mittajana näkyy', mitat.janaNakyy && mitat.janaLeveys > 0,
+  `leveys ${mitat.janaLeveys}`);
+vaadi('7f janan pituus on vakiosarjasta', SALLITUT_KM.has(mitat.km), `${mitat.km} km`);
+const osuus = mitat.paneLeveys ? (mitat.janaLeveys / mitat.paneLeveys) * 100 : 0;
+vaadi('7g jana on 15–25 % kartan leveydestä', osuus >= 15 && osuus <= 25,
+  `${osuus.toFixed(1)} % (${mitat.janaTeksti})`);
+
+/*
+ * MAAKYLTTI VÄISTYY: kartuutsi kertoo maan nimen, joten oikean
+ * yläkulman pilleri olisi sama tieto kahdesti.
+ */
+vaadi('7h oikean yläkulman maakyltti on piilossa lehden päällä', !mitat.pilleriNakyy);
+
+// Mitat eivät saa peittää alanappeja eivätkä kelluvaa pöllöä.
+const osuvat = (a, b) => Boolean(a && b)
+  && a.x < b.oikea && a.oikea > b.x && a.y < b.ala && a.ala > b.y;
+const janaLaatikko = await sivu.evaluate(() => {
+  const r = document.querySelector('.fokus-jana')?.getBoundingClientRect();
+  return r ? {
+    x: r.x, y: r.y, oikea: r.right, ala: r.bottom,
+  } : null;
+});
+vaadi('7i kartuutsi ja jana eivät peitä alanappeja',
+  !osuvat(mitat.kartuutsiLaatikko, mitat.napit) && !osuvat(janaLaatikko, mitat.napit),
+  JSON.stringify({ kartuutsi: mitat.kartuutsiLaatikko, jana: janaLaatikko, napit: mitat.napit }));
+vaadi('7j kartuutsi ja jana eivät peitä kelluvaa pöllöä',
+  !mitat.pollo
+  || (!osuvat(mitat.kartuutsiLaatikko, mitat.pollo) && !osuvat(janaLaatikko, mitat.pollo)),
+  JSON.stringify({ pollo: mitat.pollo }));
+
+/*
+ * DYNAAMISUUS: zoomaus lyhentää janan kilometrimäärää. Tämä on koko
+ * muutoksen ydin — poltettu jana väitti 200 km millä tahansa zoomilla.
+ */
+await sivu.evaluate(() => {
+  window.matkakirja.ui.kartta.zoomaaPainikkeella(1);
+  window.matkakirja.ui.kartta.zoomaaPainikkeella(1);
+});
+await sivu.waitForTimeout(1100);
+await sivu.evaluate(() => window.matkakirja.ui.paivitaMaastonimet());
+await sivu.waitForTimeout(300);
+const lahella = await mittaaMitat();
+vaadi('7k jana lyhenee kilometreissä kun karttaa lähennetään',
+  lahella.km > 0 && lahella.km < mitat.km,
+  `${mitat.km} km → ${lahella.km} km`);
+vaadi('7l lähennettykin jana pysyy vakiosarjassa ja järkevän kokoisena',
+  SALLITUT_KM.has(lahella.km)
+  && (lahella.janaLeveys / lahella.paneLeveys) * 100 >= 15
+  && (lahella.janaLeveys / lahella.paneLeveys) * 100 <= 25,
+  `${lahella.km} km, ${((lahella.janaLeveys / lahella.paneLeveys) * 100).toFixed(1)} %`);
+
+/* ------------------------------- 8. liukuva maataulu (v1099) */
+
+/*
+ * Kartuutsin kertapainallus nostaa alhaalta liukuvan taulun, jossa
+ * ovat maan perustiedot SAMASTA lähteestä kuin maalehdessä
+ * (MAATIEDOT) ja plus-nappi itse lehteen. Sulku: X, Esc tai napautus
+ * taulun ulkopuolelle.
+ */
+const auki = await sivu.evaluate(async () => {
+  document.querySelector('.fokus-kartuutsi').click();
+  await new Promise((r) => setTimeout(r, 450));
+  const taulu = document.querySelector('.fokus-maataulu');
+  const pane = document.querySelector('.map-pane').getBoundingClientRect();
+  const r = taulu.getBoundingClientRect();
+  const napit = document.querySelector('.turn-card')?.getBoundingClientRect() ?? null;
+  const otsikot = [...taulu.querySelectorAll('.fokus-maataulu-otsikko')].map((e) => e.textContent);
+  return {
+    auki: taulu.classList.contains('auki'),
+    nakyy: getComputedStyle(taulu).visibility === 'visible',
+    lapinakyva: getComputedStyle(taulu).backgroundColor,
+    // Kartta jää näkyviin: taulu ei täytä koko karttaruutua.
+    korkeusOsuus: r.height / pane.height,
+    // Alanapit jäävät taulun alapuolelle kokonaan.
+    nappienPaalla: Boolean(napit) && r.bottom > napit.top,
+    otsikot,
+    vakiluku: taulu.querySelector('.fokus-maataulu-arvo')?.textContent ?? '',
+    kielia: taulu.querySelectorAll('.fokus-maataulu-kielet .tervehdys').length,
+    lippuja: taulu.querySelectorAll('.fokus-maataulu-kielet img').length,
+    // Vieritys ei saa vuotaa kartan panorointiin.
+    kosketus: getComputedStyle(taulu).touchAction,
+    plus: Boolean(taulu.querySelector('.fokus-maataulu-lehti')),
+    aria: document.querySelector('.fokus-kartuutsi').getAttribute('aria-expanded'),
+  };
+});
+vaadi('8a kartuutsin painallus avaa maataulun', auki.auki && auki.nakyy, JSON.stringify(auki));
+vaadi('8b taulu on läpikuultava ja kartta jää näkyviin',
+  /rgba\(/.test(auki.lapinakyva) && auki.korkeusOsuus < 0.6,
+  `${auki.lapinakyva}, korkeus ${(auki.korkeusOsuus * 100).toFixed(0)} % kartasta`);
+vaadi('8c taulu ei peitä alanappeja', !auki.nappienPaalla);
+vaadi('8d taulussa ovat maalehden omat luvut',
+  auki.otsikot.includes('Väkiluku') && auki.otsikot.includes('Pinta-ala')
+  && /milj\./.test(auki.vakiluku),
+  JSON.stringify(auki.otsikot));
+vaadi('8e taulussa ovat maan kielet lippuineen',
+  auki.kielia >= 2 && auki.lippuja >= 1, `${auki.kielia} kieltä, ${auki.lippuja} lippua`);
+vaadi('8f taulun vieritys ei panoroi karttaa (touch-action)',
+  auki.kosketus === 'pan-y', auki.kosketus);
+vaadi('8g plus-nappi maalehteen on olemassa ja aria kertoo tilan',
+  auki.plus && auki.aria === 'true', JSON.stringify({ plus: auki.plus, aria: auki.aria }));
+
+// Esc sulkee.
+await sivu.keyboard.press('Escape');
+await sivu.waitForTimeout(450);
+const escJalkeen = await mittaaMitat();
+vaadi('8h Esc sulkee taulun', escJalkeen.tauluAuki === false, String(escJalkeen.tauluAuki));
+
+// Napautus taulun ulkopuolelle sulkee.
+const ulkoa = await sivu.evaluate(async () => {
+  document.querySelector('.fokus-kartuutsi').click();
+  await new Promise((r) => setTimeout(r, 400));
+  const kesken = document.querySelector('.fokus-maataulu').classList.contains('auki');
+  document.querySelector('.map-pane').dispatchEvent(new PointerEvent('pointerdown', {
+    bubbles: true, pointerId: 7, clientX: 20, clientY: 20,
+  }));
+  await new Promise((r) => setTimeout(r, 400));
+  return { kesken, jalkeen: document.querySelector('.fokus-maataulu').classList.contains('auki') };
+});
+vaadi('8i napautus taulun ulkopuolelle sulkee sen',
+  ulkoa.kesken && !ulkoa.jalkeen, JSON.stringify(ulkoa));
+/* ------------------------------- 7. laatta on fokusnäkymän Tutki-nappi */
+
+/*
+ * OMISTAJAN PELITESTITILAUS 24.8.2026 (v1099:n jälkeen), kolme väitettä
+ * samasta muutoksesta:
+ *
+ *   1. NYKYISEN KAUPUNGIN LAATTA NÄKYY LEHDELLÄ AINA — mutta pienenä ja
+ *      ruudulla lähes vakiokokoisena (js/ui.js FOKUS_LAATTA_PX = 26).
+ *      Mitta otetaan RUUDULTA (getBoundingClientRect), koska juuri se on
+ *      luvattu: laudan yksiköissä sama laatta on eri kokoinen joka
+ *      zoomilla.
+ *   2. NAPAUTUSALUE ON SORMENKOKOINEN vaikka laatta piirtyy pienenä
+ *      (.fokuslaatta-osuma, vähintään 44 px).
+ *   3. ALARIVILLÄ ON VAIN LIIKU: Tutki-nappia ei ole, ja sen toiminto
+ *      tulee laatan napautuksesta.
+ *
+ * Aarrevaiheen tila jäi osiosta 6 voimaan, joten napautuksen kuuluu
+ * avata fokusvirta eikä saapumiskorttia (lehtilukko).
+ *
+ * MITTAUS TEHDÄÄN FOKUSNÄKYMÄSSÄ, EI YLEISKUVASSA. Osio 4 jätti kartan
+ * puoliväliin keskeytettyä ajoa, ja siinä zoomissa lehti on vain osa
+ * ruutua — laatta on jo luonnostaan pieni eikä kutistus tee mitään.
+ * Kamera ajetaan siksi ensin lehden ikkunaan (sama ajo kuin osiossa 3),
+ * jolloin mitataan se näkymä, josta omistajan palaute tuli.
+ */
+await sivu.evaluate((b) => window.matkakirja.ui.kartta.ajaKamera({ bbox: b }), RAJAUS);
+await sivu.waitForTimeout(2600);
+
+const laatta = await sivu.evaluate(async () => {
+  const ui = window.matkakirja.ui;
+  ui.game.phase = 'action';
+  ui.render();
+  await new Promise((s) => setTimeout(s, 400));
+  const city = ui.game.cityOf();
+  const laattaOsa = document.querySelector(
+    `#board .cities .city[data-kaupunki="${city.id}"], `
+    + `#board .cities .city-start[data-kaupunki="${city.id}"]`,
+  );
+  const osuma = document.querySelector('#board .fokuslaatta-osuma');
+  const rivi = document.querySelector('.toimintorivi');
+  const napit = [...(rivi?.querySelectorAll('.toimintorivi-perus button') ?? [])]
+    .map((b) => b.getAttribute('aria-label'));
+  const kuva = laattaOsa?.getBoundingClientRect();
+  return {
+    kaupunki: city.id,
+    skaala: Number((ui.nakyvaAlue()?.skaala ?? 0).toFixed(3)),
+    rx: Number(laattaOsa?.getAttribute('rx')),
+    osumaR: Number(osuma?.getAttribute('r')),
+    lehdella: ui.fokusPohjanAlla(city.x, city.y),
+    laattaNakyy: laattaOsa ? getComputedStyle(laattaOsa).display !== 'none' : false,
+    halkaisija: kuva ? Math.round(Math.max(kuva.width, kuva.height)) : -1,
+    osumaLeveys: osuma ? Math.round(osuma.getBoundingClientRect().width) : -1,
+    napit,
+    yksiRivi: Boolean(rivi?.classList.contains('rivi-yksi')),
+  };
+});
+console.log(`      (zoom ${laatta.skaala} px/yksikkö, laatan rx ${laatta.rx?.toFixed(1)} `
+  + `→ ruudulla ${laatta.halkaisija} px, osuma-alue ${laatta.osumaLeveys} px)`);
+vaadi('7a nykyisen kaupungin laatta NÄKYY lehden päällä',
+  laatta.lehdella === true && laatta.laattaNakyy === true, JSON.stringify(laatta));
+vaadi('7b laatta on ruudulla pieni (24–32 px, varaa mittaan)',
+  laatta.halkaisija >= 20 && laatta.halkaisija <= 40,
+  `halkaisija ${laatta.halkaisija} px`);
+vaadi('7c napautusalue on sormenkokoinen (≥ 44 px)',
+  laatta.osumaLeveys >= 44, `${laatta.osumaLeveys} px — ${JSON.stringify(laatta)}`);
+vaadi('7d alarivillä on vain Liiku — Tutki muutti laattaan',
+  laatta.yksiRivi === true && laatta.napit.length === 1
+  && laatta.napit[0] === 'Liiku', JSON.stringify(laatta.napit));
+
+const napautus = await sivu.evaluate(async () => {
+  const ui = window.matkakirja.ui;
+  ui.fokusvirtaKortti?.remove();
+  ui.fokusvirtaKortti = null;
+  document.querySelector('#board .fokuslaatta-osuma').dispatchEvent(
+    new MouseEvent('click', { bubbles: true }),
+  );
+  await new Promise((s) => setTimeout(s, 700));
+  return {
+    virta: Boolean(document.querySelector('.fokusvirta-kortti, .fokusvirta-kupla')),
+    saapuminen: document.getElementById('arrival-dialog')?.open === true,
+  };
+});
+vaadi('7e laatan napautus avaa fokusvirran (ei saapumiskorttia)',
+  napautus.virta === true && napautus.saapuminen === false, JSON.stringify(napautus));
 
 await selain.close();
 palvelin.close();
