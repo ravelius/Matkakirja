@@ -4442,6 +4442,48 @@ body.fokuspohja .country-korostus { display: none; }
 
 .fokus-piilossa { display: none; }
 
+/* ---------------------------------------------------------------------------
+   PALLOT POIS LEHDEN PÄÄLTÄ (omistajan pelitestipalaute v1097, iPad:
+   *"Ota pallot pois"* — js/ui.js paivitaFokusPallot)
+   ---------------------------------------------------------------------------
+   Fokuslehti on kokonainen 1873-atlaksen sivu, ja sen päällä laudan
+   pyöreät pelimerkit — kaupungin laatta, käännetty aarrekiekko,
+   pelinappula ja kohderengas — näyttävät toisesta pelistä lainatuilta.
+   Ne piilotetaan lehden alueelta ja palaavat vain tarpeeseen:
+   matkustusvalinnan kohteet valinnan ajaksi ja nykyisen kaupungin
+   laatta aarrevaiheessa.
+
+   KAUPUNKIEN NIMET EIVÄT SAA TÄTÄ LUOKKAA (js/ui.js): ATEENA ja Kreeta
+   ovat lehden tekstiä, eivät pelimerkkejä.
+
+   `display: none` eikä opacity, samasta syystä kuin .fokus-piilossa:
+   piilossa oleva laatta ei saa maksaa piirtoa panoroinnissa. Kehittäjän
+   napautusalue (.target-hit) EI ole tämän säännön piirissä, joten
+   dev-siirto toimii piilotetullakin laatalla.
+   ------------------------------------------------------------------------- */
+.fokus-lehden-alla { display: none; }
+
+/*
+ * PÖLLÖ OSOITTAA LAATTAA. Kun laatta ilmestyy aarrevaiheessa lehden
+ * päälle, se saa kevyen huomioeleen: kaksi rauhallista sykähdystä ja
+ * sitten hiljaisuus. Vain `opacity` liikkuu — ei suodattimia (iOS) eikä
+ * geometriaa, jotta kartan rasterointi ei joudu töihin.
+ */
+@keyframes fokus-laatta-esiin {
+  0% { opacity: 0; }
+  25% { opacity: 1; }
+  50% { opacity: 0.45; }
+  100% { opacity: 1; }
+}
+
+.fokus-laatta-esiin {
+  animation: fokus-laatta-esiin 1400ms ease-in-out 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fokus-laatta-esiin { animation: none; }
+}
+
 .fokus-sumu-harso {
   fill: rgba(238, 225, 196, 0.62);
   stroke: none;

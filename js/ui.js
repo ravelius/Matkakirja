@@ -127,7 +127,7 @@ import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
 // kutsua: saapumisen laukaisin renderissä ja lehtilukko openArrivalissa.
 import {
   fokusvirtaOhittaaLehden, fokusvirtaSaapuminen, fokusvirtaLukitseeLehden,
-  fokusvirtaMatkakirja, fokusvirtaMerkintaLuettu,
+  fokusvirtaMatkakirja, fokusvirtaMerkintaLuettu, fokusvirtaLaattaNakyy,
   paivitaFokuskuvat, nollaaFokuskuvat,
 } from './fokusvirta.js';
 
@@ -4586,9 +4586,16 @@ export class UI {
      * fokuskerros on hiljaa tekemättä mitään.
      */
     const fokusMaat = pack.map.cityCountry ?? null;
+    /*
+     * KAUPUNGIN TUNNUS SAMAAN KYYTIIN (v1097, *"Ota pallot pois"*).
+     * Fokuslehden päältä piilotetaan laatat mutta ei nimiä, ja
+     * nykyisen kaupungin laatta tuodaan takaisin aarrevaiheessa —
+     * molempiin tarvitaan tieto siitä, KENEN osa tämä on. Sama määre
+     * kuin maakoodi, samasta syystä (luokat ovat varattuja ulkoasulle).
+     */
     const fokusMaare = (c) => {
       const iso = fokusMaat?.[c.id];
-      return iso ? { 'data-fokus-maa': iso } : {};
+      return iso ? { 'data-fokus-maa': iso, 'data-kaupunki': c.id } : {};
     };
     /*
      * LEHTIVALMIUS VÄREINÄ — VAIN KEHITTÄJÄTILASSA (omistajan tilaus
@@ -4918,11 +4925,11 @@ export class UI {
      * luokalla eikä hidden-määreellä, jotta sama sääntö kattaa yhdellä
      * rivillä CSS:ää kaikki kaupungin osat.
      *
-     * KOHDERENKAAT (targetLayer) JÄÄVÄT NÄKYVIIN. Ne ovat pelin ainoa
-     * kartalta tehtävä valinta: jos ne katoaisivat, fokusmoodissa ei
-     * pääsisi ensimmäisestä maasta koskaan pois. Reittien ja renkaiden
-     * piilotus kuuluu pakettiin 2 yhdessä Liiku-napin uuden
-     * matkustusvalinnan kanssa.
+     * KOHDERENKAAT (targetLayer) JÄÄVÄT NÄKYVIIN TÄSSÄ. Ne ovat pelin
+     * ainoa kartalta tehtävä valinta: jos ne katoaisivat kokonaan,
+     * fokusmoodissa ei pääsisi ensimmäisestä maasta koskaan pois.
+     * Lehden PÄÄLTÄ ne piilotetaan erikseen ja vain valinnan
+     * ulkopuolella (paivitaFokusPallot, v1097).
      */
     const piilota = Boolean(this.fokusmoodi && maat && !this.katselu
       && this.game.phase !== 'pickstart');
@@ -4939,6 +4946,133 @@ export class UI {
     // Maakohtainen topografiapohja ämpäristä (paketti 2). Puuttuva kuva
     // ei muuta mitään: kerros jää tyhjäksi.
     paivitaFokuskartta(this);
+    // Lehden päällä olevat pelimerkit (v1097: "Ota pallot pois").
+    this.paivitaFokusPallot();
+  }
+
+  /* --- PALLOT POIS LEHDEN PÄÄLTÄ (omistaja 24.8.2026, v1097) -------- */
+
+  /**
+   * Osuuko laudan piste fokuslehden alueelle?
+   *
+   * Sama laatikkotesti kuin maastonimillä (himmennaMaastonimet), yksi
+   * lisä: kiertävällä laudalla napautettavat osat piirretään myös
+   * laudan leveyden verran oikealle (kiertoKohdat), ja kopion on
+   * kadottava lehden alta samalla tavalla kuin alkuperäisen.
+   */
+  fokusPohjanAlla(x, y) {
+    const pohja = this.fokusPohjaBbox ?? null;
+    if (!pohja || !Number.isFinite(x) || !Number.isFinite(y)) return false;
+    if (!(y >= pohja.y && y <= pohja.y + pohja.h)) return false;
+    const kierto = this.kartta?.kiertava?.() ? (this.game.pack.map?.width ?? 0) : 0;
+    const osuu = (px) => px >= pohja.x && px <= pohja.x + pohja.w;
+    return osuu(x) || (kierto > 0 && osuu(x - kierto));
+  }
+
+  /**
+   * Onko matkustusvalinta auki juuri nyt?
+   *
+   * Kaksi hetkeä, joissa pelaaja valitsee kartalta minne mennään:
+   * Liiku-napin avaama lentolista (`travelExpanded`) ja nopanheiton
+   * jälkeinen siirtovaihe. Kummassakin kohderenkaat ja kohteiden
+   * kaupunkipisteet palaavat lehden päälle valinnan ajaksi, ja
+   * katoavat heti kun valinta sulkeutuu tai matka alkaa — vaihe
+   * vaihtuu tai `suljeMatkavalikko` nollaa lipun, ja seuraava render
+   * piilottaa ne uudelleen.
+   */
+  fokusMatkavalintaAuki() {
+    if (this.game.player?.isBot) return false;
+    return Boolean(this.travelExpanded) || this.game.phase === 'move';
+  }
+
+  /**
+   * PALLOT POIS LEHDEN PÄÄLTÄ.
+   *
+   * Omistajan pelitestipalaute v1097 (iPad, fokusnäkymä): *"Ota pallot
+   * pois"* — laudan pyöreät pelimerkit (Ateenan laatta ja pelaajan
+   * nappula päällekkäin, Kreetan valkoinen rengas) rikkovat 1873-
+   * atlaksen lehden tunnelman. Lehti on kokonainen kartta, ja sen
+   * päällä pelilaudan grafiikka näyttää vieraalta.
+   *
+   * KOLME SÄÄNTÖÄ:
+   *
+   *   1. OLETUS ON PIILOSSA. Lehden alueella laattojen, nappuloiden ja
+   *      kohderenkaiden osat saavat luokan .fokus-lehden-alla.
+   *      KAUPUNKIEN NIMET JÄÄVÄT (ATEENA, Kreeta) — ne kuuluvat
+   *      lehteen, samoin kuin lehden omat painetut nimet.
+   *
+   *   2. MATKUSTUSVALINTA TUO KOHTEET TAKAISIN. Kun Liiku-nappi tai
+   *      nopanheitto avaa valinnan, kohderenkaat ja valittavien
+   *      kaupunkien pisteet syttyvät valinnan ajaksi
+   *      (fokusMatkavalintaAuki + drawTargetsin kokoama joukko).
+   *
+   *   3. AARREVAIHE TUO LAATAN. Kun fokusvirta on edennyt kohtaamiseen,
+   *      nykyisen kaupungin laatta ilmestyy pienellä huomioeleellä ja
+   *      jää näkyviin kunnes se on käännetty. Käännetyn laatan jälkeen
+   *      peli jatkuu täsmälleen ennallaan (fokusvirtaLaattaNakyy).
+   *
+   * KEHITTÄJÄTILAN NAPAUTUS EI SAA LAKATA TOIMIMASTA. Piilotus koskee
+   * vain näkyviä koristeita (.target-ring, .target-halo, kohdemerkki);
+   * näkymätön osuma-alue (.target-hit) ja sen ryhmä jäävät koskematta,
+   * joten doKehittajaSiirto toimii piilossa olevalla laatalla.
+   *
+   * PIILOTUS ON LUOKKA, EI SUODATIN. Sama iOS-sääntö kuin muillakin
+   * kartan kerroksilla (tests/rules.test.mjs).
+   */
+  paivitaFokusPallot() {
+    if (!this.svg) return;
+    const pohja = this.fokusPohjaBbox ?? null;
+    const nykyinen = pohja ? this.game.cityOf?.() : null;
+    const valinta = pohja ? this.fokusMatkavalintaAuki() : false;
+    const kohteet = valinta ? (this.fokusKohdeKaupungit ?? new Set()) : null;
+    // Aarrevaihe (tai käännetty laatta) päästää nykyisen kaupungin
+    // pisteen takaisin lehden päälle.
+    const omaNakyy = Boolean(nykyinen) && fokusvirtaLaattaNakyy(this, nykyinen);
+    /** Saako tämän kaupungin piste näkyä lehden päällä? */
+    const kaupunkiNakyy = (id) => (id === nykyinen?.id && omaNakyy)
+      || Boolean(kohteet?.has(id));
+
+    for (const osa of this.svg.querySelectorAll('.cities [data-kaupunki]')) {
+      // Nimi jää aina: se on lehden tekstiä, ei pelimerkki.
+      const nimi = osa.classList.contains('city-label');
+      const x = Number(osa.getAttribute('cx') ?? osa.getAttribute('x'));
+      const y = Number(osa.getAttribute('cy') ?? osa.getAttribute('y'));
+      const piiloon = !nimi && this.fokusPohjanAlla(x, y)
+        && !kaupunkiNakyy(osa.dataset.kaupunki);
+      osa.classList.toggle('fokus-lehden-alla', piiloon);
+      /*
+       * PÖLLÖ OSOITTAA LAATTAA: kun laatta ilmestyy aarrevaiheessa, se
+       * saa kevyen huomioeleen. Luokka asetetaan togglella, joten se ei
+       * käynnisty uudelleen joka piirrossa — ele nähdään kerran.
+       */
+      if (osa.classList.contains('city') || osa.classList.contains('city-start')) {
+        osa.classList.toggle('fokus-laatta-esiin',
+          !piiloon && omaNakyy && osa.dataset.kaupunki === nykyinen?.id
+          && this.fokusPohjanAlla(x, y));
+      }
+    }
+
+    for (const kiekko of this.tokenLayer?.querySelectorAll('.token-found') ?? []) {
+      const piiloon = this.fokusPohjanAlla(Number(kiekko.dataset.x), Number(kiekko.dataset.y))
+        && kiekko.dataset.kaupunki !== nykyinen?.id;
+      kiekko.classList.toggle('fokus-lehden-alla', piiloon);
+    }
+
+    for (const nappula of this.pawnLayer?.querySelectorAll('.pawn') ?? []) {
+      const lehdella = this.fokusPohjanAlla(Number(nappula.dataset.x), Number(nappula.dataset.y));
+      nappula.classList.toggle('fokus-lehden-alla', lehdella && !omaNakyy && !valinta);
+    }
+
+    for (const kohde of this.targetLayer?.querySelectorAll('.target') ?? []) {
+      const osuma = kohde.querySelector('.target-hit');
+      const piiloon = !valinta
+        && this.fokusPohjanAlla(Number(osuma?.getAttribute('cx')),
+          Number(osuma?.getAttribute('cy')));
+      // Vain koristeet piiloon — osuma-alue jää aktiiviseksi.
+      for (const koriste of kohde.querySelectorAll('.target-ring, .target-halo, .lento-kohde-merkki')) {
+        koriste.classList.toggle('fokus-lehden-alla', piiloon);
+      }
+    }
   }
 
   /**
@@ -4972,6 +5106,12 @@ export class UI {
    *      kellumaan. Lehden alueelle osuvat piilotetaan
    *      (himmennaMaastonimet).
    *
+   *   4. PELIMERKIT (laatat, käännetyt aarrekiekot, pelinappula,
+   *      kohderenkaat) asuvat omissa kerroksissaan kuvan päällä.
+   *      Omistajan pelitestipalaute v1097: *"Ota pallot pois"* — ne
+   *      piilotetaan lehden alueelta ja tuodaan takaisin vain kun
+   *      peli niitä oikeasti tarvitsee (paivitaFokusPallot).
+   *
    * Reitit hoituvat ilman koodia: ne ovat laudan bittikartassa ja
    * jäävät opaakin kuvan alle itsestään.
    */
@@ -4988,6 +5128,9 @@ export class UI {
     this.fokusAvain = null;
     this.paivitaFokusSumu(this.fokusMaat());
     this.himmennaMaastonimet();
+    // Neljäs kerros: pelimerkit (ks. doc yllä ja paivitaFokusPallot).
+    // Kutsu on tässä, koska pohja saapuu verkosta vasta piirron jälkeen.
+    this.paivitaFokusPallot();
   }
 
   /**
@@ -5260,6 +5403,12 @@ export class UI {
       const g = el('g', {
         class: 'token-found',
         transform: `translate(${city.x + 22},${city.y + 18}) rotate(${vary(`token:${cityId}`, 8).toFixed(1)})`,
+        // Fokuslehden pallonpiilotus lukee paikan ja kaupungin täältä
+        // (paivitaFokusPallot); muuten kiekko on laudan yksiköissä
+        // vain muunnoksen sisällä.
+        'data-kaupunki': cityId,
+        'data-x': city.x + 22,
+        'data-y': city.y + 18,
       }, this.tokenLayer);
       el('circle', {
         r: 16.4 + hash01(`token:r:${cityId}`) * 1.4,
@@ -5290,6 +5439,23 @@ export class UI {
   drawTargets() {
     const { game } = this;
     this.targetLayer.textContent = '';
+    /*
+     * MITKÄ KAUPUNGIT OVAT JUURI NYT VALITTAVIA KOHTEITA?
+     *
+     * Fokuslehden päällä kaupunkien pisteet ovat piilossa (v1097,
+     * *"Ota pallot pois"*), mutta matkustusvalinnan ajaksi valittavien
+     * kohteiden pisteet on tuotava takaisin — muuten pelaaja valitsisi
+     * paljaalta paperilta. Lista kerätään tässä, koska kohteiden
+     * säännöt (kehittäjätila, lähtöpiste, lennot, nopanheitto) asuvat
+     * tässä metodissa eikä niitä saa kirjoittaa toiseen paikkaan
+     * uudelleen.
+     *
+     * KEHITTÄJÄTILAN NÄKYMÄTTÖMÄT HYPPYALUEET EIVÄT OLE KOHTEITA: ne
+     * ovat oikotie, ei valinta, eikä niiden takia saa syttyä yhtään
+     * pistettä lehden päälle.
+     */
+    const kohdeKaupungit = new Set();
+    this.fokusKohdeKaupungit = kohdeKaupungit;
 
     /*
      * Maailmanradio: kaupungit ovat itse play-nappeja eikä kartalla
@@ -5358,6 +5524,7 @@ export class UI {
       // riittää olla valitsematta kaupunkia.
       const zoomaa = this.kartta.zoomTarpeen() && !this.aloitusZoom;
       for (const c of game.board.cities) {
+        kohdeKaupungit.add(c.id);
         for (const x of this.kiertoKohdat(c.x)) {
           const g = el('g', { class: 'target' }, this.targetLayer);
           el('circle', { cx: x, cy: c.y, r: 34, class: 'target-hit' }, g);
@@ -5384,6 +5551,7 @@ export class UI {
       for (const dest of game.airportDestinations()) {
         const city = game.board.cityById.get(dest);
         if (!city) continue;
+        kohdeKaupungit.add(city.id);
         for (const x of this.kiertoKohdat(city.x)) {
           const g = el('g', { class: 'target' }, this.targetLayer);
           el('circle', { cx: x, cy: city.y, r: 34, class: 'target-hit' }, g);
@@ -5401,6 +5569,7 @@ export class UI {
     if (game.phase !== 'move' || game.player.isBot) return;
     for (const opt of game.moveOptions()) {
       const { x, y } = pixelOf(game.board, opt.pos);
+      if (opt.city?.id) kohdeKaupungit.add(opt.city.id);
       for (const kx of this.kiertoKohdat(x)) {
         const g = el('g', { class: 'target' }, this.targetLayer);
         el('circle', { cx: kx, cy: y, r: 30, class: 'target-hit' }, g);
@@ -5481,6 +5650,11 @@ export class UI {
         const y = base.y + Math.sin(angle) * spread;
         const g = this.pawnShape(this.pawnLayer, p, p.id === game.current && !this.busy);
         g.setAttribute('transform', `translate(${x},${y})`);
+        // Paikka talteen fokuslehden pallonpiilotusta varten: nappula
+        // asuu muunnoksessa, eikä sen koordinaatteja saa muuten selville
+        // ilman geometrian mittaamista (paivitaFokusPallot).
+        g.dataset.x = x;
+        g.dataset.y = y;
       });
     }
   }

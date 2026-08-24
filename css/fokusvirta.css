@@ -26,11 +26,33 @@
  * ylariville ja otsikkoon.
  *
  * KORTTIA KASVATETTIIN, EI FONTTIA PIENENNETTY. Suurempi kirjasin
- * tarvitsee enemmän tilaa, ja se otettiin kahdesta paikasta: kuva ei
- * ole enää kortilla isona (se on kartalla, ks. alin osio) vaan pienenä
- * viitteenä, ja leveällä ruudulla kortti on entistä leveämpi.
+ * tarvitsee enemmän tilaa, ja se otettiin leveydestä: leveällä ruudulla
+ * kortti on entistä leveämpi.
+ *
+ * ── KUVA ON TAAS KORTILLA ISONA (omistajan pelitestipalaute
+ * 24.8.2026, iPad) ─────────────────────────────────────────────────
+ *
+ * Välivaiheessa kortin kuva kutistettiin pikkuviitteeksi, koska
+ * kartalle tulivat omat vinjetit. Pelitestissä kortti oli silloin
+ * pelkkää tekstiä tumman massan päällä: *"Liian raskaan oloinen
+ * visuaalisesti. Kuva saisi tässä näkyä heti isolla."* Nyt kuva on
+ * kortin ensimmäinen asia ja koko kortin levyinen, kortin pinta on
+ * vaaleaa paperia, ja kortti saa kasvaa korkeussuunnassa kuvan takia.
+ * Kartan vinjetit jäävät ennalleen — ne ovat matkamuistoja kartalla,
+ * kortin kuva on se, mistä juuri nyt puhutaan.
  */
 
+/*
+ * KORTTI ON PAPERIA, EI TUMMAA MASSAA (omistajan pelitestipalaute
+ * 24.8.2026, iPad: *"Liian raskaan oloinen visuaalisesti"* — kortti oli
+ * tumma ruskea laatikko, joka peitti puoli ruutua).
+ *
+ * Sama pergamentti kuin pöllön kuplalla (.fokusvirta-kupla) ja sama
+ * muste: kartta on paperia, annos on paperia, eikä niiden väliin
+ * tarvita kolmatta materiaalia. Reunukset ovat ohuita, varjo kevyt ja
+ * tummia pintoja ei ole lainkaan — minivisan laatikko erottuu
+ * kehysviivalla eikä tummuudella.
+ */
 .fokusvirta-kortti {
   position: absolute;
   left: 0.6rem;
@@ -38,20 +60,26 @@
   bottom: 0.6rem;
   z-index: 6;
   /*
-   * Kortti ei yllä ylävasempaan matkakirjakorttiin (omistajan tarkennus
-   * 24.8.2026: syvennyskortit *"eivät peitä ylävasenta
-   * matkakirjakorttia"*). Ruudun ylin kolmannes jää siis aina vapaaksi,
-   * ja sitä pidempi teksti vieritetään kortin sisällä.
+   * KORTTI SAA KASVAA KUVAN TAKIA (omistajan tarkennus 24.8.2026:
+   * *"Kortin korkeus saa kasvaa kuvan takia … matkakirjakortti
+   * ylävasemmalla saa jäädä kortin alle tässä vaiheessa jos tila ei
+   * muuten riitä (kuva on nyt pääasia)"*). Aiempi katto oli 58 %, joka
+   * jätti ylävasemman matkakirjakortin aina vapaaksi; ison kuvan
+   * kanssa se olisi vieritysputki. Ruudun ylälaita jää yhä näkyviin,
+   * jottei kortti muutu koko ruudun modaaliksi — se on fokusmoodin
+   * perussääntö.
    */
-  max-height: 58%;
+  max-height: 82%;
   display: flex;
   flex-direction: column;
-  padding: 0.7rem 0.8rem 0.75rem;
-  border-radius: 14px;
-  border: 1px solid var(--overlay-line);
-  background: linear-gradient(180deg, rgba(46, 33, 20, 0.96), rgba(30, 21, 12, 0.97));
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
-  color: var(--ink-light);
+  padding: 0.6rem 0.7rem 0.65rem;
+  border-radius: 12px;
+  border: 1px solid rgba(122, 85, 20, 0.32);
+  background: #f5f0e2;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.3);
+  color: #211d18;
+  /* Pergamentin oma pinta; kartan vaalea hehkuvarjo ei periydy tänne. */
+  text-shadow: none;
   font-family: var(--font-luku);
   /* Kartta ottaa eleet itselleen (.map-pane touch-action: none); kortin
      sisällä pystyvieritys on saatava takaisin, tai pitkä syvennysteksti
@@ -84,20 +112,31 @@
   padding-right: 0.2rem;
 }
 
+/*
+ * Sulkuruksi kelluu kuvan päällä, joten sillä on oma pieni paperinsa:
+ * ilman sitä ruksi katoaisi tumman valokuvan sekaan.
+ */
 .fokusvirta-sulje {
   position: absolute;
   top: 0.35rem;
   right: 0.4rem;
+  z-index: 2;
   min-height: 30px;
   padding: 0.1rem 0.45rem;
-  border: 0;
-  background: transparent;
-  color: var(--muted);
+  border: 1px solid rgba(122, 85, 20, 0.3);
+  border-radius: 6px;
+  background: rgba(245, 240, 226, 0.86);
+  box-shadow: none;
+  color: rgba(33, 29, 24, 0.7);
   font-size: 1rem;
   line-height: 1;
 }
 
-.fokusvirta-sulje:hover { background: transparent; color: var(--ink-light); }
+.fokusvirta-sulje:hover,
+.fokusvirta-sulje:focus-visible {
+  background: rgba(245, 240, 226, 0.96);
+  color: #16130f;
+}
 
 /* --- otsikot: tähän ja vain tähän jää kirjoituskone --- */
 
@@ -107,7 +146,7 @@
   font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: #7a5514;
 }
 
 .fokusvirta-otsikko {
@@ -116,47 +155,58 @@
   font-size: 1.05rem;
   font-weight: 700;
   line-height: 1.3;
+  color: #211d18;
 }
 
-/* --- kuvaviite: pikkukuva ja selite yhdellä rivillä --- */
+/* ---------------------------------------------------------------------------
+   KORTIN KUVA HETI ISONA (omistaja 24.8.2026: *"Kuva saisi tässä näkyä
+   heti isolla"* — js/fokusvirta.js piirraKuva)
+   ---------------------------------------------------------------------------
+   Kuva on kortin ensimmäinen asia ja koko kortin levyinen. Korkeus on
+   kiinteä ikkuna kuten postikortilla (css/styles.css .postikortti img):
+   vaaka- ja pystykuva näkyvät suunnilleen samankokoisina, eikä korkea
+   kuva venytä korttia ruudun mittaiseksi. Selite ja lähde ovat ohuena
+   rivinä kuvan alla.
+   ------------------------------------------------------------------------- */
 
 .fokusvirta-viite {
-  display: flex;
-  gap: 0.6rem;
-  align-items: flex-start;
+  display: block;
   margin: 0 0 0.6rem;
 }
 
 .fokusvirta-viite[hidden] { display: none; }
 
 .fokusvirta-kuva {
-  flex: 0 0 auto;
-  width: 5.6rem;
-  padding: 0.2rem;
-  border: 1px solid rgba(217, 161, 59, 0.35);
-  border-radius: 7px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid rgba(58, 38, 16, 0.22);
+  border-radius: 8px;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.25);
+  background: #ded5c2;
+  box-shadow: none;
   min-height: 0;
 }
 
 .fokusvirta-kuva img {
   display: block;
   width: 100%;
-  height: 4.1rem;
+  height: min(34vh, 15rem);
   object-fit: cover;
-  border-radius: 4px;
 }
 
 .fokusvirta-kuvateksti {
-  flex: 1 1 auto;
-  margin: 0;
-  font-size: 0.83rem;
-  line-height: 1.45;
-  color: var(--muted);
+  margin: 0.3rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: rgba(33, 29, 24, 0.78);
 }
 
-.fokusvirta-kuvalahde { display: block; font-size: 0.75rem; opacity: 0.85; }
+.fokusvirta-kuvalahde {
+  display: block;
+  font-size: 0.72rem;
+  color: rgba(33, 29, 24, 0.6);
+}
 
 /* --- teksti --- */
 
@@ -170,12 +220,25 @@
 
 /* --- minivisa --- */
 
+/* Kevyt kehysviiva erottaa visan leivästä — ei tummaa pintaa, vain
+   hitusen vaaleampi paperi ja katkoviiva (omistaja 24.8.2026). */
 .fokusvirta-visa {
-  margin-top: 0.75rem;
-  padding: 0.6rem 0.65rem;
-  border: 1px dashed rgba(217, 161, 59, 0.45);
+  margin-top: 0.7rem;
+  padding: 0.55rem 0.6rem;
+  border: 1px dashed rgba(122, 85, 20, 0.45);
   border-radius: 10px;
-  background: rgba(0, 0, 0, 0.18);
+  background: rgba(255, 255, 255, 0.42);
+}
+
+/* Palkintonappi ("Lunasta juliste") syntyy visalaatikon sisään eikä
+   nappiriville — sekin on paperia, ei tummaa laatikkoa. */
+.fokusvirta-visa > button {
+  margin-top: 0.5rem;
+  border: 1px solid rgba(122, 85, 20, 0.4);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: none;
+  color: #211d18;
 }
 
 .fokusvirta-visa-kysymys {
@@ -196,6 +259,21 @@
   font-size: 0.98rem;
   line-height: 1.45;
   min-height: 42px;
+  /* Vastausrivit ovat papereita paperilla: musteviiva ja hitusen
+     vaaleampi pinta, ei tummaa laatikkoa (vrt. kuplan painikkeet). */
+  padding: 0.45rem 0.6rem;
+  border: 1px solid rgba(122, 85, 20, 0.35);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: none;
+  color: #211d18;
+  font-weight: 400;
+}
+
+.fokusvirta-vaihtoehdot button:hover:not(:disabled),
+.fokusvirta-vaihtoehdot button:focus-visible {
+  background: rgba(122, 85, 20, 0.12);
+  color: #16130f;
 }
 
 .fokusvirta-visa-tulos {
@@ -205,8 +283,10 @@
 }
 
 .fokusvirta-visa-tulos:empty { display: none; }
-.fokusvirta-visa-tulos.oikein-tulos { color: #9fd6a0; }
-.fokusvirta-visa-tulos.vaarin-tulos { color: var(--danger); }
+/* Vaalealla paperilla tarvitaan tummat merkkivärit: entiset (vaalean
+   vihreä ja kartan punainen) katosivat pergamenttiin. */
+.fokusvirta-visa-tulos.oikein-tulos { color: #2f6b3a; }
+.fokusvirta-visa-tulos.vaarin-tulos { color: #9a2b21; }
 
 /* --- napit --- */
 
@@ -225,6 +305,38 @@
 }
 
 .fokusvirta-napit button.primary { text-align: center; }
+
+/*
+ * KORTIN PAINIKKEET SAMAA PERGAMENTTIKIELTÄ KUIN KUPLAN (omistaja
+ * 24.8.2026: kortti kevyemmäksi). Litteitä musteviivalla erotettuja
+ * rivejä — tumma nappi vaalealla paperilla näyttäisi ruudulta, joka on
+ * eksynyt kortille.
+ */
+.fokusvirta-kortti .fokusvirta-napit { gap: 0; margin-top: 0.6rem; }
+
+.fokusvirta-kortti .fokusvirta-napit button {
+  min-height: 44px;
+  margin: 0;
+  padding: 0.5rem 0.15rem;
+  border: 0;
+  border-top: 1px solid rgba(60, 44, 26, 0.28);
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: #211d18;
+  font-weight: 400;
+}
+
+.fokusvirta-kortti .fokusvirta-napit button.primary {
+  font-weight: 700;
+  text-align: left;
+}
+
+.fokusvirta-kortti .fokusvirta-napit button:hover:not(:disabled),
+.fokusvirta-kortti .fokusvirta-napit button:focus-visible {
+  background: rgba(122, 85, 20, 0.1);
+  color: #16130f;
+}
 
 /* ===================================================================
    PÖLLÖN PUHEKUPLA (js/fokusvirta.js piirraKupla)
@@ -430,7 +542,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  /* Kapea marginaali: kuva täyttää ruudun selvästi (omistaja
+     24.8.2026), ja kehyksen oma tila on jo vähennetty JS:ssä. */
+  padding: 0.5rem;
   background: rgba(18, 12, 4, 0);
   transition: background-color 320ms ease-out;
   cursor: zoom-out;
@@ -440,14 +554,32 @@
 /* Kevyt himmennys: kartta erottuu yhä kuvan takaa. */
 .fokuszoom-auki { background: rgba(18, 12, 4, 0.32); }
 
+/*
+ * PAPERIKEHYS PELIN OMAA KIELTÄ (omistajan pelitestipalaute 24.8.2026:
+ * *"anna suurennokselle siisti atlas-/postikorttimainen kehys pelin
+ * tyyliin"*). Samat arvot kuin postikortilla (css/styles.css
+ * .postikortti-kortti): pergamentinvaalea paperi, kapea reunus, pehmeä
+ * varjo — ja kuvan ympärille ohut mustereunus. Ei suodattimia.
+ *
+ * KEHYS ON YKSI KAPPALE. Kuvateksti asuu paperilla kuvan alla, joten
+ * kortti on aina täsmälleen kuvan levyinen (leveyden asettaa JS
+ * mitoita) eikä teksti voi valua kartan tai pöllön kuplan päälle.
+ */
 .fokuszoom-kehys {
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  max-width: min(92vw, 82vmin);
+  align-items: stretch;
+  gap: 0.45rem;
+  max-width: min(94vw, 94vmin);
+  padding: 0.55rem 0.55rem 0.45rem;
+  background: #f8f3e6;
+  border: 1px solid rgba(58, 38, 16, 0.35);
+  border-radius: 2px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.5);
   pointer-events: none;
+  /* FLIP: muunnos lasketaan kehyksen vasemmasta yläkulmasta (js). */
+  transform-origin: top left;
 }
 
 /*
@@ -461,15 +593,12 @@
  */
 .fokuszoom-kuva {
   display: block;
-  max-width: min(92vw, 82vmin);
-  max-height: min(78vh, 82vmin);
+  max-width: 100%;
+  max-height: min(88vh, 94vmin);
   object-fit: contain;
-  border: 2px solid rgba(214, 188, 140, 0.55);
-  border-radius: 6px;
-  background: rgba(20, 14, 6, 0.5);
-  box-shadow: 0 12px 44px rgba(0, 0, 0, 0.5);
-  /* FLIP: muunnos lasketaan kuvan vasemmasta yläkulmasta (js). */
-  transform-origin: top left;
+  /* Ohut mustereunus kuvan ympäri — sama kuin postikortin kuvalla. */
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  background: #ded5c2;
 }
 
 /* Viuhkassa selattaessa kuva vaihtuu paikallaan pienellä häivähdyksellä
@@ -481,14 +610,26 @@
 
 .fokuszoom-vaihtuu { animation: fokuszoom-vaihtuu 180ms ease-out; }
 
+/*
+ * KUVATEKSTIPALKKI KEHYKSEN SISÄLLÄ (omistajan pelitestipalaute
+ * 24.8.2026: *"selite + lähderivi valuvat irtotekstinä kartan ja pöllön
+ * kuplan päälle (lukukelvoton)"*).
+ *
+ * Ennen teksti kellui kuvan alla vaaleana kartan päällä pelkän
+ * tekstivarjon varassa — kartta on itsekin vaaleaa pergamenttia, joten
+ * kontrasti katosi. Nyt teksti on mustetta paperilla: sama pinta kuin
+ * kehyksellä, kiinteä leveys (JS asettaa kehyksen kuvan levyiseksi) ja
+ * oma kapea yläviiva erottamassa se kuvasta.
+ */
 .fokuszoom-teksti {
-  max-width: min(92vw, 82vmin);
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.15rem 0.1rem 0;
   text-align: center;
   font-family: var(--font-luku);
   font-size: 0.9rem;
-  line-height: 1.5;
-  color: #f1e6d0;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+  line-height: 1.45;
+  color: #3a2610;
   transition: opacity 320ms ease-out;
 }
 
@@ -497,8 +638,8 @@
 .fokuszoom-lahde,
 .fokuszoom-laskuri {
   display: block;
-  font-size: 0.78rem;
-  opacity: 0.82;
+  font-size: 0.74rem;
+  color: rgba(58, 38, 16, 0.72);
 }
 
 .fokuszoom-laskuri:empty { display: none; }
@@ -523,6 +664,23 @@
 
 .fokuszoom-nuoli:hover,
 .fokuszoom-nuoli:focus-visible { background: rgba(40, 28, 12, 0.7); }
+
+/*
+ * VIRRAN PINNAT POIS SUURENNOKSEN AJAKSI (omistajan pelitestipalaute
+ * 24.8.2026: kupla jäi suurennoksen viereen ja kuvateksti valui sen
+ * päälle). Luokan asettaa js/fokusvirta.js avaaSuurennos ja poistaa
+ * poista(), joten pinnat palaavat ennalleen myös silloin, kun
+ * suurennos suljetaan ilman animaatiota.
+ *
+ * HÄIVYTYS EIKÄ `display: none`: kortin kuvaviite on suurennoksen
+ * ankkuri, ja piilotettuna sillä ei olisi ruutupaikkaa, johon kutistua.
+ */
+body.fokuszoom-paalla .fokusvirta-kupla,
+body.fokuszoom-paalla .fokusvirta-kortti {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease-out;
+}
 
 /*
  * LIIKEHERKKYYS. JS jättää kasvumuunnoksen tekemättä kokonaan
