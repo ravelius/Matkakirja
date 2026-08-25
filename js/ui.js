@@ -114,6 +114,12 @@ import {
   polloVihjePois,
 } from './pollo.js';
 import { ajastaEhdotusKupla, ehdotusOsio, proHakuRasti, proOsio } from './ehdotukset.js';
+/*
+ * SÄHKEPINTA (Raamattu, osio SÄHKEJÄRJESTELMÄ): retkikunta, sähkeet ja
+ * kaveriapu asuvat omassa moduulissaan (js/sahke.js). ui.js kutsuu
+ * siitä kahta asiaa: valikon retkikuntaosio ja piirtokutsu.
+ */
+import { paivitaSahke, retkikuntaOsio } from './sahke.js';
 import { taytaLahderivi } from './tekijakortti.js';
 // Tietäjätasot: matkalaukun nimikerivi ja pöllön onnittelukuplat.
 import {
@@ -8405,6 +8411,13 @@ export class UI {
     this.renderActions();
     this.renderFact();
     renderQuiz(this);
+    /*
+     * Sähkepinta heti visan jälkeen: kaveriavun nappi asuu visan
+     * apurivillä ja odotuskortti sen vaihtoehtojen yllä, joten kortti
+     * pitää päivittää vasta kun visa on piirretty (js/sahke.js).
+     * Ilman sähkelinjaa tai retkikuntaa kutsu palaa saman tien.
+     */
+    paivitaSahke(this);
     // Linssit tahdistetaan joka piirrossa, mutta työ tehdään vasta kun
     // jokin oikeasti muuttui: uusi löytö, uusi lauta tai uusi kerros.
     void this.paivitaLinssit();
@@ -10982,6 +10995,14 @@ export class UI {
    * tarvitse osata nimetä lehteä itse.
    */
   lisaaEhdotusOsio(lohko, tilanne = '') {
+    /*
+     * RETKIKUNTA ensin (Raamattu, osio SÄHKEJÄRJESTELMÄ): sähkeosio
+     * asuu samassa valikon lomakkeessa kuin ehdotuskanava, koska
+     * molemmat ovat pelin ympäryksiä eivätkä pelisisältöä
+     * (hampurilaisen linjaus 18.8.2026). Ilman sähkelinjaa osio on yksi
+     * rivi tekstiä ja ilman yhtään nappia (js/sahke.js).
+     */
+    lohko.appendChild(retkikuntaOsio(this));
     const osio = ehdotusOsio(this.ehdotusSivu(tilanne));
     if (osio) lohko.appendChild(osio);
     // PRO-SISÄLLÖNTUOTTAJAT kahdessa osassa (omistajan tarkennukset

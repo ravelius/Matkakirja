@@ -11,6 +11,14 @@ export const START_MONEY = 300;
 export const SEA_FARE = 100; // laivamatkan hinta vuorolta
 export const FIFTY_FIFTY_PRICE = 80; // kahden väärän vaihtoehdon piilotus
 export const HINT_PRICE = 40; // sanallinen vihje kysymykseen
+/*
+ * KYSY KAVERILTA (Raamattu, osio SÄHKEJÄRJESTELMÄ: *"yksi apuvaihtoehto
+ * on KYSY KAVERILTA — hinta 25 puntaa, aika pysähtyy"*). Hinta on
+ * omistajan asettama eikä tasapainotettu muiden apukeinojen kanssa:
+ * kaveri ei anna oikeaa vastausta vaan veikkauksen, joten se on
+ * halvempi kuin vihje.
+ */
+export const KAVERIAPU_HINTA = 25;
 export const QUIZ_SECONDS = 45; // vastausaika tiimalasin verran
 export const STRANDED_AID = 100; // kotisääntö: jumiin jäänyt saa pankilta 100
 export const HARD_BONUS = 100; // palkkio vaikeasta kysymyksestä oikein vastattaessa
@@ -2016,6 +2024,39 @@ export class Game {
     quiz.hintShown = true;
     this.say(p.id, `${p.name} osti vihjeen ${HINT_PRICE} punnalla.`);
     return { ok: true, hint: quiz.hint };
+  }
+
+  /**
+   * KYSY KAVERILTA: veloittaa 25 puntaa ja merkitsee avun ostetuksi.
+   *
+   * Raamattu (SÄHKEJÄRJESTELMÄ, omistaja 25.8.2026): *"yksi
+   * apuvaihtoehto on KYSY KAVERILTA — hinta 25 puntaa, aika pysähtyy,
+   * retkikunnan jäsen saa kysymyksen ja antaa oman veikkauksensa
+   * vaihtoehdoista"*.
+   *
+   * TÄMÄ METODI HOITAA VAIN RAHAN JA LIPUN. Sähke, odotus ja veikkauksen
+   * näyttäminen ovat käyttöliittymän puolella (js/sahke.js) — moottori
+   * ei tunne verkkoa. Kirjanpito kulkee täsmälleen samaa reittiä kuin
+   * vihjeellä ja 50:50:llä, joten pelaajan kukkaro pysyy yhdessä
+   * totuudessa.
+   */
+  actionKaveriapu() {
+    if (this.phase !== 'quiz' || !this.quiz) return { ok: false, error: 'Ei avointa kysymystä' };
+    const quiz = this.quiz;
+    if (quiz.chosen !== null) return { ok: false, error: 'Kysymykseen on jo vastattu' };
+    if (quiz.kaveriapu) return { ok: false, error: 'Kaverilta on jo kysytty' };
+    // Veikkaus annetaan vaihtoehdon indeksinä, joten vaihtoehtoja pitää
+    // olla. Karttakysymykseen vastataan kartalta — sinne apu ei sovi.
+    if (!Array.isArray(quiz.options) || quiz.options.length < 2) {
+      return { ok: false, error: 'Tähän ei voi kysyä kaverilta' };
+    }
+
+    const p = this.player;
+    if (p.money < KAVERIAPU_HINTA) return { ok: false, error: 'Rahat eivät riitä' };
+    p.money -= KAVERIAPU_HINTA;
+    quiz.kaveriapu = true;
+    this.say(p.id, `${p.name} sähkötti retkikunnalle ja maksoi ${KAVERIAPU_HINTA} puntaa.`);
+    return { ok: true };
   }
 
   /** Aika loppui: vastaus katsotaan vääräksi ja vuoro päättyy. */

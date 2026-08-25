@@ -9,6 +9,8 @@ const SHELL = [
   './css/fokusvirta.css',
   './css/fokuskohteet.css',
   './css/fokusnosto.css',
+  // Sähkepinta lataa oman tyylinsä itse (js/sahke.js).
+  './css/sahke.css',
   './js/muutokset.js',
   './js/main.js',
   './js/ui.js',
@@ -46,6 +48,8 @@ const SHELL = [
   './js/tietajagalleria.js',
   './js/minipopup.js',
   './js/ai.js',
+  // Retkikunta, sähkeet ja kaveriapu (Raamattu: SÄHKEJÄRJESTELMÄ).
+  './js/sahke.js',
   './js/rules.js',
   './js/pack.js',
   './js/passport.js',

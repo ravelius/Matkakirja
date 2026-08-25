@@ -13,6 +13,8 @@ import { startQuizMusic, stopPlaceStream, stopQuizMusic } from './ambience-strea
 import { kertojaTila, asetaKertojaTila } from './aani-ehdokkaat.js';
 import { stopDiaryVoice, stopIntroVoice } from './luenta.js';
 import { asennaPollo } from './pollo.js';
+// Sähkejärjestelmä: retkikunta, sähkeet ja kaveriapu (js/sahke.js).
+import { kytkeSahke, nollaaSahke } from './sahke.js';
 // Lukijaäänen säädin (kehittäjätila): asetukset ja näytekuuntelu.
 import {
   asetaPuheenNopeus, asetaPuheenVoima, luePuheAsetukset, puheenNopeus,
@@ -383,6 +385,14 @@ function newPlayer() {
 
 function attach(game) {
   if (ui) ui.destroy();
+  /*
+   * Sähkeliuskat ja virstanpylväät nollille uuden UI-olion mukana:
+   * vanhan pelin päälle jäänyt sähke olisi merkintä matkasta, jota ei
+   * enää ole, ja lähtötilanne pitää kirjata uudestaan ettei kesken
+   * jäänyt peli sähkötä kaikkia jo löydettyjä aarteita (js/sahke.js).
+   * Retkikuntaa tämä ei pura — se on laitteen eikä pelikerran asia.
+   */
+  nollaaSahke();
   ui = new UI(game, { onNewGame: startGame, onChange: saveGame });
   ui.mount();
   // Kehityksen apuri konsolia varten. Vanha nimi jää rinnalle, koska
@@ -1287,3 +1297,19 @@ if (puheDialog && puheSaadinNappi) {
  * itsestään, se vain ilmestyy näkyviin kun avausteksti on väistynyt.
  */
 asennaPollo(() => ui);
+
+/*
+ * SÄHKEJÄRJESTELMÄ (Raamattu, osio SÄHKEJÄRJESTELMÄ; js/sahke.js).
+ *
+ * Kytkentä tekee ensin terveystarkistuksen: jos worker ei vastaa, koko
+ * sähkepinta jää kiinni eikä yhtään ajastinta tai kuuntelijaa jää
+ * pyörimään. Peli toimii silloin täsmälleen kuten ennen — sähkeosio
+ * kertoo vain, että linja avataan pian.
+ *
+ * MIKSI ERILLINEN KUTSU EIKÄ SIVUVAIKUTUS MODUULIN LATAUKSESSA:
+ * niputuksen vartija (tools/tarkista-niputus.mjs) vaatii, että jokainen
+ * listattu moduuli on jonkin toisen listatun moduulin STAATTISESTI
+ * tuoma, ja nimetty kutsu on samalla luettava — käynnistystiedostosta
+ * näkee, että sähkeet ovat osa peliä.
+ */
+kytkeSahke();
