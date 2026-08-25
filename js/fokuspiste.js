@@ -197,11 +197,22 @@ export function paivitaFokuspiste(ui) {
       }
     }
   }
+  asetaPisteMittakaava(ui, 1);
+  // Nipistyksen ajaksi merkki vastaskaalataan eleen kertoimella
+  // (js/kartta.js vastaskaalaaMerkit) — kiinteä ruutukoko myös eleen
+  // aikana, ei vain sen jälkeen (omistajan iPad-havainto 25.8.2026).
+  (ui.nipistysVastaskaalaajat ??= new Set())
+    .add(ui.fokuspisteVastaskaala ??= (suhde) => asetaPisteMittakaava(ui, suhde));
+}
+
+/** Ankkuriryhmien käänteisskaala; `suhde` on käynnissä olevan
+ *  nipistyseleen kerroin (1 = ei elettä). */
+function asetaPisteMittakaava(ui, suhde) {
   const skaala = ui.nakyvaAlue?.()?.skaala;
   // Ilman mitattavaa näkymää muunnos jätetään entiselleen: väärä
   // mittakaava olisi pahempi kuin yhden kehyksen viive.
   if (!skaala || !Number.isFinite(skaala) || skaala <= 0) return;
-  const zoom = (1 / skaala).toFixed(4);
+  const zoom = (1 / (skaala * (suhde > 0 ? suhde : 1))).toFixed(4);
   for (const ryhma of ui.fokuspisteRyhmat ?? []) {
     ryhma.g.setAttribute('transform', `translate(${ryhma.x} ${ryhma.y}) scale(${zoom})`);
   }
