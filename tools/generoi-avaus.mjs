@@ -66,10 +66,15 @@ const LOPPUTAUKO = ' <break time="1.0s" />';
  * ohjettakaan. INTRO_RUUTU päättyy siis nyt täsmälleen siihen,
  * mihin nauhoitettu luentakin päättyy.
  */
+/*
+ * V5 25.8.2026 (omistajan uusi alkuteksti, sanasta sanaan): terminaali
+ * mukaan, yksi kappale. Klikattava lause on nyt "Mistä aloitan?" —
+ * sitä ei lueta, kuten ei paikkariviäkään.
+ */
 export const INTRO_RUUTU = 'Vintiltä löytyi isoisän matkalaukku ja '
-  + 'hänen kulunut matkakirjansa.\n\n'
-  + 'Viimeinen sivu on revitty irti kesken lauseen. Mitä hän löysi — '
-  + 'ja kuka sen sivun repi?';
+  + 'kulunut matkakirja. Juoksen sisälle terminaaliin ja olen varma, '
+  + 'että ukko oli löytänyt jotain. Mutta kuka on repinyt kirjasta '
+  + 'viimeisen sivun?';
 // HUOM (historia): ennen 25.8.2026 vakion viimeinen rivi oli pelaajan
 // OHJE, jota ei luettu ääneen (omistajan päätös 10.8.2026) — luenta
 // päättyi kysymykseen "...sen sivun repi?". Nykyinen mp3 leikattiin
@@ -89,10 +94,10 @@ export const LENTO_RUUTU = 'Kone nousee. Isoisän kirja aukeaa '
 const TYOT = [
   {
     tiedosto: 'assets/audio/intro-puhe.mp3',
-    luenta: '[curious] Vintiltä löytyi isoisän matkalaukku ja hänen '
-      + 'kulunut matkakirjansa. '
-      + '[whispers] Viimeinen sivu on revitty irti kesken lauseen. '
-      + '[curious] Mitä hän löysi — ja kuka sen sivun repi? '
+    luenta: '[curious] Vintiltä löytyi isoisän matkalaukku ja kulunut '
+      + 'matkakirja. Juoksen sisälle terminaaliin ja olen varma, että '
+      + 'ukko oli löytänyt jotain. '
+      + '[whispers] Mutta kuka on repinyt kirjasta viimeisen sivun? '
       + '[long pause]',
   },
   {
