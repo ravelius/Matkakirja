@@ -7403,6 +7403,82 @@ body.katselu #newgame-btn { display: none; }
   color: #9c6f1e;
 }
 
+/*
+ * LUENNAN KYTKIN PUHEKUPLAN ALLA (omistajan tilaus 25.8.2026;
+ * Raamattu, Fokusmoodi/LUENTA: *"Luenta on striimiääni, jonka kytkin on
+ * AINA puhekuplan alla painettavissa päälle ja pois"*).
+ *
+ * Rivi on kortin viimeinen lapsi, joten se asettuu tekstin — ja
+ * mahdollisen kuvanapin — alle. Ulkoasu on kortin muun kalustuksen
+ * hiljaista sukua: sama ruskea muste kuin kaiuttimella ja kuvanapilla,
+ * ei taustaa eikä reunusta, jotta merkintä pysyy pääosassa.
+ *
+ * Mitat ovat em-yksiköissä eivätkä pikseleitä: kytkin kutistuu ja
+ * kasvaa oman kirjasinkokonsa mukana, ja puhelimen pienempi kortti saa
+ * pienemmän kytkimen ilman omaa media-sääntöä.
+ *
+ * Kutistuneessa yhden rivin lapussa kytkin katoaa muiden mukana
+ * (.fact-card.pieni > *:not(.fact-place)) — lapulla ei ole mitään
+ * luettavaa näkyvissä.
+ */
+.fact-luenta {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  margin-top: 0.4rem;
+  padding: 0.1rem 0;
+  min-height: 0;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  color: #9a7c4c;
+  font-family: var(--font-type);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.fact-luenta:hover:not(:disabled) { background: none; color: #9c6f1e; }
+
+/* Ura ja nuppi piirretään currentColorilla: yksi värisäätö riittää
+ * molempiin tiloihin eikä sävyjä pääse ajautumaan erilleen. */
+.fact-luenta-ura {
+  position: relative;
+  flex: none;
+  width: 1.7em;
+  height: 0.9em;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  background: rgba(122, 85, 20, 0.1);
+  transition: background 160ms ease;
+}
+
+.fact-luenta-nuppi {
+  position: absolute;
+  top: 50%;
+  left: 0.12em;
+  width: 0.56em;
+  height: 0.56em;
+  border-radius: 50%;
+  background: currentColor;
+  transform: translateY(-50%);
+  transition: transform 160ms ease;
+}
+
+/* Päällä: nuppi oikeaan laitaan, muste tummenee. */
+.fact-luenta.paalla { color: #7a5514; }
+.fact-luenta.paalla .fact-luenta-ura { background: rgba(122, 85, 20, 0.34); }
+.fact-luenta.paalla .fact-luenta-nuppi { transform: translate(0.76em, -50%); }
+
+/* Liikeherkälle sama tila ilman liukua (vrt. päiväkirjan kutistuminen). */
+@media (prefers-reduced-motion: reduce) {
+  .fact-luenta-ura,
+  .fact-luenta-nuppi { transition: none; }
+}
+
 /* Pulman piirroksen selite: hiljainen rivi luonnoksen alla. */
 .quiz-selite {
   margin: -0.2rem 0 0.5rem;

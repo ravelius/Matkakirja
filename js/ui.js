@@ -47,9 +47,9 @@ import {
 } from './maalehti.js';
 // Remontin M6: luenta ja visa.
 import {
-  haivytaJaSiivoa, haivytaLuenta, lueMerkinta,
-  merkitsePuhuja, playDiaryVoice, playIntroVoice, stopDiaryVoice,
-  stopIntroVoice, vapautaPuhuja,
+  asetaLuentaKytkin, haivytaJaSiivoa, haivytaLuenta, lueMerkinta,
+  luentaKytkinPaalla, merkitsePuhuja, playDiaryVoice, playIntroVoice,
+  stopDiaryVoice, stopIntroVoice, vapautaPuhuja,
 } from './luenta.js';
 import {
   answerDuelUi, answerQuiz, renderDuel, renderQuiz, stopQuizTimer,
@@ -128,7 +128,7 @@ import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
 import {
   fokusvirtaOhittaaLehden, fokusvirtaSaapuminen, fokusvirtaLukitseeLehden,
   fokusvirtaMatkakirja, fokusvirtaMerkintaLuettu, fokusvirtaLaattaNakyy,
-  fokusvirtaKohtaaminenPisteessa, fokusvirtaLehtivinkki,
+  fokusvirtaKohtaaminenPisteessa, fokusvirtaLehtivinkki, fokusvirtaSisalto,
   paivitaFokuskuvat, nollaaFokuskuvat,
 } from './fokusvirta.js';
 
@@ -1527,6 +1527,7 @@ export class UI {
     this.factPlace = document.getElementById('fact-place');
     this.factText = document.getElementById('fact-text');
     this.factCard = this.factText.closest('.fact-card');
+    this.rakennaLuentaKytkin();
     this.factKey = null;
     // Jatkuu-vihje: nuoli ja häivytys näkyvät, kun tekstiä on näkymän
     // alapuolella. Tarkkailija kattaa myös kirjoituskoneen etenemisen,
@@ -6967,8 +6968,16 @@ export class UI {
    *
    * UMPIKUJAA EI SYNNY. Nappi on aina näkyvissä silloin kun laattaa ei
    * ole (kaupunki ilman laattaa, reitin varsi ilman kaupunkia,
-   * fokusmoodi pois, katselutila) ja aina kehittäjätilassa, jossa
-   * omistaja hyppii kaupungista toiseen.
+   * fokusmoodi pois, katselutila).
+   *
+   * KEHITTÄJÄTILA EI OLE ENÄÄ POIKKEUS (omistajan pelitesti 25.8.2026:
+   * *"Liiku teksti ei pitäisi vielä näkyä"*). Poikkeus oli tarkoitettu
+   * kaupungista toiseen hyppimiseen, mutta omistaja pelaa
+   * kehittäjätilassa päällä — fokus- ja sumennuskytkimet ovat siinä —
+   * ja poikkeus näytti napin heti pelin alusta juuri sille, jonka
+   * pelikokemusta sääntö suojelee. Sääntö on nyt sama kaikissa
+   * tiloissa: nappi ilmestyy, kun laatta on käännetty. Katselutila
+   * (yllä) riittää yhä kartan vapaaseen tarkasteluun.
    *
    * VÄÄRÄ VASTAUS EI LUKITSE KAUPUNKIIN. Laatta jää silloin paikalleen
    * ja kysymyksen voi yrittää uudelleen (sama sääntö kuin lehtilukolla,
@@ -6982,9 +6991,6 @@ export class UI {
    */
   liikuNappiNakyy() {
     if (!this.fokusmoodi || this.katselu) return true;
-    // Kytkin luetaan joka kerta eikä välimuistista: omistaja kytkee
-    // kehittäjätilan kesken pelin, eikä napin pidä odottaa uutta peliä.
-    if (kehittajaTilaPaalla()) return true;
     const city = this.game.cityOf?.();
     if (!city) return true;
     return !this.game.tokens?.has(city.id);
@@ -7591,6 +7597,95 @@ export class UI {
     return rivi;
   }
 
+  /*
+   * ── LUENNAN KYTKIN PUHEKUPLAN ALLA (omistajan tilaus 25.8.2026) ────
+   *
+   * Raamattu (Fokusmoodi, LUENTA): *"Luenta on striimiääni, jonka kytkin
+   * on AINA puhekuplan alla painettavissa päälle ja pois."*
+   *
+   * Kytkin rakennetaan koodista eikä index.html:stä, koska se kuuluu
+   * matkakirjakortin pohjalle riippumatta siitä, mikä kortin sisältöä
+   * kulloinkin kirjoittaa (saapumismerkintä, fokusvirran merkintä,
+   * isoisän aikataulurivi). Se on kortin VIIMEINEN lapsi, joten se
+   * asettuu tekstin alle myös silloin kun kuvanappi on esillä.
+   *
+   * KYTKIN OHJAA ISOISÄÄ. Pöllön kuplat elävät omassa kerroksessaan
+   * (js/fokusvirta.js) eikä niitä lueta koskaan, joten kytkimellä ei ole
+   * niihin mitään sanottavaa.
+   */
+  rakennaLuentaKytkin() {
+    if (!this.factCard) return;
+    const nappi = html('button', 'fact-luenta');
+    nappi.type = 'button';
+    // role="switch" eikä pelkkä painike: ruudunlukija kertoo tilan
+    // (aria-checked) eikä pelkkää nimeä.
+    nappi.setAttribute('role', 'switch');
+    nappi.appendChild(html('span', 'fact-luenta-nimi', 'Luenta'));
+    const ura = html('span', 'fact-luenta-ura');
+    ura.appendChild(html('span', 'fact-luenta-nuppi'));
+    nappi.appendChild(ura);
+    nappi.addEventListener('click', (e) => {
+      // Kortti on kutistuneena itsekin painike ja kartta ottaa
+      // napautukset zoomaukseksi — kytkin ei saa vuotaa kumpaankaan.
+      e.stopPropagation();
+      const paalle = !luentaKytkinPaalla();
+      asetaLuentaKytkin(paalle);
+      this.paivitaLuentaKytkin();
+      sfx.play('clack');
+      if (!paalle) {
+        // Pois kesken luennan: kertoja vaikenee heti.
+        stopDiaryVoice(this);
+        return;
+      }
+      /*
+       * Päälle kesken merkinnän: NYKYINEN MERKINTÄ SAA ALKAA ALUSTA
+       * (omistajan tilaus). Lyhyen kertojan jatko-osa nollataan samalla,
+       * ettei kaiutinnappi tarjoaisi jatkoa luennalle, joka alkoi juuri
+       * uudelleen alusta.
+       */
+      this.merkintaJatko = null;
+      this.merkinnanLuenta?.();
+    });
+    this.factCard.appendChild(nappi);
+    this.luentaKytkin = nappi;
+    this.paivitaLuentaKytkin();
+  }
+
+  /** Kytkimen ulkoasu ja saavutettavuusmääreet tallennetusta tilasta. */
+  paivitaLuentaKytkin() {
+    const nappi = this.luentaKytkin;
+    if (!nappi) return;
+    const paalla = luentaKytkinPaalla();
+    nappi.classList.toggle('paalla', paalla);
+    nappi.setAttribute('aria-checked', paalla ? 'true' : 'false');
+    const nimi = paalla ? 'Luenta päällä — sulje' : 'Luenta pois — kytke päälle';
+    nappi.title = nimi;
+    nappi.setAttribute('aria-label', nimi);
+  }
+
+  /**
+   * Nykyisen merkinnän luenta yhteen paikkaan talteen.
+   *
+   * Jokainen matkakirjahaara antaa tästä oman aloitusfunktionsa (tai
+   * nullin, jos luettavaa ei ole). Kaksi asiaa hoituu silloin yhdessä
+   * paikassa: luenta EI ALA kytkimen ollessa pois päältä, ja kytkimen
+   * kääntäminen päälle voi käynnistää juuri sen merkinnän, joka on
+   * ruudulla — ilman että kytkin tuntisi yhtäkään haaraa.
+   *
+   * `aloita: false` vain rekisteröi (tai tyhjentää) tehtävän: sitä
+   * käytetään haaroissa, jotka ovat itse jo päättäneet olla vaiti
+   * (sama merkintä uudelleen ruudulle, kertojatila 'ei').
+   */
+  asetaMerkinnanLuenta(tehtava, { aloita = true } = {}) {
+    this.merkinnanLuenta = tehtava ?? null;
+    if (!aloita) return;
+    if (!this.merkinnanLuenta || !luentaKytkinPaalla()) {
+      stopDiaryVoice(this);
+      return;
+    }
+    this.merkinnanLuenta();
+  }
+
   /**
    * Matkakirjamerkinnän kaiutin: sama nappi, kaksi lukijaa.
    *
@@ -7704,6 +7799,9 @@ export class UI {
       this.factKuuntele.hidden = true;
       this.naytaFactValokuva(null);
       stopDiaryVoice(this);
+      // Ei merkintää, ei luettavaa: kytkin ei saa käynnistää edellisen
+      // pelin merkintää.
+      this.asetaMerkinnanLuenta(null, { aloita: false });
       return;
     }
 
@@ -7730,10 +7828,23 @@ export class UI {
      * tulee tähän, sille kortille, jolla saapumistekstit ovat aina
      * olleet. Piilotus siis vaihtui syötöksi.
      *
-     * LUENTA PYSYY VAITI. Fokusvirran teksteille ei ole äänitteitä
-     * eikä niiden luentoja ole vielä tehty (omistaja: *"luennat
-     * tehdään myöhemmin erikseen"*), joten vanhaa saapumisluentaa ei
-     * käynnistetä eikä kuuntelunappia näytetä.
+     * LUENTA SOI, KUN ÄÄNITE ON (omistajan tilaus 25.8.2026; korvaa
+     * v1093:n "luenta pysyy vaiti" -välivaiheen). Fokusvirran
+     * matkakirjalohkolla voi olla kenttä `aanite`; kun se on, merkintä
+     * luetaan täsmälleen samalla koneistolla kuin saapumisluennat
+     * (playDiaryVoice) — kertojatilan lyhyt/pitkä-sääntö, hengähdys
+     * ennen aloitusta ja taustan väistö pätevät sellaisenaan.
+     *
+     * KYTKENTÄ ON YLEINEN EIKÄ ATEENAN OMA: kenttä luetaan datasta,
+     * joten Sofia ja muut kaupungit soivat samalla koodilla heti kun
+     * niiden äänitteet ilmestyvät. Ilman äänitettä merkintä on vaiti
+     * kuten ennenkin — mitään ei striimata varapoluksi, koska luennat
+     * generoidaan äänitteiksi yksi kaupunki kerrallaan.
+     *
+     * Äänite luetaan ensisijaisesti fokusvirran palauttamasta
+     * merkinnästä ja toissijaisesti suoraan virran sisällöstä
+     * (fokusvirtaSisalto) — näin kytkentä ei ole kiinni siitä, kumpaa
+     * kenttää fokusvirtaMatkakirja sattuu välittämään eteenpäin.
      *
      * Laatan käännyttyä fokusvirtaMatkakirja palauttaa nullin ja
      * kortti jatkaa tavallista elämäänsä — kuten v1093:ssa.
@@ -7749,7 +7860,6 @@ export class UI {
         this.factPlace.textContent = merkinta.paikkarivi;
         this.factImageTitle = null;
         this.factImage.hidden = true;
-        this.factKuuntele.hidden = true;
         stopDiaryVoice(this);
         // Vanha valokuva kortin kylkeen suoraan virran datasta: kuvaa
         // ei ole kaupunkien kuvastossa (VALOKUVAT), se on virran oma.
@@ -7757,6 +7867,35 @@ export class UI {
         this.typeText(this.factText, merkinta.teksti, 'fact', () => {
           fokusvirtaMerkintaLuettu(this, virtaKaupunki);
         });
+        const virranMerkinta = fokusvirtaSisalto(this, virtaKaupunki)?.matkakirja;
+        const virtaAanite = merkinta.aanite ?? virranMerkinta?.aanite ?? null;
+        this.diaryFullUrl = virtaAanite;
+        if (virtaAanite) {
+          // Kaiutin näkyviin vain äänitteellisille: ilman äänitettä
+          // nappi tarjoaisi laitteen lukijaa merkinnälle, jota ei ole
+          // tarkoitettu striimattavaksi.
+          this.naytaMerkinnanKaiutin(true);
+        } else {
+          this.factKuuntele.hidden = true;
+        }
+        // Lyhyt kertoja pysähtyy ensimmäisen virkkeen jälkeiseen
+        // hengähdykseen; osuus kertoo äänitteen lauserajan etsijälle,
+        // mistä kohtaa puhetta virkkeen loppu suunnilleen on.
+        const { eka: virtaEka } = ekaLause(merkinta.teksti);
+        const virtaOsuus = merkinta.teksti.length
+          ? virtaEka.length / merkinta.teksti.length : null;
+        this.asetaMerkinnanLuenta(virtaAanite ? () => {
+          const tila = kertojaTila();
+          if (tila === 'ei') {
+            stopDiaryVoice(this);
+          } else if (tila === 'lyhyt') {
+            playDiaryVoice(this, virtaAanite, {
+              ekaLauseeseen: true, osuus: virtaOsuus, viive: 1000,
+            });
+          } else {
+            playDiaryVoice(this, virtaAanite, { viive: 1000 });
+          }
+        } : null);
         return;
       }
       if (virtaKaupunki && fokusvirtaLukitseeLehden(this, virtaKaupunki)) {
@@ -7769,6 +7908,7 @@ export class UI {
         this.factKuuntele.hidden = true;
         this.naytaFactValokuva(null);
         stopDiaryVoice(this);
+        this.asetaMerkinnanLuenta(null, { aloita: false });
         return;
       }
     }
@@ -7794,6 +7934,7 @@ export class UI {
       this.factKuuntele.hidden = true;
       this.naytaFactValokuva(null);
       stopDiaryVoice(this);
+      this.asetaMerkinnanLuenta(null, { aloita: false });
       this.typeText(this.factText, aikataulu.text);
       return;
     }
@@ -7883,12 +8024,11 @@ export class UI {
         if (puheTuettu() && !saapumisAanite) {
           this.diaryFullUrl = null;
           this.naytaMerkinnanKaiutin(false);
-          if (this.luettuSaapuminen !== luentaAvain) {
-            this.luettuSaapuminen = luentaAvain;
+          // Kertojan tila (yläpalkin valikko): pitkä lukee koko
+          // merkinnän, lyhyt vain ensimmäisen lauseen — kaiutinnappi
+          // jatkaa loput. Ei kertojaa → ei autoluentaa.
+          const aloitaStriimi = () => {
             stopDiaryVoice(this);
-            // Kertojan tila (yläpalkin valikko): pitkä lukee koko
-            // merkinnän, lyhyt vain ensimmäisen lauseen — kaiutinnappi
-            // jatkaa loput. Ei kertojaa → ei autoluentaa.
             const tila = kertojaTila();
             if (tila === 'lyhyt') {
               this.merkintaJatko = jatkoTeksti || null;
@@ -7896,10 +8036,15 @@ export class UI {
             } else if (tila === 'pitka') {
               lueMerkinta(this, [uusi.kuvaus, uusi.nosto].filter(Boolean).join(' '), { viive: 1000 });
             }
+          };
+          if (this.luettuSaapuminen !== luentaAvain) {
+            this.luettuSaapuminen = luentaAvain;
+            this.asetaMerkinnanLuenta(aloitaStriimi);
           } else {
             // Sama merkintä uudelleen ruudulle (vihje, aikataulu) —
             // mahdollinen vanha äänite kiinni, luentaa ei aloiteta.
             stopDiaryVoice(this);
+            this.asetaMerkinnanLuenta(aloitaStriimi, { aloita: false });
           }
           return;
         }
@@ -7915,27 +8060,34 @@ export class UI {
           ? `assets/audio/puhe-${saapumisLauta}-saapuminen-${saapuminen.cityId}.mp3`
           : null;
         this.naytaMerkinnanKaiutin(Boolean(saapumisLauta));
-        if (saapumisLauta && this.luettuSaapuminen !== luentaAvain) {
-          this.luettuSaapuminen = luentaAvain;
-          // Kertojan tila (yläpalkin valikko): pitkä lukee koko merkinnän,
-          // lyhyt vain ensimmäisen lauseen (omistajan tarkennus — luenta
-          // pysähtyy ensimmäisen virkkeen jälkeiseen hengähdykseen), ei
-          // kertojaa jättää luennan aloittamatta — kaiutinnappi yliajaa
-          // sen hetkellisesti.
+        // Kertojan tila (yläpalkin valikko): pitkä lukee koko merkinnän,
+        // lyhyt vain ensimmäisen lauseen (omistajan tarkennus — luenta
+        // pysähtyy ensimmäisen virkkeen jälkeiseen hengähdykseen), ei
+        // kertojaa jättää luennan aloittamatta — kaiutinnappi yliajaa
+        // sen hetkellisesti.
+        const saapumisAani = this.diaryFullUrl;
+        const aloitaSaapuminen = saapumisLauta ? () => {
           const tila = kertojaTila();
           if (tila === 'ei') {
             stopDiaryVoice(this);
           } else if (tila === 'lyhyt') {
-            playDiaryVoice(this, this.diaryFullUrl, {
+            playDiaryVoice(this, saapumisAani, {
               ekaLauseeseen: true,
               osuus: eka.length / (uusi.kuvaus.length + 1 + (uusi.nosto?.length ?? 0)),
               viive: 1000,
             });
           } else {
-            playDiaryVoice(this, this.diaryFullUrl, { viive: 1000 });
+            playDiaryVoice(this, saapumisAani, { viive: 1000 });
           }
+        } : null;
+        if (saapumisLauta && this.luettuSaapuminen !== luentaAvain) {
+          this.luettuSaapuminen = luentaAvain;
+          this.asetaMerkinnanLuenta(aloitaSaapuminen);
         } else {
           stopDiaryVoice(this);
+          // Sama merkintä uudelleen ruudulle: automatiikka on jo
+          // kuluttanut vuoronsa, mutta kytkin saa yhä aloittaa alusta.
+          this.asetaMerkinnanLuenta(aloitaSaapuminen, { aloita: false });
         }
         return;
       }
@@ -7980,13 +8132,18 @@ export class UI {
         if (puheTuettu()) {
           this.diaryFullUrl = null;
           this.naytaMerkinnanKaiutin(false);
-          if (this.luettuSaapuminen !== luentaAvain && kertojaTila() !== 'ei') {
-            this.luettuSaapuminen = luentaAvain;
+          const aloitaHavainto = () => {
+            if (kertojaTila() === 'ei') return;
             stopDiaryVoice(this);
             this.merkintaJatko = loput || null;
             lueMerkinta(this, eka, { viive: 1000 });
+          };
+          if (this.luettuSaapuminen !== luentaAvain && kertojaTila() !== 'ei') {
+            this.luettuSaapuminen = luentaAvain;
+            this.asetaMerkinnanLuenta(aloitaHavainto);
           } else {
             stopDiaryVoice(this);
+            this.asetaMerkinnanLuenta(aloitaHavainto, { aloita: false });
           }
           return;
         }
@@ -7995,16 +8152,22 @@ export class UI {
           ? `assets/audio/puhe-${havaintoLauta}-havainto-${saapuminen.cityId}.mp3`
           : null;
         this.naytaMerkinnanKaiutin(Boolean(havaintoLauta));
-        if (havaintoLauta && this.luettuSaapuminen !== luentaAvain && kertojaTila() !== 'ei') {
-          this.luettuSaapuminen = luentaAvain;
-          playDiaryVoice(this, this.diaryFullUrl, {
+        const havaintoAani = this.diaryFullUrl;
+        const soitaHavainto = havaintoLauta ? () => {
+          if (kertojaTila() === 'ei') return;
+          playDiaryVoice(this, havaintoAani, {
             ekaLauseeseen: true,
             // Ensimmäisen virkkeen osuus tekstistä ohjaa tauon valintaa.
             osuus: teksti.length ? eka.length / teksti.length : null,
             viive: 1000,
           });
+        } : null;
+        if (soitaHavainto && this.luettuSaapuminen !== luentaAvain && kertojaTila() !== 'ei') {
+          this.luettuSaapuminen = luentaAvain;
+          this.asetaMerkinnanLuenta(soitaHavainto);
         } else {
           stopDiaryVoice(this);
+          this.asetaMerkinnanLuenta(soitaHavainto, { aloita: false });
         }
         return;
       }
@@ -8024,6 +8187,9 @@ export class UI {
     this.factKuuntele.hidden = true;
     this.naytaFactValokuva(player.pos.type === 'city' ? city.id : null, city.name);
     stopDiaryVoice(this);
+    // Satunnaishavainnolla ei ole luentaa: kytkin ei saa aloittaa
+    // edellisen merkinnän ääntä sen päälle.
+    this.asetaMerkinnanLuenta(null, { aloita: false });
 
     // Otsikko kertoo kumpi ääni puhuu, alarivi paikan.
     const onRoute = player.pos.type === 'edge';
