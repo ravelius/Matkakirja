@@ -734,10 +734,15 @@ const INTRO_FONT_MIN = 0.6;
  * tuli klikattava viimeinen lause (INTRO_VALINTA). Teksti päättyy
  * siis täsmälleen siihen, mihin nauhoitettu luentakin.
  */
-const INTRO_TEXT = 'Vintiltä löytyi isoisän matkalaukku ja '
-  + 'hänen kulunut matkakirjansa.\n\n'
-  + 'Viimeinen sivu on revitty irti kesken lauseen. Mitä hän löysi — '
-  + 'ja kuka sen sivun repi?';
+/*
+ * V5 25.8.2026 (omistajan uusi alkuteksti, sanasta sanaan): terminaali
+ * ja revitty sivu yhdessä kappaleessa; paikkarivi naputetaan ensin
+ * kirjoituskoneella ja luenta alkaa vasta tästä kappaleesta.
+ */
+const INTRO_TEXT = 'Vintiltä löytyi isoisän matkalaukku ja kulunut '
+  + 'matkakirja. Juoksen sisälle terminaaliin ja olen varma, että ukko '
+  + 'oli löytänyt jotain. Mutta kuka on repinyt kirjasta viimeisen '
+  + 'sivun?';
 /*
  * KLIKATTAVA VIIMEINEN LAUSE (omistajan tilaus 25.8.2026). Nappi,
  * joka näyttää lauseelta: sama kirjasin kuin avaustekstissä, vain
@@ -746,7 +751,7 @@ const INTRO_TEXT = 'Vintiltä löytyi isoisän matkalaukku ja '
  * siksi kuulu INTRO_TEXTiin: kertoja ei lue sitä, aivan kuten se ei
  * lukenut vanhaa "Valitse kohde kartalta" -ohjettakaan.
  */
-const INTRO_VALINTA = 'Aloitan sieltä, mistä hänkin — Lontoosta.';
+const INTRO_VALINTA = 'Mistä aloitan?';
 /*
  * ETUSIVUN PAIKKARIVI (omistajan tilaus 25.8.2026): kohtausmerkintä
  * avaustekstin ensimmäisenä rivinä, kuukausi ja vuosi laitteen
@@ -11489,7 +11494,6 @@ export class UI {
       return;
     }
     this.introShown = true;
-    playIntroVoice(this);
     /*
      * Avauslennon esilämmitys alkaa samasta hetkestä kuin kertomus:
      * pelaaja kuuntelee, peli rakentaa kohdelaudan taustalla
@@ -11497,11 +11501,13 @@ export class UI {
      */
     this.esilammitaAvaus();
     /*
-     * PAIKKARIVI LAITTEEN KELLOSTA (omistajan tilaus 25.8.2026).
-     * Kirjoitetaan valmiiksi eikä naputeta: se on kohtausmerkintä,
-     * ei kerrontaa, ja fitIntro tarvitsee sen mitat heti.
+     * PAIKKARIVI NAPUTETAAN ENSIN (omistajan tilaus 25.8.2026: "Tätä ei
+     * tarvitse lukea, mutta konekirjoitus ääni pitää kuulua ensin tämän
+     * kohdalla, sitten vasta alkaa seuraavan kappaleen luenta").
+     * Kirjoituskone lyö kohtausmerkinnän, ja vasta sen valmistuttua
+     * kertoja aloittaa ja runko alkaa kirjoittua.
      */
-    if (this.introPaikka) this.introPaikka.textContent = this.introPaikkarivi();
+    if (this.introPaikka) this.introPaikka.textContent = '';
     /*
      * Avausteksti kirjoittuu selvästi hitaammin kuin muut: se on matkan
      * ensimmäinen hetki eikä pelitilanteen ilmoitus.
@@ -11527,13 +11533,25 @@ export class UI {
         this.introValinta.addEventListener('click', () => this.aloitaKartalta());
       }
     }
-    this.typeText(this.introRunko, INTRO_TEXT, 'intro', () => {
-      // Lause paljastuu pehmeästi vasta kun viimeinen kirjain on tullut.
-      this.introValinta?.classList.remove('intro-valinta-piilossa');
-    }, INTRO_TYPE_MS);
-    // Koko teksti on jo paikallaan, joten koon voi sovittaa heti — sen
-    // jälkeen mikään ei enää liiku kirjoituksen aikana.
-    this.fitIntro();
+    const aloitaRunko = () => {
+      if (this.dead || this.game.phase !== 'pickstart') return;
+      // Luenta alkaa vasta nyt — paikkarivi oli pelkkää konekirjoitusta.
+      playIntroVoice(this);
+      this.typeText(this.introRunko, INTRO_TEXT, 'intro', () => {
+        // Lause paljastuu pehmeästi vasta kun viimeinen kirjain on tullut.
+        this.introValinta?.classList.remove('intro-valinta-piilossa');
+      }, INTRO_TYPE_MS);
+      // Koko teksti on paikallaan (typeTextin varjoteksti varaa tilan),
+      // joten koon voi sovittaa heti — mikään ei liiku kirjoituksen alla.
+      this.fitIntro();
+    };
+    if (this.introPaikka) {
+      this.typeText(this.introPaikka, `${this.introPaikkarivi()}:`, 'intro',
+        aloitaRunko, INTRO_TYPE_MS);
+      this.fitIntro();
+    } else {
+      aloitaRunko();
+    }
   }
 
   /**
