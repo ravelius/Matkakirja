@@ -275,7 +275,13 @@ export const RAAMATTU = {
           + 'sittenkin KIINTEÄN KOKOISIA ruudulla joka zoomilla. '
           + 'Kuvasuurennos: kehys kuvan muotoinen, taustalle jää '
           + 'pikkukuva ja tietoruutu näkyviin (saumaton liuku, ei '
-          + 'pomppua), taustaan hyvin kevyt blur ja tummennos.',
+          + 'pomppua), taustaan hyvin kevyt blur ja tummennos. '
+          + 'Kaupungin laatta SYKKII KEVYESTI houkutellen '
+          + 'klikkaamaan. Liiku-nappi on TEKSTINAPPI keskitettynä '
+          + 'sivusuunnassa alareunaan. Asteikot (viivaimet) '
+          + 'NELJÄLLÄ SIVULLA; ne liukuvat pois ruudusta kartan '
+          + 'liikuttelun ajaksi ja palaavat pienen viiveen '
+          + 'jälkeen kun liike loppuu.',
         'KAMERA PELIN KÄSISSÄ (omistaja 24.8.2026, ilta; '
           + 'tarkennettu samana iltana): peli siirtää karttaa itse '
           + 'pelin edetessä (kamera-ajot), mutta käsin liikuttelu '
