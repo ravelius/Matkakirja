@@ -540,6 +540,16 @@ export const RAAMATTU = {
           + 'taulun yläreunassa keskellä omalla rivillään. '
           + 'KEHITTÄJÄN VÄRILAATTAKOODIT POISTETTU kartalta — '
           + 'valmiusvärit elävät vain työhuoneen Tilastot-taulussa.',
+        'VANHA KARTTA KOKONAAN POIS PELISTÄ TOISTAISEKSI (omistaja '
+          + '25.8.2026, ilta — laajentaa aiempaa fokusnäkymärajausta): '
+          + 'pelilaudan vanhaa piirrosta ei näytetä MISSÄÄN pelin '
+          + 'aikana — ei myöskään avauslennossa eikä yleiskuvassa. '
+          + 'Atlas-lehdet + sumuverho/pergamentti ovat ainoa kartta; '
+          + 'lennon punainen viiva ja kone piirtyvät niiden päälle. '
+          + 'KUMOAA aiemman "lento on niukka vanha kartta" -linjan. '
+          + 'Etusivun (pickstart) taustakartta ja katselulaudat '
+          + 'ennallaan — niillä ei ole atlasta. Vanhaa piirtokoodia '
+          + 'EI poisteta (toistaiseksi-linjaus).',
         'TILANNE 25.8.2026: Kreikka-pilotti valmis ja viisi uutta '
           + 'maata pelissä Kreikan tasolla (Sofia, Rooma, Istanbul, '
           + 'Sarajevo, Bukarest — fokusvirrat, lehtitehtävät, '
