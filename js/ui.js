@@ -8158,7 +8158,16 @@ export class UI {
           fokusvirtaMerkintaLuettu(this, virtaKaupunki);
         });
         const virranMerkinta = fokusvirtaSisalto(this, virtaKaupunki)?.matkakirja;
-        const virtaAanite = merkinta.aanite ?? virranMerkinta?.aanite ?? null;
+        /*
+         * AARREMERKINTÄ EI PERI SAAPUMISMERKINNÄN ÄÄNITETTÄ (omistajan
+         * pelitesti 25.8.2026: aarteen jälkeen lukija aloitti vanhan
+         * matkakirjan uudelleen). Varapolku virran matkakirjan
+         * äänitteeseen kuuluu vain virran omalle merkinnälle — muu
+         * merkintä ilman omaa äänitettä jää lukematta.
+         */
+        const onAarremerkinta = merkinta.avain.startsWith('fokusaarre:');
+        const virtaAanite = merkinta.aanite
+          ?? (onAarremerkinta ? null : virranMerkinta?.aanite) ?? null;
         this.diaryFullUrl = virtaAanite;
         if (virtaAanite) {
           // Kaiutin näkyviin vain äänitteellisille: ilman äänitettä

@@ -88,6 +88,8 @@ import { asetaKuva } from './media.js';
 import { html, jaaKappaleiksi } from './ui-apurit.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { FOKUSKOHTEET_BGR } from './packs/fokuskohteet-bgr.js';
+import { FOKUSKOHTEET_ITA } from './packs/fokuskohteet-ita.js';
+import { FOKUSKOHTEET_TUR } from './packs/fokuskohteet-tur.js';
 import { FOKUSKOHTEET_GRC } from './packs/fokuskohteet-grc.js';
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
@@ -103,7 +105,12 @@ import { sfx } from './sound.js';
  * ovat ämpärissä (tarkistettu 25.8.2026), joten merkit saavat lehden,
  * jonka päälle asettua.
  */
-const KOHDE_MAAT = { GRC: FOKUSKOHTEET_GRC, BGR: FOKUSKOHTEET_BGR };
+const KOHDE_MAAT = {
+  GRC: FOKUSKOHTEET_GRC,
+  BGR: FOKUSKOHTEET_BGR,
+  ITA: FOKUSKOHTEET_ITA,
+  TUR: FOKUSKOHTEET_TUR,
+};
 
 /** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta). */
 const KOHDE_OSUMA_R = 22;

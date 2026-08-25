@@ -70,6 +70,12 @@ const MODULES = [
   // moduulitasolla (bgrFokuskohteet).
   'js/packs/fokuskohteet-bgr.js',
   'js/packs/fokusvirta-sofia.js',
+  // Sama pari Italialle ja Turkille: kohteet ennen kaupungin
+  // pakettia, koska fokusvirta poimii kohdenoston moduulitasolla.
+  'js/packs/fokuskohteet-ita.js',
+  'js/packs/fokusvirta-rooma.js',
+  'js/packs/fokuskohteet-tur.js',
+  'js/packs/fokusvirta-istanbul.js',
   'js/packs/fokusvirrat.js',
   'js/packs/uutislahteet.js',
   // uutiset vasta lähteidensä jälkeen (tuo uutislahteet.js:n).
