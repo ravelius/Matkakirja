@@ -358,9 +358,16 @@ const MODULES = [
    */
   'js/fokuspiste.js',
   /*
+   * Täkysymbolit ennen täkynostoa (nosto tuo sen piirto- ja
+   * nollauskutsut). Kerros tuo vain mapartin ja äänet, jotka ovat jo
+   * yllä.
+   */
+  'js/fokusnosto-symbolit.js',
+  /*
    * Täkynosto ennen main.js:ää (main tuo sen kytkentäkutsun). Se tuo
-   * fokusvirran piirtopinnan ja kartan kohteiden tietoruudun — molemmat
-   * ovat jo yllä, ja juuri siksi nosto on listalla vasta tässä.
+   * fokusvirran piirtopinnan, kartan kohteiden tietoruudun ja
+   * täkysymbolit — kaikki ovat jo yllä, ja juuri siksi nosto on
+   * listalla vasta tässä.
    */
   'js/fokusnosto.js',
   /*

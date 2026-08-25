@@ -1,6 +1,6 @@
 /*
- * TÄKYNOSTO (js/fokusnosto.js): kartalta nouseva klikkiotsikko ja sen
- * lunastuskortti.
+ * TÄKYNOSTO (js/fokusnosto.js): kartan puhekupla, sen täkysymbolit
+ * (js/fokusnosto-symbolit.js) ja lunastuskortti.
  *
  * OMA TIEDOSTO, EI styles.css: css/styles.css on toisen työvaiheen
  * hallussa, eikä yhteen tiedostoon kirjoita kaksi tekijää yhtä aikaa.
@@ -14,15 +14,25 @@
  * transform + opacity, taustan tummennus on tavallinen läpinäkyvä väri
  * eikä backdrop-filter, ja varjot ovat box-shadow'ta.
  *
- * KIINTEÄ SIJAINTI, EI KARTAN KOORDINAATTEJA. Nosto on ruudun elementti
- * eikä laudan: se ei skaalaudu zoomissa eikä liiku panoroinnissa. Se
- * asuu document.bodyssa, joten karttapaneelin eleet eivät näe sitä
- * lainkaan (ks. js/fokusnosto.js "MIKSI document.body").
+ * BODYSSA, MUTTA ANKKUROITUNA. Kupla ja liuska asuvat molemmat
+ * document.bodyssa, joten karttapaneelin eleet eivät näe niitä lainkaan
+ * (ks. js/fokusnosto.js "MIKSI document.body"). Ero on paikassa: liuska
+ * on ruudun alalaidassa, kupla taas kirjoitetaan `transform`-muunnoksena
+ * siihen kohtaan ruutua, jossa kartan ankkuri kulloinkin on.
+ *
+ * TIEDOSTON OSAT
+ *   1. LIUSKA — vanha alalaidan esitystapa, varapolku ilman paikkaa
+ *   2. PUHEKUPLA — nykyinen esitystapa, ankkuroituna kartalle
+ *   3. TÄKYSYMBOLIT — kartan SVG-kerros (js/fokusnosto-symbolit.js)
+ *   4. LUNASTUSKORTTI
  */
 
 /* ===========================================================================
-   1. LIUSKA — klikkiotsikko + miniatyyri
+   1. LIUSKA — klikkiotsikko + miniatyyri (VARAPOLKU)
    ---------------------------------------------------------------------------
+   Käytössä vain kun nostolla ei ole `paikka`-kenttää tälle laudalle:
+   ankkuriton kupla olisi pahempi kuin ankkuroimaton liuska.
+
    Paikka: kartan alalaidan keskellä, alanappirivin YLÄPUOLELLA. Vasen
    alanurkka on maan kartuutsilla ja oikea mittajanalla (css/styles.css
    .fokusmitat), ja kelluva pöllö on oikeassa reunassa noin 5 rem
@@ -59,7 +69,7 @@
   transition: opacity 260ms ease-out, transform 260ms cubic-bezier(0.22, 0.9, 0.24, 1);
 }
 
-.fokusnosto-nousee {
+.fokusnosto.fokusnosto-nousee {
   opacity: 1;
   transform: translate(-50%, 0);
 }
@@ -71,7 +81,9 @@
 /* Kartan lennon ja kamera-ajon ajaksi pois, kuten muutkin kartan
    kelluvat merkinnät (css/styles.css .fokusmitat). */
 body.flight-active .fokusnosto,
-body.kartalento .fokusnosto { opacity: 0; pointer-events: none; }
+body.kartalento .fokusnosto,
+body.flight-active .fokusnosto-kupla,
+body.kartalento .fokusnosto-kupla { opacity: 0; pointer-events: none; }
 
 /*
  * KLIKKIOTSIKKO. Koko liuska on painike: otsikko vasemmalla,
@@ -157,7 +169,207 @@ body.kartalento .fokusnosto { opacity: 0; pointer-events: none; }
 }
 
 /* ===========================================================================
-   2. LUNASTUSKORTTI
+   2. PUHEKUPLA — nosto siihen kohtaan karttaa, jota juttu koskee
+   ---------------------------------------------------------------------------
+   Raamattu, TÄKYSYMBOLIT (omistaja 25.8.2026): kartalla on tekstikuplassa
+   VAIN YKSI täkynosto kerrallaan, ja se ankkuroituu tapahtumapaikkaansa.
+
+   KOLME PORRASTA, KOLME TEHTÄVÄÄ (ks. js/fokusnosto.js piirraNostonKupla):
+
+     .fokusnosto-kupla        PAIKKA — kiinteä laatikko, jonka sijainti on
+                              pelkkä transform-muunnos. Muunnos on
+                              kompositorin työtä, joten kartan liikkeen
+                              aikana ei tehdä uutta ladontaa.
+     .fokusnosto-kuplapaperi  PAPERI ja NOUSU — ulomman muunnos on jo
+                              varattu paikalle, joten nousu tarvitsee oman
+                              portaansa.
+     .fokusnosto-nokka        KÄRKI, joka osoittaa ankkuriin.
+
+   EI SUODATTIMIA: varjo on box-shadow ja nousu pelkkä transform+opacity.
+   =========================================================================== */
+
+.fokusnosto-kupla {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 40;
+  width: max-content;
+  max-width: min(24rem, calc(100vw - 2.5rem));
+  /* Laatikko on vain paikanpitäjä: napautukset kuuluvat paperille. */
+  pointer-events: none;
+}
+
+.fokusnosto-kuplapaperi {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  pointer-events: auto;
+  border-radius: 0.7rem;
+  border: 1px solid rgba(122, 85, 20, 0.34);
+  background: #f5f0e2;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.3);
+  color: #211d18;
+  /* Pergamentin oma pinta; kartan vaalea hehkuvarjo ei periydy tänne. */
+  text-shadow: none;
+  font-family: var(--font-luku);
+  /*
+   * NOUSU. Lähtötila tässä, maalitila nousuluokassa — sama kaava ja sama
+   * syy kuin liuskalla (js liittää luokan yhden pakotetun tyylinlaskennan
+   * jälkeen, jotta liike alkaa vain kerran).
+   */
+  opacity: 0;
+  transform: translateY(7px) scale(0.97);
+  transform-origin: 50% 100%;
+  transition: opacity 240ms ease-out, transform 240ms cubic-bezier(0.22, 0.9, 0.24, 1);
+}
+
+.fokusnosto-kupla-nousee .fokusnosto-kuplapaperi {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fokusnosto-kuplapaperi { transition: none; }
+}
+
+/* Kuplan kulmat ovat hiukan pyöreämmät kuin liuskan, joten sen omat
+   painikkeet saavat samat kulmat — muuten nappi työntyisi kehyksen yli. */
+.fokusnosto-kuplapaperi .fokusnosto-nappi { border-radius: 0.7rem 0 0 0.7rem; }
+.fokusnosto-kuplapaperi .fokusnosto-sulje { border-radius: 0 0.7rem 0.7rem 0; }
+
+/*
+ * NOKKA on 45 astetta käännetty neliö, ei kolmio-hakkerointi: näin
+ * kärjessä on paperin oma musteviiva kahdella ulkoreunalla, ja neliön
+ * paperinvärinen puolikas peittää kuplan reunaviivan sen alta. Kärjen
+ * VAAKAPAIKAN kirjoittaa js (asetaNostokuplanPaikka), jotta se osoittaa
+ * ankkuriin silloinkin kun kupla on jouduttu siirtämään ruudun reunasta.
+ */
+.fokusnosto-nokka {
+  position: absolute;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  margin-left: -6px;
+  background: #f5f0e2;
+  transform: rotate(45deg);
+}
+
+.fokusnosto-kupla-ylla .fokusnosto-nokka {
+  bottom: -7px;
+  border-right: 1px solid rgba(122, 85, 20, 0.34);
+  border-bottom: 1px solid rgba(122, 85, 20, 0.34);
+}
+
+.fokusnosto-kupla-alla .fokusnosto-nokka {
+  top: -7px;
+  border-left: 1px solid rgba(122, 85, 20, 0.34);
+  border-top: 1px solid rgba(122, 85, 20, 0.34);
+}
+
+/* ===========================================================================
+   3. TÄKYSYMBOLIT — kartan oma SVG-kerros (js/fokusnosto-symbolit.js)
+   ---------------------------------------------------------------------------
+   Raamattu, TÄKYSYMBOLIT: *"muut vastaavat täkykohteet merkitään
+   yksinkertaisilla symboleilla — keltainen huutomerkki tms.
+   skandaalille/uskomattomalle, ja SÖPÖILLE eläinkohteille PÖLLÖVAUVAN
+   kuva … Symbolit tehdään kartan henkeen ja samalla tyylillä
+   (seepiamuste, aikakauden karttamerkki)."*
+
+   PALETTI ON KARTAN: musteruskea viiva, paperinvaalea aluslaatta ja yksi
+   ainoa väri — okrankeltainen, joka taittuu seepiaan. Puhdas keltainen
+   olisi liikennemerkki kartalla, jonka koko sävyasteikko on musteen ja
+   paperin väliltä.
+
+   EI SUODATTIMIA (tests/rules.test.mjs): laatta on oma ympyränsä eikä
+   varjo, ja kaikki muu on täyttöä ja viivaa.
+   =========================================================================== */
+
+.fokusnosto-symbolit {
+  --nosto-muste: #4b3a1c;
+  --nosto-okra: #dda42c;
+  --nosto-laatta: rgba(243, 234, 210, 0.88);
+  /* Kerros ei ota napautuksia vastaan; vain merkit ottavat. */
+  pointer-events: none;
+}
+
+.fokusnosto-symboli {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* Ankkuri on kuplan alla oleva merkintä paikasta, ei painike: kupla on
+   sen päällä ja kuplan oma nappi vie lunastukseen. */
+.fokusnosto-ankkuri { pointer-events: none; }
+
+/* Näkymätön sormenkokoinen osuma-alue (r = 22 → 44 px joka zoomilla). */
+.nostosym-osuma {
+  fill: none;
+  /* `fill: none` ei ota napautuksia ilman tätä. */
+  pointer-events: all;
+  /* SVG:ssä viiva periytyy: ilman nollausta ryhmän tyyli piirtäisi
+     osuma-alueen ympärille kehän (ks. piirraNostosymMerkki). */
+  stroke: none;
+}
+
+.nostosym-laatta { fill: var(--nosto-laatta); }
+
+.nostosym-kehys {
+  fill: none;
+  stroke: var(--nosto-muste);
+  stroke-width: 1.1;
+  stroke-opacity: 0.72;
+}
+
+/* Huutomerkki: okrankeltainen täyttö, musteviiva ympärillä. */
+.nostosym-huuto {
+  fill: var(--nosto-okra);
+  stroke: var(--nosto-muste);
+  stroke-width: 0.9;
+  stroke-linejoin: round;
+}
+
+/* Pöllövauva: untuvainen kroppa on paperia, kaikki muoto on viivassa. */
+.nostosym-pollo {
+  fill: rgba(247, 240, 222, 0.96);
+  stroke: var(--nosto-muste);
+  stroke-width: 1.1;
+  stroke-linejoin: round;
+}
+
+.nostosym-silma {
+  fill: #fbf6e8;
+  stroke: var(--nosto-muste);
+  stroke-width: 0.9;
+}
+
+.nostosym-tera { fill: var(--nosto-muste); }
+
+.nostosym-nokka {
+  fill: var(--nosto-okra);
+  stroke: var(--nosto-muste);
+  stroke-width: 0.7;
+  stroke-linejoin: round;
+}
+
+.nostosym-viiva {
+  fill: none;
+  stroke: var(--nosto-muste);
+  stroke-width: 1;
+  stroke-linecap: round;
+}
+
+.nostosym-ankkuripiste { fill: var(--nosto-muste); }
+
+/* Näppäimistön kohdistus näkyy myös kartalla. */
+.fokusnosto-symboli:focus-visible { outline: none; }
+
+.fokusnosto-symboli:focus-visible .nostosym-kehys {
+  stroke-width: 2;
+  stroke-opacity: 1;
+}
+
+/* ===========================================================================
+   4. LUNASTUSKORTTI
    ---------------------------------------------------------------------------
    Kortti on kartan päällä kelluva paperi, EI koko ruudun modaalia:
    fokusmoodin perussääntö on kartta näkymänä ja teksti annoksena sen

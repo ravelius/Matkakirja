@@ -34,6 +34,7 @@ const SHELL = [
   './js/fokusvirta.js',
   './js/fokuskohteet.js',
   './js/fokuspiste.js',
+  './js/fokusnosto-symbolit.js',
   './js/fokusnosto.js',
   './js/fokustehtavat.js',
   './js/maalehti.js',
