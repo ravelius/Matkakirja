@@ -334,7 +334,36 @@ function piirra(ui, iso, pohja) {
 export function paivitaFokuskartta(ui) {
   const kerros = ui.fokuskarttaKerros;
   if (!kerros) return;
-  const iso = nykyinenMaa(ui);
+  const maa = nykyinenMaa(ui);
+  /*
+   * === LENNON AIKANA EI LEHTEÄ (omistajan pelitesti 25.8.2026) ======
+   *
+   * *"Kreikan fokuskuva piirtyy rumana suorakaiteena oikeaan alakulmaan
+   * ja jättimäiset nimilaput ATEENA ja Kreeta leikkautuvat ruudun
+   * reunaan."*
+   *
+   * Peli siirtää nappulan perille jo lennon alussa (actionPickStart),
+   * joten kohdemaa on kartan mielestä "nykyinen maa" koko lennon ajan —
+   * ja lehti ilmestyi Euroopan yleiskuvaan pikkuruisena suorakaiteena
+   * keskelle merta. Sen mukana tulivat kaikki muutkin fokuskerrokset,
+   * jotka lukevat pohjan olemassaoloa (ui.fokusPohjaBbox): verhon
+   * reikä, laatan alle keskitetyt nimilaput ja kohtaamispiste.
+   *
+   * Lentonäkymä on Raamatun mukaan NIUKKA VANHA KARTTA punaisella
+   * viivalla (ALOITUSLENTO UUSIKSI): kartta rajautuu lähtö- ja
+   * kohdemaahan, kone lentää viivaa. Fokuskerrokset kuuluvat vasta
+   * laskeutumisen jälkeiseen kamera-ajoon — jonka tämä sama funktio
+   * käynnistää heti kun lippu laskeutuu, koska maa vaihtuu silloin
+   * arvosta 'pois' kohdemaahan.
+   *
+   * KUVA HAETAAN SILTI JO LENNON AIKANA. Pohja on megatavujen
+   * kokoinen, ja jos lataus alkaisi vasta laskeutumisesta, lehti
+   * välähtäisi paikalleen vasta sekunteja kamera-ajon jälkeen. Haku on
+   * välimuistitettu (VARASTO, HAUT), joten toistuvat piirrot eivät
+   * kuormita mitään.
+   */
+  if (maa && ui.aloituslentoKesken) void haePohja(maa, ui.game.pack.id);
+  const iso = ui.aloituslentoKesken ? null : maa;
   const avain = iso ?? 'pois';
   if (ui.fokuskarttaAvain === avain) return;
   const ensimmainen = ui.fokuskarttaAvain == null;

@@ -427,23 +427,36 @@ function piirraKohdeKuva(ui, sisalto, kuva) {
  * kilpaile kartan rasteroinnin kanssa — sama oppi kuin kartan
  * kamera-ajossa (js/kartta.js ajaKamera).
  *
- * EI SUODATTIMIA: tausta himmenee kevyesti, ei sumennu. Sumennus olisi
- * suodatin, ja suodatin kartan päällä on iOS:llä sama vaara kuin
- * kartalla itsellään.
+ * TAUSTA JÄÄ NÄKYVIIN. Kartta, tietoruutu ja sen pikkukuva pilkottavat
+ * hyvin kevyen sumennuksen ja tummennuksen läpi (css/fokuskohteet.css
+ * .fokuskohde-zoom-auki). Sumennus on `backdrop-filter` HTML-kerroksella
+ * kartan päällä, ei suodatin kartan omassa SVG-kerroksessa — kielto
+ * (tests/rules.test.mjs) koskee jälkimmäistä, koska iOS pudottaa
+ * suodatetun KARTTAKERROKSEN tyhjäksi taustalta palatessa.
+ *
+ * ANKKURI EI SAA KADOTA. Juuri siksi tietoruutua ei enää häivytetä
+ * suurennoksen ajaksi: kutistuminen laskeutuu kortin pikkukuvaan, ja
+ * jos kortti palaa vasta kutistumisen jälkeen, lopussa näkyy pomppu
+ * (omistajan palaute 25.8.2026).
  */
 
 /** Kasvun ja kutistuksen kesto; sama tuntuma kuin fokusvirralla. */
 const KOHDE_ZOOM_MS = 320;
-/** Suuren kuvan osuus ruudun PIENEMMÄSTÄ sivusta (kartta jää reunoille). */
-const KOHDE_ZOOM_OSUUS = 0.94;
-/** Katot leveydelle ja korkeudelle, ettei kuva puske reunaan asti. */
-const KOHDE_ZOOM_LEVEIN = 0.94;
-const KOHDE_ZOOM_KORKEIN = 0.88;
-/** Kuvatekstipalkille varattava pystytila pikseleinä (palkki on kehyksen
- *  sisällä, joten sen tila on vähennettävä kuvan korkeudesta). */
-const KOHDE_ZOOM_TEKSTIPALKKI = 120;
-/** Paperikehyksen oma tila pikseleinä (reunus + sisennys molemmin puolin). */
-const KOHDE_ZOOM_KEHYS_PX = 26;
+/**
+ * Katot ruudusta paperikehyksen ULKOMITALLE. Omistajan palaute
+ * 25.8.2026: *"kuva vielä hieman isommaksi"*. Vanha mitoitus rajasi
+ * leveyden ruudun PIENEMMÄSTÄ sivusta, jolloin vaakakuva jäi
+ * pystyruudulla turhan pieneksi; nyt kumpikin suunta katsoo omaa
+ * sivuaan ja kartalle jää joka reunalle vain kapea kaista.
+ */
+const KOHDE_ZOOM_LEVEIN = 0.96;
+const KOHDE_ZOOM_KORKEIN = 0.94;
+/** Vähimmäisreunus pikseleinä, ettei paperi puske ruudun reunaan asti. */
+const KOHDE_ZOOM_REUNA = 20;
+/** Kuvalle jäävä vähimmäisosuus ruudun korkeudesta, jos kuvateksti on pitkä. */
+const KOHDE_ZOOM_VAHIN_OSUUS = 0.28;
+/** Kehyksen kapein sallittu ulkomitta pikseleinä. */
+const KOHDE_ZOOM_KAPEIN = 140;
 /** Kuvasuhde, jota käytetään ennen kuin kuvan omat mitat tiedetään. */
 const KOHDE_ZOOM_OLETUSSUHDE = 4 / 3;
 /** Kiihtyy alussa, jarruttaa lopussa — kartan kamera-ajon sukulainen. */
@@ -514,32 +527,60 @@ function avaaKohdeSuurennos(ui, kuva, ankkuri) {
   iso.src = valokuvaSuurennos(kuva.tiedosto, KOHDE_ZOOM_PX);
 
   /**
-   * Kuvan laatikko pikseleinä. Leveys ruudun PIENEMMÄSTÄ sivusta, jotta
-   * kartta erottuu kuvan sivuilta; korkeus ruudun omasta korkeudesta,
-   * tai pystykuva jäisi tabletilla puolityhjäksi. Sama luku kummallakin
-   * versiolla, joten pikkukuvan vaihtuminen isoksi ei liikuta mitään.
+   * KUVASUHDE, JOKA ON TIEDOSSA JO ENSIMMÄISELLÄ KEHYKSELLÄ.
+   *
+   * Suurennoksen oma <img> voi olla vielä lataamatta, mutta kortin
+   * pikkukuva on ruudulla ja sillä on samasta tiedostosta luetut mitat.
+   * Ilman tätä kehys aloittaisi oletussuhteella ja loksahtaisi oikeaan
+   * muotoonsa kesken kasvun — juuri se hyppy, jonka pitää olla poissa.
+   */
+  const kuvasuhde = () => {
+    if (img.naturalWidth && img.naturalHeight) return img.naturalWidth / img.naturalHeight;
+    const pikku = ankkuri?.()?.querySelector?.('img');
+    if (pikku?.naturalWidth && pikku.naturalHeight) return pikku.naturalWidth / pikku.naturalHeight;
+    return KOHDE_ZOOM_OLETUSSUHDE;
+  };
+
+  /**
+   * MITTOJA ON YKSI: KEHYKSEN LEVEYS.
+   *
+   * Kuvan korkeus tulee kuvasuhteesta (css: height: auto + aspect-ratio),
+   * joten paperi on aina täsmälleen kuvan muotoinen — ei tyhjiä kaistoja
+   * kuvan ylä- ja alapuolella (omistajan palaute 25.8.2026). Vanha
+   * mitoitus kirjoitti kuvalle sekä leveyden että korkeuden, ja kaksi
+   * erikseen laskettua mittaa pääsi menemään ristiin.
+   *
+   * PAPERIN OMA TILA MITATAAN, EI ARVATA. Reunus, sisennys, rako ja
+   * kuvatekstipalkki vievät kehyksestä osan, ja kuvateksti TAITTUU eri
+   * tavalla eri leveydellä — vakioluku olisi väärä juuri silloin, kun
+   * pystykuva on kapea ja teksti pitkä. Siksi kierros mitataan ja
+   * toistetaan, kunnes leveys asettuu (yleensä kaksi kierrosta).
    */
   const mitoita = () => {
     const leveys = globalThis.innerWidth || 0;
     const korkeus = globalThis.innerHeight || 0;
     if (!leveys || !korkeus) return;
-    const pienempi = Math.min(leveys, korkeus);
-    const enintaanW = Math.min(leveys * KOHDE_ZOOM_LEVEIN, pienempi * KOHDE_ZOOM_OSUUS)
-      - KOHDE_ZOOM_KEHYS_PX;
-    const enintaanH = Math.max(
-      korkeus * KOHDE_ZOOM_KORKEIN - KOHDE_ZOOM_TEKSTIPALKKI,
-      korkeus * 0.3,
-    );
-    const suhde = (img.naturalWidth && img.naturalHeight)
-      ? img.naturalWidth / img.naturalHeight : KOHDE_ZOOM_OLETUSSUHDE;
-    let w = enintaanW;
-    let h = w / suhde;
-    if (h > enintaanH) { h = enintaanH; w = h * suhde; }
-    img.style.width = `${Math.round(w)}px`;
-    img.style.height = `${Math.round(h)}px`;
-    // Palkki on täsmälleen kuvan levyinen: teksti taittuu kehyksen sisään
-    // eikä kartan päälle.
-    kehys.style.width = `${Math.round(w)}px`;
+    const suhde = kuvasuhde();
+    img.style.aspectRatio = suhde.toFixed(4);
+    const enintaanW = Math.min(leveys * KOHDE_ZOOM_LEVEIN, leveys - KOHDE_ZOOM_REUNA);
+    const enintaanH = Math.min(korkeus * KOHDE_ZOOM_KORKEIN, korkeus - KOHDE_ZOOM_REUNA);
+    const vahinH = korkeus * KOHDE_ZOOM_VAHIN_OSUUS;
+    let ulko = Math.round(enintaanW);
+    for (let kierros = 0; kierros < 3; kierros += 1) {
+      kehys.style.width = `${ulko}px`;
+      const kuvaLeveys = img.offsetWidth;
+      if (!kuvaLeveys) break;
+      const vaakaTila = kehys.offsetWidth - kuvaLeveys;
+      const pystyTila = kehys.offsetHeight - img.offsetHeight;
+      // Kuinka leveä kuva mahtuu pystysuunnassa jäljelle jäävään tilaan.
+      const korkeudesta = Math.max(enintaanH - pystyTila, vahinH) * suhde;
+      const uusi = Math.round(
+        Math.max(Math.min(enintaanW - vaakaTila, korkeudesta), KOHDE_ZOOM_KAPEIN) + vaakaTila,
+      );
+      if (Math.abs(uusi - ulko) <= 1) { ulko = uusi; break; }
+      ulko = uusi;
+    }
+    kehys.style.width = `${ulko}px`;
   };
 
   /**
@@ -560,13 +601,6 @@ function avaaKohdeSuurennos(ui, kuva, ankkuri) {
   const poista = () => {
     globalThis.removeEventListener?.('resize', mitoita);
     document.removeEventListener('keydown', nappain, true);
-    /*
-     * Tietoruutu palaa näkyviin (ks. body-luokka alempana). Poisto on
-     * tässä eikä sulkemisessa, jotta kortti pysyy häivytettynä myös
-     * kutistumisen ajan — ja palaa varmasti silloinkin, kun suurennos
-     * revitään pois ilman animaatiota.
-     */
-    document.body.classList.remove('fokuskohde-zoom-paalla');
     kerros.remove();
   };
 
@@ -601,16 +635,23 @@ function avaaKohdeSuurennos(ui, kuva, ankkuri) {
   });
 
   /*
-   * TIETORUUTU POIS SUURENNOKSEN AJAKSI. Suurennos on kartan ele, ja sen
-   * ajaksi ruudulla saa olla vain kartta ja kuva.
-   *
-   * HÄIVYTYS EIKÄ `display: none` (css/fokuskohteet.css): kortin
-   * kuvapainike on suurennoksen ANKKURI, ja piilotettuna sillä ei olisi
-   * enää ruutupaikkaa — kutistuminen takaisin jäisi tekemättä.
+   * TIETORUUTU JÄÄ NÄKYVIIN (omistajan tilaus 25.8.2026). Kortti ja sen
+   * pikkukuva pilkottavat kevyen sumennuksen takaa koko suurennoksen
+   * ajan — ne ovat sekä lähtö- että maalipaikka, ja kun ankkuri on koko
+   * ajan ruudulla, sulkeminen laskeutuu siihen saumatta. Aiemmin kortti
+   * häivytettiin ja palasi vasta kutistumisen jälkeen, jolloin lopussa
+   * näkyi pomppu.
    */
-  document.body.classList.add('fokuskohde-zoom-paalla');
   document.body.appendChild(kerros);
   if (ui) ui.fokuskohdeZoom = { kerros, sulje, heti: poista };
+  /*
+   * MITTA HETI, EI VASTA KASVUN ALKAESSA. Kehyksen muoto ei saa riippua
+   * siitä, ehtiikö kuva latautua tai ajastin laueta: ilman tätä paperi
+   * ehtisi näkyä oletussuhteessa ja loksahtaisi vasta myöhemmin kuvan
+   * muotoon. Kuvasuhde tiedetään jo nyt, koska kortin pikkukuva on
+   * ruudulla (kuvasuhde).
+   */
+  mitoita();
 
   /*
    * KASVU ALKAA VASTA KUN KUVALLA ON MITAT. Ladottu <img> ilman ladattua

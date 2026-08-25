@@ -577,7 +577,7 @@ export function kokoaLuettavaTeksti(juuri, asetukset = {}) {
  *   1. kokoaLuettavatKohdat — sama valinta kuin kaynnistaLuenta tekee
  *      (samat ohitukset, sama ohitaEkaOtsikko)
  *   2. kohdat[0] on ensimmäinen kappale; sivu avataan aina ylhäältä,
- *      joten luenta alkaa siitä (nakyvaKohta palauttaa 0)
+ *      joten luenta alkaa siitä (aloitusKohta palauttaa 0)
  *   3. puheen pilkonta antaa KOKO ENSIMMÄISEN KAPPALEEN yhtenä
  *      palana (js/puhe.js kappaleenPalat; omistaja 18.8.2026 —
  *      palaraja kesken kappaleen kuului intonaatiohyppynä), joten
@@ -823,12 +823,19 @@ function luoLuennanSeuranta(kohdat, ohita = LUKIJAN_OHITETTAVAT) {
   /*
    * ALOITUSRAUHA (omistajan tilaus 15.8.2026: "Jos lehti on
    * yläreunassa ja kuuntelu alkaa, niin ruudun pitäisi pysyä
-   * paikoillaan seuraavaan kappaleeseen asti"). Luenta alkaa aina
-   * näytöllä olevasta kohdasta, joten käynnistyksen vieritys vain
+   * paikoillaan seuraavaan kappaleeseen asti"). Käynnistyksen vieritys
    * nykäisi näkymän pois siitä, mitä lukija juuri katsoi — sivun
    * ylälaidassa se pyyhkäisi nimiön ja kannen kuvat ohi ennen kuin
    * niitä ehti nähdä. Ensimmäinen kuuluva kohta ei siksi vieritä
-   * koskaan; seuranta tarttuu ruoriin vasta toisesta kohdasta.
+   * alaspäin; seuranta tarttuu ruoriin vasta toisesta kohdasta.
+   *
+   * YKSI POIKKEUS (25.8.2026): aloitus siirrettiin otsikkorajalle
+   * (aloitusKohta), joten ensimmäinen kuuluva kohta voi olla näkymän
+   * YLÄPUOLELLA — juuri ruudun ylitse vierähtänyt väliotsikko on
+   * tavallisin tapaus. Silloin se haetaan näkyviin, muuten luenta
+   * alkaisi maalaamalla tekstiä, jota kukaan ei näe. Alaspäin ei
+   * vieritetä silloinkaan: rauha koskee sitä suuntaa, jossa nimiö ja
+   * kannen kuvat ovat.
    */
   let alkurauha = true;
   const paivita = (t) => {
@@ -845,8 +852,14 @@ function luoLuennanSeuranta(kohdat, ohita = LUKIJAN_OHITETTAVAT) {
       }
       // Kohdan alku näkyviin: scroll-margin (CSS) pitää tarttuvan
       // otsikkorivin poissa päältä.
-      if (alkurauha) alkurauha = false;
-      else vierita(kohta.osat?.[0]?.solmu);
+      const alkuSolmu = kohta.osat?.[0]?.solmu;
+      if (alkurauha) {
+        alkurauha = false;
+        // Vain ylöspäin: aloitusotsikko näkymän yläpuolelta haetaan
+        // ruutuun, mutta ylälaidan rauhaa ei rikota (ks. alkurauha).
+        const rect = alkuSolmu?.getBoundingClientRect?.();
+        if (rect && rect.top < 0) vierita(alkuSolmu);
+      } else vierita(alkuSolmu);
     }
     if (maalaus && t.teksti) {
       const alueet = osoitaAlueet(kohta, t.alku, t.alku + t.teksti.length, ohita);
@@ -882,9 +895,12 @@ function luoLuennanSeuranta(kohdat, ohita = LUKIJAN_OHITETTAVAT) {
 }
 
 /**
- * Ensimmäinen kohta, joka on näytöllä: luenta alkaa siitä (omistajan
- * tilaus 14.8.2026: "Lukija saisi aloittaa sen kohdan alusta joka on
- * näytöllä"). Yläraja jättää tarttuvan otsikkorivin huomiotta.
+ * Ensimmäinen kohta, joka on näytöllä (omistajan tilaus 14.8.2026:
+ * "Lukija saisi aloittaa sen kohdan alusta joka on näytöllä"). Yläraja
+ * jättää tarttuvan otsikkorivin huomiotta.
+ *
+ * Tämä on mittaus eikä päätös: aloituskohdan valitsee aloitusKohta,
+ * joka siirtää tästä vielä otsikkorajalle.
  */
 function nakyvaKohta(kohdat) {
   if (typeof window === 'undefined') return 0;
@@ -892,6 +908,49 @@ function nakyvaKohta(kohdat) {
   for (let i = 0; i < kohdat.length; i += 1) {
     const rect = kohdat[i].osat?.[0]?.solmu?.getBoundingClientRect?.();
     if (rect && rect.bottom > ylaraja + 1) return i;
+  }
+  return 0;
+}
+
+/**
+ * LUENTA ALKAA AINA OTSIKKORAJALTA (omistajan linjaus 25.8.2026).
+ *
+ * Aloituskohtia on tasan kaksi lajia: SIVUN ALKU tai YLIN NÄKYVÄ
+ * VÄLIOTSIKKO. Keskeltä juttua ei aloiteta koskaan.
+ *
+ * MIKSI. Aloitus oli ennen pelkkä nakyvaKohta: luenta lähti siitä
+ * kappaleesta, joka sattui olemaan ruudun ylälaidassa. Kappaleen raja
+ * on kyllä virkkeen raja, mutta ei ajatuksen raja — vierityksen
+ * jälkeen kuulija putosi keskelle jaksoa ("…ja siksi kupolin rakensi
+ * Brunelleschi.") tietämättä, mistä jaksosta puhutaan. Väliotsikko
+ * kertoo sen yhdellä rivillä, ja se on kirjoitettu juuri siihen
+ * paikkaan, josta kappalejakso alkaa.
+ *
+ * VALINTA. Aloitus on aina jokin KERÄYSLISTAN kohta (valkolista:
+ * leipätekstit otsikkoineen), joten "otsikosta aloittaminen" on sama
+ * asia kuin listan leikkaaminen otsikollisesta kohdasta alkaen —
+ * otsikko on kohtansa esirivi, ei oma kohtansa (ks. keraaKohdat).
+ * Siksi valinta on yhden silmukan mittainen:
+ *
+ *   1. Sivu on alussa (ylin näkyvä kohta on ensimmäinen) → 0.
+ *   2. Muuten kävellään ylin näkyvä kohta ja siitä ylöspäin, kunnes
+ *      löytyy otsikollinen kohta. Jos ylin näkyvä kohta ITSE alkaa
+ *      otsikolla, otsikko on näkymässä ja aloitus on siinä; muuten
+ *      löytyy lähin sen yläpuolinen otsikko, jonka osiota juuri nyt
+ *      luetaan ruudulla.
+ *   3. Otsikkoa ei ole (yhtäjaksoinen juttu) → 0, sivun alku.
+ *
+ * Aloitus voi siis olla näkymän yläpuolella. Luennan seuranta hakee
+ * sen näkyviin (luoLuennanSeuranta, aloitusrauha).
+ *
+ * @param {{otsikollinen?: boolean, otsikko?: boolean}[]} kohdat
+ * @returns {number} ensimmäisenä luettavan kohdan indeksi
+ */
+export function aloitusKohta(kohdat) {
+  if (!kohdat?.length) return 0;
+  const nakyva = nakyvaKohta(kohdat);
+  for (let i = nakyva; i > 0; i -= 1) {
+    if (kohdat[i]?.otsikollinen || kohdat[i]?.otsikko) return i;
   }
   return 0;
 }
@@ -1143,8 +1202,9 @@ function kerran(fn) {
  *
  * `kohdat` ja `aloitusKappale` kytkevät luennan seurannan (lukijaääni):
  * kuuluvat virkkeet maalataan, sivu vierii luennan perässä ja luenta
- * alkaa näytöllä olevasta kohdasta. Laitteen oma ääni lukee ilman
- * seurantaa — sillä ei ole palatarkkaa tilaa.
+ * alkaa annetusta kohdasta (kaiuttimen painalluksessa sivun alusta tai
+ * ylimmästä näkyvästä väliotsikosta, ks. aloitusKohta). Laitteen oma
+ * ääni lukee ilman seurantaa — sillä ei ole palatarkkaa tilaa.
  *
  * @param {string} teksti luettava teksti
  * @param {Element|null} nappi nappi, jonka tila seuraa luentaa
@@ -1773,10 +1833,12 @@ function napinTeksti(nappi) {
 /**
  * Käynnistää napin luennan (kaiuttimen painalluksen luentahaara).
  *
- * Elementtilähteestä kootaan kohdat lohkoelementteineen: niillä
- * luenta alkaa näytöllä olevasta kohdasta, sivu vierii luennan
- * perässä ja kuuluvat virkkeet maalataan (omistajan tilaukset
- * 14.8.2026). Merkkijonolähde luetaan entiseen tapaan.
+ * Elementtilähteestä kootaan kohdat lohkoelementteineen: niillä sivu
+ * vierii luennan perässä ja kuuluvat virkkeet maalataan (omistajan
+ * tilaukset 14.8.2026), ja luenta alkaa otsikkorajalta — sivun alusta
+ * tai ylimmästä näkyvästä väliotsikosta (omistajan linjaus 25.8.2026,
+ * ks. aloitusKohta). Merkkijonolähde luetaan entiseen tapaan alusta:
+ * sillä ei ole kohtia eikä siis rajoja, joilta valita.
  */
 function kaynnistaLuenta(nappi, isanta, { lueOtsikko = false } = {}) {
   const lahdeNyt = nappi.__lukijaLahde;
@@ -1800,7 +1862,9 @@ function kaynnistaLuenta(nappi, isanta, { lueOtsikko = false } = {}) {
   if (!teksti) return false;
   const alkoi = lueAaneen(teksti, nappi, {
     kohdat,
-    aloitusKappale: kohdat ? nakyvaKohta(kohdat) : 0,
+    // Aloitus on aina otsikkoraja: sivun alku tai ylin näkyvä
+    // väliotsikko (omistajan linjaus 25.8.2026, ks. aloitusKohta).
+    aloitusKappale: kohdat ? aloitusKohta(kohdat) : 0,
     jatko: nappi.__lukijaJatko ?? null,
   });
   // Lukijaäänellä nappi avaa myös ohjauspaneelin (tauko ja

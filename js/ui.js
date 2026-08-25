@@ -444,9 +444,17 @@ const FOKUS_KUVAN_REUNA = [0.16, 0.28, 0.42, 0.62, 1];
  * puoli ruutua. Laatta skaalataan siksi käänteisellä zoomikertoimella
  * kuten fokusvirran kuvavinjetitkin (js/fokusvirta.js PINNI_LEVEYS):
  * halkaisija on ruudulla aina noin 26 px, jolloin se ei hallitse
- * lehteä muttei myöskään katoa. Skaalaus on VAIN pienennys — jos laatta
- * on jo luonnostaan tätä pienempi (kaukainen yleiskuva), se jätetään
- * rauhaan.
+ * lehteä muttei myöskään katoa.
+ *
+ * KIINTEÄ KOKO, EI DYNAAMINEN (omistajan linjaus 25.8.2026, kumoaa
+ * aiemman): *"kartan pallurat kiinteän kokoisiksi"*. Skaalaus oli
+ * aiemmin vain PIENENNYS — yleiskuvassa, jossa laatta on luonnostaan
+ * tätä pienempi, se jätettiin rauhaan, ja laatta siis kutistui ja kasvoi
+ * zoomin mukana aina siihen asti kun 26 px:n katto tuli vastaan. Nyt
+ * kerroin on käänteinen zoomiskaalaus sellaisenaan (1/skaala), sama
+ * tekniikka kuin kohdemerkeillä (paivitaFokusKohdeMitat), nimilapuilla
+ * ja kohtaamispisteellä (js/fokuspiste.js): halkaisija on ruudulla sama
+ * joka zoomilla.
  */
 const FOKUS_LAATTA_PX = 26;
 /*
@@ -455,6 +463,16 @@ const FOKUS_LAATTA_PX = 26;
  * sormenpään vähimmäismitta on 44 px. 48 px antaa siihen varan.
  */
 const FOKUS_LAATTA_OSUMA_PX = 48;
+/*
+ * SYKKIVÄN KEHÄN LEPOSÄDE RUUDUN PIKSELEINÄ (omistajan pelitestitilaus
+ * 25.8.2026: *"Ateenan laatta sykkii kevyesti houkutellen
+ * klikkaamaan"*). Laatan säde on FOKUS_LAATTA_PX / 2 = 13, joten 17
+ * jättää kehän laatan ulkopuolelle mutta sen mittasuhteisiin; CSS
+ * kasvattaa sitä sykkeen huipussa muutaman pikselin
+ * (css .fokuslaatta-syke). Kehä on olemassa vain silloin, kun laatan
+ * napautus oikeasti tekee jotain (fokusLaattaTutkii).
+ */
+const FOKUS_LAATTA_SYKE_PX = 17;
 /*
  * Osuma-alueen katto LAUDAN yksiköissä. Ruutumitta muuttuu laudan
  * yksiköiksi jakamalla zoomilla, ja yleiskuvassa (pieni zoom) jakolasku
@@ -1855,7 +1873,7 @@ export class UI {
       // Kohde 'valikko': ehdota-nappi asuu hampurilaisessa, joten
       // kupla osoittaa sinne (omistaja 18.8.2026).
       if (!this.dead) this.polloKupla(teksti, 'valikko');
-    });
+    }, () => this.game?.dayCount?.() ?? 1);
     /*
      * PÖLLÖN NÄKYVYYS UUDELLE PELILLE. Nappi katoaa ja ilmestyy pelin
      * tilan mukana (game.polloLoydetty), ja uusi peli vaihtaa UI:n
@@ -5322,9 +5340,10 @@ export class UI {
    *
    * KAKSI TYÖTÄ, YKSI PAIKKA:
    *
-   *   1. KOKO. Lehden päällä laatta skaalataan käänteisellä
-   *      zoomikertoimella niin, että sen halkaisija on ruudulla noin
-   *      FOKUS_LAATTA_PX. Skaalaus tehdään laatan omien osien
+   *   1. KOKO. Fokusnäkymässä laatta skaalataan käänteisellä
+   *      zoomikertoimella niin, että sen halkaisija on ruudulla
+   *      FOKUS_LAATTA_PX joka zoomilla — myös yleiskuvassa, jossa
+   *      skaalaus suurentaa. Skaalaus tehdään laatan omien osien
    *      transform-määreisiin kaupungin keskipisteen ympäri, jolloin
    *      heilunta (rotate) ja porttikehä säilyvät suhteessa toisiinsa.
    *      Alkuperäinen muunnos talletetaan data-määreeseen, joten
@@ -5360,21 +5379,27 @@ export class UI {
       || osa.classList.contains('city-start'));
     const rx = Number(laatta?.getAttribute('rx'));
     /*
-     * Kutistus koskee vain FOKUSNÄKYMÄN laattaa: ilman kuvaa kartta on
-     * tavallinen lauta, jossa laatta on omassa mitassaan. Ehto on kuvan
-     * olemassaolo eikä sen suorakaide (v1101, sama linja kuin
-     * paivitaFokusPallotissa): kuva on koko näkymä, ei laatta laudalla.
+     * KIINTEÄ KOKO RUUDULLA, EI ENÄÄ PELKKÄ KATTO (omistajan linjaus
+     * 25.8.2026, ks. FOKUS_LAATTA_PX). Kerroin on käänteinen
+     * zoomiskaalaus sellaisenaan: yleiskuvassa se SUURENTAA laattaa,
+     * lähikuvassa kutistaa, ja kummassakin halkaisija on ruudulla sama
+     * FOKUS_LAATTA_PX.
+     *
+     * MITTA KOSKEE FOKUSMOODIA, EI LEHTEÄ. Ehto oli ennen kuvan
+     * olemassaolo (fokusPohjaBbox), mutta pallurat ovat samat pallurat
+     * myös maassa, jolle esirenderöityä pohjaa ei vielä ole — ja juuri
+     * sellaisen maan yli aloituslento kulkee. Sama raja kuin
+     * kohdemerkeillä (fokusKohdeMerkit): fokusmoodi ja pelinäkymä.
      */
-    const lehdella = Boolean(this.fokusPohjaBbox);
-    const kerroin = lehdella && Number.isFinite(rx) && rx > 0
-      ? Math.min(1, (FOKUS_LAATTA_PX / 2) / (rx * skaala))
+    const kerroin = Number.isFinite(rx) && rx > 0
+      ? (FOKUS_LAATTA_PX / 2) / (rx * skaala)
       : 1;
     // Edellisen kaupungin osat takaisin omaan kokoonsa.
     for (const vanha of this.fokusLaattaOsat ?? []) {
       if (!osat.includes(vanha)) this.asetaLaatanKoko(vanha, 1);
     }
     for (const osa of osat) this.asetaLaatanKoko(osa, kerroin);
-    this.fokusLaattaOsat = kerroin < 1 ? osat : [];
+    this.fokusLaattaOsat = osat;
 
     /*
      * NAPAUTUSALUE VAIN KUN TUTKI OLISI TARJOLLA. Ks. fokusLaattaTutkii:
@@ -5402,6 +5427,35 @@ export class UI {
       this.fokusLaattaAvain = avain;
       this.fokusLaattaKerros.textContent = '';
       for (const x of kohdat) {
+        /*
+         * LAATTA SYKKII KEVYESTI (omistajan pelitestitilaus 25.8.2026:
+         * *"Ateenan laatta sykkii kevyesti houkutellen klikkaamaan"*).
+         *
+         * Syke on OMA KEHÄNSÄ eikä laatan oma muunnos. Laatan
+         * transform-määre on kirjoitettu käsin (heilunta + kiinteän
+         * ruutukoon skaalaus, asetaLaatanKoko), ja CSS:n transform
+         * VOITTAA määreen — sykkivä skaalaus söisi siis sekä heilunnan
+         * että keskityksen ja laatta hyppäisi paikaltaan. Kehä on siksi
+         * erillinen elementti, joka ei tiedä laatasta muuta kuin
+         * keskipisteen.
+         *
+         * SAMA KAAVA KUIN VIHREÄLLÄ KOHTAAMISPISTEELLÄ (js/fokuspiste.js):
+         * ankkuriryhmä on laudan koordinaateissa ja skaalataan zoomin
+         * käänteisluvulla, jolloin kehän säde on RUUDUN PIKSELEITÄ.
+         * Sykkeessä liikkuvat vain `opacity` ja `transform: scale()` —
+         * ei `r` (sen CSS-animointi ei ole kaikissa selaimissa tuettua)
+         * eikä suodattimia (tests/rules.test.mjs). Kehän keskipiste on
+         * ankkurin origossa, joten oletusarvoinen transform-origin osuu
+         * siihen samaan pisteeseen.
+         *
+         * KEHÄ ON NAPAUTUSALUEEN ALLA piirtojärjestyksessä ja lisäksi
+         * läpäisemätön hiirelle (css .fokuslaatta-syke), joten se ei voi
+         * varastaa napautusta.
+         */
+        const ankkuri = el('g', { class: 'fokuslaatta-ankkuri' }, this.fokusLaattaKerros);
+        ankkuri.dataset.kx = String(x);
+        ankkuri.dataset.ky = String(city.y);
+        el('circle', { class: 'fokuslaatta-syke', r: FOKUS_LAATTA_SYKE_PX }, ankkuri);
         const osuma = el('circle', {
           cx: x, cy: city.y, r, class: 'fokuslaatta-osuma',
         }, this.fokusLaattaKerros);
@@ -5413,11 +5467,21 @@ export class UI {
           if (!this.busy) this.avaaTutkinta(city);
         });
       }
-      return;
     }
-    // Sama kaupunki, uusi zoom: pelkkä säde riittää — kuuntelijaa ei
-    // kytketä uudelleen, jottei napautus katoaisi sormen alta.
-    for (const osuma of this.fokusLaattaKerros.children) osuma.setAttribute('r', r);
+    /*
+     * Mitat joka kutsulla — myös juuri rakennetuille osille, jotta
+     * sääntö on yhdessä paikassa. Napautusalue on laudan yksiköissä,
+     * sykekehän ankkuri käänteisessä zoomissa. Kuuntelijoita ei kytketä
+     * uudelleen, jottei napautus katoaisi sormen alta.
+     */
+    for (const osuma of this.fokusLaattaKerros.querySelectorAll('.fokuslaatta-osuma')) {
+      osuma.setAttribute('r', r);
+    }
+    const zoom = (1 / skaala).toFixed(4);
+    for (const ankkuri of this.fokusLaattaKerros.querySelectorAll('.fokuslaatta-ankkuri')) {
+      ankkuri.setAttribute('transform',
+        `translate(${ankkuri.dataset.kx} ${ankkuri.dataset.ky}) scale(${zoom})`);
+    }
   }
 
   /**
@@ -5426,13 +5490,20 @@ export class UI {
    * Alkuperäinen muunnos (heilunta) talletetaan ensimmäisellä kerralla
    * data-määreeseen. Ilman sitä palautus joutuisi rakentamaan heilunnan
    * uudelleen samasta siemenestä — kaksi kopiota samasta säännöstä.
+   *
+   * KERROIN SAA OLLA YLI YHDEN (omistajan linjaus 25.8.2026, kiinteä
+   * ruutukoko): yleiskuvassa laattaa SUURENNETAAN, jotta sen halkaisija
+   * on ruudulla sama kuin lähikuvassa. Palautus omaan kokoon on siis
+   * ykkösen kohta eikä "ykkönen tai enemmän" — pyöristysvara mukana,
+   * jottei tismalleen oikean kokoiselle laatalle kirjoiteta turhaa
+   * muunnosta joka piirrossa.
    */
   asetaLaatanKoko(osa, kerroin) {
     if (osa.dataset.laattaMuunnos === undefined) {
       osa.dataset.laattaMuunnos = osa.getAttribute('transform') ?? '';
     }
     const perus = osa.dataset.laattaMuunnos;
-    if (!(kerroin < 1)) {
+    if (!(kerroin > 0) || Math.abs(kerroin - 1) < 0.0005) {
       if (perus) osa.setAttribute('transform', perus);
       else osa.removeAttribute('transform');
       return;
@@ -5674,10 +5745,12 @@ export class UI {
     const pohja = this.fokusPohjaBbox ?? null;
     /*
      * ALOITUSLENTO PITÄÄ MAAILMAN AUKI (Raamattu, ALOITUSLENTO UUSIKSI:
-     * lähtömaa ja kohdemaa näkyvät molemmat). Lennon aikana kohdemaan
-     * kuva ehtii ilmestyä kartalle, mutta kuvan oma verho peittäisi
-     * Britannian ja koko lentoreitin — kone lentäisi tyhjän paperin yli.
-     * Lennon ajan pätee siis vanha sääntö: käydyt maat aukkoina.
+     * lähtömaa ja kohdemaa näkyvät molemmat). Lennon aikana lehteä ei
+     * enää piirretä lainkaan (js/fokuskartta.js), joten `pohja` on
+     * silloin null ja ehto on tuplavarmistus: jos lehti jostain jäisi
+     * paikalleen, sen oma verho peittäisi Britannian ja koko
+     * lentoreitin — kone lentäisi tyhjän paperin yli. Lennon ajan pätee
+     * siis vanha sääntö: käydyt maat aukkoina.
      *
      * SAMA YLEISKUVASSA (mannerZoom pois). Silloin ruudulla on koko
      * lauta ja fokuskuva on siinä pieni upote — verho peittäisi
@@ -6872,10 +6945,61 @@ export class UI {
   }
 
   /**
+   * SAAKO LIIKU-NAPPI NÄKYÄ JUURI NYT?
+   *
+   * Omistajan tarkennus 25.8.2026: *"Liiku-nappi EI näy pelin alussa
+   * lainkaan. Se ilmestyy vasta kun maan aarre on löydetty."*
+   *
+   * MIKSI. Fokusmoodissa kaupunki on tehtävä eikä pysäkki: matkakirja,
+   * pöllön huomio, täky, tietovisa ja lopulta paikallisen esittämä
+   * aarrekysymys (Raamattu, ANNOSTELU ja ETENEMINEN). Liiku-nappi
+   * alarivissä on koko sen ajan ovi ulos, ja aloittava pelaaja lukee
+   * ainoan näkyvän napin ohjeeksi. Kun nappi ilmestyy vasta aarteen
+   * ratkettua, se on palkinto ja lupa jatkaa — juuri se, mitä
+   * ETENEMINEN kuvaa: *"Aarteen jälkeen vapaa tutkinta … tai pelaaja
+   * jatkaa matkaa."*
+   *
+   * MITTA ON LAATTA, SAMA KUIN LEHTILUKOLLA (js/fokusvirta.js
+   * fokusvirtaLukitseeLehden): niin kauan kuin kaupungin laatta on
+   * kääntämättä (game.tokens sisältää sen), aarretta ei ole löydetty.
+   * Kääntyneen laatan alta löytyi mitä tahansa — myös väärä vastaus
+   * päättää vaiheen aikanaan — ja lukko aukeaa lopullisesti.
+   *
+   * UMPIKUJAA EI SYNNY. Nappi on aina näkyvissä silloin kun laattaa ei
+   * ole (kaupunki ilman laattaa, reitin varsi ilman kaupunkia,
+   * fokusmoodi pois, katselutila) ja aina kehittäjätilassa, jossa
+   * omistaja hyppii kaupungista toiseen.
+   *
+   * VÄÄRÄ VASTAUS EI LUKITSE KAUPUNKIIN. Laatta jää silloin paikalleen
+   * ja kysymyksen voi yrittää uudelleen (sama sääntö kuin lehtilukolla,
+   * js/fokusvirta.js): laatan napautus avaa tehtävän niin monta kertaa
+   * kuin tarvitaan. Nappi palaa heti kun laatta kääntyy — löytyi sen
+   * alta mitä tahansa.
+   *
+   * ILMESTYMINEN ILMAN SIVUN PÄIVITYSTÄ hoituu itsestään: laatan
+   * kääntävä vastaus kulkee doActionin kautta, ja se piirtää rivin
+   * uudelleen (renderActions) samassa kehyksessä.
+   */
+  liikuNappiNakyy() {
+    if (!this.fokusmoodi || this.katselu) return true;
+    // Kytkin luetaan joka kerta eikä välimuistista: omistaja kytkee
+    // kehittäjätilan kesken pelin, eikä napin pidä odottaa uutta peliä.
+    if (kehittajaTilaPaalla()) return true;
+    const city = this.game.cityOf?.();
+    if (!city) return true;
+    return !this.game.tokens?.has(city.id);
+  }
+
+  /**
    * ALANAPPIRIVI: KAKSI PAIKKAA (omistajan linjaus 24.8.2026).
    *
    *   vasen   Liiku  — monitoiminappi, avaa matkustusnapit
    *   oikea   Tutki  — suurennuslasi, ennallaan
+   *
+   * LIIKU ODOTTAA AARRETTA (omistajan tarkennus 25.8.2026): fokusmoodissa
+   * nappia ei ole olemassa ennen kuin kaupungin laatta on käännetty
+   * (ks. liikuNappiNakyy). Rivi voi siis olla hetken tyhjä — se on
+   * tarkoitus, ei virhe: silloin ainoa tarjolla oleva teko on kartalla.
    *
    * FOKUSNÄKYMÄSSÄ VAIN LIIKU (omistajan pelitestitilaus 24.8.2026
    * illalla). Tutki-napin toiminto siirtyi kaupungin laatan
@@ -6941,7 +7065,15 @@ export class UI {
       e.stopPropagation();
       this.vaihdaLiuku();
     });
-    perus.appendChild(monitoimi);
+    /*
+     * NAPPI JÄTETÄÄN POIS, EI PIILOTETA (omistajan tarkennus 25.8.2026,
+     * ks. liikuNappiNakyy). Piilotettu nappi jättäisi ruudukkoon
+     * paikkansa ja kartuutsin viereen tyhjän laatikon; poissa oleva
+     * nappi vie mukanaan myös liu'un, jota ei ilman sitä voi avata.
+     */
+    const liikuNakyy = this.liikuNappiNakyy();
+    if (liikuNakyy) perus.appendChild(monitoimi);
+    else this.liukuAuki = false;
 
     /*
      * PÖLLÖLLÄ EI OLE ENÄÄ PAIKKAA RIVISSÄ (omistajan linjaus
@@ -13131,7 +13263,7 @@ export class UI {
     if (!bbox) return false;
     try {
       await this.isoAnimaatio(() => this.aloituslentoSisalla({
-        kerros, lahto, kohde, kohdeIso, bbox, line,
+        kerros, lahto, kohde, bbox, line,
       }));
     } finally {
       /*
@@ -13146,7 +13278,7 @@ export class UI {
   }
 
   /** Lennon varsinainen piirto; kääre yllä hiljentää kartan animaatiot. */
-  async aloituslentoSisalla({ kerros, lahto, kohde, kohdeIso, bbox, line }) {
+  async aloituslentoSisalla({ kerros, lahto, kohde, bbox, line }) {
     kerros.textContent = '';
     /*
      * kartalento kertoo CSS:lle ja rasteroinnille, että lento on kartan
@@ -13156,9 +13288,14 @@ export class UI {
      */
     document.body.classList.add('flight-active', 'kartalento');
     /*
-     * Fokusmoodin niukkuus voimaan ENNEN kamera-ajoa: sumuverho ja
-     * maakohtainen pohja rakennetaan tässä, jotta ajo alkaa jo valmiiksi
-     * niukalta kartalta eikä maailma himmene kesken liikkeen.
+     * Fokusmoodin niukkuus voimaan ENNEN kamera-ajoa: sumuverho
+     * rakennetaan tässä, jotta ajo alkaa jo valmiiksi niukalta kartalta
+     * eikä maailma himmene kesken liikkeen.
+     *
+     * MAAKOHTAISTA POHJAA EI PIIRRETÄ LENNON AIKANA (omistajan pelitesti
+     * 25.8.2026, ks. js/fokuskartta.js). Lentonäkymä on niukka vanha
+     * kartta punaisella viivalla; lehti, sen verhonreikä, laatan alle
+     * keskitetyt nimilaput ja kohtaamispiste tulevat vasta perillä.
      */
     this.paivitaFokusKerros();
 
@@ -13364,14 +13501,22 @@ export class UI {
     this.hideFlightLine();
     /*
      * Lento päättyy tähän, ja vasta nyt muut kamera-ajot ovat taas
-     * sallittuja. Kamera ajaa kohdemaan rajaukseen — se on sama
-     * saapumisliike, jonka fokuskartta tekee muissa maanvaihdoksissa —
-     * ja render käynnistää annosteluvirran (fokusvirtaSaapuminen),
-     * joka odotti lennon ajan.
+     * sallittuja. Render tekee loput kahdessa osassa:
+     *
+     *   1. KAMERA-AJO KOHDEMAAHAN. Lipun laskiessa kohdemaa on
+     *      fokuskartan mielestä vaihtunut ('pois' → GRC), ja
+     *      js/fokuskartta.js ajaa saman saapumisliikkeen kuin muissakin
+     *      maanvaihdoksissa — lehden IKKUNAAN, ei maan muotolaatikkoon.
+     *      Erillinen maidenBbox-ajo oli tässä niin kauan kuin lehti
+     *      ilmestyi jo lennon aikana eikä maa siis enää vaihtunut
+     *      perillä; nyt kaksi ajoa samassa kehyksessä vain kilpailisi
+     *      keskenään (maattomalle maalle fokuskartta osaa saman
+     *      varareitin, ks. maanNakyma).
+     *   2. FOKUSKERROKSET JA ANNOSTELUVIRTA. Lehti, nimilaput,
+     *      kohtaamispiste ja fokusvirtaSaapuminen odottivat lennon ajan
+     *      ja alkavat nyt kuten muillakin saapumisilla.
      */
     this.aloituslentoKesken = false;
-    const maanRajaus = this.kartta.maidenBbox([kohdeIso]);
-    if (maanRajaus) this.kartta.ajaKamera({ bbox: maanRajaus });
     if (!this.dead) this.render();
   }
 

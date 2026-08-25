@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1103, teksti: 'Fokus: lento, napit, kysymykset, viivaimet, hionta' },
   { v: 1102, teksti: 'Fokus: kamera rajattu, laudan piilotus, maataulu' },
   { v: 1101, teksti: 'Kevyt kulku, aanet, Eurooppa, hionta' },
   { v: 1100, teksti: 'Fokusnakyma: mitat, kohteet, napit' },

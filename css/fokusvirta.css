@@ -696,10 +696,11 @@ body.fokuszoom-paalla .fokusvirta-kortti {
 
 /* ================= KEVYT KULKU -KOKEILU (24.8.2026, ilta) ==========
  *
- * Raamatun osio "Fokusmoodi", kohta KEVYT KULKU -KOKEILU. Kaksi uutta
- * pintaa: pöllön lyhyt vinkki lehden avautuessa ja kartan vihreä
- * kohtaamispiste. Kummankin markup on js:ssä (js/fokusvirta.js
- * fokusvirtaLehtivinkki, js/fokuspiste.js).
+ * Raamatun osio "Fokusmoodi", kohta KEVYT KULKU -KOKEILU. Kolme uutta
+ * pintaa: pöllön lyhyt kupla (vinkki lehden avautuessa, kuittaus
+ * tehtävän ratkettua), nimetyn tehtävän vihjerivi ja kartan vihreä
+ * kohtaamispiste. Markup on js:ssä (js/fokusvirta.js naytaPolloKupla,
+ * js/fokustehtavat.js piirraNimettyTehtava, js/fokuspiste.js).
  */
 
 /* ---------- pöllön vinkki lehden päällä ---------- */
@@ -733,6 +734,76 @@ body.fokuszoom-paalla .fokusvirta-kortti {
 }
 
 .fokusvirta-vinkkiruksi input { margin: 0; }
+
+/* ---------- nimetyn tehtävän vihjerivi ---------- */
+
+/*
+ * VIHJERIVI NIMILAATAN ALLE (omistajan pelitesti 25.8.2026: *"Tehtävän
+ * otsikko saisi vinkata että se avaa aarteen."*). Markup on
+ * js/fokustehtavat.js:ssä (piirraNimettyTehtava).
+ *
+ * Nimilaatta on kapiteelia ja harvennettua kirjoituskonefonttia — sen
+ * äänensävy on painettu leima. Vihje on toista ääntä: lehden omaa
+ * lukukirjasinta, pientä ja kursiivia, kuin latoja olisi lisännyt
+ * selityksen leiman alle. Sama keskitys pitää kaksikon yhtenä paalina
+ * eikä kahtena irrallisena rivinä.
+ *
+ * Väri on sama muste kuin nimilaatalla mutta haaleampana (styles.css:n
+ * otsakkeessa 0.78): vihje ei saa kilpailla kysymyksen kanssa, joka on
+ * laatikon varsinainen otsikko.
+ */
+.minitehtava.fokus-tehtava .fokus-tehtava-vihje,
+.dialog.lehti .arrival-kulttuuri #arrival-kulttuuri-visa.fokus-visa .fokus-tehtava-vihje {
+  margin: -0.2rem 0 0.55rem;
+  font-family: var(--font-luku);
+  font-size: 0.82rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.35;
+  text-align: center;
+  color: rgba(60, 44, 26, 0.72);
+}
+
+/* ---------- kulttuurivisa aarteen avaajana ---------- */
+
+/*
+ * NIMILAATTA VAIHTUU, LAATIKKO EI (omistajan tilaus 25.8.2026: *"myös
+ * vanha kulttuurivisa muuntuu aarteen avaavaksi"*).
+ *
+ * Visan otsake on ladottu laatikon ::before-pseudoelementtiin
+ * (css/styles.css, "Kapiteeliotsake"), koska laatikon ainoa oma teksti
+ * tulee JS:stä kysymyksenä. Sama tapa jatkuu tässä: kun aarre on vielä
+ * avaamatta, otsake on AARTEEN AVAUS — täsmälleen sama nimilaatta kuin
+ * lehden sivujen nimetyillä tehtävillä, jotta pelaaja tunnistaa kaksi
+ * kysymystä saman järjestelmän jäseniksi.
+ *
+ * Luokan asettaa js/fokustehtavat.js (fokusVisanKehys) ja se poistuu
+ * heti vastattaessa: aarre on silloin joko auennut tai kulunut, ja
+ * kummassakin tapauksessa laatikko on taas lehden oma kysymys.
+ * Valitsin on tunniste + luokka, joten se voittaa styles.css:n
+ * tunnistevalitsimen koskematta siihen.
+ */
+.dialog.lehti .arrival-kulttuuri #arrival-kulttuuri-visa.fokus-visa-aarre::before {
+  content: 'Aarteen avaus';
+}
+
+/*
+ * PALKINNOLLINEN LAATIKKO ON RUUDUKKO (css/styles.css
+ * .minitehtava-palkinnollinen): kysymys ja vastausrivit vasemmalla,
+ * julistevedos oikeassa kapeassa palstassa. Vihje kuuluu otsakkeen
+ * pariksi eli koko laatikon leveydelle, joten se ottaa rivin 2 — ja
+ * vedos, jonka styles.css asettaa riville 2, siirtyy sen tieltä riviä
+ * alemmas. Siirto on rajattu kevyen kulun laatikkoon (.fokus-tehtava),
+ * jottei lehden tavallinen minitehtävä liikahda.
+ */
+.minitehtava.fokus-tehtava.minitehtava-palkinnollinen > .fokus-tehtava-vihje {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
+.minitehtava.fokus-tehtava.minitehtava-palkinnollinen .juliste-palkinto {
+  grid-row: 3 / span 3;
+}
 
 /* ---------- vihreä hehkuva kohtaamispiste ---------- */
 

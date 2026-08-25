@@ -133,10 +133,12 @@ vaadi('luenta käynnistyi ja alkoi näytöllä olevasta kohdasta (laskuri > 1)',
   kaynnissa.lukee && laskurinAlku > 1, JSON.stringify(kaynnissa));
 vaadi('kuuluva kohta on merkitty ja virkkeet maalattu',
   kaynnissa.kohdallaOn && kaynnissa.maalattu, JSON.stringify(kaynnissa));
-// 6. Aloitusrauha: käynnistys ei liikuta näkymää ensimmäisen kohdan
-//    aikana — vieritys herää vasta kohdan vaihtuessa.
-vaadi('luennan käynnistys ei liikuta näkymää (aloitusrauha)',
-  Math.abs(kaynnissa.scrollTop - lahtoTop) < 2,
+// 6. Aloitusrauha (päivitetty 25.8.2026, omistajan aloitussääntö):
+//    käynnistys EI vieritä alaspäin — mutta lukija saa nostaa
+//    näkymää YLÖSPÄIN hakeakseen aloitusotsikon esiin, koska luenta
+//    alkaa aina otsikkorajalta (js/lukija.js aloitusKohta).
+vaadi('käynnistys ei vieritä alaspäin (aloitusotsikko saa nousta esiin)',
+  kaynnissa.scrollTop <= lahtoTop + 1,
   `lähtö ${lahtoTop}, nyt ${kaynnissa.scrollTop}`);
 
 // 3. Kappalehyppy vie näkymän kohdan alkuun (sivu seuraa lukijaa).

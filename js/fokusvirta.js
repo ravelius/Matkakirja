@@ -82,7 +82,7 @@
 import {
   fokusmoodiPaalla, html, jaaKappaleiksi, lehtivinkkiPiilotettu, piilotaLehtivinkki, TOAST_MS,
 } from './ui-apurit.js';
-import { fokusAarreAvattu, fokusAarreVastattu } from './fokustehtavat.js';
+import { asetaTehtavakuittaus, fokusAarreAvattu, fokusAarreVastattu } from './fokustehtavat.js';
 import { asetaKuva, julisteUrl } from './media.js';
 import { el } from './mapart.js';
 import { valokuvaUrl, valokuvaVara, valokuvaSuurennos } from './packs/africa-valokuvat.js';
@@ -355,8 +355,10 @@ export function fokusvirtaLaattaNakyy(ui, city) {
    * KEVYT KULKU: aarrevaihe alkaa vihreästä pisteestä. Kortteja ei ole,
    * joten virran vaihe jää ikuisesti ensimmäiseen — ja ilman tätä
    * haaraa pelinappula ei palaisi lehden päälle koskaan. Piste syttyy
-   * lehden AARTEEN AVAUS -tehtävästä, ja juuri se on tämän kokeilun
-   * "aarrevaihe": paikallinen odottaa jo kartalla.
+   * lehden aarteen avaavasta kysymyksestä — nimetystä tehtävästä tai
+   * kulttuurivisasta, kumpi ensin (js/fokustehtavat.js fokusAarreAvattu)
+   * — ja juuri se on tämän kokeilun "aarrevaihe": paikallinen odottaa
+   * jo kartalla.
    */
   if (!FOKUSVIRTA_KORTIT) return fokusAarreAvattu(ui, city);
   const vaihe = fokusvirtaTila(ui.game, city, data).vaihe;
@@ -471,7 +473,10 @@ export function fokusvirtaMerkintaLuettu(ui, city) {
  */
 export function fokusvirtaSaapuminen(ui) {
   // Kevyessä kulussa saapuminen ei ponnahduta mitään: isoisän merkintä
-  // kirjoittuu matkakirjakorttiin, ja loput odottaa lehdessä.
+  // kirjoittuu matkakirjakorttiin, ja loput odottaa lehdessä. Sama
+  // renderin kytkentäkohta kuitenkin kelpaa aarteen löytymisen
+  // huomaamiseen — se on kevyen kulun oma hetki.
+  aarreLoytyi(ui);
   if (!FOKUSVIRTA_KORTIT) return;
   const city = ui?.game?.cityOf?.();
   if (!city || !fokusvirtaLukitseeLehden(ui, city)) return;
@@ -1432,7 +1437,8 @@ function piirraKohtaaminen(ui, city, data, kohde) {
  *   1. kevyt kulku päällä (raskaassa virrassa kohtaaminen on kortissa),
  *   2. kaupungilla on virtasisältö ja kohtaamispiste tälle laudalle,
  *   3. laatta on yhä kääntämättä (piste sammuu kun aarre on avattu),
- *   4. lehden AARTEEN AVAUS -tehtävä on ratkaistu oikein.
+ *   4. jokin lehden aarteen avaavista kysymyksistä on ratkaistu oikein
+ *      (nimetty tehtävä TAI kulttuurivisa — omistaja 25.8.2026).
  *
  * @returns {{x:number,y:number,nimi:string}|null}
  */
@@ -1453,12 +1459,14 @@ export function fokusvirtaKohtaamispiste(ui, city) {
  * koko kokeilun: AARTEEN AVAUS -tehtävää ei tarvitsisi tehdä lainkaan.
  * Lehden alanappi luetaan siksi tästä (js/ui.js tehtavaNapinTila).
  *
- * UMPIKUJAN ESTO. Minitehtävään vastataan kerran, joten VÄÄRIN
- * vastannut ei voi enää sytyttää pistettä. Silloin — ja vain silloin —
- * lehden alanappi palaa, jottei yksi väärä vastaus jättäisi aarretta
- * ikuisesti tavoittamattomiin. Sama oppi kuin raskaan virran
- * täkyportilla (ks. fokusvirtaSiirto, "MIKSI 'visa' MERKITSEE TÄYN
- * TEHDYKSI RIIPPUMATTA VASTAUKSESTA").
+ * UMPIKUJAN ESTO. Lehden kysymykseen vastataan kerran, joten VÄÄRIN
+ * vastannut ei voi enää sytyttää pistettä siitä kysymyksestä. Vasta kun
+ * KAIKKI kaupungin aarteen avaavat kysymykset on käytetty eikä yksikään
+ * osunut (js/fokustehtavat.js fokusAarreVastattu), lehden alanappi
+ * palaa — jottei yksi väärä vastaus jättäisi aarretta ikuisesti
+ * tavoittamattomiin. Sama oppi kuin raskaan virran täkyportilla (ks.
+ * fokusvirtaSiirto, "MIKSI 'visa' MERKITSEE TÄYN TEHDYKSI RIIPPUMATTA
+ * VASTAUKSESTA").
  */
 export function fokusvirtaKohtaaminenPisteessa(ui, city) {
   if (FOKUSVIRTA_KORTIT) return false;
@@ -1508,20 +1516,23 @@ function vinkkiAvain(ui, city) {
   return `${ui.game.pack.id}:${city.id}`;
 }
 
-export function fokusvirtaLehtivinkki(ui, city) {
-  if (FOKUSVIRTA_KORTIT || typeof document === 'undefined') return false;
-  if (!city || !fokusvirtaSisalto(ui, city)) return false;
-  // Aarre jo löytynyt: lehti on vapaata tutkintaa eikä vinkattavaa ole.
-  if (!fokusvirtaLukitseeLehden(ui, city)) return false;
-  if (lehtivinkkiPiilotettu()) return false;
-  ui.fokusvinkkiNaytetty ??= new Set();
-  const avain = vinkkiAvain(ui, city);
-  if (ui.fokusvinkkiNaytetty.has(avain)) return false;
+/**
+ * YHDEN LAUSEEN KUPLA PÖLLÖNAPISTA — kevyen kulun oma pikkupinta.
+ *
+ * Sama kupla palvelee kahta hetkeä: lehden avautuessa näytettävää
+ * vinkkiä (`ruksi: true`, "Älä näytä jatkossa") ja tehtävän ratkettua
+ * tulevaa kuittausta (`ruksi: false`). Kuittaus on kertaluontoinen
+ * palaute pelaajan omasta teosta, joten sitä ei saa vaientaa asetuksella
+ * — muuten palkinto jäisi kertomatta juuri niiltä, jotka ruksin joskus
+ * painoivat.
+ *
+ * @returns {boolean} näkyikö kupla
+ */
+function naytaPolloKupla(ui, teksti, { ruksi: ruksillinen = false } = {}) {
   const nappi = polloNappi();
-  // Ilman kelluvaa pöllöä kuplalla ei ole kärkeä eikä paikkaa; vinkki
+  // Ilman kelluvaa pöllöä kuplalla ei ole kärkeä eikä paikkaa; teksti
   // jää silloin väliin — se on vihje, ei pelin portti.
   if (!nappi) return false;
-  ui.fokusvinkkiNaytetty.add(avain);
   const tyyliKesken = lataaTyyli();
   suljeFokusvirta(ui);
 
@@ -1536,16 +1547,18 @@ export function fokusvirtaLehtivinkki(ui, city) {
   });
 
   const sisalto = html('div', 'fokusvirta-sisalto');
-  sisalto.appendChild(html('p', 'fokusvirta-vinkkiteksti', LEHTIVINKKI_TEKSTI));
-  const rivi = html('label', 'fokusvirta-vinkkiruksi');
-  const ruksi = document.createElement('input');
-  ruksi.type = 'checkbox';
-  ruksi.addEventListener('change', () => {
-    piilotaLehtivinkki(ruksi.checked);
-    if (ruksi.checked) suljeFokusvirta(ui);
-  });
-  rivi.append(ruksi, html('span', '', 'Älä näytä jatkossa'));
-  sisalto.appendChild(rivi);
+  sisalto.appendChild(html('p', 'fokusvirta-vinkkiteksti', teksti));
+  if (ruksillinen) {
+    const rivi = html('label', 'fokusvirta-vinkkiruksi');
+    const ruksi = document.createElement('input');
+    ruksi.type = 'checkbox';
+    ruksi.addEventListener('change', () => {
+      piilotaLehtivinkki(ruksi.checked);
+      if (ruksi.checked) suljeFokusvirta(ui);
+    });
+    rivi.append(ruksi, html('span', '', 'Älä näytä jatkossa'));
+    sisalto.appendChild(rivi);
+  }
   kupla.appendChild(sisalto);
   koti.appendChild(kupla);
   ui.fokusvirtaKortti = kupla;
@@ -1561,6 +1574,123 @@ export function fokusvirtaLehtivinkki(ui, city) {
   globalThis.addEventListener?.('resize', asemoi);
   globalThis.addEventListener?.('orientationchange', asemoi);
   return true;
+}
+
+export function fokusvirtaLehtivinkki(ui, city) {
+  if (FOKUSVIRTA_KORTIT || typeof document === 'undefined') return false;
+  if (!city || !fokusvirtaSisalto(ui, city)) return false;
+  // Aarre jo löytynyt: lehti on vapaata tutkintaa eikä vinkattavaa ole.
+  if (!fokusvirtaLukitseeLehden(ui, city)) return false;
+  if (lehtivinkkiPiilotettu()) return false;
+  ui.fokusvinkkiNaytetty ??= new Set();
+  const avain = vinkkiAvain(ui, city);
+  if (ui.fokusvinkkiNaytetty.has(avain)) return false;
+  if (!polloNappi()) return false;
+  ui.fokusvinkkiNaytetty.add(avain);
+  return naytaPolloKupla(ui, LEHTIVINKKI_TEKSTI, { ruksi: true });
+}
+
+/**
+ * PÖLLÖN KUITTAUS LEHDEN KYSYMYKSESTÄ (omistajan pelitesti 25.8.2026):
+ * oikea vastaus palkitaan lehden ULKOPUOLELLA — aarteen jälki syttyy
+ * kartalle ja juliste menee matkalaukkuun — joten pöllö kertoo sen
+ * lyhyesti.
+ *
+ * SAMA KUPLA KAIKISTA LEHDEN KYSYMYKSISTÄ (omistaja 25.8.2026): sivujen
+ * nimetyistä tehtävistä ja kulttuurivisasta, ja riippumatta siitä
+ * avasiko vastaus aarteen vai toiko se pelkkää rahaa. Sanat tulevat
+ * js/fokustehtavat.js:stä, joka tuntee kaupungin kaikki kysymykset ja
+ * niiden kirjanpidon; tämä on vain pinta. Kytkentä on takaisinkutsu
+ * (asetaTehtavakuittaus alempana) eikä import, koska niputusjärjestys
+ * kulkee fokustehtävistä tänne päin.
+ */
+export function fokusvirtaKuittaus(ui, teksti) {
+  if (FOKUSVIRTA_KORTIT || typeof document === 'undefined') return false;
+  if (!teksti) return false;
+  return naytaPolloKupla(ui, teksti);
+}
+
+/*
+ * Kytkentä heti moduulin latautuessa: js/ui.js tuo tämän moduulin
+ * staattisesti, joten pinta on paikallaan ennen kuin lehteä ehtii avata.
+ */
+asetaTehtavakuittaus(fokusvirtaKuittaus);
+
+/* ---------- pöllön kuittaus aarteen löydyttyä ---------- */
+
+/**
+ * MAAN AARRE ON LÖYTYNYT (omistajan tarkennus 25.8.2026).
+ *
+ * Tämä on ERI HETKI kuin lehden AARTEEN AVAUS -tehtävän ratkeaminen:
+ * silloin kartalle syttyi vihreä piste, nyt kohtaaminen on käyty,
+ * laattakysymykseen on vastattu ja aarre on auki. Samalla aukeaa
+ * matkustaminen (Liiku-nappi ilmestyy vasta aarteen löydyttyä), eikä
+ * napin ilmestyminen yksin kerro pelaajalle mitään — pöllö kertoo.
+ *
+ * Pöllö puhuu nykypäivästä eikä 1873:sta, ja repliikki on lyhyt.
+ */
+const AARREKUITTAUS_TEKSTI = 'Aarre on sinun! Nyt voit matkustaa seuraavaan kaupunkiin — '
+  + 'tai jäädä vielä tutkimaan maata, kartan kohteista löytyy lisää.';
+
+/** Uusi yritys tämän välein, kun ruutu on vielä varattu. */
+const AARREKUITTAUS_YRITYS_MS = 700;
+
+/**
+ * Yritysten katto. Kupla on iloinen jälkisana, ei pelin portti: jos
+ * pöllönappia ei näy puoleen minuuttiin (voittolappu, uusi peli,
+ * pelaaja lähti valikkoon), asia saa jäädä eikä ajastin jää pyörimään.
+ */
+const AARREKUITTAUS_YRITYKSIA = 40;
+
+/**
+ * Kupla vasta kun ruutu on vapaa.
+ *
+ * Löytöhetkellä päällimmäisenä on aarteen oma lappu (`<dialog>`, selaimen
+ * top layer), jonka päälle tavallinen kupla ei piirry. Yritystä siis
+ * toistetaan, kunnes lappu on suljettu — silloin pelaaja on lukenut
+ * löytönsä ja on juuri oikea hetki kertoa, mitä seuraavaksi voi tehdä.
+ */
+function kerroAarteesta(ui, avain, yritys) {
+  clearTimeout(ui.fokusaarreAjastin);
+  if (ui.dead || typeof document === 'undefined') return;
+  const vapaa = !document.querySelector('dialog[open]');
+  if (vapaa && naytaPolloKupla(ui, AARREKUITTAUS_TEKSTI)) {
+    ui.fokusaarreKerrottu.add(avain);
+    return;
+  }
+  if (yritys >= AARREKUITTAUS_YRITYKSIA) return;
+  ui.fokusaarreAjastin = setTimeout(
+    () => kerroAarteesta(ui, avain, yritys + 1), AARREKUITTAUS_YRITYS_MS,
+  );
+}
+
+/**
+ * KYTKENTÄ RENDERIIN (fokusvirtaSaapuminen). Löytö luetaan laatasta:
+ * niin kauan kuin laatta on kartalla, aarre on avaamatta.
+ *
+ * Kaksi joukkoa, jotta kuittaus tulee VAIN oikeasta hetkestä:
+ * `fokusaarreOdottaa` merkitsee kaupungit, joiden laatan tämä istunto on
+ * nähnyt kääntämättömänä, ja `fokusaarreKerrottu` ne, joista on jo
+ * kerrottu. Vanhaan tallennukseen palaava pelaaja ei siis saa kuittausta
+ * aarteista, jotka hän löysi eilen — laatta oli jo poissa, kun istunto
+ * alkoi.
+ */
+function aarreLoytyi(ui) {
+  if (FOKUSVIRTA_KORTIT || typeof document === 'undefined') return;
+  const city = ui?.game?.cityOf?.();
+  if (!city || !fokusvirtaSisalto(ui, city)) return;
+  ui.fokusaarreOdottaa ??= new Set();
+  ui.fokusaarreKerrottu ??= new Set();
+  const avain = `${ui.game.pack.id}:${city.id}`;
+  if (ui.game.tokens?.has(city.id)) {
+    ui.fokusaarreOdottaa.add(avain);
+    return;
+  }
+  if (!ui.fokusaarreOdottaa.has(avain) || ui.fokusaarreKerrottu.has(avain)) return;
+  // Merkintä pois heti: yritys on jo käynnissä eikä joka piirto saa
+  // aloittaa omaa ajastintaan.
+  ui.fokusaarreOdottaa.delete(avain);
+  kerroAarteesta(ui, avain, 0);
 }
 
 /* ==================== KUVAT KARTALLA ==================== */

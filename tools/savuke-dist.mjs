@@ -102,7 +102,12 @@ const tila = await sivu.evaluate(() => ({
   monitoimi: document.querySelectorAll('.monitoimi-nappi').length,
 }));
 vaadi('peli käynnistyy niputetussa versiossa', tila.peli === true, JSON.stringify(tila));
-vaadi('alanappirivi rakentuu', tila.rivi === 1 && tila.monitoimi === 1, JSON.stringify(tila));
+/*
+ * Monitoiminappeja saa olla 0 tai 1: LIIKU ilmestyy vasta kun maan
+ * aarre on löydetty (omistaja 25.8.2026), joten pelin alussa rivi on
+ * tyhjä pöllöä lukuun ottamatta. Rivi itse rakentuu silti aina.
+ */
+vaadi('alanappirivi rakentuu', tila.rivi === 1 && tila.monitoimi <= 1, JSON.stringify(tila));
 vaadi('pöllönappi on paikallaan', tila.pollo === 1, JSON.stringify(tila));
 
 /*

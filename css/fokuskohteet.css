@@ -304,12 +304,19 @@
    (js/fokuskohteet.js kuunteleKohdetta), joten sen luokan lainaaminen
    veisi suurennokselta oman ankkurinsa.
 
-   Kaksi eroa lehtien katselimeen (css/styles.css .lightbox), ja
-   molemmat ovat omistajan tilauksesta: tausta himmenee vain kevyesti
-   eikä sumennu — sumennus on suodatin, ja kartan päällä suodatin on
-   iOS:llä sama vaara kuin kartalla itsellään — ja kuva mitoitetaan
-   ruudun PIENEMMÄN sivun mukaan, jolloin kartta jää joka reunalta
-   näkyviin.
+   ERO LEHTIEN KATSELIMEEN (css/styles.css .lightbox) on omistajan
+   tilauksesta: tausta jää NÄKYVIIN. Kartta, tietoruutu ja sen pikkukuva
+   pilkottavat suurennoksen takaa hyvin kevyen sumennuksen ja
+   tummennuksen läpi — suurennos on kartan ele, ei näkymän vaihto.
+
+   SUMENNUS ON `backdrop-filter`, EI SVG-SUODATIN. Kartan omissa
+   SVG-kerroksissa suodatin on kielletty (tests/rules.test.mjs): iOS
+   vapauttaa suodattimen piirtopuskurin taustalla eikä saa sitä enää
+   varattua, jolloin kerros palaa tyhjänä. Tämä kerros on kuitenkin
+   document.bodyn oma HTML-laatikko kartan PÄÄLLÄ, ei kartan kerros:
+   pahin mahdollinen vika on sumennuksen jääminen pois, ei kartan
+   katoaminen. `-webkit-`-etuliite on iOS-Safarin takia, ja pelkkä
+   rgba-tummennus on varana siellä, missä koko määre puuttuu.
    =================================================================== */
 
 .fokuskohde-zoom {
@@ -326,13 +333,33 @@
      tila on jo vähennetty JS:ssä (mitoita). */
   padding: 0.5rem;
   background: rgba(18, 12, 4, 0);
-  transition: background-color 320ms ease-out;
+  -webkit-backdrop-filter: blur(0);
+  backdrop-filter: blur(0);
+  transition: background-color 320ms ease-out,
+    -webkit-backdrop-filter 320ms ease-out,
+    backdrop-filter 320ms ease-out;
   cursor: zoom-out;
   touch-action: none;
 }
 
-/* Kevyt himmennys: kartta erottuu yhä kuvan takaa. */
-.fokuskohde-zoom-auki { background: rgba(18, 12, 4, 0.32); }
+/*
+ * HYVIN KEVYT SUMENNUS JA TUMMENNUS (omistajan tilaus 25.8.2026).
+ * Kartta, tietoruutu ja sen pikkukuva jäävät näkyviin — ne vain
+ * väistyvät taustalle, jotta katse tarttuu kuvaan.
+ */
+.fokuskohde-zoom-auki {
+  background: rgba(18, 12, 4, 0.3);
+  -webkit-backdrop-filter: blur(2px) saturate(0.95);
+  backdrop-filter: blur(2px) saturate(0.95);
+}
+
+/*
+ * VARA: ilman backdrop-filteriä sumennusta ei tule, joten tummennus
+ * tekee erotuksen yksin ja saa olla hitusen syvempi.
+ */
+@supports not ((backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px))) {
+  .fokuskohde-zoom-auki { background: rgba(18, 12, 4, 0.44); }
+}
 
 /*
  * PAPERIKEHYS PELIN OMAA KIELTÄ: pergamentinvaalea paperi, kapea reunus,
@@ -341,6 +368,13 @@
  * KEHYS ON YKSI KAPPALE. Kuvateksti asuu paperilla kuvan alla, joten
  * kortti on aina täsmälleen kuvan levyinen (leveyden asettaa JS) eikä
  * teksti voi valua kartan päälle.
+ *
+ * KEHYS ON KUVAN MUOTOINEN, EI KIINTEÄN SUHTEEN LAATIKKO (omistajan
+ * palaute 25.8.2026: *"nyt paperikehyksessä on isot tyhjät kaistat
+ * kuvan ylä- ja alapuolella"*). Kehys saa JS:ltä VAIN leveyden, ja
+ * korkeus tulee kuvasta itsestään (.fokuskohde-zoomkuva height: auto)
+ * — silloin pysty- ja vaakakuva saavat kumpikin oman muotonsa eikä
+ * paperille voi jäädä tyhjää kaistaa.
  */
 .fokuskohde-zoomkehys {
   margin: 0;
@@ -348,7 +382,9 @@
   flex-direction: column;
   align-items: stretch;
   gap: 0.45rem;
-  max-width: min(94vw, 94vmin);
+  /* JS korvaa leveyden (mitoita); tämä on vara, jos mittaa ei saada. */
+  width: min(94vw, 40rem);
+  max-width: 96vw;
   padding: 0.55rem 0.55rem 0.45rem;
   background: #f8f3e6;
   border: 1px solid rgba(58, 38, 16, 0.35);
@@ -362,16 +398,25 @@
 }
 
 /*
- * MITAT TULEVAT JS:STÄ (avaaKohdeSuurennos mitoita). Pelkkä `max-width`
- * jättäisi kuvan sen luonnolliseen kokoon, ja koska suurennos näyttää
- * ENSIN välimuistissa olevan pikkukuvan ja vasta sitten ison version,
- * kuva hyppäisi keskellä animaatiota isommaksi. Nämä ovat varmistus,
- * jos mitoitus ei ehdi ajoissa.
+ * KUVA TÄYTTÄÄ KEHYKSEN LEVEYDEN, KORKEUS SEURAA KUVASUHDETTA.
+ *
+ * Aiemmin JS asetti kuvalle sekä leveyden että korkeuden. Kaksi
+ * erikseen kirjoitettua mittaa voi mennä ristiin — `max-width: 100%`
+ * kutistaa leveyttä muttei korkeutta, ja kuvasuhde ehtii muuttua kun
+ * välimuistin pikkukuva vaihtuu isoon — ja silloin `object-fit`
+ * jättää paperille juuri ne tyhjät kaistat, joista omistaja huomautti
+ * 25.8.2026. Nyt mittoja on vain YKSI: kehyksen leveys. Korkeuden
+ * laskee selain kuvasuhteesta, jonka JS asettaa `aspect-ratio`:iin
+ * kuvan omista mitoista (avaaKohdeSuurennos mitoita).
+ *
+ * `aspect-ratio` tässä on vara sille hetkelle, jolloin kuvan omia
+ * mittoja ei vielä tiedetä — sama luku kuin KOHDE_ZOOM_OLETUSSUHDE.
  */
 .fokuskohde-zoomkuva {
   display: block;
-  max-width: 100%;
-  max-height: min(88vh, 94vmin);
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
   object-fit: contain;
   /* Ohut mustereunus kuvan ympäri — sama kuin postikortin kuvalla. */
   border: 1px solid rgba(0, 0, 0, 0.18);
@@ -407,20 +452,15 @@
 .fokuskohde-zoomlahde:empty { display: none; }
 
 /*
- * TIETORUUTU POIS SUURENNOKSEN AJAKSI (sama sopimus kuin fokusvirralla:
- * suurennos on kartan ele, ja sen ajaksi ruudulla saa olla vain kartta
- * ja kuva). Luokan asettaa js/fokuskohteet.js avaaKohdeSuurennos ja
- * poistaa poista(), joten kortti palaa myös silloin, kun suurennos
- * revitään pois ilman animaatiota.
+ * TIETORUUTU JÄÄ NÄKYVIIN SUURENNOKSEN AJAKSI (omistajan tilaus
+ * 25.8.2026). Aiemmin kortti häivytettiin — ja koska se palasi vasta
+ * kutistumisen jälkeen, sulkeminen päättyi pomppuun: kuva laskeutui
+ * paikkaan, joka oli juuri sillä hetkellä vielä tyhjä. Nyt kortti ja
+ * sen pikkukuva ovat koko ajan paikallaan sumennuksen takana, jolloin
+ * suurennos liukuu niiden väliä saumatta.
  *
- * HÄIVYTYS EIKÄ `display: none`: kortin kuvapainike on suurennoksen
- * ankkuri, ja piilotettuna sillä ei olisi ruutupaikkaa, johon kutistua.
+ * TÄSSÄ EI SIIS OLE SÄÄNTÖÄ .fokuskohde-popupille — se on koko juttu.
  */
-body.fokuskohde-zoom-paalla .fokuskohde-popup {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 200ms ease-out;
-}
 
 /*
  * LIIKEHERKKYYS. JS jättää kasvumuunnoksen tekemättä kokonaan
@@ -428,6 +468,5 @@ body.fokuskohde-zoom-paalla .fokuskohde-popup {
  */
 @media (prefers-reduced-motion: reduce) {
   .fokuskohde-zoom,
-  .fokuskohde-zoomteksti,
-  body.fokuskohde-zoom-paalla .fokuskohde-popup { transition: none; }
+  .fokuskohde-zoomteksti { transition: none; }
 }
