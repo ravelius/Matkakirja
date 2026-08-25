@@ -388,15 +388,30 @@ function maanNakyma(ui, iso, lauta) {
  * postimerkin kokoisia tilkkuja keskellä merta.
  */
 
+/*
+ * PUHELIMELLE PIENEMMÄT KATOT (25.8.2026). Omistajan iPhone kuoli
+ * saapumisessa Ateenaan toistuvaan uudelleenlataussilmukkaan: samaan
+ * hetkeen osuvat ison lehden purku (~100 Mt RGBA), laudan rasterointi
+ * ja atlaksen naapurihaut, ja iOS tappaa sivun muistin loppuessa —
+ * Safari lataa uudelleen, tallenne palauttaa samaan kohtaan ja kuolema
+ * toistuu. Pöytäselaimessa sama polku kulkee puhtaasti läpi (mitattu
+ * 25.8.2026, ei yhtään virhettä). Kapea ruutu on paras saatavilla
+ * oleva puhelinvihje: iOS ei kerro muistia (navigator.deviceMemory
+ * puuttuu WebKitistä).
+ */
+const ATLAS_PUHELIN = typeof screen !== 'undefined'
+  && Math.min(screen.width || 9999, screen.height || 9999) < 500;
+
 /** Enintään näin monta lehteä muistissa kerralla (omistajan ohje ~8). */
-const ATLAS_ENINTAAN = 8;
+const ATLAS_ENINTAAN = ATLAS_PUHELIN ? 4 : 8;
 /*
  * ...ja enintään näin monta megapikseliä purettuna, mikä on käytännössä
  * se katto, joka osuu ensin: mitattu lehti on 25,6 Mp, joten 96 Mp on
  * kolme–neljä lehteä eli noin 384 Mt purettua kuvaa. Kahdeksan täyttä
- * lehteä olisi 205 Mp ≈ 820 Mt, mitä yksikään iPad ei kestä.
+ * lehteä olisi 205 Mp ≈ 820 Mt, mitä yksikään iPad ei kestä. Puhelimen
+ * 40 Mp ≈ 160 Mt on nykyinen maa + korkeintaan yksi naapuri.
  */
-const ATLAS_MEGAPIKSELIA = 96;
+const ATLAS_MEGAPIKSELIA = ATLAS_PUHELIN ? 40 : 96;
 /** Lehden oletuskoko ennen kuin todellinen on mitattu (tyypillinen). */
 const ATLAS_OLETUS_MP = 25.6;
 /** Esilatausvara näkymän ympärille, osuutena näkymän mitasta. */
@@ -432,8 +447,31 @@ function leikkausAla(a, b) {
  * Onko atlas voimassa juuri nyt? Sama kolmen ehdon perhe kuin muillakin
  * fokuskerroksilla, plus yleiskuvan ja lennon rajaus (ks. johdanto).
  */
+/*
+ * TURVATILA (25.8.2026): jos peli on käynnistynyt monta kertaa parissa
+ * minuutissa (js/main.js kirjaaKaynnistys), laite on todennäköisesti
+ * tappanut sivun muistin loppuessa — silloin atlas pidetään tunti pois
+ * päältä, jolloin vanha lauta palaa näkyviin ja vain nykyisen maan
+ * lehti piirretään. Silmukka purkautuu itsestään ilman että pelaajan
+ * tarvitsee tehdä mitään. Luetaan kerran ja muistetaan istunnon ajan.
+ */
+const TURVATILA_AVAIN = 'matkakirja-atlas-turvatila';
+const TURVATILA_MS = 60 * 60 * 1000;
+let atlasTurvatilaMuisti = null;
+function atlasTurvatila() {
+  if (atlasTurvatilaMuisti !== null) return atlasTurvatilaMuisti;
+  try {
+    const leima = Number(localStorage.getItem(TURVATILA_AVAIN) ?? 0);
+    atlasTurvatilaMuisti = leima > 0 && (Date.now() - leima) < TURVATILA_MS;
+  } catch {
+    atlasTurvatilaMuisti = false;
+  }
+  return atlasTurvatilaMuisti;
+}
+
 function atlasPaalla(ui) {
   if (!ui.fokusmoodi || ui.katselu) return false;
+  if (atlasTurvatila()) return false;
   /*
    * ALOITUSRUUDULLA EI ATLASTA. Sama ehto kuin nykyisellä maalla
    * (nykyinenMaa) ja verholla (ui.fokusSumuPaalla): pickstart-vaiheessa
