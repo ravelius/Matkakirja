@@ -24,6 +24,27 @@
  *      ja napautus avaa `nimi`, `tyyppi`, `kuva`, `teksti` ja `lahde`
  *      -kentistä pienen tietoruudun.
  *
+ * ── KAKSI KENTTÄÄ PÖLLÖÄ VARTEN (omistajan tilaus 25.8.2026) ───────
+ *
+ * Kartan tietoruudun lopussa on kaksi valmista kysymystä, ja sen
+ * leipätekstissä voi olla alleviivattuja sanoja, joista pöllö kertoo
+ * lisää. Kummatkin ovat DATAA — koodi (js/fokuskohteet.js) ei tiedä
+ * yhdestäkään kohteesta mitään:
+ *
+ *   kysymykset: ['...', '...']  Enintään kaksi, PELAAJAN ÄÄNELLÄ ja
+ *     neutraalina — pöllön karaktääri koskee vastausta, joka syntyy
+ *     workerissa, ei kysymystä. Kysymykset on laadittu kohteen oman
+ *     pop-up-tekstin pohjalta niin, että ne vievät ETEENPÄIN siitä:
+ *     tekstissä jo vastattua ei kysytä uudestaan.
+ *
+ *   korostukset: ['sana', 'perusmuoto|näkyvä muoto']  Sanat, jotka
+ *     alleviivataan leipätekstissä pisteviivalla. Näkyvän muodon on
+ *     löydyttävä tekstistä sellaisenaan; perusmuoto on se, jolla
+ *     pöllöltä kysytään ("Kerro lisää: minolainen kulttuuri"). Sama
+ *     putkimerkintä kuin pöllölinkeissä (js/pollo.js puraPutki).
+ *     1–2 kohteille, joissa on luonteva syventävä termi; kohde ilman
+ *     kenttää toimii ennallaan.
+ *
  * ÄÄNI ON SIKSI NEUTRAALI kaikissa paitsi Korintin kanavassa, joka on
  * jo poimittu Ateenan virtaan ja kirjoitettu pöllön puhuteltavaksi.
  * Kartan tietoruutu ei ole kenenkään puhetta vaan lehden reunahuomio;
@@ -106,6 +127,11 @@ export const FOKUSKOHTEET_GRC = [
     id: 'thessaloniki',
     nimi: 'Thessaloniki',
     tyyppi: 'kaupunki',
+    kysymykset: [
+      'Miksi juutalaisyhteisö kasvoi täällä niin suureksi?',
+      'Millainen hallitsija Kassandros oli?',
+    ],
+    korostukset: ['Bysantti|Bysantin'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Kaupunki, joka sai nimensä vaimolta',
     // 22,9356 E / 40,6403 N — en-Wikipedia "Thessaloniki".
@@ -137,6 +163,11 @@ export const FOKUSKOHTEET_GRC = [
     id: 'patras',
     nimi: 'Patras',
     tyyppi: 'kaupunki',
+    kysymykset: [
+      'Miksi kapina alkoi juuri Patrasista?',
+      'Mistä Patras elää nykyään?',
+    ],
+    korostukset: ['ruutukaava|ruutukaavan'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Kaupunki, joka rakennettiin uudelleen',
     // 21,73333 E / 38,25 N — en-Wikipedia "Patras".
@@ -165,6 +196,11 @@ export const FOKUSKOHTEET_GRC = [
     id: 'ioannina',
     nimi: 'Ioánnina',
     tyyppi: 'kaupunki',
+    kysymykset: [
+      'Miten Ali-pasha nousi niin mahtavaksi?',
+      'Näkyykö hänen aikansa kaupungissa yhä?',
+    ],
+    korostukset: ['kreikkalainen valistus'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Ruhtinas järven rannalla',
     // 20,85222 E / 39,66361 N — en-Wikipedia "Ioannina".
@@ -197,6 +233,11 @@ export const FOKUSKOHTEET_GRC = [
     id: 'nafplio',
     nimi: 'Náfplio',
     tyyppi: 'kaupunki',
+    kysymykset: [
+      'Miksi pääkaupunki siirrettiin Ateenaan?',
+      'Mistä kuningas Otto tuli Kreikkaan?',
+    ],
+    korostukset: ['Ioannis Kapodistrias'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Kreikan ensimmäinen pääkaupunki',
     // 22,8 E / 37,56583 N — en-Wikipedia "Nafplio".
@@ -231,6 +272,11 @@ export const FOKUSKOHTEET_GRC = [
     id: 'iraklion',
     nimi: 'Iraklion',
     tyyppi: 'kaupunki',
+    kysymykset: [
+      'Millainen kansa minolaiset olivat?',
+      'Miten Knossoksen rauniot löydettiin?',
+    ],
+    korostukset: ['Knossos|Knossoksen', 'minolainen kulttuuri|minolaisen kulttuurin'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Euroopan vanhin kaupunki?',
     // 25,1344 E / 35,3403 N — en-Wikipedia "Heraklion".
@@ -262,6 +308,11 @@ export const FOKUSKOHTEET_GRC = [
     id: 'olympos',
     nimi: 'Ólympos',
     tyyppi: 'vuori',
+    kysymykset: [
+      'Kuka kiipesi Olympokselle ensimmäisenä?',
+      'Miksi juuri Olympos oli jumalten koti?',
+    ],
+    korostukset: ['Mytikas|Mytikakseen'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Jumalten koti',
     // 22,35861 E / 40,08556 N — en-Wikipedia "Mount Olympus".
@@ -290,6 +341,11 @@ export const FOKUSKOHTEET_GRC = [
     id: 'parnassos',
     nimi: 'Parnassós',
     tyyppi: 'vuori',
+    kysymykset: [
+      'Miten Dionysoksen juhlia vietettiin?',
+      'Mitä Homeros kertoo Parnassoksesta?',
+    ],
+    korostukset: ['bauksiitti|bauksiittia'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Vuori kahdelle jumalalle',
     // 22,62417 E / 38,53583 N — en-Wikipedia "Mount Parnassus".
@@ -317,6 +373,11 @@ export const FOKUSKOHTEET_GRC = [
     id: 'taygetos',
     nimi: 'Taÿ́getos',
     tyyppi: 'vuori',
+    kysymykset: [
+      'Kuka oli Taygete?',
+      'Millaista elämä on vuoren kylissä nykyään?',
+    ],
+    korostukset: ['Pentadaktylos'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Vuori Odysseiasta',
     // 22,35222 E / 36,95389 N — en-Wikipedia "Taygetus".
@@ -354,6 +415,11 @@ export const FOKUSKOHTEET_GRC = [
     id: 'pindos',
     nimi: 'Píndos',
     tyyppi: 'vuori',
+    kysymykset: [
+      'Asuuko vuoristossa yhä ihmisiä?',
+      'Miksi Epeiros jäi muusta Kreikasta erilleen?',
+    ],
+    korostukset: ['Dinaariset Alpit|Dinaaristen Alppien'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Kreikan selkäranka',
     // 20,92528 E / 40,08889 N — en-Wikipedia "Pindus".
@@ -381,6 +447,11 @@ export const FOKUSKOHTEET_GRC = [
     id: 'egeanmeri',
     nimi: 'Egeanmeri',
     tyyppi: 'meri',
+    kysymykset: [
+      'Miksi Theseus unohti vaihtaa purjeet?',
+      'Miksi Egeanmerellä on niin paljon saaria?',
+    ],
+    korostukset: ['Minotauros|Minotaurosta'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Meri, joka sai nimen kuninkaalta',
     // 25 E / 39 N — en-Wikipedia "Aegean Sea". KOKO MEREN KESKIPISTE,
@@ -408,6 +479,11 @@ export const FOKUSKOHTEET_GRC = [
     id: 'joonianmeri',
     nimi: 'Joonianmeri',
     tyyppi: 'meri',
+    kysymykset: [
+      'Kuka oli Aiskhylos?',
+      'Miksi meri järisee juuri täällä?',
+    ],
+    korostukset: ['Kalypson syvänne'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Välimeren syvin kohta',
     // 19 E / 38 N — en-Wikipedia "Ionian Sea". KOKO MEREN KESKIPISTE.
@@ -441,6 +517,11 @@ export const FOKUSKOHTEET_GRC = [
     id: 'korintin-kanava',
     nimi: 'Korintin kanava',
     tyyppi: 'muu',
+    kysymykset: [
+      'Kuljetaanko kanavan läpi vielä nykyään?',
+      'Miksi kaivaminen onnistui vasta 1800-luvulla?',
+    ],
+    korostukset: ['Periandros', 'vetotie|vetotien'],
     /* Valintakuplan painike. Lupaus on 1873-kulma, ei maantiede. */
     nappi: 'Kanava, jota ei vielä ollut',
     // 22,98389 E / 37,93472 N — en-Wikipedia "Corinth Canal".
@@ -486,6 +567,11 @@ export const FOKUSKOHTEET_GRC = [
     id: 'santorini',
     nimi: 'Santoríni',
     tyyppi: 'saari',
+    kysymykset: [
+      'Kuinka laajalle purkauksen tuhka levisi?',
+      'Miksi Atlantis-tarua yhdistetään Santoriniin?',
+    ],
+    korostukset: ['Akrotiri|Akrotirin', 'kaldera|kalderan'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Saari, joka räjähti',
     // 25,4325 E / 36,415 N — en-Wikipedia "Santorini".
@@ -516,6 +602,11 @@ export const FOKUSKOHTEET_GRC = [
     id: 'delfoi',
     nimi: 'Delfoi',
     tyyppi: 'muu',
+    kysymykset: [
+      'Miksi oraakkelin vastaukset olivat niin moniselitteisiä?',
+      'Kuka sai tulla kysymään neuvoa Delfoista?',
+    ],
+    korostukset: ['omfalos|Omfalos', 'Pythia'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Maailman napa',
     // 22,5013 E / 38,4823 N — en-Wikipedia "Delphi".

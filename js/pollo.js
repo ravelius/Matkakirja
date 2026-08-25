@@ -73,6 +73,11 @@ export const KONTEKSTIN_ENIMMAISPITUUS = 5000;
 
 /** Yksittäisten osien katot, jottei mikään niistä syö koko pakettia. */
 const MATKAKIRJAN_KATTO = 900;
+/*
+ * Kartan kohdetietoruudun teksti (js/fokuskohteet.js). Sama luokka kuin
+ * matkakirjamerkinnällä: se on YKSI näkyvä pinta, ei koko lehti.
+ */
+const KOHTEEN_KATTO = 900;
 const LOHKON_KATTO = 1600;
 const AINEISTON_KATTO = 1900;
 
@@ -367,6 +372,7 @@ export function kokoaKonteksti({
   maa = null,
   paiva = null,
   nakyma = null,
+  kohde = null,
   matkakirja = null,
   aineisto = [],
   lohkot = [],
@@ -380,6 +386,21 @@ export function kokoaKonteksti({
   if (maa) rivit.push(`Maa, jossa pelaaja on: ${polloSiisti(maa)}`);
   if (paiva) rivit.push(`Matkapäivä: ${paiva}`);
   if (nakyma) rivit.push(`Näkymä: ${polloSiisti(nakyma)}`);
+  /*
+   * AVOIN KOHDETIETORUUTU (omistajan tilaus 25.8.2026: *"Kysy minulta
+   * mitä tahansa siitä, mitä kartalla tai lehdessä juuri nyt näkyy"*).
+   * Kortti on kartan päällä oma pintansa, joten se kerrotaan omalla
+   * rivillään heti näkymän perässä — ei sijaintina eikä lehtitekstinä.
+   * Kortin teksti on pelin omaa tarkistettua aineistoa
+   * (js/packs/fokuskohteet-*.js), ja juuri siitä pelaaja kysyy.
+   */
+  if (kohde?.nimi) {
+    const tyyppi = kohde.tyyppi ? ` (${polloSiisti(kohde.tyyppi)})` : '';
+    rivit.push(`Kartalla auki oleva kohdetietoruutu: ${polloSiisti(kohde.nimi)}${tyyppi}`);
+    if (kohde.teksti) {
+      rivit.push(`Tietoruudun teksti: ${polloLeikkaa(polloSiisti(kohde.teksti), KOHTEEN_KATTO)}`);
+    }
+  }
   if (matkakirja) {
     rivit.push(`Isoisän matkakirjamerkintä: ${polloLeikkaa(polloSiisti(matkakirja), MATKAKIRJAN_KATTO)}`);
   }
@@ -444,19 +465,52 @@ export function lueNakyma({ game = null, ui = null, doc = document, aineisto = [
   // maahan, jossa pelaaja seisoo.
   const maalehtiIso = lehtiAuki ? ui?.lehtitila?.tutkiMaaLehti ?? null : null;
   const lehdenMaa = polloMaanNimi(game, maalehtiIso);
+  /*
+   * Kartan kohdetietoruutu luetaan vain kartalla: lehti on sen PÄÄLLÄ,
+   * ja auki jäänyt kortti sen alla ei ole se, mitä pelaaja katsoo.
+   */
+  const kohde = lehtiAuki ? null : avoinKohdetietoruutu(ui);
   let nakyma = 'kartta';
   if (lehtiAuki && maalehtiIso) {
     nakyma = lehdenMaa ? `maan lehti auki (${lehdenMaa})` : 'maan lehti auki';
   } else if (lehtiAuki) {
     nakyma = 'kaupungin lehti auki';
+  } else if (kohde) {
+    nakyma = 'kartta, kohteen tietoruutu auki';
   }
   return kokoaKonteksti({
     ...tila,
     matkakirja,
     nakyma,
+    kohde,
     aineisto,
     lohkot: lehtiAuki ? poimiLohkot(lehti) : [],
   });
+}
+
+/**
+ * Kartalla auki oleva kohdetietoruutu, tai null.
+ *
+ * Kortin avaaja (js/fokuskohteet.js avaaFokuskohde) tallettaa koko
+ * kohteen `ui.fokuskohdeAuki.kohde`-kenttään juuri tätä varten. Kentät
+ * poimitaan nimeltä eikä koko oliota anneta eteenpäin: koordinaatit,
+ * kuvatiedostot ja virran painikelupaukset eivät kerro pöllölle mitään,
+ * ja kontekstissa on tilaa vain sillä, mitä pelaaja näkee.
+ *
+ * DOM tarkistetaan silti: kortti voidaan purkaa ruudulta ilman että
+ * kukaan päivittää muistikenttää, ja vanhentunut kortti kontekstissa
+ * olisi pahempi kuin puuttuva.
+ */
+function avoinKohdetietoruutu(ui) {
+  const auki = ui?.fokuskohdeAuki ?? null;
+  const kohde = auki?.kohde ?? null;
+  if (!kohde?.nimi) return null;
+  if (auki.popup && auki.popup.isConnected === false) return null;
+  return {
+    nimi: kohde.nimi,
+    tyyppi: kohde.tyyppi ?? null,
+    teksti: kohde.teksti ?? null,
+  };
 }
 
 /* ------------------------------------------------------------------ */
@@ -1809,7 +1863,16 @@ class Pollo {
     if (typeof this.doc.addEventListener !== 'function') return;
     this.doc.addEventListener('pointerdown', (e) => {
       if (!this.auki) return;
-      if (e.target?.closest?.('.pollo-paneeli, .pollo-nappi')) return;
+      /*
+       * KARTAN KOHDETIETORUUTU ON CHATIN TYÖPARI, EI SEN ULKOPUOLTA
+       * (omistajan pelitesti 25.8.2026). Kortin valmiit kysymykset ja
+       * alleviivatut sanat lähtevät tähän keskusteluun, ja pöllö vastaa
+       * juuri siitä kohteesta — jos napautus kortin päällä sulkisi
+       * paneelin, kysymysnappi sulkisi sen sekunnin murto-osaa ennen
+       * kuin se avaisi sen uudelleen. Kortin oma sulkusopimus säilyy
+       * ennallaan (js/fokuskohteet.js).
+       */
+      if (e.target?.closest?.('.pollo-paneeli, .pollo-nappi, .fokuskohde-popup')) return;
       this.sulje();
     });
     this.doc.addEventListener('keydown', (e) => {
@@ -3835,21 +3898,44 @@ export function polloValintakysymys(valinta) {
  *   löydetty, tai edellinen vastaus on kesken).
  */
 export function kysyPollolta(valinta) {
+  return polloKysy(polloValintakysymys(valinta));
+}
+
+/**
+ * VALMIS KYSYMYS SUORAAN CHATTIIN (omistajan tilaus 25.8.2026: kartan
+ * kohdetietoruudun kaksi kysymysnappia ja sen alleviivatut sanat).
+ *
+ * Tämä on pelin sisäinen "lähetä ohjelmallinen kysymys" -reitti: teksti
+ * menee TÄSMÄLLEEN samaa polkua kuin pelaajan itse kirjoittama kysymys
+ * (Pollo.kysy), joten striimi, luenta, historia, konteksti ja
+ * jatkokysymykset toimivat sellaisenaan. Kutsuja ei tarvitse tietää
+ * paneelista mitään — jos chat on kiinni, se avataan.
+ *
+ * KYSYMYS ON PELAAJAN ÄÄNTÄ. Pöllön karaktääri (Raamattu, PÖLLÖN
+ * KARAKTÄÄRI) koskee VASTAUSTA, joka syntyy workerissa; tänne annetaan
+ * neutraali kysymys, ei repliikkiä pöllön suuhun.
+ *
+ * @param {string} kysymys valmis kysymys sellaisenaan.
+ * @returns {boolean} lähtikö kysymys. Epätosi kertoo, ettei pöllö ollut
+ *   käytettävissä (peliä ei ole, pöllöä ei ole löydetty, tai edellinen
+ *   vastaus on kesken) — kutsuja saa jättää sen huomiotta.
+ */
+export function polloKysy(kysymys) {
   const pollo = nykyinenPollo;
   if (!pollo) return false;
   // Pöllö on aarre: ennen löytöä sitä ei ole olemassa pelaajalle, eikä
-  // valikkotoiminto saa paljastaa sitä etuajassa (ks. nakyyko).
+  // mikään pikatoiminto saa paljastaa sitä etuajassa (ks. nakyyko).
   if (!pollo.nakyyko()) return false;
-  const kysymys = polloValintakysymys(valinta);
-  if (!kysymys) return false;
+  const teksti = String(kysymys ?? '').replace(/\s+/g, ' ').trim();
+  if (!teksti) return false;
   // Kesken oleva vastaus voittaa: kysy hylkäisi tämän joka tapauksessa,
   // ja paneelin avaaminen kysymyksettä olisi pelaajalle arvoitus.
   if (pollo.kesken) return false;
   if (!pollo.auki) pollo.avaa();
   // kysy on asynkroninen (verkkopyyntö); lupausta ei odoteta, koska
-  // kuoren valikkotoiminto on jo mennyt. Hylkäys niellään samalla
-  // opilla kuin muissakin kuorikutsuissa (js/natiivi.js nielaise).
-  Promise.resolve(pollo.kysy(kysymys)).catch(() => {});
+  // kutsuva ele on jo mennyt. Hylkäys niellään samalla opilla kuin
+  // muissakin kuorikutsuissa (js/natiivi.js nielaise).
+  Promise.resolve(pollo.kysy(teksti)).catch(() => {});
   return true;
 }
 

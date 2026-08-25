@@ -373,7 +373,102 @@ await sivu.evaluate(() => {
 await sivu.waitForTimeout(250);
 vaadi('fokusvirran kuplan avautuminen sulkee tietoruudun', (await popup()) === null);
 
-/* --- 9: ilman lehteä ei merkkejä --- */
+/* --- 9: pöllö ja tietoruutu ovat rinnakkain --- */
+
+/*
+ * Omistajan pelitesti 25.8.2026: *"kohteen pop-up katoaa, kun painaa
+ * pöllönappia"*. Juurisyy oli kortin sulkusopimuksessa (napautus kortin
+ * ULKOPUOLELLE sulkee), ja korjaus on poikkeus siihen — siksi koe on
+ * täällä eikä yksikkötestissä: se mittaa oikeaa napautusta oikealla
+ * asettelulla, myös sen, ettei paneeli peitä korttia.
+ *
+ * Kupla pois kohdan 8 jäljiltä: uusi kortti avataan puhtaalle pöydälle.
+ */
+await sivu.evaluate(() => document.querySelector('.fokusvirta-kupla')?.remove());
+await napauta('delfoi');
+vaadi('kortti aukeaa pöllökoetta varten', (await popup()) !== null);
+
+await sivu.locator('.pollo-nappi').click();
+await sivu.waitForTimeout(700);
+const rinnakkain = await sivu.evaluate(() => {
+  const kortti = document.querySelector('.fokuskohde-popup');
+  const paneeli = document.querySelector('.pollo-paneeli');
+  if (!paneeli) return null;
+  if (!kortti) return { kortti: false, chatAuki: !paneeli.hidden, osuus: 1 };
+  const k = kortti.getBoundingClientRect();
+  const p = paneeli.getBoundingClientRect();
+  const leveys = Math.max(0, Math.min(k.right, p.right) - Math.max(k.left, p.left));
+  const korkeus = Math.max(0, Math.min(k.bottom, p.bottom) - Math.max(k.top, p.top));
+  const ala = k.width * k.height;
+  return {
+    kortti: true,
+    chatAuki: !paneeli.hidden,
+    osuus: ala > 0 ? Number(((leveys * korkeus) / ala).toFixed(2)) : 1,
+  };
+});
+vaadi('pöllönappi ei sulje tietoruutua',
+  rinnakkain?.kortti === true && rinnakkain.chatAuki === true, JSON.stringify(rinnakkain));
+vaadi('pöllöpaneeli ei peitä tietoruutua',
+  rinnakkain?.osuus < 0.5, JSON.stringify(rinnakkain));
+
+const konteksti = await sivu.evaluate(() => window.matkakirjaPollo.konteksti(''));
+vaadi('pöllön konteksti tuntee auki olevan kohteen',
+  /Kartalla auki oleva kohdetietoruutu: Delfoi/.test(konteksti)
+  && konteksti.includes('Omfalos'),
+  konteksti.slice(0, 240));
+
+/* --- 10: valmiit kysymykset ja alleviivatut sanat --- */
+
+const kysymysnapit = await sivu.evaluate(
+  () => [...document.querySelectorAll('.fokuskohde-kysymys')].map((n) => n.textContent),
+);
+vaadi('kortin lopussa on kaksi valmista kysymystä',
+  kysymysnapit.length === 2, JSON.stringify(kysymysnapit));
+
+/** Chatin tila: onko paneeli auki, mitä pelaaja on kysynyt, onko kortti yhä. */
+const chatTila = () => sivu.evaluate(() => ({
+  auki: !document.querySelector('.pollo-paneeli')?.hidden,
+  kysytyt: [...document.querySelectorAll('.pollo-viesti.pollo-kayttaja')]
+    .map((v) => v.textContent),
+  kortti: Boolean(document.querySelector('.fokuskohde-popup')),
+}));
+
+await sivu.locator('.fokuskohde-kysymys').first().click();
+await sivu.waitForTimeout(1200);
+let chat = await chatTila();
+vaadi('valmis kysymys lähtee chattiin ja kortti jää auki',
+  chat.auki && chat.kortti && chat.kysytyt.includes(kysymysnapit[0]),
+  JSON.stringify(chat));
+
+const sanat = await sivu.evaluate(() => {
+  const napit = [...document.querySelectorAll('.fokuskohde-teksti .fokuskohde-sana')];
+  const tyyli = napit[0] ? getComputedStyle(napit[0]) : null;
+  return {
+    tekstit: napit.map((n) => n.textContent),
+    leipatekstissa: napit.every((n) => Boolean(n.closest('.fokuskohde-teksti p'))),
+    viiva: tyyli?.textDecorationLine ?? '',
+    tyyli: tyyli?.textDecorationStyle ?? '',
+  };
+});
+vaadi('alleviivatut sanat ovat leipätekstin sisällä pisteviivalla',
+  sanat.tekstit.length >= 1 && sanat.leipatekstissa
+  && sanat.viiva.includes('underline') && sanat.tyyli === 'dotted',
+  JSON.stringify(sanat));
+
+await sivu.locator('.fokuskohde-teksti .fokuskohde-sana').first().click();
+await sivu.waitForTimeout(1200);
+chat = await chatTila();
+vaadi('alleviivattu sana kysyy pöllöltä lisää kortin sulkeutumatta',
+  chat.auki && chat.kortti
+  && chat.kysytyt.some((k) => k === 'Kerro lisää: omfalos (kohteessa Delfoi)'),
+  JSON.stringify(chat));
+
+// Chat kiinni ennen viimeisiä kokeita: paneeli ei saa jäädä mittaamaan
+// seuraavien kohtien geometriaa.
+await sivu.evaluate(() => window.matkakirjaPollo.sulje());
+await sivu.waitForTimeout(300);
+
+/* --- 11: ilman lehteä ei merkkejä --- */
 
 await sivu.evaluate(() => window.matkakirja.ui.paivitaFokusPohja(null));
 await sivu.waitForTimeout(300);

@@ -283,6 +283,103 @@
 
 .fokuskohde-teksti p:last-child { margin-bottom: 0; }
 
+/* ===================================================================
+   ALLEVIIVATTU SANA JA KAKSI VALMISTA KYSYMYSTÄ (omistajan tilaus
+   25.8.2026, js/fokuskohteet.js)
+   -------------------------------------------------------------------
+   Molemmat vievät samaan paikkaan: pöllön keskusteluun, joka aukeaa
+   kortin viereen kortin jäädessä auki. Ulkoasu on siksi yhtä sukua —
+   sama muste, sama pisteviiva.
+
+   SANA ON PAINIKE, EI LINKKI. Kaksi syytä, samat kuin kortin kuvalla:
+   näppäimistö pääsee painikkeeseen, ja kortin oma sulkusopimus
+   (napautus kortin päällä = sulku, painikkeen päällä = valinta,
+   js/fokuskohteet.js avaaFokuskohde) tottelee sitä ilman poikkeusta.
+   Napin oletusulkoasu riisutaan kokonaan, jotta sana pysyy leipätekstin
+   osana: sama kirjasin, sama koko, sama rivitys — vain hienovarainen
+   pisteviiva-alleviivaus kertoo, että siitä saa lisää.
+   =================================================================== */
+
+.fokuskohde-sana {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  /* Hienovarainen pisteviiva — ei suodattimia, ei hehkua. */
+  text-decoration: underline dotted rgba(122, 85, 20, 0.75);
+  text-underline-offset: 0.16em;
+  cursor: pointer;
+  /* Kartta ottaa eleet itselleen; napautuksen on silti tultava perille. */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fokuskohde-sana:hover,
+.fokuskohde-sana:focus-visible {
+  color: #7a5514;
+  text-decoration-color: #7a5514;
+}
+
+.fokuskohde-sana:focus { outline: none; }
+
+.fokuskohde-sana:focus-visible {
+  outline: 2px solid #9c6b17;
+  outline-offset: 2px;
+}
+
+/*
+ * KAKSI KYSYMYSTÄ ALLEKKAIN kortin loppuun. Allekkain eikä vierekkäin:
+ * kortti on kapea (21 rem), ja kaksi kysymystä vierekkäin taittuisi
+ * kummallekin kahdelle riville, jolloin nappien rajat katoaisivat.
+ */
+.fokuskohde-kysymykset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin: 0.6rem 0 0;
+}
+
+.fokuskohde-kysymys {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0.34rem 0.5rem;
+  border: 1px dashed rgba(122, 85, 20, 0.5);
+  border-radius: 8px;
+  background: rgba(236, 226, 200, 0.6);
+  box-shadow: none;
+  color: #46331f;
+  font-family: var(--font-luku);
+  font-size: 0.84rem;
+  line-height: 1.35;
+  text-align: left;
+  text-shadow: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fokuskohde-kysymys:hover,
+.fokuskohde-kysymys:focus-visible {
+  border-color: rgba(122, 85, 20, 0.8);
+  background: rgba(236, 226, 200, 0.92);
+  color: #211d18;
+}
+
+.fokuskohde-kysymys:focus { outline: none; }
+
+.fokuskohde-kysymys:focus-visible {
+  outline: 2px solid #9c6b17;
+  outline-offset: -2px;
+}
+
 .fokuskohde-lahde {
   margin: 0.5rem 0 0;
   font-size: 0.68rem;

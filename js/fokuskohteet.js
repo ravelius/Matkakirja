@@ -57,6 +57,26 @@
  * oman ankkurinsa. Siksi täällä on oma kevyt suurennos omalla luokallaan
  * ja SAMALLA ULKOASULLA (css/fokuskohteet.css peilaa .fokuszoom-tyylit).
  *
+ * === KORTTI JA PÖLLÖ OVAT TYÖPARI (omistajan pelitesti 25.8.2026) ===
+ *
+ * Kortti EI enää katoa, kun pelaaja avaa pöllön: chat aukeaa sen
+ * viereen, ja kortti väistyy paneelin tieltä (asetaKohteenPaikka).
+ * Kolme kohtaa tekevät sen yhdessä:
+ *
+ *   1. SULKUSOPIMUKSEN POIKKEUS. Napautus pöllönapin tai -paneelin
+ *      päällä ei ole "ulkopuolelle" (kuunteleKohdetta ulos) — juuri se
+ *      sulki kortin ennen. Toiseen suuntaan sama sopimus on pöllön
+ *      päässä: napautus kortin päällä ei sulje chattia (js/pollo.js
+ *      seuraaSulkemista).
+ *   2. KORTTI ON PÖLLÖN KONTEKSTISSA. Auki oleva kohde talletetaan
+ *      `ui.fokuskohdeAuki.kohde`-kenttään, ja js/pollo.js lueNakyma
+ *      lukee siitä nimen, tyypin ja tekstin samaan pakettiin, jolla
+ *      lehti ja kartta jo kulkevat workerille.
+ *   3. KAKSI VALMISTA KYSYMYSTÄ JA ALLEVIIVATUT SANAT ovat DATAA
+ *      (`kysymykset`, `korostukset` js/packs/fokuskohteet-*.js) eivätkä
+ *      koodia: napautus lähettää kysymyksen pöllölle (js/pollo.js
+ *      polloKysy) ja kortti jää auki sen rinnalle.
+ *
  * === MITÄ TÄSSÄ EI OLE ===
  *
  * TÄYSI NIUKKA-KARTTA-KOROSTUS. Raamatun KOHDEKOROSTUS lupaa kartan
@@ -69,6 +89,7 @@ import { html, jaaKappaleiksi } from './ui-apurit.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { FOKUSKOHTEET_BGR } from './packs/fokuskohteet-bgr.js';
 import { FOKUSKOHTEET_GRC } from './packs/fokuskohteet-grc.js';
+import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
 
 /*
@@ -324,15 +345,32 @@ export function suljeFokuskohde(ui) {
   if (auki.purku) auki.purku();
 }
 
+/** Auki oleva pöllöpaneeli ruudun koordinaateissa, tai null. */
+function kohdePolloPaneeli() {
+  const paneeli = document.querySelector('.pollo-paneeli');
+  if (!paneeli || paneeli.hidden) return null;
+  const r = paneeli.getBoundingClientRect();
+  return r.width > 0 && r.height > 0 ? r : null;
+}
+
 /**
  * Kortin paikka merkin viereen.
  *
- * KOLME PAKKOA: kortti ei valu ruudun (karttapaneelin) ulkopuolelle,
+ * NELJÄ PAKKOA: kortti ei valu ruudun (karttapaneelin) ulkopuolelle,
  * se ei peitä alanappeja — vuorolaatikko luetaan ruudulta eikä
- * arvata — ja jos pystysuunnassa on ahdasta, kortti saa oman kattonsa
- * ja loppu vieritetään sen sisällä. Vaakasuunnassa kortti menee
- * mieluiten merkin OIKEALLE puolelle ja kääntyy vasemmalle vasta jos
- * ei mahdu; niin merkki jää näkyviin kortin viereen.
+ * arvata — se väistää auki olevaa pöllöpaneelia, ja jos pystysuunnassa
+ * on ahdasta, kortti saa oman kattonsa ja loppu vieritetään sen
+ * sisällä. Vaakasuunnassa kortti menee mieluiten merkin OIKEALLE
+ * puolelle ja kääntyy vasemmalle vasta jos ei mahdu; niin merkki jää
+ * näkyviin kortin viereen.
+ *
+ * PÖLLÖN VÄISTÖ ON KAKSIVAIHEINEN. Paneeli on kiinteä ja asuu oikeassa
+ * alanurkassa, mutta kapealla ruudulla (css/styles.css max-width 560px)
+ * se levittäytyy reunasta reunaan. Jos paneelin vasemmalle puolelle
+ * mahtuu koko kortti, kortti menee sinne; muuten se nousee paneelin
+ * yläpuolelle ja saa sieltä oman kattonsa. Kortin vähimmäiskorkeus
+ * voittaa yhä molemmat: mieluummin kapea kaista kortin alalaidasta
+ * paneelin alle kuin kortti, jota ei voi lukea.
  */
 function asetaKohteenPaikka(ui) {
   const auki = ui.fokuskohdeAuki;
@@ -344,26 +382,62 @@ function asetaKohteenPaikka(ui) {
 
   // Alanapit: vuorolaatikko kelluu kapealla ruudulla kartan päällä.
   let alaraja = pane.bottom - KOHDE_MARGINAALI;
+  let oikeaRaja = pane.right - KOHDE_MARGINAALI;
+  const vasenRaja = pane.left + KOHDE_MARGINAALI;
   const napit = document.querySelector('.turn-card')?.getBoundingClientRect();
   if (napit && napit.height > 0 && napit.right > pane.left && napit.left < pane.right
     && napit.top > pane.top) {
     alaraja = Math.min(alaraja, napit.top - KOHDE_MARGINAALI);
   }
+
+  // Leveys on tyylistä eikä katosta, joten se voidaan mitata jo tässä.
+  const leveys = auki.popup.getBoundingClientRect().width;
+  const chat = kohdePolloPaneeli();
+  if (chat && chat.right > vasenRaja && chat.left < oikeaRaja && chat.bottom > pane.top) {
+    if (chat.left - vasenRaja >= leveys + KOHDE_RAKO) {
+      oikeaRaja = Math.min(oikeaRaja, chat.left - KOHDE_RAKO);
+    } else {
+      alaraja = Math.min(alaraja, chat.top - KOHDE_MARGINAALI);
+    }
+  }
+
   const katto = Math.max(140, Math.round(alaraja - pane.top - KOHDE_MARGINAALI));
   auki.popup.style.maxHeight = `${katto}px`;
 
-  const laatikko = auki.popup.getBoundingClientRect();
-  const leveys = laatikko.width;
-  const korkeus = laatikko.height;
+  const korkeus = auki.popup.getBoundingClientRect().height;
   let vasen = m.right + KOHDE_RAKO;
-  if (vasen + leveys > pane.right - KOHDE_MARGINAALI) vasen = m.left - KOHDE_RAKO - leveys;
-  vasen = Math.max(pane.left + KOHDE_MARGINAALI,
-    Math.min(vasen, pane.right - KOHDE_MARGINAALI - leveys));
+  if (vasen + leveys > oikeaRaja) vasen = m.left - KOHDE_RAKO - leveys;
+  vasen = Math.max(vasenRaja, Math.min(vasen, oikeaRaja - leveys));
   let ylin = m.top + m.height / 2 - korkeus / 2;
   ylin = Math.min(ylin, alaraja - korkeus);
   ylin = Math.max(pane.top + KOHDE_MARGINAALI, ylin);
   auki.popup.style.left = `${Math.round(vasen - pane.left)}px`;
   auki.popup.style.top = `${Math.round(ylin - pane.top)}px`;
+}
+
+/**
+ * Kortin paikka uudelleen sen jälkeen, kun pöllöpaneeli on ehtinyt
+ * avautua tai sulkeutua. Kaksi mittausta: heti seuraavalla kehyksellä
+ * ja vielä hetken päästä — paneelin oma korkeus asettuu vasta kun sen
+ * sisältö on ladottu, eikä tästä tiedostosta kuunnella sen tilaa.
+ */
+function siirraKohdeMyohemmin(ui) {
+  globalThis.requestAnimationFrame?.(() => asetaKohteenPaikka(ui));
+  setTimeout(() => asetaKohteenPaikka(ui), 260);
+}
+
+/**
+ * Valmis kysymys pöllölle kortista käsin.
+ *
+ * KORTTI JÄÄ AUKI (omistajan tilaus 25.8.2026): chat aukeaa sen
+ * viereen ja kortti väistää paneelia. Kysymys menee js/pollo.js:n
+ * omaa ohjelmallista reittiä, joten se näkyy chatissa täsmälleen kuin
+ * pelaajan itse kirjoittamana.
+ */
+function kysyKohteesta(ui, kysymys) {
+  const lahti = polloKysy(kysymys);
+  siirraKohdeMyohemmin(ui);
+  return lahti;
 }
 
 /**
@@ -411,6 +485,114 @@ function piirraKohdeKuva(ui, sisalto, kuva) {
     kehys.appendChild(teksti);
   }
   sisalto.appendChild(kehys);
+}
+
+/* ========== ALLEVIIVATUT SANAT JA KAKSI VALMISTA KYSYMYSTÄ ==========
+ *
+ * Omistajan tilaus 25.8.2026. Molemmat ovat DATAA eivätkä koodia:
+ * kohteella on valinnainen `korostukset`-lista ja valinnainen
+ * `kysymykset`-lista (js/packs/fokuskohteet-*.js). Uusi kohde saa
+ * kummatkin ilman että tähän tiedostoon kosketaan.
+ *
+ * MERKINTÄ ON SAMA KUIN PÖLLÖLINKEISSÄ (js/pollo.js puraPutki):
+ * `'perusmuoto|näkyvä muoto'`. Tekstissä alleviivataan taivutettu muoto,
+ * mutta kysymys tehdään perusmuodosta — "Kerro lisää: minolaiset" on
+ * kysymys, "Kerro lisää: minolaisen" ei ole. Ilman putkea muodot ovat
+ * samat.
+ *
+ * SANA MERKITÄÄN KERRAN. Sama sana voi toistua tekstissä, mutta toinen
+ * ja kolmas alleviivaus tekisivät kappaleesta linkkiviidakon; jäljellä
+ * olevista korostuksista poistetaan aina se, joka juuri osui.
+ */
+
+/** Yhden korostuksen kaksi muotoa. Tyhjä merkintä jätetään pois. */
+function puraKorostus(merkinta) {
+  const teksti = String(merkinta ?? '').trim();
+  if (!teksti) return null;
+  const putki = teksti.indexOf('|');
+  if (putki < 0) return { perus: teksti, nakyva: teksti };
+  const perus = teksti.slice(0, putki).trim();
+  const nakyva = teksti.slice(putki + 1).trim();
+  if (!perus || !nakyva) return null;
+  return { perus, nakyva };
+}
+
+/** Napautettava sana leipätekstin sisällä. */
+function piirraKorostettuSana(ui, kohde, korostus, nakyvaTeksti) {
+  const nappi = html('button', 'fokuskohde-sana', nakyvaTeksti);
+  nappi.type = 'button';
+  nappi.title = `Kysy pöllöltä lisää: ${korostus.perus}`;
+  nappi.setAttribute('aria-label', `Kysy pöllöltä lisää: ${korostus.perus}`);
+  nappi.addEventListener('click', (tapahtuma) => {
+    tapahtuma.stopPropagation();
+    kysyKohteesta(ui, `Kerro lisää: ${korostus.perus} (kohteessa ${kohde.nimi})`);
+  });
+  return nappi;
+}
+
+/**
+ * Yksi kappale, jossa jäljellä olevat korostukset ovat painikkeina.
+ *
+ * Teksti asetetaan aina TEKSTISOLMUINA eikä merkkauksena — sama sääntö
+ * kuin pöllön vastauksissa (js/pollo.js): pelin oma aineisto on tekstiä,
+ * eikä siitä tulkita hakasulkeita, kulmasulkeita tai mitään muutakaan.
+ */
+function piirraKohdeKappale(ui, kohde, kappale, jaljella) {
+  const p = html('p', '');
+  let loppu = kappale;
+  for (;;) {
+    let osuma = null;
+    const matala = loppu.toLowerCase();
+    for (const korostus of jaljella) {
+      const kohta = matala.indexOf(korostus.nakyva.toLowerCase());
+      if (kohta < 0) continue;
+      if (!osuma || kohta < osuma.kohta) osuma = { kohta, korostus };
+    }
+    if (!osuma) break;
+    const pituus = osuma.korostus.nakyva.length;
+    if (osuma.kohta > 0) p.appendChild(document.createTextNode(loppu.slice(0, osuma.kohta)));
+    // Näkyvä teksti otetaan KAPPALEESTA eikä datasta: kirjoitusasu
+    // (iso alkukirjain, tarkkeet) on tekstin oma, ei merkinnän.
+    p.appendChild(piirraKorostettuSana(ui, kohde, osuma.korostus,
+      loppu.slice(osuma.kohta, osuma.kohta + pituus)));
+    loppu = loppu.slice(osuma.kohta + pituus);
+    jaljella.delete(osuma.korostus);
+  }
+  if (loppu) p.appendChild(document.createTextNode(loppu));
+  return p;
+}
+
+/** Kortin leipäteksti kappaleittain, korostukset painikkeina. */
+function piirraKohdeTeksti(ui, sisalto, kohde) {
+  const jaljella = new Set(
+    (Array.isArray(kohde.korostukset) ? kohde.korostukset : [])
+      .map(puraKorostus).filter(Boolean),
+  );
+  const teksti = html('div', 'fokuskohde-teksti');
+  for (const kappale of jaaKappaleiksi(kohde.teksti)) {
+    teksti.appendChild(piirraKohdeKappale(ui, kohde, kappale, jaljella));
+  }
+  sisalto.appendChild(teksti);
+}
+
+/** Kortin loppuun enintään kaksi valmista kysymystä pöllölle. */
+function piirraKohdeKysymykset(ui, sisalto, kohde) {
+  const kysymykset = (Array.isArray(kohde.kysymykset) ? kohde.kysymykset : [])
+    .map((k) => String(k ?? '').trim()).filter(Boolean).slice(0, 2);
+  if (!kysymykset.length) return;
+  const rivi = html('div', 'fokuskohde-kysymykset');
+  rivi.setAttribute('role', 'group');
+  rivi.setAttribute('aria-label', `Kysy pöllöltä: ${kohde.nimi}`);
+  for (const kysymys of kysymykset) {
+    const nappi = html('button', 'fokuskohde-kysymys', kysymys);
+    nappi.type = 'button';
+    nappi.addEventListener('click', (tapahtuma) => {
+      tapahtuma.stopPropagation();
+      kysyKohteesta(ui, kysymys);
+    });
+    rivi.appendChild(nappi);
+  }
+  sisalto.appendChild(rivi);
 }
 
 /* ==================== KUVAN SUURENNOS KARTAN PÄÄLLE ==================
@@ -741,17 +923,19 @@ export function avaaFokuskohde(ui, kohde) {
     KOHDE_TYYPIT[kohde.tyyppi] ?? KOHDE_TYYPIT.muu));
   sisalto.appendChild(html('h3', 'fokuskohde-otsikko', kohde.nimi));
   piirraKohdeKuva(ui, sisalto, kohde.kuva);
-  const teksti = html('div', 'fokuskohde-teksti');
-  for (const kappale of jaaKappaleiksi(kohde.teksti)) {
-    teksti.appendChild(html('p', '', kappale));
-  }
-  sisalto.appendChild(teksti);
+  piirraKohdeTeksti(ui, sisalto, kohde);
+  piirraKohdeKysymykset(ui, sisalto, kohde);
   if (kohde.lahde) sisalto.appendChild(html('p', 'fokuskohde-lahde', kohde.lahde));
   popup.appendChild(sisalto);
   koti.appendChild(popup);
 
   merkki?.classList.add('auki');
-  ui.fokuskohdeAuki = { id: kohde.id, popup, merkki, purku: null };
+  /*
+   * KOHDE ITSE TALTEEN, ei vain sen tunnus: pöllön kontekstinkeruu
+   * (js/pollo.js lueNakyma) lukee tästä auki olevan kortin nimen,
+   * tyypin ja tekstin, jotta chat vastaa siitä, mitä ruudulla näkyy.
+   */
+  ui.fokuskohdeAuki = { id: kohde.id, kohde, popup, merkki, purku: null };
   ui.fokuskohdeAuki.purku = kuunteleKohdetta(ui, popup);
   asetaKohteenPaikka(ui);
   // Mitta uudelleen, kun asettelu ja tyyli ovat valmiit: ensimmäinen
@@ -788,6 +972,19 @@ function kuunteleKohdetta(ui, popup) {
      * kuva kutistuisi paikkaan, jota ei enää ole.
      */
     if (tapahtuma.target?.closest?.('.fokuskohde-zoom')) return;
+    /*
+     * PÖLLÖ EI SULJE KORTTIA (omistajan pelitesti 25.8.2026: *"kohteen
+     * pop-up katoaa, kun painaa pöllönappia"*). Juurisyy oli tässä:
+     * pöllönappi on kortin ulkopuolella, joten sen napautus meni tästä
+     * läpi sulkuna, ja chat aukesi tyhjän kartan päälle. Nyt nappi ja
+     * paneeli ovat kortin työpari — kortti jää auki ja väistää
+     * paneelia (asetaKohteenPaikka). Sama sopimus toiseen suuntaan on
+     * js/pollo.js seuraaSulkemista.
+     */
+    if (tapahtuma.target?.closest?.('.pollo-nappi, .pollo-paneeli')) {
+      siirraKohdeMyohemmin(ui);
+      return;
+    }
     suljeFokuskohde(ui);
   };
   const asemoi = () => asetaKohteenPaikka(ui);
