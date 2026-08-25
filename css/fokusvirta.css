@@ -696,10 +696,11 @@ body.fokuszoom-paalla .fokusvirta-kortti {
 
 /* ================= KEVYT KULKU -KOKEILU (24.8.2026, ilta) ==========
  *
- * Raamatun osio "Fokusmoodi", kohta KEVYT KULKU -KOKEILU. Kaksi uutta
- * pintaa: pöllön lyhyt vinkki lehden avautuessa ja kartan vihreä
- * kohtaamispiste. Kummankin markup on js:ssä (js/fokusvirta.js
- * fokusvirtaLehtivinkki, js/fokuspiste.js).
+ * Raamatun osio "Fokusmoodi", kohta KEVYT KULKU -KOKEILU. Kolme uutta
+ * pintaa: pöllön lyhyt kupla (vinkki lehden avautuessa, kuittaus
+ * tehtävän ratkettua), nimetyn tehtävän vihjerivi ja kartan vihreä
+ * kohtaamispiste. Markup on js:ssä (js/fokusvirta.js naytaPolloKupla,
+ * js/fokustehtavat.js piirraNimettyTehtava, js/fokuspiste.js).
  */
 
 /* ---------- pöllön vinkki lehden päällä ---------- */
@@ -733,6 +734,52 @@ body.fokuszoom-paalla .fokusvirta-kortti {
 }
 
 .fokusvirta-vinkkiruksi input { margin: 0; }
+
+/* ---------- nimetyn tehtävän vihjerivi ---------- */
+
+/*
+ * VIHJERIVI NIMILAATAN ALLE (omistajan pelitesti 25.8.2026: *"Tehtävän
+ * otsikko saisi vinkata että se avaa aarteen."*). Markup on
+ * js/fokustehtavat.js:ssä (piirraNimettyTehtava).
+ *
+ * Nimilaatta on kapiteelia ja harvennettua kirjoituskonefonttia — sen
+ * äänensävy on painettu leima. Vihje on toista ääntä: lehden omaa
+ * lukukirjasinta, pientä ja kursiivia, kuin latoja olisi lisännyt
+ * selityksen leiman alle. Sama keskitys pitää kaksikon yhtenä paalina
+ * eikä kahtena irrallisena rivinä.
+ *
+ * Väri on sama muste kuin nimilaatalla mutta haaleampana (styles.css:n
+ * otsakkeessa 0.78): vihje ei saa kilpailla kysymyksen kanssa, joka on
+ * laatikon varsinainen otsikko.
+ */
+.minitehtava.fokus-tehtava .fokus-tehtava-vihje {
+  margin: -0.2rem 0 0.55rem;
+  font-family: var(--font-luku);
+  font-size: 0.82rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.35;
+  text-align: center;
+  color: rgba(60, 44, 26, 0.72);
+}
+
+/*
+ * PALKINNOLLINEN LAATIKKO ON RUUDUKKO (css/styles.css
+ * .minitehtava-palkinnollinen): kysymys ja vastausrivit vasemmalla,
+ * julistevedos oikeassa kapeassa palstassa. Vihje kuuluu otsakkeen
+ * pariksi eli koko laatikon leveydelle, joten se ottaa rivin 2 — ja
+ * vedos, jonka styles.css asettaa riville 2, siirtyy sen tieltä riviä
+ * alemmas. Siirto on rajattu kevyen kulun laatikkoon (.fokus-tehtava),
+ * jottei lehden tavallinen minitehtävä liikahda.
+ */
+.minitehtava.fokus-tehtava.minitehtava-palkinnollinen > .fokus-tehtava-vihje {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
+.minitehtava.fokus-tehtava.minitehtava-palkinnollinen .juliste-palkinto {
+  grid-row: 3 / span 3;
+}
 
 /* ---------- vihreä hehkuva kohtaamispiste ---------- */
 

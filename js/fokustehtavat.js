@@ -16,10 +16,12 @@
  * avain vastataan kerran, raha maksetaan vain oikeasta vastauksesta ja
  * kaikki kulkee pelitallenteessa. Uutta on kolme asiaa:
  *
- *   1. NIMILAATTA. Laatikon otsake ei ole "Lehden minitehtävä" vaan
- *      tehtävän oma nimi — "AARTEEN AVAUS" tai "JULISTE". Se on koko
- *      kokeilun ydin: pelaajan pitää nähdä sivulta, kumpi tehtävä
- *      avaa tien aarteelle ja kumpi antaa julisteen.
+ *   1. NIMILAATTA JA VIHJERIVI. Laatikon otsake ei ole "Lehden
+ *      minitehtävä" vaan tehtävän oma nimi — "AARTEEN AVAUS" tai
+ *      "JULISTE" — ja sen alla lukee yhdellä rivillä, mitä oikeasta
+ *      vastauksesta seuraa. Se on koko kokeilun ydin: pelaajan pitää
+ *      nähdä sivulta, kumpi tehtävä avaa tien aarteelle ja kumpi antaa
+ *      julisteen (omistajan pelitesti 25.8.2026).
  *   2. SIJAINTI SIVUNUMEROSSA. Tehtävä ei tule aihesivun omasta
  *      `tehtava`-kentästä vaan kaupungin fokusvirtadatasta
  *      (js/packs/fokusvirta-ateena.js lehtitehtavat), jossa jokaisella
@@ -27,6 +29,10 @@
  *      sivulla on Raamatun vaatima YKSI minitehtävä eikä kahta.
  *   3. PALKINTONA PISTE. AARTEEN AVAUS ei maksa julistetta vaan
  *      sytyttää kartalle vihreän kohtaamispisteen (js/fokuspiste.js).
+ *   4. PÖLLÖN KUITTAUS. Oikean vastauksen jälkeen pöllö kertoo
+ *      lyhyesti, mitä juuri tapahtui ja mitä on vielä tekemättä —
+ *      palkinto tapahtuu lehden ulkopuolella (kartta, matkalaukku),
+ *      eikä pelaaja näe sitä sivulta (ks. kuittausTeksti).
  *
  * ── LIPPU ──────────────────────────────────────────────────────────
  *
@@ -65,6 +71,71 @@ export const FOKUS_TEHTAVA_PALKKIO = 50;
 
 /** Kirjanpitoavaimen etuliite: ei voi osua aihesivun omaan avaimeen. */
 const TEHTAVA_ETULIITE = 'fokus';
+
+/**
+ * VIHJERIVI NIMILAATAN ALLE (omistajan pelitesti 25.8.2026: *"Tehtävän
+ * otsikko saisi vinkata että se avaa aarteen."*).
+ *
+ * Nimilaatta kertoo MIKÄ tehtävä on, vihjerivi mitä siitä SEURAA.
+ * Pelitestissä laatikko luettiin pelkäksi lehden kysymykseksi, koska
+ * "AARTEEN AVAUS" ei vielä lupaa mitään — palkinto oli näkymätön siihen
+ * asti kunnes vastaus oli annettu.
+ *
+ * Rivi on sidottu PALKINTOON eikä kaupunkiin, joten jokainen uusi lauta
+ * saa sen ilmaiseksi samalla kun se saa nimetyn tehtävän. Pack-data voi
+ * silti korvata sen omalla `vihje`-kentällään, jos jonkin kaupungin
+ * palkinto on joskus jotain muuta.
+ *
+ * Rivi EI OLE otsakkeen sisällä vaan sen sisarena: otsakkeen teksti on
+ * nimilaatta ja vain se (savuke lukee sen sellaisenaan), ja vihje on
+ * eri äänensävyä — pientä kursiivia, ei kapiteelia.
+ */
+const TEHTAVAN_VIHJE = {
+  piste: 'oikea vastaus paljastaa aarteen jäljen kartalle',
+  juliste: 'oikea vastaus tuo julisteen kokoelmaasi',
+};
+
+/** Fokusvirran tyylitiedosto sivulle, jos sitä ei vielä ole. */
+const TEHTAVA_TYYLIN_TUNNUS = 'fokusvirta-tyyli';
+
+/*
+ * Sama kaava ja sama syy kuin fokusvirralla ja fokuspisteellä:
+ * css/styles.css on toisen työvaiheen hallussa, joten kevyen kulun omat
+ * rivit asuvat css/fokusvirta.css:ssä. Tunnus on sama kaikilla
+ * lataajilla, joten tiedosto tulee sivulle enintään kerran — lehden
+ * tehtävälaatikko voi hyvin olla ensimmäinen, joka sitä tarvitsee, sillä
+ * korttipintaa ei kevyessä kulussa välttämättä avata koskaan.
+ *
+ * Nimet on prefiksoitu (lataaTehtavaTyyli, TEHTAVA_*), koska yhden
+ * tiedoston versio ketjuttaa moduulit samaan näkyvyysalueeseen
+ * (tools/tarkista-niputus.mjs).
+ */
+function lataaTehtavaTyyli() {
+  if (typeof document === 'undefined') return;
+  if (document.getElementById(TEHTAVA_TYYLIN_TUNNUS)) return;
+  const peruslinkki = document.querySelector('link[rel="stylesheet"][href*="styles.css"]');
+  // Yhden tiedoston versiossa tyylit ovat jo sivun <style>-lohkossa.
+  if (!peruslinkki) return;
+  const linkki = document.createElement('link');
+  linkki.id = TEHTAVA_TYYLIN_TUNNUS;
+  linkki.rel = 'stylesheet';
+  linkki.href = new URL('fokusvirta.css', peruslinkki.href).href;
+  document.head.appendChild(linkki);
+}
+
+/**
+ * PÖLLÖN KUITTAUSPINTA — js/fokusvirta.js asettaa tämän latautuessaan.
+ *
+ * Miksi takaisinkutsu eikä import: niputusjärjestys kulkee tästä
+ * moduulista fokusvirtaan päin (ks. tiedoston alun "MIKSI OMA MODUULI"),
+ * eikä sitä saa kääntää. Fokusvirta omistaa pöllön kuplan, tämä moduuli
+ * omistaa sanat omista tehtävistään — kutsu vie sanat kuplaan.
+ */
+let kuittausPinta = null;
+
+export function asetaTehtavakuittaus(fn) {
+  kuittausPinta = typeof fn === 'function' ? fn : null;
+}
 
 /** Tehtävän aiheavain (game.actionMinitehtava) ja koko avain. */
 function tehtavanAihe(tehtava) {
@@ -123,6 +194,41 @@ export function fokusAarreVastattu(ui, city) {
 }
 
 /**
+ * PÖLLÖN KUITTAUS OIKEAN VASTAUKSEN JÄLKEEN (omistajan pelitesti
+ * 25.8.2026).
+ *
+ * Palkinto tapahtuu muualla kuin siinä laatikossa, johon pelaaja juuri
+ * vastasi: aarteen jälki syttyy KARTALLE lehden taakse ja juliste menee
+ * MATKALAUKKUUN. Pöllö kertoo lyhyesti mitä tapahtui — ja mitä on vielä
+ * tekemättä.
+ *
+ * KAKSI SÄÄNTÖÄ (omistaja): repliikki mahdollisimman lyhyt, ja jo
+ * tehtyä ei luvata uudestaan. Jälkimmäinen ratkaistaan lukemalla toisen
+ * tehtävän kirjanpito: jos JULISTE on jo tehty (oikein tai väärin), sitä
+ * ei enää tarjota, ja jos aarre on vielä avaamatta, pöllö vinkkaa
+ * siihen. Pöllö puhuu nykypäivästä, ei 1873:sta.
+ */
+function kuittausTeksti(ui, city, tehtava) {
+  const kaikki = kaupunginTehtavat(ui, city);
+  const vastattu = (t) => Boolean(ui.game.minitehtavatVastatut?.has(tehtavanAvain(ui, city, t)));
+  if (tehtava.palkinto === 'piste') {
+    const juliste = kaikki.find((t) => t.palkinto === 'juliste' && !vastattu(t));
+    if (!juliste) return 'Aarteen jälki hehkuu nyt kartalla vihreänä.';
+    // Sivunumerot ovat datassa (js/packs/fokusvirta-ateena.js), joten
+    // suunta luetaan sieltä eikä oleteta julistetta aina jälkimmäiseksi.
+    const suunta = juliste.sivu > tehtava.sivu ? 'Seuraavan' : 'Edellisen';
+    return 'Aarteen jälki hehkuu nyt kartalla vihreänä. '
+      + `${suunta} sivun ${juliste.otsake}-tehtävästä saat vielä julisteen mukaasi.`;
+  }
+  if (tehtava.palkinto === 'juliste') {
+    const aarre = kaikki.find((t) => t.palkinto === 'piste' && !vastattu(t));
+    if (!aarre) return 'Juliste on nyt kokoelmassasi.';
+    return `Juliste on nyt kokoelmassasi. Aarteen jäljen paljastaa ${aarre.otsake} -tehtävä.`;
+  }
+  return '';
+}
+
+/**
  * Juuri nyt auki olevan LEHDEN SIVUN nimetty tehtävä, tai null.
  *
  * KAUPUNKILEHTI JA NYKYINEN KAUPUNKI, EI MUUTA. Maalehden aihesivut
@@ -165,13 +271,20 @@ export function piirraSivunTehtava(ui, kohde, kategoria) {
  * Ulkoasu on lehden minitehtävän oma (.minitehtava ja sen luokat,
  * css/styles.css): kokeilu ei tuo lehteen uutta grafiikkaa, vaan
  * vaihtaa laatikon otsakkeen ja palkinnon. Otsake on isolla kirjoitettu
- * nimi datasta — se on Raamatun vaatima "näkyvä nimilaatta".
+ * nimi datasta — se on Raamatun vaatima "näkyvä nimilaatta" — ja sen
+ * alla lukee yhdellä rivillä, mitä oikeasta vastauksesta seuraa
+ * (TEHTAVAN_VIHJE). Vihjerivi näkyy vain vastaamattomassa laatikossa:
+ * ratkaistussa se olisi vanha lupaus, ja palkinto on jo saatu.
  */
 function piirraNimettyTehtava(ui, kohde, city, tehtava) {
   const visa = tehtava.visa;
   if (!visa?.vaihtoehdot?.length) return;
+  lataaTehtavaTyyli();
   const juliste = tehtava.palkinto === 'juliste' ? kaupunginJuliste(city.id) : null;
-  const laatikko = html('div', `minitehtava${juliste ? ' minitehtava-palkinnollinen' : ''}`);
+  const laatikko = html(
+    'div',
+    `minitehtava fokus-tehtava${juliste ? ' minitehtava-palkinnollinen' : ''}`,
+  );
   laatikko.appendChild(html('p', 'minitehtava-otsikko', tehtava.otsake));
   const avain = tehtavanAvain(ui, city, tehtava);
 
@@ -195,6 +308,10 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
     return;
   }
 
+  // Vihjerivi heti nimilaatan alle: se kertoo mitä palkinnosta seuraa.
+  const vihjeteksti = tehtava.vihje ?? TEHTAVAN_VIHJE[tehtava.palkinto];
+  const vihjerivi = vihjeteksti ? html('p', 'fokus-tehtava-vihje', vihjeteksti) : null;
+  if (vihjerivi) laatikko.appendChild(vihjerivi);
   // Palkinto ensin, jotta teksti kiertää sen (float oikealle, css).
   const palkinto = juliste
     ? ui.piirraJulistepalkinto(laatikko, city.id, juliste, ui.game.julisteet?.has(city.id))
@@ -212,6 +329,8 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
         city.id, tehtavanAihe(tehtava), oikein, FOKUS_TEHTAVA_PALKKIO,
       );
       if (!vastaus.ok) return;
+      // Vihjerivi oli lupaus vastaamattomalle; nyt tilalle tulee tulos.
+      vihjerivi?.remove();
       vaihtoehdot.replaceChildren();
       tulos.hidden = false;
       tulos.className = oikein ? 'kulttuuri-tulos oikein-tulos' : 'kulttuuri-tulos vaarin-tulos';
@@ -251,6 +370,14 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
        * voisi ehtiä katsoa karttaa sitä ennen.
        */
       if (oikein && tehtava.palkinto === 'piste') ui.paivitaFokuspiste?.();
+      /*
+       * PÖLLÖ KERTOO PALKINNOSTA VIIMEISENÄ. Kupla nousee pöllönapista
+       * lehden päälle, ja se on tässä vasta kaiken muun jälkeen kahdesta
+       * syystä: piste on jo sytytetty (kupla ei saa luvata mitään, mitä
+       * kartalla ei ole), ja kirjanpito on jo tallessa — kuittausteksti
+       * lukee siitä, kumpi tehtävä on vielä tekemättä.
+       */
+      if (oikein) kuittausPinta?.(ui, kuittausTeksti(ui, city, tehtava));
     });
     vaihtoehdot.appendChild(nappi);
   });
