@@ -1,0 +1,45 @@
+# Vie fokuskarttalehdet R2-ämpäriin. Lehdet (webp + json) asuvat
+# erillisellä vientihaaralla samasta syystä kuin julisteet
+# (omistajan linjaus 21.8.2026: media ämpäriin eikä repoon).
+# Malli: vie-julisteet.yml. Ajetaan workflow_dispatchilla; webp ja
+# json viedään omilla content-typeillään kahdella sync-ajolla.
+name: Vie fokuslehdet R2:een
+
+on:
+  workflow_dispatch:
+    inputs:
+      haara:
+        description: 'Haara jolla julisteet/fokus/-kansio on'
+        type: string
+        default: 'claude/fokus-vienti'
+
+permissions:
+  contents: read
+
+jobs:
+  vie:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.haara }}
+      - name: Vie ämpäriin
+        run: |
+          set -euo pipefail
+          [ -d julisteet/fokus ] || { echo "::error::julisteet/fokus-kansiota ei ole haaralla"; exit 1; }
+          aws s3 sync julisteet/fokus "s3://${{ secrets.R2_BUCKET }}/julisteet/fokus" \
+            --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+            --exclude '*' --include '*.webp' \
+            --content-type image/webp --no-progress
+          aws s3 sync julisteet/fokus "s3://${{ secrets.R2_BUCKET }}/julisteet/fokus" \
+            --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+            --exclude '*' --include '*.json' \
+            --content-type application/json --no-progress
+          echo "Viety $(ls julisteet/fokus | wc -l) tiedostoa."
