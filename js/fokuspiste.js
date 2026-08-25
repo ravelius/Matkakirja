@@ -97,9 +97,12 @@ function piirraPiste(ui, ryhma, city, nimi) {
   g.setAttribute('tabindex', '0');
   g.setAttribute('aria-label', `${nimi}: tapaa paikallinen`);
   el('circle', { class: 'fokuspiste-osuma', r: PISTE_OSUMA_R }, g);
-  el('circle', { class: 'fokuspiste-hehku', r: 9 }, g);
-  el('circle', { class: 'fokuspiste-keha', r: 5.2 }, g);
-  el('circle', { class: 'fokuspiste-ydin', r: 2.6 }, g);
+  // Mitat kasvatettu 25.8.2026: omistaja ei löytänyt pistettä iPadilta
+  // ("kartalla ei näy vihreää pistettä") — merkin on erottava
+  // käsivarren mitalta, ei vasta etsimällä.
+  el('circle', { class: 'fokuspiste-hehku', r: 13 }, g);
+  el('circle', { class: 'fokuspiste-keha', r: 7.2 }, g);
+  el('circle', { class: 'fokuspiste-ydin', r: 3.4 }, g);
   const avaa = (tapahtuma) => {
     tapahtuma.stopPropagation();
     tapahtuma.preventDefault();

@@ -375,6 +375,9 @@ function kohdePolloPaneeli() {
 function asetaKohteenPaikka(ui) {
   const auki = ui.fokuskohdeAuki;
   if (!auki?.popup?.isConnected || !auki.merkki?.isConnected) return;
+  // Pelaajan raahaama kortti pysyy siinä, mihin se raahattiin
+  // (raahausTaiSulku) — automaattinen asemointi ei kilpaile käden kanssa.
+  if (auki.raahattu) return;
   const koti = auki.popup.offsetParent ?? auki.popup.parentNode;
   const pane = koti?.getBoundingClientRect?.();
   if (!pane || !(pane.width > 0)) return;
@@ -580,6 +583,9 @@ function piirraKohdeKysymykset(ui, sisalto, kohde) {
   const kysymykset = (Array.isArray(kohde.kysymykset) ? kohde.kysymykset : [])
     .map((k) => String(k ?? '').trim()).filter(Boolean).slice(0, 2);
   if (!kysymykset.length) return;
+  // Omistaja 25.8.2026: "Ennen kysymyksiä voisi olla lause: kysy
+  // pöllöltä" — kertoo, mihin pisteviivanapit johtavat.
+  sisalto.appendChild(html('p', 'fokuskohde-kysy-otsikko', 'Kysy pöllöltä:'));
   const rivi = html('div', 'fokuskohde-kysymykset');
   rivi.setAttribute('role', 'group');
   rivi.setAttribute('aria-label', `Kysy pöllöltä: ${kohde.nimi}`);
@@ -886,6 +892,71 @@ function avaaKohdeSuurennos(ui, kuva, ankkuri) {
  * sulkee edellisen, ja fokusvirran kortin tai kuplan avautuminen sulkee
  * tämän (ks. vahdiVirtaa).
  */
+/*
+ * Kynnys, jonka jälkeen kortin päällä alkanut ele on raahaus eikä
+ * napautus. Sama luokka kuin selainten omissa napautustoleransseissa —
+ * tärisevä sormi ei saa vahingossa siirtää korttia.
+ */
+const KOHDE_RAAHAUSKYNNYS = 8;
+
+/**
+ * Yksi kortin päällä alkanut ele: napautus sulkee sormen noustessa,
+ * kynnyksen ylittänyt liike raahaa korttia. Raahattu kortti muistetaan
+ * (auki.raahattu), eikä automaattinen asemointi enää siirrä sitä —
+ * pelaajan valitsema paikka voittaa (asetaKohteenPaikka).
+ *
+ * Kosketuksella pystyveto tekstin päällä jää selaimen vieritykseksi
+ * (touch-action: pan-y → pointercancel), jolloin ele ei sulje eikä
+ * siirrä — vieritys voittaa. Ylärivin ja otsikon päältä raahaus toimii
+ * joka suuntaan (css/fokuskohteet.css touch-action: none).
+ */
+function raahausTaiSulku(ui, popup, alku) {
+  const alkuX = alku.clientX;
+  const alkuY = alku.clientY;
+  const lahtoVasen = popup.offsetLeft;
+  const lahtoYlin = popup.offsetTop;
+  let raahaa = false;
+  const siirry = (tapahtuma) => {
+    if (tapahtuma.pointerId !== alku.pointerId) return;
+    const dx = tapahtuma.clientX - alkuX;
+    const dy = tapahtuma.clientY - alkuY;
+    if (!raahaa) {
+      if (Math.hypot(dx, dy) < KOHDE_RAAHAUSKYNNYS) return;
+      raahaa = true;
+      popup.classList.add('raahauksessa');
+      try { popup.setPointerCapture(alku.pointerId); } catch { /* ei pakollinen */ }
+    }
+    const koti = popup.offsetParent;
+    const maxVasen = Math.max(0, (koti?.clientWidth ?? Infinity) - popup.offsetWidth);
+    const maxYlin = Math.max(0, (koti?.clientHeight ?? Infinity) - popup.offsetHeight);
+    popup.style.left = `${Math.round(Math.min(Math.max(0, lahtoVasen + dx), maxVasen))}px`;
+    popup.style.top = `${Math.round(Math.min(Math.max(0, lahtoYlin + dy), maxYlin))}px`;
+  };
+  const puru = () => {
+    popup.removeEventListener('pointermove', siirry);
+    popup.removeEventListener('pointerup', loppu);
+    popup.removeEventListener('pointercancel', peru);
+    popup.classList.remove('raahauksessa');
+  };
+  const loppu = (tapahtuma) => {
+    if (tapahtuma.pointerId !== alku.pointerId) return;
+    puru();
+    if (raahaa) {
+      if (ui.fokuskohdeAuki?.popup === popup) ui.fokuskohdeAuki.raahattu = true;
+      return;
+    }
+    sfx.play('paper');
+    suljeFokuskohde(ui);
+  };
+  const peru = (tapahtuma) => {
+    if (tapahtuma.pointerId !== alku.pointerId) return;
+    puru();
+  };
+  popup.addEventListener('pointermove', siirry);
+  popup.addEventListener('pointerup', loppu);
+  popup.addEventListener('pointercancel', peru);
+}
+
 export function avaaFokuskohde(ui, kohde) {
   if (typeof document === 'undefined' || !kohde) return null;
   lataaKohdeTyyli();
@@ -897,15 +968,19 @@ export function avaaFokuskohde(ui, kohde) {
   popup.setAttribute('role', 'group');
   popup.setAttribute('aria-label', `${kohde.nimi}: tietoruutu`);
   /*
-   * NAPAUTUS SULKEE, PAINIKE EI. Sama sopimus kuin pöllön kuplalla
-   * (js/fokusvirta.js piirraKupla): kortin päällä napautus on sulku,
-   * mutta painikkeen tai linkin päällä se on valinta.
+   * NAPAUTUS SULKEE, PAINIKE EI, RAAHAUS SIIRTÄÄ. Sulkusopimus on sama
+   * kuin pöllön kuplalla (js/fokusvirta.js piirraKupla): kortin päällä
+   * napautus on sulku, mutta painikkeen tai linkin päällä se on
+   * valinta. Uutena (omistaja 25.8.2026: *"Pystyykö pop up ikkunoista
+   * tehdä raahattavia"*) sama ele jatkettuna on siirto: sulku ratkeaa
+   * vasta sormen noustessa, ja kynnyksen ylittänyt liike muuttuu
+   * raahaukseksi eikä sulje. Samalla korjaantui vanha vika, jossa
+   * pitkän kortin vieritysyritys sulki kortin heti pointerdownissa.
    */
   popup.addEventListener('pointerdown', (tapahtuma) => {
     tapahtuma.stopPropagation();
     if (tapahtuma.target?.closest?.('button, a')) return;
-    sfx.play('paper');
-    suljeFokuskohde(ui);
+    raahausTaiSulku(ui, popup, tapahtuma);
   });
 
   const sulje = html('button', 'fokuskohde-sulje', '✕');

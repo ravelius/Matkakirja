@@ -121,7 +121,9 @@
   max-height: 60%;
   display: flex;
   flex-direction: column;
-  padding: 0.55rem 0.6rem 0.6rem;
+  /* Omistaja 25.8.2026: "Pop upissa voisi olla hieman isommat
+     marginaalit" — väljempi reunus kuin muissa korteissa. */
+  padding: 0.85rem 0.95rem 0.95rem;
   border-radius: 12px;
   border: 1px solid rgba(122, 85, 20, 0.32);
   background: #f5f0e2;
@@ -186,6 +188,25 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #7a5514;
+}
+
+/*
+ * YLÄRIVI JA OTSIKKO OVAT RAAHAUSKAHVA (js/fokuskohteet.js
+ * raahausTaiSulku): touch-action: none irrottaa ne selaimen
+ * vierityksestä, joten sormi saa kortin liikkeelle joka suuntaan.
+ * Leipätekstin päällä pystyveto pysyy vierityksenä (pan-y).
+ */
+.fokuskohde-ylarivi,
+.fokuskohde-otsikko {
+  touch-action: none;
+  cursor: grab;
+}
+
+.fokuskohde-popup.raahauksessa {
+  cursor: grabbing;
+  user-select: none;
+  -webkit-user-select: none;
+  animation: none;
 }
 
 .fokuskohde-otsikko {
@@ -304,6 +325,11 @@
   display: inline;
   margin: 0;
   padding: 0;
+  /* Yleissääntö `button { min-height: 42px }` (css/styles.css) venytti
+     linkkisanan rivin muita leveämmäksi — sana elää leipätekstin
+     rivikorkeudella (omistajan iPad-havainto 25.8.2026). */
+  min-height: 0;
+  min-width: 0;
   border: 0;
   border-radius: 0;
   background: none;
@@ -339,11 +365,20 @@
  * kortti on kapea (21 rem), ja kaksi kysymystä vierekkäin taittuisi
  * kummallekin kahdelle riville, jolloin nappien rajat katoaisivat.
  */
+.fokuskohde-kysy-otsikko {
+  margin: 0.6rem 0 0;
+  font-family: var(--font-type);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7a5514;
+}
+
 .fokuskohde-kysymykset {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-  margin: 0.6rem 0 0;
+  margin: 0.3rem 0 0;
 }
 
 .fokuskohde-kysymys {

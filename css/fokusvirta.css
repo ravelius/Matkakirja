@@ -838,13 +838,13 @@ body.fokuszoom-paalla .fokusvirta-kortti {
  */
 .fokuspiste-hehku {
   fill: #4f9d3a;
-  opacity: 0.28;
+  opacity: 0.34;
   animation: fokuspiste-syke 2200ms ease-in-out infinite;
 }
 
 .fokuspiste-keha {
   fill: #5aad42;
-  opacity: 0.55;
+  opacity: 0.72;
 }
 
 .fokuspiste-ydin {
@@ -864,8 +864,8 @@ body.fokuszoom-paalla .fokusvirta-kortti {
 .fokuspiste:focus-visible .fokuspiste-hehku { opacity: 0.5; }
 
 @keyframes fokuspiste-syke {
-  0%, 100% { opacity: 0.22; transform: scale(0.88); }
-  50% { opacity: 0.42; transform: scale(1.22); }
+  0%, 100% { opacity: 0.26; transform: scale(0.85); }
+  50% { opacity: 0.52; transform: scale(1.35); }
 }
 
 /*

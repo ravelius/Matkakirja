@@ -1543,51 +1543,46 @@ export class UI {
       this.suljePostikortti();
     };
 
+    /*
+     * KAIUTIN ON LUENNAN KYTKIN (omistaja 25.8.2026: *"Tuon luenta
+     * tekstin ja kytkimen voi ottaa pois kokonaan koska yläreunassa on
+     * jo kaiutin kuvake sitä varten"*). Erillinen LUENTA-liukukytkin
+     * poistui; painallus kääntää saman laitekohtaisen tilan
+     * (js/luenta.js) ja kuvake saa vinoviivan, kun luenta on pois.
+     */
     this.factKuuntele = document.getElementById('fact-kuuntele');
     this.factKuuntele.addEventListener('click', () => {
-      const audio = this.diaryVoice;
-      if (audio) {
-        if (audio.paused) {
-          audio.jatkettu = true; // automaattinen pysäytys ei enää koske
-          audio.play().catch(() => {});
-        } else {
-          audio.pause();
-        }
+      const paalle = !luentaKytkinPaalla();
+      asetaLuentaKytkin(paalle);
+      this.paivitaKaiutinTila();
+      sfx.play('clack');
+      if (!paalle) {
+        // Pois kesken luennan: kumpikin lukija vaikenee heti.
+        stopDiaryVoice(this);
+        if (lukijaLukee(this.factKuuntele)) pysaytaLukija();
         return;
       }
-      // Ääni ehti sulkeutua (esim. korttien vaihto) — aloitetaan alusta.
+      /*
+       * Päälle: RUUDULLA OLEVA MERKINTÄ ALKAA ALUSTA — sama sopimus
+       * kuin vanhalla kytkimellä. Jatko-osa nollataan, ettei alusta
+       * alkaneen luennan perään soisi vanhaa jatkoa.
+       */
+      this.merkintaJatko = null;
+      if (this.merkinnanLuenta) {
+        this.merkinnanLuenta();
+        return;
+      }
+      // Merkintä, jota ei ole rekisteröity luentatehtäväksi: soitetaan
+      // äänite tai luetaan laitteen omalla äänellä kuten ennenkin.
       if (this.diaryFullUrl) {
         playDiaryVoice(this, this.diaryFullUrl);
         return;
       }
-      /*
-       * MERKINTÄ ILMAN GENEROITUA ÄÄNITETTÄ (v-lisäys 12.8.2026).
-       *
-       * Sama kaiutin, sama ele, eri lukija: kun puhe-*.mp3:ää ei ole
-       * tehty, merkintä luetaan laitteen omalla äänellä (iOS-kuoren
-       * luentasilta tai selaimen puhesyntetisaattori). Generoituihin
-       * äänitteisiin tämä ei kajoa lainkaan — ne käsitellään yllä.
-       */
-      if (lukijaLukee(this.factKuuntele)) {
-        pysaytaLukija();
-        return;
-      }
-      /*
-       * Lyhyen autoluennan jatko: autoluenta luki vain ensimmäisen
-       * virkkeen ja pani loput talteen — nappi jatkaa siitä, ei
-       * alusta. Seuraava painallus (jatko kulutettu) lukee taas koko
-       * merkinnän.
-       */
-      const jatko = this.merkintaJatko;
-      this.merkintaJatko = null;
-      const teksti = jatko ?? kokoaLuettavaTeksti(this.factText);
-      // Merkinnät omalla persoonalla ja omassa äänisäilössä (omistajan
-      // ohje 14.8.2026): säilön voi tuhota erikseen, kun tekstit
-      // kirjoitetaan uusiksi, ja äänen voi vaihtaa muista lukuäänistä
-      // riippumatta.
+      const teksti = kokoaLuettavaTeksti(this.factText);
       if (lueMerkinta(this, teksti)) return;
       lueAaneen(teksti, this.factKuuntele, { persoona: 'merkinnat', sailio: 'merkinnat' });
     });
+    this.paivitaKaiutinTila();
 
     this.eventDialog = document.getElementById('event-dialog');
     this.eventText = document.getElementById('event-text');
@@ -1603,7 +1598,6 @@ export class UI {
     this.factPlace = document.getElementById('fact-place');
     this.factText = document.getElementById('fact-text');
     this.factCard = this.factText.closest('.fact-card');
-    this.rakennaLuentaKytkin();
     this.factKey = null;
     // Jatkuu-vihje: nuoli ja häivytys näkyvät, kun tekstiä on näkymän
     // alapuolella. Tarkkailija kattaa myös kirjoituskoneen etenemisen,
@@ -7933,67 +7927,30 @@ export class UI {
   }
 
   /*
-   * ── LUENNAN KYTKIN PUHEKUPLAN ALLA (omistajan tilaus 25.8.2026) ────
+   * ── KAIUTIN ON LUENNAN KYTKIN (omistajan tilaus 25.8.2026) ─────────
    *
-   * Raamattu (Fokusmoodi, LUENTA): *"Luenta on striimiääni, jonka kytkin
-   * on AINA puhekuplan alla painettavissa päälle ja pois."*
-   *
-   * Kytkin rakennetaan koodista eikä index.html:stä, koska se kuuluu
-   * matkakirjakortin pohjalle riippumatta siitä, mikä kortin sisältöä
-   * kulloinkin kirjoittaa (saapumismerkintä, fokusvirran merkintä,
-   * isoisän aikataulurivi). Se on kortin VIIMEINEN lapsi, joten se
-   * asettuu tekstin alle myös silloin kun kuvanappi on esillä.
+   * Erillinen LUENTA-liukukytkin puhekuplan alla poistui: *"yläreunassa
+   * on jo kaiutin kuvake sitä varten"*. Sama laitekohtainen tila
+   * (js/luenta.js) elää yhä — sitä käännetään nyt kortin kaiuttimesta,
+   * ja pois kytkettynä kuvakkeen päällä on vinoviiva (css/styles.css
+   * .fact-kuuntele.mykistetty).
    *
    * KYTKIN OHJAA ISOISÄÄ. Pöllön kuplat elävät omassa kerroksessaan
    * (js/fokusvirta.js) eikä niitä lueta koskaan, joten kytkimellä ei ole
    * niihin mitään sanottavaa.
    */
-  rakennaLuentaKytkin() {
-    if (!this.factCard) return;
-    const nappi = html('button', 'fact-luenta');
-    nappi.type = 'button';
+  paivitaKaiutinTila() {
+    const nappi = this.factKuuntele;
+    if (!nappi) return;
+    const paalla = luentaKytkinPaalla();
+    nappi.classList.toggle('mykistetty', !paalla);
     // role="switch" eikä pelkkä painike: ruudunlukija kertoo tilan
     // (aria-checked) eikä pelkkää nimeä.
     nappi.setAttribute('role', 'switch');
-    nappi.appendChild(html('span', 'fact-luenta-nimi', 'Luenta'));
-    const ura = html('span', 'fact-luenta-ura');
-    ura.appendChild(html('span', 'fact-luenta-nuppi'));
-    nappi.appendChild(ura);
-    nappi.addEventListener('click', (e) => {
-      // Kortti on kutistuneena itsekin painike ja kartta ottaa
-      // napautukset zoomaukseksi — kytkin ei saa vuotaa kumpaankaan.
-      e.stopPropagation();
-      const paalle = !luentaKytkinPaalla();
-      asetaLuentaKytkin(paalle);
-      this.paivitaLuentaKytkin();
-      sfx.play('clack');
-      if (!paalle) {
-        // Pois kesken luennan: kertoja vaikenee heti.
-        stopDiaryVoice(this);
-        return;
-      }
-      /*
-       * Päälle kesken merkinnän: NYKYINEN MERKINTÄ SAA ALKAA ALUSTA
-       * (omistajan tilaus). Lyhyen kertojan jatko-osa nollataan samalla,
-       * ettei kaiutinnappi tarjoaisi jatkoa luennalle, joka alkoi juuri
-       * uudelleen alusta.
-       */
-      this.merkintaJatko = null;
-      this.merkinnanLuenta?.();
-    });
-    this.factCard.appendChild(nappi);
-    this.luentaKytkin = nappi;
-    this.paivitaLuentaKytkin();
-  }
-
-  /** Kytkimen ulkoasu ja saavutettavuusmääreet tallennetusta tilasta. */
-  paivitaLuentaKytkin() {
-    const nappi = this.luentaKytkin;
-    if (!nappi) return;
-    const paalla = luentaKytkinPaalla();
-    nappi.classList.toggle('paalla', paalla);
     nappi.setAttribute('aria-checked', paalla ? 'true' : 'false');
-    const nimi = paalla ? 'Luenta päällä — sulje' : 'Luenta pois — kytke päälle';
+    const nimi = paalla ? 'Luenta päällä — mykistä' : 'Luenta pois — kytke päälle';
+    nappi.dataset.lukijaNimi = nimi;
+    if (lukijaLukee(nappi)) return;
     nappi.title = nimi;
     nappi.setAttribute('aria-label', nimi);
   }
@@ -8034,11 +7991,9 @@ export class UI {
     const nappi = this.factKuuntele;
     if (!nappi) return;
     nappi.hidden = !onAanite && !lukijaTuettu();
-    const nimi = onAanite ? 'Jatka merkinnän kuuntelua' : 'Kuuntele merkintä';
-    nappi.dataset.lukijaNimi = nimi;
-    if (lukijaLukee(nappi)) return;
-    nappi.title = nimi;
-    nappi.setAttribute('aria-label', nimi);
+    // Nimi ja tila tulevat kytkimestä — kaiutin on sama vipu joka
+    // merkinnällä, oli äänite tai laitteen lukija.
+    this.paivitaKaiutinTila();
   }
 
   /**
