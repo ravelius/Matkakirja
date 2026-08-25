@@ -640,7 +640,7 @@ export const EUROPE = {
     // kaupunki lisätään paikallisaarteisiin samassa suhteessa kuin
     // muutkin (noin kolmasosa isoja) — pääaarre ja mantereen aarre ovat
     // aina yksi kumpikin, eikä ryöstäjien määrä muutu kaupunkien mukana.
-    counts: { star: 1, mannerAarre: 1, robber: 3, isoAarre: 13, pieniAarre: 27 },
+    counts: { star: 1, mannerAarre: 1, isoAarre: 14, pieniAarre: 29 },
   },
 
   questions: EUROPE_QUESTIONS,

@@ -175,7 +175,7 @@ export const SUOMI = {
       mannerAarre: { name: 'Spektroliitti', color: '#4a6fb3' },
     }),
     // 19 kaupunkia, yksi laatta kussakin.
-    counts: { star: 1, mannerAarre: 1, robber: 2, isoAarre: 5, pieniAarre: 10 },
+    counts: { star: 1, mannerAarre: 1, isoAarre: 6, pieniAarre: 11 },
   },
 
   questions: SUOMI_QUESTIONS,

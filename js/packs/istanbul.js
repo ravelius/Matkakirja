@@ -144,7 +144,7 @@ export const ISTANBUL = {
       mannerAarre: { name: 'Turkoosi', color: '#3aaea6' },
     }),
     // 17 kaupunkia, yksi laatta kussakin.
-    counts: { star: 1, mannerAarre: 1, robber: 2, isoAarre: 4, pieniAarre: 9 },
+    counts: { star: 1, mannerAarre: 1, isoAarre: 5, pieniAarre: 10 },
   },
 
   questions: ISTANBUL_QUESTIONS,

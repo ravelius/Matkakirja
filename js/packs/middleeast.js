@@ -215,7 +215,7 @@ export const MIDDLE_EAST = {
       },
     }),
     // 29 kaupunkia, yksi laatta kussakin.
-    counts: { star: 1, mannerAarre: 1, robber: 3, isoAarre: 8, pieniAarre: 16 },
+    counts: { star: 1, mannerAarre: 1, isoAarre: 9, pieniAarre: 18 },
   },
 
   questions: MIDDLEEAST_QUESTIONS,

@@ -345,7 +345,7 @@ export const ASIA = {
       },
     }),
     // 41 kaupunkia, yksi laatta kussakin.
-    counts: { star: 1, mannerAarre: 1, robber: 3, isoAarre: 12, pieniAarre: 24 },
+    counts: { star: 1, mannerAarre: 1, isoAarre: 13, pieniAarre: 26 },
   },
 
   questions: ASIA_QUESTIONS,

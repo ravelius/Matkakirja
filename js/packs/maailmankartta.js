@@ -1153,7 +1153,7 @@ export const MAAILMANKARTTA = {
      * jaetaan samassa suhteessa — pääaarteet, mantereen aarteet ja
      * ryöstäjät eivät kasva kaupunkimäärän mukana.
      */
-    counts: {"star":7,"mannerAarre":7,"robber":18,"isoAarre":76,"pieniAarre":153},
+    counts: {"star":7,"mannerAarre":7,"isoAarre":82,"pieniAarre":165},
   },
 
   questions: yhdistaKysymykset(),

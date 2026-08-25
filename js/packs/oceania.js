@@ -314,7 +314,7 @@ export const OCEANIA = {
       },
     }),
     // 33 kaupunkia, yksi laatta kussakin.
-    counts: { star: 1, mannerAarre: 1, robber: 3, isoAarre: 9, pieniAarre: 19 },
+    counts: { star: 1, mannerAarre: 1, isoAarre: 10, pieniAarre: 21 },
   },
 
   questions: OCEANIA_QUESTIONS,

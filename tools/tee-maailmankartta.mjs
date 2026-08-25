@@ -342,9 +342,9 @@ const mantereita = PACKS.length; // yksi manner per lähdelauta
 const counts = {
   star: mantereita,
   mannerAarre: mantereita,
-  robber: Math.round(cities.length * 0.08),
+  // Rosvolaatat poistettu (Raamattu, Poistetut ideat 25.8.2026).
 };
-const paikallisia = cities.length - counts.star - counts.mannerAarre - counts.robber;
+const paikallisia = cities.length - counts.star - counts.mannerAarre;
 counts.isoAarre = Math.round(paikallisia / 3);
 counts.pieniAarre = paikallisia - counts.isoAarre;
 

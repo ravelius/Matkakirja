@@ -349,7 +349,7 @@ export const MAAILMA = {
     // omaa aarretta.
     types: themedTokenTypes({ star: { name: 'Magellanin kompassi' } }),
     // 14 kaupunkia: laattoja on oltava täsmälleen yhtä monta.
-    counts: { star: 1, mannerAarre: 1, robber: 1, isoAarre: 4, pieniAarre: 7 },
+    counts: { star: 1, mannerAarre: 1, isoAarre: 4, pieniAarre: 8 },
   },
 
   questions: MAAILMA_QUESTIONS,

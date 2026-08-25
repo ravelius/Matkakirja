@@ -285,7 +285,7 @@ export const AFRICA = {
     }),
     // 41 kaupunkia, yksi laatta kussakin. Pääaarre ja mantereen aarre
     // ovat yksi kumpikin; lopusta noin kolmasosa on iso paikallisaarre.
-    counts: { star: 1, mannerAarre: 1, robber: 3, isoAarre: 12, pieniAarre: 24 },
+    counts: { star: 1, mannerAarre: 1, isoAarre: 13, pieniAarre: 26 },
   },
 
   questions: AFRICA_QUESTIONS,

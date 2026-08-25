@@ -317,7 +317,7 @@ export const SOUTHAMERICA = {
       },
     }),
     // 38 kaupunkia, yksi laatta kussakin.
-    counts: { star: 1, mannerAarre: 1, robber: 3, isoAarre: 11, pieniAarre: 22 },
+    counts: { star: 1, mannerAarre: 1, isoAarre: 12, pieniAarre: 24 },
   },
 
   questions: SOUTHAMERICA_QUESTIONS,
