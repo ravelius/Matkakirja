@@ -49,10 +49,18 @@ const LOPPUTAUKO = ' <break time="1.0s" />';
  * V2 10.8.2026: lainausmerkit pois (ne tuottivat luentaan taukoja) ja
  * revitty sitaatti "…voinut uskoa…" pois (hidas kuunnella) — revitty
  * sivu kerrotaan toteamuksena, mysteeri säilyy. */
-export const INTRO_RUUTU = 'Vintiltä löytyi isoisän kulunut matkakirja — '
-  + 'Maailman ympäri kahdeksassakymmenessä päivässä.\n\n'
-  + 'Viimeinen sivu on revitty irti kesken lauseen. Mitä hän löysi? '
-  + 'Ja kuka repii kirjasta juuri sen sivun?\n\n'
+/*
+ * V3 25.8.2026 (omistajan tilaus): kirjan nimi POIS tekstistä — se
+ * selviää uudesta kansikuvasta — ja tilalle matkalaukku; teksti
+ * mahdollisimman lyhyt, jotta pelaaja jaksaa kuunnella. Alkuun tulee
+ * lisäksi DYNAAMINEN paikkarivi ("Heathrow, Lontoo, <kuukausi>
+ * <vuosi>" laitteen kellosta, js/ui.js) — sitä EI lueta ääneen eikä
+ * se kuulu tähän vakioon.
+ */
+export const INTRO_RUUTU = 'Vintiltä löytyi isoisän matkalaukku ja '
+  + 'hänen kulunut matkakirjansa.\n\n'
+  + 'Viimeinen sivu on revitty irti kesken lauseen. Mitä hän löysi — '
+  + 'ja kuka sen sivun repi?\n\n'
   + 'Valitse kohde kartalta.';
 // HUOM: viimeinen rivi on pelaajan OHJE eikä sitä lueta ääneen
 // (omistajan päätös 10.8.2026) — luenta päättyy kysymykseen
@@ -60,26 +68,28 @@ export const INTRO_RUUTU = 'Vintiltä löytyi isoisän kulunut matkakirja — '
 // (tools-ohje: scratchpadin leikkaa-intro.mjs-malli).
 // "Huh — ehdin!" poistui 10.8.2026 illalla (omistajan tilaus) —
 // nykyinen mp3 leikattiin ensimmäisen pitkän puheryöpyn eteen.
-export const LENTO_RUUTU = 'Kone nousee, ja isoisän kirja '
-  + 'aukeaa sylissäni kuin se olisi odottanut tätä hetkeä. Revitty sivu '
-  + 'ei kerro, mitä hän löysi — joten menen katsomaan itse.';
+/*
+ * V2 25.8.2026 (omistajan tilaus: "lentokoneen tekstiä voisi
+ * lyhentää"): toinen virke pois — se toisti etusivun revityn sivun,
+ * ja aloituksen pitää olla kevyt.
+ */
+export const LENTO_RUUTU = 'Kone nousee. Isoisän kirja aukeaa '
+  + 'sylissäni kuin se olisi odottanut.';
 
 /** Luennat: sama teksti tunnetagein (eleven_v3; tagit englanniksi). */
 const TYOT = [
   {
     tiedosto: 'assets/audio/intro-puhe.mp3',
-    luenta: '[curious] Vintiltä löytyi isoisän kulunut matkakirja — '
-      + 'Maailman ympäri kahdeksassakymmenessä päivässä. '
+    luenta: '[curious] Vintiltä löytyi isoisän matkalaukku ja hänen '
+      + 'kulunut matkakirjansa. '
       + '[whispers] Viimeinen sivu on revitty irti kesken lauseen. '
-      + '[curious] Mitä hän löysi? Ja kuka repii kirjasta juuri sen '
-      + 'sivun? [long pause]',
+      + '[curious] Mitä hän löysi — ja kuka sen sivun repi? '
+      + '[long pause]',
   },
   {
     tiedosto: 'assets/audio/puhe-lento-alku.mp3',
-    luenta: '[curious] Kone '
-      + 'nousee, ja isoisän kirja aukeaa sylissäni kuin se olisi '
-      + 'odottanut tätä hetkeä. [short pause] [excited] Revitty sivu ei '
-      + 'kerro, mitä hän löysi — joten menen katsomaan itse. [long pause]',
+    luenta: '[curious] Kone nousee. [short pause] Isoisän kirja aukeaa '
+      + 'sylissäni kuin se olisi odottanut. [long pause]',
   },
 ];
 
