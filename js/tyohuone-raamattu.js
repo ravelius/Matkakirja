@@ -1064,6 +1064,37 @@ export const RAAMATTU = {
       ],
     },
     {
+      otsikko: 'Jakelu ja iOS-kuori',
+      tila: 'kirjattu 25.8.2026 (omistajan huomautuksesta — tämä puuttui)',
+      kohdat: [
+        'PELIÄ PELATAAN ENSISIJAISESTI TESTFLIGHTIN KAUTTA: '
+          + 'iOS-kuorisovellus (WKWebView) lataa pelin Pagesista '
+          + '(ravelius.github.io/Matkakirja). Kuoren lähdekoodi EI ole '
+          + 'tässä repossa (ios/Matkakirja/...); pelin puoleiset '
+          + 'kytkennät ovat js/natiivi.js (silta '
+          + 'window.matkakirjaNatiivi: iCloud-synkka, widget, Game '
+          + 'Center, luentasilta js/lukija.js, haptiikka). Selain '
+          + 'ilman kuorta on aina tuettu varapolku.',
+        'WKWEBVIEW ON AHTAAMPI KUIN SAFARI: sisältöprosessin '
+          + 'muistikatto on tiukempi ja ylitys tappaa prosessin '
+          + 'ilman virhettä — kuori lataa sivun uudelleen, mikä '
+          + 'näkyy pelaajalle aloituslogosilmukkana. Muistipiikit '
+          + '(isojen kuvien purku, rasterointi) on mitoitettava '
+          + 'kuoren mukaan, ei pöytäselaimen. Vikaraportit, joissa '
+          + '"peli jää logoruutuun", ovat ensisijaisesti '
+          + 'muistikuolemia kuoressa.',
+        'TURVATILA (v1112–v1113): kolme käynnistystä neljän '
+          + 'minuutin sisään kytkee fokuslehdet ja atlaksen pois '
+          + 'tunniksi, jolloin kaatumissilmukka purkautuu itsestään '
+          + '(js/main.js kirjaaKaynnistys, js/fokuskartta.js '
+          + 'atlasTurvatila).',
+        'HÄTÄKEINO pelaajalle: TestFlight-sovelluksen poisto ja '
+          + 'uudelleenasennus nollaa kuoren välimuistin ja '
+          + 'paikallisen tallenteen (iCloud-synkka voi palauttaa '
+          + 'pelin).',
+      ],
+    },
+    {
       otsikko: 'Poistetut ideat',
       tila: 'toimintatapa kirjattu 17.8.2026',
       kohdat: [
