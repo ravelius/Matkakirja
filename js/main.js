@@ -50,7 +50,7 @@ const PLAYER_COLOR = '#d94f3d';
  * Ateenan saapumisessa yhä uudelleen "Ladataan matkakirjaa" -ruutuun).
  * iOS tappaa sivun muistin loppuessa ja Safari lataa sen uudelleen —
  * tallenne palauttaa samaan raskaaseen kohtaan ja kuolema toistuu.
- * Kirjataan jokainen käynnistys: kolme käynnistystä kolmen minuutin
+ * Kirjataan jokainen käynnistys: kolme käynnistystä neljän minuutin
  * sisään sytyttää atlaksen turvatilan tunniksi (js/fokuskartta.js
  * atlasTurvatila), jolloin raskain muistikuorma jää pois ja silmukka
  * purkautuu itsestään. Ehjä 90 sekunnin istunto nollaa laskurin.
@@ -60,7 +60,7 @@ const PLAYER_COLOR = '#d94f3d';
     const AVAIN = 'matkakirja-kaynnistykset';
     const nyt = Date.now();
     const lista = (JSON.parse(localStorage.getItem(AVAIN) ?? '[]'))
-      .filter((t) => Number.isFinite(t) && nyt - t < 180000);
+      .filter((t) => Number.isFinite(t) && nyt - t < 240000);
     lista.push(nyt);
     if (lista.length >= 3) {
       localStorage.setItem('matkakirja-atlas-turvatila', String(nyt));

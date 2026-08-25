@@ -72,6 +72,15 @@ const HAUT = new Map();
  */
 function nykyinenMaa(ui) {
   if (!ui.fokusmoodi || ui.katselu) return null;
+  /*
+   * TURVATILASSA EI YHTÄÄN LEHTEÄ (25.8.2026, toinen kierros: pelkkä
+   * atlaksen sammutus ei riittänyt — omistajan iPhone kuoli jo
+   * käynnistyksessä, kun tallenne palautti pelin Ateenaan ja nykyisen
+   * maan lehti purettiin laudan rakentamisen päälle). Turvatilassa
+   * myös oman maan lehti jää pois: peli näyttää vanhan laudan, kaikki
+   * toimii, eikä ainuttakaan isoa kuvaa pureta muistiin.
+   */
+  if (atlasTurvatila()) return null;
   if (ui.game.phase === 'pickstart') return null;
   const taulu = ui.game.pack?.map?.cityCountry;
   if (!taulu) return null;
