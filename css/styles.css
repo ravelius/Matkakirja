@@ -5279,6 +5279,30 @@ body.aloitusverho-paalla .pollo-nappi {
 }
 
 /*
+ * LAUTAA EI MAALATA TÄYSIN PEITTÄVÄN ARKIN ALLA (omistajan pelitesti
+ * 25.8.2026: avauslennossa *"menee monta sekuntia, kun pelissä ei
+ * tapahdu mitään"*).
+ *
+ * Arkin takana rakennetaan uusi maailmankartta: 7000 vektorielementtiä,
+ * joista tehdään bittikartta (js/ui.js rasteroiTaide). Selain maalasi
+ * kuitenkin koko ajan myös itse lautaa — lähikuvassa mitattuna 1,6
+ * sekuntia kehykseltä — ja juuri se maalaus vei sen ajan, jolla
+ * bittikartan olisi pitänyt valmistua. Arkin alla maalaukselle ei ole
+ * katsojaa, joten se jätetään tekemättä.
+ *
+ * VISIBILITY EIKÄ DISPLAY. Asettelu on jätettävä voimaan: kamera lukee
+ * mittansa elävästä puusta (getScreenCTM, getBoundingClientRect) ja
+ * rasterointi lukee lasketut tyylit (mapart.js tyylitSisaan). display:
+ * none nollaisi molemmat, ja kartasta tulisi tyhjä.
+ *
+ * Luokka on ERI kuin aloitusverho-paalla ja tulee vasta kun arkki on
+ * mitatusti läpinäkymätön: samalla hetkellä asetettuna lauta katoaisi
+ * puoliksi läpinäkyvän arkin alta ja ruudulla välähtäisi tyhjää
+ * (v1105:n korjaama vika).
+ */
+body.lauta-arkin-alla #board { visibility: hidden; }
+
+/*
  * Zoomatessa avausteksti työntyy alas pois näkyvistä samaa tahtia kuin
  * kartta suurenee (omistajan toive). Matka, kesto ja pehmennys tulevat
  * js/ui.js:n tyonnaAvausteksti-metodista, joka mittaa kartan alareunan
@@ -18930,7 +18954,11 @@ body.fokuspohja .maa-pilleri { display: none; }
    * asia, joka tekee kahdesta kalusteesta yhden. Oikea pehmuste pitää
    * rivit poissa plus-napin alta.
    */
-  padding: 0.65rem 2.6rem 0.5rem 0.35rem;
+  /* Yläpehmuste tekee tilan plussalle, joka istuu taulun yläreunassa
+     keskellä omalla rivillään (omistaja 25.8.2026) — se ei saa jäädä
+     lukurivien päälle. Oikea pehmuste kapeni samalla: kulmassa ei enää
+     asu nappia. */
+  padding: 2.5rem 0.35rem 0.5rem;
   border: 0;
   background: none;
   box-shadow: none;
@@ -18985,9 +19013,10 @@ body.fokuspohja .maa-pilleri { display: none; }
  */
 .fokus-maataulu-lehti {
   position: absolute;
-  top: 0.35rem;
-  /* Yläreunaan keskelle (omistaja 25.8.2026); siirto marginaalilla
-     eikä translatella, koska syke animoi transformia. */
+  top: 0;
+  /* Yläreunaan keskelle omalle rivilleen (omistaja 25.8.2026) — taulun
+     yläpehmuste (2.5rem) on varattu sille. Siirto marginaalilla eikä
+     translatella, koska syke animoi transformia. */
   left: 50%;
   margin-left: -22px;
   right: auto;

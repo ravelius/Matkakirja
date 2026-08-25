@@ -221,6 +221,7 @@ import {
   rasteroiRuutu,
   RUUTU_TYHJA,
   avaaTaidelahde,
+  esilammitaTaide,
   rasteroiPohja,
   pohjanMitat,
   piirtotarkkuus,
@@ -243,6 +244,7 @@ import { MAASTON_VARJOSTUS } from './packs/maailmankartta-varjostus.js';
 import { Kartta } from './kartta.js';
 // Fokusmoodin maakohtainen topografiapohja (paketti 2).
 import {
+  esilammitaFokuspohja,
   fokusAtlasIkkunat, paivitaFokusAtlas, paivitaFokuskartta, paivitaFokusNimet,
   nollaaFokuskartta,
 } from './fokuskartta.js';
@@ -379,6 +381,25 @@ const ALOITUSLENNON_MARGINAALI = 0.16;
 // tämä on pelin ensimmäinen liike, ja matka Lontoosta kohteeseen
 // kannattaa ehtiä lukea kartalta ennen kuin kone lähtee.
 const ALOITUSLENNON_AJO_MS = 2400;
+/*
+ * Kuinka kauan arkin takana enintään odotetaan karkeaa koko laudan
+ * kuvaa (pohjatasoa) ennen kuin lento lähtee joka tapauksessa.
+ *
+ * Mitattu Chromiumissa: arkin alla maalaamattomana (body.lauta-arkin-alla)
+ * pohjataso valmistuu noin kahdessa sekunnissa kamera-ajon jälkeen.
+ *
+ * KATTO ON SILTI RUNSAS, koska sen ylittäminen on pahempi vaihtoehto
+ * kuin odottaminen: ilman pohjatasoa ruudulle jää vektorilauta, jonka
+ * jokainen kehys maksaa lähikuvassa sekunteja — nelinkertaisesti
+ * kuristetussa Chromiumissa mitattuna yhdeksän. Katto on siis
+ * varoventtiili rikkinäiselle putkelle eikä hitaan laitteen normaali
+ * tila; silmukka päättyy joka tapauksessa heti kun pohja on valmis TAI
+ * kun se on todettu mahdottomaksi (pohjaTulossa laskee).
+ *
+ * Aika luetaan kellosta eikä ajastimien laukeamisista, joten katto
+ * pitää silloinkin kun pääsäie on tukossa (ks. aloituslentoSisalla).
+ */
+const ALOITUSLENNON_POHJA_ODOTUS_MS = 12000;
 // Reitin kaaren voimakkuus. Sama kerroin kuin laudan omilla
 // lentoreiteillä (drawBoard, .air-route), jotta uusi viiva on samaa
 // käsialaa kuin kartalle valmiiksi piirretyt kaaret.
@@ -479,20 +500,19 @@ const FOKUS_KUVAN_REUNA = [0.16, 0.28, 0.42, 0.62, 1];
  * MITTA ON RUUDULLA, EI LAUDALLA. Fokusmoodin zoomiväli on valtava —
  * yleiskuvassa koko Eurooppa, fokusajon jälkeen yksi maa — ja laudan
  * yksiköissä mitoitettu laatta olisi lehdellä joko täplä tai kiekko
- * puoli ruutua. Laatta skaalataan siksi käänteisellä zoomikertoimella
- * kuten fokusvirran kuvavinjetitkin (js/fokusvirta.js PINNI_LEVEYS):
- * halkaisija on ruudulla aina noin 26 px, jolloin se ei hallitse
- * lehteä muttei myöskään katoa.
+ * puoli ruutua. Laatta viritetään siksi ruutumittaan: halkaisija on
+ * lehden perusnäkymässä noin 26 px, jolloin se ei hallitse lehteä
+ * muttei myöskään katoa.
  *
- * KIINTEÄ KOKO, EI DYNAAMINEN (omistajan linjaus 25.8.2026, kumoaa
- * aiemman): *"kartan pallurat kiinteän kokoisiksi"*. Skaalaus oli
- * aiemmin vain PIENENNYS — yleiskuvassa, jossa laatta on luonnostaan
- * tätä pienempi, se jätettiin rauhaan, ja laatta siis kutistui ja kasvoi
- * zoomin mukana aina siihen asti kun 26 px:n katto tuli vastaan. Nyt
- * kerroin on käänteinen zoomiskaalaus sellaisenaan (1/skaala), sama
- * tekniikka kuin kohdemerkeillä (paivitaFokusKohdeMitat), nimilapuilla
- * ja kohtaamispisteellä (js/fokuspiste.js): halkaisija on ruudulla sama
- * joka zoomilla.
+ * MITTA ON LEHDEN PERUSTASOLLA, EI JOKA ZOOMILLA (omistajan LOPULLINEN
+ * linjaus 26.8.2026, kumoaa 25.8. kirjatun kiinteän ruutukoon):
+ * *"pisteiden koko pitäisi olla koko ajan sama suhteessa kartan muihin
+ * elementteihin"*. Kerroin on nyt VAKIO (fokusMerkkiSkaala): laatta on
+ * 26 px siinä näkymässä, johon saapumisajo maahan päätyy, ja kasvaa tai
+ * kutistuu siitä kartan mukana. Sama tekniikka kaikilla fokusnäkymän
+ * merkkikerroksilla: kohdemerkit (js/fokuskohteet.js), kohtaamispiste
+ * (js/fokuspiste.js), nostosymbolit (js/fokusnosto-symbolit.js) sekä
+ * nappula ja aarremerkki (fokusMerkkiKerroin).
  */
 const FOKUS_LAATTA_PX = 26;
 /*
@@ -527,16 +547,17 @@ const AARREMERKKI_R = 9.4;
  * VIKA OLI SAMA KUIN LAATALLA AIKANAAN: pelinappula ja käännetty
  * laatta ovat laudan yksiköissä, ja fokuszoomi suurentaa ne ruudulla
  * moninkertaisiksi — kuvakaappauksessa nappula oli neljänneksen
- * ruudun levyinen. Korjaus on sama käänteisskaalaus kuin nykyisen
- * kaupungin laatalla (FOKUS_LAATTA_PX, paivitaFokusLaatta): mitta on
- * RUUDULLA eikä laudalla.
+ * ruudun levyinen. Korjaus on sama mitoitus kuin nykyisen kaupungin
+ * laatalla (FOKUS_LAATTA_PX, paivitaFokusLaatta): mitta luetaan
+ * RUUDULTA lehden perustasolla eikä laudalta.
  *
  * SUHTEET: nappula on laatan kokoluokkaa (28 vs. 26) — se on pelaajan
  * oma paikka ja saa olla kiinnekohta — ja aarremerkki on
  * kääntämätöntä laattaa pienempi (20 vs. 26), kuten laudallakin.
  *
- * YLEISKUVASSA JA MUILLA LAUDOILLA KOOT OVAT ENNALLAAN: kerroin on 1
- * aina kun fokusnäkymä ei ole päällä (paivitaFokusMerkkiMitat).
+ * MUILLA LAUDOILLA JA FOKUSNÄKYMÄN ULKOPUOLELLA KOOT OVAT ENNALLAAN:
+ * kerroin on 1 aina kun fokusnäkymä ei ole päällä
+ * (paivitaFokusMerkkiMitat).
  */
 const FOKUS_NAPPULA_PX = 28;
 const FOKUS_AARRE_PX = 20;
@@ -2834,6 +2855,9 @@ export class UI {
     // Sama kartalennolle: lippu pidättelee kamera-ajoja ja annosteluvirtaa,
     // joten kesken katkennut lento lamauttaisi seuraavan pelin.
     document.body.classList.remove('flight-active', 'kartalento');
+    // Arkin alle piilotettu lauta takaisin näkyviin: pystyyn jäädessään
+    // luokka jättäisi uuden pelin kartan näkymättömäksi.
+    document.body.classList.remove('lauta-arkin-alla', 'aloitusverho-paalla');
     this.aloituslentoKesken = false;
     // Radiotila piilottaa matkakirjan ja alanapit; ilman purkua ne
     // jäisivät piiloon uudessa pelissä.
@@ -2982,6 +3006,9 @@ export class UI {
     this.vapautaPohja();
     this.taideLahde = null;
     this.taideLahdeTulossa = true;
+    // Edellisen laudan lykätty työ ei koskaan enää kelpaa.
+    this.taideLahdeLykatty = null;
+    this.taideAtlasOdottaa = false;
     this.taideLuotu = performance.now();
     this.pohjaValmisMs = null;
     /*
@@ -2994,55 +3021,109 @@ export class UI {
     this.pohjaTulossa = true;
     this.pohjaTehoOdotus = pohjanMitat(this.game.pack.map).teho;
     const taide = this.taide;
-    avaaTaidelahde(taide, this.game.pack.map).then((lahde) => {
+    const kaynnistaLahde = () => {
       if (this.dead || this.taide !== taide) return;
-      this.taideLahde = lahde;
-      this.taideLahdeTulossa = false;
-      // Ilman lähdettä ei tule pohjaakaan — lippu alas ENNEN
-      // täydennystä, ettei yleiskuva jää odottamaan pohjaa ikuisesti.
-      if (!lahde) this.pohjaTulossa = false;
-      // Ruutusarja odotti lähdettä (ks. taydennaTaide); nyt se saa alkaa.
-      // Pohjatasoa EI odoteta: sen pakkaus vie ison laudan kokoisena
-      // sekunteja (mitattu Chromium ~5 s), ja ruudut blokkaava odotus
-      // piti koko kartan vektoreina sen ajan.
-      this.taydennaTaide();
-      if (!lahde) return;
-      rasteroiPohja(lahde, this.game.pack.map).then((pohja) => {
+      avaaTaidelahde(taide, this.game.pack.map).then((lahde) => {
         if (this.dead || this.taide !== taide) return;
-        this.pohjaTulossa = false;
-        if (!pohja) { this.taydennaTaide(); return; }
-        /*
-         * Pohja OMAAN ryhmäänsä taideRyhmän EDELLE, ei taideRyhmän
-         * sisään: uudet ruudut lisätään taideRyhmän alkuun
-         * (insertBefore firstChild), joten ryhmän sisällä pohja
-         * valuisi ruutujen PÄÄLLE heti ensimmäisen ruudun tullessa.
-         * Edeltävänä sisaruksena se on aina kaiken tarkan alla, ja
-         * kiertävän kartan <use>-kopio monistaa sen siinä missä
-         * muunkin juuriryhmän sisällön.
-         */
-        const ryhmaPohjalle = el('g', { class: 'taide-pohja' });
-        this.taideRyhma.parentElement?.insertBefore(ryhmaPohjalle, this.taideRyhma);
-        ryhmaPohjalle.appendChild(pohja.kuva);
-        this.pohjaRyhma = ryhmaPohjalle;
-        this.taidePohja = pohja.kuva;
-        this.pohjaTeho = pohja.teho;
-        // Aika laudan luonnista koko laudan kattavaan bittikarttaan —
-        // savuke vartioi tätä (tools/savuke-kartan-sujuvuus.mjs).
-        this.pohjaValmisMs = performance.now() - this.taideLuotu;
-        // Raskas vektorikerros pois HETI: pohja kattaa koko laudan,
-        // eikä poisto odota ruutusarjaa, jonka raskaat vektorikehykset
-        // itse pitäisivät ikuisesti kesken (ks. poistaVektorit).
-        this.poistaVektorit();
-        // Yleiskuvassa pohja korvaa ruudut (ks. taydennaTaide), joten
-        // näkymä saa tilaisuuden vapauttaa ne heti.
+        this.taideLahde = lahde;
+        this.taideLahdeTulossa = false;
+        // Ilman lähdettä ei tule pohjaakaan — lippu alas ENNEN
+        // täydennystä, ettei yleiskuva jää odottamaan pohjaa ikuisesti.
+        if (!lahde) this.pohjaTulossa = false;
+        // Ruutusarja odotti lähdettä (ks. taydennaTaide); nyt se saa alkaa.
+        // Pohjatasoa EI odoteta: sen pakkaus vie ison laudan kokoisena
+        // sekunteja (mitattu Chromium ~5 s), ja ruudut blokkaava odotus
+        // piti koko kartan vektoreina sen ajan.
         this.taydennaTaide();
+        if (!lahde) return;
+        rasteroiPohja(lahde, this.game.pack.map).then((pohja) => {
+          if (this.dead || this.taide !== taide) return;
+          this.pohjaTulossa = false;
+          if (!pohja) { this.taydennaTaide(); return; }
+          /*
+           * Pohja OMAAN ryhmäänsä taideRyhmän EDELLE, ei taideRyhmän
+           * sisään: uudet ruudut lisätään taideRyhmän alkuun
+           * (insertBefore firstChild), joten ryhmän sisällä pohja
+           * valuisi ruutujen PÄÄLLE heti ensimmäisen ruudun tullessa.
+           * Edeltävänä sisaruksena se on aina kaiken tarkan alla, ja
+           * kiertävän kartan <use>-kopio monistaa sen siinä missä
+           * muunkin juuriryhmän sisällön.
+           */
+          const ryhmaPohjalle = el('g', { class: 'taide-pohja' });
+          this.taideRyhma.parentElement?.insertBefore(ryhmaPohjalle, this.taideRyhma);
+          ryhmaPohjalle.appendChild(pohja.kuva);
+          this.pohjaRyhma = ryhmaPohjalle;
+          this.taidePohja = pohja.kuva;
+          this.pohjaTeho = pohja.teho;
+          // Aika laudan luonnista koko laudan kattavaan bittikarttaan —
+          // savuke vartioi tätä (tools/savuke-kartan-sujuvuus.mjs).
+          this.pohjaValmisMs = performance.now() - this.taideLuotu;
+          // Raskas vektorikerros pois HETI: pohja kattaa koko laudan,
+          // eikä poisto odota ruutusarjaa, jonka raskaat vektorikehykset
+          // itse pitäisivät ikuisesti kesken (ks. poistaVektorit).
+          this.poistaVektorit();
+          // Yleiskuvassa pohja korvaa ruudut (ks. taydennaTaide), joten
+          // näkymä saa tilaisuuden vapauttaa ne heti.
+          this.taydennaTaide();
+        });
       });
-    });
+    };
+    /*
+     * BITTIKARTTAPUTKI EI KÄYNNISTY PIILOTETULLE LAUDALLE (omistajan
+     * kysymys 25.8.2026, ks. vanhaLautaPiilossa). Atlasnäkymässä
+     * lauta on display: none, eikä sen lähdettä ja pohjatasoa — koko
+     * laudan kokoinen bittikartta, mitattuna sekuntien työ — kannata
+     * rakentaa kuvalle, jota kukaan ei näe.
+     *
+     * AVAUSLENTO EI OLE ESTE, vaikka sekin piirtyy kartan päälle.
+     * Kokeiltiin ja mitattiin: lennon aikana lykätty putki tarkoittaa,
+     * että laudan 7000 vektorielementtiä jäävät elävään puuhun koko
+     * lennon ajaksi, ja lähikuvassa niiden tyyli- ja maalauskierros
+     * maksaa Chromiumissa 1,6 sekuntia JOKA KEHYS — kirjoituskone
+     * naputti sanan 1,6 sekunnin välein ja kone olisi nytkähdellyt
+     * samaan tahtiin. Juuri pohjataso on se, joka päästää vektorit
+     * pois (poistaVektorit), joten lennolla se on tehtävä eikä
+     * lykättävä.
+     *
+     * Työ ei katoa vaan odottaa: jatkaLykattyPiirto käynnistää sen heti
+     * kun lauta palaa näkyviin.
+     */
+    if (this.piirtoLykkaantyy()) this.taideLahdeLykatty = kaynnistaLahde;
+    else kaynnistaLahde();
     // Ensimmäinen piirto vasta seuraavalla kehyksellä: laudan
     // luontihetkellä viewBox on vielä oletusarvoinen eikä paneelin koko
     // ole tiedossa.
     requestAnimationFrame(() => this.taydennaTaide());
     this.vahdiTarkkuutta();
+  }
+
+  /**
+   * Onko laudan bittikartalla juuri nyt katsojaa? Ks. rasteroiTaide.
+   */
+  piirtoLykkaantyy() {
+    return this.vanhaLautaPiilossa();
+  }
+
+  /**
+   * Käynnistää lykätyn bittikarttatyön, kun este on poistunut.
+   *
+   * Kutsutaan kahdesta paikasta: avauslennon päättyessä ja siitä
+   * kohdasta, joka poistaa atlaksen piilotusluokan (js/fokuskartta.js
+   * paivitaVanhaLauta). Molemmat voivat tulla silloinkin, kun toinen
+   * este on yhä voimassa — siksi ehto tarkistetaan tässä eikä
+   * kutsujassa.
+   */
+  jatkaLykattyPiirto() {
+    if (this.dead || this.piirtoLykkaantyy()) return;
+    const lykatty = this.taideLahdeLykatty;
+    if (lykatty) {
+      this.taideLahdeLykatty = null;
+      lykatty();
+    }
+    if (this.taideAtlasOdottaa) {
+      this.taideAtlasOdottaa = false;
+      this.taydennaTaide({ heti: true });
+    }
   }
 
   /** Poistaa pohjatason ja vapauttaa sen blob-osoitteen. */
@@ -3144,6 +3225,13 @@ export class UI {
    */
   tarkistaTarkkuus() {
     if (this.dead || !this.taide || !this.taideSkaala) return;
+    /*
+     * Piilotetun laudan tarkkuudella ei ole katsojaa (ks.
+     * vanhaLautaPiilossa). Tarkistus ei siirry ajastimelle vaan jää
+     * odottamaan paluuta näkymästä: silloin sarja pyydetään joka
+     * tapauksessa uusiksi (jatkaVanhanLaudanPiirto).
+     */
+    if (this.vanhaLautaPiilossa()) { this.taideAtlasOdottaa = true; return; }
     /*
      * Tarkistus SIIRTYY eikä peruunnu: muuten kartta voisi jäädä
      * sumeaksi vain siksi, että ajastin sattui osumaan eleen kohdalle.
@@ -3325,6 +3413,19 @@ export class UI {
    *    piirretyt ruudut jäävät sellaisinaan — uutta työtä on vain se
    *    kaistale, joka tuli näkyviin.
    */
+  /**
+   * Onko vanha lauta juuri nyt piilossa atlaksen alla?
+   *
+   * Totuus on CSS-luokassa eikä omassa kirjanpidossa: sen asettaa
+   * js/fokuskartta.js (paivitaVanhaLauta) ja siihen nojaa myös se
+   * tyylisääntö, joka laudan oikeasti piilottaa (css/styles.css
+   * body.fokus-atlas-nakyma .staattinen/.taide-pohja). Kaksi lippua
+   * samasta asiasta pääsisi ennen pitkää eri mieltä.
+   */
+  vanhaLautaPiilossa() {
+    return Boolean(globalThis.document?.body?.classList?.contains('fokus-atlas-nakyma'));
+  }
+
   taydennaTaide({ heti = false } = {}) {
     if (this.dead) return;
     /*
@@ -3347,6 +3448,34 @@ export class UI {
     }
     if (!this.taide || !this.taideRyhma) return;
     /*
+     * PIILOTETTUA VANHAA LAUTAA EI RASTEROIDA LAINKAAN (omistajan
+     * kysymys 25.8.2026: *"Eihän sitä vanhaa maailman karttaa vaan
+     * lasketa myös vaikka sitä ei näytetä eikä käytetä?"*).
+     *
+     * Fokusnäkymässä atlas korvaa laudan kokonaan ja lauta on
+     * display: none (js/fokuskartta.js paivitaVanhaLauta,
+     * body.fokus-atlas-nakyma). Piirto oli kuitenkin jäänyt päälle:
+     * jokainen ele päättyi ruutusarjaan, joka maalasi satoja
+     * millisekunteja pääsäikeessä pikseleitä, joita kukaan ei näe.
+     *
+     * Lippu on OMANSA eikä taideOdottaa. Juuri se on koko pointti:
+     * taideOdottaa on "tee heti kun ele päättyy", ja sen kanssa työ
+     * laukeaisi joka sormennoston jälkeen uudelleen. Tämä odottaa
+     * paluuta näkymästä (jatkaVanhanLaudanPiirto), ei sormea.
+     *
+     * TYHJÄÄ EI VÄLÄHDÄ PALUUSSA: mitään ei poisteta, vain jätetään
+     * tekemättä. Edellisen mittakaavan ruudut ja pohjataso jäävät
+     * paikoilleen ja tulevat display: none -luokan mukana takaisin
+     * näkyviin — karkeana, jos mittakaava on sillä välin muuttunut,
+     * ja tarkentuvat hetken kuluttua kuten kartta muutenkin.
+     */
+    if (this.vanhaLautaPiilossa()) {
+      this.taideAtlasOdottaa = true;
+      this.taideOdottaa = false;
+      this.peruutaRengas();
+      return;
+    }
+    /*
      * Lennon aikana ei rasteroida.
      *
      * Lauta piirretään kalvon taakse jo lennon aikana, ja rasterointi vie
@@ -3358,15 +3487,21 @@ export class UI {
      *
      * Kuva täydennetään heti kun kalvo väistyy.
      *
-     * POIKKEUS: ALOITUSLENTO KARTALLA (body.kartalento). Siinä kalvoa ei
-     * ole vaan lento piirtyy kartan päälle, ja kartta ON se, mitä
-     * pelaaja katsoo: rasteroimatta jäänyt lauta näkyisi koko lennon
-     * ajan venytettynä sumuna. Työtä tulee kuitenkin vain yksi erä,
-     * koska näkymä ei enää muutu koneen lähdettyä liikkeelle — kamera-
-     * ajo on silloin jo ohi (ks. aloituslentoSisalla).
+     * AVAUSLENTO KARTALLA (body.kartalento) EI OLE ENÄÄ POIKKEUS.
+     *
+     * Poikkeus oli olemassa siksi, että avauslennossa kalvoa ei ole
+     * vaan lento piirtyy kartan päälle — ja rasteroimaton lauta olisi
+     * näkynyt lennon ajan venytettynä sumuna. Sitä ongelmaa ei enää
+     * ole: koko bittikarttaputki lykkääntyy lennon yli
+     * (rasteroiTaide → piirtoLykkaantyy), joten lennon aikana ruudulla
+     * on laudan VEKTORIKUVA, joka on tarkempi kuin yksikään ruutu.
+     * Rasterointi alkaa perillä — tai jää tekemättä, jos maa peittyy
+     * atlaksen lehden alle.
+     *
+     * Mitattuna (Chromium, klikkauksesta koneen lähtöön): poikkeuksen
+     * kanssa 24,4 s, ilman 5,0 s.
      */
-    if (document.body.classList.contains('flight-active')
-      && !document.body.classList.contains('kartalento')) {
+    if (document.body.classList.contains('flight-active')) {
       this.taideOdottaa = true;
       return;
     }
@@ -3748,6 +3883,17 @@ export class UI {
     const askel = async () => {
       // Vanhentunut työ: mittakaava vaihtui tai peli vaihtui alta.
       if (this.dead || this.taideRengas !== tyo || skaala !== this.taideSkaala) return;
+      /*
+       * Vanha lauta meni piiloon atlaksen alle kesken renkaan: jono
+       * jää tekemättä eikä sitä yritetä uudelleen joutohetkittäin.
+       * Paluu näkymästä rakentaa sarjan uusiksi (taydennaTaide), joten
+       * mitään ei mene hukkaan — vain työtä jää tekemättä.
+       */
+      if (this.vanhaLautaPiilossa()) {
+        this.taideRengas = null;
+        this.taideAtlasOdottaa = true;
+        return;
+      }
       // Pohjataso kattaa tämän mittakaavan: rengas on turha, ja
       // vanhat ruudut saavat siivoutua saman tien.
       if (this.taidePohja && skaala * tarkkuus <= this.pohjaTeho) {
@@ -5500,6 +5646,86 @@ export class UI {
     this.paivitaFokusNimilaput();
   }
 
+  /* --- MERKIT KARTAN MITTAKAAVAAN (omistajan linjaus 26.8.2026) ------ */
+
+  /**
+   * FOKUSNÄKYMÄN MERKKIKERROSTEN VAKIOSKAALA.
+   *
+   * === MIKÄ MUUTTUI ===
+   *
+   * Omistajan LOPULLINEN linjaus (Raamattu, kumoaa 25.8. kirjatun
+   * *"kartan pallurat kiinteän kokoisiksi"* -linjan): *"Nähtävyyspisteet
+   * ja Ateenan merkki kummatkin vielä muuttuvat zoomatessa. Eli pisteet
+   * pitäisi suurentua samalla kun karttaa suurentaa ja pienentyä karttaa
+   * zoomatessa ulospäin. Eli niiden koko pitäisi olla koko ajan sama
+   * suhteessa kartan muihin elementteihin."*
+   *
+   * Merkit olivat ruudun pikseleitä: ankkuriryhmä skaalattiin zoomin
+   * KÄÄNTEISLUVULLA (1/skaala), jolloin merkki oli ruudulla samankokoinen
+   * joka zoomilla — ja uloszoomatussa atlaksessa täysikokoiset pisteet
+   * hallitsivat lehteä, jonka päällä ne olivat vain nuppineulanpäitä.
+   * Nyt merkit ovat KARTAN MITTAKAAVASSA: transform on VAKIO, ja merkki
+   * kasvaa ja kutistuu kartan mukana kuten kaikki muukin lehdellä.
+   *
+   * === MISTÄ VAKIO TULEE ===
+   *
+   * Peruskoko viritetään lehden PERUSTASOON eli siihen näkymään, johon
+   * saapumisajo maahan päätyy (js/fokuskartta.js maanNakyma: kamera
+   * sovittaa lehden IKKUNAN ruutuun) ja jota kauemmas loitonnusnappi ei
+   * päästä (js/kartta.js fokusZoomMinimi). Sillä tasolla merkki on
+   * suunnilleen entisen ruutukokonsa kokoinen; siitä se kasvaa
+   * lähennettäessä ja kutistuu loitonnettaessa.
+   *
+   *   perusSkaala = min(paneW / ikkuna.w, paneH / ikkuna.h)
+   *
+   * — sama kaava kuin kameran omalla pohjalla (fokusZoomMinimi), jotta
+   * merkin peruskoko ja kameran alaraja eivät voi ajautua erilleen.
+   * Paluuarvo on ankkuriryhmän kerroin eli 1 / perusSkaala.
+   *
+   * === VARAPOLKU ON ENTINEN RUUTUKOKO ===
+   *
+   * Ilman lehden ikkunaa (muu lauta, fokusmoodi maassa jolle
+   * esirenderöityä pohjaa ei ole, yleiskuva ilman maata) ei ole
+   * perustasoa, johon virittää — silloin palataan entiseen 1/skaalaan.
+   * Vain siinä haarassa `suhde` merkitsee: nipistys skaalaa koko SVG:n
+   * CSS-muunnoksella muuttamatta viewBoxia, joten ruutukokoon sidottu
+   * merkki tarvitsee eleen ajaksi vastaskaalan (js/kartta.js
+   * vastaskaalaaMerkit). Vakioskaalassa vastaskaalaa EI tarvita: ele
+   * suurentaa merkin kartan mukana, mikä on juuri se mitä pyydettiin.
+   *
+   * VÄLIMUISTI on maa + ruutukoko: vakio muuttuu vain kun lehti vaihtuu
+   * tai ruutu muuttaa kokoaan, eikä sitä lasketa joka kehyksessä.
+   */
+  fokusMerkkiSkaala(suhde = 1) {
+    const nakyva = this.nakyvaAlue();
+    const skaala = nakyva?.skaala;
+    // Ilman mitattavaa näkymää mittakaava jäisi arvaukseksi: kutsuja
+    // jättää entisen koon voimaan (0 = ei mittaa).
+    if (!Number.isFinite(skaala) || skaala <= 0) return 0;
+    const ele = suhde > 0 ? suhde : 1;
+    const rajaus = this.fokusPohjaRajaus;
+    /*
+     * Paneelin mitat samasta lähteestä kuin kameralla (clientWidth), ja
+     * varana näkyvästä alueesta johdettu leveys — nakyvaAlue on jo
+     * mitattu yllä, joten kumpikaan ei ole uusi asettelun pakotus.
+     */
+    const pane = this.svg?.parentElement;
+    const paneW = pane?.clientWidth || skaala * nakyva.w;
+    const paneH = pane?.clientHeight || skaala * nakyva.h;
+    if (!(rajaus?.w > 0) || !(rajaus?.h > 0) || !(paneW > 0) || !(paneH > 0)) {
+      return 1 / (skaala * ele);
+    }
+    const avain = `${rajaus.x}:${rajaus.y}:${rajaus.w}:${rajaus.h}`
+      + `:${Math.round(paneW)}x${Math.round(paneH)}`;
+    if (this.fokusMerkkiSkaalaAvain !== avain) {
+      const perus = Math.min(paneW / rajaus.w, paneH / rajaus.h);
+      if (!(perus > 0)) return 1 / (skaala * ele);
+      this.fokusMerkkiSkaalaAvain = avain;
+      this.fokusMerkkiSkaalaArvo = 1 / perus;
+    }
+    return this.fokusMerkkiSkaalaArvo;
+  }
+
   /* --- LAATTA ON FOKUSNÄKYMÄN TUTKI-NAPPI (omistaja 24.8.2026) ------- */
 
   /**
@@ -5536,14 +5762,15 @@ export class UI {
    *
    * KAKSI TYÖTÄ, YKSI PAIKKA:
    *
-   *   1. KOKO. Fokusnäkymässä laatta skaalataan käänteisellä
-   *      zoomikertoimella niin, että sen halkaisija on ruudulla
-   *      FOKUS_LAATTA_PX joka zoomilla — myös yleiskuvassa, jossa
-   *      skaalaus suurentaa. Skaalaus tehdään laatan omien osien
-   *      transform-määreisiin kaupungin keskipisteen ympäri, jolloin
-   *      heilunta (rotate) ja porttikehä säilyvät suhteessa toisiinsa.
-   *      Alkuperäinen muunnos talletetaan data-määreeseen, joten
-   *      palautus on tarkka eikä arvattu.
+   *   1. KOKO. Fokusnäkymässä laatta skaalataan MERKKIEN VAKIOSKAALALLA
+   *      (fokusMerkkiSkaala) niin, että sen halkaisija on lehden
+   *      perustasolla ruudulla FOKUS_LAATTA_PX — ja siitä se kasvaa
+   *      lähennettäessä ja kutistuu loitonnettaessa kartan mukana.
+   *      Skaalaus tehdään laatan omien osien transform-määreisiin
+   *      kaupungin keskipisteen ympäri, jolloin heilunta (rotate) ja
+   *      porttikehä säilyvät suhteessa toisiinsa. Alkuperäinen muunnos
+   *      talletetaan data-määreeseen, joten palautus on tarkka eikä
+   *      arvattu.
    *   2. NAPAUTUS. Laatan päälle piirretään näkymätön ympyrä, jonka
    *      halkaisija on ruudulla vähintään FOKUS_LAATTA_OSUMA_PX (44 px:n
    *      sormisääntö). Napautus tekee saman kuin vanha Tutki-nappi.
@@ -5554,7 +5781,7 @@ export class UI {
    * Tutki olisi muutenkin tarjolla (fokusLaattaTutkii) — muuten se
    * peittäisi siirtovaiheen kohdealueita.
    *
-   * KIINTEÄ RUUTUKOKO PÄIVITTYY ZOOMISTA. Kutsu tulee sekä
+   * MITTAKAAVA PÄIVITTYY LEHDEN JA RUUDUN VAIHTUESSA. Kutsu tulee sekä
    * paivitaFokusPallotin kautta joka piirrossa että
    * paivitaMaastonimistä, joka ajetaan aina kun näkymä on asettunut —
    * sama kytkentäkohta kuin fokusvirran kuvavinjeteillä.
@@ -5563,10 +5790,10 @@ export class UI {
     if (!this.svg || !this.fokusLaattaKerros) return;
     const city = this.fokusmoodi && !this.katselu ? this.game.cityOf?.() : null;
     if (!city) { this.tyhjennaFokusLaatta(); return; }
-    const skaala = this.nakyvaAlue()?.skaala;
+    const s = this.fokusMerkkiSkaala();
     // Ilman mitattavaa näkymää mittakaava jäisi arvaukseksi: entinen
     // koko on parempi kuin väärä (sama sääntö kuin kuvavinjeteillä).
-    if (!Number.isFinite(skaala) || skaala <= 0) return;
+    if (!(s > 0)) return;
 
     const osat = [...this.svg.querySelectorAll('.cities [data-kaupunki]')]
       .filter((osa) => osa.dataset.kaupunki === city.id
@@ -5575,11 +5802,12 @@ export class UI {
       || osa.classList.contains('city-start'));
     const rx = Number(laatta?.getAttribute('rx'));
     /*
-     * KIINTEÄ KOKO RUUDULLA, EI ENÄÄ PELKKÄ KATTO (omistajan linjaus
-     * 25.8.2026, ks. FOKUS_LAATTA_PX). Kerroin on käänteinen
-     * zoomiskaalaus sellaisenaan: yleiskuvassa se SUURENTAA laattaa,
-     * lähikuvassa kutistaa, ja kummassakin halkaisija on ruudulla sama
-     * FOKUS_LAATTA_PX.
+     * KARTAN MITTAKAAVASSA, EI RUUDUN (omistajan linjaus 26.8.2026, ks.
+     * fokusMerkkiSkaala ja FOKUS_LAATTA_PX). Kerroin on VAKIO niin kauan
+     * kuin lehti ja ruutukoko pysyvät: laatan halkaisija on lehden
+     * perustasolla FOKUS_LAATTA_PX, ja siitä se kasvaa ja kutistuu kartan
+     * mukana. Ilman lehden ikkunaa vakiota ei ole, ja fokusMerkkiSkaala
+     * palauttaa entisen käänteisen zoomiskaalauksen.
      *
      * MITTA KOSKEE FOKUSMOODIA, EI LEHTEÄ. Ehto oli ennen kuvan
      * olemassaolo (fokusPohjaBbox), mutta pallurat ovat samat pallurat
@@ -5588,7 +5816,7 @@ export class UI {
      * kohdemerkeillä (fokusKohdeMerkit): fokusmoodi ja pelinäkymä.
      */
     const kerroin = Number.isFinite(rx) && rx > 0
-      ? (FOKUS_LAATTA_PX / 2) / (rx * skaala)
+      ? (FOKUS_LAATTA_PX / 2) * s / rx
       : 1;
     // Edellisen kaupungin osat takaisin omaan kokoonsa.
     for (const vanha of this.fokusLaattaOsat ?? []) {
@@ -5608,14 +5836,18 @@ export class UI {
       return;
     }
     /*
-     * Napautusalue laudan yksiköinä: ruutumitta jaettuna zoomilla, mutta
-     * korkeintaan FOKUS_LAATTA_OSUMA_LAUDALLA (ettei alue yleiskuvassa
-     * peitä naapureita) ja vähintään laatan oma säde (ettei näkyvän
-     * laatan reuna jää alueen ulkopuolelle).
+     * Napautusalue laudan yksiköinä — SAMASSA MITTAKAAVASSA KUIN LAATTA
+     * (fokusMerkkiSkaala), eli ruudulla FOKUS_LAATTA_OSUMA_PX lehden
+     * perustasolla ja siitä kartan mukana. Alue saa pienetä laatan
+     * mukana: napautus tapahtuu lähizoomilla, jossa laatta on kasvanut.
+     * Katto FOKUS_LAATTA_OSUMA_LAUDALLA jää varmistukseksi varapolulle
+     * (yleiskuva ilman lehteä, jossa jakolasku kasvattaisi alueen
+     * naapurikaupunkien päälle), ja vähintään laatan oma säde, ettei
+     * näkyvän laatan reuna jää alueen ulkopuolelle.
      */
     const r = Math.max(
       Number.isFinite(rx) ? rx : 0,
-      Math.min((FOKUS_LAATTA_OSUMA_PX / 2) / skaala, FOKUS_LAATTA_OSUMA_LAUDALLA),
+      Math.min((FOKUS_LAATTA_OSUMA_PX / 2) * s, FOKUS_LAATTA_OSUMA_LAUDALLA),
     );
     const kohdat = this.kiertoKohdat(city.x);
     const avain = `${this.game.pack.id}:${city.id}:${kohdat.length}`;
@@ -5636,9 +5868,10 @@ export class UI {
          * keskipisteen.
          *
          * SAMA KAAVA KUIN VIHREÄLLÄ KOHTAAMISPISTEELLÄ (js/fokuspiste.js):
-         * ankkuriryhmä on laudan koordinaateissa ja skaalataan zoomin
-         * käänteisluvulla, jolloin kehän säde on RUUDUN PIKSELEITÄ.
-         * Sykkeessä liikkuvat vain `opacity` ja `transform: scale()` —
+         * ankkuriryhmä on laudan koordinaateissa ja skaalataan merkkien
+         * vakioskaalalla (fokusMerkkiSkaala), jolloin kehän säde on
+         * ruudun pikseleitä LEHDEN PERUSTASOLLA ja kasvaa siitä kartan
+         * mukana. Sykkeessä liikkuvat vain `opacity` ja `scale()` —
          * ei `r` (sen CSS-animointi ei ole kaikissa selaimissa tuettua)
          * eikä suodattimia (tests/rules.test.mjs). Kehän keskipiste on
          * ankkurin origossa, joten oletusarvoinen transform-origin osuu
@@ -5667,13 +5900,13 @@ export class UI {
     /*
      * Mitat joka kutsulla — myös juuri rakennetuille osille, jotta
      * sääntö on yhdessä paikassa. Napautusalue on laudan yksiköissä,
-     * sykekehän ankkuri käänteisessä zoomissa. Kuuntelijoita ei kytketä
+     * sykekehän ankkuri merkkien vakioskaalassa. Kuuntelijoita ei kytketä
      * uudelleen, jottei napautus katoaisi sormen alta.
      */
     for (const osuma of this.fokusLaattaKerros.querySelectorAll('.fokuslaatta-osuma')) {
       osuma.setAttribute('r', r);
     }
-    const zoom = (1 / skaala).toFixed(4);
+    const zoom = s.toFixed(4);
     for (const ankkuri of this.fokusLaattaKerros.querySelectorAll('.fokuslaatta-ankkuri')) {
       ankkuri.setAttribute('transform',
         `translate(${ankkuri.dataset.kx} ${ankkuri.dataset.ky}) scale(${zoom})`);
@@ -5687,12 +5920,12 @@ export class UI {
    * data-määreeseen. Ilman sitä palautus joutuisi rakentamaan heilunnan
    * uudelleen samasta siemenestä — kaksi kopiota samasta säännöstä.
    *
-   * KERROIN SAA OLLA YLI YHDEN (omistajan linjaus 25.8.2026, kiinteä
-   * ruutukoko): yleiskuvassa laattaa SUURENNETAAN, jotta sen halkaisija
-   * on ruudulla sama kuin lähikuvassa. Palautus omaan kokoon on siis
-   * ykkösen kohta eikä "ykkönen tai enemmän" — pyöristysvara mukana,
-   * jottei tismalleen oikean kokoiselle laatalle kirjoiteta turhaa
-   * muunnosta joka piirrossa.
+   * KERROIN SAA OLLA YLI YHDEN: kapealla ruudulla lehden perustaso on
+   * niin kaukana, että FOKUS_LAATTA_PX vaatii laatalta enemmän kuin sen
+   * oma lautakoko. Palautus omaan kokoon on siis ykkösen kohta eikä
+   * "ykkönen tai enemmän" — pyöristysvara mukana, jottei tismalleen
+   * oikean kokoiselle laatalle kirjoiteta turhaa muunnosta joka
+   * piirrossa.
    */
   asetaLaatanKoko(osa, kerroin) {
     if (osa.dataset.laattaMuunnos === undefined) {
@@ -5711,37 +5944,42 @@ export class UI {
       + `translate(${-x} ${-y}) ${perus}`.trimEnd());
   }
 
-  /* --- NAPPULA JA AARREMERKKI RUUDUN MITTAAN (omistaja 26.8.2026) ---- */
+  /* --- NAPPULA JA AARREMERKKI KARTAN MITTAAN (omistaja 26.8.2026) ---- */
 
   /**
-   * Käänteisskaalaus yhdelle kartan merkille — 1 fokusnäkymän ulkopuolella.
+   * Kokokerroin yhdelle kartan merkille — 1 fokusnäkymän ulkopuolella.
    *
-   * `px` on merkin haluttu LÄPIMITTA RUUDULLA ja `omaR` sen säde laudan
-   * yksiköissä. Sama laskutoimitus kuin nykyisen kaupungin laatalla
-   * (paivitaFokusLaatta); erillinen funktio, koska nappulan siirto
-   * tarvitsee kertoimen kesken animaation (animatePawnSisalla).
+   * `px` on merkin haluttu LÄPIMITTA RUUDULLA LEHDEN PERUSTASOLLA ja
+   * `omaR` sen säde laudan yksiköissä. Sama laskutoimitus kuin nykyisen
+   * kaupungin laatalla (paivitaFokusLaatta); erillinen funktio, koska
+   * nappulan siirto tarvitsee kertoimen kesken animaation
+   * (animatePawnSisalla).
+   *
+   * KERROIN ON VAKIO, EI ZOOMIN KÄÄNTEISLUKU (omistajan linjaus
+   * 26.8.2026, ks. fokusMerkkiSkaala). Nappula ja aarremerkki elävät
+   * kartan mukana kuten kaikki muukin lehdellä: perustasolla ne ovat
+   * `px`:n kokoisia, lähennettäessä isompia ja loitonnettaessa
+   * pienempiä.
    *
    * EHTO ON SAMA KUIN LAATALLA (fokusmoodi ja pelinäkymä) eikä lehden
    * olemassaolo: pallurat ovat samat pallurat myös maassa, jolle
    * esirenderöityä pohjaa ei vielä ole — ja juuri sellaisen maan yli
    * aloituslento kulkee.
    *
-   * KERROIN ON KATTO, EI KIINTEÄ KOKO — tässä kohdin sääntö EROAA
-   * nykyisen kaupungin laatasta (FOKUS_LAATTA_PX, joka suurentaa
-   * yleiskuvassa). Omistajan tilaus 26.8.2026 koski nimenomaan
-   * fokusnäkymän jättimäisiä merkkejä: *"Yleiskuvassa koot ennallaan."*
-   * Laattoja on kartalla yksi (pelaajan oma), mutta aarremerkkejä
-   * kertyy pelin mittaan kymmeniä — kiinteä ruutukoko täyttäisi
-   * yleiskuvan 20 pikselin kiekoilla, vaikka kaupungit itse ovat siinä
-   * zoomissa nuppineulanpäitä. Skaalaus tehdään siis vain silloin, kun
-   * se PIENENTÄÄ.
+   * KATTO ON YHÄ YKSI — tässä kohdin sääntö EROAA nykyisen kaupungin
+   * laatasta. Omistajan tilaus 26.8.2026: *"Yleiskuvassa koot
+   * ennallaan."* Laattoja on kartalla yksi (pelaajan oma), mutta
+   * aarremerkkejä kertyy pelin mittaan kymmeniä, eikä niitä pidä
+   * SUURENTAA yli oman lautakokonsa missään näkymässä. Kerroin 1 on
+   * sekin vakio, joten merkki skaalautuu kartan mukana silloinkin kun
+   * katto puree.
    */
   fokusMerkkiKerroin(px, omaR) {
     if (!this.fokusmoodi || this.katselu) return 1;
     if (!(omaR > 0)) return 1;
-    const skaala = this.nakyvaAlue()?.skaala;
-    if (!Number.isFinite(skaala) || skaala <= 0) return 1;
-    return Math.min(1, (px / 2) / (omaR * skaala));
+    const s = this.fokusMerkkiSkaala();
+    if (!(s > 0)) return 1;
+    return Math.min(1, (px / 2) * s / omaR);
   }
 
   /**
@@ -5869,7 +6107,11 @@ export class UI {
        * (FOKUS_NIMI_NAPPULAN_ALLE) — muuten nimi jäisi lähikuvassa
        * nappulan alle.
        */
-      const ruudulta = (FOKUS_LAATTA_PX / 2 + 4 + FOKUS_NIMI_PX) / skaala;
+      // Kartan mittakaava, ei ruudun (omistaja 25.8.2026: "nimilaput
+      // samalla lailla") — kerroin on vakio kuten merkeillä, joten nimi
+      // kasvaa ja kutistuu laatan mukana.
+      const kerroin = this.fokusMerkkiSkaala();
+      const ruudulta = (FOKUS_LAATTA_PX / 2 + 4 + FOKUS_NIMI_PX) * kerroin;
       const etaisyys = lappu.dataset.kaupunki === oma?.id
         ? Math.max(FOKUS_NIMI_NAPPULAN_ALLE, ruudulta)
         : ruudulta;
@@ -5877,7 +6119,7 @@ export class UI {
       lappu.setAttribute('text-anchor', 'middle');
       // Heilunta pois: se kiertää tekstiä vanhan ankkurin ympäri.
       lappu.removeAttribute('transform');
-      lappu.style.fontSize = `${(FOKUS_NIMI_PX / skaala).toFixed(2)}px`;
+      lappu.style.fontSize = `${(FOKUS_NIMI_PX * kerroin).toFixed(2)}px`;
     }
   }
 
@@ -6711,27 +6953,30 @@ export class UI {
     const skaala = this.nakyvaAlue()?.skaala;
     // Ilman mitattavaa näkymää entinen koko on parempi kuin väärä.
     if (!Number.isFinite(skaala) || skaala <= 0) return;
+    // Kartan mittakaava, ei ruudun (omistaja 25.8.2026: "nimilaput
+    // samalla lailla") — sama vakio kuin merkeillä ja nimilapuilla.
+    const kerroin = this.fokusMerkkiSkaala();
     for (const osa of osat) {
       if (osa.classList.contains('target-piste')) {
         const px = Number(osa.dataset.px) || FOKUS_KOHDE_PX;
-        osa.setAttribute('r', ((px / 2) / skaala).toFixed(2));
+        osa.setAttribute('r', ((px / 2) * kerroin).toFixed(2));
       } else if (osa.classList.contains('target-nimi')) {
-        osa.setAttribute('font-size', (FOKUS_KOHDE_NIMI_PX / skaala).toFixed(2));
+        osa.setAttribute('font-size', (FOKUS_KOHDE_NIMI_PX * kerroin).toFixed(2));
         const y = Number(osa.dataset.ky);
         if (Number.isFinite(y)) {
           // Nimi merkin yläpuolelle: puolikas merkkiä ja pieni rako.
-          osa.setAttribute('y', (y - (FOKUS_KOHDE_PX / 2 + 6) / skaala).toFixed(2));
+          osa.setAttribute('y', (y - (FOKUS_KOHDE_PX / 2 + 6) * kerroin).toFixed(2));
         }
       } else {
         /*
-         * Napautusalue: sormenkokoinen ruudulla, mutta ei koskaan
+         * Napautusalue: sormenkokoinen perustasolla, mutta ei koskaan
          * pienempi kuin laudan oma alue eikä suurempi kuin naapurien
          * väli (sama katto kuin laatalla).
          */
         const perus = Number(osa.dataset.perusR) || 0;
         osa.setAttribute('r', Math.max(
           perus,
-          Math.min((FOKUS_KOHDE_OSUMA_PX / 2) / skaala, FOKUS_LAATTA_OSUMA_LAUDALLA),
+          Math.min((FOKUS_KOHDE_OSUMA_PX / 2) * kerroin, FOKUS_LAATTA_OSUMA_LAUDALLA),
         ).toFixed(2));
       }
     }
@@ -7657,12 +7902,109 @@ export class UI {
   async piilotaAloitusverho() {
     const verho = this.aloitusverho;
     this.aloitusverho = null;
+    /*
+     * Lauta takaisin maalattavaksi AINA, myös kun arkkia ei enää ole
+     * (poikkeuspolku): luokka on koko näkymän kytkin eikä saa jäädä
+     * pystyyn — pystyyn jäädessään kartta olisi loppupelin ajan
+     * näkymätön.
+     */
+    document.body.classList.remove('lauta-arkin-alla');
     if (!verho) return;
     document.body.classList.remove('aloitusverho-paalla');
+    /*
+     * Yksi kehys laudalle ENNEN häivytystä: lauta on ollut arkin alla
+     * maalaamatta, ja ensimmäinen maalaus on sen kertaluontoinen hinta.
+     * Ilman tätä hinta osuisi keskelle häivytystä ja arkin alta
+     * paljastuisi hetkeksi tyhjä paneeli.
+     */
+    await new Promise((valmis) => requestAnimationFrame(() => requestAnimationFrame(valmis)));
+    if (this.dead) { verho.remove(); return; }
     verho.style.setProperty('--verho-kesto', `${ALOITUSVERHO_ULOS_MS}ms`);
     verho.classList.remove('verho-nakyy');
     await this.wait(ALOITUSVERHO_ULOS_MS);
     verho.remove();
+  }
+
+  /**
+   * AVAUSLENNON ESILÄMMITYS ALKUKERTOMUKSEN AIKANA.
+   *
+   * Omistajan kysymys 25.8.2026: *"Lataako peli siinä taustalla jotain
+   * todella paljon? Ja jos lataa, niin voisiko ne jo ladata heti pelin
+   * alussa, kun vasta kuunnellaan alkukertomusta?"*
+   *
+   * Lataa. Mitattuna (Chromium, tools/mittaa-avaus, ks. raportti)
+   * napautuksesta koneen lähtöön meni 24 sekuntia, ja siitä laudan
+   * rakentaminen oli 4,5 s. Alkukertomus kestää kymmeniä sekunteja,
+   * eikä pelaaja tee sinä aikana mitään — juuri se aika käytetään tässä.
+   *
+   * MITÄ ESILÄMMITETÄÄN JA MITÄ EI. Kaikkea ei voi: laudan piirto
+   * kirjoittaa suoraan siihen samaan SVG:hen, jossa avausruudun oma
+   * kartta on, eikä toista lautaa voi rakentaa sen rinnalle ilman että
+   * koko piirtoketju (this.svg, boardRoot, kerrokset, tyylien luku
+   * elävästä puusta) revitään auki. Sen sijaan tehdään kaikki se, mikä
+   * EI koske näkyvään puuhun:
+   *
+   *   1. kohdelaudan pelitila (game.enterWorld) — laattapino ja
+   *      verkko, mitattu 108 ms pöytäkoneella eli nelinkertaisesti
+   *      puhelimella
+   *   2. kartan piirron raskain puhdas laskenta (mapart.esilammitaTaide:
+   *      rannikkoruudukko ja meripisteet)
+   *   3. kohdemaan fokuspohja verkosta ja purettuna
+   *      (fokuskartta.esilammitaFokuspohja) — megatavujen webp, joka
+   *      muuten purettaisiin vasta laskeutumisen jälkeen
+   *   4. äänipuolen herätys, jotta napautuksen naksahdus soi heti
+   *
+   * RNG-JÄRJESTYS SÄILYY. Avauslennon repliikki nostetaan tässä ja
+   * pannaan talteen (esilammitys.line), ja doPickStart käyttää sen
+   * eikä nosta uutta. Näin arvonnat osuvat samaan kohtaan kuin ennen:
+   * ensin repliikki, sitten laudan laattapino (ks. doPickStart, jossa
+   * sama järjestys oli jo kommentoitu).
+   *
+   * TYÖ PILKOTAAN joutohetkiin, jottei avausteksti töki: yksi vaihe
+   * kerrallaan, requestIdleCallbackilla ja ajastinvarareitillä.
+   */
+  esilammitaAvaus() {
+    if (this.esilammitys || this.dead || this.katselu) return;
+    if (this.game.phase !== 'pickstart') return;
+    // Kohde tiedetään ennalta vain jos valittavia on tasan yksi
+    // (ETUSIVUN_KOHTEET). Useammalla esilämmitys jää tekemättä eikä
+    // mikään muutu — se on etumatka, ei ehto.
+    if (ETUSIVUN_KOHTEET.size !== 1) return;
+    const [kohdeId] = [...ETUSIVUN_KOHTEET];
+    const kohde = this.game.board.cityById.get(kohdeId);
+    const portti = (kohde?.links ?? [])[0];
+    if (!kohde || !portti) return;
+    const lauta = packById(portti.pack);
+    if (!lauta) return;
+    this.esilammitys = { kohde: kohdeId, line: null };
+
+    const vaiheet = [
+      // Ääni ensin: se on halvin ja sen puute kuuluu heti napautuksessa.
+      () => sfx.ensureContext(),
+      // Repliikki ENNEN lautaa — sama arvontajärjestys kuin doPickStartissa.
+      () => { this.esilammitys.line = this.game.firstFlightLine(kohdeId); },
+      () => this.game.enterWorld(lauta),
+      () => esilammitaTaide(lauta.map),
+      () => esilammitaFokuspohja(lauta.map?.cityCountry?.[portti.city], lauta.id),
+    ];
+
+    const pyyda = window.requestIdleCallback
+      ? (tehtava) => window.requestIdleCallback(tehtava, { timeout: 1200 })
+      : (tehtava) => setTimeout(tehtava, 150);
+    const askel = () => {
+      // Matka ehti alkaa: loput vaiheet tapahtuvat joka tapauksessa
+      // oikeassa järjestyksessä lennon omalla polulla.
+      if (this.dead || this.game.phase !== 'pickstart') return;
+      const vaihe = vaiheet.shift();
+      if (!vaihe) return;
+      try {
+        vaihe();
+      } catch {
+        /* esilämmitys on etumatka eikä ehto: virhe ei saa näkyä pelaajalle */
+      }
+      if (vaiheet.length) pyyda(askel);
+    };
+    pyyda(askel);
   }
 
   /**
@@ -7681,6 +8023,24 @@ export class UI {
     // kuin kohdemaan kartta aukeaa.
     const lontoo = game.board.cityById.get(ALOITUSLENNON_LAHTO);
     if (lontoo && lontoo.id !== city.id) {
+      /*
+       * NAKSAHDUS ENSIMMÄISENÄ RIVINÄ (omistajan pelitesti 25.8.2026
+       * iPhonella: *"kun klikkaa Atenaa, niin ei kuulu mitään ääntä"*).
+       *
+       * Kuittausääni on napautuksen ainoa välitön vastaus, ja sen on
+       * synnyttävä ennen kuin mikään muu ehtii viedä pääsäiettä:
+       * äänisolmu syntyy vain pääsäikeessä, ja sen jälkeen soitto on
+       * selaimen äänisäikeen asia. Ennen tämä oli vasta kertojan
+       * vaientamisen, luokanvaihdon ja lentotavan päättelyn jälkeen.
+       *
+       * VOIMAKKAAMPANA KUIN TAVALLINEN NAKSU. Napautuksen hetkellä
+       * soivat sekä avauskertoja että etusivun lentoasemahäly, ja
+       * tehosteväylän oma taso on hillitty (Sound master 0,24):
+       * naksahdus jäi mitatusti noin -23 dB puheen alle eikä puhelimen
+       * kaiuttimessa erottunut. `voima` on sama säädin kuin
+       * kirjoituskoneen lyönnillä (js/sound.js REAL_PLAYERS).
+       */
+      sfx.play('clack', { voima: 2.4 });
       // Lukuääni väistyy, kun matka alkaa.
       stopIntroVoice(this);
       this.introEl.classList.add('intro-fade');
@@ -7701,18 +8061,31 @@ export class UI {
        * peittävyyden siirtymä hoituu kompositorissa, joten se ehtii
        * maaliin vaikka pääsäie jumittuisi heti perään piirtoon.
        *
-       * Naksahdus soi aina, arkki vain karttalennolla: vanha kalvo tuo
-       * oman peittonsa, eikä liikeherkkyydessä (reducedMotion) saa
-       * odotuttaa turhaan.
+       * Arkki tulee vain karttalennolla: vanha kalvo tuo oman peittonsa,
+       * eikä liikeherkkyydessä (reducedMotion) saa odotuttaa turhaan.
        */
-      sfx.play('clack');
       if (kartalento) {
         this.naytaAloitusverho();
         await this.wait(ALOITUSVERHO_SISAAN_MS);
         if (this.dead) return;
+        /*
+         * Arkki on nyt läpinäkymätön: lauta saa lakata maalautumasta
+         * sen alla (css/styles.css body.lauta-arkin-alla). Vasta tässä
+         * eikä arkin ilmestyessä — muuten lauta katoaisi puoliksi
+         * läpinäkyvän arkin alta ja ruudulla välähtäisi tyhjää.
+         */
+        document.body.classList.add('lauta-arkin-alla');
       }
-      // Repliikki ennen siirtoa, jotta rng-kutsut osuvat samaan kohtaan.
-      const line = game.firstFlightLine(city.id);
+      /*
+       * Repliikki ennen siirtoa, jotta rng-kutsut osuvat samaan kohtaan.
+       * Esilämmitys on voinut nostaa sen jo alkukertomuksen aikana —
+       * silloin arvonta on tehty siellä ja täsmälleen samassa kohdassa
+       * (ks. esilammitaAvaus). Toiselle kaupungille (kehittäjätilan
+       * hyppy) talletus ei kelpaa.
+       */
+      const esilammitetty = this.esilammitys?.kohde === city.id
+        ? this.esilammitys.line : null;
+      const line = esilammitetty ?? game.firstFlightLine(city.id);
       // Lippu ennen siirtoa, jotta saapumismerkintä ei ala lennon alla —
       // se odottaa Astu ulos -nappia. Lennot poistavat lipun perillä.
       if (!this.reducedMotion) document.body.classList.add('flight-active');
@@ -7739,6 +8112,9 @@ export class UI {
         const lensi = kartalento && await this.aloituslento(city.id, line);
         if (!lensi) {
           this.aloituslentoKesken = false;
+          // Kartalento ei lähtenyt (puuttuva maatieto tai rajaus):
+          // lykätty bittikarttatyö on käynnistettävä tässäkin haarassa.
+          this.jatkaLykattyPiirto();
           // Vanha kalvo tulee oman häivytyksensä kanssa: arkki pois
           // ensin, jottei kalvo aukea peitetylle ruudulle.
           await this.piilotaAloitusverho();
@@ -11115,6 +11491,12 @@ export class UI {
     this.introShown = true;
     playIntroVoice(this);
     /*
+     * Avauslennon esilämmitys alkaa samasta hetkestä kuin kertomus:
+     * pelaaja kuuntelee, peli rakentaa kohdelaudan taustalla
+     * (ks. esilammitaAvaus).
+     */
+    this.esilammitaAvaus();
+    /*
      * PAIKKARIVI LAITTEEN KELLOSTA (omistajan tilaus 25.8.2026).
      * Kirjoitetaan valmiiksi eikä naputeta: se on kohtausmerkintä,
      * ei kerrontaa, ja fitIntro tarvitsee sen mitat heti.
@@ -13876,6 +14258,9 @@ export class UI {
        * jossain aivan muualla kuin lennossa.
        */
       this.aloituslentoKesken = false;
+      // Lennon yli lykätty bittikarttatyö saa alkaa — ellei kohdemaan
+      // lehti juuri peitä lautaa (ks. jatkaLykattyPiirto).
+      this.jatkaLykattyPiirto();
     }
     return true;
   }
@@ -13924,26 +14309,57 @@ export class UI {
     );
     if (this.dead) return;
     /*
-     * KARTTA TARKENTUU ENNEN KUIN KONE LÄHTEE.
+     * ARKIN TAKANA ODOTETAAN VAIN KARKEA KOKO LAUDAN KUVA.
      *
-     * Ajon päätteeksi kartta rasteroidaan uudessa mittakaavassa
-     * (ajaKamera → taydennaTaide), ja se vie pääsäikeestä satoja
-     * millisekunteja kerrallaan. Mitattuna (Chromium, kontti) repliikin
-     * ensimmäinen sana ilmestyi 4,5 sekuntia kalvon jälkeen, kun sen
-     * pitäisi tulla 400 ms:ssä: kirjoituskone naputtaa setTimeoutilla ja
-     * jäi rasteroinnin alle. Kone lensi silloin yksin ja teksti tuli
-     * perässä omaan tahtiinsa.
+     * Pohjataso (rasteroiTaide → rasteroiPohja) on koko laudan
+     * bittikartta, ja se on avauksen ratkaiseva hetki kahdesta syystä.
+     * Se on ensimmäinen kuva, joka näyttää kartalta ilman vektoreita —
+     * ja ennen kaikkea se PÄÄSTÄÄ VEKTORIT POIS (poistaVektorit).
+     * Niin kauan kuin laudan 7000 vektorielementtiä ovat elävässä
+     * puussa, jokainen lähikuvan kehys maksaa Chromiumissa mitatusti
+     * 1,6 sekuntia: kone nytkähtelisi, kirjoituskone naputtaisi sanan
+     * puolentoista sekunnin välein eikä ajastin osuisi mihinkään.
      *
-     * Siksi lento odottaa piirron rauhoittumista. Odotus ei ole tyhjää:
-     * ruudulla kartta tarkentuu venytetystä yleiskuvasta lopulliseen —
-     * juuri se isoisän atlaksen tarkentuminen, jota fokusmoodi muutenkin
-     * esittää. Yläraja on varoventtiili hitaalle laitteelle: kone lähtee
-     * joka tapauksessa, vaikka viimeinen ruutu olisi kesken.
+     * ODOTUS ON LYHYT JA MITATTU KELLOSTA. Vanha versio odotti koko
+     * ruutusarjan valmistumista silmukalla, joka laski ajastimen
+     * laukeamisia — ja koska juuri ne olivat jumissa, sen luvattu
+     * kolmen sekunnin katto venyi kuudeksitoista. Tässä katto luetaan
+     * performance.now():sta, joten se pitää riippumatta siitä, mitä
+     * pääsäie tekee. Kattoon osuessaan lento lähtee joka tapauksessa.
+     *
+     * TARKAT RUUDUT EIVÄT KUULU TÄHÄN (omistajan tilaus 25.8.2026:
+     * *"karkea kuva SAA tarkentua koneen lennon alla; älä odota täyttä
+     * rasterointia verhon takana"*). Ne piirretään perillä — tai
+     * jäävät piirtämättä, jos kohdemaan lehti peittää laudan.
      */
-    for (let i = 0; i < 30 && (this.taidePiirtyy || this.taideOdottaa); i++) {
-      await this.wait(100);
+    const pohjanTakaraja = performance.now() + ALOITUSLENNON_POHJA_ODOTUS_MS;
+    while (!this.dead && !this.taidePohja && this.pohjaTulossa
+      && performance.now() < pohjanTakaraja) {
+      // eslint-disable-next-line no-await-in-loop
+      await this.wait(60);
     }
     if (this.dead) return;
+    /*
+     * KARTTA TARKENTUU KONEEN LENNON ALLA — EI ARKIN TAKANA.
+     *
+     * Tässä oli odotus, joka piti pergamenttiarkkia ruudulla siihen
+     * asti kunnes koko ruutusarja oli rasteroitu (30 x 100 ms).
+     * Ylärajan piti olla kolme sekuntia, mutta se ei pitänyt: silmukan
+     * odotukset ovat ajastimia, ja rasterointi jumittaa pääsäikeen
+     * satojen millisekuntien erissä, joten yksi kierros venyi
+     * mitatusti puoleentoista sekuntiin. Klikkauksesta koneen lähtöön
+     * kului Chromiumissa 24 sekuntia, ja siitä 16 tämän silmukan
+     * takana — pergamentti ruudulla, ei mitään tapahtumassa.
+     *
+     * Omistajan tilaus 25.8.2026: *"kartta tulisi nopeasti feidaten
+     * ilman odottelua ja sen jälkeen tulisi ääni ja lentokone alkaisi
+     * liikkua"* — ja *"karkea kuva saa tarkentua koneen lennon alla"*.
+     * Arkki väistyy siis heti kun kamera on rajauksessa ja kone on
+     * kiitoradalla (ks. piilotaAloitusverho alempana), ja ruutusarja
+     * jatkuu lennon alla. Kartta ei ole silloin tyhjä: laudan vektorit
+     * ovat paikallaan täydessä tarkkuudessaan ja pohjataso niiden
+     * alla — tarkentuu vain se, mikä on jo oikein.
+     */
 
     // --- 2) Reitti ja kone laudan koordinaateissa --------------------
     /*
@@ -14059,8 +14475,6 @@ export class UI {
     overlay.appendChild(nuoli);
     const nuolenAjastin = setTimeout(() => nuoli.classList.add('nakyy'), LENNON_NUOLI_MS);
     nuoli.addEventListener('click', ohitaLento);
-    // Matkustamon äänimaisema seuraa flight-active-lippua, kuten kalvolla.
-    this.syncAmbience();
 
     // --- 4) Lento selaimen omina animaatioina ------------------------
     const RUUTUJA = 120;
@@ -14087,6 +14501,17 @@ export class UI {
      */
     await this.piilotaAloitusverho();
     if (this.dead) return;
+    /*
+     * KARTTA ENSIN, SITTEN ÄÄNI, SITTEN KONE (omistajan tilaus
+     * 25.8.2026: *"kartta tulisi nopeasti feidaten ilman odottelua ja
+     * sen jälkeen tulisi ääni ja lentokone alkaisi liikkua"*).
+     *
+     * Matkustamon äänimaisema seuraa flight-active-lippua kuten
+     * kalvollakin, mutta se käynnistyy vasta tässä eikä enää arkin
+     * takana: moottori nousee kuuluviin samalla kun kartta on juuri
+     * paljastunut, ja kone lähtee liikkeelle heti perään.
+     */
+    this.syncAmbience();
     await new Promise((valmis) => requestAnimationFrame(() => requestAnimationFrame(valmis)));
     const koneAnim = kone.animate(koneRuudut, {
       duration: lennonKesto, delay: 180, easing: 'linear', fill: 'forwards',

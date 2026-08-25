@@ -9,9 +9,9 @@
  * MIKSI SAVUKE EIKÄ YKSIKKÖTESTI: kohteiden data on tarkistettavissa
  * ilman selainta (tests/fokusvirta.test.mjs vahtii rakenteen), mutta
  * koko paketin idea on geometriaa ja osumia — merkin on oltava
- * NAPAUTETTAVISSA lehden päällä, oikean kokoinen ruudulla joka
- * zoomilla, ja pop-upin on pysyttävä ruudun sisällä alanappeja
- * peittämättä. Sitä ei voi mitata ilman oikeaa asettelua.
+ * NAPAUTETTAVISSA lehden päällä, oikean kokoinen suhteessa karttaan, ja
+ * pop-upin on pysyttävä ruudun sisällä alanappeja peittämättä. Sitä ei
+ * voi mitata ilman oikeaa asettelua.
  *
  * VARTIOT:
  *   1. LEHTI TUO MERKIT. Kun Kreikan fokuslehti on kartalla, jokainen
@@ -19,7 +19,9 @@
  *      MOLEMMISSA kohdissa, koska <use>-kopiosta ei voi napauttaa
  *      mitään.
  *   2. EI SUODATTIMIA (tests/rules.test.mjs:n sääntö kartan kerroksille).
- *   3. OSUMA-ALUE ON ≥44 px JA PYSYY SELLAISENA ZOOMATESSA.
+ *   3. OSUMA-ALUE ON LEHDEN PERUSTASOLLA ≥44 px, JA MERKKI ELÄÄ KARTAN
+ *      MUKANA — lähennettäessä isompi, loitonnettaessa pienempi (ks.
+ *      osio 2: omistajan LOPULLINEN linjaus 26.8.2026).
  *   4. NAPAUTUS AVAA POP-UPIN: nimi, teksti ja lähderivi, ja merkki
  *      korostuu (KOHDEKOROSTUS).
  *   5. POP-UP PYSYY RUUDULLA eikä peitä vuorolaatikon nappeja.
@@ -217,11 +219,22 @@ const vaalea = (vari) => {
   return (osat[0] * 0.299 + osat[1] * 0.587 + osat[2] * 0.114) > 190;
 };
 
-/** Kamera lehden päälle ja odotus, kunnes ajo on ohi (ZOOM_MS 3,4 s). */
+/**
+ * Kamera lehden PERUSTASOLLE ja odotus, kunnes ajo on ohi (ZOOM_MS 3,4 s).
+ *
+ * AJO ON IKKUNAAN (fokusPohjaRajaus) EIKÄ KUVAAN (fokusPohjaBbox), koska
+ * juuri siihen pelin oma saapumisajo päätyy (js/fokuskartta.js
+ * maanNakyma) ja juuri se on merkkien peruskoon ankkuri (js/ui.js
+ * fokusMerkkiSkaala). Kuva on ikkunaa 30 % laajempi, ja siihen ajaminen
+ * jäisi kameran oman alarajan (js/kartta.js fokusZoomMinimi) alapuolelle:
+ * näkymä nousisi silti ikkunaan, mutta zoomitilaan jäisi rajan alittava
+ * kerroin, jolloin lähennysnappi kieltäytyisi liikkumasta ja koe 2
+ * mittaisi kahdesti saman näkymän.
+ */
 async function ajaLehdelle() {
   await sivu.evaluate(() => {
     const ui = window.matkakirja.ui;
-    ui.kartta.ajaKamera({ bbox: ui.fokusPohjaBbox, marginaali: 0 });
+    ui.kartta.ajaKamera({ bbox: ui.fokusPohjaRajaus ?? ui.fokusPohjaBbox, marginaali: 0 });
   });
   await sivu.waitForTimeout(4200);
 }
@@ -272,22 +285,47 @@ vaadi('kiertävällä laudalla merkit ovat molemmissa kohdissa',
 vaadi('kerros on juuriryhmän ulkopuolella (<use>-kopio ei syö napautusta)',
   m.juuressa === false);
 vaadi('ei suodattimia kartan kerroksessa', m.suodattimia === 0);
-vaadi('osuma-alue on vähintään 44 px',
+vaadi('osuma-alue on lehden perustasolla vähintään 44 px',
   m.osumat.length > 0 && m.osumat.every((o) => o.w >= 44 && o.h >= 44),
   JSON.stringify(m.osumat.slice(0, 3)));
 
-/* --- 2: koko pysyy zoomatessa --- */
+/* --- 2: merkki elää kartan mukana --- */
 
+/*
+ * SOPIMUS VAIHTUI: MERKKI EI OLE ENÄÄ KIINTEÄN KOKOINEN RUUDULLA.
+ *
+ * Omistajan LOPULLINEN linjaus 26.8.2026 (Raamattu, kumoaa 25.8. kirjatun
+ * kiinteän ruutukoon): *"pisteiden pitäisi suurentua samalla kun karttaa
+ * suurentaa ja pienentyä karttaa zoomatessa ulospäin. Eli niiden koko
+ * pitäisi olla koko ajan sama suhteessa kartan muihin elementteihin."*
+ * Vanha vartio mittasi juuri päinvastaista.
+ *
+ * MITTA ON SUHDE EIKÄ PIKSELIMÄÄRÄ: merkin ruutukoon on kasvettava
+ * samassa suhteessa kuin kartan mittakaavan (ui.nakyvaAlue().skaala).
+ * Suhteessa on 4 %:n vara — merkin laatikko luetaan kokonaislukuina.
+ *
+ * Osuma-alue saa kasvaa ja kutistua mukana: merkit syttyvät muutenkin
+ * vasta lähikuvassa (js/fokuskohteet.js LEHDEN_VAHIN_OSUUS), eli siinä
+ * zoomissa, jossa sormi niitä oikeasti etsii.
+ */
 const ennenZoomia = m.osumat[0];
+const skaalaEnnen = await sivu.evaluate(() => window.matkakirja.ui.nakyvaAlue().skaala);
 await sivu.evaluate(() => window.matkakirja.ui.kartta.zoomaaPainikkeella(1));
 // Zoomiajo kestää ZOOM_MS (3,4 s): mitta otetaan vasta kun kartta on
 // asettunut, tai se mittaisi liikkeen keskikohtaa.
 await sivu.waitForTimeout(4200);
 m = await merkit();
-const zoomiMuutti = await sivu.evaluate(() => window.matkakirja.ui.zoomSkaala);
-vaadi('merkki on yhtä suuri zoomin jälkeen',
-  m.osumat[0] && Math.abs(m.osumat[0].w - ennenZoomia.w) <= 2,
-  `${JSON.stringify(ennenZoomia)} → ${JSON.stringify(m.osumat[0])} (skaala ${zoomiMuutti})`);
+const skaalaJalkeen = await sivu.evaluate(() => window.matkakirja.ui.nakyvaAlue().skaala);
+const kartanKasvu = skaalaJalkeen / skaalaEnnen;
+const merkinKasvu = m.osumat[0] ? m.osumat[0].w / ennenZoomia.w : 0;
+console.log(`      (kartta ${skaalaEnnen.toFixed(3)} → ${skaalaJalkeen.toFixed(3)} `
+  + `= ${kartanKasvu.toFixed(3)}×, merkki ${ennenZoomia.w} → ${m.osumat[0]?.w} px `
+  + `= ${merkinKasvu.toFixed(3)}×)`);
+vaadi('lähennys oikeasti muutti kartan mittakaavaa', kartanKasvu > 1.05,
+  `${skaalaEnnen} → ${skaalaJalkeen}`);
+vaadi('merkki suurenee kartan mukana (sama koko suhteessa karttaan)',
+  Math.abs(merkinKasvu - kartanKasvu) <= kartanKasvu * 0.04,
+  `kartta ${kartanKasvu.toFixed(3)}× vs. merkki ${merkinKasvu.toFixed(3)}×`);
 
 /* --- 3: napautus avaa tietoruudun --- */
 

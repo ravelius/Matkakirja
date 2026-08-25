@@ -30,10 +30,12 @@
  *    siis pelkkiä täyttöjä ja viivoja — paperinvaalea aluslaatta on oma
  *    ympyränsä eikä varjo.
  *
- * 3. KIINTEÄ KOKO RUUDULLA. Ankkuriryhmä on laudan koordinaateissa ja
- *    skaalataan zoomin käänteisluvulla, jolloin merkin lapset ovat
- *    ruudun pikseleitä. Osuma-alueen r = 22 on 44 px läpimitta joka
- *    zoomilla — sama sormisääntö kuin muualla.
+ * 3. KARTAN MITTAKAAVA, EI RUUDUN (omistajan LOPULLINEN linjaus
+ *    26.8.2026, Raamattu). Ankkuriryhmä on laudan koordinaateissa ja
+ *    skaalataan VAKIOLLA (js/ui.js fokusMerkkiSkaala), jolloin merkin
+ *    lapset ovat ruudun pikseleitä LEHDEN PERUSTASOLLA ja elävät siitä
+ *    kartan mukana. Osuma-alueen r = 22 on 44 px läpimitta perustasolla
+ *    — sama sormisääntö kuin muualla.
  *
  * ── KERROS EI TAPPELE Z-JÄRJESTYKSESTÄ ─────────────────────────────
  *
@@ -60,7 +62,7 @@ const NOSTOSYM_OSUMA_R = 22;
  * SYMBOLIN PIIRTÄJÄT.
  *
  * Kumpikin piirtää ruudun pikseleissä ORIGON YMPÄRILLE — ankkuriryhmä
- * hoitaa paikan ja zoomin käänteisskaalauksen. Mitat on valittu niin,
+ * hoitaa paikan ja vakioskaalauksen. Mitat on valittu niin,
  * että merkki on suunnilleen kohdemerkin kokoinen (halkaisija ~21 px):
  * pienempi katoaisi karttaan, isompi kilpailisi kaupungin laatan kanssa.
  */
@@ -250,16 +252,23 @@ export function paivitaNostosymbolit(ui, tila = {}) {
  * setAttribute per ryhmä, ei yhtäkään uutta solmua.
  */
 export function asemoiNostosymbolit(ui, suhde = 1) {
-  const skaala = ui?.nakyvaAlue?.()?.skaala;
+  /*
+   * MITTAKAAVA ON VAKIO, EI ZOOMIN KÄÄNTEISLUKU (omistajan LOPULLINEN
+   * linjaus 26.8.2026, Raamattu): täkysymbolit elävät kartan mukana
+   * kuten muutkin lehden merkit. `suhde` (nipistyseleen kerroin) on
+   * merkitsevä vain lehdettömällä varapolulla — ks. js/ui.js
+   * fokusMerkkiSkaala.
+   */
+  const s = ui?.fokusMerkkiSkaala?.(suhde);
   // Ilman mitattavaa näkymää muunnos jätetään entiselleen: väärä
   // mittakaava olisi pahempi kuin yhden kehyksen viive.
-  if (!skaala || !Number.isFinite(skaala) || skaala <= 0) return;
-  const zoom = (1 / (skaala * (suhde > 0 ? suhde : 1))).toFixed(4);
+  if (!(s > 0)) return;
+  const zoom = s.toFixed(4);
   for (const ryhma of ui.nostosymRyhmat ?? []) {
     ryhma.g.setAttribute('transform', `translate(${ryhma.x} ${ryhma.y}) scale(${zoom})`);
   }
-  // Nipistyksen vastaskaala (js/kartta.js vastaskaalaaMerkit): kiinteä
-  // ruutukoko myös eleen aikana, ei vain sen jälkeen.
+  // Rekisteröinti nipistykseen jää (js/kartta.js vastaskaalaaMerkit):
+  // varapolku on yhä ruutumitassa ja tarvitsee vastaskaalan.
   (ui.nipistysVastaskaalaajat ??= new Set())
     .add(ui.nostosymVastaskaala ??= (s) => asemoiNostosymbolit(ui, s));
 }

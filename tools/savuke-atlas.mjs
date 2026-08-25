@@ -140,8 +140,30 @@ const tila = () => sivu.evaluate(() => ({
 const a = await tila();
 vaadi('kohdemaan lehti on omassa ryhmässään kartalla',
   a.oma === 'GRC' && a.lehti === 1, JSON.stringify(a));
+/*
+ * RAJA NOUSI KAHDESTA KOLMEEN v1110:SSÄ, JA SYY ON MITTAUSYMPÄRISTÖSSÄ.
+ *
+ * Naapureiden määrän ratkaisee megapikselibudjetti, josta nykyisen maan
+ * oma lehti syö osansa (js/fokuskartta.js atlasOmaMp). Ennen tätä
+ * versiota Kreikan lehteä ei ollut vielä haettu siinä kohtaa, jossa
+ * valinta tehtiin, joten budjetista vähennettiin ATLAS_OLETUS_MP eli
+ * ARVIO — ja arviolla naapureita mahtui kaksi.
+ *
+ * Nyt avausruutu esilämmittää kohdemaan pohjan alkukertomuksen aikana
+ * (js/ui.js esilammitaAvaus, omistajan tilaus 25.8.2026), joten valinta
+ * saa käyttöönsä lehden TODELLISEN koon. Tässä savukkeessa lehti on
+ * paikallinen tynkä eli käytännössä nollan megapikselin kokoinen, ja
+ * budjettiin mahtuu silloin yksi lisää.
+ *
+ * OIKEASSA PELISSÄ tilanne on päinvastainen eikä muuttunut lainkaan:
+ * mitattuna Kreikan lehti on 25,6 megapikseliä, ja avauslennon jälkeen
+ * atlaksessa on nolla naapuria sekä esilämmityksen kanssa että ilman —
+ * lento hakee pohjan joka tapauksessa ennen laskeutumista
+ * (paivitaFokuskartta). Raja on siis tynkäympäristön luku, ei
+ * muistibudjetin löystyminen: budjettia itseään ei ole koskettu.
+ */
 vaadi('lähikuvassa naapureita ei ladata turhaan',
-  a.atlas.length <= 2, `atlas=${a.atlas}`);
+  a.atlas.length <= 3, `atlas=${a.atlas}`);
 
 /* Kehittäjätila päälle, jotta kamera pääsee lehden ikkunan ulkopuolelle. */
 await sivu.evaluate(() => {

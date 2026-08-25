@@ -1229,8 +1229,11 @@ export class Kartta {
      * sx/sy/yleisSkaala jäävät laskennasta käyttämättä samasta syystä.
      */
     void sx; void sy; void yleisSkaala;
-    stopIntroVoice(this);
-    stopDiaryVoice(this);
+    // ui, EI kartta: funktiot lukevat ui.introVoice/diaryVoice —
+    // kartta-oliolla kutsuttuna ne eivät tehneet mitään, ja kertoja
+    // jäi soimaan matkan alettua (mitattu 25.8.2026).
+    stopIntroVoice(this.ui);
+    stopDiaryVoice(this.ui);
     this.ui.svg.style.transition = '';
     this.tyonnaAvausteksti(0);
     this.asetaPan(this.ui.panX, this.ui.panY);
@@ -1653,8 +1656,9 @@ export class Kartta {
    * Ilman taukoa moottori hukkui puheen ja meren alle.
    */
   zoomAanellaJaViiveella(liuku, kesto = ZOOM_MS) {
-    stopIntroVoice(this);
-    stopDiaryVoice(this);
+    // ui, EI kartta (sama korjaus kuin yllä).
+    stopIntroVoice(this.ui);
+    stopDiaryVoice(this.ui);
     vaimennaTausta();
     clearTimeout(this.ui.zoomAlkuAjastin);
     this.ui.zoomAlkuAjastin = setTimeout(() => {
@@ -2560,15 +2564,20 @@ export class Kartta {
      * taustapaluussa: ei erovertailua, turha ajo on halpa).
      */
     /*
-     * KIINTEIDEN MERKKIEN VASTASKAALA NIPISTYKSEN AIKANA (omistajan
-     * iPad-havainto 25.8.2026: "Kartan kohdepisteet eivät ole kiinteän
-     * kokoisia vaan muuttuvat zoomatessa"). Ele skaalaa koko SVG:n
-     * CSS:llä, joten ruutukokoon käänteisskaalatut merkkikerrokset
-     * paisuivat eleen ajaksi ja napsahtivat kokoonsa vasta lopussa.
-     * Merkkikerrokset (js/fokuskohteet.js, js/fokuspiste.js,
-     * js/fokusnosto-symbolit.js) rekisteröivät tänne päivittäjänsä,
-     * jota kutsutaan eleen kerroin mukanaan — työ on muutama
-     * setAttribute per kehys.
+     * RUUTUMITTAISTEN MERKKIEN VASTASKAALA NIPISTYKSEN AIKANA. Ele
+     * skaalaa koko SVG:n CSS:llä, joten ruutukokoon käänteisskaalatut
+     * merkkikerrokset paisuisivat eleen ajaksi ja napsahtaisivat
+     * kokoonsa vasta lopussa. Merkkikerrokset (js/fokuskohteet.js,
+     * js/fokuspiste.js, js/fokusnosto-symbolit.js) rekisteröivät tänne
+     * päivittäjänsä, jota kutsutaan eleen kerroin mukanaan — työ on
+     * muutama setAttribute per kehys.
+     *
+     * MEKANISMI JÄI, MERKITYS KAPENI (omistajan LOPULLINEN linjaus
+     * 26.8.2026): fokuslehden päällä merkit ovat nyt KARTAN
+     * MITTAKAAVASSA (js/ui.js fokusMerkkiSkaala), ja niiden pitääkin
+     * suurentua eleen mukana — silloin rekisteröity funktio kirjoittaa
+     * saman vakiomuunnoksen ja `suhde` ohitetaan. Vastaskaala on
+     * voimassa vain lehdettömällä varapolulla, joka on yhä ruutumitassa.
      */
     const vastaskaalaaMerkit = (suhde) => {
       for (const f of this.ui.nipistysVastaskaalaajat ?? []) {
