@@ -12,7 +12,7 @@
 import { kertojaTila } from './aani-ehdokkaat.js';
 import { startQuizMusic, stopQuizMusic } from './ambience-stream.js';
 import {
-  DUEL_BYPASS_SHOES, EXPLORE_REWARD, FIFTY_FIFTY_PRICE, HARD_BONUS,
+  EXPLORE_REWARD, FIFTY_FIFTY_PRICE, HARD_BONUS,
   HINT_PRICE, QUIZ_SECONDS,
 } from './game.js';
 import { lueKertojana, playDiaryVoice } from './luenta.js';
@@ -348,12 +348,16 @@ export function renderQuiz(ui) {
           html('span', 'muted', 'Vuoro vaihtuu — seuraavalla vuorolla saat uuden kysymyksen.'),
         );
       }
-      // Hahmon repliikki päättää kohtaamisen: löytö, tyhjä kätkö tai
-      // lohdutus väärästä vastauksesta.
+      /*
+       * Hahmon repliikki päättää kohtaamisen: löytö, tyhjin käsin jäänti
+       * tai lohdutus väärästä vastauksesta. Laatan alta löytyy nykyään
+       * aina jotain, joten tyhjä repliikki jää tilanteeseen, jossa oikea
+       * vastaus ei käännä laattaa lainkaan (esimerkiksi tietoportti).
+       */
       if (kohtaaminen) {
         const repliikki = !quiz.right
           ? kohtaaminen.vaarin
-          : (quiz.explore || (quiz.found && quiz.found !== 'empty'))
+          : (quiz.explore || quiz.found)
             ? kohtaaminen.loyto
             : kohtaaminen.tyhja;
         if (repliikki) body.appendChild(html('span', 'kohtaaminen-repliikki', repliikki));
@@ -388,7 +392,7 @@ export function renderQuiz(ui) {
   if (!ui.quizDialog.open) ui.quizDialog.showModal();
 }
 
-/** Rosvon kaksintaistelu: 8 vaihtoehtoa, helpotukset ja hevosenkenkäohitus. */
+/** Rosvon kaksintaistelu: 8 vaihtoehtoa ja helpotukset. */
 export function renderDuel(ui) {
   const { game } = ui;
   const duel = game.duel;
@@ -424,10 +428,12 @@ export function renderDuel(ui) {
   if (duel.reliefs >= 2) ui.quizFifty.textContent = 'Helpotukset käytetty';
   else ui.ikonoi(ui.quizFifty, 'kallo', `Helpotus (rosvo vie ${toll} p)`);
 
-  // Kolmella hevosenkengällä pääsee ohi.
-  ui.quizHint.hidden = answered || p.isBot || p.horseshoes < DUEL_BYPASS_SHOES;
-  ui.quizHint.disabled = false;
-  ui.ikonoi(ui.quizHint, 'kenka', `Ohita rosvo (${DUEL_BYPASS_SHOES} kenkää)`);
+  /*
+   * Rosvon ohi ei enää pääse maksamatta: hevosenkenkälaatta poistui,
+   * kun laatan alta alkoi löytyä aina aarre. Vihjenappi on siksi
+   * kaksintaistelussa aina piilossa.
+   */
+  ui.quizHint.hidden = true;
 
   ui.quizHintText.hidden = duel.reliefs === 0;
   if (duel.reliefs > 0) {

@@ -4494,6 +4494,46 @@ body.fokuspohja .country-korostus { display: none; }
    ------------------------------------------------------------------------- */
 .fokus-lehden-alla { display: none; }
 
+/* ---------------------------------------------------------------------------
+   VANHA MAAILMANKARTTA POIS ATLAKSEN ALTA (omistajan linjaus 25.8.2026,
+   pelitestipalaute v1106: *"kartan scrollaus on aika hidasta ja
+   tökkivää"* ja *"ota vanha maailmankartta suoraan kokonaan pois
+   näkyvistä … tässä näkymässä sitä ei kannata piirtää enää ollenkaan"*).
+
+   Fokusnäkymässä kartta on jatkuva atlas: opaakit lehdet peittävät
+   alueensa kokonaan (js/fokuskartta.js). Laudan oma bittikartta jäi
+   silti niiden alle — karkea pohjataso (.taide-pohja) ja tarkkojen
+   ruutujen sarja (.staattinen) — ja panoroinnissa selain maalasi
+   jokaisen paljastuvan kaistaleen niistäkin, vaikka pikselit eivät näy.
+   Mitattu Chromiumissa: pudonneita kehyksiä 8,9 % → 6,2 % ja pahin
+   kehys 150 ms → 67 ms.
+
+   `display: none` EIKÄ opacity/visibility: läpinäkyväkin kerros on yhä
+   osa komposointia, ja iOS Safari maalaa sen kuten näkyvänkin. Sama
+   sääntö kuin .fokus-piilossa ja .fokus-lehden-alla yllä.
+
+   PERGAMENTTI EI OLE TÄSSÄ MUKANA. Paperin pohja (.paper-pohja) on
+   laudan juuriryhmän ensimmäinen lapsi eikä kuulu taideryhmään
+   (js/ui.js drawPaperPohja), joten lehtien ulkopuolelle jää paperi eikä
+   paneelin tumma tausta. Luokan kytkee js/fokuskartta.js
+   paivitaFokusAtlas täsmälleen atlaksen ehdoilla, joten yleiskuva,
+   aloituslento, aloitusruutu ja katselutila saavat vanhan laudan
+   ennallaan.
+   --------------------------------------------------------------------------- */
+body.fokus-atlas-nakyma .staattinen,
+body.fokus-atlas-nakyma .taide-pohja { display: none; }
+
+/*
+ * Myös vanhan laudan paperirae pois atlasnäkymästä (Fable 25.8.2026,
+ * omistajan linjaus "vanha maailmankartta kokonaan pois näkyvistä"):
+ * rae on laudan levyinen multiply-suorakaide, joka piirtyisi lehtien
+ * päälle joka kehyksessä — mittauksissa toiseksi suurin pudonneiden
+ * kehysten lähde. Lehdissä on oma paperitekstuurinsa maalattuna, joten
+ * mitään ei jää puuttumaan. Sama ennakkotapaus kuin lennolla
+ * (body.flight-active .grain).
+ */
+body.fokus-atlas-nakyma .grain { display: none; }
+
 /*
  * LAATTA ON FOKUSNÄKYMÄN TUTKI-NAPPI (omistajan pelitestitilaus
  * 24.8.2026): alarivillä on vain Liiku, ja tutkiminen alkaa nykyisen
@@ -5911,15 +5951,6 @@ body.flight-active .fact-card {
 
 .icon-star { fill: #e8b23c; stroke: #6d4d12; stroke-width: 1.6; stroke-linejoin: round; }
 
-.icon-shoe {
-  fill: none;
-  stroke: #9aa3ad;
-  stroke-width: 5;
-  stroke-linecap: round;
-  paint-order: stroke;
-}
-.icon-shoe-hole { fill: #4c5560; }
-
 .icon-hat { fill: #34291d; }
 .icon-mask { fill: #6b5a45; }
 .icon-eye { fill: #f7ecd2; }
@@ -5933,14 +5964,11 @@ body.flight-active .fact-card {
 .icon-linssi-varsi { fill: none; stroke: #3b2a13; stroke-width: 3.4; stroke-linecap: round; }
 .icon-linssi-kajo { fill: none; stroke: rgba(255, 255, 255, 0.8); stroke-width: 1.4; stroke-linecap: round; }
 
-.icon-gem { stroke: #3b2a13; stroke-width: 1.5; stroke-linejoin: round; }
-.icon-gem-facets { fill: none; stroke: rgba(255, 255, 255, 0.55); stroke-width: 1.1; }
-.gem-ruby { fill: #d2402f; }
-.gem-emerald { fill: #2f9e63; }
-.gem-topaz { fill: #e0a020; }
-body[data-pack='middleeast'] .gem-topaz,
-body[data-pack='istanbul'] .gem-topaz { fill: #3aaea6; }
-body[data-pack='suomi'] .gem-topaz { fill: #4a6fb3; }
+/* Aarrekuvakkeiden varasolu: kolikkopino ja kätköarkku. Aarteella on
+   useimmiten oma kuvansa, joten nämä näkyvät vain maissa, joiden omaa
+   aarreparia ei ole vielä kirjoitettu (js/packs/paikallisaarteet.js). */
+.icon-aarre { fill: #c89a3c; stroke: #3b2a13; stroke-width: 1.5; stroke-linejoin: round; }
+.icon-aarre-viivat { fill: none; stroke: #3b2a13; stroke-width: 1.4; stroke-linecap: round; }
 
 .token-icon { display: inline-block; vertical-align: -0.22em; }
 /* Tarinallinen aarrekuva pikkuikonina: pyöreä rajaus ja kevyt
@@ -7693,79 +7721,27 @@ body.katselu #newgame-btn { display: none; }
 }
 
 /*
- * LUENNAN KYTKIN PUHEKUPLAN ALLA (omistajan tilaus 25.8.2026;
- * Raamattu, Fokusmoodi/LUENTA: *"Luenta on striimiääni, jonka kytkin on
- * AINA puhekuplan alla painettavissa päälle ja pois"*).
- *
- * Rivi on kortin viimeinen lapsi, joten se asettuu tekstin — ja
- * mahdollisen kuvanapin — alle. Ulkoasu on kortin muun kalustuksen
- * hiljaista sukua: sama ruskea muste kuin kaiuttimella ja kuvanapilla,
- * ei taustaa eikä reunusta, jotta merkintä pysyy pääosassa.
- *
- * Mitat ovat em-yksiköissä eivätkä pikseleitä: kytkin kutistuu ja
- * kasvaa oman kirjasinkokonsa mukana, ja puhelimen pienempi kortti saa
- * pienemmän kytkimen ilman omaa media-sääntöä.
- *
- * Kutistuneessa yhden rivin lapussa kytkin katoaa muiden mukana
- * (.fact-card.pieni > *:not(.fact-place)) — lapulla ei ole mitään
- * luettavaa näkyvissä.
+ * KAIUTIN ON LUENNAN KYTKIN (omistajan tilaus 25.8.2026): erillinen
+ * LUENTA-liukukytkin poistui, ja pois kytketty tila piirretaan
+ * kaiuttimen paalle vinoviivana. Viiva on ::after-palkki currentColorilla
+ * — ei suodattimia, ei kuvatiedostoa — ja kulkee kuvakkeen ylitse
+ * kulmasta kulmaan, jotta tila nakyy yhdella silmayksella.
  */
-.fact-luenta {
-  align-self: flex-start;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45em;
-  margin-top: 0.4rem;
-  padding: 0.1rem 0;
-  min-height: 0;
-  background: none;
-  border: 0;
-  box-shadow: none;
-  color: #9a7c4c;
-  font-family: var(--font-type);
-  font-size: 0.62rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  line-height: 1.4;
-  cursor: pointer;
-}
+.fact-kuuntele { overflow: visible; }
 
-.fact-luenta:hover:not(:disabled) { background: none; color: #9c6f1e; }
+.fact-kuuntele.mykistetty { color: rgba(122, 85, 20, 0.62); }
 
-/* Ura ja nuppi piirretään currentColorilla: yksi värisäätö riittää
- * molempiin tiloihin eikä sävyjä pääse ajautumaan erilleen. */
-.fact-luenta-ura {
-  position: relative;
-  flex: none;
-  width: 1.7em;
-  height: 0.9em;
-  border: 1px solid currentColor;
-  border-radius: 999px;
-  background: rgba(122, 85, 20, 0.1);
-  transition: background 160ms ease;
-}
-
-.fact-luenta-nuppi {
+.fact-kuuntele.mykistetty::after {
+  content: '';
   position: absolute;
+  left: 50%;
   top: 50%;
-  left: 0.12em;
-  width: 0.56em;
-  height: 0.56em;
-  border-radius: 50%;
+  width: 1.5em;
+  height: 2px;
   background: currentColor;
-  transform: translateY(-50%);
-  transition: transform 160ms ease;
-}
-
-/* Päällä: nuppi oikeaan laitaan, muste tummenee. */
-.fact-luenta.paalla { color: #7a5514; }
-.fact-luenta.paalla .fact-luenta-ura { background: rgba(122, 85, 20, 0.34); }
-.fact-luenta.paalla .fact-luenta-nuppi { transform: translate(0.76em, -50%); }
-
-/* Liikeherkälle sama tila ilman liukua (vrt. päiväkirjan kutistuminen). */
-@media (prefers-reduced-motion: reduce) {
-  .fact-luenta-ura,
-  .fact-luenta-nuppi { transition: none; }
+  border-radius: 1px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  pointer-events: none;
 }
 
 /* Pulman piirroksen selite: hiljainen rivi luonnoksen alla. */
@@ -19011,25 +18987,27 @@ body.fokuspohja .maa-pilleri { display: none; }
 }
 
 /*
- * PLUS OIKEAAN YLÄKULMAAN — taulun ainoa nappi (omistaja 26.8.2026).
- *
- * Se on absoluuttisesti kulmassa eikä otsikkorivillä, koska otsikkoa ei
- * enää ole; taulun sisällön oikea pehmuste (2.6rem) pitää lukurivit
- * poissa sen alta. Nappi on itsekin läpikuultava — kartta kuultaa myös
- * sen läpi — ja SYKKII hitaasti, jotta se erottuu kutsuna eikä jää
- * koristeeksi.
+ * PALJAS PAKSU PLUS LUKURIVIEN VIERESSÄ (omistaja 25.8.2026: "enemmän
+ * vasemmalla lähempänä tekstiä... pelkästään paksummaksi plus merkiksi
+ * ilman pyöreää ympyrää"). Ympyrälaatta ja reunaviiva ovat poissa —
+ * merkki piirretään kahdella currentColor-palkilla, jotta se on aidosti
+ * paksu eikä kirjasimen faux-boldin varassa. Nappi SYKKII hitaasti,
+ * jotta se erottuu kutsuna eikä jää koristeeksi.
  *
  * SYKE ON TRANSFORM JA OPACITY. Sama iOS-sääntö kuin kaikella muullakin
  * (tests/rules.test.mjs): ei suodattimia, ei box-shadow-animaatiota.
  * prefers-reduced-motion sammuttaa sen ja jättää napin täyteen
  * peittävyyteen, jottei se jää pysyvästi haaleaksi.
  *
- * Kosketusala on 44 px, vaikka piirretty ympyrä on pienempi.
+ * Kosketusala on 44 px, vaikka piirretty merkki on pienempi. Vasen
+ * mitta on rivien tyypillisen leveyden mukaan; kapealla ruudulla nappi
+ * pysyy taulun sisällä calc-varalla.
  */
 .fokus-maataulu-lehti {
   position: absolute;
   top: 0.35rem;
-  right: 0.35rem;
+  left: min(19.5rem, calc(100% - 48px));
+  right: auto;
   width: 2.1rem;
   height: 2.1rem;
   min-width: 44px;
@@ -19037,15 +19015,27 @@ body.fokuspohja .maa-pilleri { display: none; }
   display: grid;
   place-items: center;
   padding: 0;
-  border: 1px solid rgba(74, 52, 33, 0.45);
-  border-radius: 50%;
-  background: rgba(252, 244, 224, 0.42);
+  border: 0;
+  border-radius: 0;
+  background: none;
   color: rgba(58, 40, 25, 0.95);
-  font-size: 1.3rem;
-  line-height: 1;
+  /* Merkin piirtävät palkit; tekstisolmun '+' ei saa näkyä niiden alla. */
+  font-size: 0;
+  line-height: 0;
   cursor: pointer;
   animation: fokus-plus-syke 3.2s ease-in-out infinite;
 }
+
+.fokus-maataulu-lehti::before,
+.fokus-maataulu-lehti::after {
+  content: '';
+  grid-area: 1 / 1;
+  background: currentColor;
+  border-radius: 2px;
+}
+
+.fokus-maataulu-lehti::before { width: 1.15rem; height: 3px; }
+.fokus-maataulu-lehti::after { width: 3px; height: 1.15rem; }
 
 @keyframes fokus-plus-syke {
   0%, 100% { transform: scale(1); opacity: 0.72; }
@@ -19054,7 +19044,7 @@ body.fokuspohja .maa-pilleri { display: none; }
 
 .fokus-maataulu-lehti:hover,
 .fokus-maataulu-lehti:focus-visible {
-  background: rgba(255, 249, 232, 0.85);
+  color: #16130f;
   animation-play-state: paused;
   opacity: 1;
 }

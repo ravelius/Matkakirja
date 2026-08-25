@@ -68,10 +68,10 @@ const pehmene = (t) => Math.max(0, Math.min(1, t)) ** 1.8;
  * avain tarkoittaa PÄÄLLÄ, ja vain '0' tarkoittaa pois. Kelvoton tai
  * vanha arvo palautuu siis oletukseen eikä jätä peliä puolitilaan.
  *
- * Kytkin koskee vain AUTOMAATTISTA luentaa (merkintä ilmestyy → kertoja
- * aloittaa). Kortin oma kaiutinnappi on pelaajan nimenomainen ele, ja se
- * toimii ennallaan: pois kytketty automatiikka ei tarkoita, ettei
- * merkintää saisi pyynnöstä kuunnella.
+ * Kytkintä käännetään kortin KAIUTTIMESTA (omistaja 25.8.2026:
+ * erillinen liukukytkin poistui; js/ui.js paivitaKaiutinTila). Pois
+ * kytkettynä kuvakkeen päällä on vinoviiva, päälle kääntäminen
+ * aloittaa ruudulla olevan merkinnän alusta.
  */
 const LUENTA_KYTKIN_AVAIN = 'matkakirja-luenta';
 

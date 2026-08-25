@@ -626,34 +626,21 @@ export const EUROPE = {
   minCityDistance: 60,
 
   tokens: {
-    // Meripihka on Itämeren oma jalokivi: fossiloitunutta puuhartsia.
     types: themedTokenTypes({
       star: {
         name: 'Meripihkahuoneen aarre',
         kuva: 'assets/aarteet/aarre-europe-star.jpg',
       },
-      ruby: {
+      mannerAarre: {
         name: 'Kruununjalokivi', color: '#b0304a',
-        kuva: 'assets/aarteet/aarre-europe-ruby.jpg',
-      },
-      emerald: {
-        name: 'Ritarin hopeamiekka', color: '#aeb6c2',
-        kuva: 'assets/aarteet/aarre-europe-emerald.jpg',
-      },
-      topaz: {
-        name: 'Meripihka', color: '#d98f2b',
-        kuva: 'assets/aarteet/aarre-europe-topaz.jpg',
+        kuva: 'assets/aarteet/aarre-europe-manner.jpg',
       },
     }),
-    // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (45).
-    // Tampere toi 42:nnen ja sen laatta lisättiin yleisimpään
-    // aarteeseen (meripihka, topaz 10 -> 11); Firenze toi 43:nnen ja
-    // sen laatta otettiin tyhjistä (12 -> 13), jottei aarteiden määrä
-    // muutu kaupungin lisäämisen sivutuotteena. Sevilla ja Bergen
-    // (17.8.2026) toivat 44:nnen ja 45:nnen: yksi topaasiin (11 -> 12)
-    // ja yksi tyhjiin (13 -> 14) samalla jaolla kuin omissa
-    // haaroissaan.
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 6, emerald: 7, topaz: 12, empty: 14 },
+    // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (45). Uusi
+    // kaupunki lisätään paikallisaarteisiin samassa suhteessa kuin
+    // muutkin (noin kolmasosa isoja) — pääaarre ja mantereen aarre ovat
+    // aina yksi kumpikin, eikä ryöstäjien määrä muutu kaupunkien mukana.
+    counts: { star: 1, mannerAarre: 1, isoAarre: 14, pieniAarre: 29 },
   },
 
   questions: EUROPE_QUESTIONS,
@@ -702,7 +689,7 @@ export const EUROPE = {
     intro: 'Peli alkaa! Etsikää kadonneen Meripihkahuoneen aarre ja palatkaa kotisatamaan: Lontooseen, Istanbuliin, Moskovaan tai Ateenaan.',
     starFound: (name, city) => `◈ ${name} löysi MERIPIHKAHUONEEN AARTEEN kaupungista ${city}!`,
     starToast: 'MERIPIHKAHUONEEN AARRE!',
-    starChase: 'Nyt on kiire kotiin — myös hevosenkengän haltija voi voittaa pelin.',
+    starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
     winStar: 'toi Meripihkahuoneen aarteen turvallisesti kotiin',
     winnerStar: (name, money) => `${name} toi Meripihkahuoneen aarteen kotiin ${money} punnan kanssa.`,
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.

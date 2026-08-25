@@ -431,6 +431,60 @@ function atlasPaalla(ui) {
   return Boolean(ui.mannerZoom);
 }
 
+/*
+ * ============ VANHA LAUTA POIS ATLAKSEN ALTA =========================
+ *
+ * Omistajan linjaus 25.8.2026 (pelitesti iPadilla, v1106: *"kartan
+ * scrollaus on aika hidasta ja tökkivää"*): *"Ota vanha maailmankartta
+ * suoraan kokonaan pois näkyvistä. Ei siis poisteta sitä mutta tässä
+ * näkymässä sitä ei kannata piirtää enää ollenkaan. Rakennetaan uusi
+ * kartta korvaamaan vanha kartta kokonaan ja on tässä vaiheessa ihan OK
+ * että koska piirto on kesken niin kaikkea kartan osia ei ole vielä
+ * näkyvillä."*
+ *
+ * MIKÄ MAKSOI. Fokusnäkymässä atlaksen lehdet ovat OPAAKKEJA (ks. sääntö
+ * 4 tiedoston alussa) ja peittävät alueensa kokonaan — mutta laudan oma
+ * bittikartta jäi silti niiden alle: karkea pohjataso (.taide-pohja) ja
+ * tarkkojen ruutujen sarja (.staattinen, js/ui.js rasteroiTaide). Ne
+ * ovat ruudun kokoisia bittikarttoja, ja panoroinnissa selain maalaa
+ * jokaisen paljastuvan kaistaleen niistäkin, vaikka pikselit jäävät
+ * lehden alle näkymättömiin. Ennen jatkuvaa atlasta lehtiä oli yksi ja
+ * lauta näkyi sen ympärillä; nyt lehdet kattavat ruudun ja koko työ on
+ * hukkaan heitettyä.
+ *
+ * MITATTU (Chromium 430 x 930, kolme oikean kokoista lehteä kartalla,
+ * kahdeksan vetoa suuntaansa, kehysvälit rAF:sta):
+ *
+ *   ennen  — pudonneita kehyksiä (yli 32 ms) 99/1116 = 8,9 %, p99 150 ms
+ *   pois   — pudonneita kehyksiä             65/1053 = 6,2 %, p99  67 ms
+ *
+ * DISPLAY: NONE EIKÄ OPACITY. Läpinäkyvä kerros on yhä osa
+ * komposointia — iOS Safari maalaa ja pitää sen puskureissaan
+ * täsmälleen kuten näkyvänkin. Sama oppi kuin .fokus-piilossa- ja
+ * .fokus-lehden-alla-luokilla (css/styles.css).
+ *
+ * KOODIA EI POISTETA. Lauta rasteroidaan ja pidetään yllä kuten ennenkin
+ * (ui.taydennaTaide), joten yleiskuvaan, lentoon, aloitusruutuun ja
+ * maailmankarttanäkymään palataan ilman uutta odotusta. Piiloon menee
+ * vain PIIRTO ja vain siinä näkymässä, jossa atlas on kartta — eli
+ * täsmälleen atlasPaallan ehdoilla.
+ *
+ * PERGAMENTTI JÄÄ. Paperin pohja (.paper-pohja) on laudan juuriryhmän
+ * ensimmäinen lapsi eikä kuulu rasteroitavaan taideryhmään (js/ui.js
+ * drawPaperPohja), joten lehtien ulkopuolelle jää paperi eikä paneelin
+ * tumma tausta. Pelin omat kerrokset — kaupungit, laatat, nappula,
+ * kohderenkaat, kohtaamispiste — ovat lehden PÄÄLLÄ omissa
+ * ryhmissään eivätkä ole tässä mukana.
+ */
+const LAUTA_POIS_LUOKKA = 'fokus-atlas-nakyma';
+
+/** Kytkee vanhan laudan piirron pois (tai takaisin). */
+function paivitaVanhaLauta(paalla) {
+  try {
+    globalThis.document?.body?.classList?.toggle(LAUTA_POIS_LUOKKA, Boolean(paalla));
+  } catch { /* ei bodya (yksikkötesti): näkymää ei ole piilotettavaksi */ }
+}
+
 /** Atlaksen oma ryhmä fokuskerroksessa; luodaan tarvittaessa. */
 function atlasRyhma(ui) {
   const kerros = ui.fokuskarttaKerros;
@@ -623,11 +677,21 @@ function karsiAtlas(ui, lauta, suojatut) {
  * — pienen panoroinnin jälkeen sama joukko lehtiä on yhä oikea.
  */
 export function paivitaFokusAtlas(ui) {
+  /*
+   * VANHAN LAUDAN PIIRTO ENSIMMÄISENÄ ja ennen kaikkia varhaisia
+   * paluita: tämä funktio on ainoa paikka, joka tietää atlaksen tilan,
+   * ja sitä kutsutaan sekä joka piirrosta (ui.paivitaFokusKerros) että
+   * jokaisesta näkymän asettumisesta (ui.paivitaMaastonimet). Jos
+   * kytkentä olisi vasta ryhmän luonnin jälkeen, lauta jäisi piiloon
+   * niissä tilanteissa, joissa fokuskerrosta ei ole (laudan vaihto).
+   */
+  const atlas = atlasPaalla(ui);
+  paivitaVanhaLauta(atlas);
   const ryhma = atlasRyhma(ui);
   if (!ryhma) return;
   ui.atlasLehdet ??= new Map();
   ui.atlasHaut ??= new Set();
-  if (!atlasPaalla(ui)) {
+  if (!atlas) {
     if (ui.atlasLehdet.size) {
       for (const iso of [...ui.atlasLehdet.keys()]) vapautaLehti(ui, iso);
       ui.atlasAvain = null;
@@ -879,6 +943,13 @@ export function paivitaFokuskartta(ui) {
 
 /** Laudan vaihto: kerros, atlas ja muistettu maa nollille. */
 export function nollaaFokuskartta(ui) {
+  /*
+   * Uusi lauta piirtyy näkyviin kokonaisena: piilotus palaa heti
+   * seuraavasta paivitaFokusAtlaksesta, jos uusikin näkymä on atlas.
+   * Ilman tätä vanhan laudan piilotus jäisi voimaan laudalle, jolla
+   * atlasta ei ole lainkaan.
+   */
+  paivitaVanhaLauta(false);
   ui.fokuskarttaAvain = null;
   if (ui.fokuskarttaKerros) ui.fokuskarttaKerros.textContent = '';
   // Atlas asuu samassa kerroksessa: DOM meni jo, mutta kirjanpito on

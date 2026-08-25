@@ -82,7 +82,7 @@ päiväkirjamerkinnät. Matka jatkuu, kun astut ulos koneesta.
   vihje, 80 punnan 50:50 ja 45 sekunnin tiimalasi auttavat pinteessä.
 - **Rosvon kaksintaistelu:** rosvolaatta ei vie rahoja suoraan, vaan rosvo
   esittää kiperän kysymyksen kahdeksalla vaihtoehdolla — oikea vastaus tuo
-  200 punnan saaliin, ja kolmella hevosenkengällä rosvon voi ohittaa.
+  200 punnan saaliin, ja helpotus maksaa puolet rahoista.
 - **Tietäjäpisteet ja tietäjätasot:** uusi kaupunki 10, uusi lauta 50,
   vaikea kysymys 25, pulma 25 ja unohdettu aarre 100 pistettä; tietoprosentti
   kertoo osumatarkkuuden. Pisteet nostavat nimikettä Untuvikosta (0 tp)
@@ -167,13 +167,15 @@ lennolla (300 p) toiselle laudalle. Maakohtaiset kartat (esim. Suomi) eivät
 aukea rahalla vaan tiedolla — mantereen pääkaupungissa vastataan vaikeaan
 kysymykseen, ja oikea vastaus avaa portin ilmaiseksi.
 
-**Aarteet.** Jokaisessa isoisän merkitsemässä kaupungissa on yksi laatta.
-Oikea vastaus kääntää laatan; väärästä vuoro päättyy ja samassa kaupungissa
-saa uuden kysymyksen seuraavalla vuorolla. Laattoina ovat unohdettu aarre,
-hevosenkengät, ryöstäjät, jalokivet (arvo 300–1000 puntaa suoraan kukkaroon)
-ja tyhjät — tyhjän kohdalla isoisän merkintä oli vanhentunut. Jalokivet
-vaihtuvat laudan mukaan: Lähi-idässä turkoosi, Euroopassa meripihka,
-Suomessa spektroliitti.
+**Aarteet.** Jokaisessa kaupungissa on yksi laatta, ja sen alta löytyy aina
+aarre. Oikea vastaus kääntää laatan; väärästä vuoro päättyy ja samassa
+kaupungissa saa uuden kysymyksen seuraavalla vuorolla. Aarteita on neljää
+kokoa: pieni paikallisaarre (100–250 p), iso paikallisaarre (500–800 p),
+mantereen oma aarre (kiinteä 1000 p) ja unohdettu aarre (2000 p, jää
+matkalaukkuun ja avaa mannerlennon). Paikallisaarteiden arvo arvotaan
+löytöhetkellä, ja jokaisella maalla on aikanaan oma parinsa. Ainoa laatta,
+joka ei ole aarre, on ryöstäjä. Varusteet — kuten karttalinssit — ostetaan
+kaupasta, eivät löydy laatoista.
 
 **Rahan käyttö.** Rahalla ei osteta aarteita vaan matkoja ja apuja: laiva
 100 p, lento 300 p, vihje 40 p ja 50:50 80 p. Jokainen aloittaa 300 punnalla.

@@ -55,6 +55,8 @@ const MODULES = [
   'js/packs/nahtavyysjutut.js',
   'js/packs/miniatyyrit.js',
   'js/packs/julisteet.js',
+  // Maakohtaiset paikallisaarteet: laattatyyppien nimet ennen pakkoja.
+  'js/packs/paikallisaarteet.js',
   'js/packs/lipputiedot.js',
   'js/packs/henkilot.js',
   'js/packs/saatiedot.js',
@@ -70,6 +72,16 @@ const MODULES = [
   // moduulitasolla (bgrFokuskohteet).
   'js/packs/fokuskohteet-bgr.js',
   'js/packs/fokusvirta-sofia.js',
+  // Sama pari Italialle ja Turkille: kohteet ennen kaupungin
+  // pakettia, koska fokusvirta poimii kohdenoston moduulitasolla.
+  'js/packs/fokuskohteet-ita.js',
+  'js/packs/fokusvirta-rooma.js',
+  'js/packs/fokuskohteet-tur.js',
+  'js/packs/fokusvirta-istanbul.js',
+  'js/packs/fokuskohteet-rou.js',
+  'js/packs/fokusvirta-bukarest.js',
+  'js/packs/fokuskohteet-bih.js',
+  'js/packs/fokusvirta-sarajevo.js',
   'js/packs/fokusvirrat.js',
   'js/packs/uutislahteet.js',
   // uutiset vasta lähteidensä jälkeen (tuo uutislahteet.js:n).
@@ -348,9 +360,16 @@ const MODULES = [
    */
   'js/fokuspiste.js',
   /*
+   * Täkysymbolit ennen täkynostoa (nosto tuo sen piirto- ja
+   * nollauskutsut). Kerros tuo vain mapartin ja äänet, jotka ovat jo
+   * yllä.
+   */
+  'js/fokusnosto-symbolit.js',
+  /*
    * Täkynosto ennen main.js:ää (main tuo sen kytkentäkutsun). Se tuo
-   * fokusvirran piirtopinnan ja kartan kohteiden tietoruudun — molemmat
-   * ovat jo yllä, ja juuri siksi nosto on listalla vasta tässä.
+   * fokusvirran piirtopinnan, kartan kohteiden tietoruudun ja
+   * täkysymbolit — kaikki ovat jo yllä, ja juuri siksi nosto on
+   * listalla vasta tässä.
    */
   'js/fokusnosto.js',
   /*

@@ -278,21 +278,14 @@ export const AFRICA = {
         name: 'Suuren Zimbabwen kivilintu',
         kuva: 'assets/aarteet/aarre-africa-star.jpg',
       },
-      ruby: {
+      mannerAarre: {
         name: 'Kimberleyn timantti', color: '#bcd6e8',
-        kuva: 'assets/aarteet/aarre-africa-ruby.jpg',
-      },
-      emerald: {
-        name: 'Kultahippu', color: '#e0b02a',
-        kuva: 'assets/aarteet/aarre-africa-emerald.jpg',
-      },
-      topaz: {
-        name: 'Kaurikotilo', color: '#e0cfa8',
-        kuva: 'assets/aarteet/aarre-africa-topaz.jpg',
+        kuva: 'assets/aarteet/aarre-africa-manner.jpg',
       },
     }),
-    // 37 laattakaupunkia seitsemän uuden paikan jälkeen (omistajan laajennus).
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 6, emerald: 7, topaz: 10, empty: 12 },
+    // 41 kaupunkia, yksi laatta kussakin. Pääaarre ja mantereen aarre
+    // ovat yksi kumpikin; lopusta noin kolmasosa on iso paikallisaarre.
+    counts: { star: 1, mannerAarre: 1, isoAarre: 13, pieniAarre: 26 },
   },
 
   questions: AFRICA_QUESTIONS,
@@ -413,7 +406,7 @@ export const AFRICA = {
     intro: 'Peli alkaa! Etsikää Suuren Zimbabwen kivilintu ja palatkaa Tangeriin, Kairoon tai Kapkaupunkiin.',
     starFound: (name, city) => `◈ ${name} löysi SUUREN ZIMBABWEN KIVILINNUN kaupungista ${city}!`,
     starToast: 'SUUREN ZIMBABWEN KIVILINTU!',
-    starChase: 'Nyt on kiire kotiin — myös hevosenkengän haltija voi voittaa pelin.',
+    starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
     winStar: 'toi Suuren Zimbabwen kivilinnun turvallisesti kotiin',
     winnerStar: (name, money) => `${name} toi Suuren Zimbabwen kivilinnun kotiin ${money} punnan kanssa.`,
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.

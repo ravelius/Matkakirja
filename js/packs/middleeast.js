@@ -204,26 +204,18 @@ export const MIDDLE_EAST = {
   minCityDistance: 60,
 
   tokens: {
-    // Turkoosi on saanut nimensä Turkista, jonka kautta kivi kulki Eurooppaan.
     types: themedTokenTypes({
       star: {
         name: 'Sheban kuningattaren aarre',
         kuva: 'assets/aarteet/aarre-middleeast-star.jpg',
       },
-      ruby: {
+      mannerAarre: {
         name: 'Messinkilamppu', color: '#c88f2b',
-        kuva: 'assets/aarteet/aarre-middleeast-ruby.jpg',
-      },
-      emerald: {
-        name: 'Suitsukepihka', color: '#d8c690',
-        kuva: 'assets/aarteet/aarre-middleeast-emerald.jpg',
-      },
-      topaz: {
-        name: 'Sahramipussi', color: '#e05c20',
-        kuva: 'assets/aarteet/aarre-middleeast-topaz.jpg',
+        kuva: 'assets/aarteet/aarre-middleeast-manner.jpg',
       },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 7, empty: 7 },
+    // 29 kaupunkia, yksi laatta kussakin.
+    counts: { star: 1, mannerAarre: 1, isoAarre: 9, pieniAarre: 18 },
   },
 
   questions: MIDDLEEAST_QUESTIONS,
@@ -273,7 +265,7 @@ export const MIDDLE_EAST = {
     intro: 'Peli alkaa! Etsikää Sheban kuningattaren aarre ja palatkaa Istanbuliin, Kairoon tai Dubaihin.',
     starFound: (name, city) => `◈ ${name} löysi SHEBAN KUNINGATTAREN AARTEEN kaupungista ${city}!`,
     starToast: 'SHEBAN AARRE!',
-    starChase: 'Nyt on kiire kotiin — myös hevosenkengän haltija voi voittaa pelin.',
+    starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
     winStar: 'toi Sheban kuningattaren aarteen turvallisesti kotiin',
     winnerStar: (name, money) => `${name} toi Sheban kuningattaren aarteen kotiin ${money} punnan kanssa.`,
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.

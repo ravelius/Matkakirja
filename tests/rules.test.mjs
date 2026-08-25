@@ -26,10 +26,12 @@ function checkSources(source, where) {
 }
 import { buildBoard, findMoves, posKey, cityDistances, pointAlong } from '../js/rules.js';
 import { isOnLand } from '../js/mapart.js';
-import { tokenPileTemplate } from '../js/tokens.js';
+import {
+  ISO_AARRE_ARVO, MANNER_AARRE_ARVO, PIENI_AARRE_ARVO, onAarre, tokenPileTemplate,
+} from '../js/tokens.js';
 import {
   Game, mulberry32, questionLevel, FLIGHT_PRICE, START_MONEY, STAR_PRIZE, STRANDED_AID,
-  DUEL_BYPASS_SHOES, DUEL_PRIZE, FIFTY_FIFTY_PRICE, HARD_BONUS, HINT_PRICE,
+  DUEL_PRIZE, FIFTY_FIFTY_PRICE, HARD_BONUS, HINT_PRICE,
   QUIZ_SECONDS, SEA_FARE,
   XP_NEW_CITY, XP_NEW_BOARD, XP_HARD_ANSWER, XP_STAR,
   TURN_HOURS, RECORD_DAYS, XP_RECORD, timeOfDayName,
@@ -41,7 +43,7 @@ import {
 } from '../js/wiki.js';
 import {
   chooseDuelAnswer, chooseMove, chooseQuizAnswer, chooseTravel,
-  wantsDuelBypass, wantsDuelRelief, wantsFiftyFifty, wantsHint,
+  wantsDuelRelief, wantsFiftyFifty, wantsHint,
 } from '../js/ai.js';
 
 const AFRICA = packById('africa');
@@ -146,13 +148,34 @@ for (const pack of PACKS) {
     // päätös 10.8.2026 — js/game.js enterWorld).
     const pile = tokenPileTemplate(pack.tokens.counts);
     assert.equal(pile.length, pack.cities.length);
-    // Tähtiä on yksi per manner (omistajan päätös 11.8.2026): laudalla,
-    // jolla mantereita ei ole erikseen merkitty, se on yksi.
+    // Pääaarteita ja mantereen aarteita on tasan yksi per manner
+    // (Raamattu, "Aarteet ja eteneminen"): laudalla, jolla mantereita
+    // ei ole erikseen merkitty, se on yksi kumpaakin.
     assert.equal(pack.tokens.counts.star, mantereet(pack).length);
-    assert.ok(pack.tokens.counts.horseshoe >= 1);
+    assert.equal(pack.tokens.counts.mannerAarre, mantereet(pack).length);
     for (const type of Object.keys(pack.tokens.counts)) {
       assert.ok(pack.tokens.types[type], `laattatyyppiä ${type} ei ole määritelty`);
     }
+  });
+
+  test(`${pack.id}: jokaisen laatan alta löytyy aarre tai ryöstäjä`, () => {
+    /*
+     * Raamattu, osio "Aarteet ja eteneminen": *"Laatta joka
+     * kaupungissa; oikea vastaus paljastaa, alta löytyy AINA aarre."*
+     * Tyhjä laatta, hevosenkenkä, jalokivien arvotaulu ja linssilaatta
+     * on poistettu — ryöstäjä ei ole aarre vaan este, ja se on ainoa
+     * sallittu poikkeus.
+     */
+    for (const type of Object.keys(pack.tokens.counts)) {
+      assert.ok(onAarre(type) || type === 'robber',
+        `${pack.id}: laattatyyppi ${type} ei ole aarre eikä ryöstäjä`);
+    }
+    // Paikallisaarteita on selvästi eniten, ja pieniä noin kaksi
+    // kertaa niin paljon kuin isoja (noin 2/3 vastaan 1/3).
+    const { pieniAarre, isoAarre } = pack.tokens.counts;
+    assert.ok(pieniAarre > isoAarre, 'pieniä aarteita pitää olla enemmän kuin isoja');
+    const osuus = isoAarre / (pieniAarre + isoAarre);
+    assert.ok(osuus > 0.28 && osuus < 0.39, `isojen osuus ${osuus.toFixed(2)} ei ole noin 1/3`);
   });
 
   test(`${pack.id}: kysymyspankki on ehjä`, () => {
@@ -636,7 +659,7 @@ test('jumiin jäänyt saa avustuksen vuoron alussa', () => {
   assert.equal(p.money, STRANDED_AID);
 });
 
-test('laattojen vaikutukset: jalokivi, ryöstäjä ja tähti', () => {
+test('laattojen vaikutukset: paikallisaarre, mantereen aarre, ryöstäjä ja pääaarre', () => {
   const game = new Game({
     players: [
       { name: 'A', color: '#f00', start: 'tanger' },
@@ -648,13 +671,31 @@ test('laattojen vaikutukset: jalokivi, ryöstäjä ja tähti', () => {
   const p = game.player;
   p.pos = { type: 'city', city: 'timbuktu' };
 
-  game.tokens.set('timbuktu', 'ruby');
+  // Mantereen aarre on kiinteä tuhat puntaa.
+  game.tokens.set('timbuktu', 'mannerAarre');
   game.revealToken('timbuktu');
-  assert.equal(p.money, START_MONEY + 1000);
+  assert.equal(p.money, START_MONEY + MANNER_AARRE_ARVO);
 
+  /*
+   * Paikallisaarteiden arvo arvotaan löytöhetkellä (Raamattu: *"Arvo
+   * vaihtelee löytöhetkellä"*), joten testi tarkistaa välin ja
+   * kymmenen punnan tarkkuuden — ei yhtä lukua.
+   */
+  const arvot = { pieniAarre: PIENI_AARRE_ARVO, isoAarre: ISO_AARRE_ARVO };
+  for (const [type, vali] of Object.entries(arvot)) {
+    const ennen = p.money;
+    game.tokens.set('timbuktu', type);
+    game.revealToken('timbuktu');
+    const arvo = p.money - ennen;
+    assert.ok(arvo >= vali.min && arvo <= vali.max, `${type} antoi ${arvo} puntaa`);
+    assert.equal(arvo % 10, 0, `${type} ei pyöristynyt kymmeneen puntaan`);
+    assert.equal(game.viimeAarre.arvo, arvo, 'löytöhetken arvo ei päätynyt kortille');
+  }
+
+  const rahatEnnenRosvoa = p.money;
   game.tokens.set('timbuktu', 'robber');
   game.revealToken('timbuktu');
-  assert.equal(p.money, START_MONEY + 1000, 'rosvo ei vie rahoja ennen kaksintaistelua');
+  assert.equal(p.money, rahatEnnenRosvoa, 'rosvo ei vie rahoja ennen kaksintaistelua');
   assert.ok(game.duelArmed, 'rosvo virittää kaksintaistelun');
   game.duelArmed = false;
 
@@ -664,7 +705,158 @@ test('laattojen vaikutukset: jalokivi, ryöstäjä ja tähti', () => {
   assert.ok(game.starFound);
 });
 
-test('tähti kotiin voittaa, hevosenkenkä voi ehtiä ensin', () => {
+test('paikallisaarteen arvo vaihtelee löydöstä toiseen', () => {
+  const game = new Game({
+    players: [{ name: 'A', color: '#f00', start: 'tanger' }],
+    rng: mulberry32(5),
+  });
+  const p = game.player;
+  p.pos = { type: 'city', city: 'timbuktu' };
+  const arvot = new Set();
+  for (let i = 0; i < 40; i++) {
+    game.tokens.set('timbuktu', 'pieniAarre');
+    const ennen = p.money;
+    game.revealToken('timbuktu');
+    arvot.add(p.money - ennen);
+  }
+  assert.ok(arvot.size > 1, 'sama aarre antoi joka kerta saman summan');
+});
+
+test('laattajako: joka mantereella oma pääaarre ja oma 1000 punnan aarre', () => {
+  /*
+   * Raamattu, "Aarteet ja eteneminen": pääaarre ja mantereen aarre
+   * ovat mannerkohtaisia lupauksia. Sattuma ei saa kasata kahta samaan
+   * maanosaan eikä jättää yhtäkään ilman, joten laattajako sijoittaa
+   * ne käsin (js/game.js jaaLaatat).
+   */
+  const pack = packById('maailmankartta');
+  for (const seed of [3, 77, 2026]) {
+    const game = new Game({
+      players: [{ name: 'Yksin', color: '#f00', start: null }],
+      pack,
+      seed,
+    });
+    const laskuri = new Map();
+    for (const [city, type] of game.world.tokens) {
+      if (type !== 'star' && type !== 'mannerAarre') continue;
+      const avain = `${type}:${game.mannerOf(city)}`;
+      laskuri.set(avain, (laskuri.get(avain) ?? 0) + 1);
+    }
+    for (const manner of Object.keys(pack.tokens.mannerTypes)) {
+      assert.equal(laskuri.get(`star:${manner}`), 1, `${manner}: pääaarteita (siemen ${seed})`);
+      assert.equal(laskuri.get(`mannerAarre:${manner}`), 1,
+        `${manner}: mantereen aarteita (siemen ${seed})`);
+    }
+    // Jokaisen laatan alta löytyy aarre tai ryöstäjä — ei tyhjää.
+    for (const type of game.world.tokens.values()) {
+      assert.ok(onAarre(type) || type === 'robber', `laudalle jäi laatta ${type}`);
+    }
+  }
+});
+
+test('pääaarre voi osua mantereen ensimmäiseen kätköön ja on varma viimeisessä', () => {
+  /*
+   * Raamattu: *"Pääaarre voi osua mantereen ensimmäiseen kätköön;
+   * varma viimeisessä."* Tasajakauma mantereen laattakaupunkien kesken
+   * tekee molemmat: eri siemenillä aarre päätyy eri kaupunkiin, ja kun
+   * muut on käännetty, jäljelle jää se yksi.
+   */
+  const pack = packById('maailmankartta');
+  const kaupungit = new Set();
+  for (let seed = 1; seed <= 25; seed++) {
+    const game = new Game({
+      players: [{ name: 'Yksin', color: '#f00', start: null }],
+      pack,
+      seed,
+    });
+    for (const [city, type] of game.world.tokens) {
+      if (type === 'star' && game.mannerOf(city) === 'europe') kaupungit.add(city);
+    }
+  }
+  assert.ok(kaupungit.size > 3, `pääaarre osui vain ${kaupungit.size} eri kaupunkiin`);
+
+  // Viimeinen kääntämätön laatta on se, jonka alla aarre on.
+  const game = new Game({
+    players: [{ name: 'Yksin', color: '#f00', start: null }],
+    pack,
+    seed: 9,
+  });
+  const tahtikaupunki = [...game.world.tokens]
+    .find(([city, type]) => type === 'star' && game.mannerOf(city) === 'europe')[0];
+  for (const [city] of [...game.world.tokens]) {
+    if (game.mannerOf(city) !== 'europe' || city === tahtikaupunki) continue;
+    game.world.tokens.delete(city);
+  }
+  const jaljella = [...game.world.tokens].filter(([city]) => game.mannerOf(city) === 'europe');
+  assert.deepEqual(jaljella, [[tahtikaupunki, 'star']]);
+});
+
+test('vanha tallennus poistuneilla laattatyypeillä latautuu paikallisaarteina', () => {
+  /*
+   * Jalokivet, hevosenkenkä, tyhjä laatta ja linssilaatta poistuivat
+   * 25.8.2026. Kesken jäänyt matka ei saa katketa siihen: tuntematon
+   * tyyppi luetaan pieneksi paikallisaarteeksi sekä kääntämättömistä
+   * laatoista että jo käännetyistä kirjauksista.
+   */
+  const game = new Game({
+    players: [{ name: 'A', color: '#f00', start: 'tanger' }],
+    seed: 55,
+  });
+  const data = JSON.parse(JSON.stringify(game.toJSON()));
+  const maailma = data.worlds.africa;
+  maailma.tokens = [['timbuktu', 'ruby'], ['gao', 'horseshoe'], ['kano', 'linssi'],
+    ['tripoli', 'star'], ['kairo', 'robber']];
+  maailma.revealed = [['dakar', 'topaz']];
+  data.players[0].finds = ['emerald', 'star', 'robber', 'empty'];
+  data.players[0].horseshoes = 3;
+  delete data.players[0].findMaa;
+
+  const palautettu = Game.fromJSON(data);
+  assert.ok(palautettu, 'vanha tallennus hylättiin');
+  assert.equal(palautettu.world.tokens.get('timbuktu'), 'pieniAarre');
+  assert.equal(palautettu.world.tokens.get('gao'), 'pieniAarre');
+  assert.equal(palautettu.world.tokens.get('kano'), 'pieniAarre');
+  assert.equal(palautettu.world.tokens.get('tripoli'), 'star', 'pääaarre säilyy');
+  assert.equal(palautettu.world.tokens.get('kairo'), 'robber', 'ryöstäjä säilyy');
+  assert.equal(palautettu.world.revealed.get('dakar'), 'pieniAarre');
+  assert.deepEqual(palautettu.players[0].finds,
+    ['pieniAarre', 'star', 'robber', 'empty'], 'löydöt käännettiin väärin');
+  assert.equal(palautettu.players[0].horseshoes, undefined, 'kenkälaskuri jäi roikkumaan');
+  // Paikkalistat täydentyvät finds-listan mittaisiksi.
+  assert.equal(palautettu.players[0].findMaa.length, 4);
+  assert.equal(palautettu.players[0].findManner.length, 4);
+});
+
+test('paikallisaarteen nimi tulee maasta ja putoaa varanimeen', async () => {
+  /*
+   * Maakohtaiset parit (js/packs/paikallisaarteet.js) tulevat
+   * päätoimittajalta myöhemmin. Mekaniikan on oltava valmis ottamaan
+   * ne vastaan maakoodilla, ja ilman paria käytössä on yksi yleinen
+   * varanimi.
+   */
+  const { PAIKALLISAARTEET, VARA_PARI } = await import('../js/packs/paikallisaarteet.js');
+  const game = new Game({
+    players: [{ name: 'Yksin', color: '#f00', start: null }],
+    pack: packById('maailmankartta'),
+    seed: 12,
+  });
+  assert.equal(game.aarreTyyppi('pieniAarre', 'helsinki').name, VARA_PARI.pieniAarre.name);
+  assert.equal(game.aarreTyyppi('isoAarre', 'helsinki').name, VARA_PARI.isoAarre.name);
+
+  PAIKALLISAARTEET.FIN = { pieniAarre: { name: 'Koelöytö', fakta: 'Testifakta.' } };
+  try {
+    const aarre = game.aarreTyyppi('pieniAarre', 'helsinki');
+    assert.equal(aarre.name, 'Koelöytö', 'maan oma pari ei mennyt varanimen edelle');
+    assert.equal(aarre.fakta, 'Testifakta.');
+    assert.equal(aarre.id, 'pieniAarre', 'tunniste ei saa muuttua nimen mukana');
+    // Toinen maa käyttää yhä varanimeä.
+    assert.equal(game.aarreTyyppi('pieniAarre', 'pariisi').name, VARA_PARI.pieniAarre.name);
+  } finally {
+    delete PAIKALLISAARTEET.FIN;
+  }
+});
+
+test('pääaarre kotiin voittaa; ilman sitä ei voita', () => {
   const makeGame = () =>
     new Game({
       players: [
@@ -682,12 +874,17 @@ test('tähti kotiin voittaa, hevosenkenkä voi ehtiä ensin', () => {
   assert.equal(g1.winner.name, 'A');
   assert.equal(g1.phase, 'over');
 
-  // Ilman tähteä hevosenkenkä ei riitä ennen kuin tähti on löytynyt.
+  /*
+   * Hevosenkengän voittotie on poistettu (Raamattu: laatan alta löytyy
+   * aina aarre, joten kenkiä ei ole). Kotikaupungissa seisominen ei
+   * riitä, vaikka joku muu olisi jo löytänyt pääaarteen.
+   */
   const g2 = makeGame();
-  g2.player.horseshoes = 1;
-  g2.player.pos = { type: 'city', city: 'tanger' };
-  assert.equal(g2.checkWin(), false);
   g2.world.starsFound.set('africa', 'timbuktu');
+  g2.player.pos = { type: 'city', city: 'tanger' };
+  assert.equal(g2.player.stars, 0);
+  assert.equal(g2.checkWin(), false);
+  g2.player.stars = 1;
   assert.ok(g2.checkWin());
 });
 
@@ -695,7 +892,6 @@ test('tähti kotiin voittaa, hevosenkenkä voi ehtiä ensin', () => {
 function playBotStep(game) {
   if (game.phase === 'duel') {
     if (game.duel.chosen !== null) game.closeDuel();
-    else if (wantsDuelBypass(game)) game.actionDuelBypass();
     else if (wantsDuelRelief(game)) game.actionDuelRelief();
     else game.answerDuel(chooseDuelAnswer(game));
     return;
@@ -737,7 +933,7 @@ test('oikea vastaus kääntää laatan, väärä ei', () => {
     });
     game.polloLoydetty = true; // laattatesti — pöllö on jo löytynyt
     game.player.pos = { type: 'city', city: 'timbuktu' };
-    game.tokens.set('timbuktu', 'ruby');
+    game.tokens.set('timbuktu', 'mannerAarre');
     return game;
   };
 
@@ -748,7 +944,7 @@ test('oikea vastaus kääntää laatan, väärä ei', () => {
   assert.equal(win.quiz.options.length, 4);
   const rahaEnnen = win.player.money;
   win.answerQuiz(win.quiz.correct);
-  assert.equal(win.revealed.get('timbuktu'), 'ruby');
+  assert.equal(win.revealed.get('timbuktu'), 'mannerAarre');
   assert.equal(win.players[0].money, rahaEnnen + 1000);
   win.closeQuiz();
   assert.equal(win.phase, 'action');
@@ -775,7 +971,7 @@ test('helppojen kysymysten pelaaja saa tason 1 kysymyksen', () => {
   });
   const levelByText = new Map(allQuestions(AFRICA).map((q) => [q.q, questionLevel(q)]));
   game.player.pos = { type: 'city', city: 'tripoli' };
-  game.tokens.set('tripoli', 'topaz');
+  game.tokens.set('tripoli', 'pieniAarre');
   for (let i = 0; i < 5; i++) {
     game.phase = 'offer';
     game.actionQuiz({ form: 'quiz' });
@@ -810,7 +1006,7 @@ test('vaikea kysymys antaa bonuksen oikeasta vastauksesta', () => {
   game.polloLoydetty = true; // laattatesti — pöllö on jo löytynyt
   const levelByText = new Map(allQuestions(AFRICA).map((q) => [q.q, questionLevel(q)]));
   game.player.pos = { type: 'city', city: 'timbuktu' };
-  game.tokens.set('timbuktu', 'topaz');
+  game.tokens.set('timbuktu', 'pieniAarre');
 
   assert.ok(game.hardAvailable('timbuktu'));
   game.phase = 'offer';
@@ -820,8 +1016,11 @@ test('vaikea kysymys antaa bonuksen oikeasta vastauksesta', () => {
   assert.equal(levelByText.get(game.quiz.question), 3, 'kysymyksen pitää olla vaikea');
 
   game.answerQuiz(game.quiz.correct);
-  assert.equal(game.player.money, START_MONEY + HARD_BONUS + 300, 'bonus ja topaasin arvo');
-  assert.equal(game.revealed.get('timbuktu'), 'topaz');
+  // Bonus on kiinteä, aarteen arvo arvotaan löytöhetkellä.
+  const aarre = game.player.money - START_MONEY - HARD_BONUS;
+  assert.ok(aarre >= PIENI_AARRE_ARVO.min && aarre <= PIENI_AARRE_ARVO.max,
+    `paikallisaarre antoi ${aarre} puntaa`);
+  assert.equal(game.revealed.get('timbuktu'), 'pieniAarre');
 });
 
 test('väärä vastaus vaikeaan kysymykseen ei anna bonusta', () => {
@@ -833,7 +1032,7 @@ test('väärä vastaus vaikeaan kysymykseen ei anna bonusta', () => {
     rng: mulberry32(29),
   });
   game.player.pos = { type: 'city', city: 'timbuktu' };
-  game.tokens.set('timbuktu', 'topaz');
+  game.tokens.set('timbuktu', 'pieniAarre');
   game.phase = 'offer';
   game.actionQuiz({ hard: true });
   game.answerQuiz((game.quiz.correct + 1) % 4);
@@ -863,7 +1062,7 @@ test('tasovalinta laskeutuu pehmeästi, jos tason kysymyksiä ei ole', () => {
     rng: mulberry32(31),
   });
   game.player.pos = { type: 'city', city: 'timbuktu' };
-  game.tokens.set('timbuktu', 'topaz');
+  game.tokens.set('timbuktu', 'pieniAarre');
 
   // Helppoja ei ole, joten pelaaja saa tason 2 kysymyksen virheen sijaan.
   game.phase = 'offer';
@@ -943,31 +1142,24 @@ test('rosvon kaksintaistelu: väärä vastaus vie kaikki rahat', () => {
   assert.equal(game.current, 1);
 });
 
-test('rosvon voi ohittaa kolmella hevosenkengällä', () => {
+test('rosvoa ei voi enää ohittaa: kaksintaistelu on pakko käydä', () => {
+  /*
+   * Hevosenkenkälaatta poistui, kun laatan alta alkoi löytyä aina
+   * aarre (Raamattu, "Aarteet ja eteneminen"). Sen mukana katosi ainoa
+   * tapa päästä rosvon ohi vastaamatta — koko toiminto on poistettu,
+   * ei vain kytketty pois.
+   */
   const game = newGame(64);
   const p = game.player;
   p.pos = { type: 'city', city: 'timbuktu' };
   game.tokens.set('timbuktu', 'robber');
-  p.horseshoes = DUEL_BYPASS_SHOES;
   game.actionTravel('stay', { form: 'quiz' });
   game.answerQuiz(game.quiz.correct);
   game.closeQuiz();
 
-  const rahaEnnen = p.money;
-  assert.ok(game.actionDuelBypass().ok);
-  assert.equal(p.horseshoes, 0, 'kengät kuluvat');
-  assert.equal(p.money, rahaEnnen, 'rahat säilyvät');
-  assert.equal(game.duel, null);
-  assert.equal(game.current, 1, 'vuoro vaihtuu');
-
-  // Ilman kenkiä ohitus ei onnistu.
-  const toinen = newGame(65);
-  toinen.player.pos = { type: 'city', city: 'timbuktu' };
-  toinen.tokens.set('timbuktu', 'robber');
-  toinen.actionTravel('stay', { form: 'quiz' });
-  toinen.answerQuiz(toinen.quiz.correct);
-  toinen.closeQuiz();
-  assert.equal(toinen.actionDuelBypass().ok, false);
+  assert.equal(game.phase, 'duel', 'rosvo vie kaksintaisteluun');
+  assert.equal(typeof game.actionDuelBypass, 'undefined', 'ohitus on yhä olemassa');
+  assert.equal(p.horseshoes, undefined, 'hevosenkenkälaskuri on yhä pelaajassa');
 });
 
 test('aloitusnäytön joka kaupungista pääsee maailmankartalle', () => {
@@ -1399,7 +1591,7 @@ test('pöllö korvaa ensimmäisen laatan aarteen kokonaan', () => {
   assert.equal(game.takePolloPaljastus(), false, 'paljastus odotti ilman löytöä');
 
   game.player.pos = { type: 'city', city: 'lima' };
-  game.world.tokens.set('lima', 'ruby');
+  game.world.tokens.set('lima', 'mannerAarre');
   const rahaEnnen = game.player.money;
   const pisteetEnnen = game.player.xp;
   const loydot = game.player.finds.length;
@@ -1423,8 +1615,8 @@ test('pöllö korvaa ensimmäisen laatan aarteen kokonaan', () => {
 
   // Toinen laatta paljastuu normaalisti eikä löydä pöllöä uudelleen.
   game.player.pos = { type: 'city', city: 'kairo' };
-  game.world.tokens.set('kairo', 'emerald');
-  assert.equal(game.revealToken('kairo'), 'emerald', 'toinen laatta ei paljastunut normaalisti');
+  game.world.tokens.set('kairo', 'pieniAarre');
+  assert.equal(game.revealToken('kairo'), 'pieniAarre', 'toinen laatta ei paljastunut normaalisti');
   assert.ok(game.player.money > rahaEnnen, 'toinen laatta ei tuonut rahaa');
   assert.equal(game.takePolloPaljastus(), false, 'pöllö löytyi kahdesti');
 });
@@ -1469,7 +1661,7 @@ test('pöllön löytö kulkee tallennuksen läpi ja vanha tallennus saa pöllön
   assert.equal(Game.fromJSON(alku).polloLoydetty, false);
 
   game.player.pos = { type: 'city', city: 'lima' };
-  game.world.tokens.set('lima', 'ruby');
+  game.world.tokens.set('lima', 'mannerAarre');
   game.revealToken('lima');
   const data = JSON.parse(JSON.stringify(game.toJSON()));
   assert.equal(data.polloLoydetty, true);
@@ -1497,13 +1689,13 @@ test('botin kääntämä laatta ei vie pöllön löytöhetkeä pelaajalta', () =
   });
   assert.ok(game.player.isBot, 'testin oletus: botti aloittaa');
   game.player.pos = { type: 'city', city: 'lima' };
-  game.world.tokens.set('lima', 'ruby');
+  game.world.tokens.set('lima', 'mannerAarre');
   game.revealToken('lima');
   assert.equal(game.polloLoydetty, false, 'botti löysi pöllön');
 
   game.current = 1;
   game.player.pos = { type: 'city', city: 'kairo' };
-  game.world.tokens.set('kairo', 'emerald');
+  game.world.tokens.set('kairo', 'pieniAarre');
   game.revealToken('kairo');
   assert.equal(game.polloLoydetty, true, 'pelaaja ei löytänyt pöllöä');
 });
@@ -1522,9 +1714,9 @@ test('oletuspelissä pöllö on mukana alusta eikä laatta korvaudu', () => {
 
   // Ensimmäinen laatta antaa oman aarteensa: mikään ei korvaudu pöllöllä.
   game.player.pos = { type: 'city', city: 'lima' };
-  game.world.tokens.set('lima', 'ruby');
+  game.world.tokens.set('lima', 'mannerAarre');
   const rahaEnnen = game.player.money;
-  assert.equal(game.revealToken('lima'), 'ruby', 'ensimmäinen laatta korvautui pöllöllä');
+  assert.equal(game.revealToken('lima'), 'mannerAarre', 'ensimmäinen laatta korvautui pöllöllä');
   assert.ok(game.player.money > rahaEnnen, 'jalokivi ei tuonut rahaa');
   assert.equal(game.takePolloPaljastus(), false, 'pöllö paljastui vaikka se oli jo mukana');
 });
@@ -1608,7 +1800,7 @@ test('peli tallentuu ja palautuu samaan tilanteeseen', () => {
   });
   game.polloLoydetty = true; // laattatesti — pöllö on jo löytynyt
   game.players[0].pos = { type: 'city', city: 'timbuktu' };
-  game.tokens.set('timbuktu', 'emerald');
+  game.tokens.set('timbuktu', 'pieniAarre');
   game.actionTravel('stay', { form: 'quiz' });
   game.answerQuiz(game.quiz.correct);
   game.closeQuiz();
@@ -1625,7 +1817,7 @@ test('peli tallentuu ja palautuu samaan tilanteeseen', () => {
   assert.equal(restored.die, game.die);
   assert.equal(restored.current, game.current);
   assert.equal(restored.tokens.size, game.tokens.size);
-  assert.equal(restored.revealed.get('timbuktu'), 'emerald');
+  assert.equal(restored.revealed.get('timbuktu'), 'pieniAarre');
   assert.equal(restored.players[0].money, game.players[0].money);
   assert.deepEqual(restored.players[1].pos, game.players[1].pos);
   assert.equal(restored.usedQuestions.size, game.usedQuestions.size);
@@ -1673,7 +1865,7 @@ test('50:50 poistaa kaksi väärää vaihtoehtoa ja maksaa 80', () => {
   });
   game.polloLoydetty = true; // laattatesti — pöllö on jo löytynyt
   game.player.pos = { type: 'city', city: 'timbuktu' };
-  game.tokens.set('timbuktu', 'topaz');
+  game.tokens.set('timbuktu', 'pieniAarre');
   game.actionTravel('stay', { form: 'quiz' });
 
   const rahaEnnen = game.player.money;
@@ -1690,7 +1882,7 @@ test('50:50 poistaa kaksi väärää vaihtoehtoa ja maksaa 80', () => {
   // Oikea vastaus toimii yhä.
   game.answerQuiz(game.quiz.correct);
   assert.ok(game.quiz.right);
-  assert.equal(game.revealed.get('timbuktu'), 'topaz');
+  assert.equal(game.revealed.get('timbuktu'), 'pieniAarre');
 });
 
 test('50:50 ei onnistu ilman rahaa', () => {
@@ -1718,7 +1910,7 @@ test('vihje maksaa 40 puntaa ja näkyy vain kerran ostettuna', () => {
     seed: 404,
   });
   game.player.pos = { type: 'city', city: 'timbuktu' };
-  game.tokens.set('timbuktu', 'topaz');
+  game.tokens.set('timbuktu', 'pieniAarre');
   game.actionTravel('stay', { form: 'quiz' });
 
   assert.equal(game.quiz.hintShown, false);
@@ -1762,7 +1954,7 @@ test('aikarajan loppuminen lasketaan vääräksi vastaukseksi', () => {
     seed: 406,
   });
   game.player.pos = { type: 'city', city: 'kano' };
-  game.tokens.set('kano', 'ruby');
+  game.tokens.set('kano', 'mannerAarre');
   game.actionTravel('stay', { form: 'quiz' });
   assert.equal(game.quiz.seconds, QUIZ_SECONDS);
 
@@ -1791,7 +1983,7 @@ test('väärä vastaus päättää vuoron ja seuraavalla vuorolla saa uuden kysy
   });
   game.polloLoydetty = true; // laattatesti — pöllö on jo löytynyt
   game.player.pos = { type: 'city', city: 'kano' };
-  game.tokens.set('kano', 'ruby');
+  game.tokens.set('kano', 'mannerAarre');
 
   game.actionTravel('stay', { form: 'quiz' });
   const eka = game.quiz.question;
@@ -1806,7 +1998,7 @@ test('väärä vastaus päättää vuoron ja seuraavalla vuorolla saa uuden kysy
   game.actionTravel('stay', { form: 'quiz' });
   assert.notEqual(game.quiz.question, eka);
   game.answerQuiz(game.quiz.correct);
-  assert.equal(game.revealed.get('kano'), 'ruby');
+  assert.equal(game.revealed.get('kano'), 'mannerAarre');
 });
 
 test('vuoro etenee: matkustustapa, noppa, siirto ja vasta sitten tietovisa', () => {
@@ -1891,7 +2083,7 @@ test('matkustustapa valitaan automaattisesti kun vaihtoehtoja ei ole', () => {
 
   // Aarrekaupungissa valinta on aito: liikkua tai jäädä vastaamaan.
   game.player.pos = { type: 'city', city: 'gao' };
-  game.tokens.set('gao', 'topaz');
+  game.tokens.set('gao', 'pieniAarre');
   game.phase = 'action';
   game.beginTurn();
   assert.equal(game.phase, 'action');
@@ -1941,7 +2133,7 @@ test('kysymyksen lähde kulkeutuu tietovisaan ja kaksintaisteluun', () => {
 
   // Lähteetön kysymys antaa tyhjän listan, ei undefinedia.
   game.player.pos = { type: 'city', city: 'timbuktu' };
-  game.tokens.set('timbuktu', 'topaz');
+  game.tokens.set('timbuktu', 'pieniAarre');
   game.phase = 'action';
   game.actionTravel('stay', { form: 'quiz' });
   assert.ok(Array.isArray(game.quiz.source));
@@ -2021,7 +2213,7 @@ test('vaikea kysymys ja laudan pääaarre antavat kokemuspisteitä', () => {
   const game = newGame(44);
   const p = game.player;
   p.pos = { type: 'city', city: 'timbuktu' };
-  game.tokens.set('timbuktu', 'emerald');
+  game.tokens.set('timbuktu', 'pieniAarre');
   const ennen = p.xp;
 
   game.actionTravel('stay', { form: 'quiz' });
@@ -2059,7 +2251,7 @@ test('vastatut kysymykset kirjautuvat myös oikeista pelitilanteista', () => {
   const game = newGame(61);
   const p = game.player;
   p.pos = { type: 'city', city: 'timbuktu' };
-  game.tokens.set('timbuktu', 'emerald');
+  game.tokens.set('timbuktu', 'pieniAarre');
 
   game.actionTravel('stay', { form: 'quiz' });
   const vaara = (game.quiz.correct + 1) % game.quiz.options.length;
@@ -2104,7 +2296,7 @@ test('kokemuspisteet, laskurit ja käydyt kaupungit säilyvät tallennuksessa', 
 test('vanha tallennus ilman käyntitietoja ei jaa pisteitä uudelleen', () => {
   const game = newGame(88);
   game.tokens.delete('timbuktu');
-  game.revealed.set('timbuktu', 'emerald');
+  game.revealed.set('timbuktu', 'pieniAarre');
   const data = JSON.parse(JSON.stringify(game.toJSON()));
   delete data.worlds.africa.visited;
 
@@ -2323,7 +2515,7 @@ test('lauta ilman väittämiä ja tapahtumia toimii silti', () => {
 test('vaikea kysymys ja tietoportti ovat aina monivalinta', () => {
   const game = newGame(304);
   game.player.pos = { type: 'city', city: 'timbuktu' };
-  game.tokens.set('timbuktu', 'emerald');
+  game.tokens.set('timbuktu', 'pieniAarre');
   assert.ok(game.actionQuiz({ hard: true }).ok);
   assert.equal(game.quiz.kind, undefined, 'vaikea kysymys ei ole erikoismuoto');
   assert.equal(game.quiz.options.length, 4);
@@ -2332,7 +2524,7 @@ test('vaikea kysymys ja tietoportti ovat aina monivalinta', () => {
 test('isoisän väittämä on kaksivaihtoehtoinen eikä salli apukeinoja', () => {
   const game = newGame(305);
   game.player.pos = { type: 'city', city: 'timbuktu' };
-  game.tokens.set('timbuktu', 'emerald');
+  game.tokens.set('timbuktu', 'pieniAarre');
   assert.ok(game.actionQuiz({ form: 'claim' }).ok);
   const quiz = game.quiz;
   assert.equal(quiz.kind, 'claim');
@@ -2351,7 +2543,7 @@ test('valokuvakysymys: kuvan paikka arvataan laudan nimistä', () => {
   for (const seed of [301, 302, 303, 304, 305]) {
     const game = newGame(seed);
     game.player.pos = { type: 'city', city: 'timbuktu' };
-    game.tokens.set('timbuktu', 'emerald');
+    game.tokens.set('timbuktu', 'pieniAarre');
     game.setPhotoPool(['tripoli', 'kairo', 'sansibar']);
     assert.ok(game.actionQuiz({ form: 'photo' }).ok);
     const quiz = game.quiz;
@@ -2374,7 +2566,7 @@ test('valokuvakysymys: kuvan paikka arvataan laudan nimistä', () => {
 test('valokuvakysymys ei toista samaa kuvaa ja putoaa pois ilman kuvia', () => {
   const game = newGame(306);
   game.player.pos = { type: 'city', city: 'timbuktu' };
-  game.tokens.set('timbuktu', 'emerald');
+  game.tokens.set('timbuktu', 'pieniAarre');
 
   // Ilman ladattuja kuvia muoto ei saa painoa ja pakotettunakin se
   // putoaa tavalliseen monivalintaan.
@@ -2385,7 +2577,7 @@ test('valokuvakysymys ei toista samaa kuvaa ja putoaa pois ilman kuvia', () => {
   // Yhden kuvan lista: sama kuva ei tule kahdesti.
   const toinen = newGame(307);
   toinen.player.pos = { type: 'city', city: 'timbuktu' };
-  toinen.tokens.set('timbuktu', 'emerald');
+  toinen.tokens.set('timbuktu', 'pieniAarre');
   toinen.setPhotoPool(['tripoli']);
   assert.ok(toinen.actionQuiz({ form: 'photo' }).ok);
   assert.equal(toinen.quiz.photoCity, 'tripoli');
@@ -2403,7 +2595,7 @@ function soloGame(seed) {
 test('tapahtumakortti vie vuoron eikä käännä laattaa', () => {
   const game = soloGame(307);
   game.player.pos = { type: 'city', city: 'timbuktu' };
-  game.tokens.set('timbuktu', 'emerald');
+  game.tokens.set('timbuktu', 'pieniAarre');
   const vuoroEnnen = game.turnCount;
   assert.ok(game.actionQuiz({ form: 'event' }).ok);
   assert.equal(game.phase, 'event');
@@ -2417,7 +2609,7 @@ test('tapahtumakortti vie vuoron eikä käännä laattaa', () => {
 test('tapahtuma ei jätä matkaajaa velkaan', () => {
   const game = soloGame(308);
   game.player.pos = { type: 'city', city: 'timbuktu' };
-  game.tokens.set('timbuktu', 'emerald');
+  game.tokens.set('timbuktu', 'pieniAarre');
   game.player.money = 20;
   game.actionQuiz({ form: 'event' });
   game.eventCard.effect = { kind: 'raha', amount: -60 };
@@ -2428,7 +2620,7 @@ test('tapahtuma ei jätä matkaajaa velkaan', () => {
 test('kyyti siirtää naapurikaupunkiin ilmaiseksi', () => {
   const game = soloGame(309);
   game.player.pos = { type: 'city', city: 'timbuktu' };
-  game.tokens.set('timbuktu', 'emerald');
+  game.tokens.set('timbuktu', 'pieniAarre');
   const rahaEnnen = game.player.money;
   game.actionQuiz({ form: 'event' });
   game.eventCard.effect = { kind: 'kyyti' };
@@ -2874,7 +3066,14 @@ test('oikea pulma tuo kokemuspisteet, väärä ei rankaise', () => {
   oikein.answerQuiz(oikein.quiz.correct);
   assert.equal(oikein.quiz.right, true);
   assert.equal((oikein.player.xp ?? 0) - xpEnnen, XP_PUZZLE);
-  assert.equal(oikein.player.money, rahaEnnen, 'pulma ei liikuta rahaa');
+  /*
+   * Pulma itse ei tuo rahaa, mutta laatallisessa kaupungissa oikea
+   * ratkaisu kääntää laatan (omistajan linjaus 10.8.2026) — ja laatan
+   * alta löytyy nykyään AINA aarre. Rahan muutos on siis täsmälleen
+   * löytöhetkellä arvotun aarteen arvo, ei mitään muuta.
+   */
+  const laatanArvo = oikein.quiz.found ? oikein.viimeAarre.arvo : 0;
+  assert.equal(oikein.player.money, rahaEnnen + laatanArvo, 'pulma liikutti rahaa itse');
 
   const vaarin = puzzleGame(404, puzzle.city);
   const xp2 = vaarin.player.xp ?? 0;
@@ -2900,13 +3099,13 @@ test('oikea pulma tuo kokemuspisteet, väärä ei rankaise', () => {
 test('laatallisessa kaupungissa pulma on pysähdyksen tehtävä: kääntää laatan ja päättää vuoron', () => {
   const puzzle = packById('africa').puzzles.find((p) => p.city !== 'kairo');
   const game = puzzleGame(405, puzzle.city);
-  game.tokens.set(puzzle.city, 'emerald');
+  game.tokens.set(puzzle.city, 'pieniAarre');
   game.phase = 'action';
   const vuoroEnnen = game.turnCount;
 
   game.openPuzzle();
   game.answerQuiz(game.quiz.correct);
-  assert.equal(game.quiz.found, 'emerald', 'oikea ratkaisu paljastaa laatan');
+  assert.equal(game.quiz.found, 'pieniAarre', 'oikea ratkaisu paljastaa laatan');
   game.closeQuiz();
 
   assert.ok(!game.tokens.has(puzzle.city), 'laatan piti kääntyä');
@@ -2940,7 +3139,7 @@ test('tarinakaari ei pakota muotoa: lippukysymys ohittaa kaaren, visa käyttää
   });
   for (const p of pack.puzzles ?? []) game.puzzlesSeen.add(`europe:${p.city}`);
   game.player.pos = { type: 'city', city: kaupunki };
-  game.tokens.set(kaupunki, 'ruby');
+  game.tokens.set(kaupunki, 'mannerAarre');
   game.phase = 'action';
 
   // Nimetty muoto (lippukysymys) pysyy lippuna eikä kuluta kaarta
@@ -2976,7 +3175,7 @@ test('pulmattoman kaarikaupungin ensimmäinen tehtävä on luettu kohtaaminen', 
     seed: 409,
   });
   game.player.pos = { type: 'city', city: kaupunki };
-  game.tokens.set(kaupunki, 'ruby');
+  game.tokens.set(kaupunki, 'mannerAarre');
   game.phase = 'action';
 
   assert.ok(game.actionQuiz().ok);
@@ -3002,13 +3201,13 @@ test('kohtaaminen on ensimmäinen tehtävä myös pulmakaupungissa; pulma vasta 
   });
   game.polloLoydetty = true; // laattatesti — pöllö on jo löytynyt
   game.player.pos = { type: 'city', city: pulmakaupunki };
-  game.tokens.set(pulmakaupunki, 'ruby');
+  game.tokens.set(pulmakaupunki, 'mannerAarre');
   game.phase = 'action';
 
   assert.ok(game.actionQuiz().ok);
   assert.equal(game.quiz.kaari, true, 'ensin kohtaaminen, ei pulma');
   game.answerQuiz(game.quiz.correct);
-  assert.equal(game.quiz.found, 'ruby', 'kohtaamisen oikea vastaus kääntää laatan');
+  assert.equal(game.quiz.found, 'mannerAarre', 'kohtaamisen oikea vastaus kääntää laatan');
   game.closeQuiz();
 
   // Pulma ei kulunut kohtaamisessa: se avautuu seuraavalla pysähdyksellä.
@@ -3059,7 +3258,7 @@ test('botti ei kuluta yhteistä kohtaamista', () => {
     seed: 414,
   });
   game.player.pos = { type: 'city', city: kaupunki };
-  game.tokens.set(kaupunki, 'ruby');
+  game.tokens.set(kaupunki, 'mannerAarre');
   game.phase = 'action';
 
   assert.ok(game.actionQuiz().ok);
@@ -4137,7 +4336,7 @@ test('lippukysymys näyttää lipun ja neljä vaihtoehtoa', async () => {
   // Afrikan lauta riittää: sillä on omat countryShapes-rajat lippuineen.
   // Laatta pelaajan alle, muuten actionQuiz avaa Tutki-kortin.
   const game = newGame(455);
-  game.worldOf(game.player).tokens.set(game.cityOf().id, 'ruby');
+  game.worldOf(game.player).tokens.set(game.cityOf().id, 'mannerAarre');
   game.phase = 'action';
   const tulos = game.actionQuiz({ form: 'flag' });
   assert.ok(tulos.ok, tulos.error);
@@ -4153,10 +4352,10 @@ test('lippukysymys näyttää lipun ja neljä vaihtoehtoa', async () => {
 
 test('lippukysymys ei kysy samaa maata kahdesti', async () => {
   const game = newGame(456);
-  game.worldOf(game.player).tokens.set(game.cityOf().id, 'ruby');
+  game.worldOf(game.player).tokens.set(game.cityOf().id, 'mannerAarre');
   const nahdyt = new Set();
   for (let i = 0; i < 25; i++) {
-    game.worldOf(game.player).tokens.set(game.cityOf().id, 'ruby');
+    game.worldOf(game.player).tokens.set(game.cityOf().id, 'mannerAarre');
     game.phase = 'action';
     const q = game.actionQuiz({ form: 'flag' }).quiz;
     if (q.kind !== 'flag') break;
@@ -4264,7 +4463,7 @@ test('valokuvakysymys näyttää kuratoidun kuvan, ei artikkelin pääkuvaa', ()
    */
   const game = newGame(311);
   game.player.pos = { type: 'city', city: 'timbuktu' };
-  game.tokens.set('timbuktu', 'emerald');
+  game.tokens.set('timbuktu', 'pieniAarre');
   game.setPhotoPool(['tripoli', 'kairo'], new Map([
     ['tripoli', { tiedosto: 'Tripoli-katu.jpg', lahde: 'CC BY (Kuvaaja, Commons)' }],
     ['kairo', { tiedosto: 'Kairo-tori.jpg', lahde: 'CC BY-SA (Toinen, Commons)' }],
@@ -4320,7 +4519,7 @@ test('valokuvakysymys ei näytä kuvaa siitä kaupungista, jossa seistään', ()
    */
   const game = newGame(312);
   game.player.pos = { type: 'city', city: 'timbuktu' };
-  game.tokens.set('timbuktu', 'emerald');
+  game.tokens.set('timbuktu', 'pieniAarre');
   // Poolissa on vain nykyinen kaupunki -> valokuvamuoto ei kelpaa,
   // vaan kysymys putoaa tavalliseen monivalintaan.
   game.setPhotoPool(['timbuktu'], new Map([['timbuktu', { tiedosto: 'x.jpg' }]]));
@@ -4332,7 +4531,7 @@ test('valokuvakysymys ei näytä kuvaa siitä kaupungista, jossa seistään', ()
   for (const seed of [313, 314, 315, 316, 317]) {
     const peli = newGame(seed);
     peli.player.pos = { type: 'city', city: 'timbuktu' };
-    peli.tokens.set('timbuktu', 'emerald');
+    peli.tokens.set('timbuktu', 'pieniAarre');
     peli.setPhotoPool(['timbuktu', 'tripoli'], new Map([
       ['timbuktu', { tiedosto: 'a.jpg' }],
       ['tripoli', { tiedosto: 'b.jpg' }],

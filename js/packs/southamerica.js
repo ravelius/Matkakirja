@@ -306,27 +306,18 @@ export const SOUTHAMERICA = {
   minCityDistance: 50,
 
   tokens: {
-    // Smaragdin tilalla on Kolumbian oma jalokivi ja topaasin tilalla
-    // Andien hopea, jonka takia koko manner aikanaan valloitettiin.
     types: themedTokenTypes({
       star: {
         name: 'El Doradon aarre',
         kuva: 'assets/aarteet/aarre-southamerica-star.jpg',
       },
-      ruby: {
+      mannerAarre: {
         name: 'Inkojen kultafiguuri', color: '#e0b02a',
-        kuva: 'assets/aarteet/aarre-southamerica-ruby.jpg',
-      },
-      emerald: {
-        name: 'Kolumbian smaragdi', color: '#2fa36b',
-        kuva: 'assets/aarteet/aarre-southamerica-emerald.jpg',
-      },
-      topaz: {
-        name: 'Potosín hopeakolikko', color: '#c9ccd4',
-        kuva: 'assets/aarteet/aarre-southamerica-topaz.jpg',
+        kuva: 'assets/aarteet/aarre-southamerica-manner.jpg',
       },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 6, topaz: 8, empty: 13 },
+    // 38 kaupunkia, yksi laatta kussakin.
+    counts: { star: 1, mannerAarre: 1, isoAarre: 12, pieniAarre: 24 },
   },
 
   questions: SOUTHAMERICA_QUESTIONS,
@@ -382,7 +373,7 @@ export const SOUTHAMERICA = {
     intro: 'Peli alkaa! Etsikää El Doradon aarre ja palatkaa Panamaan, Buenos Airesiin tai Rioon.',
     starFound: (name, city) => `◈ ${name} löysi EL DORADON AARTEEN kaupungista ${city}!`,
     starToast: 'EL DORADON AARRE!',
-    starChase: 'Nyt on kiire kotiin — myös hevosenkengän haltija voi voittaa pelin.',
+    starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
     winStar: 'toi El Doradon aarteen turvallisesti kotiin',
     winnerStar: (name, money) => `${name} toi El Doradon aarteen kotiin ${money} punnan kanssa.`,
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.

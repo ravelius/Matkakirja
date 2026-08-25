@@ -10,6 +10,7 @@ import { HUUDAHDUKSET } from './aani-ehdokkaat.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { asetaKuva } from './media.js';
 import { tokenIconSvg } from './mapart.js';
+import { AARRETYYPIT } from './tokens.js';
 import { fetchImage, fetchSummary } from './wiki.js';
 import { OMAT_TIIVISTELMAT } from './packs/omat-tiivistelmat.js';
 
@@ -190,43 +191,53 @@ export const EVENT_SOUND = { fare: 'ferry', flight: 'flight', aid: 'coin', stuck
 // luki vain kartan päällä kellunut tilarivi, jota ei enää ole.)
 
 /*
- * Laatat, jotka ovat aarre: unohdettu aarre ja kolme jalokiveä. Erottelu
- * on iOS-kuoren juhlatärähdystä varten (js/natiivi.js) — muut laatat
- * ovat löytöjä, mutta eivät sitä hetkeä, jota varten juhla on olemassa.
+ * Laatat, joista iOS-kuori tärähtää juhlaan (js/natiivi.js).
+ *
+ * JUHLA ON ISOILLE LÖYDÖILLE. Kun laatan alta alkoi löytyä aina aarre,
+ * "kaikki aarteet" olisi tarkoittanut tärähdystä lähes joka
+ * pysähdyksellä ja ele olisi kulunut loppuun. Pieni paikallisaarre —
+ * kaksi kolmasosaa laatoista — jää siksi ulkopuolelle; osuus on
+ * suunnilleen sama kuin ennen, kun juhla kuului tähdelle ja
+ * jalokivilaatoille.
  */
-export const AARRELAATAT = new Set(['star', 'ruby', 'emerald', 'topaz']);
+export const AARRELAATAT = new Set(
+  [...AARRETYYPIT].filter((type) => type !== 'pieniAarre'),
+);
 
+/*
+ * Paljastusruudun alateksti laattatyypeittäin. Paikallisaarteilta ja
+ * mantereen aarteelta rivi puuttuu tarkoituksella: niiden alle tulee
+ * löytöhetkellä arvottu "+N puntaa" (js/ui.js playTokenReveal).
+ */
 export const REVEAL_SUB = {
   star: 'Vie unohdettu aarre kotiin ja voitat pelin!',
-  horseshoe: 'Voit voittaa, jos ehdit kotiin ensimmäisenä',
   robber: 'Rosvo haastaa kaksintaisteluun!',
-  empty: 'Isoisän merkintä oli vanhentunut — täältä ei löytynyt mitään',
-  // Ilman tätä riviä taikalasin alle tulisi "+0 puntaa": laattatyypin
-  // arvo on nolla, koska linssi ei ole rahaa (js/tokens.js).
-  linssi: 'Uusi linssi kartalle — katso maailmaa toisin',
 };
 
 /*
  * Nuoren herran huudahdus paljastushetkellä (omistajan tilaus
  * 9.8.2026): lyhyt spontaani repliikki heti kun aarre kääntyy esiin,
- * ENNEN varsinaista cliffhanger-tekstiä. Sävy kasvaa aarteen arvon
- * mukana — pikkulöytö kuitataan, suurlöytö vie sanat. Arvotaan joka
- * kerta, jotta toisto ei kulu.
+ * ENNEN varsinaista cliffhanger-tekstiä. Arvotaan joka kerta, jotta
+ * toisto ei kulu.
  */
 
 /**
- * Arvo huudahdus laattatyypin mukaan; muille kuin aarteille ei
- * mitään. Palauttaa tekstin JA sitä vastaavan äänitiedoston — sama
- * repliikki luetaan ja kirjoitetaan (omistajan tarkennus 10.8.2026:
- * "Hihkaisu saisi olla sama luettuna ja kirjoitettuna"). Tiedostot
+ * Arvo huudahdus laattatyypin mukaan; muille kuin aarteille ei mitään.
+ *
+ * PÄÄAARTEEN HUUDAHDUKSET LUETAAN ÄÄNEEN, MUITA EI (Raamattu, osio
+ * "Aarteet ja eteneminen": *"pääaarteen luetut säilyvät; muut
+ * korvataan korkeintaan kahden sanan huudahduksilla"*). Pääaarteen
+ * repliikit ovat siis sama luettuna ja kirjoitettuna, ja tiedostot
  * generoi tools/generoi-hihkaisut.mjs täsmälleen tästä taulusta.
+ * Lyhyiden huudahdusten tiedosto on null: äänitteitä ei ole eikä
+ * tarvita, kun repliikki on kaksi sanaa.
  */
-export function arvoHuudahdus(type, token) {
-  const avain = type === 'star' ? 'star' : token.value;
-  const lista = HUUDAHDUKSET[avain];
+export function arvoHuudahdus(type) {
+  const lista = HUUDAHDUKSET[type];
   if (!lista) return null;
   const i = Math.floor(Math.random() * lista.length);
-  return { teksti: lista[i], tiedosto: `assets/audio/huudahdus-${avain}-${i + 1}.mp3` };
+  const tiedosto = type === 'star' ? `assets/audio/huudahdus-star-${i + 1}.mp3` : null;
+  return { teksti: lista[i], tiedosto };
 }
 
 /*
@@ -248,8 +259,8 @@ export function aarrekuvanOsoitteet(kuva) {
  * token on VALMIIKSI RATKAISTU näyttötieto (game.aarreTyyppi /
  * aarreMantereella) — maailmankartalla se on löytömantereen aarre.
  * Piirrosikoni jää varasoluksi laatoille, joilla ei ole kuvaa
- * (kenkä, rosvo, linssi; Suomi ja Istanbul) — sekä tilanteeseen,
- * jossa kuva ei lataudu.
+ * (rosvo, paikallisaarteet, varusteet) — sekä tilanteeseen, jossa
+ * kuva ei lataudu.
  */
 export function aarreIkoni(token, type, size) {
   const kuva = token?.kuva;
@@ -614,7 +625,6 @@ export const VIIVA_IKONIT = {
   passi: '<rect x="5.5" y="3.5" width="13" height="17" rx="2"/><circle cx="12" cy="10.3" r="2.9"/><path d="M8.6 16.6h6.8"/>',
   paivita: '<path d="M19.4 4.8v3.7h-3.7"/><path d="M19.2 8.4a7.4 7.4 0 1 0 1 5.4"/>',
   kallo: '<path d="M12 3.8c-3.9 0-6.5 2.7-6.5 6.1 0 2 .9 3.3 2.1 4.2v2.5h8.8v-2.5c1.2-.9 2.1-2.2 2.1-4.2 0-3.4-2.6-6.1-6.5-6.1z"/><g class="taytto"><circle cx="9.6" cy="10.1" r="1.3"/><circle cx="14.4" cy="10.1" r="1.3"/></g><path d="M10.3 16.6v2.4M13.7 16.6v2.4"/>',
-  kenka: '<path d="M5.2 19.6h4.3v-3.2a5.7 5.7 0 1 1 5 0v3.2h4.3"/>',
   kukkaro: '<path d="M9.6 6.9 8.3 4.2h7.4L14.4 6.9"/><path d="M9.6 6.9h4.8c2.5 1.6 4.1 4.2 4.1 7 0 3.3-2.5 5.4-6.5 5.4s-6.5-2.1-6.5-5.4c0-2.8 1.6-5.4 4.1-7z"/>',
   estetty: '<circle cx="12" cy="12" r="8.4"/><path d="M6.3 6.3l11.4 11.4"/>',
   ankkuri: '<circle cx="12" cy="5" r="1.8"/><path d="M12 6.8v12.6M8.7 9.6h6.6"/><path d="M5.2 13.8c.3 3.9 3.2 6.3 6.8 6.3s6.5-2.4 6.8-6.3"/><path d="M5.2 13.8 3.5 12.6M18.8 13.8l1.7-1.2"/>',

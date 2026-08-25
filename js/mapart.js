@@ -2016,15 +2016,6 @@ export function drawTokenIcon(parent, type) {
       }, g);
       break;
 
-    case 'horseshoe':
-      el('path', {
-        d: 'M-8,10 L-8,-1 A8,9 0 0 1 8,-1 L8,10',
-        class: 'icon-shoe',
-      }, g);
-      el('circle', { cx: -8, cy: 8, r: 1.7, class: 'icon-shoe-hole' }, g);
-      el('circle', { cx: 8, cy: 8, r: 1.7, class: 'icon-shoe-hole' }, g);
-      break;
-
     case 'robber':
       // Leveälierinen hattu ja silmänaamio.
       el('path', { d: 'M-12,-2 q12,-5 24,0 q-12,4 -24,0 z', class: 'icon-hat' }, g);
@@ -2041,14 +2032,13 @@ export function drawTokenIcon(parent, type) {
 
     case 'linssi':
       /*
-       * Taikalasi: sama suurennuslasin muoto kuin Tutki-napissa, jotta
-       * laatan alta löytyvä esine tunnistetaan siksi työkaluksi, jolla
-       * maailmaa katsotaan tarkemmin.
+       * Taikalasi EI ole laatta vaan varuste (Raamattu: varusteet
+       * ostetaan kaupasta). Kuvake on silti täällä, koska matkalaukun
+       * varustenappi käyttää sitä varasoluna, jos varustekuva ei
+       * lataudu (js/ui.js rakennaLinssivalikko).
        *
-       * Lasi on läpikuultava eikä jalokiven tapaan täyteen väritetty:
-       * linssi ei peitä maailmaa vaan näyttää siitä uuden puolen. Ilman
-       * omaa haaraa tämä piirtyisi default-haaran jalokivenä
-       * (docs/moduulit/linssit.md luku 4.7).
+       * Lasi on läpikuultava eikä aarteen tapaan täyteen väritetty:
+       * linssi ei peitä maailmaa vaan näyttää siitä uuden puolen.
        */
       el('circle', { cx: -2, cy: -3, r: 7.4, class: 'icon-linssi-lasi' }, g);
       el('path', { d: 'M3.2,2.2 L9.6,8.8', class: 'icon-linssi-varsi' }, g);
@@ -2056,16 +2046,24 @@ export function drawTokenIcon(parent, type) {
       el('path', { d: 'M-6.6,-4.4 A5,5 0 0 1 -2.8,-7.8', class: 'icon-linssi-kajo' }, g);
       break;
 
+    case 'pieniAarre':
+      // Pieni paikallisaarre: kolikkopino. Varasolu maalle, jonka
+      // omaa aarreparia ei ole vielä kirjoitettu — ja sille hetkelle,
+      // kun aarrekuva ei lataudu.
+      el('ellipse', { cx: 0, cy: 6, rx: 9, ry: 3.4, class: 'icon-aarre' }, g);
+      el('ellipse', { cx: 0, cy: 1, rx: 9, ry: 3.4, class: 'icon-aarre' }, g);
+      el('ellipse', { cx: 0, cy: -4, rx: 9, ry: 3.4, class: 'icon-aarre' }, g);
+      break;
+
     default: {
-      // Jalokivi: hiottu kanta ja särmät.
-      el('path', {
-        d: 'M-11,-3 L-6,-9 L6,-9 L11,-3 L0,10 Z',
-        class: `icon-gem gem-${type}`,
-      }, g);
-      el('path', {
-        d: 'M-11,-3 L11,-3 M-6,-9 L-3.5,-3 L0,10 M6,-9 L3.5,-3',
-        class: 'icon-gem-facets',
-      }, g);
+      /*
+       * Iso paikallisaarre ja mantereen aarre: kätköarkku. Sama kuvake
+       * kummallekin — ero on arvossa ja nimessä, ei muodossa, ja
+       * useimmiten tilalla on aarteen oma kuva.
+       */
+      el('path', { d: 'M-11,-1 q11,-8 22,0 l0,9 q-11,3 -22,0 z', class: 'icon-aarre' }, g);
+      el('path', { d: 'M-11,-1 L11,-1', class: 'icon-aarre-viivat' }, g);
+      el('path', { d: 'M-2,-2.5 L-2,4 M2,-2.5 L2,4', class: 'icon-aarre-viivat' }, g);
     }
   }
   return g;

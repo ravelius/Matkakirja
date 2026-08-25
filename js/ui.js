@@ -6,7 +6,6 @@ import {
   chooseMove,
   chooseQuizAnswer,
   chooseTravel,
-  wantsDuelBypass,
   wantsDuelRelief,
   wantsFiftyFifty,
   wantsHint,
@@ -31,6 +30,7 @@ import {
   kehittajaPisteetPaalla, kehittajaRajatPaalla, kehittajaTilaPaalla,
   shortIntro, suojaa, tallennaLinssi, tallennettuLinssi, viivaIkoni,
 } from './ui-apurit.js';
+import { onAarre } from './tokens.js';
 // Remontin M5a: lehden sivukoneisto.
 import {
   avaaGrafiikkaLehti,
@@ -221,7 +221,6 @@ import {
   drawTerrain,
   drawTokenIcon,
   drawWaves,
-  tokenIconSvg,
   paperi,
   kasinPiirretty,
   rasteroiRuutu,
@@ -1543,51 +1542,46 @@ export class UI {
       this.suljePostikortti();
     };
 
+    /*
+     * KAIUTIN ON LUENNAN KYTKIN (omistaja 25.8.2026: *"Tuon luenta
+     * tekstin ja kytkimen voi ottaa pois kokonaan koska yläreunassa on
+     * jo kaiutin kuvake sitä varten"*). Erillinen LUENTA-liukukytkin
+     * poistui; painallus kääntää saman laitekohtaisen tilan
+     * (js/luenta.js) ja kuvake saa vinoviivan, kun luenta on pois.
+     */
     this.factKuuntele = document.getElementById('fact-kuuntele');
     this.factKuuntele.addEventListener('click', () => {
-      const audio = this.diaryVoice;
-      if (audio) {
-        if (audio.paused) {
-          audio.jatkettu = true; // automaattinen pysäytys ei enää koske
-          audio.play().catch(() => {});
-        } else {
-          audio.pause();
-        }
+      const paalle = !luentaKytkinPaalla();
+      asetaLuentaKytkin(paalle);
+      this.paivitaKaiutinTila();
+      sfx.play('clack');
+      if (!paalle) {
+        // Pois kesken luennan: kumpikin lukija vaikenee heti.
+        stopDiaryVoice(this);
+        if (lukijaLukee(this.factKuuntele)) pysaytaLukija();
         return;
       }
-      // Ääni ehti sulkeutua (esim. korttien vaihto) — aloitetaan alusta.
+      /*
+       * Päälle: RUUDULLA OLEVA MERKINTÄ ALKAA ALUSTA — sama sopimus
+       * kuin vanhalla kytkimellä. Jatko-osa nollataan, ettei alusta
+       * alkaneen luennan perään soisi vanhaa jatkoa.
+       */
+      this.merkintaJatko = null;
+      if (this.merkinnanLuenta) {
+        this.merkinnanLuenta();
+        return;
+      }
+      // Merkintä, jota ei ole rekisteröity luentatehtäväksi: soitetaan
+      // äänite tai luetaan laitteen omalla äänellä kuten ennenkin.
       if (this.diaryFullUrl) {
         playDiaryVoice(this, this.diaryFullUrl);
         return;
       }
-      /*
-       * MERKINTÄ ILMAN GENEROITUA ÄÄNITETTÄ (v-lisäys 12.8.2026).
-       *
-       * Sama kaiutin, sama ele, eri lukija: kun puhe-*.mp3:ää ei ole
-       * tehty, merkintä luetaan laitteen omalla äänellä (iOS-kuoren
-       * luentasilta tai selaimen puhesyntetisaattori). Generoituihin
-       * äänitteisiin tämä ei kajoa lainkaan — ne käsitellään yllä.
-       */
-      if (lukijaLukee(this.factKuuntele)) {
-        pysaytaLukija();
-        return;
-      }
-      /*
-       * Lyhyen autoluennan jatko: autoluenta luki vain ensimmäisen
-       * virkkeen ja pani loput talteen — nappi jatkaa siitä, ei
-       * alusta. Seuraava painallus (jatko kulutettu) lukee taas koko
-       * merkinnän.
-       */
-      const jatko = this.merkintaJatko;
-      this.merkintaJatko = null;
-      const teksti = jatko ?? kokoaLuettavaTeksti(this.factText);
-      // Merkinnät omalla persoonalla ja omassa äänisäilössä (omistajan
-      // ohje 14.8.2026): säilön voi tuhota erikseen, kun tekstit
-      // kirjoitetaan uusiksi, ja äänen voi vaihtaa muista lukuäänistä
-      // riippumatta.
+      const teksti = kokoaLuettavaTeksti(this.factText);
       if (lueMerkinta(this, teksti)) return;
       lueAaneen(teksti, this.factKuuntele, { persoona: 'merkinnat', sailio: 'merkinnat' });
     });
+    this.paivitaKaiutinTila();
 
     this.eventDialog = document.getElementById('event-dialog');
     this.eventText = document.getElementById('event-text');
@@ -1603,7 +1597,6 @@ export class UI {
     this.factPlace = document.getElementById('fact-place');
     this.factText = document.getElementById('fact-text');
     this.factCard = this.factText.closest('.fact-card');
-    this.rakennaLuentaKytkin();
     this.factKey = null;
     // Jatkuu-vihje: nuoli ja häivytys näkyvät, kun tekstiä on näkymän
     // alapuolella. Tarkkailija kattaa myös kirjoituskoneen etenemisen,
@@ -1695,11 +1688,8 @@ export class UI {
     });
     this.quizHint = document.getElementById('quiz-hint');
     this.quizHint.addEventListener('click', () => {
-      if (this.game.phase === 'duel') {
-        sfx.play('coin');
-        this.doAction(() => this.game.actionDuelBypass());
-        return;
-      }
+      // Kaksintaistelussa vihjenappi on piilossa: hevosenkengillä
+      // ohittaminen poistui uuden aarrejärjestelmän myötä (js/visa.js).
       sfx.play('hint');
       this.doAction(() => this.game.actionHint());
     });
@@ -7933,67 +7923,30 @@ export class UI {
   }
 
   /*
-   * ── LUENNAN KYTKIN PUHEKUPLAN ALLA (omistajan tilaus 25.8.2026) ────
+   * ── KAIUTIN ON LUENNAN KYTKIN (omistajan tilaus 25.8.2026) ─────────
    *
-   * Raamattu (Fokusmoodi, LUENTA): *"Luenta on striimiääni, jonka kytkin
-   * on AINA puhekuplan alla painettavissa päälle ja pois."*
-   *
-   * Kytkin rakennetaan koodista eikä index.html:stä, koska se kuuluu
-   * matkakirjakortin pohjalle riippumatta siitä, mikä kortin sisältöä
-   * kulloinkin kirjoittaa (saapumismerkintä, fokusvirran merkintä,
-   * isoisän aikataulurivi). Se on kortin VIIMEINEN lapsi, joten se
-   * asettuu tekstin alle myös silloin kun kuvanappi on esillä.
+   * Erillinen LUENTA-liukukytkin puhekuplan alla poistui: *"yläreunassa
+   * on jo kaiutin kuvake sitä varten"*. Sama laitekohtainen tila
+   * (js/luenta.js) elää yhä — sitä käännetään nyt kortin kaiuttimesta,
+   * ja pois kytkettynä kuvakkeen päällä on vinoviiva (css/styles.css
+   * .fact-kuuntele.mykistetty).
    *
    * KYTKIN OHJAA ISOISÄÄ. Pöllön kuplat elävät omassa kerroksessaan
    * (js/fokusvirta.js) eikä niitä lueta koskaan, joten kytkimellä ei ole
    * niihin mitään sanottavaa.
    */
-  rakennaLuentaKytkin() {
-    if (!this.factCard) return;
-    const nappi = html('button', 'fact-luenta');
-    nappi.type = 'button';
+  paivitaKaiutinTila() {
+    const nappi = this.factKuuntele;
+    if (!nappi) return;
+    const paalla = luentaKytkinPaalla();
+    nappi.classList.toggle('mykistetty', !paalla);
     // role="switch" eikä pelkkä painike: ruudunlukija kertoo tilan
     // (aria-checked) eikä pelkkää nimeä.
     nappi.setAttribute('role', 'switch');
-    nappi.appendChild(html('span', 'fact-luenta-nimi', 'Luenta'));
-    const ura = html('span', 'fact-luenta-ura');
-    ura.appendChild(html('span', 'fact-luenta-nuppi'));
-    nappi.appendChild(ura);
-    nappi.addEventListener('click', (e) => {
-      // Kortti on kutistuneena itsekin painike ja kartta ottaa
-      // napautukset zoomaukseksi — kytkin ei saa vuotaa kumpaankaan.
-      e.stopPropagation();
-      const paalle = !luentaKytkinPaalla();
-      asetaLuentaKytkin(paalle);
-      this.paivitaLuentaKytkin();
-      sfx.play('clack');
-      if (!paalle) {
-        // Pois kesken luennan: kertoja vaikenee heti.
-        stopDiaryVoice(this);
-        return;
-      }
-      /*
-       * Päälle kesken merkinnän: NYKYINEN MERKINTÄ SAA ALKAA ALUSTA
-       * (omistajan tilaus). Lyhyen kertojan jatko-osa nollataan samalla,
-       * ettei kaiutinnappi tarjoaisi jatkoa luennalle, joka alkoi juuri
-       * uudelleen alusta.
-       */
-      this.merkintaJatko = null;
-      this.merkinnanLuenta?.();
-    });
-    this.factCard.appendChild(nappi);
-    this.luentaKytkin = nappi;
-    this.paivitaLuentaKytkin();
-  }
-
-  /** Kytkimen ulkoasu ja saavutettavuusmääreet tallennetusta tilasta. */
-  paivitaLuentaKytkin() {
-    const nappi = this.luentaKytkin;
-    if (!nappi) return;
-    const paalla = luentaKytkinPaalla();
-    nappi.classList.toggle('paalla', paalla);
     nappi.setAttribute('aria-checked', paalla ? 'true' : 'false');
-    const nimi = paalla ? 'Luenta päällä — sulje' : 'Luenta pois — kytke päälle';
+    const nimi = paalla ? 'Luenta päällä — mykistä' : 'Luenta pois — kytke päälle';
+    nappi.dataset.lukijaNimi = nimi;
+    if (lukijaLukee(nappi)) return;
     nappi.title = nimi;
     nappi.setAttribute('aria-label', nimi);
   }
@@ -8034,11 +7987,9 @@ export class UI {
     const nappi = this.factKuuntele;
     if (!nappi) return;
     nappi.hidden = !onAanite && !lukijaTuettu();
-    const nimi = onAanite ? 'Jatka merkinnän kuuntelua' : 'Kuuntele merkintä';
-    nappi.dataset.lukijaNimi = nimi;
-    if (lukijaLukee(nappi)) return;
-    nappi.title = nimi;
-    nappi.setAttribute('aria-label', nimi);
+    // Nimi ja tila tulevat kytkimestä — kaiutin on sama vipu joka
+    // merkinnällä, oli äänite tai laitteen lukija.
+    this.paivitaKaiutinTila();
   }
 
   /**
@@ -8203,7 +8154,16 @@ export class UI {
           fokusvirtaMerkintaLuettu(this, virtaKaupunki);
         });
         const virranMerkinta = fokusvirtaSisalto(this, virtaKaupunki)?.matkakirja;
-        const virtaAanite = merkinta.aanite ?? virranMerkinta?.aanite ?? null;
+        /*
+         * AARREMERKINTÄ EI PERI SAAPUMISMERKINNÄN ÄÄNITETTÄ (omistajan
+         * pelitesti 25.8.2026: aarteen jälkeen lukija aloitti vanhan
+         * matkakirjan uudelleen). Varapolku virran matkakirjan
+         * äänitteeseen kuuluu vain virran omalle merkinnälle — muu
+         * merkintä ilman omaa äänitettä jää lukematta.
+         */
+        const onAarremerkinta = merkinta.avain.startsWith('fokusaarre:');
+        const virtaAanite = merkinta.aanite
+          ?? (onAarremerkinta ? null : virranMerkinta?.aanite) ?? null;
         this.diaryFullUrl = virtaAanite;
         if (virtaAanite) {
           // Kaiutin näkyviin vain äänitteellisille: ilman äänitettä
@@ -11770,8 +11730,9 @@ export class UI {
   }
 
   /**
-   * Matkasaalis passissa: tähti, hevosenkengät ja jalokivet. Nämä näkyivät
-   * ennen erillisessä pelaajapaneelissa, joka vei tilaa kartalta.
+   * Matkasaalis passissa: unohdetut aarteet, mantereen aarteet ja
+   * paikallisaarteet. Nämä näkyivät ennen erillisessä
+   * pelaajapaneelissa, joka vei tilaa kartalta.
    */
   renderFinds() {
     const { game } = this;
@@ -11799,25 +11760,25 @@ export class UI {
       const tahti = game.aarreMantereella('star', p.findManner?.[i] ?? null);
       rivi(aarreIkoni(tahti, 'star', 44), tahti.name);
     });
-    if (p.horseshoes) rivi(tokenIconSvg('horseshoe', 44), `Hevosenkenkiä ${p.horseshoes}`);
 
     /*
-     * Jalokivet tyypeittäin JA mantereittain: maailmankartalla sama
-     * laji on eri mantereilla eri aarre (findManner kulkee finds-
-     * listan rinnalla; vanhan tallennuksen löydöillä manner on null
-     * ja laudan oma tyyppi kelpaa).
+     * Muut aarteet omina riveinään. Ryhmittely tehdään VALMIIN NIMEN
+     * mukaan, koska sama laattatyyppi on eri paikoissa eri aarre:
+     * mantereen aarre vaihtuu mantereittain (findManner) ja
+     * paikallisaarre maittain (findMaa). Kummankin listan alkiot
+     * kulkevat finds-listan rinnalla samoin indeksein; vanhan
+     * tallennuksen löydöillä ne ovat null, jolloin laudan oma tyyppi
+     * ja yleinen varanimi kelpaavat.
      */
     const counts = new Map();
     p.finds.forEach((type, i) => {
-      if ((game.tokenTypes[type]?.value ?? 0) <= 0) return;
-      const manner = p.findManner?.[i] ?? null;
-      const avain = `${type}:${manner ?? ''}`;
-      const rivit = counts.get(avain) ?? { type, manner, n: 0 };
+      if (type === 'star' || !onAarre(type)) return;
+      const token = game.aarreMantereella(type, p.findManner?.[i] ?? null, p.findMaa?.[i] ?? null);
+      const rivit = counts.get(token.name) ?? { type, token, n: 0 };
       rivit.n++;
-      counts.set(avain, rivit);
+      counts.set(token.name, rivit);
     });
-    for (const { type, manner, n } of counts.values()) {
-      const token = game.aarreMantereella(type, manner);
+    for (const { type, token, n } of counts.values()) {
       rivi(aarreIkoni(token, type, 44), `${token.name}${n > 1 ? ` ×${n}` : ''}`);
     }
 
@@ -12675,9 +12636,12 @@ export class UI {
     if (!this.winnerDialog.open) sfx.play('win');
     const w = this.game.winner;
     document.getElementById('winner-title').textContent = `${w.name} voitti!`;
-    this.typeText(document.getElementById('winner-text'), w.stars > 0
-      ? this.game.pack.texts.winnerStar(w.name, w.money)
-      : `${w.name} ehti hevosenkengän kanssa kotiin ennen unohdetun aarteen löytäjää.`, 'winner');
+    // Voiton ainoa tie on pääaarre kotiin (js/game.js checkWin).
+    this.typeText(
+      document.getElementById('winner-text'),
+      this.game.pack.texts.winnerStar(w.name, w.money),
+      'winner',
+    );
     const roamBtn = document.getElementById('winner-roam');
     roamBtn.onclick = () => {
       this.winnerDialog.close();
@@ -12913,38 +12877,35 @@ export class UI {
     const token = this.game.aarreTyyppi(type, this.game.quiz?.cityId);
     /*
      * Aarre tuntuu kädessä (iOS-kuori). Juhla on pelin voimakkain
-     * tärähdys, ja siksi se on varattu löydölle: tyhjä kotelo, rosvo,
-     * hevosenkenkä ja taikalasi eivät saa sitä, tai ele kuluisi loppuun.
+     * tärähdys, ja siksi se on varattu löydölle: rosvo ei saa sitä,
+     * tai ele kuluisi loppuun.
      */
     if (AARRELAATAT.has(type)) natiiviTarise('juhla');
-    /*
-     * Varustekuva (omistajan tilaus 10.8.2026: "tee varusteet kuviksi
-     * samoin kuin aarteet"): löytynyt linssi nousee mustasta omalla
-     * toimintakuvallaan kuten aarteet. Tunnus on jo tapahtumajonossa
-     * (revealToken kirjoitti sen); tyhjä kotelo jää kuvattomaksi,
-     * koska sillä ei ole varustetta näytettävänä.
-     */
-    const linssiTunnus = type === 'linssi'
-      ? (this.game.events?.find((e) => e.linssi)?.linssi ?? null) : null;
-    const kuva = linssiTunnus
-      ? `assets/varusteet/varuste-${linssiTunnus}.jpg` : (token.kuva ?? null);
+    const kuva = token.kuva ?? null;
     const { overlay, caption, kuvaEl } = this.rakennaPaljastus(kuva, token.name);
 
     // Nuoren herran huudahdus ensin — se kuuluu juuri siihen hetkeen,
     // kun aarre tulee näkyviin; cliffhanger-teksti vasta sen jälkeen.
-    const huudahdus = arvoHuudahdus(type, token);
+    const huudahdus = arvoHuudahdus(type);
     if (huudahdus) caption.appendChild(html('span', 'reveal-huudahdus', huudahdus.teksti));
     caption.appendChild(html('strong', '', token.name));
-    caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+${token.value} puntaa`));
+    /*
+     * ARVO ON LÖYTÖHETKEN OMA (Raamattu: *"Arvo vaihtelee
+     * löytöhetkellä"*). revealToken jätti sen viimeAarre-kenttään;
+     * ilman sitä kortti näyttäisi laattatyypin nollan, koska pienen ja
+     * ison paikallisaarteen arvoa ei lueta taulusta.
+     */
+    const loyto = this.game.viimeAarre;
+    const arvo = loyto?.type === type ? loyto.arvo : token.value;
+    caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+${arvo} puntaa`));
     /*
      * Tarinakaaren aarreteksti paljastuksen alle: kätkön löytyessä
      * kaaren henkilö sulkee kohtaamisen ja jättää auki jäävän vihjeen
      * (omistajan tilaus 9.8.2026 — korvasi isoisän aarresitaatin).
-     * Ei tyhjälle laatalle — pettymyksellä on oma selitteensä. Teksti
-     * on kerrontaa eikä sitaatti, joten lainausmerkkejä tai nimiötä
-     * ei lisätä päälle.
+     * Teksti on kerrontaa eikä sitaatti, joten lainausmerkkejä tai
+     * nimiötä ei lisätä päälle.
      */
-    const kaari = (type !== 'empty' && KAARI_LAUDAT.has(this.game.pack.id))
+    const kaari = KAARI_LAUDAT.has(this.game.pack.id)
       ? TARINAKAARI[this.game.quiz?.cityId] : null;
     /*
      * Hihkaisu on kortin huudahdus ääneen — sama repliikki luettuna
@@ -12956,21 +12917,13 @@ export class UI {
     const hihkaisu = (huudahdus && sfx.enabled && kertojaTila() !== 'ei')
       ? huudahdus.tiedosto : null;
     if (kaari?.aarre) caption.appendChild(html('p', 'reveal-isoisa', kaari.aarre));
-    /*
-     * Taikalasin kohdalla "Taikalasi" ei kerro vielä mitään: pelaajan
-     * pitää nähdä KUMPI lasi löytyi ja mitä sillä näkee. Nimi ja kuvaus
-     * asuvat linssimoduulissa (suunnitelman luku 3), joten ne haetaan
-     * dynaamisella tuonnilla — eikä kortin nousu jää sitä odottamaan,
-     * vaan teksti täydentyy paikalleen kun se saapuu.
-     */
-    if (type === 'linssi') void this.taydennaLinssiPaljastus(caption);
 
     // Dialogi on top layerissa, joten paljastus lisätään sen sisään.
     this.quizDialog.appendChild(overlay);
 
-    // Näyttöaika kasvaa selitteen mukana: "+300 puntaa" saa vilahtaa,
-    // mutta pitkä selite (esim. tyhjän laatan "merkintä oli vanhentunut")
-    // pitää ehtiä lukea. Napautus tai ruksi ohittaa odotuksen.
+    // Näyttöaika kasvaa selitteen mukana: "+180 puntaa" saa vilahtaa,
+    // mutta pitkä selite (pääaarteen kotiinvientikehotus) pitää ehtiä
+    // lukea. Napautus tai ruksi ohittaa odotuksen.
     const seliteMs = ((REVEAL_SUB[type] ?? '').length + (kaari?.aarre?.length ?? 0)) * 45;
     // Kortti odottaa vähimmäislukuajan; ruksi tai napautus sulkee heti.
     const napautus = new Promise((resolve) => {
@@ -12998,8 +12951,8 @@ export class UI {
     }
     overlay.remove();
     // Löytö päätyy matkalaukkuun: yläreunan Laukku-nappi heilahtaa
-    // eloisasti merkiksi (omistajan toive). Tyhjä laatta ei tuo mitään.
-    if (type !== 'empty') this.elavoitaLaukku();
+    // eloisasti merkiksi (omistajan toive). Rosvo ei tuo mitään.
+    if (onAarre(type)) this.elavoitaLaukku();
   }
 
   /**
@@ -13063,26 +13016,6 @@ export class UI {
      * tapahtumakuplien perään.
      */
     polloPaivitaNakyvyys(true);
-  }
-
-  /**
-   * Paljastusruudun teksti taikalasille: linssin oma nimi ja se yksi
-   * rivi, joka kertoo miksi lasi on hieno.
-   *
-   * Tunnus luetaan pelin tapahtumajonosta, johon revealToken juuri
-   * kirjoitti sen (kenttä linssi). Jono tyhjennetään vasta
-   * playEventsissä, joka ajetaan tämän animaation jälkeen.
-   */
-  async taydennaLinssiPaljastus(caption) {
-    const tunnus = this.game.events?.find((e) => e.linssi)?.linssi ?? null;
-    if (!tunnus) return;
-    const tuki = await this.lataaLinssit();
-    const linssi = tuki?.kaikki.find((l) => l.tunnus === tunnus) ?? null;
-    // Kortti on voinut jo poistua ruudulta: hidas tuonti ei saa
-    // kirjoittaa irralliseen elementtiin.
-    if (!linssi || !caption.isConnected) return;
-    caption.firstChild.textContent = linssi.nimi;
-    caption.lastChild.textContent = linssi.lyhyt;
   }
 
   /**
@@ -14290,7 +14223,6 @@ export class UI {
     }
     if (game.phase === 'duel') {
       if (game.duel.chosen !== null) this.run(() => game.closeDuel());
-      else if (wantsDuelBypass(game)) this.run(() => game.actionDuelBypass());
       else if (wantsDuelRelief(game)) this.run(() => game.actionDuelRelief());
       else answerDuelUi(this, chooseDuelAnswer(game));
       return;

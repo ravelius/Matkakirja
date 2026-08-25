@@ -334,27 +334,18 @@ export const ASIA = {
   minCityDistance: 50,
 
   tokens: {
-    // Topaasin tilalla jade: Kiinassa sitä on arvostettu kultaa enemmän
-    // tuhansien vuosien ajan.
     types: themedTokenTypes({
       star: {
         name: 'Keisarin jadesinetti',
         kuva: 'assets/aarteet/aarre-asia-star.jpg',
       },
-      ruby: {
+      mannerAarre: {
         name: 'Sukeltajan helmi', color: '#e8e4da',
-        kuva: 'assets/aarteet/aarre-asia-ruby.jpg',
-      },
-      emerald: {
-        name: 'Silkkikäärö', color: '#c94f7c',
-        kuva: 'assets/aarteet/aarre-asia-emerald.jpg',
-      },
-      topaz: {
-        name: 'Posliinikuppi', color: '#7f9fc9',
-        kuva: 'assets/aarteet/aarre-asia-topaz.jpg',
+        kuva: 'assets/aarteet/aarre-asia-manner.jpg',
       },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 6, emerald: 8, topaz: 10, empty: 11 },
+    // 41 kaupunkia, yksi laatta kussakin.
+    counts: { star: 1, mannerAarre: 1, isoAarre: 13, pieniAarre: 26 },
   },
 
   questions: ASIA_QUESTIONS,
@@ -409,7 +400,7 @@ export const ASIA = {
     intro: 'Peli alkaa! Etsikää Keisarin jadesinetti ja palatkaa kotisatamaan: Teheraniin, Tokioon, Pekingiin, Singaporeen tai Mumbaihin.',
     starFound: (name, city) => `◈ ${name} löysi KEISARIN JADESINETIN kaupungista ${city}!`,
     starToast: 'KEISARIN JADESINETTI!',
-    starChase: 'Nyt on kiire kotiin — myös hevosenkengän haltija voi voittaa pelin.',
+    starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
     winStar: 'toi Keisarin jadesinetin turvallisesti kotiin',
     winnerStar: (name, money) => `${name} toi Keisarin jadesinetin kotiin ${money} punnan kanssa.`,
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.

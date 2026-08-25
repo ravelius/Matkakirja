@@ -91,7 +91,7 @@ async function lataaSfx() {
 const NIMET = [
   'dieTick', 'dieLand', 'ferry', 'flight',
   'click', 'paper', 'swipe', 'step', 'arrive', 'correct', 'wrong', 'hint',
-  'tick', 'timeout', 'flip', 'clack', 'star', 'gem', 'horseshoe', 'robber',
+  'tick', 'timeout', 'flip', 'clack', 'star', 'gem', 'robber',
   'empty', 'coin', 'stuck', 'turn', 'win', 'pen', 'quizOpen', 'zoom',
   // Pöllön omat äänet (13.8.2026): huhuilu paneelin avautuessa ja
   // kirjoituskoneen rivinvaihtokello vastauksen valmistuessa.
@@ -349,12 +349,21 @@ test('Afrikan kaupungeilla on ambienssi ja tyyppi on tunnettu', async () => {
 
 test('treasureSound osaa kaikki laattatyypit', async () => {
   const { treasureSound } = await import('../js/sound.js');
+  const { TOKEN_TYPES } = await import('../js/tokens.js');
   assert.equal(treasureSound('star'), 'star');
   assert.equal(treasureSound('robber'), 'robber');
-  assert.equal(treasureSound('horseshoe'), 'horseshoe');
+  // Sisäinen merkki: pöllön korvaama laatta ei kilahda aarteena.
   assert.equal(treasureSound('empty'), 'empty');
-  assert.equal(treasureSound('emerald'), 'gem');
+  // Muut aarteet jakavat saman kilahduksen.
+  assert.equal(treasureSound('mannerAarre'), 'gem');
+  assert.equal(treasureSound('isoAarre'), 'gem');
+  assert.equal(treasureSound('pieniAarre'), 'gem');
   assert.equal(treasureSound(undefined), 'gem');
+  // Jokaiselle laattatyypille on oltava ääni — myös uusille.
+  const aanet = new Set(['star', 'robber', 'empty', 'gem']);
+  for (const type of Object.keys(TOKEN_TYPES)) {
+    assert.ok(aanet.has(treasureSound(type)), `laattatyypiltä ${type} puuttuu ääni`);
+  }
 });
 
 // --- kaupunkien omat kenttä-äänitykset (paketti 20) -------------------------

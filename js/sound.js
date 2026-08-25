@@ -1297,7 +1297,6 @@ const REAL_SAMPLES = {
   },
   star: { url: 'assets/audio/efekti-tahti.mp3', credit: 'ElevenLabs SFX' },
   gem: { url: 'assets/audio/efekti-jalokivi.mp3', credit: 'ElevenLabs SFX' },
-  horseshoe: { url: 'assets/audio/efekti-kenka.mp3', credit: 'ElevenLabs SFX' },
   robber: { url: 'assets/audio/efekti-rosvo.mp3', credit: 'ElevenLabs SFX' },
   empty: { url: 'assets/audio/efekti-tyhja.mp3', credit: 'ElevenLabs SFX' },
   stuck: { url: 'assets/audio/efekti-jumissa.mp3', credit: 'ElevenLabs SFX' },
@@ -1349,7 +1348,6 @@ const REAL_PLAYERS = {
   }),
   star: (s) => s.playSlice('star', { dur: 2.6, gain: 0.45, alusta: true }),
   gem: (s) => s.playSlice('gem', { dur: 1.6, gain: 0.4, alusta: true }),
-  horseshoe: (s) => s.playSlice('horseshoe', { dur: 1.1, gain: 0.4, alusta: true }),
   robber: (s) => s.playSlice('robber', { dur: 2.1, gain: 0.45, alusta: true }),
   empty: (s) => s.playSlice('empty', { dur: 1.1, gain: 0.3, alusta: true }),
   stuck: (s) => s.playSlice('stuck', { dur: 1.1, gain: 0.35, alusta: true }),
@@ -1655,11 +1653,6 @@ const SOUNDS = {
     s.hiss({ dur: 0.9, type: 'highpass', freq: 3000, sweepTo: 6000, gain: 0.04, delay: 0.25 });
   },
   gem: (s) => s.bell({ freq: 880, dur: 1.2, gain: 0.13 }),
-  horseshoe: (s) => {
-    // Rauta rautaa vasten: kirkas FM-kilahdus ja pitkä sointi.
-    s.ding({ freq: 1180, ratio: 2.1, index: 700, dur: 0.7, gain: 0.11 });
-    s.bell({ freq: 1180, dur: 0.9, gain: 0.06, delay: 0.02 });
-  },
   robber: (s) => {
     s.tone({ freq: 130, to: 62, dur: 0.55, type: 'sawtooth', gain: 0.17 });
     s.tone({ freq: 196, to: 185, dur: 0.5, type: 'square', gain: 0.06, delay: 0.04 });
@@ -1695,20 +1688,18 @@ lisaaTaustaVaimennus({
   palauta: () => sfx.jatkaEtualalle(),
 });
 
-/** Aarteen paljastuksen ääni laattatyypin mukaan. */
+/**
+ * Aarteen paljastuksen ääni laattatyypin mukaan.
+ *
+ * Pääaarteella on oma fanfaarinsa ja ryöstäjällä oma iskunsa; kaikki
+ * muut aarteet — mantereen aarre ja paikallisaarteet — jakavat saman
+ * kilahduksen ('gem'), jottei jokainen uusi laattatyyppi kasvattaisi
+ * offline-pakettia omalla mp3:llaan. Sisäinen 'empty' on yhä oma
+ * äänensä, jottei pöllön korvaama laatta kilahtaisi aarteena.
+ */
 export function treasureSound(type) {
   if (type === 'star') return 'star';
   if (type === 'robber') return 'robber';
-  if (type === 'horseshoe') return 'horseshoe';
   if (type === 'empty') return 'empty';
-  /*
-   * Taikalasi lainaa tähden fanfaarin eikä saa omaa äänitiedostoa.
-   *
-   * Jokainen uusi mp3 kasvattaa offline-pakettia, ja jalokiven kilahdus
-   * olisi tässä suorastaan väärä vihje: linssi ei ole rahaa. Tähti on
-   * pelin "tämä on iso juttu" -ääni, ja juuri sitä uusi katselutapa on
-   * (docs/moduulit/linssit.md luku 4.7).
-   */
-  if (type === 'linssi') return 'star';
   return 'gem';
 }

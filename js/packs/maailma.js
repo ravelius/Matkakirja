@@ -344,9 +344,12 @@ export const MAAILMA = {
   minCityDistance: 45,
 
   tokens: {
+    // Aloitusnäytön lauta: mantereen aarre jää yleisnimelle, koska
+    // tällä laudalla ei pelata (js/pack.js) eikä sille ole kirjoitettu
+    // omaa aarretta.
     types: themedTokenTypes({ star: { name: 'Magellanin kompassi' } }),
-    // 12 aarrekaupunkia: laattoja on oltava täsmälleen yhtä monta.
-    counts: { star: 1, horseshoe: 2, robber: 1, ruby: 1, emerald: 3, topaz: 4, empty: 2 },
+    // 14 kaupunkia: laattoja on oltava täsmälleen yhtä monta.
+    counts: { star: 1, mannerAarre: 1, isoAarre: 4, pieniAarre: 8 },
   },
 
   questions: MAAILMA_QUESTIONS,
@@ -518,7 +521,7 @@ export const MAAILMA = {
     intro: 'Peli alkaa! Etsikää Magellanin kompassi — maailmanympäripurjehtijan kadonnut aarre.',
     starFound: (name, city) => `◈ ${name} löysi MAGELLANIN KOMPASSIN kaupungista ${city}!`,
     starToast: 'MAGELLANIN KOMPASSI!',
-    starChase: 'Nyt on kiire kotiin — myös hevosenkengän haltija voi voittaa pelin.',
+    starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
     winStar: 'toi Magellanin kompassin turvallisesti kotiin',
     winnerStar: (name, money) => `${name} toi Magellanin kompassin kotiin ${money} punnan kanssa.`,
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.

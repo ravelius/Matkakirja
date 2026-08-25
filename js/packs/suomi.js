@@ -169,12 +169,13 @@ export const SUOMI = {
   minCityDistance: 60,
 
   tokens: {
-    // Spektroliitti on Suomen oma jalokivi: sitä löytyy vain Ylämaalta.
+    // Spektroliitti on Suomen oma kivi: sitä löytyy vain Ylämaalta.
     types: themedTokenTypes({
       star: { name: 'Lapin kulta' },
-      topaz: { name: 'Spektroliitti', color: '#4a6fb3' },
+      mannerAarre: { name: 'Spektroliitti', color: '#4a6fb3' },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 2, ruby: 2, emerald: 4, topaz: 5, empty: 3 },
+    // 19 kaupunkia, yksi laatta kussakin.
+    counts: { star: 1, mannerAarre: 1, isoAarre: 6, pieniAarre: 11 },
   },
 
   questions: SUOMI_QUESTIONS,
@@ -224,7 +225,7 @@ export const SUOMI = {
     intro: 'Peli alkaa! Etsikää Lapin kulta ja palatkaa Helsinkiin tai Ouluun.',
     starFound: (name, city) => `◈ ${name} löysi LAPIN KULLAN: ${city}!`,
     starToast: 'LAPIN KULTA!',
-    starChase: 'Nyt on kiire kotiin — myös hevosenkengän haltija voi voittaa pelin.',
+    starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
     winStar: 'toi Lapin kullan turvallisesti kotiin',
     winnerStar: (name, money) => `${name} toi Lapin kullan kotiin ${money} punnan kanssa.`,
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.

@@ -407,7 +407,8 @@ function rakennaMaataulu(ui) {
   taulu.inert = true;
 
   /*
-   * PLUS OIKEAAN YLÄREUNAAN. Se on taulun ainoa nappi ja samalla ainoa
+   * PALJAS PLUS LUKURIVIEN VIEREEN (css/styles.css .fokus-maataulu-lehti).
+   * Se on taulun ainoa nappi ja samalla ainoa
    * kutsu eteenpäin (maan lehteen), joten se saa kevyen sykkeen —
    * transform ja opacity, ei suodatinta eikä varjoanimaatiota.
    */

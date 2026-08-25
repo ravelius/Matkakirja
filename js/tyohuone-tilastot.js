@@ -1206,28 +1206,24 @@ function piirraAarretaulut(kohde) {
     + 'paljastaa sen mantereen aarteen, jolta se löytyy. Unohdettu aarre '
     + 'on Aarnin luettelon päämäärä, joka avaa mannerlennon.'));
   kohde.appendChild(pikataulu(
-    ['Manner', 'Unohdettu aarre', `Aarre +${eka.ruby?.value ?? 1000} p`,
-      `Aarre +${eka.emerald?.value ?? 600} p`, `Aarre +${eka.topaz?.value ?? 300} p`],
+    ['Manner', 'Unohdettu aarre', `Mantereen aarre +${eka.mannerAarre?.value ?? 1000} p`],
     mannerit.map(([manner, t]) => [
       MANNERNIMI[manner] ?? manner,
-      t.star?.name ?? '?', t.ruby?.name ?? '?',
-      t.emerald?.name ?? '?', t.topaz?.name ?? '?',
+      t.star?.name ?? '?', t.mannerAarre?.name ?? '?',
     ]),
   ));
   const maarat = maailma?.tokens?.counts ?? {};
   const yhteensa = Object.values(maarat).reduce((a, b) => a + b, 0);
   kohde.appendChild(html('p', 'tk-selite',
-    `Laattojen jakauma (${yhteensa} laattaa, yksi joka kaupungissa):`));
+    `Laattojen jakauma (${yhteensa} laattaa, yksi joka kaupungissa; `
+    + 'laatan alta löytyy aina aarre):'));
   kohde.appendChild(pikataulu(['Laatta', 'Kpl', 'Vaikutus'], [
     ['Pääaarre (unohdettu aarre)', maarat.star ?? 0,
       '+2000 p JA jää matkalaukkuun näkyviin — avaa mannerlennon'],
-    [`Aarre +${eka.ruby?.value ?? 1000} p`, maarat.ruby ?? 0, 'Muuttuu heti rahaksi'],
-    [`Aarre +${eka.emerald?.value ?? 600} p`, maarat.emerald ?? 0, 'Muuttuu heti rahaksi'],
-    [`Aarre +${eka.topaz?.value ?? 300} p`, maarat.topaz ?? 0, 'Muuttuu heti rahaksi'],
-    ['Hevosenkenkä', maarat.horseshoe ?? 0, 'Varuste: kolmella hevosenkengällä rosvon voi ohittaa'],
+    ['Mantereen aarre', maarat.mannerAarre ?? 0, 'Kiinteä +1000 p — muuttuu heti rahaksi'],
+    ['Iso paikallisaarre', maarat.isoAarre ?? 0, 'Maan oma aarre, +500–800 p löytöhetken mukaan'],
+    ['Pieni paikallisaarre', maarat.pieniAarre ?? 0, 'Maan oma aarre, +100–250 p löytöhetken mukaan'],
     ['Ryöstäjä', maarat.robber ?? 0, 'Vie rahat — tai voita kaksintaistelu'],
-    ['Tyhjä', maarat.empty ?? 0, 'Kätkö on tyhjä'],
-    ['Taikalasi', maarat.linssi ?? 0, 'Varuste: uusi tapa katsoa karttaa'],
   ]));
 }
 

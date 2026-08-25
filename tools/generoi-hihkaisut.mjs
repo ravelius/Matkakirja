@@ -38,24 +38,18 @@ const LOPPUTAUKO = ' <break time="0.6s" />';
 /*
  * Huudahdukset ääneen SAMOIN SANOIN kuin ruudulla (omistajan
  * tarkennus 10.8.2026 ilta: "Hihkaisu saisi olla sama luettuna ja
- * kirjoitettuna"). Lista vastaa ui.js:n HUUDAHDUKSET-taulua —
- * tiedostonimi on huudahdus-<avain>-<järjestys>.mp3, ja ui valitsee
- * saman indeksin tekstille ja äänelle. Tagit sävyttävät arvon mukaan:
- * pikkulöytö kuitataan, suurlöytö vie sanat.
+ * kirjoitettuna"). Lista vastaa js/aani-ehdokkaat.js:n HUUDAHDUKSET-
+ * taulua — tiedostonimi on huudahdus-star-<järjestys>.mp3, ja ui
+ * valitsee saman indeksin tekstille ja äänelle.
+ *
+ * VAIN PÄÄAARTEELLA ON LUENTA (Raamattu, "Aarteet ja eteneminen":
+ * *"pääaarteen luetut säilyvät; muut korvataan korkeintaan kahden
+ * sanan huudahduksilla"*). Paikallisaarteiden ja mantereen aarteen
+ * huudahdukset ovat niin lyhyitä, ettei äänitettä tarvita — eikä
+ * niiden arvo ole edes vakio, joten vanha arvon mukainen jaottelu
+ * (300/600/1000) ei enää toimisi avaimena.
  */
 const TYOT = [
-  { tiedosto: 'assets/audio/huudahdus-300-1.mp3', luenta: '[pleased] Hei — löytyi sittenkin! [long pause]' },
-  { tiedosto: 'assets/audio/huudahdus-300-2.mp3', luenta: '[pleased] Pieni, mutta aito! [long pause]' },
-  { tiedosto: 'assets/audio/huudahdus-300-3.mp3', luenta: '[cheerful] Kelpaa tämäkin! [long pause]' },
-  { tiedosto: 'assets/audio/huudahdus-300-4.mp3', luenta: '[cheerful] Taskuun ja eteenpäin! [long pause]' },
-  { tiedosto: 'assets/audio/huudahdus-600-1.mp3', luenta: '[excited] Mahtavaa! [long pause]' },
-  { tiedosto: 'assets/audio/huudahdus-600-2.mp3', luenta: '[excited] Sepä vasta löytö! [long pause]' },
-  { tiedosto: 'assets/audio/huudahdus-600-3.mp3', luenta: '[chuckles] Isoisä olisi hykerrellyt! [long pause]' },
-  { tiedosto: 'assets/audio/huudahdus-600-4.mp3', luenta: '[pleased] Tämä merkitään päiväkirjaan! [long pause]' },
-  { tiedosto: 'assets/audio/huudahdus-1000-1.mp3', luenta: '[amazed] Uskomatonta! [long pause]' },
-  { tiedosto: 'assets/audio/huudahdus-1000-2.mp3', luenta: '[excited] Jes! Katsokaa nyt tätä! [long pause]' },
-  { tiedosto: 'assets/audio/huudahdus-1000-3.mp3', luenta: '[out of breath] Sydän hakkaa — mikä löytö! [long pause]' },
-  { tiedosto: 'assets/audio/huudahdus-1000-4.mp3', luenta: '[amazed] Juuri tällaisesta isoisä kirjoitti! [long pause]' },
   { tiedosto: 'assets/audio/huudahdus-star-1.mp3', luenta: '[awe] Se on totta... [whispers] se on oikeasti totta! [long pause]' },
   { tiedosto: 'assets/audio/huudahdus-star-2.mp3', luenta: '[awe] Aarni oli oikeassa — se on olemassa! [long pause]' },
   { tiedosto: 'assets/audio/huudahdus-star-3.mp3', luenta: '[quietly] Isoisä... [pause] minä löysin sen. [long pause]' },

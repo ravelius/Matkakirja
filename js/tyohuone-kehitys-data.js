@@ -69,6 +69,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'istanbul',
+      kuva: 'assets/kohtaamiset/kohtaaminen-istanbul.jpg',
       mykistetyt: ['saapuminen', 'aarre'],
       otsikko: 'Istanbul — upotettu palatsi',
       saapuminen: 'Laskin viisikymmentäkaksi porrasta pimeään, ja kaupungin äänet '
@@ -322,6 +323,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'rooma',
+      kuva: 'assets/kohtaamiset/kohtaaminen-rooma.jpg',
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Rooma — kolikko joka palasi altaaseen',
       saapuminen: 'Trevin allas oli tyhjennetty, ja pohjalta nousi kolikoiden '
@@ -926,6 +928,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'sarajevo',
+      kuva: 'assets/kohtaamiset/kohtaaminen-sarajevo.jpg',
       mykistetyt: ['saapuminen', 'aarre'],
       otsikko: 'Sarajevo — kaivo joka kutsuu takaisin',
       /*
@@ -1008,6 +1011,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'bukarest',
+      kuva: 'assets/kohtaamiset/kohtaaminen-bukarest.jpg',
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Bukarest — paimenen kirkonkello',
       saapuminen: 'Kirkonkello löi yhden, kun astuin portista, ja soittaja '
