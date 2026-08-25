@@ -1739,8 +1739,29 @@ function coastDistance(p, map) {
   return best;
 }
 
+/*
+ * Merelle laskettujen pisteiden muisti.
+ *
+ * Pisteet riippuvat VAIN laudasta ja kahdesta vakiosta, mutta ne
+ * lasketaan uusiksi joka kerta kun lauta piirretään — ja maailmankartalla
+ * silmukka käy yli kymmenentuhatta pistettä, joista jokainen kysyy
+ * onLandia ja rannikkoetäisyyttä. Mitattuna (Chromium, CPU-profiili
+ * avauslennosta) tämä ja sen kutsumat funktiot ovat laudan piirron
+ * suurin yksittäinen JS-erä. Muistin ansiosta työ voidaan tehdä jo
+ * alkukertomuksen aikana (esilammitaTaide) ja se säilyy myös laudan
+ * uudelleenpiirtoihin (kehittäjäkytkimet, uusi peli).
+ *
+ * WeakMap laudan karttaolion varassa: lauta on moduulivakio, joten
+ * muisti elää yhtä kauan kuin lautakin, eikä yksikään käyttämätön
+ * lauta jää roikkumaan.
+ */
+const MERIPISTEET = new WeakMap();
+
 /** Ruudukon pisteet merellä, riittävän kaukana rannikosta. */
 export function seaPoints(map, spacing = 92, margin = 46) {
+  const avain = `${spacing}:${margin}`;
+  let muisti = MERIPISTEET.get(map);
+  if (muisti?.has(avain)) return muisti.get(avain);
   const points = [];
   for (let x = 30; x < map.width; x += spacing) {
     for (let y = 30; y < map.height; y += spacing) {
@@ -1749,21 +1770,60 @@ export function seaPoints(map, spacing = 92, margin = 46) {
       points.push(p);
     }
   }
+  if (!muisti) MERIPISTEET.set(map, muisti = new Map());
+  muisti.set(avain, points);
   return points;
 }
 
-/** Ruudukon pisteet maalla, riittävän kaukana rannikosta ja esteistä. */
-export function landPoints(map, obstacles, spacing = 78, clearance = 34) {
+/**
+ * Esilämmittää laudan piirron raskaimmat puhtaat laskennat.
+ *
+ * Kutsutaan joutohetkinä ennen kuin lautaa tarvitaan (js/ui.js
+ * esilammitaAvaus): rannikkoruudukko ja meripisteet ovat pelkkää
+ * geometriaa, eivät koske DOMiin eivätkä siis voi näkyä ruudulla.
+ * Työ on täsmälleen sama, jonka drawBoard muuten tekisi juuri sillä
+ * hetkellä, kun pelaaja odottaa karttaa.
+ */
+export function esilammitaTaide(map) {
+  if (!map?.width || !map?.height) return;
+  try {
+    seaPoints(map);
+    maapisteet(map, 78);
+  } catch {
+    /* esilämmitys on pelkkä etumatka: epäonnistuminen ei saa näkyä */
+  }
+}
+
+/*
+ * Maalla olevien ruudukkopisteiden muisti — sama syy kuin merellä
+ * (MERIPISTEET). Muistiin menee VAIN kallis osa eli maa- ja
+ * rannikkosuodatus, joka riippuu pelkästä laudasta; esteet (kaupungit,
+ * nimet) suodatetaan joka kerta erikseen, koska ne ovat kutsujan tieto.
+ */
+const MAAPISTEET = new WeakMap();
+
+/** Ruudukon pisteet maalla, riittävän kaukana rannikosta. */
+function maapisteet(map, spacing) {
+  const avain = String(spacing);
+  let muisti = MAAPISTEET.get(map);
+  if (muisti?.has(avain)) return muisti.get(avain);
   const points = [];
   for (let x = 40; x < map.width; x += spacing) {
     for (let y = 40; y < map.height; y += spacing) {
       const p = [x, y];
       if (!onLand(p, map) || coastDistance(p, map) < 34) continue;
-      if (obstacles.some((o) => Math.hypot(p[0] - o.x, p[1] - o.y) < clearance)) continue;
       points.push(p);
     }
   }
+  if (!muisti) MAAPISTEET.set(map, muisti = new Map());
+  muisti.set(avain, points);
   return points;
+}
+
+/** Ruudukon pisteet maalla, riittävän kaukana rannikosta ja esteistä. */
+export function landPoints(map, obstacles, spacing = 78, clearance = 34) {
+  return maapisteet(map, spacing)
+    .filter((p) => !obstacles.some((o) => Math.hypot(p[0] - o.x, p[1] - o.y) < clearance));
 }
 
 function blocked(p, zones) {

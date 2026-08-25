@@ -105,6 +105,40 @@ await sivu.waitForTimeout(3000);
 vaadi('kartta on lähikuvassa', lahikuvassa === true);
 
 /*
+ * VANHA LAUTA NÄKYVIIN RUUTUMITTAUSTEN AJAKSI (v1110).
+ *
+ * Omistajan linjaus 25.8.2026: *"Eihän sitä vanhaa maailman karttaa
+ * vaan lasketa myös vaikka sitä ei näytetä eikä käytetä?"* — ei enää
+ * lasketa. Fokusnäkymässä lauta on display: none atlaksen alla
+ * (js/fokuskartta.js paivitaVanhaLauta), ja js/ui.js ohittaa silloin
+ * koko rasteroinnin (vanhaLautaPiilossa).
+ *
+ * TÄMÄN SAVUKKEEN RUUTUMITTARIT KOSKEVAT SITÄ TILAA, JOSSA LAUTA ON
+ * NÄKYVISSÄ: yleiskuva, avausruutu, lento, katselutila ja fokusmoodin
+ * kehittäjäkytkin pois päältä. Muuten ne vaatisivat työtä, jota ei
+ * kuulukaan tehdä — ja mittasivat siis nimenomaan sitä vikaa, joka
+ * juuri korjattiin. Atlasnäkymän oma vaatimus on tämän tiedoston
+ * lopussa (osio 14): silloin ruutuja ei saa syntyä yhtään.
+ *
+ * Kytkin on fokusmoodi, koska se on atlaksen ensimmäinen ehto
+ * (atlasPaalla) eikä muuta kartan mittakaavaa, kameraa tai
+ * ruutukoneistoa millään tavalla.
+ */
+const asetaFokusmoodi = async (paalla) => {
+  await sivu.evaluate((p) => {
+    const { ui } = window.matkakirja;
+    ui.fokusmoodi = p;
+    ui.fokusAvain = null;
+    ui.paivitaFokusKerros();
+    ui.taydennaTaide({ heti: true });
+  }, paalla);
+  await sivu.waitForTimeout(1500);
+};
+await asetaFokusmoodi(false);
+vaadi('vanha lauta on näkyvissä ruutumittausten ajan',
+  (await sivu.evaluate(() => !document.body.classList.contains('fokus-atlas-nakyma'))) === true);
+
+/*
  * MITTARIT. Ruudut lasketaan DOMista (jokainen lisätty solmu on yksi
  * rasteroitu ruutu), pakotukset kääreestä tarkistaTarkkuuden ympärillä.
  * Molemmista kirjataan, oliko sormi kartalla juuri sillä hetkellä —
@@ -444,6 +478,10 @@ vaadi('ensitarkistus korjaa mittakaavan alle sekunnissa',
 vaadi('ensitarkistuksen jälkeen tarkkuussuhde on 1,00',
   ensiSuhde !== null && Math.abs(ensiSuhde - 1) <= 0.02, String(ensiSuhde));
 
+// Ääriviiva on fokusmoodin oma piirre: kytkin takaisin päälle sen
+// osion ajaksi (ks. asetaFokusmoodi yllä).
+await asetaFokusmoodi(true);
+
 /*
  * 8) MAAN ÄÄRIVIIVA piirtyy uuteen maahan saavuttaessa (omistajan
  * tilaus 13.8.2026) — mutta EI samaan maahan palatessa, eikä animaatio
@@ -613,6 +651,10 @@ vaadi('ääriviiva-animaatio ei pakota uudelleenrasterointia',
 vaadi('ääriviiva-animaatio ei lisää rasterointia levon yli',
   animaationAikana.aloitukset <= lepo.aloitukset,
   `animaatio ${animaationAikana.aloitukset}, lepo ${lepo.aloitukset}`);
+
+// Ääriviivaosio ohi: lauta takaisin näkyviin lopun ruutumittauksia
+// varten (ks. asetaFokusmoodi).
+await asetaFokusmoodi(false);
 
 /*
  * 9) KOKONÄKYMÄSTÄ NIPISTYS EI LOIKI. Ennen korjausta ele sytytti
@@ -1136,6 +1178,50 @@ if (hetki?.pohjanVaraan) {
   vaadi('näkyvä alue on terävä heti katettuaan, odottamatta puskurirengasta',
     Boolean(hetki) && hetki.sumeat === 0, JSON.stringify(hetki));
 }
+
+/*
+ * 14) ATLASNÄKYMÄSSÄ PIILOTETTUA LAUTAA EI RASTEROIDA LAINKAAN.
+ *
+ * Omistajan kysymys 25.8.2026: *"Eihän sitä vanhaa maailman karttaa
+ * vaan lasketa myös vaikka sitä ei näytetä eikä käytetä?"*
+ *
+ * Laskettiin. Fokusnäkymässä lauta on display: none atlaksen alla
+ * (js/fokuskartta.js paivitaVanhaLauta), mutta ruutusarja jatkoi
+ * työtään jokaisen eleen päätteeksi — satoja millisekunteja
+ * pääsäikeessä pikseleitä, joita kukaan ei näe. Nyt js/ui.js ohittaa
+ * koko putken (vanhaLautaPiilossa, piirtoLykkaantyy) ja käynnistää
+ * sen vasta kun lauta palaa näkyviin.
+ *
+ * Vaatimus on kaksiosainen: piilotettuna EI YHTÄÄN rasterointia, ja
+ * paluussa lauta ei jää tyhjäksi — vanhat ruudut ja pohjataso ovat yhä
+ * paikoillaan, koska mitään ei poistettu, vain jätettiin tekemättä.
+ */
+await asetaFokusmoodi(true);
+const atlasPaalla = await sivu.evaluate(() => ({
+  luokka: document.body.classList.contains('fokus-atlas-nakyma'),
+  ruutuja: window.matkakirja.ui.taideRuudut?.size ?? 0,
+  pohja: Boolean(window.matkakirja.ui.taidePohja),
+}));
+vaadi('atlasnäkymä on päällä ja vanha lauta piilossa',
+  atlasPaalla.luokka === true, JSON.stringify(atlasPaalla));
+await nollaa();
+await panoroi(220, 20);
+await sivu.waitForTimeout(1200);
+await panoroi(-220, 20);
+await sivu.waitForTimeout(2500);
+const atlasMittarit = await mittarit();
+vaadi('atlasnäkymässä ei aloiteta yhtään rasterointia',
+  atlasMittarit.aloitukset === 0 && atlasMittarit.ruudut === 0,
+  JSON.stringify(atlasMittarit));
+await asetaFokusmoodi(false);
+const atlasPaluu = await sivu.evaluate(() => ({
+  luokka: document.body.classList.contains('fokus-atlas-nakyma'),
+  ruutuja: window.matkakirja.ui.taideRuudut?.size ?? 0,
+  pohja: Boolean(window.matkakirja.ui.taidePohja),
+}));
+vaadi('paluussa lauta ei ole tyhjä: pohjataso tai ruudut ovat paikoillaan',
+  atlasPaluu.luokka === false && (atlasPaluu.pohja || atlasPaluu.ruutuja > 0),
+  JSON.stringify(atlasPaluu));
 
 vaadi('ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 

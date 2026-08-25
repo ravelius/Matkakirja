@@ -187,6 +187,24 @@ async function haePohja(iso, lauta) {
   return haku;
 }
 
+/**
+ * Hakee maan pohjan valmiiksi taustalla ilman että mitään piirretään.
+ *
+ * Avausruudussa tiedetään jo, minne matka menee (js/ui.js
+ * ETUSIVUN_KOHTEET), ja alkukertomus kestää kymmeniä sekunteja. Pohja
+ * on megatavujen kokoinen webp, jonka purku vie oman aikansa — kun se
+ * on tehty jo kertomuksen aikana, laskeutumisen jälkeinen lehti
+ * ilmestyy heti eikä sekunteja kamera-ajon jälkeen.
+ *
+ * Tulos päätyy samaan välimuistiin (VARASTO) kuin tavallinen haku,
+ * joten myöhempi piirto saa sen ilmaiseksi. Epäonnistuminen on
+ * tavallinen tila eikä virhe (sääntö 1 tiedoston alussa).
+ */
+export function esilammitaFokuspohja(iso, lauta) {
+  if (!iso || !lauta) return;
+  void haePohja(iso, lauta).catch(() => {});
+}
+
 /*
  * === SUOMENKIELISET LISÄNIMET ===
  *
@@ -478,11 +496,22 @@ function atlasPaalla(ui) {
  */
 const LAUTA_POIS_LUOKKA = 'fokus-atlas-nakyma';
 
-/** Kytkee vanhan laudan piirron pois (tai takaisin). */
-function paivitaVanhaLauta(paalla) {
+/**
+ * Kytkee vanhan laudan piirron pois (tai takaisin).
+ *
+ * PIILOTUS PYSÄYTTÄÄ MYÖS RASTEROINNIN (omistajan kysymys 25.8.2026:
+ * *"Eihän sitä vanhaa maailman karttaa vaan lasketa myös vaikka sitä ei
+ * näytetä eikä käytetä?"* — laskettiin: ruutusarja jauhoi satoja
+ * millisekunteja pääsäikeessä jokaisen eleen päätteeksi kuvaa, joka on
+ * display: none). Piilotuksen huomaa js/ui.js taydennaTaide itse
+ * luokasta; paluu on kerrottava, koska mikään muu ei laukaisisi
+ * lykättyä työtä ennen seuraavaa elettä.
+ */
+function paivitaVanhaLauta(ui, paalla) {
   try {
     globalThis.document?.body?.classList?.toggle(LAUTA_POIS_LUOKKA, Boolean(paalla));
   } catch { /* ei bodya (yksikkötesti): näkymää ei ole piilotettavaksi */ }
+  if (!paalla) ui?.jatkaLykattyPiirto?.();
 }
 
 /** Atlaksen oma ryhmä fokuskerroksessa; luodaan tarvittaessa. */
@@ -686,7 +715,7 @@ export function paivitaFokusAtlas(ui) {
    * niissä tilanteissa, joissa fokuskerrosta ei ole (laudan vaihto).
    */
   const atlas = atlasPaalla(ui);
-  paivitaVanhaLauta(atlas);
+  paivitaVanhaLauta(ui, atlas);
   const ryhma = atlasRyhma(ui);
   if (!ryhma) return;
   ui.atlasLehdet ??= new Map();
@@ -976,7 +1005,7 @@ export function nollaaFokuskartta(ui) {
    * Ilman tätä vanhan laudan piilotus jäisi voimaan laudalle, jolla
    * atlasta ei ole lainkaan.
    */
-  paivitaVanhaLauta(false);
+  paivitaVanhaLauta(ui, false);
   ui.fokuskarttaAvain = null;
   if (ui.fokuskarttaKerros) ui.fokuskarttaKerros.textContent = '';
   // Atlas asuu samassa kerroksessa: DOM meni jo, mutta kirjanpito on

@@ -1334,7 +1334,16 @@ const REAL_PLAYERS = {
   tick: (s) => s.playSlice('tick', { dur: 0.6, gain: 0.25, alusta: true }),
   timeout: (s) => s.playSlice('timeout', { dur: 1.6, gain: 0.4, alusta: true }),
   flip: (s) => s.playSlice('flip', { dur: 0.9, gain: 0.35, alusta: true }),
-  clack: (s) => s.playSlice('clack', { dur: 0.6, gain: 0.3, alusta: true }),
+  /*
+   * `voima` kertoo, kuinka kovaa naksautetaan — sama säädin kuin
+   * kirjoituskoneen lyönnillä yllä. Oletus 1 on se hillitty naksu, joka
+   * kuittaa pelin sisäiset napautukset; avauslennon lähtönapautus soi
+   * kovempaa, koska sen päällä soivat sekä kertoja että etusivun
+   * äänimaisema (js/ui.js doPickStart).
+   */
+  clack: (s, { voima = 1 } = {}) => s.playSlice('clack', {
+    dur: 0.6, gain: 0.3 * voima, alusta: true,
+  }),
   // Koko äänite alusta loppuun, ilman satunnaista vireheittoa: moottori
   // kuulostaa oudolta jos sitä siirretään umpimähkään. Sen sijaan
   // toistonopeus seuraa zoomausliu'un vauhtia (omistajan toive), joten
@@ -1640,10 +1649,11 @@ const SOUNDS = {
 
   // Aarteen paljastus
   flip: (s) => s.hiss({ dur: 0.55, freq: 380, sweepTo: 2100, gain: 0.08, q: 0.9 }),
-  clack: (s) => {
-    // Passin leima: matala läiskä ja kuiva klikki.
-    s.tone({ freq: 80, to: 62, dur: 0.16, type: 'sine', gain: 0.17 });
-    s.knock({ freqs: [900, 1500], dur: 0.05, gain: 0.09, q: 6 });
+  clack: (s, { voima = 1 } = {}) => {
+    // Passin leima: matala läiskä ja kuiva klikki. `voima` kuten
+    // äänitteellisessä versiossa (REAL_PLAYERS.clack).
+    s.tone({ freq: 80, to: 62, dur: 0.16, type: 'sine', gain: 0.17 * voima });
+    s.knock({ freqs: [900, 1500], dur: 0.05, gain: 0.09 * voima, q: 6 });
   },
   star: (s) => {
     // Soittorasia: epäharmoniset kellot nousevassa sarjassa.
