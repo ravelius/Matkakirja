@@ -643,6 +643,44 @@ class Sound {
   }
 
 
+  /*
+   * KIERRÄTETTY SUHINAKANAVA tiheään toistuville äänille (naputus).
+   * hiss() luo kolme Web Audio -solmua joka kutsulla, ja kirjoituskoneen
+   * naputus kutsuu sitä jokaisella sanalla — CPU-profiilissa ~19 %
+   * ajasta meni roskienkeruuseen aloituslennon aikana (mittaus
+   * 25.8.2026, omistajan "vähän tökkivä" -havainnon juurisyy). Tämä
+   * kanava rakentaa lähde→suodatin→voimakkuus-ketjun KERRAN ja soittaa
+   * lyönnit säätämällä vain suodatinta ja voimakkuutta: nolla uutta
+   * solmua per lyönti. Kanava on yksiääninen — uusi lyönti leikkaa
+   * edellisen hännän, mikä sopii kirjoituskoneelle.
+   */
+  hissNopea({ dur = 0.2, gain = 0.15, type = 'bandpass', freq = 1200, sweepTo = null, q = 1 }) {
+    const ctx = this.ensureContext();
+    if (!ctx) return;
+    if (!this.nopeaKanava || this.nopeaKanava.ctx !== ctx) {
+      const src = ctx.createBufferSource();
+      src.buffer = this.noise;
+      src.loop = true;
+      const filter = ctx.createBiquadFilter();
+      const g = ctx.createGain();
+      g.gain.value = 0.0001;
+      src.connect(filter).connect(g).connect(this.bus);
+      src.start();
+      this.nopeaKanava = { ctx, filter, g };
+    }
+    const { filter, g } = this.nopeaKanava;
+    const t0 = ctx.currentTime;
+    filter.type = type;
+    filter.Q.value = q;
+    filter.frequency.cancelScheduledValues(t0);
+    filter.frequency.setValueAtTime(this.jitter(freq), t0);
+    if (sweepTo) filter.frequency.exponentialRampToValueAtTime(Math.max(sweepTo, 40), t0 + dur);
+    g.gain.cancelScheduledValues(t0);
+    g.gain.setValueAtTime(0.0001, t0);
+    g.gain.exponentialRampToValueAtTime(this.jitter(gain), t0 + 0.012);
+    g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+  }
+
   /**
    * Resonoiva kopsahdus: lyhyt kohinapurske useamman kaistanpäästön läpi.
    * Suodattimien taajuudet ovat esineen ominaistaajuuksia, joten sama
@@ -1421,7 +1459,9 @@ const SOUNDS = {
   // hiljainen, koska se toistuu joka sanalla. `voima` on kutsujan oma
   // kerroin: pöllön striimin naputus on taustaa eikä pääosa, joten se
   // soittaa saman lyönnin selvästi hiljempaa (js/pollo.js).
-  pen: (s, { voima = 1 } = {}) => s.hiss({
+  // Kierrätetty kanava (hissNopea): naputus toistuu joka sanalla, eikä
+  // se saa luoda uusia audiosolmuja per lyönti (ks. hissNopea-kommentti).
+  pen: (s, { voima = 1 } = {}) => s.hissNopea({
     dur: 0.06, type: 'highpass', freq: 2600, sweepTo: 1500, gain: 0.02 * voima, q: 0.7,
   }),
   swipe: (s) => s.hiss({ dur: 0.24, freq: 700, sweepTo: 2600, gain: 0.09, q: 0.8 }),
