@@ -258,10 +258,10 @@ export const RAAMATTU = {
           + 'rajautuu automaattisesti niin, että lähtömaa (Lontoo/'
           + 'Britannia) ja kohdemaa näkyvät molemmat sopivalla '
           + 'marginaalilla, ja lentokone lentää punaista viivaa '
-          + 'pitkin Lontoosta kohteeseen. Kartta on tällöin jo '
-          + 'fokusmoodin tapaan niukka: maat, joissa ei ole käyty '
-          + 'tai joissa pelaaja ei ole, himmeinä/sumennettuina. '
-          + 'Koko näkymä uusitaan.',
+          + 'pitkin Lontoosta kohteeseen. (Lennon karttapohjasta '
+          + 'määrää nyt "VANHA KARTTA KOKONAAN POIS" -linjaus: '
+          + 'pohja on atlas-lehdet + pergamentti, ei niukka vanha '
+          + 'piirros.)',
         'NOPPA JA REITIT (omistaja 24.8.2026): nykyinen noppa ja '
           + 'reittien viivat/pisteet säilyvät ennallaan — pienellä '
           + 'luvulla aika kuluu jo nyt hitaammin, kun heittoja '
@@ -549,7 +549,11 @@ export const RAAMATTU = {
           + 'KUMOAA aiemman "lento on niukka vanha kartta" -linjan. '
           + 'Etusivun (pickstart) taustakartta ja katselulaudat '
           + 'ennallaan — niillä ei ole atlasta. Vanhaa piirtokoodia '
-          + 'EI poisteta (toistaiseksi-linjaus).',
+          + 'EI poisteta (toistaiseksi-linjaus). TOTEUTETTU v1115. '
+          + 'Hyväksytty välitila kunnes lehtiä on joka maasta: '
+          + 'yleiskuva on pergamenttia + valmiiden maiden lehdet, '
+          + 'ja lento lehdettömään maahan näyttää vain pergamentin, '
+          + 'harson ja punaisen viivan.',
         'TILANNE 25.8.2026: Kreikka-pilotti valmis ja viisi uutta '
           + 'maata pelissä Kreikan tasolla (Sofia, Rooma, Istanbul, '
           + 'Sarajevo, Bukarest — fokusvirrat, lehtitehtävät, '
