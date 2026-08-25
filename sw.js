@@ -153,6 +153,7 @@ const SHELL = [
   './js/packs/nahtavyysjutut.js',
   './js/packs/miniatyyrit.js',
   './js/packs/julisteet.js',
+  './js/packs/paikallisaarteet.js',
   './js/packs/lipputiedot.js',
   './js/packs/henkilot.js',
   './js/packs/saatiedot.js',
@@ -238,24 +239,13 @@ const SHELL = [
    * TAVOITE, joten välimuisti on nopeutta varten eikä lupaus.
    *
    * Ydinsettiin jäävät kaksi lajia, joilla myöhästyminen kuuluisi:
-   * aarrelöydön huudahdukset (sama repliikki kuin kortilla) ja
-   * käyttöliittymän lyhyet tehosteet (alempana). Yhteensä 39 tiedostoa,
-   * noin 1,3 Mt. Ne EIVÄT kulje ämpärin kautta, koska silloin peli
+   * pääaarteen huudahdukset (sama repliikki kuin kortilla — muiden
+   * aarteiden huudahdukset ovat kahden sanan mittaisia eikä niitä
+   * lueta ääneen) ja käyttöliittymän lyhyet tehosteet (alempana).
+   * Ne EIVÄT kulje ämpärin kautta, koska silloin peli
    * pyytäisi eri osoitetta kuin minkä tämä lista esilatasi — sääntö on
    * js/media.js:n YDINAANI, ja nämä kaksi listaa kuuluvat yhteen.
    */
-  './assets/audio/huudahdus-300-1.mp3',
-  './assets/audio/huudahdus-300-2.mp3',
-  './assets/audio/huudahdus-300-3.mp3',
-  './assets/audio/huudahdus-300-4.mp3',
-  './assets/audio/huudahdus-600-1.mp3',
-  './assets/audio/huudahdus-600-2.mp3',
-  './assets/audio/huudahdus-600-3.mp3',
-  './assets/audio/huudahdus-600-4.mp3',
-  './assets/audio/huudahdus-1000-1.mp3',
-  './assets/audio/huudahdus-1000-2.mp3',
-  './assets/audio/huudahdus-1000-3.mp3',
-  './assets/audio/huudahdus-1000-4.mp3',
   './assets/audio/huudahdus-star-1.mp3',
   './assets/audio/huudahdus-star-2.mp3',
   './assets/audio/huudahdus-star-3.mp3',
@@ -263,28 +253,14 @@ const SHELL = [
   './assets/kohtaamiset/kohtaaminen-ateena.jpg',
   './assets/kohtaamiset/kohtaaminen-sofia.jpg',
   './assets/kohtaamiset/kohtaaminen-katko.jpg',
-  // AI-generoidut aarrekuvat (paljastuskortti) — 21 kpl, 7 lautaa.
-  './assets/aarteet/aarre-europe-ruby.jpg',
-  './assets/aarteet/aarre-europe-emerald.jpg',
-  './assets/aarteet/aarre-europe-topaz.jpg',
-  './assets/aarteet/aarre-africa-ruby.jpg',
-  './assets/aarteet/aarre-africa-emerald.jpg',
-  './assets/aarteet/aarre-africa-topaz.jpg',
-  './assets/aarteet/aarre-middleeast-ruby.jpg',
-  './assets/aarteet/aarre-middleeast-emerald.jpg',
-  './assets/aarteet/aarre-middleeast-topaz.jpg',
-  './assets/aarteet/aarre-asia-ruby.jpg',
-  './assets/aarteet/aarre-asia-emerald.jpg',
-  './assets/aarteet/aarre-asia-topaz.jpg',
-  './assets/aarteet/aarre-northamerica-ruby.jpg',
-  './assets/aarteet/aarre-northamerica-emerald.jpg',
-  './assets/aarteet/aarre-northamerica-topaz.jpg',
-  './assets/aarteet/aarre-southamerica-ruby.jpg',
-  './assets/aarteet/aarre-southamerica-emerald.jpg',
-  './assets/aarteet/aarre-southamerica-topaz.jpg',
-  './assets/aarteet/aarre-oceania-ruby.jpg',
-  './assets/aarteet/aarre-oceania-emerald.jpg',
-  './assets/aarteet/aarre-oceania-topaz.jpg',
+  // Mantereiden omat 1000 punnan aarteet (paljastuskortti).
+  './assets/aarteet/aarre-europe-manner.jpg',
+  './assets/aarteet/aarre-africa-manner.jpg',
+  './assets/aarteet/aarre-middleeast-manner.jpg',
+  './assets/aarteet/aarre-asia-manner.jpg',
+  './assets/aarteet/aarre-northamerica-manner.jpg',
+  './assets/aarteet/aarre-southamerica-manner.jpg',
+  './assets/aarteet/aarre-oceania-manner.jpg',
   // Unohdetut aarteet — yksi per manner (omistajan päätös 11.8.2026).
   // Nämä puuttuivat esilatauksesta kokonaan, vaikka paljastuskortti on
   // pelin tärkein kuva.
@@ -613,7 +589,6 @@ const SHELL = [
   './assets/audio/efekti-zoom.mp3',
   './assets/audio/efekti-tahti.mp3',
   './assets/audio/efekti-jalokivi.mp3',
-  './assets/audio/efekti-kenka.mp3',
   './assets/audio/efekti-rosvo.mp3',
   './assets/audio/efekti-tyhja.mp3',
   './assets/audio/efekti-jumissa.mp3',

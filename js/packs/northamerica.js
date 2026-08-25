@@ -299,27 +299,20 @@ export const NORTHAMERICA = {
   minCityDistance: 50,
 
   tokens: {
-    // Topaasin tilalla Klondiken kulta: kultaryntäys veti 1890-luvulla
+    // Mantereen aarre on Klondiken kulta: kultaryntäys veti 1890-luvulla
     // kymmeniätuhansia onnenonkijoita Yukonin jokilaaksoon.
     types: themedTokenTypes({
       star: {
         name: 'Montezuman aarre',
         kuva: 'assets/aarteet/aarre-northamerica-star.jpg',
       },
-      ruby: {
+      mannerAarre: {
         name: 'Kultaryntäyksen hippu', color: '#e0b02a',
-        kuva: 'assets/aarteet/aarre-northamerica-ruby.jpg',
-      },
-      emerald: {
-        name: 'Turkoosi', color: '#3aaea6',
-        kuva: 'assets/aarteet/aarre-northamerica-emerald.jpg',
-      },
-      topaz: {
-        name: 'Kaakaopavut', color: '#8a5a33',
-        kuva: 'assets/aarteet/aarre-northamerica-topaz.jpg',
+        kuva: 'assets/aarteet/aarre-northamerica-manner.jpg',
       },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 6, topaz: 8, empty: 13 },
+    // 38 kaupunkia, yksi laatta kussakin.
+    counts: { star: 1, mannerAarre: 1, robber: 3, isoAarre: 11, pieniAarre: 22 },
   },
 
   questions: NORTHAMERICA_QUESTIONS,
@@ -371,7 +364,7 @@ export const NORTHAMERICA = {
     intro: 'Peli alkaa! Etsikää Montezuman aarre ja palatkaa New Yorkiin, San Franciscoon tai Los Angelesiin.',
     starFound: (name, city) => `◈ ${name} löysi MONTEZUMAN AARTEEN kaupungista ${city}!`,
     starToast: 'MONTEZUMAN AARRE!',
-    starChase: 'Nyt on kiire kotiin — myös hevosenkengän haltija voi voittaa pelin.',
+    starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
     winStar: 'toi Montezuman aarteen turvallisesti kotiin',
     winnerStar: (name, money) => `${name} toi Montezuman aarteen kotiin ${money} punnan kanssa.`,
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.

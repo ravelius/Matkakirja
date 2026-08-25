@@ -1,10 +1,11 @@
 // Pelin tila ja säännöt: vuorot, laattojen kääntäminen ja voittoehdot.
 
 import { FLIGHT_PRICE, buildBoard, findMoves, posKey, reachableCities } from './rules.js';
-import { createTokenPile } from './tokens.js';
+import { TOKEN_TYPES, arvoAarteenArvo, createTokenPile } from './tokens.js';
 import { packById, sourceList } from './pack.js';
+import { paikallisaarre } from './packs/paikallisaarteet.js';
 import { TARINAKAARI, KAARI_LAUDAT } from './packs/tarinakaari.js';
-import { laattamantereet, linssiKaupungista, myonna, tarkistaKynnys } from './linssit/omistus.js';
+import { tarkistaKynnys } from './linssit/omistus.js';
 import { tietajatasonNousut } from './tietajatasot.js';
 
 export const START_MONEY = 300;
@@ -24,7 +25,6 @@ export const STRANDED_AID = 100; // kotisääntö: jumiin jäänyt saa pankilta 
 export const HARD_BONUS = 100; // palkkio vaikeasta kysymyksestä oikein vastattaessa
 export const STAR_PRIZE = 2000; // pääaarteen arvo vaellustilassa, jossa peli ei pääty
 export const DUEL_PRIZE = 200; // rosvon saalis, jos kaksintaistelun voittaa suoraan
-export const DUEL_BYPASS_SHOES = 3; // näin monella hevosenkengällä rosvon voi ohittaa
 
 /*
  * MANNERLENNON TEKSTIT (Fable 11.8.2026). Ne ovat tässä yhdessä
@@ -165,6 +165,23 @@ export function mulberry32(seed) {
  * tallennuksen hylkääminen, ja koskee vain ennen 11.8.2026 aloitettuja
  * matkoja.
  */
+/*
+ * VANHAN TALLENNUKSEN LAATTATYYPIT (25.8.2026).
+ *
+ * Jalokivet, hevosenkenkä, tyhjä laatta ja linssilaatta poistuivat, kun
+ * laatan alta alkoi löytyä AINA aarre. Kesken jäänyt matka ei silti saa
+ * katketa siihen: poistunut tai tuntematon tyyppi luetaan pieneksi
+ * paikallisaarteeksi. Se on aina turvallinen tulkinta — pieni aarre ei
+ * lupaa mitään, mitä peli ei pysty antamaan.
+ *
+ * Yhä olemassa olevat tyypit säilyvät sellaisinaan, myös sisäinen
+ * 'empty' (pöllön korvaama laatta), jottei vanha kirjaus muutu
+ * jälkikäteen aarteeksi, jota pelaaja ei koskaan saanut.
+ */
+function paivitaLaattatyyppi(type) {
+  return TOKEN_TYPES[type] ? type : 'pieniAarre';
+}
+
 function mannerkohtaisetTahdet(pack, w) {
   if (!w?.starFound) return [];
   let city = w.starCity ?? null;
@@ -238,11 +255,14 @@ export class Game {
       pos: { type: 'city', city: p.start ?? firstStart.id },
       // Montako unohdettua aarretta pelaaja kantaa (yksi per manner).
       stars: 0,
-      horseshoes: 0,
       finds: [], // löydetyt laatat tyyppeinä
       // Miltä mantereelta kukin löytö on (maailmankartta) — kulkee
       // finds-listan rinnalla samoin indeksein, muilla laudoilla null.
       findManner: [],
+      // Mistä MAASTA kukin löytö on (ISO3). Manner ratkaisee pääaarteen
+      // ja mantereen aarteen, maa paikallisaarteen parin — siksi
+      // matkalaukku tarvitsee molemmat, samoin indeksein.
+      findMaa: [],
       // Tällä matkalla löydetyt linssit tunnuksina. Omistus itsessään on
       // passissa ja kestää pelin yli; tämä lista kertoo mitkä löytyivät
       // nyt, jotta lokista ja laukusta näkee matkan oman saaliin.
@@ -369,6 +389,12 @@ export class Game {
     this.polloAarteena = polloAarteena;
     this.polloLoydetty = !polloAarteena;
     this.polloPaljastus = false;
+    /*
+     * Viimeisin laatan alta löytynyt aarre ja sen löytöhetkellä arvottu
+     * arvo (revealToken). Istunnon viesti käyttöliittymälle, ei
+     * pelitilanteen osa: raha on jo maksettu, joten tätä ei tallenneta.
+     */
+    this.viimeAarre = null;
     // Avaus on pelkkää kerrontaa: sääntöasiat ovat Säännöt-dialogissa eivätkä
     // lokirivejä. Laudan intro-teksti jää pakkoihin muuta käyttöä varten.
     // Vaellus alkaa lähtöpisteen valinnalla, jos sitä ei ole annettu valmiiksi.
@@ -442,78 +468,74 @@ export class Game {
   /**
    * Laattojen jako kaupungeille.
    *
-   * Linssilaatat eivät saa jäädä sekoituksen varaan: sattuma voisi
-   * kasata kaksi samaan maanosaan ja jättää toisen ilman, jolloin osa
-   * linsseistä olisi käytännössä löytymättömissä. Siksi jokaiselle
-   * mantereelle, jolla on rekisterissä oma linssi, arvotaan yksi
-   * laattakaupunki erikseen ja loput laatat jaetaan kuten ennen.
+   * Kaksi laattaa per manner sijoitetaan käsin, koska ne ovat
+   * mannerkohtaisia lupauksia eivätkä satunnaisia löytöjä:
    *
-   * Jos mantereella ei ole yhtään vapaata laattakaupunkia — tai jos
-   * linssejä on laudalla enemmän kuin mantereita — ylimääräiset laatat
-   * jäävät sekoitukseen ja arvotaan muiden mukana. Peli ei kaadu siihen.
+   * 1. PÄÄAARRE (star): jokaisella mantereella on oma unohdettu
+   *    aarteensa (omistajan päätös 11.8.2026), ja sen löytö avaa
+   *    mannerlennon seuraavalle. Sekoitukselle jätettynä sattuma voisi
+   *    kasata kaksi samaan maanosaan ja jättää toisen ilman.
+   * 2. MANTEREEN AARRE (mannerAarre): kiinteän 1000 punnan laatta,
+   *    myös tasan yksi per manner (Raamattu, "Aarteet ja eteneminen").
    *
-   * Sama koskee unohdettuja aarteita (tähtilaattoja): omistajan päätös
-   * 11.8.2026 on, että jokaisella mantereella on OMA aarteensa. Portteja
-   * eikä kynnyksiä ei ole — aarre voi löytyä mantereen ensimmäisestä
-   * laatasta, ja jos kaikki muut mantereen laatat on jo käännetty, se on
-   * varmasti viimeisessä. Tämä on matemaattisesti sama asia kuin arpoa
-   * yksi tähti per manner jo laattajaossa, joten dynaamista
-   * uudelleensijoittelua ei tarvita.
+   * Loput kaupungit saavat pienen tai ison paikallisaarteen suoraan
+   * sekoitetusta pinosta — niiden ei tarvitse osua mihinkään, koska
+   * jokainen laatta on yhtä lailla aarre.
+   *
+   * SPEC: *"Pääaarre voi osua mantereen ensimmäiseen kätköön; varma
+   * viimeisessä."* Tasajakauma mantereen laattakaupunkien kesken tekee
+   * juuri tämän: kätkö numero yksi voi olla se oikea, ja kun kaikki
+   * muut on käännetty, jäljellä oleva viimeinen on varmasti se.
+   * Dynaamista uudelleensijoittelua ei tarvita.
+   *
+   * Aloituskaupunki on ainoa poikkeus ehdokkaista: pelin päämaali heti
+   * lähtöruudussa olisi latistus (omistajan päätös 10.8.2026). Muut
+   * aarteet kelpaavat aloituskaupunkiin.
    */
   jaaLaatat(pack, tokenCities, pile) {
     // Muilla laudoilla kuin maailmankartalla koko lauta on yksi manner.
     const mannerNimi = (cityId) => pack.map?.cityManner?.[cityId] ?? pack.id;
-    const linsseja = pile.filter((type) => type === 'linssi').length;
-    const linssikaupungit = new Set();
-
-    // Mantereet eivät mene päällekkäin — kaupunki kuuluu tasan yhdelle —
-    // joten valittua kaupunkia ei tarvitse merkitä varatuksi.
-    for (const manner of laattamantereet()) {
-      if (linssikaupungit.size >= linsseja) break;
-      const ehdokkaat = tokenCities.filter((id) => mannerNimi(id) === manner);
-      if (!ehdokkaat.length) continue;
-      linssikaupungit.add(ehdokkaat[Math.floor(this.rng() * ehdokkaat.length)]);
-    }
-
-    /*
-     * Yksi unohdettu aarre per manner. Tähti ei kuulu aloituskaupunkiin
-     * (pelin päämaali heti lähtöruudussa olisi latistus), joten
-     * aloituskaupungit karsitaan jo ehdokaslistasta — mannerkohtainen
-     * väistö, ei jälkikäteinen korjaus. Linssikaupungit karsitaan, jotta
-     * sama kaupunki ei saisi kahta käsin sijoitettua laattaa.
-     *
-     * Laudoilla, joilla mantereita on vain yksi (pack.id), tämä tekee
-     * saman kuin ennen: yksi tähti, ei aloituskaupunkiin.
-     */
     const startit = new Set(pack.cities.filter((c) => c.start).map((c) => c.id));
-    const tahtia = pile.filter((type) => type === 'star').length;
-    const tahtikaupungit = new Set();
     const mantereet = [];
     for (const id of tokenCities) {
       const manner = mannerNimi(id);
       if (!mantereet.includes(manner)) mantereet.push(manner);
     }
-    for (const manner of mantereet) {
-      if (tahtikaupungit.size >= tahtia) break;
-      const ehdokkaat = tokenCities.filter((id) => mannerNimi(id) === manner
-        && !startit.has(id) && !linssikaupungit.has(id));
-      if (!ehdokkaat.length) continue;
-      tahtikaupungit.add(ehdokkaat[Math.floor(this.rng() * ehdokkaat.length)]);
-    }
 
-    // Käsin sijoitetut linssi- ja tähtilaatat poistetaan pinon alusta,
-    // jottei muiden laattojen keskinäinen järjestys muutu lainkaan:
-    // sekoitus on jo tehty, ja tämä vaihe vain nostaa siitä osan sivuun.
-    const jaettava = [];
-    let linssejaPois = linssikaupungit.size;
-    let tahtiaPois = tahtikaupungit.size;
-    for (const type of pile) {
-      if (type === 'linssi' && linssejaPois > 0) {
-        linssejaPois--;
-        continue;
+    /*
+     * Yksi laatta per manner, tyyppi kerrallaan. Varatut kaupungit
+     * kulkevat mukana, jottei sama kaupunki saa kahta käsin sijoitettua
+     * laattaa; mantereet eivät mene päällekkäin, joten muuta varausta
+     * ei tarvita. Jos laudalla on jotain tyyppiä enemmän kuin
+     * mantereita, ylimäärä jää sekoitukseen ja arvotaan muiden mukana.
+     */
+    const varatut = new Map(); // kaupunki -> käsin sijoitettu tyyppi
+    const sijoita = (type, ohitaStartit) => {
+      let jaljella = pile.filter((t) => t === type).length;
+      for (const manner of mantereet) {
+        if (jaljella <= 0) break;
+        const ehdokkaat = tokenCities.filter((id) => mannerNimi(id) === manner
+          && !varatut.has(id) && !(ohitaStartit && startit.has(id)));
+        if (!ehdokkaat.length) continue;
+        varatut.set(ehdokkaat[Math.floor(this.rng() * ehdokkaat.length)], type);
+        jaljella--;
       }
-      if (type === 'star' && tahtiaPois > 0) {
-        tahtiaPois--;
+    };
+    sijoita('star', true);
+    sijoita('mannerAarre', false);
+
+    // Käsin sijoitetut laatat poistetaan pinon alusta, jottei muiden
+    // laattojen keskinäinen järjestys muutu lainkaan: sekoitus on jo
+    // tehty, ja tämä vaihe vain nostaa siitä osan sivuun.
+    const poistettavia = new Map();
+    for (const type of varatut.values()) {
+      poistettavia.set(type, (poistettavia.get(type) ?? 0) + 1);
+    }
+    const jaettava = [];
+    for (const type of pile) {
+      const jaljella = poistettavia.get(type) ?? 0;
+      if (jaljella > 0) {
+        poistettavia.set(type, jaljella - 1);
         continue;
       }
       jaettava.push(type);
@@ -522,22 +544,19 @@ export class Game {
     const laatat = new Map();
     let i = 0;
     for (const city of tokenCities) {
-      if (linssikaupungit.has(city)) laatat.set(city, 'linssi');
-      else if (tahtikaupungit.has(city)) laatat.set(city, 'star');
-      else laatat.set(city, jaettava[i++]);
+      laatat.set(city, varatut.get(city) ?? jaettava[i++]);
     }
 
     /*
-     * Varmistus ylimääräisille tähdille: jos laudalla on enemmän
-     * tähtiä kuin mantereita, loput jäivät sekoitukseen ja voivat osua
+     * Varmistus ylimääräisille pääaarteille: jos laudalla on enemmän
+     * niitä kuin mantereita, loput jäivät sekoitukseen ja voivat osua
      * aloituskaupunkiin. Silloin ne vaihtavat paikkaa arvotun
-     * tavallisen kaupungin laatan kanssa, kuten ennen. Nykyisillä
-     * laudoilla tämä ei laukea kertaakaan.
+     * paikallisaarteen kanssa. Nykyisillä laudoilla tämä ei laukea
+     * kertaakaan.
      */
     for (const [cityId, type] of laatat) {
       if (type !== 'star' || !startit.has(cityId)) continue;
-      const vapaat = tokenCities.filter((id) => !startit.has(id)
-        && laatat.get(id) !== 'linssi' && laatat.get(id) !== 'star');
+      const vapaat = tokenCities.filter((id) => !startit.has(id) && !varatut.has(id));
       const vaihto = vapaat[Math.floor(this.rng() * vapaat.length)];
       if (!vaihto) break;
       laatat.set(cityId, laatat.get(vaihto));
@@ -584,20 +603,35 @@ export class Game {
   }
 
   /**
-   * Laattatyypin näyttötiedot mantereen aarteistolla. Maailmankartalla
+   * Laattatyypin näyttötiedot mantereen ja maan mukaan.
+   *
+   * MANNER ratkaisee pääaarteen ja mantereen aarteen: maailmankartalla
    * laatta paljastaa sen mantereen aarteen, jolta se löytyi
    * (pack.tokens.mannerTypes); muilla laudoilla — ja ilman manteretta —
-   * laudan oma tyyppi kelpaa sellaisenaan. Arvo ja tunniste eivät
-   * muutu, vain nimi, väri ja kuva.
+   * laudan oma tyyppi kelpaa sellaisenaan.
+   *
+   * MAA ratkaisee paikallisaarteet: pieni ja iso aarre ovat maan omaa
+   * paria (js/packs/paikallisaarteet.js), ja niin kauan kuin maalla ei
+   * ole omaansa, käytetään yleistä varanimeä. Arvo ja tunniste eivät
+   * muutu kummassakaan tapauksessa, vain nimi, väri, kuva ja fakta.
+   *
+   * Tuntematon tyyppi (vanha tallennus, jonka laattaa ei enää ole)
+   * luetaan pieneksi paikallisaarteeksi, jottei kortti jää tyhjäksi.
    */
-  aarreMantereella(type, manner) {
-    return (manner && this.pack.tokens.mannerTypes?.[manner]?.[type])
-      || this.tokenTypes[type];
+  aarreMantereella(type, manner, maaIso = null) {
+    const pohja = (manner && this.pack.tokens.mannerTypes?.[manner]?.[type])
+      || this.tokenTypes[type] || TOKEN_TYPES.pieniAarre;
+    const oma = paikallisaarre(type, maaIso);
+    return oma ? { ...pohja, ...oma } : pohja;
   }
 
   /** Laattatyypin näyttötiedot löytökaupungin mukaan. */
   aarreTyyppi(type, cityId) {
-    return this.aarreMantereella(type, cityId && this.pack.map?.cityManner?.[cityId]);
+    return this.aarreMantereella(
+      type,
+      cityId ? this.pack.map?.cityManner?.[cityId] ?? null : null,
+      cityId ? this.pack.map?.cityCountry?.[cityId] ?? null : null,
+    );
   }
 
   get airRoutes() {
@@ -1144,7 +1178,7 @@ export class Game {
     this.pendingFare = 0;
     this.autoTravel = false;
 
-    // Hevosenkenkä tai tähti kotikaupungissa ratkaisee pelin heti vuoron alussa.
+    // Pääaarre kotikaupungissa ratkaisee pelin heti vuoron alussa.
     if (this.checkWin()) return;
 
     if (this.needsAid(p)) {
@@ -1175,7 +1209,7 @@ export class Game {
     if (!canTravel) return true;
 
     // Vaelluksessa kotiin ei tarvitse ehtiä, joten tavoitteita ovat aina laatat.
-    const racingHome = !this.roaming && (p.stars > 0 || (this.starFound && p.horseshoes > 0));
+    const racingHome = !this.roaming && p.stars > 0;
     const goals = racingHome
       ? new Set(this.players.map((pl) => pl.start))
       : new Set(this.tokens.keys());
@@ -2156,7 +2190,10 @@ export class Game {
    * Suora oikea vastaus tuo rosvon saaliin (DUEL_PRIZE). Helpotus poistaa
    * puolet jäljellä olevista vääristä vaihtoehdoista, mutta rosvo vie siitä
    * puolet rahoista. Väärä vastaus tai aikakatkaisu vie kaikki rahat.
-   * Kolmella hevosenkengällä rosvon voi ohittaa kokonaan.
+   *
+   * Hevosenkengillä ohittaminen poistui uuden aarrejärjestelmän myötä:
+   * laattojen alta löytyy vain aarteita, joten kenkiä ei enää ole.
+   * Rosvo itse säilyy ennallaan — se ei ole aarre vaan este.
    */
   beginDuel() {
     const pool = this.pack.duels ?? [];
@@ -2207,24 +2244,6 @@ export class Game {
     duel.hidden = [...duel.hidden, ...wrong.slice(0, removeCount)].sort((a, b) => a - b);
     this.say(p.id, `${p.name} pyysi rosvolta helpotusta — rosvo vei ${toll} puntaa.`);
     return { ok: true, toll, hidden: duel.hidden };
-  }
-
-  /** Kolme hevosenkenkää heitetään rosvolle, ja tämä päästää kulkijan ohi. */
-  actionDuelBypass() {
-    const duel = this.duel;
-    if (this.phase !== 'duel' || !duel) return { ok: false, error: 'Ei kaksintaistelua' };
-    if (duel.chosen !== null) return { ok: false, error: 'Kysymykseen on jo vastattu' };
-    const p = this.player;
-    if (p.horseshoes < DUEL_BYPASS_SHOES) {
-      return { ok: false, error: `Ohitus vaatii ${DUEL_BYPASS_SHOES} hevosenkenkää` };
-    }
-    p.horseshoes -= DUEL_BYPASS_SHOES;
-    this.say(p.id, `Ω ${p.name} heitti rosvolle ${DUEL_BYPASS_SHOES} hevosenkenkää ja pääsi ohi.`);
-    this.emit('aid', 'Rosvo päästi ohi', { icon: 'kenka', sub: `−${DUEL_BYPASS_SHOES} hevosenkenkää` });
-    this.duel = null;
-    this.phase = 'action';
-    this.endTurn();
-    return { ok: true, bypassed: true };
   }
 
   /** Vastaa rosvon kysymykseen. */
@@ -2370,6 +2389,17 @@ export class Game {
 
   // --- laatat ja voitto ---------------------------------------------------
 
+  /**
+   * Löydön paikka talteen finds-listan rinnalle samoin indeksein.
+   * Manner näyttää matkalaukussa oikean mantereen aarteen, maa oikean
+   * paikallisaarteen parin. Muilla laudoilla kuin maailmankartalla
+   * kenttiä ei ole, jolloin null kelpaa: laudan oma tyyppi on jo oikea.
+   */
+  kirjaaLoytopaikka(player, cityId) {
+    (player.findManner ??= []).push(this.pack.map?.cityManner?.[cityId] ?? null);
+    (player.findMaa ??= []).push(this.pack.map?.cityCountry?.[cityId] ?? null);
+  }
+
   revealToken(cityId) {
     const type = this.tokens.get(cityId);
     if (!type) return null;
@@ -2411,7 +2441,7 @@ export class Game {
       if (type === 'star') {
         const manner = this.mannerOf(cityId);
         const vapaat = [...this.tokens.entries()]
-          .filter(([id, t]) => t !== 'star' && t !== 'linssi'
+          .filter(([id, t]) => t !== 'star' && t !== 'mannerAarre'
             && this.mannerOf(id) === manner)
           .map(([id]) => id);
         if (vapaat.length) {
@@ -2425,7 +2455,7 @@ export class Game {
         this.polloPaljastus = true;
         this.revealed.set(cityId, 'empty');
         p.finds.push('empty');
-        (p.findManner ??= []).push(this.pack.map?.cityManner?.[cityId] ?? null);
+        this.kirjaaLoytopaikka(p, cityId);
         const city = this.board.cityById.get(cityId);
         this.say(p.id, `${p.name} käänsi ensimmäisen laatan kaupungissa ${city.name} — kätköstä löytyi Viisas Pöllö!`);
         this.checkWin();
@@ -2435,11 +2465,18 @@ export class Game {
     this.revealed.set(cityId, type);
     const token = this.aarreTyyppi(type, cityId);
     p.finds.push(type);
-    // Mistä mantereelta laatta löytyi — passi näyttää maailmankartan
-    // löydöt oikean mantereen aarteina. Muilla laudoilla null: laudan
-    // oma tyyppi on jo oikea. Lista kulkee finds-listan rinnalla.
-    (p.findManner ??= []).push(this.pack.map?.cityManner?.[cityId] ?? null);
+    this.kirjaaLoytopaikka(p, cityId);
     const city = this.board.cityById.get(cityId);
+    /*
+     * ARVO ARVOTAAN LÖYTÖHETKELLÄ (Raamattu, "Aarteet ja eteneminen":
+     * *"Arvo vaihtelee löytöhetkellä; kiinteät vain 1000/2000"*). Sama
+     * luku menee lokiin, kuplaan JA paljastuskorttiin, joten se
+     * talletetaan hetkeksi näkyviin: viimeAarre on istunnon viesti
+     * käyttöliittymälle eikä pelitilanteen osa, joten se ei kulje
+     * tallennuksessa (raha on jo maksettu).
+     */
+    const arvo = arvoAarteenArvo(type, this.rng);
+    this.viimeAarre = { type, cityId, arvo };
 
     switch (type) {
       case 'star': {
@@ -2478,15 +2515,6 @@ export class Game {
         }
         break;
       }
-      case 'horseshoe':
-        p.horseshoes++;
-        this.say(p.id, `Ω ${p.name} löysi hevosenkengän kaupungista ${city.name}.`);
-        this.emit('treasure', 'Hevosenkenkä', {
-          token: type,
-          city: cityId,
-          sub: 'Voi voittaa pelin, jos unohdettu aarre löytyy',
-        });
-        break;
       case 'robber':
         this.say(p.id, `☠ Ryöstäjä yllätti pelaajan ${p.name} — edessä on kaksintaistelu!`);
         this.emit('robber', 'Ryöstäjä!', {
@@ -2496,29 +2524,17 @@ export class Game {
         });
         this.duelArmed = true;
         break;
-      case 'linssi': {
-        // Kumpi linssi löytyy, ratkeaa kaupungin mantereesta. Jos
-        // annettavaa ei ole — kaikki linssit on jo omistettu — kätkö on
-        // tyhjä. Laatta ei saa luvata sitä, mitä se ei voi antaa.
-        const tunnus = linssiKaupungista(this, cityId);
-        if (!tunnus) {
-          this.say(p.id, `${p.name} löysi tyhjän linssikotelon kaupungissa ${city.name}.`);
-          this.emit('treasure', 'Tyhjä kotelo', { token: 'empty', city: cityId, sub: 'Lasi oli jo laukussa' });
-          break;
-        }
-        myonna(this, p, tunnus);
-        this.say(p.id, `${token.symbol} ${p.name} löysi taikalasin kaupungista ${city.name} — maailma näyttää uuden puolensa.`);
-        this.emit('treasure', token.name, { token: type, city: cityId, linssi: tunnus, sub: 'Uusi linssi kartalle' });
-        break;
-      }
-      case 'empty':
-        this.say(p.id, `${p.name} käänsi tyhjän laatan kaupungissa ${city.name}.`);
-        this.emit('treasure', 'Tyhjä laatta', { token: type, city: cityId, sub: 'Isoisän merkintä oli vanhentunut' });
-        break;
       default:
-        p.money += token.value;
-        this.say(p.id, `${token.symbol} ${p.name} löysi jalokiven ${token.name} (${token.value} puntaa).`);
-        this.emit('treasure', token.name, { token: type, city: cityId, sub: `+${token.value} puntaa` });
+        /*
+         * Paikallisaarteet ja mantereen aarre menevät samasta haarasta:
+         * kaikki muuttuvat heti rahaksi, ja ainoa ero on arvon
+         * arvonta. Sama haara ottaa vastaan myös tuntemattoman tyypin
+         * (vanha tallennus), jonka aarreTyyppi on jo kääntänyt pieneksi
+         * paikallisaarteeksi.
+         */
+        p.money += arvo;
+        this.say(p.id, `${token.symbol} ${p.name} löysi kätköstä: ${token.name} (${arvo} puntaa).`);
+        this.emit('treasure', token.name, { token: type, city: cityId, sub: `+${arvo} puntaa` });
     }
 
     this.checkWin();
@@ -2526,10 +2542,14 @@ export class Game {
   }
 
   /**
-   * Voitto: tähden tai hevosenkengän kanssa aloituskaupunkiin sen
-   * jälkeen kun tähti on löytynyt. ENSIMMÄINEN aarre riittää — vaikka
-   * mantereita on seitsemän, moninpelin kotiinjuoksu alkaa yhdestä
-   * (omistajan linjaus 11.8.2026: pienin muutos nykyiseen).
+   * Voitto: pääaarteen kanssa aloituskaupunkiin. ENSIMMÄINEN aarre
+   * riittää — vaikka mantereita on seitsemän, moninpelin kotiinjuoksu
+   * alkaa yhdestä (omistajan linjaus 11.8.2026: pienin muutos
+   * nykyiseen).
+   *
+   * Hevosenkengän oma voittotie poistui uuden aarrejärjestelmän myötä:
+   * laattojen alta löytyy vain aarteita, joten kenkiä ei ole enää
+   * olemassa eikä pelin voi voittaa ilman pääaarretta.
    */
   checkWin() {
     if (this.roaming) return false;
@@ -2538,14 +2558,11 @@ export class Game {
     const p = this.player;
     const city = this.cityOf();
     if (!city || !city.start) return false;
-    if (!p.stars && p.horseshoes === 0) return false;
+    if (!p.stars) return false;
 
     this.winner = p;
     this.phase = 'over';
-    const reason = p.stars
-      ? this.pack.texts.winStar
-      : 'ehti hevosenkengän kanssa kotiin ensimmäisenä';
-    this.say(p.id, `🏆 ${p.name} ${reason} kaupungissa ${city.name} ja voitti pelin!`);
+    this.say(p.id, `🏆 ${p.name} ${this.pack.texts.winStar} kaupungissa ${city.name} ja voitti pelin!`);
     return true;
   }
 
@@ -2657,8 +2674,10 @@ export class Game {
       game.worlds.set(pack.id, {
         pack,
         board: buildBoard(pack.cities, pack.edges, pack.map),
-        tokens: new Map(w.tokens ?? []),
-        revealed: new Map(w.revealed ?? []),
+        // Poistuneet laattatyypit käännetään lennossa, sekä
+        // kääntämättömistä laatoista että jo käännetyistä kirjauksista.
+        tokens: new Map((w.tokens ?? []).map(([city, type]) => [city, paivitaLaattatyyppi(type)])),
+        revealed: new Map((w.revealed ?? []).map(([city, type]) => [city, paivitaLaattatyyppi(type)])),
         // Vanhoissa tallennuksissa käyntejä ei kirjattu: jo käännetyt laatat
         // kertovat, missä on käyty, joten tietäjäpisteet eivät kerry uudelleen.
         visited: new Set(w.visited ?? (w.revealed ?? []).map(([city]) => city)),
@@ -2671,22 +2690,30 @@ export class Game {
     // Versio 1 -> 2: hasStar oli lippu, stars on laskuri. Kentät
     // luetaan ennen spreadia ja hasStar jätetään pois, jottei
     // vanhentunut lippu jää roikkumaan olioon.
-    game.players = data.players.map(({ hasStar, ...p }) => ({
+    // Hevosenkengät (horseshoes) jätetään pois: laatta poistui, eikä
+    // vanha laskuri saa jäädä roikkumaan olioon — sama kuvio kuin
+    // hasStar-lipulla versiossa 1 -> 2.
+    game.players = data.players.map(({ hasStar, horseshoes, ...p }) => ({
       packId: rootPack.id,
       xp: 0,
       quizAsked: 0,
       quizCorrect: 0,
       linssit: [],
       findManner: [],
+      findMaa: [],
       stars: hasStar ? 1 : 0,
       ...p,
+      // Poistuneet laattatyypit käännetään myös matkalaukun löydöissä.
+      finds: (p.finds ?? []).map(paivitaLaattatyyppi),
     }));
-    // findManner kulkee finds-listan rinnalla samoin indeksein. Vanhan
-    // tallennuksen löydöt (ajalta ennen kenttää) ovat listan alussa,
-    // joten vaje täydennetään null-mantereiksi ALKUUN — uudet löydöt
-    // osuvat silloin oikeille riveilleen.
+    // findManner ja findMaa kulkevat finds-listan rinnalla samoin
+    // indeksein. Vanhan tallennuksen löydöt (ajalta ennen kenttää) ovat
+    // listan alussa, joten vaje täydennetään tyhjillä ALKUUN — uudet
+    // löydöt osuvat silloin oikeille riveilleen.
     for (const p of game.players) {
+      p.findMaa ??= [];
       while (p.findManner.length < (p.finds?.length ?? 0)) p.findManner.unshift(null);
+      while (p.findMaa.length < (p.finds?.length ?? 0)) p.findMaa.unshift(null);
     }
     game.usedQuestions = new Set(data.usedQuestions ?? []);
     game.current = data.current;
@@ -2759,6 +2786,7 @@ export class Game {
     game.polloAarteena = data.polloAarteena ?? POLLO_ON_AARRE;
     game.polloLoydetty = game.polloAarteena ? (data.polloLoydetty ?? true) : true;
     game.polloPaljastus = false;
+    game.viimeAarre = null;
     game.lastPath = null;
     game.winner = data.winnerId === null ? null : game.players[data.winnerId] ?? null;
     game.turnCount = data.turnCount ?? 1;

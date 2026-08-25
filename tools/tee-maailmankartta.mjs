@@ -332,16 +332,21 @@ const islands = pisteet
   })
   .map((c) => c.id);
 
-/* Laattamäärä suhteutettuna kaupunkien määrään; tähtiä yksi. */
-const laattaKaupunkeja = cities.filter((c) => !c.start).length;
-const OSUUDET = { horseshoe: 0.05, robber: 0.08, ruby: 0.13, emerald: 0.16, topaz: 0.21 };
-const counts = { star: 1 };
-let jaljella = laattaKaupunkeja - 1;
-for (const [laji, osuus] of Object.entries(OSUUDET)) {
-  counts[laji] = Math.round(laattaKaupunkeja * osuus);
-  jaljella -= counts[laji];
-}
-counts.empty = jaljella;
+/*
+ * Laattamäärä = kaupunkien määrä, ja jokaisen laatan alta löytyy aarre
+ * (Raamattu, "Aarteet ja eteneminen"). Pääaarteita ja mantereen
+ * aarteita on yksi per manner; ryöstäjiä noin kahdeksan prosenttia, ja
+ * loput ovat paikallisaarteita suhteessa 1/3 iso, 2/3 pieni.
+ */
+const mantereita = PACKS.length; // yksi manner per lähdelauta
+const counts = {
+  star: mantereita,
+  mannerAarre: mantereita,
+  robber: Math.round(cities.length * 0.08),
+};
+const paikallisia = cities.length - counts.star - counts.mannerAarre - counts.robber;
+counts.isoAarre = Math.round(paikallisia / 3);
+counts.pieniAarre = paikallisia - counts.isoAarre;
 
 /*
  * Maatunnukset lähteistä. Vanha maailma on mukana siksi, että sen

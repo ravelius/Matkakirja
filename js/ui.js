@@ -6,7 +6,6 @@ import {
   chooseMove,
   chooseQuizAnswer,
   chooseTravel,
-  wantsDuelBypass,
   wantsDuelRelief,
   wantsFiftyFifty,
   wantsHint,
@@ -31,6 +30,7 @@ import {
   kehittajaPisteetPaalla, kehittajaRajatPaalla, kehittajaTilaPaalla,
   shortIntro, suojaa, tallennaLinssi, tallennettuLinssi, viivaIkoni,
 } from './ui-apurit.js';
+import { onAarre } from './tokens.js';
 // Remontin M5a: lehden sivukoneisto.
 import {
   avaaGrafiikkaLehti,
@@ -221,7 +221,6 @@ import {
   drawTerrain,
   drawTokenIcon,
   drawWaves,
-  tokenIconSvg,
   paperi,
   kasinPiirretty,
   rasteroiRuutu,
@@ -1689,11 +1688,8 @@ export class UI {
     });
     this.quizHint = document.getElementById('quiz-hint');
     this.quizHint.addEventListener('click', () => {
-      if (this.game.phase === 'duel') {
-        sfx.play('coin');
-        this.doAction(() => this.game.actionDuelBypass());
-        return;
-      }
+      // Kaksintaistelussa vihjenappi on piilossa: hevosenkengillä
+      // ohittaminen poistui uuden aarrejärjestelmän myötä (js/visa.js).
       sfx.play('hint');
       this.doAction(() => this.game.actionHint());
     });
@@ -11734,8 +11730,9 @@ export class UI {
   }
 
   /**
-   * Matkasaalis passissa: tähti, hevosenkengät ja jalokivet. Nämä näkyivät
-   * ennen erillisessä pelaajapaneelissa, joka vei tilaa kartalta.
+   * Matkasaalis passissa: unohdetut aarteet, mantereen aarteet ja
+   * paikallisaarteet. Nämä näkyivät ennen erillisessä
+   * pelaajapaneelissa, joka vei tilaa kartalta.
    */
   renderFinds() {
     const { game } = this;
@@ -11763,25 +11760,25 @@ export class UI {
       const tahti = game.aarreMantereella('star', p.findManner?.[i] ?? null);
       rivi(aarreIkoni(tahti, 'star', 44), tahti.name);
     });
-    if (p.horseshoes) rivi(tokenIconSvg('horseshoe', 44), `Hevosenkenkiä ${p.horseshoes}`);
 
     /*
-     * Jalokivet tyypeittäin JA mantereittain: maailmankartalla sama
-     * laji on eri mantereilla eri aarre (findManner kulkee finds-
-     * listan rinnalla; vanhan tallennuksen löydöillä manner on null
-     * ja laudan oma tyyppi kelpaa).
+     * Muut aarteet omina riveinään. Ryhmittely tehdään VALMIIN NIMEN
+     * mukaan, koska sama laattatyyppi on eri paikoissa eri aarre:
+     * mantereen aarre vaihtuu mantereittain (findManner) ja
+     * paikallisaarre maittain (findMaa). Kummankin listan alkiot
+     * kulkevat finds-listan rinnalla samoin indeksein; vanhan
+     * tallennuksen löydöillä ne ovat null, jolloin laudan oma tyyppi
+     * ja yleinen varanimi kelpaavat.
      */
     const counts = new Map();
     p.finds.forEach((type, i) => {
-      if ((game.tokenTypes[type]?.value ?? 0) <= 0) return;
-      const manner = p.findManner?.[i] ?? null;
-      const avain = `${type}:${manner ?? ''}`;
-      const rivit = counts.get(avain) ?? { type, manner, n: 0 };
+      if (type === 'star' || !onAarre(type)) return;
+      const token = game.aarreMantereella(type, p.findManner?.[i] ?? null, p.findMaa?.[i] ?? null);
+      const rivit = counts.get(token.name) ?? { type, token, n: 0 };
       rivit.n++;
-      counts.set(avain, rivit);
+      counts.set(token.name, rivit);
     });
-    for (const { type, manner, n } of counts.values()) {
-      const token = game.aarreMantereella(type, manner);
+    for (const { type, token, n } of counts.values()) {
       rivi(aarreIkoni(token, type, 44), `${token.name}${n > 1 ? ` ×${n}` : ''}`);
     }
 
@@ -12639,9 +12636,12 @@ export class UI {
     if (!this.winnerDialog.open) sfx.play('win');
     const w = this.game.winner;
     document.getElementById('winner-title').textContent = `${w.name} voitti!`;
-    this.typeText(document.getElementById('winner-text'), w.stars > 0
-      ? this.game.pack.texts.winnerStar(w.name, w.money)
-      : `${w.name} ehti hevosenkengän kanssa kotiin ennen unohdetun aarteen löytäjää.`, 'winner');
+    // Voiton ainoa tie on pääaarre kotiin (js/game.js checkWin).
+    this.typeText(
+      document.getElementById('winner-text'),
+      this.game.pack.texts.winnerStar(w.name, w.money),
+      'winner',
+    );
     const roamBtn = document.getElementById('winner-roam');
     roamBtn.onclick = () => {
       this.winnerDialog.close();
@@ -12877,38 +12877,35 @@ export class UI {
     const token = this.game.aarreTyyppi(type, this.game.quiz?.cityId);
     /*
      * Aarre tuntuu kädessä (iOS-kuori). Juhla on pelin voimakkain
-     * tärähdys, ja siksi se on varattu löydölle: tyhjä kotelo, rosvo,
-     * hevosenkenkä ja taikalasi eivät saa sitä, tai ele kuluisi loppuun.
+     * tärähdys, ja siksi se on varattu löydölle: rosvo ei saa sitä,
+     * tai ele kuluisi loppuun.
      */
     if (AARRELAATAT.has(type)) natiiviTarise('juhla');
-    /*
-     * Varustekuva (omistajan tilaus 10.8.2026: "tee varusteet kuviksi
-     * samoin kuin aarteet"): löytynyt linssi nousee mustasta omalla
-     * toimintakuvallaan kuten aarteet. Tunnus on jo tapahtumajonossa
-     * (revealToken kirjoitti sen); tyhjä kotelo jää kuvattomaksi,
-     * koska sillä ei ole varustetta näytettävänä.
-     */
-    const linssiTunnus = type === 'linssi'
-      ? (this.game.events?.find((e) => e.linssi)?.linssi ?? null) : null;
-    const kuva = linssiTunnus
-      ? `assets/varusteet/varuste-${linssiTunnus}.jpg` : (token.kuva ?? null);
+    const kuva = token.kuva ?? null;
     const { overlay, caption, kuvaEl } = this.rakennaPaljastus(kuva, token.name);
 
     // Nuoren herran huudahdus ensin — se kuuluu juuri siihen hetkeen,
     // kun aarre tulee näkyviin; cliffhanger-teksti vasta sen jälkeen.
-    const huudahdus = arvoHuudahdus(type, token);
+    const huudahdus = arvoHuudahdus(type);
     if (huudahdus) caption.appendChild(html('span', 'reveal-huudahdus', huudahdus.teksti));
     caption.appendChild(html('strong', '', token.name));
-    caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+${token.value} puntaa`));
+    /*
+     * ARVO ON LÖYTÖHETKEN OMA (Raamattu: *"Arvo vaihtelee
+     * löytöhetkellä"*). revealToken jätti sen viimeAarre-kenttään;
+     * ilman sitä kortti näyttäisi laattatyypin nollan, koska pienen ja
+     * ison paikallisaarteen arvoa ei lueta taulusta.
+     */
+    const loyto = this.game.viimeAarre;
+    const arvo = loyto?.type === type ? loyto.arvo : token.value;
+    caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+${arvo} puntaa`));
     /*
      * Tarinakaaren aarreteksti paljastuksen alle: kätkön löytyessä
      * kaaren henkilö sulkee kohtaamisen ja jättää auki jäävän vihjeen
      * (omistajan tilaus 9.8.2026 — korvasi isoisän aarresitaatin).
-     * Ei tyhjälle laatalle — pettymyksellä on oma selitteensä. Teksti
-     * on kerrontaa eikä sitaatti, joten lainausmerkkejä tai nimiötä
-     * ei lisätä päälle.
+     * Teksti on kerrontaa eikä sitaatti, joten lainausmerkkejä tai
+     * nimiötä ei lisätä päälle.
      */
-    const kaari = (type !== 'empty' && KAARI_LAUDAT.has(this.game.pack.id))
+    const kaari = KAARI_LAUDAT.has(this.game.pack.id)
       ? TARINAKAARI[this.game.quiz?.cityId] : null;
     /*
      * Hihkaisu on kortin huudahdus ääneen — sama repliikki luettuna
@@ -12920,21 +12917,13 @@ export class UI {
     const hihkaisu = (huudahdus && sfx.enabled && kertojaTila() !== 'ei')
       ? huudahdus.tiedosto : null;
     if (kaari?.aarre) caption.appendChild(html('p', 'reveal-isoisa', kaari.aarre));
-    /*
-     * Taikalasin kohdalla "Taikalasi" ei kerro vielä mitään: pelaajan
-     * pitää nähdä KUMPI lasi löytyi ja mitä sillä näkee. Nimi ja kuvaus
-     * asuvat linssimoduulissa (suunnitelman luku 3), joten ne haetaan
-     * dynaamisella tuonnilla — eikä kortin nousu jää sitä odottamaan,
-     * vaan teksti täydentyy paikalleen kun se saapuu.
-     */
-    if (type === 'linssi') void this.taydennaLinssiPaljastus(caption);
 
     // Dialogi on top layerissa, joten paljastus lisätään sen sisään.
     this.quizDialog.appendChild(overlay);
 
-    // Näyttöaika kasvaa selitteen mukana: "+300 puntaa" saa vilahtaa,
-    // mutta pitkä selite (esim. tyhjän laatan "merkintä oli vanhentunut")
-    // pitää ehtiä lukea. Napautus tai ruksi ohittaa odotuksen.
+    // Näyttöaika kasvaa selitteen mukana: "+180 puntaa" saa vilahtaa,
+    // mutta pitkä selite (pääaarteen kotiinvientikehotus) pitää ehtiä
+    // lukea. Napautus tai ruksi ohittaa odotuksen.
     const seliteMs = ((REVEAL_SUB[type] ?? '').length + (kaari?.aarre?.length ?? 0)) * 45;
     // Kortti odottaa vähimmäislukuajan; ruksi tai napautus sulkee heti.
     const napautus = new Promise((resolve) => {
@@ -12962,8 +12951,8 @@ export class UI {
     }
     overlay.remove();
     // Löytö päätyy matkalaukkuun: yläreunan Laukku-nappi heilahtaa
-    // eloisasti merkiksi (omistajan toive). Tyhjä laatta ei tuo mitään.
-    if (type !== 'empty') this.elavoitaLaukku();
+    // eloisasti merkiksi (omistajan toive). Rosvo ei tuo mitään.
+    if (onAarre(type)) this.elavoitaLaukku();
   }
 
   /**
@@ -13027,26 +13016,6 @@ export class UI {
      * tapahtumakuplien perään.
      */
     polloPaivitaNakyvyys(true);
-  }
-
-  /**
-   * Paljastusruudun teksti taikalasille: linssin oma nimi ja se yksi
-   * rivi, joka kertoo miksi lasi on hieno.
-   *
-   * Tunnus luetaan pelin tapahtumajonosta, johon revealToken juuri
-   * kirjoitti sen (kenttä linssi). Jono tyhjennetään vasta
-   * playEventsissä, joka ajetaan tämän animaation jälkeen.
-   */
-  async taydennaLinssiPaljastus(caption) {
-    const tunnus = this.game.events?.find((e) => e.linssi)?.linssi ?? null;
-    if (!tunnus) return;
-    const tuki = await this.lataaLinssit();
-    const linssi = tuki?.kaikki.find((l) => l.tunnus === tunnus) ?? null;
-    // Kortti on voinut jo poistua ruudulta: hidas tuonti ei saa
-    // kirjoittaa irralliseen elementtiin.
-    if (!linssi || !caption.isConnected) return;
-    caption.firstChild.textContent = linssi.nimi;
-    caption.lastChild.textContent = linssi.lyhyt;
   }
 
   /**
@@ -14254,7 +14223,6 @@ export class UI {
     }
     if (game.phase === 'duel') {
       if (game.duel.chosen !== null) this.run(() => game.closeDuel());
-      else if (wantsDuelBypass(game)) this.run(() => game.actionDuelBypass());
       else if (wantsDuelRelief(game)) this.run(() => game.actionDuelRelief());
       else answerDuelUi(this, chooseDuelAnswer(game));
       return;

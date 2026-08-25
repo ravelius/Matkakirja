@@ -154,20 +154,21 @@ async function leimaaPassiin(r) {
 }
 
 /**
- * Mikä linssi löytyy tämän kaupungin laatan alta.
+ * Mikä linssi kuuluu tähän kaupunkiin.
  *
- * Ensisijaisesti kaupungin oman mantereen linssi: laattoja on yksi per
- * manner, joten normaalipelissä tämä osuu aina ja jokainen manner
- * antaa oman linssinsä.
+ * EI ENÄÄ KUTSUJIA (25.8.2026): linssit eivät löydy laatoista vaan
+ * ostetaan kaupasta (Raamattu, "Aarteet ja eteneminen"). Sääntö jää
+ * odottamaan kauppaa, jonka valikoima on paikkasidonnainen samalla
+ * tavalla.
  *
- * Jos se on jo omistettu — mikä on toisella pelikerralla tavallista,
- * koska passin leimat säilyvät — annetaan ensimmäinen omistamaton
- * linssi rekisterijärjestyksessä. Laattalinssit tarjotaan ensin ja
+ * Ensisijaisesti kaupungin oman mantereen linssi. Jos se on jo
+ * omistettu — mikä on toisella pelikerralla tavallista, koska passin
+ * leimat säilyvät — annetaan ensimmäinen omistamaton linssi
+ * rekisterijärjestyksessä. Mannerlinssit tarjotaan ensin ja
  * tietäjäpistelinssit vasta niiden loputtua: muuten palaava pelaaja
- * saisi koko tietäjäpistereitin ilmaiseksi seitsemällä laatalla.
+ * saisi koko tietäjäpistereitin ilmaiseksi.
  *
- * null tarkoittaa, ettei annettavaa ole; kutsuja kohtelee laattaa
- * silloin tyhjänä.
+ * null tarkoittaa, ettei annettavaa ole.
  */
 export function linssiKaupungista(game, cityId, player = game.player) {
   const pack = game.pack;
@@ -208,9 +209,12 @@ export function tarkistaKynnys(game, player, ennen, jalkeen) {
 }
 
 /**
- * Mantereet, joille kuuluu linssilaatta — rekisterijärjestyksessä.
- * Laattojen jako (js/game.js enterWorld) kysyy tämän, jottei sen
- * tarvitse tuntea rekisterin muotoa.
+ * Mantereet, joille kuuluu oma linssi — rekisterijärjestyksessä.
+ *
+ * EI ENÄÄ KUTSUJIA (25.8.2026): linssit eivät löydy laatoista, koska
+ * laatan alta löytyy aina aarre ja varusteet ostetaan kaupasta
+ * (Raamattu, "Aarteet ja eteneminen"). Funktio jää odottamaan kauppaa,
+ * joka tarvitsee saman mannerjaon valikoimaansa.
  */
 export function laattamantereet() {
   const ulos = [];

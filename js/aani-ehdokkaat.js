@@ -15,30 +15,39 @@ const AVAIN = 'matkakirja-aanivalinnat';
 
 
 /*
- * Nuoren herran huudahdukset aarteen paljastukseen — sama repliikki
- * kirjoitettuna ja luettuna (tiedostot assets/audio/huudahdus-
- * <avain>-<n>.mp3, generointi tools/generoi-hihkaisut.mjs).
- * Asuu täällä eikä ui.js:ssä, jotta työhuoneen äänistudio saa
- * saman listan ilman koko pelin tuontia.
+ * Nuoren herran huudahdukset aarteen paljastukseen. Avaimena on
+ * LAATTATYYPPI (js/tokens.js), ei enää aarteen arvo: pienen ja ison
+ * paikallisaarteen arvo arvotaan löytöhetkellä, joten se ei kelpaa
+ * avaimeksi.
+ *
+ * PÄÄAARTEEN REPLIIKIT LUETAAN ÄÄNEEN, MUITA EI (Raamattu, osio
+ * "Aarteet ja eteneminen": *"pääaarteen luetut säilyvät; muut
+ * korvataan korkeintaan kahden sanan huudahduksilla ('Jes!', 'No
+ * okei.')"*). Pääaarteen tiedostot ovat assets/audio/huudahdus-star-
+ * <n>.mp3 (generointi tools/generoi-hihkaisut.mjs); lyhyet
+ * huudahdukset ovat pelkkää tekstiä.
+ *
+ * Asuu täällä eikä ui.js:ssä, jotta työhuoneen äänistudio saa saman
+ * listan ilman koko pelin tuontia.
  */
 export const HUUDAHDUKSET = {
-  300: [
-    'Hei — löytyi sittenkin!',
-    'Pieni, mutta aito!',
-    'Kelpaa tämäkin!',
-    'Taskuun ja eteenpäin!',
+  pieniAarre: [
+    'Jes!',
+    'No okei.',
+    'Kelpaa tämäkin.',
+    'Taskuun!',
   ],
-  600: [
-    'Mahtavaa!',
-    'Sepä vasta löytö!',
-    'Isoisä olisi hykerrellyt!',
-    'Tämä merkitään päiväkirjaan!',
+  isoAarre: [
+    'Ohhoh!',
+    'Kas noin!',
+    'Melkoinen löytö!',
+    'Tämäpä painava.',
   ],
-  1000: [
+  mannerAarre: [
     'Uskomatonta!',
-    'Jes! Katsokaa nyt tätä!',
-    'Sydän hakkaa — mikä löytö!',
-    'Juuri tällaisesta isoisä kirjoitti!',
+    'Katsokaa tätä!',
+    'Sydän hakkaa!',
+    'Voi hyvänen aika.',
   ],
   star: [
     'Se on totta... se on oikeasti totta!',
@@ -370,18 +379,10 @@ export const EHDOKKAAT = {
     ],
   },
   'tehoste:gem': {
-    otsikko: 'Jalokiven paljastus',
+    otsikko: 'Aarteen paljastus',
     oletus: 'assets/audio/efekti-jalokivi.mp3',
     ehdokkaat: [
       { url: 'assets/audio/efekti-jalokivi.mp3', nimi: 'Lasinen kimallushelähdys — ElevenLabs SFX' },
-      { url: null, nimi: 'Syntetisoitu' },
-    ],
-  },
-  'tehoste:horseshoe': {
-    otsikko: 'Hevosenkengän paljastus',
-    oletus: 'assets/audio/efekti-kenka.mp3',
-    ehdokkaat: [
-      { url: 'assets/audio/efekti-kenka.mp3', nimi: 'Metallinen kilahdus puuta vasten — ElevenLabs SFX' },
       { url: null, nimi: 'Syntetisoitu' },
     ],
   },

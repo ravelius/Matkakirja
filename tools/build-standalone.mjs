@@ -55,6 +55,8 @@ const MODULES = [
   'js/packs/nahtavyysjutut.js',
   'js/packs/miniatyyrit.js',
   'js/packs/julisteet.js',
+  // Maakohtaiset paikallisaarteet: laattatyyppien nimet ennen pakkoja.
+  'js/packs/paikallisaarteet.js',
   'js/packs/lipputiedot.js',
   'js/packs/henkilot.js',
   'js/packs/saatiedot.js',

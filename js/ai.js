@@ -1,12 +1,12 @@
 // Yksinkertainen tietokonevastustaja.
 //
 // Strategia:
-//   1. Jos hallussa on tähti tai (tähti löytynyt ja hallussa hevosenkenkä) -> kotiin.
+//   1. Jos hallussa on pääaarre -> kotiin.
 //   2. Muuten: käännä laatta jos seisot sellaisen päällä.
 //   3. Muuten: liiku kohti lähintä kääntämätöntä laattaa.
 
 import { cityDistances, distanceOf } from './rules.js';
-import { DUEL_BYPASS_SHOES, FIFTY_FIFTY_PRICE, FLIGHT_PRICE, HINT_PRICE } from './game.js';
+import { FIFTY_FIFTY_PRICE, FLIGHT_PRICE, HINT_PRICE } from './game.js';
 
 // Kuinka usein botti osaa vastata tietovisaan oikein.
 export const BOT_SKILL = 0.55;
@@ -14,7 +14,7 @@ export const BOT_SKILL = 0.55;
 function racingHome(game, p) {
   // Vaelluksessa ei kiirehditä kotiin, koska peli ei pääty.
   if (game.roaming) return false;
-  return p.stars > 0 || (game.starFound && p.horseshoes > 0);
+  return p.stars > 0;
 }
 
 /** Etäisyydet kohteisiin: yhdistetty kartta, jossa jokainen kohde on nollaetäisyydellä. */
@@ -170,11 +170,6 @@ export function wantsQuiz() {
 }
 
 // --- rosvon kaksintaistelu -------------------------------------------------
-
-/** Ohittaako botti rosvon hevosenkengillä? Aina, jos kenkiä riittää. */
-export function wantsDuelBypass(game) {
-  return game.player.horseshoes >= DUEL_BYPASS_SHOES;
-}
 
 /** Pyytääkö botti rosvolta helpotusta? Kerran, jos pelissä on paljon rahaa. */
 export function wantsDuelRelief(game) {

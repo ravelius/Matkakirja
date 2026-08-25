@@ -300,27 +300,21 @@ export const OCEANIA = {
   minCityDistance: 35,
 
   tokens: {
-    // Topaasin tilalla opaali: Coober Pedy tuottaa valtaosan maailman
-    // jalo-opaaleista, ja kaivoskaupungissa asutaan maan alla helteen takia.
+    // Opaali on Oseanian oma aarre: Coober Pedy tuottaa valtaosan
+    // maailman jalo-opaaleista, ja kaivoskaupungissa asutaan maan alla
+    // helteen takia.
     types: themedTokenTypes({
       star: {
         name: 'Eteläristin helmi',
         kuva: 'assets/aarteet/aarre-oceania-star.jpg',
       },
-      ruby: {
+      mannerAarre: {
         name: 'Opaali', color: '#7fb7c9',
-        kuva: 'assets/aarteet/aarre-oceania-ruby.jpg',
-      },
-      emerald: {
-        name: 'Paua-simpukkakoru', color: '#3a9ea6',
-        kuva: 'assets/aarteet/aarre-oceania-emerald.jpg',
-      },
-      topaz: {
-        name: 'Simpukkarahanauha', color: '#e0cfa8',
-        kuva: 'assets/aarteet/aarre-oceania-topaz.jpg',
+        kuva: 'assets/aarteet/aarre-oceania-manner.jpg',
       },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 6, topaz: 7, empty: 10 },
+    // 33 kaupunkia, yksi laatta kussakin.
+    counts: { star: 1, mannerAarre: 1, robber: 3, isoAarre: 9, pieniAarre: 19 },
   },
 
   questions: OCEANIA_QUESTIONS,
@@ -375,7 +369,7 @@ export const OCEANIA = {
     intro: 'Peli alkaa! Etsikää Eteläristin helmi ja palatkaa Sydneyyn tai Perthiin.',
     starFound: (name, city) => `◈ ${name} löysi ETELÄRISTIN HELMEN kaupungista ${city}!`,
     starToast: 'ETELÄRISTIN HELMI!',
-    starChase: 'Nyt on kiire kotiin — myös hevosenkengän haltija voi voittaa pelin.',
+    starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
     winStar: 'toi Eteläristin helmen turvallisesti kotiin',
     winnerStar: (name, money) => `${name} toi Eteläristin helmen kotiin ${money} punnan kanssa.`,
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.

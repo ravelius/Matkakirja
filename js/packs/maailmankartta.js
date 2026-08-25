@@ -1138,29 +1138,22 @@ export const MAAILMANKARTTA = {
      * löytömannerta).
      */
     mannerTypes: Object.fromEntries(LAHDEPAKAT.map((p) => [p.id, p.tokens.types])),
-    // Laattamäärä = kaupunkien määrä (261): jokainen kaupunki saa
-    // laatan, myös aloituskaupungit (omistajan päätös 10.8.2026).
-    // Aloituskaupunkien 19 lisälaattaa ovat jalokiviä — ei uusia
-    // tyhjiä, rosvoja eikä tähtiä, ettei alku ala pettymyksellä.
-    //
-    // Seitsemän linssilaattaa on otettu tyhjistä (84 -> 77), koska
-    // maailmankartalla on seitsemän lähdemannerta ja tyhjä laatta on
-    // pelin turhauttavin ruutu: se vie vuoron eikä anna mitään.
-    //
-    // SEITSEMÄN TÄHTEÄ, YKSI PER MANNER (omistajan päätös 11.8.2026):
-    // jokaisella mantereella on oma Aarnin luettelon aarteensa, ja
-    // mannerTypes antaa kullekin oman nimensä ja kuvansa. Kuusi uutta
-    // tähteä otettiin tyhjistä samalla perusteella kuin linssit
-    // (77 -> 71).
-    //
-    // YKSITOISTA UUTTA KAUPUNKIA (17.8.2026) nostivat kaupunkimäärän
-    // 248 -> 261. Lisälaatat jaettu samoin kuin lähdelaudoilla:
-    // Tampere ja Sevilla topaasiin, Firenze ja Bergen tyhjiin
-    // (europe.js), Kioto, Varanasi, Mandalay ja Kanton yksi kuhunkin
-    // ruby/emerald/topaz/empty (asia.js), Fès topaasiin ja Lalibela
-    // tyhjiin (africa.js), Sitka, Ouro Preto ja Dunedin tyhjiin
-    // (northamerica.js, southamerica.js, oceania.js).
-    counts: {"star":7,"horseshoe":11,"robber":18,"ruby":35,"emerald":44,"topaz":61,"empty":78,"linssi":7},
+    /*
+     * LAATTAMÄÄRÄ = KAUPUNKIEN MÄÄRÄ (261): jokainen kaupunki saa
+     * laatan, myös aloituskaupungit (omistajan päätös 10.8.2026), ja
+     * jokaisen alta löytyy aarre (Raamattu, "Aarteet ja eteneminen").
+     *
+     * Seitsemän mannerta, siis seitsemän pääaarretta (omistajan päätös
+     * 11.8.2026: jokaisella mantereella on oma Aarnin luettelon
+     * aarteensa) ja seitsemän mantereen 1000 punnan aarretta —
+     * mannerTypes antaa kummallekin mantereen oman nimen ja kuvan.
+     *
+     * Loput 229 kaupunkia saavat paikallisaarteen: noin kolmasosa iso,
+     * kaksi kolmasosaa pieni. Kun kaupunkeja lisätään, uudet laatat
+     * jaetaan samassa suhteessa — pääaarteet, mantereen aarteet ja
+     * ryöstäjät eivät kasva kaupunkimäärän mukana.
+     */
+    counts: {"star":7,"mannerAarre":7,"robber":18,"isoAarre":76,"pieniAarre":153},
   },
 
   questions: yhdistaKysymykset(),

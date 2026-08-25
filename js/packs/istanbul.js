@@ -141,9 +141,10 @@ export const ISTANBUL = {
     // Pääaarre on Topkapın kuuluisan timantin henkinen sukulainen.
     types: themedTokenTypes({
       star: { name: 'Sulttaanin timantti' },
-      topaz: { name: 'Turkoosi', color: '#3aaea6' },
+      mannerAarre: { name: 'Turkoosi', color: '#3aaea6' },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 2, ruby: 2, emerald: 4, topaz: 4, empty: 2 },
+    // 17 kaupunkia, yksi laatta kussakin.
+    counts: { star: 1, mannerAarre: 1, robber: 2, isoAarre: 4, pieniAarre: 9 },
   },
 
   questions: ISTANBUL_QUESTIONS,
@@ -193,7 +194,7 @@ export const ISTANBUL = {
     intro: 'Peli alkaa! Etsikää Sulttaanin timantti ja palatkaa lentoasemalle.',
     starFound: (name, city) => `◈ ${name} löysi SULTTAANIN TIMANTIN: ${city}!`,
     starToast: 'SULTTAANIN TIMANTTI!',
-    starChase: 'Nyt on kiire kotiin — myös hevosenkengän haltija voi voittaa pelin.',
+    starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
     winStar: 'toi Sulttaanin timantin turvallisesti kotiin',
     winnerStar: (name, money) => `${name} toi Sulttaanin timantin kotiin ${money} punnan kanssa.`,
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
