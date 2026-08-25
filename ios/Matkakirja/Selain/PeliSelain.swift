@@ -25,6 +25,10 @@ final class PeliSelain: NSObject, ObservableObject {
 
     @Published private(set) var tila: Tila = .lataa
 
+    /// Sisältöprosessin kuolemien aikaleimat silmukkajarrua varten
+    /// (ks. webViewWebContentProcessDidTerminate).
+    private var prosessikuolemat: [Date] = []
+
     let webNakyma: WKWebView
     let sillat: NatiiviSilta
 
@@ -238,6 +242,30 @@ extension PeliSelain: WKNavigationDelegate {
     func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
         // Muistipaine tappoi sivun prosessin: haetaan peli uudestaan sen sijaan
         // että pelaaja jäisi tuijottamaan valkoista ruutua.
+        //
+        // SILMUKKAJARRU (25.8.2026, omistajan iPhone ja iPad: peli jäi
+        // aloituslogosilmukkaan, kun tallenteen palautus kaatoi prosessin
+        // heti uudelleen). Kuolemat kirjataan; kolmas kuolema viiden
+        // minuutin sisään lataa pelin turvatilaparametrilla, jonka
+        // js/main.js muuntaa pelin omaksi turvatilaksi (fokuslehdet pois
+        // tunniksi) — silmukka purkautuu ilman pelaajan toimia.
+        let nyt = Date()
+        prosessikuolemat = prosessikuolemat.filter { nyt.timeIntervalSince($0) < 300 }
+        prosessikuolemat.append(nyt)
+        if prosessikuolemat.count >= 3, var osat = pelinOsoite.flatMap({
+            URLComponents(url: $0, resolvingAgainstBaseURL: false)
+        }) {
+            prosessikuolemat.removeAll()
+            var kysely = osat.queryItems ?? []
+            kysely.removeAll { $0.name == "turvatila" }
+            kysely.append(URLQueryItem(name: "turvatila", value: "1"))
+            osat.queryItems = kysely
+            if let turvaosoite = osat.url {
+                tila = .lataa
+                webNakyma.load(URLRequest(url: turvaosoite))
+                return
+            }
+        }
         lataaPeli()
     }
 

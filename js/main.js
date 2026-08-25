@@ -57,6 +57,16 @@ const PLAYER_COLOR = '#d94f3d';
  */
 (function kirjaaKaynnistys() {
   try {
+    /*
+     * KUOREN TURVATILAPARAMETRI: iOS-kuoren silmukkajarru (ios/
+     * Matkakirja/Selain/PeliSelain.swift) lataa pelin osoitteella
+     * ?turvatila=1, kun sisältöprosessi on kuollut kolmesti — se on
+     * sama tunnin turvatila kuin oma käynnistyslaskurimme, vain kuoren
+     * sytyttämänä. Peli ohittaa tuntemattomat parametrit muutenkin.
+     */
+    if (new URL(location.href).searchParams.get('turvatila') === '1') {
+      localStorage.setItem('matkakirja-atlas-turvatila', String(Date.now()));
+    }
     const AVAIN = 'matkakirja-kaynnistykset';
     const nyt = Date.now();
     const lista = (JSON.parse(localStorage.getItem(AVAIN) ?? '[]'))

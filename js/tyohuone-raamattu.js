@@ -1069,12 +1069,16 @@ export const RAAMATTU = {
       kohdat: [
         'PELIÄ PELATAAN ENSISIJAISESTI TESTFLIGHTIN KAUTTA: '
           + 'iOS-kuorisovellus (WKWebView) lataa pelin Pagesista '
-          + '(ravelius.github.io/Matkakirja). Kuoren lähdekoodi EI ole '
-          + 'tässä repossa (ios/Matkakirja/...); pelin puoleiset '
+          + '(ravelius.github.io/Matkakirja). Kuoren lähdekoodi ON '
+          + 'TÄSSÄ REPOSSA kansiossa ios/ (SwiftUI + PeliSelain.swift '
+          + '+ sillat + widget + fastlane; ks. ios/OHJE.md) — Claude '
+          + 'on rakentanut sen aiemmissa sessioissa. Pelin puoleiset '
           + 'kytkennät ovat js/natiivi.js (silta '
           + 'window.matkakirjaNatiivi: iCloud-synkka, widget, Game '
           + 'Center, luentasilta js/lukija.js, haptiikka). Selain '
-          + 'ilman kuorta on aina tuettu varapolku.',
+          + 'ilman kuorta on aina tuettu varapolku. HUOM: kuoren '
+          + 'muutokset päätyvät laitteille vasta omistajan uudesta '
+          + 'TestFlight-buildista — web-muutokset heti Pagesista.',
         'WKWEBVIEW ON AHTAAMPI KUIN SAFARI: sisältöprosessin '
           + 'muistikatto on tiukempi ja ylitys tappaa prosessin '
           + 'ilman virhettä — kuori lataa sivun uudelleen, mikä '
