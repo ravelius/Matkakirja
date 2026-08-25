@@ -37,7 +37,9 @@
  *   3. Loitonnettaessa naapurilehdet piirtyvät atlakseen (.fokus-atlas).
  *   4. Laiska lataus: haettujen lehtien määrä on murto-osa kaikista.
  *   5. Näkymästä poistuneet lehdet vapautetaan (LRU).
- *   5b. Vanhaa lautaa ei piirretä lehtien alla — ja se palaa yleiskuvaan.
+ *   5b. Vanhaa lautaa ei piirretä lehtien alla — EIKÄ yleiskuvassa;
+ *       se palaa vasta kun fokusmoodi sammutetaan (omistajan linjaus
+ *       25.8.2026, ilta: vanha kartta kokonaan pois pelin ajaksi).
  *   6. Ylärivissä ovat "rajat" ja "pisteet", valikossa fokus + sumennus.
  *   7. "rajat" kytkee pelaajan liikkuvuusrajoitteen päälle.
  *   8. "pisteet" piirtää kaupungit ja reittiverkon kartalle.
@@ -258,7 +260,23 @@ vaadi('fokusnäkymässä vanhaa lautaa ei piirretä lehtien alla',
   && piilotus.paperi !== 'none' && piilotus.paperi !== 'ei ole',
   JSON.stringify(piilotus));
 
-const paluu = await sivu.evaluate(async () => {
+/*
+ * YLEISKUVA EI OLE ENÄÄ PALUU VANHAAN LAUTAAN (omistajan linjaus
+ * 25.8.2026, ilta: *"Lennon aikana taidetaan käyttää sitä vanhaa
+ * karttaa. Vanha kartta pitää ottaa kokonaan pois pelistä
+ * toistaiseksi."*).
+ *
+ * Väite oli tässä päinvastainen: uloszoomatussa yleiskuvassa piilotus
+ * väistyi ja lauta piirtyi taas. Juuri se oli omistajan näkemä vika —
+ * vanha piirros vilahti pelin aikana. Uusi sopimus: pelilaudalla
+ * piilotus on päällä myös yleiskuvassa, ja vanha lauta palaa vasta kun
+ * peliä ei enää pelata fokusmoodissa (kytkin pois, aloitusruutu,
+ * katselutila, turvatila).
+ *
+ * KAKSI VÄITETTÄ, KOSKA PIILOTUS ILMAN PALUUTA OLISI YHTÄ PAHA VIKA:
+ * kytkimen napautus ei saa jättää ruudulle tyhjää pergamenttia.
+ */
+const yleiskuva = await sivu.evaluate(async () => {
   const { ui } = window.matkakirja;
   ui.mannerZoom = false;
   document.body.classList.remove('manner-zoom');
@@ -269,9 +287,26 @@ const paluu = await sivu.evaluate(async () => {
   return {
     luokka: document.body.classList.contains('fokus-atlas-nakyma'),
     staattinen: getComputedStyle(document.querySelector('.staattinen')).display,
+    paperi: getComputedStyle(document.querySelector('.paper-pohja')).display,
   };
 });
-vaadi('yleiskuvaan palatessa vanha lauta piirtyy taas',
+vaadi('yleiskuvassakaan vanha lauta ei piirry — pergamentti jää',
+  yleiskuva.luokka && yleiskuva.staattinen === 'none' && yleiskuva.paperi !== 'none',
+  JSON.stringify(yleiskuva));
+
+const paluu = await sivu.evaluate(async () => {
+  const { ui } = window.matkakirja;
+  // Fokusmoodin kytkin on atlaksen ensimmäinen ehto (atlasPaalla).
+  ui.fokusmoodi = false;
+  ui.fokusAvain = null;
+  ui.paivitaFokusKerros();
+  await new Promise((r) => setTimeout(r, 300));
+  return {
+    luokka: document.body.classList.contains('fokus-atlas-nakyma'),
+    staattinen: getComputedStyle(document.querySelector('.staattinen')).display,
+  };
+});
+vaadi('fokusmoodin sammuttaminen tuo vanhan laudan takaisin',
   !paluu.luokka && paluu.staattinen !== 'none', JSON.stringify(paluu));
 
 /* --- kehittäjänapit (sivu uusiksi, jotta main.js näyttää kotelon) --- */

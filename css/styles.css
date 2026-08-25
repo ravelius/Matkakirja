@@ -4515,10 +4515,25 @@ body.fokuspohja .country-korostus { display: none; }
    PERGAMENTTI EI OLE TÄSSÄ MUKANA. Paperin pohja (.paper-pohja) on
    laudan juuriryhmän ensimmäinen lapsi eikä kuulu taideryhmään
    (js/ui.js drawPaperPohja), joten lehtien ulkopuolelle jää paperi eikä
-   paneelin tumma tausta. Luokan kytkee js/fokuskartta.js
-   paivitaFokusAtlas täsmälleen atlaksen ehdoilla, joten yleiskuva,
-   aloituslento, aloitusruutu ja katselutila saavat vanhan laudan
-   ennallaan.
+   paneelin tumma tausta.
+
+   PIILOTUS KATTAA KOKO PELIN (omistajan linjaus 25.8.2026, ilta:
+   *"Lennon aikana taidetaan käyttää sitä vanhaa karttaa. Vanha kartta
+   pitää ottaa kokonaan pois pelistä toistaiseksi."*). Luokan kytkee
+   js/fokuskartta.js paivitaFokusAtlas täsmälleen atlaksen ehdoilla, ja
+   ne ehdot ovat nyt "pelilaudalla aina": myös avauslennossa ja
+   uloszoomatussa yleiskuvassa. Vanhan piirroksen saavat yhä
+   aloitusruutu (pickstart), katselutila (?lauta=), turvatila ja
+   lauta, jolle ei ole yhtäkään lehteä.
+
+   MYÖS VEKTORIT OVAT TÄMÄN LUOKAN ALLA — MUTTA NE EIVÄT SILTI OLE
+   ILMAISIA. .staattinen on sama ryhmä, jossa laudan alkuperäiset ~6500
+   vektorielementtiä elävät ennen kuin bittikartta korvaa ne (js/ui.js
+   rasteroiTaide). Mitattuna 25.8.2026 (Chromium, puhelinruutu, CPU x2):
+   jos putki jätetään ajamatta, vektorit jäävät tähän piilotettuun
+   ryhmään ja nipistyksen pudonneet kehykset nousevat 3,2 %:sta
+   15,3 %:iin. Lauta rakennetaan siis kerran näkyvänä, pohjataso ajaa
+   vektorit pois, ja vasta sitten tämä luokka peittää lopun.
    --------------------------------------------------------------------------- */
 body.fokus-atlas-nakyma .staattinen,
 body.fokus-atlas-nakyma .taide-pohja { display: none; }
@@ -8703,6 +8718,14 @@ body.katselu #newgame-btn { display: none; }
  * poistuu lennon lopussa 280 ms ennen kuin js/ui.js tyhjentää
  * lentokerroksen; ilman tätä sääntöä molemmat harsot olisivat sen
  * hetken päällekkäin.
+ *
+ * HARSON ALLA ON NYT ATLAS EIKÄ VANHA LAUTA (omistajan linjaus
+ * 25.8.2026, ilta: *"Vanha kartta pitää ottaa kokonaan pois pelistä
+ * toistaiseksi."*). Aukoton harso jää silti tähän kohtaan sellaisenaan
+ * — sen tehtävä on estää kohdemaata erottumasta ennen laskeutumista
+ * (ks. yllä), eikä se tehtävä muuttunut mihinkään. Ero on siinä, mitä
+ * harson läpi näkyy: ennen laudan piirros, nyt pergamentti ja
+ * valmistuneiden maiden atlas-lehdet.
  */
 body.kartalento .fokus-sumu { display: none; }
 
