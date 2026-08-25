@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1112, teksti: 'Muistisuojat: puhelinkatot ja turvatila' },
   { v: 1111, teksti: 'Uusi alkuteksti ja luenta' },
   { v: 1110, teksti: 'Nopea avaus, merkit kartan mittakaavaan' },
   { v: 1109, teksti: 'Aarremerkit laattoihin, kiinteat merkkikoot, takykupla' },
