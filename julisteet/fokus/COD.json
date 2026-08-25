@@ -1,0 +1,201 @@
+{
+  "iso": "COD",
+  "lauta": "maailmankartta",
+  "bbox": {
+    "x": 5664.02,
+    "y": 2789.62,
+    "w": 1788.33,
+    "h": 1117.71
+  },
+  "rajaus": {
+    "x": 6125.93,
+    "y": 2918.58,
+    "w": 864.5,
+    "h": 859.78
+  },
+  "kuva": {
+    "w": 6400,
+    "h": 4000
+  },
+  "tiedosto": "COD.webp",
+  "tehty": "2026-08-25",
+  "yleinen": true,
+  "ikkuna": {
+    "lonKeski": 21.745494000000008,
+    "lat0": -16.84840458,
+    "lat1": 8.76533358,
+    "kuvasuhde": 1.0054968255003653
+  },
+  "maamuodonEro": 3.6,
+  "paikat": [
+    "Kinshasa",
+    "Lubumbashi",
+    "Kikwit",
+    "Kolwezi",
+    "Matadi",
+    "Bumba",
+    "Mbuji-Mayi",
+    "Kananga",
+    "Kisangani"
+  ],
+  "tasaus": [
+    {
+      "id": "lontoo",
+      "nimi": "Lontoo",
+      "kohdemaassa": false,
+      "lauta": [
+        5829.5,
+        1324.1
+      ],
+      "projektio": [
+        5829.1,
+        1324
+      ],
+      "ero": 0.43
+    },
+    {
+      "id": "istanbul",
+      "nimi": "Istanbul",
+      "kohdemaassa": false,
+      "lauta": [
+        6796.5,
+        1763
+      ],
+      "projektio": [
+        6799.3,
+        1763.1
+      ],
+      "ero": 2.78
+    },
+    {
+      "id": "pariisi",
+      "nimi": "Pariisi",
+      "kohdemaassa": false,
+      "lauta": [
+        5911.1,
+        1440.1
+      ],
+      "projektio": [
+        5911.7,
+        1439.6
+      ],
+      "ero": 0.81
+    },
+    {
+      "id": "lissabon",
+      "nimi": "Lissabon",
+      "kohdemaassa": false,
+      "lauta": [
+        5529.2,
+        1852.5
+      ],
+      "projektio": [
+        5528.7,
+        1852.8
+      ],
+      "ero": 0.61
+    },
+    {
+      "id": "madrid",
+      "nimi": "Madrid",
+      "kohdemaassa": false,
+      "lauta": [
+        5709.7,
+        1787
+      ],
+      "projektio": [
+        5709.9,
+        1786.5
+      ],
+      "ero": 0.55
+    },
+    {
+      "id": "berliini",
+      "nimi": "Berliini",
+      "kohdemaassa": false,
+      "lauta": [
+        6279.2,
+        1278.3
+      ],
+      "projektio": [
+        6280.2,
+        1278.9
+      ],
+      "ero": 1.11
+    },
+    {
+      "id": "wien",
+      "nimi": "Wien",
+      "kohdemaassa": false,
+      "lauta": [
+        6379.9,
+        1467.8
+      ],
+      "projektio": [
+        6379.1,
+        1467.3
+      ],
+      "ero": 0.89
+    },
+    {
+      "id": "rooma",
+      "nimi": "Rooma",
+      "kohdemaassa": false,
+      "lauta": [
+        6249.7,
+        1728.1
+      ],
+      "projektio": [
+        6249.9,
+        1727.5
+      ],
+      "ero": 0.66
+    },
+    {
+      "id": "ateena",
+      "nimi": "Ateena",
+      "kohdemaassa": false,
+      "lauta": [
+        6624.7,
+        1882
+      ],
+      "projektio": [
+        6624.3,
+        1881.5
+      ],
+      "ero": 0.7
+    },
+    {
+      "id": "helsinki",
+      "nimi": "Helsinki",
+      "kohdemaassa": false,
+      "lauta": [
+        6661.1,
+        901.8
+      ],
+      "projektio": [
+        6664.6,
+        917.2
+      ],
+      "ero": 15.83
+    },
+    {
+      "id": "kairo",
+      "nimi": "Kairo",
+      "kohdemaassa": false,
+      "lauta": [
+        6874.2,
+        2180.9
+      ],
+      "projektio": [
+        6874.5,
+        2179.3
+      ],
+      "ero": 1.65
+    }
+  ],
+  "lahteet": [
+    "Natural Earth 10m (Kelso & Patterson) — public domain",
+    "ETOPO1 Global Relief (NOAA, Amante & Eakins 2009) — public domain"
+  ]
+}
