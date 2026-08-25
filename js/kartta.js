@@ -22,7 +22,7 @@ import {
 import { stopDiaryVoice, stopIntroVoice } from './luenta.js';
 import { el } from './mapart.js';
 import { sfx } from './sound.js';
-import { fokusmoodiPaalla, kehittajaTilaPaalla } from './ui-apurit.js';
+import { fokusmoodiPaalla, kehittajaRajatPaalla, kehittajaTilaPaalla } from './ui-apurit.js';
 
 /*
  * Kuinka paljon pergamenttia jatketaan kartan alle avaustekstiä varten.
@@ -1825,9 +1825,15 @@ export class Kartta {
    *
    * KEHITTÄJÄTILASSA VAPAA — ja ilman fokusmoodia (vertailutila,
    * katselulinkit) sekin on pelin vanha rajaton panorointi.
+   *
+   * KEHITTÄJÄN "rajat"-NAPPI (omistajan tilaus 25.8.2026) kytkee
+   * pelaajan rajoitteen takaisin päälle kehittäjätilassakin. Oletus on
+   * pois, eli kehittäjätilan vanha vapaa panorointi säilyy sellaisenaan
+   * — nappi on nimenomaan tapa PYYTÄÄ autenttinen rajoite, ei uusi
+   * oletus (ks. js/ui-apurit.js kehittajaRajatPaalla).
    */
   panorointiVapaa() {
-    if (kehittajaTilaPaalla()) return true;
+    if (kehittajaTilaPaalla()) return !kehittajaRajatPaalla();
     return !fokusmoodiPaalla();
   }
 
@@ -1930,6 +1936,17 @@ export class Kartta {
    */
   fokusRajaukset() {
     if (!this.ui.fokusmoodi || this.ui.katselu) return null;
+    /*
+     * KEHITTÄJÄN "rajat"-NAPPI OHITTAA KUVAN RAJAUKSENKIN (omistajan
+     * tilaus 25.8.2026). Kommentti yllä sanoi *"myös kehittäjätilassa,
+     * koska juuri siinä tilassa omistaja pelitestaa"* — ja se pitää yhä
+     * paikkansa silloin kun rajoite on pyydetty päälle. Nyt atlas on
+     * jatkuva pinta, jossa naapurimaiden lehdet piirtyvät samaan aikaan
+     * (js/fokuskartta.js), ja sen selaaminen on koko uuden näkymän
+     * tarkistamisen ehto: fokusikkuna lukitsisi kameran yhteen maahan.
+     * Sama nappi, sama sääntö kuin panorointiVapaassa.
+     */
+    if (kehittajaTilaPaalla() && !kehittajaRajatPaalla()) return null;
     /*
      * VAIN LÄHIKUVASSA. Yleiskuva (mannerZoom pois) on laudan oma
      * näkymä, jossa fokuskuva on pieni upote maailmankartalla eikä

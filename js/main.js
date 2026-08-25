@@ -4,8 +4,9 @@ import { MUUTOKSET } from './muutokset.js';
 import { Game } from './game.js';
 import { UI } from './ui.js';
 import {
-  asetaFokusSumennus, asetaFokusmoodi, asetaKehittajaTila,
-  fokusSumennusPaalla, fokusmoodiPaalla, kehittajaTilaPaalla,
+  asetaFokusSumennus, asetaFokusmoodi, asetaKehittajaPisteet, asetaKehittajaRajat,
+  asetaKehittajaTila, fokusSumennusPaalla, fokusmoodiPaalla, kehittajaPisteetPaalla,
+  kehittajaRajatPaalla, kehittajaTilaPaalla,
 } from './ui-apurit.js';
 import { sfx } from './sound.js';
 import { packById } from './pack.js';
@@ -1132,16 +1133,30 @@ function paivitaPuheSaadin() {
   paivitaFokusKytkimet();
 }
 
-/* --- Fokusmoodin kytkimet (omistajan linjaus 24.8.2026) ------------------ */
+/* --- Kehittäjän kytkimet (omistajan tilaus 25.8.2026) -------------------- */
 
 /*
- * KAKSI KEHITTÄJÄNAPPIA MATKALAUKUN OIKEALLA PUOLELLA (index.html
- * #fokus-kytkimet).
+ * YLÄRIVIN KAKSI NAPPIA (index.html #fokus-kytkimet) JA VALIKON KAKSI
+ * VERTAILUKYTKINTÄ (index.html #kehittaja-kotelo).
+ *
+ * YLÄRIVI = PELITESTIN TYÖKALUT (omistajan tilaus 25.8.2026):
+ *
+ *   #kehittaja-rajat-btn   "rajat"   — pelaajan liikkuvuusrajoite
+ *       (fokusikkuna + valloitettu alue) päälle/pois kehittäjätilassa.
+ *       Pois = omistaja selaa koko atlasta vapaasti; päällä = sama
+ *       rajoite kuin pelaajalla ilman että kehittäjätila pitää sammuttaa.
+ *   #kehittaja-pisteet-btn "pisteet" — laudan kaupungit ja reittiverkko
+ *       piirtyvät fokuskartan päälle, jotta kaupunkiin näkee hypätä
+ *       (hyppy on vanha kehittäjätilan oikotie: napautus vie perille).
+ *
+ * VALIKKO = FOKUSMOODIN VERTAILU (Raamatun osio "Fokusmoodi" vaatii
+ * molemmat): #fokus-btn kytkee koko fokusmoodin ja #fokus-sumennus-btn
+ * pelkät sumennukset. Ne olivat ylärivissä 24.–25.8., kunnes ylärivi
+ * sai uudet tehtävät; toiminnallisuus on ennallaan, vain paikka vaihtui.
  *
  * Fokusmoodi on pelin oletustila, ja tavalliselle pelaajalle se on AINA
- * päällä: kotelo on piilossa ilman kehittäjätilaa, joten kytkintä ei ole
- * olemassa eikä asetusta voi vahingossa sammuttaa. Kehittäjä tarvitsee
- * molemmat suunnat nähdäkseen, mitä fokusmoodi muutti.
+ * päällä: molemmat kotelot ovat piilossa ilman kehittäjätilaa, joten
+ * kytkintä ei ole olemassa eikä asetusta voi vahingossa sammuttaa.
  *
  * TILA PÄIVITTYY ILMAN SIVULATAUSTA. Fokuskerros elää valmiiksi
  * piirretyn kartan päällä (js/ui.js paivitaFokusKerros), joten kytkin
@@ -1153,10 +1168,11 @@ function paivitaPuheSaadin() {
 const fokusKotelo = document.getElementById('fokus-kytkimet');
 const fokusNappi = document.getElementById('fokus-btn');
 const fokusSumennusNappi = document.getElementById('fokus-sumennus-btn');
+const rajatNappi = document.getElementById('kehittaja-rajat-btn');
+const pisteetNappi = document.getElementById('kehittaja-pisteet-btn');
 
 function paivitaFokusKytkimet() {
-  if (!fokusKotelo) return;
-  fokusKotelo.hidden = !kehittajaTilaPaalla();
+  if (fokusKotelo) fokusKotelo.hidden = !kehittajaTilaPaalla();
   const fokus = fokusmoodiPaalla();
   const sumennus = fokusSumennusPaalla();
   if (fokusNappi) {
@@ -1173,6 +1189,24 @@ function paivitaFokusKytkimet() {
       ? `Fokusmoodin sumennukset ovat päällä${fokus ? '' : ' (fokusmoodi on pois, joten mitään ei sumenneta)'}`
       : 'Fokusmoodin sumennukset ovat pois päältä — kytke päälle';
   }
+  if (rajatNappi) {
+    const rajat = kehittajaRajatPaalla();
+    rajatNappi.setAttribute('aria-pressed', String(rajat));
+    rajatNappi.title = rajat
+      ? 'Pelaajan liikkuvuusrajoite on PÄÄLLÄ: kamera pysyy fokusikkunassa '
+        + 'ja valloitetulla alueella — kytke pois selataksesi atlasta vapaasti'
+      : 'Liikkuvuusrajoite on pois: koko atlas on vapaasti selattavissa — '
+        + 'kytke päälle pelataksesi pelaajan rajoitteella';
+  }
+  if (pisteetNappi) {
+    const pisteet = kehittajaPisteetPaalla();
+    pisteetNappi.setAttribute('aria-pressed', String(pisteet));
+    pisteetNappi.title = pisteet
+      ? 'Kaupungit ja reittiverkko näkyvät fokuskartan päällä — napauta '
+        + 'kaupunkia hypätäksesi sinne; kytke pois puhtaan atlaksen näkemiseksi'
+      : 'Kaupungit ja reittipisteet piilossa fokuskartan alla — kytke '
+        + 'päälle nähdäksesi mihin voi hypätä';
+  }
 }
 
 fokusNappi?.addEventListener('click', () => {
@@ -1185,6 +1219,18 @@ fokusSumennusNappi?.addEventListener('click', () => {
   asetaFokusSumennus(!fokusSumennusPaalla());
   paivitaFokusKytkimet();
   ui?.paivitaFokusmoodi();
+});
+
+rajatNappi?.addEventListener('click', () => {
+  asetaKehittajaRajat(!kehittajaRajatPaalla());
+  paivitaFokusKytkimet();
+  ui?.paivitaKehittajaNapit();
+});
+
+pisteetNappi?.addEventListener('click', () => {
+  asetaKehittajaPisteet(!kehittajaPisteetPaalla());
+  paivitaFokusKytkimet();
+  ui?.paivitaKehittajaNapit();
 });
 
 paivitaFokusKytkimet();

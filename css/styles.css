@@ -4445,6 +4445,35 @@ body.fokuspohja .country-korostus { display: none; }
 .fokus-piilossa { display: none; }
 
 /* ---------------------------------------------------------------------------
+   KEHITTÄJÄN "pisteet"-KERROS (omistajan tilaus 25.8.2026, js/ui.js
+   paivitaKehittajaPisteet)
+   ---------------------------------------------------------------------------
+   Laudan kaupungit ja reittiverkko fokuskartan päälle, jotta omistaja
+   näkee mihin voi hypätä. Väri on tarkoituksella pelin ulkopuolinen
+   punainen: kehittäjän merkintää ei saa erehtyä lukemaan kartaksi, ja
+   1873-atlaksen ruskeanvihreässä maastossa punainen erottuu joka
+   sävystä. Kerros on `pointer-events: none` — napautuksen ottaa
+   vastaan pelin oma näkymätön osuma-alue (.target-hit).
+
+   Mitat ovat laudan yksiköitä kuten muillakin kartan kerroksilla:
+   verkko skaalautuu zoomin mukana eikä jää lähikuvassa hiussuoraksi.
+   ------------------------------------------------------------------------- */
+.dev-reitti {
+  fill: none;
+  stroke: rgba(176, 42, 42, 0.5);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+}
+
+.dev-reitti-sea { stroke-dasharray: 9 7; }
+
+.dev-kaupunki {
+  fill: rgba(176, 42, 42, 0.72);
+  stroke: rgba(255, 245, 222, 0.85);
+  stroke-width: 2;
+}
+
+/* ---------------------------------------------------------------------------
    PALLOT POIS LEHDEN PÄÄLTÄ (omistajan pelitestipalaute v1097, iPad:
    *"Ota pallot pois"* — js/ui.js paivitaFokusPallot)
    ---------------------------------------------------------------------------
@@ -17717,6 +17746,31 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
 .tyohuone-nappi .viiva-ikoni svg {
   width: 1.15rem;
   height: 1.15rem;
+}
+
+/*
+ * FOKUSMOODIN VERTAILUKYTKIMET VALIKOSSA (omistajan tilaus 25.8.2026:
+ * ylärivin napit saivat uudet tehtävät, ja nämä siirtyivät tänne).
+ *
+ * Kytkin ei ole oikotie vaan päälle/pois-tila, joten sen on näytettävä
+ * tilansa: painettuna kullalla ja pienellä pallolla rivin lopussa.
+ * ::after eikä toinen elementti — sisältö on tilan kuvaus, ei nappia.
+ */
+.tyohuone-nappi[aria-pressed]::after {
+  content: '○';
+  margin-left: auto;
+  font-size: 0.8em;
+  opacity: 0.55;
+}
+
+.tyohuone-nappi[aria-pressed='true'] {
+  border-color: rgba(234, 184, 78, 0.8);
+  color: var(--kulta, #eab84e);
+}
+
+.tyohuone-nappi[aria-pressed='true']::after {
+  content: '●';
+  opacity: 1;
 }
 
 .puhe-saadin-rivi {
