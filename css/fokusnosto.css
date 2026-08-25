@@ -1,0 +1,341 @@
+/*
+ * TÄKYNOSTO (js/fokusnosto.js): kartalta nouseva klikkiotsikko ja sen
+ * lunastuskortti.
+ *
+ * OMA TIEDOSTO, EI styles.css: css/styles.css on toisen työvaiheen
+ * hallussa, eikä yhteen tiedostoon kirjoita kaksi tekijää yhtä aikaa.
+ * Sama ratkaisu ja sama syy kuin fokusvirralla (css/fokusvirta.css) ja
+ * kartan kohteilla (css/fokuskohteet.css). Muuttujat ovat styles.css:n
+ * :root-muuttujia, joten nosto puhuu samaa väri- ja kirjasinkieltä kuin
+ * muu peli.
+ *
+ * EI SUODATTIMIA (js/fokuskartta.js sääntö 3, tests/rules.test.mjs):
+ * suodatettu kerros palaa iOS:n taustalta tyhjänä. Nousu on pelkkä
+ * transform + opacity, taustan tummennus on tavallinen läpinäkyvä väri
+ * eikä backdrop-filter, ja varjot ovat box-shadow'ta.
+ *
+ * KIINTEÄ SIJAINTI, EI KARTAN KOORDINAATTEJA. Nosto on ruudun elementti
+ * eikä laudan: se ei skaalaudu zoomissa eikä liiku panoroinnissa. Se
+ * asuu document.bodyssa, joten karttapaneelin eleet eivät näe sitä
+ * lainkaan (ks. js/fokusnosto.js "MIKSI document.body").
+ */
+
+/* ===========================================================================
+   1. LIUSKA — klikkiotsikko + miniatyyri
+   ---------------------------------------------------------------------------
+   Paikka: kartan alalaidan keskellä, alanappirivin YLÄPUOLELLA. Vasen
+   alanurkka on maan kartuutsilla ja oikea mittajanalla (css/styles.css
+   .fokusmitat), ja kelluva pöllö on oikeassa reunassa noin 5 rem
+   korkeudella — leveysrajoitus pitää liuskan irti niistä kaikista myös
+   puhelimessa.
+   =========================================================================== */
+
+.fokusnosto {
+  position: fixed;
+  left: 50%;
+  bottom: 6.6rem;
+  z-index: 40;
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  width: max-content;
+  max-width: min(34rem, calc(100vw - 7.5rem));
+  border-radius: 0.6rem;
+  border: 1px solid rgba(122, 85, 20, 0.34);
+  background: #f5f0e2;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.32);
+  color: #211d18;
+  /* Pergamentin oma pinta; kartan vaalea hehkuvarjo ei periydy tänne. */
+  text-shadow: none;
+  font-family: var(--font-luku);
+  /*
+   * NOUSU. Lähtötila on tässä ja maalitila .fokusnosto-nousee-luokassa,
+   * jotta liike alkaa vasta kun JS on liittänyt luokan (yksi pakotettu
+   * tyylinlaskenta välissä) — animaatiolla tehtynä se alkaisi uudestaan
+   * joka kerta kun elementtiä koskee.
+   */
+  opacity: 0;
+  transform: translate(-50%, 14px);
+  transition: opacity 260ms ease-out, transform 260ms cubic-bezier(0.22, 0.9, 0.24, 1);
+}
+
+.fokusnosto-nousee {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fokusnosto { transition: none; }
+}
+
+/* Kartan lennon ja kamera-ajon ajaksi pois, kuten muutkin kartan
+   kelluvat merkinnät (css/styles.css .fokusmitat). */
+body.flight-active .fokusnosto,
+body.kartalento .fokusnosto { opacity: 0; pointer-events: none; }
+
+/*
+ * KLIKKIOTSIKKO. Koko liuska on painike: otsikko vasemmalla,
+ * miniatyyri sen PERÄSSÄ (omistajan tilaus). Kosketusala on rivin
+ * korkuinen eli reilusti yli 44 px.
+ */
+.fokusnosto-nappi {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 48px;
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  padding: 0.35rem 0.3rem 0.35rem 0.7rem;
+  border: 0;
+  border-radius: 0.6rem 0 0 0.6rem;
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.fokusnosto-nappi:hover,
+.fokusnosto-nappi:focus-visible { background: rgba(122, 85, 20, 0.09); }
+
+/*
+ * Otsikko on KLIKKIOTSIKKOTASOINEN lause, ei artikkelin nimi: se saa
+ * olla pitkä ja se taittuu enintään kolmelle riville. Kirjasin on
+ * lehden oma otsikkokirjasin, jotta liuska luetaan lehtijutuksi eikä
+ * pelin ohjeeksi.
+ */
+.fokusnosto-otsikko {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family: var(--font-luku);
+  font-size: 0.94rem;
+  font-weight: 700;
+  line-height: 1.28;
+  /* Kolme riviä riittää pisimmällekin otsikolle; ylipitkä katkeaa
+     siististi sen sijaan että venyttäisi liuskan kartan poikki. */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+
+/* Miniatyyri otsikon perässä: pieni painettu kuva, ei ikoni. */
+.fokusnosto-mini {
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  border-radius: 4px;
+  border: 1px solid rgba(122, 85, 20, 0.35);
+  object-fit: cover;
+  background: rgba(122, 85, 20, 0.12);
+}
+
+/* Rasti työntää noston syrjään lukematta — oma kapea sarakkeensa. */
+.fokusnosto-sulje {
+  flex: 0 0 auto;
+  min-width: 34px;
+  min-height: 48px;
+  margin: 0;
+  padding: 0 0.4rem;
+  border: 0;
+  border-left: 1px solid rgba(122, 85, 20, 0.22);
+  border-radius: 0 0.6rem 0.6rem 0;
+  background: transparent;
+  box-shadow: none;
+  color: rgba(33, 29, 24, 0.6);
+  font-size: 0.95rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.fokusnosto-sulje:hover,
+.fokusnosto-sulje:focus-visible {
+  background: rgba(122, 85, 20, 0.12);
+  color: #16130f;
+}
+
+/* ===========================================================================
+   2. LUNASTUSKORTTI
+   ---------------------------------------------------------------------------
+   Kortti on kartan päällä kelluva paperi, EI koko ruudun modaalia:
+   fokusmoodin perussääntö on kartta näkymänä ja teksti annoksena sen
+   päällä. Tausta himmenee kevyesti, jotta kortti erottuu — se ei sumene
+   (suodatinkielto) eikä pimene kokonaan.
+   =========================================================================== */
+
+.fokusnosto-kerros {
+  position: fixed;
+  inset: 0;
+  z-index: 46;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(18, 12, 4, 0);
+  transition: background 220ms ease-out;
+}
+
+.fokusnosto-kortti-auki { background: rgba(18, 12, 4, 0.3); }
+
+.fokusnosto-kortti {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(34rem, 100%);
+  max-height: min(80vh, 44rem);
+  padding: 0.7rem 0.8rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid rgba(122, 85, 20, 0.32);
+  background: #f5f0e2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34);
+  color: #211d18;
+  text-shadow: none;
+  font-family: var(--font-luku);
+  /* Kartta ottaa eleet itselleen (.map-pane touch-action: none); kortin
+     sisällä pystyvieritys on saatava takaisin. */
+  touch-action: pan-y;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 220ms ease-out, transform 220ms cubic-bezier(0.22, 0.9, 0.24, 1);
+}
+
+.fokusnosto-kortti-auki .fokusnosto-kortti {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fokusnosto-kerros,
+  .fokusnosto-kortti { transition: none; }
+}
+
+.fokusnosto-kortti-sulje {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.4rem;
+  z-index: 2;
+  min-height: 30px;
+  padding: 0.1rem 0.45rem;
+  border: 1px solid rgba(122, 85, 20, 0.3);
+  border-radius: 6px;
+  background: rgba(245, 240, 226, 0.86);
+  box-shadow: none;
+  color: rgba(33, 29, 24, 0.7);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.fokusnosto-kortti-sulje:hover,
+.fokusnosto-kortti-sulje:focus-visible {
+  background: rgba(245, 240, 226, 0.96);
+  color: #16130f;
+}
+
+.fokusnosto-sisalto {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  min-height: 0;
+  padding-right: 0.2rem;
+}
+
+.fokusnosto-ylarivi {
+  margin: 0 2.2rem 0.1rem 0;
+  color: #7a5514;
+  font-family: var(--font-type);
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.fokusnosto-kortti-otsikko {
+  margin: 0 2.2rem 0.5rem 0;
+  font-family: var(--font-luku);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.24;
+}
+
+/* Kuva on kortin ensimmäinen iso asia, kuten fokusvirran kortilla:
+   nosto myytiin kuvalla, joten kuva näkyy heti kunnolla. */
+.fokusnosto-kuva {
+  margin: 0 0 0.55rem;
+}
+
+.fokusnosto-kuva[hidden] { display: none; }
+
+.fokusnosto-kuva img {
+  display: block;
+  width: 100%;
+  max-height: 34vh;
+  border-radius: 6px;
+  border: 1px solid rgba(122, 85, 20, 0.3);
+  object-fit: cover;
+  background: rgba(122, 85, 20, 0.1);
+}
+
+.fokusnosto-kuvateksti {
+  margin: 0.3rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: rgba(33, 29, 24, 0.82);
+}
+
+/* Lähde on lisenssiehto ja jatkaa selitettä samalla rivillä pienemmällä
+   (sama kaava kuin fokusvirran kuvatekstillä). */
+.fokusnosto-kuvalahde {
+  display: inline;
+  margin-left: 0.35rem;
+  font-size: 0.72rem;
+  color: rgba(33, 29, 24, 0.6);
+}
+
+.fokusnosto-teksti p {
+  margin: 0 0 0.5rem;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.fokusnosto-teksti p:last-child { margin-bottom: 0; }
+
+.fokusnosto-lahde {
+  margin: 0.55rem 0 0;
+  font-size: 0.74rem;
+  line-height: 1.4;
+  color: rgba(33, 29, 24, 0.58);
+}
+
+/*
+ * Kohdenappi on lehden tehtävärivien tapaan litteä musteviivalla
+ * erotettu rivi eikä tumma laatikko: tumma nappi vaalealla paperilla
+ * näyttäisi ruudulta, joka on eksynyt korttiin.
+ */
+.fokusnosto-kohdenappi {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  margin: 0.7rem 0 0;
+  padding: 0.4rem 0.2rem;
+  border: 0;
+  border-top: 1px solid rgba(122, 85, 20, 0.28);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: #7a5514;
+  font-family: var(--font-luku);
+  font-size: 0.95rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.fokusnosto-kohdenappi::before {
+  content: '→ ';
+  color: rgba(122, 85, 20, 0.7);
+}
+
+.fokusnosto-kohdenappi:hover,
+.fokusnosto-kohdenappi:focus-visible {
+  background: rgba(122, 85, 20, 0.1);
+  color: #16130f;
+}

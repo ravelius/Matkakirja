@@ -413,6 +413,15 @@ export function fokusvirtaOhittaaLehden(ui, city) {
  * samat kolme ehtoa lasketaan, ajautuisi ennen pitkää eri linjoille.
  */
 export function fokusvirtaMatkakirja(ui, city) {
+  /*
+   * AARREMERKINTÄ VOITTAA SAAPUMISMERKINNÄN. Se on sama kortti ja sama
+   * kirja, mutta myöhempi sivu: saapumismerkintä on kirjoitettu ennen
+   * kuin aarre löytyi, aarremerkintä sen jälkeen. Tarkistus on ENNEN
+   * lehtilukkoa, koska aarremerkintä näytetään nimenomaan silloin kun
+   * laatta on jo käännetty (ks. AARREMERKINTÄ alempana).
+   */
+  const aarre = fokusvirtaAarremerkinta(ui, city);
+  if (aarre) return aarre;
   if (!fokusvirtaLukitseeLehden(ui, city)) return null;
   const data = fokusvirtaSisalto(ui, city);
   const merkinta = data?.matkakirja;
@@ -444,6 +453,13 @@ export const MERKINNAN_TAUKO_MS = 1400;
  * siirron), lähteä kaupungista tai aloittaa uuden pelin.
  */
 export function fokusvirtaMerkintaLuettu(ui, city) {
+  /*
+   * AARREMERKINTÄ ON KEVYEN KULUN OMA POIKKEUS: sen jälkeen pöllö saa
+   * vuoron myös silloin kun korttiannostelu on lipun takana. Sama
+   * sopimus kuin saapumismerkinnällä — isoisä ensin, pöllö perästä,
+   * eikä molempien ääntä yhtä aikaa.
+   */
+  if (aarremerkintaLuettu(ui, city)) return;
   // Kevyessä kulussa merkinnän loppu ei päästä pöllöä ääneen: kuplaa
   // ei ole, ja vinkki lehden minitehtävästä tulee vasta lehden
   // avautuessa (fokusvirtaLehtivinkki).
@@ -477,6 +493,9 @@ export function fokusvirtaSaapuminen(ui) {
   // renderin kytkentäkohta kuitenkin kelpaa aarteen löytymisen
   // huomaamiseen — se on kevyen kulun oma hetki.
   aarreLoytyi(ui);
+  // Sama kytkentäkohta palvelee täkynostoa: se seuraa samaa hetkeä
+  // (aarre löytyi) ja tarvitsee saman piirtotahdin (ks. asetaNostopinta).
+  nostoPinta?.(ui);
   if (!FOKUSVIRTA_KORTIT) return;
   const city = ui?.game?.cityOf?.();
   if (!city || !fokusvirtaLukitseeLehden(ui, city)) return;
@@ -523,6 +542,7 @@ function lataaTyyli() {
  * jottei suljettu kupla jää mittaamaan itseään jokaisesta kierrosta.
  */
 export function suljeFokusvirta(ui) {
+  const oli = Boolean(ui.fokusvirtaKortti);
   ui.fokusvirtaKortti?.remove();
   ui.fokusvirtaKortti = null;
   if (ui.fokusvirtaAsemointi) {
@@ -530,6 +550,20 @@ export function suljeFokusvirta(ui) {
     globalThis.removeEventListener?.('orientationchange', ui.fokusvirtaAsemointi);
     ui.fokusvirtaAsemointi = null;
   }
+  /*
+   * TÄKYNOSTO ODOTTAA KUPLAN JÄLKEEN (ks. js/fokusnosto.js
+   * nostoRuutuVapaa). Kupla ja nosto nousevat samaan alalaitaan, joten
+   * nosto väistää kuplan — ja juuri tämä kutsu tekee järjestyksestä
+   * välittömän: pelaajan napautus sulkee kuplan, ja otsikko nousee
+   * heti sen tilalle sen sijaan että odottaisi seuraavaa piirtoa.
+   */
+  /*
+   * KUTSU ON VIIVÄSTETTY YHDELLÄ TIKILLÄ. Kuplan vaihtuessa toiseksi
+   * tämä sulku tapahtuu ENNEN uuden kuplan luontia (naytaPolloKupla),
+   * joten heti ajettu tarkistus näkisi ruudun vapaana ja nostaisi
+   * otsikon juuri sen kuplan alle, joka on tulossa.
+   */
+  if (oli) setTimeout(() => nostoPinta?.(ui), 0);
 }
 
 /**
@@ -1508,8 +1542,14 @@ export function avaaFokusKohtaaminen(ui, city) {
  * (js/ui-apurit.js lehtivinkkiPiilotettu) — sama try/catch-kaava kuin
  * kehittäjätilalla ja fokusmoodilla, eikä riviäkään pelitallennukseen:
  * tämä on lukijan asetus, ei pelitilanne.
+ *
+ * KARAKTÄÄRI (Raamattu, PÖLLÖN KARAKTÄÄRI): kuiva toteavuus, ei
+ * kehotusta pelaajalle ylhäältä ("Tee lehden minitehtävä" oli käsky).
+ * Pöllö sanoo mitä tapahtuu ja mitä jää tapahtumatta — ei enempää.
+ * Silminnäkijäheittoa EI ole tässä: sen kiintiö (kerran per maa) menee
+ * aarrekuittauksiin, jotka ovat isompia hetkiä.
  */
-const LEHTIVINKKI_TEKSTI = 'Tee lehden minitehtävä — se avaa tien aarteelle.';
+const LEHTIVINKKI_TEKSTI = 'Lehden minitehtävä avaa tien aarteelle. Muuten kartta pysyy hiljaa.';
 
 /** Vinkki näkyy kerran per saapuminen; avain on sama kuin virralla. */
 function vinkkiAvain(ui, city) {
@@ -1573,6 +1613,15 @@ function naytaPolloKupla(ui, teksti, { ruksi: ruksillinen = false } = {}) {
   ui.fokusvirtaAsemointi = asemoi;
   globalThis.addEventListener?.('resize', asemoi);
   globalThis.addEventListener?.('orientationchange', asemoi);
+  /*
+   * TÄKYNOSTO VÄISTYY KUPLAN TIELTÄ. Nosto nousee samaan alalaitaan
+   * (js/fokusnosto.js), ja se voi olla ruudulla jo ennen kuplaa —
+   * aarteen löytyessä molemmat heräävät samasta hetkestä, mutta
+   * kirjoituskone pidättelee kuplaa merkinnän ajan. Kupla on tärkeämpi:
+   * se on vastaus pelaajan omaan tekoon. Nosto palaa, kun kupla suljetaan
+   * (suljeFokusvirta).
+   */
+  nostoPinta?.(ui);
   return true;
 }
 
@@ -1616,6 +1665,30 @@ export function fokusvirtaKuittaus(ui, teksti) {
  */
 asetaTehtavakuittaus(fokusvirtaKuittaus);
 
+/* ---------- täkynoston piirtopinta ---------- */
+
+/**
+ * TÄKYNOSTON PIIRTOPINTA — js/fokusnosto.js asettaa tämän.
+ *
+ * Miksi takaisinkutsu eikä import: täkynosto avaa kartan kohteiden
+ * tietoruudun (js/fokuskohteet.js), joka on niputusjärjestyksessä VASTA
+ * tämän moduulin jälkeen (tools/build-standalone.mjs MODULES). Suora
+ * tuonti tästä sinne kääntäisi järjestyksen väärin päin; sama ratkaisu
+ * ja sama syy kuin lehtitehtävien kuittauksella (asetaTehtavakuittaus
+ * yllä), vain vastakkaiseen suuntaan.
+ *
+ * MIKSI TÄMÄ KYTKENTÄKOHTA. Täkynosto nousee kartalta silloin kun maan
+ * aarre on löytynyt (Raamattu, KEVYT KULKU -KOKEILU), eli tismalleen
+ * samasta hetkestä kuin pöllön aarrekuittaus — ja se on tässä
+ * tiedostossa (aarreLoytyi). Yksi renderin kytkentäkohta riittää siis
+ * molemmille, eikä js/ui.js:ään tarvita uutta riviä.
+ */
+let nostoPinta = null;
+
+export function asetaNostopinta(fn) {
+  nostoPinta = typeof fn === 'function' ? fn : null;
+}
+
 /* ---------- pöllön kuittaus aarteen löydyttyä ---------- */
 
 /**
@@ -1628,9 +1701,15 @@ asetaTehtavakuittaus(fokusvirtaKuittaus);
  * napin ilmestyminen yksin kerro pelaajalle mitään — pöllö kertoo.
  *
  * Pöllö puhuu nykypäivästä eikä 1873:sta, ja repliikki on lyhyt.
+ *
+ * KARAKTÄÄRI (Raamattu, PÖLLÖN KARAKTÄÄRI; repliikki Fablen kirjoittama
+ * ja omistajan hyväksymä 25.8.2026). Vanha versio ("Aarre on sinun!")
+ * oli huudahdus ja onnittelu — kaksi asiaa, joita reportteri ei tee.
+ * Tässä on sen sijaan maan AINOA silminnäkijäheitto: pöllö tiesi
+ * paikan koko ajan eikä sanonut mitään.
  */
-const AARREKUITTAUS_TEKSTI = 'Aarre on sinun! Nyt voit matkustaa seuraavaan kaupunkiin — '
-  + 'tai jäädä vielä tutkimaan maata, kartan kohteista löytyy lisää.';
+const AARREKUITTAUS_TEKSTI = 'Tiesin paikan koko ajan, mutta vaikenin kohteliaisuudesta. '
+  + 'Seuraava kaupunki odottaa — tai jää tutkimaan, kartalla riittää katsottavaa.';
 
 /** Uusi yritys tämän välein, kun ruutu on vielä varattu. */
 const AARREKUITTAUS_YRITYS_MS = 700;
@@ -1678,6 +1757,12 @@ function kerroAarteesta(ui, avain, yritys) {
 function aarreLoytyi(ui) {
   if (FOKUSVIRTA_KORTIT || typeof document === 'undefined') return;
   const city = ui?.game?.cityOf?.();
+  // Aarremerkintä kuuluu sille kaupungille, jossa aarre löytyi: kun
+  // pelaaja matkustaa eteenpäin, matkakirjakortti palaa omilleen.
+  if (ui?.fokusaarreMerkinta
+    && (!city || ui.fokusaarreMerkinta.avain !== `${ui.game.pack.id}:${city.id}`)) {
+    ui.fokusaarreMerkinta = null;
+  }
   if (!city || !fokusvirtaSisalto(ui, city)) return;
   ui.fokusaarreOdottaa ??= new Set();
   ui.fokusaarreKerrottu ??= new Set();
@@ -1690,7 +1775,136 @@ function aarreLoytyi(ui) {
   // Merkintä pois heti: yritys on jo käynnissä eikä joka piirto saa
   // aloittaa omaa ajastintaan.
   ui.fokusaarreOdottaa.delete(avain);
+  // Isoisä ensin, pöllö perästä — jos laudalla on aarremerkintä.
+  if (avaaAarremerkinta(ui, city, avain)) return;
   kerroAarteesta(ui, avain, 0);
+}
+
+/* ---------- isoisän aarremerkintä matkakirjakorttiin ---------- */
+
+/*
+ * AARREMERKINTÄ (omistaja 25.8.2026).
+ *
+ * Kun MAAN AARRE LÖYTYY, matkakirjakorttiin aukeaa isoisän merkintä
+ * ENNEN pöllön kuittausta. Kulku on tismalleen sama kuin kaupunkiin
+ * saavuttaessa — vain sivu on eri:
+ *
+ *   1. aarreLoytyi huomaa laatan kääntyneen ja nostaa lipun
+ *      (ui.fokusaarreMerkinta) sekä pyytää kortin piirron heti;
+ *   2. js/ui.js renderFact kysyy sisällön fokusvirtaMatkakirjalta, joka
+ *      antaa aarremerkinnän saapumismerkinnän sijaan;
+ *   3. kirjoituskone lyö merkinnän loppuun ja kutsuu
+ *      fokusvirtaMerkintaLuettua, joka päästää pöllön ääneen tauon
+ *      jälkeen (aarremerkintaLuettu → kerroAarteesta).
+ *
+ * MIKSI SAMA POLKU EIKÄ UUSI KORTTI. Raamatun ASETTELU-kohta on
+ * yksiselitteinen: isoisän teksti näytetään PERINTEISESSÄ
+ * matkakirjakortissa ylävasemmalla. Uusi kortti olisi toinen matkakirja
+ * ruudulla — juuri se vika, jonka v1093 korjasi. Näin ui.js:ään ei
+ * myöskään tarvita riviäkään uutta: renderFact kysyy jo nyt tältä
+ * moduulilta, mitä korttiin kirjoitetaan.
+ *
+ * YLEINEN MEKANISMI, EI ATEENAN ERIKOISTAPAUS. Kenttä on
+ * `aarremerkinta` kaupungin fokusvirtadatassa (js/packs/
+ * fokusvirta-ateena.js), ja se saa olla joko pelkkä merkkijono tai olio
+ * (`teksti`, `paikkarivi`, `kuva`). Lauta, jolla kenttää ei ole, ei saa
+ * merkintää eikä huomaa mitään: pöllö kuittaa suoraan kuten ennenkin.
+ */
+
+/**
+ * Nostaa aarremerkinnän lipun ja pyytää kortin piirron.
+ *
+ * @returns {boolean} tuliko merkintä — false tarkoittaa, että pöllö saa
+ *   puhua heti, koska laudalla ei ole aarremerkintää.
+ */
+function avaaAarremerkinta(ui, city, avain) {
+  if (!aarremerkinnanTeksti(ui, city)) return false;
+  ui.fokusaarreMerkinta = { avain, kuitattu: false };
+  /*
+   * KORTTI KIRJOITETAAN HETI. renderFact on jo ajettu tässä piirrossa
+   * (aarreLoytyi kutsutaan renderin lopussa), joten ilman tätä kutsua
+   * merkintä odottaisi seuraavaa piirtoa — ja aarteen löytöhetkellä
+   * pelaaja katsoo ruutua juuri nyt.
+   */
+  ui.renderFact?.();
+  /*
+   * VARMISTUS, JOTTEI PÖLLÖ JÄÄ ODOTTAMAAN IKUISESTI. Kirjoituskoneen
+   * loppukutsu on normaali polku, mutta se jää tulematta, jos kortti oli
+   * jo samassa merkinnässä (factKey osuu) tai jos renderFact ei jostain
+   * syystä päädy tähän haaraan. Kuittaus on aarteen jälkisana eikä pelin
+   * portti, mutta se ei saa kadota kokonaan.
+   */
+  clearTimeout(ui.fokusaarreVarmistus);
+  ui.fokusaarreVarmistus = setTimeout(() => {
+    if (ui.dead) return;
+    const lippu = ui.fokusaarreMerkinta;
+    if (lippu?.avain !== avain || lippu.kuitattu) return;
+    lippu.kuitattu = true;
+    kerroAarteesta(ui, avain, 0);
+  }, AARREMERKINNAN_VARMISTUS_MS);
+  return true;
+}
+
+/**
+ * Kuinka kauan varmistus odottaa kirjoituskonetta.
+ *
+ * Merkintä on muutama virke, ja kirjoituskone lyö sen läpi
+ * sanaväleineen ja välimerkkitaukoineen selvästi tätä nopeammin
+ * (js/ui.js typeText). Luku on siis viimeinen verkko eikä ajastus.
+ */
+const AARREMERKINNAN_VARMISTUS_MS = 20000;
+
+/** Laudan aarremerkintä normalisoituna olioksi, tai null. */
+function aarremerkinnanTeksti(ui, city) {
+  const kentta = fokusvirtaSisalto(ui, city)?.aarremerkinta;
+  const merkinta = typeof kentta === 'string' ? { teksti: kentta } : kentta;
+  return merkinta?.teksti ? merkinta : null;
+}
+
+/**
+ * KYTKENTÄ fokusvirtaMatkakirjaan: aarremerkinnän sisältö korttiin.
+ *
+ * Paikkarivi on oletuksena "Isoisän merkintä · Ateena" — merkintä ei ole
+ * saapumispäivän havainto vaan myöhempi sivu, joten sillä ei ole
+ * ilmanpuntaria eikä päivämäärää. Lauta saa silti antaa oman
+ * paikkarivinsä, jos merkintä ansaitsee sen.
+ */
+export function fokusvirtaAarremerkinta(ui, city) {
+  const lippu = ui?.fokusaarreMerkinta;
+  if (!lippu || !city || !ui.game?.pack) return null;
+  if (lippu.avain !== `${ui.game.pack.id}:${city.id}`) return null;
+  const merkinta = aarremerkinnanTeksti(ui, city);
+  if (!merkinta) return null;
+  return {
+    avain: `fokusaarre:${lippu.avain}`,
+    paikkarivi: merkinta.paikkarivi ?? `Isoisän merkintä · ${city.name}`,
+    teksti: merkinta.teksti,
+    kuva: merkinta.kuva ?? null,
+  };
+}
+
+/**
+ * Kirjoituskone sai aarremerkinnän loppuun: pöllö saa vuoron.
+ *
+ * @returns {boolean} oliko kortissa aarremerkintä — true pysäyttää
+ *   fokusvirtaMerkintaLuetun, jottei sama kutsu yritä myös raskaan
+ *   virran vaihesiirtoa.
+ */
+function aarremerkintaLuettu(ui, city) {
+  const lippu = ui?.fokusaarreMerkinta;
+  if (!lippu || !city || !ui.game?.pack) return false;
+  if (lippu.avain !== `${ui.game.pack.id}:${city.id}`) return false;
+  if (!aarremerkinnanTeksti(ui, city)) return false;
+  // Kortti voi piirtyä uudelleen; kuittaus tulee silti kerran.
+  if (lippu.kuitattu) return true;
+  lippu.kuitattu = true;
+  clearTimeout(ui.fokusaarreVarmistus);
+  clearTimeout(ui.fokusaarreAjastin);
+  ui.fokusaarreAjastin = setTimeout(() => {
+    if (ui.dead) return;
+    kerroAarteesta(ui, lippu.avain, 0);
+  }, MERKINNAN_TAUKO_MS);
+  return true;
 }
 
 /* ==================== KUVAT KARTALLA ==================== */

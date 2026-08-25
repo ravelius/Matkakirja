@@ -26,6 +26,15 @@ import {
   natiiviSeuraa, natiiviSynkkaa, natiiviWidget, natiiviYhdistaLeimat,
 } from './natiivi.js';
 import { readStamps, writeStamps, STAMP_KEY } from './passport.js';
+/*
+ * Täkynosto (js/fokusnosto.js): aarteen löydyttyä kartalta nouseva
+ * klikkiotsikko. Kytkentä on tässä eikä js/ui.js:ssä, koska nosto elää
+ * fokusvirran renderikutsun tahdissa (js/fokusvirta.js asetaNostopinta)
+ * — käynnistys tarvitsee vain tämän yhden kutsun.
+ */
+import { kytkeFokusnosto } from './fokusnosto.js';
+
+kytkeFokusnosto();
 
 const PLAYER_COLOR = '#d94f3d';
 /*

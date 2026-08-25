@@ -8,6 +8,7 @@ const SHELL = [
   // Fokusmoodin annostelukortti lataa oman tyylinsä itse (js/fokusvirta.js).
   './css/fokusvirta.css',
   './css/fokuskohteet.css',
+  './css/fokusnosto.css',
   './js/muutokset.js',
   './js/main.js',
   './js/ui.js',
@@ -31,6 +32,7 @@ const SHELL = [
   './js/fokusvirta.js',
   './js/fokuskohteet.js',
   './js/fokuspiste.js',
+  './js/fokusnosto.js',
   './js/fokustehtavat.js',
   './js/maalehti.js',
   './js/lukija.js',

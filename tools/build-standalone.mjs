@@ -343,6 +343,12 @@ const MODULES = [
    */
   'js/fokuspiste.js',
   /*
+   * Täkynosto ennen main.js:ää (main tuo sen kytkentäkutsun). Se tuo
+   * fokusvirran piirtopinnan ja kartan kohteiden tietoruudun — molemmat
+   * ovat jo yllä, ja juuri siksi nosto on listalla vasta tässä.
+   */
+  'js/fokusnosto.js',
+  /*
    * Fokusnäkymän ruutuun ankkuroidut mitat ennen ui:ta (ui tuo ne
    * staattisesti). Se lukee laudan projektion fokus-grc.js:stä ja maan
    * perustiedot sisältötauluista — molemmat ovat jo yllä.
@@ -390,7 +396,7 @@ const bundle = MODULES.map((file) => `// ===== ${file} =====\n${stripModuleSynta
  * samaan <style>-lohkoon.
  */
 const css = `${read('css/styles.css')}\n\n${read('css/fokusvirta.css')}`
-  + `\n\n${read('css/fokuskohteet.css')}`;
+  + `\n\n${read('css/fokuskohteet.css')}\n\n${read('css/fokusnosto.css')}`;
 const indexHtml = read('index.html');
 
 const body = indexHtml
