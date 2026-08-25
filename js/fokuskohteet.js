@@ -89,6 +89,7 @@ import { html, jaaKappaleiksi } from './ui-apurit.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { FOKUSKOHTEET_BGR } from './packs/fokuskohteet-bgr.js';
 import { FOKUSKOHTEET_ITA } from './packs/fokuskohteet-ita.js';
+import { FOKUSKOHTEET_ROU } from './packs/fokuskohteet-rou.js';
 import { FOKUSKOHTEET_TUR } from './packs/fokuskohteet-tur.js';
 import { FOKUSKOHTEET_GRC } from './packs/fokuskohteet-grc.js';
 import { polloKysy } from './pollo.js';
@@ -110,6 +111,7 @@ const KOHDE_MAAT = {
   BGR: FOKUSKOHTEET_BGR,
   ITA: FOKUSKOHTEET_ITA,
   TUR: FOKUSKOHTEET_TUR,
+  ROU: FOKUSKOHTEET_ROU,
 };
 
 /** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta). */

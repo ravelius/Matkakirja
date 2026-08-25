@@ -17,6 +17,7 @@
  */
 import { FOKUSVIRTA_ATEENA } from './fokusvirta-ateena.js';
 import { FOKUSVIRTA_ISTANBUL } from './fokusvirta-istanbul.js';
+import { FOKUSVIRTA_BUKAREST } from './fokusvirta-bukarest.js';
 import { FOKUSVIRTA_ROOMA } from './fokusvirta-rooma.js';
 import { FOKUSVIRTA_SOFIA } from './fokusvirta-sofia.js';
 
@@ -25,6 +26,7 @@ export const FOKUSVIRRAT = {
   sofia: FOKUSVIRTA_SOFIA,
   istanbul: FOKUSVIRTA_ISTANBUL,
   rooma: FOKUSVIRTA_ROOMA,
+  bukarest: FOKUSVIRTA_BUKAREST,
 };
 
 /** Kaupungin fokusvirta tai null, jos kaupungille ei ole sisältöä. */
