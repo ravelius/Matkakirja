@@ -249,10 +249,23 @@ function meriruudukko(kansio, ruudukko) {
       herat[r0].push([xa, ya, xb, yb, r1]);
     }
   };
+  /*
+   * Päivämääränraja: NE:n koordinaatit ovat -180..180, mutta lehden
+   * ikkuna voi jatkua rajan yli (AUS, NZL, FJI). Rajan ylittävälle
+   * ikkunalle renkaat lisätään myös 360 astetta siirrettyinä, jotta
+   * rajan takainen meri osuu maskiin; ikkunan ulkopuoliset
+   * leikkausparit putoavat pois täyttövaiheen puskuroinnissa.
+   */
+  const siirretty = (rengas, d) => rengas.map(([x, y]) => [x + d, y]);
+  const lisaaKierrolla = (rengas) => {
+    lisaaRengas(rengas);
+    if (lon1 > 180) lisaaRengas(siirretty(rengas, 360));
+    if (lon0 < -180) lisaaRengas(siirretty(rengas, -360));
+  };
   const lisaa = (geom) => {
-    if (geom.type === 'Polygon') for (const r of geom.coordinates) lisaaRengas(r);
+    if (geom.type === 'Polygon') for (const r of geom.coordinates) lisaaKierrolla(r);
     else if (geom.type === 'MultiPolygon') {
-      for (const p of geom.coordinates) for (const r of p) lisaaRengas(r);
+      for (const p of geom.coordinates) for (const r of p) lisaaKierrolla(r);
     }
   };
   for (const f of lue(kansio, tiedosto).features) lisaa(f.geometry);
@@ -433,6 +446,9 @@ function samaNimi(a, b) {
   const lyhyt = a.length < b.length ? a : b;
   const pitka = a.length < b.length ? b : a;
   if (lyhyt.length >= 5 && pitka.startsWith(lyhyt)) return true;
+  // Loppuosa kattaa etuliitteelliset kaksoset: New Delhi ~ Delhi,
+  // New Taipei ~ Taipei. Sama viiden merkin raja kuin alkuosalla.
+  if (lyhyt.length >= 5 && pitka.endsWith(lyhyt)) return true;
   return lyhyt.length >= 6 && yhdenPaassa(a, b);
 }
 
