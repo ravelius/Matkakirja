@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1108, teksti: 'Suoja paivityksen reload-silmukkaa vastaan' },
   { v: 1107, teksti: 'Neljä uutta maata, aarteet uusiksi, sujuva kartta' },
   { v: 1106, teksti: 'Jatkuva atlas ja kehittajan uudet napit' },
   { v: 1105, teksti: 'Etusivu, sahkeet, Sofia, kohdepopup ja pollo' },

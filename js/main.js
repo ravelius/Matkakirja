@@ -59,7 +59,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1107';
+const APP_VERSION = '2026-08-09.1108';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -796,6 +796,23 @@ if (hasManifest && 'serviceWorker' in navigator && location.protocol.startsWith(
       oliOhjain = true;
       return;
     }
+    /*
+     * RELOAD-SILMUKAN SUOJA (omistajan iPhone 25.8.2026: "Vilkuttaa
+     * vain matkakirjan lataussivua"). Julkaisun jälkeen selain voi
+     * saada sw.js:n vuorotellen HTTP-välimuistista vanhana ja verkosta
+     * uutena (Pages max-age 600 s): jokainen vaihto asentuu, ottaa
+     * ohjat (skipWaiting+claim) ja laukaisi tämän reloadin — sivu jäi
+     * vilkkuvaan uudelleenlataussilmukkaan kunnes välimuisti vanheni.
+     * Siksi automaattinen reload sallitaan enintään kerran minuutissa;
+     * ohitettu päivitys tulee voimaan seuraavassa tavallisessa
+     * avauksessa. sessionStorage: lippu ei saa jäädä laitteelle.
+     */
+    const AVAIN = 'matkakirja-viime-autoreload';
+    try {
+      const viime = Number(sessionStorage.getItem(AVAIN) ?? 0);
+      if (Date.now() - viime < 60000) return;
+      sessionStorage.setItem(AVAIN, String(Date.now()));
+    } catch { /* yksityinen selaus: reload silti, silmukka on siellä epätodennäköinen */ }
     // Sama siisti ruutu kuin Päivitä-napista: lataus alkaa heti, joten
     // lippu on asetettava ennen sitä.
     merkitsePaivitys();
