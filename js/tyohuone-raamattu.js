@@ -7,7 +7,7 @@
  */
 
 export const RAAMATTU = {
-  paivitetty: '15.8.2026',
+  paivitetty: '25.8.2026',
   johdanto: 'Koko pelin idea yhdessä dokumentissa — tämän lukeminen '
     + 'riittää pelin kehittämiseen. Käydään läpi omistajan kanssa osio '
     + 'kerrallaan; valmis Raamattu laukaisee kaikkien '
@@ -102,6 +102,26 @@ export const RAAMATTU = {
           + 'tunnelman; lehti syventää tiedoksi.',
         'Herroille saa luonnostella uusia piirteitä '
           + '(etikettivirheet, hassu asu) — yhdessä omistajan kanssa.',
+        'ISOISÄ ON PIIRTÄJÄ, EI VALOKUVAAJA (25.8.2026): kuvakieli '
+          + 'on kirkas — 1873 = isoisän piirros, nykyhetki = '
+          + 'valokuva. Matkakirja on nimetön kulunut muistikirja '
+          + '(kannessa ei painettua nimeä).',
+        'ALKUKOHTAUS V5 (omistajan teksti 25.8.2026, sanasta '
+          + 'sanaan pelissä): paikkarivi "Heathrow, Lontoo, '
+          + '<kuukausi vuosi>:" naputetaan kirjoituskoneella ilman '
+          + 'luentaa; sitten kertoja: "Vintiltä löytyi isoisän '
+          + 'matkalaukku ja kulunut matkakirja. Juoksen sisälle '
+          + 'terminaaliin ja olen varma, että ukko oli löytänyt '
+          + 'jotain. Mutta kuka on repinyt kirjasta viimeisen '
+          + 'sivun?"; klikattava lause "Mistä aloitan?" (ei lueta).',
+        'VAANIJAKAARI ALKOI (kaanonit 25.8.2026): Istanbulin '
+          + 'aarremerkintä on ensimmäinen vaanijavihje ("mies, joka '
+          + 'oli kysellyt minusta satamassa, seisoi jo sillalla"); '
+          + 'Rooman merkintä on twist-siemen ("Rooman aarre oli '
+          + 'ainoa, jota en yrittänytkään... Jonain päivänä '
+          + 'ymmärrät miksi"); Bukarest kuittaa hiljaisuuden '
+          + '("Sillalla ei tällä kertaa seissyt ketään"). Kaari '
+          + 'hengittää — ei joka maassa.',
       ],
     },
     {
@@ -162,14 +182,18 @@ export const RAAMATTU = {
       kohdat: [
         'Yksi lauta: koko maailma yhdellä kartalla.',
         'ALKU: tarina alkaa Lontoosta. Ensimmäisen kohteen saa '
-          + 'valita kartalta vapaasti — valinta ratkaisee, minkä '
-          + 'mantereen pääaarretta etsitään ensin.',
+          + 'valita kartalta — valinta ratkaisee, minkä mantereen '
+          + 'pääaarretta etsitään ensin. BETA-RAJAUS (25.8.2026): '
+          + 'toistaiseksi valittavissa vain Ateena; vapaa valinta '
+          + 'palaa kun fokusmaita on tarpeeksi.',
         'VUORO: matkustustapa (jalan/laiva/lento) → noppa → siirto. '
           + 'Heitto, laiva tai lento = 6 h matka-aikaa.',
         'MANNERRAJA: uudelle mantereelle vasta pääaarteella tai '
           + 'maksamalla 1000 p (per ylitys). Rajakaupunkiin pääsee.',
-        'Kaupungissa mikään ei ponnahda itsestään: Tutki-nappi avaa '
-          + 'kortin, tehtävä alkaa napista. Vapaa vaellus.',
+        'Kaupungissa fokusmoodin annostelu korvaa vanhan '
+          + 'Tutki-napin: saapumisesittely alkaa itsestään, muu '
+          + 'aukeaa pelaajan valinnoista (ks. Fokusmoodi). Vapaa '
+          + 'vaellus.',
         'LOPPU: seitsemäs pääaarre. Revitty sivu ja seuraaja jäävät '
           + 'auki — Reginald ymmärtää vihdoin isoisäänsä '
           + '(sydänteeman lunastus).',
