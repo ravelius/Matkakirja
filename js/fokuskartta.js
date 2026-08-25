@@ -91,14 +91,32 @@ function nykyinenMaa(ui) {
  * Lataus on osa POHJAN OLEMASSAOLOA: jos kuvaa ei ole, koko pohja
  * merkitään puuttuvaksi eikä kerrokseen jää tyhjää <image>-elementtiä
  * (ks. haePohja).
+ *
+ * PURKU TEHDÄÄN decode():LLA JA SIIS TAUSTASÄIKEESSÄ (omistajan
+ * pelitesti 25.8.2026: aloituslento oli *"vähän tökkivä"*).
+ *
+ * onload kertoo vain, että tavut ovat perillä. Itse purku — kolmisen
+ * megatavua webpiä maan kokoiseksi bittikartaksi — jäi selaimen
+ * tehtäväksi siihen hetkeen, kun kuva ensimmäisen kerran maalataan, ja
+ * juuri se hetki on pahin mahdollinen: lehti asetetaan kartalle heti
+ * laskeutumisen jälkeen, samaan kehykseen kuin saapumisen kamera-ajo.
+ * decode() tekee saman työn etukäteen ja selaimen omassa
+ * purkusäikeessä, joten pääsäie saa valmiin rasterin. Haku alkaa yhä
+ * lennon aikana (ks. paivitaFokuskartta) — verkko ei ole pääsäikeessä.
+ *
+ * VARAREITTI: jos decode() puuttuu, odotetaan kuten ennen. Kumpikin
+ * haara palauttaa saman tosi/epätosi-arvon.
  */
 function lataaKuva(osoite) {
-  return new Promise((valmis) => {
-    const kuva = new Image();
-    kuva.onload = () => valmis(true);
-    kuva.onerror = () => valmis(false);
-    kuva.src = osoite;
-  });
+  const kuva = new Image();
+  kuva.src = osoite;
+  if (typeof kuva.decode !== 'function') {
+    return new Promise((valmis) => {
+      kuva.onload = () => valmis(true);
+      kuva.onerror = () => valmis(false);
+    });
+  }
+  return kuva.decode().then(() => true, () => false);
 }
 
 /**

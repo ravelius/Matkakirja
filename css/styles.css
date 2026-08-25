@@ -8409,6 +8409,71 @@ body.katselu #newgame-btn { display: none; }
 }
 
 /*
+ * LENNON OMA NIUKKA KERROS (js/kartta.js aloituslennonNiukkuus,
+ * omistajan pelitesti v1103:sta).
+ *
+ * KOHDEMAA PIMENNOKSEEN MUIDEN MUKANA. Fokusmoodin sumuverho jättää
+ * käytyihin maihin aukot, ja peli siirtää nappulan perille jo lennon
+ * alussa — kohdemaa jäi siis ainoana maana tarkaksi ja paljasti
+ * määränpään ennen kuin kone oli siellä. Aukko on SVG-maskissa, joten
+ * sitä ei voi peittää täältä: pelin oma verho menee lennon ajaksi
+ * kokonaan piiloon ja lentokerros piirtää tilalle saman sävyisen
+ * harson ilman aukkoja.
+ *
+ * DISPLAY EIKÄ HÄIVYTYS, toisin kuin muissa lennon piilotuksissa. Kaksi
+ * verhoa on identtinen yhtä asiaa lukuun ottamatta (kohdemaan aukko),
+ * joten välitön vaihto on huomaamaton — ristiinhäivytys sen sijaan
+ * näkyisi, koska kaksi läpikuultavaa harsoa päällekkäin on tummempi
+ * kuin kumpikaan yksin. Display myös takaa, ettei maskattua kerrosta
+ * rasteroida lennon aikana lainkaan: kone ja sen perässä piirtyvä viiva
+ * mitätöivät kaaren laatikon joka kehyksellä, ja maski jouduttiin
+ * maalaamaan uudelleen sen alta. Mittaustulos ja Chromiumin todellinen
+ * pullonkaula ovat js/kartta.js:n saman nimisessä osiossa.
+ *
+ * LENTOKERROKSEN HARSO ON VUOROSTAAN PIILOSSA AINA MUULLOIN. Lippu
+ * poistuu lennon lopussa 280 ms ennen kuin js/ui.js tyhjentää
+ * lentokerroksen; ilman tätä sääntöä molemmat harsot olisivat sen
+ * hetken päällekkäin.
+ */
+body.kartalento .fokus-sumu { display: none; }
+
+/*
+ * PIILOSSA OLEVAT SYKKEET SEIS LENNON AJAKSI. Laatan sykkivä kehä ja
+ * maataulun plus-nappi ovat lennon ajan häivytettyjä (opacity: 0), mutta
+ * niiden animaatiot juoksevat silti: selain laskee molemmille uuden
+ * tyylin joka kehyksellä siinä missä koneelle ja reittiviivallekin.
+ * Mitattuna (Chromium, jäljitys 25.8.2026) lennon aikana oli käynnissä
+ * viisi animaatiota, joista kolme kuului näkymättömiin kerroksiin.
+ * Ne palaavat itsestään, kun lippu poistuu.
+ */
+body.kartalento .fokuslaatta-syke,
+body.kartalento .fokus-maataulu-lehti { animation: none; }
+
+.aloituslento-niukka { display: none; }
+
+body.kartalento .aloituslento-niukka { display: block; }
+
+/*
+ * Reitin päiden nimet: Lontoo ja kohdekaupunki, ei muuta. Sama
+ * kaunokirjoitus ja pergamenttihalo kuin fokuskartan lisänimillä
+ * (.fokus-nimi), mutta tummempana ja hiukan harvennettuna — nämä ovat
+ * lennon ainoat kaksi nimeä, ja ne luetaan harson läpi.
+ *
+ * HALON LEVEYS TULEE MÄÄREENÄ js/kartta.js:stä eikä täältä. Nimen koko
+ * on laudan yksiköitä ja riippuu lennon mittakaavasta, joten kiinteä
+ * pikselileveys olisi ruudulla milloin mitäkin — se lasketaan samasta
+ * kertoimesta kuin kirjasinkoko.
+ */
+.aloituslento-nimi {
+  font-family: var(--font-kauno);
+  fill: rgba(52, 36, 22, 0.92);
+  paint-order: stroke;
+  stroke: rgba(240, 228, 200, 0.85);
+  stroke-linejoin: round;
+  letter-spacing: 0.04em;
+}
+
+/*
  * NIUKKA KARTTA LENNON AJAKSI (Raamattu: *"kartta on tällöin jo
  * fokusmoodin tapaan niukka"*). Sumuverhon hoitaa fokusmoodi itse;
  * tässä piiloutuu se pelitila, jonka peli on jo ehtinyt siirtää perille
