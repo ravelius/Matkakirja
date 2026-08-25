@@ -138,17 +138,21 @@ export const FOKUSVIRTA_SOFIA = {
       + 'ikkunalaudalle kynttilän palamaan. Kysyin kenelle. Hän sanoi: '
       + '"Sille, jonka hautaa ei kukaan tunne."',
     /*
-     * LUENTAA EI OLE. Ateenan merkinnällä on `luenta` ja `aanite`, koska
-     * sille generoitiin mp3 (tools/generoi-luennat.mjs). Sofialle ei ole
-     * generoitu mitään, eikä tänne kirjoiteta äänitepolkua, jota ei ole:
-     * puuttuva kenttä tarkoittaa yksinkertaisesti sitä, että kytkin ei
-     * ilmesty puhekuplan alle (js/fokusvirta.js).
+     * Luenta generoitu 25.8.2026 samalla reseptillä kuin muut
+     * matkakirjaluennat (Viisas Kertoja, eleven_v3, stability 0.5).
+     * Teksti sama kuin yllä — vain tunnetagit lisätty.
      *
      * KUVA: Vasil Levski, Bulgarian kansallisarkiston valokuva.
      * Commonsin imageinfo 25.8.2026: 5773×7469, public domain, tekijä
      * tuntematon, Category:Vasil Levski. Merkintä ei mainitse nimeä —
      * kuva mainitsee, ja juuri siitä syntyy vaiheen 2 jatko.
      */
+    luenta: '[curious] Sofiassa kukaan ei sano ääneen sen miehen nimeä, '
+      + 'joka hirtettiin täällä helmikuussa — mutta majatalon isäntä '
+      + 'jätti ikkunalaudalle kynttilän palamaan. [whispers] Kysyin '
+      + 'kenelle. [softly] Hän sanoi: Sille, jonka hautaa ei kukaan '
+      + 'tunne.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-sofia.mp3',
     kuva: {
       tiedosto: 'BASA-713K-1-52-4-Vasil Levski.JPG',
       selite: 'Vasil Levski. Bulgarialaiset kutsuvat häntä Vapauden '
