@@ -47,6 +47,7 @@
  */
 import { el } from './mapart.js';
 import { fokuskarttaUrl, peiliKaytossa } from './media.js';
+import { natiiviKuori } from './natiivi.js';
 import { FOKUS_LISANIMET, FOKUS_POHJAT, FOKUS_SVG_NIMET } from './packs/fokus-grc.js';
 
 /*
@@ -128,6 +129,355 @@ function lataaKuva(osoite) {
   return kuva.decode().then(() => kuva, () => null);
 }
 
+/*
+ * ============ LEHTI PIENENNETÄÄN JO PURUSSA ==========================
+ *
+ * OMISTAJAN TESTFLIGHT-PELITESTI 25.8.2026: peli kuoli aloituslogon
+ * silmukkaan sekä iPhonella ETTÄ iPadilla. Kuoren (WKWebView)
+ * sisältöprosessilla on tiukempi muistikatto kuin Safarin omalla
+ * välilehdellä, ja kaksi raskasta työtä osui samaan hetkeen: laudan
+ * rasterointi ja fokuslehden purku. Yksi lehti on 6400 x 4000 = 25,6
+ * megapikseliä eli PURETTUNA noin 102 megatavua (4 tavua/pikseli) —
+ * tiedostona se on kolmisen megatavua, joten verkko ei ole se raja,
+ * joka tulee vastaan, vaan RGBA-puskuri. Prosessi kuoli, kuori latasi
+ * sivun uudelleen, tallenne palautti pelin samaan kohtaan ja sama
+ * kuolema toistui.
+ *
+ * Turvatila (atlasTurvatila) purki silmukan sammuttamalla lehdet
+ * kokonaan. Se on vakuutus eikä ratkaisu: fokusnäkymä ON peli.
+ *
+ * RATKAISU ON PIENENTÄÄ LEHTI SILLÄ HETKELLÄ, KUN SE PURETAAN, eikä
+ * jäädä pitämään täyttä rasteria muistissa. Ruudulla ei häviä mitään,
+ * mitä siellä olisi ollutkaan: puhelimen ruutu on 390 x 844 pistettä
+ * eli kolminkertaisellakin pikselitiheydellä 1170 x 2532 fyysistä
+ * pikseliä, ja lehti kattaa siitä murto-osan kerrallaan. Täysi 6400
+ * pikselin leveys näkyy vasta zoomissa, jota kamera ei salli
+ * (kartta.tarkistaFokusZoom).
+ *
+ * MITAT. Pitkä sivu enintään 3200 pikseliä ja pinta-ala enintään 8
+ * megapikseliä, kuvasuhde säilyttäen: tyypillinen lehti kutistuu
+ * 6400 x 4000:sta 3200 x 2000:een eli 25,6 megapikselistä 6,4:ään —
+ * muistissa 102 Mt → 26 Mt, siis neljäsosa. Katto 3200 on myös
+ * turvallisesti iOS:n vanhan canvas-rajan (4096 x 4096 = 16,7 Mp)
+ * alapuolella; sitä isompi canvas palautuu Safarissa tyhjänä.
+ *
+ * KOLME POLKUA, PARAS ENSIN:
+ *
+ *   1. createImageBitmap(blob, { resizeWidth, resizeHeight }) purkaa JA
+ *      pienentää selaimen omassa säikeessään, jolloin täyttä
+ *      100 megatavun rasteria ei synny lainkaan. Mitat luetaan ensin
+ *      <img>-elementin onloadista — se kertoo naturalWidthin
+ *      purkamatta pikseleitä (purku tapahtuu vasta maalattaessa, ks.
+ *      lataaKuva) — joten resize-valinnat osataan asettaa oikein eikä
+ *      pientä lehteä vahingossa suurenneta.
+ *   2. canvas + drawImage, jos createImageBitmap puuttuu tai kaatuu.
+ *      Silloin täysi purku tapahtuu kerran (transientti piikki), mutta
+ *      muistiin JÄÄ vain pienennetty kuva.
+ *   3. Alkuperäinen kuva sellaisenaan. Tähän pudotaan, jos tavuja ei
+ *      saada CORS-noudolla (peli avattu muualta kuin ämpärin sallimasta
+ *      osoitteesta): ilman CORSia canvas tahriintuu eikä toBlob toimi.
+ *      Peli näyttää silloin täsmälleen samalta kuin ennen tätä pakettia.
+ *
+ * MIKSI CORS ONNISTUU. Ämpärissä on 6.8.2026 lisätty sääntö, joka
+ * vastaa `access-control-allow-origin: https://ravelius.github.io`
+ * (sw.js kuvalähde-haara), ja iOS-kuori lataa pelin täsmälleen siitä
+ * osoitteesta (ios/Matkakirja/Resurssit/Config.plist). Paikallisessa
+ * kehityksessä sääntö ei osu, ja silloin polku 3 hoitaa asian.
+ *
+ * PIENENNYS EI KOSKE TYÖPÖYTÄSELAINTA. Siellä muisti riittää, ja lehti
+ * kuuluu nähdä täytenä (mitattu 25.8.2026: sama polku kulkee
+ * pöytäselaimessa puhtaasti läpi). Kytkin on kuori TAI kapea ruutu.
+ */
+
+/** Pienennetyn lehden pisin sivu pikseleinä (iOS-canvasraja 4096). */
+const PIENENNYS_PITKA_SIVU = 3200;
+/** ...ja pinta-alan katto megapikseleinä (noin 32 Mt RGBA). */
+const PIENENNYS_KATTO_MP = 8;
+/** Uudelleenpakkauksen laatu; lehti on akvarellia, ei tekstiä. */
+const PIENENNYS_LAATU = 0.8;
+
+/**
+ * Pienennetäänkö lehdet? Kuoressa aina, selaimessa vain kapealla
+ * ruudulla (sama puhelinvihje kuin atlaksen katoilla, ATLAS_PUHELIN).
+ *
+ * Kysytään joka kerta eikä muisteta: silta ruiskutetaan sivulle ennen
+ * pelin skriptejä, mutta muistettu "ei kuorta" olisi väärä ikuisesti,
+ * jos se joskus saapuisi myöhässä.
+ */
+function pienennysPaalla() {
+  return natiiviKuoriTurvassa() || ATLAS_PUHELIN;
+}
+
+/** Kuoren kysely ilman kaatumista (silta puuttuu selaimessa ja Nodessa). */
+function natiiviKuoriTurvassa() {
+  try {
+    return natiiviKuori();
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Pienennetyn lehden mitat, tai null jos alkuperäinen kelpaa jo.
+ *
+ * Kuvasuhde säilyy: kumpikin katto (pitkä sivu, pinta-ala) lasketaan
+ * kertoimeksi ja pienin voittaa. Kerroin ei koskaan ole yli yhden —
+ * pientä lehteä (Kypros 5,6 Mp) ei suurenneta, koska se maksaisi
+ * muistia ilman yhtäkään uutta pikseliä.
+ */
+function pienennysMitat(w, h) {
+  if (!(w > 0) || !(h > 0)) return null;
+  const kerroin = Math.min(
+    PIENENNYS_PITKA_SIVU / Math.max(w, h),
+    Math.sqrt((PIENENNYS_KATTO_MP * 1e6) / (w * h)),
+  );
+  if (!(kerroin < 1)) return null;
+  return {
+    w: Math.max(1, Math.round(w * kerroin)),
+    h: Math.max(1, Math.round(h * kerroin)),
+  };
+}
+
+/** Canvas tai null (Node, tai selain ilman documenttia). */
+function teeCanvas(w, h) {
+  const asiakirja = globalThis.document;
+  if (typeof asiakirja?.createElement !== 'function') return null;
+  const canvas = asiakirja.createElement('canvas');
+  canvas.width = w;
+  canvas.height = h;
+  return canvas;
+}
+
+/*
+ * WebP vai JPEG? WebKit ei kirjoita webpiä canvasista, ja toBlob
+ * palauttaa spesifikaation mukaan tuntemattomasta tyypistä PNG:n —
+ * ja PNG kuudesta megapikselistä akvarellia on kymmeniä megatavuja.
+ * Siksi tuki kysytään kerran pikkuruisella canvasilla. Lehdet ovat
+ * opaakkeja (ks. sääntö 4 tiedoston alussa), joten JPEG kelpaa.
+ */
+let webpTuki = null;
+function tukeeWebp() {
+  if (webpTuki !== null) return webpTuki;
+  try {
+    const canvas = teeCanvas(1, 1);
+    webpTuki = Boolean(canvas?.toDataURL?.('image/webp')?.startsWith?.('data:image/webp'));
+  } catch {
+    webpTuki = false;
+  }
+  return webpTuki;
+}
+
+/** Canvasin sisältö blob-osoitteeksi; null jos ei onnistu. */
+function canvasOsoitteeksi(canvas) {
+  if (typeof canvas?.toBlob !== 'function' || typeof URL?.createObjectURL !== 'function') {
+    return Promise.resolve(null);
+  }
+  return new Promise((valmis) => {
+    let vastattu = false;
+    // Varmistus: jos toBlob ei koskaan kutsu takaisin, lehti ei saa
+    // jäädä roikkumaan jonoon (jono on sarjallinen, ks. purkuJono).
+    const kello = setTimeout(() => anna(null), 8000);
+    function anna(blob) {
+      if (vastattu) return;
+      vastattu = true;
+      clearTimeout(kello);
+      let osoite = null;
+      try {
+        osoite = blob ? URL.createObjectURL(blob) : null;
+      } catch { osoite = null; }
+      valmis(osoite);
+    }
+    try {
+      canvas.toBlob(anna, tukeeWebp() ? 'image/webp' : 'image/jpeg', PIENENNYS_LAATU);
+    } catch { anna(null); }
+  });
+}
+
+/** Piirtää lähteen pienennettynä canvasille ja palauttaa blob-osoitteen. */
+async function canvasille(lahde, mitat) {
+  const canvas = teeCanvas(mitat.w, mitat.h);
+  const piirtoalusta = canvas?.getContext?.('2d');
+  if (!piirtoalusta) return null;
+  try {
+    piirtoalusta.drawImage(lahde, 0, 0, mitat.w, mitat.h);
+  } catch {
+    return null;
+  }
+  const osoite = await canvasOsoitteeksi(canvas);
+  // Canvas irti heti: iOS pitää piirtopuskurin (tässä 26 Mt) hengissä
+  // niin kauan kuin elementillä on mittoja.
+  try {
+    canvas.width = 1;
+    canvas.height = 1;
+  } catch { /* ei väliä */ }
+  return osoite;
+}
+
+/**
+ * Polku 1: purku ja pienennys yhdellä kertaa selaimen omassa säikeessä.
+ *
+ * resizeQuality: 'high' on tässä oikea valinta — lehti on maastoa ja
+ * viivakuvaa, ja karkea alasotanta tekisi rannikoista rosoa.
+ */
+async function bittikartasta(blob, mitat) {
+  if (typeof createImageBitmap !== 'function') return null;
+  let bittikartta = null;
+  try {
+    bittikartta = await createImageBitmap(blob, {
+      resizeWidth: mitat.w,
+      resizeHeight: mitat.h,
+      resizeQuality: 'high',
+    });
+    return await canvasille(bittikartta, mitat);
+  } catch {
+    return null;
+  } finally {
+    // Bittikartta on oma puskurinsa eikä katoa roskien mukana heti.
+    try { bittikartta?.close?.(); } catch { /* vanha selain */ }
+  }
+}
+
+/** Kuva blob-osoitteesta MITAT edellä: onload ei vielä pura pikseleitä. */
+function lataaMitat(osoite) {
+  return new Promise((valmis) => {
+    const kuva = new Image();
+    kuva.onload = () => valmis(kuva);
+    kuva.onerror = () => valmis(null);
+    kuva.src = osoite;
+  });
+}
+
+/** Lehden tavut CORS-noudolla; null jos sääntö ei salli (ks. johdanto). */
+async function haeTavut(osoite) {
+  if (typeof fetch !== 'function') return null;
+  try {
+    const vastaus = await fetch(osoite, { mode: 'cors', credentials: 'omit' });
+    if (!vastaus?.ok) return null;
+    const blob = await vastaus.blob();
+    return blob?.size ? blob : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Purkaa ja pienentää yhden lehden. Palauttaa
+ * `{ url, w, h, objectURL }` tai null.
+ *
+ * `objectURL` on se osoite, joka on vapautettava lehden mukana
+ * (vapautaLehti → siivoaLehtiUrlit); null tarkoittaa, että näytössä on
+ * ämpärin oma osoite eikä mitään vapautettavaa.
+ */
+async function pienennaLehti(lahde, blob) {
+  let blobOsoite = null;
+  try {
+    blobOsoite = URL.createObjectURL(blob);
+  } catch {
+    return null;
+  }
+  try {
+    const kuva = await lataaMitat(blobOsoite);
+    if (!kuva) return null;
+    const mitat = pienennysMitat(kuva.naturalWidth, kuva.naturalHeight);
+    if (!mitat) {
+      /*
+       * JO VALMIIKSI PIENI LEHTI näytetään ämpärin omasta osoitteesta:
+       * uudelleenpakkaus veisi aikaa ja tuottaisi tismalleen saman
+       * muistikuorman. Mitat on silti mitattu eikä arvattu.
+       */
+      return { url: lahde, w: kuva.naturalWidth, h: kuva.naturalHeight, objectURL: null };
+    }
+    const osoite = await bittikartasta(blob, mitat) ?? await canvasille(kuva, mitat);
+    if (!osoite) return null;
+    return {
+      url: osoite, w: mitat.w, h: mitat.h, objectURL: osoite,
+    };
+  } finally {
+    // Väliaikainen blob-osoite ei jää muistiin: kuva on jo piirretty
+    // canvasille siihen mennessä, kun tämä suoritetaan.
+    try { URL.revokeObjectURL(blobOsoite); } catch { /* ei URLia */ }
+  }
+}
+
+/*
+ * YKSI LEHTI KERRALLAAN (omistajan TestFlight-testi 25.8.2026).
+ *
+ * Atlas hakee useaa lehteä rinnakkain, ja kaksi yhtaikaista purkua on
+ * kuoressa kaksi kertaa se piikki, joka jo yksinään tappoi prosessin.
+ * Jono ei hidasta mitään näkyvää: lehdet ilmestyvät kartalle
+ * järjestyksessä, ja kohdemaan lehti on aina ensimmäisenä jonossa,
+ * koska sen haku alkaa jo lennon aikana (paivitaFokuskartta).
+ *
+ * JONOSSA ON VAIN PURKU, EI NOUTOA. Verkko ei ole muistista pois:
+ * tavut ovat kolmisen megatavua ja saavat tulla rinnakkain kuten
+ * ennenkin. Jos jono kattaisi noudon, kolmen lehden atlas odottaisi
+ * kolme peräkkäistä latausta.
+ *
+ * Jono koskee VAIN pienennettyä polkua. Työpöytäselaimessa purku on
+ * selaimen omissa käsissä kuten ennenkin.
+ */
+let purkuJono = Promise.resolve();
+function jonossa(tyo) {
+  const vuoro = purkuJono.then(tyo, tyo);
+  purkuJono = vuoro.then(() => {}, () => {});
+  return vuoro;
+}
+
+/**
+ * Lehti näyttökuntoon: `{ url, w, h, objectURL }` tai null.
+ *
+ * Kuoressa ja puhelimessa purku pienennetään ja sarjoitetaan; muualla
+ * tämä on entinen lataaKuva mittoineen.
+ */
+async function lataaLehti(lahde) {
+  if (pienennysPaalla()) {
+    const blob = await haeTavut(lahde);
+    const pienennetty = blob ? await jonossa(() => pienennaLehti(lahde, blob)) : null;
+    if (pienennetty) return pienennetty;
+    // Varareitti: tavuja ei saatu CORSilla tai pienennys ei onnistunut.
+    // Lehti on tärkeämpi kuin sen koko (sääntö 1 tiedoston alussa).
+  }
+  const kuva = await lataaKuva(lahde);
+  if (!kuva) return null;
+  return {
+    url: lahde, w: kuva.naturalWidth, h: kuva.naturalHeight, objectURL: null,
+  };
+}
+
+/**
+ * Vapauttaa ne blob-osoitteet, joita mikään kartalla oleva lehti ei
+ * enää käytä.
+ *
+ * MIKSI KÄYTTÖ TARKISTETAAN DOMISTA eikä luoteta kutsujaan: sama
+ * pohja voi olla yhtä aikaa nykyisen maan lehtenä (.fokus-lehti) ja
+ * atlaksen lehtenä (.fokus-atlas), ja vapautettu osoite näkyisi
+ * pelaajalle rikkinäisenä kuvana. Solmuja on korkeintaan kourallinen,
+ * joten kysely on halpa.
+ *
+ * VAPAUTETTU POHJA PURETAAN UUDELLEEN, jos lehti palaa kartalle:
+ * `kuva` nollataan, mutta mitattu `mp` jää talteen, jotta atlaksen
+ * muistibudjetti laskee yhä oikeilla luvuilla eikä arviolla.
+ */
+function siivoaLehtiUrlit(ui) {
+  let kaytossa = null;
+  for (const pohja of VARASTO.values()) {
+    if (!pohja || pohja === 'ei' || !pohja.objectURL || !pohja.piirretty) continue;
+    if (!kaytossa) {
+      kaytossa = new Set();
+      const solmut = ui?.fokuskarttaKerros?.querySelectorAll?.('image') ?? [];
+      for (const solmu of solmut) {
+        const osoite = solmu.getAttribute?.('href');
+        if (osoite) kaytossa.add(osoite);
+      }
+    }
+    if (kaytossa.has(pohja.objectURL)) continue;
+    try { URL.revokeObjectURL(pohja.objectURL); } catch { /* ei URLia */ }
+    pohja.objectURL = null;
+    pohja.kuva = null;
+    pohja.piirretty = false;
+  }
+}
+
 /**
  * Hakee maan pohjan tiedot. Palauttaa { bbox, kuva } tai null.
  *
@@ -137,7 +487,15 @@ function lataaKuva(osoite) {
  */
 async function haePohja(iso, lauta) {
   const avain = `${lauta}:${iso}`;
-  if (VARASTO.has(avain)) return VARASTO.get(avain) === 'ei' ? null : VARASTO.get(avain);
+  const ennestaan = VARASTO.get(avain);
+  if (ennestaan === 'ei') return null;
+  /*
+   * VAPAUTETTU LEHTI PURETAAN UUDELLEEN. Muistissa oleva pohja kelpaa
+   * vain jos sillä on yhä osoite: siivoaLehtiUrlit nollaa `kuva`-kentän
+   * silloin, kun blob-osoite on vapautettu lehden mukana. Rajaus ja
+   * mitattu koko jäävät talteen, joten uusi purku on ainoa työ.
+   */
+  if (ennestaan?.kuva) return ennestaan;
   if (HAUT.has(avain)) return HAUT.get(avain);
   const haku = (async () => {
     try {
@@ -163,29 +521,42 @@ async function haePohja(iso, lauta) {
        * koordinaateilla maailmankartalle.
        */
       if (tiedot.lauta && tiedot.lauta !== lauta) throw new Error('eri lauta');
-      const pohja = {
+      const lahde = fokuskarttaUrl(tiedot.tiedosto ?? `${iso}.webp`);
+      const pohja = (ennestaan && ennestaan !== 'ei') ? ennestaan : {
         bbox: b,
         // Ikkuna, johon kamera ajaa; vanhemmilla pohjilla sitä ei ole,
         // jolloin koko kuva on ikkuna kuten ennen.
         rajaus: tiedot.rajaus ?? b,
-        kuva: fokuskarttaUrl(tiedot.tiedosto ?? `${iso}.webp`),
       };
-      const kuva = await lataaKuva(pohja.kuva);
-      if (!kuva) throw new Error('kuva ei lataudu');
+      const lehti = await lataaLehti(lahde);
+      if (!lehti) throw new Error('kuva ei lataudu');
+      pohja.kuva = lehti.url;
+      // Vapautettava blob-osoite (pienennetty lehti) tai null, jos
+      // näytössä on ämpärin oma osoite.
+      pohja.objectURL = lehti.objectURL ?? null;
+      pohja.piirretty = false;
       /*
-       * TODELLINEN PIKSELIMÄÄRÄ TALTEEN. Jatkuva atlas pitää useaa
-       * lehteä kartalla yhtä aikaa, ja sen muistikatto lasketaan
-       * megapikseleinä eikä lehtien lukumääränä (ks. ATLAS_MEGAPIKSELIA).
-       * Mitta luetaan siitä samasta kuvasta, joka juuri purettiin —
-       * arvaus olisi tässä pahin mahdollinen virhe, koska lehtien koot
-       * vaihtelevat Kyproksen 5,6:sta Suomen 25,6 megapikseliin.
+       * TODELLINEN PIKSELIMÄÄRÄ TALTEEN — JA NIMENOMAAN PIENENNETTY.
+       * Jatkuva atlas pitää useaa lehteä kartalla yhtä aikaa, ja sen
+       * muistikatto lasketaan megapikseleinä eikä lehtien lukumääränä
+       * (ks. atlasMegapikselia). Mitta luetaan siitä samasta kuvasta,
+       * joka oikeasti jää muistiin: jos lehti pienennettiin 6400 x
+       * 4000:sta 3200 x 2000:een, budjettiin kirjataan 6,4 eikä 25,6
+       * megapikseliä. Arvaus olisi tässä pahin mahdollinen virhe.
        */
-      pohja.mp = (kuva.naturalWidth * kuva.naturalHeight) / 1e6 || ATLAS_OLETUS_MP;
+      pohja.mp = (lehti.w * lehti.h) / 1e6 || ATLAS_OLETUS_MP;
       VARASTO.set(avain, pohja);
       return pohja;
     } catch {
       // Puuttuva pohja on tavallinen tila eikä virhe: maita on satoja
       // ja kuvia toistaiseksi yksi.
+      //
+      // TÄMÄ KOSKEE MYÖS UUDELLEENPURKUA: jos kerran nähty lehti ei
+      // enää lataudu (verkko poikki), se merkitään puuttuvaksi istunnon
+      // loppuun. Vaihtoehto olisi yrittää uudelleen joka panoroinnissa,
+      // ja juuri se olisi väärin muistin kannalta — puuttuva lehti ei
+      // riko mitään (sääntö 1 tiedoston alussa), loputon uudelleenyritys
+      // veisi kaistaa ja purkuja siihen asti kunnes jokin onnistuu.
       VARASTO.set(avain, 'ei');
       return null;
     } finally {
@@ -381,8 +752,9 @@ function maanNakyma(ui, iso, lauta) {
  *      lehden vain, jos se peittää vähintään ATLAS_UUSIA_RUUTUJA
  *      sellaista ruutua, jota mikään jo valittu lehti ei peitä.
  *      Käytännössä kartalla on 1–4 lehteä, ei kahdeksaa.
- *   3. KAKSI KATTOA, LRU VAPAUTTAA. Enintään ATLAS_ENINTAAN lehteä JA
- *      enintään ATLAS_MEGAPIKSELIA megapikseliä. Kun katto ylittyy,
+ *   3. KAKSI KATTOA, LRU VAPAUTTAA. Enintään atlasEnintaan() lehteä JA
+ *      enintään atlasMegapikselia() megapikseliä (pienennettyinä,
+ *      ks. "LEHTI PIENENNETÄÄN JO PURUSSA"). Kun katto ylittyy,
  *      kauimmin sitten käytetty lehti irrotetaan DOMista — juuri se
  *      vapauttaa puretun kuvan, koska VARASTO ei pidä Image-oliota
  *      tallessa vaan pelkän osoitteen ja mitat.
@@ -411,17 +783,61 @@ function maanNakyma(ui, iso, lauta) {
 const ATLAS_PUHELIN = typeof screen !== 'undefined'
   && Math.min(screen.width || 9999, screen.height || 9999) < 500;
 
+/*
+ * KUORI ON OMA TAPAUKSENSA — MYÖS iPADILLA (omistajan TestFlight-testi
+ * 25.8.2026: peli kuoli aloituslogon silmukkaan sekä iPhonella että
+ * iPadilla). WKWebView'n sisältöprosessilla on tiukempi muistikatto kuin
+ * Safarin omalla välilehdellä, eikä ruudun leveys kerro siitä mitään:
+ * iPadin kuori on leveä ruutu ja silti se ympäristö, joka kaatui. Siksi
+ * kuori tunnistetaan sillasta (js/natiivi.js) eikä ruudusta, ja se saa
+ * puhelintakin harkitummat katot.
+ *
+ * LUVUT OVAT PIENENNETTYJÄ MEGAPIKSELEITÄ (ks. "LEHTI PIENENNETÄÄN JO
+ * PURUSSA"): kuoressa ja puhelimessa lehti on tyypillisesti 6,4 Mp
+ * ≈ 26 Mt eikä 25,6 Mp ≈ 102 Mt.
+ *
+ *   kuori    5 lehteä / 40 Mp — käytännössä 5 x 6,4 = 32 Mp ≈ 128 Mt.
+ *            Enemmän lehtiä kuin ennen, VÄHEMMÄN muistia (ennen 40 Mp
+ *            täysinä lehtinä oli 160 Mt eli puolitoista lehteä).
+ *   puhelin  4 / 40 kuten ennenkin — selaimessa sivu saa kuolla ilman
+ *            että koko sovellus katoaa, ja Safarin oma välilehti kestää
+ *            enemmän kuin kuoren sisältöprosessi.
+ *   työpöytä 8 / 96 täysinä lehtinä, ei pienennystä. Siellä muisti
+ *            riittää eikä yksikään mittaus ole kaatunut.
+ */
+const ATLAS_KUORI_ENINTAAN = 5;
+const ATLAS_KUORI_MEGAPIKSELIA = 40;
+
 /** Enintään näin monta lehteä muistissa kerralla (omistajan ohje ~8). */
-const ATLAS_ENINTAAN = ATLAS_PUHELIN ? 4 : 8;
+function atlasEnintaan() {
+  if (natiiviKuoriTurvassa()) return ATLAS_KUORI_ENINTAAN;
+  return ATLAS_PUHELIN ? 4 : 8;
+}
 /*
  * ...ja enintään näin monta megapikseliä purettuna, mikä on käytännössä
- * se katto, joka osuu ensin: mitattu lehti on 25,6 Mp, joten 96 Mp on
+ * se katto, joka osuu ensin: täysi lehti on 25,6 Mp, joten 96 Mp on
  * kolme–neljä lehteä eli noin 384 Mt purettua kuvaa. Kahdeksan täyttä
  * lehteä olisi 205 Mp ≈ 820 Mt, mitä yksikään iPad ei kestä. Puhelimen
- * 40 Mp ≈ 160 Mt on nykyinen maa + korkeintaan yksi naapuri.
+ * 40 Mp on pienennettynä 6 lehteä, jolloin lukumääräkatto osuu ensin.
  */
-const ATLAS_MEGAPIKSELIA = ATLAS_PUHELIN ? 40 : 96;
-/** Lehden oletuskoko ennen kuin todellinen on mitattu (tyypillinen). */
+function atlasMegapikselia() {
+  if (natiiviKuoriTurvassa()) return ATLAS_KUORI_MEGAPIKSELIA;
+  return ATLAS_PUHELIN ? 40 : 96;
+}
+/*
+ * LEHDEN OLETUSKOKO ENNEN KUIN TODELLINEN ON MITATTU.
+ *
+ * ARVIO ON TÄYSI LEHTI MYÖS SILLOIN, KUN PIENENNYS ON PÄÄLLÄ. Se
+ * näyttää varovaiselta ja on sitä tarkoituksella: pienennys voi pudota
+ * varareitille (CORS ei onnistu, canvas ei kirjoita blobia), jolloin
+ * lehti onkin kartalla täytenä. Mitattu 25.8.2026 juuri sillä polulla:
+ * kun budjetti laski 6,4 megapikselin arviolla, valinta otti VIISI
+ * lehteä ja ne kaikki saapuivat täysinä — 128 Mp ≈ 512 Mt, eli
+ * täsmälleen se tilanne, jota tämä paketti on estämässä. Arvio on siis
+ * pessimistinen ja mittaus optimistinen: kun lehti on kerran mitattu,
+ * budjettiin kirjautuu sen todellinen (pienennetty) koko ja naapureita
+ * mahtuu enemmän jo seuraavassa päivityksessä.
+ */
 const ATLAS_OLETUS_MP = 25.6;
 /** Esilatausvara näkymän ympärille, osuutena näkymän mitasta. */
 const ATLAS_VARA = 0.3;
@@ -699,12 +1115,12 @@ function atlasValinta(ui, nakyva, lauta, nykyinen, ehdokkaat) {
   }
   for (const e of ehdokkaat) {
     if (e.iso === nykyinen) continue;
-    if (valitut.length + (oma ? 1 : 0) >= ATLAS_ENINTAAN) break;
+    if (valitut.length + (oma ? 1 : 0) >= atlasEnintaan()) break;
     if (peita(ruudut, e.bbox, nakyva, false) < ATLAS_UUSIA_RUUTUJA) continue;
     const koko = lehdenMp(e.iso, lauta);
     // Budjetin täyttyminen ei lopeta hakua: seuraava lehti voi olla
     // pieni (Kypros 5,6 Mp) ja mahtua vielä.
-    if (mp + koko > ATLAS_MEGAPIKSELIA) continue;
+    if (mp + koko > atlasMegapikselia()) continue;
     peita(ruudut, e.bbox, nakyva, true);
     mp += koko;
     valitut.push(e);
@@ -712,12 +1128,21 @@ function atlasValinta(ui, nakyva, lauta, nykyinen, ehdokkaat) {
   return valitut;
 }
 
-/** Vapauttaa yhden lehden: irti DOMista = purettu kuva pois muistista. */
+/**
+ * Vapauttaa yhden lehden: irti DOMista = purettu kuva pois muistista.
+ *
+ * PIENENNETYLLÄ LEHDELLÄ ON MYÖS BLOB-OSOITE, joka pitää pakatut tavut
+ * hengissä niin kauan kuin sitä ei vapauteta. Yksi lehti on kolmisen
+ * megatavua ja niitä kertyisi maa maalta koko istunnon ajan — vuoto
+ * söisi juuri sen hyödyn, jonka pienennys tuo. Vapautus tehdään vasta
+ * kun mikään kartalla oleva kuva ei enää käytä osoitetta.
+ */
 function vapautaLehti(ui, iso) {
   const tieto = ui.atlasLehdet?.get(iso);
   if (!tieto) return;
   tieto.el?.remove();
   ui.atlasLehdet.delete(iso);
+  siivoaLehtiUrlit(ui);
 }
 
 /**
@@ -730,8 +1155,8 @@ function karsiAtlas(ui, lauta, suojatut) {
   const yli = () => {
     let mp = ui.atlasOmaMp ?? 0;
     for (const [iso] of lehdet) mp += lehdenMp(iso, lauta);
-    return lehdet.size + (ui.atlasOmaMp ? 1 : 0) > ATLAS_ENINTAAN
-      || mp > ATLAS_MEGAPIKSELIA;
+    return lehdet.size + (ui.atlasOmaMp ? 1 : 0) > atlasEnintaan()
+      || mp > atlasMegapikselia();
   };
   while (yli()) {
     let vanhin = null;
@@ -802,7 +1227,7 @@ export function paivitaFokusAtlas(ui) {
    * Siksi: karsinta suojaa kaikki ruudulla näkyvät ladatut lehdet
    * (ei vain valittuja), ja välitön vapautus tehdään vasta selvästi
    * varan takaa (tuplavara). Muisti pysyy aisoissa, koska UUSIA lehtiä
-   * haetaan yhä vain valintabudjetin (ATLAS_MEGAPIKSELIA) verran —
+   * haetaan yhä vain valintabudjetin (atlasMegapikselia) verran —
    * suojaus koskee vain jo maksettuja, yhä näkyviä kuvia.
    */
   ui.atlasSuojatut = new Set(ui.atlasValitut);
@@ -853,10 +1278,13 @@ export function paivitaFokusAtlas(ui) {
        * maksettu siinä vaiheessa; oikea paikka päättää sen kohtalosta on
        * LRU-karsinta, joka pudottaa sen heti jos katot ylittyvät.
        */
-      if (ui.dead || !pohja || !ui.fokuskarttaKerros) return;
+      if (ui.dead || !pohja?.kuva || !ui.fokuskarttaKerros) return;
       if (ui.game.pack.id !== lauta || !atlasPaalla(ui)) return;
       const kohde = atlasRyhma(ui);
       if (!kohde || ui.atlasLehdet.has(v.iso)) return;
+      // Osoite on nyt kartalla: siivous saa vapauttaa sen vasta kun
+      // lehti irrotetaan (siivoaLehtiUrlit).
+      pohja.piirretty = true;
       const kuva = el('image', {
         x: v.bbox.x,
         y: v.bbox.y,
@@ -912,9 +1340,12 @@ export function fokusAtlasIkkunat(ui, maat) {
 /** Piirtää lehden ja kertoo kartalle, että sen alue on nyt kuvan alla. */
 function piirra(ui, iso, pohja) {
   const ryhma = lehtiRyhma(ui);
-  if (!ryhma) return;
+  if (!ryhma || !pohja.kuva) return;
   ryhma.textContent = '';
   const { bbox } = pohja;
+  // Osoite on kartalla: pienennetyn lehden blob-osoitetta ei vapauteta
+  // ennen kuin tämä kuva on irronnut (siivoaLehtiUrlit).
+  pohja.piirretty = true;
   el('image', {
     x: bbox.x,
     y: bbox.y,
@@ -992,6 +1423,9 @@ export function paivitaFokuskartta(ui) {
    * uudelleen — ja juuri purku on se kallis työ (ks. atlaksen johdanto).
    */
   lehtiRyhma(ui)?.replaceChildren();
+  // Edellisen maan lehti on nyt irti kartalta: jos se oli pienennetty,
+  // sen blob-osoite on vapautettava (ellei sama kuva ole yhä atlaksessa).
+  siivoaLehtiUrlit(ui);
   // Atlaksen valinta on maakohtainen (nykyisen maan lehti vie peiton ja
   // budjetin), joten tunniste on nollattava — muuten uusi maa jäisi
   // vanhan valinnan varaan seuraavaan panorointiin asti.
@@ -1004,7 +1438,7 @@ export function paivitaFokuskartta(ui) {
 
   const nayta = (pohja) => {
     // Maa on voinut vaihtua haun aikana (botti, nopea siirto).
-    if (ui.dead || !pohja || ui.fokuskarttaAvain !== iso || !ui.fokuskarttaKerros) return;
+    if (ui.dead || !pohja?.kuva || ui.fokuskarttaAvain !== iso || !ui.fokuskarttaKerros) return;
     /*
      * KAMERA AJAA LEHDEN IKKUNAAN, EI KOKO KUVAAN. Kuvassa on ikkunan
      * ympärillä vuotoa, jonka tehtävä on jäädä ruudun ulkopuolelle — jos
@@ -1031,9 +1465,10 @@ export function paivitaFokuskartta(ui) {
     if (nakyma) ui.kartta?.ajaKamera?.(nakyma);
   }
   const valmis = VARASTO.get(`${lauta}:${iso}`);
-  // Jo muistissa: piirretään samassa kehyksessä, jottei kuva välähdä
-  // vasta seuraavalla ruudunpäivityksellä.
-  if (valmis && valmis !== 'ei') nayta(valmis);
+  // Jo muistissa JA yhä osoitteineen: piirretään samassa kehyksessä,
+  // jottei kuva välähdä vasta seuraavalla ruudunpäivityksellä. Ilman
+  // osoitetta (vapautettu blob) pohja puretaan uudelleen kuten uusi.
+  if (valmis && valmis !== 'ei' && valmis.kuva) nayta(valmis);
   else if (valmis !== 'ei') void haePohja(iso, lauta).then(nayta);
   /*
    * NYKYISEN MAAN LEHTI ON MYÖS ATLAKSEN LEHTI: se vie peittoa ja
@@ -1061,5 +1496,8 @@ export function nollaaFokuskartta(ui) {
   ui.atlasHaut?.clear();
   ui.atlasAvain = null;
   ui.atlasOmaMp = 0;
+  // Kerros on tyhjä, joten jokainen pienennetyn lehden blob-osoite on
+  // nyt käyttämätön — ne vapautuvat kaikki tässä.
+  siivoaLehtiUrlit(ui);
   ui.paivitaFokusPohja?.(null);
 }
