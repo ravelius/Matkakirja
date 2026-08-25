@@ -1229,8 +1229,11 @@ export class Kartta {
      * sx/sy/yleisSkaala jäävät laskennasta käyttämättä samasta syystä.
      */
     void sx; void sy; void yleisSkaala;
-    stopIntroVoice(this);
-    stopDiaryVoice(this);
+    // ui, EI kartta: funktiot lukevat ui.introVoice/diaryVoice —
+    // kartta-oliolla kutsuttuna ne eivät tehneet mitään, ja kertoja
+    // jäi soimaan matkan alettua (mitattu 25.8.2026).
+    stopIntroVoice(this.ui);
+    stopDiaryVoice(this.ui);
     this.ui.svg.style.transition = '';
     this.tyonnaAvausteksti(0);
     this.asetaPan(this.ui.panX, this.ui.panY);
@@ -1653,8 +1656,9 @@ export class Kartta {
    * Ilman taukoa moottori hukkui puheen ja meren alle.
    */
   zoomAanellaJaViiveella(liuku, kesto = ZOOM_MS) {
-    stopIntroVoice(this);
-    stopDiaryVoice(this);
+    // ui, EI kartta (sama korjaus kuin yllä).
+    stopIntroVoice(this.ui);
+    stopDiaryVoice(this.ui);
     vaimennaTausta();
     clearTimeout(this.ui.zoomAlkuAjastin);
     this.ui.zoomAlkuAjastin = setTimeout(() => {
