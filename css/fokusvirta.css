@@ -105,6 +105,32 @@
   .fokusvirta-kortti { right: auto; width: min(37rem, 56%); }
 }
 
+/*
+ * KESKITETTY KORTTI (omistajan pelitesti 25.8.2026): kohtaamiskortti
+ * aukeaa keskelle ruutua eikä alalaitaan — se on hetken päänäyttämö,
+ * ei karttaa säestävä liuska. Keskitys on transformilla, joten
+ * esiintuloanimaatio tarvitsee omat kehyksensä samoilla siirroilla.
+ */
+.fokusvirta-kortti.keskella {
+  left: 50%;
+  right: auto;
+  top: 50%;
+  bottom: auto;
+  width: min(37rem, calc(100% - 1.2rem));
+  max-height: 82%;
+  transform: translate(-50%, -50%);
+  animation: fokusvirta-esiin-keskella 0.24s ease-out;
+}
+
+@keyframes fokusvirta-esiin-keskella {
+  from { opacity: 0; transform: translate(-50%, calc(-50% + 10px)); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fokusvirta-kortti.keskella { animation: none; }
+}
+
 .fokusvirta-sisalto {
   overflow-y: auto;
   overscroll-behavior: contain;

@@ -660,6 +660,10 @@ function piirraKortti(ui, city, data, tila) {
 function piirraKehys(ui, city, data, tila) {
   const koti = document.querySelector('.map-pane') ?? document.body;
   const kortti = html('div', 'fokusvirta-kortti');
+  // Kohtaamiskortti aukeaa keskelle ruutua (omistajan pelitesti
+  // 25.8.2026: "Tämä taulu saisi aueta keskelle ruutua") — muut
+  // kortit pysyvät alalaidan liuskana.
+  if (tila.vaihe === 'kohtaaminen') kortti.classList.add('keskella');
   kortti.setAttribute('role', 'group');
   kortti.setAttribute('aria-label', `${city.name}: esittely`);
 
