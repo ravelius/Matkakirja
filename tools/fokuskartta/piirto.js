@@ -80,14 +80,34 @@ const ASTEIKKO = [
   { m: 2900, v: [150, 90, 62] },
 ];
 
-/* Meri: ei sinistä vaan viileä paperi, syvyys porrastettuna. */
+/*
+ * Meri: ei sinistä vaan viileä paperi, syvyys porrastettuna.
+ *
+ * MATALA MERI ON OMA PORTAANSA (−30 m). Alkuperäinen asteikko lähti
+ * nollasta lähes paperinvärisenä ja seuraava porras oli vasta −120 m:
+ * mannerjalusta erottui paperista parilla sävyaskelella, ja
+ * Persianlahti (33–89 m) suli lehden paperiin niin, ettei sitä lukenut
+ * merenä lainkaan (ARE, QAT, KWT, SAU, IRQ, IRN). Meri maalataan
+ * paperin päälle puolella peitolla, joten jokainen askel puolittuu
+ * matkalla — asteikon oli siis alettava laskea heti.
+ *
+ * NYT JYRKIN LASKU ON SIELLÄ, MISSÄ MATALAA MERTA ON: −30 metriin
+ * mennessä sävy on paperia (232,220,188) noin kolmetoista askelta
+ * tummempi valmiissa kuvassa, ja loput 5000 metriä laskevat sen verran
+ * lisää. Porras nollasta on tarkoituksella lempeä, jotta sauma
+ * rannikolla pysyy pehmeänä eikä rantaviiva saa toista, väärää viivaa
+ * viereensä. Syvänmeren pää tummeni vain kahdella askelella valmiissa
+ * kuvassa, joten valtamerilehtien ilme ei muutu — muuttuu se, että
+ * mannerjalusta erottuu vihdoin ulapasta ja paperista.
+ */
 const SYVYYS = [
-  { m: 0, v: [225, 217, 191] },
-  { m: -120, v: [219, 212, 189] },
-  { m: -600, v: [211, 205, 186] },
-  { m: -1500, v: [202, 197, 182] },
-  { m: -3000, v: [193, 189, 177] },
-  { m: -5000, v: [185, 182, 172] },
+  { m: 0, v: [222, 215, 190] },
+  { m: -30, v: [206, 201, 183] },
+  { m: -120, v: [199, 195, 180] },
+  { m: -600, v: [193, 190, 177] },
+  { m: -1500, v: [188, 185, 173] },
+  { m: -3000, v: [184, 181, 170] },
+  { m: -5000, v: [180, 178, 168] },
 ];
 
 const PAPERI = '#e8dcbc';
@@ -308,6 +328,38 @@ export function piirra(canvas, aineisto, asetukset) {
   };
 
   /*
+   * ================================================ MAA VAI MERI?
+   *
+   * ETOPOn merkki ei riitä. Kuivaa maata on merenpinnan alapuolella
+   * enemmän kuin äkkiseltään uskoisi: Kaspianmeren ranta ja koko Kaspian
+   * alanko ovat −28…0 m, Kuollutmeren laakso −400 m, Qattaran painanne
+   * −133 m. Pelkällä `m < 0` -säännöllä ne kaikki maalattiin mereksi —
+   * ja kohdemaan sisällä maastokerros maalasi vielä meren maaksi
+   * (`Math.max(0, m)`), koska Natural Earthin maarajaus ei noudata
+   * rantaviivaa Kaspianmerellä.
+   *
+   * Vesi on siis "ETOPO alle nollan JA piste meren alalla", missä meren
+   * ala on Natural Earthin `ne_10m_ocean` rasteroituna korkeusruudukon
+   * ruudukkoon (aineisto.mjs meriruudukko). Rannikon MUOTO tulee yhä
+   * ETOPOsta pehmeänä nollakäyränä; maski vain kertoo, kuuluuko painanne
+   * merelle. Ilman maskia (vanha aineisto) sääntö on entinen.
+   */
+  const MERI = aineisto.meri
+    ? Uint8Array.from(atob(aineisto.meri.b64), (c) => c.charCodeAt(0))
+    : null;
+  const merenAlalla = (lon, lat) => {
+    if (!MERI) return true;
+    const x = Math.round((lon - K.lon0) / DLON);
+    const y = Math.round((K.lat1 - lat) / DLAT);
+    // Ruudukon ulkopuoli on avomerta, kuten korkeudessakin.
+    if (x < 0 || y < 0 || x > K.w - 1 || y > K.h - 1) return true;
+    const i = y * K.w + x;
+    return ((MERI[i >> 3] >> (i & 7)) & 1) === 1;
+  };
+  /** Onko tämä piste vettä? `m` on jo haettu korkeus (NaN = ulkopuoli). */
+  const vetta = (lon, lat, m) => (Number.isFinite(m) ? m < 0 && merenAlalla(lon, lat) : true);
+
+  /*
    * Varjostus: valo luoteesta, liioittelu maltillinen. Askel on
    * ruudukon väli METREINÄ, jotta rinne on aito kaltevuus eikä
    * pikselien ero — muuten sama maasto varjostuisi eri tavalla eri
@@ -434,10 +486,18 @@ export function piirra(canvas, aineisto, asetukset) {
         const lon = lonPikselista(x + 0.5);
         const lat = latPikselista(y + 0.5);
         let m = korkeus(lon, lat);
+        if (!vetta(lon, lat, m)) continue;
         if (!Number.isFinite(m)) m = -900;
-        if (m >= 0) continue;
+        /*
+         * Kohina aaltoilee syvyysrajaa, mutta MATALASSA VEDESSÄ SE ON
+         * MATALAMPI: kiinteä ±75 metriä heittäisi Persianlahden 40
+         * metrin pohjan puolet ajasta plussalle eli paperin väriin, ja
+         * lahti olisi laikukas. Amplitudi seuraa syvyyttä 120 metriin
+         * asti, minkä jälkeen se on entinen — syvä ulappa näyttää siis
+         * täsmälleen samalta kuin ennen.
+         */
         const n = fbm(KOHINA, x / (30 * S), y / (30 * S), 4) - 0.5;
-        const v = lerpSyvyys(m + n * 150);
+        const v = lerpSyvyys(m + n * Math.min(150, Math.max(12, -m * 1.25)));
         const i = (y * W + x) * 4;
         const a = 0.5;
         d[i] = d[i] * (1 - a) + v[0] * a;
@@ -543,7 +603,7 @@ export function piirra(canvas, aineisto, asetukset) {
         const lon = lonPikselista(x + 0.5);
         const lat = latPikselista(y + 0.5);
         const m = korkeus(lon, lat);
-        if (!Number.isFinite(m) || m < 0) continue;
+        if (!Number.isFinite(m) || vetta(lon, lat, m)) continue;
         /*
          * Etäisyys kohdemaan rannikosta prototyyppipikseleinä. Sama
          * kenttä kuin naapurien ääriviivoilla, joten maasto ja viiva
@@ -691,6 +751,14 @@ export function piirra(canvas, aineisto, asetukset) {
         const lon = lonPikselista(x + 0.5);
         const lat = latPikselista(y + 0.5);
         let m = korkeus(lon, lat);
+        /*
+         * MAAN RAJA EI OLE MAAN RAJA. Natural Earthin maarajaus ulottuu
+         * Kaspianmerellä avoveden päälle (meri on jaettu rantavaltioiden
+         * kesken), ja ilman tätä ehtoa maastokerros maalasi meren maaksi
+         * — juuri sen, minkä osio 2 oli jo maalannut vedeksi. Vesi jää
+         * siis maastokerroksen läpi näkyviin.
+         */
+        if (Number.isFinite(m) && vetta(lon, lat, m)) { d[i + 3] = 0; continue; }
         if (!Number.isFinite(m)) m = 60;
         /*
          * Vyöhykkeen raja aaltoilee: korkeuteen lisätään kohinaa ENNEN
