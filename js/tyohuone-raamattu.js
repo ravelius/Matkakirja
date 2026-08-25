@@ -7,7 +7,7 @@
  */
 
 export const RAAMATTU = {
-  paivitetty: '15.8.2026',
+  paivitetty: '25.8.2026',
   johdanto: 'Koko pelin idea yhdessä dokumentissa — tämän lukeminen '
     + 'riittää pelin kehittämiseen. Käydään läpi omistajan kanssa osio '
     + 'kerrallaan; valmis Raamattu laukaisee kaikkien '
@@ -102,6 +102,26 @@ export const RAAMATTU = {
           + 'tunnelman; lehti syventää tiedoksi.',
         'Herroille saa luonnostella uusia piirteitä '
           + '(etikettivirheet, hassu asu) — yhdessä omistajan kanssa.',
+        'ISOISÄ ON PIIRTÄJÄ, EI VALOKUVAAJA (25.8.2026): kuvakieli '
+          + 'on kirkas — 1873 = isoisän piirros, nykyhetki = '
+          + 'valokuva. Matkakirja on nimetön kulunut muistikirja '
+          + '(kannessa ei painettua nimeä).',
+        'ALKUKOHTAUS V5 (omistajan teksti 25.8.2026, sanasta '
+          + 'sanaan pelissä): paikkarivi "Heathrow, Lontoo, '
+          + '<kuukausi vuosi>:" naputetaan kirjoituskoneella ilman '
+          + 'luentaa; sitten kertoja: "Vintiltä löytyi isoisän '
+          + 'matkalaukku ja kulunut matkakirja. Juoksen sisälle '
+          + 'terminaaliin ja olen varma, että ukko oli löytänyt '
+          + 'jotain. Mutta kuka on repinyt kirjasta viimeisen '
+          + 'sivun?"; klikattava lause "Mistä aloitan?" (ei lueta).',
+        'VAANIJAKAARI ALKOI (kaanonit 25.8.2026): Istanbulin '
+          + 'aarremerkintä on ensimmäinen vaanijavihje ("mies, joka '
+          + 'oli kysellyt minusta satamassa, seisoi jo sillalla"); '
+          + 'Rooman merkintä on twist-siemen ("Rooman aarre oli '
+          + 'ainoa, jota en yrittänytkään... Jonain päivänä '
+          + 'ymmärrät miksi"); Bukarest kuittaa hiljaisuuden '
+          + '("Sillalla ei tällä kertaa seissyt ketään"). Kaari '
+          + 'hengittää — ei joka maassa.',
       ],
     },
     {
@@ -162,14 +182,18 @@ export const RAAMATTU = {
       kohdat: [
         'Yksi lauta: koko maailma yhdellä kartalla.',
         'ALKU: tarina alkaa Lontoosta. Ensimmäisen kohteen saa '
-          + 'valita kartalta vapaasti — valinta ratkaisee, minkä '
-          + 'mantereen pääaarretta etsitään ensin.',
+          + 'valita kartalta — valinta ratkaisee, minkä mantereen '
+          + 'pääaarretta etsitään ensin. BETA-RAJAUS (25.8.2026): '
+          + 'toistaiseksi valittavissa vain Ateena; vapaa valinta '
+          + 'palaa kun fokusmaita on tarpeeksi.',
         'VUORO: matkustustapa (jalan/laiva/lento) → noppa → siirto. '
           + 'Heitto, laiva tai lento = 6 h matka-aikaa.',
         'MANNERRAJA: uudelle mantereelle vasta pääaarteella tai '
           + 'maksamalla 1000 p (per ylitys). Rajakaupunkiin pääsee.',
-        'Kaupungissa mikään ei ponnahda itsestään: Tutki-nappi avaa '
-          + 'kortin, tehtävä alkaa napista. Vapaa vaellus.',
+        'Kaupungissa fokusmoodin annostelu korvaa vanhan '
+          + 'Tutki-napin: saapumisesittely alkaa itsestään, muu '
+          + 'aukeaa pelaajan valinnoista (ks. Fokusmoodi). Vapaa '
+          + 'vaellus.',
         'LOPPU: seitsemäs pääaarre. Revitty sivu ja seuraaja jäävät '
           + 'auki — Reginald ymmärtää vihdoin isoisäänsä '
           + '(sydänteeman lunastus).',
@@ -1061,6 +1085,41 @@ export const RAAMATTU = {
           + 'run/doAction-portin kautta.',
         'Laiska raja (dynaaminen tuonti), kun moduuli ei kuulu yhden '
           + 'tiedoston versioon (linssit, maakäyrät).',
+      ],
+    },
+    {
+      otsikko: 'Jakelu ja iOS-kuori',
+      tila: 'kirjattu 25.8.2026 (omistajan huomautuksesta — tämä puuttui)',
+      kohdat: [
+        'PELIÄ PELATAAN ENSISIJAISESTI TESTFLIGHTIN KAUTTA: '
+          + 'iOS-kuorisovellus (WKWebView) lataa pelin Pagesista '
+          + '(ravelius.github.io/Matkakirja). Kuoren lähdekoodi ON '
+          + 'TÄSSÄ REPOSSA kansiossa ios/ (SwiftUI + PeliSelain.swift '
+          + '+ sillat + widget + fastlane; ks. ios/OHJE.md) — Claude '
+          + 'on rakentanut sen aiemmissa sessioissa. Pelin puoleiset '
+          + 'kytkennät ovat js/natiivi.js (silta '
+          + 'window.matkakirjaNatiivi: iCloud-synkka, widget, Game '
+          + 'Center, luentasilta js/lukija.js, haptiikka). Selain '
+          + 'ilman kuorta on aina tuettu varapolku. HUOM: kuoren '
+          + 'muutokset päätyvät laitteille vasta omistajan uudesta '
+          + 'TestFlight-buildista — web-muutokset heti Pagesista.',
+        'WKWEBVIEW ON AHTAAMPI KUIN SAFARI: sisältöprosessin '
+          + 'muistikatto on tiukempi ja ylitys tappaa prosessin '
+          + 'ilman virhettä — kuori lataa sivun uudelleen, mikä '
+          + 'näkyy pelaajalle aloituslogosilmukkana. Muistipiikit '
+          + '(isojen kuvien purku, rasterointi) on mitoitettava '
+          + 'kuoren mukaan, ei pöytäselaimen. Vikaraportit, joissa '
+          + '"peli jää logoruutuun", ovat ensisijaisesti '
+          + 'muistikuolemia kuoressa.',
+        'TURVATILA (v1112–v1113): kolme käynnistystä neljän '
+          + 'minuutin sisään kytkee fokuslehdet ja atlaksen pois '
+          + 'tunniksi, jolloin kaatumissilmukka purkautuu itsestään '
+          + '(js/main.js kirjaaKaynnistys, js/fokuskartta.js '
+          + 'atlasTurvatila).',
+        'HÄTÄKEINO pelaajalle: TestFlight-sovelluksen poisto ja '
+          + 'uudelleenasennus nollaa kuoren välimuistin ja '
+          + 'paikallisen tallenteen (iCloud-synkka voi palauttaa '
+          + 'pelin).',
       ],
     },
     {
