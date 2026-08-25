@@ -45,6 +45,35 @@ const PLAYER_COLOR = '#d94f3d';
  * kesken jäänyt peli ei katoa päivityksessä — se siirretään uuteen avaimeen
  * ensimmäisellä latauksella ja poistetaan vasta sitten.
  */
+/*
+ * KAATUMISSILMUKAN VAHTI (25.8.2026, omistajan iPhone: peli kuoli
+ * Ateenan saapumisessa yhä uudelleen "Ladataan matkakirjaa" -ruutuun).
+ * iOS tappaa sivun muistin loppuessa ja Safari lataa sen uudelleen —
+ * tallenne palauttaa samaan raskaaseen kohtaan ja kuolema toistuu.
+ * Kirjataan jokainen käynnistys: kolme käynnistystä kolmen minuutin
+ * sisään sytyttää atlaksen turvatilan tunniksi (js/fokuskartta.js
+ * atlasTurvatila), jolloin raskain muistikuorma jää pois ja silmukka
+ * purkautuu itsestään. Ehjä 90 sekunnin istunto nollaa laskurin.
+ */
+(function kirjaaKaynnistys() {
+  try {
+    const AVAIN = 'matkakirja-kaynnistykset';
+    const nyt = Date.now();
+    const lista = (JSON.parse(localStorage.getItem(AVAIN) ?? '[]'))
+      .filter((t) => Number.isFinite(t) && nyt - t < 180000);
+    lista.push(nyt);
+    if (lista.length >= 3) {
+      localStorage.setItem('matkakirja-atlas-turvatila', String(nyt));
+      localStorage.removeItem(AVAIN);
+    } else {
+      localStorage.setItem(AVAIN, JSON.stringify(lista.slice(-5)));
+    }
+    setTimeout(() => {
+      try { localStorage.removeItem(AVAIN); } catch { /* yksityinen selaus */ }
+    }, 90000);
+  } catch { /* yksityinen selaus: vahti ei ole pakollinen */ }
+}());
+
 const SAVE_KEY = 'matkakirja-save-v1';
 const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 /*
@@ -59,7 +88,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1111';
+const APP_VERSION = '2026-08-09.1112';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
