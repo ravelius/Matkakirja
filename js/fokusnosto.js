@@ -224,6 +224,16 @@ const NOSTO_KUVA_PX = 800;
  * ei toista tulkintaa siitä, minkä maan sisältöä ruudulla on.
  */
 function nostoMaanPooli(ui, city) {
+  /*
+   * Kaupungin oma pooli packista ensin (Sofia 25.8.2026: kenttä
+   * `takynostot` js/packs/fokusvirta-sofia.js:ssä käyttää lunastus-
+   * nimeä tekstille) — näin uusi maa ei vaadi riviä tähän tiedostoon.
+   * NOSTO_MAAT jää Kreikan poolille ja varapoluksi.
+   */
+  const oma = fokusvirtaSisalto(ui, city)?.takynostot;
+  if (Array.isArray(oma) && oma.length) {
+    return oma.map((n) => (n.teksti ? n : { ...n, teksti: n.lunastus }));
+  }
   const taulu = ui?.game?.pack?.map?.cityCountry;
   const iso = (taulu && city && taulu[city.id]) || null;
   return (iso && NOSTO_MAAT[iso]) || null;
