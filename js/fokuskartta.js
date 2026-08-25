@@ -717,6 +717,29 @@ export function paivitaFokusAtlas(ui) {
   const valitut = atlasValinta(ui, nakyva, lauta, nykyinen, ehdokkaat);
   ui.atlasValitut = new Set(valitut.map((v) => v.iso));
   /*
+   * HYSTEREESI VÄLKKYMISTÄ VASTAAN (omistajan iPad-havainto 25.8.2026:
+   * "Scrollatessa karttaa jotkut maat ilmestyvät ja häviävät
+   * vuorotellen"). Kaksi mekanismia tuotti välkkeen: (1) LRU pudotti
+   * katon täyttyessä lehtiä, jotka olivat yhä RUUDULLA mutta eivät
+   * valittuja — seuraava vieritys valitsi ne takaisin; (2) varan
+   * reunalla keikkuva lehti vapautettiin ja haettiin vuorotellen.
+   * Siksi: karsinta suojaa kaikki ruudulla näkyvät ladatut lehdet
+   * (ei vain valittuja), ja välitön vapautus tehdään vasta selvästi
+   * varan takaa (tuplavara). Muisti pysyy aisoissa, koska UUSIA lehtiä
+   * haetaan yhä vain valintabudjetin (ATLAS_MEGAPIKSELIA) verran —
+   * suojaus koskee vain jo maksettuja, yhä näkyviä kuvia.
+   */
+  ui.atlasSuojatut = new Set(ui.atlasValitut);
+  for (const [iso, tieto] of ui.atlasLehdet) {
+    if (tieto.bbox && leikkausAla(tieto.bbox, nakyva) > 0) ui.atlasSuojatut.add(iso);
+  }
+  const tuplavara = {
+    x: nakyva.x - nakyva.w * ATLAS_VARA * 2,
+    y: nakyva.y - nakyva.h * ATLAS_VARA * 2,
+    w: nakyva.w * (1 + 4 * ATLAS_VARA),
+    h: nakyva.h * (1 + 4 * ATLAS_VARA),
+  };
+  /*
    * KAUKAINEN LEHTI VAPAUTETAAN HETI, EI VASTA KATON TÄYTTYESSÄ. LRU
    * yksin pitäisi purettua kuvaa muistissa katon verran, ja katto on
    * satoja megatavuja — iOS:llä se on juuri se tilanne, jossa seuraava
@@ -727,8 +750,12 @@ export function paivitaFokusAtlas(ui) {
    * kunnes katto oikeasti täyttyy.
    */
   const lahella = new Set(ehdokkaat.map((e) => e.iso));
-  for (const iso of [...ui.atlasLehdet.keys()]) {
-    if (!lahella.has(iso)) vapautaLehti(ui, iso);
+  for (const [iso, tieto] of [...ui.atlasLehdet]) {
+    if (lahella.has(iso)) continue;
+    // Hystereesi: vapautus vasta kun lehti on selvästi varan takana —
+    // varan reunalla keikkuva lehti ei saa välkkyä (ks. yllä).
+    if (tieto.bbox && leikkausAla(tieto.bbox, tuplavara) > 0) continue;
+    vapautaLehti(ui, iso);
   }
   ui.atlasKello = (ui.atlasKello ?? 0) + 1;
   const nyt = ui.atlasKello;
@@ -772,7 +799,7 @@ export function paivitaFokusAtlas(ui) {
       const jarjestys = [...ui.atlasLehdet.values()]
         .sort((a, b) => (b.bbox.w * b.bbox.h) - (a.bbox.w * a.bbox.h));
       for (const t of jarjestys) kohde.appendChild(t.el);
-      karsiAtlas(ui, lauta, ui.atlasValitut ?? new Set());
+      karsiAtlas(ui, lauta, ui.atlasSuojatut ?? ui.atlasValitut ?? new Set());
       // Verho ei tiedä uudesta lehdestä ennen kuin sille kerrotaan.
       ui.paivitaAtlasVerho?.();
     });
@@ -786,7 +813,7 @@ export function paivitaFokusAtlas(ui) {
    */
   ui.atlasAvain = kesken ? null : avain;
   const ennen = ui.atlasLehdet.size;
-  karsiAtlas(ui, lauta, ui.atlasValitut);
+  karsiAtlas(ui, lauta, ui.atlasSuojatut ?? ui.atlasValitut);
   if (ui.atlasLehdet.size !== ennen) ui.paivitaAtlasVerho?.();
 }
 
