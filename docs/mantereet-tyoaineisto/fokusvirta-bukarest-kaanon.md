@@ -29,9 +29,13 @@ katkeruuden.)
 
 ## 2. Pöllön huomio (reportteri — tämä on tarkoituksella haikea)
 
-> Isoisäsi toive ei toteutunut: torni purettiin 1888, ja sen paikalla
-> on nykyään sairaala. Tornista jäi kourallinen valokuvia — tämä on
-> yksi niistä. Siksi minä kannan arkistoa siivissäni.
+> Isoisäsi toive ei toteutunut: torni purettiin 1888, ja sen nimeä
+> kantaa yhä viereinen sairaala. Tornista jäi kourallinen valokuvia —
+> tämä on yksi niistä. Siksi minä kannan arkistoa siivissäni.
+
+(Fable 25.8.2026: alkuperäinen "sen paikalla on nykyään sairaala" ei
+ollut lähteen kattama — Colțea-sairaala on tornin tontilla sen
+vieressä, ei paikalla. Muoto korjattu ylle.)
 
 (Viimeinen virke on pöllön kuiva omakuva, ei silminnäkijäheitto.
 Rakentaja tarkistaa purkuvuoden ja sairaalan täkyraportista.)

@@ -193,15 +193,15 @@ export const FOKUSVIRTA_BUKAREST = {
    * Colțea-kokonaisuutta kuin sairaala — mutta se, seisooko sairaala
    * juuri tornin kohdalla, EI ole kummassakaan lähteessä.
    *
-   * Teksti on silti tässä kaanonin sanamuodossa, koska kaanonin tekstit
-   * siirretään sanasta sanaan eikä rakentaja kirjoita omaa proosaa
-   * niiden tilalle. Fable ratkaisee: joko lähde tuolle lauseelle tai
-   * muoto, jonka raportti kattaa.
+   * Fable ratkaisi 25.8.2026: kaanonin "sen paikalla on nykyään
+   * sairaala" korvattiin muodolla "sen nimeä kantaa yhä viereinen
+   * sairaala", jonka lähteet kattavat — kaanon päivitetty samalla.
    */
   pollo: {
     teksti: 'Isoisäsi toive ei toteutunut: torni purettiin 1888, ja sen '
-      + 'paikalla on nykyään sairaala. Tornista jäi kourallinen valokuvia — '
-      + 'tämä on yksi niistä. Siksi minä kannan arkistoa siivissäni.',
+      + 'nimeä kantaa yhä viereinen sairaala. Tornista jäi kourallinen '
+      + 'valokuvia — tämä on yksi niistä. Siksi minä kannan arkistoa '
+      + 'siivissäni.',
     /*
      * Commons 25.8.2026: 2397×3339, public domain, kuvaus "Photo of
      * Turnul Colței, Bucharest, before the demolition", Category:Turnul
