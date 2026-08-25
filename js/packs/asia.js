@@ -343,6 +343,17 @@ export const ASIA = {
         name: 'Sukeltajan helmi', color: '#e8e4da',
         kuva: 'assets/aarteet/aarre-asia-manner.jpg',
       },
+      // Mantereen oma paikallisaarrepari (entiset jalokiviaarteet
+      // nimineen ja kuvineen) — väliaikainen, kunnes maakohtaiset
+      // parit (js/packs/paikallisaarteet.js) täyttyvät.
+      isoAarre: {
+        name: 'Silkkikäärö', color: '#c94f7c',
+        kuva: 'assets/aarteet/aarre-asia-emerald.jpg',
+      },
+      pieniAarre: {
+        name: 'Posliinikuppi', color: '#7f9fc9',
+        kuva: 'assets/aarteet/aarre-asia-topaz.jpg',
+      },
     }),
     // 41 kaupunkia, yksi laatta kussakin.
     counts: { star: 1, mannerAarre: 1, isoAarre: 13, pieniAarre: 26 },

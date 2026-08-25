@@ -635,6 +635,17 @@ export const EUROPE = {
         name: 'Kruununjalokivi', color: '#b0304a',
         kuva: 'assets/aarteet/aarre-europe-manner.jpg',
       },
+      // Mantereen oma paikallisaarrepari (entiset jalokiviaarteet
+      // nimineen ja kuvineen) — väliaikainen, kunnes maakohtaiset
+      // parit (js/packs/paikallisaarteet.js) täyttyvät.
+      isoAarre: {
+        name: 'Ritarin hopeamiekka', color: '#aeb6c2',
+        kuva: 'assets/aarteet/aarre-europe-emerald.jpg',
+      },
+      pieniAarre: {
+        name: 'Meripihka', color: '#d98f2b',
+        kuva: 'assets/aarteet/aarre-europe-topaz.jpg',
+      },
     }),
     // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (45). Uusi
     // kaupunki lisätään paikallisaarteisiin samassa suhteessa kuin

@@ -22,9 +22,10 @@
  * 2. EI SUODATTIMIA (js/fokuskartta.js sääntö 3, tests/rules.test.mjs):
  *    suodatettu kerros palaa iOS:n taustalta tyhjänä. HEHKU ON SIIS
  *    CSS-ANIMAATIO eikä feGaussianBlur: kolme sisäkkäistä ympyrää,
- *    joiden `opacity` ja `r` sykkivät (css/fokusvirta.css). Kartan
- *    rasterointi ei kilpaile sen kanssa — animoituvat vain ne kaksi
- *    ominaisuutta, jotka kompositori osaa yksin.
+ *    joiden `opacity` ja `transform` TUIKKIVAT (css/fokusvirta.css
+ *    fokuspiste-tuike). Kartan rasterointi ei kilpaile sen kanssa —
+ *    animoituvat vain ne kaksi ominaisuutta, jotka kompositori osaa
+ *    yksin.
  *
  * 3. KIINTEÄ KOKO RUUDULLA. Ankkuriryhmä on laudan koordinaateissa ja
  *    skaalataan zoomin käänteisluvulla, jolloin merkin lapset ovat
@@ -47,6 +48,42 @@ import { sfx } from './sound.js';
 
 /** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta). */
 const PISTE_OSUMA_R = 22;
+
+/*
+ * MERKKI ON PIENI JA TUIKKIVA (omistajan pelitestitilaus 26.8.2026,
+ * iPhone: *"se voisi kyllä olla paljon pienempi, kun se on aarrepiste,
+ * kohan se tuikkii"*).
+ *
+ * Mitat pienenivät kolmasosaan (hehku 13 → 5,5; kehä 7,2 → 3,2; ydin
+ * 3,4 → 1,8): 25.8. mitat kasvatettiin, koska pistettä ei löytynyt
+ * iPadilta, mutta löytämisen hoitaa nyt TUIKE eikä koko. Osuma-alue on
+ * ennallaan 44 px, joten sormi osuu yhtä hyvin kuin ennenkin.
+ */
+const PISTE_HEHKU_R = 5.5;
+const PISTE_KEHA_R = 3.2;
+const PISTE_YDIN_R = 1.8;
+
+/*
+ * PISTE POIS KAUPUNGIN LAATAN PÄÄLTÄ (omistajan pelitestitilaus
+ * 26.8.2026: *"Vihreä piste on hämäävä, kun se korvaa Ateenan
+ * pisteen... Piste kannattaisi siirtää jonnekin muualle"*).
+ *
+ * Kohtaamispaikan koordinaatit ovat DATAA (js/packs/fokusvirta-*.js
+ * kohtaamispiste.laudat) ja ne kertovat, missä henkilö oikeasti on —
+ * useassa maassa keskustassa eli kaupungin laatan kohdalla (Ateena,
+ * Sofia, Istanbul, Rooma, Sarajevo, Bukarest). Kartalla kaksi merkkiä
+ * samassa pisteessä on kuitenkin yksi merkki: vihreä piste näytti
+ * korvaavan Ateenan.
+ *
+ * SIIRTO ON ESITYSTÄ, EI DATAA. Jos piste osuu PISTE_ERO_MIN yksikön
+ * sisään laatasta, PIIRRETTY merkki siirretään kiinteästi koilliseen
+ * (oikealle ja ylös) niin että molemmat näkyvät erikseen; datan
+ * koordinaatteihin ei kosketa, eikä sääntö tarvitse yhtään
+ * maakohtaista poikkeusta.
+ */
+const PISTE_ERO_MIN = 14;
+const PISTE_SIIRTO_X = 14;
+const PISTE_SIIRTO_Y = -10;
 
 /** Tyylitiedoston tunnus — sama tiedosto kuin fokusvirran korteilla. */
 const PISTE_TYYLIN_TUNNUS = 'fokusvirta-tyyli';
@@ -97,12 +134,10 @@ function piirraPiste(ui, ryhma, city, nimi) {
   g.setAttribute('tabindex', '0');
   g.setAttribute('aria-label', `${nimi}: tapaa paikallinen`);
   el('circle', { class: 'fokuspiste-osuma', r: PISTE_OSUMA_R }, g);
-  // Mitat kasvatettu 25.8.2026: omistaja ei löytänyt pistettä iPadilta
-  // ("kartalla ei näy vihreää pistettä") — merkin on erottava
-  // käsivarren mitalta, ei vasta etsimällä.
-  el('circle', { class: 'fokuspiste-hehku', r: 13 }, g);
-  el('circle', { class: 'fokuspiste-keha', r: 7.2 }, g);
-  el('circle', { class: 'fokuspiste-ydin', r: 3.4 }, g);
+  // Pieni merkki, joka löytyy tuikkeesta eikä koosta (ks. PISTE_*_R).
+  el('circle', { class: 'fokuspiste-hehku', r: PISTE_HEHKU_R }, g);
+  el('circle', { class: 'fokuspiste-keha', r: PISTE_KEHA_R }, g);
+  el('circle', { class: 'fokuspiste-ydin', r: PISTE_YDIN_R }, g);
   const avaa = (tapahtuma) => {
     tapahtuma.stopPropagation();
     tapahtuma.preventDefault();
@@ -145,19 +180,39 @@ export function paivitaFokuspiste(ui) {
     ui.fokuspisteRyhmat = [];
     if (piste) {
       lataaPisteTyyli();
+      /*
+       * SIVUSIIRTO VAIN LÄHELLÄ LAATTAA (ks. PISTE_ERO_MIN). Etäisyys
+       * mitataan kaupungin keskipisteestä, eli siitä samasta kohdasta,
+       * johon laatta ja käännetyn laatan aarremerkki piirtyvät.
+       */
+      const lahella = Number.isFinite(city.x) && Number.isFinite(city.y)
+        && Math.hypot(piste.x - city.x, piste.y - city.y) < PISTE_ERO_MIN;
+      const sx = lahella ? PISTE_SIIRTO_X : 0;
+      const sy = lahella ? PISTE_SIIRTO_Y : 0;
       // Kiertävällä laudalla sama merkki molempiin kohtiin (ks. sääntö 1).
       for (const x of ui.kiertoKohdat?.(piste.x) ?? [piste.x]) {
         const ryhma = el('g', { class: 'fokuspiste-ryhma' }, kerros);
-        ui.fokuspisteRyhmat.push({ g: ryhma, x, y: piste.y });
+        ui.fokuspisteRyhmat.push({ g: ryhma, x: x + sx, y: piste.y + sy });
         piirraPiste(ui, ryhma, city, piste.nimi);
       }
     }
   }
+  asetaPisteMittakaava(ui, 1);
+  // Nipistyksen ajaksi merkki vastaskaalataan eleen kertoimella
+  // (js/kartta.js vastaskaalaaMerkit) — kiinteä ruutukoko myös eleen
+  // aikana, ei vain sen jälkeen (omistajan iPad-havainto 25.8.2026).
+  (ui.nipistysVastaskaalaajat ??= new Set())
+    .add(ui.fokuspisteVastaskaala ??= (suhde) => asetaPisteMittakaava(ui, suhde));
+}
+
+/** Ankkuriryhmien käänteisskaala; `suhde` on käynnissä olevan
+ *  nipistyseleen kerroin (1 = ei elettä). */
+function asetaPisteMittakaava(ui, suhde) {
   const skaala = ui.nakyvaAlue?.()?.skaala;
   // Ilman mitattavaa näkymää muunnos jätetään entiselleen: väärä
   // mittakaava olisi pahempi kuin yhden kehyksen viive.
   if (!skaala || !Number.isFinite(skaala) || skaala <= 0) return;
-  const zoom = (1 / skaala).toFixed(4);
+  const zoom = (1 / (skaala * (suhde > 0 ? suhde : 1))).toFixed(4);
   for (const ryhma of ui.fokuspisteRyhmat ?? []) {
     ryhma.g.setAttribute('transform', `translate(${ryhma.x} ${ryhma.y}) scale(${zoom})`);
   }

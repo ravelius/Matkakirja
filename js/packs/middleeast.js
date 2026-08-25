@@ -213,6 +213,17 @@ export const MIDDLE_EAST = {
         name: 'Messinkilamppu', color: '#c88f2b',
         kuva: 'assets/aarteet/aarre-middleeast-manner.jpg',
       },
+      // Mantereen oma paikallisaarrepari (entiset jalokiviaarteet
+      // nimineen ja kuvineen) — väliaikainen, kunnes maakohtaiset
+      // parit (js/packs/paikallisaarteet.js) täyttyvät.
+      isoAarre: {
+        name: 'Suitsukepihka', color: '#d8c690',
+        kuva: 'assets/aarteet/aarre-middleeast-emerald.jpg',
+      },
+      pieniAarre: {
+        name: 'Sahramipussi', color: '#e05c20',
+        kuva: 'assets/aarteet/aarre-middleeast-topaz.jpg',
+      },
     }),
     // 29 kaupunkia, yksi laatta kussakin.
     counts: { star: 1, mannerAarre: 1, isoAarre: 9, pieniAarre: 18 },

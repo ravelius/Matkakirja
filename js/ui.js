@@ -200,12 +200,7 @@ import { puheTuettu } from './puhe.js';
  * piirretään vain kehittäjätilan valikkolinkeistä.
  */
 import { RAAMATTU } from './tyohuone-raamattu.js';
-import { TILANNE, TESTATTAVAA, TUOREET } from './tyohuone-tilanne.js';
-// Kartan kehittäjävärit lukevat valmiusasteen samasta moduulista kuin
-// Tilastot-taulu (drawBoard, valmiusLuokka) — yksi määritelmä, jottei
-// kartta ja taulu voi kertoa eri tarinaa samasta kaupungista.
-import { lehtiValmius } from './tyohuone-tilastot.js';
-import { viitekuvaTila } from './viitekuva-herot.js';
+import { TILANNE, TESTATTAVAA } from './tyohuone-tilanne.js';
 import {
   el,
   hash01,
@@ -517,6 +512,40 @@ const FOKUS_LAATTA_OSUMA_PX = 48;
  */
 const FOKUS_LAATTA_SYKE_PX = 17;
 /*
+ * AARREMERKIN SÄDE LAUDAN YKSIKÖINÄ (omistajan pelitestitilaus
+ * 26.8.2026: käännetty laatta korvaa kaupungin laatan *"vain
+ * pienempänä"*). Tavallisen kaupungin laatta on 11,6 yksikköä
+ * (drawBoard, base) ja lähtökaupungin 20 — 9,4 on kummankin sisällä,
+ * eikä laatan reuna siis jää merkin ympärille renkaaksi.
+ */
+const AARREMERKKI_R = 9.4;
+/*
+ * FOKUSNÄKYMÄN NAPPULA JA AARREMERKKI RUUDUN PIKSELEINÄ (omistajan
+ * pelitestitilaus 26.8.2026, iPhone-kuvakaappaus Kreikasta: *"Nämä
+ * pisteet näkyvät aivan liian suurella"*).
+ *
+ * VIKA OLI SAMA KUIN LAATALLA AIKANAAN: pelinappula ja käännetty
+ * laatta ovat laudan yksiköissä, ja fokuszoomi suurentaa ne ruudulla
+ * moninkertaisiksi — kuvakaappauksessa nappula oli neljänneksen
+ * ruudun levyinen. Korjaus on sama käänteisskaalaus kuin nykyisen
+ * kaupungin laatalla (FOKUS_LAATTA_PX, paivitaFokusLaatta): mitta on
+ * RUUDULLA eikä laudalla.
+ *
+ * SUHTEET: nappula on laatan kokoluokkaa (28 vs. 26) — se on pelaajan
+ * oma paikka ja saa olla kiinnekohta — ja aarremerkki on
+ * kääntämätöntä laattaa pienempi (20 vs. 26), kuten laudallakin.
+ *
+ * YLEISKUVASSA JA MUILLA LAUDOILLA KOOT OVAT ENNALLAAN: kerroin on 1
+ * aina kun fokusnäkymä ei ole päällä (paivitaFokusMerkkiMitat).
+ */
+const FOKUS_NAPPULA_PX = 28;
+const FOKUS_AARRE_PX = 20;
+/*
+ * Nappulan oma säde laudan yksiköinä: `pawn-ring` on 13 (pawnShape),
+ * ja käänteisskaalaus lasketaan siitä.
+ */
+const NAPPULAN_R = 13;
+/*
  * Osuma-alueen katto LAUDAN yksiköissä. Ruutumitta muuttuu laudan
  * yksiköiksi jakamalla zoomilla, ja yleiskuvassa (pieni zoom) jakolasku
  * kasvattaisi alueen naapurikaupunkien päälle — 34 on sama säde kuin
@@ -606,16 +635,6 @@ const OIKAISUN_HILJAISUUS_MS = 250;
  */
 const PALUU_TAHTI_MS = 300;
 const PALUU_KESTO_MS = 8000;
-/*
- * TUOREET LEHDET KARTALLE (omistajan tilaus 23.8.2026): juuri
- * valmistuneet kaupungit erottuvat kirkkaammalla vihreällä muista
- * valmiista, jotta viime julkaisujen sato näkyy laudalta yhdellä
- * silmäyksellä. Lista on TUOREET.valmiit (js/tyohuone-tilanne.js,
- * jota vain Fable päivittää) — sama taulu, josta Tilastot-taulu
- * merkitsee tuoreet rivit. Aikaleimoja paketeissa ei ole, joten
- * tuoreutta ei voi päätellä datasta.
- */
-const TUORE_VALMIS_IDT = new Set((TUOREET?.valmiit ?? []).map((k) => k.id));
 // Kirjoituskoneen tahti: avaus saa naksua rauhassa, muut tekstit ripeästi.
 const TYPE_MS = 50;
 const INTRO_TYPE_MS = 190;
@@ -3863,7 +3882,9 @@ export class UI {
     // päällä kiinteän kokoinen RUUDULLA (paivitaFokusLaatta), joten sen
     // mittakaava ja napautusalue lasketaan uudelleen jokaisesta zoomista.
     this.paivitaFokusLaatta();
-    // Sama koskee valittavien kohteiden merkkejä ja niiden nimiä.
+    // Sama koskee pelinappulaa ja aarremerkkiä (paivitaFokusMerkkiMitat)…
+    this.paivitaFokusMerkkiMitat();
+    // …sekä valittavien kohteiden merkkejä ja niiden nimiä.
     this.paivitaFokusKohdeMitat();
     // Ja kaupunkien omia nimilappuja: ne ladotaan fokusnäkymässä laatan
     // alle ruudulla vakiokokoisina (paivitaFokusNimilaput).
@@ -4858,91 +4879,44 @@ export class UI {
         : {};
     };
     /*
-     * LEHTIVALMIUS VÄREINÄ — VAIN KEHITTÄJÄTILASSA (omistajan tilaus
-     * 23.8.2026: kartan värit ovat nyt neliportainen valmiusasteikko).
+     * KEHITTÄJÄN VÄRILAATTAKOODIT ON POISTETTU (omistajan tilaus
+     * 26.8.2026: *"Poista pelistä muuten kaikki värilaattakoodit, jotka
+     * olivat aiemmin, jotta pystyin seuraamaan kaupunkien
+     * rakennusvaiheita pelissä."*).
      *
-     * Tämä KORVAA aiemmat merkinnät: julistevihreän (21.8.), violetit
-     * herokuvat (22.8.), keltaisen työn alla olevan ja oranssinruskean
-     * tekstiremontin (20.8.). Ne kertoivat kukin yhdestä yksittäisestä
-     * urakasta, ja päällekkäin ladottuina ne peittivät toisensa —
-     * neljä väriä yhdellä asteikolla vastaa yhteen kysymykseen: missä
-     * kunnossa tämän kaupungin lehti on?
-     *
-     *   kirkkaan vihreä  juuri valmistunut (TUOREET.valmiit)
-     *   vihreä           valmis
-     *   valkoinen        lähes valmis: lehti on, jokin osa puuttuu
-     *   harmaa           ei lehteä lainkaan
-     *
-     * TUOREUS EI OHITA VALMIUTTA (omistajan havainto 23.8.2026:
-     * "Täällä vielä vihreää vaikka herokuvat ei generoitu" — TUOREET-
-     * lista väritti Kašgarin ja kumppanit vihreiksi ilman heroja).
-     * Kirkkaan vihreän saa vain kaupunki, joka on oikeasti valmis;
-     * muuten tuorekin kaupunki näkyy asteikon mukaan.
-     *
-     * Aste tulee js/tyohuone-tilastot.js:n lehtiValmius-funktiosta eli
-     * samasta määritelmästä kuin Tilastot-taulun sarakkeet.
-     *
-     * NYT JOKAINEN PISTE SAA LUOKAN. Vanha sääntö "valmis on se, joka
-     * ei saa luokkaa" säästi laudan oman pergamentinvaalean, mutta
-     * asteikolla se olisi sokea kohta: pergamentti ei ole yksi neljästä
-     * väristä vaan taustan väri, eikä katsoja tietäisi, onko piste
-     * valmis vai jäikö se värjäämättä. Pelaajan laudalle ei lisätä
-     * edelleenkään yhtään luokkaa, joten tavallinen näkymä on
-     * tismalleen entisensä.
+     * Kartan laatat värjättiin kehittäjätilassa lehden valmiusasteen
+     * mukaan (vihreä/kirkkaanvihreä/valkoinen/harmaa, js/ui.js
+     * valmiusLuokka) ja herokuvien viiteankkuroinnin mukaan (oranssi,
+     * viiteLuokka). Sama tieto on yhä luettavissa siellä, missä se on
+     * taulukkona tarkempaakin: Tilastot-taulussa
+     * (js/tyohuone-tilastot.js lehtiValmius, viitekuvaTila) — kartalta
+     * se on nyt poissa, myös kehittäjätilassa. Laatan luokka on siis
+     * pelkkä `city`/`city-start` joka tilassa.
      */
-    const valmiusLuokka = (c) => {
-      if (!this.kehittajaTila) return '';
-      const aste = lehtiValmius(c.id);
-      if (aste === 'valmis') {
-        return TUORE_VALMIS_IDT.has(c.id) ? ' city-tuore' : ' city-valmis';
-      }
-      return aste === 'lahes' ? ' city-lahes' : ' city-kesken';
-    };
-
-    /*
-     * ORANSSI LAATTA = kaupungin herokuvat on generoitu kohteen omista
-     * Commons-valokuvista viitteinä (omistajan tilaus 24.8.2026:
-     * "muuta niiden kaupunkien laatan väri oranssiksi"). Ankkuroimaton
-     * generointi tuotti Kašgariin väärän rakennuksen, joten ankkuroitu
-     * ja ankkuroimaton erä ovat eri luotettavuustasoa — ja se ero
-     * halutaan nähdä suoraan laudalta.
-     *
-     * ORANSSI KORVAA VALMIUSVÄRIN, EI TÄYDENNÄ SITÄ. Laatta on yksi
-     * ellipsi ja sillä on yksi täyttöväri, joten kahta asteikkoa ei voi
-     * näyttää samassa täytössä. Lehtivalmius jää silti luettavaksi:
-     * valmiusluokka annetaan yhä ja sen ÄÄRIVIIVA jää voimaan, koska
-     * oranssit säännöt asettavat vain fillin. Kaupunki, joka on sekä
-     * valmis että ankkuroitu, on siis oranssi vihrein reunoin.
-     *
-     * Vain kehittäjätilassa — pelaajan lauta pysyy ennallaan.
-     */
-    const viiteLuokka = (c) => {
-      if (!this.kehittajaTila) return '';
-      const kansi = (KULTTUURI_KATEGORIAT[c.id] ?? [])
-        .find((k) => k.id === 'kaupunki');
-      const kaikki = (kansi?.avauskuvat ?? [])
-        .filter((kuva) => kuva.ampari).length;
-      const tila = viitekuvaTila(c.id, kaikki);
-      if (!tila) return '';
-      return tila.taysi ? ' city-viite-taysi' : ' city-viite-osa';
-    };
-
-    /** Laatan kehittäjäluokat: valmiusaste + mahdollinen viiteankkurointi. */
-    const laatanLuokat = (c) => `${valmiusLuokka(c)}${viiteLuokka(c)}`;
     for (const c of board.cities) {
       const wobble = `rotate(${vary(`city:rot:${c.id}`, 12).toFixed(1)} ${c.x} ${c.y})`;
       const base = (c.start ? 20 : 11.6) * nodeScale;
       const rx = base + vary(`city:rx:${c.id}`, 0.7);
       const ry = base + vary(`city:ry:${c.id}`, 0.7);
       const fokus = fokusMaare(c);
+      /*
+       * LAATAN OMA TUNNUS AINA MUKANA, myös laudan ulkopuolisille
+       * kaupungeille. Käännetyn laatan aarremerkki piirtyy nyt tähän
+       * samaan kohtaan ja laatta piilotetaan sen alta
+       * (piilotaAarreLaatat) — ja piilotus tarvitsee tiedon siitä,
+       * kenen laatta tämä on. Maatunniste (data-fokus-maa, data-kx,
+       * data-ky) jää fokusMaareen: se tulee laudan kaupunki–maa-
+       * taulusta, jota kaikilla kaupungeilla ei ole.
+       */
+      const tunnus = { 'data-kaupunki': c.id };
       if (c.start) {
         el('ellipse', {
-          cx: c.x, cy: c.y, rx, ry, transform: wobble, class: `city-start${laatanLuokat(c)}`,
-          ...fokus,
+          cx: c.x, cy: c.y, rx, ry, transform: wobble, class: 'city-start',
+          ...tunnus, ...fokus,
         }, cities);
         el('ellipse', {
           cx: c.x, cy: c.y, rx: rx * 0.6, ry: ry * 0.6, transform: wobble, class: 'coast-soft',
-          ...fokus,
+          ...tunnus, ...fokus,
         }, cities);
       } else {
         el('ellipse', {
@@ -4952,8 +4926,8 @@ export class UI {
           ry,
           transform: wobble,
           'stroke-width': (2.2 + hash01(`city:sw:${c.id}`) * 0.7).toFixed(2),
-          class: `city${laatanLuokat(c)}`,
-          ...fokus,
+          class: 'city',
+          ...tunnus, ...fokus,
         }, cities);
       }
       // Porttikaupungista lähtee pitkä lento toiselle laudalle: kaksoiskehä
@@ -5515,6 +5489,10 @@ export class UI {
     // Näkyvyys on nyt ratkaistu; jäljellä on nykyisen laatan KOKO ja sen
     // napautusalue (oma metodinsa, koska sitä kutsutaan myös zoomista).
     this.paivitaFokusLaatta();
+    // Sama koskee pelinappulaa ja käännetyn laatan aarremerkkiä: ne ovat
+    // laudan yksiköissä ja kasvaisivat fokuszoomissa ruutua peittäviksi
+    // (omistajan pelitesti 26.8.2026).
+    this.paivitaFokusMerkkiMitat();
     // Samoin valittavien kohteiden merkit: pieni piste ja nimi, molemmat
     // mitattuina ruudulta eikä laudalta (omistaja 26.8.2026).
     this.paivitaFokusKohdeMitat();
@@ -5731,6 +5709,85 @@ export class UI {
     if (!Number.isFinite(x) || !Number.isFinite(y)) return;
     osa.setAttribute('transform', `translate(${x} ${y}) scale(${kerroin.toFixed(4)}) `
       + `translate(${-x} ${-y}) ${perus}`.trimEnd());
+  }
+
+  /* --- NAPPULA JA AARREMERKKI RUUDUN MITTAAN (omistaja 26.8.2026) ---- */
+
+  /**
+   * Käänteisskaalaus yhdelle kartan merkille — 1 fokusnäkymän ulkopuolella.
+   *
+   * `px` on merkin haluttu LÄPIMITTA RUUDULLA ja `omaR` sen säde laudan
+   * yksiköissä. Sama laskutoimitus kuin nykyisen kaupungin laatalla
+   * (paivitaFokusLaatta); erillinen funktio, koska nappulan siirto
+   * tarvitsee kertoimen kesken animaation (animatePawnSisalla).
+   *
+   * EHTO ON SAMA KUIN LAATALLA (fokusmoodi ja pelinäkymä) eikä lehden
+   * olemassaolo: pallurat ovat samat pallurat myös maassa, jolle
+   * esirenderöityä pohjaa ei vielä ole — ja juuri sellaisen maan yli
+   * aloituslento kulkee.
+   *
+   * KERROIN ON KATTO, EI KIINTEÄ KOKO — tässä kohdin sääntö EROAA
+   * nykyisen kaupungin laatasta (FOKUS_LAATTA_PX, joka suurentaa
+   * yleiskuvassa). Omistajan tilaus 26.8.2026 koski nimenomaan
+   * fokusnäkymän jättimäisiä merkkejä: *"Yleiskuvassa koot ennallaan."*
+   * Laattoja on kartalla yksi (pelaajan oma), mutta aarremerkkejä
+   * kertyy pelin mittaan kymmeniä — kiinteä ruutukoko täyttäisi
+   * yleiskuvan 20 pikselin kiekoilla, vaikka kaupungit itse ovat siinä
+   * zoomissa nuppineulanpäitä. Skaalaus tehdään siis vain silloin, kun
+   * se PIENENTÄÄ.
+   */
+  fokusMerkkiKerroin(px, omaR) {
+    if (!this.fokusmoodi || this.katselu) return 1;
+    if (!(omaR > 0)) return 1;
+    const skaala = this.nakyvaAlue()?.skaala;
+    if (!Number.isFinite(skaala) || skaala <= 0) return 1;
+    return Math.min(1, (px / 2) / (omaR * skaala));
+  }
+
+  /**
+   * Pelinappuloiden ja aarremerkkien koko fokusnäkymässä.
+   *
+   * KUTSUTAAN SAMOISTA KAHDESTA PAIKASTA kuin laatan mitat: joka
+   * piirrossa (paivitaFokusPallot) ja aina kun näkymä on asettunut
+   * (paivitaMaastonimet). Kumpikin merkki asuu omassa muunnoksessaan,
+   * joten skaalaus kirjoitetaan siihen — ei CSS:ään, joka voittaisi
+   * määreen ja söisi paikan.
+   *
+   * PALAUTUS OMAAN KOKOON on kertoimen 1 kohta: fokusnäkymästä
+   * poistuttaessa nappula ja merkki ovat taas laudan yksiköissä, myös
+   * silloin kun kartta ei ehdi piirtyä uudelleen.
+   */
+  paivitaFokusMerkkiMitat() {
+    for (const nappula of this.pawnLayer?.querySelectorAll('.pawn') ?? []) {
+      this.asetaMerkinKoko(nappula, this.fokusMerkkiKerroin(FOKUS_NAPPULA_PX, NAPPULAN_R));
+    }
+    for (const merkki of this.tokenLayer?.querySelectorAll('.token-found') ?? []) {
+      const oma = Number(merkki.dataset.r);
+      this.asetaMerkinKoko(merkki, this.fokusMerkkiKerroin(FOKUS_AARRE_PX, oma));
+    }
+  }
+
+  /**
+   * Yhden merkin muunnos: paikka, koko ja heilunta samassa järjestyksessä.
+   *
+   * Muunnos KIRJOITETAAN KOKONAAN UUDELLEEN eikä täydennetä: sen osat
+   * ovat tiedossa määreinä (data-x, data-y, data-kierto), ja skaalaus
+   * on pakko tulla siirron jälkeen mutta heilunnan edellä — muuten
+   * merkki lentäisi paikaltaan tai kiertyisi väärän pisteen ympäri.
+   * Ilman paikkaa ei ole mitään mitoitettavaa (liikkuva nappula, jonka
+   * paikka on tyylissä; ks. animatePawnSisalla).
+   */
+  asetaMerkinKoko(merkki, kerroin) {
+    const x = Number(merkki.dataset.x);
+    const y = Number(merkki.dataset.y);
+    if (!Number.isFinite(x) || !Number.isFinite(y)) return;
+    const kierto = Number(merkki.dataset.kierto);
+    const osat = [`translate(${x},${y})`];
+    if (kerroin > 0 && Math.abs(kerroin - 1) >= 0.0005) {
+      osat.push(`scale(${kerroin.toFixed(4)})`);
+    }
+    if (Number.isFinite(kierto) && kierto) osat.push(`rotate(${kierto})`);
+    merkki.setAttribute('transform', osat.join(' '));
   }
 
   /* --- KAUPUNGIN NIMI LAATAN ALLE (omistajan pelitesti v1101) -------- */
@@ -6269,45 +6326,111 @@ export class UI {
     nappi.hidden = false;
   }
 
-  /** Kartalla näkyvät vain käännetyt laatat omina kuvakkeinaan. */
+  /**
+   * KÄÄNNETTY LAATTA = PIENI AARREMERKKI KAUPUNGIN LAATAN PAIKALLA.
+   *
+   * Omistajan pelitestitilaus 26.8.2026 (iPhone, Ateena): *"aarteen
+   * löytämisen merkin voisi siirtää suoraan kaupungin laatan päälle,
+   * eli se korvaisi sen, mutta vain pienempänä. Eli jokaisessa avatussa
+   * laatassa näkyy vain suoraan se aarre. Mikä sieltä on löytynyt ja
+   * alkuperäinen laatta katoaa näkyvistä. Jäljelle ei jää koskaan
+   * kahta irrallista laattaa vierekkäin."*
+   *
+   * ENNEN: kiekko piirrettiin 22 yksikköä oikealle ja 18 alas laatan
+   * vierestä, jolloin kartalla oli kaksi pyöreää merkkiä vierekkäin —
+   * kaupungin laatta ja sen löytö. Fokusnäkymän zoomilla pari oli
+   * puolen ruudun kokoinen kaksoiskiekko.
+   *
+   * NYT: merkki on kaupungin keskipisteessä ja LAATTA PIILOTETAAN sen
+   * alta (piilotaAarreLaatat). Merkki on tarkoituksella laattaa
+   * pienempi (AARREMERKKI_R vs. laudan 11,6 yksikköä): avattu paikka
+   * on kevyempi kuin avaamaton, eikä kartalle jää rengasta merkin
+   * ympärille.
+   *
+   * KIRJANPITO EI MUUTU. Tämä on esitys: game.revealed ja game.tokens
+   * ovat tismalleen ennallaan, ja laatan kääntö vie yhä samaan
+   * paikkaan pelissä (tools/savuke-pollo.mjs).
+   */
   drawTokens() {
     const { game } = this;
     this.tokenLayer.textContent = '';
     for (const [cityId, type] of game.revealed) {
       const city = game.board.cityById.get(cityId);
+      // Toisen laudan löytö ei ole tällä kartalla: ilman kaupunkia ei
+      // ole paikkaa, johon merkki kuuluisi.
+      if (!city) continue;
+      const r = AARREMERKKI_R + hash01(`token:r:${cityId}`) * 0.8;
+      const kierto = vary(`token:${cityId}`, 8).toFixed(1);
       const g = el('g', {
         class: 'token-found',
-        transform: `translate(${city.x + 22},${city.y + 18}) rotate(${vary(`token:${cityId}`, 8).toFixed(1)})`,
+        transform: `translate(${city.x},${city.y}) rotate(${kierto})`,
         // Fokuslehden pallonpiilotus lukee paikan ja kaupungin täältä
-        // (paivitaFokusPallot); muuten kiekko on laudan yksiköissä
-        // vain muunnoksen sisällä.
+        // (paivitaFokusPallot), fokusnäkymän mitoitus lisäksi säteen ja
+        // heilunnan (paivitaFokusMerkkiMitat); muuten merkki on laudan
+        // yksiköissä vain muunnoksen sisällä.
         'data-kaupunki': cityId,
-        'data-x': city.x + 22,
-        'data-y': city.y + 18,
+        'data-x': city.x,
+        'data-y': city.y,
+        'data-r': r.toFixed(2),
+        'data-kierto': kierto,
       }, this.tokenLayer);
-      el('circle', {
-        r: 16.4 + hash01(`token:r:${cityId}`) * 1.4,
-        class: 'token-disc',
-      }, g);
+      el('circle', { r, class: 'token-disc' }, g);
       /*
        * Käännetty laatta näyttää laudan tarinallisen aarrekuvan
        * pyöreänä (omistajan päätös 10.8.2026); piirrosikoni jää
-       * varasoluksi laatoille ja laudoille ilman kuvaa. clip-path
-       * rajaa kuvan laattakiekon sisään, slice täyttää ympyrän.
+       * varasoluksi laatoille ja laudoille ilman kuvaa (maailmankartta,
+       * tyhjä laatta). clip-path rajaa kuvan kiekon sisään, slice
+       * täyttää ympyrän. Mitat lasketaan säteestä, jotta kuva ja
+       * ikoni pysyvät merkin sisällä myös silloin kun sädettä
+       * muutetaan.
        */
       const kuva = game.aarreTyyppi(type, cityId)?.kuva;
       if (kuva && kuva.startsWith('assets/')) {
+        const puolikas = r * 0.92;
         const im = el('image', {
-          x: -15, y: -15, width: 30, height: 30,
-          'clip-path': 'circle(14.5px)',
+          x: -puolikas,
+          y: -puolikas,
+          width: puolikas * 2,
+          height: puolikas * 2,
+          'clip-path': `circle(${(r * 0.885).toFixed(2)}px)`,
           preserveAspectRatio: 'xMidYMid slice',
           class: 'token-aarrekuva',
         }, g);
         im.setAttribute('href', kuva);
       } else {
         const icon = drawTokenIcon(g, type);
-        icon.setAttribute('transform', 'scale(0.88)');
+        // Piirrosikonit on mitoitettu vanhaan 16,4 yksikön kiekkoon.
+        icon.setAttribute('transform', `scale(${(0.88 * r / 16.4).toFixed(3)})`);
       }
+    }
+    this.piilotaAarreLaatat();
+  }
+
+  /**
+   * AVATUN KAUPUNGIN OMA LAATTA POIS AARREMERKIN ALTA.
+   *
+   * Aarremerkki piirtyy laatan paikalle (drawTokens), joten laatasta
+   * jäisi näkyviin rengas merkin ympärille — juuri se, mitä omistaja
+   * ei halua nähdä (*"alkuperäinen laatta katoaa näkyvistä"*).
+   *
+   * PIILOTUS ON TÄSSÄ EIKÄ PIIRROSSA, koska lauta piirretään vain kun
+   * pakkaus vaihtuu (drawBoardFor) mutta laattoja käännetään kesken
+   * pelin. Sama syy kuin muillakin kartan tilaluokilla.
+   *
+   * VAIN LAATAN OMAT ELLIPSIT. Kaupungin nimi, porttikehä ja
+   * lentokentän merkki kertovat kaupungista eivätkä kääntämättömästä
+   * laatasta, joten ne jäävät — ja merkki on niin pieni, että ne
+   * mahtuvat sen ympärille.
+   */
+  piilotaAarreLaatat() {
+    if (!this.svg) return;
+    const auki = this.game?.revealed;
+    for (const osa of this.svg.querySelectorAll(
+      '.cities .city, .cities .city-start, .cities .coast-soft',
+    )) {
+      // dataset.kaupunki puuttuu vain laudoilta, joita ei ole piirretty
+      // tässä versiossa; Map.has(undefined) on silloin epätosi.
+      osa.classList.toggle('aarre-laatan-alla', Boolean(auki?.has(osa.dataset.kaupunki)));
     }
   }
 
@@ -14035,13 +14158,23 @@ export class UI {
     g.classList.add('pawn-moving');
     if (stepMs !== STEP_MS) g.style.transitionDuration = `${stepMs}ms`;
 
+    /*
+     * LIIKKUVA NAPPULA ON YHTÄ PIENI KUIN PAIKALLAAN OLEVA. Siirron
+     * paikka on TYYLISSÄ (siirtymä animoi sen), ja tyyli voittaa
+     * transform-määreen — fokusnäkymän käänteisskaalaus on siksi
+     * kirjoitettava tähän samaan merkkijonoon eikä paivitaFokusMerkki-
+     * Mitatiin. Kerroin luetaan kerran: iso animaatio hiljentää kartan
+     * muut liikkeet, joten zoomi ei muutu matkan aikana.
+     */
+    const kerroin = this.fokusMerkkiKerroin(FOKUS_NAPPULA_PX, NAPPULAN_R);
+    const koko = Math.abs(kerroin - 1) < 0.0005 ? '' : ` scale(${kerroin.toFixed(4)})`;
     const start = pixelOf(board, from);
-    g.style.transform = `translate(${start.x}px, ${start.y}px)`;
+    g.style.transform = `translate(${start.x}px, ${start.y}px)${koko}`;
     g.getBoundingClientRect(); // varmistaa, että ensimmäinenkin askel animoituu
 
     for (const [i, pos] of path.entries()) {
       const { x, y } = pixelOf(board, pos);
-      g.style.transform = `translate(${x}px, ${y}px)`;
+      g.style.transform = `translate(${x}px, ${y}px)${koko}`;
       // Määränpään äänimaisema lähtee nousemaan jo viimeisellä
       // askeleella, jotta ristihäivytys on käynnissä saapumishetkellä
       // eikä ala vasta kertojan kanssa yhtä aikaa (omistajan toive).

@@ -5870,51 +5870,31 @@ body.flight-active .fact-card {
 .city-start { fill: #eec66b; stroke: #6d4d12; stroke-width: 3.4; }
 
 /* ------------------------------------------------------------------
- * KEHITTÄJÄKARTAN VALMIUSASTEIKKO (omistajan tilaus 23.8.2026)
- *
- * Neljä väriä, yksi kysymys: missä kunnossa tämän kaupungin lehti on?
- * Asteikko korvaa aiemmat yhden urakan merkinnät — julistevihreän,
- * violetit herokuvat, työn alla olevan keltaisen ja tekstiremontin
- * oranssinruskean — jotka peittivät toisensa päällekkäin ladottuina.
- *
- * Luokat lisätään VAIN kehittäjätilassa (js/ui.js drawBoard,
- * valmiusLuokka), joten pelaajan kartta ei muutu näistä säännöistä
- * millään tavalla.
- *
- * Sävyt on valittu erottumaan toisistaan JA laudan omasta
- * pergamentista (#f3e5c4 kaupunki, #eec66b lähtökaupunki):
- *   - valmis on sammaleen vihreä, ainoa viileä perusväri;
- *   - tuore on selvästi kirkkaampi ja kylläisempi vihreä, ja saa
- *     tummemman reunuksen, jotta se erottuu valmiista myös pienenä
- *     pisteenä ja mustavalkoisena;
- *   - lähes valmis on melkein valkoinen — kermaisen pergamentin
- *     päällä se lukee vaaleana pisteenä vasta tumman reunuksen
- *     kanssa, joten reunus on tarkoituksella muita paksumpi;
- *   - puutteellinen on kuollut harmaa, ainoa täysin kylläisyydetön.
+ * KEHITTÄJÄKARTAN VÄRILAATTAKOODIT ON POISTETTU (omistajan tilaus
+ * 26.8.2026: *"Poista pelistä muuten kaikki värilaattakoodit, jotka
+ * olivat aiemmin"*). Tässä olivat lehden valmiusasteikko
+ * (.city-valmis/.city-tuore/.city-lahes/.city-kesken) ja herokuvien
+ * viiteankkurointi (.city-viite-taysi/.city-viite-osa). Sama tieto on
+ * yhä Tilastot-taulussa (js/tyohuone-tilastot.js); kartalla laatta on
+ * nyt joka tilassa laudan oma pergamentti.
  * ------------------------------------------------------------------ */
-.city.city-valmis,
-.city-start.city-valmis { fill: #6a9e54; stroke: #3d6330; }
-.city.city-tuore,
-.city-start.city-tuore { fill: #3fcf5a; stroke: #14561f; stroke-width: 3.4; }
-.city.city-lahes,
-.city-start.city-lahes { fill: #fdfcf7; stroke: #3a3128; stroke-width: 3.4; }
-.city.city-kesken,
-.city-start.city-kesken { fill: #c9c4bb; stroke: #78736b; }
 
 /*
- * ORANSSI LAATTA (vain kehittäjätilassa): kaupungin herokuvat on
- * generoitu kohteen omista Commons-valokuvista viitteinä.
- * Täysi oranssi = koko erä ankkuroitu, haalea = vain osa.
- * Ks. js/viitekuva-herot.js ja js/ui.js (viiteLuokka).
+ * AVATTU LAATTA POIS AARREMERKIN ALTA (omistajan pelitestitilaus
+ * 26.8.2026: *"jokaisessa avatussa laatassa näkyy vain suoraan se
+ * aarre ... alkuperäinen laatta katoaa näkyvistä. Jäljelle ei jää
+ * koskaan kahta irrallista laattaa vierekkäin."*).
  *
- * Näissä säädetään VAIN fill. Valmiusluokkien ääriviiva jää siksi
- * voimaan, ja laatan reunasta näkee yhä lehden valmiusasteen — muuten
- * oranssi peittäisi toisen asteikon kokonaan.
+ * Aarremerkki piirtyy täsmälleen kaupungin laatan paikalle ja on sitä
+ * PIENEMPI (js/ui.js drawTokens), joten laatan reuna jäisi näkyviin
+ * renkaana merkin ympärille. Piilotus on luokka eikä suodatin (sama
+ * iOS-sääntö kuin kartan muillakin kerroksilla) ja se koskee vain
+ * laatan omia ellipsejä: nimi, porttikehä ja lentokentän merkki
+ * kertovat kaupungista, eivät kääntämättömästä laatasta.
  */
-.city.city-viite-taysi,
-.city-start.city-viite-taysi { fill: #e08a2e; }
-.city.city-viite-osa,
-.city-start.city-viite-osa { fill: #f2c48a; }
+.city.aarre-laatan-alla,
+.city-start.aarre-laatan-alla,
+.coast-soft.aarre-laatan-alla { display: none; }
 .airport { font-size: 14px; fill: #8d3a2c; }
 
 /* Porttikaupunki: katkoviivakehä kertoo, että täältä lähtee lento toiselle laudalle. */
@@ -19006,7 +18986,10 @@ body.fokuspohja .maa-pilleri { display: none; }
 .fokus-maataulu-lehti {
   position: absolute;
   top: 0.35rem;
-  left: min(19.5rem, calc(100% - 48px));
+  /* Yläreunaan keskelle (omistaja 25.8.2026); siirto marginaalilla
+     eikä translatella, koska syke animoi transformia. */
+  left: 50%;
+  margin-left: -22px;
   right: auto;
   width: 2.1rem;
   height: 2.1rem;

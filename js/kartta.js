@@ -2462,6 +2462,7 @@ export class Kartta {
       if (!Number.isFinite(tx) || !Number.isFinite(ty)) return;
       this.ui.svg.style.transform =
         `translate3d(${tx.toFixed(1)}px, ${ty.toFixed(1)}px, 0) scale(${nipistys.suhde.toFixed(4)})`;
+      vastaskaalaaMerkit(nipistys.suhde);
     };
 
     const paataNipistys = () => {
@@ -2475,6 +2476,7 @@ export class Kartta {
       this.ui.kartanRaahaus = false;
       document.body.classList.remove('kartta-raahaus');
       this.ui.svg.style.transform = '';
+      vastaskaalaaMerkit(1);
       // Napautus eleen jälkeen ei saa valita kaupunkia.
       this.ui.raahattiin = true;
       setTimeout(() => { this.ui.raahattiin = false; }, 0);
@@ -2557,6 +2559,23 @@ export class Kartta {
      * geometrian niistä uudelleen (sama ankkurioppi kuin
      * taustapaluussa: ei erovertailua, turha ajo on halpa).
      */
+    /*
+     * KIINTEIDEN MERKKIEN VASTASKAALA NIPISTYKSEN AIKANA (omistajan
+     * iPad-havainto 25.8.2026: "Kartan kohdepisteet eivät ole kiinteän
+     * kokoisia vaan muuttuvat zoomatessa"). Ele skaalaa koko SVG:n
+     * CSS:llä, joten ruutukokoon käänteisskaalatut merkkikerrokset
+     * paisuivat eleen ajaksi ja napsahtivat kokoonsa vasta lopussa.
+     * Merkkikerrokset (js/fokuskohteet.js, js/fokuspiste.js,
+     * js/fokusnosto-symbolit.js) rekisteröivät tänne päivittäjänsä,
+     * jota kutsutaan eleen kerroin mukanaan — työ on muutama
+     * setAttribute per kehys.
+     */
+    const vastaskaalaaMerkit = (suhde) => {
+      for (const f of this.ui.nipistysVastaskaalaajat ?? []) {
+        try { f(suhde); } catch { /* yksi merkki ei saa kaataa elettä */ }
+      }
+    };
+
     const hylkaaNipistys = () => {
       if (!nipistys) return;
       nipistys = null;
@@ -2566,6 +2585,7 @@ export class Kartta {
       // Yleiskuvan haara ei kirjoita muunnosta (asetaPan ajetaan vain
       // lähikuvissa), joten eleen jälki pyyhitään ensin käsin.
       this.ui.svg.style.transform = '';
+      vastaskaalaaMerkit(1);
       this.fitViewBox();
     };
     // Kentäksi asti: ui.js:n jumivahti (eleKesken) ja taustapaluun

@@ -315,6 +315,17 @@ export const SOUTHAMERICA = {
         name: 'Inkojen kultafiguuri', color: '#e0b02a',
         kuva: 'assets/aarteet/aarre-southamerica-manner.jpg',
       },
+      // Mantereen oma paikallisaarrepari (entiset jalokiviaarteet
+      // nimineen ja kuvineen) — väliaikainen, kunnes maakohtaiset
+      // parit (js/packs/paikallisaarteet.js) täyttyvät.
+      isoAarre: {
+        name: 'Kolumbian smaragdi', color: '#2fa36b',
+        kuva: 'assets/aarteet/aarre-southamerica-emerald.jpg',
+      },
+      pieniAarre: {
+        name: 'Potosín hopeakolikko', color: '#c9ccd4',
+        kuva: 'assets/aarteet/aarre-southamerica-topaz.jpg',
+      },
     }),
     // 38 kaupunkia, yksi laatta kussakin.
     counts: { star: 1, mannerAarre: 1, isoAarre: 12, pieniAarre: 24 },

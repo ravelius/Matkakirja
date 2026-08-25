@@ -282,6 +282,17 @@ export const AFRICA = {
         name: 'Kimberleyn timantti', color: '#bcd6e8',
         kuva: 'assets/aarteet/aarre-africa-manner.jpg',
       },
+      // Mantereen oma paikallisaarrepari (entiset jalokiviaarteet
+      // nimineen ja kuvineen) — väliaikainen, kunnes maakohtaiset
+      // parit (js/packs/paikallisaarteet.js) täyttyvät.
+      isoAarre: {
+        name: 'Kultahippu', color: '#e0b02a',
+        kuva: 'assets/aarteet/aarre-africa-emerald.jpg',
+      },
+      pieniAarre: {
+        name: 'Kaurikotilo', color: '#e0cfa8',
+        kuva: 'assets/aarteet/aarre-africa-topaz.jpg',
+      },
     }),
     // 41 kaupunkia, yksi laatta kussakin. Pääaarre ja mantereen aarre
     // ovat yksi kumpikin; lopusta noin kolmasosa on iso paikallisaarre.

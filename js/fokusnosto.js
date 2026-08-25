@@ -751,7 +751,15 @@ function piirraNostonKupla(ui, nosto, paikka) {
   kupla.setAttribute('aria-label', paikka.nimi ? `Täkynosto: ${paikka.nimi}` : 'Täkynosto');
 
   const paperi = html('div', 'fokusnosto-kuplapaperi');
-  paperi.append(nostoKlikkiotsikko(ui, nosto), nostoRasti(ui, nosto));
+  /*
+   * Kuplassa EI ole rastia (omistaja 25.8.2026: "Ota ruksi pois
+   * pop-upista") — nosto vaihtuu symbolia napauttamalla ja poistuu
+   * lunastettaessa. Rasti elää yhä liuska-varapolussa.
+   * Huutomerkkitäkyjen kupla saa kevyen keltaisen taustan (sama
+   * omistajan viesti); eläintäky pysyy paperinvärisenä.
+   */
+  if ((nosto.symboli ?? 'huuto') !== 'elain') kupla.classList.add('fokusnosto-kupla-huuto');
+  paperi.append(nostoKlikkiotsikko(ui, nosto));
   const nokka = html('span', 'fokusnosto-nokka');
   nokka.setAttribute('aria-hidden', 'true');
   paperi.appendChild(nokka);

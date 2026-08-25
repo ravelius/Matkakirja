@@ -122,7 +122,8 @@ body.kartalento .fokusnosto-kupla { opacity: 0; pointer-events: none; }
   min-width: 0;
   font-family: var(--font-luku);
   font-size: 0.94rem;
-  font-weight: 700;
+  /* Ei lihavointia (omistaja 25.8.2026) — klikkiotsikko kantaa itsensä. */
+  font-weight: 400;
   line-height: 1.28;
   /* Kolme riviä riittää pisimmällekin otsikolle; ylipitkä katkeaa
      siististi sen sijaan että venyttäisi liuskan kartan poikki. */
@@ -133,13 +134,14 @@ body.kartalento .fokusnosto-kupla { opacity: 0; pointer-events: none; }
   overflow: hidden;
 }
 
-/* Miniatyyri otsikon perässä: pieni painettu kuva, ei ikoni. */
+/* Miniatyyri otsikon perässä: pieni painettu kuva, ei ikoni.
+   Ilman kehysviivaa (omistaja 25.8.2026: "kehykset kuvasta" pois). */
 .fokusnosto-mini {
   flex: 0 0 auto;
   width: 46px;
   height: 46px;
   border-radius: 4px;
-  border: 1px solid rgba(122, 85, 20, 0.35);
+  border: 0;
   object-fit: cover;
   background: rgba(122, 85, 20, 0.12);
 }
@@ -265,6 +267,15 @@ body.kartalento .fokusnosto-kupla { opacity: 0; pointer-events: none; }
   border-left: 1px solid rgba(122, 85, 20, 0.34);
   border-top: 1px solid rgba(122, 85, 20, 0.34);
 }
+
+/*
+ * HUUTOMERKKITÄKYJEN KUPLA on kevyen keltainen (omistaja 25.8.2026:
+ * "Puhekuplan tausta kevyen keltainen huutomerkki jutuissa") — sama
+ * okra kuin symbolissa, mutta paperiin taitettuna. Nokka on paperin
+ * jatke, joten se saa saman sävyn.
+ */
+.fokusnosto-kupla-huuto .fokusnosto-kuplapaperi,
+.fokusnosto-kupla-huuto .fokusnosto-nokka { background: #f6ebc8; }
 
 /* ===========================================================================
    3. TÄKYSYMBOLIT — kartan oma SVG-kerros (js/fokusnosto-symbolit.js)

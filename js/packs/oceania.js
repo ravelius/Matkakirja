@@ -312,6 +312,17 @@ export const OCEANIA = {
         name: 'Opaali', color: '#7fb7c9',
         kuva: 'assets/aarteet/aarre-oceania-manner.jpg',
       },
+      // Mantereen oma paikallisaarrepari (entiset jalokiviaarteet
+      // nimineen ja kuvineen) — väliaikainen, kunnes maakohtaiset
+      // parit (js/packs/paikallisaarteet.js) täyttyvät.
+      isoAarre: {
+        name: 'Paua-simpukkakoru', color: '#3a9ea6',
+        kuva: 'assets/aarteet/aarre-oceania-emerald.jpg',
+      },
+      pieniAarre: {
+        name: 'Simpukkarahanauha', color: '#e0cfa8',
+        kuva: 'assets/aarteet/aarre-oceania-topaz.jpg',
+      },
     }),
     // 33 kaupunkia, yksi laatta kussakin.
     counts: { star: 1, mannerAarre: 1, isoAarre: 10, pieniAarre: 21 },

@@ -310,6 +310,17 @@ export const NORTHAMERICA = {
         name: 'Kultaryntäyksen hippu', color: '#e0b02a',
         kuva: 'assets/aarteet/aarre-northamerica-manner.jpg',
       },
+      // Mantereen oma paikallisaarrepari (entiset jalokiviaarteet
+      // nimineen ja kuvineen) — väliaikainen, kunnes maakohtaiset
+      // parit (js/packs/paikallisaarteet.js) täyttyvät.
+      isoAarre: {
+        name: 'Turkoosi', color: '#3aaea6',
+        kuva: 'assets/aarteet/aarre-northamerica-emerald.jpg',
+      },
+      pieniAarre: {
+        name: 'Kaakaopavut', color: '#8a5a33',
+        kuva: 'assets/aarteet/aarre-northamerica-topaz.jpg',
+      },
     }),
     // 38 kaupunkia, yksi laatta kussakin.
     counts: { star: 1, mannerAarre: 1, isoAarre: 12, pieniAarre: 24 },
