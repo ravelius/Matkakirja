@@ -251,6 +251,17 @@ function piirraKohdemerkki(ui, ryhma, kohde) {
  * TYÖ TEHDÄÄN VAIN KUN SISÄLTÖ MUUTTUI. Zoomi muuttaa vain ankkuri-
  * ryhmien muunnosta, ei yhtäkään solmua.
  */
+/** Ankkuriryhmien käänteisskaala; `suhde` on käynnissä olevan
+ *  nipistyseleen kerroin (1 = ei elettä). */
+function asetaKohdeMittakaava(ui, suhde) {
+  const skaala = ui.nakyvaAlue?.()?.skaala;
+  if (!skaala || !Number.isFinite(skaala) || skaala <= 0) return;
+  const zoom = (1 / (skaala * (suhde > 0 ? suhde : 1))).toFixed(4);
+  for (const ryhma of ui.fokuskohdeRyhmat ?? []) {
+    ryhma.g.setAttribute('transform', `translate(${ryhma.x} ${ryhma.y}) scale(${zoom})`);
+  }
+}
+
 export function paivitaFokuskohteet(ui) {
   if (typeof document === 'undefined') return;
   const kerros = varmistaKohdekerros(ui);
@@ -290,10 +301,12 @@ export function paivitaFokuskohteet(ui) {
   const nakyva = ui.nakyvaAlue?.();
   const skaala = nakyva?.skaala;
   if (!skaala || !Number.isFinite(skaala) || skaala <= 0) return;
-  const zoom = (1 / skaala).toFixed(4);
-  for (const ryhma of ui.fokuskohdeRyhmat ?? []) {
-    ryhma.g.setAttribute('transform', `translate(${ryhma.x} ${ryhma.y}) scale(${zoom})`);
-  }
+  asetaKohdeMittakaava(ui, 1);
+  // Nipistyksen ajaksi merkit vastaskaalataan eleen kertoimella
+  // (js/kartta.js vastaskaalaaMerkit) — muuten kiinteäkokoiset merkit
+  // paisuisivat eleen ajaksi (omistajan iPad-havainto 25.8.2026).
+  (ui.nipistysVastaskaalaajat ??= new Set())
+    .add(ui.fokuskohdeVastaskaala ??= (suhde) => asetaKohdeMittakaava(ui, suhde));
   paivitaNakyvyys(ui, kerros, nakyva);
   // Kartta liikkui: auki oleva kortti seuraa merkkiään.
   if (ui.fokuskohdeAuki) asetaKohteenPaikka(ui);

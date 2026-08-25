@@ -19006,7 +19006,10 @@ body.fokuspohja .maa-pilleri { display: none; }
 .fokus-maataulu-lehti {
   position: absolute;
   top: 0.35rem;
-  left: min(19.5rem, calc(100% - 48px));
+  /* Yläreunaan keskelle (omistaja 25.8.2026); siirto marginaalilla
+     eikä translatella, koska syke animoi transformia. */
+  left: 50%;
+  margin-left: -22px;
   right: auto;
   width: 2.1rem;
   height: 2.1rem;

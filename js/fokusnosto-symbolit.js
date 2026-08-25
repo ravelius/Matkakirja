@@ -249,15 +249,19 @@ export function paivitaNostosymbolit(ui, tila = {}) {
  * ilman uutta piirtoa (js/fokusnosto.js kartan vahti). Yksi
  * setAttribute per ryhmä, ei yhtäkään uutta solmua.
  */
-export function asemoiNostosymbolit(ui) {
+export function asemoiNostosymbolit(ui, suhde = 1) {
   const skaala = ui?.nakyvaAlue?.()?.skaala;
   // Ilman mitattavaa näkymää muunnos jätetään entiselleen: väärä
   // mittakaava olisi pahempi kuin yhden kehyksen viive.
   if (!skaala || !Number.isFinite(skaala) || skaala <= 0) return;
-  const zoom = (1 / skaala).toFixed(4);
+  const zoom = (1 / (skaala * (suhde > 0 ? suhde : 1))).toFixed(4);
   for (const ryhma of ui.nostosymRyhmat ?? []) {
     ryhma.g.setAttribute('transform', `translate(${ryhma.x} ${ryhma.y}) scale(${zoom})`);
   }
+  // Nipistyksen vastaskaala (js/kartta.js vastaskaalaaMerkit): kiinteä
+  // ruutukoko myös eleen aikana, ei vain sen jälkeen.
+  (ui.nipistysVastaskaalaajat ??= new Set())
+    .add(ui.nostosymVastaskaala ??= (s) => asemoiNostosymbolit(ui, s));
 }
 
 /**
