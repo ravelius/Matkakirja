@@ -27,11 +27,14 @@
  *    animoituvat vain ne kaksi ominaisuutta, jotka kompositori osaa
  *    yksin.
  *
- * 3. KIINTEÄ KOKO RUUDULLA. Ankkuriryhmä on laudan koordinaateissa ja
- *    skaalataan zoomin käänteisluvulla, jolloin merkin lapset ovat
- *    ruudun pikseleitä. Osuma-alueen r = 22 on siis 44 px läpimitta
- *    joka zoomilla — sama sormisääntö kuin kaupungin laatalla
- *    (js/ui.js FOKUS_LAATTA_OSUMA_PX).
+ * 3. KARTAN MITTAKAAVA, EI RUUDUN (omistajan LOPULLINEN linjaus
+ *    26.8.2026, Raamattu). Ankkuriryhmä on laudan koordinaateissa ja
+ *    skaalataan VAKIOLLA (js/ui.js fokusMerkkiSkaala), jolloin merkin
+ *    lapset ovat ruudun pikseleitä LEHDEN PERUSTASOLLA ja kasvavat tai
+ *    kutistuvat siitä kartan mukana. Osuma-alueen r = 22 on siis 44 px
+ *    läpimitta perustasolla — sama sormisääntö kuin kaupungin laatalla
+ *    (js/ui.js FOKUS_LAATTA_OSUMA_PX) — ja lähizoomilla, jossa piste
+ *    oikeasti napautetaan, sitä isompi.
  *
  * ── MITÄ TÄMÄ EI TEE ───────────────────────────────────────────────
  *
@@ -198,21 +201,26 @@ export function paivitaFokuspiste(ui) {
     }
   }
   asetaPisteMittakaava(ui, 1);
-  // Nipistyksen ajaksi merkki vastaskaalataan eleen kertoimella
-  // (js/kartta.js vastaskaalaaMerkit) — kiinteä ruutukoko myös eleen
-  // aikana, ei vain sen jälkeen (omistajan iPad-havainto 25.8.2026).
+  // Rekisteröinti nipistykseen jää (js/kartta.js vastaskaalaaMerkit),
+  // vaikka vakioskaala ei enää tarvitse vastaskaalaa: varapolku
+  // (lehdetön näkymä) on yhä ruutumitassa ja tarvitsee sen.
   (ui.nipistysVastaskaalaajat ??= new Set())
     .add(ui.fokuspisteVastaskaala ??= (suhde) => asetaPisteMittakaava(ui, suhde));
 }
 
-/** Ankkuriryhmien käänteisskaala; `suhde` on käynnissä olevan
- *  nipistyseleen kerroin (1 = ei elettä). */
+/**
+ * Ankkuriryhmien mittakaava — VAKIO, ei zoomin käänteisluku.
+ *
+ * `suhde` on käynnissä olevan nipistyseleen kerroin (1 = ei elettä), ja
+ * vakioskaalassa se ohitetaan: ele suurentaa pisteen kartan mukana.
+ * Vain lehdetön varapolku (js/ui.js fokusMerkkiSkaala) käyttää sitä.
+ */
 function asetaPisteMittakaava(ui, suhde) {
-  const skaala = ui.nakyvaAlue?.()?.skaala;
+  const s = ui.fokusMerkkiSkaala?.(suhde);
   // Ilman mitattavaa näkymää muunnos jätetään entiselleen: väärä
   // mittakaava olisi pahempi kuin yhden kehyksen viive.
-  if (!skaala || !Number.isFinite(skaala) || skaala <= 0) return;
-  const zoom = (1 / (skaala * (suhde > 0 ? suhde : 1))).toFixed(4);
+  if (!(s > 0)) return;
+  const zoom = s.toFixed(4);
   for (const ryhma of ui.fokuspisteRyhmat ?? []) {
     ryhma.g.setAttribute('transform', `translate(${ryhma.x} ${ryhma.y}) scale(${zoom})`);
   }

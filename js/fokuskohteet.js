@@ -34,10 +34,17 @@
  * 2. EI SUODATTIMIA (tests/rules.test.mjs): suodatettu kerros palaa
  *    iOS:n taustalta tyhjänä. Vaalea kehä merkin alla on oma ympyränsä.
  *
- * 3. KIINTEÄ KOKO RUUDULLA. Ankkuriryhmä on laudan koordinaateissa ja
- *    skaalataan zoomin käänteisluvulla, jolloin merkin lapset ovat
- *    ruudun pikseleitä — sama tekniikka kuin vinjeteillä. Osuma-alueen
- *    r = 22 on siis 44 px läpimitta joka zoomilla.
+ * 3. KARTAN MITTAKAAVA, EI RUUDUN (omistajan LOPULLINEN linjaus
+ *    26.8.2026, Raamattu; kumoaa 25.8. kirjatun kiinteän ruutukoon):
+ *    *"pisteiden pitäisi suurentua samalla kun karttaa suurentaa ja
+ *    pienentyä karttaa zoomatessa ulospäin"*. Ankkuriryhmä on laudan
+ *    koordinaateissa ja skaalataan VAKIOLLA (js/ui.js
+ *    fokusMerkkiSkaala), joka on viritetty niin, että merkin lapset ovat
+ *    ruudun pikseleitä LEHDEN PERUSTASOLLA — siinä näkymässä, johon
+ *    saapumisajo maahan päätyy. Osuma-alueen r = 22 on siis 44 px
+ *    läpimitta perustasolla, isompi lähennettäessä ja pienempi
+ *    loitonnettaessa. Se on tarkoitus: napautettavaksi merkit syttyvät
+ *    muutenkin vasta lähikuvassa (LEHDEN_VAHIN_OSUUS).
  *
  * === KUVA PIENENÄ, KLIK ISOKSI ===
  *
@@ -251,12 +258,18 @@ function piirraKohdemerkki(ui, ryhma, kohde) {
  * TYÖ TEHDÄÄN VAIN KUN SISÄLTÖ MUUTTUI. Zoomi muuttaa vain ankkuri-
  * ryhmien muunnosta, ei yhtäkään solmua.
  */
-/** Ankkuriryhmien käänteisskaala; `suhde` on käynnissä olevan
- *  nipistyseleen kerroin (1 = ei elettä). */
+/**
+ * Ankkuriryhmien mittakaava — VAKIO, ei zoomin käänteisluku.
+ *
+ * `suhde` on käynnissä olevan nipistyseleen kerroin (1 = ei elettä), ja
+ * vakioskaalassa se OHITETAAN: ele saa suurentaa merkit kartan mukana,
+ * mikä on juuri se mitä omistaja pyysi. Vain lehdetön varapolku
+ * (ui.fokusMerkkiSkaala) tarvitsee eleen vastaskaalan yhä.
+ */
 function asetaKohdeMittakaava(ui, suhde) {
-  const skaala = ui.nakyvaAlue?.()?.skaala;
-  if (!skaala || !Number.isFinite(skaala) || skaala <= 0) return;
-  const zoom = (1 / (skaala * (suhde > 0 ? suhde : 1))).toFixed(4);
+  const s = ui.fokusMerkkiSkaala?.(suhde);
+  if (!(s > 0)) return;
+  const zoom = s.toFixed(4);
   for (const ryhma of ui.fokuskohdeRyhmat ?? []) {
     ryhma.g.setAttribute('transform', `translate(${ryhma.x} ${ryhma.y}) scale(${zoom})`);
   }
@@ -302,9 +315,9 @@ export function paivitaFokuskohteet(ui) {
   const skaala = nakyva?.skaala;
   if (!skaala || !Number.isFinite(skaala) || skaala <= 0) return;
   asetaKohdeMittakaava(ui, 1);
-  // Nipistyksen ajaksi merkit vastaskaalataan eleen kertoimella
-  // (js/kartta.js vastaskaalaaMerkit) — muuten kiinteäkokoiset merkit
-  // paisuisivat eleen ajaksi (omistajan iPad-havainto 25.8.2026).
+  // Rekisteröinti nipistykseen jää (js/kartta.js vastaskaalaaMerkit),
+  // vaikka vakioskaala ei enää tarvitse vastaskaalaa: varapolku
+  // (lehdetön näkymä) on yhä ruutumitassa ja tarvitsee sen.
   (ui.nipistysVastaskaalaajat ??= new Set())
     .add(ui.fokuskohdeVastaskaala ??= (suhde) => asetaKohdeMittakaava(ui, suhde));
   paivitaNakyvyys(ui, kerros, nakyva);

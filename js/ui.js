@@ -479,20 +479,19 @@ const FOKUS_KUVAN_REUNA = [0.16, 0.28, 0.42, 0.62, 1];
  * MITTA ON RUUDULLA, EI LAUDALLA. Fokusmoodin zoomiväli on valtava —
  * yleiskuvassa koko Eurooppa, fokusajon jälkeen yksi maa — ja laudan
  * yksiköissä mitoitettu laatta olisi lehdellä joko täplä tai kiekko
- * puoli ruutua. Laatta skaalataan siksi käänteisellä zoomikertoimella
- * kuten fokusvirran kuvavinjetitkin (js/fokusvirta.js PINNI_LEVEYS):
- * halkaisija on ruudulla aina noin 26 px, jolloin se ei hallitse
- * lehteä muttei myöskään katoa.
+ * puoli ruutua. Laatta viritetään siksi ruutumittaan: halkaisija on
+ * lehden perusnäkymässä noin 26 px, jolloin se ei hallitse lehteä
+ * muttei myöskään katoa.
  *
- * KIINTEÄ KOKO, EI DYNAAMINEN (omistajan linjaus 25.8.2026, kumoaa
- * aiemman): *"kartan pallurat kiinteän kokoisiksi"*. Skaalaus oli
- * aiemmin vain PIENENNYS — yleiskuvassa, jossa laatta on luonnostaan
- * tätä pienempi, se jätettiin rauhaan, ja laatta siis kutistui ja kasvoi
- * zoomin mukana aina siihen asti kun 26 px:n katto tuli vastaan. Nyt
- * kerroin on käänteinen zoomiskaalaus sellaisenaan (1/skaala), sama
- * tekniikka kuin kohdemerkeillä (paivitaFokusKohdeMitat), nimilapuilla
- * ja kohtaamispisteellä (js/fokuspiste.js): halkaisija on ruudulla sama
- * joka zoomilla.
+ * MITTA ON LEHDEN PERUSTASOLLA, EI JOKA ZOOMILLA (omistajan LOPULLINEN
+ * linjaus 26.8.2026, kumoaa 25.8. kirjatun kiinteän ruutukoon):
+ * *"pisteiden koko pitäisi olla koko ajan sama suhteessa kartan muihin
+ * elementteihin"*. Kerroin on nyt VAKIO (fokusMerkkiSkaala): laatta on
+ * 26 px siinä näkymässä, johon saapumisajo maahan päätyy, ja kasvaa tai
+ * kutistuu siitä kartan mukana. Sama tekniikka kaikilla fokusnäkymän
+ * merkkikerroksilla: kohdemerkit (js/fokuskohteet.js), kohtaamispiste
+ * (js/fokuspiste.js), nostosymbolit (js/fokusnosto-symbolit.js) sekä
+ * nappula ja aarremerkki (fokusMerkkiKerroin).
  */
 const FOKUS_LAATTA_PX = 26;
 /*
@@ -527,16 +526,17 @@ const AARREMERKKI_R = 9.4;
  * VIKA OLI SAMA KUIN LAATALLA AIKANAAN: pelinappula ja käännetty
  * laatta ovat laudan yksiköissä, ja fokuszoomi suurentaa ne ruudulla
  * moninkertaisiksi — kuvakaappauksessa nappula oli neljänneksen
- * ruudun levyinen. Korjaus on sama käänteisskaalaus kuin nykyisen
- * kaupungin laatalla (FOKUS_LAATTA_PX, paivitaFokusLaatta): mitta on
- * RUUDULLA eikä laudalla.
+ * ruudun levyinen. Korjaus on sama mitoitus kuin nykyisen kaupungin
+ * laatalla (FOKUS_LAATTA_PX, paivitaFokusLaatta): mitta luetaan
+ * RUUDULTA lehden perustasolla eikä laudalta.
  *
  * SUHTEET: nappula on laatan kokoluokkaa (28 vs. 26) — se on pelaajan
  * oma paikka ja saa olla kiinnekohta — ja aarremerkki on
  * kääntämätöntä laattaa pienempi (20 vs. 26), kuten laudallakin.
  *
- * YLEISKUVASSA JA MUILLA LAUDOILLA KOOT OVAT ENNALLAAN: kerroin on 1
- * aina kun fokusnäkymä ei ole päällä (paivitaFokusMerkkiMitat).
+ * MUILLA LAUDOILLA JA FOKUSNÄKYMÄN ULKOPUOLELLA KOOT OVAT ENNALLAAN:
+ * kerroin on 1 aina kun fokusnäkymä ei ole päällä
+ * (paivitaFokusMerkkiMitat).
  */
 const FOKUS_NAPPULA_PX = 28;
 const FOKUS_AARRE_PX = 20;
@@ -5500,6 +5500,86 @@ export class UI {
     this.paivitaFokusNimilaput();
   }
 
+  /* --- MERKIT KARTAN MITTAKAAVAAN (omistajan linjaus 26.8.2026) ------ */
+
+  /**
+   * FOKUSNÄKYMÄN MERKKIKERROSTEN VAKIOSKAALA.
+   *
+   * === MIKÄ MUUTTUI ===
+   *
+   * Omistajan LOPULLINEN linjaus (Raamattu, kumoaa 25.8. kirjatun
+   * *"kartan pallurat kiinteän kokoisiksi"* -linjan): *"Nähtävyyspisteet
+   * ja Ateenan merkki kummatkin vielä muuttuvat zoomatessa. Eli pisteet
+   * pitäisi suurentua samalla kun karttaa suurentaa ja pienentyä karttaa
+   * zoomatessa ulospäin. Eli niiden koko pitäisi olla koko ajan sama
+   * suhteessa kartan muihin elementteihin."*
+   *
+   * Merkit olivat ruudun pikseleitä: ankkuriryhmä skaalattiin zoomin
+   * KÄÄNTEISLUVULLA (1/skaala), jolloin merkki oli ruudulla samankokoinen
+   * joka zoomilla — ja uloszoomatussa atlaksessa täysikokoiset pisteet
+   * hallitsivat lehteä, jonka päällä ne olivat vain nuppineulanpäitä.
+   * Nyt merkit ovat KARTAN MITTAKAAVASSA: transform on VAKIO, ja merkki
+   * kasvaa ja kutistuu kartan mukana kuten kaikki muukin lehdellä.
+   *
+   * === MISTÄ VAKIO TULEE ===
+   *
+   * Peruskoko viritetään lehden PERUSTASOON eli siihen näkymään, johon
+   * saapumisajo maahan päätyy (js/fokuskartta.js maanNakyma: kamera
+   * sovittaa lehden IKKUNAN ruutuun) ja jota kauemmas loitonnusnappi ei
+   * päästä (js/kartta.js fokusZoomMinimi). Sillä tasolla merkki on
+   * suunnilleen entisen ruutukokonsa kokoinen; siitä se kasvaa
+   * lähennettäessä ja kutistuu loitonnettaessa.
+   *
+   *   perusSkaala = min(paneW / ikkuna.w, paneH / ikkuna.h)
+   *
+   * — sama kaava kuin kameran omalla pohjalla (fokusZoomMinimi), jotta
+   * merkin peruskoko ja kameran alaraja eivät voi ajautua erilleen.
+   * Paluuarvo on ankkuriryhmän kerroin eli 1 / perusSkaala.
+   *
+   * === VARAPOLKU ON ENTINEN RUUTUKOKO ===
+   *
+   * Ilman lehden ikkunaa (muu lauta, fokusmoodi maassa jolle
+   * esirenderöityä pohjaa ei ole, yleiskuva ilman maata) ei ole
+   * perustasoa, johon virittää — silloin palataan entiseen 1/skaalaan.
+   * Vain siinä haarassa `suhde` merkitsee: nipistys skaalaa koko SVG:n
+   * CSS-muunnoksella muuttamatta viewBoxia, joten ruutukokoon sidottu
+   * merkki tarvitsee eleen ajaksi vastaskaalan (js/kartta.js
+   * vastaskaalaaMerkit). Vakioskaalassa vastaskaalaa EI tarvita: ele
+   * suurentaa merkin kartan mukana, mikä on juuri se mitä pyydettiin.
+   *
+   * VÄLIMUISTI on maa + ruutukoko: vakio muuttuu vain kun lehti vaihtuu
+   * tai ruutu muuttaa kokoaan, eikä sitä lasketa joka kehyksessä.
+   */
+  fokusMerkkiSkaala(suhde = 1) {
+    const nakyva = this.nakyvaAlue();
+    const skaala = nakyva?.skaala;
+    // Ilman mitattavaa näkymää mittakaava jäisi arvaukseksi: kutsuja
+    // jättää entisen koon voimaan (0 = ei mittaa).
+    if (!Number.isFinite(skaala) || skaala <= 0) return 0;
+    const ele = suhde > 0 ? suhde : 1;
+    const rajaus = this.fokusPohjaRajaus;
+    /*
+     * Paneelin mitat samasta lähteestä kuin kameralla (clientWidth), ja
+     * varana näkyvästä alueesta johdettu leveys — nakyvaAlue on jo
+     * mitattu yllä, joten kumpikaan ei ole uusi asettelun pakotus.
+     */
+    const pane = this.svg?.parentElement;
+    const paneW = pane?.clientWidth || skaala * nakyva.w;
+    const paneH = pane?.clientHeight || skaala * nakyva.h;
+    if (!(rajaus?.w > 0) || !(rajaus?.h > 0) || !(paneW > 0) || !(paneH > 0)) {
+      return 1 / (skaala * ele);
+    }
+    const avain = `${rajaus.x}:${rajaus.y}:${rajaus.w}:${rajaus.h}`
+      + `:${Math.round(paneW)}x${Math.round(paneH)}`;
+    if (this.fokusMerkkiSkaalaAvain !== avain) {
+      const perus = Math.min(paneW / rajaus.w, paneH / rajaus.h);
+      if (!(perus > 0)) return 1 / (skaala * ele);
+      this.fokusMerkkiSkaalaAvain = avain;
+      this.fokusMerkkiSkaalaArvo = 1 / perus;
+    }
+    return this.fokusMerkkiSkaalaArvo;
+  }
+
   /* --- LAATTA ON FOKUSNÄKYMÄN TUTKI-NAPPI (omistaja 24.8.2026) ------- */
 
   /**
@@ -5536,14 +5616,15 @@ export class UI {
    *
    * KAKSI TYÖTÄ, YKSI PAIKKA:
    *
-   *   1. KOKO. Fokusnäkymässä laatta skaalataan käänteisellä
-   *      zoomikertoimella niin, että sen halkaisija on ruudulla
-   *      FOKUS_LAATTA_PX joka zoomilla — myös yleiskuvassa, jossa
-   *      skaalaus suurentaa. Skaalaus tehdään laatan omien osien
-   *      transform-määreisiin kaupungin keskipisteen ympäri, jolloin
-   *      heilunta (rotate) ja porttikehä säilyvät suhteessa toisiinsa.
-   *      Alkuperäinen muunnos talletetaan data-määreeseen, joten
-   *      palautus on tarkka eikä arvattu.
+   *   1. KOKO. Fokusnäkymässä laatta skaalataan MERKKIEN VAKIOSKAALALLA
+   *      (fokusMerkkiSkaala) niin, että sen halkaisija on lehden
+   *      perustasolla ruudulla FOKUS_LAATTA_PX — ja siitä se kasvaa
+   *      lähennettäessä ja kutistuu loitonnettaessa kartan mukana.
+   *      Skaalaus tehdään laatan omien osien transform-määreisiin
+   *      kaupungin keskipisteen ympäri, jolloin heilunta (rotate) ja
+   *      porttikehä säilyvät suhteessa toisiinsa. Alkuperäinen muunnos
+   *      talletetaan data-määreeseen, joten palautus on tarkka eikä
+   *      arvattu.
    *   2. NAPAUTUS. Laatan päälle piirretään näkymätön ympyrä, jonka
    *      halkaisija on ruudulla vähintään FOKUS_LAATTA_OSUMA_PX (44 px:n
    *      sormisääntö). Napautus tekee saman kuin vanha Tutki-nappi.
@@ -5554,7 +5635,7 @@ export class UI {
    * Tutki olisi muutenkin tarjolla (fokusLaattaTutkii) — muuten se
    * peittäisi siirtovaiheen kohdealueita.
    *
-   * KIINTEÄ RUUTUKOKO PÄIVITTYY ZOOMISTA. Kutsu tulee sekä
+   * MITTAKAAVA PÄIVITTYY LEHDEN JA RUUDUN VAIHTUESSA. Kutsu tulee sekä
    * paivitaFokusPallotin kautta joka piirrossa että
    * paivitaMaastonimistä, joka ajetaan aina kun näkymä on asettunut —
    * sama kytkentäkohta kuin fokusvirran kuvavinjeteillä.
@@ -5563,10 +5644,10 @@ export class UI {
     if (!this.svg || !this.fokusLaattaKerros) return;
     const city = this.fokusmoodi && !this.katselu ? this.game.cityOf?.() : null;
     if (!city) { this.tyhjennaFokusLaatta(); return; }
-    const skaala = this.nakyvaAlue()?.skaala;
+    const s = this.fokusMerkkiSkaala();
     // Ilman mitattavaa näkymää mittakaava jäisi arvaukseksi: entinen
     // koko on parempi kuin väärä (sama sääntö kuin kuvavinjeteillä).
-    if (!Number.isFinite(skaala) || skaala <= 0) return;
+    if (!(s > 0)) return;
 
     const osat = [...this.svg.querySelectorAll('.cities [data-kaupunki]')]
       .filter((osa) => osa.dataset.kaupunki === city.id
@@ -5575,11 +5656,12 @@ export class UI {
       || osa.classList.contains('city-start'));
     const rx = Number(laatta?.getAttribute('rx'));
     /*
-     * KIINTEÄ KOKO RUUDULLA, EI ENÄÄ PELKKÄ KATTO (omistajan linjaus
-     * 25.8.2026, ks. FOKUS_LAATTA_PX). Kerroin on käänteinen
-     * zoomiskaalaus sellaisenaan: yleiskuvassa se SUURENTAA laattaa,
-     * lähikuvassa kutistaa, ja kummassakin halkaisija on ruudulla sama
-     * FOKUS_LAATTA_PX.
+     * KARTAN MITTAKAAVASSA, EI RUUDUN (omistajan linjaus 26.8.2026, ks.
+     * fokusMerkkiSkaala ja FOKUS_LAATTA_PX). Kerroin on VAKIO niin kauan
+     * kuin lehti ja ruutukoko pysyvät: laatan halkaisija on lehden
+     * perustasolla FOKUS_LAATTA_PX, ja siitä se kasvaa ja kutistuu kartan
+     * mukana. Ilman lehden ikkunaa vakiota ei ole, ja fokusMerkkiSkaala
+     * palauttaa entisen käänteisen zoomiskaalauksen.
      *
      * MITTA KOSKEE FOKUSMOODIA, EI LEHTEÄ. Ehto oli ennen kuvan
      * olemassaolo (fokusPohjaBbox), mutta pallurat ovat samat pallurat
@@ -5588,7 +5670,7 @@ export class UI {
      * kohdemerkeillä (fokusKohdeMerkit): fokusmoodi ja pelinäkymä.
      */
     const kerroin = Number.isFinite(rx) && rx > 0
-      ? (FOKUS_LAATTA_PX / 2) / (rx * skaala)
+      ? (FOKUS_LAATTA_PX / 2) * s / rx
       : 1;
     // Edellisen kaupungin osat takaisin omaan kokoonsa.
     for (const vanha of this.fokusLaattaOsat ?? []) {
@@ -5608,14 +5690,18 @@ export class UI {
       return;
     }
     /*
-     * Napautusalue laudan yksiköinä: ruutumitta jaettuna zoomilla, mutta
-     * korkeintaan FOKUS_LAATTA_OSUMA_LAUDALLA (ettei alue yleiskuvassa
-     * peitä naapureita) ja vähintään laatan oma säde (ettei näkyvän
-     * laatan reuna jää alueen ulkopuolelle).
+     * Napautusalue laudan yksiköinä — SAMASSA MITTAKAAVASSA KUIN LAATTA
+     * (fokusMerkkiSkaala), eli ruudulla FOKUS_LAATTA_OSUMA_PX lehden
+     * perustasolla ja siitä kartan mukana. Alue saa pienetä laatan
+     * mukana: napautus tapahtuu lähizoomilla, jossa laatta on kasvanut.
+     * Katto FOKUS_LAATTA_OSUMA_LAUDALLA jää varmistukseksi varapolulle
+     * (yleiskuva ilman lehteä, jossa jakolasku kasvattaisi alueen
+     * naapurikaupunkien päälle), ja vähintään laatan oma säde, ettei
+     * näkyvän laatan reuna jää alueen ulkopuolelle.
      */
     const r = Math.max(
       Number.isFinite(rx) ? rx : 0,
-      Math.min((FOKUS_LAATTA_OSUMA_PX / 2) / skaala, FOKUS_LAATTA_OSUMA_LAUDALLA),
+      Math.min((FOKUS_LAATTA_OSUMA_PX / 2) * s, FOKUS_LAATTA_OSUMA_LAUDALLA),
     );
     const kohdat = this.kiertoKohdat(city.x);
     const avain = `${this.game.pack.id}:${city.id}:${kohdat.length}`;
@@ -5636,9 +5722,10 @@ export class UI {
          * keskipisteen.
          *
          * SAMA KAAVA KUIN VIHREÄLLÄ KOHTAAMISPISTEELLÄ (js/fokuspiste.js):
-         * ankkuriryhmä on laudan koordinaateissa ja skaalataan zoomin
-         * käänteisluvulla, jolloin kehän säde on RUUDUN PIKSELEITÄ.
-         * Sykkeessä liikkuvat vain `opacity` ja `transform: scale()` —
+         * ankkuriryhmä on laudan koordinaateissa ja skaalataan merkkien
+         * vakioskaalalla (fokusMerkkiSkaala), jolloin kehän säde on
+         * ruudun pikseleitä LEHDEN PERUSTASOLLA ja kasvaa siitä kartan
+         * mukana. Sykkeessä liikkuvat vain `opacity` ja `scale()` —
          * ei `r` (sen CSS-animointi ei ole kaikissa selaimissa tuettua)
          * eikä suodattimia (tests/rules.test.mjs). Kehän keskipiste on
          * ankkurin origossa, joten oletusarvoinen transform-origin osuu
@@ -5667,13 +5754,13 @@ export class UI {
     /*
      * Mitat joka kutsulla — myös juuri rakennetuille osille, jotta
      * sääntö on yhdessä paikassa. Napautusalue on laudan yksiköissä,
-     * sykekehän ankkuri käänteisessä zoomissa. Kuuntelijoita ei kytketä
+     * sykekehän ankkuri merkkien vakioskaalassa. Kuuntelijoita ei kytketä
      * uudelleen, jottei napautus katoaisi sormen alta.
      */
     for (const osuma of this.fokusLaattaKerros.querySelectorAll('.fokuslaatta-osuma')) {
       osuma.setAttribute('r', r);
     }
-    const zoom = (1 / skaala).toFixed(4);
+    const zoom = s.toFixed(4);
     for (const ankkuri of this.fokusLaattaKerros.querySelectorAll('.fokuslaatta-ankkuri')) {
       ankkuri.setAttribute('transform',
         `translate(${ankkuri.dataset.kx} ${ankkuri.dataset.ky}) scale(${zoom})`);
@@ -5687,12 +5774,12 @@ export class UI {
    * data-määreeseen. Ilman sitä palautus joutuisi rakentamaan heilunnan
    * uudelleen samasta siemenestä — kaksi kopiota samasta säännöstä.
    *
-   * KERROIN SAA OLLA YLI YHDEN (omistajan linjaus 25.8.2026, kiinteä
-   * ruutukoko): yleiskuvassa laattaa SUURENNETAAN, jotta sen halkaisija
-   * on ruudulla sama kuin lähikuvassa. Palautus omaan kokoon on siis
-   * ykkösen kohta eikä "ykkönen tai enemmän" — pyöristysvara mukana,
-   * jottei tismalleen oikean kokoiselle laatalle kirjoiteta turhaa
-   * muunnosta joka piirrossa.
+   * KERROIN SAA OLLA YLI YHDEN: kapealla ruudulla lehden perustaso on
+   * niin kaukana, että FOKUS_LAATTA_PX vaatii laatalta enemmän kuin sen
+   * oma lautakoko. Palautus omaan kokoon on siis ykkösen kohta eikä
+   * "ykkönen tai enemmän" — pyöristysvara mukana, jottei tismalleen
+   * oikean kokoiselle laatalle kirjoiteta turhaa muunnosta joka
+   * piirrossa.
    */
   asetaLaatanKoko(osa, kerroin) {
     if (osa.dataset.laattaMuunnos === undefined) {
@@ -5711,37 +5798,42 @@ export class UI {
       + `translate(${-x} ${-y}) ${perus}`.trimEnd());
   }
 
-  /* --- NAPPULA JA AARREMERKKI RUUDUN MITTAAN (omistaja 26.8.2026) ---- */
+  /* --- NAPPULA JA AARREMERKKI KARTAN MITTAAN (omistaja 26.8.2026) ---- */
 
   /**
-   * Käänteisskaalaus yhdelle kartan merkille — 1 fokusnäkymän ulkopuolella.
+   * Kokokerroin yhdelle kartan merkille — 1 fokusnäkymän ulkopuolella.
    *
-   * `px` on merkin haluttu LÄPIMITTA RUUDULLA ja `omaR` sen säde laudan
-   * yksiköissä. Sama laskutoimitus kuin nykyisen kaupungin laatalla
-   * (paivitaFokusLaatta); erillinen funktio, koska nappulan siirto
-   * tarvitsee kertoimen kesken animaation (animatePawnSisalla).
+   * `px` on merkin haluttu LÄPIMITTA RUUDULLA LEHDEN PERUSTASOLLA ja
+   * `omaR` sen säde laudan yksiköissä. Sama laskutoimitus kuin nykyisen
+   * kaupungin laatalla (paivitaFokusLaatta); erillinen funktio, koska
+   * nappulan siirto tarvitsee kertoimen kesken animaation
+   * (animatePawnSisalla).
+   *
+   * KERROIN ON VAKIO, EI ZOOMIN KÄÄNTEISLUKU (omistajan linjaus
+   * 26.8.2026, ks. fokusMerkkiSkaala). Nappula ja aarremerkki elävät
+   * kartan mukana kuten kaikki muukin lehdellä: perustasolla ne ovat
+   * `px`:n kokoisia, lähennettäessä isompia ja loitonnettaessa
+   * pienempiä.
    *
    * EHTO ON SAMA KUIN LAATALLA (fokusmoodi ja pelinäkymä) eikä lehden
    * olemassaolo: pallurat ovat samat pallurat myös maassa, jolle
    * esirenderöityä pohjaa ei vielä ole — ja juuri sellaisen maan yli
    * aloituslento kulkee.
    *
-   * KERROIN ON KATTO, EI KIINTEÄ KOKO — tässä kohdin sääntö EROAA
-   * nykyisen kaupungin laatasta (FOKUS_LAATTA_PX, joka suurentaa
-   * yleiskuvassa). Omistajan tilaus 26.8.2026 koski nimenomaan
-   * fokusnäkymän jättimäisiä merkkejä: *"Yleiskuvassa koot ennallaan."*
-   * Laattoja on kartalla yksi (pelaajan oma), mutta aarremerkkejä
-   * kertyy pelin mittaan kymmeniä — kiinteä ruutukoko täyttäisi
-   * yleiskuvan 20 pikselin kiekoilla, vaikka kaupungit itse ovat siinä
-   * zoomissa nuppineulanpäitä. Skaalaus tehdään siis vain silloin, kun
-   * se PIENENTÄÄ.
+   * KATTO ON YHÄ YKSI — tässä kohdin sääntö EROAA nykyisen kaupungin
+   * laatasta. Omistajan tilaus 26.8.2026: *"Yleiskuvassa koot
+   * ennallaan."* Laattoja on kartalla yksi (pelaajan oma), mutta
+   * aarremerkkejä kertyy pelin mittaan kymmeniä, eikä niitä pidä
+   * SUURENTAA yli oman lautakokonsa missään näkymässä. Kerroin 1 on
+   * sekin vakio, joten merkki skaalautuu kartan mukana silloinkin kun
+   * katto puree.
    */
   fokusMerkkiKerroin(px, omaR) {
     if (!this.fokusmoodi || this.katselu) return 1;
     if (!(omaR > 0)) return 1;
-    const skaala = this.nakyvaAlue()?.skaala;
-    if (!Number.isFinite(skaala) || skaala <= 0) return 1;
-    return Math.min(1, (px / 2) / (omaR * skaala));
+    const s = this.fokusMerkkiSkaala();
+    if (!(s > 0)) return 1;
+    return Math.min(1, (px / 2) * s / omaR);
   }
 
   /**

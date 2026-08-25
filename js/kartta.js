@@ -2560,15 +2560,20 @@ export class Kartta {
      * taustapaluussa: ei erovertailua, turha ajo on halpa).
      */
     /*
-     * KIINTEIDEN MERKKIEN VASTASKAALA NIPISTYKSEN AIKANA (omistajan
-     * iPad-havainto 25.8.2026: "Kartan kohdepisteet eivät ole kiinteän
-     * kokoisia vaan muuttuvat zoomatessa"). Ele skaalaa koko SVG:n
-     * CSS:llä, joten ruutukokoon käänteisskaalatut merkkikerrokset
-     * paisuivat eleen ajaksi ja napsahtivat kokoonsa vasta lopussa.
-     * Merkkikerrokset (js/fokuskohteet.js, js/fokuspiste.js,
-     * js/fokusnosto-symbolit.js) rekisteröivät tänne päivittäjänsä,
-     * jota kutsutaan eleen kerroin mukanaan — työ on muutama
-     * setAttribute per kehys.
+     * RUUTUMITTAISTEN MERKKIEN VASTASKAALA NIPISTYKSEN AIKANA. Ele
+     * skaalaa koko SVG:n CSS:llä, joten ruutukokoon käänteisskaalatut
+     * merkkikerrokset paisuisivat eleen ajaksi ja napsahtaisivat
+     * kokoonsa vasta lopussa. Merkkikerrokset (js/fokuskohteet.js,
+     * js/fokuspiste.js, js/fokusnosto-symbolit.js) rekisteröivät tänne
+     * päivittäjänsä, jota kutsutaan eleen kerroin mukanaan — työ on
+     * muutama setAttribute per kehys.
+     *
+     * MEKANISMI JÄI, MERKITYS KAPENI (omistajan LOPULLINEN linjaus
+     * 26.8.2026): fokuslehden päällä merkit ovat nyt KARTAN
+     * MITTAKAAVASSA (js/ui.js fokusMerkkiSkaala), ja niiden pitääkin
+     * suurentua eleen mukana — silloin rekisteröity funktio kirjoittaa
+     * saman vakiomuunnoksen ja `suhde` ohitetaan. Vastaskaala on
+     * voimassa vain lehdettömällä varapolulla, joka on yhä ruutumitassa.
      */
     const vastaskaalaaMerkit = (suhde) => {
       for (const f of this.ui.nipistysVastaskaalaajat ?? []) {
