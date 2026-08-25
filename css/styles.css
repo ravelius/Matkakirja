@@ -4524,6 +4524,17 @@ body.fokus-atlas-nakyma .staattinen,
 body.fokus-atlas-nakyma .taide-pohja { display: none; }
 
 /*
+ * Myös vanhan laudan paperirae pois atlasnäkymästä (Fable 25.8.2026,
+ * omistajan linjaus "vanha maailmankartta kokonaan pois näkyvistä"):
+ * rae on laudan levyinen multiply-suorakaide, joka piirtyisi lehtien
+ * päälle joka kehyksessä — mittauksissa toiseksi suurin pudonneiden
+ * kehysten lähde. Lehdissä on oma paperitekstuurinsa maalattuna, joten
+ * mitään ei jää puuttumaan. Sama ennakkotapaus kuin lennolla
+ * (body.flight-active .grain).
+ */
+body.fokus-atlas-nakyma .grain { display: none; }
+
+/*
  * LAATTA ON FOKUSNÄKYMÄN TUTKI-NAPPI (omistajan pelitestitilaus
  * 24.8.2026): alarivillä on vain Liiku, ja tutkiminen alkaa nykyisen
  * kaupungin laatan napautuksesta. Laatta piirtyy lehden päällä pienenä
