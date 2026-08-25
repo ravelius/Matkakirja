@@ -73,8 +73,9 @@ export const INTRO_RUUTU = 'Vintiltä löytyi isoisän matkalaukku ja '
  * lyhentää"): toinen virke pois — se toisti etusivun revityn sivun,
  * ja aloituksen pitää olla kevyt.
  */
+// "tätä hetkeä" palautettu (omistaja 25.8.2026).
 export const LENTO_RUUTU = 'Kone nousee. Isoisän kirja aukeaa '
-  + 'sylissäni kuin se olisi odottanut.';
+  + 'sylissäni kuin se olisi odottanut tätä hetkeä.';
 
 /** Luennat: sama teksti tunnetagein (eleven_v3; tagit englanniksi). */
 const TYOT = [
@@ -89,7 +90,7 @@ const TYOT = [
   {
     tiedosto: 'assets/audio/puhe-lento-alku.mp3',
     luenta: '[curious] Kone nousee. [short pause] Isoisän kirja aukeaa '
-      + 'sylissäni kuin se olisi odottanut. [long pause]',
+      + 'sylissäni kuin se olisi odottanut tätä hetkeä. [long pause]',
   },
 ];
 
