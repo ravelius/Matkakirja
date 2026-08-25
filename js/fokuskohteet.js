@@ -449,10 +449,14 @@ const KOHDE_ZOOM_MS = 320;
  * pystyruudulla turhan pieneksi; nyt kumpikin suunta katsoo omaa
  * sivuaan ja kartalle jää joka reunalle vain kapea kaista.
  */
-const KOHDE_ZOOM_LEVEIN = 0.96;
-const KOHDE_ZOOM_KORKEIN = 0.94;
+/*
+ * Omistajan palaute 25.8.2026 v1103:sta: "Kuvat isommalla" — katot
+ * nostettu lähes koko ruutuun ja reunus puolitettu.
+ */
+const KOHDE_ZOOM_LEVEIN = 0.99;
+const KOHDE_ZOOM_KORKEIN = 0.97;
 /** Vähimmäisreunus pikseleinä, ettei paperi puske ruudun reunaan asti. */
-const KOHDE_ZOOM_REUNA = 20;
+const KOHDE_ZOOM_REUNA = 10;
 /** Kuvalle jäävä vähimmäisosuus ruudun korkeudesta, jos kuvateksti on pitkä. */
 const KOHDE_ZOOM_VAHIN_OSUUS = 0.28;
 /** Kehyksen kapein sallittu ulkomitta pikseleinä. */
