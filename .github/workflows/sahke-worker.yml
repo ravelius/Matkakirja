@@ -1,0 +1,220 @@
+# Julkaisee Sähkejärjestelmä-workerin (worker/sahke/).
+#
+# MITÄ TÄMÄ ON: moninpelin taustapalvelu. Pelaaja perustaa retkikunnan
+# ja kutsuu siihen kuuden merkin koodilla enintään seitsemän
+# matkakumppania; jäsenet näkevät toistensa etenemisen sähkeinä ja
+# voivat pyytää apua laatan arvoitukseen. Sähkeessä ei ole riviäkään
+# vapaata tekstiä — se on valkolistattu pohja ja kaupunkitunnus.
+# Arkkitehtuuri ja rajapinta: docs/raportit/sahke-suunnitelma-2026-08-25.md.
+#
+# AJO KÄSIN (workflow_dispatch): Actions → "Sähkejärjestelmä: julkaise
+# worker" → Run workflow. Ajo ei käynnisty pushista, koska julkaisu on
+# omistajan päätös eikä sivuvaikutus.
+#
+# SALAISUUDET (Settings → Secrets and variables → Actions):
+#   CLOUDFLARE_API_TOKEN  pakollinen — Workers- ja D1-oikeuksin
+#                         (Workers Scripts: Edit + D1: Edit)
+#   R2_ACCOUNT_ID         pakollinen — Cloudflaren tilitunnus, on jo
+#                         olemassa (peilaus ja ehdotusworker käyttävät)
+#   SAHKE_TIETOKANTA      vapaaehtoinen — D1-tietokannan nimi, oletus
+#                         matkakirja-sahke (ajo luo sen jos puuttuu)
+#
+# Sähkeworkerilla EI OLE pääavainta: jokainen retkikunnan jäsen saa
+# oman avaimensa liittyessään, eikä workerille aseteta yhtään
+# salaisuutta. Siksi tässä ajossa ei ole "wrangler secret put" -askelta.
+
+name: 'Sähkejärjestelmä: julkaise worker'
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Yksi julkaisu kerrallaan; keskeneräistä ei katkaista. Skeeman ajo ja
+# deploy eivät saa mennä päällekkäin toisen ajon kanssa.
+concurrency:
+  group: sahke-worker
+  cancel-in-progress: false
+
+env:
+  # Mistä peli tulee. Worker vertaa tätä pyynnön Origin-otsakkeeseen,
+  # joka on aina pelkkä alkuosa ILMAN polkua. Useampi arvo erotetaan
+  # pilkulla. Localhost kelpaa aina ilman listausta.
+  SAHKE_ORIGINIT: 'https://ravelius.github.io'
+  WRANGLER_VERSIO: 'wrangler@4'
+  WRANGLER_SEND_METRICS: 'false'
+  CI: 'true'
+
+jobs:
+  julkaisu:
+    name: Julkaise worker
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Testit ennen julkaisua: sähkeworkerin koko logiikka ajetaan
+      # Nodessa muistivarastoa vasten, joten portti on ilmainen.
+      - name: Aja sähkeworkerin testit
+        run: node --test tests/sahke-worker.test.mjs
+
+      # Puuttuva salaisuus tulee muuten vastaan vasta wranglerin
+      # sekavana virheenä. Näin ajo kertoo heti mikä nimi puuttuu —
+      # arvoja ei tulosteta, vain onko ne asetettu (sama malli kuin
+      # ehdotukset-worker.yml:ssä).
+      - name: Tarkista että salaisuudet ovat tallessa
+        env:
+          TUNNUS: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          TILI: ${{ secrets.R2_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "$TUNNUS" ] || puuttuu="$puuttuu CLOUDFLARE_API_TOKEN"
+          [ -n "$TILI" ]   || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Näitä salaisuuksia ei löydy tästä reposta:$puuttuu"
+            echo "Lisää ne osoitteessa Settings > Secrets and variables >"
+            echo "Actions > Repository secrets. API-tunnuksella on oltava"
+            echo "Workers Scripts: Edit ja D1: Edit -oikeudet."
+            exit 1
+          fi
+          echo "Molemmat salaisuudet löytyvät."
+
+      - name: Asenna wrangler
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/wrangler"
+          npm install --prefix "$RUNNER_TEMP/wrangler" --no-fund --no-audit "$WRANGLER_VERSIO"
+          echo "WRANGLER=$RUNNER_TEMP/wrangler/node_modules/.bin/wrangler" >> "$GITHUB_ENV"
+
+      # Tietokanta luodaan vain jos sitä ei ole. Olemassa olevaan ei
+      # kosketa — siellä ovat kaikki elossa olevat retkikunnat.
+      # Tunniste (uuid) luetaan listauksesta, ei luonnin tulosteesta:
+      # näin sama askel toimii sekä ensimmäisellä että sadannella
+      # julkaisulla.
+      - name: Etsi tai luo D1-tietokanta
+        working-directory: ${{ github.workspace }}
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          SAHKE_TIETOKANTA: ${{ secrets.SAHKE_TIETOKANTA }}
+        run: |
+          set -euo pipefail
+          nimi="${SAHKE_TIETOKANTA:-matkakirja-sahke}"
+          if ! "$WRANGLER" d1 list --json > "$RUNNER_TEMP/d1-lista.json" 2> "$RUNNER_TEMP/d1-virhe.log"; then
+            echo "::error title=D1-listaus epäonnistui::Tarkista, että CLOUDFLARE_API_TOKEN kelpaa (D1: Edit) ja R2_ACCOUNT_ID on oikein."
+            cat "$RUNNER_TEMP/d1-virhe.log"
+            exit 1
+          fi
+          tunniste=$(node -e '
+            const lista = JSON.parse(require("fs").readFileSync(process.argv[1], "utf8"));
+            const osuma = (Array.isArray(lista) ? lista : []).find((d) => d.name === process.argv[2]);
+            process.stdout.write(osuma ? (osuma.uuid ?? osuma.database_id ?? "") : "");
+          ' "$RUNNER_TEMP/d1-lista.json" "$nimi")
+          if [ -z "$tunniste" ]; then
+            echo "Tietokantaa $nimi ei ole — luodaan."
+            "$WRANGLER" d1 create "$nimi"
+            "$WRANGLER" d1 list --json > "$RUNNER_TEMP/d1-lista.json"
+            tunniste=$(node -e '
+              const lista = JSON.parse(require("fs").readFileSync(process.argv[1], "utf8"));
+              const osuma = (Array.isArray(lista) ? lista : []).find((d) => d.name === process.argv[2]);
+              process.stdout.write(osuma ? (osuma.uuid ?? osuma.database_id ?? "") : "");
+            ' "$RUNNER_TEMP/d1-lista.json" "$nimi")
+          else
+            echo "Tietokanta $nimi on jo olemassa."
+          fi
+          if [ -z "$tunniste" ]; then
+            echo "::error::D1-tietokannan tunnistetta ei saatu selville."
+            exit 1
+          fi
+          # Tunniste ei ole salaisuus (se ei yksin avaa mitään), mutta
+          # se ei silti kuulu repoon — vain tämän ajon ympäristöön.
+          echo "SAHKE_TIETOKANTA_NIMI=$nimi" >> "$GITHUB_ENV"
+          echo "SAHKE_TIETOKANTA_ID=$tunniste" >> "$GITHUB_ENV"
+
+      # Asetustiedosto syntyy templatesta: tietokannan nimi, tunniste ja
+      # originit tulevat ympäristöstä, eikä repoon jää tunnisteita.
+      - name: Rakenna wrangler.toml templatesta
+        env:
+          SAHKE_TIETOKANTA: ${{ env.SAHKE_TIETOKANTA_NIMI }}
+          SAHKE_TIETOKANTA_ID: ${{ env.SAHKE_TIETOKANTA_ID }}
+        run: |
+          set -euo pipefail
+          envsubst '${SAHKE_TIETOKANTA} ${SAHKE_TIETOKANTA_ID} ${SAHKE_ORIGINIT}' \
+            < worker/sahke/wrangler.toml.template \
+            > worker/sahke/wrangler.toml
+          # Tarkistus, ettei yksikään paikkamerkki jäänyt täyttämättä:
+          # tyhjä database_id julkaisisi workerin ilman varastoa.
+          if grep -q '\${' worker/sahke/wrangler.toml; then
+            echo "::error::wrangler.toml jäi vajaaksi — paikkamerkki täyttämättä."
+            exit 1
+          fi
+          # Tunniste sensuroidaan tulosteesta, muu asetus näkyy sellaisenaan.
+          sed 's/^database_id = .*/database_id = "(piilotettu)"/' worker/sahke/wrangler.toml
+
+      # Skeema ennen deployta: uusi worker ei saa vastata pyyntöihin
+      # ennen kuin taulut ovat olemassa. Kaikki lauseet ovat
+      # IF NOT EXISTS, joten ajo on turvallinen joka julkaisussa.
+      - name: Aja skeema tietokantaan
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          "$WRANGLER" d1 execute "$SAHKE_TIETOKANTA_NIMI" \
+            --config worker/sahke/wrangler.toml \
+            --remote --yes --file worker/sahke/skeema.sql
+
+      - name: Julkaise worker
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          "$WRANGLER" deploy --config worker/sahke/wrangler.toml 2>&1 \
+            | tee "$RUNNER_TEMP/deploy.log"
+          osoite=$(grep -Eo 'https://[A-Za-z0-9._-]+\.workers\.dev' "$RUNNER_TEMP/deploy.log" | head -1 || true)
+          if [ -n "$osoite" ]; then
+            echo "SAHKE_OSOITE=$osoite" >> "$GITHUB_ENV"
+          else
+            echo "::warning title=Osoitetta ei löytynyt::Julkaisu meni läpi, mutta workers.dev-osoitetta ei tunnistettu tulosteesta. Katso ajon loki."
+          fi
+
+      - name: Kerro mitä julkaistiin
+        if: success()
+        run: |
+          {
+            echo "## Sähkejärjestelmä on julkaistu"
+            echo
+            if [ -n "${SAHKE_OSOITE:-}" ]; then
+              echo "**Workerin osoite:**"
+              echo
+              echo "\`\`\`"
+              echo "$SAHKE_OSOITE"
+              echo "\`\`\`"
+            else
+              echo "Osoitetta ei saatu poimittua automaattisesti — se on muotoa"
+              echo "\`https://matkakirja-sahke.<tunnuksesi>.workers.dev\`."
+            fi
+            echo
+            echo "**Kerro tämä osoite Fablelle**, niin se kirjataan pelin"
+            echo "sähkemoduulin osoitevakioon. Ennen sitä moninpeli on"
+            echo "piilossa — mikään ei ole rikki."
+            echo
+            echo "- Tietokanta: \`${SAHKE_TIETOKANTA_NIMI}\` (D1, skeema ajettu)"
+            echo "- Sallittu origin: \`$SAHKE_ORIGINIT\` (+ localhost)"
+            echo "- Salaisuuksia ei aseteta: jokaisella jäsenellä on oma avain"
+            echo "- Siivous: cron 04:17 UTC, sähkeet 14 vrk, retkikunta 30 vrk"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # Täytetty asetus sisältää tietokannan tunnisteen — se ei kuulu
+      # mihinkään pysyvään.
+      - name: Siivoa väliaikainen asetus
+        if: always()
+        run: rm -f worker/sahke/wrangler.toml

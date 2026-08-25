@@ -1,0 +1,47 @@
+# Sähkejärjestelmä-workerin asetusPOHJA.
+#
+# TÄMÄ ON TEMPLATE, EI VALMIS ASETUS. Tietokannan nimi, sen tunniste ja
+# sallitut originit tulevat ympäristömuuttujista julkaisuhetkellä
+# (envsubst), jotta repoon ei jää tunnisteita eikä osoitteita:
+#
+#   .github/workflows/sahke-worker.yml
+#     envsubst < wrangler.toml.template > wrangler.toml
+#     wrangler d1 execute --file worker/sahke/skeema.sql
+#     wrangler deploy
+#
+# Tilitunnus (account_id) EI ole täällä: wrangler lukee sen
+# ympäristömuuttujasta CLOUDFLARE_ACCOUNT_ID, joka on ajon salaisuus.
+#
+# Muuttujat, jotka envsubst korvaa:
+#   ${SAHKE_TIETOKANTA}     D1-tietokannan nimi (oletus matkakirja-sahke)
+#   ${SAHKE_TIETOKANTA_ID}  D1-tietokannan tunniste (haetaan ajossa)
+#   ${SAHKE_ORIGINIT}       sallitut originit pilkulla erotettuna
+
+name = "matkakirja-sahke"
+main = "worker.js"
+compatibility_date = "2026-08-25"
+
+[vars]
+# Worker ei päästä ketään läpi ennen kuin tässä on pelin oma osoite:
+# puolivalmis asetus on kiinni, ei auki. Paikallinen kehityspalvelin
+# (localhost) kelpaa aina, sitä ei tarvitse listata.
+SAHKE_ORIGINIT = "${SAHKE_ORIGINIT}"
+
+# D1 EIKÄ KV: kahdeksan pelaajaa kirjoittaa samaan tilannekuvaan
+# yhtaikaa ja lukee sitä sekunneittain. Rivipohjainen varasto ei
+# ylikirjoita rinnakkaisia lähetyksiä eikä tarjoile vanhentunutta
+# tilaa. Perustelu kokonaisuudessaan: worker/sahke/varasto.js.
+[[d1_databases]]
+binding = "SAHKE"
+database_name = "${SAHKE_TIETOKANTA}"
+database_id = "${SAHKE_TIETOKANTA_ID}"
+
+# Siivous kerran vuorokaudessa: sähkeet ja apupyynnöt vanhenevat 14
+# vuorokaudessa, hiljentynyt retkikunta 30:ssä. Kellonaika on vino
+# tarkoituksella — tasatunnit ovat Cloudflaren ruuhkaisimmat.
+[triggers]
+crons = ["17 4 * * *"]
+
+# SALAISUUKSIA EI ASETETA. Sähkeworkerilla ei ole pääavainta: jokainen
+# jäsen saa oman avaimensa liittyessään, ja tietokannassa on vain sen
+# tiiviste.
