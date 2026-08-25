@@ -6,7 +6,9 @@
  * juttuidean siihen lehteen, jota hän on juuri lukemassa. Saman
  * lomakkeen perässä on PRO-OSIO: omistajan henkilökohtaisesti
  * hyväksymä ammattilainen (valokuvaaja, tutkija) kirjautuu
- * sähköpostillaan ja pysyvällä koodillaan ja saa oman tekijäsivun
+ * sähköpostillaan ja pysyvällä koodillaan, lähettää MATERIAALIA
+ * julkaisun vaatimilla tiedoilla (oikeudet, nimeämisrivi, konteksti)
+ * ja saa oman tekijäsivun
  * (js/tekijakortti.js) vastineeksi laadukkaasta sisällöstä. Lähetys
  * menee Cloudflare Workerin kautta yksityiseen ämpäriin
  * (worker/ehdotukset/), josta omistaja lukee sen työhuoneen
@@ -63,11 +65,42 @@ export const PRO_TALLE = 'matkakirja-pro-tunnus';
 /** Profiilikuvan pisin sivu: tekijäsivun kuva on pieni muotokuva. */
 const PRO_KUVAN_SIVU = 1024;
 
+/*
+ * PRO-MATERIAALIN kuvan pisin sivu (omistaja 25.8.2026). Tuottajan
+ * kuva on julkaisukelpoista lehtimateriaalia eikä puhelimen
+ * pikakuva, joten se saa oman rajansa — yleisen ehdotuksen raja
+ * (EHDOTUS_KUVAN_SIVU) pysyy ennallaan.
+ */
+export const PRO_MATERIAALIN_SIVU = 2000;
+
+/**
+ * LISENSSIVAIHTOEHDOT — sama suljettu lista kuin workerissa
+ * (worker/ehdotukset/pro.js: MATERIAALIN_LISENSSIT). Raamattu vaatii,
+ * että oikeudet kirjataan kirjallisesti; valinta listasta on
+ * kirjaus, vapaa teksti ei ole.
+ */
+export const PRO_LISENSSIT = [
+  { arvo: 'matkakirja', nimi: 'Vain Matkakirja-käyttö (peli ja sen julisteet)' },
+  { arvo: 'cc-by-4.0', nimi: 'CC BY 4.0' },
+  { arvo: 'cc-by-sa-4.0', nimi: 'CC BY-SA 4.0' },
+];
+
+/** Lisenssin ihmisluettava nimi tunnuksesta. */
+export function proLisenssinNimi(arvo) {
+  return PRO_LISENSSIT.find((l) => l.arvo === arvo)?.nimi ?? arvo ?? '';
+}
+
 /** Linkkejä enintään — sama raja kuin workerissa. */
 export const PRO_LINKKEJA = 3;
 
 /** Esittelyn merkkikatto — sama raja kuin workerissa. */
 export const PRO_ESITTELY = 600;
+
+/** Materiaalin faktan merkkikatto — sama raja kuin workerissa (1–2 virkettä). */
+export const PRO_FAKTA = 500;
+
+/** Nimeämisrivin merkkikatto — sama raja kuin workerin yksirivisillä kentillä. */
+export const PRO_NIMEAMISRIVI = 200;
 
 /** Kupla vasta, kun peliä on pelattu tämän verran. */
 const EHDOTUS_KUPLAN_VIIVE_MS = 10 * 60 * 1000;
@@ -161,6 +194,25 @@ export async function skaalaaEhdotusKuva(tiedosto, sivu = EHDOTUS_KUVAN_SIVU) {
  * ------------------------------------------------------------------ */
 
 /**
+ * Lomakkeen postitus workerille yhtenä paikkana.
+ *
+ * Kaikki kolme lähetystä (ehdotus, pro-materiaali, pro-profiili)
+ * käsittelevät vastauksen samalla tavalla: JSON jos on, workerin oma
+ * virheteksti jos se antoi sellaisen, muuten HTTP-numero.
+ *
+ * @param {string} polku workerin reitti, esim. '/laheta'
+ * @param {FormData} lomake lähetettävä lomake
+ * @returns {Promise<object>} workerin vastaus
+ */
+async function postita(polku, lomake) {
+  const vastaus = await fetch(`${EHDOTUS_OSOITE}${polku}`, { method: 'POST', body: lomake });
+  let data = null;
+  try { data = await vastaus.json(); } catch { /* tyhjä runko */ }
+  if (!vastaus.ok) throw new Error(data?.virhe ?? `HTTP ${vastaus.status}`);
+  return data ?? { ok: true };
+}
+
+/**
  * Lähettää ehdotuksen workerille.
  *
  * @param {object} ehdotus kentät lomakkeesta
@@ -179,13 +231,66 @@ export async function lahetaEhdotus(ehdotus) {
   lomake.append('hunaja', ehdotus.hunaja ?? '');
   for (const kuva of ehdotus.kuvat ?? []) lomake.append('kuvat', kuva);
 
-  const vastaus = await fetch(`${EHDOTUS_OSOITE}/laheta`, { method: 'POST', body: lomake });
-  let data = null;
-  try { data = await vastaus.json(); } catch { /* tyhjä runko */ }
-  if (!vastaus.ok) {
-    throw new Error(data?.virhe ?? `HTTP ${vastaus.status}`);
-  }
-  return data ?? { ok: true };
+  return postita('/laheta', lomake);
+}
+
+/**
+ * PRO-MATERIAALIN saateteksti työhuoneelle.
+ *
+ * Julkaisutiedot menevät workerin metaan omina kenttinään, MUTTA ne
+ * kirjoitetaan lisäksi ehdotuksen tekstin alkuun rakenteisena
+ * lohkona. Näin omistajan Lukijoilta-lehti näyttää ne heti myös
+ * silloin, kun selain puhuu vanhemmalle workerille, joka ei uusia
+ * kenttiä vielä tunne — eikä tieto katoa mihinkään väliin.
+ *
+ * @param {object} m materiaalin kentät
+ * @returns {string} saateteksti
+ */
+export function proMateriaaliTeksti(m) {
+  const rivit = [
+    `[Pro-materiaali${m.tekija ? ` · ${m.tekija}` : ''}]`,
+    `Paikka: ${m.paikka ?? ''}`,
+    `Aihe: ${m.aihe ?? ''}`,
+    `Fakta: ${m.fakta ?? ''}`,
+    `Nimeäminen: ${m.nimeamisrivi ?? ''}`,
+    `Lisenssi: ${proLisenssinNimi(m.lisenssi)}`,
+  ];
+  if (m.video) rivit.push(`Video: ${m.video}`);
+  return rivit.join('\n');
+}
+
+/**
+ * Lähettää kirjautuneen pro-tuottajan MATERIAALIN.
+ *
+ * Reitti on sama /laheta kuin lukijan ehdotuksella — materiaali on
+ * ehdotus siinä missä muutkin, ja omistaja lukee kaikki samalta
+ * Lukijoilta-lehdeltä. Ero on mukana kulkeva tunnuspari: worker
+ * tunnistaa tuottajan ja vaatii julkaisun edellyttämät tiedot.
+ *
+ * @param {object} m { sahkoposti, koodi, tekija, paikka, aihe, fakta,
+ *   nimeamisrivi, lisenssi, video, kuvat, sivu }
+ * @returns {Promise<object>} workerin vastaus
+ */
+export function lahetaProMateriaali(m) {
+  const lomake = new FormData();
+  lomake.append('teksti', proMateriaaliTeksti(m));
+  lomake.append('sivu', m.sivu || 'Pro-materiaali');
+  lomake.append('sahkoposti', m.sahkoposti ?? '');
+  lomake.append('koodi', m.koodi ?? '');
+  // Nimimerkki on tuottajan nimi, jotta lähetys erottuu listassa;
+  // nimeämisrivi on eri asia ja kulkee omana kenttänään.
+  lomake.append('nimimerkki', m.tekija ?? '');
+  lomake.append('saaKrediitteihin', 'on');
+  lomake.append('oikeudet', m.oikeudet ? 'on' : '');
+  lomake.append('lisenssi', m.lisenssi ?? '');
+  lomake.append('nimeamisrivi', m.nimeamisrivi ?? '');
+  lomake.append('paikka', m.paikka ?? '');
+  lomake.append('aihe', m.aihe ?? '');
+  lomake.append('fakta', m.fakta ?? '');
+  lomake.append('video', m.video ?? '');
+  for (const kuva of m.kuvat ?? []) lomake.append('kuvat', kuva);
+
+  return postita('/laheta', lomake);
 }
 
 /* ------------------------------------------------------------------ *
@@ -592,7 +697,7 @@ export async function tarkistaPro(sahkoposti, koodi) {
  * @param {object} profiili { sahkoposti, koodi, esittely, linkit, kuva }
  * @returns {Promise<object>} workerin vastaus
  */
-export async function lahetaProProfiili(profiili) {
+export function lahetaProProfiili(profiili) {
   const lomake = new FormData();
   lomake.append('sahkoposti', profiili.sahkoposti ?? '');
   lomake.append('koodi', profiili.koodi ?? '');
@@ -600,13 +705,7 @@ export async function lahetaProProfiili(profiili) {
   for (const linkki of profiili.linkit ?? []) lomake.append('linkit', linkki);
   if (profiili.kuva) lomake.append('kuva', profiili.kuva);
 
-  const vastaus = await fetch(`${EHDOTUS_OSOITE}/pro-profiili`, {
-    method: 'POST', body: lomake,
-  });
-  let data = null;
-  try { data = await vastaus.json(); } catch { /* tyhjä runko */ }
-  if (!vastaus.ok) throw new Error(data?.virhe ?? `HTTP ${vastaus.status}`);
-  return data ?? { ok: true };
+  return postita('/pro-profiili', lomake);
 }
 
 /** Tuottajan tilan suomeksi lomakkeen tilariville. */
@@ -617,8 +716,208 @@ function proTilaTeksti(tila) {
   return 'Et ole vielä lähettänyt profiilia.';
 }
 
+/* ------------------------------------------------------------------ *
+ * MATERIAALIN LÄHETYS (omistaja 25.8.2026)
+ *
+ * Tuottajan tekijäsivu kertoo KUKA hän on; tämä lohko on se, minkä
+ * takia hänet on kutsuttu: varsinainen kuva tai video. Lomake kerää
+ * kerralla ne tiedot, joita ilman materiaalia ei voi julkaista —
+ * jälkikäteen kysyminen sähköpostitse on hidasta ja unohtuu:
+ *
+ *   OIKEUDET   rasti + lisenssi + nimeämisrivi (Raamattu: oikeudet ja
+ *              nimeämisrivi kirjataan aina kirjallisesti)
+ *   KONTEKSTI  paikka + aihe + 1–2 virkkeen fakta → täkyn
+ *              lunastusteksti syntyy näistä
+ *   MUOTO      kuva pienennetään 2000 pikseliin, video on pelkkä linkki
+ *
+ * Pakolliset kentät tarkistetaan sekä täällä (heti, ilman verkkoa)
+ * että workerissa (koska selaimeen ei voi luottaa).
+ * ------------------------------------------------------------------ */
+
 /**
- * Kirjautuneen tuottajan näkymä: omakuva, esittely ja linkit.
+ * Materiaalilohko kirjautuneelle tuottajalle.
+ *
+ * @param {object} tunnus { sahkoposti, koodi }
+ * @param {object} tiedot workerin /pro-tarkista-vastaus
+ * @returns {HTMLElement} lohko
+ */
+function proMateriaaliLohko(tunnus, tiedot) {
+  const lohko = html('div', 'periaate-ehdotus pro-materiaali');
+  lohko.appendChild(html('h4', 'periaate-valiotsikko', 'Lähetä materiaalia'));
+  lohko.appendChild(html('p', 'periaate-teksti',
+    'Kuva tai video lehteen. Täytä myös oikeudet ja konteksti — '
+    + 'niistä kirjoitetaan kuvan lähderivi ja täkyn lunastusteksti.'));
+
+  /* --- muoto: kuvat ja video --- */
+  const kuvaNimio = html('label', 'periaate-nimio', `Kuvat (enintään ${EHDOTUS_KUVIA})`);
+  const kuvaKentta = html('input', 'periaate-kentta pro-materiaali-kuvat');
+  kuvaKentta.type = 'file';
+  kuvaKentta.accept = 'image/jpeg,image/png,image/webp,image/heic,image/heif';
+  kuvaKentta.multiple = true;
+  kuvaNimio.appendChild(kuvaKentta);
+  lohko.appendChild(kuvaNimio);
+
+  lohko.appendChild(html('p', 'periaate-huomio',
+    `Vaakakuvat vähintään ${PRO_MATERIAALIN_SIVU} px pitkältä sivulta; `
+    + `lähetys pienentää suuremmat siihen mittaan. Video: linkki riittää.`));
+
+  const kuvaTieto = html('p', 'periaate-huomio');
+  kuvaTieto.setAttribute('role', 'status');
+  lohko.appendChild(kuvaTieto);
+
+  const video = html('input', 'periaate-kentta pro-materiaali-video');
+  video.type = 'url';
+  video.placeholder = 'Videon osoite (vapaaehtoinen)';
+  video.setAttribute('aria-label', 'Videon osoite, vapaaehtoinen');
+  lohko.appendChild(video);
+
+  /* --- konteksti --- */
+  lohko.appendChild(html('h4', 'periaate-valiotsikko', 'Konteksti'));
+
+  const paikka = html('input', 'periaate-kentta pro-materiaali-paikka');
+  paikka.type = 'text';
+  paikka.placeholder = 'Paikka: missä kuvattu?';
+  paikka.setAttribute('aria-label', 'Paikka, missä kuvattu');
+  lohko.appendChild(paikka);
+
+  const aihe = html('input', 'periaate-kentta pro-materiaali-aihe');
+  aihe.type = 'text';
+  aihe.placeholder = 'Aihe: mikä eläin tai kohde?';
+  aihe.setAttribute('aria-label', 'Aihe, mikä eläin tai kohde');
+  lohko.appendChild(aihe);
+
+  const fakta = html('textarea', 'periaate-kentta pro-materiaali-fakta');
+  fakta.rows = 3;
+  fakta.maxLength = PRO_FAKTA;
+  fakta.placeholder = 'Fakta (1–2 virkettä): mitä kuvassa tapahtuu tai miksi se on kiinnostava?';
+  fakta.setAttribute('aria-label', 'Fakta, yksi tai kaksi virkettä');
+  lohko.appendChild(fakta);
+
+  /* --- oikeudet --- */
+  lohko.appendChild(html('h4', 'periaate-valiotsikko', 'Oikeudet'));
+
+  const oikeudet = html('label', 'periaate-rasti');
+  const oikeusRasti = document.createElement('input');
+  oikeusRasti.type = 'checkbox';
+  oikeusRasti.className = 'pro-materiaali-oikeudet';
+  oikeudet.appendChild(oikeusRasti);
+  oikeudet.appendChild(html('span', '',
+    'Myönnän Matkakirjalle oikeuden käyttää materiaalia pelissä ja sen julisteissa.'));
+  lohko.appendChild(oikeudet);
+
+  const lisenssiNimio = html('label', 'periaate-nimio', 'Lisenssi');
+  const lisenssi = html('select', 'periaate-kentta pro-materiaali-lisenssi');
+  for (const vaihtoehto of PRO_LISENSSIT) {
+    const rivi = document.createElement('option');
+    rivi.value = vaihtoehto.arvo;
+    rivi.textContent = vaihtoehto.nimi;
+    lisenssi.appendChild(rivi);
+  }
+  lisenssiNimio.appendChild(lisenssi);
+  lohko.appendChild(lisenssiNimio);
+
+  const nimeaminen = html('input', 'periaate-kentta pro-materiaali-nimeaminen');
+  nimeaminen.type = 'text';
+  nimeaminen.maxLength = PRO_NIMEAMISRIVI;
+  nimeaminen.placeholder = 'Nimeämisrivi, esim. "Kuva: Maija Meikäläinen"';
+  nimeaminen.setAttribute('aria-label', 'Nimeämisrivi');
+  // Valmis ehdotus tuottajan omasta nimestä: rivin saa yhä muuttaa,
+  // mutta tyhjää kenttää ei tarvitse tuijottaa.
+  nimeaminen.value = tiedot.nimi ? `Kuva: ${tiedot.nimi}` : '';
+  lohko.appendChild(nimeaminen);
+
+  const nappi = html('button', 'primary periaate-laheta', 'Lähetä materiaali');
+  nappi.type = 'button';
+  lohko.appendChild(nappi);
+
+  const huomio = html('p', 'periaate-huomio');
+  huomio.setAttribute('role', 'status');
+  lohko.appendChild(huomio);
+
+  /* --- toiminta --- */
+  let valitut = [];
+  kuvaKentta.addEventListener('change', async () => {
+    const tiedostot = [...(kuvaKentta.files ?? [])];
+    if (tiedostot.length > EHDOTUS_KUVIA) {
+      valitut = [];
+      kuvaTieto.textContent = `Valitse enintään ${EHDOTUS_KUVIA} kuvaa.`;
+      return;
+    }
+    if (!tiedostot.length) {
+      valitut = [];
+      kuvaTieto.textContent = '';
+      return;
+    }
+    kuvaTieto.textContent = 'Valmistellaan kuvia…';
+    valitut = [];
+    for (const tiedosto of tiedostot) {
+      // eslint-disable-next-line no-await-in-loop
+      valitut.push(await skaalaaEhdotusKuva(tiedosto, PRO_MATERIAALIN_SIVU));
+    }
+    const megat = valitut.reduce((summa, k) => summa + (k.size ?? 0), 0) / (1024 * 1024);
+    kuvaTieto.textContent = `${valitut.length} kuvaa valmiina (${megat.toFixed(1)} Mt).`;
+  });
+
+  nappi.addEventListener('click', async () => {
+    // Järjestys on lomakkeen järjestys: pelaajaa ei hyppyytetä ylös
+    // ja alas, vaan puutteet kerrotaan ylhäältä alas.
+    const puute = (viesti, kentta) => {
+      huomio.textContent = viesti;
+      kentta?.focus();
+    };
+    if (!valitut.length && !video.value.trim()) {
+      puute('Valitse kuva tai anna videon osoite.', video);
+      return;
+    }
+    if (!paikka.value.trim()) { puute('Kerro, missä materiaali on kuvattu.', paikka); return; }
+    if (!aihe.value.trim()) { puute('Kerro, mikä eläin tai kohde on aiheena.', aihe); return; }
+    if (!fakta.value.trim()) { puute('Kirjoita 1–2 virkkeen fakta.', fakta); return; }
+    if (!oikeusRasti.checked) {
+      puute('Myönnä vielä käyttöoikeus materiaaliin.', oikeusRasti);
+      return;
+    }
+    if (!nimeaminen.value.trim()) {
+      puute('Kirjoita nimeämisrivi — se päätyy kuvan lähderiville.', nimeaminen);
+      return;
+    }
+
+    nappi.disabled = true;
+    huomio.textContent = 'Lähetetään…';
+    try {
+      await lahetaProMateriaali({
+        ...tunnus,
+        tekija: tiedot.nimi ?? '',
+        paikka: paikka.value.trim(),
+        aihe: aihe.value.trim(),
+        fakta: fakta.value.trim(),
+        oikeudet: true,
+        lisenssi: lisenssi.value,
+        nimeamisrivi: nimeaminen.value.trim(),
+        video: video.value.trim(),
+        kuvat: valitut,
+      });
+      valitut = [];
+      kuvaKentta.value = '';
+      video.value = '';
+      paikka.value = '';
+      aihe.value = '';
+      fakta.value = '';
+      kuvaTieto.textContent = '';
+      nappi.disabled = false;
+      huomio.textContent = 'Kiitos! Materiaali on perillä ja odottaa omistajan '
+        + 'arviota. Oikeudet ja nimeämisrivi tallennettiin lähetyksen mukana.';
+    } catch (err) {
+      console.warn('Pro-materiaalin lähetys ei onnistunut:', err);
+      nappi.disabled = false;
+      huomio.textContent = `Lähetys ei onnistunut: ${err.message}`;
+    }
+  });
+
+  return lohko;
+}
+
+/**
+ * Kirjautuneen tuottajan näkymä: materiaalin lähetys ja oma tekijäsivu.
  *
  * @param {object} tunnus { sahkoposti, koodi }
  * @param {object} tiedot workerin /pro-tarkista-vastaus
@@ -628,8 +927,9 @@ function proNakyma(tunnus, tiedot) {
   const lohko = html('div', 'pro-nakyma');
 
   const tervehdys = html('p', 'periaate-teksti',
-    `Hei ${tiedot.nimi || tunnus.sahkoposti}! Tässä on oma tekijäsivusi. `
-    + 'Se näkyy pelaajalle kuviesi lähderiviltä.');
+    `Hei ${tiedot.nimi || tunnus.sahkoposti}! Täältä lähetät materiaalia `
+    + 'lehtiin, ja täältä hoidat oman tekijäsivusi — se näkyy pelaajalle '
+    + 'kuviesi lähderiviltä.');
   lohko.appendChild(tervehdys);
 
   const tila = html('p', 'periaate-huomio', proTilaTeksti(tiedot.tila));
@@ -639,17 +939,29 @@ function proNakyma(tunnus, tiedot) {
     lohko.appendChild(html('p', 'periaate-huomio', `Omistajan viesti: ${tiedot.kommentti}`));
   }
 
+  /*
+   * MATERIAALI ENSIN, tekijäsivu väkäsen taakse (omistaja 25.8.2026:
+   * "Pelissä on jo se pro syöttö"). Tekijäsivu tehdään kerran,
+   * materiaalia lähetetään joka kerta — siksi tämä järjestys.
+   */
+  lohko.appendChild(proMateriaaliLohko(tunnus, tiedot));
+
+  const profiili = html('details', 'periaate-ehdotus pro-profiililohko');
+  profiili.appendChild(html('summary', 'periaate-valiotsikko',
+    'Oma tekijäsivu — kuva, esittely ja linkit'));
+  lohko.appendChild(profiili);
+
   /* --- omakuva --- */
   const kuvaNimio = html('label', 'periaate-nimio', 'Oma kuva (1 kpl)');
   const kuvaKentta = html('input', 'periaate-kentta');
   kuvaKentta.type = 'file';
   kuvaKentta.accept = 'image/jpeg,image/png,image/webp';
   kuvaNimio.appendChild(kuvaKentta);
-  lohko.appendChild(kuvaNimio);
+  profiili.appendChild(kuvaNimio);
   const kuvaTieto = html('p', 'periaate-huomio',
     tiedot.profiili?.kuva ? 'Kuva on tallessa. Uusi valinta korvaa sen.' : '');
   kuvaTieto.setAttribute('role', 'status');
-  lohko.appendChild(kuvaTieto);
+  profiili.appendChild(kuvaTieto);
 
   /* --- esittely --- */
   const esittely = html('textarea', 'periaate-kentta');
@@ -658,10 +970,10 @@ function proNakyma(tunnus, tiedot) {
   esittely.placeholder = `Lyhyt esittely (enintään ${PRO_ESITTELY} merkkiä)`;
   esittely.setAttribute('aria-label', 'Esittely');
   esittely.value = tiedot.profiili?.esittely ?? '';
-  lohko.appendChild(esittely);
+  profiili.appendChild(esittely);
 
   /* --- linkit --- */
-  lohko.appendChild(html('p', 'periaate-huomio',
+  profiili.appendChild(html('p', 'periaate-huomio',
     `Linkit omille sivuillesi (enintään ${PRO_LINKKEJA}, http- tai https-osoite).`));
   const linkkiKentat = [];
   for (let i = 0; i < PRO_LINKKEJA; i += 1) {
@@ -671,20 +983,20 @@ function proNakyma(tunnus, tiedot) {
     kentta.setAttribute('aria-label', `Linkki ${i + 1}`);
     kentta.value = tiedot.profiili?.linkit?.[i]?.url ?? '';
     linkkiKentat.push(kentta);
-    lohko.appendChild(kentta);
+    profiili.appendChild(kentta);
   }
 
   const nappi = html('button', 'primary periaate-laheta', 'Lähetä profiili');
   nappi.type = 'button';
-  lohko.appendChild(nappi);
+  profiili.appendChild(nappi);
+
+  const huomio = html('p', 'periaate-huomio');
+  huomio.setAttribute('role', 'status');
+  profiili.appendChild(huomio);
 
   const ulos = html('button', 'ghost pro-ulos', 'Unohda tunnukseni tältä laitteelta');
   ulos.type = 'button';
   lohko.appendChild(ulos);
-
-  const huomio = html('p', 'periaate-huomio');
-  huomio.setAttribute('role', 'status');
-  lohko.appendChild(huomio);
 
   let valittu = null;
   kuvaKentta.addEventListener('change', async () => {
@@ -727,8 +1039,13 @@ function proNakyma(tunnus, tiedot) {
 
   ulos.addEventListener('click', () => {
     asetaProTunnus(null);
-    huomio.textContent = 'Tunnukset unohdettu. Avaa osio uudelleen ja kirjaudu koodillasi.';
+    // Viesti tilariville eikä profiilin huomioon: profiili on väkäsen
+    // takana, ja suljetun väkäsen sisällä oleva kuittaus ei näy.
+    tila.textContent = 'Tunnukset unohdettu. Avaa osio uudelleen ja kirjaudu koodillasi.';
     nappi.disabled = true;
+    for (const painike of lohko.querySelectorAll('.pro-materiaali button')) {
+      painike.disabled = true;
+    }
   });
 
   return lohko;

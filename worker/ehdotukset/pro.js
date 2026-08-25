@@ -37,6 +37,12 @@
  *   POST /pro-profiili             tuottaja  kuva + esittely + linkit
  *   GET  /tekija/<id>              pelaaja   julkaistu profiili
  *   GET  /tekija/<id>/kuva         pelaaja   julkaistun profiilin kuva
+ *
+ * MATERIAALIN LÄHETYS ei ole täällä vaan ehdotuskanavan /laheta-
+ * reitillä (kasittelija.js): materiaali on ehdotus siinä missä
+ * pelaajankin lähetys, ja omistaja lukee kaikki samalta
+ * Lukijoilta-lehdeltä. Tämä moduuli antaa siihen vain tunnistuksen
+ * (tunnista) ja lisenssilistan (MATERIAALIN_LISENSSIT).
  */
 
 /** Kansioetuliitteet ämpärissä. */
@@ -93,6 +99,19 @@ export const PRO_KUVA_TYYPIT = {
 
 /** Julkisen tunnuksen muoto — sama tarkistus joka reitillä. */
 const TUNNUS_MUOTO = /^[a-z0-9]{4,32}$/;
+
+/*
+ * MATERIAALIN LISENSSIT (omistaja 25.8.2026). Raamatun eläintäky- ja
+ * pro-materiaalilinjaus: "oikeudet ja nimeämisrivi kirjataan aina
+ * kirjallisesti". Siksi lisenssi on VALINTA suljetusta listasta eikä
+ * vapaa teksti — vapaasta tekstistä ei myöhemmin tiedä, mitä
+ * julisteessa saa käyttää.
+ *
+ *   matkakirja    vain tässä pelissä ja sen julisteissa
+ *   cc-by-4.0     CC BY 4.0 (nimeäminen)
+ *   cc-by-sa-4.0  CC BY-SA 4.0 (nimeäminen, sama lisenssi)
+ */
+export const MATERIAALIN_LISENSSIT = ['matkakirja', 'cc-by-4.0', 'cc-by-sa-4.0'];
 
 /* ------------------------------------------------------------------ *
  * Pienet apurit
@@ -185,9 +204,12 @@ function julkinenProfiili(tietue) {
  * Tuntematon osoite tekee saman vertailun valekoodia vasten, jottei
  * vastausaika kerro, onko osoite rekisterissä.
  *
+ * Vietynä myös ehdotuskanavan käyttöön: /laheta tunnistaa pro-
+ * tuottajan samalla parilla, kun tämä lähettää materiaalia.
+ *
  * @returns {Promise<{avain: string, tietue: object}|null>} tuottaja tai null
  */
-async function tunnista(env, posti, koodi, apu) {
+export async function tunnista(env, posti, koodi, apu) {
   const annettu = normalisoiKoodi(koodi);
   const VALE = 'ZZZZZZZZ';
   if (!posti || annettu.length !== KOODIN_PITUUS) {

@@ -17452,6 +17452,30 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
 }
 
 /*
+ * MATERIAALIN LÄHETYS (omistaja 25.8.2026). Kirjautuneen tuottajan
+ * lohko on lomakkeen pisin osa, joten sen ryhmät erotetaan väliotsikon
+ * ilmavuudella eikä uusilla laatikoilla — paperi pysyy paperina.
+ * Kentät perivät .periaate-kentta-tyylin; tässä on vain ero.
+ */
+.pro-materiaali .periaate-valiotsikko { margin-top: 1.1rem; }
+
+/* Lisenssivalinta on select, jonka oma nuoli ei peri kentän kirjasinta. */
+.pro-materiaali-lisenssi {
+  font-family: var(--font-type);
+  font-size: 0.9rem;
+}
+
+/*
+ * Tekijäsivu on kertaluontoinen työ, joten se taittuu väkäsen taakse
+ * materiaalin alle. Väkänen on osion sisäinen, ei uusi lohko: siksi
+ * kevyempi yläviiva kuin .periaate-ehdotuksella oletuksena.
+ */
+.pro-profiililohko > summary {
+  cursor: pointer;
+  margin: 0;
+}
+
+/*
  * Lähderivin tekijännimi on painike, ei linkki: se ei vie ulos vaan
  * avaa pelin oman kortin. Ulkoasu on silti tekstin oma — lähderivi
  * ei saa muuttua nappuloiden riviksi.

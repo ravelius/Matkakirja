@@ -15,6 +15,8 @@
  *
  * REITIT
  *   POST /laheta               julkinen, CORS vain pelin originille
+ *                              (pro-tuottajan materiaali kulkee samaa
+ *                              reittiä sähköposti + koodi mukanaan)
  *   GET  /lista?avain=…        vain avaimella (metat, uusin ensin)
  *   GET  /kohde/<polku>?avain= vain avaimella (kuvan nouto)
  *   PUT  /kommentti?avain=…    vain avaimella (kuratointi)
@@ -28,7 +30,10 @@
  * ilman avainta.
  */
 
-import { proOmistajanPolku, proPolku, proReitti, proSelaimenPolku } from './pro.js';
+import {
+  MATERIAALIN_LISENSSIT, normalisoiSahkoposti, proOmistajanPolku, proPolku, proReitti,
+  proSelaimenPolku, siivoaLinkki, tunnista as tunnistaPro,
+} from './pro.js';
 
 /** Sallitut kuvatyypit ja niiden tiedostopäätteet. */
 export const KUVA_TYYPIT = {
@@ -44,6 +49,9 @@ export const KUVAN_KATTO = 8 * 1024 * 1024;
 export const TEKSTIN_KATTO = 4000;
 export const KENTAN_KATTO = 200;
 export const LISTAN_KATTO = 200;
+
+/** Pro-lähetyksen faktavirkkeet — 1–2 virkettä, ei esseetä. */
+export const FAKTAN_KATTO = 500;
 
 /** Ehdotuksen kuratointitilat (kirjataan meta.jsoniin). */
 export const TILAT = ['uusi', 'kuratoitu', 'hyvaksytty', 'hylatty'];
@@ -152,6 +160,63 @@ export function turvallinenPolku(polku) {
  * POST /laheta
  * ------------------------------------------------------------------ */
 
+/**
+ * PRO-LÄHETYKSEN JULKAISUTIEDOT (omistaja 25.8.2026).
+ *
+ * Kun lomakkeessa on koodi, lähettäjä on kirjautunut pro-tuottaja ja
+ * lähetys on MATERIAALIA eikä pelkkä idea. Silloin vaaditaan ne
+ * kolme asiaa, joita ilman materiaalia ei voi julkaista:
+ *
+ *   1. OIKEUDET — rasti + lisenssi suljetusta listasta + nimeämisrivi.
+ *      Raamattu: "oikeudet ja nimeämisrivi kirjataan aina
+ *      kirjallisesti". Rivi kirjataan sellaisenaan, koska juuri se
+ *      teksti päätyy kuvan lähderiville.
+ *   2. KONTEKSTI — paikka, aihe ja 1–2 virkkeen fakta. Näistä syntyy
+ *      täkyn lunastusteksti, eikä sitä voi kirjoittaa jälkikäteen
+ *      kuvasta arvaamalla.
+ *   3. VIDEO on pelkkä osoite: tiedostoa ei oteta vastaan.
+ *
+ * Virhe on aina 400 selkeällä viestillä — puolivalmis materiaali ei
+ * saa jäädä ämpäriin odottamaan, että joku muistaa kysyä loput.
+ *
+ * @returns {{virhe: string, status: number}|{tiedot: object}} tulos
+ */
+function lueProLahetys(lomake, tietue) {
+  const oikeudetAnnettu = rasti(lomake, 'oikeudet');
+  const nimeamisrivi = kentta(lomake, 'nimeamisrivi');
+  const lisenssi = kentta(lomake, 'lisenssi', 40).toLowerCase();
+  const paikka = kentta(lomake, 'paikka');
+  const aihe = kentta(lomake, 'aihe');
+  const fakta = tekstikentta(lomake, 'fakta', FAKTAN_KATTO);
+  const videoRaaka = kentta(lomake, 'video');
+
+  if (!oikeudetAnnettu) {
+    return { virhe: 'Myönnä vielä käyttöoikeus materiaaliin.', status: 400 };
+  }
+  if (!nimeamisrivi) {
+    return { virhe: 'Kirjoita nimeämisrivi (miten tekijä merkitään).', status: 400 };
+  }
+  if (!MATERIAALIN_LISENSSIT.includes(lisenssi)) {
+    return { virhe: `Lisenssi ei kelpaa (${MATERIAALIN_LISENSSIT.join(', ')}).`, status: 400 };
+  }
+  if (!paikka || !aihe || !fakta) {
+    return { virhe: 'Täytä paikka, aihe ja lyhyt fakta.', status: 400 };
+  }
+  const video = videoRaaka ? siivoaLinkki(videoRaaka) : null;
+  if (videoRaaka && !video) {
+    return { virhe: 'Videon pitää olla http- tai https-osoite.', status: 400 };
+  }
+
+  return {
+    tiedot: {
+      pro: { tekijaId: tietue.tekijaId, nimi: tietue.nimi },
+      oikeudet: { myonnetty: true, lisenssi, nimeamisrivi },
+      konteksti: { paikka, aihe, fakta },
+      video: video?.url ?? '',
+    },
+  };
+}
+
 async function laheta(pyynto, env, kors, apurit) {
   const ampari = env?.EHDOTUKSET;
   if (!ampari) {
@@ -180,7 +245,33 @@ async function laheta(pyynto, env, kors, apurit) {
   const nimimerkki = kentta(lomake, 'nimimerkki', 80);
   const sahkoposti = kentta(lomake, 'sahkoposti', 120);
   const saaKrediitteihin = rasti(lomake, 'saaKrediitteihin');
-  const lisenssivakuutus = rasti(lomake, 'lisenssivakuutus');
+
+  /*
+   * PRO-TUOTTAJA tunnistetaan samalla sähköposti + koodi -parilla kuin
+   * /pro-tarkista. Koodi luetaan lomakkeesta eikä sitä kirjoiteta
+   * lokiin eikä metaan. Väärä pari on 401 eikä hiljainen ohitus:
+   * muuten tuottaja luulisi lähettäneensä materiaalin pro-lähetyksenä,
+   * vaikka se olisi tallentunut nimettömänä ideana ilman oikeuksia.
+   */
+  const koodiRaaka = lomake.get('koodi');
+  const proYritys = typeof koodiRaaka === 'string' && koodiRaaka.trim() !== '';
+  let pro = null;
+  if (proYritys) {
+    const loyto = await tunnistaPro(env, normalisoiSahkoposti(sahkoposti), koodiRaaka,
+      { vertaa: vertaaSalaisuus });
+    if (!loyto) {
+      return vastaa({ virhe: 'Sähköposti ja koodi eivät täsmää.' }, { status: 401, ...kors });
+    }
+    const tulos = lueProLahetys(lomake, loyto.tietue);
+    if (tulos.virhe) return vastaa({ virhe: tulos.virhe }, { status: tulos.status, ...kors });
+    pro = tulos.tiedot;
+  }
+
+  /*
+   * Pro-lähetyksen oikeuksien myöntö kattaa myös lisenssivakuutuksen:
+   * se on sama lupaus tiukempana, joten sitä ei kysytä kahdesti.
+   */
+  const lisenssivakuutus = rasti(lomake, 'lisenssivakuutus') || Boolean(pro);
 
   const tiedostot = lomake.getAll('kuvat')
     .filter((k) => k && typeof k === 'object' && typeof k.arrayBuffer === 'function');
@@ -203,7 +294,7 @@ async function laheta(pyynto, env, kors, apurit) {
     return vastaa({ virhe: 'Kuvista tarvitaan lisenssivakuutus.' },
       { status: 400, ...kors });
   }
-  if (!teksti && !tiedostot.length) {
+  if (!teksti && !tiedostot.length && !pro?.video) {
     return vastaa({ virhe: 'Kirjoita viesti tai liitä kuva.' },
       { status: 400, ...kors });
   }
@@ -229,9 +320,13 @@ async function laheta(pyynto, env, kors, apurit) {
    * koodilla). Palkkiokentät varataan JO NYT, vaikka itse lunastus
    * peliin rakennetaan vasta vaiheessa 2 — näin vanhoja meta.jsoneja
    * ei tarvitse myöhemmin siirtää.
+   *
+   * PRO-KENTÄT (versio 2) ovat null tavallisessa lukijan ehdotuksessa.
+   * Vanhat meta.jsonit jäävät versioon 1 eikä niitä siirretä: puuttuva
+   * kenttä on sama asia kuin null, ja työhuone kestää molemmat.
    */
   const meta = {
-    versio: 1,
+    versio: pro ? 2 : 1,
     aikaleima: nyt.toISOString(),
     kansio,
     sivu,
@@ -242,6 +337,11 @@ async function laheta(pyynto, env, kors, apurit) {
     sahkoposti,
     lisenssivakuutus,
     kuvat,
+    // Pro-tuottajan materiaali: julkaisun vaatimat tiedot (null muilla).
+    pro: pro?.pro ?? null,
+    oikeudet: pro?.oikeudet ?? null,
+    konteksti: pro?.konteksti ?? null,
+    video: pro?.video ?? '',
     // Kuratointi (PUT /kommentti täyttää nämä).
     tila: 'uusi',
     kommentti: '',
