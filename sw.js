@@ -198,6 +198,11 @@ const SHELL = [
   './js/die.js',
   './assets/icon.svg',
   './assets/logo.png',
+  // Etusivun työpöytäsommitelma: isoisän matkakirja ja sen alta
+  // pilkottava irtolehti (läpinäkyviä PNG:itä). Ilman esilatausta
+  // pelin ENSIMMÄINEN ruutu olisi offline-tilassa vajaa.
+  './assets/etusivu/kansikuva.png',
+  './assets/etusivu/irtolehti.png',
   // Kuvalinssit. Nämä ovat binäärejä eivätkä moduuleja — ilman
   // esilatausta ne puuttuisivat juuri offline-tilassa, jossa linssejä
   // selaillaan eniten.

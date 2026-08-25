@@ -57,15 +57,23 @@ const LOPPUTAUKO = ' <break time="1.0s" />';
  * <vuosi>" laitteen kellosta, js/ui.js) — sitä EI lueta ääneen eikä
  * se kuulu tähän vakioon.
  */
+/*
+ * V4 25.8.2026 (omistajan tilaus, etusivu-uudistus): ohjerivi
+ * "Valitse kohde kartalta" POIS tekstistä. Sen tilalle tuli
+ * KLIKATTAVA VIIMEINEN LAUSE (js/ui.js INTRO_VALINTA, "Aloitan
+ * sieltä, mistä hänkin — Lontoosta."), joka on nappi eikä
+ * kerrontaa — eikä sitä lueta ääneen sen paremmin kuin vanhaa
+ * ohjettakaan. INTRO_RUUTU päättyy siis nyt täsmälleen siihen,
+ * mihin nauhoitettu luentakin päättyy.
+ */
 export const INTRO_RUUTU = 'Vintiltä löytyi isoisän matkalaukku ja '
   + 'hänen kulunut matkakirjansa.\n\n'
   + 'Viimeinen sivu on revitty irti kesken lauseen. Mitä hän löysi — '
-  + 'ja kuka sen sivun repi?\n\n'
-  + 'Valitse kohde kartalta.';
-// HUOM: viimeinen rivi on pelaajan OHJE eikä sitä lueta ääneen
-// (omistajan päätös 10.8.2026) — luenta päättyy kysymykseen
-// "...juuri sen sivun?". Nykyinen mp3 leikattiin samasta syystä
-// (tools-ohje: scratchpadin leikkaa-intro.mjs-malli).
+  + 'ja kuka sen sivun repi?';
+// HUOM (historia): ennen 25.8.2026 vakion viimeinen rivi oli pelaajan
+// OHJE, jota ei luettu ääneen (omistajan päätös 10.8.2026) — luenta
+// päättyi kysymykseen "...sen sivun repi?". Nykyinen mp3 leikattiin
+// samasta syystä (tools-ohje: scratchpadin leikkaa-intro.mjs-malli).
 // "Huh — ehdin!" poistui 10.8.2026 illalla (omistajan tilaus) —
 // nykyinen mp3 leikattiin ensimmäisen pitkän puheryöpyn eteen.
 /*

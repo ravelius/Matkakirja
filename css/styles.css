@@ -4922,43 +4922,147 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 .pending { visibility: hidden; }
 
 /*
- * Avausteksti kartan alapuolisessa tyhjässä pergamentissa. Kartta nousee
- * ruudun yläreunaan (boardBounds jatkaa laatikkoa alaspäin), joten pelaaja
- * näkee kohteet ja voi napauttaa niitä heti luettuaan tekstin.
+ * AVAUS ON YKSI PALSTA KARTAN PÄÄLLÄ (omistajan tilaus 25.8.2026).
+ *
+ * Ennen teksti asui kartan alapuolisessa tyhjässä pergamentissa. Nyt se
+ * on yhtenä palstana keskellä paneelia, ja kartta jää sen taakse
+ * kevyesti sumennettuna (.intro-verho). Palstassa on järjestyksessä
+ * paikkarivi, avausteksti, klikattava viimeinen lause ja isoisän
+ * matkakirjan kansikuva.
+ *
+ * Paikan ja korkeuden antaa nyt CSS eikä js/ui.js placeIntro: palsta
+ * kattaa koko paneelin, ja js säätää siitä vain kirjasinkoon (fitIntro).
  */
 .intro {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  /* Avausteksti häipyy pehmeästi, kun ensimmäinen lento lähtee. */
+  inset: 0;
+  /* Avausteksti häipyy pehmeästi, kun kartalle siirrytään. */
   transition: opacity 0.9s ease;
-  /* Kaistan ylälaidan ja korkeuden laskee js/ui.js placeIntro: se on se
-     tyhjä pergamentti, joka jää laudan alle. Teksti keskittyy kaistaan. */
   display: flex;
   align-items: center;
   justify-content: center;
-  width: min(560px, 84%);
   text-align: center;
   pointer-events: none; /* kartta jää napautettavaksi tekstin takaa */
   z-index: 3;
 }
 
+/*
+ * SUMUVERHO KARTAN PÄÄLLE. Oma HTML-kerroksensa nimenomaan siksi, ettei
+ * kartan SVG:hen tule suodatinta: iOS:n webapp-tila palauttaa suodatetun
+ * SVG-kerroksen tyhjänä taustalta palattaessa (sama vika on korjattu
+ * tässä repossa jo useasti — ks. tests/sw.test.mjs).
+ *
+ * Verho ilmestyy vasta Aloita seikkailu -napin jälkeen (.intro-aloitettu):
+ * portin takana etusivulla on terävä kartta ja portin oma tummennus.
+ */
+.intro-verho {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+  /* Kevyt sumennus + hennon pergamentin sävyinen huntu, joka nostaa
+     tekstin luettavaksi kartan kuvioinnin päältä. */
+  background: rgba(239, 220, 180, 0.3);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+.intro.intro-aloitettu .intro-verho { opacity: 1; }
+
+/*
+ * FALLBACK ilman backdrop-filteriä (vanhat WebKitit): sumennusta ei saa,
+ * joten luettavuus tehdään tummemmalla hunnulla. Ilman tätä teksti jäisi
+ * terävän kartan päälle sellaisenaan.
+ */
+@supports not ((backdrop-filter: blur(3px)) or (-webkit-backdrop-filter: blur(3px))) {
+  .intro-verho { background: rgba(239, 220, 180, 0.62); }
+}
+
+/*
+ * Itse palsta. Kirjasinkoon asettaa js/ui.js fitIntro TÄHÄN elementtiin,
+ * ja lapset on mitoitettu em-yksiköissä — niin klikattava lause ja
+ * kansikuva kutistuvat tekstin mukana, kun ruutu on matala.
+ */
+.intro-palsta {
+  position: relative;
+  width: min(560px, 86%);
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Kokoa säätää js/ui.js fitIntro paneelin korkeuden mukaan
+     (INTRO_FONT_MAX/MIN); tämä on lähtöarvo ennen mittausta. */
+  font-size: 0.96rem;
+  pointer-events: none;
+}
+
+/*
+ * JULISTEOTSIKKO: teoksen nimi ladottuna, ei kuvana.
+ *
+ * Kaanonmuutos 25.8.2026 ("ISOISÄ PIIRTÄJÄNÄ"): isoisän matkakirja on
+ * nimetön kulunut muistikirja, joten nimi ei voi olla sen kannessa.
+ * Nyt se on juliste vuodelta 1873: lukukirjasin versaalina, reilu
+ * kirjainväli, kaksi riviä ja hiusviivakoristeet. Mitat ovat em-
+ * yksiköissä, joten otsikko kutistuu palstan mukana (fitIntro).
+ */
+.intro-juliste {
+  width: 100%;
+  margin: 0 0 1.3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55em;
+  font-family: var(--font-luku);
+  font-weight: 700;
+  color: var(--map-ink);
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(247, 237, 216, 0.9), 0 0 6px rgba(247, 237, 216, 0.75);
+}
+
+/* Kirjainväli levittää rivin oikealle: sama verran takaisin, jotta
+   keskitys osuu (viimeisen kirjaimen jälkeinen väli ei näy). */
+.juliste-rivi { display: block; line-height: 1.15; }
+.juliste-yla { font-size: 1.5em; letter-spacing: 0.2em; text-indent: 0.2em; }
+.juliste-ala { font-size: 0.86em; letter-spacing: 0.26em; text-indent: 0.26em; }
+
+/*
+ * Hiusviivakoriste: kaksi eripaksuista viivaa ja keskellä pelin oma
+ * merkki ◈. Viiva on kahtena kappaleena merkin molemmin puolin, koska
+ * yhtenäisen viivan katkaisu vaatisi merkin taakse umpinaisen laatan —
+ * ja sen alta pitää näkyä kartta.
+ */
+.juliste-viiva {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55em;
+  width: min(100%, 17em);
+  font-size: 0.62em;
+  letter-spacing: 0;
+  color: rgba(70, 51, 31, 0.7);
+}
+
+.juliste-viiva > span {
+  flex: 1;
+  height: 4px;
+  border-top: 1px solid rgba(70, 51, 31, 0.55);
+  border-bottom: 1px solid rgba(70, 51, 31, 0.26);
+}
+
 .intro-text {
   margin: 0;
   color: var(--map-ink);
-  /* Kokoa säätää js/ui.js fitIntro kaistan korkeuden mukaan
-     (INTRO_FONT_MAX/MIN); tämä on lähtöarvo ennen mittausta. */
-  font-size: 0.96rem;
+  font-size: 1em;
   line-height: 1.6;
-  white-space: pre-line; /* omistajan teksti on kolmena kappaleena */
+  white-space: pre-line; /* omistajan teksti on kahtena kappaleena */
   text-shadow: 0 1px 0 rgba(247, 237, 216, 0.9), 0 0 6px rgba(247, 237, 216, 0.75);
 }
 
 /*
- * Paikkarivi avaustekstin yläpuolella — kohtausmerkintä, ei repliikki.
- * Kertoja ei lue sitä (ks. index.html), joten se ei myöskään näytä
- * samalta kuin luettu teksti: pienempi, harvempi ja himmeämpi, kuin
- * käsikirjoituksen kohtausotsikko. Koko on em, jotta se seuraa
+ * Paikkarivi avaustekstin ensimmäisenä rivinä — kohtausmerkintä, ei
+ * repliikki. Kertoja ei lue sitä (ks. index.html), joten se ei myöskään
+ * näytä samalta kuin luettu teksti: pienempi, harvempi ja himmeämpi,
+ * kuin käsikirjoituksen kohtausotsikko. Koko on em, jotta se seuraa
  * fitIntron säätämää kirjasinkokoa.
  */
 .intro-paikka {
@@ -4970,7 +5074,140 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
   opacity: 0.9;
 }
 
+/*
+ * KLIKATTAVA VIIMEINEN LAUSE: nappi, joka näyttää lauseelta. Sama
+ * kirjasin ja sama koko kuin avaustekstissä, vain korostettuna —
+ * alleviivaus on kynällä vedetty viiva, ei linkin oletus.
+ *
+ * Ilmestyy vasta kun teksti on kirjoittunut loppuun, mutta varaa
+ * paikkansa jo ennen sitä (visibility eikä display), jottei palsta
+ * hyppää lauseen ilmestyessä.
+ */
+.intro-valinta {
+  margin: 1.4em 0 0;
+  padding: 0.1em 0.2em;
+  border: 0;
+  background: none;
+  min-height: 0;
+  max-width: 100%;
+  font-family: inherit;
+  font-size: 1em;
+  line-height: 1.6;
+  font-weight: 700;
+  color: var(--map-ink);
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 0 rgba(247, 237, 216, 0.9), 0 0 6px rgba(247, 237, 216, 0.75);
+  /* Alleviivaus itse tekstiin eikä napin laatikkoon: laatikon reuna
+     venyisi palstan levyiseksi ja näyttäisi väliviivalta. */
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+  text-decoration-color: rgba(70, 51, 31, 0.4);
+  cursor: pointer;
+  pointer-events: auto; /* palsta on läpinapautettava, tämä ei */
+  transition: opacity 0.8s ease, text-decoration-color 0.25s ease, transform 0.25s ease;
+}
+
+.intro-valinta:hover,
+.intro-valinta:focus-visible {
+  text-decoration-color: var(--map-ink);
+  transform: translateY(-1px);
+}
+
+/* Lause odottaa kirjoituksen loppuun näkymättömänä mutta paikallaan. */
+.intro-valinta.intro-valinta-piilossa {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/*
+ * ISOISÄN TYÖPÖYTÄ tekstin alla: revennyt matkakirja ja sen alta
+ * pilkottava irrallinen luonnoslehti. Läpinäkyvät PNG:t suoraan
+ * blurratun kartan päälle — ei kehystä, ei laatikkoa, ei varjoa,
+ * kuvat tuovat omansa. Leveys on em-yksiköissä, joten sommitelma
+ * pienenee tekstin mukana matalalla ruudulla (fitIntro).
+ */
+.intro-tyopoyta {
+  position: relative;
+  width: min(100%, 26em);
+  margin-top: 1.5em;
+  /* Irtolehti kellii laatikon ulkopuolelle: mitään ei leikata. */
+  overflow: visible;
+}
+
+.intro-kansi {
+  position: relative;
+  z-index: 1; /* kirja irtolehden päälle */
+  display: block;
+  width: 100%;
+  height: auto;
+  /* Kuvasuhde tiedetään ennen latausta, joten palstan korkeus on
+     mitattavissa heti eikä kuva hyppää paikalleen jälkikäteen. */
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/*
+ * Irtolehti kirjan alta vasemmalta, pari astetta vinossa — sommitelma
+ * on työpöytä eikä tuotekuva. Absoluuttinen, jotta se ei kasvata
+ * palstan korkeutta (fitIntro mittaa sen).
+ */
+.intro-irtolehti {
+  position: absolute;
+  z-index: 0;
+  left: -13%;
+  bottom: -5%;
+  width: 47%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  transform: rotate(-8deg);
+  pointer-events: none;
+}
+
 .intro.intro-fade { opacity: 0; }
+
+/*
+ * ALOITUSSIIRTYMÄN TYHJÄ PERGAMENTTIARKKI (js/ui.js naytaAloitusverho).
+ *
+ * Pelkkä pergamentti ja sen rakeisuus — ei suodattimia, ei sisältöä.
+ * Arkki nousee kohdekaupungin napautuksesta, raskas laudanvaihto ja
+ * kameran asettuminen tapahtuvat sen takana, ja arkki häipyy vasta
+ * valmiiseen lentonäkymään. Peittävyys on ainoa animoitava ominaisuus,
+ * joten siirtymä pysyy kompositorissa eikä jää pääsäikeen jumin alle.
+ *
+ * z-index 50: lentokalvon (7), aloitusportin (6) ja kelluvan
+ * pöllönapin (45) yläpuolella, mutta dialogien (60+) alapuolella —
+ * arkin on peitettävä KOKO näkymä, myös kartan päällä kelluvat napit.
+ */
+.aloitusverho {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  opacity: 0;
+  pointer-events: none;
+  background-color: var(--paper);
+  background-image: var(--paper-noise);
+  transition: opacity var(--verho-kesto, 420ms) ease;
+}
+
+/* Näkyvä arkki nielee myös napautukset: siirtymän aikana ei valita. */
+.aloitusverho.verho-nakyy {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/*
+ * Kelluva pöllönappi elää kartan kerrosten ulkopuolella, joten arkin
+ * z-index ei yllä sen yli (mitattu: nappi jäi näkyviin tyhjälle
+ * arkille). Se väistyy siis omalla säännöllään ja palaa arkin mukana.
+ */
+body.aloitusverho-paalla .pollo-nappi {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
 
 /*
  * Zoomatessa avausteksti työntyy alas pois näkyvistä samaa tahtia kuin
@@ -4985,7 +5222,9 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  */
 .intro.intro-pois {
   opacity: 0;
-  transform: translate(-50%, var(--intro-tyonto, 85%));
+  /* Palsta on nykyään koko paneelin levyinen (ei enää translateX(-50%)),
+     joten työntö on pelkkä pystysiirto. */
+  transform: translateY(var(--intro-tyonto, 85%));
   will-change: transform, opacity;
   transition:
     transform var(--intro-kesto, 1.2s)
@@ -5512,9 +5751,30 @@ body.flight-active .fact-card {
 }
 
 
+/*
+ * Puhelin: palsta leveämmäksi, rivit tiheämmiksi ja kansikuva
+ * pienemmäksi. Omistajan ohje 25.8.2026: iPhonella tila saa olla ahdas
+ * muttei rikki — teksti on tärkein, kuva joustaa.
+ */
 @media (max-width: 700px) {
-  .intro { width: 90%; }
+  .intro-palsta { width: 92%; }
+  .intro-juliste { margin-bottom: 1em; gap: 0.45em; }
+  .juliste-yla { font-size: 1.24em; letter-spacing: 0.16em; text-indent: 0.16em; }
+  .juliste-ala { font-size: 0.8em; letter-spacing: 0.2em; text-indent: 0.2em; }
   .intro-text { line-height: 1.5; }
+  .intro-valinta { margin-top: 1.1em; line-height: 1.4; }
+  .intro-tyopoyta { width: min(100%, 19em); margin-top: 1.1em; }
+  /* Kapealla ruudulla irtolehdelle ei ole tilaa: se valuisi palstan
+     ulkopuolelle ruudun laitaan (omistajan lupa piilottaa). */
+  .intro-irtolehti { display: none; }
+}
+
+/*
+ * Matala ruutu (vaakapuhelin): kansikuva pois — palstaan mahtuu vain
+ * teksti ja klikattava lause, ja juuri ne kaksi ovat välttämättömiä.
+ */
+@media (max-height: 520px) {
+  .intro-tyopoyta { display: none; }
 }
 
 /* Pallonpuoliskokartan kehykset ja asteverkko. */

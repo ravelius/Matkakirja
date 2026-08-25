@@ -357,26 +357,69 @@
              reunoilla. Nousee esiin vasta zoomauksen jälkeen. -->
         <div class="kiikari" aria-hidden="true"></div>
         <!--
-          Aloitusteksti kirjoittuu kartan alapuolelle jäävään tyhjään
-          pergamenttiin, jotta kohteen voi napauttaa heti luettuaan.
+          AVAUS ON YKSI PALSTA KARTAN PÄÄLLÄ (omistajan tilaus
+          25.8.2026). Kartta jää palstan taakse kevyesti sumennettuna
+          (.intro-verho, CSS backdrop-filter — EI SVG-suodattimia
+          kartan omiin kerroksiin), ja palstassa on järjestyksessä
+          paikkarivi, avausteksti, klikattava viimeinen lause ja
+          isoisän matkakirjan kansikuva.
         -->
         <section id="intro" class="intro" hidden>
-          <!-- Avausteksti kahtena osana: runko ja viimeinen rivi
-               ("mistä aloitan?"), joka lihavoidaan omistajan toiveesta.
-               Teksti itse on lukittu js/ui.js:n INTRO_TEXT-vakioon.
+          <!-- Sumuverho kartan päälle. Oma HTML-kerroksensa, jotta
+               kartan SVG pysyy suodattimettomana (iOS:n webapp-tila
+               palauttaa suodatetun SVG-kerroksen tyhjänä). -->
+          <div class="intro-verho" aria-hidden="true"></div>
+          <div class="intro-palsta">
+            <!-- JULISTEOTSIKKO (omistajan tilaus 25.8.2026, kaanonmuutos
+                 "ISOISÄ PIIRTÄJÄNÄ"): isoisän matkakirja on NIMETÖN, joten
+                 teoksen nimi ei ole enää kansikuvassa vaan ladottuna
+                 1873-julisteen tapaan: harvennettu versaali kahdella
+                 rivillä ja hiusviivakoristeet. Kaikki typografiaa, ei
+                 kuvaa. -->
+            <h2 class="intro-juliste">
+              <span class="juliste-viiva" aria-hidden="true"><span></span>◈<span></span></span>
+              <span class="juliste-rivi juliste-yla">Maailman ympäri</span>
+              <span class="juliste-rivi juliste-ala">kahdeksassakymmenessä päivässä</span>
+              <span class="juliste-viiva" aria-hidden="true"><span></span>◈<span></span></span>
+            </h2>
+            <!-- Avausteksti: paikkarivi ja runko. Teksti itse on
+                 lukittu js/ui.js:n INTRO_TEXT-vakioon.
 
-               PAIKKARIVI ON PELKKÄ RUUTUTEKSTI (omistajan tilaus
-               12.8.2026). Se on tarkoituksella HTML:ssä eikä
-               INTRO_TEXTissä: kertoja ei lue sitä, ja avaustekstin
-               luenta (assets/audio/intro-puhe.mp3) on nauhoitettu
-               täsmälleen INTRO_TEXTin mukaan. Rivi kuuluu samaan
-               kappaleeseen, jotta fitIntro mittaa senkin korkeuden ja
-               skaalaa koko avauksen yhtenä.
+                 PAIKKARIVI ON PELKKÄ RUUTUTEKSTI (omistajan tilaus
+                 12.8.2026, dynaaminen 25.8.2026). Se on
+                 tarkoituksella INTRO_TEXTin ulkopuolella: kertoja ei
+                 lue sitä, ja avaustekstin luenta
+                 (assets/audio/intro-puhe.mp3) on nauhoitettu
+                 täsmälleen INTRO_TEXTin mukaan. Sisällön kirjoittaa
+                 js/ui.js laitteen kellosta ("Heathrow, Lontoo,
+                 elokuu 2026"). Rivi kuuluu samaan kappaleeseen,
+                 jotta fitIntro mittaa senkin korkeuden ja skaalaa
+                 koko avauksen yhtenä.
 
-               ELEMENTIT SAMALLE RIVILLE: .intro-text on
-               white-space: pre-line, joten lähdekoodin rivinvaihto
-               tagien välissä näkyisi ruudulla tyhjänä rivinä. -->
-          <p id="intro-text" class="intro-text"><span class="intro-paikka">Lontoo, nykyhetki:</span><span id="intro-runko"></span><b id="intro-lopetus" class="intro-lopetus"></b></p>
+                 ELEMENTIT SAMALLE RIVILLE: .intro-text on
+                 white-space: pre-line, joten lähdekoodin rivinvaihto
+                 tagien välissä näkyisi ruudulla tyhjänä rivinä. -->
+            <p id="intro-text" class="intro-text"><span id="intro-paikka" class="intro-paikka"></span><span id="intro-runko"></span></p>
+            <!-- Klikattava viimeinen lause: nappi, joka näyttää
+                 lauseelta. Teksti tulee js/ui.js:n INTRO_VALINTA-
+                 vakiosta, ja nappi paljastuu vasta kun avausteksti on
+                 kirjoittunut loppuun. -->
+            <button id="intro-valinta" class="intro-valinta" type="button" hidden></button>
+            <!-- Isoisän työpöytä tekstin alle: revennyt matkakirja ja
+                 sen alta pilkottava irrallinen luonnoslehti, kevyesti
+                 kallistettuna. Läpinäkyvät PNG:t suoraan blurratun
+                 kartan päälle: ei kehystä, ei laatikkoa. Kirja on
+                 NIMETÖN (kaanon: "ISOISÄ PIIRTÄJÄNÄ") — teoksen nimi
+                 on julisteotsikossa. -->
+            <div class="intro-tyopoyta">
+              <img id="intro-irtolehti" class="intro-irtolehti" src="assets/etusivu/irtolehti.png"
+                   width="620" height="413" decoding="async"
+                   alt="Isoisän irrallinen luonnoslehti: lyijykynäpiirros Akropoliista">
+              <img id="intro-kansi" class="intro-kansi" src="assets/etusivu/kansikuva.png"
+                   width="820" height="547" decoding="async"
+                   alt="Isoisän kulunut nimetön matkakirja, kansi revennyt ja välistä pilkottaa luonnossivu">
+            </div>
+          </div>
         </section>
       </section>
 

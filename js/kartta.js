@@ -24,8 +24,17 @@ import { el } from './mapart.js';
 import { sfx } from './sound.js';
 import { fokusmoodiPaalla, kehittajaTilaPaalla } from './ui-apurit.js';
 
-// Kuinka paljon pergamenttia jatketaan kartan alle avaustekstiä varten.
-export const INTRO_SPACE = 0.5;
+/*
+ * Kuinka paljon pergamenttia jatketaan kartan alle avaustekstiä varten.
+ *
+ * NOLLA 25.8.2026 (omistajan etusivu-uudistus): avausteksti ei enää asu
+ * kartan ALAPUOLELLA vaan yhtenä palstana kartan PÄÄLLÄ, ja kartta jää
+ * sen taakse kevyesti sumennettuna. Kaistalle ei siis ole enää käyttöä,
+ * ja ilman sitä lauta saa koko paneelin — juuri sen kartan, jonka päälle
+ * palsta asettuu. Vakio jätetään paikalleen (eikä laskukaavoja pureta),
+ * koska kaista voi palata, jos avaus vielä muuttuu.
+ */
+export const INTRO_SPACE = 0;
 // Kuinka paljon lautaa lasketaan yläreunasta aloitusnäkymässä.
 const INTRO_TOP = 0.05;
 /*
