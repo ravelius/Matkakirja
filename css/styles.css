@@ -7403,6 +7403,82 @@ body.katselu #newgame-btn { display: none; }
   color: #9c6f1e;
 }
 
+/*
+ * LUENNAN KYTKIN PUHEKUPLAN ALLA (omistajan tilaus 25.8.2026;
+ * Raamattu, Fokusmoodi/LUENTA: *"Luenta on striimiääni, jonka kytkin on
+ * AINA puhekuplan alla painettavissa päälle ja pois"*).
+ *
+ * Rivi on kortin viimeinen lapsi, joten se asettuu tekstin — ja
+ * mahdollisen kuvanapin — alle. Ulkoasu on kortin muun kalustuksen
+ * hiljaista sukua: sama ruskea muste kuin kaiuttimella ja kuvanapilla,
+ * ei taustaa eikä reunusta, jotta merkintä pysyy pääosassa.
+ *
+ * Mitat ovat em-yksiköissä eivätkä pikseleitä: kytkin kutistuu ja
+ * kasvaa oman kirjasinkokonsa mukana, ja puhelimen pienempi kortti saa
+ * pienemmän kytkimen ilman omaa media-sääntöä.
+ *
+ * Kutistuneessa yhden rivin lapussa kytkin katoaa muiden mukana
+ * (.fact-card.pieni > *:not(.fact-place)) — lapulla ei ole mitään
+ * luettavaa näkyvissä.
+ */
+.fact-luenta {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  margin-top: 0.4rem;
+  padding: 0.1rem 0;
+  min-height: 0;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  color: #9a7c4c;
+  font-family: var(--font-type);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.fact-luenta:hover:not(:disabled) { background: none; color: #9c6f1e; }
+
+/* Ura ja nuppi piirretään currentColorilla: yksi värisäätö riittää
+ * molempiin tiloihin eikä sävyjä pääse ajautumaan erilleen. */
+.fact-luenta-ura {
+  position: relative;
+  flex: none;
+  width: 1.7em;
+  height: 0.9em;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  background: rgba(122, 85, 20, 0.1);
+  transition: background 160ms ease;
+}
+
+.fact-luenta-nuppi {
+  position: absolute;
+  top: 50%;
+  left: 0.12em;
+  width: 0.56em;
+  height: 0.56em;
+  border-radius: 50%;
+  background: currentColor;
+  transform: translateY(-50%);
+  transition: transform 160ms ease;
+}
+
+/* Päällä: nuppi oikeaan laitaan, muste tummenee. */
+.fact-luenta.paalla { color: #7a5514; }
+.fact-luenta.paalla .fact-luenta-ura { background: rgba(122, 85, 20, 0.34); }
+.fact-luenta.paalla .fact-luenta-nuppi { transform: translate(0.76em, -50%); }
+
+/* Liikeherkälle sama tila ilman liukua (vrt. päiväkirjan kutistuminen). */
+@media (prefers-reduced-motion: reduce) {
+  .fact-luenta-ura,
+  .fact-luenta-nuppi { transition: none; }
+}
+
 /* Pulman piirroksen selite: hiljainen rivi luonnoksen alla. */
 .quiz-selite {
   margin: -0.2rem 0 0.5rem;
@@ -8330,6 +8406,71 @@ body.katselu #newgame-btn { display: none; }
 .aloituslento-piste {
   fill: #c2452f;
   opacity: 0.9;
+}
+
+/*
+ * LENNON OMA NIUKKA KERROS (js/kartta.js aloituslennonNiukkuus,
+ * omistajan pelitesti v1103:sta).
+ *
+ * KOHDEMAA PIMENNOKSEEN MUIDEN MUKANA. Fokusmoodin sumuverho jättää
+ * käytyihin maihin aukot, ja peli siirtää nappulan perille jo lennon
+ * alussa — kohdemaa jäi siis ainoana maana tarkaksi ja paljasti
+ * määränpään ennen kuin kone oli siellä. Aukko on SVG-maskissa, joten
+ * sitä ei voi peittää täältä: pelin oma verho menee lennon ajaksi
+ * kokonaan piiloon ja lentokerros piirtää tilalle saman sävyisen
+ * harson ilman aukkoja.
+ *
+ * DISPLAY EIKÄ HÄIVYTYS, toisin kuin muissa lennon piilotuksissa. Kaksi
+ * verhoa on identtinen yhtä asiaa lukuun ottamatta (kohdemaan aukko),
+ * joten välitön vaihto on huomaamaton — ristiinhäivytys sen sijaan
+ * näkyisi, koska kaksi läpikuultavaa harsoa päällekkäin on tummempi
+ * kuin kumpikaan yksin. Display myös takaa, ettei maskattua kerrosta
+ * rasteroida lennon aikana lainkaan: kone ja sen perässä piirtyvä viiva
+ * mitätöivät kaaren laatikon joka kehyksellä, ja maski jouduttiin
+ * maalaamaan uudelleen sen alta. Mittaustulos ja Chromiumin todellinen
+ * pullonkaula ovat js/kartta.js:n saman nimisessä osiossa.
+ *
+ * LENTOKERROKSEN HARSO ON VUOROSTAAN PIILOSSA AINA MUULLOIN. Lippu
+ * poistuu lennon lopussa 280 ms ennen kuin js/ui.js tyhjentää
+ * lentokerroksen; ilman tätä sääntöä molemmat harsot olisivat sen
+ * hetken päällekkäin.
+ */
+body.kartalento .fokus-sumu { display: none; }
+
+/*
+ * PIILOSSA OLEVAT SYKKEET SEIS LENNON AJAKSI. Laatan sykkivä kehä ja
+ * maataulun plus-nappi ovat lennon ajan häivytettyjä (opacity: 0), mutta
+ * niiden animaatiot juoksevat silti: selain laskee molemmille uuden
+ * tyylin joka kehyksellä siinä missä koneelle ja reittiviivallekin.
+ * Mitattuna (Chromium, jäljitys 25.8.2026) lennon aikana oli käynnissä
+ * viisi animaatiota, joista kolme kuului näkymättömiin kerroksiin.
+ * Ne palaavat itsestään, kun lippu poistuu.
+ */
+body.kartalento .fokuslaatta-syke,
+body.kartalento .fokus-maataulu-lehti { animation: none; }
+
+.aloituslento-niukka { display: none; }
+
+body.kartalento .aloituslento-niukka { display: block; }
+
+/*
+ * Reitin päiden nimet: Lontoo ja kohdekaupunki, ei muuta. Sama
+ * kaunokirjoitus ja pergamenttihalo kuin fokuskartan lisänimillä
+ * (.fokus-nimi), mutta tummempana ja hiukan harvennettuna — nämä ovat
+ * lennon ainoat kaksi nimeä, ja ne luetaan harson läpi.
+ *
+ * HALON LEVEYS TULEE MÄÄREENÄ js/kartta.js:stä eikä täältä. Nimen koko
+ * on laudan yksiköitä ja riippuu lennon mittakaavasta, joten kiinteä
+ * pikselileveys olisi ruudulla milloin mitäkin — se lasketaan samasta
+ * kertoimesta kuin kirjasinkoko.
+ */
+.aloituslento-nimi {
+  font-family: var(--font-kauno);
+  fill: rgba(52, 36, 22, 0.92);
+  paint-order: stroke;
+  stroke: rgba(240, 228, 200, 0.85);
+  stroke-linejoin: round;
+  letter-spacing: 0.04em;
 }
 
 /*
@@ -17373,6 +17514,30 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
   font-family: var(--font-type);
   font-size: 0.82rem;
   text-shadow: none;
+}
+
+/*
+ * MATERIAALIN LÄHETYS (omistaja 25.8.2026). Kirjautuneen tuottajan
+ * lohko on lomakkeen pisin osa, joten sen ryhmät erotetaan väliotsikon
+ * ilmavuudella eikä uusilla laatikoilla — paperi pysyy paperina.
+ * Kentät perivät .periaate-kentta-tyylin; tässä on vain ero.
+ */
+.pro-materiaali .periaate-valiotsikko { margin-top: 1.1rem; }
+
+/* Lisenssivalinta on select, jonka oma nuoli ei peri kentän kirjasinta. */
+.pro-materiaali-lisenssi {
+  font-family: var(--font-type);
+  font-size: 0.9rem;
+}
+
+/*
+ * Tekijäsivu on kertaluontoinen työ, joten se taittuu väkäsen taakse
+ * materiaalin alle. Väkänen on osion sisäinen, ei uusi lohko: siksi
+ * kevyempi yläviiva kuin .periaate-ehdotuksella oletuksena.
+ */
+.pro-profiililohko > summary {
+  cursor: pointer;
+  margin: 0;
 }
 
 /*

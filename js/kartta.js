@@ -20,6 +20,7 @@ import {
   vaimennaTausta, palautaTausta,
 } from './ambience-stream.js';
 import { stopDiaryVoice, stopIntroVoice } from './luenta.js';
+import { el } from './mapart.js';
 import { sfx } from './sound.js';
 import { fokusmoodiPaalla, kehittajaTilaPaalla } from './ui-apurit.js';
 
@@ -180,6 +181,39 @@ const AJO_MS = 2000;
  * silloin näe onko maa loppu vai jatkuuko se ruudun ulkopuolelle.
  */
 const AJON_MARGINAALI = 0.12;
+
+/*
+ * === ALOITUSLENNON NIUKKA KERROS ====================================
+ *
+ * Mitat ovat RUUDUN PIKSELEITÄ ja muunnetaan laudan yksiköiksi vasta
+ * piirrettäessä — sama sääntö kuin lennon koneella ja viivalla (js/ui.js
+ * ALOITUSLENNON_KONE_PX): kamera seisoo lennon ajan paikallaan, joten
+ * kerroin luetaan kerran eikä joka kehyksellä.
+ */
+// Reitin päätepisteen säde. Sama kaava kuin js/ui.js:n lähtömerkillä
+// (ALOITUSLENNON_VIIVA_PX * 1.6), jotta pisteet ovat samankokoisia.
+const LENNON_PISTE_PX = 3.5;
+// Nimen kirjasinkoko. Selvästi pienempi kuin pelilaudan kaupunkinimet:
+// nämä eivät ole napautettavia kohteita vaan reitin päät.
+const LENNON_NIMI_PX = 14;
+/*
+ * Nimen etäisyys pisteestä alaspäin (pisteen keskeltä tekstin
+ * ylälaitaan). Mitta on koneen mitan mukainen: kone laskeutuu kohteen
+ * pisteen päälle, ja nimen on jäätävä sen rungon alapuolelle
+ * (js/ui.js ALOITUSLENNON_KONE_PX on 34, eli puolikas runko ~12 px).
+ */
+const LENNON_NIMI_VALI_PX = 20;
+// Pergamenttihalon leveys osuutena kirjasinkoosta (vrt. .fokus-nimi,
+// jossa suhde on 2,4 / 8). Halo pitää nimen luettavana harson päällä.
+const LENNON_HALO_OSUUS = 0.3;
+/*
+ * Lähtökaupunki on sama kuin js/ui.js:n ALOITUSLENNON_LAHTO. Arvo on
+ * tässä toistettuna, koska ui.js ei vie sitä ulos eikä sitä saa tuoda
+ * (kehäriippuvuus: ui.js tuo tämän moduulin). Jos Lontoo joskus vaihtuu,
+ * molemmat on muutettava — siksi tarkistus alla on pehmeä: tuntematon
+ * lähtö jättää nimikerroksen pois eikä kaada lentoa.
+ */
+const LENNON_LAHTO = 'lontoo';
 
 /**
  * Kiihtyy alussa, jarruttaa lopussa (omistajan sanoin "zoomi kiihtyy ja
@@ -1368,6 +1402,13 @@ export class Kartta {
     }
     this.fitViewBox();
     this.paivitaZoomiNapit();
+    /*
+     * Lennon oma kerros rakennetaan TÄSSÄ eikä lennon alussa: mitat
+     * luetaan ruudulta (nakyvaAlue), ja vasta fitViewBox on asettanut
+     * lopullisen mittakaavan. Ajo piirretään sen päälle muunnoksena,
+     * joten pisteet ja nimet skaalautuvat kartan mukana kuten kaikki muu.
+     */
+    if (this.ui.aloituslentoKesken && pakota) this.aloituslennonNiukkuus();
 
     const loppu = this.kameranTila();
     if (this.ui.reducedMotion || !alku || !loppu || kesto <= 0) {
@@ -1444,6 +1485,119 @@ export class Kartta {
       };
       ajo.kehys = requestAnimationFrame(askel);
     });
+  }
+
+  /*
+   * === ALOITUSLENNON NIUKKA KERROS ==================================
+   *
+   * Raamattu (Fokusmoodi, ALOITUSLENTO UUSIKSI): lennon kartta on
+   * niukka — lähtömaa ja kohdemaa samassa kuvassa, punainen viiva ja
+   * kone. Omistajan pelitesti v1103:sta löysi kaksi vikaa.
+   *
+   *   1. KOHDEMAA EROTTUI YHÄ. Sumuverho (js/ui.js paivitaFokusSumu)
+   *      jättää KÄYTYIHIN maihin aukot, ja peli siirtää nappulan
+   *      perille jo lennon alussa (actionPickStart). Kohdemaa oli siis
+   *      kartan mielestä käyty ja jäi ainoana maana verhon alta
+   *      tarkaksi: tumma rantaviiva ja ruskeat vuoret keskellä muuten
+   *      himmeää Eurooppaa. Määränpää paljastui ennen kuin kone oli
+   *      siellä. Maan korostusrengas ja -sävy oli jo piilotettu
+   *      (css body.kartalento), mutta verhon aukkoa ei voi peittää
+   *      CSS:llä — aukko on maskissa.
+   *   2. KARTALLA EI OLLUT NIMIÄ. Kaupunkikerros nimilappuineen on
+   *      lennon ajan piilossa (sama CSS-sääntö), joten reitin päistä
+   *      ei kertonut mikään. Omistajan tilaus: *"lennon aikana
+   *      kartalla näkyy Lontoo pisteenä + Lontoo-teksti ja Ateena
+   *      pisteenä + Ateena-teksti. Ei muita pisteitä eikä nimiä."*
+   *
+   * MOLEMMAT RATKAISTAAN LENNON OMASSA KERROKSESSA eikä pelitilan
+   * kerroksia muokkaamalla. Verho korvataan lennon ajaksi tasaisella
+   * harsolla ilman aukkoja (pelin oma verho menee samalla piiloon,
+   * css body.kartalento .fokus-sumu), ja reitin päihin piirretään kaksi
+   * pistettä nimineen. Kerros syntyy lennon kamera-ajon alussa ja
+   * katoaa itsestään, kun js/ui.js tyhjentää lentokerroksen perillä.
+   *
+   * SAMALLA MASKI KATOAA LENNON PIIRTOPOLULTA. Pelin oma verho on koko
+   * laudan kokoinen suorakaide, jonka läpinäkyvyys tulee SVG-MASKISTA
+   * (valkoinen pohja + maan ääriviiva neljänä porrastettuna vetona).
+   * Kone ja sen perässä piirtyvä viiva ovat samassa maalauskerroksessa
+   * sen päällä, joten jokainen kehys mitätöi kaaren laatikon ja verho
+   * jouduttiin maalaamaan uudestaan sen alta. Tasainen harso on pelkkä
+   * väri ilman maskia, eikä lennon aikana ole enää yhtään maskattua
+   * kerrosta.
+   *
+   * MITTAUS (Chromium kontissa, CPU 10× hidastettuna, 25.8.2026): tämä
+   * EI yksin näy kehysajoissa — ero jäi ajojen väliseen hajontaan.
+   * Chromiumin pullonkaula on muualla (koko laudan maalauslistan
+   * uudelleennauhoitus joka kehyksellä, ja profiilissa ~19 % roskien-
+   * keruuta lentorepliikin naputusäänistä, js/sound.js hiss). Maskin
+   * poisto tehdään silti: se on iOS:n tunnettu kallis kerros — sama
+   * sääntö, jolla suodattimet on kielletty kartan kerroksilta.
+   */
+
+  /**
+   * Rakentaa lennon oman kerroksen: tasainen harso, reitin päätepisteet
+   * ja niiden nimet. Kutsutaan vain lennon omasta kamera-ajosta.
+   */
+  aloituslennonNiukkuus() {
+    const kerros = this.ui.flightLayer;
+    // Kerros on kertakäyttöinen: js/ui.js tyhjentää sen ennen lentoa ja
+    // sen jälkeen. Vartija on varalta, jos ajo joskus toistuisi.
+    if (!kerros || kerros.querySelector('.aloituslento-niukka')) return;
+    const map = this.ui.game?.pack?.map;
+    if (!map?.width || !map?.height) return;
+    const g = el('g', {
+      class: 'aloituslento-niukka', 'pointer-events': 'none',
+    }, kerros);
+    /*
+     * TASAINEN HARSO KOKO LAUDALLE. Sama luokka ja siis sama pergamentin
+     * sävy kuin fokusmoodin omalla verholla — vaihdos lennon lopussa on
+     * tästä syystä huomaamaton: kerrokset ovat identtiset yhtä asiaa
+     * lukuun ottamatta, ja se yksi asia on kohdemaan aukko.
+     */
+    el('rect', {
+      x: 0,
+      y: 0,
+      width: map.width,
+      height: map.height,
+      class: 'fokus-sumu-harso aloituslento-harso',
+    }, g);
+
+    // --- Kaksi pistettä ja kaksi nimeä --------------------------------
+    const lahto = this.ui.game.board?.cityById?.get(LENNON_LAHTO);
+    const kohde = this.ui.game.cityOf?.();
+    // Ilman kumpaakin päätä nimikerros jää pois: harso on jo paikallaan,
+    // ja lento näyttää tällöin samalta kuin v1103:ssa.
+    if (!lahto || !kohde || lahto.id === kohde.id) return;
+    const skaala = this.nakyvaAlueenSkaala();
+    for (const kaupunki of [lahto, kohde]) {
+      el('circle', {
+        cx: kaupunki.x,
+        cy: kaupunki.y,
+        r: LENNON_PISTE_PX / skaala,
+        class: 'aloituslento-piste',
+      }, g);
+      const teksti = el('text', {
+        x: kaupunki.x,
+        // Nimi pisteen ALLE: kaari kaartuu aina pohjoiseen
+        // (js/ui.js aloituslennonOhjauspiste), joten alapuoli on se
+        // laita, jossa nimi ei osu viivaan kummassakaan päässä.
+        y: kaupunki.y + (LENNON_NIMI_VALI_PX + LENNON_NIMI_PX) / skaala,
+        'font-size': LENNON_NIMI_PX / skaala,
+        // Pergamenttihalo samassa mittakaavassa kuin kirjasin (css
+        // .aloituslento-nimi): kiinteä pikselileveys katoaisi tai
+        // paksuuntuisi zoomin mukana.
+        'stroke-width': (LENNON_NIMI_PX * LENNON_HALO_OSUUS) / skaala,
+        'text-anchor': 'middle',
+        class: 'aloituslento-nimi',
+      }, g);
+      teksti.textContent = kaupunki.name ?? '';
+    }
+  }
+
+  /** Kartan mittakaava ruudulla; nolla ja puuttuva alue tarkoittavat 1. */
+  nakyvaAlueenSkaala() {
+    const skaala = this.ui.nakyvaAlue?.()?.skaala;
+    return Number.isFinite(skaala) && skaala > 0 ? skaala : 1;
   }
 
   /**

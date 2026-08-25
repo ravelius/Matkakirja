@@ -54,6 +54,46 @@ const LOPUN_HILJAISUUS_S = 0.025;
 /** Pehmennyskäyrä: alkaa hitaasti, jyrkkenee lopussa (ease-in). */
 const pehmene = (t) => Math.max(0, Math.min(1, t)) ** 1.8;
 
+/*
+ * ── LUENNAN KYTKIN (omistajan tilaus 25.8.2026) ─────────────────────
+ *
+ * Raamattu (Fokusmoodi, LUENTA): *"Luenta on striimiääni, jonka kytkin
+ * on AINA puhekuplan alla painettavissa päälle ja pois."* Kytkin ohjaa
+ * ISOISÄN matkakirjamerkintöjen luentaa — pöllön repliikkejä ei lueta
+ * koskaan, joten kytkimellä ei ole niihin mitään sanottavaa.
+ *
+ * Tila on LAITEKOHTAINEN eikä pelitilanteen osa: se asuu omassa
+ * localStorage-avaimessaan eikä matkusta pelitallennuksen mukana. Sama
+ * kolmiarvoinen kaava kuin fokusmoodilla (js/ui-apurit.js): puuttuva
+ * avain tarkoittaa PÄÄLLÄ, ja vain '0' tarkoittaa pois. Kelvoton tai
+ * vanha arvo palautuu siis oletukseen eikä jätä peliä puolitilaan.
+ *
+ * Kytkin koskee vain AUTOMAATTISTA luentaa (merkintä ilmestyy → kertoja
+ * aloittaa). Kortin oma kaiutinnappi on pelaajan nimenomainen ele, ja se
+ * toimii ennallaan: pois kytketty automatiikka ei tarkoita, ettei
+ * merkintää saisi pyynnöstä kuunnella.
+ */
+const LUENTA_KYTKIN_AVAIN = 'matkakirja-luenta';
+
+/** Onko matkakirjamerkintöjen automaattinen luenta päällä. */
+export function luentaKytkinPaalla() {
+  try {
+    return localStorage.getItem(LUENTA_KYTKIN_AVAIN) !== '0';
+  } catch {
+    return true; // yksityinen selaus: oletus on päällä
+  }
+}
+
+/** Kääntää kytkimen ja muistaa tilan seuraavaan istuntoon. */
+export function asetaLuentaKytkin(paalla) {
+  try {
+    if (paalla) localStorage.removeItem(LUENTA_KYTKIN_AVAIN);
+    else localStorage.setItem(LUENTA_KYTKIN_AVAIN, '0');
+  } catch {
+    /* yksityinen selaus: tila jää vain tälle istunnolle */
+  }
+}
+
 /**
  * Avausteksti luettuna: omistajan ElevenLabsilla tuottama lukuääni
  * (assets/audio/intro-puhe.mp3). Selain ei salli ääntä ennen

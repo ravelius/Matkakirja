@@ -10,11 +10,17 @@
  * Pilotti on Ateena (Raamatun osio "Fokusmoodi": PILOTTI). Rekisteri on
  * oma tiedostonsa, jotta seuraavan kaupungin lisääminen on yhden rivin
  * työ eikä koske moottoriin (js/fokusvirta.js) lainkaan.
+ *
+ * Sofia on toinen kaupunki (omistajan lupa 25.8.2026) ja todistaa sen:
+ * uusi kaupunki oli yksi tuonti ja yksi rivi tähän tauluun. Sofia on
+ * Ateenasta yksi askel jalan pelin maantieteessä.
  */
 import { FOKUSVIRTA_ATEENA } from './fokusvirta-ateena.js';
+import { FOKUSVIRTA_SOFIA } from './fokusvirta-sofia.js';
 
 export const FOKUSVIRRAT = {
   ateena: FOKUSVIRTA_ATEENA,
+  sofia: FOKUSVIRTA_SOFIA,
 };
 
 /** Kaupungin fokusvirta tai null, jos kaupungille ei ole sisältöä. */

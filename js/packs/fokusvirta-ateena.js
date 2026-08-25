@@ -376,6 +376,28 @@ export const FOKUSVIRTA_ATEENA = {
   },
 
   /*
+   * ISOISÄN AARREMERKINTÄ — matkakirjan myöhempi sivu (omistaja
+   * 25.8.2026).
+   *
+   * Kun MAAN AARRE LÖYTYY, tämä teksti aukeaa SAMAAN perinteiseen
+   * matkakirjakorttiin kuin saapumismerkintä, ja vasta sen jälkeen
+   * pöllö kuittaa löydön (js/fokusvirta.js, ks. AARREMERKINTÄ).
+   * Paikkarivi tulee koodista muodossa "Isoisän merkintä · Ateena":
+   * tämä ei ole saapumispäivän havainto eikä siinä siksi ole
+   * päivämäärää eikä ilmanpuntaria.
+   *
+   * TEKSTI ON KAANONIA EIKÄ SITÄ SAA MUOTOILLA UUSIKSI (Fable
+   * 25.8.2026). Se sitoo Ateenan kaaren umpeen: saapumismerkinnässä
+   * isoisä kuuli torilla miehestä, joka löysi kullan mutta jota kukaan
+   * ei nähnyt kaivamassa — tässä hän myöntää seisseensa itse saman
+   * kysymyksen äärellä ja jättäneensä kaivamatta.
+   */
+  aarremerkinta: 'Seisoin samalla kalliolla enkä uskaltanut kaivaa '
+    + 'vartijan nähden — piirsin vain ristin luettelon reunaan. Jos sinä '
+    + 'pitelet nyt sitä, mitä minä vain katselin, olemme molemmat '
+    + 'löytäneet omamme.',
+
+  /*
    * NIMETYT MINITEHTÄVÄT KAUPUNKILEHDEN SIVUILLE 2 JA 3.
    *
    * Raamattu (KEVYT KULKU -KOKEILU): *"Lehden sivuilla 2 ja 3 on

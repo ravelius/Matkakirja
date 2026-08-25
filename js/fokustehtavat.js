@@ -356,22 +356,46 @@ function aarreAuki(ui, city) {
  * `auki` on tilanne ENNEN tätä vastausta: kun aarre oli jo auki, kupla
  * ei saa kertoa jäljen syttyneen — se syttyi jo aiemmasta kysymyksestä,
  * ja tästä tuli pelkkää rahaa (omistaja 25.8.2026).
+ *
+ * ── KARAKTÄÄRI (Raamattu, "Viisas Pöllö" → PÖLLÖN KARAKTÄÄRI,
+ * omistaja + Fable 25.8.2026) ──────────────────────────────────────
+ *
+ * Repliikit ovat Fablen kirjoittamia ja omistajan hyväksymiä. Pöllö on
+ * IKIVANHA SILMINNÄKIJÄ-REPORTTERI: kuiva toteavuus, enintään kaksi
+ * virkettä, EI HUUTOMERKKEJÄ. Vanhat versiot ("Aarteen jälki hehkuu nyt
+ * kartalla vihreänä", "Juliste on nyt kokoelmassasi") olivat pelin
+ * kertojaääntä eivätkä kenenkään puhetta — ne kertoivat mitä ruudulla
+ * tapahtui, eivät sitä kuka katsoo.
+ *
+ * KAHDEN VIRKKEEN KATTO PITÄÄ, VAIKKA ASIOITA ON KAKSI. Kun samaan
+ * kuplaan kuuluu sekä tulos että vinkki tekemättömästä tehtävästä,
+ * TULOS lyhenee (AARRE_RAHAA → AARRE_RAHAA_LYHYT, JULISTE_KEHU →
+ * JULISTE_TALTEEN) eikä vinkki jää pois: vinkki on pelaajalle uutta
+ * tietoa, kehu ei.
  */
+
+/** Aarteen jälki syttyi juuri — silminnäkijäheitto kerran per maa. */
+const AARRE_SYTTYI = 'Vihreä piste kartalla — kävisin katsomassa, minä olen jo käynyt.';
+/** Aarre oli jo auki: jäljellä on raha, ja pöllö laskee sen. */
+const AARRE_RAHAA = 'Oikein. Puntia matkakassaan — niitä ei laske kukaan muu kuin minä.';
+/** Sama asia yhdellä virkkeellä, kun perään tulee vielä julistevinkki. */
+const AARRE_RAHAA_LYHYT = 'Oikein, puntia matkakassaan.';
+/** Juliste irtosi. Kehu jää pois, jos tilalle tulee vinkki. */
+const JULISTE_TALTEEN = 'Juliste talteen.';
+const JULISTE_KEHU = 'Juliste talteen. Hyvä silmä.';
+
 function kuittausTeksti(ui, city, tehtava, auki) {
   const vastattu = (t) => Boolean(ui.game.minitehtavatVastatut?.has(tehtavanAvain(ui, city, t)));
   if (avaaAarteen(tehtava)) {
-    const alku = auki
-      ? 'Oikein — puntia matkakassaan.'
-      : 'Aarteen jälki hehkuu nyt kartalla vihreänä.';
     const juliste = kaupunginTehtavat(ui, city)
       .find((t) => t.palkinto === 'juliste' && !vastattu(t));
-    if (!juliste) return alku;
-    return `${alku} ${sivunSuunta(tehtava, juliste)}${juliste.otsake}-tehtävästä `
-      + 'saat vielä julisteen mukaasi.';
+    if (!juliste) return auki ? AARRE_RAHAA : AARRE_SYTTYI;
+    return `${auki ? AARRE_RAHAA_LYHYT : AARRE_SYTTYI} `
+      + `${sivunSuunta(tehtava, juliste)}${juliste.otsake}-tehtävästä irtoaa vielä juliste.`;
   }
   const aarre = auki ? null : aarteenAvaajat(ui, city).find((t) => !vastattu(t));
-  if (!aarre) return 'Juliste on nyt kokoelmassasi.';
-  return `Juliste on nyt kokoelmassasi. Aarteen jäljen paljastaa ${aarre.otsake} -tehtävä.`;
+  if (!aarre) return JULISTE_KEHU;
+  return `${JULISTE_TALTEEN} Aarteen jäljen paljastaa ${aarre.otsake} -tehtävä.`;
 }
 
 /**

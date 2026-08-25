@@ -45,6 +45,10 @@ dist/
 # wrangler.toml.template on repossa, tulos ei.
 worker/ehdotukset/wrangler.toml
 
+# Sähkeworkerin täytetty asetus syntyy samalla tavalla julkaisuajossa ja
+# sisältää D1-tietokannan tunnisteen — pohja on repossa, tulos ei.
+worker/sahke/wrangler.toml
+
 # Agenttien worktreet. Claude Code luo tanne oman git-worktreen jokaiselle
 # eristetylle agentille; ne ovat vain taman session tyokaluja, ja
 # vahingossa lisattyna ne menevat committiin upotettuna repona
