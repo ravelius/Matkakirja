@@ -4479,6 +4479,58 @@ body.fokuspohja .country-korostus { display: none; }
   cursor: pointer;
 }
 
+/* ===========================================================================
+   LAATTA SYKKII KEVYESTI (omistajan pelitestitilaus 25.8.2026)
+   ---------------------------------------------------------------------------
+   *"Ateenan laatta sykkii kevyesti houkutellen klikkaamaan."* Laatta on
+   fokusnäkymän ainoa nappi kartalla (Tutki muutti sen sisään), eikä
+   pelaaja arvaa sitä pelkästä pienestä pallurasta.
+
+   KEHÄ ON ERILLINEN, EI LAATAN OMA SKAALAUS. Laatan transform-määre on
+   pelin kirjoittama (heilunta + kiinteä ruutukoko, js/ui.js
+   asetaLaatanKoko), ja CSS:n transform voittaa määreen — sykkivä laatta
+   menettäisi siis sekä heiluntansa että paikkansa. Kehä on siksi oma
+   ympyränsä laatan ympärillä (js/ui.js paivitaFokusLaatta).
+
+   SAMAT KOLME SÄÄNTÖÄ KUIN VIHREÄLLÄ KOHTAAMISPISTEELLÄ
+   (js/fokuspiste.js, css/fokusvirta.css):
+
+     1. EI SUODATTIMIA. Suodatettu kerros palaa iOS:n taustalta tyhjänä
+        (tests/rules.test.mjs), joten sumeaa hehkua ei ole — pelkkä
+        läpikuultava ääriviiva.
+     2. MITTAKAAVA, EI `r`. SVG:n geometriamääreiden CSS-animointi ei ole
+        kaikissa selaimissa tuettua; `transform: scale()` on, ja koska
+        ympyrän keskipiste on ankkurin origossa, oletusarvoinen
+        transform-origin osuu samaan pisteeseen.
+     3. VAIN opacity JA transform. Kompositori hoitaa molemmat ilman
+        uudelleenmaalausta, eikä kartan rasterointi joudu töihin.
+
+   HILLITTY EIKÄ HUOMIOPIIPPARI (omistajan sanamuoto): jakso on hidas,
+   kasvu muutaman pikselin luokkaa ja väri pergamentin oma okra
+   (--accent) läpikuultavana — sama väri, jolla peli muutenkin kuiskaa
+   (.icon-btn.tutki-syke).
+   =========================================================================== */
+.fokuslaatta-syke {
+  fill: none;
+  stroke: var(--accent, #d9a13b);
+  stroke-width: 1.4;
+  opacity: 0.42;
+  /* Kehä on koriste: napautukset kuuluvat .fokuslaatta-osumalle. */
+  pointer-events: none;
+  animation: fokuslaatta-syke 2600ms ease-in-out infinite;
+}
+
+@keyframes fokuslaatta-syke {
+  0%, 100% { transform: scale(1); opacity: 0.42; }
+  50% { transform: scale(1.22); opacity: 0.12; }
+}
+
+/* Liikkeen välttäjälle pelkkä kehä ilman sykettä — merkki säilyy,
+   liike jää pois (sama sääntö kuin muillakin pelin sykkeillä). */
+@media (prefers-reduced-motion: reduce) {
+  .fokuslaatta-syke { animation: none; opacity: 0.38; }
+}
+
 /*
  * PÖLLÖ OSOITTAA LAATTAA. Kun laatta ilmestyy aarrevaiheessa lehden
  * päälle, se saa kevyen huomioeleen: kaksi rauhallista sykähdystä ja
@@ -8287,11 +8339,52 @@ body.katselu #newgame-btn { display: none; }
  * — nappula, kohderenkaat ja laatat olisivat kohdekaupungissa vastassa
  * ennen kuin kone on edes lähtenyt. Häivytys eikä display, jotta ne
  * palaavat pehmeästi kun lippu poistuu.
+ *
+ * KAUPUNKIKERROS (.cities) JA LAATAN OMA KERROS (.fokuslaatta, jossa
+ * napautusalue ja sykkivä kehä) TULIVAT MUKAAN 25.8.2026 kahdesta
+ * syystä.
+ * Ensinnäkin kohdekaupungin nimilappu (ATEENA, Kreeta) on samaa
+ * pelitilaa kuin laattakin: se odotti valmiina määränpäässä. Toiseksi
+ * fokusnäkymän laatta mitoitetaan RUUDULTA (js/ui.js
+ * paivitaFokusLaatta), ja mitoitus päivittyy vasta kun näkymä on
+ * asettunut — lennon aikana taas ei päivitetä mitään (ks. saman
+ * tiedoston rasterointiehto, `flight-active`). Kamera-ajo Euroopan
+ * yleiskuvaan jätti siis laatalle lähikuvan kertoimen, ja laatta
+ * levisi ruudulla kultaiseksi kiekoksi. Piilossa oleva kerros ei voi
+ * näyttää vanhentunutta mittaa, ja perillä mitta lasketaan uusiksi
+ * ensimmäisessä piirrossa.
  */
 body.kartalento .pawns,
 body.kartalento .targets,
 body.kartalento .tokens,
+body.kartalento .cities,
+body.kartalento .fokuslaatta,
 body.kartalento .fokuskuvat {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/*
+ * SAMA KOSKEE KAHTA KERROSTA, JOTKA JÄIVÄT ENNEN LEHDEN PIILOON
+ * (omistajan pelitesti 25.8.2026).
+ *
+ *   .fokuspisteet     kevyen kulun vihreä kohtaamispiste (js/fokuspiste.js)
+ *                     — omistaja näki sen vilkkuvan kohdemaan päällä
+ *                     kesken lennon, koska peli oli jo siirtänyt
+ *                     matkaajan perille.
+ *   .country-tint     nykyisen maan sävytys ja punamullan värinen
+ *   .country-korostus ääriviiva. Ne piiloutuivat ennen sen sivuvaikutuksena,
+ *                     että lehti oli kartalla (body.fokuspohja); nyt lehteä
+ *                     ei lennon aikana ole, ja ilman tätä kohdemaa
+ *                     rajautuisi punaisella kesken lennon. Lentonäkymän
+ *                     ainoa punainen on reittiviiva.
+ *
+ * Häivytys eikä display, samasta syystä kuin yllä: ne palaavat pehmeästi
+ * kun lippu poistuu.
+ */
+body.kartalento .fokuspisteet,
+body.kartalento .country-tint,
+body.kartalento .country-korostus {
   opacity: 0;
   pointer-events: none;
 }
@@ -15989,24 +16082,54 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
 .rivi-tyhja { visibility: hidden; }
 
 /*
- * FOKUSNÄKYMÄN YHDEN NAPIN RIVI (omistajan pelitestitilaus 24.8.2026).
+ * FOKUSNÄKYMÄN YHDEN NAPIN RIVI (omistajan pelitestitilaus 24.8.2026,
+ * ulkoasu uusittu 25.8.2026).
  *
  * Tutki muutti kaupungin laattaan, ja alariville jää vain Liiku. Tyhjää
  * paikkaa EI jätetä: silloin nappi jäisi riippumaan vasempaan reunaan
- * kuin toinen olisi unohtunut. Nappi keskitetään ja saa väljyyttä, mutta
- * ei veny leveällä ruudulla laidasta laitaan — 20rem on suunnilleen sama
- * mitta kuin kahden napin rivi puhelimella, joten kortti näyttää samalta
- * eikä rivin korkeus muutu. Liuku (matkustusnapit) on absoluuttinen ja
- * peittää rivin entiseen tapaan, joten se ei tarvitse omaa sääntöä.
+ * kuin toinen olisi unohtunut. Liuku (matkustusnapit) on absoluuttinen
+ * ja peittää rivin entiseen tapaan, joten se ei tarvitse omaa sääntöä.
+ *
+ * NAPPI ON SANA, EI PALKKI EIKÄ NELIÖ (omistajan tarkennus 25.8.2026:
+ * *"muutetaan tekstinapiksi (LIIKU) ja keskitetään sivusuunnassa ruudun
+ * alareunaan"*). Väliaikoina se oli ensin 20rem levyinen palkki ja
+ * sitten kompassineliö kartuutsin rinnalla; kumpikin kumottiin. Leveys
+ * tulee nyt sanasta ja pehmusteesta, korkeus sormen mitasta, ja kartta
+ * näkyy sen molemmin puolin.
+ *
+ * KIRJASIN ON KARTUUTSIN KÄSIALAA: harvennettu versaali, sama kuin maan
+ * nimessä ja mittajanassa (.fokus-kartuutsi). Kuvake jää piiloon —
+ * nappi on sama iconButton kuin muuallakin, joten sekä kompassi että
+ * teksti ovat olemassa ja fokusnäkymä valitsee niistä sanan.
  */
 .toimintorivi.rivi-yksi .toimintorivi-perus {
   grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
 }
 
 .toimintorivi.rivi-yksi .monitoimi-nappi {
-  width: 100%;
-  max-width: 20rem;
+  width: auto;
+  min-width: 7rem;
+  max-width: min(100%, 14rem);
+  min-height: 44px;
   margin-inline: auto;
+  padding: 0.5rem 1.7rem;
+}
+
+.toimintorivi.rivi-yksi .monitoimi-nappi .viiva-ikoni { display: none; }
+
+.toimintorivi.rivi-yksi .monitoimi-nappi .icon-label {
+  /* Alle 520 px napit kutistuvat muualla pelkiksi ikoneiksi
+     (.icon-label display:none). Tämä nappi on päinvastainen: ikoni on
+     piilossa ja sana on koko nappi, joten ilman tätä riviä puhelimella
+     jäisi tyhjä laatikko — mitattu 390 px:n ruudulla. */
+  display: inline;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  /* Harvennus lisää tilaa myös viimeisen kirjaimen jälkeen; pieni
+     siirto palauttaa sanan optiseen keskiöön. */
+  text-indent: 0.18em;
+  font-size: 0.86rem;
 }
 
 /* Pöllön paikka: nappi asuu js/pollo.js:ssä ja siirtyi tänne joka
@@ -18199,30 +18322,37 @@ button.fokus-kartuutsi:active:not(:disabled) {
 }
 
 /* ===========================================================================
-   FOKUSNÄKYMÄN ALANAPPIRIVI — LIIKU ON PIENI NELIÖ KARTUUTSIN RINNALLA
+   FOKUSNÄKYMÄN ALANAPPIRIVI — LIIKU ON KESKITETTY TEKSTINAPPI
    ---------------------------------------------------------------------------
-   Omistajan pelitestitilaus 26.8.2026: *"Liiku pieneksi neliöksi
-   (kompassi-ikoni, ei leveää tekstipalkkia) ja maan nimi -kartuutsi
-   pudotetaan sen tasolle vasempaan alareunaan"*.
+   Omistajan pelitestitilaus 25.8.2026 (KUMOAA AIEMMIN TILATUN NELIÖN):
+   *"Liiku-nappi: nykyinen alareunan neliö (kompassi-ikoni) muutetaan
+   TEKSTINAPIKSI (LIIKU) ja keskitetään sivusuunnassa ruudun alareunaan."*
 
-   KOLME MUUTOSTA, KAIKKI RAJATTU body.fokuspohjaan eli täsmälleen siihen
-   tilaan, jossa kartuutsi on ruudulla (js/ui.js paivitaFokusPohja).
-   Fokusmoodin ulkopuolella rivi on pikselilleen entisensä.
+   Neliö oli kartuutsin rinnalla vasemmassa alanurkassa, ja siellä se luki
+   kuin kartuutsin osa — kompassi ilman sanaa ei kerro, että se on pelin
+   ainoa tapa lähteä liikkeelle. Keskitetty sana LIIKU on ruudun
+   alareunan oma kaluste eikä kartuutsin liite.
 
-     1. KORTTI VASEMPAAN LAITAAN. .turn-card on muualla keskitetty
-        560 pikselin kortti; täällä se venyy laidasta laitaan ilman
-        omaa pehmustetta, jotta sen vasen reuna on täsmälleen samassa
-        kohdassa kuin kartuutsin (.fokusmitat left: 0.7rem) ja napin
-        alareuna samalla viivalla kartuutsin kanssa.
-     2. NAPPI SIIRTYY KARTUUTSIN OHI. Kartuutsin leveys riippuu maan
-        nimestä, joten se MITATAAN (js/fokusmitat.js paivitaNappipaikka)
-        ja tulee tänne muuttujana --fokus-nappipaikka. Pehmuste on
-        .toimintorivi-peruksessa eikä rivissä: matkanappien liuku on
-        rivin absoluuttinen lapsi (inset: 0) ja ankkuroituu rivin
-        PEHMUSTELAATIKKOON, joten rivin pehmuste kaventaisi liukua.
-     3. NELIÖ ON NELIÖ. Leveys ja korkeus 3rem = 48 px, eli yli Applen
-        44 pisteen kosketusrajan, eikä ikonin viereen ladota tekstiä
-        (.icon-label pois) — muuten nappi olisi taas palkki.
+   NAPIN OMA ULKOASU (sana, mitat, keskitys) ON YHDEN NAPIN RIVIN
+   YLEISSÄÄNNÖISSÄ (.toimintorivi.rivi-yksi, ks. "FOKUSNÄKYMÄN YHDEN
+   NAPIN RIVI"): se ei riipu siitä, onko maalle esirenderöityä lehteä.
+   Täällä ratkaistaan vain se, mitä kartuutsin ja mittajanan naapuruus
+   vaatii — ja nämä säännöt on siksi rajattu body.fokuspohjaan eli
+   täsmälleen siihen tilaan, jossa kartuutsi on ruudulla (js/ui.js
+   paivitaFokusPohja).
+
+     1. KORTTI LAIDASTA LAITAAN. .turn-card on muualla keskitetty
+        560 pikselin kortti; täällä se venyy laidasta laitaan ilman omaa
+        pehmustetta, jotta keskitys on RUUDUN keskitys eikä kortin.
+        Rivin vanha vasen pehmuste (--fokus-nappipaikka, mitattu
+        kartuutsin leveydestä js/fokusmitat.js:ssä) jää käyttämättä: se
+        oli olemassa vain siksi, että neliö väisti kartuutsin
+        sivusuunnassa.
+     2. EI TÖRMÄYSTÄ KARTUUTSIIN. Kartuutsi on vasemmassa ja mittajana
+        oikeassa alanurkassa; leveällä ruudulla keskelle jää tilaa, mutta
+        kapealla ei. Kapealla nappi nousee siksi kartuutsin YLÄPUOLELLE
+        (mediakysely alempana) — ei sivuun, koska keskitys on juuri se,
+        mikä tilattiin.
 
    MATKANAPPIEN LIUKU EI KUTISTU. Se peittää rivin entiseen tapaan ja
    saa keskitetyn enimmäisleveyden, jotta kolme nappia eivät veny
@@ -18247,23 +18377,12 @@ body.fokuspohja .toimintorivi { width: min(100%, 20rem); margin-inline: auto; }
 
 body.fokuspohja .toimintorivi.rivi-yksi { width: 100%; margin-inline: 0; }
 
-body.fokuspohja .toimintorivi.rivi-yksi .toimintorivi-perus {
-  padding-left: var(--fokus-nappipaikka, 0px);
-  justify-items: start;
-}
-
-body.fokuspohja .toimintorivi.rivi-yksi .monitoimi-nappi {
-  width: 3rem;
-  min-width: 3rem;
-  max-width: 3rem;
-  height: 3rem;
-  min-height: 3rem;
-  margin-inline: 0;
-  padding: 0;
-}
-
-body.fokuspohja .toimintorivi.rivi-yksi .monitoimi-nappi .icon-label { display: none; }
-
+/*
+ * Napin oma ulkoasu (sana, keskitys, mitat) on yhden napin rivin
+ * yleissäännöissä ylempänä — se ei riipu siitä, onko maalle
+ * esirenderöityä lehteä. Täällä ratkaistaan enää se, mitä kartuutsin ja
+ * mittajanan naapuruus vaatii.
+ */
 body.fokuspohja .toimintorivi-liuku {
   left: 0;
   right: 0;
@@ -18271,15 +18390,26 @@ body.fokuspohja .toimintorivi-liuku {
   margin-inline: auto;
 }
 
-/* Kapeimmalla puhelimella neliö on täsmälleen sormen mitta eikä
-   pikselia enempää: alalaidassa on myös kartuutsi ja mittajana. */
-@media (max-width: 460px) {
-  body.fokuspohja .toimintorivi.rivi-yksi .monitoimi-nappi {
-    width: 44px;
-    min-width: 44px;
-    max-width: 44px;
-    height: 44px;
-    min-height: 44px;
+/* ---------------------------------------------------------------------------
+   KAPEALLA RUUDULLA NAPPI NOUSEE KARTUUTSIN YLÄPUOLELLE.
+
+   Alalaidassa on kolme kalustetta: kartuutsi vasemmalla (maan nimestä
+   riippuen noin 220 px), mittajana oikealla (noin 230 px) ja nyt keskellä
+   LIIKU. Mitattuna ne mahtuvat samalle viivalle vasta noin 700 pikselin
+   levyisellä ruudulla; sitä kapeammalla keskitetty nappi menisi
+   kartuutsin päälle. Nousu on napin oma eikä kartuutsin: maan nimi ja
+   mittajana kuuluvat lehden alalaitaan, nappi on pelin kaluste.
+
+   Maataulu väistää mukana ilman muutoksia — se mittaa napin yläreunan
+   ruudulta (js/fokusmitat.js paivitaTaulunPohja).
+   --------------------------------------------------------------------------- */
+@media (max-width: 700px) {
+  body.fokuspohja[data-mode] .turn-card {
+    /* Kaksi riviä: jälkimmäinen ohittaa ensimmäisen siellä, missä
+       turva-alue on olemassa (iPhonen kotipalkki, ks. 640 px:n sääntö
+       ylempänä); vanhassa selaimessa jää voimaan ensimmäinen. */
+    bottom: calc(0.9rem + 3.4rem);
+    bottom: calc(0.9rem + 3.4rem + env(safe-area-inset-bottom, 0px));
   }
 }
 
