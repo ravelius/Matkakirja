@@ -5961,7 +5961,11 @@ export class UI {
        * (FOKUS_NIMI_NAPPULAN_ALLE) — muuten nimi jäisi lähikuvassa
        * nappulan alle.
        */
-      const ruudulta = (FOKUS_LAATTA_PX / 2 + 4 + FOKUS_NIMI_PX) / skaala;
+      // Kartan mittakaava, ei ruudun (omistaja 25.8.2026: "nimilaput
+      // samalla lailla") — kerroin on vakio kuten merkeillä, joten nimi
+      // kasvaa ja kutistuu laatan mukana.
+      const kerroin = this.fokusMerkkiSkaala();
+      const ruudulta = (FOKUS_LAATTA_PX / 2 + 4 + FOKUS_NIMI_PX) * kerroin;
       const etaisyys = lappu.dataset.kaupunki === oma?.id
         ? Math.max(FOKUS_NIMI_NAPPULAN_ALLE, ruudulta)
         : ruudulta;
@@ -5969,7 +5973,7 @@ export class UI {
       lappu.setAttribute('text-anchor', 'middle');
       // Heilunta pois: se kiertää tekstiä vanhan ankkurin ympäri.
       lappu.removeAttribute('transform');
-      lappu.style.fontSize = `${(FOKUS_NIMI_PX / skaala).toFixed(2)}px`;
+      lappu.style.fontSize = `${(FOKUS_NIMI_PX * kerroin).toFixed(2)}px`;
     }
   }
 
@@ -6803,27 +6807,30 @@ export class UI {
     const skaala = this.nakyvaAlue()?.skaala;
     // Ilman mitattavaa näkymää entinen koko on parempi kuin väärä.
     if (!Number.isFinite(skaala) || skaala <= 0) return;
+    // Kartan mittakaava, ei ruudun (omistaja 25.8.2026: "nimilaput
+    // samalla lailla") — sama vakio kuin merkeillä ja nimilapuilla.
+    const kerroin = this.fokusMerkkiSkaala();
     for (const osa of osat) {
       if (osa.classList.contains('target-piste')) {
         const px = Number(osa.dataset.px) || FOKUS_KOHDE_PX;
-        osa.setAttribute('r', ((px / 2) / skaala).toFixed(2));
+        osa.setAttribute('r', ((px / 2) * kerroin).toFixed(2));
       } else if (osa.classList.contains('target-nimi')) {
-        osa.setAttribute('font-size', (FOKUS_KOHDE_NIMI_PX / skaala).toFixed(2));
+        osa.setAttribute('font-size', (FOKUS_KOHDE_NIMI_PX * kerroin).toFixed(2));
         const y = Number(osa.dataset.ky);
         if (Number.isFinite(y)) {
           // Nimi merkin yläpuolelle: puolikas merkkiä ja pieni rako.
-          osa.setAttribute('y', (y - (FOKUS_KOHDE_PX / 2 + 6) / skaala).toFixed(2));
+          osa.setAttribute('y', (y - (FOKUS_KOHDE_PX / 2 + 6) * kerroin).toFixed(2));
         }
       } else {
         /*
-         * Napautusalue: sormenkokoinen ruudulla, mutta ei koskaan
+         * Napautusalue: sormenkokoinen perustasolla, mutta ei koskaan
          * pienempi kuin laudan oma alue eikä suurempi kuin naapurien
          * väli (sama katto kuin laatalla).
          */
         const perus = Number(osa.dataset.perusR) || 0;
         osa.setAttribute('r', Math.max(
           perus,
-          Math.min((FOKUS_KOHDE_OSUMA_PX / 2) / skaala, FOKUS_LAATTA_OSUMA_LAUDALLA),
+          Math.min((FOKUS_KOHDE_OSUMA_PX / 2) * kerroin, FOKUS_LAATTA_OSUMA_LAUDALLA),
         ).toFixed(2));
       }
     }
