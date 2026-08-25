@@ -167,6 +167,8 @@ const SHELL = [
   './js/packs/fokusvirta-istanbul.js',
   './js/packs/fokuskohteet-rou.js',
   './js/packs/fokusvirta-bukarest.js',
+  './js/packs/fokuskohteet-bih.js',
+  './js/packs/fokusvirta-sarajevo.js',
   './js/packs/paivan-kuvat.js',
   './js/packs/uutislahteet.js',
   './js/packs/pollo-asetukset.js',

@@ -78,6 +78,8 @@ const MODULES = [
   'js/packs/fokusvirta-istanbul.js',
   'js/packs/fokuskohteet-rou.js',
   'js/packs/fokusvirta-bukarest.js',
+  'js/packs/fokuskohteet-bih.js',
+  'js/packs/fokusvirta-sarajevo.js',
   'js/packs/fokusvirrat.js',
   'js/packs/uutislahteet.js',
   // uutiset vasta lähteidensä jälkeen (tuo uutislahteet.js:n).
