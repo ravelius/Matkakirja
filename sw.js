@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1104';
+const CACHE = 'matkakirja-2026-08-09.1105';
 const SHELL = [
   './',
   './index.html',
@@ -9,6 +9,8 @@ const SHELL = [
   './css/fokusvirta.css',
   './css/fokuskohteet.css',
   './css/fokusnosto.css',
+  // Sähkepinta lataa oman tyylinsä itse (js/sahke.js).
+  './css/sahke.css',
   './js/muutokset.js',
   './js/main.js',
   './js/ui.js',
@@ -46,6 +48,8 @@ const SHELL = [
   './js/tietajagalleria.js',
   './js/minipopup.js',
   './js/ai.js',
+  // Retkikunta, sähkeet ja kaveriapu (Raamattu: SÄHKEJÄRJESTELMÄ).
+  './js/sahke.js',
   './js/rules.js',
   './js/pack.js',
   './js/passport.js',
@@ -194,6 +198,11 @@ const SHELL = [
   './js/die.js',
   './assets/icon.svg',
   './assets/logo.png',
+  // Etusivun työpöytäsommitelma: isoisän matkakirja ja sen alta
+  // pilkottava irtolehti (läpinäkyviä PNG:itä). Ilman esilatausta
+  // pelin ENSIMMÄINEN ruutu olisi offline-tilassa vajaa.
+  './assets/etusivu/kansikuva.png',
+  './assets/etusivu/irtolehti.png',
   // Kuvalinssit. Nämä ovat binäärejä eivätkä moduuleja — ilman
   // esilatausta ne puuttuisivat juuri offline-tilassa, jossa linssejä
   // selaillaan eniten.

@@ -114,6 +114,12 @@ import {
   polloVihjePois,
 } from './pollo.js';
 import { ajastaEhdotusKupla, ehdotusOsio, proHakuRasti, proOsio } from './ehdotukset.js';
+/*
+ * SÄHKEPINTA (Raamattu, osio SÄHKEJÄRJESTELMÄ): retkikunta, sähkeet ja
+ * kaveriapu asuvat omassa moduulissaan (js/sahke.js). ui.js kutsuu
+ * siitä kahta asiaa: valikon retkikuntaosio ja piirtokutsu.
+ */
+import { paivitaSahke, retkikuntaOsio } from './sahke.js';
 import { taytaLahderivi } from './tekijakortti.js';
 // Tietäjätasot: matkalaukun nimikerivi ja pöllön onnittelukuplat.
 import {
@@ -239,7 +245,7 @@ import { MAASTO_TEKSTIT_MALLI } from './packs/maasto-tekstit-malli.js';
 import { MERISYVYYS } from './packs/maailmankartta-syvyys.js';
 import { MAASTON_VARJOSTUS } from './packs/maailmankartta-varjostus.js';
 // Remontin M7a: laudan kamera ja koordinaatit (malli B).
-import { INTRO_SPACE, Kartta } from './kartta.js';
+import { Kartta } from './kartta.js';
 // Fokusmoodin maakohtainen topografiapohja (paketti 2).
 import { paivitaFokuskartta, paivitaFokusNimet, nollaaFokuskartta } from './fokuskartta.js';
 // Fokuslehden klikattavat karttakohteet ja niiden pop-up (js/fokuskohteet.js).
@@ -332,6 +338,40 @@ const LENNON_NUOLI_MS = 3500;
  */
 // Lähtökaupunki: matka alkaa aina Lontoosta (Raamattu, "Pelin kulku").
 const ALOITUSLENNON_LAHTO = 'lontoo';
+/*
+ * ETUSIVUN VALITTAVAT KOHTEET (omistajan tilaus 25.8.2026).
+ *
+ * Aloituskartalla on vain ne kaupungit, joilla on valmis fokusmoodin
+ * sisältö: matkan ensimmäinen kohde on kokonaisen maan avaus, eikä
+ * puolivalmiiseen kohteeseen saa päästä lentämään. PISTEITÄ LISÄTÄÄN
+ * SITÄ MUKAA KUN MAITA VALMISTUU FOKUSJÄRJESTELMÄLLE — lisäys on tähän
+ * joukkoon, ei laudan dataan (js/packs/maailma.js pysyy täytenä
+ * maailmankarttana, jota myös katselutila käyttää).
+ *
+ * Sofia on jo pelissä mutta EI ole aloituskohde: sinne kävellään
+ * Ateenasta, kuten tarina menee.
+ */
+const ETUSIVUN_KOHTEET = new Set(['ateena']);
+/*
+ * ALOITUSSIIRTYMÄN PERGAMENTTIARKKI (omistajan tilaus 25.8.2026).
+ *
+ * JUURISYY, jonka tämä korjaa: kohteen napautus vaihtaa laudan
+ * etusivun pikku laudasta (js/packs/maailma.js) koko maailmankarttaan,
+ * ja uusi lauta sovitetaan ensin OLETUSNÄKYMÄÄN eli koko maailmaan.
+ * Vasta sen jälkeen kamera-ajo vie näkymän lähtömaan ja kohdemaan
+ * yhteisrajaukseen. Mitattuna (Chromium, kontti) laudan piirto vei
+ * 3,8 sekuntia ja kamera-ajo 5 sekuntia — koko sen ajan ruudulla oli
+ * tyhjä, sumuverhon alle jäänyt maailmankartta. Se on se välähdys.
+ *
+ * Korjaus: näkymä feidataan ensin tyhjäksi pergamenttiarkiksi, raskas
+ * työ tehdään arkin takana, kamera asetetaan rajaukseen HETI (kesto 0)
+ * ja arkki feidataan pois vasta valmiiseen lentonäkymään. Tyhjää
+ * maailmankarttaa ei näy hetkeäkään.
+ *
+ * Sisään nopeasti (napautuksen vastaus), ulos rauhassa (paljastus).
+ */
+const ALOITUSVERHO_SISAAN_MS = 420;
+const ALOITUSVERHO_ULOS_MS = 700;
 // Rajauksen marginaali: lähtömaan ja kohdemaan ympärille jää tämän
 // verran merta ja naapureita, jotta molemmat maat erottuvat muodoiltaan
 // eivätkä kosketa ruudun laitaa. Väljempi kuin kartan oletus (0,12),
@@ -637,20 +677,41 @@ export function kirjoituksenKesto(teksti, tahti = INTRO_TYPE_MS) {
  */
 const INTRO_FONT_MAX = 0.96;
 const INTRO_FONT_MIN = 0.6;
-// Omistajan päättämä avausteksti. ÄLÄ muokkaa ilman omistajan lupaa
-// (docs/tyolista-opukselle.md, paketti 3). Lyhennetty omistajan
-// pyynnöstä 4.8.2026; draamaviilaus omistajan hyväksynnällä
-// 10.8.2026. Teksti ja luenta (intro-puhe.mp3) pidetään samana —
-// muutos vain tools/generoi-avaus.mjs:n kautta.
-const INTRO_TEXT = 'Vintiltä löytyi isoisän kulunut matkakirja — '
-  + 'Maailman ympäri kahdeksassakymmenessä päivässä.\n\n'
-  + 'Viimeinen sivu on revitty irti kesken lauseen. Mitä hän löysi? '
-  + 'Ja kuka repii kirjasta juuri sen sivun?\n\n'
-  + 'Valitse kohde kartalta.';
-// Kirjan nimi kursivoidaan VAIN ruudulla (renderIntro) — luentaan
-// kursiivi ei vaikuta. Nimen on esiinnyttävä INTRO_TEXTissä juuri
-// tässä muodossa, jotta kursiivijako osuu.
-const INTRO_KIRJAN_NIMI = 'Maailman ympäri kahdeksassakymmenessä päivässä';
+/*
+ * Omistajan päättämä avausteksti. ÄLÄ muokkaa ilman omistajan lupaa
+ * (docs/tyolista-opukselle.md, paketti 3). Lyhennetty omistajan
+ * pyynnöstä 4.8.2026; draamaviilaus omistajan hyväksynnällä
+ * 10.8.2026. Teksti ja luenta (intro-puhe.mp3) pidetään samana —
+ * muutos vain tools/generoi-avaus.mjs:n kautta, jonka INTRO_RUUTU
+ * on tämän vakion ainoa lähde (sanasta sanaan).
+ *
+ * V3/V4 25.8.2026 (omistajan etusivu-uudistus): kirjan nimi pois —
+ * se luetaan nyt kansikuvan selästä (assets/etusivu/kansikuva.png) —
+ * ja ohjerivi "Valitse kohde kartalta" pois, koska ohjeen tilalle
+ * tuli klikattava viimeinen lause (INTRO_VALINTA). Teksti päättyy
+ * siis täsmälleen siihen, mihin nauhoitettu luentakin.
+ */
+const INTRO_TEXT = 'Vintiltä löytyi isoisän matkalaukku ja '
+  + 'hänen kulunut matkakirjansa.\n\n'
+  + 'Viimeinen sivu on revitty irti kesken lauseen. Mitä hän löysi — '
+  + 'ja kuka sen sivun repi?';
+/*
+ * KLIKATTAVA VIIMEINEN LAUSE (omistajan tilaus 25.8.2026). Nappi,
+ * joka näyttää lauseelta: sama kirjasin kuin avaustekstissä, vain
+ * korostettuna. Ilmestyy vasta kun teksti on kirjoittunut loppuun,
+ * ja vie kartan lähikuvaan Lontoon kohdalle. EI OLE KERRONTAA eikä
+ * siksi kuulu INTRO_TEXTiin: kertoja ei lue sitä, aivan kuten se ei
+ * lukenut vanhaa "Valitse kohde kartalta" -ohjettakaan.
+ */
+const INTRO_VALINTA = 'Aloitan sieltä, mistä hänkin — Lontoosta.';
+/*
+ * ETUSIVUN PAIKKARIVI (omistajan tilaus 25.8.2026): kohtausmerkintä
+ * avaustekstin ensimmäisenä rivinä, kuukausi ja vuosi laitteen
+ * kellosta. Kertoja EI lue tätä (nauhoitettu luenta alkaa vasta
+ * varsinaisesta tekstistä), joten rivi elää oman elementtinsä
+ * varassa eikä ole osa INTRO_TEXTiä.
+ */
+const INTRO_PAIKKA = 'Heathrow, Lontoo';
 
 /*
  * ETUSIVUN ALKUANIMAATIO: kuusi reittiä, joita pitkin kulkee sykkivä
@@ -1145,11 +1206,22 @@ export class UI {
     this.turnCard = document.getElementById('actions').closest('.turn-card');
     this.introEl = document.getElementById('intro');
     this.introText = document.getElementById('intro-text');
-    // Avausteksti kirjoittuu kahteen osaan, jotta viimeinen rivi
-    // ("mistä aloitan?") voidaan lihavoida ilman että itse tekstiä
-    // muutetaan (INTRO_TEXT on omistajan lukitsema).
+    // Avauspalsta (paikkarivi, teksti, klikattava lause, kansikuva).
+    // Kirjasinkoko säädetään palstaan, jotta kuva ja nappi kutistuvat
+    // tekstin mukana — mitat ovat niissä em-yksiköissä (fitIntro).
+    this.introPalsta = this.introEl?.querySelector('.intro-palsta');
     this.introRunko = document.getElementById('intro-runko');
-    this.introLopetus = document.getElementById('intro-lopetus');
+    // Paikkarivi: kohtausmerkintä laitteen kellosta (INTRO_PAIKKA).
+    this.introPaikka = document.getElementById('intro-paikka');
+    // Klikattava viimeinen lause; kuuntelija kytketään renderIntrossa.
+    this.introValinta = document.getElementById('intro-valinta');
+    // Isoisän työpöytä: matkakirja ja irtolehti samassa sommitelmassa.
+    this.introTyopoyta = this.introEl?.querySelector('.intro-tyopoyta');
+    this.introKansi = document.getElementById('intro-kansi');
+    // Kuvan latauduttua palstan korkeus on lopullinen: sovitetaan koko
+    // uudelleen. aspect-ratio kertoo mitat jo ennen latausta, joten tämä
+    // on varmistus eikä ainoa mittaus.
+    this.introKansi?.addEventListener('load', () => this.fitIntro(), { once: true });
 
     /*
      * LEHTITILA — lehden, maalehden ja kohdekartan koko muistitila
@@ -4073,31 +4145,41 @@ export class UI {
    * ruudulla laatikko on myös pystysuunnassa kirjekuoressa.
    */
   placeIntro(box, vy, vh, paneH) {
-    const paneY = (boardY) => ((boardY - vy) / vh) * paneH;
-    // Kaista alkaa laudan alareunasta ja päättyy rajauslaatikon pohjaan.
-    // Rajataan paneelin sisään, jottei teksti valu ulos matalalla ruudulla.
-    const ylin = Math.max(0, paneY(box.y + box.h / (1 + INTRO_SPACE)));
-    // Kaista jatkuu paneelin pohjaan asti: pergamentti ulottuu sinne, joten
-    // kapealla ruudulla teksti saa käyttöönsä kaiken tyhjän tilan.
-    const alin = paneH;
-    this.introEl.style.top = `${Math.round(ylin)}px`;
-    this.introEl.style.height = `${Math.max(0, Math.round(alin - ylin))}px`;
+    /*
+     * AVAUSPALSTA ON KOKO PANEELIN KOKOINEN (omistajan tilaus
+     * 25.8.2026): teksti ei enää asu kartan alapuolisessa kaistassa
+     * vaan yhtenä palstana kartan PÄÄLLÄ, ja kartta jää sen taakse
+     * kevyesti sumennettuna. Paikan ja korkeuden antaa siis CSS
+     * (.intro { inset: 0 }), eikä tässä ole enää mitään mitattavaa —
+     * jäljelle jää kirjasinkoon sovitus.
+     *
+     * Parametrit (laudan rajaus ja näkymä) jäävät kutsurajapintaan,
+     * koska js/kartta.js kutsuu tätä samasta kohdasta kuin ennenkin
+     * eikä niiden poistaminen toisi mitään.
+     */
+    void box; void vy; void vh; void paneH;
     this.fitIntro();
   }
 
   /**
-   * Kutistaa avaustekstiä, jos se ei mahdu kaistaan. Matalalla ruudulla
-   * kaista jää kapeaksi, eikä teksti saa valua laudan tai kartan reunan yli.
+   * Kutistaa avauspalstaa, jos se ei mahdu paneeliin.
+   *
+   * Kirjasinkoko asetetaan PALSTAAN eikä pelkkään tekstiin, koska
+   * klikattava lause ja kansikuva on mitoitettu em-yksiköissä: kun
+   * teksti pienenee, ne pienenevät mukana ja koko avaus säilyttää
+   * mittasuhteensa. Puhelimen pystyruudulla juuri tämä ratkaisee sen,
+   * mahtuuko kuva näkyviin.
    */
   fitIntro() {
     const kaista = this.introEl.clientHeight;
-    if (!kaista) return;
+    const palsta = this.introPalsta;
+    if (!kaista || !palsta) return;
     let koko = INTRO_FONT_MAX;
-    this.introText.style.fontSize = `${koko}rem`;
+    palsta.style.fontSize = `${koko}rem`;
     // Askelia riittävästi koko haarukkaan; INTRO_FONT_MIN on lattia.
-    for (let i = 0; i < 8 && this.introText.scrollHeight > kaista; i++) {
+    for (let i = 0; i < 8 && palsta.scrollHeight > kaista; i++) {
       koko = Math.max(INTRO_FONT_MIN, koko - 0.09);
-      this.introText.style.fontSize = `${koko}rem`;
+      palsta.style.fontSize = `${koko}rem`;
     }
   }
 
@@ -6150,8 +6232,23 @@ export class UI {
       if (!siirtoVaihe) return;
     }
 
-    // Lähtöpisteen valinta: kaikki kaupungit ovat napautettavia.
+    /*
+     * LÄHTÖPISTEEN VALINTA — ETUSIVUN VALINTAKARTTA.
+     *
+     * Kohdepisteitä on tasan yksi (ks. ETUSIVUN_KOHTEET): Ateena.
+     * Pisteitä lisätään sitä mukaa kun maita valmistuu
+     * fokusjärjestelmälle. Sofia on jo pelissä, mutta se EI ole
+     * aloituskohde — sinne kävellään Ateenasta.
+     *
+     * PISTEET ILMESTYVÄT VASTA LÄHIKUVASSA (omistajan tilaus
+     * 25.8.2026). Etusivulla kartan päällä on avauspalsta, ja kartta
+     * on sen takana sumennettuna; vasta klikattava viimeinen lause
+     * ("Aloitan sieltä, mistä hänkin — Lontoosta.", ui.aloitaKartalta)
+     * vie kartan koko ruudulle Lontoon kohdalle, ja siitä näkymästä
+     * kohde valitaan.
+     */
     if (game.phase === 'pickstart') {
+      if (!this.aloitusZoom) return;
       // Puhelimella ensimmäinen napautus zoomaa kartan lähemmäs sen
       // sijaan että valitsisi kaupungin — kaukaa katsottuna kaupungit
       // ovat liian pieniä osuttaviksi (omistajan havainto). Zoomauksen
@@ -6159,6 +6256,7 @@ export class UI {
       // riittää olla valitsematta kaupunkia.
       const zoomaa = this.kartta.zoomTarpeen() && !this.aloitusZoom;
       for (const c of game.board.cities) {
+        if (!ETUSIVUN_KOHTEET.has(c.id)) continue;
         kohdeKaupungit.add(c.id);
         for (const x of this.kiertoKohdat(c.x)) {
           const g = el('g', { class: 'target' }, this.targetLayer);
@@ -7247,6 +7345,46 @@ export class UI {
   }
 
   /**
+   * Tyhjä pergamenttiarkki koko näkymän päälle (ks.
+   * ALOITUSVERHO_SISAAN_MS). Pelkkä pergamentti ja sen rakeisuus — ei
+   * suodattimia, ei sisältöä: arkki, jolle seuraava kuva piirretään.
+   *
+   * Peittävyyden siirtymä on kompositorin työtä, joten se etenee
+   * loppuun vaikka pääsäie jumittuisi heti perään laudan piirtoon.
+   */
+  naytaAloitusverho() {
+    if (this.aloitusverho) return this.aloitusverho;
+    const verho = html('div', 'aloitusverho');
+    verho.setAttribute('aria-hidden', 'true');
+    verho.style.setProperty('--verho-kesto', `${ALOITUSVERHO_SISAAN_MS}ms`);
+    this.mapPane.appendChild(verho);
+    // Pakotettu asettelu, jotta selain näkee alkuasennon (opacity 0)
+    // omana tilanaan eikä hyppää suoraan lopputilaan.
+    void verho.getBoundingClientRect();
+    verho.classList.add('verho-nakyy');
+    /*
+     * Kelluva pöllönappi ei ole kartan kerroksissa vaan sen ulkopuolella,
+     * joten arkin z-index ei yllä sen yli — se jäi mitatusti näkyviin
+     * tyhjän arkin päälle. Nappi väistyy siis luokalla, ei kerroksella.
+     */
+    document.body.classList.add('aloitusverho-paalla');
+    this.aloitusverho = verho;
+    return verho;
+  }
+
+  /** Häivyttää arkin pois ja odottaa häivytyksen loppuun. */
+  async piilotaAloitusverho() {
+    const verho = this.aloitusverho;
+    this.aloitusverho = null;
+    if (!verho) return;
+    document.body.classList.remove('aloitusverho-paalla');
+    verho.style.setProperty('--verho-kesto', `${ALOITUSVERHO_ULOS_MS}ms`);
+    verho.classList.remove('verho-nakyy');
+    await this.wait(ALOITUSVERHO_ULOS_MS);
+    verho.remove();
+  }
+
+  /**
    * Lähtöpisteen valinta: napautus vie suoraan perille. Porttikaupungista
    * laskeudutaan mantereen omalle laudalle, muualta jäädään maailmankartalle.
    * Useamman portin kaupungeista (Kairo, Mumbai) otetaan ensimmäinen eli
@@ -7265,8 +7403,6 @@ export class UI {
       // Lukuääni väistyy, kun matka alkaa.
       stopIntroVoice(this);
       this.introEl.classList.add('intro-fade');
-      // Repliikki ennen siirtoa, jotta rng-kutsut osuvat samaan kohtaan.
-      const line = game.firstFlightLine(city.id);
       /*
        * Kumpi avauslento (Raamattu, ALOITUSLENTO UUSIKSI): fokusmoodissa
        * kone lentää kartalla, muuten vanha kalvo. Ratkaisu tehdään ENNEN
@@ -7275,6 +7411,27 @@ export class UI {
        * virtaa, joita render muuten käynnistäisi kesken lennon.
        */
       const kartalento = this.aloituslentoKartalla();
+      /*
+       * NAKSAHDUS JA TYHJÄ PERGAMENTTIARKKI (omistajan tilaus
+       * 25.8.2026, ks. naytaAloitusverho): näkymä feidataan arkiksi
+       * ENNEN kuin lauta vaihtuu, ja arkista feidataan suoraan
+       * valmiiseen lentonäkymään. Arkin on oltava täysin peittävä jo
+       * ennen laudan piirtoa, joten siirtymä odotetaan loppuun —
+       * peittävyyden siirtymä hoituu kompositorissa, joten se ehtii
+       * maaliin vaikka pääsäie jumittuisi heti perään piirtoon.
+       *
+       * Naksahdus soi aina, arkki vain karttalennolla: vanha kalvo tuo
+       * oman peittonsa, eikä liikeherkkyydessä (reducedMotion) saa
+       * odotuttaa turhaan.
+       */
+      sfx.play('clack');
+      if (kartalento) {
+        this.naytaAloitusverho();
+        await this.wait(ALOITUSVERHO_SISAAN_MS);
+        if (this.dead) return;
+      }
+      // Repliikki ennen siirtoa, jotta rng-kutsut osuvat samaan kohtaan.
+      const line = game.firstFlightLine(city.id);
       // Lippu ennen siirtoa, jotta saapumismerkintä ei ala lennon alla —
       // se odottaa Astu ulos -nappia. Lennot poistavat lipun perillä.
       if (!this.reducedMotion) document.body.classList.add('flight-active');
@@ -7297,15 +7454,25 @@ export class UI {
       }
       // Kartalento voi todeta lennon mahdottomaksi (puuttuva maatieto tai
       // rajaus); silloin vanha kalvo hoitaa avauksen kuten ennenkin.
-      const lensi = kartalento && await this.aloituslento(city.id, line);
-      if (!lensi) {
-        this.aloituslentoKesken = false;
-        await this.animateFlight(
-          'Lontoo', city.name, line,
-          { dx: city.x - lontoo.x, dy: city.y - lontoo.y },
-        );
+      try {
+        const lensi = kartalento && await this.aloituslento(city.id, line);
+        if (!lensi) {
+          this.aloituslentoKesken = false;
+          // Vanha kalvo tulee oman häivytyksensä kanssa: arkki pois
+          // ensin, jottei kalvo aukea peitetylle ruudulle.
+          await this.piilotaAloitusverho();
+          await this.animateFlight(
+            'Lontoo', city.name, line,
+            { dx: city.x - lontoo.x, dy: city.y - lontoo.y },
+          );
+        }
+      } finally {
+        clearTimeout(this.lentoPuheAjastin);
+        // Varmistus: arkki ei saa jäädä ruudulle, jos lento katkeaa
+        // poikkeukseen. Tavallisella polulla se on jo poistettu
+        // (aloituslentoSisalla) ja tämä palaa heti.
+        await this.piilotaAloitusverho();
       }
-      clearTimeout(this.lentoPuheAjastin);
       return;
     }
     this.doAction(() => game.actionPickStart(city.id, portti ? 0 : null));
@@ -8405,6 +8572,13 @@ export class UI {
     this.renderActions();
     this.renderFact();
     renderQuiz(this);
+    /*
+     * Sähkepinta heti visan jälkeen: kaveriavun nappi asuu visan
+     * apurivillä ja odotuskortti sen vaihtoehtojen yllä, joten kortti
+     * pitää päivittää vasta kun visa on piirretty (js/sahke.js).
+     * Ilman sähkelinjaa tai retkikuntaa kutsu palaa saman tien.
+     */
+    paivitaSahke(this);
     // Linssit tahdistetaan joka piirrossa, mutta työ tehdään vasta kun
     // jokin oikeasti muuttui: uusi löytö, uusi lauta tai uusi kerros.
     void this.paivitaLinssit();
@@ -10608,9 +10782,24 @@ export class UI {
   }
 
   /**
-   * Avausteksti kirjoittuu kartan alapuoliseen tyhjään pergamenttiin.
-   * Teksti on omistajan lukkoon lyömä eikä sitä muokata täällä; se naksuu
-   * esiin kirjoituskoneen tapaan ja väistyy heti kun kohde on valittu.
+   * Etusivun paikkarivi laitteen kellosta: "Heathrow, Lontoo, elokuu 2026".
+   *
+   * Kuukausi pienellä alkukirjaimella, kuten suomessa kuuluu — se tulee
+   * suoraan toLocaleStringiltä, joka ei versaalia lisää. Jos selaimen
+   * fi-FI-tuki puuttuu (vanha WebKit ilman ICU-dataa), kuukausi voi
+   * palautua englanniksi; rivi on silti ehjä eikä ajo kaadu.
+   */
+  introPaikkarivi(nyt = new Date()) {
+    const kuukausi = nyt.toLocaleString('fi-FI', { month: 'long' });
+    return `${INTRO_PAIKKA}, ${kuukausi} ${nyt.getFullYear()}`;
+  }
+
+  /**
+   * Avausteksti kirjoittuu yhtenä palstana kartan päälle; kartta jää
+   * palstan taakse kevyesti sumennettuna (.intro-verho). Teksti on
+   * omistajan lukkoon lyömä eikä sitä muokata täällä; se naksuu esiin
+   * kirjoituskoneen tapaan, ja lopuksi sen alle ilmestyy klikattava
+   * viimeinen lause, joka vie kartan lähikuvaan Lontoon kohdalle.
    */
   renderIntro() {
     // Katselutilassa (?lauta=) porttia ja avaustekstiä ei näytetä: kartta
@@ -10650,10 +10839,16 @@ export class UI {
      * animoituna.
      */
     if (this.introText) this.introText.hidden = !nakyy || !this.aloitettu;
+    // Työpöytäsommitelma ja klikattava lause seuraavat tekstiä: portin
+    // takana etusivulla on vain kartta ja aloitusnappi.
+    if (this.introTyopoyta) this.introTyopoyta.hidden = !nakyy || !this.aloitettu;
+    // Sumuverho syttyy samalla kuin teksti: portin takana kartta on
+    // terävä, ja portilla on oma tummennuksensa.
+    this.introEl.classList.toggle('intro-aloitettu', Boolean(nakyy && this.aloitettu));
     if (!nakyy) {
       this.introShown = false;
       this.introRunko.textContent = '';
-      this.introLopetus.textContent = '';
+      if (this.introValinta) this.introValinta.hidden = true;
       stopIntroVoice(this);
       this.suljeAloitusportti();
       return;
@@ -10668,58 +10863,68 @@ export class UI {
     }
     this.introShown = true;
     playIntroVoice(this);
-    // Avausteksti kirjoittuu selvästi hitaammin kuin muut: se on matkan
-    // ensimmäinen hetki eikä pelitilanteen ilmoitus. Viimeinen rivi
-    // kirjoittuu omaan lihavoituun elementtiinsä, jotta kysymys erottuu
-    // (omistajan toive) — itse tekstiä ei muuteta.
-    const raja = INTRO_TEXT.lastIndexOf('\n\n');
-    const runko = raja < 0 ? INTRO_TEXT : INTRO_TEXT.slice(0, raja);
-    const lopetus = raja < 0 ? '' : INTRO_TEXT.slice(raja);
-    // Lopetus varaa tilansa jo ennen kirjoitusta samalla näkymättömällä
-    // varjotekstillä kuin typeText. Ilman sitä fitIntro mittaisi tekstin
-    // ilman viimeistä riviä, ja lihavoitu "mistä aloitan?" jäisi ruudun
-    // alapuolelle (omistajan havainto).
-    this.introLopetus.textContent = '';
-    if (lopetus) {
-      const varaus = html('span', 'pending');
-      varaus.textContent = lopetus;
-      this.introLopetus.appendChild(varaus);
-    }
     /*
-     * Kirjan nimi kursiiviin (omistajan toive 10.8.2026, vain ruudulla):
-     * runko jaetaan paloihin nimen kohdalta ja palat kirjoitetaan
-     * peräkkäin omiin elementteihinsä (span / i). Jokainen pala varaa
-     * tilansa pending-varjolla heti, jotta fitIntro mittaa koko
-     * tekstin ennen kirjoituksen alkua — sama syy kuin lopetuksella.
+     * PAIKKARIVI LAITTEEN KELLOSTA (omistajan tilaus 25.8.2026).
+     * Kirjoitetaan valmiiksi eikä naputeta: se on kohtausmerkintä,
+     * ei kerrontaa, ja fitIntro tarvitsee sen mitat heti.
+     */
+    if (this.introPaikka) this.introPaikka.textContent = this.introPaikkarivi();
+    /*
+     * Avausteksti kirjoittuu selvästi hitaammin kuin muut: se on matkan
+     * ensimmäinen hetki eikä pelitilanteen ilmoitus.
+     *
+     * Teksti varaa tilansa näkymättömällä varjotekstillä (typeTextin
+     * oma pending-span) jo ennen kirjoitusta, ja fitIntro mitataan
+     * vasta sen jälkeen — muuten palsta kasvaisi kirjoituksen alla ja
+     * kansikuva hyppisi sen perässä.
      */
     this.introRunko.textContent = '';
-    const kohta = runko.indexOf(INTRO_KIRJAN_NIMI);
-    const palat = (kohta < 0
-      ? [{ teksti: runko, kursiivi: false }]
-      : [
-        { teksti: runko.slice(0, kohta), kursiivi: false },
-        { teksti: INTRO_KIRJAN_NIMI, kursiivi: true },
-        { teksti: runko.slice(kohta + INTRO_KIRJAN_NIMI.length), kursiivi: false },
-      ]).filter((pala) => pala.teksti);
-    const palaElementit = palat.map((pala) => {
-      const elementti = html(pala.kursiivi ? 'i' : 'span', 'intro-pala');
-      const varaus = html('span', 'pending');
-      varaus.textContent = pala.teksti;
-      elementti.appendChild(varaus);
-      this.introRunko.appendChild(elementti);
-      return elementti;
-    });
-    const kirjoitaPala = (i) => {
-      if (i >= palat.length) {
-        if (lopetus) this.typeText(this.introLopetus, lopetus, 'intro-loppu', null, INTRO_TYPE_MS);
-        return;
+    /*
+     * KLIKATTAVA VIIMEINEN LAUSE ILMESTYY VASTA KIRJOITUKSEN JÄLKEEN
+     * (omistajan tilaus 25.8.2026). Nappi on kuitenkin jo asettelussa
+     * mukana (visibility, ei hidden), jotta palstan korkeus on mitattu
+     * oikein heti eikä mikään liiku lauseen ilmestyessä.
+     */
+    if (this.introValinta) {
+      this.introValinta.textContent = INTRO_VALINTA;
+      this.introValinta.hidden = false;
+      this.introValinta.classList.add('intro-valinta-piilossa');
+      if (!this.introValintaKytketty) {
+        this.introValintaKytketty = true;
+        this.introValinta.addEventListener('click', () => this.aloitaKartalta());
       }
-      this.typeText(palaElementit[i], palat[i].teksti, 'intro', () => kirjoitaPala(i + 1), INTRO_TYPE_MS);
-    };
-    kirjoitaPala(0);
+    }
+    this.typeText(this.introRunko, INTRO_TEXT, 'intro', () => {
+      // Lause paljastuu pehmeästi vasta kun viimeinen kirjain on tullut.
+      this.introValinta?.classList.remove('intro-valinta-piilossa');
+    }, INTRO_TYPE_MS);
     // Koko teksti on jo paikallaan, joten koon voi sovittaa heti — sen
     // jälkeen mikään ei enää liiku kirjoituksen aikana.
     this.fitIntro();
+  }
+
+  /**
+   * Klikattava viimeinen lause: "Aloitan sieltä, mistä hänkin —
+   * Lontoosta." (omistajan tilaus 25.8.2026).
+   *
+   * Naksahdus, avauspalsta häipyy (teksti, sumuverho ja kansikuva
+   * samalla kertaa, koska ne ovat saman elementin lapsia), ja kartta
+   * zoomautuu koko ruudulle Lontoon kohdalle — sama lähikuva, joka
+   * ennen aukesi puhelimella kartan napautuksesta
+   * (kartta.zoomaaAloituskartta). Kohdepisteet piirtyvät vasta siinä
+   * lähikuvassa, joten Ateenan voi valita vasta täältä.
+   */
+  aloitaKartalta() {
+    if (this.aloitusZoom || this.game.phase !== 'pickstart') return;
+    // Naksahdus: sama puinen naksu kuin nappulan kolauksessa
+    // (efekti-naksu.mp3). Kevyt eikä juhlava — matka ei ole vielä
+    // alkanut, kartta vain avautuu.
+    sfx.play('clack');
+    // Häivytys ensin ja zoomaus vasta sen alettua: kartta saa liikkua
+    // pehmenevän tekstin alla eikä ruutu välähdä tyhjäksi väliltä.
+    this.introEl.classList.add('intro-fade');
+    const lontoo = this.game.board.cityById.get(ALOITUSLENNON_LAHTO);
+    this.kartta.zoomaaAloituskartta(lontoo ? { x: lontoo.x, y: lontoo.y } : null);
   }
 
   /** Aloita seikkailu -portti: keskellä ruutua, kartta himmeänä takana. */
@@ -10982,6 +11187,14 @@ export class UI {
    * tarvitse osata nimetä lehteä itse.
    */
   lisaaEhdotusOsio(lohko, tilanne = '') {
+    /*
+     * RETKIKUNTA ensin (Raamattu, osio SÄHKEJÄRJESTELMÄ): sähkeosio
+     * asuu samassa valikon lomakkeessa kuin ehdotuskanava, koska
+     * molemmat ovat pelin ympäryksiä eivätkä pelisisältöä
+     * (hampurilaisen linjaus 18.8.2026). Ilman sähkelinjaa osio on yksi
+     * rivi tekstiä ja ilman yhtään nappia (js/sahke.js).
+     */
+    lohko.appendChild(retkikuntaOsio(this));
     const osio = ehdotusOsio(this.ehdotusSivu(tilanne));
     if (osio) lohko.appendChild(osio);
     // PRO-SISÄLLÖNTUOTTAJAT kahdessa osassa (omistajan tarkennukset
@@ -13471,9 +13684,19 @@ export class UI {
      * this.aloituslentoKesken torjuu muut ajot lennon ajaksi, ja tämä on
      * se yksi ajo, joka saa mennä läpi.
      */
+    /*
+     * PERGAMENTTIARKIN TAKANA KAMERA EI AJA VAAN ASETTUU (omistajan
+     * tilaus 25.8.2026). Ajo alkaisi uuden laudan oletusnäkymästä eli
+     * koko maailmankartasta, ja juuri se on se tyhjä maailmankartta,
+     * joka ennen välähti — arkin takana ajolla ei olisi katsojaa,
+     * vain hinta. kesto 0 vie näkymän rajaukseen kerralla.
+     *
+     * Ilman arkkia (esim. jos verho on jo ehditty poistaa) ajo menee
+     * kuten ennenkin.
+     */
     await this.kartta.ajaKamera(
       { bbox, marginaali: ALOITUSLENNON_MARGINAALI },
-      { kesto: ALOITUSLENNON_AJO_MS, pakota: true },
+      { kesto: this.aloitusverho ? 0 : ALOITUSLENNON_AJO_MS, pakota: true },
     );
     if (this.dead) return;
     /*
@@ -13631,6 +13854,15 @@ export class UI {
       reittiRuudut.push({ offset: t, strokeDashoffset: kokoPituus * (1 - e) });
     }
     kone.style.transform = koneRuudut[0].transform;
+    /*
+     * ARKKI POIS VASTA NYT: kaikki on paikallaan — kartta rajattuna
+     * lähtömaahan ja kohdemaahan, lähtömerkki Lontoon kohdalla, kone
+     * kiitoradalla. Pergamenttiarkista feidataan siis suoraan valmiiseen
+     * lentonäkymään, eikä tyhjää maailmankarttaa näy hetkeäkään
+     * (omistajan tilaus 25.8.2026, ks. ALOITUSVERHO_SISAAN_MS).
+     */
+    await this.piilotaAloitusverho();
+    if (this.dead) return;
     await new Promise((valmis) => requestAnimationFrame(() => requestAnimationFrame(valmis)));
     const koneAnim = kone.animate(koneRuudut, {
       duration: lennonKesto, delay: 180, easing: 'linear', fill: 'forwards',

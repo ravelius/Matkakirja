@@ -359,6 +359,13 @@ const MODULES = [
    * perustiedot sisältötauluista — molemmat ovat jo yllä.
    */
   'js/fokusmitat.js',
+  /*
+   * Sähkepinta ennen ui:ta (ui tuo siitä retkikuntaosion ja
+   * piirtokutsun staattisesti). Se tuo pelin, visan, äänet ja
+   * ui-apurit — kaikki jo yllä; visa erityisesti, koska kaveriapu
+   * pysäyttää tiimalasin sen omilla funktioilla.
+   */
+  'js/sahke.js',
   'js/ui.js',
 
   'js/muutokset.js',
@@ -402,6 +409,9 @@ const bundle = MODULES.map((file) => `// ===== ${file} =====\n${stripModuleSynta
  */
 const css = `${read('css/styles.css')}\n\n${read('css/fokusvirta.css')}`
   + `\n\n${read('css/fokuskohteet.css')}\n\n${read('css/fokusnosto.css')}`;
+  + `\n\n${read('css/fokuskohteet.css')}`
+  // Sähkepinnan oma tyyli samasta syystä (js/sahke.js sahkeLataaTyyli).
+  + `\n\n${read('css/sahke.css')}`;
 const indexHtml = read('index.html');
 
 const body = indexHtml

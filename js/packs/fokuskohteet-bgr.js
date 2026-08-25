@@ -11,6 +11,14 @@
  * perustelut on selitetty Kreikan tiedoston alussa; tässä on vain se,
  * mikä Bulgariassa on toisin.
  *
+ * KAKSI KENTTÄÄ PÖLLÖÄ VARTEN (omistajan tilaus 25.8.2026) on nekin
+ * kuvattu Kreikan tiedoston alussa: `kysymykset` on kaksi valmista,
+ * pelaajan äänellä kirjoitettua kysymystä kartan tietoruudun loppuun,
+ * ja `korostukset` on lista sanoista, jotka alleviivataan
+ * leipätekstistä ja joista pöllö kertoo lisää ('perusmuoto|näkyvä
+ * muoto', jos taivutus eroaa). Bulgariassa pätee sama sääntö kuin
+ * muualla: kysymys ei toista sitä, minkä teksti jo kertoo.
+ *
  * ── FAKTAPOHJA ─────────────────────────────────────────────────────
  *
  * docs/mantereet-tyoaineisto/fokuskohteet-bulgaria.md, kohteet 1–11
@@ -92,6 +100,11 @@ export const FOKUSKOHTEET_BGR = [
     id: 'plovdiv',
     nimi: 'Plovdiv',
     tyyppi: 'kaupunki',
+    kysymykset: [
+      'Milloin Filibestä tuli taas Plovdiv?',
+      'Mitä bulgarialaisen kirkon elpyminen tarkoitti?',
+    ],
+    korostukset: ['vilajetti|vilajettiin'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Kaupunki seitsemällä kukkulalla',
     // 24,75 E / 42,15 N — en-Wikipedia "Plovdiv".
@@ -121,6 +134,11 @@ export const FOKUSKOHTEET_BGR = [
     id: 'varna',
     nimi: 'Varna',
     tyyppi: 'kaupunki',
+    kysymykset: [
+      'Keitä kultaa kantaneet ihmiset olivat?',
+      'Mistä Varnan kulta oli peräisin?',
+    ],
+    korostukset: ['Odessos', 'nekropoli|nekropolista'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Maailman vanhin kulta',
     // 27,91667 E / 43,21667 N — en-Wikipedia "Varna, Bulgaria".
@@ -154,6 +172,11 @@ export const FOKUSKOHTEET_BGR = [
     id: 'veliko-tarnovo',
     nimi: 'Veliko Tarnovo',
     tyyppi: 'kaupunki',
+    kysymykset: [
+      'Miksi kansalliskokous kokoontui juuri täällä?',
+      'Millainen kaupunki Veliko Tarnovo on nykyään?',
+    ],
+    korostukset: ['Toinen Bulgarian valtakunta|Toisen Bulgarian valtakunnan'],
     /* Valintakuplan painike. Lupaus on 1873-kulma, ei maantiede. */
     nappi: 'Pääkaupunki, joka oli jo ollut',
     // 25,61667 E / 43,07778 N — en-Wikipedia "Veliko Tarnovo".
@@ -185,6 +208,11 @@ export const FOKUSKOHTEET_BGR = [
     id: 'rila',
     nimi: 'Rila-vuoristo',
     tyyppi: 'vuori',
+    kysymykset: [
+      'Miten jääkausi muovasi Rilan järvet?',
+      'Mitä eläimiä vuoristossa elää?',
+    ],
+    korostukset: ['vedenjakaja'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Balkanin korkein vuoristo',
     /*
@@ -219,6 +247,11 @@ export const FOKUSKOHTEET_BGR = [
     id: 'musala',
     nimi: 'Musala',
     tyyppi: 'vuori',
+    kysymykset: [
+      'Miksi juuri huipulle rakennettiin tutkimusasema?',
+      'Millainen sää Musalalla on kesällä?',
+    ],
+    korostukset: ['kosminen säteilyasema'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Balkanin korkein kohta',
     // 23,58667 E / 42,17972 N — en-Wikipedia "Musala".
@@ -246,6 +279,11 @@ export const FOKUSKOHTEET_BGR = [
     id: 'rilan-luostari',
     nimi: 'Rilan luostari',
     tyyppi: 'muu',
+    kysymykset: [
+      'Miten luostari selvisi osmanivallan läpi?',
+      'Mitä munkit tekevät luostarissa nykyään?',
+    ],
+    korostukset: ['Ivan Rilalainen|Ivan Rilalaisen'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Luostari setelin kääntöpuolella',
     // 23,34028 E / 42,13333 N — en-Wikipedia "Rila Monastery".
@@ -274,6 +312,11 @@ export const FOKUSKOHTEET_BGR = [
     id: 'vitosa',
     nimi: 'Vitoša',
     tyyppi: 'vuori',
+    kysymykset: [
+      'Voiko Vitoša vielä purkautua?',
+      'Miksi vuori on sofialaisille niin tärkeä?',
+    ],
+    korostukset: ['Cherni Vrah'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Vuori bussipysäkin takana',
     /*
@@ -309,6 +352,11 @@ export const FOKUSKOHTEET_BGR = [
     id: 'balkanvuoret',
     nimi: 'Balkanvuoret',
     tyyppi: 'vuori',
+    kysymykset: [
+      'Mitä sana Balkan tarkoittaa?',
+      'Kuinka vanhoja Maguran maalaukset ovat?',
+    ],
+    korostukset: ['Stara planina|Stara planinaksi', 'karstimaasto|karstimaastossa'],
     /* Valintakuplan painike. Lupaus on nimen alkuperä. */
     nappi: 'Vuori, joka nimesi puolen Euroopan',
     /*
@@ -345,6 +393,11 @@ export const FOKUSKOHTEET_BGR = [
     id: 'tonava',
     nimi: 'Tonava',
     tyyppi: 'joki',
+    kysymykset: [
+      'Kuinka monen maan läpi Tonava virtaa?',
+      'Kulkeeko joella vielä rahtiliikennettä?',
+    ],
+    korostukset: ['Danubius'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Joki, joka oli Rooman raja',
     /*
@@ -379,6 +432,11 @@ export const FOKUSKOHTEET_BGR = [
     id: 'mustameri',
     nimi: 'Mustameri',
     tyyppi: 'meri',
+    kysymykset: [
+      'Mikä tekee Mustastamerestä poikkeuksellisen?',
+      'Miksi purjehdus siellä oli niin vaarallista?',
+    ],
+    korostukset: ['Pontos Axeinos', 'Karadeniz|Karadenizeksi'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Meri, joka vaihtoi luonteensa',
     /*
@@ -410,6 +468,11 @@ export const FOKUSKOHTEET_BGR = [
     id: 'ruusulaakso',
     nimi: 'Ruusulaakso',
     tyyppi: 'muu',
+    kysymykset: [
+      'Miten ruusuöljyä valmistetaan?',
+      'Miksi juuri tämä laakso sopii ruusuille?',
+    ],
+    korostukset: ['ruusuöljy|ruusuöljyn'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Puolet maailman ruusuöljystä',
     // 25,4 E / 42,61667 N — en-Wikipedia "Rose Valley, Bulgaria".
@@ -447,6 +510,11 @@ export const FOKUSKOHTEET_BGR = [
     id: 'boyana',
     nimi: 'Boyanan kirkko',
     tyyppi: 'muu',
+    kysymykset: [
+      'Kuka maalasi Boyanan freskot?',
+      'Miten 1200-luvun maalaukset ovat säilyneet?',
+    ],
+    korostukset: ['sebastokraattori'],
     /* Valintakuplan painike. Lupaus on freskojen vuosiluku. */
     nappi: 'Kasvot, jotka maalattiin 1259',
     /*

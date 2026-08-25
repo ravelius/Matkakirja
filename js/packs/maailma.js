@@ -508,8 +508,12 @@ export const MAAILMA = {
     // enemmän imua); luenta v3-tunnetagein tools/generoi-avaus.mjs:llä
     // — teksti muutetaan vain sen kautta, jotta ruutu ja puhe pysyvät
     // samana.
+    // V2 25.8.2026 (omistajan tilaus: "lentokoneen tekstiä voisi
+    // lyhentää"): toinen virke pois — se toisti etusivun revityn
+    // sivun, ja aloituksen pitää olla kevyt. Luenta on generoitu
+    // uudestaan tälle riville (tools/generoi-avaus.mjs LENTO_RUUTU).
     flightFirst: [
-      'Kone nousee, ja isoisän kirja aukeaa sylissäni kuin se olisi odottanut tätä hetkeä. Revitty sivu ei kerro, mitä hän löysi — joten menen katsomaan itse.',
+      'Kone nousee. Isoisän kirja aukeaa sylissäni kuin se olisi odottanut tätä hetkeä.',
     ],
     intro: 'Peli alkaa! Etsikää Magellanin kompassi — maailmanympäripurjehtijan kadonnut aarre.',
     starFound: (name, city) => `◈ ${name} löysi MAGELLANIN KOMPASSIN kaupungista ${city}!`,
