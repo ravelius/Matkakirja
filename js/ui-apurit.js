@@ -929,6 +929,77 @@ export function asetaFokusSumennus(paalla) {
 }
 
 /*
+ * === KEHITTÄJÄN KAKSI YLÄRIVIN NAPPIA (omistajan tilaus 25.8.2026) ===
+ *
+ * Ylärivin kehittäjänapit saivat uudet tehtävät. Ennen ne kytkivät
+ * fokusmoodin ja sumennukset; nyt ne ovat pelitestaajan työkalut:
+ *
+ *   "rajat"   — pelaajan LIIKKUVUUSRAJOITE päälle/pois. Fokusmoodissa
+ *               kamera on pelin käsissä (js/kartta.js panorointiVapaa,
+ *               fokusRajaukset): käsi liikkuu vain valloitetulla
+ *               alueella ja fokusikkunan sisällä. Kehittäjätilassa
+ *               rajoite on ollut aina pois; nyt sen saa halutessaan
+ *               PÄÄLLE, jotta omistaja pelitestaa autenttisella
+ *               rajoitteella ilman että kehittäjätila pitää sammuttaa.
+ *   "pisteet" — laudan kaupungit ja reittiverkko näkyviin fokuskartan
+ *               päälle, jotta mihin tahansa kaupunkiin näkee hypätä
+ *               (hyppy itsessään on vanha kehittäjätilan oikotie,
+ *               js/ui.js doKehittajaSiirto).
+ *
+ * OLETUS ON KUMPIKIN POIS. Kehittäjätilan nykyinen käytös (vapaa
+ * panorointi, puhdas atlas) säilyy siis muuttumattomana siihen asti
+ * kun nappia painetaan — eikä yksikään olemassa oleva savuke muutu.
+ * Molemmat ovat laitteen asetuksia eivätkä pelitilanteen osaa: sama
+ * kaava kuin kehittäjätilalla ja fokusmoodilla yllä (oma avain,
+ * try/catch, ei riviäkään pelitallennuksessa).
+ *
+ * VANHA FOKUS/SUMENNUS EI POISTUNUT. Raamatun osio "Fokusmoodi" vaatii
+ * yhä molemmat kytkimet kehittäjätilaan (*"Fokusmoodin kytkin
+ * matkalaukun oikealla puolella VAIN kehittäjätilassa; lisäksi
+ * kehittäjätilaan sumennukset päälle/pois -nappi"*), joten ne siirtyivät
+ * hampurilaisvalikon Työhuone-koteloon (index.html #kehittaja-kotelo).
+ * Ylärivi on ahdas, ja nämä kaksi ovat harvemmin tarvittavia
+ * vertailukytkimiä — pelitestin työkalut kuuluvat kartan viereen.
+ */
+const KEHITTAJA_RAJAT_AVAIN = 'matkakirja-kehittaja-rajat';
+
+export function kehittajaRajatPaalla() {
+  try {
+    return localStorage.getItem(KEHITTAJA_RAJAT_AVAIN) === '1';
+  } catch {
+    return false; // yksityinen selaus
+  }
+}
+
+export function asetaKehittajaRajat(paalla) {
+  try {
+    if (paalla) localStorage.setItem(KEHITTAJA_RAJAT_AVAIN, '1');
+    else localStorage.removeItem(KEHITTAJA_RAJAT_AVAIN);
+  } catch {
+    /* yksityinen selaus: tila jää vain tälle istunnolle */
+  }
+}
+
+const KEHITTAJA_PISTEET_AVAIN = 'matkakirja-kehittaja-pisteet';
+
+export function kehittajaPisteetPaalla() {
+  try {
+    return localStorage.getItem(KEHITTAJA_PISTEET_AVAIN) === '1';
+  } catch {
+    return false; // yksityinen selaus
+  }
+}
+
+export function asetaKehittajaPisteet(paalla) {
+  try {
+    if (paalla) localStorage.setItem(KEHITTAJA_PISTEET_AVAIN, '1');
+    else localStorage.removeItem(KEHITTAJA_PISTEET_AVAIN);
+  } catch {
+    /* yksityinen selaus: tila jää vain tälle istunnolle */
+  }
+}
+
+/*
  * PÖLLÖN LEHTIVINKKI (kevyt kulku -kokeilu, omistaja 24.8.2026, ilta).
  *
  * Raamatun KEVYT KULKU -KOKEILU: kun kaupunkilehti aukeaa, pöllö

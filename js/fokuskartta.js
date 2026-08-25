@@ -112,11 +112,11 @@ function lataaKuva(osoite) {
   kuva.src = osoite;
   if (typeof kuva.decode !== 'function') {
     return new Promise((valmis) => {
-      kuva.onload = () => valmis(true);
-      kuva.onerror = () => valmis(false);
+      kuva.onload = () => valmis(kuva);
+      kuva.onerror = () => valmis(null);
     });
   }
-  return kuva.decode().then(() => true, () => false);
+  return kuva.decode().then(() => kuva, () => null);
 }
 
 /**
@@ -161,7 +161,17 @@ async function haePohja(iso, lauta) {
         rajaus: tiedot.rajaus ?? b,
         kuva: fokuskarttaUrl(tiedot.tiedosto ?? `${iso}.webp`),
       };
-      if (!await lataaKuva(pohja.kuva)) throw new Error('kuva ei lataudu');
+      const kuva = await lataaKuva(pohja.kuva);
+      if (!kuva) throw new Error('kuva ei lataudu');
+      /*
+       * TODELLINEN PIKSELIMÄÄRÄ TALTEEN. Jatkuva atlas pitää useaa
+       * lehteä kartalla yhtä aikaa, ja sen muistikatto lasketaan
+       * megapikseleinä eikä lehtien lukumääränä (ks. ATLAS_MEGAPIKSELIA).
+       * Mitta luetaan siitä samasta kuvasta, joka juuri purettiin —
+       * arvaus olisi tässä pahin mahdollinen virhe, koska lehtien koot
+       * vaihtelevat Kyproksen 5,6:sta Suomen 25,6 megapikseliin.
+       */
+      pohja.mp = (kuva.naturalWidth * kuva.naturalHeight) / 1e6 || ATLAS_OLETUS_MP;
       VARASTO.set(avain, pohja);
       return pohja;
     } catch {
@@ -311,10 +321,432 @@ function maanNakyma(ui, iso, lauta) {
   return muoto ? { bbox: muoto } : null;
 }
 
+/*
+ * ================== JATKUVA ATLAS (omistajan tilaus 25.8.2026) ======
+ *
+ * *"fokuskarttapiirros piirretään KOKO AJAN — kaikkien valmistuneiden
+ * maiden lehdet näkyvät kartalla samanaikaisesti koko maailman
+ * mittakaavassa"*.
+ *
+ * Lehdet ovat jo valmiiksi maailmankartan koordinaateissa (FOKUS_POHJAT
+ * bbox), joten yhtenäinen atlas ei vaadi uutta grafiikkaa: riittää että
+ * niitä piirretään useampi kuin yksi. Koko työ on siinä, MITKÄ niistä
+ * ovat kartalla milläkin hetkellä.
+ *
+ * === MUISTI ON AINOA OIKEA RAJOITE ===
+ *
+ * Mitattu 25.8.2026 ämpäristä (39 lehteä, WebP-otsakkeista luetut
+ * mitat): tiedostoina 62,5 Mt, mutta PURETTUINA 928 megapikseliä eli
+ * noin 3,7 gigatavua (4 tavua/pikseli). Yksittäinen lehti on tyypillisesti
+ * 6400 x 4000 = 25,6 Mp ≈ 102 Mt; pienimmät ovat Kypros 5,6 Mp ≈ 22 Mt
+ * ja Luxemburg 8,9 Mp ≈ 36 Mt. Kaikkien lataaminen kerralla ei siis ole
+ * hidasta vaan MAHDOTONTA — iOS jättää kuvat purkamatta ja kartta jää
+ * tyhjäksi (sama vikaluokka kuin suodattimilla, ks. sääntö 3 yllä).
+ *
+ * NELJÄ SÄÄNTÖÄ:
+ *
+ *   1. VAIN NÄKYMÄN LEHDET. Ehdokkaaksi pääsee lehti, jonka bbox
+ *      leikkaa nykyistä näkymää tai sen esilatausvaraa (ATLAS_VARA) ja
+ *      joka on näkymään nähden riittävän leveä (ATLAS_VAHIMMAISLEVEYS).
+ *   2. VAIN NE, JOTKA TUOVAT UUTTA. Lehdet ovat isoja ja menevät
+ *      raskaasti päällekkäin — kohdemaan lehti peittää tavallisesti
+ *      koko ruudun yksin. Ahne peittotesti karkealla ruudukolla ottaa
+ *      lehden vain, jos se peittää vähintään ATLAS_UUSIA_RUUTUJA
+ *      sellaista ruutua, jota mikään jo valittu lehti ei peitä.
+ *      Käytännössä kartalla on 1–4 lehteä, ei kahdeksaa.
+ *   3. KAKSI KATTOA, LRU VAPAUTTAA. Enintään ATLAS_ENINTAAN lehteä JA
+ *      enintään ATLAS_MEGAPIKSELIA megapikseliä. Kun katto ylittyy,
+ *      kauimmin sitten käytetty lehti irrotetaan DOMista — juuri se
+ *      vapauttaa puretun kuvan, koska VARASTO ei pidä Image-oliota
+ *      tallessa vaan pelkän osoitteen ja mitat.
+ *   4. PURKU TAUSTALLA. Lehti ilmestyy kartalle vasta kun decode() on
+ *      valmis (haePohja → lataaKuva), joten pääsäie ei purkaudu
+ *      panoroinnin keskellä.
+ *
+ * ATLAS EI OLE VOIMASSA YLEISKUVASSA (ui.mannerZoom pois) eikä
+ * aloituslennon aikana: molemmat ovat laudan omia näkymiä, joissa
+ * kuvien pitää olla poissa (sama raja kuin kartta.fokusRajauksilla ja
+ * verholla). Maailmanlaajuisessa yleiskuvassa lehdet olisivat lisäksi
+ * postimerkin kokoisia tilkkuja keskellä merta.
+ */
+
+/** Enintään näin monta lehteä muistissa kerralla (omistajan ohje ~8). */
+const ATLAS_ENINTAAN = 8;
+/*
+ * ...ja enintään näin monta megapikseliä purettuna, mikä on käytännössä
+ * se katto, joka osuu ensin: mitattu lehti on 25,6 Mp, joten 96 Mp on
+ * kolme–neljä lehteä eli noin 384 Mt purettua kuvaa. Kahdeksan täyttä
+ * lehteä olisi 205 Mp ≈ 820 Mt, mitä yksikään iPad ei kestä.
+ */
+const ATLAS_MEGAPIKSELIA = 96;
+/** Lehden oletuskoko ennen kuin todellinen on mitattu (tyypillinen). */
+const ATLAS_OLETUS_MP = 25.6;
+/** Esilatausvara näkymän ympärille, osuutena näkymän mitasta. */
+const ATLAS_VARA = 0.3;
+/** Lehti sivuutetaan, jos se on tätä kapeampi osuus näkymästä. */
+const ATLAS_VAHIMMAISLEVEYS = 0.12;
+/*
+ * Peittotestin ruudukko näkyvän alueen päällä, ja kuinka monta uutta
+ * ruutua lehden on tuotava kelvatakseen.
+ *
+ * MITTA ON RUUTUJA EIKÄ OSUUS NÄKYMÄSTÄ. Pystyruudulla näkymä on kaksi
+ * kertaa korkeampi kuin leveä, ja lehdet ovat vaakasuuntaisia: yksikään
+ * naapurilehti ei täytä viittä prosenttia sellaisesta näkymästä, joten
+ * suhdeluku hylkäsi ne kaikki (mitattu 25.8.2026 — atlakseen jäi vain
+ * Italia). Ruutumäärä on sama kaikilla ruuduilla ja tarkoittaa sitä,
+ * mitä sen pitääkin: tuoko tämä lehti kartalle kaistaleen, jota
+ * mikään jo valittu lehti ei kata.
+ */
+const ATLAS_RUUTUJA_X = 16;
+const ATLAS_RUUTUJA_Y = 16;
+const ATLAS_UUSIA_RUUTUJA = 5;
+
+/** Kahden laatikon leikkauksen pinta-ala (0 jos eivät leikkaa). */
+function leikkausAla(a, b) {
+  const x0 = Math.max(a.x, b.x);
+  const x1 = Math.min(a.x + a.w, b.x + b.w);
+  const y0 = Math.max(a.y, b.y);
+  const y1 = Math.min(a.y + a.h, b.y + b.h);
+  return (x1 > x0 && y1 > y0) ? (x1 - x0) * (y1 - y0) : 0;
+}
+
+/**
+ * Onko atlas voimassa juuri nyt? Sama kolmen ehdon perhe kuin muillakin
+ * fokuskerroksilla, plus yleiskuvan ja lennon rajaus (ks. johdanto).
+ */
+function atlasPaalla(ui) {
+  if (!ui.fokusmoodi || ui.katselu) return false;
+  /*
+   * ALOITUSRUUDULLA EI ATLASTA. Sama ehto kuin nykyisellä maalla
+   * (nykyinenMaa) ja verholla (ui.fokusSumuPaalla): pickstart-vaiheessa
+   * maailmaa katsellaan kokonaisuutena eikä matka ole alkanut. Ilman
+   * tätä puhelimen aloituszoom (kartta.zoomTarpeen) sytyttäisi
+   * mannerZoomin ja koko Euroopan atlaksen ruudulle ennen kuin pelaaja
+   * on valinnut lähtöpaikkaa — päinvastoin kuin Raamattu vaatii
+   * (*"kartoittamaton päiväkirja tarkentuu vasta kun jäljillä
+   * kuljetaan"*), ja vielä ilman verhoa, joka on pickstartissa pois.
+   */
+  if (ui.game.phase === 'pickstart') return false;
+  if (ui.aloituslentoKesken) return false;
+  return Boolean(ui.mannerZoom);
+}
+
+/** Atlaksen oma ryhmä fokuskerroksessa; luodaan tarvittaessa. */
+function atlasRyhma(ui) {
+  const kerros = ui.fokuskarttaKerros;
+  if (!kerros) return null;
+  let g = kerros.querySelector('.fokus-atlas');
+  if (!g) {
+    // ENSIMMÄISENÄ LAPSENA: nykyisen maan lehti (.fokus-lehti) on tämän
+    // päällä, jotta kohdemaa ei jää naapurin vuodon alle.
+    g = el('g', { class: 'fokus-atlas', 'pointer-events': 'none' });
+    kerros.insertBefore(g, kerros.firstChild);
+  }
+  return g;
+}
+
+/** Nykyisen maan oma ryhmä (kuva + lisänimet) atlaksen päällä. */
+function lehtiRyhma(ui) {
+  const kerros = ui.fokuskarttaKerros;
+  if (!kerros) return null;
+  let g = kerros.querySelector('.fokus-lehti');
+  if (!g) g = el('g', { class: 'fokus-lehti', 'pointer-events': 'none' }, kerros);
+  return g;
+}
+
+/** Lehden arvioitu koko megapikseleinä (mitattu, jos jo ladattu). */
+function lehdenMp(iso, lauta) {
+  const tallessa = VARASTO.get(`${lauta}:${iso}`);
+  return (tallessa && tallessa !== 'ei' && tallessa.mp) || ATLAS_OLETUS_MP;
+}
+
+/**
+ * Näkymään osuvat lehdet parhaasta huonoimpaan.
+ *
+ * KIERTÄVÄ LAUTA: sama lehti voi olla näkyvissä laudan leveyden päässä
+ * (js/ui.js kiertoKohdat piirtää kartan uudelleen sauman toiselle
+ * puolelle). Jokaisesta lehdestä otetaan se kopio, joka leikkaa näkymää
+ * eniten; päivämäärärajan yli ULOTTUVA lehti rajautuisi väärin, mikä on
+ * sama tiedossa oleva yksinkertaistus kuin kartan muissakin rajauksissa
+ * (js/kartta.js rajaaFokusPan) eikä koske yhtäkään nykyistä lehteä.
+ */
+function atlasEhdokkaat(ui, nakyva, lauta) {
+  const kierto = ui.kartta?.kiertava?.() ? (ui.game.pack.map?.width ?? 0) : 0;
+  const vara = {
+    x: nakyva.x - nakyva.w * ATLAS_VARA,
+    y: nakyva.y - nakyva.h * ATLAS_VARA,
+    w: nakyva.w * (1 + 2 * ATLAS_VARA),
+    h: nakyva.h * (1 + 2 * ATLAS_VARA),
+  };
+  /*
+   * NÄKYMÄN SYDÄN — keskimmäinen puolikas. Järjestys ei saa olla pelkkä
+   * leikkauksen pinta-ala: pystyruudulla näkymä on korkea, ja Norjan
+   * lehti (2025 x 1265 yksikköä) leikkaa sellaista näkymää enemmän kuin
+   * yksikään Kreikan naapuri, vaikka pelaaja seisoo Ateenassa ja katsoo
+   * ruudun keskelle (mitattu 25.8.2026: atlakseen valikoitui Norja).
+   * Sydämen osuus painaa nelinkertaisesti, joten lähimmät lehdet tulevat
+   * ensin ja kaukainen jättiläinen vasta jos budjettia jää.
+   */
+  const sydan = {
+    x: nakyva.x + nakyva.w * 0.25,
+    y: nakyva.y + nakyva.h * 0.25,
+    w: nakyva.w * 0.5,
+    h: nakyva.h * 0.5,
+  };
+  const lista = [];
+  for (const [iso, tiedot] of Object.entries(FOKUS_POHJAT)) {
+    if (tiedot.lauta && tiedot.lauta !== lauta) continue;
+    // Tiedetysti puuttuva lehti ei ole ehdokas: muuten valinta odottaisi
+    // ikuisesti kuvaa, jota ei ole (VARASTO muistaa puutteen).
+    if (VARASTO.get(`${lauta}:${iso}`) === 'ei') continue;
+    const b = tiedot.bbox;
+    if (!(b?.w > 0) || !(b?.h > 0)) continue;
+    // Postimerkkiä ei kannata purkaa: näkymään nähden liian kapea lehti
+    // ei toisi ruudulle mitään luettavaa.
+    if (b.w < nakyva.w * ATLAS_VAHIMMAISLEVEYS) continue;
+    let paras = null;
+    for (const dx of kierto ? [0, kierto, -kierto] : [0]) {
+      const laatikko = {
+        x: b.x + dx, y: b.y, w: b.w, h: b.h,
+      };
+      const osuus = leikkausAla(laatikko, vara);
+      if (osuus > (paras?.osuus ?? 0)) {
+        paras = { laatikko, osuus, dx, arvo: osuus + 4 * leikkausAla(laatikko, sydan) };
+      }
+    }
+    if (!paras) continue;
+    const ikkuna = tiedot.rajaus ?? b;
+    lista.push({
+      iso,
+      bbox: paras.laatikko,
+      ikkuna: {
+        x: ikkuna.x + paras.dx, y: ikkuna.y, w: ikkuna.w, h: ikkuna.h,
+      },
+      arvo: paras.arvo,
+      kuva: fokuskarttaUrl(tiedot.tiedosto ?? `${iso}.webp`),
+    });
+  }
+  lista.sort((a, b) => b.arvo - a.arvo);
+  return lista;
+}
+
+/**
+ * Merkitsee lehden peittämät ruudut ja kertoo, kuinka moni niistä oli
+ * uusi. `merkitse = false` vain kysyy.
+ */
+function peita(ruudut, laatikko, nakyva, merkitse) {
+  let uusia = 0;
+  for (let iy = 0; iy < ATLAS_RUUTUJA_Y; iy += 1) {
+    const y = nakyva.y + ((iy + 0.5) / ATLAS_RUUTUJA_Y) * nakyva.h;
+    if (y < laatikko.y || y > laatikko.y + laatikko.h) continue;
+    for (let ix = 0; ix < ATLAS_RUUTUJA_X; ix += 1) {
+      const x = nakyva.x + ((ix + 0.5) / ATLAS_RUUTUJA_X) * nakyva.w;
+      if (x < laatikko.x || x > laatikko.x + laatikko.w) continue;
+      const i = iy * ATLAS_RUUTUJA_X + ix;
+      if (ruudut[i]) continue;
+      uusia += 1;
+      if (merkitse) ruudut[i] = 1;
+    }
+  }
+  return uusia;
+}
+
+/**
+ * Ahne valinta: mitkä lehdet kuuluvat juuri nyt atlakseen?
+ *
+ * Nykyisen maan lehti ei ole listassa (se piirtyy omaan ryhmäänsä),
+ * mutta se vie peittoa ja muistibudjettia — muuten kohdemaan viereen
+ * ladattaisiin naapureita, joita ei näy.
+ */
+function atlasValinta(ui, nakyva, lauta, nykyinen, ehdokkaat) {
+  const ruudut = new Uint8Array(ATLAS_RUUTUJA_X * ATLAS_RUUTUJA_Y);
+  const valitut = [];
+  let mp = 0;
+  const oma = ehdokkaat.find((e) => e.iso === nykyinen);
+  if (oma) {
+    peita(ruudut, oma.bbox, nakyva, true);
+    mp += lehdenMp(oma.iso, lauta);
+  }
+  for (const e of ehdokkaat) {
+    if (e.iso === nykyinen) continue;
+    if (valitut.length + (oma ? 1 : 0) >= ATLAS_ENINTAAN) break;
+    if (peita(ruudut, e.bbox, nakyva, false) < ATLAS_UUSIA_RUUTUJA) continue;
+    const koko = lehdenMp(e.iso, lauta);
+    // Budjetin täyttyminen ei lopeta hakua: seuraava lehti voi olla
+    // pieni (Kypros 5,6 Mp) ja mahtua vielä.
+    if (mp + koko > ATLAS_MEGAPIKSELIA) continue;
+    peita(ruudut, e.bbox, nakyva, true);
+    mp += koko;
+    valitut.push(e);
+  }
+  return valitut;
+}
+
+/** Vapauttaa yhden lehden: irti DOMista = purettu kuva pois muistista. */
+function vapautaLehti(ui, iso) {
+  const tieto = ui.atlasLehdet?.get(iso);
+  if (!tieto) return;
+  tieto.el?.remove();
+  ui.atlasLehdet.delete(iso);
+}
+
+/**
+ * LRU-vapautus: pudottaa kauimmin sitten käytetyt lehdet, kunnes
+ * molemmat katot toteutuvat. Suojatut (juuri nyt valitut) jäävät.
+ */
+function karsiAtlas(ui, lauta, suojatut) {
+  const lehdet = ui.atlasLehdet;
+  if (!lehdet?.size) return;
+  const yli = () => {
+    let mp = ui.atlasOmaMp ?? 0;
+    for (const [iso] of lehdet) mp += lehdenMp(iso, lauta);
+    return lehdet.size + (ui.atlasOmaMp ? 1 : 0) > ATLAS_ENINTAAN
+      || mp > ATLAS_MEGAPIKSELIA;
+  };
+  while (yli()) {
+    let vanhin = null;
+    for (const [iso, tieto] of lehdet) {
+      if (suojatut.has(iso)) continue;
+      if (!vanhin || tieto.kaytetty < vanhin.kaytetty) vanhin = { iso, kaytetty: tieto.kaytetty };
+    }
+    if (!vanhin) return; // pelkkiä suojattuja jäljellä: katto joustaa
+    vapautaLehti(ui, vanhin.iso);
+  }
+}
+
+/**
+ * Tahdistaa atlaksen näkymään. Kutsutaan aina kun näkymä on ASETTUNUT
+ * (js/ui.js paivitaMaastonimet) ja fokuskerroksen päivityksestä.
+ *
+ * Työ on halpaa, kun mikään ei muuttunut: karkea näkymätunniste
+ * (atlasAvain) ohittaa koko valinnan. Tunniste on karkea tarkoituksella
+ * — pienen panoroinnin jälkeen sama joukko lehtiä on yhä oikea.
+ */
+export function paivitaFokusAtlas(ui) {
+  const ryhma = atlasRyhma(ui);
+  if (!ryhma) return;
+  ui.atlasLehdet ??= new Map();
+  ui.atlasHaut ??= new Set();
+  if (!atlasPaalla(ui)) {
+    if (ui.atlasLehdet.size) {
+      for (const iso of [...ui.atlasLehdet.keys()]) vapautaLehti(ui, iso);
+      ui.atlasAvain = null;
+      ui.paivitaAtlasVerho?.();
+    }
+    return;
+  }
+  const nakyva = ui.nakyvaAlue?.();
+  if (!nakyva?.w) return;
+  const lauta = ui.game.pack.id;
+  const nykyinen = ui.fokuskarttaAvain !== 'pois' ? ui.fokuskarttaAvain : null;
+  ui.atlasOmaMp = nykyinen ? lehdenMp(nykyinen, lauta) : 0;
+  // Karkea tunniste: kymmenesosa näkymän mitasta riittää tarkkuudeksi.
+  const avain = [
+    lauta, nykyinen ?? '-',
+    Math.round(nakyva.x / (nakyva.w / 10)),
+    Math.round(nakyva.y / (nakyva.h / 10)),
+    Math.round(Math.log2(nakyva.w) * 4),
+  ].join(':');
+  if (ui.atlasAvain === avain) return;
+
+  const ehdokkaat = atlasEhdokkaat(ui, nakyva, lauta);
+  const valitut = atlasValinta(ui, nakyva, lauta, nykyinen, ehdokkaat);
+  ui.atlasValitut = new Set(valitut.map((v) => v.iso));
+  /*
+   * KAUKAINEN LEHTI VAPAUTETAAN HETI, EI VASTA KATON TÄYTTYESSÄ. LRU
+   * yksin pitäisi purettua kuvaa muistissa katon verran, ja katto on
+   * satoja megatavuja — iOS:llä se on juuri se tilanne, jossa seuraava
+   * purku epäonnistuu ja kartta jää tyhjäksi. Näkymän (ja sen varan)
+   * ulkopuolelle jäänyt lehti ei näytä mitään, joten sillä ei ole
+   * mitään syytä olla muistissa. LRU alla hoitaa loput: näkymässä yhä
+   * olevat mutta valitsematta jääneet lehdet saavat jäädä välimuistiin,
+   * kunnes katto oikeasti täyttyy.
+   */
+  const lahella = new Set(ehdokkaat.map((e) => e.iso));
+  for (const iso of [...ui.atlasLehdet.keys()]) {
+    if (!lahella.has(iso)) vapautaLehti(ui, iso);
+  }
+  ui.atlasKello = (ui.atlasKello ?? 0) + 1;
+  const nyt = ui.atlasKello;
+  let kesken = false;
+  for (const v of valitut) {
+    const tieto = ui.atlasLehdet.get(v.iso);
+    if (tieto) { tieto.kaytetty = nyt; continue; }
+    kesken = true;
+    if (ui.atlasHaut.has(v.iso)) continue;
+    ui.atlasHaut.add(v.iso);
+    void haePohja(v.iso, lauta).then((pohja) => {
+      ui.atlasHaut?.delete(v.iso);
+      /*
+       * SAAPUNUT LEHTI OTETAAN VASTAAN, VAIKKA NÄKYMÄ OLISI EHTINYT
+       * SIIRTYÄ (mitattu 25.8.2026). Ensimmäinen versio hylkäsi lehden,
+       * jos näkymätunniste oli vaihtunut haun aikana — ja koska kamera-ajo
+       * päivittää tunnisteen useasti sekunnissa, jokainen ajon aikana
+       * alkanut haku hylättiin ja atlas jäi tyhjäksi. Purettu kuva on jo
+       * maksettu siinä vaiheessa; oikea paikka päättää sen kohtalosta on
+       * LRU-karsinta, joka pudottaa sen heti jos katot ylittyvät.
+       */
+      if (ui.dead || !pohja || !ui.fokuskarttaKerros) return;
+      if (ui.game.pack.id !== lauta || !atlasPaalla(ui)) return;
+      const kohde = atlasRyhma(ui);
+      if (!kohde || ui.atlasLehdet.has(v.iso)) return;
+      const kuva = el('image', {
+        x: v.bbox.x,
+        y: v.bbox.y,
+        width: v.bbox.w,
+        height: v.bbox.h,
+        href: pohja.kuva,
+        preserveAspectRatio: 'none',
+        class: 'fokuskartta-kuva',
+      }, kohde);
+      ui.atlasLehdet.set(v.iso, {
+        el: kuva, kaytetty: nyt, bbox: v.bbox, ikkuna: v.ikkuna,
+      });
+      // ISO LEHTI POHJIMMAISEKSI: pienempi maa ei saa jäädä naapurinsa
+      // vuodon alle. Järjestys on halpa korjata, koska solmuja on
+      // korkeintaan kahdeksan.
+      const jarjestys = [...ui.atlasLehdet.values()]
+        .sort((a, b) => (b.bbox.w * b.bbox.h) - (a.bbox.w * a.bbox.h));
+      for (const t of jarjestys) kohde.appendChild(t.el);
+      karsiAtlas(ui, lauta, ui.atlasValitut ?? new Set());
+      // Verho ei tiedä uudesta lehdestä ennen kuin sille kerrotaan.
+      ui.paivitaAtlasVerho?.();
+    });
+  }
+  /*
+   * TUNNISTE VASTA KUN JOUKKO ON KOOSSA. Jos yksikin lehti on vielä
+   * matkalla, tunniste jätetään nollaksi ja valinta lasketaan uudelleen
+   * seuraavasta piirrosta — muuten kesken jäänyt haku ei koskaan saisi
+   * toista tilaisuutta. Uusintalaskenta on halpa (39 laatikkotestiä) ja
+   * käynnissä oleva haku tunnistetaan atlasHaut-joukosta.
+   */
+  ui.atlasAvain = kesken ? null : avain;
+  const ennen = ui.atlasLehdet.size;
+  karsiAtlas(ui, lauta, ui.atlasValitut);
+  if (ui.atlasLehdet.size !== ennen) ui.paivitaAtlasVerho?.();
+}
+
+/**
+ * Atlaksen lehtien laatikot verhoa varten (js/ui.js paivitaFokusSumu).
+ *
+ * Palauttaa vain ne lehdet, joiden maa on annetussa joukossa: PELITILASSA
+ * käymättömän maan päällä pysyy sumuverho (Raamattu, osio "Fokusmoodi":
+ * *"käymättömät maat himmeinä"*) vaikka sen lehti piirtyisikin alle.
+ */
+export function fokusAtlasIkkunat(ui, maat) {
+  const ulos = [];
+  for (const [iso, tieto] of ui.atlasLehdet ?? []) {
+    if (maat && !maat.has(iso)) continue;
+    ulos.push({ bbox: tieto.bbox, ikkuna: tieto.ikkuna });
+  }
+  return ulos;
+}
+
 /** Piirtää lehden ja kertoo kartalle, että sen alue on nyt kuvan alla. */
 function piirra(ui, iso, pohja) {
-  const kerros = ui.fokuskarttaKerros;
-  kerros.textContent = '';
+  const ryhma = lehtiRyhma(ui);
+  if (!ryhma) return;
+  ryhma.textContent = '';
   const { bbox } = pohja;
   el('image', {
     x: bbox.x,
@@ -326,11 +758,11 @@ function piirra(ui, iso, pohja) {
     // erikseen, jottei pyöristys jätä pikselin rakoa reunaan.
     preserveAspectRatio: 'none',
     class: 'fokuskartta-kuva',
-  }, kerros);
+  }, ryhma);
   // Nimet päällimmäisenä tässä kerroksessa — mutta yhä kaupunkien ja
   // laattojen alla, koska koko kerros on niiden alla. Nykyisellä
   // lipulla (FOKUS_SVG_NIMET) tämä ei tee mitään: nimet ovat kuvassa.
-  piirraLisanimet(ui, iso, kerros);
+  piirraLisanimet(ui, iso, ryhma);
   paivitaFokusNimet(ui);
   // Kaksi laatikkoa: kuva vie bboxin, mutta kameran ja rajausten
   // mittapuu on IKKUNA (ks. maanNakyma ja kartta.fokusRajaukset).
@@ -386,9 +818,22 @@ export function paivitaFokuskartta(ui) {
   if (ui.fokuskarttaAvain === avain) return;
   const ensimmainen = ui.fokuskarttaAvain == null;
   ui.fokuskarttaAvain = avain;
-  kerros.textContent = '';
+  /*
+   * VAIN NYKYISEN MAAN RYHMÄ TYHJENNETÄÄN, EI KOKO KERROSTA. Atlaksen
+   * naapurilehdet (.fokus-atlas) elävät näkymän eivätkä vuoron mukana:
+   * jos ne pyyhittäisiin joka maanvaihdossa, ne purettaisiin heti
+   * uudelleen — ja juuri purku on se kallis työ (ks. atlaksen johdanto).
+   */
+  lehtiRyhma(ui)?.replaceChildren();
+  // Atlaksen valinta on maakohtainen (nykyisen maan lehti vie peiton ja
+  // budjetin), joten tunniste on nollattava — muuten uusi maa jäisi
+  // vanhan valinnan varaan seuraavaan panorointiin asti.
+  ui.atlasAvain = null;
   ui.paivitaFokusPohja?.(null);
-  if (!iso) return;
+  if (!iso) {
+    paivitaFokusAtlas(ui);
+    return;
+  }
 
   const nayta = (pohja) => {
     // Maa on voinut vaihtua haun aikana (botti, nopea siirto).
@@ -423,11 +868,24 @@ export function paivitaFokuskartta(ui) {
   // vasta seuraavalla ruudunpäivityksellä.
   if (valmis && valmis !== 'ei') nayta(valmis);
   else if (valmis !== 'ei') void haePohja(iso, lauta).then(nayta);
+  /*
+   * NYKYISEN MAAN LEHTI ON MYÖS ATLAKSEN LEHTI: se vie peittoa ja
+   * muistibudjettia, joten naapurivalinta on tehtävä uusiksi heti eikä
+   * vasta seuraavasta panoroinnista. Kun maa on juuri vaihtunut, atlas
+   * on tavallisesti tyhjä — kohdemaan lehti täyttää ruudun yksin.
+   */
+  paivitaFokusAtlas(ui);
 }
 
-/** Laudan vaihto: kerros ja muistettu maa nollille. */
+/** Laudan vaihto: kerros, atlas ja muistettu maa nollille. */
 export function nollaaFokuskartta(ui) {
   ui.fokuskarttaAvain = null;
   if (ui.fokuskarttaKerros) ui.fokuskarttaKerros.textContent = '';
+  // Atlas asuu samassa kerroksessa: DOM meni jo, mutta kirjanpito on
+  // nollattava erikseen tai LRU luulisi lehtiä yhä kartalla oleviksi.
+  ui.atlasLehdet?.clear();
+  ui.atlasHaut?.clear();
+  ui.atlasAvain = null;
+  ui.atlasOmaMp = 0;
   ui.paivitaFokusPohja?.(null);
 }

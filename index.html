@@ -122,20 +122,24 @@
       <button id="turn-pill" class="turn-pill" type="button"
               title="Isoisän matkalaukku: passi, leimat ja tavarat"></button>
       <!--
-        FOKUSMOODIN KYTKIMET — MATKALAUKUN OIKEALLA PUOLELLA, VAIN
-        KEHITTÄJÄTILASSA (omistajan linjaus 24.8.2026, Raamatun osio
-        "Fokusmoodi").
+        KEHITTÄJÄN PELITESTINAPIT — MATKALAUKUN OIKEALLA PUOLELLA, VAIN
+        KEHITTÄJÄTILASSA (omistajan tilaus 25.8.2026; paikka ja
+        näkyvyyssääntö 24.8.2026, Raamatun osio "Fokusmoodi").
 
-        Fokusmoodi on pelin oletustila, joten tavallinen pelaaja ei näe
-        näitä koskaan: kotelo on piilossa, kunnes kehittäjätila on
-        päällä (js/main.js paivitaFokusKytkimet). Kytkin on siis
-        kehittäjän vertailukeino eikä pelaajan asetus — peliin ei tule
-        asetusnäkymää, jossa fokusmoodin voisi vahingossa sammuttaa.
+        Kotelo on piilossa, kunnes kehittäjätila on päällä (js/main.js
+        paivitaFokusKytkimet) — tavallinen pelaaja ei näe näitä koskaan.
 
-        KAKSI NAPPIA EIKÄ YKSI. Vasen kytkee koko fokusmoodin, oikea
-        pelkät sumennukset. Ennen–jälkeen-vertailussa halutaan usein
-        nähdä juuri sumennuksen osuus muun fokusmoodin pysyessä
-        paikallaan, ja yhdellä napilla se vaatisi kaksi latausta.
+        UUDET TEHTÄVÄT 25.8.2026. Napit kytkivät ennen fokusmoodin ja
+        sumennukset; nyt ne ovat pelitestin kaksi työkalua:
+
+          rajat   — pelaajan liikkuvuusrajoite (fokusikkuna +
+                    valloitettu alue) päälle/pois kehittäjätilassa.
+          pisteet — laudan kaupungit ja reittiverkko näkyviin
+                    fokuskartan päälle, jotta kaupunkiin näkee hypätä.
+
+        Vanhat kytkimet siirtyivät hampurilaisvalikon Työhuone-koteloon
+        (ks. #fokus-btn siellä); perustelu js/ui-apurit.js:n osiossa
+        "KEHITTÄJÄN KAKSI YLÄRIVIN NAPPIA".
 
         Paikka on matkalaukun JA .topbar-actionsin välissä: laukku on
         pelin tavaraa, hampurilainen on pelin ympäryksiä, ja nämä ovat
@@ -143,10 +147,10 @@
         tekstinappeja, koska kuvake ei kerro kumpi kytkin on kumpi.
       -->
       <div id="fokus-kytkimet" class="fokus-kytkimet" hidden>
-        <button id="fokus-btn" class="fokus-kytkin" type="button"
-                aria-pressed="true">fokus</button>
-        <button id="fokus-sumennus-btn" class="fokus-kytkin" type="button"
-                aria-pressed="true">sumennus</button>
+        <button id="kehittaja-rajat-btn" class="fokus-kytkin" type="button"
+                aria-pressed="false">rajat</button>
+        <button id="kehittaja-pisteet-btn" class="fokus-kytkin" type="button"
+                aria-pressed="false">pisteet</button>
       </div>
       <div class="topbar-actions">
         <!-- Varusteet: kartan linssivalitsin. Kotelo on piilossa, kunnes
@@ -266,6 +270,33 @@
               <button id="puhe-saadin-btn" class="ghost tyohuone-nappi" type="button" hidden>
                 <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 10v4h3.5l4 3.5v-11L8.5 10z"/><path d="M15.5 9.5a3.6 3.6 0 0 1 0 5"/><path d="M17.5 7.5a6.4 6.4 0 0 1 0 9"/></svg></span>
                 <span>Lukijaääni</span>
+              </button>
+              <!--
+                FOKUSMOODIN VERTAILUKYTKIMET (Raamatun osio "Fokusmoodi":
+                *"Fokusmoodin kytkin ... VAIN kehittäjätilassa; lisäksi
+                kehittäjätilaan sumennukset päälle/pois -nappi"*).
+
+                Ne olivat ylärivissä 24.–25.8.2026, kunnes omistajan
+                tilaus 25.8. antoi ylärivin kahdelle napille uudet
+                tehtävät (rajat, pisteet). Raamattu vaatii kytkimet yhä,
+                joten ne siirtyivät tänne — samaan koteloon muun
+                kehittäjän kaluston kanssa, ja samalla näkyvyyssäännöllä
+                (kotelo on piilossa ilman kehittäjätilaa).
+
+                Tunnisteet ovat entiset (#fokus-btn, #fokus-sumennus-btn),
+                joten js/main.js kytkee ne kuten ennenkin. Nappi kertoo
+                tilansa aria-pressedillä ja tekstin perässä olevalla
+                merkillä (js/main.js paivitaFokusKytkimet).
+              -->
+              <button id="fokus-btn" class="ghost tyohuone-nappi" type="button"
+                      aria-pressed="true">
+                <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><circle cx="12" cy="12" r="2.6"/></svg></span>
+                <span>Fokusmoodi</span>
+              </button>
+              <button id="fokus-sumennus-btn" class="ghost tyohuone-nappi" type="button"
+                      aria-pressed="true">
+                <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 15.5c2.2-3 4.4-4.5 6.7-4.5 2.2 0 4.5 1.5 6.6 4.5"/><path d="M4 10c2.2-3 4.4-4.5 6.7-4.5 2.2 0 4.5 1.5 6.6 4.5"/><path d="M19.5 12h.5"/></svg></span>
+                <span>Sumennukset</span>
               </button>
             </div>
             <!--
