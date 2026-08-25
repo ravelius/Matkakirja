@@ -18666,8 +18666,11 @@ body.fokuspohja .maa-pilleri { display: none; }
    z-index on 2 eli mittojen (3), taulun (5) ja alanappien alla — jos
    jokin niistä osuu päälle, viivain jää alle eikä toisin päin.
 
-   PAIKAT: pituusasteet yläreunaan, leveysasteet vasempaan. Alareuna on
-   kartuutsin, neliönapin ja mittajanan, oikea reuna kelluvan pöllön.
+   PAIKAT: pituusasteet ylä- JA alareunaan, leveysasteet vasempaan JA
+   oikeaan (omistajan pelitestitilaus 25.8.2026: neljä sivua). Alalaidan
+   kartuutsi, neliönappi ja mittajana sekä oikean reunan kelluva pöllö ja
+   zoomiportaat eivät väisty — viivain jättää merkin latomatta niiden
+   kohdalta (js/fokusmitat.js KALUSTEET).
    =========================================================================== */
 
 .fokus-viivaimet {
@@ -18683,7 +18686,9 @@ body.fokuspohja .maa-pilleri { display: none; }
 
 .fokus-viivain { position: absolute; }
 .fokus-viivain-yla { top: 0; left: 0; right: 0; height: 1.4rem; }
+.fokus-viivain-ala { bottom: 0; left: 0; right: 0; height: 1.4rem; }
 .fokus-viivain-vasen { top: 0; bottom: 0; left: 0; width: 2.6rem; }
+.fokus-viivain-oikea { top: 0; bottom: 0; right: 0; width: 2.6rem; }
 
 .fokus-viivain-merkki {
   position: absolute;
@@ -18718,6 +18723,18 @@ body.fokuspohja .maa-pilleri { display: none; }
 
 .fokus-viivain-yla .fokus-viivain-viiva { width: 1px; height: 6px; }
 
+/* Alaviivain on yläviivaimen peilikuva: viiva alareunassa kiinni ja
+   lukema sen YLÄPUOLELLA (column-reverse), jottei lukema jää ruudun
+   alalaidan taakse. */
+.fokus-viivain-ala .fokus-viivain-merkki {
+  bottom: 0;
+  flex-direction: column-reverse;
+  align-items: center;
+  transform: translateX(-50%);
+}
+
+.fokus-viivain-ala .fokus-viivain-viiva { width: 1px; height: 6px; }
+
 /* Vasen viivain: vaakaviiva reunasta oikealle, lukema sen perässä. */
 .fokus-viivain-vasen .fokus-viivain-merkki {
   left: 0;
@@ -18725,3 +18742,56 @@ body.fokuspohja .maa-pilleri { display: none; }
 }
 
 .fokus-viivain-vasen .fokus-viivain-viiva { width: 6px; height: 1px; }
+
+/* Oikea viivain: sama peilattuna — viiva kiinni oikeassa reunassa ja
+   lukema sen vasemmalla puolella (row-reverse). */
+.fokus-viivain-oikea .fokus-viivain-merkki {
+  right: 0;
+  flex-direction: row-reverse;
+  transform: translateY(-50%);
+}
+
+.fokus-viivain-oikea .fokus-viivain-viiva { width: 6px; height: 1px; }
+
+/* ---------------------------------------------------------------------------
+   VIIVAIMET POIS LIIKKEEN AJAKSI (omistajan tilaus 25.8.2026)
+
+   Lukemat lasketaan vasta kun näkymä on asettunut, joten liikkeen aikana
+   ne kertoisivat edellisestä ruudusta. Nauha liukuu siksi kokonaan
+   reunansa yli sillä aikaa kun kartta on kädessä ja palaa pienen viiveen
+   päästä uusilla lukemilla (js/fokusmitat.js merkitseViivainLiike).
+
+   SIIRTO ON REILUSTI YLI NAUHAN OMAN MITAN. Lukema ladotaan viivan
+   VIEREEN eikä nauhan sisään, joten pelkkä -100 % jättäisi numeron
+   roikkumaan reunaan; lisäys vie senkin ruudun ulkopuolelle.
+
+   Transform ja opacity, ei suodattimia (sama iOS-sääntö kuin kartan
+   kerroksilla). Kevennetyllä liikkeellä viivaimet jäävät paikoilleen:
+   silloin pieni epätarkkuus lukemassa on parempi kuin liike ruudulla.
+   --------------------------------------------------------------------------- */
+
+.fokus-viivain {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.fokus-viivaimet.viivaimet-poissa .fokus-viivain { opacity: 0; }
+.fokus-viivaimet.viivaimet-poissa .fokus-viivain-yla {
+  transform: translateY(calc(-100% - 0.8rem));
+}
+.fokus-viivaimet.viivaimet-poissa .fokus-viivain-ala {
+  transform: translateY(calc(100% + 0.8rem));
+}
+.fokus-viivaimet.viivaimet-poissa .fokus-viivain-vasen {
+  transform: translateX(calc(-100% - 2.4rem));
+}
+.fokus-viivaimet.viivaimet-poissa .fokus-viivain-oikea {
+  transform: translateX(calc(100% + 2.4rem));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fokus-viivain { transition: none; }
+  .fokus-viivaimet.viivaimet-poissa .fokus-viivain {
+    transform: none;
+    opacity: 1;
+  }
+}

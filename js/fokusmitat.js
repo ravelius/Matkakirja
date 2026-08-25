@@ -551,6 +551,24 @@ function taytaMaataulu(ui, iso) {
  * alanapit. Reunanauha on muutaman pikselin levyinen eikä siksi osu
  * mihinkään niistä.
  *
+ * NELJÄ SIVUA, EI KAHTA (omistajan pelitestitilaus 25.8.2026:
+ * *"aste-asteikot laajennetaan neljälle sivulle"*). Leveysasteet ovat
+ * MOLEMMISSA pystyreunoissa ja pituusasteet MOLEMMISSA vaakareunoissa,
+ * kuten aikakauden atlaksen lehdessä: lukema löytyy siitä reunasta,
+ * joka sattuu olemaan lähinnä katsottua kohtaa, eikä silmän tarvitse
+ * hakea koko ruudun poikki. Lukemat lasketaan KERRAN ja ladotaan
+ * molempiin nauhoihin — kaksi erillistä laskentaa voisi antaa samasta
+ * ruudusta kaksi eri astetta.
+ *
+ * VIIVAIN VÄISTÄÄ RUUDUN KALUSTEET (ks. KALUSTEET). Kaksi uutta reunaa
+ * osuvat väistämättä johonkin: alalaidassa ovat kartuutsi, Liiku-neliö
+ * ja mittajana, oikeassa reunassa kelluva pöllö ja zoomiportaat.
+ * Kalusteita ei siirretä eikä nauhaa kavenneta — pois jää se yksi
+ * merkki, joka osuisi kalusteen kohdalle, kuten maataulun kanssa on
+ * tehty alusta asti. Paikat MITATAAN ajossa, koska yksikään kaluste ei
+ * ole kiinteässä kohdassa: kartuutsin leveys riippuu maan nimestä,
+ * napit ja pöllö turva-alueesta, zoomiportaat osoitinlaitteesta.
+ *
  * KAAVA ON SAMA KUIN MITTAJANALLA (FOKUS_LAUTAPROJEKTIOT,
  * projektionKaavat). Jos viivaimet käyttäisivät omaa kaavaansa, sama
  * ruutu väittäisi kahta eri leveysastetta.
@@ -564,9 +582,54 @@ function taytaMaataulu(ui, iso) {
  */
 const ASTEASKELEET = [30, 20, 10, 5, 2, 1, 0.5, 0.25, 0.1];
 const VALIN_MIN = 78;
-/* Nurkka on kahden viivaimen risteys: pystyviivaimen ylin lukema
- * jätetään pois, jottei se osu vaakaviivaimen numeroriviin. */
+/* Nurkka on kahden viivaimen risteys: pystyviivainten ylin ja alin
+ * lukema jätetään pois, jotteivat ne osu vaakaviivainten numeroriviin.
+ * Nurkat kuuluvat siis vaakaviivaimille, kaikissa neljässä kulmassa. */
 const NURKKA_PX = 30;
+
+/*
+ * RUUDUN KALUSTEET, JOIDEN KOHDALTA VIIVAIN VÄISTÄÄ.
+ *
+ * Lista on VALITSIMIA eikä mittoja: jokainen näistä elää oman
+ * sääntönsä mukaan (kartuutsin leveys maan nimestä, napit ja pöllö
+ * turva-alueesta, zoomiportaat siitä onko laitteessa osoitinta), joten
+ * ainoa kestävä mitta on ajossa luettu ruutulaatikko.
+ *
+ * Maataulu EI ole listalla vaikka sekin väistetään: sen avaus on
+ * scaleY-siirtymä, ja ruutulaatikko kertoisi kesken animaation väärän
+ * korkeuden — se mitataan asettelulaatikosta erikseen (ks.
+ * kalusteLaatikot).
+ */
+const KALUSTEET = [
+  '.fokus-kartuutsi',
+  '.fokus-jana',
+  '.toimintorivi button',
+  '.zoomi',
+  '.pollo-nappi.pollo-kelluu',
+];
+
+/*
+ * Kuinka paljon kalusteen ympärille jätetään ilmaa. Merkin lukema on
+ * leveämpi kuin korkea ("37,5°P" on parikymmentä pikseliä leveä mutta
+ * yhden rivin korkuinen), ja vaakaviivaimessa lukema on vielä
+ * KESKITETTY viivan kohdalle — siksi vaakasuunnassa varataan puolikas
+ * lukema kumpaankin suuntaan ja pystysuunnassa vain rivin verran.
+ */
+const MERKKI_VARA_X = 26;
+const MERKKI_VARA_Y = 9;
+
+/*
+ * KOSKETUS EI OLE PEITTO. Kaluste varaa kaistan vain jos se osuu
+ * nauhaan tätä syvemmältä.
+ *
+ * Mitattu vika: alanappirivin painikkeet päättyvät tasan alaviivaimen
+ * yläreunaan, ja pyöristyksen jälkeen ne menivät nauhan kanssa
+ * päällekkäin 0,45 pikseliä. Sillä ei peitä mitään — mutta se varasi
+ * napin koko leveyden, ja alaviivain jäi tyhjäksi ruudun puolikkaalta.
+ * Raja on siis pienempi kuin mikään lukema mutta suurempi kuin
+ * pyöristysvirhe.
+ */
+const OSUMA_MIN = 4;
 
 /**
  * PIENIN askel, jonka väli on ruudulla vielä luettava.
@@ -584,13 +647,14 @@ function valitseAskel(pxAsteessa) {
   return mahtuvat.length ? mahtuvat[mahtuvat.length - 1] : ASTEASKELEET[0];
 }
 
-/** Reunaviivainten säiliö: kaksi nauhaa, ylä ja vasen. */
+/** Reunaviivainten säiliö: neljä nauhaa, yksi joka sivulle. */
 function rakennaViivaimet(ui) {
   const sailio = luo('div', 'fokus-viivaimet');
   sailio.setAttribute('aria-hidden', 'true');
   sailio.hidden = true;
-  sailio.appendChild(luo('div', 'fokus-viivain fokus-viivain-yla'));
-  sailio.appendChild(luo('div', 'fokus-viivain fokus-viivain-vasen'));
+  for (const sivu of ['yla', 'ala', 'vasen', 'oikea']) {
+    sailio.appendChild(luo('div', `fokus-viivain fokus-viivain-${sivu}`));
+  }
   ui.mapPane.appendChild(sailio);
   return sailio;
 }
@@ -643,25 +707,135 @@ function viivainMerkki(nauha, paikka, teksti, pysty) {
 }
 
 /**
+ * Ruudun kalusteiden laatikot karttaruudun koordinaatteina.
+ *
+ * MITATAAN RUUTULAATIKOISTA, KOSKA KALUSTEET EIVÄT OLE SAMAN VANHEMMAN
+ * LAPSIA. Kartuutsi ja jana ovat karttaruudussa, alanappirivi
+ * .rail-kerroksessa ja kelluva pöllö kiinni ikkunassa (position:
+ * fixed) — offsetTop tarkoittaisi kullakin eri origoa. Ruutulaatikko on
+ * yhteinen kieli, ja karttaruudun oma laatikko kääntää sen paneelin
+ * koordinaateiksi.
+ */
+function kalusteLaatikot(ui) {
+  const p = ui.mapPane.getBoundingClientRect();
+  const laatikot = [];
+  for (const valitsin of KALUSTEET) {
+    for (const osa of document.querySelectorAll(valitsin)) {
+      const r = osa.getBoundingClientRect();
+      if (!(r.width > 0) || !(r.height > 0)) continue;
+      laatikot.push({
+        x1: r.left - p.left,
+        x2: r.right - p.left,
+        y1: r.top - p.top,
+        y2: r.bottom - p.top,
+      });
+    }
+  }
+  /*
+   * AUKI OLEVA MAATAULU VARAA KAISTAN ITSELLEEN. Taulu on pohjaton
+   * (ks. rakennaMaataulu), ja sen lukurivit alkavat samasta
+   * pystyviivasta kuin kartuutsi eli viivainnauhan päältä. Ennen
+   * paperilaatta peitti lukemat; nyt ne latoutuisivat "34°P KESKITULO"
+   * -sotkuksi. Lukema on kahdesta vähäarvoisempi — se palaa heti kun
+   * taulu sulkeutuu — joten viivain väistää eikä taulu.
+   *
+   * ASETTELULAATIKKO EIKÄ getBoundingClientRect: taulun avaus on
+   * transform-siirtymä (scaleY), ja ruutulaatikko kertoisi kesken
+   * animaation väärän korkeuden. offsetTop/offsetHeight ovat
+   * karttaruudun suhteen ja transformista riippumattomat.
+   */
+  const taulu = ui.fokusMaatauluAuki ? ui.fokusMaataulu : null;
+  if (taulu && taulu.offsetHeight > 0) {
+    laatikot.push({
+      x1: taulu.offsetLeft,
+      x2: taulu.offsetLeft + taulu.offsetWidth,
+      y1: taulu.offsetTop,
+      y2: taulu.offsetTop + taulu.offsetHeight,
+    });
+  }
+  return laatikot;
+}
+
+/**
+ * Nauhan oma kaista karttaruudussa.
+ *
+ * offset* eikä ruutulaatikko: nauha LIUKUU RUUDUN ULKOPUOLELLE
+ * liikkeen ajaksi (ks. merkitseViivainLiike), ja lukemat ladotaan
+ * uudelleen juuri silloin kun se on ulkona. Ruutulaatikko kertoisi
+ * tuolloin siirretyn paikan, ja kalusteiden väistö laskettaisiin
+ * väärästä kohdasta; asettelulaatikko ei tunne siirtymää lainkaan.
+ */
+function nauhanKaista(nauha) {
+  return {
+    x1: nauha.offsetLeft,
+    x2: nauha.offsetLeft + nauha.offsetWidth,
+    y1: nauha.offsetTop,
+    y2: nauha.offsetTop + nauha.offsetHeight,
+  };
+}
+
+/**
+ * Kaistat, joihin nauha ei saa latoa merkkiä.
+ *
+ * Mukaan otetaan VAIN ne kalusteet, jotka oikeasti osuvat tähän
+ * nauhaan: pöllö on oikean reunan asia eikä saa jättää aukkoa vasempaan
+ * viivaimeen, ja kartuutsi on alalaidan asia eikä saa syödä merkkiä
+ * yläreunasta.
+ */
+function varatutKaistat(laatikot, kaista, pysty) {
+  const varatut = [];
+  const yhteinen = (a1, a2, b1, b2) => Math.min(a2, b2) - Math.max(a1, b1);
+  for (const laatikko of laatikot) {
+    const osuu = yhteinen(laatikko.x1, laatikko.x2, kaista.x1, kaista.x2) > OSUMA_MIN
+      && yhteinen(laatikko.y1, laatikko.y2, kaista.y1, kaista.y2) > OSUMA_MIN;
+    if (!osuu) continue;
+    varatut.push(pysty
+      ? [laatikko.y1 - MERKKI_VARA_Y, laatikko.y2 + MERKKI_VARA_Y]
+      : [laatikko.x1 - MERKKI_VARA_X, laatikko.x2 + MERKKI_VARA_X]);
+  }
+  return varatut;
+}
+
+const kaistallaVarattu = (paikka, varatut) => varatut
+  .some(([alku, loppu]) => paikka > alku && paikka < loppu);
+
+/**
  * Piirtää viivaimet nykyiseen näkymään.
  *
  * Kutsutaan samasta paikasta kuin mittajana eli VASTA KUN NÄKYMÄ ON
  * ASETTUNUT — merkit eivät siis liiku panoroinnin aikana vaan
- * asettuvat kerran sen päätteeksi, kuten maastonimetkin.
+ * asettuvat kerran sen päätteeksi, kuten maastonimetkin. Liikkeen ajan
+ * koko nauha on ruudun ulkopuolella (ks. merkitseViivainLiike), ja tämä
+ * ajetaan kerran juuri ennen sen paluuta.
  */
 function paivitaViivaimet(ui) {
   const sailio = ui.fokusViivaimet;
   if (!sailio?.isConnected) return;
   const kaavat = projektionKaavat(FOKUS_LAUTAPROJEKTIOT[ui.game?.pack?.id]);
   const ruutu = ruutuKaavat(ui);
-  const yla = sailio.querySelector('.fokus-viivain-yla');
-  const vasen = sailio.querySelector('.fokus-viivain-vasen');
-  yla.textContent = '';
-  vasen.textContent = '';
+  const nauhat = {
+    yla: sailio.querySelector('.fokus-viivain-yla'),
+    ala: sailio.querySelector('.fokus-viivain-ala'),
+    vasen: sailio.querySelector('.fokus-viivain-vasen'),
+    oikea: sailio.querySelector('.fokus-viivain-oikea'),
+  };
+  for (const nauha of Object.values(nauhat)) nauha.textContent = '';
   if (!kaavat || !ruutu) { sailio.hidden = true; return; }
   sailio.hidden = false;
 
-  /* --- pituusasteet yläreunaan --- */
+  const laatikot = kalusteLaatikot(ui);
+  /** Latoo samat lukemat kahteen vastakkaiseen nauhaan. */
+  const lado = (parit, sivut, pysty) => {
+    for (const nauha of sivut) {
+      const varatut = varatutKaistat(laatikot, nauhanKaista(nauha), pysty);
+      for (const [paikka, teksti] of parit) {
+        if (kaistallaVarattu(paikka, varatut)) continue;
+        viivainMerkki(nauha, paikka, teksti, pysty);
+      }
+    }
+  };
+
+  /* --- pituusasteet ylä- ja alareunaan --- */
   const lonAlku = kaavat.lon(ruutu.lautaX(0));
   const lonLoppu = kaavat.lon(ruutu.lautaX(ruutu.leveys));
   const pxAsteessa = Math.abs(ruutu.leveys / (lonLoppu - lonAlku));
@@ -669,32 +843,16 @@ function paivitaViivaimet(ui) {
     const askel = valitseAskel(pxAsteessa);
     const alku = Math.ceil(Math.min(lonAlku, lonLoppu) / askel) * askel;
     const loppu = Math.max(lonAlku, lonLoppu);
+    const parit = [];
     for (let lon = alku; lon <= loppu + 1e-9; lon += askel) {
       const x = ruutu.px(kaavat.x(lon));
       if (x < 8 || x > ruutu.leveys - 8) continue;
-      viivainMerkki(yla, x, asteTeksti(lon, ['I', 'L']), false);
+      parit.push([x, asteTeksti(lon, ['I', 'L'])]);
     }
+    lado(parit, [nauhat.yla, nauhat.ala], false);
   }
 
-  /* --- leveysasteet vasempaan reunaan --- */
-  /*
-   * AUKI OLEVA MAATAULU VARAA KAISTAN ITSELLEEN. Taulu on nyt pohjaton
-   * (ks. rakennaMaataulu), ja sen lukurivit alkavat samasta
-   * pystyviivasta kuin kartuutsi eli viivainnauhan päältä. Ennen
-   * paperilaatta peitti lukemat; nyt ne latoutuisivat "34°P KESKITULO"
-   * -sotkuksi. Lukema on kahdesta vähäarvoisempi — se palaa heti kun
-   * taulu sulkeutuu — joten viivain väistää eikä taulu.
-   */
-  const taulu = ui.fokusMaatauluAuki ? ui.fokusMaataulu : null;
-  /*
-   * ASETTELULAATIKKO EIKÄ getBoundingClientRect: taulun avaus on
-   * transform-siirtymä (scaleY), ja ruutulaatikko kertoisi kesken
-   * animaation väärän korkeuden. offsetTop/offsetHeight ovat
-   * karttaruudun suhteen ja transformista riippumattomat.
-   */
-  const varattu = taulu && taulu.offsetHeight > 0
-    ? [taulu.offsetTop - 6, taulu.offsetTop + taulu.offsetHeight + 6]
-    : null;
+  /* --- leveysasteet vasempaan ja oikeaan reunaan --- */
   const latYla = kaavat.lat(ruutu.lautaY(0));
   const latAla = kaavat.lat(ruutu.lautaY(ruutu.korkeus));
   const pxLeveysasteessa = Math.abs(ruutu.korkeus / (latYla - latAla));
@@ -702,14 +860,162 @@ function paivitaViivaimet(ui) {
     const askel = valitseAskel(pxLeveysasteessa);
     const alku = Math.ceil(Math.min(latYla, latAla) / askel) * askel;
     const loppu = Math.max(latYla, latAla);
+    const parit = [];
     for (let lat = alku; lat <= loppu + 1e-9; lat += askel) {
       const y = ruutu.py(kaavat.y(lat));
-      // Nurkka kuuluu yläviivaimelle, alanurkka kartuutsille.
-      if (y < NURKKA_PX || y > ruutu.korkeus - 64) continue;
-      if (varattu && y > varattu[0] && y < varattu[1]) continue;
-      viivainMerkki(vasen, y, asteTeksti(lat, ['P', 'E']), true);
+      // Nurkat kuuluvat vaakaviivaimille, ylhäällä ja alhaalla.
+      if (y < NURKKA_PX || y > ruutu.korkeus - NURKKA_PX) continue;
+      parit.push([y, asteTeksti(lat, ['P', 'E'])]);
     }
+    lado(parit, [nauhat.vasen, nauhat.oikea], true);
   }
+}
+
+/* ------------------------------------------- viivaimet pois liikkeen ajaksi */
+
+/*
+ * VIIVAIMET LIUKUVAT POIS KARTAN LIIKKEEN AJAKSI (omistajan tilaus
+ * 25.8.2026, pelitesti): *"viivaimet liukuvat pois ruudusta kartan
+ * panoroinnin ja zoomauksen ajaksi ja takaisin sisään pienen viiveen
+ * jälkeen kun liike loppuu"*.
+ *
+ * MIKSI. Merkit lasketaan vasta kun näkymä on asettunut (ks.
+ * paivitaViivaimet), joten liikkeen aikana ne väittäisivät edellisen
+ * ruudun asteita — "22°I" seisoisi paikallaan sillä aikaa kun sen alla
+ * oleva maasto vaihtuu toiseksi. Väärä lukema on pahempi kuin ei
+ * lukemaa lainkaan, ja siksi viivain poistuu näkyvistä siksi aikaa kun
+ * se ei voi olla oikeassa. Sama liike kertoo samalla, että kartta on
+ * pelaajan kädessä.
+ *
+ * LUKEMAT PÄIVITETÄÄN ULKONA. Sisääntulo alkaa vasta kun merkit on
+ * ladottu uudelleen (paastaViivaimetSisaan), joten vanhoja arvoja ei
+ * vilahda ruudulla hetkeäkään.
+ *
+ * === MISTÄ LIIKE TIEDETÄÄN ===
+ *
+ * Kartta ei kutsu tätä moduulia liikkeen aikana — eikä saa kutsua, sillä
+ * juuri sen välttäminen tekee panoroinnista sujuvaa (js/kartta.js
+ * asetaPan: "siirron aikana EI piirretä bittikarttaa"). Signaali
+ * KATSOTAAN siis kartasta itsestään, tässä moduulissa, kahdella
+ * tarkkailijalla:
+ *
+ *   1. LAUDAN OMAT ATTRIBUUTIT. Panorointi on `svg.style.transform`
+ *      ja zoomi `viewBox` + `style.width/height` (js/kartta.js
+ *      asetaPan, fitViewBox, kamera-ajot). Yksikään muu kuin kartan
+ *      liike ei kirjoita niihin, joten MutationObserver näiden päällä
+ *      on täsmälleen "kartta liikkui juuri nyt".
+ *   2. RUNGON LIIKELUOKAT. Zoomiliuku ja kamera-ajo asettavat lopullisen
+ *      muunnoksen kerralla ja antavat CSS:n hoitaa välikuvat — silloin
+ *      attribuutti muuttuu vain kerran, vaikka kuva liikkuu vielä
+ *      puoli sekuntia. body-luokat (`zoom-kaynnissa`, `kartta-raahaus`,
+ *      ...) kertovat sen ajan, ja niiden ollessa päällä paluuta
+ *      siirretään eteenpäin.
+ *
+ * Näin kartta.js:ään ja ui.js:ään ei tarvitse koskea lainkaan.
+ */
+
+/** Viive liikkeen päättymisestä siihen, kun viivaimet palaavat. */
+const LEPO_MS = 480;
+/** Uusi yritys, jos kartta on yhä liikkeessä (esim. zoomiliuku kesken). */
+const UUSI_YRITYS_MS = 140;
+
+/*
+ * Rungon luokat, jotka tarkoittavat "kuva liikkuu VIELÄ".
+ *
+ * TILALUOKKA EI OLE LIIKELUOKKA. Tämä lista on tarkka juuri siksi, että
+ * ensimmäinen versio ei ollut: siihen otettiin mukaan `manner-zoom` ja
+ * `aloitus-zoom`, jotka kuulostavat liikkeeltä mutta ovat TILOJA — ne
+ * kertovat, että kartta on lähikuvassa, ja pysyvät rungossa niin kauan
+ * kuin pelaaja siellä on (js/kartta.js poistaa ne vasta lähikuvasta
+ * poistuttaessa). Viivaimet jäivät ruudun ulkopuolelle pysyvästi, koska
+ * "liike" ei loppunut koskaan. Mukaan kelpaavat vain luokat, jotka
+ * jokin ajastin tai eleen loppu ottaa varmasti pois.
+ *
+ * Lista on sama kuin pelin omalla "onko ruutu rauhassa" -tarkistuksella
+ * (js/ui.js tarkkuusOdotus) — sama kysymys, sama vastaus.
+ */
+const LIIKELUOKAT = [
+  'kartta-raahaus', 'zoom-kaynnissa', 'manner-odottaa', 'flight-active',
+];
+
+const kartanLiike = () => LIIKELUOKAT.some((l) => document.body.classList.contains(l));
+
+/** Viivaimet ulos ja lepolaskuri alusta. */
+function merkitseViivainLiike(ui) {
+  const sailio = ui.fokusViivaimet;
+  const vahti = ui.fokusViivainVahti;
+  if (!sailio || !vahti || sailio.hidden) return;
+  sailio.classList.add('viivaimet-poissa');
+  clearTimeout(vahti.ajastin);
+  vahti.ajastin = setTimeout(() => paastaViivaimetSisaan(ui), LEPO_MS);
+}
+
+/** Lukemat ajan tasalle ja viivaimet takaisin sisään. */
+function paastaViivaimetSisaan(ui) {
+  const sailio = ui.fokusViivaimet;
+  const vahti = ui.fokusViivainVahti;
+  if (!sailio || !vahti) return;
+  if (kartanLiike()) {
+    vahti.ajastin = setTimeout(() => paastaViivaimetSisaan(ui), UUSI_YRITYS_MS);
+    return;
+  }
+  paivitaViivaimet(ui);
+  /*
+   * Kehyksen odotus ei ole varmuuden vuoksi vaan järjestyksen takia:
+   * ladonta ja luokan poisto samassa työssä olisivat selaimelle yksi
+   * ainoa tyylimuutos, ja liuku alkaisi samalla kehyksellä kuin uudet
+   * lukemat asettuvat paikoilleen.
+   */
+  cancelAnimationFrame(vahti.kehys);
+  vahti.kehys = requestAnimationFrame(() => sailio.classList.remove('viivaimet-poissa'));
+}
+
+/** Tarkkailijat pois ja viivaimet paikoilleen. */
+function puraViivainVahti(vahti) {
+  if (!vahti) return;
+  clearTimeout(vahti.ajastin);
+  cancelAnimationFrame(vahti.kehys);
+  vahti.lauta?.disconnect();
+  vahti.runko?.disconnect();
+}
+
+/**
+ * Kytkee liiketarkkailijat, jos niitä ei vielä ole tälle laudalle.
+ *
+ * LAUTA VOI VAIHTUA ILMAN ETTÄ VIIVAIMET VAIHTUVAT: uusi paketti luo
+ * uuden svg-elementin karttaruudun sisään, mutta säiliö jää paikalleen
+ * eikä rakenna() aja itseään uudelleen. Siksi tarkkailija tunnistetaan
+ * siitä laudasta, jota se katsoo — vanha jäisi muuten tuijottamaan
+ * irronnutta elementtiä, eikä kartan liike näkyisi enää missään.
+ */
+function vahdiKartanLiiketta(ui) {
+  const vanha = ui.fokusViivainVahti;
+  if (vanha && vanha.lautaOsa === ui.svg) return;
+  puraViivainVahti(vanha);
+  const vahti = { lautaOsa: ui.svg, ajastin: 0, kehys: 0 };
+  if (ui.svg) {
+    vahti.lauta = new MutationObserver(() => merkitseViivainLiike(ui));
+    vahti.lauta.observe(ui.svg, {
+      attributes: true,
+      attributeFilter: ['style', 'viewBox', 'width', 'height'],
+    });
+  }
+  /*
+   * Runkoa katsotaan LUOKKALISTAN TILANA eikä muutoksena: bodyn
+   * luokkiin kirjoitetaan pelin joka käänteessä (lehdet, paneelit,
+   * tilat), ja jos jokainen niistä työntäisi viivaimet ulos, ne
+   * vilkkuisivat läpi pelin. Vain liikeluokkien totuusarvon vaihtuminen
+   * on kartan liikettä.
+   */
+  let edellinen = kartanLiike();
+  vahti.runko = new MutationObserver(() => {
+    const nyt = kartanLiike();
+    if (nyt === edellinen) return;
+    edellinen = nyt;
+    merkitseViivainLiike(ui);
+  });
+  vahti.runko.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+  ui.fokusViivainVahti = vahti;
 }
 
 /**
@@ -817,7 +1123,13 @@ export function paivitaFokusmitat(ui) {
   if (!nakyy) {
     if (!sailio.hidden) {
       sailio.hidden = true;
-      if (ui.fokusViivaimet) ui.fokusViivaimet.hidden = true;
+      if (ui.fokusViivaimet) {
+        ui.fokusViivaimet.hidden = true;
+        // Piilotus katkaisee liu'un: näkyviin palataan aina sisällä.
+        ui.fokusViivaimet.classList.remove('viivaimet-poissa');
+      }
+      puraViivainVahti(ui.fokusViivainVahti);
+      ui.fokusViivainVahti = null;
       document.body.style.removeProperty('--fokus-nappipaikka');
       document.body.style.removeProperty('--fokus-taulupohja');
       avaaMaataulu(ui, false);
@@ -852,6 +1164,9 @@ export function paivitaFokusmitat(ui) {
   // karttaruudun korkeus voivat vaihtua kesken pelin.
   paivitaNappipaikka(ui);
   paivitaTaulunPohja(ui);
+  // Liiketarkkailu kytketään tässä eikä rakenna()ssa: lauta voi vaihtua
+  // säiliön alta (ks. vahdiKartanLiiketta).
+  vahdiKartanLiiketta(ui);
   paivitaViivaimet(ui);
 
   const jana = laskeMittajana(ui);
@@ -865,6 +1180,8 @@ export function paivitaFokusmitat(ui) {
 /** Laudan vaihto tai UI:n purku: elementit ja tila pois. */
 export function nollaaFokusmitat(ui) {
   avaaMaataulu(ui, false);
+  puraViivainVahti(ui.fokusViivainVahti);
+  ui.fokusViivainVahti = null;
   ui.fokusmitatSailio?.remove();
   ui.fokusMaataulu?.remove();
   ui.fokusViivaimet?.remove();
