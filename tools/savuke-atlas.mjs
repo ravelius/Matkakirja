@@ -37,6 +37,7 @@
  *   3. Loitonnettaessa naapurilehdet piirtyvät atlakseen (.fokus-atlas).
  *   4. Laiska lataus: haettujen lehtien määrä on murto-osa kaikista.
  *   5. Näkymästä poistuneet lehdet vapautetaan (LRU).
+ *   5b. Vanhaa lautaa ei piirretä lehtien alla — ja se palaa yleiskuvaan.
  *   6. Ylärivissä ovat "rajat" ja "pisteet", valikossa fokus + sumennus.
  *   7. "rajat" kytkee pelaajan liikkuvuusrajoitteen päälle.
  *   8. "pisteet" piirtää kaupungit ja reittiverkon kartalle.
@@ -205,6 +206,51 @@ const c = await sivu.evaluate(async () => {
 vaadi('LRU vapauttaa näkymästä poistuneet lehdet',
   c.ulkopuolella.length === 0 && c.kuvia === c.atlas.length,
   `atlas=${c.atlas} ulkopuolella=${c.ulkopuolella}`);
+
+/* --- vanha lauta pois atlaksen alta (omistajan linjaus 25.8.2026) ---
+ *
+ * Opaakit lehdet peittävät alueensa kokonaan, mutta laudan oma
+ * bittikartta jäi niiden alle piirtymään: karkea pohjataso ja tarkkojen
+ * ruutujen sarja. Se maksoi panoroinnissa jokaisesta paljastuvasta
+ * kaistaleesta ilman että yksikään pikseli näkyi (mitattu Chromiumissa:
+ * pudonneita kehyksiä 10,0 % → 6,1 %).
+ *
+ * VÄITE ON KAKSIOSAINEN: piirto on pois atlasnäkymässä JA se palaa heti
+ * kun näkymä ei enää ole atlas. Pergamentin pohja EI ole piilotettujen
+ * joukossa — muuten lehtien ulkopuolelle jäisi paneelin tumma tausta.
+ */
+const piilotus = await sivu.evaluate(() => {
+  const nayta = (sel) => {
+    const e = document.querySelector(sel);
+    return e ? getComputedStyle(e).display : 'ei ole';
+  };
+  return {
+    luokka: document.body.classList.contains('fokus-atlas-nakyma'),
+    staattinen: nayta('.staattinen'),
+    pohja: nayta('.taide-pohja'),
+    paperi: nayta('.paper-pohja'),
+  };
+});
+vaadi('fokusnäkymässä vanhaa lautaa ei piirretä lehtien alla',
+  piilotus.luokka && piilotus.staattinen === 'none'
+  && piilotus.paperi !== 'none' && piilotus.paperi !== 'ei ole',
+  JSON.stringify(piilotus));
+
+const paluu = await sivu.evaluate(async () => {
+  const { ui } = window.matkakirja;
+  ui.mannerZoom = false;
+  document.body.classList.remove('manner-zoom');
+  ui.kartta.nollaaAloitusZoom();
+  ui.kartta.fitViewBox();
+  ui.paivitaMaastonimet();
+  await new Promise((r) => setTimeout(r, 300));
+  return {
+    luokka: document.body.classList.contains('fokus-atlas-nakyma'),
+    staattinen: getComputedStyle(document.querySelector('.staattinen')).display,
+  };
+});
+vaadi('yleiskuvaan palatessa vanha lauta piirtyy taas',
+  !paluu.luokka && paluu.staattinen !== 'none', JSON.stringify(paluu));
 
 /* --- kehittäjänapit (sivu uusiksi, jotta main.js näyttää kotelon) --- */
 await sivu.reload({ waitUntil: 'load' });

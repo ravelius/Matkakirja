@@ -4494,6 +4494,35 @@ body.fokuspohja .country-korostus { display: none; }
    ------------------------------------------------------------------------- */
 .fokus-lehden-alla { display: none; }
 
+/* ---------------------------------------------------------------------------
+   VANHA MAAILMANKARTTA POIS ATLAKSEN ALTA (omistajan linjaus 25.8.2026,
+   pelitestipalaute v1106: *"kartan scrollaus on aika hidasta ja
+   tökkivää"* ja *"ota vanha maailmankartta suoraan kokonaan pois
+   näkyvistä … tässä näkymässä sitä ei kannata piirtää enää ollenkaan"*).
+
+   Fokusnäkymässä kartta on jatkuva atlas: opaakit lehdet peittävät
+   alueensa kokonaan (js/fokuskartta.js). Laudan oma bittikartta jäi
+   silti niiden alle — karkea pohjataso (.taide-pohja) ja tarkkojen
+   ruutujen sarja (.staattinen) — ja panoroinnissa selain maalasi
+   jokaisen paljastuvan kaistaleen niistäkin, vaikka pikselit eivät näy.
+   Mitattu Chromiumissa: pudonneita kehyksiä 8,9 % → 6,2 % ja pahin
+   kehys 150 ms → 67 ms.
+
+   `display: none` EIKÄ opacity/visibility: läpinäkyväkin kerros on yhä
+   osa komposointia, ja iOS Safari maalaa sen kuten näkyvänkin. Sama
+   sääntö kuin .fokus-piilossa ja .fokus-lehden-alla yllä.
+
+   PERGAMENTTI EI OLE TÄSSÄ MUKANA. Paperin pohja (.paper-pohja) on
+   laudan juuriryhmän ensimmäinen lapsi eikä kuulu taideryhmään
+   (js/ui.js drawPaperPohja), joten lehtien ulkopuolelle jää paperi eikä
+   paneelin tumma tausta. Luokan kytkee js/fokuskartta.js
+   paivitaFokusAtlas täsmälleen atlaksen ehdoilla, joten yleiskuva,
+   aloituslento, aloitusruutu ja katselutila saavat vanhan laudan
+   ennallaan.
+   --------------------------------------------------------------------------- */
+body.fokus-atlas-nakyma .staattinen,
+body.fokus-atlas-nakyma .taide-pohja { display: none; }
+
 /*
  * LAATTA ON FOKUSNÄKYMÄN TUTKI-NAPPI (omistajan pelitestitilaus
  * 24.8.2026): alarivillä on vain Liiku, ja tutkiminen alkaa nykyisen
