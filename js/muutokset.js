@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1114, teksti: 'Lehtien muistikuorma kuriin kuoressa' },
   { v: 1113, teksti: 'Turvatila kattaa koko fokuslehden' },
   { v: 1112, teksti: 'Muistisuojat: puhelinkatot ja turvatila' },
   { v: 1111, teksti: 'Uusi alkuteksti ja luenta' },
