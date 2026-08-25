@@ -96,6 +96,20 @@ export const FOKUSVIRTA_ATEENA = {
       + 'nähnyt kultaa omin silmin. Kirjoitan tämän muistiin siksi, että '
       + 'molemmat puolet saattavat olla oikeassa yhtä aikaa.',
     /*
+     * Luenta generoitu 25.8.2026 samalla reseptillä kuin
+     * tools/generoi-luennat.mjs (Viisas Kertoja, eleven_v3,
+     * stability 0.5, lopputauko). Teksti on sama kuin yllä —
+     * vain tunnetagit lisätty. Äänite:
+     * assets/audio/puhe-fokus-matkakirja-ateena.mp3 (~23 s).
+     */
+    luenta: '[curious] Torilla ei tänään tingitty oliiveista — siellä '
+      + 'puhuttiin miehestä, joka löysi kesäkuussa Troijan kullan. '
+      + 'Puoli toria piti häntä valehtelijana, toinen puoli nerona, '
+      + '[whispers] eikä yksikään ollut nähnyt kultaa omin silmin. '
+      + '[softly] Kirjoitan tämän muistiin siksi, että molemmat puolet '
+      + 'saattavat olla oikeassa yhtä aikaa.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-ateena.mp3',
+    /*
      * Fablen päätös 4: Sophia Schliemann koruineen. Commonsin
      * rajapinta 24.8.2026: 1093×1273, public domain, tekijä tuntematon,
      * päiväys "circa 1873" — eli täsmälleen isoisän matkan vuosi.
