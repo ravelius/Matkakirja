@@ -65,6 +65,11 @@ const MODULES = [
   // niistä omansa moduulitasolla (fokuskohteet).
   'js/packs/fokuskohteet-grc.js',
   'js/packs/fokusvirta-ateena.js',
+  // Sama pari Bulgarialle (Sofia, 25.8.2026): kohteet ennen kaupungin
+  // pakettia, koska fokusvirta-sofia.js poimii niistä Boyanan
+  // moduulitasolla (bgrFokuskohteet).
+  'js/packs/fokuskohteet-bgr.js',
+  'js/packs/fokusvirta-sofia.js',
   'js/packs/fokusvirrat.js',
   'js/packs/uutislahteet.js',
   // uutiset vasta lähteidensä jälkeen (tuo uutislahteet.js:n).

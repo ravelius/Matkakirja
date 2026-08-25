@@ -67,6 +67,7 @@ import { el } from './mapart.js';
 import { asetaKuva } from './media.js';
 import { html, jaaKappaleiksi } from './ui-apurit.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
+import { FOKUSKOHTEET_BGR } from './packs/fokuskohteet-bgr.js';
 import { FOKUSKOHTEET_GRC } from './packs/fokuskohteet-grc.js';
 import { sfx } from './sound.js';
 
@@ -75,8 +76,13 @@ import { sfx } from './sound.js';
  * fokuskartan pohjilla (js/fokuskartta.js nykyinenMaa), jotta lehti ja
  * sen kohteet ovat aina samasta maasta. Uusi maa on yksi rivi tähän ja
  * yksi pakettitiedosto sen viereen.
+ *
+ * Bulgaria lisätty 25.8.2026 Sofian fokusvirran mukana — ja se oli
+ * täsmälleen yksi rivi, kuten yllä luvattiin. Pohja BGR.webp ja BGR.json
+ * ovat ämpärissä (tarkistettu 25.8.2026), joten merkit saavat lehden,
+ * jonka päälle asettua.
  */
-const KOHDE_MAAT = { GRC: FOKUSKOHTEET_GRC };
+const KOHDE_MAAT = { GRC: FOKUSKOHTEET_GRC, BGR: FOKUSKOHTEET_BGR };
 
 /** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta). */
 const KOHDE_OSUMA_R = 22;
