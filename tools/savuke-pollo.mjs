@@ -635,10 +635,16 @@ const rivi = await sivu.evaluate(() => {
  * oletuksena päällä, joten tämä on se rivi, jonka pelaaja näkee —
  * kytkimen takainen vanha kahden napin rivi mitataan heti alla.
  */
-vaadi('fokusnäkymässä alanappirivissä on vain Liiku',
-  rivi.paikkoja === 1 && rivi.yksiRivi === true, JSON.stringify(rivi));
-vaadi('vasemmalla monitoiminappi', rivi.monitoimi === true);
-vaadi('vasen nappi on nimeltään Liiku', /^liiku$/i.test(rivi.liiku), rivi.liiku);
+/*
+ * LIIKU ODOTTAA AARRETTA (omistajan tarkennus 25.8.2026): pelin alussa
+ * fokusrivi on TYHJÄ — nappi ilmestyy vasta kun kaupungin laatta on
+ * käännetty. Tyhjä rivi on tarkoitus, ei virhe (js/ui.js
+ * liikuNappiNakyy). Napin ilmestyminen käännön jälkeen mitataan alla
+ * liukukokeessa, joka kääntää laatan kirjanpidosta.
+ */
+vaadi('fokusnäkymässä rivi on alussa tyhjä (Liiku odottaa aarretta)',
+  rivi.paikkoja === 0 && rivi.yksiRivi === true && rivi.monitoimi === false,
+  JSON.stringify(rivi));
 vaadi('pöllö ei ole alanappirivissä', rivi.polloRivissa === false, JSON.stringify(rivi));
 vaadi('pöllö kelluu myös pelinäkymässä', rivi.polloKelluu === true, JSON.stringify(rivi));
 vaadi('matkustusnapit ovat liu\'ussa', rivi.liukuNapit >= 1, `${rivi.liukuNapit} kpl`);
@@ -674,6 +680,19 @@ vaadi('fokusmoodin ollessa pois rivi on entisensä (Liiku · Tutki)',
 await sivu.screenshot({ path: join(ULOS, 'pollo-rivi-kiinni-390.png') });
 
 const auki = await sivu.evaluate(async () => {
+  /*
+   * LIIKU ODOTTAA AARRETTA (omistaja 25.8.2026): fokusmoodissa nappia
+   * ei ole ennen kuin kaupungin laatta on käännetty. Liu'un koe
+   * kääntää laatan kirjanpidosta, jotta nappi on olemassa — itse
+   * ilmestymissääntö vartioidaan js/ui.js:n liikuNappiNakyy-kokeissa.
+   */
+  const ui = window.matkakirja.ui;
+  const city = ui.game.cityOf?.();
+  if (city && ui.game.tokens?.has(city.id)) {
+    ui.game.tokens.delete(city.id);
+    ui.render();
+    await new Promise((r) => setTimeout(r, 300));
+  }
   document.querySelector('.monitoimi-nappi').click();
   await new Promise((r) => setTimeout(r, 350));
   const rivi = document.querySelector('.toimintorivi');
@@ -2160,6 +2179,15 @@ const leveaCtx = await selain.newContext({ viewport: { width: 900, height: 900 }
 const { sivu: leveaSivu } = await avaaPeli(leveaCtx);
 await kytkeRajapinta(leveaSivu, []);
 const leveaNapit = await leveaSivu.evaluate(async () => {
+  // LIIKU odottaa aarretta (25.8.2026) — sama laatankääntö kuin
+  // kapean ruudun liukukokeessa yllä.
+  const ui = window.matkakirja.ui;
+  const city = ui.game.cityOf?.();
+  if (city && ui.game.tokens?.has(city.id)) {
+    ui.game.tokens.delete(city.id);
+    ui.render();
+    await new Promise((r) => setTimeout(r, 300));
+  }
   document.querySelector('.monitoimi-nappi').click();
   await new Promise((r) => setTimeout(r, 350));
   return [...document.querySelectorAll('.toimintorivi-liuku button')]
