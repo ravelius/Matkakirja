@@ -64,6 +64,12 @@ const TYYLI = (henkilo) => `Vintage adventure book character portrait of ${henki
 const KUVAT = [
   ['kohtaaminen-ateena', 'a Greek stonemason in his dusty work apron, pausing with a chisel in hand, weathered friendly face with dark hair and moustache, a small carved stone owl beside him'],
   ['kohtaaminen-sofia', 'a middle-aged Bulgarian woman tending a hot mineral spring, holding a long-handled copper ladle, wisps of steam around her, warm knowing smile, headscarf'],
+  // Neljä uutta fokusmaata (Fablen tilaus 25.8.2026); hahmokuvaukset
+  // KAARI_PAKETIT-datasta (js/tyohuone-kehitys-data.js).
+  ['kohtaaminen-istanbul', 'a Turkish woman warden of an ancient underground cistern, raising a small oil lantern, headscarf, calm watchful face lit warmly from the lantern, a hint of a stone column behind her'],
+  ['kohtaaminen-rooma', 'an elderly Italian fountain keeper with a white moustache, turning an old coin in a gloved hand, water-darkened work apron, gentle amused eyes'],
+  ['kohtaaminen-sarajevo', 'a Bosnian coppersmith holding a copper sheet with tongs, leather apron, short grey beard, proud warm face, a hammered copper coffee pot beside him'],
+  ['kohtaaminen-bukarest', 'a Romanian woman bell-ringer with a bell rope wound around her wrist, dark shawl over her shoulders, kind weathered face looking slightly upward, no candle visible and no lamp visible, no flame anywhere'],
   /*
    * Yhteinen "Kätkö löytyi!" -kuva laatattoman kohtaamisen
    * tuloskorttiin (Fablen tilaus 10.8.2026). Ei henkilöä — mutta sama
