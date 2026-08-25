@@ -72,6 +72,9 @@ export const PRO_ESITTELY = 600;
 /** Kupla vasta, kun peliä on pelattu tämän verran. */
 const EHDOTUS_KUPLAN_VIIVE_MS = 10 * 60 * 1000;
 
+/** Aikaisin pelipäivä, jona kutsukupla saa näkyä (omistaja 25.8.2026). */
+const EHDOTUS_KUPLAN_ALKUPAIVA = 4;
+
 /** Pöllön minipuhekupla — sama kiinteä tekstin malli kuin valintavihjeellä. */
 export const EHDOTUS_KUPLAN_TEKSTI = 'Haluatko osallistua pelin rakentamiseen? '
   + 'Lähetä kuva tai juttuidea!';
@@ -298,18 +301,30 @@ export function ehdotusAika(iso) {
  * kymmenen minuuttia, ja localStorage-lippu estää toisen kerran
  * ikuisesti.
  *
+ * Neljäs portti (omistaja 25.8.2026): kupla saa tulla vasta pelin
+ * NELJÄNNESTÄ PÄIVÄSTÄ alkaen — alkupäivinä pelaaja opettelee vasta
+ * peliä eikä häntä kutsuta vielä talkoisiin. Jos kymmenen minuuttia
+ * täyttyy aikaisemmin, ajastin virittyy uudelleen ja kokeilee
+ * myöhemmin; nähty-lippu kirjoitetaan vasta kun kupla oikeasti näkyi.
+ *
  * @param {(teksti: string) => void} nayta kuplan näyttäjä (pöllö)
+ * @param {(() => number)|null} haePaiva pelipäivän lukija (1. päivä = 1)
  * @returns {number|null} ajastimen tunnus tai null jos kuplaa ei tule
  */
-export function ajastaEhdotusKupla(nayta) {
+export function ajastaEhdotusKupla(nayta, haePaiva = null) {
   if (!ehdotusKaytossa()) return null;
   let nahty = false;
   try { nahty = localStorage.getItem(EHDOTUS_KUPLA_TALLE) === '1'; } catch { nahty = true; }
   if (nahty) return null;
-  return setTimeout(() => {
+  const yrita = () => {
+    if (haePaiva && (haePaiva() ?? 1) < EHDOTUS_KUPLAN_ALKUPAIVA) {
+      return setTimeout(yrita, EHDOTUS_KUPLAN_VIIVE_MS);
+    }
     try { localStorage.setItem(EHDOTUS_KUPLA_TALLE, '1'); } catch { /* yksityinen selaus */ }
     nayta(EHDOTUS_KUPLAN_TEKSTI);
-  }, EHDOTUS_KUPLAN_VIIVE_MS);
+    return null;
+  };
+  return setTimeout(yrita, EHDOTUS_KUPLAN_VIIVE_MS);
 }
 
 /* ------------------------------------------------------------------ *

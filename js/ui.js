@@ -1855,7 +1855,7 @@ export class UI {
       // Kohde 'valikko': ehdota-nappi asuu hampurilaisessa, joten
       // kupla osoittaa sinne (omistaja 18.8.2026).
       if (!this.dead) this.polloKupla(teksti, 'valikko');
-    });
+    }, () => this.game?.dayCount?.() ?? 1);
     /*
      * PÖLLÖN NÄKYVYYS UUDELLE PELILLE. Nappi katoaa ja ilmestyy pelin
      * tilan mukana (game.polloLoydetty), ja uusi peli vaihtaa UI:n
