@@ -3090,6 +3090,16 @@ export class UI {
      * pois (poistaVektorit), joten lennolla se on tehtävä eikä
      * lykättävä.
      *
+     * EIKÄ PIILOTUS RIITÄ SYYKSI LYKÄTÄ (mitattu 25.8.2026, ilta).
+     * Kun vanha lauta otettiin lennostakin pois näkyvistä, olisi
+     * ollut houkuttelevaa jättää koko putki tekemättä — mutta
+     * vektorit ovat samassa .staattinen-ryhmässä, ja Chromium maksaa
+     * niistä myös display: none -tilassa: nipistyksessä pudonneita
+     * kehyksiä 3,2 % → 15,3 %. Putki siis ajetaan kerran laudan
+     * syntyessä (ennen kuin atlas ehtii peittää sen), ja vasta
+     * TOISTUVA työ eli tarkkojen ruutujen sarja jää tekemättä
+     * (taydennaTaide, taideAtlasOdottaa).
+     *
      * Työ ei katoa vaan odottaa: jatkaLykattyPiirto käynnistää sen heti
      * kun lauta palaa näkyviin.
      */
@@ -5700,35 +5710,63 @@ export class UI {
    *
    * VÄLIMUISTI on maa + ruutukoko: vakio muuttuu vain kun lehti vaihtuu
    * tai ruutu muuttaa kokoaan, eikä sitä lasketa joka kehyksessä.
+   *
+   * === EIKÄ MITATA SITÄ, MITÄ EI TARVITA (mitattu 25.8.2026, ilta) ===
+   *
+   * Ensimmäinen versio luki näkyvän alueen HETI kättelyssä, ja
+   * välimuisti säästi vain kertolaskun. Mittaus (Chromium, puhelin-
+   * ruutu 390 x 844, CPU x2, Ateenan fokusnäkymä, panorointi +
+   * nipistys) kertoi mitä se maksoi:
+   *
+   *   getBoundingClientRect  2 751 ms omaa aikaa, josta
+   *     1 447 ms  nipistyksen vastaskaalaajasta (fokuskohteet.js)
+   *     1 055 ms  nimilappujen silmukasta (paivitaFokusNimilaput)
+   *
+   * Syy ei ole yksittäisen mittauksen hinta vaan ASETTELUN
+   * PIISKAAMINEN: jokainen kutsuja KIRJOITTAA merkkiensä muunnokset
+   * kutsujen välissä, joten seuraava mittaus mitätöi juuri lasketun
+   * asettelun ja selain laskee sen uudelleen — kymmeniä kertoja
+   * kehyksessä. Nipistys skaalaa lisäksi koko SVG:tä joka kehyksellä.
+   *
+   * Vakiohaara EI TARVITSE näkyvää aluetta lainkaan: kerroin lasketaan
+   * paneelin mitoista ja lehden rajauksesta. Näkyvä alue mitataan siis
+   * vasta varapolulla (lehdetön näkymä), jossa vastaus on ruutukoon
+   * käänteisluku. Välimuistiosuma ei enää koske asettelua ollenkaan.
+   *
+   * PANEELIN MITAT (clientWidth/clientHeight) OVAT SILTI MITTAUS —
+   * mutta paneeli on tavallinen div, jota kartan muunnokset eivät
+   * liikuta, ja sen lukeminen maksoi mittauksissa alle kymmenesosan
+   * SVG:n laatikosta. Ne jäävät, koska juuri niistä välimuistin avain
+   * huomaa ruudun koon muutoksen (kääntö, näppäimistö).
    */
   fokusMerkkiSkaala(suhde = 1) {
+    const ele = suhde > 0 ? suhde : 1;
+    const rajaus = this.fokusPohjaRajaus;
+    const pane = this.svg?.parentElement;
+    const paneW = pane?.clientWidth || 0;
+    const paneH = pane?.clientHeight || 0;
+    if (rajaus?.w > 0 && rajaus?.h > 0 && paneW > 0 && paneH > 0) {
+      const avain = `${rajaus.x}:${rajaus.y}:${rajaus.w}:${rajaus.h}`
+        + `:${Math.round(paneW)}x${Math.round(paneH)}`;
+      if (this.fokusMerkkiSkaalaAvain !== avain) {
+        const perus = Math.min(paneW / rajaus.w, paneH / rajaus.h);
+        if (perus > 0) {
+          this.fokusMerkkiSkaalaAvain = avain;
+          this.fokusMerkkiSkaalaArvo = 1 / perus;
+        }
+      }
+      if (this.fokusMerkkiSkaalaAvain === avain) return this.fokusMerkkiSkaalaArvo;
+    }
+    /*
+     * VARAPOLKU: ruutukoon käänteisluku. Vasta tässä tarvitaan kartan
+     * mittakaava — ja vain tässä haarassa `suhde` merkitsee (ks. yllä).
+     */
     const nakyva = this.nakyvaAlue();
     const skaala = nakyva?.skaala;
     // Ilman mitattavaa näkymää mittakaava jäisi arvaukseksi: kutsuja
     // jättää entisen koon voimaan (0 = ei mittaa).
     if (!Number.isFinite(skaala) || skaala <= 0) return 0;
-    const ele = suhde > 0 ? suhde : 1;
-    const rajaus = this.fokusPohjaRajaus;
-    /*
-     * Paneelin mitat samasta lähteestä kuin kameralla (clientWidth), ja
-     * varana näkyvästä alueesta johdettu leveys — nakyvaAlue on jo
-     * mitattu yllä, joten kumpikaan ei ole uusi asettelun pakotus.
-     */
-    const pane = this.svg?.parentElement;
-    const paneW = pane?.clientWidth || skaala * nakyva.w;
-    const paneH = pane?.clientHeight || skaala * nakyva.h;
-    if (!(rajaus?.w > 0) || !(rajaus?.h > 0) || !(paneW > 0) || !(paneH > 0)) {
-      return 1 / (skaala * ele);
-    }
-    const avain = `${rajaus.x}:${rajaus.y}:${rajaus.w}:${rajaus.h}`
-      + `:${Math.round(paneW)}x${Math.round(paneH)}`;
-    if (this.fokusMerkkiSkaalaAvain !== avain) {
-      const perus = Math.min(paneW / rajaus.w, paneH / rajaus.h);
-      if (!(perus > 0)) return 1 / (skaala * ele);
-      this.fokusMerkkiSkaalaAvain = avain;
-      this.fokusMerkkiSkaalaArvo = 1 / perus;
-    }
-    return this.fokusMerkkiSkaalaArvo;
+    return 1 / (skaala * ele);
   }
 
   /* --- LAATTA ON FOKUSNÄKYMÄN TUTKI-NAPPI (omistaja 24.8.2026) ------- */
@@ -6074,9 +6112,19 @@ export class UI {
     const laput = this.svg.querySelectorAll('.cities .city-label');
     if (!laput.length) return;
     const paalla = Boolean(this.fokusmoodi && !this.katselu && this.fokusPohjaBbox);
-    const skaala = paalla ? this.nakyvaAlue()?.skaala : 0;
-    // Ilman mitattavaa näkymää entinen latominen on parempi kuin väärä.
-    if (paalla && !(skaala > 0)) return;
+    /*
+     * KERROIN LASKETAAN KERRAN, EI JOKAISELLE LAPULLE (mitattu
+     * 25.8.2026, ilta: 1 055 ms pakotettua asettelua tästä silmukasta
+     * yhdellä mittausajolla). Arvo ei riipu lapusta mitenkään, mutta
+     * silmukka kirjoittaa jokaisen lapun x:n ja y:n kutsujen väliin —
+     * ja juuri kirjoituksen ja lukemisen vuorottelu pakottaa selaimen
+     * laskemaan asettelun uudelleen lappu lapulta. Ks. fokusMerkkiSkaala.
+     *
+     * Nolla tarkoittaa "ei mittaa": entinen latominen on silloin
+     * parempi kuin väärä (sama sääntö kuin ennenkin).
+     */
+    const kerroin = paalla ? this.fokusMerkkiSkaala() : 0;
+    if (paalla && !(kerroin > 0)) return;
     const oma = paalla ? this.game.cityOf?.() : null;
     for (const lappu of laput) {
       if (!paalla) {
@@ -6114,8 +6162,7 @@ export class UI {
        */
       // Kartan mittakaava, ei ruudun (omistaja 25.8.2026: "nimilaput
       // samalla lailla") — kerroin on vakio kuten merkeillä, joten nimi
-      // kasvaa ja kutistuu laatan mukana.
-      const kerroin = this.fokusMerkkiSkaala();
+      // kasvaa ja kutistuu laatan mukana. Laskettu kerran silmukan yllä.
       const ruudulta = (FOKUS_LAATTA_PX / 2 + 4 + FOKUS_NIMI_PX) * kerroin;
       const etaisyys = lappu.dataset.kaupunki === oma?.id
         ? Math.max(FOKUS_NIMI_NAPPULAN_ALLE, ruudulta)
@@ -6279,8 +6326,19 @@ export class UI {
      * maailman yhden maan takia. Sama raja kuin kameran rajauksilla
      * (js/kartta.js fokusRajaukset), ja kartta kutsuu tämän uudelleen
      * lähikuvan asettuessa (sovitaMannerZoom).
+     *
+     * ELLEI VANHA LAUTA OLE PIILOSSA — SILLOIN AUKKO ON PAHEMPI KUIN
+     * VERHO (omistajan linjaus 25.8.2026, ilta: vanha kartta pois koko
+     * pelin ajaksi). Maan muotoinen aukko on olemassa sitä varten, että
+     * käyty maa pysyisi laudan piirroksessa TARKKANA; kun piirrosta ei
+     * ole, aukko paljastaa pelkän tyhjän pergamentin. Piilotuksen
+     * ollessa päällä aukot kuuluvat siis lehdille — kuvan haara osaa jo
+     * sen — ja loppu maailma jää tasaisen verhon alle. Kuvan haara
+     * toimii myös ilman omaa lehteä (`pohja` null): se on juuri se
+     * tilanne, jossa maalla ei ole lehteä tai lento on kesken.
      */
-    const kuvanVerho = Boolean(pohja) && !this.aloituslentoKesken && Boolean(this.mannerZoom);
+    const kuvanVerho = this.vanhaLautaPiilossa()
+      || (Boolean(pohja) && !this.aloituslentoKesken && Boolean(this.mannerZoom));
     // Avain kertoo, onko mitään muuttunut: sama joukko samassa tilassa
     // piirretään uudestaan turhaan joka vuorolla.
     /*
@@ -6355,7 +6413,9 @@ export class UI {
       for (const lehti of fokusAtlasIkkunat(this, maat)) {
         reika(lehti.bbox, lehti.ikkuna ?? lehti.bbox);
       }
-      reika(pohja, this.fokusPohjaRajaus ?? pohja);
+      // Oma lehti vain jos sellainen on: haara on nyt käytössä myös
+      // lehdettömässä maassa ja lennon aikana (ks. kuvanVerho).
+      if (pohja) reika(pohja, this.fokusPohjaRajaus ?? pohja);
       el('rect', {
         x: 0,
         y: 0,
@@ -14349,6 +14409,13 @@ export class UI {
      * *"karkea kuva SAA tarkentua koneen lennon alla; älä odota täyttä
      * rasterointia verhon takana"*). Ne piirretään perillä — tai
      * jäävät piirtämättä, jos kohdemaan lehti peittää laudan.
+     */
+    /*
+     * ODOTUS PÄTEE MYÖS NYT, KUN LAUTA ON ATLAKSEN ALLA (25.8.2026,
+     * ilta). Pohjataso rakennetaan yhä kerran, koska juuri se päästää
+     * vektorit pois — ja piilotettukin vektorikerros maksaa Chromiumissa
+     * (ks. rasteroiTaide). Odotus on siis edelleen se hetki, jonka
+     * jälkeen kone lentää kevyen puun päällä.
      */
     const pohjanTakaraja = performance.now() + ALOITUSLENNON_POHJA_ODOTUS_MS;
     while (!this.dead && !this.taidePohja && this.pohjaTulossa

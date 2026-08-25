@@ -204,7 +204,9 @@ export const RAAMATTU = {
     },
     {
       otsikko: 'Fokusmoodi',
-      tila: 'luonnos — rakennetaan, pilotti Kreikka',
+      tila: 'toteutuksessa — pilotti Kreikka valmis; pelissä 25.8.2026 '
+        + 'kuusi fokusmaata (Kreikka, Bulgaria, Italia, Turkki, '
+        + 'Bosnia, Romania)',
       kohdat: [
         'FOKUSMOODI (omistaja 24.8.2026): pelin oletustila heti '
           + 'alusta — tietoa, kysymyksiä ja valintoja niukasti '
@@ -256,10 +258,10 @@ export const RAAMATTU = {
           + 'rajautuu automaattisesti niin, että lähtömaa (Lontoo/'
           + 'Britannia) ja kohdemaa näkyvät molemmat sopivalla '
           + 'marginaalilla, ja lentokone lentää punaista viivaa '
-          + 'pitkin Lontoosta kohteeseen. Kartta on tällöin jo '
-          + 'fokusmoodin tapaan niukka: maat, joissa ei ole käyty '
-          + 'tai joissa pelaaja ei ole, himmeinä/sumennettuina. '
-          + 'Koko näkymä uusitaan.',
+          + 'pitkin Lontoosta kohteeseen. (Lennon karttapohjasta '
+          + 'määrää nyt "VANHA KARTTA KOKONAAN POIS" -linjaus: '
+          + 'pohja on atlas-lehdet + pergamentti, ei niukka vanha '
+          + 'piirros.)',
         'NOPPA JA REITIT (omistaja 24.8.2026): nykyinen noppa ja '
           + 'reittien viivat/pisteet säilyvät ennallaan — pienellä '
           + 'luvulla aika kuluu jo nyt hitaammin, kun heittoja '
@@ -446,8 +448,11 @@ export const RAAMATTU = {
           + 'päiväkirjamerkinnät generoidaan puheeksi '
           + '(ElevenLabs-resepti, tools/generoi-luennat.mjs); '
           + 'PÖLLÖN repliikkejä EI lueta. Luenta on striimiääni, '
-          + 'jonka kytkin on AINA puhekuplan alla painettavissa '
-          + 'päälle ja pois. LEHDEN LUKIJA aloittaa aina joko '
+          + 'jonka kytkin on kortin KAIUTINKUVAKE (omistaja '
+          + '25.8.2026, kumoaa liukukytkimen puhekuplan alla): '
+          + 'mykistettynä kuvakkeen päällä on vinoviiva; päälle '
+          + 'kytkeminen aloittaa ruudulla olevan merkinnän alusta. '
+          + 'LEHDEN LUKIJA aloittaa aina joko '
           + 'ihan alusta tai ylimpänä näkyvästä väliotsikosta — '
           + 'ei koskaan leipätekstin puolivälistä. '
           + 'Asteikot (viivaimet) '
@@ -507,35 +512,89 @@ export const RAAMATTU = {
           + 'lyhyitä.',
         'UI: pöllö pysyvästi leijuvana sivuelementtinä kaikissa '
           + 'tiloissa (pois alanapeista, kuten nyt lehtiä '
-          + 'luettaessa). Fokusmoodissa alhaalla vain Liiku- ja '
-          + 'Tutki-napit (Tutki-napin tarve fokusmoodissa vielä '
-          + 'auki). Fokusmoodin kytkin matkalaukun oikealla puolella '
+          + 'luettaessa). Fokusmoodissa alhaalla vain Liiku-nappi '
+          + '(Tutki poistui — toiminto on kaupungin laatassa). '
+          + 'Fokusmoodin kytkin matkalaukun oikealla puolella '
           + 'VAIN kehittäjätilassa; lisäksi kehittäjätilaan '
           + 'sumennukset päälle/pois -nappi. Muille aina päällä.',
-        'PILOTTI: Kreikka/Ateena. Nykyinen aarrekysymys säilyy '
-          + 'pääkysymyksenä; lämmittelyt lehdistä, tarvittaessa '
-          + 'uusia. Ateenalle uusi matkakirjapätkä (Fable) '
-          + 'täkytutkimuksen jälkeen.',
+        'PELITESTIKIERROSTEN LINJAUKSET 25.8.2026 (toteutettu): '
+          + 'KÄÄNNETTY LAATTA KORVAUTUU AARREMERKILLÄ — pieni pyöreä '
+          + 'merkki löytyneen aarteen kuvalla kaupungin paikalla, ei '
+          + 'koskaan kahta laattaa vierekkäin. VIHREÄ KOHTAAMISPISTE '
+          + 'on pieni ja TUIKKII (löytyminen hoituu tuikkeella, ei '
+          + 'koolla) ja piirretty merkki siirtyy sivuun laatasta, '
+          + 'jottei se korvaa kaupungin pistettä. KOHTAAMISKORTTI '
+          + 'aukeaa keskelle ruutua (hetken päänäyttämö). KOHDEPOPUP: '
+          + 'isommat marginaalit, "Kysy pöllöltä" -rivi kysymysten '
+          + 'yllä, RAAHATTAVA (napautus sulkee sormen noustessa, veto '
+          + 'siirtää; raahattu paikka voittaa automaattiasemoinnin). '
+          + 'VANHA MAAILMANKARTTA JA PAPERIRAE EIVÄT PIIRRY atlaksen '
+          + 'alla fokusnäkymässä (mitattu: pudonneet kehykset '
+          + '~kolmannekseen), eikä piilotettua lautaa rasteroida — '
+          + 'yleiskuvaan palatessa kartta tarkentuu hetken. NOPEA '
+          + 'AVAUS: raskas työ esilämmitetään alkukertomuksen aikana, '
+          + 'lautaa ei maalata pergamenttiarkin alla; järjestys on '
+          + 'kartta feidaten → ääni → kone (klikkauksesta karttaan '
+          + '~5 s, oli ~24 s). Kertoja vaikenee kun matka alkaa. '
+          + 'Maataulun plus on PALJAS PAKSU PLUS ilman ympyrää, '
+          + 'taulun yläreunassa keskellä omalla rivillään. '
+          + 'KEHITTÄJÄN VÄRILAATTAKOODIT POISTETTU kartalta — '
+          + 'valmiusvärit elävät vain työhuoneen Tilastot-taulussa.',
+        'VANHA KARTTA KOKONAAN POIS PELISTÄ TOISTAISEKSI (omistaja '
+          + '25.8.2026, ilta — laajentaa aiempaa fokusnäkymärajausta): '
+          + 'pelilaudan vanhaa piirrosta ei näytetä MISSÄÄN pelin '
+          + 'aikana — ei myöskään avauslennossa eikä yleiskuvassa. '
+          + 'Atlas-lehdet + sumuverho/pergamentti ovat ainoa kartta; '
+          + 'lennon punainen viiva ja kone piirtyvät niiden päälle. '
+          + 'KUMOAA aiemman "lento on niukka vanha kartta" -linjan. '
+          + 'Etusivun (pickstart) taustakartta ja katselulaudat '
+          + 'ennallaan — niillä ei ole atlasta. Vanhaa piirtokoodia '
+          + 'EI poisteta (toistaiseksi-linjaus). TOTEUTETTU v1115. '
+          + 'Hyväksytty välitila kunnes lehtiä on joka maasta: '
+          + 'yleiskuva on pergamenttia + valmiiden maiden lehdet, '
+          + 'ja lento lehdettömään maahan näyttää vain pergamentin, '
+          + 'harson ja punaisen viivan.',
+        'TILANNE 25.8.2026: Kreikka-pilotti valmis ja viisi uutta '
+          + 'maata pelissä Kreikan tasolla (Sofia, Rooma, Istanbul, '
+          + 'Sarajevo, Bukarest — fokusvirrat, lehtitehtävät, '
+          + 'kohteet, täkynostot, aarremerkinnät, luennat, '
+          + 'kohtaamiskuvat). Seuraavaksi loput Euroopan maat '
+          + 'samalla Sofia-rakentajamallilla kaanoneista.',
       ],
     },
     {
       otsikko: 'Aarteet ja eteneminen',
-      tila: 'luonnos',
+      tila: 'mekaniikka toteutettu v1109–v1110 (25.8.2026); '
+        + 'maakohtaiset parit sisältötyönä jäljellä',
       kohdat: [
         'Laatta joka kaupungissa; oikea vastaus paljastaa, alta löytyy '
-          + 'AINA aarre.',
+          + 'AINA aarre. Vanhat laattatyypit (jalokivet, tyhjät, '
+          + 'hevosenkengät, rosvot, linssilaatat) on POISTETTU '
+          + 'pelistä; vanhat tallenteet migratoituvat.',
         'AARTEET: pieni paikallisaarre (~100–250 p) · iso '
           + 'paikallisaarre (~500–800 p) · mantereen 1000 p aarre · '
-          + 'PÄÄAARRE (2000 p + jää matkalaukkuun). Arvo vaihtelee '
-          + 'löytöhetkellä; kiinteät vain 1000/2000.',
+          + 'PÄÄAARRE (2000 p + jää matkalaukkuun; entinen '
+          + 'tähtimekaniikka, avaa mannerlennon). Arvo arvotaan '
+          + 'löytöhetkellä 10 punnan tarkkuudella; kiinteät vain '
+          + '1000/2000. Jako: 1 pääaarre + 1 mantereen aarre per '
+          + 'manner, lopuista ~1/3 isoja ja ~2/3 pieniä.',
         'Paikallisaarteet: joka maalle oma pari (pieni + iso), '
-          + 'paikkaan sopivia, osa hauskan yllättäviä. ~220 paria.',
-        'Löytöteksti: lyhyt tosi fakta aarteesta + onnentoivotus.',
-        'Huudahdukset: pääaarteen luetut säilyvät; muut korvataan '
-          + 'korkeintaan kahden sanan huudahduksilla ("Jes!", '
-          + '"No okei.").',
+          + 'paikkaan sopivia, osa hauskan yllättäviä. ~220 paria — '
+          + 'mekaniikka valmis (js/packs/paikallisaarteet.js, '
+          + 'ISO3-avaimet), sisältö kirjoitetaan erissä. SIIHEN ASTI '
+          + 'väliaikaisina pareina mantereiden entiset aarteet '
+          + 'nimineen ja kuvineen (esim. Eurooppa: Meripihka / '
+          + 'Ritarin hopeamiekka).',
+        'Löytöteksti: lyhyt tosi fakta aarteesta + onnentoivotus '
+          + '(fakta-kenttä valmiina; kortille kun parit tulevat).',
+        'Huudahdukset: pääaarteen luetut säilyvät; muut ovat '
+          + 'korkeintaan kahden sanan huudahduksia ("Jes!", '
+          + '"No okei.") — toteutettu.',
         'VARUSTEET ostetaan kaupasta (hampurilaisvalikko, ~1000 '
-          + 'p/kpl) — eivät löydy laatoista.',
+          + 'p/kpl) — eivät löydy laatoista. AVOIN 25.8.2026: '
+          + 'kauppaa ei ole vielä rakennettu, joten mannerkohtaiset '
+          + 'linssit eivät tällä hetkellä ole saatavissa mistään '
+          + '(vain tietäjäpisterajojen linssit aukeavat).',
         'Pääaarre voi osua mantereen ensimmäiseen kätköön; varma '
           + 'viimeisessä. Löytö avaa mannerlennon seuraavalle.',
       ],
@@ -731,11 +790,13 @@ export const RAAMATTU = {
         'Kohteita saa olla entistä enemmän per kaupunki — kartta on '
           + 'zoomattava (linjaus 15.8.2026). Uudet kaupunkikartat '
           + 'tehdään 5 kaupungin erissä omistajan tsekattavaksi.',
-        'UUSIIN KAUPUNKEIHIN JA MAIHIN EI VIELÄ TARINAKAARTA '
-          + '(omistaja 17.8.2026): ei matkakirjatekstejä, ei '
-          + 'kohtaamisia eikä kysymyksiä — koko kaari tulee '
-          + 'muuttumaan. Tehdään VAIN kaupunkilehti ja maalehti; '
-          + 'kaari kirjoitetaan myöhemmin uuden mallin mukaan.',
+        'UUSI TARINAKAARI ON FOKUSVIRTA (korvaa 17.8. jäädytyksen; '
+          + '25.8.2026): uusi maa rakennetaan Sofia-mallilla — Fable '
+          + 'kirjoittaa sitovan kaanonin (matkakirja, pöllön huomio, '
+          + 'täyt, aarremerkintä, täkynostot; docs/moduulit/'
+          + 'tarinakaari.md), rakentaja siirtää sen sanasta sanaan '
+          + 'fokusvirtapaketiksi ja kohdelistaksi tutkimusraporttien '
+          + 'faktoilla. Kuusi maata tehty tällä mallilla.',
         'MATKAILIJAN OPAS on pelin kevyt ja viihteellinen osa, joka '
           + 'houkuttelee matkustamaan itse kohteeseen (linjaus '
           + '16.8.2026): se saa käyttää muuta lehteä iloisempia '
@@ -799,9 +860,12 @@ export const RAAMATTU = {
           + '(v868:n kelluva kahva poistettu — kaksi kaiutinta samassa '
           + 'kulmassa).',
         'LUENTAPOLKU: äänite soi kun luenta-kenttä vastaa '
-          + 'näyttötekstiä; muuttunut teksti striimataan. Uusia '
-          + 'äänitteitä EI generoida — kaikki uusitaan kerralla, kun '
-          + 'Raamattu on valmis ja tekstit kirjoitettu.',
+          + 'näyttötekstiä; muuttunut teksti striimataan. '
+          + 'Matkakirjaluennat generoidaan maittain kaanonin '
+          + 'valmistuessa (ElevenLabs, Viisas Kertoja, tunnetagit; '
+          + 'tools/generoi-luennat.mjs) — 25.8.2026 mennessä kuusi '
+          + 'fokusmaata ja avaustekstit. Vanha "kaikki kerralla '
+          + 'lopussa" -varaus on kumottu.',
         'Lisäksi tehosteet, mietintämusiikki, äänimaisemat ja '
           + 'musiikkinäytteet. Uudet taustaäänet LUFS-mitataan heti '
           + '(testi valvoo).',
@@ -816,13 +880,17 @@ export const RAAMATTU = {
       otsikko: 'Kuvat ja lähteet',
       tila: 'luonnos',
       kohdat: [
-        'HEROGENEROINTI TAUOLLA (omistaja 24.8.2026): uusia '
-          + 'herokuvia ei generoida toistaiseksi — tekotavassa voi '
-          + 'olla vielä virheitä (kierrosten 22–25 katselmointi: '
-          + 'viitteettömät yleisnäkymät keksivät maamerkkejä). '
-          + 'Valmiit, katselmoidut kuvat kytketään loppuun; '
-          + 'hylättyjen uusinta-ajot ja uudet kierrokset vasta '
-          + 'omistajan luvalla. Työ keskittyy nyt fokusmoodiin.',
+        'HEROKUVIEN HYBRIDIMALLI (omistaja 25.8.2026, korvaa 24.8. '
+          + 'tauon API-massa-ajojen osalta): omistaja generoi '
+          + 'herokuvat ChatGPT Plus -käyttöliittymässä Fablen '
+          + 'promptiarkeilla (VAKIO-resepti tools/hero-kuvakulmat.'
+          + 'mjs; arkin mukana 2–3 Commons-valokuvaa viitteeksi), '
+          + 'ja API:a käytetään vain täsmäajoihin — kiinteä '
+          + 'kuukausihinta voittaa kuvakohtaisen API-hinnan '
+          + '(~0,17–0,25 $/kuva). Kuvat toimitetaan Fablelle, joka '
+          + 'vie ne ämpäriin. Viitteettömiä yleisnäkymiä ei '
+          + 'generoida (kierrosten 22–25 oppi: ne keksivät '
+          + 'maamerkkejä).',
         'Kaikki kuvat PD/CC (Commons, Finna, LoC, Flickr — lisenssi '
           + 'aina rajapinnasta), silmin tarkistettuina; tekijä ja '
           + 'lisenssi näkyvissä.',
@@ -1054,7 +1122,14 @@ export const RAAMATTU = {
           + 'superlinssi = alle 80 päivän palkinto · visavihje / '
           + 'aarrevihje = ks. Talous · johtolause = isoisän äänen '
           + 'esittelytapa · lehtikaupunki / maalehti = luettava '
-          + 'lehti · työhuone = kehittäjävivun takaiset lehdet pelissä.',
+          + 'lehti · työhuone = kehittäjävivun takaiset lehdet '
+          + 'pelissä · fokuslehti = maan esirenderöity karttakuva · '
+          + 'atlas = kaikkien valmiiden maiden lehdet kartalla · '
+          + 'täky / täkynosto = uteliaisuuskoukku ja sen '
+          + 'klikkiotsikkokupla · sähke / retkikunta = rakenteinen '
+          + 'moninpeliviestintä · kaveriapu = retkikunnan veikkaus '
+          + 'aarrekysymykseen (25 p) · turvatila = kaatumissilmukan '
+          + 'itsekorjaus (lehdet pois tunniksi).',
       ],
     },
     {
@@ -1135,9 +1210,21 @@ export const RAAMATTU = {
         '— Offline-pelaus tavoitteena (16.8.2026); verkkoyhteyden '
           + 'saa olettaa, välimuisti on nopeutta varten.',
         '— Rosvo-, tyhjä- ja hevosenkenkälaatat; laatan alta löytyy '
-          + 'aina aarre.',
+          + 'aina aarre (poistettu pelistä v1109, 25.8.2026).',
         '— Erillinen vihjejärjestelmä; aarrevihjeet ovat tekstien '
           + 'sivuhuomioita.',
+        '— Jalokivi- ja linssilaatat (25.8.2026); tilalla pieni ja '
+          + 'iso paikallisaarre, linssit kauppaan.',
+        '— Kiinteä ruutukoko kartan merkeillä (25.8.2026); merkit '
+          + 'elävät kartan mittakaavassa.',
+        '— LUENTA-liukukytkin puhekuplan alla (25.8.2026); '
+          + 'kaiutinkuvake on kytkin.',
+        '— Kehittäjän värilaattakoodit kartalla (25.8.2026); '
+          + 'valmiusvärit vain Tilastot-taulussa.',
+        '— Täkynoston alalaidan liuska (25.8.2026); nosto on '
+          + 'puhekupla tapahtuman kohdalla.',
+        '— Etusivun kirjakuva toistaiseksi (omistaja 25.8.2026); '
+          + 'palataan kuvaan myöhemmin.',
       ],
     },
     {

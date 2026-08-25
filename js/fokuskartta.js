@@ -238,14 +238,45 @@ function pienennysMitat(w, h) {
   };
 }
 
-/** Canvas tai null (Node, tai selain ilman documenttia). */
-function teeCanvas(w, h) {
+/** Sivun oma canvas tai null (Node, tai selain ilman documenttia). */
+function teeDomCanvas(w, h) {
   const asiakirja = globalThis.document;
   if (typeof asiakirja?.createElement !== 'function') return null;
   const canvas = asiakirja.createElement('canvas');
   canvas.width = w;
   canvas.height = h;
   return canvas;
+}
+
+/**
+ * Pienennyksen canvas — OffscreenCanvas jos sellainen on.
+ *
+ * SYY ON PAKKAUS EIKÄ PIIRTO (mitattu 25.8.2026, ilta). Lehden
+ * pienennys päättyy uudelleenpakkaukseen, ja tavallisen canvasin
+ * `toBlob` tekee sen PÄÄSÄIKEESSÄ: 3200 x 2000 pikseliä akvarellia
+ * webpiksi on satojen millisekuntien työ, ja se osui avauslennon
+ * päälle, jossa lehtiä puretaan kaksi peräkkäin. Mitattuna lennon
+ * aikana yksi 1 522 ms:n longtask.
+ *
+ * OffscreenCanvasin `convertToBlob` tekee saman pakkauksen pääsäikeen
+ * ULKOPUOLELLA ja palauttaa lupauksen. Piirto (drawImage) jää
+ * pääsäikeeseen, mutta se on pelkkä skaalattu kopiointi eikä
+ * pakkausta.
+ *
+ * VARAREITTI ON ENNALLAAN. Ilman OffscreenCanvasia (vanha WebKit)
+ * palataan sivun omaan canvasiin ja toBlobiin, eli täsmälleen siihen
+ * mitä ennenkin — pienennys ei saa jäädä tekemättä muistin takia.
+ */
+function teeCanvas(w, h) {
+  if (typeof OffscreenCanvas === 'function') {
+    try {
+      const canvas = new OffscreenCanvas(w, h);
+      // Vain jos se osaa myös pakata: pelkkä konstruktori ilman
+      // convertToBlobia veisi meidät umpikujaan (ks. canvasOsoitteeksi).
+      if (typeof canvas.convertToBlob === 'function') return canvas;
+    } catch { /* varareitti alla */ }
+  }
+  return teeDomCanvas(w, h);
 }
 
 /*
@@ -259,7 +290,10 @@ let webpTuki = null;
 function tukeeWebp() {
   if (webpTuki !== null) return webpTuki;
   try {
-    const canvas = teeCanvas(1, 1);
+    // SIVUN OMA CANVAS, ei OffscreenCanvas: koe tehdään toDataURLilla,
+    // jota OffscreenCanvasissa ei ole. Sama moottori pakkaa molemmat,
+    // joten vastaus kelpaa kummallekin.
+    const canvas = teeDomCanvas(1, 1);
     webpTuki = Boolean(canvas?.toDataURL?.('image/webp')?.startsWith?.('data:image/webp'));
   } catch {
     webpTuki = false;
@@ -269,9 +303,23 @@ function tukeeWebp() {
 
 /** Canvasin sisältö blob-osoitteeksi; null jos ei onnistu. */
 function canvasOsoitteeksi(canvas) {
-  if (typeof canvas?.toBlob !== 'function' || typeof URL?.createObjectURL !== 'function') {
-    return Promise.resolve(null);
+  if (typeof URL?.createObjectURL !== 'function') return Promise.resolve(null);
+  const tyyppi = tukeeWebp() ? 'image/webp' : 'image/jpeg';
+  /*
+   * PAKKAUS POIS PÄÄSÄIKEELTÄ, kun selain osaa (ks. teeCanvas). Lupaus
+   * ratkeaa kun pakkaus on valmis; virhe on sama tulos kuin epäonnistunut
+   * toBlob, eli varareitti täyteen lehteen.
+   */
+  if (typeof canvas?.convertToBlob === 'function') {
+    return canvas.convertToBlob({ type: tyyppi, quality: PIENENNYS_LAATU })
+      .then((blob) => {
+        try {
+          return blob ? URL.createObjectURL(blob) : null;
+        } catch { return null; }
+      })
+      .catch(() => null);
   }
+  if (typeof canvas?.toBlob !== 'function') return Promise.resolve(null);
   return new Promise((valmis) => {
     let vastattu = false;
     // Varmistus: jos toBlob ei koskaan kutsu takaisin, lehti ei saa
@@ -288,7 +336,7 @@ function canvasOsoitteeksi(canvas) {
       valmis(osoite);
     }
     try {
-      canvas.toBlob(anna, tukeeWebp() ? 'image/webp' : 'image/jpeg', PIENENNYS_LAATU);
+      canvas.toBlob(anna, tyyppi, PIENENNYS_LAATU);
     } catch { anna(null); }
   });
 }
@@ -762,11 +810,26 @@ function maanNakyma(ui, iso, lauta) {
  *      valmis (haePohja → lataaKuva), joten pääsäie ei purkaudu
  *      panoroinnin keskellä.
  *
- * ATLAS EI OLE VOIMASSA YLEISKUVASSA (ui.mannerZoom pois) eikä
- * aloituslennon aikana: molemmat ovat laudan omia näkymiä, joissa
- * kuvien pitää olla poissa (sama raja kuin kartta.fokusRajauksilla ja
- * verholla). Maailmanlaajuisessa yleiskuvassa lehdet olisivat lisäksi
- * postimerkin kokoisia tilkkuja keskellä merta.
+ * ATLAS ON VOIMASSA KOKO PELIN AJAN — MYÖS YLEISKUVASSA JA LENNOSSA
+ * (omistajan linjaus 25.8.2026, ilta: *"Lennon aikana taidetaan käyttää
+ * sitä vanhaa karttaa. Vanha kartta pitää ottaa kokonaan pois pelistä
+ * toistaiseksi."*).
+ *
+ * AIEMPI RAJAUS ON KUMOTTU. Atlas oli voimassa vain mannerZoomissa ja
+ * aloituslennon ulkopuolella, koska niissä kahdessa näkymässä vanha
+ * lauta sai näkyä: yleiskuvassa lehdet ovat postimerkin kokoisia
+ * tilkkuja ja lennossa kartan piti olla "niukka vanha kartta". Kun
+ * vanhaa piirrosta ei enää näytetä pelin aikana lainkaan, niistä ei jää
+ * karttaa vaan tyhjä pergamentti — joten atlas on se kartta myös
+ * siellä. Postimerkkiehto (ATLAS_VAHIMMAISLEVEYS) hoitaa yleiskuvan
+ * itsestään: koko maailman mittakaavassa yksikään maa ei ole näkymään
+ * nähden riittävän leveä, joten yleiskuva jää lehdettömäksi
+ * pergamentiksi verhon alla eikä lataa mitään.
+ *
+ * KAKSI POIKKEUSTA, JOISSA VANHA PIIRROS SAA YHÄ NÄKYÄ: aloitusruutu
+ * (phase 'pickstart', maailma-lauta jolle ei ole lehtiä lainkaan) ja
+ * katselutila (?lauta=) muilla laudoilla. Molemmat ovat laudan
+ * ESITTELYÄ eivätkä matkaa.
  */
 
 /*
@@ -894,6 +957,29 @@ function atlasTurvatila() {
   return atlasTurvatilaMuisti;
 }
 
+/**
+ * Onko tällä laudalla ylipäätään lehtiä?
+ *
+ * TÄMÄ ON SE VARTIJA, JOKA PITÄÄ VANHAN PIIRROKSEN LAUDOILLA, JOILLE
+ * ATLASTA EI OLE. Piilotus on nyt voimassa aina kun peliä pelataan, ja
+ * ilman tätä ehtoa lauta, jolle ei ole yhtäkään lehteä, jäisi
+ * kokonaan tyhjäksi pergamentiksi. Vastaus ei muutu kesken istunnon
+ * (tiedostolista on käännösaikainen), joten se muistetaan.
+ */
+const LEHTILAUDAT = new Map();
+function laudallaLehtia(lauta) {
+  if (!lauta) return false;
+  let on = LEHTILAUDAT.get(lauta);
+  if (on === undefined) {
+    on = false;
+    for (const tiedot of Object.values(FOKUS_POHJAT)) {
+      if (!tiedot.lauta || tiedot.lauta === lauta) { on = true; break; }
+    }
+    LEHTILAUDAT.set(lauta, on);
+  }
+  return on;
+}
+
 function atlasPaalla(ui) {
   if (!ui.fokusmoodi || ui.katselu) return false;
   if (atlasTurvatila()) return false;
@@ -908,8 +994,13 @@ function atlasPaalla(ui) {
    * kuljetaan"*), ja vielä ilman verhoa, joka on pickstartissa pois.
    */
   if (ui.game.phase === 'pickstart') return false;
-  if (ui.aloituslentoKesken) return false;
-  return Boolean(ui.mannerZoom);
+  /*
+   * YLEISKUVA JA ALOITUSLENTO EIVÄT OLE ENÄÄ POIKKEUKSIA (omistajan
+   * linjaus 25.8.2026, ilta — ks. atlaksen johdanto). Ne olivat sitä
+   * niin kauan kuin niissä näytettiin vanhaa lautaa; nyt sitä ei
+   * näytetä pelin aikana missään, joten atlas on kartta myös siellä.
+   */
+  return laudallaLehtia(ui.game.pack?.id);
 }
 
 /*
@@ -944,11 +1035,17 @@ function atlasPaalla(ui) {
  * täsmälleen kuten näkyvänkin. Sama oppi kuin .fokus-piilossa- ja
  * .fokus-lehden-alla-luokilla (css/styles.css).
  *
- * KOODIA EI POISTETA. Lauta rasteroidaan ja pidetään yllä kuten ennenkin
- * (ui.taydennaTaide), joten yleiskuvaan, lentoon, aloitusruutuun ja
- * maailmankarttanäkymään palataan ilman uutta odotusta. Piiloon menee
- * vain PIIRTO ja vain siinä näkymässä, jossa atlas on kartta — eli
- * täsmälleen atlasPaallan ehdoilla.
+ * KOODIA EI POISTETA. Lauta piirretään, rasteroidaan ja pidetään yllä
+ * kuten ennenkin (ui.taydennaTaide) heti kun piilotus väistyy —
+ * aloitusruudulla, katselutilassa, turvatilassa ja fokusmoodin ollessa
+ * pois. Piiloon menee vain PIIRTO ja täsmälleen atlasPaallan ehdoilla.
+ *
+ * PIILOTUS KATTAA NYT KOKO PELIN (omistajan linjaus 25.8.2026, ilta:
+ * *"Vanha kartta pitää ottaa kokonaan pois pelistä toistaiseksi."*).
+ * Ensimmäinen versio piilotti laudan vain lähikuvassa (mannerZoom) ja
+ * lennon ulkopuolella; omistaja näki vanhan piirroksen yhä
+ * avauslennossa ja uloszoomatussa yleiskuvassa. Ehto on nyt sama kuin
+ * atlaksella: pelilaudalla piilotus on päällä AINA.
  *
  * PERGAMENTTI JÄÄ. Paperin pohja (.paper-pohja) on laudan juuriryhmän
  * ensimmäinen lapsi eikä kuulu rasteroitavaan taideryhmään (js/ui.js
@@ -1282,6 +1379,36 @@ export function paivitaFokusAtlas(ui) {
       if (ui.game.pack.id !== lauta || !atlasPaalla(ui)) return;
       const kohde = atlasRyhma(ui);
       if (!kohde || ui.atlasLehdet.has(v.iso)) return;
+      // Maa ehti vaihtua haun aikana juuri tähän: sen lehti kuuluu nyt
+      // omaan ryhmäänsä eikä atlakseen (ks. piirra, kaksoiskappale).
+      if (v.iso === ui.fokuskarttaAvain) return;
+      /*
+       * NÄKYMÄ EHTI SILTI SIIRTYÄ NIIN KAUAS, ETTEI LEHTI NÄY (mitattu
+       * 25.8.2026, ilta). Yllä oleva sääntö "otetaan vastaan vaikka
+       * tunniste vaihtui" on oikea kamera-ajolle, jossa lehti on koko
+       * ajan menossa RUUDULLE — mutta väärä aloituslennolle, joka on
+       * nyt atlaksen piirissä: lento katsoo koko Eurooppaa ja aloittaa
+       * kourallisen hakuja, joista osa valmistuu vasta perillä
+       * Ateenassa. Ne jäivät kartalle, koska LRU-vapautus lasketaan
+       * vain paivitaFokusAtlaksen alussa ja asettunut näkymä ohittaa
+       * sen tunnisteella (atlasAvain). Mitattuna Ateenassa jäi
+       * Norjan lehti — 2025 x 1265 yksikköä opaakkia kuvaa ruudun
+       * ulkopuolella, joka maalattiin jokaisessa nipistyskehyksessä.
+       *
+       * TESTI ON GEOMETRIAA EIKÄ TUNNISTE: sama tuplavara kuin
+       * hystereesillä yllä, joten varan reunalla keikkuva lehti tulee
+       * yhä vastaanotetuksi eikä ala välkkyä.
+       */
+      const nyky = ui.nakyvaAlue?.();
+      if (nyky?.w > 0) {
+        const raja = {
+          x: nyky.x - nyky.w * ATLAS_VARA * 2,
+          y: nyky.y - nyky.h * ATLAS_VARA * 2,
+          w: nyky.w * (1 + 4 * ATLAS_VARA),
+          h: nyky.h * (1 + 4 * ATLAS_VARA),
+        };
+        if (!(leikkausAla(v.bbox, raja) > 0)) return;
+      }
       // Osoite on nyt kartalla: siivous saa vapauttaa sen vasta kun
       // lehti irrotetaan (siivoaLehtiUrlit).
       pohja.piirretty = true;
@@ -1362,6 +1489,26 @@ function piirra(ui, iso, pohja) {
   // lipulla (FOKUS_SVG_NIMET) tämä ei tee mitään: nimet ovat kuvassa.
   piirraLisanimet(ui, iso, ryhma);
   paivitaFokusNimet(ui);
+  /*
+   * SAMA MAA EI SAA OLLA KARTALLA KAHDESTI (mitattu 25.8.2026, ilta).
+   *
+   * Aloituslennon aikana nykyistä maata ei ole ('pois'), joten kohdemaa
+   * on atlaksen mielestä tavallinen naapuri ja latautuu .fokus-atlas
+   * -ryhmään. Perillä sama maa saa oman ryhmänsä — ja atlaksen kopio
+   * jäi paikoilleen, koska LRU vapauttaa vain näkymästä poistuneita
+   * lehtiä eikä yksikään lehti ole niin varmasti näkymässä kuin se,
+   * jossa seistään. Kartalla oli siis kaksi identtistä opaakkia kuvaa
+   * päällekkäin: kaksinkertainen maalaus jokaisessa panorointikehyksessä
+   * ja kaksinkertainen muistilasku (mitattu Ateenassa: pudonneita
+   * kehyksiä nipistyksessä 5,5 % → 18,1 %).
+   *
+   * VASTA TÄSSÄ, KUVAN ASETTAMISEN JÄLKEEN. vapautaLehti siivoaa myös
+   * pienennettyjen lehtien blob-osoitteet sen mukaan, mitkä osoitteet
+   * ovat elävässä DOMissa (siivoaLehtiUrlit) — ennen appendChildia sama
+   * osoite näyttäisi käyttämättömältä ja vapautuisi juuri asetetun
+   * kuvan alta.
+   */
+  vapautaLehti(ui, iso);
   // Kaksi laatikkoa: kuva vie bboxin, mutta kameran ja rajausten
   // mittapuu on IKKUNA (ks. maanNakyma ja kartta.fokusRajaukset).
   ui.paivitaFokusPohja?.(bbox, pohja.rajaus ?? bbox);
@@ -1397,12 +1544,20 @@ export function paivitaFokuskartta(ui) {
    * jotka lukevat pohjan olemassaoloa (ui.fokusPohjaBbox): verhon
    * reikä, laatan alle keskitetyt nimilaput ja kohtaamispiste.
    *
-   * Lentonäkymä on Raamatun mukaan NIUKKA VANHA KARTTA punaisella
-   * viivalla (ALOITUSLENTO UUSIKSI): kartta rajautuu lähtö- ja
-   * kohdemaahan, kone lentää viivaa. Fokuskerrokset kuuluvat vasta
-   * laskeutumisen jälkeiseen kamera-ajoon — jonka tämä sama funktio
-   * käynnistää heti kun lippu laskeutuu, koska maa vaihtuu silloin
-   * arvosta 'pois' kohdemaahan.
+   * Fokuskerrokset kuuluvat vasta laskeutumisen jälkeiseen
+   * kamera-ajoon — jonka tämä sama funktio käynnistää heti kun lippu
+   * laskeutuu, koska maa vaihtuu silloin arvosta 'pois' kohdemaahan.
+   *
+   * KOHDEMAAN KUVA EI SILTI KATOA LENNOSTA (omistajan linjaus
+   * 25.8.2026, ilta: vanha kartta pois myös lennosta, *"lennossa
+   * näkyvät atlas-lehdet ja sumu kuten muutenkin"*). Kun `iso` on
+   * lennon ajan null, kohdemaa ei ole atlaksen mielestä "nykyinen maa"
+   * vaan tavallinen ehdokas — ja piirtyy siis muiden lehtien joukossa
+   * atlasryhmään (paivitaFokusAtlas). Pois jää vain se, mikä v1103:ssa
+   * oli vikana: oma lehtiryhmä, verhon reikä, laatan alle keskitetyt
+   * nimilaput ja kohtaamispiste, jotka kaikki lukevat ui.fokusPohjaBbox
+   * -kenttää. Lento pysyy siis niukkana eikä määränpää erotu muista
+   * maista, mutta kartta on kartta eikä tyhjä paperi.
    *
    * KUVA HAETAAN SILTI JO LENNON AIKANA. Pohja on megatavujen
    * kokoinen, ja jos lataus alkaisi vasta laskeutumisesta, lehti
@@ -1486,6 +1641,22 @@ export function nollaaFokuskartta(ui) {
    * seuraavasta paivitaFokusAtlaksesta, jos uusikin näkymä on atlas.
    * Ilman tätä vanhan laudan piilotus jäisi voimaan laudalle, jolla
    * atlasta ei ole lainkaan.
+   *
+   * TÄSSÄ ON MYÖS SE HETKI, JOKA PÄÄSTÄÄ VEKTORIT POIS (mitattu
+   * 25.8.2026, ilta). Laudan bittikarttaputki käynnistetään muutamaa
+   * riviä myöhemmin (js/ui.js rasteroiTaide), ja se katsoo elävästä
+   * luokasta, kannattaako työtä aloittaa (ui.piirtoLykkaantyy).
+   * Kokeiltiin arvata piilotus valmiiksi oikein, jolloin koko putki
+   * olisi jäänyt tekemättä piilossa olevalle laudalle — ja mitattiin,
+   * että se on huono kauppa: laudan ~6500 vektorielementtiä jäävät
+   * silloin DOMiin (poistaVektorit ei laukea ilman bittikarttaa), ja
+   * vaikka ne ovat display: none, Chromium maksaa niistä jokaisessa
+   * eleessä. Nipistyksessä pudonneita kehyksiä 3,2 % → 15,3 %.
+   *
+   * Oikea järjestys on siis tämä: lauta syntyy näkyvänä, pohjataso
+   * rakennetaan kerran, vektorit lähtevät sen mukana — ja vasta sitten
+   * atlas peittää lopun. Tarkkoja ruutuja ei enää piirretä
+   * (taideAtlasOdottaa), joten toistuva työ jää silti pois.
    */
   paivitaVanhaLauta(ui, false);
   ui.fokuskarttaAvain = null;

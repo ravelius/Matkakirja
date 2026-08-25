@@ -299,9 +299,18 @@ const lento = await sivu.evaluate(async () => {
           }
           return false;
         };
+        const naytto = (sel) => {
+          const e = document.querySelector(sel);
+          return e ? getComputedStyle(e).display : 'ei ole';
+        };
         havainnot.kartta = {
           lauta: game.pack.id,
           kartalento: document.body.classList.contains('kartalento'),
+          // Vanha piirros pois myös lennosta (omistajan linjaus
+          // 25.8.2026, ilta) — mutta pergamentti jää alle.
+          atlasLuokka: document.body.classList.contains('fokus-atlas-nakyma'),
+          staattinen: naytto('.staattinen'),
+          paperi: naytto('.paper-pohja'),
           reitti: Boolean(document.querySelector('.flight .flight-trail')),
           skene: Boolean(document.querySelector('.flight-scene')),
           sumu: Boolean(document.querySelector('.fokus-sumu-harso')),
@@ -342,6 +351,24 @@ vaadi('rajaukseen mahtuvat sekä lähtömaa että kohdemaa',
 vaadi('kartta on lennon aikana niukka: sumu päällä, pelitila piilossa',
   Boolean(kartta.sumu) && kartta.himmennettyja > 0 && kartta.nappula === '0',
   `sumu ${kartta.sumu}, himmennettyjä ${kartta.himmennettyja}, nappulan peittävyys ${kartta.nappula}`);
+/*
+ * VANHA KARTTA POIS MYÖS LENNOSTA (omistajan linjaus 25.8.2026, ilta:
+ * *"Lennon aikana taidetaan käyttää sitä vanhaa karttaa. Vanha kartta
+ * pitää ottaa kokonaan pois pelistä toistaiseksi."*).
+ *
+ * Aiemmin lentonäkymä oli nimenomaan NIUKKA VANHA KARTTA: laudan
+ * piirros harson alla. Nyt harson alla on pergamentti ja
+ * valmistuneiden maiden atlas-lehdet — ja jos lähtö- ja kohdemaalle ei
+ * ole vielä lehtiä (esim. lento New Yorkiin), pelkkä pergamentti.
+ *
+ * PAPERI ON OSA VÄITETTÄ. Ilman sitä lehdettömästä lennosta tulisi
+ * paneelin tumma tausta, mikä olisi selvästi pahempi vika kuin se, joka
+ * korjattiin.
+ */
+vaadi('lennossa vanha lauta on piilossa mutta pergamentti jää',
+  kartta.atlasLuokka === true && kartta.staattinen === 'none'
+  && kartta.paperi !== 'none' && kartta.paperi !== 'ei ole',
+  `atlasLuokka ${kartta.atlasLuokka}, staattinen ${kartta.staattinen}, paperi ${kartta.paperi}`);
 /*
  * Yläraja puuttuu tarkoituksella: avauslennon alla piirtyy koko
  * maailmankartan lauta, ja kuormitettu pääsäie venyttää jokaista
