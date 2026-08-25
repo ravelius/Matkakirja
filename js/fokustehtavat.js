@@ -1,5 +1,5 @@
 /*
- * KEVYEN KULUN NIMETYT MINITEHTÄVÄT — kaupunkilehden sivut 2 ja 3.
+ * KEVYEN KULUN NIMETYT MINITEHTÄVÄT — kaupunkilehden kysymyssivut.
  *
  * Raamatun osio "Fokusmoodi", kohta KEVYT KULKU -KOKEILU (omistaja
  * 24.8.2026, ilta): *"Lehden sivuilla 2 ja 3 on KUMMALLAKIN YKSI
@@ -7,6 +7,34 @@
  * toinen JULISTE-tehtävä. Aarteen avaus -tehtävän suoritus sytyttää
  * kartalle PIENEN VIHREÄNÄ HEHKUVAN PISTEEN … juliste-tehtävästä saa
  * julisteen."*
+ *
+ * ── LEHDEN KYSYMYKSET YHTENÄISENÄ JÄRJESTELMÄNÄ ────────────────────
+ *
+ * Raamattu, sama osio (omistaja 25.8.2026): *"jokaisella lehden
+ * sivulla PAITSI etusivulla (herokuvat) on kysymys lopussa; jokaisesta
+ * saa rahaa; jos kysymyksellä ei ole julistepalkintoa, se AVAA
+ * AARTEEN (myös vanha kulttuurivisa muuntuu aarteen avaavaksi); kun
+ * aarre on jo auki, aarteen avaavista saa enää pelkkää rahaa."*
+ *
+ * Kaikki kolme sääntöä asuvat tässä tiedostossa, koska ne ovat yhden
+ * kysymyksen kolme puolta eivätkä kolme ominaisuutta:
+ *
+ *   RAHA. Jokainen kysymys maksaa oikeasta vastauksesta — nimetty
+ *   tehtävä FOKUS_TEHTAVA_PALKKION (game.actionMinitehtava),
+ *   kulttuurivisa oman palkkionsa (js/ui.js naytaKulttuuri,
+ *   game.actionKulttuuri). Kahta maksajaa ei ole eikä tarvita.
+ *
+ *   AARRE. Palkinto ratkaisee roolin: `palkinto: 'juliste'` antaa
+ *   julisteen, KAIKKI MUUT avaavat aarteen (avaaAarteen alempana).
+ *   Sääntö on kirjoitettu näin päin, jotta uusi kysymys avaa aarteen
+ *   ilman että datan tarvitsee sanoa siitä mitään — ja koska
+ *   kulttuurivisa, jonka dataa ei tässä omisteta, on juuri sellainen.
+ *
+ *   AARRE JO AUKI. Kun jälki on jo kartalla (tai aarre kokonaan
+ *   löydetty), aarteen avaavalla kysymyksellä ei ole enää mitään
+ *   avattavaa. Silloin otsake ja vihjerivi kertovat rehellisesti, mitä
+ *   luvassa on: "LEHDEN KYSYMYS" ja "oikeasta vastauksesta rahaa"
+ *   (aarreAuki, AARRE_AUKI_*). Lupausta ei anneta kahdesti.
  *
  * ── MIKÄ TÄMÄ ON JA MIKÄ EI ────────────────────────────────────────
  *
@@ -33,6 +61,11 @@
  *      lyhyesti, mitä juuri tapahtui ja mitä on vielä tekemättä —
  *      palkinto tapahtuu lehden ulkopuolella (kartta, matkalaukku),
  *      eikä pelaaja näe sitä sivulta (ks. kuittausTeksti).
+ *   5. KULTTUURIVISA SAMAAN JÄRJESTELMÄÄN. Lehden vanha visalaatikko
+ *      piirretään js/ui.js:ssä eikä täällä, joten se ei muutu nimetyksi
+ *      tehtäväksi — se PUKEUTUU sellaiseksi (fokusVisanKehys): otsake,
+ *      vihjerivi ja aarteen avaus tulevat tästä moduulista, kysymys ja
+ *      rahapalkkio jäävät sinne, missä ne jo ovat.
  *
  * ── LIPPU ──────────────────────────────────────────────────────────
  *
@@ -53,6 +86,9 @@ import { fokusmoodiPaalla, html, TOAST_MS } from './ui-apurit.js';
 import { kaupunginJuliste } from './packs/julisteet.js';
 import { fokusvirtaKaupungille } from './packs/fokusvirrat.js';
 import { natiiviVastaus } from './natiivi.js';
+// Kulttuurivisan kysymysdata: visa on lehden aarteen avaava kysymys,
+// mutta sen kysymys asuu yhä sisältötauluissa (ks. fokusVisanKehys).
+import { KULTTUURIT } from './sisaltotaulut.js';
 import { sfx } from './sound.js';
 
 /** Kevyen kulun lehtitehtävät päällä? Ks. LIPPU yllä. */
@@ -89,11 +125,37 @@ const TEHTAVA_ETULIITE = 'fokus';
  * Rivi EI OLE otsakkeen sisällä vaan sen sisarena: otsakkeen teksti on
  * nimilaatta ja vain se (savuke lukee sen sellaisenaan), ja vihje on
  * eri äänensävyä — pientä kursiivia, ei kapiteelia.
+ *
+ * Aarteen vihje on OLETUS eikä palkintokohtainen taulukko: jokainen
+ * kysymys, joka ei anna julistetta, avaa aarteen (ks. avaaAarteen).
  */
-const TEHTAVAN_VIHJE = {
-  piste: 'oikea vastaus paljastaa aarteen jäljen kartalle',
-  juliste: 'oikea vastaus tuo julisteen kokoelmaasi',
-};
+const AARTEEN_VIHJE = 'oikea vastaus paljastaa aarteen jäljen kartalle';
+const JULISTEEN_VIHJE = 'oikea vastaus tuo julisteen kokoelmaasi';
+
+/**
+ * OTSAKE JA VIHJE, KUN AARRE ON JO AUKI (omistaja 25.8.2026).
+ *
+ * Aarteen avaava kysymys on avannut aarteen vain kerran; sen jälkeen
+ * jäljellä on rahapalkkio. Nimilaatta palaa silloin lehden omaksi —
+ * "LEHDEN KYSYMYS" on sama sana, jonka kulttuurivisa on kantanut
+ * alusta asti (css/styles.css, #arrival-kulttuuri-visa::before) — ja
+ * vihjerivi lupaa vain sen, mitä on luvassa.
+ */
+const AARRE_AUKI_OTSAKE = 'LEHDEN KYSYMYS';
+const AARRE_AUKI_VIHJE = 'oikeasta vastauksesta rahaa';
+
+/**
+ * AVAAKO TÄMÄ KYSYMYS AARTEEN?
+ *
+ * Sääntö on kirjoitettu poissulkevasti (omistaja 25.8.2026: *"jos
+ * kysymyksellä EI ole julistepalkintoa, se AVAA AARTEEN"*): juliste on
+ * ainoa palkinto, joka vie kysymyksen pois aarteen tieltä. Näin uusi
+ * kysymys — myös sellainen, jonka dataa ei tässä omisteta, kuten
+ * kulttuurivisa — kuuluu järjestelmään ilman omaa lippukenttää.
+ */
+function avaaAarteen(tehtava) {
+  return tehtava?.palkinto !== 'juliste';
+}
 
 /** Fokusvirran tyylitiedosto sivulle, jos sitä ei vielä ole. */
 const TEHTAVA_TYYLIN_TUNNUS = 'fokusvirta-tyyli';
@@ -162,6 +224,65 @@ function kaupunginTehtavat(ui, city) {
 }
 
 /**
+ * KULTTUURIVISA AARTEEN AVAAJANA — pseudotehtävä, ei pack-dataa.
+ *
+ * Visan kysymys, vastauslipukkeet ja rahapalkkio asuvat js/ui.js:n
+ * naytaKulttuurissa, eikä niitä siirretä minnekään. Tämä olio on vain
+ * se osa, jota lehden kysymysjärjestelmä tarvitsee: kirjanpitoavaimen
+ * id, nimilaatan teksti ja palkintorooli. `sivu` on tyhjä, koska visan
+ * sivunumero vaihtelee kaupungeittain (js/lehti.js naytaTutkiSivu:
+ * lehtikaupungeissa sivu 1, muilla etusivu) — pöllön kuittaus osaa
+ * jättää sivusuunnan sanomatta, kun sitä ei ole.
+ */
+const VISA_TEHTAVA = {
+  id: 'kulttuurivisa', sivu: null, otsake: 'AARTEEN AVAUS', palkinto: 'aarre',
+};
+
+/**
+ * VOIKO TÄSSÄ KAUPUNGISSA AVATA AARTEEN LEHDEN KYSYMYKSELLÄ?
+ *
+ * Vihreä piste tarvitsee kaksi asiaa datassa: kohtaamisen ja sille
+ * paikan tällä laudalla (js/packs/fokusvirta-ateena.js kohtaamispiste;
+ * ehdot luetaan auki js/fokusvirta.js:n fokusvirtaKohtaaminenPisteessa
+ * -kommentissa). Ilman niitä aarteen avaus olisi tyhjä lupaus, ja
+ * kulttuurivisa on pelin JOKAISESSA pilottikaupungissa — se ei saa
+ * vaihtaa otsakettaan aarteen avaukseksi paikassa, jossa mikään ei
+ * syttyisi.
+ *
+ * Nimetyt lehtitehtävät kulkevat oman datansa mukana eivätkä kysy
+ * tätä: jos lauta antaa kaupungille AARTEEN AVAUS -tehtävän, se on
+ * laudan oma lupaus.
+ */
+function aarteenAvausMahdollista(ui, city) {
+  if (!FOKUS_LEHTITEHTAVAT || !city || !ui?.game || ui.game.player?.isBot) return false;
+  if (!fokusmoodiPaalla()) return false;
+  const data = fokusvirtaKaupungille(city.id);
+  if (!data?.kohtaaminen) return false;
+  const paikka = data.kohtaamispiste?.laudat?.[ui.game.pack?.id];
+  return Number.isFinite(paikka?.x) && Number.isFinite(paikka?.y);
+}
+
+/** Kaupungin kulttuurivisan kysymys, kun visa kuuluu järjestelmään. */
+function kaupunginVisa(ui, city) {
+  if (!aarteenAvausMahdollista(ui, city)) return null;
+  return (KULTTUURIT[ui.game.pack?.id] ?? {})[city.id]?.kysymys ?? null;
+}
+
+/**
+ * KAIKKI KAUPUNGIN AARTEEN AVAAVAT KYSYMYKSET.
+ *
+ * Lehden nimetyt tehtävät ilman julistepalkintoa JA kulttuurivisa —
+ * omistajan sääntö 25.8.2026 tekee niistä saman asian. Lista on uusi
+ * taulukko joka kutsulla (`filter`), joten visan lisääminen ei kirjoita
+ * pack-dataan.
+ */
+function aarteenAvaajat(ui, city) {
+  const lista = kaupunginTehtavat(ui, city).filter(avaaAarteen);
+  if (kaupunginVisa(ui, city)) lista.push(VISA_TEHTAVA);
+  return lista;
+}
+
+/**
  * ONKO AARTEEN AVAUS RATKAISTU OIKEIN?
  *
  * Vihreä piste ja pelinappulan paluu lehden päälle lukevat tämän
@@ -170,27 +291,51 @@ function kaupunginTehtavat(ui, city) {
  * väärä vastaus ei avaa tietä aarteelle, mutta se ei myöskään jätä
  * pelaajaa lukkoon — kysymykseen vastataan kerran, ja piste syttyy
  * silloin kun sivun tehtävä on oikeasti ratkaistu.
+ *
+ * MIKÄ TAHANSA AVAAJA RIITTÄÄ (omistaja 25.8.2026): aarre voi aueta
+ * yhtä hyvin kulttuurivisasta kuin sivun nimetystä tehtävästä. Yksi
+ * oikea vastaus riittää, eikä toisen kysymyksen väärä vastaus sammuta
+ * jo syttynyttä jälkeä.
  */
 export function fokusAarreAvattu(ui, city) {
-  const tehtava = kaupunginTehtavat(ui, city).find((t) => t.palkinto === 'piste');
-  if (!tehtava) return false;
-  return Boolean(ui.game.minitehtavatOikein?.has(tehtavanAvain(ui, city, tehtava)));
+  return aarteenAvaajat(ui, city)
+    .some((t) => ui.game.minitehtavatOikein?.has(tehtavanAvain(ui, city, t)));
 }
 
 /**
- * ONKO AARTEEN AVAUKSEEN JO VASTATTU — oikein tai väärin?
+ * ONKO AARTEEN AVAUS UMPIKUJASSA — jokaiseen avaajaan jo vastattu?
  *
- * Tätä tarvitaan umpikujan estoon: minitehtävään vastataan kerran
- * (game.actionMinitehtava), joten väärin vastannut ei voi enää sytyttää
- * pistettä. Silloin kohtaamisen on löydyttävä muualta, ja lehden oma
- * alanappi palaa (js/ui.js tehtavaNapinTila). Sama oppi kuin
- * fokusvirran täkyportilla: yksi väärä vastaus ei saa lukita pelaajaa
- * kaupunkiin.
+ * Tätä tarvitaan umpikujan estoon: kysymykseen vastataan kerran, joten
+ * väärin vastannut ei voi enää sytyttää pistettä. Silloin kohtaamisen
+ * on löydyttävä muualta, ja lehden oma alanappi palaa (js/ui.js
+ * tehtavaNapinTila). Sama oppi kuin fokusvirran täkyportilla: yksi
+ * väärä vastaus ei saa lukita pelaajaa kaupunkiin.
+ *
+ * KAIKKI, EI YKSI: kun aarteen avaajia on useampi, yksi väärä vastaus
+ * ei ole vielä umpikuja — jäljellä olevat kysymykset ovat yhä auki, ja
+ * lehden alanappi saa pysyä poissa niin kauan kuin niitä on.
  */
 export function fokusAarreVastattu(ui, city) {
-  const tehtava = kaupunginTehtavat(ui, city).find((t) => t.palkinto === 'piste');
-  if (!tehtava) return false;
-  return Boolean(ui.game.minitehtavatVastatut?.has(tehtavanAvain(ui, city, tehtava)));
+  const avaajat = aarteenAvaajat(ui, city);
+  if (!avaajat.length) return false;
+  return avaajat.every((t) => ui.game.minitehtavatVastatut?.has(tehtavanAvain(ui, city, t)));
+}
+
+/**
+ * ONKO AARRE JO AUKI — eikä avattavaa siis enää ole?
+ *
+ * Kaksi tapaa, sama lopputulos kysymyksen kannalta:
+ *   1. jälki on jo kartalla (jokin avaaja on ratkaistu oikein), tai
+ *   2. laatta on käännetty eli aarre on kokonaan löydetty — silloin
+ *      vihreä piste on jo sammunut (js/fokusvirta.js
+ *      fokusvirtaKohtaaminenPisteessa).
+ *
+ * Kummassakin tapauksessa aarteen avaavasta kysymyksestä saa enää
+ * rahaa, ja otsakkeen ja vihjerivin on kerrottava se.
+ */
+function aarreAuki(ui, city) {
+  if (fokusAarreAvattu(ui, city)) return true;
+  return !ui?.game?.tokens?.has(city.id);
 }
 
 /**
@@ -207,25 +352,39 @@ export function fokusAarreVastattu(ui, city) {
  * tehtävän kirjanpito: jos JULISTE on jo tehty (oikein tai väärin), sitä
  * ei enää tarjota, ja jos aarre on vielä avaamatta, pöllö vinkkaa
  * siihen. Pöllö puhuu nykypäivästä, ei 1873:sta.
+ *
+ * `auki` on tilanne ENNEN tätä vastausta: kun aarre oli jo auki, kupla
+ * ei saa kertoa jäljen syttyneen — se syttyi jo aiemmasta kysymyksestä,
+ * ja tästä tuli pelkkää rahaa (omistaja 25.8.2026).
  */
-function kuittausTeksti(ui, city, tehtava) {
-  const kaikki = kaupunginTehtavat(ui, city);
+function kuittausTeksti(ui, city, tehtava, auki) {
   const vastattu = (t) => Boolean(ui.game.minitehtavatVastatut?.has(tehtavanAvain(ui, city, t)));
-  if (tehtava.palkinto === 'piste') {
-    const juliste = kaikki.find((t) => t.palkinto === 'juliste' && !vastattu(t));
-    if (!juliste) return 'Aarteen jälki hehkuu nyt kartalla vihreänä.';
-    // Sivunumerot ovat datassa (js/packs/fokusvirta-ateena.js), joten
-    // suunta luetaan sieltä eikä oleteta julistetta aina jälkimmäiseksi.
-    const suunta = juliste.sivu > tehtava.sivu ? 'Seuraavan' : 'Edellisen';
-    return 'Aarteen jälki hehkuu nyt kartalla vihreänä. '
-      + `${suunta} sivun ${juliste.otsake}-tehtävästä saat vielä julisteen mukaasi.`;
+  if (avaaAarteen(tehtava)) {
+    const alku = auki
+      ? 'Oikein — puntia matkakassaan.'
+      : 'Aarteen jälki hehkuu nyt kartalla vihreänä.';
+    const juliste = kaupunginTehtavat(ui, city)
+      .find((t) => t.palkinto === 'juliste' && !vastattu(t));
+    if (!juliste) return alku;
+    return `${alku} ${sivunSuunta(tehtava, juliste)}${juliste.otsake}-tehtävästä `
+      + 'saat vielä julisteen mukaasi.';
   }
-  if (tehtava.palkinto === 'juliste') {
-    const aarre = kaikki.find((t) => t.palkinto === 'piste' && !vastattu(t));
-    if (!aarre) return 'Juliste on nyt kokoelmassasi.';
-    return `Juliste on nyt kokoelmassasi. Aarteen jäljen paljastaa ${aarre.otsake} -tehtävä.`;
-  }
-  return '';
+  const aarre = auki ? null : aarteenAvaajat(ui, city).find((t) => !vastattu(t));
+  if (!aarre) return 'Juliste on nyt kokoelmassasi.';
+  return `Juliste on nyt kokoelmassasi. Aarteen jäljen paljastaa ${aarre.otsake} -tehtävä.`;
+}
+
+/**
+ * "Seuraavan sivun " / "Edellisen sivun " — vai pelkkä "Lehden "?
+ *
+ * Sivunumerot ovat datassa (js/packs/fokusvirta-ateena.js), joten
+ * suunta luetaan sieltä eikä oleteta julistetta aina jälkimmäiseksi.
+ * Kulttuurivisalla numeroa ei ole (VISA_TEHTAVA), ja silloin pöllö
+ * jättää suunnan sanomatta — väärä suunta olisi pahempi kuin ei mitään.
+ */
+function sivunSuunta(tehtava, kohde) {
+  if (!Number.isFinite(tehtava?.sivu) || !Number.isFinite(kohde?.sivu)) return 'Lehden ';
+  return kohde.sivu > tehtava.sivu ? 'Seuraavan sivun ' : 'Edellisen sivun ';
 }
 
 /**
@@ -272,20 +431,30 @@ export function piirraSivunTehtava(ui, kohde, kategoria) {
  * css/styles.css): kokeilu ei tuo lehteen uutta grafiikkaa, vaan
  * vaihtaa laatikon otsakkeen ja palkinnon. Otsake on isolla kirjoitettu
  * nimi datasta — se on Raamatun vaatima "näkyvä nimilaatta" — ja sen
- * alla lukee yhdellä rivillä, mitä oikeasta vastauksesta seuraa
- * (TEHTAVAN_VIHJE). Vihjerivi näkyy vain vastaamattomassa laatikossa:
- * ratkaistussa se olisi vanha lupaus, ja palkinto on jo saatu.
+ * alla lukee yhdellä rivillä, mitä oikeasta vastauksesta seuraa.
+ * Vihjerivi näkyy vain vastaamattomassa laatikossa: ratkaistussa se
+ * olisi vanha lupaus, ja palkinto on jo saatu.
+ *
+ * AARRE JO AUKI → LAATIKKO PALAA LEHDEN KYSYMYKSEKSI (omistaja
+ * 25.8.2026). Sivu piirretään uudelleen joka käännöksellä (js/lehti.js
+ * naytaTutkiSivu → js/maalehti.js piirraKategoria), joten otsake ja
+ * vihje ehtivät muuttua heti, kun aarre aukeaa toisen sivun
+ * kysymyksestä.
  */
 function piirraNimettyTehtava(ui, kohde, city, tehtava) {
   const visa = tehtava.visa;
   if (!visa?.vaihtoehdot?.length) return;
   lataaTehtavaTyyli();
   const juliste = tehtava.palkinto === 'juliste' ? kaupunginJuliste(city.id) : null;
+  // Aarteen avaajan nimilaatta riippuu tilanteesta; juliste on aina
+  // juliste, koska sen palkinto ei kulu toisen kysymyksen mukana.
+  const rahaaVain = avaaAarteen(tehtava) && aarreAuki(ui, city);
+  const nimilaatta = rahaaVain ? AARRE_AUKI_OTSAKE : tehtava.otsake;
   const laatikko = html(
     'div',
     `minitehtava fokus-tehtava${juliste ? ' minitehtava-palkinnollinen' : ''}`,
   );
-  laatikko.appendChild(html('p', 'minitehtava-otsikko', tehtava.otsake));
+  laatikko.appendChild(html('p', 'minitehtava-otsikko', nimilaatta));
   const avain = tehtavanAvain(ui, city, tehtava);
 
   if (ui.game.minitehtavatVastatut?.has(avain)) {
@@ -309,7 +478,9 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
   }
 
   // Vihjerivi heti nimilaatan alle: se kertoo mitä palkinnosta seuraa.
-  const vihjeteksti = tehtava.vihje ?? TEHTAVAN_VIHJE[tehtava.palkinto];
+  // Datan oma vihje lupaa aarteen, joten se väistyy kun aarre on auki.
+  let vihjeteksti = tehtava.vihje ?? (avaaAarteen(tehtava) ? AARTEEN_VIHJE : JULISTEEN_VIHJE);
+  if (rahaaVain) vihjeteksti = AARRE_AUKI_VIHJE;
   const vihjerivi = vihjeteksti ? html('p', 'fokus-tehtava-vihje', vihjeteksti) : null;
   if (vihjerivi) laatikko.appendChild(vihjerivi);
   // Palkinto ensin, jotta teksti kiertää sen (float oikealle, css).
@@ -325,6 +496,9 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
     nappi.type = 'button';
     nappi.addEventListener('click', () => {
       const oikein = i === visa.oikea;
+      // Tilanne ENNEN vastausta: kuittaus ei saa kertoa jäljen
+      // syttyneen, jos se paloi kartalla jo tähän napautettaessa.
+      const oliAuki = aarreAuki(ui, city);
       const vastaus = ui.game.actionMinitehtava(
         city.id, tehtavanAihe(tehtava), oikein, FOKUS_TEHTAVA_PALKKIO,
       );
@@ -344,7 +518,7 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
           kind: 'stamp',
           icon: 'kukkaro',
           text: `+${FOKUS_TEHTAVA_PALKKIO} puntaa`,
-          sub: `${tehtava.otsake} ratkesi`,
+          sub: `${nimilaatta} ratkesi`,
         });
         if (box) setTimeout(() => ui.removeToast(box), TOAST_MS.default);
       }
@@ -369,7 +543,7 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
        * kutsua se odottaisi seuraavaa kartan päivitystä, ja pelaaja
        * voisi ehtiä katsoa karttaa sitä ennen.
        */
-      if (oikein && tehtava.palkinto === 'piste') ui.paivitaFokuspiste?.();
+      if (oikein && avaaAarteen(tehtava)) ui.paivitaFokuspiste?.();
       /*
        * PÖLLÖ KERTOO PALKINNOSTA VIIMEISENÄ. Kupla nousee pöllönapista
        * lehden päälle, ja se on tässä vasta kaiken muun jälkeen kahdesta
@@ -377,11 +551,126 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
        * kartalla ei ole), ja kirjanpito on jo tallessa — kuittausteksti
        * lukee siitä, kumpi tehtävä on vielä tekemättä.
        */
-      if (oikein) kuittausPinta?.(ui, kuittausTeksti(ui, city, tehtava));
+      if (oikein) kuittausPinta?.(ui, kuittausTeksti(ui, city, tehtava, oliAuki));
     });
     vaihtoehdot.appendChild(nappi);
   });
   laatikko.appendChild(vaihtoehdot);
   laatikko.appendChild(tulos);
   kohde.appendChild(laatikko);
+}
+
+/* ==================== KULTTUURIVISA AARTEEN AVAAJANA ================ */
+
+/**
+ * KYTKENTÄKOHTA js/lehti.js:n naytaTutkiSivussa.
+ *
+ * Omistajan tilaus 25.8.2026: *"myös vanha kulttuurivisa ('LEHDEN
+ * KYSYMYS' -laatikko) muuntuu aarteen avaavaksi."* Laatikko itse
+ * piirretään js/ui.js:n naytaKulttuurissa eikä täällä, joten sitä ei
+ * rakenneta uudelleen vaan PUETAAN: nimilaatta ::before-yliajolla
+ * (css/fokusvirta.css), vihjerivi ensimmäiseksi lapseksi ja kirjaus
+ * aarteen avaajien joukkoon.
+ *
+ * MIKSI NÄIN EIKÄ UUTENA LAATIKKONA. Visan kysymysdata, rahapalkkio ja
+ * oma kirjanpito (game.actionKulttuuri) ovat olleet paikallaan
+ * kauemmin kuin koko fokusmoodi, ja ne palvelevat myös kaikkia niitä
+ * kaupunkeja, joissa kevyttä kulkua ei ole. Yksi laatikko kahdella
+ * otsakkeella on pienempi muutos kuin kaksi laatikkoa samasta
+ * kysymyksestä — eikä pelaajan tarvitse oppia uutta pintaa.
+ *
+ * Kutsu tulee joka sivunäytöllä, myös silloin kun visa on piilossa:
+ * silloin funktio siivoaa jälkensä ja palaa. Näin edellisen kaupungin
+ * otsake ei jää roikkumaan seuraavan lehteen.
+ */
+export function fokusVisanKehys(ui) {
+  const laatikko = ui?.arrivalKulttuuriVisa;
+  if (!laatikko) return;
+  laatikko.classList.remove('fokus-visa', 'fokus-visa-aarre');
+  laatikko.querySelector('.fokus-tehtava-vihje')?.remove();
+  if (ui.lehtitila?.tutkiTila !== 'kaupunki') return;
+  const city = ui.game?.cityOf?.();
+  if (!city || ui.lehtitila.arrivalShownFor !== city.id) return;
+  if (!kaupunginVisa(ui, city)) return;
+  lataaTehtavaTyyli();
+  laatikko.classList.add('fokus-visa');
+  kytkeVisanNapit(ui, city);
+  // Vastattuun laatikkoon ei kuulu lupausta: sen otsake on lehden oma
+  // ja tilalla lukee jo js/ui.js:n kuittaus.
+  if (visaanVastattu(ui, city)) return;
+  const rahaaVain = aarreAuki(ui, city);
+  if (!rahaaVain) laatikko.classList.add('fokus-visa-aarre');
+  laatikko.insertBefore(
+    html('p', 'fokus-tehtava-vihje', rahaaVain ? AARRE_AUKI_VIHJE : AARTEEN_VIHJE),
+    laatikko.firstChild,
+  );
+}
+
+/**
+ * Onko visaan vastattu tässä kaupungissa?
+ *
+ * Kaksi kirjanpitoa, koska niillä on eri ikä: `kulttuuriVastatut` on
+ * visan oma ja tuntee myös ennen tätä ominaisuutta pelatut vastaukset,
+ * `minitehtavatVastatut` taas kevyen kulun peili (ks. visaanVastattiin).
+ */
+function visaanVastattu(ui, city) {
+  if (ui.game.minitehtavatVastatut?.has(tehtavanAvain(ui, city, VISA_TEHTAVA))) return true;
+  return Boolean(ui.game.kulttuuriVastatut?.has(`${ui.game.pack.id}:${city.id}`));
+}
+
+/**
+ * Oma kuuntelija visan vastauslipukkeisiin.
+ *
+ * Lipukkeet syntyvät js/ui.js:n naytaKulttuurissa omine
+ * kuuntelijoineen; tämä lisätään niiden PERÄÄN, joten se ajetaan vasta
+ * kun raha on maksettu ja visan oma kirjanpito on tallessa. Merkintä
+ * lipukkeessa (dataset) pitää huolen siitä, ettei sama nappi saa kahta
+ * kuuntelijaa, vaikka sivua selattaisiin edestakaisin.
+ *
+ * Oikea vaihtoehto luetaan samasta datasta kuin ui.js lukee sen
+ * (KULTTUURIT), koska napissa itsessään ei ole tietoa oikeellisuudesta
+ * — vain teksti.
+ */
+function kytkeVisanNapit(ui, city) {
+  const kysymys = kaupunginVisa(ui, city);
+  const kotelo = ui.arrivalKulttuuriVaihtoehdot;
+  if (!kysymys || !kotelo) return;
+  [...kotelo.children].forEach((nappi, i) => {
+    if (nappi.dataset.fokusVisa) return;
+    nappi.dataset.fokusVisa = '1';
+    nappi.addEventListener('click', () => visaanVastattiin(ui, city, i === kysymys.correct));
+  });
+}
+
+/**
+ * VISAN VASTAUS KEVYEN KULUN KIRJANPITOON.
+ *
+ * Visan oma kirjanpito (`game.kulttuuriVastatut`) muistaa VAIN sen,
+ * että kysymykseen on vastattu — ei sitä, meniköhän oikein. Aarteen
+ * jälki taas saa syttyä vain oikeasta vastauksesta ja sen on
+ * säilyttävä tallennuksen yli, joten vastaus peilataan samoihin
+ * joukkoihin, joissa lehden nimetyt tehtävät jo asuvat.
+ *
+ * MIKSI JOUKKOIHIN SUORAAN EIKÄ game.actionMinitehtavan kautta: tämä
+ * ei ole uusi pelisiirto vaan MERKINTÄ jo tehdystä siirrosta. Raha on
+ * maksettu (game.actionKulttuuri), vuoro kulunut ja tapahtuma kirjattu
+ * lokiin; actionMinitehtava kirjaisi saman vastauksen toistamiseen ja
+ * lisäisi lokiin rivin "+0 puntaa", jota pelaaja ei ansainnut.
+ */
+function visaanVastattiin(ui, city, oikein) {
+  const avain = tehtavanAvain(ui, city, VISA_TEHTAVA);
+  if (ui.game.minitehtavatVastatut?.has(avain)) return;
+  // Tilanne ENNEN kirjausta: kertooko pöllö jäljen syttyneen vai rahasta.
+  const oliAuki = aarreAuki(ui, city);
+  ui.game.minitehtavatVastatut?.add(avain);
+  if (oikein) ui.game.minitehtavatOikein?.add(avain);
+  ui.onChange?.(ui.game);
+  // Lupaus on lunastettu: nimilaatta palaa lehden omaksi ja vihje pois.
+  ui.arrivalKulttuuriVisa?.classList.remove('fokus-visa-aarre');
+  ui.arrivalKulttuuriVisa?.querySelector('.fokus-tehtava-vihje')?.remove();
+  if (!oikein) return;
+  // Sama järjestys kuin nimetyssä tehtävässä: piste ensin kartalle,
+  // vasta sitten pöllö — kupla ei saa luvata mitään, mitä siellä ei ole.
+  ui.paivitaFokuspiste?.();
+  kuittausPinta?.(ui, kuittausTeksti(ui, city, VISA_TEHTAVA, oliAuki));
 }

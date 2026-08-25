@@ -355,8 +355,10 @@ export function fokusvirtaLaattaNakyy(ui, city) {
    * KEVYT KULKU: aarrevaihe alkaa vihreästä pisteestä. Kortteja ei ole,
    * joten virran vaihe jää ikuisesti ensimmäiseen — ja ilman tätä
    * haaraa pelinappula ei palaisi lehden päälle koskaan. Piste syttyy
-   * lehden AARTEEN AVAUS -tehtävästä, ja juuri se on tämän kokeilun
-   * "aarrevaihe": paikallinen odottaa jo kartalla.
+   * lehden aarteen avaavasta kysymyksestä — nimetystä tehtävästä tai
+   * kulttuurivisasta, kumpi ensin (js/fokustehtavat.js fokusAarreAvattu)
+   * — ja juuri se on tämän kokeilun "aarrevaihe": paikallinen odottaa
+   * jo kartalla.
    */
   if (!FOKUSVIRTA_KORTIT) return fokusAarreAvattu(ui, city);
   const vaihe = fokusvirtaTila(ui.game, city, data).vaihe;
@@ -1435,7 +1437,8 @@ function piirraKohtaaminen(ui, city, data, kohde) {
  *   1. kevyt kulku päällä (raskaassa virrassa kohtaaminen on kortissa),
  *   2. kaupungilla on virtasisältö ja kohtaamispiste tälle laudalle,
  *   3. laatta on yhä kääntämättä (piste sammuu kun aarre on avattu),
- *   4. lehden AARTEEN AVAUS -tehtävä on ratkaistu oikein.
+ *   4. jokin lehden aarteen avaavista kysymyksistä on ratkaistu oikein
+ *      (nimetty tehtävä TAI kulttuurivisa — omistaja 25.8.2026).
  *
  * @returns {{x:number,y:number,nimi:string}|null}
  */
@@ -1456,12 +1459,14 @@ export function fokusvirtaKohtaamispiste(ui, city) {
  * koko kokeilun: AARTEEN AVAUS -tehtävää ei tarvitsisi tehdä lainkaan.
  * Lehden alanappi luetaan siksi tästä (js/ui.js tehtavaNapinTila).
  *
- * UMPIKUJAN ESTO. Minitehtävään vastataan kerran, joten VÄÄRIN
- * vastannut ei voi enää sytyttää pistettä. Silloin — ja vain silloin —
- * lehden alanappi palaa, jottei yksi väärä vastaus jättäisi aarretta
- * ikuisesti tavoittamattomiin. Sama oppi kuin raskaan virran
- * täkyportilla (ks. fokusvirtaSiirto, "MIKSI 'visa' MERKITSEE TÄYN
- * TEHDYKSI RIIPPUMATTA VASTAUKSESTA").
+ * UMPIKUJAN ESTO. Lehden kysymykseen vastataan kerran, joten VÄÄRIN
+ * vastannut ei voi enää sytyttää pistettä siitä kysymyksestä. Vasta kun
+ * KAIKKI kaupungin aarteen avaavat kysymykset on käytetty eikä yksikään
+ * osunut (js/fokustehtavat.js fokusAarreVastattu), lehden alanappi
+ * palaa — jottei yksi väärä vastaus jättäisi aarretta ikuisesti
+ * tavoittamattomiin. Sama oppi kuin raskaan virran täkyportilla (ks.
+ * fokusvirtaSiirto, "MIKSI 'visa' MERKITSEE TÄYN TEHDYKSI RIIPPUMATTA
+ * VASTAUKSESTA").
  */
 export function fokusvirtaKohtaaminenPisteessa(ui, city) {
   if (FOKUSVIRTA_KORTIT) return false;
@@ -1586,15 +1591,18 @@ export function fokusvirtaLehtivinkki(ui, city) {
 }
 
 /**
- * PÖLLÖN KUITTAUS LEHDEN NIMETYSTÄ TEHTÄVÄSTÄ (omistajan pelitesti
- * 25.8.2026): oikea vastaus palkitaan lehden ULKOPUOLELLA — aarteen
- * jälki syttyy kartalle ja juliste menee matkalaukkuun — joten pöllö
- * kertoo sen lyhyesti.
+ * PÖLLÖN KUITTAUS LEHDEN KYSYMYKSESTÄ (omistajan pelitesti 25.8.2026):
+ * oikea vastaus palkitaan lehden ULKOPUOLELLA — aarteen jälki syttyy
+ * kartalle ja juliste menee matkalaukkuun — joten pöllö kertoo sen
+ * lyhyesti.
  *
- * Sanat tulevat js/fokustehtavat.js:stä, joka tuntee kaupungin molemmat
- * tehtävät ja niiden kirjanpidon; tämä on vain pinta. Kytkentä on
- * takaisinkutsu (asetaTehtavakuittaus alempana) eikä import, koska
- * niputusjärjestys kulkee fokustehtävistä tänne päin.
+ * SAMA KUPLA KAIKISTA LEHDEN KYSYMYKSISTÄ (omistaja 25.8.2026): sivujen
+ * nimetyistä tehtävistä ja kulttuurivisasta, ja riippumatta siitä
+ * avasiko vastaus aarteen vai toiko se pelkkää rahaa. Sanat tulevat
+ * js/fokustehtavat.js:stä, joka tuntee kaupungin kaikki kysymykset ja
+ * niiden kirjanpidon; tämä on vain pinta. Kytkentä on takaisinkutsu
+ * (asetaTehtavakuittaus alempana) eikä import, koska niputusjärjestys
+ * kulkee fokustehtävistä tänne päin.
  */
 export function fokusvirtaKuittaus(ui, teksti) {
   if (FOKUSVIRTA_KORTIT || typeof document === 'undefined') return false;

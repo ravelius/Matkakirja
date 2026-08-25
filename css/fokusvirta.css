@@ -752,7 +752,8 @@ body.fokuszoom-paalla .fokusvirta-kortti {
  * otsakkeessa 0.78): vihje ei saa kilpailla kysymyksen kanssa, joka on
  * laatikon varsinainen otsikko.
  */
-.minitehtava.fokus-tehtava .fokus-tehtava-vihje {
+.minitehtava.fokus-tehtava .fokus-tehtava-vihje,
+.dialog.lehti .arrival-kulttuuri #arrival-kulttuuri-visa.fokus-visa .fokus-tehtava-vihje {
   margin: -0.2rem 0 0.55rem;
   font-family: var(--font-luku);
   font-size: 0.82rem;
@@ -761,6 +762,29 @@ body.fokuszoom-paalla .fokusvirta-kortti {
   line-height: 1.35;
   text-align: center;
   color: rgba(60, 44, 26, 0.72);
+}
+
+/* ---------- kulttuurivisa aarteen avaajana ---------- */
+
+/*
+ * NIMILAATTA VAIHTUU, LAATIKKO EI (omistajan tilaus 25.8.2026: *"myös
+ * vanha kulttuurivisa muuntuu aarteen avaavaksi"*).
+ *
+ * Visan otsake on ladottu laatikon ::before-pseudoelementtiin
+ * (css/styles.css, "Kapiteeliotsake"), koska laatikon ainoa oma teksti
+ * tulee JS:stä kysymyksenä. Sama tapa jatkuu tässä: kun aarre on vielä
+ * avaamatta, otsake on AARTEEN AVAUS — täsmälleen sama nimilaatta kuin
+ * lehden sivujen nimetyillä tehtävillä, jotta pelaaja tunnistaa kaksi
+ * kysymystä saman järjestelmän jäseniksi.
+ *
+ * Luokan asettaa js/fokustehtavat.js (fokusVisanKehys) ja se poistuu
+ * heti vastattaessa: aarre on silloin joko auennut tai kulunut, ja
+ * kummassakin tapauksessa laatikko on taas lehden oma kysymys.
+ * Valitsin on tunniste + luokka, joten se voittaa styles.css:n
+ * tunnistevalitsimen koskematta siihen.
+ */
+.dialog.lehti .arrival-kulttuuri #arrival-kulttuuri-visa.fokus-visa-aarre::before {
+  content: 'Aarteen avaus';
 }
 
 /*

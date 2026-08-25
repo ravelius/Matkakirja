@@ -398,6 +398,16 @@ export const FOKUSVIRTA_ATEENA = {
    * (js/fokuspiste.js), 'juliste' myöntää kaupungin aikakausjulisteen
    * kuten lehden tavallinen minitehtävä. Kumpikin maksaa lisäksi saman
    * pienen rahapalkkion (js/fokustehtavat.js).
+   *
+   * KOLMAS KYSYMYS EI OLE TÄSSÄ LISTASSA (omistaja 25.8.2026: *"jos
+   * kysymyksellä EI ole julistepalkintoa, se AVAA AARTEEN — myös vanha
+   * kulttuurivisa"*). Sivun 1 kysymys on Ateenan kulttuurivisa
+   * (js/packs/europe-kulttuuri.js), joka kuuluu järjestelmään ilman
+   * omaa riviään täällä — js/fokustehtavat.js pukee sen samaksi
+   * AARTEEN AVAUS -laatikoksi. Ateenan lehden neljä sivua ovat siis
+   * etusivu ilman kysymystä ja kolme kysymyssivua: visa, tämä
+   * 'aarre' ja 'juliste'. KUMPI TAHANSA aarteen avaajista sytyttää
+   * pisteen, ja jälkimmäisestä saa enää rahaa.
    */
   lehtitehtavat: [
     { id: 'aarre', sivu: 2, otsake: 'AARTEEN AVAUS', palkinto: 'piste', visa: PNYX_VISA },

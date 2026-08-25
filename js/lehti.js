@@ -17,6 +17,7 @@ import {
   ehdotusKuvaOsoite, haeEhdotukset, haeProTuottajat, lisaaProTuottaja,
   paataProProfiili, proKuvaOsoite,
 } from './ehdotukset.js';
+import { fokusVisanKehys } from './fokustehtavat.js';
 import {
   kaynnistaLukija, kokoaLuettavaTeksti, liitaLukija, paivitaLukija,
   pysaytaLukija, vieritaPehmeasti,
@@ -435,6 +436,17 @@ export function naytaTutkiSivu(ui, indeksi, { heti = false, suunta = 0 } = {}) {
   const visasivu = ui.lehtitila.tutkiTila !== 'maa' && ui.lehtitila.tutkiTila !== 'kehittaja'
     && (ui.lehtitila.tutkiLehti && sivuja > 1 ? i === 1 : etusivu);
   ui.arrivalKulttuuri.hidden = !visasivu || !ui.lehtitila.kulttuuriSaatavilla;
+  /*
+   * KEVYT KULKU: visa on lehden kysymysjärjestelmän jäsen (omistaja
+   * 25.8.2026). Nimilaatta, vihjerivi ja aarteen avaus tulevat
+   * js/fokustehtavat.js:stä; kysymys ja rahapalkkio jäävät js/ui.js:n
+   * naytaKulttuuriin. Kutsu on tässä eikä naytaKulttuurissa, koska
+   * lupaus riippuu SIVUSTA JA HETKESTÄ — aarre voi aueta toisen sivun
+   * kysymyksestä kesken lehden selailun, ja tämä on ainoa kohta, joka
+   * ajetaan joka sivunkäännöksellä. Fokusmoodin ulkopuolella funktio
+   * palaa heti eikä laatikko muutu miksikään.
+   */
+  fokusVisanKehys(ui);
 
   // Kaupungin kohdekartta lehden etusivun loppuun (omistajan
   // tarkennus 7.8.2026: "kartta pitäisi olla jo ihan ensimmäisellä
