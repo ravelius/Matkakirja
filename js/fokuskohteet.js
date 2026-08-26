@@ -101,6 +101,7 @@ import { FOKUSKOHTEET_ITA } from './packs/fokuskohteet-ita.js';
 import { FOKUSKOHTEET_ROU } from './packs/fokuskohteet-rou.js';
 import { FOKUSKOHTEET_TUR } from './packs/fokuskohteet-tur.js';
 import { FOKUSKOHTEET_GRC } from './packs/fokuskohteet-grc.js';
+import { niputaFokusmerkit } from './fokusniput.js';
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
 
@@ -503,16 +504,20 @@ function eritteleKohdeRyhmat(ui, s) {
  * mikä on juuri se mitä omistaja pyysi. Vain lehdetön varapolku
  * (ui.fokusMerkkiSkaala) tarvitsee eleen vastaskaalan yhä.
  *
- * PAIKKA ON DATAN PAIKKA PLUS EROTTELUSIIRTO (eritteleKohdeRyhmat).
+ * PAIKKA ON DATAN PAIKKA PLUS EROTTELUSIIRTO (eritteleKohdeRyhmat) —
+ * paitsi kaupungin päälle osuneilla merkeillä, jotka yhteinen
+ * kasauspassi (js/fokusniput.js) siirtää nippuun kaupungin oikealle
+ * puolelle; nipun paikka korvaa sekä datan paikan että erottelusiirron.
  */
 function asetaKohdeMittakaava(ui, suhde) {
   const s = ui.fokusMerkkiSkaala?.(suhde);
   if (!(s > 0)) return;
   eritteleKohdeRyhmat(ui, s);
+  niputaFokusmerkit(ui, s);
   const zoom = s.toFixed(4);
   for (const ryhma of ui.fokuskohdeRyhmat ?? []) {
-    const x = (ryhma.x + (ryhma.sx ?? 0)).toFixed(2);
-    const y = (ryhma.y + (ryhma.sy ?? 0)).toFixed(2);
+    const x = (ryhma.nippu?.x ?? ryhma.x + (ryhma.sx ?? 0)).toFixed(2);
+    const y = (ryhma.nippu?.y ?? ryhma.y + (ryhma.sy ?? 0)).toFixed(2);
     ryhma.g.setAttribute('transform', `translate(${x} ${y}) scale(${zoom})`);
   }
 }

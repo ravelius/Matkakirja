@@ -68,6 +68,7 @@
  * NOSTOSYM_/nostosym-etuliitteellä.
  */
 import { el } from './mapart.js';
+import { niputaFokusmerkit } from './fokusniput.js';
 import { sfx } from './sound.js';
 
 /** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta). */
@@ -544,9 +545,18 @@ export function asemoiNostosymbolit(ui, suhde = 1) {
   // Ilman mitattavaa näkymää muunnos jätetään entiselleen: väärä
   // mittakaava olisi pahempi kuin yhden kehyksen viive.
   if (!(s > 0)) return;
+  /*
+   * Kaupungin päälle osuvat symbolit siirtyvät yhteiseen nippuun
+   * kaupungin oikealle puolelle (js/fokusniput.js — sama passi kuin
+   * kohdemerkeillä, jotta sarake on yksi). Passi kirjoittaa ryhmiin
+   * `nippu`-kentän; muut merkit pysyvät omilla paikoillaan.
+   */
+  niputaFokusmerkit(ui, s);
   const zoom = s.toFixed(4);
   for (const ryhma of ui.nostosymRyhmat ?? []) {
-    ryhma.g.setAttribute('transform', `translate(${ryhma.x} ${ryhma.y}) scale(${zoom})`);
+    const x = ryhma.nippu?.x.toFixed(2) ?? ryhma.x;
+    const y = ryhma.nippu?.y.toFixed(2) ?? ryhma.y;
+    ryhma.g.setAttribute('transform', `translate(${x} ${y}) scale(${zoom})`);
   }
   // Rekisteröinti nipistykseen jää (js/kartta.js vastaskaalaaMerkit):
   // varapolku on yhä ruutumitassa ja tarvitsee vastaskaalan.
