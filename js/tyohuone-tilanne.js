@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1143 — kartan kohdemerkit ~12 % pienemmiksi (symbolilaatta 16 -> 14 px, pistemerkkien osat samassa suhteessa); osuma-alue yha 44 px',
   'v1142 — matkustusnakyman askelympyrat piirtyvat nyt oikeisiin noppa-askeliin (ennen murtoviivan jokaiseen piirtopisteeseen: 166 ympyraa, kiehkura Attikan edustalla, Kreeta ilman pisteita — nyt 7 askelta tasavalein); askelympyra hieman isompi',
   'v1141 — kartan raahaus siirtyi svg-juuresta div-kuoreen: asettelulaskenta putosi 1,05:sta 0,35:een per kehys (savuke-panorointi 7/7, vartijaraja kiristetty 0,7:aan) — TESTAA vieritys iPadilla, myos nipistys ja fokusviivainten seuranta',
   'v1140 — kohdekortin ylarivin luokkanimet nominatiiviin: RUOKA JA JUOMA, HISTORIA, LUONTO jne. (ennen partitiivissa)',

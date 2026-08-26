@@ -131,19 +131,21 @@ const KOHDE_OSUMA_R = 22;
 /*
  * MERKIN OSAT RUUDUN PIKSELEINÄ LEHDEN PERUSTASOLLA (ks. sääntö 3
  * tiedoston alussa). Omistajan pelitestitilaus 26.8.2026 (iPhone,
- * Kreikka): *"Kaikkia pisteitä voisi hieman pienentää."* Mitat ovat
- * 15 % pienemmät kuin ennen (9,5 / 6,6 / 4,6 / 1,5) — merkki on
- * lehden painojäljen päällä merkintä eikä nappi, ja sen löytämisen
- * hoitaa muoto eikä koko.
+ * Kreikka): *"Kaikkia pisteitä voisi hieman pienentää"* — ja saman
+ * illan jatko: *"Kartan kohdenapit saisi olla hieman pienempiä"*.
+ * Mitat ovat nyt kahden pienennyksen jäljiltä ~25 % alle
+ * alkuperäisen (9,5 / 6,6 / 4,6 / 1,5 → 8,1-sarja → tämä) — merkki
+ * on lehden painojäljen päällä merkintä eikä nappi, ja sen
+ * löytämisen hoitaa muoto eikä koko.
  *
  * OSUMA-ALUE EI PIENENTYNYT. KOHDE_OSUMA_R on yhä 22 eli 44 px:n
  * sormisääntö perustasolla, joten napautus osuu täsmälleen yhtä
  * hyvin kuin ennen.
  */
-const KOHDE_KOROSTUS_R = 8.1;
-const KOHDE_HALO_R = 5.6;
-const KOHDE_RENGAS_R = 3.9;
-const KOHDE_PISTE_R = 1.3;
+const KOHDE_KOROSTUS_R = 7.1;
+const KOHDE_HALO_R = 4.9;
+const KOHDE_RENGAS_R = 3.4;
+const KOHDE_PISTE_R = 1.15;
 
 /** Pop-upin reunavara ja merkin ja kortin väliin jäävä rako. */
 const KOHDE_MARGINAALI = 8;
@@ -339,11 +341,12 @@ function kohteenSymboli(kohde) {
 
 /*
  * Symbolin mittakaava kohdemerkissä: kirjasto piirtää ~21 px merkin
- * (täkysymbolin koko), kohdemerkki on halkaisijaltaan noin 16 px —
+ * (täkysymbolin koko), kohdemerkki on halkaisijaltaan noin 14 px —
  * pienempi, koska kohteita on lehdellä toistakymmentä ja täky on
- * kartalla aina harvinaisempi kutsu.
+ * kartalla aina harvinaisempi kutsu. 16 → 14 (omistaja 26.8.2026
+ * ilta: "Kartan kohdenapit saisi olla hieman pienempiä").
  */
-const KOHDE_SYMBOLI_SKAALA = 16 / 21;
+const KOHDE_SYMBOLI_SKAALA = 14 / 21;
 
 /** Symbolilaatan säde kohdemerkin mitassa (kirjaston laatta r = 10.4). */
 const KOHDE_SYMBOLI_R = 10.4 * KOHDE_SYMBOLI_SKAALA;
