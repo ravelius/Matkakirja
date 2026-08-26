@@ -441,8 +441,41 @@ export const NOSTOSYM_LUOKAT = {
  * tällä — kutsuja hoitaa paikan ja mittakaavan ankkuriryhmällään.
  */
 export function piirraNostosymboli(g, symboli) {
-  (NOSTOSYM_PIIRTAJAT[symboli] ?? piirraNostosymHuuto)(g);
+  const tunnus = NOSTOSYM_PIIRTAJAT[symboli] ? symboli : 'huuto';
+  /*
+   * GENEROITU KAIVERRUSKUVA LAATALLA (omistajan tilaus 26.8.2026 ilta:
+   * "Symboleista voisi tehdä generoimalla paremmat" + "Lisää peliin
+   * niin katson"). Pergamenttilaatan ja mustereunan piirtää edelleen
+   * koodi, jotta väri- ja kokokieli pysyy yhdessä paikassa
+   * (.github/workflows/generoi-symbolit.yml); vain glyyfi tulee
+   * kuvana. Jos kuva ei lataudu (offline ennen esilatausta, rikkoutunut
+   * tiedosto), ryhmä tyhjennetään ja sama merkki piirretään koodilla —
+   * vanhat piirtäjät ovat siis VARAPOLKU, eivät kuollutta koodia.
+   */
+  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
+  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
+  const kuva = el('image', {
+    href: NOSTOSYM_KUVAT[tunnus],
+    x: -7.5, y: -7.5, width: 15, height: 15,
+    preserveAspectRatio: 'xMidYMid meet',
+  }, g);
+  // Vanha WebKit lukee vain xlink-nimiavaruuden osoitteen.
+  kuva.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', NOSTOSYM_KUVAT[tunnus]);
+  kuva.addEventListener('error', () => {
+    g.replaceChildren();
+    NOSTOSYM_PIIRTAJAT[tunnus](g);
+  });
 }
+
+/*
+ * Generoidut symbolikuvat (gpt-image-1, 19th-century copperplate
+ * engraving, läpinäkyvä pohja; erä 26.8.2026, katsottu silmin).
+ * Leikattu sisältöön ja pienennetty 96 px:iin — merkki näkyy ~21 px
+ * kokoisena, joten 96 riittää retinallakin. Avaimet = piirtäjätaulu.
+ */
+const NOSTOSYM_KUVAT = Object.fromEntries(
+  Object.keys(NOSTOSYM_PIIRTAJAT).map((t) => [t, `assets/kartat/symbolit/sym-${t}.webp`]),
+);
 
 /**
  * AKTIIVISEN TÄYN ANKKURI — täyn OMA SYMBOLI, jonka päälle kupla
