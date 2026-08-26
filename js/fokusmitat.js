@@ -436,9 +436,14 @@ function rakennaMaataulu(ui) {
    * nimi 1873-atlaksen asussa (ΕΛΛΑΣ) ja pieni valtiomuotolisä
    * kartuutsissa.
    */
-  // Sama lähdemaininta kuin maalehdessä: luvut ovat MAATIEDOT-taulusta.
+  /*
+   * Vain lähteet — "Samat luvut kuin maan lehdessä" -alku poistui
+   * (omistaja 26.8.2026 ilta: "Samat luvut selite on turha, ota
+   * pois"). Lukija ei vertaile pintoja keskenään; lähdemaininta
+   * riittää.
+   */
   taulu.appendChild(luo('p', 'fokus-maataulu-lahde',
-    'Samat luvut kuin maan lehdessä · Maailmanpankki ja V-Dem'));
+    'Maailmanpankki ja V-Dem'));
 
   // Ele jää tauluun eikä valu kartalle (ks. sääntö 2 yllä).
   for (const tapahtuma of ['pointerdown', 'touchstart', 'wheel']) {
