@@ -569,8 +569,22 @@ export const FOKUSVIRTA_BUKAREST = {
    * MIKÄÄN NOSTO EI TOISTA TÄKYÄ. Kaanon valitsi poolin nimenomaan
    * täkyjen ulkopuolelta: Stoker, Comăneci ja Letean hevoset ovat kaikki
    * eri aiheita kuin Colțean torni, Szathmari ja Libearty-sanktuaari.
-   * Yksi niistä on eläinaiheinen (takynostot-romania.md, omistajan
-   * täydennys: *"vähintään yhden nostoista on oltava eläinaiheinen"*).
+   *
+   * VAIN YKSI NOSTO PER MAA (omistaja 26.8.2026 ilta: *"Täkyjä josta
+   * tulee puhekupla pitää olla vain yksi per maa. Kaikki muut
+   * normaaleita."*). Poolissa oli kolme nostoa; jäljellä on kaanonin
+   * ensimmäinen. Kahdesta muusta:
+   *   - "comaneci" on siirretty kartan tavalliseksi kohteeksi
+   *     (js/packs/fokuskohteet-rou.js, tunnus `comaneci`) teksteineen,
+   *     kuvineen ja lähteineen sellaisenaan;
+   *   - eläinnosto "hevoset" jäi kokonaan pois, koska työaineisto sitoo
+   *     sen suoraan olemassa olevaan kohteeseen `tonavan-suisto`
+   *     (takynostot-romania.md, ehdokas 9: *"Kohde: Tonavan suisto
+   *     (fokuskohde 5)"*) — kahta merkkiä samaan paikkaan ei tehdä.
+   * Maan eläinaihe (takynostot-romania.md, omistajan täydennys:
+   * *"vähintään yhden nostoista on oltava eläinaiheinen"*) on siis nyt
+   * kartan kohteessa eikä täkypoolissa; jos omistaja haluaa eläimen
+   * takaisin kuplaan, vaihto on yhden rivin päätös tässä listassa.
    */
   takynostot: [
     {
@@ -595,61 +609,6 @@ export const FOKUSVIRTA_BUKAREST = {
         tiedosto: 'Stoker Dracula Notes Personal.jpg',
         selite: 'Bram Stokerin omat muistiinpanot romaaninsa henkilöistä.',
         lahde: 'Bram Stoker ennen 1897, Wikimedia Commons (public domain)',
-      },
-    },
-    {
-      id: 'comaneci',
-      otsikko: 'Tulostaulu ei osannut näyttää täyttä kymppiä — se näytti '
-        + '1.00',
-      /* Faktat: takynostot-romania.md, ehdokas 3 (VARMA). */
-      lunastus: '18. heinäkuuta 1976 Montrealin olympialaisissa 14-vuotias '
-        + 'Nadia Comăneci sai ensimmäisenä voimistelijana '
-        + 'olympiahistoriassa täydet kymmenen pistettä eritasonojapuilta. '
-        + 'Tulostaulut toimittanut Omega oli saanut ymmärtää, ettei täyttä '
-        + 'kymppiä voi saada, eikä ollut ohjelmoinut taulua näyttämään '
-        + 'sitä — niinpä tuomarit saivat sen näkyviin ainoalla jäljellä '
-        + 'olleella tavalla, muodossa 1.00. Samoissa kisoissa hän sai vielä '
-        + 'kuusi kymppiä lisää ja voitti kolme kultaa.',
-      /*
-       * Commons 25.8.2026: 480×722, public domain, tekijä tuntematon
-       * (agerpres-arkisto), kuvattu 3.8.1976, kuvaus "Nadia Comăneci at
-       * the 1976 Olympics".
-       */
-      kuva: {
-        tiedosto: 'Nadia Comăneci 1976.jpg',
-        selite: 'Nadia Comăneci Montrealin olympialaisissa 1976.',
-        lahde: 'Tuntematon kuvaaja (Agerpres-arkisto) 1976, Wikimedia '
-          + 'Commons (public domain)',
-      },
-    },
-    {
-      id: 'hevoset',
-      otsikko: 'Neljätuhatta villihevosta tuomittiin — mediakohu pelasti ne',
-      /*
-       * ELÄINNOSTO. Faktat: takynostot-romania.md, ehdokas 9 ja
-       * takyt-bukarest.md, eläintäky E3 (molemmat VARMOJA). Raportin
-       * varaus on noudatettu: "mahdollisesti Euroopan viimeinen"
-       * ("possibly"), ei "Euroopan viimeinen".
-       */
-      lunastus: 'Letean metsässä Tonavan suistossa on elänyt satojen vuosien '
-        + 'ajan hevoslauma, mahdollisesti Euroopan viimeinen merkittävän '
-        + 'kokoinen villihevoskanta. Kun kolhoosit lakkautettiin '
-        + '1990-luvulla, vapautetut hevoset liittyivät laumaan, ja '
-        + '2000-luvun alkuun mennessä niitä oli noin 4 000 — niin paljon, '
-        + 'että ne uhkasivat alueen suojeltua kasvillisuutta. Viranomaisten '
-        + 'alkuperäinen suunnitelma oli tappaa hevoset; vuoden 2011 '
-        + 'mediakohu sai heidät perääntymään, ja kantaa säädellään nyt '
-        + 'ehkäisyrokotteilla.',
-      /*
-       * Commons 25.8.2026: 5908×3833, CC BY-SA 4.0, Joe Mabel, kuvattu
-       * 26.9.2024, kuvaus "Wild/feral horses grazing in the Pădurea Letea
-       * Nature Reserve, Tulcea County, Romania. Four horses running."
-       */
-      kuva: {
-        tiedosto: 'Pădurea Letea Nature Reserve 021.jpg',
-        selite: 'Villihevosia Letean luonnonsuojelualueella Tonavan '
-          + 'suistossa.',
-        lahde: 'Joe Mabel, Wikimedia Commons (CC BY-SA 4.0)',
       },
     },
   ],

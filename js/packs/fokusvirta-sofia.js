@@ -561,15 +561,16 @@ export const FOKUSVIRTA_SOFIA = {
    * sääntö 1: otsikon lupaus lunastetaan tai se on klikkihuijaus).
    * `avaa` osoittaa tämän tiedoston täkyyn, jos sellainen on.
    *
-   * KOLMAS NOSTO TARKISTETTIIN. Kaanon jätti täyn 13 varauksella:
-   * *"rakentaja tarkistaa lunastuksen täkyraportista; jos täky 13 ei
-   * kestä lähdetarkistusta, tilalle täky 2:n salaiset tunnelit."*
-   * Takyt-sofia.md merkitsee täyn 13 VARMAKSI ja lainaa en-Wikipedian
-   * Sofia-artikkelia sanatarkasti (seitsemän moskeijaa yhtenä yönä
-   * joulukuussa 1878, ukkosmyrsky peitti räjähdysten äänen) — lunastus
-   * siis kestää, ja kolmas nosto jää kaanonin ensisijaiseen muotoonsa.
-   * Raportin oma sävyvaroitus on noudatettu: lunastus kertoo sotatoimen
-   * faktana eikä voittajajuhlana, ja mainitsee myös väestön lähdön.
+   * VAIN YKSI NOSTO PER MAA (omistaja 26.8.2026 ilta: *"Täkyjä josta
+   * tulee puhekupla pitää olla vain yksi per maa. Kaikki muut
+   * normaaleita."*). Poolissa oli kolme nostoa; jäljellä on kaanonin
+   * ensimmäinen. Kahdesta muusta:
+   *   - "pollopatsas" jäi kokonaan pois, koska sama patsas on jo tämän
+   *     tiedoston omana täkynä (`avaa: 'pollopatsas'` osoitti siihen) —
+   *     kahta kertomusta samasta aiheesta ei tehdä;
+   *   - "moskeijat" on siirretty kartan tavalliseksi kohteeksi
+   *     (js/packs/fokuskohteet-bgr.js, tunnus `moskeijat`) teksteineen,
+   *     kuvineen ja lähteineen sellaisenaan.
    */
   takynostot: [
     {
@@ -586,47 +587,6 @@ export const FOKUSVIRTA_SOFIA = {
         tiedosto: 'Amphitheatre of Serdica - General view.jpg',
         selite: 'Serdican amfiteatteri hotellin pohjakerroksessa.',
         lahde: 'Epaunov72, Wikimedia Commons (CC BY-SA 4.0)',
-      },
-    },
-    {
-      id: 'pollopatsas',
-      otsikko: 'Kaupungin patsas vaihtoi Leninin tilalle naisen — jonka '
-        + 'kruunussa istuu pöllö',
-      lunastus: 'Nezavisimost-aukion jalustalla seisoi ennen Lenin. Vuoden '
-        + '2000 lopulla sille nostettiin kahdeksanmetrinen Sofia, jolle '
-        + 'kuvanveistäjä antoi kruunun vallan, seppeleen maineen ja pöllön '
-        + 'viisauden merkiksi.',
-      avaa: 'pollopatsas',
-      // Sama tarkistettu tiedosto kuin täyllä 'pollopatsas'.
-      kuva: {
-        tiedosto: 'Sofia statue, Sofia (P1070773).jpg',
-        selite: 'Sofia-patsas Nezavisimost-aukiolla.',
-        lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
-      },
-    },
-    {
-      id: 'moskeijat',
-      otsikko: 'Ukkosmyrsky peitti yön, jona seitsemän moskeijaa räjähti',
-      /* Faktat: takyt-sofia.md, täky 13 (VARMA, suora lainaus lähteestä). */
-      lunastus: 'Joulukuussa 1878, viisi vuotta isoisän käynnin jälkeen, '
-        + 'venäläiset sotilasinsinöörit räjäyttivät seitsemän Sofian '
-        + 'moskeijaa samana yönä; ukkosmyrsky peitti räjähdysten äänen. '
-        + 'Suurin osa kaupungin moskeijoista tuhoutui sodassa, ja suurin '
-        + 'osa muslimiväestöstä lähti kaupungista sen jälkeen.',
-      /*
-       * Tälle nostolle ei ole omaa täkyä tässä tiedostossa, joten
-       * `avaa` puuttuu tarkoituksella — lunastus kannattelee noston
-       * yksinään.
-       *
-       * Commons 25.8.2026: 700×485, public domain, tekijä tuntematon,
-       * kuvaus "Баня баши джамия от края на 19 век", Category:Sofia in
-       * the 19th century. Kuva näyttää sen moskeijan, joka jäi jäljelle.
-       */
-      kuva: {
-        tiedosto: 'Banya bashi dhzamiya 19 vek.jpg',
-        selite: 'Banja Bashin moskeija 1800-luvun lopun valokuvassa. Se on '
-          + 'Sofian ainoa yhä toimiva moskeija.',
-        lahde: 'Tuntematon kuvaaja, Wikimedia Commons (public domain)',
       },
     },
   ],

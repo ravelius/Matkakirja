@@ -121,9 +121,10 @@
 /**
  * Kreikan fokuskohteet: aineiston kaikki 14 kohdetta samassa
  * järjestyksessä kuin docs/mantereet-tyoaineisto/fokuskohteet-kreikka.md,
- * niiden perässä Akropolis ja Akropolis-museo (v1119–v1121) sekä
- * symbolitaksonomian ensimmäinen sisältöerä (kuusi kohdetta, ks.
- * erän oma kommentti listan sisällä).
+ * niiden perässä Akropolis ja Akropolis-museo (v1119–v1121),
+ * symbolitaksonomian ensimmäinen sisältöerä (kuusi kohdetta) ja
+ * täkypoolista siirretyt kaksi eläinkohdetta — kummallakin erällä on
+ * oma kommenttinsa listan sisällä.
  */
 export const FOKUSKOHTEET_GRC = [
   {
@@ -1049,6 +1050,166 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Antikytheran mekanismin kappaleita Ateenan kansallisessa '
         + 'arkeologisessa museossa.',
       lahde: 'Zde, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  },
+  /*
+   * ── ENTISET TÄKYNOSTOT NORMAALEINA KOHTEINA (omistaja 26.8.2026
+   *    ilta: *"Täkyjä josta tulee puhekupla pitää olla vain yksi per
+   *    maa. Kaikki muut normaaleita. … Kreikassa vielä useampi."*) ────
+   *
+   * Kreikan täkypoolissa oli viisi nostoa, joista kartalle nousi kupla
+   * ja neljä täkysymbolia. Poolissa on nyt tasan yksi (js/fokusnosto.js
+   * NOSTO_MAAT.GRC), ja loput ovat tässä kartan tavallisina kohteina.
+   *
+   * MITÄÄN EI OLE KIRJOITETTU UUDELLEEN. Otsikko, leipäteksti, kuva,
+   * kuvan lähde, lähderivi, symbolikategoria ja laudan koordinaatit ovat
+   * sanasta sanaan ne, jotka nostoilla oli — vain kenttien nimet
+   * vaihtuivat noston muodosta kohteen muotoon (`otsikko` → `nappi`,
+   * `paikka.laudat` → `laudat`). Perustelut valinnoista, kuvien
+   * Commons-tarkistukset ja paikkojen asteluvut olivat noston omissa
+   * kommenteissa, ja ne ovat mukana tässä.
+   *
+   * KAKSI NOSTOA JÄI POIS KOKONAAN, koska niiden paikalla on jo kartan
+   * oma kohde eikä kahta merkkiä samaan pisteeseen tehdä:
+   *   - "Kokonainen kylä istui oraakkelin päällä" osoitti kentällään
+   *     `kohde: 'delfoi'` suoraan tämän tiedoston kohteeseen `delfoi`;
+   *   - Antikytheran sukeltajanosto oli täsmälleen samassa pisteessä
+   *     (6610,0 / 1962,6) kuin tämän tiedoston kohde `antikythera`,
+   *     ja sillä oli sama tunnuskin.
+   * Kummankin lunastusteksti on tallessa git-historiassa (v1143:n
+   * js/fokusnosto.js) siltä varalta, että päätoimittaja haluaa sulattaa
+   * niistä jotain olemassa olevien kohteiden teksteihin.
+   */
+  {
+    /*
+     * ELÄINTÄKY 1 — PIKKUPÖLLÖ (entinen nosto `pikkupollo`).
+     *
+     * Faktat en-Wikipediasta, ei yhtään väitettä sen yli: laji elää
+     * Kreikassa (mm. alalaji A. n. indigena), pöllö oli Ateenan
+     * hopearahan kuva, ja sanonta pöllöjen viemisestä Ateenaan
+     * tarkoitti nimenomaan sitä kolikkoa. Akropoliin nykyesiintymistä
+     * EI väitetä mitään — sellaista lähdettä ei ole.
+     *
+     * PÖLLÖN OMA HEITTO on tekstin viimeinen lause. Se on noston omaa,
+     * hyväksyttyä tekstiä eikä sitä ole muutettu tässä siirrossa; jos
+     * kartan tietoruudun neutraali ääni (ks. tiedoston alku) vaatii sen
+     * pois, poisto on päätoimittajan tekstipäätös eikä siirron.
+     */
+    id: 'pikkupollo',
+    nimi: 'Pikkupöllö',
+    tyyppi: 'muu',
+    symboli: 'elain',
+    /* Valintakuplan painike: noston oma klikkiotsikko sellaisenaan. */
+    nappi: 'Ateena löi tunnuksensa hopeaan — mallina 22-senttinen lintu, '
+      + 'joka tuijottaa yhä takaisin',
+    /*
+     * Samos, 26,83333 E / 37,75 N — en-Wikipedia "Samos". Kuvan lintu
+     * on juuri sieltä (Commonsin oma tiedostokuvaus), ja saari on
+     * lehden ikkunan sisällä, 104 yksikön päässä Ateenasta.
+     */
+    laudat: {
+      maailmankartta: { x: 6727.8, y: 1890.5 },
+      europe: { x: 726.4, y: 900.8 },
+    },
+    teksti: 'Athenen pyhä lintu ei ole vertauskuva vaan laji. Pikkupöllö '
+      + '(Athene noctua) on noin 22 senttiä pitkä, siipiväli 56 senttiä ja '
+      + 'paino noin 180 grammaa; keltaiset silmät ja valkeat kulmajuovat '
+      + 'antavat sille ainaisen tuiman ilmeen. Suku sai nimensä '
+      + 'jumalattaresta ja lajinimi noctua Minervalle pyhitetystä pöllöstä. '
+      + 'Lintu on osittain päiväaktiivinen ja istuu usein näkyvällä paikalla '
+      + 'keskellä päivää; se viihtyy raunioiden, louhosten ja '
+      + 'kalliopaljastumien liepeillä, ja kanta on yhä elinvoimainen.\n\n'
+      + 'Kaupunki teki linnusta rahansa. Vuoden 500 eaa. tetradrakmassa '
+      + 'pöllö istuu oliivinoksa vierellään, ja 510 eaa. jälkeen pöllöstä '
+      + 'tuli Ateenan hopearahan vakiokuva; kolikkoa kutsuttiin antiikin '
+      + 'maailmassa yksinkertaisesti nimellä glaux, pikkupöllö. Aristofanes '
+      + 'pani Linnuissa ja Lysistratessa merkille, kuinka paljon näitä '
+      + 'lintuja seudulla oli. Sanonta pöllöjen viemisestä Ateenaan '
+      + 'tarkoitti kolikkoa ja oli turhan työn vertaus — sama kuin hiilien '
+      + 'kantaminen Newcastleen. Kopio samasta kolikosta on nykyisin '
+      + 'Kreikan yhden euron rahassa.\n\n'
+      + 'Kahdessatuhannessa vuodessa laji ei ole muuttanut ilmettään '
+      + 'senttiäkään. En sano tästä enempää, jottei kukaan luulisi minun '
+      + 'kehuvan sukuani.',
+    lahde: 'en-Wikipedia "Little owl" (osiot "Taxonomy", "Description", '
+      + '"Distribution and habitat", "Status" ja "In human culture"), '
+      + '"Owl of Athena" (osio "Ancient Greece") ja "Owls to Athens" '
+      + '(osio "Title") — tarkistettu 26.8.2026.',
+    /*
+     * Commons 26.8.2026: 2613×1742, CC0, Hobbyfotowiki, kuvattu
+     * 19.9.2024, kuvaus "little owl (Athene noctua), Greece, island of
+     * Samos", Restrictions tyhjä. Katsottu silmin: terävä, edestä
+     * kuvattu villi lintu kivirakenteen aukossa, ei rengasta, ei
+     * häkkiä, ei ihmisiä.
+     */
+    kuva: {
+      tiedosto: 'Little owl (Athene noctua),.jpg',
+      selite: 'Pikkupöllö Samoksella. Laji on osittain päiväaktiivinen ja '
+        + 'istuu usein näkyvillä keskellä päivää.',
+      lahde: 'Hobbyfotowiki, Wikimedia Commons (CC0)',
+    },
+  },
+  {
+    /*
+     * ELÄINTÄKY 2 — REUNUSKILPIKONNA (entinen nosto `reunuskilpikonna`).
+     *
+     * Alkuperäinen tilaus oli Filopappoksen kukkula, mutta lähdettä
+     * lajin esiintymiselle juuri sillä kukkulalla ei ole: en-Wikipedia
+     * kertoo levinneisyyden maan tasolla (Peloponnesokselta
+     * Olympokselle) eikä Filopappos-artikkeli mainitse lajia
+     * lainkaan. Teksti pysyy siksi siinä, minkä lähde kattaa, ja
+     * paikka on se saari, jolla kuvan yksilö kohdattiin.
+     */
+    id: 'reunuskilpikonna',
+    nimi: 'Reunuskilpikonna',
+    tyyppi: 'muu',
+    symboli: 'elain',
+    /* Valintakuplan painike: noston oma klikkiotsikko sellaisenaan. */
+    nappi: 'Maa oli liian kova pesäkuopalle — naaras kasteli sen itse ja '
+      + 'polki jäljet umpeen',
+    /*
+     * Euboia (Evia), 24,0 E / 38,5 N — en-Wikipedia "Euboea". Saari on
+     * 22 yksikön päässä Ateenasta eli suunnilleen yhtä kaukana kuin
+     * Korintin kanavan oma merkki, ja kuvan kilpikonna tavattiin
+     * siellä.
+     */
+    laudat: {
+      maailmankartta: { x: 6633.3, y: 1861.5 },
+      europe: { x: 672.0, y: 881.1 },
+    },
+    teksti: 'Euroopan suurin kilpikonna on kreikkalainen. Reunuskilpikonna '
+      + '(Testudo marginata) kasvaa 35-senttiseksi ja viisikiloiseksi, ja se '
+      + 'on kotoperäinen Kreikassa, Italiassa ja Balkanilla. Luontainen '
+      + 'levinneisyys kulkee Etelä-Kreikassa Peloponnesokselta '
+      + 'Olympokselle, ja vuorilla laji nousee jopa 1 600 metriin. Nimensä '
+      + 'se on saanut kilven takareunasta, joka levenee ulospäin kuin '
+      + 'kellon helma.\n\n'
+      + 'Aikuisen kilpi on lähes musta, ja vuoristossa se on etu: tumma '
+      + 'pinta imee lämmön nopeasti. Aamulla kilpikonna paistattelee '
+      + 'auringossa nostaakseen ruumiinlämpönsä ja lähtee vasta sitten '
+      + 'ruokailemaan; keskipäivän kuumuudeksi se vetäytyy suojaan ja tulee '
+      + 'ulos taas iltapäivällä.\n\n'
+      + 'Munat tulevat touko–kesäkuussa kuoppaan, jonka naaras kaivaa '
+      + 'takajaloillaan vuorotellen ja jonka syvyyden määrää jalkojen '
+      + 'pituus. Jos maa on kaivettavaksi liian kovaa, naaras pehmittää sen '
+      + 'peräaukkorauhasensa vedellä. Lopuksi hän tallaa kuopan suun '
+      + 'umpeen, kunnes maa on yhtä kovaa kuin ennenkin — pesää ei löydä '
+      + 'kukaan. Munia on kerralla noin viisitoista, ja kuoriutumiseen '
+      + 'menee luonnossa noin sata päivää.',
+    lahde: 'en-Wikipedia "Marginated tortoise", osiot "Description", '
+      + '"Distribution and habitat" ja "Reproduction" (tarkistettu '
+      + '26.8.2026).',
+    /*
+     * Commons 26.8.2026: 2816×2112, CC BY-SA 4.0, kernpanik, kuvattu
+     * 16.4.2017, kuvaus "Testudo marginata on Evia (Euboea) island,
+     * Greece", Restrictions tyhjä. Katsottu silmin: villi yksilö
+     * maastossa, lähikuva päästä ja etujaloista, ei ihmisiä.
+     */
+    kuva: {
+      tiedosto: 'Testudo marginata on Evia (Euboea) island, Greece.jpg',
+      selite: 'Reunuskilpikonna Euboian saarella. Raajojen etupuolta '
+        + 'peittävät suuret suomut, ja aikuisen kilpi on lähes musta.',
+      lahde: 'kernpanik, Wikimedia Commons (CC BY-SA 4.0)',
     },
   },
 ];

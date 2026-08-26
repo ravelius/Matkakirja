@@ -598,13 +598,20 @@ export const FOKUSVIRTA_ROOMA = {
    * nousee poolista seuraava (js/fokusnosto.js lukee tämän kentän
    * suoraan, joten uusi maa ei vaadi riviä siihen tiedostoon).
    *
-   * OTSIKOT OVAT KAANONIN OMAT (fokusvirta-rooma-kaanon.md, kohta 6) —
-   * sanamuotoja ei ole muutettu, eikä järjestystä ole vaihdettu.
-   * `lunastus` on rakentajan kokoama lyhyt fakta, joka pitää otsikon
-   * lupauksen (takynostot-italia.md, sääntö 1: otsikon lupaus
-   * lunastetaan tai se on klikkihuijaus). `avaa` osoittaa tämän
-   * tiedoston täkyyn, jos sellainen on — kahdella jälkimmäisellä ei
-   * ole, ja lunastus kannattelee noston yksinään.
+   * OTSIKKO ON KAANONIN OMA (fokusvirta-rooma-kaanon.md, kohta 6) —
+   * sanamuotoa ei ole muutettu. `lunastus` on rakentajan kokoama lyhyt
+   * fakta, joka pitää otsikon lupauksen (takynostot-italia.md, sääntö 1:
+   * otsikon lupaus lunastetaan tai se on klikkihuijaus). `avaa` osoittaa
+   * tämän tiedoston täkyyn.
+   *
+   * VAIN YKSI NOSTO PER MAA (omistaja 26.8.2026 ilta: *"Täkyjä josta
+   * tulee puhekupla pitää olla vain yksi per maa. Kaikki muut
+   * normaaleita."*). Poolissa oli kolme nostoa; jäljellä on kaanonin
+   * ensimmäinen. Kumpikaan pudonneista ei tarvinnut uutta kohdetta,
+   * koska niiden paikka on jo kartalla omana kohteenaan
+   * (js/packs/fokuskohteet-ita.js): "pisan-torni" → kohde `pisa` ja
+   * "pompeji" → kohde `pompeji`, molemmat samoilla Commons-kuvilla kuin
+   * nostoissa. Kahta merkkiä samaan pisteeseen ei tehdä.
    *
    * LIVE-KAMERAA EI OLE MISSÄÄN NOSTOSSA. Ks. tiedoston alku:
    * takynostot-italia.md:n kameralistasta on tarkistettu vain
@@ -629,69 +636,6 @@ export const FOKUSVIRTA_ROOMA = {
         tiedosto: 'Cat Sanctuary, Cats, Largo di Torre Argentina, Rome - 398 (19257774921).jpg',
         selite: 'Kissoja Largo di Torre Argentinan raunioilla.',
         lahde: 'Andy Rusch, Wikimedia Commons (CC BY 2.0)',
-      },
-    },
-    {
-      id: 'pisan-torni',
-      /* Kaanon, kohta 6, nosto 2. */
-      otsikko: 'Yksi kersantti päätti olla ampumatta — siksi Pisan '
-        + 'torni on yhä pystyssä',
-      /* Faktat: takynostot-italia.md, ehdokas 5 (VARMA). */
-      lunastus: 'Toisen maailmansodan aikana liittoutuneet epäilivät '
-        + 'saksalaisten käyttävän Pisan kellotornia tähystyspaikkana, ja '
-        + 'kersantti Leon Weckstein lähetettiin varmistamaan asia. '
-        + 'Tuomiokirkon ja kellotornin kauneus teki häneen sellaisen '
-        + 'vaikutuksen, ettei hän antanut tykistötulikäskyä. Torni '
-        + 'säästyi.',
-      /*
-       * Ei `avaa`-kenttää: Pisan tornille ei ole täkyä tässä
-       * tiedostossa. Kohde 'pisa' on maan kohdelistassa
-       * (js/packs/fokuskohteet-ita.js), mutta kohdenosto ei ole täky
-       * eikä nosto saa luvata sitä.
-       *
-       * Kuva: takynostot-italia.md, ehdokas 5 — 10153×6087, CC BY 4.0,
-       * PaestumPaestum, 2023. Sama tarkistettu tiedosto kuin kohteella
-       * 'pisa'.
-       */
-      kuva: {
-        tiedosto: 'Piazza dei Miracoli (Pisa) 2023.jpg',
-        selite: 'Pisan kalteva kellotorni ja tuomiokirkko Piazza dei '
-          + 'Miracolilla.',
-        lahde: 'PaestumPaestum, Wikimedia Commons (CC BY 4.0)',
-      },
-    },
-    {
-      id: 'pompeji',
-      /* Kaanon, kohta 6, nosto 3. */
-      otsikko: 'Kaupunki oli tyhjä — kunnes tutkija tajusi, että kuopat '
-        + 'olivat ihmisiä',
-      /* Faktat: takynostot-italia.md, ehdokas 2 (VARMA). */
-      lunastus: 'Pompejin kaivauksissa oli vuosikymmeniä törmätty '
-        + 'tuhkakerroksen outoihin onkaloihin. Giuseppe Fiorelli otti '
-        + 'kaivaukset johtoonsa 1863 ja ymmärsi, mitä ne olivat: '
-        + 'hajonneen ruumiin jättämä muotti. Hän kehitti tavan valaa '
-        + 'onkaloihin kipsiä, ja tekniikka on yhä käytössä — kipsin '
-        + 'tilalla nykyään kirkas hartsi, joka ei tuhoa luita. Sama '
-        + 'Fiorelli rakensi kaivauksen oman museon 1873–1874, tasan '
-        + 'isoisän matkavuonna.',
-      /*
-       * Ei `avaa`-kenttää: Pompejille ei ole täkyä tässä tiedostossa.
-       *
-       * KUVAVALINTA ON FABLEN PÄÄTETTÄVÄ (takynostot-italia.md,
-       * ehdokas 2, ikäsopivuushuomio): raportti tarjoaa uhrivalukuvan
-       * ("Pompeii Garden of the Fugitives 02.jpg", 580×852) ja
-       * aikalaisakvarellin koirasta (1882, PD) ja jättää valinnan
-       * Fablelle — *"Koira-akvarelli on kaunis mutta surullinen —
-       * Fablen päätettäväksi, kumpi kuva sopii pelin sävyyn"*. Koska
-       * päätöstä ei ole, tässä on fokuskohteet-italia.md:n oma,
-       * tarkistettu ja neutraali kuva samasta kohteesta (Forum ja
-       * Vesuvius, 8308×5486): se näyttää sen tyhjän kaupungin, josta
-       * otsikko puhuu, eikä ennakoi Fablen päätöstä.
-       */
-      kuva: {
-        tiedosto: 'Forum (Pompeii) and the Vesuvio.jpg',
-        selite: 'Pompejin tyhjä Forum ja sen takana Vesuvius.',
-        lahde: 'Commonists, Wikimedia Commons (CC BY-SA 4.0)',
       },
     },
   ],

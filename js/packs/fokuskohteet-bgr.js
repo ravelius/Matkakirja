@@ -799,6 +799,65 @@ export const FOKUSKOHTEET_BGR = [
         + 'domain)',
     },
   },
+  /*
+   * ── ENTINEN TÄKYNOSTO NORMAALINA KOHTEENA (omistaja 26.8.2026 ilta:
+   *    *"Täkyjä josta tulee puhekupla pitää olla vain yksi per maa.
+   *    Kaikki muut normaaleita."*) ────────────────────────────────────
+   *
+   * Sofian täkypoolissa (js/packs/fokusvirta-sofia.js takynostot) oli
+   * kolme nostoa; siellä on nyt tasan yksi. Toinen niistä
+   * ("pollopatsas") jäi kokonaan pois, koska sama aihe on jo kaupungin
+   * omana täkynä samassa tiedostossa — kahta kertomusta samasta
+   * patsaasta ei tehdä. Tämä kolmas ei osoittanut mihinkään olemassa
+   * olevaan, ja se on tässä sellaisenaan.
+   *
+   * TEKSTI, KUVA JA LÄHTEET OVAT NOSTON OMAT eikä niitä ole
+   * kirjoitettu uudelleen: `lunastus` → `teksti`, `otsikko` → `nappi`,
+   * kuva kaikkine kenttineen entisellään.
+   *
+   * PAIKKA ON AINEISTON OMA, EI ARVATTU. Nostolla ei ollut
+   * koordinaatteja, koska se piirtyi ruudun alalaidan liuskana, mutta
+   * kohde tarvitsee paikan. Täkyraportti antaa sen itse
+   * (docs/mantereet-tyoaineisto/takyt-sofia.md, täky 13): *"Ei
+   * yksittäistä paikkaa — tapahtui eri puolilla keskustaa. Yleinen
+   * sijainti: Sofian vanha kaupunki. n. 42.6977°N, 23.3219°E
+   * (kaupungin keskusta, karttaviite)"*. Luvut on muunnettu laudan
+   * yksiköiksi tiedoston alussa kuvatuilla kaavoilla. Piste osuu Sofian
+   * laatan viereen, joten merkki niputtuu kaupungin sarakkeeseen samalla
+   * passilla kuin muutkin lähimerkit (js/fokusniput.js).
+   */
+  {
+    id: 'moskeijat',
+    nimi: 'Sofian moskeijat',
+    tyyppi: 'muu',
+    symboli: 'historia',
+    /* Valintakuplan painike: noston oma klikkiotsikko sellaisenaan. */
+    nappi: 'Ukkosmyrsky peitti yön, jona seitsemän moskeijaa räjähti',
+    // 23,3219 E / 42,6977 N — takyt-sofia.md, täky 13 (kaupungin keskusta).
+    laudat: {
+      maailmankartta: { x: 6610.7, y: 1695.6 },
+      europe: { x: 659.0, y: 770.7 },
+    },
+    /* Faktat: takyt-sofia.md, täky 13 (VARMA, suora lainaus lähteestä). */
+    teksti: 'Joulukuussa 1878, viisi vuotta isoisän käynnin jälkeen, '
+      + 'venäläiset sotilasinsinöörit räjäyttivät seitsemän Sofian '
+      + 'moskeijaa samana yönä; ukkosmyrsky peitti räjähdysten äänen. '
+      + 'Suurin osa kaupungin moskeijoista tuhoutui sodassa, ja suurin '
+      + 'osa muslimiväestöstä lähti kaupungista sen jälkeen.',
+    lahde: 'en-Wikipedia "Sofia" (tarkistettu 25.8.2026 täkyraporttiin '
+      + 'docs/mantereet-tyoaineisto/takyt-sofia.md, täky 13).',
+    /*
+     * Commons 25.8.2026: 700×485, public domain, tekijä tuntematon,
+     * kuvaus "Баня баши джамия от края на 19 век", Category:Sofia in
+     * the 19th century. Kuva näyttää sen moskeijan, joka jäi jäljelle.
+     */
+    kuva: {
+      tiedosto: 'Banya bashi dhzamiya 19 vek.jpg',
+      selite: 'Banja Bashin moskeija 1800-luvun lopun valokuvassa. Se on '
+        + 'Sofian ainoa yhä toimiva moskeija.',
+      lahde: 'Tuntematon kuvaaja, Wikimedia Commons (public domain)',
+    },
+  },
 ];
 
 const BGR_TUNNUKSITTAIN = new Map(FOKUSKOHTEET_BGR.map((k) => [k.id, k]));

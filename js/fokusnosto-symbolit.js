@@ -1,6 +1,6 @@
 /*
- * TÄKYSYMBOLIT JA KARTTASYMBOLIEN KIRJASTO — poolin muut täyt kartan
- * omina merkkeinä, ja kaikkien karttamerkkien yhteiset piirtäjät.
+ * TÄKYN ANKKURISYMBOLI JA KARTTASYMBOLIEN KIRJASTO — kuplan alla oleva
+ * merkintä paikasta, ja kaikkien karttamerkkien yhteiset piirtäjät.
  *
  * Raamatun osio "Fokusmoodi", kohta TÄKYSYMBOLIT (omistaja 25.8.2026):
  * *"kartalla on tekstikuplassa VAIN YKSI täkynosto kerrallaan; muut
@@ -9,6 +9,15 @@
  * eläinkohteille PÖLLÖVAUVAN kuva; muitakin symboleita voidaan
  * kehittää. Symbolit tehdään kartan henkeen ja samalla tyylillä
  * (seepiamuste, aikakauden karttamerkki)."*
+ *
+ * TÄMÄN KERROKSEN OSUUS TUOSTA KAPENI 26.8.2026 illalla, kun omistaja
+ * linjasi: *"Täkyjä josta tulee puhekupla pitää olla vain yksi per maa.
+ * Kaikki muut normaaleita."* Maan poolissa on nyt tasan yksi täky, joten
+ * "muut vastaavat täkykohteet" ovat kartan TAVALLISIA KOHTEITA
+ * (js/fokuskohteet.js) — ja koska ne piirtyvät samasta kirjastosta,
+ * symbolitaksonomia näkyy kartalla entiseen tapaan. Tämä kerros piirtää
+ * enää sen yhden täyn ankkurin, ja siksi täällä ei ole enää
+ * napautettavia merkkejä eikä osuma-alueita.
  *
  * Ja SYMBOLITAKSONOMIA (omistaja 26.8.2026 ilta: *"tee kaikki
  * ehdotetut symbolit ja myös lisäkandidaatit"*): KAKSITOISTA
@@ -26,7 +35,7 @@
  * KARTTAKERROS ja PIIRTOKIRJASTO. Kerros ei tiedä poolista,
  * lukemisista eikä siitä, milloin täky saa näkyä: kaikki se on
  * täkynoston omassa kirjanpidossa (js/fokusnosto.js), joka kutsuu tätä
- * valmiilla listalla. Näin näkyvyysehdot pysyvät yhdessä paikassa,
+ * valmiilla merkinnällä. Näin näkyvyysehdot pysyvät yhdessä paikassa,
  * kuten liuskan aikana. Kirjaston (piirraNostosymboli) kutsujat
  * hoitavat itse paikan ja mittakaavan — piirtäjä tuottaa aina saman
  * ~21 px merkin origon ympärille.
@@ -34,11 +43,12 @@
  * ── KOLME SÄÄNTÖÄ, JOTKA ON PERITTY MUILTA KARTAN KERROKSILTA ──────
  *
  * 1. OMA KERROS SVG:N JUURESSA (ui.svg:n suora lapsi). Kiertävän laudan
- *    <use>-kopiosta ei voi napauttaa mitään: tapahtuma osuisi
- *    <use>-elementtiin eikä sen sisältöön. Merkki piirretään siksi
- *    oikeana elementtinä jokaiseen kiertokohtaan (ui.kiertoKohdat) —
- *    sama ratkaisu kuin kohderenkailla, vinjeteillä, fokuskohteilla ja
- *    vihreällä pisteellä (js/fokuspiste.js).
+ *    <use>-kopio ei kelpaa: sama paikka on kartalla kahdesti, ja kuplan
+ *    on löydettävä se ankkuri, joka pelaajalla oikeasti on edessään
+ *    (nostosymAnkkuri). Merkki piirretään siksi oikeana elementtinä
+ *    jokaiseen kiertokohtaan (ui.kiertoKohdat) — sama ratkaisu kuin
+ *    kohderenkailla, vinjeteillä, fokuskohteilla ja vihreällä pisteellä
+ *    (js/fokuspiste.js).
  *
  * 2. EI SUODATTIMIA (js/fokuskartta.js sääntö 3, tests/rules.test.mjs):
  *    suodatettu kerros palaa iOS:n taustalta tyhjänä. Symbolit ovat
@@ -49,8 +59,7 @@
  *    26.8.2026, Raamattu). Ankkuriryhmä on laudan koordinaateissa ja
  *    skaalataan VAKIOLLA (js/ui.js fokusMerkkiSkaala), jolloin merkin
  *    lapset ovat ruudun pikseleitä LEHDEN PERUSTASOLLA ja elävät siitä
- *    kartan mukana. Osuma-alueen r = 22 on 44 px läpimitta perustasolla
- *    — sama sormisääntö kuin muualla.
+ *    kartan mukana — sama mitta kuin kartan kohdemerkeillä.
  *
  * ── KERROS EI TAPPELE Z-JÄRJESTYKSESTÄ ─────────────────────────────
  *
@@ -69,10 +78,6 @@
  */
 import { el } from './mapart.js';
 import { niputaFokusmerkit } from './fokusniput.js';
-import { sfx } from './sound.js';
-
-/** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta). */
-const NOSTOSYM_OSUMA_R = 22;
 
 /**
  * SYMBOLIN PIIRTÄJÄT.
@@ -449,8 +454,8 @@ export function piirraNostosymboli(g, symboli) {
  * kun sitä painaa ... Saisi pysyä"*). Nyt symboli pysyy paikallaan
  * kuplan alla — merkki ja kupla kertovat samasta asiasta. Ankkuri ei
  * silti ota napautuksia vastaan (css: pointer-events), koska kupla on
- * sen päällä ja sen oma nappi vie lunastukseen; siksi tässä ei ole
- * osuma-aluetta eikä kuuntelijoita (vrt. piirraNostosymMerkki).
+ * sen päällä ja KOKO KUPLA vie lunastukseen (omistaja 26.8.2026 ilta);
+ * siksi tässä ei ole osuma-aluetta eikä kuuntelijoita.
  */
 function piirraNostosymAnkkuri(g, symboli) {
   piirraNostosymboli(g, symboli);
@@ -478,46 +483,21 @@ function nostosymKerros(ui) {
   return ui.nostosymKerros;
 }
 
-/** Yksi symbolimerkki: näkymätön osuma-alue ja sen päällä kuva. */
-function piirraNostosymMerkki(ui, ryhma, merkinta, valitse) {
-  /*
-   * TYYPPILUOKKA ON OMA NIMENSÄ (`nostosym-tyyppi-*`) eikä sama kuin
-   * muodon luokka: SVG:ssä `fill` ja `stroke` PERIYTYVÄT, joten ryhmälle
-   * osunut muototyyli valuisi myös näkymättömään osuma-alueeseen ja
-   * piirtäisi sen ympärille kehän.
-   */
-  const g = el('g', { class: `fokusnosto-symboli nostosym-tyyppi-${merkinta.symboli}` }, ryhma);
-  g.dataset.nosto = merkinta.id;
-  g.setAttribute('role', 'button');
-  g.setAttribute('tabindex', '0');
-  g.setAttribute('aria-label', `${merkinta.otsikko} — nosta esiin`);
-  el('circle', { class: 'nostosym-osuma', r: NOSTOSYM_OSUMA_R }, g);
-  piirraNostosymboli(g, merkinta.symboli);
-  const avaa = (tapahtuma) => {
-    tapahtuma.stopPropagation();
-    tapahtuma.preventDefault();
-    // Kesken animaation (nopan pyörähdys, siirtymä) kartta ottaa yhä
-    // napautuksia vastaan — sama kiireen esto kuin vihreällä pisteellä.
-    if (ui.busy) return;
-    sfx.play('paper');
-    valitse?.(merkinta.id);
-  };
-  g.addEventListener('click', avaa);
-  g.addEventListener('keydown', (tapahtuma) => {
-    if (tapahtuma.key === 'Enter' || tapahtuma.key === ' ') avaa(tapahtuma);
-  });
-  return g;
-}
-
 /**
- * SYMBOLIT JA AKTIIVISEN ANKKURI KARTALLE.
+ * KUPLAN ANKKURI KARTALLE.
  *
  * @param {object} ui
  * @param {object} tila
- * @param {Array} tila.merkinnat  [{ id, otsikko, symboli, paikka:{x,y} }]
- *   — järjestyksessä; aktiivinen mukana, jos sillä on paikka.
- * @param {string|null} tila.aktiivinen  Kuplassa olevan täyn tunnus.
- * @param {(id:string)=>void} tila.valitse  Symbolin napautus.
+ * @param {?object} tila.merkinta  { id, otsikko, symboli, paikka:{x,y} }
+ *   — kuplassa olevan täyn ankkuri, tai null/puuttuva kun kartalla ei
+ *   ole yhtään täkyä.
+ *
+ * YKSI TÄKY PER MAA (omistaja 26.8.2026 ilta), joten kerroksella on
+ * enää tämä yksi merkintä. Ennen sama kerros piirsi myös poolin muut
+ * täyt napautettavina symboleina, joiden napautus nosti täyn kuplaan;
+ * kun poolissa on vain yksi täky, sellaisia merkkejä ei enää synny, ja
+ * maan muut aiheet ovat kartan tavallisia kohteita (js/fokuskohteet.js
+ * — sama symbolikirjasto piirtää nekin, ks. tiedoston alku).
  *
  * TYÖ TEHDÄÄN VAIN KUN SISÄLTÖ MUUTTUI, kuten muillakin kerroksilla:
  * zoomi muuttaa vain ankkuriryhmien muunnosta, ei yhtäkään solmua.
@@ -526,32 +506,26 @@ export function paivitaNostosymbolit(ui, tila = {}) {
   if (typeof document === 'undefined') return;
   const kerros = nostosymKerros(ui);
   if (!kerros) return;
-  const merkinnat = Array.isArray(tila.merkinnat) ? tila.merkinnat : [];
-  const avain = merkinnat.length
-    ? `${ui.game?.pack?.id}:${tila.aktiivinen ?? '-'}:`
-      + merkinnat.map((m) => `${m.id}@${m.paikka.x},${m.paikka.y}/${m.symboli}`).join('|')
+  const merkinta = tila.merkinta ?? null;
+  const avain = merkinta
+    ? `${ui.game?.pack?.id}:${merkinta.id}@${merkinta.paikka.x},${merkinta.paikka.y}`
+      + `/${merkinta.symboli}`
     : 'tyhja';
   if (ui.nostosymAvain !== avain) {
     ui.nostosymAvain = avain;
     kerros.textContent = '';
     ui.nostosymRyhmat = [];
     ui.nostosymAnkkurit = [];
-    for (const merkinta of merkinnat) {
-      const onAktiivinen = merkinta.id === tila.aktiivinen;
-      // Kiertävällä laudalla sama merkki molempiin kohtiin (ks. sääntö 1).
-      for (const x of ui.kiertoKohdat?.(merkinta.paikka.x) ?? [merkinta.paikka.x]) {
-        const ryhma = el('g', { class: 'fokusnosto-symboliryhma' }, kerros);
-        ui.nostosymRyhmat.push({ g: ryhma, x, y: merkinta.paikka.y });
-        if (onAktiivinen) {
-          const ankkuri = el('g', {
-            class: `fokusnosto-ankkuri nostosym-tyyppi-${merkinta.symboli}`,
-          }, ryhma);
-          piirraNostosymAnkkuri(ankkuri, merkinta.symboli);
-          ui.nostosymAnkkurit.push(ankkuri);
-        } else {
-          piirraNostosymMerkki(ui, ryhma, merkinta, tila.valitse);
-        }
-      }
+    // Kiertävällä laudalla sama merkki molempiin kohtiin (ks. sääntö 1).
+    for (const x of merkinta
+      ? ui.kiertoKohdat?.(merkinta.paikka.x) ?? [merkinta.paikka.x] : []) {
+      const ryhma = el('g', { class: 'fokusnosto-symboliryhma' }, kerros);
+      ui.nostosymRyhmat.push({ g: ryhma, x, y: merkinta.paikka.y });
+      const ankkuri = el('g', {
+        class: `fokusnosto-ankkuri nostosym-tyyppi-${merkinta.symboli}`,
+      }, ryhma);
+      piirraNostosymAnkkuri(ankkuri, merkinta.symboli);
+      ui.nostosymAnkkurit.push(ankkuri);
     }
   }
   asemoiNostosymbolit(ui);

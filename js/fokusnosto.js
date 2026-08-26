@@ -9,10 +9,29 @@
  * tositarina, lupaus lunastetaan faktalla) + miniatyyrikuva perässä,
  * houkuttelemassa kohteen auki."*
  *
- * Kreikan pooli on omistajan valitsema (sama kohta, KREIKAN TÄKYNOSTOT
- * VALITTU): kartoituksen kolme kärkeä
- * docs/mantereet-tyoaineisto/takynostot-kreikka.md:stä. *"Näytetään
- * yksi kerrallaan; luetun tilalle nousee poolista seuraava."*
+ * ── YKSI TÄKY PER MAA (omistaja 26.8.2026 ilta) ────────────────────
+ *
+ * *"Täkyjä josta tulee puhekupla pitää olla vain yksi per maa. Kaikki
+ * muut normaaleita. Ja kun täkyä painaa niin sen pitäisi aueta suoraan
+ * pop upiksi ilman pelkkää otsikko nostoa. Kreikassa vielä useampi."*
+ *
+ * Ennen tätä maan poolissa oli kolmesta viiteen nostoa: yksi nousi
+ * kuplaan ja loput jäivät kartalle täkysymboleiksi, joiden napautus
+ * NOSTI täyn kuplaan — ja vasta kuplan napista pääsi lunastukseen.
+ * Kaksi napautusta, kaksi eri merkkilajia samalla lehdellä.
+ *
+ * Nyt jokaisen maan poolissa on TASAN YKSI nosto (nostoMaanPooli
+ * leikkaa poolin, jotta sääntö on koodissa eikä pelkässä datassa), ja
+ * loput entiset nostot ovat kartan tavallisia kohteita omissa
+ * pakettitiedostoissaan (js/packs/fokuskohteet-*.js). Siitä seuraa
+ * kolme yksinkertaistusta:
+ *
+ *   - symbolikerroksella on enää AKTIIVISEN täyn ankkuri, ei muita
+ *     merkkejä — ja siksi symbolin napautusta ei enää ole;
+ *   - kupla on kokonaisuudessaan yksi painike, joka avaa lunastuksen
+ *     suoraan (piirraNostonKupla);
+ *   - mekaniikka jää muuten ennalleen: luettu täky ei nouse enää, ja
+ *     ohitettu (liuskan rasti) väistyy istunnon ajaksi.
  *
  * ── LUPAUS LUNASTETAAN, TAI OTSIKKO ON HUIJAUS ─────────────────────
  *
@@ -29,23 +48,22 @@
  * ── PUHEKUPLA SIIHEN KOHTAAN KARTTAA, JOTA JUTTU KOSKEE ────────────
  *
  * Raamatun osio "Fokusmoodi", kohta TÄKYSYMBOLIT (omistaja 25.8.2026):
- * *"kartalla on tekstikuplassa VAIN YKSI täkynosto kerrallaan; muut
- * vastaavat täkykohteet merkitään yksinkertaisilla symboleilla."*
+ * *"kartalla on tekstikuplassa VAIN YKSI täkynosto kerrallaan."*
  * Omistajan sanoin samana päivänä: *"täkyn pitäisi tulla puhekuplana
- * siihen kohtaan karttaa jota tapahtuma koskee. Muut näkyisivät
- * huutomerkkeinä ja pöllön poikanen symboleina."*
+ * siihen kohtaan karttaa jota tapahtuma koskee."*
  *
  * Nosto on siis kaksiosainen:
  *
  *   1. KUPLA (tämä tiedosto) — HTML kartan päällä, koska nosto on
  *      tekstiä ja pieni kuva, ja ne HTML taittaa mutta SVG ei. Kupla
  *      seuraa ankkuriaan panoroinnissa ja zoomissa, ja sen nokka
- *      osoittaa siihen pisteeseen kartalla, jota juttu koskee.
- *   2. SYMBOLIT (js/fokusnosto-symbolit.js) — SVG kartan omassa
- *      kerroksessa, koska ne ankkuroituvat laudan koordinaatteihin ja
- *      pysyvät kiinteän kokoisina zoomin käänteisskaalauksella. Yhden
- *      symbolin napautus nostaa sen täyn kuplaan, ja edellinen putoaa
- *      symboliksi.
+ *      osoittaa siihen pisteeseen kartalla, jota juttu koskee. KOKO
+ *      KUPLA ON PAINIKE: napautus mihin tahansa siinä avaa
+ *      lunastuskortin suoraan (omistaja 26.8.2026 ilta).
+ *   2. ANKKURISYMBOLI (js/fokusnosto-symbolit.js) — SVG kartan omassa
+ *      kerroksessa, koska se ankkuroituu laudan koordinaatteihin ja
+ *      elää kartan mukana. Se on kuplan alla oleva merkintä paikasta
+ *      eikä painike; kupla on sen päällä ja hoitaa napautuksen.
  *
  * ILMAN PAIKKAA VANHA ALALAIDAN LIUSKA JÄÄ VARAPOLUKSI. Nostolla ei ole
  * pakko olla `paikka`-kenttää — sitä ilman kupla jäisi ilman ankkuria,
@@ -104,32 +122,33 @@ import { sfx } from './sound.js';
 /* ==================== POOLI ==================== */
 
 /*
- * KREIKAN TÄKYNOSTOT (omistajan valinta 25.8.2026; kaksi eläintäkyä
- * lisätty 26.8.2026, ks. oma perustelulohkonsa listan lopussa).
+ * KREIKAN TÄKYNOSTO (omistajan valinta 25.8.2026).
  *
- * Jokainen lunastus on aineiston omaa, lähteestä tarkistettua tekstiä
- * (docs/mantereet-tyoaineisto/takynostot-kreikka.md, ehdokkaat 2, 6 ja
- * 10) — siitä on paikoin lyhennetty, muttei lisätty eikä muutettu
- * yhtään faktaväitettä. Lähderivi on kortissa näkyvissä.
+ * YKSI NOSTO, EI ENEMPÄÄ (omistaja 26.8.2026 ilta: *"Täkyjä josta tulee
+ * puhekupla pitää olla vain yksi per maa. Kaikki muut normaaleita. …
+ * Kreikassa vielä useampi."*). Poolissa oli viisi nostoa, joista yksi
+ * nousi kuplaan ja neljä jäi kartalle täkysymboleiksi. Nyt jäljellä on
+ * omistajan kärkivalinta eli poolin ensimmäinen, ja loput ovat kartan
+ * tavallisia kohteita (js/packs/fokuskohteet-grc.js, oma erälohkonsa) —
+ * kaksi niistä jäi kokonaan pois, koska niiden paikalla on jo kohde.
  *
- * KUVAT on kysytty Commonsin imageinfo-rajapinnalta 25.8.2026 (koko,
- * lisenssi, tekijä, päiväys) — nimiä ei ole arvattu:
+ * Lunastus on aineiston omaa, lähteestä tarkistettua tekstiä
+ * (docs/mantereet-tyoaineisto/takynostot-kreikka.md, ehdokas 2) —
+ * siitä on paikoin lyhennetty, muttei lisätty eikä muutettu yhtään
+ * faktaväitettä. Lähderivi on kortissa näkyvissä.
+ *
+ * KUVA on kysytty Commonsin imageinfo-rajapinnalta 25.8.2026 (koko,
+ * lisenssi, tekijä, päiväys) — nimeä ei ole arvattu:
  *   - Sophia Schliemann wearing gold jewelry.jpg — 1093×1273, public
  *     domain, n. 1873. Kuva on JO PELISSÄ (js/packs/fokusvirta-ateena.js
  *     matkakirja.kuva), ja miniatyyri on tarkoituksella sama: pelaaja
  *     tunnistaa sen isoisän merkinnästä, ja juuri se tekee otsikosta
  *     koukun.
- *   - Anticythera shipwreck. Standard diving dress.jpg — 1968×1500,
- *     CC BY-SA 3.0, kuvattu 1901.
- *   - Kastri (Delphi) and the Phaedriades by Paul des Granges
- *     (1869).jpg — 7152×6608, public domain, negatiivi 1869.
  *
- * IKÄSOPIVUUS (13+, Perustuslaki). Antikytheran lunastuksessa kerrotaan
- * aineiston ohjeen mukaan, että sukellusten hinta oli kova, mutta
- * yksityiskohtia ei kuvata. Sofian tarinasta on jätetty pois
+ * IKÄSOPIVUUS (13+, Perustuslaki): Sofian tarinasta on jätetty pois
  * aineistossa erikseen hylätty avioliittokulma.
  *
- * ── PAIKAT LAUDALLA (omistaja 25.8.2026: kupla siihen kohtaan) ─────
+ * ── PAIKKA LAUDALLA (omistaja 25.8.2026: kupla siihen kohtaan) ─────
  *
  * Koordinaatit on laskettu SAMALLA MENETELMÄLLÄ kuin kohtaamispisteillä
  * (js/packs/fokusvirta-ateena.js) ja kartan kohteilla
@@ -142,11 +161,6 @@ import { sfx } from './sound.js';
  *     POHJOINEN 76 (tools/fokuskartta/piirto.js laudanProjektio).
  *   europe — tasaväli, x = (lon + 11) × 19,2 ja y = (72 − lat) × 26,3
  *     (js/packs/europe.js).
- *
- * TARKISTUS: samalla kaavalla laskettu Delfoi (22,5013 E / 38,4823 N)
- * antaa 6583,4 / 1862,2 ja 643,2 / 881,5 — täsmälleen ne luvut, jotka
- * fokuskohteet-grc.js:ssä jo ovat. Kaava on siis oikea, ja Kastrin
- * nosto käyttää suoraan Delfoin omaa pistettä.
  *
  * Lauta, jota rivillä ei ole, ei saa kuplaa vaan alalaidan liuskan —
  * väärään paikkaan ankkuroitu kupla olisi pahempi kuin ankkuroimaton.
@@ -183,233 +197,6 @@ const NOSTO_MAAT = {
         selite: 'Sofia Schliemann "Helenan koruissa". Juuri tämä kuva '
           + 'kertoi viranomaisille, missä Troijan kulta oli.',
         lahde: 'Tuntematon kuvaaja n. 1873, Wikimedia Commons (public domain)',
-      },
-    },
-    {
-      id: 'antikythera',
-      otsikko: 'Sukeltaja nousi pintaan kauhuissaan: pohjalla makasi kasa ruumiita',
-      teksti: 'Pääsiäisen aikaan 1900 sienisukeltajien alus jäi odottamaan '
-        + 'tuulta Antikytheran saarelle. Sukeltaja Elias Stadiatis laskeutui '
-        + '45 metriin ja pyysi heti ylös: hän kertoi nähneensä merenpohjalla '
-        + 'kasan mätäneviä ruumiita ja hevosia. Kapteeni Dimitrios Kondos '
-        + 'luuli miestä typpihumalaiseksi, sukelsi itse — ja nousi pintaan '
-        + 'pronssipatsaan käsivarsi mukanaan.\n\n'
-        + 'Kaksi vuotta myöhemmin, 17.5.1902, arkeologi Valerios Stais huomasi '
-        + 'museossa, että yhdessä syöpyneessä pronssimöykyssä oli hammasratas '
-        + 'ja kreikkalaista tekstiä: se oli Antikytheran kone, maailman vanhin '
-        + 'tunnettu analogiatietokone. Hinta oli kova — sukeltajista yksi '
-        + 'kuoli ja kaksi halvaantui sukeltajantautiin kesällä 1901.',
-      lahde: 'en-Wikipedia "Antikythera wreck", osiot "Discovery" ja '
-        + '"Artifact recovery" (tarkistettu 25.8.2026).',
-      /*
-       * Antikytheran saari, 23,3 E / 35,8667 N (en-Wikipedia
-       * "Antikythera": 35°52′N 23°18′E). Hylky makaa saaren
-       * koillisrannan edustalla, mutta saari itse on se piste, jonka
-       * kartta osaa näyttää — ja jonka viereen alus jäi odottamaan
-       * tuulta.
-       */
-      paikka: {
-        nimi: 'Antikythera',
-        laudat: {
-          maailmankartta: { x: 6610.0, y: 1962.6 },
-          europe: { x: 658.6, y: 950.3 },
-        },
-      },
-      kuva: {
-        tiedosto: 'Anticythera shipwreck. Standard diving dress.jpg',
-        selite: 'Antikytheran hylyn sukeltajat varusteissaan vuonna 1901.',
-        lahde: 'Wikimedia Commons (CC BY-SA 3.0)',
-      },
-    },
-    {
-      id: 'kastri',
-      otsikko: 'Kokonainen kylä istui oraakkelin päällä — eikä lähtenyt ennen kuin maa järisi',
-      teksti: 'Kun ranskalaiset halusivat kaivaa Delfoin pyhäkön esiin, sen '
-        + 'päällä seisoi Kastrin kylä: noin sata taloa ja 200 asukasta, jotka '
-        + 'olivat vuosisatoja louhineet antiikin kiviä omiin seiniinsä. Kylä '
-        + 'piti siirtää ennen kaivauksia, mutta asukkaat kieltäytyivät.\n\n'
-        + 'Tilaisuus tuli vasta kun maanjäristys vaurioitti kylää pahoin: '
-        + 'asukkaille tarjottiin kokonaan uutta kylää vanhan paikan tilalle, '
-        + 'ja 1893 Ranskan arkeologinen koulu kuori pois maavyöryjen massat ja '
-        + 'paljasti Apollonin pyhäkön.',
-      lahde: 'en-Wikipedia "Delphi", osio "Excavations" (tarkistettu 25.8.2026).',
-      kuva: {
-        tiedosto: 'Kastri (Delphi) and the Phaedriades by Paul des Granges (1869).jpg',
-        selite: 'Kastrin kylä raunioiden päällä Phaidriades-kallioiden alla. '
-          + 'Valokuva on vuodelta 1869 — neljä vuotta ennen isoisän matkaa.',
-        lahde: 'Paul des Granges 1869, Wikimedia Commons (public domain)',
-      },
-      // Kartalla on jo Delfoin oma merkki (js/packs/fokuskohteet-grc.js),
-      // joten nosto voi ohjata suoraan sen tietoruutuun.
-      kohde: 'delfoi',
-      /*
-       * Delfoi, 22,5013 E / 38,4823 N — samat luvut kuin kohteen omalla
-       * rivillä (js/packs/fokuskohteet-grc.js). Kastrin kylä seisoi
-       * täsmälleen pyhäkön päällä, joten paikka on sama piste.
-       */
-      paikka: {
-        nimi: 'Delfoi',
-        laudat: {
-          maailmankartta: { x: 6583.4, y: 1862.2 },
-          europe: { x: 643.2, y: 881.5 },
-        },
-      },
-    },
-    /*
-     * ── KAKSI ELÄINTÄKYÄ (päätoimittajan valinta, omistaja hyväksyi
-     *    26.8.2026) ─────────────────────────────────────────────────
-     *
-     * Raamattu, osio "Fokusmoodi", kohta TÄKYSYMBOLIT: *"SÖPÖILLE
-     * eläinkohteille PÖLLÖVAUVAN kuva"*. Symboli on ollut valmiina
-     * (js/fokusnosto-symbolit.js piirraNostosymPollo) siitä asti kun
-     * merkit tehtiin, mutta Kreikan poolissa ei ollut yhtäkään
-     * eläintäkyä, joten pöllönpoikanen ei ollut päässyt kartalle
-     * kertaakaan. Nämä kaksi ovat sen ensimmäiset käyttäjät: kenttä
-     * `symboli: 'elain'` riittää, koodiin ei kosketa.
-     *
-     * PAIKAT ON VALITTU MYÖS KARTAN EHDOILLA. Kreikan fokuslehden ikkuna
-     * on 468 laudan yksikköä leveä (js/packs/fokus-grc.js FOKUS_POHJAT
-     * .GRC), joten puhelimen ruudulla yksi yksikkö on suunnilleen yksi
-     * pikseli ja merkin läpimitta on 21 px. Kaikki, mikä on alle ~20
-     * yksikön päässä Ateenasta, piirtyisi siis kaupungin laatan päälle —
-     * ja koska symbolikerros on laatan YLÄPUOLELLA, se veisi myös laatan
-     * napautukset. Siksi kumpikin eläin on ankkuroitu sinne, missä
-     * KUVAN yksilö oikeasti kohdattiin (Samos, Euboia), eikä Ateenan
-     * kupeeseen: Korintin kanava on 25 yksikön päässä ja toimii, Lavrio
-     * ja Hymettos olisivat 15 ja 3.
-     *
-     * KUVAT on kysytty Commonsin imageinfo-rajapinnalta 26.8.2026
-     * (koko, lisenssi, tekijä, päiväys, Restrictions tyhjä) JA katsottu
-     * silmin. Kummassakin on villi yksilö Kreikassa, ei häkkiä eikä
-     * ihmisiä.
-     */
-    {
-      /*
-       * ELÄINTÄKY 1 — PIKKUPÖLLÖ.
-       *
-       * Faktat en-Wikipediasta, ei yhtään väitettä sen yli: laji elää
-       * Kreikassa (mm. alalaji A. n. indigena), pöllö oli Ateenan
-       * hopearahan kuva, ja sanonta pöllöjen viemisestä Ateenaan
-       * tarkoitti nimenomaan sitä kolikkoa. Akropoliin nykyesiintymistä
-       * EI väitetä mitään — sellaista lähdettä ei ole.
-       *
-       * PÖLLÖN OMA HEITTO on tarkoituksella yksi kuiva lause tekstin
-       * lopussa (Raamattu, PÖLLÖN KARAKTÄÄRI: kuiva huumori, ei
-       * huutomerkkejä). Se puhuu lajista, ei pelistä eikä pelaajalle.
-       */
-      id: 'pikkupollo',
-      symboli: 'elain',
-      otsikko: 'Ateena löi tunnuksensa hopeaan — mallina 22-senttinen lintu, joka tuijottaa yhä takaisin',
-      teksti: 'Athenen pyhä lintu ei ole vertauskuva vaan laji. Pikkupöllö '
-        + '(Athene noctua) on noin 22 senttiä pitkä, siipiväli 56 senttiä ja '
-        + 'paino noin 180 grammaa; keltaiset silmät ja valkeat kulmajuovat '
-        + 'antavat sille ainaisen tuiman ilmeen. Suku sai nimensä '
-        + 'jumalattaresta ja lajinimi noctua Minervalle pyhitetystä pöllöstä. '
-        + 'Lintu on osittain päiväaktiivinen ja istuu usein näkyvällä paikalla '
-        + 'keskellä päivää; se viihtyy raunioiden, louhosten ja '
-        + 'kalliopaljastumien liepeillä, ja kanta on yhä elinvoimainen.\n\n'
-        + 'Kaupunki teki linnusta rahansa. Vuoden 500 eaa. tetradrakmassa '
-        + 'pöllö istuu oliivinoksa vierellään, ja 510 eaa. jälkeen pöllöstä '
-        + 'tuli Ateenan hopearahan vakiokuva; kolikkoa kutsuttiin antiikin '
-        + 'maailmassa yksinkertaisesti nimellä glaux, pikkupöllö. Aristofanes '
-        + 'pani Linnuissa ja Lysistratessa merkille, kuinka paljon näitä '
-        + 'lintuja seudulla oli. Sanonta pöllöjen viemisestä Ateenaan '
-        + 'tarkoitti kolikkoa ja oli turhan työn vertaus — sama kuin hiilien '
-        + 'kantaminen Newcastleen. Kopio samasta kolikosta on nykyisin '
-        + 'Kreikan yhden euron rahassa.\n\n'
-        + 'Kahdessatuhannessa vuodessa laji ei ole muuttanut ilmettään '
-        + 'senttiäkään. En sano tästä enempää, jottei kukaan luulisi minun '
-        + 'kehuvan sukuani.',
-      lahde: 'en-Wikipedia "Little owl" (osiot "Taxonomy", "Description", '
-        + '"Distribution and habitat", "Status" ja "In human culture"), '
-        + '"Owl of Athena" (osio "Ancient Greece") ja "Owls to Athens" '
-        + '(osio "Title") — tarkistettu 26.8.2026.',
-      /*
-       * Samos, 26,83333 E / 37,75 N — en-Wikipedia "Samos". Kuvan lintu
-       * on juuri sieltä (Commonsin oma tiedostokuvaus), ja saari on
-       * lehden ikkunan sisällä, 104 yksikön päässä Ateenasta.
-       */
-      paikka: {
-        nimi: 'Samos',
-        laudat: {
-          maailmankartta: { x: 6727.8, y: 1890.5 },
-          europe: { x: 726.4, y: 900.8 },
-        },
-      },
-      /*
-       * Commons 26.8.2026: 2613×1742, CC0, Hobbyfotowiki, kuvattu
-       * 19.9.2024, kuvaus "little owl (Athene noctua), Greece, island of
-       * Samos", Restrictions tyhjä. Katsottu silmin: terävä, edestä
-       * kuvattu villi lintu kivirakenteen aukossa, ei rengasta, ei
-       * häkkiä, ei ihmisiä.
-       */
-      kuva: {
-        tiedosto: 'Little owl (Athene noctua),.jpg',
-        selite: 'Pikkupöllö Samoksella. Laji on osittain päiväaktiivinen ja '
-          + 'istuu usein näkyvillä keskellä päivää.',
-        lahde: 'Hobbyfotowiki, Wikimedia Commons (CC0)',
-      },
-    },
-    {
-      /*
-       * ELÄINTÄKY 2 — REUNUSKILPIKONNA.
-       *
-       * Alkuperäinen tilaus oli Filopappoksen kukkula, mutta lähdettä
-       * lajin esiintymiselle juuri sillä kukkulalla ei ole: en-Wikipedia
-       * kertoo levinneisyyden maan tasolla (Peloponnesokselta
-       * Olympokselle) eikä Filopappos-artikkeli mainitse lajia
-       * lainkaan. Teksti pysyy siksi siinä, minkä lähde kattaa, ja
-       * paikka on se saari, jolla kuvan yksilö kohdattiin.
-       */
-      id: 'reunuskilpikonna',
-      symboli: 'elain',
-      otsikko: 'Maa oli liian kova pesäkuopalle — naaras kasteli sen itse ja polki jäljet umpeen',
-      teksti: 'Euroopan suurin kilpikonna on kreikkalainen. Reunuskilpikonna '
-        + '(Testudo marginata) kasvaa 35-senttiseksi ja viisikiloiseksi, ja se '
-        + 'on kotoperäinen Kreikassa, Italiassa ja Balkanilla. Luontainen '
-        + 'levinneisyys kulkee Etelä-Kreikassa Peloponnesokselta '
-        + 'Olympokselle, ja vuorilla laji nousee jopa 1 600 metriin. Nimensä '
-        + 'se on saanut kilven takareunasta, joka levenee ulospäin kuin '
-        + 'kellon helma.\n\n'
-        + 'Aikuisen kilpi on lähes musta, ja vuoristossa se on etu: tumma '
-        + 'pinta imee lämmön nopeasti. Aamulla kilpikonna paistattelee '
-        + 'auringossa nostaakseen ruumiinlämpönsä ja lähtee vasta sitten '
-        + 'ruokailemaan; keskipäivän kuumuudeksi se vetäytyy suojaan ja tulee '
-        + 'ulos taas iltapäivällä.\n\n'
-        + 'Munat tulevat touko–kesäkuussa kuoppaan, jonka naaras kaivaa '
-        + 'takajaloillaan vuorotellen ja jonka syvyyden määrää jalkojen '
-        + 'pituus. Jos maa on kaivettavaksi liian kovaa, naaras pehmittää sen '
-        + 'peräaukkorauhasensa vedellä. Lopuksi hän tallaa kuopan suun '
-        + 'umpeen, kunnes maa on yhtä kovaa kuin ennenkin — pesää ei löydä '
-        + 'kukaan. Munia on kerralla noin viisitoista, ja kuoriutumiseen '
-        + 'menee luonnossa noin sata päivää.',
-      lahde: 'en-Wikipedia "Marginated tortoise", osiot "Description", '
-        + '"Distribution and habitat" ja "Reproduction" (tarkistettu '
-        + '26.8.2026).',
-      /*
-       * Euboia (Evia), 24,0 E / 38,5 N — en-Wikipedia "Euboea". Saari on
-       * 22 yksikön päässä Ateenasta eli suunnilleen yhtä kaukana kuin
-       * Korintin kanavan oma merkki, ja kuvan kilpikonna tavattiin
-       * siellä.
-       */
-      paikka: {
-        nimi: 'Euboia',
-        laudat: {
-          maailmankartta: { x: 6633.3, y: 1861.5 },
-          europe: { x: 672.0, y: 881.1 },
-        },
-      },
-      /*
-       * Commons 26.8.2026: 2816×2112, CC BY-SA 4.0, kernpanik, kuvattu
-       * 16.4.2017, kuvaus "Testudo marginata on Evia (Euboea) island,
-       * Greece", Restrictions tyhjä. Katsottu silmin: villi yksilö
-       * maastossa, lähikuva päästä ja etujaloista, ei ihmisiä.
-       */
-      kuva: {
-        tiedosto: 'Testudo marginata on Evia (Euboea) island, Greece.jpg',
-        selite: 'Reunuskilpikonna Euboian saarella. Raajojen etupuolta '
-          + 'peittävät suuret suomut, ja aikuisen kilpi on lähes musta.',
-        lahde: 'kernpanik, Wikimedia Commons (CC BY-SA 4.0)',
       },
     },
   ],
@@ -485,17 +272,33 @@ function nostoMaanPooli(ui, city) {
    * NOSTO_MAAT jää Kreikan poolille ja varapoluksi.
    *
    * PACKIN POOLI SAA SAMAT KENTÄT: valinnainen `paikka` (kupla ja
-   * symboli kartalle) ja valinnainen `symboli: 'elain'` (pöllövauva
-   * huutomerkin sijaan) kulkevat levityksen mukana sellaisenaan, joten
-   * kenttien lisääminen pakettiin ei vaadi riviä tänne.
+   * ankkurisymboli kartalle) ja valinnainen `symboli: 'elain'`
+   * (pöllövauva huutomerkin sijaan) kulkevat levityksen mukana
+   * sellaisenaan, joten kenttien lisääminen pakettiin ei vaadi riviä
+   * tänne.
    */
   const oma = fokusvirtaSisalto(ui, city)?.takynostot;
   if (Array.isArray(oma) && oma.length) {
-    return oma.map((n) => (n.teksti ? n : { ...n, teksti: n.lunastus }));
+    return nostoYksiPerMaa(oma.map((n) => (n.teksti ? n : { ...n, teksti: n.lunastus })));
   }
   const taulu = ui?.game?.pack?.map?.cityCountry;
   const iso = (taulu && city && taulu[city.id]) || null;
-  return (iso && NOSTO_MAAT[iso]) || null;
+  return (iso && nostoYksiPerMaa(NOSTO_MAAT[iso])) || null;
+}
+
+/**
+ * YKSI TÄKY PER MAA — SÄÄNTÖ ON KOODISSA EIKÄ PELKÄSSÄ DATASSA.
+ *
+ * Omistaja 26.8.2026 ilta: *"Täkyjä josta tulee puhekupla pitää olla
+ * vain yksi per maa."* Poolit on karsittu jo datassa (jokaisessa
+ * `takynostot`-listassa ja NOSTO_MAAT-taulussa on yksi rivi), mutta
+ * leikkaus on tässäkin: uusi maa tai vahingossa jäänyt toinen rivi ei
+ * saa palauttaa kartalle sitä kahden merkkilajin sekamelskaa, joka
+ * juuri purettiin. Jos poolia halutaan joskus taas kasvattaa, muutos
+ * tehdään tietoisesti tähän yhteen kohtaan.
+ */
+function nostoYksiPerMaa(pooli) {
+  return Array.isArray(pooli) && pooli.length ? pooli.slice(0, 1) : null;
 }
 
 /**
@@ -503,8 +306,8 @@ function nostoMaanPooli(ui, city) {
  * vapaa?
  *
  * NÄKYVYYSEHDOT OVAT TÄSMÄLLEEN LIUSKAN AIKAISET (omistajan tilaus:
- * sama hetki, sama pooli, sama kirjanpito) — kupla ja symbolit vain
- * jakavat saman listan keskenään. Kolme ehtoa, kaikki pakollisia:
+ * sama hetki, sama pooli, sama kirjanpito). Kolme ehtoa, kaikki
+ * pakollisia:
  *   1. kaupungilla on fokusvirtasisältö (eli fokusmoodi on päällä,
  *      pelaaja on ihminen ja laudalla on kevyt kulku käytössä);
  *   2. MAAN AARRE ON LÖYTYNYT — laatta on käännetty, eli lehtilukko on
@@ -512,8 +315,8 @@ function nostoMaanPooli(ui, city) {
  *      pelaajalla on kesken toinen asia, eikä nosto saa kilpailla siitä;
  *   3. nosto on lukematon (laitteen muisti) ja ohittamaton (istunto).
  *
- * LUNASTETTU TÄKY EI PALAA SYMBOLIKSI: luetut karsitaan tästä yhdestä
- * listasta, josta sekä kupla että symbolikerros syntyvät.
+ * LUNASTETTU TÄKY EI PALAA KARTALLE: luetut karsitaan tästä yhdestä
+ * listasta, josta sekä kupla että sen ankkurisymboli syntyvät.
  */
 function nostoJaljella(ui) {
   if (typeof document === 'undefined') return [];
@@ -531,30 +334,20 @@ function nostoJaljella(ui) {
 /**
  * MIKÄ NOSTO ON KUPLASSA?
  *
- * Poolin ensimmäinen tarjolla oleva — paitsi jos pelaaja on napauttanut
- * jotakin symbolia, jolloin se nousee kuplaan ja entinen putoaa
- * symboliksi (nostoValitse). Valinta on istunnon tieto eikä tallenne:
- * se kertoo vain, mitä ruudulla katsotaan juuri nyt.
+ * Poolin ainoa tarjolla oleva — tai ei mitään, jos kuplan kiintiö on
+ * jo käytetty tässä istunnossa.
  */
 function nostoVuorossa(ui, jaljella) {
   if (!jaljella.length) return null;
   /*
-   * PELAAJAN OMA VALINTA VOITTAA AINA. Symbolin napautus on pyyntö
-   * nähdä juuri se täky, eikä sitä rajoita mikään kiintiö.
-   */
-  const valittu = jaljella.find((n) => n.id === ui?.fokusnostoValittu);
-  if (valittu) return valittu;
-  /*
-   * VAIN YKSI KUPLA ITSESTÄÄN (omistajan tilaus v1119, kohta 20:
+   * VAIN YKSI KUPLA ISTUNNOSSA (omistajan tilaus v1119, kohta 20:
    * *"Ruudulle saa tulla VAIN YKSI täkykupla, eikä sen jälkeen enempää
-   * kuplia — KAIKKI muut täkyt näkyvät HETI kartalla symboleina"*).
+   * kuplia"*).
    *
    * Ennen jokainen luettu täky nosti seuraavan kuplaan, ja kaupungissa
-   * saattoi ponnahtaa kolme kuplaa peräkkäin. Nyt ensimmäinen täky
-   * esittelee koko mekaniikan, ja loput odottavat symboleinaan sitä,
-   * että pelaaja napauttaa niitä. Lippu on istunnon tieto: uusi
-   * kaupunki samassa istunnossa ei ala kuplasta, koska mekaniikka on
-   * jo nähty.
+   * saattoi ponnahtaa kolme kuplaa peräkkäin. Lippu on istunnon tieto:
+   * uusi kaupunki samassa istunnossa ei ala kuplasta, koska mekaniikka
+   * on jo nähty.
    */
   if (ui?.fokusnostoKuplaNahty) return null;
   return jaljella[0];
@@ -581,39 +374,23 @@ function nostonPaikka(ui, nosto) {
 }
 
 /**
- * SYMBOLIKERROKSEN LISTA: jokainen tarjolla oleva nosto, jolla on
- * paikka. Aktiivinen on mukana — symbolikerros piirtää sen kohdalle
- * kuplan ankkurin symbolin sijaan.
+ * KUPLAN ANKKURIMERKINTÄ, tai null jos täyllä ei ole paikkaa tällä
+ * laudalla (silloin piirtyy alalaidan liuska eikä kartalle tule mitään).
  *
  * SYMBOLI TULEE DATASTA: täyn `symboli`-kenttä on Raamatun
  * SYMBOLITAKSONOMIAN kategoria ('elain', 'historia', 'ruoka', … —
  * koko lista js/fokusnosto-symbolit.js NOSTOSYM_TYYPIT). Muut arvot
  * ja puuttuva kenttä → keltainen huutomerkki, kuten alusta asti.
- *
- * Kreikan poolissa on kolme huutomerkkiä ja kaksi eläintäkyä
- * (pikkupöllö ja reunuskilpikonna, lisätty v1121).
  */
-function nostoMerkinnat(ui, jaljella) {
-  const merkinnat = [];
-  for (const nosto of jaljella) {
-    const paikka = nostonPaikka(ui, nosto);
-    if (!paikka) continue;
-    merkinnat.push({
-      id: nosto.id,
-      otsikko: nosto.otsikko,
-      symboli: NOSTOSYM_TYYPIT.has(nosto.symboli) ? nosto.symboli : 'huuto',
-      paikka,
-    });
-  }
-  return merkinnat;
-}
-
-/** Symbolin napautus: tämä täky kuplaan, entinen putoaa symboliksi. */
-function nostoValitse(ui, id) {
-  if (!ui) return;
-  ui.fokusnostoValittu = id;
-  nostoPintaPois(ui);
-  paivitaFokusnosto(ui);
+function nostonMerkinta(ui, nosto) {
+  const paikka = nosto ? nostonPaikka(ui, nosto) : null;
+  if (!paikka) return null;
+  return {
+    id: nosto.id,
+    otsikko: nosto.otsikko,
+    symboli: NOSTOSYM_TYYPIT.has(nosto.symboli) ? nosto.symboli : 'huuto',
+    paikka,
+  };
 }
 
 /**
@@ -666,9 +443,8 @@ const NOSTO_KUPLAN_VIIVE_MS = 2600;
  * fokusvirtaSaapumisesta, jonka js/ui.js render ajaa joka piirrossa).
  *
  * TYÖ TEHDÄÄN VAIN KUN NOSTO VAIHTUU. Ruudulla oleva nosto jätetään
- * rauhaan, jottei se aloita nousuanimaatiotaan alusta joka piirrossa —
- * ja jotta luetun tilalle nouseva seuraava saa oman nousunsa. Sama
- * sääntö on symbolikerroksella: se vertaa omaa avaintaan eikä pura
+ * rauhaan, jottei se aloita nousuanimaatiotaan alusta joka piirrossa.
+ * Sama sääntö on ankkurikerroksella: se vertaa omaa avaintaan eikä pura
  * yhtäkään solmua turhaan.
  */
 export function paivitaFokusnosto(ui, yritys = 0) {
@@ -681,32 +457,22 @@ export function paivitaFokusnosto(ui, yritys = 0) {
   }
   nostoLataaTyyli();
   const nosto = nostoVuorossa(ui, jaljella);
-  const paikka = nosto ? nostonPaikka(ui, nosto) : null;
-  const merkinnat = nostoMerkinnat(ui, jaljella);
+  const merkinta = nostonMerkinta(ui, nosto);
+  const paikka = merkinta?.paikka ?? null;
   /*
-   * SYMBOLIT HETI JA AINA (omistajan tilaus v1119, kohta 20b: *"muut
-   * symbolit (huutomerkit ym.) ilmestyvät laudalle HETI"*).
-   *
-   * Tässä oli ennen varhainen paluu: jos ruutu oli varattu (pöllön
-   * kuittauskupla, lehti, lento), koko nostokerros purettiin ja
-   * symbolitkin katosivat kartalta. Symbolit eivät kuitenkaan ole
-   * kelluvia pintoja vaan kartan omia merkkejä — ne eivät ole kenenkään
-   * tiellä. Vain KUPLA odottaa vuoroaan (alla).
-   *
-   * Kerros vertaa omaa avaintaan ja tekee työtä vain kun lista tai
-   * aktiivinen vaihtui. Kupla tarvitsee kerroksen ankkurin, joten sen
+   * ANKKURI KARTALLE ENSIN. Kerros vertaa omaa avaintaan ja tekee työtä
+   * vain kun täky vaihtuu; kupla tarvitsee kerroksen ankkurin, joten sen
    * on oltava kartalla ennen kuin kuplaa asemoidaan.
+   *
+   * Kun kuplan vuoro on käytetty (`nosto` on null), kartalle ei jää
+   * mitään: poolissa on vain tämä yksi täky, ja muut maan aiheet ovat
+   * kartan tavallisia kohteita (js/fokuskohteet.js).
    */
-  paivitaNostosymbolit(ui, {
-    aktiivinen: paikka ? nosto.id : null,
-    merkinnat,
-    valitse: (id) => nostoValitse(ui, id),
-  });
+  paivitaNostosymbolit(ui, { merkinta });
   // Vahti vain silloin kun kartalla on jotain seurattavaa: pelkkä liuska
   // on ruudun elementti eikä liiku kartan mukana.
-  if (merkinnat.length) nostoVahdiKarttaa(ui);
+  if (merkinta) nostoVahdiKarttaa(ui);
   else nostoLopetaVahti(ui);
-  // Kuplan vuoro on käytetty (vain yksi itsestään): kartalle jää symbolit.
   if (!nosto) { nostoPintaPois(ui); return; }
   if (!nostoRuutuVapaa()) {
     nostoPintaPois(ui);
@@ -750,8 +516,8 @@ export function paivitaFokusnosto(ui, yritys = 0) {
     return;
   }
   nostoPintaPois(ui);
-  // Kuplan kiintiö on käytetty: seuraavat täkyt jäävät symboleiksi
-  // (ks. nostoVuorossa). Lippu on istunnon tieto eikä tallennetta.
+  // Kuplan kiintiö on käytetty tässä istunnossa (ks. nostoVuorossa).
+  // Lippu on istunnon tieto eikä tallennetta.
   ui.fokusnostoKuplaNahty = true;
   ui.fokusnosto = {
     avain,
@@ -761,7 +527,7 @@ export function paivitaFokusnosto(ui, yritys = 0) {
 }
 
 /**
- * Kupla tai liuska pois ruudulta — kartan symbolit jäävät.
+ * Kupla tai liuska pois ruudulta — kartan ankkurisymboli jää.
  *
  * SIIVOUS TEHDÄÄN VALITSIMELLA eikä pelkällä muistiin jääneellä
  * viitteellä: uusi peli rakentaa uuden UI-olion (js/main.js), jolloin
@@ -777,8 +543,8 @@ function nostoPintaPois(ui) {
 }
 
 /**
- * Nosto pois ruudulta kokonaan: kupla tai liuska, kartan symbolit ja
- * kartan liikkeen vahti. Muistiin ei kosketa — se on eri asia.
+ * Nosto pois ruudulta kokonaan: kupla tai liuska, kartan ankkurisymboli
+ * ja kartan liikkeen vahti. Muistiin ei kosketa — se on eri asia.
  */
 export function suljeFokusnosto(ui) {
   nostoPintaPois(ui);
@@ -895,9 +661,14 @@ function piirraNosto(ui, nosto) {
  * liuskassa. Otsikkotaso, teksti ja kuva ovat samat kummassakin; vain
  * kehys ympärillä vaihtuu (omistajan tilaus: *"sama otsikkoteksti +
  * miniatyyri, klikkiotsikkotaso säilyy"*).
+ *
+ * KUPLASSA PAINIKE ON ITSE PAPERI. Omistaja 26.8.2026 ilta: *"kun täkyä
+ * painaa niin sen pitäisi aueta suoraan pop upiksi"* — jos painike olisi
+ * kuplan sisällä oma laatikkonsa, paperin reunoille jäisi kuollutta
+ * pintaa, joka ei tee mitään. Siksi kutsuja antaa valmiin elementin
+ * (`nappi`), ja kuplassa se on `.fokusnosto-kuplapaperi` itse.
  */
-function nostoKlikkiotsikko(ui, nosto) {
-  const nappi = html('button', 'fokusnosto-nappi');
+function nostoKlikkiotsikko(ui, nosto, nappi = html('button', 'fokusnosto-nappi')) {
   nappi.type = 'button';
   nappi.setAttribute('aria-label', `${nosto.otsikko} — lue lisää`);
   nappi.appendChild(html('span', 'fokusnosto-otsikko', nosto.otsikko));
@@ -925,7 +696,6 @@ function nostoKlikkiotsikko(ui, nosto) {
 /**
  * RASTI — noston voi työntää syrjään lukematta, ja silloin se ei nouse
  * enää tässä istunnossa (`fokusnostoOhitetut`, ei laitteen muisti).
- * Sama sopimus kuin liuskan aikana: poolin seuraava saa nousta heti.
  */
 function nostoRasti(ui, nosto) {
   const sulje = html('button', 'fokusnosto-sulje', '✕');
@@ -935,9 +705,7 @@ function nostoRasti(ui, nosto) {
   sulje.addEventListener('click', () => {
     sfx.play('paper');
     (ui.fokusnostoOhitetut ??= new Set()).add(nosto.id);
-    if (ui.fokusnostoValittu === nosto.id) ui.fokusnostoValittu = null;
     suljeFokusnosto(ui);
-    // Seuraava poolista saa nousta heti tilalle.
     paivitaFokusnosto(ui);
   });
   return sulje;
@@ -964,10 +732,17 @@ const NOSTO_NOKKA_VARA = 16;
  *   .fokusnosto-kuplapaperi itse paperi ja sen NOUSU (opacity +
  *                           transform). Nousu on omalla portaallaan,
  *                           koska ulomman muunnos on jo varattu paikalle.
+ *                           PAPERI ON MYÖS PAINIKE (ks. alla).
  *   .fokusnosto-nokka       kärki, joka osoittaa ankkuriin. Sen
  *                           vaakapaikka lasketaan erikseen, jotta se
  *                           osoittaa oikeaan kohtaan silloinkin kun
  *                           kupla on siirtynyt ruudun reunasta.
+ *
+ * KOKO KUPLA AVAA LUNASTUKSEN (omistaja 26.8.2026 ilta: *"kun täkyä
+ * painaa niin sen pitäisi aueta suoraan pop upiksi ilman pelkkää otsikko
+ * nostoa"*). Paperi ON se painike — ei laatikko, jonka sisällä on
+ * pienempi painike — joten paperilla ei ole yhtään kuollutta pintaa:
+ * napautus otsikkoon, miniatyyriin tai marginaaliin tekee saman asian.
  *
  * MIKSI BODY EIKÄ .map-pane: ks. tiedoston alku. Kartan eleet eivät näe
  * bodyssa olevaa pintaa lainkaan, joten js/kartta.js:n KELLUVA_UI-listaa
@@ -978,16 +753,16 @@ function piirraNostonKupla(ui, nosto, paikka) {
   kupla.setAttribute('role', 'group');
   kupla.setAttribute('aria-label', paikka.nimi ? `Täkynosto: ${paikka.nimi}` : 'Täkynosto');
 
-  const paperi = html('div', 'fokusnosto-kuplapaperi');
   /*
    * Kuplassa EI ole rastia (omistaja 25.8.2026: "Ota ruksi pois
-   * pop-upista") — nosto vaihtuu symbolia napauttamalla ja poistuu
-   * lunastettaessa. Rasti elää yhä liuska-varapolussa.
-   * Huutomerkkitäkyjen kupla saa kevyen keltaisen taustan (sama
-   * omistajan viesti); eläintäky pysyy paperinvärisenä.
+   * pop-upista") — nosto poistuu lunastettaessa. Rasti elää yhä
+   * liuska-varapolussa. Huutomerkkitäkyjen kupla saa kevyen keltaisen
+   * taustan (sama omistajan viesti); eläintäky pysyy paperinvärisenä.
    */
   if ((nosto.symboli ?? 'huuto') !== 'elain') kupla.classList.add('fokusnosto-kupla-huuto');
-  paperi.append(nostoKlikkiotsikko(ui, nosto));
+  const paperi = nostoKlikkiotsikko(
+    ui, nosto, html('button', 'fokusnosto-kuplapaperi fokusnosto-nappi'),
+  );
   const nokka = html('span', 'fokusnosto-nokka');
   nokka.setAttribute('aria-hidden', 'true');
   paperi.appendChild(nokka);
@@ -1276,9 +1051,6 @@ export function kytkeFokusnosto() {
 export function nollaaFokusnosto(ui) {
   if (ui) {
     ui.fokusnostoOhitetut = new Set();
-    // Symbolista nostettu valinta koski vanhaa lautaa; uudella laudalla
-    // poolin oma järjestys saa taas ratkaista.
-    ui.fokusnostoValittu = null;
     // Kortin muistiviite pois ENNEN sulkua: muuten sulku kutsuisi
     // paivitaFokusnostoa, joka nostaisi seuraavan noston juuri
     // nollattavan laudan päälle.

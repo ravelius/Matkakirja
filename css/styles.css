@@ -19948,15 +19948,9 @@ body.fokuspohja .maa-pilleri { display: none; }
   --sym-urheilu: #93893c;      /* kullanvihreä — urheilu ja kisat */
 }
 
-/* Näkymätön sormenkokoinen osuma-alue (r = 22 → 44 px perustasolla). */
-.nostosym-osuma {
-  fill: none;
-  /* `fill: none` ei ota napautuksia ilman tätä. */
-  pointer-events: all;
-  /* SVG:ssä viiva periytyy: ilman nollausta ryhmän tyyli piirtäisi
-     osuma-alueen ympärille kehän (ks. piirraNostosymMerkki). */
-  stroke: none;
-}
+/* Täkysymbolien oma osuma-alue (.nostosym-osuma) poistui 26.8.2026:
+ * yksi kuplatäky per maa, muut aiheet ovat kartan tavallisia
+ * kohteita (js/fokusnosto-symbolit.js). */
 
 /* Paperinvaalea aluslaatta ja musteviivainen kehä — joka symbolilla. */
 .nostosym-laatta { fill: var(--sym-laatta); }

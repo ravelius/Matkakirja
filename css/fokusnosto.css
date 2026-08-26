@@ -1,5 +1,5 @@
 /*
- * TÄKYNOSTO (js/fokusnosto.js): kartan puhekupla, sen täkysymbolit
+ * TÄKYNOSTO (js/fokusnosto.js): kartan puhekupla, sen ankkurisymboli
  * (js/fokusnosto-symbolit.js) ja lunastuskortti.
  *
  * OMA TIEDOSTO, EI styles.css: css/styles.css on toisen työvaiheen
@@ -23,7 +23,7 @@
  * TIEDOSTON OSAT
  *   1. LIUSKA — vanha alalaidan esitystapa, varapolku ilman paikkaa
  *   2. PUHEKUPLA — nykyinen esitystapa, ankkuroituna kartalle
- *   3. TÄKYSYMBOLIT — kartan SVG-kerros (js/fokusnosto-symbolit.js)
+ *   3. ANKKURISYMBOLI — kartan SVG-kerros (js/fokusnosto-symbolit.js)
  *   4. LUNASTUSKORTTI
  */
 
@@ -234,10 +234,37 @@ body.kartalento .fokusnosto-kupla { opacity: 0; pointer-events: none; }
   .fokusnosto-kuplapaperi { transition: none; }
 }
 
-/* Kuplan kulmat ovat hiukan pyöreämmät kuin liuskan, joten sen omat
-   painikkeet saavat samat kulmat — muuten nappi työntyisi kehyksen yli. */
-.fokusnosto-kuplapaperi .fokusnosto-nappi { border-radius: 0.7rem 0 0 0.7rem; }
-.fokusnosto-kuplapaperi .fokusnosto-sulje { border-radius: 0 0.7rem 0.7rem 0; }
+/*
+ * KOKO KUPLA ON PAINIKE (omistaja 26.8.2026 ilta: *"kun täkyä painaa
+ * niin sen pitäisi aueta suoraan pop upiksi ilman pelkkää otsikko
+ * nostoa"*).
+ *
+ * Paperi EI OLE enää laatikko, jonka sisällä on pienempi nappi: se on
+ * itse `<button>`, jolla on molemmat luokat (js/fokusnosto.js
+ * piirraNostonKupla). Näin paperilla ei ole yhtään kuollutta pintaa —
+ * napautus otsikkoon, miniatyyriin tai marginaaliin tekee saman asian.
+ *
+ * MITÄ TÄSSÄ ON PAKKO KIRJOITTAA AUKI. `.fokusnosto-nappi` on liuskaa
+ * varten läpinäkyvä ja reunaton, ja sen `:hover` on yhtä tarkka kuin
+ * paperin oma sääntö. Ilman näitä rivejä kupla menettäisi kehyksensä
+ * kohdistuksessa ja muuttuisi hiiren alla läpikuultavaksi.
+ */
+.fokusnosto-kuplapaperi.fokusnosto-nappi {
+  min-height: 48px;
+  margin: 0;
+  padding: 0.4rem 0.55rem 0.4rem 0.7rem;
+  align-items: center;
+  border: 1px solid rgba(122, 85, 20, 0.34);
+  border-radius: 0.7rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.fokusnosto-kuplapaperi:hover,
+.fokusnosto-kuplapaperi:focus-visible { background: #efe7d2; }
+
+.fokusnosto-kupla-huuto .fokusnosto-kuplapaperi:hover,
+.fokusnosto-kupla-huuto .fokusnosto-kuplapaperi:focus-visible { background: #f1e3ba; }
 
 /*
  * NOKKA on 45 astetta käännetty neliö, ei kolmio-hakkerointi: näin
@@ -278,47 +305,37 @@ body.kartalento .fokusnosto-kupla { opacity: 0; pointer-events: none; }
 .fokusnosto-kupla-huuto .fokusnosto-nokka { background: #f6ebc8; }
 
 /* ===========================================================================
-   3. TÄKYSYMBOLIT — kartan oma SVG-kerros (js/fokusnosto-symbolit.js)
+   3. TÄKYN ANKKURISYMBOLI — kartan oma SVG-kerros
+      (js/fokusnosto-symbolit.js)
    ---------------------------------------------------------------------------
-   Raamattu, TÄKYSYMBOLIT: *"muut vastaavat täkykohteet merkitään
-   yksinkertaisilla symboleilla — keltainen huutomerkki tms.
-   skandaalille/uskomattomalle, ja SÖPÖILLE eläinkohteille PÖLLÖVAUVAN
-   kuva … Symbolit tehdään kartan henkeen ja samalla tyylillä
-   (seepiamuste, aikakauden karttamerkki)."*
+   Raamattu, TÄKYSYMBOLIT: *"Symbolit tehdään kartan henkeen ja samalla
+   tyylillä (seepiamuste, aikakauden karttamerkki)."*
+
+   KERROKSELLA ON ENÄÄ YKSI MERKKI. Omistaja 26.8.2026 ilta: *"Täkyjä
+   josta tulee puhekupla pitää olla vain yksi per maa. Kaikki muut
+   normaaleita."* Poolin muut täyt olivat ennen tässä kerroksessa
+   napautettavina symboleina; nyt ne ovat kartan tavallisia kohteita
+   (css/fokuskohteet.css), ja tänne jäi vain kuplan alla oleva ankkuri.
 
    SYMBOLIEN PIIRTOTYYLIT MUUTTIVAT css/styles.css:ÄÄN (osio
-   KARTTASYMBOLIT, --sym-*): sama kirjasto piirtää nyt myös kartan
+   KARTTASYMBOLIT, --sym-*): sama kirjasto piirtää myös kartan
    kohdemerkit (js/fokuskohteet.js), eikä kohdekerros lataa tätä
-   tiedostoa — styles.css on ainoa, joka on aina paikalla. Tänne jäi
-   vain se, mikä koskee TÄKYKERROSTA: napautukset ja kohdistus.
+   tiedostoa — styles.css on ainoa, joka on aina paikalla.
 
    EI SUODATTIMIA (tests/rules.test.mjs): laatta on oma ympyränsä eikä
    varjo, ja kaikki muu on täyttöä ja viivaa.
    =========================================================================== */
 
 .fokusnosto-symbolit {
-  /* Kerros ei ota napautuksia vastaan; vain merkit ottavat. */
+  /* Kerros ei ota napautuksia vastaan lainkaan. */
   pointer-events: none;
 }
 
-.fokusnosto-symboli {
-  pointer-events: auto;
-  cursor: pointer;
-}
-
 /* Ankkuri on kuplan alla oleva merkintä paikasta, ei painike: kupla on
-   sen päällä ja kuplan oma nappi vie lunastukseen. */
+   sen päällä, ja koko kupla vie lunastukseen. */
 .fokusnosto-ankkuri { pointer-events: none; }
 
 .nostosym-ankkuripiste { fill: var(--sym-muste); }
-
-/* Näppäimistön kohdistus näkyy myös kartalla. */
-.fokusnosto-symboli:focus-visible { outline: none; }
-
-.fokusnosto-symboli:focus-visible .nostosym-kehys {
-  stroke-width: 2;
-  stroke-opacity: 1;
-}
 
 /* ===========================================================================
    4. LUNASTUSKORTTI

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1153, teksti: 'Yksi kuplataky per maa, kupla avaa suoraan' },
   { v: 1152, teksti: 'Raamattuun kohdekartan kohdemaara 6-15' },
   { v: 1151, teksti: 'Raamattuun: elainkohteille lisakuvat + livekamerat' },
   { v: 1150, teksti: 'Elainkohteen kuva nayttaa elaimen (Srebarna)' },
