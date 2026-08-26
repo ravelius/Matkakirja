@@ -169,8 +169,20 @@ const KOHDE_LAITAVARA_ENINTAAN = 96;
 /** Pop-upin kuvan pyyntöleveys: pieni viite, ei kortin iso kuva. */
 const KOHDE_KUVAN_PX = 480;
 
-/** Suurennoksen pyyntöleveys: sama mitta kuin muualla pelissä. */
-const KOHDE_ZOOM_PX = 1600;
+/**
+ * Suurennoksen pyyntöleveys Commonsista (js/packs/africa-valokuvat.js
+ * valokuvaSuurennos → commonsUrl).
+ *
+ * NOSTETTU 1600 → 2000 (omistajan pelitestipalaute v1119: *"Kuvat
+ * saisi näkyä isommalla"*). Suurennos venyy nyt lähes koko ruudun
+ * levyiseksi, ja iPadin kaksinkertaisella pikselitiheydellä 1600
+ * pikseliä on 834 pisteen ruudulla jo alle kaksi laitepikseliä per
+ * piste. Commonsin thumb-putki tuottaa pyydetyn leveyden suoraan
+ * URL-parametrista, joten isompaa ei tarvitse hakea mistään muualta —
+ * ja alkuperäistä isompaa se ei koskaan tee, joten pikselipuuroa ei
+ * synny.
+ */
+const KOHDE_ZOOM_PX = 2000;
 
 /** Tyyppien ylärivit. Tuntematon tyyppi saa yleisen otsikon. */
 const KOHDE_TYYPIT = {
@@ -846,6 +858,13 @@ const KOHDE_ZOOM_REUNA = 10;
 const KOHDE_ZOOM_VAHIN_OSUUS = 0.28;
 /** Kehyksen kapein sallittu ulkomitta pikseleinä. */
 const KOHDE_ZOOM_KAPEIN = 140;
+/**
+ * Kuinka paljon lähdettä isommaksi suurennos saa venyä (omistajan
+ * pelitestipalaute v1119: *"skaalaus ei saa venyttää pikselipuuroksi:
+ * jos lähde on pieni, rajaa suurennos lähteen luonnolliseen kokoon
+ * ×1,4 asti"*).
+ */
+const KOHDE_ZOOM_VENYMA = 1.4;
 /** Kuvasuhde, jota käytetään ennen kuin kuvan omat mitat tiedetään. */
 const KOHDE_ZOOM_OLETUSSUHDE = 4 / 3;
 /** Kiihtyy alussa, jarruttaa lopussa — kartan kamera-ajon sukulainen. */
@@ -946,12 +965,46 @@ function avaaKohdeSuurennos(ui, kuva, ankkuri) {
    * toistetaan, kunnes leveys asettuu (yleensä kaksi kierrosta).
    */
   const mitoita = () => {
-    const leveys = globalThis.innerWidth || 0;
-    const korkeus = globalThis.innerHeight || 0;
+    /*
+     * RUUDUN MITAT PELIN OMASTA MITTARISTA, EI innerWidthista
+     * (omistajan pelitestipalaute v1119: *"suurennos jää iPadilla
+     * pieneksi keskelle ruutua … kuvat saisi näkyä isommalla"*).
+     *
+     * Katot ovat jo lähes koko ruutu (KOHDE_ZOOM_LEVEIN 0,99), joten
+     * vika ei ollut mitoituksessa vaan mitassa: WKWebView voi pitää
+     * asetteluviewportin vanhassa kapeassa lukemassa, ja `innerWidth`
+     * kertoo silloin kapeamman ruudun kuin laitteessa oikeasti on.
+     * Sama ilmiö on korjattu tässä repossa jo useasti (js/ui.js
+     * mittaaNakyma ja mittaaNakymanKorkeus ristiintarkistavat
+     * visuaalisen ja asetteluviewportin) — nyt suurennos käyttää
+     * samaa mittaria kuin lehden arkki ja kulttuurikuvan suurennos.
+     *
+     * Ilman ui-oliota (yksikkötesti, esikatselu) pudotaan entiseen.
+     */
+    const leveys = ui?.nakymanLeveys || ui?.mittaaNakyma?.()
+      || document.documentElement?.clientWidth || globalThis.innerWidth || 0;
+    const korkeus = ui?.mittaaNakymanKorkeus?.()
+      || document.documentElement?.clientHeight || globalThis.innerHeight || 0;
     if (!leveys || !korkeus) return;
     const suhde = kuvasuhde();
     img.style.aspectRatio = suhde.toFixed(4);
-    const enintaanW = Math.min(leveys * KOHDE_ZOOM_LEVEIN, leveys - KOHDE_ZOOM_REUNA);
+    /*
+     * PIENTÄ LÄHDETTÄ EI VENYTETÄ PIKSELIPUUROKSI (omistajan
+     * pelitestipalaute v1119). Suurennos pyydetään Commonsista
+     * KOHDE_ZOOM_PX:n levyisenä, mutta thumb-putki ei koskaan tuota
+     * alkuperäistä isompaa — jos kuva on pieni, se on pieni. Silloin
+     * katto on kuvan oma luonnollinen leveys kertaa KOHDE_ZOOM_VENYMA:
+     * hitusen suurentaminen on parempi kuin pieni kuva keskellä
+     * ruutua, mutta moninkertaistaminen ei ole.
+     *
+     * Kuvan omat mitat tunnetaan vasta kun ISO versio on ladattu; sitä
+     * ennen (välimuistin pikkukuva) katto jää pois eikä mitoita mitään.
+     */
+    const luonnollinen = img.src === iso.src && img.naturalWidth
+      ? img.naturalWidth * KOHDE_ZOOM_VENYMA : Infinity;
+    const enintaanW = Math.min(
+      leveys * KOHDE_ZOOM_LEVEIN, leveys - KOHDE_ZOOM_REUNA, luonnollinen,
+    );
     const enintaanH = Math.min(korkeus * KOHDE_ZOOM_KORKEIN, korkeus - KOHDE_ZOOM_REUNA);
     const vahinH = korkeus * KOHDE_ZOOM_VAHIN_OSUUS;
     let ulko = Math.round(enintaanW);

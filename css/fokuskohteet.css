@@ -517,7 +517,17 @@
   gap: 0.45rem;
   /* JS korvaa leveyden (mitoita); tämä on vara, jos mittaa ei saada. */
   width: min(94vw, 40rem);
-  max-width: 96vw;
+  /*
+   * KATTO SUHTEESSA KERROKSEEN, EI vw-YKSIKKÖÖN (omistajan
+   * pelitestipalaute v1119: suurennos jäi iPadilla pieneksi).
+   *
+   * `96vw` lukee asetteluviewporttia, ja juuri se voi WKWebView'ssä
+   * olla jumissa vanhassa kapeassa lukemassa — sama ilmiö, jonka takia
+   * JS mittaa ruudun ristiintarkistaen (js/ui.js mittaaNakyma).
+   * Kerros itse on `position: fixed; inset: 0` eli aina koko ruudun
+   * kokoinen, joten prosentti siitä on aina oikein.
+   */
+  max-width: 100%;
   padding: 0.55rem 0.55rem 0.45rem;
   background: #f8f3e6;
   border: 1px solid rgba(58, 38, 16, 0.35);

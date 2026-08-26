@@ -583,6 +583,28 @@ const SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS = 900;
  */
 const SAAPUMISEN_KUPLA_TOINEN = 'Klikkaa kaupungin kultaista merkkiä kartalla.';
 
+/*
+ * MATKUSTUSNÄKYMÄN MARGINAALI (omistajan pelitestipalaute v1119).
+ * Osuus rajauslaatikon koosta joka reunaan: naapurikaupungin nimi ja
+ * laatta mahtuvat kokonaan ruudulle eivätkä kosketa laitaa. Väljempi
+ * kuin kameran oletus (0,12), koska laatikko on tässä pieni ja
+ * kaupunkien merkit ovat sen reunoilla.
+ */
+const MATKUSTUKSEN_MARGINAALI = 0.22;
+
+/*
+ * NUOREN HERRAN HUUDAHDUSRIVI PALJASTUSKORTILLA (omistajan
+ * pelitestipalaute v1119: *"'Taskuun!'-rivi POIS toistaiseksi (koodia
+ * ei poisteta, piilotus/lippu)"*).
+ *
+ * Rivi on kortin kärjessä oleva kursivoitu repliikki ("Taskuun!",
+ * "Ohhoh!"). Huudahdus ITSESSÄÄN jää: pääaarteen luettu hihkaisu soi
+ * kuten ennenkin (js/aani-ehdokkaat.js HUUDAHDUKSET), ja arvonta on
+ * ennallaan — vain teksti on piilossa. Lippu takaisin todeksi
+ * palauttaa rivin sellaisenaan.
+ */
+const REVEAL_HUUDAHDUS_RIVI = false;
+
 const AUTO_ROLL_MS = 320; // tauko ennen itsestään pyörähtävää noppaa
 /*
  * PÖLLÖN PAIKALLINEN VIHJE (omistajan toive 13.8.2026: *"Pöllö voi
@@ -8026,15 +8048,16 @@ export class UI {
     const perus = html('div', 'toimintorivi-perus');
 
     /*
-     * "LIIKU" EIKÄ "MATKUSTUSTAVAT" (omistajan linjaus 24.8.2026).
-     * Kompassikuvake säilyy, mutta nimi kertoo teon eikä valikon
-     * sisältöä — kahden napin rivi on "Liiku · Tutki". iconButton
-     * asettaa saman tekstin näkyväksi nimeksi, titleksi ja
+     * "MATKUSTA" (omistajan pelitestipalaute v1119; ennen "Liiku",
+     * ja sitä ennen "Matkustustavat"). Kompassikuvake säilyy, mutta
+     * nimi kertoo teon täsmällisemmin: napin takaa avautuvat jalan,
+     * laivalla ja lentäen -valinnat, eikä "Liiku" kertonut niistä.
+     * iconButton asettaa saman tekstin näkyväksi nimeksi, titleksi ja
      * aria-labeliksi, joten ruudunlukija ja hiiren kärki saavat sen
      * yhtä aikaa. Matkustustapojen valinta on liu'un omien nappien
      * aria-label-teksteissä (jalan, laiva, lento).
      */
-    const monitoimi = this.iconButton('kompassi', 'Liiku');
+    const monitoimi = this.iconButton('kompassi', 'Matkusta');
     monitoimi.classList.add('monitoimi-nappi');
     /*
      * Ilman matkustusvaihtoehtoja nappi on estetty — sama harmaus kuin
@@ -8085,7 +8108,16 @@ export class UI {
     for (const nappi of matkanapit) liuku.appendChild(nappi);
     // Mikä tahansa liu'un nappi vie toimintoon, jonka jälkeen rivi
     // piirretään uudestaan — liuku ei saa jäädä auki sen alle.
-    liuku.addEventListener('click', () => { this.liukuAuki = false; });
+    liuku.addEventListener('click', () => {
+      this.liukuAuki = false;
+      /*
+       * MATKUSTUSTAPA VALITTU: kamera JÄÄ uloszoomattuun näkymään
+       * (v1119). Seuraava vaihe on kohteen valinta kartalta, ja
+       * kohteet ovat juuri ne naapurit, joiden takia näkymä avattiin —
+       * paluu lähikuvaan piilottaisi ne saman tien.
+       */
+      this.matkustusPaluu = null;
+    });
     rivi.appendChild(liuku);
 
     if (this.liukuAuki && !monitoimi.disabled) rivi.classList.add('liuku-auki');
@@ -8156,13 +8188,97 @@ export class UI {
     this.liukuAuki = !this.liukuAuki;
     // Liuku peittää pöllön napin, joten avautuessaan se sulkee chatin.
     if (this.liukuAuki) polloSulje();
+    if (this.liukuAuki) this.avaaMatkustusNakyma();
+    else this.palaaMatkustusNakymasta();
     this.paivitaLiuku();
   }
 
   suljeLiuku() {
     if (!this.liukuAuki) return;
     this.liukuAuki = false;
+    this.palaaMatkustusNakymasta();
     this.paivitaLiuku();
+  }
+
+  /**
+   * MATKUSTA AVAA NÄKYMÄN NAAPUREIHIN (omistajan pelitestipalaute
+   * v1119: *"kun pelaaja painaa MATKUSTA-nappia, kartan pitää ZOOMATA
+   * ULOSPÄIN pehmeällä kamera-ajolla niin, että näkyvissä ovat nykyinen
+   * kaupunki, KAIKKI naapurikaupungit joihin reitti kulkee, ja reitit
+   * niihin kokonaisuudessaan (reittipisteineen/noppineen) sopivalla
+   * marginaalilla"*).
+   *
+   * Lähikuvassa naapurikaupunki jäi ruudun ylälaidan taakse, eikä
+   * reitistä näkynyt kuin ensimmäinen askel — pelaaja valitsi
+   * matkustustavan näkemättä, mihin se veisi.
+   *
+   * RAJAUS ON REITTIEN OMA, EI ARVATTU SÄDE: laatikko lasketaan
+   * nykyisen kaupungin naapurireittien MURTOVIIVOISTA (board.edgeById
+   * poly), joten mukaan tulevat myös reittien väliaskelpisteet — ne,
+   * joilla noppa kulkee. Sama kamera-ajokoneisto kuin muissakin ajoissa
+   * (js/kartta.js ajaKamera), joten liike on pehmeä ja ele keskeyttää
+   * sen kuten aina.
+   */
+  matkustusRajaus() {
+    const kaupunki = this.game?.cityOf?.();
+    const board = this.game?.board;
+    if (!kaupunki || !board?.adj) return null;
+    let x0 = kaupunki.x; let y0 = kaupunki.y;
+    let x1 = kaupunki.x; let y1 = kaupunki.y;
+    const mukaan = (x, y) => {
+      if (!Number.isFinite(x) || !Number.isFinite(y)) return;
+      if (x < x0) x0 = x;
+      if (x > x1) x1 = x;
+      if (y < y0) y0 = y;
+      if (y > y1) y1 = y;
+    };
+    for (const eid of board.adj.get(kaupunki.id) ?? []) {
+      const reitti = board.edgeById.get(eid);
+      if (!reitti) continue;
+      // Murtoviiva kattaa molemmat päät ja väliaskeleet; ilman sitä
+      // (vanha lauta ilman polyä) riittävät reitin päätekaupungit.
+      for (const p of reitti.poly ?? []) mukaan(p?.x ?? p?.[0], p?.y ?? p?.[1]);
+      for (const id of [reitti.a, reitti.b]) {
+        const c = board.cityById.get(id);
+        if (c) mukaan(c.x, c.y);
+      }
+    }
+    if (!(x1 > x0) || !(y1 > y0)) return null;
+    return { x: x0, y: y0, w: x1 - x0, h: y1 - y0 };
+  }
+
+  /** Kamera naapureiden rajaukseen; paluupaikka talteen. */
+  avaaMatkustusNakyma() {
+    if (!this.kartta?.ajaKamera || this.katselu) return;
+    const bbox = this.matkustusRajaus();
+    if (!bbox) return;
+    /*
+     * PALUUPAIKKA ON NÄKYVÄ ALUE, EI ZOOMIKERROIN. Kerroin lasketaan
+     * yleiskuvan mittakaavasta, ja fokusnäkymässä se on eri asia kuin
+     * lehden oma rajaus; näkyvä alue palautuu sellaisenaan
+     * (ajaKamera bbox + marginaali 0).
+     */
+    const nakyva = this.nakyvaAlue?.();
+    this.matkustusPaluu = nakyva?.w > 0
+      ? {
+        x: nakyva.x, y: nakyva.y, w: nakyva.w, h: nakyva.h,
+      } : null;
+    this.kartta.ajaKamera({ bbox, marginaali: MATKUSTUKSEN_MARGINAALI });
+  }
+
+  /**
+   * Kamera takaisin siihen näkymään, josta matkustusvalintaan tultiin.
+   *
+   * Vain sulkemisesta (napautus ulkopuolelle tai sama nappi uudelleen).
+   * Kun matkustustapa VALITAAN, paluuta ei tehdä: seuraavaksi valitaan
+   * kohde kartalta, ja juuri tämä uloszoomattu näkymä on se, jossa
+   * kohteet näkyvät (ks. renderActions liu'un kuuntelija).
+   */
+  palaaMatkustusNakymasta() {
+    const paluu = this.matkustusPaluu;
+    this.matkustusPaluu = null;
+    if (!paluu || !this.kartta?.ajaKamera || this.dead) return;
+    this.kartta.ajaKamera({ bbox: paluu, marginaali: 0 });
   }
 
   paivitaLiuku() {
@@ -13761,7 +13877,38 @@ export class UI {
     ruksi.type = 'button';
     ruksi.setAttribute('aria-label', 'Sulje paljastus');
     overlay.appendChild(ruksi);
-    return { overlay, scene, caption, kuvaEl, ruksi };
+    /*
+     * JATKA MATKAA (omistajan pelitestipalaute v1119: *"sivu pysyy
+     * näkyvissä kunnes käyttäjä toimii: lisää selkeä nappi 'JATKA
+     * MATKAA' (1873-nappityyli); napautus muuallakin ruudulla saa myös
+     * sulkea"*).
+     *
+     * Ennen kortti sulkeutui itsestään lukuajan päätteeksi, ja
+     * pitkähkö kaariteksti ehti jäädä kesken. Nappi on kortin oma
+     * kahva; ruksi ja napautus mihin tahansa jäävät ennalleen, koska
+     * ne olivat jo olemassa ja kärsimätön pelaaja käyttää niitä.
+     */
+    const jatka = html('button', 'reveal-jatka', 'Jatka matkaa');
+    jatka.type = 'button';
+    scene.appendChild(jatka);
+    return {
+      overlay, scene, caption, kuvaEl, ruksi, jatka,
+    };
+  }
+
+  /**
+   * Odottaa, että pelaaja sulkee paljastuskortin (v1119).
+   *
+   * Kolme kahvaa, yksi lupaus: Jatka matkaa -nappi, kulman ruksi ja
+   * napautus mihin tahansa kortilla. Ajastinta EI ole — kortti on
+   * ruudulla niin kauan kuin pelaaja haluaa.
+   */
+  odotaPaljastuksenSulku(overlay, jatka) {
+    if (jatka) jatka.classList.add('nakyy');
+    return new Promise((valmis) => {
+      jatka?.addEventListener('click', valmis, { once: true });
+      overlay.addEventListener('pointerdown', valmis, { once: true });
+    });
   }
 
   /**
@@ -13792,12 +13939,18 @@ export class UI {
      */
     if (AARRELAATAT.has(type)) natiiviTarise('juhla');
     const kuva = token.kuva ?? null;
-    const { overlay, caption, kuvaEl } = this.rakennaPaljastus(kuva, token.name);
+    const {
+      overlay, caption, kuvaEl, jatka,
+    } = this.rakennaPaljastus(kuva, token.name);
 
     // Nuoren herran huudahdus ensin — se kuuluu juuri siihen hetkeen,
     // kun aarre tulee näkyviin; cliffhanger-teksti vasta sen jälkeen.
     const huudahdus = arvoHuudahdus(type);
-    if (huudahdus) caption.appendChild(html('span', 'reveal-huudahdus', huudahdus.teksti));
+    // Huudahdusrivi ("Taskuun!") on lipun takana (REVEAL_HUUDAHDUS_RIVI):
+    // ääni jää, teksti on toistaiseksi pois. Ks. lipun kommentti.
+    if (huudahdus && REVEAL_HUUDAHDUS_RIVI) {
+      caption.appendChild(html('span', 'reveal-huudahdus', huudahdus.teksti));
+    }
     caption.appendChild(html('strong', '', token.name));
     /*
      * ARVO ON LÖYTÖHETKEN OMA (Raamattu: *"Arvo vaihtelee
@@ -13831,22 +13984,28 @@ export class UI {
     // Dialogi on top layerissa, joten paljastus lisätään sen sisään.
     this.quizDialog.appendChild(overlay);
 
-    // Näyttöaika kasvaa selitteen mukana: "+180 puntaa" saa vilahtaa,
-    // mutta pitkä selite (pääaarteen kotiinvientikehotus) pitää ehtiä
-    // lukea. Napautus tai ruksi ohittaa odotuksen.
-    const seliteMs = ((REVEAL_SUB[type] ?? '').length + (kaari?.aarre?.length ?? 0)) * 45;
+    // Näyttöaika ei ole enää mitoitettu selitteen pituuteen (v1119):
+    // kortti odottaa pelaajaa, joten pitkä kaariteksti ei voi jäädä
+    // kesken. Alla oleva lyhyt `odota` on vain kuvan nousun rytmiä.
     // Kortti odottaa vähimmäislukuajan; ruksi tai napautus sulkee heti.
     const napautus = new Promise((resolve) => {
       overlay.addEventListener('pointerdown', resolve, { once: true });
     });
     const odota = (min) => Promise.race([this.wait(min), napautus]);
 
+    /*
+     * KORTTI ODOTTAA PELAAJAA (v1119). Ennen tässä oli lukuaikaan
+     * mitoitettu ajastin (seliteMs); nyt kortti pysyy ruudulla, kunnes
+     * pelaaja painaa Jatka matkaa -nappia, ruksia tai napauttaa
+     * korttia. `odota` jää kuvan nousun rytmiin.
+     */
     if (this.reducedMotion) {
       kuvaEl?.classList.add('shown');
       caption.classList.add('shown');
       sfx.play(treasureSound(type));
       if (hihkaisu) this.soitaHihkaisu(hihkaisu);
-      await odota(900 + seliteMs);
+      await odota(900);
+      await this.odotaPaljastuksenSulku(overlay, jatka);
     } else {
       // Kuva nousee mustasta: hidas häivytys ja kasvu, ei kääntöä.
       await this.wait(420);
@@ -13855,7 +14014,7 @@ export class UI {
       if (hihkaisu) this.soitaHihkaisu(hihkaisu);
       await this.wait(760);
       caption.classList.add('shown');
-      await odota(1250 + seliteMs);
+      await this.odotaPaljastuksenSulku(overlay, jatka);
       overlay.classList.add('leaving');
       await this.wait(300);
     }
@@ -13882,10 +14041,13 @@ export class UI {
    * kuplat puretaan.
    */
   async naytaPolloAarre() {
-    const { overlay, caption, kuvaEl } = this.rakennaPaljastus(
+    const { overlay, caption, kuvaEl, jatka } = this.rakennaPaljastus(
       POLLO_AARRE.kuva, POLLO_AARRE.nimi,
     );
-    caption.appendChild(html('span', 'reveal-huudahdus', POLLO_AARRE.huudahdus));
+    // Huudahdusrivi on lipun takana kuten laattapaljastuksessakin.
+    if (REVEAL_HUUDAHDUS_RIVI) {
+      caption.appendChild(html('span', 'reveal-huudahdus', POLLO_AARRE.huudahdus));
+    }
     caption.appendChild(html('strong', '', POLLO_AARRE.nimi));
     caption.appendChild(html('span', '', POLLO_AARRE.selite));
     caption.appendChild(html('p', 'reveal-isoisa', POLLO_AARRE.esittely));
@@ -13900,20 +14062,21 @@ export class UI {
       overlay.addEventListener('pointerdown', resolve, { once: true });
     });
     const odota = (min) => Promise.race([this.wait(min), napautus]);
-    const seliteMs = (POLLO_AARRE.selite.length + POLLO_AARRE.esittely.length) * 45;
 
+    // Kortti odottaa pelaajaa (v1119, ks. odotaPaljastuksenSulku).
     if (this.reducedMotion) {
       kuvaEl?.classList.add('shown');
       caption.classList.add('shown');
       sfx.play(treasureSound('star'));
-      await odota(900 + seliteMs);
+      await odota(900);
+      await this.odotaPaljastuksenSulku(overlay, jatka);
     } else {
       await this.wait(420);
       kuvaEl?.classList.add('shown');
       sfx.play(treasureSound('star'));
       await this.wait(760);
       caption.classList.add('shown');
-      await odota(1250 + seliteMs);
+      await this.odotaPaljastuksenSulku(overlay, jatka);
       overlay.classList.add('leaving');
       await this.wait(300);
     }
