@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1132, teksti: 'Kortin ylarivi: symboli+luokka; etusivun blur koko ruutuun' },
   { v: 1131, teksti: 'Bukarestin lehdelle herokuvakaruselli' },
   { v: 1130, teksti: 'Uudet fokuskohteet Kreikkaan, Bulgariaan ja Turkkiin' },
   { v: 1129, teksti: 'Sarajevon lehdelle herokuvakaruselli' },

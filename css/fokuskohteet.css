@@ -192,6 +192,19 @@
 }
 
 /*
+ * Kategorian symboli luokan nimen vierellä (js/fokuskohteet.js
+ * piirraKohdeYlarivi): sama kaiverrusmerkki kuin kartalla, rivin
+ * korkuisena ja tekstin viereen upotettuna. Negatiivinen
+ * vertical-align istuttaa laatan versaalirivin keskelle.
+ */
+.fokuskohde-ylarivi-symboli {
+  width: 1.35em;
+  height: 1.35em;
+  margin-right: 0.45em;
+  vertical-align: -0.4em;
+}
+
+/*
  * YLÄRIVI JA OTSIKKO OVAT RAAHAUSKAHVA (js/fokuskohteet.js
  * raahausTaiSulku): touch-action: none irrottaa ne selaimen
  * vierityksestä, joten sormi saa kortin liikkeelle joka suuntaan.
