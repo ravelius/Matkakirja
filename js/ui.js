@@ -8050,7 +8050,9 @@ export class UI {
       () => { this.esilammitys.line = this.game.firstFlightLine(kohdeId); },
       () => this.game.enterWorld(lauta),
       () => esilammitaTaide(lauta.map),
-      () => esilammitaFokuspohja(lauta.map?.cityCountry?.[portti.city], lauta.id),
+      () => esilammitaFokuspohja(
+        lauta.map?.cityCountry?.[portti.city], lauta.id, lauta.map,
+      ),
     ];
 
     const pyyda = window.requestIdleCallback

@@ -45,7 +45,7 @@
  * (sw.js ämpärikori) — niitä EI esiladata, koska pelaaja käy vain
  * murto-osassa maista.
  */
-import { el } from './mapart.js';
+import { el, paperinSavy } from './mapart.js';
 import { fokuskarttaUrl, peiliKaytossa } from './media.js';
 import { natiiviKuori } from './natiivi.js';
 import { FOKUS_LISANIMET, FOKUS_POHJAT, FOKUS_SVG_NIMET } from './packs/fokus-grc.js';
@@ -301,10 +301,51 @@ function tukeeWebp() {
   return webpTuki;
 }
 
+/** Pienennetyn lehden pakkausmuoto. Yksi paikka, kaksi kysyjää. */
+function pakkausTyyppi() {
+  return tukeeWebp() ? 'image/webp' : 'image/jpeg';
+}
+
+/*
+ * ============ ALFA EI SÄILY JPEGISSÄ — SIITÄ TULIVAT MUSTAT KAISTAT ==
+ *
+ * OMISTAJAN PELITESTI 26.8.2026 (iPhone, v1116): lehtien väliin jäi
+ * täysin mustia vaakakaistoja, lennolla lehti loppui terävään
+ * suorakulmaan ja koko lehden yli oli harmaa utu.
+ *
+ * MIKÄ MAKSOI. Jokaisessa lehdessä on häivytetty vuotoreuna: alfa
+ * laskee 255:stä nollaan uloimmalla kaistalla (mitattu: Kreikan lehti
+ * ~2,5 % korkeudesta, Ruotsin ~12 % leveydestä), ja juuri se saumaton
+ * reuna sulattaa lehdet toisiinsa ja pergamenttiin. Puhelimessa lehti
+ * pienennetään canvasille, ja WebKit ei kirjoita canvasista webpiä —
+ * pakkaus menee JPEGille. HTML:n spesifikaatio sanoo alfattomasta
+ * muodosta yksiselitteisesti: kuva ladotaan MUSTAA taustaa vasten.
+ * Häivytetty reuna muuttui siis mustaksi reunukseksi, ja koko vuoto-
+ * alue harmaaksi utuksi lehden päälle.
+ *
+ * KORJAUS. Kun pakkausmuodossa ei ole alfaa, canvas pohjustetaan
+ * pergamentin sävyllä (js/mapart.js PAPERIN_SAVY) ennen kuin lehti
+ * piirretään. Silloin häivytys latistuu sitä samaa paperia vasten,
+ * jonka päällä lehti kartalla lepää — reuna sulaa taustaan eikä
+ * ruudulle jää yhtään mustaa pikseliä.
+ *
+ * TYÖPÖYTÄSELAIN EI MUUTU. Siellä pakkaus on webpiä, alfa säilyy ja
+ * lehdet sekoittuvat toisiinsa kuten ennenkin — pohjustus tehdään
+ * VAIN alfattomalle polulle.
+ *
+ * MIKSI EI PNG. Alfa säilyisi, mutta 3200 x 2000 pikseliä akvarellia
+ * on PNG:nä noin seitsemän megatavua lehteä kohti (mitattu). Juuri
+ * tämä laite kaatui muistiin (ks. moduulin johdanto), joten
+ * lisämegatavut ovat viimeinen asia, jota siihen saa kaataa.
+ */
+function alfaSailyy() {
+  return pakkausTyyppi() === 'image/webp';
+}
+
 /** Canvasin sisältö blob-osoitteeksi; null jos ei onnistu. */
 function canvasOsoitteeksi(canvas) {
   if (typeof URL?.createObjectURL !== 'function') return Promise.resolve(null);
-  const tyyppi = tukeeWebp() ? 'image/webp' : 'image/jpeg';
+  const tyyppi = pakkausTyyppi();
   /*
    * PAKKAUS POIS PÄÄSÄIKEELTÄ, kun selain osaa (ks. teeCanvas). Lupaus
    * ratkeaa kun pakkaus on valmis; virhe on sama tulos kuin epäonnistunut
@@ -342,11 +383,18 @@ function canvasOsoitteeksi(canvas) {
 }
 
 /** Piirtää lähteen pienennettynä canvasille ja palauttaa blob-osoitteen. */
-async function canvasille(lahde, mitat) {
+async function canvasille(lahde, mitat, savy) {
   const canvas = teeCanvas(mitat.w, mitat.h);
   const piirtoalusta = canvas?.getContext?.('2d');
   if (!piirtoalusta) return null;
   try {
+    // Alfaton pakkaus latistaisi häivytetyn reunan mustaa vasten
+    // (ks. alfaSailyy): pohjaksi se pergamentti, jonka päällä lehti
+    // kartalla lepää, jolloin reuna sulaa siihen näkymättömiin.
+    if (!alfaSailyy() && savy) {
+      piirtoalusta.fillStyle = savy;
+      piirtoalusta.fillRect(0, 0, mitat.w, mitat.h);
+    }
     piirtoalusta.drawImage(lahde, 0, 0, mitat.w, mitat.h);
   } catch {
     return null;
@@ -367,7 +415,7 @@ async function canvasille(lahde, mitat) {
  * resizeQuality: 'high' on tässä oikea valinta — lehti on maastoa ja
  * viivakuvaa, ja karkea alasotanta tekisi rannikoista rosoa.
  */
-async function bittikartasta(blob, mitat) {
+async function bittikartasta(blob, mitat, savy) {
   if (typeof createImageBitmap !== 'function') return null;
   let bittikartta = null;
   try {
@@ -376,7 +424,7 @@ async function bittikartasta(blob, mitat) {
       resizeHeight: mitat.h,
       resizeQuality: 'high',
     });
-    return await canvasille(bittikartta, mitat);
+    return await canvasille(bittikartta, mitat, savy);
   } catch {
     return null;
   } finally {
@@ -416,7 +464,7 @@ async function haeTavut(osoite) {
  * (vapautaLehti → siivoaLehtiUrlit); null tarkoittaa, että näytössä on
  * ämpärin oma osoite eikä mitään vapautettavaa.
  */
-async function pienennaLehti(lahde, blob) {
+async function pienennaLehti(lahde, blob, savy) {
   let blobOsoite = null;
   try {
     blobOsoite = URL.createObjectURL(blob);
@@ -435,7 +483,8 @@ async function pienennaLehti(lahde, blob) {
        */
       return { url: lahde, w: kuva.naturalWidth, h: kuva.naturalHeight, objectURL: null };
     }
-    const osoite = await bittikartasta(blob, mitat) ?? await canvasille(kuva, mitat);
+    const osoite = await bittikartasta(blob, mitat, savy)
+      ?? await canvasille(kuva, mitat, savy);
     if (!osoite) return null;
     return {
       url: osoite, w: mitat.w, h: mitat.h, objectURL: osoite,
@@ -477,10 +526,11 @@ function jonossa(tyo) {
  * Kuoressa ja puhelimessa purku pienennetään ja sarjoitetaan; muualla
  * tämä on entinen lataaKuva mittoineen.
  */
-async function lataaLehti(lahde) {
+async function lataaLehti(lahde, savy) {
   if (pienennysPaalla()) {
     const blob = await haeTavut(lahde);
-    const pienennetty = blob ? await jonossa(() => pienennaLehti(lahde, blob)) : null;
+    const pienennetty = blob
+      ? await jonossa(() => pienennaLehti(lahde, blob, savy)) : null;
     if (pienennetty) return pienennetty;
     // Varareitti: tavuja ei saatu CORSilla tai pienennys ei onnistunut.
     // Lehti on tärkeämpi kuin sen koko (sääntö 1 tiedoston alussa).
@@ -533,7 +583,7 @@ function siivoaLehtiUrlit(ui) {
  * on ehto — puolikas pohja ei kelpaa, koska väärään paikkaan asetettu
  * tai puuttuva kuva näkyisi pelaajalle rikkinäisenä karttana.
  */
-async function haePohja(iso, lauta) {
+async function haePohja(iso, lauta, map = null) {
   const avain = `${lauta}:${iso}`;
   const ennestaan = VARASTO.get(avain);
   if (ennestaan === 'ei') return null;
@@ -576,7 +626,15 @@ async function haePohja(iso, lauta) {
         // jolloin koko kuva on ikkuna kuten ennen.
         rajaus: tiedot.rajaus ?? b,
       };
-      const lehti = await lataaLehti(lahde);
+      /*
+       * PERGAMENTIN SÄVY LEHDEN KOHDALLA. Alfaton pakkaus (iOS, ks.
+       * alfaSailyy) latistaa lehden häivytetyn vuotoreunan jotakin
+       * väriä vasten, ja ainoa oikea väri on se pergamentti, jonka
+       * päällä lehti kartalla lepää. Piste on lehden keskikohta: sävy
+       * muuttuu laudalla hitaasti, ja yksi lehti on murto-osa laudasta.
+       */
+      const savy = paperinSavy(map, b.x + b.w / 2, b.y + b.h / 2);
+      const lehti = await lataaLehti(lahde, savy);
       if (!lehti) throw new Error('kuva ei lataudu');
       pohja.kuva = lehti.url;
       // Vapautettava blob-osoite (pienennetty lehti) tai null, jos
@@ -628,9 +686,9 @@ async function haePohja(iso, lauta) {
  * joten myöhempi piirto saa sen ilmaiseksi. Epäonnistuminen on
  * tavallinen tila eikä virhe (sääntö 1 tiedoston alussa).
  */
-export function esilammitaFokuspohja(iso, lauta) {
+export function esilammitaFokuspohja(iso, lauta, map = null) {
   if (!iso || !lauta) return;
-  void haePohja(iso, lauta).catch(() => {});
+  void haePohja(iso, lauta, map).catch(() => {});
 }
 
 /*
@@ -1364,7 +1422,7 @@ export function paivitaFokusAtlas(ui) {
     kesken = true;
     if (ui.atlasHaut.has(v.iso)) continue;
     ui.atlasHaut.add(v.iso);
-    void haePohja(v.iso, lauta).then((pohja) => {
+    void haePohja(v.iso, lauta, ui.game.pack.map).then((pohja) => {
       ui.atlasHaut?.delete(v.iso);
       /*
        * SAAPUNUT LEHTI OTETAAN VASTAAN, VAIKKA NÄKYMÄ OLISI EHTINYT
@@ -1565,7 +1623,9 @@ export function paivitaFokuskartta(ui) {
    * välimuistitettu (VARASTO, HAUT), joten toistuvat piirrot eivät
    * kuormita mitään.
    */
-  if (maa && ui.aloituslentoKesken) void haePohja(maa, ui.game.pack.id);
+  if (maa && ui.aloituslentoKesken) {
+    void haePohja(maa, ui.game.pack.id, ui.game.pack.map);
+  }
   const iso = ui.aloituslentoKesken ? null : maa;
   const avain = iso ?? 'pois';
   if (ui.fokuskarttaAvain === avain) return;
@@ -1624,7 +1684,7 @@ export function paivitaFokuskartta(ui) {
   // jottei kuva välähdä vasta seuraavalla ruudunpäivityksellä. Ilman
   // osoitetta (vapautettu blob) pohja puretaan uudelleen kuten uusi.
   if (valmis && valmis !== 'ei' && valmis.kuva) nayta(valmis);
-  else if (valmis !== 'ei') void haePohja(iso, lauta).then(nayta);
+  else if (valmis !== 'ei') void haePohja(iso, lauta, ui.game.pack.map).then(nayta);
   /*
    * NYKYISEN MAAN LEHTI ON MYÖS ATLAKSEN LEHTI: se vie peittoa ja
    * muistibudjettia, joten naapurivalinta on tehtävä uusiksi heti eikä

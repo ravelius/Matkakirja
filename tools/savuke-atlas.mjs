@@ -44,9 +44,16 @@
  *   7. "rajat" kytkee pelaajan liikkuvuusrajoitteen päälle.
  *   8. "pisteet" piirtää kaupungit ja reittiverkon kartalle.
  *   9. Kaupungin napautus hyppää sinne kehittäjätilassa.
+ *  10. Lehti pienenee myös silloin, kun canvas ei osaa kirjoittaa
+ *      webpiä (WebKit) — pakkaus menee JPEGille.
+ *  11. Häivytetty vuotoreuna latistuu pergamenttiin eikä mustaan:
+ *      juuri musta tuotti omistajan iPhonella mustat vaakakaistat
+ *      lehtien väliin (26.8.2026).
+ *  12. Laudan oma jokiverkko (g.maasto) ei piirry atlasnäkymässä.
  */
 
 import { createServer } from 'node:http';
+import { deflateSync } from 'node:zlib';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -75,6 +82,82 @@ const PIKKUKUVA = Buffer.from(
   'base64',
 );
 
+/*
+ * === HÄIVYTETTY VALELEHTI (väitteet 10–11) ===========================
+ *
+ * Oikeassa lehdessä on häivytetty vuotoreuna: alfa laskee 255:stä
+ * nollaan uloimmalla kaistalla, ja juuri se sulattaa lehden reunan
+ * pergamenttiin. Yhden pikselin valelehdessä sellaista ei ole, joten
+ * viimeiset väitteet tarvitsevat oman kuvansa — ja kuvan on oltava
+ * pitkää sivua (3200 px) leveämpi, jotta pienennys ylipäätään lähtee
+ * käyntiin (js/fokuskartta.js pienennysMitat).
+ *
+ * Matala: kaksi riviä riittää todistamaan reunan, eikä 3600 x 8
+ * kuormita mitään.
+ */
+const HAIVE_LEVEYS = 3600;
+const HAIVE_KORKEUS = 8;
+/** Lehden oma paperinsävy — sama vaalea sävy kuin oikeissa lehdissä. */
+const HAIVE_VARI = [231, 217, 185];
+
+/** Pienin mahdollinen PNG-kirjoitin: RGBA, suodatin 0, yksi IDAT. */
+function teePng(leveys, korkeus, pikselit) {
+  const crcTaulu = new Int32Array(256);
+  for (let n = 0; n < 256; n += 1) {
+    let c = n;
+    for (let k = 0; k < 8; k += 1) c = (c & 1) ? (0xedb88320 ^ (c >>> 1)) : (c >>> 1);
+    crcTaulu[n] = c;
+  }
+  const crc = (buf) => {
+    let c = -1;
+    for (const tavu of buf) c = crcTaulu[(c ^ tavu) & 0xff] ^ (c >>> 8);
+    return (c ^ -1) >>> 0;
+  };
+  const lohko = (tyyppi, data) => {
+    const pituus = Buffer.alloc(4);
+    pituus.writeUInt32BE(data.length);
+    const runko = Buffer.concat([Buffer.from(tyyppi, 'latin1'), data]);
+    const summa = Buffer.alloc(4);
+    summa.writeUInt32BE(crc(runko));
+    return Buffer.concat([pituus, runko, summa]);
+  };
+  const ihdr = Buffer.alloc(13);
+  ihdr.writeUInt32BE(leveys, 0);
+  ihdr.writeUInt32BE(korkeus, 4);
+  ihdr[8] = 8; // bittisyvyys
+  ihdr[9] = 6; // RGBA
+  const raaka = Buffer.alloc(korkeus * (1 + leveys * 4));
+  for (let y = 0; y < korkeus; y += 1) {
+    pikselit.copy(raaka, y * (1 + leveys * 4) + 1, y * leveys * 4, (y + 1) * leveys * 4);
+  }
+  return Buffer.concat([
+    Buffer.from('89504e470d0a1a0a', 'hex'),
+    lohko('IHDR', ihdr),
+    lohko('IDAT', deflateSync(raaka)),
+    lohko('IEND', Buffer.alloc(0)),
+  ]);
+}
+
+/** Vaalea lehti, jonka vasen ja oikea reuna häivytetään läpinäkyväksi. */
+const HAIVELEHTI = (() => {
+  const pikselit = Buffer.alloc(HAIVE_LEVEYS * HAIVE_KORKEUS * 4);
+  const haive = 300;
+  for (let y = 0; y < HAIVE_KORKEUS; y += 1) {
+    for (let x = 0; x < HAIVE_LEVEYS; x += 1) {
+      const i = (y * HAIVE_LEVEYS + x) * 4;
+      const reunalle = Math.min(x, HAIVE_LEVEYS - 1 - x);
+      pikselit[i] = HAIVE_VARI[0];
+      pikselit[i + 1] = HAIVE_VARI[1];
+      pikselit[i + 2] = HAIVE_VARI[2];
+      pikselit[i + 3] = Math.round(255 * Math.min(1, reunalle / haive));
+    }
+  }
+  return teePng(HAIVE_LEVEYS, HAIVE_KORKEUS, pikselit);
+})();
+
+/** Kumpi valelehti tarjoillaan; vaihdetaan viimeisiä väitteitä varten. */
+let valelehti = PIKKUKUVA;
+
 const paketti = await import(process.env.PLAYWRIGHT_JS
   ?? '/opt/node22/lib/node_modules/playwright/index.js');
 const chromium = paketti.chromium ?? paketti.default?.chromium;
@@ -87,7 +170,15 @@ const sivu = await ctx.newPage();
 const pyynnot = [];
 await sivu.route((url) => /julisteet\/fokus\/.*\.webp$/.test(url.href), (route) => {
   pyynnot.push(route.request().url().split('/').pop().replace('.webp', ''));
-  route.fulfill({ status: 200, contentType: 'image/png', body: PIKKUKUVA });
+  route.fulfill({
+    status: 200,
+    contentType: 'image/png',
+    // CORS kuten oikeassa ämpärissä: ilman otsaketta lehden tavuja ei
+    // saa fetchillä eikä pienennyspolku käynnisty lainkaan
+    // (js/fokuskartta.js haeTavut).
+    headers: { 'access-control-allow-origin': '*' },
+    body: valelehti,
+  });
 });
 // Muu ulkomaailma katkaistaan — mutta EI fokuslehtiä, jotka yllä oleva
 // reitti vastaa itse. Playwrightissa myöhemmin rekisteröity reitti
@@ -375,6 +466,110 @@ const hyppy = await sivu.evaluate(async () => {
 });
 vaadi('kaupungin napautus hyppää sinne kehittäjätilassa',
   hyppy.jalkeen === hyppy.kohde, JSON.stringify(hyppy));
+
+/* ===================================================================
+ * 10–11. ALFATON PAKKAUS EI SAA JÄTTÄÄ MUSTAA (omistajan pelitesti
+ *        26.8.2026, iPhone v1116)
+ * ===================================================================
+ *
+ * Puhelimessa lehti pienennetään canvasille, ja WebKit ei kirjoita
+ * canvasista webpiä — pakkaus menee JPEGille, jossa ei ole alfaa.
+ * HTML:n spesifikaatio latoo alfattoman kuvan MUSTAA vasten, joten
+ * lehden häivytetty vuotoreuna muuttui mustaksi: ruudulle tuli mustia
+ * vaakakaistoja lehtien väliin ja lennolla lehti loppui terävään
+ * suorakulmaan. Korjaus pohjustaa canvasin pergamentin sävyllä ennen
+ * piirtoa (js/fokuskartta.js canvasille, js/mapart.js paperinSavy).
+ *
+ * VÄITE MITATAAN PIKSELEISTÄ eikä ulkoasusta: kartalle päätynyt
+ * blob-osoite luetaan takaisin canvasille ja katsotaan, mitä lehden
+ * uloimmassa pikselissä on. Ennen korjausta siellä oli musta.
+ *
+ * Sivu ladataan uudelleen, koska sekä webp-tuki että lehtivarasto ovat
+ * moduulitason muistia — ne nollautuvat vain uuden dokumentin myötä.
+ */
+valelehti = HAIVELEHTI;
+await sivu.addInitScript(() => {
+  // iOS:n jäljitelmä: canvas ei osaa kirjoittaa webpiä.
+  const alkuUrl = HTMLCanvasElement.prototype.toDataURL;
+  HTMLCanvasElement.prototype.toDataURL = function (tyyppi, ...loput) {
+    if (String(tyyppi).includes('webp')) return alkuUrl.call(this, 'image/png');
+    return alkuUrl.call(this, tyyppi, ...loput);
+  };
+  if (typeof OffscreenCanvas === 'function') {
+    const alkuBlob = OffscreenCanvas.prototype.convertToBlob;
+    OffscreenCanvas.prototype.convertToBlob = function (asetukset = {}) {
+      if (String(asetukset.type).includes('webp')) {
+        return Promise.reject(new Error('ei webpiä'));
+      }
+      return alkuBlob.call(this, asetukset);
+    };
+  }
+});
+/*
+ * KÄYNNISTYSLASKURI NOLLAAN ENNEN KOLMATTA LATAUSTA. Peli sytyttää
+ * atlaksen turvatilan, jos sivu käynnistyy kolmesti neljässä
+ * minuutissa (js/main.js kirjaaKaynnistys) — savukkeen omat lataukset
+ * täyttäisivät ehdon, ja turvatilassa atlasta ei ole testattavaksi.
+ */
+await sivu.evaluate(() => {
+  localStorage.removeItem('matkakirja-kaynnistykset');
+  localStorage.removeItem('matkakirja-atlas-turvatila');
+});
+await sivu.reload({ waitUntil: 'load' });
+await sivu.waitForTimeout(2500);
+await ateenaan();
+await sivu.waitForTimeout(3000);
+
+const reuna = await sivu.evaluate(async () => {
+  const kuva = document.querySelector('.fokus-lehti image, .fokus-atlas image');
+  const osoite = kuva?.getAttribute('href') ?? '';
+  if (!osoite.startsWith('blob:')) return { blob: false, osoite: osoite.slice(0, 40) };
+  const lehti = new Image();
+  lehti.src = osoite;
+  await lehti.decode();
+  const canvas = document.createElement('canvas');
+  canvas.width = lehti.naturalWidth;
+  canvas.height = lehti.naturalHeight;
+  const ctx2 = canvas.getContext('2d');
+  ctx2.drawImage(lehti, 0, 0);
+  const nappaa = (x) => [...ctx2.getImageData(x, 0, 1, 1).data].slice(0, 3);
+  return {
+    blob: true,
+    leveys: canvas.width,
+    vasen: nappaa(0),
+    oikea: nappaa(canvas.width - 1),
+    keski: nappaa(Math.floor(canvas.width / 2)),
+  };
+});
+const vaalea = (v) => Array.isArray(v) && v.every((k) => k > 140);
+vaadi('pienennetty lehti syntyy myös ilman webp-tukea',
+  reuna.blob === true && reuna.leveys > 0, JSON.stringify(reuna));
+vaadi('häivytetty reuna latistuu pergamenttiin — ei mustaa kaistaa',
+  vaalea(reuna.vasen) && vaalea(reuna.oikea) && vaalea(reuna.keski),
+  JSON.stringify(reuna));
+
+/*
+ * 12. VANHAN LAUDAN JOKIVERKKO EI PIIRRY ATLAKSEN ALLA.
+ *
+ * Omistaja epäili mustien kaistojen seurassa näkyvää ohutta jokiverkkoa
+ * vanhan laudan jäänteeksi (joet ovat laudalla g.maasto → g.iso-joet,
+ * js/mapart.js drawMaasto). Väite pitää tuon epäilyn koneellisesti
+ * poissa: atlasnäkymässä yksikään laudan piirroskerros ei saa olla
+ * ruudulla. Ruudulla näkyvä jokiverkko on lehtien omaa vuotoaluetta.
+ */
+const jokikerros = await sivu.evaluate(() => {
+  const kerrokset = ['.iso-joet', '.maasto', '.landmass', '.waves', '.graticule'];
+  const nakyvat = [];
+  for (const valitsin of kerrokset) {
+    for (const e of document.querySelectorAll(valitsin)) {
+      const laatikko = e.getBoundingClientRect();
+      if (laatikko.width > 0 || laatikko.height > 0) nakyvat.push(valitsin);
+    }
+  }
+  return { luokka: document.body.classList.contains('fokus-atlas-nakyma'), nakyvat };
+});
+vaadi('atlasnäkymässä laudan jokiverkko ei piirry',
+  jokikerros.luokka && jokikerros.nakyvat.length === 0, JSON.stringify(jokikerros));
 
 vaadi('ei sivuvirheitä', virheet.length === 0, virheet.join(' | '));
 
