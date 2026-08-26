@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1155, teksti: 'Akropolis-museon kierrokset pois (upotus ei toimi)' },
   { v: 1154, teksti: 'Elainkohteille useampi kuva (Srebarna, Van)' },
   { v: 1153, teksti: 'Yksi kuplataky per maa, kupla avaa suoraan' },
   { v: 1152, teksti: 'Raamattuun kohdekartan kohdemaara 6-15' },

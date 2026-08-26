@@ -710,7 +710,9 @@ export const FOKUSKOHTEET_GRC = [
   {
     id: 'akropolis-museo',
     nimi: 'Akropolis-museo',
-    tyyppi: 'multimedia',
+    // multimedia -> kulttuuri 26.8.2026: kierrokset poistuivat (ks.
+    // alempana), joten silmän "katsottavaa muualla" -lupaus poistui.
+    tyyppi: 'kulttuuri',
     kysymykset: [
       'Miksi museon ylin kerros on vinossa muihin nähden?',
       'Mitä museon lattian lasin alta näkyy?',
@@ -746,35 +748,16 @@ export const FOKUSKOHTEET_GRC = [
         + 'salissa.',
       lahde: 'Carole Raddato, Wikimedia Commons (CC BY-SA 2.0)',
     },
-    kierrokset: [
-      {
-        url: 'https://embed.culturalspot.org/embedv2/streetview/1wHvAr1PHfUbDw',
-        otsikko: 'Parthenon-galleria 360°',
-        nappi: 'Astu galleriaan',
-        avaustapa: 'upotus',
-        lahde: 'Akropolis-museo / Google Arts & Culture',
-        varaTeksti: 'Kierros ei aukea pelin sisällä. Se avautuu '
-          + 'laitteen omassa selaimessa.',
-      },
-      {
-        url: 'https://embed.culturalspot.org/embedv2/streetview/VgGUWDq9_Uo1pg',
-        otsikko: 'Akropoliin rinteet 360°',
-        nappi: 'Kierrä rinteiden galleria',
-        avaustapa: 'upotus',
-        lahde: 'Akropolis-museo / Google Arts & Culture',
-        varaTeksti: 'Kierros ei aukea pelin sisällä. Se avautuu '
-          + 'laitteen omassa selaimessa.',
-      },
-      {
-        url: 'https://embed.culturalspot.org/embedv2/streetview/KwH9HX2-0bOSJg',
-        otsikko: 'Kaivaus museon alla 360°',
-        nappi: 'Laskeudu kaivaukselle',
-        avaustapa: 'upotus',
-        lahde: 'Akropolis-museo / Google Arts & Culture',
-        varaTeksti: 'Kierros ei aukea pelin sisällä. Se avautuu '
-          + 'laitteen omassa selaimessa.',
-      },
-    ],
+    /*
+     * KIERROKSET POISTETTU (omistaja 26.8.2026 ilta: "Jos ei
+     * mahdollista niin otetaan pois pelistä"): Google Arts &
+     * Culture -upotukset eivät latautuneet pelin sisällä oikealla
+     * iPadilla (varapolku laukesi joka kerta), vaikka palvelin
+     * sallii kehystämisen — pelkkä ulos vievä linkki ei ansaitse
+     * silmäsymbolin lupausta. Kierros-ikkuna (avaaKierros) jää
+     * koodiin tulevia toimivia upotuksia ja livekameroita varten.
+     * Poistetut osoitteet ovat git-historiassa (v1154).
+     */
   },
   /*
    * ── SYMBOLITAKSONOMIAN ENSIMMÄINEN SISÄLTÖERÄ (omistaja 26.8.2026,
