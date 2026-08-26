@@ -5108,13 +5108,17 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 .juliste-rivi { display: block; line-height: 1.15; }
 .juliste-yla { font-size: 1.5em; letter-spacing: 0.2em; text-indent: 0.2em; }
 .juliste-ala { font-size: 0.86em; letter-spacing: 0.26em; text-indent: 0.26em; }
-/* Jatko-osan merkintä: pieni ja harvennettu, julisteen alarivinä. */
+/* Jatko-osan merkintä: viktoriaanisen julisteen tapaan alaotsikko
+   PUNAISELLA musteella (sama suku kuin reittiviivan/merkkien
+   --mark), lihavoituna — koko pysyy pääotsikkoa pienempänä, väri
+   tekee korostuksen (omistaja 26.8.2026). */
 .juliste-osa {
   margin-top: 0.45em;
-  font-size: 0.52em;
+  font-size: 0.6em;
+  font-weight: 700;
   letter-spacing: 0.42em;
   text-indent: 0.42em;
-  opacity: 0.78;
+  color: #9c3a26;
 }
 
 /*
