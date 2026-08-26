@@ -14525,7 +14525,12 @@ export class UI {
     const pvm = el('text', {
       x: 0, y: r - 24, 'text-anchor': 'middle', class: 'lento-leima-pvm',
     }, leima);
-    pvm.textContent = 'ELOKUU 1873';
+    // Leima on PELAAJAN saapumisen jälki, ei isoisän: kuukausi ja
+    // vuosi laitteen kellosta kuten etusivun paikkarivissä (kaanon:
+    // nuori herra matkaa nykyhetkessä, 1873 elää vain isoisän
+    // piirroksissa ja merkinnöissä).
+    const nyt = new Date();
+    pvm.textContent = `${nyt.toLocaleString('fi-FI', { month: 'long' }).toUpperCase()} ${nyt.getFullYear()}`;
     // Kolme musteläiskää: leima ei ole painokuva vaan kumileimasimen
     // jälki, ja juuri roiskeet tekevät siitä sellaisen.
     for (const [lx, ly, lr] of [[-r + 5, -6, 2.6], [r - 9, 11, 1.9], [3, -r + 4, 1.4]]) {
