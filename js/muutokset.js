@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1139, teksti: 'MATKUSTA kullatuksi paanapiksi' },
   { v: 1138, teksti: 'Aktiivisen tayn symboli pysyy kuplan alla' },
   { v: 1137, teksti: 'Kaannetty laatta kaiverruskielelle (arkkukuvake)' },
   { v: 1136, teksti: 'Siivous: testitiedosto pois reposta' },
