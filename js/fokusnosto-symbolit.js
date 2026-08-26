@@ -45,7 +45,8 @@
  * 1. OMA KERROS SVG:N JUURESSA (ui.svg:n suora lapsi). Kiertävän laudan
  *    <use>-kopio ei kelpaa: sama paikka on kartalla kahdesti, ja kuplan
  *    on löydettävä se ankkuri, joka pelaajalla oikeasti on edessään
- *    (nostosymAnkkuri). Merkki piirretään siksi oikeana elementtinä
+ *    (js/fokusnosto.js nostoAnkkurinPaikka). Merkki piirretään siksi
+ *    oikeana elementtinä
  *    jokaiseen kiertokohtaan (ui.kiertoKohdat) — sama ratkaisu kuin
  *    kohderenkailla, vinjeteillä, fokuskohteilla ja vihreällä pisteellä
  *    (js/fokuspiste.js).
@@ -600,28 +601,18 @@ export function asemoiNostosymbolit(ui, suhde = 1) {
     .add(ui.nostosymVastaskaala ??= (s) => asemoiNostosymbolit(ui, s));
 }
 
-/**
- * Aktiivisen täyn ankkuri RUUDULLA — se kopio, joka on lähimpänä
- * näkymän keskustaa.
+/*
+ * AKTIIVISEN TÄYN ANKKURIT ovat `ui.nostosymAnkkurit` — kiertävällä
+ * laudalla sama paikka on kartalla kahdesti, ja kupla asetetaan sen
+ * kopion viereen, joka pelaajalla oikeasti on edessään.
  *
- * Kiertävällä laudalla sama paikka on kartalla kahdesti, ja kupla on
- * asetettava sen kopion viereen, joka pelaajalla oikeasti on edessään.
+ * Valinta EI OLE ENÄÄ TÄSSÄ (26.8.2026): se luki jokaisen kopion
+ * paikan getBoundingClientRectillä, ja koska kartan vahti asemoi
+ * kuplan joka kehyksellä, siitä tuli kaksi asettelunlukua kehykseen
+ * kesken eleen. Nyt kopiot mitataan kerran ja lähin valitaan
+ * talletetuista luvuista (js/fokusnosto.js nostoAnkkurinPaikka) —
+ * v1115:n sääntö "ei asettelunlukuja silmukassa".
  */
-export function nostosymAnkkuri(ui) {
-  const ankkurit = (ui?.nostosymAnkkurit ?? []).filter((a) => a.isConnected);
-  if (!ankkurit.length) return null;
-  if (ankkurit.length === 1) return ankkurit[0];
-  const keski = (globalThis.innerWidth ?? 0) / 2;
-  let paras = null;
-  let parasEro = Infinity;
-  for (const ankkuri of ankkurit) {
-    const laatikko = ankkuri.getBoundingClientRect();
-    if (!(laatikko.width > 0)) continue;
-    const ero = Math.abs(laatikko.left + laatikko.width / 2 - keski);
-    if (ero < parasEro) { parasEro = ero; paras = ankkuri; }
-  }
-  return paras ?? ankkurit[0];
-}
 
 /** Symbolit pois. Kerros jää paikalleen tyhjänä, kuten muillakin. */
 export function nollaaNostosymbolit(ui) {

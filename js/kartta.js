@@ -498,6 +498,19 @@ export class Kartta {
      * alalaidassa on merta, kaupungit ovat keskellä.
      */
     let scale = Math.min(w / box.w, (h - kaista) / box.h);
+    /*
+     * Avaustekstin kaistallinen laatikko (h x 2,2) kutistaa laudan
+     * leveällä ikkunalla: korkeus määrää mittakaavan ja kartta jää
+     * kapeaksi suikaleeksi otsikon taakse (omistaja 26.8.2026:
+     * "macilla aloitusnäytön kartta taustalla näkyy liian pienellä").
+     * Aloitusnäkymän kartta on koristetausta sumuverhon alla, joten
+     * sen annetaan täyttää leveys — kunhan LAUTA (ilman kaistaa)
+     * mahtuu 72 %:iin ruudun korkeudesta, jotta avausteksti saa
+     * alaosan. Kapealla ruudulla leveys määrää kuten ennenkin.
+     */
+    if (alkuun && this.ui.aloitettu) {
+      scale = Math.min(w / box.w, (h * 0.72) / this.laudanKorkeus(box));
+    }
     if (this.kiertava()) scale = this.rajaaSkaala(scale, w, box);
     const vw = w / scale;
     const vh = h / scale;

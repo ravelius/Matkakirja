@@ -113,7 +113,7 @@ import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { avaaFokuskohde, suljeFokuskohde } from './fokuskohteet.js';
 import { fokuskohteet } from './packs/fokuskohteet-grc.js';
 import {
-  asemoiNostosymbolit, nollaaNostosymbolit, nostosymAnkkuri, NOSTOSYM_TYYPIT,
+  asemoiNostosymbolit, nollaaNostosymbolit, NOSTOSYM_TYYPIT,
   paivitaNostosymbolit,
 } from './fokusnosto-symbolit.js';
 import { asetaNostopinta, fokusvirtaLukitseeLehden, fokusvirtaSisalto } from './fokusvirta.js';
@@ -512,7 +512,7 @@ export function paivitaFokusnosto(ui, yritys = 0) {
      * (Liiku-nappi), joten ruudun rajat mitataan tässä kohtaa uudelleen.
      * Kartan liikkeen aikana käytetään talletettuja lukuja.
      */
-    if (paikka) { nostoMittaaKupla(ui); asetaNostokuplanPaikka(ui); }
+    if (paikka) { nostoMittaaKupla(ui); nostoUnohdaAnkkurit(ui); asetaNostokuplanPaikka(ui); }
     return;
   }
   nostoPintaPois(ui);
@@ -584,6 +584,9 @@ function nostoVahdiKarttaa(ui) {
     if (laatikko !== ui.fokusnostoViewBox) {
       ui.fokusnostoViewBox = laatikko;
       asemoiNostosymbolit(ui);
+      // Zoomi vaihtui: ankkurin ruutupaikkaa ei voi enää päätellä
+      // siirrosta, joten talletettu mittaus vanhenee tässä.
+      nostoUnohdaAnkkurit(ui);
     }
     asetaNostokuplanPaikka(ui);
   };
@@ -598,7 +601,7 @@ function nostoVahdiKarttaa(ui) {
   };
   // Ikkunan koon muutos vaihtaa sekä paperin mitat että ruudun rajat,
   // joten silloin — ja vain silloin — ne mitataan uudelleen.
-  const mittaaUudelleen = () => { nostoMittaaKupla(ui); pyyda(); };
+  const mittaaUudelleen = () => { nostoMittaaKupla(ui); nostoUnohdaAnkkurit(ui); pyyda(); };
   const vahti = typeof MutationObserver === 'undefined' ? null : new MutationObserver(pyyda);
   vahti?.observe(ui.svg, { attributes: true, attributeFilter: ['style', 'viewBox'] });
   /*
@@ -823,6 +826,125 @@ function nostoMittaaKupla(ui) {
   return auki.mitat;
 }
 
+/* ==================== ANKKURI ILMAN ASETTELUNLUKUA ==================== */
+
+/**
+ * Suurin yksittäinen siirtoaskel, joka vielä kelpaa laskettavaksi
+ * talletetusta mittauksesta. Käsi ei siirrä karttaa tätä enempää yhden
+ * kehyksen aikana; sen ylittävä loikka on kiertävän laudan sauma
+ * (js/kartta.js asetaPan hyppäyttää panX:n yhden laudan leveyden
+ * verran) tai kamera-ajo, ja silloin mitataan uudestaan.
+ */
+const NOSTO_SIIRTOASKEL_KATTO = 400;
+
+/**
+ * Kartan siirtokuoren PUHDAS SIIRTO pikseleinä, tai null.
+ *
+ * Panoroinnissa kuoren muunnos on aina muotoa `translate3d(x, y, 0)`
+ * (js/kartta.js asetaPan), ja tyhjä muunnos on sama kuin nolla. Kaikki
+ * muu — nipistyksen ja zoomin `scale`, kesken oleva siirtymä — on
+ * merkki siitä, ettei ankkurin paikkaa voi päätellä pelkästä siirrosta.
+ * Tyylimääreen lukeminen EI pakota asettelua, toisin kuin
+ * getBoundingClientRect.
+ */
+function nostoKuorenSiirto(ui) {
+  const muunnos = ui?.karttaKuori?.style?.transform;
+  if (muunnos == null) return null;
+  if (muunnos === '' || muunnos === 'none') return { x: 0, y: 0 };
+  const osuma = /^translate3d\(\s*(-?[\d.]+)px,\s*(-?[\d.]+)px,\s*0(?:px)?\s*\)$/.exec(muunnos);
+  if (!osuma) return null;
+  return { x: Number(osuma[1]), y: Number(osuma[2]) };
+}
+
+/**
+ * ANKKURIN PAIKKA RUUDULLA — MITATAAN KERRAN, SIIRRETÄÄN LASKEMALLA.
+ *
+ * === MIKÄ OLI VIALLA ===
+ *
+ * Kartan vahti asemoi kuplan joka kehyksellä, ja asemointi luki
+ * ankkurin paikan `getBoundingClientRect`illä. Kiertävällä laudalla
+ * ankkureita on kaksi (sama paikka kahdesti, ks. js/fokusnosto-
+ * symbolit.js), ja lähimmän valinta mittasi ensin molemmat: kolme
+ * asettelunlukua kehyksessä. Mitattu 26.8.2026 (Chromium,
+ * iPad-ikkuna 834×1112, 150 kehyksen raahaus Kreikan fokusnäkymässä
+ * kupla auki): 228 gBCR-kutsua eleen aikana, kaikki tästä ketjusta.
+ *
+ * Se on täsmälleen se sääntö, jonka v1115 asetti eleiden silmukoille:
+ * KESKEN ELEEN EI LUETA ASETTELUA. Luku on halpa vain niin kauan kuin
+ * asettelu on puhdas — ja heti kun jokin muu kerros likaa sen, jokainen
+ * näistä kutsuista laskee ison laudan asettelun synkronisesti sormen
+ * alla.
+ *
+ * === MITÄ TEHDÄÄN ===
+ *
+ * Ankkurit mitataan KERRAN ja talteen jää sekä jokaisen kopion
+ * ruutupaikka että se kuoren siirto, jolla mittaus otettiin. Panorointi
+ * on pelkkä siirto, joten seuraavien kehysten paikat saa vähennyslaskulla
+ * — ilman yhtäkään asettelunlukua. Uusi mittaus otetaan vain kun
+ * jokin oikeasti muuttui:
+ *
+ *   - muunnos ei ole puhdas siirto (nipistys, zoomiliuku, kamera-ajo);
+ *   - siirto loikkasi kerralla yli katon (kiertävän laudan sauma);
+ *   - ankkurikerros rakennettiin uusiksi tai zoomi muuttui
+ *     (nostoUnohdaAnkkurit — kutsutaan viewBoxin vaihtuessa ja
+ *     ikkunan koon muuttuessa).
+ *
+ * LÄHIN KOPIO VALITAAN YHÄ JOKA KEHYKSELLÄ, koska kiertävällä laudalla
+ * se vaihtuu kesken eleen — mutta nyt talletetuista luvuista.
+ *
+ * Kolme funktiota: mittaus (nostoMittaaAnkkurit), mitätöinti
+ * (nostoUnohdaAnkkurit) ja kehyksen kysymys (nostoAnkkurinPaikka).
+ */
+
+/** Talletettu mittaus roskiin: seuraava kysyjä mittaa uudestaan. */
+function nostoUnohdaAnkkurit(ui) {
+  if (ui) ui.fokusnostoAnkkuriMitta = null;
+}
+
+/** Jokaisen ankkurikopion ruutupaikka talteen — ainoa asettelunluku. */
+function nostoMittaaAnkkurit(ui) {
+  const ankkurit = (ui?.nostosymAnkkurit ?? []).filter((a) => a.isConnected);
+  if (!ankkurit.length) return null;
+  const kopiot = [];
+  for (const ankkuri of ankkurit) {
+    const r = ankkuri.getBoundingClientRect();
+    if (!(r.width > 0) && !(r.height > 0)) continue;
+    kopiot.push({ x: r.left + r.width / 2, y: r.top + r.height / 2, puolikas: r.height / 2 });
+  }
+  if (!kopiot.length) return null;
+  const siirto = nostoKuorenSiirto(ui);
+  ui.fokusnostoAnkkuriMitta = { ankkurit, kopiot, siirto, edellinen: siirto };
+  return ui.fokusnostoAnkkuriMitta;
+}
+
+/** Näkymän keskustaa lähin ankkurikopio — se, joka pelaajalla on edessään. */
+function nostoLahinKopio(kopiot, dx, dy) {
+  const keski = (globalThis.innerWidth ?? 0) / 2;
+  let paras = null;
+  let parasEro = Infinity;
+  for (const kopio of kopiot) {
+    const x = kopio.x + dx;
+    const ero = Math.abs(x - keski);
+    if (ero < parasEro) { parasEro = ero; paras = { x, y: kopio.y + dy, puolikas: kopio.puolikas }; }
+  }
+  return paras;
+}
+
+/** Kehyksen kysymys: missä aktiivisen täyn ankkuri on juuri nyt? */
+function nostoAnkkurinPaikka(ui) {
+  const muisti = ui?.fokusnostoAnkkuriMitta;
+  const siirto = nostoKuorenSiirto(ui);
+  if (muisti?.siirto && siirto && muisti.ankkurit.every((a) => a.isConnected)) {
+    const askel = Math.hypot(siirto.x - muisti.edellinen.x, siirto.y - muisti.edellinen.y);
+    if (askel <= NOSTO_SIIRTOASKEL_KATTO) {
+      muisti.edellinen = siirto;
+      return nostoLahinKopio(muisti.kopiot, siirto.x - muisti.siirto.x, siirto.y - muisti.siirto.y);
+    }
+  }
+  const uusi = nostoMittaaAnkkurit(ui);
+  return uusi ? nostoLahinKopio(uusi.kopiot, 0, 0) : null;
+}
+
 /**
  * KUPLAN PAIKKA ANKKURIN VIEREEN — REUNAPAKKO VOITTAA.
  *
@@ -843,28 +965,27 @@ function nostoMittaaKupla(ui) {
  * paikoitusmuunnosta, joten mittaus ei muutu sen mukaan, mihin kupla on
  * juuri asetettu.
  *
- * PANOROINNIN AIKANA MITATAAN VAIN ANKKURI. Paperin koko ja ruudun rajat
+ * PANOROINNIN AIKANA EI MITATA MITÄÄN. Paperin koko ja ruudun rajat
  * eivät muutu kartan liikkuessa, joten ne luetaan talteen erikseen
- * (nostoMittaaKupla) ja kartan vahti käyttää talletettuja lukuja: yksi
- * mittaus kehystä kohti, ei viittä.
+ * (nostoMittaaKupla), ja ankkurin paikka lasketaan talletetusta
+ * mittauksesta kuoren siirron avulla (nostoAnkkurinPaikka): nolla
+ * asettelunlukua kehystä kohti, ennen viisi.
  */
 function asetaNostokuplanPaikka(ui) {
   const auki = ui?.fokusnostoKupla;
   if (!auki?.el?.isConnected) return;
   const mitat = auki.mitat ?? nostoMittaaKupla(ui);
   if (!mitat) return;
-  const ankkuri = nostosymAnkkuri(ui);
-  if (!ankkuri?.isConnected) return;
-  const a = ankkuri.getBoundingClientRect();
-  if (!(a.width > 0) && !(a.height > 0)) return;
+  const a = nostoAnkkurinPaikka(ui);
+  if (!a) return;
   const { leveys, korkeus } = mitat;
   const {
     vasen: vasenRaja, oikea: oikeaRaja, yla: ylaRaja, ala: alaRaja,
   } = mitat.rajat;
 
-  const ax = a.left + a.width / 2;
-  const ay = a.top + a.height / 2;
-  const puolikas = a.height / 2;
+  const ax = a.x;
+  const ay = a.y;
+  const puolikas = a.puolikas;
   const ylaTila = ay - puolikas - NOSTO_NOKKA - ylaRaja;
   const alaTila = alaRaja - (ay + puolikas + NOSTO_NOKKA);
   // Yläpuoli voittaa aina kun kupla mahtuu sinne; muuten valitaan se
