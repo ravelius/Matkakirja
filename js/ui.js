@@ -7591,6 +7591,16 @@ export class UI {
 
   renderTurnPill() {
     const { game } = this;
+    /*
+     * Etusivulla ja avauslennolla yläpalkki on tyhjä: laukku, kukkaro
+     * ja päivä ilmestyvät vasta ensimmäiseen kaupunkiin saavuttaessa
+     * (omistaja 26.8.2026). Lento päättää itsensä render-kutsulla,
+     * joten pilleri syttyy täsmälleen saapumisen hetkellä; ladatussa
+     * pelissä kumpikaan ehto ei ole tosi ja pilleri näkyy heti.
+     */
+    const piilossa = game.phase === 'pickstart' || this.aloituslentoKesken;
+    this.turnPill.hidden = piilossa;
+    if (piilossa) return;
     this.turnPill.textContent = '';
     // Laukun kahva pillerin edessä: pilleri on samalla matkalaukun nappi,
     // ja ilman kuvaketta mikään ei kertoisi sen aukeavan (omistajan toive).
