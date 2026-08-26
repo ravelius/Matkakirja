@@ -7280,16 +7280,21 @@ export class UI {
    * pakkaus vaihtuu (drawBoardFor) mutta laattoja käännetään kesken
    * pelin. Sama syy kuin muillakin kartan tilaluokilla.
    *
-   * VAIN LAATAN OMAT ELLIPSIT. Kaupungin nimi, porttikehä ja
-   * lentokentän merkki kertovat kaupungista eivätkä kääntämättömästä
-   * laatasta, joten ne jäävät — ja merkki on niin pieni, että ne
-   * mahtuvat sen ympärille.
+   * MYÖS PORTTIKEHÄ JA LENTOKONEMERKKI (laajennus 27.8.2026,
+   * omistajan kaappaus Ateenasta: "Ateenan laatta muuttuu vieläkin
+   * liian isoksi ja vääräksi aarteen löytymisen jälkeen"). Ne jäivät
+   * ennen näkyviin, ja fokusnäkymän laattasuurennos
+   * (paivitaFokusLaatta) skaalasi porttikaupungin kaksoiskehän
+   * isoiksi renkaiksi nappulan ympärille — juuri se kahden
+   * irrallisen laatan vaikutelma, jonka piti kadota. Vain kaupungin
+   * NIMI jää: se kertoo paikasta, ei kääntämättömästä laatasta.
    */
   piilotaAarreLaatat() {
     if (!this.svg) return;
     const auki = this.game?.revealed;
     for (const osa of this.svg.querySelectorAll(
-      '.cities .city, .cities .city-start, .cities .coast-soft',
+      '.cities .city, .cities .city-start, .cities .coast-soft, '
+      + '.cities .city-gate, .cities .airport',
     )) {
       // dataset.kaupunki puuttuu vain laudoilta, joita ei ole piirretty
       // tässä versiossa; Map.has(undefined) on silloin epätosi.

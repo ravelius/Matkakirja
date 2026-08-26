@@ -212,19 +212,30 @@ export function niputaFokusmerkit(ui, s) {
       || (a.merkki.ryhma.x - b.merkki.ryhma.x)
       || (a.jono - b.jono));
     const x = cx + NIPPU_DX * s;
-    let rivi = 0;
+    /*
+     * SARAKE KESKITETÄÄN KAUPUNGIN KORKEUDELLE (rivit 0, +1, −1, +2, …
+     * — omistaja 26.8.2026, Akropolis: "piste on liian kaukana
+     * ateenasta"). Ennen rivit laskivat vain alaspäin, ja kun vihreä
+     * piste vielä työnsi ensimmäisen merkin riville 1, kaupungin
+     * keskellä oleva kohde valui diagonaalisesti kauas laatasta.
+     * Yksittäinen merkki — tavallisin tapaus — istuu nyt suoraan
+     * laatan viereen samalle korkeudelle.
+     */
+    const riviY = (i) => city.y
+      + (i === 0 ? 0 : (i % 2 ? (i + 1) / 2 : -(i / 2))) * NIPPU_VALI * s;
+    let indeksi = 0;
     for (const { merkki } of jono) {
-      let y = city.y + rivi * NIPPU_VALI * s;
+      let y = riviY(indeksi);
       // Vihreä piste ei väisty — sarake väistää sitä (ks. sääntö 4).
       let vaistoja = 0;
       while (vaistoja < NIPPU_VAISTOJA
         && pisteet.some((p) => Math.hypot(x - p.x, y - p.y) < vapaa)) {
-        rivi += 1;
+        indeksi += 1;
         vaistoja += 1;
-        y = city.y + rivi * NIPPU_VALI * s;
+        y = riviY(indeksi);
       }
       nippuAseta(merkki.ryhma, { x, y }, s);
-      rivi += 1;
+      indeksi += 1;
     }
   }
 }

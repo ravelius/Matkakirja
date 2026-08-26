@@ -6295,7 +6295,9 @@ body.flight-active .fact-card {
  */
 .city.aarre-laatan-alla,
 .city-start.aarre-laatan-alla,
-.coast-soft.aarre-laatan-alla { display: none; }
+.coast-soft.aarre-laatan-alla,
+.city-gate.aarre-laatan-alla,
+.airport.aarre-laatan-alla { display: none; }
 .airport { font-size: 14px; fill: #8d3a2c; }
 
 /* Porttikaupunki: katkoviivakehä kertoo, että täältä lähtee lento toiselle laudalle. */
