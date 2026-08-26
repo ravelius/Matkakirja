@@ -170,8 +170,13 @@ const KOHDE_RAKO = 12;
 const KOHDE_LAITAVARA_OSUUS = 0.1;
 const KOHDE_LAITAVARA_ENINTAAN = 96;
 
-/** Pop-upin kuvan pyyntöleveys: pieni viite, ei kortin iso kuva. */
-const KOHDE_KUVAN_PX = 480;
+/*
+ * Pop-upin kuvan pyyntöleveys. Kuva kasvoi 10 rem korkeaksi (omistaja
+ * 26.8.2026 ilta: "kuva voisi olla hieman isompi jo heti tässä
+ * näkymässä"), joten 480 px jäisi iPadin tuplatiheydellä pehmeäksi —
+ * 800 px kattaa kortin leveyden @2x. Suurennos hakee yhä omansa.
+ */
+const KOHDE_KUVAN_PX = 800;
 
 /**
  * Suurennoksen pyyntöleveys Commonsista (js/packs/africa-valokuvat.js
