@@ -1227,9 +1227,9 @@ function piirraTeksti(kohde, teksti) {
   return leipa;
 }
 
-/** Napit kortin alalaitaan. */
-function piirraNapit(kohde, napit) {
-  const rivi = html('div', 'fokusvirta-napit');
+/** Napit kortin alalaitaan. Lisäluokalla rivi voi poiketa perusasusta. */
+function piirraNapit(kohde, napit, luokka = '') {
+  const rivi = html('div', luokka ? `fokusvirta-napit ${luokka}` : 'fokusvirta-napit');
   for (const n of napit) rivi.appendChild(n);
   kohde.appendChild(rivi);
 }
@@ -1511,12 +1511,19 @@ function piirraKohtaaminen(ui, city, data, kohde) {
     const pulmaOdottaa = ui.game.pendingPuzzle?.();
     ui.doAction(() => ui.game.actionQuiz(pulmaOdottaa ? {} : { form: 'quiz' }));
   };
+  /*
+   * KYLLÄ JA EI OVAT OIKEITA NAPPEJA (omistaja 26.8.2026 ilta: "Kyllä
+   * ja ei saisi olla nappeina"). Kortin muut siirtymät jäävät 24.8.
+   * kevennettyyn musteviivariviin, mutta varmistus on kortin ainoa
+   * peruuttamaton valinta — se saa painaa nappien verran. Asu tulee
+   * lisäluokasta (css/fokusvirta.css fokusvirta-varmistusnapit).
+   */
   piirraNapit(kohde, [
     nappi('Kyllä', 'primary', aloita),
     // EI ei kuluta yritystä: kortti vain sulkeutuu, ja vihreä piste jää
     // kartalle palamaan (js/fokuspiste.js).
     nappi('Ei', '', () => suljeKasin(ui)),
-  ]);
+  ], 'fokusvirta-varmistusnapit');
   kohde.appendChild(html('p', 'fokusvirta-varoitus', KOHTAAMISEN_VAROITUS));
   piirraVihjelinkki(ui, city, kohtaaminen, kohde);
 }
