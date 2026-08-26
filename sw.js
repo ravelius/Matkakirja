@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1171';
+const CACHE = 'matkakirja-2026-08-09.1172';
 const SHELL = [
   './',
   './index.html',
@@ -621,6 +621,16 @@ const SHELL = [
   './assets/kartat/miniatyyrit/vilna-uzupis.webp',
   './assets/kartat/miniatyyrit/vilna-vilnan-tuomiokirkko.webp',
   './assets/kartat/miniatyyrit/vilna-vilnan-yliopisto.webp',
+  './assets/kartat/ihmeet/aleksandrian-kirjasto.webp',
+  './assets/kartat/ihmeet/artemiin-temppeli.webp',
+  './assets/kartat/ihmeet/babylonin-puutarhat.webp',
+  './assets/kartat/ihmeet/faroksen-majakka.webp',
+  './assets/kartat/ihmeet/halikarnassoksen-mausoleumi.webp',
+  './assets/kartat/ihmeet/hefaistoksen-temppeli.webp',
+  './assets/kartat/ihmeet/knossos-loistossaan.webp',
+  './assets/kartat/ihmeet/parthenon-loistossaan.webp',
+  './assets/kartat/ihmeet/rodoksen-kolossi.webp',
+  './assets/kartat/ihmeet/zeuksen-patsas.webp',
   // Lippuikkunan versioliput (pilotti Suomi + Saksa, v711).
   './assets/liput/versiot/fin-valtiolippu.png',
   './assets/liput/versiot/fin-sotalippu.png',

@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1172: Kadonneiden ihmeiden 10 rekonstruktiokuvaa korteissa (Zeus, kolossi, Faros, mausoleumi, Artemision, puutarhat, kirjasto, Knossos, Hefaisteion ja Parthenon vareissaan). TESTAA: ihmekohteiden kortit kartoilla.',
   'v1171: Miniatyyriera 5/5 VALMIS: Vilna, Tallinna, Ankara ja Izmir (24 kuvaa) + Vapahtajan katedraalin kulta-uusinta. Koko Eurooppa-era: 20 kaupunkia, 121 kuvaa. TESTAA: kohdekartat lapi.',
   'v1170: Miniatyyriera 4/5: Moskova, Pietari, Kiova ja Riika (24 kuvaa) + St Gilesin kruunutorni-uusinta; kaupunkien porttitornisymboli on nyt generoitu kuva. TESTAA: nailla kartoilla piirrokset ja kaupunkikohteiden symboli.',
   'v1169: Antiikin kadonneet ihmeet: 6 uutta kohdetta (Rodoksen kolossi, Knossos, Hefaistoksen temppeli, Halikarnassos, Faroksen majakka, Babylonin puutarhat + Aleksandrian kirjasto) ja rekonstruktiokuvapaikat; Egypti ja Irak saivat ensimmaiset fokuskohteensa. Kuvat generoidaan erikseen. TESTAA: uudet kohteet kartoilla.',
