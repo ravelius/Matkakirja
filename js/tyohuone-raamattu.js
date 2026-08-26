@@ -1209,6 +1209,14 @@ export const RAAMATTU = {
           + 'kuvailevat selitteet kirjoitetaan uusiksi erissä.',
         'Faktat tarkistetaan, lähteet merkitään. API-avaimia ei '
           + 'koskaan repoon eikä lokiin.',
+        'SALAISUUDET (omistaja 26.8.2026): POLLO_KEHITTAJAKOODI ja '
+          + 'EHDOTUS_AVAIN elävät VAIN GitHubin repo-secreteissä — '
+          + 'niitä ei pyydetä keskusteluun, ei talleteta tiedostoihin '
+          + 'eikä kirjoiteta lokiin. Täysi pöllösavuke ajetaan '
+          + 'julkaisuporttina Actions-työnkululla '
+          + '(.github/workflows/savuke-pollo.yml, workflow_dispatch), '
+          + 'joka saa arvot secreteistä; paikallinen savuke ajaa '
+          + 'ilman koodeja osittaisena.',
       ],
     },
     {

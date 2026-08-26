@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1122, teksti: 'Pollosavuke julkaisuportiksi Actions-ajona' },
   { v: 1121, teksti: 'Elaintakyt, museokierrokset ja etusivun karttapinta' },
   { v: 1120, teksti: 'Pelitestikierros: 21 korjausta ja saatoa' },
   { v: 1119, teksti: 'Etusivu uusiksi, kartan pohja ehjaksi, erikoispiirit' },
