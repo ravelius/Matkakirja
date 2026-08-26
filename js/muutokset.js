@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1130, teksti: 'Uudet fokuskohteet Kreikkaan, Bulgariaan ja Turkkiin' },
   { v: 1129, teksti: 'Sarajevon lehdelle herokuvakaruselli' },
   { v: 1128, teksti: 'Kartan panorointi sujuvaksi: mitatut juurisyyt pois' },
   { v: 1127, teksti: 'Paallekkaiset karttamerkit nippuun kaupungin viereen' },

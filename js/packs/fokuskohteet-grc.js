@@ -120,7 +120,10 @@
 
 /**
  * Kreikan fokuskohteet: aineiston kaikki 14 kohdetta samassa
- * järjestyksessä kuin docs/mantereet-tyoaineisto/fokuskohteet-kreikka.md.
+ * järjestyksessä kuin docs/mantereet-tyoaineisto/fokuskohteet-kreikka.md,
+ * niiden perässä Akropolis ja Akropolis-museo (v1119–v1121) sekä
+ * symbolitaksonomian ensimmäinen sisältöerä (kuusi kohdetta, ks.
+ * erän oma kommentti listan sisällä).
  */
 export const FOKUSKOHTEET_GRC = [
   {
@@ -771,6 +774,282 @@ export const FOKUSKOHTEET_GRC = [
           + 'laitteen omassa selaimessa.',
       },
     ],
+  },
+  /*
+   * ── SYMBOLITAKSONOMIAN ENSIMMÄINEN SISÄLTÖERÄ (omistaja 26.8.2026,
+   *    Raamatun osio "Fokusmoodi", kohta SYMBOLITAKSONOMIA) ───────────
+   *
+   * Tästä alaspäin jokaisella kohteella on UUSI KENTTÄ `symboli`, jonka
+   * arvo on taksonomian kategoria (urheilu, ruoka, merenkulku,
+   * kulttuuri, sana, tekniikka…). Rinnakkainen työ piirtää symbolit
+   * yhteiseen kirjastoon; tämä tiedosto kirjaa vain datan, ja ilman
+   * piirtäjää kohde näkyy entiseen tapaan pisteenä (js/fokuskohteet.js
+   * ei kaadu tuntemattomaan kenttään). Vanhoille kohteille kenttää EI
+   * ole lisätty tässä erässä — se on oma, koko datan kattava päätös.
+   *
+   * Faktapohja: en-Wikipedia raakatekstinä (index.php?action=raw)
+   * artikkeli kerrallaan 26.8.2026 — ei aiempaa työaineistoa, joten
+   * lähderivit osoittavat suoraan artikkeleihin. Koordinaatit on
+   * laskettu tiedoston alussa kuvatuilla kaavoilla, ja kaavat
+   * VALIDOITIIN ennen käyttöä kahdella tässä tiedostossa jo olevalla
+   * kohteella (Thessaloniki ja Santorini: lasketut luvut vastasivat
+   * kirjattuja 0,1 yksikön tarkkuudella). Kuvat on valittu Commonsin
+   * rajapinnalla (imageinfo: lisenssi, tekijä, Restrictions tyhjä) ja
+   * katsottu silmin ~480 px:n leveydellä ennen kirjaamista.
+   */
+  {
+    id: 'olympia',
+    nimi: 'Olympia',
+    tyyppi: 'muu',
+    symboli: 'urheilu',
+    kysymykset: [
+      'Mitä lajeja antiikin kisoissa kilpailtiin?',
+      'Miksi kisat aikanaan loppuivat?',
+    ],
+    korostukset: ['stadion'],
+    /* Valintakuplan painike. Lupaus on 1873-kulma, ei urheiluhistoria. */
+    nappi: 'Kisat, jotka odottivat kaivajiaan',
+    // 21,63 E / 37,63833 N — en-Wikipedia "Olympia, Greece" (37°38′18″N
+    // 21°37′48″E).
+    laudat: {
+      maailmankartta: { x: 6554.3, y: 1894.8 },
+      europe: { x: 626.5, y: 903.7 },
+    },
+    teksti: 'Antiikin olympialaiset käytiin Olympian pyhäkköalueella joka '
+      + 'neljäs vuosi Zeuksen kunniaksi 700-luvulta eaa. aina 300-luvulle '
+      + 'jaa., ja hänen temppelissään seisoi Feidiaan kullasta ja '
+      + 'norsunluusta veistämä Zeus-patsas, yksi antiikin seitsemästä '
+      + 'ihmeestä. Stadionin kentän pituudesta tuli kreikkalaisten '
+      + 'matkamitta, stadion. Isoisän matkan aikaan rauniot olivat vielä '
+      + 'suurelta osin kaivamatta: saksalaisten suurkaivaus alkoi 1875 ja '
+      + 'kirjasi kaikkiaan 14 000 esinettä. Kisojen aate herätettiin '
+      + 'henkiin 1894.',
+    lahde: 'en-Wikipedia "Olympia, Greece", johdanto ja osio "1875–1881" '
+      + '(tarkistettu 26.8.2026).',
+    /*
+     * Category:Stadium of Olympia. Commons 26.8.2026: 6240×4160,
+     * CC BY 2.0, dronepicr, Restrictions tyhjä. Katsottu silmin:
+     * stadionin kenttä lähtöviivoineen, ei ihmisiä, ei vesileimaa.
+     */
+    kuva: {
+      tiedosto: 'Ancient Olympia Stadium in Greece (51224128585).jpg',
+      selite: 'Olympian antiikin stadion. Kentän pituudesta tuli '
+        + 'mittayksikkö stadion.',
+      lahde: 'dronepicr, Wikimedia Commons (CC BY 2.0)',
+    },
+  },
+  {
+    id: 'kalamata',
+    nimi: 'Kalamata',
+    tyyppi: 'kaupunki',
+    symboli: 'ruoka',
+    kysymykset: [
+      'Kuinka vanhaksi oliivipuu voi elää?',
+      'Miksi tuore oliivi ei kelpaa syötäväksi?',
+    ],
+    korostukset: ['Kalamon'],
+    /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
+    nappi: 'Oliivi, joka poimitaan käsin',
+    // 22,11111 E / 37,03778 N — en-Wikipedia "Kalamata" (37°02′16″N
+    // 22°06′40″E).
+    laudat: {
+      maailmankartta: { x: 6570.4, y: 1917.9 },
+      europe: { x: 635.7, y: 919.5 },
+    },
+    teksti: 'Kalamata on antanut nimensä suurelle, tummanvioletille ja '
+      + 'mantelinmuotoiselle pöytäoliiville, jota säilötään perinteisesti '
+      + 'viinietikassa tai oliiviöljyssä. Lajiketta viljeltiin alun perin '
+      + 'kaupungin ympäristössä Messeniassa ja naapurissa Lakoniassa. '
+      + 'Kalamata-oliivia ei voi korjata vihreänä, ja se poimitaan käsin, '
+      + 'jotta hedelmä ei kolhiinnu. EU:ssa nimi on suojattu: Kalamataksi '
+      + 'saa kutsua vain seudun omia oliiveja, ja muualla kasvatetut '
+      + 'myydään nimellä Kalamon.',
+    lahde: 'en-Wikipedia "Kalamata olive", johdanto ja osiot "Description" '
+      + 'ja "Preparation" (tarkistettu 26.8.2026).',
+    /*
+     * Category:Aceitunas Kalamata. Commons 26.8.2026: 3072×2304,
+     * CC BY-SA 2.0, Michael Fielitz, Restrictions tyhjä. Katsottu
+     * silmin: kulho Kalamata-oliiveja, ei ihmisiä, ei vesileimaa.
+     */
+    kuva: {
+      tiedosto: 'Kalamataolives.jpg',
+      selite: 'Kalamata-oliiveja. Tummanvioletti hedelmä poimitaan '
+        + 'käsin, jotta se ei kolhiinnu.',
+      lahde: 'Michael Fielitz, Wikimedia Commons (CC BY-SA 2.0)',
+    },
+  },
+  {
+    id: 'ermoupoli',
+    nimi: 'Ermoupoli',
+    tyyppi: 'kaupunki',
+    symboli: 'merenkulku',
+    kysymykset: [
+      'Mistä saarille paenneet ihmiset tulivat?',
+      'Mitä telakoilla rakennetaan nykyään?',
+    ],
+    korostukset: ['Pireus'],
+    /* Valintakuplan painike. Lupaus on 1873-kulma: satama oli tuolloin maan ykkönen. */
+    nappi: 'Satama ennen Pireusta',
+    // 24,91667 E / 37,43333 N — en-Wikipedia "Ermoupoli" (37°26′N 24°55′E).
+    laudat: {
+      maailmankartta: { x: 6663.9, y: 1902.7 },
+      europe: { x: 689.6, y: 909.1 },
+    },
+    teksti: 'Hermeksen kaupungiksi nimetty Ermoupoli perustettiin Syroksen '
+      + 'saarelle 1820-luvulla, kun vapaussodan pakolaiset muilta saarilta '
+      + 'asettuivat sinne. Siitä kasvoi nopeasti Kreikan johtava kauppa- '
+      + 'ja teollisuuskaupunki ja maan pääsatama: Kreikan höyrylaivayhtiö '
+      + 'perustettiin täällä 1856, ja Syroksen telakoilta laskettiin '
+      + 'vesille tuhansia laivoja. Vasta 1800-luvun lopulla Pireus ajoi '
+      + 'kaupungin ohi, ja Ermoupoli jäi Kykladien hallintokeskukseksi.',
+    lahde: 'en-Wikipedia "Ermoupoli", johdanto ja osio "History" '
+      + '(tarkistettu 26.8.2026).',
+    /*
+     * Category:Ermoupoli. Commons 26.8.2026: 3888×2592, CC BY-SA 3.0,
+     * Hans Peter Schaefer, Restrictions tyhjä. Katsottu silmin:
+     * 1800-luvun kaupunki nousee satamasta rinteelle; rannassa vain
+     * etäisiä, tunnistamattomia hahmoja, ei vesileimaa.
+     */
+    kuva: {
+      tiedosto: 'Syros ermoupolis 140707.jpg',
+      selite: 'Ermoupoli nousee satamasta rinteelle Syroksen saarella. '
+        + 'Kaupunki oli 1800-luvulla Kreikan pääsatama.',
+      lahde: 'Hans Peter Schaefer, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+  },
+  {
+    id: 'epidauros',
+    nimi: 'Epidauros',
+    tyyppi: 'muu',
+    symboli: 'kulttuuri',
+    kysymykset: [
+      'Miten sairaita hoidettiin Asklepioksen pyhäkössä?',
+      'Mitä näytelmiä teatterissa esitetään nykyään?',
+    ],
+    korostukset: ['Asklepios|Asklepioksen'],
+    /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
+    nappi: 'Teatteri 14 000 kuulijalle',
+    // 23,07444 E / 37,59778 N — en-Wikipedia "Epidaurus" (37°35′52″N
+    // 23°04′28″E).
+    laudat: {
+      maailmankartta: { x: 6602.5, y: 1896.4 },
+      europe: { x: 654.2, y: 904.8 },
+    },
+    teksti: 'Epidauroksen teatteri rakennettiin 300-luvulla eaa. '
+      + 'parantajajumala Asklepioksen pyhäkön vaurastuttua, ja Polykleitos '
+      + 'nuoremman suunnittelemaan katsomoon mahtuu jopa 14 000 katsojaa. '
+      + 'Teatteri on kuulu akustiikastaan, jolle on mitattu selityskin: '
+      + 'kalkkikiviset istuinrivit suodattavat yleisön matalaa huminaa ja '
+      + 'vahvistavat näyttämön korkeita ääniä. Roomalaiset jatkoivat '
+      + 'katsomoa 21 rivillä, ja antiikin näytelmiä esitetään samoilla '
+      + 'penkeillä yhä.',
+    lahde: 'en-Wikipedia "Epidaurus", johdanto ja osio "The great theatre" '
+      + '(tarkistettu 26.8.2026).',
+    /*
+     * Category:Theatre of Epidaurus. Commons 26.8.2026: 2816×2112,
+     * CC BY-SA 4.0, Nicholas Hartmann, Restrictions tyhjä. Katsottu
+     * silmin: koko katsomo ylhäältä; kentällä vain etäisiä,
+     * tunnistamattomia hahmoja, ei vesileimaa.
+     */
+    kuva: {
+      tiedosto: '2007 Greece Epidavros theater.jpg',
+      selite: 'Epidauroksen teatterin katsomo. Kalkkikiviset istuinrivit '
+        + 'ovat osa sen kuuluisaa akustiikkaa.',
+      lahde: 'Nicholas Hartmann, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  },
+  {
+    id: 'marathon',
+    nimi: 'Marathon',
+    tyyppi: 'kaupunki',
+    symboli: 'sana',
+    kysymykset: [
+      'Kuinka pitkä nykyinen maratonmatka on ja miksi?',
+      'Miten alivoimainen armeija voitti?',
+    ],
+    korostukset: ['fenkoli|fenkolia'],
+    /* Valintakuplan painike. Lupaus on sanan tarina. */
+    nappi: 'Juoksu, josta laji sai nimen',
+    // 23,96194 E / 38,15333 N — en-Wikipedia "Marathon, Greece"
+    // (38°9′12″N 23°57′43″E).
+    laudat: {
+      maailmankartta: { x: 6632.1, y: 1874.9 },
+      europe: { x: 671.3, y: 890.2 },
+    },
+    teksti: 'Marathonin tasangolla Ateenan alivoimainen armeija löi '
+      + 'Persian suurvallan joukot 490 eaa. Tarun mukaan airut '
+      + 'Feidippides juoksi taistelukentältä Ateenaan asti ilmoittamaan '
+      + 'voitosta — ja tästä legendasta maratonjuoksu sai uudella ajalla '
+      + 'nimensä. Itse paikannimi on arkisempi: se tulee fenkolia '
+      + 'tarkoittavasta kreikan sanasta ja merkitsee "fenkolien paikkaa". '
+      + 'Tasangolla kohoaa yhä Soros, kumpuhauta taistelussa kaatuneille '
+      + '192 ateenalaiselle.',
+    lahde: 'en-Wikipedia "Marathon, Greece", johdanto, osio "History" ja '
+      + 'kohta "Points of interest" (tarkistettu 26.8.2026).',
+    /*
+     * Category:Soros. Commons 26.8.2026: 4000×3000, CC BY-SA 4.0,
+     * Tomisti, Restrictions tyhjä. Katsottu silmin: kumpu selvästi
+     * keskellä kuvaa avoimella tasangolla, ei ihmisiä, ei vesileimaa.
+     * Saman kuvaajan kaksi muuta kumpukuvaa hylättiin, koska niissä
+     * kumpu jää puiden taakse.
+     */
+    kuva: {
+      tiedosto: 'Marathon Tomb of the Athenians 1.jpg',
+      selite: 'Soros, kaatuneiden ateenalaisten kumpuhauta Marathonin '
+        + 'tasangolla.',
+      lahde: 'Tomisti, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  },
+  {
+    id: 'antikythera',
+    nimi: 'Antikythera',
+    tyyppi: 'saari',
+    symboli: 'tekniikka',
+    kysymykset: [
+      'Kuka laitteen rakensi ja missä?',
+      'Mitä muuta hylystä nostettiin?',
+    ],
+    korostukset: ['analogiatietokone'],
+    /* Valintakuplan painike. Lupaus on koneen mahdottomuus omaan aikaansa. */
+    nappi: 'Kone väärältä vuosituhannelta',
+    // 23,3 E / 35,86667 N — en-Wikipedia "Antikythera" (35°52′N 23°18′E).
+    laudat: {
+      maailmankartta: { x: 6610.0, y: 1962.6 },
+      europe: { x: 658.6, y: 950.3 },
+    },
+    /*
+     * AJOITUS ON KOHTEEN YDIN: isoisän matkan aikaan 1873 hylkyä ei
+     * ollut löydetty — Symin sienisukeltajat osuivat siihen vasta 1900.
+     * Teksti sanoo tämän itse, jottei kohde vihjaa isoisän tienneen
+     * asiasta mitään.
+     */
+    teksti: 'Symin sienisukeltajat löysivät Antikytheran edustalta '
+      + 'roomalaisen rahtilaivan hylyn vuonna 1900 — isoisän aikaan meri '
+      + 'piti salaisuutensa vielä visusti. Nostetun lastin joukosta '
+      + 'paljastui pronssinen laite, Antikytheran mekanismi: 100-luvulla '
+      + 'eaa. rakennettu käsikäyttöinen taivaankoneisto ja vanhin tunnettu '
+      + 'analogiatietokone, joka ennusti taivaankappaleiden asemat ja '
+      + 'pimennykset vuosikymmeniksi eteenpäin. Suurimmassa rattaassa oli '
+      + '223 hammasta. Yhtä monimutkaisia koneita tehtiin seuraavan '
+      + 'kerran vasta 1300-luvun Euroopassa.',
+    lahde: 'en-Wikipedia "Antikythera mechanism", johdanto ja osio '
+      + '"Discovery"; saaren koordinaatit en-Wikipedia "Antikythera" '
+      + '(tarkistettu 26.8.2026).',
+    /*
+     * Category:Antikythera mechanism in the National Archaeological
+     * Museum of Athens. Commons 26.8.2026: 4478×2985, CC BY-SA 4.0,
+     * Zde (sama kuvaaja kuin Varnan kulta-aarteessa), Restrictions
+     * tyhjä. Katsottu silmin: mekanismin kappale vitriinissä ja
+     * hammasratas näkyvissä, ei ihmisiä, ei vesileimaa. Selite ei
+     * väitä kappaletta suurimmaksi — kuvaajan oma kuvaus ei kerro,
+     * mikä 82 kappaleesta on kyseessä.
+     */
+    kuva: {
+      tiedosto: 'Mechanism of Antikythera, 150-100 BC, NAMA, 191434.jpg',
+      selite: 'Antikytheran mekanismin kappaleita Ateenan kansallisessa '
+        + 'arkeologisessa museossa.',
+      lahde: 'Zde, Wikimedia Commons (CC BY-SA 4.0)',
+    },
   },
 ];
 

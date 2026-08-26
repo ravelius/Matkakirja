@@ -92,8 +92,10 @@
 
 /**
  * Bulgarian fokuskohteet: aineiston 11 kohdetta samassa järjestyksessä
- * kuin docs/mantereet-tyoaineisto/fokuskohteet-bulgaria.md, ja niiden
- * perässä Boyanan kirkko (ks. tiedoston alku).
+ * kuin docs/mantereet-tyoaineisto/fokuskohteet-bulgaria.md, niiden
+ * perässä Boyanan kirkko (ks. tiedoston alku) sekä symbolitaksonomian
+ * ensimmäinen sisältöerä (viisi kohdetta, ks. erän oma kommentti
+ * listan sisällä).
  */
 export const FOKUSKOHTEET_BGR = [
   {
@@ -543,6 +545,255 @@ export const FOKUSKOHTEET_BGR = [
       selite: 'Boyanan kirkko Vitošan juurella. Rakennus nousi kolmessa '
         + 'vaiheessa 300 vuoden aikana.',
       lahde: 'Todor Bozhinov, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+  },
+  /*
+   * ── SYMBOLITAKSONOMIAN ENSIMMÄINEN SISÄLTÖERÄ (omistaja 26.8.2026,
+   *    Raamatun osio "Fokusmoodi", kohta SYMBOLITAKSONOMIA) ───────────
+   *
+   * Tästä alaspäin jokaisella kohteella on uusi kenttä `symboli`
+   * (taksonomian kategoria: ruoka, sana, historia, elain, kulttuuri).
+   * Rinnakkainen työ piirtää symbolit; ilman piirtäjää kohde näkyy
+   * entiseen tapaan pisteenä. Faktapohja on en-Wikipedia raakatekstinä
+   * (index.php?action=raw) artikkeli kerrallaan 26.8.2026 — ei aiempaa
+   * työaineistoa, joten lähderivit osoittavat suoraan artikkeleihin.
+   * Koordinaattikaavat validoitiin ennen käyttöä kahdella tämän
+   * tiedoston kohteella (Varna ja Boyanan kirkko: lasketut luvut
+   * vastasivat kirjattuja 0,1 yksikön tarkkuudella). Kuvat on valittu
+   * Commonsin rajapinnalla (imageinfo: lisenssi, tekijä, Restrictions
+   * tyhjä) ja katsottu silmin ~480 px:n leveydellä.
+   */
+  {
+    id: 'jogurtti',
+    nimi: 'Bulgarialainen jogurtti',
+    tyyppi: 'muu',
+    symboli: 'ruoka',
+    kysymykset: [
+      'Mitä bakteeri tekee maidolle?',
+      'Miten jogurttia syödään Bulgariassa?',
+    ],
+    korostukset: ['Lactobacillus bulgaricus'],
+    /* Valintakuplan painike. Lupaus on bakteerin nimen tarina. */
+    nappi: 'Bakteeri, joka sai maan nimen',
+    /*
+     * 22,66667 E / 42,83333 N — en-Wikipedia "Tran, Bulgaria" (42°50′N
+     * 22°40′E). Piste on TRANIN PIKKUKAUPUNKI: Grigorovin kotikylällä
+     * Studen Izvorilla ei ole en-Wikipediassa omaa artikkelia eikä
+     * koordinaattia, ja kylä kuuluu Tranin kuntaan (en-Wikipedia
+     * "Stamen Grigorov") — sama korvikeratkaisu kuin Vitošan
+     * Cherni Vrah -pisteessä.
+     */
+    laudat: {
+      maailmankartta: { x: 6588.9, y: 1690.1 },
+      europe: { x: 646.4, y: 767.1 },
+    },
+    teksti: 'Jogurtin tekee jogurtiksi maitohappobakteeri, jonka '
+      + 'bulgarialainen lääketieteen opiskelija Stamen Grigorov tunnisti '
+      + 'Genevessä 1905 tutkiessaan kotimaansa jogurttia. Bakteeri '
+      + 'nimettiin löytäjän kotimaan mukaan Lactobacillus bulgaricukseksi, '
+      + 'ja se on yhä jogurtinvalmistuksen pääbakteeri kaikkialla '
+      + 'maailmassa. Grigorov syntyi Studen Izvorin kylässä Tranin '
+      + 'seudulla. Nobelisti Ilja Metšnikov arveli aikanaan Grigorovin '
+      + 'työn pohjalta, että bulgarialaisten talonpoikien pitkä ikä '
+      + 'johtui juuri jogurtista.',
+    lahde: 'en-Wikipedia "Stamen Grigorov", "Lactobacillus delbrueckii '
+      + 'subsp. bulgaricus" (johdanto) ja "Yogurt" (osio History) '
+      + '(tarkistettu 26.8.2026).',
+    /*
+     * Commons-haku "Bulgarian yogurt". Commons 26.8.2026: 3264×2448,
+     * CC BY-SA 3.0, Ned Jelyazkov, Restrictions tyhjä. Katsottu
+     * silmin: kulhollinen kiselo mlyakoa, ei ihmisiä, ei vesileimaa.
+     */
+    kuva: {
+      tiedosto: 'Bulgarian yogurt.JPG',
+      selite: 'Bulgarialaista jogurttia eli kiselo mlyakoa. Sen '
+        + 'pääbakteeri kantaa maan nimeä.',
+      lahde: 'Ned Jelyazkov, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+  },
+  {
+    id: 'veliki-preslav',
+    nimi: 'Veliki Preslav',
+    tyyppi: 'kaupunki',
+    symboli: 'sana',
+    kysymykset: [
+      'Keitä koulun kuuluisat kirjoittajat olivat?',
+      'Miksi kirjaimisto on nimetty Kyrilloksen mukaan?',
+    ],
+    korostukset: ['kyrillinen kirjaimisto'],
+    /* Valintakuplan painike. Lupaus on aakkosten syntypaikka. */
+    nappi: 'Paja, josta aakkoset tulivat',
+    // 26,817 E / 43,16667 N — en-Wikipedia "Veliki Preslav" (43°10′0″N
+    // 26°49′1.2″E).
+    laudat: {
+      maailmankartta: { x: 6727.2, y: 1676.6 },
+      europe: { x: 726.1, y: 758.3 },
+    },
+    teksti: 'Veliki Preslav oli ensimmäisen Bulgarian valtakunnan '
+      + 'pääkaupunki, ja hallitsija Simeon I siirsi tänne 893 valtakunnan '
+      + 'kirjallisuuskoulun — keskiajan slaavien tärkeimmän oppineiston '
+      + 'keskuksen, jossa käännettiin, sepitettiin runoja ja maalattiin '
+      + 'keramiikkaa. Juuri Preslavin koulussa kehitettiin kyrillinen '
+      + 'kirjaimisto, ja varhaisimmat ajoitettavat kyrilliset kirjoitukset '
+      + 'on löydetty tältä seudulta. Bysantin keisarin joukot valtasivat '
+      + 'ja polttivat kaupungin 972.',
+    lahde: 'en-Wikipedia "Preslav Literary School", johdanto ja osio '
+      + '"History"; pääkaupunkiasema ja koordinaatit en-Wikipedia '
+      + '"Veliki Preslav" (tarkistettu 26.8.2026).',
+    /*
+     * Category:Golden Church in Preslav: Kultainen eli pyöreä kirkko,
+     * Simeonin ajan kuuluisin rakennus. Artikkelin oma kuva samasta
+     * kohteesta hylättiin, koska siinä kirkko ei erotu muurien takaa;
+     * tässä osittain entisöidyt kaaret näkyvät selvästi. Commons
+     * 26.8.2026: 3264×2448, CC BY-SA 4.0, Alexander.D.Hristov,
+     * Restrictions tyhjä. Katsottu silmin: kirkon rauniot kaarineen,
+     * ei ihmisiä, ei vesileimaa.
+     */
+    kuva: {
+      tiedosto: 'Round Church, Preslav - Church outside view.jpg',
+      selite: 'Kultaisen eli pyöreän kirkon rauniot Veliki Preslavissa, '
+        + 'ensimmäisen Bulgarian valtakunnan pääkaupungissa.',
+      lahde: 'Alexander.D.Hristov, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  },
+  {
+    id: 'madara',
+    nimi: 'Madaran ratsastaja',
+    tyyppi: 'muu',
+    symboli: 'historia',
+    kysymykset: [
+      'Keitä kaanit Tervel ja Krum olivat?',
+      'Miten kalliokuvaa suojellaan rapautumiselta?',
+    ],
+    korostukset: ['kaani Tervel|kaani Tervelin'],
+    /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
+    nappi: 'Ratsastaja kalliossa',
+    // 27,11956 E / 43,27669 N — en-Wikipedia "Madara Rider"
+    // (43°16′36.1″N 27°07′10.4″E).
+    laudat: {
+      maailmankartta: { x: 6737.3, y: 1672.2 },
+      europe: { x: 731.9, y: 755.4 },
+    },
+    teksti: 'Madaran kalliojyrkänteeseen on hakattu lähes luonnollisen '
+      + 'kokoinen ratsastaja, joka työntää keihään hevosen jalkoihin '
+      + 'kaatuneeseen leijonaan koira kintereillään. Reliefi veistettiin '
+      + '23 metrin korkeuteen todennäköisesti 700-luvun alussa kaani '
+      + 'Tervelin kaudella, ja sen ympärillä on kolme keskiajan kreikaksi '
+      + 'kirjoitettua tekstiä Bulgarian varhaisista kaaneista. Kuvan '
+      + 'merkitys on yhä arvoitus. Unescon maailmanperintölistalle '
+      + 'reliefi pääsi 1979, ja se on kuvattu Bulgarian pikkukolikoihin.',
+    lahde: 'en-Wikipedia "Madara Rider", johdanto sekä osiot '
+      + '"Description", "Inscriptions" ja "Legacy" (tarkistettu '
+      + '26.8.2026).',
+    /*
+     * SAMA TIEDOSTO KUIN BULGARIAN MAAKARTTANOSTOSSA
+     * (js/packs/maakartat.js): Diego Delson otos reliefistä, joka on
+     * jo pelissä ja silmätarkistettu 8.8.2026 — sisarotos DD 41
+     * hylättiin, koska peilipolku katkaisee pitkän nimen ja kaksi eri
+     * tiedostoa osuisi ämpärissä samaan polkuun (tests/media.test.mjs
+     * valvoo tätä). Rivi on tarkoituksella yli mitan: nimeä ei saa
+     * katkaista. Commons 26.8.2026: CC BY-SA 4.0, Diego Delso,
+     * Restrictions tyhjä; katsottu silmin (kalliokuva, ei ihmisiä,
+     * ei vesileimaa).
+     */
+    kuva: {
+      tiedosto: 'Caballero de Madara, reserva histórico-arqueológica Nacional de Madara, Bulgaria, 2016-05-27, DD 39.jpg',
+      selite: 'Madaran ratsastaja kalliojyrkänteessä. Reliefi on '
+        + 'veistetty 23 metrin korkeuteen.',
+      lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  },
+  {
+    id: 'srebarna',
+    nimi: 'Srebarna',
+    tyyppi: 'muu',
+    symboli: 'elain',
+    kysymykset: [
+      'Kuinka suureksi kiharapelikaani kasvaa?',
+      'Mitä muita lintuja järvellä pesii?',
+    ],
+    korostukset: ['Via Pontica|Via Pontican'],
+    /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
+    nappi: 'Järvi, jolla pelikaanit pesivät',
+    // 27,07806 E / 44,11444 N — en-Wikipedia "Srebarna Nature Reserve"
+    // (44°06′52″N 27°04′41″E).
+    laudat: {
+      maailmankartta: { x: 6735.9, y: 1638.1 },
+      europe: { x: 731.1, y: 733.4 },
+    },
+    teksti: 'Parin kilometrin päässä Tonavan etelärannasta lepää matala '
+      + 'Srebarnan järvi, jonka nimen uskotuimman selityksen mukaan antoi '
+      + 'täydenkuun hopeinen kimallus veden pinnassa. Järvi on Via '
+      + 'Pontican, Euroopan ja Afrikan välisen lintujen muuttotien, '
+      + 'varrella, ja sen alueella pesii 179 lintulajia — tunnetuimpana '
+      + 'kiharapelikaani. Alue rauhoitettiin 1948, ja Unescon '
+      + 'maailmanluonnonperintöön se otettiin 1983.',
+    lahde: 'en-Wikipedia "Srebarna Nature Reserve", johdanto sekä osiot '
+      + '"History", "Legends" ja "Fauna" (tarkistettu 26.8.2026).',
+    /*
+     * Category:Srebarna Nature Reserve. Srebarnassa kuvatut
+     * pelikaanikuvat katsottiin silmin ja hylättiin: linnut ovat
+     * niissä kaukaisia, epätarkkoja läiskiä taivasta vasten, eikä
+     * sellainen kuva kerro kortissa mitään. Tässä on itse järvi
+     * kaislasaarineen — paikka, josta koko teksti kertoo. Commons
+     * 26.8.2026: 1000×600, CC BY-SA 4.0, ABesheva, Restrictions
+     * tyhjä. Katsottu silmin: järvi ja kaislikot, ei ihmisiä, ei
+     * vesileimaa.
+     */
+    kuva: {
+      tiedosto: 'Biosphere reserve Srebarna.jpg',
+      selite: 'Srebarnan matalaa järveä kaislasaarineen. Kaislikoissa '
+        + 'pesii 179 lintulajia, tunnetuimpana kiharapelikaani.',
+      lahde: 'ABesheva, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  },
+  {
+    id: 'pernik',
+    nimi: 'Pernik',
+    tyyppi: 'kaupunki',
+    symboli: 'kulttuuri',
+    kysymykset: [
+      'Miten kukeri-naamio tehdään?',
+      'Pääseekö kulkueeseen mukaan itse?',
+    ],
+    korostukset: ['kukeri|kukereille'],
+    /* Valintakuplan painike. Lupaus on rituaalin tarkoitus. */
+    nappi: 'Naamiot, jotka ajavat henget pois',
+    // 23,03333 E / 42,6 N — en-Wikipedia "Pernik" (42°36′N 23°02′E).
+    laudat: {
+      maailmankartta: { x: 6601.1, y: 1699.5 },
+      europe: { x: 653.4, y: 773.2 },
+    },
+    teksti: 'Tammikuun lopulla Pernik kuuluu kukereille: naamioituneet '
+      + 'hahmot tanssivat kaduilla puisissa eläinnaamioissa, vyöllään '
+      + 'suuret kellot, joiden kalke karkottaa perinteen mukaan pahat '
+      + 'henget ja tuo kylälle sadon, terveyden ja onnen. Survan '
+      + 'naamiaisfestivaali on järjestetty vuodesta 1966, ja se on '
+      + 'Balkanin ja koko itäisen Euroopan suurimpia: kolmen päivän '
+      + 'ajaksi kaupunkiin kokoontuu tuhansia kukereita eri puolilta '
+      + 'Bulgariaa ja maailmaa.',
+    lahde: 'en-Wikipedia "Kukeri" (johdanto) ja "Pernik" (osiot '
+      + '"History" ja "Surva") (tarkistettu 26.8.2026).',
+    /*
+     * Category:Kukeri. SURVA-FESTIVAALIN OMAT VALOKUVAT HYLÄTTIIN:
+     * jokaisessa katsotussa (Surva 2019, Surva 2013, Klearchosin
+     * Pernik-otos) yleisön tai esiintyjän kasvot erottuvat selvästi
+     * (ei tunnistettavia ihmisiä -sääntö), ja Pernikin seudun vanhat
+     * mustavalkokuvat ovat skannauksia, joiden CC-lisenssimerkintä ei
+     * voi olla lataajan oma. Tässä kukerit ovat kokonaan naamioidensa
+     * peitossa. Kuva on Razlogista eikä Pernikistä — selite sanoo sen
+     * itse, samaan tapaan kuin Kırkpınarin maalauksessa. Commons
+     * 26.8.2026: 2288×1712, public domain (kuvaajan oma vapautus,
+     * bg-Wikipedia), Restrictions tyhjä. Katsottu silmin: naamioidut
+     * hahmot, taustan harvat sivustakatsojat pieniä ja epätarkkoja,
+     * ei vesileimaa.
+     */
+    kuva: {
+      tiedosto: 'Kukeri razlog.JPG',
+      selite: 'Kukereita uudenvuoden kulkueessa Razlogissa. Sama '
+        + 'naamioperinne kokoaa tuhannet kulkijat Pernikin Survaan.',
+      lahde: 'Ivaneskoto, bg-Wikipedia / Wikimedia Commons (public '
+        + 'domain)',
     },
   },
 ];

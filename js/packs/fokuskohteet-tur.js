@@ -124,7 +124,9 @@
 
 /**
  * Turkin fokuskohteet: aineiston 14 kohdetta samassa järjestyksessä
- * kuin docs/mantereet-tyoaineisto/fokuskohteet-turkki.md.
+ * kuin docs/mantereet-tyoaineisto/fokuskohteet-turkki.md, ja niiden
+ * perässä symbolitaksonomian ensimmäinen sisältöerä (viisi kohdetta,
+ * ks. erän oma kommentti listan sisällä).
  */
 export const FOKUSKOHTEET_TUR = [
   {
@@ -700,6 +702,265 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Kızılırmak Bafran suistossa. Joki on Turkin pisin '
         + 'kokonaan maan sisällä virtaava joki, 1 355 kilometriä.',
       lahde: 'Sadi Sezgin, Wikimedia Commons (CC BY 3.0)',
+    },
+  },
+  /*
+   * ── SYMBOLITAKSONOMIAN ENSIMMÄINEN SISÄLTÖERÄ (omistaja 26.8.2026,
+   *    Raamatun osio "Fokusmoodi", kohta SYMBOLITAKSONOMIA) ───────────
+   *
+   * Tästä alaspäin jokaisella kohteella on uusi kenttä `symboli`
+   * (taksonomian kategoria: ruoka, kauppa, merenkulku, elain, urheilu).
+   * Rinnakkainen työ piirtää symbolit; ilman piirtäjää kohde näkyy
+   * entiseen tapaan pisteenä. Faktapohja on en-Wikipedia raakatekstinä
+   * (index.php?action=raw) artikkeli kerrallaan 26.8.2026 — ei aiempaa
+   * työaineistoa, joten lähderivit osoittavat suoraan artikkeleihin.
+   * Koordinaattikaavat validoitiin ennen käyttöä kahdella tämän
+   * tiedoston kohteella (Trabzon ja Göbekli Tepe: lasketut luvut
+   * vastasivat kirjattuja 0,1 yksikön tarkkuudella). Kuvat on valittu
+   * Commonsin rajapinnalla (imageinfo: lisenssi, tekijä, Restrictions
+   * tyhjä) ja katsottu silmin ~480 px:n leveydellä. Turkissa ei ole
+   * panoraamavapautta, joten kuvien aiheet ovat vanhoja rakennuksia,
+   * ruokaa, eläin ja PD-kartta — ei modernia arkkitehtuuria eikä
+   * uusia taideteoksia. Jean Pascal Sébahin 1890-luvun basaarikuva
+   * HYLÄTTIIN, koska negatiiviin on raaputettu studion nimikirjoitus
+   * (vanhan studion signeeraus hylkää kuvan siinä missä vesileimakin).
+   */
+  {
+    id: 'gaziantep',
+    nimi: 'Gaziantep',
+    tyyppi: 'kaupunki',
+    symboli: 'ruoka',
+    kysymykset: [
+      'Montako taikinakerrosta baklavassa on?',
+      'Miten pistaasit korjataan?',
+    ],
+    korostukset: ['kaymak|kaymak-kerman'],
+    /* Valintakuplan painike. Lupaus on 1873-kulma: resepti ehti perille juuri ennen isoisää. */
+    nappi: 'Resepti, joka ehti perille 1871',
+    // 37,37806 E / 37,06583 N — en-Wikipedia "Gaziantep" (37°03′57″N
+    // 37°22′41″E).
+    laudat: {
+      maailmankartta: { x: 7079.3, y: 1916.8 },
+      europe: { x: 928.9, y: 918.8 },
+    },
+    teksti: 'Gaziantep on kuulu baklavastaan: ohuista taikinalevyistä, '
+      + 'pähkinöistä ja makeasta liemestä kerrostettu leivonnainen '
+      + 'tehdään täällä seudun omista pistaaseista ja tarjotaan usein '
+      + 'kaymak-kerman kera. Kaupungin baklavaresepti saapui vuonna 1871 '
+      + 'leipurilta, joka oli oppinut taidon Damaskoksessa — kaksi vuotta '
+      + 'ennen isoisän matkaa. Vuonna 2013 Antep-baklava sai EU:n '
+      + 'suojatun maantieteellisen merkinnän ensimmäisenä turkkilaisena '
+      + 'tuotteena.',
+    lahde: 'en-Wikipedia "Baklava", johdanto ja osio "Turkey" '
+      + '(tarkistettu 26.8.2026; reseptin toi Çelebi Güllü). '
+      + 'Koordinaatit en-Wikipedia "Gaziantep".',
+    /*
+     * Commons-haku "baklava Gaziantep". Commons 26.8.2026: lisenssi ja
+     * Restrictions tarkistettu rajapinnasta, katsottu silmin
+     * (baklavaa myyntitiskillä, ei ihmisiä, ei vesileimaa). Kuvaaja on
+     * sama Adam Jones, jonka otos on jo Veliko Tarnovon kohteella.
+     */
+    kuva: {
+      tiedosto: 'Baklava and Pistachios for Sale - Gaziantep.jpg',
+      selite: 'Baklavaa ja pistaaseja myynnissä Gaziantepissä. Seudun '
+        + 'pistaasit ovat kaupungin baklavan ydin.',
+      lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 2.0)',
+    },
+  },
+  {
+    id: 'kapalicarsi',
+    nimi: 'Kapalıçarşı',
+    tyyppi: 'muu',
+    symboli: 'kauppa',
+    kysymykset: [
+      'Mitä basaarissa myydään nykyään?',
+      'Miten kauppias saa myymälän basaarista?',
+    ],
+    korostukset: ['Konstantinopolin valloitus|Konstantinopolin valloituksen'],
+    /* Valintakuplan painike. Lupaus on rakennuksen ikä. */
+    nappi: 'Kauppahalli vuodelta 1455',
+    /*
+     * 28,96793 E / 41,01058 N — en-Wikipedia "Grand Bazaar, Istanbul"
+     * (41°0′38.09″N 28°58′4.56″E). Piste on Istanbulin laatan vieressä
+     * (6796,5 / 1763) — esityssiirto erottaa merkit, kuten Akropoliin
+     * ja Akropolis-museon parilla (js/fokuskohteet.js
+     * eritteleKohdeRyhmat).
+     */
+    laudat: {
+      maailmankartta: { x: 6798.9, y: 1763.0 },
+      europe: { x: 767.4, y: 815.0 },
+    },
+    teksti: 'Istanbulin katettu basaari eli Kapalıçarşı on maailman '
+      + 'suurimpia ja vanhimpia katettuja kauppapaikkoja: 61 katettua '
+      + 'katua ja yli 4 000 myymälää, joissa käy satojatuhansia ihmisiä '
+      + 'päivässä. Sen ydin rakennettiin talvella 1455–56 pian '
+      + 'Konstantinopolin valloituksen jälkeen, kun sulttaani Mehmed II '
+      + 'pystytti kankaiden ja jalokivien kaupalle oman hallin. Isoisä '
+      + 'kulki samojen holvien alla kuin nykypäivän kävijä — basaaria '
+      + 'sanotaan usein yhdeksi maailman ensimmäisistä kauppakeskuksista.',
+    lahde: 'en-Wikipedia "Grand Bazaar, Istanbul", johdanto ja osio '
+      + '"History" (tarkistettu 26.8.2026).',
+    /*
+     * Category:Gates of the Grand Bazaar. SISÄKUVAT HYLÄTTIIN
+     * KATSOTTUINA: basaarin käytävät ovat aina väkeä täynnä, ja
+     * jokaisessa katsotussa sisäkuvassa kasvot erottuvat (ei
+     * tunnistettavia ihmisiä -sääntö). Sébahin 1890-luvun kuva
+     * hylättiin studion signeerauksen vuoksi (ks. erän kommentti).
+     * Tässä on Beyazıtin portti — historiallinen kiviportti, jonka
+     * kaaressa lukee KAPALIÇARŞI / GRAND BAZAAR. Commons 26.8.2026:
+     * 2140×3211, CC BY 2.0, Alexandru Panoiu, Restrictions tyhjä.
+     * Katsottu silmin: portti ja kojujen tavaraa, ei ihmisiä, ei
+     * vesileimaa.
+     */
+    kuva: {
+      tiedosto: 'Bayezid Gate of the Grand Bazaar (AP4M2098 1PS) (28796761060).jpg',
+      selite: 'Kapalıçarşın Beyazıtin portti. Kaaren medaljongissa on '
+        + 'sulttaanin tughra eli nimikirjoitusmerkki.',
+      lahde: 'Alexandru Panoiu, Wikimedia Commons (CC BY 2.0)',
+    },
+  },
+  {
+    id: 'gelibolu',
+    nimi: 'Gelibolu',
+    tyyppi: 'kaupunki',
+    symboli: 'merenkulku',
+    kysymykset: [
+      'Mitä karttaan on piirretty Amerikasta?',
+      'Millainen osmanien laivasto oli 1500-luvulla?',
+    ],
+    korostukset: ['Kitab-ı Bahriye'],
+    /* Valintakuplan painike. Lupaus on kartan kohtalo. */
+    nappi: 'Kartta, joka makasi palatsissa',
+    // 26,67028 E / 40,41389 N — en-Wikipedia "Gelibolu" (40°24′50″N
+    // 26°40′13″E).
+    laudat: {
+      maailmankartta: { x: 6722.3, y: 1786.6 },
+      europe: { x: 723.3, y: 830.7 },
+    },
+    teksti: 'Gelibolun satamakaupungissa lapset "tuuditettiin uneen '
+      + 'meren ja laivojen kehtolaululla", kirjoitti 1500-luvun '
+      + 'historioitsija Ibn Kemal. Täällä syntyi Piri Reis, osmanien '
+      + 'laivaston kartantekijä, jonka vuoden 1513 maailmankartta nojasi '
+      + 'muun muassa Kolumbuksen sittemmin kadonneeseen karttaan ja '
+      + 'jonka merikirja Kitab-ı Bahriye kuvasi rannikot laivureille. '
+      + 'Isoisän aikaan kartta makasi unohdettuna Topkapın palatsissa: '
+      + 'se löytyi uudelleen vasta 1929 ja on siitä asti ollut Turkille '
+      + 'kansallisylpeyden aihe.',
+    lahde: 'en-Wikipedia "Piri Reis", johdanto ja osio "Early life"; '
+      + 'koordinaatit en-Wikipedia "Gelibolu" (tarkistettu 26.8.2026).',
+    /*
+     * Kuva on itse vuoden 1513 kartta — Piri Reisin oma käsialaa oleva
+     * pergamentti, public domain. Commons 26.8.2026: Restrictions
+     * tyhjä, katsottu silmin (karttafragmentti, ei vesileimaa).
+     */
+    kuva: {
+      tiedosto: 'Piri reis world map 01.jpg',
+      selite: 'Piri Reisin maailmankartan säilynyt osa vuodelta 1513. '
+        + 'Kartta löytyi uudelleen Topkapın palatsista 1929.',
+      lahde: 'Piri Reis 1513, Wikimedia Commons (public domain)',
+    },
+  },
+  {
+    id: 'vanin-kissa',
+    nimi: 'Vanin kissa',
+    tyyppi: 'muu',
+    symboli: 'elain',
+    kysymykset: [
+      'Miksi kissa oppi uimaan?',
+      'Voiko tutkimuskeskuksessa vierailla?',
+    ],
+    /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
+    nappi: 'Kissa, joka ui',
+    /*
+     * 43,38 E / 38,49417 N — en-Wikipedia "Van, Turkey" (38°29′39″N
+     * 43°22′48″E). EI `europe`-PISTETTÄ: 43,4 E on Euroopan laudan
+     * kaavan (−11°…41°) ulkopuolella, kuten Araratilla ja Vanjärvellä
+     * (ks. tiedoston alku). Piste on VANIN KAUPUNKI — eri piste kuin
+     * Vanjärvi-kohteen järven keskikohta.
+     */
+    laudat: {
+      maailmankartta: { x: 7279.3, y: 1861.7 },
+    },
+    teksti: 'Vanjärven seudulla elää oma kissakantansa, jota ei ole '
+      + 'jalostettu rotukirjoihin: kookas, liidunvalkoinen Vanin kissa, '
+      + 'jonka silmät ovat siniset, meripihkanväriset tai '
+      + 'kuuluisimmillaan yksi kumpaakin. Kissa tunnetaan "uivana '
+      + 'kissana", sillä sen on nähty uivan Vanjärvessä. Puhtaita '
+      + 'yksilöitä laskettiin 1992 enää 92, ja valkoista kantaa on '
+      + 'vuodesta 1995 kasvattanut tutkimuskeskus Yüzüncü Yıl '
+      + '-yliopiston kampuksella Vanissa.',
+    lahde: 'en-Wikipedia "Van cat", johdanto sekä osiot "History", '
+      + '"Breed registration" ja "Characteristics"; koordinaatit '
+      + 'en-Wikipedia "Van, Turkey" (tarkistettu 26.8.2026).',
+    /*
+     * Kuva on en-Wikipedian "Van cat" -artikkelin oma. Keskuksessa
+     * otettu aikuiskuva hylättiin (etualalla ihmisen käsi, kissan
+     * silmät kiinni verkon takana); tässä pennussa erottuu juuri se,
+     * mistä teksti kertoo — yksi sininen ja yksi vihertävä silmä.
+     * Commons 26.8.2026: 1268×1392, CC BY 2.5, Restrictions tyhjä.
+     * Katsottu silmin: valkoinen pentu eriväriset silmät näkyvissä,
+     * ei ihmisiä, ei vesileimaa.
+     */
+    kuva: {
+      tiedosto: 'Van kitten.jpg',
+      selite: 'Vanin kissan pentu, jolla on yksi sininen ja yksi '
+        + 'vihertävä silmä — kannan kuuluisin tuntomerkki.',
+      lahde: 'Bertilvidet, Wikimedia Commons (CC BY 2.5)',
+    },
+  },
+  {
+    id: 'kirkpinar',
+    nimi: 'Kırkpınar',
+    tyyppi: 'muu',
+    symboli: 'urheilu',
+    kysymykset: [
+      'Miksi painijat öljyävät itsensä?',
+      'Miten ottelu ratkeaa?',
+    ],
+    korostukset: ['pehlivan|Pehlivanit'],
+    /* Valintakuplan painike. Lupaus on perinteen ikä. */
+    nappi: 'Puoli vuosituhatta painia',
+    /*
+     * 26,55556 E / 41,67694 N — en-Wikipedia "Edirne" (41°40′37″N
+     * 26°33′20″E). Piste on EDIRNEN KAUPUNKI, jonka liepeillä turnaus
+     * on käyty — turnauskentällä ei ole omaa koordinaattia
+     * artikkelissa.
+     */
+    laudat: {
+      maailmankartta: { x: 6718.5, y: 1736.5 },
+      europe: { x: 721.1, y: 797.5 },
+    },
+    teksti: 'Edirnen liepeillä on painittu öljypainia joka vuosi '
+      + 'vuodesta 1360: Kırkpınar, "neljänkymmenen lähteen" turnaus, '
+      + 'pitää Guinnessin ennätystä maailman pisimpään jatkuneena '
+      + 'urheilukilpailuna. Pehlivanit eli painijat pukeutuvat vain '
+      + 'nahkaisiin polvihousuihin, kıspeteihin, ja valelevat itsensä '
+      + 'oliiviöljyllä ennen jokaista ottelua. Kolmipäiväisen turnauksen '
+      + 'voittaja kantaa päänpainijan arvoa seuraavaan Kırkpınariin '
+      + 'asti. Isoisän matkan aikaan perinne oli jo yli 500 vuotta '
+      + 'vanha.',
+    lahde: 'en-Wikipedia "Kırkpınar", johdanto ja osio "Description" '
+      + '(tarkistettu 26.8.2026). Koordinaatit en-Wikipedia "Edirne".',
+    /*
+     * Category:Oil wrestling in Turkey. NYKYTURNAUKSEN VALOKUVAT
+     * HYLÄTTIIN, koska niissä painijoiden ja yleisön kasvot erottuvat
+     * selvästi (ei tunnistettavia ihmisiä -sääntö), ja Kırkpınarin
+     * muistomerkkikuvat, koska Turkissa ei ole panoraamavapautta
+     * moderneille veistoksille. Tämä on sen sijaan noin vuoden 1809
+     * maalaus — aikalaiskuva perinteestä, joka oli isoisän matkankin
+     * aikaan täsmälleen sama laji. Selite sanoo suoraan, että paikka
+     * on Topkapın puutarha eikä Kırkpınarin kenttä. Commons 26.8.2026:
+     * 728×424, public domain (anonyymi kreikkalainen taiteilija,
+     * n. 1809), Restrictions tyhjä. Katsottu silmin: painipari ja
+     * yleisöä, ei vesileimaa eikä signeerausta.
+     */
+    kuva: {
+      tiedosto: 'Oil wrestling match in the gardens of the Sultan\'s Palace.jpg',
+      selite: 'Öljypainiottelu Topkapın palatsin puutarhassa '
+        + 'tuntemattoman kreikkalaisen taiteilijan maalauksessa '
+        + 'noin 1809. Laji oli sama kuin Kırkpınarin kentällä.',
+      lahde: 'Tuntematon kreikkalainen taiteilija n. 1809, Wikimedia '
+        + 'Commons (public domain)',
     },
   },
 ];
