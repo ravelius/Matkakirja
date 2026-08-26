@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1151 — Raamattuun laajennus: elainkohde saa useamman kuvan ja livekameran (kierros-mekanismilla, vain viralliset upotuksen sallivat lahteet) — toteutus tulee erikseen',
   'v1150 — Raamattuun saanto: elainkohteen (poikassymboli) kuvassa on itse elain lahikuvassa; Srebarnan jarvimaisema vaihtui kiharapelikaaniin lennossa (Tonavan suisto, selite kertoo paikan)',
   'v1149 — kohdekortin kuva kasvoi (7,5 -> 10 rem, tarkempi 800 px -nouto) ja kuvateksti irtosi kuvan harmaasta laatikosta paljaalle paperille',
   'v1148 — kartan maataulun alarivi poistui kokonaan (myos Maailmanpankki ja V-Dem -maininta; lahteet ovat maan lehdessa)',

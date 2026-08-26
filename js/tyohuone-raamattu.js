@@ -1129,7 +1129,14 @@ export const RAAMATTU = {
           + 'kohteen kuvassa on eläin lähikuvassa, ei maisemaa. Jos '
           + 'paikan omat otokset ovat kaukaisia läiskiä, kuva saa '
           + 'olla lajista muualta — selite kertoo paikan '
-          + 'rehellisesti.',
+          + 'rehellisesti. LAAJENNUS (omistaja samana iltana: "Söpö '
+          + 'kohteissa voisi olla useampikin kuva jos vain löytyy. '
+          + 'Myös live kamerat hyviä jos löytyy"): eläinkohde saa '
+          + 'USEAMMAN kuvan kun hyviä löytyy, ja LIVEKAMERAN '
+          + 'kierros-mekanismilla (pelin sisäinen selainikkuna + '
+          + 'Avaa selaimessa -linkki) — vain virallisia, upotuksen '
+          + 'sallivia lähteitä, ja toimivuus tarkistetaan ennen '
+          + 'julkaisua.',
         'Etusivukuvien kaava (omistaja 16.8.2026): kuva-aiheet '
           + 'speksataan kaupunkikohtaisesti ENNEN hakua '
           + '(docs/kuvakasikirjoitukset.md). Pääkuva = tärkein kohde '
