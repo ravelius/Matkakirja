@@ -979,3 +979,13 @@ body.fokuszoom-paalla .fokusvirta-kortti {
   .fokuspiste-hehku { animation: none; opacity: 0.35; }
   .fokuspiste-ydin { animation: none; opacity: 1; }
 }
+
+/*
+ * Raahauksen ajaksi tuike vaikenee — sama sääntö ja sama mitattu syy
+ * kuin laattakehän sykkeellä (css/styles.css .kartta-raahaus-lista):
+ * SVG-lapsen transform-animaatio likaa koko laudan asettelun joka
+ * kehyksellä eikä ole kompositorin työtä, ja likainen asettelu tekee
+ * panoroinnista tahmeaa. Piste jää paikalleen näkyviin lepoasussaan.
+ */
+body.kartta-raahaus .fokuspiste-hehku,
+body.kartta-raahaus .fokuspiste-ydin { animation: none; }

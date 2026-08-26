@@ -1089,9 +1089,22 @@ body.manner-odottaa .rail {
 }
 
 /* Raahauksen ajaksi kartan sykähdykset vaikenevat (omistajan toive):
-   liikkuva kartta on jo tarpeeksi työtä ruudunpäivitykselle. */
+   liikkuva kartta on jo tarpeeksi työtä ruudunpäivitykselle.
+
+   TÄMÄ EI OLE VAIN KAUNEUTTA VAAN PANOROINNIN SUJUVUUS (mitattu
+   26.8.2026, Chromium + CDP-invalidointijäljitys): SVG-lapsen
+   CSS-transform-animaatio EI ole kompositorin työtä, vaan jokainen
+   animaatiokehys likaa KOKO laudan asettelun ("Style changed" →
+   LayoutInvalidation joka kehyksellä). Likainen asettelu taas pakottaa
+   jokaisen siirtokäsittelijän asettelunluvun (clientWidth ym.)
+   laskemaan ison laudan asettelun synkronisesti — fokuslaatta-syke
+   yksin tuotti 178 pakotettua asettelua 180 kehyksen panoroinnissa,
+   vaimennettuna 8. Siksi jokainen laudan SVG:n sisällä jatkuvasti
+   sykkivä animaatio on oltava tässä listassa; fokuspisteen vastine
+   asuu lajinsa vieressä css/fokusvirta.css:ssä. */
 body.kartta-raahaus .target-ring,
 body.kartta-raahaus .target-halo,
+body.kartta-raahaus .fokuslaatta-syke,
 body.kartta-raahaus .pawn-pulse { animation: none; }
 
 /*

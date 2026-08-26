@@ -430,6 +430,19 @@ export class Kartta {
     const w = pane.clientWidth;
     const h = pane.clientHeight;
     if (!w || !h) return;
+    /*
+     * Karttaruudun mitat talteen KERRAN näkymän asettuessa: eleiden
+     * silmukat (rajaaKasinPan, rajaaFokusPan, fokusZoomMinimi) lukevat
+     * tämän välimuistin eivätkä asettelua — v1115:n sääntö "ei
+     * asettelunlukuja silmukassa". clientWidth jokaisella
+     * pointermovella pakotti ison laudan asettelun synkronisesti aina
+     * kun jokin oli ehtinyt liata sen (mitattu 26.8.2026 CDP-
+     * jäljityksellä: 178 pakotettua asettelua 180 kehyksen
+     * panoroinnissa, profiilissa 2,8 s itsekulua rajaaFokusPanissa).
+     * Ruudun koon muutos ajaa aina fitViewBoxin (ResizeObserver,
+     * ks. ui.js), joten välimuisti ei vanhene käsiin.
+     */
+    this.ui.paneKoko = { w, h };
     const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
     // Katselutila (?lauta=) näyttää laudan kuin pelissä: ei porttia eikä
     // avaustekstiä, vaikka vaihe on pickstart.
@@ -2067,8 +2080,10 @@ export class Kartta {
     const rajat = this.fokusRajaukset();
     if (!rajat) return 0;
     const pane = this.ui.svg?.parentElement;
-    const paneW = pane?.clientWidth ?? 0;
-    const paneH = pane?.clientHeight ?? 0;
+    if (!pane) return 0;
+    // Nipistys kysyy tätä joka touchmovella (zoomiRajat), joten mitat
+    // tulevat välimuistista eivätkä asettelusta (ks. paneMitat).
+    const { w: paneW, h: paneH } = this.paneMitat(pane);
     if (!paneW || !paneH) return 0;
     const yleis = this.yleiskuvanSkaala(paneW, paneH);
     if (!yleis) return 0;
@@ -2137,6 +2152,22 @@ export class Kartta {
    * ulottuva fokuskuva rajautuisi väärin — tiedossa oleva
    * yksinkertaistus, joka ei koske yhtäkään nykyistä pohjaa.
    */
+  /**
+   * Karttaruudun mitat ILMAN asettelunlukua: fitViewBoxin mittaama
+   * välimuisti, tai jos sitä ei vielä ole (ele ennen ensimmäistä
+   * sovitusta), kertamittaus joka jää muistiin. Eleiden silmukat
+   * kulkevat tämän kautta — clientWidth suoraan luettuna pakottaa
+   * asettelun, ja likaisella asettelulla se maksaa koko ison laudan
+   * verran joka siirrolla (ks. fitViewBoxin kommentti; v1115).
+   */
+  paneMitat(pane) {
+    const koko = this.ui.paneKoko;
+    if (koko?.w > 0 && koko?.h > 0) return koko;
+    const mitattu = { w: pane?.clientWidth ?? 0, h: pane?.clientHeight ?? 0 };
+    if (mitattu.w > 0 && mitattu.h > 0) this.ui.paneKoko = mitattu;
+    return mitattu;
+  }
+
   rajaaFokusPan(x, y, alue) {
     const pane = this.ui.svg?.parentElement;
     const skaala = this.ui.zoomSkaala;
@@ -2154,9 +2185,11 @@ export class Kartta {
         : Math.min(a0 + pituus - nakyva, Math.max(a0, alku));
       return Math.abs(kohde - alku) < 0.001 ? pan : -(kohde - origo) * skaala;
     };
+    const mitat = this.paneMitat(pane);
+    if (!mitat.w || !mitat.h) return { x, y };
     return {
-      x: rajaa(x, pane.clientWidth, box.x, alue.x, alue.w),
-      y: rajaa(y, pane.clientHeight, ylaReuna, alue.y, alue.h),
+      x: rajaa(x, mitat.w, box.x, alue.x, alue.w),
+      y: rajaa(y, mitat.h, ylaReuna, alue.y, alue.h),
     };
   }
 
@@ -2188,8 +2221,10 @@ export class Kartta {
     if (!alue || !pane || !skaala || !Number.isFinite(skaala) || skaala <= 0) return { x, y };
     const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
     const ylaReuna = this.ui.zoomYlaReuna ?? box.y;
-    const paneW = pane.clientWidth;
-    const paneH = pane.clientHeight;
+    // Välimuistista, ei asettelusta: tämä ajetaan joka pointermovella
+    // (ks. paneMitat).
+    const { w: paneW, h: paneH } = this.paneMitat(pane);
+    if (!paneW || !paneH) return { x, y };
 
     let uusiX = x;
     const jakso = this.ui.panJakso;
