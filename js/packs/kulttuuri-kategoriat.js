@@ -13765,34 +13765,33 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Mititei',
         },
       ],
-          /*
-       * AVAUSKUVAT (19.8.2026): kolme suuntaa. Dâmbovița-joen kanava
-       * illansuussa, Yliopiston aukio ylhäältä keskellä päivää, ja
-       * matalien kattojen yli katsottu siluetti iltaruskossa.
-       * Lisenssit, tekijät ja koot todennettu Commonsin API:sta,
-       * jokainen kuva katsottu silmin.
+      /*
+       * AVAUSKUVAT: omistajan ChatGPT-herot 26.8.2026 (viiteankkuroitu
+       * prosessi, silmätarkistettu; ämpärissä vie-julisteet-ajolla).
+       * Bukarest oli Sarajevon jälkeen viimeinen pelattava fokusvirta
+       * ilman heroja. Korvasi 19.8. Commons-yleisnäkymät.
        */
       avauskuvat: [
         {
-          tiedosto: 'Bucharest - Dambovita view 01.jpg',
-          selite: 'Dâmbovița oli vuosisatojen ajan Bukarestin tärkein '
-            + 'juomavesilähde, ja joen nimi juontuu tammea tarkoittavasta '
-            + 'slaavilaisesta sanasta.',
-          lahde: 'Joe Mabel, Wikimedia Commons (CC BY 3.0)',
+          ampari: 'herokoe/hero-bukarest-aamu.jpg',
+          selite: 'Arcul de Triumf pystytettiin Kiseleff-bulevardille '
+            + 'graniittisena 1936 ensimmäisen maailmansodan voiton ja maan '
+            + 'yhdistymisen muistoksi, ja sen malli tulee Pariisista.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Bucharest-Skyline-01.jpg',
-          selite: 'Yliopiston aukio merkitsee Bukarestin vanhan keskustan '
-            + 'koillisrajaa, ja yliopiston edessä seisoo neljä patsasta, '
-            + 'joista vanhin on vuodelta 1874.',
-          lahde: 'seisdeagosto, Wikimedia Commons (CC BY-SA 2.0)',
+          ampari: 'herokoe/hero-bukarest-keskipaiva.jpg',
+          selite: 'Stavropoleosin luostarikirkko valmistui 1724 '
+            + 'brâncoveanulaiseen tyyliin: veistetty kiviportaali, maalattu '
+            + 'julkisivu ja pylväikköpiha vanhan keskustan sydämessä.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Bucharest Skyline.jpg',
-          selite: 'Vuoden 1977 maanjäristyksessä Bukarestissa romahti noin 33 '
-            + 'suurta kerrostaloa, ja sen jälkeen kaupungin '
-            + 'rakennusmääräyksiä tiukennettiin tuntuvasti.',
-          lahde: 'Dan Mihai Pitea, Wikimedia Commons (CC BY-SA 3.0)',
+          ampari: 'herokoe/hero-bukarest-ilta.jpg',
+          selite: 'CEC-palatsi valmistui 1900 säästöpankin päärakennukseksi '
+            + 'Calea Victoriellen — beaux-arts-tyylinen talo, jonka keskellä '
+            + 'kaartuu suuri lasi- ja metallikupoli.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
