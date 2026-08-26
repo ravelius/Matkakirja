@@ -54,10 +54,16 @@
  *      (omistajan tilaus 26.8.2026: uloszoomattu kartta näytti
  *      tilkkutäkiltä, koska jokainen maalehti korostaa omaa maataan).
  *  14. Yleislehti myös HAETAAN kaukozoomissa (MAAILMA.webp).
- *  15. Lähizoomiin palatessa maalehdet palaavat ja yleislehti poistuu.
- *  16. Turvatilassa yleislehteä ei haeta eikä piirretä.
+ *  15. Lähizoomiin palatessa maalehdet palaavat — ja yleislehti JÄÄ
+ *      pohjakerrokseksi niiden alle (omistajan työpöytäkaappaukset
+ *      v1118: lataamattomien maiden kohdalla oli pergamenttia ja
+ *      naapurilehtien vuotoa, ei karttaa).
+ *  16. Turvatilassa yleislehteä ei haeta eikä piirretä — ei kaukaa
+ *      eikä pohjakerroksena.
  *  17. Puuttuva yleislehti palauttaa maalehtien atlaksen — kaukozoom ei
  *      jää tyhjäksi pergamentiksi, jos kuvaa ei ole ämpärissä.
+ *  18. Pohjakerros on lähizoomissa DOMissa ja nimenomaan atlaslehtien
+ *      ALLA: maalehden on peitettävä pohja omalla alueellaan.
  */
 
 import { createServer } from 'node:http';
@@ -308,12 +314,20 @@ async function loitonna(kerroin) {
   await sivu.waitForTimeout(3000);
 }
 
-pyynnot.length = 0;
 await loitonna(3);
 const b = await tila();
 vaadi('loitonnettaessa naapurilehdet piirtyvät atlakseen',
   b.atlas.length >= 1 && b.kuvia === b.atlas.length, `atlas=${b.atlas}`);
 
+/*
+ * PYYNNÖT LASKETAAN SIVUN LATAUKSESTA ASTI EIKÄ VAIN TÄSTÄ ELEESTÄ.
+ * Väite on laiskuus — 132 lehdestä haetaan vain kourallinen — ja se on
+ * totta koko istunnosta. Ennen v1119:ää laskuri nollattiin juuri ennen
+ * loitonnusta, jolloin väite riippui siitä, sattuiko jokin lehti
+ * saapumaan vasta tässä eleessä: pohjakerroksen myötä purkujono
+ * (js/fokuskartta.js jonossa) hakee saman joukon hieman eri
+ * järjestyksessä, ja ele saattaa olla kokonaan uusia pyyntöjä vailla.
+ */
 const haetut = [...new Set(pyynnot)];
 vaadi('laiska lataus: 132 lehdestä haettiin vain näkymän lehdet',
   haetut.length > 0 && haetut.length <= 8, `haetut=${haetut.join(',')}`);
@@ -383,15 +397,22 @@ async function nakymaan(bbox) {
   await sivu.waitForTimeout(3000);
 }
 
-const lehtitila = () => sivu.evaluate(() => ({
-  leveys: Math.round(window.matkakirja.ui.nakyvaAlue()?.w ?? 0),
-  paalla: Boolean(window.matkakirja.ui.yleislehtiPaalla),
-  yleis: document.querySelectorAll('.fokus-yleislehti image').length,
-  atlas: document.querySelectorAll('.fokus-atlas image').length,
-  oma: document.querySelectorAll('.fokus-lehti image').length,
-  kirjanpito: window.matkakirja.ui.atlasLehdet?.size ?? 0,
-  maa: window.matkakirja.ui.fokuskarttaAvain,
-}));
+const lehtitila = () => sivu.evaluate(() => {
+  const kerros = window.matkakirja.ui.fokuskarttaKerros;
+  const lapset = [...(kerros?.children ?? [])].map((e) => e.getAttribute('class'));
+  return {
+    leveys: Math.round(window.matkakirja.ui.nakyvaAlue()?.w ?? 0),
+    paalla: Boolean(window.matkakirja.ui.yleislehtiPaalla),
+    pohja: Boolean(window.matkakirja.ui.yleislehtiPohja),
+    yleis: document.querySelectorAll('.fokus-yleislehti image').length,
+    atlas: document.querySelectorAll('.fokus-atlas image').length,
+    oma: document.querySelectorAll('.fokus-lehti image').length,
+    kirjanpito: window.matkakirja.ui.atlasLehdet?.size ?? 0,
+    maa: window.matkakirja.ui.fokuskarttaAvain,
+    // Kerrosjärjestys: pohja ennen atlasta ennen omaa lehteä.
+    jarjestys: lapset.join('|'),
+  };
+});
 
 pyynnot.length = 0;
 await nakymaan({
@@ -407,19 +428,202 @@ vaadi('kaukozoomissa haetaan yleislehti',
 await sivu.screenshot({ path: join(ULOS, 'savuke-atlas-yleislehti.png') });
 
 /*
- * Takaisin lähelle: yleislehti väistyy ja nykyisen maan lehti palaa
- * kartalle ilman että maa on vaihtunut (js/fokuskartta.js
- * palautaMaalehti). Ikkuna on Kreikan oma rajaus kolminkertaisena eli
- * noin 1400 yksikköä — selvästi kynnyksen alapuolella.
+ * Takaisin lähelle: nykyisen maan lehti palaa kartalle ilman että maa
+ * on vaihtunut (js/fokuskartta.js palautaMaalehti). Ikkuna on Kreikan
+ * oma rajaus kolminkertaisena eli noin 1400 yksikköä — selvästi
+ * kynnyksen alapuolella.
+ *
+ * YLEISLEHTI EI ENÄÄ POISTU (omistajan työpöytäkaappaukset v1118): se
+ * jää POHJAKERROKSEKSI maalehtien alle, jotta lataamattomien maiden
+ * kohdalla on oikea maailmankartta eikä pergamenttia ja naapurilehtien
+ * vuotoa. Kaukozoomin oma lippu (yleislehtiPaalla) sen sijaan sammuu,
+ * koska maalehdet palaavat.
  */
 await nakymaan({
   x: 6000, y: 1550, w: 1400, h: 900,
 });
 const lahi = await lehtitila();
-vaadi('lähizoomiin palatessa maalehdet palaavat ja yleislehti poistuu',
-  lahi.leveys < 2340 && !lahi.paalla && lahi.yleis === 0
+vaadi('lähizoomiin palatessa maalehdet palaavat ja yleislehti jää pohjaksi',
+  lahi.leveys < 2340 && !lahi.paalla && lahi.pohja && lahi.yleis === 1
   && lahi.oma === 1 && lahi.maa === 'GRC',
   JSON.stringify(lahi));
+vaadi('pohjakerros on atlaslehtien ja oman lehden ALLA',
+  /fokus-yleislehti\|fokus-atlas\|fokus-lehti/.test(lahi.jarjestys),
+  lahi.jarjestys);
+
+/* --- 18. ERIKOISPIIRIT (omistaja + päätoimittaja 28.8.2026) ---------
+ *
+ * Päiväntasaaja, kääntöpiirit, pohjoinen napapiiri ja Greenwichin
+ * meridiaani himmeänä kerroksena atlaslehtien päällä
+ * (js/fokuskartta.js paivitaErikoispiirit).
+ *
+ * KOLME VÄITETTÄ:
+ *   a) kerros on DOMissa atlasnäkymässä, viisi piiriä nimineen ja
+ *      lehtien PÄÄLLÄ (viimeisenä fokuskerroksessa);
+ *   b) etelänapapiiri ei ole mukana — se jää laudan ulkopuolelle;
+ *   c) kaukozoomissa päiväntasaaja ja Greenwich jäävät yleislehden
+ *      poltetun asteverkon varaan, jottei sama viiva piirry kahdesti.
+ */
+const piirit = () => sivu.evaluate(() => {
+  const kerros = document.querySelector('.fokuskartta');
+  const g = kerros?.querySelector('.fokus-piirit');
+  if (!g) return { on: false };
+  const osat = [...g.querySelectorAll('.fokus-piiri')].map((o) => ({
+    luokka: [...o.classList].find((c) => c.startsWith('fokus-piiri-')) ?? '',
+    piilossa: o.hasAttribute('hidden'),
+    nimi: o.querySelector('.fokus-piiri-nimi')?.textContent ?? '',
+    viiva: o.querySelector('.fokus-piiri-viiva')?.getAttribute('d') ?? '',
+    viivaNakyy: o.querySelector('.fokus-piiri-viiva')?.style.display !== 'none',
+  }));
+  return {
+    on: true,
+    viimeisena: kerros.lastElementChild === g,
+    lapinakyvyys: Number(getComputedStyle(g).opacity),
+    osat,
+  };
+});
+const piiritLahella = await piirit();
+const nimet = piiritLahella.osat?.map((o) => o.nimi) ?? [];
+vaadi('erikoispiirikerros on atlasnäkymässä lehtien päällä',
+  piiritLahella.on && piiritLahella.viimeisena
+  && piiritLahella.lapinakyvyys > 0.2 && piiritLahella.lapinakyvyys < 0.5
+  && nimet.includes('Päiväntasaaja') && nimet.includes('Kravun kääntöpiiri')
+  && nimet.includes('Kauriin kääntöpiiri') && nimet.includes('Pohjoinen napapiiri')
+  && nimet.includes('Greenwichin meridiaani'),
+  JSON.stringify(piiritLahella));
+vaadi('etelänapapiiriä ei piirretä — se jää laudan ulkopuolelle',
+  nimet.filter((n) => /napapiiri/.test(n)).length === 1
+  && (piiritLahella.osat ?? []).every((o) => !o.piilossa || o.viiva === ''),
+  nimet.join(' | '));
+vaadi('lähizoomissa päiväntasaajan viiva on kartalla',
+  (piiritLahella.osat ?? []).some((o) => o.luokka === 'fokus-piiri-paivantasaaja'
+    && o.viivaNakyy && /^M0,/.test(o.viiva)),
+  JSON.stringify(piiritLahella.osat?.[0] ?? null));
+await sivu.screenshot({ path: join(ULOS, 'savuke-atlas-piirit-lahi.png') });
+
+await nakymaan({
+  x: 3000, y: 1000, w: 4200, h: 2600,
+});
+const piiritKaukana = await piirit();
+const kaukoOsat = piiritKaukana.osat ?? [];
+const etsi = (luokka) => kaukoOsat.find((o) => o.luokka === `fokus-piiri-${luokka}`);
+vaadi('kaukozoomissa piirit ovat yhä kartalla mutta tupla jää pois',
+  piiritKaukana.on
+  && etsi('paivantasaaja')?.viivaNakyy === false
+  && etsi('greenwich')?.viivaNakyy === false
+  && etsi('kravun')?.viivaNakyy === true
+  && etsi('napapiiri')?.viivaNakyy === true,
+  JSON.stringify(kaukoOsat.map((o) => [o.luokka, o.viivaNakyy])));
+await sivu.screenshot({ path: join(ULOS, 'savuke-atlas-piirit-kauko.png') });
+
+/*
+ * ETUSIVULLA EI PIIREJÄ. Kerros on atlaksen kerros ja katoaa sen
+ * mukana: aloitusruudun taustakartta on maailma sellaisenaan, ei
+ * atlas (js/fokuskartta.js atlasPaalla: pickstart-vaihe).
+ *
+ * TALLENNUS POIS eikä vain käynnistyslaskuri: tallennettu peli
+ * palauttaisi latauksen suoraan action-vaiheeseen, eikä etusivua
+ * pääsisi katsomaan lainkaan (mitattu: vaihe oli 'action'). Muut
+ * avaimet jäävät — kehittäjätilan kytkin on niiden joukossa, ja sitä
+ * tarvitaan tämän jälkeen tulevissa väitteissä.
+ */
+await sivu.evaluate(() => {
+  localStorage.removeItem('matkakirja-save-v1');
+  localStorage.removeItem('matkakirja-kaynnistykset');
+  localStorage.removeItem('matkakirja-atlas-turvatila');
+});
+await sivu.reload({ waitUntil: 'load' });
+await sivu.waitForTimeout(2500);
+const etusivulla = await sivu.evaluate(() => ({
+  vaihe: window.matkakirja.game.phase,
+  piireja: document.querySelectorAll('.fokus-piirit').length,
+}));
+vaadi('etusivun taustakartalla ei ole erikoispiirejä',
+  etusivulla.vaihe === 'pickstart' && etusivulla.piireja === 0,
+  JSON.stringify(etusivulla));
+await ateenaan();
+await nakymaan({
+  x: 6000, y: 1550, w: 1400, h: 900,
+});
+
+/* --- 19. REUNAVIIVAIMET PÄIVITTYVÄT REAALIAJASSA -------------------
+ *
+ * Omistajan tilaus 28.8.2026: lukemien on muututtava kesken
+ * panoroinnin — eikä silmukka saa lukea asettelua (v1115:n oppi).
+ * Väite on tässä savukkeessa eikä fokuskartan omassa, koska viivaimet
+ * näkyvät vain fokuspohjan päällä ja vain tämä savuke tarjoilee
+ * lehden (valelehti).
+ *
+ * KAKSI PUOLTA, SAMA VETO:
+ *   1. ARVO MUUTTUU. Yläviivaimen merkkien lukemat ja paikat kirjataan
+ *      jokaisesta kehyksestä eleen aikana; jos ne laskettaisiin vasta
+ *      liikkeen jälkeen, kaikki kehykset olisivat samanlaisia.
+ *   2. EI ASETTELUNLUKUJA. getBoundingClientRect kääritään laskuriin
+ *      eleen ajaksi. Kartta itse mittaa paneelinsa eleen alussa, joten
+ *      raja ei ole nolla vaan kourallinen — viivaimet eivät saa
+ *      kasvattaa lukua kehyksissä (30 kehystä × 4 nauhaa olisi satoja).
+ */
+const viivaimet = await sivu.evaluate(async () => {
+  const { ui } = window.matkakirja;
+  const sailio = ui.fokusViivaimet;
+  if (!sailio || sailio.hidden) return { nakyy: false };
+  const nauha = sailio.querySelector('.fokus-viivain-yla');
+  const lue = () => [...nauha.querySelectorAll('.fokus-viivain-merkki')]
+    .filter((m) => m.style.display !== 'none')
+    .map((m) => `${m.querySelector('.fokus-viivain-luku').textContent}@${m.style.transform}`)
+    .join(',');
+
+  const laskuri = { rect: 0 };
+  const alkuRect = Element.prototype.getBoundingClientRect;
+  Element.prototype.getBoundingClientRect = function kaare(...a) {
+    laskuri.rect += 1;
+    return alkuRect.apply(this, a);
+  };
+
+  const kuvat = [];
+  let kaynnissa = true;
+  const kehys = () => {
+    if (!kaynnissa) return;
+    kuvat.push(lue());
+    requestAnimationFrame(kehys);
+  };
+  requestAnimationFrame(kehys);
+
+  const pane = ui.svg.parentElement;
+  const r = alkuRect.call(pane);
+  const x0 = r.x + r.width / 2;
+  const y0 = r.y + r.height / 2;
+  const tapahtuma = (laji, x, y) => pane.dispatchEvent(new PointerEvent(laji, {
+    bubbles: true, clientX: x, clientY: y, pointerId: 11, buttons: 1,
+  }));
+  tapahtuma('pointerdown', x0, y0);
+  for (let i = 1; i <= 30; i += 1) {
+    tapahtuma('pointermove', x0 - i * 7, y0);
+    // eslint-disable-next-line no-await-in-loop
+    await new Promise((valmis) => requestAnimationFrame(valmis));
+  }
+  tapahtuma('pointerup', x0 - 210, y0);
+  await new Promise((valmis) => setTimeout(valmis, 120));
+  kaynnissa = false;
+  Element.prototype.getBoundingClientRect = alkuRect;
+
+  const kelvot = kuvat.filter(Boolean);
+  return {
+    nakyy: true,
+    kehyksia: kelvot.length,
+    erilaisia: new Set(kelvot).size,
+    rect: laskuri.rect,
+    ensin: kelvot[0] ?? '',
+    lopuksi: kelvot.at(-1) ?? '',
+  };
+});
+vaadi('reunalukemat päivittyvät panoroinnin aikana',
+  viivaimet.nakyy && viivaimet.kehyksia > 8 && viivaimet.erilaisia > 5
+  && viivaimet.ensin !== viivaimet.lopuksi,
+  JSON.stringify({ kehyksia: viivaimet.kehyksia, erilaisia: viivaimet.erilaisia }));
+vaadi('viivainsilmukka ei lue asettelua',
+  viivaimet.nakyy && viivaimet.rect < 40,
+  `getBoundingClientRect ${viivaimet.rect} kertaa ${viivaimet.kehyksia} kehyksellä`);
 
 /* --- vanha lauta pois atlaksen alta (omistajan linjaus 25.8.2026) ---
  *

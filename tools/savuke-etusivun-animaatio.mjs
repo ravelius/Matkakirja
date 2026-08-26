@@ -238,6 +238,77 @@ await sivu.evaluate(() => {
 });
 await sivu.waitForTimeout(2000);
 
+// --- 3b) Avauksen asettelu: pieni kartta ylhäällä, tyhjä arkki alla -------
+/*
+ * OMISTAJAN TILAUS 26.8.2026, ilta: *"Aloitussivulla saisi olla
+ * maailmankartta pienemmällä ja asettelu niin että maailmankartan
+ * päällä olisi 'Maailman ympäri...' -otsikko ja sen alapuolella olisi
+ * tyhjää vaaleaa karttapohjaa ja sen päälle tulisi muut tekstit.
+ * Muuta 'Mistä aloitan?' napiksi... Ja poista 'Aloita matka' -nappi
+ * kokonaan."*
+ *
+ * Väitteet mittaavat juuri nuo neljä asiaa: kartta on ylälohkossa eikä
+ * täytä ruutua, arkki alkaa siitä mihin lohko loppuu, kysymys on nappi
+ * ja ALOITA MATKA on poissa. Odotus kirjoituksen loppuun asti on osa
+ * väitettä: nappi paljastuu vasta silloin.
+ */
+await sivu.waitForFunction(() => {
+  const runko = document.getElementById('intro-runko');
+  return runko && runko.textContent.length > 100 && !runko.querySelector('.pending');
+}, { timeout: 60000 }).catch(() => {});
+await sivu.waitForTimeout(1200);
+await sivu.screenshot({ path: join(ULOS, 'etusivu-avaus.png') });
+
+const avaus = await sivu.evaluate(() => {
+  const mitat = (sel) => {
+    const e = document.querySelector(sel);
+    if (!e) return null;
+    const r = e.getBoundingClientRect();
+    return { y: Math.round(r.y), h: Math.round(r.height) };
+  };
+  const nappi = document.getElementById('intro-valinta');
+  return {
+    intro: mitat('#intro'),
+    kartta: mitat('.intro-kartta'),
+    arkki: mitat('.intro-arkki'),
+    juliste: mitat('.intro-juliste'),
+    nappi: nappi && !nappi.hidden
+      ? { teksti: nappi.textContent.trim(), peittavyys: Number(getComputedStyle(nappi).opacity) }
+      : null,
+    // Poistetut elementit: vanha erillinen nappi ja tekstikysymys.
+    aloitaMatka: [...document.querySelectorAll('button')]
+      .some((b) => /aloita matka/i.test(b.textContent)),
+    kysymysElementti: Boolean(document.getElementById('intro-kysymys')),
+    // Arkin on peitettävä kartta: läpinäkyvä tausta paljastaisi laudan.
+    arkinTausta: (() => {
+      const e = document.querySelector('.intro-arkki');
+      return e ? getComputedStyle(e).backgroundImage.slice(0, 40) : '';
+    })(),
+  };
+});
+console.log('  avauksen asettelu:', JSON.stringify(avaus));
+const osuus = avaus.kartta && avaus.intro ? avaus.kartta.h / avaus.intro.h : 0;
+vaadi('maailmankartta on omassa ylälohkossaan (~30–55 % korkeudesta)',
+  osuus > 0.25 && osuus < 0.58, `ylälohko ${(osuus * 100).toFixed(1)} % avauksesta`);
+vaadi('julisteotsikko on kartan päällä',
+  Boolean(avaus.juliste && avaus.kartta
+    && avaus.juliste.y >= avaus.kartta.y - 1
+    && avaus.juliste.y + avaus.juliste.h <= avaus.kartta.y + avaus.kartta.h + 1),
+  JSON.stringify({ juliste: avaus.juliste, kartta: avaus.kartta }));
+vaadi('arkki alkaa siitä mihin kartta loppuu ja peittää loput',
+  Boolean(avaus.arkki && avaus.kartta && avaus.intro
+    && Math.abs(avaus.arkki.y - (avaus.kartta.y + avaus.kartta.h)) < 2
+    && Math.abs((avaus.arkki.y + avaus.arkki.h) - (avaus.intro.y + avaus.intro.h)) < 2
+    && avaus.arkinTausta.startsWith('linear-gradient')),
+  JSON.stringify({ arkki: avaus.arkki, tausta: avaus.arkinTausta }));
+vaadi('Mistä aloitan? on näkyvä nappi',
+  Boolean(avaus.nappi && /^mistä aloitan\?$/i.test(avaus.nappi.teksti)
+    && avaus.nappi.peittavyys > 0.9),
+  JSON.stringify(avaus.nappi));
+vaadi('ALOITA MATKA -nappi ja erillinen kysymyselementti ovat poissa',
+  !avaus.aloitaMatka && !avaus.kysymysElementti,
+  `aloitaMatka ${avaus.aloitaMatka}, kysymysElementti ${avaus.kysymysElementti}`);
+
 /*
  * Tarkkailu käynnistetään ODOTTAMATTA sen valmistumista: samalla kun
  * sivun oma silmukka kerää ajat, Node ehtii kaapata kuvan lennosta
@@ -533,7 +604,7 @@ vaadi('ensimmäinen kupla toivottaa tervetulleeksi maahan',
     .test(saapuminen.kuplat[0] ?? ''),
   saapuminen.kuplat[0] ?? '(puuttuu)');
 vaadi('toinen kupla neuvoo vihreään pisteeseen',
-  saapuminen.kuplat[1] === 'Klikkaa vihreää pistettä kartalla.',
+  saapuminen.kuplat[1] === 'Klikkaa kaupungin kultaista merkkiä kartalla.',
   saapuminen.kuplat[1] ?? '(puuttuu)');
 
 // --- 6) Napautusohitus: sama lento uudestaan, tällä kertaa kiirehtien ------
@@ -596,7 +667,8 @@ vaadi('napautus ei vuoda alla oleviin elementteihin',
 // Lentonäkymä puretaan paperin ALLA, joten purku mitataan vasta täältä
 // — napautushetkellä kone on tarkoituksella vielä paikallaan arkin
 // takana, jottei purku näy ruudulla.
-await sivu2.waitForTimeout(7000);
+/* Kuplien viiveet kasvoivat 26.8 (1,8 s + 1,6 s) — odotus sen mukaan. */
+await sivu2.waitForTimeout(9500);
 const ohituksenLoppu = await sivu2.evaluate(() => ({
   kortteja: document.querySelectorAll('.saapumiskortti').length,
   kuplat: [...document.querySelectorAll('.pollo-vihje')].filter((k) => !k.hidden).length,

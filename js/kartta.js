@@ -27,14 +27,26 @@ import { fokusmoodiPaalla, kehittajaRajatPaalla, kehittajaTilaPaalla } from './u
 /*
  * Kuinka paljon pergamenttia jatketaan kartan alle avaustekstiä varten.
  *
- * NOLLA 25.8.2026 (omistajan etusivu-uudistus): avausteksti ei enää asu
- * kartan ALAPUOLELLA vaan yhtenä palstana kartan PÄÄLLÄ, ja kartta jää
- * sen taakse kevyesti sumennettuna. Kaistalle ei siis ole enää käyttöä,
- * ja ilman sitä lauta saa koko paneelin — juuri sen kartan, jonka päälle
- * palsta asettuu. Vakio jätetään paikalleen (eikä laskukaavoja pureta),
- * koska kaista voi palata, jos avaus vielä muuttuu.
+ * NOLLA 25.8.2026 (etusivu-uudistus): teksti oli hetken yhtenä palstana
+ * kartan PÄÄLLÄ, joten kaistalle ei ollut käyttöä.
+ *
+ * TAKAISIN 26.8.2026, ilta (omistajan tilaus): *"Aloitussivulla saisi
+ * olla maailmankartta pienemmällä ja asettelu niin että maailmankartan
+ * päällä olisi 'Maailman ympäri...' -otsikko ja sen alapuolella olisi
+ * tyhjää vaaleaa karttapohjaa ja sen päälle tulisi muut tekstit."*
+ *
+ * Juuri tämä vakio pienentää kartan: rajauslaatikkoa jatketaan alaspäin,
+ * jolloin sovitus laskee mittakaavan isommalle laatikolle ja lauta
+ * kutistuu ruudun ylälohkoon. Alle jäävä pergamentti on se tyhjä vaalea
+ * karttapohja, jonka päälle avausteksti asettuu (js/ui.js placeIntro
+ * mittaa rajan .intro-arkille).
+ *
+ * 1.2 = lauta vie ylälohkon ja pergamenttia jatketaan 1,2-kertaisesti
+ * sen alle. Leveällä ruudulla (korkeus rajoittaa) lauta asettuu noin
+ * 45 %:iin paneelin korkeudesta; kapealla pystyruudulla leveys rajoittaa
+ * jo ennestään eikä kaista pienennä lautaa, vaan nostaa sen ylös.
  */
-export const INTRO_SPACE = 0;
+export const INTRO_SPACE = 1.2;
 // Kuinka paljon lautaa lasketaan yläreunasta aloitusnäkymässä.
 const INTRO_TOP = 0.05;
 /*
@@ -341,10 +353,33 @@ export class Kartta {
    * nostaa laudan ruudun ylälaitaan ja jättää tekstille tyhjän alaosan.
    */
   withIntroSpace(box) {
-    // Katselutila (?lauta=) ei näytä avaustekstiä, joten pergamenttia ei
-    // jatketa — muuten lauta kutistuu ja jää yläreunaan (omistajan havainto).
-    if (this.ui.game.phase !== 'pickstart' || this.ui.katselu) return box;
+    if (!this.introKaistaKaytossa()) return box;
     return { ...box, h: box.h * (1 + INTRO_SPACE) };
+  }
+
+  /**
+   * Onko avaustekstin kaista käytössä juuri nyt?
+   *
+   * Kaista on VASTA PORTIN JÄLKEEN (omistajan aloitusnäkymä pidetään
+   * ennallaan): Aloita seikkailu -ruudussa lauta on iso ja keskellä,
+   * ja vasta napin painalluksesta se kutistuu ylälohkoon ja alle
+   * jäävälle pergamentille kirjoittuu avausteksti. Katselutila
+   * (?lauta=) ei näytä avaustekstiä lainkaan, joten siellä kaistaa ei
+   * ole koskaan — muuten lauta kutistuisi ja jäisi yläreunaan
+   * (omistajan havainto).
+   */
+  introKaistaKaytossa() {
+    return this.ui.game.phase === 'pickstart' && !this.ui.katselu && Boolean(this.ui.aloitettu);
+  }
+
+  /**
+   * Laudan oma korkeus rajauslaatikossa: aloitusnäkymässä laatikkoa on
+   * jatkettu avaustekstin kaistalla (withIntroSpace), joten lauta on
+   * vain sen yläosa. Yksi paikka, josta sekä rajaus, aloitusZoom että
+   * js/ui.js placeIntro lukevat saman luvun.
+   */
+  laudanKorkeus(box) {
+    return this.introKaistaKaytossa() ? box.h / (1 + INTRO_SPACE) : box.h;
   }
 
   /**
@@ -429,8 +464,9 @@ export class Kartta {
     // kaistan yläpuoliseen osaan.
     let vy;
     if (alkuun && !this.ui.aloitettu) {
-      const laudanKorkeus = box.h / (1 + INTRO_SPACE);
-      vy = box.y + laudanKorkeus / 2 - vh / 2;
+      // Portin takana kaistaa ei ole (introKaistaKaytossa), joten laatikko
+      // on laudan oma: keskitetään se sellaisenaan.
+      vy = box.y + this.laudanKorkeus(box) / 2 - vh / 2;
     } else if (alkuun) {
       vy = box.y - box.h * INTRO_TOP;
     } else {
@@ -509,7 +545,7 @@ export class Kartta {
     const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
     // Rajauslaatikko ilman avaustekstin varaamaa alaosaa: lähikuvassa
     // teksti on jo väistynyt, joten koko korkeus on laudan käytössä.
-    const laudanKorkeus = box.h / (1 + INTRO_SPACE);
+    const laudanKorkeus = this.laudanKorkeus(box);
     const yleiskuva = Math.min(paneW / box.w, paneH / box.h);
     const skaala = this.rajaaSkaala(yleiskuva * ALOITUS_ZOOM, paneW, box);
     const leveys = Math.round(box.w * skaala);

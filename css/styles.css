@@ -4751,6 +4751,55 @@ body.fokus-atlas-nakyma .grain { display: none; }
 .fokus-nimet-piilossa { display: none; }
 
 /* ---------------------------------------------------------------------------
+   ERIKOISPIIRIT — PÄIVÄNTASAAJA, KÄÄNTÖPIIRIT, NAPAPIIRI JA GREENWICH
+   ---------------------------------------------------------------------------
+   Omistajan ja päätoimittajan taidesuunta 28.8.2026 (js/fokuskartta.js
+   paivitaErikoispiirit). 1800-luvun atlaksen asu: hiusviiva, piste-viiva-
+   katko ja pieni kursiivi.
+
+   HIMMEÄ ON EHTO EIKÄ MAKUASIA. Kerros on koko kartan levyinen ja
+   kulkee maiden yli; täydellä mustalla se olisi ruudukko maaston päällä.
+   Läpinäkyvyys pidetään RYHMÄSSÄ eikä väreissä, jotta viivan ja nimen
+   suhde toisiinsa säilyy — atlaksessa nimi on aina viivaansa haaleampi.
+
+   VIIVA ON RUUDUN MITTAINEN (vector-effect), ei laudan: laudan
+   yksikköinä mitattu hiusviiva katoaa kaukozoomissa ja paksuuntuu
+   tussiksi lähikuvassa. Sama ratkaisu kuin vuorimerkeillä ja
+   kaupunkipisteillä yllä. Suodattimia ei ole (tests/rules.test.mjs). */
+
+.fokus-piirit { opacity: 0.38; }
+
+.fokus-piiri-viiva {
+  fill: none;
+  stroke: rgba(74, 52, 33, 0.85);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  /* Kääntöpiirit, napapiiri ja meridiaani: hento piste-viiva-katko. */
+  stroke-dasharray: 7 3 1.5 3;
+}
+
+/* Päiväntasaaja on yhtenäinen ja hitusen muita vahvempi — kuten
+   aikakauden kartoissa, joissa se on kartan perusviiva. */
+.fokus-piiri-vahva {
+  stroke-dasharray: none;
+  stroke-width: 1.5;
+}
+
+.fokus-piiri-nimi {
+  font-family: var(--font-type);
+  font-style: italic;
+  fill: rgba(74, 52, 33, 0.95);
+  text-anchor: middle;
+  paint-order: stroke;
+  stroke: rgba(244, 232, 205, 0.9);
+  stroke-width: 2.4px;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.fokus-piiri[hidden] { display: none; }
+
+/* ---------------------------------------------------------------------------
    PELILAATTOJEN KAUPUNKINIMET FOKUSNÄKYMÄSSÄ — PALJON PIENEMMÄLLÄ
    ---------------------------------------------------------------------------
    Omistajan pelitestitilaus 26.8.2026: *"Ateena ja Kreeta paljon
@@ -5006,16 +5055,24 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 .pending { visibility: hidden; }
 
 /*
- * AVAUS ON YKSI PALSTA KARTAN PÄÄLLÄ (omistajan tilaus 25.8.2026).
+ * AVAUS ON KAKSI LOHKOA (omistajan tilaus 26.8.2026, ilta).
  *
- * Ennen teksti asui kartan alapuolisessa tyhjässä pergamentissa. Nyt se
- * on yhtenä palstana keskellä paneelia, ja kartta jää sen taakse
- * kevyesti sumennettuna (.intro-verho). Palstassa on järjestyksessä
- * paikkarivi, avausteksti, klikattava viimeinen lause ja isoisän
- * matkakirjan kansikuva.
+ * *"Aloitussivulla saisi olla maailmankartta pienemmällä ja asettelu
+ * niin että maailmankartan päällä olisi 'Maailman ympäri...' -otsikko
+ * ja sen alapuolella olisi tyhjää vaaleaa karttapohjaa ja sen päälle
+ * tulisi muut tekstit."*
  *
- * Paikan ja korkeuden antaa nyt CSS eikä js/ui.js placeIntro: palsta
- * kattaa koko paneelin, ja js säätää siitä vain kirjasinkoon (fitIntro).
+ *   .intro-kartta  ylälohko: pienennetty maailmankartta ja sen päällä
+ *                  julisteotsikko (kartta kevyesti sumennettuna,
+ *                  .intro-verho, jotta otsikko erottuu).
+ *   .intro-arkki   alalohko: peittävä tyhjä pergamentti, jonka päällä
+ *                  paikkarivi, avausteksti ja Mistä aloitan? -nappi.
+ *
+ * Ylälohkon korkeus EI ole arvattu prosentti: js/ui.js placeIntro
+ * mittaa, mihin pienennetty lauta loppuu, ja kirjoittaa rajan
+ * --intro-kartta-korkeus-muuttujaan. Kartan pienentää js/kartta.js
+ * INTRO_SPACE (pergamenttia jatketaan laudan alle). Prosentti tässä on
+ * vain varasija ennen ensimmäistä mittausta.
  */
 .intro {
   position: absolute;
@@ -5023,11 +5080,20 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
   /* Avausteksti häipyy pehmeästi, kun kartalle siirrytään. */
   transition: opacity 0.9s ease;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   text-align: center;
   pointer-events: none; /* kartta jää napautettavaksi tekstin takaa */
   z-index: 3;
+}
+
+/* Ylälohko: pienennetty kartta ja sen päällä julisteotsikko. */
+.intro-kartta {
+  position: relative;
+  flex: 0 0 var(--intro-kartta-korkeus, 44%);
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*
@@ -5038,6 +5104,9 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  *
  * Verho ilmestyy vasta Aloita seikkailu -napin jälkeen (.intro-aloitettu):
  * portin takana etusivulla on terävä kartta ja portin oma tummennus.
+ *
+ * Verho on VAIN YLÄLOHKON kokoinen: alalohkossa on peittävä arkki,
+ * eikä sumennettavaa ole.
  */
 .intro-verho {
   position: absolute;
@@ -5063,9 +5132,46 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 }
 
 /*
+ * ALALOHKO: TYHJÄ VAALEA KARTTAPOHJA.
+ *
+ * Peittävä pergamentti samasta sävymaailmasta kuin paneelin oma pohja
+ * (body.aloitusnakyma .map-pane) — kartta ei paista läpi, joten teksti
+ * lepää tyhjällä paperilla. Yläreuna ei ole viivasuora leikkaus vaan
+ * häivytys (::before), jolloin sumennettu kartta liukuu paperiin.
+ */
+.intro-arkki {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #f4e5c3 0%, #eeddb2 55%, #e6d2a2 100%);
+  /* Arkki nousee sumuverhon kanssa samaan tahtiin vasta Aloita
+     seikkailu -napin jälkeen: portin takana lauta on iso ja keskellä,
+     eikä sen päälle lasketa paperia. */
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+.intro.intro-aloitettu .intro-arkki { opacity: 1; }
+
+.intro-arkki::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* Häivytyskaista arkin YLÄPUOLELLE, kartan alalaidan päälle. */
+  bottom: 100%;
+  height: 2.2em;
+  background: linear-gradient(180deg, rgba(244, 229, 195, 0) 0%, rgba(244, 229, 195, 0.75) 65%, #f4e5c3 100%);
+  pointer-events: none;
+}
+
+/*
  * Itse palsta. Kirjasinkoon asettaa js/ui.js fitIntro TÄHÄN elementtiin,
- * ja lapset on mitoitettu em-yksiköissä — niin klikattava lause ja
- * kansikuva kutistuvat tekstin mukana, kun ruutu on matala.
+ * ja lapset on mitoitettu em-yksiköissä — niin nappi ja kansikuva
+ * kutistuvat tekstin mukana, kun ruutu on matala.
  */
 .intro-palsta {
   position: relative;
@@ -5074,7 +5180,7 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Kokoa säätää js/ui.js fitIntro paneelin korkeuden mukaan
+  /* Kokoa säätää js/ui.js fitIntro arkin korkeuden mukaan
      (INTRO_FONT_MAX/MIN); tämä on lähtöarvo ennen mittausta. */
   font-size: 0.96rem;
   pointer-events: none;
@@ -5087,11 +5193,18 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  * nimetön kulunut muistikirja, joten nimi ei voi olla sen kannessa.
  * Nyt se on juliste vuodelta 1873: lukukirjasin versaalina, reilu
  * kirjainväli, kaksi riviä ja hiusviivakoristeet. Mitat ovat em-
- * yksiköissä, joten otsikko kutistuu palstan mukana (fitIntro).
+ * yksiköissä, joten otsikko kutistuu kokonaisuutena, kun js/ui.js
+ * fitIntro sovittaa sen ylälohkoon (26.8.2026 alkaen otsikko on
+ * kartan päällä oma lohkonsa, ei enää tekstipalstan ensimmäinen rivi).
  */
 .intro-juliste {
-  width: 100%;
-  margin: 0 0 1.3em;
+  position: relative; /* sumuverhon päälle */
+  width: min(560px, 86%);
+  margin: 0;
+  /* Lähtöarvo ennen fitIntron mittausta: INTRO_FONT_MAX kerrottuna
+     selaimen omalla h2-kertoimella (1,5), jolla otsikko latoutui myös
+     ennen — silloin se peri kokonsa tekstipalstalta. */
+  font-size: 1.44rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -5171,32 +5284,20 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 }
 
 /*
- * KLIKATTAVA VIIMEINEN LAUSE: nappi, joka näyttää lauseelta. Sama
- * kirjasin ja sama koko kuin avaustekstissä, vain korostettuna —
- * alleviivaus on kynällä vedetty viiva, ei linkin oletus.
+ * MISTÄ ALOITAN? — kertojan viimeinen kysymys 1873-nappina (omistajan
+ * tilaus 26.8.2026, ilta). Kehys, harvennettu versaali ja sama
+ * huomiokieli kuin maataulun plussassa — mutta EI SYKETTÄ: nappi seisoo
+ * tyhjällä arkilla eikä kilpaile mistään huomiosta.
  *
- * Ilmestyy vasta kun teksti on kirjoittunut loppuun, mutta varaa
- * paikkansa jo ennen sitä (visibility eikä display), jottei palsta
- * hyppää lauseen ilmestyessä.
- */
-/* Kertojan viimeinen ajatus — tavallista tekstiä, ei klikattava. */
-.intro-kysymys {
-  display: block;
-  margin: 1.2em 0 0;
-  font-weight: 700;
-  line-height: 1.6;
-  color: var(--map-ink);
-  text-shadow: 0 1px 0 rgba(247, 237, 216, 0.9), 0 0 6px rgba(247, 237, 216, 0.75);
-  transition: opacity 0.8s ease;
-}
-
-/*
- * ALOITA MATKA — selkeä 1873-tyylinen nappi (omistaja 26.8.2026:
- * pelkkä alleviivattu lause ei auennut napiksi). Kehys, harvennettu
- * versaali ja kevyt syke, sama huomiokieli kuin maataulun plussassa.
+ * Erillinen ALOITA MATKA -nappi poistettiin samalla: kysymys ja vastaus
+ * peräkkäin oli yksi kehotus liikaa.
+ *
+ * Ilmestyy vasta kun avausteksti on kirjoittunut loppuun, mutta varaa
+ * paikkansa jo ennen sitä (peittävyys eikä display), jottei palsta
+ * hyppää napin ilmestyessä.
  */
 .intro-valinta {
-  margin: 1.1em auto 0;
+  margin: 1.4em auto 0;
   padding: 0.55em 1.5em;
   border: 1.5px solid rgba(70, 51, 31, 0.75);
   border-radius: 2px;
@@ -5215,7 +5316,6 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
   pointer-events: auto; /* palsta on läpinapautettava, tämä ei */
   transition: opacity 0.8s ease, background-color 0.25s ease,
     border-color 0.25s ease, transform 0.25s ease;
-  animation: fokus-plus-syke 3.2s ease-in-out 1.5s infinite;
 }
 
 .intro-valinta:hover,
@@ -5223,16 +5323,10 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
   border-color: var(--map-ink);
   background: rgba(247, 237, 216, 0.85);
   transform: translateY(-1px);
-  animation-play-state: paused;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .intro-valinta { animation: none; }
-}
-
-/* Rivit odottavat kirjoituksen loppuun näkymättöminä mutta paikallaan. */
-.intro-valinta.intro-valinta-piilossa,
-.intro-kysymys.intro-valinta-piilossa {
+/* Nappi odottaa kirjoituksen loppuun näkymättömänä mutta paikallaan. */
+.intro-valinta.intro-valinta-piilossa {
   opacity: 0;
   pointer-events: none;
 }
@@ -19415,11 +19509,17 @@ body.fokuspohja .maa-pilleri { display: none; }
 .fokus-viivain-vasen { top: 0; bottom: 0; left: 0; width: 2.6rem; }
 .fokus-viivain-oikea { top: 0; bottom: 0; right: 0; width: 2.6rem; }
 
+/* Merkin paikka nauhassa tulee TRANSFORMISTA eikä left/top-arvosta
+   (js/fokusmitat.js ladoNauha): lukemat päivittyvät kartan liikkuessa
+   joka kehyksellä, ja `left` pakottaisi uudelleenasettelun jokaisesta
+   merkistä. Siksi nauhan omat ankkurit ovat nollassa ja kaikki liike
+   on yhdessä muunnoksessa — myös keskitys, joka oli ennen tässä. */
 .fokus-viivain-merkki {
   position: absolute;
   display: flex;
   align-items: center;
   gap: 0.15rem;
+  will-change: transform;
 }
 
 .fokus-viivain-viiva {
@@ -19441,6 +19541,7 @@ body.fokuspohja .maa-pilleri { display: none; }
    viivan kohdalle (kuten mittajanan päätylukemat). */
 .fokus-viivain-yla .fokus-viivain-merkki {
   top: 0;
+  left: 0;
   flex-direction: column;
   align-items: center;
   transform: translateX(-50%);
@@ -19453,6 +19554,7 @@ body.fokuspohja .maa-pilleri { display: none; }
    alalaidan taakse. */
 .fokus-viivain-ala .fokus-viivain-merkki {
   bottom: 0;
+  left: 0;
   flex-direction: column-reverse;
   align-items: center;
   transform: translateX(-50%);
@@ -19463,6 +19565,7 @@ body.fokuspohja .maa-pilleri { display: none; }
 /* Vasen viivain: vaakaviiva reunasta oikealle, lukema sen perässä. */
 .fokus-viivain-vasen .fokus-viivain-merkki {
   left: 0;
+  top: 0;
   transform: translateY(-50%);
 }
 
@@ -19472,6 +19575,7 @@ body.fokuspohja .maa-pilleri { display: none; }
    lukema sen vasemmalla puolella (row-reverse). */
 .fokus-viivain-oikea .fokus-viivain-merkki {
   right: 0;
+  top: 0;
   flex-direction: row-reverse;
   transform: translateY(-50%);
 }
@@ -19479,44 +19583,15 @@ body.fokuspohja .maa-pilleri { display: none; }
 .fokus-viivain-oikea .fokus-viivain-viiva { width: 6px; height: 1px; }
 
 /* ---------------------------------------------------------------------------
-   VIIVAIMET POIS LIIKKEEN AJAKSI (omistajan tilaus 25.8.2026)
+   VIIVAIMET SEURAAVAT KARTTAA (omistajan tilaus 28.8.2026)
 
-   Lukemat lasketaan vasta kun näkymä on asettunut, joten liikkeen aikana
-   ne kertoisivat edellisestä ruudusta. Nauha liukuu siksi kokonaan
-   reunansa yli sillä aikaa kun kartta on kädessä ja palaa pienen viiveen
-   päästä uusilla lukemilla (js/fokusmitat.js merkitseViivainLiike).
+   Ennen nauha liukui kokonaan reunansa yli kartan liikkeen ajaksi, koska
+   lukemat laskettiin vasta liikkeen päätteeksi eivätkä ne siihen asti
+   voineet olla oikeassa. Nyt ne lasketaan joka kehyksellä (js/fokusmitat.js
+   piirraViivaimet), joten nauha pysyy paikallaan ja lukemat elävät.
 
-   SIIRTO ON REILUSTI YLI NAUHAN OMAN MITAN. Lukema ladotaan viivan
-   VIEREEN eikä nauhan sisään, joten pelkkä -100 % jättäisi numeron
-   roikkumaan reunaan; lisäys vie senkin ruudun ulkopuolelle.
-
-   Transform ja opacity, ei suodattimia (sama iOS-sääntö kuin kartan
-   kerroksilla). Kevennetyllä liikkeellä viivaimet jäävät paikoilleen:
-   silloin pieni epätarkkuus lukemassa on parempi kuin liike ruudulla.
+   MERKIN OMA LIUKU ON POIS TARKOITUKSELLA. Merkkiä siirretään joka
+   kehyksellä uuteen kohtaan; siirtymä tarkoittaisi, että se olisi aina
+   matkalla edelliseen paikkaan eli aina väärässä kohdassa. Kartan liike
+   on jo pelaajan sormen liikettä — viivain vain seuraa sitä.
    --------------------------------------------------------------------------- */
-
-.fokus-viivain {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.fokus-viivaimet.viivaimet-poissa .fokus-viivain { opacity: 0; }
-.fokus-viivaimet.viivaimet-poissa .fokus-viivain-yla {
-  transform: translateY(calc(-100% - 0.8rem));
-}
-.fokus-viivaimet.viivaimet-poissa .fokus-viivain-ala {
-  transform: translateY(calc(100% + 0.8rem));
-}
-.fokus-viivaimet.viivaimet-poissa .fokus-viivain-vasen {
-  transform: translateX(calc(-100% - 2.4rem));
-}
-.fokus-viivaimet.viivaimet-poissa .fokus-viivain-oikea {
-  transform: translateX(calc(100% + 2.4rem));
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fokus-viivain { transition: none; }
-  .fokus-viivaimet.viivaimet-poissa .fokus-viivain {
-    transform: none;
-    opacity: 1;
-  }
-}

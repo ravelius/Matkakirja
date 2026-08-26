@@ -196,7 +196,7 @@ test('kartta ilmestyy saapumisessa ilman kamera-ajoa', () => {
 });
 
 test('pöllön kaksi kuplaa: kaanonin sanamuoto ja pari allekkain', () => {
-  assert.match(UI, /const SAAPUMISEN_KUPLA_TOINEN = 'Klikkaa vihreää pistettä kartalla\.';/,
+  assert.match(UI, /const SAAPUMISEN_KUPLA_TOINEN = 'Klikkaa kaupungin kultaista merkkiä kartalla\.';/,
     'toisen kuplan kaanonlause muuttui');
   assert.match(UI, /`Tervetuloa \$\{maahanMuoto\(maa\)\}\. Sinun on ratkaistava tehtävä \$\{paikka\} `/,
     'ensimmäisen kuplan kaanonlause muuttui');
