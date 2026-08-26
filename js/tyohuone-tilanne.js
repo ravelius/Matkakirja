@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1154 — kohdekortti tukee useampaa kuvaa (kuvat-lista); Srebarnalla nyt 3 pelikaanikuvaa (lento, lepo, pesa) ja Vanin kissalla 3 (pentu, silmalahikuva, kissatalon asukas) — livekameroita ei loytynyt virallisista lahteista kummallekaan',
   'v1153 — takyremontti: jokaisella maalla tasan yksi kuplataky (poolin karki; GRC=Sofia Schliemann, BGR=areena, ROU=Dracula, TUR=Schliemannin haat... ks. PR) ja KOKO kuplan napautus avaa lunastuskortin suoraan; muut entiset tayt ovat nyt kartan tavallisia kohteita symboleineen (7 uutta kohdetta, mm. pikkupollo ja reunuskilpikonna) — TESTAA Kreikassa: yksi kupla, ei irtosymboleita, kuplan napautus',
   'v1152 — Raamattuun linjaus: kohdekartan kohteita 6-15, mielenkiintoisuus ratkaisee (ei taytekohteita); Euroopan miniatyyri- ja kohde-era etenee taman mukaan',
   'v1151 — Raamattuun laajennus: elainkohde saa useamman kuvan ja livekameran (kierros-mekanismilla, vain viralliset upotuksen sallivat lahteet) — toteutus tulee erikseen',
