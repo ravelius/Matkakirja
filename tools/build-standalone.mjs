@@ -349,9 +349,15 @@ const MODULES = [
   // se itse tuo mapartin, median ja lisänimet, jotka ovat yllä).
   'js/packs/fokus-grc.js',
   'js/fokuskartta.js',
+  /*
+   * Karttasymbolien kirjasto ennen kohteita ja täkynostoa (molemmat
+   * piirtävät symbolinsa sillä — Raamattu, SYMBOLITAKSONOMIA). Kerros
+   * tuo vain mapartin ja äänet, jotka ovat jo yllä.
+   */
+  'js/fokusnosto-symbolit.js',
   // Fokuslehden klikattavat karttakohteet ennen ui:ta (ui tuo sen
-  // päivitys- ja nollauskutsun; kohteiden lista, mapart, media,
-  // ui-apurit, valokuvat ja äänet ovat kaikki jo yllä).
+  // päivitys- ja nollauskutsun; kohteiden lista, symbolikirjasto,
+  // mapart, media, ui-apurit, valokuvat ja äänet ovat kaikki jo yllä).
   'js/fokuskohteet.js',
   /*
    * Kevyen kulun vihreä kohtaamispiste ennen ui:ta (ui tuo sen päivitys-
@@ -359,12 +365,6 @@ const MODULES = [
    * jotka ovat molemmat jo yllä.
    */
   'js/fokuspiste.js',
-  /*
-   * Täkysymbolit ennen täkynostoa (nosto tuo sen piirto- ja
-   * nollauskutsut). Kerros tuo vain mapartin ja äänet, jotka ovat jo
-   * yllä.
-   */
-  'js/fokusnosto-symbolit.js',
   /*
    * Täkynosto ennen main.js:ää (main tuo sen kytkentäkutsun). Se tuo
    * fokusvirran piirtopinnan, kartan kohteiden tietoruudun ja

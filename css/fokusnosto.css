@@ -286,19 +286,17 @@ body.kartalento .fokusnosto-kupla { opacity: 0; pointer-events: none; }
    kuva … Symbolit tehdään kartan henkeen ja samalla tyylillä
    (seepiamuste, aikakauden karttamerkki)."*
 
-   PALETTI ON KARTAN: musteruskea viiva, paperinvaalea aluslaatta ja yksi
-   ainoa väri — okrankeltainen, joka taittuu seepiaan. Puhdas keltainen
-   olisi liikennemerkki kartalla, jonka koko sävyasteikko on musteen ja
-   paperin väliltä.
+   SYMBOLIEN PIIRTOTYYLIT MUUTTIVAT css/styles.css:ÄÄN (osio
+   KARTTASYMBOLIT, --sym-*): sama kirjasto piirtää nyt myös kartan
+   kohdemerkit (js/fokuskohteet.js), eikä kohdekerros lataa tätä
+   tiedostoa — styles.css on ainoa, joka on aina paikalla. Tänne jäi
+   vain se, mikä koskee TÄKYKERROSTA: napautukset ja kohdistus.
 
    EI SUODATTIMIA (tests/rules.test.mjs): laatta on oma ympyränsä eikä
    varjo, ja kaikki muu on täyttöä ja viivaa.
    =========================================================================== */
 
 .fokusnosto-symbolit {
-  --nosto-muste: #4b3a1c;
-  --nosto-okra: #dda42c;
-  --nosto-laatta: rgba(243, 234, 210, 0.88);
   /* Kerros ei ota napautuksia vastaan; vain merkit ottavat. */
   pointer-events: none;
 }
@@ -312,80 +310,7 @@ body.kartalento .fokusnosto-kupla { opacity: 0; pointer-events: none; }
    sen päällä ja kuplan oma nappi vie lunastukseen. */
 .fokusnosto-ankkuri { pointer-events: none; }
 
-/* Näkymätön sormenkokoinen osuma-alue (r = 22 → 44 px joka zoomilla). */
-.nostosym-osuma {
-  fill: none;
-  /* `fill: none` ei ota napautuksia ilman tätä. */
-  pointer-events: all;
-  /* SVG:ssä viiva periytyy: ilman nollausta ryhmän tyyli piirtäisi
-     osuma-alueen ympärille kehän (ks. piirraNostosymMerkki). */
-  stroke: none;
-}
-
-.nostosym-laatta { fill: var(--nosto-laatta); }
-
-.nostosym-kehys {
-  fill: none;
-  stroke: var(--nosto-muste);
-  stroke-width: 1.1;
-  stroke-opacity: 0.72;
-}
-
-/* Huutomerkki: okrankeltainen täyttö, musteviiva ympärillä. */
-.nostosym-huuto {
-  fill: var(--nosto-okra);
-  stroke: var(--nosto-muste);
-  stroke-width: 0.9;
-  stroke-linejoin: round;
-}
-
-/* Pöllövauva: untuvainen kroppa on paperia, kaikki muoto on viivassa. */
-.nostosym-pollo {
-  fill: rgba(247, 240, 222, 0.96);
-  stroke: var(--nosto-muste);
-  stroke-width: 1.1;
-  stroke-linejoin: round;
-}
-
-.nostosym-silma {
-  fill: #fbf6e8;
-  stroke: var(--nosto-muste);
-  stroke-width: 0.9;
-}
-
-.nostosym-tera { fill: var(--nosto-muste); }
-
-/*
- * SILMÄSYMBOLIN KEHÄ (omistajan tilaus v1119, kohdat 19–20): sama
- * musteviiva kuin muillakin symboleilla, mutta täyttö on okra — silmä
- * lupaa katsottavaa, ja okra on tässä perheessä "tästä avautuu jotakin"
- * -väri (vrt. huutomerkki).
- */
-.nostosym-silmakaari {
-  fill: var(--nosto-okra);
-  stroke: var(--nosto-muste);
-  stroke-width: 0.9;
-  stroke-linejoin: round;
-}
-
-/* Terän kiilto: yksi vaalea piste, ettei silmä ole musta läiskä. */
-.nostosym-kiilto { fill: rgba(251, 246, 232, 0.9); }
-
-.nostosym-nokka {
-  fill: var(--nosto-okra);
-  stroke: var(--nosto-muste);
-  stroke-width: 0.7;
-  stroke-linejoin: round;
-}
-
-.nostosym-viiva {
-  fill: none;
-  stroke: var(--nosto-muste);
-  stroke-width: 1;
-  stroke-linecap: round;
-}
-
-.nostosym-ankkuripiste { fill: var(--nosto-muste); }
+.nostosym-ankkuripiste { fill: var(--sym-muste); }
 
 /* Näppäimistön kohdistus näkyy myös kartalla. */
 .fokusnosto-symboli:focus-visible { outline: none; }
