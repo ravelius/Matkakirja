@@ -612,7 +612,13 @@ const MATKUSTUKSEN_MARGINAALI = 0.22;
  */
 const MATKAREITIN_VIIVA_PX = 2;
 const MATKAREITIN_KATKO_PX = 8;
-const MATKAREITIN_PISTE_PX = 3.4;
+/*
+ * Askelympyrä on nyt OIKEA väliaskel eikä yksi murtoviivan sadasta
+ * pehmennyspisteestä (ks. paivitaMatkareitit), joten niitä on reitillä
+ * kourallinen eikä sataa. Siksi piste saa olla hitusen isompi: se on
+ * ruutu, jolle nappula pysähtyy, ja sellaisen pitää näkyä.
+ */
+const MATKAREITIN_PISTE_PX = 4.2;
 
 /*
  * NUOREN HERRAN HUUDAHDUSRIVI PALJASTUSKORTILLA (omistajan
@@ -5707,8 +5713,30 @@ export class UI {
    * lehti, ei pelilauta.
    *
    * PIIRRETÄÄN LAUDAN OMASTA MURTOVIIVASTA (board.edgeById poly), sama
-   * lähde kuin matkustusrajauksella (matkustusRajaus): askelympyrät
-   * osuvat siis täsmälleen niihin pisteisiin, joissa nappula pysähtyy.
+   * lähde kuin matkustusrajauksella (matkustusRajaus): viiva on siis
+   * täsmälleen se reitti, jota pitkin nappula kulkee.
+   *
+   * VÄLIASKELEET LASKETAAN KAARENPITUUDESTA, EI MURTOVIIVAN
+   * PISTEISTÄ (omistajan tilaus 26.8.2026: *"Käytä alkuperäisen kartan
+   * pisteitä siirtymislinjoihin ja väliaskelin. Älä ota siis karttaa
+   * vaan pelkästään ne reitit ja väliaskelmaa."*).
+   *
+   * JUURISYY, joka omistajan kuvakaappauksessa näkyi. Murtoviivan
+   * pisteet EIVÄT ole askelia: js/rules.js edgePolyline pehmentää
+   * reitin Catmull–Rom-käyrällä ja tihentää sen neljääntoista
+   * pisteeseen jokaista väliä kohti. Ateenan naapureilla se tekee
+   * 43, 127 ja 2 pistettä — vaikka askelia on 4, 4 ja 2. Ympyrä
+   * jokaisessa pisteessä tuotti siis kolme eri kieltä samalla
+   * ruudulla: helminauhan (Sofia), kiehkuran siellä missä
+   * pehmennyksen kaari kääntyy tiukasti (Sisilian väylä Attikan
+   * niemen ympäri) ja PALJAAN KATKOVIIVAN reitillä, jonka
+   * murtoviivassa on vain kaksi pistettä eli pelkät päät (Kreeta).
+   *
+   * Nappulan oma askel lasketaan kaarenpituudesta:
+   * `pointAlong(poly, idx / steps)` (js/rules.js pixelOf). Ympyrät
+   * piirretään nyt samalla kaavalla, joten ne osuvat täsmälleen
+   * niihin ruutuihin, joilla nappula pysähtyy — yhtä monta joka
+   * reitillä, tasavälein, myös merellä.
    */
   paivitaMatkareitit() {
     const kerros = this.matkaLayer;
@@ -5748,14 +5776,23 @@ export class UI {
       const jakso = MATKAREITIN_KATKO_PX / skaala;
       viiva.style.strokeDasharray = `${(jakso * 0.5).toFixed(2)} ${(jakso * 0.5).toFixed(2)}`;
       /*
-       * ASKELPISTEET: reitin väliaskeleet ympyröinä, sama data kuin
-       * nappulan reitillä (js/rules.js stepsFrom). Päätekaupungit
-       * jäävät pois — niillä on jo oma laattansa.
+       * ASKELPISTEET: reitin väliaskeleet ympyröinä, sama kaava kuin
+       * nappulan sijainnilla (js/rules.js pixelOf). Päätekaupungit
+       * jäävät pois — niillä on jo oma laattansa — joten kierros on
+       * 1 … steps-1. Yhden askelen reitillä (steps = 1) välipisteitä
+       * ei ole lainkaan, ja silloin piirtyy pelkkä viiva; se on
+       * oikein, koska sellaisella reitillä ei ole ruutua johon
+       * pysähtyä.
+       *
+       * Vanhoilla laudoilla askelmäärä voi puuttua reitiltä; silloin
+       * reitti on yhden askelen mittainen eikä ympyröitä tule.
        */
-      for (let i = 1; i < poly.length - 1; i += 1) {
+      const askelia = Math.max(1, Math.round(reitti.steps ?? 1));
+      for (let i = 1; i < askelia; i += 1) {
+        const { x, y } = pointAlong(poly, i / askelia);
         el('circle', {
-          cx: poly[i][0],
-          cy: poly[i][1],
+          cx: x.toFixed(1),
+          cy: y.toFixed(1),
           r: (MATKAREITIN_PISTE_PX / skaala).toFixed(2),
           class: 'matkareitti-piste',
         }, kerros);
