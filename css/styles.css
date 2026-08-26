@@ -17080,32 +17080,34 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
 .toimintorivi.rivi-yksi .monitoimi-nappi .viiva-ikoni { display: none; }
 
 /*
- * MATKUSTA-NAPIN OMA ILME (omistajan pelitestipalaute v1119:
- * *"teksti MATKUSTA, hieman ylemmäs nykyisestä (irti alareunasta) ja
- * KEVYEN ORANSSI sävy — ei huutava"*).
- *
- * Sävy on pelin merkkipunaoranssin (--mark) haalea muunnos: sama
- * väriperhe kuin lentoreitin viivalla ja kohderenkailla, mutta niin
- * laimeana että se lukee pergamenttina eikä varoituksena. Teksti jää
- * tummaksi musteeksi — nappi erottuu pohjastaan, ei väristään.
+ * MATKUSTA ON KULLATTU PÄÄNAPPI (Arkkikirjasto-linjaus 26.8.2026;
+ * omistaja samana iltana: *"Matkusta napin väri ei sovi pelin
+ * väripalettiin"* — kumoaa v1119:n "kevyen oranssin", joka jäi
+ * paletin ulkopuoliseksi lohenpunaksi). Matkusta on kartan etenevä
+ * päävalinta, joten se puhuu samaa kultaa kuin Aloita peli ja
+ * varmistuksen Kyllä (button.primary): sama liukuväri, sama
+ * mustereuna, tumma teksti.
  *
  * body[data-mode] on tarpeen, koska kartan yleinen nappisääntö
  * (body[data-mode] .actions button) asettaa saman ominaisuuden.
  */
 body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi {
-  background: rgba(214, 122, 62, 0.2);
-  border-color: rgba(176, 84, 40, 0.55);
-  color: #6d3a18;
+  background: linear-gradient(180deg, #eab84e, #d09024);
+  border-color: var(--accent-dark);
+  color: #2c1e07;
+  font-weight: 700;
 }
 
 body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:hover:not(:disabled) {
-  background: rgba(214, 122, 62, 0.32);
+  background: linear-gradient(180deg, #f3c661, #d9a13b);
 }
 
+/* Estettynä kulta laimenee pergamentiksi — ei katoa, ei kutsu. */
 body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
-  background: rgba(214, 122, 62, 0.08);
-  border-color: rgba(176, 84, 40, 0.24);
-  color: rgba(109, 58, 24, 0.45);
+  background: rgba(208, 144, 36, 0.14);
+  border-color: rgba(122, 85, 20, 0.3);
+  color: rgba(44, 30, 7, 0.45);
+  font-weight: 400;
 }
 
 .toimintorivi.rivi-yksi .monitoimi-nappi .icon-label {

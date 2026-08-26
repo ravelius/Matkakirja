@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1139 — MATKUSTA-nappi on nyt sama kullattu paanappi kuin Aloita peli ja varmistuksen Kylla (lohenpunainen v1119-savy pois); estettyna kulta laimenee pergamentiksi',
   'v1138 — takysymboli (esim. pollonpoikanen) ei enaa katoa eika muutu pisteeksi kun sita napauttaa: aktiivisen tayn ankkuri on nyt tayn oma symboli kuplan alla',
   'v1137 — kaannetty laatta yhtenaistetty kartan kaiverruskielelle: pergamenttikiekko + kaiverrettu arkkukuvake mustaan kiekkoon leikatun aarrekuvan tilalle (kuva elaa paljastuksessa ja matkalaukussa) — Ateenan maalitaulu poissa',
   'v1136 — siivous: v1134:n mukana repoon livahtanut koe-varmistus.html poistettu (ei pelivaikutusta)',
