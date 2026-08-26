@@ -7124,6 +7124,20 @@ body.flight-active .fact-card {
 }
 .gem-count { font-size: 0.78rem; color: var(--muted); }
 
+/*
+ * KÄTKÖ SULKEUTUI (omistajan pelitestipalaute v1119): toteava rivi
+ * tuomion alla, kun kohtaamisen toinen yritys meni väärin ja kaupungin
+ * aarre lukittui pysyvästi (js/visa.js, js/game.js lukitseAarre).
+ * Vaimea muste — tämä ei ole moite eikä hälytys, vaan tieto.
+ */
+.quiz-lukko {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: rgba(90, 67, 38, 0.85);
+}
+
 /* --- kapea / pystyasento: tiiviimmät napit ja tekstit --- */
 
 @media (max-width: 900px), (orientation: portrait) {

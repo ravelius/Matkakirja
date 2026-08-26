@@ -337,10 +337,27 @@ export class Game {
     this.usedQuestions = new Set();
     /*
      * Tarinakaaren kohtaamisten yritykset (pack:city →
-     * {yritykset, onnistui}). Ei tallenneta: uusi istunto saa
-     * kohtaamiset uudelleen, kuten UI:n tervehdykset.
+     * {yritykset, onnistui}).
+     *
+     * TALLENNETAAN v1119:STÄ ALKAEN (omistajan tilaus: *"kohtaamisen
+     * aarrekysymyksessä pelaajalla on 2 vastausyritystä. Toisen väärän
+     * jälkeen sen kaupungin aarre LUKITTUU PYSYVÄSTI (pelitallennukseen;
+     * ei nollaudu istunnon vaihdossa)"*). Ennen tämä oli
+     * istuntokohtainen: uusi istunto antoi kohtaamiset uudelleen, ja
+     * silloin kahden yrityksen sääntö olisi ollut pelkkä muodollisuus.
      */
     this.kaariYritykset = new Map();
+    /*
+     * PYSYVÄSTI LUKITTUNEET AARTEET (omistajan tilaus v1119).
+     *
+     * Kaupungin tunnus muodossa `pack:city`. Kun kohtaamisen toinen
+     * yritys menee väärin, kaupungin laatta poistetaan pelistä eikä sen
+     * aarretta, pisteitä eikä aarremerkintää voi enää saada. Peli EI
+     * jumitu: laatan puuttuminen tarkoittaa muualla pelissä täsmälleen
+     * samaa kuin käännetty laatta, joten MATKUSTA aukeaa normaalisti
+     * (ks. lukitseAarre ja js/ui.js liikuNappiNakyy).
+     */
+    this.aarreLukot = new Set();
     this.lastPath = null;
     this.winner = null;
     this.turnCount = 1;
@@ -1481,6 +1498,77 @@ export class Game {
   }
 
   /**
+   * MONESKO YRITYS ON MENOSSA JA MONTAKO NIITÄ ON (omistajan tilaus
+   * v1119: *"yritysten määrä näkyy kysymysvaiheessa (esim. 'Yritys
+   * 1/2')"*).
+   *
+   * Yritys kirjataan kysymystä AVATTAESSA (actionQuiz), joten
+   * tallennettu luku on jo tämän yrityksen numero.
+   *
+   * @returns {{nyt:number, kaikki:number}|null} null, jos kaupungilla
+   *   ei ole kohtaamista tällä laudalla
+   */
+  kaariYritysLuku(cityId) {
+    const tila = this.kaariTilanne(cityId);
+    if (!tila) return null;
+    return {
+      nyt: Math.min(Math.max(1, tila.yritykset), KAARI_YRITYKSET),
+      kaikki: KAARI_YRITYKSET,
+    };
+  }
+
+  /** Onko kaupungin aarre lukittunut pysyvästi (v1119)? */
+  aarreLukittu(cityId) {
+    return Boolean(this.aarreLukot?.has(`${this.pack.id}:${cityId}`));
+  }
+
+  /**
+   * AARRE LUKKOON PYSYVÄSTI (omistajan tilaus v1119: *"Toisen väärän
+   * jälkeen sen kaupungin aarre LUKITTUU PYSYVÄSTI"*).
+   *
+   * Laatta POISTETAAN pelistä: sen alta ei enää voi löytää mitään,
+   * eikä sitä kirjata löydöksi (ei pisteitä, ei rahaa, ei
+   * aarremerkintää). Kaupunki merkitään lukoksi, jotta käyttöliittymä
+   * osaa kertoa menetyksestä.
+   *
+   * PELI EI SAA JUMITTUA (päätoimittajan linjaus): laatan puuttuminen
+   * tarkoittaa muualla pelissä samaa kuin käännetty laatta, joten
+   * MATKUSTA aukeaa (js/ui.js liikuNappiNakyy), lehden lukitus
+   * purkautuu (js/fokusvirta.js fokusvirtaLukitseeLehden) ja
+   * kohtaamispiste sammuu itsestään.
+   *
+   * UNOHDETTU AARRE EI SAA KADOTA. Jos lukittuvan laatan alla on
+   * mantereen tähti tai mannerAarre, se siirretään toisen saman
+   * mantereen kääntämättömän laatan alle — sama varotoimi ja sama syy
+   * kuin pöllöhaarassa (revealToken): muuten peli voisi muuttua
+   * voittamattomaksi yhdestä väärästä vastauksesta.
+   */
+  lukitseAarre(cityId) {
+    this.aarreLukot ??= new Set();
+    const avain = `${this.pack.id}:${cityId}`;
+    if (this.aarreLukot.has(avain)) return false;
+    this.aarreLukot.add(avain);
+    const type = this.tokens.get(cityId);
+    if (!type) return true;
+    this.tokens.delete(cityId);
+    if (type === 'star' || type === 'mannerAarre') {
+      const manner = this.mannerOf(cityId);
+      const vapaat = [...this.tokens.entries()]
+        .filter(([id, t]) => t !== 'star' && t !== 'mannerAarre'
+          && this.mannerOf(id) === manner)
+        .map(([id]) => id);
+      if (vapaat.length) {
+        this.tokens.set(vapaat[Math.floor(this.rng() * vapaat.length)], type);
+      }
+    }
+    const city = this.board.cityById.get(cityId);
+    this.say(this.player.id,
+      `Kätkö sulkeutui kaupungissa ${city?.name ?? cityId} — aarre jäi löytymättä.`);
+    this.checkWin();
+    return true;
+  }
+
+  /**
    * Avaa pysähdyksen: monivalinta, isoisän väittämä, karttakysymys tai
    * tapahtumakortti. Oikea vastaus kääntää laatan ilmaiseksi.
    * `hard: true` arpoo vaikean kysymyksen, josta oikein vastattaessa saa
@@ -1977,6 +2065,18 @@ export class Game {
       const tila = this.kaariYritykset.get(avain) ?? { yritykset: 1, onnistui: false };
       tila.onnistui = true;
       this.kaariYritykset.set(avain, tila);
+    }
+    /*
+     * KAKSI YRITYSTÄ, SITTEN KÄTKÖ SULKEUTUU (omistajan tilaus v1119).
+     * Yritys on kirjattu jo kysymystä avattaessa (actionQuiz), joten
+     * toisen väärän vastauksen hetkellä laskuri on kahdessa.
+     */
+    if (this.quiz.kaari && !this.quiz.right) {
+      const avain = `${this.pack.id}:${this.quiz.cityId}`;
+      const tila = this.kaariYritykset.get(avain) ?? { yritykset: 1, onnistui: false };
+      if (tila.yritykset >= KAARI_YRITYKSET) {
+        this.quiz.aarreLukittui = this.lukitseAarre(this.quiz.cityId);
+      }
     }
 
     // Pulma: oikeasta tietäjäpisteitä, väärästä ei rangaistusta.
@@ -2614,6 +2714,9 @@ export class Game {
       julisteet: [...this.julisteet],
       fokusvirrat: this.fokusvirrat,
       explored: [...this.explored],
+      // Kohtaamisten yritykset ja pysyvät aarrelukot (v1119).
+      kaariYritykset: [...this.kaariYritykset.entries()],
+      aarreLukot: [...this.aarreLukot],
       scheduleNote: this.scheduleNote,
       scheduleShown: [...this.scheduleShown],
       recordNoted: this.recordNoted,
@@ -2757,7 +2860,14 @@ export class Game {
      * jokainen kaarikaupungin tutkiminen kaatui TypeErroriin ja
      * Tutki-nappi mykistyi (omistajan löytö 10.8.2026 Ateenassa).
      */
-    game.kaariYritykset = new Map();
+    /*
+     * Kohtaamisten yritykset ja aarrelukot luetaan tallennuksesta
+     * (v1119). Vanha tallennus ei tunne kumpaakaan: silloin
+     * kohtaamiset ovat pelaamatta eikä lukkoja ole — sama tilanne kuin
+     * ennen sääntöä.
+     */
+    game.kaariYritykset = new Map(data.kaariYritykset ?? []);
+    game.aarreLukot = new Set(data.aarreLukot ?? []);
     game.puzzlePrevPhase = null;
     // Vanha tallennus ei tunne aikaa: se jatkuu päivästä 1 eikä ole nähnyt
     // yhtään isoisän aikataulurivistä.

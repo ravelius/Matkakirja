@@ -326,6 +326,27 @@ export const FOKUSVIRTA_ATEENA = {
   kohtaaminen: {
     hahmo: 'Vartija Nikos',
     nappi: 'Tapaa Nikos',
+    /*
+     * VARMISTUSKYSYMYS (omistajan pelitestipalaute v1119). Lause on
+     * datassa eikä koodissa, koska suomen genetiivi ei taivu
+     * koneellisesti jokaisesta nimestä — ilman omaa lausetta kortti
+     * käyttää pronominia (js/fokusvirta.js varmistusLause).
+     */
+    varmistus: 'Haluatko varmasti tavata Nikoksen juuri nyt?',
+    /*
+     * VIHJELINKIN OSIO (omistajan pelitestipalaute v1119, kohta 13:
+     * rivi kertoo *"MISTÄ PÄIN LEHTEÄ pulman ratkaisu löytyy,
+     * vastausta paljastamatta"* ja avaa lehden siihen osioon).
+     *
+     * Tunnus on kaupunkilehden osion id (js/packs/kulttuuri-
+     * kategoriat.js): Ateenan lehdessä on kaksi osiota, 'kaupunki'
+     * ("Ateena") ja 'arki' ("Arki ja tavat"). Nikoksen kysymys koskee
+     * Athenen lahjaa, ja lähin tuki sille on Ateena-osiossa —
+     * artikkeli "Palkintona oksa puusta" kertoo, minkä puun oksa on
+     * kaupungin oma palkinto. Vastausta se ei anna, vaan nyökkää
+     * siihen suuntaan.
+     */
+    vihjeOsio: 'kaupunki',
     teksti: 'Vartija Nikos on kiertänyt Akropoliin ja Agoran kujia jo '
       + 'kaksikymmentä vuotta, ja hän on nähnyt tarpeeksi ulkomaalaisia, '
       + 'jotka haaveilevat löytävänsä oman Priamoksensa jo ensimmäisellä '

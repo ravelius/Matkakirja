@@ -365,6 +365,57 @@
 }
 
 /* ===================================================================
+   KOHTAAMISEN VARMISTUS (js/fokusvirta.js piirraKohtaaminen)
+   -------------------------------------------------------------------
+   Omistajan pelitestipalaute v1119: kohtaaminen kysyy ensin, ja alla
+   lukee pienellä mitä panoksena on. Kysymys on kortin teksti-
+   kokoinen ja tummin rivi; varoitus ja vihjelinkki ovat sitä pienempiä
+   ja vaimeampia — ne ovat reunahuomautuksia, eivät kehotuksia.
+   =================================================================== */
+
+.fokusvirta-varmistus {
+  margin: 0.9rem 0 0;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #211d18;
+}
+
+.fokusvirta-varoitus {
+  margin: 0.5rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: rgba(58, 38, 16, 0.72);
+}
+
+/*
+ * Vihjelinkki on tekstiä eikä nappilaatikkoa: se on lehden reunaan
+ * kirjoitettu muistutus, ei kolmas valinta kahden napin rinnalle.
+ * Alleviivaus kertoo painettavuuden, ja kosketusala on silti sormen
+ * mittainen.
+ */
+.fokusvirta-vihjelinkki {
+  display: block;
+  width: 100%;
+  min-height: 40px;
+  margin: 0.35rem 0 0;
+  padding: 0.3rem 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  text-align: left;
+  font-family: inherit;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: rgba(122, 85, 20, 0.95);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  cursor: pointer;
+}
+
+.fokusvirta-vihjelinkki:hover,
+.fokusvirta-vihjelinkki:focus-visible { color: #7a5514; }
+
+/* ===================================================================
    PÖLLÖN PUHEKUPLA (js/fokusvirta.js piirraKupla)
    -------------------------------------------------------------------
    Omistajan pelitestipalaute 24.8.2026: *"pöllön puhekuplat saisi
