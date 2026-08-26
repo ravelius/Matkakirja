@@ -18,7 +18,7 @@
     "h": 4003
   },
   "tiedosto": "HUN.webp",
-  "tehty": "2026-08-24",
+  "tehty": "2026-08-26",
   "yleinen": true,
   "ikkuna": {
     "lonKeski": 19.485817999999966,
@@ -28,12 +28,12 @@
   },
   "maamuodonEro": 0.6,
   "paikat": [
-    "Budapest",
     "Miskolc",
     "Debrecen",
     "Szeged",
     "Pécs",
     "Győr",
+    "Vác",
     "Székesfehérvár",
     "Szombathely",
     "Békéscsaba"

@@ -18,7 +18,16 @@
     "h": 4000
   },
   "tiedosto": "GRC.webp",
-  "tehty": "2026-08-24",
+  "tehty": "2026-08-26",
+  "yleinen": false,
+  "ikkuna": {
+    "lonKeski": 24,
+    "lat0": 34.4,
+    "lat1": 41.95,
+    "kuvasuhde": 1.6
+  },
+  "maamuodonEro": 21.4,
+  "paikat": [],
   "tasaus": [
     {
       "id": "lontoo",
