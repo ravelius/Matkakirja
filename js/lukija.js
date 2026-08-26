@@ -175,6 +175,10 @@ export const LUKIJAN_OHITETTAVAT = [
   '#arrival-lehti-yla',
   '.lehti-ylarivi',
   '#arrival-city',
+  // Maalehden maan nimi lippuineen on P-elementti (taittosyy), joten
+  // otsikonohitus ei osu siihen ja luenta alkoi maan nimestä
+  // (omistajan havainto 26.8.2026). Rivi on taittoa, ei juttua.
+  '.arrival-maa-rivi',
 
   // Lähdemerkinnät ja krediitit.
   '.lahde',
