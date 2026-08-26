@@ -303,4 +303,43 @@ export const MINIATYYRIT = {
     Latinalaissilta: 'assets/kartat/miniatyyrit/sarajevo-latinalaissilta.webp',
     'Keltainen linnake': 'assets/kartat/miniatyyrit/sarajevo-keltainen-linnake.webp',
   },
+  /*
+   * Erä 2 läntiseen ja keskiseen Eurooppaan (generoi-miniatyyrit.yml
+   * 26.8.2026). Kaikki 25 katsottu silmin ja hyväksytty — tunnusmerkit
+   * osuvat (Rossion aaltokiveys, kauppahallin Zsolnay-katto, Puerta
+   * del Solin karhupatsas, Sigismundin pylväs linnanaukiolla).
+   */
+  madrid: {
+    Kuninkaanlinna: 'assets/kartat/miniatyyrit/madrid-kuninkaanlinna.webp',
+    'Plaza Mayor': 'assets/kartat/miniatyyrit/madrid-plaza-mayor.webp',
+    'Puerta del Sol': 'assets/kartat/miniatyyrit/madrid-puerta-del-sol.webp',
+    'Cibeleen aukio': 'assets/kartat/miniatyyrit/madrid-cibeleen-aukio.webp',
+    'Prado-museo': 'assets/kartat/miniatyyrit/madrid-prado-museo.webp',
+    'Alcalán portti': 'assets/kartat/miniatyyrit/madrid-alcalan-portti.webp',
+  },
+  lissabon: {
+    'Glórian köysirata': 'assets/kartat/miniatyyrit/lissabon-glorian-koysirata.webp',
+    Rossio: 'assets/kartat/miniatyyrit/lissabon-rossio.webp',
+    'São Jorgen linna': 'assets/kartat/miniatyyrit/lissabon-sao-jorgen-linna.webp',
+    Tuomiokirkko: 'assets/kartat/miniatyyrit/lissabon-tuomiokirkko.webp',
+    Kauppatori: 'assets/kartat/miniatyyrit/lissabon-kauppatori.webp',
+    Kansallispanteoni: 'assets/kartat/miniatyyrit/lissabon-kansallispanteoni.webp',
+  },
+  budapest: {
+    Kalastajanlinnake: 'assets/kartat/miniatyyrit/budapest-kalastajanlinnake.webp',
+    Ketjusilta: 'assets/kartat/miniatyyrit/budapest-ketjusilta.webp',
+    Parlamenttitalo: 'assets/kartat/miniatyyrit/budapest-parlamenttitalo.webp',
+    'Gellértinvuori': 'assets/kartat/miniatyyrit/budapest-gellertinvuori.webp',
+    'Pyhän Tapanin kirkko': 'assets/kartat/miniatyyrit/budapest-pyhan-tapanin-kirkko.webp',
+    'Suuri kauppahalli': 'assets/kartat/miniatyyrit/budapest-suuri-kauppahalli.webp',
+    'Sankarien aukio': 'assets/kartat/miniatyyrit/budapest-sankarien-aukio.webp',
+  },
+  varsova: {
+    'Vanhankaupungin tori': 'assets/kartat/miniatyyrit/varsova-vanhankaupungin-tori.webp',
+    'Varsovan linna': 'assets/kartat/miniatyyrit/varsova-varsovan-linna.webp',
+    'Kopernikuksen tiedekeskus': 'assets/kartat/miniatyyrit/varsova-kopernikuksen-tiedekeskus.webp',
+    'Pyhän ristin kirkko': 'assets/kartat/miniatyyrit/varsova-pyhan-ristin-kirkko.webp',
+    'Varsovan kansallismuseo': 'assets/kartat/miniatyyrit/varsova-varsovan-kansallismuseo.webp',
+    'Kulttuuri- ja tiedepalatsi': 'assets/kartat/miniatyyrit/varsova-kulttuuri-ja-tiedepalatsi.webp',
+  },
 };

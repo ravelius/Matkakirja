@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1162';
+const CACHE = 'matkakirja-2026-08-09.1163';
 const SHELL = [
   './',
   './index.html',
@@ -520,6 +520,31 @@ const SHELL = [
   './assets/kartat/miniatyyrit/sofia-pyhan-yrjon-rotunda.webp',
   './assets/kartat/miniatyyrit/sofia-sofian-katedraali.webp',
   './assets/kartat/miniatyyrit/sofia-sofian-yliopisto.webp',
+  './assets/kartat/miniatyyrit/budapest-gellertinvuori.webp',
+  './assets/kartat/miniatyyrit/budapest-kalastajanlinnake.webp',
+  './assets/kartat/miniatyyrit/budapest-ketjusilta.webp',
+  './assets/kartat/miniatyyrit/budapest-parlamenttitalo.webp',
+  './assets/kartat/miniatyyrit/budapest-pyhan-tapanin-kirkko.webp',
+  './assets/kartat/miniatyyrit/budapest-sankarien-aukio.webp',
+  './assets/kartat/miniatyyrit/budapest-suuri-kauppahalli.webp',
+  './assets/kartat/miniatyyrit/lissabon-glorian-koysirata.webp',
+  './assets/kartat/miniatyyrit/lissabon-kansallispanteoni.webp',
+  './assets/kartat/miniatyyrit/lissabon-kauppatori.webp',
+  './assets/kartat/miniatyyrit/lissabon-rossio.webp',
+  './assets/kartat/miniatyyrit/lissabon-sao-jorgen-linna.webp',
+  './assets/kartat/miniatyyrit/lissabon-tuomiokirkko.webp',
+  './assets/kartat/miniatyyrit/madrid-alcalan-portti.webp',
+  './assets/kartat/miniatyyrit/madrid-cibeleen-aukio.webp',
+  './assets/kartat/miniatyyrit/madrid-kuninkaanlinna.webp',
+  './assets/kartat/miniatyyrit/madrid-plaza-mayor.webp',
+  './assets/kartat/miniatyyrit/madrid-prado-museo.webp',
+  './assets/kartat/miniatyyrit/madrid-puerta-del-sol.webp',
+  './assets/kartat/miniatyyrit/varsova-kopernikuksen-tiedekeskus.webp',
+  './assets/kartat/miniatyyrit/varsova-kulttuuri-ja-tiedepalatsi.webp',
+  './assets/kartat/miniatyyrit/varsova-pyhan-ristin-kirkko.webp',
+  './assets/kartat/miniatyyrit/varsova-vanhankaupungin-tori.webp',
+  './assets/kartat/miniatyyrit/varsova-varsovan-kansallismuseo.webp',
+  './assets/kartat/miniatyyrit/varsova-varsovan-linna.webp',
   // Lippuikkunan versioliput (pilotti Suomi + Saksa, v711).
   './assets/liput/versiot/fin-valtiolippu.png',
   './assets/liput/versiot/fin-sotalippu.png',
