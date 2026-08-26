@@ -14035,7 +14035,7 @@ export class UI {
    * @param {string|null} kuva kuvan polku (assets/…) tai null
    * @param {string} alt kuvan tekstivastine
    * @returns {{overlay: HTMLElement, scene: HTMLElement, caption: HTMLElement,
-   *   kuvaEl: HTMLImageElement|null, ruksi: HTMLElement}}
+   *   kuvaEl: HTMLImageElement|null, jatka: HTMLElement}}
    */
   rakennaPaljastus(kuva, alt) {
     const overlay = html('div', 'reveal-overlay');
@@ -14055,16 +14055,11 @@ export class UI {
     scene.appendChild(caption);
     overlay.appendChild(scene);
     /*
-     * Ruksi kortin kulmaan ja kortti esillä koko luennan ajan
-     * (omistajan palaute 10.8.2026: "aarre häviää näkyvistä ennen
-     * kuin lukija ehtii lukea repliikkinsä loppuun"). Koko kortti
-     * sulkeutuu napautuksesta muutenkin — ruksi on sen näkyvä kahva.
-     */
-    const ruksi = html('button', 'reveal-sulje', '×');
-    ruksi.type = 'button';
-    ruksi.setAttribute('aria-label', 'Sulje paljastus');
-    overlay.appendChild(ruksi);
-    /*
+     * KULMAN RUKSIA EI ENÄÄ OLE (omistaja 26.8.2026 ilta: "Yläkulman
+     * ruksi on turha. Ota pois."). Jatka matkaa -nappi ja napautus
+     * mihin tahansa kortilla riittävät — ruksi oli kolmas kahva
+     * samaan oveen.
+     *
      * JATKA MATKAA (omistajan pelitestipalaute v1119: *"sivu pysyy
      * näkyvissä kunnes käyttäjä toimii: lisää selkeä nappi 'JATKA
      * MATKAA' (1873-nappityyli); napautus muuallakin ruudulla saa myös
@@ -14079,15 +14074,15 @@ export class UI {
     jatka.type = 'button';
     scene.appendChild(jatka);
     return {
-      overlay, scene, caption, kuvaEl, ruksi, jatka,
+      overlay, scene, caption, kuvaEl, jatka,
     };
   }
 
   /**
    * Odottaa, että pelaaja sulkee paljastuskortin (v1119).
    *
-   * Kolme kahvaa, yksi lupaus: Jatka matkaa -nappi, kulman ruksi ja
-   * napautus mihin tahansa kortilla. Ajastinta EI ole — kortti on
+   * Kaksi kahvaa, yksi lupaus: Jatka matkaa -nappi ja napautus
+   * mihin tahansa kortilla (kulman ruksi poistui 26.8.2026). Ajastinta EI ole — kortti on
    * ruudulla niin kauan kuin pelaaja haluaa.
    */
   odotaPaljastuksenSulku(overlay, jatka) {
@@ -14174,7 +14169,7 @@ export class UI {
     // Näyttöaika ei ole enää mitoitettu selitteen pituuteen (v1119):
     // kortti odottaa pelaajaa, joten pitkä kaariteksti ei voi jäädä
     // kesken. Alla oleva lyhyt `odota` on vain kuvan nousun rytmiä.
-    // Kortti odottaa vähimmäislukuajan; ruksi tai napautus sulkee heti.
+    // Kortti odottaa vähimmäislukuajan; napautus sulkee heti.
     const napautus = new Promise((resolve) => {
       overlay.addEventListener('pointerdown', resolve, { once: true });
     });
@@ -14183,7 +14178,7 @@ export class UI {
     /*
      * KORTTI ODOTTAA PELAAJAA (v1119). Ennen tässä oli lukuaikaan
      * mitoitettu ajastin (seliteMs); nyt kortti pysyy ruudulla, kunnes
-     * pelaaja painaa Jatka matkaa -nappia, ruksia tai napauttaa
+     * pelaaja painaa Jatka matkaa -nappia tai napauttaa
      * korttia. `odota` jää kuvan nousun rytmiin.
      */
     if (this.reducedMotion) {
@@ -14243,7 +14238,7 @@ export class UI {
     /*
      * KERTOJA EI LUE ESITTELYÄ (omistajan tilaus 18.8.2026: kertojan
      * ääni pois kaikista aarteen tapaamisista) — kortti odottaa vain
-     * lukuajan verran, ja napautus tai ruksi ohittaa odotuksen.
+     * lukuajan verran, ja napautus ohittaa odotuksen.
      */
     const napautus = new Promise((resolve) => {
       overlay.addEventListener('pointerdown', resolve, { once: true });

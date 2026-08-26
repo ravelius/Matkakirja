@@ -6999,7 +6999,21 @@ body.flight-active .fact-card {
    * Sumennus jää tunnelmaksi: se pehmentää alla olevan pelinäkymän,
    * mikä näkyy vielä lähes mustan pohjan lävitse.
    */
-  background: #0b0805;
+  /*
+   * KESKUSTA MUSTA, REUNAT KUULTAVAT (omistaja 26.8.2026 ilta:
+   * "Tausta voisi ehkä hieman kuultaa läpi ainakin jostain kohtaa").
+   * Aarrekuva on maalattu mustalle, joten sen kohdalla pohjan on
+   * pysyttävä täytenä — muuten kuvan reuna erottuisi halona (sama
+   * oppi kuin v894:n vaalean harson kanssa). Säteittäinen liukuväri
+   * pitää keskustan umpimustana ja päästää sumennetun pelinäkymän
+   * hohtamaan laidoilta: pimeys ei ole seinä vaan hetki kartan päällä.
+   */
+  background: radial-gradient(
+    ellipse 80% 70% at 50% 42%,
+    #0b0805 0%,
+    #0b0805 48%,
+    rgba(11, 8, 5, 0.74) 100%
+  );
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
   z-index: 20;
@@ -7020,33 +7034,8 @@ body.flight-active .fact-card {
 
 .reveal-overlay.leaving { animation: fade-out 0.3s ease-in forwards; }
 
-/* Paljastuksen sulkuruksi: kortti pysyy esillä luennan ajan, joten
- * kärsimättömälle tarjotaan selvä ulos-ovi (omistajan toive
- * 10.8.2026). Koko overlay sulkee napautuksesta muutenkin — ruksi on
- * sen näkyvä kahva. */
-.reveal-sulje {
-  position: absolute;
-  top: max(0.9rem, env(safe-area-inset-top));
-  right: 0.9rem;
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  /* Mustaa pohjaa vasten ruksi on vaalea ääriviiva, ei paperilaatta. */
-  border: 1px solid rgba(244, 231, 202, 0.4);
-  background: rgba(244, 231, 202, 0.08);
-  color: rgba(244, 231, 202, 0.88);
-  font-size: 1.5rem;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.reveal-sulje:hover,
-.reveal-sulje:focus-visible {
-  background: rgba(244, 231, 202, 0.85);
-  color: #1a1208;
-}
+/* Kulman sulkuruksi poistui 26.8.2026 (omistaja: "Yläkulman ruksi on
+ * turha") — Jatka matkaa ja napautus kortille riittävät. */
 
 /*
  * JATKA MATKAA — 1873-NAPPI (omistajan pelitestipalaute v1119:
