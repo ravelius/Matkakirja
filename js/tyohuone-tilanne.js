@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1129 — Sarajevon lehden etusivulle kolmen herokuvan avauskaruselli (Gazi Husrev-beg + Sahat Kula, Katedrala, Latinalainen silta; omistajan ChatGPT-era, silmatarkistettu) — kansikuvat siirtyvat pikkuriville',
   'v1128 — kartan vierityksen tokkiminen korjattu mittauksin: sykeanimaatiot vaimennetaan raahauksen ajaksi ja siirtosilmukka ei enaa pakota asettelua (asettelut/kehys 1,8 -> 0,7, longtaskit 4-6 -> 0-1, p50-kehysaika -25%); uusi vartija savuke-panorointi — kokeile panorointia Kreikan fokuskartalla iPadilla',
   'v1127 — kaupungin paalle osuvat kohde- ja takymerkit kasataan nippuun kaupungin oikealle puolelle siististi allekkain (esim. Ateena): kaupunkia on helppo painaa, niputetut merkit toimivat normaalisti; kaupunkimerkki ja vihrea kohtaamispiste eivat siirry',
   'v1126 — SYMBOLIKIRJASTO: kartan taky- ja kohdemerkit kertovat kategoriansa 12 symbolilla (murtunut pylvas, vuori+aalto, malja, lyyra, hammasratas, vaaka, sulkakyna, ankkuri, laakeriseppele + entiset huutomerkki, pollonpoikanen, silma) vaimein heraldisin varein; kohteet saavat symbolin tyyppijohdolla, kaupunki ja muu jaavat pisteiksi — katso Kreikan fokuskartta',
