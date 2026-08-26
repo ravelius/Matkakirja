@@ -492,14 +492,21 @@ console.log(`  asteina         lon ${laatikko.lon0.toFixed(2)}..${laatikko.lon1.
 console.log(`  aineisto        ${dataKansio}`);
 
 /*
- * PELILAATTOJEN PAIKAT ASTEINA. Aineistosta poimittu kaupunkipiste ei
- * saa osua laatan päälle: peli piirtää laatan nimineen kuvan päälle, ja
- * kaksi Ateenaa vierekkäin olisi pahin mahdollinen virhe. Laatat
- * lasketaan takaisin asteiksi laudan omalla kaavalla — sama kaava, jolla
- * kuva piirretään, joten ero on vain laatan käsin siirretty verran.
+ * PELILAATTOJEN PAIKAT ASTEINA JA NIMINÄ. Aineistosta poimittu
+ * kaupunkipiste ei saa osua laatan päälle: peli piirtää laatan nimineen
+ * kuvan päälle, ja kaksi Ateenaa vierekkäin olisi pahin mahdollinen
+ * virhe. Laatat lasketaan takaisin asteiksi laudan omalla kaavalla —
+ * sama kaava, jolla kuva piirretään, joten ero on vain laatan käsin
+ * siirretty verran.
+ *
+ * NIMI KULKEE MUKANA, KOSKA SIIRTO VOI OLLA ISO. Euroopassa laatat ovat
+ * lähellä todellista paikkaansa, mutta Amerikoissa niitä on siirretty
+ * enemmän — Havannan laatta on 2,64 astetta todellisesta Havannasta —
+ * eikä puolen asteen säde enää tunnista samaa kaupunkia. Silloin sama
+ * kaupunki tuli lehdelle kahdesti. Ks. aineisto.mjs `samaNimi`.
  */
 const laudanKaupungitAsteina = pack.cities.map((c) => ({
-  lon: kaava.lautaLon(c.x), lat: kaava.lautaLat(c.y),
+  lon: kaava.lautaLon(c.x), lat: kaava.lautaLat(c.y), nimi: c.name,
 }));
 
 const aineisto = keraaAineisto({
@@ -516,6 +523,14 @@ console.log(`  renkaat ${aineisto.maa.renkaat.length} · joet ${aineisto.joet.le
   + `${aineisto.korkeus.w}x${aineisto.korkeus.h} `
   + `(lon ${aineisto.korkeus.lon0}..${aineisto.korkeus.lon1} `
   + `lat ${aineisto.korkeus.lat0}..${aineisto.korkeus.lat1})`);
+/*
+ * Meren ala erottaa veden merenpinnan alapuolisesta kuivasta maasta
+ * (Kaspian alanko, Kuollutmeri, Qattara). Ilman sitä moottori palaa
+ * vanhaan `m < 0` -sääntöön, ja se on syytä näkyä lokissa.
+ */
+console.log(`  meren ala       ${aineisto.meri
+  ? 'ne_10m_ocean.geojson (maa ja meri erotettu)'
+  : 'EI AINEISTOA — meri päätellään pelkästä ETOPOsta (ks. aineisto.mjs)'}`);
 /*
  * Korkeusruudukon on katettava koko kuva, muuten meren syvyysporrastus
  * vaihtuu tasaiseksi sävyksi ja kuvaan jää suora sauma (ks.
@@ -544,13 +559,23 @@ const tyokansio = join(tmpdir(), `fokuskartta-${iso}-${process.pid}`);
 mkdirSync(tyokansio, { recursive: true });
 writeFileSync(join(tyokansio, 'aineisto.json'), JSON.stringify(aineisto));
 
+/*
+ * ASETUKSET KULKEVAT TIEDOSTONA, EIVÄT OSOITTEESSA.
+ *
+ * Ne menivät ennen selaimelle URL-kyselynä, ja `--tarkistus` kaatui
+ * isoilla mailla (USA, GRL, CHN, IDN, ARG, BRA, CHL): tarkistuskuvaan
+ * kuuluvat laudan omat maarenkaat, ja niiden koodattu JSON ylitti
+ * node:http:n 16 kilotavun otsikko- ja pyyntörivirajan — palvelin
+ * vastasi 431/katkaisi yhteyden, ja piirto ei alkanut lainkaan. Nyt
+ * sivu hakee asetukset samasta työkansiosta kuin aineiston, jolloin
+ * kokoa rajoittaa vain levy.
+ */
 const SIVU = `<!doctype html><meta charset="utf-8"><title>fokuskartta</title>
 <body style="margin:0;background:#333"><canvas id="k"></canvas>
 <script type="module">
   import { piirra } from './piirto.js';
   const aineisto = await (await fetch('./aineisto.json')).json();
-  const asetukset = JSON.parse(document.currentScript?.dataset?.asetukset
-    ?? new URLSearchParams(location.search).get('asetukset'));
+  const asetukset = await (await fetch('./asetukset.json')).json();
   const mitat = piirra(document.getElementById('k'), aineisto, asetukset);
   window.__mitat = mitat;
   document.body.dataset.valmis = '1';
@@ -570,10 +595,16 @@ const palvelin = createServer((req, res) => {
   const lahteet = {
     '/piirto.js': join(TAALLA, 'fokuskartta', 'piirto.js'),
     '/aineisto.json': join(tyokansio, 'aineisto.json'),
+    '/asetukset.json': join(tyokansio, 'asetukset.json'),
   };
   const tiedosto = lahteet[polku];
   if (!tiedosto) { res.writeHead(404); res.end('ei'); return; }
-  res.writeHead(200, { 'content-type': polku.endsWith('.json') ? TYYPIT['.json'] : TYYPIT['.js'] });
+  res.writeHead(200, {
+    'content-type': polku.endsWith('.json') ? TYYPIT['.json'] : TYYPIT['.js'],
+    // Asetukset vaihtuvat saman ajon aikana (tarkistus- ja
+    // esikatselukuva): välimuisti antaisi selaimelle vanhat.
+    'cache-control': 'no-store',
+  });
   res.end(readFileSync(tiedosto));
 });
 await new Promise((ok) => palvelin.listen(0, '127.0.0.1', ok));
@@ -591,12 +622,13 @@ const selain = await chromium.launch({
 
 /** Yksi renderöinti; palauttaa PNG-puskurin ja kuvan mitat. */
 async function renderoi(asetukset) {
+  writeFileSync(join(tyokansio, 'asetukset.json'), JSON.stringify(asetukset));
   const sivu = await selain.newPage({ viewport: { width: 400, height: 300 } });
   const virheet = [];
   sivu.on('pageerror', (e) => virheet.push(String(e)));
   sivu.on('console', (m) => { if (m.type() === 'error') virheet.push(m.text()); });
-  const kysely = `?asetukset=${encodeURIComponent(JSON.stringify(asetukset))}`;
-  await sivu.goto(osoite + kysely, { waitUntil: 'load' });
+  // Tyhjennysvara: sama osoite eri asetuksilla ei saa tulla välimuistista.
+  await sivu.goto(`${osoite}?ajo=${Date.now()}`, { waitUntil: 'load' });
   await sivu.waitForSelector('body[data-valmis="1"]', { timeout: 600000 })
     .catch(() => { throw new Error(`Piirto ei valmistunut: ${virheet.join(' | ') || 'aikakatkaisu'}`); });
   const data = await sivu.evaluate(

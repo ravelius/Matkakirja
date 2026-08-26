@@ -16,7 +16,31 @@
  *   ne_10m_rivers_lake_centerlines.geojson  maailman pääjoet
  *   ne_10m_rivers_europe.geojson            Euroopan tiheämpi jokiverkko
  *   ne_10m_lakes.geojson                    järvet
+ *   ne_10m_ocean.geojson                    meren ala (VALINNAINEN, ks. alla)
  *   etopo-band-*.csv                        ETOPO1 ERDDAPista, CSV-kaistoina
+ *
+ * --- miksi meren ala on oma aineistonsa ---
+ *
+ * Piirtomoottori päätteli ennen maan ja meren rajan pelkästä ETOPOsta:
+ * `m < 0` oli merta. Kaava pettää kaikkialla, missä KUIVA MAA on
+ * merenpinnan alapuolella — ja niitä paikkoja on: Kaspianmeren ranta ja
+ * koko Kaspian alanko ovat −28…0 m, Kuollutmeren laakso −400 m, Qattaran
+ * painanne −133 m. Kaspian lehdillä (TKM, KAZ) tämä näkyi pahiten: meri
+ * ja sen ranta saivat saman sävyn, ja kohdemaan sisällä maastokerros
+ * maalasi vielä merenkin maaksi (`Math.max(0, m)`).
+ *
+ * Natural Earthin `ne_10m_ocean` on oikea vastaus: se on meren ala
+ * monikulmiona ja se SISÄLTÄÄ Kaspianmeren mutta EI Kuolluttamerta,
+ * Qattaraa eikä Aralia (jotka ovat järviä tai kuivaa maata). Se
+ * rasteroidaan tässä korkeusruudukon ruudukkoon bittimaskiksi, ja
+ * piirtomoottori kysyy vettä muodossa "ETOPO alle nollan JA meren
+ * alalla". Rannikon tarkka muoto tulee siis yhä ETOPOsta — maski vain
+ * kertoo, KUULUUKO tämä painanne merelle.
+ *
+ * Tiedosto on VALINNAINEN: ilman sitä moottori palaa vanhaan `m < 0`
+ * -sääntöön, ja ajo kertoo siitä lokissa. Lähde on sama Natural Earth
+ * 10m -aineisto kuin muillakin (naturalearthdata.com, public domain;
+ * GeoJSON esimerkiksi github.com/nvkelso/natural-earth-vector).
  *
  * Natural Earth (Kelso & Patterson) on public domain, ETOPO1 (NOAA,
  * Amante & Eakins 2009) niin ikään. Kaistat haetaan samalta
@@ -184,6 +208,125 @@ function korkeusruudukko(kansio, laatikko) {
   };
 }
 
+/*
+ * MEREN ALA BITTIMASKIKSI korkeusruudukon omaan ruudukkoon.
+ *
+ * Rasterointi on juovapyyhkäisy (scanline): jokaiselle ruudukon riville
+ * lasketaan kaikkien monikulmion reunojen leikkauskohdat sen
+ * leveysasteen kanssa, ne järjestetään ja parillisuussääntö täyttää
+ * ruudut. Reunat käydään läpi aktiivireunataulun kautta, joten koko
+ * maailman rantaviivasta katsotaan vain se, mikä osuu tähän ikkunaan.
+ *
+ * LAAJENNUS (dilaatio) kahdella ruudulla on tahallinen. Maski on
+ * kaariminuutin ruudukossa, kuva jopa neljä kertaa tiheämpi: ilman
+ * laajennusta maskin porrastus näkyisi rannikolla sahalaitana siellä,
+ * missä ETOPO sanoo vettä mutta maski juuri ja juuri maata. Laajennus
+ * työntää maskin rajan rantaviivan yli maan puolelle, jolloin rajan
+ * piirtää yhä ETOPOn pehmeä nollakäyrä. Kuivalle painanteelle
+ * laajennus antaa korkeintaan parin kaariminuutin kaistan rannassa.
+ */
+function meriruudukko(kansio, ruudukko) {
+  const tiedosto = 'ne_10m_ocean.geojson';
+  if (!existsSync(join(kansio, tiedosto))) return null;
+  const {
+    w, h, lon0, lon1, lat0, lat1,
+  } = ruudukko;
+  const dlon = (lon1 - lon0) / (w - 1);
+  const dlat = (lat1 - lat0) / (h - 1);
+  // Rivi 0 on POHJOISIN, kuten korkeusruudukossa.
+  const rivi = (lat) => (lat1 - lat) / dlat;
+
+  // Aktiivireunataulu: reuna herää sillä rivillä, jolla se alkaa.
+  const herat = Array.from({ length: h }, () => []);
+  const lisaaRengas = (rengas) => {
+    for (let i = 0, j = rengas.length - 1; i < rengas.length; j = i++) {
+      const [xa, ya] = rengas[j]; const [xb, yb] = rengas[i];
+      if (ya === yb) continue;
+      const ylin = Math.max(ya, yb); const alin = Math.min(ya, yb);
+      const r0 = Math.max(0, Math.ceil(rivi(ylin)));
+      const r1 = Math.min(h - 1, Math.floor(rivi(alin)));
+      if (r1 < r0) continue;
+      herat[r0].push([xa, ya, xb, yb, r1]);
+    }
+  };
+  /*
+   * Päivämääränraja: NE:n koordinaatit ovat -180..180, mutta lehden
+   * ikkuna voi jatkua rajan yli (AUS, NZL, FJI). Rajan ylittävälle
+   * ikkunalle renkaat lisätään myös 360 astetta siirrettyinä, jotta
+   * rajan takainen meri osuu maskiin; ikkunan ulkopuoliset
+   * leikkausparit putoavat pois täyttövaiheen puskuroinnissa.
+   */
+  const siirretty = (rengas, d) => rengas.map(([x, y]) => [x + d, y]);
+  const lisaaKierrolla = (rengas) => {
+    lisaaRengas(rengas);
+    if (lon1 > 180) lisaaRengas(siirretty(rengas, 360));
+    if (lon0 < -180) lisaaRengas(siirretty(rengas, -360));
+  };
+  const lisaa = (geom) => {
+    if (geom.type === 'Polygon') for (const r of geom.coordinates) lisaaKierrolla(r);
+    else if (geom.type === 'MultiPolygon') {
+      for (const p of geom.coordinates) for (const r of p) lisaaKierrolla(r);
+    }
+  };
+  for (const f of lue(kansio, tiedosto).features) lisaa(f.geometry);
+
+  const bittej = Math.ceil((w * h) / 8);
+  const maski = new Uint8Array(bittej);
+  const aseta = (x, y) => { maski[(y * w + x) >> 3] |= 1 << ((y * w + x) & 7); };
+  let aktiiviset = [];
+  const leikkaukset = [];
+  for (let y = 0; y < h; y++) {
+    if (herat[y].length) aktiiviset = aktiiviset.concat(herat[y]);
+    if (!aktiiviset.length) continue;
+    const lat = lat1 - y * dlat;
+    leikkaukset.length = 0;
+    let elossa = 0;
+    for (let i = 0; i < aktiiviset.length; i++) {
+      const e = aktiiviset[i];
+      if (e[4] < y) continue;
+      aktiiviset[elossa++] = e;
+      const [xa, ya, xb, yb] = e;
+      if ((ya > lat) === (yb > lat)) continue;
+      leikkaukset.push(xa + ((lat - ya) / (yb - ya)) * (xb - xa));
+    }
+    aktiiviset.length = elossa;
+    if (leikkaukset.length < 2) continue;
+    leikkaukset.sort((a, b) => a - b);
+    for (let i = 0; i + 1 < leikkaukset.length; i += 2) {
+      const a = Math.max(0, Math.ceil((leikkaukset[i] - lon0) / dlon));
+      const b = Math.min(w - 1, Math.floor((leikkaukset[i + 1] - lon0) / dlon));
+      for (let x = a; x <= b; x++) aseta(x, y);
+    }
+  }
+
+  // Laajennus kahdella ruudulla: ensin vaakaan, sitten pystyyn.
+  const R = 2;
+  const bitti = (x, y) => (maski[(y * w + x) >> 3] >> ((y * w + x) & 7)) & 1;
+  const vaaka = new Uint8Array(w * h);
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      let v = 0;
+      for (let d = -R; d <= R && !v; d++) {
+        const xx = x + d;
+        if (xx >= 0 && xx < w && bitti(xx, y)) v = 1;
+      }
+      vaaka[y * w + x] = v;
+    }
+  }
+  maski.fill(0);
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      let v = 0;
+      for (let d = -R; d <= R && !v; d++) {
+        const yy = y + d;
+        if (yy >= 0 && yy < h && vaaka[yy * w + x]) v = 1;
+      }
+      if (v) aseta(x, y);
+    }
+  }
+  return { b64: Buffer.from(maski.buffer).toString('base64') };
+}
+
 /**
  * Yhden maan asteikkolaatikko Natural Earthin geometriasta.
  *
@@ -245,6 +388,70 @@ export function maanLaatikko(kansio, iso, { etaisyys = 2.5 } = {}) {
   };
 }
 
+/*
+ * LAUDAN MAATUNNUS -> NATURAL EARTHIN TUNNUS PAIKKA-AINEISTOSSA.
+ *
+ * Natural Earth ei ole yhtenäinen omien tiedostojensa kesken:
+ * `ne_10m_admin_0_countries` antaa Etelä-Sudanille ADM0_A3-arvon SDS
+ * (sama kuin laudalla), mutta `ne_10m_populated_places` käyttää samasta
+ * maasta ISO-koodia SSD. Ilman käännöstä maan kaikki kaupungit
+ * putosivat pois, ja SDS:n lehti tuli ulos ilman yhtään nimeä.
+ *
+ * Taulu on tarkoituksella pieni ja perusteltu: laudan 134 maatunnusta
+ * verrattiin koneellisesti molempien NE-tiedostojen tunnuksiin, ja
+ * ainoa ero on tämä. (SHN eli Saint Helena puuttuu NE:n
+ * paikka-aineistosta kokonaan — sille ei ole tunnusta, jolla se
+ * löytyisi, eikä siis aliasta.)
+ */
+export const NE_PAIKKATUNNUS = { SDS: 'SSD' };
+
+/** Nimi vertailumuotoon: aksentit pois, pienaakkoset, vain kirjaimet. */
+function normalisoi(nimi) {
+  return (nimi ?? '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+/** Levenshtein enintään yhteen muokkaukseen asti (true = riittävän lähellä). */
+function yhdenPaassa(a, b) {
+  if (Math.abs(a.length - b.length) > 1) return false;
+  let i = 0;
+  while (i < a.length && i < b.length && a[i] === b[i]) i++;
+  let j = 0;
+  while (j < a.length - i && j < b.length - i
+    && a[a.length - 1 - j] === b[b.length - 1 - j]) j++;
+  return (a.length - i - j) <= 1 && (b.length - i - j) <= 1;
+}
+
+/**
+ * Onko tämä sama kaupunki kuin laudan laatta?
+ *
+ * Kirjoitusasut eivät ole samat: lauta sanoo Havanna, Natural Earth
+ * Havana; lauta Mérida, aineisto Mérida ilman aksenttia toisessa
+ * kohdassa. Vertailu tehdään siksi normalisoiduille nimille kolmella
+ * säännöllä: sama nimi, alkuosa (Mexico City ~ Mexico) tai yhden
+ * merkin ero (Havanna ~ Havana).
+ *
+ * LYHYILLÄ NIMILLÄ VAIN TARKKA OSUMA. Kolmen kirjaimen "Ely" ja "Eli"
+ * eivät ole sama kaupunki, eivätkä viiden kirjaimen Salta ja Malta —
+ * siksi alkuosa vaatii viisi merkkiä ja yhden merkin ero kuusi. Väärä
+ * osuma pudottaisi lehdeltä nimen, jota kukaan ei piirrä tilalle.
+ */
+function samaNimi(a, b) {
+  if (!a || !b) return false;
+  if (a === b) return true;
+  const lyhyt = a.length < b.length ? a : b;
+  const pitka = a.length < b.length ? b : a;
+  if (lyhyt.length >= 5 && pitka.startsWith(lyhyt)) return true;
+  // Loppuosa kattaa etuliitteelliset kaksoset: New Delhi ~ Delhi,
+  // New Taipei ~ Taipei. Sama viiden merkin raja kuin alkuosalla.
+  if (lyhyt.length >= 5 && pitka.endsWith(lyhyt)) return true;
+  return lyhyt.length >= 6 && yhdenPaassa(a, b);
+}
+
 /**
  * Kaupunkipisteet Natural Earthin populated_places -aineistosta.
  *
@@ -273,13 +480,18 @@ export function maanLaatikko(kansio, iso, { etaisyys = 2.5 } = {}) {
  */
 export function paikat(kansio, {
   iso, laatikko, enintaan = 9, vahinVali = 0.55, poisLahelta = [], scalerank = 10,
+  nimiSade = 5,
 }) {
   const tiedosto = 'ne_10m_populated_places.geojson';
   if (!existsSync(join(kansio, tiedosto))) return [];
+  const neIso = NE_PAIKKATUNNUS[iso] ?? iso;
+  const laatat = poisLahelta
+    .filter((o) => o.nimi)
+    .map((o) => ({ ...o, avain: normalisoi(o.nimi) }));
   const kaikki = [];
   for (const f of lue(kansio, tiedosto).features) {
     const p = f.properties;
-    if ((p.ADM0_A3 ?? p.SOV_A3) !== iso) continue;
+    if ((p.ADM0_A3 ?? p.SOV_A3) !== neIso) continue;
     if ((p.SCALERANK ?? 99) > scalerank) continue;
     const [lon, lat] = f.geometry.coordinates;
     if (lon < laatikko.lon0 || lon > laatikko.lon1) continue;
@@ -302,6 +514,19 @@ export function paikat(kansio, {
     );
     if (liianLahella(poisLahelta, vahinVali)) continue;
     if (liianLahella(ulos, vahinVali)) continue;
+    /*
+     * SAMA KAUPUNKI TOISELLA NIMELLÄ. Pelkkä säde ei riitä: laudan
+     * laattoja on siirretty käsin, jotta nimet mahtuvat, ja
+     * Amerikoissa siirto on isompi kuin Euroopassa (Havanna on 2,64
+     * astetta todellisesta paikastaan). Silloin sama kaupunki tulisi
+     * lehdelle kahdesti — kerran laattana, kerran kuvaan poltettuna.
+     * Nimivertailu on siis säteen rinnalla, ei sen tilalla: säde
+     * karsii eri nimiset naapurit, nimi kaukanakin olevan kaksoisolennon.
+     */
+    const avain = normalisoi(k.nimi);
+    const kaksoisolento = laatat.some((o) => samaNimi(o.avain, avain)
+      && Math.hypot(o.lon - k.lon, o.lat - k.lat) < nimiSade);
+    if (kaksoisolento) continue;
     ulos.push(k);
   }
   return ulos;
@@ -362,6 +587,8 @@ export function keraaAineisto({
     if (r.length) jarvet.push({ nimi: f.properties.name ?? '', renkaat: r });
   }
 
+  const korkeus = korkeusruudukko(kansio, laatikko);
+
   return {
     iso,
     laatikko,
@@ -370,6 +597,12 @@ export function keraaAineisto({
     joet,
     jarvet,
     paikat: paikkoja ? paikat(kansio, { ...paikkoja, iso, laatikko }) : [],
-    korkeus: korkeusruudukko(kansio, laatikko),
+    korkeus,
+    /*
+     * Meren ala samassa ruudukossa kuin korkeus (bittimaski) tai null,
+     * jos ne_10m_ocean.geojson puuttuu kansiosta. Piirtomoottori
+     * käyttää sitä maan ja meren erottamiseen; ks. meriruudukko().
+     */
+    meri: meriruudukko(kansio, korkeus),
   };
 }

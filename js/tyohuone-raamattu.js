@@ -560,6 +560,18 @@ export const RAAMATTU = {
           + 'kohteet, täkynostot, aarremerkinnät, luennat, '
           + 'kohtaamiskuvat). Seuraavaksi loput Euroopan maat '
           + 'samalla Sofia-rakentajamallilla kaanoneista.',
+        'KOKO MAAILMAN LEHDET (25.8.2026, yö): maanosaparvi '
+          + 'generoi 93 uutta fokuslehteä yleisellä reitillä '
+          + '(Afrikka, Aasia, Amerikat, Oseania, Lähi-itä) — '
+          + 'atlas kattaa nyt 132 maata eli koko pelilaudan paitsi '
+          + 'Venäjän ja Kanadan (niiden ikkunat ylittävät yleisen '
+          + 'reitin rajat; tarvitaan kuratoidut ikkunat). Samalla '
+          + 'piirtomoottoriin: matalan meren porras (Persianlahti '
+          + 'näkyy), meren ala ocean-maskista (Kaspia vetenä, '
+          + 'toimii päivämäärärajan yli), tuplanimisuodatin '
+          + 'laattoja vasten. Euroopan 39 lehteä ovat vanhalla '
+          + 'sävyasteikolla — uusinta on omistajan päätös, koska '
+          + 'hyväksyttyjen lehtien ilme muuttuisi.',
       ],
     },
     {
