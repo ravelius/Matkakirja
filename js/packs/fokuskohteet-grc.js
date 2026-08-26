@@ -643,9 +643,13 @@ export const FOKUSKOHTEET_GRC = [
    * tietoruudun "Avaa kierros" -nappi nostaa kierroksen pelin omaan
    * ikkunaan (avaaKierros).
    *
-   * UPOTUS ON TARKISTETTU: acropolisvirtualtour.gr ei lähetä
-   * X-Frame-Options- eikä CSP-otsaketta (curl 26.8.2026), joten iframe
-   * kelpaa. Ikkunassa on silti aina ulkoinen linkki varalta.
+   * AVAUSTAPA ON LINKKI, EI UPOTUS (kartoitus 26.8.2026): sivu ei
+   * lähetä X-Frame-Options- eikä CSP-otsaketta, mutta Kreikan
+   * kulttuuriministeriön käyttöehdot (kohta 8) kieltävät ministeriön
+   * sivujen lataamisen muiden sivustojen kehyksiin — jokaisen sivun on
+   * latauduttava omaan ikkunaansa. Linkittämiseen ehdot sen sijaan
+   * kannustavat ilman erillistä lupaa, joten kierros avataan laitteen
+   * selaimeen.
    *
    * 23,7261 E / 37,9715 N — en-Wikipedia "Acropolis of Athens"
    * (37°58′17″N 23°43′34″E). Sama piste kuin Ateenan kohtaamispisteellä
@@ -685,6 +689,7 @@ export const FOKUSKOHTEET_GRC = [
       url: 'https://acropolisvirtualtour.gr',
       otsikko: 'Akropolis 360°',
       nappi: 'Avaa virtuaalikierros',
+      avaustapa: 'linkki',
       lahde: 'Acropolis Virtual Tour — Hellenic Ministry of Culture',
       varaTeksti: 'Kierros ei aukea pelin sisällä. Se avautuu laitteen '
         + 'omassa selaimessa.',

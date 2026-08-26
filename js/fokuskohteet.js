@@ -839,11 +839,17 @@ function piirraKohdeKysymykset(ui, sisalto, kohde) {
  * sen aukeavan PELIN SISÄLLÄ ikkunaan, lisättynä suoraan kartalle omalla
  * nähtävyys/multimedia-ikonilla"*.
  *
- * UPOTUS ON SALLITTU. Sivun vastaus tarkistettiin ennen toteutusta
- * (curl -I, 26.8.2026): acropolisvirtualtour.gr ei lähetä
- * X-Frame-Options- eikä Content-Security-Policy -otsaketta eikä sen
- * HTML:ssä ole frame-ancestors-metaa, joten iframe kelpaa. Pelillä
- * itsellään ei ole CSP:tä, joka estäisi kehyksen.
+ * AVAUSTAPA ON DATASSA, EI PALVELIMEN OTSAKKEISSA (kartoitus
+ * 26.8.2026): moni kierrossivusto sallii kehyksen teknisesti mutta
+ * KIELTÄÄ sen käyttöehdoissaan — esimerkiksi Kreikan
+ * kulttuuriministeriön ehdot vaativat sivujen latautuvan omaan
+ * ikkunaansa, vaikka acropolisvirtualtour.gr ei lähetä
+ * X-Frame-Options- eikä CSP-otsaketta. Siksi jokainen kierros kantaa
+ * kentän `avaustapa`: 'upotus' avaa pelin sisäisen ikkunan (vain kun
+ * upotus on sekä teknisesti sallittu että ehtojen mukaan tarkoitettu,
+ * kuten museoiden itse julkaisemat embed-osoitteet), 'linkki' avaa
+ * kierroksen suoraan laitteen selaimeen eikä kehystä edes yritetä.
+ * Ilman kenttää oletus on 'linkki' — ehtoja ei rikota vahingossa.
  *
  * VARAPOLKU ON SILTI OLEMASSA. Kolmannen osapuolen sivu voi vaihtaa
  * otsakkeitaan milloin tahansa, ja WKWebView voi torjua kehyksen omista
@@ -870,6 +876,17 @@ const KIERROS_ODOTUS_MS = 10000;
 function piirraKierrosnappi(ui, sisalto, kohde) {
   const kierros = kohde.kierros;
   if (!kierros?.url) return;
+  if (kierros.avaustapa !== 'upotus') {
+    // Linkkikierros: suoraan laitteen selaimeen. Kuori (WKWebView) vie
+    // target="_blank"-linkin ulkoiseen selaimeen.
+    const linkki = html('a', 'fokuskohde-kierrosnappi', `${kierros.nappi ?? 'Avaa kierros'} ↗`);
+    linkki.href = kierros.url;
+    linkki.target = '_blank';
+    linkki.rel = 'noopener noreferrer';
+    linkki.addEventListener('click', (tapahtuma) => tapahtuma.stopPropagation());
+    sisalto.appendChild(linkki);
+    return;
+  }
   const nappi = html('button', 'fokuskohde-kierrosnappi', kierros.nappi ?? 'Avaa kierros');
   nappi.type = 'button';
   nappi.addEventListener('click', (tapahtuma) => {

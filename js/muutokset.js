@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1120, teksti: 'Pelitestikierros: 21 korjausta ja saatoa' },
   { v: 1119, teksti: 'Etusivu uusiksi, kartan pohja ehjaksi, erikoispiirit' },
   { v: 1118, teksti: 'Saapumissekvenssi, upeampi lento ja koko laudan atlas' },
   { v: 1117, teksti: 'Lehtien mustat reunat pois puhelimella (JPEG-alfa)' },

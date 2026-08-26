@@ -645,8 +645,13 @@
  * ainoa teko.
  */
 .fokuskohde-kierrosnappi {
+  /* Sama ulkoasu napille ja linkille: linkkikierros piirretään
+   * a-elementtinä (js/fokuskohteet.js piirraKierrosnappi). */
+  box-sizing: border-box;
   display: block;
   width: 100%;
+  text-align: center;
+  text-decoration: none;
   min-height: 44px;
   margin: 0.6rem 0 0.2rem;
   padding: 0.5rem 0.8rem;
