@@ -963,6 +963,131 @@ export const FOKUSKOHTEET_TUR = [
         + 'Commons (public domain)',
     },
   },
+  /*
+   * ── ENTISET TÄKYNOSTOT NORMAALEINA KOHTEINA (omistaja 26.8.2026
+   *    ilta: *"Täkyjä josta tulee puhekupla pitää olla vain yksi per
+   *    maa. Kaikki muut normaaleita."*) ────────────────────────────────
+   *
+   * Istanbulin täkypoolissa (js/packs/fokusvirta-istanbul.js
+   * takynostot) oli kolme nostoa; siellä on nyt tasan yksi, ja nämä
+   * kaksi ovat kartan tavallisia kohteita.
+   *
+   * TEKSTIT, KUVAT JA LÄHTEET OVAT NOSTOJEN OMAT eikä niitä ole
+   * kirjoitettu uudelleen: `lunastus` → `teksti`, `otsikko` → `nappi`,
+   * kuvat kaikkine kenttineen entisellään. Nostojen omat perustelut
+   * (lähteen varaus "reportedly", kuvavalinnan silmätarkistusehto) ovat
+   * mukana sellaisinaan.
+   *
+   * PAIKAT OVAT TYÖAINEISTON OMIA, EIVÄT ARVATTUJA. Nostoilla ei ollut
+   * koordinaatteja, koska ne piirtyivät ruudun alalaidan liuskana, mutta
+   * kohde tarvitsee paikan kartalla. Työaineisto nimeää kummankin
+   * (docs/mantereet-tyoaineisto/takynostot-turkki.md, ehdokas 1:
+   * *"Kohde: Dolmabahçen palatsi"*; ehdokas 5: *"Kohde: Eskikaraağaçin
+   * kylä, Karacabey, Bursan maakunta … UUSI kohde, jos haikarakylä
+   * halutaan omaksi karttapisteeksi"*), ja asteluvut on muunnettu laudan
+   * yksiköiksi tiedoston alussa kuvatuilla kaavoilla.
+   */
+  {
+    id: 'dolmabahce',
+    nimi: 'Dolmabahçen palatsi',
+    tyyppi: 'muu',
+    symboli: 'historia',
+    /* Valintakuplan painike: noston oma klikkiotsikko sellaisenaan. */
+    nappi: 'Sulttaanin äiti läimäytti Ranskan keisarinnaa',
+    // 29,00167 E / 41,03944 N — en-Wikipedia "Dolmabahçe Palace".
+    laudat: {
+      maailmankartta: { x: 6800.1, y: 1761.8 },
+      europe: { x: 768.0, y: 814.3 },
+    },
+    /*
+     * Faktat: takynostot-turkki.md, ehdokas 1. LÄHDE ITSE VARAA ASIAN
+     * sanalla "reportedly" ja antaa kaksi eri versiota — raportti
+     * vaatii, että molemmat kerrotaan ja varaus näkyy. Ilman sitä
+     * tämä olisi klikkihuijaus.
+     */
+    teksti: 'Vuonna 1868 sulttaani Abdülaziz vei vieraansa, Ranskan '
+      + 'keisarinna Eugénien, tapaamaan äitiään Dolmabahçen palatsiin. '
+      + 'Pertevniyal Sultan piti vieraan naisen läsnäoloa omissa '
+      + 'yksityisissä huoneissaan loukkauksena, ja hänen kerrotaan '
+      + 'läimäisseen keisarinnaa kasvoihin — tilanne oli lähellä '
+      + 'kansainvälistä selkkausta. Toisen kertomuksen mukaan hän '
+      + 'suuttui siitä, että Eugénie tarttui hänen poikaansa '
+      + 'käsivarresta, ja läimäisi tätä vatsaan muistutuksena siitä, '
+      + 'ettei oltu Ranskassa. Hovista vuoti kaksi eri huhua siitä, '
+      + 'mihin sulttaanin äiti löi.',
+    lahde: 'en-Wikipedia "Abdulaziz", osio "European tour" (tarkistettu '
+      + '25.8.2026 työaineistoon docs/mantereet-tyoaineisto/'
+      + 'takynostot-turkki.md, ehdokas 1). Lähde varaa tapahtuman sanalla '
+      + '"reportedly", ja molemmat sen antamat versiot on kerrottu.',
+    /*
+     * Commons (takynostot-turkki.md, ehdokas 1, varmennettu
+     * 25.8.2026): 2481×3823, public domain, Franz Xaver Winterhalter,
+     * 1852 — keisarinnan kuuluisin muotokuva.
+     */
+    kuva: {
+      tiedosto: 'Franz Xaver Winterhalter Empress Eugenie.jpg',
+      selite: 'Keisarinna Eugénie Franz Xaver Winterhalterin '
+        + 'muotokuvassa vuodelta 1852.',
+      lahde: 'Franz Xaver Winterhalter 1852, Wikimedia Commons (public domain)',
+    },
+  },
+  {
+    /*
+     * ELÄINKOHDE. Nosto oli kirjoitettu MENNEESEEN AIKAMUOTOON, ja se
+     * on raportin nimenomainen vaatimus: *"Wikipedia-artikkelia ei ole
+     * päivitetty vuoden 2021 jälkeen… Älä väitä, että ystävyys jatkuu
+     * vuonna 2026 — kirjoita menneessä aikamuodossa."* Aikamuoto on
+     * siirretty tänne sellaisenaan.
+     */
+    id: 'yaren',
+    nimi: 'Eskikaraağaç',
+    tyyppi: 'muu',
+    symboli: 'elain',
+    /* Valintakuplan painike: noston oma klikkiotsikko sellaisenaan. */
+    nappi: 'Haikara palasi Afrikasta samalle kalastajalle — joka kevät',
+    // 28,6125 E / 40,18639 N — en-Wikipedia "Eskikaraağaç, Karacabey".
+    laudat: {
+      maailmankartta: { x: 6787.1, y: 1795.6 },
+      europe: { x: 760.6, y: 836.7 },
+    },
+    /* Faktat: takynostot-turkki.md, ehdokas 5 ja takyt-istanbul.md, täky 18. */
+    teksti: 'Uluabat-järven rannalla, 199 asukkaan Eskikaraağaçin '
+      + 'kylässä Bursan maakunnassa, asuu kalastaja Adem Yılmaz. '
+      + 'Vuodesta 2010 alkaen sama kattohaikara — kylässä sitä '
+      + 'kutsuttiin nimellä Yaren — palasi Afrikan-muutolta joka '
+      + 'maaliskuu samaan kylään ja laskeutui joka aamu hänen pieneen '
+      + 'veneeseensä. Kalaan lähdettiin yhdessä, ja niin jatkui yli '
+      + 'kymmenen vuoden ajan. Paikallinen valokuvaaja kuvasi '
+      + 'ystävyyden ensi kerran 2016, siitä tehtiin palkittu '
+      + 'dokumentti, ja kylän keskusaukiolle pystytettiin patsas '
+      + 'kalastajasta ja haikarasta.',
+    lahde: 'en-Wikipedia "Yaren (stork)" ja "Eskikaraağaç, Karacabey" '
+      + '(tarkistettu 25.8.2026 työaineistoihin docs/mantereet-tyoaineisto/'
+      + 'takynostot-turkki.md, ehdokas 5, ja takyt-istanbul.md, täky 18). '
+      + 'Artikkelia ei ole päivitetty vuoden 2021 jälkeen, joten teksti on '
+      + 'menneessä aikamuodossa.',
+    /*
+     * KUVAVALINTA ON TIETOINEN VARMAN PUOLEN VALINTA. Tarinan oma
+     * alkuperäiskuva on `Adem Amca ve Yaren Leylek 2020.jpg`
+     * (5568×3480, CC BY-SA 4.0, Alpertuydes 6.3.2020) — sama
+     * valokuvaaja, joka nimetään lähteessä, ja miniatyyrinä selvästi
+     * parempi koukku. Molemmat raportit merkitsevät sen kohdalle
+     * SILMÄTARKISTUS PAKOLLINEN, koska kuvassa on tunnistettava
+     * henkilö. Sitä tarkistusta ei ole tehty (kuvia ei ole katsottu
+     * silmin), joten tähän on valittu henkilötön kuva samasta
+     * lajista ja samasta maasta. Kun silmätarkistus on tehty, kuvan
+     * voi vaihtaa — teksti kantaa kumman tahansa kanssa.
+     *
+     * Commons (takyt-istanbul.md, täky 17, varmennettu 25.8.2026):
+     * 4250×2833, CC BY-SA 4.0, Zeynel Cebeci, 2020.
+     */
+    kuva: {
+      tiedosto: 'Ciconia ciconia - White Stork 09.jpg',
+      selite: 'Kattohaikara Turkissa. Haikarat kiertävät Välimeren '
+        + 'Bosporin kautta, koska nousuvirtauksia ei synny meren yllä.',
+      lahde: 'Zeynel Cebeci, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  },
 ];
 
 const TUR_TUNNUKSITTAIN = new Map(FOKUSKOHTEET_TUR.map((k) => [k.id, k]));

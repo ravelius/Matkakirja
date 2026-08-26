@@ -625,6 +625,14 @@ export const FOKUSVIRTA_SARAJEVO = {
    * sääntö 1: otsikon lupaus lunastetaan tai se on klikkihuijaus).
    * `avaa` osoittaa tämän tiedoston täkyyn, jos sellainen on.
    *
+   * VAIN YKSI NOSTO PER MAA (omistaja 26.8.2026 ilta: *"Täkyjä josta
+   * tulee puhekupla pitää olla vain yksi per maa. Kaikki muut
+   * normaaleita."*). Poolissa oli kolme nostoa; jäljellä on kaanonin
+   * ensimmäinen. Kumpikaan pudonneista ei tarvinnut uutta kohdetta:
+   * "haggada" ja "villihevoset" osoittivat kentällään `avaa` tämän
+   * tiedoston OMIIN TÄKYIHIN, joissa sama aihe on jo kerrottu
+   * pidempään — kahta kertomusta samasta asiasta ei tehdä.
+   *
    * KAIKKI KOLME OTSIKKOA TARKISTETTIIN takynostot-bosnia.md:tä vasten
    * eikä yksikään vaatinut korjausta:
    *   1. "Seitsemän arkeologia" — ehdokas 1: *"Seitsemän Euroopan
@@ -673,45 +681,6 @@ export const FOKUSVIRTA_SARAJEVO = {
         selite: 'Visočican kukkula Visokon lähellä. Geologien mukaan se on '
           + 'luonnonmuodostuma.',
         lahde: 'Mhare, Wikimedia Commons (CC BY-SA 4.0)',
-      },
-    },
-    {
-      id: 'haggada',
-      otsikko: 'Kirjastonhoitaja salakuljetti käsikirjoituksen vuorille — '
-        + 'ja piilotti samalla tytön',
-      /* Faktat: takynostot-bosnia.md, ehdokas 3 (VARMA). */
-      lunastus: 'Toisen maailmansodan aikana Sarajevon kansallismuseon '
-        + 'pääkirjastonhoitaja Derviš Korkut vei 1300-luvun haggadan pois '
-        + 'kaupungista ja antoi sen muslimipapille Bjelašnican '
-        + 'vuoristokylään, missä se piilotettiin moskeijaan. Samaan aikaan '
-        + 'Korkut ja hänen vaimonsa piilottivat kodissaan nuoren '
-        + 'juutalaistytön, Mira Papon — joka vuosikymmeniä myöhemmin '
-        + 'huolehti Korkutin tyttären turvallisuudesta.',
-      avaa: 'haggada',
-      // Sama tarkistettu tiedosto kuin täyllä 'haggada'.
-      kuva: {
-        tiedosto: 'Sarajevska hagada.jpg',
-        selite: 'Sivu Sarajevon haggadasta.',
-        lahde: 'Tuntematon tekijä n. 1350, Zemaljski muzej, Wikimedia '
-          + 'Commons (public domain)',
-      },
-    },
-    {
-      id: 'villihevoset',
-      otsikko: 'Seitsemänsataa villihevosta kuuluu ylängöllä ei '
-        + 'kenellekään',
-      /* Faktat: takynostot-bosnia.md, ehdokas 7 (VARMA). */
-      lunastus: 'Livnon ja Kupresin välisellä ylängöllä laukkaa yli '
-        + 'seitsemänsataa hevosta noin 145 neliökilometrin alueella. Ne '
-        + 'eivät ole muinaisia villihevosia: kun koneet korvasivat '
-        + 'työhevoset 1950-luvulla, omistajat päästivät ne vapaaksi. Lauma '
-        + 'jäi vuorille, lisääntyi ja on ollut suojeltu vuodesta 2010.',
-      avaa: 'villihevoset',
-      // Sama tarkistettu tiedosto kuin täyllä 'villihevoset'.
-      kuva: {
-        tiedosto: 'Livno wild horses (1).jpg',
-        selite: 'Livnon lauma Cincar-vuoren juurella.',
-        lahde: 'Brian Eager, Wikimedia Commons (CC BY 2.0)',
       },
     },
   ],

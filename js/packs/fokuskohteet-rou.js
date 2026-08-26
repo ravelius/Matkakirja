@@ -574,6 +574,69 @@ export const FOKUSKOHTEET_ROU = [
       lahde: 'Pasztilla aka Attila Terbócs, Wikimedia Commons (CC BY-SA 4.0)',
     },
   },
+  /*
+   * ── ENTINEN TÄKYNOSTO NORMAALINA KOHTEENA (omistaja 26.8.2026 ilta:
+   *    *"Täkyjä josta tulee puhekupla pitää olla vain yksi per maa.
+   *    Kaikki muut normaaleita."*) ────────────────────────────────────
+   *
+   * Bukarestin täkypoolissa (js/packs/fokusvirta-bukarest.js
+   * takynostot) oli kolme nostoa; siellä on nyt tasan yksi. Eläinnosto
+   * "hevoset" jäi kokonaan pois, koska työaineisto sitoo sen suoraan
+   * tämän tiedoston kohteeseen `tonavan-suisto`
+   * (docs/mantereet-tyoaineisto/takynostot-romania.md, ehdokas 9:
+   * *"Kohde: Tonavan suisto (fokuskohde 5)"*) — kahta merkkiä samaan
+   * paikkaan ei tehdä. Tämä kolmas on siirretty tähän sellaisenaan.
+   *
+   * TEKSTI, KUVA JA LÄHTEET OVAT NOSTON OMAT eikä niitä ole
+   * kirjoitettu uudelleen: `lunastus` → `teksti`, `otsikko` → `nappi`,
+   * kuva kaikkine kenttineen entisellään.
+   *
+   * PAIKKA ON AINEISTON OMA, EI ARVATTU. Nostolla ei ollut
+   * koordinaatteja, koska se piirtyi ruudun alalaidan liuskana, mutta
+   * kohde tarvitsee paikan kartalla. Työaineisto nimeää sen itse
+   * (takynostot-romania.md, ehdokas 3: *"Kohde: Romania yleisesti;
+   * syntymäkaupunki Onești, Bacăun lääni"*), ja asteluvut on muunnettu
+   * laudan yksiköiksi tiedoston alussa kuvatuilla kaavoilla. Piste on
+   * siis se kaupunki, josta voimistelija on kotoisin — tapahtuma itse
+   * oli Montrealissa, eikä sitä väitetä tässä muuksi.
+   */
+  {
+    id: 'comaneci',
+    nimi: 'Nadia Comăneci',
+    tyyppi: 'muu',
+    symboli: 'urheilu',
+    /* Valintakuplan painike: noston oma klikkiotsikko sellaisenaan. */
+    nappi: 'Tulostaulu ei osannut näyttää täyttä kymppiä — se näytti 1.00',
+    // 26,76917 E / 46,25861 N — en-Wikipedia "Onești" (syntymäkaupunki,
+    // takynostot-romania.md, ehdokas 3).
+    laudat: {
+      maailmankartta: { x: 6725.6, y: 1549.6 },
+      europe: { x: 725.2, y: 677.0 },
+    },
+    /* Faktat: takynostot-romania.md, ehdokas 3 (VARMA). */
+    teksti: '18. heinäkuuta 1976 Montrealin olympialaisissa 14-vuotias '
+      + 'Nadia Comăneci sai ensimmäisenä voimistelijana '
+      + 'olympiahistoriassa täydet kymmenen pistettä eritasonojapuilta. '
+      + 'Tulostaulut toimittanut Omega oli saanut ymmärtää, ettei täyttä '
+      + 'kymppiä voi saada, eikä ollut ohjelmoinut taulua näyttämään '
+      + 'sitä — niinpä tuomarit saivat sen näkyviin ainoalla jäljellä '
+      + 'olleella tavalla, muodossa 1.00. Samoissa kisoissa hän sai vielä '
+      + 'kuusi kymppiä lisää ja voitti kolme kultaa.',
+    lahde: 'en-Wikipedia "Nadia Comăneci", johdanto ja osio "1976 Summer '
+      + 'Olympics" (tarkistettu 25.8.2026 työaineistoon '
+      + 'docs/mantereet-tyoaineisto/takynostot-romania.md, ehdokas 3).',
+    /*
+     * Commons 25.8.2026: 480×722, public domain, tekijä tuntematon
+     * (agerpres-arkisto), kuvattu 3.8.1976, kuvaus "Nadia Comăneci at
+     * the 1976 Olympics".
+     */
+    kuva: {
+      tiedosto: 'Nadia Comăneci 1976.jpg',
+      selite: 'Nadia Comăneci Montrealin olympialaisissa 1976.',
+      lahde: 'Tuntematon kuvaaja (Agerpres-arkisto) 1976, Wikimedia '
+        + 'Commons (public domain)',
+    },
+  },
 ];
 
 const ROU_TUNNUKSITTAIN = new Map(FOKUSKOHTEET_ROU.map((k) => [k.id, k]));

@@ -624,19 +624,22 @@ export const FOKUSVIRTA_ISTANBUL = {
    * perässä"*. Näytetään yksi kerrallaan; luetun tilalle nousee poolista
    * seuraava.
    *
-   * OTSIKOT OVAT KAANONIN OMAT (fokusvirta-istanbul-kaanon.md, kohta 6)
-   * — sanamuotoja ei ole muutettu. `lunastus` on rakentajan kokoama
+   * OTSIKKO ON KAANONIN OMA (fokusvirta-istanbul-kaanon.md, kohta 6)
+   * — sanamuotoa ei ole muutettu. `lunastus` on rakentajan kokoama
    * lyhyt fakta takynostot-turkki.md:stä, ja se pitää otsikon lupauksen
    * (sääntö 1: otsikon lupaus lunastetaan tai se on klikkihuijaus).
    * `avaa` osoittaisi tämän tiedoston täkyyn, jos sellainen olisi —
-   * yhdelläkään näistä kolmesta ei ole omaa täkyä, joten kenttä puuttuu
-   * tarkoituksella ja lunastus kannattelee noston yksinään.
+   * tällä ei ole omaa täkyä, joten kenttä puuttuu tarkoituksella ja
+   * lunastus kannattelee noston yksinään.
    *
-   * KOLMAS NOSTO ON KIRJOITETTU MENNEESEEN AIKAMUOTOON, ja se on
-   * raportin nimenomainen vaatimus: *"Wikipedia-artikkelia ei ole
-   * päivitetty vuoden 2021 jälkeen... Älä väitä, että ystävyys jatkuu
-   * vuonna 2026 — kirjoita menneessä aikamuodossa."* Otsikko on
-   * kaanonin oma ja toimii sellaisenaan menneessä ("palasi").
+   * VAIN YKSI NOSTO PER MAA (omistaja 26.8.2026 ilta: *"Täkyjä josta
+   * tulee puhekupla pitää olla vain yksi per maa. Kaikki muut
+   * normaaleita."*). Poolissa oli kolme nostoa; jäljellä on kaanonin
+   * ensimmäinen. Kaksi muuta ("laimays" ja eläinnosto "yaren") ovat
+   * nyt kartan tavallisia kohteita (js/packs/fokuskohteet-tur.js,
+   * tunnukset `dolmabahce` ja `yaren`) teksteineen, kuvineen ja
+   * lähteineen sellaisenaan. Maan eläinaihe on siis kartan kohteessa
+   * eikä täkypoolissa.
    */
   takynostot: [
     {
@@ -662,73 +665,6 @@ export const FOKUSVIRTA_ISTANBUL = {
         selite: 'Heinrich Schliemann vuonna 1870, vuosi ennen Troijan '
           + 'kaivauskausien alkua.',
         lahde: 'Library of Congress 1870, Wikimedia Commons (public domain)',
-      },
-    },
-    {
-      id: 'laimays',
-      otsikko: 'Sulttaanin äiti läimäytti Ranskan keisarinnaa',
-      /*
-       * Faktat: takynostot-turkki.md, ehdokas 1. LÄHDE ITSE VARAA ASIAN
-       * sanalla "reportedly" ja antaa kaksi eri versiota — raportti
-       * vaatii, että molemmat kerrotaan ja varaus näkyy. Ilman sitä
-       * tämä olisi klikkihuijaus.
-       */
-      lunastus: 'Vuonna 1868 sulttaani Abdülaziz vei vieraansa, Ranskan '
-        + 'keisarinna Eugénien, tapaamaan äitiään Dolmabahçen palatsiin. '
-        + 'Pertevniyal Sultan piti vieraan naisen läsnäoloa omissa '
-        + 'yksityisissä huoneissaan loukkauksena, ja hänen kerrotaan '
-        + 'läimäisseen keisarinnaa kasvoihin — tilanne oli lähellä '
-        + 'kansainvälistä selkkausta. Toisen kertomuksen mukaan hän '
-        + 'suuttui siitä, että Eugénie tarttui hänen poikaansa '
-        + 'käsivarresta, ja läimäisi tätä vatsaan muistutuksena siitä, '
-        + 'ettei oltu Ranskassa. Hovista vuoti kaksi eri huhua siitä, '
-        + 'mihin sulttaanin äiti löi.',
-      /*
-       * Commons (takynostot-turkki.md, ehdokas 1, varmennettu
-       * 25.8.2026): 2481×3823, public domain, Franz Xaver Winterhalter,
-       * 1852 — keisarinnan kuuluisin muotokuva.
-       */
-      kuva: {
-        tiedosto: 'Franz Xaver Winterhalter Empress Eugenie.jpg',
-        selite: 'Keisarinna Eugénie Franz Xaver Winterhalterin '
-          + 'muotokuvassa vuodelta 1852.',
-        lahde: 'Franz Xaver Winterhalter 1852, Wikimedia Commons (public domain)',
-      },
-    },
-    {
-      id: 'yaren',
-      otsikko: 'Haikara palasi Afrikasta samalle kalastajalle — joka kevät',
-      /* Faktat: takynostot-turkki.md, ehdokas 5 ja takyt-istanbul.md, täky 18. */
-      lunastus: 'Uluabat-järven rannalla, 199 asukkaan Eskikaraağaçin '
-        + 'kylässä Bursan maakunnassa, asuu kalastaja Adem Yılmaz. '
-        + 'Vuodesta 2010 alkaen sama kattohaikara — kylässä sitä '
-        + 'kutsuttiin nimellä Yaren — palasi Afrikan-muutolta joka '
-        + 'maaliskuu samaan kylään ja laskeutui joka aamu hänen pieneen '
-        + 'veneeseensä. Kalaan lähdettiin yhdessä, ja niin jatkui yli '
-        + 'kymmenen vuoden ajan. Paikallinen valokuvaaja kuvasi '
-        + 'ystävyyden ensi kerran 2016, siitä tehtiin palkittu '
-        + 'dokumentti, ja kylän keskusaukiolle pystytettiin patsas '
-        + 'kalastajasta ja haikarasta.',
-      /*
-       * KUVAVALINTA ON TIETOINEN VARMAN PUOLEN VALINTA. Tarinan oma
-       * alkuperäiskuva on `Adem Amca ve Yaren Leylek 2020.jpg`
-       * (5568×3480, CC BY-SA 4.0, Alpertuydes 6.3.2020) — sama
-       * valokuvaaja, joka nimetään lähteessä, ja miniatyyrinä selvästi
-       * parempi koukku. Molemmat raportit merkitsevät sen kohdalle
-       * SILMÄTARKISTUS PAKOLLINEN, koska kuvassa on tunnistettava
-       * henkilö. Sitä tarkistusta ei ole tehty (kuvia ei ole katsottu
-       * silmin), joten tähän on valittu henkilötön kuva samasta
-       * lajista ja samasta maasta. Kun silmätarkistus on tehty, kuvan
-       * voi vaihtaa — teksti kantaa kumman tahansa kanssa.
-       *
-       * Commons (takyt-istanbul.md, täky 17, varmennettu 25.8.2026):
-       * 4250×2833, CC BY-SA 4.0, Zeynel Cebeci, 2020.
-       */
-      kuva: {
-        tiedosto: 'Ciconia ciconia - White Stork 09.jpg',
-        selite: 'Kattohaikara Turkissa. Haikarat kiertävät Välimeren '
-          + 'Bosporin kautta, koska nousuvirtauksia ei synny meren yllä.',
-        lahde: 'Zeynel Cebeci, Wikimedia Commons (CC BY-SA 4.0)',
       },
     },
   ],
