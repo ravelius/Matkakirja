@@ -6586,6 +6586,33 @@ export class UI {
   /* --- KAUPUNGIN NIMI LAATAN ALLE (omistajan pelitesti v1101) -------- */
 
   /**
+   * Määre vain jos se OIKEASTI muuttuu.
+   *
+   * `setAttribute` ei vertaa mitään: samalla arvolla kirjoitettu määre
+   * on selaimelle yhtä lailla muutos, ja se mitätöi elementin tyylin ja
+   * SVG-tekstin asettelun. Mitattu omistajan tökkimisvalituksen
+   * (26.8.2026, iPad) jäljityksessä — Chromiumin invalidointijäljitys,
+   * 150 kehyksen raahaus Kreikan fokusnäkymässä:
+   *
+   *   780  setAttribute  text.city-label  [x] [y] [text-anchor]  SAMA ARVO
+   *
+   * Kaikki 780 tulivat YHTENÄ RYÖPPYNÄ eleen päättyessä
+   * (kartta.js `paata` → taydennaTaide → paivitaMaastonimet →
+   * paivitaFokusNimilaput): panorointi ei muuta yhdenkään nimilapun
+   * paikkaa laudalla eikä yhdenkään kirjasinkokoa, joten silmukka
+   * kirjoitti 260 lapulle kolme määrettä samoilla arvoilla kuin ennenkin
+   * — ja mitätöi 260 SVG-tekstin asettelun juuri sillä hetkellä, kun
+   * sormi irtoaa. Se on täsmälleen se hetki, jossa nykäys tuntuu.
+   *
+   * Vertailu on tässä eikä kutsupaikoissa, jotta sääntö pysyy yhtenä.
+   */
+  static maare(osa, nimi, arvo) {
+    const teksti = String(arvo);
+    if (osa.getAttribute(nimi) === teksti) return;
+    osa.setAttribute(nimi, teksti);
+  }
+
+  /**
    * Kaupunkien nimilaput fokusnäkymässä: laatan alle keskitettynä ja
    * ruudulla vakiokokoisina.
    *
@@ -6668,7 +6695,7 @@ export class UI {
           muunnos: lappu.getAttribute('transform') ?? '',
         });
       }
-      lappu.setAttribute('x', x.toFixed(2));
+      UI.maare(lappu, 'x', x.toFixed(2));
       /*
        * Laatan puolikas + rako + kirjaimen korkeus, kaikki ruudun
        * pikseleinä ja vasta lopuksi laudan yksiköiksi. Nykyisen
@@ -6695,8 +6722,8 @@ export class UI {
       const etaisyys = lappu.dataset.kaupunki === oma?.id
         ? Math.max(FOKUS_NIMI_NAPPULAN_ALLE_PX * kerroin, ruudulta)
         : ruudulta;
-      lappu.setAttribute('y', (y + etaisyys).toFixed(2));
-      lappu.setAttribute('text-anchor', 'middle');
+      UI.maare(lappu, 'y', (y + etaisyys).toFixed(2));
+      UI.maare(lappu, 'text-anchor', 'middle');
       // Heilunta pois: se kiertää tekstiä vanhan ankkurin ympäri.
       lappu.removeAttribute('transform');
       lappu.style.fontSize = `${nimiYksikot.toFixed(2)}px`;

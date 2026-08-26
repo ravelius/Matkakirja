@@ -19817,7 +19817,11 @@ body.fokuspohja .maa-pilleri { display: none; }
 
 .fokus-viivaimet[hidden] { display: none; }
 
-.fokus-viivain { position: absolute; }
+/* NAUHA ON SE, JOKA LIIKKUU (js/fokusmitat.js paivitaNauha): panoroinnissa
+   koko nauha liu'utetaan yhdellä muunnoksella, ja merkkien omat muunnokset
+   kirjoitetaan vain uudelleenladonnassa. Siksi vihje kuuluu nauhalle —
+   ja samalla kompositorin kerroksia on kaksi eikä kahdeksantoista. */
+.fokus-viivain { position: absolute; will-change: transform; }
 .fokus-viivain-yla { top: 0; left: 0; right: 0; height: 1.4rem; }
 .fokus-viivain-ala { bottom: 0; left: 0; right: 0; height: 1.4rem; }
 .fokus-viivain-vasen { top: 0; bottom: 0; left: 0; width: 2.6rem; }
@@ -19833,7 +19837,6 @@ body.fokuspohja .maa-pilleri { display: none; }
   display: flex;
   align-items: center;
   gap: 0.15rem;
-  will-change: transform;
 }
 
 .fokus-viivain-viiva {

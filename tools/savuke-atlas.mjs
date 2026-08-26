@@ -562,16 +562,23 @@ await nakymaan({
  *      eleen ajaksi. Kartta itse mittaa paneelinsa eleen alussa, joten
  *      raja ei ole nolla vaan kourallinen — viivaimet eivät saa
  *      kasvattaa lukua kehyksissä (30 kehystä × 4 nauhaa olisi satoja).
+ *
+ * PAIKKA LUETAAN NAUHAN JA MERKIN MUUNNOKSISTA YHDESSÄ (28.8.2026:
+ * nauha liukuu kokonaisena, js/fokusmitat.js paivitaNauha). Merkin oma
+ * muunnos on sen paikka nauhassa ja nauhan muunnos on koko nauhan
+ * liuku; pelaajan näkemä paikka on niiden summa, ja juuri se on tässä
+ * väitteen kohde. Pelkkä merkin muunnos mittaisi nykyään ladonnan
+ * tiheyttä eikä sitä, seuraako viivain karttaa.
  */
 const viivaimet = await sivu.evaluate(async () => {
   const { ui } = window.matkakirja;
   const sailio = ui.fokusViivaimet;
   if (!sailio || sailio.hidden) return { nakyy: false };
   const nauha = sailio.querySelector('.fokus-viivain-yla');
-  const lue = () => [...nauha.querySelectorAll('.fokus-viivain-merkki')]
+  const lue = () => `${nauha.style.transform}|${[...nauha.querySelectorAll('.fokus-viivain-merkki')]
     .filter((m) => m.style.display !== 'none')
     .map((m) => `${m.querySelector('.fokus-viivain-luku').textContent}@${m.style.transform}`)
-    .join(',');
+    .join(',')}`;
 
   const laskuri = { rect: 0 };
   const alkuRect = Element.prototype.getBoundingClientRect;
