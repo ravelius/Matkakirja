@@ -1123,6 +1123,13 @@ export const RAAMATTU = {
         'Kaikki kuvat PD/CC (Commons, Finna, LoC, Flickr — lisenssi '
           + 'aina rajapinnasta), silmin tarkistettuina; tekijä ja '
           + 'lisenssi näkyvissä.',
+        'ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN (omistaja 26.8.2026 '
+          + 'ilta: "Pitäisi saada kuva itse eläimestä aina jos on '
+          + 'söpöysmerkki"): eläinkategorian (pöllönpoikas-symboli) '
+          + 'kohteen kuvassa on eläin lähikuvassa, ei maisemaa. Jos '
+          + 'paikan omat otokset ovat kaukaisia läiskiä, kuva saa '
+          + 'olla lajista muualta — selite kertoo paikan '
+          + 'rehellisesti.',
         'Etusivukuvien kaava (omistaja 16.8.2026): kuva-aiheet '
           + 'speksataan kaupunkikohtaisesti ENNEN hakua '
           + '(docs/kuvakasikirjoitukset.md). Pääkuva = tärkein kohde '
