@@ -340,11 +340,18 @@ vaadi('vuorikohde sai luontosymbolin (vuorenhuippu ja aalto)',
 vaadi('kaupunkikohde jäi vanhaksi pisteeksi',
   taksonomia.kaupunki?.piste === true && taksonomia.kaupunki?.laatta === false,
   JSON.stringify(taksonomia.kaupunki));
+/*
+ * Silmäsymboleita EI enää odoteta (26.8.2026: Akropolis-museon
+ * GA&C-kierrokset poistettiin, koska upotus ei latautunut iPadilla —
+ * Kreikassa ei ole tällä hetkellä yhtään kierroskohdetta). Vartija
+ * kääntyi: silmän saa vain kohde, jolla on OIKEASTI kierroksia, eikä
+ * sellaisia nyt ole.
+ */
 const silmia = await sivu.evaluate(
   () => new Set([...document.querySelectorAll('.fokuskohde:has(.nostosym-silmakaari)')]
     .map((g) => g.dataset.kohde)).size,
 );
-vaadi('kierroskohde sai kirjaston silmäsymbolin', silmia >= 1, `${silmia} silmää`);
+vaadi('silmäsymboli vain kierroskohteilla (nyt 0)', silmia === 0, `${silmia} silmää`);
 
 /* --- 1b: päällekkäiset merkit erkanevat (esitys, ei data) ---
  *
