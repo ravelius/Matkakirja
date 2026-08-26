@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1149 — kohdekortin kuva kasvoi (7,5 -> 10 rem, tarkempi 800 px -nouto) ja kuvateksti irtosi kuvan harmaasta laatikosta paljaalle paperille',
   'v1148 — kartan maataulun alarivi poistui kokonaan (myos Maailmanpankki ja V-Dem -maininta; lahteet ovat maan lehdessa)',
   'v1147 — kohdekortin raahaus ei enaa rapsahda sormen irrotessa (avausanimaatio kaynnistyi uudelleen raahausluokan poistuessa)',
   'v1146 — kartan maataulun alarivi pelkistyi: Samat luvut kuin maan lehdessa -selite pois, jaljelle jai Maailmanpankki ja V-Dem',

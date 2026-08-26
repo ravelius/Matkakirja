@@ -247,13 +247,17 @@
  * peittäisi juuri sen kohteen, josta se kertoo. Suurennos on siksi oma
  * eleensä (js/fokuskohteet.js avaaKohdeSuurennos).
  */
+/*
+ * KEHYS ON VAIN KUVALLA (omistaja 26.8.2026 ilta: "kuvateksti
+ * kannattaa irrottaa kuvasta. Nykyinen on vähän häiritsevä") —
+ * ennen figure kehysti kuvan JA tekstin samaan harmaaseen
+ * laatikkoon, ja kuvateksti näytti lomakkeen osalta. Nyt kehys ja
+ * pohja ovat kuvanapilla, ja teksti lepää paljaana paperilla kuvan
+ * alla kuten lehdessä.
+ */
 .fokuskohde-kuva {
   display: block;
-  margin: 0 0 0.5rem;
-  border: 1px solid rgba(58, 38, 16, 0.22);
-  border-radius: 8px;
-  overflow: hidden;
-  background: #ded5c2;
+  margin: 0 0 0.55rem;
 }
 
 /*
@@ -267,9 +271,10 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: none;
+  border: 1px solid rgba(58, 38, 16, 0.22);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ded5c2;
   box-shadow: none;
   cursor: zoom-in;
   /* Kartta ottaa eleet itselleen; napautuksen on silti tultava perille. */
@@ -287,7 +292,9 @@
 .fokuskohde-kuva img {
   display: block;
   width: 100%;
-  height: 7.5rem;
+  /* 7,5 -> 10 rem (omistaja 26.8.2026 ilta: "kuva voisi olla hieman
+     isompi jo heti tässä näkymässä"); suurennos jää omaksi eleekseen. */
+  height: 10rem;
   object-fit: cover;
   /*
    * EI `filter`-KOROSTUSTA hiiren alla, vaikka tämä on HTML-kortti eikä
@@ -306,7 +313,7 @@
 }
 
 .fokuskohde-kuvateksti {
-  margin: 0.28rem 0.4rem 0.35rem;
+  margin: 0.3rem 0.1rem 0.4rem;
   font-size: 0.76rem;
   line-height: 1.4;
   color: rgba(33, 29, 24, 0.78);
