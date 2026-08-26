@@ -1203,6 +1203,20 @@ function raahausTaiSulku(ui, popup, alku) {
 
 export function avaaFokuskohde(ui, kohde) {
   if (typeof document === 'undefined' || !kohde) return null;
+  /*
+   * ÄÄNI ENSIMMÄISENÄ RIVINÄ (omistajan pelitestipalaute v1119, kohta
+   * 17: *"soitto lähtee pointerup/click-käsittelijässä heti, ennen
+   * raskaampaa työtä"*).
+   *
+   * Ennen tämä oli funktion VIIMEINEN rivi, ja sitä ennen ehdittiin
+   * ladata tyylitiedosto, rakentaa koko kortti, hakea kuva ja mitata
+   * asettelu kolmesti. Nyt soitto lähtee samassa mikrotehtävässä kuin
+   * napautus, ja loppu tapahtuu sen jälkeen.
+   *
+   * Äänen mykistys ja TAUSTAÄÄNET-kytkin hoituvat SoundKit.play():n
+   * sisällä (enabled), joten tässä ei tarvitse tietää niistä mitään.
+   */
+  sfx.play('popup');
   lataaKohdeTyyli();
   suljeFokuskohde(ui);
   const merkki = ui.fokuskohdeMerkit?.get(kohde.id)?.[0];
@@ -1261,7 +1275,7 @@ export function avaaFokuskohde(ui, kohde) {
   // mitta voi osua hetkeen, jolloin tyylitiedosto on vasta matkalla.
   globalThis.requestAnimationFrame?.(() => asetaKohteenPaikka(ui));
   setTimeout(() => asetaKohteenPaikka(ui), 200);
-  sfx.play('paper');
+  // Avausääni soi jo funktion alussa (ks. sfx.play('popup') ylhäällä).
   return popup;
 }
 

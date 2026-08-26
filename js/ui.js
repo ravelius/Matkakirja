@@ -805,14 +805,35 @@ const FOKUS_KOHDE_NIMI_PX = 13;
  */
 const FOKUS_NIMI_PX = 9;
 /*
- * NYKYISEN KAUPUNGIN NIMI EI MAHDU NAPPULAN ALLE RUUTUMITALLA. Laatta on
- * fokusnäkymässä pieni ja ruudulla vakiokokoinen, mutta PELINAPPULA on
- * yhä laudan yksiköissä (js/ui.js pawnShape: kehä 17 yksikköä), joten
- * lähikuvassa se peittää kaiken, mikä ladotaan kymmenen yksikön päähän
- * keskipisteestä. Nimi lasketaan siksi kahdesta mitasta ja kauempi
- * voittaa: nappulan kehä + rako laudan yksikköinä on tämä.
+ * NYKYISEN KAUPUNGIN NIMI NAPPULAN ALLE.
+ *
+ * TÄSSÄ OLI 24 LAUDAN YKSIKKÖÄ (omistajan pelitestipalaute v1119:
+ * *"ATEENAN NIMIKYLTTI on LIIAN ALHAALLA — kaukana kaupungin
+ * kultaisesta merkistä"*).
+ *
+ * Luku oli oikein silloin kun se kirjoitettiin: pelinappula oli laudan
+ * yksiköissä (kehä 17 yksikköä), joten sen alle oli pakko ladota laudan
+ * mitalla. Sen jälkeen nappula sai ruutumitan muiden merkkien tapaan
+ * (paivitaFokusMerkkiMitat, FOKUS_NAPPULA_PX), eikä laudan yksiköitä
+ * enää tarvita — mutta luku jäi. Fokuszoomissa 24 yksikköä on noin 70
+ * ruutupikseliä, ja juuri niin kaukana nimi oli laatastaan (mitattu
+ * 68 px).
+ *
+ * Nyt mitta on RUUDUN pikseleitä kuten kaikki muukin fokusnäkymässä:
+ * nappulan puolikas, rako ja kirjaimen korkeus.
  */
-const FOKUS_NIMI_NAPPULAN_ALLE = 24;
+const FOKUS_NIMI_NAPPULAN_ALLE_PX = 28 / 2 + 4 + 9;
+/*
+ * NIMEN PIENIN SALLITTU KOKO RUUDULLA (omistajan pelitestipalaute
+ * v1119: *"kyltistä PUUTTUU PALOJA — teksti piirtyy rikkinäisenä"*).
+ *
+ * Nimikoko on ruutumitta LEHDEN PERUSTASOLLA ja kutistuu siitä kartan
+ * mukana, joten hieman uloszoomattuna Ateenan nimi piirtyi seitsemän
+ * pikselin korkuisena (mitattu). Sen kokoinen teksti ei enää ole pieni
+ * vaan rikki: kirjaimet katoavat pikselirasteriin ja pergamenttihalo
+ * täyttää sen mitä jää. Tämä on lattia, jonka alle koko ei mene.
+ */
+const FOKUS_NIMI_VAHIN_PX = 11;
 /* Askelpiste ilman kaupunkia on pelkkä reitin nasta — puolet merkistä. */
 const FOKUS_KOHDE_PISTE_PX = 10;
 /* Napautusalue: sama sormisääntö kuin laatalla, sama katto laudalla. */
@@ -6540,6 +6561,9 @@ export class UI {
      */
     const kerroin = paalla ? this.fokusMerkkiSkaala() : 0;
     if (paalla && !(kerroin > 0)) return;
+    // Näkymän oma mittakaava (px laudan yksikköä kohti) nimikoon
+    // ruutulattiaa varten; luetaan kerran kuten kerroinkin.
+    const skaala = paalla ? (this.nakyvaAlue()?.skaala ?? 0) : 0;
     const oma = paalla ? this.game.cityOf?.() : null;
     for (const lappu of laput) {
       if (!paalla) {
@@ -6551,6 +6575,7 @@ export class UI {
         if (perus.muunnos) lappu.setAttribute('transform', perus.muunnos);
         else lappu.removeAttribute('transform');
         lappu.style.removeProperty('font-size');
+        lappu.style.removeProperty('stroke-width');
         delete lappu.dataset.nimiPerus;
         continue;
       }
@@ -6578,15 +6603,33 @@ export class UI {
       // Kartan mittakaava, ei ruudun (omistaja 25.8.2026: "nimilaput
       // samalla lailla") — kerroin on vakio kuten merkeillä, joten nimi
       // kasvaa ja kutistuu laatan mukana. Laskettu kerran silmukan yllä.
-      const ruudulta = (FOKUS_LAATTA_PX / 2 + 4 + FOKUS_NIMI_PX) * kerroin;
+      /*
+       * KOKO ENSIN, ETÄISYYS SEN MUKAAN. Nimikoko on ruutumitta lehden
+       * perustasolla, mutta sillä on LATTIA ruudulla
+       * (FOKUS_NIMI_VAHIN_PX): uloszoomattuna kirjaimet menivät
+       * seitsemään pikseliin ja piirtyivät rikkinäisinä. Lattia
+       * lasketaan näkymän omasta mittakaavasta, joten se on ruudun
+       * pikseleitä juuri nyt eikä perustasolla.
+       */
+      const nimiYksikot = Math.max(
+        FOKUS_NIMI_PX * kerroin,
+        skaala > 0 ? FOKUS_NIMI_VAHIN_PX / skaala : 0,
+      );
+      const ruudulta = (FOKUS_LAATTA_PX / 2 + 4) * kerroin + nimiYksikot;
       const etaisyys = lappu.dataset.kaupunki === oma?.id
-        ? Math.max(FOKUS_NIMI_NAPPULAN_ALLE, ruudulta)
+        ? Math.max(FOKUS_NIMI_NAPPULAN_ALLE_PX * kerroin, ruudulta)
         : ruudulta;
       lappu.setAttribute('y', (y + etaisyys).toFixed(2));
       lappu.setAttribute('text-anchor', 'middle');
       // Heilunta pois: se kiertää tekstiä vanhan ankkurin ympäri.
       lappu.removeAttribute('transform');
-      lappu.style.fontSize = `${(FOKUS_NIMI_PX * kerroin).toFixed(2)}px`;
+      lappu.style.fontSize = `${nimiYksikot.toFixed(2)}px`;
+      /*
+       * PERGAMENTTIHALO SAMASSA SUHTEESSA. CSS antaa sille kiinteän
+       * 1,6 laudan yksikköä, mikä on pienellä kirjaimella paksumpi
+       * kuin kirjain itse — juuri se täytti kirjainten sisukset.
+       */
+      lappu.style.strokeWidth = `${(nimiYksikot * 0.22).toFixed(2)}px`;
     }
   }
 
