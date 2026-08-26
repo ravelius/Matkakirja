@@ -901,12 +901,33 @@ export const FOKUSKOHTEET_TUR = [
      * Katsottu silmin: valkoinen pentu eriväriset silmät näkyvissä,
      * ei ihmisiä, ei vesileimaa.
      */
-    kuva: {
-      tiedosto: 'Van kitten.jpg',
-      selite: 'Vanin kissan pentu, jolla on yksi sininen ja yksi '
-        + 'vihertävä silmä — kannan kuuluisin tuntomerkki.',
-      lahde: 'Bertilvidet, Wikimedia Commons (CC BY 2.5)',
-    },
+    /*
+     * KOLME KUVAA (Raamatun eläinkuvasäännön laajennus 26.8.2026).
+     * Lisäkuvat katsottu silmin, lisenssit ja Restrictions
+     * tarkistettu Commonsin rajapinnasta 26.8.2026: äärilähikuva
+     * kasvoista (heterokromia terävimmillään) ja aikuinen kissa
+     * Vanin yliopiston kissatalossa (kuvauspaikka todennettu).
+     */
+    kuvat: [
+      {
+        tiedosto: 'Van kitten.jpg',
+        selite: 'Vanin kissan pentu, jolla on yksi sininen ja yksi '
+          + 'vihertävä silmä — kannan kuuluisin tuntomerkki.',
+        lahde: 'Bertilvidet, Wikimedia Commons (CC BY 2.5)',
+      },
+      {
+        tiedosto: 'VAN CAT.png',
+        selite: 'Lähikuvassa erot näkyvät parhaiten: toinen silmä '
+          + 'sininen, toinen kellanvihreä.',
+        lahde: 'Estin Giç Giç, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      {
+        tiedosto: "Van, casa del gatto di van, presso la facoltà di veterinaria dell'università 04.jpg",
+        selite: 'Aikuinen asukas Vanin yliopiston kissatalossa, jossa '
+          + 'kantaa tutkitaan ja suojellaan.',
+        lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+    ],
   },
   {
     id: 'kirkpinar',

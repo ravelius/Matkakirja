@@ -771,6 +771,21 @@ function kysyKohteesta(ui, kysymys) {
  * asettajassa (js/media.js asetaKuva), joten sitä ei kirjoiteta tähän
  * uudestaan.
  */
+/*
+ * USEAMPI KUVA SAMAAN KORTTIIN (Raamattu, eläinkohteen kuvasäännön
+ * laajennus — omistaja 26.8.2026 ilta: "Söpö kohteissa voisi olla
+ * useampikin kuva jos vain löytyy"): kohde saa `kuva`-kentän rinnalle
+ * valinnaisen `kuvat`-listan, ja jokainen piirtyy omana kehyksenään
+ * selitteineen peräkkäin — kortti on jo vieritettävä. Yhden kuvan
+ * kohteet toimivat ennallaan.
+ */
+function piirraKohdeKuvat(ui, sisalto, kohde) {
+  const lista = Array.isArray(kohde.kuvat) && kohde.kuvat.length
+    ? kohde.kuvat
+    : (kohde.kuva ? [kohde.kuva] : []);
+  for (const kuva of lista) piirraKohdeKuva(ui, sisalto, kuva);
+}
+
 function piirraKohdeKuva(ui, sisalto, kuva) {
   if (!kuva?.tiedosto) return;
   const kehys = html('figure', 'fokuskohde-kuva');
@@ -1569,7 +1584,7 @@ export function avaaFokuskohde(ui, kohde) {
   const sisalto = html('div', 'fokuskohde-sisalto');
   sisalto.appendChild(piirraKohdeYlarivi(kohde));
   sisalto.appendChild(html('h3', 'fokuskohde-otsikko', kohde.nimi));
-  piirraKohdeKuva(ui, sisalto, kohde.kuva);
+  piirraKohdeKuvat(ui, sisalto, kohde);
   piirraKohdeTeksti(ui, sisalto, kohde);
   piirraKohdeKysymykset(ui, sisalto, kohde);
   piirraKierrosnappi(ui, sisalto, kohde);

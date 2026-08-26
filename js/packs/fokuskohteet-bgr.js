@@ -742,13 +742,35 @@ export const FOKUSKOHTEET_BGR = [
      * kiharapelikaani lennossa lähikuvassa, ei ihmisiä, ei
      * vesileimaa.
      */
-    kuva: {
-      tiedosto: 'Dalmatian pelican (Pelecanus crispus) in flight Danube delta.jpg',
-      selite: 'Kiharapelikaani lennossa Tonavan suistossa, Srebarnan '
-        + 'muuttoreitin varrella. Järven kaislikoissa pesii 179 '
-        + 'lintulajia.',
-      lahde: 'Charles J. Sharp, Wikimedia Commons (CC BY-SA 4.0)',
-    },
+    /*
+     * KOLME KUVAA (Raamatun eläinkuvasäännön laajennus 26.8.2026:
+     * useampi kuva kun hyviä löytyy). Kaikki katsottu silmin,
+     * lisenssit ja Restrictions tarkistettu Commonsin rajapinnasta
+     * 26.8.2026. Pesäkuva on Venäjän Donguzlovosta ja lentokuva
+     * Tonavan suistosta — selitteet eivät väitä niitä Srebarnasta
+     * kuvatuiksi (paikan omat otokset ovat kaukaisia läiskiä).
+     */
+    kuvat: [
+      {
+        tiedosto: 'Dalmatian pelican (Pelecanus crispus) in flight Danube delta.jpg',
+        selite: 'Kiharapelikaani lennossa Tonavan suistossa, Srebarnan '
+          + 'muuttoreitin varrella. Järven kaislikoissa pesii 179 '
+          + 'lintulajia.',
+        lahde: 'Charles J. Sharp, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      {
+        tiedosto: 'Dalmatian Pelican.jpg',
+        selite: 'Levossa kiharapelikaanin sulat kihartuvat niskassa — '
+          + 'siitä lajin nimi.',
+        lahde: 'Koustabh Dutta, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      {
+        tiedosto: 'Pelican nestling.jpg',
+        selite: 'Emo ja poikaset kaislapesällä. Srebarnan yhdyskunnan '
+          + 'poikaset kuoriutuvat touko-kesäkuussa.',
+        lahde: 'Popov Jevgeni, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+    ],
   },
   {
     id: 'pernik',
