@@ -48,6 +48,8 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1161: Etusivujuliste alkaa pelin nimella MATKAKIRJA; aloitusportti siistitty: nappiryhma otsikon alla, tausta sumenee napin takana. TESTAA: etusivu iPadilla ja puhelimella ennen ja jalkeen Aloita-napin.',
+  'v1161: Etusivun julisteotsikko alkaa nyt pelin nimella MATKAKIRJA ja Vernen teosnimi on alaotsikkona (omistajan idea). TESTAA: etusivun otsikkoasettelu iPadilla ja puhelimella.',
   'v1160: Sisilian aamuherokuvan selite kertoo nyt, etta temppelin edessa makaava pronssi on oikeasti olemassa (Mitorajin Kaatunut Ikaros) - generoitu kuva herattaa muuten epailyt. TESTAA: Sisilian lehden avauskuvan kuvateksti.',
   'v1159: Kohdekarttojen miniatyyripiirrokset nyt myos Ateenassa, Sofiassa, Bukarestissa ja Sarajevossa (25 kuvaa, era 1/5). TESTAA: avaa nailla kartoilla kohteita, piirrokset numeroympyroiden tilalla.',
   'v1158: Vieritys sujuvammaksi: viivainmerkit kierratetaan lukeman mukaan ja nauha liukuu kokonaisena; nimilappujen 780 turhaa kirjoitusta eleen lopussa poistettu; skriptiaika -19 %. TESTAA: panoroi karttaa iPadilla, tokkiiko viela.',

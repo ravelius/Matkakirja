@@ -5395,8 +5395,11 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 /* Kirjainväli levittää rivin oikealle: sama verran takaisin, jotta
    keskitys osuu (viimeisen kirjaimen jälkeinen väli ei näy). */
 .juliste-rivi { display: block; line-height: 1.15; }
-.juliste-yla { font-size: 1.5em; letter-spacing: 0.2em; text-indent: 0.2em; }
-.juliste-ala { font-size: 0.86em; letter-spacing: 0.26em; text-indent: 0.26em; }
+/* Pelin nimi on julisteen pääotsikko (omistaja 26.8.2026); Vernen
+   teosnimi latoutuu sen alle kahtena tasakokoisena alaotsikkorivinä. */
+.juliste-nimi { font-size: 1.72em; letter-spacing: 0.24em; text-indent: 0.24em; }
+.juliste-yla { font-size: 0.92em; letter-spacing: 0.22em; text-indent: 0.22em; margin-top: 0.35em; }
+.juliste-ala { font-size: 0.78em; letter-spacing: 0.24em; text-indent: 0.24em; }
 /* Jatko-osan merkintä: viktoriaanisen julisteen tapaan alaotsikko
    PUNAISELLA musteella (sama suku kuin reittiviivan/merkkien
    --mark), lihavoituna — koko pysyy pääotsikkoa pienempänä, väri
@@ -5929,19 +5932,30 @@ body:not(.flight-active) .flight-overlay:not(.flight-leaving) { display: none; }
   position: absolute;
   inset: 0;
   z-index: 6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: rgba(36, 26, 18, 0.55);
+  /* Reunakuulto tasaisen tummennuksen sijaan (arkkikirjaston
+     panos-aste): keskusta jää valoisammaksi, jotta julisteotsikko
+     lukee portin läpi, ja reunat kehystävät. Nappiryhmä ei enää
+     keskity otsikon päälle vaan asettuu sen ALLE (omistaja
+     26.8.2026: "Tämä on hässäkän näköinen"). */
+  background: radial-gradient(ellipse at 50% 42%,
+    rgba(36, 26, 18, 0.28) 40%, rgba(36, 26, 18, 0.6) 100%);
+  /* Juliste ja kartta sumenevat napin takana (omistaja 26.8.2026:
+     "Aloitusvalikossa tekstin ja kartan voi sumentaa") — portti on
+     oma pintansa, tarkka sisältö palaa vasta napautuksesta. */
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   animation: flight-overlay-in 0.35s ease;
   padding: 1rem;
 }
 
-/* Vain nappi on virrassa, joten se keskittyy täsmälleen ruudun keskelle.
-   Ääniviihje kelluu sen yläpuolella eikä siirrä nappia. */
+/* Nappiryhmä julisteen alapuolella: juliste täyttää ylälohkon (fitIntro),
+   joten 62 % korkeudesta on sen alaraja väljällä varalla. Ääniviihje
+   kelluu napin yläpuolella eikä siirrä sitä. */
 .start-gate-keskus {
-  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 62%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6195,7 +6209,8 @@ body.flight-active .fact-card {
 @media (max-width: 700px) {
   .intro-palsta { width: 92%; }
   .intro-juliste { margin-bottom: 1em; gap: 0.45em; }
-  .juliste-yla { font-size: 1.24em; letter-spacing: 0.16em; text-indent: 0.16em; }
+  .juliste-nimi { font-size: 1.42em; letter-spacing: 0.18em; text-indent: 0.18em; }
+  .juliste-yla { font-size: min(0.86em, 4.4vw); letter-spacing: 0.14em; text-indent: 0.14em; }
   /* "kahdeksassakymmenessä" on 21 merkkiä yhtä sanaa: kapealla
      ruudulla koko sidotaan ruudun leveyteen ja välistys tiivistyy,
      jottei rivi leikkaudu reunoista (omistajan kaappaus 26.8.2026,
