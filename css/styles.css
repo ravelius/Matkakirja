@@ -6131,7 +6131,11 @@ body.flight-active .fact-card {
   .intro-palsta { width: 92%; }
   .intro-juliste { margin-bottom: 1em; gap: 0.45em; }
   .juliste-yla { font-size: 1.24em; letter-spacing: 0.16em; text-indent: 0.16em; }
-  .juliste-ala { font-size: 0.8em; letter-spacing: 0.2em; text-indent: 0.2em; }
+  /* "kahdeksassakymmenessä" on 21 merkkiä yhtä sanaa: kapealla
+     ruudulla koko sidotaan ruudun leveyteen ja välistys tiivistyy,
+     jottei rivi leikkaudu reunoista (omistajan kaappaus 26.8.2026,
+     iPhone). */
+  .juliste-ala { font-size: min(0.8em, 4vw); letter-spacing: 0.1em; text-indent: 0.1em; }
   .intro-text { line-height: 1.5; }
   .intro-valinta { margin-top: 1.1em; line-height: 1.4; }
   .intro-tyopoyta { width: min(100%, 19em); margin-top: 1.1em; }

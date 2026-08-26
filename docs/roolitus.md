@@ -35,6 +35,11 @@ tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
   tilabugin kierrokset). Rutiinityö menee tavallisille agenteille —
   Fablemax on kallein työkalu, ja sitä käytetään vain kun halvempi
   ei riitä. Aina isolation: worktree, kuten muutkin agentit.
+- **Agenttien mallivalinta (omistaja 26.8.2026):** tavalliset
+  agentit ajetaan AINA Opus- (koodi, sisältö) tai Sonnet-mallilla
+  (lukeva työ, tarkistukset). Fable-mallia saa käyttää agenttina
+  vain todella vaikeaan pulmaan korkealla effort-tasolla
+  (= Fablemax-tapaukset).
 
 ## Opus — toimitus: lehdet ja koodi
 
