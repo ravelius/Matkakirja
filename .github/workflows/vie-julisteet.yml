@@ -1,7 +1,8 @@
 # Kertakäyttöinen vienti: lataa julisteet/-kansion R2-ämpärin
-# julisteet/-kansioon. Ajetaan workflow_dispatchilla tältä haaralta;
-# haara poistetaan viennin jälkeen. Secretit ovat repo-secreteinä
-# (samat kuin peilaa.yml käyttää).
+# julisteet/-kansioon ja kuvat/-kansion kuvat/-kansioon. Ajetaan
+# workflow_dispatchilla tältä haaralta; haara poistetaan viennin
+# jälkeen. Secretit ovat repo-secreteinä (samat kuin peilaa.yml
+# käyttää). PNG ja JPG viedään omilla content-typeillään.
 name: Vie julisteet R2:een
 
 on:
@@ -25,7 +26,16 @@ jobs:
       - name: Vie ämpäriin
         run: |
           set -euo pipefail
+          paate="https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com"
           aws s3 sync julisteet "s3://${{ secrets.R2_BUCKET }}/julisteet" \
-            --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+            --endpoint-url "$paate" --exclude "*.jpg" \
             --content-type image/png --no-progress
-          echo "Viety $(ls julisteet | wc -l) julistetta."
+          aws s3 sync julisteet "s3://${{ secrets.R2_BUCKET }}/julisteet" \
+            --endpoint-url "$paate" --exclude "*" --include "*.jpg" \
+            --content-type image/jpeg --no-progress
+          if [ -d kuvat ]; then
+            aws s3 sync kuvat "s3://${{ secrets.R2_BUCKET }}/kuvat" \
+              --endpoint-url "$paate" --exclude "*" --include "*.jpg" \
+              --content-type image/jpeg --no-progress
+          fi
+          echo "Viety: $(find julisteet -type f | wc -l) julistetiedostoa, $(find kuvat -type f 2>/dev/null | wc -l) kuvaa."
