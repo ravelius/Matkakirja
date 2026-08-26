@@ -264,4 +264,43 @@ export const MINIATYYRIT = {
     'New Yorkin kaupungintalo': 'assets/kartat/miniatyyrit/newyork-kaupungintalo.webp',
     'Trinity Church': 'assets/kartat/miniatyyrit/newyork-trinity-church.webp',
   },
+  /*
+   * Erä 1 Balkanin ja Kreikan kohdekartoille (v1156:n promptit,
+   * generoi-miniatyyrit.yml 26.8.2026). Kaikki 25 katsottu silmin ja
+   * hyväksytty — NDK:n taustaharja on Vitoša ja rotundan haaleat
+   * viivatalot presidentinlinnan sisäpiha, molemmat tarkoituksella.
+   */
+  ateena: {
+    'Antiikin agora': 'assets/kartat/miniatyyrit/ateena-antiikin-agora.webp',
+    Akropolis: 'assets/kartat/miniatyyrit/ateena-akropolis.webp',
+    'Zeuksen temppeli': 'assets/kartat/miniatyyrit/ateena-zeuksen-temppeli.webp',
+    'Sýntagman aukio': 'assets/kartat/miniatyyrit/ateena-syntagman-aukio.webp',
+    'Lykavittós': 'assets/kartat/miniatyyrit/ateena-lykavittos.webp',
+    Kallimarmaro: 'assets/kartat/miniatyyrit/ateena-kallimarmaro.webp',
+  },
+  sofia: {
+    'Mineraalikylpylä': 'assets/kartat/miniatyyrit/sofia-mineraalikylpyla.webp',
+    'Pyhän Yrjön rotunda': 'assets/kartat/miniatyyrit/sofia-pyhan-yrjon-rotunda.webp',
+    'Sofian katedraali': 'assets/kartat/miniatyyrit/sofia-sofian-katedraali.webp',
+    'Sofian yliopisto': 'assets/kartat/miniatyyrit/sofia-sofian-yliopisto.webp',
+    'Borisovan puutarha': 'assets/kartat/miniatyyrit/sofia-borisovan-puutarha.webp',
+    Kansalliskulttuuripalatsi: 'assets/kartat/miniatyyrit/sofia-kansalliskulttuuripalatsi.webp',
+  },
+  bukarest: {
+    'Romanian ateneum': 'assets/kartat/miniatyyrit/bukarest-romanian-ateneum.webp',
+    'Cișmigiun puutarha': 'assets/kartat/miniatyyrit/bukarest-cismigiun-puutarha.webp',
+    'Yliopiston aukio': 'assets/kartat/miniatyyrit/bukarest-yliopiston-aukio.webp',
+    'Stavropoleoksen kirkko': 'assets/kartat/miniatyyrit/bukarest-stavropoleoksen-kirkko.webp',
+    'Vanha ruhtinaanhovi': 'assets/kartat/miniatyyrit/bukarest-vanha-ruhtinaanhovi.webp',
+    Parlamenttipalatsi: 'assets/kartat/miniatyyrit/bukarest-parlamenttipalatsi.webp',
+    'Antipan museo': 'assets/kartat/miniatyyrit/bukarest-antipan-museo.webp',
+  },
+  sarajevo: {
+    'Sarajevon katedraali': 'assets/kartat/miniatyyrit/sarajevo-sarajevon-katedraali.webp',
+    'Gazi Husrev-begin moskeija': 'assets/kartat/miniatyyrit/sarajevo-gazi-husrev-begin-moskeija.webp',
+    'Baščaršija': 'assets/kartat/miniatyyrit/sarajevo-bascarsija.webp',
+    'Vijećnica': 'assets/kartat/miniatyyrit/sarajevo-vijecnica.webp',
+    Latinalaissilta: 'assets/kartat/miniatyyrit/sarajevo-latinalaissilta.webp',
+    'Keltainen linnake': 'assets/kartat/miniatyyrit/sarajevo-keltainen-linnake.webp',
+  },
 };

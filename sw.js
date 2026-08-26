@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1158';
+const CACHE = 'matkakirja-2026-08-09.1159';
 const SHELL = [
   './',
   './index.html',
@@ -483,6 +483,31 @@ const SHELL = [
   './assets/kartat/miniatyyrit/newyork-washington-squaren-riemukaari.webp',
   './assets/kartat/miniatyyrit/newyork-kaupungintalo.webp',
   './assets/kartat/miniatyyrit/newyork-trinity-church.webp',
+  './assets/kartat/miniatyyrit/ateena-akropolis.webp',
+  './assets/kartat/miniatyyrit/ateena-antiikin-agora.webp',
+  './assets/kartat/miniatyyrit/ateena-kallimarmaro.webp',
+  './assets/kartat/miniatyyrit/ateena-lykavittos.webp',
+  './assets/kartat/miniatyyrit/ateena-syntagman-aukio.webp',
+  './assets/kartat/miniatyyrit/ateena-zeuksen-temppeli.webp',
+  './assets/kartat/miniatyyrit/bukarest-antipan-museo.webp',
+  './assets/kartat/miniatyyrit/bukarest-cismigiun-puutarha.webp',
+  './assets/kartat/miniatyyrit/bukarest-parlamenttipalatsi.webp',
+  './assets/kartat/miniatyyrit/bukarest-romanian-ateneum.webp',
+  './assets/kartat/miniatyyrit/bukarest-stavropoleoksen-kirkko.webp',
+  './assets/kartat/miniatyyrit/bukarest-vanha-ruhtinaanhovi.webp',
+  './assets/kartat/miniatyyrit/bukarest-yliopiston-aukio.webp',
+  './assets/kartat/miniatyyrit/sarajevo-bascarsija.webp',
+  './assets/kartat/miniatyyrit/sarajevo-gazi-husrev-begin-moskeija.webp',
+  './assets/kartat/miniatyyrit/sarajevo-keltainen-linnake.webp',
+  './assets/kartat/miniatyyrit/sarajevo-latinalaissilta.webp',
+  './assets/kartat/miniatyyrit/sarajevo-sarajevon-katedraali.webp',
+  './assets/kartat/miniatyyrit/sarajevo-vijecnica.webp',
+  './assets/kartat/miniatyyrit/sofia-borisovan-puutarha.webp',
+  './assets/kartat/miniatyyrit/sofia-kansalliskulttuuripalatsi.webp',
+  './assets/kartat/miniatyyrit/sofia-mineraalikylpyla.webp',
+  './assets/kartat/miniatyyrit/sofia-pyhan-yrjon-rotunda.webp',
+  './assets/kartat/miniatyyrit/sofia-sofian-katedraali.webp',
+  './assets/kartat/miniatyyrit/sofia-sofian-yliopisto.webp',
   // Lippuikkunan versioliput (pilotti Suomi + Saksa, v711).
   './assets/liput/versiot/fin-valtiolippu.png',
   './assets/liput/versiot/fin-sotalippu.png',
