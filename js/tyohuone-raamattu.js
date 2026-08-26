@@ -554,6 +554,18 @@ export const RAAMATTU = {
           + 'taulun yläreunassa keskellä omalla rivillään. '
           + 'KEHITTÄJÄN VÄRILAATTAKOODIT POISTETTU kartalta — '
           + 'valmiusvärit elävät vain työhuoneen Tilastot-taulussa.',
+        'PELITESTIKIERROS 26.8.2026 (aamu): (1) nähtävyyspisteet '
+          + '-15 % ja nykyisen kaupungin pääpiste -12 % (kosketus- '
+          + 'alueet ennallaan 44/48 px); (2) PÄÄLLEKKÄISET PISTEET '
+          + 'siirretään ESITYSSIIRROLLA erilleen — saa poiketa '
+          + 'kartan oikeasta paikasta (omistajan linjaus), data ei '
+          + 'muutu; (3) kohdepopup aukeaa irti ylä-/alalaidasta '
+          + '(vara 10 % ruudun korkeudesta); (4) maataulun plus '
+          + 'aidosti keskellä + reilu avaussykäys; (5) lennon '
+          + 'jälkeen EI Astu mantereelle -nappia — automaattinen '
+          + 'jatko, ja napautus ohittaa lentoanimaation; (6) '
+          + 'lentokohtaus juhlavammaksi: paksumpi katkoviivareitti, '
+          + 'saapumisleima, harsopilvet hitaasti kartan yli.',
         'VANHA KARTTA KOKONAAN POIS PELISTÄ TOISTAISEKSI (omistaja '
           + '25.8.2026, ilta — laajentaa aiempaa fokusnäkymärajausta): '
           + 'pelilaudan vanhaa piirrosta ei näytetä MISSÄÄN pelin '
