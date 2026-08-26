@@ -225,7 +225,21 @@ function korkeusruudukko(kansio, laatikko) {
  * piirtää yhä ETOPOn pehmeä nollakäyrä. Kuivalle painanteelle
  * laajennus antaa korkeintaan parin kaariminuutin kaistan rannassa.
  */
-function meriruudukko(kansio, ruudukko) {
+/*
+ * VIETY, KOSKA KAUKOZOOMIN YLEISLEHTI TARVITSEE SAMAN MASKIN.
+ *
+ * Koko laudan kattava yleislehti (tools/tee-yleislehti.mjs) ei kokoa
+ * aineistoaan maan ympäriltä vaan koko maailmasta, mutta maan ja meren
+ * ero on siellä täsmälleen sama kysymys — ja väärä vastaus näkyisi
+ * kaukozoomissa Kaspianmerenä maan värisenä. Yhteinen rasterointi on
+ * ainoa tapa pitää yleislehti ja maalehdet samassa maailmassa.
+ *
+ * `laajennus` on ruutuina mitattu dilaatio (ks. alla). Maalehdillä
+ * ruudukko on kuvaa harvempi ja laajennus 2 tasoittaa portaikon;
+ * yleislehdellä ruutu ja kuvapikseli ovat samaa kokoluokkaa, jolloin
+ * pienempi laajennus riittää eikä painanne saa turhaa merikaistaa.
+ */
+export function meriMaski(kansio, ruudukko, { laajennus = 2 } = {}) {
   const tiedosto = 'ne_10m_ocean.geojson';
   if (!existsSync(join(kansio, tiedosto))) return null;
   const {
@@ -299,8 +313,9 @@ function meriruudukko(kansio, ruudukko) {
     }
   }
 
-  // Laajennus kahdella ruudulla: ensin vaakaan, sitten pystyyn.
-  const R = 2;
+  // Laajennus (oletuksena kaksi ruutua): ensin vaakaan, sitten pystyyn.
+  const R = laajennus;
+  if (R <= 0) return maski;
   const bitti = (x, y) => (maski[(y * w + x) >> 3] >> ((y * w + x) & 7)) & 1;
   const vaaka = new Uint8Array(w * h);
   for (let y = 0; y < h; y++) {
@@ -324,7 +339,13 @@ function meriruudukko(kansio, ruudukko) {
       if (v) aseta(x, y);
     }
   }
-  return { b64: Buffer.from(maski.buffer).toString('base64') };
+  return maski;
+}
+
+/** Sama maski siinä muodossa, jossa se kulkee selaimeen (base64). */
+function meriruudukko(kansio, ruudukko) {
+  const maski = meriMaski(kansio, ruudukko);
+  return maski ? { b64: Buffer.from(maski.buffer).toString('base64') } : null;
 }
 
 /**

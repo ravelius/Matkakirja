@@ -911,6 +911,40 @@ export const FOKUS_POHJAT = {
 };
 
 /*
+ * ============ KAUKOZOOMIN YLEISLEHTI (omistaja 26.8.2026) ============
+ *
+ * *"Uloszoomattu maailmankartta näyttää tilkkutäkiltä."* Syy on
+ * rakenteellinen: jokainen maalehti korostaa omaa maataan ja piirtää
+ * naapurit haaleina, joten vierekkäiset lehdet esittävät saman
+ * rajaseudun kahdella eri voimalla. Lähikuvassa juuri sitä
+ * fokusmoodilta halutaan; kaukaa katsottuna se on tilkkutäkki — ja
+ * lehtiä on ruudulla samalla neljä tai viisi, mikä on kaukozoomissa
+ * pelkkää muistikuormaa ilman yhtään luettavaa yksityiskohtaa.
+ *
+ * YLEISLEHTI on yksi kuva koko laudalta ILMAN maakorostuksia: sama
+ * paperi, sama hypsometria, sama meren syvyysporrastus kuin
+ * maalehdillä, mutta kaikki maat samalla voimalla eikä yhtään
+ * kartuutsia tai kaupunkinimeä (tools/tee-yleislehti.mjs). Peli
+ * näyttää sen kaukozoomissa ja purkaa maalehdet siksi aikaa pois
+ * (js/fokuskartta.js "KAUKOZOOMIN YLEISLEHTI").
+ *
+ * BBOX ON KOKO LAUTA (12000 x 5399) eikä siinä ole vuotoa — lehden
+ * reunat OVAT laudan reunat, eikä sen ulkopuolella ole lautaa, johon
+ * jäisi sauma. Luvut ovat suoraan työkalun kirjoittamasta
+ * MAAILMA.json-tiedostosta (tasauksen ankkurit alle 1,7 lautayksikköä).
+ *
+ * TÄMÄ EI OLE FOKUS_POHJAT-TAULUSSA. Se ei ole minkään maan lehti:
+ * atlaksen valinta, sumuverho ja kameran ajot lukevat FOKUS_POHJAT-
+ * taulua maakohtaisesti, ja koko laudan kokoinen "maa" sotkisi ne
+ * kaikki (valinta ottaisi sen aina, verho tekisi reiän koko maailmaan).
+ */
+export const YLEISLEHTI = {
+  lauta: 'maailmankartta',
+  bbox: { x: 0, y: 0, w: 12000, h: 5399 },
+  tiedosto: 'MAAILMA.webp',
+};
+
+/*
  * LAUTOJEN PROJEKTIOT — vain mittajanaa varten (js/fokusmitat.js).
  *
  * Fokusnäkymän mittajana on RUUTUUN ankkuroitu ja laskee pituutensa

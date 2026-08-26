@@ -50,6 +50,12 @@
  *      juuri musta tuotti omistajan iPhonella mustat vaakakaistat
  *      lehtien väliin (26.8.2026).
  *  12. Laudan oma jokiverkko (g.maasto) ei piirry atlasnäkymässä.
+ *  13. Kaukozoomissa kartalla on yleislehti eikä yhtäkään maalehteä
+ *      (omistajan tilaus 26.8.2026: uloszoomattu kartta näytti
+ *      tilkkutäkiltä, koska jokainen maalehti korostaa omaa maataan).
+ *  14. Yleislehti myös HAETAAN kaukozoomissa (MAAILMA.webp).
+ *  15. Lähizoomiin palatessa maalehdet palaavat ja yleislehti poistuu.
+ *  16. Turvatilassa yleislehteä ei haeta eikä piirretä.
  */
 
 import { createServer } from 'node:http';
@@ -303,11 +309,24 @@ vaadi('laiska lataus: 132 lehdestä haettiin vain näkymän lehdet',
   haetut.length > 0 && haetut.length <= 8, `haetut=${haetut.join(',')}`);
 await sivu.screenshot({ path: join(ULOS, 'savuke-atlas-loitonnettu.png') });
 
-/* --- LRU: näkymästä poistuneet vapautetaan --- */
+/* --- LRU: näkymästä poistuneet vapautetaan ---
+ *
+ * NÄKYMÄ PIDETÄÄN KAUKOZOOMIN KYNNYKSEN ALAPUOLELLA (1400 lautayksikköä
+ * < 2600, js/fokuskartta.js KAUKOZOOMIN_RAJA). Ajo oli ennen
+ * `kerroin: 3`, mikä tällä ruudulla on noin 4000 yksikköä leveä näkymä
+ * — sieltä maalehdet purettaisiin kokonaan pois yleislehden tieltä, ja
+ * LRU:n väite muuttuisi tyhjäksi (nolla lehteä, nolla ulkopuolella).
+ * Kaukozoomi on oma väitteensä alempana.
+ */
 const c = await sivu.evaluate(async () => {
   const { ui } = window.matkakirja;
   const pohjat = (await import('./js/packs/fokus-grc.js')).FOKUS_POHJAT;
-  await ui.kartta.ajaKamera({ x: 5300, y: 1100, kerroin: 3 }, { kesto: 0 });
+  await ui.kartta.ajaKamera({
+    bbox: {
+      x: 4600, y: 700, w: 1400, h: 900,
+    },
+    marginaali: 0,
+  }, { kesto: 0 });
   await new Promise((r) => setTimeout(r, 600));
   ui.paivitaMaastonimet();
   await new Promise((r) => setTimeout(r, 1500));
@@ -328,6 +347,69 @@ const c = await sivu.evaluate(async () => {
 vaadi('LRU vapauttaa näkymästä poistuneet lehdet',
   c.ulkopuolella.length === 0 && c.kuvia === c.atlas.length,
   `atlas=${c.atlas} ulkopuolella=${c.ulkopuolella}`);
+
+/* ===================================================================
+ * 13–15. KAUKOZOOMIN YLEISLEHTI (omistajan tilaus 26.8.2026)
+ * ===================================================================
+ *
+ * *"Uloszoomattu maailmankartta näyttää tilkkutäkiltä."* Kaukaa
+ * katsottuna kartalla on yksi koko laudan kattava lehti ilman
+ * maakorostuksia (tools/tee-yleislehti.mjs), ja maalehdet puretaan
+ * siksi aikaa pois — sekä naapurien (.fokus-atlas) että nykyisen maan
+ * oma (.fokus-lehti). Juuri purku on palkinto: kaukozoomissa oli ennen
+ * neljä tai viisi purettua lehteä, joista yksikään ei näyttänyt
+ * yhtään luettavaa yksityiskohtaa.
+ *
+ * VÄITE MITATAAN DOMISTA, koska DOMista irrottaminen on se, mikä
+ * vapauttaa puretun kuvan (sama oppi kuin LRU:lla yllä).
+ */
+async function nakymaan(bbox) {
+  await sivu.evaluate(async (b) => {
+    const { ui } = window.matkakirja;
+    await ui.kartta.ajaKamera({ bbox: b, marginaali: 0 }, { kesto: 0 });
+    await new Promise((r) => setTimeout(r, 300));
+    ui.paivitaMaastonimet();
+  }, bbox);
+  await sivu.waitForTimeout(3000);
+}
+
+const lehtitila = () => sivu.evaluate(() => ({
+  leveys: Math.round(window.matkakirja.ui.nakyvaAlue()?.w ?? 0),
+  paalla: Boolean(window.matkakirja.ui.yleislehtiPaalla),
+  yleis: document.querySelectorAll('.fokus-yleislehti image').length,
+  atlas: document.querySelectorAll('.fokus-atlas image').length,
+  oma: document.querySelectorAll('.fokus-lehti image').length,
+  kirjanpito: window.matkakirja.ui.atlasLehdet?.size ?? 0,
+  maa: window.matkakirja.ui.fokuskarttaAvain,
+}));
+
+pyynnot.length = 0;
+await nakymaan({
+  x: 3000, y: 1000, w: 4200, h: 2600,
+});
+const kauko = await lehtitila();
+vaadi('kaukozoomissa yleislehti on kartalla eikä maalehtiä ole DOMissa',
+  kauko.leveys > 2860 && kauko.paalla && kauko.yleis === 1
+  && kauko.atlas === 0 && kauko.oma === 0 && kauko.kirjanpito === 0,
+  JSON.stringify(kauko));
+vaadi('kaukozoomissa haetaan yleislehti',
+  pyynnot.includes('MAAILMA'), `pyynnot=${[...new Set(pyynnot)].join(',')}`);
+await sivu.screenshot({ path: join(ULOS, 'savuke-atlas-yleislehti.png') });
+
+/*
+ * Takaisin lähelle: yleislehti väistyy ja nykyisen maan lehti palaa
+ * kartalle ilman että maa on vaihtunut (js/fokuskartta.js
+ * palautaMaalehti). Ikkuna on Kreikan oma rajaus kolminkertaisena eli
+ * noin 1400 yksikköä — selvästi kynnyksen alapuolella.
+ */
+await nakymaan({
+  x: 6000, y: 1550, w: 1400, h: 900,
+});
+const lahi = await lehtitila();
+vaadi('lähizoomiin palatessa maalehdet palaavat ja yleislehti poistuu',
+  lahi.leveys < 2340 && !lahi.paalla && lahi.yleis === 0
+  && lahi.oma === 1 && lahi.maa === 'GRC',
+  JSON.stringify(lahi));
 
 /* --- vanha lauta pois atlaksen alta (omistajan linjaus 25.8.2026) ---
  *
@@ -570,6 +652,47 @@ const jokikerros = await sivu.evaluate(() => {
 });
 vaadi('atlasnäkymässä laudan jokiverkko ei piirry',
   jokikerros.luokka && jokikerros.nakyvat.length === 0, JSON.stringify(jokikerros));
+
+/*
+ * 16. TURVATILASSA EI HAETA YLEISLEHTEÄKÄÄN.
+ *
+ * Turvatila on vakuutus muistikuolemaa vastaan (js/fokuskartta.js
+ * atlasTurvatila): kun sivu on käynnistynyt monta kertaa parissa
+ * minuutissa, yhtäkään isoa kuvaa ei pureta ja peli näyttää laudan
+ * oman pergamentin. Yleislehti on niistä kuvista suurin — 6400 x 2879
+ * — joten sen on jäätävä pois nimenomaan siellä. Turvatila on
+ * moduulitason muistia, joten se luetaan vain uuden dokumentin
+ * yhteydessä: siksi sivu ladataan uudelleen lippu päällä.
+ */
+await sivu.evaluate(() => {
+  localStorage.setItem('matkakirja-atlas-turvatila', String(Date.now()));
+});
+await sivu.reload({ waitUntil: 'load' });
+await sivu.waitForTimeout(2500);
+await ateenaan();
+pyynnot.length = 0;
+await sivu.evaluate(async () => {
+  const { ui } = window.matkakirja;
+  await ui.kartta.ajaKamera({
+    bbox: {
+      x: 3000, y: 1000, w: 4200, h: 2600,
+    },
+    marginaali: 0,
+  }, { kesto: 0 });
+  await new Promise((r) => setTimeout(r, 300));
+  ui.paivitaMaastonimet();
+});
+await sivu.waitForTimeout(3000);
+const turva = await sivu.evaluate(() => ({
+  turvatila: Boolean(localStorage.getItem('matkakirja-atlas-turvatila')),
+  yleis: document.querySelectorAll('.fokus-yleislehti image').length,
+  lehtia: document.querySelectorAll('.fokus-atlas image, .fokus-lehti image').length,
+  lauta: getComputedStyle(document.querySelector('.staattinen')).display,
+}));
+vaadi('turvatilassa yleislehteä ei haeta eikä piirretä',
+  turva.turvatila && turva.yleis === 0 && turva.lehtia === 0
+  && !pyynnot.includes('MAAILMA') && turva.lauta !== 'none',
+  `${JSON.stringify(turva)} pyynnot=${[...new Set(pyynnot)].join(',')}`);
 
 vaadi('ei sivuvirheitä', virheet.length === 0, virheet.join(' | '));
 

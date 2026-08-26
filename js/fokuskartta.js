@@ -48,7 +48,9 @@
 import { el, paperinSavy } from './mapart.js';
 import { fokuskarttaUrl, peiliKaytossa } from './media.js';
 import { natiiviKuori } from './natiivi.js';
-import { FOKUS_LISANIMET, FOKUS_POHJAT, FOKUS_SVG_NIMET } from './packs/fokus-grc.js';
+import {
+  FOKUS_LISANIMET, FOKUS_POHJAT, FOKUS_SVG_NIMET, YLEISLEHTI,
+} from './packs/fokus-grc.js';
 
 /*
  * Maakohtaiset pohjat käynnin ajan muistissa: 'lauta:ISO' ->
@@ -63,6 +65,23 @@ const VARASTO = new Map();
 
 /** Kesken oleva haku maata kohti, jottei samaa haeta kahdesti. */
 const HAUT = new Map();
+
+/*
+ * Kaukozoomin yleislehden avain. Se ei ole maatunnus vaan oma
+ * erikoistapauksensa, ja sitä käytetään samassa varastossa kuin
+ * maalehtiä (`lauta:MAAILMA`) — koko latausketju purkuineen ja
+ * muistipienennyksineen on täsmälleen sama, vain rajaus tulee toisesta
+ * taulusta (ks. pohjanTiedot).
+ */
+const YLEISLEHDEN_AVAIN = 'MAAILMA';
+
+/**
+ * Lehden rajaustiedot avaimesta: maalehdet FOKUS_POHJAT-taulusta ja
+ * kaukozoomin yleislehti omastaan (js/packs/fokus-grc.js YLEISLEHTI).
+ */
+function pohjanTiedot(iso) {
+  return iso === YLEISLEHDEN_AVAIN ? YLEISLEHTI : FOKUS_POHJAT[iso];
+}
 
 /**
  * Minkä maan pohja kuuluu juuri nyt näkyä?
@@ -606,7 +625,7 @@ async function haePohja(iso, lauta, map = null) {
        * tuotannossa 24.8.2026. Kuva pysyy ämpärissä (iso), rajaus
        * repossa (pieni ja muuttumaton).
        */
-      const tiedot = FOKUS_POHJAT[iso];
+      const tiedot = pohjanTiedot(iso);
       if (!tiedot) throw new Error('ei pohjaa');
       const b = tiedot.bbox;
       if (!(b?.w > 0) || !(b?.h > 0)) throw new Error('rajaus puuttuu');
@@ -1139,9 +1158,12 @@ function atlasRyhma(ui) {
   let g = kerros.querySelector('.fokus-atlas');
   if (!g) {
     // ENSIMMÄISENÄ LAPSENA: nykyisen maan lehti (.fokus-lehti) on tämän
-    // päällä, jotta kohdemaa ei jää naapurin vuodon alle.
+    // päällä, jotta kohdemaa ei jää naapurin vuodon alle. Yleislehti on
+    // ainoa, joka menee tämänkin alle — se on koko laudan kokoinen
+    // pohja, ei naapuri.
     g = el('g', { class: 'fokus-atlas', 'pointer-events': 'none' });
-    kerros.insertBefore(g, kerros.firstChild);
+    const yleis = kerros.querySelector('.fokus-yleislehti');
+    kerros.insertBefore(g, yleis ? yleis.nextSibling : kerros.firstChild);
   }
   return g;
 }
@@ -1324,6 +1346,147 @@ function karsiAtlas(ui, lauta, suojatut) {
   }
 }
 
+/*
+ * ============ KAUKOZOOMIN YLEISLEHTI (omistajan tilaus 26.8.2026) ====
+ *
+ * *"Uloszoomattu maailmankartta näyttää tilkkutäkiltä"*, koska jokainen
+ * maalehti korostaa omaa maataan ja piirtää naapurit haaleina — kaksi
+ * vierekkäistä lehteä esittää saman rajaseudun eri voimalla. Vastaus on
+ * YKSI koko laudan kattava lehti ilman maakorostuksia
+ * (tools/tee-yleislehti.mjs, js/packs/fokus-grc.js YLEISLEHTI), joka
+ * näytetään kaukaa ja väistyy maalehtien tieltä lähempänä.
+ *
+ * === KYNNYS ON 2600 LAUTAYKSIKKÖÄ, JA SE ON MITTA EIKÄ MAKUASIA ===
+ *
+ * Yleislehti on 6400 pikseliä koko laudan 12000 yksikölle eli 0,53
+ * kuvapikseliä yksikköä kohti. Kun näkymä on 2600 yksikköä leveä, sitä
+ * katsotaan noin 1:1 (2600 x 0,53 = 1387 kuvapikseliä tuhatkunnan
+ * pisteen ruudulle); sitä lähempänä kuvaa alettaisiin suurentaa, ja
+ * juuri siinä kohtaa maalehtien tarkkuutta tarvitaan. Toisin päin
+ * katsottuna 2600 yksikköä on mannerta leveämpi näkymä — Eurooppa on
+ * laudalla noin 1700 ja Afrikka 2300 yksikköä leveä — joten yhdenkään
+ * maan lehti ei ole siinä mittakaavassa enää luettava.
+ *
+ * HYSTEREESI ±10 % on pakollinen eikä hienosäätöä. Ilman sitä kynnyksen
+ * päällä keikkuva näkymä purkaisi ja hakisi lehdet vuorotellen joka
+ * kehyksessä — sama välkyntä, joka atlaksen valinnasta jouduttiin
+ * poistamaan (ks. "HYSTEREESI VÄLKKYMISTÄ VASTAAN").
+ *
+ * === MAALEHDET PURETAAN, JA SE ON KOKO PALKINTO ===
+ *
+ * Kaukozoomissa kartalla oli tähän asti neljä tai viisi maalehteä —
+ * pienennettynäkin 6,4 megapikseliä kappale — eikä yksikään niistä
+ * näyttänyt yhtään yksityiskohtaa, jota tässä mittakaavassa lukisi.
+ * Kun yleislehti tulee tilalle, kaikki maalehdet irrotetaan DOMista
+ * (juuri se vapauttaa puretun kuvan) ja muistiin jää yksi kuva.
+ * Lähizoomissa mikään ei muutu: katot, LRU ja valinta ovat ennallaan.
+ *
+ * TURVATILASSA EI YLEISLEHTEÄKÄÄN. Sama sääntö kuin muillakin lehdillä
+ * (atlasTurvatila): turvatilassa ei pureta yhtäkään isoa kuvaa, ja
+ * laudan oma pergamentti riittää. Tämä koodi on atlasPaallan takana,
+ * joten turvatilassa yleislehteä ei edes haeta.
+ */
+const KAUKOZOOMIN_RAJA = 2600;
+const KAUKOZOOMIN_HYSTEREESI = 0.1;
+
+/** Onko näkymä kaukozoomissa? Edellinen tila ratkaisee kynnyksen välissä. */
+function kaukozoomissa(ui, leveys) {
+  if (!(leveys > 0)) return false;
+  if (leveys > KAUKOZOOMIN_RAJA * (1 + KAUKOZOOMIN_HYSTEREESI)) return true;
+  if (leveys < KAUKOZOOMIN_RAJA * (1 - KAUKOZOOMIN_HYSTEREESI)) return false;
+  return Boolean(ui.yleislehtiPaalla);
+}
+
+/** Yleislehden oma ryhmä — kaiken muun alla, koska se on pohja. */
+function yleislehtiRyhma(ui) {
+  const kerros = ui.fokuskarttaKerros;
+  if (!kerros) return null;
+  let g = kerros.querySelector('.fokus-yleislehti');
+  if (!g) {
+    g = el('g', { class: 'fokus-yleislehti', 'pointer-events': 'none' });
+    kerros.insertBefore(g, kerros.firstChild);
+  }
+  return g;
+}
+
+/**
+ * Hakee ja piirtää yleislehden, jos sitä ei jo ole kartalla.
+ *
+ * Lehti kulkee saman haun ja saman muistipienennyksen läpi kuin
+ * maalehdet (haePohja → lataaLehti), joten puhelimessa ja kuoressa se
+ * puretaan pienennettynä eikä täytenä.
+ */
+function naytaYleislehti(ui, lauta) {
+  const ryhma = yleislehtiRyhma(ui);
+  if (!ryhma) return;
+  if (YLEISLEHTI?.lauta && YLEISLEHTI.lauta !== lauta) return;
+  if (ryhma.querySelector('image') || ui.yleislehtiHaku) return;
+  ui.yleislehtiHaku = true;
+  void haePohja(YLEISLEHDEN_AVAIN, lauta, ui.game.pack.map).then((pohja) => {
+    ui.yleislehtiHaku = false;
+    if (ui.dead || !pohja?.kuva || !ui.fokuskarttaKerros) return;
+    // Näkymä on voinut palata lähikuvaan haun aikana; silloin lehti
+    // jää varastoon eikä kartalle.
+    if (!ui.yleislehtiPaalla || ui.game.pack.id !== lauta) return;
+    const kohde = yleislehtiRyhma(ui);
+    if (!kohde || kohde.querySelector('image')) return;
+    pohja.piirretty = true;
+    el('image', {
+      x: pohja.bbox.x,
+      y: pohja.bbox.y,
+      width: pohja.bbox.w,
+      height: pohja.bbox.h,
+      href: pohja.kuva,
+      preserveAspectRatio: 'none',
+      class: 'fokuskartta-kuva',
+    }, kohde);
+  });
+}
+
+/** Yleislehti pois kartalta ja sen blob-osoite vapautettavaksi. */
+function poistaYleislehti(ui) {
+  const ryhma = ui.fokuskarttaKerros?.querySelector('.fokus-yleislehti');
+  if (!ryhma?.firstChild) return;
+  ryhma.replaceChildren();
+  siivoaLehtiUrlit(ui);
+}
+
+/**
+ * Palauttaa nykyisen maan lehden kartalle kaukozoomin jälkeen.
+ *
+ * Maa ei vaihtunut, joten paivitaFokuskartta ei tee mitään (se vertaa
+ * vain avainta) — ja purettu lehti on irrotettu DOMista. Atlaksen muut
+ * lehdet palaavat itsestään, koska valinnan tunniste nollataan.
+ *
+ * YLEISLEHTI POISTETAAN VASTA TÄSSÄ, EI HETI KYNNYKSEN ALITTUESSA.
+ * Maalehden purku kestää satoja millisekunteja (blob-osoite on voitu jo
+ * vapauttaa), ja jos pohja vedettäisiin alta samassa kehyksessä, väliin
+ * jäisi välähdys tyhjää pergamenttia. `yleislehtiPalautus` kertoo
+ * kutsujalle, että poisto on jo hoidossa.
+ */
+function palautaMaalehti(ui) {
+  const valmis = () => {
+    ui.yleislehtiPalautus = false;
+    if (!ui.yleislehtiPaalla) poistaYleislehti(ui);
+  };
+  const iso = ui.fokuskarttaAvain;
+  const ryhma = lehtiRyhma(ui);
+  if (!iso || iso === 'pois' || !ryhma || ryhma.querySelector('image')) {
+    valmis();
+    return;
+  }
+  const lauta = ui.game.pack.id;
+  ui.yleislehtiPalautus = true;
+  void haePohja(iso, lauta, ui.game.pack.map).then((pohja) => {
+    if (ui.dead) return;
+    if (pohja?.kuva && ui.fokuskarttaAvain === iso && !ui.yleislehtiPaalla
+      && ui.game.pack.id === lauta) piirra(ui, iso, pohja);
+    // Myös epäonnistunut haku päättää palautuksen: yleislehti ei saa
+    // jäädä muistiin siksi, ettei maalla ollutkaan omaa lehteä.
+    valmis();
+  });
+}
+
 /**
  * Tahdistaa atlaksen näkymään. Kutsutaan aina kun näkymä on ASETTUNUT
  * (js/ui.js paivitaMaastonimet) ja fokuskerroksen päivityksestä.
@@ -1348,6 +1511,11 @@ export function paivitaFokusAtlas(ui) {
   ui.atlasLehdet ??= new Map();
   ui.atlasHaut ??= new Set();
   if (!atlas) {
+    // Turvatila ja fokusmoodin sammutus vievät myös yleislehden: tässä
+    // haarassa kartalle ei jätetä yhtäkään purettua kuvaa.
+    ui.yleislehtiPaalla = false;
+    ui.yleislehtiPalautus = false;
+    poistaYleislehti(ui);
     if (ui.atlasLehdet.size) {
       for (const iso of [...ui.atlasLehdet.keys()]) vapautaLehti(ui, iso);
       ui.atlasAvain = null;
@@ -1358,6 +1526,44 @@ export function paivitaFokusAtlas(ui) {
   const nakyva = ui.nakyvaAlue?.();
   if (!nakyva?.w) return;
   const lauta = ui.game.pack.id;
+
+  /*
+   * KAUKOZOOMI ENNEN VALINTAA (ks. "KAUKOZOOMIN YLEISLEHTI"): jos
+   * näkymä on mannerta leveämpi, kartalla on yksi yhtenäinen lehti ja
+   * maalehdet puretaan pois. Tila muistetaan, koska kynnyksellä on
+   * hystereesi.
+   */
+  const kauko = kaukozoomissa(ui, nakyva.w);
+  if (Boolean(ui.yleislehtiPaalla) !== kauko) {
+    ui.yleislehtiPaalla = kauko;
+    // Valinta on laskettava uudelleen kumpaankin suuntaan: lehdet joko
+    // purettiin juuri tai ne kuuluu hakea takaisin.
+    ui.atlasAvain = null;
+    if (!kauko) palautaMaalehti(ui);
+  }
+  if (kauko) {
+    if (ui.atlasLehdet.size) {
+      for (const iso of [...ui.atlasLehdet.keys()]) vapautaLehti(ui, iso);
+      ui.paivitaAtlasVerho?.();
+    }
+    /*
+     * MYÖS NYKYISEN MAAN LEHTI PURETAAN. Se on kaukozoomissa yhtä
+     * lukukelvoton tilkku kuin naapurien lehdet, ja sen purettu kuva on
+     * suurin yksittäinen erä muistia. Maan tunnus (fokuskarttaAvain)
+     * jää ennalleen, joten paluu lähizoomiin piirtää sen takaisin
+     * (palautaMaalehti) ilman että peli luulee maan vaihtuneen.
+     */
+    const oma = lehtiRyhma(ui);
+    if (oma?.firstChild) {
+      oma.replaceChildren();
+      siivoaLehtiUrlit(ui);
+    }
+    naytaYleislehti(ui, lauta);
+    return;
+  }
+  // Kesken oleva palautus poistaa yleislehden itse, kun maalehti on
+  // kartalla (palautaMaalehti) — muuten se poistetaan tässä.
+  if (!ui.yleislehtiPalautus) poistaYleislehti(ui);
   const nykyinen = ui.fokuskarttaAvain !== 'pois' ? ui.fokuskarttaAvain : null;
   ui.atlasOmaMp = nykyinen ? lehdenMp(nykyinen, lauta) : 0;
   // Karkea tunniste: kymmenesosa näkymän mitasta riittää tarkkuudeksi.
@@ -1655,6 +1861,14 @@ export function paivitaFokuskartta(ui) {
     // Maa on voinut vaihtua haun aikana (botti, nopea siirto).
     if (ui.dead || !pohja?.kuva || ui.fokuskarttaAvain !== iso || !ui.fokuskarttaKerros) return;
     /*
+     * KAUKOZOOMISSA MAALEHTEÄ EI PIIRRETÄ. Näkymä on voinut loitontua
+     * haun aikana, ja silloin kartalla on yleislehti — juuri tästä
+     * haarasta tullut maalehti jäisi sen päälle tilkuksi, jota mikään
+     * ei enää irrottaisi ennen seuraavaa maanvaihtoa. Lehti palaa
+     * lähizoomissa (palautaMaalehti).
+     */
+    if (ui.yleislehtiPaalla) return;
+    /*
      * KAMERA AJAA LEHDEN IKKUNAAN, EI KOKO KUVAAN. Kuvassa on ikkunan
      * ympärillä vuotoa, jonka tehtävä on jäädä ruudun ulkopuolelle — jos
      * kamera sovittaisi koko kuvan, pelaaja näkisi lehden pienenä ruudun
@@ -1727,6 +1941,11 @@ export function nollaaFokuskartta(ui) {
   ui.atlasHaut?.clear();
   ui.atlasAvain = null;
   ui.atlasOmaMp = 0;
+  // Yleislehden ryhmä katosi kerroksen mukana; tila on nollattava
+  // erikseen tai uusi lauta luulisi lehden olevan yhä kartalla.
+  ui.yleislehtiPaalla = false;
+  ui.yleislehtiHaku = false;
+  ui.yleislehtiPalautus = false;
   // Kerros on tyhjä, joten jokainen pienennetyn lehden blob-osoite on
   // nyt käyttämätön — ne vapautuvat kaikki tässä.
   siivoaLehtiUrlit(ui);

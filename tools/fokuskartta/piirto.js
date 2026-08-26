@@ -65,11 +65,26 @@
 /* ------------------------------------------------------------ paletti */
 
 /*
+ * PALETTI JA KOHINA OVAT VIETYJÄ, KOSKA LEHTIÄ ON NYT KAKSI LAJIA.
+ *
+ * Maalehden rinnalle tuli kaukozoomin YLEISLEHTI (tools/tee-yleislehti.mjs,
+ * moottori tools/fokuskartta/maailmapiirto.js): yksi koko laudan
+ * kattava kuva ilman maakorostuksia. Sen on näytettävä samalta
+ * paperilta kuin maalehtien — sama hypsometria, sama meren
+ * syvyysporrastus, sama rae — tai kaukozoomin ja lähizoomin välissä
+ * välähtäisi kaksi eri karttaa.
+ *
+ * Siksi asteikot ja kohinageneraattorit asuvat TÄSSÄ yhtenä kappaleena
+ * ja maailmanmoottori tuo ne täältä. Kopio olisi juuri se tapa, jolla
+ * kaksi karttaa ehtii ajautua eri sävyihin.
+ */
+
+/*
  * Hypsometrinen asteikko. Alanko on haalean khakinvihreä (1873-atlaksen
  * tapa), ylöspäin lämpimän ruskean puolelle — sama väriperhe kuin pelin
  * seepiakartassa (#e7d2a4 -> #c69257 -> #a2603a).
  */
-const ASTEIKKO = [
+export const ASTEIKKO = [
   { m: -60, v: [214, 202, 168] },
   { m: 0, v: [221, 216, 173] },
   { m: 200, v: [226, 212, 163] },
@@ -100,7 +115,7 @@ const ASTEIKKO = [
  * kuvassa, joten valtamerilehtien ilme ei muutu — muuttuu se, että
  * mannerjalusta erottuu vihdoin ulapasta ja paperista.
  */
-const SYVYYS = [
+export const SYVYYS = [
   { m: 0, v: [222, 215, 190] },
   { m: -30, v: [206, 201, 183] },
   { m: -120, v: [199, 195, 180] },
@@ -110,8 +125,8 @@ const SYVYYS = [
   { m: -5000, v: [180, 178, 168] },
 ];
 
-const PAPERI = '#e8dcbc';
-const MUSTE = '#4a3421';
+export const PAPERI = '#e8dcbc';
+export const MUSTE = '#4a3421';
 
 /*
  * Naapurit piirretään PUOLIKKAALLA tarkkuudella ja venytetään paikalleen.
@@ -127,7 +142,7 @@ const NAAPURI_JAKO = 2;
 
 /* ------------------------------------------------------------- apurit */
 
-function mulberry32(a) {
+export function mulberry32(a) {
   return function satunnainen() {
     a |= 0; a = (a + 0x6D2B79F5) | 0;
     let t = Math.imul(a ^ (a >>> 15), 1 | a);
@@ -137,7 +152,7 @@ function mulberry32(a) {
 }
 
 /** Siemenellinen arvokohina: 256x256 taulu ja bilineaarinen haku. */
-function teeKohina(siemen) {
+export function teeKohina(siemen) {
   const N = 256;
   const rnd = mulberry32(siemen);
   const t = new Float32Array(N * N);
@@ -155,7 +170,7 @@ function teeKohina(siemen) {
   };
 }
 
-function fbm(kohina, x, y, oktaavit = 4) {
+export function fbm(kohina, x, y, oktaavit = 4) {
   let s = 0; let amp = 0.5; let f = 1; let norm = 0;
   for (let i = 0; i < oktaavit; i++) {
     s += amp * kohina(x * f, y * f);
@@ -164,11 +179,11 @@ function fbm(kohina, x, y, oktaavit = 4) {
   return s / norm;
 }
 
-const KOHINA = teeKohina(18730425);
-const KOHINA2 = teeKohina(90211);
+export const KOHINA = teeKohina(18730425);
+export const KOHINA2 = teeKohina(90211);
 
 /** Lineaarinen väriliuku asteikolta, joka on järjestetty NOUSEVASTI. */
-function lerpVari(asteikko, m) {
+export function lerpVari(asteikko, m) {
   if (m <= asteikko[0].m) return asteikko[0].v;
   for (let i = 1; i < asteikko.length; i++) {
     if (m <= asteikko[i].m) {
@@ -185,7 +200,7 @@ function lerpVari(asteikko, m) {
 }
 
 /** Sama LASKEVALLE asteikolle: syvyys menee nollasta alaspäin. */
-function lerpSyvyys(m) {
+export function lerpSyvyys(m) {
   if (m >= 0) return SYVYYS[0].v;
   for (let i = 1; i < SYVYYS.length; i++) {
     if (m >= SYVYYS[i].m) {
