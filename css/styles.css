@@ -5253,12 +5253,15 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 }
 
 /*
- * ALALOHKO: TYHJÄ VAALEA KARTTAPOHJA.
+ * ALALOHKO: TYHJÄ KARTTAPINTA.
  *
- * Peittävä pergamentti samasta sävymaailmasta kuin paneelin oma pohja
- * (body.aloitusnakyma .map-pane) — kartta ei paista läpi, joten teksti
- * lepää tyhjällä paperilla. Yläreuna ei ole viivasuora leikkaus vaan
- * häivytys (::before), jolloin sumennettu kartta liukuu paperiin.
+ * EI OMAA TAUSTAA (omistajan oikaisu 26.8.2026: *"alaosa ei vaadi
+ * mitään erillistä vaaleampaa aluetta — kartan pohjaa vain voisi
+ * jatkaa alaspäin, eli tavallaan tyhjää karttapintaa"*). Kartan oma
+ * pergamentti jatkuu laudan alla (js/kartta.js INTRO_SPACE), joten
+ * teksti lepää suoraan sillä; luettavuuden hoitaa koko paneelin
+ * kattava .intro-verho. Aiempi peittävä liukuväri teki alalohkosta
+ * erottuvan vaaleamman arkin ja sauman kartan alalaitaan.
  */
 .intro-arkki {
   position: relative;
@@ -5267,7 +5270,6 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, #f4e5c3 0%, #eeddb2 55%, #e6d2a2 100%);
   /* Arkki nousee sumuverhon kanssa samaan tahtiin vasta Aloita
      seikkailu -napin jälkeen: portin takana lauta on iso ja keskellä,
      eikä sen päälle lasketa paperia. */
@@ -5276,18 +5278,6 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 }
 
 .intro.intro-aloitettu .intro-arkki { opacity: 1; }
-
-.intro-arkki::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  /* Häivytyskaista arkin YLÄPUOLELLE, kartan alalaidan päälle. */
-  bottom: 100%;
-  height: 2.2em;
-  background: linear-gradient(180deg, rgba(244, 229, 195, 0) 0%, rgba(244, 229, 195, 0.75) 65%, #f4e5c3 100%);
-  pointer-events: none;
-}
 
 /*
  * Itse palsta. Kirjasinkoon asettaa js/ui.js fitIntro TÄHÄN elementtiin,

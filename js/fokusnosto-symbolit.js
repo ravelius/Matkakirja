@@ -95,9 +95,10 @@ function piirraNostosymHuuto(g) {
  * mutta poikasena: korvatupsut ovat vasta töpöt ja kroppa on melkein
  * pallo.
  *
- * Kreikan poolissa ei ole vielä yhtäkään eläintäkyä, mutta symboli on
- * valmiina: uusi täky saa sen kentällä `symboli: 'elain'` ilman että
- * tähän tiedostoon kosketaan.
+ * Symboli valitaan datasta: täky saa sen kentällä `symboli: 'elain'`
+ * ilman että tähän tiedostoon kosketaan. Kreikan poolin ensimmäiset
+ * käyttäjät ovat pikkupöllö ja reunuskilpikonna (js/fokusnosto.js
+ * NOSTO_MAAT.GRC).
  */
 function piirraNostosymPollo(g) {
   el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);

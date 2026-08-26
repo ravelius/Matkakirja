@@ -39,6 +39,25 @@ export const RAAMATTU = {
         'SYDÄNTEEMA: ihminen on peruskysymysten äärellä yhtä pihalla '
           + 'kuin ennenkin. Poika yrittää ymmärtää isoisäänsä — siihen '
           + 'pelin loppu päättyy.',
+        'NIMEN KAKSI TASOA (omistaja 26.8.2026): Unohdetulla '
+          + 'aarteella on kaksi tasoa. (a) PELIN MAAILMASSA: Aarnin '
+          + 'luettelon aarteet ovat oikeasti olemassa — ne on vain '
+          + 'unohdettu. Samaa etsintää on isoisä itse: hänen '
+          + 'tarinansa on pojanpojalle aluksi yhtä kadoksissa ja '
+          + 'löytyy matkan varrella (sydänteeman jatke). (b) PELIN '
+          + 'YDINIDEANA: unohdettu aarre on kaikki se '
+          + 'kulttuuriperimän, taiteen, tieteen, löydösten ja '
+          + 'maailman epäkummallisuuksien rikkaus, joka tekee '
+          + 'ihmisenä olemisesta mielenkiintoista ja elämisen '
+          + 'arvoista — ja joka nykyisen some- ja AI-moskan keskellä '
+          + 'äkkiä unohtuu.',
+        'PELIN MISSIO AI-AIKANA (omistaja 26.8.2026): peli '
+          + 'valjastaa tekoälyn nimenomaan LÖYTÄMÄÄN tuon rikkauden '
+          + 'ja johdattamaan pelaajat rikastuttamaan omaa elämäänsä '
+          + 'eri maiden kulttuureilla, yleistiedolla ja '
+          + 'laaja-alaisemmalla ymmärryksellä historian ja politiikan '
+          + 'tapahtumista ja niiden vaikutuksista. AI on VASTAVOIMA '
+          + 'sisältömoskalle, ei sen lähde.',
       ],
     },
     {
@@ -609,10 +628,14 @@ export const RAAMATTU = {
           + 'saa aueta pelin sisäiseen ikkunaan vain jos sivusto ei '
           + 'estä upotusta EIKÄ KIELLÄ sitä ehdoissaan; muuten '
           + 'linkkinä laitteen selaimeen (avaustapa on datassa, '
-          + 'oletus linkki). Akropolis-kierros AVATAAN LINKKINÄ: '
-          + 'Kreikan kulttuuriministeriön ehdot kieltävät sivujensa '
-          + 'kehystämisen, vaikka palvelin ei otsakkeilla estä — '
-          + 'linkittämiseen ehdot kannustavat. (6) AARTEEN PALJASTUS '
+          + 'oletus linkki). TARKENNUS (omistaja 26.8.2026 ilta): '
+          + 'kierros otetaan peliin VAIN jos se aukeaa pelin sisällä '
+          + '— acropolisvirtualtour.gr jäi siksi kokonaan pois '
+          + '(ministeriön ehdot kieltävät kehystämisen), ja tilalle '
+          + 'tulivat Akropolis-museon KOLME Google Arts & Culture '
+          + '-upotusta (Parthenon-galleria, rinteet, kaivaus museon '
+          + 'alla; museo julkaisee embed-osoitteet itse, joten upotus '
+          + 'on sekä sallittu että tarkoitettu). (6) AARTEEN PALJASTUS '
           + 'mustalla pohjalla + JATKA MATKAA -nappi; "taskuun"-rivi '
           + 'pois toistaiseksi. (7) ÄÄNIVALIKKO erittelee KERTOJAN '
           + 'ja TAUSTAÄÄNET; matkakirjan kaiutinnappi synkassa '
@@ -622,6 +645,34 @@ export const RAAMATTU = {
           + 'paikasta kartalla." + suora linkki lehden oikeaan '
           + 'kappaleeseen; aarrekuittaus "Aarteen jälki syttyi: '
           + 'vihreä piste kartalla näyttää paikan." ~2,5 s viiveellä.',
+        'SYMBOLITAKSONOMIA (omistaja 26.8.2026 ilta: "tee kaikki '
+          + 'ehdotetut symbolit ja myös lisäkandidaatit; katsotaan '
+          + 'miten toimivat ja muutetaan sen perusteella"): kartan '
+          + 'täky- ja kohdemerkit kertovat KATEGORIANSA symbolilla — '
+          + 'ei enää pelkkiä pisteitä. KAKSITOISTA kategoriaa, '
+          + 'symbolia ja vaimeaa heraldista väriä: HUUTOMERKKI = '
+          + 'skandaalit ja hurjat tarinat (keltainen); PÖLLÖNPOIKANEN '
+          + '= eläimet (ruskea); SILMÄ = nähtävyydet ja multimedia '
+          + '(sininen); MURTUNUT PYLVÄS = historia ja rauniot '
+          + '(punaruskea); VUORENHUIPPU JA AALTO = luonto: vuoret, '
+          + 'joet, järvet (sinivihreä); HÖYRYÄVÄ MALJA = ruoka ja '
+          + 'juoma (viininpunainen); LYYRA = kulttuuri: musiikki, '
+          + 'teatteri, taide (violetti); HAMMASRATAS = tekniikka ja '
+          + 'keksinnöt (teräksenharmaa); VAAKA = kauppa ja raha '
+          + '(oliivi); SULKAKYNÄ = kieli, kirjallisuus ja legendat '
+          + '(tummansininen); ANKKURI = merenkulku ja satamat '
+          + '(meren tummansininen); LAAKERISEPPELE = urheilu ja kisat '
+          + '(kullanvihreä). MUOTO RATKAISEE, väri on toissijainen '
+          + 'vihje (pergamentilla vaimeat värit sekoittuvat). '
+          + 'Symbolit PIIRRETÄÄN KOODILLA 1800-luvun kaiverrustyyliin '
+          + '(terävät joka zoomilla, ei latauksia) yhteisestä '
+          + 'kirjastosta, jota käyttävät sekä täkysymbolit että '
+          + 'kohdemerkit; datakenttä on `symboli`, ja ilman kenttää '
+          + 'täky saa huutomerkin ja kohde vanhan pisteen. Vihreä '
+          + 'tuikkiva kohtaamispiste EI saa symbolia — sen erilaisuus '
+          + 'on sen merkki. ENSIMMÄINEN SISÄLTÖERÄ tällä sapluunalla: '
+          + 'Kreikka ja pelattavat naapurit (BGR, TUR) saavat eri '
+          + 'kategorioiden kohteita ja täkyjä.',
         'ASTEVERKKOERÄ (omistaja 26.8.2026): (1) ERIKOISPIIRIT '
           + '1800-luvun atlastyyliin — päiväntasaaja, Kravun ja '
           + 'Kauriin kääntöpiirit, pohjoinen napapiiri ja '
@@ -735,6 +786,15 @@ export const RAAMATTU = {
         'Ideapankki: imperiumit, kauppareitit, viestinnän historia, '
           + 'tutkimusmatkat, aikapyyhkäisy. Kerroksia enintään 2–3 '
           + 'kerralla.',
+        'IDEAPANKIN TÄYDENNYS (omistaja 26.8.2026): ihmisten '
+          + 'leviäminen maapallolla, silkkitiet, ristiretket, '
+          + 'kolonialismi, kielten leviäminen, öljynporauksen '
+          + 'vaikutus rahaliikenteeseen, dataverkkojen ja '
+          + 'puhelinverkkojen kehitys, rautateiden kehitys; lisäksi '
+          + 'kuvaajat, joilla näkee yksittäisen kaupungin kasvun '
+          + 'kerros kerrokselta (lavalinssin aihe). Linsseillä '
+          + 'karttapohjiin animoidaan aikajanatekniikalla erilaisia '
+          + 'näkökulmia.',
         'Toteutus: käsin tarkistettu data, pelin oma animaatio. '
           + 'Etusivulla kevyt vihjeanimaatio.',
         'KAMERA-AJOT (omistaja 24.8.2026): piirtomoottoriin '
@@ -1192,6 +1252,28 @@ export const RAAMATTU = {
           + 'lunastuskoodilla, jonka pelaaja syöttää peliin (pelissä '
           + 'ei ole tilejä, joten koodi on ainoa reitti oikealle '
           + 'pelaajalle).',
+      ],
+    },
+    {
+      /*
+       * Oma osio eikä Lukijoiden ehdotusten kohta: visio on pelin
+       * filosofista ydintä (ks. Ydinajatus, PELIN MISSIO AI-AIKANA)
+       * ja kantaa pidemmälle kuin nykyinen kanava.
+       */
+      otsikko: 'Sisältöeditori (visio)',
+      tila: 'luonnos — suunniteltu kehityssuunta',
+      kohdat: [
+        'EDITORIN KAUNEIN IDEA (omistajan visio 26.8.2026): kuka '
+          + 'tahansa voi tuottaa peliin näkyville asioita, jotka hän '
+          + 'kokee mielenkiintoisiksi ja merkityksellisiksi, mistä '
+          + 'päin maailmaa tahansa.',
+        'KOLME NÄKYVYYSTASOA: vain itselle → oma yhteisö → kaikille '
+          + 'pelaajille, kun sisältö täyttää pelin fakta- ja '
+          + 'laatukriteerit.',
+        'KURATOINTI: AI kokoaa ehdotetuista muutoksista tiiviin '
+          + 'tietopaketin, mutta RATKAISUT TEKEE AINA IHMINEN.',
+        'Nykyinen Lukijoilta-kanava ja pro-tuottajat (osio '
+          + '"Lukijoiden ehdotukset") ovat tämän ensimmäinen vaihe.',
       ],
     },
     {
