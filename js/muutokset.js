@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1128, teksti: 'Kartan panorointi sujuvaksi: mitatut juurisyyt pois' },
   { v: 1127, teksti: 'Paallekkaiset karttamerkit nippuun kaupungin viereen' },
   { v: 1126, teksti: 'Karttasymbolit 12 kategorialle kirjastosta' },
   { v: 1125, teksti: 'Maalehden luenta alkaa leipatekstista' },
