@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1147 — kohdekortin raahaus ei enaa rapsahda sormen irrotessa (avausanimaatio kaynnistyi uudelleen raahausluokan poistuessa)',
   'v1146 — kartan maataulun alarivi pelkistyi: Samat luvut kuin maan lehdessa -selite pois, jaljelle jai Maailmanpankki ja V-Dem',
   'v1145 — Kreetan lehden etusivulle kolmen herokuvan avauskaruselli (Arkadin luostari, Koulesin linnoitus, Rethymnon Fortezza; omistajan ChatGPT-era, silmatarkistettu) — korvaa Commons-vuoristomaisemat',
   'v1144 — Raamattuun omistajan linjaus: kaikki muu kuvagenerointi API:n kautta paitsi herokuvat; uusi generoi-symbolit.yml-eraajo (12 karttasymbolia gpt-image-1:lla lapinakyvalle pohjalle) — ei viela pelinakyvia muutoksia',
