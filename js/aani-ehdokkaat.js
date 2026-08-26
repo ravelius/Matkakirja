@@ -1092,12 +1092,35 @@ export function kertojaTila() {
   }
 }
 
+/**
+ * ÄÄNITILAN MUUTOKSESTA KERROTAAN KAIKILLE (omistajan pelitestipalaute
+ * v1119: kaiutinkuvake ja valikon KERTOJA-kytkin ovat saman pysyvän
+ * valinnan kaksi kahvaa, ja *"kumpikin päivittyy heti kun toista
+ * painetaan"*).
+ *
+ * Kytkin voi kääntyä kahdesta paikasta — päävalikosta (js/main.js) ja
+ * matkakirjakortin kaiuttimesta (js/ui.js) — eikä kumpikaan tunne
+ * toista. Tapahtuma on niiden yhteinen kello: kumpikin kuuntelee sitä
+ * ja piirtää oman ilmeensä uusiksi.
+ */
+export const AANITILA_TAPAHTUMA = 'matkakirja-aanitila';
+
+/** Ilmoittaa äänitilan muutoksesta (ks. AANITILA_TAPAHTUMA). */
+export function ilmoitaAanitila() {
+  try {
+    document.dispatchEvent(new CustomEvent(AANITILA_TAPAHTUMA));
+  } catch {
+    /* ei domia (yksikkötesti): kuuntelijoita ei ole */
+  }
+}
+
 export function asetaKertojaTila(tila) {
   try {
     localStorage.setItem(KERTOJA_AVAIN, tila);
   } catch {
     /* yksityinen selaustila — valinta ei säily */
   }
+  ilmoitaAanitila();
 }
 
 // Puheen voimakkuus: yksi yleinen säätö kaikkiin luentoihin (intro,

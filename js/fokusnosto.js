@@ -305,6 +305,9 @@ function nostoLataaTyyli() {
 
 /* ==================== MIKÄ NOSTO NOUSEE ==================== */
 
+/** Tunnetut symbolityypit; muu (ja puuttuva) on huutomerkki. */
+const NOSTO_SYMBOLIT = new Set(['huuto', 'elain', 'silma']);
+
 /** Miniatyyrin ja kortin kuvan pyyntöleveydet pikseleinä. */
 const NOSTO_MINI_PX = 160;
 const NOSTO_KUVA_PX = 800;
@@ -377,7 +380,26 @@ function nostoJaljella(ui) {
  */
 function nostoVuorossa(ui, jaljella) {
   if (!jaljella.length) return null;
-  return jaljella.find((n) => n.id === ui?.fokusnostoValittu) ?? jaljella[0];
+  /*
+   * PELAAJAN OMA VALINTA VOITTAA AINA. Symbolin napautus on pyyntö
+   * nähdä juuri se täky, eikä sitä rajoita mikään kiintiö.
+   */
+  const valittu = jaljella.find((n) => n.id === ui?.fokusnostoValittu);
+  if (valittu) return valittu;
+  /*
+   * VAIN YKSI KUPLA ITSESTÄÄN (omistajan tilaus v1119, kohta 20:
+   * *"Ruudulle saa tulla VAIN YKSI täkykupla, eikä sen jälkeen enempää
+   * kuplia — KAIKKI muut täkyt näkyvät HETI kartalla symboleina"*).
+   *
+   * Ennen jokainen luettu täky nosti seuraavan kuplaan, ja kaupungissa
+   * saattoi ponnahtaa kolme kuplaa peräkkäin. Nyt ensimmäinen täky
+   * esittelee koko mekaniikan, ja loput odottavat symboleinaan sitä,
+   * että pelaaja napauttaa niitä. Lippu on istunnon tieto: uusi
+   * kaupunki samassa istunnossa ei ala kuplasta, koska mekaniikka on
+   * jo nähty.
+   */
+  if (ui?.fokusnostoKuplaNahty) return null;
+  return jaljella[0];
 }
 
 /* ==================== PAIKKA LAUDALLA ==================== */
@@ -405,9 +427,15 @@ function nostonPaikka(ui, nosto) {
  * paikka. Aktiivinen on mukana — symbolikerros piirtää sen kohdalle
  * kuplan ankkurin symbolin sijaan.
  *
- * SYMBOLI TULEE DATASTA: `symboli: 'elain'` antaa pöllövauvan, muut
- * (ja puuttuva kenttä) keltaisen huutomerkin. Kreikan poolissa ei ole
- * eläintäkyä, joten siellä huutomerkit riittävät.
+ * SYMBOLI TULEE DATASTA (v1119: kolme tyyppiä):
+ *   'elain'  pöllönpoikanen — söpö eläinkohde
+ *   'silma'  silmä — nähtävyys tai katsottava multimediakohde
+ *   muut ja puuttuva kenttä → keltainen huutomerkki
+ *
+ * KREIKAN POOLISSA EI OLE YHTÄKÄÄN ELÄINTÄKYÄ (tarkistettu v1119:
+ * NOSTO_MAAT.GRC — kolme täkyä, kaikki ilman symboli-kenttää). Se on
+ * sisältöpuute eikä koodivika: pöllönpoikanen piirtyy heti kun jokin
+ * täky saa kentän `symboli: 'elain'`.
  */
 function nostoMerkinnat(ui, jaljella) {
   const merkinnat = [];
@@ -417,7 +445,7 @@ function nostoMerkinnat(ui, jaljella) {
     merkinnat.push({
       id: nosto.id,
       otsikko: nosto.otsikko,
-      symboli: nosto.symboli === 'elain' ? 'elain' : 'huuto',
+      symboli: NOSTO_SYMBOLIT.has(nosto.symboli) ? nosto.symboli : 'huuto',
       paikka,
     });
   }
@@ -468,6 +496,12 @@ function nostoRuutuVapaa() {
  */
 const NOSTO_YRITYS_MS = 900;
 const NOSTO_YRITYKSIA = 30;
+/*
+ * Hengähdys sen jälkeen kun ruutu vapautui (pöllön kuittauskupla,
+ * lehti, lento). Omistajan tilaus v1119: *"muutaman sekunnin viive
+ * pöllön kuplan jälkeen"*.
+ */
+const NOSTO_KUPLAN_VIIVE_MS = 2600;
 
 /* ==================== NOSTON PIIRTO ==================== */
 
@@ -485,27 +519,27 @@ export function paivitaFokusnosto(ui, yritys = 0) {
   if (typeof document === 'undefined' || !ui) return;
   clearTimeout(ui.fokusnostoAjastin);
   const jaljella = nostoJaljella(ui);
-  const nosto = nostoVuorossa(ui, jaljella);
-  if (!nosto) {
+  if (!jaljella.length) {
     suljeFokusnosto(ui);
-    return;
-  }
-  if (!nostoRuutuVapaa()) {
-    suljeFokusnosto(ui);
-    if (yritys < NOSTO_YRITYKSIA) {
-      ui.fokusnostoAjastin = setTimeout(
-        () => paivitaFokusnosto(ui, yritys + 1), NOSTO_YRITYS_MS,
-      );
-    }
     return;
   }
   nostoLataaTyyli();
-  const paikka = nostonPaikka(ui, nosto);
+  const nosto = nostoVuorossa(ui, jaljella);
+  const paikka = nosto ? nostonPaikka(ui, nosto) : null;
   const merkinnat = nostoMerkinnat(ui, jaljella);
   /*
-   * SYMBOLIT ENSIN: kerros vertaa omaa avaintaan ja tekee työtä vain kun
-   * lista tai aktiivinen vaihtui. Kupla tarvitsee kerroksen ankkurin,
-   * joten sen on oltava kartalla ennen kuin kuplaa asemoidaan.
+   * SYMBOLIT HETI JA AINA (omistajan tilaus v1119, kohta 20b: *"muut
+   * symbolit (huutomerkit ym.) ilmestyvät laudalle HETI"*).
+   *
+   * Tässä oli ennen varhainen paluu: jos ruutu oli varattu (pöllön
+   * kuittauskupla, lehti, lento), koko nostokerros purettiin ja
+   * symbolitkin katosivat kartalta. Symbolit eivät kuitenkaan ole
+   * kelluvia pintoja vaan kartan omia merkkejä — ne eivät ole kenenkään
+   * tiellä. Vain KUPLA odottaa vuoroaan (alla).
+   *
+   * Kerros vertaa omaa avaintaan ja tekee työtä vain kun lista tai
+   * aktiivinen vaihtui. Kupla tarvitsee kerroksen ankkurin, joten sen
+   * on oltava kartalla ennen kuin kuplaa asemoidaan.
    */
   paivitaNostosymbolit(ui, {
     aktiivinen: paikka ? nosto.id : null,
@@ -516,6 +550,33 @@ export function paivitaFokusnosto(ui, yritys = 0) {
   // on ruudun elementti eikä liiku kartan mukana.
   if (merkinnat.length) nostoVahdiKarttaa(ui);
   else nostoLopetaVahti(ui);
+  // Kuplan vuoro on käytetty (vain yksi itsestään): kartalle jää symbolit.
+  if (!nosto) { nostoPintaPois(ui); return; }
+  if (!nostoRuutuVapaa()) {
+    nostoPintaPois(ui);
+    ui.fokusnostoRuutuOliVarattu = true;
+    if (yritys < NOSTO_YRITYKSIA) {
+      ui.fokusnostoAjastin = setTimeout(
+        () => paivitaFokusnosto(ui, yritys + 1), NOSTO_YRITYS_MS,
+      );
+    }
+    return;
+  }
+  /*
+   * HENGÄHDYS PÖLLÖN KUPLAN JÄLKEEN (omistajan tilaus v1119, kohta
+   * 20b: *"ENSIMMÄINEN täkynosto (kupla) tulee kartalle heti kun aarre
+   * on löytynyt JA pöllön kuittauskupla on näytetty — muutaman
+   * sekunnin viive pöllön kuplan jälkeen"*).
+   *
+   * Ruutu vapautui juuri: kuplaa ei nosteta samassa silmänräpäyksessä
+   * kuin edellinen katosi, vaan sen verran myöhemmin että pelaaja
+   * ehtii nähdä kartan välissä.
+   */
+  if (ui.fokusnostoRuutuOliVarattu) {
+    ui.fokusnostoRuutuOliVarattu = false;
+    ui.fokusnostoAjastin = setTimeout(() => paivitaFokusnosto(ui), NOSTO_KUPLAN_VIIVE_MS);
+    return;
+  }
   /*
    * RUUDULLA OLEVA NOSTO JÄTETÄÄN RAUHAAN, jottei se aloita
    * nousuanimaatiotaan alusta joka piirrossa. Avaimessa on myös MUOTO:
@@ -533,6 +594,9 @@ export function paivitaFokusnosto(ui, yritys = 0) {
     return;
   }
   nostoPintaPois(ui);
+  // Kuplan kiintiö on käytetty: seuraavat täkyt jäävät symboleiksi
+  // (ks. nostoVuorossa). Lippu on istunnon tieto eikä tallennetta.
+  ui.fokusnostoKuplaNahty = true;
   ui.fokusnosto = {
     avain,
     id: nosto.id,

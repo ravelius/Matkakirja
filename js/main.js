@@ -11,7 +11,9 @@ import {
 import { sfx } from './sound.js';
 import { packById } from './pack.js';
 import { startQuizMusic, stopPlaceStream, stopQuizMusic } from './ambience-stream.js';
-import { kertojaTila, asetaKertojaTila } from './aani-ehdokkaat.js';
+import {
+  AANITILA_TAPAHTUMA, kertojaTila, asetaKertojaTila,
+} from './aani-ehdokkaat.js';
 import { stopDiaryVoice, stopIntroVoice } from './luenta.js';
 import { asennaPollo } from './pollo.js';
 // Sähkejärjestelmä: retkikunta, sähkeet ja kaveriapu (js/sahke.js).
@@ -98,7 +100,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1119';
+const APP_VERSION = '2026-08-09.1120';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -449,31 +451,51 @@ function startGame() {
 
 // --- äänet ------------------------------------------------------------------
 
-// Kertojavalikko yläpalkissa. Kolme tilaa (omistajan tiivistys
-// 10.8.2026: lyhyt kertoja pois, järjestys käännettiin): kaikki
-// äänet, äänet ilman kertojaa, äänet pois. Pelkät kuvakkeet ja
-// täppä. Mykistys on sound.js:n enabled-tila (muistetaan käyntien
-// yli), kertojan tila oma talletuksensa (aani-ehdokkaat.js) —
-// vanha talletettu 'lyhyt' luetaan pitkänä. (Palautettu v525:ssä:
-// v524:n versiokonfliktin ratkaisu pyyhkäisi tämän vahingossa.)
-const KERTOJA_KIRJA = '<path d="M4.5 11c2.3-1.1 4.6-1.1 7.5 0 2.9-1.1 5.2-1.1 7.5 0v8.2c-2.3-1.1-4.6-1.1-7.5 0-2.9-1.1-5.2-1.1-7.5 0z"/><path d="M12 11v8.2"/>';
-const KERTOJA_TILAT = [
+/*
+ * ÄÄNET: KAKSI KYTKINTÄ (omistajan pelitestipalaute v1119:
+ * *"Erittele ÄÄNET-osioon kaksi selkeää omaa päälle/pois-kytkintä:
+ * KERTOJA (luennat) ja TAUSTAÄÄNET (ambienssi + efektit) — kumpikin
+ * pysyvä valinta"*).
+ *
+ * MITÄ ENNEN OLI. Kolme kuvakenappia yhtenä valintaryhmänä: "kaikki
+ * äänet" (kertojatila 'pitka'), "äänet ilman kertojaa" (kertojatila
+ * 'ei') ja "äänet pois" (sound.js enabled = false). Kolme nappia
+ * kuvasi siis KAHTA riippumatonta tilaa, joista toinen oli piilotettu
+ * kolmanteen: mykistyksestä palatessa kertojan entinen valinta joko
+ * palasi tai ei, eikä valikosta näkynyt kumpi.
+ *
+ * MITEN NE MENIVÄT UUSIKSI:
+ *   vanha "kaikki äänet"        → KERTOJA päällä + TAUSTAÄÄNET päällä
+ *   vanha "äänet ilman kertojaa" → KERTOJA pois  + TAUSTAÄÄNET päällä
+ *   vanha "äänet pois"          → TAUSTAÄÄNET pois (kertojan oma
+ *                                 valinta säilyy erikseen)
+ *
+ * KERTOJA on kertojatila (js/aani-ehdokkaat.js): 'pitka' tai 'ei'.
+ * Sama kytkin on matkakirjakortin kaiuttimessa (js/luenta.js
+ * luentaKytkinPaalla), ja molemmat päivittyvät toisistaan
+ * AANITILA_TAPAHTUMAn kautta.
+ *
+ * TAUSTAÄÄNET on sound.js:n enabled-tila: äänimaisemat, tehosteet ja
+ * visamusiikki. Se EI enää vaienna kertojaa — luennat kulkevat oman
+ * kytkimensä kautta (js/luenta.js playDiaryVoice, playIntroVoice).
+ */
+const AANIKYTKIMET = [
   {
-    tila: 'pitka',
-    seloste: 'Kaikki äänet — kertoja lukee merkinnät ja avaustekstit',
-    ikoni: `${KERTOJA_KIRJA}<path d="M10.2 6.8a2.9 2.9 0 0 1 3.6 0"/><path d="M8.6 4.2a5.6 5.6 0 0 1 6.8 0"/>`,
+    avain: 'kertoja',
+    nimi: 'Kertoja',
+    seloste: 'Kertoja lukee matkakirjan merkinnät ja avaustekstin',
+    ikoni: '<path d="M4.5 11c2.3-1.1 4.6-1.1 7.5 0 2.9-1.1 5.2-1.1 7.5 0v8.2c-2.3-1.1-4.6-1.1-7.5 0-2.9-1.1-5.2-1.1-7.5 0z"/><path d="M12 11v8.2"/><path d="M10.2 6.8a2.9 2.9 0 0 1 3.6 0"/><path d="M8.6 4.2a5.6 5.6 0 0 1 6.8 0"/>',
+    paalla: () => kertojaTila() !== 'ei',
   },
   {
-    tila: 'ei',
-    seloste: 'Äänet ilman kertojaa — kaiutinnappi lukee pyydettäessä',
-    ikoni: `${KERTOJA_KIRJA}<path d="M5.4 5.4l13.2 13.2"/>`,
-  },
-  {
-    tila: 'mykistys',
-    seloste: 'Äänet pois',
-    ikoni: '<path d="M4.5 9.4h2.8l4.2-3.4v12l-4.2-3.4H4.5z"/><path d="M15.4 9.6l4.8 4.8M20.2 9.6l-4.8 4.8"/>',
+    avain: 'tausta',
+    nimi: 'Taustaäänet',
+    seloste: 'Äänimaisemat ja tehosteet',
+    ikoni: '<path d="M4.5 9.4h2.8l4.2-3.4v12l-4.2-3.4H4.5z"/><path d="M15.4 8.6a4.4 4.4 0 0 1 0 6.8"/><path d="M18.2 6.2a7.6 7.6 0 0 1 0 11.6"/>',
+    paalla: () => sfx.enabled,
   },
 ];
+
 /*
  * Kertojan äänet ovat päävalikossa auki valmiiksi (omistajan toive
  * 5.8.2026), joten avausnappia ja sen kuvaketta ei enää ole. Valikko
@@ -481,59 +503,71 @@ const KERTOJA_TILAT = [
  */
 const kertojaValikko = document.getElementById('kertoja-valikko');
 const svg = (piirto) => `<svg viewBox="0 0 24 24">${piirto}</svg>`;
-const nykyinenKertoja = () => {
-  if (!sfx.enabled) return 'mykistys';
-  const tila = kertojaTila();
-  // Poistunut 'lyhyt'-tila (10.8.2026) luetaan pitkänä, jotta vanha
-  // laitteelle talletettu valinta ei jätä valikkoa täpättömäksi.
-  return tila === 'lyhyt' ? 'pitka' : tila;
-};
 
 const naytaKertoja = () => {
-  const nyt = nykyinenKertoja();
   for (const rivi of kertojaValikko.querySelectorAll('button')) {
-    rivi.classList.toggle('valittu', rivi.dataset.tila === nyt);
+    const tiedot = AANIKYTKIMET.find((k) => k.avain === rivi.dataset.kytkin);
+    if (!tiedot) continue;
+    const paalla = tiedot.paalla();
+    rivi.classList.toggle('valittu', paalla);
+    rivi.setAttribute('aria-checked', paalla ? 'true' : 'false');
+    const tila = rivi.querySelector('.aanikytkin-tila');
+    if (tila) tila.textContent = paalla ? 'päällä' : 'pois';
   }
 };
 
-const valitseKertoja = (tila) => {
-  if (tila === 'mykistys') {
+/** KERTOJA päälle/pois. Sama tila kuin kortin kaiuttimessa. */
+const kaannaKertoja = (paalle) => {
+  asetaKertojaTila(paalle ? 'pitka' : 'ei');
+  // Pois kesken luennan: kertoja vaikenee heti eikä jää lauseen puoliväliin.
+  if (!paalle && ui) { stopDiaryVoice(ui); stopIntroVoice(ui); pysaytaLukija(); }
+  ui?.paivitaKaiutinTila?.();
+};
+
+/** TAUSTAÄÄNET päälle/pois (sound.js enabled). */
+const kaannaTausta = (paalle) => {
+  if (!paalle) {
     sfx.setEnabled(false);
-    // Kaikki soiva hiljenee heti: striimit, luennat, lukija ja lentomoottori.
+    // Kaikki soiva hiljenee heti: striimit, visamusiikki ja lentomoottori.
     stopPlaceStream();
     stopQuizMusic();
     sfx.stopFlight();
-    // Luennan pysäytys on luenta.js:n funktio, joka ottaa ui:n
-    // parametrina — metodikutsu ui:lle heitti TypeErrorin ja
-    // katkaisi valinnan ennen naytaKertojaa (omistajan havainto
-    // 18.8.2026: "valittu nappi ei päivity visuaalisesti").
-    if (ui) { stopDiaryVoice(ui); stopIntroVoice(ui); }
-    pysaytaLukija();
-  } else {
-    const oliMykistys = !sfx.enabled;
-    sfx.setEnabled(true); // palatessa kuuluu kuittausklikki
-    asetaKertojaTila(tila);
-    if (oliMykistys) {
-      ui?.syncAmbience();
-      if (ui?.game?.quiz) startQuizMusic(ui.game.pack.id);
-    }
-    // Kertojan vaihto hiljentää käynnissä olevan luennan; seuraava
-    // saapuminen luetaan uuden tilan mukaan.
-    if (tila === 'ei' && ui) stopDiaryVoice(ui);
+    return;
   }
+  sfx.setEnabled(true); // palatessa kuuluu kuittausklikki
+  ui?.syncAmbience();
+  if (ui?.game?.quiz) startQuizMusic(ui.game.pack.id);
+};
+
+const kaannaAani = (avain) => {
+  const tiedot = AANIKYTKIMET.find((k) => k.avain === avain);
+  if (!tiedot) return;
+  const paalle = !tiedot.paalla();
+  if (avain === 'kertoja') kaannaKertoja(paalle);
+  else kaannaTausta(paalle);
   naytaKertoja();
 };
 
-for (const tiedot of KERTOJA_TILAT) {
+for (const tiedot of AANIKYTKIMET) {
   const rivi = document.createElement('button');
   rivi.type = 'button';
-  rivi.dataset.tila = tiedot.tila;
+  rivi.className = 'aanikytkin';
+  rivi.dataset.kytkin = tiedot.avain;
+  // role="switch": ruudunlukija kertoo tilan eikä pelkkää nimeä.
+  rivi.setAttribute('role', 'switch');
   rivi.title = tiedot.seloste;
-  rivi.setAttribute('aria-label', tiedot.seloste);
-  rivi.innerHTML = `<span class="viiva-ikoni">${svg(tiedot.ikoni)}</span><span class="tappa">✓</span>`;
-  rivi.addEventListener('click', () => valitseKertoja(tiedot.tila));
+  rivi.setAttribute('aria-label', `${tiedot.nimi} — ${tiedot.seloste}`);
+  rivi.innerHTML = `<span class="viiva-ikoni">${svg(tiedot.ikoni)}</span>`
+    + `<span class="aanikytkin-nimi">${tiedot.nimi}</span>`
+    + '<span class="aanikytkin-tila"></span>';
+  rivi.addEventListener('click', () => kaannaAani(tiedot.avain));
   kertojaValikko.appendChild(rivi);
 }
+/*
+ * Kytkin voi kääntyä myös matkakirjakortin kaiuttimesta (js/ui.js):
+ * valikko kuulee siitä tapahtumana eikä jää näyttämään vanhaa tilaa.
+ */
+document.addEventListener(AANITILA_TAPAHTUMA, () => naytaKertoja());
 naytaKertoja();
 
 // --- päävalikko --------------------------------------------------------------

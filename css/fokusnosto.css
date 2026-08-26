@@ -355,6 +355,22 @@ body.kartalento .fokusnosto-kupla { opacity: 0; pointer-events: none; }
 
 .nostosym-tera { fill: var(--nosto-muste); }
 
+/*
+ * SILMÄSYMBOLIN KEHÄ (omistajan tilaus v1119, kohdat 19–20): sama
+ * musteviiva kuin muillakin symboleilla, mutta täyttö on okra — silmä
+ * lupaa katsottavaa, ja okra on tässä perheessä "tästä avautuu jotakin"
+ * -väri (vrt. huutomerkki).
+ */
+.nostosym-silmakaari {
+  fill: var(--nosto-okra);
+  stroke: var(--nosto-muste);
+  stroke-width: 0.9;
+  stroke-linejoin: round;
+}
+
+/* Terän kiilto: yksi vaalea piste, ettei silmä ole musta läiskä. */
+.nostosym-kiilto { fill: rgba(251, 246, 232, 0.9); }
+
 .nostosym-nokka {
   fill: var(--nosto-okra);
   stroke: var(--nosto-muste);

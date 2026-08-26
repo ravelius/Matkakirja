@@ -184,8 +184,9 @@ const alanappi = await sivu.evaluate(() => {
 vaadi('lehden alin "tapaa henkilö" -kohta on poissa',
   alanappi.piilossa, JSON.stringify(alanappi));
 
-// Pöllön vinkki lehden päällä + ruksi.
-await sivu.waitForTimeout(600);
+// Pöllön vinkki lehden päällä + ruksi. Kupla tulee tarkoituksella
+// vasta ~1,4 s hengähdyksen jälkeen (omistaja 26.8.2026).
+await sivu.waitForTimeout(2200);
 const vinkki = await sivu.evaluate(() => {
   const kupla = document.querySelector('.fokusvirta-vinkki');
   return {
@@ -194,7 +195,7 @@ const vinkki = await sivu.evaluate(() => {
   };
 });
 vaadi('pöllö vinkkaa lyhyesti lehden avautuessa',
-  vinkki.teksti.length > 0 && vinkki.teksti.length <= 70 && /minitehtäv/i.test(vinkki.teksti),
+  vinkki.teksti.length > 0 && vinkki.teksti.length <= 90 && /minitehtäv/i.test(vinkki.teksti),
   `${vinkki.teksti.length} mrk: ${vinkki.teksti}`);
 vaadi('vinkissä on "Älä näytä jatkossa" -ruksi', vinkki.ruksi);
 
@@ -251,7 +252,9 @@ const juliste = await sivu.evaluate(async () => {
     tulos: document.querySelector('#arrival-dialog .kulttuuri-tulos')?.textContent ?? '',
     lunasta: Boolean([...document.querySelectorAll('#arrival-dialog button')]
       .find((b) => /lunasta juliste/i.test(b.textContent))),
-    kokoelmassa: window.matkakirja.game.julisteet?.has('ateena') ?? false,
+    // v1120: tehtävä kantaa oman juliste-avaimen (tehtava.juliste =
+    // 'ateena-nike'), joka voittaa kaupungin oletusavaimen.
+    kokoelmassa: window.matkakirja.game.julisteet?.has('ateena-nike') ?? false,
   };
 });
 vaadi('JULISTE-tehtävästä saa julisteen ja Lunasta-napin',
@@ -309,22 +312,29 @@ const kohtaaminen = await sivu.evaluate(async () => {
   return {
     kortti: Boolean(kortti),
     otsikko: kortti?.querySelector('.fokusvirta-otsikko')?.textContent ?? '',
-    nappi: [...(kortti?.querySelectorAll('button') ?? [])]
-      .map((b) => b.textContent.trim()).find((t) => /tapaa/i.test(t)) ?? '',
+    // v1120: suora Tapaa-nappi korvattiin varmistuksella (Kyllä/Ei)
+    // ja kahden yrityksen pränttivaroituksella.
+    varmistus: kortti?.querySelector('.fokusvirta-varmistus')?.textContent ?? '',
+    varoitus: kortti?.querySelector('.fokusvirta-varoitus')?.textContent ?? '',
+    napit: [...(kortti?.querySelectorAll('button') ?? [])]
+      .map((b) => b.textContent.trim()).filter((t) => /^(kyllä|ei)$/i.test(t)),
   };
 });
 vaadi('pisteen napautus avaa Vartija Nikoksen kohtaamisen',
-  kohtaaminen.kortti && /nikos/i.test(kohtaaminen.otsikko) && /tapaa nikos/i.test(kohtaaminen.nappi),
+  kohtaaminen.kortti && /nikos/i.test(kohtaaminen.otsikko)
+    && /haluatko varmasti tavata/i.test(kohtaaminen.varmistus)
+    && /kaksi yritystä/i.test(kohtaaminen.varoitus)
+    && kohtaaminen.napit.length === 2,
   JSON.stringify(kohtaaminen));
 
 await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-kohtaaminen.png') });
 
-// Kohtaamisen nappi vie laattakysymykseen (sama actionQuiz kuin ennen).
+// Kohtaamisen Kyllä vie laattakysymykseen (sama actionQuiz kuin ennen).
 const kysymys = await sivu.evaluate(async () => {
   const { game } = window.matkakirja;
   game.phase = 'action';
   [...document.querySelectorAll('.fokusvirta-kortti button')]
-    .find((b) => /tapaa nikos/i.test(b.textContent))?.click();
+    .find((b) => /^kyllä$/i.test(b.textContent.trim()))?.click();
   await new Promise((r) => setTimeout(r, 900));
   return {
     kortti: document.querySelectorAll('.fokusvirta-kortti').length,
@@ -332,7 +342,7 @@ const kysymys = await sivu.evaluate(async () => {
     kysymys: Boolean(game.quiz),
   };
 });
-vaadi('Tapaa Nikos avaa laattakysymyksen ja sulkee kortin',
+vaadi('Kyllä avaa laattakysymyksen ja sulkee kortin',
   kysymys.kortti === 0 && (kysymys.kysymys || kysymys.vaihe === 'quiz'), JSON.stringify(kysymys));
 
 vaadi('ei sivuvirheitä kokeilutilassa', virheet.length === 0, virheet.join(' | '));

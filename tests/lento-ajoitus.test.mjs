@@ -234,11 +234,18 @@ test('paikannimet taipuvat kuplaan oikein', () => {
 test('lentokohtauksen koristeet ovat transformia ja peittävyyttä', () => {
   /*
    * iOS:n webapp-tila palauttaa suodatetun kerroksen tyhjänä (ks.
-   * tests/sw.test.mjs). Kohtauksen uudet osat — katkojälki, vanavesi,
-   * leima, vinjetti ja harsopilvet — eivät siksi saa käyttää yhtäkään
-   * suodatinta, ja niiden pehmeys on liu'uissa.
+   * tests/sw.test.mjs). Kohtauksen osat — katkojälki, vanavesi,
+   * laivareitit, vinjetti ja harsopilvet — eivät siksi saa käyttää
+   * yhtäkään suodatinta, ja niiden pehmeys on liu'uissa.
+   *
+   * SAAPUMISLEIMA (.lento-leima) OLI TÄSSÄ LISTASSA. Se poistettiin
+   * v1119:ssä omistajan pelitestipalautteesta (*"näkyy vain lopussa,
+   * turha"*), ja sen tilalle tulivat laivareitit.
    */
-  const osiot = ['.lento-katko', '.lento-vana', '.lento-leima', '.lento-vinjetti', '.lento-pilvi'];
+  const osiot = [
+    '.lento-katko', '.lento-vana', '.lento-laivareitti', '.lento-laivapiste',
+    '.lento-vinjetti', '.lento-pilvi',
+  ];
   for (const valitsin of osiot) {
     const saanto = CSS.match(new RegExp(`\\${valitsin}[^{]*\\{[^}]*\\}`))?.[0] ?? '';
     assert.ok(saanto, `${valitsin} puuttuu tyyleistä`);
@@ -250,8 +257,53 @@ test('lentokohtauksen koristeet ovat transformia ja peittävyyttä', () => {
   assert.match(pilvi, /will-change: transform/, 'pilvi ei nouse omalle kerrokselleen');
   assert.match(CSS, /@keyframes lento-pilvi-ajelehdi \{[^}]*translate3d/,
     'pilven ajelehdinta ei ole transform-animaatio');
-  // Leiman avainruudut ovat CSS-muunnoksia: yksikötön translate on
-  // kelvoton ja pudottaisi koko muunnoksen (mitattu 26.8.2026).
-  assert.match(UI, /const perus = `translate\(\$\{x\.toFixed\(2\)\}px, \$\{y\.toFixed\(2\)\}px\) rotate\(\$\{kallistus\}deg\)`/,
-    'leiman muunnos ei ole yksiköllistä CSS:ää');
+  // Leima ei saa palata: se on poistettu sekä koodista että tyyleistä.
+  assert.doesNotMatch(UI, /lennonLeima\(/, 'saapumisleima on palannut js/ui.js:ään');
+  assert.doesNotMatch(CSS, /\.lento-leima\b/, 'saapumisleiman tyylit ovat palanneet');
+});
+
+test('laivareitit merellä ovat laudan omia merireittejä', () => {
+  /*
+   * Omistajan pelitestipalaute v1119 (leiman tilalle): *"piirrä
+   * lentonäkymän mereen muutama himmeä laivareittiviiva (katkoviiva,
+   * vanhan merikartan tyyli) ja niihin HYVIN himmeät pisteet jotka
+   * liikkuvat hitaasti ja välkkyvät kevyesti (transform/opacity, ei
+   * filtereitä; poistuvat laskeutuessa)."*
+   */
+  const metodi = UI.match(/lennonLaivareitit\(\{ kerros, skaala = 1 \}\) \{[\s\S]*?\n  \}/)[0];
+  assert.match(metodi, /reitti\?\.type !== 'sea'/,
+    'laivareitit eivät tule laudan merireiteistä');
+  assert.match(metodi, /iterations: Infinity/, 'laivan piste ei liiku');
+  // Liike on transformia ja välke peittävyyttä — ei suodattimia.
+  assert.match(metodi, /transform: `translate\(/, 'pisteen liike ei ole transform');
+  assert.match(metodi, /opacity: 0\.\d+ \}, \{ opacity: 0\.\d+ \}/, 'välke ei ole peittävyyttä');
+  // Suodatin tyylinä (Array.prototype.filter on eri asia).
+  assert.doesNotMatch(metodi, /filter\s*[:=]/, 'laivareitit käyttävät suodatinta');
+  // Reitit ovat lentoreitin ALLA: ne ovat taustaa eivätkä tapahtuma.
+  assert.match(UI, /this\.lennonLaivareitit\(\{ kerros, skaala \}\);[\s\S]{0,700}class: 'flight-trail'/,
+    'laivareitit piirtyvät lentoreitin päälle');
+});
+
+test('pöllön kuplat odottavat matkapäiväkirjan luennan loppumista', () => {
+  /*
+   * Omistajan pelitestipalaute v1119: kuplat ponnahtivat kertojan
+   * päälle kesken merkinnän. Ensimmäinen kupla on nyt kiinni luennan
+   * loppumisessa, ja kiinteä viive on varapolku mykistetylle pelille.
+   */
+  const luenta = readFileSync(new URL('../js/luenta.js', import.meta.url), 'utf8');
+  assert.match(luenta, /export function luennanLoppuun\(/,
+    'luennan loppumisesta ei saa kahvaa');
+  // Lyhyt kertojatila pysäyttää äänen lauserajalla ilman ended-tapahtumaa.
+  assert.match(luenta, /audio\.paused && audio\.currentTime > 0/,
+    'lauserajalla pysäytetty luenta ei koskaan päättyisi');
+  const kuplat = UI.match(/saapumisenKuplat\(kohde\) \{[\s\S]*?\n  \}/)[0];
+  assert.match(kuplat, /const luenta = luennanLoppuun\(this\);/,
+    'kuplat eivät kuuntele luentaa');
+  assert.match(kuplat, /naytaKuplat\(SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS\)/,
+    'luennan jälkeinen hengähdys puuttuu');
+  assert.match(kuplat, /naytaKuplat\(SAAPUMISEN_KUPLA_MS\)/,
+    'varapolun kiinteä viive puuttuu');
+  // Toinen kupla sai pidemmän tauon: 1,6 s → ~2,5 s.
+  assert.ok(luku('SAAPUMISEN_KUPLA_VALI_MS') >= 2300,
+    `toisen kuplan tauko ${luku('SAAPUMISEN_KUPLA_VALI_MS')} ms on yhä lyhyt`);
 });

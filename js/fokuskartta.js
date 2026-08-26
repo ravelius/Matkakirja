@@ -1243,6 +1243,93 @@ function atlasRyhma(ui) {
   return g;
 }
 
+/*
+ * ==================================================================
+ * LEHDEN NELIÖREUNA POIS AVAUSLENNOSTA (omistajan pelitestipalaute
+ * v1119: *"Kreikan minikartan ympärillä on yhä NELIÖREUNA — pois
+ * (kuva saa istua paperiin häivytettynä, ei laatikkoa)"*)
+ * ==================================================================
+ *
+ * Lennon aikana kartta on niukka 1873-pergamentti, jonka päällä on
+ * vain reitti ja kone — ja sen keskellä loisti kohdemaan atlaslehti
+ * terävänä suorakaiteena. Lehti on opaakki bittikartta omalla
+ * paperillaan, joten sen reuna on aina viivasuora; verhon oma
+ * portaittainen häivytys (js/ui.js paivitaFokusSumu FOKUS_KUVAN_REUNA)
+ * pehmentää vain sitä kaistaa, joka on kuvan omaa vuotoa, eikä yllä
+ * lehden ja pergamentin väliseen saumaan.
+ *
+ * HÄIVYTYS ON MASKI, EI SUODATIN. Kartan kerroksilla ei saa olla
+ * suodattimia (tests/rules.test.mjs; iOS palauttaa suodatetun kerroksen
+ * taustalta tyhjänä), mutta maski on jo pelin omaa kieltä — sumuverho
+ * on rakennettu samalla tavalla. Maski on YKSI kaikille lehdille:
+ * sisältö on rajauslaatikon yksiköissä (maskContentUnits), joten sama
+ * tunniste kelpaa erikokoisille lehdille.
+ *
+ * Maski on voimassa vain avauslennon ajan (ui.aloituslentoKesken);
+ * perillä lehti on kartta, jolla pelataan, ja sen reunan hoitaa verho.
+ */
+const LENNON_HAIVYTYS_ID = 'lento-lehden-haivytys';
+/** Kuinka suuri osuus lehden leveydestä/korkeudesta häivytetään. */
+const LENNON_HAIVYTYS_OSUUS = 0.16;
+
+/** Luo häivytysmaskin fokuskerrokseen kerran; palauttaa viittauksen. */
+function lennonHaivytysMaski(kerros) {
+  if (!kerros) return null;
+  if (!kerros.querySelector(`#${LENNON_HAIVYTYS_ID}`)) {
+    const maski = el('mask', {
+      id: LENNON_HAIVYTYS_ID,
+      maskUnits: 'objectBoundingBox',
+      maskContentUnits: 'objectBoundingBox',
+      x: 0,
+      y: 0,
+      width: 1,
+      height: 1,
+    }, kerros);
+    // Valkoinen pohja = lehti näkyy; mustaksi liukuvat reunat = lehti
+    // haalistuu paperiin. Neljä liukua, yksi kullekin reunalle;
+    // nurkissa ne kertautuvat, mikä pyöristää kulman itsestään.
+    el('rect', { x: 0, y: 0, width: 1, height: 1, fill: '#fff' }, maski);
+    const r = LENNON_HAIVYTYS_OSUUS;
+    const reunat = [
+      { id: 'vasen', x1: 0, y1: 0, x2: 1, y2: 0, x: 0, y: 0, w: r, h: 1 },
+      { id: 'oikea', x1: 1, y1: 0, x2: 0, y2: 0, x: 1 - r, y: 0, w: r, h: 1 },
+      { id: 'ylos', x1: 0, y1: 0, x2: 0, y2: 1, x: 0, y: 0, w: 1, h: r },
+      { id: 'alas', x1: 0, y1: 1, x2: 0, y2: 0, x: 0, y: 1 - r, w: 1, h: r },
+    ];
+    for (const reuna of reunat) {
+      const tunnus = `${LENNON_HAIVYTYS_ID}-${reuna.id}`;
+      const liuku = el('linearGradient', {
+        id: tunnus, x1: reuna.x1, y1: reuna.y1, x2: reuna.x2, y2: reuna.y2,
+      }, maski);
+      el('stop', { offset: 0, 'stop-color': '#000', 'stop-opacity': 1 }, liuku);
+      el('stop', { offset: 1, 'stop-color': '#000', 'stop-opacity': 0 }, liuku);
+      el('rect', {
+        x: reuna.x, y: reuna.y, width: reuna.w, height: reuna.h, fill: `url(#${tunnus})`,
+      }, maski);
+    }
+  }
+  return `url(#${LENNON_HAIVYTYS_ID})`;
+}
+
+/**
+ * Kytkee (tai purkaa) atlaslehtien reunahäivytyksen avauslennon
+ * mukaan. Kutsutaan sekä lehden saapuessa että joka piirrosta, koska
+ * lehti voi saapua verkosta kesken lennon ja lento päättyä ilman että
+ * lehtijoukko muuttuu.
+ */
+export function paivitaLennonLehdet(ui) {
+  const kerros = ui?.fokuskarttaKerros;
+  if (!kerros) return;
+  const kuvat = kerros.querySelectorAll('.fokuskartta-kuva');
+  if (!kuvat.length) return;
+  const lennossa = Boolean(ui.aloituslentoKesken);
+  const maski = lennossa ? lennonHaivytysMaski(kerros) : null;
+  for (const kuva of kuvat) {
+    if (maski) kuva.setAttribute('mask', maski);
+    else kuva.removeAttribute('mask');
+  }
+}
+
 /** Nykyisen maan oma ryhmä (kuva + lisänimet) atlaksen päällä. */
 function lehtiRyhma(ui) {
   const kerros = ui.fokuskarttaKerros;
@@ -2111,6 +2198,9 @@ export function paivitaFokusAtlas(ui) {
         .sort((a, b) => (b.bbox.w * b.bbox.h) - (a.bbox.w * a.bbox.h));
       for (const t of jarjestys) kohde.appendChild(t.el);
       karsiAtlas(ui, lauta, ui.atlasSuojatut ?? ui.atlasValitut ?? new Set());
+      // Lehti voi saapua kesken avauslennon: reunahäivytys kytketään
+      // heti, muuten neliöreuna välähtäisi kartalla (ks. LENNON_HAIVYTYS_ID).
+      paivitaLennonLehdet(ui);
       // Verho ei tiedä uudesta lehdestä ennen kuin sille kerrotaan.
       ui.paivitaAtlasVerho?.();
     });

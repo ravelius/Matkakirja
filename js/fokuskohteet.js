@@ -169,8 +169,20 @@ const KOHDE_LAITAVARA_ENINTAAN = 96;
 /** Pop-upin kuvan pyyntöleveys: pieni viite, ei kortin iso kuva. */
 const KOHDE_KUVAN_PX = 480;
 
-/** Suurennoksen pyyntöleveys: sama mitta kuin muualla pelissä. */
-const KOHDE_ZOOM_PX = 1600;
+/**
+ * Suurennoksen pyyntöleveys Commonsista (js/packs/africa-valokuvat.js
+ * valokuvaSuurennos → commonsUrl).
+ *
+ * NOSTETTU 1600 → 2000 (omistajan pelitestipalaute v1119: *"Kuvat
+ * saisi näkyä isommalla"*). Suurennos venyy nyt lähes koko ruudun
+ * levyiseksi, ja iPadin kaksinkertaisella pikselitiheydellä 1600
+ * pikseliä on 834 pisteen ruudulla jo alle kaksi laitepikseliä per
+ * piste. Commonsin thumb-putki tuottaa pyydetyn leveyden suoraan
+ * URL-parametrista, joten isompaa ei tarvitse hakea mistään muualta —
+ * ja alkuperäistä isompaa se ei koskaan tee, joten pikselipuuroa ei
+ * synny.
+ */
+const KOHDE_ZOOM_PX = 2000;
 
 /** Tyyppien ylärivit. Tuntematon tyyppi saa yleisen otsikon. */
 const KOHDE_TYYPIT = {
@@ -179,6 +191,14 @@ const KOHDE_TYYPIT = {
   meri: 'Meri',
   saari: 'Saari',
   joki: 'Joki',
+  /*
+   * MULTIMEDIA (omistajan tilaus v1119, kohta 19: *"uusi
+   * karttamerkkityyppi 'multimedia/nähtävyyssivu' — SILMÄ-ikoni"*).
+   * Kohde, jolla on katsottavaa muualla kuin lehden sivulla:
+   * virtuaalikierros, panoraama tai vastaava. Merkki on silmä, ja
+   * napautus avaa kierroksen pelin omaan ikkunaan (avaaKierros).
+   */
+  multimedia: 'Katsottavaa',
   muu: 'Kartalla',
 };
 
@@ -260,6 +280,24 @@ function varmistaKohdekerros(ui) {
  * Korostusrengas on valmiina paikallaan läpinäkyvänä — auki oleva
  * kohde saa sen näkyviin luokalla eikä uudella elementillä.
  */
+/**
+ * SILMÄ MULTIMEDIAKOHTEEN MERKIKSI (omistajan tilaus v1119, kohta 19).
+ *
+ * Sama muoto ja sama perhe kuin täkysymbolien silmällä
+ * (js/fokusnosto-symbolit.js piirraNostosymSilma), mutta kohdemerkin
+ * mittakaavassa: kohdemerkki on halkaisijaltaan noin 16 px, kun
+ * täkysymboli on 21. Merkki kertoo, että täällä on katsottavaa —
+ * pelkkä piste lupaisi vain tekstiä.
+ */
+function piirraSilmamerkki(g) {
+  el('path', {
+    class: 'fokuskohde-silmakaari',
+    d: 'M-5.6 0 C-3.5 -3.5 3.5 -3.5 5.6 0 C3.5 3.5 -3.5 3.5 -5.6 0 Z',
+  }, g);
+  el('circle', { class: 'fokuskohde-silma', cx: 0, cy: 0, r: 2.3 }, g);
+  el('circle', { class: 'fokuskohde-silmatera', cx: 0, cy: 0, r: 1.15 }, g);
+}
+
 function piirraKohdemerkki(ui, ryhma, kohde) {
   const g = el('g', { class: `fokuskohde fokuskohde-${kohde.tyyppi ?? 'muu'}` }, ryhma);
   g.dataset.kohde = kohde.id;
@@ -268,9 +306,12 @@ function piirraKohdemerkki(ui, ryhma, kohde) {
   g.setAttribute('aria-label', `${kohde.nimi}: avaa tietoruutu`);
   el('circle', { class: 'fokuskohde-osuma', r: KOHDE_OSUMA_R }, g);
   el('circle', { class: 'fokuskohde-korostus', r: KOHDE_KOROSTUS_R }, g);
-  el('circle', { class: 'fokuskohde-halo', r: KOHDE_HALO_R }, g);
-  el('circle', { class: 'fokuskohde-rengas', r: KOHDE_RENGAS_R }, g);
-  el('circle', { class: 'fokuskohde-piste', r: KOHDE_PISTE_R }, g);
+  if (kohde.kierros) piirraSilmamerkki(g);
+  else {
+    el('circle', { class: 'fokuskohde-halo', r: KOHDE_HALO_R }, g);
+    el('circle', { class: 'fokuskohde-rengas', r: KOHDE_RENGAS_R }, g);
+    el('circle', { class: 'fokuskohde-piste', r: KOHDE_PISTE_R }, g);
+  }
   const avaa = (tapahtuma) => {
     tapahtuma.stopPropagation();
     tapahtuma.preventDefault();
@@ -792,6 +833,173 @@ function piirraKohdeKysymykset(ui, sisalto, kohde) {
   sisalto.appendChild(rivi);
 }
 
+/* ============ VIRTUAALIKIERROS PELIN SISÄLLÄ (v1119, kohta 19) ======
+ *
+ * Omistajan tilaus: *"omistaja löysi acropolisvirtualtour.gr ja haluaa
+ * sen aukeavan PELIN SISÄLLÄ ikkunaan, lisättynä suoraan kartalle omalla
+ * nähtävyys/multimedia-ikonilla"*.
+ *
+ * AVAUSTAPA ON DATASSA, EI PALVELIMEN OTSAKKEISSA (kartoitus
+ * 26.8.2026): moni kierrossivusto sallii kehyksen teknisesti mutta
+ * KIELTÄÄ sen käyttöehdoissaan — esimerkiksi Kreikan
+ * kulttuuriministeriön ehdot vaativat sivujen latautuvan omaan
+ * ikkunaansa, vaikka acropolisvirtualtour.gr ei lähetä
+ * X-Frame-Options- eikä CSP-otsaketta. Siksi jokainen kierros kantaa
+ * kentän `avaustapa`: 'upotus' avaa pelin sisäisen ikkunan (vain kun
+ * upotus on sekä teknisesti sallittu että ehtojen mukaan tarkoitettu,
+ * kuten museoiden itse julkaisemat embed-osoitteet), 'linkki' avaa
+ * kierroksen suoraan laitteen selaimeen eikä kehystä edes yritetä.
+ * Ilman kenttää oletus on 'linkki' — ehtoja ei rikota vahingossa.
+ *
+ * VARAPOLKU ON SILTI OLEMASSA. Kolmannen osapuolen sivu voi vaihtaa
+ * otsakkeitaan milloin tahansa, ja WKWebView voi torjua kehyksen omista
+ * syistään. Ikkunan otsikkorivillä on siksi aina "Avaa selaimessa"
+ * -linkki (target=_blank, rel=noopener) — kuori vie sen ulkoiseen
+ * selaimeen — ja jos kehys ei lataudu kymmenessä sekunnissa, ikkuna
+ * kertoo sen ja tarjoaa saman linkin isona nappina.
+ *
+ * IKKUNA ON SAMAA PERHETTÄ KUIN KOHDEPOPUP: pergamenttikehys, ruksi
+ * ja raahattava otsikkorivi — mutta lähes koko ruudun kokoinen, koska
+ * kierros on katsottavaa eikä luettavaa.
+ * =================================================================== */
+
+/** Kuinka kauan kehyksen latautumista odotetaan ennen varapolkua. */
+const KIERROS_ODOTUS_MS = 10000;
+
+/**
+ * "Avaa kierros" -nappi tietoruutuun, jos kohteella on kierros.
+ *
+ * Nappi eikä suora avaus: tietoruutu kertoo ensin mistä on kyse ja
+ * mistä kierros on peräisin, ja vasta sitten pelaaja päättää avaako
+ * hän koko ruudun kokoisen ikkunan.
+ */
+function piirraKierrosnappi(ui, sisalto, kohde) {
+  const kierros = kohde.kierros;
+  if (!kierros?.url) return;
+  if (kierros.avaustapa !== 'upotus') {
+    // Linkkikierros: suoraan laitteen selaimeen. Kuori (WKWebView) vie
+    // target="_blank"-linkin ulkoiseen selaimeen.
+    const linkki = html('a', 'fokuskohde-kierrosnappi', `${kierros.nappi ?? 'Avaa kierros'} ↗`);
+    linkki.href = kierros.url;
+    linkki.target = '_blank';
+    linkki.rel = 'noopener noreferrer';
+    linkki.addEventListener('click', (tapahtuma) => tapahtuma.stopPropagation());
+    sisalto.appendChild(linkki);
+    return;
+  }
+  const nappi = html('button', 'fokuskohde-kierrosnappi', kierros.nappi ?? 'Avaa kierros');
+  nappi.type = 'button';
+  nappi.addEventListener('click', (tapahtuma) => {
+    tapahtuma.stopPropagation();
+    avaaKierros(ui, kohde);
+  });
+  sisalto.appendChild(nappi);
+}
+
+/** Sulkee auki olevan kierrosikkunan. */
+export function suljeKierros(ui) {
+  const auki = ui?.kierrosIkkuna;
+  if (!auki) return;
+  ui.kierrosIkkuna = null;
+  clearTimeout(auki.ajastin);
+  document.removeEventListener('keydown', auki.nappain, true);
+  auki.kerros.remove();
+}
+
+/**
+ * Virtuaalikierros pelin omaan ikkunaan (v1119, kohta 19b).
+ *
+ * @param {object} ui
+ * @param {{nimi:string, kierros:{url:string, otsikko?:string, lahde?:string}}} kohde
+ */
+function avaaKierros(ui, kohde) {
+  if (typeof document === 'undefined') return null;
+  const kierros = kohde?.kierros;
+  if (!kierros?.url) return null;
+  sfx.play('popup');
+  suljeKierros(ui);
+  lataaKohdeTyyli();
+
+  const kerros = html('div', 'fokuskierros');
+  kerros.setAttribute('role', 'dialog');
+  kerros.setAttribute('aria-modal', 'true');
+  kerros.setAttribute('aria-label', kierros.otsikko ?? kohde.nimi);
+  const ikkuna = html('div', 'fokuskierros-ikkuna');
+  const ylarivi = html('div', 'fokuskierros-ylarivi');
+  ylarivi.appendChild(html('span', 'fokuskierros-otsikko', kierros.otsikko ?? kohde.nimi));
+  /*
+   * ULKOINEN LINKKI AINA NÄKYVISSÄ. Kuori (WKWebView) vie
+   * target="_blank" -linkin laitteen omaan selaimeen, jossa kierros
+   * saa käyttöönsä kaiken, mitä kehys ei anna — koko ruudun, sensorit
+   * ja täyden näytön.
+   */
+  const ulos = html('a', 'fokuskierros-ulos', 'Avaa selaimessa ↗');
+  ulos.href = kierros.url;
+  ulos.target = '_blank';
+  ulos.rel = 'noopener noreferrer';
+  ylarivi.appendChild(ulos);
+  const sulje = html('button', 'fokuskierros-sulje', '✕');
+  sulje.type = 'button';
+  sulje.setAttribute('aria-label', 'Sulje kierros');
+  sulje.addEventListener('click', () => suljeKierros(ui));
+  ylarivi.appendChild(sulje);
+  ikkuna.appendChild(ylarivi);
+
+  const kehys = document.createElement('iframe');
+  kehys.className = 'fokuskierros-kehys';
+  kehys.src = kierros.url;
+  kehys.title = kierros.otsikko ?? kohde.nimi;
+  kehys.setAttribute('allow', 'fullscreen; accelerometer; gyroscope; xr-spatial-tracking');
+  kehys.setAttribute('referrerpolicy', 'no-referrer');
+  ikkuna.appendChild(kehys);
+
+  /*
+   * VARAPOLKU: jos kehys ei ilmoita latautuneensa, sivu on joko
+   * torjunut upotuksen tai verkko on poikki. Silloin ikkunaan
+   * kirjoitetaan siisti kortti ja iso nappi ulos.
+   */
+  const vara = html('div', 'fokuskierros-vara');
+  vara.hidden = true;
+  vara.appendChild(html('p', '', kierros.varaTeksti
+    ?? 'Kierros ei aukea pelin sisällä. Se avautuu laitteen omassa selaimessa.'));
+  const varaNappi = html('a', 'fokuskierros-varanappi', 'Avaa kierros selaimessa ↗');
+  varaNappi.href = kierros.url;
+  varaNappi.target = '_blank';
+  varaNappi.rel = 'noopener noreferrer';
+  vara.appendChild(varaNappi);
+  if (kierros.lahde) vara.appendChild(html('p', 'fokuskierros-lahde', kierros.lahde));
+  ikkuna.appendChild(vara);
+  if (kierros.lahde) ikkuna.appendChild(html('p', 'fokuskierros-lahde', kierros.lahde));
+
+  kerros.appendChild(ikkuna);
+  document.body.appendChild(kerros);
+
+  const ajastin = setTimeout(() => {
+    if (!kehys.dataset.latautui) {
+      kehys.hidden = true;
+      vara.hidden = false;
+    }
+  }, KIERROS_ODOTUS_MS);
+  kehys.addEventListener('load', () => { kehys.dataset.latautui = '1'; }, { once: true });
+
+  const nappain = (tapahtuma) => {
+    if (tapahtuma.key !== 'Escape') return;
+    tapahtuma.stopPropagation();
+    suljeKierros(ui);
+  };
+  document.addEventListener('keydown', nappain, true);
+  // Napautus ikkunan ULKOPUOLELLE sulkee; ikkunan sisällä napautus
+  // kuuluu kierrokselle itselleen.
+  kerros.addEventListener('pointerdown', (tapahtuma) => {
+    if (ikkuna.contains(tapahtuma.target)) return;
+    suljeKierros(ui);
+  });
+  ui.kierrosIkkuna = {
+    kerros, kehys, ajastin, nappain,
+  };
+  return kerros;
+}
+
 /* ==================== KUVAN SUURENNOS KARTAN PÄÄLLE ==================
  *
  * Sama ele ja sama ulkoasu kuin fokusvirran kuvilla: kuva KASVAA
@@ -846,6 +1054,13 @@ const KOHDE_ZOOM_REUNA = 10;
 const KOHDE_ZOOM_VAHIN_OSUUS = 0.28;
 /** Kehyksen kapein sallittu ulkomitta pikseleinä. */
 const KOHDE_ZOOM_KAPEIN = 140;
+/**
+ * Kuinka paljon lähdettä isommaksi suurennos saa venyä (omistajan
+ * pelitestipalaute v1119: *"skaalaus ei saa venyttää pikselipuuroksi:
+ * jos lähde on pieni, rajaa suurennos lähteen luonnolliseen kokoon
+ * ×1,4 asti"*).
+ */
+const KOHDE_ZOOM_VENYMA = 1.4;
 /** Kuvasuhde, jota käytetään ennen kuin kuvan omat mitat tiedetään. */
 const KOHDE_ZOOM_OLETUSSUHDE = 4 / 3;
 /** Kiihtyy alussa, jarruttaa lopussa — kartan kamera-ajon sukulainen. */
@@ -946,12 +1161,46 @@ function avaaKohdeSuurennos(ui, kuva, ankkuri) {
    * toistetaan, kunnes leveys asettuu (yleensä kaksi kierrosta).
    */
   const mitoita = () => {
-    const leveys = globalThis.innerWidth || 0;
-    const korkeus = globalThis.innerHeight || 0;
+    /*
+     * RUUDUN MITAT PELIN OMASTA MITTARISTA, EI innerWidthista
+     * (omistajan pelitestipalaute v1119: *"suurennos jää iPadilla
+     * pieneksi keskelle ruutua … kuvat saisi näkyä isommalla"*).
+     *
+     * Katot ovat jo lähes koko ruutu (KOHDE_ZOOM_LEVEIN 0,99), joten
+     * vika ei ollut mitoituksessa vaan mitassa: WKWebView voi pitää
+     * asetteluviewportin vanhassa kapeassa lukemassa, ja `innerWidth`
+     * kertoo silloin kapeamman ruudun kuin laitteessa oikeasti on.
+     * Sama ilmiö on korjattu tässä repossa jo useasti (js/ui.js
+     * mittaaNakyma ja mittaaNakymanKorkeus ristiintarkistavat
+     * visuaalisen ja asetteluviewportin) — nyt suurennos käyttää
+     * samaa mittaria kuin lehden arkki ja kulttuurikuvan suurennos.
+     *
+     * Ilman ui-oliota (yksikkötesti, esikatselu) pudotaan entiseen.
+     */
+    const leveys = ui?.nakymanLeveys || ui?.mittaaNakyma?.()
+      || document.documentElement?.clientWidth || globalThis.innerWidth || 0;
+    const korkeus = ui?.mittaaNakymanKorkeus?.()
+      || document.documentElement?.clientHeight || globalThis.innerHeight || 0;
     if (!leveys || !korkeus) return;
     const suhde = kuvasuhde();
     img.style.aspectRatio = suhde.toFixed(4);
-    const enintaanW = Math.min(leveys * KOHDE_ZOOM_LEVEIN, leveys - KOHDE_ZOOM_REUNA);
+    /*
+     * PIENTÄ LÄHDETTÄ EI VENYTETÄ PIKSELIPUUROKSI (omistajan
+     * pelitestipalaute v1119). Suurennos pyydetään Commonsista
+     * KOHDE_ZOOM_PX:n levyisenä, mutta thumb-putki ei koskaan tuota
+     * alkuperäistä isompaa — jos kuva on pieni, se on pieni. Silloin
+     * katto on kuvan oma luonnollinen leveys kertaa KOHDE_ZOOM_VENYMA:
+     * hitusen suurentaminen on parempi kuin pieni kuva keskellä
+     * ruutua, mutta moninkertaistaminen ei ole.
+     *
+     * Kuvan omat mitat tunnetaan vasta kun ISO versio on ladattu; sitä
+     * ennen (välimuistin pikkukuva) katto jää pois eikä mitoita mitään.
+     */
+    const luonnollinen = img.src === iso.src && img.naturalWidth
+      ? img.naturalWidth * KOHDE_ZOOM_VENYMA : Infinity;
+    const enintaanW = Math.min(
+      leveys * KOHDE_ZOOM_LEVEIN, leveys - KOHDE_ZOOM_REUNA, luonnollinen,
+    );
     const enintaanH = Math.min(korkeus * KOHDE_ZOOM_KORKEIN, korkeus - KOHDE_ZOOM_REUNA);
     const vahinH = korkeus * KOHDE_ZOOM_VAHIN_OSUUS;
     let ulko = Math.round(enintaanW);
@@ -1150,6 +1399,20 @@ function raahausTaiSulku(ui, popup, alku) {
 
 export function avaaFokuskohde(ui, kohde) {
   if (typeof document === 'undefined' || !kohde) return null;
+  /*
+   * ÄÄNI ENSIMMÄISENÄ RIVINÄ (omistajan pelitestipalaute v1119, kohta
+   * 17: *"soitto lähtee pointerup/click-käsittelijässä heti, ennen
+   * raskaampaa työtä"*).
+   *
+   * Ennen tämä oli funktion VIIMEINEN rivi, ja sitä ennen ehdittiin
+   * ladata tyylitiedosto, rakentaa koko kortti, hakea kuva ja mitata
+   * asettelu kolmesti. Nyt soitto lähtee samassa mikrotehtävässä kuin
+   * napautus, ja loppu tapahtuu sen jälkeen.
+   *
+   * Äänen mykistys ja TAUSTAÄÄNET-kytkin hoituvat SoundKit.play():n
+   * sisällä (enabled), joten tässä ei tarvitse tietää niistä mitään.
+   */
+  sfx.play('popup');
   lataaKohdeTyyli();
   suljeFokuskohde(ui);
   const merkki = ui.fokuskohdeMerkit?.get(kohde.id)?.[0];
@@ -1191,6 +1454,7 @@ export function avaaFokuskohde(ui, kohde) {
   piirraKohdeKuva(ui, sisalto, kohde.kuva);
   piirraKohdeTeksti(ui, sisalto, kohde);
   piirraKohdeKysymykset(ui, sisalto, kohde);
+  piirraKierrosnappi(ui, sisalto, kohde);
   if (kohde.lahde) sisalto.appendChild(html('p', 'fokuskohde-lahde', kohde.lahde));
   popup.appendChild(sisalto);
   koti.appendChild(popup);
@@ -1208,7 +1472,7 @@ export function avaaFokuskohde(ui, kohde) {
   // mitta voi osua hetkeen, jolloin tyylitiedosto on vasta matkalla.
   globalThis.requestAnimationFrame?.(() => asetaKohteenPaikka(ui));
   setTimeout(() => asetaKohteenPaikka(ui), 200);
-  sfx.play('paper');
+  // Avausääni soi jo funktion alussa (ks. sfx.play('popup') ylhäällä).
   return popup;
 }
 

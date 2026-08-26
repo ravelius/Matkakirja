@@ -132,6 +132,30 @@ function piirraNostosymPollo(g) {
 }
 
 /**
+ * SILMÄ — NÄHTÄVYYS- JA MULTIMEDIAKOHDE (omistajan tilaus v1119, kohdat
+ * 19 ja 20: *"SILMÄ-ikoni … piirretään samaan symboliperheeseen"*).
+ *
+ * Sama pyöreä laatta ja musteviivainen kehä kuin huutomerkillä ja
+ * pöllövauvalla; sisällä vanhan kartografian silmä: kaksi kaarta, terä
+ * ja pieni kiilto. Symboli lupaa katsottavaa — kierroksen, kuvan tai
+ * paikan, joka avautuu omaan ikkunaansa.
+ */
+function piirraNostosymSilma(g) {
+  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
+  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
+  // Silmän kehä: kaksi vastakkaista kaarta, ei ellipsiä — kartografin
+  // kynänjälki on kaari, ei sujuva muotti.
+  el('path', {
+    class: 'nostosym-silmakaari',
+    d: 'M-7.4 0 C-4.6 -4.6 4.6 -4.6 7.4 0 C4.6 4.6 -4.6 4.6 -7.4 0 Z',
+  }, g);
+  el('circle', { class: 'nostosym-silma', cx: 0, cy: 0, r: 3.0 }, g);
+  el('circle', { class: 'nostosym-tera', cx: 0, cy: 0, r: 1.5 }, g);
+  // Kiilto: yksi vaalea piste, jotta terä ei ole pelkkä musta läiskä.
+  el('circle', { class: 'nostosym-kiilto', cx: 1.1, cy: -1.1, r: 0.55 }, g);
+}
+
+/**
  * AKTIIVISEN TÄYN ANKKURI — pieni mustepiste, jonka päälle kupla
  * asettuu ja johon sen nokka osoittaa.
  *
@@ -183,6 +207,7 @@ function piirraNostosymMerkki(ui, ryhma, merkinta, valitse) {
   g.setAttribute('aria-label', `${merkinta.otsikko} — nosta esiin`);
   el('circle', { class: 'nostosym-osuma', r: NOSTOSYM_OSUMA_R }, g);
   if (merkinta.symboli === 'elain') piirraNostosymPollo(g);
+  else if (merkinta.symboli === 'silma') piirraNostosymSilma(g);
   else piirraNostosymHuuto(g);
   const avaa = (tapahtuma) => {
     tapahtuma.stopPropagation();

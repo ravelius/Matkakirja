@@ -83,7 +83,7 @@
  * riippuvuus kulkee vain tähän suuntaan.
  */
 import { fokusmoodiPaalla, html, TOAST_MS } from './ui-apurit.js';
-import { kaupunginJuliste } from './packs/julisteet.js';
+import { juliste as julisteAvaimella, kaupunginJuliste } from './packs/julisteet.js';
 import { fokusvirtaKaupungille } from './packs/fokusvirrat.js';
 import { natiiviVastaus } from './natiivi.js';
 // Kulttuurivisan kysymysdata: visa on lehden aarteen avaava kysymys,
@@ -374,8 +374,12 @@ function aarreAuki(ui, city) {
  * tietoa, kehu ei.
  */
 
-/** Aarteen jälki syttyi juuri — silminnäkijäheitto kerran per maa. */
-const AARRE_SYTTYI = 'Vihreä piste kartalla — kävisin katsomassa, minä olen jo käynyt.';
+/*
+ * Aarteen jälki syttyi juuri. Sanamuoto selkeytettiin omistajan
+ * pyynnöstä 26.8.2026 ("liian kryptinen") — opastus voittaa tässä
+ * pöllön kuivan heiton, kuten lehtivinkissäkin.
+ */
+const AARRE_SYTTYI = 'Aarteen jälki syttyi: vihreä piste kartalla näyttää paikan.';
 /** Aarre oli jo auki: jäljellä on raha, ja pöllö laskee sen. */
 const AARRE_RAHAA = 'Oikein. Puntia matkakassaan — niitä ei laske kukaan muu kuin minä.';
 /** Sama asia yhdellä virkkeellä, kun perään tulee vielä julistevinkki. */
@@ -469,7 +473,21 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
   const visa = tehtava.visa;
   if (!visa?.vaihtoehdot?.length) return;
   lataaTehtavaTyyli();
-  const juliste = tehtava.palkinto === 'juliste' ? kaupunginJuliste(city.id) : null;
+  /*
+   * TEHTÄVÄKOHTAINEN JULISTE VOITTAA KAUPUNGIN OLETUKSEN (omistajan
+   * tilaus v1119, kohta 21: *"tehtävä voi kantaa oman juliste-avaimen
+   * (esim. tehtava.juliste = 'ateena-nike'), joka voittaa kaupungin
+   * oletuksen — pelaaja voi näin saada samasta kaupungista USEAMMAN
+   * eri julisteen eri tehtävistä"*).
+   *
+   * Avain kulkee tästä eteenpäin kaikkialle, missä ennen käytettiin
+   * kaupungin tunnusta: kokoelmaan (game.myonnaJuliste), palkintokuvaan
+   * ja lunastukseen. Tuntematon avain putoaa kaupungin oletukseen,
+   * jottei kirjoitusvirhe datassa vie palkintoa kokonaan.
+   */
+  const julisteAvain = tehtava.juliste && julisteAvaimella(tehtava.juliste)
+    ? tehtava.juliste : city.id;
+  const juliste = tehtava.palkinto === 'juliste' ? kaupunginJuliste(julisteAvain) : null;
   // Aarteen avaajan nimilaatta riippuu tilanteesta; juliste on aina
   // juliste, koska sen palkinto ei kulu toisen kysymyksen mukana.
   const rahaaVain = avaaAarteen(tehtava) && aarreAuki(ui, city);
@@ -489,10 +507,10 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
      * vastannut ei saa sitä takaoven kautta.
      */
     const voitettu = Boolean(juliste)
-      && (ui.game.minitehtavatOikein?.has(avain) || ui.game.julisteet?.has(city.id));
+      && (ui.game.minitehtavatOikein?.has(avain) || ui.game.julisteet?.has(julisteAvain));
     if (juliste) {
-      const myonto = voitettu ? ui.game.myonnaJuliste(city.id) : { uusi: false };
-      ui.piirraJulistepalkinto(laatikko, city.id, juliste, voitettu);
+      const myonto = voitettu ? ui.game.myonnaJuliste(julisteAvain) : { uusi: false };
+      ui.piirraJulistepalkinto(laatikko, julisteAvain, juliste, voitettu);
       if (myonto.uusi) ui.onChange?.(ui.game);
     }
     laatikko.appendChild(html('p', 'minitehtava-kysymys',
@@ -509,7 +527,7 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
   if (vihjerivi) laatikko.appendChild(vihjerivi);
   // Palkinto ensin, jotta teksti kiertää sen (float oikealle, css).
   const palkinto = juliste
-    ? ui.piirraJulistepalkinto(laatikko, city.id, juliste, ui.game.julisteet?.has(city.id))
+    ? ui.piirraJulistepalkinto(laatikko, julisteAvain, juliste, ui.game.julisteet?.has(julisteAvain))
     : null;
   laatikko.appendChild(html('p', 'minitehtava-kysymys', visa.kysymys));
   const vaihtoehdot = html('div', 'kulttuuri-vaihtoehdot');
@@ -549,12 +567,12 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
       if (oikein && juliste) {
         // Juliste kokoelmaan heti, katselu vasta napista (omistajan
         // tilaus 22.8.2026): oikean vastauksen tekstin ehtii lukea.
-        ui.game.myonnaJuliste(city.id);
+        ui.game.myonnaJuliste(julisteAvain);
         palkinto?.merkitseVoitetuksi();
         ui.elavoitaLaukku?.();
         const lunasta = html('button', 'minitehtava-lunastus', 'Lunasta juliste');
         lunasta.type = 'button';
-        lunasta.addEventListener('click', () => ui.naytaJuliste(city.id));
+        lunasta.addEventListener('click', () => ui.naytaJuliste(julisteAvain));
         laatikko.appendChild(lunasta);
       }
       // Koko render() sulkisi lehden — riittää tallentaa ja päivittää

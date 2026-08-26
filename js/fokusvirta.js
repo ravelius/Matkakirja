@@ -87,6 +87,8 @@ import { asetaKuva, julisteUrl } from './media.js';
 import { el } from './mapart.js';
 import { valokuvaUrl, valokuvaVara, valokuvaSuurennos } from './packs/africa-valokuvat.js';
 import { kaupunginJuliste } from './packs/julisteet.js';
+// Vihjelinkin osiotunniste ja sen näyttönimi (ks. piirraVihjelinkki).
+import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 import { fokusvirtaKaupungille } from './packs/fokusvirrat.js';
 import { natiiviVastaus } from './natiivi.js';
 import { sfx } from './sound.js';
@@ -751,7 +753,9 @@ function piirraKupla(ui, city, data, tila, nappi, tyyliKesken = null) {
 function asetaKuplanPaikka(kupla, nappi) {
   const ikkuna = document.defaultView ?? globalThis;
   const laatikko = nappi.getBoundingClientRect();
-  const marginaali = 8;
+  // Selvästi irti reunoista (omistaja 26.8.2026) — kupla kiinni
+  // laidassa näytti ahtaalta.
+  const marginaali = 16;
   const rako = 12;
   const leveys = kupla.getBoundingClientRect().width;
   const keskitetty = laatikko.left + laatikko.width / 2 - leveys / 2;
@@ -1425,11 +1429,75 @@ function piirraOppitunti(ui, city, data, kohde) {
 }
 
 /* ---------- vaihe 6 ---------- */
+
+/*
+ * KOHTAAMISEN VARMISTUS (omistajan pelitestipalaute v1119: *"nykyisen
+ * suoran 'Tapaa Nikos' -toiminnon tilalle kysymys 'Haluatko varmasti
+ * tavata Nikoksen juuri nyt?' ja KYLLÄ / EI -napit. EI sulkee kortin
+ * (kohtaamiseen voi palata myöhemmin)."*).
+ *
+ * Kohtaaminen kuluttaa yhden kahdesta yrityksestä (js/game.js
+ * actionQuiz kirjaa yrityksen jo avattaessa), joten napin painallus on
+ * peruuttamaton teko — eikä se saa tapahtua vahingossa. Varmistuksen
+ * alla lukee pienellä, mitä panoksena on.
+ */
+const KOHTAAMISEN_VAROITUS = 'Sinulla on vain kaksi yritystä, jonka '
+  + 'jälkeen aarre sulkeutuu ikuisesti.';
+
+/**
+ * Varmistuskysymyksen sanamuoto.
+ *
+ * Kohde voi antaa oman lauseensa (`kohtaaminen.varmistus`), koska
+ * suomen genetiivi ei taivu koneellisesti jokaisesta nimestä
+ * ("Nikos" → "Nikoksen", "Inês" → ?). Ilman omaa lausetta käytetään
+ * pronominia: väärin taivutettu nimi olisi pahempi kuin sen puute.
+ */
+function varmistusLause(kohtaaminen) {
+  if (kohtaaminen.varmistus) return kohtaaminen.varmistus;
+  return 'Haluatko varmasti tavata hänet juuri nyt?';
+}
+
+/**
+ * VIHJELINKKI LEHDEN OSIOON (omistajan pelitestipalaute v1119, kohta
+ * 13: *"vihjerivi pienellä: kaupunkikohtainen valinnainen kenttä
+ * kohtaamisdataan, joka kertoo MISTÄ PÄIN LEHTEÄ pulman ratkaisu
+ * löytyy, vastausta paljastamatta"* — ja tarkennus: *"vihjeriviä
+ * painamalla kaupunkilehti avautuu suoraan siihen osioon"*).
+ *
+ * Kenttä on OSIOTUNNISTE eikä vapaa teksti (`kohtaaminen.vihjeOsio`,
+ * esim. 'kaupunki'), jolloin näyttöteksti voidaan johtaa osion omasta
+ * otsikosta eikä kahta totuutta pääse syntymään. Tunnistetta ei
+ * tarvitse antaa: ilman sitä riviä ei ole.
+ *
+ * Linkki sulkee varmistuksen samaa tietä kuin EI-nappi (kohtaamiseen
+ * voi palata) ja avaa lehden siltä sivulta, jolla osio on.
+ */
+function piirraVihjelinkki(ui, city, kohtaaminen, kohde) {
+  const tunnus = kohtaaminen.vihjeOsio;
+  if (!tunnus) return;
+  const osiot = KULTTUURI_KATEGORIAT[city.id] ?? [];
+  const kohta = osiot.findIndex((o) => o.id === tunnus);
+  if (kohta < 0) return;
+  const nimi = osiot[kohta].nimi;
+  const linkki = html('button', 'fokusvirta-vihjelinkki', `Vihje: pulman ratkaisu löytyy lehden osiosta ${nimi} →`);
+  linkki.type = 'button';
+  linkki.addEventListener('click', () => {
+    sfx.play('paper');
+    suljeFokusvirta(ui);
+    ui.openArrival?.(city);
+    // Sivu 0 on kansi, joten osion sivu on sen indeksi + 1
+    // (js/lehti.js rakennaSivut ja naytaTutkiSivu).
+    ui.naytaTutkiSivu?.(kohta + 1, { heti: true });
+  });
+  kohde.appendChild(linkki);
+}
+
 function piirraKohtaaminen(ui, city, data, kohde) {
   const kohtaaminen = data.kohtaaminen ?? {};
   otsikko(kohde, 'Kohtaaminen', kohtaaminen.hahmo ?? null);
   piirraTeksti(kohde, kohtaaminen.teksti ?? '');
-  piirraNapit(kohde, [nappi(kohtaaminen.nappi ?? 'Tapaa paikallinen', 'primary', () => {
+  kohde.appendChild(html('p', 'fokusvirta-varmistus', varmistusLause(kohtaaminen)));
+  const aloita = () => {
     sfx.play('paper');
     // Kevyessä kulussa virran vaihetta ei ole eikä siihen kirjoiteta:
     // kortti on tässä vain esittely, ja laattamekaniikka jatkaa siitä.
@@ -1442,7 +1510,15 @@ function piirraKohtaaminen(ui, city, data, kohde) {
      */
     const pulmaOdottaa = ui.game.pendingPuzzle?.();
     ui.doAction(() => ui.game.actionQuiz(pulmaOdottaa ? {} : { form: 'quiz' }));
-  })]);
+  };
+  piirraNapit(kohde, [
+    nappi('Kyllä', 'primary', aloita),
+    // EI ei kuluta yritystä: kortti vain sulkeutuu, ja vihreä piste jää
+    // kartalle palamaan (js/fokuspiste.js).
+    nappi('Ei', '', () => suljeKasin(ui)),
+  ]);
+  kohde.appendChild(html('p', 'fokusvirta-varoitus', KOHTAAMISEN_VAROITUS));
+  piirraVihjelinkki(ui, city, kohtaaminen, kohde);
 }
 
 /* ============ KEVYEN KULUN OMAT PINNAT (kokeilu 24.8.2026) ==========
@@ -1547,13 +1623,15 @@ export function avaaFokusKohtaaminen(ui, city) {
  * kehittäjätilalla ja fokusmoodilla, eikä riviäkään pelitallennukseen:
  * tämä on lukijan asetus, ei pelitilanne.
  *
- * KARAKTÄÄRI (Raamattu, PÖLLÖN KARAKTÄÄRI): kuiva toteavuus, ei
- * kehotusta pelaajalle ylhäältä ("Tee lehden minitehtävä" oli käsky).
- * Pöllö sanoo mitä tapahtuu ja mitä jää tapahtumatta — ei enempää.
- * Silminnäkijäheittoa EI ole tässä: sen kiintiö (kerran per maa) menee
- * aarrekuittauksiin, jotka ovat isompia hetkiä.
+ * SANAMUOTO ON OMISTAJAN (26.8.2026) — ohjaava kehotus voittaa tässä
+ * pöllön kuivan toteavuuden, koska kyse on opastuksesta eikä
+ * repliikistä. Silminnäkijäheittoa EI ole tässä: sen kiintiö (kerran
+ * per maa) menee aarrekuittauksiin, jotka ovat isompia hetkiä.
  */
-const LEHTIVINKKI_TEKSTI = 'Lehden minitehtävä avaa tien aarteelle. Muuten kartta pysyy hiljaa.';
+const LEHTIVINKKI_TEKSTI = 'Etsi minitehtävä lehdestä ja ratkaise se, '
+  + 'niin saat vinkin aarteen paikasta kartalla.';
+/* Kupla tulee vasta hengähdyksen jälkeen (omistaja 26.8.2026). */
+const LEHTIVINKKI_VIIVE_MS = 1400;
 
 /** Vinkki näkyy kerran per saapuminen; avain on sama kuin virralla. */
 function vinkkiAvain(ui, city) {
@@ -1640,7 +1718,15 @@ export function fokusvirtaLehtivinkki(ui, city) {
   if (ui.fokusvinkkiNaytetty.has(avain)) return false;
   if (!polloNappi()) return false;
   ui.fokusvinkkiNaytetty.add(avain);
-  return naytaPolloKupla(ui, LEHTIVINKKI_TEKSTI, { ruksi: true });
+  clearTimeout(ui.fokusvinkkiAjastin);
+  ui.fokusvinkkiAjastin = setTimeout(() => {
+    // Pöllö on voinut kadota (lehti kiinni, näkymä vaihtui) —
+    // myöhästynyt kupla ilman kärkeä jää silloin näyttämättä.
+    if (!ui.dead && polloNappi()) {
+      naytaPolloKupla(ui, LEHTIVINKKI_TEKSTI, { ruksi: true });
+    }
+  }, LEHTIVINKKI_VIIVE_MS);
+  return true;
 }
 
 /**
@@ -1660,7 +1746,16 @@ export function fokusvirtaLehtivinkki(ui, city) {
 export function fokusvirtaKuittaus(ui, teksti) {
   if (FOKUSVIRTA_KORTIT || typeof document === 'undefined') return false;
   if (!teksti) return false;
-  return naytaPolloKupla(ui, teksti);
+  /*
+   * Kuittaus tulee vasta muutaman sekunnin päästä (omistaja
+   * 26.8.2026): pelaaja katsoo vielä vastaustaan, ja heti lävähtävä
+   * kupla söi sen hetken.
+   */
+  clearTimeout(ui.fokusKuittausAjastin);
+  ui.fokusKuittausAjastin = setTimeout(() => {
+    if (!ui.dead && polloNappi()) naytaPolloKupla(ui, teksti);
+  }, 2500);
+  return true;
 }
 
 /*

@@ -1266,7 +1266,8 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
    * ei anna kahvaa, joten sen kehys pysyy kiinteänä kuten ennen.
    */
   if (lava) kytkeKarttaZoom(ui, iso, lava, isoNapit, ydin, { zoomMuuttui: levita });
-  sfx.play('paper');
+  // Avausääni kuuluu jo napautuksessa (naytaNahtavyys), joten tässä ei
+  // enää soiteta mitään — sama korjaus kuin kohdepopupeilla (v1119).
 }
 
 /**
@@ -1471,6 +1472,13 @@ export function avaaNahtavyys(ui, kohde, numero, {
 } = {}) {
   const dialogi = document.getElementById('nahtavyys-dialog');
   if (!dialogi) return;
+  /*
+   * AVAUSÄÄNI ENSIMMÄISENÄ (omistajan pelitestipalaute v1119, kohta
+   * 17: ääni heti napautuksesta, ennen raskaampaa työtä). Ennen se
+   * soi vasta ikkunan rakentamisen jälkeen — ja `paper`-äänitteen
+   * omasta alusta, joka on hiljaisuutta (ks. js/sound.js popup).
+   */
+  sfx.play('popup');
   /*
    * PALUUPOLKU (omistajan tilaus 15.8.2026: "engelin artikkelista
    * ei pääse takaisin edelliseen artikkeliin ... nuoli taaksepäin").

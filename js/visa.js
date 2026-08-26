@@ -137,9 +137,19 @@ export function renderQuiz(ui) {
   } else if (quiz.gate) {
     otsikko = `${city.name} — portti: ${quiz.gate.label}`;
   } else if (kaariTarina) {
-    // Tarinakaaren kohtaaminen: kehyksenä kaupunki ja kohtaaminen —
-    // henkilö esittäytyy itse repliikissään.
-    otsikko = `${city.name} — kohtaaminen:${hardTag}`;
+    /*
+     * Tarinakaaren kohtaaminen: kehyksenä kaupunki ja kohtaaminen —
+     * henkilö esittäytyy itse repliikissään.
+     *
+     * YRITYSLASKURI OTSIKKORIVILLE (omistajan pelitestipalaute v1119:
+     * *"yritysten määrä näkyy kysymysvaiheessa (esim. 'Yritys 1/2')"*).
+     * Kohtaamisessa on kaksi yritystä, ja toisen väärän jälkeen
+     * kaupungin aarre lukittuu pysyvästi (js/game.js lukitseAarre) —
+     * pelaajan on tiedettävä, kumpi yritys on menossa.
+     */
+    const luku = game.kaariYritysLuku?.(quiz.cityId);
+    const yritys = luku ? ` · yritys ${luku.nyt}/${luku.kaikki}` : '';
+    otsikko = `${city.name} — kohtaaminen${yritys}:${hardTag}`;
   } else if (kohtaaminen) {
     // Tarinallinen kohtaaminen (omistajan toive 5.8.2026): nimetty
     // paikallinen hahmo kysyy, ei satunnainen kysyjä.
@@ -287,6 +297,22 @@ export function renderQuiz(ui) {
     if (!revealed) {
       const verdict = quiz.timedOut ? 'Aika loppui!' : quiz.right ? 'Oikein!' : 'Väärin.';
       ui.quizResult.appendChild(html('strong', 'quiz-verdict', verdict));
+      /*
+       * KÄTKÖ SULKEUTUI (omistajan pelitestipalaute v1119: toisen
+       * väärän vastauksen jälkeen aarre lukittuu pysyvästi, ja
+       * *"kohtaamiskortti/laatta näyttää menetetyn tilan (lyhyt toteava
+       * teksti)"*).
+       *
+       * Rivi on toteamus eikä moite: peli jatkuu, matka jatkuu, mutta
+       * tämä kätkö jäi. Henkilön nimi tulee kaaridatasta, jotta lause
+       * on kaupungin oma eikä yleinen.
+       */
+      if (quiz.aarreLukittui) {
+        const nimi = TARINAKAARI[quiz.cityId]?.nimi;
+        ui.quizResult.appendChild(html('span', 'quiz-lukko', nimi
+          ? `Aarre jäi löytymättä — ${nimi} ei kerro enempää.`
+          : 'Aarre jäi löytymättä — kätkö sulkeutui.'));
+      }
     } else {
       const found = quiz.found ? game.aarreTyyppi(quiz.found, quiz.cityId) : null;
       const body = html('div');

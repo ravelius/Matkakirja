@@ -147,7 +147,9 @@ function piirraPiste(ui, ryhma, city, nimi) {
     // Kesken animaation (nopan pyörähdys, siirtymä) kartta ottaa yhä
     // napautuksia vastaan — sama kiireen esto kuin kaupungin laatalla.
     if (ui.busy) return;
-    sfx.play('paper');
+    // Sama selkeä avausääni kuin kohdepopupeilla, ja ENNEN kortin
+    // rakentamista (v1119, kohta 17).
+    sfx.play('popup');
     avaaFokusKohtaaminen(ui, city);
   };
   g.addEventListener('click', avaa);

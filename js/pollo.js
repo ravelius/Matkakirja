@@ -1715,6 +1715,21 @@ class Pollo {
     if (this.vihjeLisa) this.vihjeLisa.hidden = true;
     kupla.classList.remove('pollo-vihje-parina');
     this.asetaVihjeenPaikka();
+    this.kuplanAani();
+  }
+
+  /**
+   * KUPLAN ILMESTYMISÄÄNI (omistajan pelitestipalaute v1119: *"pieni
+   * hiljainen ääni kun kupla ilmestyy … kunnioita mykistystä"*).
+   *
+   * Kupla saattoi tulla ruudulle täysin äänettömästi, jolloin sen
+   * huomasi vain jos sattui katsomaan oikeaan nurkkaan. Ääni on
+   * hiljainen paperin kahahdus (js/sound.js 'kupla'), ja mykistys
+   * hoituu itsestään: SoundKit.play palaa heti, kun ääni on pois
+   * päältä tai peli on taustalla.
+   */
+  kuplanAani() {
+    sfx.play('kupla');
   }
 
   /**
@@ -1737,6 +1752,7 @@ class Pollo {
     kupla.hidden = false;
     this.vihje.classList.add('pollo-vihje-parina');
     this.asetaVihjeenPaikka();
+    this.kuplanAani();
   }
 
   /**
@@ -1832,7 +1848,15 @@ class Pollo {
     // ristiin, koska sama elementti kiertää molemmissa asennoissa.
     const ankkuri = this.vihjeAnkkuri ?? this.nappi;
     const nappi = ankkuri.getBoundingClientRect();
-    const marginaali = 8;
+    /*
+     * KUPLA IRTI SIVURAJOISTA (omistajan pelitestipalaute v1119:
+     * *"kuplat hieman irti sivurajoista — nyt kiinni oikeassa
+     * laidassa — esim. 12–16 px marginaali"*). Kahdeksan pikseliä
+     * riitti pitämään kuplan ruudulla, muttei erottamaan sitä
+     * reunasta: iPadilla saapumiskuplat näyttivät liimautuneen kiinni
+     * oikeaan laitaan.
+     */
+    const marginaali = 14;
     const vasemmalle = (osa) => {
       const leveys = osa.getBoundingClientRect().width;
       const keskitetty = nappi.left + nappi.width / 2 - leveys / 2;

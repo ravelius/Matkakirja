@@ -993,6 +993,33 @@ export const JULISTEET = {
       + 'James Taylorin viljelmältä lähetettiin saaren ensimmäinen teelasti '
       + 'Lontoon huutokauppaan.',
   },
+  /*
+   * TEHTÄVÄKOHTAISET JULISTEET (omistajan tilaus v1119, kohta 21).
+   *
+   * Avain ei ole enää pakosti kaupungin tunnus: tehtävä voi kantaa
+   * oman `juliste`-avaimensa (js/packs/fokusvirta-*.js lehtitehtavat),
+   * joka voittaa kaupungin oletuksen. Näin samasta kaupungista voi
+   * saada useamman eri julisteen eri tehtävistä.
+   *
+   * Nämä kaksi ovat Ateenan Athena Nike -aiheiset vedokset; kaupungin
+   * oma oletusjuliste (tuot-ateena.png) jää niille tehtäville, joilla
+   * ei ole omaa avainta.
+   */
+  'ateena-nike': {
+    tiedosto: 'tuotanto/tuot-ateena-nike.png',
+    kaupunki: 'Ateena',
+    otsikko: 'Athena Nike 1873',
+    selite: 'Athena Niken temppelin kadonnut puujumalankuva oli siivetön — '
+      + 'ateenalaiset sanoivat, ettei voitto voisi koskaan lentää pois '
+      + 'kaupungista. Kädessään sillä oli granaattiomena ja kypärä.',
+  },
+  'ateena-nike-temppeli': {
+    tiedosto: 'tuotanto/tuot-ateena-nike-temppeli.png',
+    kaupunki: 'Ateena',
+    otsikko: 'Nike Apteros 1873',
+    selite: 'Aikalaiskuvitelma siivettömän voitonjumalattaren kuvasta '
+      + 'temppelinsä pylväiden välissä Akropoliin lounaisbastionilla.',
+  },
   karachi: {
     tiedosto: 'tuotanto/tuot-karachi.png',
     kaupunki: 'Karachi',
@@ -1006,4 +1033,16 @@ export const JULISTEET = {
 /** Kaupungin juliste tai null. Yksi kysely, jotta tarkistus on samanlainen kaikkialla. */
 export function kaupunginJuliste(cityId) {
   return JULISTEET[cityId] ?? null;
+}
+
+/**
+ * JULISTE AVAIMELLA (omistajan tilaus v1119, kohta 21).
+ *
+ * Avain on joko kaupungin tunnus (kaupungin oletusjuliste) tai
+ * tehtävän oma `juliste`-avain, joka voittaa oletuksen. Sama kysely
+ * kaikkialla: kokoelma (js/ui.js julisteVoitot), palkintokuva ja
+ * lunastus lukevat julisteen tästä.
+ */
+export function juliste(avain) {
+  return JULISTEET[avain] ?? null;
 }
