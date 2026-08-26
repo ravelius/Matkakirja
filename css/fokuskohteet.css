@@ -616,28 +616,15 @@
 
 
 /* ===================================================================
-   SILMÄMERKKI JA VIRTUAALIKIERROS (omistajan tilaus v1119, kohta 19)
+   KATEGORIASYMBOLIT JA VIRTUAALIKIERROS
    -------------------------------------------------------------------
-   Kohde, jolla on katsottavaa muualla kuin lehden sivulla, saa kartalle
-   silmän pisteen tilalle — sama muoto ja sama perhe kuin täkysymbolien
-   silmällä (css/fokusnosto.css .nostosym-silmakaari), kohdemerkin
-   mittakaavassa.
+   Kohdemerkin kategoriasymbolit (silmä mukaan lukien) piirtää nykyään
+   yhteinen kirjasto (js/fokusnosto-symbolit.js piirraNostosymboli), ja
+   niiden tyylit — myös värit — ovat css/styles.css:n osiossa
+   KARTTASYMBOLIT (--sym-*). Tässä tiedostossa ei siksi ole enää
+   symbolien omia sääntöjä; v1119:n oma silmäkopio poistui
+   symbolitaksonomian myötä (Raamattu, omistaja 26.8.2026 ilta).
    =================================================================== */
-
-.fokuskohde-silmakaari {
-  fill: #c8912f;
-  stroke: #3a2610;
-  stroke-width: 0.7;
-  stroke-linejoin: round;
-}
-
-.fokuskohde-silma {
-  fill: #fbf6e8;
-  stroke: #3a2610;
-  stroke-width: 0.6;
-}
-
-.fokuskohde-silmatera { fill: #3a2610; }
 
 /*
  * "Avaa kierros" -nappi tietoruudussa: sama pergamenttikieli kuin
