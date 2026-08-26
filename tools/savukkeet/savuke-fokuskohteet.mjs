@@ -329,7 +329,9 @@ const taksonomia = await sivu.evaluate(() => {
       silma: href.endsWith('sym-silma.webp'),
       piste: Boolean(g.querySelector('.fokuskohde-piste')),
       laatta: Boolean(g.querySelector('.nostosym-laatta')),
-      portti: Boolean(g.querySelector('.nostosym-kaupunki')),
+      // v1170: porttitornikin on generoitu kuva; koodiluokka on varapolku.
+      portti: href.endsWith('sym-kaupunki.webp')
+        || Boolean(g.querySelector('.nostosym-kaupunki')),
     } : null;
   };
   return {

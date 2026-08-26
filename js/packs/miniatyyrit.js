@@ -380,5 +380,44 @@ export const MINIATYYRIT = {
     'Greyfriars Bobby': 'assets/kartat/miniatyyrit/edinburgh-greyfriars-bobby.webp',
     'Calton Hill': 'assets/kartat/miniatyyrit/edinburgh-calton-hill.webp',
     'Holyroodin palatsi': 'assets/kartat/miniatyyrit/edinburgh-holyroodin-palatsi.webp',
+    // Uusinta 27.8.2026: kruunutorni nyt oikein (1. otto hylattiin).
+    'St Gilesin katedraali': 'assets/kartat/miniatyyrit/edinburgh-st-gilesin-katedraali.webp',
+  },
+  /*
+   * Erä 4 (27.8.2026): 24/25 hyväksytty. Vapahtajan katedraali
+   * HYLÄTTIIN — kupolit piirtyivät vihreinä vaikka kullatut kupolit
+   * ovat tunnusmerkki (saman erän Kiovan Sofia todistaa että kulta
+   * onnistuu); prompti tiukennettu, uusinta erän 5 mukana.
+   */
+  moskova: {
+    'Bolšoi-teatteri': 'assets/kartat/miniatyyrit/moskova-bolsoi-teatteri.webp',
+    'Punainen tori': 'assets/kartat/miniatyyrit/moskova-punainen-tori.webp',
+    'Pyhän Vasilin katedraali': 'assets/kartat/miniatyyrit/moskova-pyhan-vasilin-katedraali.webp',
+    'Moskovan Kreml': 'assets/kartat/miniatyyrit/moskova-moskovan-kreml.webp',
+    'Tretjakovin galleria': 'assets/kartat/miniatyyrit/moskova-tretjakovin-galleria.webp',
+  },
+  pietari: {
+    'Pietari-Paavalin linnoitus': 'assets/kartat/miniatyyrit/pietari-pietari-paavalin-linnoitus.webp',
+    Talvipalatsi: 'assets/kartat/miniatyyrit/pietari-talvipalatsi.webp',
+    Verikirkko: 'assets/kartat/miniatyyrit/pietari-verikirkko.webp',
+    Vaskiratsastaja: 'assets/kartat/miniatyyrit/pietari-vaskiratsastaja.webp',
+    'Kazanin katedraali': 'assets/kartat/miniatyyrit/pietari-kazanin-katedraali.webp',
+    'Mariinski-teatteri': 'assets/kartat/miniatyyrit/pietari-mariinski-teatteri.webp',
+  },
+  kiova: {
+    'Kontraktovan aukio': 'assets/kartat/miniatyyrit/kiova-kontraktovan-aukio.webp',
+    'Andreaksen kirkko': 'assets/kartat/miniatyyrit/kiova-andreaksen-kirkko.webp',
+    'Pyhän Mikaelin luostari': 'assets/kartat/miniatyyrit/kiova-pyhan-mikaelin-luostari.webp',
+    'Pyhän Sofian katedraali': 'assets/kartat/miniatyyrit/kiova-pyhan-sofian-katedraali.webp',
+    'Itsenäisyyden aukio': 'assets/kartat/miniatyyrit/kiova-itsenaisyyden-aukio.webp',
+    'Kiovan kultainen portti': 'assets/kartat/miniatyyrit/kiova-kiovan-kultainen-portti.webp',
+  },
+  riika: {
+    Vapaudenpatsas: 'assets/kartat/miniatyyrit/riika-vapaudenpatsas.webp',
+    'Kolme veljestä': 'assets/kartat/miniatyyrit/riika-kolme-veljesta.webp',
+    'Riian tuomiokirkko': 'assets/kartat/miniatyyrit/riika-riian-tuomiokirkko.webp',
+    'Pyhän Pietarin kirkko': 'assets/kartat/miniatyyrit/riika-pyhan-pietarin-kirkko.webp',
+    'Mustapäiden talo': 'assets/kartat/miniatyyrit/riika-mustapaiden-talo.webp',
+    Keskustori: 'assets/kartat/miniatyyrit/riika-keskustori.webp',
   },
 };

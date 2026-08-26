@@ -1705,7 +1705,8 @@ const KUVAT = [
     + 'towers with spires at intervals along it and one taller gate '
     + 'tower with a clock, and rising behind the wall the golden onion '
     + 'domes of cathedrals and a tall white bell tower'],
-  ['moskova-vapahtajan-katedraali', 'a huge white stone russian '
+  // 1. otto (27.8.2026): kupolit vihreina — kulta on tunnusmerkki.
+  ['moskova-vapahtajan-katedraali', 'GOLDEN domes, bright gilded gold (NOT green, NOT patina): a huge white stone russian '
     + 'cathedral: one enormous GILDED dome on a tall windowed drum in '
     + 'the middle and four smaller gilded domes on square corner towers '
     + 'around it, deep arched gables along the white walls and an '
