@@ -184,8 +184,9 @@ const alanappi = await sivu.evaluate(() => {
 vaadi('lehden alin "tapaa henkilö" -kohta on poissa',
   alanappi.piilossa, JSON.stringify(alanappi));
 
-// Pöllön vinkki lehden päällä + ruksi.
-await sivu.waitForTimeout(600);
+// Pöllön vinkki lehden päällä + ruksi. Kupla tulee tarkoituksella
+// vasta ~1,4 s hengähdyksen jälkeen (omistaja 26.8.2026).
+await sivu.waitForTimeout(2200);
 const vinkki = await sivu.evaluate(() => {
   const kupla = document.querySelector('.fokusvirta-vinkki');
   return {
@@ -194,7 +195,7 @@ const vinkki = await sivu.evaluate(() => {
   };
 });
 vaadi('pöllö vinkkaa lyhyesti lehden avautuessa',
-  vinkki.teksti.length > 0 && vinkki.teksti.length <= 70 && /minitehtäv/i.test(vinkki.teksti),
+  vinkki.teksti.length > 0 && vinkki.teksti.length <= 90 && /minitehtäv/i.test(vinkki.teksti),
   `${vinkki.teksti.length} mrk: ${vinkki.teksti}`);
 vaadi('vinkissä on "Älä näytä jatkossa" -ruksi', vinkki.ruksi);
 

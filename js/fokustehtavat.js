@@ -374,8 +374,12 @@ function aarreAuki(ui, city) {
  * tietoa, kehu ei.
  */
 
-/** Aarteen jälki syttyi juuri — silminnäkijäheitto kerran per maa. */
-const AARRE_SYTTYI = 'Vihreä piste kartalla — kävisin katsomassa, minä olen jo käynyt.';
+/*
+ * Aarteen jälki syttyi juuri. Sanamuoto selkeytettiin omistajan
+ * pyynnöstä 26.8.2026 ("liian kryptinen") — opastus voittaa tässä
+ * pöllön kuivan heiton, kuten lehtivinkissäkin.
+ */
+const AARRE_SYTTYI = 'Aarteen jälki syttyi: vihreä piste kartalla näyttää paikan.';
 /** Aarre oli jo auki: jäljellä on raha, ja pöllö laskee sen. */
 const AARRE_RAHAA = 'Oikein. Puntia matkakassaan — niitä ei laske kukaan muu kuin minä.';
 /** Sama asia yhdellä virkkeellä, kun perään tulee vielä julistevinkki. */

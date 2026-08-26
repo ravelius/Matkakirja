@@ -751,7 +751,9 @@ function piirraKupla(ui, city, data, tila, nappi, tyyliKesken = null) {
 function asetaKuplanPaikka(kupla, nappi) {
   const ikkuna = document.defaultView ?? globalThis;
   const laatikko = nappi.getBoundingClientRect();
-  const marginaali = 8;
+  // Selvästi irti reunoista (omistaja 26.8.2026) — kupla kiinni
+  // laidassa näytti ahtaalta.
+  const marginaali = 16;
   const rako = 12;
   const leveys = kupla.getBoundingClientRect().width;
   const keskitetty = laatikko.left + laatikko.width / 2 - leveys / 2;
@@ -1547,13 +1549,15 @@ export function avaaFokusKohtaaminen(ui, city) {
  * kehittäjätilalla ja fokusmoodilla, eikä riviäkään pelitallennukseen:
  * tämä on lukijan asetus, ei pelitilanne.
  *
- * KARAKTÄÄRI (Raamattu, PÖLLÖN KARAKTÄÄRI): kuiva toteavuus, ei
- * kehotusta pelaajalle ylhäältä ("Tee lehden minitehtävä" oli käsky).
- * Pöllö sanoo mitä tapahtuu ja mitä jää tapahtumatta — ei enempää.
- * Silminnäkijäheittoa EI ole tässä: sen kiintiö (kerran per maa) menee
- * aarrekuittauksiin, jotka ovat isompia hetkiä.
+ * SANAMUOTO ON OMISTAJAN (26.8.2026) — ohjaava kehotus voittaa tässä
+ * pöllön kuivan toteavuuden, koska kyse on opastuksesta eikä
+ * repliikistä. Silminnäkijäheittoa EI ole tässä: sen kiintiö (kerran
+ * per maa) menee aarrekuittauksiin, jotka ovat isompia hetkiä.
  */
-const LEHTIVINKKI_TEKSTI = 'Lehden minitehtävä avaa tien aarteelle. Muuten kartta pysyy hiljaa.';
+const LEHTIVINKKI_TEKSTI = 'Etsi minitehtävä lehdestä ja ratkaise se, '
+  + 'niin saat vinkin aarteen paikasta kartalla.';
+/* Kupla tulee vasta hengähdyksen jälkeen (omistaja 26.8.2026). */
+const LEHTIVINKKI_VIIVE_MS = 1400;
 
 /** Vinkki näkyy kerran per saapuminen; avain on sama kuin virralla. */
 function vinkkiAvain(ui, city) {
@@ -1640,7 +1644,15 @@ export function fokusvirtaLehtivinkki(ui, city) {
   if (ui.fokusvinkkiNaytetty.has(avain)) return false;
   if (!polloNappi()) return false;
   ui.fokusvinkkiNaytetty.add(avain);
-  return naytaPolloKupla(ui, LEHTIVINKKI_TEKSTI, { ruksi: true });
+  clearTimeout(ui.fokusvinkkiAjastin);
+  ui.fokusvinkkiAjastin = setTimeout(() => {
+    // Pöllö on voinut kadota (lehti kiinni, näkymä vaihtui) —
+    // myöhästynyt kupla ilman kärkeä jää silloin näyttämättä.
+    if (!ui.dead && polloNappi()) {
+      naytaPolloKupla(ui, LEHTIVINKKI_TEKSTI, { ruksi: true });
+    }
+  }, LEHTIVINKKI_VIIVE_MS);
+  return true;
 }
 
 /**
@@ -1660,7 +1672,16 @@ export function fokusvirtaLehtivinkki(ui, city) {
 export function fokusvirtaKuittaus(ui, teksti) {
   if (FOKUSVIRTA_KORTIT || typeof document === 'undefined') return false;
   if (!teksti) return false;
-  return naytaPolloKupla(ui, teksti);
+  /*
+   * Kuittaus tulee vasta muutaman sekunnin päästä (omistaja
+   * 26.8.2026): pelaaja katsoo vielä vastaustaan, ja heti lävähtävä
+   * kupla söi sen hetken.
+   */
+  clearTimeout(ui.fokusKuittausAjastin);
+  ui.fokusKuittausAjastin = setTimeout(() => {
+    if (!ui.dead && polloNappi()) naytaPolloKupla(ui, teksti);
+  }, 2500);
+  return true;
 }
 
 /*
