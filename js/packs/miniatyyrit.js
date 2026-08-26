@@ -342,4 +342,43 @@ export const MINIATYYRIT = {
     'Varsovan kansallismuseo': 'assets/kartat/miniatyyrit/varsova-varsovan-kansallismuseo.webp',
     'Kulttuuri- ja tiedepalatsi': 'assets/kartat/miniatyyrit/varsova-kulttuuri-ja-tiedepalatsi.webp',
   },
+  /*
+   * Erä 3 (generoi-miniatyyrit.yml 26.8.2026): 23/24 hyväksytty.
+   * St Gilesin katedraali HYLÄTTIIN — kuvasta puuttui kruunutorni,
+   * tunnusmerkki; prompti tiukennettu ja uusinta ajossa erän 4
+   * mukana. Siihen asti kohde toimii kartalla porttitornittomana
+   * merkkinä. Sagrada Famílian nostokurjet ovat kuvassa
+   * tarkoituksella — kirkko on yhä kesken, kuten oikeasti.
+   */
+  oslo: {
+    Kuninkaanlinna: 'assets/kartat/miniatyyrit/oslo-kuninkaanlinna.webp',
+    'Karl Johans gate': 'assets/kartat/miniatyyrit/oslo-karl-johans-gate.webp',
+    'Oslon tuomiokirkko': 'assets/kartat/miniatyyrit/oslo-oslon-tuomiokirkko.webp',
+    Kaupungintalo: 'assets/kartat/miniatyyrit/oslo-kaupungintalo.webp',
+    'Akershusin linnoitus': 'assets/kartat/miniatyyrit/oslo-akershusin-linnoitus.webp',
+    Oopperatalo: 'assets/kartat/miniatyyrit/oslo-oopperatalo.webp',
+  },
+  dublin: {
+    'Guinness-panimo': 'assets/kartat/miniatyyrit/dublin-guinness-panimo.webp',
+    'Patrickin katedraali': 'assets/kartat/miniatyyrit/dublin-patrickin-katedraali.webp',
+    'Dublinin linna': 'assets/kartat/miniatyyrit/dublin-dublinin-linna.webp',
+    'Ha’penny-silta': 'assets/kartat/miniatyyrit/dublin-hapenny-silta.webp',
+    Spire: 'assets/kartat/miniatyyrit/dublin-spire.webp',
+    'Trinity College': 'assets/kartat/miniatyyrit/dublin-trinity-college.webp',
+  },
+  barcelona: {
+    'Sagrada Família': 'assets/kartat/miniatyyrit/barcelona-sagrada-familia.webp',
+    'Casa Batlló': 'assets/kartat/miniatyyrit/barcelona-casa-batllo.webp',
+    'Arc de Triomf': 'assets/kartat/miniatyyrit/barcelona-arc-de-triomf.webp',
+    Musiikkipalatsi: 'assets/kartat/miniatyyrit/barcelona-musiikkipalatsi.webp',
+    'Boquerian kauppahalli': 'assets/kartat/miniatyyrit/barcelona-boquerian-kauppahalli.webp',
+    'Kolumbuksen patsas': 'assets/kartat/miniatyyrit/barcelona-kolumbuksen-patsas.webp',
+  },
+  edinburgh: {
+    'Charlotte Square': 'assets/kartat/miniatyyrit/edinburgh-charlotte-square.webp',
+    'Edinburghin linna': 'assets/kartat/miniatyyrit/edinburgh-edinburghin-linna.webp',
+    'Greyfriars Bobby': 'assets/kartat/miniatyyrit/edinburgh-greyfriars-bobby.webp',
+    'Calton Hill': 'assets/kartat/miniatyyrit/edinburgh-calton-hill.webp',
+    'Holyroodin palatsi': 'assets/kartat/miniatyyrit/edinburgh-holyroodin-palatsi.webp',
+  },
 };

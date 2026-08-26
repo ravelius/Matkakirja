@@ -1657,11 +1657,15 @@ const KUVAT = [
     + 'out of the rock face, buildings with crow-stepped gables and '
     + 'small towers crowded behind it on the summit, a flag on the '
     + 'highest roof and the bare cliff falling away below'],
+  // 1. otto (26.8.2026) tuotti tavallisen suippotornin kellolla —
+  // kruunu on kohteen tunnusmerkki, joten kielto lisätty promptiin.
   ['edinburgh-st-gilesin-katedraali', 'a gothic town church with an '
-    + 'extraordinary tower: a square stone tower whose top is a CROWN — '
-    + 'eight thin flying arches springing inward from its corners and '
-    + 'meeting under a small central spire, an open stone crown '
-    + 'standing in the air — with the low pinnacled nave below it'],
+    + 'extraordinary tower top: an OPEN IMPERIAL CROWN of stone floating '
+    + 'on a square tower — eight separate thin flying buttress arches '
+    + 'leaning inward through open air and meeting at a tiny central '
+    + 'pinnacle, daylight visible BETWEEN the arches. NOT a pointed '
+    + 'spire, NOT a solid steeple, NO clock face. Low pinnacled nave '
+    + 'below'],
   ['edinburgh-greyfriars-bobby', 'a small bronze statue of a shaggy '
     + 'little terrier sitting alert on top of a low ROUND polished '
     + 'granite drinking fountain at a street corner, tall old '
