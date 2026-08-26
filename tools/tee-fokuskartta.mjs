@@ -509,12 +509,28 @@ const laudanKaupungitAsteina = pack.cities.map((c) => ({
   lon: kaava.lautaLon(c.x), lat: kaava.lautaLat(c.y), nimi: c.name,
 }));
 
+/*
+ * `tyyli.paikat` on joko `true` (poiminnan omat oletukset, kuten
+ * yleisellä reitillä) tai olio, joka säätää poimintaa.
+ *
+ * MIKSI SÄÄTÖ ON OLEMASSA: nimen leveys mitataan lehden leveydestä,
+ * ei asteista. Kreikan lehdellä `vahinVali` 0,55 astetta on reilusti
+ * enemmän kuin nimen levyinen, mutta Venäjän lehti on 173 astetta
+ * leveä — siellä "Nizhny Novgorod" vie kaksitoista astetta, ja puolen
+ * asteen väli päästää naapurikaupungit toistensa nimien päälle.
+ * Oletusarvot eivät muutu: säätö on vain kuratoiduilla jättiläisillä.
+ */
 const aineisto = keraaAineisto({
   kansio: dataKansio,
   iso,
   laatikko,
   naapurit: (tyyli.naapurit ?? []).map((n) => n.iso),
-  paikkoja: tyyli.paikat ? { poisLahelta: laudanKaupungitAsteina } : null,
+  paikkoja: tyyli.paikat
+    ? {
+      ...(typeof tyyli.paikat === 'object' ? tyyli.paikat : {}),
+      poisLahelta: laudanKaupungitAsteina,
+    }
+    : null,
 });
 console.log(`  renkaat ${aineisto.maa.renkaat.length} · joet ${aineisto.joet.length} `
   + `· järvet ${aineisto.jarvet.length} · paikat `

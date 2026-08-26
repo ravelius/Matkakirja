@@ -310,7 +310,35 @@ export function piirra(canvas, aineisto, asetukset) {
 
   // --- projektio: asteet -> lauta -> kuvapikselit ja takaisin --------
   const { lautaX, lautaY, lautaLon, lautaLat } = laudanProjektio(projektio);
-  const kuvaX = (lon) => (lautaX(lon) - bbox.x) * px;
+  /*
+   * KIERTÄVÄ LAUTA JA KUVAN JATKUVA AKSELI.
+   *
+   * Maailmankartta on lieriö, jonka sauma on lon −175 (LON0), ja
+   * `lautaX` palauttaa siksi aina lukeman väliltä [0, leveys) — lon 190
+   * saa saman x:n kuin lon −170. Käänteinen `lautaLon` ei kierrä
+   * lainkaan, joten rasterikerrokset (korkeus, varjostus, meri) lukevat
+   * kuvan oikean reunan jo nyt jatkuvana: bbox voi ulottua sauman yli.
+   *
+   * Vektorikerrokset kulkevat toiseen suuntaan — asteista pikseleiksi —
+   * ja niille kierto on virhe. Venäjän lehti ulottuu lon 218:aan asti;
+   * ilman tätä korjausta Tšukotkan rantaviiva sauman takaa ja Alaskan
+   * joet olisivat lentäneet kuvan vasempaan laitaan Skandinavian päälle.
+   *
+   * Korjaus: valitaan se kopio, joka on lähinnä kuvan keskustaa. Kuva
+   * on aina alle täyden kierroksen levyinen, joten kopioita on yksi.
+   * Sauman sisäpuolella oleville lehdille tämä ei muuta mitään.
+   */
+  const kierto = projektio.tyyppi === 'miller' ? projektio.leveys : 0;
+  const kuvaKeski = bbox.x + bbox.w / 2;
+  const lautaXjatkuva = (lon) => {
+    let x = lautaX(lon);
+    if (kierto) {
+      while (x - kuvaKeski > kierto / 2) x -= kierto;
+      while (kuvaKeski - x > kierto / 2) x += kierto;
+    }
+    return x;
+  };
+  const kuvaX = (lon) => (lautaXjatkuva(lon) - bbox.x) * px;
   const kuvaY = (lat) => (lautaY(lat) - bbox.y) * px;
   const lonPikselista = (x) => lautaLon(bbox.x + x / px);
   const latPikselista = (y) => lautaLat(bbox.y + y / px);
@@ -418,6 +446,53 @@ export function piirra(canvas, aineisto, asetukset) {
         if (i === 0) g.moveTo(x, y); else g.lineTo(x, y);
       }
       g.closePath();
+    }
+  };
+
+  /*
+   * RANTAVIIVAN VETO — sama polku kuin `polku`, mutta PÄIVÄMÄÄRÄNRAJAN
+   * SAUMAA EI VEDETÄ.
+   *
+   * Natural Earth katkaisee monikulmionsa pituusasteelle ±180, ja rajan
+   * ylittävällä lehdellä maa tulee siksi kahtena renkaana, joiden
+   * yhteinen reuna kulkee suoraan pitkin meridiaania. Se ei ole
+   * rantaviivaa vaan aineiston sauma: ilman katkaisua Venäjän lehdelle
+   * piirtyi suora pystyviiva Tšukotkan poikki (mitattu 26.8.2026 —
+   * Venäjän geometriassa on 25 peräkkäistä pistettä täsmälleen
+   * lukemalla ±180).
+   *
+   * KATKAISU ON VAIN VEDOSSA. Täytöissä ja leikkauksissa renkaat
+   * kelpaavat sellaisenaan, koska sauma jää täytön sisään — ja avoin
+   * rengas rikkoisi parillisuussäännön.
+   *
+   * Kynä nostetaan vain, kun segmentin MOLEMMAT päät ovat meridiaanilla;
+   * yksittäinen rantapiste, joka sattuu osumaan siihen, piirtyy
+   * normaalisti.
+   */
+  const saumalla = ([lon]) => Math.abs((((lon + 180) % 360) + 360) % 360) < 1e-6;
+  const rantaPolku = (g, renkaat, jitter, siemen) => {
+    const rnd = mulberry32(siemen);
+    g.beginPath();
+    for (const rengas of renkaat) {
+      // Pisteet kerralla, jotta jitter kuluttaa satunnaislukuja samassa
+      // järjestyksessä kuin `polku` — sivellinjälki pysyy samana.
+      const pisteet = rengas.map(([lon, lat]) => {
+        let x = kuvaX(lon);
+        let y = kuvaY(lat);
+        if (jitter) {
+          x += (rnd() - 0.5) * jitter * S;
+          y += (rnd() - 0.5) * jitter * S;
+        }
+        return [x, y];
+      });
+      const n = pisteet.length;
+      let kynaAlla = false;
+      for (let i = 0; i < n; i++) {
+        const j = (i + 1) % n;
+        if (saumalla(rengas[i]) && saumalla(rengas[j])) { kynaAlla = false; continue; }
+        if (!kynaAlla) { g.moveTo(pisteet[i][0], pisteet[i][1]); kynaAlla = true; }
+        g.lineTo(pisteet[j][0], pisteet[j][1]);
+      }
     }
   };
 
@@ -885,11 +960,11 @@ export function piirra(canvas, aineisto, asetukset) {
   ctx.lineCap = 'round';
   ctx.strokeStyle = 'rgba(74,52,33,0.20)';
   ctx.lineWidth = 3.4 * S;
-  polku(ctx, aineisto.maa.renkaat, 1.4, 555);
+  rantaPolku(ctx, aineisto.maa.renkaat, 1.4, 555);
   ctx.stroke();
   ctx.strokeStyle = 'rgba(58,40,25,0.9)';
   ctx.lineWidth = 1.35 * S;
-  polku(ctx, aineisto.maa.renkaat, 0.35, 909);
+  rantaPolku(ctx, aineisto.maa.renkaat, 0.35, 909);
   ctx.stroke();
   ctx.restore();
 
