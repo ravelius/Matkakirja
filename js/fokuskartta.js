@@ -1533,7 +1533,16 @@ export function paivitaFokusAtlas(ui) {
    * maalehdet puretaan pois. Tila muistetaan, koska kynnyksellä on
    * hystereesi.
    */
-  const kauko = kaukozoomissa(ui, nakyva.w);
+  /*
+   * PUUTTUVA YLEISLEHTI EI SAA TYHJENTÄÄ KARTTAA (sääntö 1 tiedoston
+   * alussa: puuttuva kuva ei riko mitään). Jos MAAILMA.webp ei ole
+   * ämpärissä — uusi versio ennen kuvan vientiä, katkaisija pois
+   * päältä, verkko poikki — kaukozoom palaa maalehtien atlakseen
+   * sellaisena kuin se oli ennen tätä pakettia. Puute muistetaan
+   * käynnin ajaksi (VARASTO), joten turhaa hakua ei toisteta.
+   */
+  const kauko = kaukozoomissa(ui, nakyva.w)
+    && VARASTO.get(`${lauta}:${YLEISLEHDEN_AVAIN}`) !== 'ei';
   if (Boolean(ui.yleislehtiPaalla) !== kauko) {
     ui.yleislehtiPaalla = kauko;
     // Valinta on laskettava uudelleen kumpaankin suuntaan: lehdet joko

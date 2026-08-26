@@ -56,6 +56,8 @@
  *  14. Yleislehti myös HAETAAN kaukozoomissa (MAAILMA.webp).
  *  15. Lähizoomiin palatessa maalehdet palaavat ja yleislehti poistuu.
  *  16. Turvatilassa yleislehteä ei haeta eikä piirretä.
+ *  17. Puuttuva yleislehti palauttaa maalehtien atlaksen — kaukozoom ei
+ *      jää tyhjäksi pergamentiksi, jos kuvaa ei ole ämpärissä.
  */
 
 import { createServer } from 'node:http';
@@ -163,6 +165,12 @@ const HAIVELEHTI = (() => {
 
 /** Kumpi valelehti tarjoillaan; vaihdetaan viimeisiä väitteitä varten. */
 let valelehti = PIKKUKUVA;
+/*
+ * Katkaisin yleislehdelle: kun tämä on päällä, MAAILMA.webp ei vastaa
+ * lainkaan. Sillä todistetaan varareitti — puuttuva yleislehti ei saa
+ * jättää kaukozoomia tyhjäksi pergamentiksi (väite 17).
+ */
+let yleislehtiPois = false;
 
 const paketti = await import(process.env.PLAYWRIGHT_JS
   ?? '/opt/node22/lib/node_modules/playwright/index.js');
@@ -175,7 +183,9 @@ const sivu = await ctx.newPage();
 
 const pyynnot = [];
 await sivu.route((url) => /julisteet\/fokus\/.*\.webp$/.test(url.href), (route) => {
-  pyynnot.push(route.request().url().split('/').pop().replace('.webp', ''));
+  const nimi = route.request().url().split('/').pop().replace('.webp', '');
+  pyynnot.push(nimi);
+  if (nimi === 'MAAILMA' && yleislehtiPois) { route.abort(); return; }
   route.fulfill({
     status: 200,
     contentType: 'image/png',
@@ -652,6 +662,34 @@ const jokikerros = await sivu.evaluate(() => {
 });
 vaadi('atlasnäkymässä laudan jokiverkko ei piirry',
   jokikerros.luokka && jokikerros.nakyvat.length === 0, JSON.stringify(jokikerros));
+
+/*
+ * 17. PUUTTUVA YLEISLEHTI PALAUTTAA MAALEHTIEN ATLAKSEN.
+ *
+ * Sääntö 1 (js/fokuskartta.js): puuttuva kuva ei riko mitään. Jos
+ * MAAILMA.webp ei ole ämpärissä — uusi versio ennen kuvan vientiä,
+ * katkaisija pois päältä, verkko poikki — kaukozoom EI saa jäädä
+ * tyhjäksi pergamentiksi, vaan sen on palattava maalehtiin kuten ennen
+ * tätä pakettia. Varasto on moduulitason muistia, joten puute luetaan
+ * uudelleen vasta uudessa dokumentissa: sivu ladataan uusiksi.
+ */
+valelehti = PIKKUKUVA;
+yleislehtiPois = true;
+await sivu.evaluate(() => {
+  localStorage.removeItem('matkakirja-kaynnistykset');
+  localStorage.removeItem('matkakirja-atlas-turvatila');
+});
+await sivu.reload({ waitUntil: 'load' });
+await sivu.waitForTimeout(2500);
+await ateenaan();
+await nakymaan({
+  x: 3000, y: 1000, w: 4200, h: 2600,
+});
+await sivu.waitForTimeout(2000);
+const varareitti = await lehtitila();
+vaadi('puuttuva yleislehti palauttaa maalehtien atlaksen',
+  varareitti.leveys > 2860 && varareitti.yleis === 0 && varareitti.atlas > 0,
+  JSON.stringify(varareitti));
 
 /*
  * 16. TURVATILASSA EI HAETA YLEISLEHTEÄKÄÄN.
