@@ -320,9 +320,13 @@ vaadi('osuma-alue on lehden perustasolla vähintään 44 px',
 const taksonomia = await sivu.evaluate(() => {
   const luokat = (id) => {
     const g = document.querySelector(`.fokuskohde[data-kohde="${id}"]`);
+    // v1162: glyyfi on generoitu kuva (image href sym-<tunnus>.webp);
+    // koodipiirto on varapolku, joten luokkia ei enää odoteta.
+    const kuva = g?.querySelector('image');
+    const href = kuva?.getAttribute('href') ?? '';
     return g ? {
-      vuoristo: Boolean(g.querySelector('.nostosym-vuoristo')),
-      silma: Boolean(g.querySelector('.nostosym-silmakaari')),
+      luonto: href.endsWith('sym-luonto.webp'),
+      silma: href.endsWith('sym-silma.webp'),
       piste: Boolean(g.querySelector('.fokuskohde-piste')),
       laatta: Boolean(g.querySelector('.nostosym-laatta')),
     } : null;
@@ -333,8 +337,8 @@ const taksonomia = await sivu.evaluate(() => {
     kaupunki: luokat('patras') ?? luokat('thessaloniki'),
   };
 });
-vaadi('vuorikohde sai luontosymbolin (vuorenhuippu ja aalto)',
-  taksonomia.vuori?.vuoristo === true && taksonomia.vuori?.laatta === true
+vaadi('vuorikohde sai luontosymbolin (sym-luonto-kuva laatalla)',
+  taksonomia.vuori?.luonto === true && taksonomia.vuori?.laatta === true
   && taksonomia.vuori?.piste === false,
   JSON.stringify(taksonomia.vuori));
 vaadi('kaupunkikohde jäi vanhaksi pisteeksi',
@@ -348,8 +352,9 @@ vaadi('kaupunkikohde jäi vanhaksi pisteeksi',
  * sellaisia nyt ole.
  */
 const silmia = await sivu.evaluate(
-  () => new Set([...document.querySelectorAll('.fokuskohde:has(.nostosym-silmakaari)')]
-    .map((g) => g.dataset.kohde)).size,
+  () => new Set([...document.querySelectorAll('.fokuskohde image')]
+    .filter((k) => (k.getAttribute('href') ?? '').endsWith('sym-silma.webp'))
+    .map((k) => k.closest('.fokuskohde').dataset.kohde)).size,
 );
 vaadi('silmäsymboli vain kierroskohteilla (nyt 0)', silmia === 0, `${silmia} silmää`);
 

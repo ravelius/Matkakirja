@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1161';
+const CACHE = 'matkakirja-2026-08-09.1162';
 const SHELL = [
   './',
   './index.html',
@@ -153,6 +153,18 @@ const SHELL = [
   './js/packs/maakartat.js',
   './js/packs/nahtavyysjutut.js',
   './js/packs/miniatyyrit.js',
+  './assets/kartat/symbolit/sym-elain.webp',
+  './assets/kartat/symbolit/sym-historia.webp',
+  './assets/kartat/symbolit/sym-huuto.webp',
+  './assets/kartat/symbolit/sym-kauppa.webp',
+  './assets/kartat/symbolit/sym-kulttuuri.webp',
+  './assets/kartat/symbolit/sym-luonto.webp',
+  './assets/kartat/symbolit/sym-merenkulku.webp',
+  './assets/kartat/symbolit/sym-ruoka.webp',
+  './assets/kartat/symbolit/sym-sana.webp',
+  './assets/kartat/symbolit/sym-silma.webp',
+  './assets/kartat/symbolit/sym-tekniikka.webp',
+  './assets/kartat/symbolit/sym-urheilu.webp',
   './js/packs/julisteet.js',
   './js/packs/paikallisaarteet.js',
   './js/packs/lipputiedot.js',
