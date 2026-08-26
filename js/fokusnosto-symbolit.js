@@ -392,6 +392,36 @@ function piirraNostosymSeppele(g) {
  * Tuntematon tai puuttuva arvo piirretään huutomerkkinä
  * (piirraNostosymboli) — kutsuja saa siis antaa kentän suodattamatta.
  */
+
+/**
+ * PORTTITORNI — kaupunki. Jokainen kortin avaava kohde saa symbolin
+ * (omistaja 26.8.2026: "onhan kaupungille myös oma symboli, jos sen
+ * takaa aukeaa popup?"): muurattu kaupunginportti kahdella tornilla
+ * ja holvatulla aukolla, 1873-kartan kaupunkimerkin henkeen.
+ */
+function piirraNostosymPortti(g) {
+  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
+  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
+  // Kaksi tornia sakaroineen ja muuri niiden välissä.
+  el('path', {
+    class: 'nostosym-kaupunki',
+    d: 'M-7.2 6.2 L-7.2 -3.4 L-6.2 -3.4 L-6.2 -5.2 L-4.6 -5.2 L-4.6 -3.4 L-3.4 -3.4 L-3.4 6.2 Z '
+      + 'M3.4 6.2 L3.4 -3.4 L4.6 -3.4 L4.6 -5.2 L6.2 -5.2 L6.2 -3.4 L7.2 -3.4 L7.2 6.2 Z '
+      + 'M-3.4 6.2 L-3.4 -1.2 L3.4 -1.2 L3.4 6.2 Z',
+  }, g);
+  // Holvattu porttiaukko muurin keskellä — paperinvärinen, jotta portti
+  // näyttää avoimelta.
+  el('path', {
+    class: 'nostosym-portinaukko',
+    d: 'M-1.7 6.2 L-1.7 1.6 Q0 -0.4 1.7 1.6 L1.7 6.2 Z',
+  }, g);
+  // Muurin harjan sakarat viivana.
+  el('path', {
+    class: 'nostosym-viiva',
+    d: 'M-3.4 -1.2 L-2.2 -1.2 L-2.2 -2.4 L-0.8 -2.4 L-0.8 -1.2 L0.8 -1.2 L0.8 -2.4 L2.2 -2.4 L2.2 -1.2 L3.4 -1.2',
+  }, g);
+}
+
 const NOSTOSYM_PIIRTAJAT = {
   huuto: piirraNostosymHuuto,
   elain: piirraNostosymPollo,
@@ -405,6 +435,7 @@ const NOSTOSYM_PIIRTAJAT = {
   sana: piirraNostosymSulka,
   merenkulku: piirraNostosymMeriankkuri,
   urheilu: piirraNostosymSeppele,
+  kaupunki: piirraNostosymPortti,
 };
 
 /** Tunnetut symbolikategoriat — yksi totuus myös kutsujien tarkistuksiin. */
@@ -433,6 +464,7 @@ export const NOSTOSYM_LUOKAT = {
   sana: 'Tarinat',
   merenkulku: 'Merenkulku',
   urheilu: 'Urheilu',
+  kaupunki: 'Kaupungit',
 };
 
 /**
@@ -443,6 +475,11 @@ export const NOSTOSYM_LUOKAT = {
  */
 export function piirraNostosymboli(g, symboli) {
   const tunnus = NOSTOSYM_PIIRTAJAT[symboli] ? symboli : 'huuto';
+  if (!NOSTOSYM_KUVAT[tunnus]) {
+    // Kuvaa ei ole (viela) generoitu: koodipiirtaja hoitaa koko merkin.
+    NOSTOSYM_PIIRTAJAT[tunnus](g);
+    return;
+  }
   /*
    * GENEROITU KAIVERRUSKUVA LAATALLA (omistajan tilaus 26.8.2026 ilta:
    * "Symboleista voisi tehdä generoimalla paremmat" + "Lisää peliin
@@ -474,8 +511,15 @@ export function piirraNostosymboli(g, symboli) {
  * Leikattu sisältöön ja pienennetty 96 px:iin — merkki näkyy ~21 px
  * kokoisena, joten 96 riittää retinallakin. Avaimet = piirtäjätaulu.
  */
+/*
+ * Vain jo generoidut tunnukset — puuttuva tunnus (nyt kaupunki, kunnes
+ * sen kuva on hyväksytty) piirretään suoraan koodilla ilman turhaa
+ * 404-pyyntöä jokaisesta merkistä.
+ */
+const NOSTOSYM_GENEROIDUT = ['huuto', 'elain', 'silma', 'historia', 'luonto', 'ruoka',
+  'kulttuuri', 'tekniikka', 'kauppa', 'sana', 'merenkulku', 'urheilu'];
 const NOSTOSYM_KUVAT = Object.fromEntries(
-  Object.keys(NOSTOSYM_PIIRTAJAT).map((t) => [t, `assets/kartat/symbolit/sym-${t}.webp`]),
+  NOSTOSYM_GENEROIDUT.map((t) => [t, `assets/kartat/symbolit/sym-${t}.webp`]),
 );
 
 /**

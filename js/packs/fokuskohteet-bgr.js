@@ -280,6 +280,8 @@ export const FOKUSKOHTEET_BGR = [
   {
     id: 'rilan-luostari',
     nimi: 'Rilan luostari',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'kulttuuri',
     tyyppi: 'muu',
     kysymykset: [
       'Miten luostari selvisi osmanivallan läpi?',
@@ -469,6 +471,8 @@ export const FOKUSKOHTEET_BGR = [
   {
     id: 'ruusulaakso',
     nimi: 'Ruusulaakso',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'luonto',
     tyyppi: 'muu',
     kysymykset: [
       'Miten ruusuöljyä valmistetaan?',
@@ -511,6 +515,8 @@ export const FOKUSKOHTEET_BGR = [
   {
     id: 'boyana',
     nimi: 'Boyanan kirkko',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'kulttuuri',
     tyyppi: 'muu',
     kysymykset: [
       'Kuka maalasi Boyanan freskot?',

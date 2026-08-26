@@ -329,6 +329,7 @@ const taksonomia = await sivu.evaluate(() => {
       silma: href.endsWith('sym-silma.webp'),
       piste: Boolean(g.querySelector('.fokuskohde-piste')),
       laatta: Boolean(g.querySelector('.nostosym-laatta')),
+      portti: Boolean(g.querySelector('.nostosym-kaupunki')),
     } : null;
   };
   return {
@@ -341,8 +342,11 @@ vaadi('vuorikohde sai luontosymbolin (sym-luonto-kuva laatalla)',
   taksonomia.vuori?.luonto === true && taksonomia.vuori?.laatta === true
   && taksonomia.vuori?.piste === false,
   JSON.stringify(taksonomia.vuori));
-vaadi('kaupunkikohde jäi vanhaksi pisteeksi',
-  taksonomia.kaupunki?.piste === true && taksonomia.kaupunki?.laatta === false,
+// v1165: kaupunkikin avaa kortin, joten sekin sai merkin (porttitorni,
+// koodipiirto kunnes generoitu kuva on hyväksytty).
+vaadi('kaupunkikohde sai porttitornisymbolin',
+  taksonomia.kaupunki?.portti === true && taksonomia.kaupunki?.laatta === true
+  && taksonomia.kaupunki?.piste === false,
   JSON.stringify(taksonomia.kaupunki));
 /*
  * Silmäsymboleita EI enää odoteta (26.8.2026: Akropolis-museon

@@ -223,6 +223,7 @@ const KOHDE_TYYPIT = {
   merenkulku: 'Merenkulkua',
   urheilu: 'Urheilua',
   elain: 'Eläimiä',
+  kaupunki: 'Kaupunkielämää',
   muu: 'Kartalla',
 };
 
@@ -336,6 +337,8 @@ const KOHDE_TYYPPISYMBOLIT = {
   merenkulku: 'merenkulku',
   urheilu: 'urheilu',
   elain: 'elain',
+  // Kaupunkikin avaa kortin, joten silläkin on merkki (omistaja 26.8.2026).
+  kaupunki: 'kaupunki',
 };
 
 function kohteenSymboli(kohde) {
