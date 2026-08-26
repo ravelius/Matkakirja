@@ -349,6 +349,9 @@ const MODULES = [
   // se itse tuo mapartin, median ja lisänimet, jotka ovat yllä).
   'js/packs/fokus-grc.js',
   'js/fokuskartta.js',
+  // Merkkien yhteinen kasauspassi ennen kerroksia, jotka tuovat sen
+  // (fokuskohteet ja fokusnosto-symbolit). Ei tuo itse mitään.
+  'js/fokusniput.js',
   // Fokuslehden klikattavat karttakohteet ennen ui:ta (ui tuo sen
   // päivitys- ja nollauskutsun; kohteiden lista, mapart, media,
   // ui-apurit, valokuvat ja äänet ovat kaikki jo yllä).
