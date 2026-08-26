@@ -533,7 +533,7 @@ vaadi('ensimmäinen kupla toivottaa tervetulleeksi maahan',
     .test(saapuminen.kuplat[0] ?? ''),
   saapuminen.kuplat[0] ?? '(puuttuu)');
 vaadi('toinen kupla neuvoo vihreään pisteeseen',
-  saapuminen.kuplat[1] === 'Klikkaa vihreää pistettä kartalla.',
+  saapuminen.kuplat[1] === 'Klikkaa kaupungin kultaista merkkiä kartalla.',
   saapuminen.kuplat[1] ?? '(puuttuu)');
 
 // --- 6) Napautusohitus: sama lento uudestaan, tällä kertaa kiirehtien ------
@@ -596,7 +596,8 @@ vaadi('napautus ei vuoda alla oleviin elementteihin',
 // Lentonäkymä puretaan paperin ALLA, joten purku mitataan vasta täältä
 // — napautushetkellä kone on tarkoituksella vielä paikallaan arkin
 // takana, jottei purku näy ruudulla.
-await sivu2.waitForTimeout(7000);
+/* Kuplien viiveet kasvoivat 26.8 (1,8 s + 1,6 s) — odotus sen mukaan. */
+await sivu2.waitForTimeout(9500);
 const ohituksenLoppu = await sivu2.evaluate(() => ({
   kortteja: document.querySelectorAll('.saapumiskortti').length,
   kuplat: [...document.querySelectorAll('.pollo-vihje')].filter((k) => !k.hidden).length,

@@ -513,15 +513,18 @@ const SAAPUMISKORTTI_TAUKO_MS = 280;
 const SAAPUMISKORTTI_LUKUAIKA_MS = 1000;
 // Tekstin oma häivytys (css .saapumiskortti-teksti).
 const SAAPUMISKORTTI_TEKSTI_MS = 320;
-// Kartan ilmestymisestä ensimmäiseen kuplaan ja siitä toiseen.
-const SAAPUMISEN_KUPLA_MS = 1000;
-const SAAPUMISEN_KUPLA_VALI_MS = 800;
+// Kartan ilmestymisestä ensimmäiseen kuplaan ja siitä toiseen —
+// molemmissa selvä hengähdys (omistaja 26.8.2026: "pieni tauko").
+const SAAPUMISEN_KUPLA_MS = 1800;
+const SAAPUMISEN_KUPLA_VALI_MS = 1600;
 /*
  * KUPLIEN SANAMUOTO ON KAANON (omistajan tilaus 26.8.2026). Maa ja
  * kaupunki taipuvat js/ui-apurit.js:n taulukoilla, mutta lauseiden
- * rakenne ei muutu ilman omistajan sanaa.
+ * rakenne ei muutu ilman omistajan sanaa. Toinen kupla kuvaa merkin
+ * TODELLISEN ulkoasun (kultainen kiekko) — "vihreä piste" oli väärin
+ * (omistajan oikaisu 26.8.2026: muuta tekstiä, älä merkin väriä).
  */
-const SAAPUMISEN_KUPLA_TOINEN = 'Klikkaa vihreää pistettä kartalla.';
+const SAAPUMISEN_KUPLA_TOINEN = 'Klikkaa kaupungin kultaista merkkiä kartalla.';
 
 const AUTO_ROLL_MS = 320; // tauko ennen itsestään pyörähtävää noppaa
 /*

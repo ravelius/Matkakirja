@@ -1908,7 +1908,24 @@ export function paivitaFokuskartta(ui) {
      * katsojaa — vain hinta, ja arkin väistyessä kartta olisi vielä
      * matkalla. Kesto 0 vie näkymän rajaukseen kerralla.
      */
-    if (nakyma) ui.kartta?.ajaKamera?.(nakyma, ui.saapumisAsettuu ? { kesto: 0 } : {});
+    let kohde = nakyma;
+    if (nakyma && ui.saapumisAsettuu) {
+      /*
+       * SAAPUMINEN ZOOMAA LÄHEMMÄS (omistaja 26.8.2026): koko maan
+       * ikkunan sijaan ~60 % siitä, saapumiskaupunki painotettuna
+       * keskelle mutta ikkuna pidettynä maan ikkunan sisällä, ettei
+       * reunaan vuoda lehden ulkopuolista tyhjää.
+       */
+      const b = nakyma.bbox;
+      const c = ui.game?.cityOf?.();
+      const w = b.w * 0.6; const h = b.h * 0.6;
+      const cx = (typeof c?.x === 'number') ? c.x : b.x + b.w / 2;
+      const cy = (typeof c?.y === 'number') ? c.y : b.y + b.h / 2;
+      const x = Math.min(Math.max(cx - w / 2, b.x), b.x + b.w - w);
+      const y = Math.min(Math.max(cy - h / 2, b.y), b.y + b.h - h);
+      kohde = { bbox: { x, y, w, h }, marginaali: 0 };
+    }
+    if (kohde) ui.kartta?.ajaKamera?.(kohde, ui.saapumisAsettuu ? { kesto: 0 } : {});
   }
   const valmis = VARASTO.get(`${lauta}:${iso}`);
   // Jo muistissa JA yhä osoitteineen: piirretään samassa kehyksessä,
