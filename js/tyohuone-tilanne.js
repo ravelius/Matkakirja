@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1125 — maalehden lukija ei enaa aloita maan nimesta: nimirivi lippuineen on taittoa ja ohitetaan, luenta alkaa suoraan leipatekstista (esim. Italian maalehti)',
   'v1124 — ylapalkin laukku, kukkaro ja paiva ovat piilossa etusivulla ja avauslennon ajan; ne ilmestyvat vasta kun ensimmaiseen kaupunkiin (esim. Ateena) saavutaan; ladatussa pelissa pilleri nakyy heti',
   'v1123 — etusivun alaotsikko (kahdeksassakymmenessa paivassa) ei enaa leikkaudu iPhonen ruudun reunoista: koko sidottu ruudun leveyteen ja valistys tiivistetty kapealla; roolitukseen kirjattu agenttien mallivalinta (Opus/Sonnet, Fable vain vaikeimpiin)',
   'v1122 — ei pelinakyvaa muutosta: pollosavuke ajetaan nyt julkaisuporttina GitHub Actionsissa (savuke-pollo.yml, koodit secreteista) ja kaytanto on kirjattu Raamatun Kuvat ja lahteet -osioon (SALAISUUDET)',

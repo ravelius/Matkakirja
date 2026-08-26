@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1125, teksti: 'Maalehden luenta alkaa leipatekstista' },
   { v: 1124, teksti: 'Ylapalkki tyhjaksi ennen ekaa saapumista' },
   { v: 1123, teksti: 'Etusivun alaotsikko mahtuu kapealle ruudulle' },
   { v: 1122, teksti: 'Pollosavuke julkaisuportiksi Actions-ajona' },
