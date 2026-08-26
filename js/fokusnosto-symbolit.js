@@ -439,18 +439,20 @@ export function piirraNostosymboli(g, symboli) {
 }
 
 /**
- * AKTIIVISEN TÄYN ANKKURI — pieni mustepiste, jonka päälle kupla
+ * AKTIIVISEN TÄYN ANKKURI — täyn OMA SYMBOLI, jonka päälle kupla
  * asettuu ja johon sen nokka osoittaa.
  *
- * Piste on tarkoituksella hillitty: kupla on jo iso ja se kertoo
- * itsestään, joten kartalle jää vain merkintä siitä KOHDASTA, jota
- * juttu koskee. Piste ei ota napautuksia vastaan (css: pointer-events),
- * koska kupla on sen päällä ja sen oma nappi vie lunastukseen.
+ * Ennen ankkuri oli pelkkä mustepiste, mutta se näytti pelaajasta
+ * siltä, että symboli katoaa tai "muuttuu peruspisteeksi" napautuksesta
+ * (omistaja 26.8.2026 ilta: *"Kartalta katoaa pöllön poikasen kuvake
+ * kun sitä painaa ... Saisi pysyä"*). Nyt symboli pysyy paikallaan
+ * kuplan alla — merkki ja kupla kertovat samasta asiasta. Ankkuri ei
+ * silti ota napautuksia vastaan (css: pointer-events), koska kupla on
+ * sen päällä ja sen oma nappi vie lunastukseen; siksi tässä ei ole
+ * osuma-aluetta eikä kuuntelijoita (vrt. piirraNostosymMerkki).
  */
-function piirraNostosymAnkkuri(g) {
-  el('circle', { class: 'nostosym-laatta', r: 5.6 }, g);
-  el('circle', { class: 'nostosym-kehys', r: 5.6 }, g);
-  el('circle', { class: 'nostosym-ankkuripiste', r: 2.0 }, g);
+function piirraNostosymAnkkuri(g, symboli) {
+  piirraNostosymboli(g, symboli);
 }
 
 /* ==================== KERROS ==================== */
@@ -540,8 +542,10 @@ export function paivitaNostosymbolit(ui, tila = {}) {
         const ryhma = el('g', { class: 'fokusnosto-symboliryhma' }, kerros);
         ui.nostosymRyhmat.push({ g: ryhma, x, y: merkinta.paikka.y });
         if (onAktiivinen) {
-          const ankkuri = el('g', { class: 'fokusnosto-ankkuri' }, ryhma);
-          piirraNostosymAnkkuri(ankkuri);
+          const ankkuri = el('g', {
+            class: `fokusnosto-ankkuri nostosym-tyyppi-${merkinta.symboli}`,
+          }, ryhma);
+          piirraNostosymAnkkuri(ankkuri, merkinta.symboli);
           ui.nostosymAnkkurit.push(ankkuri);
         } else {
           piirraNostosymMerkki(ui, ryhma, merkinta, tila.valitse);
