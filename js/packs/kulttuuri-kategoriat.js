@@ -13872,6 +13872,35 @@ export const KULTTUURI_KATEGORIAT = {
       johdanto: 'Kapea jokilaakso, jossa yksi askel vie ottomaanien basaarista '
         + 'wieniläisen näköiseen kortteliin — ja jossa tornikello näyttää '
         + 'kahtatoista vasta auringon laskiessa.',
+      /*
+       * Avauskuvat: omistajan ChatGPT-herot 26.8.2026 (viiteankkuroitu
+       * prosessi, silmätarkistettu) — Sarajevo oli pelattavista
+       * fokusvirroista viimeinen ilman heroja.
+       */
+      avauskuvat: [
+        {
+          ampari: 'herokoe/hero-sarajevo-aamu.jpg',
+          selite: 'Gazi Husrev-begin moskeija valmistui 1531 Baščaršijan '
+            + 'basaarikortteliin, ja sen pihan suihkulähdepaviljongin takana '
+            + 'kohoaa Sahat Kula, jonka kello näyttää aikaa auringonlaskusta '
+            + 'laskettuna.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-sarajevo-keskipaiva.jpg',
+          selite: 'Jeesuksen pyhän sydämen katedraali valmistui 1889 '
+            + 'Ferhadija-kadulle uusgoottilaiseen asuun kaksoistorneineen ja '
+            + 'ruusuikkunoineen, ja sitä kutsutaan usein vain Katedralaksi.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-sarajevo-ilta.jpg',
+          selite: 'Latinalainen silta rakennettiin kivestä Miljackan yli '
+            + 'ottomaanikaudella, ja sen kupeessa tapahtui kesäkuussa 1914 '
+            + 'laukaus, joka sysäsi maailman sotaan.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+      ],
       kansikuvat: [
         {
           tiedosto: 'Sarajevo City Hall 01.jpg',
