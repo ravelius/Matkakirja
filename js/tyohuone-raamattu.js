@@ -106,6 +106,14 @@ export const RAAMATTU = {
           + 'on kirkas — 1873 = isoisän piirros, nykyhetki = '
           + 'valokuva. Matkakirja on nimetön kulunut muistikirja '
           + '(kannessa ei painettua nimeä).',
+        'JULISTEOTSIKKO ON VERNEN NIMI + OSA TOINEN (omistaja '
+          + '26.8.2026): etusivun otsikko on "Maailman ympäri '
+          + 'kahdeksassakymmenessä päivässä · osa toinen". Vernen '
+          + 'romaani (1873) on public domain eikä lyhyt nimi ylitä '
+          + 'teoskynnystä, joten käyttö on vapaata. RAJAT: mistään '
+          + 'suojatusta SUOMENNOKSESTA ei lainata tekstiä (kääntäjän '
+          + 'oikeudet), eikä mihinkään elokuva-/tv-sovitukseen '
+          + 'vihjata. "V2.0" hylättiin — ei istu 1873-typografiaan.',
         'ALKUKOHTAUS V5 (omistajan teksti 25.8.2026, sanasta '
           + 'sanaan pelissä): paikkarivi "Heathrow, Lontoo, '
           + '<kuukausi vuosi>:" naputetaan kirjoituskoneella ilman '

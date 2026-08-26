@@ -5108,6 +5108,14 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 .juliste-rivi { display: block; line-height: 1.15; }
 .juliste-yla { font-size: 1.5em; letter-spacing: 0.2em; text-indent: 0.2em; }
 .juliste-ala { font-size: 0.86em; letter-spacing: 0.26em; text-indent: 0.26em; }
+/* Jatko-osan merkintä: pieni ja harvennettu, julisteen alarivinä. */
+.juliste-osa {
+  margin-top: 0.45em;
+  font-size: 0.52em;
+  letter-spacing: 0.42em;
+  text-indent: 0.42em;
+  opacity: 0.78;
+}
 
 /*
  * Hiusviivakoriste: kaksi eripaksuista viivaa ja keskellä pelin oma
