@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1163, teksti: 'Miniatyyrit Madridiin, Lissaboniin, Budapestiin ja Varsovaan' },
   { v: 1162, teksti: 'Generoidut kaiverrussymbolit karttamerkkeihin' },
   { v: 1161, teksti: 'Pelin nimi Matkakirja etusivujulisteen karkeen' },
   { v: 1160, teksti: 'Mitorajin Ikaros Sisilian herokuvan selitteeseen' },

@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1163: Miniatyyriera 2/5: Madrid, Lissabon, Budapest ja Varsova (25 kuvaa) kohdekartoille. TESTAA: nailla kartoilla piirrokset numeroympyroiden tilalla.',
   'v1162: Karttasymbolien glyyfit ovat nyt generoituja kaiverruskuvia (12 kpl) pergamenttilaatalla; koodipiirto jai varapoluksi. TESTAA: fokuskohteiden merkit kartalla, kohdekortin ylarivi ja takykuplan ankkuri.',
   'v1161: Etusivujuliste alkaa pelin nimella MATKAKIRJA; aloitusportti siistitty: nappiryhma otsikon alla, tausta sumenee napin takana. TESTAA: etusivu iPadilla ja puhelimella ennen ja jalkeen Aloita-napin.',
   'v1161: Etusivun julisteotsikko alkaa nyt pelin nimella MATKAKIRJA ja Vernen teosnimi on alaotsikkona (omistajan idea). TESTAA: etusivun otsikkoasettelu iPadilla ja puhelimella.',
