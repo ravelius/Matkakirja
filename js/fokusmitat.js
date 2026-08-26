@@ -535,6 +535,21 @@ function taytaMaataulu(ui, iso) {
     for (const osa of kielet) dd.appendChild(osa);
     lista.appendChild(dd);
   }
+  /*
+   * PLUS PALSTOJEN RAJALLE (omistaja 26.8.2026: keskitys taulun
+   * leveyteen näytti oikealle harhautuneelta, koska arvopalsta on
+   * otsikkopalstaa leveämpi). Raja mitataan ensimmäisestä arvosolusta
+   * KERRAN täytön yhteydessä — ei mittauksia missään silmukassa.
+   */
+  const lehti = taulu.querySelector('.fokus-maataulu-lehti');
+  const arvo = lista.querySelector('dd');
+  if (lehti && arvo) {
+    requestAnimationFrame(() => {
+      const raja = arvo.getBoundingClientRect().left
+        - lista.getBoundingClientRect().left;
+      if (raja > 0) lehti.style.marginLeft = `${Math.max(0, raja - 22)}px`;
+    });
+  }
 }
 
 /* ---------------------------------------------------- asteviivaimet */
