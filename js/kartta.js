@@ -201,7 +201,9 @@ const AJON_MARGINAALI = 0.12;
  */
 // Reitin päätepisteen säde. Sama kaava kuin js/ui.js:n lähtömerkillä
 // (ALOITUSLENNON_VIIVA_PX * 1.6), jotta pisteet ovat samankokoisia.
-const LENNON_PISTE_PX = 3.5;
+// Kasvoi 3,5:stä, kun reittiviiva paksuuntui retkikuntakartan
+// mustepunaiseksi vetäisyksi (päätoimittajan taidesuunta 26.8.2026).
+const LENNON_PISTE_PX = 5.4;
 // Nimen kirjasinkoko. Selvästi pienempi kuin pelilaudan kaupunkinimet:
 // nämä eivät ole napautettavia kohteita vaan reitin päät.
 const LENNON_NIMI_PX = 14;
@@ -916,8 +918,8 @@ export class Kartta {
     if (this.ui.game.phase === 'pickstart') return false;
     if (!ZOOMATTAVAT.has(this.ui.game.pack.id)) return false;
     // Lentokalvon aikana lauta piirtyy jo taustalle, mutta pelaaja ei näe
-    // sitä. Zoomaus odottaa Astu mantereelle -napin painallusta
-    // (omistajan havainto: zoomaus ehti tapahtua lennon aikana).
+    // sitä. Zoomaus odottaa lennon loppua (omistajan havainto: zoomaus
+    // ehti tapahtua lennon aikana).
     if (document.body.classList.contains('flight-active')) return false;
     // Isolla laudalla lähikuva tarvitaan aina, myös leveällä ruudulla:
     // kokonäkymä näyttäisi koko vanhan maailman kerralla, eikä siitä

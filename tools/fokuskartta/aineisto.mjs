@@ -78,6 +78,34 @@ const pyorista = (n) => Math.round(n * 1e4) / 1e4;
 /** Osuuko laatikko [a0,a1] toiseen [b0,b1]? */
 const osuu = (a0, a1, b0, b1) => a1 >= b0 && a0 <= b1;
 
+/*
+ * PÄIVÄMÄÄRÄNRAJAN YLI JATKUVA IKKUNA.
+ *
+ * Natural Earthin pituusasteet ovat aina välillä −180..180, mutta
+ * lehden ikkuna ei ole: Venäjän ikkuna kulkee Kaliningradista
+ * (lon 19) Dežnjovin niemelle (lon 190,35) ja Uuden-Seelannin
+ * Chathamsaarille asti (lon 183). Sellaisella lehdellä rajan takainen
+ * geometria on aineistossa lukemilla −180..−170, ei 180..190, ja
+ * pelkkä laatikkovertailu pudottaisi sen pois — juuri niin kävi
+ * Oseania-erässä, jossa Chathamsaarten maasto piirtyi mutta rantaviiva
+ * puuttui.
+ *
+ * `kierrot` kertoo, mitkä ±360 asteen siirrot on kokeiltava. Sama
+ * sääntö kuin meren alan maskissa (meriruudukko `lisaaKierrolla`), nyt
+ * yhteisenä: geometria otetaan mukaan siinä kierroksessa, jossa se
+ * osuu ikkunaan, JA SE KIRJOITETAAN SIIRRETTYNÄ — piirtomoottori
+ * odottaa jatkuvaa akselia (piirto.js `kuvaX`).
+ *
+ * Kaksoiskappaleita ei synny, koska ikkuna on aina alle 360 astetta
+ * leveä: sama rengas osuu korkeintaan yhteen kierrokseen.
+ */
+function kierrot(laatikko) {
+  const ulos = [0];
+  if (laatikko.lon1 > 180) ulos.push(360);
+  if (laatikko.lon0 < -180) ulos.push(-360);
+  return ulos;
+}
+
 /**
  * Monikulmion renkaat listaksi; renkaat, jotka eivät osu laatikkoon,
  * jäävät pois. Laatikko on asteina ja hivenen todellista suurempi,
@@ -85,6 +113,7 @@ const osuu = (a0, a1, b0, b1) => a1 >= b0 && a0 <= b1;
  */
 function renkaat(geom, laatikko) {
   const ulos = [];
+  const kierrokset = kierrot(laatikko);
   const lisaa = (poly) => {
     for (const rengas of poly) {
       let lon0 = Infinity; let lon1 = -Infinity;
@@ -95,9 +124,11 @@ function renkaat(geom, laatikko) {
         if (lat < lat0) lat0 = lat;
         if (lat > lat1) lat1 = lat;
       }
-      if (!osuu(lon0, lon1, laatikko.lon0, laatikko.lon1)) continue;
       if (!osuu(lat0, lat1, laatikko.lat0, laatikko.lat1)) continue;
-      ulos.push(rengas.map(([lon, lat]) => [pyorista(lon), pyorista(lat)]));
+      for (const d of kierrokset) {
+        if (!osuu(lon0 + d, lon1 + d, laatikko.lon0, laatikko.lon1)) continue;
+        ulos.push(rengas.map(([lon, lat]) => [pyorista(lon + d), pyorista(lat)]));
+      }
     }
   };
   if (geom.type === 'Polygon') lisaa(geom.coordinates);
@@ -108,10 +139,14 @@ function renkaat(geom, laatikko) {
 /** Viivageometria osiksi; laatikon ulkopuoliset osat jäävät pois. */
 function viivat(geom, laatikko) {
   const ulos = [];
+  const kierrokset = kierrot(laatikko);
   const lisaa = (rivi) => {
-    const mukana = rivi.some(([lon, lat]) => lon >= laatikko.lon0 && lon <= laatikko.lon1
-      && lat >= laatikko.lat0 && lat <= laatikko.lat1);
-    if (mukana) ulos.push(rivi.map(([lon, lat]) => [pyorista(lon), pyorista(lat)]));
+    for (const d of kierrokset) {
+      const mukana = rivi.some(([lon, lat]) => lon + d >= laatikko.lon0
+        && lon + d <= laatikko.lon1
+        && lat >= laatikko.lat0 && lat <= laatikko.lat1);
+      if (mukana) ulos.push(rivi.map(([lon, lat]) => [pyorista(lon + d), pyorista(lat)]));
+    }
   };
   if (geom.type === 'LineString') lisaa(geom.coordinates);
   else if (geom.type === 'MultiLineString') for (const r of geom.coordinates) lisaa(r);
@@ -225,7 +260,21 @@ function korkeusruudukko(kansio, laatikko) {
  * piirtää yhä ETOPOn pehmeä nollakäyrä. Kuivalle painanteelle
  * laajennus antaa korkeintaan parin kaariminuutin kaistan rannassa.
  */
-function meriruudukko(kansio, ruudukko) {
+/*
+ * VIETY, KOSKA KAUKOZOOMIN YLEISLEHTI TARVITSEE SAMAN MASKIN.
+ *
+ * Koko laudan kattava yleislehti (tools/tee-yleislehti.mjs) ei kokoa
+ * aineistoaan maan ympäriltä vaan koko maailmasta, mutta maan ja meren
+ * ero on siellä täsmälleen sama kysymys — ja väärä vastaus näkyisi
+ * kaukozoomissa Kaspianmerenä maan värisenä. Yhteinen rasterointi on
+ * ainoa tapa pitää yleislehti ja maalehdet samassa maailmassa.
+ *
+ * `laajennus` on ruutuina mitattu dilaatio (ks. alla). Maalehdillä
+ * ruudukko on kuvaa harvempi ja laajennus 2 tasoittaa portaikon;
+ * yleislehdellä ruutu ja kuvapikseli ovat samaa kokoluokkaa, jolloin
+ * pienempi laajennus riittää eikä painanne saa turhaa merikaistaa.
+ */
+export function meriMaski(kansio, ruudukko, { laajennus = 2 } = {}) {
   const tiedosto = 'ne_10m_ocean.geojson';
   if (!existsSync(join(kansio, tiedosto))) return null;
   const {
@@ -251,16 +300,19 @@ function meriruudukko(kansio, ruudukko) {
   };
   /*
    * Päivämääränraja: NE:n koordinaatit ovat -180..180, mutta lehden
-   * ikkuna voi jatkua rajan yli (AUS, NZL, FJI). Rajan ylittävälle
+   * ikkuna voi jatkua rajan yli (RUS, AUS, NZL, FJI). Rajan ylittävälle
    * ikkunalle renkaat lisätään myös 360 astetta siirrettyinä, jotta
    * rajan takainen meri osuu maskiin; ikkunan ulkopuoliset
    * leikkausparit putoavat pois täyttövaiheen puskuroinnissa.
+   *
+   * Maski EI voi rajata siirtoja renkaan laatikolla kuten `renkaat`
+   * tekee: juovapyyhkäisyn parillisuussääntö vaatii kaikki reunat,
+   * myös ikkunan ulkopuoliset, tai täyttö kääntyisi nurin.
    */
+  const kierrokset = kierrot({ lon0, lon1 });
   const siirretty = (rengas, d) => rengas.map(([x, y]) => [x + d, y]);
   const lisaaKierrolla = (rengas) => {
-    lisaaRengas(rengas);
-    if (lon1 > 180) lisaaRengas(siirretty(rengas, 360));
-    if (lon0 < -180) lisaaRengas(siirretty(rengas, -360));
+    for (const d of kierrokset) lisaaRengas(d ? siirretty(rengas, d) : rengas);
   };
   const lisaa = (geom) => {
     if (geom.type === 'Polygon') for (const r of geom.coordinates) lisaaKierrolla(r);
@@ -299,8 +351,9 @@ function meriruudukko(kansio, ruudukko) {
     }
   }
 
-  // Laajennus kahdella ruudulla: ensin vaakaan, sitten pystyyn.
-  const R = 2;
+  // Laajennus (oletuksena kaksi ruutua): ensin vaakaan, sitten pystyyn.
+  const R = laajennus;
+  if (R <= 0) return maski;
   const bitti = (x, y) => (maski[(y * w + x) >> 3] >> ((y * w + x) & 7)) & 1;
   const vaaka = new Uint8Array(w * h);
   for (let y = 0; y < h; y++) {
@@ -324,7 +377,13 @@ function meriruudukko(kansio, ruudukko) {
       if (v) aseta(x, y);
     }
   }
-  return { b64: Buffer.from(maski.buffer).toString('base64') };
+  return maski;
+}
+
+/** Sama maski siinä muodossa, jossa se kulkee selaimeen (base64). */
+function meriruudukko(kansio, ruudukko) {
+  const maski = meriMaski(kansio, ruudukko);
+  return maski ? { b64: Buffer.from(maski.buffer).toString('base64') } : null;
 }
 
 /**
@@ -488,14 +547,20 @@ export function paikat(kansio, {
   const laatat = poisLahelta
     .filter((o) => o.nimi)
     .map((o) => ({ ...o, avain: normalisoi(o.nimi) }));
+  const kierrokset = kierrot(laatikko);
   const kaikki = [];
   for (const f of lue(kansio, tiedosto).features) {
     const p = f.properties;
     if ((p.ADM0_A3 ?? p.SOV_A3) !== neIso) continue;
     if ((p.SCALERANK ?? 99) > scalerank) continue;
-    const [lon, lat] = f.geometry.coordinates;
-    if (lon < laatikko.lon0 || lon > laatikko.lon1) continue;
+    const [lonRaaka, lat] = f.geometry.coordinates;
     if (lat < laatikko.lat0 || lat > laatikko.lat1) continue;
+    // Sama ±360 kuin geometrialla: rajan takainen kaupunki (Tšukotkan
+    // Uelen) on aineistossa lukemalla -170, ikkunassa lukemalla 190.
+    const lon = kierrokset
+      .map((d) => lonRaaka + d)
+      .find((v) => v >= laatikko.lon0 && v <= laatikko.lon1);
+    if (lon === undefined) continue;
     kaikki.push({
       nimi: p.NAME ?? p.NAMEASCII ?? '',
       lon: pyorista(lon),

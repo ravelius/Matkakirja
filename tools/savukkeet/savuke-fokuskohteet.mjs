@@ -17,14 +17,16 @@
  *   1. LEHTI TUO MERKIT. Kun Kreikan fokuslehti on kartalla, jokainen
  *      maan kohde saa merkin — ja kiertävällä laudalla merkit ovat
  *      MOLEMMISSA kohdissa, koska <use>-kopiosta ei voi napauttaa
- *      mitään.
+ *      mitään. Päällekkäin osuvat merkit (Delfoi ja Parnassos)
+ *      työnnetään erilleen ESITYKSESSÄ, ei datassa.
  *   2. EI SUODATTIMIA (tests/rules.test.mjs:n sääntö kartan kerroksille).
  *   3. OSUMA-ALUE ON LEHDEN PERUSTASOLLA ≥44 px, JA MERKKI ELÄÄ KARTAN
  *      MUKANA — lähennettäessä isompi, loitonnettaessa pienempi (ks.
  *      osio 2: omistajan LOPULLINEN linjaus 26.8.2026).
  *   4. NAPAUTUS AVAA POP-UPIN: nimi, teksti ja lähderivi, ja merkki
  *      korostuu (KOHDEKOROSTUS).
- *   5. POP-UP PYSYY RUUDULLA eikä peitä vuorolaatikon nappeja.
+ *   5. POP-UP PYSYY RUUDULLA eikä peitä vuorolaatikon nappeja — ja
+ *      jää selvästi irti ylä- ja alalaidasta.
  *   6. VAIN YKSI KERRALLAAN: toisen merkin napautus vaihtaa kohdetta.
  *   7. SULKU: rasti, Esc ja napautus kortin päälle.
  *   8. FOKUSVIRTA VOITTAA: kortin tai kuplan ilmestyminen sulkee
@@ -289,6 +291,56 @@ vaadi('osuma-alue on lehden perustasolla vähintään 44 px',
   m.osumat.length > 0 && m.osumat.every((o) => o.w >= 44 && o.h >= 44),
   JSON.stringify(m.osumat.slice(0, 3)));
 
+/* --- 1b: päällekkäiset merkit erkanevat (esitys, ei data) ---
+ *
+ * Omistajan pelitestitilaus 26.8.2026 (iPhone, Parnassoksen seutu):
+ * *"Tuossa menee kaksi pistettä päällekkäin. Niitä voisi keinotekoisesti
+ * siirtää poispäin toisistaan."* Delfoi on vuoren rinteellä ja siis
+ * laudalla vain viiden yksikön päässä siitä, joten juuri tämä pari
+ * mittaa erottelupassin (js/fokuskohteet.js eritteleKohdeRyhmat).
+ *
+ * KAKSI VÄITETTÄ, KOSKA LUPAUS ON KAKSIOSAINEN: kehät eivät mene
+ * limittäin RUUDULLA, ja siirto näkyy vain piirtopaikassa — ryhmien
+ * ankkurit ovat yhä täsmälleen datan koordinaateissa.
+ */
+const erottelu = await sivu.evaluate(() => {
+  const merkit = [...document.querySelectorAll('.fokuskohde')].map((g) => {
+    const r = g.querySelector('.fokuskohde-halo').getBoundingClientRect();
+    return { id: g.dataset.kohde, x: r.left + r.width / 2, y: r.top + r.height / 2, w: r.width };
+  }).filter((merkki) => merkki.w > 0);
+  const limittain = [];
+  for (let i = 0; i < merkit.length; i += 1) {
+    for (let j = i + 1; j < merkit.length; j += 1) {
+      const a = merkit[i]; const b = merkit[j];
+      const etaisyys = Math.hypot(a.x - b.x, a.y - b.y);
+      const vahin = (a.w + b.w) / 2;
+      // Pyöristysvara 1 px: kehät saavat sipaista toisiaan.
+      if (etaisyys < vahin - 1) {
+        limittain.push(`${a.id}+${b.id} ${Math.round(etaisyys)}<${Math.round(vahin)}`);
+      }
+    }
+  }
+  const ryhmat = window.matkakirja.ui.fokuskohdeRyhmat ?? [];
+  return {
+    limittain,
+    siirretyt: ryhmat.filter((r) => Math.abs(r.sx ?? 0) > 0.01 || Math.abs(r.sy ?? 0) > 0.01).length,
+    ankkurit: ryhmat.map((r) => `${r.x}:${r.y}`),
+  };
+});
+vaadi('päällekkäiset merkit on siirretty erilleen',
+  erottelu.limittain.length === 0, erottelu.limittain.join(', '));
+vaadi('erottelu siirsi ainakin yhtä paria (Delfoi ja Parnassos)',
+  erottelu.siirretyt >= 2, `${erottelu.siirretyt} siirrettyä ryhmää`);
+const datanPaikat = new Set(FOKUSKOHTEET_GRC
+  .map((kohde) => kohde.laudat?.maailmankartta)
+  .filter(Boolean)
+  .map((paikka) => `${paikka.x}:${paikka.y}`));
+vaadi('siirto koskee vain piirtopaikkaa: ankkurit ovat yhä datan koordinaateissa',
+  erottelu.ankkurit.length > 0
+  && erottelu.ankkurit.some((avain) => datanPaikat.has(avain))
+  && [...datanPaikat].every((avain) => erottelu.ankkurit.includes(avain)),
+  JSON.stringify(erottelu.ankkurit.slice(0, 4)));
+
 /* --- 2: merkki elää kartan mukana --- */
 
 /*
@@ -357,6 +409,23 @@ vaadi('tietoruutu ei valu ruudun ulkopuolelle',
 vaadi('tietoruutu ei peitä alanappeja',
   p && (p.nappienYlin === null || p.laatikko.alin <= p.nappienYlin),
   `kortin alin ${p?.laatikko.alin}, nappien ylin ${p?.nappienYlin}`);
+
+/*
+ * KORTTI IRTI YLÄ- JA ALALAIDASTA (omistajan pelitestitilaus 26.8.2026:
+ * *"Pop-up-ikkunat avautuvat nyt joko ylä- tai alalaitaan. Ne voisivat
+ * olla hieman enemmän irti laidoista, kun aukeavat, vähän lähempänä
+ * keskustaa."*). Ennen korjausta kortti pysähtyi kahdeksan pikselin
+ * päähän laidasta; nyt vara on osuus karttapinnan korkeudesta
+ * (js/fokuskohteet.js KOHDE_LAITAVARA_OSUUS). Mitta on tässä väljempi
+ * kuin sääntö (5 % vs. 10 %), jotta koe kertoo vaatimuksen — kortti on
+ * SELVÄSTI irti laidasta — eikä toista vakiota.
+ */
+const paneKorkeus = p ? p.pane.alin - p.pane.ylin : 0;
+const ylavara = p ? p.laatikko.ylin - p.pane.ylin : 0;
+const alavara = p ? p.pane.alin - p.laatikko.alin : 0;
+vaadi('tietoruutu jää selvästi irti ylä- ja alalaidasta',
+  paneKorkeus > 0 && ylavara >= paneKorkeus * 0.05 && alavara >= paneKorkeus * 0.05,
+  `ylävara ${ylavara}, alavara ${alavara}, pane ${paneKorkeus}`);
 
 /* --- 5: vain yksi kerrallaan --- */
 

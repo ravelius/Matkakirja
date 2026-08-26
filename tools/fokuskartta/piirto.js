@@ -65,11 +65,26 @@
 /* ------------------------------------------------------------ paletti */
 
 /*
+ * PALETTI JA KOHINA OVAT VIETYJÄ, KOSKA LEHTIÄ ON NYT KAKSI LAJIA.
+ *
+ * Maalehden rinnalle tuli kaukozoomin YLEISLEHTI (tools/tee-yleislehti.mjs,
+ * moottori tools/fokuskartta/maailmapiirto.js): yksi koko laudan
+ * kattava kuva ilman maakorostuksia. Sen on näytettävä samalta
+ * paperilta kuin maalehtien — sama hypsometria, sama meren
+ * syvyysporrastus, sama rae — tai kaukozoomin ja lähizoomin välissä
+ * välähtäisi kaksi eri karttaa.
+ *
+ * Siksi asteikot ja kohinageneraattorit asuvat TÄSSÄ yhtenä kappaleena
+ * ja maailmanmoottori tuo ne täältä. Kopio olisi juuri se tapa, jolla
+ * kaksi karttaa ehtii ajautua eri sävyihin.
+ */
+
+/*
  * Hypsometrinen asteikko. Alanko on haalean khakinvihreä (1873-atlaksen
  * tapa), ylöspäin lämpimän ruskean puolelle — sama väriperhe kuin pelin
  * seepiakartassa (#e7d2a4 -> #c69257 -> #a2603a).
  */
-const ASTEIKKO = [
+export const ASTEIKKO = [
   { m: -60, v: [214, 202, 168] },
   { m: 0, v: [221, 216, 173] },
   { m: 200, v: [226, 212, 163] },
@@ -100,7 +115,7 @@ const ASTEIKKO = [
  * kuvassa, joten valtamerilehtien ilme ei muutu — muuttuu se, että
  * mannerjalusta erottuu vihdoin ulapasta ja paperista.
  */
-const SYVYYS = [
+export const SYVYYS = [
   { m: 0, v: [222, 215, 190] },
   { m: -30, v: [206, 201, 183] },
   { m: -120, v: [199, 195, 180] },
@@ -110,8 +125,8 @@ const SYVYYS = [
   { m: -5000, v: [180, 178, 168] },
 ];
 
-const PAPERI = '#e8dcbc';
-const MUSTE = '#4a3421';
+export const PAPERI = '#e8dcbc';
+export const MUSTE = '#4a3421';
 
 /*
  * Naapurit piirretään PUOLIKKAALLA tarkkuudella ja venytetään paikalleen.
@@ -127,7 +142,7 @@ const NAAPURI_JAKO = 2;
 
 /* ------------------------------------------------------------- apurit */
 
-function mulberry32(a) {
+export function mulberry32(a) {
   return function satunnainen() {
     a |= 0; a = (a + 0x6D2B79F5) | 0;
     let t = Math.imul(a ^ (a >>> 15), 1 | a);
@@ -137,7 +152,7 @@ function mulberry32(a) {
 }
 
 /** Siemenellinen arvokohina: 256x256 taulu ja bilineaarinen haku. */
-function teeKohina(siemen) {
+export function teeKohina(siemen) {
   const N = 256;
   const rnd = mulberry32(siemen);
   const t = new Float32Array(N * N);
@@ -155,7 +170,7 @@ function teeKohina(siemen) {
   };
 }
 
-function fbm(kohina, x, y, oktaavit = 4) {
+export function fbm(kohina, x, y, oktaavit = 4) {
   let s = 0; let amp = 0.5; let f = 1; let norm = 0;
   for (let i = 0; i < oktaavit; i++) {
     s += amp * kohina(x * f, y * f);
@@ -164,11 +179,11 @@ function fbm(kohina, x, y, oktaavit = 4) {
   return s / norm;
 }
 
-const KOHINA = teeKohina(18730425);
-const KOHINA2 = teeKohina(90211);
+export const KOHINA = teeKohina(18730425);
+export const KOHINA2 = teeKohina(90211);
 
 /** Lineaarinen väriliuku asteikolta, joka on järjestetty NOUSEVASTI. */
-function lerpVari(asteikko, m) {
+export function lerpVari(asteikko, m) {
   if (m <= asteikko[0].m) return asteikko[0].v;
   for (let i = 1; i < asteikko.length; i++) {
     if (m <= asteikko[i].m) {
@@ -185,7 +200,7 @@ function lerpVari(asteikko, m) {
 }
 
 /** Sama LASKEVALLE asteikolle: syvyys menee nollasta alaspäin. */
-function lerpSyvyys(m) {
+export function lerpSyvyys(m) {
   if (m >= 0) return SYVYYS[0].v;
   for (let i = 1; i < SYVYYS.length; i++) {
     if (m >= SYVYYS[i].m) {
@@ -295,7 +310,35 @@ export function piirra(canvas, aineisto, asetukset) {
 
   // --- projektio: asteet -> lauta -> kuvapikselit ja takaisin --------
   const { lautaX, lautaY, lautaLon, lautaLat } = laudanProjektio(projektio);
-  const kuvaX = (lon) => (lautaX(lon) - bbox.x) * px;
+  /*
+   * KIERTÄVÄ LAUTA JA KUVAN JATKUVA AKSELI.
+   *
+   * Maailmankartta on lieriö, jonka sauma on lon −175 (LON0), ja
+   * `lautaX` palauttaa siksi aina lukeman väliltä [0, leveys) — lon 190
+   * saa saman x:n kuin lon −170. Käänteinen `lautaLon` ei kierrä
+   * lainkaan, joten rasterikerrokset (korkeus, varjostus, meri) lukevat
+   * kuvan oikean reunan jo nyt jatkuvana: bbox voi ulottua sauman yli.
+   *
+   * Vektorikerrokset kulkevat toiseen suuntaan — asteista pikseleiksi —
+   * ja niille kierto on virhe. Venäjän lehti ulottuu lon 218:aan asti;
+   * ilman tätä korjausta Tšukotkan rantaviiva sauman takaa ja Alaskan
+   * joet olisivat lentäneet kuvan vasempaan laitaan Skandinavian päälle.
+   *
+   * Korjaus: valitaan se kopio, joka on lähinnä kuvan keskustaa. Kuva
+   * on aina alle täyden kierroksen levyinen, joten kopioita on yksi.
+   * Sauman sisäpuolella oleville lehdille tämä ei muuta mitään.
+   */
+  const kierto = projektio.tyyppi === 'miller' ? projektio.leveys : 0;
+  const kuvaKeski = bbox.x + bbox.w / 2;
+  const lautaXjatkuva = (lon) => {
+    let x = lautaX(lon);
+    if (kierto) {
+      while (x - kuvaKeski > kierto / 2) x -= kierto;
+      while (kuvaKeski - x > kierto / 2) x += kierto;
+    }
+    return x;
+  };
+  const kuvaX = (lon) => (lautaXjatkuva(lon) - bbox.x) * px;
   const kuvaY = (lat) => (lautaY(lat) - bbox.y) * px;
   const lonPikselista = (x) => lautaLon(bbox.x + x / px);
   const latPikselista = (y) => lautaLat(bbox.y + y / px);
@@ -403,6 +446,53 @@ export function piirra(canvas, aineisto, asetukset) {
         if (i === 0) g.moveTo(x, y); else g.lineTo(x, y);
       }
       g.closePath();
+    }
+  };
+
+  /*
+   * RANTAVIIVAN VETO — sama polku kuin `polku`, mutta PÄIVÄMÄÄRÄNRAJAN
+   * SAUMAA EI VEDETÄ.
+   *
+   * Natural Earth katkaisee monikulmionsa pituusasteelle ±180, ja rajan
+   * ylittävällä lehdellä maa tulee siksi kahtena renkaana, joiden
+   * yhteinen reuna kulkee suoraan pitkin meridiaania. Se ei ole
+   * rantaviivaa vaan aineiston sauma: ilman katkaisua Venäjän lehdelle
+   * piirtyi suora pystyviiva Tšukotkan poikki (mitattu 26.8.2026 —
+   * Venäjän geometriassa on 25 peräkkäistä pistettä täsmälleen
+   * lukemalla ±180).
+   *
+   * KATKAISU ON VAIN VEDOSSA. Täytöissä ja leikkauksissa renkaat
+   * kelpaavat sellaisenaan, koska sauma jää täytön sisään — ja avoin
+   * rengas rikkoisi parillisuussäännön.
+   *
+   * Kynä nostetaan vain, kun segmentin MOLEMMAT päät ovat meridiaanilla;
+   * yksittäinen rantapiste, joka sattuu osumaan siihen, piirtyy
+   * normaalisti.
+   */
+  const saumalla = ([lon]) => Math.abs((((lon + 180) % 360) + 360) % 360) < 1e-6;
+  const rantaPolku = (g, renkaat, jitter, siemen) => {
+    const rnd = mulberry32(siemen);
+    g.beginPath();
+    for (const rengas of renkaat) {
+      // Pisteet kerralla, jotta jitter kuluttaa satunnaislukuja samassa
+      // järjestyksessä kuin `polku` — sivellinjälki pysyy samana.
+      const pisteet = rengas.map(([lon, lat]) => {
+        let x = kuvaX(lon);
+        let y = kuvaY(lat);
+        if (jitter) {
+          x += (rnd() - 0.5) * jitter * S;
+          y += (rnd() - 0.5) * jitter * S;
+        }
+        return [x, y];
+      });
+      const n = pisteet.length;
+      let kynaAlla = false;
+      for (let i = 0; i < n; i++) {
+        const j = (i + 1) % n;
+        if (saumalla(rengas[i]) && saumalla(rengas[j])) { kynaAlla = false; continue; }
+        if (!kynaAlla) { g.moveTo(pisteet[i][0], pisteet[i][1]); kynaAlla = true; }
+        g.lineTo(pisteet[j][0], pisteet[j][1]);
+      }
     }
   };
 
@@ -870,11 +960,11 @@ export function piirra(canvas, aineisto, asetukset) {
   ctx.lineCap = 'round';
   ctx.strokeStyle = 'rgba(74,52,33,0.20)';
   ctx.lineWidth = 3.4 * S;
-  polku(ctx, aineisto.maa.renkaat, 1.4, 555);
+  rantaPolku(ctx, aineisto.maa.renkaat, 1.4, 555);
   ctx.stroke();
   ctx.strokeStyle = 'rgba(58,40,25,0.9)';
   ctx.lineWidth = 1.35 * S;
-  polku(ctx, aineisto.maa.renkaat, 0.35, 909);
+  rantaPolku(ctx, aineisto.maa.renkaat, 0.35, 909);
   ctx.stroke();
   ctx.restore();
 

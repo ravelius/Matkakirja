@@ -238,7 +238,12 @@ await sivu.evaluate(() => {
 });
 await sivu.waitForTimeout(2000);
 
-const lento = await sivu.evaluate(async () => {
+/*
+ * Tarkkailu käynnistetään ODOTTAMATTA sen valmistumista: samalla kun
+ * sivun oma silmukka kerää ajat, Node ehtii kaapata kuvan lennosta
+ * kesken kaiken. Lupaus noudetaan vasta lennon jälkeen.
+ */
+const lentoLupaus = sivu.evaluate(async () => {
   const { ui, game } = window.matkakirja;
   if (game.phase !== 'pickstart') return { virhe: `väärä vaihe: ${game.phase}` };
   const kaupunki = game.pack.cities.find((c) => c.id !== 'lontoo' && c.links?.length);
@@ -255,7 +260,15 @@ const lento = await sivu.evaluate(async () => {
     const tikki = setInterval(() => {
       const nyt = performance.now();
       const rivi = document.querySelector('.flight-line');
-      const nappi = document.querySelector('.flight-exit');
+      /*
+       * ASTU MANTEREELLE -NAPPIA EI OLE (omistajan tilaus 26.8.2026).
+       * Nappi oli ennen se hetki, josta laskeutuminen luettiin; nyt
+       * lento jatkaa itsestään, ja sama hetki luetaan saapumisen
+       * välikortista — se ilmestyy samassa lohkossa, jossa lento
+       * päättyy. Napin paluu on oma väitteensä, joten sitä myös
+       * tarkkaillaan koko lennon ajan.
+       */
+      if (document.querySelector('.flight-exit')) havainnot.nappiaOli = true;
       if (rivi && havainnot.kalvo === undefined) havainnot.kalvo = nyt;
       if (rivi) {
         const kirjoitettu = rivi.querySelector('.typed')?.textContent ?? rivi.textContent;
@@ -266,8 +279,17 @@ const lento = await sivu.evaluate(async () => {
           havainnot.rivi = rivi.textContent;
         }
       }
-      if (nappi && !nappi.classList.contains('odottaa') && havainnot.koneLaskeutui === undefined) {
+      if (document.querySelector('.saapumiskortti') && havainnot.koneLaskeutui === undefined) {
         havainnot.koneLaskeutui = nyt;
+      }
+      // Kohtauksen koristeet luetaan silloin kun kone on puolimatkassa:
+      // katkojälki syttyy koneen perässä, joten heti lähdössä sitä ei
+      // vielä ole. Leima tulee vasta laskeutumisessa (ks. alempi ajo).
+      if (document.querySelector('.lento-katko')) {
+        havainnot.katkoja = document.querySelectorAll('.lento-katko').length;
+        havainnot.pilvia = document.querySelectorAll('.lento-pilvi').length;
+        havainnot.vinjetti = Boolean(document.querySelector('.lento-vinjetti'));
+        havainnot.vanoja = document.querySelectorAll('.lento-vana').length;
       }
       /*
        * Kartan tila luetaan sillä hetkellä, kun kone ilmestyy: silloin
@@ -334,8 +356,22 @@ const lento = await sivu.evaluate(async () => {
     tekstiValmis: suhteessa(havainnot.tekstiValmis),
     koneLaskeutui: suhteessa(havainnot.koneLaskeutui),
     kartta: havainnot.kartta ?? null,
+    nappiaOli: Boolean(havainnot.nappiaOli),
+    katkoja: havainnot.katkoja ?? 0,
+    pilvia: havainnot.pilvia ?? 0,
+    vanoja: havainnot.vanoja ?? 0,
+    vinjetti: Boolean(havainnot.vinjetti),
   };
 });
+
+// Kaappaus kesken lennon: kone, katkojälki, pilvet ja vinjetti yhdessä
+// kuvassa — juuri se näkymä, jota omistaja katsoo.
+await sivu.waitForSelector('.flight .flight-plane', { state: 'attached', timeout: 40000 })
+  .catch(() => {});
+await sivu.waitForTimeout(3000);
+await sivu.screenshot({ path: join(ULOS, 'lento-kartalla.png') });
+
+const lento = await lentoLupaus;
 console.log('  lennon ajoitus:', JSON.stringify(lento));
 console.log('  lennon kartta:', JSON.stringify(lento.kartta));
 
@@ -388,9 +424,198 @@ vaadi('lennon repliikki ei ala kalvon kanssa yhtä aikaa',
   lento.tekstiAlkoi >= 350, `${lento.tekstiAlkoi} ms kalvon avauduttua`);
 vaadi('kone ei laskeudu kesken kirjoituksen',
   lento.tekstiValmis !== undefined && lento.koneLaskeutui >= lento.tekstiValmis,
-  `teksti valmis ${lento.tekstiValmis} ms, Astu mantereelle ${lento.koneLaskeutui} ms`
+  `teksti valmis ${lento.tekstiValmis} ms, jatko ${lento.koneLaskeutui} ms`
   + ` (${lento.sanoja} sanaa)`);
-await sivu.screenshot({ path: join(ULOS, 'lento-repliikki.png') });
+
+/*
+ * === TILAUS 26.8.2026: EI NAPPIA, AUTOMAATTINEN JATKO, KOHTAUKSEN
+ * KORISTEET =========================================================
+ */
+vaadi('Astu mantereelle -nappia ei ole missään vaiheessa',
+  lento.nappiaOli === false, lento.nappiaOli ? '.flight-exit ilmestyi ruudulle' : '');
+vaadi('lento jatkaa itsestään ilman napautusta',
+  lento.koneLaskeutui !== undefined,
+  `jatko ${lento.koneLaskeutui} ms kalvon avauduttua`);
+vaadi('reitti jättää katkoviivaisen jäljen',
+  lento.katkoja >= 5, `${lento.katkoja} katkoa`);
+vaadi('koneella on vanavesiviirut', lento.vanoja === 2, `${lento.vanoja} viirua`);
+vaadi('lennon vinjetti on paikallaan', lento.vinjetti === true);
+/*
+ * PILVET OVAT DOMISSA VAIN LENNON AJAN (omistajan lisätilaus
+ * 26.8.2026). Ikuinen animaatio kartan päällä on juuri se, mitä
+ * isoAnimaatio muuten kieltää — se on sallittu vain siksi, että se on
+ * pelkkää transformia omalla kerroksellaan JA että se katoaa
+ * laskeutumisessa.
+ */
+vaadi('harsopilvet lennon aikana', lento.pilvia >= 4 && lento.pilvia <= 6,
+  `${lento.pilvia} pilveä`);
+
+// --- 5) Saapumissekvenssi: välikortti, kartta ja kaksi kuplaa -------------
+/*
+ * Omistajan tilaus 26.8.2026: lento → feidi tyhjään paperiin →
+ * välikortti (kaupunki + päivälaskuri) → kartta suoraan oikeassa
+ * zoomitilassa → pöllön kaksi kuplaa allekkain.
+ *
+ * Kamera-ajon puuttuminen mitataan body-luokasta zoom-kaynnissa: se on
+ * päällä täsmälleen niin kauan kuin kamera liikkuu (js/kartta.js
+ * ajaKamera). Tarkkailu alkaa välikortilta ja jatkuu kuplien yli.
+ */
+await sivu.evaluate(() => {
+  window.__ajoja = 0;
+  window.__ajoVahti = setInterval(() => {
+    if (document.body.classList.contains('zoom-kaynnissa')) window.__ajoja += 1;
+  }, 20);
+});
+/*
+ * Teksti kirjoittuu vasta kun paperi on täyttänyt ruudun, joten sitä
+ * odotetaan — ja odotetaan nimenomaan KIRJOITETTUA osaa (.typed).
+ * typeText piirtää loppuosan näkymättömänä samaan elementtiin, joten
+ * pelkkä textContent olisi valmis jo ennen ensimmäistä sanaa eikä
+ * kaappaus näyttäisi mitään.
+ */
+const kortti = await sivu.evaluate(async () => {
+  /*
+   * typeText korvaa kirjoituksen lopuksi koko sisällön yhdellä
+   * tekstisolmulla (.typed ja .pending katoavat), joten valmis rivi
+   * luetaan textContentista ja kesken oleva .typedistä. Pisin nähty
+   * rivi jää talteen: kortti on ruudulla vain hetken, eikä väite saa
+   * kaatua siihen, että ajastus meni ohi.
+   */
+  let nahty = '';
+  let oli = false;
+  for (let i = 0; i < 600; i++) {
+    const kortinPaalla = Boolean(document.querySelector('.saapumiskortti'));
+    if (kortinPaalla) oli = true;
+    const solmu = document.querySelector('.saapumiskortti-teksti');
+    const kirjoitettu = solmu?.querySelector('.typed')?.textContent ?? solmu?.textContent ?? '';
+    if (kirjoitettu.length > nahty.length) nahty = kirjoitettu;
+    if (oli && !kortinPaalla) break;
+    if (kirjoitettu && !solmu?.querySelector('.pending')?.textContent) break;
+    await new Promise((valmis) => setTimeout(valmis, 20));
+  }
+  return { on: oli, teksti: nahty };
+});
+console.log('  välikortti:', JSON.stringify(kortti));
+await sivu.screenshot({ path: join(ULOS, 'saapumiskortti.png') });
+vaadi('saapumisen välikortti näkyy lennon jälkeen', kortti.on === true);
+vaadi('välikortissa on kaupunki ja päivälaskuri',
+  /\S+\s+·\s+PÄIVÄ\s+\d+\/80/.test(kortti.teksti.replace(/\s+/g, ' ')),
+  kortti.teksti || '(tyhjä)');
+
+// Kortti häipyy, kartta paljastuu ja pöllö puhuu.
+await sivu.waitForTimeout(6000);
+const saapuminen = await sivu.evaluate(() => {
+  clearInterval(window.__ajoVahti);
+  const kuplat = [...document.querySelectorAll('.pollo-vihje')]
+    .filter((k) => !k.hidden)
+    .map((k) => k.textContent.trim());
+  return {
+    kortteja: document.querySelectorAll('.saapumiskortti').length,
+    pilvia: document.querySelectorAll('.lento-pilvi').length,
+    lentokerros: document.querySelectorAll('.flight *').length,
+    kuplat,
+    ajoja: window.__ajoja,
+  };
+});
+console.log('  saapuminen:', JSON.stringify(saapuminen));
+await sivu.screenshot({ path: join(ULOS, 'saapumisen-kuplat.png') });
+vaadi('välikortti väistyy kartan tieltä', saapuminen.kortteja === 0);
+vaadi('pilvet ovat DOMissa vain lennon aikana', saapuminen.pilvia === 0,
+  `${saapuminen.pilvia} pilveä lennon jälkeen`);
+vaadi('lentokerros on tyhjä perillä', saapuminen.lentokerros === 0,
+  `${saapuminen.lentokerros} elementtiä`);
+vaadi('kartta ilmestyy ilman kamera-ajoa', saapuminen.ajoja === 0,
+  `zoom-kaynnissa havaittu ${saapuminen.ajoja} kertaa`);
+vaadi('kaksi pöllön kuplaa yhtä aikaa allekkain', saapuminen.kuplat.length === 2,
+  saapuminen.kuplat.join(' || ') || '(ei kuplia)');
+vaadi('ensimmäinen kupla toivottaa tervetulleeksi maahan',
+  /^Tervetuloa .+\. Sinun on ratkaistava tehtävä .+ ennen kuin voit etsiä aarretta\.$/
+    .test(saapuminen.kuplat[0] ?? ''),
+  saapuminen.kuplat[0] ?? '(puuttuu)');
+vaadi('toinen kupla neuvoo vihreään pisteeseen',
+  saapuminen.kuplat[1] === 'Klikkaa vihreää pistettä kartalla.',
+  saapuminen.kuplat[1] ?? '(puuttuu)');
+
+// --- 6) Napautusohitus: sama lento uudestaan, tällä kertaa kiirehtien ------
+/*
+ * Omistajan tilaus 26.8.2026: *"jos pelaaja haluaa kiirehtiä, niin
+ * napauttamalla ruutua animaatio katkeaa kesken ja pelaaja pääsee
+ * siirtymään mantereelle välittömästi"*.
+ *
+ * Ohitus on oma ajonsa omassa istunnossaan: avauslento lennetään vain
+ * kerran pelin alussa, eikä samaa hetkeä voi elää kahdesti samalla
+ * sivulla. Napautus tehdään OIKEALLA HIIRIELEELLÄ ruudun keskeltä —
+ * juuri siitä kohdasta, jossa kartan alla on kaupunkeja ja laattoja,
+ * jotta myös vuoto alle näkyisi.
+ */
+const ctx2 = await selain.newContext({ viewport: { width: 390, height: 900 }, serviceWorkers: 'block' });
+const sivu2 = await ctx2.newPage();
+const virheet2 = [];
+sivu2.on('pageerror', (e) => virheet2.push(String(e)));
+await sivu2.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
+await sivu2.goto('http://127.0.0.1:8734/index.html', { waitUntil: 'load' });
+await sivu2.waitForTimeout(2500);
+await sivu2.evaluate(() => {
+  const n = [...document.querySelectorAll('button')]
+    .find((b) => /aloita seikkailu/i.test(b.textContent));
+  n?.click();
+});
+await sivu2.waitForTimeout(2000);
+const ohituksenLahto = await sivu2.evaluate(() => {
+  const { ui, game } = window.matkakirja;
+  if (game.phase !== 'pickstart') return { virhe: `väärä vaihe: ${game.phase}` };
+  const kaupunki = game.pack.cities.find((c) => c.id !== 'lontoo' && c.links?.length);
+  ui.doPickStart(kaupunki);
+  return { kaupunki: kaupunki.id, kaupunkeja: game.board.cityById.size };
+});
+await sivu2.waitForSelector('.flight .flight-plane', { state: 'attached', timeout: 40000 })
+  .catch(() => {});
+// Kone on juuri lähtenyt: napautus keskelle karttaa.
+await sivu2.waitForTimeout(2200);
+await sivu2.screenshot({ path: join(ULOS, 'ohitus-ennen.png') });
+const kelloEnnen = Date.now();
+await sivu2.mouse.click(195, 420);
+await sivu2.waitForSelector('.saapumiskortti', { timeout: 8000 }).catch(() => {});
+const ohitus = await sivu2.evaluate(() => ({
+  kortti: Boolean(document.querySelector('.saapumiskortti')),
+  kone: document.querySelectorAll('.flight .flight-plane').length,
+  kalvo: document.querySelectorAll('.flight-overlay').length,
+  pilvia: document.querySelectorAll('.lento-pilvi').length,
+  dialogi: Boolean(document.querySelector('dialog[open]')),
+  vaihe: window.matkakirja.game.phase,
+}));
+const ohitusKesti = Date.now() - kelloEnnen;
+console.log('  ohitus:', JSON.stringify(ohitus), `${ohitusKesti} ms`);
+await sivu2.screenshot({ path: join(ULOS, 'ohitus-jalkeen.png') });
+vaadi('napautus vie saapumiseen välittömästi',
+  ohitus.kortti === true && ohitusKesti < 3000,
+  `välikortti ${ohitus.kortti}, ${ohitusKesti} ms napautuksesta`);
+vaadi('napautus ei vuoda alla oleviin elementteihin',
+  ohitus.dialogi === false, ohitus.dialogi ? 'napautus avasi jotain kartan alta' : '');
+// Ohituskin päätyy samaan sekvenssiin: kartta ja kuplat tulevat.
+// Lentonäkymä puretaan paperin ALLA, joten purku mitataan vasta täältä
+// — napautushetkellä kone on tarkoituksella vielä paikallaan arkin
+// takana, jottei purku näy ruudulla.
+await sivu2.waitForTimeout(7000);
+const ohituksenLoppu = await sivu2.evaluate(() => ({
+  kortteja: document.querySelectorAll('.saapumiskortti').length,
+  kuplat: [...document.querySelectorAll('.pollo-vihje')].filter((k) => !k.hidden).length,
+  lentokerros: document.querySelectorAll('.flight *').length,
+  kalvo: document.querySelectorAll('.flight-overlay').length,
+  pilvia: document.querySelectorAll('.lento-pilvi').length,
+}));
+console.log('  ohituksen loppu:', JSON.stringify(ohituksenLoppu), JSON.stringify(ohituksenLahto));
+await sivu2.screenshot({ path: join(ULOS, 'ohitus-saapuminen.png') });
+vaadi('ohitettu lento päätyy samaan saapumissekvenssiin',
+  ohituksenLoppu.kortteja === 0 && ohituksenLoppu.kuplat === 2,
+  `kortteja ${ohituksenLoppu.kortteja}, kuplia ${ohituksenLoppu.kuplat}`);
+vaadi('ohitus ei jätä puolinaista lentonäkymää',
+  ohituksenLoppu.lentokerros === 0 && ohituksenLoppu.kalvo === 0
+  && ohituksenLoppu.pilvia === 0,
+  `lentokerros ${ohituksenLoppu.lentokerros}, kalvoja ${ohituksenLoppu.kalvo},`
+  + ` pilviä ${ohituksenLoppu.pilvia}`);
+vaadi('ohitusajossa ei JS-virheitä', virheet2.length === 0, virheet2.join(' | '));
+await ctx2.close();
 
 vaadi('ei JS-virheitä', virheet.length === 0, virheet.join(' | '));
 

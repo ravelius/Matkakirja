@@ -142,6 +142,154 @@ export const FOKUSMAAT = {
       Evros: 'Évros',
     },
   },
+
+  /* ================================================================
+   * KAKSI JÄTTILÄISTÄ, JOILLE YLEINEN REITTI EI KELPAA
+   *
+   * Venäjä ja Kanada ovat ainoat maat, joiden lehti EI SYNNY yleisellä
+   * reitillä lainkaan — eivät siksi, että ne olisivat rumia, vaan
+   * siksi, että yleisen reitin KUVAN kaava räjähtää niillä.
+   *
+   * Kaava on tools/tee-fokuskartta.mjs:ssä: kuvan on katettava
+   * `ikkunanKorkeus * 2,08` leveydeltä ja `ikkunanLeveys / 1,23`
+   * korkeudelta, jotta kamera ei näe kuvan reunaa millään
+   * vaakaruudulla. Se on hyvä sääntö niin kauan kuin ikkuna on maan
+   * kokoinen. Kanadalla ikkuna on 4010 x 3270 lautayksikköä, ja sääntö
+   * vaatii kuvalta 6801 yksikön leveyttä — 204 pituusastetta eli
+   * ylitse puolen maapallon, ja pystysuunnassa navan yli leveysasteelle
+   * 94,5, jota ei ole olemassa. Venäjällä sama tapahtuu toisin päin:
+   * ikkuna on niin leveä, että korkeusehto venyttää kuvan päiväntasaajan
+   * tuolle puolen. Kumpaakaan kuvaa ei voi renderöidä eikä sille voi
+   * hakea korkeusaineistoa.
+   *
+   * KURATOITU IKKUNA ON VASTAUS. Kun ikkuna annetaan käsin, kuvaan
+   * riittää sama 15 %:n vuoto kuin Kreikan hyväksytyllä lehdellä, ja
+   * kuvasta tulee ikkunan kokoinen eikä puolen pallon kokoinen. Vuoto
+   * kattaa ruudun kuvasuhteet välillä `kuvasuhde/1,3 … kuvasuhde*1,3`;
+   * sen ulkopuolella kuvan reuna häivytetään läpinäkyväksi (piirto.js
+   * REUNAHÄIVYTYS) ja sulaa laudan pergamenttiin. Venäjän 2,54:llä
+   * yksikään vaakaruutu ei ole niin leveä, että vuotoa tarvittaisiin
+   * sivuilla; ylä- ja alareunassa häivytys tekee työnsä.
+   *
+   * KUMPIKAAN EI OLE LEHTIASU VAAN JATKUVA PINTA (`jatkuva: true`)
+   * kuten yleisen reitin 93 muuta maata: kalusteet piirtää peli,
+   * naapureilla on oma maastonsa eikä rajaviivaa, kaupunkipisteet
+   * poimitaan aineistosta (`paikat`) ja vedet jatkuvat rajan yli
+   * (`jatkuvatVedet`). Käsityötä on siis vain ikkuna ja kourallinen
+   * merten nimiä — ei omaa tyyliä.
+   * ================================================================ */
+
+  RUS: {
+    /*
+     * VENÄJÄ KALININGRADISTA BERINGINSALMELLE.
+     *
+     * Ikkuna on lon 18,42..191,58 eli 173,2 astetta: läntisin piste on
+     * Kaliningradin Baltijsk (19,6) ja itäisin Dežnjovin niemi
+     * (−169,65 = 190,35), ja molemmille jää reilun asteen reuna.
+     * PITUUSASTE JATKUU YLI 180:N TAHALLAAN — se ei ole laskuvirhe vaan
+     * ainoa tapa esittää Tšukotka kokonaisena. Aineisto ja korkeuslevy
+     * on haettava samalla jatkuvalla akselilla (aineisto.mjs `kierrot`,
+     * etopo.mjs raa'at lon-rajat), ja piirtomoottori palauttaa
+     * yli-180-asteiset pituusasteet oikealle kohdalle kuvaa (piirto.js
+     * `kuvaX`) — maailmankartan oma sauma on lon −175, ei 180.
+     *
+     * LEVEYSASTEET 40,4..82,5 ovat koko maa: etelässä Dagestanin
+     * Bazardüzü (41,19) ja pohjoisessa Frans Joosefin maa (81,86).
+     * Arktiset saaret ovat mukana tarkoituksella — ilman niitä ikkuna
+     * olisi vielä litteämpi (kuvasuhde 3,0 eikä 2,54), ja Severnaja
+     * Zemlja ja Frans Joosefin maa jäisivät lehdeltä pois, vaikka ne
+     * ovat isoisän atlaksen Venäjää siinä missä Kamtšatkakin.
+     *
+     * KUVASUHDE 2,54 EI OLE VALINTA VAAN SEURAUS: se on tuon
+     * lon-välin ja tuon lat-välin suhde laudan Millerin lieriössä.
+     * Maailman levein maa ei mahdu 1,6:n lehdelle millään — 1,6 vaatisi
+     * ikkunan ulottuvan päiväntasaajalle asti.
+     */
+    ikkuna: {
+      lonKeski: 105, lat0: 40.4, lat1: 82.5, kuvasuhde: 2.54,
+    },
+    vuoto: 0.15,
+    jatkuva: true,
+    otsikko: 'VENÄJÄ',
+    alaotsikko: 'isoisän matkakirjan mukaan · 1873',
+    naapurit: [],
+    jatkuvatVedet: true,
+    /*
+     * Kaupunkipisteet aineistosta, mutta HARVEMMASSA kuin oletuksena.
+     * Nimen leveys on lehden leveydestä kiinni: tällä lehdellä
+     * "Nizhny Novgorod" vie kaksitoista pituusastetta, joten oletuksen
+     * 0,55 asteen väli kasaisi Volgan varren kaupungit yhdeksi
+     * mustepuuroksi. Kuuden asteen väli levittää merkinnät koko maahan
+     * — Murmanskista Anadyriin — ja kahdellatoista nimellä 173 asteen
+     * lehti on yhä harvempi kuin Kreikan neljällä 18 asteella.
+     */
+    paikat: { enintaan: 12, vahinVali: 6 },
+
+    /*
+     * Merten nimet. Neljä nimeä 173 asteen levyisellä lehdellä on
+     * harvempaa merkintää kuin Kreikan neljä 18 asteella — juuri niin
+     * kuin isoisän atlaksessa. Koot on mitoitettu niin, että nimi
+     * mahtuu omalle ulapalleen: Ohotanmeri on vain kolmetoista astetta
+     * leveä, Jäämeri sata.
+     */
+    meret: [
+      { nimi: 'JÄÄMERI', lon: 120, lat: 81, koko: 26 },
+      { nimi: 'BARENTSINMERI', lon: 38, lat: 74.5, koko: 14 },
+      { nimi: 'OHOTANMERI', lon: 150, lat: 54.3, koko: 11 },
+      // Beringinmeri jää antimeridiaanin molemmin puolin (172..188):
+      // sen paikka on samalla todiste siitä, että rajan ylitys pitää.
+      { nimi: 'BERINGINMERI', lon: 180, lat: 58.5, koko: 13 },
+    ],
+  },
+
+  CAN: {
+    /*
+     * KANADA.
+     *
+     * LEVEYSASTEET 41..83,6 ovat koko maa: etelässä Erie-järven Middle
+     * Island (41,67) ja pohjoisessa Ellesmeren Kap Columbia (83,12).
+     * Pituusasteita ei anneta, vaan ne seuraavat kuvasuhteesta kuten
+     * Kreikalla — ja KUVASUHDE ON KREIKAN 1,6, koska Kanada mahtuu
+     * siihen: maa itse on 89 astetta leveä (−141..−52,6) ja 1,6 antaa
+     * 112,3 astetta keskimeridiaanilta −96,5, eli lon −152,7..−40,3.
+     * Ylimääräinen tila ei ole tyhjää vaan Alaskaa lännessä ja
+     * Grönlantia idässä — juuri sitä jatkuvaa pintaa, jonka takia
+     * rajaviivat katosivat lehdiltä.
+     *
+     * 1,6 on tässä arvokas myös siksi, että se on ainoa kuvasuhde,
+     * jolla 15 %:n vuoto kattaa kaikki vaakaruudut (1,23–2,08) ilman
+     * häivytystä. Maan oma muoto antaisi 1,29, ja silloin leveä ruutu
+     * näkisi kuvan reunan.
+     */
+    ikkuna: {
+      lonKeski: -96.5, lat0: 41, lat1: 83.6, kuvasuhde: 1.6,
+    },
+    vuoto: 0.15,
+    jatkuva: true,
+    otsikko: 'KANADA',
+    alaotsikko: 'isoisän matkakirjan mukaan · 1873',
+    naapurit: [],
+    jatkuvatVedet: true,
+    /*
+     * Sama peruste kuin Venäjällä, lievempänä: 112 asteen lehdellä
+     * "Charlottetown" vie yhdeksän astetta, ja Pyhän Laurentiuksen
+     * varrella kaupunkeja on tiheässä. 1,8 asteen väli pitää Ottawan ja
+     * Québecin mutta siirtää loput nimet sinne, missä lehti on tyhjä —
+     * Labradoriin, Nunavutiin ja Mackenzien varrelle.
+     */
+    paikat: { enintaan: 12, vahinVali: 1.8 },
+
+    /*
+     * Merten nimet. Hudsoninlahti on pitkä sana ahtaassa altaassa: nimi
+     * on aseteltu lahden leveimmälle kohdalle (lat 60,3) ja sen läntinen
+     * puoli painottuen, koska idässä Ungavan niemi tulee vastaan.
+     */
+    meret: [
+      { nimi: 'JÄÄMERI', lon: -105, lat: 82, koko: 24 },
+      { nimi: 'HUDSONINLAHTI', lon: -87.3, lat: 60.3, koko: 13 },
+      { nimi: 'ATLANTTI', lon: -50, lat: 45, koko: 20 },
+    ],
+  },
 };
 
 /* ==================================================================
@@ -251,17 +399,14 @@ export const YLEISET_POIKKEUKSET = {
     },
   },
   /*
-   * Venäjä ulottuu laudalla Kaliningradista Tyynellemerelle. Yhden
-   * lehden ikkuna sen yli olisi 160 astetta leveä eikä esittäisi
-   * mitään; Euroopan lehdellä Venäjä on Euroopan puoleinen Venäjä,
-   * Moskovasta ja Pietarista Uralille. Aasian puoli on oman lautansa
-   * ja oman lehtensä asia, jos sellainen joskus tehdään.
+   * VENÄJÄLLÄ OLI TÄSSÄ RAJAUS EUROOPAN PUOLEISEEN VENÄJÄÄN
+   * (lon 19,6..60,5), koska koko maan ikkuna olisi 160 astetta leveä
+   * "eikä esittäisi mitään". Se poistettiin, kun Venäjä sai kuratoidun
+   * osion FOKUSMAAT-taulusta: kuratoitu reitti voittaa aina yleisen,
+   * joten rivi oli kuollutta koodia — ja väärä lupaus, koska lehti
+   * esittää nyt koko maan Kaliningradista Beringinsalmelle. Jos
+   * FOKUSMAAT.RUS joskus poistetaan, tämä rajaus on palautettava.
    */
-  RUS: {
-    laatikko: {
-      lon0: 19.6, lon1: 60.5, lat0: 43.2, lat1: 69.5,
-    },
-  },
 };
 
 /**

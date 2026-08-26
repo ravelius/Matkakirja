@@ -1710,11 +1710,49 @@ class Pollo {
     kupla.classList.toggle('pollo-vihje-ylos', Boolean(this.vihjeAnkkuri));
     kupla.textContent = teksti;
     kupla.hidden = false;
+    // Uusi yksittäinen vihje aloittaa puhtaalta pöydältä: mahdollinen
+    // toinen kupla kuului edelliseen puheenvuoroon.
+    if (this.vihjeLisa) this.vihjeLisa.hidden = true;
+    kupla.classList.remove('pollo-vihje-parina');
     this.asetaVihjeenPaikka();
   }
 
-  /** Kupla bodyyn kerran; sama elementti palvelee vihjettä ja juhlaa. */
-  varmistaKupla() {
+  /**
+   * TOINEN KUPLA ENSIMMÄISEN ALLE (omistajan tilaus 26.8.2026,
+   * saapumissekvenssi: *"Melkein heti perään TOINEN kupla ENSIMMÄISEN
+   * ALLE, ensimmäinen EI häviä"*).
+   *
+   * Sama kuplaperhe kuin vihjeellä — sama paperi, sama typografia,
+   * sama napautussopimus — mutta kaksi elementtiä päällekkäin: alempi
+   * on pöllön vieressä ja pitää kärjen, ylempi nousee sen yläpuolelle
+   * ja luopuu kärjestään (kaksi kärkeä osoittaisi toistensa päälle).
+   *
+   * Ilman ensimmäistä kuplaa tämä ei tee mitään: pari on pari.
+   */
+  naytaLisavihje(teksti) {
+    if (!teksti || this.auki || this.nappi.hidden) return;
+    if (!this.vihje || this.vihje.hidden) return;
+    const kupla = this.varmistaKupla(true);
+    kupla.textContent = teksti;
+    kupla.hidden = false;
+    this.vihje.classList.add('pollo-vihje-parina');
+    this.asetaVihjeenPaikka();
+  }
+
+  /**
+   * Kupla bodyyn kerran; sama elementti palvelee vihjettä ja juhlaa.
+   * `lisa` antaa parin alemman kuplan (ks. naytaLisavihje).
+   */
+  varmistaKupla(lisa = false) {
+    if (lisa) {
+      if (!this.vihjeLisa) {
+        this.vihjeLisa = polloElementti('div', 'pollo-vihje pollo-vihje-lisa');
+        this.vihjeLisa.setAttribute('role', 'status');
+        this.vihjeLisa.addEventListener('pointerdown', () => this.piilotaVihje());
+        this.doc.body.appendChild(this.vihjeLisa);
+      }
+      return this.vihjeLisa;
+    }
     if (!this.vihje) {
       this.vihje = polloElementti('div', 'pollo-vihje');
       // role="status": ruudunlukija kertoo vihjeen ilman että se
@@ -1794,25 +1832,50 @@ class Pollo {
     // ristiin, koska sama elementti kiertää molemmissa asennoissa.
     const ankkuri = this.vihjeAnkkuri ?? this.nappi;
     const nappi = ankkuri.getBoundingClientRect();
-    const leveys = kupla.getBoundingClientRect().width;
     const marginaali = 8;
-    const keskitetty = nappi.left + nappi.width / 2 - leveys / 2;
-    const vasen = Math.max(marginaali,
-      Math.min(keskitetty, (ikkuna.innerWidth || 0) - leveys - marginaali));
-    kupla.style.left = `${Math.round(vasen)}px`;
+    const vasemmalle = (osa) => {
+      const leveys = osa.getBoundingClientRect().width;
+      const keskitetty = nappi.left + nappi.width / 2 - leveys / 2;
+      return Math.max(marginaali,
+        Math.min(keskitetty, (ikkuna.innerWidth || 0) - leveys - marginaali));
+    };
+    kupla.style.left = `${Math.round(vasemmalle(kupla))}px`;
+    /*
+     * PARI PINOTAAN ALHAALTA YLÖS. Alempi kupla on siinä, missä yksi
+     * kupla muutenkin olisi, ja ylempi nousee sen korkeuden verran
+     * ylemmäs. Järjestys on lukujärjestys: ensimmäinen lause on
+     * ylempänä, sen jatko alempana lähempänä pöllöä.
+     */
+    const lisa = this.vihjeLisa && !this.vihjeLisa.hidden ? this.vihjeLisa : null;
+    if (lisa) lisa.style.left = `${Math.round(vasemmalle(lisa))}px`;
     if (this.vihjeAnkkuri) {
       kupla.style.bottom = '';
       kupla.style.top = `${Math.round(nappi.bottom + 10)}px`;
-    } else {
-      kupla.style.top = '';
-      kupla.style.bottom = `${Math.round((ikkuna.innerHeight || 0) - nappi.top + 10)}px`;
+      if (lisa) {
+        const korkeus = kupla.getBoundingClientRect().height;
+        lisa.style.bottom = '';
+        lisa.style.top = `${Math.round(nappi.bottom + 18 + korkeus)}px`;
+      }
+      return;
     }
+    const alaReuna = Math.round((ikkuna.innerHeight || 0) - nappi.top + 10);
+    kupla.style.top = '';
+    if (lisa) {
+      lisa.style.top = '';
+      lisa.style.bottom = `${alaReuna}px`;
+      kupla.style.bottom = `${Math.round(alaReuna + lisa.getBoundingClientRect().height + 8)}px`;
+      return;
+    }
+    kupla.style.bottom = `${alaReuna}px`;
   }
 
   /** Kupla pois: pelaaja teki valinnan, koski karttaa tai vaihe vaihtui. */
   piilotaVihje() {
+    // Pari häviää yhdessä: toinen puoli lausetta jäisi kummittelemaan.
+    if (this.vihjeLisa) this.vihjeLisa.hidden = true;
     if (!this.vihje) return;
     this.vihje.hidden = true;
+    this.vihje.classList.remove('pollo-vihje-parina');
   }
 
   /**
@@ -3960,6 +4023,14 @@ export function polloVihje(teksti, kohde) {
  */
 export function polloOnnittelu(sisalto) {
   nykyinenPollo?.naytaOnnittelu(sisalto);
+}
+
+/**
+ * Toinen kupla ensimmäisen alle (saapumissekvenssi, js/ui.js
+ * saapumisenKuplat). Ei tee mitään ilman ensimmäistä kuplaa.
+ */
+export function polloLisavihje(teksti) {
+  nykyinenPollo?.naytaLisavihje(teksti);
 }
 
 /** Vihjekupla pois. */

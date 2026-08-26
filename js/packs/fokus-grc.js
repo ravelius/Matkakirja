@@ -765,6 +765,29 @@ export const FOKUS_POHJAT = {
     tiedosto: 'UZB.webp',
   },
 
+  /*
+   * --- VENÄJÄ JA KANADA (kuratoidut ikkunat 26.8.2026) ---
+   * Molemmat kaatuivat yleisellä reitillä (ikkuna venyi yli puolen
+   * maapallon), joten ikkunat ovat käsin tools/fokuskartta/maat.mjs
+   * FOKUSMAAT-taulussa. HUOM RUS: bbox.x + w = 13085 eli laudan
+   * leveyden 12000 YLI — tarkoituksella, lehti ylittää laudan sauman
+   * (lon -175) ja peli kokeilee kierrot 0/±12000. Lukua EI saa
+   * "korjata" välille [0, 12000): se siirtäisi lehden väärään
+   * paikkaan.
+   */
+  CAN: {
+    lauta: 'maailmankartta',
+    bbox: { x: 182.5, y: -928.22, w: 4868.34, h: 3042.71 },
+    rajaus: { x: 744.23, y: -577.13, w: 3744.88, h: 2340.55 },
+    tiedosto: 'CAN.webp',
+  },
+  RUS: {
+    lauta: 'maailmankartta',
+    bbox: { x: 5581.38, y: -826.27, w: 7503.91, h: 2954.29 },
+    rajaus: { x: 6447.21, y: -485.39, w: 5772.24, h: 2272.53 },
+    tiedosto: 'RUS.webp',
+  },
+
   /* --- POHJOIS- JA VÄLI-AMERIKKA (maanosaparvi 25.8.2026, yleinen reitti) --- */
   CUB: {
     lauta: 'maailmankartta',
@@ -908,6 +931,40 @@ export const FOKUS_POHJAT = {
     rajaus: { x: 11348.15, y: 3605.64, w: 184.35, h: 335.17 },
     tiedosto: 'VUT.webp',
   },
+};
+
+/*
+ * ============ KAUKOZOOMIN YLEISLEHTI (omistaja 26.8.2026) ============
+ *
+ * *"Uloszoomattu maailmankartta näyttää tilkkutäkiltä."* Syy on
+ * rakenteellinen: jokainen maalehti korostaa omaa maataan ja piirtää
+ * naapurit haaleina, joten vierekkäiset lehdet esittävät saman
+ * rajaseudun kahdella eri voimalla. Lähikuvassa juuri sitä
+ * fokusmoodilta halutaan; kaukaa katsottuna se on tilkkutäkki — ja
+ * lehtiä on ruudulla samalla neljä tai viisi, mikä on kaukozoomissa
+ * pelkkää muistikuormaa ilman yhtään luettavaa yksityiskohtaa.
+ *
+ * YLEISLEHTI on yksi kuva koko laudalta ILMAN maakorostuksia: sama
+ * paperi, sama hypsometria, sama meren syvyysporrastus kuin
+ * maalehdillä, mutta kaikki maat samalla voimalla eikä yhtään
+ * kartuutsia tai kaupunkinimeä (tools/tee-yleislehti.mjs). Peli
+ * näyttää sen kaukozoomissa ja purkaa maalehdet siksi aikaa pois
+ * (js/fokuskartta.js "KAUKOZOOMIN YLEISLEHTI").
+ *
+ * BBOX ON KOKO LAUTA (12000 x 5399) eikä siinä ole vuotoa — lehden
+ * reunat OVAT laudan reunat, eikä sen ulkopuolella ole lautaa, johon
+ * jäisi sauma. Luvut ovat suoraan työkalun kirjoittamasta
+ * MAAILMA.json-tiedostosta (tasauksen ankkurit alle 1,7 lautayksikköä).
+ *
+ * TÄMÄ EI OLE FOKUS_POHJAT-TAULUSSA. Se ei ole minkään maan lehti:
+ * atlaksen valinta, sumuverho ja kameran ajot lukevat FOKUS_POHJAT-
+ * taulua maakohtaisesti, ja koko laudan kokoinen "maa" sotkisi ne
+ * kaikki (valinta ottaisi sen aina, verho tekisi reiän koko maailmaan).
+ */
+export const YLEISLEHTI = {
+  lauta: 'maailmankartta',
+  bbox: { x: 0, y: 0, w: 12000, h: 5399 },
+  tiedosto: 'MAAILMA.webp',
 };
 
 /*

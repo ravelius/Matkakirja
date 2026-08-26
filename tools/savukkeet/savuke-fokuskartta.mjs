@@ -1017,7 +1017,7 @@ vaadi('8o kartuutsin toinen painallus sulkee taulun',
  * samasta muutoksesta:
  *
  *   1. NYKYISEN KAUPUNGIN LAATTA NÄKYY LEHDELLÄ AINA — mutta pienenä ja
- *      ruudulla lähes vakiokokoisena (js/ui.js FOKUS_LAATTA_PX = 26).
+ *      ruudulla lähes vakiokokoisena (js/ui.js FOKUS_LAATTA_PX = 23).
  *      Mitta otetaan RUUDULTA (getBoundingClientRect), koska juuri se on
  *      luvattu: laudan yksiköissä sama laatta on eri kokoinen joka
  *      zoomilla.
