@@ -19782,22 +19782,8 @@ body.fokuspohja .maa-pilleri { display: none; }
   white-space: nowrap;
 }
 
-.fokus-maataulu-lahde {
-  margin: 0.6rem 0 0;
-  color: rgba(74, 52, 33, 0.62);
-  font-size: 0.64rem;
-}
-
-/*
- * KAPEALLA RUUDULLA TAULU YLTÄÄ OIKEAAN LAITAAN, jossa kelluva pöllö
- * leijuu (.pollo-kelluu-kartalla). Pöllö on taulun päällä (z-index 40),
- * joten viimeinen rivi jäi sen alle — mitattu 390 px:n ruudulla.
- * Alarivi väistää pöllön leveyden verran; leveämmällä ruudulla taulu
- * loppuu ennen sitä.
- */
-@media (max-width: 620px) {
-  .fokus-maataulu-lahde { padding-right: 4.2rem; }
-}
+/* Lähderivi (.fokus-maataulu-lahde) poistui 26.8.2026 — omistaja:
+ * "ota se koko rivi pois joka alkoi samat luvut tekstillä". */
 
 /* ===========================================================================
    KARTAN REUNAVIIVAIMET — dynaamiset asteviivat (js/fokusmitat.js)
