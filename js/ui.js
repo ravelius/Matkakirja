@@ -591,6 +591,15 @@ const SAAPUMISEN_KUPLA_TOINEN = 'Klikkaa kaupungin kultaista merkkiä kartalla.'
  * kaupunkien merkit ovat sen reunoilla.
  */
 const MATKUSTUKSEN_MARGINAALI = 0.22;
+/*
+ * Matkareittien mitat ruudun pikseleinä (skaalataan näkymän
+ * mittakaavalla kuten lentoreitilläkin). Viiva on laudan omaa
+ * katkoviivaa hennompi: se on merkintä atlaksen päällä, ei pelilauta
+ * takaisin.
+ */
+const MATKAREITIN_VIIVA_PX = 2;
+const MATKAREITIN_KATKO_PX = 8;
+const MATKAREITIN_PISTE_PX = 3.4;
 
 /*
  * NUOREN HERRAN HUUDAHDUSRIVI PALJASTUSKORTILLA (omistajan
@@ -5428,6 +5437,24 @@ export class UI {
      */
     root.appendChild(this.countryNameLayer);
 
+    /*
+     * MATKAREITIT ATLAKSEN PÄÄLLE (omistajan pelitestipalaute v1119,
+     * kohta 16: *"nopan heiton jälkeen nappula askeltaa NÄKYVÄSTI piste
+     * pisteeltä (entinen askellusanimaatio; reittipisteet ja nappula
+     * piirtyvät atlas-kerroksen päälle)"*).
+     *
+     * JUURISYY. Laudan reittiverkko — katkoviivat ja askelympyrät —
+     * asuu laudan omassa bittikartassa (js/mapart.js), ja fokusmoodissa
+     * koko lauta on piilossa atlaslehtien alla (css
+     * body.fokus-atlas-nakyma .staattinen). Nappula siis liikkui kuten
+     * ennenkin, mutta se askelsi tyhjän paperin yli: askelpisteitä ei
+     * ollut näkyvissä, eikä liikkeestä nähnyt reittiä. Sama muutos
+     * (v1115, vanha kartta pois) vei myös sen, mihin askel osui.
+     *
+     * Kerros on kaupunkien PÄÄLLÄ ja laattojen ALLA: reitti on kartan
+     * merkintä, ei pelimerkki.
+     */
+    this.matkaLayer = el('g', { class: 'matkareitit', 'pointer-events': 'none' }, root);
     this.tokenLayer = el('g', { class: 'tokens' }, root);
     this.targetLayer = el('g', { class: 'targets' }, root);
     this.pawnLayer = el('g', { class: 'pawns' }, root);
@@ -5609,6 +5636,74 @@ export class UI {
   }
 
   /**
+   * NYKYISEN KAUPUNGIN MATKAREITIT NÄKYVIIN (omistajan
+   * pelitestipalaute v1119, kohta 16: *"matkustamisen askellus on
+   * kadonnut … reittipisteet ja nappula piirtyvät atlas-kerroksen
+   * päälle"*).
+   *
+   * Reitti piirretään VAIN silloin, kun matka on menossa: kun
+   * matkustusvalinta on auki (liukuAuki) tai kun nappula askeltaa
+   * (vaihe 'roll' tai 'move'). Muulloin kerros on tyhjä — atlas on
+   * lehti, ei pelilauta.
+   *
+   * PIIRRETÄÄN LAUDAN OMASTA MURTOVIIVASTA (board.edgeById poly), sama
+   * lähde kuin matkustusrajauksella (matkustusRajaus): askelympyrät
+   * osuvat siis täsmälleen niihin pisteisiin, joissa nappula pysähtyy.
+   */
+  paivitaMatkareitit() {
+    const kerros = this.matkaLayer;
+    if (!kerros) return;
+    const { game } = this;
+    const vaiheessa = game.phase === 'roll' || game.phase === 'move';
+    const naytetaan = !this.katselu && !game.player?.isBot
+      && (this.liukuAuki || vaiheessa);
+    /*
+     * MITKÄ REITIT PIIRRETÄÄN. Kaupungissa naapurireitit, kesken
+     * reittiä pelkkä se reitti, jolla nappula on — silloin muut
+     * reitit eivät ole valittavissa eikä niitä siis kuulu näkyä.
+     */
+    const kaupunki = game.cityOf?.();
+    const kesken = !kaupunki && game.player?.pos?.type === 'edge'
+      ? game.player.pos.edge : null;
+    const reittiTunnukset = kaupunki
+      ? [...(game.board.adj.get(kaupunki.id) ?? [])]
+      : (kesken ? [kesken] : []);
+    const avain = naytetaan && reittiTunnukset.length
+      ? `${game.pack.id}:${kaupunki?.id ?? kesken}:${game.phase}` : '';
+    if (this.matkareittiAvain === avain) return;
+    this.matkareittiAvain = avain;
+    kerros.textContent = '';
+    if (!avain) return;
+    const skaala = this.nakyvaAlue()?.skaala || 1;
+    for (const eid of reittiTunnukset) {
+      const reitti = game.board.edgeById.get(eid);
+      const poly = reitti?.poly;
+      if (!poly?.length) continue;
+      const d = `M${poly.map(([x, y]) => `${x.toFixed(1)},${y.toFixed(1)}`).join(' L')}`;
+      const viiva = el('path', {
+        d,
+        class: `matkareitti matkareitti-${reitti.type === 'sea' ? 'meri' : 'maa'}`,
+      }, kerros);
+      viiva.style.strokeWidth = (MATKAREITIN_VIIVA_PX / skaala).toFixed(2);
+      const jakso = MATKAREITIN_KATKO_PX / skaala;
+      viiva.style.strokeDasharray = `${(jakso * 0.5).toFixed(2)} ${(jakso * 0.5).toFixed(2)}`;
+      /*
+       * ASKELPISTEET: reitin väliaskeleet ympyröinä, sama data kuin
+       * nappulan reitillä (js/rules.js stepsFrom). Päätekaupungit
+       * jäävät pois — niillä on jo oma laattansa.
+       */
+      for (let i = 1; i < poly.length - 1; i += 1) {
+        el('circle', {
+          cx: poly[i][0],
+          cy: poly[i][1],
+          r: (MATKAREITIN_PISTE_PX / skaala).toFixed(2),
+          class: 'matkareitti-piste',
+        }, kerros);
+      }
+    }
+  }
+
+  /**
    * ALOITUSKARTAN KAUPUNGIT: VAIN VALITTAVAT NÄKYVIIN (omistajan
    * pelitestipalaute v1119, ks. ETUSIVUN_NAKYVAT).
    *
@@ -5650,6 +5745,8 @@ export class UI {
   paivitaFokusKerros() {
     if (!this.svg) return;
     this.paivitaAloituskaupungit();
+    // Matkareitit atlaksen päälle liikkumisen ajaksi (v1119, kohta 16).
+    this.paivitaMatkareitit();
     const maat = this.fokusMaat();
     /*
      * KÄYMÄTTÖMÄN MAAN DATAKERROS POIS KOKONAAN (Raamatun linjaus: "ilman
@@ -8199,6 +8296,9 @@ export class UI {
     if (this.liukuAuki) this.avaaMatkustusNakyma();
     else this.palaaMatkustusNakymasta();
     this.paivitaLiuku();
+    // Reitit näkyviin (tai pois) heti: liu'un avaus ei kulje renderin
+    // kautta, ja juuri silloin pelaaja katsoo, mihin reitit vievät.
+    this.paivitaMatkareitit();
   }
 
   suljeLiuku() {
@@ -8206,6 +8306,7 @@ export class UI {
     this.liukuAuki = false;
     this.palaaMatkustusNakymasta();
     this.paivitaLiuku();
+    this.paivitaMatkareitit();
   }
 
   /**

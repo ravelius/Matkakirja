@@ -4504,6 +4504,38 @@ body.fokuspohja .country-korostus { display: none; }
 .aloitus-piilossa { display: none; }
 
 /* ---------------------------------------------------------------------------
+   MATKAREITIT ATLAKSEN PÄÄLLE (omistajan pelitestipalaute v1119, kohta 16:
+   *"matkustamisen askellus on kadonnut … reittipisteet ja nappula piirtyvät
+   atlas-kerroksen päälle"* — js/ui.js paivitaMatkareitit)
+
+   Laudan oma reittiverkko asuu bittikartassa, joka on fokusnäkymässä
+   atlaslehtien alla piilossa. Nappula askelsi siis tyhjän paperin yli.
+   Nämä ovat sama reitti kerrottuna atlaksen kielellä: hento musteviiva ja
+   pienet askelpisteet, joissa nappula pysähtyy.
+
+   Viivan paksuus ja katkoviivan jakso tulevat js:stä, koska ne mitataan
+   RUUDUN pikseleinä eivätkä laudan yksiköinä.
+   ------------------------------------------------------------------------- */
+.matkareitti {
+  fill: none;
+  stroke: #4a3a24;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.42;
+}
+
+/* Merireitti erottuu maareitistä sinertävällä musteella, kuten laudallakin. */
+.matkareitti-meri { stroke: #3d5570; }
+
+.matkareitti-piste {
+  fill: rgba(250, 243, 226, 0.9);
+  stroke: #4a3a24;
+  stroke-width: 1;
+  opacity: 0.7;
+  vector-effect: non-scaling-stroke;
+}
+
+/* ---------------------------------------------------------------------------
    KEHITTÄJÄN "pisteet"-KERROS (omistajan tilaus 25.8.2026, js/ui.js
    paivitaKehittajaPisteet)
    ---------------------------------------------------------------------------
