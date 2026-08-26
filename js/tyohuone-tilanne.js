@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1145 — Kreetan lehden etusivulle kolmen herokuvan avauskaruselli (Arkadin luostari, Koulesin linnoitus, Rethymnon Fortezza; omistajan ChatGPT-era, silmatarkistettu) — korvaa Commons-vuoristomaisemat',
   'v1144 — Raamattuun omistajan linjaus: kaikki muu kuvagenerointi API:n kautta paitsi herokuvat; uusi generoi-symbolit.yml-eraajo (12 karttasymbolia gpt-image-1:lla lapinakyvalle pohjalle) — ei viela pelinakyvia muutoksia',
   'v1143 — kartan kohdemerkit ~12 % pienemmiksi (symbolilaatta 16 -> 14 px, pistemerkkien osat samassa suhteessa); osuma-alue yha 44 px',
   'v1142 — matkustusnakyman askelympyrat piirtyvat nyt oikeisiin noppa-askeliin (ennen murtoviivan jokaiseen piirtopisteeseen: 166 ympyraa, kiehkura Attikan edustalla, Kreeta ilman pisteita — nyt 7 askelta tasavalein); askelympyra hieman isompi',

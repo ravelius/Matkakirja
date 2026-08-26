@@ -19777,35 +19777,36 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Oliivi',
         },
       ],
-          /*
-       * AVAUSKUVAT (19.8.2026): saaren sisämaa kolmena maisemana —
-       * Valkoiset vuoret, kanjoni ja korkea viljelytasanko.
-       * Kansikuvissa ovat jo Chanian satama, Knossos ja Elafonisin
-       * ranta, joten rannikko ja arkeologia on jo katettu. Lisenssit,
-       * tekijät ja koot todennettu Commonsin API:sta, jokainen kuva
-       * katsottu silmin.
+      /*
+       * AVAUSKUVAT (26.8.2026): omistajan ChatGPT-herokuvat (era
+       * Kreeta: Arkadi, Koules, Fortezza — kaikki silmin
+       * tarkistettu). Korvasi 19.8. Commons-vuoristomaisemat;
+       * venetsialaisajan kivilinnat istuvat 1873-matkakirjaan, ja
+       * Arkadin luostari kantaa vuoden 1866 tarinaa, joka oli
+       * matkakirjan aikaan tuoreessa muistissa.
        */
       avauskuvat: [
         {
-          tiedosto: 'Lefka Ori 01.jpg',
-          selite: 'Lefka Ori eli Valkoiset vuoret on yksi Kreetan kuudesta '
-            + 'vuoristoryhmästä, ja Samarian rotko halkaisee sen.',
-          lahde: 'Olaf Tausch, Wikimedia Commons (CC BY 3.0)',
+          ampari: 'herokoe/hero-kreeta-aamu.jpg',
+          selite: 'Arkadin luostarin kirkon fasadi valmistui 1587 '
+            + 'venetsialaiseen renessanssityyliin. Vuonna 1866 luostari '
+            + 'oli Kreetan kapinan traaginen näyttämö, jonka tarina '
+            + 'tunnettiin kaikkialla Euroopassa.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Kourtaliotiko Gorge 01.JPG',
-          selite: 'Kourtaliotikon rotko kulkee Kouroupa- ja Xiron-vuorten '
-            + 'välissä, ja sen kalliot ovat partakorppikotkan '
-            + 'levähdyspaikka.',
-          lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-kreeta-keskipaiva.jpg',
+          selite: 'Koulesin linnoitus valmistui Heraklionin satamansuulle '
+            + '1540 venetsialaisten Rocca a Marena, ja sen muurissa on '
+            + 'yhä Pyhän Markuksen leijona.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Omalos Plateau.jpg',
-          selite: 'Omalosin 15 neliökilometrin tasanko on Valkoisissa '
-            + 'vuorissa 38 kilometriä Chaniasta etelään, ja sen '
-            + 'eteläreunasta laskeudutaan Samarian rotkoon.',
-          lahde: 'Emmanuel Eragne from Tokyo, Japan, Wikimedia Commons '
-            + '(CC BY 2.0)',
+          ampari: 'herokoe/hero-kreeta-ilta.jpg',
+          selite: 'Rethymnon Fortezza rakennettiin 1573-1580 '
+            + 'tähtilinnoitukseksi merirosvohyökkäysten jälkeen; kummun '
+            + 'keskellä kohoaa osmanniajan kupoli.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
