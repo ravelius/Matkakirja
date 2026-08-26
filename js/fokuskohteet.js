@@ -306,7 +306,7 @@ function piirraKohdemerkki(ui, ryhma, kohde) {
   g.setAttribute('aria-label', `${kohde.nimi}: avaa tietoruutu`);
   el('circle', { class: 'fokuskohde-osuma', r: KOHDE_OSUMA_R }, g);
   el('circle', { class: 'fokuskohde-korostus', r: KOHDE_KOROSTUS_R }, g);
-  if (kohde.kierros) piirraSilmamerkki(g);
+  if (kohteenKierrokset(kohde).length) piirraSilmamerkki(g);
   else {
     el('circle', { class: 'fokuskohde-halo', r: KOHDE_HALO_R }, g);
     el('circle', { class: 'fokuskohde-rengas', r: KOHDE_RENGAS_R }, g);
@@ -867,6 +867,17 @@ function piirraKohdeKysymykset(ui, sisalto, kohde) {
 const KIERROS_ODOTUS_MS = 10000;
 
 /**
+ * Kohteen kierrokset yhtenä listana. Yksi kierros annetaan kenttänä
+ * `kierros`, useampi listana `kierrokset` (esim. Akropolis-museon kolme
+ * galleriaa) — kumpikin kelpaa, eikä dataa tarvitse muotoilla uusiksi
+ * yhden kierroksen kohteissa.
+ */
+function kohteenKierrokset(kohde) {
+  if (Array.isArray(kohde?.kierrokset)) return kohde.kierrokset.filter((k) => k?.url);
+  return kohde?.kierros?.url ? [kohde.kierros] : [];
+}
+
+/**
  * "Avaa kierros" -nappi tietoruutuun, jos kohteella on kierros.
  *
  * Nappi eikä suora avaus: tietoruutu kertoo ensin mistä on kyse ja
@@ -874,26 +885,26 @@ const KIERROS_ODOTUS_MS = 10000;
  * hän koko ruudun kokoisen ikkunan.
  */
 function piirraKierrosnappi(ui, sisalto, kohde) {
-  const kierros = kohde.kierros;
-  if (!kierros?.url) return;
-  if (kierros.avaustapa !== 'upotus') {
-    // Linkkikierros: suoraan laitteen selaimeen. Kuori (WKWebView) vie
-    // target="_blank"-linkin ulkoiseen selaimeen.
-    const linkki = html('a', 'fokuskohde-kierrosnappi', `${kierros.nappi ?? 'Avaa kierros'} ↗`);
-    linkki.href = kierros.url;
-    linkki.target = '_blank';
-    linkki.rel = 'noopener noreferrer';
-    linkki.addEventListener('click', (tapahtuma) => tapahtuma.stopPropagation());
-    sisalto.appendChild(linkki);
-    return;
+  for (const kierros of kohteenKierrokset(kohde)) {
+    if (kierros.avaustapa !== 'upotus') {
+      // Linkkikierros: suoraan laitteen selaimeen. Kuori (WKWebView) vie
+      // target="_blank"-linkin ulkoiseen selaimeen.
+      const linkki = html('a', 'fokuskohde-kierrosnappi', `${kierros.nappi ?? 'Avaa kierros'} ↗`);
+      linkki.href = kierros.url;
+      linkki.target = '_blank';
+      linkki.rel = 'noopener noreferrer';
+      linkki.addEventListener('click', (tapahtuma) => tapahtuma.stopPropagation());
+      sisalto.appendChild(linkki);
+      continue;
+    }
+    const nappi = html('button', 'fokuskohde-kierrosnappi', kierros.nappi ?? 'Avaa kierros');
+    nappi.type = 'button';
+    nappi.addEventListener('click', (tapahtuma) => {
+      tapahtuma.stopPropagation();
+      avaaKierros(ui, kohde, kierros);
+    });
+    sisalto.appendChild(nappi);
   }
-  const nappi = html('button', 'fokuskohde-kierrosnappi', kierros.nappi ?? 'Avaa kierros');
-  nappi.type = 'button';
-  nappi.addEventListener('click', (tapahtuma) => {
-    tapahtuma.stopPropagation();
-    avaaKierros(ui, kohde);
-  });
-  sisalto.appendChild(nappi);
 }
 
 /** Sulkee auki olevan kierrosikkunan. */
@@ -912,9 +923,8 @@ export function suljeKierros(ui) {
  * @param {object} ui
  * @param {{nimi:string, kierros:{url:string, otsikko?:string, lahde?:string}}} kohde
  */
-function avaaKierros(ui, kohde) {
+function avaaKierros(ui, kohde, kierros = kohteenKierrokset(kohde)[0]) {
   if (typeof document === 'undefined') return null;
-  const kierros = kohde?.kierros;
   if (!kierros?.url) return null;
   sfx.play('popup');
   suljeKierros(ui);

@@ -633,23 +633,14 @@ export const FOKUSKOHTEET_GRC = [
     },
   },
   /*
-   * AKROPOLIS — ENSIMMÄINEN MULTIMEDIAKOHDE (omistajan tilaus v1119,
-   * kohta 19: *"omistaja löysi acropolisvirtualtour.gr ja haluaa sen
-   * aukeavan PELIN SISÄLLÄ ikkunaan, lisättynä suoraan kartalle omalla
-   * nähtävyys/multimedia-ikonilla"*).
+   * AKROPOLIS (omistajan tilaus v1119, kohta 19).
    *
-   * Tyyppi 'multimedia' ja kenttä `kierros` ovat uusia: kartalla merkki
-   * on SILMÄ pisteen sijaan (js/fokuskohteet.js piirraSilmamerkki), ja
-   * tietoruudun "Avaa kierros" -nappi nostaa kierroksen pelin omaan
-   * ikkunaan (avaaKierros).
-   *
-   * AVAUSTAPA ON LINKKI, EI UPOTUS (kartoitus 26.8.2026): sivu ei
-   * lähetä X-Frame-Options- eikä CSP-otsaketta, mutta Kreikan
-   * kulttuuriministeriön käyttöehdot (kohta 8) kieltävät ministeriön
-   * sivujen lataamisen muiden sivustojen kehyksiin — jokaisen sivun on
-   * latauduttava omaan ikkunaansa. Linkittämiseen ehdot sen sijaan
-   * kannustavat ilman erillistä lupaa, joten kierros avataan laitteen
-   * selaimeen.
+   * ACROPOLISVIRTUALTOUR.GR JÄI POIS (omistajan päätös 26.8.2026):
+   * Kreikan kulttuuriministeriön käyttöehdot (kohta 8) kieltävät
+   * ministeriön sivujen lataamisen muiden sivustojen kehyksiin, vaikka
+   * palvelin ei estä otsakkeilla — ja omistaja linjasi, ettei
+   * kierrosta oteta, jos se ei aukea pelin sisällä. Pelin sisään
+   * upotettavat kierrokset ovat Akropolis-museon kohteella alempana.
    *
    * 23,7261 E / 37,9715 N — en-Wikipedia "Acropolis of Athens"
    * (37°58′17″N 23°43′34″E). Sama piste kuin Ateenan kohtaamispisteellä
@@ -658,7 +649,7 @@ export const FOKUSKOHTEET_GRC = [
   {
     id: 'akropolis',
     nimi: 'Akropolis',
-    tyyppi: 'multimedia',
+    tyyppi: 'muu',
     kysymykset: [
       'Miksi Parthenon rakennettiin juuri kalliolle?',
       'Mitä Akropoliilla tehtiin ennen temppeleitä?',
@@ -680,26 +671,106 @@ export const FOKUSKOHTEET_GRC = [
       + 'Erekhtheionin ja Athena Niken temppelit sekä Propylaia-portti. '
       + 'Nykyiset rakennukset pystytettiin 400-luvulla eaa. Perikleen '
       + 'aikana, mutta kalliolla oli asuttu ja rakennettu jo tuhansia '
-      + 'vuosia aiemmin. Kreikan kulttuuriministeriö on kuvannut alueen '
-      + '360 asteen panoraamoina, joita voi kierrellä pysähtymättä '
-      + 'yhteenkään jonoon.',
+      + 'vuosia aiemmin.',
     lahde: 'en-Wikipedia "Acropolis of Athens", johdanto-osa '
       + '(tarkistettu 26.8.2026).',
-    kierros: {
-      url: 'https://acropolisvirtualtour.gr',
-      otsikko: 'Akropolis 360°',
-      nappi: 'Avaa virtuaalikierros',
-      avaustapa: 'linkki',
-      lahde: 'Acropolis Virtual Tour — Hellenic Ministry of Culture',
-      varaTeksti: 'Kierros ei aukea pelin sisällä. Se avautuu laitteen '
-        + 'omassa selaimessa.',
-    },
     kuva: {
       tiedosto: 'The Parthenon in Athens.jpg',
       selite: 'Parthenon Akropoliin kalliolla — temppeli valmistui '
         + 'vuonna 432 eaa.',
       lahde: 'Steve Swayne, Wikimedia Commons (CC BY 2.0)',
     },
+  },
+  /*
+   * AKROPOLIS-MUSEO — MULTIMEDIAKOHDE KOLMELLA UPOTETTAVALLA
+   * KIERROKSELLA (omistajan päätös 26.8.2026: acropolisvirtualtour.gr
+   * jäi pois, koska sitä ei saa avata pelin sisällä; tilalle nämä
+   * kolme, jotka saa).
+   *
+   * UPOTUS ON SEKÄ SALLITTU ETTÄ TARKOITETTU: osoitteet ovat Google
+   * Arts & Culturen virallisia embed-päätepisteitä
+   * (embed.culturalspot.org), jotka Akropolis-museo itse julkaisee
+   * iframe-koodina omilla sivuillaan. Tekninen tarkistus 26.8.2026:
+   * ei X-Frame-Options-otsaketta, CSP ilman frame-ancestorsia.
+   * Museon OMA sivusto sen sijaan estää kehyksen (XFO: SAMEORIGIN),
+   * siksi ulkoinen-linkit osoittavat sinne mutta upotus ei.
+   *
+   * Useampi kierros yhdellä kohteella: kenttä `kierrokset` (lista) —
+   * js/fokuskohteet.js kohteenKierrokset piirtää napin jokaiselle.
+   *
+   * 23,7283 E / 37,9691 N — en-Wikipedia "Acropolis Museum". Museo on
+   * Makrygiannin korttelissa kallion kaakkoispuolella, joten merkki
+   * osuu Akropoliin merkin viereen — esityssiirto erottaa ne
+   * (js/fokuskohteet.js eritteleKohdeRyhmat).
+   */
+  {
+    id: 'akropolis-museo',
+    nimi: 'Akropolis-museo',
+    tyyppi: 'multimedia',
+    kysymykset: [
+      'Miksi museon ylin kerros on vinossa muihin nähden?',
+      'Mitä museon lattian lasin alta näkyy?',
+    ],
+    korostukset: ['Parthenon|Parthenonin'],
+    nappi: 'Museo, jonka läpi näkee',
+    laudat: {
+      maailmankartta: { x: 6624.3, y: 1882.0 },
+      europe: { x: 666.7, y: 895.0 },
+    },
+    teksti: 'Akropolis-museo avattiin vuonna 2009 kallion '
+      + 'kaakkoispuolelle, ja se rakennettiin kokoamaan yhteen kaikki '
+      + 'Akropoliilta ja sen rinteiltä löytynyt — yli 4 250 esinettä '
+      + 'pronssikaudelta Bysantin aikaan. Rakennus seisoo pilarien '
+      + 'varassa antiikin kaupunginosan raunioiden päällä, ja kaivaus '
+      + 'näkyy lasilattioiden läpi. Ylin kerros on käännetty vinoon '
+      + 'muuhun rakennukseen nähden: se seuraa Parthenonin suuntaa, ja '
+      + 'temppelin veistokset on aseteltu saliin samaan järjestykseen '
+      + 'ja samoin päin kuin ne olivat itse temppelissä, lasiseinien '
+      + 'läpi tulevassa luonnonvalossa.',
+    lahde: 'en-Wikipedia "Acropolis Museum" (johdanto ja osio "The '
+      + 'building") — tarkistettu 26.8.2026.',
+    /*
+     * Commons 26.8.2026: 3254×4914, CC BY-SA 2.0, Carole Raddato,
+     * Restrictions tyhjä. Katsottu silmin: Erekhtheionin alkuperäisiä
+     * karyatideja museon salissa, ei ihmisiä. Aihe on antiikin
+     * veistos, ei museon moderni rakennus (Kreikassa ei ole
+     * panoraamavapautta uudelle arkkitehtuurille).
+     */
+    kuva: {
+      tiedosto: 'Caryatids from the Erechtheion on the Acropolis, Acropolis Museum, Athens (13889706087).jpg',
+      selite: 'Erekhtheionin alkuperäisiä karyatideja Akropolis-museon '
+        + 'salissa.',
+      lahde: 'Carole Raddato, Wikimedia Commons (CC BY-SA 2.0)',
+    },
+    kierrokset: [
+      {
+        url: 'https://embed.culturalspot.org/embedv2/streetview/1wHvAr1PHfUbDw',
+        otsikko: 'Parthenon-galleria 360°',
+        nappi: 'Astu galleriaan',
+        avaustapa: 'upotus',
+        lahde: 'Akropolis-museo / Google Arts & Culture',
+        varaTeksti: 'Kierros ei aukea pelin sisällä. Se avautuu '
+          + 'laitteen omassa selaimessa.',
+      },
+      {
+        url: 'https://embed.culturalspot.org/embedv2/streetview/VgGUWDq9_Uo1pg',
+        otsikko: 'Akropoliin rinteet 360°',
+        nappi: 'Kierrä rinteiden galleria',
+        avaustapa: 'upotus',
+        lahde: 'Akropolis-museo / Google Arts & Culture',
+        varaTeksti: 'Kierros ei aukea pelin sisällä. Se avautuu '
+          + 'laitteen omassa selaimessa.',
+      },
+      {
+        url: 'https://embed.culturalspot.org/embedv2/streetview/KwH9HX2-0bOSJg',
+        otsikko: 'Kaivaus museon alla 360°',
+        nappi: 'Laskeudu kaivaukselle',
+        avaustapa: 'upotus',
+        lahde: 'Akropolis-museo / Google Arts & Culture',
+        varaTeksti: 'Kierros ei aukea pelin sisällä. Se avautuu '
+          + 'laitteen omassa selaimessa.',
+      },
+    ],
   },
 ];
 
