@@ -765,6 +765,29 @@ export const FOKUS_POHJAT = {
     tiedosto: 'UZB.webp',
   },
 
+  /*
+   * --- VENÄJÄ JA KANADA (kuratoidut ikkunat 26.8.2026) ---
+   * Molemmat kaatuivat yleisellä reitillä (ikkuna venyi yli puolen
+   * maapallon), joten ikkunat ovat käsin tools/fokuskartta/maat.mjs
+   * FOKUSMAAT-taulussa. HUOM RUS: bbox.x + w = 13085 eli laudan
+   * leveyden 12000 YLI — tarkoituksella, lehti ylittää laudan sauman
+   * (lon -175) ja peli kokeilee kierrot 0/±12000. Lukua EI saa
+   * "korjata" välille [0, 12000): se siirtäisi lehden väärään
+   * paikkaan.
+   */
+  CAN: {
+    lauta: 'maailmankartta',
+    bbox: { x: 182.5, y: -928.22, w: 4868.34, h: 3042.71 },
+    rajaus: { x: 744.23, y: -577.13, w: 3744.88, h: 2340.55 },
+    tiedosto: 'CAN.webp',
+  },
+  RUS: {
+    lauta: 'maailmankartta',
+    bbox: { x: 5581.38, y: -826.27, w: 7503.91, h: 2954.29 },
+    rajaus: { x: 6447.21, y: -485.39, w: 5772.24, h: 2272.53 },
+    tiedosto: 'RUS.webp',
+  },
+
   /* --- POHJOIS- JA VÄLI-AMERIKKA (maanosaparvi 25.8.2026, yleinen reitti) --- */
   CUB: {
     lauta: 'maailmankartta',
