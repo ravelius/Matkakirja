@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1144, teksti: 'API-generointilupa Raamattuun + symbolieraajo' },
   { v: 1143, teksti: 'Kohdemerkit hieman pienemmiksi (16 -> 14 px)' },
   { v: 1142, teksti: 'Matkustusreittien askelet laudan noppapisteista' },
   { v: 1141, teksti: 'Panorointi div-kuoreen: asettelu 0,35/kehys' },

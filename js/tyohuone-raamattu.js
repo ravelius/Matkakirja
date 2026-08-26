@@ -1096,16 +1096,19 @@ export const RAAMATTU = {
       otsikko: 'Kuvat ja lähteet',
       tila: 'luonnos',
       kohdat: [
-        'KUVAGENEROINNIN TYÖNJAKO (omistaja 26.8.2026, tarkentaa '
-          + 'hybridimallia): KAIKKI herokuvat ja julisteet on tehty '
-          + 'OpenAI:n kuva-API:lla paitsi viimeisimmät ChatGPT:n '
-          + 'käyttöliittymässä. JATKOSSA: herokuvat tehdään CHATIN '
-          + 'kautta (referenssihaku STEP 1-3 -reseptillä), mutta kun '
-          + 'omistaja ERIKSEEN pyytää, API:n kautta — OPENAI_API_KEY '
-          + 'on repon secreteissä ja pyydettäessä-reitti on '
-          + '.github/workflows/generoi-kuva-api.yml (dispatch, kuva '
-          + 'palautuu artifaktina). Gemini-työkalut (aarrekuvat, '
-          + 'kohtaamiskuvat ym.) ovat oma putkensa eivätkä muutu.',
+        'KUVAGENEROINNIN TYÖNJAKO (omistaja 26.8.2026 ilta: "Saat '
+          + 'generoida aina kaiken muun apin kautta paitsi '
+          + 'herokuvat" — laajentaa saman päivän pyydettäessä-'
+          + 'linjauksen vakioluvaksi): KAIKKI MUU kuvagenerointi '
+          + '(karttasymbolit, aarrekuvat, kohtaamiskuvat, varusteet, '
+          + 'avatarit, miniatyyrit) saa kulkea API-työnkulkujen '
+          + 'kautta ilman erillistä kysymistä — avaimet VAIN repon '
+          + 'secreteissä (OPENAI_API_KEY, GOOGLE_API_KEY), reitit '
+          + '.github/workflows/generoi-*.yml (dispatch, kuvat '
+          + 'artifaktina tai työhaarana). VAIN HEROKUVAT ja '
+          + 'julisteet omistaja generoi itse ChatGPT:n '
+          + 'käyttöliittymässä (STEP 1-3 -resepti) — niitä ei tehdä '
+          + 'API:lla ilman omistajan erillistä pyyntöä.',
         'HEROKUVIEN HYBRIDIMALLI (omistaja 25.8.2026, korvaa 24.8. '
           + 'tauon API-massa-ajojen osalta): omistaja generoi '
           + 'herokuvat ChatGPT Plus -käyttöliittymässä Fablen '

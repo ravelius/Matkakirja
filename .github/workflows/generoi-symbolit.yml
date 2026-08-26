@@ -1,0 +1,111 @@
+# Symbolitaksonomian 12 karttasymbolin eräajo OpenAI:n kuva-API:lla.
+# Omistajan linjaus 26.8.2026 ilta: "Symboleista voisi tehdä
+# generoimalla paremmat" + "Saat generoida aina kaiken muun apin
+# kautta paitsi herokuvat" (Raamattu, Kuvat ja lähteet). Kuvat
+# generoidaan läpinäkyvälle pohjalle — pergamenttilaatan ja
+# mustereunan piirtää edelleen koodi (js/fokusnosto-symbolit.js),
+# jotta väri- ja kokokieli pysyy yhdessä paikassa.
+#
+# Tulokset: artifakti "symbolikuvat" JA työhaara claude/symbolikuvat-api
+# (force-push; haara on noutoa varten ja poistetaan integroinnin
+# jälkeen — mainin historiaan kuvat päätyvät vasta hyväksyttyinä ja
+# pienennettyinä).
+name: Generoi symbolit
+
+on:
+  workflow_dispatch:
+    inputs:
+      vain:
+        description: 'Vain nämä tunnukset (välilyönnein), tyhjä = kaikki'
+        type: string
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  generoi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generoi 12 symbolia
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          VAIN: ${{ inputs.vain }}
+        run: |
+          set -euo pipefail
+          mkdir -p symbolikuvat
+          node - <<'SKRIPTI'
+          // Aiheet ja vaimeat heraldiset värit: Raamattu, SYMBOLITAKSONOMIA.
+          const SYMBOLIT = [
+            ['huuto', 'a bold exclamation mark', 'muted ochre yellow'],
+            ['elain', 'a small owl chick facing forward with big round eyes', 'muted warm brown'],
+            ['silma', 'an open human eye with iris and brow line', 'muted slate blue'],
+            ['historia', 'a broken ancient Greek column, cracked at the top, base intact', 'muted terracotta red-brown'],
+            ['luonto', 'a mountain peak rising above a stylized ocean wave', 'muted teal blue-green'],
+            ['ruoka', 'a steaming goblet, three wisps of steam rising', 'muted wine red'],
+            ['kulttuuri', 'a classical Greek lyre with strings', 'muted violet'],
+            ['tekniikka', 'a toothed gear wheel with a hub', 'muted steel grey'],
+            ['kauppa', 'a two-pan balance scale on a stand', 'muted olive green'],
+            ['sana', 'a quill pen with a detailed feather, nib down', 'muted dark navy blue'],
+            ['merenkulku', 'a ship anchor with crossbar, shank and curved flukes', 'muted deep sea blue'],
+            ['urheilu', 'a laurel wreath of two branches, open at the top', 'muted golden green'],
+          ];
+          const POHJA = (aihe, vari) => 'A single emblem in 19th-century '
+            + `copperplate engraving style: ${aihe}. Fine cross-hatching and `
+            + 'stipple shading, hand-engraved slightly irregular linework, '
+            + `dark sepia-black ink with ${vari} as the single muted heraldic `
+            + 'accent wash. Bold simple silhouette with thick main strokes that '
+            + 'stays readable when shrunk to 20 pixels. Emblem centered, '
+            + 'filling most of the canvas. Isolated on a fully transparent '
+            + 'background - no circle, no coin, no token, no frame, no border, '
+            + 'no text, no drop shadow, no paper texture.';
+          const vain = (process.env.VAIN ?? '').split(/\s+/).filter(Boolean);
+          const jono = SYMBOLIT.filter(([t]) => !vain.length || vain.includes(t));
+          const { writeFileSync } = await import('node:fs');
+          let virheita = 0;
+          for (const [tunnus, aihe, vari] of jono) {
+            const vastaus = await fetch('https://api.openai.com/v1/images/generations', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+              },
+              body: JSON.stringify({
+                model: 'gpt-image-1',
+                prompt: POHJA(aihe, vari),
+                size: '1024x1024',
+                quality: 'medium',
+                background: 'transparent',
+                output_format: 'png',
+              }),
+            });
+            if (!vastaus.ok) {
+              console.error(`${tunnus}: HTTP ${vastaus.status}`, (await vastaus.text()).slice(0, 300));
+              virheita += 1;
+              continue;
+            }
+            const data = await vastaus.json();
+            const b64 = data.data?.[0]?.b64_json;
+            if (!b64) { console.error(`${tunnus}: ei kuvaa vastauksessa`); virheita += 1; continue; }
+            writeFileSync(`symbolikuvat/sym-${tunnus}.png`, Buffer.from(b64, 'base64'));
+            console.log(`sym-${tunnus}.png kirjoitettu`);
+          }
+          if (virheita) { console.error(`${virheita} epäonnistui`); process.exit(1); }
+          SKRIPTI
+      - uses: actions/upload-artifact@v4
+        with:
+          name: symbolikuvat
+          path: symbolikuvat/
+          retention-days: 7
+      - name: Työhaaraan noutoa varten
+        run: |
+          set -euo pipefail
+          git config user.name "matkakirja-symbolit"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout --orphan claude/symbolikuvat-api
+          git rm -rq --cached . || true
+          git add -f symbolikuvat/
+          git commit -m "Symbolikuvat era $(date -u +%Y-%m-%dT%H:%M)Z (poistetaan integroinnin jalkeen)"
+          git push -f origin claude/symbolikuvat-api
