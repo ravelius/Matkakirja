@@ -4751,6 +4751,55 @@ body.fokus-atlas-nakyma .grain { display: none; }
 .fokus-nimet-piilossa { display: none; }
 
 /* ---------------------------------------------------------------------------
+   ERIKOISPIIRIT — PÄIVÄNTASAAJA, KÄÄNTÖPIIRIT, NAPAPIIRI JA GREENWICH
+   ---------------------------------------------------------------------------
+   Omistajan ja päätoimittajan taidesuunta 28.8.2026 (js/fokuskartta.js
+   paivitaErikoispiirit). 1800-luvun atlaksen asu: hiusviiva, piste-viiva-
+   katko ja pieni kursiivi.
+
+   HIMMEÄ ON EHTO EIKÄ MAKUASIA. Kerros on koko kartan levyinen ja
+   kulkee maiden yli; täydellä mustalla se olisi ruudukko maaston päällä.
+   Läpinäkyvyys pidetään RYHMÄSSÄ eikä väreissä, jotta viivan ja nimen
+   suhde toisiinsa säilyy — atlaksessa nimi on aina viivaansa haaleampi.
+
+   VIIVA ON RUUDUN MITTAINEN (vector-effect), ei laudan: laudan
+   yksikköinä mitattu hiusviiva katoaa kaukozoomissa ja paksuuntuu
+   tussiksi lähikuvassa. Sama ratkaisu kuin vuorimerkeillä ja
+   kaupunkipisteillä yllä. Suodattimia ei ole (tests/rules.test.mjs). */
+
+.fokus-piirit { opacity: 0.38; }
+
+.fokus-piiri-viiva {
+  fill: none;
+  stroke: rgba(74, 52, 33, 0.85);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  /* Kääntöpiirit, napapiiri ja meridiaani: hento piste-viiva-katko. */
+  stroke-dasharray: 7 3 1.5 3;
+}
+
+/* Päiväntasaaja on yhtenäinen ja hitusen muita vahvempi — kuten
+   aikakauden kartoissa, joissa se on kartan perusviiva. */
+.fokus-piiri-vahva {
+  stroke-dasharray: none;
+  stroke-width: 1.5;
+}
+
+.fokus-piiri-nimi {
+  font-family: var(--font-type);
+  font-style: italic;
+  fill: rgba(74, 52, 33, 0.95);
+  text-anchor: middle;
+  paint-order: stroke;
+  stroke: rgba(244, 232, 205, 0.9);
+  stroke-width: 2.4px;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.fokus-piiri[hidden] { display: none; }
+
+/* ---------------------------------------------------------------------------
    PELILAATTOJEN KAUPUNKINIMET FOKUSNÄKYMÄSSÄ — PALJON PIENEMMÄLLÄ
    ---------------------------------------------------------------------------
    Omistajan pelitestitilaus 26.8.2026: *"Ateena ja Kreeta paljon
@@ -19460,11 +19509,17 @@ body.fokuspohja .maa-pilleri { display: none; }
 .fokus-viivain-vasen { top: 0; bottom: 0; left: 0; width: 2.6rem; }
 .fokus-viivain-oikea { top: 0; bottom: 0; right: 0; width: 2.6rem; }
 
+/* Merkin paikka nauhassa tulee TRANSFORMISTA eikä left/top-arvosta
+   (js/fokusmitat.js ladoNauha): lukemat päivittyvät kartan liikkuessa
+   joka kehyksellä, ja `left` pakottaisi uudelleenasettelun jokaisesta
+   merkistä. Siksi nauhan omat ankkurit ovat nollassa ja kaikki liike
+   on yhdessä muunnoksessa — myös keskitys, joka oli ennen tässä. */
 .fokus-viivain-merkki {
   position: absolute;
   display: flex;
   align-items: center;
   gap: 0.15rem;
+  will-change: transform;
 }
 
 .fokus-viivain-viiva {
@@ -19486,6 +19541,7 @@ body.fokuspohja .maa-pilleri { display: none; }
    viivan kohdalle (kuten mittajanan päätylukemat). */
 .fokus-viivain-yla .fokus-viivain-merkki {
   top: 0;
+  left: 0;
   flex-direction: column;
   align-items: center;
   transform: translateX(-50%);
@@ -19498,6 +19554,7 @@ body.fokuspohja .maa-pilleri { display: none; }
    alalaidan taakse. */
 .fokus-viivain-ala .fokus-viivain-merkki {
   bottom: 0;
+  left: 0;
   flex-direction: column-reverse;
   align-items: center;
   transform: translateX(-50%);
@@ -19508,6 +19565,7 @@ body.fokuspohja .maa-pilleri { display: none; }
 /* Vasen viivain: vaakaviiva reunasta oikealle, lukema sen perässä. */
 .fokus-viivain-vasen .fokus-viivain-merkki {
   left: 0;
+  top: 0;
   transform: translateY(-50%);
 }
 
@@ -19517,6 +19575,7 @@ body.fokuspohja .maa-pilleri { display: none; }
    lukema sen vasemmalla puolella (row-reverse). */
 .fokus-viivain-oikea .fokus-viivain-merkki {
   right: 0;
+  top: 0;
   flex-direction: row-reverse;
   transform: translateY(-50%);
 }
@@ -19524,44 +19583,15 @@ body.fokuspohja .maa-pilleri { display: none; }
 .fokus-viivain-oikea .fokus-viivain-viiva { width: 6px; height: 1px; }
 
 /* ---------------------------------------------------------------------------
-   VIIVAIMET POIS LIIKKEEN AJAKSI (omistajan tilaus 25.8.2026)
+   VIIVAIMET SEURAAVAT KARTTAA (omistajan tilaus 28.8.2026)
 
-   Lukemat lasketaan vasta kun näkymä on asettunut, joten liikkeen aikana
-   ne kertoisivat edellisestä ruudusta. Nauha liukuu siksi kokonaan
-   reunansa yli sillä aikaa kun kartta on kädessä ja palaa pienen viiveen
-   päästä uusilla lukemilla (js/fokusmitat.js merkitseViivainLiike).
+   Ennen nauha liukui kokonaan reunansa yli kartan liikkeen ajaksi, koska
+   lukemat laskettiin vasta liikkeen päätteeksi eivätkä ne siihen asti
+   voineet olla oikeassa. Nyt ne lasketaan joka kehyksellä (js/fokusmitat.js
+   piirraViivaimet), joten nauha pysyy paikallaan ja lukemat elävät.
 
-   SIIRTO ON REILUSTI YLI NAUHAN OMAN MITAN. Lukema ladotaan viivan
-   VIEREEN eikä nauhan sisään, joten pelkkä -100 % jättäisi numeron
-   roikkumaan reunaan; lisäys vie senkin ruudun ulkopuolelle.
-
-   Transform ja opacity, ei suodattimia (sama iOS-sääntö kuin kartan
-   kerroksilla). Kevennetyllä liikkeellä viivaimet jäävät paikoilleen:
-   silloin pieni epätarkkuus lukemassa on parempi kuin liike ruudulla.
+   MERKIN OMA LIUKU ON POIS TARKOITUKSELLA. Merkkiä siirretään joka
+   kehyksellä uuteen kohtaan; siirtymä tarkoittaisi, että se olisi aina
+   matkalla edelliseen paikkaan eli aina väärässä kohdassa. Kartan liike
+   on jo pelaajan sormen liikettä — viivain vain seuraa sitä.
    --------------------------------------------------------------------------- */
-
-.fokus-viivain {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.fokus-viivaimet.viivaimet-poissa .fokus-viivain { opacity: 0; }
-.fokus-viivaimet.viivaimet-poissa .fokus-viivain-yla {
-  transform: translateY(calc(-100% - 0.8rem));
-}
-.fokus-viivaimet.viivaimet-poissa .fokus-viivain-ala {
-  transform: translateY(calc(100% + 0.8rem));
-}
-.fokus-viivaimet.viivaimet-poissa .fokus-viivain-vasen {
-  transform: translateX(calc(-100% - 2.4rem));
-}
-.fokus-viivaimet.viivaimet-poissa .fokus-viivain-oikea {
-  transform: translateX(calc(100% + 2.4rem));
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fokus-viivain { transition: none; }
-  .fokus-viivaimet.viivaimet-poissa .fokus-viivain {
-    transform: none;
-    opacity: 1;
-  }
-}

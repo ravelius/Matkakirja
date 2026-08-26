@@ -465,7 +465,7 @@ export function maanLaatikko(kansio, iso, { etaisyys = 2.5 } = {}) {
 export const NE_PAIKKATUNNUS = { SDS: 'SSD' };
 
 /** Nimi vertailumuotoon: aksentit pois, pienaakkoset, vain kirjaimet. */
-function normalisoi(nimi) {
+export function normalisoi(nimi) {
   return (nimi ?? '')
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
@@ -485,6 +485,87 @@ function yhdenPaassa(a, b) {
   return (a.length - i - j) <= 1 && (b.length - i - j) <= 1;
 }
 
+/*
+ * ============ NIMIALIAKSET: SUOMI JA NATURAL EARTH ==================
+ *
+ * Omistajan tilaus 28.8.2026: *"laudan laattojen nimet ovat suomeksi
+ * (Riika, Vilna) ja NE-aineiston englanniksi (Riga, Vilnius) — suodatin
+ * ei tunnista niitä samaksi ja kaupunki tuplautuu lehdelle."*
+ *
+ * `samaNimi` alla vertailee KIRJOITUSASUJA, ja se riittää silloin kun
+ * suomalainen asu on aineiston asu pienin muunnoksin (Havanna ~ Havana,
+ * Bagdad ~ Baghdad, Jakutsk ~ Yakutsk). Eksonyymi on eri asia: "Vilna"
+ * ja "Vilnius" eivät ole saman sanan kaksi kirjoitusasua vaan kaksi
+ * nimeä, eikä yhtään merkkietäisyyttä voi virittää tunnistamaan niitä
+ * ilman että Salta ja Malta menevät samalla yhteen. Siksi lista on
+ * KÄSIN KIRJOITETTU JA SULJETTU.
+ *
+ * LISTA ON MITATTU, EI ARVATTU. Se on koottu ajamalla laudan KAIKKI 261
+ * laattaa NE:n populated_places -pisteitä vasten 4° säteellä ja
+ * poimimalla parit, joita tämä sääntö ei tunnistanut. Poimituista
+ * jäivät pois maastonimet (Alpit, Sahara, Uluru) ja saaret (Sisilia,
+ * Kreeta, Islanti): niiden laatta ei ole kaupungin nimi eikä NE:n
+ * kaupunki siis ole sama asia.
+ *
+ * ALIAS EI VOI TUODA MITÄÄN LEHDELLE — se voi vain jättää nimen pois.
+ * Vertailu tehdään aina yhdessä etäisyysrajan (`nimiSade`, 5°) kanssa,
+ * joten Canton Ohiossa ei katoa siksi, että laudalla on Kanton
+ * Kiinassa. Suurin osuma listassa on Riika ~ Riga 3,1° päässä: laudan
+ * laatta on siirretty käsin, ja juuri se siirto teki tuplasta
+ * näkyvän.
+ *
+ * Nimet ovat NORMALISOIDUSSA muodossa (ks. normalisoi): pienaakkoset,
+ * aksentit purettuna ja välimerkit väleinä.
+ */
+export const NIMIALIAKSET = [
+  // Eurooppa
+  ['lontoo', 'london'],
+  ['pariisi', 'paris'],
+  ['lissabon', 'lisbon'],
+  ['berliini', 'berlin'],
+  ['praha', 'prague'],
+  ['wien', 'vienna'],
+  ['varsova', 'warsaw'],
+  ['krakova', 'krakow'],
+  ['venetsia', 'venice'],
+  ['firenze', 'florence'],
+  ['rooma', 'rome'],
+  ['ateena', 'athens'],
+  ['bukarest', 'bucharest'],
+  ['kiova', 'kyiv', 'kiev'],
+  ['moskova', 'moscow'],
+  ['pietari', 'st petersburg', 'saint petersburg'],
+  ['riika', 'riga'],
+  ['vilna', 'vilnius'],
+  ['tukholma', 'stockholm'],
+  ['koopenhamina', 'kobenhavn', 'copenhagen'],
+  // Afrikka ja Lähi-itä
+  ['kairo', 'cairo'],
+  ['fes', 'fez'],
+  ['murzuk', 'marzuq'],
+  ['kapkaupunki', 'cape town'],
+  ['damaskos', 'damascus'],
+  ['mekka', 'makkah', 'mecca'],
+  ['riad', 'riyadh'],
+  ['sana', 'sanaa'],
+  ['masqat', 'muscat'],
+  // Aasia
+  ['tokio', 'tokyo'],
+  ['kioto', 'kyoto'],
+  ['astana', 'nur sultan'],
+  ['ulan bator', 'ulaanbaatar'],
+  ['peking', 'beijing'],
+  ['soul', 'seoul'],
+  ['xi an', 'xian'],
+  ['kanton', 'guangzhou'],
+];
+
+/** Normalisoitu nimi -> ryhmän numero. Sama numero = sama kaupunki. */
+const ALIASRYHMA = new Map();
+NIMIALIAKSET.forEach((ryhma, i) => {
+  for (const n of ryhma) ALIASRYHMA.set(n, i);
+});
+
 /**
  * Onko tämä sama kaupunki kuin laudan laatta?
  *
@@ -492,16 +573,20 @@ function yhdenPaassa(a, b) {
  * Havana; lauta Mérida, aineisto Mérida ilman aksenttia toisessa
  * kohdassa. Vertailu tehdään siksi normalisoiduille nimille kolmella
  * säännöllä: sama nimi, alkuosa (Mexico City ~ Mexico) tai yhden
- * merkin ero (Havanna ~ Havana).
+ * merkin ero (Havanna ~ Havana) — ja niiden lisäksi käsin kirjoitetulla
+ * aliaslistalla (Riika ~ Riga, ks. NIMIALIAKSET).
  *
  * LYHYILLÄ NIMILLÄ VAIN TARKKA OSUMA. Kolmen kirjaimen "Ely" ja "Eli"
  * eivät ole sama kaupunki, eivätkä viiden kirjaimen Salta ja Malta —
  * siksi alkuosa vaatii viisi merkkiä ja yhden merkin ero kuusi. Väärä
  * osuma pudottaisi lehdeltä nimen, jota kukaan ei piirrä tilalle.
  */
-function samaNimi(a, b) {
+export function samaNimi(a, b) {
   if (!a || !b) return false;
   if (a === b) return true;
+  // Aliakset ensin: ne ovat käsin tarkistettuja ja voittavat heuristiikat.
+  const ryhma = ALIASRYHMA.get(a);
+  if (ryhma !== undefined && ryhma === ALIASRYHMA.get(b)) return true;
   const lyhyt = a.length < b.length ? a : b;
   const pitka = a.length < b.length ? b : a;
   if (lyhyt.length >= 5 && pitka.startsWith(lyhyt)) return true;

@@ -49,7 +49,7 @@ import { el, paperinSavy } from './mapart.js';
 import { fokuskarttaUrl, peiliKaytossa } from './media.js';
 import { natiiviKuori } from './natiivi.js';
 import {
-  FOKUS_LISANIMET, FOKUS_POHJAT, FOKUS_SVG_NIMET, YLEISLEHTI,
+  FOKUS_LAUTAPROJEKTIOT, FOKUS_LISANIMET, FOKUS_POHJAT, FOKUS_SVG_NIMET, YLEISLEHTI,
 } from './packs/fokus-grc.js';
 
 /*
@@ -1487,6 +1487,197 @@ function palautaMaalehti(ui) {
   });
 }
 
+/*
+ * ============ ERIKOISPIIRIT: PÄIVÄNTASAAJA JA KÄÄNTÖPIIRIT ==========
+ *
+ * Omistajan ja päätoimittajan taidesuunta 28.8.2026: atlasnäkymään
+ * himmeä 1800-luvun atlaksen kerros, jossa ovat päiväntasaaja,
+ * molemmat kääntöpiirit, pohjoinen napapiiri ja Greenwichin meridiaani
+ * — nimineen, pienellä kursiivilla viivaa myötäillen.
+ *
+ * MIKSI NÄMÄ VIIDEN JA EI TÄYTTÄ ASTEVERKKOA. Täysi verkko on jo
+ * kaukozoomin yleislehdessä (tools/fokuskartta/maailmapiirto.js osio 6,
+ * 20 asteen väli), ja lähizoomissa lukemat ovat ruudun reunaviivaimissa
+ * (js/fokusmitat.js). Nämä viisi eivät ole mittapuu vaan MAANTIEDETTÄ:
+ * ne kertovat missä aurinko käy zeniitissä ja missä se ei nouse — ja ne
+ * ovat aikakauden kartan tunnistettavin piirre. Etelänapapiiri (−66,56°)
+ * jää laudan ulkopuolelle (lauta päättyy leveysasteeseen −58) eikä sitä
+ * siksi piirretä; PÄIVÄMÄÄRÄRAJAA EI PIIRRETÄ LAINKAAN, koska sitä ei
+ * vuonna 1873 ollut olemassa.
+ *
+ * VAIN PELIN ATLASNÄKYMÄSSÄ (atlasPaalla): ei etusivun taustakartalla
+ * eikä katselutilassa. Kerros syntyy ja katoaa täsmälleen atlaksen
+ * mukana, koska se on osa samaa kuvaa.
+ *
+ * === MITTAKAAVA: VIIVA RUUDULLA, TEKSTI RUUDULLA ===
+ *
+ * Kerros elää laudan koordinaateissa (juuriryhmän sisällä, joten
+ * kiertävän kartan <use>-kopio saa sen ilmaiseksi), mutta kumpikaan
+ * viivan paksuus tai kirjasinkoko ei saa skaalautua zoomin mukana:
+ * laudan yksikköinä mitattu hiusviiva on kaukozoomissa näkymätön ja
+ * lähizoomissa tussi. Viiva pysyy ruudun mittaisena `vector-effect:
+ * non-scaling-stroke` -määreellä (ei suodatin — tests/rules.test.mjs
+ * iOS-sääntö) ja teksti sillä, että kirjasinkoko lasketaan näkyvän
+ * alueen mittakaavasta joka kerta kun näkymä asettuu.
+ *
+ * === NIMI KERRAN NÄKYMÄÄ KOHTI ===
+ *
+ * Nimi ladotaan NÄKYVÄN ALUEEN KESKELLE eikä toistuvana nauhana. Toisto
+ * olisi 12 000 yksikön laudalla joko nimipuuroa tai (kaukozoomissa)
+ * yksi ainoa nimi jossain Tyynenmeren takana. Keskitetty nimi on aina
+ * siinä missä katse on, ja se päivittyy näkymän asettuessa.
+ */
+const PIIRIT = [
+  { avain: 'paivantasaaja', lat: 0, nimi: 'Päiväntasaaja', vahva: true },
+  { avain: 'kravun', lat: 23.44, nimi: 'Kravun kääntöpiiri' },
+  { avain: 'kauriin', lat: -23.44, nimi: 'Kauriin kääntöpiiri' },
+  { avain: 'napapiiri', lat: 66.56, nimi: 'Pohjoinen napapiiri' },
+];
+const MERIDIAANI = { avain: 'greenwich', lon: 0, nimi: 'Greenwichin meridiaani' };
+
+/** Nimen koko RUUDULLA. Pienempi kuin maastonimi: piiri ei ole paikka. */
+const PIIRIN_NIMI_PX = 11;
+/** Nimi jää pois, jos näkyvä alue on tätä kapeampi — nimi ei ole tie. */
+const PIIRIN_NIMI_VAHIN_PX = 260;
+
+/** Laudan projektiokaavat piirien y- ja x-koordinaatteja varten. */
+function piirinKaavat(lauta) {
+  const p = FOKUS_LAUTAPROJEKTIOT[lauta];
+  if (!p) return null;
+  if (p.tyyppi === 'miller') {
+    const skaala = p.leveys / (2 * Math.PI);
+    const RAD = Math.PI / 180;
+    const millerY = (lat) => -1.25 * Math.log(Math.tan(Math.PI / 4 + 0.4 * lat * RAD));
+    const yPohjoinen = millerY(p.pohjoinen);
+    const kierros = 2 * Math.PI;
+    return {
+      y: (lat) => (millerY(lat) - yPohjoinen) * skaala,
+      x: (lon) => {
+        const d = (lon - p.lon0) * RAD;
+        return (((d % kierros) + kierros) % kierros) * skaala;
+      },
+    };
+  }
+  return { y: (lat) => p.latA * lat + p.latB, x: (lon) => p.lonA * lon + p.lonB };
+}
+
+/** Erikoispiirien oma ryhmä: atlaslehtien päällä, pelin merkkien alla. */
+function piiriRyhma(ui) {
+  const kerros = ui.fokuskarttaKerros;
+  if (!kerros) return null;
+  let g = kerros.querySelector('.fokus-piirit');
+  if (!g) {
+    /*
+     * VIIMEISEKSI LAPSEKSI eli kaikkien lehtien päälle: piiri on
+     * merkintä kartalla, ei maastoa lehden alla. Pelin omat merkit
+     * (kaupungit, laatat, nappulat) ovat myöhemmissä juuriryhmissä
+     * tämän kerroksen yläpuolella, joten mikään niistä ei jää alle.
+     */
+    g = el('g', { class: 'fokus-piirit', 'pointer-events': 'none' }, kerros);
+  } else if (g !== kerros.lastElementChild) {
+    // Uusi lehti on lisätty ryhmän jälkeen: piirit takaisin päällimmäisiksi.
+    kerros.appendChild(g);
+  }
+  return g;
+}
+
+/** Yksi piiri: viiva ja sen nimi. Luodaan kerran, sen jälkeen siirretään. */
+function piiriOsat(ryhma, tiedot) {
+  let osa = ryhma.querySelector(`.fokus-piiri-${tiedot.avain}`);
+  if (osa) return osa;
+  osa = el('g', { class: `fokus-piiri fokus-piiri-${tiedot.avain}` }, ryhma);
+  el('path', {
+    class: `fokus-piiri-viiva${tiedot.vahva ? ' fokus-piiri-vahva' : ''}`,
+  }, osa);
+  const teksti = el('text', { class: 'fokus-piiri-nimi' }, osa);
+  teksti.textContent = tiedot.nimi;
+  return osa;
+}
+
+/**
+ * Piirtää erikoispiirit nykyiseen näkymään.
+ *
+ * Kutsutaan paivitaFokusAtlaksesta, eli aina kun näkymä on asettunut.
+ * Työ on muutama setAttribute neljälle viivalle — halvempaa kuin
+ * tunnisteen vertailu, joten sitä ei ole.
+ *
+ * `yleislehdella` kertoo, että kartalla on kaukozoomin yleislehti,
+ * johon 20 asteen asteverkko on jo POLTETTU. Silloin päiväntasaaja ja
+ * Greenwich piirtyisivät kahteen kertaan — sama viiva, kaksi mustetta —
+ * ja siksi juuri ne kaksi viivaa jäävät lehden varaan. Nimet jäävät:
+ * poltetussa verkossa ei ole yhtään nimeä, ja nimi on tämän kerroksen
+ * koko anti kaukozoomissa.
+ */
+function paivitaErikoispiirit(ui, yleislehdella) {
+  const ryhma = piiriRyhma(ui);
+  if (!ryhma) return;
+  const kaavat = piirinKaavat(ui.game?.pack?.id);
+  const nakyva = ui.nakyvaAlue?.();
+  const kartta = ui.game?.pack?.map;
+  if (!kaavat || !(nakyva?.w > 0) || !kartta?.width) {
+    ryhma.replaceChildren();
+    return;
+  }
+  const leveys = kartta.width;
+  const korkeus = kartta.height ?? 0;
+  const skaala = nakyva.skaala > 0 ? nakyva.skaala : 0;
+  // Nimen koko laudan yksikköinä niin, että ruudulla se on aina sama.
+  const nimenKoko = skaala > 0 ? PIIRIN_NIMI_PX / skaala : 0;
+  const nimetNakyy = skaala > 0 && nakyva.w * skaala >= PIIRIN_NIMI_VAHIN_PX;
+  const keskiX = nakyva.x + nakyva.w / 2;
+  const keskiY = nakyva.y + nakyva.h / 2;
+
+  for (const tiedot of PIIRIT) {
+    const y = kaavat.y(tiedot.lat);
+    const osa = piiriOsat(ryhma, tiedot);
+    // Laudan ulkopuolelle jäävä piiri (etelänapapiiri) ei piirry.
+    if (!Number.isFinite(y) || y < 0 || y > korkeus) { osa.setAttribute('hidden', ''); continue; }
+    osa.removeAttribute('hidden');
+    const viiva = osa.querySelector('.fokus-piiri-viiva');
+    viiva.setAttribute('d', `M0,${y.toFixed(2)} H${leveys}`);
+    // Kaukozoomissa yleislehden oma päiväntasaaja hoitaa viivan.
+    viiva.style.display = yleislehdella && tiedot.lat === 0 ? 'none' : '';
+    const nimi = osa.querySelector('.fokus-piiri-nimi');
+    nimi.setAttribute('x', keskiX.toFixed(1));
+    // Nimi istuu viivan päällä, kirjaimen verran ylempänä.
+    nimi.setAttribute('y', (y - nimenKoko * 0.45).toFixed(2));
+    nimi.setAttribute('font-size', nimenKoko.toFixed(3));
+    nimi.setAttribute('letter-spacing', (nimenKoko * 0.12).toFixed(3));
+    nimi.style.display = nimetNakyy ? '' : 'none';
+  }
+
+  const x = kaavat.x(MERIDIAANI.lon);
+  const osa = piiriOsat(ryhma, MERIDIAANI);
+  if (!Number.isFinite(x) || !(korkeus > 0)) {
+    osa.setAttribute('hidden', '');
+    return;
+  }
+  osa.removeAttribute('hidden');
+  const viiva = osa.querySelector('.fokus-piiri-viiva');
+  viiva.setAttribute('d', `M${x.toFixed(2)},0 V${korkeus}`);
+  viiva.style.display = yleislehdella ? 'none' : '';
+  const nimi = osa.querySelector('.fokus-piiri-nimi');
+  /*
+   * NIMI MYÖTÄILEE VIIVAA ELI KÄÄNTYY PYSTYYN.
+   *
+   * rotate(-90) vie pisteen (x, y) laudan pisteeseen (y, −x). Halutun
+   * paikan (meridiaanin x, näkymän pystykeskikohta) saa siis vain
+   * KÄÄNTEISKUVAUKSELLA: x = −keskiY ja y = meridiaanin x. Suora
+   * sijoitus olisi peilikuva — mitattu: nimi lensi laudan
+   * vasemmalle puolelle näkymättömiin.
+   *
+   * Nimen siirto viivalta on samaa kokoluokkaa kuin leveyspiireillä ja
+   * samaan suuntaan: y:n pienentäminen siirtää nimen laudalla
+   * VASEMMALLE eli viivan viereen, ei sen päälle.
+   */
+  nimi.setAttribute('x', (-keskiY).toFixed(1));
+  nimi.setAttribute('y', (x - nimenKoko * 0.45).toFixed(2));
+  nimi.setAttribute('font-size', nimenKoko.toFixed(3));
+  nimi.setAttribute('letter-spacing', (nimenKoko * 0.12).toFixed(3));
+  nimi.setAttribute('transform', 'rotate(-90)');
+  nimi.style.display = nimetNakyy ? '' : 'none';
+}
+
 /**
  * Tahdistaa atlaksen näkymään. Kutsutaan aina kun näkymä on ASETTUNUT
  * (js/ui.js paivitaMaastonimet) ja fokuskerroksen päivityksestä.
@@ -1516,6 +1707,9 @@ export function paivitaFokusAtlas(ui) {
     ui.yleislehtiPaalla = false;
     ui.yleislehtiPalautus = false;
     poistaYleislehti(ui);
+    // Erikoispiirit ovat atlaksen kerros: ne katoavat sen mukana
+    // etusivulla, katselutilassa ja turvatilassa (ks. atlasPaalla).
+    ui.fokuskarttaKerros?.querySelector('.fokus-piirit')?.remove();
     if (ui.atlasLehdet.size) {
       for (const iso of [...ui.atlasLehdet.keys()]) vapautaLehti(ui, iso);
       ui.atlasAvain = null;
@@ -1550,6 +1744,13 @@ export function paivitaFokusAtlas(ui) {
     ui.atlasAvain = null;
     if (!kauko) palautaMaalehti(ui);
   }
+  /*
+   * ERIKOISPIIRIT ENNEN KAUKOZOOMIN VARHAISTA PALUUTA. Kerros näkyy
+   * molemmissa zoomeissa — maalehtien päällä ja yleislehden päällä —
+   * ja sen nimet on ladottava uudelleen joka asettumisella, myös
+   * silloin kun lehtivalinta ohitetaan tunnisteella (atlasAvain).
+   */
+  paivitaErikoispiirit(ui, kauko);
   if (kauko) {
     if (ui.atlasLehdet.size) {
       for (const iso of [...ui.atlasLehdet.keys()]) vapautaLehti(ui, iso);
