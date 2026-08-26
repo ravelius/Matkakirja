@@ -437,13 +437,11 @@ function rakennaMaataulu(ui) {
    * kartuutsissa.
    */
   /*
-   * Vain lähteet — "Samat luvut kuin maan lehdessä" -alku poistui
-   * (omistaja 26.8.2026 ilta: "Samat luvut selite on turha, ota
-   * pois"). Lukija ei vertaile pintoja keskenään; lähdemaininta
-   * riittää.
+   * Lähderiviä ei ole (omistajan tarkennus 26.8.2026 ilta: "ota se
+   * koko rivi pois joka alkoi samat luvut tekstillä" — kumoaa saman
+   * illan lyhennyksen). Lähdemaininta Maailmanpankista ja V-Demistä
+   * on maan lehdessä, jossa samat luvut esitetään laajemmin.
    */
-  taulu.appendChild(luo('p', 'fokus-maataulu-lahde',
-    'Maailmanpankki ja V-Dem'));
 
   // Ele jää tauluun eikä valu kartalle (ks. sääntö 2 yllä).
   for (const tapahtuma of ['pointerdown', 'touchstart', 'wheel']) {

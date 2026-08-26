@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1148 — kartan maataulun alarivi poistui kokonaan (myos Maailmanpankki ja V-Dem -maininta; lahteet ovat maan lehdessa)',
   'v1147 — kohdekortin raahaus ei enaa rapsahda sormen irrotessa (avausanimaatio kaynnistyi uudelleen raahausluokan poistuessa)',
   'v1146 — kartan maataulun alarivi pelkistyi: Samat luvut kuin maan lehdessa -selite pois, jaljelle jai Maailmanpankki ja V-Dem',
   'v1145 — Kreetan lehden etusivulle kolmen herokuvan avauskaruselli (Arkadin luostari, Koulesin linnoitus, Rethymnon Fortezza; omistajan ChatGPT-era, silmatarkistettu) — korvaa Commons-vuoristomaisemat',
