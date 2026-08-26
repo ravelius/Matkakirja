@@ -395,6 +395,8 @@ export const MINIATYYRIT = {
     'Pyhän Vasilin katedraali': 'assets/kartat/miniatyyrit/moskova-pyhan-vasilin-katedraali.webp',
     'Moskovan Kreml': 'assets/kartat/miniatyyrit/moskova-moskovan-kreml.webp',
     'Tretjakovin galleria': 'assets/kartat/miniatyyrit/moskova-tretjakovin-galleria.webp',
+    // Uusinta 27.8.2026: kupolit nyt kullatut (1. otto hylattiin vihreista).
+    'Vapahtajan katedraali': 'assets/kartat/miniatyyrit/moskova-vapahtajan-katedraali.webp',
   },
   pietari: {
     'Pietari-Paavalin linnoitus': 'assets/kartat/miniatyyrit/pietari-pietari-paavalin-linnoitus.webp',
@@ -419,5 +421,42 @@ export const MINIATYYRIT = {
     'Pyhän Pietarin kirkko': 'assets/kartat/miniatyyrit/riika-pyhan-pietarin-kirkko.webp',
     'Mustapäiden talo': 'assets/kartat/miniatyyrit/riika-mustapaiden-talo.webp',
     Keskustori: 'assets/kartat/miniatyyrit/riika-keskustori.webp',
+  },
+  /*
+   * Erä 5, VIIMEINEN (27.8.2026): 24/24 hyväksytty + Vapahtajan
+   * katedraalin kulta-uusinta. Koko Eurooppa-erä (v1156:n 122
+   * promptia, 20 kaupunkia) on tällä valmis.
+   */
+  vilna: {
+    'Gediminaksen torni': 'assets/kartat/miniatyyrit/vilna-gediminaksen-torni.webp',
+    'Vilnan tuomiokirkko': 'assets/kartat/miniatyyrit/vilna-vilnan-tuomiokirkko.webp',
+    'Pyhän Annan kirkko': 'assets/kartat/miniatyyrit/vilna-pyhan-annan-kirkko.webp',
+    'Vilnan yliopisto': 'assets/kartat/miniatyyrit/vilna-vilnan-yliopisto.webp',
+    'Užupis': 'assets/kartat/miniatyyrit/vilna-uzupis.webp',
+    Aamuportti: 'assets/kartat/miniatyyrit/vilna-aamuportti.webp',
+  },
+  tallinna: {
+    'Paksu Margareeta': 'assets/kartat/miniatyyrit/tallinna-paksu-margareeta.webp',
+    'Olevisten kirkko': 'assets/kartat/miniatyyrit/tallinna-olevisten-kirkko.webp',
+    Raatihuoneentori: 'assets/kartat/miniatyyrit/tallinna-raatihuoneentori.webp',
+    'Nevskin katedraali': 'assets/kartat/miniatyyrit/tallinna-nevskin-katedraali.webp',
+    'Virun portti': 'assets/kartat/miniatyyrit/tallinna-virun-portti.webp',
+    Matkustajasatama: 'assets/kartat/miniatyyrit/tallinna-matkustajasatama.webp',
+  },
+  ankara: {
+    'Ankaran linna': 'assets/kartat/miniatyyrit/ankara-ankaran-linna.webp',
+    'Augustuksen temppeli': 'assets/kartat/miniatyyrit/ankara-augustuksen-temppeli.webp',
+    'Roomalainen kylpylä': 'assets/kartat/miniatyyrit/ankara-roomalainen-kylpyla.webp',
+    'Julianuksen pylväs': 'assets/kartat/miniatyyrit/ankara-julianuksen-pylvas.webp',
+    'Anatolian sivilisaatioiden museo': 'assets/kartat/miniatyyrit/ankara-anatolian-sivilisaatioiden-museo.webp',
+    'Linnanportin kellotorni': 'assets/kartat/miniatyyrit/ankara-linnanportin-kellotorni.webp',
+  },
+  izmir: {
+    'İzmirin kellotorni': 'assets/kartat/miniatyyrit/izmir-izmirin-kellotorni.webp',
+    'Kemeraltin basaari': 'assets/kartat/miniatyyrit/izmir-kemeraltin-basaari.webp',
+    'Hisarin moskeija': 'assets/kartat/miniatyyrit/izmir-hisarin-moskeija.webp',
+    'Sulu Han': 'assets/kartat/miniatyyrit/izmir-sulu-han.webp',
+    'Smyrnan agora': 'assets/kartat/miniatyyrit/izmir-smyrnan-agora.webp',
+    'Salepçioğlun moskeija': 'assets/kartat/miniatyyrit/izmir-salepcioglun-moskeija.webp',
   },
 };

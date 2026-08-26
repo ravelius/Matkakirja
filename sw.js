@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1170';
+const CACHE = 'matkakirja-2026-08-09.1171';
 const SHELL = [
   './',
   './index.html',
@@ -596,6 +596,31 @@ const SHELL = [
   './assets/kartat/miniatyyrit/riika-pyhan-pietarin-kirkko.webp',
   './assets/kartat/miniatyyrit/riika-riian-tuomiokirkko.webp',
   './assets/kartat/miniatyyrit/riika-vapaudenpatsas.webp',
+  './assets/kartat/miniatyyrit/ankara-anatolian-sivilisaatioiden-museo.webp',
+  './assets/kartat/miniatyyrit/ankara-ankaran-linna.webp',
+  './assets/kartat/miniatyyrit/ankara-augustuksen-temppeli.webp',
+  './assets/kartat/miniatyyrit/ankara-julianuksen-pylvas.webp',
+  './assets/kartat/miniatyyrit/ankara-linnanportin-kellotorni.webp',
+  './assets/kartat/miniatyyrit/ankara-roomalainen-kylpyla.webp',
+  './assets/kartat/miniatyyrit/izmir-hisarin-moskeija.webp',
+  './assets/kartat/miniatyyrit/izmir-izmirin-kellotorni.webp',
+  './assets/kartat/miniatyyrit/izmir-kemeraltin-basaari.webp',
+  './assets/kartat/miniatyyrit/izmir-salepcioglun-moskeija.webp',
+  './assets/kartat/miniatyyrit/izmir-smyrnan-agora.webp',
+  './assets/kartat/miniatyyrit/izmir-sulu-han.webp',
+  './assets/kartat/miniatyyrit/moskova-vapahtajan-katedraali.webp',
+  './assets/kartat/miniatyyrit/tallinna-matkustajasatama.webp',
+  './assets/kartat/miniatyyrit/tallinna-nevskin-katedraali.webp',
+  './assets/kartat/miniatyyrit/tallinna-olevisten-kirkko.webp',
+  './assets/kartat/miniatyyrit/tallinna-paksu-margareeta.webp',
+  './assets/kartat/miniatyyrit/tallinna-raatihuoneentori.webp',
+  './assets/kartat/miniatyyrit/tallinna-virun-portti.webp',
+  './assets/kartat/miniatyyrit/vilna-aamuportti.webp',
+  './assets/kartat/miniatyyrit/vilna-gediminaksen-torni.webp',
+  './assets/kartat/miniatyyrit/vilna-pyhan-annan-kirkko.webp',
+  './assets/kartat/miniatyyrit/vilna-uzupis.webp',
+  './assets/kartat/miniatyyrit/vilna-vilnan-tuomiokirkko.webp',
+  './assets/kartat/miniatyyrit/vilna-vilnan-yliopisto.webp',
   // Lippuikkunan versioliput (pilotti Suomi + Saksa, v711).
   './assets/liput/versiot/fin-valtiolippu.png',
   './assets/liput/versiot/fin-sotalippu.png',
