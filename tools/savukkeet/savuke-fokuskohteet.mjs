@@ -448,7 +448,7 @@ vaadi('napautus avaa tietoruudun', p !== null, 'pop-up ei auennut');
 // Ylärivi on v1132:sta alkaen kategorian symboli ja LUOKAN nimi
 // (js/fokuskohteet.js piirraKohdeYlarivi): vuori kuuluu luontoon.
 vaadi('tietoruudussa on nimi, luokka, teksti ja lähde',
-  p?.otsikko === 'Ólympos' && /luontoa/i.test(p.ylarivi)
+  p?.otsikko === 'Ólympos' && /luonto/i.test(p.ylarivi)
   && p.teksti.includes('jumalten koti') && p.lahde.includes('Wikipedia'),
   JSON.stringify(p));
 vaadi('tietoruudussa on kuva ja sen lähderivi',
