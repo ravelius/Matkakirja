@@ -517,7 +517,9 @@ export function piirraNostosymboli(g, symboli) {
  * 404-pyyntöä jokaisesta merkistä.
  */
 const NOSTOSYM_GENEROIDUT = ['huuto', 'elain', 'silma', 'historia', 'luonto', 'ruoka',
-  'kulttuuri', 'tekniikka', 'kauppa', 'sana', 'merenkulku', 'urheilu'];
+  'kulttuuri', 'tekniikka', 'kauppa', 'sana', 'merenkulku', 'urheilu',
+  // kaupunki hyvaksytty 27.8.2026 (generoi-symbolit.yml, vain=kaupunki).
+  'kaupunki'];
 const NOSTOSYM_KUVAT = Object.fromEntries(
   NOSTOSYM_GENEROIDUT.map((t) => [t, `assets/kartat/symbolit/sym-${t}.webp`]),
 );
