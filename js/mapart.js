@@ -135,6 +135,17 @@ function raetta(hex) {
 }
 
 /*
+ * Pohjan liukuvärin pysäkit yhdessä paikassa: sekä SVG-liukuväri
+ * (paperiPohjanLiukuvari) että pergamentin sävyn laskenta
+ * (paperinSavy) lukevat nämä, jottei kahta kopiota pääse eriytymään.
+ */
+const POHJAN_PYSAKIT = [
+  [0, '#f6e7c6'],
+  [0.55, '#ecd8ae'],
+  [1, '#cfae79'],
+];
+
+/*
  * Pohjan liukuväri: #paper-grad uudelleen, mutta laudan yksiköissä.
  *
  * #paper-grad on objectBoundingBox-yksiköissä (cx 50 %, cy 46 %, r 62 %),
@@ -164,10 +175,65 @@ export function paperiPohjanLiukuvari(defs, map = null) {
   }, defs);
   // Samat pysäkit kuin #paper-grad:ssa, rakeen keskitummennus leivottuna
   // (ks. raetta yllä).
-  el('stop', { offset: '0%', 'stop-color': raetta('#f6e7c6') }, grad);
-  el('stop', { offset: '55%', 'stop-color': raetta('#ecd8ae') }, grad);
-  el('stop', { offset: '100%', 'stop-color': raetta('#cfae79') }, grad);
+  for (const [kohta, vari] of POHJAN_PYSAKIT) {
+    el('stop', { offset: `${kohta * 100}%`, 'stop-color': raetta(vari) }, grad);
+  }
   return grad;
+}
+
+/*
+ * ============ PERGAMENTIN SÄVY YHDESSÄ PISTEESSÄ =====================
+ *
+ * Sama liukuväri kuin yllä, mutta laskettuna eikä piirrettynä: mikä
+ * väri pergamentin pohjalla on laudan pisteessä (x, y)?
+ *
+ * TÄTÄ TARVITAAN PERGAMENTIN ULKOPUOLELLA. Fokuslehden pienennys
+ * joutuu puhelimessa pakkaamaan lehden JPEGiksi, jossa ei ole alfaa,
+ * ja lehden häivytetty vuotoreuna on silloin latistettava jotakin
+ * väriä vasten (js/fokuskartta.js canvasille). Oikea väri on
+ * täsmälleen se pergamentti, jonka päällä lehti kartalla lepää — muuten
+ * lehden reunaan jää värihyppy eli juuri se "kova lehtireuna", jota
+ * häivytyksellä yritettiin välttää. Musta, jonka HTML:n spesifikaatio
+ * määrää alfattomalle muodolle, tuotti mustat kaistat lehtien väliin.
+ *
+ * ELLIPSI PURETTUNA. Liukuväri on ympyrä, joka venytetään arkin
+ * kuvasuhteeseen keskuksensa ympäri (gradientTransform yllä), joten
+ * käänteismuunnos on pelkkä y-akselin jako venytyksellä. Sen jälkeen
+ * etäisyys keskuksesta säteen suhteen on liukuvärin oma t, ja väri
+ * poimitaan pysäkkien väliltä lineaarisesti — samoin kuin SVG tekee.
+ * Reunan yli mennään pysähtyen (pad), kuten liukuvärin oletus.
+ */
+export function paperinSavy(map = null, x = null, y = null) {
+  const keskisavy = raetta(POHJAN_PYSAKIT[1][1]);
+  // Ilman lautaa tai pistettä jää vain keskisävy: se on oikea vastaus
+  // esimerkiksi esilämmityksessä, jossa lautaa ei vielä ole.
+  if (!(map?.width > 0) || !(map?.height > 0)) return keskisavy;
+  if (!Number.isFinite(x) || !Number.isFinite(y)) return keskisavy;
+  const arkki = paperi(map);
+  const cx = arkki.x + arkki.w * 0.5;
+  const cy = arkki.y + arkki.h * 0.46;
+  const venytys = arkki.h / arkki.w;
+  const sade = arkki.w * 0.62;
+  if (!(sade > 0) || !(venytys > 0)) return keskisavy;
+  const dx = (x - cx) / sade;
+  const dy = (y - cy) / (sade * venytys);
+  const t = Math.min(1, Math.sqrt(dx * dx + dy * dy));
+  let ala = POHJAN_PYSAKIT[0];
+  let yla = POHJAN_PYSAKIT[POHJAN_PYSAKIT.length - 1];
+  for (let i = 1; i < POHJAN_PYSAKIT.length; i += 1) {
+    if (t <= POHJAN_PYSAKIT[i][0]) {
+      ala = POHJAN_PYSAKIT[i - 1];
+      yla = POHJAN_PYSAKIT[i];
+      break;
+    }
+  }
+  const osuus = yla[0] > ala[0] ? (t - ala[0]) / (yla[0] - ala[0]) : 0;
+  const kanava = (hex, i) => parseInt(hex.slice(1 + i * 2, 3 + i * 2), 16);
+  const sekoitus = `#${[0, 1, 2].map((i) => {
+    const arvo = kanava(ala[1], i) + (kanava(yla[1], i) - kanava(ala[1], i)) * osuus;
+    return Math.round(arvo).toString(16).padStart(2, '0');
+  }).join('')}`;
+  return raetta(sekoitus);
 }
 
 /**
