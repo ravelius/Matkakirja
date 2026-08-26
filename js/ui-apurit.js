@@ -302,6 +302,119 @@ export function tallennaLinssi(tunnus) {
   }
 }
 
+/*
+ * ==================================================================
+ * PAIKANNIMIEN SIJAMUODOT (omistajan tilaus 26.8.2026,
+ * saapumissekvenssin puhekuplat)
+ * ==================================================================
+ *
+ * Pöllö sanoo saapumisessa *"Tervetuloa Kreikkaan. Sinun on
+ * ratkaistava tehtävä Ateenassa…"* — ja lause on parametroitu, koska
+ * maita on yli sata ja kaupunkeja enemmän. Suomen taivutusta ei voi
+ * arvata pelkällä säännöllä, mutta sen VOI arvata oikein valtaosassa
+ * ja luetella loput.
+ *
+ * SÄÄNTÖ HOITAA SÄÄNNÖLLISET, TAULUKKO POIKKEUKSET. Poikkeuksia ovat
+ * (1) monikolliset maannimet (Yhdysvallat → Yhdysvaltoihin), (2)
+ * saaret ja niemet, jotka ottavat ulkopaikallissijan (Kypros →
+ * Kyprokselle, Kreeta → Kreetalla), ja (3) astevaihtelu, jota
+ * vierasperäiset nimet eivät noudata mutta suomalaiset noudattavat
+ * (Helsinki → Helsingissä).
+ *
+ * Taulukot on käyty läpi pelin OMIA nimiä vasten (js/packs/
+ * *-countries.js ja lautojen kaupungit 26.8.2026). Uusi maa tai
+ * kaupunki putoaa säännölle; jos sääntö ei osu, nimi lisätään tänne.
+ */
+const VOKAALIT = 'aeiouyäö';
+/*
+ * Aidot diftongit ja pitkät vokaalit. Kaksi peräkkäistä vokaalia ei
+ * riitä ehdoksi: "Algeria" ja "Nicaragua" ovat kaksitavuisia loppuja
+ * (i-a, u-a) eivätkä diftongeja, ja niiden illatiivi on tavallinen
+ * Algeriaan, Nicaraguaan — h-muoto tekisi niistä väärää suomea.
+ */
+const DIFTONGIT = new Set([
+  'ai', 'ei', 'oi', 'ui', 'yi', 'äi', 'öi',
+  'au', 'eu', 'iu', 'ou', 'ey', 'iy', 'äy', 'öy',
+  'ie', 'uo', 'yö',
+]);
+const ILLATIIVI_POIKKEUKSET = {
+  Alankomaat: 'Alankomaihin',
+  Arabiemiirikunnat: 'Arabiemiirikuntiin',
+  Bermuda: 'Bermudalle',
+  Falklandinsaaret: 'Falklandinsaarille',
+  Fidži: 'Fidžille',
+  Filippiinit: 'Filippiineille',
+  Kypros: 'Kyprokselle',
+  Norfolkinsaari: 'Norfolkinsaarelle',
+  // Kirjoitusasun y äännetään näissä i:nä, joten pääte on -hin eikä
+  // sääntö osu: nimet luetellaan.
+  Paraguay: 'Paraguayhin',
+  Salomonsaaret: 'Salomonsaarille',
+  Suomi: 'Suomeen',
+  Uruguay: 'Uruguayhin',
+  Yhdysvallat: 'Yhdysvaltoihin',
+};
+const INESSIIVI_POIKKEUKSET = {
+  Alpit: 'Alpeilla',
+  Helsinki: 'Helsingissä',
+  Islanti: 'Islannissa',
+  Kapkaupunki: 'Kapkaupungissa',
+  Kreeta: 'Kreetalla',
+  Riika: 'Riiassa',
+  Rovaniemi: 'Rovaniemellä',
+  Tampere: 'Tampereella',
+};
+
+/**
+ * Vokaalisointu a/ä-päätteelle.
+ *
+ * Sointu luetaan sanan LOPUSTA alkaen: vierasperäisissä nimissä
+ * ratkaisee viimeinen ei-neutraali vokaali, ei ensimmäinen.
+ * "Kööpenhaminassa" ja "New Yorkissa" ovat oikein juuri niin —
+ * alkupäästä luettuna niistä tulisi Kööpenhaminassä ja New Yorkissä.
+ */
+function takavokaalinen(sana) {
+  const merkit = [...String(sana).toLowerCase()];
+  for (let i = merkit.length - 1; i >= 0; i--) {
+    if ('aou'.includes(merkit[i])) return true;
+    if ('äöy'.includes(merkit[i])) return false;
+  }
+  // Pelkkiä neutraaleja vokaaleja (e, i): pääte on etuvokaalinen.
+  return false;
+}
+
+/**
+ * "Tervetuloa X" -muoto maan nimestä: illatiivi tai poikkeustaulun
+ * ulkopaikallissija.
+ */
+export function maahanMuoto(nimi) {
+  const sana = String(nimi ?? '').trim();
+  if (!sana) return '';
+  if (ILLATIIVI_POIKKEUKSET[sana]) return ILLATIIVI_POIKKEUKSET[sana];
+  // Yhdysnimen loppu -maa taipuu kuten "maa": Thaimaahan, ei
+  // Thaimaaseen (jälkimmäinen olisi kaksitavuisen pitkän vokaalin
+  // sääntö, joka ei koske tätä sanaa).
+  if (/maa$/i.test(sana)) return `${sana}han`;
+  const viim = sana.slice(-1).toLowerCase();
+  const toka = sana.slice(-2, -1).toLowerCase();
+  if (!VOKAALIT.includes(viim)) return `${sana}iin`;
+  if (viim === toka) return `${sana}seen`;
+  if (DIFTONGIT.has(`${toka}${viim}`)) {
+    return 'iy'.includes(viim) ? `${sana}hin` : `${sana}h${viim}n`;
+  }
+  return `${sana}${viim}n`;
+}
+
+/** "Tehtävä X:ssä" -muoto kaupungin nimestä: inessiivi tai poikkeus. */
+export function paikassaMuoto(nimi) {
+  const sana = String(nimi ?? '').trim();
+  if (!sana) return '';
+  if (INESSIIVI_POIKKEUKSET[sana]) return INESSIIVI_POIKKEUKSET[sana];
+  const paate = takavokaalinen(sana) ? 'ssa' : 'ssä';
+  const viim = sana.slice(-1).toLowerCase();
+  return VOKAALIT.includes(viim) ? `${sana}${paate}` : `${sana}i${paate}`;
+}
+
 /**
  * Ensimmäinen virke lainaus- ja päätösmerkkeineen; loput erikseen.
  * Päiväkirjan luennassa ääneen luetaan vain tämä ja teksti lihavoidaan.

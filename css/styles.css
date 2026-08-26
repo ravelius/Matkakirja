@@ -5316,6 +5316,40 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 }
 
 /*
+ * SAAPUMISEN VÄLIKORTTI (omistajan tilaus 26.8.2026): sama tyhjä
+ * pergamenttiarkki kuin aloitussiirtymässä, mutta sen keskellä on
+ * konekirjoituksella ilmestyvä rivi — kohdekaupunki ja päivälaskuri.
+ * Kortti on lennon ja kartan välissä: se on ainoa hetki, jolloin
+ * pelaaja lukee mihin hän saapui ja monesko päivä on menossa.
+ */
+.saapumiskortti {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.saapumiskortti-teksti {
+  margin: 0;
+  max-width: min(30rem, calc(100% - 2rem));
+  color: var(--map-ink, #46331f);
+  font-family: var(--font-type);
+  font-size: clamp(1.05rem, 4.4vw, 1.6rem);
+  letter-spacing: 0.13em;
+  line-height: 1.5;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 320ms ease;
+}
+
+/* Teksti häviää ennen karttaa: paperi jää hetkeksi tyhjäksi. */
+.saapumiskortti-teksti.poistuu { opacity: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .saapumiskortti-teksti { transition: none; }
+}
+
+/*
  * Kelluva pöllönappi elää kartan kerrosten ulkopuolella, joten arkin
  * z-index ei yllä sen yli (mitattu: nappi jäi näkyviin tyhjälle
  * arkille). Se väistyy siis omalla säännöllään ja palaa arkin mukana.
@@ -5507,26 +5541,26 @@ body.flight-active .grain { display: none; }
  */
 body:not(.flight-active) .flight-overlay:not(.flight-leaving) { display: none; }
 
-/* Repliikki ja Astu mantereelle -nappi samassa alaosassa: asettelu
- * hoituu virtauksella, joten napin osumakohta on aina siinä missä nappi
- * näkyy.
+/* Repliikin kelluva alaosa kalvon pystypinossa.
  *
- * VIRRASSA EIKÄ KELLUEN (omistajan tilaus 12.8.2026): alaosa on nyt
- * kalvon pystypinon toinen jäsen kartan alla, joten teksti ei voi enää
- * osua lentoreitin päälle. Repliikki varaa koko korkeutensa heti
- * (js/ui.js typeText piirtää kirjoittamattoman osan näkymättömänä),
- * joten nappi ei liiku kirjoituksen aikana.
+ * VIRRASSA EIKÄ KELLUEN (omistajan tilaus 12.8.2026): alaosa on
+ * kalvon pystypinon toinen jäsen kartan alla, joten teksti ei voi
+ * osua lentoreitin päälle.
+ *
+ * ASTU MANTEREELLE -NAPPI ON POISSA (omistajan tilaus 26.8.2026):
+ * lento jatkaa itsestään, ja alaosaan jää vain repliikki. Pino ei
+ * siltikään liiku kirjoituksen aikana, koska rivi varaa koko
+ * korkeutensa heti (js/ui.js typeText piirtää kirjoittamattoman osan
+ * näkymättömänä).
  *
  * VÄLI KARTAN JA REPLIIKIN VÄLIIN (omistajan tilaus 12.8.2026: teksti
  * saa olla vähän alempana). Repliikki oli kiinni lentoreitin
  * alareunassa, ja kone lensi käytännössä tekstin niskaan. Väli on noin
- * kaksinkertainen entiseen, ja se on koko pinon — repliikin ja napin —
- * yhteinen: nappi pysyy siis samalla etäisyydellä repliikistä eikä pino
- * järjesty uudelleen kesken kirjoituksen. Mitattuna 51 px (390 px) ja
- * 48 px (900 px), kun se oli ennen 21 px ja 20 px.
+ * kaksinkertainen entiseen. Mitattuna 51 px (390 px) ja 48 px
+ * (900 px), kun se oli ennen 21 px ja 20 px.
  *
  * Yläraja on rem-mitta eikä vh, jottei matala vaakanäyttö työntäisi
- * nappia ruudun ulkopuolelle. */
+ * riviä ruudun ulkopuolelle. */
 .flight-alaosa {
   margin-top: clamp(1.4rem, 6vh, 3.2rem);
   width: min(680px, calc(100% - 1.6rem));
@@ -5537,10 +5571,6 @@ body:not(.flight-active) .flight-overlay:not(.flight-leaving) { display: none; }
   z-index: 5;
 }
 
-/* Perillä: kalvo odottaa, kunnes pelaaja astuu mantereelle. */
-/* Astu mantereelle: ainoa napautettava asia koko kalvolla, joten se ei
-   saa näyttää samalta laatikolta kuin yläpuolen repliikki (omistajan
-   havainto). Sama messinkiväri kuin muillakin pelin päänapeilla. */
 /*
  * Ohita lento -nuoli: pieni kärki oikeassa alanurkassa, joka syttyy
  * muutaman sekunnin kuluttua.
@@ -5592,40 +5622,12 @@ body:not(.flight-active) .flight-overlay:not(.flight-leaving) { display: none; }
 }
 
 /*
- * Astu mantereelle on kalvon ainoa napautettava asia, ja nyt kun
- * repliikin tumma laatikko on poissa, se on myös kalvon ainoa väripinta
- * — sen on erotuttava vaaleasta pergamentista yksin. Siksi täysi
- * messinkiliuku, tumma teksti ja selvä varjo.
- *
- * Nappi on ruudulla koko lennon ajan mutta näkymättömänä (js/ui.js:
- * .odottaa), jotta pino ei liiku kun se syttyy. Häivytys tehdään
- * siirtymällä eikä animaatiolla: animaatio olisi ehtinyt ajaa loppuun
- * jo piilossa, eikä syttymistä näkisi lainkaan.
+ * ASTU MANTEREELLE -NAPPI ON POISTETTU (omistajan tilaus 26.8.2026:
+ * *"ota siitä pois astu mantereelle -nappi. Muuten tulee liikaa
+ * nappeja heti alkuun."*). Lento jatkaa laskeuduttuaan itsestään ja
+ * napautus vie perille heti, joten kalvolla ei ole enää yhtään nappia
+ * — ohitusnuolta lukuun ottamatta. Napin messinkitylli asui tässä.
  */
-.flight-exit {
-  padding: 0.6rem 1.6rem;
-  font-size: 1.05rem;
-  background: linear-gradient(180deg, #eab84e, #d09024);
-  border-color: var(--accent-dark);
-  color: #2c1e07;
-  font-weight: 700;
-  box-shadow: 0 6px 18px rgba(20, 12, 4, 0.45);
-  opacity: 1;
-  transition: opacity 0.45s ease, visibility 0s;
-}
-
-.flight-exit.odottaa {
-  visibility: hidden;
-  opacity: 0;
-}
-
-.flight-exit:hover:not(:disabled) {
-  background: linear-gradient(180deg, #f3c661, #d9a13b);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .flight-exit { transition: none; }
-}
 
 /* Aloita seikkailu -portti: kartta himmeänä taustalla, nappi keskellä.
  * Napautus avaa selaimen äänilukon, joten intro-puhe ja ambienssi
@@ -7332,7 +7334,7 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
    * kokoisia ja keskellä. Korkeus pysyy 44 pikselissä, jotta sormi osuu.
    *
    * Rajaus koskee vain yhden rivin matkustusvalintaa: leveämmät napit
-   * (Astu mantereelle, Takaisin) tarvitsevat tekstitilansa. */
+   * (esim. Takaisin) tarvitsevat tekstitilansa. */
   body[data-mode] .actions[data-rivi='yksi'] {
     grid-auto-columns: minmax(0, 3.6rem);
     justify-content: center;
@@ -8723,6 +8725,171 @@ body.katselu #newgame-btn { display: none; }
 .aloituslento-piste {
   fill: #c2452f;
   opacity: 0.9;
+}
+
+/*
+ * ==================================================================
+ * LENTOKOHTAUKSEN KORISTEET (päätoimittajan taidesuunta 26.8.2026)
+ * ==================================================================
+ *
+ * Omistajan havainto oli, että kohtaus on "vähän paljaannäköinen":
+ * punainen viiva ja pieni kone tyhjällä kartalla. Lisät ovat kaikki
+ * samaa 1873-akvarellikieltä ja kaikki transformia, peittävyyttä tai
+ * liukua — EI SUODATTIMIA (iOS:n webapp-tila palauttaa suodatetun
+ * kerroksen tyhjänä, ks. tests/sw.test.mjs).
+ */
+
+/* Kuljetun reitin katkojälki: vanhan matkakartan reittimerkintä, joka
+   jää koneen taakse. Sama muste kuin tuoreella vetäisyllä mutta
+   ohuempana ja haaleampana — jälki on vanhempi kuin kärki. */
+.lento-katko {
+  fill: none;
+  stroke: #c2452f;
+  stroke-linecap: round;
+  opacity: 0.72;
+}
+
+/* Siipien vanavesi: kaksi ohutta viirua, jotka haalistuvat liu'ulla. */
+.lento-vana {
+  fill: none;
+  stroke: url(#lento-vana);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+
+/* Koneen huojunta omassa ryhmässään (js/ui.js lennonHuojunta): pelkkä
+   siirto, joten origolla ei ole väliä eikä transform-box tarvita. */
+.flight-keinu { will-change: transform; }
+
+/* Saapumisleima: pieni postileima kohdekaupungin viereen. */
+.lento-leima { pointer-events: none; }
+
+.lento-leima-keha {
+  fill: none;
+  stroke: #9c3a26;
+  stroke-width: 2.6;
+  opacity: 0.82;
+}
+
+.lento-leima-sisakeha {
+  fill: none;
+  stroke: #9c3a26;
+  stroke-width: 1;
+  stroke-dasharray: 3 3.4;
+  opacity: 0.6;
+}
+
+.lento-leima-nimi,
+.lento-leima-pvm {
+  fill: #9c3a26;
+  font-family: var(--font-type);
+  font-weight: 700;
+  opacity: 0.86;
+}
+
+.lento-leima-nimi {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+}
+
+.lento-leima-pvm {
+  font-size: 8.5px;
+  letter-spacing: 0.08em;
+}
+
+/* Kumileimasimen roiskeet: leima ei ole painokuva vaan käden jälki. */
+.lento-leima-roiske {
+  fill: #9c3a26;
+  opacity: 0.5;
+}
+
+/* Lentokerros häipyy saapumisessa kalvon kanssa samaa tahtia — ilman
+   tätä kone, viiva ja leima katoaisivat yhdessä kehyksessä. */
+.flight.lento-poistuu {
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+/*
+ * Vinjetti lennon ajaksi: hyvin hento tummennus ruudun reunoihin, joka
+ * nostaa kartan keskeltä esiin. Liuku on elementissä itsessään, joten
+ * kartta ei joudu piirtymään uudelleen — ja koska kalvo on kartan
+ * päällä, vinjetti häipyy kalvon mukana.
+ */
+.lento-vinjetti {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(
+    118% 82% at 50% 44%,
+    rgba(32, 21, 10, 0) 54%,
+    rgba(32, 21, 10, 0.1) 78%,
+    rgba(32, 21, 10, 0.26) 100%
+  );
+  opacity: 0;
+  animation: lento-vinjetti-sisaan 1.8s ease forwards;
+}
+
+@keyframes lento-vinjetti-sisaan { to { opacity: 1; } }
+
+/*
+ * HARSOPILVET LENNON AJAKSI (omistajan lisätilaus 26.8.2026: *"Saisiko
+ * lennon ajaksi animoitua kevyesti harsomaisia pilviä tai usvaa tai
+ * jotain kartan päälle? Voisi liikkua hyvin hitaasti."*).
+ *
+ * Viisi laikkua, joiden pehmeys on radial-gradientissa eikä
+ * suodattimessa. Liike on pelkkää transformia omalla kerroksellaan
+ * (will-change), joten kartta ei piirry uudelleen niiden takia —
+ * tämä on se ehto, jolla jatkuva animaatio ylipäätään saa olla kartan
+ * päällä lennon aikana (vrt. js/ui.js isoAnimaatio).
+ *
+ * Jaksot ovat 88–146 sekuntia ja matkat muutama prosentti ruudusta:
+ * yksikään pilvi ei ehdi lennon aikana käydä matkaansa loppuun.
+ * Elementit ovat DOMissa vain lennon ajan.
+ */
+.lento-pilvet {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1.6s ease;
+}
+
+.lento-pilvet.nakyy { opacity: 1; }
+
+.lento-pilvet.poistuu {
+  opacity: 0;
+  transition: opacity 0.32s ease;
+}
+
+.lento-pilvi {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--koko);
+  aspect-ratio: 1 / var(--korkeus);
+  background: radial-gradient(
+    closest-side,
+    rgba(255, 252, 244, var(--kirkkaus)) 0%,
+    rgba(255, 252, 244, calc(var(--kirkkaus) * 0.55)) 46%,
+    rgba(255, 252, 244, 0) 100%
+  );
+  will-change: transform;
+  animation: lento-pilvi-ajelehdi var(--kesto) linear infinite alternate;
+  animation-delay: var(--viive);
+}
+
+@keyframes lento-pilvi-ajelehdi {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(var(--matka), var(--nousu), 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lento-pilvi { animation: none; }
+  .lento-vinjetti { animation: none; opacity: 1; }
 }
 
 /*
@@ -16874,6 +17041,15 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
   border-bottom: 1px solid rgba(122, 85, 20, 0.32);
   transform: rotate(45deg);
 }
+
+/*
+ * KAKSI KUPLAA ALLEKKAIN (omistajan tilaus 26.8.2026,
+ * saapumissekvenssi). Alempi kupla on pöllön vieressä ja pitää
+ * kärkensä; ylempi luopuu omastaan, koska kärki osoittaisi suoraan
+ * toisen kuplan paperiin. Paikat laskee js/pollo.js
+ * asetaVihjeenPaikka.
+ */
+.pollo-vihje-parina::after { display: none; }
 
 /*
  * Kärki ylöspäin: valikkovihje ankkuroituu hampurilaisnapin ALLE

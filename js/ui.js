@@ -12,7 +12,7 @@ import {
 } from './ai.js';
 import {
   DUEL_PRIZE, FLIGHT_PRICE,
-  HINT_PRICE, MANNERLENTO_NAPPI, MANNER_NIMET, SEA_FARE,
+  HINT_PRICE, MANNERLENTO_NAPPI, MANNER_NIMET, RECORD_DAYS, SEA_FARE,
 } from './game.js';
 import {
   factSource, factText, factVoice, isSourceUrl, PACKS, packById, sourceLabel, voiceTitle,
@@ -25,7 +25,8 @@ import {
   MERKKI_SOITA, REVEAL_SUB, VIIVA_IKONIT, aarreIkoni, aarrekuvanOsoitteet,
   alkuKehykset, arvoHuudahdus, ekaLause, esilataaKuvat, html, jaaKappaleiksi,
   jaljenKehykset, kierraKehykset, kuvitukseton, lahdemerkinta, liuskaIkoniSvg,
-  onVanhaKuva, pehmeaPolku, piirraLeipateksti, pisteMonikulmiossa, polunPituus,
+  maahanMuoto, onVanhaKuva, paikassaMuoto, pehmeaPolku, piirraLeipateksti,
+  pisteMonikulmiossa, polunPituus,
   cachedImage, cachedSummary, fokusSumennusPaalla, fokusmoodiPaalla,
   kehittajaPisteetPaalla, kehittajaRajatPaalla, kehittajaTilaPaalla,
   shortIntro, suojaa, tallennaLinssi, tallennettuLinssi, viivaIkoni,
@@ -111,8 +112,8 @@ import { MINIATYYRIT } from './packs/miniatyyrit.js';
 // kehittäjäkartan vihreä merkintä lukevat kaikki tämän saman taulun.
 import { JULISTEET, JULISTE_LAHDE, kaupunginJuliste } from './packs/julisteet.js';
 import {
-  POLLO_AARRE, polloAnkkuri, polloOnnittelu, polloPaivitaNakyvyys, polloSulje, polloVihje,
-  polloVihjePois,
+  POLLO_AARRE, polloAnkkuri, polloLisavihje, polloOnnittelu, polloPaivitaNakyvyys, polloSulje,
+  polloVihje, polloVihjePois,
 } from './pollo.js';
 import { ajastaEhdotusKupla, ehdotusOsio, proHakuRasti, proOsio } from './ehdotukset.js';
 /*
@@ -330,6 +331,28 @@ const LENNON_TEKSTI_VIIVE_MS = 400;
 const LENNON_TEKSTI_ODOTUS_MS = 30000;
 // Kuinka kauan lennon jälkeen odotetaan, ennen kuin pieni nuoli syttyy.
 const LENNON_NUOLI_MS = 3500;
+/*
+ * LENTO JATKUU ITSESTÄÄN (omistajan tilaus 26.8.2026: *"Peli voisi
+ * lennon jälkeen automaattisesti jatkaa mantereelle, eli ota siitä pois
+ * astu mantereelle -nappi. Muuten tulee liikaa nappeja heti alkuun."*).
+ *
+ * Astu mantereelle oli pelin ensimmäinen nappi, ja se tuli ruudulle
+ * ennen kuin pelaaja oli nähnyt yhtäkään pelin omaa nappia. Nyt lento
+ * laskeutuu ja jatkaa itsestään: viive on tässä, jotta laskeutuminen
+ * ehditään nähdä — kone pysähtyy, saapumisleima läimähtää kohteen
+ * viereen ja vasta sitten kuva vaihtuu. Lyhyempi tuntuisi katkaisulta
+ * ja pidempi odottelulta; napauttamalla pääsee joka tapauksessa heti.
+ */
+const LENNON_JATKO_MS = 1100;
+/*
+ * Ohituksen jälkeinen napautusten nielu.
+ *
+ * Ohitus poistaa kalvon alta koko lentonäkymän, ja napautuksen
+ * jälkipuoli (pointerup, click) osuisi siihen, mikä juuri paljastui —
+ * kartan kaupunkiin tai alarivin nappiin. Nielu on lyhyt: se kattaa
+ * saman napautuksen loppuosan muttei ehdi syödä seuraavaa.
+ */
+const LENNON_NIELU_MS = 500;
 
 /*
  * ALOITUSLENTO KARTALLA (omistaja 24.8.2026, Raamatun osio
@@ -422,12 +445,83 @@ const ALOITUSLENNON_LAAJUUS = 2.2;
 // Reittiviivan paksuus ja koneen mitta RUUDUN pikseleinä: kumpikin
 // muunnetaan laudan yksiköiksi näkymän mittakaavalla, jottei viiva
 // katoa hiuskarvaksi eikä kone kasva mantereen kokoiseksi.
-const ALOITUSLENNON_VIIVA_PX = 2.2;
+const ALOITUSLENNON_VIIVA_PX = 3.4;
 const ALOITUSLENNON_KONE_PX = 34;
 // Koneen piirroksen oma leveys omissa yksiköissään (polku ulottuu
 // x = -15…14, ks. aloituslentoSisalla): mitta, jota vasten
 // ALOITUSLENNON_KONE_PX skaalataan.
 const ALOITUSLENNON_KONE_MITTA = 29;
+/*
+ * RETKIKUNTAKARTAN REITTIMERKINTÄ (päätoimittajan taidesuunta
+ * 26.8.2026): koneen kärjessä on yhtenäinen tuore vetäisy ja sen
+ * taakse jää katkoviiva — juuri niin kuin 1800-luvun matkakartoissa
+ * merkittiin kuljettu reitti.
+ *
+ * Miksi kaksi elementtiä eikä yksi katkoviivainen polku: sama polku ei
+ * voi olla yhtä aikaa katkonainen ja puoliksi piirtynyt (stroke-
+ * dasharray hoitaa kummankin, ei molempia). Tuore vetäisy on siksi
+ * pääpolun ainoa näkyvä pätkä, joka kulkee koneen mukana, ja katkojälki
+ * on oma sarjansa lyhyitä viivoja, jotka syttyvät koneen ohitettua.
+ *
+ * Mitat ovat RUUDUN pikseleitä kuten viivan paksuuskin.
+ */
+const ALOITUSLENNON_KARKI_PX = 52;
+const ALOITUSLENNON_KATKO_PX = 22;
+// Katkoviivan viivan osuus jaksosta; loppu on väli.
+const ALOITUSLENNON_KATKO_OSUUS = 0.58;
+// Katkojälkeä ei piirretä loputtomiin: harva pitkä lento ei saa
+// synnyttää satoja elementtejä eikä lyhyt lento tiheää tikkuriviä.
+const ALOITUSLENNON_KATKOJA_ENINTAAN = 44;
+const ALOITUSLENNON_KATKOJA_VAHINTAAN = 5;
+/*
+ * SAAPUMISLEIMA (päätoimittajan taidesuunta 26.8.2026): pieni
+ * postileimamainen pyöreä leima kohdekaupungin viereen, kun kone on
+ * perillä. Halkaisija ruudun pikseleinä; leiman oma piirros on
+ * pikseliyksiköissä ja skaalataan näkymän mittakaavalla, jottei leima
+ * kasva kohdemaan kokoiseksi.
+ */
+const LEIMA_PX = 78;
+// Leiman etäisyys kohdekaupungista ruudun pikseleinä. Nimilappu on
+// pisteen alla (js/kartta.js aloituslennonNiukkuus), joten leima menee
+// viistoon sivulle — sille puolelle, josta kone ei tullut.
+const LEIMA_ETAISYYS_X = 78;
+const LEIMA_ETAISYYS_Y = 38;
+
+/*
+ * ==================================================================
+ * SAAPUMISSEKVENSSI (omistajan tilaus 26.8.2026)
+ * ==================================================================
+ *
+ * *"Lentoanimaation päätyttyä näkymä feidautuu ensin TYHJÄÄN vaaleaan
+ * karttapohjaan. Siihen kirjoittuu KONEKIRJOITUKSELLA välikorttiteksti:
+ * kohdekaupunki ja päivälaskuri. Teksti häviää, ja varsinainen kartta
+ * feidautuu sisään SUORAAN oikeassa zoomitilassa — EI
+ * zoomausanimaatiota. ~1 s kartan ilmestymisestä: pöllön ensimmäinen
+ * puhekupla… Melkein heti perään TOINEN kupla ENSIMMÄISEN ALLE."*
+ *
+ * Sekvenssi korvaa vanhan suoran siirtymän, ja OHITUSKIN HYPPÄÄ TÄHÄN
+ * eikä tämän yli: napautus lopettaa lennon, muttei sitä hetkeä, jossa
+ * pelaajalle kerrotaan mihin hän saapui.
+ *
+ * Välikortti on sama pergamenttiarkki kuin aloitussiirtymässä
+ * (naytaAloitusverho): tyhjä paperi ilman suodattimia, jonka takana
+ * raskas työ tehdään näkymättä. Ero on vain sisällössä.
+ */
+// Tauko sen jälkeen kun paperi on täyttänyt ruudun, ennen kirjoitusta.
+const SAAPUMISKORTTI_TAUKO_MS = 280;
+// Kuinka kauan valmis välikorttiteksti jää ruudulle ennen häipymistä.
+const SAAPUMISKORTTI_LUKUAIKA_MS = 1000;
+// Tekstin oma häivytys (css .saapumiskortti-teksti).
+const SAAPUMISKORTTI_TEKSTI_MS = 320;
+// Kartan ilmestymisestä ensimmäiseen kuplaan ja siitä toiseen.
+const SAAPUMISEN_KUPLA_MS = 1000;
+const SAAPUMISEN_KUPLA_VALI_MS = 800;
+/*
+ * KUPLIEN SANAMUOTO ON KAANON (omistajan tilaus 26.8.2026). Maa ja
+ * kaupunki taipuvat js/ui-apurit.js:n taulukoilla, mutta lauseiden
+ * rakenne ei muutu ilman omistajan sanaa.
+ */
+const SAAPUMISEN_KUPLA_TOINEN = 'Klikkaa vihreää pistettä kartalla.';
 
 const AUTO_ROLL_MS = 320; // tauko ennen itsestään pyörähtävää noppaa
 /*
@@ -696,7 +790,7 @@ const KIRJOITUS_MIETE = { osuus: 0.15, tauko: 280, huojunta: 340 };
  * saman käden — ja koska tahti on sama, ruututeksti pysyy luennan
  * tahdissa siellä missä kertoja lukee.
  */
-const KIRJOITUSRYTMI = new Set(['intro', 'flight']);
+const KIRJOITUSRYTMI = new Set(['intro', 'flight', 'saapuminen']);
 
 /**
  * Kuinka kauan typeText kirjoittaa tekstin: sama rytmi keskiarvoilla,
@@ -13852,15 +13946,25 @@ export class UI {
     // vain kohdemantereen kartta. Lukuääni jatkuu kalvon alla.
     document.body.classList.add('flight-active');
 
-    // Napautus mihin tahansa hypäyttää koneen perille; kalvo pysyy
-    // kuitenkin esillä, kunnes pelaaja astuu ulos napista. Animaatiot
-    // kerätään talteen, jotta napautus voi viedä ne loppuun.
+    // Napautus mihin tahansa vie koneen perille JA lennon läpi
+    // (omistajan tilaus 26.8.2026). Animaatiot kerätään talteen, jotta
+    // napautus voi viedä ne loppuun eikä ruudulle jää puolinaista
+    // tilaa.
     const lentoAnimaatiot = [];
+    let ohitettu = false;
+    let ohitusKuittaus = null;
+    const ohitusLupaus = new Promise((valmis) => { ohitusKuittaus = valmis; });
     const ohita = () => {
       for (const a of lentoAnimaatiot) a.finish();
       // Ohitus vie myös repliikin loppuun: hypätty lento ei saa jäädä
       // odottamaan kesken jäänyttä kirjoitusta.
       this.paataLennonTeksti(line);
+      // Ja perille heti (omistajan tilaus 26.8.2026): napautus on koko
+      // lennon loppu, ei pelkkä hypäytys. Nielu estää napautuksen
+      // jälkipuolta osumasta siihen, mikä kalvon alta paljastuu.
+      ohitettu = true;
+      this.nielaiseNapautus();
+      ohitusKuittaus();
     };
     overlay.addEventListener('pointerdown', ohita, { once: true });
 
@@ -13960,28 +14064,21 @@ export class UI {
       };
     };
 
-    // Repliikki ja Astu mantereelle -nappi asuvat samassa kelluvassa
-    // alaosassa: asettelu hoituu itsestään eikä napin osumakohtaa
-    // tarvitse laskea käsin.
+    // Repliikki asuu kelluvassa alaosassa: asettelu hoituu itsestään.
+    //
+    // ASTU MANTEREELLE -NAPPI ON POISSA (omistajan tilaus 26.8.2026:
+    // *"ota siitä pois astu mantereelle -nappi. Muuten tulee liikaa
+    // nappeja heti alkuun."*). Alaosaan jää siis vain rivi, ja koska
+    // rivi varaa koko korkeutensa heti (typeText piirtää
+    // kirjoittamattoman osan näkymättömänä), pino ei liiku kirjoituksen
+    // aikana — juuri se oli aikoinaan syy pitää näkymätöntä nappia
+    // paikkaa varaamassa.
     const alaosa = html('div', 'flight-alaosa');
     overlay.appendChild(alaosa);
     // Ilman repliikkiä ei ole mitään odotettavaa: vanha kuittaus pois,
     // jottei tämä lento jää edellisen rivin varaan.
     this.flightLineValmis = null;
     if (line) this.showFlightLine(line, alaosa);
-    /*
-     * Astu mantereelle -nappi luodaan heti mutta näkyy vasta perillä.
-     *
-     * Se varaa paikkansa alusta asti, koska kartta, repliikki ja nappi
-     * ovat nyt samassa pystypinossa (ks. .flight-overlay css): jos nappi
-     * ilmestyisi vasta lennon lopussa, koko pino keskittyisi uudelleen
-     * ja repliikki nytkähtäisi ylöspäin juuri kun sitä luetaan.
-     * Näkymätön nappi ei ole myöskään sarkainjärjestyksessä eikä
-     * nappaa napautuksia (visibility: hidden).
-     */
-    const nappi = html('button', 'flight-exit odottaa', 'Astu mantereelle');
-    nappi.type = 'button';
-    alaosa.appendChild(nappi);
     /*
      * Lennon kesto repliikin mukaan; ilman repliikkiä perusmitta.
      *
@@ -13990,7 +14087,7 @@ export class UI {
      * välimerkkejä, ja kolmen pisteen jälkeinen tauko yksin on yli
      * sekunnin. Ilman tätä kone laskeutui pisimmillä riveillä kesken
      * lauseen. Lukuaika on se hetki, jonka valmis rivi ehtii olla
-     * ruudulla ennen kuin Astu mantereelle syttyy.
+     * ruudulla ennen kuin lento jatkaa perille.
      *
      * Kirjoituksen aloitusviive (LENNON_TEKSTI_VIIVE_MS) on mukana
      * summassa: teksti alkaa nyt myöhemmin kuin kalvo, ja ilman sitä
@@ -14077,8 +14174,8 @@ export class UI {
       /* peruttu animaatio (esim. dialogin sulku) ei kaada lentoa */
     });
 
-    // Moottori jää käymään kalvon ajaksi — se hiljenee vasta, kun
-    // pelaaja astuu ulos koneesta.
+    // Moottori jää käymään kalvon ajaksi — se hiljenee vasta
+    // saapumisen omassa lohkossa, ohituksessa samalla tavalla.
 
     /*
      * KONE EI LASKEUDU KESKEN LAUSEEN — MITATTUNA, EI ARVIOITUNA.
@@ -14094,25 +14191,25 @@ export class UI {
      * jälkeen tämän hienosäädön, eli kyse ei ole uudesta viiveestä
      * vaan vanhasta oletuksesta.
      *
-     * Siksi Astu mantereelle syttyy vasta kun rivi on oikeasti
-     * valmis. Nopealla laitteella odotus on nolla, hitaalla se on
-     * juuri se hetki, jonka lukija tarvitsee. Yläraja on varoventtiili:
-     * kadonnut kuittaus ei saa jättää kalvoa ikuisiksi ajoiksi.
+     * Siksi lento jatkaa vasta kun rivi on oikeasti valmis. Nopealla
+     * laitteella odotus on nolla, hitaalla se on juuri se hetki, jonka
+     * lukija tarvitsee. Yläraja on varoventtiili: kadonnut kuittaus ei
+     * saa jättää kalvoa ikuisiksi ajoiksi. Napautus ohittaa odotuksen.
      */
     await Promise.race([
       this.flightLineValmis ?? Promise.resolve(),
       this.wait(LENNON_TEKSTI_ODOTUS_MS),
+      ohitusLupaus,
     ]);
 
-    // Perillä kalvo jää odottamaan: lukuääni saa puhua rauhassa, ja
-    // pelaaja astuu ulos itse valitsemallaan hetkellä.
+    /*
+     * Perillä kalvo hengähtää hetken ja jatkaa itsestään (omistajan
+     * tilaus 26.8.2026): laskeutuminen ehditään nähdä, mutta yhtään
+     * nappia ei tarvitse painaa. Napautus vie tästäkin ohi.
+     */
     clearTimeout(nuolenAjastin);
     nuoli.remove();
-    await new Promise((resolve) => {
-      // Nappi on jo paikallaan repliikin alla; tässä se vain syttyy.
-      nappi.classList.remove('odottaa');
-      nappi.addEventListener('click', resolve, { once: true });
-    });
+    if (!ohitettu) await Promise.race([this.wait(LENNON_JATKO_MS), ohitusLupaus]);
 
     sfx.stopFlight();
     // Kohteen äänimaisema alkaa jo kalvon häivytyksen aikana: kun
@@ -14180,7 +14277,7 @@ export class UI {
     const rivi = this.flightLine;
     clearTimeout(this.lentoTekstiAjastin);
     // Kuittaus siitä, että rivi on valmis: lento odottaa sitä ennen kuin
-    // Astu mantereelle syttyy (ks. animateFlightSisalla).
+    // se jatkaa itsestään perille (ks. animateFlightSisalla).
     this.flightLineValmis = new Promise((valmis) => { this.flightLineKuittaus = valmis; });
     this.lentoTekstiAjastin = setTimeout(() => {
       if (this.flightLine !== rivi) return;
@@ -14209,6 +14306,326 @@ export class UI {
     this.flightLineKuittaus?.();
     this.flightLineValmis = null;
     this.flightLine = null;
+  }
+
+  /*
+   * ==================================================================
+   * LENNON YHTEISET OSAT (omistajan tilaus 26.8.2026)
+   * ==================================================================
+   *
+   * Kaksi lentoa — avauslento kartalla (aloituslentoSisalla) ja vanha
+   * kalvolento (animateFlightSisalla) — jakavat nyt ohituksen ja
+   * automaattisen jatkon. Kohtauksen koristeet (katkojälki, leima,
+   * vanavesi, vinjetti, pilvet) kuuluvat avauslennolle: se on se
+   * kohtaus, jonka pelaaja näkee ja jonka omistaja katsoi.
+   */
+
+  /**
+   * Nielaisee juuri alkaneen napautuksen loppuosan.
+   *
+   * Ohitus purkaa lentonäkymän saman tien, ja napautuksen pointerup ja
+   * click ehtivät osua siihen, mikä alta paljastuu — kartan kaupunkiin
+   * tai alarivin nappiin. Kuuntelija on kaappausvaiheessa, joten se on
+   * kaiken muun edellä, ja se poistuu itsestään.
+   */
+  nielaiseNapautus(ms = LENNON_NIELU_MS) {
+    const nielaise = (ev) => {
+      ev.stopPropagation();
+      ev.preventDefault();
+    };
+    const lajit = ['pointerup', 'click'];
+    for (const laji of lajit) document.addEventListener(laji, nielaise, true);
+    setTimeout(() => {
+      for (const laji of lajit) document.removeEventListener(laji, nielaise, true);
+    }, ms);
+  }
+
+  /**
+   * Harsomaiset pilvet kartan päälle lennon ajaksi (omistajan lisätilaus
+   * 26.8.2026: *"Saisiko lennon ajaksi animoitua kevyesti harsomaisia
+   * pilviä tai usvaa tai jotain kartan päälle? Voisi liikkua hyvin
+   * hitaasti."*).
+   *
+   * Muutama iso pehmeäreunainen laikku, joilla on eri nopeus ja suunta:
+   * hitaimman jakso on lähes kaksi minuuttia, joten yksikään pilvi ei
+   * ehdi lennon aikana käydä matkaansa loppuun — liike on sitä lajia,
+   * jonka huomaa vasta kun katsoo kahdesti.
+   *
+   * TEKNIIKKA ON iOS-SÄÄNNÖN MUKAINEN: pehmeys on elementissä itsessään
+   * (radial-gradient) eikä suodattimessa, ja liike on pelkkää
+   * transformia omalla kerroksellaan. Blur olisi ollut yksi rivi ja
+   * palautuisi iPadin webapp-tilassa tyhjänä, kuten kolme kertaa ennen.
+   *
+   * Pilvet elävät DOMissa vain lennon ajan (savuke vartioi tätä):
+   * ikuinen animaatio kartan päällä on juuri se, mitä isoAnimaatio
+   * muuten kieltää.
+   */
+  lennonPilvet(kotelo) {
+    if (!kotelo || this.reducedMotion) return null;
+    const pilvet = html('div', 'lento-pilvet');
+    /*
+     * Viisi laikkua: kaksi isoa ja hidasta ylös, kaksi keskikokoista
+     * laidoille ja yksi kapea usvaviiru alas. Sijainnit ovat ruudun
+     * laidoilla ja nurkissa, koska kone lentää keskeltä — pilvi ei saa
+     * peittää konetta, viivaa eikä matkakirjatekstiä.
+     */
+    const mallit = [
+      { x: -14, y: 4, koko: 86, korkeus: 0.5, kirkkaus: 0.2 },
+      { x: 46, y: -6, koko: 74, korkeus: 0.46, kirkkaus: 0.17 },
+      { x: 58, y: 26, koko: 52, korkeus: 0.55, kirkkaus: 0.13 },
+      { x: -8, y: 52, koko: 62, korkeus: 0.5, kirkkaus: 0.12 },
+      { x: 18, y: 70, koko: 96, korkeus: 0.3, kirkkaus: 0.1 },
+    ];
+    // Ajelehdinta: matka ruudun leveydestä, jakso sekunteina ja
+    // negatiivinen viive, joka aloittaa liikkeen keskeltä — muuten
+    // kaikki viisi lähtisivät samasta kohdasta samaan aikaan.
+    const ajot = [
+      { matka: 9, nousu: 2, kesto: 104, viive: 0 },
+      { matka: -7, nousu: 3, kesto: 132, viive: -12 },
+      { matka: 6, nousu: -3, kesto: 88, viive: -30 },
+      { matka: 8, nousu: -2, kesto: 118, viive: -46 },
+      { matka: -6, nousu: 1, kesto: 146, viive: -8 },
+    ].map((ajo, i) => ({ ...mallit[i], ...ajo }));
+    for (const m of ajot) {
+      const pilvi = html('div', 'lento-pilvi');
+      pilvi.style.setProperty('--x', `${m.x}%`);
+      pilvi.style.setProperty('--y', `${m.y}%`);
+      pilvi.style.setProperty('--koko', `${m.koko}%`);
+      pilvi.style.setProperty('--korkeus', String(m.korkeus));
+      pilvi.style.setProperty('--kirkkaus', String(m.kirkkaus));
+      pilvi.style.setProperty('--matka', `${m.matka}%`);
+      pilvi.style.setProperty('--nousu', `${m.nousu}%`);
+      pilvi.style.setProperty('--kesto', `${m.kesto}s`);
+      pilvi.style.setProperty('--viive', `${m.viive}s`);
+      pilvet.appendChild(pilvi);
+    }
+    kotelo.appendChild(pilvet);
+    // Häivytys sisään vasta seuraavassa kehyksessä: luokka samassa
+    // lohkossa kuin elementin luonti ei käynnistäisi siirtymää.
+    requestAnimationFrame(() => pilvet.classList.add('nakyy'));
+    return pilvet;
+  }
+
+  /** Pilvet pois — häivytys ensin, poisto vasta sen jälkeen. */
+  poistaLennonPilvet(pilvet) {
+    if (!pilvet) return;
+    pilvet.classList.add('poistuu');
+    setTimeout(() => pilvet.remove(), 400);
+  }
+
+  /**
+   * Katkoviivainen jälki koneen perään (a-kohta, päätoimittaja
+   * 26.8.2026).
+   *
+   * Jokainen katko on oma lyhyt polkunsa, joka syttyy juuri kun kone on
+   * ohittanut sen. Sytytys on selaimen oma animaatio kuten koneenkin
+   * liike, ja se on VIIVEELLÄ eikä silmukassa: ohitus vie ne loppuun
+   * yhdellä finishillä, ja lennon aikana käynnissä on kerrallaan
+   * korkeintaan pari lyhyttä häivytystä.
+   *
+   * Sytytyshetki lasketaan pehmennyksen käänteisfunktiolla: kone kulkee
+   * eased-tahtia (kiihdytys ja jarrutus), joten tasainen jako pituudelle
+   * antaisi väärän hetken juuri lennon päissä.
+   */
+  lennonKatkojalki({ kerros, kohta, kokoPituus, mitta = 1, kesto, viive = 0 }) {
+    const animaatiot = [];
+    if (!kerros || !(kokoPituus > 0)) return animaatiot;
+    const jakso = ALOITUSLENNON_KATKO_PX * mitta;
+    const maara = Math.max(
+      ALOITUSLENNON_KATKOJA_VAHINTAAN,
+      Math.min(ALOITUSLENNON_KATKOJA_ENINTAAN, Math.round(kokoPituus / jakso)),
+    );
+    const oma = kokoPituus / maara;
+    const viiva = oma * ALOITUSLENNON_KATKO_OSUUS;
+    // easeInOutQuad käänteisenä: millä hetkellä kone on kohdassa x.
+    const milloin = (x) => (x < 0.5 ? Math.sqrt(x / 2) : 1 - Math.sqrt((1 - x) / 2));
+    for (let i = 0; i < maara; i++) {
+      const alku = i * oma;
+      const loppu = alku + viiva;
+      const kohdat = [];
+      for (let k = 0; k <= 3; k++) kohdat.push(kohta((alku + ((loppu - alku) * k) / 3) / kokoPituus));
+      const d = `M${kohdat.map((p) => `${p.x.toFixed(2)},${p.y.toFixed(2)}`).join(' L')}`;
+      const pala = el('path', { d, class: 'lento-katko' }, kerros);
+      pala.style.strokeWidth = (ALOITUSLENNON_VIIVA_PX * 0.8 * mitta).toFixed(2);
+      pala.style.opacity = '0';
+      animaatiot.push(pala.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: 240,
+        delay: viive + milloin(Math.min(1, loppu / kokoPituus)) * kesto,
+        easing: 'ease-out',
+        fill: 'forwards',
+      }));
+    }
+    return animaatiot;
+  }
+
+  /**
+   * Koneen elävöitys (c-kohta): kevyt pystyhuojunta ja kaksi
+   * haalistuvaa vanavesiviirua siivistä taaksepäin.
+   *
+   * Kallistus reitin suuntaan tulee jo koneen omasta liikkeestä (kulma
+   * lasketaan reitiltä), joten tässä lisätään vain se, mikä puuttui:
+   * kone ei enää liu'u kuin viivain vaan huojuu ilmavirrassa.
+   *
+   * HUOJUNTA ON PELKKÄ SIIRTO — ei kiertoa eikä skaalausta. Kone on
+   * ryhmä ryhmän sisällä, ja SVG:ssä kierron origo riippuu
+   * transform-boxista; siirrolla ei ole origoa, joten se on sama
+   * jokaisessa selaimessa. Suunta on koneen omassa kehyksessä eli
+   * kohtisuoraan lentorataa vastaan, kuten ilmakuopassa.
+   */
+  lennonHuojunta(keinu, { mitta = 1, kesto, viive = 0 }) {
+    const jaksoja = Math.max(2, Math.round(kesto / 2600));
+    const ruudut = [];
+    for (let i = 0; i <= 48; i++) {
+      const t = i / 48;
+      const y = Math.sin(t * Math.PI * 2 * jaksoja) * 2.4 * mitta;
+      ruudut.push({ offset: t, transform: `translate(0px, ${y.toFixed(2)}px)` });
+    }
+    return keinu.animate(ruudut, {
+      duration: kesto, delay: viive, easing: 'linear', fill: 'forwards',
+    });
+  }
+
+  /**
+   * Saapumisleima kohdekaupungin viereen (b-kohta): pyöreä 1873-tyylinen
+   * postileima, jossa kaupungin nimi kaarella ja kuukausi alla.
+   *
+   * VUOSILUKU ON ISOISÄN. Kartta on isoisän 1873-atlas ja leima on
+   * kartan päällä, joten se on samaa käsialaa kuin kaikki muukin, mitä
+   * lennon aikana näkyy.
+   *
+   * Leima piirretään PIKSELIYKSIKÖISSÄ ja kutistetaan laudan
+   * mittakaavaan yhdellä kertoimella — sama tapa kuin koneella ja
+   * reittiviivalla. Läimähdys on skaalaus + peittävyys eli kaksi
+   * halvinta ominaisuutta, ei suodatinta.
+   */
+  lennonLeima({ kerros, kohde, mitta = 1, nimi, vasemmalle = false }) {
+    if (!kerros || !kohde) return null;
+    const x = kohde.x + (vasemmalle ? -LEIMA_ETAISYYS_X : LEIMA_ETAISYYS_X) * mitta;
+    const y = kohde.y + LEIMA_ETAISYYS_Y * mitta;
+    const kallistus = vasemmalle ? 7 : -8;
+    const leima = el('g', { class: 'lento-leima' }, kerros);
+    const r = LEIMA_PX / 2;
+    el('circle', { cx: 0, cy: 0, r, class: 'lento-leima-keha' }, leima);
+    el('circle', { cx: 0, cy: 0, r: r - 6.5, class: 'lento-leima-sisakeha' }, leima);
+    // Nimi kaarelle: kaari kulkee vasemmalta oikealle leiman yläkautta.
+    const kaariId = 'lento-leima-kaari';
+    const kaari = el('path', {
+      id: kaariId,
+      d: `M${-(r - 13)},4 A${r - 13},${r - 13} 0 0 1 ${r - 13},4`,
+      fill: 'none',
+    }, leima);
+    kaari.style.visibility = 'hidden';
+    const teksti = el('text', { class: 'lento-leima-nimi' }, leima);
+    const polkuTeksti = el('textPath', {
+      href: `#${kaariId}`, startOffset: '50%', 'text-anchor': 'middle',
+    }, teksti);
+    polkuTeksti.textContent = String(nimi ?? '').toUpperCase();
+    // Päiväys leiman alaosaan mutta sisäkehän sisään: y valittu niin,
+    // että rivi mahtuu kehän jänteen leveydelle.
+    const pvm = el('text', {
+      x: 0, y: r - 24, 'text-anchor': 'middle', class: 'lento-leima-pvm',
+    }, leima);
+    pvm.textContent = 'ELOKUU 1873';
+    // Kolme musteläiskää: leima ei ole painokuva vaan kumileimasimen
+    // jälki, ja juuri roiskeet tekevät siitä sellaisen.
+    for (const [lx, ly, lr] of [[-r + 5, -6, 2.6], [r - 9, 11, 1.9], [3, -r + 4, 1.4]]) {
+      el('circle', { cx: lx, cy: ly, r: lr, class: 'lento-leima-roiske' }, leima);
+    }
+    /*
+     * CSS-MUUNNOS, EI SVG-ATTRIBUUTIN SYNTAKSIA. Avainruudut ovat
+     * tyylejä, joten pituuksilla on oltava yksikkö ja kulmalla deg —
+     * yksikötön translate(1234,567) on kelvoton CSS ja selain pudottaa
+     * KOKO muunnoksen (mitattu 26.8.2026: leima jäi laudan origoon
+     * ruudun ulkopuolelle ja skaalaamatta). Sama kirjoitusasu kuin
+     * koneen omissa avainruuduissa.
+     */
+    const perus = `translate(${x.toFixed(2)}px, ${y.toFixed(2)}px) rotate(${kallistus}deg)`;
+    leima.style.opacity = '0';
+    leima.animate([
+      { transform: `${perus} scale(${(mitta * 1.55).toFixed(4)})`, opacity: 0, offset: 0 },
+      { transform: `${perus} scale(${(mitta * 0.93).toFixed(4)})`, opacity: 1, offset: 0.55 },
+      { transform: `${perus} scale(${mitta.toFixed(4)})`, opacity: 1, offset: 1 },
+    ], { duration: 420, easing: 'cubic-bezier(0.2, 0.9, 0.3, 1)', fill: 'forwards' });
+    return leima;
+  }
+
+  /* ==== SAAPUMISSEKVENSSI (ks. SAAPUMISKORTTI_TAUKO_MS) ============ */
+
+  /** Kohdekaupungin maan nimi pelin omasta rajadatasta. */
+  kaupunginMaanNimi(cityId) {
+    const map = this.game?.pack?.map;
+    const iso = map?.cityCountry?.[cityId];
+    return iso ? (map.countryShapes?.[iso]?.nimi ?? '') : '';
+  }
+
+  /**
+   * Välikortin teksti: kohdekaupunki ja päivälaskuri.
+   *
+   * Päivä luetaan pelin omasta kellosta ja katto on isoisän ennätys
+   * (RECORD_DAYS = 80) — sama luku, jota vasten koko matka mitataan.
+   */
+  saapumisKortinTeksti(kohde) {
+    const nimi = String(kohde?.name ?? '').toUpperCase();
+    const paiva = this.game?.dayCount?.() ?? 1;
+    return `${nimi} · PÄIVÄ ${paiva}/${RECORD_DAYS}`;
+  }
+
+  /**
+   * Tyhjä paperi ruudulle ja välikorttiteksti siihen konekirjoituksella.
+   *
+   * Sama arkki kuin aloitussiirtymässä (naytaAloitusverho): pelkkä
+   * pergamentti, ei suodattimia. Kirjoitus käyttää samaa typeTextiä ja
+   * samaa naputusääntä kuin etusivun avausteksti ja lennon repliikki
+   * (KIRJOITUSRYTMI), joten käsi on koko pelissä sama.
+   */
+  async naytaSaapumiskortti(kohde) {
+    const arkki = this.naytaAloitusverho();
+    arkki.classList.add('saapumiskortti');
+    await this.wait(ALOITUSVERHO_SISAAN_MS + SAAPUMISKORTTI_TAUKO_MS);
+    if (this.dead) return arkki;
+    const teksti = html('p', 'saapumiskortti-teksti');
+    arkki.appendChild(teksti);
+    await new Promise((valmis) => {
+      this.typeText(teksti, this.saapumisKortinTeksti(kohde), 'saapuminen', valmis, INTRO_TYPE_MS);
+    });
+    if (this.dead) return arkki;
+    await this.wait(SAAPUMISKORTTI_LUKUAIKA_MS);
+    // Teksti häviää ennen karttaa: paperi jää hetkeksi tyhjäksi, ja
+    // kartta nousee tyhjältä paperilta eikä tekstin päältä.
+    teksti.classList.add('poistuu');
+    await this.wait(SAAPUMISKORTTI_TEKSTI_MS);
+    teksti.remove();
+    return arkki;
+  }
+
+  /**
+   * Pöllön kaksi kuplaa saapumisen päätteeksi.
+   *
+   * Ensimmäinen kertoo, mihin tultiin ja mitä täällä on tehtävä;
+   * toinen kertoo, mitä sormella tehdään. Ne ovat ruudulla YHTÄ AIKAA
+   * allekkain (omistajan tilaus): ohje ei saa syödä sitä lausetta,
+   * jonka se selittää.
+   */
+  saapumisenKuplat(kohde) {
+    const maa = this.kaupunginMaanNimi(kohde?.id);
+    const paikka = paikassaMuoto(kohde?.name);
+    // Ilman maata tai kaupunkia lause jäisi puolikkaaksi — silloin
+    // mieluummin pelkkä toimintaohje kuin rikkinäinen tervetulotoivotus.
+    const tervetuloa = maa && paikka
+      ? `Tervetuloa ${maahanMuoto(maa)}. Sinun on ratkaistava tehtävä ${paikka} `
+        + 'ennen kuin voit etsiä aarretta.'
+      : '';
+    clearTimeout(this.saapumisKuplaAjastin);
+    clearTimeout(this.saapumisKupla2Ajastin);
+    this.saapumisKuplaAjastin = setTimeout(() => {
+      if (this.dead) return;
+      polloVihje(tervetuloa || SAAPUMISEN_KUPLA_TOINEN);
+      if (!tervetuloa) return;
+      this.saapumisKupla2Ajastin = setTimeout(() => {
+        if (this.dead) return;
+        polloLisavihje(SAAPUMISEN_KUPLA_TOINEN);
+      }, SAAPUMISEN_KUPLA_VALI_MS);
+    }, SAAPUMISEN_KUPLA_MS);
   }
 
   /*
@@ -14501,25 +14918,51 @@ export class UI {
      * viiva tekee päinvastoin, se on koneen jälki — sama kieli kuin
      * vanhalla kalvolla, joten mitään ei mene hukkaan.
      *
-     * Katkoviiva (.flight-trail stroke-dasharray) korvautuu tässä
-     * paljastuksella: sama polku ei voi olla yhtä aikaa katkonainen ja
-     * puoliksi piirtynyt.
+     * TUORE VETÄISY KÄRJESSÄ, KATKOJÄLKI TAKANA (päätoimittajan
+     * taidesuunta 26.8.2026). Pääpolusta näkyy vain lyhyt yhtenäinen
+     * pätkä, joka kulkee koneen mukana: dasharray on "kärki + koko
+     * pituus", jolloin kuvioon mahtuu koko polulle vain yksi viiva, ja
+     * dashoffset siirtää sen koneen perään. Kuljettu matka jää
+     * näkyviin erillisinä katkoina (lennonKatkojalki) — se on vanhojen
+     * retkikuntakarttojen reittimerkintä.
      */
     reitti.style.strokeWidth = (ALOITUSLENNON_VIIVA_PX / skaala).toFixed(2);
     const kokoPituus = reitti.getTotalLength();
-    reitti.style.strokeDasharray = kokoPituus;
-    reitti.style.strokeDashoffset = kokoPituus;
+    const karki = Math.min(kokoPituus, (ALOITUSLENNON_KARKI_PX / skaala));
+    reitti.style.strokeDasharray = `${karki} ${kokoPituus}`;
+    reitti.style.strokeDashoffset = karki;
 
     const kone = el('g', { class: 'flight-plane' }, kerros);
+    // Huojunta omaan ryhmäänsä: koneen oma muunnos on varattu reitille
+    // (siirto + kääntö), eikä yksi elementti voi kantaa kahta
+    // animaatiota samasta ominaisuudesta.
+    const keinu = el('g', { class: 'flight-keinu' }, kone);
+    const runko = el('g', {
+      transform: `scale(${(ALOITUSLENNON_KONE_PX
+        / (ALOITUSLENNON_KONE_MITTA * skaala)).toFixed(4)})`,
+    }, keinu);
+    /*
+     * Vanavesiviirut siivistä taaksepäin: kaksi ohutta viivaa, jotka
+     * haalistuvat liu'ulla eivätkä suodattimella (iOS-sääntö). Liuku
+     * on koneen omassa kehyksessä, joten viiru osoittaa aina taakse.
+     */
+    const defs = el('defs', {}, kerros);
+    const vana = el('linearGradient', {
+      id: 'lento-vana',
+      x1: -7, y1: 0, x2: -34, y2: 0,
+      gradientUnits: 'userSpaceOnUse',
+    }, defs);
+    el('stop', { offset: 0, 'stop-color': '#2e2114', 'stop-opacity': 0.34 }, vana);
+    el('stop', { offset: 1, 'stop-color': '#2e2114', 'stop-opacity': 0 }, vana);
+    el('path', { d: 'M-7,-6.5 L-31,-9.5', class: 'lento-vana' }, runko);
+    el('path', { d: 'M-7,6.5 L-31,9.5', class: 'lento-vana' }, runko);
     // Sama koneen piirros kuin vanhalla kalvolla: runko, siivet, pyrstö.
     // Mitta ruudun pikseleinä, jottei kone kasva mantereen kokoiseksi.
     el('path', {
       d: 'M14,0 L-6,0 M-10,0 L-14,0 M2,0 L-8,-9 L-4,-9 L6,0 L-4,9 L-8,9 z '
         + 'M-11,0 L-15,-5 L-13,-5 L-9,0 L-13,5 L-15,5 z',
       class: 'flight-plane-body',
-      transform: `scale(${(ALOITUSLENNON_KONE_PX
-        / (ALOITUSLENNON_KONE_MITTA * skaala)).toFixed(4)})`,
-    }, kone);
+    }, runko);
 
     // Reitti näytteistetään kerran valmiiksi (sama syy kuin kalvolla:
     // getPointAtLength joka kehyksellä nykii etenkin iPadin Safarissa).
@@ -14541,28 +14984,53 @@ export class UI {
       };
     };
 
-    // --- 3) Repliikki, napit ja ohitus (ennallaan kalvolta) ----------
+    // --- 3) Repliikki, ohitus ja kohtauksen kerrokset -----------------
+    /*
+     * OHITUS VIE PERILLE HETI (omistajan tilaus 26.8.2026: *"jos pelaaja
+     * haluaa kiirehtiä, niin napauttamalla ruutua animaatio katkeaa
+     * kesken ja pelaaja pääsee siirtymään mantereelle välittömästi"*).
+     *
+     * Ennen napautus vain hypäytti koneen perille ja kalvo jäi
+     * odottamaan napin painallusta. Nyt sama napautus on koko lennon
+     * loppu: animaatiot viedään loppuun (ei puolinaisia tiloja),
+     * repliikki päätetään, ja lupaus päästää suorituksen suoraan
+     * saapumiseen. Äänet vaikenevat samassa kohdassa kuin tavallisessa
+     * laskeutumisessa, koska ne ovat saapumisen omassa lohkossa.
+     */
     const lentoAnimaatiot = [];
+    let ohitettu = false;
+    let ohitusKuittaus = null;
+    const ohitusLupaus = new Promise((valmis) => { ohitusKuittaus = valmis; });
     const ohitaLento = () => {
+      if (ohitettu) return;
+      ohitettu = true;
       for (const anim of lentoAnimaatiot) anim.finish();
       this.paataLennonTeksti(line);
+      this.nielaiseNapautus();
+      ohitusKuittaus();
     };
     /*
      * Kalvo on nyt LÄPINÄKYVÄ (.flight-overlay.kartalla): siitä jää
-     * jäljelle vain repliikin ja napin pysty pino sekä koko ruudun
+     * jäljelle vain repliikin pysty pino, hento vinjetti ja koko ruudun
      * kokoinen ohituskuuntelija. Tausta, sumennus ja piirretty kohtaus
      * ovat poissa — kartta näkyy sellaisenaan.
      */
     const overlay = html('div', 'flight-overlay kartalla');
     this.mapPane.appendChild(overlay);
     overlay.addEventListener('pointerdown', ohitaLento, { once: true });
+    /*
+     * Hento vinjetti lennon ajaksi (d-kohta, päätoimittajan taidesuunta
+     * 26.8.2026): ruudun reunat tummuvat aavistuksen, jolloin katse
+     * hakeutuu kartan keskelle reitin päälle. Liuku elementissä eikä
+     * suodattimessa, ja se häipyy kalvon mukana.
+     */
+    overlay.appendChild(html('div', 'lento-vinjetti'));
     const alaosa = html('div', 'flight-alaosa');
     overlay.appendChild(alaosa);
     this.flightLineValmis = null;
     if (line) this.showFlightLine(line, alaosa);
-    const nappi = html('button', 'flight-exit odottaa', 'Astu mantereelle');
-    nappi.type = 'button';
-    alaosa.appendChild(nappi);
+    // Harsopilvet kartan päälle koko lennon ajaksi.
+    const pilvet = this.lennonPilvet(this.mapPane);
     const sanoja = line ? String(line).trim().split(/\s+/).length : 0;
     const lennonKesto = Math.min(
       LENNON_ENINTAAN_MS,
@@ -14595,7 +15063,9 @@ export class UI {
         offset: t,
         transform: `translate(${p.x.toFixed(2)}px, ${p.y.toFixed(2)}px) rotate(${p.kulma.toFixed(2)}deg)`,
       });
-      reittiRuudut.push({ offset: t, strokeDashoffset: kokoPituus * (1 - e) });
+      // Tuore vetäisy kulkee koneen perässä: kuvion ainoa viiva alkaa
+      // aina kärjen verran ennen konetta ja päättyy koneeseen.
+      reittiRuudut.push({ offset: t, strokeDashoffset: karki - kokoPituus * e });
     }
     kone.style.transform = koneRuudut[0].transform;
     /*
@@ -14626,51 +15096,109 @@ export class UI {
       duration: lennonKesto, delay: 180, easing: 'linear', fill: 'forwards',
     });
     lentoAnimaatiot.push(koneAnim, reittiAnim);
+    // Katkojälki ja koneen huojunta samaan tahtiin: ne ovat kohtauksen
+    // koristeita, mutta ohituksen on vietävä nekin loppuun, ettei
+    // ruudulle jää puolikasta reittimerkintää.
+    lentoAnimaatiot.push(...this.lennonKatkojalki({
+      kerros, kohta, kokoPituus, mitta: 1 / skaala, kesto: lennonKesto, viive: 180,
+    }));
+    lentoAnimaatiot.push(this.lennonHuojunta(keinu, {
+      mitta: 1 / skaala, kesto: lennonKesto, viive: 180,
+    }));
     await Promise.all([koneAnim.finished, reittiAnim.finished]).catch(() => {
       /* peruttu animaatio (esim. uusi peli) ei kaada lentoa */
     });
 
-    // Sama mitattu sääntö kuin kalvolla: Astu mantereelle syttyy vasta
-    // kun repliikki on oikeasti kirjoittunut loppuun.
+    /*
+     * PERILLÄ — JA JATKO TAPAHTUU ITSESTÄÄN (omistajan tilaus
+     * 26.8.2026). Astu mantereelle -nappia ei enää ole; tilalla on
+     * kolme odotusta, jotka kaikki katkeavat napautuksesta:
+     *
+     *   1. repliikki loppuun (sama mitattu sääntö kuin ennen: kone ei
+     *      saa jättää lausetta kesken)
+     *   2. saapumisleima kohteen viereen
+     *   3. lyhyt hengähdys (LENNON_JATKO_MS), jonka aikana leiman
+     *      ehtii lukea
+     */
+    if (!ohitettu) {
+      /*
+       * LEIMA SILLE PUOLELLE, JOSSA ON TILAA. Ensisijainen sääntö on
+       * ruutu eikä reitti: kohdekaupunki on rajauksen laidalla yhtä
+       * usein kuin keskellä, ja väärään laitaan pantu leima jäisi
+       * puoliksi ruudun ulkopuolelle (mitattu Ateenan lennolla
+       * 26.8.2026). Vasta jos kaupunki on keskellä, valitaan se puoli,
+       * josta kone ei tullut.
+       */
+      const alue = this.nakyvaAlue();
+      const osuus = alue?.w ? (kohde.x - alue.x) / alue.w : 0.5;
+      this.lennonLeima({
+        kerros,
+        kohde,
+        mitta: 1 / skaala,
+        nimi: kohde.name,
+        vasemmalle: osuus > 0.6 || (osuus >= 0.4 && b.x < a.x),
+      });
+    }
     await Promise.race([
       this.flightLineValmis ?? Promise.resolve(),
       this.wait(LENNON_TEKSTI_ODOTUS_MS),
+      ohitusLupaus,
     ]);
     clearTimeout(nuolenAjastin);
     nuoli.remove();
-    await new Promise((resolve) => {
-      nappi.classList.remove('odottaa');
-      nappi.addEventListener('click', resolve, { once: true });
-    });
+    if (!ohitettu) await Promise.race([this.wait(LENNON_JATKO_MS), ohitusLupaus]);
 
-    // --- 5) Perillä: fokusmoodin tavallinen saapuminen ---------------
+    // --- 5) Saapumissekvenssi: paperi, välikortti, kartta, kuplat ----
     sfx.stopFlight();
     this.ennakoiAmbienssi(this.game.player?.pos);
+    /*
+     * PAPERI ENSIN, VASTA SITTEN PURKU. Arkki nousee lentonäkymän
+     * päälle ja täyttää ruudun; kone, viiva ja leima häipyvät sen alla
+     * eikä purkua näy. Ilman tätä järjestystä ruudulla välähtäisi
+     * puolittain purettu kohtaus.
+     */
+    const kortti = this.naytaSaapumiskortti(kohde);
     document.body.classList.remove('flight-active', 'kartalento');
     overlay.classList.add('flight-leaving');
+    this.poistaLennonPilvet(pilvet);
+    kerros.classList.add('lento-poistuu');
     await this.wait(280);
     overlay.remove();
     kerros.textContent = '';
+    kerros.classList.remove('lento-poistuu');
     this.hideFlightLine();
+    // Välikortti kirjoittuu ja häipyy arkilla; kartta rakennetaan
+    // vasta sen jälkeen, arkin takana.
+    await kortti;
+    if (this.dead) return;
     /*
      * Lento päättyy tähän, ja vasta nyt muut kamera-ajot ovat taas
      * sallittuja. Render tekee loput kahdessa osassa:
      *
-     *   1. KAMERA-AJO KOHDEMAAHAN. Lipun laskiessa kohdemaa on
+     *   1. KAMERA KOHDEMAAHAN — ILMAN AJOA. Lipun laskiessa kohdemaa on
      *      fokuskartan mielestä vaihtunut ('pois' → GRC), ja
-     *      js/fokuskartta.js ajaa saman saapumisliikkeen kuin muissakin
-     *      maanvaihdoksissa — lehden IKKUNAAN, ei maan muotolaatikkoon.
-     *      Erillinen maidenBbox-ajo oli tässä niin kauan kuin lehti
-     *      ilmestyi jo lennon aikana eikä maa siis enää vaihtunut
-     *      perillä; nyt kaksi ajoa samassa kehyksessä vain kilpailisi
-     *      keskenään (maattomalle maalle fokuskartta osaa saman
-     *      varareitin, ks. maanNakyma).
+     *      js/fokuskartta.js vie näkymän samaan rajaukseen kuin
+     *      muissakin maanvaihdoksissa — lehden IKKUNAAN, ei maan
+     *      muotolaatikkoon. Saapumissekvenssissä se ASETTUU eikä aja
+     *      (saapumisAsettuu → kesto 0): ajo alkaisi näkymästä, jota
+     *      kukaan ei nähnyt, koska arkki peittää sen — omistajan
+     *      tilaus 26.8.2026: *"kartta feidautuu sisään SUORAAN oikeassa
+     *      zoomitilassa — EI zoomausanimaatiota"*.
      *   2. FOKUSKERROKSET JA ANNOSTELUVIRTA. Lehti, nimilaput,
      *      kohtaamispiste ja fokusvirtaSaapuminen odottivat lennon ajan
      *      ja alkavat nyt kuten muillakin saapumisilla.
      */
     this.aloituslentoKesken = false;
-    if (!this.dead) this.render();
+    this.saapumisAsettuu = true;
+    try {
+      this.render();
+    } finally {
+      this.saapumisAsettuu = false;
+    }
+    // Arkki pois: kartta on jo valmiissa rajauksessaan sen takana.
+    await this.piilotaAloitusverho();
+    if (this.dead) return;
+    this.saapumisenKuplat(kohde);
   }
 
   /** Siirtää nappulaa askel kerrallaan annettua polkua pitkin. */

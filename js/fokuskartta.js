@@ -1900,7 +1900,15 @@ export function paivitaFokuskartta(ui) {
    */
   if (!ensimmainen) {
     const nakyma = maanNakyma(ui, iso, lauta);
-    if (nakyma) ui.kartta?.ajaKamera?.(nakyma);
+    /*
+     * SAAPUMISSEKVENSSISSÄ KAMERA ASETTUU EIKÄ AJA (omistajan tilaus
+     * 26.8.2026: *"varsinainen kartta feidautuu sisään SUORAAN
+     * oikeassa zoomitilassa — EI zoomausanimaatiota"*). Näkymä
+     * rakennetaan tyhjän välikorttiarkin takana, joten ajolla ei olisi
+     * katsojaa — vain hinta, ja arkin väistyessä kartta olisi vielä
+     * matkalla. Kesto 0 vie näkymän rajaukseen kerralla.
+     */
+    if (nakyma) ui.kartta?.ajaKamera?.(nakyma, ui.saapumisAsettuu ? { kesto: 0 } : {});
   }
   const valmis = VARASTO.get(`${lauta}:${iso}`);
   // Jo muistissa JA yhä osoitteineen: piirretään samassa kehyksessä,
