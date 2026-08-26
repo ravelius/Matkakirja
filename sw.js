@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1168';
+const CACHE = 'matkakirja-2026-08-09.1169';
 const SHELL = [
   './',
   './index.html',
@@ -184,6 +184,9 @@ const SHELL = [
   './js/packs/fokusvirta-bukarest.js',
   './js/packs/fokuskohteet-bih.js',
   './js/packs/fokusvirta-sarajevo.js',
+  // Maat ilman omaa fokusvirtaa: kadonneiden ihmeiden erä 26.8.2026.
+  './js/packs/fokuskohteet-egy.js',
+  './js/packs/fokuskohteet-irq.js',
   './js/packs/paivan-kuvat.js',
   './js/packs/uutislahteet.js',
   './js/packs/pollo-asetukset.js',

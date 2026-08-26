@@ -211,6 +211,23 @@ export const FOKUSKOHTEET_TUR = [
         + 'temppelistä on jäljellä vain kivijalka ja yksi pylväs.',
       lahde: 'Benh Lieu Song, Wikimedia Commons (CC BY-SA 3.0)',
     },
+    /*
+     * ARTEMIIN TEMPPELI HAVAINNEKUVANA (omistajan tilaus 26.8.2026:
+     * kadonneiden ihmeiden erä; säännöt ja perustelut js/packs/
+     * fokuskohteet-grc.js:n vastaavassa lohkossa). Kuva syntyy
+     * .github/workflows/generoi-ihmeet.yml -ajossa; siihen asti
+     * kuvapaikka jää pois eikä mikään hajoa.
+     */
+    kuvat: [
+      {
+        osoite: 'assets/kartat/ihmeet/artemiin-temppeli.webp',
+        selite: 'Havainnekuva: Artemiin temppeli ehjänä. Viimeinen '
+          + 'temppeli tuhoutui vuonna 401 jaa., ja paikalla on nyt vain '
+          + 'perustukset ja yksi kokoon kasattu pylväs — mittasuhteet '
+          + 'ovat John Turtle Woodin kaivausten mittauksista.',
+        lahde: 'Matkakirjan havainnekuva',
+      },
+    ],
   },
   {
     id: 'kappadokia',
@@ -1119,6 +1136,56 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Kattohaikara Turkissa. Haikarat kiertävät Välimeren '
         + 'Bosporin kautta, koska nousuvirtauksia ei synny meren yllä.',
       lahde: 'Zeynel Cebeci, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  },
+  {
+    /*
+     * HALIKARNASSOKSEN MAUSOLEUMI (omistajan tilaus 26.8.2026,
+     * kadonneiden ihmeiden erä). Havainnekuvan säännöt — selite
+     * kertoo aina rekonstruktiosta ja lähderivi on 'Matkakirjan
+     * havainnekuva' — on kirjattu js/packs/fokuskohteet-grc.js:n
+     * vastaavaan lohkoon; sama pätee tässä.
+     *
+     * 27,4241 E / 37,0379 N — en-Wikipedia "Mausoleum at
+     * Halicarnassus" (tietolaatikon coordinates). Efesos on 12
+     * lautayksikköä pohjoisessa, joten merkit eivät osu päällekkäin.
+     */
+    id: 'halikarnassos',
+    nimi: 'Halikarnassoksen mausoleumi',
+    tyyppi: 'muu',
+    symboli: 'historia',
+    kysymykset: [
+      'Miksi hautaa kutsutaan mausoleumiksi?',
+      'Mitä Bodrumin linnasta on nykyään nähtävissä?',
+    ],
+    korostukset: ['mausoleumi', 'Mausolos|Mausolokselle'],
+    nappi: 'Hauta, joka antoi nimen kaikille haudoille',
+    laudat: {
+      maailmankartta: { x: 6747.5, y: 1917.9 },
+      europe: { x: 737.7, y: 919.5 },
+    },
+    teksti: 'Nykyisen Bodrumin paikalla seisoi vuosina 353–351 eaa. '
+      + 'rakennettu noin 45-metrinen hauta Karian satraapille '
+      + 'Mausolokselle ja hänen sisarelleen ja puolisolleen Artemisia '
+      + 'toiselle. Kreikkalaisarkkitehdit Satyros ja Pythios '
+      + 'suunnittelivat sen, ja neljä aikansa kuuluisinta kuvanveistäjää '
+      + 'koristeli kunkin sivun. Rakennus oli niin ihailtu, että sen '
+      + 'nimestä tuli sana mausoleumi. Maanjäristykset kaatoivat sen '
+      + 'keskiajalla, ja Pyhän Johanneksen ritarit käyttivät kivet '
+      + 'Bodrumin linnaan vuodesta 1494. Isoisäsi matkaa edeltäneellä '
+      + 'vuosikymmenellä brittiarkeologi Charles Newton kaivoi paikan '
+      + 'esiin: veistokset lastattiin laivaan lokakuussa 1857 ja ovat '
+      + 'nyt British Museumissa.',
+    lahde: 'en-Wikipedia "Mausoleum at Halicarnassus", johdanto, '
+      + 'tietolaatikko sekä osiot "Destruction of the tomb" ja '
+      + '"Discovery and excavation" (tarkistettu 26.8.2026).',
+    kuva: {
+      osoite: 'assets/kartat/ihmeet/halikarnassoksen-mausoleumi.webp',
+      selite: 'Havainnekuva: Halikarnassoksen mausoleumi ehjänä 300-luvulla '
+        + 'eaa. Rakennuksesta on jäljellä vain perustukset ja British '
+        + 'Museumiin viedyt veistokset — porrastettu pyramidikatto ja '
+        + 'vaunuryhmä huipulla ovat antiikin kuvausten mukaisia.',
+      lahde: 'Matkakirjan havainnekuva',
     },
   },
 ];

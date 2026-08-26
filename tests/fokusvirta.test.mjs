@@ -282,9 +282,20 @@ test('Kreikan fokuskohteet ovat rakenteeltaan ehjiä', () => {
       assert.ok(Number.isFinite(paikka?.x) && Number.isFinite(paikka?.y),
         `${kohde.id}: ${lauta}-koordinaatit puuttuvat`);
     }
-    assert.ok(kohde.kuva?.tiedosto || kohde.kuva?.ampari, `${kohde.id}: kuva puuttuu`);
+    // `osoite` on pelin oma generoitu havainnekuva repossa
+    // (assets/kartat/ihmeet/) — sillä ei ole Commons-nimeä.
+    assert.ok(kohde.kuva?.tiedosto || kohde.kuva?.ampari || kohde.kuva?.osoite,
+      `${kohde.id}: kuva puuttuu`);
     assert.ok(kohde.kuva.selite?.length > 20, `${kohde.id}: kuvaselite puuttuu`);
     assert.ok(kohde.kuva.lahde?.length > 10, `${kohde.id}: kuvan lähde puuttuu`);
+    // Lisäkuvat (`kuvat`) ovat pääkuvan jatke, ja niitä koskee sama
+    // selite- ja lähdevaatimus: kuvateksti kertoo aina, mitä katsotaan.
+    for (const lisa of kohde.kuvat ?? []) {
+      assert.ok(lisa.tiedosto || lisa.ampari || lisa.osoite,
+        `${kohde.id}: lisäkuvalta puuttuu tiedosto`);
+      assert.ok(lisa.selite?.length > 20, `${kohde.id}: lisäkuvan selite puuttuu`);
+      assert.ok(lisa.lahde?.length > 10, `${kohde.id}: lisäkuvan lähde puuttuu`);
+    }
   }
 });
 

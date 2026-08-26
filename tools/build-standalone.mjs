@@ -82,6 +82,10 @@ const MODULES = [
   'js/packs/fokusvirta-bukarest.js',
   'js/packs/fokuskohteet-bih.js',
   'js/packs/fokusvirta-sarajevo.js',
+  // Egyptillä ja Irakilla ei ole omaa fokusvirtaa: pelkät kohteet
+  // (kadonneiden ihmeiden erä 26.8.2026), joten paririviä ei ole.
+  'js/packs/fokuskohteet-egy.js',
+  'js/packs/fokuskohteet-irq.js',
   'js/packs/fokusvirrat.js',
   'js/packs/uutislahteet.js',
   // uutiset vasta lähteidensä jälkeen (tuo uutislahteet.js:n).

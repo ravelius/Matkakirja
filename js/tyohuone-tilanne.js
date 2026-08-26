@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1169: Antiikin kadonneet ihmeet: 6 uutta kohdetta (Rodoksen kolossi, Knossos, Hefaistoksen temppeli, Halikarnassos, Faroksen majakka, Babylonin puutarhat + Aleksandrian kirjasto) ja rekonstruktiokuvapaikat; Egypti ja Irak saivat ensimmaiset fokuskohteensa. Kuvat generoidaan erikseen. TESTAA: uudet kohteet kartoilla.',
   'v1168: Izmirin avauskaruselli sai omistajan herokuvat (kellotorni, Asansor, Kizlaragasi Han). TESTAA: Izmirin lehden avauskuvat.',
   'v1167: Kaksi karttakorjausta: loydetyn kaupungin porttikeha ja lentokonemerkki piiloutuvat aarremerkin alta (Ateenan iso rengas pois), ja kaupungin keskella oleva kohde (Akropolis) istuu nyt laatan viereen samalle korkeudelle eika valu kauas. TESTAA: Ateena aarteen loydon jalkeen + Akropoliin merkki.',
   'v1166: Miniatyyriera 3/5: Oslo, Dublin, Barcelona ja Edinburgh (23 kuvaa; St Gilesin kruunutorni uusintaan). TESTAA: nailla kartoilla piirrokset.',

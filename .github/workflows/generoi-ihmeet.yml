@@ -1,0 +1,205 @@
+# Kadonneiden ihmeiden ja loistoajan havainnekuvien eräajo OpenAI:n
+# kuva-API:lla. Omistajan tilaus 26.8.2026: "peliin voisi generoida
+# kaikki antiikin kadonneet ihmeet sekä jos on muita vastaavia
+# kadonneita, niin generoidaan ne kaikki" + Hefaistoksen temppelistä
+# "tämäkin olisi mielenkiintoinen nähdä generoituna". Lupa API-ajoon:
+# Raamattu, osio "Kuvat ja lähteet", kohta KUVAGENEROINNIN TYÖNJAKO
+# ("Saat generoida aina kaiken muun apin kautta paitsi herokuvat").
+#
+# ERO SYMBOLIAJOON (.github/workflows/generoi-symbolit.yml, tämän
+# malli): symbolit ovat läpinäkyviä neliöitä, nämä ovat MAISEMIA.
+# Siksi 3:2-vaakakuva ilman läpinäkyvyyttä ja jpg — kuvat menevät
+# kohdekortin kuvapaikkaan (js/fokuskohteet.js), joka on vaakarajattu
+# eikä koskaan tarvitse alfakanavaa. Integroija pienentää ja muuntaa
+# webpiksi polkuun assets/kartat/ihmeet/<tunnus>.webp, joka on juuri se
+# polku, jonka kohteiden `osoite`-kenttä jo lupaa.
+#
+# TYYLI ON 1800-LUVUN TIETEELLINEN REKONSTRUKTIOPIIRROS eikä
+# valokuvamainen render: akvarellilla väritetty litografia, sama
+# kuvakieli kuin isoisän matkakirjan aikakaudella. Se on myös
+# REHELLISYYSKEINO — piirros ei esitä olevansa valokuva paikasta, jota
+# ei ole. Jokaisen kohteen `selite` kertoo saman sanoin, ja lähderivi
+# on aina 'Matkakirjan havainnekuva'.
+#
+# EI TEKSTIÄ KUVAAN: kuvateksti ladotaan kortissa, ja generoitu teksti
+# olisi joka tapauksessa väärin kirjoitettua.
+#
+# Tulokset: artifakti "ihmekuvat" JA työhaara claude/ihmekuvat-api
+# (force-push; haara on noutoa varten ja poistetaan integroinnin
+# jälkeen — mainin historiaan kuvat päätyvät vasta hyväksyttyinä ja
+# pienennettyinä).
+name: Generoi ihmeet
+
+on:
+  workflow_dispatch:
+    inputs:
+      vain:
+        description: 'Vain nämä tunnukset (välilyönnein), tyhjä = kaikki'
+        type: string
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  generoi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generoi havainnekuvat
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          VAIN: ${{ inputs.vain }}
+        run: |
+          set -euo pipefail
+          mkdir -p ihmekuvat
+          node - <<'SKRIPTI'
+          /*
+           * TUNNUS = KOHTEEN `osoite`-KENTÄN TIEDOSTONIMI. Jos tunnusta
+           * muuttaa, on muutettava myös js/packs/fokuskohteet-*.js.
+           *
+           * Aiheen kuvaus on kohteen omista tuntomerkeistä sellaisina
+           * kuin en-Wikipedia ne kertoo (mitat, materiaalit, muoto) —
+           * ei mielikuvituksesta. Sama tarkistus kuin teksteillä.
+           */
+          const IHMEET = [
+            ['zeuksen-patsas',
+              'the lost Statue of Zeus at Olympia inside its temple: a colossal '
+              + 'seated bearded Zeus, 12 metres tall, made of gold and ivory, '
+              + 'on an ornate carved cedarwood throne, an olive wreath on his '
+              + 'head, a small winged Nike figure in his right hand and a '
+              + 'sceptre with an eagle in his left, framed by tall Doric columns '
+              + 'of the temple interior, tiny human worshippers below for scale'],
+            ['rodoksen-kolossi',
+              'the lost Colossus of Rhodes: a 33-metre bronze statue of the sun '
+              + 'god Helios standing on a white marble pedestal beside the '
+              + 'harbour of ancient Rhodes, nude youthful male figure with a '
+              + 'spiked radiate crown, one hand raised shading his eyes, feet '
+              + 'together on a single block, ancient sailing ships and harbour '
+              + 'walls far below for scale, Mediterranean coastline'],
+            ['faroksen-majakka',
+              'the lost Lighthouse of Alexandria: a 110-metre stone tower in '
+              + 'three stages, a broad square base, an octagonal middle section '
+              + 'and a cylindrical top with an open fire chamber and a large '
+              + 'polished mirror, smoke and firelight at the summit, standing on '
+              + 'a rocky island at a harbour mouth, ancient ships and a causeway, '
+              + 'evening light'],
+            ['artemiin-temppeli',
+              'the lost Temple of Artemis at Ephesus: an enormous Ionic marble '
+              + 'temple with a dense double forest of over one hundred fluted '
+              + 'columns 17 metres tall, carved relief drums at the column bases, '
+              + 'a wide pedimented front with a broad flight of steps, a cult '
+              + 'statue visible in the shadowed doorway, small figures for scale'],
+            ['halikarnassoksen-mausoleumi',
+              'the lost Mausoleum at Halicarnassus: a 45-metre tomb in three '
+              + 'parts, a high rectangular podium with sculpted friezes and '
+              + 'free-standing statues, an Ionic colonnade of 36 columns above '
+              + 'it, and a stepped pyramid roof of 24 steps crowned by a marble '
+              + 'four-horse chariot with two standing figures, seen from below '
+              + 'against the Carian coast'],
+            ['babylonin-puutarhat',
+              'the legendary Hanging Gardens of Babylon: a stepped ziggurat-like '
+              + 'structure of mud brick, each terrace planted with trees, shrubs '
+              + 'and trailing vines so the whole resembles a green mountain, '
+              + 'arched vaults and brick piers carrying the terraces, a water '
+              + 'screw and channels irrigating the top, the Euphrates and flat '
+              + 'Mesopotamian plain beyond'],
+            ['aleksandrian-kirjasto',
+              'the lost Library of Alexandria in use: a long colonnaded hall with '
+              + 'a coffered ceiling, walls lined with pigeonhole shelves holding '
+              + 'hundreds of rolled papyrus scrolls with hanging identification '
+              + 'tags, wooden reading tables and stools, robed Greek scholars '
+              + 'unrolling scrolls, high clerestory windows casting shafts of '
+              + 'daylight'],
+            ['knossos-loistossaan',
+              'the Minoan palace of Knossos in use around 1500 BC: the great '
+              + 'central court surrounded by multi-storey wings, distinctive '
+              + 'Minoan columns of bright red painted wood tapering downwards on '
+              + 'black bases, horns of consecration on the rooftops, walls '
+              + 'covered with bright frescoes of dolphins, bulls and processions, '
+              + 'a broad flight of stone steps, Cretan hills behind'],
+            ['hefaistoksen-temppeli',
+              'the Temple of Hephaestus in Athens as it looked when new in the '
+              + '5th century BC: a complete Doric marble temple of 6 by 13 '
+              + 'columns standing on the low hill above the ancient agora, roof '
+              + 'and pediments intact with terracotta tiles, the metopes, '
+              + 'triglyphs and pediment sculptures painted in ancient '
+              + 'polychromy - deep red, strong blue and gold accents on the '
+              + 'entablature - the marble columns left plain'],
+            ['parthenon-loistossaan',
+              'the Parthenon on the Athenian Acropolis as it looked when new in '
+              + '432 BC: the complete Doric temple with its roof, pediments and '
+              + 'all sculptures in place, the metopes, triglyphs and pedimental '
+              + 'figures painted in ancient polychromy with deep red, strong '
+              + 'blue and gilded details, bronze shields hung on the '
+              + 'architrave, the marble columns left plain, seen from the '
+              + 'Propylaea with worshippers on the sacred rock'],
+          ];
+          /*
+           * YKSI POHJA KAIKILLE: tyyli, rajaus ja kiellot samassa
+           * paikassa, jotta sarja näyttää sarjalta. Muutos tähän
+           * muuttaa kaikkia kymmentä kuvaa — se on tarkoitus.
+           */
+          const POHJA = (aihe) => 'A 19th-century scientific archaeological '
+            + `reconstruction plate showing ${aihe}. Hand-drawn lithograph `
+            + 'with delicate watercolour washes in the style of a Victorian '
+            + 'archaeological folio: fine ink linework, accurate architectural '
+            + 'perspective and proportion, muted earth pigments - warm stone '
+            + 'ochre, terracotta, faded sky blue, olive green - on aged '
+            + 'off-white paper. Wide horizontal landscape composition, the '
+            + 'monument whole and complete, seen in clear daylight with small '
+            + 'human figures for scale. Not photographic, not a 3D render, not '
+            + 'cinematic; no modern buildings, no ruins, no rubble, no tourists, '
+            + 'no lettering, no captions, no labels, no signature, no frame, '
+            + 'no border.';
+          const vain = (process.env.VAIN ?? '').split(/\s+/).filter(Boolean);
+          const jono = IHMEET.filter(([t]) => !vain.length || vain.includes(t));
+          const { writeFileSync } = await import('node:fs');
+          let virheita = 0;
+          for (const [tunnus, aihe] of jono) {
+            const vastaus = await fetch('https://api.openai.com/v1/images/generations', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+              },
+              body: JSON.stringify({
+                model: 'gpt-image-1',
+                prompt: POHJA(aihe),
+                // 3:2-vaaka: kohdekortin kuvapaikka on vaakarajattu.
+                size: '1536x1024',
+                quality: 'medium',
+                // Maisema, ei symboli: pohja on läpinäkymätön.
+                background: 'opaque',
+                output_format: 'jpeg',
+              }),
+            });
+            if (!vastaus.ok) {
+              console.error(`${tunnus}: HTTP ${vastaus.status}`, (await vastaus.text()).slice(0, 300));
+              virheita += 1;
+              continue;
+            }
+            const data = await vastaus.json();
+            const b64 = data.data?.[0]?.b64_json;
+            if (!b64) { console.error(`${tunnus}: ei kuvaa vastauksessa`); virheita += 1; continue; }
+            writeFileSync(`ihmekuvat/${tunnus}.jpg`, Buffer.from(b64, 'base64'));
+            console.log(`${tunnus}.jpg kirjoitettu`);
+          }
+          if (virheita) { console.error(`${virheita} epäonnistui`); process.exit(1); }
+          SKRIPTI
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ihmekuvat
+          path: ihmekuvat/
+          retention-days: 7
+      - name: Työhaaraan noutoa varten
+        run: |
+          set -euo pipefail
+          git config user.name "matkakirja-ihmeet"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout --orphan claude/ihmekuvat-api
+          git rm -rq --cached . || true
+          git add -f ihmekuvat/
+          git commit -m "Ihmekuvat era $(date -u +%Y-%m-%dT%H:%M)Z (poistetaan integroinnin jalkeen)"
+          git push -f origin claude/ihmekuvat-api
