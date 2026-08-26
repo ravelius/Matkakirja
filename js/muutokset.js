@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1157, teksti: 'Sisilian herokaruselli + leveampi kohdekortti' },
   { v: 1156, teksti: 'Miniatyyriprompit 20 Euroopan kaupungille' },
   { v: 1155, teksti: 'Akropolis-museon kierrokset pois (upotus ei toimi)' },
   { v: 1154, teksti: 'Elainkohteille useampi kuva (Srebarna, Van)' },

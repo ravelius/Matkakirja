@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1157 — Sisilian lehdelle herokuvakaruselli (Concordia, Syrakusan tuomiokirkko, Monreale; omistajan ChatGPT-era) ja kohdekortti leveni 21 -> 24 rem (kuvien kasvun jatkoksi)',
   'v1156 — miniatyyrigenerointiin promptit 20 Euroopan kaupungin 122 kohteelle (tunnusmerkit todennettu juttujen Commons-kuvista); kuvat generoidaan kaupunkierissa — ei viela pelinakyvia muutoksia',
   'v1155 — Akropolis-museon 360-kierrokset poistettu pelista (GA&C-upotus ei latautunut iPadilla, varapolku laukesi aina); kohde jai tavalliseksi kulttuurikortiksi, kierros-ikkunamekanismi jai koodiin tulevia varten',
   'v1154 — kohdekortti tukee useampaa kuvaa (kuvat-lista); Srebarnalla nyt 3 pelikaanikuvaa (lento, lepo, pesa) ja Vanin kissalla 3 (pentu, silmalahikuva, kissatalon asukas) — livekameroita ei loytynyt virallisista lahteista kummallekaan',
