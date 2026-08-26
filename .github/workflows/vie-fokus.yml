@@ -11,7 +11,7 @@ on:
       haara:
         description: 'Haara jolla julisteet/fokus/-kansio on'
         type: string
-        default: 'claude/fokus-vienti'
+        default: 'claude/julisteet-vienti'
 
 permissions:
   contents: read

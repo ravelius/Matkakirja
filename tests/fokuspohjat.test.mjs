@@ -47,7 +47,24 @@ const NAAPURIN_RAJA = 30;
  * maamuoto joskus korjataan, poikkeus poistetaan ja testi alkaa vaatia
  * peittoa myös Islannilta.
  */
-const MAAMUOTO_POIKKEUKSET = new Set(['ISL']);
+/*
+ * MYS: laudalla ei ole maamuotoa lainkaan (countryShapes.MYS on
+ * tyhjä) — lehden ikkuna johdetaan Natural Earthista, joten peittoa
+ * laudan muotoon ei voi mitata. Jos muoto joskus piirretään laudalle,
+ * poikkeus poistetaan.
+ */
+/*
+ * USA: laudan muoto sisältää Alaskan ja Havaijin, mutta yleisen
+ * reitin lehti rajautuu mantereeseen — Alaskan kattaminen venyttäisi
+ * kuvan Kanadan tapaan yli puolen maapallon. Kuratoitu lisälehti tai
+ * ikkuna ratkaisee, kunhan sellainen tehdään (sama juttu kuin RUS ja
+ * CAN, jotka puuttuvat kokonaan).
+ */
+/*
+ * ECU: laudan muodossa on Galápagos, tuhat kilometriä ulapalla —
+ * lehti rajautuu mantereeseen kuten kartastoissa yleensäkin.
+ */
+const MAAMUOTO_POIKKEUKSET = new Set(['ISL', 'MYS', 'USA', 'ECU']);
 
 const laatikot = {};
 for (const [iso, muoto] of Object.entries(MAAILMANKARTTA.map.countryShapes)) {

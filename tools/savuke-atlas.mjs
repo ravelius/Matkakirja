@@ -164,8 +164,15 @@ vaadi('kohdemaan lehti on omassa ryhmässään kartalla',
  * (paivitaFokuskartta). Raja on siis tynkäympäristön luku, ei
  * muistibudjetin löystyminen: budjettia itseään ei ole koskettu.
  */
+/*
+ * Raja nousi kolmesta viiteen v1116:ssa: maailmassa on nyt 132
+ * lehteä, ja Pohjois-Afrikan (DZA, LBY) ja Grönlannin leveät kuvat
+ * ulottuvat aidosti Kreikan näkymän ylle. Tynkälehdet ovat ~0 Mp,
+ * joten budjetti päästää ne kaikki — oikeassa pelissä megapikseli-
+ * budjetti karsii samat lehdet ensimmäisenä.
+ */
 vaadi('lähikuvassa naapureita ei ladata turhaan',
-  a.atlas.length <= 3, `atlas=${a.atlas}`);
+  a.atlas.length <= 5, `atlas=${a.atlas}`);
 
 /* Kehittäjätila päälle, jotta kamera pääsee lehden ikkunan ulkopuolelle. */
 await sivu.evaluate(() => {
@@ -201,8 +208,8 @@ vaadi('loitonnettaessa naapurilehdet piirtyvät atlakseen',
   b.atlas.length >= 1 && b.kuvia === b.atlas.length, `atlas=${b.atlas}`);
 
 const haetut = [...new Set(pyynnot)];
-vaadi('laiska lataus: 39 lehdestä haettiin vain näkymän lehdet',
-  haetut.length > 0 && haetut.length <= 5, `haetut=${haetut.join(',')}`);
+vaadi('laiska lataus: 132 lehdestä haettiin vain näkymän lehdet',
+  haetut.length > 0 && haetut.length <= 8, `haetut=${haetut.join(',')}`);
 await sivu.screenshot({ path: join(ULOS, 'savuke-atlas-loitonnettu.png') });
 
 /* --- LRU: näkymästä poistuneet vapautetaan --- */
