@@ -1237,6 +1237,708 @@ const KUVAT = [
     + 'brownstone Gothic Revival church with a single tall square '
     + 'tower carrying a pointed spire and a clock face, pointed arched '
     + 'windows along its side and an old graveyard beside it'],
+
+  /*
+   * ── EUROOPAN LOPUT KOHDEKARTAT, 20 kaupunkia (erät E1–E5,
+   * 26.8.2026; omistajan tilaus: "Voisi käydä koko Euroopan läpi ja
+   * lisätä kaikkiin puuttuvat kuvat") ──────────────────────────────
+   * VAIN JONOSSA, ei generoitu: päätoimittaja ajaa generoinnin
+   * Actions-työnkululla erissä. Kartalla kohteet näkyvät siihen asti
+   * numeroympyröinä, kuten koodi tekee piirroksettomalle kohteelle.
+   * Kuvaukset on kirjoitettu kohteiden omien nähtävyysjuttujen ja
+   * niiden todennettujen valokuvien mukaan (js/packs/nahtavyysjutut.js)
+   * — arkkitehtuurin tosiasioita, ei mielikuvia. Yksi otto per kohde.
+   * Järjestys on kartan kohdejärjestys (js/packs/maakartat.js).
+   */
+
+  // ── Sofia (erä E1, 26.8.2026) ────────────────────────────────────
+  ['sofia-mineraalikylpyla', 'a long symmetrical Vienna Secession '
+    + 'bath house of cream and red brick banded with rows of colourful '
+    + 'ceramic tiles: two storeys of round-arched windows under a red '
+    + 'tiled roof, a tall semicircular arched entrance with a '
+    + 'fan-shaped tiled tympanum in the middle, and THREE dark ribbed '
+    + 'domes on small arcaded drums — one over the entrance and one at '
+    + 'each end of the building; a wide fountain pool on the terrace '
+    + 'in front'],
+  ['sofia-pyhan-yrjon-rotunda', 'a very small ancient ROUND red-brick '
+    + 'church standing in a courtyard below much taller buildings: a '
+    + 'plain cylindrical brick drum with a few narrow arched windows, a '
+    + 'shallow round tiled dome with a cross on top, and low apsidal '
+    + 'brick bays leaning against its sides. Bare weathered brick '
+    + 'everywhere, no plaster', 'halpa'],
+  ['sofia-sofian-katedraali', 'a huge Bulgarian orthodox cathedral: '
+    + 'one enormous GILDED dome on a windowed drum in the middle, '
+    + 'around it several smaller domes of weathered COPPER GREEN with '
+    + 'gilded crosses, and one tall bell tower with a gilded cap at the '
+    + 'front; rows of round-arched windows and shallow arched gables '
+    + 'along the pale stone walls. Absolutely NO minarets'],
+  ['sofia-sofian-yliopisto', 'a long neoclassical university palace '
+    + 'whose wings curve gently back from the street: a central portico '
+    + 'of tall corinthian columns under a plain entablature, a broad '
+    + 'green COPPER dome rising behind it, two smaller green domes over '
+    + 'the ends of the wings, and one seated stone figure on a low '
+    + 'pedestal at each side of the entrance steps'],
+  ['sofia-borisovan-puutarha', 'a large old city park: a calm lake '
+    + 'with a fountain jetting in the middle, long avenues of lime and '
+    + 'chestnut trees, gravel paths curving between rose beds and park '
+    + 'benches, and a slender concrete television tower rising far '
+    + 'behind the treetops'],
+  ['sofia-kansalliskulttuuripalatsi', 'a huge low modernist congress '
+    + 'palace: a wide symmetrical front faced from top to bottom with '
+    + 'tall narrow white vertical fins, a glazed ground floor between '
+    + 'them, a dark flat-roofed block above and one big round sunburst '
+    + 'emblem in the centre of the facade; in front a very long '
+    + 'straight axis of stepped fountain basins between broad paved '
+    + 'promenades, mountains on the horizon. NO text, NO letters'],
+
+  // ── Ateena (erä E1, 26.8.2026) ───────────────────────────────────
+  ['ateena-antiikin-agora', 'an ancient greek market place: in the '
+    + 'middle a small COMPLETE doric temple standing intact on a low '
+    + 'stepped platform, columns all round it and a plain triangular '
+    + 'pediment at each end, and behind it a long two-storey '
+    + 'colonnaded hall; broken column drums and blocks lying on the '
+    + 'grass around them'],
+  ['ateena-akropolis', 'a steep flat-topped rock rising straight out '
+    + 'of a city, its sides ringed by rough stone walls: on the crown a '
+    + 'great marble doric temple with rows of columns and its roof gone, '
+    + 'a columned gateway at the head of a ramp on the near side, and '
+    + 'beside the temple a small porch carried by SIX draped female '
+    + 'statues standing where the columns should be'],
+  ['ateena-zeuksen-temppeli', 'the ruin of a colossal greek temple: '
+    + 'about fifteen ENORMOUS corinthian columns with deep acanthus '
+    + 'capitals still standing in two rows, a short length of straight '
+    + 'entablature resting across the tops of three of them, and ONE '
+    + 'fallen column lying broken into a neat row of round drums on the '
+    + 'ground beside them', 'halpa'],
+  ['ateena-syntagman-aukio', 'a large plain ochre neoclassical palace '
+    + 'block, three storeys of regular tall windows under a flat '
+    + 'roofline, with a slightly projecting central bay carrying a '
+    + 'columned porch and a triangular pediment; below it a broad '
+    + 'marble terrace with a low carved tomb, and two guards in pleated '
+    + 'skirts and pompom shoes standing stiffly still in front of it. A '
+    + 'wide paved square below'],
+  ['ateena-lykavittos', 'a steep cone-shaped limestone hill covered in '
+    + 'dark pine woods rising abruptly out of a city, with one tiny '
+    + 'whitewashed chapel with a small bell gable perched right on the '
+    + 'summit and a zigzag path climbing the slope to it', 'halpa'],
+  ['ateena-kallimarmaro', 'an ancient athletics stadium built entirely '
+    + 'of WHITE MARBLE, seen slightly from above: a long horseshoe of '
+    + 'steep straight tiers of marble benches wrapped round a narrow '
+    + 'U-shaped running track and open at the near end, a plain marble '
+    + 'entrance below and cypresses on the wooded slope behind'],
+
+  // ── Bukarest (erä E1, 26.8.2026) ─────────────────────────────────
+  ['bukarest-romanian-ateneum', 'a ROUND domed concert hall: a tall '
+    + 'circular drum crowned by a shallow dome with a small finial, and '
+    + 'in front of it a porch of six slender ionic columns under a '
+    + 'triangular pediment, with a band of mosaic panels running round '
+    + 'the drum above the columns; a low flight of steps and flower '
+    + 'beds in front'],
+  ['bukarest-cismigiun-puutarha', 'a leafy 19th-century city park '
+    + 'around a lake: old trees leaning over the water, a wooden '
+    + 'landing stage and a small terrace restaurant at the shore, a '
+    + 'fountain jetting in the lake, and a small semicircular stone '
+    + 'rotunda ringed with portrait busts among the trees'],
+  ['bukarest-yliopiston-aukio', 'a broad city square seen from above: '
+    + 'a wide boulevard sweeping past a round grassy traffic island, on '
+    + 'one side an ornate pale palace of the 1860s with steep grey '
+    + 'mansard roofs, corner domes and rows of dormer windows, on the '
+    + 'other a small park of paths and trees, and bronze statues on '
+    + 'pedestals along the kerb'],
+  ['bukarest-stavropoleoksen-kirkko', 'a very small richly carved '
+    + 'romanian church: an open porch along its front carried on '
+    + 'slender stone columns covered in deep vine carving under '
+    + 'multi-lobed arches, a row of ROUND painted saint medallions in '
+    + 'the frieze above them, wide overhanging tiled eaves, and behind '
+    + 'the porch a small octagonal tower with a shallow cap and a '
+    + 'second dome further back'],
+  ['bukarest-vanha-ruhtinaanhovi', 'the excavated ruins of a medieval '
+    + 'princely court: low broken walls of thin red brick and stone '
+    + 'standing a metre or two high in an open paved enclosure, one '
+    + 'stone column standing alone among them, and a surviving '
+    + 'round-arched brick vault leading down out of sight', 'halpa'],
+  ['bukarest-parlamenttipalatsi', 'an immense symmetrical 1980s palace '
+    + 'of white stone: a vast facade rising in stepped tiers to a '
+    + 'central block, tier after tier of identical arched loggias and '
+    + 'columns across its whole width, a flagpole on the roof and a '
+    + 'huge empty paved plaza in front. Monumental and utterly regular'],
+  ['bukarest-antipan-museo', 'a pale yellow neoclassical museum: a '
+    + 'slightly projecting central bay with four flat pilasters '
+    + 'carrying a triangular pediment, three arched doorways beneath it '
+    + 'at the top of a wide flight of steps, long two-storey wings of '
+    + 'round-arched windows on both sides, and a giraffe sculpture '
+    + 'standing on the lawn in front'],
+
+  // ── Sarajevo (erä E1, 26.8.2026) ─────────────────────────────────
+  ['sarajevo-sarajevon-katedraali', 'a neo-gothic stone cathedral: TWO '
+    + 'identical square west towers with steep pointed pyramid roofs '
+    + 'and corner pinnacles, a large ROUND rose window between them '
+    + 'above a pointed arched portal, and the steep gabled nave roof '
+    + 'running back behind'],
+  ['sarajevo-gazi-husrev-begin-moskeija', 'an Ottoman mosque of pale '
+    + 'stone: one broad lead-grey dome over the prayer hall with '
+    + 'smaller domes stepping down over an arcaded porch in front of '
+    + 'it, one very tall slender stone minaret with a single railed '
+    + 'balcony and a pointed cap beside it, and a small domed fountain '
+    + 'in the walled courtyard'],
+  ['sarajevo-bascarsija', 'an old Ottoman bazaar square: in the middle '
+    + 'a wooden kiosk fountain — an ornate octagonal cage of carved '
+    + 'timber under a wide overhanging pointed roof, standing on a low '
+    + 'stone base — and around it small tiled-roof shops with open '
+    + 'fronts, hammered copper trays and coffee pots stacked on their '
+    + 'tables, a minaret rising behind the roofs. NO text, NO letters'],
+  ['sarajevo-vijecnica', 'a pseudo-Moorish city hall on a river bank: '
+    + 'walls striped in horizontal bands of ochre and cream, an angled '
+    + 'corner front with an upper loggia of many horseshoe arches on '
+    + 'slender paired columns, carved panels between the windows and a '
+    + 'crenellated parapet along the flat roof; a stone embankment wall '
+    + 'and the river below it'],
+  ['sarajevo-latinalaissilta', 'a low Ottoman stone bridge over a '
+    + 'shallow river: FOUR shallow arches carried on three thick piers, '
+    + 'and above each pier one ROUND open hole pierced right through '
+    + 'the parapet wall, with a plain stone railing along the top', 'halpa'],
+  ['sarajevo-keltainen-linnake', 'a small hilltop gun bastion of '
+    + 'yellow sandstone: a curved crescent-shaped rampart wall with a '
+    + 'flat gravel terrace behind it and a few embrasures in the '
+    + 'parapet, standing on a steep grassy slope that falls away in '
+    + 'front of it', 'halpa'],
+
+  // ── Madrid (erä E2, 26.8.2026) ───────────────────────────────────
+  ['madrid-kuninkaanlinna', 'a vast white stone baroque palace on a '
+    + 'high plinth: a long symmetrical facade of three storeys, the '
+    + 'upper two tied together by tall engaged columns and pilasters, a '
+    + 'plain balustraded roofline with urns, rows of identical windows '
+    + 'and a wide empty paved courtyard in front'],
+  ['madrid-plaza-mayor', 'a completely ENCLOSED rectangular square: '
+    + 'four continuous ranges of identical red-ochre houses with slate '
+    + 'roofs and rows of small iron balconies, an arcade of round '
+    + 'arches running along the ground floor all the way round, one '
+    + 'taller bay with two slate spires on the far side, and a bronze '
+    + 'equestrian statue in the middle of the paving'],
+  ['madrid-puerta-del-sol', 'a broad crescent-shaped city square: '
+    + 'along one side a long red-and-white 18th-century post-office '
+    + 'palace whose central bay carries a square clock tower with a '
+    + 'small bell cupola, and at the near kerb a bronze statue of a '
+    + 'bear standing on its hind legs and reaching up into a small '
+    + 'tree. NO text, NO letters'],
+  ['madrid-cibeleen-aukio', 'a white marble fountain in the middle of '
+    + 'a square: a goddess sitting upright in a chariot drawn by TWO '
+    + 'LIONS walking side by side, the whole group set on carved rocks '
+    + 'in a wide basin; behind it a huge white palace with pinnacled '
+    + 'towers and a tall gabled centre', 'halpa'],
+  ['madrid-prado-museo', 'a long low neoclassical museum of warm brick '
+    + 'and pale stone: a projecting portico of six doric columns in the '
+    + 'middle of the front, an arcaded gallery of round arches running '
+    + 'the whole length of the ground floor on both sides of it, and a '
+    + 'bronze statue on a pedestal at the foot of the steps'],
+  ['madrid-alcalan-portti', 'a free-standing granite triumphal gate '
+    + 'standing alone in the middle of a roundabout: FIVE openings side '
+    + 'by side — three tall round archways in the centre and one '
+    + 'smaller square-topped opening at each end — engaged columns '
+    + 'between them, and carved trophies and reclining figures above '
+    + 'the cornice', 'halpa'],
+
+  // ── Lissabon (erä E2, 26.8.2026) ─────────────────────────────────
+  ['lissabon-glorian-koysirata', 'a short yellow funicular tram car '
+    + 'climbing a very steep narrow street: a squat boxy car with '
+    + 'rounded ends, its floor cut into steps so that it stands level '
+    + 'on the slope, running on a single track between tall plastered '
+    + 'houses with small iron balconies', 'halpa'],
+  ['lissabon-rossio', 'a long paved square: in the middle a tall '
+    + 'slender column on a stepped base with a small bronze figure on '
+    + 'top and a tiered fountain on each side of it, wave-patterned '
+    + 'black-and-white mosaic paving over the whole square, and at the '
+    + 'far end a pale neoclassical theatre with a six-columned portico'],
+  ['lissabon-sao-jorgen-linna', 'a hilltop moorish castle: a ring of '
+    + 'crenellated stone walls with tall square battlemented towers, a '
+    + 'gate tower reached by a stone bridge over a dry ditch, a flag on '
+    + 'the highest tower, and umbrella pines and olive trees on the '
+    + 'slope below'],
+  ['lissabon-tuomiokirkko', 'a fortress-like romanesque cathedral: TWO '
+    + 'squat square bell towers with crenellated tops flanking the '
+    + 'front, a large ROUND rose window between them above a plain '
+    + 'round-arched doorway, and heavy grey stone walls with very few '
+    + 'openings'],
+  ['lissabon-kauppatori', 'a huge open square facing a river: '
+    + 'identical pale yellow buildings with round-arched arcades along '
+    + 'their ground floors closing three sides of it, a bronze '
+    + 'equestrian statue in the middle, and in the far range a tall '
+    + 'ornate triumphal arch crowned with statues spanning the street '
+    + 'that leads out of the square'],
+  ['lissabon-kansallispanteoni', 'a white marble baroque church on a '
+    + 'greek-cross plan: one great white DOME on a windowed drum in the '
+    + 'middle, four small square corner towers with little domes of '
+    + 'their own, and a curved front with columns; the whole building '
+    + 'gleaming pale above a huddle of red-tiled rooftops'],
+
+  // ── Budapest (erä E2, 26.8.2026) ─────────────────────────────────
+  ['budapest-kalastajanlinnake', 'a white stone terrace on a hilltop '
+    + 'that only looks like a castle: SEVEN small lookout turrets with '
+    + 'pointed conical roofs standing in a row along the parapet, '
+    + 'joined by open arcaded walkways and cloister-like arches, with '
+    + 'broad stairways sweeping down in front of it'],
+  ['budapest-ketjusilta', 'a 19th-century chain suspension bridge over '
+    + 'a wide river: two massive pale stone gateway towers standing in '
+    + 'the water, each pierced by one tall round archway, heavy iron '
+    + 'chains slung in shallow curves between and beyond them, and a '
+    + 'stone lion lying on a pedestal at the bridge end', 'halpa'],
+  ['budapest-parlamenttitalo', 'an enormous neo-gothic parliament on a '
+    + 'river bank: a great ribbed DOME on a colonnaded drum in the '
+    + 'middle, long symmetrical wings of pointed windows stretching '
+    + 'away on both sides, spiky pinnacles and small spired turrets all '
+    + 'along the roofline, and an arcaded terrace at the water'],
+  ['budapest-gellertinvuori', 'a steep rocky hill above a river: a '
+    + 'long low crenellated stone fortress running along the summit, '
+    + 'and beside it on the very top a tall plain pedestal carrying a '
+    + 'slim bronze woman who holds a palm leaf high above her head with '
+    + 'both hands'],
+  ['budapest-pyhan-tapanin-kirkko', 'a neoclassical basilica: one '
+    + 'great DOME on a colonnaded drum over the crossing, and at the '
+    + 'front two identical square bell towers with small domed caps '
+    + 'flanking a columned porch with a triangular pediment between '
+    + 'them'],
+  ['budapest-suuri-kauppahalli', 'a great 19th-century market hall of '
+    + 'pale brick with red brick trim: a tall gabled front with a huge '
+    + 'arched window over the entrance and small corner turrets, and a '
+    + 'steep roof covered in patterned coloured glazed tiles laid in '
+    + 'zigzag bands; a long glass-and-iron roof running back behind '
+    + 'the gable'],
+  ['budapest-sankarien-aukio', 'a monument on a wide paved square: a '
+    + 'tall slender column with a winged figure on top holding a crown '
+    + 'in one hand and a double cross in the other, at its foot a '
+    + 'bronze group of SEVEN horsemen in fur cloaks, and behind them a '
+    + 'curved colonnade of paired columns on each side with statues '
+    + 'standing in the gaps between them'],
+
+  // ── Varsova (erä E2, 26.8.2026) ──────────────────────────────────
+  ['varsova-vanhankaupungin-tori', 'a small enclosed old town square: '
+    + 'three- and four-storey burgher houses in many different colours '
+    + 'standing shoulder to shoulder round all four sides, each with '
+    + 'its own decorated gable and rows of shuttered windows, cobbled '
+    + 'paving, and in the middle a small bronze mermaid holding a sword '
+    + 'and a round shield'],
+  ['varsova-varsovan-linna', 'a long brick-red baroque royal castle: a '
+    + 'wide symmetrical five-storey range with a plain roofline, and '
+    + 'rising from its centre one tall square clock tower with a green '
+    + 'copper cupola and a slender spire; a tall column with a small '
+    + 'statue on top standing on the square in front of it'],
+  ['varsova-kopernikuksen-tiedekeskus', 'a long low modern building '
+    + 'clad in vertical panels of rusty brown, copper and grey metal in '
+    + 'irregular stripes, with narrow slot windows, an open steel '
+    + 'trellis with climbing plants running along one side, and a flat '
+    + 'roof planted as a garden', 'halpa'],
+  ['varsova-pyhan-ristin-kirkko', 'a baroque church front of grey '
+    + 'stone: TWO identical towers with ornate curving multi-tiered '
+    + 'caps flanking a facade of pilasters, niches and statues, a '
+    + 'shallow curved pediment in the middle and a wide flight of steps '
+    + 'running the full width in front'],
+  ['varsova-varsovan-kansallismuseo', 'a stripped-classical 1930s '
+    + 'museum of pale limestone: a deeply recessed portico running '
+    + 'right across the front, carried on tall plain SQUARE piers with '
+    + 'no capitals and no bases, a flat roof slab above them, a broad '
+    + 'low flight of steps and a long rectangular fountain pool in '
+    + 'front'],
+  ['varsova-kulttuuri-ja-tiedepalatsi', 'a huge Stalinist skyscraper: '
+    + 'a tiered wedding-cake tower stepping inwards stage by stage from '
+    + 'a broad pillared base, small pinnacles and lanterns at every '
+    + 'setback, four large round clock faces near the top and a tall '
+    + 'slender spire above them'],
+
+  // ── Oslo (erä E3, 26.8.2026) ─────────────────────────────────────
+  ['oslo-kuninkaanlinna', 'a pale YELLOW neoclassical palace on a low '
+    + 'hill: a long symmetrical three-storey block with a plain flat '
+    + 'roofline, a projecting central bay with a row of tall columns '
+    + 'under a triangular pediment, and a bronze equestrian statue on a '
+    + 'high pedestal on the gravel forecourt in front'],
+  ['oslo-karl-johans-gate', 'a broad city street seen straight down '
+    + 'its length: rows of leafy trees along both sides, plain '
+    + 'four-storey 19th-century facades behind them, and at the far end '
+    + 'of the perspective a pale palace standing on a rise and closing '
+    + 'the view. NO text, NO letters, no readable signs'],
+  ['oslo-oslon-tuomiokirkko', 'a plain broad brick church tower: a '
+    + 'massive square shaft of pale brown brick with ONE large round '
+    + 'white clock face high on each side, and above it a dark copper '
+    + 'bell stage with an open arcaded lantern and a small pointed '
+    + 'spire; a sandstone gothic-revival porch with a rounded '
+    + 'ornamental gable at its foot and the low dark-roofed nave behind'],
+  ['oslo-kaupungintalo', 'a massive dark red brick city hall: TWO tall '
+    + 'square brick towers of equal height rising side by side from a '
+    + 'wide lower block between them, small windows in strict regular '
+    + 'rows, and an arcaded gallery along the ground floor facing a '
+    + 'paved square with statues'],
+  ['oslo-akershusin-linnoitus', 'a medieval stone fortress on a rocky '
+    + 'shore: thick pale walls rising straight out of the rock, two '
+    + 'square towers with pointed green copper spires and a round tower '
+    + 'between them, a stepped brick gable on one wing, and calm water '
+    + 'with a small sailing boat below'],
+  ['oslo-oopperatalo', 'a modern opera house like a white iceberg '
+    + 'risen out of the sea: broad flat SLOPING planes of white marble '
+    + 'running straight down into the water, a tall glass wall of '
+    + 'slender mullions rising at one end, and a plain metal-clad box '
+    + 'standing on the sloping roof'],
+
+  // ── Dublin (erä E3, 26.8.2026) ───────────────────────────────────
+  ['dublin-guinness-panimo', 'an old brewery block of dark '
+    + 'soot-blackened brick on a cobbled street: a long high wall '
+    + 'articulated by a row of tall blind arched recesses, iron '
+    + 'bollards along the kerb, and on the roof of the block a ROUND '
+    + 'drum of glass — a circular glazed bar — sitting above the brick'],
+  ['dublin-patrickin-katedraali', 'an early gothic cathedral of grey '
+    + 'stone: ONE massive square battlemented tower at the near corner '
+    + 'carrying a tall stone spire, a long low nave with buttresses and '
+    + 'lancet windows beside it, and a big pointed west window under a '
+    + 'gable'],
+  ['dublin-dublinin-linna', 'a castle yard: at one end a stout ROUND '
+    + 'medieval tower of rough grey stone with a crenellated top, and '
+    + 'joined to it a long Georgian range of red brick with pale stone '
+    + 'dressings, rows of sash windows and three round-arched carriage '
+    + 'passages through the middle of it'],
+  ['dublin-hapenny-silta', 'a narrow cast-iron footbridge over a city '
+    + 'river: ONE shallow elliptical arch of iron ribs, a white '
+    + 'latticed railing curving along it, and three ornate lamp '
+    + 'standards standing on the parapet', 'halpa'],
+  ['dublin-spire', 'a single enormous stainless steel needle standing '
+    + 'alone on a city street: a plain round shaft, widest at the '
+    + 'ground and tapering evenly all the way up to a hair-thin point, '
+    + 'mirror-smooth with no ornament of any kind', 'halpa'],
+  ['dublin-trinity-college', 'a university square: in the middle a '
+    + 'tall stone bell tower standing free — an open round-arched base, '
+    + 'above it a square stage with a seated statue on each corner, '
+    + 'then an octagonal lantern of pointed arched openings under a '
+    + 'ribbed dome and small cupola; a long Georgian range with an '
+    + 'arcaded ground floor along one side, big chestnut trees and '
+    + 'cobbled paving'],
+
+  // ── Barcelona (erä E3, 26.8.2026) ────────────────────────────────
+  ['barcelona-sagrada-familia', 'an unfinished modernist basilica: a '
+    + 'cluster of very tall tapering honeycombed towers of different '
+    + 'heights, their tips studded with coloured knobs, rising in a '
+    + 'bunch above a facade covered in dripping cave-like stone '
+    + 'sculpture; one construction crane leaning against a tower'],
+  ['barcelona-casa-batllo', 'a narrow city house with almost no '
+    + 'straight lines: a wavy facade shimmering with broken coloured '
+    + 'glass and ceramic mosaic, bone-like stone columns across the '
+    + 'bottom, balconies shaped like carved masks with iron rails, and '
+    + 'a scaly arched roof like a dragon’s back with a small turret and '
+    + 'cross at one end'],
+  ['barcelona-arc-de-triomf', 'a triumphal gate built entirely of RED '
+    + 'BRICK: one wide round archway, brick pilasters at the corners, a '
+    + 'carved stone relief panel above the arch, a band of small '
+    + 'shields running round the top and a small pinnacle at each '
+    + 'corner; palm trees along the promenade that runs through it', 'halpa'],
+  ['barcelona-musiikkipalatsi', 'an ornate red-brick concert hall on a '
+    + 'street corner: an upper gallery of slender columns each clad in '
+    + 'a DIFFERENT coloured mosaic pattern, the arches above them '
+    + 'filled with floral mosaic, a big stone sculpture group bursting '
+    + 'out of the corner below, and a balustrade of small mosaic '
+    + 'colonnettes'],
+  ['barcelona-boquerian-kauppahalli', 'the entrance of a covered '
+    + 'market: a wide shallow gable of iron trusses over the opening, '
+    + 'its edges set with rows of round coloured glass roundels, a big '
+    + 'stained-glass coat of arms in the middle of the gable, and rows '
+    + 'of stalls under striped awnings in the iron-roofed hall behind. '
+    + 'NO text, NO letters'],
+  ['barcelona-kolumbuksen-patsas', 'a tall monument at the end of a '
+    + 'boulevard by the sea: a slender round column on a broad ornate '
+    + 'base with winged figures and griffins at its corners, and on top '
+    + 'a bronze man in a long cloak pointing straight out over the '
+    + 'water with one arm and holding a rolled chart in the other; palm '
+    + 'trees around the base', 'halpa'],
+
+  // ── Edinburgh (erä E3, 26.8.2026) ────────────────────────────────
+  ['edinburgh-charlotte-square', 'a Georgian terrace of golden '
+    + 'sandstone facing a square: one long unbroken palace front of '
+    + 'three storeys, a slightly projecting centre with columns and a '
+    + 'triangular pediment, a rusticated ground floor with fanlight '
+    + 'doorways, iron railings along the pavement and a dense row of '
+    + 'chimney stacks along the roofline'],
+  ['edinburgh-edinburghin-linna', 'a castle on a sheer volcanic crag: '
+    + 'a curved half-round gun battery of dark stone rising straight '
+    + 'out of the rock face, buildings with crow-stepped gables and '
+    + 'small towers crowded behind it on the summit, a flag on the '
+    + 'highest roof and the bare cliff falling away below'],
+  ['edinburgh-st-gilesin-katedraali', 'a gothic town church with an '
+    + 'extraordinary tower: a square stone tower whose top is a CROWN — '
+    + 'eight thin flying arches springing inward from its corners and '
+    + 'meeting under a small central spire, an open stone crown '
+    + 'standing in the air — with the low pinnacled nave below it'],
+  ['edinburgh-greyfriars-bobby', 'a small bronze statue of a shaggy '
+    + 'little terrier sitting alert on top of a low ROUND polished '
+    + 'granite drinking fountain at a street corner, tall old '
+    + 'rubble-stone tenements behind it', 'halpa'],
+  ['edinburgh-calton-hill', 'a grassy hilltop crowded with odd '
+    + 'monuments: an UNFINISHED greek temple — a bare row of about '
+    + 'twelve huge doric columns carrying a short length of entablature '
+    + 'and then stopping abruptly in mid-air — and beside it a tall '
+    + 'round dark stone tower shaped like an upturned telescope with a '
+    + 'mast on top'],
+  ['edinburgh-holyroodin-palatsi', 'a low quadrangular palace of grey '
+    + 'stone: a front with TWO round battlemented towers with small '
+    + 'conical caps at its ends and a columned doorway with a little '
+    + 'clock cupola between them, and beside the palace the roofless '
+    + 'ruined nave of an abbey church with tall empty pointed windows'],
+
+  // ── Moskova (erä E4, 26.8.2026) ──────────────────────────────────
+  ['moskova-bolsoi-teatteri', 'a neoclassical theatre: a portico of '
+    + 'eight tall columns across the front under a plain triangular '
+    + 'pediment, and standing on the roof above the pediment a bronze '
+    + 'chariot drawn by FOUR horses abreast with a god holding a lyre; '
+    + 'a long plain wing of windows on each side'],
+  ['moskova-punainen-tori', 'a long paved square: along one side a '
+    + 'dark red brick fortress wall with a tall tented clock tower, at '
+    + 'the far end a fanciful dark red museum bristling with spiky '
+    + 'pinnacles and small tent roofs, and along the other side the '
+    + 'long arcaded glass-roofed front of an old department store. NO '
+    + 'text, NO letters'],
+  ['moskova-pyhan-vasilin-katedraali', 'a russian cathedral like a '
+    + 'bonfire of towers: NINE onion domes of different sizes on tall '
+    + 'slender drums, each dome patterned differently — spirals, '
+    + 'zigzags, facets, chevrons — clustered around one taller tented '
+    + 'spire, the whole standing on a low arcaded terrace with covered '
+    + 'stairways'],
+  ['moskova-moskovan-kreml', 'a long dark red brick fortress wall with '
+    + 'swallowtail battlements running along a river bank, tall tented '
+    + 'towers with spires at intervals along it and one taller gate '
+    + 'tower with a clock, and rising behind the wall the golden onion '
+    + 'domes of cathedrals and a tall white bell tower'],
+  ['moskova-vapahtajan-katedraali', 'a huge white stone russian '
+    + 'cathedral: one enormous GILDED dome on a tall windowed drum in '
+    + 'the middle and four smaller gilded domes on square corner towers '
+    + 'around it, deep arched gables along the white walls and an '
+    + 'arcaded stone terrace at its foot'],
+  ['moskova-tretjakovin-galleria', 'a fairy-tale museum front in '
+    + 'russian revival style: terracotta-red walls with a white central '
+    + 'bay crowned by a big keel-shaped ogee gable carrying a carved '
+    + 'relief of a horseman, a wide arched doorway beneath it, small '
+    + 'white gabled porches with tiled edging on both sides, and bands '
+    + 'of coloured majolica tiles across the wall'],
+
+  // ── Pietari (erä E4, 26.8.2026) ──────────────────────────────────
+  ['pietari-pietari-paavalin-linnoitus', 'a star-shaped fortress on a '
+    + 'low river island seen slightly from above: long low pale bastion '
+    + 'walls meeting in sharp points, and rising from the middle of '
+    + 'them a cathedral with a needle-thin GOLDEN spire, enormously '
+    + 'tall, with a tiny angel on its very tip'],
+  ['pietari-talvipalatsi', 'an immense baroque palace: a very long '
+    + 'facade painted pale GREEN with white columns and window frames, '
+    + 'two storeys of tall windows above a lower one, a balustraded '
+    + 'roofline crowded with statues and urns, and one tall granite '
+    + 'column with a figure on top standing on the square in front'],
+  ['pietari-verikirkko', 'a russian church beside a canal: a group of '
+    + 'onion domes of different heights, each patterned in a different '
+    + 'bright enamel — spirals, chequers, facets — clustered around a '
+    + 'tall tented central spire, with ornate gabled porches below and '
+    + 'a slim tent-roofed bell tower at the front'],
+  ['pietari-vaskiratsastaja', 'a bronze equestrian statue on a '
+    + 'colossal rough granite boulder shaped like a breaking wave: the '
+    + 'horse rears up on its hind legs at the very edge of the rock, a '
+    + 'snake writhing under its hooves, and the rider sits upright with '
+    + 'one arm flung straight out ahead', 'halpa'],
+  ['pietari-kazanin-katedraali', 'a cathedral with a great curved '
+    + 'colonnade: a huge semicircular sweep of tall corinthian columns '
+    + 'in four rows curving out from the building to embrace a small '
+    + 'square, and behind it a plain drum and dome with a cross'],
+  ['pietari-mariinski-teatteri', 'a pale GREEN and white theatre: a '
+    + 'symmetrical front of three storeys with a rounded projecting '
+    + 'central bay carried on columns, a shallow curved roof over the '
+    + 'auditorium behind it, and small square corner towers with '
+    + 'sculpted ornament'],
+
+  // ── Kiova (erä E4, 26.8.2026) ────────────────────────────────────
+  ['kiova-kontraktovan-aukio', 'a yellow-and-white classicist merchant '
+    + 'hall on a square: a heavy portico of six white doric columns '
+    + 'carrying a plain triangular pediment, rusticated yellow walls '
+    + 'with white window frames on both sides of it, and a broad flight '
+    + 'of steps between the columns'],
+  ['kiova-andreaksen-kirkko', 'a baroque church standing on a steep '
+    + 'hill high on a tall arcaded stone substructure, so that it seems '
+    + 'to float above the street: turquoise BLUE walls with white '
+    + 'columns and gilded trim, one dome with a gilded cap in the '
+    + 'middle and slender turrets with small gilded caps at its '
+    + 'corners, and a long flight of steps climbing to its door'],
+  ['kiova-pyhan-mikaelin-luostari', 'a Ukrainian baroque monastery '
+    + 'church: sky-BLUE walls with white pilasters and gilded ornament, '
+    + 'and above them a group of GILDED onion domes of different sizes '
+    + 'on tall drums; beside it a separate white bell tower rising in '
+    + 'narrowing tiers to a gilded cap'],
+  ['kiova-pyhan-sofian-katedraali', 'an ancient byzantine cathedral '
+    + 'rebuilt in white baroque plaster: one large GILDED dome in the '
+    + 'middle and many smaller GREEN domes on drums stepping down '
+    + 'around it, each carrying a slender gilded cross, above white '
+    + 'walls with pilasters and small arched windows'],
+  ['kiova-itsenaisyyden-aukio', 'a tall white monument on a wide city '
+    + 'square: a slender fluted column with a carved corinthian capital '
+    + 'standing on an ornate white base with figures in niches, and on '
+    + 'top a gilded woman holding a leafy branch high above her head; '
+    + 'behind it a low glass dome over an underground hall and a pale '
+    + 'columned building'],
+  ['kiova-kiovan-kultainen-portti', 'a reconstructed medieval city '
+    + 'gate standing alone in a park: a square whitewashed and brick '
+    + 'gatehouse with one tall arched passage through it, wooden '
+    + 'battlements and a shingled roof, and on top of it a tiny church '
+    + 'with a single GILDED onion dome; a fragment of old ruined wall '
+    + 'in a grey casing at its foot'],
+
+  // ── Riika (erä E4, 26.8.2026) ────────────────────────────────────
+  ['riika-vapaudenpatsas', 'a tall slender monument: a narrow pale '
+    + 'stone shaft on a broad stepped granite base with bronze figure '
+    + 'groups round its foot, and at the very top a bronze woman '
+    + 'holding THREE gilded stars up above her head with both hands', 'halpa'],
+  ['riika-kolme-veljesta', 'THREE narrow old town houses of different '
+    + 'heights standing side by side in one row on a lane: the widest '
+    + 'plain and pale with a simple stepped gable, the middle one with '
+    + 'a tall stepped gable and a carved stone doorway, and the '
+    + 'narrowest a slim ornate baroque front with a scrolled gable — '
+    + 'three different faces in one wall'],
+  ['riika-riian-tuomiokirkko', 'a big red-brick medieval cathedral: a '
+    + 'long steep-roofed nave with round-arched brick windows, and one '
+    + 'square brick tower carrying an octagonal green copper stage and '
+    + 'a bulbous baroque cupola with a spire and a weathercock on top'],
+  ['riika-pyhan-pietarin-kirkko', 'a red-brick gothic church with an '
+    + 'enormous tiered spire: a square brick tower whose top is a stack '
+    + 'of THREE open green copper galleries growing smaller one above '
+    + 'the other and ending in a thin needle with a gilded weathercock; '
+    + 'the brick nave with tall pointed windows below'],
+  ['riika-mustapaiden-talo', 'a richly decorated Hanseatic guild '
+    + 'house: a tall narrow brick front rising to a stepped-and-scrolled '
+    + 'renaissance gable crowded with stone figures, a round clock and '
+    + 'coats of arms high on the gable, tall arched windows below, and '
+    + 'a stone knight with a raised sword standing on a pedestal on the '
+    + 'square in front'],
+  ['riika-keskustori', 'FIVE identical enormous barrel-vaulted market '
+    + 'pavilions standing in a row: each one a long half-cylinder '
+    + 'hangar roof of ribbed metal on a low arcaded stone base, its end '
+    + 'wall a plain gable pierced by one huge arched window, all five '
+    + 'side by side and seen slightly from above'],
+
+  // ── Vilna (erä E5, 26.8.2026) ────────────────────────────────────
+  ['vilna-gediminaksen-torni', 'a stout OCTAGONAL red-brick tower '
+    + 'standing alone on a steep green hill: three low storeys with a '
+    + 'few small windows, a flat crenellated top with a flagpole and '
+    + 'flag, and fragments of ruined stone wall on the slope below it', 'halpa'],
+  ['vilna-vilnan-tuomiokirkko', 'a white cathedral built like a greek '
+    + 'temple: a wide portico of six tall columns under a plain '
+    + 'triangular pediment, THREE stone statues standing on the '
+    + 'roofline above it, and standing quite SEPARATELY beside it a '
+    + 'tall ROUND white bell tower rising in tiers to a small dome and '
+    + 'cross'],
+  ['vilna-pyhan-annan-kirkko', 'a small brick gothic church like red '
+    + 'lace: a facade of THREE slender pointed brick turrets with the '
+    + 'middle one taller, and between them one large flamboyant ogee '
+    + 'arch of moulded brick over the doorway, the whole wall woven out '
+    + 'of thin patterned brick shafts and little niches'],
+  ['vilna-vilnan-yliopisto', 'a university courtyard: pale yellow '
+    + 'three-storey ranges with red tiled roofs enclosing a rectangular '
+    + 'yard, an open arcade of round arches running along the ground '
+    + 'floor, patterned paving across the middle, and at one corner a '
+    + 'tall white baroque bell tower rising in narrowing tiers to a '
+    + 'small spire'],
+  ['vilna-uzupis', 'a tall slender column on a small square in an '
+    + 'artists’ quarter, with a bronze ANGEL standing on top, its wings '
+    + 'spread and a long trumpet raised to its lips; low old plastered '
+    + 'houses with tiled roofs around the square', 'halpa'],
+  ['vilna-aamuportti', 'a whitewashed city gate spanning a narrow '
+    + 'street: ONE round arched passage at street level, and above it a '
+    + 'chapel front with three tall arched windows between pilasters, a '
+    + 'gilded image glinting in the middle one, a triangular pediment '
+    + 'with a gilded sunburst above, and a tiny bellcote with a cross '
+    + 'on the very top'],
+
+  // ── Tallinna (erä E5, 26.8.2026) ─────────────────────────────────
+  ['tallinna-paksu-margareeta', 'an immensely thick squat ROUND cannon '
+    + 'tower of grey limestone at the end of a street: far wider than '
+    + 'it is tall, with only a few small openings in its huge wall, a '
+    + 'low conical red roof, and a stone gateway with a carved coat of '
+    + 'arms attached to its side', 'halpa'],
+  ['tallinna-olevisten-kirkko', 'a very tall church spire: a slim '
+    + 'green copper octagonal spire rising to a needle point above a '
+    + 'square limestone tower, so tall that it dwarfs the low '
+    + 'whitewashed gothic nave with its pointed windows and steep roof '
+    + 'at its foot'],
+  ['tallinna-raatihuoneentori', 'a medieval town hall on a square: a '
+    + 'long low limestone hall with an arcade of pointed arches along '
+    + 'the ground floor and a row of small windows above, and at one '
+    + 'end a slender octagonal tower rising in tiers to a small spire '
+    + 'with a weathervane of a watchman on top; gabled merchant houses '
+    + 'closing the square around it'],
+  ['tallinna-nevskin-katedraali', 'a russian revival cathedral of red '
+    + 'brick with pale stone banding: FIVE onion domes with gilded '
+    + 'crosses — one big one in the middle and four smaller ones around '
+    + 'it — above walls with arched gables, mosaic panels and a low '
+    + 'arcaded porch'],
+  ['tallinna-virun-portti', 'TWO ROUND stone gate towers of equal size '
+    + 'standing a street’s width apart, each with a pointed red-tiled '
+    + 'conical roof and a few small windows, ivy climbing their walls, '
+    + 'and the street running between them', 'halpa'],
+  ['tallinna-matkustajasatama', 'a passenger harbour seen from above: '
+    + 'two long low modern terminal buildings along a quay, a big '
+    + 'blunt-nosed car ferry moored at each of them, gangway bridges '
+    + 'reaching out to the ships, and open sea beyond. NO text, NO '
+    + 'letters on the hulls'],
+
+  // ── Ankara (erä E5, 26.8.2026) ───────────────────────────────────
+  ['ankara-ankaran-linna', 'a byzantine hilltop citadel: a crenellated '
+    + 'stone curtain wall with square towers set close together running '
+    + 'along the top of a rocky crag, a flag on the highest tower, and '
+    + 'small red-tiled houses crowded on the slope below the wall'],
+  ['ankara-augustuksen-temppeli', 'the ruin of a roman temple: two '
+    + 'long parallel walls of pale limestone blocks standing roofless '
+    + 'and open to the sky, an elaborately carved doorway frame between '
+    + 'them at the near end, the stumps of six column bases in front of '
+    + 'it, and a slender brick minaret rising close behind'],
+  ['ankara-roomalainen-kylpyla', 'a roman bath excavation: hundreds of '
+    + 'short PILLARS OF STACKED BRICKS standing in neat regular rows '
+    + 'across an open field where the floor has gone, low stone footing '
+    + 'walls running between them, and a few carved column capitals '
+    + 'lying on the grass at the edge'],
+  ['ankara-julianuksen-pylvas', 'a single roman column standing alone '
+    + 'on a lawn: about fifteen metres tall, built up of stacked stone '
+    + 'drums, its whole shaft cut into close HORIZONTAL RINGS from '
+    + 'bottom to top, with a leafy carved capital at the summit and '
+    + 'pieces broken off its upper edge', 'halpa'],
+  ['ankara-anatolian-sivilisaatioiden-museo', 'an Ottoman covered '
+    + 'market turned museum: a long low stone hall roofed by TEN small '
+    + 'lead domes in rows, a walled courtyard in front of it with a '
+    + 'plain arched entrance, and carved stone lions and reliefs '
+    + 'standing on the paving of the yard'],
+  ['ankara-linnanportin-kellotorni', 'a small clock tower built on top '
+    + 'of a ROUND stone bastion beside a castle gate: the tower is '
+    + 'plastered pale pink, octagonal at the top with open arches, and '
+    + 'has a white clock face with roman numerals below that; beside it '
+    + 'the gate arch is laid in alternating light and dark stones', 'halpa'],
+
+  // ── İzmir (erä E5, 26.8.2026) ────────────────────────────────────
+  ['izmir-izmirin-kellotorni', 'an ornate Ottoman clock tower: an '
+    + 'OCTAGONAL open base of horseshoe arches on paired slender '
+    + 'columns with small marble drinking fountains under the arches, '
+    + 'above it a tapering shaft with a round clock face, and at the '
+    + 'top an open pavilion of little columns carrying a pointed cap', 'halpa'],
+  ['izmir-kemeraltin-basaari', 'a narrow paved bazaar lane curving '
+    + 'gently out of sight: small shopfronts under striped awnings on '
+    + 'both sides, goods hanging above the doorways, and one big plane '
+    + 'tree spreading its shade over the street. NO text, NO letters, '
+    + 'no readable signs'],
+  ['izmir-hisarin-moskeija', 'a large Ottoman mosque seen over the '
+    + 'roofs of a bazaar quarter: one broad lead-grey central dome with '
+    + 'a crescent finial, three big domes stepping down on each side of '
+    + 'it and a row of small domes along the courtyard wall, and one '
+    + 'slender minaret with a single railed balcony beside them'],
+  ['izmir-sulu-han', 'the courtyard of an Ottoman caravanserai: TWO '
+    + 'storeys of arcaded galleries of pointed arches running right '
+    + 'round a square yard with small merchant rooms behind them, a '
+    + 'fountain basin in the middle of the paving, and one deep arched '
+    + 'gateway tall enough for a loaded pack animal'],
+  ['izmir-smyrnan-agora', 'an excavated roman market place: a long row '
+    + 'of tall CORINTHIAN columns standing on a stepped base along one '
+    + 'side, and in front of them a wall of massive open stone arches — '
+    + 'one wide arch and then a row of narrower ones — the vaults that '
+    + 'once carried the floor of the market above'],
+  ['izmir-salepcioglun-moskeija', 'a mosque of the 1900s: a square '
+    + 'prayer hall with dark GREEN marble walls framed in white marble, '
+    + 'one grey dome on top and three smaller domes over the entrance '
+    + 'side, two rows of arched windows with small white iron balconies '
+    + 'in front of them, and standing quite SEPARATE on its own stone '
+    + 'base an extremely slender round minaret with a single balcony'],
 ];
 
 const uusiksi = process.argv.includes('--uusiksi');
