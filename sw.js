@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1165';
+const CACHE = 'matkakirja-2026-08-09.1166';
 const SHELL = [
   './',
   './index.html',
@@ -545,6 +545,29 @@ const SHELL = [
   './assets/kartat/miniatyyrit/varsova-vanhankaupungin-tori.webp',
   './assets/kartat/miniatyyrit/varsova-varsovan-kansallismuseo.webp',
   './assets/kartat/miniatyyrit/varsova-varsovan-linna.webp',
+  './assets/kartat/miniatyyrit/barcelona-arc-de-triomf.webp',
+  './assets/kartat/miniatyyrit/barcelona-boquerian-kauppahalli.webp',
+  './assets/kartat/miniatyyrit/barcelona-casa-batllo.webp',
+  './assets/kartat/miniatyyrit/barcelona-kolumbuksen-patsas.webp',
+  './assets/kartat/miniatyyrit/barcelona-musiikkipalatsi.webp',
+  './assets/kartat/miniatyyrit/barcelona-sagrada-familia.webp',
+  './assets/kartat/miniatyyrit/dublin-dublinin-linna.webp',
+  './assets/kartat/miniatyyrit/dublin-guinness-panimo.webp',
+  './assets/kartat/miniatyyrit/dublin-hapenny-silta.webp',
+  './assets/kartat/miniatyyrit/dublin-patrickin-katedraali.webp',
+  './assets/kartat/miniatyyrit/dublin-spire.webp',
+  './assets/kartat/miniatyyrit/dublin-trinity-college.webp',
+  './assets/kartat/miniatyyrit/edinburgh-calton-hill.webp',
+  './assets/kartat/miniatyyrit/edinburgh-charlotte-square.webp',
+  './assets/kartat/miniatyyrit/edinburgh-edinburghin-linna.webp',
+  './assets/kartat/miniatyyrit/edinburgh-greyfriars-bobby.webp',
+  './assets/kartat/miniatyyrit/edinburgh-holyroodin-palatsi.webp',
+  './assets/kartat/miniatyyrit/oslo-akershusin-linnoitus.webp',
+  './assets/kartat/miniatyyrit/oslo-karl-johans-gate.webp',
+  './assets/kartat/miniatyyrit/oslo-kaupungintalo.webp',
+  './assets/kartat/miniatyyrit/oslo-kuninkaanlinna.webp',
+  './assets/kartat/miniatyyrit/oslo-oopperatalo.webp',
+  './assets/kartat/miniatyyrit/oslo-oslon-tuomiokirkko.webp',
   // Lippuikkunan versioliput (pilotti Suomi + Saksa, v711).
   './assets/liput/versiot/fin-valtiolippu.png',
   './assets/liput/versiot/fin-sotalippu.png',
