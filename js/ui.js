@@ -501,20 +501,28 @@ const FOKUS_KUVAN_REUNA = [0.16, 0.28, 0.42, 0.62, 1];
  * yleiskuvassa koko Eurooppa, fokusajon jälkeen yksi maa — ja laudan
  * yksiköissä mitoitettu laatta olisi lehdellä joko täplä tai kiekko
  * puoli ruutua. Laatta viritetään siksi ruutumittaan: halkaisija on
- * lehden perusnäkymässä noin 26 px, jolloin se ei hallitse lehteä
+ * lehden perusnäkymässä noin 23 px, jolloin se ei hallitse lehteä
  * muttei myöskään katoa.
  *
  * MITTA ON LEHDEN PERUSTASOLLA, EI JOKA ZOOMILLA (omistajan LOPULLINEN
  * linjaus 26.8.2026, kumoaa 25.8. kirjatun kiinteän ruutukoon):
  * *"pisteiden koko pitäisi olla koko ajan sama suhteessa kartan muihin
  * elementteihin"*. Kerroin on nyt VAKIO (fokusMerkkiSkaala): laatta on
- * 26 px siinä näkymässä, johon saapumisajo maahan päätyy, ja kasvaa tai
- * kutistuu siitä kartan mukana. Sama tekniikka kaikilla fokusnäkymän
- * merkkikerroksilla: kohdemerkit (js/fokuskohteet.js), kohtaamispiste
- * (js/fokuspiste.js), nostosymbolit (js/fokusnosto-symbolit.js) sekä
- * nappula ja aarremerkki (fokusMerkkiKerroin).
+ * FOKUS_LAATTA_PX siinä näkymässä, johon saapumisajo maahan päätyy, ja
+ * kasvaa tai kutistuu siitä kartan mukana. Sama tekniikka kaikilla
+ * fokusnäkymän merkkikerroksilla: kohdemerkit (js/fokuskohteet.js),
+ * kohtaamispiste (js/fokuspiste.js), nostosymbolit
+ * (js/fokusnosto-symbolit.js) sekä nappula ja aarremerkki
+ * (fokusMerkkiKerroin).
+ *
+ * MITTA PIENENI NOIN 12 % (26 → 23) omistajan pelitestitilauksesta
+ * 26.8.2026 (iPhone, Kreikka): *"Kaikkia pisteitä voisi hieman
+ * pienentää. Myös Ateenan pääpistettä voi hieman pienentää."* Samassa
+ * erässä kohdemerkit kutistuivat 15 % (js/fokuskohteet.js). Laatta
+ * pysyy silti kartan kiinnekohtana, ja napautusalue on ennallaan
+ * sormenkokoinen (FOKUS_LAATTA_OSUMA_PX).
  */
-const FOKUS_LAATTA_PX = 26;
+const FOKUS_LAATTA_PX = 23;
 /*
  * Napautusalue on suurempi kuin piirretty laatta: laatta on
  * fokusnäkymässä Tutki-napin paikka (alarivillä on vain Liiku), ja
@@ -524,13 +532,14 @@ const FOKUS_LAATTA_OSUMA_PX = 48;
 /*
  * SYKKIVÄN KEHÄN LEPOSÄDE RUUDUN PIKSELEINÄ (omistajan pelitestitilaus
  * 25.8.2026: *"Ateenan laatta sykkii kevyesti houkutellen
- * klikkaamaan"*). Laatan säde on FOKUS_LAATTA_PX / 2 = 13, joten 17
- * jättää kehän laatan ulkopuolelle mutta sen mittasuhteisiin; CSS
+ * klikkaamaan"*). Laatan säde on FOKUS_LAATTA_PX / 2 = 11,5, joten 15
+ * jättää kehän laatan ulkopuolelle mutta sen mittasuhteisiin — kehä
+ * kutistui laatan mukana (17 → 15, ks. FOKUS_LAATTA_PX); CSS
  * kasvattaa sitä sykkeen huipussa muutaman pikselin
  * (css .fokuslaatta-syke). Kehä on olemassa vain silloin, kun laatan
  * napautus oikeasti tekee jotain (fokusLaattaTutkii).
  */
-const FOKUS_LAATTA_SYKE_PX = 17;
+const FOKUS_LAATTA_SYKE_PX = 15;
 /*
  * AARREMERKIN SÄDE LAUDAN YKSIKÖINÄ (omistajan pelitestitilaus
  * 26.8.2026: käännetty laatta korvaa kaupungin laatan *"vain

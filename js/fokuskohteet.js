@@ -126,9 +126,45 @@ const KOHDE_MAAT = {
 /** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta). */
 const KOHDE_OSUMA_R = 22;
 
+/*
+ * MERKIN OSAT RUUDUN PIKSELEINÄ LEHDEN PERUSTASOLLA (ks. sääntö 3
+ * tiedoston alussa). Omistajan pelitestitilaus 26.8.2026 (iPhone,
+ * Kreikka): *"Kaikkia pisteitä voisi hieman pienentää."* Mitat ovat
+ * 15 % pienemmät kuin ennen (9,5 / 6,6 / 4,6 / 1,5) — merkki on
+ * lehden painojäljen päällä merkintä eikä nappi, ja sen löytämisen
+ * hoitaa muoto eikä koko.
+ *
+ * OSUMA-ALUE EI PIENENTYNYT. KOHDE_OSUMA_R on yhä 22 eli 44 px:n
+ * sormisääntö perustasolla, joten napautus osuu täsmälleen yhtä
+ * hyvin kuin ennen.
+ */
+const KOHDE_KOROSTUS_R = 8.1;
+const KOHDE_HALO_R = 5.6;
+const KOHDE_RENGAS_R = 3.9;
+const KOHDE_PISTE_R = 1.3;
+
 /** Pop-upin reunavara ja merkin ja kortin väliin jäävä rako. */
 const KOHDE_MARGINAALI = 8;
 const KOHDE_RAKO = 12;
+
+/*
+ * KORTTI IRTI RUUDUN YLÄ- JA ALALAIDASTA (omistajan pelitestitilaus
+ * 26.8.2026: *"Pop-up-ikkunat avautuvat nyt joko ylä- tai alalaitaan.
+ * Ne voisivat olla hieman enemmän irti laidoista, kun aukeavat, vähän
+ * lähempänä keskustaa."*).
+ *
+ * Kortti tarttui ennen laitaan KOHDE_MARGINAALIn eli kahdeksan pikselin
+ * päähän, ja pystysuunnassa juuri se on yleisin lopputulos: merkki on
+ * lehden ylä- tai alaosassa, ja kortti keskitetään sen kohdalle.
+ *
+ * VARA ON OSUUS karttapinnan korkeudesta, jotta se tarkoittaa samaa
+ * puhelimessa ja työpöydällä. Katto pitää huolen siitä, ettei kortille
+ * jäävä katto kutistu isolla ruudulla turhaan, ja pohjana on entinen
+ * marginaali. Vaakasuunta jää ennalleen: siellä kortti kääntyy merkin
+ * toiselle puolelle eikä puskeudu laitaan.
+ */
+const KOHDE_LAITAVARA_OSUUS = 0.1;
+const KOHDE_LAITAVARA_ENINTAAN = 96;
 
 /** Pop-upin kuvan pyyntöleveys: pieni viite, ei kortin iso kuva. */
 const KOHDE_KUVAN_PX = 480;
@@ -231,10 +267,10 @@ function piirraKohdemerkki(ui, ryhma, kohde) {
   g.setAttribute('tabindex', '0');
   g.setAttribute('aria-label', `${kohde.nimi}: avaa tietoruutu`);
   el('circle', { class: 'fokuskohde-osuma', r: KOHDE_OSUMA_R }, g);
-  el('circle', { class: 'fokuskohde-korostus', r: 9.5 }, g);
-  el('circle', { class: 'fokuskohde-halo', r: 6.6 }, g);
-  el('circle', { class: 'fokuskohde-rengas', r: 4.6 }, g);
-  el('circle', { class: 'fokuskohde-piste', r: 1.5 }, g);
+  el('circle', { class: 'fokuskohde-korostus', r: KOHDE_KOROSTUS_R }, g);
+  el('circle', { class: 'fokuskohde-halo', r: KOHDE_HALO_R }, g);
+  el('circle', { class: 'fokuskohde-rengas', r: KOHDE_RENGAS_R }, g);
+  el('circle', { class: 'fokuskohde-piste', r: KOHDE_PISTE_R }, g);
   const avaa = (tapahtuma) => {
     tapahtuma.stopPropagation();
     tapahtuma.preventDefault();
@@ -258,6 +294,102 @@ function piirraKohdemerkki(ui, ryhma, kohde) {
  * TYÖ TEHDÄÄN VAIN KUN SISÄLTÖ MUUTTUI. Zoomi muuttaa vain ankkuri-
  * ryhmien muunnosta, ei yhtäkään solmua.
  */
+/* ============ PÄÄLLEKKÄISET MERKIT ERILLEEN (esitys, ei data) ========
+ *
+ * Omistajan pelitestitilaus 26.8.2026 (iPhone-kuvakaappaus Kreikasta,
+ * Parnassoksen seutu): *"Tuossa menee kaksi pistettä päällekkäin.
+ * Niitä voisi keinotekoisesti siirtää poispäin toisistaan. Ei haittaa,
+ * vaikka ne eivät ole sitten aivan oikealla paikalla kartan mukaan."*
+ *
+ * Delfoi on Parnassoksen rinteellä ja siis laudalla vain noin viiden
+ * yksikön päässä vuoresta (ks. LEHDEN_VAHIN_OSUUS): merkkien vaaleat
+ * kehät peittivät toisensa, ja päällimmäinen — jälkimmäisenä piirretty —
+ * söi alemman napautuksen.
+ *
+ * SIIRTO ON ESITYSTÄ, EI DATAA. Sama sopimus kuin kohtaamispisteellä
+ * (js/fokuspiste.js PISTE_ERO_MIN): kohteen omat koordinaatit
+ * (js/packs/fokuskohteet-*.js) jäävät koskematta, ja vain PIIRTOPAIKKAA
+ * työnnetään yhteysakselia pitkin niin, että kehät juuri erkanevat.
+ * Popup ja napautus tulevat siirretystä paikasta ilman eri sääntöä,
+ * koska molemmat lukevat merkin oman ruutulaatikon.
+ *
+ * MITTA ELÄÄ KARTAN MUKANA. Merkit ovat ruudun pikseleitä LEHDEN
+ * PERUSTASOLLA (sääntö 3), joten vähimmäisetäisyys muunnetaan laudan
+ * yksiköiksi samalla vakioskaalalla — merkki ja sen väli kasvavat
+ * yhdessä, eli pari on päällekkäin joko joka zoomilla tai ei
+ * yhdelläkään.
+ */
+
+/**
+ * Merkkien vähin keskipiste-etäisyys ruudun pikseleinä perustasolla:
+ * vaalean kehän HALKAISIJA, jolloin kehät sipaisevat toisiaan mutta
+ * eivät mene limittäin. Isompi luku heittäisi merkit kauas oikealta
+ * paikaltaan, ja omistajan lupa siirtoon koski limittäisyyttä.
+ */
+const KOHDE_ERO_MIN = 2 * KOHDE_HALO_R;
+
+/**
+ * Rentoutuskierrosten määrä. Kolmen merkin ryppäässä yksi työntö voi
+ * luoda uuden limittäisyyden, joten pareja käydään läpi muutamaan
+ * kertaan; kierrokset loppuvat heti kun mikään ei enää liiku.
+ */
+const KOHDE_ERO_KIERROKSIA = 4;
+
+/**
+ * Esityssiirrot ryhmille (`sx`, `sy`) — deterministinen erottelupassi.
+ *
+ * DETERMINISTINEN KAHDESTA SYYSTÄ: parit käydään läpi aina samassa
+ * järjestyksessä (ryhmät ovat datan järjestyksessä), ja täsmälleen
+ * samassa pisteessä olevat merkit erotetaan indeksistä johdetulla
+ * kiinteällä suunnalla eikä satunnaisluvulla. Sama lehti antaa siis
+ * aina saman kartan.
+ *
+ * TYÖ TEHDÄÄN VAIN KUN MITTA MUUTTUI: vakioskaalalla vastaus on sama
+ * niin kauan kuin lehti ja ruutukoko pysyvät (ui.fokuskohdeEroAvain).
+ */
+function eritteleKohdeRyhmat(ui, s) {
+  const ryhmat = ui.fokuskohdeRyhmat ?? [];
+  if (!ryhmat.length) return;
+  const avain = `${ui.fokuskohdeAvain}:${s.toFixed(4)}`;
+  if (ui.fokuskohdeEroAvain === avain) return;
+  ui.fokuskohdeEroAvain = avain;
+  const vahin = KOHDE_ERO_MIN * s;
+  const paikat = ryhmat.map(({ x, y }) => ({ x, y }));
+  for (let kierros = 0; kierros < KOHDE_ERO_KIERROKSIA; kierros += 1) {
+    let liikkui = false;
+    for (let i = 0; i < paikat.length; i += 1) {
+      for (let j = i + 1; j < paikat.length; j += 1) {
+        const a = paikat[i];
+        const b = paikat[j];
+        let dx = b.x - a.x;
+        let dy = b.y - a.y;
+        let etaisyys = Math.hypot(dx, dy);
+        if (etaisyys >= vahin) continue;
+        if (!(etaisyys > 0)) {
+          // Täsmälleen samassa pisteessä: kiinteä suunta indeksistä,
+          // jotta myös tämä tapaus on sama joka ajolla.
+          const kulma = (j * Math.PI) / 4;
+          dx = Math.cos(kulma);
+          dy = Math.sin(kulma);
+          etaisyys = 1;
+        }
+        // Molempia puoliksi: pari erkanee, eikä kumpikaan siirry yksin.
+        const puolikas = (vahin - etaisyys) / 2;
+        const sx = (dx / etaisyys) * puolikas;
+        const sy = (dy / etaisyys) * puolikas;
+        a.x -= sx; a.y -= sy;
+        b.x += sx; b.y += sy;
+        liikkui = true;
+      }
+    }
+    if (!liikkui) break;
+  }
+  for (let i = 0; i < ryhmat.length; i += 1) {
+    ryhmat[i].sx = paikat[i].x - ryhmat[i].x;
+    ryhmat[i].sy = paikat[i].y - ryhmat[i].y;
+  }
+}
+
 /**
  * Ankkuriryhmien mittakaava — VAKIO, ei zoomin käänteisluku.
  *
@@ -265,13 +397,18 @@ function piirraKohdemerkki(ui, ryhma, kohde) {
  * vakioskaalassa se OHITETAAN: ele saa suurentaa merkit kartan mukana,
  * mikä on juuri se mitä omistaja pyysi. Vain lehdetön varapolku
  * (ui.fokusMerkkiSkaala) tarvitsee eleen vastaskaalan yhä.
+ *
+ * PAIKKA ON DATAN PAIKKA PLUS EROTTELUSIIRTO (eritteleKohdeRyhmat).
  */
 function asetaKohdeMittakaava(ui, suhde) {
   const s = ui.fokusMerkkiSkaala?.(suhde);
   if (!(s > 0)) return;
+  eritteleKohdeRyhmat(ui, s);
   const zoom = s.toFixed(4);
   for (const ryhma of ui.fokuskohdeRyhmat ?? []) {
-    ryhma.g.setAttribute('transform', `translate(${ryhma.x} ${ryhma.y}) scale(${zoom})`);
+    const x = (ryhma.x + (ryhma.sx ?? 0)).toFixed(2);
+    const y = (ryhma.y + (ryhma.sy ?? 0)).toFixed(2);
+    ryhma.g.setAttribute('transform', `translate(${x} ${y}) scale(${zoom})`);
   }
 }
 
@@ -287,6 +424,8 @@ export function paivitaFokuskohteet(ui) {
     ui.fokuskohdeAvain = avain;
     kerros.textContent = '';
     ui.fokuskohdeRyhmat = [];
+    // Erottelusiirrot lasketaan uusille ryhmille uudestaan.
+    ui.fokuskohdeEroAvain = null;
     ui.fokuskohdeMerkit = new Map();
     if (!kohteet.length) suljeFokuskohde(ui);
     else lataaKohdeTyyli();
@@ -362,6 +501,7 @@ function paivitaNakyvyys(ui, kerros, nakyva) {
 export function nollaaFokuskohteet(ui) {
   suljeFokuskohde(ui);
   ui.fokuskohdeAvain = null;
+  ui.fokuskohdeEroAvain = null;
   ui.fokuskohdeRyhmat = [];
   ui.fokuskohdeMerkit = new Map();
   if (ui.fokuskohdeKerros?.isConnected) ui.fokuskohdeKerros.textContent = '';
@@ -401,6 +541,10 @@ function kohdePolloPaneeli() {
  * puolelle ja kääntyy vasemmalle vasta jos ei mahdu; niin merkki jää
  * näkyviin kortin viereen.
  *
+ * PYSTYSUUNNAN LAIDAT OVAT VÄLJEMMÄT (KOHDE_LAITAVARA_OSUUS, omistajan
+ * pelitestitilaus 26.8.2026): ylä- tai alalaitaan asettuva kortti jää
+ * selvästi irti reunasta, lähemmäs keskustaa.
+ *
  * PÖLLÖN VÄISTÖ ON KAKSIVAIHEINEN. Paneeli on kiinteä ja asuu oikeassa
  * alanurkassa, mutta kapealla ruudulla (css/styles.css max-width 560px)
  * se levittäytyy reunasta reunaan. Jos paneelin vasemmalle puolelle
@@ -420,8 +564,18 @@ function asetaKohteenPaikka(ui) {
   if (!pane || !(pane.width > 0)) return;
   const m = auki.merkki.getBoundingClientRect();
 
+  /*
+   * PYSTYSUUNNAN LAIDAT OVAT VÄLJEMMÄT KUIN VAAKASUUNNAN
+   * (KOHDE_LAITAVARA_OSUUS): kortti aukeaa lähemmäs keskustaa eikä
+   * tartu ylä- tai alalaitaan kiinni.
+   */
+  const laitavara = Math.min(
+    KOHDE_LAITAVARA_ENINTAAN,
+    Math.max(KOHDE_MARGINAALI, Math.round(pane.height * KOHDE_LAITAVARA_OSUUS)),
+  );
   // Alanapit: vuorolaatikko kelluu kapealla ruudulla kartan päällä.
-  let alaraja = pane.bottom - KOHDE_MARGINAALI;
+  let alaraja = pane.bottom - laitavara;
+  const ylaraja = pane.top + laitavara;
   let oikeaRaja = pane.right - KOHDE_MARGINAALI;
   const vasenRaja = pane.left + KOHDE_MARGINAALI;
   const napit = document.querySelector('.turn-card')?.getBoundingClientRect();
@@ -441,7 +595,7 @@ function asetaKohteenPaikka(ui) {
     }
   }
 
-  const katto = Math.max(140, Math.round(alaraja - pane.top - KOHDE_MARGINAALI));
+  const katto = Math.max(140, Math.round(alaraja - ylaraja));
   auki.popup.style.maxHeight = `${katto}px`;
 
   const korkeus = auki.popup.getBoundingClientRect().height;
@@ -450,7 +604,7 @@ function asetaKohteenPaikka(ui) {
   vasen = Math.max(vasenRaja, Math.min(vasen, oikeaRaja - leveys));
   let ylin = m.top + m.height / 2 - korkeus / 2;
   ylin = Math.min(ylin, alaraja - korkeus);
-  ylin = Math.max(pane.top + KOHDE_MARGINAALI, ylin);
+  ylin = Math.max(ylaraja, ylin);
   auki.popup.style.left = `${Math.round(vasen - pane.left)}px`;
   auki.popup.style.top = `${Math.round(ylin - pane.top)}px`;
 }
