@@ -8,7 +8,7 @@
  * ui.luentaTauolla, ui.merkintaJatko).
  */
 
-import { kertojaTila, puheVoima } from './aani-ehdokkaat.js';
+import { asetaKertojaTila, kertojaTila, puheVoima } from './aani-ehdokkaat.js';
 import { lisaaTaustaVaimennus } from './aani-tausta.js';
 import { puheAlkoi, puheLoppui } from './ambience-stream.js';
 import {
@@ -73,24 +73,41 @@ const pehmene = (t) => Math.max(0, Math.min(1, t)) ** 1.8;
  * kytkettynä kuvakkeen päällä on vinoviiva, päälle kääntäminen
  * aloittaa ruudulla olevan merkinnän alusta.
  */
+/*
+ * KAKSI KYTKINTÄ YHDEKSI (omistajan pelitestipalaute v1119:
+ * *"matkapäiväkirjalaatikon kaiutinkuvake SYNKRONOIDAAN suoraan
+ * valikon KERTOJA-kytkimeen — sen painaminen kytkee kertojan äänen
+ * PYSYVÄSTI päälle/pois (sama tila molemmissa). Ei enää erillistä
+ * tapauskohtaista mykistystä — kaiutin on saman pysyvän kytkimen
+ * toinen kahva."*).
+ *
+ * Kytkimiä oli kaksi, ja ne tarkoittivat käytännössä samaa asiaa:
+ * päävalikon kertojarivi (js/aani-ehdokkaat.js kertojaTila) ja
+ * matkakirjakortin kaiutin (oma localStorage-avaimensa). Pelaaja
+ * saattoi mykistää kertojan kaiuttimesta ja ihmetellä, miksi valikko
+ * väitti kertojan olevan päällä.
+ *
+ * NYT KERTOJATILA ON AINOA TOTUUS. Nämä kaksi funktiota ovat sen
+ * kahva: 'ei' tarkoittaa kertojan olevan pois, mikä tahansa muu
+ * päällä. Vanha avain jätetään lukematta — sitä ei enää kirjoiteta,
+ * eikä laitteelle jäänyt vanha arvo saa ohittaa valikon valintaa.
+ */
 const LUENTA_KYTKIN_AVAIN = 'matkakirja-luenta';
 
 /** Onko matkakirjamerkintöjen automaattinen luenta päällä. */
 export function luentaKytkinPaalla() {
-  try {
-    return localStorage.getItem(LUENTA_KYTKIN_AVAIN) !== '0';
-  } catch {
-    return true; // yksityinen selaus: oletus on päällä
-  }
+  return kertojaTila() !== 'ei';
 }
 
 /** Kääntää kytkimen ja muistaa tilan seuraavaan istuntoon. */
 export function asetaLuentaKytkin(paalla) {
+  asetaKertojaTila(paalla ? 'pitka' : 'ei');
+  // Vanha erillinen avain pois laitteelta: se ei enää ohjaa mitään,
+  // eikä sen kuulu jäädä sekoittamaan seuraavaa versiota.
   try {
-    if (paalla) localStorage.removeItem(LUENTA_KYTKIN_AVAIN);
-    else localStorage.setItem(LUENTA_KYTKIN_AVAIN, '0');
+    localStorage.removeItem(LUENTA_KYTKIN_AVAIN);
   } catch {
-    /* yksityinen selaus: tila jää vain tälle istunnolle */
+    /* yksityinen selaus: mitään ei ollut poistettavaksi */
   }
 }
 
@@ -101,7 +118,14 @@ export function asetaLuentaKytkin(paalla) {
  * napautuksesta. Puuttuva tiedosto ei haittaa: virhe ohitetaan.
  */
 export function playIntroVoice(ui) {
-  if (!sfx.enabled) return;
+  /*
+   * KERTOJA ON OMA KYTKIMENSÄ (omistajan pelitestipalaute v1119:
+   * ÄÄNET-osiossa on kaksi erillistä kytkintä, KERTOJA ja
+   * TAUSTAÄÄNET). Ennen tässä katsottiin sound.js:n yleistä
+   * mykistystä, jolloin taustaäänten sammuttaminen vei kertojan
+   * mukanaan eivätkä kytkimet olleet erillisiä.
+   */
+  if (!luentaKytkinPaalla()) return;
   // Vain pitkä kertoja lukee avaustekstin: lyhyt lukee pelkän
   // matkakirjan kuvauksen ja ei kertojaa -tila ei mitään.
   if (kertojaTila() !== 'pitka') return;
@@ -344,7 +368,8 @@ export function lueKertojana(ui, teksti, { viive = 0, onLoppu = null } = {}) {
 export function playDiaryVoice(ui, url, { ekaLauseeseen = false, osuus = null, viive = 0 } = {}) {
   stopDiaryVoice(ui);
   if (ui.radioModuuli && !ui.radioModuuli.luentaSallittu()) return;
-  if (!url || !sfx.enabled) return;
+  // Kertojan oma kytkin, ei taustaäänten (ks. playIntroVoice).
+  if (!url || !luentaKytkinPaalla()) return;
   /*
    * Luennat tulevat ämpäristä (js/media.js aaniUrl), repon polku on
    * varareitti. Ämpärin pettäessä siirrytään siihen kerran ja

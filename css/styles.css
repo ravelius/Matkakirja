@@ -422,42 +422,71 @@ button, .brand, .turn-pill, .fact-card h2 {
  * kanssa valikko kutistui 82 pikseliin ja napit latautuivat päällekkäin.
  * Nappeja on kolme eikä rivin tarvitse rivittyä.
  */
+/*
+ * KAKSI KYTKINTÄ ALLEKKAIN (omistajan pelitestipalaute v1119:
+ * *"Erittele ÄÄNET-osioon kaksi selkeää omaa päälle/pois-kytkintä:
+ * KERTOJA (luennat) ja TAUSTAÄÄNET (ambienssi + efektit)"*).
+ *
+ * Kolme kuvakeneliötä vierekkäin oli arvoitus: mikä niistä oli päällä
+ * ja mitä kukin tarkoitti, selvisi vain kokeilemalla. Nyt rivillä on
+ * kuvake, nimi ja tila sanana — ja rivi on koko valikon levyinen, eli
+ * sormelle helppo kohde.
+ */
 .paavalikko .kertoja-valikko {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 0.5rem;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
-/*
- * Nappi on leveämpi kuin korkea (54 × 44). Kolme leveää nappia täyttää
- * valikon rivin laidasta laitaan ja jättää kuvakkeelle ilmaa
- * ympärilleen; korkeus pysyy 44 pikselissä, joka on sormen mitta.
- * `aspect-ratio` poistui, koska ruutu ei ole enää neliö.
- */
 .paavalikko .kertoja-valikko button {
-  flex-direction: column;
-  gap: 0.15rem;
-  width: 54px;
-  height: 44px;
-  padding: 0;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.35rem 0.7rem;
+  justify-content: flex-start;
   background: rgba(53, 39, 26, 0.55);
   border: 1.2px solid var(--line);
   border-radius: 8px;
 }
 
-.paavalikko .kertoja-valikko button svg { width: 26px; height: 26px; }
+.paavalikko .kertoja-valikko button svg { width: 24px; height: 24px; }
 
-/* Valittu äänitila erottuu kullalla, kuten valittu varuste. */
+.paavalikko .kertoja-valikko .aanikytkin-nimi {
+  flex: 1 1 auto;
+  text-align: left;
+  font-family: var(--font-type);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+}
+
+/* Tila sanana rivin oikeassa laidassa: "päällä" / "pois". */
+.paavalikko .kertoja-valikko .aanikytkin-tila {
+  flex: 0 0 auto;
+  font-family: var(--font-type);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+/* Päällä oleva kytkin erottuu kullalla, kuten valittu varuste. */
 .paavalikko .kertoja-valikko button.valittu {
   background: var(--panel-2);
   border-color: var(--accent-dark);
   color: var(--accent);
 }
 
-/* Täppä oli pudotusvalikon rivimerkintä; ruudukossa valinnan kertoo
-   kehys ja väri, ja täppä veisi tilaa kuvakkeelta. */
+/* Pois kytketty rivi on vaimea mutta luettava — ei katoa näkyvistä. */
+.paavalikko .kertoja-valikko button:not(.valittu) {
+  color: rgba(230, 214, 184, 0.62);
+}
+
+.paavalikko .kertoja-valikko button:not(.valittu) svg { opacity: 0.55; }
+
+/* Täppä oli pudotusvalikon rivimerkintä; kytkinrivillä tilan kertoo
+   sana ja väri. */
 .paavalikko .kertoja-valikko .tappa { display: none; }
 
 /*

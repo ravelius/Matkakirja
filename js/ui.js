@@ -175,7 +175,7 @@ import {
   hiljennaAmbienssi, palautaAmbienssi,
 } from './ambience-stream.js';
 import {
-  puheVoima, jaaAlku, kertojaTila, luentaVastaaTekstia,
+  AANITILA_TAPAHTUMA, puheVoima, jaaAlku, kertojaTila, luentaVastaaTekstia,
 } from './aani-ehdokkaat.js';
 import { BoardDie } from './die.js';
 /*
@@ -1818,6 +1818,14 @@ export class UI {
      * (js/luenta.js) ja kuvake saa vinoviivan, kun luenta on pois.
      */
     this.factKuuntele = document.getElementById('fact-kuuntele');
+    /*
+     * KAIUTIN JA VALIKON KERTOJA-KYTKIN OVAT SAMA TILA (omistajan
+     * pelitestipalaute v1119). Kytkin voi kääntyä valikosta, ja
+     * kuvakkeen vinoviivan on seurattava sitä heti — tapahtuma tulee
+     * js/aani-ehdokkaat.js:stä (AANITILA_TAPAHTUMA).
+     */
+    this.aanitilaKuuntelija = () => this.paivitaKaiutinTila();
+    document.addEventListener(AANITILA_TAPAHTUMA, this.aanitilaKuuntelija);
     this.factKuuntele.addEventListener('click', () => {
       const paalle = !luentaKytkinPaalla();
       asetaLuentaKytkin(paalle);
