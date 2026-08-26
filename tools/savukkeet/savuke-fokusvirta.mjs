@@ -675,7 +675,9 @@ const kartanTila = () => puhelin.evaluate(() => {
   return {
     panX: Math.round((ui.panX ?? 0) * 10) / 10,
     panY: Math.round((ui.panY ?? 0) * 10) / 10,
-    muunnos: ui.svg.style.transform,
+    // Siirto asuu kartan kuoressa (wrapper-siirto 26.8.2026), ei
+    // enää svg-juuressa.
+    muunnos: (ui.karttaKuori ?? ui.svg).style.transform,
     viewBox: ui.svg.getAttribute('viewBox'),
     vara: Math.round(ui.panVara ?? 0),
     varaY: Math.round(ui.panVaraY ?? 0),

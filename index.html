@@ -338,8 +338,29 @@
 
     <main class="stage">
       <section class="map-pane">
-        <svg id="board" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet"
-             role="img" aria-label="Afrikan aarrekartta"></svg>
+        <!--
+          KARTAN SIIRTOKUORI (omistaja 26.8.2026 ilta: *"scrollaus
+          parempi mutta ei taysin sujuva"* — wrapper-siirto).
+
+          Panorointi ja zoomieleet kirjoittavat CSS-muunnoksensa TÄHÄN
+          diviin eivätkä SVG-juureen. Ero on mitattu: muunnos
+          svg-juuressa likaa laudan asettelun kerran jokaisella
+          kehyksellä (Chromium CDP LayoutCount ~1,05 asettelua/kehys
+          skriptatussa panoroinnissa), koska SVG:n oma asettelu
+          lasketaan juuren muunnoksen läpi. Tavallisen divin muunnos on
+          kompositorin työtä eikä koske asetteluun lainkaan
+          (tools/savukkeet/savuke-panorointi.mjs vartioi lukua).
+
+          SVG jää kuoren sisään entisellään: viewBox, inline-mitat ja
+          flex-asemointi ovat yhä sen omia (js/kartta.js fitViewBox,
+          sovitaMannerZoom), ja kuori on paneelin kokoinen kehys, joka
+          liikkuu kartan mukana. iOS-varoitus ennallaan: SVG:hen ei saa
+          lisätä suodattimia — divin muunnos on turvallinen.
+        -->
+        <div class="kartta-kuori">
+          <svg id="board" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet"
+               role="img" aria-label="Afrikan aarrekartta"></svg>
+        </div>
         <!--
           KARTAN PÄÄLLÄ EI OLE OHJETEKSTIÄ (omistajan linjaus 13.8.2026:
           *"kartan päälle ei tule enää mitään ohjetekstiä"*). Tässä oli

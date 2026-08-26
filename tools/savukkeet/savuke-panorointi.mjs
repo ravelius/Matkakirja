@@ -22,16 +22,28 @@
  * v1115:n sääntö "ei asettelunlukuja silmukassa". Jälkeen: ~0,8
  * asettelua/kehys, p95 29,2 ms, 0 longtaskia.
  *
+ *   4. WRAPPER-SIIRTO (omistaja 26.8.2026 ilta: *"scrollaus parempi
+ *      mutta ei taysin sujuva"*). Jäljelle jäi yksi asettelu kehystä
+ *      kohti, ja se tuli siirron kirjoittamisesta SVG-JUUREEN: SVG:n
+ *      oma asettelu lasketaan juuren muunnoksen läpi, joten jokainen
+ *      `svg.style.transform` likasi laudan asettelun. Siirto
+ *      kirjoitetaan nyt tavalliseen div-kuoreen (.kartta-kuori,
+ *      index.html; js/kartta.js `get kuori`), jonka muunnos on
+ *      kompositorin työtä. Mitattu tällä savukkeella samalla ajolla:
+ *      ennen 1,05 → jälkeen 0,35 asettelua/kehys.
+ *
  * TÄMÄ SAVUKE VARTIOI RAKENNETTA, EI KELLOA. Kehysaikaraja flakkaisi
  * CI:n koneilla, joten väitteet ovat determinantteja:
  *
  *   1a/1b. Raahauksen aikana body.kartta-raahaus on päällä ja laatan
  *          syke on animaatioltaan vaiennettu (computed 'none').
  *   2.     Asetteluja syntyy skriptatussa panoroinnissa korkeintaan
- *          1,5 kpl kehystä kohti (CDP LayoutCount; ennen korjausta
- *          ~1,8–2,0, jälkeen ~0,8 — raja on väljä tarkoituksella).
- *   3.     Panorointi oikeasti liikuttaa karttaa (transform muuttuu)
- *          — muuten väitteet 1–2 mittaisivat tyhjää.
+ *          0,7 kpl kehystä kohti (CDP LayoutCount; ennen sykekorjausta
+ *          ~1,8–2,0, sen jälkeen ~1,05 ja wrapper-siirron jälkeen
+ *          ~0,35 — raja on väljä tarkoituksella, mutta se ei enää
+ *          päästä läpi siirtoa, joka likaa asettelun joka kehyksellä).
+ *   3.     Panorointi oikeasti liikuttaa karttaa (kuoren transform
+ *          muuttuu) — muuten väitteet 1–2 mittaisivat tyhjää.
  *   4.     Eleen jälkeen syke herää uudelleen (animaatio palaa).
  *
  * Fokuspohja syötetään paikallisesti samalla stubilla kuin
@@ -167,7 +179,10 @@ const ele = await sivu.evaluate(async (N) => {
     bubbles: true, cancelable: true, pointerId: 7, isPrimary: true,
     pointerType: 'touch', clientX: x, clientY: y, buttons: 1,
   });
-  const alkuMuunnos = ui.svg.style.transform;
+  // Siirto asuu kartan kuoressa (wrapper-siirto); vanha DOM ilman
+  // kuorta putoaa takaisin lautaan, kuten js/kartta.js `get kuori`.
+  const liikkuja = ui.karttaKuori ?? ui.svg;
+  const alkuMuunnos = liikkuja.style.transform;
   pane.dispatchEvent(new PointerEvent('pointerdown', o(cx, cy)));
   let raahausNahty = false;
   let sykeVaiennettu = null;
@@ -177,7 +192,7 @@ const ele = await sivu.evaluate(async (N) => {
     const ph = (i / N) * 2 * Math.PI;
     pane.dispatchEvent(new PointerEvent('pointermove',
       o(cx + 180 * Math.sin(2 * ph), cy + 90 * Math.sin(3 * ph))));
-    if (ui.svg.style.transform !== alkuMuunnos) muuttui = true;
+    if (liikkuja.style.transform !== alkuMuunnos) muuttui = true;
     if (document.body.classList.contains('kartta-raahaus')) {
       raahausNahty = true;
       // Luetaan kerran keskeltä elettä: computed-tyyli kertoo, onko
@@ -213,16 +228,17 @@ vaadi('1b laatan syke vaikenee raahauksen ajaksi', ele.sykeVaiennettu === true,
 vaadi('3 panorointi liikuttaa karttaa', ele.muuttui);
 
 /*
- * Väljä raja: nyt ~0,8 asettelua/kehys (svg-juuren transform-
- * kirjoitus likaa asettelun kerran kehyksessä — tunnettu jäännös,
- * ks. raportti 26.8.2026), ennen korjausta ~1,8–2,0. Raja 1,5
- * erottaa regression ilman että normaali vaihtelu kaataa ajoa.
+ * Väljä raja: nyt ~0,35 asettelua/kehys (wrapper-siirto 26.8.2026 —
+ * siirto kirjoitetaan div-kuoreen eikä svg-juureen). Ennen sitä ~1,05
+ * ja ennen sykekorjausta ~1,8–2,0. Raja 0,7 päästää läpi normaalin
+ * vaihtelun mutta kaatuu, jos siirto palaa likaamaan asettelun joka
+ * kehyksellä.
  */
 const asetteluaPerKehys = (layoutJalkeen - layoutEnnen) / KEHYKSIA;
 console.log(`      mitattu: ${asetteluaPerKehys.toFixed(2)} asettelua/kehys`);
 vaadi('2 asettelu ei palaa siirtosilmukkaan',
-  asetteluaPerKehys <= 1.5,
-  `${asetteluaPerKehys.toFixed(2)} asettelua/kehys (raja 1,5)`);
+  asetteluaPerKehys <= 0.7,
+  `${asetteluaPerKehys.toFixed(2)} asettelua/kehys (raja 0,7)`);
 
 // Eleen jälkeen syke herää: vaimennus oli raahausluokan varassa eikä
 // jäänyt päälle.

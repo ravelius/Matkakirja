@@ -971,6 +971,39 @@ button, .brand, .turn-pill, .fact-card h2 {
   touch-action: none;
 }
 
+/*
+ * KARTAN SIIRTOKUORI (omistaja 26.8.2026 ilta: *"scrollaus parempi
+ * mutta ei taysin sujuva"* — wrapper-siirto).
+ *
+ * Kuori on paneelin kokoinen kehys SVG:n ympärillä, ja SE liikkuu
+ * panoroitaessa ja nipistettäessä — ei SVG-juuri (js/kartta.js
+ * asetaPan, paivitaNipistys, ajaKamera). Syy on mitattu: muunnos
+ * svg-juuressa likaa laudan asettelun kerran kehyksessä, tavallisen
+ * divin muunnos ei koske asetteluun lainkaan.
+ *
+ * Kuori on itse flex-säiliö, jotta SVG:n oma asemointi säilyy
+ * täsmälleen ennallaan: lähikuvassa se on paneelia isompi ja
+ * `align-self: flex-start`, aloituskartalla `center` (js/kartta.js
+ * sovitaAloitusZoom / sovitaMannerZoom kirjoittavat inline-mitat
+ * yhä SVG:hen). Kuori ei leikkaa mitään — leikkaus on .map-panen
+ * `overflow: hidden`, ja juuri siksi kuori saa liikkua vapaasti.
+ *
+ * Origo vasempaan yläkulmaan: nipistyksen muunnoslaskenta
+ * (js/kartta.js paivitaNipistys) olettaa sen, ja nyt oletus pitää
+ * paikkansa tarkalleen — kuoren kulma ON paneelin kulma.
+ */
+.kartta-kuori {
+  flex: 1 1 auto;
+  align-self: stretch;
+  min-width: 0;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transform-origin: 0 0;
+  touch-action: none;
+}
+
 #board {
   width: 100%;
   height: 100%;
@@ -978,9 +1011,11 @@ button, .brand, .turn-pill, .fact-card h2 {
   /* Kartta on staattinen: koko lauta näkyy kerralla ilman zoomausta. */
   touch-action: manipulation;
   /* Nipistys voi alkaa myös kokonäkymästä, ja sen muunnoslaskenta
-     (js/ui.js paivitaNipistys) olettaa origon vasempaan yläkulmaan.
+     (js/kartta.js paivitaNipistys) olettaa origon vasempaan yläkulmaan.
      Oletusorigo (50 % 50 %) veisi eleen ankkurin keskelle ja kartta
-     karkaisi sormien alta heti ensimmäisellä liikkeellä. */
+     karkaisi sormien alta heti ensimmäisellä liikkeellä. Muunnos
+     kirjoitetaan nykyään kuoreen, mutta origo jää tähän varmuuden
+     vuoksi: sääntö on halpa eikä saa kadota kuoren mukana. */
   transform-origin: 0 0;
 }
 
@@ -1033,10 +1068,23 @@ body.manner-zoom #board {
   /* Raahaus ei saa maalata kartan tekstejä valituiksi. */
   user-select: none;
   -webkit-user-select: none;
-  will-change: transform;
   /* Siirto ja zoomausliuku lasketaan elementin vasemmasta yläkulmasta
-     (js/ui.js liukuZoomiin), joten origo ei saa olla keskellä. */
+     (js/kartta.js asetaPan), joten origo ei saa olla keskellä. */
   transform-origin: 0 0;
+}
+
+/*
+ * OMA KERROS KUORELLE, EI SVG:LLE (wrapper-siirto 26.8.2026).
+ *
+ * will-change oli ennen #boardilla, jolloin selain nosti SVG-juuren
+ * omalle kerrokselleen — ja juuri siihen juureen kirjoitettiin myös
+ * siirto, jonka asettelunlikaus oli jäljelle jäänyt nykimisen syy.
+ * Nyt lippu on sillä elementillä, joka oikeasti liikkuu; SVG saa
+ * pysyä paikallaan kuoren sisällä.
+ */
+body.aloitus-zoom .kartta-kuori,
+body.manner-zoom .kartta-kuori {
+  will-change: transform;
 }
 
 /*

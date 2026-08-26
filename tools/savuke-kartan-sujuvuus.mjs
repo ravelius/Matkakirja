@@ -229,7 +229,7 @@ const suhde = () => sivu.evaluate(() => {
 async function panoroi(matka = 200, askelia = 20) {
   if (WEBKIT) {
     await sivu.evaluate(async ({ matka: m, askelia: n }) => {
-      const pane = window.matkakirja.ui.svg.parentElement;
+      const pane = window.matkakirja.ui.mapPane;
       const x = 195; const y = 500;
       const laheta = (tyyppi, px, py, lisa = {}) => pane.dispatchEvent(new PointerEvent(tyyppi, {
         pointerId: 7, pointerType: 'touch', isPrimary: true,
@@ -263,7 +263,7 @@ async function panoroi(matka = 200, askelia = 20) {
 async function nipista(kerroin, askelia = 14, viiveMs = 16) {
   if (WEBKIT) {
     await sivu.evaluate(async ({ kerroin: k, askelia: n, viiveMs: v }) => {
-      const pane = window.matkakirja.ui.svg.parentElement;
+      const pane = window.matkakirja.ui.mapPane;
       const kx = 195; const ky = 420; const alku = 120;
       const sormi = (id, x, y) => ({ identifier: id, clientX: x, clientY: y, pageX: x, pageY: y });
       const parit = (d) => [sormi(1, kx - d / 2, ky), sormi(2, kx + d / 2, ky)];
@@ -958,7 +958,7 @@ vaadi('salamasarjan jälkeen jokainen näkyvä ruutu piirtyy oikealla tarkkuudel
  */
 await sivu.waitForTimeout(1500);
 await sivu.evaluate(() => {
-  const pane = window.matkakirja.ui.svg.parentElement;
+  const pane = window.matkakirja.ui.mapPane;
   const laheta = (tyyppi, x, y) => pane.dispatchEvent(new PointerEvent(tyyppi, {
     bubbles: true, cancelable: true, composed: true, pointerId: 11,
     pointerType: 'touch', isPrimary: true, clientX: x, clientY: y, buttons: 1,

@@ -589,7 +589,7 @@ const viivaimet = await sivu.evaluate(async () => {
   };
   requestAnimationFrame(kehys);
 
-  const pane = ui.svg.parentElement;
+  const pane = ui.mapPane;
   const r = alkuRect.call(pane);
   const x0 = r.x + r.width / 2;
   const y0 = r.y + r.height / 2;

@@ -101,7 +101,7 @@ vaadi('fokusmoodi päällä ja nappula Ateenassa',
 /** Näkymän keskipiste laudan yksiköissä — sama kaava kuin kartta.js:ssä. */
 const keskipiste = () => sivu.evaluate(() => {
   const { ui } = window.matkakirja;
-  const pane = ui.svg.parentElement;
+  const pane = ui.mapPane;
   const box = ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
   const ylaReuna = ui.zoomYlaReuna ?? box.y;
   return {
@@ -125,7 +125,7 @@ vaadi('valloitettu alue on olemassa ja pelikaupunki on sen sisällä',
 /** Yksi pitkä veto kartan yli. Palauttaa keskipisteen ennen ja jälkeen. */
 async function veda(dx, dy) {
   const laatikko = await sivu.evaluate(() => {
-    const r = window.matkakirja.ui.svg.parentElement.getBoundingClientRect();
+    const r = window.matkakirja.ui.mapPane.getBoundingClientRect();
     return { x: r.x, y: r.y, w: r.width, h: r.height };
   });
   const ennen = await keskipiste();
@@ -194,7 +194,7 @@ const ajo = await sivu.evaluate(async (raja) => {
   const kohde = { x: raja.x0 - 900, y: raja.y1 - 400 };
   await ui.kartta.ajaKamera({ ...kohde, kerroin: 3 }, { kesto: 0 });
   await new Promise((r) => setTimeout(r, 400));
-  const pane = ui.svg.parentElement;
+  const pane = ui.mapPane;
   const box = ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
   return {
     kohde,
@@ -213,7 +213,7 @@ const keskeytys = await sivu.evaluate(async () => {
   ui.kartta.ajaKamera({ x: ateena.x, y: ateena.y, kerroin: 3 }, { kesto: 1600 });
   await new Promise((r) => setTimeout(r, 200));
   const kesken = Boolean(ui.kartta.kameraAjo);
-  ui.svg.parentElement.dispatchEvent(new PointerEvent('pointerdown', {
+  ui.mapPane.dispatchEvent(new PointerEvent('pointerdown', {
     bubbles: true, clientX: 200, clientY: 400, pointerId: 7,
   }));
   await new Promise((r) => setTimeout(r, 120));

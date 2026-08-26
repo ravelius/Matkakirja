@@ -57,19 +57,21 @@
  *
  * ── KARTAN LIIKE ILMAN UUTTA PIIRTOA ───────────────────────────────
  *
- * Panorointi on CSS-muunnos kartan SVG:llä (js/kartta.js asetaPan) eikä
+ * Panorointi on CSS-muunnos kartan SIIRTOKUORELLA (js/kartta.js
+ * asetaPan; wrapper-siirto 26.8.2026 — ennen kohde oli SVG-juuri) eikä
  * uusi piirto, joten mikään ei kutsu tätä moduulia kesken eleen. Kupla
  * ja symbolit seuraavat siksi omaa vahtiaan: MutationObserver kartan
- * SVG:n `style`- ja `viewBox`-attribuuteilla (nostoVahdiKarttaa). Työ
- * niputetaan yhteen requestAnimationFrameen, ja se on kaksi
+ * SVG:n `viewBox`- ja `style`-attribuuteilla sekä kuoren `style`-
+ * attribuutilla (nostoVahdiKarttaa). Työ niputetaan yhteen
+ * requestAnimationFrameen, ja se on kaksi
  * setAttributea ja yksi mittaus — ei uusia solmuja eikä uutta ladontaa.
  * js/ui.js:ään ei siis tarvita riviä lisää.
  *
  * ── MIKSI document.body EIKÄ .map-pane ─────────────────────────────
  *
  * Kartan eleet (panorointi, zoomi) kuunnellaan karttapaneelista
- * (js/kartta.js: `pane = this.ui.svg.parentElement`), ja paneelin
- * sisällä olevan kelluvan pinnan napautus pitää erikseen tunnistaa
+ * (js/kartta.js: `pane = this.ui.mapPane`), ja paneelin sisällä
+ * olevan kelluvan pinnan napautus pitää erikseen tunnistaa
  * KELLUVA_UI-listalta. Bodyssa oleva kiinteä kerros ei ole paneelin
  * jälkeläinen lainkaan, joten sen napautus ei kuplii karttaan eikä
  * js/kartta.js:ää tarvitse koskea — sama ratkaisu kuin fokusvirran
@@ -833,6 +835,14 @@ function nostoVahdiKarttaa(ui) {
   const mittaaUudelleen = () => { nostoMittaaKupla(ui); pyyda(); };
   const vahti = typeof MutationObserver === 'undefined' ? null : new MutationObserver(pyyda);
   vahti?.observe(ui.svg, { attributes: true, attributeFilter: ['style', 'viewBox'] });
+  /*
+   * SIIRTOKUORI MYÖS VAHDIN ALLE (wrapper-siirto 26.8.2026).
+   * Panoroinnin muunnos kirjoitetaan kuoreen eikä lautaan, joten ilman
+   * tätä kupla jäisi paikalleen kun kartta liikkuu sen alta.
+   */
+  if (ui.karttaKuori) {
+    vahti?.observe(ui.karttaKuori, { attributes: true, attributeFilter: ['style'] });
+  }
   globalThis.addEventListener?.('resize', mittaaUudelleen);
   globalThis.addEventListener?.('orientationchange', mittaaUudelleen);
   ui.fokusnostoVahtiSvg = ui.svg;
