@@ -18,7 +18,7 @@
     "h": 4000
   },
   "tiedosto": "CHN.webp",
-  "tehty": "2026-08-25",
+  "tehty": "2026-08-26",
   "yleinen": true,
   "ikkuna": {
     "lonKeski": 104.18741749999992,
@@ -30,13 +30,13 @@
   "paikat": [
     "Chengdu",
     "Ürümqi",
-    "Guangzhou",
     "Wuhan",
     "Tianjin",
     "Chongqing",
     "Shenyeng",
     "Nanjing",
-    "Guiyang"
+    "Guiyang",
+    "Harbin"
   ],
   "tasaus": [
     {

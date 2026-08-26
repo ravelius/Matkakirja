@@ -18,7 +18,7 @@
     "h": 4000
   },
   "tiedosto": "ZAF.webp",
-  "tehty": "2026-08-25",
+  "tehty": "2026-08-26",
   "yleinen": true,
   "ikkuna": {
     "lonKeski": 24.681529000000012,
@@ -28,7 +28,6 @@
   },
   "maamuodonEro": 4.2,
   "paikat": [
-    "Cape Town",
     "Johannesburg",
     "Durban",
     "Port Elizabeth",
@@ -36,7 +35,8 @@
     "Welkom",
     "East London",
     "George",
-    "Upington"
+    "Upington",
+    "Middelburg"
   ],
   "tasaus": [
     {

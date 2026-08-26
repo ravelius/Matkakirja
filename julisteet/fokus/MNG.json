@@ -18,7 +18,7 @@
     "h": 4003
   },
   "tiedosto": "MNG.webp",
-  "tehty": "2026-08-25",
+  "tehty": "2026-08-26",
   "yleinen": true,
   "ikkuna": {
     "lonKeski": 103.821368,
@@ -28,7 +28,6 @@
   },
   "maamuodonEro": 1.5,
   "paikat": [
-    "Ulaanbaatar",
     "Erdenet",
     "Choibalsan",
     "Dund-Us",
@@ -36,7 +35,8 @@
     "Darkhan",
     "Ulaangom",
     "Altai",
-    "Arvaikheer"
+    "Arvaikheer",
+    "Mörön"
   ],
   "tasaus": [
     {
