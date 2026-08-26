@@ -632,6 +632,70 @@ export const FOKUSKOHTEET_GRC = [
       lahde: 'Holger Uwe Schmitt, Wikimedia Commons (CC BY-SA 4.0)',
     },
   },
+  /*
+   * AKROPOLIS — ENSIMMÄINEN MULTIMEDIAKOHDE (omistajan tilaus v1119,
+   * kohta 19: *"omistaja löysi acropolisvirtualtour.gr ja haluaa sen
+   * aukeavan PELIN SISÄLLÄ ikkunaan, lisättynä suoraan kartalle omalla
+   * nähtävyys/multimedia-ikonilla"*).
+   *
+   * Tyyppi 'multimedia' ja kenttä `kierros` ovat uusia: kartalla merkki
+   * on SILMÄ pisteen sijaan (js/fokuskohteet.js piirraSilmamerkki), ja
+   * tietoruudun "Avaa kierros" -nappi nostaa kierroksen pelin omaan
+   * ikkunaan (avaaKierros).
+   *
+   * UPOTUS ON TARKISTETTU: acropolisvirtualtour.gr ei lähetä
+   * X-Frame-Options- eikä CSP-otsaketta (curl 26.8.2026), joten iframe
+   * kelpaa. Ikkunassa on silti aina ulkoinen linkki varalta.
+   *
+   * 23,7261 E / 37,9715 N — en-Wikipedia "Acropolis of Athens"
+   * (37°58′17″N 23°43′34″E). Sama piste kuin Ateenan kohtaamispisteellä
+   * (js/packs/fokusvirta-ateena.js): Nikos työskentelee siellä.
+   */
+  {
+    id: 'akropolis',
+    nimi: 'Akropolis',
+    tyyppi: 'multimedia',
+    kysymykset: [
+      'Miksi Parthenon rakennettiin juuri kalliolle?',
+      'Mitä Akropoliilla tehtiin ennen temppeleitä?',
+    ],
+    korostukset: ['Parthenon|Parthenonin'],
+    /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
+    nappi: 'Kalliolinna, jonka voi kiertää itse',
+    /*
+     * Samat luvut kuin Ateenan kohtaamispisteellä
+     * (js/packs/fokusvirta-ateena.js kohtaamispiste): sama kallio, sama
+     * mittaus. Yksi paikka, ei kahta pyöristystä.
+     */
+    laudat: {
+      maailmankartta: { x: 6624.2, y: 1881.9 },
+      europe: { x: 666.7, y: 894.9 },
+    },
+    teksti: 'Akropolis on kalliolinna keskellä Ateenaa: 156 metrin '
+      + 'kalkkikivikallio, jonka päällä seisovat Parthenonin, '
+      + 'Erekhtheionin ja Athena Niken temppelit sekä Propylaia-portti. '
+      + 'Nykyiset rakennukset pystytettiin 400-luvulla eaa. Perikleen '
+      + 'aikana, mutta kalliolla oli asuttu ja rakennettu jo tuhansia '
+      + 'vuosia aiemmin. Kreikan kulttuuriministeriö on kuvannut alueen '
+      + '360 asteen panoraamoina, joita voi kierrellä pysähtymättä '
+      + 'yhteenkään jonoon.',
+    lahde: 'en-Wikipedia "Acropolis of Athens", johdanto-osa '
+      + '(tarkistettu 26.8.2026).',
+    kierros: {
+      url: 'https://acropolisvirtualtour.gr',
+      otsikko: 'Akropolis 360°',
+      nappi: 'Avaa virtuaalikierros',
+      lahde: 'Acropolis Virtual Tour — Hellenic Ministry of Culture',
+      varaTeksti: 'Kierros ei aukea pelin sisällä. Se avautuu laitteen '
+        + 'omassa selaimessa.',
+    },
+    kuva: {
+      tiedosto: 'The Parthenon in Athens.jpg',
+      selite: 'Parthenon Akropoliin kalliolla — temppeli valmistui '
+        + 'vuonna 432 eaa.',
+      lahde: 'Steve Swayne, Wikimedia Commons (CC BY 2.0)',
+    },
+  },
 ];
 
 const TUNNUKSITTAIN = new Map(FOKUSKOHTEET_GRC.map((k) => [k.id, k]));

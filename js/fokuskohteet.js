@@ -191,6 +191,14 @@ const KOHDE_TYYPIT = {
   meri: 'Meri',
   saari: 'Saari',
   joki: 'Joki',
+  /*
+   * MULTIMEDIA (omistajan tilaus v1119, kohta 19: *"uusi
+   * karttamerkkityyppi 'multimedia/nähtävyyssivu' — SILMÄ-ikoni"*).
+   * Kohde, jolla on katsottavaa muualla kuin lehden sivulla:
+   * virtuaalikierros, panoraama tai vastaava. Merkki on silmä, ja
+   * napautus avaa kierroksen pelin omaan ikkunaan (avaaKierros).
+   */
+  multimedia: 'Katsottavaa',
   muu: 'Kartalla',
 };
 
@@ -272,6 +280,24 @@ function varmistaKohdekerros(ui) {
  * Korostusrengas on valmiina paikallaan läpinäkyvänä — auki oleva
  * kohde saa sen näkyviin luokalla eikä uudella elementillä.
  */
+/**
+ * SILMÄ MULTIMEDIAKOHTEEN MERKIKSI (omistajan tilaus v1119, kohta 19).
+ *
+ * Sama muoto ja sama perhe kuin täkysymbolien silmällä
+ * (js/fokusnosto-symbolit.js piirraNostosymSilma), mutta kohdemerkin
+ * mittakaavassa: kohdemerkki on halkaisijaltaan noin 16 px, kun
+ * täkysymboli on 21. Merkki kertoo, että täällä on katsottavaa —
+ * pelkkä piste lupaisi vain tekstiä.
+ */
+function piirraSilmamerkki(g) {
+  el('path', {
+    class: 'fokuskohde-silmakaari',
+    d: 'M-5.6 0 C-3.5 -3.5 3.5 -3.5 5.6 0 C3.5 3.5 -3.5 3.5 -5.6 0 Z',
+  }, g);
+  el('circle', { class: 'fokuskohde-silma', cx: 0, cy: 0, r: 2.3 }, g);
+  el('circle', { class: 'fokuskohde-silmatera', cx: 0, cy: 0, r: 1.15 }, g);
+}
+
 function piirraKohdemerkki(ui, ryhma, kohde) {
   const g = el('g', { class: `fokuskohde fokuskohde-${kohde.tyyppi ?? 'muu'}` }, ryhma);
   g.dataset.kohde = kohde.id;
@@ -280,9 +306,12 @@ function piirraKohdemerkki(ui, ryhma, kohde) {
   g.setAttribute('aria-label', `${kohde.nimi}: avaa tietoruutu`);
   el('circle', { class: 'fokuskohde-osuma', r: KOHDE_OSUMA_R }, g);
   el('circle', { class: 'fokuskohde-korostus', r: KOHDE_KOROSTUS_R }, g);
-  el('circle', { class: 'fokuskohde-halo', r: KOHDE_HALO_R }, g);
-  el('circle', { class: 'fokuskohde-rengas', r: KOHDE_RENGAS_R }, g);
-  el('circle', { class: 'fokuskohde-piste', r: KOHDE_PISTE_R }, g);
+  if (kohde.kierros) piirraSilmamerkki(g);
+  else {
+    el('circle', { class: 'fokuskohde-halo', r: KOHDE_HALO_R }, g);
+    el('circle', { class: 'fokuskohde-rengas', r: KOHDE_RENGAS_R }, g);
+    el('circle', { class: 'fokuskohde-piste', r: KOHDE_PISTE_R }, g);
+  }
   const avaa = (tapahtuma) => {
     tapahtuma.stopPropagation();
     tapahtuma.preventDefault();
@@ -804,6 +833,156 @@ function piirraKohdeKysymykset(ui, sisalto, kohde) {
   sisalto.appendChild(rivi);
 }
 
+/* ============ VIRTUAALIKIERROS PELIN SISÄLLÄ (v1119, kohta 19) ======
+ *
+ * Omistajan tilaus: *"omistaja löysi acropolisvirtualtour.gr ja haluaa
+ * sen aukeavan PELIN SISÄLLÄ ikkunaan, lisättynä suoraan kartalle omalla
+ * nähtävyys/multimedia-ikonilla"*.
+ *
+ * UPOTUS ON SALLITTU. Sivun vastaus tarkistettiin ennen toteutusta
+ * (curl -I, 26.8.2026): acropolisvirtualtour.gr ei lähetä
+ * X-Frame-Options- eikä Content-Security-Policy -otsaketta eikä sen
+ * HTML:ssä ole frame-ancestors-metaa, joten iframe kelpaa. Pelillä
+ * itsellään ei ole CSP:tä, joka estäisi kehyksen.
+ *
+ * VARAPOLKU ON SILTI OLEMASSA. Kolmannen osapuolen sivu voi vaihtaa
+ * otsakkeitaan milloin tahansa, ja WKWebView voi torjua kehyksen omista
+ * syistään. Ikkunan otsikkorivillä on siksi aina "Avaa selaimessa"
+ * -linkki (target=_blank, rel=noopener) — kuori vie sen ulkoiseen
+ * selaimeen — ja jos kehys ei lataudu kymmenessä sekunnissa, ikkuna
+ * kertoo sen ja tarjoaa saman linkin isona nappina.
+ *
+ * IKKUNA ON SAMAA PERHETTÄ KUIN KOHDEPOPUP: pergamenttikehys, ruksi
+ * ja raahattava otsikkorivi — mutta lähes koko ruudun kokoinen, koska
+ * kierros on katsottavaa eikä luettavaa.
+ * =================================================================== */
+
+/** Kuinka kauan kehyksen latautumista odotetaan ennen varapolkua. */
+const KIERROS_ODOTUS_MS = 10000;
+
+/**
+ * "Avaa kierros" -nappi tietoruutuun, jos kohteella on kierros.
+ *
+ * Nappi eikä suora avaus: tietoruutu kertoo ensin mistä on kyse ja
+ * mistä kierros on peräisin, ja vasta sitten pelaaja päättää avaako
+ * hän koko ruudun kokoisen ikkunan.
+ */
+function piirraKierrosnappi(ui, sisalto, kohde) {
+  const kierros = kohde.kierros;
+  if (!kierros?.url) return;
+  const nappi = html('button', 'fokuskohde-kierrosnappi', kierros.nappi ?? 'Avaa kierros');
+  nappi.type = 'button';
+  nappi.addEventListener('click', (tapahtuma) => {
+    tapahtuma.stopPropagation();
+    avaaKierros(ui, kohde);
+  });
+  sisalto.appendChild(nappi);
+}
+
+/** Sulkee auki olevan kierrosikkunan. */
+export function suljeKierros(ui) {
+  const auki = ui?.kierrosIkkuna;
+  if (!auki) return;
+  ui.kierrosIkkuna = null;
+  clearTimeout(auki.ajastin);
+  document.removeEventListener('keydown', auki.nappain, true);
+  auki.kerros.remove();
+}
+
+/**
+ * Virtuaalikierros pelin omaan ikkunaan (v1119, kohta 19b).
+ *
+ * @param {object} ui
+ * @param {{nimi:string, kierros:{url:string, otsikko?:string, lahde?:string}}} kohde
+ */
+function avaaKierros(ui, kohde) {
+  if (typeof document === 'undefined') return null;
+  const kierros = kohde?.kierros;
+  if (!kierros?.url) return null;
+  sfx.play('popup');
+  suljeKierros(ui);
+  lataaKohdeTyyli();
+
+  const kerros = html('div', 'fokuskierros');
+  kerros.setAttribute('role', 'dialog');
+  kerros.setAttribute('aria-modal', 'true');
+  kerros.setAttribute('aria-label', kierros.otsikko ?? kohde.nimi);
+  const ikkuna = html('div', 'fokuskierros-ikkuna');
+  const ylarivi = html('div', 'fokuskierros-ylarivi');
+  ylarivi.appendChild(html('span', 'fokuskierros-otsikko', kierros.otsikko ?? kohde.nimi));
+  /*
+   * ULKOINEN LINKKI AINA NÄKYVISSÄ. Kuori (WKWebView) vie
+   * target="_blank" -linkin laitteen omaan selaimeen, jossa kierros
+   * saa käyttöönsä kaiken, mitä kehys ei anna — koko ruudun, sensorit
+   * ja täyden näytön.
+   */
+  const ulos = html('a', 'fokuskierros-ulos', 'Avaa selaimessa ↗');
+  ulos.href = kierros.url;
+  ulos.target = '_blank';
+  ulos.rel = 'noopener noreferrer';
+  ylarivi.appendChild(ulos);
+  const sulje = html('button', 'fokuskierros-sulje', '✕');
+  sulje.type = 'button';
+  sulje.setAttribute('aria-label', 'Sulje kierros');
+  sulje.addEventListener('click', () => suljeKierros(ui));
+  ylarivi.appendChild(sulje);
+  ikkuna.appendChild(ylarivi);
+
+  const kehys = document.createElement('iframe');
+  kehys.className = 'fokuskierros-kehys';
+  kehys.src = kierros.url;
+  kehys.title = kierros.otsikko ?? kohde.nimi;
+  kehys.setAttribute('allow', 'fullscreen; accelerometer; gyroscope; xr-spatial-tracking');
+  kehys.setAttribute('referrerpolicy', 'no-referrer');
+  ikkuna.appendChild(kehys);
+
+  /*
+   * VARAPOLKU: jos kehys ei ilmoita latautuneensa, sivu on joko
+   * torjunut upotuksen tai verkko on poikki. Silloin ikkunaan
+   * kirjoitetaan siisti kortti ja iso nappi ulos.
+   */
+  const vara = html('div', 'fokuskierros-vara');
+  vara.hidden = true;
+  vara.appendChild(html('p', '', kierros.varaTeksti
+    ?? 'Kierros ei aukea pelin sisällä. Se avautuu laitteen omassa selaimessa.'));
+  const varaNappi = html('a', 'fokuskierros-varanappi', 'Avaa kierros selaimessa ↗');
+  varaNappi.href = kierros.url;
+  varaNappi.target = '_blank';
+  varaNappi.rel = 'noopener noreferrer';
+  vara.appendChild(varaNappi);
+  if (kierros.lahde) vara.appendChild(html('p', 'fokuskierros-lahde', kierros.lahde));
+  ikkuna.appendChild(vara);
+  if (kierros.lahde) ikkuna.appendChild(html('p', 'fokuskierros-lahde', kierros.lahde));
+
+  kerros.appendChild(ikkuna);
+  document.body.appendChild(kerros);
+
+  const ajastin = setTimeout(() => {
+    if (!kehys.dataset.latautui) {
+      kehys.hidden = true;
+      vara.hidden = false;
+    }
+  }, KIERROS_ODOTUS_MS);
+  kehys.addEventListener('load', () => { kehys.dataset.latautui = '1'; }, { once: true });
+
+  const nappain = (tapahtuma) => {
+    if (tapahtuma.key !== 'Escape') return;
+    tapahtuma.stopPropagation();
+    suljeKierros(ui);
+  };
+  document.addEventListener('keydown', nappain, true);
+  // Napautus ikkunan ULKOPUOLELLE sulkee; ikkunan sisällä napautus
+  // kuuluu kierrokselle itselleen.
+  kerros.addEventListener('pointerdown', (tapahtuma) => {
+    if (ikkuna.contains(tapahtuma.target)) return;
+    suljeKierros(ui);
+  });
+  ui.kierrosIkkuna = {
+    kerros, kehys, ajastin, nappain,
+  };
+  return kerros;
+}
+
 /* ==================== KUVAN SUURENNOS KARTAN PÄÄLLE ==================
  *
  * Sama ele ja sama ulkoasu kuin fokusvirran kuvilla: kuva KASVAA
@@ -1258,6 +1437,7 @@ export function avaaFokuskohde(ui, kohde) {
   piirraKohdeKuva(ui, sisalto, kohde.kuva);
   piirraKohdeTeksti(ui, sisalto, kohde);
   piirraKohdeKysymykset(ui, sisalto, kohde);
+  piirraKierrosnappi(ui, sisalto, kohde);
   if (kohde.lahde) sisalto.appendChild(html('p', 'fokuskohde-lahde', kohde.lahde));
   popup.appendChild(sisalto);
   koti.appendChild(popup);
