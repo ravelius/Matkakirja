@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1137 — kaannetty laatta yhtenaistetty kartan kaiverruskielelle: pergamenttikiekko + kaiverrettu arkkukuvake mustaan kiekkoon leikatun aarrekuvan tilalle (kuva elaa paljastuksessa ja matkalaukussa) — Ateenan maalitaulu poissa',
   'v1136 — siivous: v1134:n mukana repoon livahtanut koe-varmistus.html poistettu (ei pelivaikutusta)',
   'v1135 — Raamattuun uusi osio Arkkikirjasto: pop-upien yhteinen sanasto, taustan kolme astetta panoksen mittarina ja sulkemissopimus; toteutus erissa alkaa wrapper-tyon jalkeen',
   'v1134 — aarrepaljastus: ylakulman ruksi poistettu (Jatka matkaa ja napautus riittavat) ja musta tausta kuultaa nyt reunoiltaan sumennetun kartan lapi; keskusta pysyy mustana ettei aarrekuvan reuna saa haloa',

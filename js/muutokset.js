@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1137, teksti: 'Kaannetty laatta kaiverruskielelle (arkkukuvake)' },
   { v: 1136, teksti: 'Siivous: testitiedosto pois reposta' },
   { v: 1135, teksti: 'Raamattuun arkkikirjasto-linjaus (pop-upien kieli)' },
   { v: 1134, teksti: 'Paljastus: ruksi pois, reunat kuultavat' },

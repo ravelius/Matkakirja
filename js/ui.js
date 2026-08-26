@@ -7160,32 +7160,22 @@ export class UI {
       }, this.tokenLayer);
       el('circle', { r, class: 'token-disc' }, g);
       /*
-       * Käännetty laatta näyttää laudan tarinallisen aarrekuvan
-       * pyöreänä (omistajan päätös 10.8.2026); piirrosikoni jää
-       * varasoluksi laatoille ja laudoille ilman kuvaa (maailmankartta,
-       * tyhjä laatta). clip-path rajaa kuvan kiekon sisään, slice
-       * täyttää ympyrän. Mitat lasketaan säteestä, jotta kuva ja
-       * ikoni pysyvät merkin sisällä myös silloin kun sädettä
-       * muutetaan.
+       * KÄÄNNETTY LAATTA PUHUU KARTAN KAIVERRUSKIELTÄ (omistaja
+       * 26.8.2026 ilta, kuvakaappaus Ateenasta: "Miksi Ateenan laatta
+       * muuttuu aarteen löytymisen jälkeen tällaiseksi? Tämä pitää
+       * yhtenäistää myös" — kumoaa 10.8.2026 päätöksen näyttää
+       * aarrekuva kiekossa). Tarinalliset aarrekuvat on maalattu
+       * mustalle pohjalle, ja pieneen kiekkoon rajattuna niistä jäi
+       * musta täplä — 1873-kaiverrusten keskellä se näytti punaisen
+       * pelinappulan alla maalitaululta. Merkki on nyt aina samaa
+       * kieltä kuin muut karttamerkit: pergamenttikiekko ja
+       * kaiverrettu kuvake (drawTokenIcon — aarteille kätköarkku).
+       * Aarteen oma kuva elää siellä, missä se on suuri ja mustalla
+       * pohjallaan saumaton: paljastuksessa ja matkalaukussa.
        */
-      const kuva = game.aarreTyyppi(type, cityId)?.kuva;
-      if (kuva && kuva.startsWith('assets/')) {
-        const puolikas = r * 0.92;
-        const im = el('image', {
-          x: -puolikas,
-          y: -puolikas,
-          width: puolikas * 2,
-          height: puolikas * 2,
-          'clip-path': `circle(${(r * 0.885).toFixed(2)}px)`,
-          preserveAspectRatio: 'xMidYMid slice',
-          class: 'token-aarrekuva',
-        }, g);
-        im.setAttribute('href', kuva);
-      } else {
-        const icon = drawTokenIcon(g, type);
-        // Piirrosikonit on mitoitettu vanhaan 16,4 yksikön kiekkoon.
-        icon.setAttribute('transform', `scale(${(0.88 * r / 16.4).toFixed(3)})`);
-      }
+      const icon = drawTokenIcon(g, type);
+      // Piirrosikonit on mitoitettu vanhaan 16,4 yksikön kiekkoon.
+      icon.setAttribute('transform', `scale(${(0.88 * r / 16.4).toFixed(3)})`);
     }
     this.piilotaAarreLaatat();
   }
