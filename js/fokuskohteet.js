@@ -91,7 +91,7 @@
  * vaiheessa korostus on kevyt rengas auki olevan kohteen ympärillä.
  */
 import { el } from './mapart.js';
-import { NOSTOSYM_TYYPIT, piirraNostosymboli } from './fokusnosto-symbolit.js';
+import { NOSTOSYM_LUOKAT, NOSTOSYM_TYYPIT, piirraNostosymboli } from './fokusnosto-symbolit.js';
 import { asetaKuva } from './media.js';
 import { html, jaaKappaleiksi } from './ui-apurit.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
@@ -1476,6 +1476,38 @@ function raahausTaiSulku(ui, popup, alku) {
   popup.addEventListener('pointercancel', peru);
 }
 
+/*
+ * KORTIN YLÄRIVI (omistaja 26.8.2026 ilta: *"Voisiko symboli ja sen
+ * luokka näkyä noston ylimmällä rivillä nykyisen ylimmän rivin
+ * tilalla"* — Kalamatan kortissa luki KAUPUNKI, vaikka kartalla
+ * kohteella on malja). Symboli valitaan SAMALLA säännöllä kuin
+ * karttamerkkiin (kohteenSymboli), joten kortti ja merkki kertovat
+ * aina samaa; vierellä on luokan nimi (NOSTOSYM_LUOKAT). Symbolittomat
+ * kohteet — kaupunki ja muu ilman symboli-kenttää — pitävät entisen
+ * tyyppinimiön, koska niillä ei ole luokkaa kerrottavana.
+ */
+function piirraKohdeYlarivi(kohde) {
+  const rivi = html('p', 'fokuskohde-ylarivi');
+  const symboli = kohteenSymboli(kohde);
+  const luokka = symboli ? NOSTOSYM_LUOKAT[symboli] : null;
+  if (!luokka) {
+    rivi.textContent = KOHDE_TYYPIT[kohde.tyyppi] ?? KOHDE_TYYPIT.muu;
+    return rivi;
+  }
+  // Sama piirtokirjasto kuin kartalla: symboli asuu ~24 yksikön
+  // ruudussa origon ympärillä, ja viewBox tuo sen rivin kokoon.
+  // Luokat (nostosym-*) tyylittyvät css/styles.css:n
+  // KARTTASYMBOLIT-osiosta, joka on aina ladattu.
+  const kuva = el('svg', {
+    class: 'fokuskohde-ylarivi-symboli',
+    viewBox: '-12 -12 24 24',
+    'aria-hidden': 'true',
+  }, rivi);
+  piirraNostosymboli(el('g', {}, kuva), symboli);
+  rivi.appendChild(document.createTextNode(luokka));
+  return rivi;
+}
+
 export function avaaFokuskohde(ui, kohde) {
   if (typeof document === 'undefined' || !kohde) return null;
   /*
@@ -1527,8 +1559,7 @@ export function avaaFokuskohde(ui, kohde) {
   popup.appendChild(sulje);
 
   const sisalto = html('div', 'fokuskohde-sisalto');
-  sisalto.appendChild(html('p', 'fokuskohde-ylarivi',
-    KOHDE_TYYPIT[kohde.tyyppi] ?? KOHDE_TYYPIT.muu));
+  sisalto.appendChild(piirraKohdeYlarivi(kohde));
   sisalto.appendChild(html('h3', 'fokuskohde-otsikko', kohde.nimi));
   piirraKohdeKuva(ui, sisalto, kohde.kuva);
   piirraKohdeTeksti(ui, sisalto, kohde);

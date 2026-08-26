@@ -404,6 +404,30 @@ const NOSTOSYM_PIIRTAJAT = {
 /** Tunnetut symbolikategoriat — yksi totuus myös kutsujien tarkistuksiin. */
 export const NOSTOSYM_TYYPIT = new Set(Object.keys(NOSTOSYM_PIIRTAJAT));
 
+/*
+ * KATEGORIALUOKKIEN NIMET (omistaja 26.8.2026 ilta: *"Voisiko symboli
+ * ja sen luokka näkyä noston ylimmällä rivillä nykyisen ylimmän rivin
+ * tilalla"*). Kohdekortin ylärivi näyttää symbolin vierellä tämän
+ * nimen — partitiivissa samaan tapaan kuin tyyppinimiöt
+ * (js/fokuskohteet.js KOHDE_TYYPIT), koska rivi lupaa sisältöä.
+ * Avaimet ovat samat kuin piirtäjätaulussa; taulu asuu tässä, jotta
+ * symboli ja sen nimi pysyvät yhdessä paikassa.
+ */
+export const NOSTOSYM_LUOKAT = {
+  huuto: 'Skandaaleja',
+  elain: 'Eläimiä',
+  silma: 'Katsottavaa',
+  historia: 'Historiaa',
+  luonto: 'Luontoa',
+  ruoka: 'Ruokaa ja juomaa',
+  kulttuuri: 'Kulttuuria',
+  tekniikka: 'Tekniikkaa',
+  kauppa: 'Kauppaa',
+  sana: 'Tarinoita',
+  merenkulku: 'Merenkulkua',
+  urheilu: 'Urheilua',
+};
+
 /**
  * KIRJASTON OVI: piirtää kategorian symbolin ryhmään origon ympärille
  * (~21 px merkki lehden perustasolla). Sekä täkysymbolit (tämä

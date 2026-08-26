@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1132 — kohdekortin ylarivilla nyt kategorian symboli ja luokan nimi (esim. Kalamata: malja + RUOKAA JA JUOMAA); etusivun sumennus kattaa koko ruudun, terava vaakaraja poissa',
   'v1131 — Bukarestin lehden etusivulle kolmen herokuvan avauskaruselli (Arcul de Triumf, Stavropoleos, CEC-palatsi; omistajan ChatGPT-era, silmatarkistettu) — korvaa Commons-yleisnakymat',
   'v1130 — ensimmainen sisaltoera symbolitaksonomialla: 16 uutta fokuskohdetta — GRC: Olympia, Kalamata, Ermoupoli, Epidauros, Marathon, Antikythera; BGR: jogurtti, Veliki Preslav, Madaran ratsastaja, Srebarna, Pernik; TUR: Gaziantep, Kapalicarsi, Gelibolu, Vanin kissa, Kirkpinar — eri kategorioita, symbolit tyyppijohdolla (v1126)',
   'v1129 — Sarajevon lehden etusivulle kolmen herokuvan avauskaruselli (Gazi Husrev-beg + Sahat Kula, Katedrala, Latinalainen silta; omistajan ChatGPT-era, silmatarkistettu) — kansikuvat siirtyvat pikkuriville',

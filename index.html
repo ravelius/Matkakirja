@@ -405,10 +405,14 @@
           SVG-kerroksen tyhjänä).
         -->
         <section id="intro" class="intro" hidden>
+          <!-- Sumuverho KOKO paneelin päälle: oma HTML-kerroksensa.
+               Verho oli ennen vain ylälohkon kokoinen, mutta kartan
+               pergamentti jatkuu laudan alla (js/kartta.js INTRO_SPACE),
+               ja sumennuksen raja piirtyi terävänä saumana alalohkon
+               yläreunaan (omistaja 26.8.2026 ilta: "Blurri loppuu
+               kesken"). -->
+          <div class="intro-verho" aria-hidden="true"></div>
           <div class="intro-kartta">
-            <!-- Sumuverho pienennetyn kartan päälle: oma HTML-kerroksensa,
-                 ja vain ylälohkon kokoinen — alalohkossa on arkki. -->
-            <div class="intro-verho" aria-hidden="true"></div>
             <!-- JULISTEOTSIKKO (omistajan tilaus 25.8.2026, kaanonmuutos
                  "ISOISÄ PIIRTÄJÄNÄ"): isoisän matkakirja on NIMETÖN, joten
                  teoksen nimi ei ole enää kansikuvassa vaan ladottuna

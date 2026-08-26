@@ -5239,8 +5239,12 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  * Verho ilmestyy vasta Aloita seikkailu -napin jälkeen (.intro-aloitettu):
  * portin takana etusivulla on terävä kartta ja portin oma tummennus.
  *
- * Verho on VAIN YLÄLOHKON kokoinen: alalohkossa on peittävä arkki,
- * eikä sumennettavaa ole.
+ * Verho kattaa KOKO PANEELIN (omistaja 26.8.2026 ilta: *"Blurri
+ * loppuu kesken"*): kartan pergamentti hiusviivoineen jatkuu laudan
+ * alla (js/kartta.js INTRO_SPACE), joten pelkän ylälohkon kokoinen
+ * verho piirsi sumennuksen rajan terävänä saumana alalohkon
+ * yläreunaan. Elementti on .intro-paneelin ensimmäinen lapsi, joten
+ * lohkot piirtyvät sen päälle ilman z-index-kikkoja.
  */
 .intro-verho {
   position: absolute;
