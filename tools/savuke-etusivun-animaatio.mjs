@@ -279,10 +279,13 @@ const avaus = await sivu.evaluate(() => {
     aloitaMatka: [...document.querySelectorAll('button')]
       .some((b) => /aloita matka/i.test(b.textContent)),
     kysymysElementti: Boolean(document.getElementById('intro-kysymys')),
-    // Arkin on peitettävä kartta: läpinäkyvä tausta paljastaisi laudan.
+    // v1121 (omistajan oikaisu): arkilla EI ole omaa taustaa — kartan
+    // pergamentti jatkuu tyhjänä karttapintana alas asti.
     arkinTausta: (() => {
       const e = document.querySelector('.intro-arkki');
-      return e ? getComputedStyle(e).backgroundImage.slice(0, 40) : '';
+      if (!e) return '';
+      const s = getComputedStyle(e);
+      return `${s.backgroundImage.slice(0, 20)}|${s.backgroundColor}`;
     })(),
   };
 });
@@ -303,11 +306,12 @@ vaadi('julisteotsikko on kartan päällä',
     && avaus.juliste.y >= avaus.kartta.y - 1
     && avaus.juliste.y + avaus.juliste.h <= avaus.kartta.y + avaus.kartta.h + 1),
   JSON.stringify({ juliste: avaus.juliste, kartta: avaus.kartta }));
-vaadi('arkki alkaa siitä mihin kartta loppuu ja peittää loput',
+vaadi('arkki alkaa mihin kartta loppuu ja on pohjaton (karttapinta jatkuu)',
   Boolean(avaus.arkki && avaus.kartta && avaus.intro
     && Math.abs(avaus.arkki.y - (avaus.kartta.y + avaus.kartta.h)) < 2
     && Math.abs((avaus.arkki.y + avaus.arkki.h) - (avaus.intro.y + avaus.intro.h)) < 2
-    && avaus.arkinTausta.startsWith('linear-gradient')),
+    && avaus.arkinTausta.startsWith('none|')
+    && /rgba\(0, 0, 0, 0\)|transparent/.test(avaus.arkinTausta)),
   JSON.stringify({ arkki: avaus.arkki, tausta: avaus.arkinTausta }));
 // Napin teksti vaihtui v1119:ssä: "Mistä aloitan?" → "Valitse
 // aloituskaupunki" (omistajan pelitestipalaute — kysymys ei kertonut
@@ -590,10 +594,11 @@ vaadi('harsopilvet lennon aikana', lento.pilvia >= 4 && lento.pilvia <= 6,
  */
 vaadi('saapumisleimaa ei piirretä lennon aikana', lento.leimoja === 0,
   `${lento.leimoja} leimaa`);
+// Katto nousi 4 → 6 (omistaja 26.8.2026: laivoja myös Välimerelle).
 vaadi('merellä kulkee himmeitä laivareittejä',
-  lento.laivoja >= 1 && lento.laivoja <= 4, `${lento.laivoja} reittiä`);
-vaadi('laivareiteillä on liikkuvat pisteet', lento.laivapisteita === lento.laivoja,
-  `${lento.laivapisteita} pistettä / ${lento.laivoja} reittiä`);
+  lento.laivoja >= 1 && lento.laivoja <= 6, `${lento.laivoja} reittiä`);
+vaadi('laivareiteillä on liikkuvat laivat', lento.laivapisteita === lento.laivoja,
+  `${lento.laivapisteita} laivaa / ${lento.laivoja} reittiä`);
 vaadi('pöllönappi on piilossa lennon ajan', lento.polloNakyy === false,
   `peittävyys ${lento.polloPeitto}`);
 vaadi('lennon konekirjoitusrivi on selvästi isompi kuin 1 rem',

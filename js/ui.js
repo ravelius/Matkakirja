@@ -296,9 +296,15 @@ const FLY_OVERLAY_MS = 4800;
  */
 const LENNON_POHJA_MS = 2200;
 const LENNON_SANA_MS = 210;
-const LENNON_ENINTAAN_MS = 15000;
-// Kuinka kauan valmis repliikki jää ruudulle ennen kuin lento päättyy.
-const LENNON_LUKUAIKA_MS = 1600;
+const LENNON_ENINTAAN_MS = 20000;
+/*
+ * Kuinka kauan valmis repliikki jää ruudulle ennen kuin lento päättyy.
+ * Nostettu 1600 → 4200 ja katto 15 s → 20 s (omistaja 26.8.2026:
+ * *"Lentokohtaus ehtii loppua ennen kuin lukija ehtii lukea tekstin
+ * loppuun"*) — konekirjoituksen valmistuttua lukija tarvitsee vielä
+ * rauhallisen lukuhetken. Napautus ohittaa odotuksen milloin vain.
+ */
+const LENNON_LUKUAIKA_MS = 4200;
 /*
  * ÄÄNI EDELLÄ, TEKSTI PERÄSSÄ (omistaja 12.8.2026).
  *
@@ -515,16 +521,23 @@ const ALOITUSLENNON_KATKOJA_VAHINTAAN = 5;
  * KAIKKI MITAT RUUDUN PIKSELEINÄ ja skaalataan näkymän mittakaavalla,
  * kuten reittiviivalla ja koneellakin.
  */
-const LAIVAREITTEJA_ENINTAAN = 4;
+/*
+ * Nostettu 4 → 6 ja vähimmäispituus 260 → 170 (omistaja 26.8.2026:
+ * *"välimerelle voisi lisätä myös laivoja kulkemaan"*) — Välimeren
+ * linjat ovat laudalla lyhyempiä kuin valtamerten, joten pelkkiä
+ * pisimpiä valitessa sisämeret jäivät tyhjiksi.
+ */
+const LAIVAREITTEJA_ENINTAAN = 6;
 // Viivan paksuus ja katkoviivan jakso ruudun pikseleinä.
 const LAIVAREITIN_VIIVA_PX = 1.5;
 const LAIVAREITIN_KATKO_PX = 9;
-// Laivan piste: säde ruudun pikseleinä ja kierroksen kesto.
-const LAIVAN_PISTE_PX = 2.6;
+// Laivasiluetin mittakaava (2,6 = entisen pisteen säde; siluetti on
+// tällä noin 9 ruudun pikseliä pitkä) ja kierroksen kesto.
+const LAIVAN_PISTE_PX = 3.1;
 const LAIVAN_KIERROS_MS = 46000;
 // Reitin on oltava vähintään näin pitkä (laudan yksikköinä), jottei
 // kartalle ilmesty tikkuja lahtien poikki.
-const LAIVAREITIN_VAHIN_PITUUS = 260;
+const LAIVAREITIN_VAHIN_PITUUS = 170;
 
 /*
  * ==================================================================
@@ -933,7 +946,13 @@ export function kirjoituksenKesto(teksti, tahti = INTRO_TYPE_MS) {
  * ruudulla viimeinen rivi ("Valitse kohde kartalta") jäi kaistan
  * ulkopuolelle, koska lattia tuli vastaan ennen kuin teksti mahtui.
  */
-const INTRO_FONT_MAX = 0.96;
+/*
+ * Nostettu 0,96 → 1,14 (omistaja 26.8.2026: *"tekstiä saisi ainakin
+ * iPadilla suurentaa, siis sitä konekirjoitettua"*). fitIntro kutistuu
+ * lattiaan asti kapealla ruudulla, joten katto koskee vain ruutuja,
+ * joilla tila riittää — juuri iPadia.
+ */
+const INTRO_FONT_MAX = 1.14;
 const INTRO_FONT_MIN = 0.6;
 /*
  * AVAUKSEN YLÄLOHKON HAARUKKA (omistajan pelitestipalaute v1119:
@@ -15101,9 +15120,29 @@ export class UI {
        * erota.
        */
       const pituus = viiva.getTotalLength();
-      const piste = el('circle', {
-        cx: 0, cy: 0, r: (LAIVAN_PISTE_PX / skaala).toFixed(2), class: 'lento-laivapiste',
-      }, g);
+      /*
+       * PISTEESTÄ LAIVAKSI (omistajan tilaus 26.8.2026: *"välimerelle
+       * voisi lisätä myös laivoja kulkemaan"*): kulkija on pieni
+       * purjelaivasiluetti — runko ja kaksi purjetta — samaan sepiaan
+       * kuin reittiviiva. Ulompi ryhmä liikkuu avainruuduilla, sisempi
+       * skaalaa ruudun pikseleihin ja kääntää keulan menosuuntaan
+       * (peilaus riittää: reitit kulkevat kartalla enimmäkseen
+       * vaakaan, ja pysty keinunta näyttäisi vain oudolta).
+       */
+      const piste = el('g', { class: 'lento-laivapiste' }, g);
+      const eka = reitti.pisteet[0];
+      const vika = reitti.pisteet[reitti.pisteet.length - 1];
+      const suunta = vika.x < eka.x ? -1 : 1;
+      const mitta = (LAIVAN_PISTE_PX / 2.6) / skaala;
+      const laiva = el('g', {
+        transform: `scale(${(suunta * mitta).toFixed(3)}, ${mitta.toFixed(3)})`,
+      }, piste);
+      // Runko: matala kaukalo vesirajan alla.
+      el('path', { d: 'M-4.2 0.8 L4.2 0.8 L2.6 3 L-2.6 3 Z' }, laiva);
+      // Kaksi purjetta ja keulapurje — 1873:n prikin siluetti.
+      el('path', { d: 'M-1 -3.8 L-1 0.2 L-3.6 0.2 Z' }, laiva);
+      el('path', { d: 'M0 -4.6 L0 0.2 L3 0.2 Z' }, laiva);
+      el('path', { d: 'M3.4 -1.6 L3.4 0.2 L4.6 0.6 Z' }, laiva);
       const ruudut = [];
       for (let k = 0; k <= 20; k++) {
         const p = viiva.getPointAtLength((pituus * k) / 20);
