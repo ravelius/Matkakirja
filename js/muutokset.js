@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1160, teksti: 'Mitorajin Ikaros Sisilian herokuvan selitteeseen' },
   { v: 1159, teksti: 'Miniatyyrit Ateenaan, Sofiaan, Bukarestiin ja Sarajevoon' },
   { v: 1158, teksti: 'Viivainten panorointikirjoitukset 9,3 -> 0,9/kehys' },
   { v: 1157, teksti: 'Sisilian herokaruselli + leveampi kohdekortti' },

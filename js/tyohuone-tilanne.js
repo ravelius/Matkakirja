@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1160: Sisilian aamuherokuvan selite kertoo nyt, etta temppelin edessa makaava pronssi on oikeasti olemassa (Mitorajin Kaatunut Ikaros) - generoitu kuva herattaa muuten epailyt. TESTAA: Sisilian lehden avauskuvan kuvateksti.',
   'v1159: Kohdekarttojen miniatyyripiirrokset nyt myos Ateenassa, Sofiassa, Bukarestissa ja Sarajevossa (25 kuvaa, era 1/5). TESTAA: avaa nailla kartoilla kohteita, piirrokset numeroympyroiden tilalla.',
   'v1158: Vieritys sujuvammaksi: viivainmerkit kierratetaan lukeman mukaan ja nauha liukuu kokonaisena; nimilappujen 780 turhaa kirjoitusta eleen lopussa poistettu; skriptiaika -19 %. TESTAA: panoroi karttaa iPadilla, tokkiiko viela.',
   'v1157 — Sisilian lehdelle herokuvakaruselli (Concordia, Syrakusan tuomiokirkko, Monreale; omistajan ChatGPT-era) ja kohdekortti leveni 21 -> 24 rem (kuvien kasvun jatkoksi)',

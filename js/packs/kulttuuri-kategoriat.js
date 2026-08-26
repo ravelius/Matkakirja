@@ -20173,7 +20173,9 @@ export const KULTTUURI_KATEGORIAT = {
           ampari: 'herokoe/hero-sisilia-aamu.jpg',
           selite: 'Concordian temppeli Agrigenton Temppelilaaksossa on '
             + 'säilynyt lähes ehjänä 400-luvulta eaa. — sen pelasti '
-            + 'muutos kristilliseksi kirkoksi 500-luvulla.',
+            + 'muutos kristilliseksi kirkoksi 500-luvulla. Edustalla '
+            + 'makaa oikeasti Igor Mitorajin pronssinen Kaatunut '
+            + 'Ikaros, laaksolle 2011 lahjoitettu veistos.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
