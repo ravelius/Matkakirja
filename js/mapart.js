@@ -276,6 +276,38 @@ export function el(tag, attrs = {}, parent = null) {
   return node;
 }
 
+/**
+ * SVG-MÄÄRE VAIN JOS ARVO OIKEASTI MUUTTUI.
+ *
+ * Sama sääntö ja sama syy kuin nimilapuilla (js/ui.js UI.maare, v1158):
+ * `setAttribute` ei vertaa mitään, joten samalla arvolla kirjoitettu
+ * määre on selaimelle yhtä lailla muutos ja mitätöi elementin
+ * SVG-asettelun. Ero on vain siinä, kummasta suunnasta kutsuja tulee:
+ * UI-luokan omat kerrokset käyttävät UI.maaretta, laudan piirtäjät
+ * tätä — kumpikin päätyy tähän yhteen vertailuun.
+ *
+ * MITATTU (Chromium, iPad-ikkuna 834×1112, 150 kehyksen raahaus
+ * Kreikan fokusnäkymässä, 26.8.2026 — v1158:n jälkeen jäljelle jääneet
+ * ryöpyt):
+ *
+ *   48  setAttribute  g.fokuskohde-ryhma  [transform]        SAMA ARVO
+ *   26  setAttribute  .fokus-piiri-*      [d] [x] [y] [font-size] …
+ *                                                            SAMA ARVO
+ *
+ * Molemmat tulivat YHTENÄ RYÖPPYNÄ sillä hetkellä, kun sormi irtoaa
+ * (kartta.js `paata` → taydennaTaide → paivitaMaastonimet): panorointi
+ * ei muuta yhdenkään kohdemerkin eikä yhdenkään leveyspiirin paikkaa
+ * laudalla, joten silmukat kirjoittivat samat luvut uudestaan — ja
+ * mitätöivät 74 SVG-solmun asettelun juuri siinä nykäyshetkessä.
+ *
+ * Vertailu on tässä eikä kutsupaikoissa, jotta sääntö pysyy yhtenä.
+ */
+export function maare(node, nimi, arvo) {
+  const teksti = String(arvo);
+  if (node.getAttribute(nimi) === teksti) return;
+  node.setAttribute(nimi, teksti);
+}
+
 /*
  * KÄSIN PIIRRETTY HEILUNTA ILMAN SUODATINTA
  *

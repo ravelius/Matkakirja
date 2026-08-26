@@ -45,7 +45,7 @@
  * (sw.js ämpärikori) — niitä EI esiladata, koska pelaaja käy vain
  * murto-osassa maista.
  */
-import { el, paperinSavy } from './mapart.js';
+import { el, maare, paperinSavy } from './mapart.js';
 import { fokuskarttaUrl, peiliKaytossa } from './media.js';
 import { natiiviKuori } from './natiivi.js';
 import {
@@ -1846,12 +1846,47 @@ function piiriOsat(ryhma, tiedot) {
   return osa;
 }
 
+/*
+ * Piiri piiloon tai esiin `hidden`-määreellä — VAIN JOS TILA MUUTTUI.
+ * Sama sääntö kuin arvollisilla määreillä (js/mapart.js maare): jo
+ * piilossa olevan solmun piilottaminen uudestaan on selaimelle
+ * muutos siinä missä mikä tahansa muukin määrekirjoitus.
+ */
+function piiriPiiloon(osa, piiloon) {
+  if (osa.hasAttribute('hidden') === piiloon) return;
+  if (piiloon) osa.setAttribute('hidden', '');
+  else osa.removeAttribute('hidden');
+}
+
+/*
+ * Viivan tai nimen näkyvyys inline-tyylillä — VAIN JOS TILA MUUTTUI.
+ * CSSOM ei sekään vertaa: saman arvon sijoitus likaa tyylin.
+ */
+function piiriNakyviin(osa, nakyy) {
+  const arvo = nakyy ? '' : 'none';
+  if (osa.style.display === arvo) return;
+  osa.style.display = arvo;
+}
+
 /**
  * Piirtää erikoispiirit nykyiseen näkymään.
  *
  * Kutsutaan paivitaFokusAtlaksesta, eli aina kun näkymä on asettunut.
- * Työ on muutama setAttribute neljälle viivalle — halvempaa kuin
- * tunnisteen vertailu, joten sitä ei ole.
+ * Työ on muutama määre neljälle viivalle — halvempaa kuin tunnisteen
+ * vertailu, joten sitä ei ole.
+ *
+ * MUTTA MÄÄRE KIRJOITETAAN VAIN JOS SE MUUTTUI (js/mapart.js maare,
+ * js/ui.js UI.maare — v1158:n sääntö nimilapuilta). "Muutama
+ * setAttribute" on halpaa vain, jos se oikeasti muuttaa jotain:
+ * `setAttribute` ei vertaa mitään, joten samalla arvolla kirjoitettu
+ * määre mitätöi SVG-solmun asettelun kuin mikä tahansa muutos.
+ * Panorointi ei siirrä yhtäkään leveyspiiriä laudalla eikä muuta
+ * nimen kokoa, ja pystysuora panorointi jättää myös nimen vaakapaikan
+ * ennalleen — mitattu 26.8.2026 (iPad-ikkuna, 150 kehyksen raahaus
+ * Kreikan fokusnäkymässä): 26 samanarvoista kirjoitusta yhtenä
+ * ryöppynä sillä hetkellä, kun sormi irtoaa. Korjauksen jälkeen
+ * kirjoitetaan vain se, mikä oikeasti liikkui (nimen x seuraa näkymän
+ * keskikohtaa, joten vaakapanorointi kirjoittaa yhä sen).
  *
  * `yleislehdella` kertoo, että kartalla on kaukozoomin yleislehti,
  * johon 20 asteen asteverkko on jo POLTETTU. Silloin päiväntasaaja ja
@@ -1883,31 +1918,31 @@ function paivitaErikoispiirit(ui, yleislehdella) {
     const y = kaavat.y(tiedot.lat);
     const osa = piiriOsat(ryhma, tiedot);
     // Laudan ulkopuolelle jäävä piiri (etelänapapiiri) ei piirry.
-    if (!Number.isFinite(y) || y < 0 || y > korkeus) { osa.setAttribute('hidden', ''); continue; }
-    osa.removeAttribute('hidden');
+    if (!Number.isFinite(y) || y < 0 || y > korkeus) { piiriPiiloon(osa, true); continue; }
+    piiriPiiloon(osa, false);
     const viiva = osa.querySelector('.fokus-piiri-viiva');
-    viiva.setAttribute('d', `M0,${y.toFixed(2)} H${leveys}`);
+    maare(viiva, 'd', `M0,${y.toFixed(2)} H${leveys}`);
     // Kaukozoomissa yleislehden oma päiväntasaaja hoitaa viivan.
-    viiva.style.display = yleislehdella && tiedot.lat === 0 ? 'none' : '';
+    piiriNakyviin(viiva, !(yleislehdella && tiedot.lat === 0));
     const nimi = osa.querySelector('.fokus-piiri-nimi');
-    nimi.setAttribute('x', keskiX.toFixed(1));
+    maare(nimi, 'x', keskiX.toFixed(1));
     // Nimi istuu viivan päällä, kirjaimen verran ylempänä.
-    nimi.setAttribute('y', (y - nimenKoko * 0.45).toFixed(2));
-    nimi.setAttribute('font-size', nimenKoko.toFixed(3));
-    nimi.setAttribute('letter-spacing', (nimenKoko * 0.12).toFixed(3));
-    nimi.style.display = nimetNakyy ? '' : 'none';
+    maare(nimi, 'y', (y - nimenKoko * 0.45).toFixed(2));
+    maare(nimi, 'font-size', nimenKoko.toFixed(3));
+    maare(nimi, 'letter-spacing', (nimenKoko * 0.12).toFixed(3));
+    piiriNakyviin(nimi, nimetNakyy);
   }
 
   const x = kaavat.x(MERIDIAANI.lon);
   const osa = piiriOsat(ryhma, MERIDIAANI);
   if (!Number.isFinite(x) || !(korkeus > 0)) {
-    osa.setAttribute('hidden', '');
+    piiriPiiloon(osa, true);
     return;
   }
-  osa.removeAttribute('hidden');
+  piiriPiiloon(osa, false);
   const viiva = osa.querySelector('.fokus-piiri-viiva');
-  viiva.setAttribute('d', `M${x.toFixed(2)},0 V${korkeus}`);
-  viiva.style.display = yleislehdella ? 'none' : '';
+  maare(viiva, 'd', `M${x.toFixed(2)},0 V${korkeus}`);
+  piiriNakyviin(viiva, !yleislehdella);
   const nimi = osa.querySelector('.fokus-piiri-nimi');
   /*
    * NIMI MYÖTÄILEE VIIVAA ELI KÄÄNTYY PYSTYYN.
@@ -1922,12 +1957,12 @@ function paivitaErikoispiirit(ui, yleislehdella) {
    * samaan suuntaan: y:n pienentäminen siirtää nimen laudalla
    * VASEMMALLE eli viivan viereen, ei sen päälle.
    */
-  nimi.setAttribute('x', (-keskiY).toFixed(1));
-  nimi.setAttribute('y', (x - nimenKoko * 0.45).toFixed(2));
-  nimi.setAttribute('font-size', nimenKoko.toFixed(3));
-  nimi.setAttribute('letter-spacing', (nimenKoko * 0.12).toFixed(3));
-  nimi.setAttribute('transform', 'rotate(-90)');
-  nimi.style.display = nimetNakyy ? '' : 'none';
+  maare(nimi, 'x', (-keskiY).toFixed(1));
+  maare(nimi, 'y', (x - nimenKoko * 0.45).toFixed(2));
+  maare(nimi, 'font-size', nimenKoko.toFixed(3));
+  maare(nimi, 'letter-spacing', (nimenKoko * 0.12).toFixed(3));
+  maare(nimi, 'transform', 'rotate(-90)');
+  piiriNakyviin(nimi, nimetNakyy);
 }
 
 /**

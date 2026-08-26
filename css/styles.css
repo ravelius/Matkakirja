@@ -1149,11 +1149,26 @@ body.manner-odottaa .rail {
    yksin tuotti 178 pakotettua asettelua 180 kehyksen panoroinnissa,
    vaimennettuna 8. Siksi jokainen laudan SVG:n sisällä jatkuvasti
    sykkivä animaatio on oltava tässä listassa; fokuspisteen vastine
-   asuu lajinsa vieressä css/fokusvirta.css:ssä. */
+   asuu lajinsa vieressä css/fokusvirta.css:ssä.
+
+   PAUSSI EIKÄ POISTO (26.8.2026). Sääntö oli ennen `animation: none`,
+   ja se vaimentaa yhtä hyvin — mutta se myös NOLLAA muunnoksen:
+   puoliksi kasvanut kehä kutistuu takaisin lepomittaansa juuri siinä
+   silmänräpäyksessä, kun sormi osuu ruutuun, ja hyppää eleen päätyttyä
+   uudestaan jakson alkuun. Kaksi ylimääräistä geometrian muutosta
+   eleen molemmissa päissä — eli kaksi asettelun mitätöintiä juuri
+   niissä hetkissä, joissa nykäys tuntuu — ja päälle näkyvä nytkähdys.
+   `animation-play-state: paused` jäädyttää kehän siihen mittaan, jossa
+   se oli, ja päästää sen jatkamaan samasta kohdasta.
+
+   Mitattu (Chromium, iPad-ikkuna 834×1112, 2 s lepoa Kreikan
+   fokusnäkymässä): vaimentamattomana 120 asettelua ja 120
+   tyylinlaskentaa, `animation: none` 1 ja 1, `paused` 1 ja 1 — eli
+   vaimennusteho on sama, ja ero on pelkkää voittoa. */
 body.kartta-raahaus .target-ring,
 body.kartta-raahaus .target-halo,
 body.kartta-raahaus .fokuslaatta-syke,
-body.kartta-raahaus .pawn-pulse { animation: none; }
+body.kartta-raahaus .pawn-pulse { animation-play-state: paused; }
 
 /*
  * Vanhan kiikarin vääristymä (omistajan toive): maailmankartan

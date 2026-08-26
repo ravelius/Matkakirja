@@ -48,11 +48,33 @@
  *      joita on vain kourallinen eleessä. Siksi väite 5 mittaa
  *      tyylikirjoituksia — juuri sitä, mikä oli vialla.
  *
+ *   6. SAMANARVOISET MÄÄREET SORMEN IRROTESSA (omistaja 26.8.2026:
+ *      *"panorointi tökkii yhä"* v1158:n jälkeen). Eleen aikana ei enää
+ *      tehty juuri mitään, mutta se hetki, jolloin sormi irtoaa, oli yhä
+ *      raskas: `taydennaTaide` → `paivitaMaastonimet` ajaa kaikki
+ *      fokuskerrokset läpi, ja kaksi niistä kirjoitti määreensä
+ *      uudestaan samoilla arvoilla. Mitattu (Chromium, iPad-ikkuna,
+ *      150 kehyksen raahaus, kohteita 48 ja piirejä 5):
+ *
+ *        48  setAttribute  g.fokuskohde-ryhma  [transform]   SAMA ARVO
+ *        26  setAttribute  .fokus-piiri-*      [d] [x] …     SAMA ARVO
+ *
+ *      Molemmat kirjoittavat nyt vain muuttuneen arvon (js/mapart.js
+ *      `maare`, sama sääntö kuin nimilapuilla). Väite 6 vartioi tätä.
+ *
+ *   7. SYKE PAUSSILLE, EI POIS. Vaimennussääntö oli `animation: none`,
+ *      joka NOLLAA muunnoksen: puoliksi kasvanut kehä kutistui takaisin
+ *      juuri kun sormi osui ruutuun ja hyppäsi jakson alkuun kun se
+ *      irtosi. `animation-play-state: paused` vaimentaa mitatusti yhtä
+ *      hyvin (2 s lepoa: vaimentamattomana 120 asettelua, kumpikin
+ *      vaimennus 1) mutta jäädyttää kehän paikalleen. Väitteet 1b ja 4
+ *      mittaavat siksi paussia eivätkä animaation katoamista.
+ *
  * TÄMÄ SAVUKE VARTIOI RAKENNETTA, EI KELLOA. Kehysaikaraja flakkaisi
  * CI:n koneilla, joten väitteet ovat determinantteja:
  *
  *   1a/1b. Raahauksen aikana body.kartta-raahaus on päällä ja laatan
- *          syke on animaatioltaan vaiennettu (computed 'none').
+ *          syke on vaiennettu (computed animation-play-state 'paused').
  *   2.     Asetteluja syntyy skriptatussa panoroinnissa korkeintaan
  *          0,7 kpl kehystä kohti (CDP LayoutCount; ennen sykekorjausta
  *          ~1,8–2,0, sen jälkeen ~1,05 ja wrapper-siirron jälkeen
@@ -60,7 +82,9 @@
  *          päästä läpi siirtoa, joka likaa asettelun joka kehyksellä).
  *   3.     Panorointi oikeasti liikuttaa karttaa (kuoren transform
  *          muuttuu) — muuten väitteet 1–2 mittaisivat tyhjää.
- *   4.     Eleen jälkeen syke herää uudelleen (animaatio palaa).
+ *   4.     Eleen jälkeen syke herää uudelleen (paussi purkautuu).
+ *   6.     Kohdemerkkien ja erikoispiirien määreitä ei kirjoiteta
+ *          uudestaan samoilla arvoilla eleessä eikä sen päätteeksi.
  *
  * Fokuspohja syötetään paikallisesti samalla stubilla kuin
  * savuke-fokuskartassa: yhden pikselin PNG ja oikea GRC-rajaus —
@@ -215,6 +239,25 @@ const ele = await sivu.evaluate(async (N) => {
     }
   }) : null;
   tyylivahti?.observe(viivaimet, { attributes: true, attributeFilter: ['style'], subtree: true });
+  /*
+   * Väite 6: samanarvoiset määreet kohdemerkeissä ja erikoispiireissä.
+   * Vahti jää päälle myös sormen irrotessa, koska juuri se hetki oli
+   * vialla — ryöppy tulee taydennaTaiteen asettumisketjusta eikä
+   * eleestä. `attributeOldValue` kertoo, oliko kirjoitus turha.
+   */
+  const turhat = { kohde: 0, piiri: 0 };
+  const turhavahdit = [];
+  for (const [nimi, valitsin] of [['kohde', '.fokuskohteet'], ['piiri', '.fokus-piirit']]) {
+    const juuri = document.querySelector(valitsin);
+    if (!juuri) continue;
+    const mo = new MutationObserver((lista) => {
+      for (const m of lista) {
+        if (m.oldValue === m.target.getAttribute(m.attributeName)) turhat[nimi] += 1;
+      }
+    });
+    mo.observe(juuri, { attributes: true, subtree: true, attributeOldValue: true });
+    turhavahdit.push(mo);
+  }
   pane.dispatchEvent(new PointerEvent('pointerdown', o(cx, cy)));
   let raahausNahty = false;
   let sykeVaiennettu = null;
@@ -232,7 +275,7 @@ const ele = await sivu.evaluate(async (N) => {
       if (i === Math.floor(N / 2)) {
         const syke = document.querySelector('.fokuslaatta-syke');
         sykeVaiennettu = syke
-          ? getComputedStyle(syke).animationName === 'none'
+          ? getComputedStyle(syke).animationPlayState === 'paused'
           : null;
       }
     }
@@ -251,6 +294,10 @@ const ele = await sivu.evaluate(async (N) => {
   }
   pane.dispatchEvent(new PointerEvent('pointerup', o(viimeX, viimeY)));
   tyylivahti?.disconnect();
+  // Väitteen 6 vahdit jäävät päälle sormen irrotessa: ryöppy tulee
+  // vasta asettumisketjusta, ja luvut luetaan alempana.
+  window.__panoTurhat = turhat;
+  window.__panoTurhaVahdit = turhavahdit;
   return {
     raahausNahty, sykeVaiennettu, muuttui, merkkiKirjoitukset, nauhaKirjoitukset,
     viivaimia: Boolean(viivaimet && !viivaimet.hidden),
@@ -294,14 +341,42 @@ vaadi('5b viivainmerkkejä ei kirjoiteta joka kehyksellä',
   `${merkkiaPerKehys.toFixed(2)} merkkikirjoitusta/kehys (raja 3)`);
 
 // Eleen jälkeen syke herää: vaimennus oli raahausluokan varassa eikä
-// jäänyt päälle.
+// jäänyt päälle. Sama odotus riittää myös väitteelle 6: asettumisryöppy
+// tulee heti sormen irrotessa (taydennaTaide { heti: true }).
 await sivu.waitForTimeout(600);
-const heraa = await sivu.evaluate(() => {
+const jalkeen = await sivu.evaluate(() => {
   const syke = document.querySelector('.fokuslaatta-syke');
-  return syke ? getComputedStyle(syke).animationName : null;
+  const tyyli = syke ? getComputedStyle(syke) : null;
+  for (const mo of window.__panoTurhaVahdit ?? []) mo.disconnect();
+  return {
+    animaatio: tyyli?.animationName ?? null,
+    paussi: tyyli?.animationPlayState ?? null,
+    turhat: window.__panoTurhat ?? null,
+    kohteita: document.querySelectorAll('.fokuskohde-ryhma').length,
+    piireja: document.querySelectorAll('.fokus-piiri').length,
+  };
 });
-vaadi('4 syke herää eleen jälkeen', Boolean(heraa) && heraa !== 'none',
-  `animationName ${heraa}`);
+vaadi('4 syke herää eleen jälkeen',
+  Boolean(jalkeen.animaatio) && jalkeen.animaatio !== 'none' && jalkeen.paussi === 'running',
+  `animationName ${jalkeen.animaatio}, playState ${jalkeen.paussi}`);
+
+/*
+ * Väite 6: kohdemerkkien ja erikoispiirien määreitä ei kirjoiteta
+ * uudestaan samoilla arvoilla. Ennen korjausta ryöppy oli 48 + 26 =
+ * 74 turhaa kirjoitusta sillä hetkellä, kun sormi irtoaa; nyt 0.
+ * Raja on väljä (8), koska yksittäinen samanarvoinen kirjoitus voi
+ * syntyä myös kerroksen uudelleenrakennuksesta — mutta se ei päästä
+ * läpi silmukkaa, joka kirjoittaa koko kerroksen uusiksi.
+ */
+const turhat = jalkeen.turhat ?? { kohde: -1, piiri: -1 };
+console.log(`      mitattu: turhia määrekirjoituksia kohde ${turhat.kohde}`
+  + ` (${jalkeen.kohteita} ryhmää), piiri ${turhat.piiri} (${jalkeen.piireja} piiriä)`);
+vaadi('6a kohdemerkkejä ja piirejä on kartalla',
+  jalkeen.kohteita > 0 && jalkeen.piireja > 0,
+  `kohteita ${jalkeen.kohteita}, piirejä ${jalkeen.piireja}`);
+vaadi('6b samanarvoisia määreitä ei kirjoiteta uudestaan',
+  turhat.kohde >= 0 && turhat.kohde <= 8 && turhat.piiri <= 8,
+  `kohde ${turhat.kohde}, piiri ${turhat.piiri} (raja 8)`);
 
 await selain.close();
 palvelin.close();

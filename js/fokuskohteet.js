@@ -90,7 +90,7 @@
  * piirtyvän muuten niukkana ja nostavan yhden kohteen esiin. Tässä
  * vaiheessa korostus on kevyt rengas auki olevan kohteen ympärillä.
  */
-import { el } from './mapart.js';
+import { el, maare } from './mapart.js';
 import { NOSTOSYM_LUOKAT, NOSTOSYM_TYYPIT, piirraNostosymboli } from './fokusnosto-symbolit.js';
 import { asetaKuva } from './media.js';
 import { html, jaaKappaleiksi } from './ui-apurit.js';
@@ -516,6 +516,14 @@ function eritteleKohdeRyhmat(ui, s) {
  * paitsi kaupungin päälle osuneilla merkeillä, jotka yhteinen
  * kasauspassi (js/fokusniput.js) siirtää nippuun kaupungin oikealle
  * puolelle; nipun paikka korvaa sekä datan paikan että erottelusiirron.
+ *
+ * MUUNNOS KIRJOITETAAN VAIN JOS SE MUUTTUI (js/mapart.js maare —
+ * v1158:n sääntö nimilapuilta). Panorointi ei liikuta yhtäkään
+ * kohdemerkkiä laudalla eikä muuta mittakaavaa, joten tämä silmukka
+ * kirjoitti sormen irrotessa 48 ryhmälle täsmälleen saman muunnoksen
+ * kuin ennenkin — ja mitätöi 48 SVG-solmun asettelun juuri siinä
+ * nykäyshetkessä. Mitattu 26.8.2026: 48 samanarvoista kirjoitusta
+ * ryöpyssä, korjauksen jälkeen 0.
  */
 function asetaKohdeMittakaava(ui, suhde) {
   const s = ui.fokusMerkkiSkaala?.(suhde);
@@ -526,7 +534,7 @@ function asetaKohdeMittakaava(ui, suhde) {
   for (const ryhma of ui.fokuskohdeRyhmat ?? []) {
     const x = (ryhma.nippu?.x ?? ryhma.x + (ryhma.sx ?? 0)).toFixed(2);
     const y = (ryhma.nippu?.y ?? ryhma.y + (ryhma.sy ?? 0)).toFixed(2);
-    ryhma.g.setAttribute('transform', `translate(${x} ${y}) scale(${zoom})`);
+    maare(ryhma.g, 'transform', `translate(${x} ${y}) scale(${zoom})`);
   }
 }
 

@@ -985,10 +985,16 @@ body.fokuszoom-paalla .fokusvirta-kortti {
  * kuin laattakehän sykkeellä (css/styles.css .kartta-raahaus-lista):
  * SVG-lapsen transform-animaatio likaa koko laudan asettelun joka
  * kehyksellä eikä ole kompositorin työtä, ja likainen asettelu tekee
- * panoroinnista tahmeaa. Piste jää paikalleen näkyviin lepoasussaan.
+ * panoroinnista tahmeaa. Piste jää paikalleen näkyviin siihen asuun,
+ * jossa se oli.
+ *
+ * PAUSSI EIKÄ POISTO, samasta syystä kuin laattakehällä (css/styles.css
+ * .kartta-raahaus-lista): `animation: none` nollaisi muunnoksen ja
+ * mitätöisi asettelun kertaalleen sekä eleen alussa että sen lopussa —
+ * juuri niissä kahdessa hetkessä, joissa nykäys tuntuu.
  */
 body.kartta-raahaus .fokuspiste-hehku,
-body.kartta-raahaus .fokuspiste-ydin { animation: none; }
+body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
 
 /* ===================================================================
    VARMISTUKSEN KYLLÄ/EI OIKEINA NAPPEINA

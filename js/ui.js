@@ -6605,6 +6605,11 @@ export class UI {
    * sormi irtoaa. Se on täsmälleen se hetki, jossa nykäys tuntuu.
    *
    * Vertailu on tässä eikä kutsupaikoissa, jotta sääntö pysyy yhtenä.
+   *
+   * SAMA SÄÄNTÖ LAUDAN PIIRTÄJILLE on js/mapart.js `maare` — sinne
+   * yltävät ne kerrokset, jotka eivät ole UI-luokan sisällä
+   * (fokuskohteet, erikoispiirit). Jos tätä sääntöä muutetaan,
+   * molemmat muuttuvat.
    */
   static maare(osa, nimi, arvo) {
     const teksti = String(arvo);
