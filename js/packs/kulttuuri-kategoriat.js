@@ -25728,25 +25728,34 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+          /*
+           * AVAUSKUVAT (27.8.2026): omistajan ChatGPT-herokuvat (erä
+           * İzmir: Konakin kellotorni, Asansör, Kızlarağası Han —
+           * kaikki silmin tarkistettu; kellotornin suihkulähteet ja
+           * hanin taustalla Hisarin moskeija oikein). Korvasi
+           * Commons/Flickr-yleisnäkymät — kolme paikallista
+           * maamerkkiä istuu 1873-matkakirjaan paremmin.
+           */
           avauskuvat: [
         {
-          tiedosto: 'Izmir Kadifekale view from wall 5677.jpg',
-          selite: 'Smyrna siirrettiin Pagos-vuorelle vanhalta paikaltaan '
-            + 'kummulta, jolle mahtui vain muutama tuhat asukasta.',
-          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-izmir-aamu.jpg',
+          selite: 'Konakin aukion kellotorni valmistui 1901 sulttaani '
+            + 'Abdülhamid II:n hallituskauden 25-vuotisjuhlaan; sen '
+            + 'juurella on neljä suihkulähdettä.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'flickr-45404137562.jpg',
-          selite: 'Kesällä İzmirin lahdella puhaltaa säännöllisesti '
-            + 'Egeanmeren etesiantuuli, jota täällä kutsutaan nimellä '
-            + 'meltem.',
-          lahde: 'Francisco Anzola, Flickr (CC BY 2.0)',
+          ampari: 'herokoe/hero-izmir-keskipaiva.jpg',
+          selite: 'Asansör on 1907 rakennettu hissitorni, joka nostaa '
+            + 'kulkijan rantakadulta Karataşin jyrkänteen päälle.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'flickr-44541665545.jpg',
-          selite: 'İzmirin lautoilla on yhdeksän laituria, ja matkustajia '
-            + 'kertyy päivässä yli 50 000.',
-          lahde: 'Francisco Anzola, Flickr (CC BY 2.0)',
+          ampari: 'herokoe/hero-izmir-ilta.jpg',
+          selite: 'Kızlarağası Han on 1744 valmistunut karavaaniserai '
+            + 'Kemeraltın basaarissa — kaarikäytävien piha palvelee yhä '
+            + 'kauppiaita ja kahvinjuojia.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       /*
