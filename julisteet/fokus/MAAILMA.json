@@ -1,0 +1,215 @@
+{
+  "id": "MAAILMA",
+  "lauta": "maailmankartta",
+  "bbox": {
+    "x": 0,
+    "y": 0,
+    "w": 12000,
+    "h": 5399
+  },
+  "rajaus": {
+    "x": 0,
+    "y": 0,
+    "w": 12000,
+    "h": 5399
+  },
+  "kuva": {
+    "w": 6400,
+    "h": 2879
+  },
+  "tiedosto": "MAAILMA.webp",
+  "tehty": "2026-08-26",
+  "laatikko": {
+    "lon0": -175.5,
+    "lon1": 185.5,
+    "lat0": -58.5,
+    "lat1": 76.5
+  },
+  "ruutu": 0.05,
+  "korkeusruudukko": {
+    "w": 7221,
+    "h": 2701
+  },
+  "meret": [
+    "TYYNIMERI",
+    "TYYNIMERI",
+    "ATLANTIN VALTAMERI",
+    "ETELÄINEN ATLANTTI",
+    "INTIAN VALTAMERI"
+  ],
+  "tasaus": [
+    {
+      "id": "lontoo",
+      "nimi": "Lontoo",
+      "ankkuri": true,
+      "lauta": [
+        5829.5,
+        1324.1
+      ],
+      "projektio": [
+        5829.1,
+        1324
+      ],
+      "ero": 0.43
+    },
+    {
+      "id": "istanbul",
+      "nimi": "Istanbul",
+      "ankkuri": false,
+      "lauta": [
+        6796.5,
+        1763
+      ],
+      "projektio": [
+        6799.3,
+        1763.1
+      ],
+      "ero": 2.78
+    },
+    {
+      "id": "rooma",
+      "nimi": "Rooma",
+      "ankkuri": true,
+      "lauta": [
+        6249.7,
+        1728.1
+      ],
+      "projektio": [
+        6249.9,
+        1727.5
+      ],
+      "ero": 0.66
+    },
+    {
+      "id": "ateena",
+      "nimi": "Ateena",
+      "ankkuri": true,
+      "lauta": [
+        6624.7,
+        1882
+      ],
+      "projektio": [
+        6624.3,
+        1881.5
+      ],
+      "ero": 0.7
+    },
+    {
+      "id": "kairo",
+      "nimi": "Kairo",
+      "ankkuri": true,
+      "lauta": [
+        6874.2,
+        2180.9
+      ],
+      "projektio": [
+        6874.5,
+        2179.3
+      ],
+      "ero": 1.65
+    },
+    {
+      "id": "kapkaupunki",
+      "nimi": "Kapkaupunki",
+      "ankkuri": false,
+      "lauta": [
+        6479.2,
+        4360.1
+      ],
+      "projektio": [
+        6447.5,
+        4387.2
+      ],
+      "ero": 41.7
+    },
+    {
+      "id": "tokio",
+      "nimi": "Tokio",
+      "ankkuri": false,
+      "lauta": [
+        10490,
+        1968.9
+      ],
+      "projektio": [
+        10489.7,
+        1969.3
+      ],
+      "ero": 0.5
+    },
+    {
+      "id": "newyork",
+      "nimi": "New York",
+      "ankkuri": false,
+      "lauta": [
+        3360,
+        1767.4
+      ],
+      "projektio": [
+        3366.5,
+        1774.8
+      ],
+      "ero": 9.82
+    },
+    {
+      "id": "sanfrancisco",
+      "nimi": "San Francisco",
+      "ankkuri": false,
+      "lauta": [
+        1760,
+        1884.7
+      ],
+      "projektio": [
+        1752.7,
+        1889.5
+      ],
+      "ero": 8.76
+    },
+    {
+      "id": "buenosaires",
+      "nimi": "Buenos Aires",
+      "ankkuri": false,
+      "lauta": [
+        3883.3,
+        4423.8
+      ],
+      "projektio": [
+        3887.3,
+        4412.6
+      ],
+      "ero": 11.85
+    },
+    {
+      "id": "lima",
+      "nimi": "Lima",
+      "ankkuri": false,
+      "lauta": [
+        3280,
+        3626.9
+      ],
+      "projektio": [
+        3265.2,
+        3614.9
+      ],
+      "ero": 18.99
+    },
+    {
+      "id": "sydney",
+      "nimi": "Sydney",
+      "ankkuri": false,
+      "lauta": [
+        10866.7,
+        4375
+      ],
+      "projektio": [
+        10873.6,
+        4385
+      ],
+      "ero": 12.21
+    }
+  ],
+  "tasauksenMediaani": 8.76,
+  "lahteet": [
+    "Natural Earth 10m (Kelso & Patterson) — public domain",
+    "ETOPO1 Global Relief (NOAA, Amante & Eakins 2009) — public domain"
+  ]
+}
