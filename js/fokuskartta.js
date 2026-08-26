@@ -135,17 +135,44 @@ function nykyinenMaa(ui) {
  *
  * VARAREITTI: jos decode() puuttuu, odotetaan kuten ennen. Kumpikin
  * haara palauttaa saman tosi/epätosi-arvon.
+ *
+ * === PURKU ON JONOSSA MYÖS TÄSSÄ (mitattu 27.8.2026) ================
+ *
+ * Rinnakkainen purku EI OLE ILMAINEN EDES TYÖPÖYTÄSELAIMESSA. Kun
+ * pohjakerros tuli mukaan (ks. "...JA POHJAKERROS KOKO FOKUSMOODIIN"),
+ * yksi lehti lisää oli yhtä aikaa purussa — ja mitattuna Chromium
+ * hylkäsi neljän lehden purun kerralla (UKR, FRA, BGR, KAZ):
+ * `decode()` torjuttiin, haePohja merkitsi lehdet puuttuviksi istunnon
+ * loppuun, ja pois jäi myös NYKYISEN MAAN oma lehti — fokusnäkymä ilman
+ * fokusta. Sama ajo ilman pohjaa purki kaikki puhtaasti. Yksi lehti on
+ * purettuna satakunta megatavua, ja viisi yhtaikaista purkua on puoli
+ * gigatavua kertaheitolla.
+ *
+ * Pienennetyllä polulla jono on ollut alusta asti (ks. "YKSI LEHTI
+ * KERRALLAAN"); nyt sama jono koskee myös purkamatonta polkua.
+ *
+ * VERKKO EI OLE JONOSSA, JA SE ON TÄSSÄ TURVALLISUUSKYSYMYS. `src`
+ * asetetaan heti ja tavuja ODOTETAAN onloadilla jonon ULKOPUOLELLA;
+ * vasta valmiiden tavujen purku menee jonoon. Jos jono kattaisi myös
+ * odotuksen, yksi hidas tai jumiin jäänyt lataus pysäyttäisi KAIKKIEN
+ * lehtien purun — ja koska jono on nyt ainoa reitti kartalle, kartta
+ * jäisi tyhjäksi siksi aikaa.
  */
 function lataaKuva(osoite) {
   const kuva = new Image();
   kuva.src = osoite;
+  const saapunut = new Promise((valmis) => {
+    // Välimuistista tullut kuva voi olla valmis jo ennen käsittelijöitä.
+    if (kuva.complete) { valmis(Boolean(kuva.naturalWidth)); return; }
+    kuva.onload = () => valmis(true);
+    kuva.onerror = () => valmis(false);
+  });
   if (typeof kuva.decode !== 'function') {
-    return new Promise((valmis) => {
-      kuva.onload = () => valmis(kuva);
-      kuva.onerror = () => valmis(null);
-    });
+    return saapunut.then((ok) => (ok ? kuva : null));
   }
-  return kuva.decode().then(() => kuva, () => null);
+  return saapunut.then((ok) => (ok
+    ? jonossa(() => kuva.decode().then(() => kuva, () => null))
+    : null));
 }
 
 /*
@@ -529,8 +556,10 @@ async function pienennaLehti(lahde, blob, savy) {
  * ennenkin. Jos jono kattaisi noudon, kolmen lehden atlas odottaisi
  * kolme peräkkäistä latausta.
  *
- * Jono koskee VAIN pienennettyä polkua. Työpöytäselaimessa purku on
- * selaimen omissa käsissä kuten ennenkin.
+ * JONO KOSKEE NYKYÄÄN MOLEMPIA POLKUJA (27.8.2026). Ensimmäinen versio
+ * jätti purkamattoman työpöytäpolun selaimen omiin käsiin; mitattuna
+ * sekin kaatui, kun pohjakerros lisäsi yhden yhtaikaisen purun (ks.
+ * lataaKuva).
  */
 let purkuJono = Promise.resolve();
 function jonossa(tyo) {
@@ -979,6 +1008,8 @@ function atlasMegapikselia() {
  * mahtuu enemmän jo seuraavassa päivityksessä.
  */
 const ATLAS_OLETUS_MP = 25.6;
+/** ...ja yleislehden oma arvio: koko lauta on maalehteä pienempi kuva. */
+const YLEISLEHDEN_OLETUS_MP = 18.4;
 /** Esilatausvara näkymän ympärille, osuutena näkymän mitasta. */
 const ATLAS_VARA = 0.3;
 /** Lehti sivuutetaan, jos se on tätä kapeampi osuus näkymästä. */
@@ -998,6 +1029,50 @@ const ATLAS_VAHIMMAISLEVEYS = 0.12;
 const ATLAS_RUUTUJA_X = 16;
 const ATLAS_RUUTUJA_Y = 16;
 const ATLAS_UUSIA_RUUTUJA = 5;
+
+/*
+ * ============ JÄTTILÄISLEHTI EI ANSAITSE PAIKKAANSA POHJAN PÄÄLLÄ ====
+ *
+ * MITATTU 27.8.2026, kun pohjakerros oli juuri kytketty päälle (ks.
+ * "...JA POHJAKERROS KOKO FOKUSMOODIIN"): omistajan Bulgaria-näkymä ei
+ * muuttunut kaappauksessa lainkaan. Syy näkyi mittarissa — kartalla oli
+ * yleislehti, Bulgarian lehti JA VENÄJÄN LEHTI, ja juuri Venäjä peitti
+ * koko ruudun.
+ *
+ * Lehti on OPAAKKI koko rajauksessaan (sääntö 4 tiedoston alussa): sen
+ * vuotoalue ei ole läpinäkyvä vaan haalea piirros naapurimaista, ja se
+ * peittää kaiken altaan. Venäjän lehti on 7504 lautayksikköä leveä
+ * kuvana, joka on 6400 pikseliä — 0,85 kuvapikseliä yksikköä kohti,
+ * kun yleislehti antaa 0,53. Ruudulla ero on olematon, mutta hinta ei:
+ * 16 megapikseliä muistia, koko näkymän peitto (jolloin ahne valinta ei
+ * ottanut yhtäkään tarkkaa naapuria, koska ne eivät tuoneet "uusia
+ * ruutuja") ja se groteski paksu jokikiemura, jonka omistaja näki.
+ *
+ * SÄÄNTÖ: kun pohja on kartalla, maalehti kelpaa vain jos se on pohjaa
+ * selvästi tarkempi. Tarkkuus on suoraan kääntäen verrannollinen
+ * lehden leveyteen lautayksikköinä, koska KAIKKI lehdet renderöidään
+ * samaan 6400 pikselin leveyteen (tools/tee-fokuskartta.mjs; mitattu
+ * ämpäristä 27.8.2026: RUS 6400 x 2520, BGR 6400 x 4003, MAAILMA
+ * 6400 x 2879 — vain pikkuruiset maat kuten Kypros jäävät alle, eikä
+ * niitä tämä sääntö koske). Kolminkertainen tarkkuus on vähin, mikä
+ * ruudulla erottuu; se karsii 134 lehdestä viisi (RUS, CAN, GRL, CHL,
+ * CHN) ja vapauttaa niiden megapikselit tarkoille naapureille.
+ *
+ * KAKSI POIKKEUSTA:
+ *   1. Ilman pohjaa vanha käytös jää voimaan. Jos MAAILMA.webp puuttuu
+ *      ämpäristä, karkeakin lehti on parempi kuin tyhjä pergamentti.
+ *   2. NYKYISEN MAAN OMA LEHTI EI KOSKAAN KARSIUDU. Venäjässä seisova
+ *      pelaaja katsoo Venäjän lehteä, ja se on silloin koko
+ *      fokusnäkymä (paivitaFokuskartta piirtää sen omaan ryhmäänsä —
+ *      tämä sääntö koskee vain atlaksen naapurivalintaa).
+ */
+const ATLAS_TARKKUUSSUHDE = 3;
+function liianKarkea(ui, bbox, iso) {
+  if (!ui.yleislehtiPohja) return false;
+  if (iso === ui.fokuskarttaAvain) return false;
+  const pohjanLeveys = YLEISLEHTI?.bbox?.w ?? 0;
+  return pohjanLeveys > 0 && bbox.w * ATLAS_TARKKUUSSUHDE > pohjanLeveys;
+}
 
 /** Kahden laatikon leikkauksen pinta-ala (0 jos eivät leikkaa). */
 function leikkausAla(a, b) {
@@ -1180,7 +1255,15 @@ function lehtiRyhma(ui) {
 /** Lehden arvioitu koko megapikseleinä (mitattu, jos jo ladattu). */
 function lehdenMp(iso, lauta) {
   const tallessa = VARASTO.get(`${lauta}:${iso}`);
-  return (tallessa && tallessa !== 'ei' && tallessa.mp) || ATLAS_OLETUS_MP;
+  if (tallessa && tallessa !== 'ei' && tallessa.mp) return tallessa.mp;
+  /*
+   * YLEISLEHDELLÄ ON OMA ARVIONSA. Se on koko laudan kuva eikä
+   * maalehti: 6400 x 2879 = 18,4 Mp (mitattu ämpäristä 27.8.2026),
+   * pienennettynä 3200 x 1440 = 4,6 Mp. Maalehden 25,6 Mp:n arvio
+   * veisi pohjakerrokselta paikan puhelimen budjetissa ennen kuin
+   * lehti on kertaakaan mitattu.
+   */
+  return iso === YLEISLEHDEN_AVAIN ? YLEISLEHDEN_OLETUS_MP : ATLAS_OLETUS_MP;
 }
 
 /**
@@ -1227,6 +1310,8 @@ function atlasEhdokkaat(ui, nakyva, lauta) {
     // Postimerkkiä ei kannata purkaa: näkymään nähden liian kapea lehti
     // ei toisi ruudulle mitään luettavaa.
     if (b.w < nakyva.w * ATLAS_VAHIMMAISLEVEYS) continue;
+    // ...eikä pohjaa karkeampaa jättiläistä (ks. liianKarkea).
+    if (liianKarkea(ui, b, iso)) continue;
     let paras = null;
     for (const dx of kierto ? [0, kierto, -kierto] : [0]) {
       const laatikko = {
@@ -1284,7 +1369,15 @@ function peita(ruudut, laatikko, nakyva, merkitse) {
 function atlasValinta(ui, nakyva, lauta, nykyinen, ehdokkaat) {
   const ruudut = new Uint8Array(ATLAS_RUUTUJA_X * ATLAS_RUUTUJA_Y);
   const valitut = [];
-  let mp = 0;
+  /*
+   * POHJAKERROS ON JO MAKSETTU (ks. atlasPohjaMp): se on kartalla
+   * kokonaan, joten sen megapikselit ja sen paikka kappalekatossa
+   * varataan ennen kuin yhtäkään naapuria valitaan. Pohja EI vie
+   * peittoa — se on tarkoituksella kaiken alla, ja jos se laskettaisiin
+   * peitoksi, yksikään maalehti ei enää kelpaisi.
+   */
+  const pohjia = ui.atlasPohjaMp ? 1 : 0;
+  let mp = ui.atlasPohjaMp ?? 0;
   const oma = ehdokkaat.find((e) => e.iso === nykyinen);
   if (oma) {
     peita(ruudut, oma.bbox, nakyva, true);
@@ -1292,7 +1385,7 @@ function atlasValinta(ui, nakyva, lauta, nykyinen, ehdokkaat) {
   }
   for (const e of ehdokkaat) {
     if (e.iso === nykyinen) continue;
-    if (valitut.length + (oma ? 1 : 0) >= atlasEnintaan()) break;
+    if (valitut.length + (oma ? 1 : 0) + pohjia >= atlasEnintaan()) break;
     if (peita(ruudut, e.bbox, nakyva, false) < ATLAS_UUSIA_RUUTUJA) continue;
     const koko = lehdenMp(e.iso, lauta);
     // Budjetin täyttyminen ei lopeta hakua: seuraava lehti voi olla
@@ -1330,9 +1423,12 @@ function karsiAtlas(ui, lauta, suojatut) {
   const lehdet = ui.atlasLehdet;
   if (!lehdet?.size) return;
   const yli = () => {
-    let mp = ui.atlasOmaMp ?? 0;
+    // Pohjakerros on kartalla kokonaan: se lasketaan mukaan samalla
+    // tavalla kuin nykyisen maan oma lehti (ks. atlasPohjaMp).
+    const pohja = ui.atlasPohjaMp ?? 0;
+    let mp = (ui.atlasOmaMp ?? 0) + pohja;
     for (const [iso] of lehdet) mp += lehdenMp(iso, lauta);
-    return lehdet.size + (ui.atlasOmaMp ? 1 : 0) > atlasEnintaan()
+    return lehdet.size + (ui.atlasOmaMp ? 1 : 0) + (pohja ? 1 : 0) > atlasEnintaan()
       || mp > atlasMegapikselia();
   };
   while (yli()) {
@@ -1385,9 +1481,76 @@ function karsiAtlas(ui, lauta, suojatut) {
  * (atlasTurvatila): turvatilassa ei pureta yhtäkään isoa kuvaa, ja
  * laudan oma pergamentti riittää. Tämä koodi on atlasPaallan takana,
  * joten turvatilassa yleislehteä ei edes haeta.
+ *
+ * ============ ...JA POHJAKERROS KOKO FOKUSMOODIIN (27.8.2026) ========
+ *
+ * OMISTAJAN TYÖPÖYTÄKAAPPAUKSET v1118 (leveä ruutu ~2000 px), kaksi
+ * vikaa samasta juuresta:
+ *
+ *   1. Bulgarian fokusnäkymässä Bulgarian oma lehti piirtyi oikein,
+ *      mutta koko muu näkymä oli pergamenttia, jonka päällä risteili
+ *      groteskin paksuja tummia jokikiemuroita ja kirkkaankeltaisia
+ *      maalaikkuja mustin ääriviivoin.
+ *   2. Kynnyksen alapuolella (noin 2600 yksikköä) näkymän eteläpuoli
+ *      oli kaunista uutta lehteä ja pohjoispuoli haaleaa sumua —
+ *      vaakasuora sauma keskellä ruutua.
+ *
+ * MIKÄ MAKSOI. Molemmissa näkyy sitä, mitä lehden ULKOPUOLELLA on:
+ * naapurilehtien häivytettyä vuotoaluetta ja paljasta pergamenttia.
+ * Leveällä ruudulla näkymään osuu enemmän maita kuin muistibudjettiin
+ * mahtuu lehtiä (atlasMegapikselia), ja lataamatta jääneiden maiden
+ * kohdalle jää tyhjää — vuotoalue suurennettuna on rumaa, koska se on
+ * tehty sulamaan naapurilehteen eikä esitettäväksi yksinään.
+ *
+ * RATKAISU ON POHJA, EI VUOTOJEN SIIVOUS. Yleislehti on jo olemassa ja
+ * se on koko laudan kartta: kun se piirretään atlaslehtien ALLE aina
+ * fokusmoodissa eikä vain kaukozoomissa, lataamattoman maan kohdalla
+ * näkyy oikea maailmankartta ja vuotoalueet sulavat siihen sen sijaan
+ * että kelluisivat tyhjän paperin päällä. Maalehdet peittävät pohjan
+ * omalla alueellaan kuten ennenkin.
+ *
+ * POHJA YKSIN EI RIITTÄNYT — TARVITTIIN MYÖS KARKEIDEN LEHTIEN
+ * KARSINTA. Ensimmäinen mittaus 27.8.2026 näytti, ettei Bulgarian
+ * näkymä muuttunut pohjasta lainkaan: ruutua peitti VENÄJÄN lehti,
+ * joka on opaakki koko rajauksessaan ja niin leveä (7504 yksikköä),
+ * että se on käytännössä yhtä sumea kuin yleislehti. Se myös esti
+ * tarkkojen naapurien valinnan. Ks. "JÄTTILÄISLEHTI EI ANSAITSE
+ * PAIKKAANSA POHJAN PÄÄLLÄ" — nämä kaksi sääntöä ovat yksi korjaus.
+ *
+ * MUISTI PYSYY KATTOJEN VARASSA. Yleislehti on 6400 x 2879 = 18,4 Mp ≈ 74 Mt
+ * (pienennettynä 3200 x 1440 = 4,6 Mp ≈ 18 Mt) eli PIENEMPI kuin
+ * tavallinen maalehti, ja se varaa paikkansa katoista (atlasPohjaMp) —
+ * atlakseen mahtuu yksi naapuri vähemmän ja tilalle tulee koko
+ * maailman kartta. Karkeiden lehtien karsinta vetää samaan suuntaan:
+ * Venäjän 16 megapikseliä siirtyy tarkoille naapurilehdille.
+ *
+ * TURVATILASSA POHJAA EI OLE. Sama sääntö kuin kaukozoomin
+ * yleislehdellä: turvatilassa ei pureta yhtäkään isoa kuvaa (koko tämä
+ * koodi on atlasPaallan takana).
  */
 const KAUKOZOOMIN_RAJA = 2600;
 const KAUKOZOOMIN_HYSTEREESI = 0.1;
+
+/*
+ * Onko yleislehti pohjakerroksena myös lähempänä kuin kaukozoomin
+ * kynnys? Yksi kytkin, jotta rajaus (esim. vain leveät ruudut) on
+ * yhden rivin muutos, jos jokin laite joskus osoittaa toisin.
+ *
+ * NYT PÄÄLLÄ KAIKKIALLA. Mitattu 27.8.2026 oikeilla ämpärin lehdillä
+ * (Bulgarian fokusnäkymä ja sen jälkeen 2500 yksikön näkymä):
+ *
+ *   430 x 930   ennen 16,8 → 23,2 Mp, jälkeen 23,8 → 30,2 Mp (katto 40)
+ *   1920 x 1080 ennen 41,8 → 67,4 Mp, jälkeen 95,3 → 146,5 Mp (katto 96)
+ *
+ * Puhelin pysyy katon alla, ja juuri se katto on se, joka on pitänyt
+ * kuoren hengissä. Työpöydällä luku kasvaa, koska kartalle jää
+ * panoroinnin jäljiltä useampi TARKKA lehti (LRU suojaa näkyvät, ks.
+ * "HYSTEREESI VÄLKKYMISTÄ VASTAAN") — siellä muisti riittää eikä
+ * yksikään mittaus ole kaatunut.
+ */
+function yleislehtiPohjaSallittu() {
+  return true;
+}
 
 /** Onko näkymä kaukozoomissa? Edellinen tila ratkaisee kynnyksen välissä. */
 function kaukozoomissa(ui, leveys) {
@@ -1426,8 +1589,9 @@ function naytaYleislehti(ui, lauta) {
     ui.yleislehtiHaku = false;
     if (ui.dead || !pohja?.kuva || !ui.fokuskarttaKerros) return;
     // Näkymä on voinut palata lähikuvaan haun aikana; silloin lehti
-    // jää varastoon eikä kartalle.
-    if (!ui.yleislehtiPaalla || ui.game.pack.id !== lauta) return;
+    // jää varastoon eikä kartalle — ellei se ole pohjakerroksena, jossa
+    // se kuuluu kartalle zoomista riippumatta.
+    if (!(ui.yleislehtiPaalla || ui.yleislehtiPohja) || ui.game.pack.id !== lauta) return;
     const kohde = yleislehtiRyhma(ui);
     if (!kohde || kohde.querySelector('image')) return;
     pohja.piirretty = true;
@@ -1467,7 +1631,8 @@ function poistaYleislehti(ui) {
 function palautaMaalehti(ui) {
   const valmis = () => {
     ui.yleislehtiPalautus = false;
-    if (!ui.yleislehtiPaalla) poistaYleislehti(ui);
+    // Pohjakerroksena yleislehti jää kartalle myös lähizoomissa.
+    if (!ui.yleislehtiPaalla && !ui.yleislehtiPohja) poistaYleislehti(ui);
   };
   const iso = ui.fokuskarttaAvain;
   const ryhma = lehtiRyhma(ui);
@@ -1702,9 +1867,12 @@ export function paivitaFokusAtlas(ui) {
   ui.atlasLehdet ??= new Map();
   ui.atlasHaut ??= new Set();
   if (!atlas) {
-    // Turvatila ja fokusmoodin sammutus vievät myös yleislehden: tässä
-    // haarassa kartalle ei jätetä yhtäkään purettua kuvaa.
+    // Turvatila ja fokusmoodin sammutus vievät myös yleislehden — sekä
+    // kaukozoomin että pohjakerroksen: tässä haarassa kartalle ei
+    // jätetä yhtäkään purettua kuvaa.
     ui.yleislehtiPaalla = false;
+    ui.yleislehtiPohja = false;
+    ui.atlasPohjaMp = 0;
     ui.yleislehtiPalautus = false;
     poistaYleislehti(ui);
     // Erikoispiirit ovat atlaksen kerros: ne katoavat sen mukana
@@ -1735,8 +1903,32 @@ export function paivitaFokusAtlas(ui) {
    * sellaisena kuin se oli ennen tätä pakettia. Puute muistetaan
    * käynnin ajaksi (VARASTO), joten turhaa hakua ei toisteta.
    */
-  const kauko = kaukozoomissa(ui, nakyva.w)
-    && VARASTO.get(`${lauta}:${YLEISLEHDEN_AVAIN}`) !== 'ei';
+  const yleisSaatavilla = VARASTO.get(`${lauta}:${YLEISLEHDEN_AVAIN}`) !== 'ei';
+  const kauko = kaukozoomissa(ui, nakyva.w) && yleisSaatavilla;
+  /*
+   * POHJAKERROS ON SAMA LEHTI TOISESSA TEHTÄVÄSSÄ (ks. "...JA
+   * POHJAKERROS KOKO FOKUSMOODIIN"). Kaukozoomissa lippu on päällä
+   * sekin, jolloin poistoehdot (palautaMaalehti) katsovat kumpaakin
+   * eikä lehti välähdä pois kynnyksen kohdalla.
+   */
+  ui.yleislehtiPohja = yleisSaatavilla && yleislehtiPohjaSallittu()
+    && (!YLEISLEHTI?.lauta || YLEISLEHTI.lauta === lauta);
+  /*
+   * POHJA VARAA PAIKKANSA BUDJETISTA — KAIKKIALLA. Katot ovat
+   * henkivakuutus (ks. atlaksen johdanto), eikä pohja saa tulla niiden
+   * PÄÄLLE: se ottaa oman paikkansa sekä megapikseleistä että
+   * kappalemäärästä, ja atlakseen VALITAAN vastaavasti yksi
+   * naapurilehti vähemmän. (Jo maksetut, yhä näkyvät lehdet ovat
+   * suojassa LRU:lta kuten ennenkin, joten panoroinnin jäljiltä
+   * kartalla voi olla enemmän kuin yksi valinta kerrallaan — se on
+   * vanha sopimus eikä tämän paketin muutos.)
+   *
+   * VAIHTOKAUPPA ON HYVÄ, KOSKA POHJA PEITTÄÄ ALUEENSA KOKONAAN.
+   * Naapurilehti kattaa yhden maan; pohja kattaa koko laudan. Kun
+   * budjetti riittää kolmeen lehteen, kolmas naapuri on kartalla
+   * satunnainen tilkku — pohja on kartta.
+   */
+  ui.atlasPohjaMp = ui.yleislehtiPohja ? lehdenMp(YLEISLEHDEN_AVAIN, lauta) : 0;
   if (Boolean(ui.yleislehtiPaalla) !== kauko) {
     ui.yleislehtiPaalla = kauko;
     // Valinta on laskettava uudelleen kumpaankin suuntaan: lehdet joko
@@ -1771,9 +1963,16 @@ export function paivitaFokusAtlas(ui) {
     naytaYleislehti(ui, lauta);
     return;
   }
-  // Kesken oleva palautus poistaa yleislehden itse, kun maalehti on
-  // kartalla (palautaMaalehti) — muuten se poistetaan tässä.
-  if (!ui.yleislehtiPalautus) poistaYleislehti(ui);
+  /*
+   * POHJAKERROS PIIRRETÄÄN TÄSSÄ, ENNEN NÄKYMÄTUNNISTEEN OIKOTIETÄ:
+   * lehti on koko laudan kokoinen eikä sen tarve muutu panoroinnin
+   * mukana, mutta ryhmä on voinut kadota laudan vaihdossa.
+   *
+   * Kesken oleva palautus poistaa yleislehden itse, kun maalehti on
+   * kartalla (palautaMaalehti) — muuten se poistetaan tässä.
+   */
+  if (ui.yleislehtiPohja) naytaYleislehti(ui, lauta);
+  else if (!ui.yleislehtiPalautus) poistaYleislehti(ui);
   const nykyinen = ui.fokuskarttaAvain !== 'pois' ? ui.fokuskarttaAvain : null;
   ui.atlasOmaMp = nykyinen ? lehdenMp(nykyinen, lauta) : 0;
   // Karkea tunniste: kymmenesosa näkymän mitasta riittää tarkkuudeksi.
@@ -1823,6 +2022,13 @@ export function paivitaFokusAtlas(ui) {
    */
   const lahella = new Set(ehdokkaat.map((e) => e.iso));
   for (const [iso, tieto] of [...ui.atlasLehdet]) {
+    /*
+     * POHJAA KARKEAMPI LEHTI LÄHTEE HETI, VAIKKA SE OLISI NÄKYMÄSSÄ
+     * (ks. liianKarkea). Juuri näkyminen on sen vika: se peittää
+     * pohjan omalla sumeudellaan. Hystereesi ei koske tätä — ehto ei
+     * riipu näkymästä eikä siis voi keikkua.
+     */
+    if (liianKarkea(ui, tieto.bbox, iso)) { vapautaLehti(ui, iso); continue; }
     if (lahella.has(iso)) continue;
     // Hystereesi: vapautus vasta kun lehti on selvästi varan takana —
     // varan reunalla keikkuva lehti ei saa välkkyä (ks. yllä).
@@ -2179,6 +2385,8 @@ export function nollaaFokuskartta(ui) {
   // Yleislehden ryhmä katosi kerroksen mukana; tila on nollattava
   // erikseen tai uusi lauta luulisi lehden olevan yhä kartalla.
   ui.yleislehtiPaalla = false;
+  ui.yleislehtiPohja = false;
+  ui.atlasPohjaMp = 0;
   ui.yleislehtiHaku = false;
   ui.yleislehtiPalautus = false;
   // Kerros on tyhjä, joten jokainen pienennetyn lehden blob-osoite on
