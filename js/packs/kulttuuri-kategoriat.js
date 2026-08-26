@@ -20160,32 +20160,35 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Palermo',
         },
       ],
-          /*
-       * AVAUSKUVAT (19.8.2026): kolme eri Sisiliaa — tulivuorisaari
-       * ilmasta, vihreä sisämaan vuoristo ja kalkkikivinen rannikko
-       * mereltä. Kansikuvissa ovat jo Taormina, Etna ja Palermon
-       * katedraali. Lisenssit, tekijät ja koot todennettu Commonsin
-       * API:sta, jokainen kuva katsottu silmin.
+      /*
+       * AVAUSKUVAT (26.8.2026): omistajan ChatGPT-herokuvat (erä
+       * Sisilia: Concordia, Syrakusan tuomiokirkko, Monreale —
+       * kaikki silmin tarkistettu; Concordiassa näkyy myös Mitorajin
+       * kaatunut Ikaros-pronssi, Syrakusan kyljessä doorilaiset
+       * pylväät). Korvasi 19.8. Commons-luontomaisemat — kolme
+       * kivistä vuosituhatta istuu 1873-matkakirjaan paremmin.
        */
       avauskuvat: [
         {
-          tiedosto: 'Aerial image of Stromboli (view from the northeast).jpg',
-          selite: 'Stromboli on yksi Italian neljästä aktiivisesta '
-            + 'tulivuoresta, ja sen jatkuvien pienten purkausten takia '
-            + 'saarta on sanottu Välimeren majakaksi.',
-          lahde: 'Carsten Steger, Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-sisilia-aamu.jpg',
+          selite: 'Concordian temppeli Agrigenton Temppelilaaksossa on '
+            + 'säilynyt lähes ehjänä 400-luvulta eaa. — sen pelasti '
+            + 'muutos kristilliseksi kirkoksi 500-luvulla.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Madonie montagna.jpg',
-          selite: 'Madonie on Sisilian pohjoisosan vuoristo, jonka korkein '
-            + 'huippu Pizzo Carbonara jää vain Etnaa matalammaksi.',
-          lahde: 'Martin Teetz, Wikimedia Commons (PD)',
+          ampari: 'herokoe/hero-sisilia-keskipaiva.jpg',
+          selite: 'Syrakusan tuomiokirkon barokkijulkisivun takana kantaa '
+            + 'yhä Athenen temppeli: doorilaiset pylväät näkyvät '
+            + 'kyljen muurissa.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Capo Zafferano ottobre 2025 3.jpg',
-          selite: 'Capo Zafferano on jyrkkä kallioniemi, jonka laella seisoo '
-            + 'valkoinen majakka.',
-          lahde: 'Auregann, Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-sisilia-ilta.jpg',
+          selite: 'Monrealen katedraali rakennettiin 1170-luvulla '
+            + 'normannien, arabien ja bysanttilaisten käsityönä; '
+            + 'vieressä avautuu ristikäytävän puutarha.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [

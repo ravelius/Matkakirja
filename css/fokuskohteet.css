@@ -118,7 +118,10 @@
   position: absolute;
   /* Paikan laskee js/fokuskohteet.js merkin ruutupaikasta. */
   z-index: 6;
-  width: min(21rem, 78vw);
+  /* 21 -> 24 rem (omistaja 26.8.2026 ilta: kuvien kasvun jatkoksi
+     "levensitkö popup kehystä?" — leveämpi kehys antaa kuvalle ja
+     leivälle ilmaa; kapealla ruudulla osuus kasvoi samassa). */
+  width: min(24rem, 86vw);
   max-height: 60%;
   display: flex;
   flex-direction: column;
