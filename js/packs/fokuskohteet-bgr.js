@@ -731,20 +731,23 @@ export const FOKUSKOHTEET_BGR = [
     lahde: 'en-Wikipedia "Srebarna Nature Reserve", johdanto sekä osiot '
       + '"History", "Legends" ja "Fauna" (tarkistettu 26.8.2026).',
     /*
-     * Category:Srebarna Nature Reserve. Srebarnassa kuvatut
-     * pelikaanikuvat katsottiin silmin ja hylättiin: linnut ovat
-     * niissä kaukaisia, epätarkkoja läiskiä taivasta vasten, eikä
-     * sellainen kuva kerro kortissa mitään. Tässä on itse järvi
-     * kaislasaarineen — paikka, josta koko teksti kertoo. Commons
-     * 26.8.2026: 1000×600, CC BY-SA 4.0, ABesheva, Restrictions
-     * tyhjä. Katsottu silmin: järvi ja kaislikot, ei ihmisiä, ei
+     * ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN (omistaja 26.8.2026
+     * ilta, Srebarna-kaappaus: "Pitäisi saada kuva itse eläimestä
+     * aina jos on söpöysmerkki") — järvimaisema vaihtui lintuun.
+     * Srebarnassa kuvatut pelikaanit ovat Commonsissa kaukaisia
+     * läiskiä, joten kuva on Tonavan suistosta, samalta
+     * muuttoreitiltä parinsadan kilometrin päästä; selite sanoo sen
+     * rehellisesti. Commons 26.8.2026: 3982×2655, CC BY-SA 4.0,
+     * Charles J. Sharp, Restrictions tyhjä. Katsottu silmin:
+     * kiharapelikaani lennossa lähikuvassa, ei ihmisiä, ei
      * vesileimaa.
      */
     kuva: {
-      tiedosto: 'Biosphere reserve Srebarna.jpg',
-      selite: 'Srebarnan matalaa järveä kaislasaarineen. Kaislikoissa '
-        + 'pesii 179 lintulajia, tunnetuimpana kiharapelikaani.',
-      lahde: 'ABesheva, Wikimedia Commons (CC BY-SA 4.0)',
+      tiedosto: 'Dalmatian pelican (Pelecanus crispus) in flight Danube delta.jpg',
+      selite: 'Kiharapelikaani lennossa Tonavan suistossa, Srebarnan '
+        + 'muuttoreitin varrella. Järven kaislikoissa pesii 179 '
+        + 'lintulajia.',
+      lahde: 'Charles J. Sharp, Wikimedia Commons (CC BY-SA 4.0)',
     },
   },
   {

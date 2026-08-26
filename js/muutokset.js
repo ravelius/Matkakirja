@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1150, teksti: 'Elainkohteen kuva nayttaa elaimen (Srebarna)' },
   { v: 1149, teksti: 'Kohdekortin kuva isommaksi, kuvateksti irti' },
   { v: 1148, teksti: 'Maataulun lahderivi kokonaan pois' },
   { v: 1147, teksti: 'Kohdekortin raahaus ei enaa rapsahda lopussa' },
