@@ -19867,3 +19867,227 @@ body.fokuspohja .maa-pilleri { display: none; }
    matkalla edelliseen paikkaan eli aina väärässä kohdassa. Kartan liike
    on jo pelaajan sormen liikettä — viivain vain seuraa sitä.
    --------------------------------------------------------------------------- */
+
+/* ===========================================================================
+   KARTTASYMBOLIT — täkysymbolien ja kohdemerkkien yhteinen kirjasto
+   ---------------------------------------------------------------------------
+   Raamattu, SYMBOLITAKSONOMIA (omistaja 26.8.2026 ilta): kaksitoista
+   kategoriaa, joilla jokaisella oma koodilla piirretty symboli
+   (js/fokusnosto-symbolit.js piirraNostosymboli) ja VAIMEA HERALDINEN
+   VÄRI. MUOTO RATKAISEE, väri on toissijainen vihje — sävyt on
+   taitettu seepiaan ja pergamenttiin, ei puhtaita perusvärejä.
+
+   TYYLIT OVAT TÄSSÄ TIEDOSTOSSA EIVÄTKÄ css/fokusnosto.css:ssä, koska
+   samat luokat piirtyvät kahdessa kerroksessa: täkysymboleissa
+   (js/fokusnosto-symbolit.js) ja kartan kohdemerkeissä
+   (js/fokuskohteet.js) — ja kohdekerros ei lataa fokusnosto.css:ää.
+   styles.css on ainoa tyylitiedosto, joka on aina paikalla.
+
+   EI SUODATTIMIA (tests/rules.test.mjs): aluslaatta on oma ympyränsä
+   eikä varjo, ja kaikki muu on pelkkää täyttöä ja viivaa.
+   =========================================================================== */
+
+:root {
+  /* Muste ja paperi — koko perheen runko. */
+  --sym-muste: #4b3a1c;
+  --sym-laatta: rgba(243, 234, 210, 0.88);
+  /* Kategoriat (Raamattu, SYMBOLITAKSONOMIA). */
+  --sym-huuto: #dda42c;        /* keltainen — skandaalit ja hurjat tarinat */
+  --sym-elain: #b98d54;        /* ruskea — eläimet (pöllönpoikanen) */
+  --sym-silma: #5f7f9e;        /* sininen — nähtävyydet ja multimedia */
+  --sym-historia: #a05c3f;     /* punaruskea — historia ja rauniot */
+  --sym-luonto: #4f7d6f;       /* sinivihreä — vuoret, joet, järvet */
+  --sym-ruoka: #8e4550;        /* viininpunainen — ruoka ja juoma */
+  --sym-kulttuuri: #7b5a8c;    /* violetti — musiikki, teatteri, taide */
+  --sym-tekniikka: #6f7278;    /* teräksenharmaa — tekniikka ja keksinnöt */
+  --sym-kauppa: #7d7840;       /* oliivi — kauppa ja raha */
+  --sym-sana: #47597f;         /* tummansininen — kieli, kirjallisuus, legendat */
+  --sym-merenkulku: #34566d;   /* meren tummansininen — merenkulku ja satamat */
+  --sym-urheilu: #93893c;      /* kullanvihreä — urheilu ja kisat */
+}
+
+/* Näkymätön sormenkokoinen osuma-alue (r = 22 → 44 px perustasolla). */
+.nostosym-osuma {
+  fill: none;
+  /* `fill: none` ei ota napautuksia ilman tätä. */
+  pointer-events: all;
+  /* SVG:ssä viiva periytyy: ilman nollausta ryhmän tyyli piirtäisi
+     osuma-alueen ympärille kehän (ks. piirraNostosymMerkki). */
+  stroke: none;
+}
+
+/* Paperinvaalea aluslaatta ja musteviivainen kehä — joka symbolilla. */
+.nostosym-laatta { fill: var(--sym-laatta); }
+
+.nostosym-kehys {
+  fill: none;
+  stroke: var(--sym-muste);
+  stroke-width: 1.1;
+  stroke-opacity: 0.72;
+}
+
+/* Kaiverruksen apuviivat: höyry, uurteet, kielet, ripustimet, varpaat. */
+.nostosym-viiva {
+  fill: none;
+  stroke: var(--sym-muste);
+  stroke-width: 1;
+  stroke-linecap: round;
+}
+
+/* Huutomerkki: okrankeltainen täyttö, musteviiva ympärillä. */
+.nostosym-huuto {
+  fill: var(--sym-huuto);
+  stroke: var(--sym-muste);
+  stroke-width: 0.9;
+  stroke-linejoin: round;
+}
+
+/* Pöllövauva: untuvainen kroppa on vaaleaa ruskeaa (kategorian sävy
+   pehmennettynä — tumma täyttö söisi silmät), muoto on viivassa. */
+.nostosym-pollo {
+  fill: #ecd9b4;
+  stroke: var(--sym-muste);
+  stroke-width: 1.1;
+  stroke-linejoin: round;
+}
+
+.nostosym-silma {
+  fill: #fbf6e8;
+  stroke: var(--sym-muste);
+  stroke-width: 0.9;
+}
+
+.nostosym-tera { fill: var(--sym-muste); }
+
+/* Silmäsymbolin kehä: kategorian sininen (SYMBOLITAKSONOMIA muutti
+   v1119:n okran — silmä on nähtävyyksien kategoria, ei "avautuu
+   jotakin" -väri). */
+.nostosym-silmakaari {
+  fill: var(--sym-silma);
+  stroke: var(--sym-muste);
+  stroke-width: 0.9;
+  stroke-linejoin: round;
+}
+
+/* Terän kiilto: yksi vaalea piste, ettei silmä ole musta läiskä. */
+.nostosym-kiilto { fill: rgba(251, 246, 232, 0.9); }
+
+.nostosym-nokka {
+  fill: var(--sym-elain);
+  stroke: var(--sym-muste);
+  stroke-width: 0.7;
+  stroke-linejoin: round;
+}
+
+/* Murtunut pylväs — historia ja rauniot. */
+.nostosym-pylvas {
+  fill: var(--sym-historia);
+  stroke: var(--sym-muste);
+  stroke-width: 0.8;
+  stroke-linejoin: round;
+}
+
+/* Vuorenhuippu ja aalto — luonto. */
+.nostosym-vuoristo {
+  fill: var(--sym-luonto);
+  stroke: var(--sym-muste);
+  stroke-width: 0.9;
+  stroke-linejoin: round;
+}
+
+.nostosym-aalto {
+  fill: none;
+  stroke: var(--sym-luonto);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+}
+
+/* Höyryävä malja — ruoka ja juoma. */
+.nostosym-malja {
+  fill: var(--sym-ruoka);
+  stroke: var(--sym-muste);
+  stroke-width: 0.8;
+  stroke-linejoin: round;
+}
+
+/* Lyyra — kulttuuri: käsivarret ja kaikupohja kantavat värin. */
+.nostosym-lyyrakaari {
+  fill: none;
+  stroke: var(--sym-kulttuuri);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+}
+
+.nostosym-lyyrapohja {
+  fill: var(--sym-kulttuuri);
+  stroke: var(--sym-muste);
+  stroke-width: 0.7;
+}
+
+/* Hammasratas — tekniikka; napa on paperia, jotta kiekosta tulee ratas. */
+.nostosym-ratas {
+  fill: var(--sym-tekniikka);
+  stroke: var(--sym-muste);
+  stroke-width: 0.8;
+  stroke-linejoin: round;
+}
+
+.nostosym-ratasnapa {
+  fill: var(--sym-laatta);
+  stroke: var(--sym-muste);
+  stroke-width: 0.8;
+}
+
+/* Vaaka — kauppa: kupit ja jalusta täyttöinä, varsi musteviivana. */
+.nostosym-vaakakuppi {
+  fill: var(--sym-kauppa);
+  stroke: var(--sym-muste);
+  stroke-width: 0.7;
+  stroke-linejoin: round;
+}
+
+/* Sulkakynä — kieli, kirjallisuus ja legendat. */
+.nostosym-sulka {
+  fill: var(--sym-sana);
+  stroke: var(--sym-muste);
+  stroke-width: 0.8;
+  stroke-linejoin: round;
+}
+
+/* Ankkuri — merenkulku: rauta kantaa värin paksumpana viivana. */
+.nostosym-ankkurirauta {
+  fill: none;
+  stroke: var(--sym-merenkulku);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+}
+
+.nostosym-ankkurikoura {
+  fill: var(--sym-merenkulku);
+  stroke: var(--sym-muste);
+  stroke-width: 0.5;
+  stroke-linejoin: round;
+}
+
+.nostosym-ankkurirengas {
+  fill: none;
+  stroke: var(--sym-muste);
+  stroke-width: 1;
+}
+
+/* Laakeriseppele — urheilu: oksat kullanvihreällä, lehdet musteella.
+   Oksa on perheen paksuin viiva: ilman sitä seppele haalistui
+   katkoympyräksi 21 pikselissä. */
+.nostosym-seppele {
+  fill: none;
+  stroke: var(--sym-urheilu);
+  stroke-width: 2.1;
+  stroke-linecap: round;
+}
+
+.nostosym-lehva {
+  fill: none;
+  stroke: var(--sym-muste);
+  stroke-width: 0.9;
+  stroke-linecap: round;
+}

@@ -93,7 +93,8 @@ import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { avaaFokuskohde, suljeFokuskohde } from './fokuskohteet.js';
 import { fokuskohteet } from './packs/fokuskohteet-grc.js';
 import {
-  asemoiNostosymbolit, nollaaNostosymbolit, nostosymAnkkuri, paivitaNostosymbolit,
+  asemoiNostosymbolit, nollaaNostosymbolit, nostosymAnkkuri, NOSTOSYM_TYYPIT,
+  paivitaNostosymbolit,
 } from './fokusnosto-symbolit.js';
 import { asetaNostopinta, fokusvirtaLukitseeLehden, fokusvirtaSisalto } from './fokusvirta.js';
 import { sfx } from './sound.js';
@@ -463,9 +464,6 @@ function nostoLataaTyyli() {
 
 /* ==================== MIKÄ NOSTO NOUSEE ==================== */
 
-/** Tunnetut symbolityypit; muu (ja puuttuva) on huutomerkki. */
-const NOSTO_SYMBOLIT = new Set(['huuto', 'elain', 'silma']);
-
 /** Miniatyyrin ja kortin kuvan pyyntöleveydet pikseleinä. */
 const NOSTO_MINI_PX = 160;
 const NOSTO_KUVA_PX = 800;
@@ -585,10 +583,10 @@ function nostonPaikka(ui, nosto) {
  * paikka. Aktiivinen on mukana — symbolikerros piirtää sen kohdalle
  * kuplan ankkurin symbolin sijaan.
  *
- * SYMBOLI TULEE DATASTA (v1119: kolme tyyppiä):
- *   'elain'  pöllönpoikanen — söpö eläinkohde
- *   'silma'  silmä — nähtävyys tai katsottava multimediakohde
- *   muut ja puuttuva kenttä → keltainen huutomerkki
+ * SYMBOLI TULEE DATASTA: täyn `symboli`-kenttä on Raamatun
+ * SYMBOLITAKSONOMIAN kategoria ('elain', 'historia', 'ruoka', … —
+ * koko lista js/fokusnosto-symbolit.js NOSTOSYM_TYYPIT). Muut arvot
+ * ja puuttuva kenttä → keltainen huutomerkki, kuten alusta asti.
  *
  * Kreikan poolissa on kolme huutomerkkiä ja kaksi eläintäkyä
  * (pikkupöllö ja reunuskilpikonna, lisätty v1121).
@@ -601,7 +599,7 @@ function nostoMerkinnat(ui, jaljella) {
     merkinnat.push({
       id: nosto.id,
       otsikko: nosto.otsikko,
-      symboli: NOSTO_SYMBOLIT.has(nosto.symboli) ? nosto.symboli : 'huuto',
+      symboli: NOSTOSYM_TYYPIT.has(nosto.symboli) ? nosto.symboli : 'huuto',
       paikka,
     });
   }

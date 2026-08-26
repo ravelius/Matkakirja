@@ -91,6 +91,7 @@
  * vaiheessa korostus on kevyt rengas auki olevan kohteen ympärillä.
  */
 import { el } from './mapart.js';
+import { NOSTOSYM_TYYPIT, piirraNostosymboli } from './fokusnosto-symbolit.js';
 import { asetaKuva } from './media.js';
 import { html, jaaKappaleiksi } from './ui-apurit.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
@@ -199,6 +200,21 @@ const KOHDE_TYYPIT = {
    * napautus avaa kierroksen pelin omaan ikkunaan (avaaKierros).
    */
   multimedia: 'Katsottavaa',
+  /*
+   * SYMBOLITAKSONOMIAN TYYPIT (Raamattu, omistaja 26.8.2026 ilta):
+   * kohteen tyyppi kertoo kategorian, ja kategoria näkyy kartalla
+   * omana symbolinaan (KOHDE_TYYPPISYMBOLIT alempana). Ylärivi on
+   * pop-upin pieni otsake — partitiivi, koska se lupaa sisältöä.
+   */
+  historia: 'Historiaa',
+  ruoka: 'Ruokaa ja juomaa',
+  kulttuuri: 'Kulttuuria',
+  tekniikka: 'Tekniikkaa',
+  kauppa: 'Kauppaa',
+  sana: 'Tarinoita',
+  merenkulku: 'Merenkulkua',
+  urheilu: 'Urheilua',
+  elain: 'Eläimiä',
   muu: 'Kartalla',
 };
 
@@ -275,29 +291,68 @@ function varmistaKohdekerros(ui) {
   return ui.fokuskohdeKerros;
 }
 
-/**
- * Yksi merkki: näkymätön osuma-alue, vaalea kehä, musteympyrä ja piste.
- * Korostusrengas on valmiina paikallaan läpinäkyvänä — auki oleva
- * kohde saa sen näkyviin luokalla eikä uudella elementillä.
- */
-/**
- * SILMÄ MULTIMEDIAKOHTEEN MERKIKSI (omistajan tilaus v1119, kohta 19).
+/*
+ * KOHDEMERKIN SYMBOLI (Raamattu, SYMBOLITAKSONOMIA — omistaja
+ * 26.8.2026 ilta): kohdemerkki kertoo kategoriansa symbolilla, ei
+ * enää pelkällä pisteellä. Symbolit piirtää sama kirjasto kuin
+ * täkysymbolit (js/fokusnosto-symbolit.js piirraNostosymboli) —
+ * ei kopioita kahteen paikkaan; myös entinen kohdemerkin oma
+ * silmäpiirtäjä (v1119) korvautui kirjaston silmällä.
  *
- * Sama muoto ja sama perhe kuin täkysymbolien silmällä
- * (js/fokusnosto-symbolit.js piirraNostosymSilma), mutta kohdemerkin
- * mittakaavassa: kohdemerkki on halkaisijaltaan noin 16 px, kun
- * täkysymboli on 21. Merkki kertoo, että täällä on katsottavaa —
- * pelkkä piste lupaisi vain tekstiä.
+ * VALINTAJÄRJESTYS:
+ *   1. kohteen oma `symboli`-kenttä, jos se on tunnettu kategoria;
+ *   2. kohteella on kierros → silmä (v1119: katsottavaa muualla kuin
+ *      lehdellä — tämä voittaa tyyppijohdon, koska kierros on
+ *      napautuksen varsinainen lupaus);
+ *   3. TYYPPIJOHTO alla olevasta taulusta;
+ *   4. muuten null → vanha piste (tyypit `kaupunki` ja `muu` JÄÄVÄT
+ *      pisteiksi — kaupunki on paikka eikä kategoria).
+ *
+ * Vihreä tuikkiva kohtaamispiste (js/fokuspiste.js) EI saa symbolia —
+ * sen erilaisuus on sen merkki (Raamattu).
  */
-function piirraSilmamerkki(g) {
-  el('path', {
-    class: 'fokuskohde-silmakaari',
-    d: 'M-5.6 0 C-3.5 -3.5 3.5 -3.5 5.6 0 C3.5 3.5 -3.5 3.5 -5.6 0 Z',
-  }, g);
-  el('circle', { class: 'fokuskohde-silma', cx: 0, cy: 0, r: 2.3 }, g);
-  el('circle', { class: 'fokuskohde-silmatera', cx: 0, cy: 0, r: 1.15 }, g);
+const KOHDE_TYYPPISYMBOLIT = {
+  // Luonto on yksi kategoria: vuoret, meret, saaret ja joet jakavat
+  // vuorenhuippu ja aalto -symbolin.
+  vuori: 'luonto',
+  meri: 'luonto',
+  saari: 'luonto',
+  joki: 'luonto',
+  multimedia: 'silma',
+  historia: 'historia',
+  ruoka: 'ruoka',
+  kulttuuri: 'kulttuuri',
+  tekniikka: 'tekniikka',
+  kauppa: 'kauppa',
+  sana: 'sana',
+  merenkulku: 'merenkulku',
+  urheilu: 'urheilu',
+  elain: 'elain',
+};
+
+function kohteenSymboli(kohde) {
+  if (NOSTOSYM_TYYPIT.has(kohde?.symboli)) return kohde.symboli;
+  if (kohteenKierrokset(kohde).length) return 'silma';
+  return KOHDE_TYYPPISYMBOLIT[kohde?.tyyppi] ?? null;
 }
 
+/*
+ * Symbolin mittakaava kohdemerkissä: kirjasto piirtää ~21 px merkin
+ * (täkysymbolin koko), kohdemerkki on halkaisijaltaan noin 16 px —
+ * pienempi, koska kohteita on lehdellä toistakymmentä ja täky on
+ * kartalla aina harvinaisempi kutsu.
+ */
+const KOHDE_SYMBOLI_SKAALA = 16 / 21;
+
+/** Symbolilaatan säde kohdemerkin mitassa (kirjaston laatta r = 10.4). */
+const KOHDE_SYMBOLI_R = 10.4 * KOHDE_SYMBOLI_SKAALA;
+
+/**
+ * Yksi merkki: näkymätön osuma-alue ja kategorian symboli — tai
+ * pistekohteilla vaalea kehä, musteympyrä ja piste. Korostusrengas on
+ * valmiina paikallaan läpinäkyvänä — auki oleva kohde saa sen näkyviin
+ * luokalla eikä uudella elementillä.
+ */
 function piirraKohdemerkki(ui, ryhma, kohde) {
   const g = el('g', { class: `fokuskohde fokuskohde-${kohde.tyyppi ?? 'muu'}` }, ryhma);
   g.dataset.kohde = kohde.id;
@@ -306,8 +361,16 @@ function piirraKohdemerkki(ui, ryhma, kohde) {
   g.setAttribute('aria-label', `${kohde.nimi}: avaa tietoruutu`);
   el('circle', { class: 'fokuskohde-osuma', r: KOHDE_OSUMA_R }, g);
   el('circle', { class: 'fokuskohde-korostus', r: KOHDE_KOROSTUS_R }, g);
-  if (kohteenKierrokset(kohde).length) piirraSilmamerkki(g);
-  else {
+  const symboli = kohteenSymboli(kohde);
+  if (symboli) {
+    // Alaryhmä kutistaa kirjaston merkin kohdemerkin mittaan; symbolin
+    // omat luokat (nostosym-*) tyylittyvät css/styles.css:stä, joka on
+    // aina ladattu — merkki ei siis odota fokusnosto.css:ää.
+    piirraNostosymboli(el('g', {
+      class: 'fokuskohde-symboli',
+      transform: `scale(${KOHDE_SYMBOLI_SKAALA.toFixed(4)})`,
+    }, g), symboli);
+  } else {
     el('circle', { class: 'fokuskohde-halo', r: KOHDE_HALO_R }, g);
     el('circle', { class: 'fokuskohde-rengas', r: KOHDE_RENGAS_R }, g);
     el('circle', { class: 'fokuskohde-piste', r: KOHDE_PISTE_R }, g);
@@ -363,11 +426,12 @@ function piirraKohdemerkki(ui, ryhma, kohde) {
 
 /**
  * Merkkien vähin keskipiste-etäisyys ruudun pikseleinä perustasolla:
- * vaalean kehän HALKAISIJA, jolloin kehät sipaisevat toisiaan mutta
- * eivät mene limittäin. Isompi luku heittäisi merkit kauas oikealta
- * paikaltaan, ja omistajan lupa siirtoon koski limittäisyyttä.
+ * leveimmän merkin eli symbolilaatan HALKAISIJA (ennen taksonomiaa
+ * vaalean kehän), jolloin laatat sipaisevat toisiaan mutta eivät mene
+ * limittäin. Isompi luku heittäisi merkit kauas oikealta paikaltaan,
+ * ja omistajan lupa siirtoon koski limittäisyyttä.
  */
-const KOHDE_ERO_MIN = 2 * KOHDE_HALO_R;
+const KOHDE_ERO_MIN = 2 * KOHDE_SYMBOLI_R;
 
 /**
  * Rentoutuskierrosten määrä. Kolmen merkin ryppäässä yksi työntö voi

@@ -1,5 +1,6 @@
 /*
- * TÄKYSYMBOLIT — poolin muut täyt kartan omina merkkeinä.
+ * TÄKYSYMBOLIT JA KARTTASYMBOLIEN KIRJASTO — poolin muut täyt kartan
+ * omina merkkeinä, ja kaikkien karttamerkkien yhteiset piirtäjät.
  *
  * Raamatun osio "Fokusmoodi", kohta TÄKYSYMBOLIT (omistaja 25.8.2026):
  * *"kartalla on tekstikuplassa VAIN YKSI täkynosto kerrallaan; muut
@@ -9,12 +10,26 @@
  * kehittää. Symbolit tehdään kartan henkeen ja samalla tyylillä
  * (seepiamuste, aikakauden karttamerkki)."*
  *
+ * Ja SYMBOLITAKSONOMIA (omistaja 26.8.2026 ilta: *"tee kaikki
+ * ehdotetut symbolit ja myös lisäkandidaatit"*): KAKSITOISTA
+ * kategoriaa, joilla jokaisella oma symboli ja vaimea heraldinen väri.
+ * MUOTO RATKAISEE, väri on toissijainen vihje — pergamentilla vaimeat
+ * värit sekoittuvat. Symbolit piirretään koodilla 1800-luvun
+ * kaiverrustyyliin (terävät joka zoomilla, ei latauksia) YHDESTÄ
+ * kirjastosta, jota käyttävät sekä täkysymbolit että kartan
+ * kohdemerkit (js/fokuskohteet.js) — ei kopioita kahteen paikkaan.
+ * Taulukko: NOSTOSYM_PIIRTAJAT alempana; värit css/styles.css
+ * (osio KARTTASYMBOLIT, --sym-*).
+ *
  * ── MITÄ TÄMÄ TIEDOSTO ON ──────────────────────────────────────────
  *
- * Pelkkä KARTTAKERROS. Se ei tiedä poolista, lukemisista eikä siitä,
- * milloin täky saa näkyä: kaikki se on täkynoston omassa kirjanpidossa
- * (js/fokusnosto.js), joka kutsuu tätä valmiilla listalla. Näin
- * näkyvyysehdot pysyvät yhdessä paikassa, kuten liuskan aikana.
+ * KARTTAKERROS ja PIIRTOKIRJASTO. Kerros ei tiedä poolista,
+ * lukemisista eikä siitä, milloin täky saa näkyä: kaikki se on
+ * täkynoston omassa kirjanpidossa (js/fokusnosto.js), joka kutsuu tätä
+ * valmiilla listalla. Näin näkyvyysehdot pysyvät yhdessä paikassa,
+ * kuten liuskan aikana. Kirjaston (piirraNostosymboli) kutsujat
+ * hoitavat itse paikan ja mittakaavan — piirtäjä tuottaa aina saman
+ * ~21 px merkin origon ympärille.
  *
  * ── KOLME SÄÄNTÖÄ, JOTKA ON PERITTY MUILTA KARTAN KERROKSILTA ──────
  *
@@ -70,8 +85,8 @@ const NOSTOSYM_OSUMA_R = 22;
 /**
  * KELTAINEN HUUTOMERKKI — skandaali tai uskomaton tositarina.
  *
- * Väri on okrankeltainen, joka taittuu seepiaan (css/fokusnosto.css
- * --nosto-okra): puhdas keltainen olisi liikennemerkki kartalla, jonka
+ * Väri on okrankeltainen, joka taittuu seepiaan (css/styles.css
+ * --sym-huuto): puhdas keltainen olisi liikennemerkki kartalla, jonka
  * koko paletti on musteen ja paperin väliltä. Muoto on aikakauden
  * karttamerkin mukainen — pyöreä laatta, musteviivainen kehä ja sen
  * sisällä kapeneva palkki ja piste.
@@ -156,6 +171,248 @@ function piirraNostosymSilma(g) {
   el('circle', { class: 'nostosym-kiilto', cx: 1.1, cy: -1.1, r: 0.55 }, g);
 }
 
+/*
+ * ── SYMBOLITAKSONOMIAN YHDEKSÄN UUTTA (omistaja 26.8.2026 ilta) ────
+ *
+ * Kaikki samaan kaavaan kuin kolme ensimmäistä: paperinvaalea
+ * aluslaatta omana ympyränä, musteviivainen kehä ja sen sisällä
+ * pelkkiä täyttöjä ja viivoja — EI SUODATTIMIA. Muodot on pelkistetty
+ * niin, että ne erottuvat toisistaan vielä 21 pikselin koossa:
+ * jokaisella on yksi iso päämuoto ja korkeintaan pari apuviivaa.
+ * Värit ovat vaimeita heraldisia sävyjä css/styles.css:ssä (--sym-*).
+ */
+
+/** MURTUNUT PYLVÄS — historia ja rauniot (punaruskea). */
+function piirraNostosymPylvas(g) {
+  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
+  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
+  // Jalusta kahtena portaana ja varsi, jonka yläpää on murtunut
+  // sahalaidaksi — juuri katkos tekee pylväästä rauniomerkin.
+  el('path', {
+    class: 'nostosym-pylvas',
+    d: 'M-6.2 7.2 L6.2 7.2 L6.2 5.2 L4.2 5.2 L4.2 3.6 L-4.2 3.6 '
+      + 'L-4.2 5.2 L-6.2 5.2 Z',
+  }, g);
+  el('path', {
+    class: 'nostosym-pylvas',
+    d: 'M-2.7 3.6 L-2.7 -5.4 L-1 -3.7 L0.3 -6.6 L1.6 -4.2 L2.7 -5.8 '
+      + 'L2.7 3.6 Z',
+  }, g);
+  // Kaksi uurretta: kaiverruksen varjostus, ei uusi muoto.
+  el('path', {
+    class: 'nostosym-viiva',
+    d: 'M-0.9 2.6 L-0.9 -2.6 M0.9 2.6 L0.9 -2.2',
+  }, g);
+}
+
+/** VUORENHUIPPU JA AALTO — luonto: vuoret, joet, järvet (sinivihreä). */
+function piirraNostosymLuonto(g) {
+  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
+  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
+  // Kaksi huippua — yksi kolmio olisi teltta, kaksi on vuoristo.
+  el('path', {
+    class: 'nostosym-vuoristo',
+    d: 'M-7.4 2.4 L-2.6 -6.4 L0.2 -1.6 L2.6 -4.8 L7.4 2.4 Z',
+  }, g);
+  // Aalto huippujen alla: vesi kuuluu samaan kategoriaan.
+  el('path', {
+    class: 'nostosym-aalto',
+    d: 'M-6.6 5.6 Q-4.95 3.4 -3.3 5.6 Q-1.65 7.8 0 5.6 '
+      + 'Q1.65 3.4 3.3 5.6 Q4.95 7.8 6.6 5.6',
+  }, g);
+}
+
+/** HÖYRYÄVÄ MALJA — ruoka ja juoma (viininpunainen). */
+function piirraNostosymMalja(g) {
+  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
+  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
+  // Malja jalkoineen yhtenä täyttönä: leveä suu, kapea jalka.
+  el('path', {
+    class: 'nostosym-malja',
+    d: 'M-6.4 -0.8 L6.4 -0.8 C6.4 3 3.8 5.2 1.3 5.6 L1.3 6.4 L3.4 6.4 '
+      + 'L3.4 7.8 L-3.4 7.8 L-3.4 6.4 L-1.3 6.4 L-1.3 5.6 '
+      + 'C-3.8 5.2 -6.4 3 -6.4 -0.8 Z',
+  }, g);
+  // Kaksi höyryjuovaa — ne tekevät maljasta aterian, eivät pikarin.
+  el('path', {
+    class: 'nostosym-viiva',
+    d: 'M-2.2 -3 Q-3.6 -4.6 -2.2 -6.2 M2.2 -3 Q0.8 -4.6 2.2 -6.2',
+  }, g);
+}
+
+/** LYYRA — kulttuuri: musiikki, teatteri, taide (violetti). */
+function piirraNostosymLyyra(g) {
+  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
+  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
+  // Kaksi käsivartta yhtenä avoimena kaarena — lyyran tunnistettavin
+  // ääriviiva. Väri on kaaressa, ei täytössä: muoto pysyy ilmavana.
+  el('path', {
+    class: 'nostosym-lyyrakaari',
+    d: 'M-4.9 -7.4 C-6.4 -2 -4.4 2.4 0 3.2 C4.4 2.4 6.4 -2 4.9 -7.4',
+  }, g);
+  // Poikkipuu ja kolme kieltä ohuena musteena.
+  el('path', {
+    class: 'nostosym-viiva',
+    d: 'M-5.3 -5.2 L5.3 -5.2 M-1.9 -5.2 L-1.3 2.6 M0 -5.2 L0 3 '
+      + 'M1.9 -5.2 L1.3 2.6',
+  }, g);
+  // Kaikupohja jalkana.
+  el('ellipse', {
+    class: 'nostosym-lyyrapohja', cx: 0, cy: 5.4, rx: 3, ry: 1.6,
+  }, g);
+}
+
+/** HAMMASRATAS — tekniikka ja keksinnöt (teräksenharmaa). */
+function piirraNostosymRatas(g) {
+  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
+  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
+  el('path', { class: 'nostosym-ratas', d: nostosymRatasPolku() }, g);
+  // Napa on paperia: reikä keskellä tekee kiekosta rattaan.
+  el('circle', { class: 'nostosym-ratasnapa', r: 2 }, g);
+}
+
+/**
+ * Rattaan polku lasketaan eikä ladota käsin: kahdeksan hammasta on 32
+ * kulmapistettä, ja käsin kirjoitettuna yksikin niistä väärin särkisi
+ * pyöreyden huomaamattomasti.
+ */
+function nostosymRatasPolku() {
+  const hampaita = 8;
+  const ulko = 7.6;
+  const sisa = 5.4;
+  // Hampaan lape on kapeampi kuin hammasväli: näin hampaat erottuvat
+  // vielä 21 pikselissä eikä ratas puuroudu monikulmioksi.
+  const lape = (Math.PI / hampaita) * 0.44;
+  const osat = [];
+  for (let i = 0; i < hampaita; i += 1) {
+    const keski = (i / hampaita) * 2 * Math.PI - Math.PI / 2;
+    const vali = ((i + 0.5) / hampaita) * 2 * Math.PI - Math.PI / 2;
+    for (const [sade, kulma] of [
+      [ulko, keski - lape], [ulko, keski + lape],
+      [sisa, keski + lape * 1.9], [sisa, vali + Math.PI / hampaita - lape * 1.9],
+    ]) {
+      osat.push(`${osat.length ? 'L' : 'M'}${(Math.cos(kulma) * sade).toFixed(2)} `
+        + `${(Math.sin(kulma) * sade).toFixed(2)}`);
+    }
+  }
+  return `${osat.join(' ')} Z`;
+}
+
+/** VAAKA — kauppa ja raha (oliivi). */
+function piirraNostosymVaaka(g) {
+  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
+  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
+  // Pylväs, orsi ja ripustimet musteella; nuppi orren päällä.
+  el('path', {
+    class: 'nostosym-viiva',
+    d: 'M0 -3.6 L0 5 M-4.6 -3.6 L4.6 -3.6 '
+      + 'M-4.6 -3.6 L-6.9 0.6 M-4.6 -3.6 L-2.3 0.6 '
+      + 'M4.6 -3.6 L2.3 0.6 M4.6 -3.6 L6.9 0.6',
+  }, g);
+  el('circle', { class: 'nostosym-vaakakuppi', cx: 0, cy: -4.8, r: 1.1 }, g);
+  // Vaakakupit puolikiekkoina ja jalusta — täytöt kantavat värin.
+  el('path', {
+    class: 'nostosym-vaakakuppi',
+    d: 'M-6.9 0.6 A2.4 2.4 0 0 0 -2.3 0.6 Z '
+      + 'M2.3 0.6 A2.4 2.4 0 0 0 6.9 0.6 Z '
+      + 'M-3 7 L3 7 L1.7 5 L-1.7 5 Z',
+  }, g);
+}
+
+/** SULKAKYNÄ — kieli, kirjallisuus ja legendat (tummansininen). */
+function piirraNostosymSulka(g) {
+  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
+  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
+  // Sulan lapa viistossa: kaksi kaarta, jotka kohtaavat kärjessä.
+  el('path', {
+    class: 'nostosym-sulka',
+    d: 'M6.6 -7 C1.8 -7 -2.8 -3.6 -4.8 1.4 L-3 3 '
+      + 'C1.6 1.6 5 -2.4 6.6 -7 Z',
+  }, g);
+  // Ruoto jatkuu kynän teräksi, ja terän alla on kirjoitettu viiva.
+  el('path', {
+    class: 'nostosym-viiva',
+    d: 'M5.4 -5.6 C1.6 -4.4 -1.8 -1.6 -3.9 2.2 M-3.9 2.2 L-6.2 6 '
+      + 'M-6.8 7.8 Q-4.4 6.6 -2 7.4',
+  }, g);
+}
+
+/** ANKKURI — merenkulku ja satamat (meren tummansininen). */
+function piirraNostosymMeriankkuri(g) {
+  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
+  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
+  // Rengas ja poikkipuu musteella, kuten kaiverruksen ohuet osat.
+  el('circle', { class: 'nostosym-ankkurirengas', cx: 0, cy: -6 , r: 1.5 }, g);
+  el('path', { class: 'nostosym-viiva', d: 'M-3.4 -3.2 L3.4 -3.2' }, g);
+  // Runko ja kynsikaari kantavat värin paksumpana viivana.
+  el('path', {
+    class: 'nostosym-ankkurirauta',
+    d: 'M0 -4.5 L0 6.6 M-6 1.4 C-5.6 4.6 -3.2 6.4 0 6.6 '
+      + 'C3.2 6.4 5.6 4.6 6 1.4',
+  }, g);
+  // Kourat: pieni väkänen kummankin kynnen päähän.
+  el('path', {
+    class: 'nostosym-ankkurikoura',
+    d: 'M-6 1.4 L-7.6 3.6 L-4.4 3.4 Z M6 1.4 L7.6 3.6 L4.4 3.4 Z',
+  }, g);
+}
+
+/** LAAKERISEPPELE — urheilu ja kisat (kullanvihreä). */
+function piirraNostosymSeppele(g) {
+  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
+  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
+  // Kaksi oksaa, jotka nousevat alhaalta ja jäävät auki ylhäältä —
+  // seppeleen tunnistaa juuri aukosta.
+  el('path', {
+    class: 'nostosym-seppele',
+    d: 'M0 7.4 C-4.6 6.6 -7 2.6 -6.2 -3.6 M0 7.4 C4.6 6.6 7 2.6 6.2 -3.6',
+  }, g);
+  // Lehdet lyhyinä piirtoina oksien MOLEMMIN puolin — pelkät
+  // ulkosyrjän piirrot jättivät seppeleen katkoympyräksi 21 pikselissä.
+  el('path', {
+    class: 'nostosym-lehva',
+    d: 'M-6.4 -2.6 L-8.2 -4 M-6.6 0.4 L-8.6 -0.4 M-5.6 3.4 L-7.6 3.2 '
+      + 'M-3.6 5.9 L-5 7.4 M6.4 -2.6 L8.2 -4 M6.6 0.4 L8.6 -0.4 '
+      + 'M5.6 3.4 L7.6 3.2 M3.6 5.9 L5 7.4 '
+      + 'M-6 -2.2 L-4.4 -1 M-6 1 L-4.2 1.6 M-4.7 3.9 L-3.2 4.2 '
+      + 'M6 -2.2 L4.4 -1 M6 1 L4.2 1.6 M4.7 3.9 L3.2 4.2',
+  }, g);
+}
+
+/*
+ * KIRJASTON TAULU: kategoria → piirtäjä. Avaimet ovat samat kuin täyn
+ * ja kohteen `symboli`-kentän arvot (Raamattu, SYMBOLITAKSONOMIA).
+ * Tuntematon tai puuttuva arvo piirretään huutomerkkinä
+ * (piirraNostosymboli) — kutsuja saa siis antaa kentän suodattamatta.
+ */
+const NOSTOSYM_PIIRTAJAT = {
+  huuto: piirraNostosymHuuto,
+  elain: piirraNostosymPollo,
+  silma: piirraNostosymSilma,
+  historia: piirraNostosymPylvas,
+  luonto: piirraNostosymLuonto,
+  ruoka: piirraNostosymMalja,
+  kulttuuri: piirraNostosymLyyra,
+  tekniikka: piirraNostosymRatas,
+  kauppa: piirraNostosymVaaka,
+  sana: piirraNostosymSulka,
+  merenkulku: piirraNostosymMeriankkuri,
+  urheilu: piirraNostosymSeppele,
+};
+
+/** Tunnetut symbolikategoriat — yksi totuus myös kutsujien tarkistuksiin. */
+export const NOSTOSYM_TYYPIT = new Set(Object.keys(NOSTOSYM_PIIRTAJAT));
+
+/**
+ * KIRJASTON OVI: piirtää kategorian symbolin ryhmään origon ympärille
+ * (~21 px merkki lehden perustasolla). Sekä täkysymbolit (tämä
+ * tiedosto) että kartan kohdemerkit (js/fokuskohteet.js) piirtävät
+ * tällä — kutsuja hoitaa paikan ja mittakaavan ankkuriryhmällään.
+ */
+export function piirraNostosymboli(g, symboli) {
+  (NOSTOSYM_PIIRTAJAT[symboli] ?? piirraNostosymHuuto)(g);
+}
+
 /**
  * AKTIIVISEN TÄYN ANKKURI — pieni mustepiste, jonka päälle kupla
  * asettuu ja johon sen nokka osoittaa.
@@ -207,9 +464,7 @@ function piirraNostosymMerkki(ui, ryhma, merkinta, valitse) {
   g.setAttribute('tabindex', '0');
   g.setAttribute('aria-label', `${merkinta.otsikko} — nosta esiin`);
   el('circle', { class: 'nostosym-osuma', r: NOSTOSYM_OSUMA_R }, g);
-  if (merkinta.symboli === 'elain') piirraNostosymPollo(g);
-  else if (merkinta.symboli === 'silma') piirraNostosymSilma(g);
-  else piirraNostosymHuuto(g);
+  piirraNostosymboli(g, merkinta.symboli);
   const avaa = (tapahtuma) => {
     tapahtuma.stopPropagation();
     tapahtuma.preventDefault();

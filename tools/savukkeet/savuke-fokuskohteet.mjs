@@ -44,6 +44,7 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { FOKUSKOHTEET_GRC } from '../../js/packs/fokuskohteet-grc.js';
+import { FOKUS_POHJAT } from '../../js/packs/fokus-grc.js';
 
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
 const paketti = await import('playwright')
@@ -234,30 +235,38 @@ const vaalea = (vari) => {
  * mittaisi kahdesti saman näkymän.
  */
 async function ajaLehdelle() {
-  await sivu.evaluate(() => {
+  /*
+   * ENSIMMÄISELLÄ AJOLLA RAJAUS TULEE DATASTA (FOKUS_POHJAT.GRC):
+   * yleislehtipohjan aikakaudella (Raamattu, "YLEISLEHTI ON KARTAN
+   * POHJA") maalehteä EI piirretä kaukozoomissa, joten heti latauksen
+   * jälkeen ui.fokusPohjaRajaus on tyhjä eikä kameralla olisi
+   * kohdetta. Lähizoomiin ajaminen tuo maalehden takaisin
+   * (js/fokuskartta.js palautaMaalehti), ja siitä eteenpäin ajot
+   * käyttävät pelin omaa rajausta kuten ennenkin.
+   */
+  await sivu.evaluate((varakohde) => {
     const ui = window.matkakirja.ui;
-    ui.kartta.ajaKamera({ bbox: ui.fokusPohjaRajaus ?? ui.fokusPohjaBbox, marginaali: 0 });
-  });
+    ui.kartta.ajaKamera({ bbox: ui.fokusPohjaRajaus ?? ui.fokusPohjaBbox ?? varakohde, marginaali: 0 });
+  }, FOKUS_POHJAT.GRC.rajaus);
   await sivu.waitForTimeout(4200);
 }
 
 /* --- 1: lehti tuo merkit --- */
 
-const lehtiNakyy = await sivu.evaluate(() => Boolean(window.matkakirja.ui.fokusPohjaBbox));
-vaadi('Kreikan fokuslehti on kartalla', lehtiNakyy === true, 'lehteä ei piirretty');
-
 /*
- * YLEISKUVASSA EI MERKKEJÄ. Sivun lataus kesken pelin ei aja kameraa
- * (js/fokuskartta.js: ensimmäinen piirto jättää ajon väliin), joten
- * kartta on tässä vaiheessa yleiskuvassa — ja silloin kaikkien
- * kohteiden osuma-alueet olisivat samassa läiskässä Ateenan laatan
- * päällä. Merkit saavat syttyä vasta kun lehti on lähikuvassa.
+ * YLEISKUVASSA EI MERKKEJÄ — EIKÄ MAALEHTEÄKÄÄN. Sivun lataus kesken
+ * pelin ei aja kameraa (js/fokuskartta.js: ensimmäinen piirto jättää
+ * ajon väliin), joten kartta on tässä vaiheessa yleiskuvassa: pohjana
+ * on yleislehti, maalehti odottaa lähizoomia (fokusPohjaBbox on
+ * tyhjä), ja kaikkien kohteiden osuma-alueet olisivat samassa
+ * läiskässä Ateenan laatan päällä. Merkit saavat syttyä vasta kun
+ * lehti on lähikuvassa.
  */
 const yleiskuvassa = await sivu.evaluate(() => {
   const kerros = document.querySelector('.fokuskohteet');
   const merkki = document.querySelector('.fokuskohde-osuma');
   return {
-    piilossa: Boolean(kerros?.classList.contains('fokuskohteet-piilossa')),
+    piilossa: !kerros || kerros.classList.contains('fokuskohteet-piilossa'),
     /*
      * Näkyvyys mitataan GEOMETRIASTA eikä `display`-arvosta: kerroksen
      * `display: none` ei periydy lapsen laskettuun arvoon, mutta
@@ -268,7 +277,8 @@ const yleiskuvassa = await sivu.evaluate(() => {
     osuus: (() => {
       const ui = window.matkakirja.ui;
       const n = ui.nakyvaAlue?.();
-      return n?.w ? Number((ui.fokusPohjaBbox.w / n.w).toFixed(3)) : null;
+      return n?.w && ui.fokusPohjaBbox
+        ? Number((ui.fokusPohjaBbox.w / n.w).toFixed(3)) : null;
     })(),
   };
 });
@@ -277,6 +287,14 @@ vaadi('yleiskuvassa merkit ovat piilossa eivätkä syö napautuksia',
   JSON.stringify(yleiskuvassa));
 
 await ajaLehdelle();
+// Maalehti puretaan ja piirretään vasta lähizoomissa: odotus koskee
+// nimenomaan lehteä, kamera on jo perillä.
+await sivu.waitForFunction(() => Boolean(window.matkakirja.ui.fokusPohjaBbox),
+  null, { timeout: 30000 }).catch(() => {});
+await sivu.waitForTimeout(900);
+
+const lehtiNakyy = await sivu.evaluate(() => Boolean(window.matkakirja.ui.fokusPohjaBbox));
+vaadi('Kreikan fokuslehti on kartalla', lehtiNakyy === true, 'lehteä ei piirretty');
 
 let m = await merkit();
 vaadi('jokainen maan kohde sai merkin',
@@ -291,6 +309,43 @@ vaadi('osuma-alue on lehden perustasolla vähintään 44 px',
   m.osumat.length > 0 && m.osumat.every((o) => o.w >= 44 && o.h >= 44),
   JSON.stringify(m.osumat.slice(0, 3)));
 
+/* --- 1a: kohdemerkit kertovat kategoriansa symbolilla ---
+ *
+ * Raamattu, SYMBOLITAKSONOMIA (omistaja 26.8.2026 ilta): tyyppijohto
+ * antaa vuorille/merille/saarille/jokille luontosymbolin ja
+ * multimedialle silmän; kaupungit ja muut JÄÄVÄT vanhoiksi pisteiksi.
+ * Symbolit piirtää sama kirjasto kuin täkysymbolit (yhteiset
+ * nostosym-luokat, js/fokusnosto-symbolit.js).
+ */
+const taksonomia = await sivu.evaluate(() => {
+  const luokat = (id) => {
+    const g = document.querySelector(`.fokuskohde[data-kohde="${id}"]`);
+    return g ? {
+      vuoristo: Boolean(g.querySelector('.nostosym-vuoristo')),
+      silma: Boolean(g.querySelector('.nostosym-silmakaari')),
+      piste: Boolean(g.querySelector('.fokuskohde-piste')),
+      laatta: Boolean(g.querySelector('.nostosym-laatta')),
+    } : null;
+  };
+  return {
+    vuori: luokat('olympos'),
+    meri: luokat('egeanmeri') ?? luokat('santorini'),
+    kaupunki: luokat('patras') ?? luokat('thessaloniki'),
+  };
+});
+vaadi('vuorikohde sai luontosymbolin (vuorenhuippu ja aalto)',
+  taksonomia.vuori?.vuoristo === true && taksonomia.vuori?.laatta === true
+  && taksonomia.vuori?.piste === false,
+  JSON.stringify(taksonomia.vuori));
+vaadi('kaupunkikohde jäi vanhaksi pisteeksi',
+  taksonomia.kaupunki?.piste === true && taksonomia.kaupunki?.laatta === false,
+  JSON.stringify(taksonomia.kaupunki));
+const silmia = await sivu.evaluate(
+  () => new Set([...document.querySelectorAll('.fokuskohde:has(.nostosym-silmakaari)')]
+    .map((g) => g.dataset.kohde)).size,
+);
+vaadi('kierroskohde sai kirjaston silmäsymbolin', silmia >= 1, `${silmia} silmää`);
+
 /* --- 1b: päällekkäiset merkit erkanevat (esitys, ei data) ---
  *
  * Omistajan pelitestitilaus 26.8.2026 (iPhone, Parnassoksen seutu):
@@ -304,8 +359,9 @@ vaadi('osuma-alue on lehden perustasolla vähintään 44 px',
  * ankkurit ovat yhä täsmälleen datan koordinaateissa.
  */
 const erottelu = await sivu.evaluate(() => {
+  // Näkyvin osa on symbolikohteessa aluslaatta, pistekohteessa halo.
   const merkit = [...document.querySelectorAll('.fokuskohde')].map((g) => {
-    const r = g.querySelector('.fokuskohde-halo').getBoundingClientRect();
+    const r = g.querySelector('.nostosym-laatta, .fokuskohde-halo').getBoundingClientRect();
     return { id: g.dataset.kohde, x: r.left + r.width / 2, y: r.top + r.height / 2, w: r.width };
   }).filter((merkki) => merkki.w > 0);
   const limittain = [];
