@@ -13872,35 +13872,6 @@ export const KULTTUURI_KATEGORIAT = {
       johdanto: 'Kapea jokilaakso, jossa yksi askel vie ottomaanien basaarista '
         + 'wieniläisen näköiseen kortteliin — ja jossa tornikello näyttää '
         + 'kahtatoista vasta auringon laskiessa.',
-      /*
-       * Avauskuvat: omistajan ChatGPT-herot 26.8.2026 (viiteankkuroitu
-       * prosessi, silmätarkistettu) — Sarajevo oli pelattavista
-       * fokusvirroista viimeinen ilman heroja.
-       */
-      avauskuvat: [
-        {
-          ampari: 'herokoe/hero-sarajevo-aamu.jpg',
-          selite: 'Gazi Husrev-begin moskeija valmistui 1531 Baščaršijan '
-            + 'basaarikortteliin, ja sen pihan suihkulähdepaviljongin takana '
-            + 'kohoaa Sahat Kula, jonka kello näyttää aikaa auringonlaskusta '
-            + 'laskettuna.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          ampari: 'herokoe/hero-sarajevo-keskipaiva.jpg',
-          selite: 'Jeesuksen pyhän sydämen katedraali valmistui 1889 '
-            + 'Ferhadija-kadulle uusgoottilaiseen asuun kaksoistorneineen ja '
-            + 'ruusuikkunoineen, ja sitä kutsutaan usein vain Katedralaksi.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          ampari: 'herokoe/hero-sarajevo-ilta.jpg',
-          selite: 'Latinalainen silta rakennettiin kivestä Miljackan yli '
-            + 'ottomaanikaudella, ja sen kupeessa tapahtui kesäkuussa 1914 '
-            + 'laukaus, joka sysäsi maailman sotaan.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-      ],
       kansikuvat: [
         {
           tiedosto: 'Sarajevo City Hall 01.jpg',
@@ -14179,33 +14150,34 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Haggada',
         },
       ],
-          /*
-       * AVAUSKUVAT (19.8.2026): kolme etäisyyttä samasta laaksosta.
-       * Itärinteeltä koko kaupunkiin, jokitasolta Miljackan rannalle
-       * ja katutasolta Vratnikin porttimuurille. Kuvat on valittu
-       * niin, ettei niissä ole sodan jälkiä, raunioita eikä
-       * hautausmaakenttiä — peli ei käsittele nykysotaa. Lisenssit,
-       * tekijät ja koot todennettu Commonsin API:sta, jokainen kuva
-       * katsottu silmin.
+      /*
+       * AVAUSKUVAT: omistajan ChatGPT-herot 26.8.2026 (viiteankkuroitu
+       * prosessi, silmätarkistettu; ämpärissä vie-julisteet-ajolla).
+       * Korvasivat 19.8. Commons-yleisnäkymät — Sarajevo oli
+       * pelattavista fokusvirroista viimeinen ilman heroja.
        */
       avauskuvat: [
         {
-          tiedosto: 'Bosnia IMG 9302 sarajevo from east.JPG',
-          selite: 'Sarajevoa ympäröivät vuoret nousevat korkeimmillaan yli '
-            + 'kahden kilometrin korkeuteen.',
-          lahde: 'Bjoertvedt, Wikimedia Commons (CC BY-SA 3.0)',
+          ampari: 'herokoe/hero-sarajevo-aamu.jpg',
+          selite: 'Gazi Husrev-begin moskeija valmistui 1531 Baščaršijan '
+            + 'basaarikortteliin, ja sen pihan suihkulähdepaviljongin takana '
+            + 'kohoaa Sahat Kula, jonka kello näyttää aikaa auringonlaskusta '
+            + 'laskettuna.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Sarajevo Reflections.jpg',
-          selite: 'Miljacka syntyy kahden pienen joen yhtymäkohdasta ja '
-            + 'virtaa idästä länteen Sarajevon läpi.',
-          lahde: 'Jocelyn777 Love Europe, Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-sarajevo-keskipaiva.jpg',
+          selite: 'Jeesuksen pyhän sydämen katedraali valmistui 1889 '
+            + 'Ferhadija-kadulle uusgoottilaiseen asuun kaksoistorneineen ja '
+            + 'ruusuikkunoineen, ja sitä kutsutaan usein vain Katedralaksi.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Clouds over Vratnik Fortress, Sarajevo.jpg',
-          selite: 'Vratnik on Sarajevon vanhimpia kaupunginosia, ja sen ydin '
-            + 'muurattiin linnoitetuksi kaupungiksi 1700-luvulla.',
-          lahde: 'Jocelyn Erskine-Kellie, Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-sarajevo-ilta.jpg',
+          selite: 'Latinalainen silta rakennettiin kivestä Miljackan yli '
+            + 'ottomaanikaudella, ja sen kupeessa tapahtui kesäkuussa 1914 '
+            + 'laukaus, joka sysäsi maailman sotaan.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
