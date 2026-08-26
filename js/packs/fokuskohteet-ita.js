@@ -150,6 +150,8 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'pompeji',
     nimi: 'Pompeji',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'historia',
     tyyppi: 'muu',
     kysymykset: [
       'Mitä kaivauksissa on löytynyt talojen sisältä?',
@@ -306,6 +308,8 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'cinque-terre',
     nimi: 'Cinque Terre',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'luonto',
     tyyppi: 'muu',
     kysymykset: [
       'Mitä terasseilla kasvatetaan?',
@@ -519,6 +523,8 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'comojarvi',
     nimi: 'Comojärvi',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'luonto',
     tyyppi: 'muu',
     kysymykset: [
       'Mikä Adda-jäätikkö oli?',

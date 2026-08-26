@@ -51,6 +51,7 @@ jobs:
             ['sana', 'a quill pen with a detailed feather, nib down', 'muted dark navy blue'],
             ['merenkulku', 'a ship anchor with crossbar, shank and curved flukes', 'muted deep sea blue'],
             ['urheilu', 'a laurel wreath of two branches, open at the top', 'muted golden green'],
+            ['kaupunki', 'a walled medieval city gate: two crenellated towers flanking an open arched gateway', 'muted wall brown'],
           ];
           const POHJA = (aihe, vari) => 'A single emblem in 19th-century '
             + `copperplate engraving style: ${aihe}. Fine cross-hatching and `

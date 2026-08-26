@@ -132,6 +132,8 @@ export const FOKUSKOHTEET_TUR = [
   {
     id: 'troija',
     nimi: 'Troija',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'historia',
     tyyppi: 'muu',
     kysymykset: [
       'Kuinka pitkälle kaivaukset ovat ehtineet nykyään?',
@@ -171,6 +173,8 @@ export const FOKUSKOHTEET_TUR = [
   {
     id: 'efesos',
     nimi: 'Efesos',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'historia',
     tyyppi: 'muu',
     kysymykset: [
       'Miksi kaupunki lopulta hylättiin?',
@@ -211,6 +215,8 @@ export const FOKUSKOHTEET_TUR = [
   {
     id: 'kappadokia',
     nimi: 'Kappadokia',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'luonto',
     tyyppi: 'muu',
     kysymykset: [
       'Asuuko kallokolotaloissa vielä ihmisiä?',
@@ -250,6 +256,8 @@ export const FOKUSKOHTEET_TUR = [
   {
     id: 'pamukkale',
     nimi: 'Pamukkale ja Hierapolis',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'luonto',
     tyyppi: 'muu',
     kysymykset: [
       'Saako terasseilla vielä kävellä?',
@@ -498,6 +506,8 @@ export const FOKUSKOHTEET_TUR = [
   {
     id: 'gobeklitepe',
     nimi: 'Göbekli Tepe',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'historia',
     tyyppi: 'muu',
     kysymykset: [
       'Ketkä pylväät pystyttivät?',
@@ -579,6 +589,8 @@ export const FOKUSKOHTEET_TUR = [
   {
     id: 'vanjarvi',
     nimi: 'Vanjärvi',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'luonto',
     tyyppi: 'muu',
     kysymykset: [
       'Mistä järven vesi tulee, jos se ei laske mihinkään?',

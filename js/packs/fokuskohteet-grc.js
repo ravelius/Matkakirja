@@ -520,6 +520,8 @@ export const FOKUSKOHTEET_GRC = [
   {
     id: 'korintin-kanava',
     nimi: 'Korintin kanava',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'tekniikka',
     tyyppi: 'muu',
     kysymykset: [
       'Kuljetaanko kanavan läpi vielä nykyään?',
@@ -605,6 +607,8 @@ export const FOKUSKOHTEET_GRC = [
   {
     id: 'delfoi',
     nimi: 'Delfoi',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'historia',
     tyyppi: 'muu',
     kysymykset: [
       'Miksi oraakkelin vastaukset olivat niin moniselitteisiä?',
@@ -653,6 +657,8 @@ export const FOKUSKOHTEET_GRC = [
   {
     id: 'akropolis',
     nimi: 'Akropolis',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'historia',
     tyyppi: 'muu',
     kysymykset: [
       'Miksi Parthenon rakennettiin juuri kalliolle?',

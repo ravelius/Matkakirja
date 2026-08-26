@@ -104,6 +104,8 @@ export const FOKUSKOHTEET_ROU = [
   {
     id: 'bran',
     nimi: 'Branin linna',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'sana',
     tyyppi: 'muu',
     kysymykset: [
       'Missä Vlad Seivästäjä sitten asui?',
@@ -181,6 +183,8 @@ export const FOKUSKOHTEET_ROU = [
   {
     id: 'peles',
     nimi: 'Peleșin linna',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'historia',
     tyyppi: 'muu',
     kysymykset: [
       'Mistä linnan oma sähkö tuotettiin?',
@@ -218,6 +222,8 @@ export const FOKUSKOHTEET_ROU = [
   {
     id: 'transfagarasan',
     nimi: 'Transfăgărășan',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'tekniikka',
     tyyppi: 'muu',
     kysymykset: [
       'Mikä linna tien varrella on?',
@@ -265,6 +271,8 @@ export const FOKUSKOHTEET_ROU = [
   {
     id: 'tonavan-suisto',
     nimi: 'Tonavan suisto',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'luonto',
     tyyppi: 'muu',
     kysymykset: [
       'Milloin pelikaanit saapuvat suistoon?',
@@ -307,6 +315,8 @@ export const FOKUSKOHTEET_ROU = [
   {
     id: 'iloinen-hautausmaa',
     nimi: 'Iloinen hautausmaa',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'kulttuuri',
     tyyppi: 'muu',
     kysymykset: [
       'Kuka ristit veistää nykyään?',
@@ -378,6 +388,8 @@ export const FOKUSKOHTEET_ROU = [
   {
     id: 'rautaportti',
     nimi: 'Rautaportti',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'luonto',
     tyyppi: 'muu',
     kysymykset: [
       'Minne Ada Kalehin asukkaat muuttivat?',
@@ -454,6 +466,8 @@ export const FOKUSKOHTEET_ROU = [
   {
     id: 'sarmizegetusa',
     nimi: 'Sarmizegetusa Regia',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'historia',
     tyyppi: 'muu',
     kysymykset: [
       'Keitä daakialaiset olivat?',
@@ -494,6 +508,8 @@ export const FOKUSKOHTEET_ROU = [
   {
     id: 'turda',
     nimi: 'Turdan suolakaivos',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'tekniikka',
     tyyppi: 'muu',
     kysymykset: [
       'Kuinka syvällä maanalainen järvi on?',
@@ -538,6 +554,8 @@ export const FOKUSKOHTEET_ROU = [
   {
     id: 'corvin',
     nimi: 'Corvinin linna',
+    // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
+    symboli: 'historia',
     tyyppi: 'muu',
     kysymykset: [
       'Mitkä ovat Romanian seitsemän ihmettä?',
