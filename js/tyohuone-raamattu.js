@@ -123,11 +123,12 @@ export const RAAMATTU = {
           + 'matkalaukku ja kulunut matkakirja. Juoksen sisälle '
           + 'terminaaliin ja olen varma, että ukko oli löytänyt '
           + 'jotain. Mutta kuka on repinyt kirjasta viimeisen '
-          + 'sivun?"; "Mistä aloitan?" on viimeinen ajatus (ei '
-          + 'lueta). PÄIVITYS 26.8.2026: kysymys EI ole enää '
-          + 'klikattava (pelaajat eivät tajunneet lausetta napiksi) '
-          + '— sen alla on kehystetty 1873-nappi ALOITA MATKA, joka '
-          + 'vie kartalle.',
+          + 'sivun?"; "Mistä aloitan?" on KEHYSTETTY 1873-NAPPI '
+          + 'ilman sykettä (ei lueta; omistaja 26.8.2026 iltap. — '
+          + 'kumoaa saman päivän ALOITA MATKA -välivaiheen). '
+          + 'ETUSIVUN ASETTELU 26.8.2026: maailmankartta pienenä '
+          + 'ylälohkona jonka päällä julisteotsikko; sen alla '
+          + 'tyhjää vaaleaa karttapohjaa ja tekstit sen päällä.',
         'VAANIJAKAARI ALKOI (kaanonit 25.8.2026): Istanbulin '
           + 'aarremerkintä on ensimmäinen vaanijavihje ("mies, joka '
           + 'oli kysellyt minusta satamassa, seisoi jo sillalla"); '
