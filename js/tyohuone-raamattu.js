@@ -108,9 +108,9 @@ export const RAAMATTU = {
           + '(kannessa ei painettua nimeä).',
         'JULISTEOTSIKKO ON VERNEN NIMI + OSA TOINEN (omistaja '
           + '26.8.2026): etusivun otsikko on "Maailman ympäri '
-          + 'kahdeksassakymmenessä päivässä · OSA II" (roomalainen '
-          + 'numero, omistajan valinta 26.8.2026 — "osa toinen" oli '
-          + 'liian hämärä). Vernen '
+          + 'kahdeksassakymmenessä päivässä · OSA II · UNOHDETTU '
+          + 'AARRE" (roomalainen numero ja jatko-osan oma alaotsikko '
+          + '1800-luvun tapaan, omistaja 26.8.2026). Vernen '
           + 'romaani (1873) on public domain eikä lyhyt nimi ylitä '
           + 'teoskynnystä, joten käyttö on vapaata. RAJAT: mistään '
           + 'suojatusta SUOMENNOKSESTA ei lainata tekstiä (kääntäjän '
