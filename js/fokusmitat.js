@@ -605,6 +605,24 @@ const VALIN_MIN = 78;
  * lukema jätetään pois, jotteivat ne osu vaakaviivainten numeroriviin.
  * Nurkat kuuluvat siis vaakaviivaimille, kaikissa neljässä kulmassa. */
 const NURKKA_PX = 30;
+/* Vaakaviivaimen oma reunavara: lukema ei ala aivan ruudun laidasta. */
+const REUNA_PX = 8;
+
+/*
+ * KUINKA KAUAS NAUHA SAA LIUKUA ENNEN UUTTA LADONTAA (ks. paivitaNauha).
+ *
+ * Merkit ladotaan tämän verran yli ruudun molemmista päistä, joten
+ * niin kauan kuin nauha on liukunut vähemmän kuin marginaalin verran,
+ * ruudulla näkyvälle alueelle on VARMASTI valmis merkki jokaista
+ * asteviivaa kohti. Marginaali on siis kate eikä arvaus: liu'un
+ * jälkeen katettu alue on [-M+d, raja+M+d], joka sisältää ruudun
+ * [0, raja] aina kun |d| ≤ M.
+ *
+ * 160 px on runsaat kaksi tiheintä asteväliä (VALIN_MIN 78), eli
+ * nauhaan tulee pari ylimääräistä merkkiä kumpaankin päähän ja uusi
+ * ladonta osuu kohdalle noin kerran 160 pikselin panoroinnissa.
+ */
+const LIUKUVARA = 160;
 
 /*
  * RUUDUN KALUSTEET, JOIDEN KOHDALTA VIIVAIN VÄISTÄÄ.
@@ -788,6 +806,15 @@ function ruutuKaavat(ui) {
   const y0 = perusta.asetteluY + ty;
   return {
     skaala,
+    /*
+     * Kameran nollakohta ruudulla. Viivainnauhat liu'uttavat itsensä
+     * juuri tämän muutoksella (ks. paivitaNauha): kun mittakaava pysyy,
+     * JOKAINEN laudan piste siirtyy ruudulla saman x0/y0-erotuksen
+     * verran, joten koko nauhan saa yhdellä muunnoksella oikeaan
+     * kohtaan — merkkeihin koskematta.
+     */
+    x0,
+    y0,
     leveys: perusta.leveys,
     korkeus: perusta.korkeus,
     px: (bx) => x0 + (bx - perusta.vbX) * skaala,
@@ -809,7 +836,7 @@ function asteTeksti(arvo, [plus, miinus]) {
 /**
  * Latoo nauhan merkit UUDELLEENKÄYTTÄEN elementit.
  *
- * KOLME SÄÄNTÖÄ, JOTKA TEKEVÄT TÄSTÄ KEHYSKELPOISEN:
+ * NELJÄ SÄÄNTÖÄ, JOTKA TEKEVÄT TÄSTÄ KEHYSKELPOISEN:
  *
  *   1. ELEMENTIT SÄILYVÄT. Vanha versio tyhjensi nauhan ja loi merkit
  *      alusta joka kerta. Se kelpasi, kun ladonta tapahtui kerran
@@ -823,26 +850,219 @@ function asteTeksti(arvo, [plus, miinus]) {
  *   3. TEKSTI VAIHDETAAN VAIN JOS SE MUUTTUI. Panoroitaessa sama
  *      lukema säilyy kymmeniä kehyksiä ja vain liukuu; turha kirjoitus
  *      mitätöisi tekstin asettelun joka kehyksellä.
+ *   4. MERKKI TUNNETAAN LUKEMASTAAN, EI TAULUKKOPAIKASTAAN — ks. alla.
+ *
+ * === MIKSI SÄÄNTÖ 3 EI YKSIN RIITTÄNYT (omistaja 26.8.2026: *"vieritys
+ * tökkii vieläkin"*) ===
+ *
+ * Sääntö 3 vertaa oikeaa merkkiä väärään. Vanha silmukka jakoi merkit
+ * TAULUKON JÄRJESTYKSESSÄ: merkki 0 sai aina ensimmäisen näkyvän
+ * asteen, merkki 1 toisen ja niin edelleen. Kun panorointi työntää
+ * ruudun reunasta sisään YHDEN uuden asteviivan, koko jono siirtyy
+ * yhden pykälän — ja jokainen vertailu `luku.textContent !== teksti`
+ * osuu, koska jokainen merkki sai naapurinsa lukeman. Yksi uusi viiva
+ * kirjoitti siis koko nauhan uusiksi.
+ *
+ * Mitattu (Chromium, 4× CPU-kuristus, 150 kehyksen skriptattu raahaus
+ * Kreikan fokusnäkymässä, 18 merkkiä kahdessa nauhassa): 157
+ * tekstinmuutosta 22 erässä, suurin erä 11 merkkiä kerralla. Oikea luku
+ * on noin 22 — tasan yksi merkki per ruudun yli vaihtunut asteviiva.
+ * Ja koska teksti on ainoa asia, joka näissä nauhoissa likaa asettelun,
+ * juuri se näkyi kehysmittarissa: 0,33 asettelua/kehys, josta viivainten
+ * osuus 0,27 (silmukka pois kytkettynä jäi 0,06).
+ *
+ * KORJAUS: merkki muistaa lukemansa (`__lukema`), ja ladonta etsii
+ * ensin jokaiselle asteelle sen OMAN merkin. Vain ne merkit, joiden
+ * lukema putosi ruudulta, kierrätetään uusille asteille — ja silloin
+ * teksti oikeasti muuttui. Liike on niille muille pelkkä muunnos.
+ *
+ * DOM-JÄRJESTYS EI ENÄÄ VASTAA RUUDUN JÄRJESTYSTÄ, eikä sen tarvitse:
+ * merkit ovat absoluuttisesti asemoituja eivätkä mene päällekkäin, ja
+ * säiliö on `aria-hidden` (lukemat eivät ole ruudunlukijan sisältöä).
  */
-function ladoNauha(nauha, parit, pysty) {
-  const merkit = nauha.children;
+function ladoNauha(nauha, parit, pysty, tila) {
+  /*
+   * Varasto lukeman mukaan ja erikseen ne merkit, joilla ei ole omaa
+   * lukemaa (vasta luodut) — jälkimmäiset kierrätetään ensin, koska
+   * niiden teksti on kirjoitettava joka tapauksessa.
+   */
+  const varasto = new Map();
+  const vapaat = [];
+  for (const merkki of nauha.children) {
+    const lukema = merkki.__lukema;
+    if (lukema != null && !varasto.has(lukema)) varasto.set(lukema, merkki);
+    else vapaat.push(merkki);
+  }
+
+  // Kierros 1: sama aste löytää saman merkin, eikä tekstiin kosketa.
+  const kohteet = new Array(parit.length);
   for (let i = 0; i < parit.length; i++) {
-    let merkki = merkit[i];
-    if (!merkki) {
+    const merkki = varasto.get(parit[i][1]);
+    if (!merkki) continue;
+    kohteet[i] = merkki;
+    varasto.delete(parit[i][1]);
+  }
+
+  // Kierros 2: loput kierrätetään — ensin lukemattomat, sitten ne,
+  // joiden aste juuri putosi ruudulta.
+  const kierratettavat = [...vapaat, ...varasto.values()];
+  let seuraava = 0;
+  for (let i = 0; i < parit.length; i++) {
+    if (kohteet[i]) continue;
+    let merkki = kierratettavat[seuraava];
+    if (merkki) seuraava += 1;
+    else {
       merkki = luo('span', 'fokus-viivain-merkki');
       merkki.appendChild(luo('i', 'fokus-viivain-viiva'));
       merkki.appendChild(luo('b', 'fokus-viivain-luku'));
       nauha.appendChild(merkki);
     }
+    kohteet[i] = merkki;
+  }
+
+  tila.merkit.length = 0;
+  for (let i = 0; i < parit.length; i++) {
     const [paikka, teksti] = parit[i];
+    const merkki = kohteet[i];
     merkki.style.transform = pysty
       ? `translate3d(0, ${paikka.toFixed(1)}px, 0) translateY(-50%)`
       : `translate3d(${paikka.toFixed(1)}px, 0, 0) translateX(-50%)`;
-    merkki.style.display = '';
-    const luku = merkki.lastChild;
-    if (luku.textContent !== teksti) luku.textContent = teksti;
+    merkki.__paikka = paikka;
+    if (merkki.__lukema !== teksti) {
+      merkki.lastChild.textContent = teksti;
+      merkki.__lukema = teksti;
+    }
+    tila.merkit.push(merkki);
   }
-  for (let i = parit.length; i < merkit.length; i++) merkit[i].style.display = 'none';
+
+  /*
+   * Ladonnan ulkopuolelle jääneet piiloon. Lukema jää muistiin: ruudulta
+   * pudonnut aste palaa usein takaisin muutaman kehyksen päästä, ja
+   * silloin se löytää oman merkkinsä ilman yhtäkään kirjoitusta.
+   */
+  for (let i = seuraava; i < kierratettavat.length; i++) piilotaMerkki(kierratettavat[i]);
+}
+
+/**
+ * Merkin näkyvyys. `display` eikä `visibility`, koska savukkeen väite
+ * 7t (savuke-fokuskartta) mittaa merkkien ruutulaatikot: piilotetun
+ * merkin on oltava mitaltaan olematon, jotta kalusteen kohdalle jäävä
+ * merkki ei näytä osuvan siihen.
+ */
+function piilotaMerkki(merkki) {
+  if (merkki.__piilossa === true) return;
+  merkki.style.display = 'none';
+  merkki.__piilossa = true;
+}
+
+function naytaMerkki(merkki) {
+  if (merkki.__piilossa === false) return;
+  merkki.style.display = '';
+  merkki.__piilossa = false;
+}
+
+/*
+ * ============ NAUHA LIUKUU KOKONAISENA, MERKIT PYSYVÄT ==============
+ *
+ * Omistajan pelitesti 26.8.2026 (iPad, v1149): *"vieritys tökkii
+ * vieläkin."* Wrapper-siirron jälkeen jäljelle jäänyt kehystyö
+ * paikannettiin mittauksella (Chromium, 4× CPU-kuristus, 150 kehyksen
+ * skriptattu raahaus Kreikan fokusnäkymässä; CDP:n
+ * invalidationTracking + LayoutCount + ablaatiot):
+ *
+ *   1398  tyylin mitätöintiä  SPAN.fokus-viivain-merkki (inline-tyyli)
+ *    150  tyylin mitätöintiä  DIV.kartta-kuori (itse panorointi)
+ *
+ * Eli kartan oma siirto maksoi yhden tyylikirjoituksen kehyksessä ja
+ * viivaimet YHDEKSÄN. Ablaatio kertoi saman toisin päin: viivainsilmukka
+ * pois kytkettynä asettelu putosi 0,33 → 0,06 kehykseltä ja pääsäikeen
+ * työ noin kolmanneksen.
+ *
+ * SYY EI OLLUT LASKENTA VAAN KIRJOITTAMINEN. Jokainen
+ * `merkki.style.transform` on oma CSS-arvon jäsennys ja oma tyylin
+ * mitätöinti, ja niitä oli kahdeksantoista kehyksessä — vaikka merkit
+ * liikkuivat KAIKKI SAMAN VERRAN.
+ *
+ * KOSKA MITTAKAAVA EI MUUTU PANOROINNISSA, kaikki laudan pisteet
+ * siirtyvät ruudulla saman verran (ruutuKaavat x0/y0). Nauha on siis
+ * liikutettavissa yhtenä kappaleena: yksi muunnos nauhalle korvaa
+ * kahdeksantoista muunnosta merkeille, ja merkkien keskinäiset paikat
+ * ovat samat pikselilleen — tämä ei ole likiarvo.
+ *
+ * MITÄ EI SILTI SAA MENETTÄÄ:
+ *
+ *   LUKEMAT OVAT OIKEIN JOKA HETKI. Ne eivät riipu liu'usta lainkaan:
+ *   merkki näyttää oman asteensa, ja aste on siinä kohdassa laudalla
+ *   missä on. Ele päättyy paivitaViivaimet-lepoladontaan, joka mittaa
+ *   perustan uudelleen ja latoo nauhat nollasta.
+ *
+ *   REUNAT JA KALUSTEET VÄISTETÄÄN YHÄ KEHYS KEHYKSELTÄ. Näkyvyys
+ *   lasketaan joka kehyksellä merkin omasta paikasta plus liu'usta
+ *   (paivitaNauha), joten aukko zoomipainikkeiden ja kartuutsin kohdalla
+ *   on oikeassa kohdassa myös kesken eleen. Kirjoitus tapahtuu vain kun
+ *   näkyvyys OIKEASTI vaihtuu — muutama kerta eleessä, ei joka kehys.
+ *
+ *   RUUDUN LAIDASTA SISÄÄN TULEVA ASTE ON VALMIINA. Ladonta ulottuu
+ *   LIUKUVARAn verran yli ruudun molemmista päistä, ja kun liuku ylittää
+ *   marginaalin, nauha ladotaan uudelleen. Siksi ruudulle ei voi jäädä
+ *   aukkoa.
+ */
+
+/** Nauhan ladontatila: mistä kamerasta merkit ladottiin ja mitkä ne ovat. */
+function nauhanTila(nauha) {
+  if (!nauha.__lado) {
+    nauha.__lado = {
+      skaala: 0, pohja: 0, kaistat: null, raja: 0, siirto: null, merkit: [],
+    };
+  }
+  return nauha.__lado;
+}
+
+/**
+ * Yksi nauha nykyiseen näkymään: joko liu'utetaan tai ladotaan uudelleen.
+ *
+ * `laske` on funktio, joka tuottaa parit [paikka, lukema] — sitä
+ * kutsutaan VAIN uudelleenladonnassa, joten liukukehyksessä ei lasketa
+ * projektioita eikä ladota merkkijonoja.
+ */
+function paivitaNauha(nauha, pysty, ruutu, kaistat, laske) {
+  const tila = nauhanTila(nauha);
+  const pohja = pysty ? ruutu.y0 : ruutu.x0;
+  const raja = pysty ? ruutu.korkeus : ruutu.leveys;
+  const reuna = pysty ? NURKKA_PX : REUNA_PX;
+  let siirto = pohja - tila.pohja;
+  /*
+   * Uudelleenladonnan ehdot. Kaistat vertaillaan VIITTEENÄ eikä
+   * sisältönä: uusi taulukko syntyy täsmälleen silloin kun kalusteet on
+   * mitattu uudelleen (paivitaPerusta), ja juuri silloin aukkojen paikat
+   * on ladottava uusiksi.
+   */
+  const uusi = !tila.merkit.length
+    || tila.skaala !== ruutu.skaala
+    || tila.kaistat !== kaistat
+    || tila.raja !== raja
+    || !(Math.abs(siirto) <= LIUKUVARA);
+  if (uusi) {
+    ladoNauha(nauha, laske(), pysty, tila);
+    tila.skaala = ruutu.skaala;
+    tila.pohja = pohja;
+    tila.kaistat = kaistat;
+    tila.raja = raja;
+    siirto = 0;
+  }
+  const muunnos = siirto
+    ? (pysty ? `translate3d(0, ${siirto.toFixed(1)}px, 0)` : `translate3d(${siirto.toFixed(1)}px, 0, 0)`)
+    : '';
+  if (tila.siirto !== muunnos) {
+    nauha.style.transform = muunnos;
+    tila.siirto = muunnos;
+  }
+  for (const merkki of tila.merkit) {
+    const paikka = merkki.__paikka + siirto;
+    if (paikka >= reuna && paikka <= raja - reuna && !kaistallaVarattu(paikka, kaistat)) {
+      naytaMerkki(merkki);
+    } else piilotaMerkki(merkki);
+  }
 }
 
 /**
@@ -995,48 +1215,45 @@ function piirraViivaimet(ui) {
   }
   sailio.hidden = false;
 
-  /** Latoo samat lukemat kahteen vastakkaiseen nauhaan. */
-  const lado = (parit, sivut, pysty) => {
-    for (const sivu of sivut) {
-      const varatut = perusta.kaistat[sivu];
-      ladoNauha(nauhat[sivu], parit.filter(([p]) => !kaistallaVarattu(p, varatut)), pysty);
-    }
-  };
-
-  /* --- pituusasteet ylä- ja alareunaan --- */
-  const lonAlku = kaavat.lon(ruutu.lautaX(0));
-  const lonLoppu = kaavat.lon(ruutu.lautaX(ruutu.leveys));
-  const pxAsteessa = Math.abs(ruutu.leveys / (lonLoppu - lonAlku));
-  const lonParit = [];
-  if (Number.isFinite(pxAsteessa) && pxAsteessa > 0) {
+  /*
+   * ASKEL VALITAAN RUUDUSTA, MERKIT LADOTAAN RUUDUN YLI. Tiheys on
+   * ruudun ominaisuus (valitseAskel), joten se lasketaan näkyvästä
+   * alueesta — mutta merkit ulottuvat LIUKUVARAn verran yli molempien
+   * laitojen, jotta nauha voi liukua ilman aukkoa (ks. paivitaNauha).
+   */
+  paivitaNauha(nauhat.yla, false, ruutu, perusta.kaistat.yla, () => {
+    const lonAlku = kaavat.lon(ruutu.lautaX(0));
+    const lonLoppu = kaavat.lon(ruutu.lautaX(ruutu.leveys));
+    const pxAsteessa = Math.abs(ruutu.leveys / (lonLoppu - lonAlku));
+    const parit = [];
+    if (!Number.isFinite(pxAsteessa) || !(pxAsteessa > 0)) return parit;
     const askel = valitseAskel(pxAsteessa);
-    const alku = Math.ceil(Math.min(lonAlku, lonLoppu) / askel) * askel;
-    const loppu = Math.max(lonAlku, lonLoppu);
+    const reunaA = kaavat.lon(ruutu.lautaX(-LIUKUVARA));
+    const reunaB = kaavat.lon(ruutu.lautaX(ruutu.leveys + LIUKUVARA));
+    const alku = Math.ceil(Math.min(reunaA, reunaB) / askel) * askel;
+    const loppu = Math.max(reunaA, reunaB);
     for (let lon = alku; lon <= loppu + 1e-9; lon += askel) {
-      const x = ruutu.px(kaavat.x(lon));
-      if (x < 8 || x > ruutu.leveys - 8) continue;
-      lonParit.push([x, asteTeksti(lon, ['I', 'L'])]);
+      parit.push([ruutu.px(kaavat.x(lon)), asteTeksti(lon, ['I', 'L'])]);
     }
-  }
-  lado(lonParit, ['yla'], false);
+    return parit;
+  });
 
-  /* --- leveysasteet vasempaan ja oikeaan reunaan --- */
-  const latYla = kaavat.lat(ruutu.lautaY(0));
-  const latAla = kaavat.lat(ruutu.lautaY(ruutu.korkeus));
-  const pxLeveysasteessa = Math.abs(ruutu.korkeus / (latYla - latAla));
-  const latParit = [];
-  if (Number.isFinite(pxLeveysasteessa) && pxLeveysasteessa > 0) {
+  paivitaNauha(nauhat.vasen, true, ruutu, perusta.kaistat.vasen, () => {
+    const latYla = kaavat.lat(ruutu.lautaY(0));
+    const latAla = kaavat.lat(ruutu.lautaY(ruutu.korkeus));
+    const pxLeveysasteessa = Math.abs(ruutu.korkeus / (latYla - latAla));
+    const parit = [];
+    if (!Number.isFinite(pxLeveysasteessa) || !(pxLeveysasteessa > 0)) return parit;
     const askel = valitseAskel(pxLeveysasteessa);
-    const alku = Math.ceil(Math.min(latYla, latAla) / askel) * askel;
-    const loppu = Math.max(latYla, latAla);
+    const reunaA = kaavat.lat(ruutu.lautaY(-LIUKUVARA));
+    const reunaB = kaavat.lat(ruutu.lautaY(ruutu.korkeus + LIUKUVARA));
+    const alku = Math.ceil(Math.min(reunaA, reunaB) / askel) * askel;
+    const loppu = Math.max(reunaA, reunaB);
     for (let lat = alku; lat <= loppu + 1e-9; lat += askel) {
-      const y = ruutu.py(kaavat.y(lat));
-      // Nurkat kuuluvat vaakaviivaimille, ylhäällä ja alhaalla.
-      if (y < NURKKA_PX || y > ruutu.korkeus - NURKKA_PX) continue;
-      latParit.push([y, asteTeksti(lat, ['P', 'E'])]);
+      parit.push([ruutu.py(kaavat.y(lat)), asteTeksti(lat, ['P', 'E'])]);
     }
-  }
-  lado(latParit, ['vasen'], true);
+    return parit;
+  });
 }
 
 /** Mittaus ja ladonta yhdessä: näkymän asettuminen ja taulun avaus. */

@@ -32,6 +32,22 @@
  *      kompositorin työtä. Mitattu tällä savukkeella samalla ajolla:
  *      ennen 1,05 → jälkeen 0,35 asettelua/kehys.
  *
+ *   5. VIIVAINNAUHA LIUKUU KOKONAISENA (omistaja 26.8.2026 ilta, v1149:
+ *      *"vieritys tökkii vieläkin"*). Wrapper-siirron jälkeen jäljelle
+ *      jäänyt kehystyö paikannettiin CDP:n invalidointijäljityksellä:
+ *      kartan oma siirto teki YHDEN tyylikirjoituksen kehyksessä ja
+ *      reunaviivaimet YHDEKSÄN (1398 kpl 150 kehyksessä,
+ *      SPAN.fokus-viivain-merkki, inline-tyyli). Merkit liikkuivat
+ *      kaikki saman verran, joten ne liikutetaan nyt yhtenä nauhana
+ *      (js/fokusmitat.js paivitaNauha) ja merkkien omat muunnokset
+ *      kirjoitetaan vain uudelleenladonnassa. Mitattu samalla ajolla:
+ *      1398 → 136 merkkikirjoitusta, pääsäikeen skriptiaika −35 %.
+ *
+ *      ASETTELULUKU EI TÄSTÄ MUUTU eikä sen pidäkään: viivainten
+ *      asettelun likaavat merkkien näkyvyysvaihdot ja tekstinmuutokset,
+ *      joita on vain kourallinen eleessä. Siksi väite 5 mittaa
+ *      tyylikirjoituksia — juuri sitä, mikä oli vialla.
+ *
  * TÄMÄ SAVUKE VARTIOI RAKENNETTA, EI KELLOA. Kehysaikaraja flakkaisi
  * CI:n koneilla, joten väitteet ovat determinantteja:
  *
@@ -183,6 +199,22 @@ const ele = await sivu.evaluate(async (N) => {
   // kuorta putoaa takaisin lautaan, kuten js/kartta.js `get kuori`.
   const liikkuja = ui.karttaKuori ?? ui.svg;
   const alkuMuunnos = liikkuja.style.transform;
+  /*
+   * Viivainten tyylikirjoitukset eleen aikana: merkkikohtaiset erikseen
+   * nauhakohtaisista (väite 5). Vahti on MutationObserver eikä
+   * käärittyjä settereitä, koska mittarin on nähtävä juuri se mitä
+   * selain näkee — jokainen inline-tyylin muutos.
+   */
+  let merkkiKirjoitukset = 0;
+  let nauhaKirjoitukset = 0;
+  const viivaimet = document.querySelector('.fokus-viivaimet');
+  const tyylivahti = viivaimet ? new MutationObserver((lista) => {
+    for (const m of lista) {
+      if (m.target.classList.contains('fokus-viivain-merkki')) merkkiKirjoitukset += 1;
+      else if (m.target.classList.contains('fokus-viivain')) nauhaKirjoitukset += 1;
+    }
+  }) : null;
+  tyylivahti?.observe(viivaimet, { attributes: true, attributeFilter: ['style'], subtree: true });
   pane.dispatchEvent(new PointerEvent('pointerdown', o(cx, cy)));
   let raahausNahty = false;
   let sykeVaiennettu = null;
@@ -218,7 +250,11 @@ const ele = await sivu.evaluate(async (N) => {
     pane.dispatchEvent(new PointerEvent('pointermove', o(viimeX, viimeY)));
   }
   pane.dispatchEvent(new PointerEvent('pointerup', o(viimeX, viimeY)));
-  return { raahausNahty, sykeVaiennettu, muuttui };
+  tyylivahti?.disconnect();
+  return {
+    raahausNahty, sykeVaiennettu, muuttui, merkkiKirjoitukset, nauhaKirjoitukset,
+    viivaimia: Boolean(viivaimet && !viivaimet.hidden),
+  };
 }, KEHYKSIA);
 const layoutJalkeen = await layoutCount();
 
@@ -239,6 +275,23 @@ console.log(`      mitattu: ${asetteluaPerKehys.toFixed(2)} asettelua/kehys`);
 vaadi('2 asettelu ei palaa siirtosilmukkaan',
   asetteluaPerKehys <= 0.7,
   `${asetteluaPerKehys.toFixed(2)} asettelua/kehys (raja 0,7)`);
+
+/*
+ * Väite 5: viivainten merkit eivät saa saada omaa tyylikirjoitusta joka
+ * kehyksellä. Nauha liikkuu, merkit pysyvät (ks. johdanto kohta 5).
+ * Mitattu tällä ajolla: merkit ~0,9 ja nauha ~1,0 kirjoitusta
+ * kehyksessä; ennen nauhaliukua merkkejä oli 9,3. Raja 3 päästää läpi
+ * uudelleenladonnat ja niiden vaihtelun mutta kaatuu, jos ladonta palaa
+ * kirjoittamaan jokaisen merkin joka kehyksellä.
+ */
+const merkkiaPerKehys = ele.merkkiKirjoitukset / KEHYKSIA;
+console.log(`      mitattu: ${merkkiaPerKehys.toFixed(2)} merkkikirjoitusta/kehys`
+  + ` (nauha ${(ele.nauhaKirjoitukset / KEHYKSIA).toFixed(2)}/kehys)`);
+vaadi('5a viivainnauha liikkuu eleen aikana', ele.viivaimia && ele.nauhaKirjoitukset > 0,
+  `nauhakirjoituksia ${ele.nauhaKirjoitukset}, viivaimet ${ele.viivaimia}`);
+vaadi('5b viivainmerkkejä ei kirjoiteta joka kehyksellä',
+  merkkiaPerKehys <= 3,
+  `${merkkiaPerKehys.toFixed(2)} merkkikirjoitusta/kehys (raja 3)`);
 
 // Eleen jälkeen syke herää: vaimennus oli raahausluokan varassa eikä
 // jäänyt päälle.
