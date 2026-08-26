@@ -1,0 +1,70 @@
+# Yksittäisen kuvan generointi OpenAI:n kuva-API:lla (gpt-image-1).
+# Omistajan linjaus 26.8.2026: herokuvat ja julisteet tehdään jatkossa
+# ChatGPT:n käyttöliittymässä, mutta erikseen pyydettäessä API:lla —
+# avain on repon secreteissä (OPENAI_API_KEY), ja tämä työnkulku on
+# se pyydettäessä-reitti. Kuva palautuu ajon artifaktina.
+name: Generoi kuva API:lla
+
+on:
+  workflow_dispatch:
+    inputs:
+      prompt:
+        description: 'Kuvaprompti (englanniksi)'
+        type: string
+        required: true
+      nimi:
+        description: 'Tiedostonimi ilman päätettä'
+        type: string
+        default: 'kuva'
+      koko:
+        description: 'Kuvakoko'
+        type: choice
+        options: ['1024x1536', '1536x1024', '1024x1024']
+        default: '1024x1536'
+
+permissions:
+  contents: read
+
+jobs:
+  generoi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Generoi
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PROMPT: ${{ inputs.prompt }}
+          NIMI: ${{ inputs.nimi }}
+          KOKO: ${{ inputs.koko }}
+        run: |
+          set -euo pipefail
+          node - <<'SKRIPTI'
+          const vastaus = await fetch('https://api.openai.com/v1/images/generations', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+            },
+            body: JSON.stringify({
+              model: 'gpt-image-1',
+              prompt: process.env.PROMPT,
+              size: process.env.KOKO,
+              quality: 'high',
+            }),
+          });
+          if (!vastaus.ok) {
+            console.error('HTTP', vastaus.status, (await vastaus.text()).slice(0, 400));
+            process.exit(1);
+          }
+          const data = await vastaus.json();
+          const b64 = data.data?.[0]?.b64_json;
+          if (!b64) { console.error('vastauksessa ei kuvaa'); process.exit(1); }
+          const { writeFileSync } = await import('node:fs');
+          writeFileSync(`${process.env.NIMI}.png`, Buffer.from(b64, 'base64'));
+          console.log(`${process.env.NIMI}.png kirjoitettu`);
+          SKRIPTI
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.nimi }}
+          path: ${{ inputs.nimi }}.png
+          retention-days: 7
