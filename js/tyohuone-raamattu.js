@@ -39,6 +39,25 @@ export const RAAMATTU = {
         'SYDÄNTEEMA: ihminen on peruskysymysten äärellä yhtä pihalla '
           + 'kuin ennenkin. Poika yrittää ymmärtää isoisäänsä — siihen '
           + 'pelin loppu päättyy.',
+        'NIMEN KAKSI TASOA (omistaja 26.8.2026): Unohdetulla '
+          + 'aarteella on kaksi tasoa. (a) PELIN MAAILMASSA: Aarnin '
+          + 'luettelon aarteet ovat oikeasti olemassa — ne on vain '
+          + 'unohdettu. Samaa etsintää on isoisä itse: hänen '
+          + 'tarinansa on pojanpojalle aluksi yhtä kadoksissa ja '
+          + 'löytyy matkan varrella (sydänteeman jatke). (b) PELIN '
+          + 'YDINIDEANA: unohdettu aarre on kaikki se '
+          + 'kulttuuriperimän, taiteen, tieteen, löydösten ja '
+          + 'maailman epäkummallisuuksien rikkaus, joka tekee '
+          + 'ihmisenä olemisesta mielenkiintoista ja elämisen '
+          + 'arvoista — ja joka nykyisen some- ja AI-moskan keskellä '
+          + 'äkkiä unohtuu.',
+        'PELIN MISSIO AI-AIKANA (omistaja 26.8.2026): peli '
+          + 'valjastaa tekoälyn nimenomaan LÖYTÄMÄÄN tuon rikkauden '
+          + 'ja johdattamaan pelaajat rikastuttamaan omaa elämäänsä '
+          + 'eri maiden kulttuureilla, yleistiedolla ja '
+          + 'laaja-alaisemmalla ymmärryksellä historian ja politiikan '
+          + 'tapahtumista ja niiden vaikutuksista. AI on VASTAVOIMA '
+          + 'sisältömoskalle, ei sen lähde.',
       ],
     },
     {
@@ -767,6 +786,15 @@ export const RAAMATTU = {
         'Ideapankki: imperiumit, kauppareitit, viestinnän historia, '
           + 'tutkimusmatkat, aikapyyhkäisy. Kerroksia enintään 2–3 '
           + 'kerralla.',
+        'IDEAPANKIN TÄYDENNYS (omistaja 26.8.2026): ihmisten '
+          + 'leviäminen maapallolla, silkkitiet, ristiretket, '
+          + 'kolonialismi, kielten leviäminen, öljynporauksen '
+          + 'vaikutus rahaliikenteeseen, dataverkkojen ja '
+          + 'puhelinverkkojen kehitys, rautateiden kehitys; lisäksi '
+          + 'kuvaajat, joilla näkee yksittäisen kaupungin kasvun '
+          + 'kerros kerrokselta (lavalinssin aihe). Linsseillä '
+          + 'karttapohjiin animoidaan aikajanatekniikalla erilaisia '
+          + 'näkökulmia.',
         'Toteutus: käsin tarkistettu data, pelin oma animaatio. '
           + 'Etusivulla kevyt vihjeanimaatio.',
         'KAMERA-AJOT (omistaja 24.8.2026): piirtomoottoriin '
@@ -1224,6 +1252,28 @@ export const RAAMATTU = {
           + 'lunastuskoodilla, jonka pelaaja syöttää peliin (pelissä '
           + 'ei ole tilejä, joten koodi on ainoa reitti oikealle '
           + 'pelaajalle).',
+      ],
+    },
+    {
+      /*
+       * Oma osio eikä Lukijoiden ehdotusten kohta: visio on pelin
+       * filosofista ydintä (ks. Ydinajatus, PELIN MISSIO AI-AIKANA)
+       * ja kantaa pidemmälle kuin nykyinen kanava.
+       */
+      otsikko: 'Sisältöeditori (visio)',
+      tila: 'luonnos — suunniteltu kehityssuunta',
+      kohdat: [
+        'EDITORIN KAUNEIN IDEA (omistajan visio 26.8.2026): kuka '
+          + 'tahansa voi tuottaa peliin näkyville asioita, jotka hän '
+          + 'kokee mielenkiintoisiksi ja merkityksellisiksi, mistä '
+          + 'päin maailmaa tahansa.',
+        'KOLME NÄKYVYYSTASOA: vain itselle → oma yhteisö → kaikille '
+          + 'pelaajille, kun sisältö täyttää pelin fakta- ja '
+          + 'laatukriteerit.',
+        'KURATOINTI: AI kokoaa ehdotetuista muutoksista tiiviin '
+          + 'tietopaketin, mutta RATKAISUT TEKEE AINA IHMINEN.',
+        'Nykyinen Lukijoilta-kanava ja pro-tuottajat (osio '
+          + '"Lukijoiden ehdotukset") ovat tämän ensimmäinen vaihe.',
       ],
     },
     {
