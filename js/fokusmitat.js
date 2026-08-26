@@ -663,12 +663,17 @@ function valitseAskel(pxAsteessa) {
   return mahtuvat.length ? mahtuvat[mahtuvat.length - 1] : ASTEASKELEET[0];
 }
 
-/** Reunaviivainten säiliö: neljä nauhaa, yksi joka sivulle. */
+/*
+ * Reunaviivainten säiliö. Vain YLÄ ja VASEN (omistaja 26.8.2026:
+ * "riittää että näkyy vain vasemmassa sekä yläreunassa") — kuten
+ * aikakauden atlaksissa usein: lukemat kahdessa reunassa, kaksi muuta
+ * jää kartalle.
+ */
 function rakennaViivaimet(ui) {
   const sailio = luo('div', 'fokus-viivaimet');
   sailio.setAttribute('aria-hidden', 'true');
   sailio.hidden = true;
-  for (const sivu of ['yla', 'ala', 'vasen', 'oikea']) {
+  for (const sivu of ['yla', 'vasen']) {
     sailio.appendChild(luo('div', `fokus-viivain fokus-viivain-${sivu}`));
   }
   ui.mapPane.appendChild(sailio);
@@ -926,9 +931,7 @@ const kaistallaVarattu = (paikka, varatut) => varatut
 function viivainNauhat(sailio) {
   return {
     yla: sailio.querySelector('.fokus-viivain-yla'),
-    ala: sailio.querySelector('.fokus-viivain-ala'),
     vasen: sailio.querySelector('.fokus-viivain-vasen'),
-    oikea: sailio.querySelector('.fokus-viivain-oikea'),
   };
 }
 
@@ -949,9 +952,7 @@ function paivitaPerusta(ui) {
   const nauhat = viivainNauhat(sailio);
   perusta.kaistat = {
     yla: varatutKaistat(laatikot, nauhanKaista(nauhat.yla), false),
-    ala: varatutKaistat(laatikot, nauhanKaista(nauhat.ala), false),
     vasen: varatutKaistat(laatikot, nauhanKaista(nauhat.vasen), true),
-    oikea: varatutKaistat(laatikot, nauhanKaista(nauhat.oikea), true),
   };
   return perusta;
 }
@@ -1007,7 +1008,7 @@ function piirraViivaimet(ui) {
       lonParit.push([x, asteTeksti(lon, ['I', 'L'])]);
     }
   }
-  lado(lonParit, ['yla', 'ala'], false);
+  lado(lonParit, ['yla'], false);
 
   /* --- leveysasteet vasempaan ja oikeaan reunaan --- */
   const latYla = kaavat.lat(ruutu.lautaY(0));
@@ -1025,7 +1026,7 @@ function piirraViivaimet(ui) {
       latParit.push([y, asteTeksti(lat, ['P', 'E'])]);
     }
   }
-  lado(latParit, ['vasen', 'oikea'], true);
+  lado(latParit, ['vasen'], true);
 }
 
 /** Mittaus ja ladonta yhdessä: näkymän asettuminen ja taulun avaus. */
