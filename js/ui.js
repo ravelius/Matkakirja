@@ -850,15 +850,16 @@ const INTRO_TEXT = 'Vintiltä löytyi isoisän matkalaukku ja kulunut '
   + 'oli löytänyt jotain. Mutta kuka on repinyt kirjasta viimeisen '
   + 'sivun?';
 /*
- * KYSYMYS JA VASTAUS (omistaja 26.8.2026, korvaa klikattavan
- * lauseen): "Mistä aloitan?" jää kertojan viimeiseksi ajatukseksi
- * tavallisena tekstinä — pelaajat eivät tajunneet lausetta napiksi —
- * ja sen alla on selkeä kehystetty nappi, joka vie kartan lähikuvaan
- * Lontoon kohdalle. Kumpikaan EI OLE KERRONTAA eikä siksi kuulu
- * INTRO_TEXTiin: nauhoitettu luenta päättyy revittyyn sivuun.
+ * KYSYMYS ON NAPPI (omistajan tilaus 26.8.2026, ilta): "Mistä
+ * aloitan?" on samalla se kehystetty 1873-nappi, joka vie kartan
+ * lähikuvaan Lontoon kohdalle. Välivaihe, jossa kysymys oli pelkkää
+ * tekstiä ja sen alla erillinen ALOITA MATKA -nappi, purettiin — kaksi
+ * peräkkäistä kehotusta oli yksi liikaa.
+ *
+ * Nappi EI OLE KERRONTAA eikä siksi kuulu INTRO_TEXTiin: nauhoitettu
+ * luenta päättyy revittyyn sivuun.
  */
-const INTRO_KYSYMYS = 'Mistä aloitan?';
-const INTRO_VALINTA = 'Aloita matka';
+const INTRO_VALINTA = 'Mistä aloitan?';
 /*
  * ETUSIVUN PAIKKARIVI (omistajan tilaus 25.8.2026): kohtausmerkintä
  * avaustekstin ensimmäisenä rivinä, kuukausi ja vuosi laitteen
@@ -1361,16 +1362,21 @@ export class UI {
     this.turnCard = document.getElementById('actions').closest('.turn-card');
     this.introEl = document.getElementById('intro');
     this.introText = document.getElementById('intro-text');
-    // Avauspalsta (paikkarivi, teksti, klikattava lause, kansikuva).
-    // Kirjasinkoko säädetään palstaan, jotta kuva ja nappi kutistuvat
-    // tekstin mukana — mitat ovat niissä em-yksiköissä (fitIntro).
+    /*
+     * AVAUKSEN KAKSI LOHKOA (omistajan tilaus 26.8.2026, ilta):
+     * ylälohkossa pienennetty kartta ja julisteotsikko, alalohkossa
+     * tyhjä vaalea arkki ja sen päällä tekstipalsta. Kumpikin lohko
+     * saa oman kirjasinkokonsa fitIntrossa, ja lasten mitat ovat
+     * em-yksiköissä — niin otsikko ja nappi kutistuvat mukana.
+     */
+    this.introKartta = this.introEl?.querySelector('.intro-kartta');
+    this.introOtsikko = this.introEl?.querySelector('.intro-juliste');
+    this.introArkki = this.introEl?.querySelector('.intro-arkki');
     this.introPalsta = this.introEl?.querySelector('.intro-palsta');
     this.introRunko = document.getElementById('intro-runko');
     // Paikkarivi: kohtausmerkintä laitteen kellosta (INTRO_PAIKKA).
     this.introPaikka = document.getElementById('intro-paikka');
-    // Kertojan viimeinen ajatus (ei klikattava) ja sen alla nappi;
-    // napin kuuntelija kytketään renderIntrossa.
-    this.introKysymys = document.getElementById('intro-kysymys');
+    // Mistä aloitan? -nappi; kuuntelija kytketään renderIntrossa.
     this.introValinta = document.getElementById('intro-valinta');
     // Isoisän työpöytä: matkakirja ja irtolehti samassa sommitelmassa.
     this.introTyopoyta = this.introEl?.querySelector('.intro-tyopoyta');
@@ -4450,39 +4456,63 @@ export class UI {
    */
   placeIntro(box, vy, vh, paneH) {
     /*
-     * AVAUSPALSTA ON KOKO PANEELIN KOKOINEN (omistajan tilaus
-     * 25.8.2026): teksti ei enää asu kartan alapuolisessa kaistassa
-     * vaan yhtenä palstana kartan PÄÄLLÄ, ja kartta jää sen taakse
-     * kevyesti sumennettuna. Paikan ja korkeuden antaa siis CSS
-     * (.intro { inset: 0 }), eikä tässä ole enää mitään mitattavaa —
-     * jäljelle jää kirjasinkoon sovitus.
+     * MISSÄ PIENENNETTY LAUTA LOPPUU (omistajan tilaus 26.8.2026,
+     * ilta: kartta pienemmällä ylös, tyhjä vaalea karttapohja alle).
      *
-     * Parametrit (laudan rajaus ja näkymä) jäävät kutsurajapintaan,
-     * koska js/kartta.js kutsuu tätä samasta kohdasta kuin ennenkin
-     * eikä niiden poistaminen toisi mitään.
+     * Avaus on kaksi lohkoa: ylälohkossa lauta ja julisteotsikko,
+     * alalohkossa tyhjä arkki ja tekstipalsta. Raja ei ole arvattu
+     * prosentti vaan mitattu: js/kartta.js on jatkanut pergamenttia
+     * laudan alle (INTRO_SPACE), ja kartta.laudanKorkeus kertoo laudan
+     * oman korkeuden laatikossa — sen alalaita muuntuu ruutupikseleiksi
+     * näkymän (vy, vh) ja paneelin korkeuden kautta.
+     *
+     * Raja rajataan varmuuden vuoksi haarukkaan: kapea ja matala ruutu
+     * ei saa jättää tekstiä ilman tilaa, eikä leveä ruutu kutistaa
+     * karttaa nauhaksi.
      */
-    void box; void vy; void vh; void paneH;
+    if (this.introEl && vh > 0 && paneH > 0) {
+      const alalaita = ((box.y + this.kartta.laudanKorkeus(box) - vy) / vh) * paneH;
+      // Portin takana arkkia ei ole (kartta on iso ja keskellä), joten
+      // ylälohko saa koko paneelin ja julisteotsikko jää sen keskelle
+      // niin kuin ennenkin. Vasta portin jälkeen lohko rajataan.
+      const katto = this.aloitettu ? paneH * 0.55 : paneH;
+      const raja = Math.min(Math.max(alalaita, paneH * 0.28), katto);
+      this.introEl.style.setProperty('--intro-kartta-korkeus', `${Math.round(raja)}px`);
+    }
     this.fitIntro();
   }
 
   /**
-   * Kutistaa avauspalstaa, jos se ei mahdu paneeliin.
+   * Kutistaa avauksen kirjasinkokoa, jos se ei mahdu lohkoonsa.
    *
-   * Kirjasinkoko asetetaan PALSTAAN eikä pelkkään tekstiin, koska
-   * klikattava lause ja kansikuva on mitoitettu em-yksiköissä: kun
-   * teksti pienenee, ne pienenevät mukana ja koko avaus säilyttää
+   * Kaksi lohkoa, kaksi sovitusta: julisteotsikko sovitetaan kartan
+   * ylälohkoon ja tekstipalsta alalohkon arkille. Kirjasinkoko
+   * asetetaan LOHKON JUUREEN eikä yksittäiseen tekstiin, koska lapset
+   * (otsikon rivit, nappi, kansikuva) on mitoitettu em-yksiköissä: kun
+   * teksti pienenee, ne pienenevät mukana ja sommitelma säilyttää
    * mittasuhteensa. Puhelimen pystyruudulla juuri tämä ratkaisee sen,
-   * mahtuuko kuva näkyviin.
+   * mahtuuko kaikki näkyviin.
    */
   fitIntro() {
-    const kaista = this.introEl.clientHeight;
-    const palsta = this.introPalsta;
+    /*
+     * Otsikon kerroin 1.5 on selaimen oma h2-koko: ennen 26.8.2026
+     * juliste oli tekstipalstan lapsi ja peri kokonsa siitä kerrottuna
+     * 1,5:llä. Nyt se on oma lohkonsa, ja sama kerroin pitää otsikon
+     * täsmälleen entisen kokoisena.
+     */
+    this.sovitaIntroLohko(this.introKartta, this.introOtsikko, 1.5);
+    this.sovitaIntroLohko(this.introArkki, this.introPalsta);
+  }
+
+  /** Pienentää palstan kirjasinta, kunnes se mahtuu kaistaan. */
+  sovitaIntroLohko(kaistaEl, palsta, kerroin = 1) {
+    const kaista = kaistaEl?.clientHeight;
     if (!kaista || !palsta) return;
-    let koko = INTRO_FONT_MAX;
+    let koko = INTRO_FONT_MAX * kerroin;
     palsta.style.fontSize = `${koko}rem`;
     // Askelia riittävästi koko haarukkaan; INTRO_FONT_MIN on lattia.
     for (let i = 0; i < 8 && palsta.scrollHeight > kaista; i++) {
-      koko = Math.max(INTRO_FONT_MIN, koko - 0.09);
+      koko = Math.max(INTRO_FONT_MIN * kerroin, koko - 0.09 * kerroin);
       palsta.style.fontSize = `${koko}rem`;
     }
   }
@@ -11598,11 +11628,13 @@ export class UI {
   }
 
   /**
-   * Avausteksti kirjoittuu yhtenä palstana kartan päälle; kartta jää
-   * palstan taakse kevyesti sumennettuna (.intro-verho). Teksti on
-   * omistajan lukkoon lyömä eikä sitä muokata täällä; se naksuu esiin
-   * kirjoituskoneen tapaan, ja lopuksi sen alle ilmestyy klikattava
-   * viimeinen lause, joka vie kartan lähikuvaan Lontoon kohdalle.
+   * Avaus on kaksi lohkoa (omistajan tilaus 26.8.2026, ilta):
+   * ylälohkossa pienennetty kartta ja sen päällä julisteotsikko,
+   * alalohkossa tyhjä vaalea karttapohja ja sen päällä paikkarivi,
+   * avausteksti ja Mistä aloitan? -nappi. Teksti on omistajan lukkoon
+   * lyömä eikä sitä muokata täällä; se naksuu esiin kirjoituskoneen
+   * tapaan, ja lopuksi sen alle ilmestyy nappi, joka vie kartan
+   * lähikuvaan Lontoon kohdalle.
    */
   renderIntro() {
     // Katselutilassa (?lauta=) porttia ja avaustekstiä ei näytetä: kartta
@@ -11651,7 +11683,6 @@ export class UI {
     if (!nakyy) {
       this.introShown = false;
       this.introRunko.textContent = '';
-      if (this.introKysymys) this.introKysymys.hidden = true;
       if (this.introValinta) this.introValinta.hidden = true;
       stopIntroVoice(this);
       this.suljeAloitusportti();
@@ -11691,16 +11722,11 @@ export class UI {
      */
     this.introRunko.textContent = '';
     /*
-     * KLIKATTAVA VIIMEINEN LAUSE ILMESTYY VASTA KIRJOITUKSEN JÄLKEEN
+     * MISTÄ ALOITAN? -NAPPI ILMESTYY VASTA KIRJOITUKSEN JÄLKEEN
      * (omistajan tilaus 25.8.2026). Nappi on kuitenkin jo asettelussa
-     * mukana (visibility, ei hidden), jotta palstan korkeus on mitattu
-     * oikein heti eikä mikään liiku lauseen ilmestyessä.
+     * mukana (peittävyys, ei hidden), jotta palstan korkeus on mitattu
+     * oikein heti eikä mikään liiku napin ilmestyessä.
      */
-    if (this.introKysymys) {
-      this.introKysymys.textContent = INTRO_KYSYMYS;
-      this.introKysymys.hidden = false;
-      this.introKysymys.classList.add('intro-valinta-piilossa');
-    }
     if (this.introValinta) {
       this.introValinta.textContent = INTRO_VALINTA;
       this.introValinta.hidden = false;
@@ -11715,8 +11741,7 @@ export class UI {
       // Luenta alkaa vasta nyt — paikkarivi oli pelkkää konekirjoitusta.
       playIntroVoice(this);
       this.typeText(this.introRunko, INTRO_TEXT, 'intro', () => {
-        // Lause paljastuu pehmeästi vasta kun viimeinen kirjain on tullut.
-        this.introKysymys?.classList.remove('intro-valinta-piilossa');
+        // Nappi paljastuu pehmeästi vasta kun viimeinen kirjain on tullut.
         this.introValinta?.classList.remove('intro-valinta-piilossa');
       }, INTRO_TYPE_MS);
       // Koko teksti on paikallaan (typeTextin varjoteksti varaa tilan),
@@ -11733,8 +11758,8 @@ export class UI {
   }
 
   /**
-   * Klikattava viimeinen lause: "Aloitan sieltä, mistä hänkin —
-   * Lontoosta." (omistajan tilaus 25.8.2026).
+   * Mistä aloitan? -napin polku kartalle (omistajan tilaus 25.8.2026,
+   * nappi 26.8.2026).
    *
    * Naksahdus, avauspalsta häipyy (teksti, sumuverho ja kansikuva
    * samalla kertaa, koska ne ovat saman elementin lapsia), ja kartta
@@ -11774,7 +11799,14 @@ export class UI {
     nappi.addEventListener('click', () => {
       this.aloitettu = true;
       this.suljeAloitusportti();
-      // Lauta siirtyy keskeltä ylös tekstin tieltä heti portin auettua.
+      /*
+       * Lauta kutistuu keskeltä ylälohkoon tekstin tieltä heti portin
+       * auettua. Rajauslaatikko on laskettava uudelleen: avaustekstin
+       * kaista (kartta.introKaistaKaytossa) syntyy vasta nyt, ja ilman
+       * uutta laskentaa fitViewBox sovittaisi vanhaan, kaistattomaan
+       * laatikkoon eikä lauta pienenisi lainkaan.
+       */
+      this.contentBox = this.kartta.boardBounds();
       this.kartta.fitViewBox();
       this.render();
     });
