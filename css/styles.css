@@ -18977,11 +18977,10 @@ body.fokuspohja .maa-pilleri { display: none; }
    * asia, joka tekee kahdesta kalusteesta yhden. Oikea pehmuste pitää
    * rivit poissa plus-napin alta.
    */
-  /* Yläpehmuste tekee tilan plussalle, joka istuu taulun yläreunassa
-     keskellä omalla rivillään (omistaja 25.8.2026) — se ei saa jäädä
-     lukurivien päälle. Oikea pehmuste kapeni samalla: kulmassa ei enää
-     asu nappia. */
-  padding: 2.5rem 0.35rem 0.5rem;
+  /* Plus on taulun ensimmäinen VIRRASSA OLEVA rivi (omistaja 26.8.2026:
+     absoluuttinen ankkurointi ei pysynyt keskellä kaikilla ruuduilla),
+     joten yläpehmuste on taas tavallinen. */
+  padding: 0.5rem 0.35rem 0.5rem;
   border: 0;
   background: none;
   box-shadow: none;
@@ -19035,20 +19034,17 @@ body.fokuspohja .maa-pilleri { display: none; }
  * pysyy taulun sisällä calc-varalla.
  */
 .fokus-maataulu-lehti {
-  position: absolute;
-  top: 0;
-  /* Yläreunaan keskelle omalle rivilleen (omistaja 25.8.2026) — taulun
-     yläpehmuste (2.5rem) on varattu sille. Siirto marginaalilla eikä
-     translatella, koska syke animoi transformia. */
-  left: 50%;
-  margin-left: -22px;
-  right: auto;
+  /* Oma rivi taulun yläreunassa, AIDOSTI keskellä (omistaja 26.8.2026):
+     virrassa oleva lohko + auto-marginaalit eivät riipu taulun
+     leveydestä eivätkä ruudun koosta, toisin kuin entinen
+     absoluuttinen left:50%-ankkurointi. */
+  display: grid;
+  place-items: center;
+  margin: 0 auto 0.15rem;
   width: 2.1rem;
   height: 2.1rem;
   min-width: 44px;
   min-height: 44px;
-  display: grid;
-  place-items: center;
   padding: 0;
   border: 0;
   border-radius: 0;
@@ -19058,7 +19054,23 @@ body.fokuspohja .maa-pilleri { display: none; }
   font-size: 0;
   line-height: 0;
   cursor: pointer;
-  animation: fokus-plus-syke 3.2s ease-in-out infinite;
+}
+
+/*
+ * Animaatiot vain kun taulu on AUKI, jotta ne käynnistyvät alusta joka
+ * avauksella: ensin yksi reilu pehmeä sykäys huomion herättäjäksi
+ * (omistaja 26.8.2026), sitten entinen hidas syke.
+ */
+.fokus-maataulu.auki .fokus-maataulu-lehti {
+  animation:
+    fokus-plus-alku 0.9s cubic-bezier(0.34, 1.3, 0.5, 1) 0.25s backwards,
+    fokus-plus-syke 3.2s ease-in-out 1.15s infinite;
+}
+
+@keyframes fokus-plus-alku {
+  0% { transform: scale(0.3); opacity: 0; }
+  55% { transform: scale(1.55); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.72; }
 }
 
 .fokus-maataulu-lehti::before,
