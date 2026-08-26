@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1131 — Bukarestin lehden etusivulle kolmen herokuvan avauskaruselli (Arcul de Triumf, Stavropoleos, CEC-palatsi; omistajan ChatGPT-era, silmatarkistettu) — korvaa Commons-yleisnakymat',
   'v1130 — ensimmainen sisaltoera symbolitaksonomialla: 16 uutta fokuskohdetta — GRC: Olympia, Kalamata, Ermoupoli, Epidauros, Marathon, Antikythera; BGR: jogurtti, Veliki Preslav, Madaran ratsastaja, Srebarna, Pernik; TUR: Gaziantep, Kapalicarsi, Gelibolu, Vanin kissa, Kirkpinar — eri kategorioita, symbolit tyyppijohdolla (v1126)',
   'v1129 — Sarajevon lehden etusivulle kolmen herokuvan avauskaruselli (Gazi Husrev-beg + Sahat Kula, Katedrala, Latinalainen silta; omistajan ChatGPT-era, silmatarkistettu) — kansikuvat siirtyvat pikkuriville',
   'v1128 — kartan vierityksen tokkiminen korjattu mittauksin: sykeanimaatiot vaimennetaan raahauksen ajaksi ja siirtosilmukka ei enaa pakota asettelua (asettelut/kehys 1,8 -> 0,7, longtaskit 4-6 -> 0-1, p50-kehysaika -25%); uusi vartija savuke-panorointi — kokeile panorointia Kreikan fokuskartalla iPadilla',
