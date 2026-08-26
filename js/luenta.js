@@ -571,6 +571,58 @@ export function haivytaAani(ui, audio, kesto = LUENNAN_HAIPYMA_S * 1000) {
   requestAnimationFrame(askel);
 }
 
+/**
+ * KUUNTELEE, MILLOIN RUUDULLA OLEVA MERKINNÄN LUENTA ON OHI (omistajan
+ * pelitestipalaute v1119: *"pöllön kuplat tulevat vasta kun
+ * MATKAPÄIVÄKIRJAN LUENTA on päättynyt"*).
+ *
+ * Saapumisessa kuplat lähtivät kiinteällä viiveellä kartan
+ * ilmestymisestä ja ponnahtivat kertojan päälle kesken merkinnän.
+ * Nyt kutsuja voi odottaa luennan loppua — ja jos luentaa ei ole
+ * (mykistys, kertojatila 'ei', puuttuva äänite), se saa tiedon siitä
+ * heti eikä jää odottamaan mitään.
+ *
+ * KOLME TAPAA PÄÄTTYÄ, KAIKKI SAMAN KAHVAN TAKANA:
+ *   1. äänite loppuu itsestään ('ended')
+ *   2. lataus tai soitto epäonnistuu ('error' — playDiaryVoice
+ *      laukaisee sen myös silloin, kun play() torjutaan)
+ *   3. LYHYT KERTOJATILA häivyttää äänen lauserajalla ja pysäyttää sen
+ *      ilman 'ended'-tapahtumaa — siksi pysähtynyt soitin luetaan
+ *      lopuksi omalla vahdillaan.
+ *
+ * Katto on varoventtiili: jos mikään yllä olevista ei laukea, kutsuja
+ * ei saa jäädä odottamaan ikuisesti.
+ *
+ * @returns {Promise<boolean>|null} null, jos luentaa ei ole käynnissä
+ */
+export function luennanLoppuun(ui, { katto = 60000 } = {}) {
+  const audio = ui?.diaryVoice;
+  if (!audio) return null;
+  return new Promise((valmis) => {
+    let tehty = false;
+    const ohi = () => {
+      if (tehty) return;
+      tehty = true;
+      clearInterval(vahti);
+      clearTimeout(katkaisin);
+      audio.removeEventListener('ended', ohi);
+      audio.removeEventListener('error', ohi);
+      valmis(true);
+    };
+    audio.addEventListener('ended', ohi);
+    audio.addEventListener('error', ohi);
+    const vahti = setInterval(() => {
+      // Luenta vaihtui tai pysäytettiin toisaalla: sama kuin loppu.
+      if (ui.diaryVoice !== audio) { ohi(); return; }
+      // Pysähtynyt soitin, joka on jo ehtinyt soida: lauserajahäivytys
+      // (lyhyt kertojatila). currentTime > 0 erottaa sen aloitusta
+      // odottavasta äänestä (playDiaryVoice soittaa viiveellä).
+      if (audio.paused && audio.currentTime > 0) ohi();
+    }, 250);
+    const katkaisin = setTimeout(ohi, katto);
+  });
+}
+
 export function stopDiaryVoice(ui) {
   ui.diaryVoice = null;
   ui.luentaTauolla = null;

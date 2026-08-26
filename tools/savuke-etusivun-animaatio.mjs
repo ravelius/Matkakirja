@@ -288,8 +288,16 @@ const avaus = await sivu.evaluate(() => {
 });
 console.log('  avauksen asettelu:', JSON.stringify(avaus));
 const osuus = avaus.kartta && avaus.intro ? avaus.kartta.h / avaus.intro.h : 0;
-vaadi('maailmankartta on omassa ylälohkossaan (~30–55 % korkeudesta)',
-  osuus > 0.25 && osuus < 0.58, `ylälohko ${(osuus * 100).toFixed(1)} % avauksesta`);
+/*
+ * HAARUKKA VÄLJENI v1119:SSÄ (omistajan pelitestipalaute:
+ * *"maailmankarttakuva katkeaa nyt liian aikaisin, eteläinen
+ * pallonpuolisko leikkautuu … kasvata ylälohkoa niin että kartta näkyy
+ * KOKONAAN alareunaansa asti, ja vaaleaa arkkia jää vastaavasti
+ * vähemmän"*). Entinen 28–55 % katkaisi laudan iPadin pystyruudulla;
+ * js/ui.js INTRO_KARTTA_VAHINTAAN/ENINTAAN ovat nyt 24–72 %.
+ */
+vaadi('maailmankartta on omassa ylälohkossaan (~24–72 % korkeudesta)',
+  osuus > 0.22 && osuus < 0.74, `ylälohko ${(osuus * 100).toFixed(1)} % avauksesta`);
 vaadi('julisteotsikko on kartan päällä',
   Boolean(avaus.juliste && avaus.kartta
     && avaus.juliste.y >= avaus.kartta.y - 1
@@ -301,8 +309,11 @@ vaadi('arkki alkaa siitä mihin kartta loppuu ja peittää loput',
     && Math.abs((avaus.arkki.y + avaus.arkki.h) - (avaus.intro.y + avaus.intro.h)) < 2
     && avaus.arkinTausta.startsWith('linear-gradient')),
   JSON.stringify({ arkki: avaus.arkki, tausta: avaus.arkinTausta }));
-vaadi('Mistä aloitan? on näkyvä nappi',
-  Boolean(avaus.nappi && /^mistä aloitan\?$/i.test(avaus.nappi.teksti)
+// Napin teksti vaihtui v1119:ssä: "Mistä aloitan?" → "Valitse
+// aloituskaupunki" (omistajan pelitestipalaute — kysymys ei kertonut
+// mitä napista tapahtuu).
+vaadi('Valitse aloituskaupunki on näkyvä nappi',
+  Boolean(avaus.nappi && /^valitse aloituskaupunki$/i.test(avaus.nappi.teksti)
     && avaus.nappi.peittavyys > 0.9),
   JSON.stringify(avaus.nappi));
 vaadi('ALOITA MATKA -nappi ja erillinen kysymyselementti ovat poissa',

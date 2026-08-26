@@ -1331,6 +1331,17 @@ const REAL_PLAYERS = {
   ferry: (s) => s.playSlice('ferry', { dur: 2.6, gain: 0.4, alusta: true }),
   flight: (s) => s.playSlice('flight', { dur: 2.1, gain: 0.35, alusta: true }),
   hint: (s) => s.playSlice('hint', { dur: 1.1, gain: 0.35, alusta: true }),
+  /*
+   * PÖLLÖN KUPLA (omistajan pelitestipalaute v1119: *"pieni hiljainen
+   * ääni kun kupla ilmestyy — käytä ensisijaisesti olemassa olevaa
+   * hiljaista ääniassettia"*).
+   *
+   * Sama paperiäänite kuin `paper`, mutta lyhyempänä siivuna ja
+   * neljäsosan voimakkuudella: kupla on kuiskaus eikä ilmoitus, ja se
+   * voi toistua kahdesti muutaman sekunnin sisällä (saapumisen kaksi
+   * kuplaa). Omaa tiedostoa ei tarvita — siivu on jo muistissa.
+   */
+  kupla: (s) => s.playSlice('paper', { dur: 0.38, gain: 0.09, alusta: true }),
   tick: (s) => s.playSlice('tick', { dur: 0.6, gain: 0.25, alusta: true }),
   timeout: (s) => s.playSlice('timeout', { dur: 1.6, gain: 0.4, alusta: true }),
   flip: (s) => s.playSlice('flip', { dur: 0.9, gain: 0.35, alusta: true }),
@@ -1642,6 +1653,14 @@ const SOUNDS = {
     s.tone({ freq: 660, dur: 0.22, type: 'sine', gain: 0.09, delay: 0.06 });
   },
   tick: (s) => s.hiss({ dur: 0.025, freq: 3200, gain: 0.03, q: 2.4 }),
+  /*
+   * Kuplan varapolku ilman äänitettä: hyvin lyhyt pehmeä paperin
+   * kahahdus (ks. REAL_PLAYERS.kupla). Ei kelloa eikä sointua — kupla
+   * ei ilmoita mitään, se vain ilmestyy.
+   */
+  kupla: (s) => s.hiss({
+    dur: 0.09, type: 'highpass', freq: 1800, sweepTo: 2600, gain: 0.025, q: 0.8,
+  }),
   timeout: (s) => {
     s.tone({ freq: 300, to: 90, dur: 0.7, type: 'triangle', gain: 0.15 });
     s.hiss({ dur: 0.5, type: 'lowpass', freq: 900, sweepTo: 200, gain: 0.07 });

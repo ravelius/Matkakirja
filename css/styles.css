@@ -3663,6 +3663,19 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   color: var(--muted);
 }
 
+/*
+ * YHDEN RIVIN LAPUN OMA PAIKKARIVI (omistajan pelitestipalaute v1119:
+ * *"kun laatikko pienenee yhdelle riville, rivillä saa näkyä VAIN
+ * otsikko ja kaupungin nimi — ei päivämäärää, säätä eikä tekstin
+ * alkua"*).
+ *
+ * Auki kortissa tämä on poissa: siellä paikkarivi on merkinnän oma
+ * kohtausrivi (#fact-place). Kutistuessa ne vaihtavat paikkaa —
+ * teksti ei siis lyhene leikkaamalla, vaan lapussa on oma lyhyt
+ * muotonsa (js/ui.js asetaPaikkarivi).
+ */
+.fact-place-lyhyt { display: none; }
+
 .fact-text {
   margin: 0;
   overflow-y: auto;
@@ -3950,7 +3963,7 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
   .linssi-selite,
   .linssi-selite > *:not(h2),
   body[data-mode] .fact-card,
-  .fact-card > *:not(.fact-place) { transition: none; }
+  .fact-card > *:not(.fact-place-lyhyt) { transition: none; }
 }
 
 .graticule { stroke: #9d8253; stroke-width: 1; opacity: 0.28; fill: none; }
@@ -4445,6 +4458,23 @@ body.fokuspohja .country-korostus { display: none; }
 .fokus-piilossa { display: none; }
 
 /* ---------------------------------------------------------------------------
+   ALOITUSKARTAN MUUT KAUPUNGIT POIS (omistajan pelitestipalaute v1119:
+   *"piilota toistaiseksi KAIKKI muut kaupungit paitsi Ateena … nimet,
+   ympyrät, konesymbolit; Lontoo lähtöpisteenä saa jäädä"* — js/ui.js
+   paivitaAloituskaupungit, ETUSIVUN_NAKYVAT)
+
+   Lähtöpisteen valinnassa valittavia kohteita on tasan yksi, mutta
+   kartalla oli neljätoista kaupunkia laattoineen ja lentokonemerkkeineen
+   — ne lupasivat matkoja, joita ei ole vielä olemassa.
+
+   `display: none` samasta syystä kuin .fokus-piilossa yllä: piilossa
+   oleva laatta ei saa jäädä napautettavaksi eikä maksaa piirtoa.
+   Piilotus koskee VAIN aloitusvaihetta; katselutilassa (?lauta=) lauta
+   näkyy täytenä maailmankarttana kuten ennenkin.
+   ------------------------------------------------------------------------- */
+.aloitus-piilossa { display: none; }
+
+/* ---------------------------------------------------------------------------
    KEHITTÄJÄN "pisteet"-KERROS (omistajan tilaus 25.8.2026, js/ui.js
    paivitaKehittajaPisteet)
    ---------------------------------------------------------------------------
@@ -4694,6 +4724,36 @@ body.fokus-atlas-nakyma .grain { display: none; }
 
 @media (prefers-reduced-motion: reduce) {
   .fokuskartta-kuva { animation: none; }
+}
+
+/*
+ * LEHTI ISTUU PAPERIIN AVAUSLENNON AJAN (omistajan pelitestipalaute
+ * v1119: *"Kreikan minikartan ympärillä on yhä NELIÖREUNA — pois (kuva
+ * saa istua paperiin häivytettynä, ei laatikkoa)"*).
+ *
+ * Reunan pehmennyksen tekee maski (js/fokuskartta.js
+ * paivitaLennonLehdet — ei suodatinta, iOS-sääntö), ja tämä sääntö
+ * hoitaa toisen puolen: lennon aikana lehti on hillitty pohjapiirros
+ * pergamentin alla eikä kohtauksen kirkkain pinta. Perillä peittävyys
+ * palaa täyteen samassa hetkessä kuin body.kartalento poistuu.
+ */
+ *
+ * PEITTÄVYYS ON OMASSA AVAINRUUDUSSAAN eikä tavallisena arvona:
+ * .fokuskartta-kuva ajaa esiinhäivytystä `both`-täytöllä, ja
+ * animaation arvo voittaa tavallisen ilmoituksen — pelkkä
+ * `opacity: 0.6` ei siis näkyisi lainkaan.
+ */
+body.kartalento .fokuskartta-kuva {
+  animation: fokuskartta-lennossa 420ms ease-out both;
+}
+
+@keyframes fokuskartta-lennossa {
+  from { opacity: 0; }
+  to { opacity: 0.6; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.kartalento .fokuskartta-kuva { animation: none; opacity: 0.6; }
 }
 
 /* ---------------------------------------------------------------------------
@@ -5449,6 +5509,29 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  * arkille). Se väistyy siis omalla säännöllään ja palaa arkin mukana.
  */
 body.aloitusverho-paalla .pollo-nappi {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/*
+ * PÖLLÖ VÄISTYY LENNON AJAKSI (omistajan pelitestipalaute v1119:
+ * *"pöllönappi piiloon lennon ajaksi"*).
+ *
+ * Lentonäkymä on kohtaus eikä pelitilanne: kartalla on vain reitti,
+ * kone ja nuoren herran repliikki. Kelluva pöllönappi jäi kohtauksen
+ * päälle oikeaan alanurkkaan — samasta syystä kuin arkin sääntö yllä,
+ * eli nappi elää kartan kerrosten ulkopuolella eikä kalvon z-index
+ * yllä sen yli. Paneeli suljetaan samalla: auki jäänyt keskustelu
+ * peittäisi puolet lennosta.
+ *
+ * Sama häivytys kuin arkilla, ja nappi palaa itsestään perillä, kun
+ * body.flight-active / body.kartalento poistuvat (js/ui.js).
+ */
+body.flight-active .pollo-nappi,
+body.kartalento .pollo-nappi,
+body.flight-active .pollo-paneeli,
+body.kartalento .pollo-paneeli {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
@@ -7184,7 +7267,7 @@ body[data-mode] .fact-card.pieni > #fact-voice {
 }
 
 /* Kaikki muu kuin rivi itse jää leikkautuvalle toiselle riville. */
-body[data-mode] .fact-card.pieni > *:not(#fact-voice):not(.fact-place) {
+body[data-mode] .fact-card.pieni > *:not(#fact-voice):not(.fact-place-lyhyt) {
   grid-row: 2;
   /*
    * PIILOSSA OLEVA TEKSTI EI SAA MÄÄRÄTÄ PALKIN LEVEYTTÄ.
@@ -7206,7 +7289,15 @@ body[data-mode] .fact-card.pieni > *:not(#fact-voice):not(.fact-place) {
   overflow: hidden;
 }
 
-.fact-card.pieni .fact-place {
+.fact-card.pieni .fact-place-lyhyt {
+  /* Perussääntö piilottaa rivin; lapussa se on koko sisältö. */
+  display: block;
+  /* Sama mitta kuin lapun otsikolla, jotta rivi on yhtä korkea kuin
+     kortin korkeusraja olettaa (--pieni-rivi). */
+  font-size: var(--pieni-rivi);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--muted);
   order: -1;
   margin: 0;
   line-height: 1.5;
@@ -7251,9 +7342,9 @@ body.manner-zoom .fact-card.pieni::before { opacity: 0; }
  * kutistumista nopeampi, joten ne ovat poissa ennen kuin lappu on
  * valmis. Siirtymä on perusluokassa, jotta se pätee molempiin suuntiin.
  */
-.fact-card > *:not(.fact-place) { transition: opacity 160ms ease; }
+.fact-card > *:not(.fact-place-lyhyt) { transition: opacity 160ms ease; }
 
-.fact-card.pieni > *:not(.fact-place),
+.fact-card.pieni > *:not(.fact-place-lyhyt),
 .fact-card.pieni .fact-valokuva {
   opacity: 0;
   /* Napautus osuu kutistuneena aina lappuun itseensä, ei sen alle
@@ -7266,7 +7357,7 @@ body.manner-zoom .fact-card.pieni::before { opacity: 0; }
  * mihin näppäimistö osoittaa. */
 .fact-card.pieni:focus-visible { outline: none; }
 
-.fact-card.pieni:focus-visible .fact-place {
+.fact-card.pieni:focus-visible .fact-place-lyhyt {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
   border-radius: 4px;
@@ -7295,7 +7386,8 @@ body[data-mode] .fact-card h2 {
   color: #7a5514; /* tumma kulta erottuu pergamentilta, kirkas ei */
 }
 
-body[data-mode] .fact-place {
+body[data-mode] .fact-place,
+body[data-mode] .fact-place-lyhyt {
   color: var(--map-ink-soft);
 }
 
@@ -8855,46 +8947,40 @@ body.katselu #newgame-btn { display: none; }
    siirto, joten origolla ei ole väliä eikä transform-box tarvita. */
 .flight-keinu { will-change: transform; }
 
-/* Saapumisleima: pieni postileima kohdekaupungin viereen. */
-.lento-leima { pointer-events: none; }
-
-.lento-leima-keha {
+/*
+ * LAIVAREITIT MERELLE (omistajan pelitestipalaute v1119, poistetun
+ * saapumisleiman tilalle — js/ui.js lennonLaivareitit).
+ *
+ * Vanhan merikartan reittimerkintä: ohut katkoviiva, jonka väri on
+ * kartan omaa haalistunutta mustetta eikä lentoreitin punaista — laiva
+ * ei kilpaile koneen kanssa. Katkoviivan jakso ja viivan paksuus
+ * asetetaan js:stä, koska ne mitataan RUUDUN pikseleinä.
+ */
+.lento-laivareitti {
   fill: none;
-  stroke: #9c3a26;
-  stroke-width: 2.6;
-  opacity: 0.82;
+  stroke: #4a3a24;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.2;
 }
 
-.lento-leima-sisakeha {
-  fill: none;
-  stroke: #9c3a26;
-  stroke-width: 1;
-  stroke-dasharray: 3 3.4;
-  opacity: 0.6;
+/*
+ * Laiva reitillä: hyvin himmeä piste, joka kulkee hitaasti ja välkkyy
+ * kevyesti. Liike ja välke ovat js-animaatioita (transform ja opacity),
+ * eivät suodattimia — sama sääntö kuin harsopilvillä, ja sama lupa:
+ * ne elävät DOMissa vain lennon ajan.
+ *
+ * Peittävyys tulee välkeanimaatiosta; tämä on lähtöarvo sitä ennen.
+ */
+.lento-laivapiste {
+  fill: #4a3a24;
+  opacity: 0.24;
+  will-change: transform, opacity;
 }
 
-.lento-leima-nimi,
-.lento-leima-pvm {
-  fill: #9c3a26;
-  font-family: var(--font-type);
-  font-weight: 700;
-  opacity: 0.86;
-}
-
-.lento-leima-nimi {
-  font-size: 12px;
-  letter-spacing: 0.16em;
-}
-
-.lento-leima-pvm {
-  font-size: 8.5px;
-  letter-spacing: 0.08em;
-}
-
-/* Kumileimasimen roiskeet: leima ei ole painokuva vaan käden jälki. */
-.lento-leima-roiske {
-  fill: #9c3a26;
-  opacity: 0.5;
+@media (prefers-reduced-motion: reduce) {
+  .lento-laivareitti,
+  .lento-laivapiste { display: none; }
 }
 
 /* Lentokerros häipyy saapumisessa kalvon kanssa samaa tahtia — ilman
@@ -9177,8 +9263,20 @@ body.kartalento #board { animation: kartalento-sisaan 0.55s ease; }
   padding: 0.35rem 0.6rem;
   color: var(--map-ink);
   font-family: var(--font-type);
-  font-size: 1rem;
-  line-height: 1.75;
+  /*
+   * KOKO NOSTETTU 1 rem → 1,25 rem (omistajan pelitestipalaute v1119:
+   * *"KONEKIRJOITUSTEKSTI ISOMMAKSI lennossa — selvästi isompi
+   * pistekoko, edelleen kirjoituskonekirjasin"*). Rivi on kartan
+   * alalaidassa keskellä ulappaa, ja iPadin etäisyydeltä 16 pikselin
+   * konekirjoitus jäi kartan omien paikannimien kokoiseksi. Kirjasin
+   * on ennallaan (--font-type), vain mitta kasvoi.
+   *
+   * clamp pitää rivin kurissa kapealla ruudulla: 390 pikselin
+   * leveydellä repliikki on kolme riviä, ja liian iso kirjasin
+   * työntäisi sen kartan päälle.
+   */
+  font-size: clamp(1.2rem, 4.2vw, 1.45rem);
+  line-height: 1.7;
   letter-spacing: 0.01em;
   text-align: center;
   text-shadow: 0 1px 0 rgba(247, 237, 216, 0.95), 0 0 7px rgba(247, 237, 216, 0.85);
@@ -17108,7 +17206,18 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
   padding: 0.5rem 0.7rem;
   border-radius: 0.6rem;
   border: 1px solid rgba(122, 85, 20, 0.32);
-  background: #f5f0e2;
+  /*
+   * KELLERTÄVÄ PERGAMENTTI, EI VALKOINEN (omistajan pelitestipalaute
+   * v1119: *"KELLERTÄVÄ pohja — pelin paperi/pergamenttisävy nykyisen
+   * valkoisen sijaan, sama sävymaailma kuin matkapäiväkirjalaatikko"*).
+   *
+   * Sävy on sama kuin matkakirjakortin paperilla (.fact-card.pieni,
+   * rgba(244, 231, 202)) — kupla ja päiväkirja ovat ruudulla yhtä
+   * aikaa, ja kaksi eri valkoista vieretysten näytti kahdelta eri
+   * peliltä. Muuttuja pitää kärjen (::after) samassa sävyssä.
+   */
+  --kuplan-paperi: #f4e7ca;
+  background: var(--kuplan-paperi);
   color: #211d18;
   font-family: var(--font-luku, Georgia, serif);
   font-size: 0.92rem;
@@ -17130,7 +17239,7 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
   right: 1.1rem;
   width: 12px;
   height: 12px;
-  background: #f5f0e2;
+  background: var(--kuplan-paperi, #f4e7ca);
   border-right: 1px solid rgba(122, 85, 20, 0.32);
   border-bottom: 1px solid rgba(122, 85, 20, 0.32);
   transform: rotate(45deg);

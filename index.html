@@ -484,7 +484,7 @@
           (js/kartta.js placeFactCard) — näin se ei koskaan peitä mannerta.
         -->
         <section class="card fact-card" data-corner="bl">
-          <h2 id="fact-voice">Matkapäiväkirjasta</h2>
+          <h2 id="fact-voice">Matkapäiväkirja</h2>
           <!-- Kaiutin: luennan kytkin (js/ui.js paivitaKaiutinTila) —
                pois kytkettynä kuvakkeen päällä on vinoviiva. -->
           <button id="fact-kuuntele" class="ghost fact-kuuntele" type="button" hidden
@@ -497,6 +497,11 @@
             </svg>
           </button>
           <p id="fact-place" class="fact-place"></p>
+          <!-- Yhden rivin lapun paikkarivi (v1119): kutistettuna
+               näytetään VAIN otsikko ja kaupungin nimi, ei päivämäärää,
+               säätä eikä merkinnän alkua. Auki kortissa tämä on
+               piilossa ja #fact-place kertoo koko rivin. -->
+          <p id="fact-place-lyhyt" class="fact-place-lyhyt" aria-hidden="true"></p>
           <!-- Kuva ja teksti samassa lohkossa: kelluva pikkukuva istuu
                tekstin oikeassa laidassa ja teksti kiertää sen. -->
           <div class="fact-teksti-rivi">

@@ -50,8 +50,8 @@ import {
 // Remontin M6: luenta ja visa.
 import {
   asetaLuentaKytkin, haivytaJaSiivoa, haivytaLuenta, lueMerkinta,
-  luentaKytkinPaalla, merkitsePuhuja, playDiaryVoice, playIntroVoice,
-  stopDiaryVoice, stopIntroVoice, vapautaPuhuja,
+  luennanLoppuun, luentaKytkinPaalla, merkitsePuhuja, playDiaryVoice,
+  playIntroVoice, stopDiaryVoice, stopIntroVoice, vapautaPuhuja,
 } from './luenta.js';
 import {
   answerDuelUi, answerQuiz, renderDuel, renderQuiz, stopQuizTimer,
@@ -247,7 +247,7 @@ import { Kartta } from './kartta.js';
 import {
   esilammitaFokuspohja,
   fokusAtlasIkkunat, paivitaFokusAtlas, paivitaFokuskartta, paivitaFokusNimet,
-  nollaaFokuskartta,
+  paivitaLennonLehdet, nollaaFokuskartta,
 } from './fokuskartta.js';
 // Fokuslehden klikattavat karttakohteet ja niiden pop-up (js/fokuskohteet.js).
 import { paivitaFokuskohteet, nollaaFokuskohteet } from './fokuskohteet.js';
@@ -376,6 +376,28 @@ const ALOITUSLENNON_LAHTO = 'lontoo';
  */
 const ETUSIVUN_KOHTEET = new Set(['ateena']);
 /*
+ * MITKÄ KAUPUNGIT NÄKYVÄT ALOITUSKARTALLA LAINKAAN (omistajan
+ * pelitestipalaute v1119: *"piilota toistaiseksi KAIKKI muut
+ * kaupungit paitsi Ateena — Tanger, Moskova, Kairo, Kapkaupunki,
+ * Peking, Mumbai ym. pois näkyvistä (nimet, ympyrät, konesymbolit;
+ * Lontoo lähtöpisteenä saa jäädä)"*).
+ *
+ * Valintakartalla oli neljätoista kaupunkia nimineen, laattoineen ja
+ * lentokonemerkkeineen, mutta VALITTAVIA on tasan yksi
+ * (ETUSIVUN_KOHTEET). Kolmetoista muuta lupasivat matkan, jota ei ole
+ * vielä olemassa.
+ *
+ * NÄKYVYYS, EI DATA. Lauta pysyy täytenä maailmankarttana
+ * (js/packs/maailma.js) — myös katselutilaa (?lauta=) varten, jossa
+ * tämä piilotus ei ole voimassa. Kaupunki palaa kartalle lisäämällä
+ * sen tunnuksen tähän joukkoon, samaan tapaan kuin ETUSIVUN_KOHTEET
+ * kasvaa maiden valmistuessa.
+ *
+ * Lontoo on mukana lähtöpisteenä: siitä matka alkaa, ja sen kultainen
+ * rengas on koko kartan ainoa kiintopiste.
+ */
+const ETUSIVUN_NAKYVAT = new Set(['lontoo', ...ETUSIVUN_KOHTEET]);
+/*
  * ALOITUSSIIRTYMÄN PERGAMENTTIARKKI (omistajan tilaus 25.8.2026).
  *
  * JUURISYY, jonka tämä korjaa: kohteen napautus vaihtaa laudan
@@ -474,18 +496,35 @@ const ALOITUSLENNON_KATKO_OSUUS = 0.58;
 const ALOITUSLENNON_KATKOJA_ENINTAAN = 44;
 const ALOITUSLENNON_KATKOJA_VAHINTAAN = 5;
 /*
- * SAAPUMISLEIMA (päätoimittajan taidesuunta 26.8.2026): pieni
- * postileimamainen pyöreä leima kohdekaupungin viereen, kun kone on
- * perillä. Halkaisija ruudun pikseleinä; leiman oma piirros on
- * pikseliyksiköissä ja skaalataan näkymän mittakaavalla, jottei leima
- * kasva kohdemaan kokoiseksi.
+ * ==================================================================
+ * LAIVAREITIT MERELLE LENNON AJAKSI (omistajan pelitestipalaute
+ * v1119, saapumisleiman tilalle)
+ * ==================================================================
+ *
+ * *"Piirrä lentonäkymän mereen muutama himmeä laivareittiviiva
+ * (katkoviiva, vanhan merikartan tyyli) ja niihin HYVIN himmeät
+ * pisteet jotka liikkuvat hitaasti ja välkkyvät kevyesti."*
+ *
+ * DATA ON LAUDAN OMA. Maailmankartalla on satoja merireittejä
+ * (js/packs/maailmankartta.js, type: 'sea') väliponnistuksineen —
+ * ne ovat oikeita 1800-luvun höyrylaivalinjoja, ja juuri niitä
+ * isoisän atlaksessa olisi. Lento poimii niistä ne, jotka osuvat
+ * rajaukseen, ja piirtää muutaman pisimmän: keksitty kaari olisi
+ * ollut sama työ ja vähemmän totta.
+ *
+ * KAIKKI MITAT RUUDUN PIKSELEINÄ ja skaalataan näkymän mittakaavalla,
+ * kuten reittiviivalla ja koneellakin.
  */
-const LEIMA_PX = 78;
-// Leiman etäisyys kohdekaupungista ruudun pikseleinä. Nimilappu on
-// pisteen alla (js/kartta.js aloituslennonNiukkuus), joten leima menee
-// viistoon sivulle — sille puolelle, josta kone ei tullut.
-const LEIMA_ETAISYYS_X = 78;
-const LEIMA_ETAISYYS_Y = 38;
+const LAIVAREITTEJA_ENINTAAN = 4;
+// Viivan paksuus ja katkoviivan jakso ruudun pikseleinä.
+const LAIVAREITIN_VIIVA_PX = 1.5;
+const LAIVAREITIN_KATKO_PX = 9;
+// Laivan piste: säde ruudun pikseleinä ja kierroksen kesto.
+const LAIVAN_PISTE_PX = 2.6;
+const LAIVAN_KIERROS_MS = 46000;
+// Reitin on oltava vähintään näin pitkä (laudan yksikköinä), jottei
+// kartalle ilmesty tikkuja lahtien poikki.
+const LAIVAREITIN_VAHIN_PITUUS = 260;
 
 /*
  * ==================================================================
@@ -513,10 +552,28 @@ const SAAPUMISKORTTI_TAUKO_MS = 280;
 const SAAPUMISKORTTI_LUKUAIKA_MS = 1000;
 // Tekstin oma häivytys (css .saapumiskortti-teksti).
 const SAAPUMISKORTTI_TEKSTI_MS = 320;
-// Kartan ilmestymisestä ensimmäiseen kuplaan ja siitä toiseen —
-// molemmissa selvä hengähdys (omistaja 26.8.2026: "pieni tauko").
+/*
+ * Kartan ilmestymisestä ensimmäiseen kuplaan ja siitä toiseen —
+ * molemmissa selvä hengähdys (omistaja 26.8.2026: "pieni tauko").
+ *
+ * ENSIMMÄINEN VIIVE ON VARAPOLKU (omistajan pelitestipalaute v1119).
+ * Kun matkapäiväkirjan luenta soi, kuplat odottavat sen loppumista
+ * (js/luenta.js luennanLoppuun) — kiinteä viive ponnahti kertojan
+ * päälle kesken merkinnän. Tämä luku pätee siis vain silloin, kun
+ * luentaa ei ole: mykistys, kertojatila 'ei' tai puuttuva äänite.
+ *
+ * TOISEN KUPLAN TAUKO 1,6 s → 2,5 s (sama palaute): ensimmäinen lause
+ * on kaksi riviä pitkä, eikä ohje saa ilmestyä ennen kuin se on
+ * luettu.
+ */
 const SAAPUMISEN_KUPLA_MS = 1800;
-const SAAPUMISEN_KUPLA_VALI_MS = 1600;
+const SAAPUMISEN_KUPLA_VALI_MS = 2500;
+/*
+ * Hengähdys luennan päättymisen ja ensimmäisen kuplan välissä. Kupla
+ * heti viimeisen sanan päälle olisi yhtä tungetteleva kuin kesken
+ * lauseen — pöllö odottaa, että kertoja on vaiennut.
+ */
+const SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS = 900;
 /*
  * KUPLIEN SANAMUOTO ON KAANON (omistajan tilaus 26.8.2026). Maa ja
  * kaupunki taipuvat js/ui-apurit.js:n taulukoilla, mutta lauseiden
@@ -827,6 +884,30 @@ export function kirjoituksenKesto(teksti, tahti = INTRO_TYPE_MS) {
 const INTRO_FONT_MAX = 0.96;
 const INTRO_FONT_MIN = 0.6;
 /*
+ * AVAUKSEN YLÄLOHKON HAARUKKA (omistajan pelitestipalaute v1119:
+ * *"maailmankarttakuva katkeaa nyt liian aikaisin, eteläinen
+ * pallonpuolisko leikkautuu … kasvata ylälohkoa niin että kartta näkyy
+ * KOKONAAN alareunaansa asti"*).
+ *
+ * Entinen 28–55 % oli liian tiukka: iPadin pystyruudulla mitattu
+ * laudan alalaita on noin 57 % paneelin korkeudesta, joten katto
+ * leikkasi kartan juuri ennen sen omaa alareunaa. Väljä haarukka
+ * päästää mitatun rajan läpi; lattia on yhä olemassa siltä varalta,
+ * että hyvin matalalla ruudulla mitattu raja jäisi olemattomaksi.
+ *
+ * Arkille jää pahimmillaankin runsas neljännes paneelista, ja
+ * avausteksti kutistuu siihen (js/ui.js fitIntro).
+ */
+const INTRO_KARTTA_VAHINTAAN = 0.24;
+const INTRO_KARTTA_ENINTAAN = 0.72;
+/*
+ * Arkin yläreunan häivytyskaista arkin omina em-yksiköinä — sama luku
+ * kuin css .intro-arkki::before korkeudessa. Raja työnnetään tämän
+ * verran laudan alalaidan alapuolelle, jotta liuku osuu laudan
+ * ALAPUOLISEEN pergamenttiin eikä syö karttakuvan alinta kaistaletta.
+ */
+const INTRO_HAIVYTYS_EM = 2.2;
+/*
  * Omistajan päättämä avausteksti. ÄLÄ muokkaa ilman omistajan lupaa
  * (docs/tyolista-opukselle.md, paketti 3). Lyhennetty omistajan
  * pyynnöstä 4.8.2026; draamaviilaus omistajan hyväksynnällä
@@ -858,8 +939,13 @@ const INTRO_TEXT = 'Vintiltä löytyi isoisän matkalaukku ja kulunut '
  *
  * Nappi EI OLE KERRONTAA eikä siksi kuulu INTRO_TEXTiin: nauhoitettu
  * luenta päättyy revittyyn sivuun.
+ *
+ * TEKSTI ON NYT KEHOTUS EIKÄ KYSYMYS (omistajan pelitestipalaute
+ * v1119): *"Mistä aloitan?" → "Valitse aloituskaupunki"*. Nappi vie
+ * kartan lähikuvaan, jossa valinta oikeasti tehdään, ja kysymys jätti
+ * epäselväksi mitä napista tapahtuu.
  */
-const INTRO_VALINTA = 'Mistä aloitan?';
+const INTRO_VALINTA = 'Valitse aloituskaupunki';
 /*
  * ETUSIVUN PAIKKARIVI (omistajan tilaus 25.8.2026): kohtausmerkintä
  * avaustekstin ensimmäisenä rivinä, kuukausi ja vuosi laitteen
@@ -1755,6 +1841,7 @@ export class UI {
 
     this.factVoiceEl = document.getElementById('fact-voice');
     this.factPlace = document.getElementById('fact-place');
+    this.factPlaceLyhyt = document.getElementById('fact-place-lyhyt');
     this.factText = document.getElementById('fact-text');
     this.factCard = this.factText.closest('.fact-card');
     this.factKey = null;
@@ -4469,14 +4556,37 @@ export class UI {
      * Raja rajataan varmuuden vuoksi haarukkaan: kapea ja matala ruutu
      * ei saa jättää tekstiä ilman tilaa, eikä leveä ruutu kutistaa
      * karttaa nauhaksi.
+     *
+     * KARTTA NÄKYY ALAREUNAANSA ASTI (omistajan pelitestipalaute
+     * v1119: *"maailmankarttakuva katkeaa nyt liian aikaisin,
+     * eteläinen pallonpuolisko leikkautuu"*). Kaksi korjausta samaan
+     * asiaan:
+     *
+     *   1. HÄIVYTYSKAISTA LASKETAAN MUKAAN. Arkin yläreuna ei ole
+     *      viivasuora leikkaus vaan liuku (css .intro-arkki::before,
+     *      INTRO_HAIVYTYS_EM arkin omaa kirjasinkokoa), ja se söi
+     *      kartan alimman kaistaleen. Nyt raja työnnetään sen verran
+     *      alemmas, että liuku osuu laudan alapuoliseen pergamenttiin
+     *      eikä enää itse karttaan.
+     *   2. HAARUKKA ON VÄLJEMPI. Entinen 28–55 % katkaisi kartan
+     *      iPadin pystyruudulla (mitattu: lauta olisi tarvinnut 57 %),
+     *      eli juuri se ruutu, jolla omistaja pelaa. 24–72 % päästää
+     *      laudan kokonaan näkyviin, ja arkille jää yhä yli neljännes
+     *      paneelista — teksti kutistuu tarvittaessa (fitIntro).
      */
     if (this.introEl && vh > 0 && paneH > 0) {
       const alalaita = ((box.y + this.kartta.laudanKorkeus(box) - vy) / vh) * paneH;
+      const arkinFontti = this.introArkki
+        ? (parseFloat(getComputedStyle(this.introArkki).fontSize) || 16) : 16;
+      const haivytys = arkinFontti * INTRO_HAIVYTYS_EM;
       // Portin takana arkkia ei ole (kartta on iso ja keskellä), joten
       // ylälohko saa koko paneelin ja julisteotsikko jää sen keskelle
       // niin kuin ennenkin. Vasta portin jälkeen lohko rajataan.
-      const katto = this.aloitettu ? paneH * 0.55 : paneH;
-      const raja = Math.min(Math.max(alalaita, paneH * 0.28), katto);
+      const katto = this.aloitettu ? paneH * INTRO_KARTTA_ENINTAAN : paneH;
+      const raja = Math.min(
+        Math.max(alalaita + haivytys, paneH * INTRO_KARTTA_VAHINTAAN),
+        katto,
+      );
       this.introEl.style.setProperty('--intro-kartta-korkeus', `${Math.round(raja)}px`);
     }
     this.fitIntro();
@@ -5241,12 +5351,16 @@ export class UI {
           ry: gr + vary(`gate:ry:${c.id}`, 1.1),
           transform: wobble,
           class: 'city-gate',
-          ...fokus,
+          ...tunnus, ...fokus,
         }, cities);
       }
       if (c.airport) {
         el('text', {
-          x: c.x, y: c.y + 5, class: 'airport', 'text-anchor': 'middle', ...fokus,
+          x: c.x,
+          y: c.y + 5,
+          class: 'airport',
+          'text-anchor': 'middle',
+          ...tunnus, ...fokus,
         }, cities).textContent = '✈';
       }
       const anchor = c.la ?? 'middle';
@@ -5261,7 +5375,7 @@ export class UI {
         'text-anchor': anchor,
         transform: `rotate(${vary(`label:rot:${c.id}`, 1.1).toFixed(2)} ${lx.toFixed(1)} ${ly.toFixed(1)})`,
         opacity: (0.92 + hash01(`label:o:${c.id}`) * 0.08).toFixed(2),
-        ...fokus,
+        ...tunnus, ...fokus,
       }, cities);
       label.textContent = c.name;
     }
@@ -5465,6 +5579,38 @@ export class UI {
   }
 
   /**
+   * ALOITUSKARTAN KAUPUNGIT: VAIN VALITTAVAT NÄKYVIIN (omistajan
+   * pelitestipalaute v1119, ks. ETUSIVUN_NAKYVAT).
+   *
+   * Lähtöpisteen valinnassa kartalla oli neljätoista kaupunkia
+   * nimineen, laattoineen ja lentokonemerkkeineen, vaikka valittavia
+   * oli tasan yksi. Kaikki muut paitsi Lontoo ja aloituskohteet
+   * piilotetaan — nimi, laatta, rantarengas, porttikehä ja
+   * konemerkki, eli kaupungin koko piirros.
+   *
+   * PIILOTUS ON LUOKKA JA VAIN NÄKYVYYTTÄ. Laudan data pysyy
+   * koskemattomana, ja katselutila (?lauta=) näyttää laudan yhä
+   * täytenä maailmankarttana — se on laudan esittelyä eikä valintaa.
+   * Sama `display: none` -sääntö kuin .fokus-piilossa: piilossa oleva
+   * osa ei saa maksaa piirtoa.
+   *
+   * Täkyrenkaat hoituvat itsestään: drawTargets piirtää renkaan vain
+   * ETUSIVUN_KOHTEET-joukolle, joka on tämän osajoukko.
+   */
+  paivitaAloituskaupungit() {
+    const cities = this.svg?.querySelector('.cities');
+    if (!cities) return;
+    const piilota = this.game.phase === 'pickstart' && !this.katselu;
+    // Ilman tunnusta osaa ei voi tunnistaa kaupungikseen — silloin se
+    // jää näkyviin, koska väärin piilotettu kartta on pahempi kuin
+    // ylimääräinen piirros.
+    for (const osa of cities.querySelectorAll('[data-kaupunki]')) {
+      osa.classList.toggle('aloitus-piilossa',
+        piilota && !ETUSIVUN_NAKYVAT.has(osa.dataset.kaupunki));
+    }
+  }
+
+  /**
    * Fokuskerroksen tahdistus: näkyvyys kaupungeille, verho maailmalle.
    *
    * Kutsutaan joka piirrossa (render). Työ on kevyttä: määrejoukon
@@ -5473,6 +5619,7 @@ export class UI {
    */
   paivitaFokusKerros() {
     if (!this.svg) return;
+    this.paivitaAloituskaupungit();
     const maat = this.fokusMaat();
     /*
      * KÄYMÄTTÖMÄN MAAN DATAKERROS POIS KOKONAAN (Raamatun linjaus: "ilman
@@ -5504,6 +5651,8 @@ export class UI {
     // Jatkuva atlas: naapurimaiden lehdet näkymän mukaan (25.8.2026).
     // Oma karkea näkymätunniste ohittaa työn, kun mikään ei muuttunut.
     paivitaFokusAtlas(this);
+    // Avauslennon reunahäivytys päälle/pois (v1119: ei neliöreunaa).
+    paivitaLennonLehdet(this);
     // Kehittäjän "pisteet"-nappi: kaupungit ja reittiverkko kuvan päälle.
     this.paivitaKehittajaPisteet();
     // Lehden päällä olevat pelimerkit (v1097: "Ota pallot pois").
@@ -8761,6 +8910,28 @@ export class UI {
     this.paivitaJatkuuVihje?.();
   }
 
+  /**
+   * PAIKKARIVI KAHDESSA MITASSA (omistajan pelitestipalaute v1119:
+   * *"kun laatikko pienenee yhdelle riville, rivillä saa näkyä VAIN
+   * otsikko ja kaupungin nimi — ei päivämäärää, säätä eikä tekstin
+   * alkua"*).
+   *
+   * Auki kortissa paikkarivi on merkinnän oma kohtausrivi: *"Ateena,
+   * heinäkuussa 1873. Seesteistä; ilmanpuntari 762 mmHg."* Yhden rivin
+   * lapussa se venyi katkeavaksi litaniaksi, josta ei erottunut mitään
+   * — ja juuri se lappu on se, jonka pelaaja näkee karttaa liikuttaessa.
+   *
+   * Lyhyt muoto on oma elementtinsä eikä leikattu teksti: leikkaus
+   * kolmella pisteellä olisi jättänyt riville puolikkaan päivämäärän.
+   * Ilman erillistä lyhyttä muotoa käytetään pitkää — useimmissa
+   * haaroissa se on jo pelkkä kaupungin nimi.
+   */
+  asetaPaikkarivi(teksti, lyhyt = null) {
+    const rivi = String(teksti ?? '');
+    if (this.factPlace) this.factPlace.textContent = rivi;
+    if (this.factPlaceLyhyt) this.factPlaceLyhyt.textContent = String(lyhyt ?? rivi);
+  }
+
   renderFact() {
     const { game } = this;
     /*
@@ -8784,7 +8955,7 @@ export class UI {
       // teksti voi välähtää ruudulla ennen kuin kortti ehtii piiloon.
       this.uusiFactKey(null);
       this.factVoiceEl.textContent = '';
-      this.factPlace.textContent = '';
+      this.asetaPaikkarivi('');
       this.factText.textContent = '';
       this.factImage.hidden = true;
       this.factKuuntele.hidden = true;
@@ -8847,8 +9018,14 @@ export class UI {
         this.factCard.hidden = false;
         if (this.factKey === merkinta.avain) return;
         this.uusiFactKey(merkinta.avain);
-        this.factVoiceEl.textContent = 'Matkapäiväkirjasta';
-        this.factPlace.textContent = merkinta.paikkarivi;
+        // Otsikko lyheni v1119:ssä (omistajan pelitestipalaute):
+        // MATKAPÄIVÄKIRJASTA → MATKAPÄIVÄKIRJA. Yhden rivin lapussa
+        // otsikko ja kaupungin nimi ovat vierekkäin, ja partitiivi
+        // teki rivistä pitkän ilman että se kertoi enempää.
+        this.factVoiceEl.textContent = 'Matkapäiväkirja';
+        // Lyhyt muoto on kaupungin nimi: kohtausrivin päivämäärä ja
+        // sää eivät mahdu yhden rivin lappuun (ks. asetaPaikkarivi).
+        this.asetaPaikkarivi(merkinta.paikkarivi, virtaKaupunki.name);
         this.factImageTitle = null;
         this.factImage.hidden = true;
         stopDiaryVoice(this);
@@ -8902,7 +9079,7 @@ export class UI {
         this.factCard.hidden = true;
         this.uusiFactKey(null);
         this.factVoiceEl.textContent = '';
-        this.factPlace.textContent = '';
+        this.asetaPaikkarivi('');
         this.factText.textContent = '';
         this.factImage.hidden = true;
         this.factKuuntele.hidden = true;
@@ -8929,7 +9106,7 @@ export class UI {
       if (this.factKey === key) return;
       this.uusiFactKey(key);
       this.factVoiceEl.textContent = 'Isoisän aikataulusta';
-      this.factPlace.textContent = `Päivä ${aikataulu.day}`;
+      this.asetaPaikkarivi(`Päivä ${aikataulu.day}`);
       this.factImage.hidden = true;
       this.factKuuntele.hidden = true;
       this.naytaFactValokuva(null);
@@ -8983,7 +9160,7 @@ export class UI {
         if (this.factKey === key) return;
         this.uusiFactKey(key);
         this.factVoiceEl.textContent = 'Matkakirjasta';
-        this.factPlace.textContent = kaupunki.name;
+        this.asetaPaikkarivi(kaupunki.name);
         this.factImageTitle = null;
         this.factImage.hidden = true;
         this.naytaFactValokuva(saapuminen.cityId, kaupunki.name);
@@ -9101,7 +9278,7 @@ export class UI {
         if (this.factKey === key) return;
         this.uusiFactKey(key);
         this.factVoiceEl.textContent = voiceTitle(factVoice(fakta));
-        this.factPlace.textContent = kaupunki.name;
+        this.asetaPaikkarivi(kaupunki.name);
         this.factImageTitle = typeof fakta === 'string' ? null : fakta.wiki ?? null;
         this.factImage.hidden = !this.factImageTitle;
         // Vanha valokuva kaupungista pikkukuvana tekstin kylkeen.
@@ -9194,7 +9371,7 @@ export class UI {
     // Otsikko kertoo kumpi ääni puhuu, alarivi paikan.
     const onRoute = player.pos.type === 'edge';
     this.factVoiceEl.textContent = voiceTitle(factVoice(fact));
-    this.factPlace.textContent = onRoute ? `Matkalla — ${city.name}` : city.name;
+    this.asetaPaikkarivi(onRoute ? `Matkalla — ${city.name}` : city.name, city.name);
     // Havaintoon voi liittyä kuva: pieni linkki avaa ilmiön Wikipedia-kuvan.
     this.factImageTitle = typeof fact === 'string' ? null : fact.wiki ?? null;
     this.factImage.hidden = !this.factImageTitle;
@@ -14520,73 +14697,121 @@ export class UI {
     });
   }
 
-  /**
-   * Saapumisleima kohdekaupungin viereen (b-kohta): pyöreä 1873-tyylinen
-   * postileima, jossa kaupungin nimi kaarella ja kuukausi alla.
+  /*
+   * SAAPUMISLEIMA ON POISTETTU (omistajan pelitestipalaute v1119:
+   * *"POISTA SAAPUMISLEIMA kokonaan — nakyy vain lopussa, turha"*).
    *
-   * VUOSILUKU ON ISOISÄN. Kartta on isoisän 1873-atlas ja leima on
-   * kartan päällä, joten se on samaa käsialaa kuin kaikki muukin, mitä
-   * lennon aikana näkyy.
-   *
-   * Leima piirretään PIKSELIYKSIKÖISSÄ ja kutistetaan laudan
-   * mittakaavaan yhdellä kertoimella — sama tapa kuin koneella ja
-   * reittiviivalla. Läimähdys on skaalaus + peittävyys eli kaksi
-   * halvinta ominaisuutta, ei suodatinta.
+   * Leima oli v1118:n taidesuunnan b-kohta: pyorea 1873-postileima,
+   * joka laimahti kohdekaupungin viereen koneen laskeuduttua. Ruudulla
+   * se ehti nakya vain sen sekunnin, joka kuluu laskeutumisen ja
+   * saapumiskortin valissa — ja juuri silloin katse on koneessa. Sen
+   * tilalle lentonakymaan tulivat merelle piirtyvat laivareitit
+   * (lennonLaivareitit), jotka elavat koko lennon ajan.
    */
-  lennonLeima({ kerros, kohde, mitta = 1, nimi, vasemmalle = false }) {
-    if (!kerros || !kohde) return null;
-    const x = kohde.x + (vasemmalle ? -LEIMA_ETAISYYS_X : LEIMA_ETAISYYS_X) * mitta;
-    const y = kohde.y + LEIMA_ETAISYYS_Y * mitta;
-    const kallistus = vasemmalle ? 7 : -8;
-    const leima = el('g', { class: 'lento-leima' }, kerros);
-    const r = LEIMA_PX / 2;
-    el('circle', { cx: 0, cy: 0, r, class: 'lento-leima-keha' }, leima);
-    el('circle', { cx: 0, cy: 0, r: r - 6.5, class: 'lento-leima-sisakeha' }, leima);
-    // Nimi kaarelle: kaari kulkee vasemmalta oikealle leiman yläkautta.
-    const kaariId = 'lento-leima-kaari';
-    const kaari = el('path', {
-      id: kaariId,
-      d: `M${-(r - 13)},4 A${r - 13},${r - 13} 0 0 1 ${r - 13},4`,
-      fill: 'none',
-    }, leima);
-    kaari.style.visibility = 'hidden';
-    const teksti = el('text', { class: 'lento-leima-nimi' }, leima);
-    const polkuTeksti = el('textPath', {
-      href: `#${kaariId}`, startOffset: '50%', 'text-anchor': 'middle',
-    }, teksti);
-    polkuTeksti.textContent = String(nimi ?? '').toUpperCase();
-    // Päiväys leiman alaosaan mutta sisäkehän sisään: y valittu niin,
-    // että rivi mahtuu kehän jänteen leveydelle.
-    const pvm = el('text', {
-      x: 0, y: r - 24, 'text-anchor': 'middle', class: 'lento-leima-pvm',
-    }, leima);
-    // Leima on PELAAJAN saapumisen jälki, ei isoisän: kuukausi ja
-    // vuosi laitteen kellosta kuten etusivun paikkarivissä (kaanon:
-    // nuori herra matkaa nykyhetkessä, 1873 elää vain isoisän
-    // piirroksissa ja merkinnöissä).
-    const nyt = new Date();
-    pvm.textContent = `${nyt.toLocaleString('fi-FI', { month: 'long' }).toUpperCase()} ${nyt.getFullYear()}`;
-    // Kolme musteläiskää: leima ei ole painokuva vaan kumileimasimen
-    // jälki, ja juuri roiskeet tekevät siitä sellaisen.
-    for (const [lx, ly, lr] of [[-r + 5, -6, 2.6], [r - 9, 11, 1.9], [3, -r + 4, 1.4]]) {
-      el('circle', { cx: lx, cy: ly, r: lr, class: 'lento-leima-roiske' }, leima);
+
+  /**
+   * LAIVAREITIT MERELLE LENNON AJAKSI (omistajan pelitestipalaute
+   * v1119, ks. LAIVAREITTEJA_ENINTAAN).
+   *
+   * Kartalla on lennon aikana yksi punainen kaari ja tyhjä ulappa.
+   * Muutama himmeä katkoviiva merellä kertoo, että maailmassa
+   * liikutaan muutenkin kuin ilmateitse — ja että kartta on isoisän
+   * merikartta, ei pelilauta.
+   *
+   * REITIT OVAT LAUDAN OMIA MERIREITTEJÄ (type: 'sea'), joten ne
+   * kulkevat vettä pitkin eivätkä mantereiden yli. Rajaukseen osuvista
+   * valitaan pisimmät — lyhyt lahdenylitys näyttäisi tikulta.
+   *
+   * PISTE ON PELKKÄÄ TRANSFORMIA JA PEITTÄVYYTTÄ. Sama sääntö kuin
+   * harsopilvillä: ikuinen animaatio kartan päällä on sallittu vain
+   * siksi, että se on halvinta laatua omalla kerroksellaan JA että se
+   * katoaa laskeutumisessa (koko lentokerros tyhjennetään).
+   *
+   * @returns {SVGElement|null} ryhmä, tai null jos reittejä ei ollut
+   */
+  lennonLaivareitit({ kerros, skaala = 1 }) {
+    if (!kerros || this.reducedMotion) return null;
+    const alue = this.nakyvaAlue();
+    const kaupungit = this.game?.board?.cityById;
+    const reitit = this.game?.pack?.edges;
+    if (!alue?.w || !kaupungit || !Array.isArray(reitit)) return null;
+    /** Osuuko piste rajaukseen (väljästi: reitti saa alkaa reunan takaa)? */
+    const vara = { x: alue.x - alue.w * 0.15, y: alue.y - alue.h * 0.15 };
+    const sisalla = (p) => p.x >= vara.x && p.x <= alue.x + alue.w * 1.15
+      && p.y >= vara.y && p.y <= alue.y + alue.h * 1.15;
+    const ehdokkaat = [];
+    for (const reitti of reitit) {
+      if (reitti?.type !== 'sea') continue;
+      const a = kaupungit.get(reitti.a);
+      const b = kaupungit.get(reitti.b);
+      if (!a || !b) continue;
+      const pisteet = [
+        { x: a.x, y: a.y },
+        ...(reitti.via ?? []).map(([x, y]) => ({ x, y })),
+        { x: b.x, y: b.y },
+      ];
+      // Vähintään puolet nivelistä rajauksessa: reitti, josta näkyy
+      // pelkkä kulma, näyttäisi irralliselta pätkältä.
+      const osuvia = pisteet.filter(sisalla).length;
+      if (osuvia < Math.max(2, Math.ceil(pisteet.length / 2))) continue;
+      let pituus = 0;
+      for (let i = 1; i < pisteet.length; i++) {
+        pituus += Math.hypot(pisteet[i].x - pisteet[i - 1].x, pisteet[i].y - pisteet[i - 1].y);
+      }
+      if (pituus < LAIVAREITIN_VAHIN_PITUUS) continue;
+      ehdokkaat.push({ pisteet, pituus });
     }
-    /*
-     * CSS-MUUNNOS, EI SVG-ATTRIBUUTIN SYNTAKSIA. Avainruudut ovat
-     * tyylejä, joten pituuksilla on oltava yksikkö ja kulmalla deg —
-     * yksikötön translate(1234,567) on kelvoton CSS ja selain pudottaa
-     * KOKO muunnoksen (mitattu 26.8.2026: leima jäi laudan origoon
-     * ruudun ulkopuolelle ja skaalaamatta). Sama kirjoitusasu kuin
-     * koneen omissa avainruuduissa.
-     */
-    const perus = `translate(${x.toFixed(2)}px, ${y.toFixed(2)}px) rotate(${kallistus}deg)`;
-    leima.style.opacity = '0';
-    leima.animate([
-      { transform: `${perus} scale(${(mitta * 1.55).toFixed(4)})`, opacity: 0, offset: 0 },
-      { transform: `${perus} scale(${(mitta * 0.93).toFixed(4)})`, opacity: 1, offset: 0.55 },
-      { transform: `${perus} scale(${mitta.toFixed(4)})`, opacity: 1, offset: 1 },
-    ], { duration: 420, easing: 'cubic-bezier(0.2, 0.9, 0.3, 1)', fill: 'forwards' });
-    return leima;
+    if (!ehdokkaat.length) return null;
+    ehdokkaat.sort((x, y) => y.pituus - x.pituus);
+    const valitut = ehdokkaat.slice(0, LAIVAREITTEJA_ENINTAAN);
+
+    const g = el('g', { class: 'lento-laivat', 'pointer-events': 'none' }, kerros);
+    valitut.forEach((reitti, i) => {
+      const d = `M${reitti.pisteet.map((p) => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' L')}`;
+      const viiva = el('path', { d, class: 'lento-laivareitti' }, g);
+      viiva.style.strokeWidth = (LAIVAREITIN_VIIVA_PX / skaala).toFixed(2);
+      const jakso = LAIVAREITIN_KATKO_PX / skaala;
+      viiva.style.strokeDasharray = `${(jakso * 0.55).toFixed(2)} ${(jakso * 0.45).toFixed(2)}`;
+      /*
+       * Piste kulkee reittiä pitkin näytteistetyillä avainruuduilla —
+       * sama tekniikka kuin koneella, koska getPointAtLength joka
+       * kehyksellä nykii iPadin Safarissa. Kaksikymmentä näytettä
+       * riittää: liike on niin hidasta, ettei murtoviivan kulmia
+       * erota.
+       */
+      const pituus = viiva.getTotalLength();
+      const piste = el('circle', {
+        cx: 0, cy: 0, r: (LAIVAN_PISTE_PX / skaala).toFixed(2), class: 'lento-laivapiste',
+      }, g);
+      const ruudut = [];
+      for (let k = 0; k <= 20; k++) {
+        const p = viiva.getPointAtLength((pituus * k) / 20);
+        ruudut.push({
+          offset: k / 20,
+          transform: `translate(${p.x.toFixed(1)}px, ${p.y.toFixed(1)}px)`,
+        });
+      }
+      piste.animate(ruudut, {
+        duration: LAIVAN_KIERROS_MS + i * 5200,
+        // Negatiivinen viive hajottaa lähdöt: muuten kaikki laivat
+        // seisoisivat satamassa samaan aikaan.
+        delay: -i * 9000,
+        easing: 'linear',
+        iterations: Infinity,
+      });
+      // Kevyt välke omana animaationaan: peittävyys ei ole samassa
+      // ominaisuudessa kuin liike, joten kaksi animaatiota ei kilpaile.
+      piste.animate(
+        [{ opacity: 0.16 }, { opacity: 0.42 }, { opacity: 0.16 }],
+        {
+          duration: 5200 + i * 900,
+          delay: -i * 1700,
+          easing: 'ease-in-out',
+          iterations: Infinity,
+        },
+      );
+    });
+    return g;
   }
 
   /* ==== SAAPUMISSEKVENSSI (ks. SAAPUMISKORTTI_TAUKO_MS) ============ */
@@ -14645,6 +14870,15 @@ export class UI {
    * toinen kertoo, mitä sormella tehdään. Ne ovat ruudulla YHTÄ AIKAA
    * allekkain (omistajan tilaus): ohje ei saa syödä sitä lausetta,
    * jonka se selittää.
+   *
+   * KUPLAT ODOTTAVAT KERTOJAA (omistajan pelitestipalaute v1119:
+   * *"pöllön kuplat tulevat vasta kun MATKAPÄIVÄKIRJAN LUENTA on
+   * päättynyt"*). Saapumisen matkakirjamerkintä alkaa soida samassa
+   * renderissä, joka tämän kutsun edeltää, ja kiinteä 1,8 sekunnin
+   * viive ponnahti kuplan kertojan päälle. Nyt ensimmäinen kupla on
+   * kiinni luennan loppumisessa (js/luenta.js luennanLoppuun) ja
+   * vanha viive on varapolku sille tapaukselle, ettei luentaa ole —
+   * mykistys, kertojatila 'ei' tai puuttuva äänite.
    */
   saapumisenKuplat(kohde) {
     const maa = this.kaupunginMaanNimi(kohde?.id);
@@ -14657,15 +14891,28 @@ export class UI {
       : '';
     clearTimeout(this.saapumisKuplaAjastin);
     clearTimeout(this.saapumisKupla2Ajastin);
-    this.saapumisKuplaAjastin = setTimeout(() => {
-      if (this.dead) return;
-      polloVihje(tervetuloa || SAAPUMISEN_KUPLA_TOINEN);
-      if (!tervetuloa) return;
-      this.saapumisKupla2Ajastin = setTimeout(() => {
+    const naytaKuplat = (viive) => {
+      this.saapumisKuplaAjastin = setTimeout(() => {
         if (this.dead) return;
-        polloLisavihje(SAAPUMISEN_KUPLA_TOINEN);
-      }, SAAPUMISEN_KUPLA_VALI_MS);
-    }, SAAPUMISEN_KUPLA_MS);
+        polloVihje(tervetuloa || SAAPUMISEN_KUPLA_TOINEN);
+        if (!tervetuloa) return;
+        this.saapumisKupla2Ajastin = setTimeout(() => {
+          if (this.dead) return;
+          polloLisavihje(SAAPUMISEN_KUPLA_TOINEN);
+        }, SAAPUMISEN_KUPLA_VALI_MS);
+      }, viive);
+    };
+    // Luenta soi tai ei soi — kumpikin haara on olemassa (ks. metodin
+    // johdanto). Kuuntelu ei estä mitään: kupla on ainoa, joka odottaa.
+    const luenta = luennanLoppuun(this);
+    if (luenta) {
+      void luenta.then(() => {
+        if (this.dead) return;
+        naytaKuplat(SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS);
+      });
+      return;
+    }
+    naytaKuplat(SAAPUMISEN_KUPLA_MS);
   }
 
   /*
@@ -14933,6 +15180,12 @@ export class UI {
     const skaala = this.nakyvaAlue()?.skaala || 1;
     const a = { x: lahto.x, y: lahto.y };
     const b = { x: kohde.x, y: kohde.y };
+    /*
+     * LAIVAREITIT ENSIMMÄISENÄ eli lentoreitin ja koneen ALLE: ne ovat
+     * kartan taustaa, eivät kohtauksen tapahtuma. Poistuvat kerroksen
+     * mukana laskeutumisessa (ks. lennonLaivareitit).
+     */
+    this.lennonLaivareitit({ kerros, skaala });
     // Sama kaari kuin rajausta laskettaessa — yksi ja sama ohjauspiste,
     // jottei viiva voi kulkea kuvan ulkopuolelta.
     const ohjaus = this.aloituslennonOhjauspiste(a, b);
@@ -15152,33 +15405,17 @@ export class UI {
     /*
      * PERILLÄ — JA JATKO TAPAHTUU ITSESTÄÄN (omistajan tilaus
      * 26.8.2026). Astu mantereelle -nappia ei enää ole; tilalla on
-     * kolme odotusta, jotka kaikki katkeavat napautuksesta:
+     * kaksi odotusta, jotka molemmat katkeavat napautuksesta:
      *
      *   1. repliikki loppuun (sama mitattu sääntö kuin ennen: kone ei
      *      saa jättää lausetta kesken)
-     *   2. saapumisleima kohteen viereen
-     *   3. lyhyt hengähdys (LENNON_JATKO_MS), jonka aikana leiman
-     *      ehtii lukea
+     *   2. lyhyt hengähdys (LENNON_JATKO_MS), jonka aikana koneen
+     *      laskeutumisen ehtii nähdä
+     *
+     * KOLMANTENA OLI SAAPUMISLEIMA. Se on poistettu v1119:ssä
+     * (omistaja: *"näkyy vain lopussa, turha"*) — ks. poiston perustelu
+     * lennonKatkojaljen jäljessä.
      */
-    if (!ohitettu) {
-      /*
-       * LEIMA SILLE PUOLELLE, JOSSA ON TILAA. Ensisijainen sääntö on
-       * ruutu eikä reitti: kohdekaupunki on rajauksen laidalla yhtä
-       * usein kuin keskellä, ja väärään laitaan pantu leima jäisi
-       * puoliksi ruudun ulkopuolelle (mitattu Ateenan lennolla
-       * 26.8.2026). Vasta jos kaupunki on keskellä, valitaan se puoli,
-       * josta kone ei tullut.
-       */
-      const alue = this.nakyvaAlue();
-      const osuus = alue?.w ? (kohde.x - alue.x) / alue.w : 0.5;
-      this.lennonLeima({
-        kerros,
-        kohde,
-        mitta: 1 / skaala,
-        nimi: kohde.name,
-        vasemmalle: osuus > 0.6 || (osuus >= 0.4 && b.x < a.x),
-      });
-    }
     await Promise.race([
       this.flightLineValmis ?? Promise.resolve(),
       this.wait(LENNON_TEKSTI_ODOTUS_MS),
