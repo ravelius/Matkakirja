@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1167: Kaksi karttakorjausta: loydetyn kaupungin porttikeha ja lentokonemerkki piiloutuvat aarremerkin alta (Ateenan iso rengas pois), ja kaupungin keskella oleva kohde (Akropolis) istuu nyt laatan viereen samalle korkeudelle eika valu kauas. TESTAA: Ateena aarteen loydon jalkeen + Akropoliin merkki.',
   'v1166: Miniatyyriera 3/5: Oslo, Dublin, Barcelona ja Edinburgh (23 kuvaa; St Gilesin kruunutorni uusintaan). TESTAA: nailla kartoilla piirrokset.',
   'v1165: Jokainen kortin avaava kohde saa nyt symbolin: kaupungeille uusi porttitorni-merkki ja 28 muu-kohteelle kuratoitu luokka (mm. Akropolis ja Korintin kanava). TESTAA: kohdekarttojen merkit, ei enaa pelkkia pisteita.',
   'v1164: Vieritysjaannokset: sormen irrotessa tullut 74 samanarvoisen kirjoituksen ryoppy ja kuplan 228 pakkomittausta poistettu (skripti -12..15 %), laatan syke pysahtyy eleen ajaksi; lisaksi Macin aloitusnaytto: kartta tayttaa nyt leveyden otsikon takana. TESTAA: vieritys iPadilla, etusivu Macilla.',
