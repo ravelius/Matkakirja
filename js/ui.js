@@ -744,14 +744,15 @@ const INTRO_TEXT = 'Vintiltä löytyi isoisän matkalaukku ja kulunut '
   + 'oli löytänyt jotain. Mutta kuka on repinyt kirjasta viimeisen '
   + 'sivun?';
 /*
- * KLIKATTAVA VIIMEINEN LAUSE (omistajan tilaus 25.8.2026). Nappi,
- * joka näyttää lauseelta: sama kirjasin kuin avaustekstissä, vain
- * korostettuna. Ilmestyy vasta kun teksti on kirjoittunut loppuun,
- * ja vie kartan lähikuvaan Lontoon kohdalle. EI OLE KERRONTAA eikä
- * siksi kuulu INTRO_TEXTiin: kertoja ei lue sitä, aivan kuten se ei
- * lukenut vanhaa "Valitse kohde kartalta" -ohjettakaan.
+ * KYSYMYS JA VASTAUS (omistaja 26.8.2026, korvaa klikattavan
+ * lauseen): "Mistä aloitan?" jää kertojan viimeiseksi ajatukseksi
+ * tavallisena tekstinä — pelaajat eivät tajunneet lausetta napiksi —
+ * ja sen alla on selkeä kehystetty nappi, joka vie kartan lähikuvaan
+ * Lontoon kohdalle. Kumpikaan EI OLE KERRONTAA eikä siksi kuulu
+ * INTRO_TEXTiin: nauhoitettu luenta päättyy revittyyn sivuun.
  */
-const INTRO_VALINTA = 'Mistä aloitan?';
+const INTRO_KYSYMYS = 'Mistä aloitan?';
+const INTRO_VALINTA = 'Aloita matka';
 /*
  * ETUSIVUN PAIKKARIVI (omistajan tilaus 25.8.2026): kohtausmerkintä
  * avaustekstin ensimmäisenä rivinä, kuukausi ja vuosi laitteen
@@ -1261,7 +1262,9 @@ export class UI {
     this.introRunko = document.getElementById('intro-runko');
     // Paikkarivi: kohtausmerkintä laitteen kellosta (INTRO_PAIKKA).
     this.introPaikka = document.getElementById('intro-paikka');
-    // Klikattava viimeinen lause; kuuntelija kytketään renderIntrossa.
+    // Kertojan viimeinen ajatus (ei klikattava) ja sen alla nappi;
+    // napin kuuntelija kytketään renderIntrossa.
+    this.introKysymys = document.getElementById('intro-kysymys');
     this.introValinta = document.getElementById('intro-valinta');
     // Isoisän työpöytä: matkakirja ja irtolehti samassa sommitelmassa.
     this.introTyopoyta = this.introEl?.querySelector('.intro-tyopoyta');
@@ -11542,6 +11545,7 @@ export class UI {
     if (!nakyy) {
       this.introShown = false;
       this.introRunko.textContent = '';
+      if (this.introKysymys) this.introKysymys.hidden = true;
       if (this.introValinta) this.introValinta.hidden = true;
       stopIntroVoice(this);
       this.suljeAloitusportti();
@@ -11586,6 +11590,11 @@ export class UI {
      * mukana (visibility, ei hidden), jotta palstan korkeus on mitattu
      * oikein heti eikä mikään liiku lauseen ilmestyessä.
      */
+    if (this.introKysymys) {
+      this.introKysymys.textContent = INTRO_KYSYMYS;
+      this.introKysymys.hidden = false;
+      this.introKysymys.classList.add('intro-valinta-piilossa');
+    }
     if (this.introValinta) {
       this.introValinta.textContent = INTRO_VALINTA;
       this.introValinta.hidden = false;
@@ -11601,6 +11610,7 @@ export class UI {
       playIntroVoice(this);
       this.typeText(this.introRunko, INTRO_TEXT, 'intro', () => {
         // Lause paljastuu pehmeästi vasta kun viimeinen kirjain on tullut.
+        this.introKysymys?.classList.remove('intro-valinta-piilossa');
         this.introValinta?.classList.remove('intro-valinta-piilossa');
       }, INTRO_TYPE_MS);
       // Koko teksti on paikallaan (typeTextin varjoteksti varaa tilan),

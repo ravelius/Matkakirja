@@ -435,10 +435,14 @@
                  white-space: pre-line, joten lähdekoodin rivinvaihto
                  tagien välissä näkyisi ruudulla tyhjänä rivinä. -->
             <p id="intro-text" class="intro-text"><span id="intro-paikka" class="intro-paikka"></span><span id="intro-runko"></span></p>
-            <!-- Klikattava viimeinen lause: nappi, joka näyttää
-                 lauseelta. Teksti tulee js/ui.js:n INTRO_VALINTA-
-                 vakiosta, ja nappi paljastuu vasta kun avausteksti on
+            <!-- Kysymys ja vastaus (omistaja 26.8.2026): "Mistä
+                 aloitan?" on kertojan viimeinen ajatus tavallisena
+                 tekstinä (EI klikattava — pelaajat eivät tajunneet
+                 lausetta napiksi), ja sen alla on selkeä 1873-tyylinen
+                 nappi. Tekstit tulevat js/ui.js:n vakioista, ja
+                 molemmat paljastuvat vasta kun avausteksti on
                  kirjoittunut loppuun. -->
+            <span id="intro-kysymys" class="intro-kysymys" hidden></span>
             <button id="intro-valinta" class="intro-valinta" type="button" hidden></button>
             <!-- Isoisän työpöytä tekstin alle: revennyt matkakirja ja
                  sen alta pilkottava irrallinen luonnoslehti, kevyesti
