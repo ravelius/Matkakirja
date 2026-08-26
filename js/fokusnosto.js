@@ -101,7 +101,8 @@ import { sfx } from './sound.js';
 /* ==================== POOLI ==================== */
 
 /*
- * KREIKAN TÄKYNOSTOT (omistajan valinta 25.8.2026).
+ * KREIKAN TÄKYNOSTOT (omistajan valinta 25.8.2026; kaksi eläintäkyä
+ * lisätty 26.8.2026, ks. oma perustelulohkonsa listan lopussa).
  *
  * Jokainen lunastus on aineiston omaa, lähteestä tarkistettua tekstiä
  * (docs/mantereet-tyoaineisto/takynostot-kreikka.md, ehdokkaat 2, 6 ja
@@ -249,6 +250,163 @@ const NOSTO_MAAT = {
           maailmankartta: { x: 6583.4, y: 1862.2 },
           europe: { x: 643.2, y: 881.5 },
         },
+      },
+    },
+    /*
+     * ── KAKSI ELÄINTÄKYÄ (päätoimittajan valinta, omistaja hyväksyi
+     *    26.8.2026) ─────────────────────────────────────────────────
+     *
+     * Raamattu, osio "Fokusmoodi", kohta TÄKYSYMBOLIT: *"SÖPÖILLE
+     * eläinkohteille PÖLLÖVAUVAN kuva"*. Symboli on ollut valmiina
+     * (js/fokusnosto-symbolit.js piirraNostosymPollo) siitä asti kun
+     * merkit tehtiin, mutta Kreikan poolissa ei ollut yhtäkään
+     * eläintäkyä, joten pöllönpoikanen ei ollut päässyt kartalle
+     * kertaakaan. Nämä kaksi ovat sen ensimmäiset käyttäjät: kenttä
+     * `symboli: 'elain'` riittää, koodiin ei kosketa.
+     *
+     * PAIKAT ON VALITTU MYÖS KARTAN EHDOILLA. Kreikan fokuslehden ikkuna
+     * on 468 laudan yksikköä leveä (js/packs/fokus-grc.js FOKUS_POHJAT
+     * .GRC), joten puhelimen ruudulla yksi yksikkö on suunnilleen yksi
+     * pikseli ja merkin läpimitta on 21 px. Kaikki, mikä on alle ~20
+     * yksikön päässä Ateenasta, piirtyisi siis kaupungin laatan päälle —
+     * ja koska symbolikerros on laatan YLÄPUOLELLA, se veisi myös laatan
+     * napautukset. Siksi kumpikin eläin on ankkuroitu sinne, missä
+     * KUVAN yksilö oikeasti kohdattiin (Samos, Euboia), eikä Ateenan
+     * kupeeseen: Korintin kanava on 25 yksikön päässä ja toimii, Lavrio
+     * ja Hymettos olisivat 15 ja 3.
+     *
+     * KUVAT on kysytty Commonsin imageinfo-rajapinnalta 26.8.2026
+     * (koko, lisenssi, tekijä, päiväys, Restrictions tyhjä) JA katsottu
+     * silmin. Kummassakin on villi yksilö Kreikassa, ei häkkiä eikä
+     * ihmisiä.
+     */
+    {
+      /*
+       * ELÄINTÄKY 1 — PIKKUPÖLLÖ.
+       *
+       * Faktat en-Wikipediasta, ei yhtään väitettä sen yli: laji elää
+       * Kreikassa (mm. alalaji A. n. indigena), pöllö oli Ateenan
+       * hopearahan kuva, ja sanonta pöllöjen viemisestä Ateenaan
+       * tarkoitti nimenomaan sitä kolikkoa. Akropoliin nykyesiintymistä
+       * EI väitetä mitään — sellaista lähdettä ei ole.
+       *
+       * PÖLLÖN OMA HEITTO on tarkoituksella yksi kuiva lause tekstin
+       * lopussa (Raamattu, PÖLLÖN KARAKTÄÄRI: kuiva huumori, ei
+       * huutomerkkejä). Se puhuu lajista, ei pelistä eikä pelaajalle.
+       */
+      id: 'pikkupollo',
+      symboli: 'elain',
+      otsikko: 'Ateena löi tunnuksensa hopeaan — mallina 22-senttinen lintu, joka tuijottaa yhä takaisin',
+      teksti: 'Athenen pyhä lintu ei ole vertauskuva vaan laji. Pikkupöllö '
+        + '(Athene noctua) on noin 22 senttiä pitkä, siipiväli 56 senttiä ja '
+        + 'paino noin 180 grammaa; keltaiset silmät ja valkeat kulmajuovat '
+        + 'antavat sille ainaisen tuiman ilmeen. Suku sai nimensä '
+        + 'jumalattaresta ja lajinimi noctua Minervalle pyhitetystä pöllöstä. '
+        + 'Lintu on osittain päiväaktiivinen ja istuu usein näkyvällä paikalla '
+        + 'keskellä päivää; se viihtyy raunioiden, louhosten ja '
+        + 'kalliopaljastumien liepeillä, ja kanta on yhä elinvoimainen.\n\n'
+        + 'Kaupunki teki linnusta rahansa. Vuoden 500 eaa. tetradrakmassa '
+        + 'pöllö istuu oliivinoksa vierellään, ja 510 eaa. jälkeen pöllöstä '
+        + 'tuli Ateenan hopearahan vakiokuva; kolikkoa kutsuttiin antiikin '
+        + 'maailmassa yksinkertaisesti nimellä glaux, pikkupöllö. Aristofanes '
+        + 'pani Linnuissa ja Lysistratessa merkille, kuinka paljon näitä '
+        + 'lintuja seudulla oli. Sanonta pöllöjen viemisestä Ateenaan '
+        + 'tarkoitti kolikkoa ja oli turhan työn vertaus — sama kuin hiilien '
+        + 'kantaminen Newcastleen. Kopio samasta kolikosta on nykyisin '
+        + 'Kreikan yhden euron rahassa.\n\n'
+        + 'Kahdessatuhannessa vuodessa laji ei ole muuttanut ilmettään '
+        + 'senttiäkään. En sano tästä enempää, jottei kukaan luulisi minun '
+        + 'kehuvan sukuani.',
+      lahde: 'en-Wikipedia "Little owl" (osiot "Taxonomy", "Description", '
+        + '"Distribution and habitat", "Status" ja "In human culture"), '
+        + '"Owl of Athena" (osio "Ancient Greece") ja "Owls to Athens" '
+        + '(osio "Title") — tarkistettu 26.8.2026.',
+      /*
+       * Samos, 26,83333 E / 37,75 N — en-Wikipedia "Samos". Kuvan lintu
+       * on juuri sieltä (Commonsin oma tiedostokuvaus), ja saari on
+       * lehden ikkunan sisällä, 104 yksikön päässä Ateenasta.
+       */
+      paikka: {
+        nimi: 'Samos',
+        laudat: {
+          maailmankartta: { x: 6727.8, y: 1890.5 },
+          europe: { x: 726.4, y: 900.8 },
+        },
+      },
+      /*
+       * Commons 26.8.2026: 2613×1742, CC0, Hobbyfotowiki, kuvattu
+       * 19.9.2024, kuvaus "little owl (Athene noctua), Greece, island of
+       * Samos", Restrictions tyhjä. Katsottu silmin: terävä, edestä
+       * kuvattu villi lintu kivirakenteen aukossa, ei rengasta, ei
+       * häkkiä, ei ihmisiä.
+       */
+      kuva: {
+        tiedosto: 'Little owl (Athene noctua),.jpg',
+        selite: 'Pikkupöllö Samoksella. Laji on osittain päiväaktiivinen ja '
+          + 'istuu usein näkyvillä keskellä päivää.',
+        lahde: 'Hobbyfotowiki, Wikimedia Commons (CC0)',
+      },
+    },
+    {
+      /*
+       * ELÄINTÄKY 2 — REUNUSKILPIKONNA.
+       *
+       * Alkuperäinen tilaus oli Filopappoksen kukkula, mutta lähdettä
+       * lajin esiintymiselle juuri sillä kukkulalla ei ole: en-Wikipedia
+       * kertoo levinneisyyden maan tasolla (Peloponnesokselta
+       * Olympokselle) eikä Filopappos-artikkeli mainitse lajia
+       * lainkaan. Teksti pysyy siksi siinä, minkä lähde kattaa, ja
+       * paikka on se saari, jolla kuvan yksilö kohdattiin.
+       */
+      id: 'reunuskilpikonna',
+      symboli: 'elain',
+      otsikko: 'Maa oli liian kova pesäkuopalle — naaras kasteli sen itse ja polki jäljet umpeen',
+      teksti: 'Euroopan suurin kilpikonna on kreikkalainen. Reunuskilpikonna '
+        + '(Testudo marginata) kasvaa 35-senttiseksi ja viisikiloiseksi, ja se '
+        + 'on kotoperäinen Kreikassa, Italiassa ja Balkanilla. Luontainen '
+        + 'levinneisyys kulkee Etelä-Kreikassa Peloponnesokselta '
+        + 'Olympokselle, ja vuorilla laji nousee jopa 1 600 metriin. Nimensä '
+        + 'se on saanut kilven takareunasta, joka levenee ulospäin kuin '
+        + 'kellon helma.\n\n'
+        + 'Aikuisen kilpi on lähes musta, ja vuoristossa se on etu: tumma '
+        + 'pinta imee lämmön nopeasti. Aamulla kilpikonna paistattelee '
+        + 'auringossa nostaakseen ruumiinlämpönsä ja lähtee vasta sitten '
+        + 'ruokailemaan; keskipäivän kuumuudeksi se vetäytyy suojaan ja tulee '
+        + 'ulos taas iltapäivällä.\n\n'
+        + 'Munat tulevat touko–kesäkuussa kuoppaan, jonka naaras kaivaa '
+        + 'takajaloillaan vuorotellen ja jonka syvyyden määrää jalkojen '
+        + 'pituus. Jos maa on kaivettavaksi liian kovaa, naaras pehmittää sen '
+        + 'peräaukkorauhasensa vedellä. Lopuksi hän tallaa kuopan suun '
+        + 'umpeen, kunnes maa on yhtä kovaa kuin ennenkin — pesää ei löydä '
+        + 'kukaan. Munia on kerralla noin viisitoista, ja kuoriutumiseen '
+        + 'menee luonnossa noin sata päivää.',
+      lahde: 'en-Wikipedia "Marginated tortoise", osiot "Description", '
+        + '"Distribution and habitat" ja "Reproduction" (tarkistettu '
+        + '26.8.2026).',
+      /*
+       * Euboia (Evia), 24,0 E / 38,5 N — en-Wikipedia "Euboea". Saari on
+       * 22 yksikön päässä Ateenasta eli suunnilleen yhtä kaukana kuin
+       * Korintin kanavan oma merkki, ja kuvan kilpikonna tavattiin
+       * siellä.
+       */
+      paikka: {
+        nimi: 'Euboia',
+        laudat: {
+          maailmankartta: { x: 6633.3, y: 1861.5 },
+          europe: { x: 672.0, y: 881.1 },
+        },
+      },
+      /*
+       * Commons 26.8.2026: 2816×2112, CC BY-SA 4.0, kernpanik, kuvattu
+       * 16.4.2017, kuvaus "Testudo marginata on Evia (Euboea) island,
+       * Greece", Restrictions tyhjä. Katsottu silmin: villi yksilö
+       * maastossa, lähikuva päästä ja etujaloista, ei ihmisiä.
+       */
+      kuva: {
+        tiedosto: 'Testudo marginata on Evia (Euboea) island, Greece.jpg',
+        selite: 'Reunuskilpikonna Euboian saarella. Raajojen etupuolta '
+          + 'peittävät suuret suomut, ja aikuisen kilpi on lähes musta.',
+        lahde: 'kernpanik, Wikimedia Commons (CC BY-SA 4.0)',
       },
     },
   ],
@@ -432,10 +590,8 @@ function nostonPaikka(ui, nosto) {
  *   'silma'  silmä — nähtävyys tai katsottava multimediakohde
  *   muut ja puuttuva kenttä → keltainen huutomerkki
  *
- * KREIKAN POOLISSA EI OLE YHTÄKÄÄN ELÄINTÄKYÄ (tarkistettu v1119:
- * NOSTO_MAAT.GRC — kolme täkyä, kaikki ilman symboli-kenttää). Se on
- * sisältöpuute eikä koodivika: pöllönpoikanen piirtyy heti kun jokin
- * täky saa kentän `symboli: 'elain'`.
+ * Kreikan poolissa on kolme huutomerkkiä ja kaksi eläintäkyä
+ * (pikkupöllö ja reunuskilpikonna, lisätty v1121).
  */
 function nostoMerkinnat(ui, jaljella) {
   const merkinnat = [];
