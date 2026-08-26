@@ -97,6 +97,8 @@ import { html, jaaKappaleiksi } from './ui-apurit.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { FOKUSKOHTEET_BGR } from './packs/fokuskohteet-bgr.js';
 import { FOKUSKOHTEET_BIH } from './packs/fokuskohteet-bih.js';
+import { FOKUSKOHTEET_EGY } from './packs/fokuskohteet-egy.js';
+import { FOKUSKOHTEET_IRQ } from './packs/fokuskohteet-irq.js';
 import { FOKUSKOHTEET_ITA } from './packs/fokuskohteet-ita.js';
 import { FOKUSKOHTEET_ROU } from './packs/fokuskohteet-rou.js';
 import { FOKUSKOHTEET_TUR } from './packs/fokuskohteet-tur.js';
@@ -123,6 +125,15 @@ const KOHDE_MAAT = {
   TUR: FOKUSKOHTEET_TUR,
   ROU: FOKUSKOHTEET_ROU,
   BIH: FOKUSKOHTEET_BIH,
+  /*
+   * Egypti ja Irak tulivat mukaan 26.8.2026 kadonneiden ihmeiden erän
+   * takia: Faroksen majakka, Aleksandrian kirjasto ja Babylonin
+   * riippuvat puutarhat olisivat muuten jääneet ilman maata. Kummankin
+   * lehti on jo ämpärissä (EGY.webp, IRQ.webp), joten merkit saavat
+   * pohjan, jonka päälle asettua — se oli lisäyksen ainoa ehto.
+   */
+  EGY: FOKUSKOHTEET_EGY,
+  IRQ: FOKUSKOHTEET_IRQ,
 };
 
 /** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta). */
@@ -790,15 +801,56 @@ function kysyKohteesta(ui, kysymys) {
  * selitteineen peräkkäin — kortti on jo vieritettävä. Yhden kuvan
  * kohteet toimivat ennallaan.
  */
+/*
+ * PÄÄKUVA ENSIN, LISÄKUVAT PERÄSSÄ (tarkennus 26.8.2026, kadonneiden
+ * ihmeiden erä). Ennen `kuvat` KORVASI `kuva`-kentän, mikä pakotti
+ * toistamaan pääkuvan listassa, jos kohteelle halusi lisäkuvan. Nyt
+ * listat ketjutetaan: `kuva` on kohteen pääkuva (sitä lukee myös
+ * fokusvirran pinni, js/fokusvirta.js) ja `kuvat` on sen jatke.
+ * Sama tiedosto molemmissa piirretään silti vain kerran, joten vanhat
+ * kohteet (Srebarnan pelikaanit, Vanin kissa — pelkkä `kuvat`) ja uudet
+ * (pääkuva + havainnekuva) toimivat kummatkin ennallaan.
+ */
 function piirraKohdeKuvat(ui, sisalto, kohde) {
-  const lista = Array.isArray(kohde.kuvat) && kohde.kuvat.length
-    ? kohde.kuvat
-    : (kohde.kuva ? [kohde.kuva] : []);
+  const nahty = new Set();
+  const lista = [kohde.kuva, ...(Array.isArray(kohde.kuvat) ? kohde.kuvat : [])]
+    .filter((kuva) => {
+      const tunnus = kuva?.tiedosto ?? kuva?.osoite;
+      if (!tunnus || nahty.has(tunnus)) return false;
+      nahty.add(tunnus);
+      return true;
+    });
   for (const kuva of lista) piirraKohdeKuva(ui, sisalto, kuva);
 }
 
+/*
+ * KAKSI KUVALÄHDETTÄ. `tiedosto` on Commonsin nimi ja kulkee median
+ * portaikon läpi (paikallinen kopio → peili → Commons); `osoite` on
+ * valmis polku repossa olevaan tiedostoon, ja sitä käyttävät pelin
+ * OMAT generoidut havainnekuvat (assets/kartat/ihmeet/), joilla ei ole
+ * Commons-nimeä eikä varareittiä. Puuttuva tiedosto poistaa kuvapaikan
+ * kokonaan, joten kohde toimii jo ennen kuin kuvaerä on generoitu.
+ *
+ * PORRAS ON ERI, JA SIKSI ASETTAJAKIN ON ERI. Verkkokuva kulkee median
+ * asettajan (js/media.js asetaKuva) läpi, joka uusii pyynnön neljän
+ * sekunnin päästä ennen kuin luovuttaa — se on oikea sääntö purskeen
+ * takana yskähtävälle palvelimelle. Repon oma tiedosto joko on tai ei
+ * ole: uusinta ei löytäisi sitä toisellakaan kerralla, ja odotus
+ * jättäisi kortille neljäksi sekunniksi tyhjän kehyksen kuvatekstin
+ * päälle. Siksi `osoite` luovuttaa heti.
+ */
+function asetaKohdeKuva(img, kuva, leveys, onVirhe) {
+  if (kuva.osoite) {
+    img.addEventListener('error', () => onVirhe(), { once: true });
+    img.src = kuva.osoite;
+    return;
+  }
+  asetaKuva(img, valokuvaUrl(kuva.tiedosto, leveys),
+    valokuvaVara(kuva.tiedosto, leveys), onVirhe);
+}
+
 function piirraKohdeKuva(ui, sisalto, kuva) {
-  if (!kuva?.tiedosto) return;
+  if (!kuva?.tiedosto && !kuva?.osoite) return;
   const kehys = html('figure', 'fokuskohde-kuva');
   const nappi = html('button', 'fokuskohde-kuvanappi');
   nappi.type = 'button';
@@ -808,8 +860,7 @@ function piirraKohdeKuva(ui, sisalto, kuva) {
   img.decoding = 'async';
   img.draggable = false;
   img.alt = kuva.selite ?? '';
-  asetaKuva(img, valokuvaUrl(kuva.tiedosto, KOHDE_KUVAN_PX),
-    valokuvaVara(kuva.tiedosto, KOHDE_KUVAN_PX), () => kehys.remove());
+  asetaKohdeKuva(img, kuva, KOHDE_KUVAN_PX, () => kehys.remove());
   nappi.appendChild(img);
   nappi.addEventListener('click', (tapahtuma) => {
     tapahtuma.stopPropagation();
@@ -1205,7 +1256,7 @@ function suljeKohdeSuurennos(ui) {
  *   liikkua kartan mukana suurennoksen ollessa auki.
  */
 function avaaKohdeSuurennos(ui, kuva, ankkuri) {
-  if (typeof document === 'undefined' || !kuva?.tiedosto) return;
+  if (typeof document === 'undefined' || (!kuva?.tiedosto && !kuva?.osoite)) return;
   suljeKohdeSuurennos(ui);
   lataaKohdeTyyli();
   let suljettu = false;
@@ -1234,14 +1285,20 @@ function avaaKohdeSuurennos(ui, kuva, ankkuri) {
    * tärkeämpää, sillä on oikeat mittasuhteet heti, jolloin kasvun lähtö-
    * ja maalilaatikko voidaan mitata odottamatta verkkoa.
    */
-  asetaKuva(img, valokuvaUrl(kuva.tiedosto, KOHDE_KUVAN_PX),
-    valokuvaVara(kuva.tiedosto, KOHDE_KUVAN_PX), null);
-  const iso = new Image();
-  iso.decoding = 'async';
-  iso.addEventListener('load', () => {
-    if (kerros.isConnected) img.src = iso.src;
-  }, { once: true });
-  iso.src = valokuvaSuurennos(kuva.tiedosto, KOHDE_ZOOM_PX);
+  asetaKohdeKuva(img, kuva, KOHDE_KUVAN_PX, () => {});
+  /*
+   * REPON OMALLA KUVALLA (`osoite`) EI OLE ISOMPAA VERSIOTA: tiedosto
+   * on jo se, mikä se on, eikä thumb-putkea ole. Toinen haku pyytäisi
+   * saman tiedoston uudestaan, joten se jätetään tekemättä.
+   */
+  if (!kuva.osoite) {
+    const iso = new Image();
+    iso.decoding = 'async';
+    iso.addEventListener('load', () => {
+      if (kerros.isConnected) img.src = iso.src;
+    }, { once: true });
+    iso.src = valokuvaSuurennos(kuva.tiedosto, KOHDE_ZOOM_PX);
+  }
 
   /**
    * KUVASUHDE, JOKA ON TIEDOSSA JO ENSIMMÄISELLÄ KEHYKSELLÄ.

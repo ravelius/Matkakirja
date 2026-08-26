@@ -690,6 +690,24 @@ export const FOKUSKOHTEET_GRC = [
         + 'vuonna 432 eaa.',
       lahde: 'Steve Swayne, Wikimedia Commons (CC BY 2.0)',
     },
+    /*
+     * PARTHENON LOISTOSSAAN (omistajan tilaus 26.8.2026, sarja
+     * "loistoaika"). Valkoinen marmoriraunio on se, minkä pelaaja
+     * tuntee; valmis temppeli oli katettu ja MAALATTU — "the decorative
+     * stonework was originally coloured" (en-Wikipedia "Parthenon").
+     * Havainnekuva näyttää sen. Vain kuvat-lista koskettaa tätä
+     * lohkoa: koordinaatteihin EI saa koskea (rinnakkainen tutkinta).
+     */
+    kuvat: [
+      {
+        osoite: 'assets/kartat/ihmeet/parthenon-loistossaan.webp',
+        selite: 'Havainnekuva: Parthenon ehjänä ja väreissään pian '
+          + 'valmistumisensa jälkeen 432 eaa. Temppelin koristeveistokset '
+          + 'olivat alun perin maalattuja — nykyinen valkoinen marmori on '
+          + 'kahdenkymmenenviiden vuosisadan jälki.',
+        lahde: 'Matkakirjan havainnekuva',
+      },
+    ],
   },
   /*
    * AKROPOLIS-MUSEO — MULTIMEDIAKOHDE KOLMELLA UPOTETTAVALLA
@@ -827,6 +845,27 @@ export const FOKUSKOHTEET_GRC = [
         + 'mittayksikkö stadion.',
       lahde: 'dronepicr, Wikimedia Commons (CC BY 2.0)',
     },
+    /*
+     * ZEUKSEN PATSAS — KADONNUT IHME HAVAINNEKUVANA (omistajan tilaus
+     * 26.8.2026: "peliin voisi generoida kaikki antiikin kadonneet
+     * ihmeet"). Patsaasta ei ole yhtään kuvaa eikä kappaletta: sen
+     * muoto tunnetaan vain antiikin kuvauksista ja kolikoista
+     * (en-Wikipedia "Statue of Zeus at Olympia"). Kuva on siis pelin
+     * OMA havainnekuva eikä valokuva mistään, ja selite sanoo sen
+     * suoraan. Tiedosto syntyy .github/workflows/generoi-ihmeet.yml
+     * -ajossa; siihen asti kuvapaikka jää tyhjänä pois (js/
+     * fokuskohteet.js piirraKohdeKuva poistaa kehyksen).
+     */
+    kuvat: [
+      {
+        osoite: 'assets/kartat/ihmeet/zeuksen-patsas.webp',
+        selite: 'Havainnekuva: Feidiaan Zeus-patsas temppelissään noin '
+          + '435 eaa. Patsas oli 12,4 metriä korkea, kullasta ja '
+          + 'norsunluusta, eikä siitä ole säilynyt palaakaan — muoto '
+          + 'tunnetaan vain antiikin kuvauksista ja kolikoista.',
+        lahde: 'Matkakirjan havainnekuva',
+      },
+    ],
   },
   {
     id: 'kalamata',
@@ -1199,6 +1238,168 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Reunuskilpikonna Euboian saarella. Raajojen etupuolta '
         + 'peittävät suuret suomut, ja aikuisen kilpi on lähes musta.',
       lahde: 'kernpanik, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  },
+  /*
+   * ── KADONNEET IHMEET JA LOISTOAIKA (omistajan tilaus 26.8.2026:
+   *    "peliin voisi generoida kaikki antiikin kadonneet ihmeet sekä
+   *    jos on muita vastaavia kadonneita, niin generoidaan ne kaikki"
+   *    + Hefaistoksen temppelistä: "tämäkin olisi mielenkiintoinen
+   *    nähdä generoituna") ────────────────────────────────────────────
+   *
+   * Näiden kohteiden ainoa kuva on PELIN OMA HAVAINNEKUVA
+   * (assets/kartat/ihmeet/, generointi .github/workflows/
+   * generoi-ihmeet.yml). Se on tietoinen poikkeus talon kuvasääntöön:
+   * kohteesta ei ole valokuvaa, koska kohdetta ei ole. Kaksi ehtoa,
+   * joista kumpaakaan ei saa purkaa:
+   *
+   *   1. SELITE SANOO SEN AINA. Jokainen selite alkaa sanalla
+   *      "Havainnekuva" ja kertoo, mihin muoto perustuu — kolikkoon,
+   *      kaivauspiirrokseen, antiikin kuvaukseen. Pelaaja ei saa
+   *      luulla katsovansa valokuvaa.
+   *   2. LÄHDERIVI ON 'Matkakirjan havainnekuva'. Ei tekijää, ei
+   *      lisenssiä, koska kuva ei ole kenenkään muun.
+   *
+   * Kuvakenttä on `osoite` eikä `tiedosto`: polku on repossa eikä
+   * Commonsissa (js/fokuskohteet.js kohdeKuvaOsoite). Ennen
+   * kuvaerän ajoa tiedostoa ei ole, ja kohde toimii silti — puuttuva
+   * kuva poistaa vain kuvapaikan.
+   *
+   * NÄITÄ EI OLE NOSTETTU YHDENKÄÄN KAUPUNGIN VIRTAAN. Jos joku
+   * nostetaan, `nappi`-rivi on valmiina — mutta fokusvirran pinnikuva
+   * lukee yhä `kuva.tiedosto`-kenttää (js/fokusvirta.js piirraPinni),
+   * joten `osoite`-tuki on lisättävä sinne samalla.
+   */
+  {
+    /*
+     * RODOKSEN KOLOSSI. 28,2167 E / 36,4333 N — en-Wikipedia
+     * "Rhodes (city)" (36°26′N 28°13′E). Patsaan oma paikka on
+     * kiistanalainen ("the actual location of the original monument
+     * remains in dispute"), joten merkki on kaupungissa eikä
+     * satamansuulla: väärään kohtaan piirretty täsmäpiste väittäisi
+     * enemmän kuin lähde.
+     */
+    id: 'rodoksen-kolossi',
+    nimi: 'Rodoksen kolossi',
+    tyyppi: 'muu',
+    symboli: 'historia',
+    kysymykset: [
+      'Miten noin iso pronssipatsas ylipäätään rakennettiin?',
+      'Miksi rodoslaiset eivät rakentaneet sitä uudelleen?',
+    ],
+    korostukset: ['Helios|Helioksesta', 'Delfoin oraakkeli|Delfoin oraakkelin'],
+    nappi: 'Jättiläinen, joka seisoi vain 54 vuotta',
+    laudat: {
+      maailmankartta: { x: 6773.9, y: 1941.0 },
+      europe: { x: 753.0, y: 935.4 },
+    },
+    teksti: 'Rodoksen kaupunkiin pystytettiin vuonna 280 eaa. pronssinen '
+      + 'patsas auringonjumala Helioksesta. Sen teki Khares Lindoslainen '
+      + 'juhlistamaan sitä, että saari oli kestänyt Demetrios '
+      + 'Makedonialaisen vuoden mittaisen piirityksen. Patsas oli noin 33 '
+      + 'metriä korkea — antiikin maailman korkein — ja se kuului '
+      + 'seitsemään ihmeeseen. Maanjäristys kaatoi sen jo 226 eaa., ja '
+      + 'Delfoin oraakkelin neuvosta rodoslaiset jättivät sen '
+      + 'rakentamatta uudelleen. Palaset makasivat maassa vuosisatoja, '
+      + 'kunnes ne vuonna 653 myytiin pois. Patsaan tarkasta paikasta '
+      + 'kiistellään yhä.',
+    lahde: 'en-Wikipedia "Colossus of Rhodes", johdanto-osa (tarkistettu '
+      + '26.8.2026); koordinaatit en-Wikipedia "Rhodes (city)".',
+    kuva: {
+      osoite: 'assets/kartat/ihmeet/rodoksen-kolossi.webp',
+      selite: 'Havainnekuva: Helioksen pronssipatsas Rodoksen sataman '
+        + 'yllä 200-luvulla eaa. Patsaasta ei ole säilynyt palaakaan '
+        + 'eikä yhtään aikalaiskuvaa — koko, aihe ja seppelekruunu '
+        + 'ovat antiikin kirjoittajien kuvauksista.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
+  },
+  {
+    /*
+     * KNOSSOS. 25,16306 E / 35,29806 N — en-Wikipedia "Knossos"
+     * (35°17′53″N 25°9′47″E). Kohde on 1,6 lautayksikön päässä
+     * Iraklionin kohteesta (6671,1 / 1982,5), eli merkit menevät
+     * päällekkäin ja esityssiirto erottaa ne (js/fokuskohteet.js
+     * eritteleKohdeRyhmat) — data pysyy oikeassa paikassa.
+     * Iraklionin kohde kertoo kaupungista ja mainitsee palatsin; tämä
+     * kertoo itse palatsista ja siitä, miltä se näytti käytössä.
+     */
+    id: 'knossos',
+    nimi: 'Knossoksen palatsi',
+    tyyppi: 'muu',
+    symboli: 'historia',
+    kysymykset: [
+      'Mihin palatsin valtavia saviruukkuja käytettiin?',
+      'Miksi palatsi tuhoutui?',
+    ],
+    korostukset: ['minolainen|minolaisen', 'pithos|pithos-ruukkuja'],
+    nappi: 'Palatsi, joka nukkui maan alla isoisän ohi',
+    laudat: {
+      maailmankartta: { x: 6672.1, y: 1984.1 },
+      europe: { x: 694.3, y: 965.3 },
+    },
+    teksti: 'Knossos on minolaisen kulttuurin suurin keskus ja usein '
+      + 'Euroopan vanhimmaksi kaupungiksi kutsuttu paikka: kukkulaa on '
+      + 'asuttu noin vuodesta 7000 eaa., ensimmäinen palatsi nousi noin '
+      + '1900 eaa. ja lopullinen tuhoutui noin 1350 eaa. Palatsi oli '
+      + 'noin 14 000 neliömetriä — sokkeloinen rypäs pihoja, portaikkoja '
+      + 'ja varastoja, joissa seisoi ihmisen kokoisia pithos-ruukkuja. '
+      + 'Isoisäsi matkan aikaan siitä ei näkynyt maan päälle mitään: '
+      + 'ensimmäiset kaivaukset teki iraklionilainen kauppias ja '
+      + 'muinaistutkija Minos Kalokairinos vasta 1878–1879 omalla '
+      + 'maallaan.',
+    lahde: 'en-Wikipedia "Knossos", johdanto, tietolaatikko ja osio '
+      + '"Excavation" (tarkistettu 26.8.2026).',
+    kuva: {
+      osoite: 'assets/kartat/ihmeet/knossos-loistossaan.webp',
+      selite: 'Havainnekuva: Knossoksen palatsin keskuspiha käytössä '
+        + 'noin 1500 eaa. Punaiset ylöspäin levenevät pylväät ja '
+        + 'seinämaalaukset tunnetaan kaivausten löydöistä; katot ja '
+        + 'yläkerrat ovat tulkintaa.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
+  },
+  {
+    /*
+     * ANTIIKIN AGORA. 23,7225 E / 23°43′21″E, 37,975 N / 37°58′30″N —
+     * en-Wikipedia "Ancient Agora of Athens". Merkki osuu Akropoliin
+     * ja Akropolis-museon viereen (kaikki kolme samassa 0,3
+     * lautayksikön ryppäässä); esityssiirto erottaa ne.
+     *
+     * HUOM: akropolis-lohkon koordinaatteihin EI ole koskettu.
+     */
+    id: 'antiikin-agora',
+    nimi: 'Antiikin agora',
+    tyyppi: 'muu',
+    symboli: 'historia',
+    kysymykset: [
+      'Mitä agoralla tehtiin tavallisena päivänä?',
+      'Miksi juuri Hefaistoksen temppeli säilyi näin ehjänä?',
+    ],
+    korostukset: ['agora', 'Hefaistoksen temppeli'],
+    nappi: 'Tori, jonka päällä asuttiin vielä 1873',
+    laudat: {
+      maailmankartta: { x: 6624.1, y: 1881.8 },
+      europe: { x: 666.7, y: 894.9 },
+    },
+    teksti: 'Akropoliin luoteispuolella, Areiopagin ja Agoraios Kolonos '
+      + '-kukkulan välissä, oli antiikin Ateenan agora: kaupungin tori, '
+      + 'kokouspaikka ja sydän 500-luvulta eaa. alkaen. Kukkulan päällä '
+      + 'seisoo Hefaistoksen temppeli, joka valmistui 449–415 eaa. ja on '
+      + 'säilynyt lähes ehjänä — syy on sen katkeamaton käyttö: 600-luvulta '
+      + 'vuoteen 1834 se oli Pyhän Yrjön kreikkalaiskatolinen kirkko. '
+      + 'Isoisäsi matkan aikaan agoran päällä oli tavallinen ateenalainen '
+      + 'asuinkortteli; alue kaivettiin esiin vasta vuodesta 1931 alkaen.',
+    lahde: 'en-Wikipedia "Ancient Agora of Athens" (johdanto ja '
+      + 'tietolaatikko) sekä "Temple of Hephaestus" (johdanto ja '
+      + 'tietolaatikko) — tarkistettu 26.8.2026.',
+    kuva: {
+      osoite: 'assets/kartat/ihmeet/hefaistoksen-temppeli.webp',
+      selite: 'Havainnekuva: Hefaistoksen temppeli maalattuna loistonsa '
+        + 'aikaan 400-luvulla eaa. Doorilainen marmoritemppeli seisoo yhä '
+        + 'agoran laidalla, mutta värit ovat kuluneet pois — nämä '
+        + 'noudattavat antiikin temppelien tunnettua väritystapaa.',
+      lahde: 'Matkakirjan havainnekuva',
     },
   },
 ];

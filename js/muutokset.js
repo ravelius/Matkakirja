@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1169, teksti: 'Antiikin kadonneet ihmeet fokuskohteiksi' },
   { v: 1168, teksti: 'Izmirin herokuvat avauskaruselliin' },
   { v: 1167, teksti: 'Loydetyn laatan siistinta ja Akropolis laatan viereen' },
   { v: 1166, teksti: 'Miniatyyrit Osloon, Dubliniin, Barcelonaan ja Edinburghiin' },
