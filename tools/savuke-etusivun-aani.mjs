@@ -267,6 +267,78 @@ const kuuluva = (tila) => ambienssit(tila)
   await ctx.close();
 }
 
+// ── (e) ÄÄNET-VALIKON KAKSI KYTKINTÄ (omistajan tilaus v1119) ────────
+{
+  /*
+   * *"Erittele ÄÄNET-osioon kaksi selkeää omaa päälle/pois-kytkintä:
+   * KERTOJA (luennat) ja TAUSTAÄÄNET (ambienssi + efektit) — kumpikin
+   * pysyvä valinta"*, ja *"matkapäiväkirjalaatikon kaiutinkuvake
+   * SYNKRONOIDAAN suoraan valikon KERTOJA-kytkimeen … kumpikin
+   * päivittyy heti kun toista painetaan"*.
+   *
+   * Vanha rivi oli kolme kuvakenappia yhtenä valintaryhmänä; uusi on
+   * kaksi riippumatonta kytkintä, joilla on nimi ja tila sanana.
+   */
+  const { ctx, sivu } = await avaa();
+  await sivu.evaluate(() => document.getElementById('menu-btn').click());
+  await sivu.waitForTimeout(300);
+  const lue = () => sivu.evaluate(() => {
+    const rivit = [...document.querySelectorAll('#kertoja-valikko button')].map((b) => ({
+      kytkin: b.dataset.kytkin,
+      nimi: b.querySelector('.aanikytkin-nimi')?.textContent ?? '',
+      tila: b.querySelector('.aanikytkin-tila')?.textContent ?? '',
+      paalla: b.classList.contains('valittu'),
+    }));
+    return {
+      rivit,
+      kertojaMuisti: localStorage.getItem('matkakirja-kertoja'),
+      kaiutinMykka: document.getElementById('fact-kuuntele')?.classList.contains('mykistetty'),
+    };
+  });
+  const alku = await lue();
+  vaadi('ÄÄNET-osiossa on kaksi kytkintä: kertoja ja taustaäänet',
+    alku.rivit.length === 2
+      && alku.rivit[0].kytkin === 'kertoja' && alku.rivit[1].kytkin === 'tausta',
+    JSON.stringify(alku.rivit));
+  vaadi('kummankin kytkimen tila lukee rivillä sanana',
+    alku.rivit.every((r) => r.tila === 'päällä' || r.tila === 'pois'),
+    JSON.stringify(alku.rivit.map((r) => r.tila)));
+
+  // KERTOJA pois valikosta: kaiutinkuvake saa vinoviivan samassa hetkessä.
+  await sivu.evaluate(() => document.querySelector('[data-kytkin="kertoja"]').click());
+  await sivu.waitForTimeout(200);
+  const kertojaPois = await lue();
+  vaadi('kertojan sammutus jää laitteen muistiin',
+    kertojaPois.kertojaMuisti === 'ei' && kertojaPois.rivit[0].paalla === false,
+    JSON.stringify(kertojaPois));
+  vaadi('kaiutinkuvake seuraa valikon kertojakytkintä',
+    kertojaPois.kaiutinMykka === true, `mykistetty ${kertojaPois.kaiutinMykka}`);
+  vaadi('taustaäänet eivät sammuneet kertojan mukana',
+    kertojaPois.rivit[1].paalla === true, JSON.stringify(kertojaPois.rivit[1]));
+
+  // Sama kytkin toisesta kahvasta: kortin kaiutin kääntää sen takaisin.
+  await sivu.evaluate(() => {
+    const ui = window.matkakirja.ui;
+    ui.factCard.hidden = false;
+    ui.factKuuntele.hidden = false;
+    ui.factKuuntele.click();
+  });
+  await sivu.waitForTimeout(200);
+  const kaiuttimesta = await lue();
+  vaadi('kaiuttimen painallus kääntää valikon kytkimen',
+    kaiuttimesta.rivit[0].paalla === true && kaiuttimesta.kertojaMuisti !== 'ei',
+    JSON.stringify(kaiuttimesta));
+
+  // TAUSTAÄÄNET pois: kertojan valinta säilyy erikseen.
+  await sivu.evaluate(() => document.querySelector('[data-kytkin="tausta"]').click());
+  await sivu.waitForTimeout(200);
+  const taustaPois = await lue();
+  vaadi('taustaäänten sammutus ei kaada kertojan omaa valintaa',
+    taustaPois.rivit[1].paalla === false && taustaPois.rivit[0].paalla === true,
+    JSON.stringify(taustaPois.rivit));
+  await ctx.close();
+}
+
 await selain.close();
 await new Promise((r) => palvelin.close(r));
 

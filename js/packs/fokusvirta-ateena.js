@@ -454,6 +454,19 @@ export const FOKUSVIRTA_ATEENA = {
    */
   lehtitehtavat: [
     { id: 'aarre', sivu: 2, otsake: 'AARTEEN AVAUS', palkinto: 'piste', visa: PNYX_VISA },
-    { id: 'juliste', sivu: 3, otsake: 'JULISTE', palkinto: 'juliste', visa: NIKE_VISA },
+    /*
+     * TEHTÄVÄKOHTAINEN JULISTE (omistajan tilaus v1119, kohta 21):
+     * Athena Nike -tehtävä antaa oman vedoksensa eikä kaupungin
+     * yleisjulistetta. Avain on js/packs/julisteet.js:n taulussa;
+     * ilman kenttää palkinto olisi yhä 'ateena' eli kaupungin oletus.
+     */
+    {
+      id: 'juliste',
+      sivu: 3,
+      otsake: 'JULISTE',
+      palkinto: 'juliste',
+      juliste: 'ateena-nike',
+      visa: NIKE_VISA,
+    },
   ],
 };

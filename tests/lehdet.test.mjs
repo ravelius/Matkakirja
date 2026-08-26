@@ -158,3 +158,44 @@ test('jokainen kohdekartta on avaimistettu laudan kaupunki-id:llä', async () =>
       + 'kartta ei renderöidy pelissä. Tarkista js/packs/<lauta>.js:n id.');
   }
 });
+
+test('tehtäväkohtainen juliste voittaa kaupungin oletuksen', async () => {
+  /*
+   * Omistajan tilaus v1119 (kohta 21): *"tehtävä voi kantaa oman
+   * juliste-avaimen (esim. tehtava.juliste = 'ateena-nike'), joka
+   * voittaa kaupungin oletuksen — pelaaja voi näin saada samasta
+   * kaupungista USEAMMAN eri julisteen eri tehtävistä"*.
+   *
+   * Kolme asiaa vartioidaan: avaimet ovat olemassa julistetaulussa,
+   * Ateenan Athena Nike -tehtävä on kytketty omaansa, ja kytkentä
+   * oikeasti kulkee koodin läpi (js/fokustehtavat.js julisteAvain)
+   * eikä jää dataan.
+   */
+  const { readFileSync } = await import('node:fs');
+  const { JULISTEET, juliste } = await import('../js/packs/julisteet.js');
+  for (const avain of ['ateena-nike', 'ateena-nike-temppeli']) {
+    assert.ok(JULISTEET[avain], `julistetta ${avain} ei ole taulussa`);
+    assert.equal(juliste(avain)?.kaupunki, 'Ateena');
+    assert.match(JULISTEET[avain].tiedosto, /^tuotanto\//,
+      `${avain}: tiedosto ei ole tuotanto-kansiossa`);
+  }
+  // Kaupungin oma oletusjuliste säilyy niille tehtäville, joilla ei ole
+  // omaa avainta.
+  assert.ok(JULISTEET.ateena, 'Ateenan oletusjuliste katosi');
+  assert.notEqual(JULISTEET.ateena.tiedosto, JULISTEET['ateena-nike'].tiedosto);
+
+  const { FOKUSVIRTA_ATEENA } = await import('../js/packs/fokusvirta-ateena.js');
+  const tehtava = (FOKUSVIRTA_ATEENA.lehtitehtavat ?? [])
+    .find((t) => t.palkinto === 'juliste');
+  assert.ok(tehtava, 'Ateenalla ei ole julistepalkintoista tehtävää');
+  assert.equal(tehtava.juliste, 'ateena-nike',
+    'Athena Nike -tehtävä ei kanna omaa juliste-avaintaan');
+
+  const tehtavat = readFileSync(new URL('../js/fokustehtavat.js', import.meta.url), 'utf8');
+  assert.match(tehtavat, /const julisteAvain = tehtava\.juliste/,
+    'tehtäväkohtaista avainta ei lueta tehtävästä');
+  assert.match(tehtavat, /myonnaJuliste\(julisteAvain\)/,
+    'kokoelmaan myönnetään yhä kaupungin tunnus eikä tehtävän avainta');
+  assert.match(tehtavat, /naytaJuliste\(julisteAvain\)/,
+    'lunastus näyttää yhä kaupungin oletusjulisteen');
+});

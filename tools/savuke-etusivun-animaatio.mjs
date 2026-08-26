@@ -321,6 +321,40 @@ vaadi('ALOITA MATKA -nappi ja erillinen kysymyselementti ovat poissa',
   `aloitaMatka ${avaus.aloitaMatka}, kysymysElementti ${avaus.kysymysElementti}`);
 
 /*
+ * === ALOITUSKARTAN KAUPUNGIT (omistajan pelitestipalaute v1119) =====
+ *
+ * *"Piilota toistaiseksi KAIKKI muut kaupungit paitsi Ateena — Tanger,
+ * Moskova, Kairo, Kapkaupunki, Peking, Mumbai ym. pois näkyvistä
+ * (nimet, ympyrät, konesymbolit; Lontoo lähtöpisteenä saa jäädä)."*
+ *
+ * Lauta on ennallaan (js/packs/maailma.js): mitataan siis NÄKYVYYS
+ * eikä datan sisältöä — kaupungit palaavat kartalle lisäämällä ne
+ * js/ui.js ETUSIVUN_NAKYVAT -joukkoon sitä mukaa kuin ne valmistuvat.
+ */
+const valintakartta = await sivu.evaluate(() => {
+  const nakyva = (e) => {
+    const cs = getComputedStyle(e);
+    return cs.display !== 'none' && cs.visibility !== 'hidden';
+  };
+  const kaupungit = document.querySelector('.cities');
+  return {
+    nimet: [...(kaupungit?.querySelectorAll('.city-label') ?? [])]
+      .filter(nakyva).map((e) => e.textContent),
+    laattoja: [...(kaupungit?.querySelectorAll('.city, .city-start') ?? [])]
+      .filter(nakyva).length,
+    koneita: [...(kaupungit?.querySelectorAll('.airport') ?? [])].filter(nakyva).length,
+  };
+});
+console.log('  valintakartta:', JSON.stringify(valintakartta));
+vaadi('aloituskartalla näkyvät vain Lontoo ja Ateena',
+  valintakartta.nimet.length === 2
+    && valintakartta.nimet.every((n) => n === 'Lontoo' || n === 'Ateena'),
+  valintakartta.nimet.join(', ') || '(ei nimiä)');
+vaadi('muiden kaupunkien laatat ja konemerkit ovat piilossa',
+  valintakartta.laattoja === 2 && valintakartta.koneita <= 2,
+  `${valintakartta.laattoja} laattaa, ${valintakartta.koneita} konemerkkiä`);
+
+/*
  * Tarkkailu käynnistetään ODOTTAMATTA sen valmistumista: samalla kun
  * sivun oma silmukka kerää ajat, Node ehtii kaapata kuvan lennosta
  * kesken kaiken. Lupaus noudetaan vasta lennon jälkeen.
@@ -372,6 +406,17 @@ const lentoLupaus = sivu.evaluate(async () => {
         havainnot.pilvia = document.querySelectorAll('.lento-pilvi').length;
         havainnot.vinjetti = Boolean(document.querySelector('.lento-vinjetti'));
         havainnot.vanoja = document.querySelectorAll('.lento-vana').length;
+        // v1119: leima pois, laivareitit merelle, pöllö piiloon, rivi isommaksi.
+        havainnot.leimoja = document.querySelectorAll('.lento-leima').length;
+        havainnot.laivoja = document.querySelectorAll('.lento-laivareitti').length;
+        havainnot.laivapisteita = document.querySelectorAll('.lento-laivapiste').length;
+        const pollo = document.querySelector('.pollo-nappi');
+        havainnot.polloPeitto = pollo ? getComputedStyle(pollo).opacity : null;
+        havainnot.polloNakyy = Boolean(pollo)
+          && getComputedStyle(pollo).display !== 'none'
+          && Number(getComputedStyle(pollo).opacity) > 0.05;
+        const rivi2 = document.querySelector('.flight-line');
+        havainnot.riviFontti = rivi2 ? parseFloat(getComputedStyle(rivi2).fontSize) : 0;
       }
       /*
        * Kartan tila luetaan sillä hetkellä, kun kone ilmestyy: silloin
@@ -443,6 +488,12 @@ const lentoLupaus = sivu.evaluate(async () => {
     pilvia: havainnot.pilvia ?? 0,
     vanoja: havainnot.vanoja ?? 0,
     vinjetti: Boolean(havainnot.vinjetti),
+    leimoja: havainnot.leimoja ?? 0,
+    laivoja: havainnot.laivoja ?? 0,
+    laivapisteita: havainnot.laivapisteita ?? 0,
+    polloNakyy: havainnot.polloNakyy ?? null,
+    polloPeitto: havainnot.polloPeitto ?? null,
+    riviFontti: havainnot.riviFontti ?? 0,
   };
 });
 
@@ -531,6 +582,22 @@ vaadi('lennon vinjetti on paikallaan', lento.vinjetti === true);
  */
 vaadi('harsopilvet lennon aikana', lento.pilvia >= 4 && lento.pilvia <= 6,
   `${lento.pilvia} pilveä`);
+/*
+ * === OMISTAJAN PELITESTIPALAUTE v1119, LENTONÄKYMÄ =================
+ *
+ * Saapumisleima pois, laivareitit merelle, pöllönappi piiloon lennon
+ * ajaksi ja konekirjoitusrivi selvästi isommaksi.
+ */
+vaadi('saapumisleimaa ei piirretä lennon aikana', lento.leimoja === 0,
+  `${lento.leimoja} leimaa`);
+vaadi('merellä kulkee himmeitä laivareittejä',
+  lento.laivoja >= 1 && lento.laivoja <= 4, `${lento.laivoja} reittiä`);
+vaadi('laivareiteillä on liikkuvat pisteet', lento.laivapisteita === lento.laivoja,
+  `${lento.laivapisteita} pistettä / ${lento.laivoja} reittiä`);
+vaadi('pöllönappi on piilossa lennon ajan', lento.polloNakyy === false,
+  `peittävyys ${lento.polloPeitto}`);
+vaadi('lennon konekirjoitusrivi on selvästi isompi kuin 1 rem',
+  lento.riviFontti >= 18, `${lento.riviFontti} px`);
 
 // --- 5) Saapumissekvenssi: välikortti, kartta ja kaksi kuplaa -------------
 /*
@@ -584,8 +651,20 @@ vaadi('välikortissa on kaupunki ja päivälaskuri',
   /\S+\s+·\s+PÄIVÄ\s+\d+\/80/.test(kortti.teksti.replace(/\s+/g, ' ')),
   kortti.teksti || '(tyhjä)');
 
-// Kortti häipyy, kartta paljastuu ja pöllö puhuu.
-await sivu.waitForTimeout(6000);
+/*
+ * Kortti häipyy, kartta paljastuu ja pöllö puhuu.
+ *
+ * ODOTUS ON EHTO EIKÄ KELLO (v1119). Kuplat odottavat nyt
+ * matkapäiväkirjan luennan loppumista (js/luenta.js luennanLoppuun) ja
+ * toisen kuplan tauko kasvoi 1,6 → 2,5 s, joten kiinteä kuuden sekunnin
+ * odotus ehti ensimmäisen kuplan väliin ja mittasi vain sen.
+ */
+await sivu.waitForFunction(
+  () => [...document.querySelectorAll('.pollo-vihje')].filter((k) => !k.hidden).length >= 2,
+  null,
+  { timeout: 90000 },
+).catch(() => {});
+await sivu.waitForTimeout(600);
 const saapuminen = await sivu.evaluate(() => {
   clearInterval(window.__ajoVahti);
   const kuplat = [...document.querySelectorAll('.pollo-vihje')]
@@ -597,6 +676,27 @@ const saapuminen = await sivu.evaluate(() => {
     lentokerros: document.querySelectorAll('.flight *').length,
     kuplat,
     ajoja: window.__ajoja,
+    /*
+     * KUPLIEN ULKOASU (omistajan pelitestipalaute v1119): kellertävä
+     * pergamenttipohja valkoisen sijaan ja selvä marginaali ruudun
+     * laitaan — kuplat olivat kiinni oikeassa reunassa.
+     */
+    kuplanPohja: (() => {
+      const k = document.querySelector('.pollo-vihje:not([hidden])');
+      return k ? getComputedStyle(k).backgroundColor : '';
+    })(),
+    kuplanMarginaali: (() => {
+      const auki = [...document.querySelectorAll('.pollo-vihje')].filter((k) => !k.hidden);
+      if (!auki.length) return -1;
+      return Math.min(...auki.map((k) => Math.round(
+        Math.min(k.getBoundingClientRect().left, innerWidth - k.getBoundingClientRect().right),
+      )));
+    })(),
+    // Saapumisleima on poistettu kokonaan (v1119).
+    leimoja: document.querySelectorAll('.lento-leima').length,
+    // Matkapäiväkirjan otsikko lyheni ja lapulla on oma lyhyt rivinsä.
+    paivakirjanOtsikko: document.getElementById('fact-voice')?.textContent ?? '',
+    paivakirjanLyhyt: document.getElementById('fact-place-lyhyt')?.textContent ?? '',
   };
 });
 console.log('  saapuminen:', JSON.stringify(saapuminen));
@@ -617,6 +717,29 @@ vaadi('ensimmäinen kupla toivottaa tervetulleeksi maahan',
 vaadi('toinen kupla neuvoo vihreään pisteeseen',
   saapuminen.kuplat[1] === 'Klikkaa kaupungin kultaista merkkiä kartalla.',
   saapuminen.kuplat[1] ?? '(puuttuu)');
+/*
+ * === OMISTAJAN PELITESTIPALAUTE v1119 ==============================
+ */
+vaadi('kuplat ovat kellertävällä pergamentilla, eivät valkoisella',
+  saapuminen.kuplanPohja === 'rgb(244, 231, 202)', saapuminen.kuplanPohja);
+vaadi('kuplat ovat irti ruudun laidasta (12–16 px)',
+  saapuminen.kuplanMarginaali >= 12 && saapuminen.kuplanMarginaali <= 20,
+  `${saapuminen.kuplanMarginaali} px laitaan`);
+vaadi('saapumisleimaa ei ole missään', saapuminen.leimoja === 0,
+  `${saapuminen.leimoja} leimaa`);
+/*
+ * Otsikko lyheni v1119:ssä: MATKAPÄIVÄKIRJASTA → MATKAPÄIVÄKIRJA.
+ * Partitiivi ei saa palata. Muu otsikko ("Matkakirjasta",
+ * "Isoisän aikataulusta") kuuluu eri haaralle eikä muuttunut — tämä
+ * ajo lentää New Yorkiin, jolla ei ole fokusvirran merkintää.
+ */
+vaadi('vanha MATKAPÄIVÄKIRJASTA-otsikko on poissa',
+  saapuminen.paivakirjanOtsikko !== 'Matkapäiväkirjasta',
+  saapuminen.paivakirjanOtsikko);
+vaadi('tiivistetyllä rivillä on vain kaupungin nimi',
+  Boolean(saapuminen.paivakirjanLyhyt)
+    && !/\d/.test(saapuminen.paivakirjanLyhyt),
+  saapuminen.paivakirjanLyhyt || '(tyhjä)');
 
 // --- 6) Napautusohitus: sama lento uudestaan, tällä kertaa kiirehtien ------
 /*

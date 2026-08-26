@@ -11338,8 +11338,14 @@ export class UI {
    * osoite vain annetaan valmiina, koska julisteella ei ole Commons-
    * tiedostonimeä (js/packs/julisteet.js).
    */
-  naytaJuliste(cityId) {
-    const juliste = kaupunginJuliste(cityId);
+  naytaJuliste(avain) {
+    /*
+     * AVAIN, EI KAUPUNKI (v1119, kohta 21). Tehtäväkohtainen juliste
+     * kulkee omalla avaimellaan (js/fokustehtavat.js julisteAvain);
+     * kaupungin tunnus on yhä kelvollinen avain, koska kaupungin oma
+     * juliste asuu JULISTEET-taulussa sen tunnuksella.
+     */
+    const juliste = kaupunginJuliste(avain);
     if (!juliste) return;
     this.naytaKulttuuriKuva({
       otsikko: juliste.otsikko,
