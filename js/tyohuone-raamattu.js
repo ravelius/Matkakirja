@@ -1003,6 +1003,13 @@ export const RAAMATTU = {
           + 'värillisen"). Kohteet leikattuina piirroksina kartalla; '
           + 'klikkaus keskittää ja suurentaa 75 %:iin, numerokyltistä '
           + 'juttuun.',
+        'KOHDEKARTAN KOHDEMÄÄRÄ (omistaja 26.8.2026 ilta: "Kohteita '
+          + 'voi olla jopa 15 jos ovat vain mielenkiintoisia"): 6-8 '
+          + 'on pohjataso ja 15 yläraja — määrä ei ole tavoite, '
+          + 'mielenkiintoisuus ratkaisee. Jokainen uusi kohde '
+          + 'tarvitsee kuratoidun jutun lähteineen, paikan kartalta '
+          + 'ja miniatyyrin; täytekohteita ei lisätä ylärajan '
+          + 'täyttämiseksi.',
         'Kohteita saa olla entistä enemmän per kaupunki — kartta on '
           + 'zoomattava (linjaus 15.8.2026). Uudet kaupunkikartat '
           + 'tehdään 5 kaupungin erissä omistajan tsekattavaksi.',
