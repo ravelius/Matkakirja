@@ -72,12 +72,15 @@ jobs:
               + 'sceptre with an eagle in his left, framed by tall Doric columns '
               + 'of the temple interior, tiny human worshippers below for scale'],
             ['rodoksen-kolossi',
+              // 1. otto hylkaantyi OpenAI:n turvajarjestelmassa sanasta
+              // "nude" — muotoiltu vaatetetuksi, muu ennallaan.
               'the lost Colossus of Rhodes: a 33-metre bronze statue of the sun '
               + 'god Helios standing on a white marble pedestal beside the '
-              + 'harbour of ancient Rhodes, nude youthful male figure with a '
-              + 'spiked radiate crown, one hand raised shading his eyes, feet '
-              + 'together on a single block, ancient sailing ships and harbour '
-              + 'walls far below for scale, Mediterranean coastline'],
+              + 'harbour of ancient Rhodes, heroic figure draped in a bronze '
+              + 'chlamys cloak, with a spiked radiate crown, one hand raised '
+              + 'shading his eyes, feet together on a single block, ancient '
+              + 'sailing ships and harbour walls far below for scale, '
+              + 'Mediterranean coastline'],
             ['faroksen-majakka',
               'the lost Lighthouse of Alexandria: a 110-metre stone tower in '
               + 'three stages, a broad square base, an octagonal middle section '
@@ -188,12 +191,16 @@ jobs:
           }
           if (virheita) { console.error(`${virheita} epäonnistui`); process.exit(1); }
           SKRIPTI
+      # if: always() — yksi hylkays ei saa hukata muun eran kuvia
+      # (1. ajossa 9/10 onnistui mutta kaikki katosivat exit 1:n mukana).
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: ihmekuvat
           path: ihmekuvat/
           retention-days: 7
       - name: Työhaaraan noutoa varten
+        if: always()
         run: |
           set -euo pipefail
           git config user.name "matkakirja-ihmeet"
