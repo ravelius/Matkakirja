@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1141, teksti: 'Panorointi div-kuoreen: asettelu 0,35/kehys' },
   { v: 1140, teksti: 'Kategorialuokat nominatiiviin (Ruoka ja juoma)' },
   { v: 1139, teksti: 'MATKUSTA kullatuksi paanapiksi' },
   { v: 1138, teksti: 'Aktiivisen tayn symboli pysyy kuplan alla' },

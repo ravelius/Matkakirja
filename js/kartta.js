@@ -268,6 +268,38 @@ export class Kartta {
     this.kameraAjo = null;
   }
 
+  /*
+   * ============ KARTAN SIIRTOKUORI ==================================
+   *
+   * Omistajan tilaus 26.8.2026 ilta: *"scrollaus parempi mutta ei
+   * taysin sujuva"* — wrapper-siirto.
+   *
+   * KAIKKI kameran CSS-muunnokset (panorointi, nipistys, zoomiliuku,
+   * kamera-ajo) kirjoitetaan tähän kuoreen — EI SVG-juureen. Ero on
+   * mitattu Chromiumin CDP-mittarilla: kun siirto kirjoitettiin
+   * `svg.style.transform`iin, skriptattu panorointi tuotti ~1,05
+   * asettelua kehystä kohti, koska SVG:n oma asettelu lasketaan juuren
+   * muunnoksen läpi ja jokainen kehys likasi sen. Tavallisen divin
+   * muunnos ei koske asetteluun lainkaan
+   * (tools/savukkeet/savuke-panorointi.mjs vartioi lukua).
+   *
+   * KAAVA EI MUUTU, VAIN KOHDE-ELEMENTTI. Kuori on paneelin kokoinen
+   * ja alkaa paneelin vasemmasta yläkulmasta, joten muunnoksen origo
+   * (0 0) osuu täsmälleen siihen, mitä eleiden laskenta on aina
+   * olettanut. SVG jää kuoren sisään entisellään: viewBox ja
+   * inline-mitat (width/height/flex/align-self) ovat yhä sen omia,
+   * eikä `svg.getBoundingClientRect()` menetä mitään — se palauttaa
+   * yhä kuoren muunnoksen mukaisen ruutupaikan, koska kuori on sen
+   * esi-isä.
+   *
+   * Varana SVG itse: vanhassa DOM:ssa (yhden tiedoston koeversiot,
+   * testisivut) kuorta ei välttämättä ole, ja silloin kartta liikkuu
+   * kuten ennenkin.
+   */
+  get kuori() {
+    return this.ui.karttaKuori ?? this.ui.svg;
+  }
+
   /**
    * Pelisisällön rajauslaatikko: kaupungit nimineen, reitit, lentokaaret ja
    * koristeet. Näkymä sovitetaan tähän eikä koko karttapohjaan, jolloin lauta
@@ -426,7 +458,7 @@ export class Kartta {
   }
 
   fitViewBox() {
-    const pane = this.ui.svg.parentElement;
+    const pane = this.ui.mapPane;
     const w = pane.clientWidth;
     const h = pane.clientHeight;
     if (!w || !h) return;
@@ -613,7 +645,12 @@ export class Kartta {
       this.ui.panX = Math.min(0, Math.max(-(this.ui.panVara ?? 0), x));
     }
     this.ui.panY = Math.min(0, Math.max(-(this.ui.panVaraY ?? 0), y));
-    this.ui.svg.style.transform =
+    /*
+     * SIIRTO KUOREEN, EI SVG-JUUREEN (ks. `get kuori`). Sama kaava kuin
+     * ennen — vain kohde-elementti vaihtui, ja sen myötä kehyksestä jäi
+     * pois laudan asettelun likaaminen.
+     */
+    this.kuori.style.transform =
       `translate3d(${this.ui.panX.toFixed(1)}px, ${this.ui.panY.toFixed(1)}px, 0)`;
     /*
      * Siirron aikana EI piirretä bittikarttaa.
@@ -744,7 +781,7 @@ export class Kartta {
    *   panX = paneW / 2 - (kohde.x - box.x) * skaala
    */
   nykyinenKeskipiste() {
-    const pane = this.ui.svg.parentElement;
+    const pane = this.ui.mapPane;
     if (!pane || !this.ui.zoomSkaala || !this.ui.mannerZoom) return null;
     const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
     return {
@@ -935,8 +972,10 @@ export class Kartta {
     this.ui.panVaraY = 0;
     this.ui.panJakso = 0;
     this.ui.zoomiVapaa = 0;
-    this.ui.svg.style.transition = '';
-    this.ui.svg.style.transform = '';
+    // Muunnos ja sen siirtymä ovat kuoressa, inline-mitat SVG:ssä
+    // (wrapper-siirto): molemmat on nollattava.
+    this.kuori.style.transition = '';
+    this.kuori.style.transform = '';
     this.ui.svg.style.width = '';
     this.ui.svg.style.height = '';
     this.ui.svg.style.flex = '';
@@ -974,7 +1013,7 @@ export class Kartta {
     // kokonäkymä näyttäisi koko vanhan maailman kerralla, eikä siitä
     // erota mitään.
     if (this.isoLauta()) return true;
-    return (this.ui.svg.parentElement?.clientWidth ?? 0) < 700;
+    return (this.ui.mapPane?.clientWidth ?? 0) < 700;
   }
 
   /**
@@ -1234,8 +1273,8 @@ export class Kartta {
     const ey = paneH / 2 - (this.ui.panY ?? 0);
     const tx = paneW / 2 - s * ex;
     const ty = paneH / 2 - s * ey;
-    this.ui.svg.style.transition = 'none';
-    this.ui.svg.style.transform =
+    this.kuori.style.transition = 'none';
+    this.kuori.style.transform =
       `translate3d(${tx.toFixed(1)}px, ${ty.toFixed(1)}px, 0) scale(${s.toFixed(4)})`;
     // Pakotettu asettelu, jotta selain näkee alkuasennon omana tilanaan.
     void this.ui.svg.getBoundingClientRect();
@@ -1247,7 +1286,7 @@ export class Kartta {
    */
   zoomaaAloituskartta(kohta = null) {
     if (this.ui.aloitusZoom) return;
-    const pane = this.ui.svg.parentElement;
+    const pane = this.ui.mapPane;
     const paneW = pane.clientWidth;
     const paneH = pane.clientHeight;
     // Yleiskuvan rajaus talteen: liu'un alkuasento lasketaan siitä.
@@ -1285,7 +1324,7 @@ export class Kartta {
     // jäi soimaan matkan alettua (mitattu 25.8.2026).
     stopIntroVoice(this.ui);
     stopDiaryVoice(this.ui);
-    this.ui.svg.style.transition = '';
+    this.kuori.style.transition = '';
     this.tyonnaAvausteksti(0);
     this.asetaPan(this.ui.panX, this.ui.panY);
     document.body.classList.remove('manner-odottaa');
@@ -1428,7 +1467,7 @@ export class Kartta {
    * käyttää vain lento itse.
    */
   ajaKamera(kohde, { kesto = AJO_MS, pehmennys = pehmennysKaari, pakota = false } = {}) {
-    const pane = this.ui.svg?.parentElement;
+    const pane = this.ui.mapPane;
     if (this.ui.dead || !pane) return Promise.resolve(false);
     /*
      * ALOITUSLENTO OMISTAA KAMERAN (omistaja 24.8.2026, Raamattu:
@@ -1490,9 +1529,10 @@ export class Kartta {
     const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
     const ylaReuna = this.ui.zoomYlaReuna ?? box.y;
     const loppuSkaala = this.ui.zoomSkaala || loppu.skaala;
-    const svg = this.ui.svg;
+    // Ajo piirretään siirtokuoreen kuten panorointikin (ks. `get kuori`).
+    const kuori = this.kuori;
     document.body.classList.add('zoom-kaynnissa');
-    svg.style.transition = 'none';
+    kuori.style.transition = 'none';
 
     /** Välivaihe ruudulle: keskipiste `x,y` mittakaavassa `s`. */
     const piirra = (x, y, s) => {
@@ -1502,7 +1542,7 @@ export class Kartta {
       const tx = paneW / 2 - k * ex;
       const ty = paneH / 2 - k * ey;
       if (!Number.isFinite(tx) || !Number.isFinite(ty) || !Number.isFinite(k)) return;
-      svg.style.transform =
+      kuori.style.transform =
         `translate3d(${tx.toFixed(1)}px, ${ty.toFixed(1)}px, 0) scale(${k.toFixed(4)})`;
     };
 
@@ -1539,8 +1579,8 @@ export class Kartta {
         // Perillä: muunnos pois, jolloin ruudulla on lopullinen näkymä
         // täydellä tarkkuudella.
         this.kameraAjo = null;
-        svg.style.transform = '';
-        svg.style.transition = '';
+        kuori.style.transform = '';
+        kuori.style.transition = '';
         document.body.classList.remove('zoom-kaynnissa');
         this.asetaPan(this.ui.panX, this.ui.panY);
         this.ui.taydennaTaide?.({ heti: true });
@@ -1677,14 +1717,14 @@ export class Kartta {
     if (!ajo) return false;
     this.kameraAjo = null;
     cancelAnimationFrame(ajo.kehys);
-    const svg = this.ui.svg;
-    if (svg) {
-      svg.style.transform = '';
-      svg.style.transition = '';
+    const kuori = this.kuori;
+    if (kuori) {
+      kuori.style.transform = '';
+      kuori.style.transition = '';
     }
     document.body.classList.remove('zoom-kaynnissa');
-    if (kirjaa && svg && !this.ui.dead) {
-      const pane = svg.parentElement;
+    if (kirjaa && kuori && !this.ui.dead) {
+      const pane = this.ui.mapPane;
       const yleis = pane ? this.yleiskuvanSkaala(pane.clientWidth, pane.clientHeight) : 0;
       const { pienin, suurin } = this.zoomiRajat();
       if (yleis) {
@@ -1759,8 +1799,8 @@ export class Kartta {
     // napautushetkellä — kuva laajenee napautetusta kohdasta ulospäin.
     const tx = sx - s * ex;
     const ty = sy - s * ey;
-    this.ui.svg.style.transition = 'none';
-    this.ui.svg.style.transform = `translate3d(${tx.toFixed(1)}px, ${ty.toFixed(1)}px, 0) scale(${s.toFixed(4)})`;
+    this.kuori.style.transition = 'none';
+    this.kuori.style.transform = `translate3d(${tx.toFixed(1)}px, ${ty.toFixed(1)}px, 0) scale(${s.toFixed(4)})`;
     // Pakotettu asettelu, jotta selain näkee alkuasennon omana tilanaan
     // eikä hyppää suoraan loppuun.
     void this.ui.svg.getBoundingClientRect();
@@ -1775,7 +1815,7 @@ export class Kartta {
    */
   kaynnistaZoomLiuku(kesto = ZOOM_MS) {
     if (this.ui.reducedMotion) return;
-    this.ui.svg.style.transition = `transform ${kesto}ms ${ZOOM_PEHMENNYS}`;
+    this.kuori.style.transition = `transform ${kesto}ms ${ZOOM_PEHMENNYS}`;
     // Liu'un ajaksi kartan oma reunahäivytys sammuu (omistajan
     // havainto). Lähikuvan kartta on rajattu kaupunkien korkeuteen,
     // joten liu'un alussa se ei täytä paneelia — häivytys piirtyi
@@ -1786,7 +1826,7 @@ export class Kartta {
     this.asetaPan(this.ui.panX, this.ui.panY);
     clearTimeout(this.ui.zoomAjastin);
     this.ui.zoomAjastin = setTimeout(() => {
-      this.ui.svg.style.transition = '';
+      this.kuori.style.transition = '';
       document.body.classList.remove('zoom-kaynnissa');
       // Liuku ohi: nyt kuva saa piirtyä loppuun.
       this.ui.taydennaTaide?.({ heti: true });
@@ -1840,7 +1880,7 @@ export class Kartta {
    */
   zoomTarpeen() {
     if (this.ui.katselu || this.ui.reducedMotion) return false;
-    return (this.ui.svg.parentElement?.clientWidth ?? 0) < 700;
+    return (this.ui.mapPane?.clientWidth ?? 0) < 700;
   }
 
   /**
@@ -2079,7 +2119,7 @@ export class Kartta {
   fokusZoomMinimi() {
     const rajat = this.fokusRajaukset();
     if (!rajat) return 0;
-    const pane = this.ui.svg?.parentElement;
+    const pane = this.ui.mapPane;
     if (!pane) return 0;
     // Nipistys kysyy tätä joka touchmovella (zoomiRajat), joten mitat
     // tulevat välimuistista eivätkä asettelusta (ks. paneMitat).
@@ -2132,7 +2172,7 @@ export class Kartta {
     if (!rajat) return;
     const pohja = this.fokusZoomMinimi();
     const nyt = this.kameranTila();
-    const pane = this.ui.svg?.parentElement;
+    const pane = this.ui.mapPane;
     if (!pohja || !nyt || !pane) return;
     const yleis = this.yleiskuvanSkaala(pane.clientWidth, pane.clientHeight);
     if (!yleis || nyt.skaala >= yleis * pohja * 0.999) return;
@@ -2169,7 +2209,7 @@ export class Kartta {
   }
 
   rajaaFokusPan(x, y, alue) {
-    const pane = this.ui.svg?.parentElement;
+    const pane = this.ui.mapPane;
     const skaala = this.ui.zoomSkaala;
     if (!pane || !skaala || !Number.isFinite(skaala) || skaala <= 0) return { x, y };
     const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
@@ -2216,7 +2256,7 @@ export class Kartta {
     const fokus = this.fokusRajaukset();
     if (fokus) return this.rajaaFokusPan(x, y, fokus.kuva);
     const alue = this.valloitettuAlue();
-    const pane = this.ui.svg?.parentElement;
+    const pane = this.ui.mapPane;
     const skaala = this.ui.zoomSkaala;
     if (!alue || !pane || !skaala || !Number.isFinite(skaala) || skaala <= 0) return { x, y };
     const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
@@ -2247,7 +2287,15 @@ export class Kartta {
    * (omistajan toive), jotta ruudunpäivitys pysyy nopeana.
    */
   asennaPanorointi() {
-    const pane = this.ui.svg.parentElement;
+    /*
+     * KARTTARUUTU, EI SIIRTOKUORI (wrapper-siirto 26.8.2026). Eleiden
+     * kuuntelijat ja niiden laatikkomittaukset kuuluvat paikallaan
+     * pysyvään ruutuun: kuori liikkuu kartan mukana, ja sen laatikosta
+     * laskettu sormen paikka karkaisi eleen aikana. Kartan päällä
+     * kelluvat kortit ovat myös ruudun lapsia (ks. KELLUVA_UI), joten
+     * niiden tapahtumat kuplivat tänne vain ruudusta kuunneltaessa.
+     */
+    const pane = this.ui.mapPane;
     let alku = null;
     let liikkui = false;
 
@@ -2518,7 +2566,7 @@ export class Kartta {
       ajastaNipistysVahti();
       // Kartta lähtee kahden sormen alla liikkeelle: päiväkirja riviksi.
       this.ui.asetaPaivakirjanKoko(true);
-      this.ui.svg.style.transition = '';
+      this.kuori.style.transition = '';
     };
 
     const paivitaNipistys = (e) => {
@@ -2537,7 +2585,7 @@ export class Kartta {
       // Kelvoton luku muunnoksessa hylkäisi koko tyylin ja kartta
       // nykäisisi takaisin — parempi jättää edellinen asento voimaan.
       if (!Number.isFinite(tx) || !Number.isFinite(ty)) return;
-      this.ui.svg.style.transform =
+      this.kuori.style.transform =
         `translate3d(${tx.toFixed(1)}px, ${ty.toFixed(1)}px, 0) scale(${nipistys.suhde.toFixed(4)})`;
       vastaskaalaaMerkit(nipistys.suhde);
     };
@@ -2552,7 +2600,7 @@ export class Kartta {
       clearTimeout(this.ui.nipistysVahtiAjastin);
       this.ui.kartanRaahaus = false;
       document.body.classList.remove('kartta-raahaus');
-      this.ui.svg.style.transform = '';
+      this.kuori.style.transform = '';
       vastaskaalaaMerkit(1);
       // Napautus eleen jälkeen ei saa valita kaupunkia.
       this.ui.raahattiin = true;
@@ -2666,7 +2714,7 @@ export class Kartta {
       document.body.classList.remove('kartta-raahaus');
       // Yleiskuvan haara ei kirjoita muunnosta (asetaPan ajetaan vain
       // lähikuvissa), joten eleen jälki pyyhitään ensin käsin.
-      this.ui.svg.style.transform = '';
+      this.kuori.style.transform = '';
       vastaskaalaaMerkit(1);
       this.fitViewBox();
     };
@@ -2917,7 +2965,7 @@ export class Kartta {
       naytteet.length = 0;
       // Kesken oleva zoomausliuku ei saa jarruttaa raahausta.
       clearTimeout(this.ui.zoomAjastin);
-      this.ui.svg.style.transition = '';
+      this.kuori.style.transition = '';
       // HUOM: osoitinta EI kaapata tässä. Kaappaus ohjaisi myös
       // click-tapahtuman paneelille, jolloin pelkkä napautus ei enää
       // osuisi kaupunkiin. Kaappaus otetaan vasta kun liike ylittää

@@ -82,13 +82,13 @@ await sivu.waitForTimeout(2000);
 /** Kartan geometrian kuntoraportti. */
 const geometria = () => sivu.evaluate(() => {
   const ui = window.matkakirja.ui;
-  const p = ui.svg.parentElement.getBoundingClientRect();
+  const p = ui.mapPane.getBoundingClientRect();
   const r = ui.svg.getBoundingClientRect();
   const vb = ui.svg.viewBox.baseVal;
   const oma = ui.game.cityOf?.() ?? null;
   const kohta = oma ? ui.kartta.mapToPane({ x: oma.x, y: oma.y }) : null;
   return {
-    transform: ui.svg.style.transform,
+    transform: (ui.karttaKuori ?? ui.svg).style.transform,
     // Positiivinen rako = paneelin pergamentti näkyy siltä reunalta.
     rakoVasen: Math.round(r.left - p.left),
     rakoYla: Math.round(r.top - p.top),
@@ -129,7 +129,7 @@ await sivu.waitForTimeout(2500);
  */
 await sivu.evaluate(() => {
   const ui = window.matkakirja.ui;
-  ui.svg.style.transform = 'translate3d(180px, 60px, 0) scale(0.5)';
+  (ui.karttaKuori ?? ui.svg).style.transform = 'translate3d(180px, 60px, 0) scale(0.5)';
 });
 await sivu.evaluate(() => { document.getElementById('arrival-dialog').close(); });
 await sivu.waitForTimeout(300);
@@ -146,7 +146,7 @@ vaadi('pelaajan kaupunki ei ole nurkassa kyltin alla',
 // --- 2. Kesken jäänyt nipistys: jumivahti hylkää eleen ----------------
 /** Nipistys sisäänpäin ILMAN touchend/touchcancel-tapahtumaa. */
 const nipistaKesken = () => sivu.evaluate(async () => {
-  const pane = window.matkakirja.ui.svg.parentElement;
+  const pane = window.matkakirja.ui.mapPane;
   const kx = 500; const ky = 500; const alku = 400;
   const sormi = (id, x, y) => ({ identifier: id, clientX: x, clientY: y, pageX: x, pageY: y });
   const parit = (d) => [sormi(1, kx - d / 2, ky), sormi(2, kx + d / 2, ky)];
@@ -200,7 +200,7 @@ vaadi('nipistyksen oma vahti purkaa jumin ilman muita ärsykkeitä',
 // --- 3. Yhden sormen kosketus purkaa jumin heti -----------------------
 await nipistaKesken();
 await sivu.evaluate(() => {
-  const pane = window.matkakirja.ui.svg.parentElement;
+  const pane = window.matkakirja.ui.mapPane;
   const sormi = { identifier: 9, clientX: 300, clientY: 500, pageX: 300, pageY: 500 };
   const e = new Event('touchstart', { bubbles: true, cancelable: true });
   Object.defineProperty(e, 'touches', { value: [sormi] });
@@ -214,7 +214,7 @@ vaadi('yhden sormen kosketus purkaa jumiutuneen nipistyksen heti',
   kunnossa(kosketuksenJalkeen), JSON.stringify(kosketuksenJalkeen));
 // Panorointi toimii jumin jälkeen: yhden sormen veto siirtää karttaa.
 await sivu.evaluate(() => {
-  const pane = window.matkakirja.ui.svg.parentElement;
+  const pane = window.matkakirja.ui.mapPane;
   const laheta = (tyyppi, px, py, lisa = {}) => pane.dispatchEvent(new PointerEvent(tyyppi, {
     pointerId: 11, pointerType: 'touch', isPrimary: true,
     clientX: px, clientY: py, bubbles: true, cancelable: true, ...lisa,
@@ -243,12 +243,12 @@ await sivu.evaluate(() => {
 await sivu.waitForTimeout(300);
 /** WKWebView-aukon jälki: vanhentunut muunnos svg:ssä. */
 const vanhenna = () => sivu.evaluate(() => {
-  window.matkakirja.ui.svg.style.transform = 'translate3d(140px, 90px, 0) scale(0.62)';
+  { const u = window.matkakirja.ui; (u.karttaKuori ?? u.svg).style.transform = 'translate3d(140px, 90px, 0) scale(0.62)'; }
 });
 /** Kyltti (matkakirjakortti) ei ole pelaajan kaupungin päällä. */
 const kylttiEhja = () => sivu.evaluate(() => {
   const ui = window.matkakirja.ui;
-  const p = ui.svg.parentElement.getBoundingClientRect();
+  const p = ui.mapPane.getBoundingClientRect();
   const oma = ui.game.cityOf?.();
   const kohta = oma ? ui.kartta.mapToPane({ x: oma.x, y: oma.y }) : null;
   const kyltti = ui.factCard?.getBoundingClientRect();
@@ -328,7 +328,7 @@ await sivu.waitForTimeout(1500);
 await sivu.waitForTimeout(1000);
 await sivu.evaluate(() => {
   window.__vvFake.height += 60;
-  window.matkakirja.ui.svg.style.transform = 'translate3d(140px, 90px, 0) scale(0.62)';
+  { const u = window.matkakirja.ui; (u.karttaKuori ?? u.svg).style.transform = 'translate3d(140px, 90px, 0) scale(0.62)'; }
 });
 // Seuraava silmukan askel (300 ms välein) huomaa muutoksen ja sovittaa.
 await sivu.waitForTimeout(1200);

@@ -345,7 +345,7 @@ const ele = await sivu.evaluate(async () => {
   await new Promise((r) => setTimeout(r, 260));
   const kesken = ui.nakyvaAlue();
   // Sormi kartalle: kaappausvaiheen kuuntelija pysäyttää ajon.
-  const pane = ui.svg.parentElement;
+  const pane = ui.mapPane;
   pane.dispatchEvent(new PointerEvent('pointerdown', {
     bubbles: true, pointerId: 1, clientX: 400, clientY: 500,
   }));

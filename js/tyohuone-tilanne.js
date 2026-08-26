@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1141 — kartan raahaus siirtyi svg-juuresta div-kuoreen: asettelulaskenta putosi 1,05:sta 0,35:een per kehys (savuke-panorointi 7/7, vartijaraja kiristetty 0,7:aan) — TESTAA vieritys iPadilla, myos nipistys ja fokusviivainten seuranta',
   'v1140 — kohdekortin ylarivin luokkanimet nominatiiviin: RUOKA JA JUOMA, HISTORIA, LUONTO jne. (ennen partitiivissa)',
   'v1139 — MATKUSTA-nappi on nyt sama kullattu paanappi kuin Aloita peli ja varmistuksen Kylla (lohenpunainen v1119-savy pois); estettyna kulta laimenee pergamentiksi',
   'v1138 — takysymboli (esim. pollonpoikanen) ei enaa katoa eika muutu pisteeksi kun sita napauttaa: aktiivisen tayn ankkuri on nyt tayn oma symboli kuplan alla',

@@ -2096,7 +2096,19 @@ export class UI {
      */
     this.arrivalDialog.addEventListener('close', () => palautaAmbienssi('lehti'));
 
-    this.mapPane = this.svg.parentElement;
+    /*
+     * KARTTARUUTU JA KARTAN SIIRTOKUORI (omistaja 26.8.2026 ilta:
+     * *"scrollaus parempi mutta ei taysin sujuva"* — wrapper-siirto).
+     *
+     * SVG:n vanhempi EI ole enää karttaruutu vaan .kartta-kuori: se on
+     * se elementti, johon panoroinnin ja eleiden CSS-muunnos
+     * kirjoitetaan (js/kartta.js asetaPan). Siksi ruutu haetaan
+     * nimeltä eikä `svg.parentElement`-ketjusta — kuori LIIKKUU, joten
+     * sen ruutupaikka ei kelpaa mihinkään, mikä mittaa "missä
+     * karttaruutu on" (nakyvaAlue, eleiden laatikot, paneelin mitat).
+     */
+    this.mapPane = this.svg.closest('.map-pane') ?? this.svg.parentElement;
+    this.karttaKuori = this.svg.closest('.kartta-kuori');
     /*
      * Kartan napautus kutistaa päiväkirjan yhden rivin lapuksi
      * (omistajan toive; v317 asti se kutisti auki levitetyn kortin
@@ -2259,7 +2271,9 @@ export class UI {
     this.kartta.asennaPanorointi();
     this.kartta.fitViewBox();
     this.observer = new ResizeObserver(() => this.kartta.fitViewBox());
-    this.observer.observe(this.svg.parentElement);
+    // Karttaruutu, ei siirtokuori: kuori on ruudun kokoinen mutta
+    // liikkuu, ja koon muutos tulee aina ruudulta (wrapper-siirto).
+    this.observer.observe(this.mapPane);
     this.vahdiNakymanKokoa();
     this.render();
     this.esilataaAarrekuvat();
@@ -3439,7 +3453,7 @@ export class UI {
    */
   nykyinenTarkkuus() {
     if (this.taideTarkkuus) return this.taideTarkkuus;
-    const pane = this.svg?.parentElement;
+    const pane = this.mapPane;
     return piirtotarkkuus(pane?.clientWidth ?? 400, pane?.clientHeight ?? 800);
   }
 
@@ -3676,7 +3690,13 @@ export class UI {
    * elementin oma koko ovat olemassa aina.
    */
   nakyvaAlue() {
-    const pane = this.svg?.parentElement;
+    /*
+     * KARTTARUUTU, EI SIIRTOKUORI (wrapper-siirto 26.8.2026). Kuori on
+     * ruudun kokoinen mutta liikkuu kartan mukana, joten siitä luettu
+     * laatikko kertoisi aina "koko lauta näkyy" — näkyvä alue on se
+     * pala, jonka PAIKALLAAN pysyvä ruutu paljastaa.
+     */
+    const pane = this.mapPane;
     if (!pane) return null;
     const vb = this.svg.viewBox?.baseVal;
     const laatikko = this.svg.getBoundingClientRect();
@@ -3849,7 +3869,7 @@ export class UI {
     if (!this.taideSkaala || nakyva.skaala > this.taideSkaala * 1.2
         || nakyva.skaala < this.taideSkaala * 0.8) {
       this.taideSkaala = nakyva.skaala;
-      const pane = this.svg.parentElement;
+      const pane = this.mapPane;
       this.taideTarkkuus = piirtotarkkuus(pane?.clientWidth ?? 400, pane?.clientHeight ?? 800);
       this.taideRuutu = ruudunKoko(nakyva.skaala, this.taideTarkkuus);
       /*
@@ -6197,7 +6217,7 @@ export class UI {
   fokusMerkkiSkaala(suhde = 1) {
     const ele = suhde > 0 ? suhde : 1;
     const rajaus = this.fokusPohjaRajaus;
-    const pane = this.svg?.parentElement;
+    const pane = this.mapPane;
     const paneW = pane?.clientWidth || 0;
     const paneH = pane?.clientHeight || 0;
     if (rajaus?.w > 0 && rajaus?.h > 0 && paneW > 0 && paneH > 0) {

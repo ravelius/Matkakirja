@@ -690,10 +690,11 @@ function rakennaViivaimet(ui) {
  *
  * Ristiriita on näennäinen. Panorointi ja nipistys eivät muuta laudan
  * ASETTELUA lainkaan: molemmat kirjoittavat pelkän CSS-muunnoksen
- * `svg.style.transform`-ominaisuuteen (js/kartta.js asetaPan,
- * paivitaNipistys, ajaKamera), ja elementin oma paikka, koko ja viewBox
- * pysyvät siinä missä olivat. Siksi ruutupaikat voi laskea kahdesta
- * osasta:
+ * KARTAN SIIRTOKUOREEN (`.kartta-kuori`; js/kartta.js asetaPan,
+ * paivitaNipistys, ajaKamera — wrapper-siirto 26.8.2026, ennen tätä
+ * kohde oli `svg.style.transform`), ja laudan oma paikka, koko ja
+ * viewBox pysyvät siinä missä olivat. Siksi ruutupaikat voi laskea
+ * kahdesta osasta:
  *
  *   PERUSTA — mitataan KERRAN, kun näkymä on levossa: laudan
  *   asettelusijainti karttaruudussa, pikseliä lautayksikköä kohti ja
@@ -719,9 +720,15 @@ function rakennaViivaimet(ui) {
  * mittaa perustan silloin uudelleen; silmukka ei mittaa koskaan.
  */
 
-/** Kartan nykyinen CSS-muunnos lukuina. Ei kosketa asetteluun. */
-function kameranSiirto(svg) {
-  const teksti = svg?.style?.transform ?? '';
+/**
+ * Kartan nykyinen CSS-muunnos lukuina. Ei kosketa asetteluun.
+ *
+ * Muunnos luetaan SIIRTOKUORESTA eikä laudasta (wrapper-siirto
+ * 26.8.2026): kuori on se elementti, jota kartta liikuttaa, ja lauta
+ * seuraa mukana sen sisällä.
+ */
+function kameranSiirto(ui) {
+  const teksti = (ui?.karttaKuori ?? ui?.svg)?.style?.transform ?? '';
   if (!teksti) return { tx: 0, ty: 0, s: 1 };
   const siirto = /translate3d\(\s*(-?[\d.]+)px\s*,\s*(-?[\d.]+)px/.exec(teksti);
   const kerroin = /scale\(\s*(-?[\d.]+)/.exec(teksti);
@@ -747,7 +754,7 @@ function mittaaPerusta(ui) {
   if (!pane || !vb?.width) return null;
   const l = svg.getBoundingClientRect();
   const p = pane.getBoundingClientRect();
-  const { tx, ty, s } = kameranSiirto(svg);
+  const { tx, ty, s } = kameranSiirto(ui);
   const pxPerYks = l.width / (vb.width * s);
   if (!(pxPerYks > 0) || !(p.width > 0)) return null;
   return {
@@ -771,7 +778,7 @@ function mittaaPerusta(ui) {
 function ruutuKaavat(ui) {
   const perusta = ui.fokusViivainPerusta;
   if (!perusta || perusta.lautaOsa !== ui.svg) return null;
-  const { tx, ty, s } = kameranSiirto(ui.svg);
+  const { tx, ty, s } = kameranSiirto(ui);
   const skaala = perusta.pxPerYks * s;
   if (!(skaala > 0)) return null;
   const x0 = perusta.asetteluX + tx;
@@ -1066,11 +1073,12 @@ function paivitaViivaimet(ui) {
  * KATSOTAAN siis kartasta itsestään, tässä moduulissa, kahdella
  * tarkkailijalla:
  *
- *   1. LAUDAN OMAT ATTRIBUUTIT. Panorointi on `svg.style.transform`
- *      ja zoomi `viewBox` + `style.width/height` (js/kartta.js
- *      asetaPan, fitViewBox, kamera-ajot). Yksikään muu kuin kartan
- *      liike ei kirjoita niihin, joten MutationObserver näiden päällä
- *      on täsmälleen "kartta liikkui juuri nyt".
+ *   1. LAUDAN JA SIIRTOKUOREN OMAT ATTRIBUUTIT. Panorointi on
+ *      kuoren `style.transform` (`.kartta-kuori`, wrapper-siirto
+ *      26.8.2026) ja zoomi laudan `viewBox` + `style.width/height`
+ *      (js/kartta.js asetaPan, fitViewBox, kamera-ajot). Yksikään muu
+ *      kuin kartan liike ei kirjoita niihin, joten MutationObserver
+ *      näiden päällä on täsmälleen "kartta liikkui juuri nyt".
  *
  *      TÄSSÄ ON MYÖS PERUSTAN VANHENEMINEN. `style.transform` on pelkkä
  *      siirto, jonka kehys osaa lukea itse — mutta viewBox ja
@@ -1212,6 +1220,19 @@ function vahdiKartanLiiketta(ui) {
       attributes: true,
       attributeFilter: ['style', 'viewBox', 'width', 'height'],
     });
+    /*
+     * SIIRTOKUORI SAMALLE TARKKAILIJALLE (wrapper-siirto 26.8.2026).
+     * Panoroinnin muunnos kirjoitetaan nykyään kuoreen, eikä lauta
+     * itse muutu eleen aikana lainkaan — ilman tätä havaintoa
+     * viivaimet eivät enää tietäisi kartan liikkuvan. Kuoresta
+     * kelpaa vain `style`, joten se ei koskaan vanhenna perustaa.
+     */
+    if (ui.karttaKuori) {
+      vahti.lauta.observe(ui.karttaKuori, {
+        attributes: true,
+        attributeFilter: ['style'],
+      });
+    }
   }
   /*
    * Runkoa katsotaan LUOKKALISTAN TILANA eikä muutoksena: bodyn
