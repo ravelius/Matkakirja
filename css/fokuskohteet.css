@@ -216,11 +216,19 @@
   cursor: grab;
 }
 
+/*
+ * EI animation-riviä tähän: `animation: none` raahauksen ajaksi
+ * kuulosti siistiltä, mutta kun luokka poistui sormen irrotessa,
+ * selain KÄYNNISTI fokuskohde-esiin-animaation alusta — kortti
+ * välähti läpinäkyvänä ja hypähti (omistaja 26.8.2026 ilta: "Jos
+ * popup ikkunaa siirtää, se räpsähtää lopussa kun sormen
+ * irroittaa"). Valmiiksi ajettu avausanimaatio ei haittaa raahausta
+ * mitenkään, joten siihen ei kosketa.
+ */
 .fokuskohde-popup.raahauksessa {
   cursor: grabbing;
   user-select: none;
   -webkit-user-select: none;
-  animation: none;
 }
 
 .fokuskohde-otsikko {

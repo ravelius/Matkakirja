@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1147, teksti: 'Kohdekortin raahaus ei enaa rapsahda lopussa' },
   { v: 1146, teksti: 'Maataulun Samat luvut -selite pois' },
   { v: 1145, teksti: 'Kreetan lehdelle herokuvakaruselli' },
   { v: 1144, teksti: 'API-generointilupa Raamattuun + symbolieraajo' },
