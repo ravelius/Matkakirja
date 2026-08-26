@@ -731,6 +731,45 @@ export const RAAMATTU = {
       ],
     },
     {
+      otsikko: 'Arkkikirjasto: pop-upien yhteinen kieli',
+      tila: 'linjattu 26.8.2026 (omistaja: "pelin pop upit saisi tulla '
+        + 'yhtenaisesta tyylikirjastosta ... Mieti kokonaisuus '
+        + 'tarkkaan") — toteutus erissä',
+      kohdat: [
+        'YKSI SANASTO KAIKILLE KELLUVILLE PINNOILLE: pop-up kootaan '
+          + 'aina samoista paloista — ylärivi (pikkuotsake, esim. '
+          + 'KOHTAAMINEN tai symboli+luokka), otsikko, leipä, '
+          + 'korostettu kysymysrivi, nappirivi, reunahuomautukset '
+          + '(varoitus ja vihjelinkki pienellä) ja lähderivi. '
+          + 'NAPPIEN KOLME ROOLIA: kullattu päänappi on etenevä tai '
+          + 'peruuttamaton valinta (Aloita peli, Kyllä), kehystetty '
+          + 'paperinappi on sivuvalinta (Ei), ja musteviivarivi jää '
+          + 'kortin sisäisille listavalinnoille (24.8. kevennys).',
+        'TAUSTAN KOLME ASTETTA OVAT PANOKSEN MITTARI. Aste 0, '
+          + 'selailu: ei tummennusta (kohdekortti, minipopup) — '
+          + 'kartta elää kortin takana. Aste 1, harkinta: kevyt '
+          + 'tummennus ja sumennus (varmistukset, lippu- ja '
+          + 'Tutki-ikkunat) — päätöstä punnitaan, perääntyä voi. '
+          + 'Aste 2, panos: tumma sumennus, joka kuultaa '
+          + 'reunoiltaan (v1134:n säteittäinen malli; tehtäväkortti '
+          + 'ja aarrepaljastus) — on sitouduttu, jännite nousee '
+          + '(omistaja 26.8.2026: "tummemman taustan voisi tuoda '
+          + 'mukaan kysymyksen alkaessa"). Tummuus kertoo aina '
+          + 'panoksesta — se ei ole koristeen asia.',
+        'SULKEMISSOPIMUS SEURAA ASTETTA: selailupinta sulkeutuu '
+          + 'rastista ja ulkopuolelta napauttaen; harkintapinta '
+          + 'napeistaan ja ulkopuolelta; panospinta vain omalla '
+          + 'toiminnollaan — kulman rastia sillä ei ole (omistaja '
+          + '26.8.2026: "Yläkulman ruksi on turha").',
+        'TOTEUTUS ERISSÄ, EI KERTARYSÄYKSELLÄ: yhteinen tyylipohja '
+          + 'ja pieni apuri, siirrot pari pintaa kerrallaan '
+          + '(panospinnat ensin, sitten fokusvirran kortti ja kupla, '
+          + 'selailupinnat, isot dialogit), savukkeet vartioivat '
+          + 'ettei siirto muuta käytöstä. UUSI pop-up tehdään AINA '
+          + 'kirjastosta — erillistyylit ovat jatkossa virhe.',
+      ],
+    },
+    {
       otsikko: 'Aarteet ja eteneminen',
       tila: 'mekaniikka toteutettu v1109–v1110 (25.8.2026); '
         + 'maakohtaiset parit sisältötyönä jäljellä',

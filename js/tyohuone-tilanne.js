@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1135 — Raamattuun uusi osio Arkkikirjasto: pop-upien yhteinen sanasto, taustan kolme astetta panoksen mittarina ja sulkemissopimus; toteutus erissa alkaa wrapper-tyon jalkeen',
   'v1134 — aarrepaljastus: ylakulman ruksi poistettu (Jatka matkaa ja napautus riittavat) ja musta tausta kuultaa nyt reunoiltaan sumennetun kartan lapi; keskusta pysyy mustana ettei aarrekuvan reuna saa haloa',
   'v1133 — kohtaamisen varmistuksen Kylla ja Ei ovat nyt oikeita nappeja (Kylla kullattu kuten Aloita peli, Ei kehystetty paperinappi) — Ateenan Vartija Nikos',
   'v1132 — kohdekortin ylarivilla nyt kategorian symboli ja luokan nimi (esim. Kalamata: malja + RUOKAA JA JUOMAA); etusivun sumennus kattaa koko ruudun, terava vaakaraja poissa',
