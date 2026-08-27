@@ -3686,7 +3686,31 @@ export class UI {
    * silloin ei ole vielä ollut yhtään elettä (kartanEleHetki puuttuu).
    */
   tarkistaTarkkuus() {
-    if (this.dead || !this.taide || !this.taideSkaala) return;
+    if (this.dead) return;
+    /*
+     * JUMIVAHTI ENNEN RASTEROINNIN EHTOJA (mitattu 27.8.2026).
+     *
+     * eleKesken on kaksi asiaa yhdessä: kysymys "onko ele kesken" ja
+     * VAHTI, joka purkaa jumiin jääneen eleen. Vahtiin päästiin
+     * kuitenkin vasta tarkkuusOdotuksen kautta — eli vasta kolmen
+     * rasterointiehdon takaa, jotka eivät liity eleisiin lainkaan.
+     * Fokusnäkymässä molemmat portit ovat kiinni: `taideSkaala` on 0
+     * (vanhaa lautaa ei ole rasteroitu kertaakaan) ja
+     * `vanhaLautaPiilossa()` on tosi (atlas peittää laudan). Mitattuna
+     * (Chromium, iPad-ikkuna, nipistys ilman touchendiä, kartanEleHetki
+     * kuusi sekuntia vanha):
+     *
+     *   tarkistaTarkkuus()  →  scale(0.4) jäi voimaan, kartanRaahaus jäi
+     *   eleKesken()  suoraan →  muunnos palautui, kartanRaahaus laski
+     *
+     * Pystyyn jäänyt lippu jäädyttää kartan piirron lopuksi istunnoksi
+     * (ks. eleKesken) ja kesken jäänyt nipistys tappaa panoroinnin
+     * kokonaan — juuri se "välillä kartta ei liiku" -kokemus. Vahti
+     * kuuluu siis ennen portteja: se ei tee mitään, ellei ele ole
+     * ollut hiljaa yli rajan.
+     */
+    this.eleKesken();
+    if (!this.taide || !this.taideSkaala) return;
     /*
      * Piilotetun laudan tarkkuudella ei ole katsojaa (ks.
      * vanhaLautaPiilossa). Tarkistus ei siirry ajastimelle vaan jää

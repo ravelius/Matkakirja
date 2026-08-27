@@ -944,9 +944,19 @@ function ladoNauha(nauha, parit, pysty, tila) {
   for (let i = 0; i < parit.length; i++) {
     const [paikka, teksti] = parit[i];
     const merkki = kohteet[i];
+    /*
+     * MERKKI SAA TASOMUUNNOKSEN, EI translate3d:tä (sujuvuusmittaus
+     * 27.8.2026). Merkki ei liiku kehyksittäin — nauha liikkuu — joten
+     * merkillä ei ole mitään asiaa omalle kompositorikerrokselleen.
+     * `translate3d` antoi sen silti (Blinkin `Trivial3DTransform`), ja
+     * kahdeksantoista lukemaa tarkoitti kahdeksaatoista kerrosta, jotka
+     * jokainen panoroinnin kehys kävi läpi. Tasomuunnos jättää merkit
+     * nauhansa kerrokseen — juuri se, mitä tämän tiedoston nauhaliuku
+     * lupasi ("kaksi eikä kahdeksantoista").
+     */
     merkki.style.transform = pysty
-      ? `translate3d(0, ${paikka.toFixed(1)}px, 0) translateY(-50%)`
-      : `translate3d(${paikka.toFixed(1)}px, 0, 0) translateX(-50%)`;
+      ? `translate(0, ${paikka.toFixed(1)}px) translateY(-50%)`
+      : `translate(${paikka.toFixed(1)}px, 0) translateX(-50%)`;
     merkki.__paikka = paikka;
     if (merkki.__lukema !== teksti) {
       merkki.lastChild.textContent = teksti;
