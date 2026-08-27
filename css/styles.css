@@ -20070,7 +20070,15 @@ body.maataulu-auki .toimintorivi .monitoimi-nappi {
   --sym-elain: #b98d54;        /* ruskea — eläimet (pöllönpoikanen) */
   --sym-silma: #5f7f9e;        /* sininen — nähtävyydet ja multimedia */
   --sym-historia: #a05c3f;     /* punaruskea — historia ja rauniot */
-  --sym-luonto: #4f7d6f;       /* sinivihreä — vuoret, joet, järvet */
+  --sym-luonto: #4f7d6f;       /* sinivihreä — luonnon kategoriaväri (kortin ylärivi) */
+  /*
+   * Luonnon merkki on perheen ainoa KOLMIVÄRINEN (omistaja 27.8.2026:
+   * "sininen meri ja ruskea vuori, jossa vihreä puu"). Sävyt ovat yhtä
+   * vaimeita kuin muidenkin aksentit — pergamentti ei kestä kirkasta.
+   */
+  --sym-luonto-vuori: #8a6849;  /* ruskea — kallio */
+  --sym-luonto-puu: #4a6b3d;    /* vihreä — havupuu */
+  --sym-luonto-vesi: #4a7690;   /* sininen — meri ja järvi */
   --sym-ruoka: #8e4550;        /* viininpunainen — ruoka ja juoma */
   --sym-kulttuuri: #7b5a8c;    /* violetti — musiikki, teatteri, taide */
   --sym-tekniikka: #6f7278;    /* teräksenharmaa — tekniikka ja keksinnöt */
@@ -20115,6 +20123,14 @@ body.maataulu-auki .toimintorivi .monitoimi-nappi {
 
 /* Porttiaukko on laatan väriä: portti näyttää avoimelta. */
 .nostosym-portinaukko { fill: var(--sym-laatta); stroke: var(--sym-muste); stroke-width: 0.7; }
+
+/* Tornin viiri: sama muurinruskea, mutta ohuempi kynä. */
+.nostosym-viiri {
+  fill: var(--sym-kaupunki);
+  stroke: var(--sym-muste);
+  stroke-width: 0.6;
+  stroke-linejoin: round;
+}
 
 
 .nostosym-kehys {
@@ -20185,17 +20201,24 @@ body.maataulu-auki .toimintorivi .monitoimi-nappi {
   stroke-linejoin: round;
 }
 
-/* Vuorenhuippu ja aalto — luonto. */
+/* Vuori, havupuu ja aalto — luonto; kolme osaa, kolme sävyä. */
 .nostosym-vuoristo {
-  fill: var(--sym-luonto);
+  fill: var(--sym-luonto-vuori);
   stroke: var(--sym-muste);
   stroke-width: 0.9;
   stroke-linejoin: round;
 }
 
+.nostosym-havu {
+  fill: var(--sym-luonto-puu);
+  stroke: var(--sym-muste);
+  stroke-width: 0.7;
+  stroke-linejoin: round;
+}
+
 .nostosym-aalto {
   fill: none;
-  stroke: var(--sym-luonto);
+  stroke: var(--sym-luonto-vesi);
   stroke-width: 1.4;
   stroke-linecap: round;
 }
@@ -20222,18 +20245,35 @@ body.maataulu-auki .toimintorivi .monitoimi-nappi {
   stroke-width: 0.7;
 }
 
-/* Hammasratas — tekniikka; napa on paperia, jotta kiekosta tulee ratas. */
-.nostosym-ratas {
+/*
+ * Höyryveturi — tekniikka. Hammasratas poistui 27.8.2026 (asetusnapin
+ * konnotaatio, ks. js/fokusnosto-symbolit.js piirraNostosymVeturi).
+ */
+.nostosym-veturi {
   fill: var(--sym-tekniikka);
   stroke: var(--sym-muste);
   stroke-width: 0.8;
   stroke-linejoin: round;
 }
 
-.nostosym-ratasnapa {
-  fill: var(--sym-laatta);
+.nostosym-veturipyora {
+  fill: var(--sym-tekniikka);
   stroke: var(--sym-muste);
   stroke-width: 0.8;
+}
+
+/* Vetopyörän napa on paperia: reikä erottaa pyörän umpikiekosta. */
+.nostosym-veturinapa {
+  fill: var(--sym-laatta);
+  stroke: var(--sym-muste);
+  stroke-width: 0.6;
+}
+
+/* Höyry on vaaleaa kuin paperi, ohut musteviiva reunana. */
+.nostosym-hoyry {
+  fill: var(--sym-laatta);
+  stroke: var(--sym-muste);
+  stroke-width: 0.6;
 }
 
 /* Vaaka — kauppa: kupit ja jalusta täyttöinä, varsi musteviivana. */

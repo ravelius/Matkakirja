@@ -489,6 +489,64 @@ export const FOKUSKOHTEET_GRC = [
       lahde: 'Deyan Vasilev (Dido3), Wikimedia Commons (CC BY-SA 3.0)',
     },
   },
+  /*
+   * PSILORÍTIS — KREETAN VUORI, JOKA JÄI KLIKATTAVAKSI VIIMEISENÄ.
+   *
+   * Omistajan havainto 27.8.2026 Kreetan kohdalta: *"vuorimerkit eivät
+   * nyt ole klikattavissa — niiden pitäisi olla."* Lehteen on poltettu
+   * viisi vuorikolmiota (tools/fokuskartta/maat.mjs GRC.vuoret), ja
+   * neljä niistä oli jo tässä taulussa kohteena: Ólympos, Parnassós,
+   * Taÿgetos ja Píndos (jonka merkki seisoo Smólikaksen huipulla).
+   * VAIN PSILORÍTIS PUUTTUI — ja juuri se on Kreetan lehdellä, jota
+   * omistaja katsoi. Kuvaan poltettu kolmio on pikseleitä, joten
+   * ilman kohdetta sen päällä ei ole mitään napautettavaa.
+   *
+   * Kohde tulee siis SAMAAN JÄRJESTELMÄÄN kuin muut vuoret eikä omaan
+   * nappikerrokseensa: kartan merkki, kortti, pöllökysymykset ja
+   * korostukset saadaan valmiina, ja napautus avaa täsmälleen saman
+   * tietoruudun kuin muillakin kohteilla.
+   */
+  {
+    id: 'psiloritis',
+    nimi: 'Psilorítis',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Mitä Idan luolasta on löydetty?',
+      'Miksi Zeus piilotettiin juuri Kreetalle?',
+    ],
+    korostukset: ['Idan luola|Idan luolassa'],
+    /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
+    nappi: 'Vuori, jossa Zeus kasvoi',
+    /*
+     * 24,77556 E / 35,22806 N — en-Wikipedia "Mount Ida (Crete)".
+     * Laudan luvut on laskettu samasta projektiosta kuin muidenkin
+     * kohteiden ja ankkuroitu Kreetan omiin naapureihin (Iraklion,
+     * Taÿgetos), jotta kolmio osuu lehden poltettuun merkkiin
+     * pikselilleen myös saaren eteläisellä leveydellä.
+     */
+    laudat: {
+      maailmankartta: { x: 6659.0, y: 1986.7 },
+      europe: { x: 686.9, y: 967.1 },
+    },
+    teksti: 'Psilorítis eli Ida on Kreetan korkein vuori, 2 456 metriä, ja '
+      + 'se kohoaa saaren keskiosassa Iraklionin lounaispuolella. Vuoren '
+      + 'pohjoisrinteessä noin 1 500 metrin korkeudessa on Idan luola, '
+      + 'jossa taruston mukaan Rhea kätki vastasyntyneen Zeuksen isänsä '
+      + 'Kronoksen ulottumattomiin. Luolasta on kaivettu esiin '
+      + 'pronssikautisia uhrilahjoja, ja se oli merkittävä pyhäkkö jo '
+      + 'minolaisella ajalla. Huipulla seisoo Ristin kappeli, ja '
+      + 'lampaita paimennetaan rinteillä yhä samaan tapaan kuin '
+      + 'vuosisatoja sitten.',
+    lahde: 'en-Wikipedia "Mount Ida (Crete)" ja "Idaean Cave", johdanto-osat '
+      + '(tarkistettu 27.8.2026).',
+    // Category:Mount Ida (Crete).
+    kuva: {
+      tiedosto: 'Psiloritis view from Thronos 01.JPG',
+      selite: 'Psilorítis on Kreetan korkein huippu, 2 456 metriä, ja sen '
+        + 'kyljessä noin 1 500 metrin korkeudessa aukeaa Idan luola.',
+      lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  },
   {
     id: 'egeanmeri',
     nimi: 'Egeanmeri',

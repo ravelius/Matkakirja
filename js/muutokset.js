@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1198, teksti: 'Uudet luonto-, tekniikka- ja kaupunkisymbolit; Psiloritis' },
   { v: 1197, teksti: 'Kuvatekstiremontti era 8: Hanoista Kabuliin' },
   { v: 1196, teksti: 'Puhekuplan napautus ei enaa vuoda kartalle' },
   { v: 1195, teksti: 'Ihmepopup: nykytilan valokuva, nappi kuvan alle, kulmanauha' },
