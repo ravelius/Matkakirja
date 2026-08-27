@@ -1503,13 +1503,14 @@ function kohteenIhmekuva(kohde) {
  * kuvan sisällä. Ennen kääreitä oli yksi, ja kaista katkesi kuvan
  * reunaan kuin veitsellä leikaten.
  *
- * VIISI OSAA, KOSKA KÄÄRIYTYMINEN ON VIISI KAPPALETTA: kaista on
- * 45 asteen kulmaan käännetty tekstipalkki, joka kulkee kulman yli;
- * kaksi taitetta ovat kaistan päissä olevat tummenevat vyöhykkeet —
- * ne ovat se kohta, jossa paperi kaareutuu varjoon kuvan reunalla —
- * ja kaksi kääntynyttä päätä jatkavat taitteesta marginaalille
- * nauhan nurjana puolena. Ilman taitteita kaista näyttäisi vinolta
- * lipukkeelta; ilman päitä se loppuisi kuvan reunaan.
+ * NELJÄ OSAA, KOSKA KÄÄRIYTYMINEN ON KAKSI KAISTAA JA KAKSI
+ * TAITETTA (kahden kaistan malli, Fablen käsityö 27.8.2026):
+ * takakaista on nauhan nurja puoli, joka jatkaa kuvan reunan takaa
+ * marginaalille; etukaista on tekstipalkki, joka loppuu kuvan
+ * reunaan; kaksi taitetta ovat etukaistan päissä olevat tummenevat
+ * vyöhykkeet — se kohta, jossa paperi kaareutuu varjoon kuvan
+ * reunalla. Ilman taitteita kaista näyttäisi vinolta lipukkeelta;
+ * ilman takakaistaa se loppuisi kuvan reunaan.
  *
  * Sama komponentti istuu kortin kuvaan ja suurennokseen pelkillä
  * muuttujien arvoilla; myös väriryhmä on pelkkä luokka
@@ -1526,11 +1527,12 @@ export function piirraIhmenauha(isanta, teksti) {
   const nauha = html('span', 'fokuskohde-ihmenauha');
   if (KOHDE_IHMENAUHAN_SAVY) nauha.classList.add(KOHDE_IHMENAUHAN_SAVY);
   nauha.setAttribute('aria-hidden', 'true');
-  // Kääntyneet päät ENSIN: ne jäävät marginaalilla omilleen, mutta
-  // niiden sisäpää työntyy kuvan puolelle taitteen alle — ja siellä
-  // sen kuuluu jäädä kaistan taakse, ei sen päälle.
-  nauha.appendChild(html('span', 'fokuskohde-ihmepaa fokuskohde-ihmepaa-ylos'));
-  nauha.appendChild(html('span', 'fokuskohde-ihmepaa fokuskohde-ihmepaa-vasen'));
+  // Isäntä saa oman luokan: ihmekuvan suurennoskehys mitoittaa siitä
+  // leveämmän valkoisen marginaalin (css .fokuskohde-ihmeisanta).
+  isanta.classList.add('fokuskohde-ihmeisanta');
+  // Takakaista ENSIN: kuvassa se jää kokonaan etukaistan alle, ja
+  // vain marginaalilla näkyvä osa on nauhan nurja puoli.
+  nauha.appendChild(html('span', 'fokuskohde-ihmetausta'));
   const kuvaosa = html('span', 'fokuskohde-ihmekuvaosa');
   // Kaista ensin, taitteet päälle: taitteet ovat läpinäkyviä varjon
   // liukuvärejä kaistan päissä, joten ne kuuluvat kaistan PÄÄLLE —

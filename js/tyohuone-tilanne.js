@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1230: Ihmenauha rakennettu uusiksi kahden kaistan malliksi - nurja puoli jatkuu yhtenaisena marginaalin yli kehyksen alle, taite kapeampi, ihmekuvalle leveampi valkoinen reunus.',
   'v1229: Livian lisays - pulu kommentoi faktavastauksia silloin talloin omalla loppuosiollaan (noin joka 3.-4. faktavastaus).',
   'v1228: Aarrekysymysten vastaukset loytyvat nyt lehdista - Ateenan oliivipuu, Bukarestin Bucur ja Sarajevon dzezva saivat jutut, Istanbulin Medusa-kysymys sovitettu tarukehykseen.',
   'v1227: Saattokamera korjattu - matkalla Ateenasta Sofiaan kartan pitaisi taas seurata nappulaa oikeaan suuntaan (pystyyn) ja saapua ilman loppunykaisya; myos fokuskohteiden merkit palasivat (v1223-regressio)',
