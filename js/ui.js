@@ -2127,20 +2127,14 @@ export class UI {
      */
     this.mapPane.addEventListener('click', () => this.asetaPaivakirjanKoko(true));
 
-    // Zoomipainikkeet. Napautus ei saa vuotaa kartalle asti: mapPanen
-    // oma kuuntelija kutistaisi päiväkirjan ja maailmankartalla
-    // napautuszoomaus veisi näkymän muualle.
-    this.zoomiKuuntelijat = [];
-    for (const [id, suunta] of [['zoom-in', 1], ['zoom-out', -1]]) {
-      const nappi = document.getElementById(id);
-      if (!nappi) continue;
-      const kasittele = (e) => {
-        e.stopPropagation();
-        this.kartta.zoomaaPainikkeella(suunta);
-      };
-      nappi.addEventListener('click', kasittele);
-      this.zoomiKuuntelijat.push([nappi, kasittele]);
-    }
+    /*
+     * KARTAN +/- -PAINIKKEET ON POISTETTU (omistajan tilaus
+     * 27.8.2026). Kosketuslaitteilta ne oli piilotettu jo ennestään,
+     * ja työpöydällä trackpad ja hiiren rulla hoitavat saman:
+     * nipistys zoomaa portaattomasti, rullan naksu portain ja kahden
+     * sormen vieritys panoroi (ks. kartta.js, TRACKPADIN ELEET).
+     * zoomaaPainikkeella-metodi jäi — rullan naksu ajaa portaat sillä.
+     */
 
     /*
      * Maiden lehdet -nappi (omistajan havainto 8.8.2026: *"Kartalta
@@ -3111,6 +3105,9 @@ export class UI {
     // Nipistyksen oma jumivahti (kartta.js ajastaNipistysVahti) ei saa
     // laueta kuolleessa pelissä.
     clearTimeout(this.nipistysVahtiAjastin);
+    // Trackpadin eleen päättymisajastin (kartta.js ajastaRullanLoppu)
+    // ei saa viimeistellä elettä kuolleessa pelissä.
+    clearTimeout(this.rullanEleAjastin);
     // Lehden avauksen mittavarmistuksen jälkitarkistukset samoin.
     clearTimeout(this.lehtitila.lehtiMittaAjastin);
     clearTimeout(this.lehtitila.lehtiMittaJalkiajastin);
@@ -3182,9 +3179,6 @@ export class UI {
       this.mapPane?.removeEventListener(nimi, kasittele, { passive: false });
     }
     this.nipistysKuuntelijat = [];
-    for (const [nappi, kasittele] of this.zoomiKuuntelijat ?? []) {
-      nappi.removeEventListener('click', kasittele);
-    }
     // Linssin kuuntelijat ovat documentissa ja ylärivissä, jotka jäävät
     // eloon uuden pelin ajaksi.
     for (const [kohde, nimi, kasittele] of this.linssiKuuntelijat ?? []) {
