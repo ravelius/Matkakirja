@@ -107,6 +107,7 @@ import { FOKUSKOHTEET_CHN } from './packs/fokuskohteet-chn.js';
 import { FOKUSKOHTEET_EGY } from './packs/fokuskohteet-egy.js';
 import { FOKUSKOHTEET_FRA } from './packs/fokuskohteet-fra.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
+import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
 import { FOKUSKOHTEET_IRN } from './packs/fokuskohteet-irn.js';
 import { FOKUSKOHTEET_IRQ } from './packs/fokuskohteet-irq.js';
 import { FOKUSKOHTEET_ITA } from './packs/fokuskohteet-ita.js';
@@ -192,6 +193,21 @@ const KOHDE_MAAT = {
    */
   LBY: FOKUSKOHTEET_LBY,
   TUN: FOKUSKOHTEET_TUN,
+  /*
+   * UNKARI 27.8.2026 — ensimmäinen maa, joka tulee tähän tauluun
+   * KURATOIDUN lehden mukana eikä ihme-erän jalustana. Budapest on
+   * pelattava kaupunki, ja sen fokuslehti kirjoitettiin käsin Kreikan
+   * kaavalla (tools/fokuskartta/maat.mjs FOKUSMAAT.HUN): lehdessä on
+   * vesileima, kolme hachure-vuorta ja viisi poltettua kaupunginnimeä.
+   *
+   * Ehto on sama kuin kaikilla edellisillä eikä siitä ole poikettu:
+   * maan fokuslehti on FOKUS_POHJAT-taulussa (js/packs/fokus-grc.js) ja
+   * ämpärissä (HUN.webp), joten merkit saavat pohjan, jonka päälle
+   * asettua. Erona on, että tällä kertaa lehti ja kohteet on tehty
+   * samalla kertaa — siksi jokainen kartalla nimetty asia on myös
+   * napautettava, eikä yhtään nimeä ole kahdesti.
+   */
+  HUN: FOKUSKOHTEET_HUN,
 };
 
 /** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta). */

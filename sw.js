@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1238';
+const CACHE = 'matkakirja-2026-08-09.1239';
 const SHELL = [
   './',
   './index.html',
@@ -205,6 +205,8 @@ const SHELL = [
   // Matkakirjan ihmeiden VÄLIMEREN erä 27.8.2026: kaksi uutta maata.
   './js/packs/fokuskohteet-lby.js',
   './js/packs/fokuskohteet-tun.js',
+  // Unkarin kuratoitu lehti: Budapestin fokuslehden seitsemäntoista kohdetta.
+  './js/packs/fokuskohteet-hun.js',
   './js/packs/paivan-kuvat.js',
   './js/packs/uutislahteet.js',
   './js/packs/pollo-asetukset.js',
