@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1227, teksti: 'Saattokamera korjattu - mittavalimuisti mitatoityy' },
   { v: 1226, teksti: 'Ihmeet nakyviin nahtavyysikkunaan' },
   { v: 1225, teksti: 'Livia tuuraajaksi: sijaisuus, maadoitus, yliviivaus' },
   { v: 1224, teksti: 'Jatka matkaa -nappi pelin tyyliin' },
