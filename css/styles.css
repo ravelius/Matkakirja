@@ -1179,8 +1179,7 @@ body.manner-odottaa .rail {
    vaimennusteho on sama, ja ero on pelkkää voittoa. */
 body.kartta-raahaus .target-ring,
 body.kartta-raahaus .target-halo,
-body.kartta-raahaus .fokuslaatta-syke,
-body.kartta-raahaus .pawn-pulse { animation-play-state: paused; }
+body.kartta-raahaus .fokuslaatta-syke { animation-play-state: paused; }
 
 /*
  * Vanhan kiikarin vääristymä (omistajan toive): maailmankartan
@@ -1588,7 +1587,6 @@ body.aloitus-zoom .kiikari {
 
 @media (prefers-reduced-motion: reduce) {
   .event-toast, .event-toast.leaving { animation: none; }
-  .pawn-pulse { animation: none; }
   .pawn-moving { transition: none; }
   .board-die, .die-cube, .die-shadow, .die-layer { transition: none !important; }
 }
@@ -6284,6 +6282,31 @@ body.flight-active .fact-card {
 .coast-soft.aarre-laatan-alla,
 .city-gate.aarre-laatan-alla,
 .airport.aarre-laatan-alla { display: none; }
+
+/*
+ * LAATTA POIS PELINAPPULAN ALTA (omistajan pelitesti 27.8.2026,
+ * iPad-kaappaus Sofian fokuslaudalta: *"nappulan alla näkyy monta
+ * päällekkäistä kerrosta"* — kullanvärinen laatta, sykekehä, tumma
+ * rengas ja punertava hehku samassa pinossa).
+ *
+ * SAMA SÄÄNTÖ, SAMA SYY KUIN AARREMERKIN ALLA yllä: kaksi merkkiä
+ * täsmälleen samassa pisteessä on yksi liikaa. Fokuslaudalla pelaajan
+ * sijainnin kertoo tinaherra, joka seisoo laatan päällä
+ * (js/ui.js paivitaFokusLaatta, nappulaKaupungissa) — silloin laatta,
+ * sen porttikehä, lentokonemerkki ja houkutteleva sykekehä jäävät pois.
+ * Kaupungin NIMI jää: se kertoo paikasta, ei laatasta.
+ *
+ * VAIN NAPPULAN KOHDALTA. Luokka kirjoitetaan geometrisen ehdon
+ * mukaan, joten muiden kaupunkien laatat ja sykkeet ovat ennallaan —
+ * samoin oma laatta silloin, kun nappuloita on samassa kaupungissa
+ * useampi ja ne on levitetty kehälle laatan viereen.
+ */
+.city.nappulan-alla,
+.city-start.nappulan-alla,
+.coast-soft.nappulan-alla,
+.city-gate.nappulan-alla,
+.airport.nappulan-alla,
+.fokuslaatta-syke.nappulan-alla { display: none; }
 .airport { font-size: 14px; fill: #8d3a2c; }
 
 /* Porttikaupunki: katkoviivakehä kertoo, että täältä lähtee lento toiselle laudalle. */
@@ -6602,6 +6625,16 @@ body.flight-active .fact-card {
 }
 .pawn-star { fill: #b8860b; font-size: 20px; }
 
+/*
+ * VUORON AINOA RENGAS (omistajan pelitesti 27.8.2026). Nappulan alla oli
+ * kaksi kehää: tämä tumma ja sen päällä pelaajan värinen sykähdys
+ * (.pawn-pulse), joka laajeni puolitoistakertaiseksi ja himmeni.
+ * Fokuslaudalla se luki punertavana hehkuna hahmon jalkojen ympärillä —
+ * yhtenä kerroksena liikaa siinä pinossa, jonka omistaja näki. Sykähdys
+ * poistettiin kokonaan (js/ui.js pawnShape); jäljelle jäi tämä yksi
+ * hillitty kehä, ja samalla katosi kartan SVG:n sisältä jatkuva
+ * animaatio, joka pudotti ruudunpäivityksen mitatusti 60 fps:stä 15:een.
+ */
 .pawn-active-ring {
   fill: none;
   stroke: #2b1f12;
@@ -6611,34 +6644,22 @@ body.flight-active .fact-card {
   opacity: 0.75;
 }
 
-.pawn-pulse {
-  fill: none;
-  stroke-width: 3;
-  transform-box: fill-box;
-  transform-origin: center;
-  /*
-   * Sykähdys osoittaa, missä matkaaja on. Se on kartan SVG:n sisällä,
-   * joten jokainen sykähdys pakottaa koko suodatetun kartan piirtymään
-   * uudelleen — mitattuna 15 fps vastaan 60 fps. Siksi se vaikenee
-   * isojen animaatioiden ajaksi (ks. .animaatio-kaynnissa alla):
-   * silloin katse on nopassa tai koneessa, ei nappulassa.
-   */
-  animation: pawn-pulse 1.8s ease-out infinite;
-}
-
-@keyframes pawn-pulse {
-  0% { transform: scale(0.85); opacity: 0.75; }
-  70% { transform: scale(1.5); opacity: 0; }
-  100% { transform: scale(1.5); opacity: 0; }
-}
-
 /*
  * Isojen animaatioiden ajaksi kartan päällä ei saa olla mitään jatkuvaa:
  * yksikin sykkivä elementti suodatetun kartan päällä pudottaa
  * ruudunpäivityksen 15 fps:ään. js/ui.js lisää tämän luokan nopanheiton,
  * lentoanimaation ja nappulan siirron ajaksi.
+ *
+ * SÄÄNTÖ SEURASI ENNEN NAPPULAN SYKÄHDYSTÄ (.pawn-pulse). Se poistettiin
+ * 27.8.2026 (yksi vuororengas kahden sijaan, ks. .pawn-active-ring), ja
+ * laudan SVG:n sisällä jatkuvasti sykkiviä animaatioita on enää yksi:
+ * nykyisen kaupungin laatan houkutuskehä. Vaimennus siirtyi siihen —
+ * PAUSSINA EIKÄ POISTONA, samasta syystä kuin raahauksessa
+ * (body.kartta-raahaus yllä): `animation: none` nollaisi muunnoksen ja
+ * puoliksi kasvanut kehä nytkähtäisi lepomittaansa juuri animaation
+ * alkaessa.
  */
-.animaatio-kaynnissa .pawn-pulse { animation: none; opacity: 0; }
+.animaatio-kaynnissa .fokuslaatta-syke { animation-play-state: paused; }
 
 /*
  * LIIKKUVA NAPPULA EI SIIRRY ENÄÄ CSS-SIIRTYMÄLLÄ (#100). Hyppy on

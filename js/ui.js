@@ -6521,12 +6521,49 @@ export class UI {
     const kerroin = Number.isFinite(rx) && rx > 0
       ? (FOKUS_LAATTA_PX / 2) * s / rx
       : 1;
-    // Edellisen kaupungin osat takaisin omaan kokoonsa.
+    // Edellisen kaupungin osat takaisin omaan kokoonsa — ja näkyviin,
+    // jos nappula seisoi niiden päällä (nappulanAlla alla).
     for (const vanha of this.fokusLaattaOsat ?? []) {
-      if (!osat.includes(vanha)) this.asetaLaatanKoko(vanha, 1);
+      if (!osat.includes(vanha)) {
+        this.asetaLaatanKoko(vanha, 1);
+        vanha.classList.remove('nappulan-alla');
+      }
     }
     for (const osa of osat) this.asetaLaatanKoko(osa, kerroin);
     this.fokusLaattaOsat = osat;
+    /*
+     * LAATTA POIS NAPPULAN ALTA (omistajan pelitesti 27.8.2026,
+     * iPad-kaappaus Sofian fokuslaudalta: *"nappulan alla näkyy monta
+     * päällekkäistä kerrosta"*).
+     *
+     * Fokuslaudalla pelaajan sijainti oli merkitty kahdesti: ensin
+     * kaupungin omalla laatalla ja sen sykekehällä, sitten — v1194:stä
+     * lähtien, kun nappulan piilotussääntö poistui — tinaherralla, joka
+     * seisoo täsmälleen saman pisteen päällä. Päällekkäin ne lukivat
+     * sotkuisena pinona: kullanvärinen rengas, sykekehä, nappulan varjo
+     * ja vuoron rengas. Omistajan tilaus on yksiselitteinen: pelaajan
+     * sijainnissa näkyy VAIN tinaherra, sen oma varjo ja vuorossa
+     * ollessa yksi hillitty rengas.
+     *
+     * PIILOTUS KOSKEE VAIN SITÄ KOHTAA, JOSSA NAPPULA ON. Ehto on
+     * geometrinen eikä "tämä on nykyinen kaupunki": jos samassa
+     * kaupungissa on useampi pelaaja, nappulat levitetään kehälle
+     * (drawPawns, spread 17) eikä kukaan seiso enää laatan päällä —
+     * silloin laatta kuuluu näkyä, koska se ei ole kenenkään alla.
+     *
+     * SÄÄNTÖ ON LUOKKA EIKÄ SUODATIN (sama iOS-sääntö kuin kartan
+     * muillakin kerroksilla, tests/rules.test.mjs) ja sama keino kuin
+     * aarremerkin alle jäävällä laatalla (.aarre-laatan-alla).
+     *
+     * NAPAUTUSALUE JÄÄ: laatta on fokusnäkymän Tutki-nappi
+     * (fokusLaattaTutkii), ja sen näkymätön osuma-ympyrä piirretään
+     * omaan kerrokseensa alla. Nappula ei ota napautuksia vastaan
+     * (css .pawn-kuva pointer-events: none), joten tinaherran
+     * napauttaminen avaa tutkinnan täsmälleen kuten laatan napautus
+     * ennenkin — nyt hahmo itse on se, mitä napautetaan.
+     */
+    const nappulanAlla = this.nappulaKaupungissa(city);
+    for (const osa of osat) osa.classList.toggle('nappulan-alla', nappulanAlla);
 
     /*
      * NAPAUTUSALUE VAIN KUN TUTKI OLISI TARJOLLA. Ks. fokusLaattaTutkii:
@@ -6614,6 +6651,54 @@ export class UI {
       ankkuri.setAttribute('transform',
         `translate(${ankkuri.dataset.kx} ${ankkuri.dataset.ky}) scale(${zoom})`);
     }
+    /*
+     * SYKEKEHÄ SEURAA LAATTAA NAPPULAN ALLE. Kehä on laatan houkutus
+     * (*"Ateenan laatta sykkii kevyesti houkutellen klikkaamaan"*), ja
+     * kun laattaa itseään ei näy, kehä olisi pelkkä irrallinen
+     * kullanvärinen rengas nappulan ympärillä — juuri se, jonka
+     * omistaja luki pinon pohjimmaiseksi kerrokseksi.
+     *
+     * KEHÄ JÄÄ DOM:IIN, LUOKKA VIE SEN POIS. `display: none` pysäyttää
+     * animaation kokonaan (ei tyylinlaskentaa, ei asettelun likaamista
+     * kehyksittäin, ks. body.kartta-raahaus -lista), mutta säilyttää
+     * sekä kehän että sen säännöt siinä kunnossa, jossa ne palaavat
+     * heti kun nappula on muualla — mekanismi on tallella, vain tämä
+     * yksi paikka on vapautettu.
+     */
+    for (const syke of this.fokusLaattaKerros.querySelectorAll('.fokuslaatta-syke')) {
+      syke.classList.toggle('nappulan-alla', nappulanAlla);
+    }
+  }
+
+  /**
+   * Seisooko jonkun pelaajan nappula tämän kaupungin laatan päällä?
+   *
+   * Kysymys on GEOMETRINEN eikä "onko tämä nykyinen kaupunki": samassa
+   * kaupungissa olevat nappulat levitetään kehälle (drawPawns, spread
+   * 17 laudan yksikköä), jolloin laatan keskipiste jää paljaaksi eikä
+   * laattaa peitä kukaan. Raja on nappulan oma jalansija (NAPPULAN_R):
+   * sitä lähempänä hahmo peittää laatan, kauempana ei.
+   *
+   * Paikka luetaan nappulan data-määreistä, joihin drawPawns kirjoittaa
+   * sen — nappula asuu muunnoksessa, eikä koordinaatteja saa muuten
+   * selville ilman geometrian mittaamista (sama syy kuin
+   * paivitaFokusPallotin piilotussäännöllä).
+   *
+   * LIIKKUVA NAPPULA EI LASKE. Se on omassa kerroksessaan
+   * (.pawn-moving, animatePawn) matkalla pisteestä toiseen, ja sen
+   * paikka muuttuu joka kehyksellä; laatan piilottaminen sen mukaan
+   * välkyttäisi laattaa siirron ajan. Kun siirto päättyy, nappula
+   * piirretään takaisin omaan kerrokseensa ja sääntö puree.
+   */
+  nappulaKaupungissa(city) {
+    if (!city || !this.pawnLayer) return false;
+    for (const nappula of this.pawnLayer.querySelectorAll('.pawn')) {
+      const x = Number(nappula.dataset.x);
+      const y = Number(nappula.dataset.y);
+      if (!Number.isFinite(x) || !Number.isFinite(y)) continue;
+      if (Math.hypot(x - city.x, y - city.y) <= NAPPULAN_R) return true;
+    }
+    return false;
   }
 
   /**
@@ -6894,7 +6979,12 @@ export class UI {
     if (this.fokusLaattaKerros?.firstChild) this.fokusLaattaKerros.textContent = '';
     this.fokusLaattaAvain = null;
     if (!this.fokusLaattaOsat?.length) return;
-    for (const osa of this.fokusLaattaOsat) this.asetaLaatanKoko(osa, 1);
+    for (const osa of this.fokusLaattaOsat) {
+      this.asetaLaatanKoko(osa, 1);
+      // Laatta myös takaisin näkyviin: fokusnäkymän ulkopuolella
+      // nappula ei peitä sitä (ks. paivitaFokusLaatta, .nappulan-alla).
+      osa.classList.remove('nappulan-alla');
+    }
     this.fokusLaattaOsat = [];
   }
 
@@ -7805,13 +7895,26 @@ export class UI {
      * pyöreää nappulaa, mutta seisovan hahmon ympärillä se olisi
      * pystyssä oleva kehä keskellä säärtä. Litistetty ellipsi lukee
      * kartan pinnalla olevaksi valoksi — samasta perspektiivistä kuin
-     * varjo, joka on sen sisällä. Pelaajan väri jäi tähän: hahmo on
-     * kaikilla sama tinaherra.
+     * varjo, joka on sen sisällä.
+     *
+     * YKSI RENGAS, EI KAHTA (omistajan pelitesti 27.8.2026,
+     * iPad-kaappaus Sofian fokuslaudalta: nappulan alla oli *"monta
+     * päällekkäistä kerrosta"*). Renkaita oli tähän asti kaksi: tumma
+     * kehä ja sen päällä pelaajan värinen sykähdys (.pawn-pulse), joka
+     * laajeni puolitoistakertaiseksi ja himmeni. Fokuslaudalla, jossa
+     * merkit skaalataan ruudulle, se luki punertavana hehkuna hahmon
+     * jalkojen ympärillä — kolmantena kerroksena varjon ja kaupungin
+     * korostuksen päällä. Pelaajan väri jäi pois nappulasta kokonaan:
+     * hahmo on kaikilla sama tinaherra, eikä sykähdys kertonut vuorosta
+     * mitään, mitä tumma kehä ei kertoisi hillitymmin.
+     *
+     * SAMALLA KATOSI KARTAN AINOA JATKUVA SYKE NAPPULASSA. Sykähdys oli
+     * laudan SVG:n sisällä, joten jokainen kehys likasi koko laudan
+     * asettelun (ks. css `body.kartta-raahaus` -lista) ja pudotti
+     * ruudunpäivityksen mitatusti 60 fps:stä 15:een — siksi sille oli
+     * kaksi erillistä vaimennussääntöä. Ne poistuivat tämän mukana.
      */
     if (active) {
-      el('ellipse', {
-        cy: NAPPULAN_JALKA_Y, rx: 10.5, ry: 4, class: 'pawn-pulse', stroke: player.color,
-      }, g);
       el('ellipse', { cy: NAPPULAN_JALKA_Y, rx: 12, ry: 4.6, class: 'pawn-active-ring' }, g);
     }
     const hahmo = el('g', { class: 'pawn-hahmo' }, g);
