@@ -850,19 +850,30 @@ function kysyKohteesta(ui, kysymys) {
  *   • `kadonnut: true` — kohdetta ei ole enää olemassa. Kartalla merkki
  *     on TÄHTI (kohteenSymboli), ja ihmekuva on kortin ENSIMMÄINEN
  *     kuva: napautus vie suoraan suurennokseen, ilman välinappia.
+ *     Useimmilla kadonneilla se on kortin AINOA kuva — kohteesta ei ole
+ *     valokuvaa, koska kohdetta ei ole.
  *   • `kadonnut: false` — kohde on yhä pystyssä. Kartalla on kohteen
- *     tavallinen merkki, ja kortin yläosaan heti otsikon alle tulee
- *     "Koe ihme" -nappi, joka avaa ihmekuvan suurennoksena. Kuva ei ole
- *     kuvalistassa: kohteella on jo oma valokuva, ja kaksi rinnakkaista
+ *     tavallinen merkki, ja "Koe ihme" -nappi tulee kortissa
+ *     ENSIMMÄISEN KUVAN ALLE (omistajan tilaus 27.8.2026 ilta, Akropolis
+ *     iPhonella): pelaaja näkee ensin sen, mitä paikalla NYT on, ja
+ *     nappi seisoo juuri siinä kohdassa, jossa vanha rekonstruktiokuva
+ *     ennen oli. Ihmekuva ei ole kuvalistassa: kaksi rinnakkaista
  *     näkymää samasta paikasta hukuttaisi yllätyksen.
  *
  * NAUHAN PIIRTÄÄ PELI, EI KUVATIEDOSTO (Raamattu: *"peli piirtää nauhan
- * kuvan päälle, sitä ei polteta kuvatiedostoon"*). Nauha on DOM-elementti
- * kuvan vasemmassa yläkulmassa, ja SAMA komponentti (piirraIhmenauha)
- * käytetään kortin kuvapaikassa ja suurennoksessa — kaksi kopiota
- * erkanisi ensimmäisessä tyylimuutoksessa. Kuvaolio kantaa nauhan
- * tekstin kentässä `nauha`, joten piirtäjien ei tarvitse tietää
- * ihmeistä mitään: nauha on kuvan ominaisuus siinä missä selitekin.
+ * kuvan päälle, sitä ei polteta kuvatiedostoon"*). Nauha on DIAGONAALINEN
+ * KULMANAUHA kuvan vasemmassa yläkulmassa (omistajan tilaus 27.8.2026
+ * ilta): 45 asteen kaista, jonka päät jatkuvat kuvan reunojen yli ja
+ * jonka juuressa on tummempi taitoskolmio kummallakin reunalla — nauha
+ * näyttää kääriytyvän kuvan ympäri. Geometria on kokonaan css:ssä
+ * (css/fokuskohteet.css, osio MATKAKIRJAN IHME); täällä syntyy vain
+ * rakenne: kääre, kaksi taitetta ja tekstikaista.
+ *
+ * SAMA komponentti (piirraIhmenauha) käytetään kortin kuvapaikassa ja
+ * suurennoksessa — kaksi kopiota erkanisi ensimmäisessä
+ * tyylimuutoksessa. Kuvaolio kantaa nauhan tekstin kentässä `nauha`,
+ * joten piirtäjien ei tarvitse tietää ihmeistä mitään: nauha on kuvan
+ * ominaisuus siinä missä selitekin.
  * =================================================================== */
 
 /** Nauhan teksti — yksi totuus kortissa ja suurennoksessa. */
@@ -885,22 +896,38 @@ function kohteenIhmekuva(kohde) {
 }
 
 /**
- * Pergamenttinauha kuvan vasempaan yläkulmaan. Kutsuja antaa sen
- * elementin, jonka sisällä nauha kelluu (kortissa kuvanappi,
- * suurennoksessa kuvan oma kehys) — asemointi on css:ssä.
+ * Diagonaalinen pergamenttinauha kuvan vasempaan yläkulmaan. Kutsuja
+ * antaa sen elementin, jonka sisällä nauha kelluu (kortissa kuvanappi,
+ * suurennoksessa kuvan oma kehys) — kaikki mitat ja kulmat ovat
+ * css:ssä.
+ *
+ * KOLME OSAA, KOSKA KÄÄRIYTYMINEN ON KOLME KAPPALETTA: kaista on
+ * 45 asteen kulmaan käännetty tekstipalkki, joka jatkuu kuvan reunojen
+ * yli, ja kaksi taitetta ovat pienet tummemmat kolmiot ylä- ja
+ * vasemman reunan kohdalla — ne ovat se osa nauhaa, joka "menee kuvan
+ * taakse". Ilman taitteita kaista näyttäisi vain vinolta lipukkeelta.
+ * Kääre itse on nollan kokoinen piste kuvan kulmassa: kaikki kolme
+ * asemoidaan siitä, joten sama komponentti istuu kortin kuvaan ja
+ * suurennokseen pelkillä muuttujien arvoilla.
  */
 function piirraIhmenauha(isanta, teksti) {
   if (!teksti) return null;
-  const nauha = html('span', 'fokuskohde-ihmenauha', teksti);
+  const nauha = html('span', 'fokuskohde-ihmenauha');
   nauha.setAttribute('aria-hidden', 'true');
+  // Taitteet ennen kaistaa: kaista maalautuu niiden päälle, jolloin
+  // pyöristyksen tai puolen pikselin heiton jättämä sauma ei näy.
+  nauha.appendChild(html('span', 'fokuskohde-ihmetaite fokuskohde-ihmetaite-ylos'));
+  nauha.appendChild(html('span', 'fokuskohde-ihmetaite fokuskohde-ihmetaite-vasen'));
+  nauha.appendChild(html('span', 'fokuskohde-ihmekaista', teksti));
   isanta.appendChild(nauha);
   return nauha;
 }
 
 /**
- * "Koe ihme" -nappi kortin yläosaan, jos kohde on YHÄ OLEMASSA ja
- * sillä on ihmekuva. Nappi kantaa saman tähden kuin kadonneiden
- * kohteiden karttamerkki: sama lupaus, sama merkki.
+ * "Koe ihme" -nappi, jos kohde on YHÄ OLEMASSA ja sillä on ihmekuva.
+ * Paikan valitsee kutsuja (piirraKohdeKuvat: ensimmäisen kuvan alle).
+ * Nappi kantaa saman tähden kuin kadonneiden kohteiden karttamerkki:
+ * sama lupaus, sama merkki.
  */
 function piirraIhmenappi(ui, sisalto, kohde) {
   const kuva = kohteenIhmekuva(kohde);
@@ -933,7 +960,19 @@ function piirraKohdeKuvat(ui, sisalto, kohde) {
       nahty.add(tunnus);
       return true;
     });
-  for (const kuva of lista) piirraKohdeKuva(ui, sisalto, kuva);
+  /*
+   * "KOE IHME" ENSIMMÄISEN KUVAN ALLE eikä otsikon alle (omistajan
+   * tilaus 27.8.2026 ilta). Nappi asuu siinä kohdassa, jossa poistettu
+   * loistoaikarekonstruktio ennen oli: pelaaja näkee ensin valokuvan
+   * kohteen NYKYISESTÄ kunnosta, ja nappi lupaa sen viereen sen, miltä
+   * paikka näyttäisi ehjänä. Kuvaton kohde saa napin silti — muuten
+   * lupaus katoaisi kokonaan, jos kuva jäisi lataamatta.
+   */
+  lista.forEach((kuva, i) => {
+    piirraKohdeKuva(ui, sisalto, kuva);
+    if (i === 0) piirraIhmenappi(ui, sisalto, kohde);
+  });
+  if (!lista.length) piirraIhmenappi(ui, sisalto, kohde);
 }
 
 /*
@@ -975,8 +1014,17 @@ function piirraKohdeKuva(ui, sisalto, kuva) {
   img.alt = kuva.selite ?? '';
   asetaKohdeKuva(img, kuva, KOHDE_KUVAN_PX, () => kehys.remove());
   nappi.appendChild(img);
-  // Nauha napin sisään eikä kehykseen: kehyksessä on myös kuvateksti,
-  // ja nauhan on jäätävä kuvan päälle sen vasempaan yläkulmaan.
+  /*
+   * Nauha napin sisään eikä kehykseen: kehyksessä on myös kuvateksti,
+   * ja nauhan on jäätävä kuvan päälle sen vasempaan yläkulmaan.
+   *
+   * KEHYS SAA OMAN LUOKAN, koska kulmanauha jatkuu kuvan reunojen yli
+   * ja kortin sisältö on vieritettävä laatikko (`overflow-y: auto`),
+   * joka leikkaisi ylityksen pois. Luokka työntää kuvanapin irti
+   * sisällön ylä- ja vasemmasta reunasta juuri sen verran, että nauhan
+   * päät mahtuvat näkyviin.
+   */
+  if (kuva.nauha) kehys.classList.add('fokuskohde-kuva-nauhalla');
   piirraIhmenauha(nappi, kuva.nauha);
   nappi.addEventListener('click', (tapahtuma) => {
     tapahtuma.stopPropagation();
@@ -1784,10 +1832,8 @@ export function avaaFokuskohde(ui, kohde) {
   const sisalto = html('div', 'fokuskohde-sisalto');
   sisalto.appendChild(piirraKohdeYlarivi(kohde));
   sisalto.appendChild(html('h3', 'fokuskohde-otsikko', kohde.nimi));
-  // "Koe ihme" HETI OTSIKON ALLE (Raamattu, osio "Matkakirjan ihmeet":
-  // *"popupin yläosassa heti oma nappi, josta ihmeen pääsee kokemaan"*)
-  // — ennen kuvaa ja tekstiä, jotta lupaus näkyy ilman vieritystä.
-  piirraIhmenappi(ui, sisalto, kohde);
+  // Kuvat ja niiden mukana "Koe ihme" -nappi: nappi piirtyy kortin
+  // ENSIMMÄISEN kuvan alle (piirraKohdeKuvat), ei otsikon alle.
   piirraKohdeKuvat(ui, sisalto, kohde);
   piirraKohdeTeksti(ui, sisalto, kohde);
   piirraKohdeKysymykset(ui, sisalto, kohde);

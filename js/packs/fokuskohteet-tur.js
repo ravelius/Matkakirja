@@ -212,27 +212,10 @@ export const FOKUSKOHTEET_TUR = [
       lahde: 'Benh Lieu Song, Wikimedia Commons (CC BY-SA 3.0)',
     },
     /*
-     * ARTEMIIN TEMPPELI HAVAINNEKUVANA (omistajan tilaus 26.8.2026:
-     * kadonneiden ihmeiden erä; säännöt ja perustelut js/packs/
-     * fokuskohteet-grc.js:n vastaavassa lohkossa). Kuva syntyy
-     * .github/workflows/generoi-ihmeet.yml -ajossa; siihen asti
-     * kuvapaikka jää pois eikä mikään hajoa.
-     */
-    kuvat: [
-      {
-        osoite: 'assets/kartat/ihmeet/artemiin-temppeli.webp',
-        selite: 'Havainnekuva: Artemiin temppeli ehjänä. Viimeinen '
-          + 'temppeli tuhoutui vuonna 401 jaa., ja paikalla on nyt vain '
-          + 'perustukset ja yksi kokoon kasattu pylväs — mittasuhteet '
-          + 'ovat John Turtle Woodin kaivausten mittauksista.',
-        lahde: 'Matkakirjan havainnekuva',
-      },
-    ],
-    /*
      * MATKAKIRJAN IHME — säännöt js/packs/fokuskohteet-grc.js:n
      * samannimisessä lohkossa. `kadonnut: false`: Efesos itse on yhä
      * käveltävissä ja kohteella on oma valokuva, joten kartalla säilyy
-     * historian pylväs ja kortin yläosaan tulee "Koe ihme" -nappi.
+     * historian pylväs ja valokuvan alle tulee "Koe ihme" -nappi.
      */
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-artemiin-temppeli.webp',
@@ -1158,10 +1141,11 @@ export const FOKUSKOHTEET_TUR = [
   {
     /*
      * HALIKARNASSOKSEN MAUSOLEUMI (omistajan tilaus 26.8.2026,
-     * kadonneiden ihmeiden erä). Havainnekuvan säännöt — selite
-     * kertoo aina rekonstruktiosta ja lähderivi on 'Matkakirjan
-     * havainnekuva' — on kirjattu js/packs/fokuskohteet-grc.js:n
-     * vastaavaan lohkoon; sama pätee tässä.
+     * kadonneiden ihmeiden erä). Kohteella on vain `ihme`-kenttä:
+     * erän ensimmäinen, piirrosmainen rekonstruktio poistettiin
+     * 27.8.2026 illalla omistajan tilauksesta. Havainnekuvan säännöt on
+     * kirjattu js/packs/fokuskohteet-grc.js:n lohkoon "MATKAKIRJAN
+     * IHME"; sama pätee tässä.
      *
      * 27,4241 E / 37,0379 N — en-Wikipedia "Mausoleum at
      * Halicarnassus" (tietolaatikon coordinates). Efesos on 12
@@ -1196,15 +1180,8 @@ export const FOKUSKOHTEET_TUR = [
     lahde: 'en-Wikipedia "Mausoleum at Halicarnassus", johdanto, '
       + 'tietolaatikko sekä osiot "Destruction of the tomb" ja '
       + '"Discovery and excavation" (tarkistettu 26.8.2026).',
-    kuva: {
-      osoite: 'assets/kartat/ihmeet/halikarnassoksen-mausoleumi.webp',
-      selite: 'Havainnekuva: Halikarnassoksen mausoleumi ehjänä 300-luvulla '
-        + 'eaa. Rakennuksesta on jäljellä vain perustukset ja British '
-        + 'Museumiin viedyt veistokset — porrastettu pyramidikatto ja '
-        + 'vaunuryhmä huipulla ovat antiikin kuvausten mukaisia.',
-      lahde: 'Matkakirjan havainnekuva',
-    },
-    /* MATKAKIRJAN IHME (kadonnut) — säännöt fokuskohteet-grc.js:ssä. */
+    /* MATKAKIRJAN IHME (kadonnut) — säännöt fokuskohteet-grc.js:ssä.
+       Kohteen ainoa kuva: haudasta on jäljellä vain perustukset. */
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-halikarnassoksen-mausoleumi.webp',
       kadonnut: true,

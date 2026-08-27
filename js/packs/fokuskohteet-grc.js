@@ -123,11 +123,13 @@
  * Raamattu, osio "Matkakirjan ihmeet" (omistaja 27.8.2026): *"kadonnut
  * suuruus palautetaan pelaajan silmien eteen FOTOREALISTISENA KESKELLÄ
  * NYKYMAAILMAA … Saa kokea pienen ihmeen kun näkee jotain mitä on jo
- * tavallaan kadonnut nykymaailmasta."* Tämä on eri asia kuin alempana
- * kuvattu KADONNEET IHMEET JA LOISTOAIKA -erä: se palauttaa kohteen
- * omaan aikaansa 1800-luvun rekonstruktiopiirroksena, tämä nostaa sen
- * loistoaikaisena keskelle NYKYPÄIVÄN kaupunkia. Kohteella voi olla
- * kumpikin, ja moneen kohteeseen tuli molemmat.
+ * tavallaan kadonnut nykymaailmasta."*
+ *
+ * TÄMÄ ON KOHTEEN AINOA REKONSTRUKTIO (omistajan tilaus 27.8.2026
+ * ilta). Ensimmäinen erä (26.8.2026) oli 1800-luvun tyylinen
+ * rekonstruktiopiirros, joka palautti kohteen omaan aikaansa; ne kuvat
+ * POISTETTIIN kaikilta kymmeneltä ihmekohteelta, koska fotorealistinen
+ * ihmekuva korvaa ne. Samasta kohteesta ei näytetä kahta havainnekuvaa.
  *
  * KENTTÄ (js/fokuskohteet.js kohteenIhmekuva):
  *
@@ -141,12 +143,13 @@
  *
  * `kadonnut: true` — kohdetta ei ole enää olemassa: kartalla merkki on
  * TÄHTI (voittaa kohteen oman `symboli`-kentän) ja ihmekuva on kortin
- * ensimmäinen kuva. `kadonnut: false` — kohde on yhä pystyssä: kartalla
- * on kohteen tavallinen merkki ja kortin yläosassa "Koe ihme" -nappi.
+ * ensimmäinen — useimmiten ainoa — kuva. `kadonnut: false` — kohde on
+ * yhä pystyssä: kartalla on kohteen tavallinen merkki ja kortissa
+ * VALOKUVAN ALLA "Koe ihme" -nappi.
  *
- * SELITTEEN SÄÄNTÖ ON ERI KUIN LOISTOAIKAKUVILLA, ja se on tietoinen
- * ero. Loistoaikakuvan selite alkaa sanalla "Havainnekuva" ja kertoo,
- * mihin muoto perustuu. Ihmekuvan selite kertoo KOHTEESTA eikä kuvasta
+ * SELITTEEN SÄÄNTÖ ON ERI KUIN VANHOILLA LOISTOAIKAKUVILLA, ja se on
+ * tietoinen ero. Loistoaikakuvan selite alkoi sanalla "Havainnekuva" ja
+ * kertoi, mihin muoto perustuu. Ihmekuvan selite kertoo KOHTEESTA eikä kuvasta
  * — mitä paikalla oli ja mitä siellä on nyt — ja havainnekuvamerkintä
  * on `lahde`-rivillä, jonka peli näyttää aina selitteen vieressä.
  * Lisäksi peli piirtää kuvan vasempaan yläkulmaan nauhan "Matkakirjan
@@ -730,27 +733,9 @@ export const FOKUSKOHTEET_GRC = [
       lahde: 'Steve Swayne, Wikimedia Commons (CC BY 2.0)',
     },
     /*
-     * PARTHENON LOISTOSSAAN (omistajan tilaus 26.8.2026, sarja
-     * "loistoaika"). Valkoinen marmoriraunio on se, minkä pelaaja
-     * tuntee; valmis temppeli oli katettu ja MAALATTU — "the decorative
-     * stonework was originally coloured" (en-Wikipedia "Parthenon").
-     * Havainnekuva näyttää sen. Vain kuvat-lista koskettaa tätä
-     * lohkoa: koordinaatteihin EI saa koskea (rinnakkainen tutkinta).
-     */
-    kuvat: [
-      {
-        osoite: 'assets/kartat/ihmeet/parthenon-loistossaan.webp',
-        selite: 'Havainnekuva: Parthenon ehjänä ja väreissään pian '
-          + 'valmistumisensa jälkeen 432 eaa. Temppelin koristeveistokset '
-          + 'olivat alun perin maalattuja — nykyinen valkoinen marmori on '
-          + 'kahdenkymmenenviiden vuosisadan jälki.',
-        lahde: 'Matkakirjan havainnekuva',
-      },
-    ],
-    /*
      * MATKAKIRJAN IHME (ks. lohko tiedoston alussa). `kadonnut: false`:
      * Parthenon seisoo yhä kalliolla, joten kartalla säilyy historian
-     * pylväs ja kortin yläosaan tulee "Koe ihme" -nappi.
+     * pylväs ja valokuvan alle tulee "Koe ihme" -nappi.
      */
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-parthenon.webp',
@@ -900,27 +885,6 @@ export const FOKUSKOHTEET_GRC = [
         + 'mittayksikkö stadion.',
       lahde: 'dronepicr, Wikimedia Commons (CC BY 2.0)',
     },
-    /*
-     * ZEUKSEN PATSAS — KADONNUT IHME HAVAINNEKUVANA (omistajan tilaus
-     * 26.8.2026: "peliin voisi generoida kaikki antiikin kadonneet
-     * ihmeet"). Patsaasta ei ole yhtään kuvaa eikä kappaletta: sen
-     * muoto tunnetaan vain antiikin kuvauksista ja kolikoista
-     * (en-Wikipedia "Statue of Zeus at Olympia"). Kuva on siis pelin
-     * OMA havainnekuva eikä valokuva mistään, ja selite sanoo sen
-     * suoraan. Tiedosto syntyy .github/workflows/generoi-ihmeet.yml
-     * -ajossa; siihen asti kuvapaikka jää tyhjänä pois (js/
-     * fokuskohteet.js piirraKohdeKuva poistaa kehyksen).
-     */
-    kuvat: [
-      {
-        osoite: 'assets/kartat/ihmeet/zeuksen-patsas.webp',
-        selite: 'Havainnekuva: Feidiaan Zeus-patsas temppelissään noin '
-          + '435 eaa. Patsas oli 12,4 metriä korkea, kullasta ja '
-          + 'norsunluusta, eikä siitä ole säilynyt palaakaan — muoto '
-          + 'tunnetaan vain antiikin kuvauksista ja kolikoista.',
-        lahde: 'Matkakirjan havainnekuva',
-      },
-    ],
     /*
      * MATKAKIRJAN IHME (ks. lohko tiedoston alussa). Kohde on OLYMPIA,
      * ja Olympia on yhä olemassa: rauniot ovat käveltävissä ja
@@ -1314,29 +1278,27 @@ export const FOKUSKOHTEET_GRC = [
     },
   },
   /*
-   * ── KADONNEET IHMEET JA LOISTOAIKA (omistajan tilaus 26.8.2026:
+   * ── KADONNEET IHMEET (omistajan tilaus 26.8.2026:
    *    "peliin voisi generoida kaikki antiikin kadonneet ihmeet sekä
    *    jos on muita vastaavia kadonneita, niin generoidaan ne kaikki"
    *    + Hefaistoksen temppelistä: "tämäkin olisi mielenkiintoinen
    *    nähdä generoituna") ────────────────────────────────────────────
    *
-   * Näiden kohteiden ainoa kuva on PELIN OMA HAVAINNEKUVA
-   * (assets/kartat/ihmeet/, generointi .github/workflows/
+   * Kadonneiden kohteiden ainoa kuva on PELIN OMA HAVAINNEKUVA, ja se
+   * on kohteen `ihme`-kentässä (ks. lohko tiedoston alussa;
+   * assets/kartat/ihmeet/ihme-*.webp, generointi .github/workflows/
    * generoi-ihmeet.yml). Se on tietoinen poikkeus talon kuvasääntöön:
-   * kohteesta ei ole valokuvaa, koska kohdetta ei ole. Kaksi ehtoa,
-   * joista kumpaakaan ei saa purkaa:
+   * kohteesta ei ole valokuvaa, koska kohdetta ei ole. Rehellisyys
+   * hoidetaan kahdesti eikä kertaakaan väitetä valokuvaa: lähderivi on
+   * 'Matkakirjan havainnekuva: …' ja peli piirtää kuvan kulmaan nauhan
+   * "Matkakirjan ihme". Kumpaakaan ei saa purkaa.
    *
-   *   1. SELITE SANOO SEN AINA. Jokainen selite alkaa sanalla
-   *      "Havainnekuva" ja kertoo, mihin muoto perustuu — kolikkoon,
-   *      kaivauspiirrokseen, antiikin kuvaukseen. Pelaaja ei saa
-   *      luulla katsovansa valokuvaa.
-   *   2. LÄHDERIVI ON 'Matkakirjan havainnekuva'. Ei tekijää, ei
-   *      lisenssiä, koska kuva ei ole kenenkään muun.
-   *
-   * Kuvakenttä on `osoite` eikä `tiedosto`: polku on repossa eikä
-   * Commonsissa (js/fokuskohteet.js kohdeKuvaOsoite). Ennen
-   * kuvaerän ajoa tiedostoa ei ole, ja kohde toimii silti — puuttuva
-   * kuva poistaa vain kuvapaikan.
+   * ERILLISTÄ LOISTOAIKAKUVAA EI ENÄÄ OLE (omistajan tilaus 27.8.2026
+   * ilta): erän ensimmäiset, piirrosmaiset rekonstruktiot poistettiin
+   * kaikilta kymmeneltä ihmekohteelta, koska fotorealistinen ihmekuva
+   * korvaa ne. Kadonneilta kohteilta poistui samalla `kuva`-kenttä
+   * kokonaan, ja Knossos sekä antiikin agora saivat tilalle oikean
+   * Commons-valokuvan.
    *
    * NÄITÄ EI OLE NOSTETTU YHDENKÄÄN KAUPUNGIN VIRTAAN. Jos joku
    * nostetaan, `nappi`-rivi on valmiina — mutta fokusvirran pinnikuva
@@ -1378,15 +1340,8 @@ export const FOKUSKOHTEET_GRC = [
       + 'kiistellään yhä.',
     lahde: 'en-Wikipedia "Colossus of Rhodes", johdanto-osa (tarkistettu '
       + '26.8.2026); koordinaatit en-Wikipedia "Rhodes (city)".',
-    kuva: {
-      osoite: 'assets/kartat/ihmeet/rodoksen-kolossi.webp',
-      selite: 'Havainnekuva: Helioksen pronssipatsas Rodoksen sataman '
-        + 'yllä 200-luvulla eaa. Patsaasta ei ole säilynyt palaakaan '
-        + 'eikä yhtään aikalaiskuvaa — koko, aihe ja seppelekruunu '
-        + 'ovat antiikin kirjoittajien kuvauksista.',
-      lahde: 'Matkakirjan havainnekuva',
-    },
-    /* MATKAKIRJAN IHME (kadonnut) — ks. lohko tiedoston alussa. */
+    /* MATKAKIRJAN IHME (kadonnut) — ks. lohko tiedoston alussa. Kohteen
+       ainoa kuva: patsaasta ei ole valokuvaa eikä aikalaiskuvaa. */
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-rodoksen-kolossi.webp',
       kadonnut: true,
@@ -1435,19 +1390,32 @@ export const FOKUSKOHTEET_GRC = [
       + 'maallaan.',
     lahde: 'en-Wikipedia "Knossos", johdanto, tietolaatikko ja osio '
       + '"Excavation" (tarkistettu 26.8.2026).',
+    /*
+     * PÄÄKUVA ON VALOKUVA KOHTEEN NYKYISESTÄ KUNNOSTA (omistajan
+     * täsmennys 27.8.2026 ilta): piirrosmainen loistoaikarekonstruktio
+     * poistettiin, ja generoitu ihmekuva aukeaa vain "Koe ihme"
+     * -napista. Kohteella ei ollut omaa valokuvaa, joten tähän tuli
+     * pelissä jo käytössä oleva Commons-kuva palatsin pohjoisesta
+     * sisäänkäynnistä (sama tiedosto kuin js/packs/europe-valokuvat.js
+     * Kreetan lisäkuvissa) — eri kuva kuin Iraklionin kohteella, jotta
+     * viereiset merkit eivät avaa samaa näkymää kahdesti. Lisenssi,
+     * tekijä ja koko tarkistettu Commonsin imageinfo-rajapinnasta
+     * 27.8.2026: CC0, Jebulon, 4315×2872, Restrictions tyhjä; kuva
+     * katsottu silmin.
+     */
     kuva: {
-      osoite: 'assets/kartat/ihmeet/knossos-loistossaan.webp',
-      selite: 'Havainnekuva: Knossoksen palatsin keskuspiha käytössä '
-        + 'noin 1500 eaa. Punaiset ylöspäin levenevät pylväät ja '
-        + 'seinämaalaukset tunnetaan kaivausten löydöistä; katot ja '
-        + 'yläkerrat ovat tulkintaa.',
-      lahde: 'Matkakirjan havainnekuva',
+      tiedosto: 'Knossos North entrance bull fresco.jpg',
+      selite: 'Palatsin pohjoinen sisäänkäynti kaivettiin esiin '
+        + '1900-luvun alussa. Arthur Evans pystytti sen punaiset pylväät '
+        + 'uudelleen betonista ja teetti seinään jäljennöksen '
+        + 'härkäfreskosta, jonka alkuperäinen on Iraklionin museossa.',
+      lahde: 'Jebulon, Wikimedia Commons (CC0)',
     },
     /*
      * MATKAKIRJAN IHME (ks. lohko tiedoston alussa). `kadonnut: false`:
      * palatsin rauniot kaivettiin esiin ja ne ovat Kreetan käydyin
      * kohde — paikka on tallella, joten kartalla säilyy historian
-     * pylväs ja kortissa on "Koe ihme" -nappi.
+     * pylväs ja valokuvan alla on "Koe ihme" -nappi.
      */
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-knossos.webp',
@@ -1495,13 +1463,22 @@ export const FOKUSKOHTEET_GRC = [
     lahde: 'en-Wikipedia "Ancient Agora of Athens" (johdanto ja '
       + 'tietolaatikko) sekä "Temple of Hephaestus" (johdanto ja '
       + 'tietolaatikko) — tarkistettu 26.8.2026.',
+    /*
+     * PÄÄKUVA ON VALOKUVA KOHTEEN NYKYISESTÄ KUNNOSTA (sama täsmennys
+     * 27.8.2026 ilta kuin Knossoksella). Tiedosto on pelissä jo
+     * käytössä nähtävyysjutuissa (js/packs/nahtavyysjutut.js, Ateenan
+     * antiikin agora), ja se näyttää kummankin puolen kohteesta:
+     * temppelin kukkulalla ja torikentän pylväänkannot etualalla.
+     * Lisenssi, tekijä ja koko tarkistettu Commonsin
+     * imageinfo-rajapinnasta 27.8.2026: CC0, Jebulon, 4536×3019,
+     * Restrictions tyhjä; kuva katsottu silmin.
+     */
     kuva: {
-      osoite: 'assets/kartat/ihmeet/hefaistoksen-temppeli.webp',
-      selite: 'Havainnekuva: Hefaistoksen temppeli maalattuna loistonsa '
-        + 'aikaan 400-luvulla eaa. Doorilainen marmoritemppeli seisoo yhä '
-        + 'agoran laidalla, mutta värit ovat kuluneet pois — nämä '
-        + 'noudattavat antiikin temppelien tunnettua väritystapaa.',
-      lahde: 'Matkakirjan havainnekuva',
+      tiedosto: 'Temple of Hephaestus from ancient agora Athens.jpg',
+      selite: 'Hefaistoksen temppeli seisoo Agoraios Kolonos '
+        + '-kukkulalla antiikin torin laidalla. Kaivetulta agorakentältä '
+        + 'nousee sen alapuolella yhä rivi pylväänkantoja.',
+      lahde: 'Jebulon, Wikimedia Commons (CC0)',
     },
     /*
      * MATKAKIRJAN IHME (ks. lohko tiedoston alussa). `kadonnut: false`:
