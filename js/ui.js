@@ -245,7 +245,7 @@ import { MAASTON_VARJOSTUS } from './packs/maailmankartta-varjostus.js';
 import { Kartta } from './kartta.js';
 // Fokusmoodin maakohtainen topografiapohja (paketti 2).
 import {
-  esilammitaFokuspohja,
+  esilammitaFokuspohja, esilataaMatkanLehti,
   fokusAtlasIkkunat, paivitaFokusAtlas, paivitaFokuskartta, paivitaFokusNimet,
   paivitaLennonLehdet, nollaaFokuskartta,
 } from './fokuskartta.js';
@@ -3875,9 +3875,37 @@ export class UI {
     const pane = this.mapPane;
     if (!pane) return null;
     const vb = this.svg.viewBox?.baseVal;
-    const laatikko = this.svg.getBoundingClientRect();
-    const paneeli = pane.getBoundingClientRect();
-    if (!vb?.width || !laatikko.width) return null;
+    if (!vb?.width) return null;
+    /*
+     * RUUDUN LAATIKOT LUETAAN KERRAN TEHTÄVÄÄ KOHTI (mitattu 28.8.2026,
+     * saapuminen uuteen maahan, 4x kuristus).
+     *
+     * Tätä kutsutaan yhden piirron aikana yli kolmekymmentä kertaa —
+     * fokusmerkit, kohteet, mittajana, atlas, sumuverho — ja jokainen
+     * kutsu lukee kaksi getBoundingClientRectia. Koska piirto myös
+     * KIRJOITTAA DOMiin kutsujen välissä, jokainen luku pakotti tuoreen
+     * tyylilaskennan: jäljityksessä yhdessä kehyksessä 47 kertaa
+     * UpdateLayoutTree ja 41 kertaa Layout, yhteensä 725 ms + 214 ms.
+     * Se on klassinen asettelupiiska (layout thrashing).
+     *
+     * MUISTI KESTÄÄ TASAN YHDEN TEHTÄVÄN. Se tyhjennetään heti
+     * mikrotehtävässä, joten seuraava napautus, ele, ajastin tai
+     * rAF-kehys mittaa taas tuoreeltaan. Yhden synkronisen tehtävän
+     * sisällä kartan RUUTU ei liiku — liikkuu vain viewBox, ja se
+     * luetaan tässä joka kerta uudestaan (vb.baseVal yllä), joten
+     * panorointi ja zoomi saavat yhä oikeat luvut.
+     */
+    let mitat = this.nakyvanMitat;
+    if (!mitat) {
+      mitat = {
+        laatikko: this.svg.getBoundingClientRect(),
+        paneeli: pane.getBoundingClientRect(),
+      };
+      this.nakyvanMitat = mitat;
+      Promise.resolve().then(() => { this.nakyvanMitat = null; });
+    }
+    const { laatikko, paneeli } = mitat;
+    if (!laatikko.width) return null;
     const skaala = laatikko.width / vb.width;
     return {
       x: vb.x + Math.max(0, paneeli.left - laatikko.left) / skaala,
@@ -16526,6 +16554,16 @@ export class UI {
   async animatePawnSisalla(player, from, path, stepMs = STEP_MS, { saatto = false, maitse = false } = {}) {
     if (!path || path.length === 0) return;
     const { board } = this.game;
+    /*
+     * KOHDEMAAN LEHTI HAKUUN HETI, ei vasta perillä (omistajan
+     * laitepalaute 28.8.2026). Kartan piirto — ja siis lehden nouto —
+     * ajetaan vasta animaation jälkeen (run → finally → render), joten
+     * ilman tätä koko megatavujen lehti haettiin ja purettiin siinä
+     * hetkessä, jossa pelaaja katsoo karttaa. Ks. fokuskartta.js
+     * esilataaMatkanLehti; purku tehdään työntekijässä eikä siis vie
+     * kehyksiä tältä animaatiolta.
+     */
+    esilataaMatkanLehti(this, path[path.length - 1]);
 
     this.movingPlayerId = player.id;
     this.drawPawns();
