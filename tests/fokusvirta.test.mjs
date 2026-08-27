@@ -629,3 +629,34 @@ test('kadonnut ihme saa kartalle tähden, olemassa oleva pitää oman merkkinsä
     'Kheopsin pyramidi on antiikin ihmeistä ainoa pystyssä oleva');
   assert.ok(pyramidi.kuva?.tiedosto, 'pyramidista on valokuva nykytilasta');
 });
+
+/*
+ * JOKAISELLA KATEGORIALLA ON OMA VIIVAMERKKI KARTALLA (27.8.2026 ilta, omistajan
+ * palaute laitteelta v1211: raskaat mustepiirrokset vaihtuivat
+ * poltetun vuorikolmion tyylisiin viivamerkkeihin).
+ *
+ * Tuntematon kategoria putoaa huutomerkkiin (nostosymMiniTunnus), ja
+ * se on kartalla täysin äänetön virhe: merkki piirtyy, kortti kertoo
+ * oikean luokan eikä mikään kaadu — vain skandaalin merkki lupaa
+ * väärää. Uuden kategorian lisääjä huomaa puutteen tästä.
+ */
+test('jokaisella symbolikategorialla on oma viivamerkki kartalla', async () => {
+  const { NOSTOSYM_TYYPIT, nostosymMiniTunnus } = await import('../js/fokusnosto-symbolit.js');
+  for (const tyyppi of NOSTOSYM_TYYPIT) {
+    const tunnus = nostosymMiniTunnus(tyyppi);
+    if (tyyppi === 'huuto') {
+      assert.equal(tunnus, 'huuto');
+      continue;
+    }
+    assert.notEqual(tunnus, 'huuto', `kategorialta ${tyyppi} puuttuu viivamerkki`);
+  }
+  /*
+   * LUONNOLLA ON KAKSI MUOTOA: kallio ja vesi. Kortin ylärivi puhuu
+   * yhdestä Luonto-luokasta, mutta kartalla vuori on kolmio ja meri
+   * aaltoviiva — juuri se pari, jonka omistaja nimesi.
+   */
+  assert.equal(nostosymMiniTunnus('luonto', 'vuori'), 'vuori');
+  assert.equal(nostosymMiniTunnus('luonto', 'saari'), 'vuori');
+  assert.equal(nostosymMiniTunnus('luonto', 'meri'), 'meri');
+  assert.equal(nostosymMiniTunnus('luonto', 'joki'), 'meri');
+});

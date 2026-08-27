@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1215: Kartan fokuskohdemerkit vaihtuivat superyksinkertaisiin viivamerkkeihin ja nimiot poltetun nimen typografiaan - mustepiirrokset elavat nyt vain pop-upeissa; tarkista vanhan kartan tuntu Kreikan lehdella',
   'v1214: Kreikan lehdelle kolme uutta kohdetta (Smolikas, Kreetanmeri, Traakianmeri) nimipudotuksen tilalle, ja Pindos-merkki siirtyi vuoriston keskelle pois Smolikaksen huipulta - tarkista etta merkit ja kortit toimivat',
   'v1213: Maataulun lisatiedot suoraan maan nimen ylapuolella, blur jatkuu nimen alle ja haipyy pehmeasti reunoilta, sumennus kevyempi - tarkista Kreikan fokusnakymassa puhelimella',
   'v1212: Ihmenauhan MATKAKIRJAN IHME -teksti pienennetty niin etta se mahtuu kokonaan, ja taitekohtaan selkea taitejuova + valoharja - tarkista iPadilla ihmekuvan suurennoksesta ja kortista',

@@ -326,10 +326,18 @@ vaadi('osuma-alue on lehden perustasolla vähintään 44 px',
  * vaaditaan ettei sitä ole ja että nimiö on.
  *
  * MERKKI LUETAAN RASTERIN DATA-MÄÄREISTÄ (omistajan lisätilaus
- * 27.8.2026): glyyfi ja nimiö piirretään yhdeksi kuvaksi canvasilla, ja
- * <image href> on siksi data-URL eikä sym-<tunnus>.webp. Piirtäjä
- * merkitsee kuvaan `data-symboli` ja `data-nimio`, ja niistä
- * lukemalla vartija tietää yhä, minkä merkin ja minkä nimen kohde sai.
+ * 27.8.2026): merkki ja nimiö piirretään yhdeksi kuvaksi canvasilla, ja
+ * <image href> on siksi data-URL. Piirtäjä merkitsee kuvaan
+ * `data-symboli` ja `data-nimio`, ja niistä lukemalla vartija tietää
+ * yhä, minkä merkin ja minkä nimen kohde sai.
+ *
+ * VIIVAMERKKI (27.8.2026 ilta, omistajan palaute laitteelta v1211: generoidut
+ * mustepiirrokset ovat *"aivan liian raskaita"*): kartalla merkki on
+ * nyt viivoja poltetun vuorikolmion mitassa ja musteessa
+ * (js/fokusnosto-symbolit.js NOSTOSYM_MINI), eikä kartalle ladata
+ * enää yhtään sym-*.webp-kuvaa — ne jäivät kortin ylärivin
+ * luokkatunnuksiksi. Vartijan väitteet lukevat data-määreitä, joten ne
+ * eivät muuttuneet.
  */
 const taksonomia = await sivu.evaluate(() => {
   const luokat = (id) => {
@@ -480,10 +488,15 @@ vaadi('ladottu nimiö ei mene naapurin symbolin eikä nimiön päälle',
  * Kreikassa ei ole tällä hetkellä yhtään kierroskohdetta). Vartija
  * kääntyi: silmän saa vain kohde, jolla on OIKEASTI kierroksia, eikä
  * sellaisia nyt ole.
+ *
+ * TUNNUS LUETAAN RASTERIN MÄÄREESTÄ eikä kuvan osoitteesta (27.8.2026):
+ * kartalla ei ole enää webp-glyyfejä, joten `href`iin katsova koe
+ * olisi tyhjä lupaus — se menisi läpi vaikka jokainen merkki olisi
+ * silmä.
  */
 const silmia = await sivu.evaluate(
-  () => new Set([...document.querySelectorAll('.fokuskohde image')]
-    .filter((k) => (k.getAttribute('href') ?? '').endsWith('sym-silma.webp'))
+  () => new Set([...document.querySelectorAll('.fokuskohde .nostosym-rasteri')]
+    .filter((k) => k.dataset.symboli === 'silma')
     .map((k) => k.closest('.fokuskohde').dataset.kohde)).size,
 );
 vaadi('silmäsymboli vain kierroskohteilla (nyt 0)', silmia === 0, `${silmia} silmää`);
@@ -507,7 +520,7 @@ const erottelu = await sivu.evaluate(() => {
    * LEVEYS LUETAAN KORKEUDESTA. Symbolimerkin kuvassa on 27.8.2026
    * alkaen glyyfin lisäksi nimiö, joka jatkuu merkin oikealle
    * puolelle: laatikon leveys on siis nimen mittainen, korkeus taas
-   * täsmälleen merkin oma mitta (NOSTOSYM_R * 2 kohdemerkin
+   * täsmälleen merkin oma ruutu (NOSTOSYM_MINI_RUUTU * 2 kohdemerkin
    * mittakaavassa) — sama luku, jolla erottelupassi
    * (eritteleKohdeRyhmat) laskee. Pistekohteen halo on ympyrä, joten
    * sillä korkeus ja leveys ovat sama asia.
