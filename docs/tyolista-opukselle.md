@@ -376,9 +376,12 @@ kaupunkeihin, et lehtiin, et oppaaseen.
    (lat/lon `maakartat.js`:ään), miniatyyripiirroksen (yksi otto per
    kohde, ks. piirrosputken kustannussääntö) ja oman
    nähtävyysjutun kuvineen ja lisenssitodennuksineen.
-3. **Kaksi kohdetta on ilman juttua jo nyt** — korjaa ne samalla:
-   Wienin **Schönbrunn** ja Budapestin **Sankarien aukio** ovat
-   kartalla mutta avaavat wiki-ponnahduksen oman juttunsa sijaan.
+3. ✅ **Juttupuutteet hoidettu.** Wienin **Schönbrunn** (v892) ja
+   Budapestin **Sankarien aukio** (v903–904) saivat omat juttunsa,
+   eikä kummankaan kohdalla enää avaudu wiki-ponnahdus. Tarkistettu
+   27.8.2026 vertaamalla `maakartat.js`:n kaikkien kaupunkien
+   `kohteet`-nimet `nahtavyysjutut.js`:n avaimiin: yhtään ilman
+   omaa juttua olevaa kartan kohdetta ei enää ole.
 
 ### Valmis malli
 

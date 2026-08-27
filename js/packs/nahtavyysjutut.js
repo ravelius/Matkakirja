@@ -2228,13 +2228,26 @@ export const NAHTAVYYSJUTUT = {
      * tiivistetty omin sanoin; kuvien lisenssit ja tekijät todennettu
      * Commonsin API:sta ja kuvat katsottu silmin.
      *
-     * PYLVÄÄN MITAT hu-Wikipediasta ("Millenniumi emlékmű", haettu
-     * 18.8.2026): pylväs 36 metriä, Gabriel lähes 5 metriä, pylväiköt
-     * 85 metriä leveät ja 13 metriä korkeat, niiden väli 20 metriä.
-     * en-Wikipedia EI anna näitä lukuja — lehden kansikuvan selitteen
-     * "36 metriä korkea pylväs" on siis oikein, ja lähde on nyt
-     * kirjattu. Älä poista lukua sillä perusteella, ettei se löydy
-     * en-artikkelista.
+     * MITAT hu-Wikipediasta ("Millenniumi emlékmű", tarkistettu
+     * uudelleen 27.8.2026): keskuspylväs 36 metriä, Gabriel lähes
+     * 5 metriä. Muistomerkki on puoliympyrän muotoinen ja sen mitat
+     * koskevat KOKONAISUUTTA: "félköríves alakban, 85 méter széles,
+     * 25 m mély, magassága 13 m, a két oszlopcsarnok között a
+     * távolság 20 méter". 85 metriä EI siis ole yhden pylväikön
+     * leveys — aiempi teksti väitti niin, ja se on korjattu.
+     * en-Wikipedia EI anna näitä lukuja lainkaan; älä poista lukuja
+     * sillä perusteella, ettei niitä löydy en-artikkelista.
+     *
+     * TÄYDENNYS 27.8.2026: aukiota reunustavat museot (Szépművészeti
+     * Múzeum 1900–1906, Műcsarnok valmis 1896, molemmat Schickedanzin
+     * ja Fülöp Herzogin piirtämiä) ja Andrássy útin maailmanperintö-
+     * status (Unesco 2002) on lisätty; lähteet en-Wikipedia
+     * (Museum of Fine Arts (Budapest), Hall of Art, Budapest,
+     * Andrássy Avenue).
+     *
+     * KUVATEKSTIT 27.8.2026 uuteen sitovaan muotoon: selite kertoo
+     * FAKTAN KOHTEESTA, ei kuvaile sitä mitä kuvassa näkyy. Kuvat
+     * itse ovat ennallaan.
      */
     'Sankarien aukio': {
       aika: '1896–1906',
@@ -2246,7 +2259,12 @@ export const NAHTAVYYSJUTUT = {
           + 'päähän nousi aukio muistomerkkeineen. Työt alkoivat 1896, '
           + 'aukio sai nimensä 1900, ja muistomerkki vihittiin lopulta '
           + '1906. Suunnittelija oli arkkitehti Albert Schickedanz, '
-          + 'joka piirsi myös aukion molemmat museot.'
+          + 'joka piirsi myös aukiota reunustavat museot: '
+          + 'Taidemuseon eli Szépművészeti Múzeumin, joka valmistui '
+          + 'muistomerkin tavoin 1906, ja sitä vastapäätä seisovan '
+          + 'Taidehallin eli Műcsarnokin, joka oli valmis jo 1896. '
+          + 'Andrássy-katu aukioineen ja metroineen on ollut Unescon '
+          + 'maailmanperintökohde vuodesta 2002.'
         + '\n\n'
         + 'Keskellä kohoaa 36 metriä korkea pylväs, jonka huipulla '
           + 'lähes viisimetrinen arkkienkeli Gabriel kantaa oikeassa '
@@ -2258,9 +2276,10 @@ export const NAHTAVYYSJUTUT = {
           + 'pylväiköissä seisoo neljätoista Unkarin hallitsijaa ja '
           + 'vapaustaistelijaa, ja pylväiköiden päällä on neljä '
           + 'allegoriaa: työ ja vauraus, sota, rauha sekä tieto ja '
-          + 'kunnia. Pylväikköjä on kaksi, kumpikin 85 metriä leveä ja '
-          + '13 metriä korkea, ja niiden väliin jää kaksikymmentä '
-          + 'metriä avointa kivetystä.'
+          + 'kunnia. Pylväikköjä on kaksi, ja yhdessä ne muodostavat '
+          + 'puoliympyrän, joka on kokonaisuudessaan 85 metriä leveä, '
+          + '25 metriä syvä ja 13 metriä korkea; pylväikköjen väliin '
+          + 'jää kaksikymmentä metriä avointa kivetystä.'
         + '\n\n'
         + 'Kaikki eivät ole seisoneet siellä alusta asti. Kun aukio '
           + 'rakennettiin, Unkari oli osa Itävalta-Unkaria ja vasemman '
@@ -2277,18 +2296,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: "Heroes' Square (Budapest) 20180824.jpg",
-          selite: 'Sankarien aukio sivusta: keskellä uurrettu pylväs, jonka '
-            + 'huipulla Gabriel levittää siipensä, juurella ratsastajien '
-            + 'pronssiryhmä ja molemmin puolin kaartuvat pylväiköt '
-            + 'patsaineen.',
+          selite: 'Millenniumi-muistomerkin puoliympyrä on 85 metriä leveä '
+            + 'ja 13 metriä korkea, ja sen keskeltä nouseva pylväs yltää '
+            + '36 metriin.',
           lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Statues (Seven chieftains) in Heroes\' Square, Budapest (2026).jpg',
-          selite: 'Seitsemän päällikön ryhmä läheltä: hevoset ovat '
-            + 'patinoituneet vihreiksi, ratsastajilla on sarvipäähineet '
-            + 'ja turkikset, ja jalustan kiveen on veistetty '
-            + 'koristereliefi.',
+          selite: 'Ratsastajaryhmän veisti György Zala, ja päälliköistä '
+            + 'Árpádin takana kulkevat Előd, Ond, Kond, Tas, Huba ja '
+            + 'Töhötöm, joiden ulkonäöstä ei tiedetä mitään.',
           lahde: 'Max263, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],

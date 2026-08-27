@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1181, teksti: 'Sankarien aukion faktakorjaus ja taydennys' },
   { v: 1180, teksti: 'Kappadokian avauskuvat: kolme generoitua herokuvaa' },
   { v: 1179, teksti: 'Lentoaani heti napautuksesta, nippuviivat, saumakorjaus' },
   { v: 1178, teksti: 'Matkakirjateksti ei enaa vaihdu vanhaan laatan ratkettua' },
