@@ -6720,18 +6720,46 @@ body.flight-active .fact-card {
 }
 
 /*
- * PELINAPPULA ON TINAHERRA (omistajan tilaus #100). Väriläiskän
- * (.pawn-ring + .pawn-dot + .pawn-gloss) tilalla on pieni
- * tinasotilasmainen herra Fogg -hahmo: silinteri, keppi ja matkalaukku.
- * Kuva on läpinäkyvä webp ilman omaa varjoa, koska varjo piirretään
- * koodilla (.pawn-shadow) — vain silloin se voi irrota hypyn laella ja
- * kertoa korkeuden (js/ui.js hyppaaAskel).
+ * PELINAPPULA. Väriläiskän (.pawn-ring + .pawn-dot + .pawn-gloss)
+ * tilalle tuli tilauksessa #100 tinaherra — pieni tinasotilasmainen
+ * herra Fogg, silinteri ja keppi — ja sen tilalle 27.8.2026 valkoinen
+ * lautapelinappula (.pawn-nappula alla), koska tinaherra luki kartalla
+ * raskaana tummana läiskänä. Tyyli valitaan js/ui.js:n NAPPULA_TYYLI
+ * -vakiosta; webp-kuva on yhä repossa paluuta varten.
+ *
+ * VARJO PIIRRETÄÄN AINA KOODILLA (.pawn-shadow) — vain silloin se voi
+ * irrota hypyn laella ja kertoa korkeuden (js/ui.js hyppaaAskel).
  */
 .pawn-shadow { fill: rgba(58, 38, 16, 0.32); }
 .pawn-kuva {
   /* Kuva on nappulan ainoa pinta: se ei saa napata napautuksia
      kaupungilta, joka on sen alla. */
   pointer-events: none;
+}
+
+/*
+ * VALKOINEN LAUTAPELINAPPULA (omistajan tilaus 27.8.2026: tinaherra oli
+ * *"liian raskas visuaalisesti"*). Muoto piirretään koodilla
+ * (js/ui.js NAPPULAN_POLKU), joten koko ulkonäkö on näissä kolmessa
+ * ominaisuudessa:
+ *
+ *   fill     lämmin valkoinen, ei puhdas #fff — seepiakartan päällä
+ *            kylmä valkoinen loistaisi irrallisena paperinpalana.
+ *   stroke   sama tumma ruskea kuin laudan muissa ääriviivoissa. Se on
+ *            ainoa asia, joka erottaa vaalean nappulan vaaleasta
+ *            kartasta, joten se on nappulan tärkein viiva — mutta ohut,
+ *            koska paksu reunus tekisi siitä taas painavan.
+ *   vector-effect  ääriviiva pysyy saman levyisenä zoomista riippumatta.
+ *            Ilman tätä laudan mittakaava paksuntaisi viivan
+ *            fokusnäkymässä tussiksi ja ohentaisi sen yleiskuvassa
+ *            olemattomiin.
+ */
+.pawn-nappula {
+  fill: #fbf7ef;
+  stroke: #2b1f12;
+  stroke-width: 1.1;
+  vector-effect: non-scaling-stroke;
+  stroke-linejoin: round;
 }
 .pawn-star { fill: #b8860b; font-size: 20px; }
 

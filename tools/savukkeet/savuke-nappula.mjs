@@ -1,5 +1,5 @@
 /*
- * Savuke: laudalla makaava noppa ja hyppivä tinaherra.
+ * Savuke: laudalla makaava noppa ja hyppivä pelinappula.
  *
  * Omistajan tilaukset #98 ja #100. Vartiot:
  *   1. Noppa asuu kartan SIIRTOKUORESSA (.kartta-kuori) ja sen
@@ -9,7 +9,8 @@
  *   3. Zoomaus skaalaa nopan samassa suhteessa kuin kartan.
  *   4. Nappula hyppii: paraabelikaari nousee ja palaa, ja koodilla
  *      piirretty varjo kutistuu ja haalenee laella.
- *   5. Nappula on tinaherra-kuva, ei väriläiskä.
+ *   5. Nappula on hahmo, jolla on mitat: valkoinen kartionappula
+ *      (koodilla piirretty polku) tai vanha tinaherra-kuva.
  *   6. Uuteen kaupunkiin saavuttaessa noppa häipyy pois.
  *
  * MIKSI VARTIO: kaikki kolme takeista (ankkurointi, skaalaus,
@@ -175,13 +176,38 @@ vaadi('4b nappula palasi laudan pintaan', hyppy.minKorkeus < 1, String(hyppy.min
 vaadi('4c varjo kutistui hypyn laella', hyppy.varjoMin < 0.85, String(hyppy.varjoMin));
 vaadi('4d varjo haaleni hypyn laella', hyppy.peittoMin < 0.7, String(hyppy.peittoMin));
 
-// --- 5. nappula on tinaherra ---
+/*
+ * --- 5. nappulalla on hahmo, ja se seisoo jaloillaan ---
+ *
+ * ULKONÄKÖÄ EI LUKITA TÄHÄN. Nappula oli tilauksessa #100 tinaherra-webp
+ * ja on 27.8.2026 lähtien koodilla piirretty valkoinen kartionappula
+ * (js/ui.js NAPPULA_TYYLI). Vartioitava asia ei kummassakaan tapauksessa
+ * ole tiedostonimi vaan se, että hahmo on OLEMASSA, MITALLINEN ja
+ * ANKKUROITU JALKAPISTEESTÄÄN kaupunkiin — juuri ne rikkoutuvat hiljaa,
+ * jos hahmon piirto vaihtuu. Väriläiskä ei tätä läpäisisi: sillä ei ole
+ * jalkapistettä nappulan alareunassa.
+ */
 const kuva = await sivu.evaluate(() => {
   const i = document.querySelector('.pawn .pawn-kuva');
-  return { href: i?.getAttribute('href') ?? null, leveys: i?.getBoundingClientRect().width ?? 0 };
+  const p = document.querySelector('.pawn');
+  const r = i?.getBoundingClientRect();
+  const pr = p?.getBoundingClientRect();
+  return {
+    onHahmo: Boolean(i),
+    tagi: i?.tagName ?? null,
+    leveys: r ? +r.width.toFixed(2) : 0,
+    korkeus: r ? +r.height.toFixed(2) : 0,
+    // Hahmon alareunan etäisyys koko nappularyhmän alareunasta: jalusta
+    // on ryhmän pohjalla (varjo ja vuororengas ovat sen tasossa).
+    jalkaEro: r && pr ? +(pr.bottom - r.bottom).toFixed(2) : null,
+  };
 });
-vaadi('5a nappula on tinaherra', /nappula-tinaherra\.webp$/.test(kuva.href ?? ''), String(kuva.href));
-vaadi('5b tinaherran kuva latautui', kuva.leveys > 0, String(kuva.leveys));
+vaadi('5a nappulalla on hahmo', kuva.onHahmo === true, JSON.stringify(kuva));
+vaadi('5b hahmo on mitallinen', kuva.leveys > 4 && kuva.korkeus > 8, JSON.stringify(kuva));
+vaadi('5c hahmo on pystymallinen', kuva.korkeus > kuva.leveys, JSON.stringify(kuva));
+vaadi('5d hahmo seisoo jaloillaan laudan pinnassa',
+  kuva.jalkaEro !== null && Math.abs(kuva.jalkaEro) < 0.6 * kuva.korkeus,
+  JSON.stringify(kuva));
 
 // --- 6. uuteen kaupunkiin saavuttaessa noppa häipyy ---
 const saapuminen = await sivu.evaluate(async () => {
