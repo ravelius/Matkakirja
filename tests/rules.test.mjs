@@ -4265,8 +4265,20 @@ test('trackpadin eleet kartalla: vieritys panoroi, nipistys on portaaton', () =>
 
   // 2) Nipistys on portaaton ja kulkee kosketusnipistyksen polkua.
   const nipistaa = ui.match(/const rullaNipistaa = \(e\) => \{[\s\S]*?\n {4}\};/)[0];
-  assert.match(nipistaa, /Math\.exp\(-e\.deltaY \* RULLAN_NIPISTYS_HERKKYYS\)/,
+  /*
+   * Portaaton kerroin on eksponentti — ja delta muunnetaan ENSIN
+   * pikseleiksi (rullanPikselit). Chromium lähettää trackpadin
+   * nipistyksen ctrl+wheelinä, jonka deltojen summa on täsmälleen
+   * −100 · ln(mittakaava) (mitattu 27.8.2026 CDP:n
+   * synthesizePinchGesturella), joten exp(−pikselit · 0,01) palauttaa
+   * juuri sen mittakaavan, jonka käyttöjärjestelmä luki sormista.
+   * Rividelta (deltaMode 1) on eri yksikkö, ja ilman muunnosta ele
+   * hiipuu siellä olemattomiin.
+   */
+  assert.match(nipistaa, /Math\.exp\(-rullanPikselit\(e\) \* RULLAN_NIPISTYS_HERKKYYS\)/,
     'nipistyksen portaaton kerroin puuttuu');
+  assert.match(ui, /const rullanPikselit = \(e\) => e\.deltaY[\s\S]{0,160}deltaMode === 1 \? 16/,
+    'rullan deltoja ei muunneta pikseleiksi ennen eksponenttia');
   assert.match(nipistaa, /aloitaNipistysMitasta\(/, 'nipistys ei käytä kosketuseleen polkua');
   assert.match(nipistaa, /paivitaNipistysMitasta\(/, 'nipistys ei käytä kosketuseleen polkua');
   // Kartta ei saa toistua: raja on ehdoton myös rullanipistyksessä.
@@ -4282,6 +4294,43 @@ test('trackpadin eleet kartalla: vieritys panoroi, nipistys on portaaton', () =>
   // 3) Hiiren rullan naksu zoomaa yhä portain, kuristimen kanssa.
   assert.match(wheel, /rullanNaksu[\s\S]*?RULLAN_VALI_MS[\s\S]*?zoomaaPainikkeella\(suunta\)/,
     'rullan naksun porraszoomaus katosi');
+});
+
+test('nipistys seuraa sormia 1:1 kaikkia kolmea reittiä', () => {
+  /*
+   * Omistajan mittaus 27.8.2026 (Mac): *"⌘ pohjassa kahden sormen
+   * vieritys toimii täydellisesti, mutta nipistys on aivan liian
+   * hidas — tuntuu kuin zoomi lukisi vain yhden zoom-komennon."*
+   * Molemmat kulkivat samaa kaavaa, joten ero ei ollut laskennassa:
+   * WebKit lähettää nipistyksen omina gesture-tapahtuminaan, ja ne
+   * käsiteltiin pelkällä preventDefaultilla — eleen oma mitta
+   * (`scale` = sormien etäisyyden suhde) heitettiin roskiin.
+   *
+   * Zoomi on nyt yksin eleiden varassa (+/- -napit poistettiin samana
+   * päivänä), joten kaikkien kolmen reitin on pysyttävä 1:1.
+   */
+  const ui = readFileSync(new URL('../js/kartta.js', import.meta.url), 'utf8');
+
+  // 1) Kosketus: kerroin on suoraan sormivälien suhde, ei vaimennettu.
+  const paivita = ui.match(/const paivitaNipistysMitasta = \(etaisyys\) => \{[\s\S]*?\n {4}\};/)[0];
+  assert.match(paivita, /nipistys\.kerroin \* \(etaisyys \/ nipistys\.etaisyys\)/,
+    'nipistyksen kerroin ei ole sormivälien suhde');
+  assert.doesNotMatch(paivita, /requestAnimationFrame|setTimeout/,
+    'esikatselu harvennettiin: ele ei enää seuraa sormia joka tapahtumalla');
+
+  // 2) WebKitin oma ele ajaa samaa polkua scale-arvolla.
+  assert.match(ui, /\['gesturestart', \(e\) => \{[\s\S]*?aloitaNipistysMitasta\(\{[\s\S]*?lahde: 'ele'/,
+    'Safarin gesturestart ei aloita nipistystä');
+  assert.match(ui, /\['gesturechange', \(e\) => \{[\s\S]*?paivitaNipistysMitasta\(SAFARIN_LAHTO \* skaala\)/,
+    'Safarin gesturechange ei aja elettä scale-arvolla — juuri se oli hidas nipistys');
+  assert.match(ui, /\['gestureend', \(e\) => \{[\s\S]*?paataNipistys\(\)/,
+    'Safarin gestureend ei viimeistele elettä');
+
+  // 3) Kosketus voittaa gesture-eleen (iOS lähettää molemmat), eikä
+  // rulla saa sekaantua toisen lähteen ajamaan eleeseen — mutta
+  // tapahtuma on silti estettävä, ettei selain zoomaa koko sivua.
+  assert.match(ui, /if \(nipistys && nipistys\.lahde !== 'rulla'\) \{ e\.preventDefault\(\); return; \}/,
+    'rullapolku ei väistä toisen lähteen elettä tai päästää sivunzoomin läpi');
 });
 
 test('maailmankartta on kiertävä ja kaupungit pysyvät laudalla', () => {

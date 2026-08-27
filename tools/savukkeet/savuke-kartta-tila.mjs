@@ -27,6 +27,9 @@
  *     tapahtumaa (jäädytetty prosessi + sanelunäppäimistö; omistaja:
  *     "ongelma tulee aina" sovellusvaihdosta ja paluusta) → paluun
  *     vakiintumissilmukka huomaa myöhäisen muutoksen ja kehys on ehjä.
+ *  6. Nipistys seuraa sormia 1:1 kumpaakin reittiä (kosketus ja
+ *     WebKitin gesturestart/gesturechange/gestureend), eikä yhtäkään
+ *     eleen tapahtumaa harvenneta pois esikatselusta.
  */
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
@@ -340,6 +343,119 @@ await sivu.evaluate(() => {
     get: () => window.__vvAito, configurable: true,
   });
 });
+
+/* --- 6. Nipistys seuraa sormia 1:1 ------------------------------------
+ *
+ * Omistajan mittaus 27.8.2026: *"⌘ pohjassa kahden sormen vieritys
+ * toimii täydellisesti, mutta nipistys on aivan liian hidas — tuntuu
+ * kuin zoomi lukisi vain yhden zoom-komennon."* Juurisyy ei ollut
+ * laskennassa vaan siinä, että WebKitin oma nipistys (gesturestart /
+ * gesturechange / gestureend, jossa `scale` on sormien etäisyyden
+ * suhde) käsiteltiin pelkällä preventDefaultilla — eleen mitta
+ * heitettiin roskiin. Mitattu tällä ajolla ennen korjausta 1,00x ja
+ * sen jälkeen 2,00x.
+ *
+ * Väite mittaa SUHTEEN, ei tuntumaa: mittakaava saa muuttua täsmälleen
+ * sormien etäisyyden suhteessa, ja jokainen tapahtuma pitää näkyä
+ * esikatselussa (ei harvennusta, ei vaimennusta).
+ */
+const zoomiKerroin = () => sivu.evaluate(() => window.matkakirja.ui.kartta.zoomiKerroin);
+const rajatKartalla = await sivu.evaluate(() => window.matkakirja.ui.kartta.zoomiRajat());
+// Lähtökohta portaikon pohjalle, jotta kaksinkertaistuminen mahtuu rajoihin.
+await sivu.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  ui.zoomiVapaa = ui.kartta.zoomiRajat().pienin;
+  ui.kartta.fitViewBox();
+});
+await sivu.waitForTimeout(600);
+
+/** Kuoren muunnoskirjoitukset eleen ajalta (seurantaviive). */
+const kirjoitusvahti = () => sivu.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  const kuori = ui.karttaKuori ?? ui.svg;
+  window.__nipKirjoitukset = 0;
+  window.__nipVahti = new MutationObserver((lista) => {
+    for (const m of lista) if (m.target === kuori) window.__nipKirjoitukset += 1;
+  });
+  window.__nipVahti.observe(kuori, { attributes: true, attributeFilter: ['style'] });
+});
+const kirjoituksia = () => sivu.evaluate(() => {
+  window.__nipVahti?.disconnect();
+  return window.__nipKirjoitukset ?? 0;
+});
+
+// 6a: kosketusnipistys, sormiväli 120 px → 240 px.
+await kirjoitusvahti();
+const ennenKosketus = await zoomiKerroin();
+const ASKELIA = 20;
+await sivu.evaluate(async (N) => {
+  const pane = window.matkakirja.ui.mapPane;
+  const kx = 400; const ky = 500;
+  const sormi = (id, x) => ({ identifier: id, clientX: x, clientY: ky, pageX: x, pageY: ky });
+  const parit = (d) => [sormi(1, kx - d / 2), sormi(2, kx + d / 2)];
+  const laheta = (tyyppi, koskee) => {
+    const e = new Event(tyyppi, { bubbles: true, cancelable: true });
+    Object.defineProperty(e, 'touches', { value: koskee });
+    Object.defineProperty(e, 'targetTouches', { value: koskee });
+    Object.defineProperty(e, 'changedTouches', { value: koskee });
+    pane.dispatchEvent(e);
+  };
+  laheta('touchstart', parit(120));
+  for (let i = 1; i <= N; i++) {
+    laheta('touchmove', parit(120 * (1 + i / N)));
+    // eslint-disable-next-line no-await-in-loop
+    await new Promise((r) => requestAnimationFrame(r));
+  }
+  laheta('touchend', []);
+}, ASKELIA);
+await sivu.waitForTimeout(800);
+const kosketusKirjoituksia = await kirjoituksia();
+const jalkeenKosketus = await zoomiKerroin();
+const kosketusSuhde = jalkeenKosketus / ennenKosketus;
+console.log(`      mitattu: kosketusnipistys ${kosketusSuhde.toFixed(3)}x`
+  + ` (${kosketusKirjoituksia} muunnoskirjoitusta / ${ASKELIA} tapahtumaa)`);
+vaadi('6a kosketusnipistys 2x kaksinkertaistaa mittakaavan',
+  Math.abs(kosketusSuhde / 2 - 1) <= 0.05,
+  `${kosketusSuhde.toFixed(3)}x (raja ±5 %, rajat ${JSON.stringify(rajatKartalla)})`);
+vaadi('6b jokainen touchmove näkyy esikatselussa (ei harvennusta)',
+  kosketusKirjoituksia >= ASKELIA,
+  `${kosketusKirjoituksia} kirjoitusta / ${ASKELIA} tapahtumaa`);
+
+// 6c: WebKitin oma nipistys — `scale` on sormien etäisyyden suhde.
+await sivu.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  ui.zoomiVapaa = ui.kartta.zoomiRajat().pienin;
+  ui.kartta.fitViewBox();
+});
+await sivu.waitForTimeout(600);
+await kirjoitusvahti();
+const ennenEle = await zoomiKerroin();
+await sivu.evaluate(async (N) => {
+  const pane = window.matkakirja.ui.mapPane;
+  const laukaise = (nimi, skaala) => {
+    const e = new Event(nimi, { bubbles: true, cancelable: true });
+    e.scale = skaala; e.rotation = 0; e.clientX = 400; e.clientY = 500;
+    pane.dispatchEvent(e);
+  };
+  laukaise('gesturestart', 1);
+  for (let i = 1; i <= N; i++) {
+    laukaise('gesturechange', 1 + i / N);
+    // eslint-disable-next-line no-await-in-loop
+    await new Promise((r) => requestAnimationFrame(r));
+  }
+  laukaise('gestureend', 2);
+}, ASKELIA);
+await sivu.waitForTimeout(800);
+const eleKirjoituksia = await kirjoituksia();
+const eleSuhde = (await zoomiKerroin()) / ennenEle;
+console.log(`      mitattu: gesture-nipistys ${eleSuhde.toFixed(3)}x`
+  + ` (${eleKirjoituksia} muunnoskirjoitusta / ${ASKELIA} tapahtumaa)`);
+vaadi('6c WebKitin gesture-nipistys (scale 1→2) kaksinkertaistaa mittakaavan',
+  Math.abs(eleSuhde / 2 - 1) <= 0.05,
+  `${eleSuhde.toFixed(3)}x (raja ±5 %; ennen korjausta 1,00x)`);
+vaadi('6d jokainen gesturechange näkyy esikatselussa',
+  eleKirjoituksia >= ASKELIA,
+  `${eleKirjoituksia} kirjoitusta / ${ASKELIA} tapahtumaa`);
 
 await selain.close();
 palvelin.close();
