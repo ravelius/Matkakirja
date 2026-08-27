@@ -60,7 +60,7 @@ import { asetaKuva } from './media.js';
 // (ks. sidoKuplanNapautus). Apuri asuu ui-apureissa, koska sama vuoto
 // koskee muitakin kelluvia kuplia — ja se on niputuksessa jo ennen
 // pöllöä (tools/build-standalone.mjs MODULES).
-import { nielaiseSulkevaNapautus } from './ui-apurit.js';
+import { nielaiseSulkevaNapautus, polloNimilappu } from './ui-apurit.js';
 import { POLLON_LINKKIKATTO, etsiAnkkuri, haeKatkelmat, rakennaIndeksi } from './pollo-haku.js';
 import {
   nykyinenPoimintaAvain, paivitaPillerit, poimintaKehittaja, tallennaPoiminta,
@@ -694,12 +694,19 @@ export const POLLO_AARRE = {
    */
   kuva: 'assets/tietaja/viisas-pollo.jpg',
   huudahdus: 'Se liikkui — kätkössä oli jotain elävää!',
+  /*
+   * NIMI ON PELKKÄÄ TEKSTIÄ, koska sitä käytetään myös kuvan alt-tekstinä
+   * ja rivillä "Löysit: …" (js/ui.js, js/visa.js). Paljastuskortin OMA
+   * otsikkorivi saa yliviivausvitsin erikseen (js/ui.js naytaPolloAarre,
+   * polloNimilappu) — nimilappu on otsikko, alt-teksti ei.
+   */
   nimi: 'Livia',
   selite: 'Columba Livia, kirjekyyhky, liittyy seuraan',
   esittely: 'Laatan alta löytyy Livia — täydeltä nimeltään Columba Livia, '
     + 'kirjekyyhky, jonka suku on kantanut viestejä Caesarille ja Pariisin '
-    + 'piiritykseen ja joka kasvattaa nyt sinua tiedon tiellä. Napauta '
-    + 'häntä, kun haluat kysyä jotakin maailmasta.',
+    + 'piiritykseen. Hän tuuraa Viisasta Pöllöä, joka palaa aivan pian, ja '
+    + 'kasvattaa sillä välin sinun untuvikkopöllöäsi. Napauta häntä, kun '
+    + 'haluat kysyä jotakin maailmasta.',
 };
 
 /** Mikrofoni samalla viivakynällä. */
@@ -894,10 +901,25 @@ function polloKehittajaTila() {
   return polloAsetus(POLLO_KEHITTAJA_TILA_AVAIN) === '1';
 }
 
-const TERVEHDYS = 'Columba Livia, viestipalvelu. Suku on kantanut kirjeitä '
-  + 'Caesarille ja Pariisiin — sinulle kannan vaikka vain terveisiä. Kysy '
-  + 'mitä tahansa siitä, mitä kartalla tai lehdessä juuri nyt näkyy, tai '
-  + 'muusta maailmasta. Pelin tehtäviä en ratkaise puolestasi.';
+/*
+ * TERVEHDYS ON AMBIVALENTTI ESITTELY (Fablen kaanon, omistajan
+ * hyväksyntä 27.8.2026, TUURAAJA-KEHYS).
+ *
+ * Livia ei korvaa Viisasta Pöllöä vaan tuuraa häntä, ja hän sanoo sen
+ * itse ääneen kolmena peruutuksena: pöllö → sijainen → pulu. Pöllön
+ * paluu on toistuva vitsi, joka ei koskaan ratkea, joten tervehdys
+ * lupaa sen ja siirtää sen samassa virkkeessä. Loppu on entisellään:
+ * mitä saa kysyä ja mitä hän ei tee.
+ *
+ * NIMI SÄILYY PUHEESSA. Otsikoiden yliviivausvitsi (pollo-yliviivattu)
+ * elää vain nimilapuissa — Livian omassa puheessa hän on Livia.
+ */
+const TERVEHDYS = 'Olen pöllö. Sijaisena. Eli pulu — kirjekyyhky, jos '
+  + 'ollaan tarkkoja, ja ollaan, koska suku on vanhaa roomalaista. Nimi on '
+  + 'Livia. Viisas Pöllö palaa aivan kohta; hän sanoi niin jo '
+  + 'Konstantinopolissa. Sillä välin: kysy minulta mitä tahansa siitä, mitä '
+  + 'kartalla tai lehdessä juuri nyt näkyy, tai muusta maailmasta. Pelin '
+  + 'tehtäviä en ratkaise puolestasi.';
 
 const EI_HEREILLA = 'Livia ei ole vielä hereillä.';
 const EI_HEREILLA_LISA = 'Tietokumppani odottaa vielä käyttöönottoa. '
@@ -1114,11 +1136,18 @@ class Pollo {
      */
     const nappi = polloElementti('button', 'icon-btn pollo-nappi');
     nappi.type = 'button';
-    nappi.title = 'Livia';
-    nappi.setAttribute('aria-label', 'Livia — avaa keskustelu');
+    /*
+     * NIMILAPPU ON YLIVIIVATTU, VIHJE EI (omistajan rajaus 27.8.2026).
+     * Napin näkyvässä selitteessä lukee "Pöllö Pulu" pöllö yli vedettynä;
+     * title ja aria-label ovat pelkkää tekstiä, joten niissä lukee vain
+     * "Pulu" — ruudunlukija ei lue yliviivattua sanaa.
+     */
+    nappi.title = 'Pulu';
+    nappi.setAttribute('aria-label', 'Pulu — avaa keskustelu');
     nappi.setAttribute('aria-expanded', 'false');
     nappi.innerHTML = `<span class="icon-glyph viiva-ikoni">${POLLO_IKONI}</span>`
-      + '<span class="icon-label">Livia</span>';
+      + '<span class="icon-label"></span>';
+    polloNimilappu(nappi.querySelector('.icon-label'));
     nappi.addEventListener('click', (e) => {
       e.stopPropagation();
       this.vaihdaTila();
@@ -1137,7 +1166,8 @@ class Pollo {
     const paneeli = polloElementti('div', 'pollo-paneeli');
     paneeli.hidden = true;
     paneeli.setAttribute('role', 'dialog');
-    paneeli.setAttribute('aria-label', 'Livia');
+    // Pelkkätekstipinta: ruudunlukijalle vain korvaava sana, ei yliviivausta.
+    paneeli.setAttribute('aria-label', 'Pulu');
     // Paneelin sisällä napautus ei saa sulkea alanappirivin liukua.
     paneeli.addEventListener('click', (e) => e.stopPropagation());
 
@@ -1396,8 +1426,9 @@ class Pollo {
     const lomake = polloElementti('form', 'pollo-rivi');
     this.kentta = polloElementti('input', 'pollo-kentta');
     this.kentta.type = 'text';
-    this.kentta.placeholder = 'Kysy Livialta…';
-    this.kentta.setAttribute('aria-label', 'Kysymys Livialle');
+    // Placeholder ja aria-label ovat pelkkää tekstiä: ei yliviivausta.
+    this.kentta.placeholder = 'Kysy pululta…';
+    this.kentta.setAttribute('aria-label', 'Kysymys pululle');
     this.kentta.maxLength = 300;
     this.laheta = polloElementti('button', 'pollo-laheta', '→');
     this.laheta.type = 'submit';
@@ -3360,7 +3391,12 @@ class Pollo {
     // kelaavat vielä pohjaan — uusi varaus viritetään heti perään.
     this.nollaaTyhjaTila();
     const kysymysViesti = this.lisaaViesti('kayttaja', kysymys);
-    const odotus = this.lisaaViesti('odottaa', 'Livia miettii…');
+    /*
+     * ODOTUSRIVI ON NIMILAPPU, ei Livian puhetta: siihen kuuluu
+     * yliviivausvitsi ("Pöllö Pulu miettii…", pöllö yli vedettynä).
+     * Ruudunlukija kuulee vain "Pulu miettii…" (polloNimilappu).
+     */
+    const odotus = polloNimilappu(this.lisaaViesti('odottaa', ''), { jalkeen: ' miettii…' });
     this.asetaKesken(true);
     this.viimeisetKatkelmat = [];
     /*

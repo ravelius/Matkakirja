@@ -235,6 +235,28 @@ export const FOKUSVIRTA_SARAJEVO = {
    * pöllön oma.
    */
   pollo: {
+    /*
+     * LIVIAN MAADOITUS (Fablen kaanon 27.8.2026, TUURAAJA-KEHYS).
+     *
+     * Merkinnän loppulause ("ei tarvitse valita, minkä kellon mukaan
+     * herää") on kaunis ja romanttinen — juuri sitä sävyä maadoitus
+     * koskee. Livia katsoo samaa kaupunkia POSTIN kannalta: monta
+     * kalenteria tarkoitti viestinviejälle jatkuvaa laskutoimitusta
+     * siitä, minä päivänä mikäkin luukku on auki.
+     *
+     * FAKTAKURI: väite pysyy siinä, minkä merkintä itse jo sanoo — että
+     * kaupungissa elettiin useamman uskon rinnalla. Mitään uutta
+     * vuosilukua, nimeä tai tapahtumaa ei lisätä, ja pyhäpäivähavainto
+     * on Livian oman suvun kokemuksena ("meikäläiset"), ei lähdeväite.
+     *
+     * Loppu myöntää isoisälle sen osan, joka piti paikkansa — kaanonin
+     * sääntö 3 kevyempänä muotona (varsinainen myönnytys on Ateenassa).
+     */
+    maadoitus: 'Kaunis lause. Postinkantajan kannalta asia näytti '
+      + 'toiselta: monta uskoa tarkoitti monta kalenteria, monta pyhien '
+      + 'sarjaa ja jatkuvaa laskutoimitusta siitä, minä päivänä mikäkin '
+      + 'luukku on auki. Meikäläiset valittivat siitä ääneen. Herätä sai '
+      + 'silti minkä kellon mukaan halusi — se osa piti paikkansa.',
     teksti: 'Joen varrella seisoo nykyään talo nimeltä Inat kuća — Uhman '
       + 'talo. Kun keisarin virkamiehet halusivat tontin, omistaja purki '
       + 'talonsa ja kokosi sen uudelleen joen toiselle puolelle, lauta '

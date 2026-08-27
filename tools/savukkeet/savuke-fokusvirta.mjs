@@ -358,12 +358,26 @@ const karki = await sivu.evaluate(() => {
   const arvo = getComputedStyle(el).getPropertyValue('--kupla-karki');
   return { arvo, vasen: el.getBoundingClientRect().left };
 });
+/*
+ * YLÄRIVI ON NIMILAPPU, EI NIMI (omistajan tilaus 27.8.2026): siinä
+ * lukee "Pöllö Pulu" pöllö yli vedettynä. textContent näkee molemmat
+ * sanat, joten tarkistetaan korvaava sana — se on se, joka jää.
+ */
 vaadi('vaihe 2 on pöllön huomio KUPLASSA, ei kortissa',
-  tila?.vaihe === 'pollo' && tila.kupla === true && tila.ylarivi.includes('Livia'),
+  tila?.vaihe === 'pollo' && tila.kupla === true && tila.ylarivi.includes('Pulu'),
   JSON.stringify(tila));
+/*
+ * KUPLASSA ON KAKSI KAPPALETTA (Fablen kaanon 27.8.2026): Livian
+ * maadoitus isoisän merkinnän perään ja sen jälkeen vaiheen oma
+ * nykypäivän huomio, joka on entisellään sanasta sanaan.
+ */
+vaadi('vaihe 2 alkaa Livian maadoituksella isoisän merkintään',
+  tila?.teksti.startsWith('"Molemmat puolet saattavat olla oikeassa yhtä aikaa."')
+  && tila.teksti.includes('Hän osui, ja se harmittaa minua'),
+  JSON.stringify(tila?.teksti));
 vaadi('pöllön teksti on lyhennetty päätoimittajan versioon',
-  tila?.teksti.startsWith('Isoisäsi ei koskaan saanut tietää, miten kullan kävi.')
-  && tila.teksti.includes('Katso ensin tuonne ylös.') && tila.teksti.length < 260,
+  tila?.teksti.includes('Isoisäsi ei koskaan saanut tietää, miten kullan kävi.')
+  && tila.teksti.includes('Katso ensin tuonne ylös.') && tila.teksti.length < 560,
   JSON.stringify(tila?.teksti));
 vaadi('kupla on pöllönapin yläpuolella eikä peitä sitä',
   Boolean(pollonappi) && tila?.laatikko.alin <= pollonappi.ylin,

@@ -136,6 +136,25 @@ export const FOKUSVIRTA_ATEENA = {
    * friisissä hän kaivaa yhä.
    */
   pollo: {
+    /*
+     * LIVIAN MAADOITUS (Fablen kaanon 27.8.2026, TUURAAJA-KEHYS).
+     *
+     * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
+     * perään (js/fokusvirta.js piirraPollo). Ateena on se kaupunki,
+     * jossa ISOISÄ OSOITTAUTUU OIKEAKSI ja Livia myöntää sen
+     * vastahakoisen kunnioittavasti — kaanon vaatii vähintään yhden
+     * tällaisen kuudesta, ettei hahmosta tule besserwisseriä.
+     *
+     * EI FAKTAVÄITTEITÄ: maadoitus koskee vain merkinnän SÄVYÄ
+     * (toriuutisesta tehty elämänohje), eikä se paljasta kullan
+     * kohtaloa — se on seuraavan kappaleen asia, ja järjestys on
+     * tarkoituksellinen: myönnytys ensin, palkinto perässä.
+     */
+    maadoitus: '"Molemmat puolet saattavat olla oikeassa yhtä aikaa." '
+      + 'Isoisälläsi oli tapana tehdä toriuutisesta elämänohje, ja yleensä '
+      + 'minä kutistan sellaisen takaisin torin kokoiseksi. Tällä kertaa en. '
+      + 'Hän osui, ja se harmittaa minua täsmälleen sen verran kuin on '
+      + 'kohtuullista.',
     teksti: 'Isoisäsi ei koskaan saanut tietää, miten kullan kävi. Se oli '
       + 'aitoa — mutta ei Priamoksen. Ja löytäjä rakensi palatsinsa tuonne '
       + 'kadun varteen; sen friisissä hän kaivaa yhä. Katso ensin tuonne ylös.',

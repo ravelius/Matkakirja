@@ -319,6 +319,39 @@ test('kaupungin virta poimii kohteet tunnuksilla eikä kaadu kirjoitusvirheeseen
     'Ateenan virrassa on oltava Korintin kanavan kohdenosto');
 });
 
+/*
+ * LIVIAN MAADOITUS (Fablen kaanon 27.8.2026, TUURAAJA-KEHYS).
+ *
+ * Jokaisella fokuskaupungilla on Livian kommentti isoisän merkinnän
+ * perään, ja se piirtyy kuplan ensimmäiseksi kappaleeksi
+ * (js/fokusvirta.js piirraPollo). Testi vartioi kolmea asiaa:
+ * kommentti on olemassa, se on oma tekstinsä eikä kopio vaiheen
+ * huomiosta, ja vähintään yhdessä kuudesta ISOISÄ OSOITTAUTUU
+ * OIKEAKSI — juuri se sääntö estää hahmoa muuttumasta
+ * besserwisseriksi.
+ */
+test('jokaisella fokuskaupungilla on Livian maadoitus isoisän merkintään', () => {
+  const kaupungit = Object.keys(FOKUSVIRRAT);
+  assert.ok(kaupungit.length >= 6, 'fokuskaupunkeja pitäisi olla vähintään kuusi');
+  for (const [kaupunki, virta] of Object.entries(FOKUSVIRRAT)) {
+    const maadoitus = virta.pollo?.maadoitus;
+    assert.ok(typeof maadoitus === 'string' && maadoitus.length > 120,
+      `${kaupunki}: Livian maadoitus puuttuu tai on liian lyhyt`);
+    assert.notEqual(maadoitus, virta.pollo?.teksti,
+      `${kaupunki}: maadoitus ei saa olla sama teksti kuin vaiheen huomio`);
+    // Huutomerkkejä Livia ei käytä (tools/pollo/worker.js KARAKTÄÄRI).
+    assert.ok(!maadoitus.includes('!'), `${kaupunki}: Livia ei käytä huutomerkkejä`);
+  }
+});
+
+test('vähintään yhdessä maadoituksessa isoisä osoittautuu oikeaksi', () => {
+  const myonnytys = Object.values(FOKUSVIRRAT)
+    .map((virta) => virta.pollo?.maadoitus ?? '')
+    .filter((teksti) => /myönnä|osui|piti paikkansa|oli oikeassa/i.test(teksti));
+  assert.ok(myonnytys.length >= 1,
+    'ainakin yhdessä kaupungissa Livian on myönnettävä isoisän olleen oikeassa');
+});
+
 test('jokaisella fokusvirran kuvalla on selite ja lähde', () => {
   for (const [kaupunki, virta] of Object.entries(FOKUSVIRRAT)) {
     const kuvat = [

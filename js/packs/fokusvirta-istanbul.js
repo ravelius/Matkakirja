@@ -263,6 +263,36 @@ export const FOKUSVIRTA_ISTANBUL = {
    * lauserakenne muuttui.
    */
   pollo: {
+    /*
+     * LIVIAN MAADOITUS + SIVUPOLKU (Fablen kaanon 27.8.2026,
+     * TUURAAJA-KEHYS). Tämä on se yksi kuudesta, jossa Livia ajautuu
+     * sivupolulle: hän aloittaa maadoituksesta, karkaa suvun
+     * puolustukseen ja palauttaa itsensä lopussa YHDELLÄ lauseella
+     * takaisin asiaan — kaanonin kaava sanasta sanaan.
+     *
+     * MAADOITUS KOSKEE VARTIJAN AFORISMIA, ei pylvästä: isoisä
+     * kirjoittaa olankohautuksen ylös kuin se olisi ollut hänelle
+     * lausuttu viisaus. Livia toteaa, että sama lause sanotaan
+     * jokaiselle pysähtyvälle. Pylvään päät, siirto Delfoista ja museon
+     * käärmeenpää jäävät koskematta — ne ovat seuraavassa kappaleessa.
+     *
+     * FAKTAKURI: suvun kohdat ovat samaa perimätietoa, joka on jo
+     * hahmon kehotteessa (tools/pollo/worker.js KARAKTÄÄRI): Pariisin
+     * piirityksen kyyhkyposti 1870–71 ja Reuterin kurssit Aachenin ja
+     * Brysselin väliä ennen lennätintä. Mitään uutta historiallista
+     * väitettä ei esitetä, ja vartijan hinnankorotus on Livian oma
+     * kuiva heitto, ei tieto.
+     */
+    maadoitus: 'Vartija sanoo tuon jokaiselle, joka pysähtyy pylvään '
+      + 'kohdalla ennen puoltapäivää; iltapäivällä hinta nousee. Ja mitä '
+      + 'ottamiseen tulee — meidän sukuamme on otettu ja pidetty '
+      + 'kaksituhatta vuotta, eikä siitä ole sepitetty yhtään aforismia. '
+      + 'Isoäitini kantoi mikrofilmiä saarretun Pariisin yli, ja häntä '
+      + 'ammuttiin ohi kolmesti samana aamuna. Setäni vei pörssikursseja '
+      + 'Aachenista Brysseliin, ja hänet korvattiin kuparilangalla. Kukaan '
+      + 'ei kohauttanut olkiaan meidän puolestamme kauniisti. Pylväs. Se '
+      + 'seisoo yhä siinä, mihin se aikoinaan siirrettiin. Se oli pointti, '
+      + 'ja hyvä pointti olikin.',
     teksti: 'Pylväästä puuttuu kolme päätä, ja yksi niistä makaa '
       + 'parinsadan metrin päässä museossa. Pylvään jalusta kaivettiin '
       + 'esiin 1855. Paikalla en ollut, mutta sukuni kantoi noihin '

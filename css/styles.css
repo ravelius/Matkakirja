@@ -1702,6 +1702,81 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 .icon-label { white-space: nowrap; }
 
 /*
+ * PÖLLÖ YLIVIIVATTUNA, PULU PERÄÄN (omistajan tilaus 27.8.2026).
+ *
+ * Tietokumppanin nimilapuissa lukee vitsi, jonka hahmo tekee itsestään:
+ * Livia on Viisaan Pöllön SIJAINEN, joten pöllö-sana on vedetty yli ja
+ * perässä lukee "Pulu". Lappu näyttää käsin korjatulta, ei uusiksi
+ * ladotulta — siksi viiva on OHUT ja pelin oma sinettivahan punainen
+ * (sama sävy kuin ihmenauhan puna, css/fokuskohteet.css --nauha-pinta-1
+ * #a1524a), ei huomioväri.
+ *
+ * VETO ON KÄSIN PIIRRETTY JA VINO (omistajan tarkennukset 27.8.2026).
+ * Vaakasuora `text-decoration: line-through` näyttää ladotulta
+ * korjaukselta, ja suora palkki kierrettynäkin näyttää viivaimelta.
+ * Siksi selaimen oma koristelu on pois päältä (<s> saisi sen
+ * oletuksena) ja veto on INLINE-SVG sanan päällä: kaksi kevyesti
+ * kaartuvaa polkua, pyöreät päät, sinettivahan punainen ja hieman
+ * läpikuultava, niin että kirjaimet erottuvat vedon alta.
+ *
+ * SUUNTA ON YLÄOIKEALTA ALAS VASEMMALLE ja veto ULOTTUU YLI TEKSTIN
+ * KORKEUDEN: polku alkaa kirjainten yläreunan yläpuolelta oikealta ja
+ * päättyy alareunan alapuolelle vasemmalle, kuten nopea kynänveto
+ * paperilla. Polut ja niiden mitoitus ovat js/ui-apurit.js:ssä
+ * (VEDON_POLUT) — täällä ovat vain väri, paikka ja se, miten veto
+ * mahtuu riville.
+ *
+ * YKSI YHTENÄINEN VETO PER LAPPU. viewBox venytetään sanan mittaan
+ * (preserveAspectRatio="none"), joten sama polku palvelee sekä sanaa
+ * "Pöllö" että paria "Viisas Pöllö" yhtenä vetona; viivanleveys pysyy
+ * silti vakiona (vector-effect: non-scaling-stroke).
+ *
+ * EI LEIKKAUDU EIKÄ KASVATA RIVIÄ. SVG on absoluuttinen, joten se ei
+ * ole rivilaatikon mitassa mukana — rivinkorkeus ei muutu. Ylitys ylä-
+ * ja alapuolelle on pieni (0,12em kumpaankin suuntaan) ja mahtuu
+ * nimilappujen rivinkorkeuden sisään, joten kuplien ja kortin ylärivin
+ * overflow ei leikkaa vedon päitä. Ylitystä ei kasvateta ilman, että
+ * kuplat katsotaan uudelleen laitteella.
+ *
+ * Yliviivattu sana on himmeämpi ja korvaava sana jää normaaliin
+ * väriin, jotta silmä lukee "Pulu" ensin. Himmennys on sanan omassa
+ * kuoressa eikä <s>-solmussa: muuten se himmentäisi myös vedon.
+ *
+ * <s> on aria-hidden (js/ui-apurit.js polloNimilappu): ruudunlukija
+ * kuulee vain korvaavan sanan, eikä yliviivattua sotkua lueta koskaan
+ * ääneen.
+ *
+ * Väri on sama sekä pergamentilla että tummalla paneelilla — se on
+ * riittävän tumma vaalealle paperille ja riittävän kylläinen tummalle.
+ */
+.pollo-yliviivattu {
+  position: relative;
+  display: inline-block;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+.pollo-yliviivattu-sana { opacity: 0.55; }
+
+/*
+ * MITAT KIRJOITETAAN AUKI, EI JÄTETÄ AUTOLLE. SVG on korvattu elementti
+ * (replaced element): pelkkä `inset` ilman leveyttä ja korkeutta jättää
+ * sen omaan sisäiseen 300×150-kokoonsa tai kutistaa sanan mittaan, eikä
+ * ylitystä synny lainkaan. Siksi laatikko lasketaan sanasta:
+ * 0,16em kumpaankin sivuun ja 0,12em ylös ja alas.
+ */
+.pollo-veto {
+  position: absolute;
+  left: -0.16em;
+  top: -0.12em;
+  width: calc(100% + 0.32em);
+  height: calc(100% + 0.24em);
+  overflow: visible;
+  pointer-events: none;
+  stroke: rgb(161 82 74 / 0.82);
+}
+
+/*
  * SUURENNUSLASIN SYKE UUDESSA KAUPUNGISSA.
  *
  * Omistajan toive 11.8.2026: uuteen kaupunkiin saavuttaessa Tutki-napin
