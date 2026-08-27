@@ -42,13 +42,15 @@
  *
  * ── KUVA ON PELIN OMA HAVAINNEKUVA ─────────────────────────────────
  *
- * Kuvakenttä on `osoite` eikä `tiedosto`: polku repoon
+ * Kohteella on VAIN `ihme`-kenttä eikä lainkaan `kuva`-kenttää
+ * (omistajan tilaus 27.8.2026 ilta: erän ensimmäinen, piirrosmainen
+ * rekonstruktio poistettiin, koska fotorealistinen ihmekuva korvaa
+ * sen). Kuvakenttä on `osoite` eikä `tiedosto`: polku repoon
  * (assets/kartat/ihmeet/), ei Commonsiin, ja kuva syntyy
- * .github/workflows/generoi-ihmeet.yml -ajossa. Selite alkaa aina
- * sanalla "Havainnekuva" ja lähderivi on 'Matkakirjan havainnekuva' —
- * säännöt kokonaisuudessaan Kreikan tiedoston kadonneiden ihmeiden
- * lohkossa. Ennen kuvaerän ajoa tiedostoa ei ole, ja kohde toimii
- * silti.
+ * .github/workflows/generoi-ihmeet.yml -ajossa. Selite kertoo
+ * KOHTEESTA, lähderivi merkitsee kuvan havainnekuvaksi ja peli piirtää
+ * kuvan kulmaan nauhan "Matkakirjan ihme" — säännöt kokonaisuudessaan
+ * Kreikan tiedoston lohkossa "MATKAKIRJAN IHME".
  */
 export const FOKUSKOHTEET_IRQ = [
   {
@@ -78,13 +80,6 @@ export const FOKUSKOHTEET_IRQ = [
       + 'eikä Babylonista ole löytynyt niistä jälkeäkään.',
     lahde: 'en-Wikipedia "Hanging Gardens of Babylon", johdanto-osa '
       + '(tarkistettu 26.8.2026); koordinaatit en-Wikipedia "Babylon".',
-    kuva: {
-      osoite: 'assets/kartat/ihmeet/babylonin-puutarhat.webp',
-      selite: 'Havainnekuva: riippuvat puutarhat sellaisina kuin antiikin '
-        + 'kirjoittajat ne kuvasivat. Mitään tämänkaltaista ei ole '
-        + 'löydetty Babylonista — kuva esittää kertomusta, ei kaivausta.',
-      lahde: 'Matkakirjan havainnekuva',
-    },
     /*
      * MATKAKIRJAN IHME (kadonnut) — säännöt js/packs/fokuskohteet-grc.js:n
      * samannimisessä lohkossa. Puutarhoja ei ole koskaan löydetty, joten

@@ -9,10 +9,11 @@
 # muun apin kautta paitsi herokuvat").
 #
 # TYYLI VAIHTUI 27.8.2026, ja se on koko työn ydin. Ensimmäinen erä
-# (26.8.2026) oli 1800-luvun akvarelloitu rekonstruktiolitografia, ja
-# ne kuvat ovat yhä pelissä loistoaikakuvina
-# (assets/kartat/ihmeet/<tunnus>.webp, kohteiden `kuva`/`kuvat`-kentät)
-# — vanha promptipohja on git-historiassa. Tämä pohja tekee eri asian:
+# (26.8.2026) oli 1800-luvun akvarelloitu rekonstruktiolitografia. Ne
+# kuvat POISTETTIIN pelistä 27.8.2026 illalla omistajan tilauksesta —
+# fotorealistinen ihmekuva korvasi ne, eikä samasta kohteesta näytetä
+# kahta rekonstruktiota. Vanha promptipohja ja vanhat kuvat ovat
+# git-historiassa. Tämä pohja tekee eri asian:
 # TAVALLISEN DOKUMENTTIVALOKUVAN, jossa ehjä antiikin kohde seisoo
 # keskellä tämän päivän kaupunkia. Kaava hiottiin kolmen koesarjan
 # kautta, ja lopullinen muoto on POHJA alempana: candid documentary

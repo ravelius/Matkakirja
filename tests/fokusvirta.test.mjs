@@ -283,12 +283,23 @@ test('Kreikan fokuskohteet ovat rakenteeltaan ehjiä', () => {
       assert.ok(Number.isFinite(paikka?.x) && Number.isFinite(paikka?.y),
         `${kohde.id}: ${lauta}-koordinaatit puuttuvat`);
     }
-    // `osoite` on pelin oma generoitu havainnekuva repossa
-    // (assets/kartat/ihmeet/) — sillä ei ole Commons-nimeä.
-    assert.ok(kohde.kuva?.tiedosto || kohde.kuva?.ampari || kohde.kuva?.osoite,
-      `${kohde.id}: kuva puuttuu`);
-    assert.ok(kohde.kuva.selite?.length > 20, `${kohde.id}: kuvaselite puuttuu`);
-    assert.ok(kohde.kuva.lahde?.length > 10, `${kohde.id}: kuvan lähde puuttuu`);
+    /*
+     * KADONNEELLA KOHTEELLA `kuva` PUUTTUU, ja se on oikein: kohteesta
+     * ei ole valokuvaa, koska kohdetta ei ole, ja kortin ensimmäinen
+     * kuva tulee `ihme`-kentästä (js/fokuskohteet.js piirraKohdeKuvat).
+     * Kaikilla muilla kuva on pakollinen — ja 27.8.2026 alkaen se on
+     * kohteen NYKYISTÄ kuntoa esittävä valokuva, ei havainnekuva
+     * (omistajan täsmennys; generoitu ihmekuva aukeaa vain "Koe ihme"
+     * -napista). `osoite` on yhä sallittu muoto muille repon omille
+     * kuville — sillä ei ole Commons-nimeä.
+     */
+    const kuvatonKadonnut = Boolean(kohde.ihme?.kadonnut) && !kohde.kuva;
+    if (!kuvatonKadonnut) {
+      assert.ok(kohde.kuva?.tiedosto || kohde.kuva?.ampari || kohde.kuva?.osoite,
+        `${kohde.id}: kuva puuttuu`);
+      assert.ok(kohde.kuva.selite?.length > 20, `${kohde.id}: kuvaselite puuttuu`);
+      assert.ok(kohde.kuva.lahde?.length > 10, `${kohde.id}: kuvan lähde puuttuu`);
+    }
     // Lisäkuvat (`kuvat`) ovat pääkuvan jatke, ja niitä koskee sama
     // selite- ja lähdevaatimus: kuvateksti kertoo aina, mitä katsotaan.
     for (const lisa of kohde.kuvat ?? []) {
@@ -466,9 +477,70 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
       assert.ok(/^Matkakirjan havainnekuva:/.test(lahde ?? ''),
         `${tunnus}: lähderivin on merkittävä kuva havainnekuvaksi`);
       assert.ok(sw.includes(`'./${osoite}'`), `${tunnus}: ${osoite} puuttuu sw.js:n listasta`);
+
+      /*
+       * YKSI REKONSTRUKTIO KOHDETTA KOHTI (omistajan tilaus 27.8.2026
+       * ilta). Erän ensimmäiset, piirrosmaiset loistoaikakuvat
+       * (assets/kartat/ihmeet/<tunnus>.webp ilman ihme-etuliitettä)
+       * poistettiin, koska fotorealistinen ihmekuva korvaa ne. Vartio
+       * on tässä, koska paluu näkyisi ruudulla vain kahtena melkein
+       * samana kuvana peräkkäin — ei virheenä.
+       */
+      const kuvalista = [kohde.kuva, ...(kohde.kuvat ?? [])].filter(Boolean);
+      for (const k of kuvalista) {
+        assert.ok(!/^assets\/kartat\/ihmeet\/(?!ihme-)/.test(k.osoite ?? ''),
+          `${tunnus}: vanha loistoaikarekonstruktio ${k.osoite} on yhä kuvalistassa`);
+      }
+
+      if (kadonnut) {
+        /*
+         * KADONNEELLA EI OLE VALOKUVAA, koska kohdetta ei ole: ihmekuva
+         * on kortin ensimmäinen ja ainoa kuva (piirraKohdeKuvat).
+         */
+        assert.equal(kuvalista.length, 0,
+          `${tunnus}: kadonneen kohteen ainoa kuva on ihmekuva`);
+      } else {
+        /*
+         * OLEMASSA OLEVAN PÄÄKUVA ON VALOKUVA KOHTEEN NYKYISESTÄ
+         * KUNNOSTA (omistajan täsmennys 27.8.2026 ilta) — Commons-nimi,
+         * ei repon oma generoitu kuva. Generoitu ihmekuva aukeaa vain
+         * "Koe ihme" -napista, joka piirtyy tämän kuvan ALLE.
+         */
+        assert.ok(kohde.kuva?.tiedosto,
+          `${tunnus}: olemassa olevan kohteen pääkuvan on oltava Commons-valokuva`);
+        assert.ok(/\(CC|\(PD|PD\)/.test(kohde.kuva.lahde ?? ''),
+          `${tunnus}: pääkuvan lähderivillä on oltava lisenssi ja tekijä`);
+      }
     }
   }
   assert.equal(ihmeita, 10, 'ensimmäisessä erässä on kymmenen Matkakirjan ihmettä');
+});
+
+/*
+ * VANHAT LOISTOAIKAKUVAT ON POISTETTU MYÖS LEVYLTÄ JA sw.js:STÄ
+ * (omistajan tilaus 27.8.2026 ilta). Jäänyt tiedosto ei näkyisi
+ * pelissä mitenkään, mutta esilatauslistaan jäänyt rivi kaataisi
+ * palvelutyöntekijän asennuksen kokonaan — addAll hylkää koko erän
+ * yhdestä 404:stä.
+ */
+test('ihmeiden kuvakansiossa on vain uudet ihme-kuvat', async () => {
+  const { readFileSync, readdirSync } = await import('node:fs');
+  const { dirname, join } = await import('node:path');
+  const { fileURLToPath } = await import('node:url');
+  const juuri = join(dirname(fileURLToPath(import.meta.url)), '..');
+  const kansio = join(juuri, 'assets/kartat/ihmeet');
+  const tiedostot = readdirSync(kansio);
+  assert.equal(tiedostot.length, 10, 'kansiossa on kymmenen ihmekuvaa');
+  for (const nimi of tiedostot) {
+    assert.ok(nimi.startsWith('ihme-'), `${nimi}: vanha loistoaikakuva on yhä levyllä`);
+  }
+  const sw = readFileSync(join(juuri, 'sw.js'), 'utf8');
+  for (const rivi of sw.split('\n')) {
+    const osuma = rivi.match(/assets\/kartat\/ihmeet\/([^']+)/);
+    if (!osuma) continue;
+    assert.ok(osuma[1].startsWith('ihme-'),
+      `sw.js esilataa poistetun kuvan ${osuma[1]}`);
+  }
 });
 
 test('kadonnut ihme saa kartalle tähden, olemassa oleva pitää oman merkkinsä', async () => {
@@ -479,4 +551,6 @@ test('kadonnut ihme saa kartalle tähden, olemassa oleva pitää oman merkkinsä
   const knossos = FOKUSKOHTEET_GRC.find((k) => k.id === 'knossos');
   assert.equal(kolossi.ihme.kadonnut, true, 'kolossia ei ole enää olemassa');
   assert.equal(knossos.ihme.kadonnut, false, 'Knossoksen rauniot ovat tallella');
+  assert.equal(kolossi.kuva, undefined, 'kadonneella ei ole valokuvaa');
+  assert.ok(knossos.kuva?.tiedosto, 'olemassa olevalla on valokuva nykytilasta');
 });

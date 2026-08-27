@@ -279,7 +279,14 @@
   padding: 0;
   border: 1px solid rgba(58, 38, 16, 0.22);
   border-radius: 8px;
-  overflow: hidden;
+  /*
+   * EI `overflow: hidden` (Matkakirjan ihmeen kulmanauha, 27.8.2026):
+   * nauhan päät ja taitoskolmiot jatkuvat kuvan reunojen yli, ja
+   * leikkaus söisi juuri sen, mikä myy kääriytymisen. Kuvan omat kulmat
+   * pyöristetään siksi img-elementistä (.fokuskohde-kuva img), ei
+   * napista.
+   */
+  overflow: visible;
   background: #ded5c2;
   box-shadow: none;
   cursor: zoom-in;
@@ -298,6 +305,9 @@
 .fokuskohde-kuva img {
   display: block;
   width: 100%;
+  /* Kulmat pyöristyvät tässä eikä napissa (ks. napin overflow-kohta):
+     hitusen napin 8 px:ää pienempi, jotta reunus jää näkyviin. */
+  border-radius: 7px;
   /* 7,5 -> 10 rem (omistaja 26.8.2026 ilta: "kuva voisi olla hieman
      isompi jo heti tässä näkymässä"); suurennos jää omaksi eleekseen. */
   height: 10rem;
@@ -319,63 +329,194 @@
 }
 
 /* ===========================================================================
-   MATKAKIRJAN IHME — NAUHA JA "KOE IHME" -NAPPI
+   MATKAKIRJAN IHME — KULMANAUHA JA "KOE IHME" -NAPPI
    ---------------------------------------------------------------------------
    Raamattu, osio "Matkakirjan ihmeet" (omistaja 27.8.2026): *"Kuvien
    vasempaan yläkulmaan pelin piirtämä pieni nauha ('Matkakirjan ihme'
    tms.) pelin kartuutsityylillä — peli piirtää nauhan kuvan päälle,
    sitä ei polteta kuvatiedostoon."*
 
-   YKSI KOMPONENTTI, KAKSI PAIKKAA: sama .fokuskohde-ihmenauha piirtyy
-   kortin kuvanapin ja suurennoksen kehyksen sisään (js/fokuskohteet.js
-   piirraIhmenauha). Molemmissa se on kuvan vasemmassa yläkulmassa
-   kiinni vasemmassa reunassa — kuin arkistokuvaan liimattu lipuke.
+   NAUHA ON DIAGONAALINEN KULMANAUHA (omistajan tilaus 27.8.2026 ilta,
+   Akropolis iPhonella): vaakalipukkeen tilalla on 45 asteen kaista,
+   jonka päät jatkuvat kuvan reunojen yli ja jonka juuressa on tummempi
+   taitoskolmio kummallakin reunalla — nauha näyttää kääriytyvän kuvan
+   ympäri sen sijaan että olisi liimattu päälle.
+
+   GEOMETRIA YHDESTÄ PISTEESTÄ. Kääre (.fokuskohde-ihmenauha) on
+   nollan kokoinen piste KUVAN vasemmassa yläkulmassa, ja kaikki kolme
+   osaa asemoidaan siitä. Viisi muuttujaa riittää, ja ne PERIYTYVÄT
+   isännältä (.fokuskohde-kuva kortissa, .fokuskohde-zoomkehys
+   suurennoksessa) — silloin sama isäntä osaa myös varata nauhalle
+   tilan, eikä mittoja kirjoiteta kahteen kertaan:
+
+     --nauha-pituus    kaistan pituus
+     --nauha-korkeus   kaistan leveys (poikkimitta)
+     --nauha-ulos      kuinka pitkälle kaistan päät menevät reunan yli
+     --nauha-taite     taitoskolmion kateetti
+     --nauha-teksti    kirjasinkoko
+
+   Kaistan keskipiste on lävistäjällä pisteessä (c, c), missä
+
+     c = pituus × sin 45° − ulos = pituus × 0,35355 − ulos,
+
+   koska kaistan puolikas (pituus/2) projisoituu kummallekin akselille
+   kertoimella sin 45°. Silloin kaista pistää reunan yli TÄSMÄLLEEN
+   `ulos`-mitan verran molemmista päistä, ja kortin ja suurennoksen ero
+   on pelkkiä lukuja.
+
+   Taitteet asettuvat kohtaan, jossa kaistan ULKOREUNA leikkaa kuvan
+   reunan: x = 2c + korkeus × sin 45°. Kolmion hypotenuusa on kaistan
+   ulkoreunan suuntainen (−45°), joten se liittyy kaistaan saumatta.
+
+   ULOTTUMA ON ENEMMÄN KUIN `ulos`. Kaista on kääntyneenä vino
+   suorakaide, joten sen uloin KULMA on vielä puoli poikkimittaa
+   kauempana: ulottuma = ulos + korkeus × sin 45°. Juuri tuo luku on
+   se tila, jonka kortin kuvakehys varaa (--nauha-tila) — pienempi vara
+   leikkaisi kärjen pois vieritettävän sisällön reunaan.
 
    NAUHA EI OTA NAPAUTUKSIA (pointer-events: none): kortissa se on
    suurennosnapin päällä, ja sormi on tarkoitettu napille.
    =========================================================================== */
 
+/* Kortin mitat. Kuvakehys on isäntä, jotta sama arvo kelpaa sekä
+   nauhalle että kehyksen varaamalle tilalle. */
+.fokuskohde-kuva {
+  --nauha-pituus: 6.9rem;
+  --nauha-korkeus: 0.98rem;
+  --nauha-ulos: 0.45rem;
+  --nauha-taite: 0.42rem;
+  --nauha-teksti: 0.5rem;
+  /* Kaistan uloimman kulman etäisyys kuvan reunasta (ks. ULOTTUMA). */
+  --nauha-tila: calc(var(--nauha-ulos) + 0.7071 * var(--nauha-korkeus) / 2 + 0.06rem);
+}
+
 .fokuskohde-ihmenauha {
+  /* Kaistan keskipiste lävistäjällä (ks. lohkon kaava). */
+  --nauha-c: calc(var(--nauha-pituus) * 0.35355 - var(--nauha-ulos));
+  /* Kohta, jossa kaistan ulkoreuna leikkaa kuvan reunan. */
+  --nauha-juuri: calc(2 * var(--nauha-c) + 0.7071 * var(--nauha-korkeus));
   position: absolute;
-  top: 0.5rem;
+  top: 0;
   left: 0;
-  z-index: 1;
-  padding: 0.18rem 0.5rem 0.18rem 0.42rem;
-  /* Pergamentti, ei paperinvalkoinen: sama sävy kuin karttasymbolien
-     aluslaatalla (css/styles.css --sym-laatta). */
-  background: linear-gradient(180deg, #f6ecd2 0%, #e6d6ac 100%);
-  border: 1px solid rgba(58, 38, 16, 0.42);
-  border-left: none;
-  border-radius: 0 3px 3px 0;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.28);
-  color: #4b3a1c;
-  font-family: var(--font-type, inherit);
-  font-size: 0.6rem;
-  line-height: 1.25;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  white-space: nowrap;
+  /* Nollan kokoinen piste: pelkkä origo osiensa asemoinnille. */
+  width: 0;
+  height: 0;
+  z-index: 2;
   pointer-events: none;
 }
 
-/* Suurennoksessa kehyksellä on oma sisennys: nauha asettuu kuvan
-   kulmaan eikä paperin reunaan. Kehys on nauhan asemointipohja —
+/*
+ * TAITE = NAUHAN TAAKSE MENEVÄ PÄÄ. Reunaviivat piirtävät kolmion:
+ * `border-width: 0 0 T T` ja väri vain alareunassa antaa kolmion
+ * (0,T)–(T,T)–(T,0), jonka hypotenuusa kulkee −45 asteessa eli kaistan
+ * ulkoreunan suuntaisesti. Sama muoto kelpaa molempiin päihin, koska
+ * kulmanauha on symmetrinen lävistäjän suhteen — vain paikka vaihtuu.
+ * Sävy on kaistaa tummempi: se on nauhan nurja puoli varjossa.
+ */
+.fokuskohde-ihmetaite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 var(--nauha-taite) var(--nauha-taite);
+  border-color: transparent transparent #a98b4e transparent;
+}
+
+/* Yläreunan taite: kuvan yläreunan yläpuolella, kaistan oikealla. */
+.fokuskohde-ihmetaite-ylos {
+  left: var(--nauha-juuri);
+  top: calc(-1 * var(--nauha-taite));
+}
+
+/* Vasemman reunan taite: sama kolmio peilattuna lävistäjän yli. */
+.fokuskohde-ihmetaite-vasen {
+  left: calc(-1 * var(--nauha-taite));
+  top: var(--nauha-juuri);
+}
+
+/*
+ * KAISTA. Pergamentti, ei paperinvalkoinen: sama sävy kuin
+ * karttasymbolien aluslaatalla (css/styles.css --sym-laatta).
+ * Musteviiva on kaksinkertainen — reunaviiva ja sen sisällä ohuempi
+ * rinnakkaisviiva (::before) — kuten kartuusin kaiverretussa nauhassa.
+ */
+.fokuskohde-ihmekaista {
+  box-sizing: border-box;
+  position: absolute;
+  left: calc(var(--nauha-c) - var(--nauha-pituus) / 2);
+  top: calc(var(--nauha-c) - var(--nauha-korkeus) / 2);
+  width: var(--nauha-pituus);
+  height: var(--nauha-korkeus);
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #f7eed6 0%, #ecdfbb 55%, #dfcc9c 100%);
+  border-top: 1px solid rgba(58, 38, 16, 0.5);
+  border-bottom: 1px solid rgba(58, 38, 16, 0.5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  color: #4b3a1c;
+  font-family: var(--font-type, inherit);
+  font-size: var(--nauha-teksti);
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.fokuskohde-ihmekaista::before {
+  content: '';
+  position: absolute;
+  inset: 0.11rem 0;
+  border-top: 1px solid rgba(58, 38, 16, 0.2);
+  border-bottom: 1px solid rgba(58, 38, 16, 0.2);
+}
+
+/*
+ * KORTIN KUVAPAIKKA. Kortin sisältö on vieritettävä laatikko
+ * (.fokuskohde-sisalto overflow-y: auto), joka leikkaisi reunan yli
+ * menevän nauhan pois ja voisi jopa avata vaakavierityksen. Nauhaa
+ * kantava kehys työntää siksi kuvanapin irti sisällön ylä- ja
+ * vasemmasta reunasta juuri nauhan ylityksen verran — kuvateksti pysyy
+ * kehyksen levyisenä eikä siirry.
+ */
+.fokuskohde-kuva-nauhalla { margin-top: var(--nauha-tila); }
+
+.fokuskohde-kuva-nauhalla > .fokuskohde-kuvanappi {
+  width: calc(100% - var(--nauha-tila));
+  margin-left: var(--nauha-tila);
+}
+
+/* Suurennoksessa kehyksellä on oma sisennys: nauha asettuu KUVAN
+   kulmaan eikä paperin reunaan, joten kääre siirtyy kehyksen
+   pehmusteen verran. Kehys on nauhan asemointipohja —
    `position: relative` on lisättävä erikseen, koska FLIP-muunnos
    poistuu animaation jälkeen eikä sitä voi käyttää pohjana. */
 .fokuskohde-zoomkehys { position: relative; }
 
+/* Suurennoksen mitat isännälle, aivan kuten kortissa. Ulottuma jää
+   paperikehyksen pehmusteen (0,55rem) ja kerroksen oman reunuksen
+   (.fokuskohde-zoom padding 0,5rem) sisään, joten nauhan kärki ei
+   leikkaudu ruudun laitaan kapeallakaan puhelimella. */
+.fokuskohde-zoomkehys {
+  --nauha-pituus: 9rem;
+  --nauha-korkeus: 1.25rem;
+  --nauha-ulos: 0.6rem;
+  --nauha-taite: 0.56rem;
+  --nauha-teksti: 0.66rem;
+}
+
 .fokuskohde-zoomkehys > .fokuskohde-ihmenauha {
-  top: 1.05rem;
+  /* Kuvan kulma, ei paperin: kehyksen pehmuste on 0,55rem. */
+  top: 0.55rem;
   left: 0.55rem;
-  font-size: 0.68rem;
-  padding: 0.22rem 0.6rem;
-  border-left: 1px solid rgba(58, 38, 16, 0.42);
-  border-radius: 3px;
 }
 
 /*
- * "KOE IHME" -NAPPI heti otsikon alla (Raamattu: *"popupin yläosassa
- * heti oma nappi, josta ihmeen pääsee kokemaan"*). Sama pergamenttinen
+ * "KOE IHME" -NAPPI ENSIMMÄISEN KUVAN ALLA (omistajan tilaus 27.8.2026
+ * ilta: nappi siirtyi otsikon alta siihen kohtaan, jossa poistettu
+ * loistoaikarekonstruktio ennen oli). Sama pergamenttinen
  * korostuskieli kuin kierrosnapilla — mutta tähti edessä, sama merkki
  * kuin kadonneiden ihmeiden karttasymbolissa.
  */
@@ -387,7 +528,9 @@
   gap: 0.45rem;
   width: 100%;
   min-height: 44px;
-  margin: 0 0 0.55rem;
+  /* Hiukan ilmaa kuvatekstin ja napin väliin: nappi seuraa kuvaa,
+     mutta ei saa liimautua sen selitteeseen kiinni. */
+  margin: 0.1rem 0 0.7rem;
   padding: 0.45rem 0.8rem;
   border: 1px solid rgba(122, 85, 20, 0.6);
   border-radius: 4px;

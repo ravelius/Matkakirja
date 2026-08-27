@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1194';
+const CACHE = 'matkakirja-2026-08-09.1195';
 const SHELL = [
   './',
   './index.html',
@@ -624,21 +624,13 @@ const SHELL = [
   './assets/kartat/miniatyyrit/vilna-uzupis.webp',
   './assets/kartat/miniatyyrit/vilna-vilnan-tuomiokirkko.webp',
   './assets/kartat/miniatyyrit/vilna-vilnan-yliopisto.webp',
-  './assets/kartat/ihmeet/aleksandrian-kirjasto.webp',
-  './assets/kartat/ihmeet/artemiin-temppeli.webp',
-  './assets/kartat/ihmeet/babylonin-puutarhat.webp',
-  './assets/kartat/ihmeet/faroksen-majakka.webp',
-  './assets/kartat/ihmeet/halikarnassoksen-mausoleumi.webp',
-  './assets/kartat/ihmeet/hefaistoksen-temppeli.webp',
-  './assets/kartat/ihmeet/knossos-loistossaan.webp',
-  './assets/kartat/ihmeet/parthenon-loistossaan.webp',
-  './assets/kartat/ihmeet/rodoksen-kolossi.webp',
-  './assets/kartat/ihmeet/zeuksen-patsas.webp',
   // Matkakirjan ihmeet: sama kohde loistoaikansa asussa NYKYMAAILMASSA
   // (Raamattu, osio "Matkakirjan ihmeet"; kohteiden `ihme`-kenttä
-  // js/packs/fokuskohteet-*.js). Nämä ovat pelin kohokohtia, joten ne
-  // kuuluvat kuoreen siinä missä loistoaikakuvatkin — ilman
-  // esilatausta ihme jäisi lentokoneessa harmaaksi laatikoksi.
+  // js/packs/fokuskohteet-*.js). Nämä ovat pelin kohokohtia, ja monella
+  // kohteella ihmekuva on kortin ainoa kuva — ilman esilatausta ihme
+  // jäisi lentokoneessa harmaaksi laatikoksi. Ensimmäisen erän
+  // piirrosmaiset loistoaikarekonstruktiot poistettiin 27.8.2026
+  // (omistajan tilaus): fotorealistinen ihmekuva korvasi ne.
   './assets/kartat/ihmeet/ihme-aleksandrian-kirjasto.webp',
   './assets/kartat/ihmeet/ihme-artemiin-temppeli.webp',
   './assets/kartat/ihmeet/ihme-babylonin-puutarhat.webp',

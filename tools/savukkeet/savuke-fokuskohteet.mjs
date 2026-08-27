@@ -707,6 +707,146 @@ vaadi('alleviivattu sana kysyy pöllöltä lisää kortin sulkeutumatta',
 await sivu.evaluate(() => window.matkakirjaPollo.sulje());
 await sivu.waitForTimeout(300);
 
+/* --- 10b: MATKAKIRJAN IHME — kuva, nappi kuvan alla ja kulmanauha ---
+ *
+ * Omistajan tilaus 27.8.2026 ilta (Akropoliin kortti iPhonella). Kolme
+ * asiaa, jotka näkyvät VAIN oikeassa asettelussa:
+ *
+ *   a) OLEMASSA OLEVAN KOHTEEN JÄRJESTYS on otsikko → nykytilan
+ *      VALOKUVA → "Koe ihme" -nappi → leipäteksti. Nappi seisoo siinä
+ *      kohdassa, jossa poistettu loistoaikarekonstruktio ennen oli, eikä
+ *      kortissa saa olla enää kahta kuvaa.
+ *   b) NAUHA ON DIAGONAALINEN JA KÄÄRIYTYY: kaista on käännetty
+ *      45 astetta ja sen laatikko jatkuu kuvan ylä- ja vasemman reunan
+ *      YLI, ja taitteita on kaksi. Vaakalaatikko läpäisisi silmämitan
+ *      mutta ei tätä.
+ *   c) NAUHA EI OTA NAPAUTUKSIA: kortissa se on suurennosnapin päällä.
+ *
+ * Kohteet: Olympia (olemassa, oma valokuva stadionista) ja Rodoksen
+ * kolossi (kadonnut, ihmekuva kortin ainoana kuvana). Olympia eikä
+ * Akropolis, koska Akropolis, sen museo ja antiikin agora ovat samassa
+ * ryppäässä: erotellut osuma-alueet koskettavat toisiaan, ja napautus
+ * voisi osua naapuriin. Olympia seisoo yksin.
+ */
+
+/** Kortin rakenne ihmeen kannalta: kuvat, nappi ja niiden järjestys. */
+const ihmekortti = () => sivu.evaluate(() => {
+  const el = document.querySelector('.fokuskohde-popup');
+  if (!el) return null;
+  const sisalto = el.querySelector('.fokuskohde-sisalto');
+  const jarjestys = [...sisalto.children].map((n) => n.className.split(' ')[0]);
+  const nauha = el.querySelector('.fokuskohde-kuva .fokuskohde-ihmenauha');
+  const kuva = el.querySelector('.fokuskohde-kuva img');
+  const kaista = nauha?.querySelector('.fokuskohde-ihmekaista');
+  const k = kaista?.getBoundingClientRect();
+  const i = kuva?.getBoundingClientRect();
+  return {
+    otsikko: el.querySelector('.fokuskohde-otsikko')?.textContent ?? '',
+    jarjestys,
+    kuvia: el.querySelectorAll('.fokuskohde-kuva img').length,
+    kuvalahde: el.querySelector('.fokuskohde-kuvalahde')?.textContent ?? '',
+    nappeja: el.querySelectorAll('.fokuskohde-ihmenappi').length,
+    // Nauha kortin kuvassa: vain kadonneella, jonka ainoa kuva on ihme.
+    nauhaKuvassa: Boolean(nauha),
+    taitteita: nauha ? nauha.querySelectorAll('.fokuskohde-ihmetaite').length : 0,
+    muunnos: kaista ? getComputedStyle(kaista).transform : '',
+    osoitin: nauha ? getComputedStyle(nauha).pointerEvents : '',
+    yli: k && i ? { ylos: Math.round(i.top - k.top), vasen: Math.round(i.left - k.left) } : null,
+  };
+});
+
+/** Suurennoksen nauha: sama komponentti, isommat mitat. */
+const ihmezoom = () => sivu.evaluate(() => {
+  const kehys = document.querySelector('.fokuskohde-zoomkehys');
+  if (!kehys) return null;
+  const nauha = kehys.querySelector('.fokuskohde-ihmenauha');
+  const kaista = nauha?.querySelector('.fokuskohde-ihmekaista');
+  const kuva = kehys.querySelector('.fokuskohde-zoomkuva');
+  const k = kaista?.getBoundingClientRect();
+  const i = kuva?.getBoundingClientRect();
+  return {
+    nauha: Boolean(nauha),
+    taitteita: nauha ? nauha.querySelectorAll('.fokuskohde-ihmetaite').length : 0,
+    muunnos: kaista ? getComputedStyle(kaista).transform : '',
+    osoitin: nauha ? getComputedStyle(nauha).pointerEvents : '',
+    teksti: kaista?.textContent ?? '',
+    yli: k && i ? { ylos: Math.round(i.top - k.top), vasen: Math.round(i.left - k.left) } : null,
+    lahde: kehys.querySelector('.fokuskohde-zoomlahde')?.textContent ?? '',
+  };
+});
+
+/*
+ * 45 asteen kierto matriisina: rotate(-45deg) on
+ * matrix(0.7071, -0.7071, 0.7071, 0.7071, 0, 0). Vaakalaatikolla a
+ * olisi 1 ja b 0, joten tämä erottaa tilatun nauhan vanhasta.
+ */
+const vino = (muunnos) => {
+  const osat = String(muunnos ?? '').match(/-?[\d.]+/g)?.map(Number) ?? [];
+  if (osat.length < 4) return false;
+  return Math.abs(osat[0] - 0.7071) < 0.02 && Math.abs(osat[1] + 0.7071) < 0.02;
+};
+
+// Edellinen kortti kiinni ja kamera takaisin lehden perustasolle:
+// avoin kortti peittäisi juuri sen kohdan, johon napautus osuu.
+await sivu.keyboard.press('Escape');
+await sivu.waitForTimeout(300);
+await ajaLehdelle();
+
+await napauta('olympia');
+let ihme = await ihmekortti();
+vaadi('olemassa olevan ihmekohteen kortti aukesi',
+  ihme?.otsikko === 'Olympia', JSON.stringify(ihme?.otsikko));
+vaadi('olemassa olevan ihmekohteen kortissa on yksi kuva: nykytilan valokuva',
+  ihme?.kuvia === 1 && /CC BY/.test(ihme.kuvalahde), JSON.stringify(ihme?.kuvalahde));
+vaadi('"Koe ihme" -nappi on kuvan ALLA eikä otsikon alla',
+  ihme?.nappeja === 1
+  && ihme.jarjestys.indexOf('fokuskohde-ihmenappi')
+     > ihme.jarjestys.indexOf('fokuskohde-kuva')
+  && ihme.jarjestys.indexOf('fokuskohde-ihmenappi')
+     < ihme.jarjestys.indexOf('fokuskohde-teksti'),
+  JSON.stringify(ihme?.jarjestys));
+vaadi('olemassa olevan kortissa ei ole nauhaa: ihmekuva aukeaa vasta napista',
+  ihme?.nauhaKuvassa === false);
+
+// Napin puuttuminen on jo raportoitu edellä: älä jää odottamaan sitä
+// 30 sekuntia, vaan anna loppujen väitteiden kertoa oma tuloksensa.
+if (ihme?.nappeja) await sivu.locator('.fokuskohde-ihmenappi').click();
+await sivu.waitForTimeout(600);
+let zoom = await ihmezoom();
+vaadi('"Koe ihme" avaa suurennoksen, jossa on ihmenauha ja havainnekuvamerkintä',
+  zoom?.nauha === true && /Matkakirjan ihme/i.test(zoom.teksti)
+  && /Matkakirjan havainnekuva/.test(zoom.lahde), JSON.stringify(zoom?.teksti));
+vaadi('suurennoksen nauha on 45 asteen kulmanauha, ei vaakalaatikko',
+  vino(zoom?.muunnos), zoom?.muunnos);
+vaadi('suurennoksen nauha kääriytyy: päät kuvan reunojen yli, kaksi taitetta',
+  zoom?.taitteita === 2 && zoom.yli.ylos > 0 && zoom.yli.vasen > 0,
+  JSON.stringify(zoom?.yli));
+vaadi('nauha ei nappaa napautuksia', zoom?.osoitin === 'none', zoom?.osoitin);
+
+await sivu.keyboard.press('Escape');
+await sivu.waitForTimeout(500);
+
+/*
+ * KADONNUT KOHDE: ihmekuva on kortin ainoa kuva ja se kantaa nauhan
+ * itse — välinappia ei ole, koska napautus vie suoraan siihen, mitä
+ * paikalla ei enää ole.
+ */
+await sivu.keyboard.press('Escape');
+await sivu.waitForTimeout(300);
+await napauta('rodoksen-kolossi');
+ihme = await ihmekortti();
+vaadi('kadonneen kohteen kortti aukesi',
+  ihme?.otsikko === 'Rodoksen kolossi', JSON.stringify(ihme?.otsikko));
+vaadi('kadonneen kohteen ainoa kuva on ihmekuva, ja siinä on nauha',
+  ihme?.kuvia === 1 && ihme.nauhaKuvassa === true && ihme.nappeja === 0,
+  JSON.stringify({ kuvia: ihme?.kuvia, nauha: ihme?.nauhaKuvassa, napit: ihme?.nappeja }));
+vaadi('kortin nauha on sekin 45 asteen kulmanauha kahdella taitteella',
+  vino(ihme?.muunnos) && ihme.taitteita === 2,
+  `${ihme?.muunnos} / ${ihme?.taitteita} taitetta`);
+vaadi('kortin nauha jatkuu kuvan ylä- ja vasemman reunan yli',
+  ihme?.yli && ihme.yli.ylos > 0 && ihme.yli.vasen > 0, JSON.stringify(ihme?.yli));
+vaadi('kortin nauha ei nappaa napautuksia', ihme?.osoitin === 'none', ihme?.osoitin);
+
 /* --- 11: ilman lehteä ei merkkejä --- */
 
 await sivu.evaluate(() => window.matkakirja.ui.paivitaFokusPohja(null));

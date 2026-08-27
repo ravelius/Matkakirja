@@ -39,14 +39,15 @@
  *
  * Kummastakaan kohteesta ei ole valokuvaa, koska kohdetta ei ole:
  * majakka romahti maanjäristyksissä ja kirjaston paikkaakaan ei
- * tunneta. Kuvakenttä on siksi `osoite` eikä `tiedosto` — polku
+ * tunneta. Kummallakin on siksi VAIN `ihme`-kenttä eikä lainkaan
+ * `kuva`-kenttää (omistajan tilaus 27.8.2026 ilta: erän ensimmäiset,
+ * piirrosmaiset rekonstruktiot poistettiin, koska fotorealistinen
+ * ihmekuva korvaa ne). Kuvakenttä on `osoite` eikä `tiedosto` — polku
  * repoon (assets/kartat/ihmeet/), ei Commonsiin — ja kuvat syntyvät
- * .github/workflows/generoi-ihmeet.yml -ajossa. Kaksi ehtoa, joita ei
- * saa purkaa (sama sääntö kuin Kreikan tiedoston kadonneiden ihmeiden
- * lohkossa): selite alkaa aina sanalla "Havainnekuva" ja kertoo mihin
- * muoto perustuu, ja lähderivi on 'Matkakirjan havainnekuva'. Ennen
- * kuvaerän ajoa tiedostoa ei ole, ja kohde toimii silti — puuttuva
- * kuva poistaa vain kuvapaikan (js/fokuskohteet.js piirraKohdeKuva).
+ * .github/workflows/generoi-ihmeet.yml -ajossa. Rehellisyyden säännöt
+ * ovat Kreikan tiedoston lohkossa "MATKAKIRJAN IHME": selite kertoo
+ * KOHTEESTA, lähderivi merkitsee kuvan havainnekuvaksi ja peli piirtää
+ * kuvan kulmaan nauhan "Matkakirjan ihme".
  *
  * ── FAKTAPOHJA ─────────────────────────────────────────────────────
  *
@@ -87,18 +88,11 @@ export const FOKUSKOHTEET_EGY = [
       + '1994, kun ranskalaissukeltajat kartoittivat sataman pohjaa.',
     lahde: 'en-Wikipedia "Lighthouse of Alexandria", johdanto ja '
       + 'tietolaatikko (tarkistettu 26.8.2026).',
-    kuva: {
-      osoite: 'assets/kartat/ihmeet/faroksen-majakka.webp',
-      selite: 'Havainnekuva: Faroksen majakka satamansuulla noin 200 eaa. '
-        + 'Kolmiosainen muoto — nelikulmio, kahdeksankulmio ja lieriö — '
-        + 'on antiikin kuvauksista ja aikakauden kolikoista; tornista '
-        + 'itsestään on jäljellä vain meren pohjan kivilohkareita.',
-      lahde: 'Matkakirjan havainnekuva',
-    },
     /*
      * MATKAKIRJAN IHME — säännöt js/packs/fokuskohteet-grc.js:n
      * samannimisessä lohkossa. Majakkaa ei ole, joten `kadonnut: true`:
-     * kartalla tähti ja kortissa tämä kuva ensimmäisenä.
+     * kartalla tähti ja kortissa tämä kuva ensimmäisenä — ja ainoana,
+     * sillä kadonneesta majakasta ei ole valokuvaa.
      */
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-faros.webp',
@@ -148,15 +142,8 @@ export const FOKUSKOHTEET_EGY = [
     lahde: 'en-Wikipedia "Library of Alexandria", johdanto ja '
       + 'tietolaatikko (tarkistettu 26.8.2026); koordinaatit '
       + 'en-Wikipedia "Alexandria" — kirjaston omaa paikkaa ei tunneta.',
-    kuva: {
-      osoite: 'assets/kartat/ihmeet/aleksandrian-kirjasto.webp',
-      selite: 'Havainnekuva: Aleksandrian kirjaston lukusali käärörullien '
-        + 'hyllyineen. Rakennuksesta ei ole löytynyt jälkeäkään eikä '
-        + 'sen paikkaakaan tunneta — kuva perustuu antiikin kirjastojen '
-        + 'tunnettuun rakenteeseen.',
-      lahde: 'Matkakirjan havainnekuva',
-    },
-    /* MATKAKIRJAN IHME (kadonnut) — säännöt fokuskohteet-grc.js:ssä. */
+    /* MATKAKIRJAN IHME (kadonnut) — säännöt fokuskohteet-grc.js:ssä.
+       Kohteen ainoa kuva: kirjastosta ei ole jäljellä mitään. */
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-aleksandrian-kirjasto.webp',
       kadonnut: true,

@@ -1052,8 +1052,9 @@ export const RAAMATTU = {
           + 'käy sellaisenaan MARKKINOINTIIN.',
         'KAKSI ESITYSTAPAA (omistaja 27.8.2026): jos kohde on YHÄ '
           + 'OLEMASSA (Akropolis, pyramidi, rauniokohteet), kartalla '
-          + 'on normaali merkintä ja popupin yläosassa heti oma '
-          + 'nappi, josta ihmeen pääsee kokemaan (nykyaikakuva '
+          + 'on normaali merkintä, pääkuvana nykytilan valokuva ja '
+          + 'sen alla oma nappi, josta ihmeen pääsee kokemaan '
+          + '(nykyaikakuva '
           + 'aukeaa). Jos kohde on KOKONAAN KADONNUT (Faros, '
           + 'kolossi, mausoleumi...), kartalla on suoraan oma '
           + 'TÄHTISYMBOLI ja popupin kuva aukeaa suoraan '
