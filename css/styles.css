@@ -17909,10 +17909,49 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
  * Sama sääntö kelpaa puhelimelle ja isolle ruudulle: katto on remeissä
  * ja dvh-laskussa, ja kahden luokan valitsin voittaa molempien
  * lohkojen height-rivit ilman media-ehtoja.
+ *
+ * ── KATTO NOSTETTU: KOKO TERVEHDYS KERRALLA (omistajan tilaus
+ * 27.8.2026: *"pöllön kupla saisi avautua korkeampana jotta pulun
+ * kaikki teksti mahtuisi kerralla näkyviin"*) ────────────────────────
+ *
+ * JUURISYY oli tämän säännön kolmas arvo: katto oli 17rem = 272 px,
+ * ja siitä paneelin oma kehys (alanappirivi, reunat, virran täyte) söi
+ * ~82 px. Keskusteluvirralle jäi 190 px. Livian TUURAAJA-tervehdys
+ * (js/pollo.js TERVEHDYS, viisi virkettä) vie kapealla ruudulla yksin
+ * 160 px, ja sen alle tulevat vielä avausehdotukset — sisältöä 271 px,
+ * tilaa 190 px. Virta vieritti itsensä pohjaan, ja tervehdyksen ALKU
+ * jäi ruudun yläpuolelle: omistaja näki puheenvuoron alkavan keskeltä
+ * virkettä. Katto ei siis rajoittanut mitään ylimääräistä tyhjää vaan
+ * leikkasi tekstiä.
+ *
+ * Katto on nyt kolmiosainen, ja jokainen osa vartioi eri asiaa:
+ *
+ *   14rem  — alaraja: matalinkin paneeli on käytettävä.
+ *   66dvh  — SE, JOKA YLEENSÄ RATKAISEE. Paneeli saa kahden kolmasosan
+ *            osuuden näkymästä; loppukolmannes jää kartalle yläreunaan,
+ *            joten paneeli ei koskaan peitä koko ruutua.
+ *   100dvh − 11rem — vanha turvaraja, ennallaan. Matalalla näkymällä
+ *            (maisema-asento, avattu näppäimistö) tämä alittaa 66dvh:n,
+ *            ja min() valitsee sen: paneelin yläpuolelle jää tilaa
+ *            samalla kaavalla kuin ennenkin.
+ *   32rem  — yläraja: leveällä ruudulla 66dvh kasvaisi järjettömäksi,
+ *            eikä alkutila saa koskaan yltää täyden paneelin (38–40rem)
+ *            korkeuteen — tuore keskustelu on yhä matalampi kuin käyty.
+ *
+ * `height: auto` säilyy, joten paneeli mitoittaa itsensä SISÄLLÖN
+ * mukaan tuohon kattoon asti: tervehdys + ehdotukset tarvitsevat
+ * iPhonella ~353 px ja iPadilla ~376 px, eli paneeli aukeaa juuri sen
+ * korkuisena eikä varaa turhaa paperia. Vieritys ei katoa mihinkään —
+ * jos sisältöä on kattoa enemmän (näppäimistö auki, iso tekstikoko),
+ * virta vierittyy kuten ennenkin.
  */
 .pollo-paneeli.pollo-alku {
   height: auto;
-  max-height: clamp(14rem, calc(100dvh - 11rem - env(safe-area-inset-bottom, 0px)), 17rem);
+  max-height: clamp(
+    14rem,
+    min(66dvh, calc(100dvh - 11rem - env(safe-area-inset-bottom, 0px))),
+    32rem
+  );
 }
 
 /*
