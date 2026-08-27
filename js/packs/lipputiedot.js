@@ -4576,4 +4576,1233 @@ export const LIPPUTIEDOT = {
     ],
     lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
   },
+  'Flag of Ireland.svg': {
+    maa: 'Irlanti',
+    symboliikka: [
+      {
+        osa: 'Vihreä',
+        selite: 'saaren katolinen enemmistö ja vanha gaelilainen '
+          + 'Irlanti.',
+      },
+      {
+        osa: 'Oranssi',
+        selite: 'protestanttinen vähemmistö. Väri on Vilhelm '
+          + 'Oranialaisen kannattajien.',
+      },
+      {
+        osa: 'Valkoinen',
+        selite: 'pysyvä aselepo näiden kahden välillä.',
+      },
+      {
+        osa: 'Pystyraidat',
+        selite: 'vihreä on aina salon puolella. Käännettynä lippu on '
+          + 'Norsunluurannikon.',
+      },
+    ],
+    kappaleet: [
+      'Vihreä-oranssi-yhdistelmä syntyi kokardina jo 1830, mutta '
+        + 'lipuksi sen teki tunnetuksi Nuori Irlanti vuonna 1848. '
+        + 'Thomas Francis Meagher selitti sen sanoilla, jotka ovat '
+        + 'jääneet elämään: valkoinen keskellä merkitsee pysyvää '
+        + 'aselepoa oranssin ja vihreän välillä, ja sen poimujen alla '
+        + 'irlantilaisten protestanttien ja katolilaisten kädet '
+        + 'saisivat yhtyä.',
+      'Kansallislipun asema tuli vasta pääsiäiskapinassa 1916, kun '
+        + 'trikolori nostettiin Dublinin pääpostitalon katolle. Sitä '
+        + 'käytti Irlannin tasavalta vapaussodassa 1919–1921 ja sen '
+        + 'jälkeen vapaavaltio; vuoden 1937 perustuslaki nosti sen '
+        + 'lyhyellä pykälällä valtion lipuksi.',
+      'Isoisän matkavuonna 1873 mitään tästä ei ollut. Irlanti oli '
+        + 'osa Yhdistynyttä kuningaskuntaa, ja saaren omana merkkinä '
+        + 'liehui vihreä harppulippu. Trikolori oli tuolloin harvinainen '
+        + 'salaseurojen tunnus — kuvaavaa on, että sen värijärjestystä '
+        + 'jouduttiin vielä 1900-luvulla erikseen opettamaan.',
+    ],
+    versiot: [
+      {
+        nimi: 'Vihreä harppulippu',
+        polku: 'assets/liput/versiot/irl-harppulippu.png',
+        selite: 'Kultainen harppu vihreällä pohjalla. Irlannin vanhin '
+          + 'oma lippu, käytössä 1600-luvun kapinoista lähtien, ja yhä '
+          + '1800-luvulla se tavallisin irlantilainen lippu.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Irlannin vaakuna',
+        polku: 'assets/liput/tunnukset/irl-vaakuna.png',
+        selite: 'Kultainen harppu hopeakielin sinisellä pohjalla. '
+          + 'Harppu on ollut Irlannin vaakunana 1500-luvulta, ja '
+          + 'kruunujen yhdistyttyä 1603 se siirtyi myös Britannian '
+          + 'kuninkaalliseen vaakunaan. Vapaavaltio otti sen omakseen '
+          + '1922 ja piirsi harpun uudelleen keskiaikaisen '
+          + 'cláirseach-soittimen, Trinity Collegen harpun, mukaan. '
+          + 'Vaakuna rekisteröitiin marraskuussa 1945.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD). Harppulippu: '
+      + 'Raymond1922A / Wikimedia Commons (CC BY-SA 3.0)',
+  },
+  'Flag of Cyprus.svg': {
+    maa: 'Kypros',
+    symboliikka: [
+      {
+        osa: 'Kuparinvärinen saari',
+        selite: 'saaren kuparivarat. Kuparin latinankielinen nimi '
+          + 'cuprum tulee Kyproksesta.',
+      },
+      {
+        osa: 'Kaksi oliivinoksaa',
+        selite: 'rauha saaren kreikkalaisten ja turkkilaisten '
+          + 'yhteisöjen välillä.',
+      },
+      { osa: 'Valkoinen pohja', selite: 'rauha.' },
+      {
+        osa: 'Mitä lipusta puuttuu',
+        selite: 'ei sinistä eikä punaista, ei ristiä eikä '
+          + 'puolikuuta — perustuslaki kielsi Kreikan ja Turkin '
+          + 'tunnusmerkit.',
+      },
+    ],
+    kappaleet: [
+      'Lippu on harvinaisuus: se piirrettiin nimenomaan siten, ettei '
+        + 'se muistuttaisi kumpaakaan emämaata. Vuoden 1960 '
+        + 'perustuslaki määräsi, että presidentin ja varapresidentin '
+        + 'on valittava lippu, jonka muoto ja väri ovat neutraaleja. '
+        + 'Voittajaksi tuli turkkilaiskyproslaisen taiteilijan İsmet '
+        + 'Güneyn ehdotus, joka nostettiin salkoon 16. elokuuta 1960.',
+      'Brittihallinnon oma ehdotus oli ollut ruskea K valkoisella '
+        + 'pohjalla; sekä arkkipiispa Makarios III että Fazıl Küçük '
+        + 'hylkäsivät sen. Vuonna 2006 lippua täsmennettiin: '
+        + 'oliivinoksien muotoa muutettiin, sävyt määriteltiin '
+        + 'uudelleen ja mittasuhteiksi tuli 2:3.',
+      'Neutraalius jäi toiveeksi. Yhteisöt erkanivat väkivaltaisuuksien '
+        + 'jälkeen 1963, ja vuodesta 1974 saari on ollut jaettu; '
+        + 'pohjoisosassa liehuu oma lippunsa, jota Kyproksen tasavalta '
+        + 'ja YK:n jäsenmaat Turkkia lukuun ottamatta eivät tunnusta. '
+        + 'Isoisän matkavuonna 1873 saari oli osmanien hallussa; '
+        + 'britit ottivat sen hoitoonsa vasta 1878.',
+    ],
+    versiot: [
+      {
+        nimi: 'Lippu 1960–2006',
+        polku: 'assets/liput/versiot/cyp-1960.png',
+        selite: 'Alkuperäinen İsmet Güneyn lippu. Saari oli '
+          + 'kuparinsävyisempi, oliivinoksat toisenmuotoiset ja '
+          + 'mittasuhde 3:5.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Kyproksen vaakuna',
+        polku: 'assets/liput/tunnukset/cyp-vaakuna.png',
+        selite: 'Kuparinkeltaisella kilvellä valkoinen kyyhky, joka '
+          + 'kantaa nokassaan oliivinoksaa, ja sen alla vuosiluku '
+          + '1960 — itsenäistymisvuosi. Kilpeä ympäröi kaksiosainen '
+          + 'oliiviseppele, joka niin ikään luetaan saaren kahdeksi '
+          + 'yhteisöksi. Kuparinväri viittaa samaan malmiin kuin '
+          + 'lipun saarikuva.',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Vaakuna: Borb ja Di '
+      + '(they-them) / Wikimedia Commons (CC BY-SA 4.0)',
+  },
+  'Flag of Syria.svg': {
+    maa: 'Syyria',
+    symboliikka: [
+      { osa: 'Vihreä', selite: 'rashidun-kalifit.' },
+      { osa: 'Valkoinen', selite: 'umaijadit, joiden pääkaupunki oli Damaskos.' },
+      { osa: 'Musta', selite: 'abbasidit.' },
+      {
+        osa: 'Kolme punaista tähteä',
+        selite: 'alun perin Aleppon, Damaskoksen ja Deir ez-Zorin '
+          + 'osavaltiot. Punainen on luettu myös vapauden hinnaksi.',
+      },
+    ],
+    kappaleet: [
+      'Tämä on itsenäisyyden lippu. Se määriteltiin jo vuoden 1930 '
+        + 'perustuslaissa, se nostettiin Ranskan mandaatin päättyessä '
+        + 'huhtikuussa 1946, ja sitä käytettiin uudelleen 1961–1963. '
+        + 'Väriyhdistelmä on arabien yhteinen: vihreä, valkoinen ja '
+        + 'musta ovat kolmen kalifikunnan värit, punainen tuli mukaan '
+        + 'arabikapinan lipusta.',
+      'Vuosina 1980–2024 Syyrian lippu oli toisenlainen: puna-valko'
+        + '-musta kolmiraita kahdella vihreällä tähdellä, peräisin '
+        + 'Egyptin kanssa solmitusta Yhdistyneestä arabitasavallasta. '
+        + 'Vanha kolmiraita säilyi kuitenkin katukuvassa vuoden 2011 '
+        + 'jälkeen opposition lippuna, ja sitä alettiin kutsua '
+        + 'vallankumouksen lipuksi.',
+      'Assadin hallinnon kaaduttua joulukuussa 2024 siirtymähallinto '
+        + 'palautti itsenäisyyden lipun, ja vuoden 2025 '
+        + 'perustuslaillinen julistus vahvisti sen valtion lipuksi '
+        + 'mittasuhteessa 2:3. Isoisän matkavuonna 1873 Syyrialla ei '
+        + 'ollut omaa lippua lainkaan: alue oli Osmanivaltakunnan '
+        + 'Syyrian vilajetti, ja salossa liehui sulttaanin lippu.',
+    ],
+    versiot: [
+      {
+        nimi: 'Lippu 1980–2024',
+        polku: 'assets/liput/versiot/syr-1980.png',
+        selite: 'Punainen, valkoinen ja musta raita kahdella '
+          + 'vihreällä tähdellä. Arabien vapautuslipun muunnelma, '
+          + 'joka periytyi Yhdistyneestä arabitasavallasta ja oli '
+          + 'käytössä Baath-puolueen valtakauden loppuun.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Syyrian tunnus',
+        polku: 'assets/liput/tunnukset/syr-vaakuna.png',
+        selite: 'Vaaleanruskea kotka, jonka pään yllä kaartuu lipun '
+          + 'kolme tähteä. Pyrstössä on viisi sulkaa — pohjoinen, '
+          + 'etelä, itä, länsi ja keskusta — ja siivissä yhteensä '
+          + '14 sulkaa, yksi kutakin maakuntaa kohti. Tunnus '
+          + 'vahvistettiin 3. heinäkuuta 2025. Sitä ennen Syyrian '
+          + 'tunnuksissa oli lähes aina kilpeä kannatteleva lintu, '
+          + 'useimmiten Quraishin haukka.',
+      },
+    ],
+    lahde: 'Liput ja tunnus: Wikimedia Commons (PD)',
+  },
+  'Flag of Yemen.svg': {
+    maa: 'Jemen',
+    symboliikka: [
+      {
+        osa: 'Punainen',
+        selite: 'yhtenäisyys ja marttyyrien vuodattama veri.',
+      },
+      { osa: 'Valkoinen', selite: 'valoisa tulevaisuus.' },
+      { osa: 'Musta', selite: 'menneisyyden pimeys.' },
+      {
+        osa: 'Koruton kolmiraita',
+        selite: 'kummankin Jemenin lipusta poistettiin oma tunnuksensa, '
+          + 'kun maat yhdistyivät. Jäljelle jäi pelkkä arabien '
+          + 'vapautuslippu.',
+      },
+    ],
+    kappaleet: [
+      'Lippu otettiin käyttöön 22. toukokuuta 1990, sinä päivänä kun '
+        + 'Pohjois- ja Etelä-Jemen yhdistyivät. Pohjoisen lipussa oli '
+        + 'ollut vihreä tähti ja etelän lipussa vaaleansininen kolmio '
+        + 'punaisine tähtineen; yhdistymisessä molemmat tunnukset '
+        + 'jätettiin pois. Lopputulos on maailman lipuista '
+        + 'yksinkertaisimpia — ja täsmälleen sama kuin Libyan '
+        + 'arabitasavallan lippu 1969–1972.',
+      'Pohjoinen oli ollut imaamien Jemenin kuningaskunta, joka '
+        + 'kaatui vallankumoukseen 1962; sen punaisessa lipussa oli '
+        + 'valkoinen miekka ja viisi tähteä. Etelä oli Britannian '
+        + 'Adenin siirtomaa ja suojelusalueet, ja itsenäistyttyään '
+        + '1967 siitä tuli Jemenin kansandemokraattinen tasavalta, '
+        + 'arabimaailman ainoa sosialistinen valtio.',
+      'Isoisän matkavuonna 1873 Jemenissä oli kaksi valtaa. Osmanit '
+        + 'olivat juuri palanneet ylängölle ja ottaneet Sanaan '
+        + 'haltuunsa, ja etelässä Aden oli ollut brittien tukikohtana '
+        + 'vuodesta 1839 — Suezin kanavan avaamisen jälkeen 1869 se '
+        + 'oli maailman vilkkaimpia hiilisatamia.',
+    ],
+    versiot: [
+      {
+        nimi: 'Jemenin kuningaskunnan lippu',
+        polku: 'assets/liput/versiot/yem-kuningaskunta.png',
+        selite: 'Punaisella pohjalla valkoinen miekka ja viisi '
+          + 'tähteä. Imaamien Jemen käytti sitä vuoteen 1962; '
+          + 'rojalistit pitivät sitä esillä sisällissodan loppuun '
+          + 'asti 1970.',
+      },
+      {
+        nimi: 'Etelä-Jemenin lippu 1967–1990',
+        polku: 'assets/liput/versiot/yem-etela.png',
+        selite: 'Sama kolmiraita, mutta salon puolella '
+          + 'vaaleansininen kolmio ja punainen tähti: kansa '
+          + 'kansallisen vapautusrintaman johdolla. Lippu palasi '
+          + 'lyhyeksi aikaa vuoden 1994 sisällissodassa.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Jemenin tunnus',
+        polku: 'assets/liput/tunnukset/yem-vaakuna.png',
+        selite: 'Kultainen Saladinin kotka, jollaisen ovat ottaneet '
+          + 'tunnuksekseen useat arabimaat. Kynsissä on nauha, jossa '
+          + 'lukee arabiaksi Jemenin tasavalta. Rinnalla olevassa '
+          + 'kilvessä on kahvipensas ja Maribin pato — kahvi vei '
+          + 'Mokan sataman nimen maailmalle, ja pato on Etelä-Arabian '
+          + 'muinaisen viljelyskulttuurin tunnetuin rakennus. Kilven '
+          + 'alaosan seitsemän aaltoviivaa ovat meri; kotkan '
+          + 'kummallakin puolella liehuu Jemenin lippu.',
+      },
+    ],
+    lahde: 'Liput ja tunnus: Wikimedia Commons (PD). Jemenin lippu: '
+      + '愛喝奶茶 / Wikimedia Commons (CC BY-SA 4.0). Kuningaskunnan '
+      + 'lippu: Abo Yemen / Wikimedia Commons (CC BY-SA 4.0)',
+  },
+  'Flag of Bahrain.svg': {
+    maa: 'Bahrain',
+    symboliikka: [
+      {
+        osa: 'Punainen',
+        selite: 'kaatuneiden veri ja saariston vanhat taistelut. '
+          + 'Punainen on Persianlahden ruhtinaskuntien perinteinen '
+          + 'väri.',
+      },
+      { osa: 'Valkoinen', selite: 'rauha ja vuoden 1820 sopimus Britannian kanssa.' },
+      {
+        osa: 'Viisi valkoista kolmiota',
+        selite: 'islamin viisi pilaria. Sakarat ovat olleet viisi '
+          + 'vuodesta 2002.',
+      },
+      {
+        osa: 'Sahalaita',
+        selite: 'lisättiin 1932 erottamaan lippu naapureiden '
+          + 'samanvärisistä lipuista. Qatarin lippu on '
+          + 'viininpunainen ja siinä on yhdeksän sakaraa.',
+      },
+    ],
+    kappaleet: [
+      'Bahrainin varhaisimmat liput olivat kokonaan punaisia. Vuoden '
+        + '1820 yleinen merisopimus Britannian kanssa toi lippuun '
+        + 'valkoisen kaistan: se oli merkki sopimuksesta ja erotti '
+        + 'sopimusruhtinaskunnat merirosvoiksi luetuista. Sama '
+        + 'punavalkoinen kaava näkyy yhä koko Persianlahden '
+        + 'eteläreunalla.',
+      'Sahalaita piirrettiin 1932. Sakaroita oli aluksi 28, mutta '
+        + 'määrä pudotettiin kahdeksaan 1972 ja edelleen viiteen '
+        + '14. helmikuuta 2002, jotta kukin kolmio vastaisi yhtä '
+        + 'islamin viidestä pilarista. Samana päivänä Bahrainista '
+        + 'tuli kuningaskunta.',
+      'Isoisän matkavuonna 1873 saarilla liehui punavalkoinen lippu '
+        + 'ilman sahalaitaa, ja Bahrain eli helmenkalastuksesta: '
+        + 'Persianlahden helmet olivat maailmanmarkkinoiden parhaita '
+        + 'siihen asti, kunnes japanilaiset viljellyt helmet '
+        + 'romahduttivat hinnat 1930-luvulla.',
+    ],
+    versiot: [
+      {
+        nimi: 'Lippu 1932–1972',
+        polku: 'assets/liput/versiot/bhr-1932.png',
+        selite: 'Sama punavalkoinen lippu, mutta sahalaidassa oli 28 '
+          + 'sakaraa. Silloin sahalaidan ainoa tehtävä oli erottaa '
+          + 'Bahrain naapureistaan, ei vielä viitata pilareihin.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Bahrainin vaakuna',
+        polku: 'assets/liput/tunnukset/bhr-vaakuna.png',
+        selite: 'Punainen kilpi, jonka yläreunassa on lipun '
+          + 'sahalaita, ja sen ympärillä punainen valkovuorinen '
+          + 'vaippa. Vaakunan piirsi 1932 brittineuvonantaja Charles '
+          + 'Belgrave hallitsija Isa ibn Ali Al Khalifalle. Vaippa '
+          + 'lisättiin 1971 itsenäistymisen merkiksi, ja vuodesta '
+          + '2022 kuningas käyttää versiota, jonka päällä on '
+          + 'kuninkaallinen kruunu.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of Afghanistan (2013–2021).svg': {
+    maa: 'Afganistan',
+    symboliikka: [
+      {
+        osa: 'Musta',
+        selite: 'menneisyys: 1800-luvun sodat ja aika suojeluvaltiona.',
+      },
+      {
+        osa: 'Punainen',
+        selite: 'itsenäisyyden puolesta vuodatettu veri, erityisesti '
+          + 'vuoden 1919 sopimus.',
+      },
+      { osa: 'Vihreä', selite: 'toivo ja vauraus. Väri on myös islamin.' },
+      {
+        osa: 'Valkoinen tunnus',
+        selite: 'moskeija mihrabeineen ja minbareineen, sen ympärillä '
+          + 'vehnäntähkät, ylinnä uskontunnustus ja alla vuosiluku '
+          + '1298 — hidžra-aurinkokalenterin vuosi 1919.',
+      },
+    ],
+    kappaleet: [
+      'Pelin lehdessä liehuu Afganistanin islamilaisen tasavallan '
+        + 'kolmiraita, jonka viimeisin muoto vahvistettiin elokuussa '
+        + '2013. Kuningas Amanullah Khan oli tuonut pystyraitaisen '
+        + 'mallin 1928 Euroopan-matkaltaan, ja lähes jokaisessa '
+        + 'afganistanilaisessa lipussa vuoden 1901 jälkeen on ollut '
+        + 'keskellä moskeijaa esittävä tunnus.',
+      'Elokuussa 2021 Taleban otti maan haltuunsa ja palautti '
+        + 'islamilaisen emiraatin valkoisen lipun, jossa on musta '
+        + 'uskontunnustus. Kolmiraita on silti yhä käytössä maan '
+        + 'ulkopuolella: sitä liehuttavat useat suurlähetystöt, se '
+        + 'on Afganistanin lippu YK:ssa ja olympialaisissa, ja '
+        + 'maanpaossa siitä on tullut vastarinnan merkki.',
+      'Isoisän matkavuonna 1873 Afganistanilla ei ollut '
+        + 'eurooppalaiseen tapaan kansallislippua. Emiiri Sher Ali '
+        + 'Khanin vallan merkkinä olivat viirit ja rummut, ja samana '
+        + 'vuonna Britannia ja Venäjä sopivat keskenään, että Amu-'
+        + 'darja on Afganistanin pohjoisraja — maasta neuvoteltiin '
+        + 'ilman maata itseään.',
+    ],
+    versiot: [
+      {
+        nimi: 'Emiraatin viiri 1826–1880',
+        polku: 'assets/liput/versiot/afg-1826.png',
+        selite: 'Kapea kolmionmuotoinen viiri, jollainen oli '
+          + 'Afganistanin emiraatin tunnus Dost Mohammad Khanin '
+          + 'ajoista lähtien — myös isoisän matkavuonna 1873. '
+          + 'Nelikulmainen kansallislippu tuli vasta seuraavalla '
+          + 'vuosikymmenellä.',
+      },
+      {
+        nimi: 'Islamilaisen emiraatin lippu',
+        polku: 'assets/liput/versiot/afg-emiraatti.png',
+        selite: 'Valkoinen lippu, jossa on mustalla islamin '
+          + 'uskontunnustus. Talebanin lippu vuodesta 1997 ja maan '
+          + 'sisällä käytössä elokuusta 2021.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Afganistanin tunnus',
+        polku: 'assets/liput/tunnukset/afg-vaakuna.png',
+        selite: 'Sama tunnus kuin kolmiraidan keskellä: moskeija, '
+          + 'jonka mihrab osoittaa Mekkaan ja jonka kummallakin '
+          + 'puolella on Afganistanin lippu. Yläreunassa on '
+          + 'uskontunnustus, alareunassa maan nimi ja vuosiluku '
+          + '1298 eli itsenäistymisvuosi 1919. Vehnäntähkät '
+          + 'ilmestyivät tunnukseen 1928, moskeija jo 1901.',
+      },
+    ],
+    lahde: 'Liput ja tunnus: Wikimedia Commons (PD/CC0). Emiraatin '
+      + 'viiri: AfghanTsakhtan / Wikimedia Commons (CC0)',
+  },
+  'Flag of Kazakhstan.svg': {
+    maa: 'Kazakstan',
+    symboliikka: [
+      {
+        osa: 'Turkoosi',
+        selite: 'loputon taivas ja vesi. Sininen on turkkilaisten '
+          + 'kansojen yhteinen väri ja merkitsee tässä kansojen '
+          + 'yhtenäisyyttä.',
+      },
+      {
+        osa: 'Aurinko ja 32 sädettä',
+        selite: 'säteet on muotoiltu viljanjyviksi — elämän ja '
+          + 'vaurauden lähde.',
+      },
+      {
+        osa: 'Arokotka',
+        selite: 'vapaus, voima ja lento tulevaisuuteen. Kotka on '
+          + 'ollut kazakkiheimojen lipuissa vuosisatoja.',
+      },
+      {
+        osa: 'Salon puolen kuvio',
+        selite: 'qoşqar-müiız eli pässinsarvet, kansanomaisin '
+          + 'kazakkilainen koristeaihe.',
+      },
+    ],
+    kappaleet: [
+      'Lippu hyväksyttiin 4. kesäkuuta 1992, puoli vuotta '
+        + 'itsenäistymisen jälkeen. Sen suunnitteli taiteilija Şäken '
+        + 'Niyazbekov, ja se korvasi neuvostoajan lipun. Kultaa ja '
+        + 'sinistä on selitetty myös jatkumoksi: kulta oli sirpin ja '
+        + 'vasaran väri, turkoosi neuvostolipun alareunan kaistan.',
+      'Kazakstanin arolla ei koskaan ollut yhtä kansallislippua, '
+        + 'vaan jokaisella heimoliitolla oli omansa. Vuoden 1917 '
+        + 'jälkeen syntynyt Alash Orda -autonomia ei ehtinyt sopia '
+        + 'yhdestä lipusta, ja bolševikkien voitettua alue liitettiin '
+        + '1920 Kazakstanin autonomiseen neuvostotasavaltaan.',
+      'Isoisän matkavuonna 1873 aro oli jo Venäjän hallussa. Vuoden '
+        + '1868 aro-ohjesäännöt olivat purkaneet khaanikuntien '
+        + 'jäänteet ja jakaneet maan kuvernementteihin, ja samana '
+        + 'kesänä 1873 Venäjän armeija marssi Kazakstanin autiomaiden '
+        + 'halki Khivaan. Kazakkien liput olivat siihen mennessä '
+        + 'jääneet paimentolaisleirien viireiksi.',
+    ],
+    versiot: [
+      {
+        nimi: 'Kazakstanin SNT:n lippu 1953–1992',
+        polku: 'assets/liput/versiot/kaz-nst.png',
+        selite: 'Punainen lippu sirppeineen ja vasaroineen, '
+          + 'alaosassa vaaleansininen kaista. Juuri tuo turkoosi '
+          + 'kaista siirtyi itsenäisen Kazakstanin lipun pohjaväriksi.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Kazakstanin tunnus',
+        polku: 'assets/liput/tunnukset/kaz-vaakuna.png',
+        selite: 'Keskellä on şañyraq, jurtan katon pyöreä '
+          + 'savuaukkokehä — perheen ja kodin merkki, josta säteilee '
+          + 'ulos uyq-tukirimoja auringonsäteiden tavoin. Sivuilla '
+          + 'kaartuvat siivekkäät tulpar-hevoset, myyttiset '
+          + 'siivekkäät ratsut. Alareunassa lukee QAZAQSTAN; '
+          + 'kyrillinen kirjoitusasu vaihtui latinalaiseen 2018. '
+          + 'Tunnus hyväksyttiin 1992, ja sen tekijät ovat '
+          + 'Jandarbek Melibekov ja Şot-Aman Uälihan.',
+      },
+    ],
+    lahde: 'Liput ja tunnus: Wikimedia Commons (PD)',
+  },
+  'Flag of Uzbekistan.svg': {
+    maa: 'Uzbekistan',
+    symboliikka: [
+      {
+        osa: 'Sininen',
+        selite: 'taivas ja vesi. Se on myös Timur Lenkin lipun väri.',
+      },
+      { osa: 'Valkoinen', selite: 'rauha ja onni.' },
+      { osa: 'Vihreä', selite: 'luonto, uusi elämä ja hyvä sato.' },
+      { osa: 'Punaiset kapeat raidat', selite: 'elämänvoima.' },
+      {
+        osa: 'Kuunsirppi ja 12 tähteä',
+        selite: 'sirppi on uuden valtion synty, tähdet maan '
+          + 'maakunnat ja vanha kaksitoistakuukautinen kalenteri.',
+      },
+    ],
+    kappaleet: [
+      'Lippu hyväksyttiin marraskuussa 1991, muutama viikko '
+        + 'itsenäistymisen jälkeen. Se on rakennettu vanhan '
+        + 'neuvostotasavallan lipun päälle: sininen ja valkoinen '
+        + 'kaista olivat jo siinä, samoin punaiset ohuet raidat. '
+        + 'Lakiteksti ei anna väreille virallisia merkityksiä, joten '
+        + 'selitykset ovat vakiintuneita mutta epävirallisia.',
+      'Uzbekistanin alueella oli 1800-luvulla kolme valtiota: '
+        + 'Buharan emiraatti, Khivan khaanikunta ja Kokandin '
+        + 'khaanikunta. Niillä oli omat lippunsa — Buharan vihreä '
+        + 'viiri kirjailtuine kirjoituksineen on niistä '
+        + 'tunnetuimpia.',
+      'Isoisän matkavuosi 1873 oli Keski-Aasian käännekohta. Venäjän '
+        + 'armeija valtasi Khivan kesäkuussa 1873, ja khaanikunnasta '
+        + 'tuli Venäjän suojelusvaltio; samana vuonna Buharan emiiri '
+        + 'joutui allekirjoittamaan sopimuksen, joka alisti hänetkin '
+        + 'Pietarin ohjaukseen. Silkkitien kaupungit Samarkand ja '
+        + 'Buhara olivat menettäneet itsenäisyytensä.',
+    ],
+    versiot: [
+      {
+        nimi: 'Buharan emiraatin lippu',
+        polku: 'assets/liput/versiot/uzb-buhara.png',
+        selite: 'Vihreä viiri, jossa on arabiankielisiä kirjoituksia '
+          + 'ja kämmenen kuva. Buhara oli isoisän matkavuonna 1873 '
+          + 'yhä oma emiraattinsa — mutta juuri sinä vuonna se '
+          + 'sidottiin sopimuksella Venäjään.',
+      },
+      {
+        nimi: 'Uzbekistanin SNT:n lippu 1952–1991',
+        polku: 'assets/liput/versiot/uzb-nst.png',
+        selite: 'Punainen lippu, jonka poikki kulkevat valkoiset ja '
+          + 'sininen kaista. Nykylipun sinivalkoinen jako on '
+          + 'suoraan tästä.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Uzbekistanin tunnus',
+        polku: 'assets/liput/tunnukset/uzb-vaakuna.png',
+        selite: 'Keskellä levittää siipensä huma eli khumo, '
+          + 'legendaarinen onnenlintu. Sen takana nousee aurinko '
+          + 'vuorten yli, ja laaksossa virtaavat Amu-darja ja '
+          + 'Syr-darja. Vasemmalla on puuvillapensas — Uzbekistanin '
+          + 'valkoinen kulta — ja oikealla vehnäntähkiä; ne on '
+          + 'sidottu yhteen lipun värisellä nauhalla. Ylinnä on '
+          + 'kahdeksansakarainen tähti kuunsirppeineen. Tunnus '
+          + 'hyväksyttiin 2. heinäkuuta 1992.',
+      },
+    ],
+    lahde: 'Liput ja tunnus: Wikimedia Commons (PD)',
+  },
+  'Flag of Hong Kong.svg': {
+    maa: 'Hongkong',
+    symboliikka: [
+      {
+        osa: 'Punainen',
+        selite: 'sama punainen kuin Kiinan lipussa: emämaa ja juhla.',
+      },
+      {
+        osa: 'Valkoinen orkideapuun kukka',
+        selite: 'Bauhinia × blakeana, Hongkongista löydetty puu ja '
+          + 'alueen tunnus.',
+      },
+      {
+        osa: 'Viisi terälehteä ja niissä tähdet',
+        selite: 'samat viisi tähteä kuin Kiinan lipussa.',
+      },
+      {
+        osa: 'Punainen ja valkoinen yhdessä',
+        selite: 'periaate yksi maa, kaksi järjestelmää.',
+      },
+    ],
+    kappaleet: [
+      'Lippu paljastettiin huhtikuussa 1990 Pekingissä, viimeisteltiin '
+        + '1996 ja nostettiin salkoon 1. heinäkuuta 1997 sinä yönä, '
+        + 'kun Hongkong siirtyi Britannialta Kiinalle. Kukkasommitelman '
+        + 'takana on arkkitehti Tao Ho.',
+      'Sitä ennen Hongkongilla oli siirtomaalippu: brittiläinen '
+        + 'sininen lippu, jonka liepeessä oli vuonna 1959 myönnetty '
+        + 'vaakuna kahdella kiinalaisella purjeveneellä. Vielä '
+        + 'aiemmin, vuodesta 1843, siirtomaan merkkinä oli tunnus, '
+        + 'jossa kauppiaat seisoivat laiturilla lastin äärellä ja '
+        + 'satamassa keinuivat purjelaiva ja džonkki.',
+      'Isoisän matkavuonna 1873 Hongkong oli ollut brittien '
+        + 'siirtomaana runsaat kolmekymmentä vuotta ja kasvanut '
+        + 'Etelä-Kiinan meren tärkeimmäksi välisatamaksi. Juuri '
+        + 'sellaista satamaa tuon ajan kaukomatkailija tarvitsi: '
+        + 'täältä lähtivät höyrylaivat Shanghaihin, Yokohamaan ja '
+        + 'Singaporeen.',
+    ],
+    versiot: [
+      {
+        nimi: 'Siirtomaalippu 1959–1997',
+        polku: 'assets/liput/versiot/hkg-siirtomaa.png',
+        selite: 'Brittiläinen sininen lippu, jonka liepeessä on '
+          + 'Hongkongin vaakuna: kaksi džonkkia, muurikruunu, '
+          + 'leijona ja lohikäärme. Laskettiin salosta '
+          + 'kesäkuun viimeisenä yönä 1997.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Hongkongin tunnus',
+        polku: 'assets/liput/tunnukset/hkg-vaakuna.png',
+        selite: 'Sama viisiterälehtinen orkideakukka pyöreässä '
+          + 'kehyksessä. Ulkokehällä lukee alueen virallinen nimi '
+          + 'perinteisin kiinalaisin kirjoitusmerkein ja englanniksi '
+          + 'Hong Kong. Tunnus otettiin käyttöön lipun kanssa '
+          + 'samana päivänä 1. heinäkuuta 1997.',
+      },
+    ],
+    lahde: 'Liput ja tunnus: Wikimedia Commons (PD)',
+  },
+  'Flag of the Republic of China.svg': {
+    maa: 'Taiwan',
+    symboliikka: [
+      {
+        osa: 'Punainen kenttä',
+        selite: 'kansallisuusaate ja vallankumouksessa uhrattu veri. '
+          + 'Sun Yat-sen lisäsi sen 1906.',
+      },
+      { osa: 'Sininen', selite: 'kansanvalta ja vapaus.' },
+      { osa: 'Valkoinen aurinko', selite: 'kansan toimeentulo ja tasa-arvo.' },
+      {
+        osa: 'Kaksitoista sädettä',
+        selite: 'vuoden kaksitoista kuukautta ja vanhan kiinalaisen '
+          + 'vuorokauden kaksitoista kaksoistuntia — lakkaamaton '
+          + 'edistys.',
+      },
+    ],
+    kappaleet: [
+      'Lipun kulmassa oleva sinivalkoinen aurinko on vanhempi kuin '
+        + 'lippu. Lu Haodong piirsi sen 1895 Qing-vastaisen Kiinan '
+        + 'elvytysseuran tunnukseksi Hongkongissa ja teloitettiin '
+        + 'samana vuonna. Sun Yat-sen lisäsi punaisen kentän 1906. '
+        + 'Yhdistelmästä tuli Kiinan tasavallan virallinen lippu '
+        + 'joulukuussa 1928, ja vuoden 1947 perustuslaki kirjasi sen '
+        + 'kuudenteen pykäläänsä.',
+      'Vuoden 1949 jälkeen lippu on ollut käytössä Taiwanissa. Se on '
+        + 'kiistelty: Kiinan kansantasavalta pitää sitä kukistetun '
+        + 'hallinnon merkkinä ja rajoittaa sen näyttämistä, kun taas '
+        + 'osa Taiwanin itsenäisyyden kannattajista torjuu sen '
+        + 'kiinalaisen nationalismin ja Kuomintangin tunnuksena. '
+        + 'Kansainvälisissä urheilukilpailuissa Taiwan esiintyy '
+        + 'toisella, erikseen sovitulla lipulla.',
+      'Isoisän matkavuonna 1873 saari oli Qing-dynastian Taiwanin '
+        + 'prefektuuri ja hallinnollisesti osa Fujiania. Keisarikunnan '
+        + 'merilippuna liehui kolmionmuotoinen keltainen '
+        + 'lohikäärmelippu. Seuraavana vuonna Japani teki saarelle '
+        + 'sotaretken, ja 1895 Taiwan siirtyi Japanin hallintaan '
+        + 'viideksikymmeneksi vuodeksi.',
+    ],
+    versiot: [
+      {
+        nimi: 'Qing-dynastian lohikäärmelippu 1862–1889',
+        polku: 'assets/liput/versiot/twn-lohikaarme.png',
+        selite: 'Kolmionmuotoinen keltainen lippu sinisine '
+          + 'lohikäärmeineen. Keisarikunnan ensimmäinen '
+          + 'länsimaiseen tapaan käytetty lippu — ja se, joka '
+          + 'liehui Taiwanin salmella isoisän matkavuonna 1873.',
+      },
+      {
+        nimi: 'Viiden kansan lippu 1912–1928',
+        polku: 'assets/liput/versiot/twn-viisi-rotua.png',
+        selite: 'Viisi vaakaraitaa: punainen han-kiinalaisille, '
+          + 'keltainen mantšuille, sininen mongoleille, valkoinen '
+          + 'huimuslimeille ja musta tiibetiläisille. Sun Yat-sen '
+          + 'vastusti sitä, koska raitojen järjestys näytti '
+          + 'arvojärjestykseltä.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Kiinan tasavallan tunnus',
+        polku: 'assets/liput/tunnukset/twn-vaakuna.png',
+        selite: 'Sininen taivas ja valkoinen aurinko — sama kuvio '
+          + 'kuin lipun kulmassa, mutta ilman punaista kenttää. Laki '
+          + 'määrittelee mittasuhteet tarkasti: auringon säteen '
+          + 'pituus on kaksi kertaa auringon säde. Kuomintangin '
+          + 'puoluetunnus on lähes sama, ja ero on juuri '
+          + 'mittasuhteissa.',
+      },
+    ],
+    lahde: 'Liput ja tunnus: Wikimedia Commons (PD)',
+  },
+  'Flag of Australia.svg': {
+    maa: 'Australia',
+    symboliikka: [
+      {
+        osa: 'Unionin lippu',
+        selite: 'brittiläinen alkuperä. Amiraliteetti vaati, että '
+          + 'siirtomaan merilippu rakennetaan sen päälle.',
+      },
+      {
+        osa: 'Iso seitsensakarainen tähti',
+        selite: 'Liittovaltiontähti: kuusi osavaltiota ja seitsemäs '
+          + 'sakara territorioille. Sakaroita oli aluksi kuusi, '
+          + 'seitsemäs lisättiin 1908.',
+      },
+      {
+        osa: 'Etelän risti',
+        selite: 'eteläisen taivaan tähtikuvio. Ivor Evans luki sen '
+          + 'neljä kirkkainta tähteä Danten hyveiksi: oikeus, '
+          + 'viisaus, kohtuus ja lujuus.',
+      },
+      {
+        osa: 'Tähtien sakarat',
+        selite: 'neljä isoa tähteä on seitsemänsakaraisia ja pienin '
+          + 'viisisakarainen — amiraliteetti yksinkertaisti '
+          + 'alkuperäisen työn kirkkausasteikon.',
+      },
+    ],
+    kappaleet: [
+      'Lippu syntyi kilpailussa heti liittovaltion perustamisen '
+        + 'jälkeen, ja voittajatyö nostettiin ensi kerran salkoon '
+        + '3. syyskuuta 1901 Melbournessa. Voittajia oli viisi, '
+        + 'koska samanlaisia ehdotuksia oli tullut useita — nuorin '
+        + 'heistä oli neljätoistavuotias koulupoika Ivor Evans. '
+        + 'Nykymuotonsa lippu sai 1908.',
+      'Pitkään sininen lippu oli virallisesti Unionin lippua '
+        + 'alempana, ja pelkän sinisen liehuttamista saatettiin pitää '
+        + 'epälojaaliuden osoituksena. Vasta vuoden 1953 lippulaki '
+        + 'teki siitä Australian kansallislipun ja antoi sille '
+        + 'etusijan. Punainen lippu oli sitä ennen tavallisen '
+        + 'kansalaisen lippu, koska sen käyttöä ei rajoitettu.',
+      'Isoisän matkavuonna 1873 Australiaa ei ollut. Manner oli '
+        + 'kuutena erillisenä brittisiirtomaana, joilla kullakin oli '
+        + 'oma sinilippunsa. Etelän risti oli silti jo tuttu tunnus: '
+        + 'se oli liehunut kaivosmiesten Eureka-lipussa Ballaratissa '
+        + '1854 — ja samana vuonna 1873 tutkimusmatkailija William '
+        + 'Gosse näki ensimmäisenä eurooppalaisena Ulurun.',
+    ],
+    versiot: [
+      {
+        nimi: 'Punainen kauppalippu',
+        polku: 'assets/liput/versiot/aus-punalippu.png',
+        selite: 'Sama kuvio punaisella pohjalla. Valittiin 1901 '
+          + 'kauppalaivaston lipuksi, mutta 1950-luvulle asti se oli '
+          + 'käytännössä myös yksityisten australialaisten lippu.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Australian vaakuna',
+        polku: 'assets/liput/tunnukset/aus-vaakuna.png',
+        selite: 'Kilpi on jaettu kuuteen ruutuun, yksi kutakin '
+          + 'osavaltiota kohti, ja sitä ympäröi kärppäreunus '
+          + 'yhdistämässä ruudut yhdeksi. Kannattajina ovat kenguru '
+          + 'ja emu — kumpikaan ei kykene kävelemään taaksepäin, '
+          + 'mikä on luettu eteenpäin katsomisen merkiksi. Ylinnä on '
+          + 'liittovaltiontähti ja taustalla kultainen akaasia, maan '
+          + 'kansalliskukka. Nykyinen vaakuna on vuodelta 1912.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of New Zealand.svg': {
+    maa: 'Uusi-Seelanti',
+    symboliikka: [
+      {
+        osa: 'Kuninkaansininen',
+        selite: 'ympäröivä meri ja taivas. Sävy on peräisin '
+          + 'kuninkaallisen laivaston sinisen laivueen lipusta.',
+      },
+      { osa: 'Unionin lippu', selite: 'maan alkuperä brittiläisenä siirtomaana.' },
+      {
+        osa: 'Neljä punaista tähteä',
+        selite: 'Etelän risti. Māorien tarustossa se on Māhutonga, '
+          + 'aukko Linnunradassa, josta myrskytuulet pääsevät ulos.',
+      },
+      {
+        osa: 'Tähtiä on neljä, ei viisi',
+        selite: 'juuri se erottaa lipun Australian lipusta — samoin '
+          + 'kuin punainen väri ja valkoiset reunukset.',
+      },
+    ],
+    kappaleet: [
+      'Lippu piirrettiin 1869 siirtomaan alusten tunnukseksi, ja '
+        + 'siitä tuli nopeasti koko maan lippu. Lakiin se kirjattiin '
+        + 'vasta vuoden 1901 lipulailla, ja vuoden 1902 '
+        + 'virallisessa lehdessä tähtien paikat määriteltiin '
+        + 'kuudeskymmenesosina lipun korkeudesta.',
+      'Ensimmäinen kansainvälisesti tunnustettu lippu oli aivan '
+        + 'toinen: māoripäälliköiden kokous valitsi 1834 Waitangissa '
+        + 'yhdistyneiden heimojen lipun, jotta uusiseelantilaiset '
+        + 'alukset saisivat papereihinsa kotimaan. Waitangin '
+        + 'sopimuksen jälkeen 1840 salkoihin nousivat brittiliput.',
+      'Lipun vaihtamisesta on keskusteltu 1970-luvulta asti. Vuonna '
+        + '2016 järjestettiin kaksivaiheinen kansanäänestys, jossa '
+        + 'haastajaksi valikoitui Kyle Lockwoodin työ: hopeasaniainen '
+        + 'ja Etelän risti sinimustalla pohjalla. Vanha lippu voitti '
+        + 'äänin 57–43. Isoisän '
+        + 'matkavuonna 1873 nykyinen lippu oli ollut käytössä neljä '
+        + 'vuotta.',
+    ],
+    versiot: [
+      {
+        nimi: 'Yhdistyneiden heimojen lippu 1834–1840',
+        polku: 'assets/liput/versiot/nzl-heimoliitto.png',
+        selite: 'Valkoinen lippu punaisine Yrjön risteineen; '
+          + 'kulmassa toinen risti ja neljä tähteä sinisellä. '
+          + 'Māoripäälliköt valitsivat sen äänestämällä — Uuden-'
+          + 'Seelannin ensimmäinen oma lippu.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Uuden-Seelannin vaakuna',
+        polku: 'assets/liput/tunnukset/nzl-vaakuna.png',
+        selite: 'Kilven toisella puolella seisoo Zealandia, '
+          + 'eurooppalainen naishahmo lippuineen, ja toisella '
+          + 'māoripäällikkö taiaha kädessään. Kilvessä ovat Etelän '
+          + 'risti, kultainen lampaannahka, lyhde, vasarat ja '
+          + 'purjelaiva: karjatalous, maanviljely, kaivannaiset ja '
+          + 'merenkulku. Ylinnä on kruunu ja alla saniaisia. '
+          + 'Vaakuna myönnettiin 1911 ja nykyasunsa se sai 1956.',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Heimoliiton lippu: '
+      + 'Greentubing / Wikimedia Commons (CC BY-SA 2.5). Vaakuna: '
+      + 'Sodacan / Wikimedia Commons (CC BY-SA 3.0)',
+  },
+  'Flag of Papua New Guinea.svg': {
+    maa: 'Papua-Uusi-Guinea',
+    symboliikka: [
+      {
+        osa: 'Punainen ja musta',
+        selite: 'maan heimojen perinteiset värit. Ne olivat myös '
+          + 'Saksan keisarikunnan värit — Saksa hallitsi pohjoisosaa '
+          + 'ennen vuotta 1918.',
+      },
+      {
+        osa: 'Kultainen paratiisilintu',
+        selite: 'Raggianin paratiisilintu, maan kansallislintu. Sen '
+          + 'nouseva asento merkitsee uuden kansakunnan syntyä.',
+      },
+      {
+        osa: 'Viisi valkoista tähteä',
+        selite: 'Etelän risti — yhteys muihin eteläisen pallonpuoliskon '
+          + 'maihin.',
+      },
+      {
+        osa: 'Vino jako',
+        selite: 'lippu on halkaistu ylänurkasta alanurkkaan. '
+          + 'Harvinainen ratkaisu, joka erottaa sen kaikista muista.',
+      },
+    ],
+    kappaleet: [
+      'Australian hallinto oli ehdottanut aivan toisenlaista lippua: '
+        + 'taiteilija Hal Holmanin pystyraitaista sini-kelta-vihreää '
+        + 'trikoloria, jossa oli valkoinen paratiisilintu ja Etelän '
+        + 'risti. Vastaanotto oli tyly — sitä pidettiin '
+        + 'virkamiestyönä. Alkuvuodesta 1971 julistettiin '
+        + 'valtakunnallinen kilpailu.',
+      'Voittajaksi valittiin viisitoistavuotiaan koulutytön Susan '
+        + 'Kariken työ. Parlamentti hyväksyi sen 11. maaliskuuta '
+        + '1971, ja lippu otettiin käyttöön 1. heinäkuuta 1971 — '
+        + 'neljä vuotta ennen itsenäisyyttä. Kilpailun ansiosta maa '
+        + 'sai lipun, jonka se koki omakseen.',
+      'Isoisän matkavuonna 1873 saari oli vielä lähes kokonaan '
+        + 'eurooppalaisten kartoittamaton. Samana vuonna brittiläinen '
+        + 'kapteeni John Moresby purjehti HMS Basiliskilla '
+        + 'etelärannikkoa ja löysi suojaisan sataman, jolle hän antoi '
+        + 'isänsä nimen. Paikalla oli jo kyliä; siitä kasvoi Port '
+        + 'Moresby, maan pääkaupunki.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Papua-Uuden-Guinean tunnus',
+        polku: 'assets/liput/tunnukset/png-vaakuna.png',
+        selite: 'Paratiisilintu levittää siipensä ristissä olevan '
+          + 'keihään ja kundu-rummun päällä. Kundu on '
+          + 'tiimalasinmuotoinen käsirumpu, jolla kylä kutsutaan '
+          + 'koolle, ja keihäs on kansan oma ase — yhdessä ne '
+          + 'edustavat perinnettä, lintu tulevaisuutta. Tunnuksen '
+          + 'piirsi Hal Holman, ja se hyväksyttiin lipun kanssa '
+          + 'samalla lailla kesäkuussa 1971.',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Tunnus: Sodacan / '
+      + 'Wikimedia Commons (CC BY-SA 4.0)',
+  },
+  'Flag of the Solomon Islands.svg': {
+    maa: 'Salomonsaaret',
+    symboliikka: [
+      { osa: 'Sininen', selite: 'meri, joet ja sade.' },
+      { osa: 'Vihreä', selite: 'saarten maa ja metsät.' },
+      { osa: 'Keltainen vinoraita', selite: 'aurinko.' },
+      {
+        osa: 'Viisi valkoista tähteä',
+        selite: 'maan viisi alkuperäistä hallintoaluetta. Maakuntia '
+          + 'on sittemmin tullut lisää, mutta tähtien määrää ei ole '
+          + 'muutettu.',
+      },
+    ],
+    kappaleet: [
+      'Lippu otettiin käyttöön 18. marraskuuta 1977, kahdeksan '
+        + 'kuukautta ennen itsenäisyyttä. Se korvasi brittiläisen '
+        + 'sinisen lipun, jonka liepeessä oli protektoraatin vaakuna.',
+      'Tie lippuun kulki kahden hylätyn voittajan kautta. Vuoden '
+        + '1975 kilpailun voitti insinööri William Robsonin työ: '
+        + 'sininen pohja, keltainen ketjuilla ympäröity kiekko ja '
+        + 'musta fregattilintu. Se peruttiin, koska lintu oli vain '
+        + 'yhden maakunnan tunnus. Toinen voittaja oli punainen '
+        + 'lippu mustine ketjuineen, viittaus blackbirding-'
+        + 'työvoimapyyntiin ja sen vuodattamaan vereen; sekin '
+        + 'herätti niin kiivasta keskustelua, että siitä luovuttiin.',
+      'Isoisän matkavuosi 1873 osuu juuri tuohon historian '
+        + 'kipupisteeseen. Saarilta värvättiin — usein pakolla — '
+        + 'työvoimaa Queenslandin ja Fidžin plantaaseille, ja '
+        + 'Britannia oli vuoden 1872 lailla juuri ryhtynyt '
+        + 'hillitsemään kauppaa. Saaret olivat vielä vailla '
+        + 'siirtomaahallintoa; protektoraatti perustettiin 1893.',
+    ],
+    versiot: [
+      {
+        nimi: 'Protektoraatin lippu 1956–1966',
+        polku: 'assets/liput/versiot/slb-protektoraatti.png',
+        selite: 'Brittiläinen sininen lippu, jonka liepeessä on '
+          + 'neljään osaan jaettu kilpi: leijona, kotka, kilpikonna, '
+          + 'fregattilintu ja saarten aseita. Aiemmassa versiossa '
+          + 'oli pelkkä merikilpikonna.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Salomonsaarten vaakuna',
+        polku: 'assets/liput/tunnukset/slb-vaakuna.png',
+        selite: 'Kilpeä kannattavat krokotiili ja hai — saariston '
+          + 'kaksi pelättyä ja kunnioitettua eläintä. Kilvessä '
+          + 'toistuvat protektoraatin vanhat tunnukset, ylinnä on '
+          + 'kypärä ja tyylitelty aurinko, ja nauhassa lukee To Lead '
+          + 'Is To Serve, johtaminen on palvelemista.',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Vaakuna: Prez001 / '
+      + 'Wikimedia Commons (CC BY-SA 3.0)',
+  },
+  'Flag of Vanuatu.svg': {
+    maa: 'Vanuatu',
+    symboliikka: [
+      { osa: 'Vihreä', selite: 'saarten rehevyys.' },
+      { osa: 'Punainen', selite: 'veri, joka yhdistää kaikkia ihmisiä.' },
+      { osa: 'Musta', selite: 'melanesialainen ni-Vanuatu-kansa.' },
+      {
+        osa: 'Keltainen Y-kuvio',
+        selite: 'saariston muoto kartalla ja evankeliumin valo, joka '
+          + 'kulkee saarten läpi.',
+      },
+      {
+        osa: 'Villisian syöksyhammas',
+        selite: 'perinne ja vauraus. Sen sisällä on kaksi '
+          + 'namele-saniaisen lehteä, joissa on 39 lehdykkää — '
+          + 'parlamentin ensimmäisten jäsenten määrä.',
+      },
+    ],
+    kappaleet: [
+      'Lippu hyväksyttiin 18. helmikuuta 1980 ja nostettiin salkoon '
+        + 'itsenäisyyspäivänä 30. heinäkuuta. Pohjana olivat Vanua'
+        + '’aku Pati -puolueen värit, jotka paikallinen '
+        + 'taiteilija Kalontas Malon oli valinnut jo 1977. '
+        + 'Parlamentin valiokunta valitsi lopullisen kuvion '
+        + 'paikallisten taiteilijoiden ehdotuksista.',
+      'Pääministeri, pastori Walter Lini pyysi lisäämään keltaisen '
+        + 'ja mustan ohuet reunukset, jotta musta erottuisi kunnolla. '
+        + 'Musta oli hänelle tärkeä: se on melanesialaisen kansan '
+        + 'väri, eikä sitä saanut hukuttaa muihin.',
+      'Isoisän matkavuonna 1873 saaret tunnettiin Uusina Hebrideinä '
+        + 'eikä niillä ollut hallitusta. Ranskalaisia ja '
+        + 'brittiläisiä istuttajia saapui rinnakkain, ja saarilta '
+        + 'värvättiin työvoimaa Queenslandiin ja Fidžille. Lopulta '
+        + 'maat sopivat 1906 ainutlaatuisesta yhteishallinnosta, '
+        + 'kondominiumista, jota asukkaat kutsuivat pilkallisesti '
+        + 'nimellä Pandemonium.',
+    ],
+    versiot: [
+      {
+        nimi: 'Väliaikaisen kansanhallituksen lippu 1977–1978',
+        polku: 'assets/liput/versiot/vut-vanuaaku.png',
+        selite: 'Vanua’aku Patin lippu, jonka värit ja '
+          + 'perusjako siirtyivät suoraan kansallislippuun. '
+          + 'Puolue julisti oman väliaikaishallituksensa vastauksena '
+          + 'siirtomaahallinnon viivyttelyyn.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Vanuatun tunnus',
+        polku: 'assets/liput/tunnukset/vut-vaakuna.png',
+        selite: 'Melanesialainen soturi keihäineen seisoo maan '
+          + 'korkeimman huipun, Tabwemasanan, edessä. Taustalla '
+          + 'kaartuu villisian syöksyhammas ja sen sisällä kaksi '
+          + 'ristissä olevaa namele-saniaisen lehteä. Nauhassa lukee '
+          + 'bislamaksi LONG GOD YUMI STANAP — Jumalan kanssa me '
+          + 'seisomme. Tunnuksen suunnitteli 1980 australialainen '
+          + 'taiteilija Rick Fraser.',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Tunnus: Sodacan / '
+      + 'Wikimedia Commons (CC BY-SA 3.0). Puoluelippu: Musgosos / '
+      + 'Wikimedia Commons (CC BY-SA 4.0)',
+  },
+  'Flag of New Caledonia.svg': {
+    maa: 'Uusi-Kaledonia',
+    symboliikka: [
+      {
+        osa: 'Kaksi lippua rinnakkain',
+        selite: 'alueella liehuu kaksi tunnustettua lippua: Ranskan '
+          + 'trikolori ja kanakien FLNKS-lippu.',
+      },
+      {
+        osa: 'Sininen (FLNKS)',
+        selite: 'taivas ja ympäröivä meri.',
+      },
+      { osa: 'Punainen (FLNKS)', selite: 'yhtenäisyys ja taistelu.' },
+      { osa: 'Vihreä (FLNKS)', selite: 'maa ja esi-isien perintö.' },
+      {
+        osa: 'Keltainen kiekko ja siinä musta kuvio',
+        selite: 'aurinko ja flèche faîtière, kanakimajan harjalle '
+          + 'pystytettävä koristeltu kattokeihäs.',
+      },
+    ],
+    kappaleet: [
+      'Uusi-Kaledonia on Ranskan merentakainen alue, ja vuoteen 2010 '
+        + 'asti sen ainoa virallinen lippu oli Ranskan trikolori. '
+        + 'Vuoden 1998 Nouméan sopimus lupasi alueelle viisi '
+        + '"identiteetin merkkiä": kansallislaulun, tunnuslauseen, '
+        + 'omat kuviot rahoihin, lipun ja mahdollisen uuden nimen.',
+      'Heinäkuussa 2010 aluekongressi äänesti siitä, että molempia '
+        + 'lippuja liehutetaan rinnakkain, ja pääministeri François '
+        + 'Fillon osallistui nostoseremoniaan Nouméassa. Ratkaisu on '
+        + 'jäänyt kiistanalaiseksi: osa kunnista nostaa vain Ranskan '
+        + 'lipun, ja osa asukkaista katsoo, että FLNKS-lippu on '
+        + 'itsenäisyysliikkeen eikä koko väestön merkki. Yhteistä '
+        + 'lippua on ehdotettu, mutta sellaista ei ole hyväksytty.',
+      'Isoisän matkavuonna 1873 saari oli ollut Ranskan hallussa '
+        + 'kaksikymmentä vuotta ja toimi rangaistussiirtolana. '
+        + 'Vuodesta 1872 alkaen sinne kuljetettiin Pariisin '
+        + 'kommuunin karkotettuja — heidän joukossaan Louise '
+        + 'Michel, joka opetti kanakilapsia ja asettui myöhemmin '
+        + 'julkisesti kanakikapinan puolelle 1878.',
+    ],
+    versiot: [
+      {
+        nimi: 'FLNKS-lippu',
+        polku: 'assets/liput/versiot/ncl-flnks.png',
+        selite: 'Kanakien ja sosialistisen kansallisen '
+          + 'vapautusrintaman lippu vuodelta 1984. Keltaisessa '
+          + 'auringossa on flèche faîtière, kanakimajan '
+          + 'kattokeihäs. Liehuu virallisesti Ranskan lipun rinnalla '
+          + 'vuodesta 2010.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Uuden-Kaledonian tunnus',
+        polku: 'assets/liput/tunnukset/ncl-vaakuna.png',
+        selite: 'Alueen tunnuksessa on kolme asiaa päällekkäin: '
+          + 'flèche faîtière eli kanakimajan kattokeihäs, sen edessä '
+          + 'helmiveneen kuori ja taustalla kolumnaarinen '
+          + 'araukariamänty, saaren maisemapuu. Kuvio on '
+          + 'mustavalkoinen, ja sitä käytetään aluehallinnon '
+          + 'merkkinä; virallista vaakunaa Uudella-Kaledonialla ei '
+          + 'ole.',
+      },
+    ],
+    lahde: 'Liput ja tunnus: Wikimedia Commons (PD)',
+  },
+  'Flag of Fiji.svg': {
+    maa: 'Fidži',
+    symboliikka: [
+      {
+        osa: 'Vaaleansininen',
+        selite: 'Tyynimeri, joka elättää saaret kalastuksella ja '
+          + 'matkailulla.',
+      },
+      { osa: 'Unionin lippu', selite: 'siteet Britanniaan.' },
+      {
+        osa: 'Kilpi',
+        selite: 'vaakunan kilpi: Yrjön risti, ylinnä brittileijona '
+          + 'kaakaonpalko kädessään.',
+      },
+      {
+        osa: 'Neljä ruutua',
+        selite: 'sokeriruoko, kookospalmu, rauhankyyhky ja '
+          + 'banaaniterttu — saarten elinkeinot.',
+      },
+    ],
+    kappaleet: [
+      'Lippu otettiin käyttöön 10. lokakuuta 1970, itsenäistymis'
+        + 'päivänä. Se on siirtomaalipun vaalennettu versio: sininen '
+        + 'on vaaleampi ja liepeessä on koko vaakunan sijasta pelkkä '
+        + 'kilpi, jotta se erottuisi paremmin. Lippu säilyi '
+        + 'ennallaan, vaikka Fidžistä tuli tasavalta 1987 — '
+        + 'Unionin lipun säilyttäneistä maista se on ainoa tasavalta.',
+      'Vuonna 2013 pääministeri Frank Bainimarama ilmoitti lipun '
+        + 'vaihdosta, ja kilpailuun tuli yli kaksituhatta ehdotusta. '
+        + 'Määräaikoja siirrettiin kerran toisensa jälkeen, ja '
+        + 'elokuussa 2016 koko hanke haudattiin. Vanha lippu jäi '
+        + 'voimaan.',
+      'Isoisän matkavuonna 1873 Fidžillä oli oma kuninkaansa. Ratu '
+        + 'Seru Epenisa Cakobau oli julistautunut Tui Vitiksi, ja '
+        + 'kesäkuussa 1871 päälliköt olivat hyväksyneet '
+        + 'perustuslaillisen kuningaskunnan. Se kesti vain kolme '
+        + 'vuotta: velat kasvoivat hallitsemattomiksi, ja 10. '
+        + 'lokakuuta 1874 Cakobau luovutti saaret Britannialle.',
+    ],
+    versiot: [
+      {
+        nimi: 'Fidžin kuningaskunnan lippu 1871–1874',
+        polku: 'assets/liput/versiot/fji-kuningaskunta.png',
+        selite: 'Vaaleansinisellä pohjalla punainen kruunattu kilpi, '
+          + 'jossa on valkoinen kyyhky oliivinoksineen. Cakobaun '
+          + 'lyhyen kuningaskunnan lippu — se liehui juuri isoisän '
+          + 'matkavuonna 1873. Kyyhky on yhä Fidžin vaakunassa.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Fidžin vaakuna',
+        polku: 'assets/liput/tunnukset/fji-vaakuna.png',
+        selite: 'Kilpeä kannattavat kaksi fidžiläistä soturia, ja '
+          + 'ylinnä on kruunuksi asetettu ulkorikkainen kanootti. '
+          + 'Kilvessä ovat sokeriruoko, kookospalmu, kyyhky ja '
+          + 'banaanit sekä ylinnä leijona kaakaonpalkoineen. '
+          + 'Nauhassa lukee fidžiksi Rerevaka na Kalou ka doka na '
+          + 'Tui. Vaakuna myönnettiin kuninkaallisella '
+          + 'julistuskirjalla heinäkuussa 1908, ja itsenäistyessään '
+          + '1970 Fidži päätti pitää sen.',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Vaakuna: Simi Tukidia / '
+      + 'Wikimedia Commons (CC BY-SA 3.0)',
+  },
+  'Flag of Norfolk Island.svg': {
+    maa: 'Norfolkinsaari',
+    symboliikka: [
+      {
+        osa: 'Vihreät reunakaistat',
+        selite: 'saaren rehevä kasvillisuus ja viljava maa.',
+      },
+      {
+        osa: 'Norfolkinmänty',
+        selite: 'Araucaria heterophylla, saaren oma laji ja sen '
+          + 'virallinen puu. Se kasvaa luonnonvaraisena vain täällä.',
+      },
+      {
+        osa: 'Valkoinen keskikaista',
+        selite: 'laki ei anna sille erillistä merkitystä — se antaa '
+          + 'männylle taustan.',
+      },
+      {
+        osa: 'Mittasuhde 1:2',
+        selite: 'lain määräämä. Vihreä on Pantone 356.',
+      },
+    ],
+    kappaleet: [
+      'Lippu otettiin käyttöön 6. kesäkuuta 1979, kun saari sai '
+        + 'rajoitetun itsehallinnon ja oman lakiasäätävän '
+        + 'kokouksensa. Laki lipusta ja sinetistä sai '
+        + 'kuninkaallisen vahvistuksen tammikuussa 1980. Kolmen '
+        + 'kaistan malli on Kanadan lipun sukua, mutta puu on '
+        + 'Norfolkin oma.',
+      'Mänty on saaren kohtalonkysymys. James Cook näki saaren '
+        + '1774 ja arveli, että sen suorat puut kelpaisivat laivojen '
+        + 'mastoiksi; arvio osoittautui vääräksi, sillä puu on '
+        + 'liian hauras. Ensimmäiset asukkaat tulivat 1788 '
+        + 'rangaistussiirtolaan, ja 1856 saarelle siirrettiin '
+        + 'Pitcairnin ylikansoittunut yhteisö — Bountyn '
+        + 'kapinallisten jälkeläiset.',
+      'Isoisän matkavuonna 1873 saarella asui vasta muutama sata '
+        + 'pitcairnilaista, jotka puhuivat omaa norfuk-kieltään ja '
+        + 'elivät vankilarakennusten keskellä. Saari oli erillinen '
+        + 'siirtokunta; se joutui Uuden Etelä-Walesin hallintoon '
+        + '1897 ja Australian territorioksi 1913.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Norfolkinsaaren vaakuna',
+        polku: 'assets/liput/tunnukset/nfk-vaakuna.png',
+        selite: 'Kilvessä on norfolkinmänty ja sen ympärillä '
+          + 'tähtiä; kannattajina ovat leijona ja kenguru — '
+          + 'brittiläinen ja australialainen puoli. Nauhassa lukee '
+          + 'INASMUCH, sana saaren omasta hymnistä Come Ye Blessed. '
+          + 'Kuningatar Elisabet II myönsi vaakunan 20. lokakuuta '
+          + '1980.',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Vaakuna: Squiresy92 / '
+      + 'Wikimedia Commons (CC BY-SA 4.0)',
+  },
+  'Flag of East Timor.svg': {
+    maa: 'Itä-Timor',
+    symboliikka: [
+      { osa: 'Punainen', selite: 'kansallisen vapautuksen taistelu.' },
+      { osa: 'Musta kolmio', selite: 'pimeys, joka on voitettava.' },
+      { osa: 'Keltainen kolmio', selite: 'maan rikkaudet.' },
+      {
+        osa: 'Valkoinen tähti',
+        selite: 'opastava valo. Valkoinen on rauhan väri, ja yksi '
+          + 'sakara osoittaa lipun vasempaan reunaan.',
+      },
+    ],
+    kappaleet: [
+      'Lippu on maataan paljon vanhempi. Se hyväksyttiin 28. '
+        + 'marraskuuta 1975, kun Itä-Timor julisti itsenäisyytensä '
+        + 'Portugalista. Yhdeksän päivää myöhemmin Indonesia '
+        + 'miehitti maan, ja lippu katosi salosta 24 vuodeksi.',
+      'Vuoden 1975 lipun selitykset olivat toiset kuin nyt: musta '
+        + 'oli neljä vuosisataa siirtomaasortoa, keltainen kolmio '
+        + 'siirtomaavallan jäljet ja punainen vuodatettu veri. '
+        + 'Vuoden 2002 perustuslaki kirjoitti merkitykset uusiksi '
+        + 'tulevaisuuteen katsoviksi, mutta kuvio pidettiin '
+        + 'ennallaan. Lippu nostettiin uudelleen 20. toukokuuta '
+        + '2002.',
+      'Isoisän matkavuonna 1873 Timorin itäpuoli oli Portugalin '
+        + 'siirtomaa ja länsipuoli Alankomaiden. Portugalin '
+        + 'Timorilla ei koskaan ollut omaa lippua — salossa liehui '
+        + 'emämaan lippu. Kaksi kertaa, 1932 ja 1965, siirtomaalle '
+        + 'piirrettiin oma lippu, mutta kumpaakaan ei hyväksytty.',
+    ],
+    versiot: [
+      {
+        nimi: 'Portugalin Timorin lippuehdotus 1965',
+        polku: 'assets/liput/versiot/tls-1965.png',
+        selite: 'Portugalin lippu, jonka liepeeseen oli lisätty '
+          + 'siirtomaan oma kilpi. Ehdotus ei koskaan tullut '
+          + 'voimaan, ja Portugalin Timor käytti loppuun asti '
+          + 'pelkkää emämaan lippua.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Itä-Timorin tunnus',
+        polku: 'assets/liput/tunnukset/tls-vaakuna.png',
+        selite: 'Tunnusta kutsutaan nimellä Belak, kiekko. Keskellä '
+          + 'kohoaa maan korkein vuori Tatamailau, sen yllä '
+          + 'valkoinen tähti ja säteet, ja mustassa osassa avoin '
+          + 'kirja, rukousnauha, jousi ja nuoli sekä rynnäkkökivääri '
+          + '— oppi, usko ja kaksi vapaustaistelun kautta. '
+          + 'Nauhoissa lukee UNIDADE, ACÇÃO, PROGRESSO ja kehällä '
+          + 'maan nimi portugaliksi. Nykyinen tunnus otettiin '
+          + 'käyttöön tammikuussa 2007.',
+      },
+    ],
+    lahde: 'Liput ja tunnus: Wikimedia Commons (PD)',
+  },
 };
