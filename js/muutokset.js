@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1190, teksti: 'Liput era 12: loput 19 maata, kaikki laudat katettu' },
   { v: 1189, teksti: 'Noppa kartan pintaan ja tinaherra hyppyanimaatiolla' },
   { v: 1188, teksti: 'Kuvatekstiremontti era 4: Dubrovnikista Mekkaan' },
   { v: 1187, teksti: 'Kuvatekstiremontti era 3: Tallinnasta Tromssaan' },
