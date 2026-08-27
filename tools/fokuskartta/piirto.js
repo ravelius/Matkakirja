@@ -40,10 +40,11 @@
  * perään (js/fokusnosto-symbolit.js), ja kohdemerkit ovat samoissa
  * pisteissä kuin kuvan omat merkinnät — sama nimi näkyi kahdesti.
  * Tyylitiedosto saa siksi antaa nimeämisen lajeittain pelille
- * (maat.mjs `poltetutNimet`, ks. `poltaNimet` alempana). Kreikka on
- * ensimmäinen ja toistaiseksi ainoa: sen lehdelle ei polteta vuorten
- * eikä merten nimiä. Oletus on yhä "polta", joten muiden maiden
- * ämpärissä olevat lehdet pysyvät ennallaan.
+ * (maat.mjs `poltetutNimet`, ks. `poltaNimet` alempana; lajit ovat
+ * `meret`, `vuoret` ja `joet`). Kreikka on ensimmäinen ja toistaiseksi
+ * ainoa: sen lehdelle ei polteta vuorten, merten eikä jokien nimiä.
+ * Oletus on yhä "polta", joten muiden maiden ämpärissä olevat lehdet
+ * pysyvät ennallaan.
  *
  * === KOLME ASIAA, JOTKA OVAT TOISIN KUIN PROTOTYYPISSÄ ===
  *
@@ -1082,8 +1083,24 @@ export function piirra(canvas, aineisto, asetukset) {
     }
   }
 
-  // 8d. Jokien nimet kursiivilla uoman varteen.
-  for (const j of aineisto.joet) {
+  /*
+   * 8d. Jokien nimet kursiivilla uoman varteen.
+   *
+   * KOLMAS LAJI, JONKA NIMEÄMISEN VOI LUOVUTTAA PELILLE (omistajan
+   * havainto 27.8.2026 Kreikan lehdeltä: *"Aliákmonas-joen karttaan
+   * poltettua nimeä ei voi klikata"*). Sama linjaus kuin vuorilla ja
+   * merillä v1210:ssä ja v1214:ssä: kuvaan poltettu nimi on pikseleitä,
+   * eikä sen päällä ole mitään napautettavaa — nimiö taas liikkuu
+   * kohteen mukana ja avaa kortin. Kun kytkin on pois, jokea EI jätetä
+   * nimeämättä vaan sille tehdään oma fokuskohde täsmälleen siihen
+   * pisteeseen, jossa tämä silmukka latoi nimen
+   * (js/packs/fokuskohteet-grc.js `aliakmonas`, `strymonas`, `evros`).
+   *
+   * OLETUS ON YHÄ "POLTA": uoma piirtyy joka tapauksessa (kohta 5),
+   * joten kytkin koskee vain nimeä, ja ilman merkintää lehti syntyy
+   * kuten ennen.
+   */
+  for (const j of (poltaNimet('joet') ? aineisto.joet : [])) {
     const nimi = tyyli.jokinimet?.[j.nimi];
     if (!nimi) continue;
     const osa = j.osat.reduce((a, b) => (b.length > a.length ? b : a), j.osat[0]);

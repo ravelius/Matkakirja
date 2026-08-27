@@ -170,7 +170,9 @@
  * KOLMIKKOERÄ, joka nimeää kohteina ne kolme paikkaa, jotka v1210 jätti
  * lehdellä nimettä: Smólikas, Kreetanmeri ja Traakianmeri. Ne eivät ole
  * listan lopussa vaan lajitovereidensa joukossa — Smólikas Píndoksen
- * perässä, meret Joonianmeren perässä.
+ * perässä, meret Joonianmeren perässä. Samana päivänä tuli vielä
+ * JOKIERÄ: Aliákmonas, Strymónas ja Évros, eli ne kolme jokea, joiden
+ * nimi oli poltettu lehteen — merten perässä, koska ne ovat vesiä.
  */
 export const FOKUSKOHTEET_GRC = [
   {
@@ -799,6 +801,186 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Samothraki kohoaa Traakianmeren takaa, Dikellan rannalta '
         + 'Traakian mantereelta nähtynä.',
       lahde: 'ROFI44WIK, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+  },
+  /*
+   * ── KOLME JOKEA, JOTKA LEHTI ENNEN NIMESI (omistaja 27.8.2026) ─────
+   *
+   * Omistajan havainto Kreikan lehdeltä: *"Aliákmonas-joen karttaan
+   * poltettua nimeä ei voi klikata."* Sama asia kolmatta kertaa —
+   * v1210 pudotti poltetut vuori- ja merinimet, v1214 teki nimettä
+   * jääneestä kolmikosta kohteet — joten linjaus on nyt tehty myös
+   * joille: kartan NIMETYT LUONNONKOHTEET OVAT KLIKATTAVIA
+   * FOKUSKOHTEITA, ja kuvaan poltettu toisinto väistyy.
+   *
+   * Lehteen poltettiin kolme joennimeä, ei yhtä: piirto.js kohta 8d
+   * latoi nimen jokaiselle uomalle, joka löytyi taulusta
+   * tools/fokuskartta/maat.mjs GRC.jokinimet — Aliákmonas, Strymónas ja
+   * Évros. Kaikki kolme saavat siis kohteen, ja polttokytkin on
+   * laajennettu kattamaan lajin `joet`.
+   *
+   * KOORDINAATIT OVAT POLTETUN NIMEN OMAT PISTEET, eivätkä Wikipedian
+   * pyöreät luvut. Joen "paikka" ei ole piste vaan viiva, joten
+   * kysymykseen "mihin kohtaan merkki kuuluu" ei ole muuta oikeaa
+   * vastausta kuin se, johon lehti itse nimen kirjoitti: piirto.js
+   * ottaa uoman pisimmän pätkän ja latoo nimen sen kohtaan 55 %.
+   * Luvut on laskettu uudelleen samasta Natural Earth -aineistosta ja
+   * samasta rajauslaatikosta, jolla lehti renderöidään.
+   *
+   * KAKSI PISTETTÄ KOLMESTA ON KREIKAN RAJOJEN ULKOPUOLELLA, ja se on
+   * oikein: Strymónaan nimi oli ladottu Bulgarian puolelle ja Évroksen
+   * Edirnen tienoille, koska siellä uoman pisin yhtenäinen pätkä
+   * lehden laatikossa sattuu olemaan. Merkki kuuluu sinne, missä nimi
+   * oli — muuten se ei osu siihen uomaan, jota se nimeää. Kummankin
+   * teksti kertoo saman asian myös sanoin: nämä joet tulevat Kreikkaan
+   * naapurista, ja isoisän aikaan ne eivät ylittäneet yhtään rajaa.
+   */
+  {
+    id: 'aliakmonas',
+    nimi: 'Aliákmonas',
+    tyyppi: 'joki',
+    kysymykset: [
+      'Kuka Plinius vanhempi oli?',
+      'Mitä joen tulvasoille tapahtui patojen jälkeen?',
+    ],
+    korostukset: ['Plinius vanhempi', 'Thermaïkoksen lahti|Thermaïkoksen lahteen'],
+    /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
+    nappi: 'Kreikan oma pisin joki',
+    /*
+     * 21,6961 E / 39,9691 N — piste, johon lehti latoi nimen
+     * "Aliákmonas": uoman pisimmän pätkän kohta 55 % (piirto.js 8d).
+     * Ylä-Aliákmonasta Grevenan pohjoispuolella. Lähin naapurikohde on
+     * Píndos 21,7 lautayksikön päässä eli kauempana kuin Píndos itse on
+     * omasta lähimmästään (17,8), joten nimiö saa oman tilansa.
+     */
+    laudat: {
+      maailmankartta: { x: 6556.5, y: 1804.1 },
+      europe: { x: 627.8, y: 842.4 },
+    },
+    teksti: 'Aliákmonas on 297 kilometrin pituinen ja Kreikan pisin joki, '
+      + 'joka virtaa alusta loppuun maan omalla puolella rajaa: Évros, '
+      + 'Strymónas ja Axiós ovat kokonaisuutena pidempiä, mutta ne tulevat '
+      + 'naapurimaista, eikä yksikään niistä yllä Kreikan puolella tämän '
+      + 'mittaan. Nimi on antiikin kreikkaa ja rakentuu sanoista álas, suola '
+      + 'tai meri, ja ákmon, alasin. Roomalainen Plinius vanhempi kirjasi '
+      + 'Makedoniasta tavan, jonka mukaan valkoisia lampaita haluava juotti '
+      + 'laumansa Aliákmonaassa ja mustia haluava Axióksessa. Joki nousee '
+      + 'Grámoksen vuorilta aivan Albanian rajan tuntumasta, kiertää laajan '
+      + 'kaaren Vourinoksen vuorten ympäri ja laskee Thermaïkoksen lahteen. '
+      + 'Isoisän matkan aikaan sen alajuoksulla ei ollut vakituista uomaa '
+      + 'lainkaan: joki tulvi vapaasti ja levitti eteensä laajoja soita, ja '
+      + 'pysyvän uransa se sai vasta 1950-luvun patotöissä.',
+    lahde: 'en-Wikipedia "Haliacmon", johdanto-osa sekä osiot "Name" ja '
+      + '"Course and tributaries" (tarkistettu 27.8.2026).',
+    /*
+     * Category:Haliacmon ja sen alakategoriat. Kuva on juuri sitä
+     * yläjuoksua, jonka kohdalla kohteen merkki on: Venetikos on
+     * artikkelin luettelema sivujoki.
+     */
+    kuva: {
+      tiedosto: 'Ven to Aliakmon.jpg',
+      selite: 'Venetikos yhtyy Aliákmonaaseen kallioisessa uomassa. '
+        + 'Venetikos on joen suurimpia sivujokia.',
+      lahde: 'TSB GR, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  },
+  {
+    id: 'strymonas',
+    nimi: 'Strymónas',
+    tyyppi: 'joki',
+    kysymykset: [
+      'Mitä Amfipoliista on kaivettu esiin?',
+      'Mitä lintuja Kerkinillä talvehtii?',
+    ],
+    korostukset: ['Amfipoli|Amfipoliin', 'Kerkinin tekojärvi|Kerkinin tekojärveä'],
+    /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
+    nappi: 'Joki, jota purjehdittiin sisämaahan',
+    /*
+     * 23,1655 E / 41,8012 N — piste, johon lehti latoi nimen
+     * "Strymónas". Kohta on Bulgarian puolella lähellä Kresnan
+     * solaa, koska siellä on uoman pisin yhtenäinen pätkä lehden
+     * laatikossa (ks. erän kommentti yllä). Lähin naapurikohde on
+     * Thessaloniki 46,8 lautayksikön päässä.
+     */
+    laudat: {
+      maailmankartta: { x: 6605.5, y: 1731.5 },
+      europe: { x: 656.0, y: 794.2 },
+    },
+    teksti: 'Strymónas saa alkunsa Vitošan vuorelta Bulgariasta ja laskee '
+      + '415 kilometrin jälkeen Strymonin lahteen Amfipoliin kohdalla. Nimi '
+      + 'on traakialaista perua ja juontuu kantaindoeurooppalaisesta '
+      + 'sanasta srew-, "virrata" — samasta juuresta tulee englannin sana '
+      + 'stream. Antiikissa joki oli purjehduskelpoinen suulta sisämaan '
+      + 'Kerkinitis-järvelle asti, ja se oli tärkeä väylä Strymonin lahden '
+      + 'ja Traakian sisämaan välillä melkein Serresin kaupunkiin saakka; '
+      + 'tuo järvi on sittemmin kuivunut. Nykyään joki täyttää ja tyhjentää '
+      + 'Kerkinin tekojärveä, joka padottiin 1932 laajan suoalueen paikalle '
+      + 'ja on nyt yksi Kreikan parhaista lintupaikoista: alueelta on '
+      + 'tavattu yli kolmesataa lintulajia. Isoisän matkan aikaan joki ei '
+      + 'ylittänyt yhtään valtakunnanrajaa — sekä nykyisen Bulgarian että '
+      + 'Kreikan puoleiset rannat kuuluivat Ottomaanien valtakuntaan, ja '
+      + 'Bulgarian ruhtinaskunta perustettiin vasta 1878.',
+    lahde: 'en-Wikipedia "Struma (river)", johdanto-osa ja osiot '
+      + '"Etymology", "History" ja "Protected areas and ecology", sekä '
+      + '"Lake Kerkini" ja "Principality of Bulgaria", johdanto-osat '
+      + '(tarkistettu 27.8.2026).',
+    // Category:Struma River in Greece (11 tiedostoa).
+    kuva: {
+      tiedosto: 'Στρυμόνας - Μπέλλες.jpg',
+      selite: 'Strymónas Serresin tasangolla. Taustalla kohoaa Belles- eli '
+        + 'Kerkinivuoristo, jonka harjanteella kulkee Bulgarian raja.',
+      lahde: 'Makedonas62, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  },
+  {
+    id: 'evros',
+    nimi: 'Évros',
+    tyyppi: 'joki',
+    kysymykset: [
+      'Miksi Edirne oli ottomaaneille niin tärkeä?',
+      'Miten Orfeuksen taru päättyi?',
+    ],
+    korostukset: ['Orfeus|Orfeuksen', 'Adrianopoli'],
+    /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
+    nappi: 'Joki, jolla on kolme nimeä',
+    /*
+     * 26,4757 E / 41,6760 N — piste, johon lehti latoi nimen "Évros",
+     * eli Edirnen tienoo Ardan ja Tundžan yhtymäkohdan lähellä. Lähin
+     * naapurikohde on Traakianmeri 69,5 lautayksikön päässä.
+     */
+    laudat: {
+      maailmankartta: { x: 6715.9, y: 1736.5 },
+      europe: { x: 719.5, y: 797.5 },
+    },
+    teksti: 'Samalla joella on kolme nimeä: bulgariaksi Marica, kreikaksi '
+      + 'Évros ja turkiksi Meriç. Se on 480 kilometriä pitkä ja Balkanin '
+      + 'niemimaan pisin kokonaan sisämaassa kulkeva joki, ja se saa '
+      + 'alkunsa Rilan vuoriston Maričini-järvistä. Vanhin tunnettu nimi on '
+      + 'Éuros, jonka runoilija Alkman kirjoitti muistiin 700–600-luvuilla '
+      + 'eaa.; se tarkoitti "leveää", ja traakian kielessä siitä tuli '
+      + 'Ebros, kreikassa Hébros. Antiikin taru kertoo, että laulaja '
+      + 'Orfeuksen kuoltua hänen päänsä ja lyyransa kelluivat Hébrosta '
+      + 'pitkin mereen ja tuuli kantoi ne Lesboksen saarelle asti. '
+      + 'Edirnessä — isoisän kartoissa Adrianopoli — jokeen yhtyvät sen '
+      + 'kaksi suurinta sivujokea Tundža ja Arda, ja sieltä se kääntyy '
+      + 'etelään kohti Egeanmerta. Isoisän matkan aikaan laaksossa kulki jo '
+      + 'juna: Konstantinopolista Edirnen kautta pohjoiseen johtava rata '
+      + 'haaroineen oli liikenteessä vuoteen 1874 mennessä. Rajajoeksi '
+      + 'Évros tuli vasta 1923.',
+    lahde: 'en-Wikipedia "Maritsa", johdanto-osa ja osiot "Names" ja '
+      + '"History", "Orpheus", osio "Death", sekä "Chemins de fer '
+      + 'Orientaux", osio "History" (tarkistettu 27.8.2026).',
+    /*
+     * Category:Meriç River. Silta on isoisän matkaa vanhempi: Mahmud
+     * II aloitti sen ja Abdülmecid I sai valmiiksi 1843
+     * (en-Wikipedia "Meriç Bridge").
+     */
+    kuva: {
+      tiedosto: 'Meriç Nehri ve Meriç Köprüsü 2015.jpg',
+      selite: 'Évros eli Meriç Edirnessä. Joen yli kaartuu Meriçin '
+        + 'kivisilta kahdellatoista holvillaan; se valmistui 1843, '
+        + 'kolmisenkymmentä vuotta ennen isoisän matkaa.',
+      lahde: 'Hamdigumus, Wikimedia Commons (CC0)',
     },
   },
   {
