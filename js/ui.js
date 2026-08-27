@@ -12698,14 +12698,22 @@ export class UI {
       + 'eikä kiistanalaista esitetä varmana. Politiikka ja historia '
       + 'kuvataan, ei tuomita: kerrotaan mitä on ja miksi.');
 
+    valiotsikko('Tekoäly apuna, ihminen päättää');
+    kappale('Tekoäly auttaa sisällön kokoamisessa: havainnekuvat luodaan '
+      + 'avoimesti lisensoiduista aineistoista ja merkitään havainnekuviksi, '
+      + 'ja tekstit kirjoitetaan lähteistä uudelleen yhtenäiseen asuun. '
+      + 'Jokaisen sisällön tarkistaa ja hyväksyy ihminen.');
+
     valiotsikko('Kunnioitus');
     kappale('Jokainen maa kuvataan asukkaidensa silmin — ei stereotypioita, '
       + 'ei pilkkaa eikä säälittelyä, ei pelkkiä turistikliseitä. '
       + 'Vaikeita aiheita ei kaunistella eikä kauhistella.');
 
     valiotsikko('Avointa ja ilmaista');
-    kappale('Peli on ilmainen harrastusprojekti, ja sen lähdekoodi on '
-      + 'kaikkien luettavissa. Kuvat, äänet ja tiedot tulevat avoimista '
+    kappale('Peli on toistaiseksi ilmainen, ja sen lähdekoodi on '
+      + 'kaikkien luettavissa. Peliä tekee tamperelainen '
+      + 'Visuaaliviestinnän Instituutti (VVI). '
+      + 'Kuvat, äänet ja tiedot tulevat avoimista '
       + 'lähteistä, ja jokaisen kohdalla lukee mistä se on ja kuka sen '
       + 'on tehnyt. Peli itse on tekijänsä omaisuutta: sitä saa pelata '
       + 'ja lähdekoodia lukea vapaasti, mutta julkaisuun tai omaan '
@@ -12733,7 +12741,8 @@ export class UI {
 
     kortti.appendChild(this.periaatePalaute());
 
-    const oikeudet = html('p', 'periaate-oikeudet', '© Sami Reivinen');
+    const oikeudet = html('p', 'periaate-oikeudet',
+      '© Visuaaliviestinnän Instituutti Tampere Oy');
     kortti.appendChild(oikeudet);
 
     const sulje = html('button', 'ghost periaate-sulje', 'Takaisin');
