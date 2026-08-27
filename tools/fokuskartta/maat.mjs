@@ -43,9 +43,10 @@
  *
  * SAMASTA SYYSTÄ NIMEÄMISEN VOI LUOVUTTAA PELILLE LAJEITTAIN
  * (`poltetutNimet`, omistaja 27.8.2026): fokuskohteiden nimiöt
- * (js/fokusnosto-symbolit.js) latovat vuorten ja merten nimet kartalle
- * merkkiensä perään, ja Kreikan lehdellä ne osuivat kuvaan poltettujen
- * nimien viereen. Kreikka on ainoa maa, jolla kytkin on päällä; ilman
+ * (js/fokusnosto-symbolit.js) latovat vuorten, merten ja jokien nimet
+ * kartalle merkkiensä perään, ja Kreikan lehdellä ne osuivat kuvaan
+ * poltettujen nimien viereen. Lajeja on kolme — `meret`, `vuoret` ja
+ * `joet` — ja Kreikka on ainoa maa, jolla kytkin on päällä; ilman
  * merkintää lehti syntyy täsmälleen kuten ennen.
  *
  * Lähteet: Natural Earth 10m ja Wikipedia (sijainnit, korkeudet).
@@ -139,8 +140,23 @@ export const FOKUSMAAT = {
      * koordinaatteihin. Nimi tulee siis nyt nimiöstä, ja napautus avaa
      * lisäksi kortin. ÄLÄ SIIS KÄYTÄ tätä listaa perusteena polton
      * palauttamiselle — kohteet ovat kartalla juuri näissä pisteissä.
+     *
+     * JOET TULIVAT KOLMANTENA LAJINA (omistaja 27.8.2026): *"Aliákmonas-
+     * joen karttaan poltettua nimeä ei voi klikata."* Sama linjaus
+     * kolmatta kertaa, joten se tehtiin kerralla loppuun: kaikki kolme
+     * jokea, joiden nimi tähän lehteen poltettiin (`jokinimet` alempana:
+     * Aliákmonas, Strymónas ja Évros), ovat nyt fokuskohteita
+     * TÄSMÄLLEEN NIISSÄ PISTEISSÄ, joihin piirto.js latoi niiden nimen —
+     * eli pisimmän uomanpätkän kohdassa 55 % (piirto.js kohta 8d).
+     * Luvut on laskettu aineistosta eikä arvattu, ja ne ovat
+     * js/packs/fokuskohteet-grc.js:n kohteiden kommenteissa asteina.
+     *
+     * `jokinimet` JÄÄ PAIKALLEEN eikä sitä tyhjennetä. Se on yhä ainoa
+     * paikka, joka kertoo, missä asussa nämä kolme uomaa Kreikan
+     * lehdellä nimetään, ja jos jokin toinen lauta joskus tarvitsee
+     * poltetut nimet takaisin, kytkin riittää.
      */
-    poltetutNimet: { meret: false, vuoret: false },
+    poltetutNimet: { meret: false, vuoret: false, joet: false },
 
     /* Merten nimet: harvaa kursiivia ulapalle, kulma seuraa merta. */
     meret: [
@@ -178,7 +194,14 @@ export const FOKUSMAAT = {
       { nimi: 'Náfplio', lon: 22.8069, lat: 37.5675, dx: 9, dy: 12 },
     ],
 
-    /* Aineiston jokien nimet siinä asussa, jossa ne kartalle kirjoitetaan. */
+    /*
+     * Aineiston jokien nimet siinä asussa, jossa ne kartalle
+     * kirjoitetaan. KREIKAN LEHDELLE NIITÄ EI ENÄÄ POLTETA
+     * (`poltetutNimet.joet` yllä) — nämä kolme ovat pelin omia
+     * fokuskohteita. Taulu jää silti tänne: se on aineiston englanti-
+     * ja translitterointinimien (Haliacmon, Strymnas, Evros) ainoa
+     * silta suomalaiseen kirjoitusasuun.
+     */
     jokinimet: {
       Haliacmon: 'Aliákmonas',
       Strymnas: 'Strymónas',
