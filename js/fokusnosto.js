@@ -1,5 +1,5 @@
 /*
- * TÄKYNOSTO — keltaisen lehden klikkiotsikko kartan päällä.
+ * TÄKYNOSTO — tuikkiva keltainen piste kartalla ja sen lunastuskortti.
  *
  * Raamatun osio "Fokusmoodi", kohta KEVYT KULKU -KOKEILU (omistaja
  * 25.8.2026): *"aarteen löydyttyä pöllö kertoo että nyt voi matkustaa
@@ -9,29 +9,36 @@
  * tositarina, lupaus lunastetaan faktalla) + miniatyyrikuva perässä,
  * houkuttelemassa kohteen auki."*
  *
- * ── YKSI TÄKY PER MAA (omistaja 26.8.2026 ilta) ────────────────────
+ * ── PELKKÄ PISTE, YKSI KERRALLAAN (omistaja 27.8.2026 ilta) ────────
  *
- * *"Täkyjä josta tulee puhekupla pitää olla vain yksi per maa. Kaikki
- * muut normaaleita. Ja kun täkyä painaa niin sen pitäisi aueta suoraan
- * pop upiksi ilman pelkkää otsikko nostoa. Kreikassa vielä useampi."*
+ * *"muuta täkynostot pelkäksi tuikkivaksi keltaiseksi pisteeksi yksi
+ * kerrallaan. uusi piste tuikkii kun edellinen on katsottu. pulu voisi
+ * kommentoida ensimmäistä vilkkuvaa täkyä"*
  *
- * Ennen tätä maan poolissa oli kolmesta viiteen nostoa: yksi nousi
- * kuplaan ja loput jäivät kartalle täkysymboleiksi, joiden napautus
- * NOSTI täyn kuplaan — ja vasta kuplan napista pääsi lunastukseen.
- * Kaksi napautusta, kaksi eri merkkilajia samalla lehdellä.
+ * Otsikko oli tähän asti KARTALLA: puhekupla, jossa luki koko
+ * klikkiotsikko ja jonka perässä oli miniatyyri. Se kertoi jutun jo
+ * ennen kuin siihen kosketti ja peitti kartan juuri siitä kohtaa, jota
+ * juttu koskee. Nyt kartalla on VAIN merkki siitä, että tässä on
+ * jotain: pieni keltainen piste, joka tuikkii (js/fokusnosto-symbolit.js
+ * osio TÄYN TUIKKIVA PISTE). Otsikko ja lunastus ovat siellä missä
+ * ennenkin — kortissa, jonka napautus avaa.
  *
- * Nyt jokaisen maan poolissa on TASAN YKSI nosto (nostoMaanPooli
- * leikkaa poolin, jotta sääntö on koodissa eikä pelkässä datassa), ja
- * loput entiset nostot ovat kartan tavallisia kohteita omissa
- * pakettitiedostoissaan (js/packs/fokuskohteet-*.js). Siitä seuraa
- * kolme yksinkertaistusta:
+ * Kolme seurausta, jotka on hyvä tietää:
  *
- *   - symbolikerroksella on enää AKTIIVISEN täyn ankkuri, ei muita
- *     merkkejä — ja siksi symbolin napautusta ei enää ole;
- *   - kupla on kokonaisuudessaan yksi painike, joka avaa lunastuksen
- *     suoraan (piirraNostonKupla);
- *   - mekaniikka jää muuten ennalleen: luettu täky ei nouse enää, ja
- *     ohitettu (liuskan rasti) väistyy istunnon ajaksi.
+ *   1. YKSI KERRALLAAN. Kartalla tuikkii poolin ENSIMMÄINEN KATSOMATON
+ *      täky (nostoVuorossa). Kun se on luettu, se katoaa laitteen
+ *      muistiin (nostoMerkitseLuetuksi) ja seuraava katsomaton syttyy
+ *      heti kun kortti sulkeutuu. Vanha "yksi täky per maa" -leikkaus
+ *      ja "yksi kupla per istunto" -kiintiö poistuivat kuplan mukana:
+ *      molemmat olivat sääntöjä ruudulle ponnahtavasta pinnasta, ja
+ *      piste ei ponnahda mihinkään.
+ *   2. PISTE ON PAINIKE. Kupla otti ennen napautuksen ja ankkurisymboli
+ *      oli mykkä; nyt piste tekee sen työn itse (osuma-alue on sormen
+ *      mitta, ks. symbolitiedosto).
+ *   3. LIVIA HUOMAUTTAA KERRAN. Ensimmäisellä tuikkivalla täyllä pöllö
+ *      (Livia) sanoo kuplassa, että kartalla on nyt jotain katsottavaa
+ *      — ks. osio LIVIAN HUOMAUTUS. Yksi kerta riittää: mekaniikka
+ *      opitaan kerran.
  *
  * ── LUPAUS LUNASTETAAN, TAI OTSIKKO ON HUIJAUS ─────────────────────
  *
@@ -45,45 +52,37 @@
  * sinne: nosto siis houkuttelee kohteen auki, kuten tilauksessa
  * sanotaan, mutta lupaus maksetaan ensin.
  *
- * ── PUHEKUPLA SIIHEN KOHTAAN KARTTAA, JOTA JUTTU KOSKEE ────────────
+ * ── PISTE SIIHEN KOHTAAN KARTTAA, JOTA JUTTU KOSKEE ───────────────
  *
- * Raamatun osio "Fokusmoodi", kohta TÄKYSYMBOLIT (omistaja 25.8.2026):
- * *"kartalla on tekstikuplassa VAIN YKSI täkynosto kerrallaan."*
- * Omistajan sanoin samana päivänä: *"täkyn pitäisi tulla puhekuplana
- * siihen kohtaan karttaa jota tapahtuma koskee."*
+ * Omistaja 25.8.2026: *"täkyn pitäisi tulla … siihen kohtaan karttaa
+ * jota tapahtuma koskee."* Se sääntö jäi voimaan, vaikka esitystapa
+ * vaihtui: piste piirretään täyn omiin koordinaatteihin
+ * (js/fokusnosto-symbolit.js), ja se on SVG:tä kartan omassa
+ * kerroksessa, koska se ankkuroituu laudan koordinaatteihin ja elää
+ * kartan mukana.
  *
- * Nosto on siis kaksiosainen:
- *
- *   1. KUPLA (tämä tiedosto) — HTML kartan päällä, koska nosto on
- *      tekstiä ja pieni kuva, ja ne HTML taittaa mutta SVG ei. Kupla
- *      seuraa ankkuriaan panoroinnissa ja zoomissa, ja sen nokka
- *      osoittaa siihen pisteeseen kartalla, jota juttu koskee. KOKO
- *      KUPLA ON PAINIKE: napautus mihin tahansa siinä avaa
- *      lunastuskortin suoraan (omistaja 26.8.2026 ilta).
- *   2. ANKKURISYMBOLI (js/fokusnosto-symbolit.js) — SVG kartan omassa
- *      kerroksessa, koska se ankkuroituu laudan koordinaatteihin ja
- *      elää kartan mukana. Se on kuplan alla oleva merkintä paikasta
- *      eikä painike; kupla on sen päällä ja hoitaa napautuksen.
- *
- * ILMAN PAIKKAA VANHA ALALAIDAN LIUSKA JÄÄ VARAPOLUKSI. Nostolla ei ole
- * pakko olla `paikka`-kenttää — sitä ilman kupla jäisi ilman ankkuria,
- * ja silloin nosto piirtyy kuten ennenkin ruudun alalaitaan.
+ * ILMAN PAIKKAA KAUPUNKI, JA VASTA SEN JÄLKEEN LIUSKA. Täyllä ei ole
+ * pakko olla `paikka`-kenttää; ilman sitä piste menee kaupunkiin, jossa
+ * pelaaja on (nostonPaikka), ja yhteinen kasauspassi siirtää sen
+ * kaupungin viereen omaan sarakkeeseensa (js/fokusniput.js). Vanha
+ * alalaidan liuska on yhä olemassa varapolkuna sille tapaukselle, ettei
+ * kaupunkiakaan ole — esimerkiksi katselutilassa.
  *
  * EI SUODATTIMIA missään muodossa (js/fokuskartta.js sääntö 3,
- * tests/rules.test.mjs): nousu on `transform` ja `opacity`, ei blur
+ * tests/rules.test.mjs): tuike on `opacity` ja `transform`, ei blur
  * eikä varjosuodatin.
  *
  * ── KARTAN LIIKE ILMAN UUTTA PIIRTOA ───────────────────────────────
  *
  * Panorointi on CSS-muunnos kartan SIIRTOKUORELLA (js/kartta.js
- * asetaPan; wrapper-siirto 26.8.2026 — ennen kohde oli SVG-juuri) eikä
- * uusi piirto, joten mikään ei kutsu tätä moduulia kesken eleen. Kupla
- * ja symbolit seuraavat siksi omaa vahtiaan: MutationObserver kartan
- * SVG:n `viewBox`- ja `style`-attribuuteilla sekä kuoren `style`-
- * attribuutilla (nostoVahdiKarttaa). Työ niputetaan yhteen
- * requestAnimationFrameen, ja se on kaksi
- * setAttributea ja yksi mittaus — ei uusia solmuja eikä uutta ladontaa.
- * js/ui.js:ään ei siis tarvita riviä lisää.
+ * asetaPan) eikä uusi piirto, joten mikään ei kutsu tätä moduulia
+ * kesken eleen. Piste on laudan koordinaateissa, joten panorointi
+ * siirtää sen itsestään; vain MITTAKAAVA on laskettava uusiksi, ja se
+ * näkyy kartan `viewBox`issa. Vahti on siksi MutationObserver yhdellä
+ * attribuutilla (nostoVahdiKarttaa), ja työ niputetaan yhteen
+ * requestAnimationFrameen: yksi setAttribute per ryhmä, ei uusia
+ * solmuja eikä yhtään asettelunlukua. js/ui.js:ään ei tarvita riviä
+ * lisää.
  *
  * ── MIKSI document.body EIKÄ .map-pane ─────────────────────────────
  *
@@ -113,10 +112,10 @@ import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { avaaFokuskohde, suljeFokuskohde } from './fokuskohteet.js';
 import { fokuskohteet } from './packs/fokuskohteet-grc.js';
 import {
-  asemoiNostosymbolit, nollaaNostosymbolit, NOSTOSYM_TYYPIT,
-  paivitaNostosymbolit,
+  asemoiNostosymbolit, nollaaNostosymbolit, paivitaNostosymbolit,
 } from './fokusnosto-symbolit.js';
 import { asetaNostopinta, fokusvirtaLukitseeLehden, fokusvirtaSisalto } from './fokusvirta.js';
+import { polloVihje } from './pollo.js';
 import { sfx } from './sound.js';
 
 /* ==================== POOLI ==================== */
@@ -148,7 +147,7 @@ import { sfx } from './sound.js';
  * IKÄSOPIVUUS (13+, Perustuslaki): Sofian tarinasta on jätetty pois
  * aineistossa erikseen hylätty avioliittokulma.
  *
- * ── PAIKKA LAUDALLA (omistaja 25.8.2026: kupla siihen kohtaan) ─────
+ * ── PAIKKA LAUDALLA (omistaja 25.8.2026: täky siihen kohtaan) ──────
  *
  * Koordinaatit on laskettu SAMALLA MENETELMÄLLÄ kuin kohtaamispisteillä
  * (js/packs/fokusvirta-ateena.js) ja kartan kohteilla
@@ -162,8 +161,8 @@ import { sfx } from './sound.js';
  *   europe — tasaväli, x = (lon + 11) × 19,2 ja y = (72 − lat) × 26,3
  *     (js/packs/europe.js).
  *
- * Lauta, jota rivillä ei ole, ei saa kuplaa vaan alalaidan liuskan —
- * väärään paikkaan ankkuroitu kupla olisi pahempi kuin ankkuroimaton.
+ * Lauta, jota rivillä ei ole, saa pisteensä kaupunkiin (nostonPaikka):
+ * väärään paikkaan ankkuroitu merkki olisi pahempi kuin maan osoite.
  */
 const NOSTO_MAAT = {
   GRC: [
@@ -271,35 +270,35 @@ function nostoMaanPooli(ui, city) {
    * nimeä tekstille) — näin uusi maa ei vaadi riviä tähän tiedostoon.
    * NOSTO_MAAT jää Kreikan poolille ja varapoluksi.
    *
-   * PACKIN POOLI SAA SAMAT KENTÄT: valinnainen `paikka` (kupla ja
-   * ankkurisymboli kartalle) ja valinnainen `symboli: 'elain'`
-   * (pöllövauva huutomerkin sijaan) kulkevat levityksen mukana
-   * sellaisenaan, joten kenttien lisääminen pakettiin ei vaadi riviä
-   * tänne.
+   * PACKIN POOLI SAA SAMAT KENTÄT: valinnainen `paikka` (pisteen
+   * paikka kartalla) kulkee levityksen mukana sellaisenaan, joten
+   * kentän lisääminen pakettiin ei vaadi riviä tänne. Vanha
+   * `symboli`-kenttä säilyy datassa, mutta kartalla sitä ei enää lueta
+   * (ks. nostonMerkinta).
    */
   const oma = fokusvirtaSisalto(ui, city)?.takynostot;
   if (Array.isArray(oma) && oma.length) {
-    return nostoYksiPerMaa(oma.map((n) => (n.teksti ? n : { ...n, teksti: n.lunastus })));
+    return oma.map((n) => (n.teksti ? n : { ...n, teksti: n.lunastus }));
   }
   const taulu = ui?.game?.pack?.map?.cityCountry;
   const iso = (taulu && city && taulu[city.id]) || null;
-  return (iso && nostoYksiPerMaa(NOSTO_MAAT[iso])) || null;
+  const pooli = iso ? NOSTO_MAAT[iso] : null;
+  return (Array.isArray(pooli) && pooli.length) ? pooli : null;
 }
 
-/**
- * YKSI TÄKY PER MAA — SÄÄNTÖ ON KOODISSA EIKÄ PELKÄSSÄ DATASSA.
+/*
+ * POOLI PALAUTETAAN KOKONAAN — LEIKKAUS ON SIIRTYNYT KATSOMISEEN.
  *
- * Omistaja 26.8.2026 ilta: *"Täkyjä josta tulee puhekupla pitää olla
- * vain yksi per maa."* Poolit on karsittu jo datassa (jokaisessa
- * `takynostot`-listassa ja NOSTO_MAAT-taulussa on yksi rivi), mutta
- * leikkaus on tässäkin: uusi maa tai vahingossa jäänyt toinen rivi ei
- * saa palauttaa kartalle sitä kahden merkkilajin sekamelskaa, joka
- * juuri purettiin. Jos poolia halutaan joskus taas kasvattaa, muutos
- * tehdään tietoisesti tähän yhteen kohtaan.
+ * Tässä oli 26.8.2026 alkaen `nostoYksiPerMaa`, joka leikkasi jokaisen
+ * maan poolin yhteen riviin: kartalle sai nousta vain yksi PUHEKUPLA,
+ * ja useampi kupla per maa olisi ollut juuri se raskaus, jota purettiin.
+ *
+ * Kuplaa ei enää ole (omistajan tilaus 27.8.2026 ilta), ja sen mukana
+ * lähti leikkauksen syy. Sääntö on nyt "YKSI KERRALLAAN" eikä "yksi per
+ * maa": pooli saa olla minkä mittainen tahansa, mutta kartalla tuikkii
+ * aina tasan yksi piste — poolin ensimmäinen katsomaton (nostoVuorossa).
+ * Seuraava syttyy vasta kun edellinen on luettu.
  */
-function nostoYksiPerMaa(pooli) {
-  return Array.isArray(pooli) && pooli.length ? pooli.slice(0, 1) : null;
-}
 
 /**
  * MITKÄ POOLIN NOSTOT OVAT YHÄ TARJOLLA — riippumatta siitä, onko ruutu
@@ -316,7 +315,8 @@ function nostoYksiPerMaa(pooli) {
  *   3. nosto on lukematon (laitteen muisti) ja ohittamaton (istunto).
  *
  * LUNASTETTU TÄKY EI PALAA KARTALLE: luetut karsitaan tästä yhdestä
- * listasta, josta sekä kupla että sen ankkurisymboli syntyvät.
+ * listasta, ja juuri se tekee "yksi kerrallaan" -vuorottelun — kun
+ * ensimmäinen katoaa listasta, seuraava on listan uusi ensimmäinen.
  */
 function nostoJaljella(ui) {
   if (typeof document === 'undefined') return [];
@@ -332,25 +332,23 @@ function nostoJaljella(ui) {
 }
 
 /**
- * MIKÄ NOSTO ON KUPLASSA?
+ * MIKÄ TÄKY TUIKKII JUURI NYT?
  *
- * Poolin ainoa tarjolla oleva — tai ei mitään, jos kuplan kiintiö on
- * jo käytetty tässä istunnossa.
+ * POOLIN ENSIMMÄINEN KATSOMATON (omistajan tilaus 27.8.2026 ilta:
+ * *"uusi piste tuikkii kun edellinen on katsottu"*). Katsotut on jo
+ * karsittu listasta (nostoJaljella lukee saman laitteen muistin, johon
+ * lunastus kirjaa), joten järjestys on poolin oma järjestys ja
+ * seuraavan sytyttää yksin se, että edellinen on luettu.
+ *
+ * ISTUNTOKIINTIÖ POISTUI KUPLAN MUKANA. Lippu `fokusnostoKuplaNahty`
+ * salli istunnossa vain yhden täyn (omistajan tilaus v1119: *"Ruudulle
+ * saa tulla VAIN YKSI täkykupla, eikä sen jälkeen enempää kuplia"*) —
+ * sääntö koski nimenomaan RUUDULLE PONNAHTAVAA kuplaa. Piste ei
+ * ponnahda eikä peitä mitään: se on kartan merkintä, joka odottaa
+ * napautusta, joten kiintiölle ei ole enää perustetta.
  */
 function nostoVuorossa(ui, jaljella) {
-  if (!jaljella.length) return null;
-  /*
-   * VAIN YKSI KUPLA ISTUNNOSSA (omistajan tilaus v1119, kohta 20:
-   * *"Ruudulle saa tulla VAIN YKSI täkykupla, eikä sen jälkeen enempää
-   * kuplia"*).
-   *
-   * Ennen jokainen luettu täky nosti seuraavan kuplaan, ja kaupungissa
-   * saattoi ponnahtaa kolme kuplaa peräkkäin. Lippu on istunnon tieto:
-   * uusi kaupunki samassa istunnossa ei ala kuplasta, koska mekaniikka
-   * on jo nähty.
-   */
-  if (ui?.fokusnostoKuplaNahty) return null;
-  return jaljella[0];
+  return jaljella[0] ?? null;
 }
 
 /* ==================== PAIKKA LAUDALLA ==================== */
@@ -361,36 +359,50 @@ function nostoVuorossa(ui, jaljella) {
  * Kenttä on valinnainen ja se annetaan kahdessa muodossa: `paikka.laudat`
  * (eri koordinaatit maailmankartalle ja maanosalaudalle, kuten
  * kohtaamispisteellä ja kartan kohteilla) tai suoraan `{x, y}`, jos
- * paketti palvelee vain yhtä lautaa. Ilman kelvollisia lukuja nosto
- * jää liuskaksi.
+ * paketti palvelee vain yhtä lautaa.
+ *
+ * VARAPAIKKA ON KAUPUNKI (27.8.2026 ilta). Kun täky oli puhekupla,
+ * paikaton täky sai alalaidan liuskan — kupla ilman ankkuria olisi ollut
+ * pahempi kuin ankkuroimaton liuska. Piste ei ole samalla tavalla
+ * vaativa: sen lupaus on *"tässä maassa on jotain katsottavaa"*, ja
+ * kaupunki on maan oikea osoite silloinkin, kun jutun tarkkoja
+ * koordinaatteja ei ole laskettu. Päällekkäisyyden hoitaa yhteinen
+ * kasauspassi, joka siirtää kaupungin päälle osuvan merkin sen viereen
+ * omaan sarakkeeseensa katkoviivan päähän (js/fokusniput.js) — sama
+ * ratkaisu kuin kartan kohdemerkeillä.
+ *
+ * Ilman kaupunkiakin (katselutila, laudan vaihto) palautuu null, ja
+ * silloin piirtyy vanha alalaidan liuska.
  */
 function nostonPaikka(ui, nosto) {
   const paikka = nosto?.paikka;
-  if (!paikka) return null;
   const lauta = ui?.game?.pack?.id;
-  const koordit = paikka.laudat ? paikka.laudat[lauta] : paikka;
-  if (!Number.isFinite(koordit?.x) || !Number.isFinite(koordit?.y)) return null;
-  return { x: koordit.x, y: koordit.y, nimi: paikka.nimi ?? null };
+  const koordit = paikka ? (paikka.laudat ? paikka.laudat[lauta] : paikka) : null;
+  if (Number.isFinite(koordit?.x) && Number.isFinite(koordit?.y)) {
+    return { x: koordit.x, y: koordit.y, nimi: paikka.nimi ?? null };
+  }
+  const city = ui?.game?.cityOf?.();
+  if (Number.isFinite(city?.x) && Number.isFinite(city?.y)) {
+    return { x: city.x, y: city.y, nimi: city.name ?? null };
+  }
+  return null;
 }
 
 /**
- * KUPLAN ANKKURIMERKINTÄ, tai null jos täyllä ei ole paikkaa tällä
- * laudalla (silloin piirtyy alalaidan liuska eikä kartalle tule mitään).
+ * TUIKKIVAN PISTEEN MERKINTÄ, tai null jos täylle ei löydy paikkaa
+ * tältä laudalta (silloin piirtyy alalaidan liuska).
  *
- * SYMBOLI TULEE DATASTA: täyn `symboli`-kenttä on Raamatun
- * SYMBOLITAKSONOMIAN kategoria ('elain', 'historia', 'ruoka', … —
- * koko lista js/fokusnosto-symbolit.js NOSTOSYM_TYYPIT). Muut arvot
- * ja puuttuva kenttä → keltainen huutomerkki, kuten alusta asti.
+ * SYMBOLIA EI ENÄÄ LUETA. Merkintä kantoi ennen täyn `symboli`-kentän
+ * (Raamatun SYMBOLITAKSONOMIAN kategoria), jonka mukaan kartalle
+ * piirtyi huutomerkki tai pöllönpoikanen. Kartalla täky on nyt pelkkä
+ * keltainen piste (omistajan tilaus 27.8.2026 ilta), joten kenttä jää
+ * tässä lukematta — datassa se säilyy, ja taksonomia elää kartan
+ * kohdemerkeissä ja korttien ylärivillä entiseen tapaan.
  */
 function nostonMerkinta(ui, nosto) {
   const paikka = nosto ? nostonPaikka(ui, nosto) : null;
   if (!paikka) return null;
-  return {
-    id: nosto.id,
-    otsikko: nosto.otsikko,
-    symboli: NOSTOSYM_TYYPIT.has(nosto.symboli) ? nosto.symboli : 'huuto',
-    paikka,
-  };
+  return { id: nosto.id, otsikko: nosto.otsikko, paikka };
 }
 
 /**
@@ -458,22 +470,27 @@ export function paivitaFokusnosto(ui, yritys = 0) {
   nostoLataaTyyli();
   const nosto = nostoVuorossa(ui, jaljella);
   const merkinta = nostonMerkinta(ui, nosto);
-  const paikka = merkinta?.paikka ?? null;
   /*
-   * ANKKURI KARTALLE ENSIN. Kerros vertaa omaa avaintaan ja tekee työtä
-   * vain kun täky vaihtuu; kupla tarvitsee kerroksen ankkurin, joten sen
-   * on oltava kartalla ennen kuin kuplaa asemoidaan.
-   *
-   * Kun kuplan vuoro on käytetty (`nosto` on null), kartalle ei jää
-   * mitään: poolissa on vain tämä yksi täky, ja muut maan aiheet ovat
-   * kartan tavallisia kohteita (js/fokuskohteet.js).
+   * PISTE KARTALLE. Kerros vertaa omaa avaintaan ja tekee työtä vain
+   * kun täky vaihtuu — napautuksen työ annetaan sille valmiina, jotta
+   * kerros ei tarvitse tietoa poolista eikä lunastuksesta.
    */
-  paivitaNostosymbolit(ui, { merkinta });
-  // Vahti vain silloin kun kartalla on jotain seurattavaa: pelkkä liuska
-  // on ruudun elementti eikä liiku kartan mukana.
-  if (merkinta) nostoVahdiKarttaa(ui);
-  else nostoLopetaVahti(ui);
-  if (!nosto) { nostoPintaPois(ui); return; }
+  paivitaNostosymbolit(ui, { merkinta, avaa: () => avaaNosto(ui, nosto) });
+  if (merkinta) {
+    // Piste on kartalla: vahti pitää sen mittakaavan ajan tasalla, eikä
+    // ruudulle jää mitään pintaa — ei kuplaa eikä liuskaa.
+    nostoVahdiKarttaa(ui);
+    nostoPintaPois(ui);
+    nostoLivianVihje(ui);
+    return;
+  }
+  /*
+   * VARAPOLKU ILMAN PAIKKAA: alalaidan liuska. Se on ruudun elementti
+   * eikä liiku kartan mukana, joten vahtia ei tarvita — ja koska se
+   * peittää kartan alalaidan, se väistää kaiken, mikä on pelaajalla
+   * kesken (nostoRuutuVapaa) täsmälleen kuten ennen.
+   */
+  nostoLopetaVahti(ui);
   if (!nostoRuutuVapaa()) {
     nostoPintaPois(ui);
     ui.fokusnostoRuutuOliVarattu = true;
@@ -486,12 +503,12 @@ export function paivitaFokusnosto(ui, yritys = 0) {
   }
   /*
    * HENGÄHDYS PÖLLÖN KUPLAN JÄLKEEN (omistajan tilaus v1119, kohta
-   * 20b: *"ENSIMMÄINEN täkynosto (kupla) tulee kartalle heti kun aarre
-   * on löytynyt JA pöllön kuittauskupla on näytetty — muutaman
-   * sekunnin viive pöllön kuplan jälkeen"*).
+   * 20b: *"ENSIMMÄINEN täkynosto tulee kartalle heti kun aarre on
+   * löytynyt JA pöllön kuittauskupla on näytetty — muutaman sekunnin
+   * viive pöllön kuplan jälkeen"*).
    *
-   * Ruutu vapautui juuri: kuplaa ei nosteta samassa silmänräpäyksessä
-   * kuin edellinen katosi, vaan sen verran myöhemmin että pelaaja
+   * Ruutu vapautui juuri: liuskaa ei nosteta samassa silmänräpäyksessä
+   * kuin edellinen pinta katosi, vaan sen verran myöhemmin että pelaaja
    * ehtii nähdä kartan välissä.
    */
   if (ui.fokusnostoRuutuOliVarattu) {
@@ -500,51 +517,87 @@ export function paivitaFokusnosto(ui, yritys = 0) {
     return;
   }
   /*
-   * RUUDULLA OLEVA NOSTO JÄTETÄÄN RAUHAAN, jottei se aloita
-   * nousuanimaatiotaan alusta joka piirrossa. Avaimessa on myös MUOTO:
-   * jos lauta vaihtuu sellaiseen, jolla nostolla ei ole paikkaa, kupla
-   * vaihtuu liuskaksi eikä jää roikkumaan ilman ankkuria.
+   * RUUDULLA OLEVA LIUSKA JÄTETÄÄN RAUHAAN, jottei se aloita
+   * nousuanimaatiotaan alusta joka piirrossa.
    */
-  const avain = `${nosto.id}:${paikka ? 'kupla' : 'liuska'}`;
-  if (ui.fokusnosto?.avain === avain && ui.fokusnosto.el?.isConnected) {
-    /*
-     * Peli piirsi uudestaan: alanapit ovat voineet ilmestyä tai kadota
-     * (Liiku-nappi), joten ruudun rajat mitataan tässä kohtaa uudelleen.
-     * Kartan liikkeen aikana käytetään talletettuja lukuja.
-     */
-    if (paikka) { nostoMittaaKupla(ui); nostoUnohdaAnkkurit(ui); asetaNostokuplanPaikka(ui); }
-    return;
-  }
+  if (ui.fokusnosto?.avain === nosto.id && ui.fokusnosto.el?.isConnected) return;
   nostoPintaPois(ui);
-  // Kuplan kiintiö on käytetty tässä istunnossa (ks. nostoVuorossa).
-  // Lippu on istunnon tieto eikä tallennetta.
-  ui.fokusnostoKuplaNahty = true;
-  ui.fokusnosto = {
-    avain,
-    id: nosto.id,
-    el: paikka ? piirraNostonKupla(ui, nosto, paikka) : piirraNosto(ui, nosto),
-  };
+  ui.fokusnosto = { avain: nosto.id, id: nosto.id, el: piirraNosto(ui, nosto) };
 }
 
 /**
- * Kupla tai liuska pois ruudulta — kartan ankkurisymboli jää.
+ * TÄKY AUKI — sama työ napautettiinpa kartan pistettä tai varapolun
+ * liuskaa.
+ *
+ * Järjestys on tarkka: täky merkitään luetuksi ENNEN pinnan sulkemista,
+ * jotta sulkemisen laukaisema päivitys ei enää löydä samaa täkyä
+ * jäljellä olevaksi ja sytytä sen pistettä uudelleen. Seuraava
+ * katsomaton syttyy vasta kun kortti suljetaan (suljeNostonKortti).
+ */
+function avaaNosto(ui, nosto) {
+  if (!nosto) return;
+  sfx.play('paper');
+  nostoMerkitseLuetuksi(nosto.id);
+  suljeFokusnosto(ui);
+  avaaNostonKortti(ui, nosto);
+}
+
+/* ==================== LIVIAN HUOMAUTUS ==================== */
+
+/**
+ * LIVIA KOMMENTOI ENSIMMÄISTÄ VILKKUVAA TÄKYÄ (omistajan tilaus
+ * 27.8.2026 ilta: *"pulu voisi kommentoida ensimmäistä vilkkuvaa
+ * täkyä"*).
+ *
+ * Piste on pieni ja hiljainen — se on koko pointti — mutta ensimmäisellä
+ * kerralla pelaaja ei tiedä, että kartalla on nyt uusi merkkilaji.
+ * Yksi kupla riittää: mekaniikka opitaan kerran, ja sen jälkeen piste
+ * puhuu puolestaan.
+ *
+ * REPLIIKKI ON LIVIAN ÄÄNTÄ (Raamattu, PULU-KOKEILU): asiantunteva
+ * viestinviejä, joka puolustautuu refleksinä ja on ylpeä työnsä
+ * tarkkuudesta — ei huutomerkkejä. Se VIHJAA eikä paljasta: kartalla
+ * tuikkii jotain katsomisen arvoista, mutta mitä, se selviää vasta
+ * napautuksesta.
+ *
+ * SAMA MEKANISMI KUIN SAAPUMISKUPLILLA (js/ui.js saapumisenKuplat):
+ * polloVihje, viive ja ruudun vapaus. Jos ruutu ei ole vapaa kun viive
+ * kuluu umpeen, lippu palautuu ja seuraava piirto yrittää uudelleen —
+ * kupla ei siis huku pöllön kuittauksen tai lehden alle.
+ */
+const NOSTO_LIVIAN_VIHJE = 'Kartalla tuikkii keltainen piste. Se on '
+  + 'minun leikekirjastani, ja tarkistin sen kahdesti — kannattaa käydä '
+  + 'katsomassa ennen kuin matkustat eteenpäin.';
+
+function nostoLivianVihje(ui) {
+  if (!ui || ui.fokusnostoVihjeNahty) return;
+  ui.fokusnostoVihjeNahty = true;
+  clearTimeout(ui.fokusnostoVihjeAjastin);
+  ui.fokusnostoVihjeAjastin = setTimeout(() => {
+    if (!ui || ui.dead) return;
+    // Ruutu varattu (pöllön kuittaus, lehti, lento): lippu takaisin,
+    // seuraava piirto yrittää uudelleen.
+    if (!nostoRuutuVapaa()) { ui.fokusnostoVihjeNahty = false; return; }
+    polloVihje(NOSTO_LIVIAN_VIHJE);
+  }, NOSTO_KUPLAN_VIIVE_MS);
+}
+
+/**
+ * Liuska pois ruudulta — kartan tuikkiva piste jää.
  *
  * SIIVOUS TEHDÄÄN VALITSIMELLA eikä pelkällä muistiin jääneellä
  * viitteellä: uusi peli rakentaa uuden UI-olion (js/main.js), jolloin
  * vanha viite katoaa mutta pinta jäisi bodyyn roikkumaan.
  */
 function nostoPintaPois(ui) {
-  if (ui) {
-    ui.fokusnosto = null;
-    ui.fokusnostoKupla = null;
-  }
+  if (ui) ui.fokusnosto = null;
   if (typeof document === 'undefined') return;
-  for (const vanha of document.querySelectorAll('.fokusnosto, .fokusnosto-kupla')) vanha.remove();
+  for (const vanha of document.querySelectorAll('.fokusnosto')) vanha.remove();
 }
 
 /**
- * Nosto pois ruudulta kokonaan: kupla tai liuska, kartan ankkurisymboli
- * ja kartan liikkeen vahti. Muistiin ei kosketa — se on eri asia.
+ * Nosto pois ruudulta kokonaan: liuska, kartan tuikkiva piste ja kartan
+ * liikkeen vahti. Muistiin ei kosketa — se on eri asia.
  */
 export function suljeFokusnosto(ui) {
   nostoPintaPois(ui);
@@ -555,7 +608,7 @@ export function suljeFokusnosto(ui) {
 /* ==================== KARTAN LIIKE ==================== */
 
 /**
- * KUPLA JA SYMBOLIT SEURAAVAT KARTTAA ILMAN UUTTA PIIRTOA.
+ * PISTE SEURAA KARTTAA ILMAN UUTTA PIIRTOA.
  *
  * Panorointi on CSS-muunnos kartan SVG:llä (js/kartta.js asetaPan) ja
  * zoomi kirjoittaa sen `viewBox`-attribuutin — kummastakaan ei seuraa
@@ -572,23 +625,22 @@ function nostoVahdiKarttaa(ui) {
   if (ui.fokusnostoVahti && ui.fokusnostoVahtiSvg === ui.svg) return;
   nostoLopetaVahti(ui);
   /*
-   * PANOROINNISSA EI RESKAALATA SYMBOLEITA. Panorointi kirjoittaa vain
-   * `style.transform`in, ja symbolien muunnos riippuu pelkästä
-   * mittakaavasta — se taas näkyy `viewBox`issa, jonka kartta kirjoittaa
-   * aina kun zoomi muuttuu (js/kartta.js fitViewBox, sovitaAloitusZoom).
-   * Attribuutin lukeminen ei pakota tyylinlaskentaa; ui.nakyvaAlue()
-   * mittaisi kaksi laatikkoa turhaan joka kehyksellä.
+   * PANOROINTI EI KOSKE PISTEESEEN LAINKAAN. Piste on laudan
+   * koordinaateissa, joten se liikkuu kartan mukana itsestään; vain
+   * MITTAKAAVA on laskettava uusiksi, ja se näkyy `viewBox`issa, jonka
+   * kartta kirjoittaa aina kun zoomi muuttuu (js/kartta.js fitViewBox,
+   * sovitaAloitusZoom). Attribuutin lukeminen ei pakota tyylinlaskentaa;
+   * ui.nakyvaAlue() mittaisi kaksi laatikkoa turhaan joka kehyksellä.
+   *
+   * KUPLAN MUKANA LÄHTI PUOLET VAHDISTA (27.8.2026 ilta): kuoren
+   * siirtoa, ikkunan kokoa ja ankkurin ruutupaikkaa ei enää tarvitse
+   * seurata, koska mitään ruutuun ankkuroitua pintaa ei ole.
    */
   const asemoi = () => {
     const laatikko = ui.svg?.getAttribute('viewBox') ?? '';
-    if (laatikko !== ui.fokusnostoViewBox) {
-      ui.fokusnostoViewBox = laatikko;
-      asemoiNostosymbolit(ui);
-      // Zoomi vaihtui: ankkurin ruutupaikkaa ei voi enää päätellä
-      // siirrosta, joten talletettu mittaus vanhenee tässä.
-      nostoUnohdaAnkkurit(ui);
-    }
-    asetaNostokuplanPaikka(ui);
+    if (laatikko === ui.fokusnostoViewBox) return;
+    ui.fokusnostoViewBox = laatikko;
+    asemoiNostosymbolit(ui);
   };
   const pyyda = () => {
     if (ui.fokusnostoKehys) return;
@@ -599,26 +651,11 @@ function nostoVahdiKarttaa(ui) {
       asemoi();
     });
   };
-  // Ikkunan koon muutos vaihtaa sekä paperin mitat että ruudun rajat,
-  // joten silloin — ja vain silloin — ne mitataan uudelleen.
-  const mittaaUudelleen = () => { nostoMittaaKupla(ui); nostoUnohdaAnkkurit(ui); pyyda(); };
   const vahti = typeof MutationObserver === 'undefined' ? null : new MutationObserver(pyyda);
-  vahti?.observe(ui.svg, { attributes: true, attributeFilter: ['style', 'viewBox'] });
-  /*
-   * SIIRTOKUORI MYÖS VAHDIN ALLE (wrapper-siirto 26.8.2026).
-   * Panoroinnin muunnos kirjoitetaan kuoreen eikä lautaan, joten ilman
-   * tätä kupla jäisi paikalleen kun kartta liikkuu sen alta.
-   */
-  if (ui.karttaKuori) {
-    vahti?.observe(ui.karttaKuori, { attributes: true, attributeFilter: ['style'] });
-  }
-  globalThis.addEventListener?.('resize', mittaaUudelleen);
-  globalThis.addEventListener?.('orientationchange', mittaaUudelleen);
+  vahti?.observe(ui.svg, { attributes: true, attributeFilter: ['viewBox'] });
   ui.fokusnostoVahtiSvg = ui.svg;
   ui.fokusnostoVahti = () => {
     vahti?.disconnect();
-    globalThis.removeEventListener?.('resize', mittaaUudelleen);
-    globalThis.removeEventListener?.('orientationchange', mittaaUudelleen);
     if (ui.fokusnostoKehys) globalThis.cancelAnimationFrame?.(ui.fokusnostoKehys);
     ui.fokusnostoKehys = 0;
   };
@@ -687,12 +724,7 @@ function nostoKlikkiotsikko(ui, nosto, nappi = html('button', 'fokusnosto-nappi'
       valokuvaVara(nosto.kuva.tiedosto, NOSTO_MINI_PX), () => mini.remove());
     nappi.appendChild(mini);
   }
-  nappi.addEventListener('click', () => {
-    sfx.play('paper');
-    nostoMerkitseLuetuksi(nosto.id);
-    suljeFokusnosto(ui);
-    avaaNostonKortti(ui, nosto);
-  });
+  nappi.addEventListener('click', () => avaaNosto(ui, nosto));
   return nappi;
 }
 
@@ -712,297 +744,6 @@ function nostoRasti(ui, nosto) {
     paivitaFokusnosto(ui);
   });
   return sulje;
-}
-
-/* ==================== PUHEKUPLA KARTALLA ==================== */
-
-/** Kuplan ja ruudun reunan väliin jäävä vara pikseleinä. */
-const NOSTO_KUPLA_MARGINAALI = 8;
-/** Ankkurin ja kuplan väliin jäävä rako — nokan korkeus. */
-const NOSTO_NOKKA = 12;
-/** Kuinka lähelle kuplan reunaa nokka saa liukua. */
-const NOSTO_NOKKA_VARA = 16;
-
-/**
- * PUHEKUPLA SIIHEN KOHTAAN KARTTAA, JOTA JUTTU KOSKEE.
- *
- * Rakenne on kolmiportainen, ja jokaisella portaalla on oma tehtävänsä:
- *
- *   .fokusnosto-kupla       kiinteä laatikko bodyssa, jonka PAIKKA
- *                           kirjoitetaan `transform`-muunnoksena — se on
- *                           kompositorin työtä, joten kartan liikkeen
- *                           aikana ei tehdä uutta ladontaa.
- *   .fokusnosto-kuplapaperi itse paperi ja sen NOUSU (opacity +
- *                           transform). Nousu on omalla portaallaan,
- *                           koska ulomman muunnos on jo varattu paikalle.
- *                           PAPERI ON MYÖS PAINIKE (ks. alla).
- *   .fokusnosto-nokka       kärki, joka osoittaa ankkuriin. Sen
- *                           vaakapaikka lasketaan erikseen, jotta se
- *                           osoittaa oikeaan kohtaan silloinkin kun
- *                           kupla on siirtynyt ruudun reunasta.
- *
- * KOKO KUPLA AVAA LUNASTUKSEN (omistaja 26.8.2026 ilta: *"kun täkyä
- * painaa niin sen pitäisi aueta suoraan pop upiksi ilman pelkkää otsikko
- * nostoa"*). Paperi ON se painike — ei laatikko, jonka sisällä on
- * pienempi painike — joten paperilla ei ole yhtään kuollutta pintaa:
- * napautus otsikkoon, miniatyyriin tai marginaaliin tekee saman asian.
- *
- * MIKSI BODY EIKÄ .map-pane: ks. tiedoston alku. Kartan eleet eivät näe
- * bodyssa olevaa pintaa lainkaan, joten js/kartta.js:n KELLUVA_UI-listaa
- * ei tarvitse koskea.
- */
-function piirraNostonKupla(ui, nosto, paikka) {
-  const kupla = html('div', 'fokusnosto-kupla');
-  kupla.setAttribute('role', 'group');
-  kupla.setAttribute('aria-label', paikka.nimi ? `Täkynosto: ${paikka.nimi}` : 'Täkynosto');
-
-  /*
-   * Kuplassa EI ole rastia (omistaja 25.8.2026: "Ota ruksi pois
-   * pop-upista") — nosto poistuu lunastettaessa. Rasti elää yhä
-   * liuska-varapolussa. Huutomerkkitäkyjen kupla saa kevyen keltaisen
-   * taustan (sama omistajan viesti); eläintäky pysyy paperinvärisenä.
-   */
-  if ((nosto.symboli ?? 'huuto') !== 'elain') kupla.classList.add('fokusnosto-kupla-huuto');
-  const paperi = nostoKlikkiotsikko(
-    ui, nosto, html('button', 'fokusnosto-kuplapaperi fokusnosto-nappi'),
-  );
-  const nokka = html('span', 'fokusnosto-nokka');
-  nokka.setAttribute('aria-hidden', 'true');
-  paperi.appendChild(nokka);
-  kupla.appendChild(paperi);
-
-  document.body.appendChild(kupla);
-  ui.fokusnostoKupla = { el: kupla, paperi, nokka, mitat: null };
-  asetaNostokuplanPaikka(ui);
-  const mittaaJaAsemoi = () => { nostoMittaaKupla(ui); asetaNostokuplanPaikka(ui); };
-  /*
-   * MITTA UUDELLEEN, kun asettelu ja tyyli ovat valmiit: ensimmäinen
-   * mitta voi osua hetkeen, jolloin tyylitiedosto on vasta matkalla, ja
-   * miniatyyri leventää paperia vasta latauduttuaan. Sama kaksoismittaus
-   * kuin kartan tietoruudulla (js/fokuskohteet.js avaaFokuskohde).
-   */
-  globalThis.requestAnimationFrame?.(mittaaJaAsemoi);
-  setTimeout(mittaaJaAsemoi, 220);
-  /*
-   * Nousu alkaa vasta seuraavassa kehyksessä (ks. piirraNosto). Kuplalla
-   * on OMA nousuluokkansa: liuskan `fokusnosto-nousee` kirjoittaa
-   * `transform`-ominaisuuden, joka on kuplalla varattu paikoitukseen.
-   */
-  void kupla.offsetWidth;
-  kupla.classList.add('fokusnosto-kupla-nousee');
-  return kupla;
-}
-
-/**
- * PAPERIN MITAT JA RUUDUN RAJAT TALTEEN.
- *
- * Kaksi asiaa, jotka eivät muutu kartan liikkuessa mutta jotka on silti
- * tiedettävä joka asemoinnissa: kuplan oma koko ja se laatikko, jonka
- * sisään sen on mahduttava. Rajat luetaan karttapaneelista, ja alanapit
- * mitataan ruudulta (vuorolaatikko kelluu kapealla ruudulla kartan
- * päällä) — sama pakko ja sama tapa kuin kartan tietoruudulla
- * (js/fokuskohteet.js asetaKohteenPaikka).
- */
-function nostoMittaaKupla(ui) {
-  const auki = ui?.fokusnostoKupla;
-  if (!auki?.el?.isConnected) return null;
-  const leveys = auki.paperi.offsetWidth;
-  const korkeus = auki.paperi.offsetHeight;
-  if (!leveys || !korkeus) return null;
-  const M = NOSTO_KUPLA_MARGINAALI;
-  const pane = document.querySelector('.map-pane')?.getBoundingClientRect();
-  const rajat = {
-    vasen: (pane?.left ?? 0) + M,
-    oikea: (pane?.right ?? globalThis.innerWidth ?? leveys) - M,
-    yla: (pane?.top ?? 0) + M,
-    ala: (pane?.bottom ?? globalThis.innerHeight ?? korkeus) - M,
-  };
-  const napit = document.querySelector('.turn-card')?.getBoundingClientRect();
-  if (napit && napit.height > 0 && napit.right > rajat.vasen && napit.left < rajat.oikea
-    && napit.top > rajat.yla) {
-    rajat.ala = Math.min(rajat.ala, napit.top - M);
-  }
-  auki.mitat = { leveys, korkeus, rajat };
-  return auki.mitat;
-}
-
-/* ==================== ANKKURI ILMAN ASETTELUNLUKUA ==================== */
-
-/**
- * Suurin yksittäinen siirtoaskel, joka vielä kelpaa laskettavaksi
- * talletetusta mittauksesta. Käsi ei siirrä karttaa tätä enempää yhden
- * kehyksen aikana; sen ylittävä loikka on kiertävän laudan sauma
- * (js/kartta.js asetaPan hyppäyttää panX:n yhden laudan leveyden
- * verran) tai kamera-ajo, ja silloin mitataan uudestaan.
- */
-const NOSTO_SIIRTOASKEL_KATTO = 400;
-
-/**
- * Kartan siirtokuoren PUHDAS SIIRTO pikseleinä, tai null.
- *
- * Panoroinnissa kuoren muunnos on aina muotoa `translate3d(x, y, 0)`
- * (js/kartta.js asetaPan), ja tyhjä muunnos on sama kuin nolla. Kaikki
- * muu — nipistyksen ja zoomin `scale`, kesken oleva siirtymä — on
- * merkki siitä, ettei ankkurin paikkaa voi päätellä pelkästä siirrosta.
- * Tyylimääreen lukeminen EI pakota asettelua, toisin kuin
- * getBoundingClientRect.
- */
-function nostoKuorenSiirto(ui) {
-  const muunnos = ui?.karttaKuori?.style?.transform;
-  if (muunnos == null) return null;
-  if (muunnos === '' || muunnos === 'none') return { x: 0, y: 0 };
-  const osuma = /^translate3d\(\s*(-?[\d.]+)px,\s*(-?[\d.]+)px,\s*0(?:px)?\s*\)$/.exec(muunnos);
-  if (!osuma) return null;
-  return { x: Number(osuma[1]), y: Number(osuma[2]) };
-}
-
-/**
- * ANKKURIN PAIKKA RUUDULLA — MITATAAN KERRAN, SIIRRETÄÄN LASKEMALLA.
- *
- * === MIKÄ OLI VIALLA ===
- *
- * Kartan vahti asemoi kuplan joka kehyksellä, ja asemointi luki
- * ankkurin paikan `getBoundingClientRect`illä. Kiertävällä laudalla
- * ankkureita on kaksi (sama paikka kahdesti, ks. js/fokusnosto-
- * symbolit.js), ja lähimmän valinta mittasi ensin molemmat: kolme
- * asettelunlukua kehyksessä. Mitattu 26.8.2026 (Chromium,
- * iPad-ikkuna 834×1112, 150 kehyksen raahaus Kreikan fokusnäkymässä
- * kupla auki): 228 gBCR-kutsua eleen aikana, kaikki tästä ketjusta.
- *
- * Se on täsmälleen se sääntö, jonka v1115 asetti eleiden silmukoille:
- * KESKEN ELEEN EI LUETA ASETTELUA. Luku on halpa vain niin kauan kuin
- * asettelu on puhdas — ja heti kun jokin muu kerros likaa sen, jokainen
- * näistä kutsuista laskee ison laudan asettelun synkronisesti sormen
- * alla.
- *
- * === MITÄ TEHDÄÄN ===
- *
- * Ankkurit mitataan KERRAN ja talteen jää sekä jokaisen kopion
- * ruutupaikka että se kuoren siirto, jolla mittaus otettiin. Panorointi
- * on pelkkä siirto, joten seuraavien kehysten paikat saa vähennyslaskulla
- * — ilman yhtäkään asettelunlukua. Uusi mittaus otetaan vain kun
- * jokin oikeasti muuttui:
- *
- *   - muunnos ei ole puhdas siirto (nipistys, zoomiliuku, kamera-ajo);
- *   - siirto loikkasi kerralla yli katon (kiertävän laudan sauma);
- *   - ankkurikerros rakennettiin uusiksi tai zoomi muuttui
- *     (nostoUnohdaAnkkurit — kutsutaan viewBoxin vaihtuessa ja
- *     ikkunan koon muuttuessa).
- *
- * LÄHIN KOPIO VALITAAN YHÄ JOKA KEHYKSELLÄ, koska kiertävällä laudalla
- * se vaihtuu kesken eleen — mutta nyt talletetuista luvuista.
- *
- * Kolme funktiota: mittaus (nostoMittaaAnkkurit), mitätöinti
- * (nostoUnohdaAnkkurit) ja kehyksen kysymys (nostoAnkkurinPaikka).
- */
-
-/** Talletettu mittaus roskiin: seuraava kysyjä mittaa uudestaan. */
-function nostoUnohdaAnkkurit(ui) {
-  if (ui) ui.fokusnostoAnkkuriMitta = null;
-}
-
-/** Jokaisen ankkurikopion ruutupaikka talteen — ainoa asettelunluku. */
-function nostoMittaaAnkkurit(ui) {
-  const ankkurit = (ui?.nostosymAnkkurit ?? []).filter((a) => a.isConnected);
-  if (!ankkurit.length) return null;
-  const kopiot = [];
-  for (const ankkuri of ankkurit) {
-    const r = ankkuri.getBoundingClientRect();
-    if (!(r.width > 0) && !(r.height > 0)) continue;
-    kopiot.push({ x: r.left + r.width / 2, y: r.top + r.height / 2, puolikas: r.height / 2 });
-  }
-  if (!kopiot.length) return null;
-  const siirto = nostoKuorenSiirto(ui);
-  ui.fokusnostoAnkkuriMitta = { ankkurit, kopiot, siirto, edellinen: siirto };
-  return ui.fokusnostoAnkkuriMitta;
-}
-
-/** Näkymän keskustaa lähin ankkurikopio — se, joka pelaajalla on edessään. */
-function nostoLahinKopio(kopiot, dx, dy) {
-  const keski = (globalThis.innerWidth ?? 0) / 2;
-  let paras = null;
-  let parasEro = Infinity;
-  for (const kopio of kopiot) {
-    const x = kopio.x + dx;
-    const ero = Math.abs(x - keski);
-    if (ero < parasEro) { parasEro = ero; paras = { x, y: kopio.y + dy, puolikas: kopio.puolikas }; }
-  }
-  return paras;
-}
-
-/** Kehyksen kysymys: missä aktiivisen täyn ankkuri on juuri nyt? */
-function nostoAnkkurinPaikka(ui) {
-  const muisti = ui?.fokusnostoAnkkuriMitta;
-  const siirto = nostoKuorenSiirto(ui);
-  if (muisti?.siirto && siirto && muisti.ankkurit.every((a) => a.isConnected)) {
-    const askel = Math.hypot(siirto.x - muisti.edellinen.x, siirto.y - muisti.edellinen.y);
-    if (askel <= NOSTO_SIIRTOASKEL_KATTO) {
-      muisti.edellinen = siirto;
-      return nostoLahinKopio(muisti.kopiot, siirto.x - muisti.siirto.x, siirto.y - muisti.siirto.y);
-    }
-  }
-  const uusi = nostoMittaaAnkkurit(ui);
-  return uusi ? nostoLahinKopio(uusi.kopiot, 0, 0) : null;
-}
-
-/**
- * KUPLAN PAIKKA ANKKURIN VIEREEN — REUNAPAKKO VOITTAA.
- *
- * Kolme sääntöä:
- *
- *   1. Kupla menee mieluiten ankkurin YLÄPUOLELLE, jotta kartta jää
- *      näkyviin sen alle ja nokka osoittaa alaspäin kuten puhekuplassa
- *      kuuluu. Jos ylhäällä ei ole tilaa, kupla laskeutuu ankkurin alle
- *      ja nokka kääntyy ylöspäin.
- *   2. KUPLA EI VALU RUUDUN ULKOPUOLELLE. Rajat luetaan karttapaneelista
- *      ja alanapit mitataan ruudulta (vuorolaatikko kelluu kapealla
- *      ruudulla kartan päällä) — sama pakko kuin kartan tietoruudulla.
- *   3. Kun kupla on jouduttu siirtämään reunasta, NOKKA JÄÄ OSOITTAMAAN
- *      ANKKURIIN: sen vaakapaikka lasketaan ankkurista eikä kuplan
- *      keskeltä, mutta se pysyy kuplan pyöristettyjen kulmien sisällä.
- *
- * MITAT LUETAAN offsetWidth/offsetHeightillä: ne eivät sisällä
- * paikoitusmuunnosta, joten mittaus ei muutu sen mukaan, mihin kupla on
- * juuri asetettu.
- *
- * PANOROINNIN AIKANA EI MITATA MITÄÄN. Paperin koko ja ruudun rajat
- * eivät muutu kartan liikkuessa, joten ne luetaan talteen erikseen
- * (nostoMittaaKupla), ja ankkurin paikka lasketaan talletetusta
- * mittauksesta kuoren siirron avulla (nostoAnkkurinPaikka): nolla
- * asettelunlukua kehystä kohti, ennen viisi.
- */
-function asetaNostokuplanPaikka(ui) {
-  const auki = ui?.fokusnostoKupla;
-  if (!auki?.el?.isConnected) return;
-  const mitat = auki.mitat ?? nostoMittaaKupla(ui);
-  if (!mitat) return;
-  const a = nostoAnkkurinPaikka(ui);
-  if (!a) return;
-  const { leveys, korkeus } = mitat;
-  const {
-    vasen: vasenRaja, oikea: oikeaRaja, yla: ylaRaja, ala: alaRaja,
-  } = mitat.rajat;
-
-  const ax = a.x;
-  const ay = a.y;
-  const puolikas = a.puolikas;
-  const ylaTila = ay - puolikas - NOSTO_NOKKA - ylaRaja;
-  const alaTila = alaRaja - (ay + puolikas + NOSTO_NOKKA);
-  // Yläpuoli voittaa aina kun kupla mahtuu sinne; muuten valitaan se
-  // puoli, jolla tilaa on enemmän — jotain on näytettävä joka tapauksessa.
-  const ylla = ylaTila >= korkeus || ylaTila >= alaTila;
-
-  let ylin = ylla ? ay - puolikas - NOSTO_NOKKA - korkeus : ay + puolikas + NOSTO_NOKKA;
-  ylin = Math.max(ylaRaja, Math.min(ylin, alaRaja - korkeus));
-  let vasen = ax - leveys / 2;
-  vasen = Math.max(vasenRaja, Math.min(vasen, oikeaRaja - leveys));
-
-  auki.el.style.transform = `translate3d(${Math.round(vasen)}px, ${Math.round(ylin)}px, 0)`;
-  auki.el.classList.toggle('fokusnosto-kupla-ylla', ylla);
-  auki.el.classList.toggle('fokusnosto-kupla-alla', !ylla);
-  const vara = Math.min(NOSTO_NOKKA_VARA, leveys / 2);
-  const nokkaX = Math.max(vara, Math.min(ax - vasen, leveys - vara));
-  auki.nokka.style.left = `${Math.round(nokkaX)}px`;
 }
 
 /* ==================== LUNASTUSKORTTI ==================== */
@@ -1181,6 +922,7 @@ export function kytkeFokusnosto() {
 export function nollaaFokusnosto(ui) {
   if (ui) {
     ui.fokusnostoOhitetut = new Set();
+    clearTimeout(ui.fokusnostoVihjeAjastin);
     // Kortin muistiviite pois ENNEN sulkua: muuten sulku kutsuisi
     // paivitaFokusnostoa, joka nostaisi seuraavan noston juuri
     // nollattavan laudan päälle.

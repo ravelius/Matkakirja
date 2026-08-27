@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1234: Takynostot ovat nyt tuikkiva keltainen piste kartalla, yksi kerrallaan - seuraava syttyy kun edellinen on katsottu. Livia vihjaa ensimmaisesta.',
   'v1233: Livian kevyt mauste - muutaman sanan oma kevennys useimpien faktavastausten alkuun tai loppuun.',
   'v1232: Livian maadoituskupla saapuu ensimmaisena kuplana Sofiassa, Sarajevossa, Bukarestissa, Istanbulissa ja Roomassa - Ateenassa ei.',
   'v1231: Livian aloituspaneeli avautuu korkeampana - koko tervehdys nakyy kerralla ilman vieritysta (iPhone ja iPad).',
