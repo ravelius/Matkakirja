@@ -1,6 +1,14 @@
 /*
- * TÄKYN ANKKURISYMBOLI JA KARTTASYMBOLIEN KIRJASTO — kuplan alla oleva
- * merkintä paikasta, ja kaikkien karttamerkkien yhteiset piirtäjät.
+ * TÄYN TUIKKIVA PISTE JA KARTTASYMBOLIEN KIRJASTO — se yksi keltainen
+ * piste, joka kutsuu katsomaan, ja kaikkien karttamerkkien yhteiset
+ * piirtäjät.
+ *
+ * TÄKY ON PELKKÄ PISTE (omistajan tilaus 27.8.2026 ilta: *"muuta
+ * täkynostot pelkäksi tuikkivaksi keltaiseksi pisteeksi yksi
+ * kerrallaan"*). Kuplan ja täyn oman symbolin tilalla on nyt yksi
+ * tuikkiva keltainen piste; alla oleva symbolitaksonomia elää kartan
+ * KOHDEMERKEISSÄ ja korttien ylärivillä entiseen tapaan. Ks. osio
+ * TÄYN TUIKKIVA PISTE.
  *
  * Raamatun osio "Fokusmoodi", kohta TÄKYSYMBOLIT (omistaja 25.8.2026):
  * *"kartalla on tekstikuplassa VAIN YKSI täkynosto kerrallaan; muut
@@ -43,11 +51,9 @@
  * ── KOLME SÄÄNTÖÄ, JOTKA ON PERITTY MUILTA KARTAN KERROKSILTA ──────
  *
  * 1. OMA KERROS SVG:N JUURESSA (ui.svg:n suora lapsi). Kiertävän laudan
- *    <use>-kopio ei kelpaa: sama paikka on kartalla kahdesti, ja kuplan
- *    on löydettävä se ankkuri, joka pelaajalla oikeasti on edessään
- *    (js/fokusnosto.js nostoAnkkurinPaikka). Merkki piirretään siksi
- *    oikeana elementtinä
- *    jokaiseen kiertokohtaan (ui.kiertoKohdat) — sama ratkaisu kuin
+ *    <use>-kopio ei kelpaa: tapahtuma osuisi <use>-elementtiin eikä sen
+ *    sisältöön, eikä täyn pistettä voisi napauttaa. Merkki piirretään
+ *    siksi oikeana elementtinä jokaiseen kiertokohtaan (ui.kiertoKohdat) — sama ratkaisu kuin
  *    kohderenkailla, vinjeteillä, fokuskohteilla ja vihreällä pisteellä
  *    (js/fokuspiste.js).
  *
@@ -1453,33 +1459,72 @@ export function piirraNostosymKartalle(g, symboli, nimio, laji, vasemmalle = fal
   });
 }
 
-/**
- * AKTIIVISEN TÄYN ANKKURI — täyn OMA SYMBOLI, jonka päälle kupla
- * asettuu ja johon sen nokka osoittaa.
+/* ==================== TÄYN TUIKKIVA PISTE ==================== */
+
+/*
+ * TÄKY ON PELKKÄ TUIKKIVA KELTAINEN PISTE (omistajan tilaus 27.8.2026
+ * ilta: *"muuta täkynostot pelkäksi tuikkivaksi keltaiseksi pisteeksi
+ * yksi kerrallaan. uusi piste tuikkii kun edellinen on katsottu"*).
  *
- * Ennen ankkuri oli pelkkä mustepiste, mutta se näytti pelaajasta
- * siltä, että symboli katoaa tai "muuttuu peruspisteeksi" napautuksesta
- * (omistaja 26.8.2026 ilta: *"Kartalta katoaa pöllön poikasen kuvake
- * kun sitä painaa ... Saisi pysyä"*). Nyt symboli pysyy paikallaan
- * kuplan alla — merkki ja kupla kertovat samasta asiasta. Ankkuri ei
- * silti ota napautuksia vastaan (css: pointer-events), koska kupla on
- * sen päällä ja KOKO KUPLA vie lunastukseen (omistaja 26.8.2026 ilta);
- * siksi tässä ei ole osuma-aluetta eikä kuuntelijoita.
+ * MITÄ JÄI POIS. Täky oli tähän asti KAKSIOSAINEN: kartalla oli
+ * ankkurisymboli (huutomerkki, pöllönpoikanen, …) ja sen päällä
+ * puhekupla, jossa luki keltaisten lehtien klikkiotsikko. Kupla kertoi
+ * jutun jo ennen kuin siihen kosketti, ja se peitti kartan siitä
+ * kohtaa, jota juttu koskee. Nyt kartalla on VAIN merkki siitä, että
+ * tässä on jotain — ja se merkki on niin pieni, että se löytyy
+ * liikkeestä eikä koosta.
  *
- * EIKÄ NIMIÖTÄ (27.8.2026, läpinäkyvä mustetyyli): kartan kohdemerkki
- * saa nimensä merkin alle, mutta täyn nimi on jo kuplassa merkin
- * päällä. Nimiö toistaisi sen kahdesti päällekkäin.
+ * MERKKI ON VIHREÄN KOHTAAMISPISTEEN SISARUS (js/fokuspiste.js): sama
+ * kolmen ympyrän rakenne, sama tuike, sama osuma-alue ja sama mitta —
+ * eri väri ja eri lupaus. Vihreä on TEKEMISTÄ (tapaa henkilö,
+ * yritä aarretta), keltainen on KATSOMISTA (lue juttu). Kaksi merkkiä
+ * samalla lehdellä erottuvat siis toisistaan värillä eivätkä muodolla,
+ * ja kumpikin lukee heti pisteeksi eikä karttamerkiksi.
+ *
+ * SYMBOLITAKSONOMIA EI KUOLLUT: se elää kartan KOHDEMERKEISSÄ
+ * (js/fokuskohteet.js) ja lunastuskortin ylärivillä täsmälleen kuten
+ * ennen. Vain täyn oma ankkuri vaihtui pisteeksi, ja siksi täyn
+ * `symboli`-datakenttä on tässä kerroksessa lukematta.
+ *
+ * EI SUODATTIMIA (js/fokuskartta.js sääntö 3, tests/rules.test.mjs):
+ * tuike on kolme ympyrää ja CSS-animaatio, jossa liikkuvat vain
+ * `opacity` ja `transform` — kompositorin työtä, ei uudelleenmaalausta.
  */
-function piirraNostosymAnkkuri(g, symboli) {
-  /*
-   * ANKKURI ON KARTALLA, JOTEN SE ON VIIVAMERKKI (27.8.2026 ilta). Kupla
-   * asettuu sen päälle, mutta merkki itse on osa karttaa eikä kuplan
-   * kuvitusta: raskas mustepiirros luki tässäkin kuvituksena. Sama
-   * taulu kuin kohdemerkeillä — kaksi merkkiperhettä samalla lehdellä
-   * olisi juuri se sekamelska, josta läpinäkyvään mustetyyliin
-   * aikanaan siirryttiin.
-   */
-  piirraNostosymMini(g, symboli);
+
+/** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta perustasolla). */
+const NOSTOSYM_TUIKE_OSUMA_R = 22;
+/* Mitat ovat vihreän pisteen mitat (js/fokuspiste.js PISTE_*_R): kaksi
+ * saman kokoluokan pistettä samalla lehdellä, ei kahta eri kokoa. */
+const NOSTOSYM_TUIKE_HEHKU_R = 5.5;
+const NOSTOSYM_TUIKE_KEHA_R = 3.2;
+const NOSTOSYM_TUIKE_YDIN_R = 1.8;
+
+/**
+ * AKTIIVISEN TÄYN MERKKI: näkymätön osuma-alue, kaksi hehkukehää ja
+ * ydin — ja `avaa`, joka vie suoraan lunastuskorttiin.
+ *
+ * MERKKI ON NYT PAINIKE. Ennen ankkuri oli mykkä (css: pointer-events),
+ * koska sen päällä oleva kupla otti napautuksen; kuplan mukana lähti
+ * myös se napautuspinta, joten piste tekee sen työn itse. Osuma-alue on
+ * sormen mitta eikä merkin, kuten kartan muillakin merkeillä.
+ */
+function piirraNostosymTuike(g, avaa) {
+  g.setAttribute('role', 'button');
+  g.setAttribute('tabindex', '0');
+  el('circle', { class: 'nostosym-tuike-osuma', r: NOSTOSYM_TUIKE_OSUMA_R }, g);
+  el('circle', { class: 'nostosym-tuike-hehku', r: NOSTOSYM_TUIKE_HEHKU_R }, g);
+  el('circle', { class: 'nostosym-tuike-keha', r: NOSTOSYM_TUIKE_KEHA_R }, g);
+  el('circle', { class: 'nostosym-tuike-ydin', r: NOSTOSYM_TUIKE_YDIN_R }, g);
+  if (typeof avaa !== 'function') return;
+  const nappaa = (tapahtuma) => {
+    tapahtuma.stopPropagation();
+    tapahtuma.preventDefault();
+    avaa();
+  };
+  g.addEventListener('click', nappaa);
+  g.addEventListener('keydown', (tapahtuma) => {
+    if (tapahtuma.key === 'Enter' || tapahtuma.key === ' ') nappaa(tapahtuma);
+  });
 }
 
 /* ==================== KERROS ==================== */
@@ -1505,20 +1550,20 @@ function nostosymKerros(ui) {
 }
 
 /**
- * KUPLAN ANKKURI KARTALLE.
+ * VUOROSSA OLEVAN TÄYN PISTE KARTALLE.
  *
  * @param {object} ui
  * @param {object} tila
- * @param {?object} tila.merkinta  { id, otsikko, symboli, paikka:{x,y} }
- *   — kuplassa olevan täyn ankkuri, tai null/puuttuva kun kartalla ei
- *   ole yhtään täkyä.
+ * @param {?object} tila.merkinta  { id, otsikko, paikka:{x,y} } — se
+ *   yksi täky, joka juuri nyt tuikkii, tai null/puuttuva kun kartalla
+ *   ei ole yhtään katsomatonta täkyä.
+ * @param {?Function} tila.avaa  napautuksen työ: avaa täyn lunastus
+ *   (js/fokusnosto.js). Ilman sitä piste on mykkä merkintä.
  *
- * YKSI TÄKY PER MAA (omistaja 26.8.2026 ilta), joten kerroksella on
- * enää tämä yksi merkintä. Ennen sama kerros piirsi myös poolin muut
- * täyt napautettavina symboleina, joiden napautus nosti täyn kuplaan;
- * kun poolissa on vain yksi täky, sellaisia merkkejä ei enää synny, ja
- * maan muut aiheet ovat kartan tavallisia kohteita (js/fokuskohteet.js
- * — sama symbolikirjasto piirtää nekin, ks. tiedoston alku).
+ * YKSI KERRALLAAN (omistajan tilaus 27.8.2026 ilta): kerroksella on
+ * aina korkeintaan yksi merkintä, ja seuraava syttyy vasta kun edellinen
+ * on katsottu. Valinnan tekee js/fokusnosto.js (nostoVuorossa) — tämä
+ * kerros piirtää sen, mitä sille annetaan.
  *
  * TYÖ TEHDÄÄN VAIN KUN SISÄLTÖ MUUTTUI, kuten muillakin kerroksilla:
  * zoomi muuttaa vain ankkuriryhmien muunnosta, ei yhtäkään solmua.
@@ -1530,23 +1575,20 @@ export function paivitaNostosymbolit(ui, tila = {}) {
   const merkinta = tila.merkinta ?? null;
   const avain = merkinta
     ? `${ui.game?.pack?.id}:${merkinta.id}@${merkinta.paikka.x},${merkinta.paikka.y}`
-      + `/${merkinta.symboli}`
     : 'tyhja';
   if (ui.nostosymAvain !== avain) {
     ui.nostosymAvain = avain;
     kerros.textContent = '';
     ui.nostosymRyhmat = [];
-    ui.nostosymAnkkurit = [];
     // Kiertävällä laudalla sama merkki molempiin kohtiin (ks. sääntö 1).
     for (const x of merkinta
       ? ui.kiertoKohdat?.(merkinta.paikka.x) ?? [merkinta.paikka.x] : []) {
       const ryhma = el('g', { class: 'fokusnosto-symboliryhma' }, kerros);
       ui.nostosymRyhmat.push({ g: ryhma, x, y: merkinta.paikka.y });
-      const ankkuri = el('g', {
-        class: `fokusnosto-ankkuri nostosym-tyyppi-${merkinta.symboli}`,
-      }, ryhma);
-      piirraNostosymAnkkuri(ankkuri, merkinta.symboli);
-      ui.nostosymAnkkurit.push(ankkuri);
+      const ankkuri = el('g', { class: 'fokusnosto-ankkuri nostosym-tuike' }, ryhma);
+      ankkuri.setAttribute('aria-label', merkinta.otsikko
+        ? `${merkinta.otsikko} — lue lisää` : 'Täky kartalla: lue lisää');
+      piirraNostosymTuike(ankkuri, tila.avaa);
     }
   }
   asemoiNostosymbolit(ui);
@@ -1589,16 +1631,11 @@ export function asemoiNostosymbolit(ui, suhde = 1) {
 }
 
 /*
- * AKTIIVISEN TÄYN ANKKURIT ovat `ui.nostosymAnkkurit` — kiertävällä
- * laudalla sama paikka on kartalla kahdesti, ja kupla asetetaan sen
- * kopion viereen, joka pelaajalla oikeasti on edessään.
- *
- * Valinta EI OLE ENÄÄ TÄSSÄ (26.8.2026): se luki jokaisen kopion
- * paikan getBoundingClientRectillä, ja koska kartan vahti asemoi
- * kuplan joka kehyksellä, siitä tuli kaksi asettelunlukua kehykseen
- * kesken eleen. Nyt kopiot mitataan kerran ja lähin valitaan
- * talletetuista luvuista (js/fokusnosto.js nostoAnkkurinPaikka) —
- * v1115:n sääntö "ei asettelunlukuja silmukassa".
+ * KERROS EI MITTAA MITÄÄN (27.8.2026 ilta). Ankkurien ruutupaikkoja
+ * luettiin ennen getBoundingClientRectillä, koska kuplan piti asettua
+ * sen kopion viereen, joka pelaajalla oikeasti oli edessään. Kuplan
+ * mukana lähti myös se lukema: piste ei tarvitse ruutumittaa, koska se
+ * on itse napautuskohde molemmissa kiertokohdissa.
  */
 
 /** Symbolit pois. Kerros jää paikalleen tyhjänä, kuten muillakin. */
@@ -1606,6 +1643,5 @@ export function nollaaNostosymbolit(ui) {
   if (!ui) return;
   ui.nostosymAvain = null;
   ui.nostosymRyhmat = [];
-  ui.nostosymAnkkurit = [];
   if (ui.nostosymKerros?.isConnected) ui.nostosymKerros.textContent = '';
 }

@@ -1,6 +1,6 @@
 /*
- * TÄKYNOSTO (js/fokusnosto.js): kartan puhekupla, sen ankkurisymboli
- * (js/fokusnosto-symbolit.js) ja lunastuskortti.
+ * TÄKYNOSTO (js/fokusnosto.js): kartan tuikkiva keltainen piste
+ * (js/fokusnosto-symbolit.js), sen varapolkuliuska ja lunastuskortti.
  *
  * OMA TIEDOSTO, EI styles.css: css/styles.css on toisen työvaiheen
  * hallussa, eikä yhteen tiedostoon kirjoita kaksi tekijää yhtä aikaa.
@@ -14,16 +14,19 @@
  * transform + opacity, taustan tummennus on tavallinen läpinäkyvä väri
  * eikä backdrop-filter, ja varjot ovat box-shadow'ta.
  *
- * BODYSSA, MUTTA ANKKUROITUNA. Kupla ja liuska asuvat molemmat
+ * BODYSSA, MUTTA ANKKUROITUNA. Liuska ja lunastuskortti asuvat
  * document.bodyssa, joten karttapaneelin eleet eivät näe niitä lainkaan
- * (ks. js/fokusnosto.js "MIKSI document.body"). Ero on paikassa: liuska
- * on ruudun alalaidassa, kupla taas kirjoitetaan `transform`-muunnoksena
- * siihen kohtaan ruutua, jossa kartan ankkuri kulloinkin on.
+ * (ks. js/fokusnosto.js "MIKSI document.body"). Piste sen sijaan on
+ * kartan omassa SVG-kerroksessa, koska se elää laudan koordinaateissa.
+ *
+ * OSA 2 OLI PUHEKUPLA ja se poistettiin 27.8.2026 illalla omistajan
+ * tilauksesta (*"muuta täkynostot pelkäksi tuikkivaksi keltaiseksi
+ * pisteeksi"*). Numerointi on jätetty ennalleen, jotta vanhat viittaukset
+ * osiin 3 ja 4 pitävät paikkansa.
  *
  * TIEDOSTON OSAT
  *   1. LIUSKA — vanha alalaidan esitystapa, varapolku ilman paikkaa
- *   2. PUHEKUPLA — nykyinen esitystapa, ankkuroituna kartalle
- *   3. ANKKURISYMBOLI — kartan SVG-kerros (js/fokusnosto-symbolit.js)
+ *   3. TUIKKIVA PISTE — kartan SVG-kerros (js/fokusnosto-symbolit.js)
  *   4. LUNASTUSKORTTI
  */
 
@@ -81,9 +84,7 @@
 /* Kartan lennon ja kamera-ajon ajaksi pois, kuten muutkin kartan
    kelluvat merkinnät (css/styles.css .fokusmitat). */
 body.flight-active .fokusnosto,
-body.kartalento .fokusnosto,
-body.flight-active .fokusnosto-kupla,
-body.kartalento .fokusnosto-kupla { opacity: 0; pointer-events: none; }
+body.kartalento .fokusnosto { opacity: 0; pointer-events: none; }
 
 /*
  * KLIKKIOTSIKKO. Koko liuska on painike: otsikko vasemmalla,
@@ -171,171 +172,119 @@ body.kartalento .fokusnosto-kupla { opacity: 0; pointer-events: none; }
 }
 
 /* ===========================================================================
-   2. PUHEKUPLA — nosto siihen kohtaan karttaa, jota juttu koskee
-   ---------------------------------------------------------------------------
-   Raamattu, TÄKYSYMBOLIT (omistaja 25.8.2026): kartalla on tekstikuplassa
-   VAIN YKSI täkynosto kerrallaan, ja se ankkuroituu tapahtumapaikkaansa.
-
-   KOLME PORRASTA, KOLME TEHTÄVÄÄ (ks. js/fokusnosto.js piirraNostonKupla):
-
-     .fokusnosto-kupla        PAIKKA — kiinteä laatikko, jonka sijainti on
-                              pelkkä transform-muunnos. Muunnos on
-                              kompositorin työtä, joten kartan liikkeen
-                              aikana ei tehdä uutta ladontaa.
-     .fokusnosto-kuplapaperi  PAPERI ja NOUSU — ulomman muunnos on jo
-                              varattu paikalle, joten nousu tarvitsee oman
-                              portaansa.
-     .fokusnosto-nokka        KÄRKI, joka osoittaa ankkuriin.
-
-   EI SUODATTIMIA: varjo on box-shadow ja nousu pelkkä transform+opacity.
-   =========================================================================== */
-
-.fokusnosto-kupla {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 40;
-  width: max-content;
-  max-width: min(24rem, calc(100vw - 2.5rem));
-  /* Laatikko on vain paikanpitäjä: napautukset kuuluvat paperille. */
-  pointer-events: none;
-}
-
-.fokusnosto-kuplapaperi {
-  position: relative;
-  display: flex;
-  align-items: stretch;
-  pointer-events: auto;
-  border-radius: 0.7rem;
-  border: 1px solid rgba(122, 85, 20, 0.34);
-  background: #f5f0e2;
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.3);
-  color: #211d18;
-  /* Pergamentin oma pinta; kartan vaalea hehkuvarjo ei periydy tänne. */
-  text-shadow: none;
-  font-family: var(--font-luku);
-  /*
-   * NOUSU. Lähtötila tässä, maalitila nousuluokassa — sama kaava ja sama
-   * syy kuin liuskalla (js liittää luokan yhden pakotetun tyylinlaskennan
-   * jälkeen, jotta liike alkaa vain kerran).
-   */
-  opacity: 0;
-  transform: translateY(7px) scale(0.97);
-  transform-origin: 50% 100%;
-  transition: opacity 240ms ease-out, transform 240ms cubic-bezier(0.22, 0.9, 0.24, 1);
-}
-
-.fokusnosto-kupla-nousee .fokusnosto-kuplapaperi {
-  opacity: 1;
-  transform: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fokusnosto-kuplapaperi { transition: none; }
-}
-
-/*
- * KOKO KUPLA ON PAINIKE (omistaja 26.8.2026 ilta: *"kun täkyä painaa
- * niin sen pitäisi aueta suoraan pop upiksi ilman pelkkää otsikko
- * nostoa"*).
- *
- * Paperi EI OLE enää laatikko, jonka sisällä on pienempi nappi: se on
- * itse `<button>`, jolla on molemmat luokat (js/fokusnosto.js
- * piirraNostonKupla). Näin paperilla ei ole yhtään kuollutta pintaa —
- * napautus otsikkoon, miniatyyriin tai marginaaliin tekee saman asian.
- *
- * MITÄ TÄSSÄ ON PAKKO KIRJOITTAA AUKI. `.fokusnosto-nappi` on liuskaa
- * varten läpinäkyvä ja reunaton, ja sen `:hover` on yhtä tarkka kuin
- * paperin oma sääntö. Ilman näitä rivejä kupla menettäisi kehyksensä
- * kohdistuksessa ja muuttuisi hiiren alla läpikuultavaksi.
- */
-.fokusnosto-kuplapaperi.fokusnosto-nappi {
-  min-height: 48px;
-  margin: 0;
-  padding: 0.4rem 0.55rem 0.4rem 0.7rem;
-  align-items: center;
-  border: 1px solid rgba(122, 85, 20, 0.34);
-  border-radius: 0.7rem;
-  text-align: left;
-  cursor: pointer;
-}
-
-.fokusnosto-kuplapaperi:hover,
-.fokusnosto-kuplapaperi:focus-visible { background: #efe7d2; }
-
-.fokusnosto-kupla-huuto .fokusnosto-kuplapaperi:hover,
-.fokusnosto-kupla-huuto .fokusnosto-kuplapaperi:focus-visible { background: #f1e3ba; }
-
-/*
- * NOKKA on 45 astetta käännetty neliö, ei kolmio-hakkerointi: näin
- * kärjessä on paperin oma musteviiva kahdella ulkoreunalla, ja neliön
- * paperinvärinen puolikas peittää kuplan reunaviivan sen alta. Kärjen
- * VAAKAPAIKAN kirjoittaa js (asetaNostokuplanPaikka), jotta se osoittaa
- * ankkuriin silloinkin kun kupla on jouduttu siirtämään ruudun reunasta.
- */
-.fokusnosto-nokka {
-  position: absolute;
-  left: 50%;
-  width: 12px;
-  height: 12px;
-  margin-left: -6px;
-  background: #f5f0e2;
-  transform: rotate(45deg);
-}
-
-.fokusnosto-kupla-ylla .fokusnosto-nokka {
-  bottom: -7px;
-  border-right: 1px solid rgba(122, 85, 20, 0.34);
-  border-bottom: 1px solid rgba(122, 85, 20, 0.34);
-}
-
-.fokusnosto-kupla-alla .fokusnosto-nokka {
-  top: -7px;
-  border-left: 1px solid rgba(122, 85, 20, 0.34);
-  border-top: 1px solid rgba(122, 85, 20, 0.34);
-}
-
-/*
- * HUUTOMERKKITÄKYJEN KUPLA on kevyen keltainen (omistaja 25.8.2026:
- * "Puhekuplan tausta kevyen keltainen huutomerkki jutuissa") — sama
- * okra kuin symbolissa, mutta paperiin taitettuna. Nokka on paperin
- * jatke, joten se saa saman sävyn.
- */
-.fokusnosto-kupla-huuto .fokusnosto-kuplapaperi,
-.fokusnosto-kupla-huuto .fokusnosto-nokka { background: #f6ebc8; }
-
-/* ===========================================================================
-   3. TÄKYN ANKKURISYMBOLI — kartan oma SVG-kerros
+   3. TÄYN TUIKKIVA PISTE — kartan oma SVG-kerros
       (js/fokusnosto-symbolit.js)
    ---------------------------------------------------------------------------
-   Raamattu, TÄKYSYMBOLIT: *"Symbolit tehdään kartan henkeen ja samalla
-   tyylillä (seepiamuste, aikakauden karttamerkki)."*
+   Omistajan tilaus 27.8.2026 ilta: *"muuta täkynostot pelkäksi
+   tuikkivaksi keltaiseksi pisteeksi yksi kerrallaan"*. Kerroksessa oli
+   ennen täyn oma symboli (huutomerkki, pöllönpoikanen, …) ja sen päällä
+   puhekupla; nyt siinä on yksi pieni keltainen piste, joka tuikkii.
 
-   KERROKSELLA ON ENÄÄ YKSI MERKKI. Omistaja 26.8.2026 ilta: *"Täkyjä
-   josta tulee puhekupla pitää olla vain yksi per maa. Kaikki muut
-   normaaleita."* Poolin muut täyt olivat ennen tässä kerroksessa
-   napautettavina symboleina; nyt ne ovat kartan tavallisia kohteita
-   (css/fokuskohteet.css), ja tänne jäi vain kuplan alla oleva ankkuri.
+   MERKKI ON VIHREÄN KOHTAAMISPISTEEN SISARUS (css/fokusvirta.css
+   .fokuspiste-*): sama kolmen ympyrän rakenne, sama tuike ja sama
+   osuma-alue — eri väri ja eri lupaus. Vihreä on TEKEMISTÄ (tapaa
+   henkilö), keltainen on KATSOMISTA (lue juttu). Tyylit ovat omina
+   sääntöinään eivätkä yhteisenä luokkana, koska kerrokset ovat eri
+   moduulien ja eri tyylitiedostojen omaisuutta — kumpikaan ei saa
+   rikkoutua siitä, että toista viritetään.
 
-   SYMBOLIEN PIIRTOTYYLIT MUUTTIVAT css/styles.css:ÄÄN (osio
-   KARTTASYMBOLIT, --sym-*): sama kirjasto piirtää myös kartan
-   kohdemerkit (js/fokuskohteet.js), eikä kohdekerros lataa tätä
-   tiedostoa — styles.css on ainoa, joka on aina paikalla.
+   VÄRI ON KARTAN OKRA EIKÄ NEONKELTAINEN: 1873-atlaksen pergamentilla
+   kirkas keltainen luettaisiin virheeksi tulostuksessa. Sävy on sama
+   lämmin okra kuin täkykuplan taustassa oli (#f6ebc8 → tummempi
+   musteversio), jotta piste erottuu paperista mutta kuuluu siihen.
 
-   EI SUODATTIMIA (tests/rules.test.mjs): laatta on oma ympyränsä eikä
-   varjo, ja kaikki muu on täyttöä ja viivaa.
+   EI SUODATTIMIA (tests/rules.test.mjs): hehku on kolme ympyrää, ja
+   animaatiossa liikkuvat vain `opacity` ja `transform`.
    =========================================================================== */
 
 .fokusnosto-symbolit {
-  /* Kerros ei ota napautuksia vastaan lainkaan. */
+  /* Kerros ei ota napautuksia vastaan; osuma-alue ottaa (ks. alla). */
   pointer-events: none;
 }
 
-/* Ankkuri on kuplan alla oleva merkintä paikasta, ei painike: kupla on
-   sen päällä, ja koko kupla vie lunastukseen. */
+/*
+ * NÄKYMÄTÖN OSUMA-ALUE, VÄHINTÄÄN 44 px. Merkki itse on pieni, koska
+ * kartta on lehteä eikä pelilautaa; sormi ei kuitenkaan osu kolmen
+ * pikselin ympyrään. Ryhmä skaalataan ruudun pikseleihin
+ * (js/fokusnosto-symbolit.js), joten r = 22 on 44 px läpimitta lehden
+ * perustasolla.
+ *
+ * PISTE ON PAINIKE (27.8.2026 ilta): ankkuri oli ennen mykkä, koska
+ * kupla otti napautuksen sen päältä. Kuplaa ei ole, joten napautuspinta
+ * on pisteen omalla vastuulla.
+ */
 .fokusnosto-ankkuri { pointer-events: none; }
 
-.nostosym-ankkuripiste { fill: var(--sym-muste); }
+.nostosym-tuike-osuma {
+  fill: none;
+  /* `fill: none` ei ota napautuksia ilman tätä. */
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.nostosym-tuike-hehku {
+  fill: #d9a520;
+  opacity: 0.32;
+  animation: nostosym-tuike 1500ms ease-in-out infinite;
+}
+
+.nostosym-tuike-keha {
+  fill: #e0b02e;
+  opacity: 0.72;
+}
+
+.nostosym-tuike-ydin {
+  fill: #fdf3cf;
+  stroke: #8a5f12;
+  stroke-width: 0.55;
+  animation: nostosym-kimallus 1500ms ease-in-out infinite;
+}
+
+.nostosym-tuike:hover .nostosym-tuike-keha,
+.nostosym-tuike:focus-visible .nostosym-tuike-keha { opacity: 0.9; }
+
+/* Selaimen oma tarkennuslaatikko pois, oma merkki tilalle — sama
+   havainto ja sama ratkaisu kuin kohtaamispisteellä. */
+.nostosym-tuike:focus { outline: none; }
+.nostosym-tuike:focus-visible .nostosym-tuike-hehku { opacity: 0.5; }
+
+/*
+ * TUIKE, EI HIDAS SYKE: nopea kirkastuminen, terävä pudotus ja pieni
+ * jälkivälke — tähtimäinen eikä hengitysmäinen. Sama rytmi kuin
+ * vihreällä pisteellä, jotta kartan kaksi tuiketta lukevat samaksi
+ * kieleksi.
+ */
+@keyframes nostosym-tuike {
+  0%, 100% { opacity: 0.16; transform: scale(0.8); }
+  18% { opacity: 0.7; transform: scale(1.4); }
+  34% { opacity: 0.2; transform: scale(0.95); }
+  52% { opacity: 0.48; transform: scale(1.2); }
+  74% { opacity: 0.18; transform: scale(0.85); }
+}
+
+/* Ydin välkkyy hehkun kanssa samaan tahtiin: kimallus, ei sammuminen. */
+@keyframes nostosym-kimallus {
+  0%, 100% { opacity: 0.62; }
+  18% { opacity: 1; }
+  34% { opacity: 0.7; }
+  52% { opacity: 0.95; }
+  74% { opacity: 0.62; }
+}
+
+/* LIIKEHERKKYYS: tuike on huomiokeino, ei tieto. Piste pysyy
+   paikallaan ja näkyvänä myös silloin kun liikettä on pyydetty
+   vähemmän. */
+@media (prefers-reduced-motion: reduce) {
+  .nostosym-tuike-hehku { animation: none; opacity: 0.35; }
+  .nostosym-tuike-ydin { animation: none; opacity: 1; }
+}
+
+/* Raahauksen ajaksi tuike vaikenee — sama mitattu syy kuin vihreällä
+   pisteellä (css/fokusvirta.css): SVG-lapsen transform-animaatio likaa
+   koko laudan asettelun joka kehyksellä. PAUSSI EIKÄ POISTO: `animation:
+   none` mitätöisi asettelun eleen alussa ja lopussa. */
+body.kartta-raahaus .nostosym-tuike-hehku,
+body.kartta-raahaus .nostosym-tuike-ydin { animation-play-state: paused; }
 
 /* ===========================================================================
    4. LUNASTUSKORTTI
