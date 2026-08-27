@@ -30800,9 +30800,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '04High Court Madras.jpg',
-          selite: 'Vanhaan kirjankuvaan on painettu julkaisijan oma '
-            + 'kuvateksti ja negatiivin tekijä, ja kuvassa oikeustalon '
-            + 'tornit ja majakkakupoli nousevat aukion takaa.',
+          selite: 'Oikeuskortteli vihittiin käyttöön 12. heinäkuuta 1892 '
+            + 'indo-saraseeniseen tyyliin J. W. Brassingtonin '
+            + 'piirustusten mukaan, ja työtä jatkoi Henry Irwin. '
+            + 'Kokonaisuus on yksi maailman suurimmista '
+            + 'oikeustaloista.',
           lahde: 'W.A. Cross, Wikimedia Commons (PD)',
         },
       ],
@@ -30841,9 +30843,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Chennai Dr MGR Central railway station.jpg',
-          selite: 'Illan valossa aseman tiilenpunainen julkisivu jatkuu '
-            + 'päätykolmioineen koko kuvan poikki, ja oikeassa reunassa '
-            + 'kohoaa kellotorni.',
+          selite: 'Robert Fellowes Chisholm lisäsi asemaan kellotornin, '
+            + 'joka valmistui 1900 ja on rakennuksen korkein osa. '
+            + 'Julkisivu maalattiin 2005 vaaleanruskeaksi, mutta '
+            + 'yleisön vaatimuksesta se palautettiin pian '
+            + 'tiilenpunaiseksi.',
           lahde: 'Thamizhpparithi Maari, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -30878,9 +30882,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ripon Building aerial view.jpg',
-          selite: 'Ilmakuvassa valkoinen kaupungintalo kellotorneineen '
-            + 'seisoo puistoaukion takana keskellä tiivistä '
-            + 'kaupunginosaa.',
+          selite: 'Kaupunginhallinnon talo valmistui 1913 täysin '
+            + 'valkoisena uusklassisena rakennuksena, jossa on '
+            + 'pituutta 85 metriä ja leveyttä 32. Keskeltä nousee 43 '
+            + 'metriä korkea torni, jonka Westminsterin sävelmää '
+            + 'soittava koneisto on vedettävä käsin joka päivä.',
           lahde: 'Saiphani02, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -30921,8 +30927,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Fort St. George George Town Chennai India - panoramio (1).jpg',
-          selite: 'Linnoituksen valkoisen ulkomuurin takaa nousee '
-            + 'harustettu lipputanko, jonka huipussa liehuu lippu.',
+          selite: 'Linnoitus valmistui 23. huhtikuuta 1644 ja oli '
+            + 'ensimmäinen englantilainen linnoitus Intiassa. Sen '
+            + 'pihalla seisova lipputanko on tiikkiä ja '
+            + 'sataviisikymmentä jalkaa korkea eli maan korkeimpia.',
           lahde: 'Hiroki Ogawa, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -30957,9 +30965,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '02Madras Egmore Station.jpg',
-          selite: 'Vuoden 1913 kirjankuvaan on painettu julkaisijan oma '
-            + 'kuvateksti, ja siinä uusi asemarakennus kupoleineen '
-            + 'kaartuu tyhjän ajotien takana.',
+          selite: 'Asema avattiin yleisölle 11. kesäkuuta 1908 Henry '
+            + 'Irwinin ja E. C. Birdin piirustusten mukaan, ja sen '
+            + 'rakensi T. Samynada Pillai. Kolmesataa jalkaa pitkä '
+            + 'indo-saraseeninen talo sai sähkönsä aluksi omista '
+            + 'dieselgeneraattoreistaan.',
           lahde: 'Wiele & Klein, Wikimedia Commons (PD)',
         },
       ],
@@ -30999,10 +31009,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'EGMORE GOVERNMENT MUSEUM.jpg',
-          selite: 'Museokorttelin Victoria Memorial Hallin '
-            + 'hiekkakivijulkisivu kohoaa suoraan edestä kuvattuna, ja '
-            + 'sen suippokaarinen pääportaali on täynnä veistettyä '
-            + 'koristelua.',
+          selite: 'Museo siirtyi 1854 Pantheonin alueelle Egmoreen, ja '
+            + 'rakennuksia laajennettiin 1864–1890. Kokoelmassa on 1,7 '
+            + 'miljoonaa esinettä, muun muassa yksi Euroopan '
+            + 'ulkopuolen laajimmista roomalaisten rahojen '
+            + 'kokoelmista.',
           lahde: 'VigneshSvasan, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -31037,9 +31048,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Chepauk Palace, the heritage building and former official residence of the Nawab of Arcot in Chennai 06.jpg',
-          selite: 'Palatsin punaiseksi maalattu siipi kaarikäytävineen ja '
-            + 'valkoisine kupoleineen nousee kadun toiselta puolelta '
-            + 'kuvattuna palmujen takaa.',
+          selite: 'Palatsi oli Arcotin nawabin virka-asunto 1768–1855, ja '
+            + 'sitä pidetään indo-saraseenisen tyylin varhaisimpina '
+            + 'esimerkkeinä Intiassa. Toisen siiven rakensi '
+            + 'käytännössä kokonaan uudelleen 1868–1871 arkkitehti '
+            + 'Robert Chisholm.',
           lahde: 'Pinakpani, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -31078,8 +31091,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Chennai, Beach.jpg',
-          selite: 'Aallot murtuvat vaahtona märälle hiekalle, jonka '
-            + 'pinnalla näkyy pelkkiä jalanjälkiä.',
+          selite: 'Marinan hiekkaranta on kolmetoista kilometriä pitkä ja '
+            + 'keskimäärin kolmesataa metriä leveä. Uiminen on siellä '
+            + 'laissa kielletty voimakkaan alivirran takia, ja '
+            + 'hiekassa on magnetiittia ja muita raskaita mineraaleja.',
           lahde: 'B Balaji from Chennai, India, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -31120,9 +31135,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'KAPALEESHWARAR TEMPLE MYLAPORE CHENNAI INDIA +91.jpg',
-          selite: 'Illalla valaistun gopuramin jokainen kerros erottuu '
-            + 'sinisenä hahmorivistönä, ja tornin yli on ripustettu '
-            + 'lamppunauhoja.',
+          selite: 'Shivalle omistetun temppelin arvellaan olevan '
+            + '600-luvulta, sillä sen jumalaa ylistetään saman '
+            + 'vuosisadan Tevaram-kokoelmassa. Itäinen gopuram kohoaa '
+            + 'noin neljäänkymmeneen metriin, ja rituaaleja pidetään '
+            + 'kuusi päivässä.',
           lahde: '0091SSS, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -31158,9 +31175,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Santhome Basilica.jpg',
-          selite: 'Valkoiseksi maalattu uusgoottilainen kirkko '
-            + 'huippukaarineen ja korkeine torneineen nousee tyhjän '
-            + 'risteyksen takaa.',
+          selite: 'Nykyinen uusgoottilainen kirkko vihittiin 1. huhtikuuta '
+            + '1896 kapteeni J. A. Powerin piirustusten mukaan. Sen '
+            + 'kahdesta tornista päätorni on '
+            + 'sataneljänkymmenenseitsemän jalan korkuinen kellotorni, '
+            + 'ja toinen merkitsee kohtaa, jossa apostoli Tuomaan '
+            + 'haudan uskotaan olevan.',
           lahde: 'w:user:PlaneMad, Wikimedia Commons (CC BY-SA 2.5)',
         },
       ],
@@ -31228,9 +31248,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Frieze on the exterior of Crawford Market, Mumbai.jpg',
-          selite: 'Sisäänkäynnin kaaren alle on veistetty vaalea paneeli, '
-            + 'jossa työtä tekevät ihmiset kantavat hedelmä- ja '
-            + 'viljakoreja.',
+          selite: 'Sisäänkäynnin ovien yläpuolelle veistettiin arjen työtä '
+            + 'esittävät paneelit, joista kaksi teki John Lockwood '
+            + 'Kipling, kirjailija Rudyard Kiplingin isä. Kolmas jäi '
+            + 'häneltä kesken, kun hän lähti Intiasta.',
           lahde: 'DesiBoy101, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -31261,8 +31282,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'View of Chowpatty Beach from Kamala Nehru Park 01.jpg',
-          selite: 'Malabar Hillin puiston puiden yli näkyy Chowpattyn '
-            + 'ranta, ja lahden vastarannalla jatkuu kaupungin tornirivi.',
+          selite: 'Rantabulevardi rakennettiin 1940 Back Bayn kaareen, ja '
+            + 'sen pohjoispäässä on Girgaon Chowpattyn hiekkaranta. '
+            + 'Kadun toinen nimi Kuningattaren kaulanauha tulee siitä, '
+            + 'että ylhäältä katsottuna sen valaisimet piirtävät yöllä '
+            + 'helminauhan pimeän lahden reunaan.',
           lahde: 'Shishirdasika, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -31301,9 +31325,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Partial wide angle exterior view of Chhatrapati Shivaji Maharaj Terminus.jpg',
-          selite: 'Alhaalta kuvattu julkisivun siipi näyttää kerroksittain '
-            + 'kaariparvekkeet, raidalliset kivipylväät ja pyöreän '
-            + 'kulmatornin.',
+          selite: 'Asema rakennettiin 1878–1888 Frederick William '
+            + 'Stevensin piirustusten mukaan goottilaiseen '
+            + 'uusrenessanssiin. Veistokset, puuleikkaukset ja kaiteet '
+            + 'tekivät Sir J. J. -taidekoulun oppilaat John Lockwood '
+            + 'Kiplingin ohjauksessa.',
           lahde: 'Shashank Mehendale, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -31339,8 +31365,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'St. Thomas Cathedral, Mumbai (40188).jpg',
-          selite: 'Valkoinen kellotorni nousee kookospalmun takaa, ja sen '
-            + 'juurella seisoo goottilainen kivinen juomavesilähde.',
+          selite: 'Kirkko avattiin jumalanpalvelukseen jouluna 1718, ja '
+            + 'torni ja kello lisättiin siihen 1838. Pihalla seisova '
+            + 'juomavesilähde on parsikauppias Cowasji Jehangir '
+            + 'Readymoneyn kustantama ja George Gilbert Scottin '
+            + 'suunnittelema.',
           lahde: 'DesiBoy101, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -31378,9 +31407,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The Asiatic Society of Mumbai.jpg',
-          selite: 'Leveä porrasjono nousee doorilaisen pylväikön juurelle, '
-            + 'ja päätykolmioon on kirjoitettu seuran nimi ja vuosiluku '
-            + '1804.',
+          selite: 'Uusklassisen talon suunnitteli eversti Thomas Cowper '
+            + 'Bombayn insinöörijoukoista, ja se valmistui 1833 '
+            + 'Englannista tuoduista kivistä. Sisäänkäynnille nousee '
+            + 'kolmekymmentä porrasta doorilaisen pylväikön juurelle, '
+            + 'ja talossa toimii 1804 perustettu Aasian seura.',
           lahde: 'Anurag Vijay 03, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -31413,9 +31444,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bombay High Court - Maidan - Mumbai - Maharashtra - India (25805018874).jpg',
-          selite: 'Rauta-aidan takaa nousevat oikeustalon suippokaariset '
-            + 'ikkunarivit, ja aitaan on kiinnitetty kyltti, jossa lukee '
-            + 'rakennuksen nimi.',
+          selite: 'Talo rakennettiin 1871–1878 eversti James A. Fullerin '
+            + 'piirustusten mukaan goottilaiseen uusrenessanssiin, ja '
+            + 'sen harjalla seisovat Oikeutta ja Armoa esittävät '
+            + 'veistokset. Pituutta on 562 jalkaa ja leveyttä 187.',
           lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -31451,9 +31483,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Rajabai Clock Tower in Mumbai University 01.jpg',
-          selite: 'Monsuunisateen märällä kadulla heijastuvat autojen '
-            + 'takavalot, ja puurivin päässä kohoaa kellotorni '
-            + 'huippukoristeineen.',
+          selite: 'Torni valmistui marraskuussa 1878 Sir George Gilbert '
+            + 'Scottin piirustusten mukaan, ja esikuvana oli Lontoon '
+            + 'Big Ben. Sen maksoi pörssimeklari Premchand Roychand '
+            + 'ehdolla, että torni nimetään hänen sokean äitinsä '
+            + 'Rajabain mukaan.',
           lahde: 'Pinakpani, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -31492,9 +31526,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'David Sassoon Library IMG 20230915 084305 (2) 01.jpg',
-          selite: 'Kirjaston kaksikerroksinen kaariparveke ja kellotapuli '
-            + 'kohoavat kadun toiselta puolelta katsottuna, ja julkisivun '
-            + 'edessä riippuu kaksi banderollia.',
+          selite: 'Kirjasto rakennettiin 1867–1870 keltaisesta Maladin '
+            + 'kivestä venetsialaiseen uusgotiikkaan, ja David Sassoon '
+            + 'maksoi 125 000 rupian hinnasta 60 000. Talo '
+            + 'peruskorjattiin 2023, jolloin 1960-luvun betonilaatta '
+            + 'purettiin ja alkuperäinen viistokatto palautettiin.',
           lahde: 'Dr. Raju Kasambe, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -31532,8 +31568,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Prince of Wales Museum, Mumbai 01.jpg',
-          selite: 'Museon valkoinen kupoli nousee palmurivin takaa, ja '
-            + 'etualan nurmella lepää vanha rautatykki.',
+          selite: 'Museon suunnitteli George Wittet indosaraseeniseen '
+            + 'tyyliin, ja sen valkosinisin laatoin katetun kupolin '
+            + 'esikuva on Golcondan linnassa. Talo valmistui 1915, '
+            + 'mutta se toimi ensin sotilassairaalana, ja museo '
+            + 'avattiin yleisölle vasta 10. tammikuuta 1922.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -31569,9 +31608,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Gateway ofIndia sea view.jpg',
-          selite: 'Portin edustan laiturilta katsottuna satama on täynnä '
-            + 'ankkurissa olevia veneitä, ja lähimpänä odottavat '
-            + 'matkustajalautat.',
+          selite: 'Kaaren takaa laskeutuu portaat merelle, ja laiturilta '
+            + 'lähtevät lautat Elephantan luolasaarelle. Portti '
+            + 'kääntyy satamaan päin, ja se on yhä ensimmäisiä '
+            + 'rakennuksia, jotka mereltä saapuva näkee.',
           lahde: 'Awadheshj, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
