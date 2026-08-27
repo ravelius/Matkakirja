@@ -1039,10 +1039,10 @@ await sivu.waitForTimeout(300);
  *      pelkkä lyhennetty kaista näyttäisi lipukkeelta joka loppuu
  *      kesken kuvan, ja tarkalleen kuvan reunaan leikattu nauha
  *      loppui *"kuin veitsellä leikaten"* (omistajan lähikuva
- *      27.8.2026 ilta, v1212). Nyt kaista loppuu kuvan reunaan
- *      (sisäkääre), kääntyneet päät jatkavat paperimarginaalille
- *      (kaksi kappaletta) ja ulkokääre leikkaa vasta siellä.
- *      Taitteita on kaksi.
+ *      27.8.2026 ilta, v1212). Kahden kaistan mallissa etukaista
+ *      loppuu kuvan reunaan (sisäkääre), takakaista — nauhan nurja
+ *      puoli — jatkaa paperimarginaalille ja ulkokääre leikkaa sen
+ *      vasta kehyksen reunassa. Taitteita on kaksi.
  *   c) NAUHA EI OTA NAPAUTUKSIA: kortissa se on suurennosnapin päällä.
  *   d) TEKSTI MAHTUU LEIKKAUKSEN SISÄÄN — eikä vain kaistan laatikkoon
  *      — ja taitejuova osuu leikkausviivaan (nauhanSovitus). Omistajan
@@ -1195,8 +1195,9 @@ const ihmekortti = () => sivu.evaluate(() => {
  *   • SISUS KUVASSA: kaista ja teksti ovat sisäkääreessä, joka on
  *     kokonaan kuvan sisällä — teksti ei voi valua ylitteeseen.
  *
- * Lisäksi kääntyneitä päitä on kaksi ja kumpikin yltää oikeasti kuvan
- * reunan yli: pelkkä tilan varaaminen ei vielä piirrä mitään.
+ * Lisäksi takakaista (nauhan nurja puoli, kahden kaistan malli) on
+ * olemassa, etukaistan alla ja yltää oikeasti kuvan reunan yli:
+ * pelkkä tilan varaaminen ei vielä piirrä mitään.
  */
 const nauhanRajat = (isantaSel, kuvaSel) => sivu.evaluate(([hs, ks]) => {
   const isanta = document.querySelector(hs);
@@ -1209,10 +1210,8 @@ const nauhanRajat = (isantaSel, kuvaSel) => sivu.evaluate(([hs, ks]) => {
   const ht = getComputedStyle(isanta);
   const sisus = nauha.querySelector('.fokuskohde-ihmekuvaosa');
   const s = sisus?.getBoundingClientRect();
-  const paat = [...nauha.querySelectorAll('.fokuskohde-ihmepaa')];
-  const pr = (sel) => nauha.querySelector(sel)?.getBoundingClientRect();
-  const ylos = pr('.fokuskohde-ihmepaa-ylos');
-  const vasen = pr('.fokuskohde-ihmepaa-vasen');
+  const tausta = nauha.querySelector('.fokuskohde-ihmetausta');
+  const t = tausta?.getBoundingClientRect();
   const p1 = (x) => Math.round(x * 10) / 10;
   return {
     // Marginaali = matka isännän pehmustelaatikon nurkasta kuvan nurkkaan.
@@ -1224,11 +1223,14 @@ const nauhanRajat = (isantaSel, kuvaSel) => sivu.evaluate(([hs, ks]) => {
     leikkaus: getComputedStyle(nauha).overflow,
     sisusLeikkaus: sisus ? getComputedStyle(sisus).overflow : '',
     sisusKuvassa: s ? (s.top >= i.top - 0.6 && s.left >= i.left - 0.6) : null,
-    paita: paat.length,
-    // Kuinka pitkälle kääntynyt pää oikeasti yltää kuvan reunan yli.
-    paaYli: {
-      ylos: ylos ? p1(i.top - ylos.top) : null,
-      vasen: vasen ? p1(i.left - vasen.left) : null,
+    // Takakaista on nauhan nurja puoli: yksi kappale, jonka on
+    // yllettävä kuvan reunan yli sekä ylös että vasemmalle, ja jonka
+    // on oltava kääreen ensimmäinen lapsi (etukaistan ALLA).
+    taustoja: tausta ? 1 : 0,
+    taustaAlla: tausta ? tausta === nauha.firstElementChild : false,
+    taustaYli: {
+      ylos: t ? p1(i.top - t.top) : null,
+      vasen: t ? p1(i.left - t.left) : null,
     },
   };
 }, [isantaSel, kuvaSel]);
@@ -1311,9 +1313,11 @@ vaadi('suurennoksen ylite ei syö koko marginaalia eikä karkaa kehyksestä',
 vaadi('suurennoksen kaista ja teksti pysyvät kuvan sisällä (sisäkääre)',
   rajat?.sisusLeikkaus === 'hidden' && rajat.sisusKuvassa === true,
   `${rajat?.sisusLeikkaus} / sisus kuvassa: ${rajat?.sisusKuvassa}`);
-vaadi('suurennoksen kääntyneet päät yltävät marginaalille, kaksi kappaletta',
-  rajat?.paita === 2 && rajat.paaYli.ylos > 0.5 && rajat.paaYli.vasen > 0.5,
-  JSON.stringify({ paita: rajat?.paita, yli: rajat?.paaYli }));
+vaadi('suurennoksen takakaista on etukaistan alla ja yltää marginaalille',
+  rajat?.taustoja === 1 && rajat.taustaAlla === true
+  && rajat.taustaYli.ylos > 0.5 && rajat.taustaYli.vasen > 0.5,
+  JSON.stringify({ taustoja: rajat?.taustoja, alla: rajat?.taustaAlla,
+    yli: rajat?.taustaYli }));
 /*
  * TEKSTI MAHTUU LEIKKAUKSEN SISÄÄN, EI VAIN KAISTAN LAATIKKOON, ja
  * jäljelle jää varaa leveämmälle kirjasimelle (ks. nauhanSovitus).
@@ -1371,9 +1375,11 @@ vaadi('kortin ylite ei syö koko pohjustusta eikä karkaa napin reunan yli',
 vaadi('kortin kaista ja teksti pysyvät kuvan sisällä (sisäkääre)',
   rajat?.sisusLeikkaus === 'hidden' && rajat.sisusKuvassa === true,
   `${rajat?.sisusLeikkaus} / sisus kuvassa: ${rajat?.sisusKuvassa}`);
-vaadi('kortin kääntyneet päät yltävät pohjustukselle, kaksi kappaletta',
-  rajat?.paita === 2 && rajat.paaYli.ylos > 0.5 && rajat.paaYli.vasen > 0.5,
-  JSON.stringify({ paita: rajat?.paita, yli: rajat?.paaYli }));
+vaadi('kortin takakaista on etukaistan alla ja yltää pohjustukselle',
+  rajat?.taustoja === 1 && rajat.taustaAlla === true
+  && rajat.taustaYli.ylos > 0.5 && rajat.taustaYli.vasen > 0.5,
+  JSON.stringify({ taustoja: rajat?.taustoja, alla: rajat?.taustaAlla,
+    yli: rajat?.taustaYli }));
 // Sama sovitusmittaus kortille: se oli suurennosta ahtaammalla, vaikka
 // omistaja näki leikkautumisen suurennoksesta (27.8.2026 ilta).
 sovitus = await nauhanSovitus('.fokuskohde-popup .fokuskohde-kuva');
