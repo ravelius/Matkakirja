@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1182';
+const CACHE = 'matkakirja-2026-08-09.1183';
 const SHELL = [
   './',
   './index.html',
@@ -725,6 +725,26 @@ const SHELL = [
   './assets/liput/tunnukset/pry-vaakuna.png',
   './assets/liput/tunnukset/ury-vaakuna.png',
   './assets/liput/tunnukset/flk-vaakuna.png',
+  './assets/liput/versiot/mar-1666.png',
+  './assets/liput/versiot/lby-jamahiriya.png',
+  './assets/liput/versiot/mli-1959.png',
+  './assets/liput/versiot/gha-1964.png',
+  './assets/liput/versiot/cmr-1961.png',
+  './assets/liput/versiot/cod-vapaavaltio.png',
+  './assets/liput/versiot/cod-zaire.png',
+  './assets/liput/tunnukset/mar-vaakuna.png',
+  './assets/liput/tunnukset/dza-vaakuna.png',
+  './assets/liput/tunnukset/tun-vaakuna.png',
+  './assets/liput/tunnukset/lby-vaakuna.png',
+  './assets/liput/tunnukset/mli-vaakuna.png',
+  './assets/liput/tunnukset/sen-vaakuna.png',
+  './assets/liput/tunnukset/sle-vaakuna.png',
+  './assets/liput/tunnukset/lbr-vaakuna.png',
+  './assets/liput/tunnukset/gha-vaakuna.png',
+  './assets/liput/tunnukset/nga-vaakuna.png',
+  './assets/liput/tunnukset/tcd-vaakuna.png',
+  './assets/liput/tunnukset/cmr-vaakuna.png',
+  './assets/liput/tunnukset/cod-vaakuna.png',
   './assets/kartat/helsinki-varikartta.png',
   './assets/kartat/kairo-keskusta.png',
   './assets/kartat/lontoo-varikartta.png',

@@ -3017,4 +3017,724 @@ export const LIPPUTIEDOT = {
     ],
     lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
   },
+  // Erä 10: Afrikan laudan pohjoinen ja läntinen puolisko
+  // (lisenssit tarkistettu Commonsin API:sta 27.8.2026, tunnukset ja
+  // versioliput katsottu silmin). Tunisian, Senegalin, Sierra Leonen,
+  // Nigerian ja Tšadin vaakunat ovat CC BY / CC BY-SA -piirroksia ja
+  // tekijät on nimetty lähderivillä; Libyan tunnus on CC0 ja loput
+  // PD. Egypti tehtiin jo erässä 6.
+  'Flag of Morocco.svg': {
+    maa: 'Marokko',
+    symboliikka: [
+      {
+        osa: 'Punainen',
+        selite: 'alauiittien hallitsijasuvun väri. Sama punainen '
+          + 'liehui Mekan šarifien lipuissa.',
+      },
+      {
+        osa: 'Vihreä viisikanta',
+        selite: 'Salomon sinetiksi kutsuttu viisisakarainen tähti. '
+          + 'Sakarat on totuttu lukemaan islamin viideksi pilariksi.',
+      },
+      {
+        osa: 'Avoin tähti',
+        selite: 'tähti piirretään viidestä yhtenäisestä oksasta ja '
+          + 'kudotaan samaan kankaaseen, jotta se näkyy lipun '
+          + 'molemmilta puolilta.',
+      },
+    ],
+    kappaleet: [
+      'Marokon lipussa oli 1600-luvulta lähtien pelkkä punainen '
+        + 'kangas — myös isoisän matkavuonna 1873. Vihreä tähti '
+        + 'lisättiin vasta 17. marraskuuta 1915, kun sulttaani Yusef '
+        + 'allekirjoitti asiakirjan, jossa syyksi kerrottiin '
+        + 'suoraan, että vanha lippu muistutti liikaa muiden '
+        + 'valtakuntien merimerkkejä.',
+      'Ranskan ja Espanjan protektoraattien aikana lippu sai liehua '
+        + 'vain maalla; merellä sen käyttö oli kielletty. Vasta '
+        + 'itsenäistymisen jälkeen 1956 se hyväksyttiin myös '
+        + 'kauppalaivaston lipuksi.',
+      'Perustuslaki mitoittaa lipun tarkasti: korkeus on kaksi '
+        + 'kolmasosaa pituudesta, tähti mahtuu ympyrään, jonka säde '
+        + 'on kuudesosa lipun pituudesta, ja kunkin sakaran haaran '
+        + 'leveys on kahdeskymmenesosa sen pituudesta. Yksi '
+        + 'sakaroista osoittaa ylöspäin.',
+    ],
+    versiot: [
+      {
+        nimi: 'Alauiittien punainen lippu',
+        polku: 'assets/liput/versiot/mar-1666.png',
+        selite: 'Pelkkä punainen kangas ilman kuviota — Marokon '
+          + 'lippu 1600-luvulta vuoteen 1915. Tämä liehui '
+          + 'Tangerissa ja Marrakechissa silloin, kun isoisä '
+          + 'kirjoitti päiväkirjaansa.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Marokon vaakuna',
+        polku: 'assets/liput/tunnukset/mar-vaakuna.png',
+        selite: 'Punaisella kilvellä on lipun vihreä viisikanta, sen '
+          + 'takana vuorijono ja ylinnä sinisellä taivaalla säteilevä '
+          + 'aurinko; vuoret on totuttu lukemaan Atlasvuoriksi. '
+          + 'Kilpeä kannattavat kaksi leijonaa, ylinnä on '
+          + 'kuninkaallinen kruunu ja nauhassa Koraanin jae: "Jos te '
+          + 'autatte Jumalaa, Hän auttaa teitä." Vaakuna otettiin '
+          + 'käyttöön 14. elokuuta 1957.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of Algeria.svg': {
+    maa: 'Algeria',
+    symboliikka: [
+      {
+        osa: 'Vihreä',
+        selite: 'islamin väri. Sama vihreä liehui 1800-luvun '
+          + 'vastarinnan johtajan Abd el-Kaderin joukoissa.',
+      },
+      { osa: 'Valkoinen', selite: 'puhtaus ja rauha.' },
+      {
+        osa: 'Punainen puolikuu ja tähti',
+        selite: 'islamin tunnus. Tähden viisi sakaraa luetaan joko '
+          + 'islamin viideksi pilariksi tai viideksi päivittäiseksi '
+          + 'rukoukseksi.',
+      },
+    ],
+    kappaleet: [
+      'Lippu vahvistettiin 3. heinäkuuta 1962, päiviä ennen kuin '
+        + 'Algeria itsenäistyi Ranskasta. Sama kuvio oli ollut '
+        + 'maanpaossa toimineen väliaikaishallituksen lippuna jo '
+        + 'vuodesta 1958.',
+      'Isoisän matkavuonna 1873 omaa lippua ei ollut: Ranska oli '
+        + 'hallinnut maata vuoden 1830 valloituksesta lähtien. Sitä '
+        + 'ennen Algerin deyn palatsin yllä liehui suuri yksivärinen '
+        + 'punainen lippu, jossa ei ollut lainkaan tunnuksia — '
+        + 'tarkoituksellinen ero Osmanien puolikuulippuihin.',
+      'Väreistä on annettu poikkeuksellisen tarkka ohje. Vihreän on '
+        + 'oltava yhtä suuret osat keltaista ja sinistä, punaisen '
+        + 'puhdasta perusväriä ilman sinistä tai keltaista, ja '
+        + 'kummallekin on merkitty oma aallonpituutensa.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Algerian valtiontunnus',
+        polku: 'assets/liput/tunnukset/dza-vaakuna.png',
+        selite: 'Pyöreä sinetti, joka esittää kokonaisen maan: '
+          + 'keskellä on Fatiman käsi, sen takana vuoret ja nouseva '
+          + 'aurinko eli uusi aika, sivuilla tehtaanpiippuja ja '
+          + 'viljantähkiä teollisuuden ja maatalouden merkkinä, '
+          + 'alinna lipun puolikuu ja tähti. Kehällä lukee arabiaksi '
+          + 'maan koko nimi, Algerian demokraattinen kansantasavalta. '
+          + 'Tämä arabiankielinen asu vahvistettiin 1. marraskuuta '
+          + '1976; sitä ennen sama teksti oli ranskaksi.',
+      },
+    ],
+    lahde: 'Liput ja tunnus: Wikimedia Commons (PD)',
+  },
+  'Flag of Tunisia.svg': {
+    maa: 'Tunisia',
+    symboliikka: [
+      {
+        osa: 'Punainen',
+        selite: 'Välimeren eteläranta purjehti punaisin merilipuin. '
+          + 'Väri on luettu myös kaatuneiden vereksi.',
+      },
+      {
+        osa: 'Valkoinen kiekko',
+        selite: 'kansakunnan loiste, aurinko.',
+      },
+      {
+        osa: 'Puolikuu ja viisisakarainen tähti',
+        selite: 'islamin tunnukset. Tähden sakarat luetaan islamin '
+          + 'viideksi pilariksi.',
+      },
+    ],
+    kappaleet: [
+      'Lippu syntyi meritappiosta. Kun Tunisian laivasto-osasto '
+        + 'tuhoutui Navarinon taistelussa 20. lokakuuta 1827, bey '
+        + 'Hussein II päätti antaa laivastolleen oman tunnuksen: '
+        + 'pelkkä punainen lippu oli liian moneen kertaan käytetty. '
+        + 'Hallituksen mukaan lippu vahvistettiin 1831 — isoisän '
+        + 'matkavuonna 1873 se siis liehui jo tällaisena.',
+      'Ranskan protektoraatin aikana lippua ei vaihdettu. '
+        + 'Epävirallisesti käytettiin jonkin aikaa versiota, jonka '
+        + 'yläkulmaan oli lisätty Ranskan trikolori; 1925 sitä '
+        + 'esitettiin viralliseksi, mutta ehdotus jäi käsittelemättä.',
+      'Tasavallan lipuksi se julistettiin perustuslaissa 1. '
+        + 'kesäkuuta 1959, ja 30. kesäkuuta 1999 laki määritteli '
+        + 'mitat ensi kertaa tarkasti: valkoisen kiekon halkaisija on '
+        + 'kolmasosa lipun pituudesta. Tunisian Punaisen Puolikuun '
+        + 'tunnus on maailman ainoa, jonka puolikuu avautuu '
+        + 'vasempaan — muuten se sekoittuisi armeijan '
+        + 'tunnusmerkkiin.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Tunisian vaakuna',
+        polku: 'assets/liput/tunnukset/tun-vaakuna.png',
+        selite: 'Kilven yläosassa purjehtii karthagolainen kaleeri '
+          + 'vapauden merkkinä. Alaosa on jaettu kahtia: vasemmalla '
+          + 'musta vaaka on oikeus, oikealla musta leijona käyrine '
+          + 'miekkoineen järjestys. Nauhassa lukee arabiaksi maan '
+          + 'tunnuslause "vapaus, järjestys, oikeus", ja ylinnä on '
+          + 'valkoinen kiekko lipun puolikuineen ja tähtineen. '
+          + 'Nykyinen järjestys palautettiin lailla 2. syyskuuta '
+          + '1989.',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Vaakuna: FXXX / '
+      + 'Wikimedia Commons (CC BY-SA 3.0)',
+  },
+  'Flag of Libya.svg': {
+    maa: 'Libya',
+    symboliikka: [
+      {
+        osa: 'Punainen',
+        selite: 'Fezzanin maakunnan väri; luetaan myös vapauden '
+          + 'puolesta vuodatetuksi vereksi.',
+      },
+      {
+        osa: 'Musta',
+        selite: 'Kyrenaikan ja Senussi-suvun väri. Sitä on luettu '
+          + 'myös Italian siirtomaavallan pimeiksi vuosiksi.',
+      },
+      {
+        osa: 'Vihreä',
+        selite: 'Tripolitania ja maatalous — Libya oli aikanaan '
+          + 'Osmanien valtakunnan viljavarasto.',
+      },
+      {
+        osa: 'Valkoinen puolikuu ja tähti',
+        selite: 'Senussi-lipusta. Puolikuu on kuukauden alku '
+          + 'islamilaisessa kalenterissa ja tähti toivo.',
+      },
+    ],
+    kappaleet: [
+      'Lipun suunnitteli Omar Faiek Shennib ja sen hyväksyi kuningas '
+        + 'Idris. Se otettiin käyttöön Libyan kuningaskunnan '
+        + 'syntyessä ja vahvistettiin virallisesti 24. joulukuuta '
+        + '1951. Musta raita on pinta-alaltaan yhtä suuri kuin '
+        + 'punainen ja vihreä yhteensä.',
+      'Kuningaskunnan kaaduttua 1969 lippu vaihtui kaksi kertaa. '
+        + 'Vuosina 1977–2011 Libyalla oli pelkkä vihreä kangas: '
+        + 'maailman ainoa yksivärinen ja kuvioton valtiolippu — '
+        + 'lukuun ottamatta lyhyttä jaksoa 1996–1997, jolloin '
+        + 'Afganistanin lippu oli valkoinen.',
+      'Vanha lippu palasi kansannousussa 2011. Kansallinen '
+        + 'siirtymäneuvosto otti sen tunnuksekseen 3. elokuuta 2011, '
+        + 'ja Yhdistyneet kansakunnat kirjasi muutoksen: sitä '
+        + 'käyttävät nyt kaikki Libyan edustustot.',
+    ],
+    versiot: [
+      {
+        nimi: 'Jamahirijan vihreä lippu 1977–2011',
+        polku: 'assets/liput/versiot/lby-jamahiriya.png',
+        selite: 'Pelkkää vihreää kangasta ilman tunnuksia. '
+          + 'Kolmenkymmenenneljän vuoden ajan maailman ainoa '
+          + 'yksivärinen valtiolippu.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Libyan tunnus',
+        polku: 'assets/liput/tunnukset/lby-vaakuna.png',
+        selite: 'Libyalla ei ole vuoden 2011 jälkeen virallisesti '
+          + 'vahvistettua vaakunaa: perustuslaillinen julistus '
+          + 'määrittelee lipun mutta vaikenee vaakunasta. '
+          + 'Käytännön tunnukseksi on vakiintunut puolikuu ja tähti, '
+          + 'joka on vuoden 2013 passin kannessa ja hallitusten '
+          + 'sineteissä. Kuningaskunnan aikana tunnus oli hopeinen '
+          + 'puolikuu ja tähti kruunun alla, Gaddafin aikana Saladinin '
+          + 'kotka ja sittemmin Quraishin haukka.',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Tunnus: Wikimedia '
+      + 'Commons (CC0)',
+  },
+  'Flag of Mali.svg': {
+    maa: 'Mali',
+    symboliikka: [
+      { osa: 'Vihreä', selite: 'maan viljavuus.' },
+      {
+        osa: 'Kulta',
+        selite: 'puhtaus ja maaperän mineraalirikkaus.',
+      },
+      {
+        osa: 'Punainen',
+        selite: 'itsenäisyyden puolesta vuodatettu veri.',
+      },
+      {
+        osa: 'Pystyraidat',
+        selite: 'malli on Ranskan trikolorista, värit '
+          + 'panafrikkalaiset.',
+      },
+    ],
+    kappaleet: [
+      'Nykyinen lippu vahvistettiin 1. maaliskuuta 1961. Ensimmäinen, '
+        + '4. huhtikuuta 1959 hyväksytty lippu oli muuten sama, mutta '
+        + 'keltaisen raidan keskellä oli musta kanaga: tyylitelty '
+        + 'ihmishahmo kädet kohti taivasta.',
+      'Hahmo poistettiin, koska ihmisen kuvaaminen herätti '
+        + 'vastustusta maassa, jonka väestöstä valtaosa on '
+        + 'muslimeja. Jäljelle jäi pelkkä kolmiraita.',
+      'Mali ja Senegal muodostivat yhdessä Malin federaation, joka '
+        + 'itsenäistyi 20. kesäkuuta 1960 ja hajosi kahdessa '
+        + 'kuukaudessa. Molemmat pitivät federaation värit: Senegal '
+        + 'vaihtoi kanagan vihreään tähteen, Mali jätti raidan '
+        + 'tyhjäksi. Malin lippu on Guinean lipun peilikuva.',
+    ],
+    versiot: [
+      {
+        nimi: 'Malin federaation lippu 1959–1961',
+        polku: 'assets/liput/versiot/mli-1959.png',
+        selite: 'Sama kolmiraita, mutta keskellä musta kanaga-hahmo. '
+          + 'Federaation, ja sen hajottua hetken myös Malin, lippu.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Malin sinetti',
+        polku: 'assets/liput/tunnukset/mli-vaakuna.png',
+        selite: 'Malilla ei ole koskaan ollut vaakunaa vaan sinetti, '
+          + 'joka on ollut nykyisessä asussaan 20. lokakuuta 1973 '
+          + 'lähtien. Vaaleansinisellä kentällä on Djennén suuri '
+          + 'savimoskeija, sen yllä lintu — vuoden 1973 asetus kutsuu '
+          + 'sitä kansantarujen korppikotkaksi, toiset lukevat sen '
+          + 'rauhan kyyhkyksi. Moskeijan kummallakin puolella on '
+          + 'jousi ja nuoli, alla nouseva aurinko. Kehällä lukee '
+          + 'maan nimi ja tunnuslause "yksi kansa, yksi päämäärä, '
+          + 'yksi usko" — sama kuin Senegalilla.',
+      },
+    ],
+    lahde: 'Liput ja sinetti: Wikimedia Commons (PD)',
+  },
+  'Flag of Senegal.svg': {
+    maa: 'Senegal',
+    symboliikka: [
+      {
+        osa: 'Vihreä',
+        selite: 'islamin väri, kristityille toivo ja perinteisissä '
+          + 'uskonnoissa hedelmällisyys.',
+      },
+      {
+        osa: 'Keltainen',
+        selite: 'vaurauden ja työn väri; hallitus lukee sen myös '
+          + 'taiteiden ja kirjallisuuden väriksi.',
+      },
+      {
+        osa: 'Punainen',
+        selite: 'veri ja elämä, uhri ja päättäväisyys.',
+      },
+      {
+        osa: 'Vihreä tähti',
+        selite: 'luetaan sekä islamin tunnukseksi että serereiden '
+          + 'Yoonir-tähdeksi, joka merkitsee onnea ja kohtaloa.',
+      },
+    ],
+    kappaleet: [
+      'Siirtomaa-aikana Senegalilla ei saanut olla omaa lippua: '
+        + 'ranskalaiset pelkäsivät sen ruokkivan itsenäisyysmielialaa. '
+        + 'Ensimmäinen oma lippu tuli vasta 4. huhtikuuta 1959, kun '
+        + 'Senegal ja Ranskan Sudan muodostivat Malin federaation.',
+      'Federaation lipussa oli keltaisen raidan keskellä '
+        + 'kanaga-hahmo. Kun Senegal erosi federaatiosta 20. '
+        + 'elokuuta 1960, hahmon tilalle tuli vihreä tähti — muuten '
+        + 'lippu jäi ennalleen.',
+      'Väreillä on myös puoluehistoria: vihreä, keltainen ja '
+        + 'punainen olivat kolmen puolueen tunnusvärit, ja puolueet '
+        + 'sulautuivat presidentti Léopold Sédar Senghorin '
+        + 'puolueeksi. Samat värit ovat panafrikkalaiset ja '
+        + 'yhteiset Malin, Guinean ja Kamerunin kanssa.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Senegalin vaakuna',
+        polku: 'assets/liput/tunnukset/sen-vaakuna.png',
+        selite: 'Kilpi on jaettu kahtia: punaisella kentällä '
+          + 'kultainen leijona, kultaisella kentällä baobab ja sen '
+          + 'alla vihreä aaltoviiva eli Senegal-joki. Ylinnä on lipun '
+          + 'vihreä tähti, ympärillä palmunlehvät ja nauha, jossa '
+          + 'lukee "Un peuple, un but, une foi" — yksi kansa, yksi '
+          + 'päämäärä, yksi usko. Alla riippuu Leijonan kansallisen '
+          + 'ritarikunnan tähti. Vaakunan piirsi pariisilainen '
+          + 'heraldikko Suzanne Gauthier 1965.',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Vaakuna: Xavigivax / '
+      + 'Wikimedia Commons (CC BY-SA 3.0)',
+  },
+  'Flag of Sierra Leone.svg': {
+    maa: 'Sierra Leone',
+    symboliikka: [
+      {
+        osa: 'Vihreä',
+        selite: 'maatalous ja maan vuoret.',
+      },
+      { osa: 'Valkoinen', selite: 'yhtenäisyys ja oikeus.' },
+      {
+        osa: 'Sininen',
+        selite: 'Freetownin luonnonsatama ja toive saada olla mukana '
+          + 'maailmanrauhan rakentamisessa.',
+      },
+    ],
+    kappaleet: [
+      'Lippu nostettiin ensi kerran keskiyöllä 27. huhtikuuta 1961, '
+        + 'itsenäistymispäivänä. Se korvasi brittiläisen sinisen '
+        + 'kauppalipun, jonka liepeessä oli siirtomaan tunnus.',
+      'Järjestys oli poikkeuksellinen: Lontoon College of Arms '
+        + 'suunnitteli ensin vaakunan, ja vasta sen väreistä — '
+        + 'vihreä, valkoinen ja sininen — koottiin lippu. Yleensä se '
+        + 'menee toisin päin.',
+      'Lippu on maailman merillä tuttu myös mukavuuslippuna: '
+        + 'ulkomaiset rahtialukset ovat purjehtineet sen alla, ja '
+        + 'hallitus on 2010-luvulta lähtien karsinut rekisteriä ja '
+        + 'tiukentanut ehtoja väärinkäytösten takia.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Sierra Leonen vaakuna',
+        polku: 'assets/liput/tunnukset/sle-vaakuna.png',
+        selite: 'Vihreällä kilvellä astelee kultainen leijona. '
+          + 'Yläreunan sahalaita on Leijonavuoret, joista maa on '
+          + 'saanut nimensä, kolme soihtua ovat rauha ja arvokkuus '
+          + 'ja alareunan siniset aallot meri. Kilpeä kannattavat '
+          + 'kaksi leijonaa palmuineen. Nauhassa lukee UNITY, '
+          + 'FREEDOM, JUSTICE. Vaakuna myönnettiin 1960, vuotta '
+          + 'ennen itsenäisyyttä.',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Vaakuna: Yuma ym. / '
+      + 'Wikimedia Commons (CC BY-SA 3.0)',
+  },
+  'Flag of Liberia.svg': {
+    maa: 'Liberia',
+    symboliikka: [
+      {
+        osa: 'Yksitoista raitaa',
+        selite: 'itsenäisyysjulistuksen yksitoista allekirjoittajaa.',
+      },
+      {
+        osa: 'Punainen ja valkoinen',
+        selite: 'rohkeus ja moraalinen ryhti.',
+      },
+      { osa: 'Sininen neliö', selite: 'Afrikan manner.' },
+      {
+        osa: 'Valkoinen tähti',
+        selite: 'Afrikan ensimmäinen itsenäinen tasavalta. Lipun '
+          + 'lempinimi on Lone Star, yksinäinen tähti.',
+      },
+    ],
+    kappaleet: [
+      'Lippu hyväksyttiin 24. elokuuta 1847, kuukausi '
+        + 'itsenäisyysjulistuksen jälkeen. Se muistuttaa Yhdysvaltain '
+        + 'lippua, koska Liberian perustivat Yhdysvalloista ja '
+        + 'Karibialta muuttaneet vapaat mustat ja vapautetut orjat.',
+      'Lipun suunnitteli ja ompeli seitsemän naisen ryhmä, jota '
+        + 'johti Susannah Elizabeth Lewis; kaikki olivat syntyneet '
+        + 'Yhdysvalloissa. Se paljastettiin yleisölle Monroviassa '
+        + 'hyväksymispäivänä, ja vuodesta 1915 lähtien 24. elokuuta '
+        + 'on ollut lipunpäivä.',
+      'Isoisän matkavuonna 1873 lippu oli jo neljännesvuosisadan '
+        + 'vanha. Nykyään se liehuu tuhansissa ulkomaisten '
+        + 'varustamojen aluksissa: Liberian alusrekisteri on Panaman '
+        + 'jälkeen maailman suosituin mukavuuslippu ja tuo maalle '
+        + 'suuren osan sen tuloista.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Liberian vaakuna',
+        polku: 'assets/liput/tunnukset/lbr-vaakuna.png',
+        selite: 'Kilvessä 1800-luvun purjelaiva saapuu rannalle: se '
+          + 'on laiva, joka toi tulijat Yhdysvalloista. Aura ja '
+          + 'lapio ovat työn arvo, nouseva aurinko kansakunnan '
+          + 'synty, palmu vauraus ja valkoinen kyyhky kirjekäärö '
+          + 'kynsissään rauhan sanoma. Ylänauhassa lukee "The Love '
+          + 'of Liberty Brought Us Here" — rakkaus vapauteen toi '
+          + 'meidät tänne. Vuonna 1974 asetettu komissio esitti '
+          + 'tunnuslauseen vaihtamista, koska se jättää maan '
+          + 'alkuperäisväestön ulkopuolelle; muutosta ei tehty.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of Ghana.svg': {
+    maa: 'Ghana',
+    symboliikka: [
+      {
+        osa: 'Punainen',
+        selite: 'siirtomaavallan vastaisessa taistelussa kaatuneiden '
+          + 'veri.',
+      },
+      {
+        osa: 'Kulta',
+        selite: 'maan kultavarat. Siirtomaan nimikin oli '
+          + 'Kultarannikko.',
+      },
+      {
+        osa: 'Vihreä',
+        selite: 'metsät ja muu luonnonvarallisuus.',
+      },
+      {
+        osa: 'Musta tähti',
+        selite: 'Afrikan vapautumisen tähti. Se on peräisin Marcus '
+          + 'Garveyn Black Star Line -varustamon lipusta.',
+      },
+    ],
+    kappaleet: [
+      'Lipun suunnitteli taiteilija ja opettaja Theodosia Okoh, ja '
+        + 'se nostettiin itsenäistymispäivänä 6. maaliskuuta 1957. '
+        + 'Ghana oli Etiopian jälkeen toinen Afrikan maa, joka otti '
+        + 'punakultavihreät panafrikkalaiset värit — Etiopiaan '
+        + 'nähden käänteisessä järjestyksessä.',
+      'Vuosina 1964–1966 keltainen raita oli valkoinen: värit '
+        + 'vaihdettiin Kwame Nkrumahin puolueen väreiksi, jolloin '
+        + 'lipusta tuli Unkarin lipun kaltainen. Kun Nkrumah '
+        + 'kukistettiin vallankaappauksessa helmikuussa 1966, '
+        + 'alkuperäinen lippu palautettiin.',
+      'Musta tähti on jäänyt kieleen: Ghanan jalkapallomaajoukkueen '
+        + 'nimi on Black Stars. Ghanan lipun malli näkyy myös '
+        + 'Guinea-Bissaun ja São Tomé ja Príncipen lipuissa.',
+    ],
+    versiot: [
+      {
+        nimi: 'Lippu 1964–1966',
+        polku: 'assets/liput/versiot/gha-1964.png',
+        selite: 'Keltainen raita vaihdettiin valkoiseen Kwame '
+          + 'Nkrumahin puolueen väreiksi. Kansan vaatimuksesta '
+          + 'alkuperäinen lippu palasi 1966.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Ghanan vaakuna',
+        polku: 'assets/liput/tunnukset/gha-vaakuna.png',
+        selite: 'Vihreä risti jakaa kilven neljään ruutuun: '
+          + 'seremoniamiekka ja puhemiehen sauva ovat perinteinen '
+          + 'päällikkövalta, Osun linna meren äärellä valtio, '
+          + 'kaakaopuu maatalous ja kultakaivos kaivannaiset. Ristin '
+          + 'keskellä kultainen leijona muistuttaa siteestä '
+          + 'Kansainyhteisöön, ylinnä on Afrikan musta tähti ja '
+          + 'kilpeä kannattavat kaksi kotkaa. Nauhassa lukee FREEDOM '
+          + 'AND JUSTICE. Vaakunan piirsi Nii Amon Kotei, ja se '
+          + 'otettiin käyttöön 4. maaliskuuta 1957.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of Nigeria.svg': {
+    maa: 'Nigeria',
+    symboliikka: [
+      { osa: 'Vihreä', selite: 'maatalous ja maan metsät.' },
+      { osa: 'Valkoinen', selite: 'rauha ja yhtenäisyys.' },
+      {
+        osa: 'Kolme yhtä leveää raitaa',
+        selite: 'lippu on pystysuora kaksivärinen: vihreä, valkoinen '
+          + 'ja vihreä.',
+      },
+    ],
+    kappaleet: [
+      'Lipun suunnitteli opiskelija Michael Taiwo Akinkunmi '
+        + 'kilpailuun, johon tuli lähes kolmetuhatta ehdotusta. '
+        + 'Voittajatyössä oli valkoisen raidan päällä punainen '
+        + 'puoliaurinko kuusitoista sädettä; komitea poisti '
+        + 'auringon, ja jäljelle jäi kolme raitaa.',
+      'Lippu nostettiin ensi kerran keskiyöllä 1. lokakuuta 1960, '
+        + 'itsenäistymispäivänä. Nostajana oli luutnantti David '
+        + 'Ejoor.',
+      'Isoisän matkavuonna 1873 aluetta ei ollut vielä koottu '
+        + 'yhdeksi. Etelä- ja Pohjois-Nigerian protektoraatit '
+        + 'yhdistettiin vasta 1914, ja silloin lordi Lugard '
+        + 'suunnitteli niille sinisen lipun, jossa oli Union Jack ja '
+        + 'liepeessä punainen kiekko kruunuineen.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Nigerian vaakuna',
+        polku: 'assets/liput/tunnukset/nga-vaakuna.png',
+        selite: 'Mustalla kilvellä on valkoinen Y-kirjaimen '
+          + 'muotoinen aaltoviiva: Nigerin ja Benuen yhtyminen '
+          + 'Lokojassa. Musta kilpi on maan viljava maaperä, kilpeä '
+          + 'kannattavat kaksi valkoista hevosta arvokkuutta ja '
+          + 'ylinnä kotka voimaa. Jalustan punaiset kukat ovat '
+          + 'Costus spectabilis, maan kansalliskukka. Nauhassa lukee '
+          + 'vuoden 1978 tunnuslause "Unity and Faith, Peace and '
+          + 'Progress", joka korvasi aiemman "Peace, Unity, '
+          + 'Freedom".',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Vaakuna: Lumia1234 / '
+      + 'Wikimedia Commons (CC BY-SA 3.0)',
+  },
+  'Flag of Chad.svg': {
+    maa: 'Tšad',
+    symboliikka: [
+      {
+        osa: 'Indigonsininen',
+        selite: 'Tšad-järvi ja taivas.',
+      },
+      { osa: 'Keltainen', selite: 'Saharan hiekka ja aurinko.' },
+      {
+        osa: 'Punainen',
+        selite: 'itsenäisyyden puolesta vuodatettu veri.',
+      },
+      {
+        osa: 'Värit yhdessä',
+        selite: 'yhdistelmä Ranskan trikoloria ja Etiopian lipun '
+          + 'panafrikkalaisia värejä.',
+      },
+    ],
+    kappaleet: [
+      'Lippu vahvistettiin 6. marraskuuta 1959. Kesäkuussa 1959 '
+        + 'lakikomissio oli ehdottanut vihreä-kelta-punaista, mutta '
+        + 'vihreä vaihdettiin siniseen, jottei lippu menisi sekaisin '
+        + 'Malin kanssa.',
+      'Sekaannus tuli silti — toisaalta. Tšadin lippu on lähes '
+        + 'identtinen Romanian lipun kanssa. Romania on käyttänyt '
+        + 'trikoloriaan vuodesta 1866, mutta 1948–1989 sen keskellä '
+        + 'oli vaakuna; kun vaakuna poistettiin, liput olivat '
+        + 'käytännössä samat. Tšad pyysi 2004 Yhdistyneitä '
+        + 'kansakuntia tutkimaan asiaa, ja Romanian presidentti Ion '
+        + 'Iliescu vastasi, ettei trikolorista luovuta.',
+      'Poliittisista mullistuksista huolimatta lippua ei ole '
+        + 'muutettu kertaakaan itsenäistymisen jälkeen 1960. Yksi '
+        + 'selitys on, ettei se kuulu millekään vallan osapuolelle.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Tšadin vaakuna',
+        polku: 'assets/liput/tunnukset/tcd-vaakuna.png',
+        selite: 'Kilven sinikeltainen siksak on Tšad-järven aallokko '
+          + 'ja ylinnä nouseva aurinko uusi alku. Kilpeä kannattavat '
+          + 'vuohi ja leijona: vuohi on maan pohjoinen puolisko, '
+          + 'leijona eteläinen. Alla riippuu Tšadin kansallisen '
+          + 'ritarikunnan tunnus ja nauhassa lukee Unité, Travail, '
+          + 'Progrès — yhtenäisyys, työ, edistys. Vaakuna otettiin '
+          + 'käyttöön 1970.',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Vaakuna: Milenioscuro / '
+      + 'Wikimedia Commons (CC BY 3.0)',
+  },
+  'Flag of Cameroon.svg': {
+    maa: 'Kamerun',
+    symboliikka: [
+      { osa: 'Vihreä', selite: 'etelän sademetsät.' },
+      {
+        osa: 'Punainen',
+        selite: 'yhtenäisyys. Keskiraitaa kutsutaan yhtenäisyyden '
+          + 'väriksi.',
+      },
+      {
+        osa: 'Keltainen',
+        selite: 'aurinko ja pohjoisen savannit.',
+      },
+      {
+        osa: 'Keltainen tähti',
+        selite: 'yhtenäisyyden tähti. Sen koko vaihtelee lipusta '
+          + 'toiseen — ohje sanoo vain, että sen on mahduttava '
+          + 'keskiraidalle.',
+      },
+    ],
+    kappaleet: [
+      'Kolmiraitainen lippu hyväksyttiin lailla 26. lokakuuta 1957 '
+        + 'ja vahvistettiin uudelleen vuoden 1960 perustuslaissa. '
+        + 'Kamerun oli Ghanan jälkeen toinen maa, joka otti '
+        + 'panafrikkalaiset värit.',
+      'Vuosina 1961–1975 vihreän raidan yläosassa oli kaksi '
+        + 'kultaista tähteä. Ne olivat liittovaltion kaksi osaa, '
+        + 'Itä- ja Länsi-Kamerun, jotka syntyivät kun brittiläinen '
+        + 'Etelä-Kamerun liittyi Kamerunin tasavaltaan.',
+      'Nykyinen asu — yksi tähti keskiraidalla — tuli 20. toukokuuta '
+        + '1975, kun liittovaltiosta tehtiin yhtenäisvaltio. Samat '
+        + 'kolme väriä ovat Senegalin, Guinean ja Malin lipuissa.',
+    ],
+    versiot: [
+      {
+        nimi: 'Liittovaltion lippu 1961–1975',
+        polku: 'assets/liput/versiot/cmr-1961.png',
+        selite: 'Kaksi kultaista tähteä vihreällä raidalla: '
+          + 'Itä-Kamerun ja Länsi-Kamerun. Yhtenäisvaltion synnyttyä '
+          + 'tähdistä tuli yksi.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Kamerunin vaakuna',
+        polku: 'assets/liput/tunnukset/cmr-vaakuna.png',
+        selite: 'Kilpi toistaa lipun värit, ja sen päällä on maan '
+          + 'kartta. Kartan päälle on vuodesta 1984 piirretty '
+          + 'oikeuden vaaka ja miekka, ylinnä on lipun tähti. Kilven '
+          + 'takana ristissä kaksi liktorinkimppua, ja nauhoissa '
+          + 'lukee maan nimi kummallakin virallisella kielellä sekä '
+          + 'tunnuslause Paix – Travail – Patrie, rauha, työ, '
+          + 'isänmaa.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of the Democratic Republic of the Congo.svg': {
+    maa: 'Kongon demokraattinen tasavalta',
+    symboliikka: [
+      { osa: 'Taivaansininen', selite: 'rauha.' },
+      {
+        osa: 'Keltainen tähti',
+        selite: 'maan tulevaisuus. Tähti on lipun vanhin osa.',
+      },
+      {
+        osa: 'Punainen vinoraita',
+        selite: 'maan marttyyrien veri.',
+      },
+      {
+        osa: 'Keltainen reunus',
+        selite: 'maan rikkaudet. Vinoraita on harvinaisuus: se on '
+          + 'lipuista vain kourallisessa, muun muassa Tansanian ja '
+          + 'Namibian lipussa.',
+      },
+    ],
+    kappaleet: [
+      'Nykyinen lippu otettiin käyttöön 18. helmikuuta 2006, kun '
+        + 'uusi perustuslaki tuli voimaan. Se palautti vuosien '
+        + '1966–1971 lipun mutta vaihtoi kuninkaansinisen '
+        + 'taivaansiniseen.',
+      'Sininen kenttä ja keltainen tähti ovat maan vanhin lippumerkki. '
+        + 'Kuvio otettiin käyttöön 1877 Leopold II:n Kansainvälisen '
+        + 'afrikkalaisen yhdistyksen lippuna, siitä tuli Kongon '
+        + 'vapaavaltion lippu ja se jatkoi Belgian Kongon lippuna '
+        + 'vuoteen 1960. Itsenäistyneen maan lipussa oli 1960–1963 '
+        + 'lisäksi kuusi pientä tähteä, yksi kutakin maakuntaa kohti.',
+      'Vuosina 1971–1997 maa oli Zaire ja lippu vaaleanvihreä: '
+        + 'keltaisessa kiekossa käsi kohotti palavaa soihtua. Sama '
+        + 'lippu oli Mobutu Sese Sekon puolueen lippu, ja se katosi '
+        + 'Mobutun kaaduttua.',
+    ],
+    versiot: [
+      {
+        nimi: 'Kongon vapaavaltion lippu 1877–1960',
+        polku: 'assets/liput/versiot/cod-vapaavaltio.png',
+        selite: 'Sininen kangas ja keltainen tähti. Ensin Leopold '
+          + 'II:n yhdistyksen, sitten vapaavaltion ja lopulta '
+          + 'Belgian Kongon lippu.',
+      },
+      {
+        nimi: 'Zairen lippu 1971–1997',
+        polku: 'assets/liput/versiot/cod-zaire.png',
+        selite: 'Vaaleanvihreällä kentällä keltainen kiekko, jossa '
+          + 'käsi kohottaa palavaa soihtua. Sama kuvio oli Mobutun '
+          + 'puolueen tunnus.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Kongon tunnus',
+        polku: 'assets/liput/tunnukset/cod-vaakuna.png',
+        selite: 'Keskellä on leopardin pää, vasemmalla norsunluu ja '
+          + 'oikealla keihäs; nauhoissa lukee Justice, Paix, Travail '
+          + '— oikeus, rauha, työ. Leopardi oli tunnuksessa jo '
+          + 'Zairen aikana. Nykyinen asu vahvistettiin lipun kanssa '
+          + 'samana päivänä 18. helmikuuta 2006.',
+      },
+    ],
+    lahde: 'Liput ja tunnus: Wikimedia Commons (PD)',
+  },
 };
