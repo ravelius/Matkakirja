@@ -3156,6 +3156,9 @@ export class UI {
     // luokka jättäisi uuden pelin kartan näkymättömäksi.
     document.body.classList.remove('lauta-arkin-alla', 'aloitusverho-paalla');
     this.aloituslentoKesken = false;
+    // Sama silta alas: ilman tätä kesken katkennut avaus jättäisi
+    // uuden pelin äänimaisemaksi lentokoneen kabiinin (ks. syncAmbience).
+    this.lennonAmbienssi = false;
     // Radiotila piilottaa matkakirjan ja alanapit; ilman purkua ne
     // jäisivät piiloon uudessa pelissä.
     document.body.classList.remove('radio-tila');
@@ -8750,6 +8753,27 @@ export class UI {
        * kirjoituskoneen lyönnillä (js/sound.js REAL_PLAYERS).
        */
       sfx.play('clack', { voima: 2.4 });
+      /*
+       * KABIININ ÄÄNI HETI NAPAUTUKSESTA — ÄÄNI JOHTAA, KUVA SEURAA
+       * (omistajan tilaus 27.8.2026: *"aloita sen äänen toisto
+       * mahdollisimman pian. Olisi kiva ensin kuulla kabiinin ääni
+       * ennenkuin lentokone feidautuu kartan kanssa näytölle"*).
+       *
+       * Ennen matkustamon äänimaisema lähti vasta lennon omassa
+       * kohdassa (aloituslentoSisalla), pergamenttiarkin jo väistyttyä
+       * — eli täsmälleen samalla hetkellä kuin kartta ja kone tulivat
+       * näkyviin. Nyt se lähtee tässä, ennen arkkia: napautuksesta
+       * kuvan paljastumiseen kuluu arkin sisääntulo, kamera-ajo,
+       * pohjatason odotus ja arkin ulostulo, joten kabiini ehtii
+       * nousta kuuluviin ennen kuin ruudulla näkyy mitään lennosta.
+       *
+       * Automaattitoisto ei esty: tämä on samaa napautuksen ketjua kuin
+       * naksahdus rivi ylempänä, eli ele on juuri tapahtunut. Lipun
+       * (lennonAmbienssi) tehtävä on kantaa lennon ääni sen ajan yli,
+       * jolloin body.flight-active ei ole vielä paikallaan — muuten
+       * väliin osuva render palauttaisi etusivun lähtöaulan.
+       */
+      if (!this.reducedMotion) this.aloitaLennonAmbienssi();
       // Lukuääni väistyy, kun matka alkaa.
       stopIntroVoice(this);
       this.introEl.classList.add('intro-fade');
@@ -8798,6 +8822,9 @@ export class UI {
       // Lippu ennen siirtoa, jotta saapumismerkintä ei ala lennon alla —
       // se odottaa Astu ulos -nappia. Lennot poistavat lipun perillä.
       if (!this.reducedMotion) document.body.classList.add('flight-active');
+      // Luokka on nyt paikallaan ja kantaa lennon äänen loppuun asti:
+      // silta napautuksesta tähän on kuljettu (ks. aloitaLennonAmbienssi).
+      this.lennonAmbienssi = false;
       if (kartalento) this.aloituslentoKesken = true;
       this.doAction(() => game.actionPickStart(city.id, portti ? 0 : null));
       if (!this.reducedMotion) {
@@ -9786,7 +9813,12 @@ export class UI {
     // 10.8.2026: kalvon taustaääneksi äänimaisema lentokoneen
     // sisältä). Kaupungin maisema alkaa vasta, kun pelaaja astuu ulos
     // koneesta (ennakoiAmbienssi ohittaa lipun kalvon lopussa).
-    if (document.body.classList.contains('flight-active')) {
+    //
+    // lennonAmbienssi on napautuksen ja luokan välinen silta: avauslento
+    // käynnistää äänen jo ennen kuin body.flight-active on paikallaan
+    // (ks. aloitaLennonAmbienssi), eikä väliin osuva render saa palauttaa
+    // etusivun lähtöaulaa kabiinin tilalle.
+    if (this.lennonAmbienssi || document.body.classList.contains('flight-active')) {
       playPlaceAmbience('lentomatka', 'lentokone', this.game.pack?.id);
       return;
     }
@@ -9814,6 +9846,25 @@ export class UI {
     }
     const city = game.board.cityById.get(pos.city);
     playPlaceAmbience(city?.id ?? null, city?.ambience ?? null, lauta, this.game.pack?.map?.cityCountry ?? null);
+  }
+
+  /**
+   * Käynnistää matkustamon äänimaiseman heti napautuksesta, ennen kuin
+   * pergamenttiarkki, kartta tai kone näkyy ruudulla (omistajan tilaus
+   * 27.8.2026: ääni ensin, kuva perässä).
+   *
+   * Ohittaa syncAmbiencen tavallisen järjestyksen samasta syystä kuin
+   * ennakoiAmbienssi saapumisessa: lentolippu (body.flight-active)
+   * nousee vasta arkin takana, ja sitä odottamalla ääni myöhästyisi
+   * juuri sen verran, ettei se ehdi kuuluviin ennen kuvaa. Lippu
+   * lennonAmbienssi pitää valinnan voimassa siihen asti, kunnes luokka
+   * on paikallaan (doPickStart).
+   */
+  aloitaLennonAmbienssi() {
+    // Radiotilassa radio on ainoa ääni — sama poikkeus kuin syncAmbiencessa.
+    if (this.radioPaalla()) return;
+    this.lennonAmbienssi = true;
+    playPlaceAmbience('lentomatka', 'lentokone', this.game.pack?.id);
   }
 
   /**
@@ -15801,14 +15852,18 @@ export class UI {
     await this.piilotaAloitusverho();
     if (this.dead) return;
     /*
-     * KARTTA ENSIN, SITTEN ÄÄNI, SITTEN KONE (omistajan tilaus
-     * 25.8.2026: *"kartta tulisi nopeasti feidaten ilman odottelua ja
-     * sen jälkeen tulisi ääni ja lentokone alkaisi liikkua"*).
+     * ÄÄNI ENSIN, SITTEN KARTTA, SITTEN KONE (omistajan tilaus
+     * 27.8.2026: *"olisi kiva ensin kuulla kabiinin ääni ennenkuin
+     * lentokone feidautuu kartan kanssa näytölle"*).
      *
-     * Matkustamon äänimaisema seuraa flight-active-lippua kuten
-     * kalvollakin, mutta se käynnistyy vasta tässä eikä enää arkin
-     * takana: moottori nousee kuuluviin samalla kun kartta on juuri
-     * paljastunut, ja kone lähtee liikkeelle heti perään.
+     * Aiemmin matkustamon äänimaisema lähti tästä eli samalla hetkellä
+     * kuin kartta paljastui (tilaus 25.8.2026: *"kartta tulisi nopeasti
+     * feidaten ja sen jälkeen tulisi ääni"*). Nyt se on jo soinut arkin
+     * takana koko sisääntulon ajan — käynnistys tapahtuu napautuksessa
+     * (doPickStart → aloitaLennonAmbienssi). Tämä kutsu jää
+     * varmistukseksi: se toteaa saman äänen soivan eikä aloita mitään
+     * uudestaan, mutta hoitaa käynnistyksen niissä poluissa, joissa
+     * napautuksen kohta on ohitettu (esim. kehittäjätilan hyppy).
      */
     this.syncAmbience();
     await new Promise((valmis) => requestAnimationFrame(() => requestAnimationFrame(valmis)));

@@ -598,13 +598,27 @@ export function paivitaFokuskohteet(ui) {
   const nakyva = ui.nakyvaAlue?.();
   const skaala = nakyva?.skaala;
   if (!skaala || !Number.isFinite(skaala) || skaala <= 0) return;
+  /*
+   * NÄKYVYYS ENNEN ASEMOINTIA. Tämä oli aiemmin asemoinnin JÄLKEEN, ja
+   * järjestys jäi huomaamatta niin kauan kuin luokkaa luki vain CSS.
+   * Kasauspassi (js/fokusniput.js) lukee sen nyt myös koodista —
+   * yhdysviivaa ei piirretä piilotetun kerroksen merkkiin — ja
+   * jäljessä oleva luokka tarkoitti, että passi näki edellisen kehyksen
+   * tilan: yleiskuvasta lähennettäessä viivat jäivät pois siihen asti,
+   * kunnes karttaa seuraavan kerran liikutettiin. Toisin päin (paluu
+   * yleiskuvaan) viivat olisivat jääneet kehykseksi näkymään.
+   *
+   * Passi ei riipu näkyvyydestä eikä näkyvyys asemoinnista
+   * (paivitaNakyvyys lukee vain lehden osuuden näkyvästä alueesta),
+   * joten järjestyksen kääntäminen on turvallinen.
+   */
+  paivitaNakyvyys(ui, kerros, nakyva);
   asetaKohdeMittakaava(ui, 1);
   // Rekisteröinti nipistykseen jää (js/kartta.js vastaskaalaaMerkit),
   // vaikka vakioskaala ei enää tarvitse vastaskaalaa: varapolku
   // (lehdetön näkymä) on yhä ruutumitassa ja tarvitsee sen.
   (ui.nipistysVastaskaalaajat ??= new Set())
     .add(ui.fokuskohdeVastaskaala ??= (suhde) => asetaKohdeMittakaava(ui, suhde));
-  paivitaNakyvyys(ui, kerros, nakyva);
   // Kartta liikkui: auki oleva kortti seuraa merkkiään.
   if (ui.fokuskohdeAuki) asetaKohteenPaikka(ui);
 }

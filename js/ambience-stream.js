@@ -103,9 +103,43 @@ const ETUSIVUN_VOIMA = 0.28;
  * entistä aiemmin. Kerroin nostaa lennon taustan sekä vapaan että
  * väistetyn tason; lopullinen lukema on kuulokokeen nuppi kuten
  * etusivullakin.
+ *
+ * 1,6 → 2,6 (omistajan tilaus 27.8.2026: *"lisää vain
+ * lentokonekohtaukseen volyymia"*). Lentokohtaus on pelin ainoa hetki,
+ * jossa taustaääni ON kohtaus eikä taustaa: kartta on niukka, kone
+ * lentää hiljaa ja kabiinin pitää kuulua. Matkustamoäänitteen oma
+ * mitattu kerroin on 2,69 (aani-ehdokkaat.js), joten efektiivinen taso
+ * nousee lukemasta 0,14 × 2,69 × 1,6 ≈ 0,60 lukemaan
+ * 0,14 × 2,69 × 2,6 ≈ 0,98 eli noin +4,2 dB. Nosto kuuluu siis
+ * REITITETYLLÄ polulla (vahvistinsolmu, jossa taso menee sellaisenaan
+ * läpi).
+ *
+ * SUORALLA VOLUME-POLULLA (iPad, hiljaisuusvahdin varareitti) TASO EI
+ * MUUTU, koska se oli jo katossa: asetaTaso kertoo tason luvulla
+ * VOLUME_POLUN_KORVAUS (1,8) ja leikkaa ykköseen, ja vanhakin lukema
+ * 0,60 × 1,8 ≈ 1,08 ylitti sen. Kyseessä ei ole tämän muutoksen
+ * aiheuttama ero vaan sen paljastama: volume-polku ei yksinkertaisesti
+ * pysty soittamaan kabiinia kovempaa. Sitä ei korjata täältä — korjaus
+ * osuisi VOLUME_POLUN_KORVAUKSEEN ja siten kaikkiin muihinkin
+ * maisemiin, ja tilaus koski vain lentokohtausta.
+ *
+ * Ykkönen on silti tälle kertoimelle tarkoituksellinen katto: sen yli
+ * mentäessä lento erkanisi laitteiden välillä yhä pahemmin, ja kabiini
+ * kuulostaisi reititetyllä polulla jo kohtauksen muuta ääntä
+ * (kertoja, tehosteet) hallitsevalta.
  */
-const LENNON_VOIMA = 1.6;
+const LENNON_VOIMA = 2.6;
 const HAIVYTYS_MS = 1800;
+/*
+ * Avauslennon oma sisääntulo. Tavallinen 1,8 sekunnin nousu on tehty
+ * kaupunkien vaihdoksille, joissa kukaan ei odota ääntä — avauslennossa
+ * se on nyt väärä työkalu: ääni käynnistetään napautuksesta juuri
+ * siksi, että kabiini kuuluisi ENNEN kuvaa (js/ui.js
+ * aloitaLennonAmbienssi), ja hitaassa nousussa se olisi vasta
+ * puolivälissä, kun kartta ja kone jo feidautuvat esiin. 600 ms on
+ * yhä liuku eikä kytkin — moottori ei pamahda päälle.
+ */
+const LENNON_NOUSU_MS = 600;
 // Sama äänite alkaa joka kerta eri kohdasta, jottei paikka kuulosta
 // itseään toistavalta kun sinne palaa. Loppuun jätetään varaa, ettei
 // silmukka pyörähdy heti alkuun.
@@ -442,7 +476,10 @@ export function playPlaceAmbience(cityId, fallbackType, lauta, cityCountry = nul
     fallbackType: fallbackType ?? null,
   };
   nykyinen = oma;
-  oma.audio = luoSoitin(oma, { arvottuAlku: oma.arvoAlku, nouse: HAIVYTYS_MS });
+  // Avauslento nousee muita nopeammin: sen ääni on kohtauksen alku eikä
+  // paikanvaihdoksen tausta (ks. LENNON_NOUSU_MS).
+  const nouse = cityId === 'lentomatka' ? LENNON_NOUSU_MS : HAIVYTYS_MS;
+  oma.audio = luoSoitin(oma, { arvottuAlku: oma.arvoAlku, nouse });
 }
 
 /**

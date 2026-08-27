@@ -779,6 +779,10 @@ const maailma = await sivu.evaluate(() => {
     piilossa: document.querySelectorAll('[data-fokus-maa].fokus-piilossa').length,
     lehdenAlla: document.querySelectorAll('.cities .fokus-lehden-alla').length,
     reitit: getComputedStyle(document.querySelector('.staattinen')).display,
+    // Lehtien reunahäivytys: montako kuvaa on maskin alla (ks. alla).
+    kuvia: document.querySelectorAll('.fokuskartta-kuva').length,
+    maskattu: [...document.querySelectorAll('.fokuskartta-kuva')]
+      .filter((k) => k.getAttribute('mask')).length,
   });
   const ennen = lue();
   document.getElementById('kehittaja-maailma-btn').click();
@@ -797,6 +801,23 @@ vaadi('"maailma" avaa laudan: kaupungit näkyviin, sumu ja rajoite pois, ei reit
   && maailma.jalkeen.lehdenAlla === 0 && maailma.jalkeen.reitit === 'none'
   && maailma.tallessa === '1' && maailma.painettu === 'true',
   JSON.stringify(maailma));
+/*
+ * MAAILMANÄKYMÄSSÄ LEHTIEN REUNAT HÄIVYTETÄÄN (omistajan havainto
+ * 27.8.2026: maalehden reuna katkeaa kovana yleiskarttaan).
+ *
+ * Pelaajan fokusnäkymässä maalehti täyttää ruudun eikä sen reunaa ole
+ * katsomassa; maailmanäkymässä kamera on kaukana, ja lehden
+ * suorakulmainen reuna näkyy kokonaan kerralla tarkkana laikkuna
+ * karkean yleiskartan päällä. Sama maski kuin avauslennolla korjaa
+ * saman vian (js/fokuskartta.js paivitaLennonLehdet,
+ * LENNON_HAIVYTYS_ID) — väite mittaa maskin OLEMASSAOLON kummassakin
+ * suunnassa, koska napin toinen painallus purkaa näkymän ja maskin on
+ * lähdettävä mukana.
+ */
+vaadi('maailmanäkymä häivyttää lehtien reunat, pelaajan näkymässä maskia ei ole',
+  maailma.ennen.kuvia > 0 && maailma.ennen.maskattu === 0
+  && maailma.jalkeen.maskattu === maailma.jalkeen.kuvia,
+  JSON.stringify({ ennen: maailma.ennen, jalkeen: maailma.jalkeen }));
 await sivu.waitForTimeout(600);
 await sivu.screenshot({ path: join(ULOS, 'savuke-atlas-maailma.png') });
 

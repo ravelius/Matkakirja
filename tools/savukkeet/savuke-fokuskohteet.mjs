@@ -415,6 +415,62 @@ vaadi('siirto koskee vain piirtopaikkaa: ankkurit ovat yhä datan koordinaateiss
   && [...datanPaikat].every((avain) => erottelu.ankkurit.includes(avain)),
   JSON.stringify(erottelu.ankkurit.slice(0, 4)));
 
+/* --- 1c: nipun yhdysviivat kaupunkiin (omistajan pelitesti 27.8.2026)
+ *
+ * *"ateenan lisäpisteisiin sen oikealla puolella saisi tulla pienet
+ * vaaleat katkoviivat, jotta tajuaa niiden olevan oikeasti ateenassa"*.
+ * Kaupungin päälle osuvat merkit siirretään sarakkeeseen kaupungin
+ * oikealle puolelle (js/fokusniput.js) — sarake yksin ei kertonut
+ * kuuluvansa kaupunkiin, ja viiva kertoo.
+ *
+ * VÄITE MITTAA KOLME LUPAUSTA, koska viivan koko olemassaolon ehto on
+ * se, ettei se saa maksaa mitään muuta:
+ *   1. viivoja on tasan yhtä monta kuin nipussa on merkkejä;
+ *   2. kerros on LAATTOJEN ALLA eikä ota napautuksia vastaan (nippu on
+ *      alun perin tehty suojaamaan kaupungin sormialuetta — viiva ei
+ *      saa viedä sitä takaisin);
+ *   3. viiva ei ala laatan alta eikä pääty merkin alle, vaan jää
+ *      molemmista päistä irti (katkoviiva, ei nuoli).
+ */
+const viivat = await sivu.evaluate(() => {
+  const { ui } = window.matkakirja;
+  const kerros = document.querySelector('.nippuviivat');
+  const laatat = ui.tokenLayer;
+  const city = ui.game?.cityOf?.();
+  const rivit = [...(kerros?.querySelectorAll('line.nippuviiva') ?? [])].map((l) => {
+    const lue = (n) => Number(l.getAttribute(n));
+    const x1 = lue('x1'); const y1 = lue('y1'); const x2 = lue('x2'); const y2 = lue('y2');
+    return {
+      // Etäisyys kaupungin keskustasta kumpaankin päähän laudan mitassa.
+      alku: city ? Math.hypot(x1 - city.x, y1 - city.y) : null,
+      loppu: city ? Math.hypot(x2 - city.x, y2 - city.y) : null,
+      leveys: lue('stroke-width'),
+      katko: l.getAttribute('stroke-dasharray'),
+      himmeys: Number(l.getAttribute('opacity')),
+    };
+  });
+  return {
+    rivit,
+    nipussa: [...(ui.fokuskohdeRyhmat ?? []), ...(ui.nostosymRyhmat ?? [])]
+      .filter((r) => r.nippu && r.g?.parentNode
+        && !r.g.parentNode.classList.contains('fokuskohteet-piilossa')).length,
+    // Kerros ennen laattoja samassa vanhemmassa = piirtyy niiden alle.
+    laattojenAlla: Boolean(kerros && laatat && kerros.parentNode === laatat.parentNode
+      && (kerros.compareDocumentPosition(laatat) & Node.DOCUMENT_POSITION_FOLLOWING)),
+    lapaisee: kerros ? getComputedStyle(kerros).pointerEvents === 'none' : null,
+  };
+});
+vaadi('nipun merkeillä on yhdysviiva kaupunkiin (yksi kutakin kohti)',
+  viivat.nipussa > 0 && viivat.rivit.length === viivat.nipussa,
+  JSON.stringify({ nipussa: viivat.nipussa, viivoja: viivat.rivit.length }));
+vaadi('viivakerros on laattojen alla eikä ota napautuksia vastaan',
+  viivat.laattojenAlla === true && viivat.lapaisee === true,
+  JSON.stringify({ laattojenAlla: viivat.laattojenAlla, lapaisee: viivat.lapaisee }));
+vaadi('viiva on katkonainen, ohut ja irti kummastakin päästä',
+  viivat.rivit.length > 0 && viivat.rivit.every((r) => r.alku > 1 && r.loppu > r.alku
+    && r.leveys > 0 && r.leveys < 4 && r.katko && r.himmeys > 0 && r.himmeys < 1),
+  JSON.stringify(viivat.rivit.slice(0, 3)));
+
 /* --- 2: merkki elää kartan mukana --- */
 
 /*
