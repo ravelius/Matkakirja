@@ -3891,21 +3891,46 @@ export class UI {
      * UpdateLayoutTree ja 41 kertaa Layout, yhteensä 725 ms + 214 ms.
      * Se on klassinen asettelupiiska (layout thrashing).
      *
-     * MUISTI KESTÄÄ TASAN YHDEN TEHTÄVÄN. Se tyhjennetään heti
-     * mikrotehtävässä, joten seuraava napautus, ele, ajastin tai
-     * rAF-kehys mittaa taas tuoreeltaan. Yhden synkronisen tehtävän
-     * sisällä kartan RUUTU ei liiku — liikkuu vain viewBox, ja se
-     * luetaan tässä joka kerta uudestaan (vb.baseVal yllä), joten
-     * panorointi ja zoomi saavat yhä oikeat luvut.
+     * MUISTI KESTÄÄ YHDEN TEHTÄVÄN — JA VAIN NIIN KAUAN KUIN KARTTA
+     * PYSYY PAIKALLAAN. v1223 luotti pelkkään tehtävärajaan sillä
+     * oletuksella, että "yhden synkronisen tehtävän sisällä kartan RUUTU
+     * ei liiku". Oletus oli VÄÄRÄ, ja juuri kamera-ajo rikkoi sen
+     * (omistajan laitepalaute: *"Ateenasta Sofiaan kartta liikkuu
+     * oudosti sivusuunnassa"*). js/kartta.js ajaKamera lukee näkymän
+     * KAHDESTI samassa tehtävässä — ennen ja jälkeen fitViewBoxin — ja
+     * fitViewBox kirjoittaa niiden VÄLISSÄ sekä SVG:n omat mitat
+     * (sovitaMannerZoom: svg.style.width/height) että siirtokuoren
+     * muunnoksen (asetaPan: kuori.style.transform). Molemmat siirtävät
+     * `svg.getBoundingClientRect()`ia, joten ajon MAALI laskettiin
+     * vanhoista laatikoista uuden viewBoxin kanssa. Mitattu Ateena →
+     * Sofia (matka laudalla lähes suoraan pohjoiseen, dx 13,5 / dy
+     * 186,1): kamera kulki 317,8 yksikköä SIVUUN ja 15,0 pystyyn, ja
+     * saattozoomi jäi kertoimeen 0,62 → 1,0:n sijaan, eli ajon lopussa
+     * kartta nykäisi 631 px yhdessä kehyksessä.
+     *
+     * TUNNISTE MITÄTÖI MUISTIN ITSESTÄÄN. Avaimeen luetaan ne neljä
+     * asiaa, joista laatikot riippuvat: SVG:n omat inline-mitat,
+     * siirtokuoren muunnos ja body-luokat (kaikki asettelutilat ajetaan
+     * niillä). Inline-tyylin ja luokkalistan lukeminen EI pakota
+     * tyylinlaskentaa — ne ovat CSSOM-merkkijonoja — joten tarkistus on
+     * yhtä halpa kuin lipun katsominen. Näin yksikään tuleva kutsupaikka
+     * ei voi unohtaa mitätöintiä: se joka siirtää karttaa, muuttaa
+     * väistämättä avainta.
      */
+    const kuori = this.karttaKuori ?? this.svg;
+    const avain = `${document.body.className}|${this.svg.style.width}|${this.svg.style.height}`
+      + `|${this.svg.style.alignSelf}|${kuori.style.transform}`;
     let mitat = this.nakyvanMitat;
-    if (!mitat) {
+    if (!mitat || mitat.avain !== avain) {
       mitat = {
+        avain,
         laatikko: this.svg.getBoundingClientRect(),
         paneeli: pane.getBoundingClientRect(),
       };
+      // Tehtäväraja on yhä toinen puoli suojasta: se kattaa muutokset,
+      // jotka eivät näy avaimessa (ikkunan koko, muualta tullut asettelu).
+      if (!this.nakyvanMitat) Promise.resolve().then(() => { this.nakyvanMitat = null; });
       this.nakyvanMitat = mitat;
-      Promise.resolve().then(() => { this.nakyvanMitat = null; });
     }
     const { laatikko, paneeli } = mitat;
     if (!laatikko.width) return null;
