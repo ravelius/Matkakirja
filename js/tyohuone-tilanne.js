@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1208: Scrollauksen sujuvuuskorjaus - panorointi ja nipistys eivat saisi enaa tokkia (kompositorikerrokset purettu, jumiin jaanyt nipistys ei enaa sammuta panorointia); testaa fokusnakymassa pitkaan',
   'v1207: Karttasymbolit mustetyylissa suoraan pergamentilla, nimio symbolin perassa (kaupunkikohteet ilman), rasteroitu portain - tarkista terava jalki eri zoomeilla ja klikattavuus',
   'Avauskuvat 13 kaupunkiin generoituina heroina: Dubrovnik, Kiova, Odessa, Vilna, Ankara (falskit pois), Marseille, Granada, Alpit, Islanti, Tromssa, Lappi, Nikosia ja Tampereen uusinta',
   'Kehittajan maailmannakyma piirtaa nyt kaikki 134 maalehtea matalatarkkuuksisina pikkukuvina (ruudulta ulospain tayttyen); pelaajan nakyma ennallaan',

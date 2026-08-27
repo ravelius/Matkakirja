@@ -4834,8 +4834,30 @@ body.fokus-atlas-nakyma .grain { display: none; }
 
 .fokuskartta { pointer-events: none; }
 
+/*
+ * TÄYTTÖ ON `backwards`, EI `both` (sujuvuusmittaus 27.8.2026).
+ *
+ * `both` jättää animaation VOIMAAN ikuisiksi ajoiksi: valmistunut
+ * peittävyysanimaatio, jolla on eteenpäin täyttö, on selaimelle yhä
+ * "aktiivinen", ja Blink pitää elementin siksi omalla
+ * kompositorikerroksellaan (CDP LayerTree compositingReasons:
+ * `ActiveOpacityAnimation`). Kerros ei jää yksin: kaikki se, mikä
+ * piirtyy sen PÄÄLLE, joutuu nousemaan omalle kerrokselleen
+ * (`Overlap`) — mitattuna Kreikan lähikuvassa kartan päälle syntyi
+ * yhdentoista kerroksen ketju (fokus-piirit, kohderyhmät, laatan
+ * osuma-ala, kierron <use>-kopio, viivaimet, fokusmitat), joista
+ * suurin oli 12000 × 118799 pikseliä. Jokainen panoroinnin kehys
+ * käy kaikki kerrokset läpi (Layerize + Commit), joten hinta
+ * maksettiin sormen alla.
+ *
+ * Loppuarvo on sama kuin oletus (opacity: 1), joten eteenpäin
+ * täyttöä ei tarvita mihinkään: `backwards` pitää alkukuvan
+ * paikallaan ennen animaatiota — se on ainoa, mitä `both`:sta
+ * oikeasti käytettiin. Lennon aikainen variantti (0.6) tarvitsee
+ * `both`:n ja saa pitää sen: se on voimassa vain lennon ajan.
+ */
 .fokuskartta-kuva {
-  animation: fokuskartta-esiin 420ms ease-out both;
+  animation: fokuskartta-esiin 420ms ease-out backwards;
 }
 
 @keyframes fokuskartta-esiin {
