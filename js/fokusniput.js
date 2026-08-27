@@ -53,16 +53,31 @@
  *    sarakkeensa, ja saman merkin kopiot saavat saman rivin, koska
  *    jono järjestetään merkin omista koordinaateista.
  *
- * 6. EI UUSIA ELEMENTTEJÄ. Yhdysviivaa merkin oikealta paikalta
- *    sarakkeeseen harkittiin ja jätettiin pois: sarake on kiinni
- *    kaupungissa (alle sormenleveyden päässä), joten yhteys on
- *    ilmeinen ilman viivaakin, ja 1800-luvun karttatyyli sietää
- *    huonosti ylimääräistä viivastoa laatan vieressä. Siirto on
- *    ESITYSTÄ, EI DATAA — sama sopimus kuin kohtaamispisteellä
- *    (js/fokuspiste.js PISTE_ERO_MIN) ja kohdemerkkien erottelulla
- *    (js/fokuskohteet.js eritteleKohdeRyhmat): pakettien koordinaatit
- *    jäävät koskematta, ja osuma-alueet seuraavat merkkiä, koska ne
- *    ovat saman ankkuriryhmän lapsia.
+ * 6. YHDYSVIIVA KAUPUNKIIN — VAALEA KATKOVIIVA LAATTOJEN ALLA.
+ *
+ *    Tämä kohta luki aiemmin "EI UUSIA ELEMENTTEJÄ": yhdysviiva
+ *    harkittiin ja jätettiin pois sillä perusteella, että sarake on
+ *    kiinni kaupungissa ja yhteys siksi ilmeinen ilman viivaakin.
+ *    OMISTAJAN PELITESTI 27.8.2026 KUMOSI SEN: *"ateenan lisäpisteisiin
+ *    sen oikealla puolella saisi tulla pienet vaaleat katkoviivat,
+ *    jotta tajuaa niiden olevan oikeasti ateenassa"*. Sarake ei siis
+ *    kerro itsestään sitä, minkä se on tarkoittanut kertoa — merkit
+ *    näyttävät omilta paikoiltaan kaupungin vierestä.
+ *
+ *    Viiva on kartan kevyttä apuviivastoa eikä nuoli: ohut, haalistunut
+ *    muste, lyhyet katkot, ei nuolenpäitä. Se alkaa kaupungin laatan
+ *    reunalta (NIPPU_LAATTA_R) eikä laatan alta ja päättyy merkin oman
+ *    aluslaatan reunaan, joten kumpikaan pää ei jää minkään alle. Kerros
+ *    on LAATTOJEN ALLA (nippuViivakerros) eikä ota napautuksia vastaan,
+ *    joten kaupungin sormialue säilyy koskemattomana — juuri se oli
+ *    koko nipun alkuperäinen tilaus.
+ *
+ *    Siirto itse on yhä ESITYSTÄ, EI DATAA — sama sopimus kuin
+ *    kohtaamispisteellä (js/fokuspiste.js PISTE_ERO_MIN) ja
+ *    kohdemerkkien erottelulla (js/fokuskohteet.js
+ *    eritteleKohdeRyhmat): pakettien koordinaatit jäävät koskematta, ja
+ *    osuma-alueet seuraavat merkkiä, koska ne ovat saman ankkuriryhmän
+ *    lapsia. Viiva on saman esityksen jälki eikä uutta tietoa.
  *
  * ── NIMET ON PREFIKSOITU ───────────────────────────────────────────
  *
@@ -70,6 +85,8 @@
  * (tools/tarkista-niputus.mjs), joten kaikki top-level-nimet alkavat
  * NIPPU_/nippu-etuliitteellä.
  */
+
+import { el, maare } from './mapart.js';
 
 /*
  * MITAT RUUDUN PIKSELEINÄ LEHDEN PERUSTASOLLA (ks. sääntö 3).
@@ -112,6 +129,32 @@ const NIPPU_VAPAA = 44;
 
 /** Varmistin: montako riviä väistö saa enintään hypätä. */
 const NIPPU_VAISTOJA = 8;
+
+/*
+ * YHDYSVIIVAN MITAT JA SÄVY (ks. sääntö 6).
+ *
+ * Mitat ovat samaa ruutupikselimittaa lehden perustasolla kuin sarakkeen
+ * omat luvut, ja ne kerrotaan samalla vakioskaalalla s — viivan paksuus
+ * ja katkojen pituus elävät siis kartan mukana täsmälleen kuten merkit,
+ * eikä viiva voi paksuuntua tikuksi loitonnettaessa.
+ *
+ * Sävy on kartan haalistunutta mustetta (vrt. css/fokuskohteet.css
+ * .fokuskohde-rengas #5d3f0f) vaaleampana ja läpikuultavana: viiva on
+ * apuviivastoa, ei merkintä. Väri, himmeys ja katkot kirjoitetaan
+ * määreinä eikä tyylitiedostosta, koska kerros syntyy tässä moduulissa
+ * eikä saa olla riippuvainen siitä, kumpi merkkikerros sattui lataamaan
+ * oman tyylinsä.
+ */
+const NIPPU_VIIVA_LEVEYS = 1.2;
+const NIPPU_VIIVA_KATKO = 2.6;
+const NIPPU_VIIVA_VARI = '#8a6a2c';
+const NIPPU_VIIVA_HIMMEYS = 0.42;
+// Pieni rako merkin aluslaatan reunaan, jottei viiva näytä kasvavan
+// merkistä kiinni.
+const NIPPU_VIIVA_RAKO = 2.5;
+// Tätä lyhyempi pätkä ei ole viiva vaan roska: rivi jätetään piirtämättä
+// (voi käydä, jos merkki päätyy poikkeuksellisen lähelle laatan reunaa).
+const NIPPU_VIIVA_MIN = 5;
 
 /**
  * Kerrosten ankkuriryhmätietueet yhtenä jonona.
@@ -157,6 +200,79 @@ function nippuAseta(ryhma, nippu, s) {
 }
 
 /**
+ * Yhdysviivojen kerros LAATTOJEN ALLE (ks. sääntö 6).
+ *
+ * Kerros menee laudan juureen laattakerroksen (ui.tokenLayer) ETEEN,
+ * jolloin kaupungin kultainen laatta ja pelin muut merkit piirtyvät sen
+ * päälle — viiva on kartan pintaa, ei pelikerrosta. Se ei myöskään ota
+ * napautuksia vastaan (pointer-events), joten se ei voi varastaa
+ * kaupungin sormialuetta; juuri sen suojeleminen on koko nipun syy.
+ *
+ * Uusi lauta rakentaa uuden juuren, jolloin vanha kerros jää irralleen —
+ * sama isConnected-tarkistus kuin muillakin kerroksilla (vrt.
+ * js/fokuskohteet.js varmistaKohdekerros) rakentaa sen silloin uusiksi.
+ */
+function nippuViivakerros(ui) {
+  const laatat = ui?.tokenLayer;
+  const juuri = laatat?.parentNode;
+  if (!juuri) return null;
+  const vanha = ui.nippuViivaKerros;
+  if (!vanha?.isConnected || vanha.parentNode !== juuri) {
+    const kerros = el('g', { class: 'nippuviivat', 'pointer-events': 'none' });
+    juuri.insertBefore(kerros, laatat);
+    ui.nippuViivaKerros = kerros;
+  }
+  return ui.nippuViivaKerros;
+}
+
+/**
+ * Piirtää katkoviivat nipun merkeistä kaupungin pisteeseen.
+ *
+ * @param {object} ui
+ * @param {Array} viivat  { cx, cy, x, y, sade } laudan koordinaateissa —
+ *   kaupungin (kopion) piste, merkin nippupaikka ja merkin oman
+ *   aluslaatan säde perustason pikseleinä.
+ * @param {number} s      merkkien vakioskaala.
+ *
+ * SOLMUT KIERRÄTETÄÄN eikä pureta ja rakenneta uudestaan: passi ajetaan
+ * jokaisella asemoinnilla (myös panoroinnin ja nipistyksen aikana), ja
+ * määreetkin kirjoitetaan vain muutoksessa (js/mapart.js maare) — sama
+ * sääntö ja sama syy kuin kohdemerkkien muunnoksilla.
+ */
+function nippuPiirraViivat(ui, viivat, s) {
+  const kerros = nippuViivakerros(ui);
+  if (!kerros) return;
+  let i = 0;
+  for (const v of viivat) {
+    const dx = v.x - v.cx;
+    const dy = v.y - v.cy;
+    const pituus = Math.hypot(dx, dy);
+    if (!(pituus > 0)) continue;
+    // Alkupää kaupungin laatan reunalta, loppupää merkin laatan reunaan.
+    const alku = NIPPU_LAATTA_R * s;
+    const loppu = pituus - (v.sade + NIPPU_VIIVA_RAKO) * s;
+    if (loppu - alku < NIPPU_VIIVA_MIN * s) continue;
+    const yx = dx / pituus;
+    const yy = dy / pituus;
+    const solmu = kerros.childNodes[i] ?? el('line', {
+      class: 'nippuviiva',
+      stroke: NIPPU_VIIVA_VARI,
+      opacity: NIPPU_VIIVA_HIMMEYS,
+      'stroke-linecap': 'round',
+    }, kerros);
+    maare(solmu, 'x1', (v.cx + yx * alku).toFixed(2));
+    maare(solmu, 'y1', (v.cy + yy * alku).toFixed(2));
+    maare(solmu, 'x2', (v.cx + yx * loppu).toFixed(2));
+    maare(solmu, 'y2', (v.cy + yy * loppu).toFixed(2));
+    maare(solmu, 'stroke-width', (NIPPU_VIIVA_LEVEYS * s).toFixed(3));
+    const katko = (NIPPU_VIIVA_KATKO * s).toFixed(3);
+    maare(solmu, 'stroke-dasharray', `${katko} ${katko}`);
+    i += 1;
+  }
+  while (kerros.childNodes.length > i) kerros.lastChild.remove();
+}
+
+/**
  * KASAUSPASSI — kutsutaan kerrosten asemoinnista ennen muunnoksia.
  *
  * @param {object} ui  Pelin UI-olio (fokuskohdeRyhmat, nostosymRyhmat,
@@ -173,10 +289,16 @@ function nippuAseta(ryhma, nippu, s) {
 export function niputaFokusmerkit(ui, s) {
   if (!ui || !(s > 0)) return;
   const merkit = nippuMerkit(ui);
-  if (!merkit.length) return;
+  // Tyhjä kerros myös silloin kun nippua ei ole: vanhat viivat eivät saa
+  // jäädä kartalle merkkien lähdettyä (ks. sääntö 6).
+  if (!merkit.length) {
+    nippuPiirraViivat(ui, [], s);
+    return;
+  }
   const city = ui.fokusmoodi && !ui.katselu ? ui.game?.cityOf?.() : null;
   if (!city || !Number.isFinite(city.x) || !Number.isFinite(city.y)) {
     for (const { ryhma } of merkit) nippuAseta(ryhma, null, s);
+    nippuPiirraViivat(ui, [], s);
     return;
   }
   /*
@@ -207,6 +329,8 @@ export function niputaFokusmerkit(ui, s) {
     .map(({ x, y }) => ({ x, y }))
     .filter((p) => Number.isFinite(p.x) && Number.isFinite(p.y));
   const vapaa = NIPPU_VAPAA * s;
+  // Yhdysviivat kerätään samassa silmukassa ja piirretään kerralla.
+  const viivat = [];
   for (const [cx, jono] of niput) {
     jono.sort((a, b) => (a.merkki.ryhma.y - b.merkki.ryhma.y)
       || (a.merkki.ryhma.x - b.merkki.ryhma.x)
@@ -236,6 +360,22 @@ export function niputaFokusmerkit(ui, s) {
       }
       nippuAseta(merkki.ryhma, { x, y }, s);
       indeksi += 1;
+      /*
+       * Yhdysviiva samasta laskennasta (ks. sääntö 6). Piilotetun
+       * merkkikerroksen riviä ei piirretä: yleiskuvassa kohdemerkit ovat
+       * poissa (css .fokuskohteet-piilossa), ja viiva jäisi osoittamaan
+       * tyhjää.
+       *
+       * LUOKAN ON OLTAVA TUORE. Tämä lukee DOMista tilan, jonka
+       * js/fokuskohteet.js paivitaNakyvyys kirjoittaa — ja se kutsutaan
+       * siksi ENNEN asemointia, ei sen jälkeen. Jäljessä oleva luokka
+       * näkyi savukkeessa suoraan: yleiskuvasta lähennettäessä viivoja
+       * ei piirretty lainkaan ennen seuraavaa kartan liikahdusta.
+       */
+      if (!merkki.ryhma.g?.parentNode?.classList?.contains('fokuskohteet-piilossa')) {
+        viivat.push({ cx, cy: city.y, x, y, sade: merkki.sade });
+      }
     }
   }
+  nippuPiirraViivat(ui, viivat, s);
 }

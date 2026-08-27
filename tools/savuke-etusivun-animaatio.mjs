@@ -368,6 +368,19 @@ const lentoLupaus = sivu.evaluate(async () => {
   if (game.phase !== 'pickstart') return { virhe: `väärä vaihe: ${game.phase}` };
   const kaupunki = game.pack.cities.find((c) => c.id !== 'lontoo' && c.links?.length);
   const havainnot = { kaupunki: kaupunki.id };
+  /*
+   * ÄÄNI ENNEN KUVAA (omistajan tilaus 27.8.2026): kabiinin
+   * äänimaisema on käynnistettävä napautuksesta, ei siitä hetkestä
+   * jona kartta ja kone feidautuvat esiin. Kellotetaan kumpikin
+   * hetki samalta kellolta: käynnistys kaapataan sen omasta
+   * metodista (js/ui.js aloitaLennonAmbienssi) ja kuvan
+   * paljastuminen pergamenttiarkin lähdöstä.
+   */
+  const kaynnista = ui.aloitaLennonAmbienssi.bind(ui);
+  ui.aloitaLennonAmbienssi = () => {
+    havainnot.aani ??= performance.now();
+    kaynnista();
+  };
   const kello = performance.now();
   ui.doPickStart(kaupunki);
   /*
@@ -389,6 +402,17 @@ const lentoLupaus = sivu.evaluate(async () => {
        * tarkkaillaan koko lennon ajan.
        */
       if (document.querySelector('.flight-exit')) havainnot.nappiaOli = true;
+      /*
+       * Arkki pois = kartta ja kone paljastuvat (ks. äänen kellotus
+       * yllä). Vasta NOUSU lasketaan: arkki tulee ruudulle vasta
+       * napautuksen jälkeen, joten ilman ensin-nähtyä arkkia tämä
+       * kirjaisi silmukan ensimmäisen tikin.
+       */
+      const arkki = document.body.classList.contains('aloitusverho-paalla');
+      if (arkki) havainnot.arkkiOli = true;
+      if (havainnot.arkkiOli && !arkki && havainnot.kuva === undefined) {
+        havainnot.kuva = nyt;
+      }
       if (rivi && havainnot.kalvo === undefined) havainnot.kalvo = nyt;
       if (rivi) {
         const kirjoitettu = rivi.querySelector('.typed')?.textContent ?? rivi.textContent;
@@ -479,7 +503,12 @@ const lentoLupaus = sivu.evaluate(async () => {
     }, 20);
   });
   const suhteessa = (t) => (t === undefined ? undefined : Math.round(t - havainnot.kalvo));
+  // Äänen ja kuvan hetket luetaan NAPAUTUKSESTA eikä kalvosta: koko
+  // väite koskee sitä, kumpi kahdesta ehtii ensin napautuksen jälkeen.
+  const napautuksesta = (t) => (t === undefined ? undefined : Math.round(t - kello));
   return {
+    aani: napautuksesta(havainnot.aani),
+    kuva: napautuksesta(havainnot.kuva),
     kaupunki: havainnot.kaupunki,
     rivi: havainnot.rivi,
     sanoja: havainnot.rivi ? havainnot.rivi.trim().split(/\s+/).length : 0,
@@ -542,6 +571,26 @@ vaadi('lennossa vanha lauta on piilossa mutta pergamentti jää',
   kartta.atlasLuokka === true && kartta.staattinen === 'none'
   && kartta.paperi !== 'none' && kartta.paperi !== 'ei ole',
   `atlasLuokka ${kartta.atlasLuokka}, staattinen ${kartta.staattinen}, paperi ${kartta.paperi}`);
+/*
+ * ÄÄNI JOHTAA, KUVA SEURAA (omistajan tilaus 27.8.2026: *"aloita sen
+ * äänen toisto mahdollisimman pian. Olisi kiva ensin kuulla kabiinin
+ * ääni ennenkuin lentokone feidautuu kartan kanssa näytölle"*).
+ *
+ * Ennen matkustamon äänimaisema lähti vasta lennon omasta kohdasta
+ * (js/ui.js aloituslentoSisalla), pergamenttiarkin jo väistyttyä — eli
+ * täsmälleen samalla hetkellä kuin kartta ja kone paljastuivat. Nyt se
+ * lähtee napautuksesta (doPickStart → aloitaLennonAmbienssi), ja väliin
+ * jää arkin sisääntulo, kamera-ajo ja arkin ulostulo.
+ *
+ * VÄITE MITTAA JÄRJESTYKSEN JA VÄLIN, ei absoluuttista hetkeä: raja on
+ * äänen oma sisääntulo (ambience-stream.js LENNON_NOUSU_MS 600 ms),
+ * koska sitä lyhyempi etumatka tarkoittaisi, ettei kabiini ehdi nousta
+ * kuuluviin ennen kuvaa — juuri se oli tilauksen sisältö.
+ */
+vaadi('kabiinin ääni lähtee ennen kuin kartta ja kone paljastuvat',
+  lento.aani !== undefined && lento.kuva !== undefined
+  && lento.kuva - lento.aani >= 600,
+  `ääni ${Math.round(lento.aani ?? NaN)} ms, kuva ${Math.round(lento.kuva ?? NaN)} ms`);
 /*
  * Yläraja puuttuu tarkoituksella: avauslennon alla piirtyy koko
  * maailmankartan lauta, ja kuormitettu pääsäie venyttää jokaista

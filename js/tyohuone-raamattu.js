@@ -1153,7 +1153,13 @@ export const RAAMATTU = {
           + 'artifaktina tai työhaarana). VAIN HEROKUVAT ja '
           + 'julisteet omistaja generoi itse ChatGPT:n '
           + 'käyttöliittymässä (STEP 1-3 -resepti) — niitä ei tehdä '
-          + 'API:lla ilman omistajan erillistä pyyntöä.',
+          + 'API:lla ilman omistajan erillistä pyyntöä. '
+          + 'KUVAMALLI (omistaja 27.8.2026): OpenAI:n kuvissa '
+          + 'käytetään AINA uusinta mallia — nyt gpt-image-2 '
+          + '(vertailussa selvästi valokuvamaisempi kuin '
+          + 'gpt-image-1); kun uudempi julkaistaan, vaihdetaan '
+          + 'siihen vertailukokeen kautta. Työnkulkujen oletusmalli '
+          + 'pidetään tässä linjassa.',
         'HEROKUVIEN HYBRIDIMALLI (omistaja 25.8.2026, korvaa 24.8. '
           + 'tauon API-massa-ajojen osalta): omistaja generoi '
           + 'herokuvat ChatGPT Plus -käyttöliittymässä Fablen '

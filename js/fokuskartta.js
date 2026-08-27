@@ -1316,13 +1316,26 @@ function lennonHaivytysMaski(kerros) {
  * mukaan. Kutsutaan sekä lehden saapuessa että joka piirrosta, koska
  * lehti voi saapua verkosta kesken lennon ja lento päättyä ilman että
  * lehtijoukko muuttuu.
+ *
+ * SAMA HÄIVYTYS MYÖS KEHITTÄJÄN MAAILMANÄKYMÄSSÄ (omistajan havainto
+ * 27.8.2026: maalehden reuna katkeaa kovana yleiskarttaan). Näkymien
+ * ero on sama kuin lennon aikana: maalehti on tarkka laikku muuten
+ * karkean yleiskartan päällä, ja koska kamera on kaukana, lehden
+ * suorakulmainen reuna näkyy kokonaan kerralla — pelaajan tavallisessa
+ * fokusnäkymässä lehti täyttää ruudun, jolloin reunaa ei ole
+ * katsomassa. Häivytys on siis sama korjaus samaan vikaan, ja maski on
+ * jo olemassa; tähän riittää ehdon laajennus.
+ *
+ * PELAAJAN POLKU EI MUUTU: maailmanakyma() vaatii kehittäjätilan eikä
+ * palauta koskaan totta katselutilassa (js/ui.js maailmanakyma).
+ * Valinnainen kutsu siltä varalta, että ui on kevyempi kuin UI-olio.
  */
 export function paivitaLennonLehdet(ui) {
   const kerros = ui?.fokuskarttaKerros;
   if (!kerros) return;
   const kuvat = kerros.querySelectorAll('.fokuskartta-kuva');
   if (!kuvat.length) return;
-  const lennossa = Boolean(ui.aloituslentoKesken);
+  const lennossa = Boolean(ui.aloituslentoKesken) || Boolean(ui.maailmanakyma?.());
   const maski = lennossa ? lennonHaivytysMaski(kerros) : null;
   for (const kuva of kuvat) {
     if (maski) kuva.setAttribute('mask', maski);
