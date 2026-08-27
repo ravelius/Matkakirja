@@ -1,12 +1,13 @@
-# Yksittäisen kuvan generointi OpenAI:n kuva-API:lla (gpt-image-1).
+# Yksittäisen kuvan generointi OpenAI:n kuva-API:lla.
 # Omistajan linjaus 26.8.2026: herokuvat ja julisteet tehdään jatkossa
 # ChatGPT:n käyttöliittymässä, mutta erikseen pyydettäessä API:lla —
 # avain on repon secreteissä (OPENAI_API_KEY), ja tämä työnkulku on
 # se pyydettäessä-reitti. Kuva palautuu ajon artifaktina.
 #
-# 27.8.2026: valinnainen läpinäkyvä tausta pelispritejä varten
-# (nappulat ym.) — transparent vaatii png-muodon, joka on muutenkin
-# tämän työnkulun tulosmuoto.
+# 27.8.2026: valinnainen läpinäkyvä tausta pelispritejä varten, ja
+# oletusmalliksi gpt-image-2 (julkaistu 21.4.2026; parempi
+# fotorealismi ja ohjeiden noudattaminen) — malli-inputilla voi
+# palata gpt-image-1:een vertailua varten.
 name: Generoi kuva API:lla
 
 on:
@@ -30,6 +31,11 @@ on:
         type: choice
         options: ['opaque', 'transparent']
         default: 'opaque'
+      malli:
+        description: 'Kuvamalli'
+        type: choice
+        options: ['gpt-image-2', 'gpt-image-1']
+        default: 'gpt-image-2'
 
 permissions:
   contents: read
@@ -46,6 +52,7 @@ jobs:
           NIMI: ${{ inputs.nimi }}
           KOKO: ${{ inputs.koko }}
           TAUSTA: ${{ inputs.tausta }}
+          MALLI: ${{ inputs.malli }}
         run: |
           set -euo pipefail
           node - <<'SKRIPTI'
@@ -56,7 +63,7 @@ jobs:
               Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
             },
             body: JSON.stringify({
-              model: 'gpt-image-1',
+              model: process.env.MALLI || 'gpt-image-2',
               prompt: process.env.PROMPT,
               size: process.env.KOKO,
               quality: 'high',
