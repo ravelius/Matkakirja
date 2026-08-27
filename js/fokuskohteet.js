@@ -91,7 +91,10 @@
  * vaiheessa korostus on kevyt rengas auki olevan kohteen ympärillä.
  */
 import { el, maare } from './mapart.js';
-import { NOSTOSYM_LUOKAT, NOSTOSYM_TYYPIT, piirraNostosymboli } from './fokusnosto-symbolit.js';
+import {
+  NOSTOSYM_LUOKAT, NOSTOSYM_R, NOSTOSYM_TYYPIT,
+  nostosymAsetaPorras, piirraNostosymKartalle, piirraNostosymboli,
+} from './fokusnosto-symbolit.js';
 import { asetaKuva } from './media.js';
 import { html, jaaKappaleiksi, nielaiseSulkevaNapautus } from './ui-apurit.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
@@ -378,6 +381,26 @@ function kohteenSymboli(kohde) {
 }
 
 /*
+ * SAAKO MERKKI NIMIÖN (27.8.2026, läpinäkyvä mustetyyli)?
+ *
+ * Symbolimerkki saa nimensä perään (js/fokusnosto-symbolit.js
+ * piirraNostosymNimio) — PAITSI KAUPUNKI, jonka nimen LEHTI PAINAA
+ * ITSE. Jokainen fokuslehti latoo kaupunkiensa nimet kuvaan pienen
+ * renkaan viereen: kuratoidulla Kreikan lehdellä käsin asetellut
+ * (tools/fokuskartta/piirto.js kohta 8f) ja muilla mailla Natural
+ * Earthistä poimitut (kohta 8g). Kohdemerkki istuu samassa pisteessä,
+ * joten sen oma nimiö olisi sama nimi kahdesti vierekkäin — juuri se
+ * näkyi Kreikan lehdellä Thessalonikin ja Pátran kohdalla.
+ *
+ * Muut kategoriat saavat nimiönsä: lehti ei nimeä pyhäköitä, museoita,
+ * markkinoita eikä eläimiä, ja juuri niistä kartta ei ilman nimiötä
+ * kerro mitään.
+ */
+function kohteenNimio(kohde) {
+  return kohde?.tyyppi !== 'kaupunki';
+}
+
+/*
  * Symbolin mittakaava kohdemerkissä: kirjasto piirtää ~21 px merkin
  * (täkysymbolin koko), kohdemerkki on halkaisijaltaan noin 14 px —
  * pienempi, koska kohteita on lehdellä toistakymmentä ja täky on
@@ -391,14 +414,24 @@ function kohteenSymboli(kohde) {
  */
 const KOHDE_SYMBOLI_SKAALA = 11 / 21;
 
-/** Symbolilaatan säde kohdemerkin mitassa (kirjaston laatta r = 10.4). */
-const KOHDE_SYMBOLI_R = 10.4 * KOHDE_SYMBOLI_SKAALA;
+/**
+ * Symbolin säde kohdemerkin mitassa. Kirjaston merkki on
+ * NOSTOSYM_R:n levyinen — ennen 27.8.2026 se oli aluslaatan säde ja
+ * nyt läpinäkyvän glyyfin oma ala, mutta luku on sama, joten merkkien
+ * välit eivät muuttuneet laatan poistuessa.
+ */
+const KOHDE_SYMBOLI_R = NOSTOSYM_R * KOHDE_SYMBOLI_SKAALA;
 
 /**
- * Yksi merkki: näkymätön osuma-alue ja kategorian symboli — tai
- * pistekohteilla vaalea kehä, musteympyrä ja piste. Korostusrengas on
- * valmiina paikallaan läpinäkyvänä — auki oleva kohde saa sen näkyviin
- * luokalla eikä uudella elementillä.
+ * Yksi merkki: näkymätön osuma-alue, kategorian symboli ja sen perään
+ * ladottu nimiö — tai pistekohteilla vaalea kehä, musteympyrä ja piste.
+ * Korostusrengas on valmiina paikallaan läpinäkyvänä — auki oleva kohde
+ * saa sen näkyviin luokalla eikä uudella elementillä.
+ *
+ * NIMIÖ ON VAIN SYMBOLIMERKEILLÄ (27.8.2026, läpinäkyvä mustetyyli).
+ * Pistekohteet ovat kartan yleismerkkejä ilman kategoriaa, ja niiden
+ * musteympyrä on tarkoituksella mykkä: nimiö tekisi jokaisesta
+ * pisteestä nimilapun ja veisi merkiltä sen "tässä on jotain" -luonteen.
  */
 function piirraKohdemerkki(ui, ryhma, kohde) {
   const g = el('g', { class: `fokuskohde fokuskohde-${kohde.tyyppi ?? 'muu'}` }, ryhma);
@@ -410,13 +443,27 @@ function piirraKohdemerkki(ui, ryhma, kohde) {
   el('circle', { class: 'fokuskohde-korostus', r: KOHDE_KOROSTUS_R }, g);
   const symboli = kohteenSymboli(kohde);
   if (symboli) {
-    // Alaryhmä kutistaa kirjaston merkin kohdemerkin mittaan; symbolin
-    // omat luokat (nostosym-*) tyylittyvät css/styles.css:stä, joka on
-    // aina ladattu — merkki ei siis odota fokusnosto.css:ää.
-    piirraNostosymboli(el('g', {
+    /*
+     * Alaryhmä kutistaa kirjaston merkin kohdemerkin mittaan; symbolin
+     * omat luokat (nostosym-*) tyylittyvät css/styles.css:stä, joka on
+     * aina ladattu — merkki ei siis odota fokusnosto.css:ää.
+     *
+     * MERKKI JA NIMIÖ TULEVAT YHTENÄ RASTERINA (omistajan lisätilaus
+     * 27.8.2026, js/fokusnosto-symbolit.js piirraNostosymKartalle):
+     * panoroinnissa selain siirtää valmista bittikarttaa eikä lado
+     * halollista tekstiä uudestaan joka kehyksellä. Rasteri saa oman
+     * ryhmänsä, koska varapolku (ei kuvaa, tai kuva ei lataudu)
+     * tyhjentää sen ja piirtää tilalle elävän merkin ja tekstin.
+     */
+    const sisus = el('g', {
       class: 'fokuskohde-symboli',
       transform: `scale(${KOHDE_SYMBOLI_SKAALA.toFixed(4)})`,
-    }, g), symboli);
+    }, g);
+    piirraNostosymKartalle(
+      el('g', { class: 'fokuskohde-glyyfi' }, sisus),
+      symboli,
+      kohteenNimio(kohde) ? kohde.nimi : '',
+    );
   } else {
     el('circle', { class: 'fokuskohde-halo', r: KOHDE_HALO_R }, g);
     el('circle', { class: 'fokuskohde-rengas', r: KOHDE_RENGAS_R }, g);
@@ -576,10 +623,38 @@ function asetaKohdeMittakaava(ui, suhde) {
   }
 }
 
+/**
+ * RASTERIN TARKKUUSPORRAS NÄKYMÄN MUKAAN (omistajan lisätilaus
+ * 27.8.2026; js/fokusnosto-symbolit.js nostosymAsetaPorras).
+ *
+ * Tarve on laitepikseleitä kirjaston yksikköä kohti: merkin oma
+ * mittakaava (KOHDE_SYMBOLI_SKAALA) × kartan suhde lehden perustasoon
+ * × näytön pikselitiheys. Suhde saadaan samasta parista kuin merkkien
+ * mittakaava — `nakyvaAlue().skaala` on kartan nykyinen kerroin ja
+ * `fokusMerkkiSkaala()` on sen käänteisluku perustasolla, joten
+ * tulo on 1 juuri siinä näkymässä, johon maahan saapuminen päättyy.
+ *
+ * TÄMÄ AJETAAN VAIN LEVOSSA. paivitaFokuskohteet kutsutaan näkymän
+ * asetuttua (js/ui.js paivitaMaastonimet), ei eleen aikana — rasterit
+ * eivät siis synny uudelleen kesken panoroinnin tai nipistyksen.
+ */
+function paivitaRasteriporras(ui, skaala) {
+  const perus = ui.fokusMerkkiSkaala?.();
+  if (!(perus > 0) || !(skaala > 0)) return false;
+  const tiheys = typeof window === 'undefined' ? 1 : (window.devicePixelRatio || 1);
+  return nostosymAsetaPorras(KOHDE_SYMBOLI_SKAALA * skaala * perus * Math.min(tiheys, 3));
+}
+
 export function paivitaFokuskohteet(ui) {
   if (typeof document === 'undefined') return;
   const kerros = varmistaKohdekerros(ui);
   if (!kerros) return;
+  /*
+   * Porras ENNEN avaimen vertailua: portaan vaihtuessa merkit on
+   * piirrettävä uusiksi, ja se hoituu tyhjentämällä avain — sama
+   * mekanismi kuin sisällön muuttuessa, ei omaa purkupolkua.
+   */
+  if (paivitaRasteriporras(ui, ui.nakyvaAlue?.()?.skaala)) ui.fokuskohdeAvain = null;
   const kohteet = nykyisenMaanKohteet(ui);
   const avain = kohteet.length
     ? `${ui.game.pack.id}:${kohteet.map(({ kohde }) => kohde.id).join('|')}`

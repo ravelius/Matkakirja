@@ -198,13 +198,25 @@
  * Kategorian symboli luokan nimen vierellä (js/fokuskohteet.js
  * piirraKohdeYlarivi): sama kaiverrusmerkki kuin kartalla, rivin
  * korkuisena ja tekstin viereen upotettuna. Negatiivinen
- * vertical-align istuttaa laatan versaalirivin keskelle.
+ * vertical-align istuttaa merkin versaalirivin keskelle.
+ *
+ * SAMA LÄPINÄKYVÄ MUSTETYYLI KUIN KARTALLA (omistajan valinta
+ * 27.8.2026, montaasin C). Merkki sai jäädä kortissa laatalle, jos se
+ * näyttäisi sisätiloissa paremmalta — ei näyttänyt: kortin pohja on jo
+ * pergamenttia, joten laatta ei tuonut kontrastia vaan pelkän
+ * rengasreunan, ja rivi luki mitalilta eikä kartan merkiltä. Yksi
+ * merkki, yksi asu: kortin ylärivi kertoo kategorian täsmälleen sillä
+ * kuvalla, jonka pelaaja juuri napautti kartalta.
+ *
+ * MERKKI KASVOI HIUKAN (1,35em -> 1,5em): glyyfi täyttää nyt koko
+ * entisen laatan alan, mutta laatan mukana katosi myös se vaalea
+ * kehys, joka teki merkistä rivillä isomman näköisen.
  */
 .fokuskohde-ylarivi-symboli {
-  width: 1.35em;
-  height: 1.35em;
-  margin-right: 0.45em;
-  vertical-align: -0.4em;
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0.4em;
+  vertical-align: -0.45em;
 }
 
 /*

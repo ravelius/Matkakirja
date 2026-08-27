@@ -53,8 +53,7 @@
  *
  * 2. EI SUODATTIMIA (js/fokuskartta.js sääntö 3, tests/rules.test.mjs):
  *    suodatettu kerros palaa iOS:n taustalta tyhjänä. Symbolit ovat
- *    siis pelkkiä täyttöjä ja viivoja — paperinvaalea aluslaatta on oma
- *    ympyränsä eikä varjo.
+ *    siis pelkkiä täyttöjä ja viivoja.
  *
  * 3. KARTAN MITTAKAAVA, EI RUUDUN (omistajan LOPULLINEN linjaus
  *    26.8.2026, Raamattu). Ankkuriryhmä on laudan koordinaateissa ja
@@ -76,9 +75,43 @@
  * Yhden tiedoston versio ketjuttaa moduulit samaan näkyvyysalueeseen
  * (tools/tarkista-niputus.mjs), joten kaikki top-level-nimet alkavat
  * NOSTOSYM_/nostosym-etuliitteellä.
+ *
+ * ── LÄPINÄKYVÄ MUSTETYYLI (omistajan valinta 27.8.2026, montaasin C) ─
+ *
+ * Merkeillä oli 26.–27.8.2026 paperinvaalea aluslaatta ja
+ * musteviivainen kehä: pergamentille painettu poletti, jonka päällä
+ * glyyfi istui. Omistaja valitsi kolmen konseptin vertailusta C:n:
+ * *"koko karttasymboliperhe siirtyy läpinäkyvään mustetyyliin"* —
+ * merkki piirretään SUORAAN pergamenttikartalle ilman ympyräpohjaa,
+ * samaan tapaan kuin lehteen poltetut vuorimerkit, ja sen perään
+ * ladotaan LYHYT NIMIÖ kartan nimiötypografialla (ks. osio NIMIÖ:
+ * siellä myös se, miksi peräkkäin eikä alle).
+ *
+ * KAKSI SEURAUSTA, JOTKA ON HYVÄ TIETÄÄ:
+ *
+ * a) GLYYFI TÄYTTÄÄ ENTISEN LAATAN. Kuva piirtyy nyt koko entisen
+ *    laatan levyisenä (NOSTOSYM_R * 2 = 20,8) eikä laatan sisään
+ *    jätettyyn 15 yksikön ruutuun. Merkin ULKOMITTA ei siis muuttunut
+ *    — kaikki sitä lukevat vakiot (js/fokusniput.js NIPPU_TAKY_R,
+ *    js/fokuskohteet.js KOHDE_SYMBOLI_R) pitävät edelleen paikkansa —
+ *    mutta itse kuva on kolmanneksen isompi ja siksi luettavampi
+ *    ilman laattaa.
+ *
+ * b) KONTRASTI ON KUVAN VASTUULLA. Laatta antoi ennen jokaiselle
+ *    glyyfille vaalean pohjan; nyt merkki lepää akvarellitopografian
+ *    päällä. Kuudelle vanhalle glyyfille (huuto, kauppa, kulttuuri,
+ *    ruoka, sana, urheilu) generoitiin 27.8.2026 uudet, selvästi
+ *    tummemmalla musteella piirretyt versiot juuri tästä syystä.
  */
-import { el } from './mapart.js';
+import { el, maare } from './mapart.js';
 import { niputaFokusmerkit } from './fokusniput.js';
+
+/**
+ * MERKIN SÄDE ruudun pikseleinä lehden perustasolla — sama luku kuin
+ * entisen aluslaatan säde, jotta merkin ulkomitta ja kaikki siihen
+ * nojaavat välimatkat säilyivät laatan poistuessa ennallaan.
+ */
+export const NOSTOSYM_R = 10.4;
 
 /**
  * SYMBOLIN PIIRTÄJÄT.
@@ -99,8 +132,6 @@ import { niputaFokusmerkit } from './fokusniput.js';
  * sisällä kapeneva palkki ja piste.
  */
 function piirraNostosymHuuto(g) {
-  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
-  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
   el('path', {
     class: 'nostosym-huuto',
     d: 'M-1.75 -6.6 L1.75 -6.6 L1.15 1.7 L-1.15 1.7 Z',
@@ -123,8 +154,6 @@ function piirraNostosymHuuto(g) {
  * NOSTO_MAAT.GRC).
  */
 function piirraNostosymPollo(g) {
-  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
-  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
   // Korvatupsut ensin, jotta kroppa peittää niiden juuret.
   el('path', {
     class: 'nostosym-viiva',
@@ -164,8 +193,6 @@ function piirraNostosymPollo(g) {
  * paikan, joka avautuu omaan ikkunaansa.
  */
 function piirraNostosymSilma(g) {
-  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
-  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
   // Silmän kehä: kaksi vastakkaista kaarta, ei ellipsiä — kartografin
   // kynänjälki on kaari, ei sujuva muotti.
   el('path', {
@@ -191,8 +218,6 @@ function piirraNostosymSilma(g) {
 
 /** MURTUNUT PYLVÄS — historia ja rauniot (punaruskea). */
 function piirraNostosymPylvas(g) {
-  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
-  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
   // Jalusta kahtena portaana ja varsi, jonka yläpää on murtunut
   // sahalaidaksi — juuri katkos tekee pylväästä rauniomerkin.
   el('path', {
@@ -226,8 +251,6 @@ function piirraNostosymPylvas(g) {
  * tietoinen poikkeus, koska juuri värien ero kertoo mistä on kyse.
  */
 function piirraNostosymLuonto(g) {
-  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
-  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
   // Kaksi huippua — yksi kolmio olisi teltta, kaksi on vuoristo.
   el('path', {
     class: 'nostosym-vuoristo',
@@ -250,8 +273,6 @@ function piirraNostosymLuonto(g) {
 
 /** HÖYRYÄVÄ MALJA — ruoka ja juoma (viininpunainen). */
 function piirraNostosymMalja(g) {
-  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
-  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
   // Malja jalkoineen yhtenä täyttönä: leveä suu, kapea jalka.
   el('path', {
     class: 'nostosym-malja',
@@ -268,8 +289,6 @@ function piirraNostosymMalja(g) {
 
 /** LYYRA — kulttuuri: musiikki, teatteri, taide (violetti). */
 function piirraNostosymLyyra(g) {
-  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
-  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
   // Kaksi käsivartta yhtenä avoimena kaarena — lyyran tunnistettavin
   // ääriviiva. Väri on kaaressa, ei täytössä: muoto pysyy ilmavana.
   el('path', {
@@ -302,8 +321,6 @@ function piirraNostosymLyyra(g) {
  * vauhtipyörä olisi taas kiekko.
  */
 function piirraNostosymVeturi(g) {
-  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
-  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
   // Runko yhtenä täyttönä: kattila edessä, ohjaamo takana, savupiippu
   // ylös. Kulkusuunta oikealle, kuten matka.
   el('path', {
@@ -325,8 +342,6 @@ function piirraNostosymVeturi(g) {
 
 /** VAAKA — kauppa ja raha (oliivi). */
 function piirraNostosymVaaka(g) {
-  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
-  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
   // Pylväs, orsi ja ripustimet musteella; nuppi orren päällä.
   el('path', {
     class: 'nostosym-viiva',
@@ -346,8 +361,6 @@ function piirraNostosymVaaka(g) {
 
 /** SULKAKYNÄ — kieli, kirjallisuus ja legendat (tummansininen). */
 function piirraNostosymSulka(g) {
-  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
-  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
   // Sulan lapa viistossa: kaksi kaarta, jotka kohtaavat kärjessä.
   el('path', {
     class: 'nostosym-sulka',
@@ -364,8 +377,6 @@ function piirraNostosymSulka(g) {
 
 /** ANKKURI — merenkulku ja satamat (meren tummansininen). */
 function piirraNostosymMeriankkuri(g) {
-  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
-  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
   // Rengas ja poikkipuu musteella, kuten kaiverruksen ohuet osat.
   el('circle', { class: 'nostosym-ankkurirengas', cx: 0, cy: -6 , r: 1.5 }, g);
   el('path', { class: 'nostosym-viiva', d: 'M-3.4 -3.2 L3.4 -3.2' }, g);
@@ -384,8 +395,6 @@ function piirraNostosymMeriankkuri(g) {
 
 /** LAAKERISEPPELE — urheilu ja kisat (kullanvihreä). */
 function piirraNostosymSeppele(g) {
-  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
-  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
   // Kaksi oksaa, jotka nousevat alhaalta ja jäävät auki ylhäältä —
   // seppeleen tunnistaa juuri aukosta.
   el('path', {
@@ -425,8 +434,6 @@ function piirraNostosymSeppele(g) {
  * muistuta.
  */
 function piirraNostosymPortti(g) {
-  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
-  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
   // Yksi torni sakaroineen ja matala muuri sen oikealla puolella.
   el('path', {
     class: 'nostosym-kaupunki',
@@ -468,20 +475,33 @@ function piirraNostosymPortti(g) {
  * symbolia — juuri siksi tähti valittiin: kartalla se lupaa jotain,
  * mitä muualla ei ole.
  *
- * Sakaroiden juureen jäävä kehä (nostosym-tahtikeha) on hiuksenohut
- * musteviiva, joka sitoo tähden laattaan samalla tavalla kuin
- * kaiverruksissa — ilman sitä tähti kelluu irrallaan.
+ * TÄHTI ON PERHEEN AINOA, JOKA EI TULE KUVANA (NOSTOSYM_GENEROIDUT):
+ * kompassiruusun sakarat ovat suoria viivoja ja teräviä kärkiä, jotka
+ * kestävät koodilla piirrettynä pienenemisen paremmin kuin rasterina.
+ * Läpinäkyvässä mustetyylissä (ks. tiedoston alku) se on siksi ainoa,
+ * jonka kontrasti pergamentilla on TÄMÄN tiedoston vastuulla — ja
+ * siitä huolehtii tähden oma musteääriviiva (css .nostosym-tahti).
+ *
+ * Sakaroiden juuressa oli 26.–27.8.2026 hiuksenohut kehä, joka sitoi
+ * tähden aluslaattaan. Laatan mukana kehäkin poistui: ilman laattaa se
+ * olisi ollut irrallinen rengas keskellä pergamenttia.
  */
 function piirraNostosymTahti(g) {
-  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
-  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
-  el('circle', { class: 'nostosym-tahtikeha', r: 5.6 }, g);
+  /*
+   * SAKARAT LIHOIVAT LAATAN POISTUESSA (27.8.2026). Vanha tähti oli
+   * hyvin teräväpiikkinen (sisänurkka säteellä 2,2), ja laatan päällä
+   * se toimi: vaalea kiekko antoi muodolle massan. Ilman laattaa
+   * yhdentoista pikselin kohdemerkki kutistui pelkäksi kultaiseksi
+   * pisteeksi. Nyt sisänurkka on säteellä 4,6, väli-ilmansuunnat 5,8
+   * ja kärjet ulottuvat merkin reunaan asti — tähdellä on keskus, joka
+   * kantaa kullan, eivätkä pelkät piikit.
+   */
   el('path', {
     class: 'nostosym-tahti',
-    d: 'M0.00 -8.80 L0.84 -2.03 L3.54 -3.54 L2.03 -0.84 L8.80 0.00 '
-      + 'L2.03 0.84 L3.54 3.54 L0.84 2.03 L0.00 8.80 L-0.84 2.03 '
-      + 'L-3.54 3.54 L-2.03 0.84 L-8.80 0.00 L-2.03 -0.84 '
-      + 'L-3.54 -3.54 L-0.84 -2.03 Z',
+    d: 'M0.00 -10.00 L1.76 -4.25 L4.10 -4.10 L4.25 -1.76 L10.00 0.00 '
+      + 'L4.25 1.76 L4.10 4.10 L1.76 4.25 L0.00 10.00 L-1.76 4.25 '
+      + 'L-4.10 4.10 L-4.25 1.76 L-10.00 0.00 L-4.25 -1.76 '
+      + 'L-4.10 -4.10 L-1.76 -4.25 Z',
   }, g);
 }
 
@@ -548,20 +568,22 @@ export function piirraNostosymboli(g, symboli) {
     return;
   }
   /*
-   * GENEROITU KAIVERRUSKUVA LAATALLA (omistajan tilaus 26.8.2026 ilta:
-   * "Symboleista voisi tehdä generoimalla paremmat" + "Lisää peliin
-   * niin katson"). Pergamenttilaatan ja mustereunan piirtää edelleen
-   * koodi, jotta väri- ja kokokieli pysyy yhdessä paikassa
-   * (.github/workflows/generoi-symbolit.yml); vain glyyfi tulee
-   * kuvana. Jos kuva ei lataudu (offline ennen esilatausta, rikkoutunut
+   * GENEROITU KAIVERRUSKUVA SUORAAN KARTALLE (omistajan tilaus
+   * 26.8.2026 ilta: "Symboleista voisi tehdä generoimalla paremmat" +
+   * "Lisää peliin niin katson"; läpinäkyvä mustetyyli 27.8.2026, ks.
+   * tiedoston alku). Kuva peittää koko entisen laatan alan
+   * (NOSTOSYM_R * 2), koska laattaa ei enää piirretä sen ympärille —
+   * merkin ulkomitta pysyi siis samana ja glyyfi kasvoi.
+   *
+   * Jos kuva ei lataudu (offline ennen esilatausta, rikkoutunut
    * tiedosto), ryhmä tyhjennetään ja sama merkki piirretään koodilla —
    * vanhat piirtäjät ovat siis VARAPOLKU, eivät kuollutta koodia.
+   * Nimiö on tarkoituksella ryhmän ULKOPUOLELLA (kutsujat), jotta
+   * tyhjennys ei vie sitä mukanaan.
    */
-  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
-  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
   const kuva = el('image', {
     href: NOSTOSYM_KUVAT[tunnus],
-    x: -7.5, y: -7.5, width: 15, height: 15,
+    x: -NOSTOSYM_R, y: -NOSTOSYM_R, width: NOSTOSYM_R * 2, height: NOSTOSYM_R * 2,
     preserveAspectRatio: 'xMidYMid meet',
   }, g);
   // Vanha WebKit lukee vain xlink-nimiavaruuden osoitteen.
@@ -573,14 +595,24 @@ export function piirraNostosymboli(g, symboli) {
 }
 
 /*
- * Generoidut symbolikuvat (gpt-image-1, 19th-century copperplate
- * engraving, läpinäkyvä pohja; erä 26.8.2026, katsottu silmin).
- * Leikattu sisältöön ja pienennetty 96 px:iin — merkki näkyy ~21 px
- * kokoisena, joten 96 riittää retinallakin. Avaimet = piirtäjätaulu.
+ * Generoidut symbolikuvat (19th-century copperplate engraving,
+ * läpinäkyvä pohja). Leikattu sisältöön ja pienennetty 96 px:iin —
+ * merkki näkyy ~21 px kokoisena, joten 96 riittää retinallakin.
+ * Avaimet = piirtäjätaulu.
+ *
+ * KAKSI ERÄÄ. Ensimmäinen (26.8.2026, gpt-image-1) piirrettiin
+ * vaalealle aluslaatalle, ja sen ohut kaiverrusjälki riitti hyvin
+ * laatan päällä. Kun laatta poistui (läpinäkyvä mustetyyli, ks.
+ * tiedoston alku), kuudessa niistä ei ollut enää tarpeeksi mustetta
+ * pergamentin päällä: huutomerkki, vaaka, lyyra, malja, sulka ja
+ * seppele katosivat neljäntoista pikselin koossa akvarellitopografiaan.
+ * Ne generoitiin uudelleen 27.8.2026 (gpt-image-2, generoi-kuva-api.yml,
+ * tausta transparent) samoista aiheista mutta paksulla musteella.
+ * Loput seitsemän kelpasivat sellaisinaan.
  */
 /*
- * Vain jo generoidut tunnukset — puuttuva tunnus (nyt kaupunki, kunnes
- * sen kuva on hyväksytty) piirretään suoraan koodilla ilman turhaa
+ * Vain jo generoidut tunnukset — puuttuva tunnus (nyt ihme, joka
+ * piirretään koodilla) haetaan suoraan piirtäjätaulusta ilman turhaa
  * 404-pyyntöä jokaisesta merkistä.
  */
 const NOSTOSYM_GENEROIDUT = ['huuto', 'elain', 'silma', 'historia', 'luonto', 'ruoka',
@@ -590,6 +622,326 @@ const NOSTOSYM_GENEROIDUT = ['huuto', 'elain', 'silma', 'historia', 'luonto', 'r
 const NOSTOSYM_KUVAT = Object.fromEntries(
   NOSTOSYM_GENEROIDUT.map((t) => [t, `assets/kartat/symbolit/sym-${t}.webp`]),
 );
+
+/* ==================== NIMIÖ ==================== */
+
+/*
+ * MERKIN NIMIÖ (omistajan valinta 27.8.2026, montaasin C: *"lisää
+ * symbolin perään lyhyt teksti kartalle … tai symbolin alapuolelle"*).
+ *
+ * SIJOITUS ON MERKIN PERÄSSÄ eli oikealla, merkin keskiviivalla —
+ * omistajan kahdesta vaihtoehdosta ensimmäinen, ja sama asettelu kuin
+ * hyväksytyn montaasin C-näytteessä ("merkki + teksti vierekkäin").
+ * ALAPUOLI KOKEILTIIN ENSIN JA HYLÄTTIIN, ja syy on kartassa itsessään:
+ *
+ *   LEHTEEN ON JO POLTETTU NIMIÄ, JA NE OVAT MERKKIENSÄ ALLA.
+ *   Fokuslehden oma atlaskerros (tools/fokuskartta/maat.mjs) latoo
+ *   vuorten, kaupunkien ja merten nimet kuvaan keskitettynä merkkinsä
+ *   alapuolelle — Ólympos kolmionsa alle ja korkeuslukema sen alle.
+ *   Kartan kohdemerkit istuvat täsmälleen samoissa paikoissa, joten
+ *   alapuolelle ladottu nimiö osui suoraan poltetun nimen päälle:
+ *   Kreikan lehdellä "Ólympos", "Parnassós", "Taÿgetos", "Psilorítis"
+ *   ja "Pátra" painuivat kaksinkertaisina päällekkäin (kaappaus
+ *   $SP/kuvat/symbolic/z-olympos.png). Oikea puoli antaa merkkikerrokselle
+ *   OMAN KAISTANSA, jota lehden painojälki ei käytä — kaksi nimistöä ei
+ *   siis voi enää tapella samasta kohdasta.
+ *
+ * Sivu on aina sama (oikea), joten kiertävällä laudalla saman kohteen
+ * kaksi kopiota näyttävät varmasti samalta, eikä sijoitusta tarvitse
+ * valita merkkikohtaisesti. Ateenan kaltaisessa nipussa
+ * (js/fokusniput.js) sarake kasvaa alaspäin ja vaakatila on vapaana,
+ * joten sama sääntö kelpaa siellä ilman poikkeusta.
+ *
+ * TYPOGRAFIA ON KARTAN OMAA (css .nostosym-nimio ~ .fokus-nimi):
+ * sama kaunokirjasin, vaimea muste ja pergamentinvaalea halo
+ * (paint-order: stroke), jotta nimi luetaan myös vuoren ruskean tai
+ * meren harmaan päältä. Nimiö ei ota napautuksia vastaan: se on
+ * leveämpi kuin merkki, ja muuten se peittäisi naapurin osuma-alueen.
+ */
+
+/**
+ * Nimiön kirjasinkoko merkin omissa yksiköissä (merkin halkaisija on
+ * NOSTOSYM_R * 2 = 20,8). Kartan kohdemerkissä ryhmä kutistuu vielä
+ * KOHDE_SYMBOLI_SKAALAlla, joten tästä tulee ruudulla lehden
+ * perustasolla noin seitsemän pikseliä — sama mitta kuin lehteen
+ * poltetuilla vuorennimillä, ja yli kartan luettavuusrajan (5 px,
+ * js/fokuskartta.js FOKUS_NIMI_LUETTAVA_PX).
+ */
+const NOSTOSYM_NIMIO_KOKO = 13.5;
+
+/** Nimiön alkukohta: merkin oikea reuna ja pieni kirjainväli. */
+const NOSTOSYM_NIMIO_X = NOSTOSYM_R + 3;
+
+/**
+ * Perusviiva merkin keskeltä alas noin kolmanneksen kirjainkorkeudesta:
+ * versaalirivi asettuu silloin optisesti merkin keskelle.
+ */
+const NOSTOSYM_NIMIO_Y = NOSTOSYM_NIMIO_KOKO * 0.36;
+
+/**
+ * Nimiön enimmäispituus merkkeinä. Pidempi nimi on kartalla nauha eikä
+ * nimiö: se peittäisi naapurit ja veisi katseen merkiltä.
+ */
+const NOSTOSYM_NIMIO_MERKKEJA = 18;
+
+/**
+ * KARTAN LYHENNYSTAPA: nimestä jää alkuosa ja lyhennyspiste, kuten
+ * 1800-luvun atlaksissa ("Halikarnassoksen." eikä "Halikarnassoks…").
+ * Rinnastus katkaistaan kokonaan — "Pamukkale ja Hierapolis" on
+ * kartalla "Pamukkale.", koska puolikas rinnastus lukisi virheeltä.
+ * Kokonaiset sanat säilyvät: kartta ei katkaise kesken sanan.
+ */
+function nostosymLyhennaNimio(nimi) {
+  const siisti = String(nimi ?? '').trim().replace(/\s+/g, ' ');
+  if (!siisti || siisti.length <= NOSTOSYM_NIMIO_MERKKEJA) return siisti;
+  const sanat = siisti.split(' ');
+  const rinnastus = sanat.findIndex((s) => s === 'ja' || s === 'sekä');
+  const kelpaavat = rinnastus > 0 ? sanat.slice(0, rinnastus) : sanat;
+  let ulos = kelpaavat[0];
+  if (ulos.length > NOSTOSYM_NIMIO_MERKKEJA) {
+    // Yksikin sana voi olla liian pitkä; silloin lyhennys osuu sanaan.
+    return `${ulos.slice(0, NOSTOSYM_NIMIO_MERKKEJA - 1)}.`;
+  }
+  for (const sana of kelpaavat.slice(1)) {
+    if (`${ulos} ${sana}`.length > NOSTOSYM_NIMIO_MERKKEJA) break;
+    ulos += ` ${sana}`;
+  }
+  return ulos === siisti ? ulos : `${ulos}.`;
+}
+
+/**
+ * NIMIÖ MERKIN PERÄÄN. Kutsuja antaa ryhmän, jossa symboli jo on —
+ * teksti tulee symbolin SISARUKSEKSI eikä sen ryhmään, koska kuvan
+ * varapolku tyhjentää oman ryhmänsä (piirraNostosymboli) eikä saa
+ * viedä nimiötä mukanaan. Palauttaa null, jos nimeä ei ole.
+ */
+export function piirraNostosymNimio(g, nimi) {
+  const teksti = nostosymLyhennaNimio(nimi);
+  if (!teksti) return null;
+  const t = el('text', {
+    class: 'nostosym-nimio',
+    x: NOSTOSYM_NIMIO_X.toFixed(2),
+    y: NOSTOSYM_NIMIO_Y.toFixed(2),
+    'font-size': NOSTOSYM_NIMIO_KOKO,
+    'text-anchor': 'start',
+    'aria-hidden': 'true',
+  }, g);
+  t.textContent = teksti;
+  return t;
+}
+
+/* ==================== RASTEROITU KARTTAMERKKI ==================== */
+
+/*
+ * MERKKI + NIMIÖ YHTENÄ VALMIINA KUVANA (omistajan lisätilaus
+ * 27.8.2026: *"uudet karttasymbolit kannattaa RASTEROIDA
+ * suorituskyvyn takia — älä jätä niitä eläviksi SVG/DOM-elementeiksi
+ * joita selain piirtää uudelleen panoroinnissa"*).
+ *
+ * ── MIKÄ TÄSSÄ MAKSAA ──────────────────────────────────────────────
+ *
+ * Kartan merkkikerroksessa on kolmisenkymmentä kohdetta ja kiertävällä
+ * laudalla jokainen kahtena kappaleena. Ennen rasterointia kukin oli
+ * <image> JA <text>, jonka halo on `paint-order: stroke` — eli teksti
+ * ladotaan ja vedostetaan kahdesti joka kerta kun merkin muunnos
+ * muuttuu. Panoroinnissa muunnos muuttuu joka kehyksellä. Asettelua se
+ * ei vaadi (savuke-panorointi mittaa nimenomaan asetteluja, ja luku
+ * pysyi ennallaan), mutta vedostustyö on turhaa: sisältö on
+ * täsmälleen sama kehyksestä toiseen, vain paikka vaihtuu.
+ *
+ * Nyt merkki on YKSI <image>, jonka sisältö on piirretty kerran
+ * canvasille ja välimuistissa data-URLina. Panoroinnissa selaimelle jää
+ * valmiin bittikartan siirto.
+ *
+ * ── PORTAAT, JOTTA RETINA PYSYY TERÄVÄNÄ ───────────────────────────
+ *
+ * Merkki elää kartan mukana (ks. sääntö 3), joten sama merkki on
+ * lehden perustasolla ~11 px ja lähimmällä zoomiportaalla noin
+ * viisinkertainen. Yksi ainoa tarkkuus olisi joko sumea lähikuvassa
+ * tai turhan raskas yleiskuvassa, joten rasteri tehdään PORTAITTAIN:
+ * NOSTOSYM_PORTAAT on laitepikseleitä kirjaston yksikköä kohti, ja
+ * kutsuja kertoo tarpeensa (nostosymAsetaPorras) — tarve on merkin
+ * oma mittakaava × kartan suhde perustasoon × devicePixelRatio.
+ *
+ * PORRAS VAIHTUU VAIN LEVOSSA. Kutsuja tarkistaa portaan siellä, missä
+ * merkit muutenkin rakennetaan uudelleen (js/fokuskohteet.js
+ * paivitaFokuskohteet, jota ajetaan näkymän asetuttua) — ei eleen
+ * aikana, jolloin kehysbudjetti on kireimmillään. Portaan vaihtuessa
+ * välimuisti tyhjennetään, joten muistissa on kerrallaan vain yhden
+ * tarkkuuden rasterit.
+ *
+ * ── VARAPOLKU ON ENTINEN ELÄVÄ PIIRTO ──────────────────────────────
+ *
+ * Jos symbolilla ei ole generoitua kuvaa (tähti) tai kuva ei lataudu,
+ * merkki piirretään kuten ennenkin: koodipiirtäjä ja oikea <text>.
+ * Sellaisia merkkejä on kartalla korkeintaan kourallinen.
+ */
+
+/** Rasterin tarkkuusportaat: laitepikseliä kirjaston yksikköä kohti. */
+const NOSTOSYM_PORTAAT = [1.5, 3, 6, 9];
+
+/** Nykyinen porras ja sillä tehdyt rasterit (avain → Promise). */
+let NOSTOSYM_PORRAS = NOSTOSYM_PORTAAT[0];
+const NOSTOSYM_RASTERIT = new Map();
+
+/** Kerran ladatut glyyfikuvat (tunnus → Promise<HTMLImageElement>). */
+const NOSTOSYM_GLYYFIT = new Map();
+
+/** Nimiön asu luetaan CSS:stä kerran — väri ja kirjasin asuvat siellä. */
+let NOSTOSYM_ASU = null;
+
+/** Mittanauha tekstin leveydelle; yksi konteksti koko kirjastolle. */
+let NOSTOSYM_MITTA = null;
+
+/**
+ * Valitsee portaan annetulle tarpeelle. Palauttaa true, jos porras
+ * vaihtui — silloin kutsujan on rakennettava merkkinsä uudelleen.
+ */
+export function nostosymAsetaPorras(tarve) {
+  const uusi = NOSTOSYM_PORTAAT.find((p) => p >= tarve) ?? NOSTOSYM_PORTAAT.at(-1);
+  if (uusi === NOSTOSYM_PORRAS) return false;
+  NOSTOSYM_PORRAS = uusi;
+  NOSTOSYM_RASTERIT.clear();
+  return true;
+}
+
+function nostosymGlyyfikuva(tunnus) {
+  if (NOSTOSYM_GLYYFIT.has(tunnus)) return NOSTOSYM_GLYYFIT.get(tunnus);
+  const lupaus = new Promise((valmis, kaatui) => {
+    const kuva = new Image();
+    kuva.onload = () => valmis(kuva);
+    kuva.onerror = () => kaatui(new Error(tunnus));
+    kuva.src = NOSTOSYM_KUVAT[tunnus];
+  });
+  NOSTOSYM_GLYYFIT.set(tunnus, lupaus);
+  return lupaus;
+}
+
+/**
+ * Nimiön väri, halo ja kirjasin CSS:stä (.nostosym-nimio). Luetaan
+ * oikeasta elementistä eikä kirjoiteta tähän uudestaan: tyyli saa asua
+ * yhdessä paikassa, vaikka piirto tapahtuu canvasilla.
+ *
+ * KIRJASINTA EI TARVITSE ODOTTAA. --font-kauno on pelkkä
+ * järjestelmäkirjasinpino (css/styles.css) eikä yhtään verkkokirjasinta,
+ * joten canvasin lataman kirjasimen ei voi käydä niin, että rasteri
+ * paistetaan varakirjasimella ja oikea saapuu vasta sen jälkeen.
+ */
+function nostosymNimionAsu(svg) {
+  if (NOSTOSYM_ASU || !svg) return NOSTOSYM_ASU;
+  const apu = el('text', {
+    class: 'nostosym-nimio', 'font-size': NOSTOSYM_NIMIO_KOKO, visibility: 'hidden',
+  }, svg);
+  apu.textContent = 'M';
+  const t = getComputedStyle(apu);
+  NOSTOSYM_ASU = {
+    perhe: t.fontFamily || 'cursive',
+    muste: t.fill || '#46331f',
+    halo: t.stroke || 'rgba(239, 220, 180, 0.8)',
+    // strokeWidth on kirjaston yksiköitä, koska font-size on niitä.
+    haloLeveys: parseFloat(t.strokeWidth) || 2.6,
+  };
+  apu.remove();
+  return NOSTOSYM_ASU;
+}
+
+/** Yksi rasteri: glyyfi ja sen perässä nimiö. Mitat kirjaston yksiköitä. */
+async function nostosymRasteroi(tunnus, nimio, svg, porras) {
+  const glyyfi = await nostosymGlyyfikuva(tunnus);
+  const asu = nostosymNimionAsu(svg) ?? {
+    perhe: 'cursive', muste: '#46331f', halo: '#efdcb4', haloLeveys: 2.6,
+  };
+  const kirjasin = (yksikkoa) => `${(yksikkoa * porras).toFixed(2)}px ${asu.perhe}`;
+  NOSTOSYM_MITTA ??= document.createElement('canvas').getContext('2d');
+  NOSTOSYM_MITTA.font = kirjasin(NOSTOSYM_NIMIO_KOKO);
+  const tekstiLeveys = nimio
+    ? NOSTOSYM_MITTA.measureText(nimio).width / porras + asu.haloLeveys : 0;
+  const leveys = NOSTOSYM_R * 2 + (nimio ? NOSTOSYM_NIMIO_X - NOSTOSYM_R + tekstiLeveys : 0);
+  const korkeus = NOSTOSYM_R * 2;
+  const kangas = document.createElement('canvas');
+  kangas.width = Math.max(1, Math.round(leveys * porras));
+  kangas.height = Math.max(1, Math.round(korkeus * porras));
+  const ctx = kangas.getContext('2d');
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(glyyfi, 0, 0, NOSTOSYM_R * 2 * porras, NOSTOSYM_R * 2 * porras);
+  if (nimio) {
+    ctx.font = kirjasin(NOSTOSYM_NIMIO_KOKO);
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'alphabetic';
+    ctx.lineJoin = 'round';
+    // Halo ensin ja teksti päälle — sama järjestys kuin CSS:n
+    // paint-order: stroke.
+    const x = (NOSTOSYM_NIMIO_X + NOSTOSYM_R) * porras;
+    const y = (NOSTOSYM_NIMIO_Y + NOSTOSYM_R) * porras;
+    ctx.strokeStyle = asu.halo;
+    ctx.lineWidth = asu.haloLeveys * porras;
+    ctx.strokeText(nimio, x, y);
+    ctx.fillStyle = asu.muste;
+    ctx.fillText(nimio, x, y);
+  }
+  /*
+   * MITAT PALAUTETAAN PYÖRISTETYISTÄ PIKSELEISTÄ eikä lasketuista
+   * yksiköistä: canvasin leveys on kokonaisluku, ja jos <image> saisi
+   * pyöristämättömän mitan, kuvasuhteet eroaisivat prosentin murto-osan
+   * ja `preserveAspectRatio: meet` kirjelöisi merkin keskelle omaa
+   * laatikkoaan. Näin laatikko on tarkalleen bittikartan muotoinen.
+   */
+  return {
+    osoite: kangas.toDataURL('image/png'),
+    leveys: kangas.width / porras,
+    korkeus: kangas.height / porras,
+  };
+}
+
+/**
+ * KARTAN MERKKI: rasteroitu glyyfi ja nimiö yhtenä kuvana.
+ *
+ * Kutsuja antaa tyhjän ryhmän, joka on jo SVG:ssä kiinni (tyyli ja
+ * ownerSVGElement luetaan siitä). Ryhmään ilmestyy ensin tyhjä <image>
+ * ja siihen rasterin osoite heti kun se on valmis — välimuistista
+ * osuttaessa vielä samalla mikrotehtävällä. Jos rasteria ei saada,
+ * ryhmään piirretään entiseen tapaan elävä merkki ja teksti.
+ */
+export function piirraNostosymKartalle(g, symboli, nimio) {
+  const tunnus = NOSTOSYM_PIIRTAJAT[symboli] ? symboli : 'huuto';
+  // Lyhennys tehdään KERRAN tässä, jotta rasteri ja varapolku latovat
+  // varmasti saman tekstin — ja jotta välimuistin avain on se, mikä
+  // kuvaan oikeasti piirtyy.
+  const teksti = nostosymLyhennaNimio(nimio);
+  const elavana = () => {
+    g.replaceChildren();
+    NOSTOSYM_PIIRTAJAT[tunnus](g);
+    if (teksti) piirraNostosymNimio(g, teksti);
+  };
+  if (typeof document === 'undefined' || !NOSTOSYM_KUVAT[tunnus]) { elavana(); return; }
+  const kuva = el('image', {
+    class: 'nostosym-rasteri',
+    preserveAspectRatio: 'xMidYMid meet',
+  }, g);
+  // Vartijoille ja virheenetsintään: kumpi merkki ja mikä nimi.
+  kuva.dataset.symboli = tunnus;
+  kuva.dataset.nimio = teksti;
+  const porras = NOSTOSYM_PORRAS;
+  const avain = `${porras}|${tunnus}|${teksti}`;
+  let valmis = NOSTOSYM_RASTERIT.get(avain);
+  if (!valmis) {
+    valmis = nostosymRasteroi(tunnus, teksti, g.ownerSVGElement, porras);
+    NOSTOSYM_RASTERIT.set(avain, valmis);
+  }
+  valmis.then((r) => {
+    if (!kuva.isConnected) return;
+    maare(kuva, 'x', (-NOSTOSYM_R).toFixed(2));
+    maare(kuva, 'y', (-NOSTOSYM_R).toFixed(2));
+    maare(kuva, 'width', r.leveys.toFixed(2));
+    maare(kuva, 'height', r.korkeus.toFixed(2));
+    maare(kuva, 'href', r.osoite);
+    // Vanha WebKit lukee vain xlink-nimiavaruuden osoitteen.
+    kuva.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', r.osoite);
+  }).catch(() => {
+    NOSTOSYM_RASTERIT.delete(avain);
+    if (kuva.isConnected) elavana();
+  });
+}
 
 /**
  * AKTIIVISEN TÄYN ANKKURI — täyn OMA SYMBOLI, jonka päälle kupla
@@ -603,6 +955,10 @@ const NOSTOSYM_KUVAT = Object.fromEntries(
  * silti ota napautuksia vastaan (css: pointer-events), koska kupla on
  * sen päällä ja KOKO KUPLA vie lunastukseen (omistaja 26.8.2026 ilta);
  * siksi tässä ei ole osuma-aluetta eikä kuuntelijoita.
+ *
+ * EIKÄ NIMIÖTÄ (27.8.2026, läpinäkyvä mustetyyli): kartan kohdemerkki
+ * saa nimensä merkin alle, mutta täyn nimi on jo kuplassa merkin
+ * päällä. Nimiö toistaisi sen kahdesti päällekkäin.
  */
 function piirraNostosymAnkkuri(g, symboli) {
   piirraNostosymboli(g, symboli);
