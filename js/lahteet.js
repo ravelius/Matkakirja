@@ -27,8 +27,10 @@
 export const PELI = {
   nimi: 'Matkakirja ja unohdettu aarre',
   englanniksi: 'The Travel Journal and the Forgotten Treasure (ehdotus, vahvistetaan käännösvaiheessa)',
-  copyright: 'Copyright © 2026 Sami Reivinen. Kaikki oikeudet pidätetään.',
-  tekija: 'Suunnittelu, tarina, tekstit, kartat ja koodi: Sami Reivinen.',
+  copyright: 'Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy. '
+    + 'Kaikki oikeudet pidätetään.',
+  tekija: 'Suunnittelu, tarina, tekstit, kartat ja koodi: Sami Reivinen / '
+    + 'Visuaaliviestinnän Instituutti Tampere Oy (VVI).',
   apu: 'Toteutuksessa avustanut Claude (Anthropic).',
   ehdot: 'Peliä saa pelata ja lähdekoodia lukea vapaasti. Julkaisuun, '
     + 'levitykseen, muunnelmiin tai omaan tuotteeseen tarvitaan tekijän '
@@ -213,8 +215,8 @@ export const LAHTEET = [
       {
         nimi: 'Kartan grafiikka, laattojen kuvakkeet, pulmien piirrokset, '
           + 'lehtien minitehtävien aikakausjulisteet ja sovelluskuvakkeet',
-        tekija: 'Pelin omaa aineistoa (Sami Reivinen)',
-        lisenssi: 'Copyright © 2026 Sami Reivinen',
+        tekija: 'Pelin omaa aineistoa (Sami Reivinen / VVI)',
+        lisenssi: 'Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy',
       },
     ],
   },
@@ -270,7 +272,7 @@ export const LAHTEET = [
       {
         nimi: 'Syntetisoidut tehosteet ja ambienssi (Web Audio)',
         tekija: 'Pelin omaa aineistoa (js/sound.js)',
-        lisenssi: 'Copyright © 2026 Sami Reivinen',
+        lisenssi: 'Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy',
       },
     ],
   },
@@ -299,8 +301,8 @@ export const LAHTEET = [
       {
         nimi: 'Pelin omat tekstit: tarina, päiväkirjamerkinnät, kysymykset, '
           + 'väittämät, tapahtumakortit, pulmat ja tiivistelmät',
-        tekija: 'Sami Reivinen',
-        lisenssi: 'Copyright © 2026 Sami Reivinen',
+        tekija: 'Sami Reivinen / VVI',
+        lisenssi: 'Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy',
       },
     ],
   },

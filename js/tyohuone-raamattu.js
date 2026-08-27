@@ -1097,6 +1097,11 @@ export const RAAMATTU = {
           + '(App Storen hinnanvaihto, ei StoreKit-koodia). Pöllö '
           + 'ensisijaisesti ilmaiseksi Applen laitemallilla — suomen '
           + 'laatu testataan ensin.',
+        'OIKEUDET JA TEKIJYYS (omistaja 27.8.2026, AVEK-haku): pelin '
+          + 'oikeudet ovat Visuaaliviestinnän Instituutti Tampere '
+          + 'Oy:llä. Julkisissa teksteissä tekijä on VVI, ei '
+          + 'yksityishenkilö, eikä sanaa harrastusprojekti käytetä. '
+          + 'Peli pysyy toistaiseksi ilmaisena.',
         'KÄÄNNÖKSET: vasta kun suomi on lukittu; ensin englanti. '
           + 'Kielikohtaiset sisältöpaketit, ei rivi-i18n:ää.',
       ],

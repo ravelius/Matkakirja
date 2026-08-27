@@ -8,7 +8,8 @@ monista muista, mutta se ei jäljittele mitään niistä eikä sillä ole
 yhteyttä niiden oikeudenhaltijoihin. Ei riippuvuuksia, ei
 käännösvaihetta — pelkkää HTML:ää, CSS:ää ja JavaScriptiä. Pelin ideana
 on oppia ja opettaa maiden kulttuurista, arjesta ja maantieteestä
-kiinnostavasti.
+kiinnostavasti. Peliä kehittää Visuaaliviestinnän Instituutti Tampere Oy
+(VVI), tamperelainen visuaalisen viestinnän koulutus- ja sisältöyhtiö.
 
 Nimen loppuosa tulee pelin ytimestä, **unohdetuista aarteista** (engl. *forgotten
 treasures*): tutkimusmatkailija Aarni luetteloi aikoinaan maailman
@@ -257,7 +258,8 @@ Valmiit tiedostot ovat repossa, joten skriptiä tarvitaan vain kuvakkeen muuttue
 
 ## Lisenssi
 
-Copyright © 2026 Sami Reivinen. Kaikki oikeudet pidätetään — ks.
+Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy. Kaikki
+oikeudet pidätetään — ks.
 [LICENSE](LICENSE).
 
 Peliä saa pelata ja lähdekoodia lukea vapaasti. Julkaisuun, levitykseen
@@ -318,7 +320,7 @@ pakettien otsikkokommentit).
 | Rijksmuseum — vanhat piirrokset ja vedokset | Rijksmuseum, Amsterdam | Public domain |
 | Internet Archive Book Images | Internet Archive | Public domain |
 | Lippukuvat | Wikimedia Commons; nimeämistä vaativat neljä on lueteltu `js/packs/lippu-tekijat.js`:ssä | Public domain sekä CC BY-SA 2.5 ja 3.0 |
-| Kartan grafiikka, laattojen kuvakkeet, pulmien piirrokset, aikakausjulisteet, sovelluskuvakkeet | Sami Reivinen | Copyright © 2026 Sami Reivinen |
+| Kartan grafiikka, laattojen kuvakkeet, pulmien piirrokset, aikakausjulisteet, sovelluskuvakkeet | Sami Reivinen / VVI | Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy |
 
 ### Äänet
 
@@ -331,7 +333,7 @@ pakettien otsikkokommentit).
 | Musiikkinäytteet kulttuurinostoissa | Wikimedia Commons, archive.org (vain lisenssiosoitteella merkityt) | Kohteittain |
 | Suorat radiolähetykset | Asemaluettelo Radio Browserista (radio-browser.info); virrat asemien omia | **Edelleenvälityksen ehtoja ei selvitetty** |
 | Peliäänet ja avaustekstin lukuääni (`efekti-*.mp3`, `intro-puhe.mp3`) | Tuotettu ElevenLabsilla | **Ei kirjattu repoon** (ElevenLabsin tilausehdot) |
-| Syntetisoidut tehosteet ja ambienssi (Web Audio) | Sami Reivinen | Copyright © 2026 Sami Reivinen |
+| Syntetisoidut tehosteet ja ambienssi (Web Audio) | Sami Reivinen / VVI | Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy |
 
 ### Tekstit
 
@@ -340,7 +342,7 @@ pakettien otsikkokommentit).
 | Wikipedia (fi ja en) — tiivistelmät, artikkelit, kysymysten tarkistuslähteet | Wikipedian kirjoittajat | CC BY-SA (maininta ja linkki näkyvät pelissä) |
 | Project Gutenberg — aikalaislainaukset | Alkuperäisteosten kirjoittajat; digitointi Project Gutenberg | Public domain (teokset) |
 | Internet Archive ja Wikisource — lainaukset, joita Gutenbergissa ei ole | Alkuperäisteosten kirjoittajat | Public domain (teokset) |
-| Pelin omat tekstit: tarina, päiväkirja, kysymykset, väittämät, tapahtumat, pulmat, tiivistelmät | Sami Reivinen | Copyright © 2026 Sami Reivinen |
+| Pelin omat tekstit: tarina, päiväkirja, kysymykset, väittämät, tapahtumat, pulmat, tiivistelmät | Sami Reivinen / VVI | Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy |
 
 **Lisenssiltään epäselvät.** Neljä riviä yllä on merkitty lihavoituna: niiden
 lisenssiä ei ole kirjattu repoon eikä sitä ole tähän arvattu. Ne ovat V-Dem /

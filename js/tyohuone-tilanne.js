@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'Periaateikkuna: VVI tekijana, uusi Tekoaly apuna -osio, copyright Visuaaliviestinnan Instituutti Tampere Oy (myos README, LICENSE, lahteet)',
   'Kuvatekstiremontti VALMIS: paatoserä Chennai ja Mumbai (20 selitetta); koko 1133 selitteen tiedosto noudattaa nyt saantoa kuvateksti kertoo kohteesta',
   'Karttasymbolit: luonto nyt vuori+puu+aalto varein, tekniikka hoyryveturi (ei ratasta), kaupunki yksi porttitorni viirilla; Psiloritis-vuori Kreetalla klikattavissa',
   'Kuvatekstiremontti era 8: 15 Aasian kaupunkia Hanoista Kabuliin uuteen saantoon (130 selitetta)',
