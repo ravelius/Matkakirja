@@ -2,42 +2,32 @@
   "iso": "HUN",
   "lauta": "maailmankartta",
   "bbox": {
-    "x": 6282.97,
-    "y": 1386.05,
-    "w": 399.78,
-    "h": 250.02
+    "x": 6312.37,
+    "y": 1404.48,
+    "w": 341.93,
+    "h": 213.71
   },
   "rajaus": {
-    "x": 6329.1,
-    "y": 1426.16,
-    "w": 307.52,
-    "h": 169.8
+    "x": 6351.82,
+    "y": 1429.14,
+    "w": 263.03,
+    "h": 164.39
   },
   "kuva": {
     "w": 6400,
-    "h": 4003
+    "h": 4000
   },
   "tiedosto": "HUN.webp",
-  "tehty": "2026-08-26",
-  "yleinen": true,
+  "tehty": "2026-08-27",
+  "yleinen": false,
   "ikkuna": {
-    "lonKeski": 19.485817999999966,
-    "lat0": 45.141343,
-    "lat1": 49.169233,
-    "kuvasuhde": 1.8111347331328194
+    "lonKeski": 19.5,
+    "lat0": 45.2,
+    "lat1": 49.1,
+    "kuvasuhde": 1.6
   },
   "maamuodonEro": 0.6,
-  "paikat": [
-    "Miskolc",
-    "Debrecen",
-    "Szeged",
-    "Pécs",
-    "Győr",
-    "Vác",
-    "Székesfehérvár",
-    "Szombathely",
-    "Békéscsaba"
-  ],
+  "paikat": [],
   "tasaus": [
     {
       "id": "lontoo",

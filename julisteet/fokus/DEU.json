@@ -2,42 +2,32 @@
   "iso": "DEU",
   "lauta": "maailmankartta",
   "bbox": {
-    "x": 5693.7,
-    "y": 1026.75,
-    "w": 975.08,
-    "h": 609.42
+    "x": 5854.95,
+    "y": 1072.88,
+    "w": 653.43,
+    "h": 522.75
   },
   "rajaus": {
-    "x": 5973.4,
-    "y": 1097.06,
-    "w": 415.69,
-    "h": 468.79
+    "x": 5930.35,
+    "y": 1133.2,
+    "w": 502.64,
+    "h": 402.11
   },
   "kuva": {
     "w": 6400,
-    "h": 4000
+    "h": 5120
   },
   "tiedosto": "DEU.webp",
-  "tehty": "2026-08-26",
-  "yleinen": true,
+  "tehty": "2026-08-27",
+  "yleinen": false,
   "ikkuna": {
-    "lonKeski": 10.437274499999972,
-    "lat0": 45.86816266,
-    "lat1": 56.46829234,
-    "kuvasuhde": 0.8867295042011947
+    "lonKeski": 10.45,
+    "lat0": 46.6,
+    "lat1": 55.7,
+    "kuvasuhde": 1.25
   },
   "maamuodonEro": 3.4,
-  "paikat": [
-    "Frankfurt",
-    "Hamburg",
-    "Munich",
-    "Dresden",
-    "Stuttgart",
-    "Cologne",
-    "Nürnberg",
-    "Bremen",
-    "Mannheim"
-  ],
+  "paikat": [],
   "tasaus": [
     {
       "id": "lontoo",

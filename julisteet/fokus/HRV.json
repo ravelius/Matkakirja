@@ -2,40 +2,32 @@
   "iso": "HRV",
   "lauta": "maailmankartta",
   "bbox": {
-    "x": 6142.23,
-    "y": 1471.72,
-    "w": 479.18,
-    "h": 299.49
+    "x": 6177.04,
+    "y": 1495.31,
+    "w": 409.25,
+    "h": 255.78
   },
   "rajaus": {
-    "x": 6247.94,
-    "y": 1506.28,
-    "w": 267.76,
-    "h": 230.38
+    "x": 6224.26,
+    "y": 1524.82,
+    "w": 314.81,
+    "h": 196.75
   },
   "kuva": {
     "w": 6400,
     "h": 4000
   },
   "tiedosto": "HRV.webp",
-  "tehty": "2026-08-26",
-  "yleinen": true,
+  "tehty": "2026-08-27",
+  "yleinen": false,
   "ikkuna": {
-    "lonKeski": 16.4546565,
-    "lat0": 41.672809640000004,
-    "lat1": 47.29049636,
-    "kuvasuhde": 1.1622512564417884
+    "lonKeski": 16.45,
+    "lat0": 42.05,
+    "lat1": 46.85,
+    "kuvasuhde": 1.6
   },
   "maamuodonEro": 0.6,
-  "paikat": [
-    "Zagreb",
-    "Split",
-    "Osijek",
-    "Zadar",
-    "Pula",
-    "Rijeka",
-    "Šibenik"
-  ],
+  "paikat": [],
   "tasaus": [
     {
       "id": "lontoo",
