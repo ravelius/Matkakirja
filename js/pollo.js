@@ -694,11 +694,12 @@ export const POLLO_AARRE = {
    */
   kuva: 'assets/tietaja/viisas-pollo.jpg',
   huudahdus: 'Se liikkui — kätkössä oli jotain elävää!',
-  nimi: 'Viisas Pöllö',
-  selite: 'Tietäjien ikivanha matkakumppani liittyy seuraan',
-  esittely: 'Laatan alta löytyy Viisas Pöllö — tietäjien ikivanha '
-    + 'matkakumppani, joka kulkee nyt mukanasi ja kasvattaa sinua tiedon '
-    + 'tiellä. Napauta pöllöä, kun haluat kysyä jotakin maailmasta.',
+  nimi: 'Livia',
+  selite: 'Columba Livia, kirjekyyhky, liittyy seuraan',
+  esittely: 'Laatan alta löytyy Livia — täydeltä nimeltään Columba Livia, '
+    + 'kirjekyyhky, jonka suku on kantanut viestejä Caesarille ja Pariisin '
+    + 'piiritykseen ja joka kasvattaa nyt sinua tiedon tiellä. Napauta '
+    + 'häntä, kun haluat kysyä jotakin maailmasta.',
 };
 
 /** Mikrofoni samalla viivakynällä. */
@@ -893,11 +894,12 @@ function polloKehittajaTila() {
   return polloAsetus(POLLO_KEHITTAJA_TILA_AVAIN) === '1';
 }
 
-const TERVEHDYS = 'Kysy minulta mitä tahansa siitä, mitä kartalla tai '
-  + 'lehdessä juuri nyt näkyy — tai muusta maailmasta. Pelin tehtäviä en '
-  + 'ratkaise puolestasi.';
+const TERVEHDYS = 'Columba Livia, viestipalvelu. Suku on kantanut kirjeitä '
+  + 'Caesarille ja Pariisiin — sinulle kannan vaikka vain terveisiä. Kysy '
+  + 'mitä tahansa siitä, mitä kartalla tai lehdessä juuri nyt näkyy, tai '
+  + 'muusta maailmasta. Pelin tehtäviä en ratkaise puolestasi.';
 
-const EI_HEREILLA = 'Pöllö ei ole vielä hereillä.';
+const EI_HEREILLA = 'Livia ei ole vielä hereillä.';
 const EI_HEREILLA_LISA = 'Tietokumppani odottaa vielä käyttöönottoa. '
   + 'Peli toimii normaalisti ilman sitä.';
 
@@ -1112,11 +1114,11 @@ class Pollo {
      */
     const nappi = polloElementti('button', 'icon-btn pollo-nappi');
     nappi.type = 'button';
-    nappi.title = 'Viisas Pöllö';
-    nappi.setAttribute('aria-label', 'Viisas Pöllö — avaa keskustelu');
+    nappi.title = 'Livia';
+    nappi.setAttribute('aria-label', 'Livia — avaa keskustelu');
     nappi.setAttribute('aria-expanded', 'false');
     nappi.innerHTML = `<span class="icon-glyph viiva-ikoni">${POLLO_IKONI}</span>`
-      + '<span class="icon-label">Pöllö</span>';
+      + '<span class="icon-label">Livia</span>';
     nappi.addEventListener('click', (e) => {
       e.stopPropagation();
       this.vaihdaTila();
@@ -1135,7 +1137,7 @@ class Pollo {
     const paneeli = polloElementti('div', 'pollo-paneeli');
     paneeli.hidden = true;
     paneeli.setAttribute('role', 'dialog');
-    paneeli.setAttribute('aria-label', 'Viisas Pöllö');
+    paneeli.setAttribute('aria-label', 'Livia');
     // Paneelin sisällä napautus ei saa sulkea alanappirivin liukua.
     paneeli.addEventListener('click', (e) => e.stopPropagation());
 
@@ -1394,8 +1396,8 @@ class Pollo {
     const lomake = polloElementti('form', 'pollo-rivi');
     this.kentta = polloElementti('input', 'pollo-kentta');
     this.kentta.type = 'text';
-    this.kentta.placeholder = 'Kysy pöllöltä…';
-    this.kentta.setAttribute('aria-label', 'Kysymys pöllölle');
+    this.kentta.placeholder = 'Kysy Livialta…';
+    this.kentta.setAttribute('aria-label', 'Kysymys Livialle');
     this.kentta.maxLength = 300;
     this.laheta = polloElementti('button', 'pollo-laheta', '→');
     this.laheta.type = 'submit';
@@ -3358,7 +3360,7 @@ class Pollo {
     // kelaavat vielä pohjaan — uusi varaus viritetään heti perään.
     this.nollaaTyhjaTila();
     const kysymysViesti = this.lisaaViesti('kayttaja', kysymys);
-    const odotus = this.lisaaViesti('odottaa', 'Pöllö miettii…');
+    const odotus = this.lisaaViesti('odottaa', 'Livia miettii…');
     this.asetaKesken(true);
     this.viimeisetKatkelmat = [];
     /*
@@ -3510,7 +3512,7 @@ class Pollo {
       // pohjaan kuten ennenkin eikä jää tyhjän yläpuolelle.
       this.nollaaTyhjaTila();
       this.lisaaViesti('pollo', virhe?.viesti
-        ?? 'Pöllö ei saanut ajatuksesta kiinni. Yritä hetken päästä uudelleen.');
+        ?? 'Livia ei saanut kysymyksestä kiinni. Yritä hetken päästä uudelleen.');
     } finally {
       // Vikaverkko: mikään polku ei saa jättää naputusta soimaan.
       this.lopetaNaputus();

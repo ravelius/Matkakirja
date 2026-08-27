@@ -727,7 +727,7 @@ function piirraKupla(ui, city, data, tila, nappi, tyyliKesken = null) {
   const koti = nappi.parentNode ?? document.body;
   const kupla = html('div', 'fokusvirta-kupla');
   kupla.setAttribute('role', 'group');
-  kupla.setAttribute('aria-label', `${city.name}: Viisas Pöllö`);
+  kupla.setAttribute('aria-label', `${city.name}: Livia`);
   kupla.addEventListener('pointerdown', (tapahtuma) => {
     if (tapahtuma.target?.closest?.('button')) return;
     nielaiseSulkevaNapautus(tapahtuma);
@@ -1281,7 +1281,7 @@ function nappi(teksti, luokka, toiminto, este = null) {
 
 /* ---------- vaihe 2 ---------- */
 function piirraPollo(ui, city, data, kohde) {
-  otsikko(kohde, 'Viisas Pöllö', null);
+  otsikko(kohde, 'Livia', null);
   // Herokuva on kartalla Ateenan yllä (paivitaFokuskuvat), ei kuplassa:
   // puhekuplaan kuuluu puhe, ja kuva kuuluu sinne mistä puhutaan.
   piirraTeksti(kohde, data.pollo.teksti);
@@ -1293,7 +1293,7 @@ function piirraPollo(ui, city, data, kohde) {
 
 /* ---------- vaihe 3 ---------- */
 function piirraValinta(ui, city, data, tila, kohde) {
-  otsikko(kohde, 'Viisas Pöllö', data.valinta?.kysymys ?? 'Mistä haluaisit kuulla?');
+  otsikko(kohde, 'Livia', data.valinta?.kysymys ?? 'Mistä haluaisit kuulla?');
   const jaljella = fokusvirtaJaljella(tila, data);
   const napit = jaljella.map((taky) => nappi(taky.nappi, '', () => {
     sfx.play('paper');
@@ -1327,7 +1327,7 @@ function piirraValinta(ui, city, data, tila, kohde) {
 function piirraTaky(ui, city, data, tila, kohde) {
   const taky = data.takyt.find((t) => t.id === tila.taky);
   if (!taky) { piirraValinta(ui, city, data, tila, kohde); return; }
-  otsikko(kohde, 'Viisas Pöllö', taky.otsikko ?? taky.nappi);
+  otsikko(kohde, 'Livia', taky.otsikko ?? taky.nappi);
   piirraKuva(ui, kohde, taky.kuva);
   piirraTeksti(kohde, taky.teksti);
   piirraMinivisa(ui, city, data, taky, kohde);
@@ -1351,7 +1351,7 @@ function piirraTaky(ui, city, data, tila, kohde) {
 function piirraKohde(ui, city, data, tila, kohde) {
   const nosto = (data.kohteet ?? []).find((k) => k.id === tila.kohde);
   if (!nosto) { piirraValinta(ui, city, data, tila, kohde); return; }
-  otsikko(kohde, 'Viisas Pöllö', nosto.nimi ?? null);
+  otsikko(kohde, 'Livia', nosto.nimi ?? null);
   piirraTeksti(kohde, nosto.teksti ?? '');
   piirraNapit(kohde, [nappi(nosto.paluu ?? 'Takaisin', 'primary', () => {
     sfx.play('paper');
@@ -1416,7 +1416,7 @@ function piirraMinivisa(ui, city, data, taky, kohde) {
       if (oikein) {
         const laatikkoToast = ui.buildToast?.({
           kind: 'stamp', icon: 'kukkaro',
-          text: `+${TAKY_PALKKIO} puntaa`, sub: 'Pöllön täky ratkesi',
+          text: `+${TAKY_PALKKIO} puntaa`, sub: 'Livian täky ratkesi',
         });
         if (laatikkoToast) {
           setTimeout(() => ui.removeToast(laatikkoToast), TOAST_MS.default);
@@ -1444,7 +1444,7 @@ function piirraMinivisa(ui, city, data, taky, kohde) {
 
 /* ---------- vaihe 5 ---------- */
 function piirraOppitunti(ui, city, data, kohde) {
-  otsikko(kohde, 'Viisas Pöllö', data.oppitunti.otsikko);
+  otsikko(kohde, 'Livia', data.oppitunti.otsikko);
   piirraKuva(ui, kohde, data.oppitunti.kuva);
   piirraTeksti(kohde, data.oppitunti.teksti);
   piirraNapit(kohde, [nappi(data.kohtaaminen?.nappi ?? 'Jatka', 'primary', () => {
@@ -1693,7 +1693,7 @@ function naytaPolloKupla(ui, teksti, { ruksi: ruksillinen = false } = {}) {
   const koti = nappi.parentNode ?? document.body;
   const kupla = html('div', 'fokusvirta-kupla fokusvirta-vinkki');
   kupla.setAttribute('role', 'note');
-  kupla.setAttribute('aria-label', 'Viisas Pöllö vinkkaa');
+  kupla.setAttribute('aria-label', 'Livia vinkkaa');
   kupla.addEventListener('pointerdown', (tapahtuma) => {
     if (tapahtuma.target?.closest?.('label, input')) return;
     // Sama nielu kuin ison kuplan sulussa: napautus loppuu vinkkiin

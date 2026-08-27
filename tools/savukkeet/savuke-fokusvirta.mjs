@@ -359,7 +359,7 @@ const karki = await sivu.evaluate(() => {
   return { arvo, vasen: el.getBoundingClientRect().left };
 });
 vaadi('vaihe 2 on pöllön huomio KUPLASSA, ei kortissa',
-  tila?.vaihe === 'pollo' && tila.kupla === true && tila.ylarivi.includes('Pöllö'),
+  tila?.vaihe === 'pollo' && tila.kupla === true && tila.ylarivi.includes('Livia'),
   JSON.stringify(tila));
 vaadi('pöllön teksti on lyhennetty päätoimittajan versioon',
   tila?.teksti.startsWith('Isoisäsi ei koskaan saanut tietää, miten kullan kävi.')

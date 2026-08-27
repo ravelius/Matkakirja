@@ -1606,10 +1606,11 @@ export const FOKUSKOHTEET_GRC = [
      * tarkoitti nimenomaan sitä kolikkoa. Akropoliin nykyesiintymistä
      * EI väitetä mitään — sellaista lähdettä ei ole.
      *
-     * PÖLLÖN OMA HEITTO on tekstin viimeinen lause. Se on noston omaa,
-     * hyväksyttyä tekstiä eikä sitä ole muutettu tässä siirrossa; jos
-     * kartan tietoruudun neutraali ääni (ks. tiedoston alku) vaatii sen
-     * pois, poisto on päätoimittajan tekstipäätös eikä siirron.
+     * HAHMON OMA HEITTO oli tekstin viimeinen lause ("En sano tästä
+     * enempää, jottei kukaan luulisi minun kehuvan sukuani."). Se on
+     * korvattu neutraalilla faktalauseella pulukokeilussa 27.8.2026:
+     * kartan tietoruudun ääni on neutraali, eikä pikkupöllö saa puhua
+     * pelin hahmon suulla. Kohde itse on Ateenan oikea laji ja pysyy.
      */
     id: 'pikkupollo',
     nimi: 'Pikkupöllö',
@@ -1645,8 +1646,7 @@ export const FOKUSKOHTEET_GRC = [
       + 'kantaminen Newcastleen. Kopio samasta kolikosta on nykyisin '
       + 'Kreikan yhden euron rahassa.\n\n'
       + 'Kahdessatuhannessa vuodessa laji ei ole muuttanut ilmettään '
-      + 'senttiäkään. En sano tästä enempää, jottei kukaan luulisi minun '
-      + 'kehuvan sukuani.',
+      + 'senttiäkään: sama lintu katsoo yhä sekä kalliolta että kolikosta.',
     lahde: 'en-Wikipedia "Little owl" (osiot "Taxonomy", "Description", '
       + '"Distribution and habitat", "Status" ja "In human culture"), '
       + '"Owl of Athena" (osio "Ancient Greece") ja "Owls to Athens" '

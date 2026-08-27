@@ -2557,7 +2557,7 @@ export class Game {
         p.finds.push('empty');
         this.kirjaaLoytopaikka(p, cityId);
         const city = this.board.cityById.get(cityId);
-        this.say(p.id, `${p.name} käänsi ensimmäisen laatan kaupungissa ${city.name} — kätköstä löytyi Viisas Pöllö!`);
+        this.say(p.id, `${p.name} käänsi ensimmäisen laatan kaupungissa ${city.name} — kätköstä löytyi Livia!`);
         this.checkWin();
         return 'pollo';
       }

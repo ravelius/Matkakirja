@@ -1035,7 +1035,7 @@ function avaaNostonKortti(ui, nosto) {
   // Ylärivi kertoo KUKA nostoa tarjoaa: pöllö on ikivanha
   // silminnäkijä-reportteri, ja täkynostot ovat sen heiniä (Raamattu,
   // PÖLLÖN KARAKTÄÄRI).
-  sisalto.appendChild(html('p', 'fokusnosto-ylarivi', 'Pöllön leikekirja'));
+  sisalto.appendChild(html('p', 'fokusnosto-ylarivi', 'Livian leikekirja'));
   sisalto.appendChild(html('h3', 'fokusnosto-kortti-otsikko', nosto.otsikko));
   if (nosto.kuva) piirraNostonKuva(sisalto, nosto.kuva);
   const teksti = html('div', 'fokusnosto-teksti');

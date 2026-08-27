@@ -29,10 +29,11 @@ import { html } from './ui-apurit.js';
  * tietäjätasoa (etulause poistettu omistajan pyynnöstä 18.8.2026).
  * Tekstiä ei muuteta ilman päätoimittajaa.
  */
-export const TIETAJASELITYS = 'Viisas Pöllö — tietäjien ikivanha matkakumppani — kulkee '
-  + 'mukanasi ja kasvattaa sinua tiedon tiellä. Jokainen uusi kaupunki, lauta ja oikea '
-  + 'vastaus kartuttaa tietäjäpisteitä, ja pisteet nostavat tietäjätasoa: untuvikosta aina '
-  + 'Tietäjäksi iänikuiseksi asti.';
+export const TIETAJASELITYS = 'Livia — täydeltä nimeltään Columba Livia, kirjekyyhky, '
+  + 'jonka suku on kantanut viestejä Caesarille ja Pariisin piiritykseen (ja hän kyllä '
+  + 'kertoo sen, jos aihetta on) — kulkee mukanasi ja kasvattaa sinua tiedon tiellä. '
+  + 'Jokainen uusi kaupunki, lauta ja oikea vastaus kartuttaa tietäjäpisteitä, ja pisteet '
+  + 'nostavat tietäjätasoa: untuvikosta aina Tietäjäksi iänikuiseksi asti.';
 
 /**
  * Avaa tasogallerian.
