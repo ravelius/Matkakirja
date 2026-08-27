@@ -4117,12 +4117,13 @@ test('zoomiportaat lasketaan laudan koosta eikä kiinteinä kertoimina', () => {
   assert.ok(saapuminen(7200) > 900 && saapuminen(7200) < 1800, 'iso lauta saapuu väärälle tasolle');
 });
 
-test('zoomipainikkeet toimivat kaikilla laudoilla ja ruuduilla', () => {
-  // Remontin M7a: zoomaaPainikkeella asuu js/kartta.js:ssä.
+test('porraszoomaus toimii kaikilla laudoilla ja ruuduilla', () => {
+  // Remontin M7a: zoomaaPainikkeella asuu js/kartta.js:ssä. Napit
+  // poistettiin 27.8.2026, mutta metodi jäi: hiiren rullan naksu ajaa
+  // portaat sillä, ja siksi tämä testi vartioi sitä yhä.
   const ui = readFileSync(new URL('../js/kartta.js', import.meta.url), 'utf8');
-  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
-  assert.match(html, /id="zoom-in"/);
-  assert.match(html, /id="zoom-out"/);
+  assert.match(ui, /this\.zoomaaPainikkeella\(suunta\)/,
+    'rullan naksu ei enää aja zoomiportaita');
   // mannerZoomTarpeen rajaa vain AUTOMAATTISEN zoomauksen (Eurooppa,
   // kapea ruutu). Jos painikkeet alkaisivat kysyä sitä, tietokoneella ja
   // muilla laudoilla ne eivät tekisi mitään — juuri se oli korjattava.
@@ -4222,13 +4223,65 @@ test('nipistyszoomaus on olemassa', () => {
   assert.match(css, /#board \{ touch-action: none; \}/,
     'kokonäkymän touch-action puuttuu — selain zoomaisi sivua');
   /*
-   * Painikkeet piilotetaan kosketuslaitteilta, koska siellä on
-   * nipistys. Jos ele katoaa mutta piilotus jää, kartalla ei olisi
-   * enää mitään tapaa zoomata — siksi nämä kaksi kuuluvat samaan
-   * testiin.
+   * ZOOMI ON YKSIN ELEIDEN VARASSA (omistajan tilaus 27.8.2026:
+   * +/- -napit pois). Ennen tätä sama testi vartioi, että napit
+   * piilotetaan kosketuslaitteilta — nyt niitä ei ole lainkaan, joten
+   * vaite kääntyi: markkinointiin ei saa jäädä nappia, ja eleen on
+   * oltava olemassa. Jos ele katoaisi, kartalla ei olisi enää mitään
+   * tapaa zoomata.
    */
-  assert.match(css, /\(pointer: coarse\) and \(hover: none\)[\s\S]{0,120}\.zoomi \{ display: none; \}/,
-    'zoomipainikkeiden piilotus kosketuslaitteilta puuttuu');
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  assert.doesNotMatch(html, /id="zoom-in"|id="zoom-out"|class="zoomi"/,
+    'kartan +/- -napit on poistettu — jäänne palasi merkkaukseen');
+  assert.doesNotMatch(css, /^\.zoomi[ ,{[]/m,
+    'kartan +/- -nappien tyylit on poistettu — jäänne palasi tyyleihin');
+});
+
+test('trackpadin eleet kartalla: vieritys panoroi, nipistys on portaaton', () => {
+  /*
+   * Omistajan tilaus 27.8.2026. Kolme elettä, kolme käytöstä — ja
+   * kaikki kolme on nyt AINOA tapa zoomata ja panoroida työpöydällä,
+   * koska +/- -napit poistettiin. Sama syy kuin nipistystestissä: jos
+   * jokin näistä katoaa hiljaa, kartalla ei ole enää mitään.
+   */
+  const ui = readFileSync(new URL('../js/kartta.js', import.meta.url), 'utf8');
+  const wheel = ui.match(/\['wheel', \(e\) => \{[\s\S]*?\n {6}\}\],/)?.[0];
+  assert.ok(wheel, 'wheel-käsittelijää ei löytynyt');
+
+  // 1) Kahden sormen vieritys panoroi. Vanha 10.8. tehty suodatus
+  // ("jos ei nipistys eikä naksu, poistu") on nimenomaan kumottu.
+  assert.match(wheel, /rullaPanoroi\(e\)/, 'kahden sormen vieritys ei panoroi');
+  assert.doesNotMatch(wheel, /if \(!nipistysEle && !rullanNaksu\) return;/,
+    'trackpadin vieritys suodatetaan taas pois');
+  // Panorointi kulkee raahauksen omaa rajauspolkua, ei omaa laskentaansa.
+  const panoroi = ui.match(/const rullaPanoroi = \(e\) => \{[\s\S]*?\n {4}\};/)[0];
+  assert.match(panoroi, /this\.rajaaKasinPan\(/, 'panorointi ohittaa raahauksen rajat');
+  assert.match(panoroi, /this\.asetaPan\(/, 'panorointi ei kirjoita siirtoa asetaPanilla');
+  // Sisältö seuraa sormia: siirto on deltan vastaluku.
+  assert.match(panoroi, /-e\.deltaX/, 'vaakasuunta ei seuraa sormia');
+  assert.match(panoroi, /-e\.deltaY/, 'pystysuunta ei seuraa sormia');
+  // Jatkuva virta on kuin raahaus: rasterointi odottaa eleen loppua.
+  assert.match(panoroi, /kartanRaahaus = true/, 'raahauslippu ei nouse rullapanoroinnissa');
+
+  // 2) Nipistys on portaaton ja kulkee kosketusnipistyksen polkua.
+  const nipistaa = ui.match(/const rullaNipistaa = \(e\) => \{[\s\S]*?\n {4}\};/)[0];
+  assert.match(nipistaa, /Math\.exp\(-e\.deltaY \* RULLAN_NIPISTYS_HERKKYYS\)/,
+    'nipistyksen portaaton kerroin puuttuu');
+  assert.match(nipistaa, /aloitaNipistysMitasta\(/, 'nipistys ei käytä kosketuseleen polkua');
+  assert.match(nipistaa, /paivitaNipistysMitasta\(/, 'nipistys ei käytä kosketuseleen polkua');
+  // Kartta ei saa toistua: raja on ehdoton myös rullanipistyksessä.
+  assert.match(nipistaa, /this\.zoomiRajat\(\)/, 'nipistyksen rajat puuttuvat');
+  // Kuristin kuuluu naksulle, ei virralle.
+  assert.doesNotMatch(nipistaa, /RULLAN_VALI_MS/, 'kuristin jäi nipistykseen');
+  // Ele päättyy taukoon, ja päätös viimeistelee eleen kuin sormen irrotus.
+  assert.match(ui, /const paataRullanEle = \(\) => \{[\s\S]*?paataNipistys\(\)/,
+    'rullaeleen viimeistely ei päätä nipistystä');
+  assert.match(ui, /setTimeout\(paataRullanEle, RULLAN_LOPPU_MS\)/,
+    'wheel-virran päättymisen debounce puuttuu');
+
+  // 3) Hiiren rullan naksu zoomaa yhä portain, kuristimen kanssa.
+  assert.match(wheel, /rullanNaksu[\s\S]*?RULLAN_VALI_MS[\s\S]*?zoomaaPainikkeella\(suunta\)/,
+    'rullan naksun porraszoomaus katosi');
 });
 
 test('maailmankartta on kiertävä ja kaupungit pysyvät laudalla', () => {

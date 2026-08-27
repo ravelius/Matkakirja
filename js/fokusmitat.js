@@ -629,8 +629,11 @@ const LIUKUVARA = 160;
  *
  * Lista on VALITSIMIA eikä mittoja: jokainen näistä elää oman
  * sääntönsä mukaan (kartuutsin leveys maan nimestä, napit ja pöllö
- * turva-alueesta, zoomiportaat siitä onko laitteessa osoitinta), joten
- * ainoa kestävä mitta on ajossa luettu ruutulaatikko.
+ * turva-alueesta), joten ainoa kestävä mitta on ajossa luettu
+ * ruutulaatikko.
+ *
+ * Kartan zoomiportaat (.zoomi) olivat listalla, kunnes napit
+ * poistettiin 27.8.2026 — kartan oikea reuna on nyt vapaa.
  *
  * Maataulu EI ole listalla vaikka sekin väistetään: sen avaus on
  * scaleY-siirtymä, ja ruutulaatikko kertoisi kesken animaation väärän
@@ -641,7 +644,6 @@ const KALUSTEET = [
   '.fokus-kartuutsi',
   '.fokus-jana',
   '.toimintorivi button',
-  '.zoomi',
   '.pollo-nappi.pollo-kelluu',
 ];
 

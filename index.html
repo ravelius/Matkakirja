@@ -376,14 +376,10 @@
             <path d="M16.2 10.4v4.2"/><path d="M16.2 8.6v.1"/>
           </svg>
         </button>
-        <div class="zoomi" role="group" aria-label="Kartan zoomaus">
-          <button type="button" id="zoom-in" class="zoomi-nappi" aria-label="Lähennä karttaa">
-            <span aria-hidden="true">+</span>
-          </button>
-          <button type="button" id="zoom-out" class="zoomi-nappi" aria-label="Loitonna karttaa">
-            <span aria-hidden="true">−</span>
-          </button>
-        </div>
+        <!-- Kartan +/- -napit poistettu 27.8.2026 (omistajan tilaus):
+             kosketuslaitteilla ne olivat piilossa jo ennestään, ja
+             työpöydällä trackpadin nipistys, rullan naksu ja kahden
+             sormen vieritys hoitavat saman (js/kartta.js). -->
         <!-- Vanhan kiikarin linssi: sumennus, vihreä sävy ja värikehät
              reunoilla. Nousee esiin vasta zoomauksen jälkeen. -->
         <div class="kiikari" aria-hidden="true"></div>

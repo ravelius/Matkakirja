@@ -1365,63 +1365,14 @@ body.aloitus-zoom .kiikari {
   color: rgba(245, 231, 200, 0.95);
 }
 
-.zoomi {
-  position: absolute;
-  right: 0.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  z-index: 3;
-}
-
-.zoomi[hidden] { display: none; }
-
 /*
- * Zoomipainikkeet pois kosketuslaitteilta (omistajan toive): siellä
- * zoomataan nipistämällä, ja napit peittävät karttaa turhaan.
- *
- * Ehto on LAITTEEN KYKY eikä käyttöjärjestelmä. "Piilota iOS:llä"
- * kuulostaa samalta mutta on eri asia: se jättäisi napit Androidiin,
- * jossa nipistys toimii samoin, ja veisi ne iPadista siinäkin
- * tapauksessa että siihen on kytketty hiiri. Karkea osoitin ilman
- * osoitinta kartalla tarkoittaa sormea — ja sormella on nipistys.
+ * KARTAN +/- -PAINIKKEET (.zoomi, .zoomi-nappi) on POISTETTU
+ * 27.8.2026 (omistajan tilaus). Kosketuslaitteilta ne oli piilotettu
+ * jo ennestään mediaehdolla, koska siellä zoomataan nipistämällä; nyt
+ * myös työpöydällä on eleet: trackpadin nipistys zoomaa portaattomasti,
+ * hiiren rullan naksu portain ja kahden sormen vieritys panoroi
+ * (js/kartta.js, TRACKPADIN ELEET). Napit vain peittivät karttaa.
  */
-@media (pointer: coarse) and (hover: none) {
-  .zoomi { display: none; }
-}
-
-.zoomi-nappi {
-  width: 2.15rem;
-  height: 2.15rem;
-  /* Sormelle riittävä osumapinta, vaikka nappi näyttää pieneltä. */
-  min-width: 40px;
-  min-height: 40px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  border: 1px solid var(--line);
-  background: rgba(239, 220, 180, 0.9);
-  color: var(--map-ink);
-  font-size: 1.35rem;
-  line-height: 1;
-  font-weight: 700;
-  cursor: pointer;
-  box-shadow: 0 1px 3px rgba(28, 20, 12, 0.35);
-  /* Kaksoisnapautus ei saa zoomata selainta itseään. */
-  touch-action: manipulation;
-}
-
-.zoomi-nappi:hover:not(:disabled) { background: var(--paper); }
-.zoomi-nappi:active:not(:disabled) { transform: scale(0.94); }
-
-/* Päässä oleva nappi himmenee mutta jää paikalleen: katoava nappi
-   saisi sormen etsimään sitä joka painalluksen jälkeen. */
-.zoomi-nappi:disabled {
-  opacity: 0.35;
-  cursor: default;
-}
 
 /*
  * Kartan oma ohjerivi (.board-hint) ja vuorolaatikon tilarivi
@@ -17345,11 +17296,11 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
  * reunaa. Fokusnäkymässä alalaidassa on lisäksi mittajana (oikea
  * alanurkka), ja pöllö on sen yläpuolella samasta syystä.
  *
- * SIVUSUUNTA. Kartan zoomiportaat (.zoomi) ovat kartan oikeassa
- * reunassa PYSTYSUUNNASSA KESKELLÄ, joten ne eivät ole tämän tiellä —
- * ja kosketuslaitteilta ne on piilotettu kokonaan. Sama 1.1rem kuin
- * lehtinäkymässä pitää napin samalla pystylinjalla molemmissa tiloissa,
- * jolloin se ei hypi sivusuunnassa lehteä avattaessa.
+ * SIVUSUUNTA. Kartan oikea reuna on vapaa: zoomiportaat (.zoomi)
+ * poistettiin 27.8.2026 eleiden tieltä, joten mikään ei ole tämän
+ * tiellä. Sama 1.1rem kuin lehtinäkymässä pitää napin samalla
+ * pystylinjalla molemmissa tiloissa, jolloin se ei hypi sivusuunnassa
+ * lehteä avattaessa.
  *
  * Turva-alue lasketaan mukaan molempiin suuntiin: iPhonen alapalkki ei
  * saa syödä nappia (viewport-fit=cover on index.html:n metassa).

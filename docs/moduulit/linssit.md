@@ -764,13 +764,13 @@ Miksi tämä eikä muu:
   (213–224) ovat myös valmiina. Sulkeutumislogiikka on kirjoitettu
   (`js/main.js` 261–288: valinta, `pointerdown` muualle, `Esc`, eivät
   kaksi valikkoa yhtä aikaa).
-* **Kosketuslaitteella se toimii.** `@media (pointer: coarse) and
-  (hover: none)` piilottaa `.zoomin` kokonaan (`css/styles.css`
-  562–598), joten valitsinta EI saa laittaa kartan oikeaan reunaan
-  zoomipainikkeiden viereen — se katoaisi juuri iPadilta, jolla peliä
-  eniten pelataan. Ylärivi ei katoa. `@media (pointer: coarse) { button
-  { min-height: 46px } }` (3796–3799) antaa riveille kosketuskoon
-  ilmaiseksi.
+* **Kosketuslaitteella se toimii.** Ylärivi ei katoa millään
+  laitteella. `@media (pointer: coarse) { button { min-height: 46px } }`
+  (3796–3799) antaa riveille kosketuskoon ilmaiseksi.
+  (Vanha muotoilu neuvoi tässä välttämään kartan oikeaa reunaa, koska
+  zoomipainikkeet `.zoomi` piilotettiin siellä kosketuslaitteilta.
+  Painikkeet POISTETTIIN kokonaan 27.8.2026 — zoomi ja panorointi
+  hoidetaan eleillä — joten kartan oikea reuna on nyt vapaa.)
 * Vaaka-asentoon ei suunnitella mitään: `pointer: coarse` +
   `orientation: landscape` piilottaa koko `.appin` (3812–3836).
 

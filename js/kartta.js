@@ -951,21 +951,18 @@ export class Kartta {
     nappi.setAttribute('aria-pressed', String(this.maatiedotHalutaan()));
   }
 
+  /**
+   * Kartan kalusteet zoomitason mukaan.
+   *
+   * NIMI ON PERUA +/- -PAINIKKEILTA, jotka poistettiin 27.8.2026
+   * (omistajan tilaus): zoomi hoidetaan eleillä, ja portaiden päät
+   * tuntee zoomaaPainikkeella itse. Kutsupaikkoja on kymmeniä — joka
+   * piirto, joka kamera-ajo — ja niistä jokainen tarvitsee yhä Maiden
+   * lehdet -napin päivityksen, joten metodi jäi paikalleen sen
+   * ainoana tehtävänään.
+   */
   paivitaZoomiNapit() {
-    // Maiden lehdet -nappi elää samaa elämää kuin zoomi: se piiloutuu
-    // avausnäkymässä ja palaa kartan mukana. Kutsu on ennen zoomin
-    // varhaista paluuta, jottei se jää tekemättä.
     this.paivitaMaalehtiNappi();
-    const sisaan = document.getElementById('zoom-in');
-    const ulos = document.getElementById('zoom-out');
-    if (!sisaan || !ulos) return;
-    const piilossa = this.avausNakymassa();
-    const ryhma = sisaan.parentElement;
-    if (ryhma) ryhma.hidden = piilossa;
-    sisaan.disabled = this.zoomiIndeksi >= this.zoomiTasot().length - 1;
-    // Loitonnuksen pohja on fokusnäkymässä fokusikkuna eikä yleiskuva.
-    ulos.disabled = this.fokusPohjallaOllaan()
-      || this.zoomiIndeksi <= this.fokusPorrasMinimi();
   }
 
   /** Palauttaa kartan tavalliseen kokoonsa (uusi peli, laudan vaihto). */
@@ -974,6 +971,9 @@ export class Kartta {
     // näkymän päälle. Sama kamera-ajolle: se puretaan KIRJAAMATTA
     // välivaihetta, koska koko lähikuvatila on juuri katoamassa.
     this.ui.pysaytaLiuku?.(true);
+    // Sama kesken jääneelle trackpad-eleelle: se ei saa jäädä
+    // odottamaan päättymistaukoaan nollatun näkymän päälle.
+    this.peruRullanEle?.();
     this.pysaytaKameraAjo(false);
     this.ui.aloitusZoom = false;
     this.ui.mannerZoom = false;
@@ -2149,21 +2149,7 @@ export class Kartta {
     return Math.min(tasot.at(-1) ?? MANNER_ZOOM, skaala / yleis);
   }
 
-  /**
-   * Ollaanko jo fokusikkunan pohjalla?
-   *
-   * Loitonnusnapin himmennys lukee tämän: viimeinen askel on vapaa
-   * kerroin eikä porras (ks. zoomaaPainikkeella), joten pelkkä
-   * porrasindeksi ei kertoisi ollaanko pohjassa.
-   */
-  fokusPohjallaOllaan() {
-    const pohja = this.fokusZoomMinimi();
-    if (!(pohja > 0)) return false;
-    const nyt = this.ui.zoomiVapaa || (this.zoomiTasot()[this.zoomiIndeksi] ?? 0);
-    return nyt > 0 && nyt <= pohja * 1.001;
-  }
-
-  /** Sama pohja portaikon indeksinä: loitonnusnappi pysähtyy tähän. */
+  /** Sama pohja portaikon indeksinä: loitonnus pysähtyy tähän. */
   fokusPorrasMinimi() {
     const pohja = this.fokusZoomMinimi();
     if (!(pohja > 0)) return 0;
@@ -2537,9 +2523,17 @@ export class Kartta {
       return { x: box.x + box.w / 2, y: box.y + box.h / 2 };
     };
 
-    const aloitaNipistys = (e) => {
-      const { etaisyys, keski } = kaksiSormea(e);
-      if (etaisyys < 24) return;
+    /**
+     * Nipistys käyntiin MITASTA eikä tapahtumasta: `etaisyys` on sormien
+     * väli ja `keski` niiden keskipiste asiakaskoordinaateissa.
+     *
+     * Mitta on erotettu tapahtumasta, koska trackpadin nipistys ei tule
+     * kosketuksina vaan ctrl+rullana (ks. rullaNipistaa): siinä sormien
+     * väliä ei ole, vaan se lasketaan virtuaalisesti rullan deltoista.
+     * Molemmat eleet kulkevat tämän jälkeen täsmälleen samaa polkua —
+     * sama CSS-esikatselu, sama ankkurointi, sama viimeistely.
+     */
+    const aloitaNipistysMitasta = ({ etaisyys, keski, rulla = false }) => {
       /*
        * Kokonäkymästä nipistettäessä EI enää hypätä lähikuvatilaan
        * eleen alussa. Aiempi versio teki juuri sen: se sytytti
@@ -2562,6 +2556,9 @@ export class Kartta {
         panY: this.ui.panY ?? 0,
         kerroin: this.zoomiKerroin,
         suhde: 1,
+        // Rullaele elää wheel-virrasta eikä kosketuksista: sen pitää
+        // päästä oman wheel-käsittelijänsä läpi (ks. wheel-kuuntelija).
+        rulla,
         /*
          * Paneelin sijainti mitataan KERRAN eleen alussa. Paneeli ei
          * liiku nipistyksen aikana (muunnos kohdistuu karttaan, ei
@@ -2584,15 +2581,22 @@ export class Kartta {
       this.kuori.style.transition = '';
     };
 
-    const paivitaNipistys = (e) => {
-      if (!nipistys || e.touches.length < 2) return;
-      const { etaisyys } = kaksiSormea(e);
+    /** Kosketusnäytön nipistys: mitta luetaan kahdesta sormesta. */
+    const aloitaNipistys = (e) => {
+      const { etaisyys, keski } = kaksiSormea(e);
+      if (etaisyys < 24) return;
+      aloitaNipistysMitasta({ etaisyys, keski });
+    };
+
+    /** Eleen esikatselu uudella sormivälillä (myös virtuaalisella). */
+    const paivitaNipistysMitasta = (etaisyys) => {
+      if (!nipistys) return;
       const { pienin, suurin } = this.zoomiRajat();
       // Rajat kertoimessa eikä suhteessa: sama katto riippumatta siitä,
       // mistä ele alkoi.
       const kerroin = Math.min(suurin, Math.max(pienin, nipistys.kerroin * (etaisyys / nipistys.etaisyys)));
       nipistys.suhde = kerroin / nipistys.kerroin;
-      // Eleen alussa mitattu paneelin sijainti (ks. aloitaNipistys).
+      // Eleen alussa mitattu paneelin sijainti (ks. aloitaNipistysMitasta).
       const laatikko = nipistys.laatikko ?? pane.getBoundingClientRect();
       const m = { x: nipistys.keski.x - laatikko.left, y: nipistys.keski.y - laatikko.top };
       const tx = m.x - (m.x - nipistys.panX) * nipistys.suhde;
@@ -2603,6 +2607,11 @@ export class Kartta {
       this.kuori.style.transform =
         `translate3d(${tx.toFixed(1)}px, ${ty.toFixed(1)}px, 0) scale(${nipistys.suhde.toFixed(4)})`;
       vastaskaalaaMerkit(nipistys.suhde);
+    };
+
+    const paivitaNipistys = (e) => {
+      if (!nipistys || e.touches.length < 2) return;
+      paivitaNipistysMitasta(kaksiSormea(e).etaisyys);
     };
 
     const paataNipistys = () => {
@@ -2761,6 +2770,146 @@ export class Kartta {
       }, NIPISTYS_JUMI_MS + 200);
     };
 
+    /*
+     * --- TRACKPADIN ELEET TYÖPÖYDÄLLÄ --------------------------------
+     *
+     * Omistajan linjaus 27.8.2026 kumoaa 10.8. tehdyn rajauksen, jossa
+     * trackpadin jatkuvat pikselideltat suodatettiin kokonaan pois.
+     * Työpöytäselaimessa trackpad on se, mihin käsi tarttuu, ja siinä
+     * on kaksi elettä:
+     *
+     *   KAHDEN SORMEN VIERITYS PANOROI. Sama suunta kuin kartoissa
+     *   yleensä: sisältö seuraa sormia (kahden sormen liike ylös vie
+     *   karttaa ylös). Siirto kulkee saman rajauksen läpi kuin
+     *   raahaus — rajaaKasinPan ja asetaPan, ei omaa rinnakkaista
+     *   rajanlaskentaa.
+     *
+     *   NIPISTYS ZOOMAA PORTAATTOMASTI. Selaimet lähettävät trackpadin
+     *   nipistyksen ctrl+rullana. Ele kulkee kosketusnäytön nipistyksen
+     *   polkua (aloitaNipistysMitasta / paivitaNipistysMitasta /
+     *   paataNipistys) niin, että sormiväli lasketaan virtuaalisesti:
+     *   jokainen tapahtuma kertoo mittakaavan eksponentiaalisesti,
+     *   jolloin ele tuntuu samalta zoomin joka syvyydessä eikä
+     *   nytkähtele portaissa. Ennen tätä nipistys ajoi
+     *   zoomaaPainikkeella-portaita kuristimen läpi — omistaja:
+     *   "aivan liian isoissa portaissa, saisi olla pehmeä ja portaaton".
+     *
+     * HIIREN RULLAN NAKSU ZOOMAA YHÄ PORTAIN (alkuperäinen toive):
+     * naksu on yksi iso delta eikä virta, ja portaikko on sille oikea
+     * tuntuma.
+     *
+     * ELEEN LOPPU ON DEBOUNCE. Wheel-virrasta ei tule "sormi irtosi"
+     * -tapahtumaa, joten se päätellään tauosta. Koko virran ajan
+     * kartanRaahaus on pystyssä kuten raahauksessa ja liu'ussa, joten
+     * tarkkuusvahti ei tökkää kesken eleen: bittikartta täydennetään
+     * vasta kun ele on ohi.
+     */
+    const RULLAN_LOPPU_MS = 150; // tämän mittainen tauko päättää eleen
+    const RULLAN_NIPISTYS_HERKKYYS = 0.01; // kerroin = exp(-deltaY * tämä)
+    const RULLAN_NIPISTYS_LAHTO = 100; // virtuaalinen sormiväli eleen alussa
+    let rullanEle = null; // 'panorointi' | 'nipistys'
+    let rullanEtaisyys = RULLAN_NIPISTYS_LAHTO;
+
+    /** Wheel-virta taukosi: ele viimeistellään kuin sormi olisi irronnut. */
+    const paataRullanEle = () => {
+      clearTimeout(this.ui.rullanEleAjastin);
+      this.ui.rullanEleAjastin = 0;
+      const tila = rullanEle;
+      rullanEle = null;
+      if (tila === 'nipistys') {
+        // Sama viimeistely kuin sormilla: rajat, ankkuri, uusi rasterointi.
+        paataNipistys();
+        return;
+      }
+      if (tila !== 'panorointi') return;
+      this.ui.kartanRaahaus = false;
+      document.body.classList.remove('kartta-raahaus');
+      this.ui.merkitseKartanEle();
+      // Sama sääntö kuin raahauksen lopussa: piilossa olevalle sivulle
+      // ei rasteroida, vaan työ jää odottamaan taustapaluuta.
+      if (document.hidden) this.ui.taideOdottaa = true;
+      else this.ui.taydennaTaide({ heti: true });
+    };
+
+    const ajastaRullanLoppu = () => {
+      clearTimeout(this.ui.rullanEleAjastin);
+      this.ui.rullanEleAjastin = setTimeout(paataRullanEle, RULLAN_LOPPU_MS);
+    };
+
+    /**
+     * Kesken jäänyt rullaele puretaan viemättä sitä loppuun (sivu
+     * piiloon, laudan nollaus). Nipistyksen puolen siivouksen hoitaa
+     * hylkaaNipistys, tässä puretaan vain panoroinnin lippu.
+     */
+    const peruRullanEle = () => {
+      clearTimeout(this.ui.rullanEleAjastin);
+      this.ui.rullanEleAjastin = 0;
+      if (rullanEle === 'panorointi') {
+        this.ui.kartanRaahaus = false;
+        document.body.classList.remove('kartta-raahaus');
+        this.ui.taideOdottaa = true;
+      }
+      rullanEle = null;
+    };
+    // Kentäksi asti: ui.js:n jumivahti ja destroy purkavat eleen tästä.
+    this.peruRullanEle = peruRullanEle;
+
+    /** Kahden sormen vieritys: kartta siirtyy kuin sormiraahauksessa. */
+    const rullaPanoroi = (e) => {
+      // Sama pääsyehto kuin raahauksen aloituksessa: kokonäkymässä ja
+      // ilman liikkumavaraa ei ole mitään panoroitavaa.
+      if (!this.ui.aloitusZoom && !this.ui.mannerZoom) return;
+      if (!this.ui.panVara && !this.ui.panVaraY && !this.ui.panJakso) return;
+      if (rullanEle !== 'panorointi') {
+        rullanEle = 'panorointi';
+        // Käden ele voittaa liu'un ja kamera-ajon, kuten raahauskin.
+        this.ui.pysaytaLiuku?.(true);
+        this.pysaytaKameraAjo();
+        this.kuori.style.transition = '';
+        this.ui.kartanRaahaus = true;
+        document.body.classList.add('kartta-raahaus');
+        // Kartta lähtee liikkeelle: päiväkirja yhdelle riville.
+        this.ui.asetaPaivakirjanKoko(true);
+      }
+      this.ui.merkitseKartanEle();
+      // Sisältö seuraa sormia: sormet ylös, kartta ylös. Pystysuunta
+      // vain siellä, missä pystyyn voi panoroida (aloituskartalla ei).
+      const dx = -e.deltaX;
+      const dy = this.ui.panVaraY ? -e.deltaY : 0;
+      const rajattu = this.rajaaKasinPan((this.ui.panX ?? 0) + dx, (this.ui.panY ?? 0) + dy);
+      this.asetaPan(rajattu.x, rajattu.y);
+      ajastaRullanLoppu();
+    };
+
+    /** Trackpadin nipistys (ctrl+rulla): portaaton mittakaava. */
+    const rullaNipistaa = (e) => {
+      if (rullanEle !== 'nipistys' || !nipistys) {
+        // Kesken oleva panorointi viimeistellään ennen kuin ele vaihtuu.
+        if (rullanEle === 'panorointi') paataRullanEle();
+        rullanEtaisyys = RULLAN_NIPISTYS_LAHTO;
+        aloitaNipistysMitasta({
+          etaisyys: rullanEtaisyys,
+          keski: { x: e.clientX, y: e.clientY },
+          rulla: true,
+        });
+        rullanEle = 'nipistys';
+      }
+      /*
+       * Virtuaalinen sormiväli rajataan samoihin päihin kuin mittakaava
+       * (zoomiRajat). Ilman rajausta ylirullaus kertyisi näkymättömiin
+       * ja eleen suunnan vaihto tuntuisi jumittavan, kunnes kertymä on
+       * purettu. Kartta ei saa toistua: alaraja on ehdoton.
+       */
+      const { pienin, suurin } = this.zoomiRajat();
+      const ala = nipistys.etaisyys * (pienin / nipistys.kerroin);
+      const yla = nipistys.etaisyys * (suurin / nipistys.kerroin);
+      const seuraava = rullanEtaisyys * Math.exp(-e.deltaY * RULLAN_NIPISTYS_HERKKYYS);
+      rullanEtaisyys = Math.min(yla, Math.max(ala, seuraava));
+      paivitaNipistysMitasta(rullanEtaisyys);
+      this.ui.merkitseKartanEle();
+      ajastaRullanLoppu();
+    };
+
     this.ui.nipistysKuuntelijat = [
       ['touchstart', (e) => {
         if (e.touches.length !== 2) return;
@@ -2799,44 +2948,46 @@ export class Kartta {
       ['gesturestart', (e) => e.preventDefault()],
       ['gesturechange', (e) => e.preventDefault()],
       /*
-       * HIIREN RULLA ZOOMAA (omistajan toive).
+       * RULLA JA TRACKPAD KARTALLA (ks. TRACKPADIN ELEET yllä).
        *
-       * Työpöydällä kartalla oli vain +/- -painikkeet, ja rulla vieritti
-       * sivua kartan alta. Rulla on se, mihin käsi tarttuu kartalla
-       * ensimmäisenä.
+       * Kolme elettä, kolme käytöstä:
+       *   ctrl/meta + rulla  = trackpadin nipistys → portaaton zoomi
+       *   hiiren rullan naksu = zoomiportaat (alkuperäinen toive)
+       *   muu wheel-virta     = kahden sormen vieritys → panorointi
        *
-       * Rulla kulkee samat portaat kuin painikkeet — ei vapaata
-       * mittakaavaa. Portaat on valittu niin, ettei mikään paikka näy
-       * kahdesti (rajaaSkaala), ja vapaa rulla ohittaisi sen rajan.
+       * Naksun tuntomerkki on rividelta (deltaMode ≠ 0) tai iso
+       * pystydelta ilman vaakaa; trackpadin vieritys tulee pieninä
+       * jatkuvina pikselideltoina usein vaaka-akselin kera. Naksun
+       * nykäisyjä hillitään yhä kuristimella — portaan hyppy on iso —
+       * mutta nipistys ei kuristinta kestä: se on virta, ja jokainen
+       * tapahtuma kuuluu eleeseen.
        *
-       * Kohdistus kursoriin: zoomKohde asetetaan siihen kartan pisteeseen,
-       * joka on osoittimen alla, jolloin kuva laajenee siitä eikä ruudun
-       * keskeltä. Painikkeet pitävät keskipisteen, koska niillä ei ole
-       * osoitinta.
-       *
-       * Nykäisyjä hillitään: tarkka rulla (trackpad) lähettää kymmeniä
-       * tapahtumia yhdestä eleestä, ja jokainen niistä olisi kokonainen
-       * porras.
+       * Kohdistus kursoriin: naksu asettaa zoomKohteeksi osoittimen
+       * alla olevan kartan pisteen, nipistys ankkuroi eleen sen alla
+       * olevaan pisteeseen (varmaAnkkuri).
        */
       ['wheel', (e) => {
-        if (nipistys) return;
+        // Kosketusnipistys on kesken: rulla ei saa sekaantua siihen.
+        // Oma rullanipistys sen sijaan jatkuu tästä eteenpäin.
+        if (nipistys && !nipistys.rulla) return;
         // Rulla kortin päällä vierittää korttia, ei zoomaa karttaa.
         if (kelluvaltaPinnalta(e)) return;
         if (this.avausNakymassa() || this.ui.radioPaalla()) return;
         e.preventDefault();
-        /*
-         * Läppärin kahden sormen vieritys EI zoomaa (omistajan toive
-         * 10.8.2026: "voisiko sen vaihtaa nipistyseleeseen") —
-         * trackpadin nipistys tulee selaimissa ctrl+rullana, ja
-         * vieritys pieninä jatkuvina pikselideltoina usein
-         * vaaka-akselin kera. Hiiren rullan naksu on rividelta
-         * (deltaMode ≠ 0) tai iso pystydelta ilman vaakaa — se
-         * zoomaa yhä, kuten alkuperäinen toive vaati.
-         */
         const nipistysEle = e.ctrlKey || e.metaKey;
+        if (nipistysEle) {
+          rullaNipistaa(e);
+          return;
+        }
+        // Ote lipesi nipistyksestä kesken virran: ele viimeistellään
+        // ennen kuin sama virta jatkuu vierityksenä.
+        if (rullanEle === 'nipistys') paataRullanEle();
         const rullanNaksu = e.deltaMode !== 0
           || (Math.abs(e.deltaY) >= 50 && e.deltaX === 0);
-        if (!nipistysEle && !rullanNaksu) return;
+        if (!rullanNaksu) {
+          rullaPanoroi(e);
+          return;
+        }
         const nyt = performance.now();
         if (nyt - (this.ui.rullanHetki ?? 0) < RULLAN_VALI_MS) return;
         const suunta = e.deltaY < 0 ? 1 : -1;
@@ -2966,6 +3117,10 @@ export class Kartta {
     };
 
     pane.addEventListener('pointerdown', (e) => {
+      // Trackpadin ele odottaa vain päättymistaukoaan, kun käsi jo
+      // tarttuu hiireen: viimeistellään se heti, ettei uusi veto jää
+      // odottamaan debouncea (rullaele varaa nipistys-tilan).
+      if (rullanEle) paataRullanEle();
       if (nipistetaan()) return;
       // Kortin, kuplan tai suurennoksen päältä alkava veto jää kortin
       // omaksi vieritykseksi — kartta ei liiku (ks. KELLUVA_UI).
@@ -3095,6 +3250,9 @@ export class Kartta {
      */
     this.ui.eleVahti = () => {
       if (!document.hidden) return;
+      // Trackpadin ele ei voi jatkua sivulla, joka ei ole näkyvissä:
+      // ajastin pois ja tila purki, hylkaaNipistys hoitaa loput.
+      peruRullanEle();
       // Sama kohtalo nipistykselle: kesken jäänyt kahden sormen ele ei
       // saa jättää muunnostaan svg:hen (ks. hylkaaNipistys — sormia ei
       // voi nipistää kartalla, joka ei ole ruudulla).
