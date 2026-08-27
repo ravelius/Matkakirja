@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'Kuvatekstiremontti era 1: Firenzen, Berliinin, Kairon, Venetsian, Madridin, Tukholman, Lontoon, Prahan, Wienin, Budapestin, Pariisin ja Helsingin selitteet kertovat nyt kohteesta',
   'Budapestin Sankarien aukion juttu: 85 m koskee koko puoliympyraa; museot ja Unesco-maininta lisatty; kuvatekstit uuteen saantoon',
   'Kappadokian lehden avauskuvat: kolme uutta havainnekuvaa (Goreme, Ortahisar, Selime) selitteineen',
   'Lentoaani: kabiinin aani alkaa heti napautuksesta ja kovempaa; nippupisteisiin ohuet katkoviivat kaupungista; maailmannakyman karttasauma haivytetty',
