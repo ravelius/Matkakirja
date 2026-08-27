@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1219: Nimiot palasivat merkeille joilta ne puuttuivat (Marathon, Ermoupoli, Kalamata, Iraklion, Delfoi, Reunuskilpikonna, Psiloritis - nimio osaa nyt myos vasemman puolen), Parnassos ja Delfoi klikattavissa erikseen, ja kaupungin poltettu nimi (esim. Thessaloniki) avaa kortin',
   'v1218: Kosketusnipistys korjattu - Safarin gesture-tapahtumien mittakaava ohjaa nyt zoomia 1:1, joten nipistyksen pitaisi seurata sormia yhta hyvin kuin rullazoomin; testaa iPadilla ja iPhonella',
   'v1217: Kahdeksan uutta ihmetta (Colosseum, Olympieion, Theodosiuksen muurit, Ishtarin portti, Ninive, Leptis Magna, Karthagon satama, Pergamonin alttari) - ihmeita nyt 35; Libya ja Tunisia uusina fokusmaina',
   'v1216: Pariisin, Lontoon, Prahan, Wienin, Venetsian ja Budapestin avauskuvat vaihtuivat uusiin generoituihin heroihin (3/kaupunki, tiukempi rajaus) - tarkista karusellit ja etta kuvat latautuvat amparista',

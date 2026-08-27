@@ -1079,16 +1079,16 @@ function nostosymNimioTeksti(nimi, asu) {
  * varapolku tyhjentää oman ryhmänsä (piirraNostosymboli) eikä saa
  * viedä nimiötä mukanaan. Palauttaa null, jos nimeä ei ole.
  */
-export function piirraNostosymNimio(g, nimi, laji) {
+export function piirraNostosymNimio(g, nimi, laji, vasemmalle = false) {
   const asu = NOSTOSYM_NIMIO_ASUT[nostosymNimionLaji(laji)];
   const teksti = nostosymNimioTeksti(nimi, asu);
   if (!teksti) return null;
   const t = el('text', {
     class: `nostosym-nimio ${asu.luokka}`.trim(),
-    x: NOSTOSYM_NIMIO_X.toFixed(2),
+    x: (vasemmalle ? -NOSTOSYM_NIMIO_X : NOSTOSYM_NIMIO_X).toFixed(2),
     y: NOSTOSYM_NIMIO_Y.toFixed(2),
     'font-size': NOSTOSYM_NIMIO_KOKO,
-    'text-anchor': 'start',
+    'text-anchor': vasemmalle ? 'end' : 'start',
     'aria-hidden': 'true',
   }, g);
   t.textContent = teksti;
@@ -1288,8 +1288,14 @@ function nostosymMittaaNimio(teksti, asu, porras = 1) {
  * (NOSTOSYM_MINI_R) ja on merkin korkuinen, koska nimiö ladotaan
  * rasterin sisään juuri siihen kaistaan. Näin väistö mittaa sitä
  * mustetta, joka kartalla on.
+ *
+ * NIMIÖ MAHTUU MYÖS MERKIN VASEMMALLE PUOLELLE (v1218). Kartta on
+ * latonut nimiä molemmin puolin pistettä 1873:n atlaksista asti — myös
+ * tämän lehden oma poltettu ladonta (tools/fokuskartta/maat.mjs, Pátra
+ * ja Ioánnina saavat `ank: 'right'`) — ja kun oikea kaista on tukossa,
+ * vasen on usein tyhjä. `vasemmalle` peilaa laatikon origon ympäri.
  */
-export function nostosymNimioLaatikko(nimi, svg, laji) {
+export function nostosymNimioLaatikko(nimi, svg, laji, vasemmalle = false) {
   if (typeof document === 'undefined') return null;
   const nimionLaji = nostosymNimionLaji(laji);
   const teksti = nostosymNimioTeksti(nimi, NOSTOSYM_NIMIO_ASUT[nimionLaji]);
@@ -1303,22 +1309,33 @@ export function nostosymNimioLaatikko(nimi, svg, laji) {
     // talleteta, tai koko istunto jäisi väärän mitan varaan.
     if (asu) NOSTOSYM_LEVEYDET.set(avain, leveys);
   }
+  const ulko = NOSTOSYM_NIMIO_X + leveys;
   return {
-    x1: NOSTOSYM_MINI_RUUTU,
-    x2: NOSTOSYM_NIMIO_X + leveys,
+    x1: vasemmalle ? -ulko : NOSTOSYM_MINI_RUUTU,
+    x2: vasemmalle ? -NOSTOSYM_MINI_RUUTU : ulko,
     y1: -NOSTOSYM_MINI_RUUTU,
     y2: NOSTOSYM_MINI_RUUTU,
   };
 }
 
-/** Yksi rasteri: viivamerkki ja sen perässä nimiö. Mitat kirjaston yksiköitä. */
-async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji) {
+/**
+ * Yksi rasteri: viivamerkki ja sen perässä (tai edessä) nimiö. Mitat
+ * kirjaston yksiköitä.
+ *
+ * Palauttaa myös `origoX`:n eli merkin keskipisteen etäisyyden kuvan
+ * vasemmasta reunasta. Oikeanpuoleisella nimiöllä se on merkin oma
+ * puolikas, vasemmanpuoleisella koko nimiökaistan mitta — <image> on
+ * asemoitava sen mukaan, tai peilattu merkki hyppäisi sivuun.
+ */
+async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji, vasemmalle = false) {
   const asu = nostosymAsuTai(svg, nimionLaji);
   const muste = nostosymMustelajit(svg);
   const tekstiLeveys = nimio ? nostosymMittaaNimio(nimio, asu, porras) : 0;
   const sade = NOSTOSYM_MINI_RUUTU;
-  const leveys = sade * 2 + (nimio ? NOSTOSYM_NIMIO_X - sade + tekstiLeveys : 0);
+  const kaista = nimio ? NOSTOSYM_NIMIO_X - sade + tekstiLeveys : 0;
+  const leveys = sade * 2 + kaista;
   const korkeus = sade * 2;
+  const origoX = vasemmalle ? kaista + sade : sade;
   const kangas = document.createElement('canvas');
   kangas.width = Math.max(1, Math.round(leveys * porras));
   kangas.height = Math.max(1, Math.round(korkeus * porras));
@@ -1326,7 +1343,7 @@ async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji) {
   ctx.imageSmoothingQuality = 'high';
   // Merkin origo on neliön keskellä, kuten SVG:ssäkin.
   ctx.save();
-  ctx.translate(sade * porras, sade * porras);
+  ctx.translate(origoX * porras, sade * porras);
   piirraNostosymMiniCanvas(ctx, tunnus, muste, porras);
   ctx.restore();
   if (nimio) {
@@ -1334,7 +1351,7 @@ async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji) {
     ctx.textAlign = 'left';
     ctx.textBaseline = 'alphabetic';
     ctx.lineJoin = 'round';
-    const x = (NOSTOSYM_NIMIO_X + sade) * porras;
+    const x = (vasemmalle ? 0 : NOSTOSYM_NIMIO_X + sade) * porras;
     const y = (NOSTOSYM_NIMIO_Y + sade) * porras;
     /*
      * MERKIT YKSITELLEN, kuten lehden omassa ladonnassa (piirto.js
@@ -1366,6 +1383,13 @@ async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji) {
     osoite: kangas.toDataURL('image/png'),
     leveys: kangas.width / porras,
     korkeus: kangas.height / porras,
+    /*
+     * Origo pyöristetään samassa suhteessa kuin leveys: <image> venyy
+     * pyöristettyyn pikselimittaan, ja jos origo laskettaisiin
+     * pyöristämättömistä yksiköistä, merkki siirtyisi kaistan mitan
+     * verran pyöristysvirhettä sivuun.
+     */
+    origoX: (origoX / leveys) * (kangas.width / porras),
   };
 }
 
@@ -1379,17 +1403,20 @@ async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji) {
  * on valmis — välimuistista osuttaessa vielä samalla mikrotehtävällä.
  * Jos rasteria ei saada, ryhmään piirretään elävä merkki ja teksti.
  */
-export function piirraNostosymKartalle(g, symboli, nimio, laji) {
+export function piirraNostosymKartalle(g, symboli, nimio, laji, vasemmalle = false) {
   const tunnus = nostosymMiniTunnus(symboli, laji);
   const nimionLaji = nostosymNimionLaji(laji);
   // Lyhennys ja kirjainlaji tehdään KERRAN tässä, jotta rasteri ja
   // varapolku latovat varmasti saman tekstin — ja jotta välimuistin
   // avain on se, mikä kuvaan oikeasti piirtyy.
   const teksti = nostosymNimioTeksti(nimio, NOSTOSYM_NIMIO_ASUT[nimionLaji]);
+  // Peilaus on merkityksetön ilman nimiötä: tyhjä kaista on tyhjä
+  // kummallakin puolella, ja yksi rasteri riittää molemmille.
+  const puoli = teksti ? vasemmalle : false;
   const elavana = () => {
     g.replaceChildren();
     piirraNostosymMini(g, symboli, laji);
-    if (teksti) piirraNostosymNimio(g, teksti, laji);
+    if (teksti) piirraNostosymNimio(g, teksti, laji, puoli);
   };
   if (typeof document === 'undefined') { elavana(); return; }
   const kuva = el('image', {
@@ -1403,16 +1430,17 @@ export function piirraNostosymKartalle(g, symboli, nimio, laji) {
    */
   kuva.dataset.symboli = NOSTOSYM_PIIRTAJAT[symboli] ? symboli : 'huuto';
   kuva.dataset.nimio = teksti;
+  kuva.dataset.puoli = puoli ? 'vasen' : 'oikea';
   const porras = NOSTOSYM_PORRAS;
-  const avain = `${porras}|${tunnus}|${nimionLaji}|${teksti}`;
+  const avain = `${porras}|${tunnus}|${nimionLaji}|${puoli ? 'v' : 'o'}|${teksti}`;
   let valmis = NOSTOSYM_RASTERIT.get(avain);
   if (!valmis) {
-    valmis = nostosymRasteroi(tunnus, teksti, g.ownerSVGElement, porras, nimionLaji);
+    valmis = nostosymRasteroi(tunnus, teksti, g.ownerSVGElement, porras, nimionLaji, puoli);
     NOSTOSYM_RASTERIT.set(avain, valmis);
   }
   valmis.then((r) => {
     if (!kuva.isConnected) return;
-    maare(kuva, 'x', (-NOSTOSYM_MINI_RUUTU).toFixed(2));
+    maare(kuva, 'x', (-r.origoX).toFixed(2));
     maare(kuva, 'y', (-NOSTOSYM_MINI_RUUTU).toFixed(2));
     maare(kuva, 'width', r.leveys.toFixed(2));
     maare(kuva, 'height', r.korkeus.toFixed(2));
