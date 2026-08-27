@@ -19292,6 +19292,8 @@ body.flight-active .fokusmitat,
 body.kartalento .fokusmitat,
 body.flight-active .fokus-maataulu,
 body.kartalento .fokus-maataulu,
+body.flight-active .fokus-maatauluhuntu,
+body.kartalento .fokus-maatauluhuntu,
 body.flight-active .fokus-viivaimet,
 body.kartalento .fokus-viivaimet { opacity: 0; pointer-events: none; }
 
@@ -19868,14 +19870,17 @@ body.fokuspohja .maa-pilleri { display: none; }
  * "ota se koko rivi pois joka alkoi samat luvut tekstillä". */
 
 /* ---------------------------------------------------------------------------
-   TAULUN ALLA OLEVA KARTTA SUMENEE (omistajan tilaus #102: *"tekstin alla
-   olevat kohdat saisi blurrautua"*).
+   TAULUN JA MAAN NIMEN ALLA OLEVA KARTTA SUMENEE (omistajan tilaus #102:
+   *"tekstin alla olevat kohdat saisi blurrautua"*, ja pelitestipalaute
+   27.8.2026 iltapäivä: *"blurin pitää levitä myös maan nimen alle ...
+   reunan pitää häivyttyä pehmeästi ... blur saa olla aavistuksen
+   kevyempi"*).
 
-   MIKSI SUMENNUS VASTA NYT. Taulu on 27.8.2026 alkaen pohjaton — pelkkää
-   mustetta maaston päällä (ks. "LOPPU PAPERILAATASTA" yllä) — ja
-   luettavuus oli kolmen kerroksen halon varassa. Halo kantaa yksittäisen
-   sanan, muttei kokonaista lukutaulukkoa vuoristokartan päällä. Sumennus
-   rauhoittaa PINNAN eikä lisää yhtään paperia takaisin.
+   MIKSI SUMENNUS. Taulu on 27.8.2026 alkaen pohjaton — pelkkää mustetta
+   maaston päällä (ks. "LOPPU PAPERILAATASTA" yllä) — ja luettavuus oli
+   kolmen kerroksen halon varassa. Halo kantaa yksittäisen sanan, muttei
+   kokonaista lukutaulukkoa vuoristokartan päällä. Sumennus rauhoittaa
+   PINNAN eikä lisää yhtään paperia takaisin.
 
    BACKDROP-FILTER, EI KARTAN OMA SUODATIN. Sama sääntö kuin Tutki-arkilla
    (.dialog.arkki::backdrop) ja lehden alapalkilla: suodatettu SVG-kerros
@@ -19883,46 +19888,91 @@ body.fokuspohja .maa-pilleri { display: none; }
    koske karttaan lainkaan — se sumentaa vain sen, mikä on TÄMÄN kerroksen
    takana.
 
-   OMA KERROS ELEMENTIN SIJAAN. Suodatin on ::before-pseudossa eikä
-   taulussa itsessään, koska taulu SISÄLTÄÄ tekstin: maski, joka pehmentää
-   sumennuksen reunat, häivyttäisi samalla laidimmaiset numerot. Pseudo on
-   z-index: -1 eli taulun tekstin alla mutta kartan päällä (taulun oma
-   transform tekee siitä pinoamiskontekstin, joten negatiivinen z-index ei
-   karkaa kartan taakse).
+   OMA ELEMENTTI, EI TAULUN PSEUDO. Sumennus oli taulun ::before-pseudossa
+   ja saattoi siksi kattaa vain taulun: KREIKKA-kartuutsi on eri
+   elementissä (.fokusmitat), joten maan nimi jäi terävän vuoriston päälle
+   ja sumennuksen alareuna piirsi ruudun poikki suoran viivan. Pseudoa ei
+   voi venyttää kartuutsin yli, koska taulu on vierityssäiliö
+   (overflow-y: auto) ja laitojen yli venyvä lapsi kasvattaisi sen
+   vieritysaluetta. Huntu on siksi karttaruudun oma lapsi kuten taulukin,
+   ja js/fokusmitat.js (paivitaMaatauluHuntu) mittaa sen molemmista
+   kalusteista.
 
-   REUNAT HÄIVYTETÄÄN. Ilman maskia sumennus olisi terävä suorakaide
-   maaston päällä — juuri se "neliöraja", joka fokuskartasta on
-   järjestelmällisesti poistettu. Säteittäinen maski jättää keskustan
-   täyteen sumennukseen ja liudentaa laidat olemattomiin.
+   MITAT TULEVAT JS:STÄ, EI TÄÄLTÄ. Taulun korkeus riippuu maan riveistä
+   ja kielirivin kietoutumisesta, kartuutsin korkeus ruudun leveydestä:
+   kumpaakaan ei voi kirjoittaa remeinä. CSS antaa vain ankkurin (vasen
+   alanurkka) ja häivytyksen.
 
-   VAIN AUKI OLLESSA: suljettuna taulu on visibility: hidden, mutta
-   suodatinkerros on silti turha työ joka kehyksellä.
+   HÄIVYTYS VAIN SINNE, MISSÄ NAAPURINA ON TERÄVÄ KARTTA. Huntu on
+   ankkuroitu karttaruudun vasempaan alanurkkaan, joten vasen ja ala
+   rajautuvat kartan KEHYKSEEN — siellä häivytys jättäisi vain ohuen
+   terävän kaistan kehyksen viereen. Ylhäällä ja oikealla naapurina on
+   kartta, ja siellä maski liudentaa sumennuksen olemattomiin
+   --fokus-haive-matkalla. Kapealla puhelimella huntu yltää kartan oikeaan
+   laitaan asti, ja silloin JS nollaa oikean häivytyksen
+   (--fokus-haive-oikea) — muuten se söisi sumennuksen kielirivin
+   viimeisiltä sanoilta.
+
+   KAKSI GRADIENTTIA JA LEIKKAUS, EI YHTÄ SÄTEITTÄISTÄ. Säteittäinen
+   maski (entinen ratkaisu) häivyttää eri matkalla joka suunnassa, ja
+   laatikon laidoilla sen liukuma jäi niin lyhyeksi, että raja näkyi
+   suorana. Kaksi lineaarista gradienttia leikattuna (mask-composite)
+   antaa saman, mitatun liukuman jokaisessa reunassa.
+
+   VAIN AUKI OLLESSA: suljettuna huntu on visibility: hidden, koska
+   suodatinkerros on muuten turhaa työtä joka kehyksellä.
    --------------------------------------------------------------------------- */
-.fokus-maataulu.auki::before {
-  content: '';
+.fokus-maatauluhuntu {
   position: absolute;
-  /*
-   * TÄSMÄLLEEN TAULUN PEHMUSTEKEHYS, EI YLI. Taulu on vierityssäiliö
-   * (overflow-y: auto), ja laitojen yli venyvä lapsi kasvattaisi
-   * vieritysaluetta ja voisi tuoda vaakapalkin. Pehmuste (0,35rem)
-   * riittää maskin liudennukselle.
-   */
-  inset: 0;
-  z-index: -1;
+  left: 0;
+  bottom: 0;
+  /* Kartan päällä (.kartta-kuori on z-indeksitön), mutta kartuutsin
+     (.fokusmitat, z-index: 3) ja taulun (z-index: 5) ALLA — muuten
+     sumennus söisi oman tekstinsä. */
+  z-index: 2;
   pointer-events: none;
-  -webkit-backdrop-filter: blur(5px) saturate(0.82);
-  backdrop-filter: blur(5px) saturate(0.82);
-  -webkit-mask-image: radial-gradient(115% 108% at 38% 55%, #000 52%, transparent 100%);
-  mask-image: radial-gradient(115% 108% at 38% 55%, #000 52%, transparent 100%);
+  /* Mitat: js/fokusmitat.js paivitaMaatauluHuntu. Nollasta lähtevä
+     laatikko ei sumenna mitään ennen ensimmäistä mittausta. */
+  width: 0;
+  height: 0;
+  /*
+   * SUMENNUS ON KEVENNETTY 5 px → 3.6 px (omistajan pelitestipalaute
+   * 27.8.2026: *"blur saa olla myös aavistuksen kevyempi"*). Sama noin
+   * kolmanneksen kevennys kylläisyydessä: 0.82 → 0.88.
+   */
+  -webkit-backdrop-filter: blur(3.6px) saturate(0.88);
+  backdrop-filter: blur(3.6px) saturate(0.88);
+  -webkit-mask-image:
+    linear-gradient(to bottom, transparent 0, #000 var(--fokus-haive, 34px)),
+    linear-gradient(to left, transparent 0, #000 var(--fokus-haive-oikea, 34px));
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to bottom, transparent 0, #000 var(--fokus-haive, 34px)),
+    linear-gradient(to left, transparent 0, #000 var(--fokus-haive-oikea, 34px));
+  mask-composite: intersect;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0s linear 0.26s;
+}
+
+.fokus-maatauluhuntu.auki {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.2s ease, visibility 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fokus-maatauluhuntu,
+  .fokus-maatauluhuntu.auki { transition: none; }
 }
 
 /*
  * FALLBACK ilman backdrop-filteriä (vanhat WebKitit): sumennusta ei saa,
  * joten pinta rauhoitetaan hennolla pergamenttihunnulla — sama kaava kuin
- * avausnäkymän verholla (.intro-verho).
+ * avausnäkymän verholla (.intro-verho). Maski häivyttää senkin reunat.
  */
 @supports not ((backdrop-filter: blur(5px)) or (-webkit-backdrop-filter: blur(5px))) {
-  .fokus-maataulu.auki::before { background: rgba(244, 232, 205, 0.55); }
+  .fokus-maatauluhuntu { background: rgba(244, 232, 205, 0.5); }
 }
 
 /* ---------------------------------------------------------------------------

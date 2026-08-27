@@ -893,9 +893,17 @@ const auki = await sivu.evaluate(async () => {
   const taulu = document.querySelector('.fokus-maataulu');
   const pane = document.querySelector('.map-pane').getBoundingClientRect();
   const r = taulu.getBoundingClientRect();
-  const nappi = document.querySelector('.toimintorivi .monitoimi-nappi')
-    ?.getBoundingClientRect() ?? null;
+  const nappiOsa = document.querySelector('.toimintorivi .monitoimi-nappi');
+  const nappi = nappiOsa?.getBoundingClientRect() ?? null;
+  const nappiNakyy = nappiOsa
+    ? getComputedStyle(nappiOsa).visibility === 'visible'
+      && getComputedStyle(nappiOsa).display !== 'none'
+    : false;
   const kartuutsi = document.querySelector('.fokus-kartuutsi').getBoundingClientRect();
+  const huntu = document.querySelector('.fokus-maatauluhuntu');
+  const huntuTyyli = huntu ? getComputedStyle(huntu) : null;
+  const huntuLaatikko = huntu?.getBoundingClientRect() ?? null;
+  const pane2 = document.querySelector('.map-pane').getBoundingClientRect();
   const plus = taulu.querySelector('.fokus-maataulu-lehti');
   const plusLaatikko = plus?.getBoundingClientRect() ?? null;
   const otsikot = [...taulu.querySelectorAll('.fokus-maataulu-otsikko')].map((e) => e.textContent);
@@ -906,8 +914,10 @@ const auki = await sivu.evaluate(async () => {
     // Kartta jää näkyviin: taulu ei täytä koko karttaruutua.
     korkeusOsuus: r.height / pane.height,
     leveysOsuus: r.width / pane.width,
-    // Liiku-neliö jää taulun alapuolelle kokonaan.
+    // Liiku-neliö on taulun ajan PIILOSSA (v1202), joten päällekkäisyys
+    // ei ole enää este — mitataan siis se, ettei nappia näy.
     nappienPaalla: Boolean(nappi) && r.bottom > nappi.top,
+    nappiNakyy,
     // Taulu on kartuutsin YLÄPUOLELLA ja samassa laidassa.
     kartuutsinYlla: Math.round(kartuutsi.top - r.bottom),
     samaLaita: Math.abs(kartuutsi.left - r.left) <= 14,
@@ -931,6 +941,28 @@ const auki = await sivu.evaluate(async () => {
     plusSuodatin: plus ? getComputedStyle(plus).filter : '',
     aria: document.querySelector('.fokus-kartuutsi').getAttribute('aria-expanded'),
     ariaNimi: taulu.getAttribute('aria-label'),
+    /*
+     * SUMENNUSHUNTU (omistajan pelitestipalaute 27.8.2026 iltapäivä).
+     * Kolme mitattavaa asiaa: huntu ulottuu kartuutsin ALLE, sen reunat
+     * häivytetään maskilla, ja sumennus on kevyempi kuin entinen 5 px.
+     */
+    huntuNakyy: huntuTyyli
+      ? huntuTyyli.visibility === 'visible' && Number(huntuTyyli.opacity) > 0.9
+      : false,
+    huntuYla: huntuLaatikko ? Math.round(huntuLaatikko.top - pane2.top) : null,
+    huntuAla: huntuLaatikko ? Math.round(pane2.bottom - huntuLaatikko.bottom) : null,
+    huntuOikea: huntuLaatikko ? Math.round(huntuLaatikko.right - pane2.left) : null,
+    huntuSuodatin: huntuTyyli
+      ? (huntuTyyli.backdropFilter || huntuTyyli.webkitBackdropFilter || '')
+      : '',
+    huntuMaski: huntuTyyli
+      ? (huntuTyyli.maskImage || huntuTyyli.webkitMaskImage || '')
+      : '',
+    // Taulun oma sumennuspseudo on poistettu: se ei ylettynyt nimen alle.
+    tauluPseudo: getComputedStyle(taulu, '::before').backdropFilter || 'none',
+    kartuutsiYla: Math.round(kartuutsi.top - pane2.top),
+    kartuutsiAla: Math.round(pane2.bottom - kartuutsi.bottom),
+    tauluYla: Math.round(r.top - pane2.top),
   };
 });
 vaadi('8a kartuutsin painallus avaa maataulun', auki.auki && auki.nakyy, JSON.stringify(auki));
@@ -939,7 +971,15 @@ vaadi('8b taulu on läpikuultava ja kartta jää näkyviin',
   && Number(auki.lapinakyva.match(/[\d.]+\)$/)?.[0].replace(')', '')) <= 0.65
   && auki.korkeusOsuus < 0.6,
   `${auki.lapinakyva}, korkeus ${(auki.korkeusOsuus * 100).toFixed(0)} % kartasta`);
-vaadi('8c taulu ei peitä Liiku-nappia', !auki.nappienPaalla);
+/*
+ * 8c KUMOUTUI OMISTAJAN TILAUKSESSA #102 (v1202) JA MITATTIIN UUSIKSI
+ * 27.8.2026: Matkusta/Liiku-nappi PIILOTETAAN taulun ajaksi, joten taulu
+ * saa laskeutua sen kohdalle — ja juuri se oli tilauksen tarkoituskin
+ * ("lisätiedot suoraan maan nimen yläpuolelle"). Väite ei siis enää
+ * kiellä päällekkäisyyttä vaan vaatii, ettei nappia näy.
+ */
+vaadi('8c alanappi on piilossa taulun ajan (ei kilpaile huomiosta)',
+  auki.nappiNakyy === false, `nappi näkyy: ${auki.nappiNakyy}`);
 vaadi('8d taulussa ovat maalehden omat luvut',
   auki.otsikot.includes('Väkiluku') && auki.otsikot.includes('Pinta-ala')
   && /milj\./.test(auki.vakiluku),
@@ -953,8 +993,14 @@ vaadi('8g plus-nappi maalehteen on olemassa ja aria kertoo tilan',
 
 /* --- omistajan pelitestitilaus 26.8.2026 --- */
 
-vaadi('8j taulu nousee kartuutsin yläpuolelle samaan laitaan',
-  auki.kartuutsinYlla >= 0 && auki.kartuutsinYlla <= 60 && auki.samaLaita,
+/*
+ * RAKO ON PIENI (27.8.2026): lukurivien pitää lukea SUORAAN maan nimen
+ * yläpuolella, ei kellua keskellä karttaa. Aiempi yläraja 60 px salli
+ * sen, mitä omistaja iPhonellaan näki — taulun alareunaan varattiin
+ * tilaa piilotetulle alanapille (js/fokusmitat.js paivitaTaulunPohja).
+ */
+vaadi('8j taulu istuu kiinni kartuutsin yläpuolella samassa laidassa',
+  auki.kartuutsinYlla >= 0 && auki.kartuutsinYlla <= 22 && auki.samaLaita,
   `rako ${auki.kartuutsinYlla} px, sama laita ${auki.samaLaita}`);
 vaadi('8k kartuutsi jää näkyviin taulun alle (maan nimi luettavissa)',
   Number(auki.kartuutsiNakyy) > 0.9, `opacity ${auki.kartuutsiNakyy}`);
@@ -976,6 +1022,28 @@ vaadi('8n plus on oikeassa yläreunassa, läpikuultava ja kevyesti animoitu',
     animaatio: auki.plusAnimaatio,
     suodatin: auki.plusSuodatin,
   }));
+
+/* --- omistajan pelitestipalaute 27.8.2026 iltapäivä: sumennushuntu --- */
+
+vaadi('8p sumennus ulottuu maan nimen ALLE ja kartan alalaitaan asti',
+  auki.huntuNakyy
+  && auki.huntuYla !== null && auki.huntuYla < auki.tauluYla
+  && auki.huntuAla !== null && auki.huntuAla <= 1,
+  JSON.stringify({
+    nakyy: auki.huntuNakyy,
+    huntuYla: auki.huntuYla,
+    tauluYla: auki.tauluYla,
+    kartuutsiAla: auki.kartuutsiAla,
+    huntuAla: auki.huntuAla,
+  }));
+vaadi('8q hunnun reunat häivytetään maskilla (ei terävää suorakaidetta)',
+  /gradient/.test(auki.huntuMaski), auki.huntuMaski.slice(0, 90));
+vaadi('8r sumennus on kevyempi kuin entinen 5 px',
+  /blur\(/.test(auki.huntuSuodatin)
+  && Number(auki.huntuSuodatin.match(/blur\(([\d.]+)px\)/)?.[1]) < 5,
+  auki.huntuSuodatin);
+vaadi('8s taulun oma sumennuspseudo on poistettu (huntu hoitaa koko alan)',
+  auki.tauluPseudo === 'none', auki.tauluPseudo);
 
 // Esc sulkee.
 await sivu.keyboard.press('Escape');

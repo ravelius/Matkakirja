@@ -312,7 +312,7 @@ const luo = (tagi, luokka, teksti) => {
 function rakenna(ui) {
   // Varmistus kaksoiskappaleita vastaan, kuten maapillerillä.
   for (const vanha of ui.mapPane.querySelectorAll(
-    '.fokusmitat, .fokus-maataulu, .fokus-viivaimet',
+    '.fokusmitat, .fokus-maataulu, .fokus-maatauluhuntu, .fokus-viivaimet',
   )) {
     vanha.remove();
   }
@@ -382,9 +382,11 @@ function rakenna(ui) {
  *    vasempaan laitaan kuin kartuutsi ja alkaa heti sen yläpuolelta —
  *    kartuutsi jää näkyviin taulun alle, ja juuri siksi taulussa EI OLE
  *    OTSIKKOA: maan nimi lukee jo kartuutsissa.
- * 2. TAULU EI PEITÄ ALANAPPEJA. Sen alareuna on kartuutsin JA
- *    Liiku-neliön yläpuolella — kummankin mitatun yläreunan mukaan
- *    (paivitaTaulunPohja), joten Liiku on käytössä koko ajan.
+ * 2. TAULU ISTUU KIINNI MAAN NIMESSÄ. Sen alareuna on kartuutsin
+ *    mitattu yläreuna plus muutaman pikselin rako (paivitaTaulunPohja),
+ *    joten luvut lukevat suoraan KREIKKA-otsikon yläpuolella. Alanapille
+ *    ei varata tilaa, koska se on taulun ajan piilossa (v1202) —
+ *    ks. paivitaTaulunPohja.
  * 3. SULKUNAPPIA EI OLE. Taulu sulkeutuu napauttamalla karttaa, samaa
  *    kartuutsia uudelleen tai Escistä — ristin paikka meni taulun
  *    ainoalle kalusteelle, plussalle.
@@ -447,8 +449,85 @@ function rakennaMaataulu(ui) {
   for (const tapahtuma of ['pointerdown', 'touchstart', 'wheel']) {
     taulu.addEventListener(tapahtuma, (e) => e.stopPropagation(), { passive: true });
   }
+  /*
+   * SUMENNUSHUNTU ON OMA ELEMENTTINSÄ TAULUN JA KARTUUTSIN ALLA
+   * (omistajan pelitestipalaute 27.8.2026 iltapäivä).
+   *
+   * Sumennus oli taulun omassa ::before-pseudossa, jolloin se saattoi
+   * kattaa vain taulun — ja jäi siis loppumaan juuri ennen KREIKKA-
+   * kartuutsia, joka on ERI elementissä (.fokusmitat). Nimi makasi
+   * terävän vuoristokartan päällä, ja sumennuksen alareuna piirsi
+   * ruudun poikki suoran viivan.
+   *
+   * PSEUDOA EI VOI VENYTTÄÄ KARTUUTSIN YLI: taulu on vierityssäiliö
+   * (overflow-y: auto), ja laitojen yli venyvä lapsi kasvattaisi sen
+   * vieritysaluetta. Siksi huntu on karttaruudun oma lapsi kuten
+   * taulukin, ja sen mitat lasketaan molemmista kalusteista
+   * (paivitaMaatauluHuntu).
+   */
+  const huntu = luo('div', 'fokus-maatauluhuntu');
+  huntu.setAttribute('aria-hidden', 'true');
+  ui.mapPane.appendChild(huntu);
+  ui.fokusMaatauluHuntu = huntu;
   ui.mapPane.appendChild(taulu);
   return taulu;
+}
+
+/* Kuinka pitkälle sumennus jatkuu tekstin ulkopuolelle ja kuinka
+ * pitkällä matkalla se häipyy olemattomiin. Sama luku molempiin, koska
+ * juuri se tekee reunasta huomaamattoman: sumennus on täydessä
+ * voimassaan koko tekstin alla ja liukenee vasta sen ulkopuolella. */
+const HUNTU_HAIVE = 34;
+
+/**
+ * SUMENNUSHUNNUN MITAT — TAULUN JA KARTUUTSIN YHTEINEN LAATIKKO.
+ *
+ * Huntu ankkuroituu karttaruudun VASEMPAAN ALANURKKAAN (left: 0,
+ * bottom: 0) eikä tekstin reunaan. Syy on omistajan sääntö "reunan
+ * pitää häivyttyä pehmeästi siellä, missä blur rajautuu karttaan":
+ * vasemmalla ja alhaalla huntu rajautuu kartan KEHYKSEEN, jossa ei ole
+ * mitään häivytettävää — siellä pehmennys jättäisi vain ohuen terävän
+ * kaistan kehyksen viereen. Ylhäällä ja oikealla rajanaapuri on
+ * terävä kartta, ja siellä häivytys on (CSS:n maski, --fokus-haive*).
+ *
+ * MITAT LUETAAN OFFSET-ARVOISTA, EI getBoundingClientRectistä. Taulu
+ * liukuu auetessaan transformilla, ja ruutulaatikko kertoisi kesken
+ * matkan olevan koon — huntu jäisi lopullista laatikkoa pienemmäksi.
+ * offsetHeight ei tunne transformia.
+ *
+ * OIKEA HÄIVYTYS KYTKETÄÄN POIS, JOS HUNTU YLTÄÄ KARTAN LAITAAN.
+ * Kapealla puhelimella taulu on lähes ruudun levyinen: häivytys söisi
+ * sumennuksen kielirivin viimeisiltä sanoilta, vaikka reunan takana ei
+ * ole terävää karttaa vaan kehys.
+ */
+function paivitaMaatauluHuntu(ui) {
+  const huntu = ui.fokusMaatauluHuntu;
+  const taulu = ui.fokusMaataulu;
+  const kartuutsi = ui.fokusKartuutsi;
+  const sailio = ui.fokusmitatSailio;
+  if (!huntu || !taulu || !kartuutsi || !sailio) return;
+  if (!ui.fokusMaatauluAuki) return;
+
+  const tyyli = getComputedStyle(taulu);
+  const pohja = parseFloat(tyyli.bottom);
+  const vasen = parseFloat(tyyli.left);
+  const korkeus = taulu.offsetHeight;
+  if (!Number.isFinite(pohja) || !Number.isFinite(vasen) || !(korkeus > 0)) return;
+
+  const paneLeveys = ui.mapPane.clientWidth;
+  const kartuutsiOikea = parseFloat(getComputedStyle(sailio).left || '0')
+    + kartuutsi.offsetWidth;
+  const oikeaReuna = Math.max(vasen + taulu.offsetWidth, kartuutsiOikea) + HUNTU_HAIVE;
+  const leveys = Math.min(paneLeveys, oikeaReuna);
+
+  huntu.style.width = `${Math.round(leveys)}px`;
+  huntu.style.height = `${Math.round(pohja + korkeus + HUNTU_HAIVE)}px`;
+  huntu.style.setProperty('--fokus-haive', `${HUNTU_HAIVE}px`);
+  // Kartan laitaan yltävä huntu ei häivy oikealta (ks. yllä).
+  huntu.style.setProperty(
+    '--fokus-haive-oikea',
+    leveys >= paneLeveys - 1 ? '0px' : `${HUNTU_HAIVE}px`,
+  );
 }
 
 /** Avaa tai sulkee maataulun ja hoitaa sen kuuntelijat. */
@@ -459,6 +538,14 @@ export function avaaMaataulu(ui, auki) {
   ui.fokusMaatauluAuki = Boolean(auki);
   taulu.classList.toggle('auki', ui.fokusMaatauluAuki);
   taulu.inert = !ui.fokusMaatauluAuki;
+  /*
+   * Huntu mitataan ENNEN luokan vaihtoa auki-tilassa, jotta sumennus on
+   * paikallaan heti ensimmäisessä kehyksessä eikä hyppää tekstin alta
+   * paikalleen liu'un aikana. Taulun mitat ovat jo lopulliset —
+   * transform ei kuulu offsetHeightiin (ks. paivitaMaatauluHuntu).
+   */
+  if (ui.fokusMaatauluAuki) paivitaMaatauluHuntu(ui);
+  ui.fokusMaatauluHuntu?.classList.toggle('auki', ui.fokusMaatauluAuki);
   ui.fokusKartuutsi?.setAttribute('aria-expanded', String(ui.fokusMaatauluAuki));
   /*
    * MATKUSTA-NAPPI VÄISTYY TAULUN AJAKSI (omistajan tilaus #102:
@@ -569,6 +656,9 @@ function taytaMaataulu(ui, iso) {
       const raja = arvo.getBoundingClientRect().left
         - lista.getBoundingClientRect().left;
       if (raja > 0) lehti.style.marginLeft = `${Math.max(0, raja - 22)}px`;
+      // Rivien määrä ja kielirivin kietoutuminen muuttavat taulun
+      // korkeutta — sumennushuntu mitataan vasta ladonnan jälkeen.
+      paivitaMaatauluHuntu(ui);
     });
   }
 }
@@ -1558,11 +1648,23 @@ const TAULUN_RAKO = 6;
  * pelin (fokusvirran kortti), jolloin taulu jäisi kellumaan kauas
  * kartuutsista seuraavaan päivitykseen asti.
  *
- * LIIKU-NELIÖ OTETAAN MUKAAN. Se on kartuutsin rinnalla mutta hitusen
- * ylempänä (alanappirivi asuu .rail-kerroksessa eikä karttaruudussa),
- * ja taulu peittäisi pelin ainoan liikkumisnapin, jos ylin reuna
- * luettaisiin pelkästä kartuutsista. Ero luetaan näiden kahden
- * ruutulaatikon erotuksena, joka ei riipu karttaruudun mitoista.
+ * MATKUSTA-NAPILLE EI VARATA TILAA (omistajan pelitestipalaute
+ * 27.8.2026 iltapäivä: *"lisätiedot saisivat tulla suoraan maan nimen
+ * yläpuolelle nyt kun matkusta-nappi on pois tieltä"*).
+ *
+ * Tässä oli aiemmin `napinYli`: kuinka paljon alanappi on kartuutsia
+ * ylempänä, lisättynä taulun alareunaan, jottei taulu peittäisi pelin
+ * ainoaa liikkumisnappia. Ehto vanheni v1202:ssa, jossa nappi
+ * PIILOTETAAN taulun ajaksi (css/styles.css body.maataulu-auki).
+ * Nappi on kuitenkin visibility: hidden eikä display: none — sen
+ * ruutulaatikko on yhä olemassa, joten mittaus varasi sille tilaa
+ * vaikkei siellä ollut mitään. Lopputulos oli mitattu omistajan
+ * iPhonella: lukurivit kelluivat ~70 pikselin päässä KREIKKA-
+ * kartuutsista, keskellä karttaa, irti nimestä johon ne kuuluvat.
+ *
+ * Nyt taulun alareuna on kartuutsin yläreuna plus TAULUN_RAKO, eli
+ * luvut ovat kiinni maan nimessä. Nappi ei voi jäädä alle, koska
+ * taulu ja nappi eivät ole koskaan näkyvissä yhtä aikaa.
  *
  * Muuttuja asetetaan bodyyn samasta syystä kuin --fokus-nappipaikka.
  */
@@ -1573,14 +1675,7 @@ function paivitaTaulunPohja(ui) {
   const korkeus = kartuutsi.offsetHeight;
   const ankkuri = parseFloat(getComputedStyle(sailio).bottom);
   if (!(korkeus > 0) || !Number.isFinite(ankkuri)) return;
-  const oma = kartuutsi.getBoundingClientRect();
-  const nappi = document.querySelector('.toimintorivi.rivi-yksi .monitoimi-nappi');
-  const napinRuutu = nappi?.getBoundingClientRect();
-  // Kuinka paljon neliö on kartuutsia ylempänä (nolla tai enemmän).
-  const napinYli = napinRuutu?.height > 0 && oma.height > 0
-    ? Math.max(0, oma.top - napinRuutu.top)
-    : 0;
-  const pohja = Math.round(ankkuri + korkeus + napinYli + TAULUN_RAKO);
+  const pohja = Math.round(ankkuri + korkeus + TAULUN_RAKO);
   if (!(pohja > 0)) return;
   document.body.style.setProperty('--fokus-taulupohja', `${pohja}px`);
 }
@@ -1647,6 +1742,9 @@ export function paivitaFokusmitat(ui) {
   // karttaruudun korkeus voivat vaihtua kesken pelin.
   paivitaNappipaikka(ui);
   paivitaTaulunPohja(ui);
+  // Kartuutsin korkeus (ja siten taulun alareuna) muuttuu ruudun
+  // leveyden mukana — auki oleva huntu mitataan samassa yhteydessä.
+  paivitaMaatauluHuntu(ui);
   // Liiketarkkailu kytketään tässä eikä rakenna()ssa: lauta voi vaihtua
   // säiliön alta (ks. vahdiKartanLiiketta).
   vahdiKartanLiiketta(ui);
@@ -1667,6 +1765,7 @@ export function nollaaFokusmitat(ui) {
   ui.fokusViivainVahti = null;
   ui.fokusmitatSailio?.remove();
   ui.fokusMaataulu?.remove();
+  ui.fokusMaatauluHuntu?.remove();
   ui.fokusViivaimet?.remove();
   document.body.style.removeProperty('--fokus-nappipaikka');
   document.body.style.removeProperty('--fokus-taulupohja');
@@ -1674,6 +1773,7 @@ export function nollaaFokusmitat(ui) {
   ui.fokusKartuutsi = null;
   ui.fokusJana = null;
   ui.fokusMaataulu = null;
+  ui.fokusMaatauluHuntu = null;
   ui.fokusViivaimet = null;
   ui.fokusViivainPerusta = null;
   ui.fokusMitatAvain = null;
