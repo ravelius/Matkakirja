@@ -22,9 +22,10 @@ import assert from 'node:assert/strict';
 
 import {
   FOKUSVIRRAN_VAIHEET, asetaFokusvirtaTila, fokusvirtaAlkutila, fokusvirtaJaljella,
-  fokusvirtaKohteetJaljella, fokusvirtaNahdytKohteet,
+  fokusvirtaKohteetJaljella, fokusvirtaMatkakirja, fokusvirtaNahdytKohteet,
   fokusvirtaPorttiAuki, fokusvirtaSiirto, fokusvirtaSiivoa, fokusvirtaTila,
 } from '../js/fokusvirta.js';
+import { EUROPE_SAAPUMISET } from '../js/packs/europe-saapumiset.js';
 import { FOKUSVIRRAT, fokusvirtaKaupungille } from '../js/packs/fokusvirrat.js';
 import { FOKUSKOHTEET_GRC, fokuskohteet } from '../js/packs/fokuskohteet-grc.js';
 import { Game } from '../js/game.js';
@@ -323,4 +324,92 @@ test('jokaisella fokusvirran kuvalla on selite ja lähde', () => {
       assert.ok(kuva.lahde?.length > 10, `${kaupunki}: kuvan lähde puuttuu`);
     }
   }
+});
+
+/* ---------- 7. matkakirjakortti ei vaihdu laatan ratkettua ---------- */
+
+/*
+ * OMISTAJAN BUGI 27.8.2026 (Kreikka): kaupungin laatan pulman ratkettua
+ * ylävasen matkakirjakortti vaihtoi tekstin VANHAAN saapumismerkintään
+ * ("oliiveja kolmesta ruukusta", js/packs/europe-saapumiset.js). Syy oli
+ * fokusvirtaMatkakirjan lehtilukkoehdossa: laatta poistuu ratkettuaan
+ * (js/game.js revealToken), lukko aukesi, funktio alkoi palauttaa
+ * nullia ja js/ui.js:n varapolku kirjoitti kortille vanhan tekstin.
+ *
+ * Vartioitava sääntö on ui.js:n oma lupaus — *"sama teksti pysyy koko
+ * käynnin ajan"*. Ansa koskee KAIKKIA fokusvirtakaupunkeja, joten
+ * tarkistus ajetaan koko rekisterin yli eikä vain Ateenalle.
+ */
+
+/** Kevyt ui-tynkä: fokusvirta tarvitsee korttiin vain pelin. */
+const uiTynka = (game) => ({ game });
+
+/** Kaupunki "löydettyyn" tilaan — täsmälleen kuten revealToken jättää sen. */
+function laattaRatkaistu(game, cityId, tyyppi = 'topaz') {
+  game.tokens.delete(cityId);
+  game.revealed.set(cityId, tyyppi);
+}
+
+test('fokusvirtakaupungin matkakirjateksti ei vaihdu laatan ratkettua', () => {
+  for (const [cityId, virta] of Object.entries(FOKUSVIRRAT)) {
+    const game = ateenaPeli();
+    const city = game.board.cityById.get(cityId);
+    assert.ok(city, `${cityId}: kaupunkia ei ole Euroopan laudalla`);
+    const ui = uiTynka(game);
+
+    // Laatta paikallaan: merkintä on virran oma.
+    game.tokens.set(cityId, 'topaz');
+    const ennen = fokusvirtaMatkakirja(ui, city);
+    assert.equal(ennen?.teksti, virta.matkakirja.teksti,
+      `${cityId}: virran merkintä ei tule korttiin ennen laatan ratkaisua`);
+
+    // Laatta ratkaistu: sama avain, sama teksti, sama kuva. Avain on
+    // yhtä tärkeä kuin teksti — sen vaihtuminen kirjoittaisi kortin
+    // uusiksi kirjoituskoneella keskellä peliä.
+    laattaRatkaistu(game, cityId);
+    const jalkeen = fokusvirtaMatkakirja(ui, city);
+    assert.deepEqual(jalkeen, ennen,
+      `${cityId}: matkakirjakortti vaihtui laatan ratkettua`);
+
+    // Ja nimenomaan: vanha saapumisteksti ei saa kummitella kortissa.
+    const vanha = EUROPE_SAAPUMISET[cityId];
+    if (vanha) {
+      assert.notEqual(jalkeen.teksti, vanha.kuvaus,
+        `${cityId}: kortissa on vanha saapumismerkintä`);
+    }
+  }
+});
+
+test('aarremerkintä voittaa saapumismerkinnän myös laatan ratkettua', () => {
+  const game = ateenaPeli();
+  const city = game.board.cityById.get('ateena');
+  laattaRatkaistu(game, 'ateena');
+  const ui = uiTynka(game);
+  // Lipun nostaa js/fokusvirta.js avaaAarremerkinta aarteen löytyessä.
+  ui.fokusaarreMerkinta = { avain: 'europe:ateena', kuitattu: false };
+  const merkinta = fokusvirtaMatkakirja(ui, city);
+  assert.equal(merkinta.teksti, ATEENA.aarremerkinta,
+    'aarteen jälkeen kortissa on isoisän myöhempi sivu');
+  assert.ok(merkinta.avain.startsWith('fokusaarre:'),
+    'aarremerkinnällä on oma korttiavain (ui.js tunnistaa siitä äänitesäännön)');
+});
+
+test('kaupunki ilman fokusvirtaa jää vanhan saapumispolun varaan', () => {
+  const game = ateenaPeli();
+  const city = game.board.cityById.get('lontoo');
+  assert.equal(fokusvirtaKaupungille('lontoo'), null, 'Lontoolla ei ole virtaa');
+  // Sekä kääntämättömänä että ratkaistuna: null tarkoittaa ui.js:lle
+  // "jatka tavalliseen tapaan" (SAAPUMISTEKSTIT / TARINAKAARI).
+  game.tokens.set('lontoo', 'topaz');
+  assert.equal(fokusvirtaMatkakirja(uiTynka(game), city), null);
+  laattaRatkaistu(game, 'lontoo');
+  assert.equal(fokusvirtaMatkakirja(uiTynka(game), city), null);
+});
+
+test('botti ei saa fokusvirran merkintää', () => {
+  const game = ateenaPeli();
+  const city = game.board.cityById.get('ateena');
+  game.tokens.set('ateena', 'topaz');
+  game.player.isBot = true;
+  assert.equal(fokusvirtaMatkakirja(uiTynka(game), city), null);
 });

@@ -9362,8 +9362,16 @@ export class UI {
      * (fokusvirtaSisalto) — näin kytkentä ei ole kiinni siitä, kumpaa
      * kenttää fokusvirtaMatkakirja sattuu välittämään eteenpäin.
      *
-     * Laatan käännyttyä fokusvirtaMatkakirja palauttaa nullin ja
-     * kortti jatkaa tavallista elämäänsä — kuten v1093:ssa.
+     * MERKINTÄ PYSYY MYÖS LAATAN RATKETTUA (korjaus 27.8.2026).
+     * Aiemmin fokusvirtaMatkakirja palautti laatan käännyttyä nullin,
+     * jolloin alempi varapolku kirjoitti korttiin vanhan
+     * SAAPUMISTEKSTIT-merkinnän — omistaja näki Kreikassa uuden
+     * merkinnän tilalla yhtäkkiä vanhan oliivitorin. Nyt virta omistaa
+     * fokusvirtakaupungin matkakirjakortin koko käynnin ajan (ks.
+     * js/fokusvirta.js fokusvirtaMatkakirja), ja koska korttiavain
+     * pysyy samana, teksti ei myöskään kirjoitu uudelleen laatan
+     * ratketessa. Varapolku alempana palvelee vain kaupunkeja, joilla
+     * fokusvirtasisältöä EI ole.
      */
     if (game.player.pos.type === 'city') {
       const virtaKaupunki = game.board.cityById.get(game.player.pos.city);

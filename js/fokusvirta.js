@@ -410,21 +410,39 @@ export function fokusvirtaOhittaaLehden(ui, city) {
  * kirjoituskoneelle ja kuva postikorttilokeroon.
  *
  * MIKSI OMA FUNKTIO EIKÄ SUORA DATAHAKU: kortti on osa virtaa, ja
- * virran ehdot (fokusmoodi päällä, sisältöä on, laatta kääntämättä)
+ * virran ehdot (fokusmoodi päällä, sisältöä on, pelaaja ihminen)
  * asuvat tässä tiedostossa yhtenä kappaleena. Kaksi paikkaa, joissa
- * samat kolme ehtoa lasketaan, ajautuisi ennen pitkää eri linjoille.
+ * samat ehdot lasketaan, ajautuisi ennen pitkää eri linjoille.
+ *
+ * ── MERKINTÄ EI VAIHDU LAATAN RATKETTUA (korjaus 27.8.2026) ─────────
+ *
+ * Omistajan pelitestihavainto Kreikassa: laatan pulman ratkettua
+ * matkakirjakorttiin ilmestyi VANHA saapumisteksti ("oliiveja kolmesta
+ * ruukusta") uuden merkinnän tilalle. Syy oli tässä: ehtona oli
+ * LEHTILUKKO (fokusvirtaLukitseeLehden), joka on tosi vain niin kauan
+ * kuin laatta on kääntämättä. Laatan ratkettua game.js poistaa laatan
+ * (tokens.delete), tämä funktio alkoi palauttaa pysyvästi nullin, ja
+ * ui.js:n varapolku luki ehdoitta vanhan SAAPUMISTEKSTIT-merkinnän —
+ * joka siis voitti aina.
+ *
+ * Lukko oli väärä mitta. Se kertoo, saako kaupunkilehden avata, ei
+ * sitä, mitä isoisän kirjassa lukee: merkintä on kirjoitettu ennen
+ * laatan kääntämistä eikä katoa kirjasta sen jälkeen. Kortin oma
+ * sääntö on ui.js:n renderFactissa asti sama kuin ennen — *"sama teksti
+ * pysyy koko käynnin ajan"* — ja nyt se pätee myös aarteen jälkeen.
+ *
+ * Ehdot ovat siis fokusvirtaSisällön kolme (fokusmoodi päällä, sisältöä
+ * on, pelaaja ihminen); vanha SAAPUMISTEKSTIT/TARINAKAARI-polku jää
+ * varapoluksi niille kaupungeille, joilla fokusvirtasisältöä ei ole.
  */
 export function fokusvirtaMatkakirja(ui, city) {
   /*
    * AARREMERKINTÄ VOITTAA SAAPUMISMERKINNÄN. Se on sama kortti ja sama
    * kirja, mutta myöhempi sivu: saapumismerkintä on kirjoitettu ennen
-   * kuin aarre löytyi, aarremerkintä sen jälkeen. Tarkistus on ENNEN
-   * lehtilukkoa, koska aarremerkintä näytetään nimenomaan silloin kun
-   * laatta on jo käännetty (ks. AARREMERKINTÄ alempana).
+   * kuin aarre löytyi, aarremerkintä sen jälkeen.
    */
   const aarre = fokusvirtaAarremerkinta(ui, city);
   if (aarre) return aarre;
-  if (!fokusvirtaLukitseeLehden(ui, city)) return null;
   const data = fokusvirtaSisalto(ui, city);
   const merkinta = data?.matkakirja;
   if (!merkinta?.teksti) return null;
