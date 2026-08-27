@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1239';
+const CACHE = 'matkakirja-2026-08-09.1240';
 const SHELL = [
   './',
   './index.html',
@@ -207,6 +207,10 @@ const SHELL = [
   './js/packs/fokuskohteet-tun.js',
   // Unkarin kuratoitu lehti: Budapestin fokuslehden seitsemäntoista kohdetta.
   './js/packs/fokuskohteet-hun.js',
+  // Kroatia 27.8.2026: kuratoitu fokuslehti (HRV.webp) ja sen
+  // yhdeksäntoista karttakohdetta. Omaa fokusvirtaa ei vielä ole —
+  // Dubrovnikin virta tulee omana työnään.
+  './js/packs/fokuskohteet-hrv.js',
   './js/packs/paivan-kuvat.js',
   './js/packs/uutislahteet.js',
   './js/packs/pollo-asetukset.js',

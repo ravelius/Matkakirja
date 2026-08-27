@@ -46,8 +46,12 @@
  * (js/fokusnosto-symbolit.js) latovat vuorten, merten ja jokien nimet
  * kartalle merkkiensä perään, ja Kreikan lehdellä ne osuivat kuvaan
  * poltettujen nimien viereen. Lajeja on kolme — `meret`, `vuoret` ja
- * `joet` — ja Kreikka on ainoa maa, jolla kytkin on päällä; ilman
- * merkintää lehti syntyy täsmälleen kuten ennen.
+ * `joet` — ja ilman merkintää lehti syntyy täsmälleen kuten ennen.
+ *
+ * KYTKIN ON PÄÄLLÄ KAHDELLA MAALLA: Kreikalla, jolle se tehtiin
+ * jälkikäteen, ja Kroatialla, jonka lehti on suunniteltu se sääntö
+ * edellä (ks. HRV-osio). Muiden maiden lehdet ovat ämpärissä
+ * sellaisina kuin ne on renderöity.
  *
  * Lähteet: Natural Earth 10m ja Wikipedia (sijainnit, korkeudet).
  */
@@ -366,6 +370,168 @@ export const FOKUSMAAT = {
       Tisa: 'Tisza',
       Drau: 'Dráva',
     },
+   * KROATIA — TOINEN KURATOITU LEHTI, JA ENSIMMÄINEN JOKA SYNTYY
+   * KLIKATTAVUUSLINJA EDELLÄ.
+   *
+   * Kreikka sai kytkimet (`poltetutNimet`) jälkikäteen, kun omistaja
+   * huomasi kartalta nimen, jota ei voinut napauttaa. Kroatian lehti
+   * on ensimmäinen, joka on suunniteltu se sääntö edellä: KAIKKI
+   * KARTALLA NIMETTY ON NAPAUTETTAVISSA. Käytännössä se tarkoittaa
+   * kolmea päätöstä, jotka on tehty tässä oliossa eikä jälkikäteen:
+   *
+   *   1. MERIÄ, VUORIA EIKÄ JOKIA EI NIMETÄ KUVAAN. Kaikki kolme
+   *      lajia on luovutettu pelille (`poltetutNimet` alempana), ja
+   *      jokaiselle on js/packs/fokuskohteet-hrv.js:ssä kohde
+   *      TÄSMÄLLEEN samassa pisteessä. Nimi tulee siis nimiöstä, joka
+   *      liikkuu kohteen mukana ja avaa napautuksesta kortin.
+   *   2. KAUPUNGIT NIMETÄÄN KUVAAN, ja jokaisella niistä on kohde
+   *      samassa pisteessä. Poltettu nimi on kartalla se iso kohde,
+   *      johon sormi osuu, ja peli laskee sille näkymättömän
+   *      osuma-alueen (js/fokuskohteet.js kaupunginNimiLaatikko) tämän
+   *      listan peilikuvasta js/packs/fokus-grc.js:n FOKUS_LISANIMET-
+   *      taulussa. Kohde on tyypiltään `kaupunki`, joten se ei lado
+   *      omaa nimiötään poltetun nimen viereen — ei kaksoisnimiä.
+   *   3. DUBROVNIK EI OLE TÄSSÄ LISTASSA. Se on pelilaatta, jonka
+   *      nimen peli piirtää itse (sama sääntö kuin Ateenalla
+   *      Kreikassa); kuvaan poltettu toisinto olisi tupla, joka ei
+   *      liikkuisi laatan mukana.
+   *
+   * === IKKUNA ===
+   *
+   * Kroatia on kuunsirpin muotoinen: Istrian niemestä (13,50 E)
+   * Slavonian itärajalle (19,38 E) ja Dubrovnikin eteläkärjestä
+   * (42,44 N) Unkarin rajalle (46,54 N). Ikkuna 11,73…21,17 E ja
+   * 42,05…46,85 N jättää maalle noin 1,8 asteen marginaalin idässä ja
+   * lännessä ja reilun kolmasosa-asteen etelässä ja pohjoisessa.
+   *
+   * KUVASUHDE ON KREIKAN 1,6 eikä maan oma 1,17. Perustelu on sama
+   * kuin Kanadalla: 1,6 on ainoa suhde, jolla 15 %:n vuoto kattaa
+   * kaikki vaakaruudut (1,23–2,08) ilman häivytystä. Ylimääräinen
+   * leveys ei ole tyhjää vaan Adrianmerta lännessä — juuri se ulappa,
+   * jonka takia rannikkomaan lehti ylipäätään tehdään.
+   * ================================================================ */
+  HRV: {
+    ikkuna: { lonKeski: 16.45, lat0: 42.05, lat1: 46.85, kuvasuhde: 1.6 },
+    vuoto: 0.15,
+    jatkuva: true,
+
+    otsikko: 'KROATIA',
+    alaotsikko: 'isoisän matkakirjan mukaan · 1873',
+
+    /*
+     * Maan oma nimi kroatiaksi, haalea vesileima maan päällä.
+     * Slavoniassa lon 17,55 / lat 45,50 on lehden tyhjin kohta:
+     * Zagreb on 1,6 astetta lännessä, Osijek 1,1 astetta idässä eikä
+     * väliin jää yhtään merkintää.
+     */
+    vesileima: {
+      teksti: 'HRVATSKA', lon: 17.55, lat: 45.5, koko: 26, vali: 9,
+    },
+
+    /*
+     * NAAPUREITA EI PIIRRETÄ LAINKAAN — ei ääriviivaa eikä nimeä.
+     *
+     * Kreikan pilotti piirtää naapureilleen haalean ääriviivan ja
+     * latoo niiden nimet kuvaan (kohdat 8c ja 2c piirto.js:ssä).
+     * Kroatiassa kumpikin jää pois kahdesta syystä:
+     *
+     *   1. RAJAVIIVA ON JUURI SE SAUMA, jonka omistaja halusi pois
+     *      (26.8.2026: *"Tee koko Euroopan kartta uudella systeemillä
+     *      jotta rajat häviää"*). Jatkuvassa pinnassa naapurilla on jo
+     *      oma maastonsa, eikä viivaa tarvita. Kroatian rajoista viisi
+     *      kuudesta on maarajaa, joten viiva olisi tällä lehdellä
+     *      hallitsevampi kuin Kreikan lehdellä.
+     *   2. POLTETTU NAAPURIN NIMI EI OLE NAPAUTETTAVISSA, ja tämä
+     *      lehti tehdään klikattavuuslinja edellä (ks. yllä).
+     */
+    naapurit: [],
+
+    /*
+     * Vedet jatkuvat rajan yli haaleina, kuten yleisellä reitillä.
+     * Sava ja Drava eivät ala eivätkä lopu Kroatian rajalle, ja
+     * katkeava uoma kertoisi kartalla valheen.
+     */
+    jatkuvatVedet: true,
+
+    /*
+     * KOLME LAJIA PELILLE (ks. tämän osion alku). Ilman merkintää
+     * oletus olisi yhä "polta kaikki"; tässä kaikki kolme lajia
+     * annetaan nimiölle, ja jokaisella on kohde samassa pisteessä
+     * (js/packs/fokuskohteet-hrv.js).
+     *
+     * KUVAAN JÄÄ VUOREN HACHURE-KOLMIO JA SEN KORKEUSLUKEMA. Kolmio
+     * on kartan omaa merkintää eikä nimeämistä — se kertoo MISSÄ
+     * vuori on silloinkin, kun kohdemerkit eivät ole päällä — ja
+     * "1831 m" täydentää nimiötä eikä toista sitä.
+     */
+    poltetutNimet: { meret: false, vuoret: false, joet: false },
+
+    /*
+     * Merten nimet. EI POLTETA (`poltetutNimet.meret`), mutta luvut
+     * jäävät tänne kahdesta syystä: ne kertovat, missä asussa ulappa
+     * tällä lehdellä nimetään, ja ne ovat fokuskohteen `adrianmeri`
+     * koordinaatin lähde. Piste on avomerellä Zadarin ja Italian
+     * puolivälissä, missä lehdellä on eniten yhtenäistä vettä.
+     */
+    meret: [
+      { nimi: 'ADRIANMERI', lon: 14.6, lat: 43.4, kulma: -38, koko: 20 },
+    ],
+
+    /*
+     * Vuoret: hachure-kolmio ja korkeus metreinä, nimi nimiöstä.
+     *
+     * Viisi huippua piirtää Dinaaristen alppien kaaren sellaisena
+     * kuin se Kroatiassa kulkee: Učka Istrian yllä, Risnjak Gorski
+     * kotarissa, Velebitin Vaganski vrh rannikkomuurina, Dinara maan
+     * korkeimpana sisämaassa ja Biokovon Sveti Jure suoraan Makarskan
+     * rannan yläpuolella. Korkeudet ja koordinaatit en-Wikipediasta.
+     */
+    vuoret: [
+      { nimi: 'Dinara', lon: 16.3853, lat: 44.0575, m: 1831, iso: true },
+      { nimi: 'Sveti Jure', lon: 17.0578, lat: 43.3306, m: 1762 },
+      { nimi: 'Vaganski vrh', lon: 15.5153, lat: 44.3506, m: 1757 },
+      { nimi: 'Risnjak', lon: 14.7539, lat: 45.4239, m: 1528 },
+      { nimi: 'Vojak', lon: 14.2019, lat: 45.2894, m: 1401 },
+    ],
+
+    /*
+     * Muut kaupungit — EI PELILAATTOJA. Dubrovnik puuttuu listasta
+     * tarkoituksella (ks. osion alku, kohta 3).
+     *
+     * Viisi nimeä 9,4 asteen levyisellä lehdellä on samaa harvuutta
+     * kuin Kreikan neljä 15,7 asteella. Siirrot on aseteltu niin,
+     * ettei nimi mene vuoren kolmion, toisen nimen tai rantaviivan
+     * päälle: Rijeka ja Zadar latovat nimensä vasemmalle (Risnjakin
+     * kolmio ja Kvarnerin saaristo ovat oikealla), Split ja Osijek
+     * alaviistoon, Zagreb yläviistoon.
+     *
+     * SAMAT LUVUT OVAT js/packs/fokus-grc.js:n FOKUS_LISANIMET.HRV-
+     * rivillä laudan koordinaateiksi muutettuina. Jos näitä muutetaan,
+     * sekin taulu on ajettava uusiksi — muuten napautettava laatikko
+     * jää eri kohtaan kuin kuvaan poltettu nimi.
+     */
+    kaupungit: [
+      { nimi: 'Zagreb', lon: 15.9772, lat: 45.8144, dx: 10, dy: -8 },
+      { nimi: 'Split', lon: 16.4402, lat: 43.5081, dx: 9, dy: 12 },
+      /*
+       * Rijeka nousee muita ylemmäs (dy −16 eikä −8): Učkan Vojak on
+       * vain 0,24 astetta lounaassa, ja sen kolmio yltää −8:lla
+       * kirjainten alapidennyksiin. Kahdeksan prototyyppipikseliä
+       * lisää jättää kolmiolle ja sen nimiölle oman kaistansa.
+       */
+      { nimi: 'Rijeka', lon: 14.4422, lat: 45.3271, dx: -10, dy: -16, ank: 'right' },
+      { nimi: 'Zadar', lon: 15.2314, lat: 44.1194, dx: -10, dy: -6, ank: 'right' },
+      { nimi: 'Osijek', lon: 18.6955, lat: 45.555, dx: 9, dy: 12 },
+    ],
+
+    /*
+     * JOKINIMIÄ EI ANNETA LAINKAAN. Taulu on aineiston englanninkielisen
+     * nimen ja suomalaisen kirjoitusasun silta, ja koska joet on
+     * luovutettu pelille (`poltetutNimet.joet`), silta jäisi
+     * käyttämättä. Sava ja Drava ovat fokuskohteita
+     * (js/packs/fokuskohteet-hrv.js), ja niiden pisteet on laskettu
+     * samasta aineistosta kuin uomat piirretään.
+     */
   },
 
   /* ================================================================
