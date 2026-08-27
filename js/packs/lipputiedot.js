@@ -3737,4 +3737,843 @@ export const LIPPUTIEDOT = {
     ],
     lahde: 'Liput ja tunnus: Wikimedia Commons (PD)',
   },
+  // Erä 11: Afrikan laudan itäinen puolisko (lisenssit tarkistettu
+  // Commonsin API:sta 27.8.2026, tunnukset ja versioliput katsottu
+  // silmin). Etelä-Afrikan, Tansanian, Kenian ja Ugandan vaakunat
+  // sekä Ugandan protektoraatin lippu ovat CC BY-SA -piirroksia ja
+  // tekijät on nimetty lähderivillä; Mosambikin tunnus on CC0 ja
+  // loput PD.
+  'Flag of Angola.svg': {
+    maa: 'Angola',
+    symboliikka: [
+      {
+        osa: 'Punainen',
+        selite: 'siirtomaa-aikana ja vapaussodassa vuodatettu veri. '
+          + 'Nykyinen perustuslaki lisää siihen maan puolustamisen.',
+      },
+      { osa: 'Musta', selite: 'Afrikka.' },
+      {
+        osa: 'Viidakkoveitsi ja puolikas hammasratas',
+        selite: 'veitsi on maanviljelijät ja vapaussota, ratas '
+          + 'työläiset ja teollisuus. Keltainen väri on maan '
+          + 'rikkaus.',
+      },
+      {
+        osa: 'Viisisakarainen tähti',
+        selite: 'kansainvälinen solidaarisuus ja edistys.',
+      },
+    ],
+    kappaleet: [
+      'Lippu nousi salkoon keskiyöllä 11. marraskuuta 1975, kun MPLA '
+        + 'julisti Angolan itsenäiseksi. Portugalin lippu oli '
+        + 'laskettu Luandassa edellisenä keskipäivänä. Kuvio on '
+        + 'MPLA:n puoluelipusta; suunnittelijaksi mainitaan Henrique '
+        + 'de Carvalho Santos, ja ensimmäisen kappaleen ompelivat '
+        + 'kaksi puoluetoveria.',
+      'Isoisän matkavuonna 1873 Angolan yllä liehui Portugalin '
+        + 'lippu. Portugalilaisilla oli oma vaakunansa siirtomaalle '
+        + 'vuodesta 1935: kilven toisella puolella Portugalin '
+        + 'tunnukset, toisella kultainen norsu ja seepra.',
+      'Sisällissodan päätyttyä 2002 lippua yritettiin vaihtaa. '
+        + 'Vuonna 2003 järjestetyn kilpailun voitti nimimerkki '
+        + 'Catica: sinivalkopunainen lippu, jonka keltainen aurinko '
+        + 'oli piirretty Tchitundu-Hulun kalliomaalausten mukaan. '
+        + 'Ehdotus kaatui julkiseen erimielisyyteen — moni ei '
+        + 'halunnut luopua itsenäisyyteen liittyvistä merkeistä.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Angolan tunnus',
+        polku: 'assets/liput/tunnukset/ago-vaakuna.png',
+        selite: 'Keskellä on viidakkoveitsi ja kuokka nousevan '
+          + 'auringon edessä, ylinnä tähti ja alinna avoin kirja eli '
+          + 'koulutus. Kehän oikean puolen muodostaa hammasratas '
+          + '(teollisuustyö) ja vasemman maissin, kahvin ja puuvillan '
+          + 'seppele (maatalous). Nauhassa lukee República de Angola; '
+          + 'teksti muutettiin 1990, kun maa lakkasi olemasta '
+          + 'kansantasavalta.',
+      },
+    ],
+    lahde: 'Liput ja tunnus: Wikimedia Commons (PD)',
+  },
+  'Flag of Namibia.svg': {
+    maa: 'Namibia',
+    symboliikka: [
+      {
+        osa: 'Sininen',
+        selite: 'Namibian taivas, Atlantti ja maan kallisarvoiset '
+          + 'vesivarat.',
+      },
+      {
+        osa: 'Punainen vinoraita',
+        selite: 'maan tärkein voimavara eli sen ihmiset: heidän '
+          + 'sankaruutensa ja päättäväisyytensä.',
+      },
+      {
+        osa: 'Valkoiset reunat',
+        selite: 'rauha, yhtenäisyys ja sopu.',
+      },
+      { osa: 'Vihreä', selite: 'kasvillisuus ja maatalous.' },
+      {
+        osa: 'Kultainen aurinko',
+        selite: 'elämä ja energia, kulta maan vauraus. Kaksitoista '
+          + 'sädettä on luettu maan kahdeksitoista väestöryhmäksi.',
+      },
+    ],
+    kappaleet: [
+      'Lippu vahvistettiin yksimielisesti 2. helmikuuta 1990 ja '
+        + 'nostettiin salkoon itsenäistymispäivänä 21. maaliskuuta '
+        + '1990. Kilpailuun tuli 870 ehdotusta. Kuusi karsittiin '
+        + 'kolmeen, ja lopullinen lippu koottiin yhdistämällä nämä '
+        + 'kolme: Theo Jankowskin, Don Stevensonin ja Ortrud Clayn '
+        + 'työt.',
+      'Suunnittelijasta on silti kiistelty. Eteläafrikkalainen '
+        + 'valtionheraldikko Frederick Brownell — sama mies, joka '
+        + 'piirsi Etelä-Afrikan nykyisen lipun — ilmoitti tehneensä '
+        + 'sen virkatyönään, ja brittiläinen Roy Allen kertoi '
+        + 'voittaneensa erään sanomalehden järjestämän kilpailun.',
+      'Ennen itsenäisyyttä alueella liehui Etelä-Afrikan oranssi, '
+        + 'valkoinen ja sininen lippu. Isoisän matkavuonna 1873 '
+        + 'siirtomaata ei vielä ollut: Saksa julisti Lounais-Afrikan '
+        + 'suojelusalueekseen vasta 1884. Vinoraita on lipuissa '
+        + 'harvinainen — muita ovat muun muassa Kongon demokraattinen '
+        + 'tasavalta, Tansania ja Trinidad ja Tobago.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Namibian vaakuna',
+        polku: 'assets/liput/tunnukset/nam-vaakuna.png',
+        selite: 'Kilpi on suoraan lipusta. Ylinnä on perinteisen '
+          + 'pääpannan päällä kalasääksi, kannattajina kaksi '
+          + 'gemsbokkia eli sapelisarviantilooppia ja jalustana '
+          + 'Namibin dyyni, jossa kasvaa welwitschia — '
+          + 'aavikkokasvi, joka voi elää yli tuhat vuotta. Nauhassa '
+          + 'lukee Unity Liberty Justice, yhtenäisyys, vapaus, '
+          + 'oikeus. Vaakuna piirrettiin lipun pohjalta 1990.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of South Africa.svg': {
+    maa: 'Etelä-Afrikka',
+    symboliikka: [
+      {
+        osa: 'Vihreä Y-kuvio',
+        selite: 'lipun ainoa virallisesti selitetty osa: '
+          + 'yhteiskunnan erilaisten ainesten yhtyminen ja yhteinen '
+          + 'tie eteenpäin.',
+      },
+      {
+        osa: 'Musta, kulta ja vihreä',
+        selite: 'Afrikan kansalliskongressin lipun värit. Kulta on '
+          + 'luettu myös maan mineraalirikkaudeksi.',
+      },
+      {
+        osa: 'Chilinpunainen, valkoinen ja sininen',
+        selite: 'Alankomaiden ja Britannian lippujen sekä vanhan '
+          + 'eteläafrikkalaisen lipun värit.',
+      },
+      {
+        osa: 'Värit yleensä',
+        selite: 'hallitus muistuttaa, ettei yksittäisille väreille '
+          + 'pidä antaa yleispätevää merkitystä — lippu on tiivistys '
+          + 'maan lippuhistoriasta.',
+      },
+    ],
+    kappaleet: [
+      'Lippu liehui ensi kerran 27. huhtikuuta 1994, maan '
+        + 'ensimmäisten kaikille avointen vaalien päivänä. Se syntyi '
+        + 'kiireessä: yleiseen kilpailuun oli tullut yli 7 000 '
+        + 'ehdotusta, joista yksikään ei kelvannut, ja lopullinen '
+        + 'kuvio — valtionheraldikko Fred Brownellin työ — '
+        + 'hyväksyttiin vasta 15. maaliskuuta. Presidentti F. W. de '
+        + 'Klerk julisti sen viikkoa ennen käyttöönottoa.',
+      'Lipun piti olla väliaikainen viideksi vuodeksi. Perustuslakia '
+        + 'valmisteltaessa tuli 118 esitystä sen säilyttämisestä ja '
+        + '35 muuttamisesta, ja 28. syyskuuta 1995 se päätettiin '
+        + 'pitää. Nyt lippu on perustuslain ensimmäinen pykälä.',
+      'Sitä ennen, vuosina 1928–1994, lippu oli oranssi-'
+        + 'valkoinen-sininen ja sen keskellä kolme pientä lippua. '
+        + 'Isoisän matkavuonna 1873 yhtenäistä Etelä-Afrikkaa ei '
+        + 'ollut lainkaan: Kapmaa ja Natal olivat brittiläisiä ja '
+        + 'buurien tasavalloilla oli omat lippunsa. Vasta 1910 '
+        + 'nelikko yhdistyi.',
+    ],
+    versiot: [
+      {
+        nimi: 'Vanha lippu 1928–1994',
+        polku: 'assets/liput/versiot/zaf-1928.png',
+        selite: 'Pohjana on Alankomaiden vanha ruhtinaanlippu, ja '
+          + 'valkoisella raidalla on kolme pientä lippua: Britannian '
+          + 'unionilippu, Oranjen vapaavaltion lippu pystyssä ja '
+          + 'Transvaalin Vierkleur. Ne on aseteltu niin, ettei '
+          + 'yksikään ole arvokkaammalla paikalla kuin toinen — '
+          + 'kolmen vuoden kiistan jälkeen syntynyt kompromissi. '
+          + 'Maailman ainoa valtiolippu, jossa oli viisi lippua '
+          + 'kolmen lipun sisällä. Vuodesta 2019 lipun turha '
+          + 'esittäminen julkisesti on Etelä-Afrikassa tuomittu '
+          + 'vihapuheeksi; museot, tutkimus, taide ja journalismi '
+          + 'ovat poikkeus.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Etelä-Afrikan vaakuna',
+        polku: 'assets/liput/tunnukset/zaf-vaakuna.png',
+        selite: 'Kilvessä on kaksi ihmishahmoa, jotka tervehtivät '
+          + 'toisiaan; ne on otettu Linton-kiven khoisan-'
+          + 'kalliotaiteesta. Kilven päällä lepäävät keihäs ja '
+          + 'nuija merkkinä rauhasta, ylinnä kuninkaanprotea, '
+          + 'sihteerihaukka ja nouseva aurinko, sivuilla '
+          + 'norsunsyöksyhampaat ja vehnäntähkät. Nauhassa on '
+          + 'sukupuuttoon kuolleella ǀxam-kielellä lause "ǃke e꞉ '
+          + 'ǀxarra ǁke" eli "erilaiset ihmiset yhdistyvät". '
+          + 'Vaakunan piirsi Iaan Bekker ja se otettiin käyttöön '
+          + 'vapaudenpäivänä 27. huhtikuuta 2000; sitä ennen '
+          + 'tunnuslause oli latinaksi Ex Unitate Vires.',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Vaakuna: Echando una '
+      + 'mano / Wikimedia Commons (CC BY-SA 4.0)',
+  },
+  'Flag of Zimbabwe.svg': {
+    maa: 'Zimbabwe',
+    symboliikka: [
+      { osa: 'Vihreä', selite: 'maatalous ja maaseutu.' },
+      {
+        osa: 'Kulta',
+        selite: 'maaperän mineraalit, ennen kaikkea kulta.',
+      },
+      {
+        osa: 'Punainen',
+        selite: 'chimurenga-sodissa eli vapaustaisteluissa vuodatettu '
+          + 'veri.',
+      },
+      { osa: 'Musta', selite: 'mustan enemmistön perintö.' },
+      { osa: 'Valkoinen kolmio', selite: 'rauha.' },
+      {
+        osa: 'Punainen tähti',
+        selite: 'kansakunnan pyrkimykset. Yleisesti se luetaan myös '
+          + 'sosialismin merkiksi.',
+      },
+      {
+        osa: 'Zimbabwen lintu',
+        selite: 'Ison Zimbabwen raunioista löytynyt vuolukivipatsas, '
+          + 'joka on todennäköisimmin kalasääksi.',
+      },
+    ],
+    kappaleet: [
+      'Lippu nostettiin salkoon keskiyöllä 17. ja 18. huhtikuuta '
+        + '1980 välisenä yönä, kun Britannia myönsi maalle '
+        + 'itsenäisyyden. Pohjana on hallituspuolue ZANU–PF:n lippu. '
+        + 'Luonnoksessa ei ollut lintua lainkaan: sen ehdotti '
+        + 'lentoluutnantti Cedric Herbert, joka muistutti linnun '
+        + 'iästä ja ainutlaatuisuudesta.',
+      'Sama lintu oli ollut jo Etelä-Rhodesian vaakunassa vuodesta '
+        + '1924. Se pääsi lippuun 11. marraskuuta 1968, kun '
+        + 'valkoisen vähemmistön hallitus otti käyttöön '
+        + 'vihreä-valkoinen-vihreän lipun vaakunoineen. Vuonna 1979 '
+        + 'maa oli hetken Zimbabwe Rhodesia ja sai neljännen lipun — '
+        + 'mustanationalistit kutsuivat sitä "lipuksi, jolla on kaksi '
+        + 'nimeä".',
+      'Isoisän matkavuonna 1873 alueella ei ollut lippua: sitä '
+        + 'hallitsi ndebelejen kuningas Lobengula, ja Cecil Rhodesin '
+        + 'yhtiö otti maan haltuunsa vasta 1890. Nykylipusta on '
+        + 'liikkeellä kaksi versiota — ulkomaisissa tehtaissa lintu '
+        + 'on litistetty ja tähti vinossa, koska mallina on '
+        + 'käytetty hätäisesti tehtyä esittelykuvaa vuodelta 1980. '
+        + 'Virallinen on se, jossa tähti on säännöllinen.',
+    ],
+    versiot: [
+      {
+        nimi: 'Rhodesian lippu 1968–1979',
+        polku: 'assets/liput/versiot/zwe-rhodesia.png',
+        selite: 'Vihreä-valkoinen-vihreä pystyraita ja keskellä '
+          + 'siirtomaan vaakuna: Cecil Rhodesin suvun leijona ja '
+          + 'ohdakkeet, kaivoshakku ja ylinnä Zimbabwen lintu. '
+          + 'Ensimmäinen valtiolippu, jossa lintu oli.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Zimbabwen vaakuna',
+        polku: 'assets/liput/tunnukset/zwe-vaakuna.png',
+        selite: 'Vihreällä kilvellä on pala Ison Zimbabwen '
+          + 'kivimuuria ja yläreunassa siniset aaltoviivat eli '
+          + 'vedet. Kilven takana ovat ristissä kuokka ja '
+          + 'rynnäkkökivääri: siirtymä sodasta rauhaan. Kannattajina '
+          + 'on kaksi kuudua, jalustassa vehnää, puuvillaa ja '
+          + 'maissia, ylinnä punainen tähti ja Zimbabwen lintu. '
+          + 'Nauhassa lukee Unity, Freedom, Work. Vaakuna otettiin '
+          + 'käyttöön 21. syyskuuta 1981 — siihen asti käytössä oli '
+          + 'yhä Rhodesian vaakuna.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of Mozambique.svg': {
+    maa: 'Mosambik',
+    symboliikka: [
+      { osa: 'Vihreä', selite: 'maaperä.' },
+      { osa: 'Musta', selite: 'Afrikan manner.' },
+      {
+        osa: 'Kulta',
+        selite: 'maankamaran alla olevat rikkaudet.',
+      },
+      {
+        osa: 'Valkoinen',
+        selite: 'rauha ja mosambikilaisten taistelun oikeutus.',
+      },
+      {
+        osa: 'Punainen kolmio',
+        selite: 'siirtomaavallan vastustaminen ja maanpuolustus.',
+      },
+      {
+        osa: 'Kirja, kuokka ja kivääri',
+        selite: 'koulutus, tuotanto ja puolustus.',
+      },
+      {
+        osa: 'Keltainen tähti',
+        selite: 'kansainvälisen solidaarisuuden henki.',
+      },
+    ],
+    kappaleet: [
+      'Mosambikin lippu on maailman ainoa valtiolippu, jossa on '
+        + 'nykyaikainen tuliase. Perustuslaki puhuu vain "kuokasta '
+        + 'ja aseesta", mutta piirroksessa se on rynnäkkökivääri '
+        + 'pistimineen. Nykyinen asu vahvistettiin 1. toukokuuta '
+        + '1983.',
+      'Itsenäisyys tuli 25. kesäkuuta 1975 ja ensimmäinen lippu oli '
+        + 'toisenlainen: neljä vinoraitaa lähti salon yläkulmasta, '
+        + 'ja kulmassa oli valkoinen hammasratas tähtineen. Kuvio '
+        + 'periytyi vapausliike FRELIMOn lipusta, jonka esikuvaksi '
+        + 'on arveltu joko Tanganjikan lippua tai Etelä-Afrikan '
+        + 'ANC:n lippua. Isoisän matkavuonna 1873 rannikolla liehui '
+        + 'Portugalin lippu.',
+      'Kiväärin poistamisesta on väitelty pitkään. Vuonna 2005 '
+        + 'järjestettiin uusi lippukilpailu osana FRELIMOn ja '
+        + 'RENAMOn rauhansopimusta; 169 ehdotusta jätettiin, mutta '
+        + 'parlamentti äänesti muutosta vastaan luvuin 155–79.',
+    ],
+    versiot: [
+      {
+        nimi: 'Ensimmäinen lippu 1975–1983',
+        polku: 'assets/liput/versiot/moz-1975.png',
+        selite: 'Neljä vinoraitaa salon yläkulmasta ja valkoinen '
+          + 'hammasratas, jonka sisällä ovat tähti, kirja, kuokka ja '
+          + 'kivääri. Hammasratas oli työväenluokka ja '
+          + 'teollisuustuotanto; se poistettiin 1983.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Mosambikin tunnus',
+        polku: 'assets/liput/tunnukset/moz-vaakuna.png',
+        selite: 'Hammasratas, jota reunustavat maissintähkä ja '
+          + 'sokeriruoko. Sisällä punainen aurinko nousee maan '
+          + 'kartan yllä, alla aaltoina meri, edessä kirja, kuokka '
+          + 'ja kivääri, ylinnä punainen tähti. Nauhassa lukee '
+          + 'República de Moçambique; teksti muutettiin 1990, kun '
+          + 'maa lakkasi olemasta kansantasavalta.',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Tunnus: Jam123 / '
+      + 'Wikimedia Commons (CC0)',
+  },
+  'Flag of Madagascar.svg': {
+    maa: 'Madagaskar',
+    symboliikka: [
+      {
+        osa: 'Valkoinen pystyraita',
+        selite: 'alun perin puhtaus, nykyisin vapaus ja turvallisuus. '
+          + 'Se on myös malagasilaisten naisten juhlavaatteen ja '
+          + 'riisin väri.',
+      },
+      {
+        osa: 'Punainen',
+        selite: 'alun perin suvereenisuus, nykyisin kansallinen '
+          + 'yhtenäisyys. Punainen oli saaren kuningaskuntien väri '
+          + 'ja se on savitiilitalojen väri.',
+      },
+      {
+        osa: 'Vihreä',
+        selite: 'toivo. Se on myös rannikon ravenala-viuhkapuun ja '
+          + 'ylängön metsien väri.',
+      },
+    ],
+    kappaleet: [
+      'Radio Tananarive pyysi 1958 ehdotuksia tulevan tasavallan '
+        + 'lipuksi. Tekninen toimikunta kokoontui 15. lokakuuta, '
+        + 'päivä Malagasin tasavallan julistamisen jälkeen, ja valitsi '
+        + 'viidestä finalistista kartastoviraston virkamiehen '
+        + 'Andrianome Ranaivosoan toisen ehdotuksen. Lippu '
+        + 'vahvistettiin 21. lokakuuta 1958, lähes kaksi vuotta ennen '
+        + 'itsenäistymistä Ranskasta 26. kesäkuuta 1960.',
+      'Väreille ei alun perin annettu merkityksiä. Vasta '
+        + 'käyttöönottopäivänä perustuslakia säätävän kokouksen '
+        + 'edustaja Barinia Tsara sanoi: "Valkoinen on puhtaus, '
+        + 'punainen suvereenisuus. Ja vihreä, hyvät herrat, on '
+        + 'toivo."',
+      'Lippua myös arvosteltiin. Punainen ja valkoinen olivat '
+        + 'merinojen kuningaskunnan värit, eivätkä kaikki pitäneet '
+        + 'siitä, että enemmistökansan hallitsijasuvun värit tulivat '
+        + 'koko maan lipuksi. Silti lippu on säilynyt muuttumattomana '
+        + 'kaikkien vallanvaihdosten läpi.',
+    ],
+    versiot: [
+      {
+        nimi: 'Merinojen kuningaskunnan lippu',
+        polku: 'assets/liput/versiot/mdg-merina.png',
+        selite: 'Valkoinen ja punainen kaksivärilippu. Radama I '
+          + 'yhdisti 1810 kaksi henkilökohtaista viiriään — '
+          + 'valkoisen ja punaisen — kuningaskunnan lipuksi, ja '
+          + 'hallitsijat kirjoittivat siihen nimensä punaisin '
+          + 'kirjaimin. Isoisän matkavuonna 1873 saarta hallitsi '
+          + 'kuningatar Ranavalona II.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Madagaskarin sinetti',
+        polku: 'assets/liput/tunnukset/mdg-vaakuna.png',
+        selite: 'Keltaisella kehällä lukee REPOBLIKAN\'I '
+          + 'MADAGASIKARA. Keskellä on saaren kartta ja sen alla '
+          + 'zebun eli kyttyräkarjan pää; punavihreät säteet '
+          + 'muodostavat sekä auringon että ravenalan viuhkan. '
+          + 'Alareunassa on tunnuslause Fitiavana, Tanindrazana, '
+          + 'Fandrosoana — rakkaus, isänmaa, edistys. Lause on '
+          + 'vaihtunut perustuslakien mukana useaan kertaan.',
+      },
+    ],
+    lahde: 'Liput ja sinetti: Wikimedia Commons (PD)',
+  },
+  'Flag of Tanzania.svg': {
+    maa: 'Tansania',
+    symboliikka: [
+      {
+        osa: 'Vihreä',
+        selite: 'maan kasvillisuus ja maatalouden rikkaus.',
+      },
+      {
+        osa: 'Sininen',
+        selite: 'Intian valtameri sekä maan järvet ja joet.',
+      },
+      {
+        osa: 'Musta vinoraita',
+        selite: 'maan asukkaat, swahilinkielinen kansa.',
+      },
+      {
+        osa: 'Kultaiset kapeat raidat',
+        selite: 'maaperän mineraalirikkaus.',
+      },
+    ],
+    kappaleet: [
+      'Lippu on kahden lipun summa. Tanganjika itsenäistyi 9. '
+        + 'joulukuuta 1961, ja sen lippu tehtiin TANU-puolueen '
+        + 'vihreä-musta-keltaisesta lipusta lisäämällä kapeat '
+        + 'keltaiset raidat. Sansibarissa vallankumous kaatoi '
+        + 'sulttaanin 12. tammikuuta 1964, ja uusi hallitus otti '
+        + 'sini-musta-vihreän lipun. Kun maat yhdistyivät '
+        + 'huhtikuussa 1964, värit sulautettiin yhteen ja uusi lippu '
+        + 'vahvistettiin 30. kesäkuuta 1964.',
+      'Sansibarin sulttaanikunnan lippu oli pelkkä punainen kangas. '
+        + 'Se periytyi Omanin Muscatin sulttaanikunnasta, eikä '
+        + 'Majid bin Said vaihtanut sitä, kun hän julisti Sansibarin '
+        + 'itsenäiseksi 2. marraskuuta 1856. Punainen liehui aina '
+        + 'joulukuuhun 1963, jolloin siihen lisättiin vihreä kiekko '
+        + 'ja kaksi mausteneilikkaa.',
+      'Isoisän matkavuonna 1873 juuri tuo punainen lippu liehui '
+        + 'Sansibarissa. Kesäkuussa 1873 Britannian konsuli John '
+        + 'Kirk esitti sulttaani Barghashille uhkavaatimuksen, ja '
+        + 'kahdessa viikossa sulttaani allekirjoitti sopimuksen, '
+        + 'joka kielsi orjakaupan ja sulki saaren suuren '
+        + 'orjamarkkinan.',
+    ],
+    versiot: [
+      {
+        nimi: 'Sansibarin sulttaanikunnan lippu',
+        polku: 'assets/liput/versiot/tza-sansibar.png',
+        selite: 'Pelkkä punainen kangas ilman tunnuksia. Sansibarin '
+          + 'lippu 1800-luvun puolivälistä vuoteen 1963 — sama, joka '
+          + 'liehui Stone Townin yllä isoisän matkavuonna 1873.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Tansanian vaakuna',
+        polku: 'assets/liput/tunnukset/tza-vaakuna.png',
+        selite: 'Soturin kilpi on jaettu neljään: ylinnä kultaisella '
+          + 'palava soihtu eli vapaus ja tieto, sitten maan lippu, '
+          + 'sitten punaisella ristissä kirves ja kuokka, alinna '
+          + 'siniset aallot. Kilpeä halkoo keihäs, ja se seisoo '
+          + 'Kilimanjaron kuvan päällä. Kannattajina ovat mies ja '
+          + 'nainen norsunsyöksyhampaiden vierellä, miehen jalassa '
+          + 'mausteneilikkapensas ja naisen jalassa puuvillapensas. '
+          + 'Nauhassa lukee swahiliksi Uhuru na Umoja — vapaus ja '
+          + 'yhtenäisyys.',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Vaakuna: FischX / '
+      + 'Wikimedia Commons (CC BY-SA 3.0)',
+  },
+  'Flag of Kenya.svg': {
+    maa: 'Kenia',
+    symboliikka: [
+      { osa: 'Musta', selite: 'maan kansa.' },
+      {
+        osa: 'Punainen',
+        selite: 'itsenäisyystaistelussa vuodatettu veri.',
+      },
+      { osa: 'Vihreä', selite: 'maa ja sen luonnonvarat.' },
+      { osa: 'Valkoiset kapeat raidat', selite: 'rauha.' },
+      {
+        osa: 'Maasai-kilpi ja kaksi keihästä',
+        selite: 'tahto puolustaa maata.',
+      },
+    ],
+    kappaleet: [
+      'Lippu otettiin käyttöön itsenäistymispäivänä 12. joulukuuta '
+        + '1963. Sen esikuvana on puoluelippu: Kenya African Union '
+        + 'otti 1951 käyttöön musta-punaisen lipun ja muutti sen '
+        + '1952 kolmiraidaksi, jonka keskellä oli kilpi. Seuraaja '
+        + 'KANU vaihtoi aseiden tilalle kukon ja kirveen.',
+      'Puoluelippua ei silti haluttu suoraan valtiolipuksi. Jomo '
+        + 'Kenyattan johtama toimikunta rakensi kompromissin, jossa '
+        + 'on KANU:n kolmiraita ja kilpailija KADU:n kapeat '
+        + 'valkoiset raidat. Keskelle jäi maasai-kilpi ja kaksi '
+        + 'keihästä, jotka näin siirtyivät puoluetunnuksesta koko '
+        + 'maan tunnukseksi. Mitat on kirjattu vuoden 2010 '
+        + 'perustuslain toiseen liitteeseen.',
+      'Isoisän matkavuonna 1873 Kenian rannikkokaista kuului '
+        + 'Sansibarin sulttaanille ja sisämaa oli omien kansojensa '
+        + 'hallussa; brittien protektoraatti perustettiin vasta '
+        + '1895. Lipun käyttöä säätelee yhä oma lakinsa, joka kieltää '
+        + 'luvattoman kaupallisen jäljentämisen.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Kenian vaakuna',
+        polku: 'assets/liput/tunnukset/ken-vaakuna.png',
+        selite: 'Kaksi kultaista leijonaa pitelee keihäitä ja '
+          + 'maasai-kilpeä. Kilvessä ovat lipun värit ja keskellä '
+          + 'kukko, joka kantaa kirvestä — KANU:n tunnus ja merkki '
+          + 'työn tahdosta ja uuden päivän koitosta. Alla on Kenia-'
+          + 'vuoren siluetti ja sen juurella kahvia, pyretriä, '
+          + 'sisalia, teetä, maissia ja ananasta. Nauhassa lukee '
+          + 'swahiliksi Harambee, "vetäkäämme yhdessä".',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Vaakuna: Ashiriz / '
+      + 'Wikimedia Commons (CC BY-SA 3.0)',
+  },
+  'Flag of Uganda.svg': {
+    maa: 'Uganda',
+    symboliikka: [
+      { osa: 'Musta', selite: 'Ugandan kansa.' },
+      { osa: 'Keltainen', selite: 'auringonpaiste.' },
+      { osa: 'Punainen', selite: 'veljeys.' },
+      {
+        osa: 'Kruunupäinen kurki',
+        selite: 'maan kansallislintu. Bagandoille se on onnen, '
+          + 'pitkän iän ja vaurauden merkki.',
+      },
+      {
+        osa: 'Kuusi raitaa',
+        selite: 'sama kolmikko kahdesti — lippu näyttää samalta, '
+          + 'vaikka sen kääntäisi ylösalaisin.',
+      },
+    ],
+    kappaleet: [
+      'Lippu otettiin käyttöön itsenäistymispäivänä 9. lokakuuta '
+        + '1962. Sitä ei ollut helppo valita. Maaliskuussa 1962 '
+        + 'kasvatustieteilijä Senteza Kajubin toimikunta oli jo '
+        + 'ehdottanut aivan toisenlaista lippua: vihreä-sini-vihreitä '
+        + 'pystyraitoja ja keltainen kurki keskellä.',
+      'Se ehdotus kaatui. Värit olivat demokraattisen puolueen, ja '
+        + 'huhtikuun vaalit voitti Uganda People\'s Congress. '
+        + 'Oikeusministeri Grace Ibingiran johtama alakomitea valitsi '
+        + 'tilalle nykyisen kuvion, joka on lähellä UPC:n omaa '
+        + 'lippua. Ibingiraa pidetään yleensä suunnittelijana, mutta '
+        + 'muutkin ovat ilmoittautuneet tekijöiksi.',
+      'Kurki oli tullut tunnukseksi jo siirtomaa-aikana: britit '
+        + 'valitsivat sen 1914 protektoraatin merkiksi, koska he '
+        + 'eivät halunneet nostaa esiin minkään yksittäisen '
+        + 'kuningaskunnan omia symboleja. Isoisän matkavuonna 1873 '
+        + 'Bugandaa hallitsi kabaka Mutesa I, ja alue oli vielä '
+        + 'kokonaan Euroopan ulottumattomissa.',
+    ],
+    versiot: [
+      {
+        nimi: 'Ugandan protektoraatin lippu 1914–1962',
+        polku: 'assets/liput/versiot/uga-protektoraatti.png',
+        selite: 'Brittiläinen sininen lippu, jonka liepeessä on '
+          + 'keltaisessa kiekossa kruunupäinen kurki. Sama lintu '
+          + 'siirtyi itsenäisen Ugandan lippuun ja vaakunaan.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Ugandan vaakuna',
+        polku: 'assets/liput/tunnukset/uga-vaakuna.png',
+        selite: 'Kilvessä on kolme kuvaa: ylinnä aaltoviivat eli '
+          + 'Victoria- ja Albert-järvi, keskellä aurinko ja alinna '
+          + 'perinteinen rumpu. Rumpu oli alun perin kuninkuuden ja '
+          + 'kuningaskuntien vallan merkki; kuningaskunnat '
+          + 'lakkautettiin 1967, ja sen jälkeen rumpua on selitetty '
+          + 'tanssin ja koolle kutsumisen merkiksi. Kannattajina '
+          + 'ovat Ugandan kob-antilooppi ja kruunupäinen kurki, '
+          + 'jalustassa Niili sekä kahvin ja puuvillan oksat. '
+          + 'Nauhassa lukee For God and My Country. Vaakuna '
+          + 'hyväksyttiin 1. lokakuuta 1962, kolme viikkoa ennen '
+          + 'itsenäisyyttä.',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Vaakuna ja '
+      + 'protektoraatin lippu: Sodacan / Wikimedia Commons '
+      + '(CC BY-SA 3.0)',
+  },
+  'Flag of Somalia.svg': {
+    maa: 'Somalia',
+    symboliikka: [
+      {
+        osa: 'Vaaleansininen',
+        selite: 'väri valittiin kunnianosoitukseksi Yhdistyneille '
+          + 'kansakunnille, jonka hallintoalueena maa oli. Nykyisin '
+          + 'se luetaan myös taivaaksi ja mereksi.',
+      },
+      {
+        osa: 'Valkoinen viisisakarainen tähti',
+        selite: 'yhtenäisyyden tähti. Sakarat ovat viisi aluetta, '
+          + 'joilla somalit ovat alkuperäisenä enemmistönä.',
+      },
+    ],
+    kappaleet: [
+      'Lippu hyväksyttiin 12. lokakuuta 1954, kun maa oli vielä '
+        + 'YK:n hallintoalue Italian hoidossa. Neuvottelut olivat '
+        + 'ajautuneet umpikujaan: suurin puolue Somali Youth League '
+        + 'halusi oman puoluelippunsa, mitä muut eivät hyväksyneet. '
+        + 'Umpisolmun avasi oppinut Mohammed Awale Liban, joka '
+        + 'ehdotti ja piirsi kokonaan uuden tunnuksen.',
+      'Tähden sakarat tarkoittavat viittä aluetta: Djiboutia, '
+        + 'Somalimaata, Etiopian somalialuetta, Kenian koillista '
+        + 'maakuntaa ja itse Somaliaa. Lippu on siis kansallisuuden '
+        + 'lippu, joka ylittää valtioiden rajat — 1800-luvun '
+        + 'puolivälistä lähtien somalinkieliset alueet oli jaettu '
+        + 'Etiopian, Ranskan, Britannian ja Italian kesken, eikä '
+        + 'niitä ole sen jälkeen koottu yhteen.',
+      'Sama lippu oli hetken myös Somalimaan valtion lippu 26. '
+        + 'kesäkuuta – 1. heinäkuuta 1960, jolloin entinen '
+        + 'brittiläinen protektoraatti yhdistyi Somaliaan. Vuonna '
+        + '1991 Somalimaa julistautui uudelleen itsenäiseksi; '
+        + 'yksikään valtio ei ole tunnustanut sitä, sillä on oma '
+        + 'lippunsa, ja Somalian lipun esittäminen on siellä '
+        + 'kielletty.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Somalian vaakuna',
+        polku: 'assets/liput/tunnukset/som-vaakuna.png',
+        selite: 'Sinisellä, kultakehyksisellä kilvellä on lipun '
+          + 'valkoinen tähti. Kilven yllä on koristekruunu, jossa on '
+          + 'viisi kärkeä, ja kannattajina kaksi leopardia — '
+          + 'leopardi on tavallinen aihe somalialaisessa '
+          + 'kuvaperinteessä. Alinna ovat palmunlehvät ja valkoinen '
+          + 'nauha. Vaakuna otettiin käyttöön 10. lokakuuta 1956 ja '
+          + 'sen piirsi italialainen Giuseppe Ricci.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of Ethiopia.svg': {
+    maa: 'Etiopia',
+    symboliikka: [
+      {
+        osa: 'Vihreä',
+        selite: 'toivo sekä maa ja sen hedelmällisyys.',
+      },
+      {
+        osa: 'Keltainen',
+        selite: 'rauha ja sopu maan eri kansojen ja uskontojen '
+          + 'välillä.',
+      },
+      {
+        osa: 'Punainen',
+        selite: 'maan puolustamisessa vuodatettu veri.',
+      },
+      {
+        osa: 'Sininen kiekko ja keltainen viisikanta',
+        selite: 'kansojen ja kansallisuuksien yhtenäisyys. Tähden '
+          + 'yhtä pitkät säteet on selitetty kaikkien '
+          + 'etiopialaisten tasa-arvoksi.',
+      },
+    ],
+    kappaleet: [
+      'Suorakulmainen kolmiraita syntyi 11. lokakuuta 1897, vuosi '
+        + 'Adwan voiton jälkeen, kun keisari Menelik II käski '
+        + 'yhdistää kolme erillistä viiriä yhdeksi lipuksi. '
+        + 'Keskiraidalla oli hänen nimensä ensimmäinen kirjain. Se '
+        + 'poistettiin keisarin kuoltua 1913, ja 1914 raitojen '
+        + 'järjestys kääntyi nykyiseksi.',
+      'Isoisän matkavuonna 1873 tällaista lippua ei siis vielä '
+        + 'ollut. Keisari Yohannes IV:n valtaa merkitsivät '
+        + 'sotarummut, punaiset päivänvarjot ja sandak alama, '
+        + 'metallitankoon kiinnitetty kultainen risti-pallo. Värit '
+        + 'itsessään olivat vanhoja: Etiopian ortodoksinen kirkko '
+        + 'käytti punaista uskon ja vallan, keltaista kirkon ja '
+        + 'rauhan sekä vihreää luonnonrikkauden värinä.',
+      'Koska Etiopia säilyi siirtomaavallan ulkopuolella, moni '
+        + 'itsenäistyvä Afrikan maa otti sen värit omakseen — niin '
+        + 'niistä tuli panafrikkalaiset värit. Tunnus on vaihtunut '
+        + 'hallitusten mukana; nykyinen viisikanta vahvistettiin 31. '
+        + 'lokakuuta 1996, ja vuoden 2009 laki kieltää lipun käytön '
+        + 'ilman tunnusta.',
+    ],
+    versiot: [
+      {
+        nimi: 'Keisarikunnan leijonalippu 1897–1974',
+        polku: 'assets/liput/versiot/eth-keisarikunta.png',
+        selite: 'Kolmiraidan keskellä kruunattu Juudan leijona, joka '
+          + 'kantaa kulkueristiä. Keisarikunnan lippu Menelik II:n '
+          + 'ajoista Haile Selassien syrjäyttämiseen 1974. Risti oli '
+          + 'ollut Etiopian tunnus jo 1600-luvulta.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Etiopian tunnus',
+        polku: 'assets/liput/tunnukset/eth-vaakuna.png',
+        selite: 'Sinisellä kiekolla on keltainen viisikanta, jonka '
+          + 'kärjistä lähtee yhtä pitkät säteet. Kiekko on suoraan '
+          + 'lipun keskeltä. Ennen vuotta 1975 tunnus oli '
+          + 'keisarikunnan vaakuna, ja Dergin aikana 1975–1987 '
+          + 'aura keltaisen auringon edessä seppeleen sisällä.',
+      },
+    ],
+    lahde: 'Liput ja tunnus: Wikimedia Commons (PD)',
+  },
+  'Flag of Sudan.svg': {
+    maa: 'Sudan',
+    symboliikka: [
+      {
+        osa: 'Punainen',
+        selite: 'itsenäisyystaistelu ja maan marttyyrit.',
+      },
+      {
+        osa: 'Valkoinen',
+        selite: 'kansa, valo ja toivo. Se muistuttaa myös vuoden '
+          + '1924 Valkoisen lipun liitosta, joka nousi '
+          + 'siirtomaavaltaa vastaan.',
+      },
+      {
+        osa: 'Musta',
+        selite: 'maan nimi: sudan tarkoittaa arabiaksi mustien maata. '
+          + 'Väri viittaa myös mahdistien mustaan lippuun.',
+      },
+      {
+        osa: 'Vihreä kolmio',
+        selite: 'islam, maatalous ja maan hedelmällisyys.',
+      },
+    ],
+    kappaleet: [
+      'Nykyinen lippu otettiin käyttöön toukokuussa 1970. Vuoden '
+        + '1969 vallankaappauksen jälkeen järjestettiin kilpailu, '
+        + 'jonka voitti taiteilija Abdel Rahman Ahmed al-Jali. '
+        + 'Pohjana ovat arabivallankumouksen värit, jotka '
+        + 'periytyvät Egyptin vuoden 1952 vallankumouksen lipusta: '
+        + 'puna-valko-musta kolmiraita, jonka vihreä osa erottaa '
+        + 'maat toisistaan.',
+      'Ensimmäinen lippu oli aivan toisenlainen. Kun Sudan '
+        + 'itsenäistyi 1. tammikuuta 1956, runoilija Macki Sufin '
+        + 'suunnittelemassa lipussa oli sini-kelta-vihreä kolmiraita: '
+        + 'Niili, Sahara ja viljelysmaat. Värit valittiin nimenomaan '
+        + 'siksi, että ne olivat puolueettomia niin kansanryhmien '
+        + 'kuin puolueidenkin välillä.',
+      'Isoisän matkavuonna 1873 Sudanilla ei ollut lippua: maata '
+        + 'hallitsi Egyptin kediivi. Anglo-egyptiläisellä '
+        + 'yhteishallinnollakaan 1899–1956 ei ollut omaa lippua — '
+        + 'salossa liehuivat Egyptin ja Britannian liput rinnakkain. '
+        + 'Vanha kolmiraita palasi katukuvaan vuosien 2018–2019 '
+        + 'mielenosoituksissa.',
+    ],
+    versiot: [
+      {
+        nimi: 'Itsenäisyyden lippu 1956–1970',
+        polku: 'assets/liput/versiot/sdn-1956.png',
+        selite: 'Sininen, keltainen ja vihreä vaakaraita: Niili, '
+          + 'Sahara ja viljelysmaat. Runoilija Macki Sufin '
+          + 'suunnittelema lippu, joka valittiin siksi, ettei se '
+          + 'kuulunut kenellekään.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Sudanin tunnus',
+        polku: 'assets/liput/tunnukset/sdn-vaakuna.png',
+        selite: 'Sihteerihaukka kantaa kilpeä, joka on peräisin '
+          + 'mahdi Muhammad Ahmadin ajalta 1800-luvulta. Ylemmässä '
+          + 'nauhassa lukee arabiaksi "voitto on meidän" ja '
+          + 'alemmassa Sudanin tasavalta. Sihteerihaukka valittiin '
+          + 'nimenomaan sudanilaiseksi vastineeksi muiden arabimaiden '
+          + 'Saladinin kotkalle ja Quraishin haukalle. Tunnus on '
+          + 'ollut käytössä vuodesta 1985; itsenäisyyden ensimmäinen '
+          + 'tunnus oli sarvikuono kahden palmun välissä.',
+      },
+    ],
+    lahde: 'Liput ja tunnus: Wikimedia Commons (PD)',
+  },
+  'Flag of South Sudan.svg': {
+    maa: 'Etelä-Sudan',
+    symboliikka: [
+      { osa: 'Musta', selite: 'Etelä-Sudanin kansa.' },
+      {
+        osa: 'Punainen',
+        selite: 'itsenäisyyden puolesta vuodatettu veri.',
+      },
+      {
+        osa: 'Vihreä',
+        selite: 'maatalous, luonnonvarat, maa ja edistys.',
+      },
+      { osa: 'Valkoiset kapeat raidat', selite: 'rauha.' },
+      {
+        osa: 'Taivaansininen kolmio',
+        selite: 'Niilin vedet, elämän lähde.',
+      },
+      {
+        osa: 'Keltainen tähti',
+        selite: 'osavaltioiden yhtenäisyys, toivo ja päättäväisyys.',
+      },
+    ],
+    kappaleet: [
+      'Lippu on maataan vanhempi. Se hyväksyttiin 2005 osana '
+        + 'kokonaisrauhansopimusta, joka päätti toisen Sudanin '
+        + 'sisällissodan, ja pohjana oli vapausliike SPLM:n lippu. '
+        + 'Itse valtio syntyi vasta 9. heinäkuuta 2011.',
+      'Neljä vaakaraitaa ovat samat kuin Kenian lipussa ja värit '
+        + 'samat kuin Sudanin lipussa, mutta merkitykset ovat omat. '
+        + 'Sinisessä kolmiossa oleva keltainen tähti muistuttaa '
+        + 'Belgian Kongon lipusta.',
+      'Lipun oikeasta muodosta on kiistelty pitkään. John Garangin '
+        + 'hautajaisissa 2005 kolmio oli tummansininen ja tähti '
+        + 'kallellaan, ja molempia muotoja käytettiin rinnakkain '
+        + 'vuoteen 2023. Elokuussa 2023 maan mediaviranomainen '
+        + 'ilmoitti, että ainoa oikea versio on se, jossa kolmio on '
+        + 'taivaansininen ja tähti pystyssä. Isoisän matkavuonna '
+        + '1873 alue oli Egyptin Sudanin Equatorian maakuntaa, jonka '
+        + 'kuvernöörinä toimi brittitutkija Samuel Baker.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Etelä-Sudanin vaakuna',
+        polku: 'assets/liput/tunnukset/ssd-vaakuna.png',
+        selite: 'Afrikankalasääksi levittää siipensä kultaisen '
+          + 'kilven takana ja pitelee ristissä keihästä ja lapiota — '
+          + 'tahtoa puolustaa maata ja tehdä työtä sen ruokkimiseksi. '
+          + 'Kotka merkitsee voimaa, sitkeyttä ja kaukonäköisyyttä. '
+          + 'Nauhoissa lukee Justice, Liberty, Prosperity ja '
+          + 'Republic of South Sudan. Vaakuna vahvistettiin '
+          + 'itsenäistymisen yhteydessä heinäkuussa 2011.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
 };
