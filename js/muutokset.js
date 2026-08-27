@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1216, teksti: 'Herot era 3: kuusi kaupunkia generoituihin avauskuviin' },
   { v: 1215, teksti: 'Karttamerkit minimalistisiksi vanhan kartan tyyliin' },
   { v: 1214, teksti: 'Smolikas Kreetanmeri ja Traakianmeri kohteiksi' },
   { v: 1213, teksti: 'Maataulun lisatiedot nimen paalle ja pehmea blur' },

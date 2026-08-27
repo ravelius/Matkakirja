@@ -75,58 +75,35 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       /*
-       * Avauskuvat (omistajan linjaukset 15.8.2026: korkean paikan
-       * näkymiä JA muita kuvakulmia, useampi karusellissa). Bussikuva
-       * siirtyi pikkuriviltä karuselliin — pikkurivi näyttää kaksi
-       * ensimmäistä kansikuvaa. Lisenssit tarkistettu Commonsin
-       * API:sta, kuvat katsottu silmin.
+       * AVAUSKUVAT (27.8.2026, herot erä 3): kolme uusittua herokuvaa
+       * korvasivat kierroksen 3 generoidut kuvat ja kolme Commonsin
+       * yleisnäkymää. Karusellissa on nyt VAIN heroja: Tower Bridge,
+       * Westminsterin palatsi ja St Paulin katedraali — samat kohteet
+       * kuin ennenkin, joten selitteet eivät muuttuneet, vain kuvat.
+       * Tiedostonimi kertoo kohteen eikä vuorokaudenaikaa. Kaikki
+       * kolme katsottu silmin.
        */
       avauskuvat: [
-        /*
-         * GENEROIDUT HEROT, KIERROS 3 (omistajan tilaus 22.8.2026):
-         * pelin omia havainnekuvia peiliämpäristä, kolme
-         * vuorokaudenaikaa ja kolme eri pääkohdetta.
-         */
         {
-          ampari: 'herokoe/hero-lontoo-aamu.png',
+          ampari: 'herokoe/hero-lontoo-tower-bridge.jpg',
           selite: 'Tower Bridge avattiin 1894, ja sen nostosillan '
             + 'puoliskot kohotetaan yhä laivojen tieltä satoja kertoja '
             + 'vuodessa.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero-lontoo-keskipaiva.png',
+          ampari: 'herokoe/hero-lontoo-westminster.jpg',
           selite: 'Westminsterin palatsi rakennettiin uudelleen vuoden '
             + '1834 palon jälkeen, ja sen kellotornin Big Ben on '
             + 'lyönyt tunteja vuodesta 1859.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero-lontoo-ilta.png',
+          ampari: 'herokoe/hero-lontoo-st-pauls.jpg',
           selite: 'Christopher Wrenin St Paulin katedraali valmistui '
             + '1710 Lontoon suurpalon raunioille ja hallitsi kaupungin '
             + 'siluettia yli kaksisataa vuotta.',
           lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          tiedosto: 'London, Greenwich, Blick vom Hügel des Royal Greenwich Observatory -- 2016 -- 4730.jpg',
-          selite: 'Greenwichin observatorion läpi kulki nollameridiaani, ja '
-            + 'siitä sai nimensä Greenwichin aika, nykyisen '
-            + 'maailmanajan edeltäjä.',
-          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'Red London Buses - geograph.org.uk - 2792011.jpg',
-          selite: 'Lontoossa ajetaan tien vasenta puolta, ja monessa '
-            + 'risteyksessä ohje katsoa ensin oikealle on maalattu '
-            + 'asfalttiin.',
-          lahde: 'Colin Smith, Wikimedia Commons (CC BY-SA 2.0)',
-        },
-        {
-          tiedosto: 'More London Office Development at Dusk, London, UK - Diliff.jpg',
-          selite: 'Lontoo ei ole yksi kaupunki vaan kokoelma kyliä, jotka ovat '
-            + 'kasvaneet kiinni toisiinsa.',
-          lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       /*
@@ -1284,55 +1261,36 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Golem',
         },
       ],
-          /*
-       * AVAUSKUVAT (18.8.2026): kolme suuntaa ja kolme hetkeä. Pohjoisen
-       * rinteeltä alas jokeen ja sen siltoihin, etelästä Vyšehradilta
-       * ylös jokea kohti linnaa, ja kattojen yli linnan siluettiin
-       * auringon ollessa matalalla. Kaarlensilta ja Vanhankaupungin
-       * tori ovat jo lehdessä eivätkä toistu. Lisenssit, tekijät ja
-       * koot todennettu Commonsin API:sta, kuvat katsottu silmin.
+      /*
+       * AVAUSKUVAT (27.8.2026, herot erä 3): kolme uusittua herokuvaa
+       * korvasivat aiemmat generoidut kuvat ja kolme Commonsin
+       * jokinäkymää. Karusellissa on nyt VAIN heroja: Pyhän Vituksen
+       * katedraali, Kaarlensilta ja Tynin kirkko — samat kohteet kuin
+       * ennenkin, joten selitteet eivät muuttuneet, vain kuvat.
+       * Tiedostonimi kertoo kohteen eikä vuorokaudenaikaa. Kaikki
+       * kolme katsottu silmin.
        */
       avauskuvat: [
         {
-          ampari: 'herokoe/hero-praha-aamu.png',
+          ampari: 'herokoe/hero-praha-st-vitus.jpg',
           selite: 'Pyhän Vituksen katedraalin rakentaminen alkoi vuonna 1344 '
             + 'Kaarle IV:n käskystä Matias Arraslaisen ja Peter Parlerin '
             + 'johdolla, ja rakennus saatiin valmiiksi vasta vuonna 1929.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero-praha-keskipaiva.png',
+          ampari: 'herokoe/hero-praha-charles-bridge.jpg',
           selite: 'Kaarlensillan peruskivi laskettiin vuonna 1357 ja silta '
             + 'valmistui 1400-luvun alussa; se oli Vltavan ainoa kiinteä ylitys '
             + 'Prahassa aina 1840-luvulle asti.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero-praha-ilta.png',
+          ampari: 'herokoe/hero-praha-tyn-church.jpg',
           selite: 'Tynin kirkkoa rakennettiin 1300-luvulta lähtien '
             + 'vanhankaupungin pääkirkoksi, ja sen kuoriin haudattiin '
             + 'tähtitieteilijä Tyko Brahe vuonna 1601.',
           lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          tiedosto: 'Vltava river in Prague.jpg',
-          selite: 'Vltava on Tšekin pisin joki, ja sen nimi tulee vanhoista '
-            + 'germaanisista sanoista, jotka merkitsevät villiä vettä.',
-          lahde: 'Dmitry A. Mottl, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'Vltava River from Vysehrad (34378141343).jpg',
-          selite: 'Vltava saa alkunsa Böömin metsästä lähes 1 200 metrin '
-            + 'korkeudelta ja yhtyy Elbeen Mělníkissä yli 430 kilometrin '
-            + 'matkan jälkeen.',
-          lahde: 'Nan Palmero from San Antonio, TX, USA, '
-            + 'Wikimedia Commons (CC BY 2.0)',
-        },
-        {
-          tiedosto: '2009-04-25 Sunrise in Prague 05.jpg',
-          selite: 'Pyhän Vituksen katedraali seisoo Prahan linnan pihojen '
-            + 'keskellä, ja linnassa säilytetään Böömin kruununjalokiviä.',
-          lahde: 'Szilas, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       ennenNyt: [
@@ -2063,62 +2021,37 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Espanjalainen ratsastuskoulu',
         },
       ],
-          /*
-       * AVAUSKUVAT (18.8.2026): kolme korkeutta ja kolme vuorokauden-
-       * aikaa. Aamu Stephansdomin tornista alas kattoihin, päivä
-       * Belvederen puutarhan yli kohti ydintä ja ilta Donaukanalin
-       * vesirajassa. Hofburg, Schönbrunn ja Riesenrad ovat jo muualla
-       * lehdessä, joten ne eivät toistu. Lisenssit, tekijät ja koot
-       * todennettu Commonsin API:sta, kuvat katsottu silmin.
+      /*
+       * AVAUSKUVAT (27.8.2026, herot erä 3): kolme uusittua herokuvaa
+       * korvasivat kierroksen 6 generoidut kuvat ja kolme Commonsin
+       * kattonäkymää. Karusellissa on nyt VAIN heroja: Stephansdom,
+       * Schönbrunn ja valtionooppera — samat kohteet kuin ennenkin,
+       * joten selitteet eivät muuttuneet, vain kuvat. Tiedostonimi
+       * kertoo kohteen eikä vuorokaudenaikaa. Kaikki kolme katsottu
+       * silmin.
        */
       avauskuvat: [
-        /*
-         * GENEROIDUT HEROT, KIERROS 6 (omistaja 23.8.2026: "Jatka
-         * herokuvia"): pelin omia havainnekuvia peiliämpäristä,
-         * kolme vuorokaudenaikaa ja kolme eri pääkohdetta.
-         */
         {
-          ampari: 'herokoe/hero-wien-aamu.png',
+          ampari: 'herokoe/hero-wien-st-stephens.jpg',
           selite: 'Stephansdomin etelätorni valmistui 1433 ja oli '
             + 'vuosisatoja Euroopan korkeimpia; kirkon kirjava '
             + 'tiilikatto on ladottu yli 230 000 laatasta.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero-wien-keskipaiva.png',
+          ampari: 'herokoe/hero-wien-schonbrunn.jpg',
           selite: 'Schönbrunn oli Habsburgien kesäpalatsi, jonka 1441 '
             + 'huonetta ja puutarhat rakennettiin kilpailemaan '
             + 'Versailles\'n kanssa.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero-wien-ilta.png',
+          ampari: 'herokoe/hero-wien-state-opera.jpg',
           selite: 'Valtionooppera avasi 1869 Ringstrassen '
             + 'loistorakennusten sarjan, ja sen lavalla on esiinnytty '
             + 'joka ilta pommituksista 1945 vain kymmenen vuoden '
             + 'tauolla.',
           lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          tiedosto: 'Wien, Stephansdom, Blick vom Südturm -- 2018 -- 3268.jpg',
-          selite: 'Stephansdomin nykyinen romaanis-goottilainen muoto sai '
-            + 'alkunsa herttua Rudolf IV:n aikana, ja kirkko seisoo kahden '
-            + 'vanhemman kirkon raunioilla.',
-          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'Wien-vom Oberen Belvedere-108-2009-gje.jpg',
-          selite: 'Belvedere rakennettiin prinssi Eugen Savoijilaisen '
-            + 'kesäasunnoksi, ja Johann Lukas von Hildebrandtin '
-            + 'suunnittelema kokonaisuus valmistui 1700-luvun alussa.',
-          lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'Wien Ringturm Panorama.jpg',
-          selite: 'Ringturm rakennettiin 1953–1955 Erich Boltensternin '
-            + 'suunnitelman mukaan, ja se on Stephansdomin jälkeen korkein '
-            + 'rakennus Ringin sisällä.',
-          lahde: 'Koalabaer, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       ennenNyt: [
@@ -3660,22 +3593,18 @@ export const KULTTUURI_KATEGORIAT = {
           musiikkiNayteNimi: 'Vivaldi: Kevät, 1. osa — John Harrison, viulu (CC BY-SA)',
         },
       ],
-          /*
-       * AVAUSKUVAT (18.8.2026): kolme korkeutta. Kaupungin omilta
-       * katoilta alas, kellotornista Bacinon yli koko rantajulkisivuun
-       * ja kanavan pinnalta veneestä. Canal Grande, Rialto ja San
-       * Marco ovat jo lehdessä eivätkä toistu.
-       *
-       * TOINEN KUVA VAIHDETTIIN valmisteluvaiheessa: ehdotettu näkymä
-       * Lidolta oli harmaa ja kaupunki jäi ohueksi viivaksi veden ja
-       * pilviverhon väliin. Tilalle etsittiin sama ajatus — kaupunki
-       * laguunin takaa — kirkkaassa valossa. Lisenssit, tekijät ja
-       * koot todennettu Commonsin API:sta, kuvat katsottu silmin.
+      /*
+       * AVAUSKUVAT (27.8.2026, herot erä 3): kolme uusittua herokuvaa
+       * korvasivat kierroksen 12 generoidut kuvat ja kolme Commonsin
+       * kanava- ja kattonäkymää. Karusellissa on nyt VAIN heroja:
+       * Markuksenkirkko kampanileineen, Rialton silta ja Santa Maria
+       * della Salute — samat kohteet kuin ennenkin, joten selitteet
+       * eivät muuttuneet, vain kuvat. Tiedostonimi kertoo kohteen eikä
+       * vuorokaudenaikaa. Kaikki kolme katsottu silmin.
        */
       avauskuvat: [
-        /* GENEROIDUT HEROT, KIERROS 12 (23.8.2026, tools/hero-tyolista-7.mjs). */
         {
-          ampari: 'herokoe/hero-venetsia-aamu.png',
+          ampari: 'herokoe/hero-venetsia-st-marks.jpg',
           selite: 'Markuksenkirkon pääportaalin yllä seisovat neljä '
             + 'pronssihevosta tuotiin Konstantinopolista 1204, ja '
             + 'kampanilen nykyinen torni on vuoden 1902 sortuman '
@@ -3683,38 +3612,19 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero-venetsia-keskipaiva.png',
+          ampari: 'herokoe/hero-venetsia-rialto-bridge.jpg',
           selite: 'Rialton silta valmistui 1591 Antonio da Ponten '
             + 'suunnittelemana yhtenä marmorikaarena, ja sen päällä '
             + 'kulkee kaksi myymäläriviä.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero-venetsia-ilta.png',
+          ampari: 'herokoe/hero-venetsia-santa-maria-della-salute.jpg',
           selite: 'Santa Maria della Salute rakennettiin kiitokseksi '
             + 'vuoden 1630 ruton päättymisestä, ja sen '
             + 'kahdeksankulmainen runko lepää yli miljoonan puupaalun '
             + 'varassa.',
           lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          tiedosto: 'Views of Venice, near Canal Grande5.jpg',
-          selite: 'Venetsian vanhassa keskustassa asui noin 120 000 ihmistä '
-            + 'vuonna 1980 ja enää 50 434 vuonna 2021.',
-          lahde: 'dconvertini, Wikimedia Commons (CC BY-SA 2.0)',
-        },
-        {
-          tiedosto: 'Views from the Campanile of Basilica di San Giorgio Maggiore (Venice) 03.jpg',
-          selite: 'Markuksen kampanile rakennettiin alun perin '
-            + 'vartiotorniksi, josta tähystettiin saapuvia laivoja ja '
-            + 'opastettiin ne satamaan.',
-          lahde: 'Derbrauni, Wikimedia Commons (CC BY 4.0)',
-        },
-        {
-          tiedosto: 'Canale Venezia sole.jpg',
-          selite: 'Venetsia jakautuu kuuteen sestieriin: Cannaregio, '
-            + 'Castello, Dorsoduro, Santa Croce, San Marco ja San Polo.',
-          lahde: 'Francesca Lissoni, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       ennenNyt: [
@@ -4385,31 +4295,24 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       /*
-       * Avauskuvat (omistajan linjaukset 15.8.2026: korkean paikan
-       * näkymiä JA muita kuvakulmia, useampi karusellissa; tarkennus
-       * 16.8.2026: ensimmäinen kuva on tunnelmallinen laajakulma
-       * erikoisvalossa, Pariisissa Eiffel-torni). Vanha kattokuva
-       * poistui — omistaja: "huono, kun näkyy vain kattoja" — ja
-       * päivänvalo-Trocadéro sen perässä, ettei karusellissa ole kahta
-       * samaa näkymää. Lisenssit tarkistettu Commonsin API:sta, kuvat
-       * katsottu silmin.
+       * AVAUSKUVAT (27.8.2026, herot erä 3): kolme uusittua herokuvaa
+       * korvasivat kierroksen 2 generoidut kuvat ja kolme Commonsin
+       * siltanäkymää. Karusellissa on nyt VAIN heroja: Eiffel-torni
+       * Marsin kentän yltä, Notre-Damen länsijulkisivu ja Sacré-Cœur
+       * Montmartren laella — samat kohteet kuin ennenkin, joten
+       * selitteet eivät muuttuneet, vain kuvat. Tiedostonimi kertoo
+       * kohteen eikä vuorokaudenaikaa. Kaikki kolme katsottu silmin.
        */
       avauskuvat: [
-        /*
-         * GENEROIDUT HEROT, KIERROS 2 (omistajan tilaus 22.8.2026:
-         * "jatka herokuvien tekoa eri maanosia vuorotellen"): pelin
-         * omia havainnekuvia peiliämpäristä, kolme vuorokaudenaikaa
-         * ja kolme eri pääkohdetta.
-         */
         {
-          ampari: 'herokoe/hero-pariisi-aamu.png',
+          ampari: 'herokoe/hero-pariisi-eiffel.jpg',
           selite: 'Eiffel-torni rakennettiin vuoden 1889 '
             + 'maailmannäyttelyyn väliaikaiseksi, ja siitä tuli '
             + 'maailman korkein rakennelma neljäksi vuosikymmeneksi.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero-pariisi-keskipaiva.png',
+          ampari: 'herokoe/hero-pariisi-notre-dame.jpg',
           selite: 'Notre-Damen katedraalia rakennettiin lähes '
             + 'kaksisataa vuotta vuodesta 1163, ja vuoden 2019 '
             + 'tulipalon jälkeen se entisöitiin ja avattiin uudelleen '
@@ -4417,32 +4320,11 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero-pariisi-ilta.png',
+          ampari: 'herokoe/hero-pariisi-sacre-coeur.jpg',
           selite: 'Sacré-Cœurin basilikaa rakennettiin Montmartren '
             + 'kukkulalle 1875–1914, ja sen travertiinikivi valkaisee '
             + 'itsensä sateessa.',
           lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          tiedosto: 'Eiffel Tower and Pont Alexandre III at night.jpg',
-          selite: 'Pont Alexandre III rakennettiin 1896–1900 ja nimettiin '
-            + 'Venäjän tsaari Aleksanteri III:n mukaan, joka oli solminut '
-            + 'Ranskan ja Venäjän liiton 1892.',
-          lahde: 'Getfunky Paris, Wikimedia Commons (CC BY 2.0)',
-        },
-        {
-          tiedosto: 'Pont Royal and Musée d\'Orsay, Paris 10 July 2020.jpg',
-          selite: 'Musée d\'Orsay rakennettiin rautatieasemaksi vuoden 1900 '
-            + 'maailmannäyttelyyn, ja Pont Royal ylittää Seinen sen '
-            + 'kohdalla.',
-          lahde: 'Pierre Blaché, Wikimedia Commons (CC0)',
-        },
-        {
-          tiedosto: 'Paris - Jardin des Tuileries - Arc de Triomphe du Carrousel - PA00085992 - 003.jpg',
-          selite: 'Carrousel-riemukaari rakennettiin 1806–1808 Napoleonin '
-            + 'voittojen muistoksi, ja se on noin puolet Champs-Élysées\'n '
-            + 'Riemukaaren koosta.',
-          lahde: 'Thesupermat, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       ennenNyt: [
@@ -9192,17 +9074,18 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Gulassi',
         },
       ],
-          /*
-       * AVAUSKUVAT (19.8.2026): kolme suuntaa ja kolme vuodenaikaa.
-       * Budan linnavuorelta itään joen yli Pestiin, Pestin rannalta
-       * länteen valaistuun linnaan, ja kattojen tasalta länteen Budan
-       * kukkuloille. Lisenssit, tekijät ja koot todennettu Commonsin
-       * API:sta, jokainen kuva katsottu silmin.
+      /*
+       * AVAUSKUVAT (27.8.2026, herot erä 3): kolme uusittua herokuvaa
+       * korvasivat kierroksen 13 generoidut kuvat ja kolme Commonsin
+       * panoraamaa. Karusellissa on nyt VAIN heroja: parlamenttitalo,
+       * Széchenyin ketjusilta ja Kalastajanlinnake — samat kohteet
+       * kuin ennenkin, joten selitteet eivät muuttuneet, vain kuvat ja
+       * kahden jälkimmäisen järjestys. Tiedostonimi kertoo kohteen
+       * eikä vuorokaudenaikaa. Kaikki kolme katsottu silmin.
        */
       avauskuvat: [
-        /* GENEROIDUT HEROT, KIERROS 13 (23.8.2026, tools/hero-tyolista-8.mjs). */
         {
-          ampari: 'herokoe/hero-budapest-aamu.png',
+          ampari: 'herokoe/hero-budapest-parliament.jpg',
           selite: 'Unkarin parlamenttitalo valmistui 1904 Imre Steindlin '
             + 'piirustuksin: uusgoottilainen palatsi on 268 metriä '
             + 'pitkä, ja sen kupoli nousee tasan 96 metriin — luku '
@@ -9210,41 +9093,19 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero-budapest-keskipaiva.png',
-          selite: 'Kalastajanlinnakkeen seitsemän suippotornia '
-            + 'muistuttavat unkarilaisten seitsemästä heimosta — '
-            + 'näköalaterassi valmistui 1902 Matthias-kirkon viereen, '
-            + 'eikä se ole koskaan ollut puolustusrakennelma.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          ampari: 'herokoe/hero-budapest-ilta.png',
+          ampari: 'herokoe/hero-budapest-chain-bridge.jpg',
           selite: 'Széchenyin ketjusilta valmistui 1849 ensimmäisenä '
             + 'pysyvänä siltana Tonavan yli Budan ja Pestin välillä — '
             + 'kivileijonat ovat vartioineet sen päitä vuodesta 1852.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Budapest Panorama R01.jpg',
-          selite: 'Buda on rakennettu kukkuloille ja Pest tasangolle, ja '
-            + 'korkeusero Tonavan pinnan ja János-vuoren välillä on yli '
-            + 'neljäsataa metriä.',
-          lahde: 'Marc Ryckaert ( MJJR ), Wikimedia Commons (CC BY 3.0)',
-        },
-        {
-          tiedosto: 'Budapest at dusk (31516129065).jpg',
-          selite: 'Budan kuninkaanlinnan, Matiaskirkon ja Kalastajabastionin '
-            + 'muodostama linnavuori on ollut Unescon maailmanperintökohde '
-            + 'vuodesta 1987.',
-          lahde: 'Jorge Franganillo from Barcelona, Spain, Wikimedia '
-            + 'Commons (CC BY 2.0)',
-        },
-        {
-          tiedosto: 'Rooftop view toward St. Stephen\'s Basilica and the Buda hills, Budapest (2025).jpg',
-          selite: 'Pyhän Tapanin basilika vihittiin vuonna 1905, ja sen '
-            + 'kupoliin pääsee hissillä tai 364 porrasta kiipeämällä.',
-          lahde: 'Paul Colin Hennig firstdorsal.eu, Wikimedia Commons '
-            + '(CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-budapest-fishermans-bastion.jpg',
+          selite: 'Kalastajanlinnakkeen seitsemän suippotornia '
+            + 'muistuttavat unkarilaisten seitsemästä heimosta — '
+            + 'näköalaterassi valmistui 1902 Matthias-kirkon viereen, '
+            + 'eikä se ole koskaan ollut puolustusrakennelma.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
