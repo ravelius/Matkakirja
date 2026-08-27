@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1235, teksti: 'Ihmenauha tasaiseksi kaistaksi kuvan reunaan' },
   { v: 1234, teksti: 'Takynostot tuikkivaksi keltaiseksi pisteeksi' },
   { v: 1233, teksti: 'Livian kevyt mauste faktavastauksiin' },
   { v: 1232, teksti: 'Isoisan maadoituskuplat kevyeen kulkuun' },

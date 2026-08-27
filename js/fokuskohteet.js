@@ -1497,20 +1497,13 @@ function kohteenIhmekuva(kohde) {
  * ilta, lähikuva suurennoksesta: *"nauhan pitäisi mennä hieman kuvan
  * ulkopuolelle eli valkoisen paperimarginaalin päälle, jotta näyttää
  * että se oikeasti kaartuu kuvan ympärille"*). Ulompi kääre
- * (.fokuskohde-ihmenauha) ulottuu marginaalille ja leikkaa nauhan
- * vasta kehyksen reunaviivaan; sisempi (.fokuskohde-ihmekuvaosa) on
- * täsmälleen kuvan kokoinen ja pitää kaistan — ja siis TEKSTIN —
- * kuvan sisällä. Ennen kääreitä oli yksi, ja kaista katkesi kuvan
- * reunaan kuin veitsellä leikaten.
+ * (.fokuskohde-ihmenauha) on täsmälleen kuvan kokoinen ja leikkaa
+ * kaistan ja taitteet kuvan reunaan — nauha ei koske paperiin.
  *
- * NELJÄ OSAA, KOSKA KÄÄRIYTYMINEN ON KAKSI KAISTAA JA KAKSI
- * TAITETTA (kahden kaistan malli, Fablen käsityö 27.8.2026):
- * takakaista on nauhan nurja puoli, joka jatkaa kuvan reunan takaa
- * marginaalille; etukaista on tekstipalkki, joka loppuu kuvan
- * reunaan; kaksi taitetta ovat etukaistan päissä olevat tummenevat
- * vyöhykkeet — se kohta, jossa paperi kaareutuu varjoon kuvan
- * reunalla. Ilman taitteita kaista näyttäisi vinolta lipukkeelta;
- * ilman takakaistaa se loppuisi kuvan reunaan.
+ * YKSI OSA (omistajan tarkennus 27.8.2026 ilta: esikuvana pelin oma
+ * MATKAOPAS-nauha — pelkkä vino kaista ilman taitekappaleita): kaista
+ * on 45 asteen kulmaan käännetty tekstipalkki, jonka kääre leikkaa
+ * kuvan reunaan. Päiden varjostus on kaistan omassa pinnassa.
  *
  * Sama komponentti istuu kortin kuvaan ja suurennokseen pelkillä
  * muuttujien arvoilla; myös väriryhmä on pelkkä luokka
@@ -1527,20 +1520,9 @@ export function piirraIhmenauha(isanta, teksti) {
   const nauha = html('span', 'fokuskohde-ihmenauha');
   if (KOHDE_IHMENAUHAN_SAVY) nauha.classList.add(KOHDE_IHMENAUHAN_SAVY);
   nauha.setAttribute('aria-hidden', 'true');
-  // Isäntä saa oman luokan: ihmekuvan suurennoskehys mitoittaa siitä
-  // leveämmän valkoisen marginaalin (css .fokuskohde-ihmeisanta).
-  isanta.classList.add('fokuskohde-ihmeisanta');
-  // Takakaista ENSIN: kuvassa se jää kokonaan etukaistan alle, ja
-  // vain marginaalilla näkyvä osa on nauhan nurja puoli.
-  nauha.appendChild(html('span', 'fokuskohde-ihmetausta'));
-  const kuvaosa = html('span', 'fokuskohde-ihmekuvaosa');
-  // Kaista ensin, taitteet päälle: taitteet ovat läpinäkyviä varjon
-  // liukuvärejä kaistan päissä, joten ne kuuluvat kaistan PÄÄLLE —
-  // alle jäädessään ne peittyisivät kaistan omaan pohjaväriin.
-  kuvaosa.appendChild(html('span', 'fokuskohde-ihmekaista', teksti));
-  kuvaosa.appendChild(html('span', 'fokuskohde-ihmetaite fokuskohde-ihmetaite-ylos'));
-  kuvaosa.appendChild(html('span', 'fokuskohde-ihmetaite fokuskohde-ihmetaite-vasen'));
-  nauha.appendChild(kuvaosa);
+  // Tähtikoristeet kuuluvat ihmeelle: ne ovat samaa merkkiä kuin
+  // kadonneiden ihmeiden karttasymboli.
+  nauha.appendChild(html('span', 'fokuskohde-ihmekaista', `✦ ${teksti} ✦`));
   isanta.appendChild(nauha);
   return nauha;
 }

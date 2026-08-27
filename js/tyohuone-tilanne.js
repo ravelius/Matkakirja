@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1235: Ihmenauha on nyt Matkaopas-tyylinen tasainen kaista joka loppuu kuvan reunaan - paksumpi, varjostettu, antiikvateksti tahtikoristein.',
   'v1234: Takynostot ovat nyt tuikkiva keltainen piste kartalla, yksi kerrallaan - seuraava syttyy kun edellinen on katsottu. Livia vihjaa ensimmaisesta.',
   'v1233: Livian kevyt mauste - muutaman sanan oma kevennys useimpien faktavastausten alkuun tai loppuun.',
   'v1232: Livian maadoituskupla saapuu ensimmaisena kuplana Sofiassa, Sarajevossa, Bukarestissa, Istanbulissa ja Roomassa - Ateenassa ei.',
