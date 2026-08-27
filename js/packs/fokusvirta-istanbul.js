@@ -233,6 +233,14 @@ export const FOKUSVIRTA_ISTANBUL = {
    * käytetty tässä ("Minä satuin istumaan räystäällä sinä päivänä") —
    * sitä ei siis saa toistaa täkyjen eikä oppitunnin teksteissä.
    *
+   * PULUKOKEILU 27.8.2026: silminnäkijäheitto on korvattu Livian omalla
+   * perusteluheitolla (sukusi kantoi Reuterin kursseja Aachenista
+   * Brysseliin). Kyyhky ei ole ikivanha silminnäkijä, joten vanha
+   * repliikki olisi ollut suoraan ristiriidassa hahmon kanssa. Kaanonin
+   * varaus pysyy: heitto on nyt käytetty TÄSSÄ eikä sitä toisteta.
+   * docs/mantereet-tyoaineisto/fokusvirta-istanbul-kaanon.md sisältää
+   * yhä pöllön sanamuodon — päätoimittaja päättää, palautetaanko se.
+   *
    * VUOSILUKU ON KORJATTU, JA KAANON KÄSKI KORJATA SEN. Kaanonin
    * repliikissä lukee 1848 ja sen oma huomautus sanoo: *"yläleuka/pää
    * löytyi 1855/1848 — RAKENTAJA TARKISTAA vuoden täkyraportista ja
@@ -257,7 +265,9 @@ export const FOKUSVIRTA_ISTANBUL = {
   pollo: {
     teksti: 'Pylväästä puuttuu kolme päätä, ja yksi niistä makaa '
       + 'parinsadan metrin päässä museossa. Pylvään jalusta kaivettiin '
-      + 'esiin 1855. Minä satuin istumaan räystäällä sinä päivänä.',
+      + 'esiin 1855. Paikalla en ollut, mutta sukuni kantoi noihin '
+      + 'aikoihin uutisia Aachenista Brysseliin — uutisen kulusta tiedän '
+      + 'siis jotakin.',
     /*
      * Commons (takyt-istanbul.md, täky 1, varmennettu 25.8.2026):
      * 640×480, CC BY-SA 4.0, Gryffindor. Juuri se säilynyt käärmeenpää,

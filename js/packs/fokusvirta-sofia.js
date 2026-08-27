@@ -168,11 +168,18 @@ export const FOKUSVIRTA_SOFIA = {
    * SILMINNÄKIJÄHEITTO ("olen katsellut etsintöjä sata viisikymmentä
    * vuotta") on tässä käytetty eikä Sofiassa tule toista: sitä ei siis
    * saa toistaa täkyjen eikä oppitunnin teksteissä.
+   *
+   * PULUKOKEILU 27.8.2026: minä-muotoinen silminnäkijäheitto on
+   * poistettu — kyyhky ei ole katsellut mitään sataa viisikymmentä
+   * vuotta. Vuosiluku ja loppukärki säilyvät sellaisenaan, vain
+   * havaitsija vaihtui persoonattomaksi. Kaanonin varaus pysyy.
+   * docs/mantereet-tyoaineisto/fokusvirta-sofia-kaanon.md sisältää yhä
+   * pöllön sanamuodon — päätoimittaja päättää, palautetaanko se.
    */
   pollo: {
     teksti: 'Hirttopaikalla seisoo nyt kolmentoista metrin '
-      + 'graniittipatsas, ja hautaa etsitään yhä. Minä olen katsellut '
-      + 'etsintöjä sata viisikymmentä vuotta — kynttilä ikkunalla oli '
+      + 'graniittipatsas, ja hautaa etsitään yhä. Etsintöjä on jatkunut '
+      + 'sata viisikymmentä vuotta — kynttilä ikkunalla oli '
       + 'lähempänä totuutta kuin yksikään lapio.',
     /*
      * Commons 25.8.2026: 1000×667, CC BY-SA 3.0, Edal Anton Lefterov,

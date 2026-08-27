@@ -127,16 +127,16 @@ export function tarkistaRajat({
     return {
       ok: false,
       syy: 'kuukausiraja',
-      viesti: 'Pöllö on käyttänyt tämän kuukauden puheajan. '
-        + 'Se palaa ensi kuun alussa.',
+      viesti: 'Livia on lentänyt tämän kuukauden matkansa. '
+        + 'Siivet eivät ole lennätin — ensi kuussa jatketaan.',
     };
   }
   if (paivaraja > 0 && paiva >= paivaraja) {
     return {
       ok: false,
       syy: 'paivaraja',
-      viesti: 'Pöllö on vastannut sinulle jo monta kertaa tänään. '
-        + 'Jutellaan huomenna lisää.',
+      viesti: 'Livia on kantanut sinulle jo monta viestiä tänään. '
+        + 'Siivet eivät ole lennätin. Huomenna lennän taas.',
     };
   }
   return { ok: true, syy: null, viesti: null };

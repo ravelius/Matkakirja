@@ -1649,8 +1649,8 @@ function puraKorostus(merkinta) {
 function piirraKorostettuSana(ui, kohde, korostus, nakyvaTeksti) {
   const nappi = html('button', 'fokuskohde-sana', nakyvaTeksti);
   nappi.type = 'button';
-  nappi.title = `Kysy pöllöltä lisää: ${korostus.perus}`;
-  nappi.setAttribute('aria-label', `Kysy pöllöltä lisää: ${korostus.perus}`);
+  nappi.title = `Kysy Livialta lisää: ${korostus.perus}`;
+  nappi.setAttribute('aria-label', `Kysy Livialta lisää: ${korostus.perus}`);
   nappi.addEventListener('click', (tapahtuma) => {
     tapahtuma.stopPropagation();
     kysyKohteesta(ui, `Kerro lisää: ${korostus.perus} (kohteessa ${kohde.nimi})`);
@@ -1710,10 +1710,10 @@ function piirraKohdeKysymykset(ui, sisalto, kohde) {
   if (!kysymykset.length) return;
   // Omistaja 25.8.2026: "Ennen kysymyksiä voisi olla lause: kysy
   // pöllöltä" — kertoo, mihin pisteviivanapit johtavat.
-  sisalto.appendChild(html('p', 'fokuskohde-kysy-otsikko', 'Kysy pöllöltä:'));
+  sisalto.appendChild(html('p', 'fokuskohde-kysy-otsikko', 'Kysy Livialta:'));
   const rivi = html('div', 'fokuskohde-kysymykset');
   rivi.setAttribute('role', 'group');
-  rivi.setAttribute('aria-label', `Kysy pöllöltä: ${kohde.nimi}`);
+  rivi.setAttribute('aria-label', `Kysy Livialta: ${kohde.nimi}`);
   for (const kysymys of kysymykset) {
     const nappi = html('button', 'fokuskohde-kysymys', kysymys);
     nappi.type = 'button';

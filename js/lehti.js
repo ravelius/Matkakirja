@@ -901,7 +901,7 @@ function piirraPoimintavienti(kohde) {
     + 'Fable poimii parit kuratointijonosta.'));
   if (!avaimet.length) {
     kotelo.appendChild(html('p', 'periaate-huomio',
-      'Ei tallennettuja poimintoja tällä laitteella. Avaa juttu, kysy pöllöltä '
+      'Ei tallennettuja poimintoja tällä laitteella. Avaa juttu, kysy Livialta '
       + 'ja paina vastauksen alla "Tallenna juttuun".'));
     kohde.appendChild(kotelo);
     return;

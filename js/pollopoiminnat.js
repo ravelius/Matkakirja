@@ -281,7 +281,7 @@ export function piirraPoimintapillerit(kohde, avain, asetukset = {}) {
   rivi.dataset.pollo = 'ei';
   const nimio = document.createElement('span');
   nimio.className = 'pollo-poiminnat-nimio';
-  nimio.textContent = 'Pöllöltä kysyttyä';
+  nimio.textContent = 'Livialta kysyttyä';
   rivi.appendChild(nimio);
 
   for (const pari of parit) {
