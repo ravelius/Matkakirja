@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1173, teksti: 'Kohdesymbolit ja nykyisen kaupungin laatta pienemmiksi' },
   { v: 1172, teksti: 'Ihmeiden rekonstruktiokuvat kortteihin' },
   { v: 1171, teksti: 'Miniatyyrit Vilnaan, Tallinnaan, Ankaraan ja Izmiriin' },
   { v: 1170, teksti: 'Miniatyyrit itaiseen Eurooppaan + kaupunkisymbolin kuva' },
