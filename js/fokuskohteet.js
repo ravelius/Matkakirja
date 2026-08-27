@@ -96,6 +96,7 @@ import {
   nostosymAsetaPorras, nostosymNimioLaatikko,
   piirraNostosymKartalle, piirraNostosymboli,
 } from './fokusnosto-symbolit.js';
+import { FOKUS_LISANIMET } from './packs/fokus-grc.js';
 import { asetaKuva } from './media.js';
 import { html, jaaKappaleiksi, nielaiseSulkevaNapautus } from './ui-apurit.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
@@ -337,11 +338,15 @@ function lataaKohdeTyyli() {
  * sama päättely kuin js/fokuskartta.js nykyinenMaa, mutta ilman
  * riippuvuutta sen sisäiseen tilaan.
  */
+function nykyinenIso(ui) {
+  const taulu = ui?.game?.pack?.map?.cityCountry;
+  const kaupunki = ui?.game?.cityOf?.();
+  return (taulu && kaupunki && taulu[kaupunki.id]) || null;
+}
+
 function nykyisenMaanKohteet(ui) {
   if (!ui?.fokusPohjaBbox) return [];
-  const taulu = ui.game?.pack?.map?.cityCountry;
-  const kaupunki = ui.game?.cityOf?.();
-  const iso = (taulu && kaupunki && taulu[kaupunki.id]) || null;
+  const iso = nykyinenIso(ui);
   const lista = iso ? KOHDE_MAAT[iso] : null;
   if (!lista) return [];
   const lauta = ui.game?.pack?.id;
@@ -437,9 +442,140 @@ function kohteenSymboli(kohde) {
  * Muut kategoriat saavat nimiönsä: lehti ei nimeä pyhäköitä, museoita,
  * markkinoita eikä eläimiä, ja juuri niistä kartta ei ilman nimiötä
  * kerro mitään.
+ *
+ * ── EHTO ON NIMI KARTALLA, EI TYYPPI (v1218) ──────────────────────
+ *
+ * Omistajan kaappaus v1217:stä: Kreikan lehdellä oli useita merkkejä
+ * kokonaan ilman nimeä siellä missä tilaa oli yllin kyllin. Syy oli
+ * tässä: `tyyppi === 'kaupunki'` vaiensi nimiön KAIKILTA kaupungeilta,
+ * mutta perustelu — *"lehti painaa nimen itse"* — pätee vain niihin,
+ * jotka lehteen oikeasti on poltettu. Kreikan lehdessä niitä on neljä
+ * (tools/fokuskartta/maat.mjs GRC.kaupungit: Thessaloníki, Pátra,
+ * Ioánnina, Náfplio) ja lisäksi pelin oma laatta (Ateena). Iraklion,
+ * Kalamata, Ermoupoli ja Marathon EIVÄT ole kummassakaan listassa,
+ * joten niiden nimi ei lukenut kartalla missään — merkki oli sulkakynä,
+ * ankkuri tai malja ilman yhtään sanaa.
+ *
+ * Ehto luetaan siksi DATASTA eikä tyypistä: nimiö jää pois vain, jos
+ * samassa pisteessä on lehden poltettu kaupunginnimi
+ * (js/packs/fokus-grc.js FOKUS_LISANIMET) tai pelin oma laatta, jonka
+ * nimen peli latoo itse. Vertailu on PAIKALLA eikä nimellä, koska
+ * kirjoitusasut eroavat listojen välillä (`Patras` / `Pátra`).
  */
-function kohteenNimio(kohde) {
-  return kohde?.tyyppi !== 'kaupunki';
+
+/** Sama piste laudalla: listat on poimittu samoista koordinaateista. */
+const KOHDE_SAMA_PISTE = 3;
+
+/** Lehden itse painamat kaupunginnimet laudan koordinaateissa. */
+function poltetutKaupungit(ui) {
+  const iso = nykyinenIso(ui);
+  const tiedot = iso ? FOKUS_LISANIMET[iso] : null;
+  if (!tiedot || tiedot.lauta !== ui?.game?.pack?.id) return [];
+  return tiedot.kaupungit ?? [];
+}
+
+/** Onko kohteen nimi jo kartalla — lehteen poltettuna tai laattana? */
+function nimiJoKartalla(ui, kohde) {
+  const paikka = kohde?.laudat?.[ui?.game?.pack?.id];
+  if (!Number.isFinite(paikka?.x) || !Number.isFinite(paikka?.y)) return false;
+  const lahella = (a) => Number.isFinite(a?.x) && Number.isFinite(a?.y)
+    && Math.abs(a.x - paikka.x) <= KOHDE_SAMA_PISTE
+    && Math.abs(a.y - paikka.y) <= KOHDE_SAMA_PISTE;
+  return poltetutKaupungit(ui).some(lahella)
+    || (ui?.game?.pack?.cities ?? []).some(lahella);
+}
+
+function kohteenNimio(ui, kohde) {
+  if (kohde?.tyyppi !== 'kaupunki') return true;
+  return !nimiJoKartalla(ui, kohde);
+}
+
+/* ============ POLTETTU KAUPUNGINNIMI ON MYÖS NAPAUTETTAVA =========
+ *
+ * Omistaja v1217: Thessaloníkin kortin sai auki vain pikkuruisesta
+ * porttitornista, vaikka kartalla iso kohde on kaupungin NIMI. Nimi on
+ * poltettu lehden kuvaan eikä siitä ole solmua, joten peli laskee sen
+ * laatikon itse ja panee siihen näkymättömän osuma-alueen.
+ *
+ * MITAT OVAT LEHDEN OMAT, EI ARVAUS. Luvut ovat suoraan
+ * tools/fokuskartta/piirto.js:n kohdasta 8f (kaupungin nimi:
+ * `koko: 13.5`, `vali: 0.5`, siirto `dx`/`dy`, ankkuri `ank`), ja
+ * yksikkö on prototyyppipikseli — sama kuin piirto.js:n `S`. Yksi
+ * prototyyppipikseli on lehden rajauksen leveys jaettuna 1600:lla,
+ * joten laudan yksiköihin päästään kertomalla sillä. Leveys mitataan
+ * canvasilla samalla kirjasimella kuin kuvaan ladottiin — sama tapa
+ * kuin nimiöillä (js/fokusnosto-symbolit.js nostosymNimioLaatikko).
+ *
+ * LIKIARVO RIITTÄÄ. Laatikko on suorakaide nimen ympärillä pienellä
+ * marginaalilla; kirjainten alapidennykset ja halon pyöristys jäävät
+ * sen sisään. Tarkempi mittaus vaatisi kuvan lukemista pikseleittäin.
+ */
+const KOHDE_POLTETTU_PROTO = 1600;
+const KOHDE_POLTETTU_KOKO = 13.5;
+const KOHDE_POLTETTU_VALI = 0.5;
+const KOHDE_POLTETTU_FONTTI = '"Liberation Serif", serif';
+/** Marginaali laatikon joka reunaan, prototyyppipikseleitä. */
+const KOHDE_POLTETTU_VARA = 3;
+/** Puolikas rivikorkeus: perusviiva on keskellä (piirto.js textBaseline). */
+const KOHDE_POLTETTU_PUOLIKAS = KOHDE_POLTETTU_KOKO * 0.62;
+
+let KOHDE_NIMIMITTA = null;
+const KOHDE_NIMILEVEYDET = new Map();
+
+/**
+ * Poltetun nimen leveys prototyyppipikseleinä.
+ *
+ * Mitta otetaan MONINKERTAISENA ja jaetaan takaisin, koska 13,5
+ * pikselin kirjasin pyöristyy canvasilla karkeasti — sama kikka ja
+ * sama syy kuin nimiöiden mittauksessa.
+ */
+function poltetunNimenLeveys(nimi) {
+  if (typeof document === 'undefined') return 0;
+  let leveys = KOHDE_NIMILEVEYDET.get(nimi);
+  if (leveys === undefined) {
+    const kerroin = 8;
+    KOHDE_NIMIMITTA ??= document.createElement('canvas').getContext('2d');
+    KOHDE_NIMIMITTA.font = `${KOHDE_POLTETTU_KOKO * kerroin}px ${KOHDE_POLTETTU_FONTTI}`;
+    const merkit = [...nimi];
+    leveys = merkit.reduce((s, m) => s + KOHDE_NIMIMITTA.measureText(m).width, 0) / kerroin
+      + KOHDE_POLTETTU_VALI * Math.max(0, merkit.length - 1);
+    KOHDE_NIMILEVEYDET.set(nimi, leveys);
+  }
+  return leveys;
+}
+
+/**
+ * Poltetun kaupunginnimen laatikko KOHTEEN DATAPISTEESEEN nähden,
+ * laudan yksiköinä — tai null, jos lehti ei ole polttanut tätä nimeä.
+ *
+ * Suhteellinen siksi, että merkki itse voi olla siirretty (erottelu tai
+ * nippu) mutta poltettu nimi ei liiku minnekään: laatikko lasketaan
+ * datapisteestä ja asemoidaan ryhmän omaan mittaan vasta piirrossa
+ * (asetaKohdeMittakaava).
+ */
+function kaupunginNimiLaatikko(ui, kohde) {
+  const paikka = kohde?.laudat?.[ui?.game?.pack?.id];
+  if (!Number.isFinite(paikka?.x) || !Number.isFinite(paikka?.y)) return null;
+  const rajaus = ui?.fokusPohjaRajaus;
+  if (!(rajaus?.w > 0)) return null;
+  const poltettu = poltetutKaupungit(ui).find((a) => Number.isFinite(a?.x)
+    && Math.abs(a.x - paikka.x) <= KOHDE_SAMA_PISTE
+    && Math.abs(a.y - paikka.y) <= KOHDE_SAMA_PISTE);
+  if (!poltettu?.nimi) return null;
+  const proto = rajaus.w / KOHDE_POLTETTU_PROTO;
+  const leveys = poltetunNimenLeveys(poltettu.nimi);
+  if (!(leveys > 0)) return null;
+  const ax = poltettu.x + (poltettu.dx ?? 9) * proto;
+  const ay = poltettu.y + (poltettu.dy ?? 0) * proto;
+  const alku = poltettu.ank === 'end' ? ax - leveys * proto : ax;
+  const vara = KOHDE_POLTETTU_VARA * proto;
+  const puolikas = KOHDE_POLTETTU_PUOLIKAS * proto;
+  return {
+    x1: alku - vara - paikka.x,
+    x2: alku + leveys * proto + vara - paikka.x,
+    y1: ay - puolikas - vara - paikka.y,
+    y2: ay + puolikas + vara - paikka.y,
+  };
 }
 
 /*
@@ -485,6 +621,50 @@ const KOHDE_SYMBOLI_R = NOSTOSYM_MINI_R * KOHDE_SYMBOLI_SKAALA;
  * musteympyrä on tarkoituksella mykkä: nimiö tekisi jokaisesta
  * pisteestä nimilapun ja veisi merkiltä sen "tässä on jotain" -luonteen.
  */
+
+/* ============ LÄHIN VOITTAA (v1218) ==============================
+ *
+ * Omistaja v1217: *"Parnassósta ei voi klikata — napautus vuoren
+ * päältä avaa aina Delfoin."* Osuma-alue on SORMEN mitta
+ * (KOHDE_OSUMA_R = 22, eli 44 px lehden perustasolla) eikä merkin,
+ * joten naapurikohteiden alueet menevät väistämättä päällekkäin —
+ * Delfoi on Parnassóksen rinteellä viiden lautayksikön päässä. Selain
+ * antoi napautuksen sille, joka oli piirtojärjestyksessä päällimmäisenä
+ * eli DATASSA MYÖHEMMÄLLE, ja alla oleva merkki oli kuollut.
+ *
+ * Sääntö on nyt: napautuksen saa se kohde, jonka OSUMAMUODON KESKIPISTE
+ * on lähinnä napautuskohtaa. Symbolin päältä napautettaessa se on aina
+ * symboli itse. Tasatilanteessa voittaa datassa ensimmäinen — sama
+ * deterministinen järjestys kuin nimiöväistössä.
+ *
+ * Muotoja voi olla kohteella kaksi: sormen ympyrä ja kaupungin
+ * poltetun nimen suorakaide. Kumpikin kilpailee omalla keskipisteellään,
+ * jolloin nimen keskeltä napautettu nimi voittaa lähelläkin olevan
+ * toisen merkin ympyrän.
+ */
+function lahinKohde(ui, tapahtuma) {
+  const x = tapahtuma?.clientX;
+  const y = tapahtuma?.clientY;
+  if (!Number.isFinite(x) || !Number.isFinite(y)) return null;
+  let paras = null;
+  let lyhin = Infinity;
+  // DOM-järjestys on datajärjestys: ensimmäinen voittaa tasatilanteen.
+  for (const g of ui.fokuskohdeKerros?.querySelectorAll('.fokuskohde') ?? []) {
+    const kohde = ui.fokuskohdeTiedot?.get(g.dataset.kohde);
+    if (!kohde) continue;
+    for (const muoto of g.querySelectorAll('.fokuskohde-osuma')) {
+      const r = muoto.getBoundingClientRect();
+      if (!(r.width > 0) || !(r.height > 0)) continue;
+      if (x < r.left || x > r.right || y < r.top || y > r.bottom) continue;
+      const etaisyys = Math.hypot(x - (r.left + r.width / 2), y - (r.top + r.height / 2));
+      // Ympyrän laatikko on sen neliö: nurkat eivät kuulu alueeseen.
+      if (muoto.tagName === 'circle' && etaisyys > r.width / 2) continue;
+      if (etaisyys < lyhin) { lyhin = etaisyys; paras = kohde; }
+    }
+  }
+  return paras;
+}
+
 function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
   const g = el('g', { class: `fokuskohde fokuskohde-${kohde.tyyppi ?? 'muu'}` }, ryhma);
   g.dataset.kohde = kohde.id;
@@ -492,6 +672,17 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
   g.setAttribute('tabindex', '0');
   g.setAttribute('aria-label', `${kohde.nimi}: avaa tietoruutu`);
   el('circle', { class: 'fokuskohde-osuma', r: KOHDE_OSUMA_R }, g);
+  /*
+   * TOINEN OSUMA-ALUE POLTETULLE NIMELLE (v1218). Kaupungin nimi on
+   * kartan iso kohde, ja se on kuvassa eikä solmuna — laatikko tulee
+   * datasta (kaupunginNimiLaatikko) ja asemoidaan mittakaavapassissa,
+   * koska sen paikka on merkin OMASTA siirrosta riippumaton.
+   */
+  const nimiLaatikko = kaupunginNimiLaatikko(ui, kohde);
+  if (nimiLaatikko) {
+    tietue.nimiLaatikko = nimiLaatikko;
+    tietue.nimiOsuma = el('rect', { class: 'fokuskohde-osuma fokuskohde-nimiosuma' }, g);
+  }
   el('circle', { class: 'fokuskohde-korostus', r: KOHDE_KOROSTUS_R }, g);
   const symboli = kohteenSymboli(kohde);
   if (symboli) {
@@ -512,7 +703,7 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
       transform: `scale(${KOHDE_SYMBOLI_SKAALA.toFixed(4)})`,
     }, g);
     const glyyfi = el('g', { class: 'fokuskohde-glyyfi' }, sisus);
-    if (kohteenNimio(kohde)) {
+    if (kohteenNimio(ui, kohde)) {
       /*
        * NIMIÖN TILA ON VÄISTÖPASSIN PÄÄTÖS (paivitaKohdeNimiot), joka
        * ajetaan heti tämän rakennuksen perään. Ensipiirto käyttää
@@ -525,6 +716,10 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
       tietue.symboli = symboli;
       tietue.laji = kohde.tyyppi;
       tietue.nimioNakyy = !ui.fokuskohdePiiloNimiot?.has(kohde.id);
+      // Sama arvaus koskee myös nimiön PUOLTA (v1218): ahtaassa
+      // paikassa väistö on saattanut kääntää nimiön vasemmalle, ja
+      // ilman muistia ensipiirto latoisi sen hetkeksi väärin päin.
+      tietue.nimioVasemmalle = ui.fokuskohdeNimioPuolet?.get(kohde.id) ?? false;
     }
     /*
      * TYYPPI KULKEE MERKILLE MUKANA (27.8.2026 ilta). Kirjasto tarvitsee sen
@@ -532,7 +727,8 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
      * vuorelle poltettu kolmio, ja meren nimiö ladotaan harvennettuna
      * kapiteelina kuten lehteen poltettu EGEANMERI.
      */
-    piirraNostosymKartalle(glyyfi, symboli, tietue.nimioNakyy ? kohde.nimi : '', kohde.tyyppi);
+    piirraNostosymKartalle(glyyfi, symboli, tietue.nimioNakyy ? kohde.nimi : '',
+      kohde.tyyppi, tietue.nimioVasemmalle);
   } else {
     el('circle', { class: 'fokuskohde-halo', r: KOHDE_HALO_R }, g);
     el('circle', { class: 'fokuskohde-rengas', r: KOHDE_RENGAS_R }, g);
@@ -541,8 +737,11 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
   const avaa = (tapahtuma) => {
     tapahtuma.stopPropagation();
     tapahtuma.preventDefault();
-    if (ui.fokuskohdeAuki?.id === kohde.id) suljeFokuskohde(ui);
-    else avaaFokuskohde(ui, kohde);
+    // Osuma-alueet limittyvät (KOHDE_OSUMA_R on sormen mitta, ei
+    // merkin): voittajan valitsee etäisyys eikä piirtojärjestys.
+    const valittu = lahinKohde(ui, tapahtuma) ?? kohde;
+    if (ui.fokuskohdeAuki?.id === valittu.id) suljeFokuskohde(ui);
+    else avaaFokuskohde(ui, valittu);
   };
   g.addEventListener('click', avaa);
   g.addEventListener('keydown', (tapahtuma) => {
@@ -693,9 +892,25 @@ function asetaKohdeMittakaava(ui, suhde) {
   niputaFokusmerkit(ui, s);
   const zoom = s.toFixed(4);
   for (const ryhma of ui.fokuskohdeRyhmat ?? []) {
-    const x = (ryhma.nippu?.x ?? ryhma.x + (ryhma.sx ?? 0)).toFixed(2);
-    const y = (ryhma.nippu?.y ?? ryhma.y + (ryhma.sy ?? 0)).toFixed(2);
-    maare(ryhma.g, 'transform', `translate(${x} ${y}) scale(${zoom})`);
+    const px = ryhma.nippu?.x ?? ryhma.x + (ryhma.sx ?? 0);
+    const py = ryhma.nippu?.y ?? ryhma.y + (ryhma.sy ?? 0);
+    maare(ryhma.g, 'transform', `translate(${px.toFixed(2)} ${py.toFixed(2)}) scale(${zoom})`);
+    /*
+     * POLTETUN NIMEN OSUMA-ALUE EI SEURAA MERKKIÄ. Laatikko on lehden
+     * kuvassa datapisteen kohdalla, kun taas merkki on voitu siirtää
+     * (erottelu tai nippu) — laatikko lasketaan siksi ryhmän omaan
+     * mittaan datapisteestä käsin ja ryhmän NYKYISESTÄ paikasta.
+     * Kiertävän laudan toinen kopio hoituu samalla, koska ryhma.x
+     * kantaa jo laudan leveyden.
+     */
+    const laatikko = ryhma.nimiLaatikko;
+    if (!laatikko || !ryhma.nimiOsuma) continue;
+    const dx = ryhma.x - px;
+    const dy = ryhma.y - py;
+    maare(ryhma.nimiOsuma, 'x', ((laatikko.x1 + dx) / s).toFixed(2));
+    maare(ryhma.nimiOsuma, 'y', ((laatikko.y1 + dy) / s).toFixed(2));
+    maare(ryhma.nimiOsuma, 'width', ((laatikko.x2 - laatikko.x1) / s).toFixed(2));
+    maare(ryhma.nimiOsuma, 'height', ((laatikko.y2 - laatikko.y1) / s).toFixed(2));
   }
 }
 
@@ -713,10 +928,18 @@ function asetaKohdeMittakaava(ui, suhde) {
  * on sormen mitta; kumpaakaan ei kosketa. Nimi on lisäselite, ja
  * napautus kertoo sen joka tapauksessa kortin otsikkona.
  *
- * NIMIÖ JÄÄ POIS, JOS SEN LAATIKKO OSUISI toisen merkin symboliin tai
- * jo hyväksyttyyn nimiöön. Laatikko on sama kaista, johon nimiö
- * rasterissa ladotaan (js/fokusnosto-symbolit.js nostosymNimioLaatikko)
- * — väistö mittaa siis juuri sitä mustetta, joka kartalle piirtyy.
+ * NIMIÖ JÄÄ POIS VASTA KUN KUMPIKAAN KYLKI EI KELPAA (v1218). Kaista
+ * kokeillaan ensin merkin oikealta ja sitten vasemmalta puolelta
+ * (KOHDE_NIMIO_PUOLET), ja nimi jää pois vain, jos kumpikin osuisi
+ * toisen merkin symboliin tai jo hyväksyttyyn nimiöön. Laatikko on sama
+ * kaista, johon nimiö rasterissa ladotaan (js/fokusnosto-symbolit.js
+ * nostosymNimioLaatikko) — väistö mittaa siis juuri sitä mustetta, joka
+ * kartalle piirtyy.
+ *
+ * Ennen v1218:aa paikkoja oli yksi, ja se maksoi nimen jokaiselta
+ * merkiltä, jonka oikealla kyljellä sattui olemaan naapuri: omistajan
+ * kaappauksessa v1217:stä Delfoi ja reunuskilpikonna olivat mykkiä,
+ * vaikka vasemmalla puolella oli tyhjää paperia.
  *
  * ── MIKSI EI ZOOMIPORTAITTAISTA PALJASTUSTA ───────────────────────
  *
@@ -759,6 +982,26 @@ function asetaKohdeMittakaava(ui, suhde) {
  */
 const KOHDE_NIMIO_VARA = 2;
 
+/**
+ * NIMIÖN PUOLET KOKEILUJÄRJESTYKSESSÄ (v1218): ensin merkin oikea
+ * puoli, sitten vasen.
+ *
+ * Omistajan kaappaus v1217:stä: merkkejä oli kartalla ilman nimeä
+ * siellä missä tilaa oli. Yksi syy oli se, että nimiö tunsi vain YHDEN
+ * paikan — merkin oikean kyljen — ja kun juuri se kaista oli tukossa
+ * (Delfoi Parnassóksen alla, reunuskilpikonna Ateenan nipun kyljessä),
+ * nimi jäi kokonaan pois, vaikka vasen puoli oli tyhjä.
+ *
+ * Kaksi puolta on kartografisesti kotona: lehden oma poltettu ladonta
+ * latoo Pátran ja Ioánninan nimet pisteen VASEMMALLE puolelle
+ * (tools/fokuskartta/maat.mjs GRC.kaupungit, `ank: 'right'`), ja
+ * yleinen reitti kääntää nimen vasemmalle kuvan oikeassa laidassa
+ * (piirto.js kohta 8g). Enempää vaihtoehtoja ei kokeilla: kaksi riittää
+ * poistamaan kadot, ja jokainen lisäpaikka on uusi tapa yllättää
+ * lukija sillä, missä nimi on.
+ */
+const KOHDE_NIMIO_PUOLET = [false, true];
+
 /** Laatikot laudan koordinaateissa. Kosketus ei ole vielä limitystä. */
 function kohdeLimittyy(a, b) {
   return a.x1 < b.x2 && b.x1 < a.x2 && a.y1 < b.y2 && b.y1 < a.y2;
@@ -788,37 +1031,62 @@ function paivitaKohdeNimiot(ui, s) {
   const jono = new Map();
   ryhmat.forEach((r, i) => {
     if (!r.glyyfi || !r.nimi) return;
-    const laatikko = nostosymNimioLaatikko(r.nimi, r.g?.ownerSVGElement, r.laji);
-    if (!laatikko) return;
+    // Sama kaista molemmilta puolilta valmiiksi: mittaus on
+    // välimuistissa (NOSTOSYM_LEVEYDET), joten toinen laatikko on
+    // pelkkää peilausta eikä uutta canvas-mittausta.
+    const vaihtoehdot = KOHDE_NIMIO_PUOLET.map((vasemmalle) => {
+      const laatikko = nostosymNimioLaatikko(r.nimi, r.g?.ownerSVGElement, r.laji, vasemmalle);
+      if (!laatikko) return null;
+      return {
+        x1: paikat[i].x + laatikko.x1 * k - (vasemmalle ? vara : 0),
+        x2: paikat[i].x + laatikko.x2 * k + (vasemmalle ? 0 : vara),
+        y1: paikat[i].y + laatikko.y1 * k,
+        y2: paikat[i].y + laatikko.y2 * k,
+      };
+    });
+    if (vaihtoehdot.some((kehys) => !kehys)) return;
     const rivi = jono.get(r.id) ?? { indeksit: [], kehykset: [] };
     rivi.indeksit.push(i);
-    rivi.kehykset.push({
-      x1: paikat[i].x + laatikko.x1 * k, x2: paikat[i].x + laatikko.x2 * k + vara,
-      y1: paikat[i].y + laatikko.y1 * k, y2: paikat[i].y + laatikko.y2 * k,
-    });
+    rivi.kehykset.push(vaihtoehdot);
     jono.set(r.id, rivi);
   });
   const varatut = [];
   const piilossa = new Set();
+  const puolet = new Map();
   for (const [id, rivi] of jono) {
-    const osuu = rivi.kehykset.some((kehys, n) => symbolit
-      .some((sym, j) => j !== rivi.indeksit[n] && kohdeLimittyy(kehys, sym))
-      || varatut.some((varattu) => kohdeLimittyy(kehys, varattu)));
-    if (osuu) piilossa.add(id);
-    else varatut.push(...rivi.kehykset);
+    /*
+     * PUOLET JÄRJESTYKSESSÄ: oikea ensin, vasen vasta jos oikea on
+     * tukossa. Järjestys on kiinteä, joten sama lehti antaa saman
+     * kartan — eikä nimiö voi vaihtaa puolta panoroinnissa.
+     */
+    const valittu = KOHDE_NIMIO_PUOLET.findIndex((_, p) => rivi.kehykset
+      .every((vaihtoehdot, n) => {
+        const kehys = vaihtoehdot[p];
+        return !symbolit.some((sym, j) => j !== rivi.indeksit[n]
+          && kohdeLimittyy(kehys, sym))
+          && !varatut.some((varattu) => kohdeLimittyy(kehys, varattu));
+      }));
+    if (valittu < 0) piilossa.add(id);
+    else {
+      puolet.set(id, KOHDE_NIMIO_PUOLET[valittu]);
+      varatut.push(...rivi.kehykset.map((vaihtoehdot) => vaihtoehdot[valittu]));
+    }
   }
   // Päätös jää muistiin seuraavan rakennuksen arvaukseksi.
   ui.fokuskohdePiiloNimiot = piilossa;
+  ui.fokuskohdeNimioPuolet = puolet;
   for (const r of ryhmat) {
     if (!r.glyyfi || !r.nimi) continue;
     const nakyy = !piilossa.has(r.id);
-    if (r.nimioNakyy === nakyy) continue;
+    const vasemmalle = puolet.get(r.id) ?? false;
+    if (r.nimioNakyy === nakyy && r.nimioVasemmalle === vasemmalle) continue;
     r.nimioNakyy = nakyy;
+    r.nimioVasemmalle = vasemmalle;
     // Nimiö on paistettu rasteriin, joten tila vaihtuu piirtämällä
     // merkki uudestaan. Nimiötön rasteri on symbolikohtainen ja siksi
     // yhteinen kaikille saman lajin vaienneille merkeille.
     r.glyyfi.replaceChildren();
-    piirraNostosymKartalle(r.glyyfi, r.symboli, nakyy ? r.nimi : '', r.laji);
+    piirraNostosymKartalle(r.glyyfi, r.symboli, nakyy ? r.nimi : '', r.laji, vasemmalle);
   }
 }
 
@@ -865,6 +1133,9 @@ export function paivitaFokuskohteet(ui) {
     // Erottelusiirrot lasketaan uusille ryhmille uudestaan.
     ui.fokuskohdeEroAvain = null;
     ui.fokuskohdeMerkit = new Map();
+    // Tunnus → kohde, jotta napautuksen voittaja (lahinKohde) löytää
+    // kortin datan ilman että jokainen merkki kantaa omaa sulkeumaansa.
+    ui.fokuskohdeTiedot = new Map(kohteet.map(({ kohde }) => [kohde.id, kohde]));
     if (!kohteet.length) suljeFokuskohde(ui);
     else lataaKohdeTyyli();
     for (const { kohde, paikka } of kohteet) {
@@ -967,6 +1238,7 @@ export function nollaaFokuskohteet(ui) {
   ui.fokuskohdeEroAvain = null;
   ui.fokuskohdeRyhmat = [];
   ui.fokuskohdeMerkit = new Map();
+  ui.fokuskohdeTiedot = new Map();
   if (ui.fokuskohdeKerros?.isConnected) ui.fokuskohdeKerros.textContent = '';
 }
 

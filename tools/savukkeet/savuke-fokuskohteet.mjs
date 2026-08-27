@@ -379,9 +379,12 @@ vaadi('kaupunkikohde sai porttitornisymbolin ilman laattaa',
  * kartan mittaan (enintään 18 merkkiä, js/fokusnosto-symbolit.js
  * NOSTOSYM_NIMIO_MERKKEJA) eikä se ota napautuksia vastaan.
  *
- * KAUPUNKI ON RAJATTU ULOS (js/fokuskohteet.js kohteenNimio): lehti
- * painaa kaupunkiensa nimet itse, joten nimiö olisi sama nimi kahdesti
- * saman pisteen vieressä. Sekin on tässä oma väitteensä.
+ * LEHDEN OMA PAINOJÄLKI ON RAJATTU ULOS (js/fokuskohteet.js
+ * kohteenNimio): kun lehti on polttanut kaupungin nimen kuvaan, nimiö
+ * olisi sama nimi kahdesti saman pisteen vieressä. Ehto on v1218:sta
+ * alkaen DATA eikä tyyppi — nimeämätön kaupunki saa nimiönsä pelistä
+ * (kokeet 1a4). Tämä väitejoukko rajaa kaupunkiluokan ulos vain
+ * yksinkertaisuuden takia.
  */
 const nimiot = await sivu.evaluate(() => [...document.querySelectorAll('.fokuskohde')]
   .filter((g) => g.querySelector('.fokuskohde-symboli')
@@ -444,21 +447,40 @@ vaadi('kaupunkimerkki jättää nimiön lehden painojäljelle',
  * mittakaava.
  *
  * LAATIKOT LUETAAN RASTERISTA. Merkin kuva on korkeutensa levyinen
- * neliö (glyyfi) ja sen oikealla puolella nimiön kaista; kun nimiö on
+ * neliö (glyyfi) ja sen kyljessä nimiön kaista; kun nimiö on
  * vaiennut, kuva on pelkkä neliö. Symbolit saavat sipaista toisiaan
  * (erottelupassin lupaus), joten koe koskee vain KAISTOJA: kaista ei
  * saa mennä toisen merkin neliön eikä toisen kaistan päälle.
+ *
+ * KAISTA VOI OLLA KUMMALLA PUOLELLA TAHANSA (v1218): väistö kääntää
+ * nimiön merkin vasemmalle, jos oikea kylki on tukossa. Neliön paikka
+ * luetaan siksi merkin OMASTA keskipisteestä (osuma-ympyrä) eikä
+ * kuvan vasemmasta reunasta — muuten koe mittaisi peilatulla merkillä
+ * nimiökaistan tilalla symbolia ja päinvastoin.
  */
 const nimioLimitys = await sivu.evaluate(() => {
   const merkit = [...document.querySelectorAll('.fokuskohde')].map((g) => {
     const r = g.querySelector('.fokuskohde-glyyfi')?.getBoundingClientRect();
-    if (!r || !(r.height > 0)) return null;
+    const o = g.querySelector('.fokuskohde-osuma')?.getBoundingClientRect();
+    if (!r || !(r.height > 0) || !o) return null;
+    const keski = o.left + o.width / 2;
+    const puolikas = r.height / 2;
+    const sym = {
+      x1: keski - puolikas, x2: keski + puolikas, y1: r.top, y2: r.bottom,
+    };
+    // Neliön ulkopuolelle jäävä osa on nimiön kaista, kummalla puolella
+    // tahansa; ilman nimiötä sitä ei ole.
+    const vasen = sym.x1 - r.left > 0.5;
+    const oikea = r.right - sym.x2 > 0.5;
     return {
       id: g.dataset.kohde,
-      sym: { x1: r.left, x2: r.left + r.height, y1: r.top, y2: r.bottom },
-      // Yli neliön menevä osa on nimiön kaista; ilman nimiötä sitä ei ole.
-      kaista: r.width > r.height + 0.5
-        ? { x1: r.left + r.height, x2: r.right, y1: r.top, y2: r.bottom } : null,
+      sym,
+      kaista: vasen || oikea ? {
+        x1: vasen ? r.left : sym.x2,
+        x2: vasen ? sym.x1 : r.right,
+        y1: r.top,
+        y2: r.bottom,
+      } : null,
     };
   }).filter(Boolean);
   // Puolen pikselin vara: pyöristys ei saa tehdä kosketuksesta osumaa.
@@ -482,6 +504,79 @@ const nimioLimitys = await sivu.evaluate(() => {
 vaadi('ladottu nimiö ei mene naapurin symbolin eikä nimiön päälle',
   nimioLimitys.kaistoja > 0 && nimioLimitys.osumat.length === 0,
   nimioLimitys.osumat.join(', '));
+
+/* --- 1a3: VÄLJÄLLÄ EI VAIETA (v1218) -------------------------------
+ *
+ * Omistajan kaappaus v1217:stä: Kreikan lehdellä oli työpöytäkoossa
+ * merkkejä ilman yhtään nimeä siellä missä tilaa oli yllin kyllin.
+ * Väistö on tarkoitettu vain AHTAALLE (1a2), ja siksi tässä on sen
+ * vastapari: jos merkin lähin naapuri on kauempana kuin yksikään nimiö
+ * voi ulottua, nimiön ON oltava paikallaan.
+ *
+ * RAJA ON RUUDULLA JA REILU. Pisin nimiö on lehdellä noin 70 px lehden
+ * perustasolla; VALJA_PX on selvästi sen yli, joten rajan takana ei ole
+ * mitään mihin törmätä — kummallakaan puolella merkkiä. Näin väite
+ * pysyy totena, vaikka nimet vaihtuisivat.
+ *
+ * Ilman tätä koetta 1a2 menisi läpi myös kartalla, jolta nimiöt ovat
+ * kadonneet: limityksiä ei ole, kun mitään ei ole ladottu.
+ */
+const valjyys = await sivu.evaluate(() => {
+  const VALJA_PX = 110;
+  const merkit = [...document.querySelectorAll('.fokuskohde')].map((g) => {
+    const o = g.querySelector('.fokuskohde-osuma')?.getBoundingClientRect();
+    const kuva = g.querySelector('.nostosym-rasteri');
+    if (!o || !kuva) return null;
+    return {
+      id: g.dataset.kohde,
+      kaupunki: g.classList.contains('fokuskohde-kaupunki'),
+      nimio: kuva.dataset.nimio ?? '',
+      x: o.left + o.width / 2,
+      y: o.top + o.height / 2,
+    };
+  }).filter(Boolean);
+  const mykat = [];
+  let valjia = 0;
+  for (const m of merkit) {
+    // Naapuri on toinen KOHDE: kiertävän laudan oma kopio ei ahdista.
+    const lahin = merkit.reduce((paras, b) => (b.id === m.id ? paras
+      : Math.min(paras, Math.hypot(b.x - m.x, b.y - m.y))), Infinity);
+    if (!(lahin > VALJA_PX)) continue;
+    valjia += 1;
+    if (!m.nimio) mykat.push(`${m.id} (lähin ${Math.round(lahin)} px)`);
+  }
+  return { valjia, mykat: [...new Set(mykat)] };
+});
+vaadi('väljällä alueella jokainen merkki saa nimiön',
+  valjyys.valjia > 0 && valjyys.mykat.length === 0,
+  `${valjyys.valjia} väljää, mykkiä: ${valjyys.mykat.join(', ')}`);
+
+/* --- 1a4: NIMIÖ JÄÄ POIS VAIN SILLE, JONKA LEHTI ON POLTTANUT ------
+ *
+ * Omistajan kaappaus v1217:stä, jatko. Ennen nimiö vaiennettiin
+ * kaikilta `tyyppi: 'kaupunki'` -kohteilta, mutta perustelu — lehti
+ * painaa nimen itse — pätee vain niihin neljään, jotka Kreikan lehteen
+ * on poltettu (tools/fokuskartta/maat.mjs GRC.kaupungit). Marathon,
+ * Kalamata, Ermoupoli ja Iraklion olivat kartalla merkkejä ilman
+ * yhtään sanaa. Ehto on nyt data (js/fokuskohteet.js kohteenNimio),
+ * ja tämä koe pitää molemmat suunnat kiinni.
+ */
+const nimioLahteet = await sivu.evaluate(() => {
+  const lue = (id) => {
+    const g = document.querySelector(`.fokuskohde[data-kohde="${id}"]`);
+    return g?.querySelector('.nostosym-rasteri')?.dataset.nimio ?? null;
+  };
+  return {
+    poltetut: ['thessaloniki', 'patras', 'ioannina', 'nafplio'].map(lue),
+    pelilta: ['marathon', 'kalamata', 'ermoupoli', 'iraklion'].map(lue),
+  };
+});
+vaadi('lehteen poltettu kaupunki jättää nimiön painojäljelle',
+  nimioLahteet.poltetut.every((t) => t === ''),
+  JSON.stringify(nimioLahteet.poltetut));
+vaadi('nimeämätön kaupunki saa nimiönsä pelistä',
+  nimioLahteet.pelilta.every((t) => t && t.length > 0),
+  JSON.stringify(nimioLahteet.pelilta));
 /*
  * Silmäsymboleita EI enää odoteta (26.8.2026: Akropolis-museon
  * GA&C-kierrokset poistettiin, koska upotus ei latautunut iPadilla —
@@ -569,6 +664,71 @@ vaadi('siirto koskee vain piirtopaikkaa: ankkurit ovat yhä datan koordinaateiss
   && erottelu.ankkurit.some((avain) => datanPaikat.has(avain))
   && [...datanPaikat].every((avain) => erottelu.ankkurit.includes(avain)),
   JSON.stringify(erottelu.ankkurit.slice(0, 4)));
+
+/* --- 1b2: LÄHIN VOITTAA LIMITTYVÄT OSUMA-ALUEET (v1218) -----------
+ *
+ * Omistaja v1217: *"Parnassósta ei voi klikata — napautus vuoren
+ * päältä avaa aina Delfoin."* Osuma-alue on SORMEN mitta (44 px) eikä
+ * merkin, joten naapureiden alueet menevät päällekkäin väistämättä:
+ * Delfoi on Parnassóksen rinteellä. Selain antoi napautuksen
+ * piirtojärjestyksen päällimmäiselle, ja alla oleva merkki oli kuollut.
+ * Nyt voittaa se, jonka osumamuodon KESKIPISTE on lähinnä
+ * (js/fokuskohteet.js lahinKohde).
+ *
+ * Koe napauttaa kummankin merkin OMAAN keskipisteeseen ja vaatii, että
+ * kummastakin aukeaa oma kortti. Pari on juuri se, jonka omistaja
+ * löysi, ja erottelupassin jäljiltä merkit ovat yhä lähempänä toisiaan
+ * kuin osuma-alueen säde.
+ */
+const parnassosSuljettu = async () => {
+  await sivu.keyboard.press('Escape');
+  await sivu.waitForTimeout(300);
+};
+await parnassosSuljettu();
+await napauta('parnassos');
+vaadi('napautus Parnassóksen keskelle avaa Parnassóksen',
+  (await popup())?.otsikko === 'Parnassós', JSON.stringify((await popup())?.otsikko));
+await parnassosSuljettu();
+await napauta('delfoi');
+vaadi('napautus Delfoin keskelle avaa Delfoin',
+  (await popup())?.otsikko === 'Delfoi', JSON.stringify((await popup())?.otsikko));
+await parnassosSuljettu();
+
+/* --- 1b3: POLTETTU KAUPUNGINNIMI ON NAPAUTETTAVA (v1218) ----------
+ *
+ * Omistaja v1217: kaupunkikohteesta sai kortin auki vain pikkuruisesta
+ * porttitornista, vaikka kartalla iso kohde on kaupungin NIMI. Nimi on
+ * poltettu lehden kuvaan, joten peli laskee sen laatikon lehden omista
+ * mitoista (js/fokuskohteet.js kaupunginNimiLaatikko) ja panee siihen
+ * näkymättömän osuma-alueen. Koe napauttaa nimen KESKELLE — ei siis
+ * merkin viereen — ja vaatii kaupungin kortin auki.
+ */
+const nimiOsuma = await sivu.evaluate(() => {
+  const g = document.querySelector('.fokuskohde[data-kohde="thessaloniki"] .fokuskohde-nimiosuma');
+  const merkki = document.querySelector('.fokuskohde[data-kohde="thessaloniki"] .fokuskohde-osuma');
+  if (!g || !merkki) return null;
+  const r = g.getBoundingClientRect();
+  const m = merkki.getBoundingClientRect();
+  return {
+    x: Math.round(r.left + r.width / 2),
+    y: Math.round(r.top + r.height / 2),
+    w: Math.round(r.width),
+    h: Math.round(r.height),
+    // Nimi on merkin VIERESSÄ: laatikko ei saa olla sama kuin merkki.
+    irti: r.left > m.left + m.width / 2,
+    ruudulla: r.left > 0 && r.top > 0 && r.right < innerWidth && r.bottom < innerHeight,
+  };
+});
+vaadi('poltetulle kaupunginnimelle syntyi oma osuma-alue merkin viereen',
+  nimiOsuma?.w > 20 && nimiOsuma?.h > 8 && nimiOsuma?.irti === true,
+  JSON.stringify(nimiOsuma));
+if (nimiOsuma?.ruudulla) {
+  await sivu.mouse.click(nimiOsuma.x, nimiOsuma.y);
+  await sivu.waitForTimeout(400);
+  vaadi('napautus poltetun kaupunginnimen keskelle avaa kaupungin kortin',
+    (await popup())?.otsikko === 'Thessaloniki', JSON.stringify((await popup())?.otsikko));
+  await parnassosSuljettu();
+}
 
 /* --- 1c: nipun yhdysviivat kaupunkiin (omistajan pelitesti 27.8.2026)
  *

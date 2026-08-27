@@ -1159,15 +1159,31 @@ export const FOKUS_LISANIMET = {
      * 1829–1834 — isoisän matkan aikaan tuore muisto), vaikka se on
      * näistä pienin.
      */
+    /*
+     * NIMI, SIIRTO JA ANKKURI OVAT LEHDEN OMAT (v1218). Rivit ovat nyt
+     * tools/fokuskartta/maat.mjs GRC.kaupungit -listan peilikuva laudan
+     * koordinaateissa: sama kirjoitusasu, sama `dx`/`dy` (prototyypin
+     * pikseleitä, ks. piirto.js `S`) ja sama puoli. Peli tarvitsee ne
+     * kahteen asiaan, jotka molemmat menivät v1217:ssä pieleen:
+     *
+     *   1. NIMIÖN VAIENNUS. Kohdemerkki jättää nimiönsä pois vain, jos
+     *      lehti on POLTTANUT saman nimen samaan pisteeseen
+     *      (js/fokuskohteet.js kohteenNimio) — Marathon, Kalamata,
+     *      Ermoupoli ja Iraklion eivät ole tässä listassa, joten ne
+     *      saavat nimensä pelistä.
+     *   2. NAPAUTETTAVA NIMI. Poltettu nimi on kartalla se iso kohde,
+     *      johon sormi osuu, ja sen laatikko lasketaan näistä luvuista
+     *      (js/fokuskohteet.js kaupunginNimiLaatikko).
+     */
     kaupungit: [
       // 22,9444 E / 40,6401 N
-      { nimi: 'Thessaloniki', x: 6598.1, y: 1777.7 },
+      { nimi: 'Thessaloníki', x: 6598.1, y: 1777.7, dx: 10, dy: -8 },
       // 21,7346 E / 38,2466 N
-      { nimi: 'Patras', x: 6557.8, y: 1871.3, ank: 'end' },
+      { nimi: 'Pátra', x: 6557.8, y: 1871.3, dx: -10, dy: -8, ank: 'end' },
       // 20,8537 E / 39,6650 N
-      { nimi: 'Ioannina', x: 6528.5, y: 1816, ank: 'end' },
+      { nimi: 'Ioánnina', x: 6528.5, y: 1816, dx: -10, dy: -6, ank: 'end' },
       // 22,8069 E / 37,5675 N
-      { nimi: 'Nafplio', x: 6593.6, y: 1897.5 },
+      { nimi: 'Náfplio', x: 6593.6, y: 1897.5, dx: 9, dy: 12 },
     ],
     /*
      * Vuoret: kolmio ja korkeus metreinä. Olympos on ainoa, jonka
