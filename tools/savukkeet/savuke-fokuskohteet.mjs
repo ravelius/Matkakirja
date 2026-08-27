@@ -716,10 +716,15 @@ await sivu.waitForTimeout(300);
  *      VALOKUVA → "Koe ihme" -nappi → leipäteksti. Nappi seisoo siinä
  *      kohdassa, jossa poistettu loistoaikarekonstruktio ennen oli, eikä
  *      kortissa saa olla enää kahta kuvaa.
- *   b) NAUHA ON DIAGONAALINEN JA KÄÄRIYTYY: kaista on käännetty
- *      45 astetta ja sen laatikko jatkuu kuvan ylä- ja vasemman reunan
- *      YLI, ja taitteita on kaksi. Vaakalaatikko läpäisisi silmämitan
- *      mutta ei tätä.
+ *   b) NAUHA ON DIAGONAALINEN JA KÄÄRIYTYY KUVAN TAAKSE: kaista on
+ *      käännetty 45 astetta ja sen laatikko jatkuu kuvan ylä- ja
+ *      vasemman reunan YLI, mutta KÄÄRE LEIKKAA ylityksen kuvan
+ *      reunaan (`overflow: hidden`, kääre kokonaan kuvan sisällä).
+ *      Molemmat mitataan, koska ne kaatuvat eri virheistä:
+ *      leikkaamaton nauha leijui paperikehyksen päällä (omistajan
+ *      iPad-kaappaus 27.8.2026, v1195), ja pelkkä lyhennetty kaista
+ *      taas näyttäisi lipukkeelta joka loppuu kesken kuvan.
+ *      Taitteita on kaksi.
  *   c) NAUHA EI OTA NAPAUTUKSIA: kortissa se on suurennosnapin päällä.
  *
  * Kohteet: Olympia (olemassa, oma valokuva stadionista) ja Rodoksen
@@ -752,6 +757,13 @@ const ihmekortti = () => sivu.evaluate(() => {
     muunnos: kaista ? getComputedStyle(kaista).transform : '',
     osoitin: nauha ? getComputedStyle(nauha).pointerEvents : '',
     yli: k && i ? { ylos: Math.round(i.top - k.top), vasen: Math.round(i.left - k.left) } : null,
+    // Leikkaus: kääre on kokonaan kuvan sisällä eikä paperin päällä.
+    leikkaus: nauha ? getComputedStyle(nauha).overflow : '',
+    kaareKuvassa: nauha && kuva ? (() => {
+      const n = nauha.getBoundingClientRect();
+      return n.top >= i.top - 0.5 && n.left >= i.left - 0.5
+        && n.right <= i.right + 0.5 && n.bottom <= i.bottom + 0.5;
+    })() : null,
   };
 });
 
@@ -771,6 +783,14 @@ const ihmezoom = () => sivu.evaluate(() => {
     osoitin: nauha ? getComputedStyle(nauha).pointerEvents : '',
     teksti: kaista?.textContent ?? '',
     yli: k && i ? { ylos: Math.round(i.top - k.top), vasen: Math.round(i.left - k.left) } : null,
+    leikkaus: nauha ? getComputedStyle(nauha).overflow : '',
+    kaareKuvassa: nauha && kuva ? (() => {
+      const n = nauha.getBoundingClientRect();
+      return n.top >= i.top - 0.5 && n.left >= i.left - 0.5
+        && n.right <= i.right + 0.5 && n.bottom <= i.bottom + 0.5;
+    })() : null,
+    // Teksti ei saa jäädä leikkauksen alle: kaistan oma laatikko riittää.
+    tekstiMahtuu: kaista ? kaista.scrollWidth <= kaista.clientWidth + 1 : null,
     lahde: kehys.querySelector('.fokuskohde-zoomlahde')?.textContent ?? '',
   };
 });
@@ -821,6 +841,11 @@ vaadi('suurennoksen nauha on 45 asteen kulmanauha, ei vaakalaatikko',
 vaadi('suurennoksen nauha kääriytyy: päät kuvan reunojen yli, kaksi taitetta',
   zoom?.taitteita === 2 && zoom.yli.ylos > 0 && zoom.yli.vasen > 0,
   JSON.stringify(zoom?.yli));
+vaadi('suurennoksen nauha leikkautuu kuvan reunaan eikä leiju paperilla',
+  zoom?.leikkaus === 'hidden' && zoom.kaareKuvassa === true,
+  `${zoom?.leikkaus} / kääre kuvassa: ${zoom?.kaareKuvassa}`);
+vaadi('suurennoksen nauhan teksti mahtuu kaistalle',
+  zoom?.tekstiMahtuu === true);
 vaadi('nauha ei nappaa napautuksia', zoom?.osoitin === 'none', zoom?.osoitin);
 
 await sivu.keyboard.press('Escape');
@@ -845,6 +870,9 @@ vaadi('kortin nauha on sekin 45 asteen kulmanauha kahdella taitteella',
   `${ihme?.muunnos} / ${ihme?.taitteita} taitetta`);
 vaadi('kortin nauha jatkuu kuvan ylä- ja vasemman reunan yli',
   ihme?.yli && ihme.yli.ylos > 0 && ihme.yli.vasen > 0, JSON.stringify(ihme?.yli));
+vaadi('kortin nauha leikkautuu kuvan reunaan eikä leiju kortin paperilla',
+  ihme?.leikkaus === 'hidden' && ihme.kaareKuvassa === true,
+  `${ihme?.leikkaus} / kääre kuvassa: ${ihme?.kaareKuvassa}`);
 vaadi('kortin nauha ei nappaa napautuksia', ihme?.osoitin === 'none', ihme?.osoitin);
 
 /* --- 11: ilman lehteä ei merkkejä --- */

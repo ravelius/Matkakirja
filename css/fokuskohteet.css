@@ -280,13 +280,12 @@
   border: 1px solid rgba(58, 38, 16, 0.22);
   border-radius: 8px;
   /*
-   * EI `overflow: hidden` (Matkakirjan ihmeen kulmanauha, 27.8.2026):
-   * nauhan päät ja taitoskolmiot jatkuvat kuvan reunojen yli, ja
-   * leikkaus söisi juuri sen, mikä myy kääriytymisen. Kuvan omat kulmat
-   * pyöristetään siksi img-elementistä (.fokuskohde-kuva img), ei
-   * napista.
+   * Kuvan omat kulmat pyöristetään img-elementistä (.fokuskohde-kuva
+   * img) eikä napista, koska napin pohjaväri saa näkyä reunuksena.
+   * Ihmenauha leikkautuu omaan kääreeseensä (osio MATKAKIRJAN IHME),
+   * joten se ei tarvitse napilta leikkausta suuntaan eikä toiseen.
    */
-  overflow: visible;
+  overflow: hidden;
   background: #ded5c2;
   box-shadow: none;
   cursor: zoom-in;
@@ -338,56 +337,91 @@
 
    NAUHA ON DIAGONAALINEN KULMANAUHA (omistajan tilaus 27.8.2026 ilta,
    Akropolis iPhonella): vaakalipukkeen tilalla on 45 asteen kaista,
-   jonka päät jatkuvat kuvan reunojen yli ja jonka juuressa on tummempi
-   taitoskolmio kummallakin reunalla — nauha näyttää kääriytyvän kuvan
-   ympäri sen sijaan että olisi liimattu päälle.
+   joka kulkee kuvan vasemman yläkulman yli ja jonka molemmat päät
+   katoavat kuvan reunan taakse.
 
-   GEOMETRIA YHDESTÄ PISTEESTÄ. Kääre (.fokuskohde-ihmenauha) on
-   nollan kokoinen piste KUVAN vasemmassa yläkulmassa, ja kaikki kolme
-   osaa asemoidaan siitä. Viisi muuttujaa riittää, ja ne PERIYTYVÄT
-   isännältä (.fokuskohde-kuva kortissa, .fokuskohde-zoomkehys
-   suurennoksessa) — silloin sama isäntä osaa myös varata nauhalle
-   tilan, eikä mittoja kirjoiteta kahteen kertaan:
+   NAUHA EI SAA LEIJUA (omistajan tilaus 27.8.2026, iPad-kaappaus
+   Hefaistoksen temppelin suurennoksesta): v1195:ssä kaistan päät ja
+   taitoskolmiot jatkuivat kuvan reunan yli VAALEAN PAPERIKEHYKSEN
+   päälle, eikä mikään sitonut niitä kuvaan — nauha näytti kelluvan
+   ilmassa. Kolme keinoa yhdessä sitovat sen nyt kuvan pintaan:
 
-     --nauha-pituus    kaistan pituus
+     1. LEIKKAUS KUVAN REUNAAN. Kääre (.fokuskohde-ihmenauha) on
+        kuvan kulmassa oleva neliö, jolla on `overflow: hidden`.
+        Kaista piirretään yhä reunan yli, mutta ylitys LEIKKAUTUU
+        täsmälleen kuvan reunaan — juuri niin kuin oikea nauha, joka
+        kiertyy kuvan taakse. Mikään nauhan osa ei tule paperille.
+     2. PUDOTUSVARJO KUVAN PINNALLE. Kaistalla on pieni, pehmeä varjo
+        alaviistoon (kaistan omassa koordinaatistossa `0 1px`, joka
+        kääntyy maailmassa alaoikealle). Varjo on kosketuksen todiste:
+        ilman sitä kaista on väriläikkä, sen kanssa se on esine kuvan
+        päällä. Varjokin leikkautuu kuvan reunaan.
+     3. KÄÄNTYMÄ TUMMENEE. Kaistan kumpikin pää tummenee juuri ennen
+        reunaa (.fokuskohde-ihmetaite): paperi kaareutuu varjoon,
+        ennen kuin se katoaa kuvan taakse. Tummin sävy on täsmälleen
+        leikkauslinjalla, joten silmä lukee reunan taitteeksi eikä
+        katkaisuksi.
+
+   GEOMETRIA YHDESTÄ PISTEESTÄ. Kääre on KUVAN vasemmassa yläkulmassa,
+   ja kaikki osat asemoidaan sen origosta. Kuusi muuttujaa riittää, ja
+   ne PERIYTYVÄT isännältä (.fokuskohde-kuva kortissa,
+   .fokuskohde-zoomkehys suurennoksessa) — kortin ja suurennoksen ero
+   on pelkkiä lukuja:
+
+     --nauha-pituus    kaistan pituus (myös reunan taakse jäävä osa)
      --nauha-korkeus   kaistan leveys (poikkimitta)
      --nauha-ulos      kuinka pitkälle kaistan päät menevät reunan yli
-     --nauha-taite     taitoskolmion kateetti
+                       ennen leikkausta
+     --nauha-taite     kääntymävyöhykkeen pituus kaistan päässä
      --nauha-teksti    kirjasinkoko
+     --nauha-kaari     kuvan kulman pyöristys, jota leikkaus seuraa
 
    Kaistan keskipiste on lävistäjällä pisteessä (c, c), missä
 
      c = pituus × sin 45° − ulos = pituus × 0,35355 − ulos,
 
    koska kaistan puolikas (pituus/2) projisoituu kummallekin akselille
-   kertoimella sin 45°. Silloin kaista pistää reunan yli TÄSMÄLLEEN
-   `ulos`-mitan verran molemmista päistä, ja kortin ja suurennoksen ero
-   on pelkkiä lukuja.
+   kertoimella sin 45°. Silloin kaista menee reunan yli TÄSMÄLLEEN
+   `ulos`-mitan verran molemmista päistä — ja tuo mitta katoaa
+   leikkaukseen.
 
-   Taitteet asettuvat kohtaan, jossa kaistan ULKOREUNA leikkaa kuvan
-   reunan: x = 2c + korkeus × sin 45°. Kolmion hypotenuusa on kaistan
-   ulkoreunan suuntainen (−45°), joten se liittyy kaistaan saumatta.
+   LEIKKAUS ON VINO KAISTAN OMASSA KOORDINAATISTOSSA. Kuvan yläreuna
+   on 45 asteen kulmassa kaistaan nähden, joten kaistan pää ei katkea
+   suorassa vaan viistosti. Jotta pää katkeaa kokonaan kuvan reunaan
+   (eikä kaistan ulkokulma jää törröttämään reunan sisäpuolelle),
+   ylityksen on peitettävä puolikas poikkimitta:
 
-   ULOTTUMA ON ENEMMÄN KUIN `ulos`. Kaista on kääntyneenä vino
-   suorakaide, joten sen uloin KULMA on vielä puoli poikkimittaa
-   kauempana: ulottuma = ulos + korkeus × sin 45°. Juuri tuo luku on
-   se tila, jonka kortin kuvakehys varaa (--nauha-tila) — pienempi vara
-   leikkaisi kärjen pois vieritettävän sisällön reunaan.
+     ulos ≥ korkeus × sin 45° / 2 = 0,3536 × korkeus.
+
+   Samasta syystä kääntymävyöhykkeen on oltava vähintään
+   `ulos × √2 + korkeus / 2`, jotta tummin sävy ehtii koko
+   poikkimitalle ennen leikkauslinjaa.
+
+   KÄÄREEN KOKO on se kohta, jossa kaistan ULKOREUNA leikkaa kuvan
+   reunan, plus vara varjolle: x = 2c + korkeus × sin 45°. Sitä
+   pienempi neliö leikkaisi kaistan kärjen tai varjon poikki keskellä
+   kuvaa, ja leikkausviiva näkyisi.
 
    NAUHA EI OTA NAPAUTUKSIA (pointer-events: none): kortissa se on
    suurennosnapin päällä, ja sormi on tarkoitettu napille.
    =========================================================================== */
 
-/* Kortin mitat. Kuvakehys on isäntä, jotta sama arvo kelpaa sekä
-   nauhalle että kehyksen varaamalle tilalle. */
+/* Kortin mitat. Kuvakehys on isäntä, jotta sama arvo periytyy koko
+   nauhalle. Kaista on v1195:tä leveämpi ja teksti isompi (omistajan
+   tilaus 27.8.2026): 0,98rem → 1,24rem eli neljänneksen kasvu.
+
+   PITUUS KASVOI SAMALLA (6,9rem → 8,8rem), koska teksti mahtuu enää
+   LEIKKAUKSEN SISÄÄN: näkyvä matka on `pituus − 2 × ulos × √2`, ja
+   ennen leikkausta teksti sai jatkua reunan yli paperille. Liian
+   lyhyt kaista söisi nyt ensimmäisen ja viimeisen kirjaimen. */
 .fokuskohde-kuva {
-  --nauha-pituus: 6.9rem;
-  --nauha-korkeus: 0.98rem;
-  --nauha-ulos: 0.45rem;
-  --nauha-taite: 0.42rem;
-  --nauha-teksti: 0.5rem;
-  /* Kaistan uloimman kulman etäisyys kuvan reunasta (ks. ULOTTUMA). */
-  --nauha-tila: calc(var(--nauha-ulos) + 0.7071 * var(--nauha-korkeus) / 2 + 0.06rem);
+  --nauha-pituus: 8.8rem;
+  --nauha-korkeus: 1.24rem;
+  --nauha-ulos: 0.55rem;
+  --nauha-taite: 1.9rem;
+  --nauha-teksti: 0.56rem;
+  /* Kortin kuva on pyöristetty (.fokuskohde-kuva img border-radius). */
+  --nauha-kaari: 7px;
 }
 
 .fokuskohde-ihmenauha {
@@ -395,43 +429,85 @@
   --nauha-c: calc(var(--nauha-pituus) * 0.35355 - var(--nauha-ulos));
   /* Kohta, jossa kaistan ulkoreuna leikkaa kuvan reunan. */
   --nauha-juuri: calc(2 * var(--nauha-c) + 0.7071 * var(--nauha-korkeus));
+  /* Kääntymävyöhykkeen keskipisteen etäisyys kaistan keskeltä. */
+  --nauha-paa: calc((var(--nauha-pituus) - var(--nauha-taite)) * 0.35355);
   position: absolute;
   top: 0;
   left: 0;
-  /* Nollan kokoinen piste: pelkkä origo osiensa asemoinnille. */
-  width: 0;
-  height: 0;
+  /* Kuvan kulmaan asettuva neliö, joka LEIKKAA nauhan kuvan reunaan.
+     Vara (0,55rem) on varjolle: ilman sitä varjon oma reuna katkeaisi
+     terävästi kesken kuvan. */
+  width: calc(var(--nauha-juuri) + 0.55rem);
+  height: calc(var(--nauha-juuri) + 0.55rem);
+  /* TURVARAJA pienelle kuvalle: kortissa kääreen asemointipohja on
+     kuvanappi, jonka koko ON kuvan koko, joten kääre ei voi valua
+     kuvan ohi vaikka mitat kasvaisivat. Suurennoksessa pohja on
+     paperikehys, mutta ihmekuvat ovat 3:2 (1536×1024), joten neliö
+     mahtuu kuvaan kapeimmallakin puhelimella. */
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  /* Leikkaus seuraa kuvan omaa kulmaa: nauha ei saa pistää esiin
+     pyöristetyn kulman ohi. */
+  border-radius: var(--nauha-kaari, 0) 0 0 0;
   z-index: 2;
   pointer-events: none;
 }
 
 /*
- * TAITE = NAUHAN TAAKSE MENEVÄ PÄÄ. Reunaviivat piirtävät kolmion:
- * `border-width: 0 0 T T` ja väri vain alareunassa antaa kolmion
- * (0,T)–(T,T)–(T,0), jonka hypotenuusa kulkee −45 asteessa eli kaistan
- * ulkoreunan suuntaisesti. Sama muoto kelpaa molempiin päihin, koska
- * kulmanauha on symmetrinen lävistäjän suhteen — vain paikka vaihtuu.
- * Sävy on kaistaa tummempi: se on nauhan nurja puoli varjossa.
+ * TAITE = KAISTAN KÄÄNTYMÄ KUVAN REUNAN TAAKSE. Ei enää kolmiota
+ * kuvan ulkopuolella (v1195), vaan kaistan päässä oleva tummeneva
+ * vyöhyke: sama vino suorakaide kuin kaista, samassa kulmassa, mutta
+ * lyhyt ja kaistan PÄÄLLE maalattu (js piirtää taitteet kaistan
+ * jälkeen). Paperi kaareutuu varjoon juuri ennen kuin se katoaa kuvan
+ * taakse.
+ *
+ * LIUKU SEURAA KUVAN REUNAA, EI KAISTAN AKSELIA. Kuvan reuna on
+ * 45 asteen kulmassa kaistaan nähden, joten kaistan suuntainen liuku
+ * osuisi leikkauslinjalle eri kohdassa kaistan kummallakin reunalla —
+ * tummuus vaihtelisi 25 %:sta 90 %:iin saman reunaviivan matkalla.
+ * Kun liuku käännetään taitteen omassa koordinaatistossa 45 astetta,
+ * se osoittaa maailmassa suoraan ylös (yläpää) tai suoraan vasemmalle
+ * (vasen pää) — samansuuntaisesti kuin leikkaus. Silloin sävy on
+ * TÄSMÄLLEEN SAMA koko reunaviivalla, ja se osuu näillä mitoilla
+ * liu'un kohtaan 55 %: siksi tummin sävy on siinä eikä lopussa.
+ * (Loppu jää leikkauksen taakse eikä näy.)
  */
 .fokuskohde-ihmetaite {
   position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 var(--nauha-taite) var(--nauha-taite);
-  border-color: transparent transparent #a98b4e transparent;
+  width: var(--nauha-taite);
+  height: var(--nauha-korkeus);
+  transform: rotate(-45deg);
 }
 
-/* Yläreunan taite: kuvan yläreunan yläpuolella, kaistan oikealla. */
+/* Yläreunan pää: kaistan keskeltä ylöoikealle lävistäjän suunnassa,
+   liuku maailman yläreunaa kohti (45deg käännetyssä laatikossa). */
 .fokuskohde-ihmetaite-ylos {
-  left: var(--nauha-juuri);
-  top: calc(-1 * var(--nauha-taite));
+  left: calc(var(--nauha-c) + var(--nauha-paa) - var(--nauha-taite) / 2);
+  top: calc(var(--nauha-c) - var(--nauha-paa) - var(--nauha-korkeus) / 2);
+  background: linear-gradient(45deg,
+    rgba(46, 29, 10, 0) 0%,
+    rgba(46, 29, 10, 0.05) 18%,
+    rgba(46, 29, 10, 0.18) 36%,
+    rgba(46, 29, 10, 0.36) 46%,
+    rgba(46, 29, 10, 0.56) 52%,
+    rgba(46, 29, 10, 0.72) 55%,
+    rgba(46, 29, 10, 0.78) 100%);
 }
 
-/* Vasemman reunan taite: sama kolmio peilattuna lävistäjän yli. */
+/* Vasemman reunan pää: sama vyöhyke peilattuna lävistäjän yli, liuku
+   maailman vasenta reunaa kohti. */
 .fokuskohde-ihmetaite-vasen {
-  left: calc(-1 * var(--nauha-taite));
-  top: var(--nauha-juuri);
+  left: calc(var(--nauha-c) - var(--nauha-paa) - var(--nauha-taite) / 2);
+  top: calc(var(--nauha-c) + var(--nauha-paa) - var(--nauha-korkeus) / 2);
+  background: linear-gradient(315deg,
+    rgba(46, 29, 10, 0) 0%,
+    rgba(46, 29, 10, 0.05) 18%,
+    rgba(46, 29, 10, 0.18) 36%,
+    rgba(46, 29, 10, 0.36) 46%,
+    rgba(46, 29, 10, 0.56) 52%,
+    rgba(46, 29, 10, 0.72) 55%,
+    rgba(46, 29, 10, 0.78) 100%);
 }
 
 /*
@@ -454,7 +530,18 @@
   background: linear-gradient(180deg, #f7eed6 0%, #ecdfbb 55%, #dfcc9c 100%);
   border-top: 1px solid rgba(58, 38, 16, 0.5);
   border-bottom: 1px solid rgba(58, 38, 16, 0.5);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  /*
+   * KAKSI VARJOA = KOSKETUS JA PAINO. Ensimmäinen on tiukka
+   * kosketusvarjo aivan kaistan alla (se kertoo, että nauha lepää
+   * kuvan pinnalla), toinen laajempi ja pehmeämpi (se antaa nauhalle
+   * paksuutta). Mitat ovat kaistan omassa koordinaatistossa, joten
+   * kierto vie ne maailmassa alaoikealle — valo tulee vasemmalta
+   * ylhäältä kuten kortin muissakin varjoissa. Kääreen leikkaus
+   * pitää varjon kuvan päällä eikä paperilla.
+   */
+  box-shadow:
+    0 1px 1px rgba(30, 18, 4, 0.42),
+    0 3px 7px rgba(30, 18, 4, 0.3);
   color: #4b3a1c;
   font-family: var(--font-type, inherit);
   font-size: var(--nauha-teksti);
@@ -474,18 +561,19 @@
 }
 
 /*
- * KORTIN KUVAPAIKKA. Kortin sisältö on vieritettävä laatikko
- * (.fokuskohde-sisalto overflow-y: auto), joka leikkaisi reunan yli
- * menevän nauhan pois ja voisi jopa avata vaakavierityksen. Nauhaa
- * kantava kehys työntää siksi kuvanapin irti sisällön ylä- ja
- * vasemmasta reunasta juuri nauhan ylityksen verran — kuvateksti pysyy
- * kehyksen levyisenä eikä siirry.
+ * KORTIN KUVAPAIKKA. Kääre leikkaa nauhan kuvan reunaan, joten kortin
+ * vieritettävälle sisällölle (.fokuskohde-sisalto overflow-y: auto)
+ * ei jää mitään leikattavaa eikä kuvaa tarvitse enää työntää irti
+ * sisällön reunasta (v1195 varasi tilan --nauha-tila:lla). Luokka jää
+ * silti kuvakehykselle: se kertoo, että tämä kuva kantaa nauhan, ja
+ * pitää nauhan asemoinnin yhdessä kohdassa.
  */
-.fokuskohde-kuva-nauhalla { margin-top: var(--nauha-tila); }
-
-.fokuskohde-kuva-nauhalla > .fokuskohde-kuvanappi {
-  width: calc(100% - var(--nauha-tila));
-  margin-left: var(--nauha-tila);
+.fokuskohde-kuva-nauhalla > .fokuskohde-kuvanappi > .fokuskohde-ihmenauha {
+  /* Napin oma 1px reunus: kääre alkaa kuvan pinnalta, jolloin kuvan
+     reunaviiva jää nauhan ulkopuolelle ja nauha näyttää menevän sen
+     alta kuvan taakse. */
+  top: 1px;
+  left: 1px;
 }
 
 /* Suurennoksessa kehyksellä on oma sisennys: nauha asettuu KUVAN
@@ -495,22 +583,25 @@
    poistuu animaation jälkeen eikä sitä voi käyttää pohjana. */
 .fokuskohde-zoomkehys { position: relative; }
 
-/* Suurennoksen mitat isännälle, aivan kuten kortissa. Ulottuma jää
-   paperikehyksen pehmusteen (0,55rem) ja kerroksen oman reunuksen
-   (.fokuskohde-zoom padding 0,5rem) sisään, joten nauhan kärki ei
-   leikkaudu ruudun laitaan kapeallakaan puhelimella. */
+/* Suurennoksen mitat isännälle, aivan kuten kortissa. Kaista on
+   v1195:tä leveämpi (1,25rem → 1,56rem) omistajan tilauksen mukaan;
+   koko nauha jää kuvan sisään, joten paperikehyksen pehmuste pysyy
+   puhtaana. */
 .fokuskohde-zoomkehys {
-  --nauha-pituus: 9rem;
-  --nauha-korkeus: 1.25rem;
-  --nauha-ulos: 0.6rem;
-  --nauha-taite: 0.56rem;
-  --nauha-teksti: 0.66rem;
+  --nauha-pituus: 11.6rem;
+  --nauha-korkeus: 1.56rem;
+  --nauha-ulos: 0.7rem;
+  --nauha-taite: 2.4rem;
+  --nauha-teksti: 0.74rem;
+  /* Suurennoksen kuvassa ei ole pyöristystä, vain 1px mustereunus. */
+  --nauha-kaari: 0;
 }
 
 .fokuskohde-zoomkehys > .fokuskohde-ihmenauha {
-  /* Kuvan kulma, ei paperin: kehyksen pehmuste on 0,55rem. */
-  top: 0.55rem;
-  left: 0.55rem;
+  /* Kuvan pinta, ei paperi: kehyksen pehmuste on 0,55rem ja kuvan oma
+     mustereunus 1px — reunaviiva jää nauhan ulkopuolelle. */
+  top: calc(0.55rem + 1px);
+  left: calc(0.55rem + 1px);
 }
 
 /*
