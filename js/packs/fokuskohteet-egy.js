@@ -95,6 +95,22 @@ export const FOKUSKOHTEET_EGY = [
         + 'itsestään on jäljellä vain meren pohjan kivilohkareita.',
       lahde: 'Matkakirjan havainnekuva',
     },
+    /*
+     * MATKAKIRJAN IHME — säännöt js/packs/fokuskohteet-grc.js:n
+     * samannimisessä lohkossa. Majakkaa ei ole, joten `kadonnut: true`:
+     * kartalla tähti ja kortissa tämä kuva ensimmäisenä.
+     */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-faros.webp',
+      kadonnut: true,
+      selite: 'Faroksen majakka seisoi sataman suulla runsaat tuhat '
+        + 'vuotta, ja sen tuli näkyi merelle noin 47 kilometrin päähän. '
+        + 'Saaren kärjessä on nyt Qaitbayn linnoitus, joka muurattiin '
+        + 'vuonna 1480 majakan omista kivistä — loput lohkareet makaavat '
+        + 'sataman pohjassa.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
+    },
   },
   {
     /*
@@ -139,6 +155,18 @@ export const FOKUSKOHTEET_EGY = [
         + 'sen paikkaakaan tunneta — kuva perustuu antiikin kirjastojen '
         + 'tunnettuun rakenteeseen.',
       lahde: 'Matkakirjan havainnekuva',
+    },
+    /* MATKAKIRJAN IHME (kadonnut) — säännöt fokuskohteet-grc.js:ssä. */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-aleksandrian-kirjasto.webp',
+      kadonnut: true,
+      selite: 'Aleksandrian kirjasto kokosi papyruskääröjä koko '
+        + 'tunnetusta maailmasta, ja sen saleissa työskenteli aikanaan '
+        + 'yli sata oppinutta. Rakennuksesta ei ole löytynyt jälkeäkään '
+        + 'eikä sen paikkaa tunneta; kaupungin rannalla toimii nyt '
+        + 'vuonna 2002 avattu Bibliotheca Alexandrina.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
     },
   },
 ];

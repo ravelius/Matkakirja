@@ -271,6 +271,9 @@
  */
 .fokuskohde-kuvanappi {
   display: block;
+  /* Ihmenauha kelluu kuvan päällä napin sisällä (ks. MATKAKIRJAN IHME
+     -osio alempana) — nappi on sen asemointipohja. */
+  position: relative;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -313,6 +316,100 @@
 
 @media (prefers-reduced-motion: reduce) {
   .fokuskohde-kuva img { transition: none; }
+}
+
+/* ===========================================================================
+   MATKAKIRJAN IHME — NAUHA JA "KOE IHME" -NAPPI
+   ---------------------------------------------------------------------------
+   Raamattu, osio "Matkakirjan ihmeet" (omistaja 27.8.2026): *"Kuvien
+   vasempaan yläkulmaan pelin piirtämä pieni nauha ('Matkakirjan ihme'
+   tms.) pelin kartuutsityylillä — peli piirtää nauhan kuvan päälle,
+   sitä ei polteta kuvatiedostoon."*
+
+   YKSI KOMPONENTTI, KAKSI PAIKKAA: sama .fokuskohde-ihmenauha piirtyy
+   kortin kuvanapin ja suurennoksen kehyksen sisään (js/fokuskohteet.js
+   piirraIhmenauha). Molemmissa se on kuvan vasemmassa yläkulmassa
+   kiinni vasemmassa reunassa — kuin arkistokuvaan liimattu lipuke.
+
+   NAUHA EI OTA NAPAUTUKSIA (pointer-events: none): kortissa se on
+   suurennosnapin päällä, ja sormi on tarkoitettu napille.
+   =========================================================================== */
+
+.fokuskohde-ihmenauha {
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  z-index: 1;
+  padding: 0.18rem 0.5rem 0.18rem 0.42rem;
+  /* Pergamentti, ei paperinvalkoinen: sama sävy kuin karttasymbolien
+     aluslaatalla (css/styles.css --sym-laatta). */
+  background: linear-gradient(180deg, #f6ecd2 0%, #e6d6ac 100%);
+  border: 1px solid rgba(58, 38, 16, 0.42);
+  border-left: none;
+  border-radius: 0 3px 3px 0;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.28);
+  color: #4b3a1c;
+  font-family: var(--font-type, inherit);
+  font-size: 0.6rem;
+  line-height: 1.25;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* Suurennoksessa kehyksellä on oma sisennys: nauha asettuu kuvan
+   kulmaan eikä paperin reunaan. Kehys on nauhan asemointipohja —
+   `position: relative` on lisättävä erikseen, koska FLIP-muunnos
+   poistuu animaation jälkeen eikä sitä voi käyttää pohjana. */
+.fokuskohde-zoomkehys { position: relative; }
+
+.fokuskohde-zoomkehys > .fokuskohde-ihmenauha {
+  top: 1.05rem;
+  left: 0.55rem;
+  font-size: 0.68rem;
+  padding: 0.22rem 0.6rem;
+  border-left: 1px solid rgba(58, 38, 16, 0.42);
+  border-radius: 3px;
+}
+
+/*
+ * "KOE IHME" -NAPPI heti otsikon alla (Raamattu: *"popupin yläosassa
+ * heti oma nappi, josta ihmeen pääsee kokemaan"*). Sama pergamenttinen
+ * korostuskieli kuin kierrosnapilla — mutta tähti edessä, sama merkki
+ * kuin kadonneiden ihmeiden karttasymbolissa.
+ */
+.fokuskohde-ihmenappi {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  width: 100%;
+  min-height: 44px;
+  margin: 0 0 0.55rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(122, 85, 20, 0.6);
+  border-radius: 4px;
+  background: rgba(214, 168, 62, 0.2);
+  color: #6d4d12;
+  font-family: var(--font-type, inherit);
+  font-size: 0.86rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fokuskohde-ihmenappi:hover,
+.fokuskohde-ihmenappi:focus-visible { background: rgba(214, 168, 62, 0.36); }
+
+.fokuskohde-ihmetahti {
+  flex: none;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .fokuskohde-kuvateksti {

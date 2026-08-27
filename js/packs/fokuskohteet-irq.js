@@ -85,5 +85,22 @@ export const FOKUSKOHTEET_IRQ = [
         + 'löydetty Babylonista — kuva esittää kertomusta, ei kaivausta.',
       lahde: 'Matkakirjan havainnekuva',
     },
+    /*
+     * MATKAKIRJAN IHME (kadonnut) — säännöt js/packs/fokuskohteet-grc.js:n
+     * samannimisessä lohkossa. Puutarhoja ei ole koskaan löydetty, joten
+     * tähti kartalla on tässä kirjaimellisin mahdollinen: paikka, jota ei
+     * ole edes varmuudella ollut.
+     */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-babylonin-puutarhat.webp',
+      kadonnut: true,
+      selite: 'Riippuvat puutarhat olivat antiikin kirjoittajien mukaan '
+        + 'terassi terassin päälle istutettu vihreä vuori savitiilistä '
+        + 'keskellä Mesopotamian tasankoa. Ne ovat seitsemästä ihmeestä '
+        + 'ainoa, jonka paikkaa ei ole varmistettu: Babylonin raunioilta '
+        + 'nykyisen Hillan liepeiltä ei ole löytynyt niistä jälkeäkään.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
+    },
   },
 ];

@@ -118,6 +118,45 @@
  * CC BY vaatii maininnan.
  */
 
+/* ── MATKAKIRJAN IHME: KOHTEEN `ihme`-KENTTÄ ───────────────────────
+ *
+ * Raamattu, osio "Matkakirjan ihmeet" (omistaja 27.8.2026): *"kadonnut
+ * suuruus palautetaan pelaajan silmien eteen FOTOREALISTISENA KESKELLÄ
+ * NYKYMAAILMAA … Saa kokea pienen ihmeen kun näkee jotain mitä on jo
+ * tavallaan kadonnut nykymaailmasta."* Tämä on eri asia kuin alempana
+ * kuvattu KADONNEET IHMEET JA LOISTOAIKA -erä: se palauttaa kohteen
+ * omaan aikaansa 1800-luvun rekonstruktiopiirroksena, tämä nostaa sen
+ * loistoaikaisena keskelle NYKYPÄIVÄN kaupunkia. Kohteella voi olla
+ * kumpikin, ja moneen kohteeseen tuli molemmat.
+ *
+ * KENTTÄ (js/fokuskohteet.js kohteenIhmekuva):
+ *
+ *   ihme: {
+ *     osoite: 'assets/kartat/ihmeet/ihme-<tunnus>.webp',
+ *     kadonnut: true | false,
+ *     selite: '...',           // kertoo KOHTEESTA, ei kuvasta
+ *     lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+ *          + 'nykymaailmassa',
+ *   }
+ *
+ * `kadonnut: true` — kohdetta ei ole enää olemassa: kartalla merkki on
+ * TÄHTI (voittaa kohteen oman `symboli`-kentän) ja ihmekuva on kortin
+ * ensimmäinen kuva. `kadonnut: false` — kohde on yhä pystyssä: kartalla
+ * on kohteen tavallinen merkki ja kortin yläosassa "Koe ihme" -nappi.
+ *
+ * SELITTEEN SÄÄNTÖ ON ERI KUIN LOISTOAIKAKUVILLA, ja se on tietoinen
+ * ero. Loistoaikakuvan selite alkaa sanalla "Havainnekuva" ja kertoo,
+ * mihin muoto perustuu. Ihmekuvan selite kertoo KOHTEESTA eikä kuvasta
+ * — mitä paikalla oli ja mitä siellä on nyt — ja havainnekuvamerkintä
+ * on `lahde`-rivillä, jonka peli näyttää aina selitteen vieressä.
+ * Lisäksi peli piirtää kuvan vasempaan yläkulmaan nauhan "Matkakirjan
+ * ihme" (js/fokuskohteet.js piirraIhmenauha), joten pelaajalle sanotaan
+ * kahdesti eikä kertaakaan väitetä valokuvaa.
+ *
+ * Kuvat on generoitu .github/workflows/generoi-ihmeet.yml -ajolla ja
+ * katsottu silmin ennen peliin ottamista.
+ */
+
 /**
  * Kreikan fokuskohteet: aineiston kaikki 14 kohdetta samassa
  * järjestyksessä kuin docs/mantereet-tyoaineisto/fokuskohteet-kreikka.md,
@@ -708,6 +747,22 @@ export const FOKUSKOHTEET_GRC = [
         lahde: 'Matkakirjan havainnekuva',
       },
     ],
+    /*
+     * MATKAKIRJAN IHME (ks. lohko tiedoston alussa). `kadonnut: false`:
+     * Parthenon seisoo yhä kalliolla, joten kartalla säilyy historian
+     * pylväs ja kortin yläosaan tulee "Koe ihme" -nappi.
+     */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-parthenon.webp',
+      kadonnut: false,
+      selite: 'Parthenon valmistui 432 eaa., ja sen päätykolmiot, '
+        + 'metoopit ja friisi olivat alun perin kirkkaasti maalattuja — '
+        + 'nykyinen valkoinen marmori on kahdenkymmenenviiden vuosisadan '
+        + 'jälki. Temppeli seisoo yhä Akropoliin kalliolla keskellä '
+        + 'nykyistä Ateenaa.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
+    },
   },
   /*
    * AKROPOLIS-MUSEO — MULTIMEDIAKOHDE KOLMELLA UPOTETTAVALLA
@@ -866,6 +921,24 @@ export const FOKUSKOHTEET_GRC = [
         lahde: 'Matkakirjan havainnekuva',
       },
     ],
+    /*
+     * MATKAKIRJAN IHME (ks. lohko tiedoston alussa). Kohde on OLYMPIA,
+     * ja Olympia on yhä olemassa: rauniot ovat käveltävissä ja
+     * kaivauskenttä on avoinna. Siksi `kadonnut: false` ja "Koe ihme"
+     * -nappi, vaikka patsas itse on kadonnut — tähti kartalla lupaisi
+     * kadonnutta PAIKKAA, ja paikka on tallella.
+     */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-zeuksen-patsas.webp',
+      kadonnut: false,
+      selite: 'Feidiaan Zeus-patsas istui Olympian temppelissä kullasta '
+        + 'ja norsunluusta tehtynä ja oli 12,4 metriä korkea — yksi '
+        + 'antiikin seitsemästä ihmeestä. Patsaasta ei ole säilynyt '
+        + 'palaakaan, ja temppelin pylväät makaavat nykyään kaatuneina '
+        + 'rivissä pyhäkköalueen kentällä.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
+    },
   },
   {
     id: 'kalamata',
@@ -1313,6 +1386,18 @@ export const FOKUSKOHTEET_GRC = [
         + 'ovat antiikin kirjoittajien kuvauksista.',
       lahde: 'Matkakirjan havainnekuva',
     },
+    /* MATKAKIRJAN IHME (kadonnut) — ks. lohko tiedoston alussa. */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-rodoksen-kolossi.webp',
+      kadonnut: true,
+      selite: 'Helioksen 33-metrinen pronssipatsas pystytettiin Rodoksen '
+        + 'kaupunkiin 280 eaa., ja se oli antiikin maailman korkein '
+        + 'patsas. Maanjäristys kaatoi sen jo 54 vuotta myöhemmin, ja '
+        + 'palaset myytiin pois vuonna 653 — patsaan tarkasta paikasta '
+        + 'kiistellään yhä.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
+    },
   },
   {
     /*
@@ -1358,6 +1443,23 @@ export const FOKUSKOHTEET_GRC = [
         + 'yläkerrat ovat tulkintaa.',
       lahde: 'Matkakirjan havainnekuva',
     },
+    /*
+     * MATKAKIRJAN IHME (ks. lohko tiedoston alussa). `kadonnut: false`:
+     * palatsin rauniot kaivettiin esiin ja ne ovat Kreetan käydyin
+     * kohde — paikka on tallella, joten kartalla säilyy historian
+     * pylväs ja kortissa on "Koe ihme" -nappi.
+     */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-knossos.webp',
+      kadonnut: false,
+      selite: 'Knossoksen palatsi oli minolaisen Kreetan suurin keskus: '
+        + 'noin 14 000 neliömetriä pihoja, portaikkoja ja varastoja, '
+        + 'joissa seisoi ihmisen kokoisia pithos-ruukkuja. Palatsi '
+        + 'tuhoutui noin 1350 eaa. ja nukkui maan alla isoisäsi matkan '
+        + 'ohi — kaivaukset alkoivat vasta 1878.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
+    },
   },
   {
     /*
@@ -1400,6 +1502,22 @@ export const FOKUSKOHTEET_GRC = [
         + 'agoran laidalla, mutta värit ovat kuluneet pois — nämä '
         + 'noudattavat antiikin temppelien tunnettua väritystapaa.',
       lahde: 'Matkakirjan havainnekuva',
+    },
+    /*
+     * MATKAKIRJAN IHME (ks. lohko tiedoston alussa). `kadonnut: false`:
+     * Hefaistoksen temppeli on antiikin parhaiten säilynyt
+     * kreikkalaistemppeli ja seisoo agoran laidalla yhä.
+     */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-hefaistoksen-temppeli.webp',
+      kadonnut: false,
+      selite: 'Hefaistoksen temppeli valmistui 449–415 eaa. ja on '
+        + 'antiikin parhaiten säilynyt kreikkalaistemppeli — syy on sen '
+        + 'katkeamaton käyttö kirkkona vuoteen 1834. Marmori on kulunut '
+        + 'valkoiseksi, mutta uutena temppelin metoopit ja päätykolmiot '
+        + 'olivat maalattuja.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
     },
   },
 ];

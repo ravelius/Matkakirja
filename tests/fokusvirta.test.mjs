@@ -413,3 +413,70 @@ test('botti ei saa fokusvirran merkintää', () => {
   game.player.isBot = true;
   assert.equal(fokusvirtaMatkakirja(uiTynka(game), city), null);
 });
+
+/* ---------- 9. Matkakirjan ihmeet ---------- */
+
+/*
+ * Raamattu, osio "Matkakirjan ihmeet": kohteen `ihme`-kenttä nostaa
+ * kadonneen suuruuden fotorealistisena keskelle nykymaailmaa. Kaksi
+ * asiaa, jotka eivät näkyisi rikkoutuessaan ruudulla mitenkään:
+ *
+ *   1. LUPAUS ILMAN KUVAA. Väärä polku jättäisi kortista vain tyhjän
+ *      paikan (piirraKohdeKuva poistaa kehyksen) tai "Koe ihme"
+ *      -napin, joka avaa tyhjän suurennoksen. Siksi tiedosto
+ *      tarkistetaan levyltä.
+ *   2. HAVAINNEKUVAMERKINTÄ. Kuva näyttää valokuvalta, joten sen on
+ *      sanottava itse olevansa havainnekuva. Nauhan piirtää peli;
+ *      lähderivin on oltava datassa.
+ *
+ * Lisäksi kuvan on oltava sw.js:n esilatauslistassa: ilman sitä pelin
+ * kohokohta jäisi lentokoneessa harmaaksi laatikoksi.
+ */
+test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () => {
+  const { readFileSync, existsSync } = await import('node:fs');
+  const { dirname, join } = await import('node:path');
+  const { fileURLToPath } = await import('node:url');
+  const juuri = join(dirname(fileURLToPath(import.meta.url)), '..');
+  const sw = readFileSync(join(juuri, 'sw.js'), 'utf8');
+
+  const paketit = Object.entries({
+    GRC: (await import('../js/packs/fokuskohteet-grc.js')).FOKUSKOHTEET_GRC,
+    TUR: (await import('../js/packs/fokuskohteet-tur.js')).FOKUSKOHTEET_TUR,
+    EGY: (await import('../js/packs/fokuskohteet-egy.js')).FOKUSKOHTEET_EGY,
+    IRQ: (await import('../js/packs/fokuskohteet-irq.js')).FOKUSKOHTEET_IRQ,
+  });
+
+  let ihmeita = 0;
+  for (const [maa, kohteet] of paketit) {
+    for (const kohde of kohteet) {
+      if (!kohde.ihme) continue;
+      ihmeita += 1;
+      const tunnus = `${maa}/${kohde.id}`;
+      const { osoite, selite, lahde, kadonnut } = kohde.ihme;
+      assert.ok(osoite?.startsWith('assets/kartat/ihmeet/ihme-'),
+        `${tunnus}: ihmekuvan polku on assets/kartat/ihmeet/ihme-*`);
+      assert.ok(existsSync(join(juuri, osoite)), `${tunnus}: ${osoite} puuttuu levyltä`);
+      assert.equal(typeof kadonnut, 'boolean',
+        `${tunnus}: esitystapa (kadonnut) on kerrottava kumpaankin suuntaan`);
+      assert.ok(selite?.length > 60, `${tunnus}: ihmekuvan selite puuttuu tai on liian lyhyt`);
+      // Selite kertoo KOHTEESTA eikä kuvasta — havainnekuvamerkintä on
+      // lähderivillä, jonka peli näyttää aina selitteen vieressä.
+      assert.ok(!/^Havainnekuva/i.test(selite),
+        `${tunnus}: ihmekuvan selite kertoo kohteesta, ei kuvasta`);
+      assert.ok(/^Matkakirjan havainnekuva:/.test(lahde ?? ''),
+        `${tunnus}: lähderivin on merkittävä kuva havainnekuvaksi`);
+      assert.ok(sw.includes(`'./${osoite}'`), `${tunnus}: ${osoite} puuttuu sw.js:n listasta`);
+    }
+  }
+  assert.equal(ihmeita, 10, 'ensimmäisessä erässä on kymmenen Matkakirjan ihmettä');
+});
+
+test('kadonnut ihme saa kartalle tähden, olemassa oleva pitää oman merkkinsä', async () => {
+  const { NOSTOSYM_LUOKAT, NOSTOSYM_TYYPIT } = await import('../js/fokusnosto-symbolit.js');
+  assert.ok(NOSTOSYM_TYYPIT.has('ihme'), 'tähti on symbolikirjastossa');
+  assert.ok(NOSTOSYM_LUOKAT.ihme, 'tähdellä on kortin ylärivin luokkanimi');
+  const kolossi = FOKUSKOHTEET_GRC.find((k) => k.id === 'rodoksen-kolossi');
+  const knossos = FOKUSKOHTEET_GRC.find((k) => k.id === 'knossos');
+  assert.equal(kolossi.ihme.kadonnut, true, 'kolossia ei ole enää olemassa');
+  assert.equal(knossos.ihme.kadonnut, false, 'Knossoksen rauniot ovat tallella');
+});

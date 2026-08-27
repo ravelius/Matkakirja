@@ -320,6 +320,12 @@ function varmistaKohdekerros(ui) {
  * silmäpiirtäjä (v1119) korvautui kirjaston silmällä.
  *
  * VALINTAJÄRJESTYS:
+ *   0. KADONNUT MATKAKIRJAN IHME → tähti (Raamattu, osio "Matkakirjan
+ *      ihmeet"; omistaja 27.8.2026: kokonaan kadonneella kohteella on
+ *      kartalla *"suoraan oma TÄHTISYMBOLI"*). Tämä voittaa kohteen
+ *      oman `symboli`-kentän tarkoituksella: Faros on merenkulkua ja
+ *      kolossi historiaa, mutta kartalla niiden lupaus on sama ja
+ *      harvinaisempi kuin kategoria — paikka, jota ei enää ole.
  *   1. kohteen oma `symboli`-kenttä, jos se on tunnettu kategoria;
  *   2. kohteella on kierros → silmä (v1119: katsottavaa muualla kuin
  *      lehdellä — tämä voittaa tyyppijohdon, koska kierros on
@@ -353,6 +359,7 @@ const KOHDE_TYYPPISYMBOLIT = {
 };
 
 function kohteenSymboli(kohde) {
+  if (kohde?.ihme?.kadonnut && kohde.ihme.osoite) return 'ihme';
   if (NOSTOSYM_TYYPIT.has(kohde?.symboli)) return kohde.symboli;
   if (kohteenKierrokset(kohde).length) return 'silma';
   return KOHDE_TYYPPISYMBOLIT[kohde?.tyyppi] ?? null;
@@ -830,9 +837,96 @@ function kysyKohteesta(ui, kysymys) {
  * kohteet (Srebarnan pelikaanit, Vanin kissa — pelkkä `kuvat`) ja uudet
  * (pääkuva + havainnekuva) toimivat kummatkin ennallaan.
  */
+/* ============== MATKAKIRJAN IHME: NAUHA, TÄHTI JA NAPPI ============
+ *
+ * Raamattu, osio "Matkakirjan ihmeet" (omistaja 27.8.2026): *"kadonnut
+ * suuruus palautetaan pelaajan silmien eteen FOTOREALISTISENA KESKELLÄ
+ * NYKYMAAILMAA … Saa kokea pienen ihmeen kun näkee jotain mitä on jo
+ * tavallaan kadonnut nykymaailmasta."*
+ *
+ * KAKSI ESITYSTAPAA, YKSI KUVA. Kohteella on valinnainen `ihme`-kenttä
+ * (js/packs/fokuskohteet-*.js): `{ osoite, selite, lahde, kadonnut }`.
+ *
+ *   • `kadonnut: true` — kohdetta ei ole enää olemassa. Kartalla merkki
+ *     on TÄHTI (kohteenSymboli), ja ihmekuva on kortin ENSIMMÄINEN
+ *     kuva: napautus vie suoraan suurennokseen, ilman välinappia.
+ *   • `kadonnut: false` — kohde on yhä pystyssä. Kartalla on kohteen
+ *     tavallinen merkki, ja kortin yläosaan heti otsikon alle tulee
+ *     "Koe ihme" -nappi, joka avaa ihmekuvan suurennoksena. Kuva ei ole
+ *     kuvalistassa: kohteella on jo oma valokuva, ja kaksi rinnakkaista
+ *     näkymää samasta paikasta hukuttaisi yllätyksen.
+ *
+ * NAUHAN PIIRTÄÄ PELI, EI KUVATIEDOSTO (Raamattu: *"peli piirtää nauhan
+ * kuvan päälle, sitä ei polteta kuvatiedostoon"*). Nauha on DOM-elementti
+ * kuvan vasemmassa yläkulmassa, ja SAMA komponentti (piirraIhmenauha)
+ * käytetään kortin kuvapaikassa ja suurennoksessa — kaksi kopiota
+ * erkanisi ensimmäisessä tyylimuutoksessa. Kuvaolio kantaa nauhan
+ * tekstin kentässä `nauha`, joten piirtäjien ei tarvitse tietää
+ * ihmeistä mitään: nauha on kuvan ominaisuus siinä missä selitekin.
+ * =================================================================== */
+
+/** Nauhan teksti — yksi totuus kortissa ja suurennoksessa. */
+const KOHDE_IHMENAUHA = 'Matkakirjan ihme';
+
+/**
+ * Kohteen ihmekuva kuvaoliona, tai null jos kohteella ei ole ihmettä.
+ * Palautettu olio on kuvalistan kanssa samaa muotoa (`osoite`, `selite`,
+ * `lahde`) ja kantaa lisäksi nauhan tekstin.
+ */
+function kohteenIhmekuva(kohde) {
+  const ihme = kohde?.ihme;
+  if (!ihme?.osoite) return null;
+  return {
+    osoite: ihme.osoite,
+    selite: ihme.selite ?? '',
+    lahde: ihme.lahde ?? '',
+    nauha: KOHDE_IHMENAUHA,
+  };
+}
+
+/**
+ * Pergamenttinauha kuvan vasempaan yläkulmaan. Kutsuja antaa sen
+ * elementin, jonka sisällä nauha kelluu (kortissa kuvanappi,
+ * suurennoksessa kuvan oma kehys) — asemointi on css:ssä.
+ */
+function piirraIhmenauha(isanta, teksti) {
+  if (!teksti) return null;
+  const nauha = html('span', 'fokuskohde-ihmenauha', teksti);
+  nauha.setAttribute('aria-hidden', 'true');
+  isanta.appendChild(nauha);
+  return nauha;
+}
+
+/**
+ * "Koe ihme" -nappi kortin yläosaan, jos kohde on YHÄ OLEMASSA ja
+ * sillä on ihmekuva. Nappi kantaa saman tähden kuin kadonneiden
+ * kohteiden karttamerkki: sama lupaus, sama merkki.
+ */
+function piirraIhmenappi(ui, sisalto, kohde) {
+  const kuva = kohteenIhmekuva(kohde);
+  if (!kuva || kohde.ihme.kadonnut) return;
+  const nappi = html('button', 'fokuskohde-ihmenappi');
+  nappi.type = 'button';
+  const tahti = el('svg', {
+    class: 'fokuskohde-ihmetahti',
+    viewBox: '-12 -12 24 24',
+    'aria-hidden': 'true',
+  }, nappi);
+  piirraNostosymboli(el('g', {}, tahti), 'ihme');
+  nappi.appendChild(document.createTextNode(kohde.ihme.nappi ?? 'Koe ihme'));
+  nappi.addEventListener('click', (tapahtuma) => {
+    tapahtuma.stopPropagation();
+    avaaKohdeSuurennos(ui, kuva, () => nappi);
+  });
+  sisalto.appendChild(nappi);
+}
+
 function piirraKohdeKuvat(ui, sisalto, kohde) {
   const nahty = new Set();
-  const lista = [kohde.kuva, ...(Array.isArray(kohde.kuvat) ? kohde.kuvat : [])]
+  // Kadonneen ihmeen kuva on kortin ENSIMMÄINEN kuva (ks. lohkon alku):
+  // kortti avaa suoraan sen, mitä paikalla ei enää ole.
+  const ihme = kohde.ihme?.kadonnut ? kohteenIhmekuva(kohde) : null;
+  const lista = [ihme, kohde.kuva, ...(Array.isArray(kohde.kuvat) ? kohde.kuvat : [])]
     .filter((kuva) => {
       const tunnus = kuva?.tiedosto ?? kuva?.osoite;
       if (!tunnus || nahty.has(tunnus)) return false;
@@ -881,6 +975,9 @@ function piirraKohdeKuva(ui, sisalto, kuva) {
   img.alt = kuva.selite ?? '';
   asetaKohdeKuva(img, kuva, KOHDE_KUVAN_PX, () => kehys.remove());
   nappi.appendChild(img);
+  // Nauha napin sisään eikä kehykseen: kehyksessä on myös kuvateksti,
+  // ja nauhan on jäätävä kuvan päälle sen vasempaan yläkulmaan.
+  piirraIhmenauha(nappi, kuva.nauha);
   nappi.addEventListener('click', (tapahtuma) => {
     tapahtuma.stopPropagation();
     avaaKohdeSuurennos(ui, kuva, () => nappi);
@@ -1296,6 +1393,10 @@ function avaaKohdeSuurennos(ui, kuva, ankkuri) {
     html('span', 'fokuskohde-zoomlahde', kuva.lahde ?? ''),
   );
   kehys.append(img, teksti);
+  // "Matkakirjan ihme" -nauha myös suurennokseen, samalla komponentilla
+  // kuin kortissa (ks. lohko MATKAKIRJAN IHME). Kehys on nauhan
+  // asemointipohja, ja css nostaa sen kuvan vasempaan yläkulmaan.
+  piirraIhmenauha(kehys, kuva.nauha);
   kerros.appendChild(kehys);
 
   /*
@@ -1308,13 +1409,25 @@ function avaaKohdeSuurennos(ui, kuva, ankkuri) {
   /*
    * REPON OMALLA KUVALLA (`osoite`) EI OLE ISOMPAA VERSIOTA: tiedosto
    * on jo se, mikä se on, eikä thumb-putkea ole. Toinen haku pyytäisi
-   * saman tiedoston uudestaan, joten se jätetään tekemättä.
+   * saman tiedoston uudestaan, joten se jätetään tekemättä — ja se on
+   * jo suurennoksen lopullinen kuva, joten lippu on heti tosi.
+   *
+   * LIPPU EIKÄ VERTAILU ISON OSOITTEESEEN (korjaus 27.8.2026,
+   * Matkakirjan ihmeet): mitoitus luki ennen `img.src === iso.src`,
+   * mutta `iso` syntyi tämän ehdon SISÄLLÄ. Repon omalla kuvalla
+   * muuttujaa ei siis ollut olemassa, ja mitoitus kaatui
+   * ReferenceErroriin heti ensimmäisellä kierroksella — suurennos jäi
+   * mitoittamatta. Nyt tila on yksi boolean, joka on olemassa
+   * kummallakin kuvalähteellä.
    */
+  let isoValmis = Boolean(kuva.osoite);
   if (!kuva.osoite) {
     const iso = new Image();
     iso.decoding = 'async';
     iso.addEventListener('load', () => {
-      if (kerros.isConnected) img.src = iso.src;
+      if (!kerros.isConnected) return;
+      img.src = iso.src;
+      isoValmis = true;
     }, { once: true });
     iso.src = valokuvaSuurennos(kuva.tiedosto, KOHDE_ZOOM_PX);
   }
@@ -1385,7 +1498,7 @@ function avaaKohdeSuurennos(ui, kuva, ankkuri) {
      * Kuvan omat mitat tunnetaan vasta kun ISO versio on ladattu; sitä
      * ennen (välimuistin pikkukuva) katto jää pois eikä mitoita mitään.
      */
-    const luonnollinen = img.src === iso.src && img.naturalWidth
+    const luonnollinen = isoValmis && img.naturalWidth
       ? img.naturalWidth * KOHDE_ZOOM_VENYMA : Infinity;
     const enintaanW = Math.min(
       leveys * KOHDE_ZOOM_LEVEIN, leveys - KOHDE_ZOOM_REUNA, luonnollinen,
@@ -1671,6 +1784,10 @@ export function avaaFokuskohde(ui, kohde) {
   const sisalto = html('div', 'fokuskohde-sisalto');
   sisalto.appendChild(piirraKohdeYlarivi(kohde));
   sisalto.appendChild(html('h3', 'fokuskohde-otsikko', kohde.nimi));
+  // "Koe ihme" HETI OTSIKON ALLE (Raamattu, osio "Matkakirjan ihmeet":
+  // *"popupin yläosassa heti oma nappi, josta ihmeen pääsee kokemaan"*)
+  // — ennen kuvaa ja tekstiä, jotta lupaus näkyy ilman vieritystä.
+  piirraIhmenappi(ui, sisalto, kohde);
   piirraKohdeKuvat(ui, sisalto, kohde);
   piirraKohdeTeksti(ui, sisalto, kohde);
   piirraKohdeKysymykset(ui, sisalto, kohde);

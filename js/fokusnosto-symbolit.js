@@ -422,6 +422,36 @@ function piirraNostosymPortti(g) {
   }, g);
 }
 
+/**
+ * TÄHTI — MATKAKIRJAN IHME, jota ei enää ole (Raamattu, osio
+ * "Matkakirjan ihmeet"; omistaja 27.8.2026: *"Jos kohde on KOKONAAN
+ * KADONNUT (Faros, kolossi, mausoleumi...), kartalla on suoraan oma
+ * TÄHTISYMBOLI"*).
+ *
+ * Muoto on vanhan merikartan kompassiruusun tähti: kahdeksan sakaraa,
+ * joista pääilmansuunnat ovat pitkiä ja väli-ilmansuunnat lyhyitä.
+ * Se erottuu yhdellä silmäyksellä huutomerkistä ja portista myös
+ * yhdentoista pikselin kokoisena, eikä muistuta mitään muuta taulun
+ * symbolia — juuri siksi tähti valittiin: kartalla se lupaa jotain,
+ * mitä muualla ei ole.
+ *
+ * Sakaroiden juureen jäävä kehä (nostosym-tahtikeha) on hiuksenohut
+ * musteviiva, joka sitoo tähden laattaan samalla tavalla kuin
+ * kaiverruksissa — ilman sitä tähti kelluu irrallaan.
+ */
+function piirraNostosymTahti(g) {
+  el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
+  el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
+  el('circle', { class: 'nostosym-tahtikeha', r: 5.6 }, g);
+  el('path', {
+    class: 'nostosym-tahti',
+    d: 'M0.00 -8.80 L0.84 -2.03 L3.54 -3.54 L2.03 -0.84 L8.80 0.00 '
+      + 'L2.03 0.84 L3.54 3.54 L0.84 2.03 L0.00 8.80 L-0.84 2.03 '
+      + 'L-3.54 3.54 L-2.03 0.84 L-8.80 0.00 L-2.03 -0.84 '
+      + 'L-3.54 -3.54 L-0.84 -2.03 Z',
+  }, g);
+}
+
 const NOSTOSYM_PIIRTAJAT = {
   huuto: piirraNostosymHuuto,
   elain: piirraNostosymPollo,
@@ -436,6 +466,7 @@ const NOSTOSYM_PIIRTAJAT = {
   merenkulku: piirraNostosymMeriankkuri,
   urheilu: piirraNostosymSeppele,
   kaupunki: piirraNostosymPortti,
+  ihme: piirraNostosymTahti,
 };
 
 /** Tunnetut symbolikategoriat — yksi totuus myös kutsujien tarkistuksiin. */
@@ -465,6 +496,9 @@ export const NOSTOSYM_LUOKAT = {
   merenkulku: 'Merenkulku',
   urheilu: 'Urheilu',
   kaupunki: 'Kaupungit',
+  // Tähti on oma luokkansa eikä historian alalaji: kortin ylärivi
+  // kertoo heti, että tästä kohteesta on jäljellä vain tarina.
+  ihme: 'Kadonneet ihmeet',
 };
 
 /**

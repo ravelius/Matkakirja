@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1183';
+const CACHE = 'matkakirja-2026-08-09.1184';
 const SHELL = [
   './',
   './index.html',
@@ -631,6 +631,21 @@ const SHELL = [
   './assets/kartat/ihmeet/parthenon-loistossaan.webp',
   './assets/kartat/ihmeet/rodoksen-kolossi.webp',
   './assets/kartat/ihmeet/zeuksen-patsas.webp',
+  // Matkakirjan ihmeet: sama kohde loistoaikansa asussa NYKYMAAILMASSA
+  // (Raamattu, osio "Matkakirjan ihmeet"; kohteiden `ihme`-kenttä
+  // js/packs/fokuskohteet-*.js). Nämä ovat pelin kohokohtia, joten ne
+  // kuuluvat kuoreen siinä missä loistoaikakuvatkin — ilman
+  // esilatausta ihme jäisi lentokoneessa harmaaksi laatikoksi.
+  './assets/kartat/ihmeet/ihme-aleksandrian-kirjasto.webp',
+  './assets/kartat/ihmeet/ihme-artemiin-temppeli.webp',
+  './assets/kartat/ihmeet/ihme-babylonin-puutarhat.webp',
+  './assets/kartat/ihmeet/ihme-faros.webp',
+  './assets/kartat/ihmeet/ihme-halikarnassoksen-mausoleumi.webp',
+  './assets/kartat/ihmeet/ihme-hefaistoksen-temppeli.webp',
+  './assets/kartat/ihmeet/ihme-knossos.webp',
+  './assets/kartat/ihmeet/ihme-parthenon.webp',
+  './assets/kartat/ihmeet/ihme-rodoksen-kolossi.webp',
+  './assets/kartat/ihmeet/ihme-zeuksen-patsas.webp',
   // Lippuikkunan versioliput (pilotti Suomi + Saksa, v711).
   './assets/liput/versiot/fin-valtiolippu.png',
   './assets/liput/versiot/fin-sotalippu.png',
