@@ -80,7 +80,8 @@
  */
 
 import {
-  fokusmoodiPaalla, html, jaaKappaleiksi, lehtivinkkiPiilotettu, piilotaLehtivinkki, TOAST_MS,
+  fokusmoodiPaalla, html, jaaKappaleiksi, lehtivinkkiPiilotettu, nielaiseSulkevaNapautus,
+  piilotaLehtivinkki, TOAST_MS,
 } from './ui-apurit.js';
 import { asetaTehtavakuittaus, fokusAarreAvattu, fokusAarreVastattu } from './fokustehtavat.js';
 import { asetaKuva, julisteUrl } from './media.js';
@@ -716,6 +717,11 @@ function piirraKehys(ui, city, data, tila) {
  * (omistaja 18.8.2026: *"Pöllön puhekuplia pitää häipyä jos sitä
  * koskettaa"*), mutta tässä kuplassa on painikkeita — napautus niiden
  * päällä on valinta eikä sulku, ja se päästetään läpi.
+ *
+ * SULKEVA NAPAUTUS EI VUODA KUPLAN ALLE. Kupla katoaa pointerdownissa,
+ * ja ilman nielua selain etsisi saman napautuksen click-kohteen vasta
+ * sormen noustessa — kartalta kuplan takaa (omistajan iPad-havainto
+ * 27.8.2026, ks. ui-apurit nielaiseSulkevaNapautus).
  */
 function piirraKupla(ui, city, data, tila, nappi, tyyliKesken = null) {
   const koti = nappi.parentNode ?? document.body;
@@ -724,6 +730,7 @@ function piirraKupla(ui, city, data, tila, nappi, tyyliKesken = null) {
   kupla.setAttribute('aria-label', `${city.name}: Viisas Pöllö`);
   kupla.addEventListener('pointerdown', (tapahtuma) => {
     if (tapahtuma.target?.closest?.('button')) return;
+    nielaiseSulkevaNapautus(tapahtuma);
     suljeKasin(ui);
   });
 
@@ -1689,6 +1696,9 @@ function naytaPolloKupla(ui, teksti, { ruksi: ruksillinen = false } = {}) {
   kupla.setAttribute('aria-label', 'Viisas Pöllö vinkkaa');
   kupla.addEventListener('pointerdown', (tapahtuma) => {
     if (tapahtuma.target?.closest?.('label, input')) return;
+    // Sama nielu kuin ison kuplan sulussa: napautus loppuu vinkkiin
+    // eikä valu kartalle sen alta.
+    nielaiseSulkevaNapautus(tapahtuma);
     sfx.play('paper');
     suljeFokusvirta(ui);
   });

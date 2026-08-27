@@ -93,7 +93,7 @@
 import { el, maare } from './mapart.js';
 import { NOSTOSYM_LUOKAT, NOSTOSYM_TYYPIT, piirraNostosymboli } from './fokusnosto-symbolit.js';
 import { asetaKuva } from './media.js';
-import { html, jaaKappaleiksi } from './ui-apurit.js';
+import { html, jaaKappaleiksi, nielaiseSulkevaNapautus } from './ui-apurit.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { FOKUSKOHTEET_BGR } from './packs/fokuskohteet-bgr.js';
 import { FOKUSKOHTEET_BIH } from './packs/fokuskohteet-bih.js';
@@ -1316,10 +1316,16 @@ function avaaKierros(ui, kohde, kierros = kohteenKierrokset(kohde)[0]) {
     suljeKierros(ui);
   };
   document.addEventListener('keydown', nappain, true);
-  // Napautus ikkunan ULKOPUOLELLE sulkee; ikkunan sisällä napautus
-  // kuuluu kierrokselle itselleen.
+  /*
+   * Napautus ikkunan ULKOPUOLELLE sulkee; ikkunan sisällä napautus
+   * kuuluu kierrokselle itselleen. Sulkeva napautus jää kerrokseen:
+   * kerros katoaa jo pointerdownissa, ja ilman nielua sen click osuisi
+   * kartalle kerroksen alta (sama vuoto kuin pöllön kuplissa, ks.
+   * ui-apurit nielaiseSulkevaNapautus).
+   */
   kerros.addEventListener('pointerdown', (tapahtuma) => {
     if (ikkuna.contains(tapahtuma.target)) return;
+    nielaiseSulkevaNapautus(tapahtuma);
     suljeKierros(ui);
   });
   ui.kierrosIkkuna = {

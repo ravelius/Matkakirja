@@ -107,7 +107,7 @@
  * (tools/tarkista-niputus.mjs), joten kaikki top-level-nimet alkavat
  * NOSTO_/nosto-etuliitteellä.
  */
-import { html, jaaKappaleiksi } from './ui-apurit.js';
+import { html, jaaKappaleiksi, nielaiseSulkevaNapautus } from './ui-apurit.js';
 import { asetaKuva } from './media.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { avaaFokuskohde, suljeFokuskohde } from './fokuskohteet.js';
@@ -1072,10 +1072,19 @@ function avaaNostonKortti(ui, nosto) {
     suljeNostonKortti(ui);
   };
   sulje.addEventListener('click', kiinni);
-  // Napautus kortin ULKOPUOLELLE sulkee; kortin päällä se ei tee mitään,
-  // jotta tekstiä voi valita ja nappeja painaa.
+  /*
+   * Napautus kortin ULKOPUOLELLE sulkee; kortin päällä se ei tee mitään,
+   * jotta tekstiä voi valita ja nappeja painaa.
+   *
+   * Sulkeva napautus jää tähän kerrokseen: kerros katoaa jo
+   * pointerdownissa, ja ilman nielua selain etsisi saman napautuksen
+   * click-kohteen vasta sormen noustessa — kartalta kerroksen alta
+   * (sama vuoto kuin pöllön kuplissa, ks. ui-apurit
+   * nielaiseSulkevaNapautus).
+   */
   kerros.addEventListener('pointerdown', (tapahtuma) => {
     if (tapahtuma.target?.closest?.('.fokusnosto-kortti')) return;
+    nielaiseSulkevaNapautus(tapahtuma);
     kiinni();
   });
   const nappain = (tapahtuma) => {
