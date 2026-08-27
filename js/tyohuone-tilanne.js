@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'Kehittajan maailmannakyma piirtaa nyt kaikki 134 maalehtea matalatarkkuuksisina pikkukuvina (ruudulta ulospain tayttyen); pelaajan nakyma ennallaan',
   'Matkakirjan ihme -nauha istuu nyt kuvan pintaan: paat leikkautuvat kuvan reunaan taitetummennoksin, kosketusvarjo, kaista noin neljanneksen leveampi',
   'Infosivun lahdeluettelo: kaikki Lisenssi epaselva -merkinnat korvattu tarkistetuilla lisensseilla (V-Dem, Yale BSC, Radio Browser, ElevenLabs)',
   'Fokuslaudalla nappulan alla vain tinaherra + varjo + yksi vuororengas — kaupungin laatta, syke ja varihehku pois alta (nimilappu ja Tutki-napautus sailyvat)',

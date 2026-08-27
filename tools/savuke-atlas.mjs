@@ -73,6 +73,15 @@
  *      jää tyhjäksi pergamentiksi, jos kuvaa ei ole ämpärissä.
  *  18. Pohjakerros on lähizoomissa DOMissa ja nimenomaan atlaslehtien
  *      ALLA: maalehden on peitettävä pohja omalla alueellaan.
+ *  19. Reunaviivaimet päivittyvät panoroinnin aikana lukematta
+ *      asettelua.
+ *  20. Pelaajan näkymässä pikkulehtiä ei ole lainkaan.
+ *  21. Maailmanäkymässä koko lauta ruudulla piirtää KAIKKI valtiot
+ *      pikkulehtinä (omistajan tilaus 27.8.2026) — kymmenkertaisesti
+ *      enemmän kuin atlaksen säännöt antaisivat — omassa ryhmässään
+ *      pohjan päällä ja tarkkojen lehtien alla.
+ *  22. Napin sammutus vie pikkulehdet DOMista: juuri irrotus vapauttaa
+ *      puretut kuvat.
  */
 
 import { createServer } from 'node:http';
@@ -308,6 +317,16 @@ vaadi('lähikuvassa naapureita ei ladata turhaan',
  * uloszoomauksen pohja on maan fokusikkuna (js/kartta.js
  * fokusRajaukset).
  */
+/*
+ * LAISKUUSLASKURI TALTEEN ENNEN MAAILMANÄKYMÄÄ. Kehittäjän
+ * maailmanäkymä hakee tarkoituksella KAIKKI 134 lehteä pikkukuvina
+ * (js/fokuskartta.js "MAAILMANÄKYMÄN PIKKULEHDET", oma väitteensä
+ * alempana), joten sen jälkeen pyyntölaskuri ei enää mittaa pelaajan
+ * polun laiskuutta. Tähän mennessä on ehditty avauslento, saapuminen
+ * Ateenaan ja ensimmäinen atlaksen täyttö — juuri se, mitä väite
+ * koskee.
+ */
+const pelaajanPyynnot = [...new Set(pyynnot)];
 await sivu.evaluate(() => {
   localStorage.setItem('matkakirja-kehittaja', '1');
   localStorage.setItem('matkakirja-kehittaja-maailma', '1');
@@ -350,8 +369,8 @@ vaadi('loitonnettaessa naapurilehdet piirtyvät atlakseen',
  * (js/fokuskartta.js jonossa) hakee saman joukon hieman eri
  * järjestyksessä, ja ele saattaa olla kokonaan uusia pyyntöjä vailla.
  */
-const haetut = [...new Set(pyynnot)];
-vaadi('laiska lataus: 132 lehdestä haettiin vain näkymän lehdet',
+const haetut = pelaajanPyynnot;
+vaadi('laiska lataus: 134 lehdestä haettiin vain näkymän lehdet',
   haetut.length > 0 && haetut.length <= 8, `haetut=${haetut.join(',')}`);
 await sivu.screenshot({ path: join(ULOS, 'savuke-atlas-loitonnettu.png') });
 
@@ -469,8 +488,19 @@ vaadi('lähizoomiin palatessa maalehdet palaavat ja yleislehti jää pohjaksi',
   lahi.leveys < 2340 && !lahi.paalla && lahi.pohja && lahi.yleis === 1
   && lahi.oma === 1 && lahi.maa === 'GRC',
   JSON.stringify(lahi));
+/*
+ * JÄRJESTYS EIKÄ VIERUSTA (28.8.2026). Väite luki ennen kolme luokkaa
+ * peräkkäin samasta merkkijonosta, mutta kerroksessa voi nyt olla
+ * niiden VÄLISSÄ kehittäjän maailmanäkymän pikkulehdet
+ * (.fokus-maailma, js/fokuskartta.js "MAAILMANÄKYMÄN PIKKULEHDET") —
+ * ne ovat pohjan päällä ja tarkkojen lehtien alla. Väitteen sisältö on
+ * yhä sama: pohja ennen atlasta ennen omaa lehteä.
+ */
+const paikka = (luokka) => lahi.jarjestys.split('|').indexOf(luokka);
 vaadi('pohjakerros on atlaslehtien ja oman lehden ALLA',
-  /fokus-yleislehti\|fokus-atlas\|fokus-lehti/.test(lahi.jarjestys),
+  paikka('fokus-yleislehti') >= 0
+  && paikka('fokus-yleislehti') < paikka('fokus-atlas')
+  && paikka('fokus-atlas') < paikka('fokus-lehti'),
   lahi.jarjestys);
 
 /* --- 18. ERIKOISPIIRIT (omistaja + päätoimittaja 28.8.2026) ---------
@@ -836,6 +866,119 @@ vaadi('kaupungin napautus hyppää sinne kehittäjätilassa',
   hyppy.jalkeen === hyppy.kohde, JSON.stringify(hyppy));
 
 /* ===================================================================
+ * 20–22. MAAILMANÄKYMÄSSÄ KAIKKI VALTIOT PIIRTYVÄT
+ * ===================================================================
+ *
+ * Omistajan iPad-kaappaus 27.8.2026: maailmannapin ollessa päällä
+ * kartalla oli maastoineen vain kourallinen valtioita (Ruotsi, Italia,
+ * Turkki) ja muu maailma oli pergamenttia. Syy oli se, että
+ * maailmanäkymä käytti yhä pelaajan atlaksen valintaa, jonka jokainen
+ * sääntö karsii nimenomaan kaukaa katsottaessa — ja koko lauta
+ * ruudulla on kaukozoomia, jossa maalehdet puretaan kokonaan pois.
+ *
+ * Korjaus on oma kerros omalla tarkkuudellaan (js/fokuskartta.js
+ * "MAAILMANÄKYMÄN PIKKULEHDET"): kaikki 134 lehteä pikkukuvina
+ * pohjan päälle ja tarkkojen lehtien alle.
+ *
+ * KOLME VÄITETTÄ:
+ *   20. Koko lauta ruudulla EI näytä pelaajan näkymässä yhtäkään
+ *       maalehteä (kaukozoomi purkaa ne — ennallaan).
+ *   21. Sama näkymä maailmannappi päällä piirtää maalehtiä
+ *       KYMMENKERTAISESTI enemmän, ja ne ovat omassa ryhmässään
+ *       pohjan päällä.
+ *   22. Napin sammutus vie ryhmän DOMista — juuri se vapauttaa
+ *       puretut kuvat.
+ *
+ * KOKO LAUTA on 12000 x 5399 yksikköä (js/packs/maailmankartta.js).
+ */
+const KOKO_LAUTA = {
+  x: 0, y: 0, w: 12000, h: 5399,
+};
+
+/** Odottaa, että pikkulehtien jono on lakannut kasvamasta. */
+async function odotaPikkulehdet(enintaanMs = 60000) {
+  const alku = Date.now();
+  let edellinen = -1;
+  let vakaita = 0;
+  while (Date.now() - alku < enintaanMs) {
+    // eslint-disable-next-line no-await-in-loop
+    const n = await sivu.evaluate(
+      () => document.querySelectorAll('.fokus-maailma image').length,
+    );
+    if (n === edellinen) vakaita += 1;
+    else { vakaita = 0; edellinen = n; }
+    if (vakaita >= 3 && n > 0) return n;
+    // eslint-disable-next-line no-await-in-loop
+    await sivu.waitForTimeout(700);
+  }
+  return edellinen;
+}
+
+const maailmanLehdet = () => sivu.evaluate(() => {
+  const kerros = document.querySelector('.fokuskartta');
+  const luokat = [...(kerros?.children ?? [])].map((e) => e.getAttribute('class'));
+  return {
+    leveys: Math.round(window.matkakirja.ui.nakyvaAlue()?.w ?? 0),
+    pikku: document.querySelectorAll('.fokus-maailma image').length,
+    maita: new Set([...document.querySelectorAll('.fokus-maailma image')]
+      .map((k) => k.getAttribute('data-maailma-maa'))).size,
+    tarkat: document.querySelectorAll('.fokus-atlas image, .fokus-lehti image').length,
+    yleis: document.querySelectorAll('.fokus-yleislehti image').length,
+    jarjestys: luokat.join('|'),
+  };
+});
+
+/*
+ * PELAAJAN LUKEMA MITATAAN SIELLÄ, MISSÄ PELAAJA VOI OLLA. Kameran
+ * uloszoomauksen pohja on maan fokusikkuna (js/kartta.js
+ * tarkistaFokusZoom), joten koko lautaa ei pelaajan säännöillä pääse
+ * katsomaan lainkaan — napin sammutus vetäisi kameran takaisin maahan
+ * kesken mittauksen. Vertailuluku on siis se, mitä kartalla on silloin
+ * kun peliä pelataan: nykyisen maan lehti ja atlaksen naapurit.
+ */
+await sivu.evaluate(() => {
+  localStorage.removeItem('matkakirja-kehittaja-maailma');
+  window.matkakirja.ui.paivitaKehittajaMaailma();
+});
+await sivu.waitForTimeout(2500);
+const pelaajanKoko = await maailmanLehdet();
+vaadi('pelaajan näkymässä pikkulehtiä ei ole lainkaan',
+  pelaajanKoko.pikku === 0 && pelaajanKoko.tarkat > 0,
+  JSON.stringify(pelaajanKoko));
+
+await sivu.evaluate(() => {
+  localStorage.setItem('matkakirja-kehittaja-maailma', '1');
+  window.matkakirja.ui.paivitaKehittajaMaailma();
+});
+await sivu.waitForTimeout(500);
+await nakymaan(KOKO_LAUTA);
+const piirretty = await odotaPikkulehdet();
+const maailmanKoko = await maailmanLehdet();
+vaadi('maailmanäkymässä piirtyy maalehtiä enemmän kuin normaalitilassa',
+  maailmanKoko.leveys > 8000
+  && maailmanKoko.pikku > pelaajanKoko.pikku + pelaajanKoko.tarkat
+  && maailmanKoko.pikku >= 100 && maailmanKoko.maita === maailmanKoko.pikku,
+  `pelaajalla ${pelaajanKoko.pikku + pelaajanKoko.tarkat}, maailmanäkymässä ${piirretty}`);
+vaadi('pikkulehdet ovat omassa ryhmässään pohjan päällä ja tarkkojen alla',
+  maailmanKoko.jarjestys.split('|').indexOf('fokus-yleislehti')
+    < maailmanKoko.jarjestys.split('|').indexOf('fokus-maailma')
+  && maailmanKoko.jarjestys.split('|').indexOf('fokus-maailma')
+    < maailmanKoko.jarjestys.split('|').indexOf('fokus-atlas'),
+  maailmanKoko.jarjestys);
+await sivu.screenshot({ path: join(ULOS, 'savuke-atlas-maailmanlehdet.png') });
+
+const sammutus = await sivu.evaluate(async () => {
+  document.getElementById('kehittaja-maailma-btn').click();
+  await new Promise((r) => setTimeout(r, 600));
+  return {
+    ryhmia: document.querySelectorAll('.fokus-maailma').length,
+    pikku: document.querySelectorAll('.fokus-maailma image').length,
+  };
+});
+vaadi('napin sammutus vie pikkulehdet DOMista (purettu kuva vapautuu)',
+  sammutus.ryhmia === 0 && sammutus.pikku === 0, JSON.stringify(sammutus));
+
+/* ===================================================================
  * 10–11. ALFATON PAKKAUS EI SAA JÄTTÄÄ MUSTAA (omistajan pelitesti
  *        26.8.2026, iPhone v1116)
  * ===================================================================
@@ -954,6 +1097,15 @@ yleislehtiPois = true;
 await sivu.evaluate(() => {
   localStorage.removeItem('matkakirja-kaynnistykset');
   localStorage.removeItem('matkakirja-atlas-turvatila');
+  /*
+   * MAAILMANÄKYMÄ TAKAISIN PÄÄLLE KAMERAA VARTEN. Väite mitataan 4200
+   * yksikön näkymässä, ja pelaajan säännöillä uloszoomauksen pohja on
+   * maan fokusikkuna (js/kartta.js tarkistaFokusZoom): ilman tätä
+   * riviä nakymaan() jäisi 470 yksikköön eikä kaukozoomia edes
+   * saavutettaisi. Nappi sammutettiin edellisessä osiossa
+   * (pikkulehtien vapautusväite).
+   */
+  localStorage.setItem('matkakirja-kehittaja-maailma', '1');
 });
 await sivu.reload({ waitUntil: 'load' });
 await sivu.waitForTimeout(2500);
