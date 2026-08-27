@@ -18062,7 +18062,52 @@ button.pollo-ehdotus {
   cursor: pointer;
 }
 
-button.pollo-ehdotus:hover { border-color: var(--pollo-korostus); color: var(--pollo-korostus); }
+/*
+ * ── OSOITETTU NAPPI EI SAA NIELLÄ TEKSTIÄÄN (omistajan bugi 27.8.2026:
+ * *"linkin väri muuttuu vääräksi osoitettaessa"*, kaappauksessa
+ * jatkokysymysnappi tummanruskeana ja teksti tuskin näkyvissä) ────────
+ *
+ * JUURISYY: paneelin napit ovat tavallisia <button>-elementtejä, ja
+ * tiedoston alun yleissääntö
+ *
+ *     button:hover:not(:disabled) { background: #43331f; }
+ *
+ * maalaa jokaisen napin taustan TUMMANRUSKEAKSI. Pöllöpaneelin omat
+ * hover-säännöt vaihtoivat vain TEKSTIN värin tummaan kultaan
+ * (--pollo-korostus, #7a5514) eivätkä koskeneet taustaan lainkaan.
+ * Lopputulos oli #7a5514 mustan ruskean #43331f päällä — kontrasti
+ * 1,6:1, eli teksti katosi juuri sinä hetkenä, jona pelaaja osoittaa
+ * nappia. Sama vika koski kolmea nappiperhettä: .pollo-ehdotus
+ * (avausruudun ehdotukset, valmiit kysymykset ja vastausten
+ * jatkokysymykset), .pollo-ehdota ja alarivin .pollo-nappula.
+ *
+ * SÄÄNTÖ TÄSTÄ ETEENPÄIN: paneelin napissa tausta ja teksti liikkuvat
+ * AINA yhdessä. Jos tausta tummuu, teksti vaalenee paperiin; jos
+ * tausta pysyy paperina, teksti pysyy musteena. Osoitettu jatkokysymys
+ * on siis mustetäplä paperilla — sama ele kuin pelin muissakin
+ * napeissa, mutta paneelin omalla paletilla ja luettavana.
+ *
+ * :focus-visible on mukana, jotta näppäimistöllä kulkeva näkee saman
+ * korostuksen kuin hiirellä osoittava, ja :active kertoo painalluksen.
+ * .actions-ketju on mukana samasta syystä kuin :disabled-säännössä
+ * yllä: kartan pergamenttinapeilla on tarkempi valitsin, joka muuten
+ * voittaisi tämän jos pöllö joskus palaa alanappiriviin.
+ */
+button.pollo-ehdotus:hover:not(:disabled),
+button.pollo-ehdotus:focus-visible,
+body[data-mode] .actions .pollo-paneeli button.pollo-ehdotus:hover:not(:disabled),
+body[data-mode] .actions .pollo-paneeli button.pollo-ehdotus:focus-visible {
+  border-color: var(--pollo-korostus);
+  background: var(--pollo-muste);
+  color: var(--pollo-paperi);
+}
+
+button.pollo-ehdotus:active:not(:disabled),
+body[data-mode] .actions .pollo-paneeli button.pollo-ehdotus:active:not(:disabled) {
+  background: var(--pollo-korostus);
+  color: var(--pollo-paperi);
+}
+
 button.pollo-ehdotus:disabled { opacity: 0.5; cursor: default; }
 
 .pollo-virta {
@@ -18226,7 +18271,20 @@ button.pollo-ehdota {
   cursor: pointer;
 }
 
-button.pollo-ehdota:hover { border-color: var(--pollo-korostus); }
+/*
+ * Sama juurisyy kuin jatkokysymysnapissa (ks. .pollo-ehdotus:hover):
+ * pelkkä kehyksen tummennus jätti yleissäännön tumman taustan voimaan.
+ * Pikkupilleri pysyy paperilla — se on kulman hiljainen tekstinappi
+ * eikä saa loimottaa tummana — ja saa hoverissa vain lämpimän sävyn
+ * sekä täyden musteen tekstiinsä.
+ */
+button.pollo-ehdota:hover,
+button.pollo-ehdota:focus-visible,
+body[data-mode] .actions .pollo-paneeli button.pollo-ehdota:hover {
+  border-color: var(--pollo-korostus);
+  background: rgba(122, 85, 20, 0.16);
+  color: var(--pollo-muste);
+}
 
 /*
  * ── VALMISKYSYMYKSET KESKUSTELUVIRRASSA (omistajan tilaus 18.8.2026:
@@ -18248,7 +18306,23 @@ button.pollo-ehdota:hover { border-color: var(--pollo-korostus); }
   margin: 0 0 0.6rem;
 }
 
-a.pollo-tekstilinkki:hover { background: rgba(122, 85, 20, 0.12); }
+/*
+ * Osoitettu artikkelilinkki TUMMUU SAMALLA KYNÄLLÄ eikä vaihda väriä.
+ * Aiemmin hover lisäsi vain lämpimän täplän tekstin alle ja jätti
+ * sävyn ennalleen, jolloin osoitus näkyi lähinnä taustan sameutumisena.
+ * #5a3d0d on sama kulta pari askelta tummempana (--pollo-korostus on
+ * #7a5514): linkki pysyy linkkinä, ei muutu leipätekstiksi, ja
+ * kontrasti paperilla nousee. Alleviivaus paksuuntuu, jotta ele näkyy
+ * myös ilman väriaistia. :focus-visible saa saman asun kuin hover.
+ */
+a.pollo-tekstilinkki:hover,
+a.pollo-tekstilinkki:focus-visible {
+  color: #5a3d0d;
+  background: rgba(122, 85, 20, 0.12);
+  text-decoration-thickness: 2px;
+}
+
+a.pollo-tekstilinkki:active { color: var(--pollo-muste); }
 
 /*
  * PÖLLÖLINKKI: [[avainkäsite]] keskellä vastausta (omistajan tilaus
@@ -18268,7 +18342,21 @@ a.pollo-kasitelinkki {
   cursor: pointer;
 }
 
-a.pollo-kasitelinkki:hover { color: var(--pollo-muste); background: rgba(107, 90, 69, 0.12); }
+/*
+ * Pöllölinkin hover tummeni aiemmin suoraan --pollo-muste-arvoon, joka
+ * on TÄSMÄLLEEN leipätekstin väri: osoitettu linkki näytti siis siltä
+ * kuin se olisi lakannut olemasta linkki. #4a3d2e on sama himmeä
+ * muste tummempana — ero leipätekstiin säilyy, kontrasti paranee.
+ * Pisteviiva paksuuntuu, jotta ele näkyy myös ilman väriaistia.
+ */
+a.pollo-kasitelinkki:hover,
+a.pollo-kasitelinkki:focus-visible {
+  color: #4a3d2e;
+  background: rgba(107, 90, 69, 0.12);
+  text-decoration-thickness: 2px;
+}
+
+a.pollo-kasitelinkki:active { color: var(--pollo-muste); }
 
 /* Katkennut striimi: yksi hienovarainen rivi vastauksen alla. Se ei ole
    pöllön puhetta vaan tilatieto, joten se on kursiivia ja himmeää. */
@@ -18465,7 +18553,24 @@ button.pollo-linkki {
   cursor: pointer;
 }
 
-button.pollo-linkki:hover { background: rgba(122, 85, 20, 0.12); }
+/*
+ * Katkoviivainen linkkinappi voitti yleissäännön jo ennestään (sama
+ * tarkkuus, myöhempi sijainti tiedostossa), joten sen tausta pysyi
+ * vaaleana. Tässä lisätään vain :focus-visible ja :active, jotta
+ * näppäimistökäyttäjä saa saman korostuksen — ja tausta kirjoitetaan
+ * näkyviin myös hoveriin, ettei sääntöjen järjestys ole se, mikä
+ * pitää napin luettavana.
+ */
+button.pollo-linkki:hover:not(:disabled),
+button.pollo-linkki:focus-visible {
+  background: rgba(122, 85, 20, 0.12);
+  color: var(--pollo-korostus);
+}
+
+button.pollo-linkki:active:not(:disabled) {
+  background: rgba(122, 85, 20, 0.22);
+  color: var(--pollo-muste);
+}
 
 /*
  * "Ei hereillä" -ilmoitus on paneelin ainoa sisältö ennen käyttöönottoa,
@@ -18539,7 +18644,22 @@ button.pollo-nappula {
 }
 
 button.pollo-nappula .viiva-ikoni svg { width: 1.15rem; height: 1.15rem; }
-button.pollo-nappula:hover:not(:disabled) { border-color: var(--pollo-korostus); }
+/*
+ * Sama juurisyy kolmannen kerran (ks. .pollo-ehdotus:hover): kehys
+ * tummeni, mutta yleissääntö maalasi taustan tummanruskeaksi ja
+ * kuvake jäi tummaksi tummalle. Alarivi pysyy paperilla — kuvakkeet
+ * piirtyvät currentColorilla, joten teksti- ja viivaväri seuraavat
+ * mukana. Päällä oleva kaiutin ja kuunteleva mikki ovat tarkoituksella
+ * täyteisiä; niiden omat säännöt ovat tämän alapuolella ja voittavat
+ * tämän myös osoitettuina.
+ */
+button.pollo-nappula:hover:not(:disabled),
+button.pollo-nappula:focus-visible,
+body[data-mode] .actions .pollo-paneeli button.pollo-nappula:hover:not(:disabled) {
+  border-color: var(--pollo-korostus);
+  background: var(--pollo-paperi-2);
+  color: var(--pollo-korostus);
+}
 button.pollo-nappula:disabled { opacity: 0.5; cursor: default; }
 
 /*
