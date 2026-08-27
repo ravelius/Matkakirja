@@ -205,12 +205,35 @@ export class BoardDie {
    * havainto 13.8.2026).
    */
   async roll(value, from, to, hooks = {}) {
-    const { onTick, onLand, onBounce, onSettle, reduced } = hooks;
     // Kesken jäänyt häivytys ei saa jäädä uuden heiton päälle.
     clearTimeout(this.haipymisAjastin);
     this.layer.classList.remove('noppa-haipyy');
     this.layer.hidden = false;
     const [faceX, faceY] = FACE_ROTATION[value] ?? [0, 0];
+
+    /*
+     * KOMPOSITORIVIHJE VAIN HEITON AJAKSI (omistajan pelitesti
+     * 27.8.2026: kartta katosi taustalta nappulan liikkuessa).
+     *
+     * Noppa asuu kartan siirtokuoressa kartan PÄÄLLÄ, ja pysyvä
+     * `will-change: transform` piti sen omalla kerroksellaan myös
+     * levossa — jolloin sen alle jäävä kartta jouduttiin nostamaan
+     * omaan kerrokseensa, ja iPhonella se jäi varaamatta (ks.
+     * css/styles.css .board-die.noppa-vierii). Vihje kytketään siis
+     * siinä hetkessä, jossa siitä on hyötyä, ja puretaan heti kun
+     * noppa on levossa.
+     */
+    this.root.classList.add('noppa-vierii');
+    try {
+      await this.vieri(value, from, to, hooks, faceX, faceY, hooks.reduced);
+    } finally {
+      this.root.classList.remove('noppa-vierii');
+    }
+  }
+
+  /** Heiton varsinainen ajo; kääre yllä hoitaa kompositorivihjeen. */
+  async vieri(value, from, to, hooks, faceX, faceY, reduced) {
+    const { onTick, onLand, onBounce, onSettle } = hooks;
 
     if (reduced) {
       this.rotation = { x: faceX - 8, y: faceY + 12, z: 0 };

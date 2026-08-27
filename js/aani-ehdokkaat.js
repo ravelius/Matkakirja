@@ -149,6 +149,15 @@ export const TYYPPI_EHDOKKAAT = {
     { url: 'https://archive.org/download/aporee_68991_80056/almaporeejochbergalm12uhr30.mp3#voima=0.5', nimi: 'Alppilaidun (Reit im Winkl, Baijeri) — sam auinger, CC BY-SA' },
     { url: 'https://cdn.freesound.org/previews/543/543449_3377875-lq.mp3#voima=0.22', nimi: 'Ulvova tuuli — Kostas17, CC BY' },
   ],
+  /*
+   * METSÄ ON MYÖS JALKAMATKAN ÄÄNI (#96). Maareittiä kuljettaessa soi
+   * matkan ajan tämän korin arpoma ääni (js/ui.js JALKAMATKAN_MAISEMA,
+   * paikkatunnus 'jalkamatka'), koska maareitti kulkee kaikenlaisen
+   * maaston läpi eikä ääni saa väittää maastosta mitään: tuuli puissa
+   * ja kaukaiset linnut käyvät yhtä hyvin Alpeille kuin Provenceen.
+   * Jos omistaja valitsee studiossa metsälle toiset äänet, myös
+   * jalkamatka vaihtuu niihin — se on tarkoitus.
+   */
   metsa: [
     { url: 'https://archive.org/download/aporee_40377_46111/rs12.mp3#voima=0.36', nimi: 'Linnut metsässä (Thuin) — Vincent Duseigne, CC BY' },
     { url: 'https://cdn.freesound.org/previews/579/579250_2977885-lq.mp3#voima=0.27', nimi: 'Tuuli puissa — Danjocross, CC0' },

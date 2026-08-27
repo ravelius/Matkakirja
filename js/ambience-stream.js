@@ -140,6 +140,25 @@ const HAIVYTYS_MS = 1800;
  * yhä liuku eikä kytkin — moottori ei pamahda päälle.
  */
 const LENNON_NOUSU_MS = 600;
+/*
+ * JALKAMATKA (omistajan tilaus #96: *"Taustalle pitää kehitellä sopiva
+ * äänimaisema siirtymän ajaksi."*).
+ *
+ * Kaksi omaa lukua, ja kummallakin sama peruste: SIIRTYMÄ ON LYHYT.
+ * Täysi kuuden askeleen jalkamatka kestää noin kolme sekuntia, joten
+ * tavallinen 1,8 sekunnin nousu olisi vasta puolivälissä, kun nappula
+ * jo laskeutuu perille — matkaääntä ei kuulisi matkan aikana lainkaan,
+ * vain sen jälkeen. 900 ms on yhä liuku eikä kytkin.
+ *
+ * TASO ON KEVYT (tilauksessa *"kevyt taustaääni"*). Matkaääni ei ole
+ * kohtaus kuten lennon kabiini vaan siirtymän tausta, ja sen päälle
+ * tulevat nappulan naksahdukset joka askeleella. Kerroin painaa sen
+ * selvästi kaupunkien maisemien alle, jotta saapuminen kuulostaa
+ * saapumiselta. Lopullinen lukema on kuulokokeen nuppi kuten
+ * etusivulla ja lennolla.
+ */
+const JALKAMATKAN_NOUSU_MS = 900;
+const JALKAMATKAN_VOIMA = 0.75;
 // Sama äänite alkaa joka kerta eri kohdasta, jottei paikka kuulosta
 // itseään toistavalta kun sinne palaa. Loppuun jätetään varaa, ettei
 // silmukka pyörähdy heti alkuun.
@@ -447,7 +466,8 @@ export function playPlaceAmbience(cityId, fallbackType, lauta, cityCountry = nul
   // aloituskohtansa puolesta, ja kabiini on jo kertaalleen kalibroitu
   // täydelle voimalleen.
   const paikanVoima = cityId === 'etusivu' ? ETUSIVUN_VOIMA
-    : (cityId === 'lentomatka' ? LENNON_VOIMA : 1);
+    : (cityId === 'lentomatka' ? LENNON_VOIMA
+      : (cityId === 'jalkamatka' ? JALKAMATKAN_VOIMA : 1));
   const oma = {
     cityId,
     url,
@@ -477,8 +497,10 @@ export function playPlaceAmbience(cityId, fallbackType, lauta, cityCountry = nul
   };
   nykyinen = oma;
   // Avauslento nousee muita nopeammin: sen ääni on kohtauksen alku eikä
-  // paikanvaihdoksen tausta (ks. LENNON_NOUSU_MS).
-  const nouse = cityId === 'lentomatka' ? LENNON_NOUSU_MS : HAIVYTYS_MS;
+  // paikanvaihdoksen tausta (ks. LENNON_NOUSU_MS). Jalkamatka nousee
+  // samasta syystä ripeästi: siirtymä on vain kolmisen sekuntia pitkä.
+  const nouse = cityId === 'lentomatka' ? LENNON_NOUSU_MS
+    : (cityId === 'jalkamatka' ? JALKAMATKAN_NOUSU_MS : HAIVYTYS_MS);
   oma.audio = luoSoitin(oma, { arvottuAlku: oma.arvoAlku, nouse });
 }
 

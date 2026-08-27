@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1194, teksti: 'Jalkamatka: hidas hyppy, saattokamera, korjaukset' },
   { v: 1193, teksti: 'Kuvatekstiremontti era 7: Adenista Varanasiin' },
   { v: 1192, teksti: 'Kuvatekstiremontti era 6: Tabrizista Sanaan' },
   { v: 1191, teksti: 'Kuvatekstiremontti era 5: Dohasta Riadiin' },
