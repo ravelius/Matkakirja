@@ -1444,6 +1444,14 @@ function kysyKohteesta(ui, kysymys) {
  * tyylimuutoksessa. Kuvaolio kantaa nauhan tekstin kentässä `nauha`,
  * joten piirtäjien ei tarvitse tietää ihmeistä mitään: nauha on kuvan
  * ominaisuus siinä missä selitekin.
+ *
+ * KOLMAS IKKUNA 27.8.2026 ILTA (omistaja, kaappaus nähtävyysikkunasta:
+ * *"täällä pitäisi olla myöskin se ihme nähtävillä"*). Kaupunkikartan
+ * nähtävyysjuttu (js/nahtavyydet.js) näyttää samat kaksi esitystapaa
+ * samoilla säännöillä, ja siksi nauha, nappi ja ihmekuvan haku ovat
+ * tästä lohkosta VIENTILISTALLA (matkakirjanIhme, piirraIhmenauha,
+ * piirraIhmenappi). Ihmettä ei kopioida nähtävyysaineistoon: se pysyy
+ * fokuskohteen kenttänä, ja juttu hakee sen nimellä.
  * =================================================================== */
 
 /** Nauhan teksti — yksi totuus kortissa ja suurennoksessa. */
@@ -1507,8 +1515,14 @@ function kohteenIhmekuva(kohde) {
  * muuttujien arvoilla; myös väriryhmä on pelkkä luokka
  * (KOHDE_IHMENAUHAN_SAVY).
  */
-function piirraIhmenauha(isanta, teksti) {
+export function piirraIhmenauha(isanta, teksti) {
   if (!teksti) return null;
+  // Nauhan geometria on css/fokuskohteet.css:ssä, joka ladataan
+  // laiskasti. Kortin polulla tyyli on jo paikallaan (avaaFokuskohde),
+  // mutta nähtävyysikkuna piirtää nauhan ilman fokusmoodia — sieltä
+  // tullessa lataus on tässä ainoa tilaisuus. Kutsu on tyhjä työ, jos
+  // tyyli on jo sivulla.
+  lataaKohdeTyyli();
   const nauha = html('span', 'fokuskohde-ihmenauha');
   if (KOHDE_IHMENAUHAN_SAVY) nauha.classList.add(KOHDE_IHMENAUHAN_SAVY);
   nauha.setAttribute('aria-hidden', 'true');
@@ -1530,14 +1544,24 @@ function piirraIhmenauha(isanta, teksti) {
 }
 
 /**
- * "Koe ihme" -nappi, jos kohde on YHÄ OLEMASSA ja sillä on ihmekuva.
- * Paikan valitsee kutsuja (piirraKohdeKuvat: ensimmäisen kuvan alle).
- * Nappi kantaa saman tähden kuin kadonneiden kohteiden karttamerkki:
- * sama lupaus, sama merkki.
+ * "Koe ihme" -nappi tähtineen. Nappi kantaa saman tähden kuin
+ * kadonneiden kohteiden karttamerkki: sama lupaus, sama merkki.
+ *
+ * AVAUS TULEE KUTSUJALTA (jako 27.8.2026 ilta, kun ihme vietiin myös
+ * nähtävyysikkunaan): kartan tietoruudussa suurennos on kartan päällä
+ * oleva `.fokuskohde-zoom`, mutta nähtävyysikkuna on modaali <dialog>
+ * eli selaimen ylimmässä kerroksessa — bodyyn liitetty suurennos jäisi
+ * sen TAAKSE (js/ui.js suurennosIsanta). Nappi on siis sama komponentti
+ * molemmissa, mutta katselin on se, joka kussakin ikkunassa toimii.
+ *
+ * @param {Element} sisalto mihin nappi liitetään
+ * @param {string} teksti napin teksti
+ * @param {(nappi: Element) => void} avaa mitä napautus tekee; saa napin
+ *   itsensä, jotta suurennos voi kasvaa juuri siitä kohdasta ruutua
+ * @returns {Element} nappi, jotta kutsuja voi siirtää sen paikalleen
  */
-function piirraIhmenappi(ui, sisalto, kohde) {
-  const kuva = kohteenIhmekuva(kohde);
-  if (!kuva || kohde.ihme.kadonnut) return;
+export function piirraIhmenappi(sisalto, teksti, avaa) {
+  lataaKohdeTyyli();
   const nappi = html('button', 'fokuskohde-ihmenappi');
   nappi.type = 'button';
   const tahti = el('svg', {
@@ -1546,12 +1570,95 @@ function piirraIhmenappi(ui, sisalto, kohde) {
     'aria-hidden': 'true',
   }, nappi);
   piirraNostosymboli(el('g', {}, tahti), 'ihme');
-  nappi.appendChild(document.createTextNode(kohde.ihme.nappi ?? 'Koe ihme'));
+  nappi.appendChild(document.createTextNode(teksti));
   nappi.addEventListener('click', (tapahtuma) => {
     tapahtuma.stopPropagation();
-    avaaKohdeSuurennos(ui, kuva, () => nappi);
+    avaa(nappi);
   });
   sisalto.appendChild(nappi);
+  return nappi;
+}
+
+/**
+ * Kortin oma "Koe ihme" -nappi, jos kohde on YHÄ OLEMASSA ja sillä on
+ * ihmekuva. Paikan valitsee kutsuja (piirraKohdeKuvat: ensimmäisen
+ * kuvan alle).
+ */
+function piirraKortinIhmenappi(ui, sisalto, kohde) {
+  const kuva = kohteenIhmekuva(kohde);
+  if (!kuva || kohde.ihme.kadonnut) return;
+  piirraIhmenappi(sisalto, kohde.ihme.nappi ?? 'Koe ihme',
+    (nappi) => avaaKohdeSuurennos(ui, kuva, () => nappi));
+}
+
+/* ---------- IHME MYÖS NÄHTÄVYYSIKKUNAAN (omistaja 27.8.2026 ilta) ----
+ *
+ * *"täällä pitäisi olla myöskin se ihme nähtävillä"* — kaappaus
+ * nähtävyysikkunan kohdenäkymästä (KOHDE 1 · Antiikin agora). Ihme oli
+ * siihen asti vain fokusmoodin kartan tietoruudussa, vaikka sama paikka
+ * on kaupunkikartalla oma juttunsa (js/nahtavyydet.js avaaNahtavyys).
+ *
+ * KUVA HAETAAN NIMELLÄ, EI KOPIOIDA. Ihme on ja pysyy fokuskohteen
+ * kenttänä (js/packs/fokuskohteet-*.js): yksi kuva, yksi lähde, yksi
+ * totuus. Nähtävyysjuttu ei siis saa omaa `ihme`-kenttää, vaan
+ * nähtävyyden nimi katsotaan tästä taulusta — kun ihmeitä lisätään
+ * pakettitiedostoihin, ne ilmestyvät kumpaankin ikkunaan itsestään.
+ *
+ * NIMIVASTAAVUUDET (KOHDE_IHMEEN_NIMET) ovat niitä harvoja paikkoja,
+ * joissa kaupunkikartta ja fokuskartta kutsuvat SAMAA kohdetta eri
+ * nimellä. Lista on tarkoituksella lyhyt ja tarkistettu pareittain;
+ * kaikki muut osuvat suoraan nimellä.
+ */
+
+/** Kaupunkikartan nimi → fokuskohteen nimi, kun ne eroavat. */
+const KOHDE_IHMEEN_NIMET = {
+  // Ateena: kaupunkikartalla suomeksi, fokuskartalla antiikin nimellä.
+  'Zeuksen temppeli': 'Olympieion',
+  // Lontoo: sama katedraali, suomennettu vs. englantilainen asu.
+  'Pyhän Paavalin katedraali': 'St Paulin katedraali',
+  // Peking: Yuanmingyuan = Vanha kesäpalatsi (poltettu 1860).
+  'Vanha kesäpalatsi': 'Yuanmingyuan',
+  // Luxor: sama Karnakin pylvässali, kaupunkikartalla "suuri".
+  'Karnakin suuri pylvässali': 'Karnakin pylvässali',
+};
+
+/** Vertailuasu: isot/pienet kirjaimet ja ylimääräiset välit pois. */
+function ihmeAvain(nimi) {
+  return String(nimi ?? '').trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
+/** Nimi → kohde, jolla on ihme. Rakennetaan kerran, ensimmäisellä haulla. */
+let KOHDE_IHMEHAKU = null;
+
+function ihmehaku() {
+  if (KOHDE_IHMEHAKU) return KOHDE_IHMEHAKU;
+  KOHDE_IHMEHAKU = new Map();
+  for (const lista of Object.values(KOHDE_MAAT)) {
+    for (const kohde of lista) {
+      if (kohde?.ihme?.osoite) KOHDE_IHMEHAKU.set(ihmeAvain(kohde.nimi), kohde);
+    }
+  }
+  return KOHDE_IHMEHAKU;
+}
+
+/**
+ * Nimetyn paikan Matkakirjan ihme, tai null jos sillä ei ole sellaista.
+ *
+ * Palautettu olio on kuvalistan kanssa samaa muotoa (`osoite`, `selite`,
+ * `lahde`, `nauha`) ja kertoo lisäksi, kumpi esitystapa kohteelle
+ * kuuluu: `kadonnut` (kuva on kuvasarjan ensimmäinen) vai nappi
+ * (`nappi`-teksti, kuva odottaa suurennoksessa).
+ */
+export function matkakirjanIhme(nimi) {
+  const haettu = KOHDE_IHMEEN_NIMET[String(nimi ?? '').trim()] ?? nimi;
+  const kohde = ihmehaku().get(ihmeAvain(haettu));
+  const kuva = kohteenIhmekuva(kohde);
+  if (!kuva) return null;
+  return {
+    ...kuva,
+    kadonnut: Boolean(kohde.ihme.kadonnut),
+    nappi: kohde.ihme.nappi ?? 'Koe ihme',
+  };
 }
 
 function piirraKohdeKuvat(ui, sisalto, kohde) {
@@ -1576,9 +1683,9 @@ function piirraKohdeKuvat(ui, sisalto, kohde) {
    */
   lista.forEach((kuva, i) => {
     piirraKohdeKuva(ui, sisalto, kuva);
-    if (i === 0) piirraIhmenappi(ui, sisalto, kohde);
+    if (i === 0) piirraKortinIhmenappi(ui, sisalto, kohde);
   });
-  if (!lista.length) piirraIhmenappi(ui, sisalto, kohde);
+  if (!lista.length) piirraKortinIhmenappi(ui, sisalto, kohde);
 }
 
 /*
