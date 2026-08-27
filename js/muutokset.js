@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1231, teksti: 'Livian paneeli korkeammaksi' },
   { v: 1230, teksti: 'Ihmenauha kahden kaistan malliksi' },
   { v: 1229, teksti: 'Livian lisays faktavastausten peraan' },
   { v: 1228, teksti: 'Aarrekysymysten vastaukset lehtiin' },
