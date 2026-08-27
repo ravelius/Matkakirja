@@ -370,6 +370,9 @@ export const FOKUSMAAT = {
       Tisa: 'Tisza',
       Drau: 'Dráva',
     },
+  },
+
+  /*
    * KROATIA — TOINEN KURATOITU LEHTI, JA ENSIMMÄINEN JOKA SYNTYY
    * KLIKATTAVUUSLINJA EDELLÄ.
    *
@@ -532,6 +535,150 @@ export const FOKUSMAAT = {
      * (js/packs/fokuskohteet-hrv.js), ja niiden pisteet on laskettu
      * samasta aineistosta kuin uomat piirretään.
      */
+  },
+
+  /*
+   * SAKSA — KOLMAS KURATOITU LEHTI SAMANA PÄIVÄNÄ, JA SEKIN SYNTYY
+   * SUORAAN KLIKATTAVUUSLINJAN MUKAISENA
+   *
+   * Kreikka joutui luopumaan poltetuista nimistä jälkikäteen, laji
+   * kerrallaan (ks. GRC.poltetutNimet yllä): ensin vuoret ja meret,
+   * sitten joet, ja joka kerta pudonneet nimet piti palauttaa omina
+   * fokuskohteinaan. Saksan lehti tehdään heti perille asti —
+   * KUVAAN EI POLTETA YHTÄKÄÄN NIMEÄ, jota ei voi napauttaa.
+   *
+   * Omistajan sitova linjaus (Raamattu, KARTTAMERKIT MINIMALISTISIKSI):
+   * *"Nimipoltto poistetaan lehdistä joilla kohteet hoitavat
+   * nimeämisen (GRC ensimmäinen); pudonneet nimet palautetaan
+   * kohteina, ei polttoa palauttamalla."* Saksa on toinen.
+   *
+   * KÄYTÄNNÖSSÄ SE TARKOITTAA NELJÄÄ RATKAISUA:
+   *   1. `poltetutNimet` on kaikilta kolmelta lajilta pois — meret,
+   *      vuoret ja joet nimeää peli kohdemerkkien nimiöillä
+   *      (js/packs/fokuskohteet-deu.js).
+   *   2. `kaupungit` on TYHJÄ. Kreikan neljä kaupunkinimeä ovat
+   *      kuvassa, ja siksi peli joutuu laskemaan niille erikseen
+   *      näkymättömän osuma-alueen (js/fokuskohteet.js
+   *      kaupunginNimiLaatikko) ja vaientamaan oman nimiönsä. Saksassa
+   *      kaupungit ovat pelkkiä fokuskohteita: nimi tulee nimiöstä,
+   *      napautus osuu merkkiin, eikä FOKUS_LISANIMET-tauluun tarvita
+   *      Saksaa lainkaan.
+   *   3. `naapurit` on tyhjä kuten yleisellä reitillä. Jatkuvassa
+   *      pinnassa naapurilla on jo oma maastonsa, ja maan nimi
+   *      ulapan yli olisi juuri sellainen poltettu nimi, jota ei voi
+   *      napauttaa.
+   *   4. `vuoret` JÄÄ — mutta vain kolmiona ja korkeuslukemana, koska
+   *      nimeäminen on pois päältä. Kolmio kertoo missä vuori on
+   *      silloinkin kun kohdemerkit eivät ole päällä, ja "2962 m"
+   *      täydentää nimiötä toistamatta sitä (piirto.js kohta 8e).
+   *
+   * VESILEIMA ON AINOA POIKKEUS, ja se on sama poikkeus kuin
+   * Kreikassa: DEUTSCHLAND ei ole paikannimi vaan paperin oma
+   * vesileima, eikä peli tarjoa siitä korttia sen paremmin kuin
+   * ΕΛΛΑΣ:sta. Se on aseteltu Hessenin ylängölle, jossa lähin
+   * kohdemerkki (Brocken, Wartburg, Köln) on toista astetta kaukana.
+   *
+   * IKKUNA. Leveysasteet 46,6..55,7 ovat koko maa reunavaroineen:
+   * etelässä Zugspitzen harjanne (47,27) ja pohjoisessa Sylt ja
+   * Flensburgin vuono (55,07). Pituusasteita ei anneta, vaan ne
+   * seuraavat kuvasuhteesta laudan Millerin lieriössä — 1,25 antaa
+   * keskimeridiaanilta 10,45 välin 2,91..17,99, eli maan molemmin
+   * puolin noin kolme astetta jatkuvaa pintaa: lännessä Alankomaat ja
+   * Belgia, idässä Puolan länsiosa, etelässä Alpit ja pohjoisessa
+   * Tanska. Berliini (13,4) jää reilusti ikkunan sisään eikä lähelle
+   * reunaa, jotta kaupungin oma fokusajo ei näytä kuvan laitaa.
+   *
+   * MIKSI 1,25 EIKÄ KREIKAN 1,6: Saksa on pystysuuntainen maa (oma
+   * laatikko 306 x 344 lautayksikköä eli kuvasuhde 0,89), ja 1,6
+   * venyttäisi ikkunan Pariisista Varsovaan — maa jäisi lehden
+   * keskelle nauhaksi. 1,25 on kompromissi, joka pitää maan lehden
+   * kokoisena mutta antaa merten nimiöille ulappaa. Leveällä
+   * vaakaruudulla kuvan reuna häivytetään läpinäkyväksi (piirto.js
+   * REUNAHÄIVYTYS) kuten yleisen reitin 93 muulla maalla.
+   * ================================================================ */
+  DEU: {
+    ikkuna: {
+      lonKeski: 10.45, lat0: 46.6, lat1: 55.7, kuvasuhde: 1.25,
+    },
+    vuoto: 0.15,
+    jatkuva: true,
+    otsikko: 'SAKSA',
+    alaotsikko: 'isoisän matkakirjan mukaan · 1873',
+
+    /* Maan oma nimi saksaksi, haalea vesileima Hessenin ylängölle. */
+    vesileima: {
+      teksti: 'DEUTSCHLAND', lon: 9.3, lat: 51.5, koko: 22, vali: 7,
+    },
+
+    /* Ks. ratkaisu 3 yllä: jatkuva pinta, ei naapurien nimiä. */
+    naapurit: [],
+
+    /*
+     * Vedet jatkuvat rajan yli kuten yleisellä reitillä: Rein tulee
+     * Sveitsistä ja jatkuu Alankomaihin, Tonava lähtee Schwarzwaldista
+     * ja jatkuu Itävaltaan. Katkaisu rajaan olisi juuri se sauma,
+     * jonka takia rajaviivat lehdiltä poistettiin.
+     */
+    jatkuvatVedet: true,
+
+    /* Ks. ratkaisu 1 yllä — kaikki nimeäminen on pelin kohdemerkeillä. */
+    poltetutNimet: { meret: false, vuoret: false, joet: false },
+
+    /*
+     * MERTEN NIMET JÄÄVÄT TÄNNE VAIKKA NIITÄ EI POLTETA, samasta
+     * syystä kuin Kreikan `jokinimet`: tämä on ainoa paikka, joka
+     * kertoo missä asussa ja missä kohtaa ulappaa Saksan lehti nämä
+     * kaksi merta nimeäisi, jos kytkin joskus käännetään. Pelin omat
+     * kohteet (`itameri`, `pohjanmeri`) ovat täsmälleen näissä
+     * pisteissä.
+     */
+    meret: [
+      { nimi: 'POHJANMERI', lon: 6.4, lat: 54.4, kulma: 0, koko: 15 },
+      { nimi: 'ITÄMERI', lon: 12.6, lat: 54.9, kulma: 0, koko: 15 },
+    ],
+
+    /*
+     * Vuoret: hachure-kolmio ja korkeus metreinä, EI nimeä (ratkaisu 4
+     * yllä). Viisi huippua on Saksan selkäranka pohjoisesta etelään:
+     * Brocken on Harzin ja koko Pohjois-Saksan korkein, Fichtelberg
+     * Ore-vuorten, Großer Arber Baijerin metsän, Feldberg
+     * Schwarzwaldin ja Zugspitze koko maan. Jokaisella on oma
+     * fokuskohde samoissa koordinaateissa.
+     */
+    vuoret: [
+      { nimi: 'Zugspitze', lon: 10.9853, lat: 47.4211, m: 2962, iso: true },
+      { nimi: 'Watzmann', lon: 12.9231, lat: 47.5553, m: 2713 },
+      { nimi: 'Feldberg', lon: 8.0047, lat: 47.8739, m: 1494 },
+      { nimi: 'Großer Arber', lon: 13.1361, lat: 49.1131, m: 1456 },
+      { nimi: 'Brocken', lon: 10.6156, lat: 51.7994, m: 1141 },
+    ],
+
+    /* Ks. ratkaisu 2 yllä: kaupunkien nimet tulevat pelistä. */
+    kaupungit: [],
+
+    /*
+     * Aineiston jokien nimet suomalaisessa asussaan. SAKSAN LEHDELLE
+     * NIITÄ EI POLTETA (`poltetutNimet.joet`) — taulu on tässä samasta
+     * syystä kuin Kreikassa: se on ainoa silta Natural Earthin
+     * saksan- ja englanninkielisten uomanimien ja pelin suomalaisten
+     * nimien välillä, ja jos jokin toinen lauta joskus tarvitsee
+     * poltetut nimet takaisin, kytkin riittää. Rein esiintyy
+     * aineistossa kolmella kielellä (Rhein / Rhine / Rhin) ja Tonava
+     * kahdella (Donau / Danube), koska uoma on pilkottu maittain.
+     */
+    jokinimet: {
+      Rhein: 'Rein',
+      Rhine: 'Rein',
+      Rhin: 'Rein',
+      Elbe: 'Elbe',
+      Donau: 'Tonava',
+      Danube: 'Tonava',
+      Oder: 'Oder',
+      Weser: 'Weser',
+      Spree: 'Spree',
+      Main: 'Main',
+      Mosel: 'Mosel',
+    },
   },
 
   /* ================================================================

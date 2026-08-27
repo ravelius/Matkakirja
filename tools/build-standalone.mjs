@@ -108,6 +108,7 @@ const MODULES = [
   // Kroatia 27.8.2026: kuratoitu fokuslehti ja sen karttakohteet.
   // Ei fokusvirtaa, joten paririviä ei ole.
   'js/packs/fokuskohteet-hrv.js',
+  'js/packs/fokuskohteet-deu.js',
   'js/packs/fokusvirrat.js',
   'js/packs/uutislahteet.js',
   // uutiset vasta lähteidensä jälkeen (tuo uutislahteet.js:n).

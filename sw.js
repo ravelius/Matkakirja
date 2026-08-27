@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1240';
+const CACHE = 'matkakirja-2026-08-09.1241';
 const SHELL = [
   './',
   './index.html',
@@ -211,6 +211,8 @@ const SHELL = [
   // yhdeksäntoista karttakohdetta. Omaa fokusvirtaa ei vielä ole —
   // Dubrovnikin virta tulee omana työnään.
   './js/packs/fokuskohteet-hrv.js',
+  // Saksa 27.8.2026: Berliinin lehti ja sen koko nimistö.
+  './js/packs/fokuskohteet-deu.js',
   './js/packs/paivan-kuvat.js',
   './js/packs/uutislahteet.js',
   './js/packs/pollo-asetukset.js',

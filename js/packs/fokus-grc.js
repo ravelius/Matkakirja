@@ -162,10 +162,17 @@ export const FOKUS_POHJAT = {
     rajaus: { x: 6195.3, y: 1318.12, w: 306.51, h: 159.89 },
     tiedosto: 'CZE.webp',
   },
+  /*
+   * SAKSA ON KREIKAN JÄLKEEN TOINEN KURATOITU LEHTI (27.8.2026), ja
+   * siksi sen luvut ovat muuttuneet kertaalleen: yleisen reitin ikkuna
+   * oli maan oma muoto marginaaleineen (kuvasuhde 0,89), kuratoitu on
+   * 1,25 ja keskitetty niin, että Berliini jää reilusti sisään.
+   * Perustelut ovat tools/fokuskartta/maat.mjs FOKUSMAAT.DEU.
+   */
   DEU: {
     lauta: 'maailmankartta',
-    bbox: { x: 5693.7, y: 1026.75, w: 975.08, h: 609.42 },
-    rajaus: { x: 5973.4, y: 1097.06, w: 415.69, h: 468.79 },
+    bbox: { x: 5854.95, y: 1072.88, w: 653.43, h: 522.75 },
+    rajaus: { x: 5930.35, y: 1133.2, w: 502.64, h: 402.11 },
     tiedosto: 'DEU.webp',
   },
   DNK: {
@@ -1721,6 +1728,18 @@ export const FOKUS_LISANIMET = {
       // 17,6504 E / 47,6875 N
       { nimi: 'Győr', x: 6421.7, y: 1489.5, dx: -10, dy: -8, ank: 'end' },
     ],
+  },
+
+  /*
+   * SAKSA (27.8.2026): lehteen ei ole poltettu yhtäkään nimeä
+   * (maat.mjs DEU: kaupungit, meret, vuoret ja joet kaikki pois),
+   * joten taulussa on tyhjä lista. Rivi on silti pakollinen:
+   * tests/fokusnimet.test.mjs vaatii jokaiselta kohdemaalta
+   * nimenomaisen kirjauksen, jotta tyhjyys on päätös eikä unohdus.
+   */
+  DEU: {
+    lauta: 'maailmankartta',
+    kaupungit: [],
   },
 
   /*
