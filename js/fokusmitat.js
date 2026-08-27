@@ -1691,8 +1691,10 @@ function paivitaTaulunPohja(ui) {
  * — sama kohta kuin maastonimillä ja fokusnimillä). Viimeinen on se,
  * joka pitää mittajanan ajan tasalla: se ei siis päivity joka
  * kehyksessä vaan zoomin ja panoroinnin PÄÄTTEEKSI.
+ *
+ * YKSI MITTAUS TEHTÄVÄÄ KOHTI (ks. paivitaFokusmitat alempana).
  */
-export function paivitaFokusmitat(ui) {
+function ajaFokusmitat(ui) {
   if (!ui.mapPane) return;
   const pohja = ui.fokusPohjaBbox ?? null;
   const iso = pohja ? ui.fokuskarttaAvain : null;
@@ -1758,8 +1760,47 @@ export function paivitaFokusmitat(ui) {
   ui.fokusJana.dataset.km = String(jana.km);
 }
 
+/**
+ * Mittaus AJETAAN KERRAN TEHTÄVÄÄ KOHTI, ei kerran kutsua kohti.
+ *
+ * MIKSI (mitattu 28.8.2026, saapuminen Ateenasta Sofiaan, 4x kuristus).
+ * Yksi piirto kutsuu tätä kolmesta paikasta (paivitaFokusPohja,
+ * paivitaFokusKerros, paivitaMaastonimet), ja saapumisessa ne osuvat
+ * samaan tehtävään — päälle vielä viivainvahdin oma mittaus, kun kamera
+ * kirjoittaa laudan viewBoxin. Jokainen kierros lukee asettelua
+ * (mittaaPerusta, kalusteLaatikot, paivitaNappipaikka, laskeMittajana)
+ * ja jokaisen VÄLISSÄ kirjoitetaan DOMiin, joten selain joutui
+ * laskemaan tyylit ja asettelun uudelleen joka kerta: jäljityksessä
+ * yhdessä saapumistehtävässä 27 kertaa UpdateLayoutTree (434 ms) ja 23
+ * kertaa Layout. Se on klassinen asettelupiiska (layout thrashing).
+ *
+ * MIKROTEHTÄVÄ ON OIKEA HETKI. Se ajetaan ennen seuraavaa piirtoa,
+ * joten pelaaja ei näe välitilaa — mutta vasta kun kaikki saman
+ * tehtävän DOM-kirjoitukset on tehty, joten mitta luetaan kerran ja
+ * tuoreesta asettelusta. Kaikki kolme kutsupaikkaa saavat siis oman
+ * työnsä tehdyksi yhdellä asettelunlaskennalla.
+ *
+ * TULOS ON SAMA KUIN ENNEN. Mittaus on puhtaasti tahdistava: se lukee
+ * ui:n nykytilan (fokusPohjaBbox, fokuskarttaAvain) eikä kutsun
+ * argumentteja, joten yksi ajo tehtävän lopussa antaa täsmälleen sen
+ * lopputuloksen, jonka viimeinen kutsu olisi antanut.
+ */
+export function paivitaFokusmitat(ui) {
+  if (!ui || ui.fokusMitatJonossa) return;
+  ui.fokusMitatJonossa = true;
+  Promise.resolve().then(() => {
+    if (!ui.fokusMitatJonossa) return;
+    ui.fokusMitatJonossa = false;
+    if (ui.dead) return;
+    ajaFokusmitat(ui);
+  });
+}
+
 /** Laudan vaihto tai UI:n purku: elementit ja tila pois. */
 export function nollaaFokusmitat(ui) {
+  // Jonossa oleva mittaus rakentaisi juuri puretun säiliön uudelleen
+  // (ks. paivitaFokusmitat): lippu pois, jolloin mikrotehtävä palaa tyhjin.
+  ui.fokusMitatJonossa = false;
   avaaMaataulu(ui, false);
   puraViivainVahti(ui.fokusViivainVahti);
   ui.fokusViivainVahti = null;

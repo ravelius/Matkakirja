@@ -487,6 +487,156 @@ async function bittikartasta(blob, mitat, savy) {
   }
 }
 
+/*
+ * ============ PURKU POIS PÄÄSÄIKEELTÄ — OMA TYÖNTEKIJÄ ==============
+ *
+ * OMISTAJAN LAITEPALAUTE 28.8.2026: *"saapuessa uuteen maahan peli
+ * TÖKKÄÄ PAHASTI kun se lataa uuden maan karttalehden."*
+ *
+ * MITATTU (Chromium, 4x CPU-kuristus, iPadin ruutu, oikeat 6400 x 4003
+ * webp-lehdet, tools ks. scratchpad/koe-purku.mjs):
+ *
+ *   createImageBitmap(blob, { resizeQuality: 'high' })   pisin kehys  900 ms
+ *   koko putki pääsäikeellä (purku + drawImage + pakkaus) ...... 1200 ms
+ *   TÄSMÄLLEEN SAMA PUTKI TYÖNTEKIJÄSSÄ ...........................33 ms
+ *
+ * Kokonaiskesto on molemmissa sama (~2,4 s): työ ei vähene, se vain
+ * tehdään muualla. Ratkaiseva luku on PISIN KEHYS — pääsäie oli
+ * kokonaisen sekunnin jumissa, ja juuri se on se tökkiminen, jonka
+ * pelaaja näkee. Saapumisjäljityksessä lohkoja oli kaksi peräkkäin
+ * (uusi maa ja atlakseen palaava vanha maa): 1217 ms ja 1117 ms.
+ *
+ * MIKSI RESIZE ON SE KALLIS OSA. Sama mittaus ilman `resizeWidth`ia:
+ * purku 418 ms ja pisin kehys 17 ms. Selain purkaa webpin taustalla,
+ * mutta korkealaatuinen alasotanta 25,6 megapikselistä tehdään
+ * pääsäikeessä. Ilman pienennystä ei kuitenkaan pärjätä (ks.
+ * "LEHTI PIENENNETÄÄN JO PURUSSA"), joten pienennys siirretään
+ * kokonaan pois pääsäikeeltä sen sijaan että se poistettaisiin.
+ *
+ * TYÖNTEKIJÄ ON BLOB-OSOITTEESSA EIKÄ OMASSA TIEDOSTOSSAAN, koska
+ * julkaisu rakentaa pelistä yhden tiedoston version (tools/
+ * build-standalone.mjs): erillinen `js/lehtityontekija.js` katoaisi
+ * siitä. Lähde on tavallinen merkkijono ja kulkee siis mukana.
+ *
+ * VARAREITTI ON ENNALLAAN. Jos Worker tai OffscreenCanvas puuttuu,
+ * työntekijä ei vastaa tai purku kaatuu siellä, palataan täsmälleen
+ * siihen pääsäiepolkuun, joka oli ennen tätä muutosta (bittikartasta →
+ * canvasille). Puuttuva työntekijä ei siis muuta mitään muuta kuin
+ * sujuvuutta.
+ */
+const TYONTEKIJAN_LAHDE = `
+self.onmessage = async (viesti) => {
+  const d = viesti.data || {};
+  let bittikartta = null;
+  try {
+    bittikartta = await createImageBitmap(d.blob, {
+      resizeWidth: d.w, resizeHeight: d.h, resizeQuality: 'high',
+    });
+    const canvas = new OffscreenCanvas(d.w, d.h);
+    const piirto = canvas.getContext('2d');
+    if (!piirto) throw new Error('ei 2d');
+    if (d.savy) { piirto.fillStyle = d.savy; piirto.fillRect(0, 0, d.w, d.h); }
+    piirto.drawImage(bittikartta, 0, 0, d.w, d.h);
+    bittikartta.close();
+    bittikartta = null;
+    const ulos = await canvas.convertToBlob({ type: d.tyyppi, quality: d.laatu });
+    canvas.width = 1; canvas.height = 1;
+    self.postMessage({ id: d.id, blob: ulos || null });
+  } catch (virhe) {
+    try { if (bittikartta) bittikartta.close(); } catch (e) { /* ohi */ }
+    self.postMessage({ id: d.id, blob: null });
+  }
+};
+`;
+
+/** Työntekijä: Worker, tai 'ei' kun sitä ei ole tai se kaatui. */
+let purkuTyontekija = null;
+/** Kesken olevat työt: id -> vastausfunktio. */
+const TYONTEKIJAN_TYOT = new Map();
+let tyonNumero = 0;
+/** Jos työntekijä ei vastaa tässä ajassa, palataan pääsäiepolulle. */
+const TYONTEKIJAN_AIKAKATKO_MS = 20000;
+
+/** Kaikki kesken olevat työt kuittaamatta jääneiksi (varareitti hoitaa). */
+function tyontekijaKaatui() {
+  purkuTyontekija = 'ei';
+  for (const vastaa of [...TYONTEKIJAN_TYOT.values()]) {
+    try { vastaa(null); } catch { /* ohi */ }
+  }
+  TYONTEKIJAN_TYOT.clear();
+}
+
+/** Työntekijä pystyyn kerran, tai null jos ympäristö ei siihen pysty. */
+function haeTyontekija() {
+  if (purkuTyontekija !== null) return purkuTyontekija === 'ei' ? null : purkuTyontekija;
+  purkuTyontekija = 'ei';
+  try {
+    if (typeof Worker !== 'function' || typeof OffscreenCanvas !== 'function') return null;
+    if (typeof URL?.createObjectURL !== 'function' || typeof Blob !== 'function') return null;
+    // Sama ehto kuin pääsäiepolulla: ilman convertToBlobia työntekijä ei
+    // saisi tulostaan ulos (ks. teeCanvas).
+    if (typeof new OffscreenCanvas(1, 1).convertToBlob !== 'function') return null;
+    const osoite = URL.createObjectURL(new Blob([TYONTEKIJAN_LAHDE], { type: 'text/javascript' }));
+    // Osoitetta EI vapauteta: työntekijän lähteen nouto on asynkroninen,
+    // ja vapautus voisi ehtiä ensin. Kyse on parista sadasta tavusta.
+    const tyontekija = new Worker(osoite);
+    tyontekija.onmessage = (viesti) => {
+      const { id, blob } = viesti.data ?? {};
+      const vastaa = TYONTEKIJAN_TYOT.get(id);
+      if (!vastaa) return;
+      TYONTEKIJAN_TYOT.delete(id);
+      vastaa(blob ?? null);
+    };
+    tyontekija.onerror = tyontekijaKaatui;
+    tyontekija.onmessageerror = tyontekijaKaatui;
+    purkuTyontekija = tyontekija;
+    return tyontekija;
+  } catch {
+    purkuTyontekija = 'ei';
+    return null;
+  }
+}
+
+/**
+ * Polku 0: purku, pienennys JA pakkaus työntekijässä. Palauttaa
+ * blob-osoitteen tai null (jolloin kutsuja ottaa pääsäiepolun).
+ */
+function tyontekijalla(blob, mitat, savy) {
+  const tyontekija = haeTyontekija();
+  if (!tyontekija) return Promise.resolve(null);
+  tyonNumero += 1;
+  const id = tyonNumero;
+  return new Promise((valmis) => {
+    let vastattu = false;
+    const anna = (tulos) => {
+      if (vastattu) return;
+      vastattu = true;
+      clearTimeout(kello);
+      TYONTEKIJAN_TYOT.delete(id);
+      let osoite = null;
+      try { osoite = tulos ? URL.createObjectURL(tulos) : null; } catch { osoite = null; }
+      valmis(osoite);
+    };
+    // Vaiti jäänyt työntekijä ei saa jumittaa sarjallista purkujonoa.
+    const kello = setTimeout(() => anna(null), TYONTEKIJAN_AIKAKATKO_MS);
+    TYONTEKIJAN_TYOT.set(id, anna);
+    try {
+      tyontekija.postMessage({
+        id,
+        blob,
+        w: mitat.w,
+        h: mitat.h,
+        // Pergamentin sävy vain alfattomalle pakkaukselle (ks. alfaSailyy).
+        savy: alfaSailyy() ? null : (savy ?? null),
+        tyyppi: pakkausTyyppi(),
+        laatu: PIENENNYS_LAATU,
+      });
+    } catch {
+      anna(null);
+    }
+  });
+}
+
 /** Kuva blob-osoitteesta MITAT edellä: onload ei vielä pura pikseleitä. */
 function lataaMitat(osoite) {
   return new Promise((valmis) => {
@@ -537,7 +687,13 @@ async function pienennaLehti(lahde, blob, savy, rajat = null) {
        */
       return { url: lahde, w: kuva.naturalWidth, h: kuva.naturalHeight, objectURL: null };
     }
-    const osoite = await bittikartasta(blob, mitat, savy)
+    /*
+     * TYÖNTEKIJÄ ENSIN, PÄÄSÄIE VASTA SEN JÄLKEEN (ks. "PURKU POIS
+     * PÄÄSÄIKEELTÄ"). Kolme polkua samaan lopputulokseen, ja jokainen
+     * seuraava on edellisen varareitti.
+     */
+    const osoite = await tyontekijalla(blob, mitat, savy)
+      ?? await bittikartasta(blob, mitat, savy)
       ?? await canvasille(kuva, mitat, savy);
     if (!osoite) return null;
     return {
@@ -2594,6 +2750,16 @@ export function paivitaFokusAtlas(ui) {
        */
       if (ui.dead || !pohja?.kuva || !ui.fokuskarttaKerros) return;
       if (ui.game.pack.id !== lauta || !atlasPaalla(ui)) return;
+      /*
+       * KAUKOZOOMISSA NAAPURILEHTEÄ EI PIIRRETÄ — sama sääntö kuin
+       * nykyisen maan lehdellä (ks. nayta). Näkymä on voinut loitontua
+       * haun aikana, ja silloin kartalla on yleislehti: juuri tästä
+       * haarasta tullut maalehti jäisi sen päälle tilkuksi, jota
+       * kaukozoomin oma purku (paivitaFokusAtlas) ei enää irrottaisi,
+       * koska se ajettiin jo. Lehti on VARASTOssa ja palaa kartalle
+       * lähizoomissa ilman uutta noutoa.
+       */
+      if (ui.yleislehtiPaalla) return;
       const kohde = atlasRyhma(ui);
       if (!kohde || ui.atlasLehdet.has(v.iso)) return;
       // Maa ehti vaihtua haun aikana juuri tähän: sen lehti kuuluu nyt
@@ -2735,6 +2901,109 @@ function piirra(ui, iso, pohja) {
 }
 
 /**
+ * Maasta lähtiessä sen lehti SIIRTYY ATLAKSEEN eikä katoa.
+ *
+ * MIKSI (mitattu 28.8.2026, saapuminen Ateenasta Sofiaan, 4x kuristus).
+ * Maanvaihto tyhjensi nykyisen maan ryhmän ja vapautti sen blob-
+ * osoitteen (siivoaLehtiUrlit) — mutta heti perään ajettu atlas valitsi
+ * juuri lähdetyn maan naapurilehdekseen, koska siinä maassa seistiin
+ * vielä sekunti sitten ja se on ruudulla. Jäljityksessä näkyi kaksi
+ * peräkkäistä 1,5 megatavun noutoa (BGR JA GRC) ja kaksi purkua, joista
+ * TOISESSA ei ollut yhtään uutta pikseliä: pelaaja maksoi saman lehden
+ * kahdesti minuutin sisällä.
+ *
+ * Siirto on pelkkä solmun vaihto ryhmästä toiseen — ei noutoa, ei
+ * purkua, ei uutta muistia: sama kuva, uusi kerros ja atlaksen oma
+ * kirjanpito. Sen jälkeen lehti elää tavallista atlaselämää: LRU ja
+ * näkymän vara päättävät koska se vapautuu (karsiAtlas).
+ *
+ * VARAREITTI ON VANHA KÄYTÖS. Jos atlasta ei ole (turvatila, katselu,
+ * kaukozoomi tulossa), lehti puretaan kartalta kuten ennenkin.
+ */
+function luovutaAtlakselle(ui, iso) {
+  const ryhma = lehtiRyhma(ui);
+  const pura = () => {
+    ryhma?.replaceChildren();
+    // Edellisen maan lehti on nyt irti kartalta: jos se oli pienennetty,
+    // sen blob-osoite on vapautettava (ellei sama kuva ole yhä atlaksessa).
+    siivoaLehtiUrlit(ui);
+  };
+  if (!iso || !ryhma) { pura(); return; }
+  const kuva = ryhma.querySelector('image.fokuskartta-kuva');
+  const pohja = VARASTO.get(`${ui.game?.pack?.id}:${iso}`);
+  if (!kuva || !pohja || pohja === 'ei' || !pohja.kuva) { pura(); return; }
+  if (!atlasPaalla(ui) || ui.atlasLehdet?.has(iso)) { pura(); return; }
+  const atlas = atlasRyhma(ui);
+  if (!atlas) { pura(); return; }
+  // Lisänimet ovat nykyisen maan kalusteita eivätkä kuulu atlakseen.
+  for (const lapsi of [...ryhma.children]) {
+    if (lapsi !== kuva) lapsi.remove();
+  }
+  /*
+   * ISO LEHTI POHJIMMAISEKSI, sama sääntö kuin atlaksen omalla
+   * lisäyksellä: pieni maa ei saa jäädä naapurinsa vuodon alle.
+   */
+  const ala = pohja.bbox.w * pohja.bbox.h;
+  let kohta = null;
+  for (const t of ui.atlasLehdet?.values() ?? []) {
+    const tAla = t.bbox ? t.bbox.w * t.bbox.h : 0;
+    if (tAla < ala) { kohta = t.el; break; }
+  }
+  atlas.insertBefore(kuva, kohta ?? null);
+  ui.atlasLehdet ??= new Map();
+  ui.atlasLehdet.set(iso, {
+    el: kuva,
+    // Vanhin merkintä: juuri lähdetty maa on ensimmäinen, jonka LRU saa
+    // pudottaa, kun katto täyttyy — mutta vasta silloin.
+    kaytetty: ui.atlasKello ?? 0,
+    bbox: pohja.bbox,
+    ikkuna: pohja.rajaus ?? pohja.bbox,
+  });
+  // Kuva on yhä DOMissa, joten siivous ei vapauta sen osoitetta; muut
+  // käyttämättömäksi jääneet osoitteet lähtevät kuten ennenkin.
+  siivoaLehtiUrlit(ui);
+  ui.paivitaAtlasVerho?.();
+}
+
+/**
+ * Kohdemaan lehti hakuun HETI KUN MATKA ALKAA.
+ *
+ * OMISTAJAN TILAUS 28.8.2026: *"kohdemaan lehti pitää ladata etukäteen
+ * niin että siirtymä on pehmeä."* Peli päivittää nappulan pelitilassa
+ * perille jo ennen animaatiota, mutta piirto (ja siis paivitaFokuskartta)
+ * ajetaan vasta animaation jälkeen (js/ui.js run → finally → render).
+ * Lehden nouto ja purku alkoivat siis vasta siinä hetkessä, jossa
+ * pelaaja katsoo karttaa — mitattuna 1,2 sekunnin kehys.
+ *
+ * Nyt nouto alkaa nappulan lähtiessä liikkeelle: kävelymatka kestää
+ * sekunteja, ja purku tehdään työntekijässä (ks. "PURKU POIS
+ * PÄÄSÄIKEELTÄ"), joten animaatio ei menetä siitä kehyksiä. Perillä
+ * lehti on tavallisesti jo VARASTOssa ja piirtyy samassa kehyksessä.
+ *
+ * Tulos päätyy samaan välimuistiin kuin tavallinen haku, ja
+ * epäonnistuminen on tavallinen tila eikä virhe (sääntö 1 tiedoston
+ * alussa). Esilataus on ETUMATKA, EI EHTO: jos se jää tekemättä,
+ * kaikki toimii kuten ennen.
+ */
+export function esilataaMatkanLehti(ui, kohde) {
+  if (!ui || ui.dead) return;
+  const id = typeof kohde === 'string' ? kohde : (kohde?.city ?? kohde?.id);
+  if (!id) return;
+  /*
+   * SAMAT EHDOT KUIN NÄKYVÄLLÄ LEHDELLÄ (nykyinenMaa): fokusmoodi
+   * päällä, ei katselutila, ei turvatila. Turvatilassa esilataus olisi
+   * juuri se purku, jota koko turvatila on välttämässä.
+   */
+  if (!ui.fokusmoodi || ui.katselu || atlasTurvatila()) return;
+  const lauta = ui.game?.pack?.id;
+  const iso = ui.game?.pack?.map?.cityCountry?.[id];
+  if (!iso || !lauta) return;
+  // Saman maan sisällä ei ole mitään esiladattavaa.
+  if (iso === nykyinenMaa(ui)) return;
+  void haePohja(iso, lauta, ui.game.pack.map).catch(() => {});
+}
+
+/**
  * Tahdistaa fokuskartan nykyiseen maahan.
  *
  * Kutsutaan joka piirrossa (ui.paivitaFokusKerros). Työ tehdään vain
@@ -2792,6 +3061,8 @@ export function paivitaFokuskartta(ui) {
   const avain = iso ?? 'pois';
   if (ui.fokuskarttaAvain === avain) return;
   const ensimmainen = ui.fokuskarttaAvain == null;
+  const edellinen = (ui.fokuskarttaAvain && ui.fokuskarttaAvain !== 'pois')
+    ? ui.fokuskarttaAvain : null;
   ui.fokuskarttaAvain = avain;
   /*
    * VAIN NYKYISEN MAAN RYHMÄ TYHJENNETÄÄN, EI KOKO KERROSTA. Atlaksen
@@ -2799,15 +3070,32 @@ export function paivitaFokuskartta(ui) {
    * jos ne pyyhittäisiin joka maanvaihdossa, ne purettaisiin heti
    * uudelleen — ja juuri purku on se kallis työ (ks. atlaksen johdanto).
    */
-  lehtiRyhma(ui)?.replaceChildren();
-  // Edellisen maan lehti on nyt irti kartalta: jos se oli pienennetty,
-  // sen blob-osoite on vapautettava (ellei sama kuva ole yhä atlaksessa).
-  siivoaLehtiUrlit(ui);
+  luovutaAtlakselle(ui, edellinen);
   // Atlaksen valinta on maakohtainen (nykyisen maan lehti vie peiton ja
   // budjetin), joten tunniste on nollattava — muuten uusi maa jäisi
   // vanhan valinnan varaan seuraavaan panorointiin asti.
   ui.atlasAvain = null;
-  ui.paivitaFokusPohja?.(null);
+  /*
+   * KAKSI POHJANVAIHTOA YHDESSÄ KEHYKSESSÄ ON YKSI LIIKAA (mitattu
+   * 28.8.2026, saapuminen Sofiaan esiladatulla lehdellä, 4x kuristus).
+   *
+   * ui.paivitaFokusPohja on kallis: se lataa kohdemerkit, mittajanan,
+   * kartuutsin ja sumuverhon uusiksi ja lukee matkalla ruudun mitat
+   * kymmeniä kertoja. Kun lehti on jo VARASTOssa (esilataus tehnyt
+   * työnsä), sama kehys kutsui sitä KAHDESTI: ensin tyhjennys (null) ja
+   * heti perään uusi pohja. Mitattuna 677 ms kahdella kutsulla, 140 ms
+   * yhdellä.
+   *
+   * Tyhjennys jätetään siis väliin silloin — ja vain silloin — kun uusi
+   * pohja asetetaan samassa kehyksessä muutamaa riviä alempana. Näkyvä
+   * lopputulos on identtinen: pelaaja ei koskaan nähnyt sitä välitilaa,
+   * jossa pohjaa ei ole.
+   */
+  const lauta = ui.game.pack.id;
+  const valmis = iso ? VARASTO.get(`${lauta}:${iso}`) : null;
+  const piirtyyHeti = Boolean(iso && valmis && valmis !== 'ei' && valmis.kuva
+    && !ui.yleislehtiPaalla && ui.fokuskarttaKerros);
+  if (!piirtyyHeti) ui.paivitaFokusPohja?.(null);
   if (!iso) {
     paivitaFokusAtlas(ui);
     return;
@@ -2838,7 +3126,6 @@ export function paivitaFokuskartta(ui) {
     piirra(ui, iso, pohja);
   };
 
-  const lauta = ui.game.pack.id;
   /*
    * KAMERA AJAA HETI, EI VASTA KUVAN LATATTUA. Sivun lataus kesken pelin
    * ei ole saapuminen (silloin kartan oma saapumiszoom hoitaa näkymän),
@@ -2874,7 +3161,6 @@ export function paivitaFokuskartta(ui) {
     }
     if (kohde) ui.kartta?.ajaKamera?.(kohde, ui.saapumisAsettuu ? { kesto: 0 } : {});
   }
-  const valmis = VARASTO.get(`${lauta}:${iso}`);
   // Jo muistissa JA yhä osoitteineen: piirretään samassa kehyksessä,
   // jottei kuva välähdä vasta seuraavalla ruudunpäivityksellä. Ilman
   // osoitetta (vapautettu blob) pohja puretaan uudelleen kuten uusi.
