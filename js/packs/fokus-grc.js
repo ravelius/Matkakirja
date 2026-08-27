@@ -1211,4 +1211,456 @@ export const FOKUS_LISANIMET = {
       { nimi: 'Kreetanmeri', x: 6653.3, y: 1961.3, koko: 0.8 },
     ],
   },
+
+  /* ================================================================
+   * MUUT MAAT — LEHDEN PEILIKUVA, KONEEN KIRJOITTAMA
+   *
+   * Omistajan havainto Bulgarian lehdeltä 27.8.2026: *"Plovdivin nimi
+   * näkyy kahteen kertaan."* Syy oli se, että yllä oleva taulu tunsi
+   * vain Kreikan. Nimiön vaiennus ja napautettava nimi lukevat molemmat
+   * TÄTÄ taulua (js/fokuskohteet.js `poltetutKaupungit`), joten maa,
+   * jolla ei ole tässä riviä, ei voi kertoa pelille yhtään lehteen
+   * poltettua nimeä — ja jokainen sen kaupunkikohde latoo nimensä
+   * poltetun päälle.
+   *
+   * === MISTÄ RIVIT TULEVAT ===
+   *
+   * Kreikka on ainoa KURATOITU lehti: sen neljä kaupunkia on aseteltu
+   * käsin (tools/fokuskartta/maat.mjs GRC.kaupungit). Kaikki muut ovat
+   * YLEISEN REITIN lehtiä, joilla kaupungit poimitaan Natural Earthistä
+   * kuvan renderöinnin aikana (tools/fokuskartta/aineisto.mjs `paikat`)
+   * — repossa ei siis ole mitään, mistä nimet voisi lukea. Ne ovat
+   * kuvan vieressä ämpärissä: tee-fokuskartta.mjs kirjaa valitut nimet
+   * `<ISO>.json`-tiedoston kenttään `paikat`.
+   *
+   * NÄMÄ RIVIT ON LADOTTU SIITÄ (tools/tee-fokus-lisanimet.mjs), ja
+   * niitä ei sovi säätää käsin: nimen paikka ja siirto tulevat suoraan
+   * piirto.js:n kohdasta 8g, ja käsin muutettu luku siirtäisi
+   * osuma-alueen pois nimen päältä. Kun maan lehti renderöidään
+   * uudelleen, työkalu ajetaan ja lohko vaihdetaan kokonaan.
+   *
+   *   NODE_USE_ENV_PROXY=1 node tools/tee-fokus-lisanimet.mjs \
+   *       --ne <kansio jossa ne_10m_populated_places.geojson>
+   *
+   * === `koko` ON UUSI KENTTÄ ===
+   *
+   * Kuratoitu lehti latoo kaupunginnimet aina kirjasinkoolla 13,5
+   * (piirto.js 8f), mutta yleinen reitti valitsee kahdesta: 14, jos
+   * Natural Earthin SCALERANK on enintään neljä, muuten 12,5 (8g).
+   * Osuma-alueen leveys mitataan kirjasimesta, joten koko on kuljetettava
+   * mukana — ilman sitä laatikko olisi Bulgarian pikkukaupungeilla
+   * kahdeksan prosenttia liian leveä ja isoilla yhtä paljon liian kapea.
+   * Puuttuva kenttä tarkoittaa yhä kuratoitua 13,5:tä.
+   *
+   * === VAIN NE MAAT, JOILLA ON KOHTEITA ===
+   *
+   * Taulu ei ole atlaksen hakemisto vaan pelin oma tarkistus: se
+   * tarvitaan siellä, missä kartalla on kohdemerkkejä, joiden nimiö voi
+   * osua poltettuun nimeen. Maat ovat siksi täsmälleen ne, joilla on
+   * kohdepaketti (js/packs/fokuskohteet-*.js), ja
+   * tests/fokusnimet.test.mjs vaatii jokaiselta sellaiselta maalta rivin
+   * — uusi maa saa virheen heti, ei vasta pelitestissä.
+   *
+   * MONELLA POLTETULLA NIMELLÄ EI OLE VIELÄ KOHDETTA (esim. Bulgarian
+   * Kyustendil, Burgas, Ruse). Ne ovat kuvassa pikseleitä eikä niitä voi
+   * napauttaa mistään: rivi tässä taulussa ei tee nimestä napautettavaa,
+   * vaan sen tekee kohde samassa pisteessä. Puuttuvat kohteet ovat
+   * SISÄLTÖTYÖTÄ eivätkä koodivika, ja niiden lista on
+   * tests/fokusnimet.test.mjs:n `KOHTEETTOMAT`.
+   * ================================================================ */
+
+  AFG: {
+    lauta: 'maailmankartta',
+    kaupungit: [
+      // 65.6949 E / 31.61 N
+      { nimi: 'Kandahar', x: 8023.2, y: 2121.9, dx: 9, dy: -1, koko: 14 },
+      // 62.17 E / 34.33 N
+      { nimi: 'Herat', x: 7905.7, y: 2020.6, dx: 9, dy: -1, koko: 14 },
+      // 67.1 E / 36.7 N
+      { nimi: 'Mazar-i-Sharif', x: 8070, y: 1930.8, dx: 9, dy: -1, koko: 14 },
+      // 68.6993 E / 36.1393 N
+      { nimi: 'Baghlan', x: 8123.3, y: 1952.2, dx: 9, dy: -1, koko: 12.5 },
+      // 62.0968 E / 32.3917 N
+      { nimi: 'Farah', x: 7903.2, y: 2093, dx: 9, dy: -1, koko: 12.5 },
+      // 67.8227 E / 34.8133 N
+      { nimi: 'Bamian', x: 8094.1, y: 2002.5, dx: 9, dy: -1, koko: 12.5 },
+      // 70.4361 E / 34.4415 N
+      { nimi: 'Jalalabad', x: 8181.2, y: 2016.4, dx: 9, dy: -1, koko: 12.5 },
+      // 68.8725 E / 36.728 N
+      { nimi: 'Kondoz', x: 8129.1, y: 1929.7, dx: 9, dy: -1, koko: 12.5 },
+      // 64.7701 E / 35.9302 N
+      { nimi: 'Meymaneh', x: 7992.3, y: 1960.2, dx: 9, dy: -1, koko: 12.5 },
+    ],
+  },
+  BGR: {
+    lauta: 'maailmankartta',
+    kaupungit: [
+      // 27.4746 E / 42.5146 N
+      { nimi: 'Burgas', x: 6749.2, y: 1702.9, dx: 9, dy: -1, koko: 12.5 },
+      // 27.8953 E / 43.2156 N
+      { nimi: 'Varna', x: 6763.2, y: 1674.6, dx: 9, dy: -1, koko: 12.5 },
+      // 25.9733 E / 43.8537 N
+      { nimi: 'Ruse', x: 6699.1, y: 1648.7, dx: 9, dy: -1, koko: 12.5 },
+      // 25.6227 E / 42.4231 N
+      { nimi: 'Stara Zagora', x: 6687.4, y: 1706.6, dx: 9, dy: -1, koko: 12.5 },
+      // 24.6134 E / 43.4238 N
+      { nimi: 'Pleven', x: 6653.8, y: 1666.2, dx: 9, dy: -1, koko: 12.5 },
+      // 25.6555 E / 43.0862 N
+      { nimi: 'Turnovo', x: 6688.5, y: 1679.9, dx: 9, dy: -1, koko: 12.5 },
+      // 22.6911 E / 42.2843 N
+      { nimi: 'Kyustendil', x: 6589.7, y: 1712.2, dx: 9, dy: -1, koko: 12.5 },
+      // 24.754 E / 42.154 N
+      { nimi: 'Plovdiv', x: 6658.5, y: 1717.4, dx: 9, dy: -1, koko: 12.5 },
+      // 26.33 E / 42.6794 N
+      { nimi: 'Sliven', x: 6711, y: 1696.3, dx: 9, dy: -1, koko: 12.5 },
+    ],
+  },
+  BIH: {
+    lauta: 'maailmankartta',
+    kaupungit: [
+      // 17.18 E / 44.7804 N
+      { nimi: 'Banja Luka', x: 6406, y: 1610.8, dx: 9, dy: -1, koko: 12.5 },
+      // 17.82 E / 43.3505 N
+      { nimi: 'Mostar', x: 6427.3, y: 1669.2, dx: 9, dy: -1, koko: 12.5 },
+      // 18.68 E / 44.5505 N
+      { nimi: 'Tuzla', x: 6456, y: 1620.3, dx: 9, dy: -1, koko: 12.5 },
+      // 17.92 E / 44.22 N
+      { nimi: 'Zenica', x: 6430.7, y: 1633.8, dx: 9, dy: -1, koko: 12.5 },
+    ],
+  },
+  CHN: {
+    lauta: 'maailmankartta',
+    kaupungit: [
+      // 104.0681 E / 30.6719 N
+      { nimi: 'Chengdu', x: 9302.3, y: 2156.3, dx: 9, dy: -1, koko: 14 },
+      // 87.5731 E / 43.807 N
+      { nimi: 'Ürümqi', x: 8752.4, y: 1650.6, dx: 9, dy: -1, koko: 14 },
+      // 114.2681 E / 30.582 N
+      { nimi: 'Wuhan', x: 9642.3, y: 2159.6, dx: 9, dy: -1, koko: 14 },
+      // 117.1966 E / 39.0828 N
+      { nimi: 'Tianjin', x: 9739.9, y: 1838.8, dx: 9, dy: -1, koko: 14 },
+      // 106.593 E / 29.5669 N
+      { nimi: 'Chongqing', x: 9386.4, y: 2196.7, dx: 9, dy: -1, koko: 14 },
+      // 123.448 E / 41.8069 N
+      { nimi: 'Shenyeng', x: 9948.3, y: 1731.3, dx: 9, dy: -1, koko: 14 },
+      // 118.778 E / 32.052 N
+      { nimi: 'Nanjing', x: 9792.6, y: 2105.5, dx: 9, dy: -1, koko: 14 },
+      // 106.7181 E / 26.582 N
+      { nimi: 'Guiyang', x: 9390.6, y: 2304.4, dx: 9, dy: -1, koko: 14 },
+      // 126.648 E / 45.7519 N
+      { nimi: 'Harbin', x: 10054.9, y: 1570.7, dx: 9, dy: -1, koko: 14 },
+    ],
+  },
+  EGY: {
+    lauta: 'maailmankartta',
+    kaupungit: [
+      // 29.9481 E / 31.202 N
+      { nimi: 'Alexandria', x: 6831.6, y: 2136.9, dx: 9, dy: -1, koko: 14 },
+      // 32.29 E / 31.26 N
+      { nimi: 'Bur Said', x: 6909.7, y: 2134.7, dx: 9, dy: -1, koko: 14 },
+      // 32.5499 E / 30.005 N
+      { nimi: 'Suez', x: 6918.3, y: 2180.7, dx: 9, dy: -1, koko: 14 },
+      // 31.1799 E / 27.19 N
+      { nimi: 'Asyut', x: 6872.7, y: 2282.6, dx: 9, dy: -1, koko: 14 },
+      // 30.84 E / 29.31 N
+      { nimi: 'El Faiyum', x: 6861.3, y: 2206, dx: 9, dy: -1, koko: 14 },
+      // 32.8989 E / 24.0875 N
+      { nimi: 'Aswan', x: 6930, y: 2393, dx: 9, dy: -1, koko: 14 },
+      // 30.75 E / 28.09 N
+      { nimi: 'El Minya', x: 6858.3, y: 2250.2, dx: 9, dy: -1, koko: 12.5 },
+      // 33.83 E / 27.23 N
+      { nimi: 'Hurghada', x: 6961, y: 2281.1, dx: 9, dy: -1, koko: 12.5 },
+      // 30.55 E / 25.44 N
+      { nimi: 'El Kharga', x: 6851.7, y: 2345.1, dx: 9, dy: -1, koko: 12.5 },
+    ],
+  },
+  FRA: {
+    lauta: 'maailmankartta',
+    kaupungit: [
+      // 4.8281 E / 45.772 N
+      { nimi: 'Lyon', x: 5994.3, y: 1569.8, dx: 9, dy: -1, koko: 14 },
+      // -0.597 E / 44.852 N
+      { nimi: 'Bordeaux', x: 5813.4, y: 1607.9, dx: 9, dy: -1, koko: 14 },
+      // 0.105 E / 49.505 N
+      { nimi: 'Le Havre', x: 5836.8, y: 1411.7, dx: 9, dy: -1, koko: 14 },
+      // 3.0781 E / 50.6519 N
+      { nimi: 'Lille', x: 5935.9, y: 1361.7, dx: 9, dy: -1, koko: 12.5 },
+      // 7.2631 E / 43.717 N
+      { nimi: 'Nice', x: 6075.4, y: 1654.3, dx: 9, dy: -1, koko: 12.5 },
+      // 1.448 E / 43.6219 N
+      { nimi: 'Toulouse', x: 5881.6, y: 1658.2, dx: 9, dy: -1, koko: 12.5 },
+      // 7.75 E / 48.58 N
+      { nimi: 'Strasbourg', x: 6091.7, y: 1451.5, dx: 9, dy: -1, koko: 12.5 },
+      // -1.67 E / 48.1 N
+      { nimi: 'Rennes', x: 5777.7, y: 1472, dx: 9, dy: -1, koko: 12.5 },
+      // 1.25 E / 45.83 N
+      { nimi: 'Limoges', x: 5875, y: 1567.4, dx: 9, dy: -1, koko: 12.5 },
+    ],
+  },
+  GBR: {
+    lauta: 'maailmankartta',
+    kaupungit: [
+      // -4.2391 E / 55.8623 N
+      { nimi: 'Glasgow', x: 5692, y: 1125.6, dx: 9, dy: -1, koko: 14 },
+      // -1.9219 E / 52.4769 N
+      { nimi: 'Birmingham', x: 5769.3, y: 1280.8, dx: 9, dy: -1, koko: 14 },
+      // -2.2487 E / 53.4753 N
+      { nimi: 'Manchester', x: 5758.4, y: 1235.7, dx: 9, dy: -1, koko: 14 },
+      // -5.9282 E / 54.5942 N
+      { nimi: 'Belfast', x: 5635.7, y: 1184.5, dx: 9, dy: -1, koko: 14 },
+      // -1.5513 E / 53.79 N
+      { nimi: 'Leeds', x: 5781.6, y: 1221.4, dx: 9, dy: -1, koko: 12.5 },
+      // -1.6116 E / 54.9897 N
+      { nimi: 'Newcastle', x: 5779.6, y: 1166.3, dx: 9, dy: -1, koko: 12.5 },
+      // -3.1676 E / 51.4826 N
+      { nimi: 'Cardiff', x: 5727.7, y: 1325.1, dx: 9, dy: -1, koko: 12.5 },
+      // -2.9619 E / 53.4051 N
+      { nimi: 'Liverpool', x: 5734.6, y: 1238.9, dx: 9, dy: -1, koko: 12.5 },
+      // -3.0834 E / 58.4333 N
+      { nimi: 'Wick', x: 5730.6, y: 1002.8, dx: 9, dy: -1, koko: 12.5 },
+    ],
+  },
+  IRN: {
+    lauta: 'maailmankartta',
+    kaupungit: [
+      // 59.5681 E / 36.272 N
+      { nimi: 'Mashhad', x: 7818.9, y: 1947.2, dx: 9, dy: -1, koko: 14 },
+      // 48.7181 E / 31.2819 N
+      { nimi: 'Ahvaz', x: 7457.3, y: 2133.9, dx: 9, dy: -1, koko: 14 },
+      // 48.515 E / 34.796 N
+      { nimi: 'Hamadan', x: 7450.5, y: 2003.1, dx: 9, dy: -1, koko: 14 },
+      // 54.37 E / 31.9201 N
+      { nimi: 'Yazd', x: 7645.7, y: 2110.4, dx: 9, dy: -1, koko: 14 },
+      // 56.2721 E / 27.2041 N
+      { nimi: 'Bandar-e-Abbas', x: 7709.1, y: 2282.1, dx: 9, dy: -1, koko: 14 },
+      // 50.9481 E / 34.652 N
+      { nimi: 'Qom', x: 7531.6, y: 2008.5, dx: 9, dy: -1, koko: 12.5 },
+      // 47.0581 E / 34.382 N
+      { nimi: 'Kermanshah', x: 7401.9, y: 2018.7, dx: 9, dy: -1, koko: 12.5 },
+      // 60.83 E / 29.5 N
+      { nimi: 'Zahedan', x: 7861, y: 2199.1, dx: 9, dy: -1, koko: 12.5 },
+      // 49.63 E / 37.3 N
+      { nimi: 'Rasht', x: 7487.7, y: 1907.8, dx: 9, dy: -1, koko: 12.5 },
+    ],
+  },
+  IRQ: {
+    lauta: 'maailmankartta',
+    kaupungit: [
+      // 47.8116 E / 30.5155 N
+      { nimi: 'Basra', x: 7427.1, y: 2162.1, dx: 9, dy: -1, koko: 14 },
+      // 44.3354 E / 32.0003 N
+      { nimi: 'Najaf', x: 7311.2, y: 2107.4, dx: 9, dy: -1, koko: 14 },
+      // 44.3923 E / 35.4722 N
+      { nimi: 'Kirkuk', x: 7313.1, y: 1977.5, dx: 9, dy: -1, koko: 14 },
+      // 44.0067 E / 36.181 N
+      { nimi: 'Irbil', x: 7300.2, y: 1950.6, dx: 9, dy: -1, koko: 12.5 },
+      // 45.4309 E / 35.5613 N
+      { nimi: 'As Sulaymaniyah', x: 7347.7, y: 1974.2, dx: 9, dy: -1, koko: 12.5 },
+      // 44.0245 E / 32.6149 N
+      { nimi: 'Karbala', x: 7300.8, y: 2084.7, dx: 9, dy: -1, koko: 12.5 },
+      // 46.2676 E / 31.0429 N
+      { nimi: 'An Nasiriyah', x: 7375.6, y: 2142.7, dx: 9, dy: -1, koko: 12.5 },
+      // 47.1512 E / 31.8416 N
+      { nimi: 'Al Amarah', x: 7405, y: 2113.3, dx: 9, dy: -1, koko: 12.5 },
+      // 45.8304 E / 32.4907 N
+      { nimi: 'Al Kut', x: 7361, y: 2089.3, dx: 9, dy: -1, koko: 12.5 },
+    ],
+  },
+  ITA: {
+    lauta: 'maailmankartta',
+    kaupungit: [
+      // 9.2031 E / 45.4719 N
+      { nimi: 'Milan', x: 6140.1, y: 1582.3, dx: 9, dy: -1, koko: 14 },
+      // 14.2431 E / 40.842 N
+      { nimi: 'Naples', x: 6308.1, y: 1769.7, dx: 9, dy: -1, koko: 14 },
+      // 15.08 E / 37.5 N
+      { nimi: 'Catania', x: 6336, y: 1900.1, dx: 9, dy: -1, koko: 14 },
+      // 7.668 E / 45.0723 N
+      { nimi: 'Turin', x: 6088.9, y: 1598.8, dx: 9, dy: -1, koko: 12.5 },
+      // 8.93 E / 44.41 N
+      { nimi: 'Genoa', x: 6131, y: 1626, dx: 9, dy: -1, koko: 12.5 },
+      // 8.57 E / 40.73 N
+      { nimi: 'Sassari', x: 6119, y: 1774.1, dx: 9, dy: -1, koko: 12.5 },
+      // 14.7699 E / 40.6804 N
+      { nimi: 'Salerno', x: 6325.7, y: 1776.1, dx: 9, dy: -1, koko: 12.5 },
+      // 16.8728 E / 41.1142 N
+      { nimi: 'Bari', x: 6395.8, y: 1758.9, dx: 9, dy: -1, koko: 12.5 },
+      // 11.34 E / 44.5004 N
+      { nimi: 'Bologna', x: 6211.3, y: 1622.3, dx: 9, dy: -1, koko: 12.5 },
+    ],
+  },
+  JOR: {
+    lauta: 'maailmankartta',
+    kaupungit: [
+      // 35.9314 E / 31.952 N
+      { nimi: 'Amman', x: 7031, y: 2109.2, dx: 9, dy: -1, koko: 14 },
+      // 35.0777 E / 29.527 N
+      { nimi: 'Al Aqabah', x: 7002.6, y: 2198.1, dx: 9, dy: -1, koko: 12.5 },
+      // 35.7047 E / 31.1851 N
+      { nimi: 'Al Karak', x: 7023.5, y: 2137.5, dx: 9, dy: -1, koko: 12.5 },
+      // 35.85 E / 32.55 N
+      { nimi: 'Irbid', x: 7028.3, y: 2087.1, dx: 9, dy: -1, koko: 12.5 },
+    ],
+  },
+  LBY: {
+    lauta: 'maailmankartta',
+    kaupungit: [
+      // 20.0648 E / 32.1187 N
+      { nimi: 'Banghazi', x: 6502.2, y: 2103.1, dx: 9, dy: -1, koko: 14 },
+      // 14.4333 E / 27.0333 N
+      { nimi: 'Sabha', x: 6314.4, y: 2288.2, dx: 9, dy: -1, koko: 14 },
+      // 15.1 E / 32.38 N
+      { nimi: 'Misrata', x: 6336.7, y: 2093.4, dx: 9, dy: -1, koko: 14 },
+      // 12.0791 E / 32.9344 N
+      { nimi: 'Zuwara', x: 6236, y: 2072.8, dx: 9, dy: -1, koko: 14 },
+      // 15.8 E / 26.3666 N
+      { nimi: 'Tmassa', x: 6360, y: 2312.1, dx: 9, dy: -1, koko: 14 },
+      // 23.96 E / 32.08 N
+      { nimi: 'Tubruq', x: 6632, y: 2104.5, dx: 9, dy: -1, koko: 12.5 },
+      // 20.22 E / 30.77 N
+      { nimi: 'Ajdabiya', x: 6507.3, y: 2152.7, dx: 9, dy: -1, koko: 12.5 },
+      // 16.59 E / 31.21 N
+      { nimi: 'Surt', x: 6386.3, y: 2136.6, dx: 9, dy: -1, koko: 12.5 },
+      // 22.6391 E / 32.7648 N
+      { nimi: 'Darnah', x: 6588, y: 2079.1, dx: 9, dy: -1, koko: 12.5 },
+    ],
+  },
+  MEX: {
+    lauta: 'maailmankartta',
+    kaupungit: [
+      // -103.332 E / 20.672 N
+      { nimi: 'Guadalajara', x: 2388.9, y: 2512.7, dx: 9, dy: -1, koko: 14 },
+      // -98.2037 E / 19.0326 N
+      { nimi: 'Puebla', x: 2559.9, y: 2569.5, dx: 9, dy: -1, koko: 14 },
+      // -117.0819 E / 32.502 N
+      { nimi: 'Tijuana', x: 1930.6, y: 2088.9, dx: 9, dy: -1, koko: 14 },
+      // -97.87 E / 22.3 N
+      { nimi: 'Tampico', x: 2571, y: 2455.8, dx: 9, dy: -1, koko: 14 },
+      // -106.0869 E / 28.6469 N
+      { nimi: 'Chihuahua', x: 2297.1, y: 2230.1, dx: 9, dy: -1, koko: 14 },
+      // -99.916 E / 16.85 N
+      { nimi: 'Acapulco', x: 2502.8, y: 2644.6, dx: 9, dy: -1, koko: 14 },
+      // -96.16 E / 19.1773 N
+      { nimi: 'Veracruz', x: 2628, y: 2564.5, dx: 9, dy: -1, koko: 14 },
+      // -86.83 E / 21.17 N
+      { nimi: 'Cancún', x: 2939, y: 2495.3, dx: 9, dy: -1, koko: 14 },
+      // -93.15 E / 16.75 N
+      { nimi: 'Tuxtla Gutiérrez', x: 2728.3, y: 2648, dx: 9, dy: -1, koko: 14 },
+    ],
+  },
+  ROU: {
+    lauta: 'maailmankartta',
+    kaupungit: [
+      // 27.5749 E / 47.1683 N
+      { nimi: 'Iași', x: 6752.5, y: 1511.4, dx: 9, dy: -1, koko: 14 },
+      // 28.61 E / 44.2027 N
+      { nimi: 'Constanța', x: 6787, y: 1634.5, dx: 9, dy: -1, koko: 14 },
+      // 23.5984 E / 46.7884 N
+      { nimi: 'Cluj-Napoca', x: 6619.9, y: 1527.4, dx: 9, dy: -1, koko: 12.5 },
+      // 21.2234 E / 45.7588 N
+      { nimi: 'Timișoara', x: 6540.8, y: 1570.4, dx: 9, dy: -1, koko: 12.5 },
+      // 25.6072 E / 45.6475 N
+      { nimi: 'Brașov', x: 6686.9, y: 1575, dx: 9, dy: -1, koko: 12.5 },
+      // 23.8259 E / 44.3263 N
+      { nimi: 'Craiova', x: 6627.5, y: 1629.4, dx: 9, dy: -1, koko: 12.5 },
+      // 26.9196 E / 46.5784 N
+      { nimi: 'Bacău', x: 6730.7, y: 1536.2, dx: 9, dy: -1, koko: 12.5 },
+      // 24.8758 E / 44.8563 N
+      { nimi: 'Pitești', x: 6662.5, y: 1607.7, dx: 9, dy: -1, koko: 12.5 },
+      // 24.5578 E / 46.5582 N
+      { nimi: 'Tirgu Mures', x: 6651.9, y: 1537.1, dx: 9, dy: -1, koko: 12.5 },
+    ],
+  },
+  SYR: {
+    lauta: 'maailmankartta',
+    kaupungit: [
+      // 36.7181 E / 34.7319 N
+      { nimi: 'Homs', x: 7057.3, y: 2005.5, dx: 9, dy: -1, koko: 12.5 },
+      // 40.13 E / 35.3304 N
+      { nimi: 'Dayr az Zawr', x: 7171, y: 1982.9, dx: 9, dy: -1, koko: 12.5 },
+      // 39.02 E / 35.9304 N
+      { nimi: 'Ar Raqqah', x: 7134, y: 1960.2, dx: 9, dy: -1, koko: 12.5 },
+      // 35.8866 E / 34.8846 N
+      { nimi: 'Tartus', x: 7029.6, y: 1999.8, dx: 9, dy: -1, koko: 12.5 },
+      // 40.9186 E / 34.4504 N
+      { nimi: 'Abu Kamal', x: 7197.3, y: 2016.1, dx: 9, dy: -1, koko: 12.5 },
+      // 36.5666 E / 32.7004 N
+      { nimi: 'As Suwayda', x: 7052.2, y: 2081.5, dx: 9, dy: -1, koko: 12.5 },
+      // 38.2833 E / 34.5504 N
+      { nimi: 'Tadmur', x: 7109.4, y: 2012.4, dx: 9, dy: -1, koko: 12.5 },
+      // 36.7333 E / 34.017 N
+      { nimi: 'Ad Nabk', x: 7057.8, y: 2032.4, dx: 9, dy: -1, koko: 12.5 },
+      // 35.8236 E / 33.1257 N
+      { nimi: 'Al Qunaytirah', x: 7027.5, y: 2065.7, dx: 9, dy: -1, koko: 12.5 },
+    ],
+  },
+  TUN: {
+    lauta: 'maailmankartta',
+    kaupungit: [
+      // 10.1797 E / 36.8028 N
+      { nimi: 'Tunis', x: 6172.7, y: 1926.9, dx: 9, dy: -1, koko: 14 },
+      // 10.625 E / 35.83 N
+      { nimi: 'Sousse', x: 6187.5, y: 1964, dx: 9, dy: -1, koko: 14 },
+      // 10.72 E / 34.75 N
+      { nimi: 'Sfax', x: 6190.7, y: 2004.8, dx: 9, dy: -1, koko: 12.5 },
+      // 10.1 E / 33.9004 N
+      { nimi: 'Gabès', x: 6170, y: 2036.8, dx: 9, dy: -1, koko: 12.5 },
+      // 11.1 E / 33.5104 N
+      { nimi: 'Zarzis', x: 6203.3, y: 2051.3, dx: 9, dy: -1, koko: 12.5 },
+      // 9.855 E / 37.2904 N
+      { nimi: 'Bizerte', x: 6161.8, y: 1908.2, dx: 9, dy: -1, koko: 12.5 },
+      // 8.78 E / 34.4204 N
+      { nimi: 'Gafsa', x: 6126, y: 2017.2, dx: 9, dy: -1, koko: 12.5 },
+      // 10.73 E / 36.4603 N
+      { nimi: 'Nabeul', x: 6191, y: 1940, dx: 9, dy: -1, koko: 12.5 },
+      // 8.83 E / 35.1804 N
+      { nimi: 'Qasserine', x: 6127.7, y: 1988.6, dx: 9, dy: -1, koko: 12.5 },
+    ],
+  },
+  TUR: {
+    lauta: 'maailmankartta',
+    kaupungit: [
+      // 29.0681 E / 40.2019 N
+      { nimi: 'Bursa', x: 6802.3, y: 1794.9, dx: 9, dy: -1, koko: 14 },
+      // 35.3181 E / 36.9969 N
+      { nimi: 'Adana', x: 7010.6, y: 1919.4, dx: 9, dy: -1, koko: 14 },
+      // 32.4731 E / 37.877 N
+      { nimi: 'Konya', x: 6915.8, y: 1885.6, dx: 9, dy: -1, koko: 14 },
+      // 36.3437 E / 41.28 N
+      { nimi: 'Samsun', x: 7044.8, y: 1752.3, dx: 9, dy: -1, koko: 14 },
+      // 37.383 E / 37.0769 N
+      { nimi: 'Gaziantep', x: 7079.4, y: 1916.4, dx: 9, dy: -1, koko: 12.5 },
+      // 30.698 E / 36.8919 N
+      { nimi: 'Antalya', x: 6856.6, y: 1923.5, dx: 9, dy: -1, koko: 12.5 },
+      // 39.72 E / 40.98 N
+      { nimi: 'Trabzon', x: 7157.3, y: 1764.2, dx: 9, dy: -1, koko: 12.5 },
+      // 35.49 E / 38.735 N
+      { nimi: 'Kayseri', x: 7016.3, y: 1852.3, dx: 9, dy: -1, koko: 12.5 },
+      // 30.53 E / 39.795 N
+      { nimi: 'Eskişehir', x: 6851, y: 1810.9, dx: 9, dy: -1, koko: 12.5 },
+    ],
+  },
+  ZWE: {
+    lauta: 'maailmankartta',
+    kaupungit: [
+      // 31.0428 E / -17.8158 N
+      { nimi: 'Harare', x: 6868.1, y: 3811.6, dx: 9, dy: -1, koko: 14 },
+      // 28.58 E / -20.17 N
+      { nimi: 'Bulawayo', x: 6786, y: 3892.9, dx: 9, dy: -1, koko: 14 },
+      // 32.65 E / -18.97 N
+      { nimi: 'Mutare', x: 6921.7, y: 3851.4, dx: 9, dy: -1, koko: 12.5 },
+      // 29.82 E / -19.45 N
+      { nimi: 'Gweru', x: 6827.3, y: 3867.9, dx: 9, dy: -1, koko: 12.5 },
+      // 29.9099 E / -18.33 N
+      { nimi: 'Kadoma', x: 6830.3, y: 3829.3, dx: 9, dy: -1, koko: 12.5 },
+      // 26.5 E / -18.37 N
+      { nimi: 'Hwange', x: 6716.7, y: 3830.7, dx: 9, dy: -1, koko: 12.5 },
+      // 30.82 E / -20.0596 N
+      { nimi: 'Masvingo', x: 6860.7, y: 3889.1, dx: 9, dy: -1, koko: 12.5 },
+      // 30.18 E / -17.3596 N
+      { nimi: 'Chinhoyi', x: 6839.3, y: 3795.9, dx: 9, dy: -1, koko: 12.5 },
+      // 30.05 E / -20.3296 N
+      { nimi: 'Zvishavane', x: 6835, y: 3898.4, dx: 9, dy: -1, koko: 12.5 },
+    ],
+  },
 };

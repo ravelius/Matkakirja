@@ -490,6 +490,36 @@ function kohteenNimio(ui, kohde) {
   return !nimiJoKartalla(ui, kohde);
 }
 
+/* ============ KARTTANIMI EI OLE AINA KORTIN NIMI (v1224) ===========
+ *
+ * Omistajan havainto Bulgarian lehdeltä 27.8.2026: nimiössä luki
+ * *"Bulgarialainen."* — sanoja, jotka eivät ole minkään paikan nimi.
+ *
+ * Nimiö ei mahduta kartalle kahdeksaatoista merkkiä pidempää nimeä
+ * (js/fokusnosto-symbolit.js NOSTOSYM_NIMIO_MERKKEJA), ja lyhennys jättää
+ * jäljelle kokonaisia sanoja ja lyhennyspisteen, kuten 1800-luvun
+ * atlaksissa. Se on hyvä sääntö silloin, kun nimen ENSIMMÄINEN sana on
+ * itsessään nimi ("Halikarnassoksen." kertoo Halikarnassoksesta), mutta
+ * se hajoaa heti, kun alkusana on määrite: "Bulgarialainen jogurtti"
+ * kutistuu määritteeksi ilman pääsanaa, eikä sitä voi lukea lyhennykseksi
+ * vaan virheeksi.
+ *
+ * MORFOLOGIAA EI YRITETÄ ARVATA. Suomen genetiivin ja adjektiivin ero
+ * ei ratkea säännöllä, jonka voisi luottaa kirjoittavan kartalle oikein
+ * joka maassa. Ratkaisu on siksi DATASSA: kohde saa halutessaan
+ * `nimio`-kentän, joka on sen nimi KARTALLA. Kortin otsikko, hakusanat ja
+ * puhe käyttävät yhä koko nimeä — vain kartta saa lyhyen asun.
+ *
+ * KENTTÄ ON PAKOLLINEN AINA, KUN NIMI EI MAHDU. tests/fokusnimet.test.mjs
+ * käy läpi jokaisen maan jokaisen kohteen ja vaatii, että karttanimi
+ * mahtuu nimiöön sellaisenaan — eli ettei yhdenkään kohteen nimiö pääty
+ * lyhennyspisteeseen. Uuden maan kirjoittaja saa virheen heti eikä vasta
+ * pelitestissä.
+ */
+function kohteenKarttanimi(kohde) {
+  return kohde?.nimio ?? kohde?.nimi;
+}
+
 /* ============ POLTETTU KAUPUNGINNIMI ON MYÖS NAPAUTETTAVA =========
  *
  * Omistaja v1217: Thessaloníkin kortin sai auki vain pikkuruisesta
@@ -509,6 +539,13 @@ function kohteenNimio(ui, kohde) {
  * LIKIARVO RIITTÄÄ. Laatikko on suorakaide nimen ympärillä pienellä
  * marginaalilla; kirjainten alapidennykset ja halon pyöristys jäävät
  * sen sisään. Tarkempi mittaus vaatisi kuvan lukemista pikseleittäin.
+ *
+ * KIRJASIMEN KOKO TULEE RIVILTÄ (v1224). Kuratoitu lehti latoo
+ * kaupunginnimet aina koolla 13,5 (piirto.js 8f), mutta yleisen reitin
+ * lehti valitsee kahdesta Natural Earthin SCALERANKin mukaan: 14 tai
+ * 12,5 (piirto.js 8g). Rivin `koko` kertoo kumpi — ilman sitä laatikko
+ * olisi joka toisella nimellä kahdeksan prosenttia väärän levyinen.
+ * Puuttuva kenttä tarkoittaa kuratoitua 13,5:tä.
  */
 const KOHDE_POLTETTU_PROTO = 1600;
 const KOHDE_POLTETTU_KOKO = 13.5;
@@ -517,29 +554,31 @@ const KOHDE_POLTETTU_FONTTI = '"Liberation Serif", serif';
 /** Marginaali laatikon joka reunaan, prototyyppipikseleitä. */
 const KOHDE_POLTETTU_VARA = 3;
 /** Puolikas rivikorkeus: perusviiva on keskellä (piirto.js textBaseline). */
-const KOHDE_POLTETTU_PUOLIKAS = KOHDE_POLTETTU_KOKO * 0.62;
+const KOHDE_POLTETTU_PUOLIKAS = 0.62;
 
 let KOHDE_NIMIMITTA = null;
 const KOHDE_NIMILEVEYDET = new Map();
 
 /**
- * Poltetun nimen leveys prototyyppipikseleinä.
+ * Poltetun nimen leveys prototyyppipikseleinä annetulla kirjasinkoolla.
  *
  * Mitta otetaan MONINKERTAISENA ja jaetaan takaisin, koska 13,5
  * pikselin kirjasin pyöristyy canvasilla karkeasti — sama kikka ja
- * sama syy kuin nimiöiden mittauksessa.
+ * sama syy kuin nimiöiden mittauksessa. Välimuistin avaimessa on koko
+ * mukana: sama nimi eri koolla on eri levyinen.
  */
-function poltetunNimenLeveys(nimi) {
+function poltetunNimenLeveys(nimi, koko) {
   if (typeof document === 'undefined') return 0;
-  let leveys = KOHDE_NIMILEVEYDET.get(nimi);
+  const avain = `${koko}|${nimi}`;
+  let leveys = KOHDE_NIMILEVEYDET.get(avain);
   if (leveys === undefined) {
     const kerroin = 8;
     KOHDE_NIMIMITTA ??= document.createElement('canvas').getContext('2d');
-    KOHDE_NIMIMITTA.font = `${KOHDE_POLTETTU_KOKO * kerroin}px ${KOHDE_POLTETTU_FONTTI}`;
+    KOHDE_NIMIMITTA.font = `${koko * kerroin}px ${KOHDE_POLTETTU_FONTTI}`;
     const merkit = [...nimi];
     leveys = merkit.reduce((s, m) => s + KOHDE_NIMIMITTA.measureText(m).width, 0) / kerroin
       + KOHDE_POLTETTU_VALI * Math.max(0, merkit.length - 1);
-    KOHDE_NIMILEVEYDET.set(nimi, leveys);
+    KOHDE_NIMILEVEYDET.set(avain, leveys);
   }
   return leveys;
 }
@@ -563,13 +602,14 @@ function kaupunginNimiLaatikko(ui, kohde) {
     && Math.abs(a.y - paikka.y) <= KOHDE_SAMA_PISTE);
   if (!poltettu?.nimi) return null;
   const proto = rajaus.w / KOHDE_POLTETTU_PROTO;
-  const leveys = poltetunNimenLeveys(poltettu.nimi);
+  const koko = poltettu.koko ?? KOHDE_POLTETTU_KOKO;
+  const leveys = poltetunNimenLeveys(poltettu.nimi, koko);
   if (!(leveys > 0)) return null;
   const ax = poltettu.x + (poltettu.dx ?? 9) * proto;
   const ay = poltettu.y + (poltettu.dy ?? 0) * proto;
   const alku = poltettu.ank === 'end' ? ax - leveys * proto : ax;
   const vara = KOHDE_POLTETTU_VARA * proto;
-  const puolikas = KOHDE_POLTETTU_PUOLIKAS * proto;
+  const puolikas = koko * KOHDE_POLTETTU_PUOLIKAS * proto;
   return {
     x1: alku - vara - paikka.x,
     x2: alku + leveys * proto + vara - paikka.x,
@@ -712,7 +752,9 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
        * eikä ahtaaseen ryppääseen synny turhaa nimiöllistä rasteria.
        */
       tietue.glyyfi = glyyfi;
-      tietue.nimi = kohde.nimi;
+      // Kartan nimi, ei kortin (kohteenKarttanimi): väistöpassi mittaa
+      // samaa tekstiä, joka merkin perään ladotaan.
+      tietue.nimi = kohteenKarttanimi(kohde);
       tietue.symboli = symboli;
       tietue.laji = kohde.tyyppi;
       tietue.nimioNakyy = !ui.fokuskohdePiiloNimiot?.has(kohde.id);
@@ -727,7 +769,8 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
      * vuorelle poltettu kolmio, ja meren nimiö ladotaan harvennettuna
      * kapiteelina kuten lehteen poltettu EGEANMERI.
      */
-    piirraNostosymKartalle(glyyfi, symboli, tietue.nimioNakyy ? kohde.nimi : '',
+    piirraNostosymKartalle(glyyfi, symboli,
+      tietue.nimioNakyy ? kohteenKarttanimi(kohde) : '',
       kohde.tyyppi, tietue.nimioVasemmalle);
   } else {
     el('circle', { class: 'fokuskohde-halo', r: KOHDE_HALO_R }, g);

@@ -266,6 +266,9 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'capri',
     nimi: 'Capri ja Sininen luola',
+    // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
+    // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
+    nimio: 'Capri',
     tyyppi: 'saari',
     kysymykset: [
       'Miten luolaan pääsee sisään?',

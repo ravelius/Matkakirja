@@ -1049,8 +1049,15 @@ const NOSTOSYM_NIMIO_MERKKEJA = 18;
  * Rinnastus katkaistaan kokonaan — "Pamukkale ja Hierapolis" on
  * kartalla "Pamukkale.", koska puolikas rinnastus lukisi virheeltä.
  * Kokonaiset sanat säilyvät: kartta ei katkaise kesken sanan.
+ *
+ * VIETY ULOS TESTIÄ VARTEN (v1224). tests/fokusnimet.test.mjs vaatii,
+ * ettei yhdenkään fokuskohteen karttanimi joudu tämän läpi muuttuneena:
+ * lyhennys on hyvä hätävara, mutta se hajoaa nimillä, joiden alkusana on
+ * määrite ("Bulgarialainen jogurtti" → "Bulgarialainen."). Silloin
+ * kohteelle kirjoitetaan oma `nimio` (js/fokuskohteet.js
+ * kohteenKarttanimi), ja testi katsoo että se on tehty.
  */
-function nostosymLyhennaNimio(nimi) {
+export function nostosymLyhennaNimio(nimi) {
   const siisti = String(nimi ?? '').trim().replace(/\s+/g, ' ');
   if (!siisti || siisti.length <= NOSTOSYM_NIMIO_MERKKEJA) return siisti;
   const sanat = siisti.split(' ');

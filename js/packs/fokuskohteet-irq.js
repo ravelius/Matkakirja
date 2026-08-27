@@ -56,6 +56,9 @@ export const FOKUSKOHTEET_IRQ = [
   {
     id: 'babylonin-puutarhat',
     nimi: 'Babylonin riippuvat puutarhat',
+    // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
+    // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
+    nimio: 'Riippupuutarhat',
     tyyppi: 'muu',
     symboli: 'historia',
     kysymykset: [
@@ -210,6 +213,9 @@ export const FOKUSKOHTEET_IRQ = [
      */
     id: 'niniven-lounaispalatsi',
     nimi: 'Sanheribin lounaispalatsi',
+    // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
+    // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
+    nimio: 'Sanheribin palatsi',
     tyyppi: 'muu',
     symboli: 'historia',
     kysymykset: [

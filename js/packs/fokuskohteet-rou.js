@@ -466,6 +466,9 @@ export const FOKUSKOHTEET_ROU = [
   {
     id: 'sarmizegetusa',
     nimi: 'Sarmizegetusa Regia',
+    // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
+    // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
+    nimio: 'Sarmizegetusa',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
     tyyppi: 'muu',
