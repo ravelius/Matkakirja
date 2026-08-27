@@ -85,8 +85,8 @@ export const KAARI_PAKETIT = {
         + 'vertaamassa. Vastaa hänen kysymykseensä, niin soudan sinut '
         + 'kasvojen luo."',
       kysymys: {
-        q: 'Säiliön pylvään alla lepää kivinen Medusan pää ylösalaisin. '
-          + 'Miksi se tarun mukaan käännettiin?',
+        q: 'Säiliön pylvään jalustana lepää kivinen Medusan pää '
+          + 'ylösalaisin. Mitä tarina kertoo syyksi?',
         vaihtoehdot: [
           'Jotta kivettävä katse ei osuisi keneenkään',
           'Jotta pylväästä tulisi tukevampi',
@@ -94,9 +94,12 @@ export const KAARI_PAKETIT = {
           'Sulttaani halusi piilottaa kasvot',
         ],
         oikea: 0,
-        fakta: 'Medusan katseen sanottiin muuttavan ihmisen kiveksi — '
-          + 'ylösalaisin käännettynä katse painuu maahan. Toinen pää '
-          + 'makaa kyljellään samasta syystä.',
+        fakta: 'Tarinan mukaan Medusan katse muutti katsojan kiveksi, ja '
+          + 'ylösalaisin käännettynä katse painuu maahan; toinen pää makaa '
+          + 'kyljellään. Varmaa syytä ei tiedetä — tutkijat pitävät päitä '
+          + 'vanhemmasta roomalaisesta rakennuksesta otettuna '
+          + 'kierrätyskivenä, jolloin asento määräytyi sen mukaan, miten '
+          + 'kivi sopi jalustaksi.',
       },
       aarre: 'Kätkö nousi vedestä. "Isoisoäitini kirjoitti kirjaan, '
         + 'kumpi kasvoista on vartija ja kumpi vanki — se sivu on '
