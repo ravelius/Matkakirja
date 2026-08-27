@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1200';
+const CACHE = 'matkakirja-2026-08-09.1201';
 const SHELL = [
   './',
   './index.html',
@@ -188,9 +188,12 @@ const SHELL = [
   './js/packs/fokusvirta-bukarest.js',
   './js/packs/fokuskohteet-bih.js',
   './js/packs/fokusvirta-sarajevo.js',
-  // Maat ilman omaa fokusvirtaa: kadonneiden ihmeiden erä 26.8.2026.
+  // Maat ilman omaa fokusvirtaa: kadonneiden ihmeiden erä 26.8.2026
+  // ja Matkakirjan ihmeiden Euroopan erä 27.8.2026.
   './js/packs/fokuskohteet-egy.js',
   './js/packs/fokuskohteet-irq.js',
+  './js/packs/fokuskohteet-fra.js',
+  './js/packs/fokuskohteet-gbr.js',
   './js/packs/paivan-kuvat.js',
   './js/packs/uutislahteet.js',
   './js/packs/pollo-asetukset.js',
@@ -641,6 +644,10 @@ const SHELL = [
   './assets/kartat/ihmeet/ihme-parthenon.webp',
   './assets/kartat/ihmeet/ihme-rodoksen-kolossi.webp',
   './assets/kartat/ihmeet/ihme-zeuksen-patsas.webp',
+  // Euroopan erä 27.8.2026: kolme kadonnutta eurooppalaista.
+  './assets/kartat/ihmeet/ihme-forum-romanum.webp',
+  './assets/kartat/ihmeet/ihme-tuileries.webp',
+  './assets/kartat/ihmeet/ihme-vanha-st-paul.webp',
   // Lippuikkunan versioliput (pilotti Suomi + Saksa, v711).
   './assets/liput/versiot/fin-valtiolippu.png',
   './assets/liput/versiot/fin-sotalippu.png',

@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'Kolme uutta ihmetta: Tuileries (tahti Pariisissa), Vanha St Paul ja Forum Romanum (Koe ihme) — Pariisi ja Lontoo saivat ensimmaiset fokuskohteensa',
   'Periaateikkuna: VVI tekijana, uusi Tekoaly apuna -osio, copyright Visuaaliviestinnan Instituutti Tampere Oy (myos README, LICENSE, lahteet)',
   'Kuvatekstiremontti VALMIS: paatoserä Chennai ja Mumbai (20 selitetta); koko 1133 selitteen tiedosto noudattaa nyt saantoa kuvateksti kertoo kohteesta',
   'Karttasymbolit: luonto nyt vuori+puu+aalto varein, tekniikka hoyryveturi (ei ratasta), kaupunki yksi porttitorni viirilla; Psiloritis-vuori Kreetalla klikattavissa',

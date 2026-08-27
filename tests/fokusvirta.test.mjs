@@ -455,6 +455,10 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
     TUR: (await import('../js/packs/fokuskohteet-tur.js')).FOKUSKOHTEET_TUR,
     EGY: (await import('../js/packs/fokuskohteet-egy.js')).FOKUSKOHTEET_EGY,
     IRQ: (await import('../js/packs/fokuskohteet-irq.js')).FOKUSKOHTEET_IRQ,
+    // Euroopan erä 27.8.2026: Forum Romanum, Tuileries ja vanha St Paul.
+    ITA: (await import('../js/packs/fokuskohteet-ita.js')).FOKUSKOHTEET_ITA,
+    FRA: (await import('../js/packs/fokuskohteet-fra.js')).FOKUSKOHTEET_FRA,
+    GBR: (await import('../js/packs/fokuskohteet-gbr.js')).FOKUSKOHTEET_GBR,
   });
 
   let ihmeita = 0;
@@ -513,7 +517,12 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
       }
     }
   }
-  assert.equal(ihmeita, 10, 'ensimmäisessä erässä on kymmenen Matkakirjan ihmettä');
+  /*
+   * KYMMENEN + KOLME. Ensimmäinen erä (26.–27.8.2026) oli antiikin
+   * kadonneet ihmeet, Euroopan erä (27.8.2026) toi kolme lisää:
+   * Forum Romanum, Tuileries'n palatsi ja keskiaikainen St Paul.
+   */
+  assert.equal(ihmeita, 13, 'Matkakirjan ihmeitä on kolmetoista');
 });
 
 /*
@@ -530,7 +539,7 @@ test('ihmeiden kuvakansiossa on vain uudet ihme-kuvat', async () => {
   const juuri = join(dirname(fileURLToPath(import.meta.url)), '..');
   const kansio = join(juuri, 'assets/kartat/ihmeet');
   const tiedostot = readdirSync(kansio);
-  assert.equal(tiedostot.length, 10, 'kansiossa on kymmenen ihmekuvaa');
+  assert.equal(tiedostot.length, 13, 'kansiossa on kolmetoista ihmekuvaa');
   for (const nimi of tiedostot) {
     assert.ok(nimi.startsWith('ihme-'), `${nimi}: vanha loistoaikakuva on yhä levyllä`);
   }
@@ -553,4 +562,20 @@ test('kadonnut ihme saa kartalle tähden, olemassa oleva pitää oman merkkinsä
   assert.equal(knossos.ihme.kadonnut, false, 'Knossoksen rauniot ovat tallella');
   assert.equal(kolossi.kuva, undefined, 'kadonneella ei ole valokuvaa');
   assert.ok(knossos.kuva?.tiedosto, 'olemassa olevalla on valokuva nykytilasta');
+
+  /*
+   * EUROOPAN ERÄ 27.8.2026, kumpikin esitystapa kerran. Tuileries on
+   * purettu 1883 → tähti ja pelkkä ihmekuva. St Paulin katedraali on
+   * paikallaan, mutta ihmekuvassa on sen EDELTÄJÄ — siksi selitteen on
+   * sanottava se, tai kuva väittäisi väärää rakennusta.
+   */
+  const { FOKUSKOHTEET_FRA } = await import('../js/packs/fokuskohteet-fra.js');
+  const { FOKUSKOHTEET_GBR } = await import('../js/packs/fokuskohteet-gbr.js');
+  const tuileries = FOKUSKOHTEET_FRA.find((k) => k.id === 'tuileries');
+  const stPaul = FOKUSKOHTEET_GBR.find((k) => k.id === 'st-paulin-katedraali');
+  assert.equal(tuileries.ihme.kadonnut, true, 'Tuileries purettiin 1883');
+  assert.equal(tuileries.kuva, undefined, 'puretusta palatsista ei ole valokuvaa');
+  assert.equal(stPaul.ihme.kadonnut, false, 'Ludgate Hillin katedraali on paikallaan');
+  assert.ok(/EDELTÄJÄ/.test(stPaul.ihme.selite),
+    'vanhan St Paulin selite kertoo kuvan olevan nykyisen edeltäjä');
 });

@@ -98,6 +98,8 @@ import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-val
 import { FOKUSKOHTEET_BGR } from './packs/fokuskohteet-bgr.js';
 import { FOKUSKOHTEET_BIH } from './packs/fokuskohteet-bih.js';
 import { FOKUSKOHTEET_EGY } from './packs/fokuskohteet-egy.js';
+import { FOKUSKOHTEET_FRA } from './packs/fokuskohteet-fra.js';
+import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_IRQ } from './packs/fokuskohteet-irq.js';
 import { FOKUSKOHTEET_ITA } from './packs/fokuskohteet-ita.js';
 import { FOKUSKOHTEET_ROU } from './packs/fokuskohteet-rou.js';
@@ -134,6 +136,16 @@ const KOHDE_MAAT = {
    */
   EGY: FOKUSKOHTEET_EGY,
   IRQ: FOKUSKOHTEET_IRQ,
+  /*
+   * Ranska ja Britannia tulivat mukaan 27.8.2026 Matkakirjan ihmeiden
+   * EUROOPAN erän takia: Tuileries'n palatsi ja keskiaikainen St Paul
+   * olisivat muuten jääneet ilman maata. Ehto on sama kuin Egyptillä ja
+   * Irakilla — kummankin lehti on jo ämpärissä (FRA.webp, GBR.webp),
+   * joten merkit saavat pohjan, jonka päälle asettua. Erän kolmas ihme,
+   * Forum Romanum, mahtui jo olemassa olevaan Italian listaan.
+   */
+  FRA: FOKUSKOHTEET_FRA,
+  GBR: FOKUSKOHTEET_GBR,
 };
 
 /** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta). */
