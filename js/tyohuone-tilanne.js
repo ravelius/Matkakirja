@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'Budapestin Sankarien aukion juttu: 85 m koskee koko puoliympyraa; museot ja Unesco-maininta lisatty; kuvatekstit uuteen saantoon',
   'Kappadokian lehden avauskuvat: kolme uutta havainnekuvaa (Goreme, Ortahisar, Selime) selitteineen',
   'Lentoaani: kabiinin aani alkaa heti napautuksesta ja kovempaa; nippupisteisiin ohuet katkoviivat kaupungista; maailmannakyman karttasauma haivytetty',
   'v1178: Matkakirjakortti pitaa uuden tarinatekstin myos laatan ratkettua (Kreikan oliivit+kolme vuorta -vanhateksti ei enaa palaa; koskee kaikkia kuutta Sofia-mallin maata). Testaa: ratkaise Ateenan laatta, poistu ja palaa - kortissa pysyy uusi teksti.',
