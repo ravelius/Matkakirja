@@ -93,7 +93,8 @@
 import { el, maare } from './mapart.js';
 import {
   NOSTOSYM_LUOKAT, NOSTOSYM_R, NOSTOSYM_TYYPIT,
-  nostosymAsetaPorras, piirraNostosymKartalle, piirraNostosymboli,
+  nostosymAsetaPorras, nostosymNimioLaatikko,
+  piirraNostosymKartalle, piirraNostosymboli,
 } from './fokusnosto-symbolit.js';
 import { asetaKuva } from './media.js';
 import { html, jaaKappaleiksi, nielaiseSulkevaNapautus } from './ui-apurit.js';
@@ -115,7 +116,7 @@ import { FOKUSKOHTEET_SYR } from './packs/fokuskohteet-syr.js';
 import { FOKUSKOHTEET_TUR } from './packs/fokuskohteet-tur.js';
 import { FOKUSKOHTEET_ZWE } from './packs/fokuskohteet-zwe.js';
 import { FOKUSKOHTEET_GRC } from './packs/fokuskohteet-grc.js';
-import { niputaFokusmerkit } from './fokusniput.js';
+import { niputaFokusmerkit, nippuAsettelunVersio } from './fokusniput.js';
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
 
@@ -460,7 +461,7 @@ const KOHDE_SYMBOLI_R = NOSTOSYM_R * KOHDE_SYMBOLI_SKAALA;
  * musteympyrä on tarkoituksella mykkä: nimiö tekisi jokaisesta
  * pisteestä nimilapun ja veisi merkiltä sen "tässä on jotain" -luonteen.
  */
-function piirraKohdemerkki(ui, ryhma, kohde) {
+function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
   const g = el('g', { class: `fokuskohde fokuskohde-${kohde.tyyppi ?? 'muu'}` }, ryhma);
   g.dataset.kohde = kohde.id;
   g.setAttribute('role', 'button');
@@ -486,11 +487,21 @@ function piirraKohdemerkki(ui, ryhma, kohde) {
       class: 'fokuskohde-symboli',
       transform: `scale(${KOHDE_SYMBOLI_SKAALA.toFixed(4)})`,
     }, g);
-    piirraNostosymKartalle(
-      el('g', { class: 'fokuskohde-glyyfi' }, sisus),
-      symboli,
-      kohteenNimio(kohde) ? kohde.nimi : '',
-    );
+    const glyyfi = el('g', { class: 'fokuskohde-glyyfi' }, sisus);
+    if (kohteenNimio(kohde)) {
+      /*
+       * NIMIÖN TILA ON VÄISTÖPASSIN PÄÄTÖS (paivitaKohdeNimiot), joka
+       * ajetaan heti tämän rakennuksen perään. Ensipiirto käyttää
+       * EDELLISEN passin päätöstä arvauksena: kun merkit rakennetaan
+       * uusiksi pelkän rasteriportaan takia, geometria ei ole muuttunut
+       * eikä ahtaaseen ryppääseen synny turhaa nimiöllistä rasteria.
+       */
+      tietue.glyyfi = glyyfi;
+      tietue.nimi = kohde.nimi;
+      tietue.symboli = symboli;
+      tietue.nimioNakyy = !ui.fokuskohdePiiloNimiot?.has(kohde.id);
+    }
+    piirraNostosymKartalle(glyyfi, symboli, tietue.nimioNakyy ? kohde.nimi : '');
   } else {
     el('circle', { class: 'fokuskohde-halo', r: KOHDE_HALO_R }, g);
     el('circle', { class: 'fokuskohde-rengas', r: KOHDE_RENGAS_R }, g);
@@ -650,6 +661,129 @@ function asetaKohdeMittakaava(ui, suhde) {
   }
 }
 
+/* ============ NIMIÖIDEN VÄISTÖ AHTAISSA RYPPÄISSÄ =================
+ *
+ * Omistajan siistintätilaus 27.8.2026 (v1207:n jälkeen, Kreikan lehti,
+ * Ateenan seutu): merkkien perään ladotut nimiöt (v1207, läpinäkyvä
+ * mustetyyli) menivät tiheissä ryppäissä toistensa ja naapurisymbolien
+ * päälle, ja kartasta tuli nimikasa.
+ *
+ * ── SÄÄNTÖ ────────────────────────────────────────────────────────
+ *
+ * SYMBOLI NÄKYY AINA, VAIN NIMIÖ VÄISTYY. Merkki on kartan tieto —
+ * "tässä on jotain, ja tätä lajia" — ja sen osuma-alue (KOHDE_OSUMA_R)
+ * on sormen mitta; kumpaakaan ei kosketa. Nimi on lisäselite, ja
+ * napautus kertoo sen joka tapauksessa kortin otsikkona.
+ *
+ * NIMIÖ JÄÄ POIS, JOS SEN LAATIKKO OSUISI toisen merkin symboliin tai
+ * jo hyväksyttyyn nimiöön. Laatikko on sama kaista, johon nimiö
+ * rasterissa ladotaan (js/fokusnosto-symbolit.js nostosymNimioLaatikko)
+ * — väistö mittaa siis juuri sitä mustetta, joka kartalle piirtyy.
+ *
+ * ── MIKSI EI ZOOMIPORTAITTAISTA PALJASTUSTA ───────────────────────
+ *
+ * Ensimmäinen ajatus oli näyttää piilotetut nimiöt lähemmällä
+ * zoomilla. Se ei tässä kartassa toimi, ja syy on merkkien omassa
+ * linjauksessa: merkit elävät KARTAN MITTAKAAVASSA (omistajan
+ * LOPULLINEN linjaus 26.8.2026), eli merkki, nimiö ja niiden välimatka
+ * kasvavat lähennettäessä yhdessä. Rypäs näyttää joka zoomilla
+ * täsmälleen samalta, vain suurempana — limitys ei siis aukene
+ * lähentämällä, ja "paljastus" olisi sama nimikasa isompana.
+ * Zoomiportaista riippuu vain rasterin TARKKUUS (NOSTOSYM_PORTAAT),
+ * ei asettelu.
+ *
+ * ── DETERMINISTINEN JÄRJESTYS ─────────────────────────────────────
+ *
+ * Nimiöt käydään läpi DATAN JÄRJESTYKSESSÄ (js/packs/fokuskohteet-*.js),
+ * ja ensimmäisenä listattu voittaa. Järjestys on kirjoittajan oma —
+ * lehden pääkohteet on listattu ensin — eikä se riipu näkymästä,
+ * satunnaisuudesta tai piirtojärjestyksestä. Sama lehti antaa siis
+ * aina saman kartan, eikä nimiö voi vilkkua panoroinnissa.
+ *
+ * KIERTÄVÄLLÄ LAUDALLA PÄÄTÖS ON KOHTEEN, EI KOPION: jos kohteen
+ * jommankumman kopion nimiö törmää, nimiö jää pois molemmista. Muuten
+ * sauman kahta puolta olisivat saman kohteen erinäköiset merkit.
+ *
+ * ── EI JOKA KEHYKSELLE ────────────────────────────────────────────
+ *
+ * Passi ajetaan vain paivitaFokuskohteet-kutsusta eli näkymän
+ * asetuttua — ei nipistyksen vastaskaalauksesta (js/kartta.js
+ * vastaskaalaaMerkit), jonka kehysbudjetti on kireimmillään. Lisäksi
+ * tulos on välimuistissa avaimen takana: kohdejoukko, merkkien
+ * vakioskaala ja nippuasettelun versio (js/fokusniput.js). Kun mikään
+ * niistä ei muuttunut, passi ei laske eikä kirjoita mitään.
+ */
+
+/**
+ * Väljyysvara nimiön ympärille ruudun pikseleinä lehden perustasolla.
+ * Nolla hyväksyisi nimiön, joka juuri sipaisee naapurin reunaa; pari
+ * pikseliä pitää kaistan väljänä ilman että se hylkää nimiöitä turhaan.
+ */
+const KOHDE_NIMIO_VARA = 2;
+
+/** Laatikot laudan koordinaateissa. Kosketus ei ole vielä limitystä. */
+function kohdeLimittyy(a, b) {
+  return a.x1 < b.x2 && b.x1 < a.x2 && a.y1 < b.y2 && b.y1 < a.y2;
+}
+
+function paivitaKohdeNimiot(ui, s) {
+  const ryhmat = ui.fokuskohdeRyhmat ?? [];
+  if (!ryhmat.length) return;
+  const avain = `${ui.fokuskohdeAvain}|${s.toFixed(4)}|${nippuAsettelunVersio()}`;
+  if (ui.fokuskohdeNimioAvain === avain) return;
+  ui.fokuskohdeNimioAvain = avain;
+  // Kirjaston yksikkö laudan yksiköiksi — sama ketju kuin piirrossa:
+  // merkin oma kutistus ja merkkien vakioskaala.
+  const k = KOHDE_SYMBOLI_SKAALA * s;
+  const vara = KOHDE_NIMIO_VARA * s;
+  const paikat = ryhmat.map((r) => ({
+    x: r.nippu?.x ?? r.x + (r.sx ?? 0),
+    y: r.nippu?.y ?? r.y + (r.sy ?? 0),
+  }));
+  // Symbolit ovat esteitä KAIKKI — myös niiden merkkien, joiden oma
+  // nimiö jää pois, ja niiden, joilla ei nimiötä koskaan ollutkaan.
+  const symbolit = paikat.map(({ x, y }) => ({
+    x1: x - KOHDE_SYMBOLI_R * s - vara, x2: x + KOHDE_SYMBOLI_R * s + vara,
+    y1: y - KOHDE_SYMBOLI_R * s - vara, y2: y + KOHDE_SYMBOLI_R * s + vara,
+  }));
+  // Kohteittain, ei kopioittain: kiertävän laudan kopiot samaan riviin.
+  const jono = new Map();
+  ryhmat.forEach((r, i) => {
+    if (!r.glyyfi || !r.nimi) return;
+    const laatikko = nostosymNimioLaatikko(r.nimi, r.g?.ownerSVGElement);
+    if (!laatikko) return;
+    const rivi = jono.get(r.id) ?? { indeksit: [], kehykset: [] };
+    rivi.indeksit.push(i);
+    rivi.kehykset.push({
+      x1: paikat[i].x + laatikko.x1 * k, x2: paikat[i].x + laatikko.x2 * k + vara,
+      y1: paikat[i].y + laatikko.y1 * k, y2: paikat[i].y + laatikko.y2 * k,
+    });
+    jono.set(r.id, rivi);
+  });
+  const varatut = [];
+  const piilossa = new Set();
+  for (const [id, rivi] of jono) {
+    const osuu = rivi.kehykset.some((kehys, n) => symbolit
+      .some((sym, j) => j !== rivi.indeksit[n] && kohdeLimittyy(kehys, sym))
+      || varatut.some((varattu) => kohdeLimittyy(kehys, varattu)));
+    if (osuu) piilossa.add(id);
+    else varatut.push(...rivi.kehykset);
+  }
+  // Päätös jää muistiin seuraavan rakennuksen arvaukseksi.
+  ui.fokuskohdePiiloNimiot = piilossa;
+  for (const r of ryhmat) {
+    if (!r.glyyfi || !r.nimi) continue;
+    const nakyy = !piilossa.has(r.id);
+    if (r.nimioNakyy === nakyy) continue;
+    r.nimioNakyy = nakyy;
+    // Nimiö on paistettu rasteriin, joten tila vaihtuu piirtämällä
+    // merkki uudestaan. Nimiötön rasteri on symbolikohtainen ja siksi
+    // yhteinen kaikille saman lajin vaienneille merkeille.
+    r.glyyfi.replaceChildren();
+    piirraNostosymKartalle(r.glyyfi, r.symboli, nakyy ? r.nimi : '');
+  }
+}
+
 /**
  * RASTERIN TARKKUUSPORRAS NÄKYMÄN MUKAAN (omistajan lisätilaus
  * 27.8.2026; js/fokusnosto-symbolit.js nostosymAsetaPorras).
@@ -701,8 +835,11 @@ export function paivitaFokuskohteet(ui) {
       // voi napauttaa mitään (ks. tiedoston alku, sääntö 1).
       for (const x of ui.kiertoKohdat?.(paikka.x) ?? [paikka.x]) {
         const ryhma = el('g', { class: 'fokuskohde-ryhma' }, kerros);
-        ui.fokuskohdeRyhmat.push({ g: ryhma, x, y: paikka.y });
-        merkit.push(piirraKohdemerkki(ui, ryhma, kohde));
+        // Tietue kantaa myös nimiöväistön tarpeet (paivitaKohdeNimiot):
+        // kohteen tunnus, glyyfiryhmä ja nimiön nykyinen tila.
+        const tietue = { g: ryhma, x, y: paikka.y, id: kohde.id };
+        ui.fokuskohdeRyhmat.push(tietue);
+        merkit.push(piirraKohdemerkki(ui, ryhma, kohde, tietue));
       }
       ui.fokuskohdeMerkit.set(kohde.id, merkit);
     }
@@ -735,6 +872,14 @@ export function paivitaFokuskohteet(ui) {
    */
   paivitaNakyvyys(ui, kerros, nakyva);
   asetaKohdeMittakaava(ui, 1);
+  /*
+   * NIMIÖIDEN VÄISTÖ VASTA TÄSSÄ eli asemoinnin jälkeen ja vain
+   * levossa: passi lukee merkkien lopulliset paikat (myös nipun) ja
+   * jää muuten välimuistin taakse. Nipistyksen vastaskaalaus ei kutsu
+   * sitä lainkaan — ks. osio NIMIÖIDEN VÄISTÖ.
+   */
+  const merkkiSkaala = ui.fokusMerkkiSkaala?.();
+  if (merkkiSkaala > 0) paivitaKohdeNimiot(ui, merkkiSkaala);
   // Rekisteröinti nipistykseen jää (js/kartta.js vastaskaalaaMerkit),
   // vaikka vakioskaala ei enää tarvitse vastaskaalaa: varapolku
   // (lehdetön näkymä) on yhä ruutumitassa ja tarvitsee sen.

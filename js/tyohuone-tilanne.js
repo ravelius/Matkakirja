@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1211: Symbolinimiot vaistavat ahtaissa ryppaissa (esim. Ateenan seutu) - paallekkain osuva nimio jaa pois, symboli nakyy aina; tarkista ettei nimioita puutu harvoilta alueilta eika mikaan limity',
   'v1210: Kreikan lehdesta pudotettu karttaan poltetut vuori- ja merinimet (symbolinimiot nimeavat nyt yksin) - tarkista ettei Olympos/Egeanmeri tuplaudu ja etta kartta latautuu oikein',
   'v1209: 14 uutta ihmetta (mm. Bastilji, Crystal Palace, Hippodromi, Gizan pyramidi, Petra, Persepolis, Bamiyan) - kadonneilla tahtisymboli ja suoraan avautuva kuva, olemassa olevilla Koe ihme -nappi kuvan alla',
   'v1208: Scrollauksen sujuvuuskorjaus - panorointi ja nipistys eivat saisi enaa tokkia (kompositorikerrokset purettu, jumiin jaanyt nipistys ei enaa sammuta panorointia); testaa fokusnakymassa pitkaan',
