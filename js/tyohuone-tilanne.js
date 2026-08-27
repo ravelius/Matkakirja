@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'Kuvatekstiremontti era 4: Dubrovnikin, Riian, Vilnan, Oslon, Kobenhavnin, Jerusalemin, Dubain, Petran, Medinan ja Mekan selitteet uuteen saantoon',
   'Lippusivut era 11: Angola, Namibia, Etela-Afrikka, Zimbabwe, Mosambik, Madagaskar, Tansania, Kenia, Uganda, Somalia, Etiopia, Sudan ja Etela-Sudan (105/116)',
   'Kuvatekstiremontti era 2: Ateenan, Amsterdamin, Dublinin, Istanbulin, Marseillen, Edinburghin, Lissabonin, Barcelonan, Granadan, Rooman, Krakovan ja Varsovan selitteet uuteen saantoon',
   'Matkakirjan ihmeet: 10 nykyaikakuvaa nauhalla; tahtisymboli kartalla kadonneilla (esim. Rodoksen kolossi), Koe ihme -nappi olemassa olevilla (esim. Knossos); suurennoksen kaatuminen repo-kuvilla korjattu',

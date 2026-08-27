@@ -1062,9 +1062,13 @@ export const RAAMATTU = {
           + '("Matkakirjan ihme" tms.) pelin kartuutsityylillä — '
           + 'peli piirtää nauhan kuvan päälle, sitä ei polteta '
           + 'kuvatiedostoon.',
-        'Kuvat generoidaan API-työnkulkuina (generoi-ihmeet.yml) '
-          + 'ja jokainen tarkistetaan silmin ennen peliä; kuvissa '
-          + 'ei tekstiä eikä vesileimaa, ja lähteeksi merkitään '
+        'GENEROINTIKANAVA (omistaja 27.8.2026): uudet ihmekuvat '
+          + 'generoidaan herokuvien tapaan ChatGPT:n '
+          + 'käyttöliittymässä — Fable antaa promptit, omistaja '
+          + 'generoi ja vie kuvat Drive-kansioon, Fable noutaa ja '
+          + 'tarkistaa silmin ennen peliä. API-työnkulku '
+          + '(generoi-ihmeet.yml) jää varakanavaksi. Kuvissa ei '
+          + 'tekstiä eikä vesileimaa, ja lähteeksi merkitään '
           + 'Matkakirjan havainnekuva.',
       ],
     },

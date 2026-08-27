@@ -8440,22 +8440,24 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Dusk Carresed the Tower Fondly (27368304931).jpg',
-          selite: 'Minčetan pyöreä puolustustorni kaupunginmuurin päällä '
-            + 'lämpimässä ilta-auringossa, taivaalla ohut '
-            + 'suihkuvanajuova.',
+          selite: 'Torni sai pyöreän muotonsa 1400-luvulla, kun osmanien uhka '
+            + 'pakotti Dubrovnikin vahvistamaan muurejaan — muuria on '
+            + 'paikoin kuusi metriä.',
           lahde: 'Los Paseos, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Minceta Fortress, Dubrovnik, 16th century (2) (30113651035).jpg',
-          selite: 'Minčetan torni alhaalta viistosti kuvattuna, harmaa '
-            + 'hammastettu muuri kirkasta sinistä taivasta vasten.',
+          selite: 'Torni kohoaa Dubrovnikin korkeimmalla kukkulalla, ja sen '
+            + 'muurien sisään rakennetuista ampuma-aukoista tykit '
+            + 'osoittivat kaupungin ulkopuolelle.',
           lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Ludwig Hans Fischer Dubrovnik Minčeta-Festung.jpg',
-          selite: 'Itävaltalaisen taidemaalari Ludwig Hans Fischerin '
-            + 'akvarelli Minčetan tornista kukkivan puutarhan takaa, '
-            + 'maalattu ennen vuotta 1915.',
+          selite: 'Kun itävaltalainen Ludwig Hans Fischer maalasi tornin ennen '
+            + 'vuotta 1915, siitä oli jo tullut kaupungin '
+            + 'voittamattomuuden vertauskuva: 1800-luvun alun sodissa '
+            + 'vihollisten tykit eivät saaneet sitä kaatumaan.',
           lahde: 'Ludwig Hans Fischer, Wikimedia Commons (Public domain)',
         },
       ],
@@ -8487,16 +8489,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Dubrovnik Pile (33547873443).jpg',
-          selite: 'Pilen portti ja sen edessä oleva kivinen silta '
-            + 'aurinkoisena päivänä, Kroatian lippu liehuu tornissa ja '
-            + 'pieni ihmisjoukko kävelee sillalla.',
+          selite: 'Pilen portti ei ole yksi ovi vaan kokonainen '
+            + 'puolustusjärjestelmä: kaksi erillistä porttia ja niiden '
+            + 'välissä silta kuivan vallihaudan yli.',
           lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'ETH-BIB-Dobrovnik, Pile-Tor-Dia 247-09508.tif',
-          selite: 'Käsin väritetty valokuva Pilen portista vuodelta 1936, '
-            + 'hienoihin takkeihin pukeutuneita ihmisiä seisoo portin '
-            + 'edustalla.',
+          selite: 'Vuonna 1936 portista kuljettiin jo vapaasti, mutta '
+            + 'aikoinaan sisäportille johti puinen nostosilta, joka '
+            + 'vedettiin joka ilta ylös — kukaan ei päässyt sisään eikä '
+            + 'ulos ennen aamua.',
           lahde: 'Leo Wehrli, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -8532,14 +8535,18 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sponza Palace, Dubrovnik, 16th century (1) (29859239440).jpg',
-          selite: 'Sponzan palatsin renessanssijulkisivu holvikaarineen, '
-            + 'goottilaisine kaksoisikkunoineen ja kellotorneineen.',
+          selite: 'Palatsi valmistui 1516–1522 Paskoje Miličevićin '
+            + 'suunnitelmien mukaan, ja siinä yhdistyvät gotiikka ja '
+            + 'renessanssi. Saman katon alla toimivat tulli, '
+            + 'tavaravarasto, rahapaja, asevarasto ja pankki.',
           lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Paleis Sponza te Dubrovnik Ragusa. Palazzo Sponza. (serietitel), RP-F-1919-182.jpg',
-          selite: 'Vanha valokuva Sponzan palatsista noin vuosilta 1890–1900, '
-            + 'muutama ohikulkija seisoo aukiolla arkadikäytävän edessä.',
+          selite: 'Vuosien 1890–1900 tienoilla palatsi oli jo selvinnyt vuoden '
+            + '1667 maanjäristyksestä lähes vahingoittumattomana; sen '
+            + 'holveissa säilytetään kaupungin arkistoa, noin 100 000 '
+            + 'käsin kirjoitettua asiakirjaa.',
           lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
         },
       ],
@@ -8572,16 +8579,18 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '31.12.16 Dubrovnik 3 Around Sunset 40 (31635072250).jpg',
-          selite: 'Vanhasatama iltavalossa ylhäältä kuvattuna: satama-allas '
-            + 'veneineen, Lovrijenacin niemi vasemmalla ja punakattoinen '
-            + 'vanhakaupunki taustalla.',
+          selite: 'Satama-alueelta on löytynyt yli 2000 vuotta vanhoja '
+            + 'kolikoita, ja täältä lähti liikkeelle tasavallan '
+            + 'kauppalaivasto, joka teki pienestä kaupunkivaltiosta yhden '
+            + 'Adrianmeren rikkaimmista.',
           lahde: 'Donald Judge, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Croatia-01870 - Old Port (10091210236).jpg',
-          selite: 'Vanhasataman veneitä ja vanhan telakkarakennuksen '
-            + 'holvikaaria aurinkoisena päivänä, matkustajia ja veneitä '
-            + 'rannassa.',
+          selite: 'Sataman reunan kiviholvien takana sijaitsi telakka, jossa '
+            + 'tasavallan laivat rakennettiin ja korjattiin jo '
+            + '1100-luvulta lähtien; holveja oli alun perin neljä, '
+            + 'mutta yksi muurattiin myöhemmin umpeen.',
           lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -8620,22 +8629,26 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Croatia-01664 - Fortress Lovrijenac (10088562716).jpg',
-          selite: 'Lovrijenacin linnake jyrkän kallion päällä, kirkas sininen '
-            + 'taivas ja meri ympärillä, ei muita rakennuksia näkyvissä.',
+          selite: 'Linnake kohoaa 37 metrin korkeudessa meren yllä, ja sen '
+            + 'pohjapiirros on kolmion muotoinen. Merta kohti osoittavat '
+            + 'muurit ovat lähes 12 metriä paksut, kaupunkiin päin '
+            + 'katsovat vain noin 60 senttimetriä.',
           lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Bokar Fortress and the Old Town of Dubrovnik, Croatia (48613181692).jpg',
-          selite: 'Ilmakuva Lovrijenacin linnakkeesta merelle työntyvällä '
-            + 'niemellä, taustalla vanhankaupungin muurit ja punaiset '
-            + 'katot.',
+          selite: 'Tarinan mukaan dubrovnikilaiset pystyttivät linnakkeen '
+            + 'kolmessa kuukaudessa, jotta venetsialaiset eivät ehtisi '
+            + 'rakentaa omaansa samalle kalliolle; ensimmäinen '
+            + 'kirjallinen maininta siitä on vuodelta 1301.',
           lahde: 'Dronepicr, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'ETH-BIB-Dobrovnik, Fort Lovrijenac vom Hôtel Impérial-Dia 247-09506.tif',
-          selite: 'Käsin väritetty valokuva Lovrijenacin linnakkeesta '
-            + 'vuodelta 1936, kuvattu Hotel Imperialista käsin, alla '
-            + 'punakattoisia taloja.',
+          selite: 'Vuonna 1936 linnake oli jo aikoja sitten menettänyt '
+            + 'sotilaallisen tehtävänsä; sitä puolusti aikanaan kymmenen '
+            + 'suurta tykkiä, joista suurinta kutsuttiin nimellä '
+            + '\'Gušter\' eli Lisko.',
           lahde: 'Leo Wehrli, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -8667,22 +8680,24 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Façana de la catedral de Dubrovnik.JPG',
-          selite: 'Dubrovnikin katedraalin barokkijulkisivu pylväineen ja '
-            + 'patsaineen kirkkaan sinistä taivasta vasten, kupoli '
-            + 'siintää yläkulmassa.',
+          selite: 'Roomalainen arkkitehti Andrea Buffalini suunnitteli 41 '
+            + 'metriä pitkän kupolikirkon, jonka rakentaminen alkoi 1671 '
+            + 'ja kesti peräti 42 vuotta.',
           lahde: 'Joanbanjo, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Cathedral of the Assumption, Dubrovnik, 1713 (1) (29933670232).jpg',
-          selite: 'Katedraalin kupoli ja sivujulkisivu patsaineen viistosta '
-            + 'alakulmasta kuvattuna.',
+          selite: 'Katedraalin aarrekammiossa säilytetään 182 '
+            + 'pyhäinjäännöslipasta, ja pääalttarin yllä riippuu '
+            + 'italialaismaalari Tizianon maalaama taulu.',
           lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Ragusa. Duomo LCCN2017660935.jpg',
-          selite: 'Väritetty 1890-luvun photochrom-valokuva Dubrovnikin '
-            + '(silloisen Ragusan) tuomiokirkosta, kuvattu viistosti '
-            + 'ylhäältä portaineen ja kupoleineen.',
+          selite: '1890-luvulla kaupunki tunnettiin vielä nimellä Ragusa. '
+            + 'Nykyinen katedraali korvasi vanhemman kirkon, jonka '
+            + 'rakentamisen tarinan mukaan rahoitti osin Rikhard '
+            + 'Leijonamieli haaksirikosta pelastuttuaan.',
           lahde: 'Photoglob Co., Wikimedia Commons (Public domain)',
         },
       ],
@@ -8728,15 +8743,18 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Brīvības laukums.jpg',
-          selite: 'Vapaudenpatsas Brīvības-aukion perällä iltapäivän '
-            + 'auringossa, avara näkymä puiden reunustamalta '
-            + 'kävelyväylältä.',
+          selite: '42 metriä korkea patsas pystytettiin 1935 Latvian '
+            + 'itsenäisyyssodassa kaatuneiden muistoksi. Huipulla seisova '
+            + 'Vapaus — latvialaisittain Milda — pitelee kolmea kultaista '
+            + 'tähteä maan vanhojen maakuntien merkkinä.',
           lahde: 'DaceX, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Centrs, Centra rajons, Rīga, Latvia - panoramio (11).jpg',
-          selite: 'Kunniavartiosto univormuissaan ja kivääreineen '
-            + 'Vapaudenpatsaan juurella harmaana marraskuun päivänä.',
+          selite: 'Patsas seisoo paikalla, jossa aiemmin oli tsaari Pietari '
+            + 'Suuren ratsastajapatsas, ja se kesti neuvostomiehityksen: '
+            + 'kuvanveistäjä Vera Muhinan kerrotaan pitäneen sitä liian '
+            + 'arvokkaana hävitettäväksi.',
           lahde: 'alinco_fan, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -8766,9 +8784,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Riga - The three brothers - trīs brāļi - panoramio.jpg',
-          selite: 'Kolme veljestä -taloryhmä Mazā Pils -kadulla: kolme '
-            + 'eri-ikäistä ja -väristä porrastalojulkisivua vierekkäin '
-            + 'sinistä taivasta vasten.',
+          selite: 'Mazā Pils -kadun talorivi on Riian vanhin säilynyt '
+            + 'asuinrakennusten rivi: vanhin veljeksistä on 1400-luvun '
+            + 'lopulta, keskimmäinen sai asunsa 1646 ja nuorin '
+            + 'rakennettiin 1600-luvun lopulla.',
           lahde: 'giggel, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -8797,23 +8816,25 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '2025 Riga Cathedral (01).jpg',
-          selite: 'Riian tuomiokirkko aurinkoisena kesäpäivänä Doma laukums '
-            + '-aukiolta kuvattuna, punatiilinen julkisivu ja kupolitorni '
-            + 'erottuvat selvästi sinistä taivasta vasten.',
+          selite: 'Baltian suurimman keskiaikaisen kirkon ensimmäinen kivi '
+            + 'muurattiin piispa Albertin toimesta vuonna 1211. Tornin '
+            + 'huipulla pyörivää viiriä riikalaiset ovat vuosisatoja '
+            + 'käyttäneet tuulen tarkkailuun.',
           lahde: 'Chris06, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Dome Square, Riga, Latvia, 1930s.jpg',
-          selite: 'Doman aukio lumisena talvipäivänä 1930-luvulla, '
-            + 'tuomiokirkon torni kohoaa kapean katukuilun päässä ja '
-            + 'kadulla näkyy vanha auto.',
+          selite: '1930-luvulla kirkossa soi jo yksi Euroopan suurimmista '
+            + 'uruista: yli 6700 pillin soitin valmistui 1883, ja sitä '
+            + 'soitettiin ensi kertaa tammikuussa 1884.',
           lahde: 'Roberts Johansons, Wikimedia Commons (Public domain)',
         },
         {
           tiedosto: '2013 Домский собор в Риге -panoramio.jpg',
-          selite: 'Tuomiokirkko lumisena talvipäivänä aukion laidalta '
-            + 'kuvattuna, ohikulkijoita etualalla ja kirkas sininen '
-            + 'taivas.',
+          selite: 'Neuvostoaikana kirkossa ei saanut pitää jumalanpalveluksia '
+            + 'viiteenkymmeneen vuoteen, vaan tilassa toimivat '
+            + 'konserttisali ja museo; seurakuntalaisille se avattiin '
+            + 'jälleen 1991.',
           lahde: 'Валерий Дед, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -8845,15 +8866,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Plaza del Ayuntamiento, Riga, Letonia, 2012-08-07, DD 24.JPG',
-          selite: 'Pyhän Pietarin kirkon korkea kerroksittainen torni kohoaa '
-            + 'Rātslaukums-aukion yllä, etualalla myös Mustapäiden talon '
-            + 'julkisivu.',
+          selite: 'Kirkko mainitaan Riian asiakirjoissa jo vuonna 1209, ja sen '
+            + 'torni on ollut vuosisatojen ajan kaupungin korkein '
+            + 'rakennelma — mutta myös yksi onnettomimmista.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Riga - St. Peter’s Church - Pētera baznīca - panoramio.jpg',
-          selite: 'Pyhän Pietarin kirkon julkisivu ja koko torni suoraan '
-            + 'edestä kuvattuna, muutama ohikulkija kirkon ovella.',
+          selite: 'Vuonna 1690 valmistunut 148 metrin puutorni oli Euroopan '
+            + 'korkein puurakennelma, kunnes salama tuhosi sen 1721; '
+            + 'nykyinen torni valmistui jälleenrakennettuna vasta '
+            + '1970-luvulla.',
           lahde: 'giggel, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -8885,22 +8908,27 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '2025 House of Blackheads (Riga) (01).jpg',
-          selite: 'Mustapäiden talon koristeellinen renessanssijulkisivu '
-            + 'Rātslaukums-aukiolla, kirkkaan sininen taivas taustalla.',
+          selite: 'Talo rakennettiin 1334 kauppiaiden varastoksi ja '
+            + 'kokoontumispaikaksi, ja 1400-luvun puolivälistä lähtien '
+            + 'sitä käytti Mustapäiden veljeskunta — naimattomien '
+            + 'kauppiaiden ja laivanomistajien kilta.',
           lahde: 'Chris06, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'House of the Blackheads.jpg',
-          selite: 'Mustapäiden talo valaistuna sinisellä hämärätunnilla, '
-            + 'edessä Roland-patsas miekka pystyssä ja julkisivun yläosassa '
-            + 'kello ja vaakunat.',
+          selite: 'Nykyinen rakennus on vuosina 1996–2000 tehty '
+            + 'jälleenrakennus, johon yli 5000 riikalaista osallistui '
+            + 'lahjoittamalla tiiliä. Ainoa alkuperäinen osa on kellari, '
+            + 'jonka 1300-luvun kivimuurit olivat maan alla piilossa '
+            + 'vuoteen 1992 asti.',
           lahde: 'Shawn M. Kent, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Riga house of the blackheads.jpg',
-          selite: 'Mustapäiden talo ja Roland-patsas aukiolla vanhassa '
-            + 'sepiapostikortissa 1900-1918-luvulta, ennen talon '
-            + 'tuhoutumista toisessa maailmansodassa.',
+          selite: 'Vuosien 1900–1918 välillä talo oli yhä alkuperäinen: '
+            + 'pommitus tuhosi sen kesäkuussa '
+            + '1941, ja neuvostoviranomaiset purkivat jäljelle jääneet '
+            + 'seinät 1948 riikalaisten vastustuksesta huolimatta.',
           lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
         },
       ],
@@ -8930,15 +8958,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Riga Central Market in the Evening (55010487126).jpg',
-          selite: 'Riian keskustorin viisi kaarihallia ilmakuvassa '
-            + 'iltavalossa, taustalla Tiedeakatemian torni ja '
-            + 'vaaleanpunertavat pilvet.',
+          selite: 'Euroopan suurin markkinahalli rakennettiin 1924–1930: viisi '
+            + 'paviljonkia peittää yli 72 000 neliömetriä ja niissä on '
+            + 'tilaa yli 3000 myyntipaikalle.',
           lahde: 'Michael Kuhn, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Riga Central Market.01.jpg',
-          selite: 'Keskustorin päähallin sisäänkäynti sinisellä '
-            + 'hämärätunnilla, suuret ikkunat valaistuina sisältä.',
+          selite: 'Paviljonkien kattojen metallirungot ovat peräisin '
+            + 'ensimmäisen maailmansodan aikaisista saksalaisista '
+            + 'zeppeliinihalleista; maailman yhdeksästä jäljellä olevasta '
+            + 'tällaisesta hallista viisi on juuri täällä.',
           lahde: 'Nenea hartia, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -8975,23 +9005,26 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Gediminas Tower (9651326233).jpg',
-          selite: 'Gediminaksen torni mäen laella rinteen juurelta kuvattuna, '
-            + 'punatiilisen kahdeksankulmaisen tornin huipulla liehuu '
-            + 'Liettuan lippu.',
+          selite: 'Suurruhtinas Vytautas rakennutti kukkulalle punatiilisen '
+            + 'linnan vuonna 1409 puulinnoituksen tilalle. Liettuan '
+            + 'kansallislippu nostettiin torniin 7. lokakuuta 1988, kun '
+            + 'maa alkoi irrottautua Neuvostoliitosta.',
           lahde: 'Bernt Rostad, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Gedimino kalnas 139.jpg',
-          selite: 'Ilmakuva Gediminaksen tornista auringonlaskun aikaan, '
-            + 'alapuolella alalinnan raunioita ja valaistu '
-            + 'tuomiokirkonaukio.',
+          selite: 'Legendan mukaan Gediminas näki tällä kukkulalla noin vuonna '
+            + '1323 unen rautaisesta sudesta, ja tietäjä Lizdeika selitti '
+            + 'sen käskyksi rakentaa paikalle linnoituskaupunki — niin '
+            + 'sai alkunsa Vilna.',
           lahde: 'Gytis Grižas, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'View of Vilnius Upper Castle with remaining Gediminas Tower.jpg',
-          selite: '1861 puupiirros Vilnan linnanmäestä: Gediminaksen torni ja '
-            + 'alalinnan rauniot kukkulalla, kaupunki ja joki '
-            + 'alapuolella.',
+          selite: 'Vuonna 1861 linnasta oli jäljellä enää yksi '
+            + 'kolmikerroksinen torni muun rakennuskannan romahdettua tai '
+            + 'tultua puretuksi; nykyinen asu on suurelta osin vuoden '
+            + '1933 jälleenrakennuksen tulos.',
           lahde: 'Julian Cegliński, Wikimedia Commons (Public domain)',
         },
       ],
@@ -9023,21 +9056,26 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Vilnius (Wilno) - cathedral.jpg',
-          selite: 'Vilnan tuomiokirkko ja sen erillinen kellotorni '
-            + 'tuomiokirkonaukiolla kirkkaan sinisen taivaan alla.',
+          selite: 'Kirkko sai nykyisen temppelimäisen muotonsa vuonna 1783, '
+            + 'kun se rakennettiin uudelleen tulipalojen tuhottua '
+            + 'edelliset kirkot; paikalla on seissyt kirkko jo '
+            + '1200-luvulta lähtien.',
           lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Vilnius Landmarks 162.jpg',
-          selite: 'Tuomiokirkonaukio auringonpaisteessa: kellotorni, '
-            + 'tuomiokirkko ja suurruhtinas Gediminaksen '
-            + 'ratsastajapatsas.',
+          selite: 'Kirkon alla olevissa holvihaudoissa lepäävät muun muassa '
+            + 'suurruhtinas Vytautas ja Barbara Radvila, jonka salainen '
+            + 'avioliitto kuninkaan kanssa on yksi Liettuan '
+            + 'tunnetuimmista rakkaustarinoista.',
           lahde: 'Scotch Mist, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Vilnius Cathedral in the 19th c.jpg',
-          selite: '1800-luvun puupiirros Vilnan tuomiokirkosta ja '
-            + 'kellotornista.',
+          selite: '1800-luvulla katolla seisoivat vielä kolme kivipatsasta, '
+            + 'joista keskimmäisen — Pyhän Helenan — käsissä kohoaa '
+            + 'yhdeksänmetrinen kultainen risti; neuvostoviranomaiset '
+            + 'purkivat patsaat 1950 ja ne palasivat vasta 1997.',
           lahde: 'Baranowski, Wikimedia Commons (Public domain)',
         },
       ],
@@ -9066,15 +9104,18 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Vilnius, St Anne and St Francis.jpg',
-          selite: 'Pyhän Annan punatiilikirkko ja sen takana kohoava Pyhän '
-            + 'Fransiskuksen (bernhardiinien) kirkko kirkkaana '
-            + 'kesäpäivänä.',
+          selite: 'Kirkko valmistui vuosien 1495 ja 1500 välillä, ja sen '
+            + 'vieressä kohoaa bernhardiinien Pyhän Fransiskuksen kirkko. '
+            + 'Suurruhtinas Vytautas oli rakennuttanut paikalle '
+            + 'alkuperäisen puukirkon vaimolleen Annalle, mutta se paloi '
+            + 'vuonna 1419.',
           lahde: 'Syrio, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'St. Anne\'s Church Exterior 3, Vilnius, Lithuania - Diliff.jpg',
-          selite: 'Pyhän Annan kirkon punatiilinen goottilainen julkisivu '
-            + 'läheltä, terävät tornit kohoavat siniselle taivaalle.',
+          selite: 'Kirkon tornit ja huiput on muurattu peräti 33 erilaisesta '
+            + 'poltetusta tiilestä, jotka valettiin omiin '
+            + 'erikoismuotoihinsa juuri tätä rakennusta varten.',
           lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -9110,15 +9151,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The Grand Courtyard of Vilnius University.jpg',
-          selite: 'Yliopiston Iso piha aamuauringossa, taustalla Pyhän '
-            + 'Johanneksen kirkon kellotorni ja punaiset kukat edessä.',
+          selite: 'Kuningas Stefan Batory perusti yliopiston 1. huhtikuuta '
+            + '1579; ensimmäisenä lukuvuonna opiskelijoita oli 160, mutta '
+            + 'jo seitsemän vuotta myöhemmin lähes 700.',
           lahde: 'Vilnius University, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Courtyard of Vilnius University - Vilnius - Lithuania (27739333602).jpg',
-          selite: 'Yliopiston piha matalassa aamuauringossa: keltaiset ja '
-            + 'valkoiset siipirakennukset tiilikattoineen, ja oikealla '
-            + 'kohoaa Pyhän Johanneksen kirkon torni.',
+          selite: 'Pihapiiriin rakennettiin vuonna 1753 tähtitorni, joka oli '
+            + 'tuolloin vasta neljäs koko Euroopassa. Tsaarin hallitus '
+            + 'sulki yliopiston 1832, mutta nykyään se on yli 23 000 '
+            + 'opiskelijan koti.',
           lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -9152,23 +9195,25 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The Republic of Užupis (52361108997).jpg',
-          selite: 'Užupiksen sillalla oleva kyltti \'Užupio Res Publika\', joka '
-            + 'merkitsee humoristisen itsenäisen taiteilijatasavallan '
-            + 'rajaa.',
+          selite: 'Alueen taiteilijat julistivat Užupiksen omaksi '
+            + 'tasavallakseen aprillipäivänä 1997, ja sillä on oma lippu, '
+            + 'oma pieni armeija ja yli 500 suurlähettilästä ympäri '
+            + 'maailmaa.',
           lahde: 'William John Gauthier, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'The Uzupis Angel (7932213486).jpg',
-          selite: 'Pronssinen enkelipatsas pylväällä Užupiksen aukiolla, '
-            + 'siivet levällään ja trumpetti kädessä, taustalla vanhoja '
-            + 'taloja.',
+          selite: 'Trumpettia puhaltava pronssienkeli pystytettiin '
+            + 'Užupikseen vuonna 2002, ja se korvasi paikalla aiemmin '
+            + 'seisseen munan muotoisen veistoksen.',
           lahde: 'Guillaume Speurt, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Vilnia, Zarečča. Вільня, Зарэчча (S. Fleury, 1896).jpg',
-          selite: '1896 valokuva Užupiksen (Zareččan) kaupunginosasta joen '
-            + 'yli kukkulalta kuvattuna, matalia puutaloja ja '
-            + 'kirkontorneja horisontissa.',
+          selite: 'Vuonna 1896 Zarečča eli Užupis — nimi tarkoittaa suunnilleen '
+            + '\'joen takana\' — oli vielä matalien puutalojen '
+            + 'kaupunginosa; nykyään sen noin 7000 asukkaasta lähes tuhat '
+            + 'on taiteilijoita.',
           lahde: 'Stanisław Filibert Fleury, Wikimedia Commons (Public domain)',
         },
       ],
@@ -9197,16 +9242,18 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Vilnius Dawn Gate.jpg',
-          selite: 'Aamuportti kadun päässä auringonpaisteessa, kultainen '
-            + 'Neitsyt Marian kuva näkyy holvikaaren yläpuolella ja katu '
-            + 'on täynnä kulkijoita.',
+          selite: 'Aamuportti on ainoa säilynyt Vilnan yhdeksästä '
+            + 'kaupunginportista: kun muuri purettiin 1799–1805, portti '
+            + 'jätettiin pystyyn, koska sen sisällä olevaa Neitsyt Marian '
+            + 'ihmekuvaa pidettiin niin pyhänä.',
           lahde: 'Marcin Białek, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Vault of the Ostra brama chapel.JPG',
-          selite: 'Kappelin holvi sisältä: valkoista stukkokoristelua '
-            + 'vaakunoineen ja kullattuja sädekuvioita, ja vasemmalla näkyy '
-            + 'ihmekuvan kehyksen yläreuna kerubeineen.',
+          selite: 'Portin yläkerran kappelissa ovat rukoilleet paavi Johannes '
+            + 'Paavali II vuonna 1993 ja paavi Franciscus 2018, ja sen '
+            + 'seinät ovat täynnä satoja hopeisia ja kultaisia '
+            + 'kiitoslahjoja.',
           lahde: 'Alma Pater, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -9238,22 +9285,25 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '00 7737 Royal Palace, Oslo.jpg',
-          selite: 'Kuninkaanlinna kirkkaana kesäpäivänä suoraan edestä '
-            + 'kuvattuna, ratsastajapatsas ja pylväikkö sekä '
-            + 'vierailijoita puistoaukiolla.',
+          selite: 'Palatsissa on peräti 173 huonetta, ja sen suunnitteli '
+            + 'tanskalainen arkkitehti Hans Linstow. Rakennusta ympäröi '
+            + 'iso puisto, jossa kuka tahansa saa kävellä.',
           lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Slottet i Oslo 1.jpg',
-          selite: 'Kuninkaanlinna symmetrisestä etunäkymästä '
-            + 'puistokäytävältä, pilvenhattaroita sinisellä '
-            + 'kesätaivaalla.',
+          selite: 'Rakentaminen alkoi 1825, kun kuningas Kaarle Juhana laski '
+            + 'peruskiven, mutta palatsi valmistui vasta 1849 — viisi '
+            + 'vuotta kuninkaan kuoleman jälkeen, joten hän ei koskaan '
+            + 'ehtinyt asua siellä.',
           lahde: 'Andreas Haldorsen, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Oslo Royal Palace 1890.jpg',
-          selite: 'Kuninkaanlinna vuonna 1890 valokuvaaja Axel Lindahlin '
-            + 'kuvaamana; puisto on vielä nuori ja puut pieniä.',
+          selite: 'Vuonna 1890 palatsin puisto oli vielä nuori. Sisätiloihin '
+            + 'tavalliset ihmiset pääsivät ensimmäistä kertaa vasta '
+            + 'vuonna 2002, ja vanhoista talleista tehtiin 2017 '
+            + 'taidenäyttelytila.',
           lahde: 'Axel Lindahl, Wikimedia Commons (Public domain)',
         },
       ],
@@ -9282,15 +9332,18 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Karl Johans gate, Oslo - Royal Palace, Oslo - perspective.jpg',
-          selite: 'Karl Johans gate kesäisenä päivänä; puukujan reunustama '
-            + 'katu johtaa suoraan kohti kuninkaanlinnaa kadun päässä.',
+          selite: 'Katu kulkee rautatieasemalta suoraan kuninkaanlinnalle '
+            + 'asti. Se syntyi 1840-luvulla, kun vanhoja kaupungin kujia '
+            + 'yhdisteltiin ja palatsin suuntaan rakennettiin uusi leveä '
+            + 'katuosuus.',
           lahde: 'Philippe Salgarolo, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Karl Johans gate abt 1890.jpg',
-          selite: 'Karl Johans gate noin vuonna 1890; hevosvetoinen '
-            + 'raitiovaunu kadulla ja kuninkaanlinna näkyvissä kadun '
-            + 'päässä.',
+          selite: 'Noin vuonna 1890 kadulla kulki jo hevosvetoinen '
+            + 'raitiovaunu. Nimensä katu oli saanut 1852 juuri kuolleen '
+            + 'kuningas Kaarle Juhanan muistoksi, ja Stortingin '
+            + 'avauduttua 1866 kaksi erillistä katua yhdistyi yhdeksi.',
           lahde: 'Axel Lindahl, Wikimedia Commons (Public domain)',
         },
       ],
@@ -9321,14 +9374,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Oslo Domkirke 1880s.jpeg',
-          selite: 'Oslon tuomiokirkko 1880-luvulla; laaja näkymä koko '
-            + 'kirkkorakennuksesta puiden ja aukion keskellä.',
+          selite: '1880-luvulla kirkko oli jo lähes kahdensadan vuoden ikäinen: '
+            + 'Oslon kolmannen tuomiokirkon peruskivi muurattiin 1694, ja '
+            + 'kirkko vihittiin käyttöön marraskuussa 1697.',
           lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
         },
         {
           tiedosto: 'Oslo Domkirke 20180729.jpg',
-          selite: 'Oslon tuomiokirkon torni alhaalta kuvattuna kirkkaan '
-            + 'sinistä kesätaivasta vasten.',
+          selite: 'Tornissa soi nykyään 48 kellon kellopeli. Kirkon ovet ovat '
+            + 'pronssia, ja ikkunoissa on taiteilija Emanuel Vigelandin '
+            + 'suunnittelemia lasimaalauksia.',
           lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -9356,14 +9411,18 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Oslo Rådhus - Oslo City Hall - Oslo, Norway 2020-09-16.jpg',
-          selite: 'Oslon kaupungintalo edestä kuvattuna, patsaat aukion '
-            + 'edessä ja kirkas syystaivas.',
+          selite: '66 metriä korkean punatiilitalon suunnittelivat Arnstein '
+            + 'Arneberg ja Magnus Poulsson, ja sen 31 metriä pitkässä '
+            + 'marmorisalissa jaetaan joka 10. joulukuuta Nobelin '
+            + 'rauhanpalkinto.',
           lahde: 'Ryan Hodnett, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Oslo Rådhus - no-nb digifoto 20150218 00063 NB MIT FNR 17150.jpg',
-          selite: 'Oslon kaupungintalo 1950-luvulla; aikakauden autoja '
-            + 'aukiolla rakennuksen edessä.',
+          selite: 'Rakennustyö keskeytyi toisen maailmansodan ajaksi, ja talo '
+            + 'valmistui vasta 1950 juuri sopivasti Oslon '
+            + '900-vuotisjuhliin. Kansanäänestyksessä norjalaiset '
+            + 'valitsivat sen kerran vuosisadan rakennukseksi.',
           lahde: 'Jac Brun, Wikimedia Commons (Public domain)',
         },
       ],
@@ -9393,20 +9452,24 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Akershus Festning from the fjord.jpg',
-          selite: 'Akershusin linnoitus vuonon toiselta puolelta katsottuna, '
-            + 'purjevene edustalla kirkkaana kesäpäivänä.',
+          selite: 'Kuningas Haakon V käski rakentaa linnoituksen 1290-luvun '
+            + 'lopulla, sen jälkeen kun kaupunki oli osoittautunut liian '
+            + 'helposti hyökättäväksi vuonna 1287.',
           lahde: 'GuoJunjun, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Castle of Aggerhus (JW Edy plate 53).jpg',
-          selite: 'Akershusin linnoitus vuoden 1820 käsivärjätyssä '
-            + 'kaiverruksessa, purjelaivoja vuonolla edustalla.',
+          selite: 'Vuoteen 1820 mennessä linnoitus oli kestänyt monta '
+            + 'piiritystä — ruotsalaiset yrittivät 1308 ja Kaarle '
+            + 'Knuutinpoika 1449–1450 — mutta mikään vieras armeija ei '
+            + 'ole koskaan vallannut sitä taistelemalla.',
           lahde: 'John William Edy, Wikimedia Commons (Public domain)',
         },
         {
           tiedosto: 'Oslo, Akershus Castle (5).JPG',
-          selite: 'Akershusin linnoituksen porrastettu tiilinen päätykolmio '
-            + 'alhaalta kuvattuna lämpimässä iltapäivänvalossa.',
+          selite: 'Kuningas Kristian IV muutti vanhan keskiaikaisen linnan '
+            + '1600-luvulla hienoksi renessanssipalatsiksi; nykyään sen '
+            + 'sisällä on Norjan kuninkaallinen hautaholvi.',
           lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -9433,21 +9496,24 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Oslo Opera house (2015).jpg',
-          selite: 'Oslon oopperatalo vuonon rannalla kirkkaana päivänä; '
-            + 'valkoinen marmoripinta ja lasijulkisivu erottuvat '
-            + 'selvästi.',
+          selite: 'Arkkitehtitoimisto Snøhettan suunnittelema talo avattiin '
+            + '12. huhtikuuta 2008, ja sen kalteville pinnoille '
+            + 'käytettiin valkoista Carraran marmoria ja graniittia.',
           lahde: 'Beata May, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Oslo Opera House at sunset 4.jpg',
-          selite: 'Oslon oopperatalo auringonlaskun aikaan; lasijulkisivu '
-            + 'hohtaa kultaisena ja kuvastuu tyyneen veteen.',
+          selite: 'Talossa on peräti 1 100 huonetta yhteensä 49 000 '
+            + 'neliömetrin alalla, ja suurimpaan saliin mahtuu 1 364 '
+            + 'katsojaa.',
           lahde: 'Nurtenge, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '2025-09-26-Operahuset-Oslo-1.jpg',
-          selite: 'Oopperatalon viistolla marmorikatolla kävellään; taustalla '
-            + 'rakennuksen alumiininen kuutio ja kirkas sininen taivas.',
+          selite: 'Kattokaltevuudet ulottuvat maahan asti, joten kuka tahansa '
+            + 'voi kävellä katolle. Rakennus valmistui etuajassa ja 300 '
+            + 'miljoonaa kruunua alle budjetin, ja ensimmäisenä vuonna '
+            + 'siellä kävi 1,3 miljoonaa ihmistä.',
           lahde: 'Gunnar Klack, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -9479,22 +9545,25 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The Little Mermaid - 4668118032.jpg',
-          selite: 'Aurinkoisena kesäpäivänä matkailijat kokoontuvat '
-            + 'rantakivillä ihailemaan pronssista Pientä merenneitoa '
-            + 'kiven päällä meren äärellä.',
+          selite: 'Pronssipatsas on vain 1,25 metriä korkea ja painaa 175 '
+            + 'kiloa. Panimomiljonääri Carl Jacobsen tilasi sen '
+            + 'innostuttuaan baletista, joka kertoi H. C. Andersenin '
+            + 'sadun pienestä merenneidosta.',
           lahde: 'Andrea Lai, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Denmark, Copenhagen, Little Mermaid, Langelinie Promenade 150422-26.jpg',
-          selite: 'Läheltä kuvattu pronssinen Pieni merenneito -patsas '
-            + 'kivellä, ilta-auringon kultaisessa valossa meren edessä.',
+          selite: 'Kuvanveistäjä Edvard Eriksen sai tilauksen vuonna 1909, ja '
+            + 'koska baleriina ei halunnut poseerata, mallina oli hänen '
+            + 'oma vaimonsa Eline Eriksen.',
           lahde: 'Richardmaackphotography, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: '1913-Edvard Eriksen-Den lillie Havfrue.jpg',
-          selite: 'Vanha sepiansävyinen postikorttivalokuva Pienestä '
-            + 'merenneidosta pian patsaan paljastamisen jälkeen vuonna '
-            + '1913, satamalaivat taustalla.',
+          selite: 'Patsas paljastettiin 23. elokuuta 1913. Sen jälkeen sen pää '
+            + 'on sahattu irti kahdesti, käsi katkaistiin 1984 ja koko '
+            + 'patsas räjäytettiin veteen 2003 — mutta se on aina '
+            + 'nostettu takaisin paikalleen.',
           lahde: 'Tuntematon (postikorttikustantajien kokoelma), Wikimedia Commons (Public domain)',
         },
       ],
@@ -9527,16 +9596,19 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Denmark 0104 - Amalienborg Palace (3990546376).jpg',
-          selite: 'Amalienborgin palatsiaukio aamuvalossa: Fredrik V:n '
-            + 'ratsastajapatsas keskellä ja kaksi symmetristä '
-            + 'palatsisiipeä sivuilla, kirkas sininen taivas.',
+          selite: 'Neljä samanlaista rokokopalatsia rakennettiin '
+            + 'kahdeksankulmaisen aukion ympärille 1750–1760 Nicolai '
+            + 'Eigtvedin suunnitelmien mukaan; keskellä seisoo Fredrik '
+            + 'V:n ratsastajapatsas, jonka Jacques Saly paljasti 1771.',
           lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Vagtparade på Amalienborg Plads, 1896-1912.jpg',
-          selite: 'Vanha stereokuvakortti (n. 1896–1912) kaartin paraatista '
-            + 'Amalienborgin aukiolla, palatsi ja ratsastajapatsas '
-            + 'taustalla.',
+          selite: 'Vuosien 1896–1912 tienoilla kuningasperhe oli asunut '
+            + 'palatseissa jo sata vuotta: se osti ne aatelissuvuilta '
+            + 'Christiansborgin palon jälkeen 1794. Aukiolla käytiin 9. '
+            + 'huhtikuuta 1940 tunnin mittainen tulitaistelu '
+            + 'henkivartijoiden ja saksalaisjoukkojen välillä.',
           lahde: 'Peter Alstrup, Wikimedia Commons (Public domain)',
         },
       ],
@@ -9563,16 +9635,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Rundetaarn (Købmagergade).jpg',
-          selite: 'Rundetårn kattojen yli: tiiliseinässä Christian IV:n '
-            + 'kultainen kuva-arvoitus, laella observatorion vihreä kupoli '
-            + 'ja takana Juutinrauma.',
+          selite: 'Christian IV halusi kaupunkiin tähtitornin: peruskivi '
+            + 'muurattiin 7. heinäkuuta 1637, ja 34,8 metriä korkea torni '
+            + 'valmistui 1642.',
           lahde: 'Orf3us, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Peter Tom-Petersen - Parti fra gården ved Regensen med udsigt til Rundetårn - 1888.png',
-          selite: 'Taidemaalari Peter Tom-Petersenin vuonna 1888 maalaama '
-            + 'näkymä Regensenin pihalta puiden lomasta kohti '
-            + 'Rundetårnia.',
+          selite: 'Kun Peter Tom-Petersen maalasi tornin vuonna 1888, sen '
+            + 'sisällä oli jo yli 200 vuotta kiertänyt 210 metriä pitkä '
+            + 'spiraalikäytävä: tavallisia portaita ei ole lainkaan, '
+            + 'vaan hevoset ja kärryt pääsivät huipulle asti.',
           lahde: 'Peter Tom-Petersen, Wikimedia Commons (Public domain)',
         },
       ],
@@ -9602,22 +9675,25 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Nyhavn houses and boats.jpg',
-          selite: 'Nyhavnin kanavan värikkäät talot ja perinteiset puiset '
-            + 'purjeveneet auringonpaisteessa, lokki lentää taivaalla.',
+          selite: 'Kuningas Christian V rakennutti 450 metriä pitkän kanavan '
+            + '1670–1675 tanskalaisten sotilaiden ja ruotsalaisten '
+            + 'sotavankien voimin, jotta laivat pääsisivät '
+            + 'merenlahdelta Kongens Nytorville asti.',
           lahde: 'OleNeitzel, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Classic Nyhavn I (7530252984).jpg',
-          selite: 'Ylhäältä kuvattu näkymä Nyhavnin kanavalle kirkkaassa '
-            + 'sinisessä taivaassa, koko kirjava talorivistö ja '
-            + 'purjeveneet näkyvissä.',
+          selite: 'Talorivin vanhin talo, numero 9, on peräisin jo vuodelta '
+            + '1681, ja satukirjailija H. C. Andersen asui kanavan '
+            + 'varrella eri osoitteissa yhteensä 18 vuoden ajan.',
           lahde: 'Karen Mardahl, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Nyhavn, København, 1896-1912.jpg',
-          selite: 'Vanha stereokuvakortti (n. 1896–1912) Nyhavnin kanavasta '
-            + 'täynnä vanhoja purjelaivoja ja rantakatua reunustavia '
-            + 'taloja.',
+          selite: 'Vuosisadan vaihteessa Nyhavn oli yhä meluisa ja vähän '
+            + 'vaarallinenkin satamakortteli täynnä merimiehiä ja '
+            + 'krouveja; laiturialue kivettiin jalankulkijoille vasta '
+            + 'vuonna 1980.',
           lahde: 'Peter Alstrup, Wikimedia Commons (Public domain)',
         },
       ],
@@ -9645,22 +9721,25 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Christiansborg Slot from west Copenhagen Denmark.jpg',
-          selite: 'Christiansborgin linna suoraan edestä kuvattuna, '
-            + 'kultaisessa illan valossa dramaattisten pilvien alla, '
-            + 'ratsastajapatsas edustalla.',
+          selite: 'Nykyinen linna on jo kolmas paikallaan: se valmistui '
+            + '1907–1928 uusbarokkityyliin raudoitetusta betonista, ja '
+            + 'sen 106 metriä korkea torni on Kööpenhaminan korkein '
+            + 'rakennus.',
           lahde: 'Jebulon, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: '2018 - Christiansborg from the Marble Bridge.jpg',
-          selite: 'Näkymä Marmorisillalta linnan kahden porttiholvin läpi '
-            + 'kohti valaistua tornia hämärän sinisellä taivaalla.',
+          selite: 'Christiansborg on maailmanlaajuisestikin harvinainen: '
+            + 'samassa rakennuksessa toimivat Tanskan parlamentti, '
+            + 'pääministerin toimisto ja korkein oikeus.',
           lahde: 'Moahim, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Christiansborg Palace before 1873 by Budtz Müller.jpg',
-          selite: 'Vanha stereokuvakortti vanhasta Christiansborgin linnasta '
-            + 'Christiansborgin aukiolta kuvattuna, sellaisena kuin se '
-            + 'näytti ennen vuotta 1873.',
+          selite: 'Ennen vuotta 1873 paikalla seisoi edellinen Christiansborg, '
+            + 'joka tuhoutui tulipalossa 1884. Ensimmäisen linnan '
+            + 'rakennutti piispa Absalon jo vuonna 1167, ja sen rauniot '
+            + 'ovat yhä nykyisen linnan alla.',
           lahde: 'Bertel Christian Budtz Müller, Wikimedia Commons (Public domain)',
         },
       ],
@@ -9696,16 +9775,18 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tivoli Copenhagen Main Entrance.jpg',
-          selite: 'Tivolin pääsisäänkäynnin kolme rakennusta kultaisessa '
-            + 'illan valossa, ihmisiä kävelemässä kadulla portin edessä.',
+          selite: 'Georg Carstensen avasi puiston 15. elokuuta 1843 Pariisin '
+            + 'Tivoli-puutarhan ja Lontoon Vauxhall Gardensin mallin '
+            + 'mukaan; se on maailman toiseksi vanhin yhä toimiva '
+            + 'huvipuisto.',
           lahde: 'Sissew, Wikimedia Commons (Public domain)',
         },
         {
           tiedosto: 'The Tivoli park entrance, Copenhagen, Denmark-LCCN2001697993.jpg',
-          selite: 'Värillinen aikalaisvalokuva (photochrom, n. 1890–1900) '
-            + 'Tivolin sisäänkäynnistä: hevosvetoinen omnibussi, '
-            + 'aikalaispukuisia kävelijöitä ja Tanskan lippu portin '
-            + 'päällä.',
+          selite: 'Noin 1890-luvulla Tivoli oli jo lähes puolen vuosisadan '
+            + 'ikäinen. Puiston puinen vuoristorata Rutschebanen '
+            + 'rakennettiin vasta 1914, ja se pyörii yhä yhtenä maailman '
+            + 'vanhimmista.',
           lahde: 'Photochrom Print Collection, Wikimedia Commons (Public domain)',
         },
       ],
@@ -9760,22 +9841,27 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Copenhagen - Church of Our Saviour - 2013.jpg',
-          selite: 'Vapahtajan kirkko kadulta nähtynä: tumma tiilirunko, '
-            + 'kellotorni ja kullattu ulkoportaikko, joka kiertyy huipun '
-            + 'kultapallolle asti.',
+          selite: 'Kirkon rakentaminen alkoi 1682 Lambert van Havenin '
+            + 'piirustusten mukaan, ja se vihittiin 1695 keskeneräisenä: '
+            + 'tornista puuttui kokonaan huippu, joka valmistui vasta '
+            + '1752 Lauritz de Thurahin piirustusten mukaan.',
           lahde: 'Avda, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'The spiral staircase of Vor Frelsers Kirke in Copenhagen, Denmark.jpg',
-          selite: 'Ulkoportaat läheltä: kullattu kaide kaartuu ylöspäin, ja '
-            + 'takana avautuu Kööpenhamina ja meri.',
+          selite: 'Huippu nousee 90 metriin, ja sen ympäri kiertää '
+            + 'ulkoportaikko neljä kierrosta vastapäivään. Portaita on '
+            + 'kaikkiaan 400, ja niistä viimeiset 150 kuljetaan '
+            + 'ulkoilmassa kullatun kaiteen takana.',
           lahde: 'Guillaume Baviere, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Voyageaucentrede00vernuoft raw 0053 1.png',
-          selite: 'Édouard Riou’n kuvitus Jules Vernen Matka maan '
-            + 'keskipisteeseen -kirjaan: pikkuruisia hahmoja kiipeää tornin '
-            + 'ulkoportaita lokkien keskellä.',
+          selite: 'Jules Vernen romaanissa Matka maan keskipisteeseen Axel '
+            + 'pannaan kiipeämään näitä portaita viitenä peräkkäisenä '
+            + 'päivänä korkeanpaikankammon voittamiseksi; Édouard Riou '
+            + 'piirsi kirjan alkuperäiseen kuvitukseen kierteen '
+            + 'vahingossa väärinpäin, myötäpäivään.',
           lahde: 'Édouard Riou, Wikimedia Commons (Public domain)',
         },
       ],
@@ -9820,22 +9906,26 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Rosenborg Castle in Copenhagen2.jpg',
-          selite: 'Rosenborgin linna puiston puolelta: punatiiliset '
-            + 'julkisivut, hiekkakivikoristelu ja kolme vihreäksi '
-            + 'patinoitunutta tornia.',
+          selite: 'Christian IV osti tontit vuonna 1606, ja vaatimattomasta '
+            + 'erakkomajasta kasvoi 28 vuoden ja neljän '
+            + 'rakennusvaiheen aikana hollantilaisen renessanssin linna, '
+            + 'joka seisoi valmiina 1633.',
           lahde: 'Marco Almbauer, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Axel Schovelin - Parti fra Rosenborg slot - 1872.png',
-          selite: 'Axel Schovelinin maalaus vuodelta 1872: linna kohoaa '
-            + 'Kuninkaan puutarhan puiden takaa, etualalla tyhjä penkki ja '
-            + 'kukkiva syreeni.',
+          selite: 'Vuonna 1872 linna oli ollut jo yli 30 vuotta yleisölle '
+            + 'avoinna. Sitä ympäröi Kuninkaan puutarha, maan vanhin '
+            + 'kuninkaallinen puisto, jossa käy nykyään arviolta 2,5 '
+            + 'miljoonaa ihmistä vuodessa.',
           lahde: 'Axel Schovelin, Wikimedia Commons (Public domain)',
         },
         {
           tiedosto: 'Crown of King Christian IV of Denmark.jpg',
-          selite: 'Christian IV:n kruunu vitriinissä: kultaa, helmiä ja '
-            + 'emalikoristeita punaisen samettimyssyn ympärillä.',
+          selite: 'Christian IV:n kruunu kuuluu Tanskan kruununregaaleihin, '
+            + 'joita säilytetään linnan kellariholvissa. Kuolemansairas '
+            + 'kuningas käski kuljettaa itsensä reellä lempilinnaansa ja '
+            + 'kuoli täällä helmikuussa 1648.',
           lahde: 'Bradley Rentz, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -9892,22 +9982,26 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kastellet aerial.jpg',
-          selite: 'Ilmakuva Kastelletista: viisisakarainen vallirengas '
-            + 'vallihautoineen, punaiset kasarmirivit keskellä ja '
-            + 'Kööpenhamina taustalla.',
+          selite: 'Kastellet on viisikulmio, jonka jokaisessa kärjessä on '
+            + 'bastioni: Kuninkaan, Kuningattaren, Kreivin, Prinsessan ja '
+            + 'Prinssin. Hollantilainen insinööri Henrik Rusen rakensi '
+            + 'sen valmiiksi vuonna 1664.',
           lahde: 'CucombreLibre, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Kastellet - windmill and canon.jpg',
-          selite: 'Kuninkaan bastionin tuulimylly punaisella jalustallaan, '
-            + 'edessä vanha tykki ja takana linnoituksen punaiset kasarmit.',
+          selite: 'Kuninkaan bastionilla jauhoi tuulimylly, sillä piiritetty '
+            + 'kaupunki tarvitsi jauhoja. Nykyinen mylly on vuodelta '
+            + '1847, ja se on ainoa yhä toimiva niistä 16 myllystä, '
+            + 'jotka pyörivät Kööpenhaminan valleilla vuonna 1800.',
           lahde: 'Klearchos Kapoutsis, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Christen Købke - The North Gate of the Citadel - Google Art Project.jpg',
-          selite: 'Christen Købken maalaus vuodelta 1834: Norjanportin '
-            + 'nostosilta, vartiomies valkoisissa housuissa ja poikia '
-            + 'kaiteella.',
+          selite: 'Christen Købke kasvoi Kastelletissa, jonka myllyn hänen '
+            + 'isänsä omisti, ja maalasi Norjanportin vuonna 1834. Saman '
+            + 'portin saksalaiset joukot räjäyttivät 9. huhtikuuta 1940 '
+            + 'ottaessaan linnoituksen haltuunsa.',
           lahde: 'Christen Købke, Wikimedia Commons (Public domain)',
         },
       ],
@@ -9953,8 +10047,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'DAMASCUS GATE AND PART OF THE CITY WALL AROUND JERUSALEM. שער דמשק בעיר העתיקה בירושלים..jpg',
-          selite: 'Vanha valokuva Damaskoksen portista ylhäältä: hammastettu '
-            + 'portinpää työntyy ulos muurilinjasta kattomeren edessä.',
+          selite: 'Nykyinen portti on vuodelta 1537, Suleiman Suuren '
+            + 'muurityön ajalta, mutta samassa kohdassa on ollut portti '
+            + 'roomalaisajasta asti — sen alta on kaivettu esiin vanhempi '
+            + 'portti keisari Hadrianuksen ajalta.',
           lahde: 'Tuntematon kuvaaja, Wikimedia Commons (public domain)',
         },
       ],
@@ -9981,8 +10077,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jerusalem Holy Sepulchre BW 18.JPG',
-          selite: 'Golgatan kappeli: kullattu alttarikaari hopeisine '
-            + 'hahmoineen, ja edessä lasin alta näkyy paljas kallio.',
+          selite: 'Golgatan kappeli on kirkon yläkerrassa kallion päällä, '
+            + 'jonne noustaan portaita; alakerrassa on itse hauta '
+            + 'pienessä kappelissa keskellä pyöreää salia.',
           lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -10010,9 +10107,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jerusalem Dome of the rock BW 14.JPG',
-          selite: 'Kalliomoskeija Öljymäeltä: kullattu kupoli '
-            + 'kahdeksankulmaisen laattapinnan päällä ja etualalla '
-            + 'temppelivuoren itämuuri.',
+          selite: 'Umaijadikalifi Abd al-Malik rakennutti kahdeksankulmaisen '
+            + 'pyhäkön vuosina 691–692 paljaan kalliopaljastuman '
+            + 'ympärille; alkuperäinen kupoli romahti 1015 ja '
+            + 'rakennettiin uudelleen 1022–1023.',
           lahde: 'Berthold Werner, Wikimedia Commons (public domain)',
         },
       ],
@@ -10039,9 +10137,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Western Wall stones, closeup.jpg',
-          selite: 'Läntisen muurin kiviä läheltä: valtavia reunahakattuja '
-            + 'lohkareita, joiden pystysaumaan on työnnetty tiheästi '
-            + 'paperilappuja.',
+          selite: 'Muuri ei ole temppelin seinä vaan 488 metriä pitkä '
+            + 'tukimuuri, jonka alimmat valtavat lohkareet ovat toisen '
+            + 'temppelin ajalta. Kivien saumoihin työnnetyt paperilaput '
+            + 'ovat muuttaneet muurin pinnan omanlaisekseen.',
           lahde: 'Danielrosehill, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -10069,8 +10168,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jerusalem Jaffa Gate BW 1.JPG',
-          selite: 'Jaffan portin torni iltavalossa: hammastettu kivimassa '
-            + 'työntyy ulos muurilinjasta, ja kaariovi jää varjoon.',
+          selite: 'Ottomaanien vuonna 1538 rakennuttama porttitorni on kapea '
+            + 'ja vain jalankulkijoille; viereinen leveä muuriaukko '
+            + 'teetettiin 1898, jotta Saksan keisari Wilhelm II pääsisi '
+            + 'kaupunkiin juhlasaatossa.',
           lahde: 'Berthold Werner, Wikimedia Commons (public domain)',
         },
       ],
@@ -10096,8 +10197,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jerusalem Al-Aqsa Mosque BW 2010-09-21 06-38-12.JPG',
-          selite: 'Al-Aqsan julkisivu: vasemmalla tumma lyijykupoli, '
-            + 'keskellä kaari-ikkunoiden rivi ja edessä tyhjä kiveysaukio.',
+          selite: 'Al-Aqsa on temppelivuoren pääasiallinen rukoushuone, ja sen '
+            + 'rakennutti joko umaijadikalifi Abd al-Malik tai hänen '
+            + 'seuraajansa al-Walid I. Julkisivun kaaririvistö ja '
+            + 'lyijykupoli ovat rakennuksen tunnusmerkit.',
           lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -10138,15 +10241,18 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Dubai Gold Souk (8668422526).jpg',
-          selite: 'Kultasuukin katettu puukäytävä, kultasepänliikkeiden '
-            + 'ikkunat molemmin puolin.',
+          selite: 'Suuk syntyi epävirallisesti 1900-luvun alussa, kun '
+            + 'kourallinen kauppiaita avasi puotinsa lahden rannalle. '
+            + 'Nykyään Al Rasin kaupunginosassa on yli 380 liikettä, '
+            + 'joista suurin osa on kultasepänliikkeitä.',
           lahde: 'Rob Young from United Kingdom, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Gold Souk, Dubai5.jpg',
-          selite: 'Näyteikkuna täynnä kultakaulakoruja suukin liikkeessä: '
-            + 'viisi mallinukkea massiivisissa koruissa ja alla rivi '
-            + 'rannerenkaita.',
+          selite: 'Myynnissä on kulta-, platina- ja hopeakoruja, harkkoja, '
+            + 'irtotimantteja ja värikiviä. Koru punnitaan asiakkaan '
+            + 'edessä, ja hinta lasketaan päivän kultakurssista plus työn '
+            + 'osuus.',
           lahde: 'dconvertini, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -10181,8 +10287,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Deira Dhow Wharfage (Dubai).jpg',
-          selite: 'Dhow-aluksia rinnakkain laiturissa Deirassa, lasti '
-            + 'pinottuna laiturille laatikoiksi ja säkeiksi.',
+          selite: 'Deiran puoleiseen laituriin kiinnittyy puisia dhow-aluksia '
+            + 'kahden ja kolmen rivissä, ja lasti odottaa taivasalla '
+            + 'laatikkopinoina. Khor Dubain lahden kautta kulkee yhä yli '
+            + '13 000 alusta vuodessa.',
           lahde: 'Iwona Rege, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -10214,8 +10322,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Saeed Al Maktoum House-Dubai2841.JPG',
-          selite: 'Sheikh Saeed Al Maktoumin talon hiekkapohjainen sisäpiha, '
-            + 'kipsikoristeltu yläparveke ja tuulitorni taivasta vasten.',
+          selite: 'Noin vuonna 1896 pystytetty Sheikh Saeed Al Maktoumin talo '
+            + 'oli Al Maktoumin suvun päämaja, ja Dubain hallitsija Saeed '
+            + 'bin Maktoum asui siinä vuodesta 1912 kuolemaansa 1958 '
+            + 'asti.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -10246,16 +10356,19 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bur Dubai Abra Station.jpg',
-          selite: 'Abroja kiinni Bur Dubain laiturilla iltavalossa: veneiden '
-            + 'päällä on vaaleat kangaskatokset, mastoissa liehuu '
-            + 'Emiraattien lippuja, ja takana avautuu lahdelma.',
+          selite: 'Abrat ovat Dubain vanhin joukkoliikenneväline: ennen '
+            + 'siltoja ja Al Shindaghan tunnelia lahdelman toiselle '
+            + 'puolelle pääsi vain veneellä. Vanhat rantalaiturit on '
+            + 'korvattu virallisilla asemilla, joiden kulkuväylät on '
+            + 'mitoitettu ihmisjoukoille.',
           lahde: 'Iwona Rege, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Commuting by Abra (3049532876).jpg',
-          selite: 'Täysi abra ylittämässä lahdelmaa matkustajat katoksen '
-            + 'alla kahdessa rivissä, takarannalla Deiran matalia taloja ja '
-            + 'minareetti.',
+          selite: 'Keskikokoiseen abraan mahtuu 20 matkustajaa, ja ylitys '
+            + 'Deiran ja Bur Dubain välillä kestää viidestä seitsemään '
+            + 'minuuttia. Veneitä on noin 150, ja ne kuljettavat vuodessa '
+            + '15–20 miljoonaa matkustajaa.',
           lahde: 'Peter Dowley, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -10288,9 +10401,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bastikya - With Old City Wall.jpg',
-          selite: 'Kapea kuja Bastakiassa: vasemmalla on palmunvarsista '
-            + 'tehty seinä ja rivi puuovia, oikealla korkea hiekanvärinen '
-            + 'muuri, ja perällä kohoaa tuulitorni.',
+          selite: 'Kortteli rakennettiin 1890-luvulta alkaen varakkaiden '
+            + 'persialaiskauppiaiden asuinalueeksi, ja se sai nimensä '
+            + 'Bastakin kaupungista Etelä-Iranista. Parhaimmillaan taloja '
+            + 'oli noin 60, ja useimpien välissä kulki vain kapea '
+            + 'mutkitteleva kuja.',
           lahde: 'MrT HK, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -10322,9 +10437,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Al Fahidi Fort 02.jpg',
-          selite: 'Al Fahidin linnoituksen pyöreä kulmatorni ja '
-            + 'korallikivestä ladottu muuri, tornin huipulla Dubain lippu ja '
-            + 'takana moskeijan minareetti.',
+          selite: 'Linnoituksen vanhin torni rakennettiin noin vuonna 1787, ja '
+            + 'se on Dubain vanhin yhä pystyssä oleva rakennus. '
+            + 'Korallikivestä ja laastista ladotut muurit nousivat '
+            + 'useassa vaiheessa neliön muotoisen linnoituksen ympärille.',
           lahde: 'Nasser Ali Alkhlaifi, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -10370,18 +10486,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Al Ahmadiya School in Dubai - building front side.jpg',
-          selite: 'Koulun julkisivu aukiolta: yläkerrassa kiertää avoin '
-            + 'kaarikäytävä ja sen yllä rivi veistettyjä kipsiritilöitä, '
-            + 'alakerran ikkunoissa on valkoiset stukkokehykset ja '
-            + 'ovi aukeaa koristekaaren alta.',
+          selite: 'Helmikaupalla rikastunut Sheikh Ahmed Bin Dalmouk '
+            + 'rakennutti talon vuonna 1912 pelkkää opetusta varten — se '
+            + 'on Dubain vanhin tunnettu muodollinen oppilaitos.',
           lahde: 'أمين علوان, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Al Ahmadiya School in Dubai - building front side with the area around the building.jpg',
-          selite: 'Sama talo laajemmasta kulmasta: vasemmalla naapurin '
-            + 'katolta kohoaa nelisivuinen tuulitorni, edessä on '
-            + 'hiekkakenttä kyyhkyineen ja oikealla jatkuu korkea '
-            + 'savirapattu muuri.',
+          selite: 'Perustaja ei ehtinyt nähdä työtään valmiina: hänen poikansa '
+            + 'Mohammed viimeisteli rakennuksen ja antoi koululle isänsä '
+            + 'nimen. Museona koulu vihittiin 20. maaliskuuta 2000.',
           lahde: 'أمين علوان, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -10413,18 +10527,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bur Dubai Grand Mosque.jpg',
-          selite: 'Minareetti alaviistosta: kahdeksankulmainen torni '
-            + 'nousee kahden parvekkeen ohi kuunsirppihuippuun, ja sen '
-            + 'alla juoksee sakarareunainen räystäslista, '
-            + 'kalligrafiapaneeli ja rivi veistettyjä puuovia.',
+          selite: 'Minareetti kohoaa 70 metriin ja on Dubain korkein. Sen '
+            + 'majakkamainen, anatolialaistyylinen muoto näkyy '
+            + 'vanhankaupungin yli kuin merimerkki.',
           lahde: 'Ankur Panchbudhe, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Grand Mosque Bur Dubai.jpg',
-          selite: 'Koko moskeija kadun toiselta puolen: hiekanvärinen '
-            + 'julkisivu, katolla rivi valkoisia kupoleita ja oikeassa '
-            + 'reunassa minareetti, joka kohoaa selvästi korkeammalle '
-            + 'kuin mikään ympärillä.',
+          selite: 'Nykyinen talo on jo kolmas paikallaan: moskeija '
+            + 'rakennettiin 1900, uudelleen 1960 ja vielä kerran 1998. '
+            + 'Katolla on 45 pientä ja yhdeksän suurta kupolia, ja '
+            + 'rukoussaliin mahtuu 1 200 ihmistä.',
           lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -10453,18 +10566,18 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Dubai Spice Souk 2018.jpg',
-          selite: 'Maustekuja katetun katon alla: tiskille on ladottu '
-            + 'rivi pusseja, joissa on saflorin oranssia, kuivattuja '
-            + 'ruusunnuppuja, hibiskusta, kuivattuja limettejä ja '
-            + 'vuorisuolamöhkäleitä.',
+          selite: 'Suuk on kapeiden kujien verkosto, jonka varrella myydään '
+            + 'suitsuketta, shishatupakkaa sekä arabialaisen ja '
+            + 'eteläaasialaisen keittiön yrttejä ja mausteita. Hinta ei '
+            + 'ole kyltissä vaan neuvottelussa.',
           lahde: 'Frodlekis, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Spice souk @ Deira @ Dubai (15696929358).jpg',
-          selite: 'Kojun tiski läheltä: chilijauhetta, timjamia, '
-            + 'chilihiutaleita ja yrttejä pusseissa, takana '
-            + 'kanelikuoria nipuissa ja verkkopusseja pähkinöitä, '
-            + 'yhdessä pussissa metallikauha.',
+          selite: 'Mausteiden lomassa myydään myös kankaita, teetä, mattoja ja '
+            + 'taloustavaraa. Suuk elää nykyään enemmän matkailusta kuin '
+            + 'ruokakaupasta, sillä dubailaiset ostavat mausteensa yhä '
+            + 'useammin suurmyymälästä.',
           lahde: 'Guilhem Vellut from Annecy, France, Wikimedia Commons '
             + '(CC BY 2.0)',
         },
@@ -10497,16 +10610,18 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bur Dubai Textile Souq (8970533953).jpg',
-          selite: 'Suukin kuja sinisellä hetkellä: puinen tynnyriholvi '
-            + 'kattotuoleineen kaartuu kujan yli, lyhdyt palavat '
-            + 'pilareissa, ja kangaskauppojen edessä riippuu kuosikankaita.',
+          selite: 'Kujien yllä kaartuva korkea puukaarikäytävä on suunniteltu '
+            + 'tuulettamaan kuumuutta: kuuma ilma nousee kaarien rakojen '
+            + 'kautta ulos ja veto pääsee kujalle tilalle. Teräspilarit '
+            + 'ovat myöhempi lisä alkuperäisen rakenteen heikettyä.',
           lahde: 'Fabio Achilli from Milano, Italy, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Grand Souq, Bur Dubai.jpg',
-          selite: 'Sama kuja päivällä: matalan puukaton alla molemmin '
-            + 'puolin seinämät taiteltuja pashminoita ja huiveja '
-            + 'väririveissä, ja katosta roikkuu perinteinen lyhty.',
+          selite: 'Kankaiden suuk syntyi 1890-luvulla, kun kauppaa avokätisesti '
+            + 'suosinut Maktoum bin Hashar hallitsi Dubaita. Vuonna 1902 '
+            + 'kaupunkiin muutti suuri joukko iranilaiskauppiaita, ja '
+            + 'Dubai saattoi ylpeillä Arabian suurimmilla suukeilla.',
           lahde: 'Jpbowen, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -10555,8 +10670,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Petra Deir 44.jpg',
-          selite: 'Ad Deir kalliokummun kyljessä, edessä laaja tasattu aukio '
-            + 'ja taustalla paljasta vuoristoa horisonttiin asti.',
+          selite: 'Petran suurimman monumentin julkisivu on 45 metriä korkea '
+            + 'ja 50 metriä leveä, ja se louhittiin kalliopintaan '
+            + '100-luvulla eKr. Sen edessä oleva laaja tasattu aukio on '
+            + 'tehty tarkoituksella kokoontumispaikaksi.',
           lahde: 'Teo Gomez, Wikimedia Commons (PD)',
         },
       ],
@@ -10590,9 +10707,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Mosaic of a wild boar, Petra Church.jpg',
-          selite: 'Sivulaivan mosaiikki läheltä: pyöreässä kehyksessä '
-            + 'kulkee villisika harjaksineen, ja tausta on ladottu '
-            + 'vaaleista kivikuutioista.',
+          selite: 'Sivulaivojen värikkäiden kuviomosaiikkien aiheina ovat '
+            + 'vuodenajat, eläimet, ihmiset, saviastiat ja kasvit. Tyyli '
+            + 'muistuttaa läheisesti Gazan koulukuntaa ja lainaa myös '
+            + 'hellenistisestä ja roomalaisesta kuvastosta.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -10621,9 +10739,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Royal Tombs from Street of Facades at Petra (3).jpg',
-          selite: 'Uurnahauta jyrkänteessä: julkisivun alla on rivi '
-            + 'holvikaaria, jotka kannattavat sen edessä olevaa pihaa, '
-            + 'ja ympärillä kalliossa on pienempiä kammioita.',
+          selite: 'Uurnahauta on kuninkaanhautojen näyttävin: sen edessä olevaa '
+            + 'suurta pihaa kannattelevat holvikaaret. Sama kallio on '
+            + 'ollut ensin hauta ja sitten kirkko, sillä rakennus '
+            + 'muutettiin kirkoksi vuonna 446 jKr.',
           lahde: 'Ankur P, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -10655,9 +10774,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Qasr al-Bint 01.jpg',
-          selite: 'Qasr al-Bint sivulta: korkea harkkomuuri seisoo '
-            + 'pystyssä ilman kattoa, ja sen edustalla maassa on '
-            + 'rivissä katkenneita pylväänpaloja.',
+          selite: 'Qasr al-Bint on poikkeus kaikkeen muuhun Petrassa: se on '
+            + 'rakennettu kivestä pystyyn eikä louhittu kallioon. '
+            + 'Rakennus seisoo podiumilla, jonka ydin on kivimursketta ja '
+            + 'pinta huoliteltua harkkomuurausta.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -10690,9 +10810,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Great Temple of Petra 01.jpg',
-          selite: 'Suuri temppeli laaksosta katsottuna: keskellä '
-            + 'kohoaa leveä porrasnousu, sen ympärillä on '
-            + 'kaivausalueen muureja ja taustalla paljas rinne.',
+          selite: 'Noin 7 560 neliömetrin kompleksia on kaivettu '
+            + 'järjestelmällisesti vuodesta 1993, jolloin Brownin '
+            + 'yliopiston Martha Sharp Joukowsky aloitti työn. '
+            + 'Pylväskadulta noustaan noin kahdeksan metriä ylös '
+            + 'seitsemäntoista metriä leveitä portaita.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -10718,10 +10840,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jordan-18A-094 - Theatre (view large).jpg',
-          selite: 'Teatteri ylhäältä: istuinrivit kaartuvat '
-            + 'puoliympyräksi punaisessa kalliossa, ja katsomon '
-            + 'yläpuolella seinässä ammottavat hautakammioiden '
-            + 'suuaukot.',
+          selite: 'Teatteri louhittiin rinteeseen niin, että katsomosta näkyisi '
+            + 'mahdollisimman monta hautaa, ja rakentaminen leikkasi '
+            + 'useiden vanhempien hautojen läpi — niiden kammiot ovat yhä '
+            + 'auki katsomon yläreunassa. Istuinrivejä ei ladottu vaan '
+            + 'hakattiin, ja katsomoon mahtui arviolta 8 500 katsojaa.',
           lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -10753,10 +10876,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Petra-Siq-38-Zoomorph-2010-gje.jpg',
-          selite: 'Rotkon seinämää läheltä: vesi on kuluttanut '
-            + 'hiekkakiveen pyöreän lohkareen, jonka juovainen pinta '
-            + 'näyttää eläimen selältä, ja taustalla kalliossa on '
-            + 'kammioiden aukkoja.',
+          selite: 'Siq ei ole veden kaivama rakokanjoni vaan luonnollinen '
+            + 'siirros, jonka maankuoren liike halkaisi kahtia; vesi on '
+            + 'vasta sen jälkeen hionut seinät sileiksi. Kallion '
+            + 'kammioissa majoittui arkeologien arvion mukaan '
+            + 'pääsisäänkäyntiä vartioineita sotilaita.',
           lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -10793,9 +10917,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Al-Khazneh, Petra, Jordan.jpg',
-          selite: 'Aarrekammio koko korkeudeltaan: alarivin pylväiden '
-            + 'juurella kulkevat ihmiset näkyvät pieninä, ja niistä näkee, '
-            + 'kuinka korkea julkisivu on.',
+          selite: 'Julkisivu on 37 metriä korkea ja 24 metriä leveä, ja se '
+            + 'rakennettiin 100-luvun alussa jKr. kuningas Aretas IV '
+            + 'Philopatriksen aikana mausoleumiksi ja kryptaksi.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -10821,10 +10945,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Petra High Place of Sacrifice 1954.jpg',
-          selite: 'Uhripaikan taso vuoren laella: kalliosta on '
-            + 'tasoitettu suorakulmainen kenttä, jonka laidalla on '
-            + 'portaat ja matala alttarikoroke, ja ympärillä aukeaa '
-            + 'utuinen vuoristo.',
+          selite: 'Jebel Madbahin laella olevalle uhripaikalle noustaan '
+            + 'teatterin luota noin kahdeksansataa askelmaa. Kallioon '
+            + 'tasoitetulla alueella on altaita ja alttari, joilla '
+            + 'yleisesti uskotaan vietetyn juomauhreja.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -10887,9 +11011,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Masjid Qiblatain.jpg',
-          selite: 'Qiblatayn puiden takaa: valkoinen kupoli kohoaa '
-            + 'keskeltä, sen molemmin puolin nousee minareetti, ja etualan '
-            + 'lehvästö peittää rakennuksen alaosan.',
+          selite: 'Nykyinen rakennus on vuodelta 1987, ja sen muoto on '
+            + 'tahallisen symmetrinen: kaksi minareettia ja kaksi kupolia '
+            + 'muistuttavat siitä, että rukoussuunta siirtyi täällä '
+            + 'Jerusalemista Mekan Kaabaan.',
           lahde: 'Muhammad Mahdi Karim at English Wikipedia, Wikimedia Commons (CC BY-SA 2.5)',
         },
       ],
@@ -10925,9 +11050,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sab\'u Masajid.jpg',
-          selite: 'Valkoinen moskeija kaarikäytävineen ja mataline '
-            + 'kupoleineen, takanaan Sela-vuoren paljas kalliorinne aivan '
-            + 'takaseinän takana.',
+          selite: 'Sela-vuoren eteläpuolen pienet moskeijat on nimetty vuoden '
+            + '627 kaivantotaistelun puolustajien mukaan. Kolme niistä — '
+            + 'al-Fath, Salman ja Abu Bakr — on sittemmin yhdistetty '
+            + 'yhdeksi isommaksi moskeijaksi, jolla on avoin sisäpiha.',
           lahde: 'Imam Khairul Annas, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -10972,17 +11098,19 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Close-up shot of the Green Dome at The Prophet\'s Mosque (Al Masjid-e-Nabawi).jpg',
-          selite: 'Vihreä kupoli lähikuvassa: sen alla erottuu '
-            + 'hiekankeltainen muuri ikkunariveineen, ja kupolin kupeessa '
-            + 'nousee minareetin varsi kirkasta taivasta vasten.',
+          selite: 'Vihreän kupolin alla on Aishan talon paikka, jonne Muhammad '
+            + 'haudattiin; samassa kammiossa ovat myös kalifit Abu Bakr '
+            + 'ja Umar. Nykyinen kupoli on vuodelta 1818, ja vihreäksi se '
+            + 'maalattiin vasta 1837.',
           lahde: 'TheHadiRahim, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Al-Masjid al-Nabawī al-Sharīf Original Construction 1 AH.jpg',
-          selite: 'Nykyaikainen kaavio ensimmäisestä moskeijasta '
-            + 'vuodelta 622: suorakaiteen muotoinen piha, jonka '
-            + 'laidoilla ovat pylväsrivit, ja kaavioon on merkitty '
-            + 'kolme ovea sekä vaimojen asuintilat sivussa.',
+          selite: 'Ensimmäinen moskeija valmistui vuonna 622 seitsemässä '
+            + 'kuukaudessa: avoin piha, jonka katon kannattivat '
+            + 'palmunrungot, kolme ovea ja rukoussuunta kohti '
+            + 'Jerusalemia. Tila oli yhtä aikaa rukoushuone, oikeussali '
+            + 'ja koulu.',
           lahde: 'SPQR10, Wikimedia Commons (CC0)',
         },
       ],
@@ -11017,9 +11145,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Perkuburan Baqi\' (Maqbaratu al-Baqi\') & Masjid al-Nabawi.jpg',
-          selite: 'Hautausmaan kenttä etualalla: karua soraa ja matalia '
-            + 'kiviä riveissä ilman kupoleita ja hautakivitekstejä, '
-            + 'taustalla Profeetan moskeijan minareetit.',
+          selite: 'Vuosisatojen kuluessa kenttä täyttyi kupoleista ja '
+            + 'hautarakennuksista, mutta hautojen päälliset purettiin '
+            + 'vuonna 1806 ja uudelleen 1926. Siitä lähtien haudat on '
+            + 'merkitty pelkillä kivillä.',
           lahde: 'Kerina yin, Wikimedia Commons (CC0)',
         },
       ],
@@ -11056,9 +11185,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Masjid Al-Ghamamah.jpg',
-          selite: 'Basalttikivinen moskeija palmunrunkojen välistä '
-            + 'katsottuna: tumma kivimuuri ja sen päällä matalat kupolit '
-            + 'vaaleaa taivasta vasten.',
+          selite: 'Moskeija pystytettiin 700-luvun alussa kalifi Umar ibn Abd '
+            + 'al-Azizin aikana, ja vuoden 1859 korjaus antoi sille '
+            + 'suunnilleen nykyisen ulkonäön. Rukoussalin päällä on kuusi '
+            + 'kupolia, joista suurin on mihrabin kohdalla.',
           lahde: 'معتز توفيق اغبارية, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -11091,9 +11221,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Hijaz Railway Station 2020.jpg',
-          selite: 'Asemarakennuksen julkisivu päivänvalossa: rivi '
-            + 'holvikaaria kivimuurissa, tasainen katto ja edessä '
-            + 'kivetty aukio ilman raiteita.',
+          selite: 'Hidžaz-radan pääteasema rakennettiin Anbariyan '
+            + 'kaupunginosaan, ja ensimmäinen juna kaartoi laiturille 1. '
+            + 'syyskuuta 1908. Junat lakkasivat tulemasta vuoden 1920 '
+            + 'tienoilla, ja entisöityyn kortteliin avattiin 2006 '
+            + 'Hidžaz-radan museo.',
           lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -11133,9 +11265,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Mezquita de Quba, Medina, Arabia Saudita, 2025-05-22, DD 16-18 HDR.jpg',
-          selite: 'Quba yöllä valaistuna: vaalea julkisivu ja kupolit '
-            + 'hehkuvat lämpimässä valossa, ja minareetit erottuvat '
-            + 'valopylväinä tummaa taivasta vasten.',
+          selite: 'Nykyisen moskeijan suunnitteli egyptiläinen arkkitehti '
+            + 'Abdel-Wahed El-Wakil, ja se muurattiin perinteisistä '
+            + 'onteloista saviharkoista ilman valubetonia. Vuonna 1986 '
+            + 'valmistuneessa rakennuksessa on neljä minareettia ja '
+            + 'viisikymmentäkuusi kupolia.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -11206,9 +11340,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jabal al-Nour And cave Hira.jpg',
-          selite: 'Vuoren kalliohuippu alhaalta katsottuna: etualalla on '
-            + 'rakennuksen kaarikoristeinen yläkerta, ja sen takana rinne '
-            + 'nousee paljaana kivenä suoraan ylös.',
+          selite: 'Valon vuori on Mekan korkein kohta, 642 metriä, ja sen '
+            + 'huippu näyttää siltä kuin vuoren päälle olisi nostettu '
+            + 'toinen vuori. Rinteessä 270 metrin korkeudessa on Hiran '
+            + 'luola, jolle noustaan 1 750 askelmaa.',
           lahde: 'Sadath i, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -11242,9 +11377,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jannat ul Mualla Cemetery.jpg',
-          selite: 'Hautakenttä katosten alla: matalia kiviä pitkinä '
-            + 'riveinä soralla ilman kupoleita ja kirjoitettuja '
-            + 'hautakiviä, ja muutama kyyhkynen kivien välissä.',
+          selite: 'Osmanimatkaaja Evliya Çelebi laski kentällä 1600-luvulla '
+            + 'seitsemänkymmentäviisi kupolihautaa, mutta suuri osa '
+            + 'hautarakenteista purettiin vuosina 1925–1926. Siitä '
+            + 'lähtien haudat on merkitty pelkillä kivillä.',
           lahde: 'Tubi719, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -11278,9 +11414,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Mosque of the Jinn 01.jpg',
-          selite: 'Punaruskeasta kivestä muurattu moskeija kadunkulmassa: '
-            + 'julkisivussa kaarevat ikkunat, kulmassa minareetti ja '
-            + 'vasemmalla kadulla bussi.',
+          selite: 'Masjid al-Jinn on kaupungin vanhimpia ja samalla sen '
+            + 'käydyimpiä moskeijoita. Se seisoo laakson pohjoisosassa '
+            + 'parin korttelin päässä Jannat al-Mu\'allan hautausmaan '
+            + 'eteläpuolella, ja siinä on yksi minareetti.',
           lahde: 'Sadrettin, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -11311,9 +11448,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Site of the birthplace of the Prophet Muhammad, Mecca, Saudi Arabia.jpg',
-          selite: 'Kirjastorakennuksen julkisivu tyhjältä kadulta: vaalea '
-            + 'kivipinta, kaareva pääty ja seinässä arabiankielinen '
-            + 'kyltti.',
+          selite: 'Perimätiedon mukaan tällä tontilla seisoi talo, jossa Amina '
+            + 'bint Wahb synnytti Muhammadin. Kuningaskunnan perustaja '
+            + 'Ibn Saud rakennutti paikan päälle kirjaston oppineiden '
+            + 'kanssa neuvoteltuaan — rakennus on kirjasto eikä pyhäkkö.',
           lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -11362,10 +11500,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The Holy Mosque in Mecca.jpg',
-          selite: 'Kaaba päivänvalossa moskeijan pihalla: ympärillä '
-            + 'kaartuvat pylväskäytävät kerroksittain ja ihmiset ovat '
-            + 'pieniä hahmoja mustan kuution vierellä, taustalla tornirivi '
-            + 'rakennusnostureineen.',
+          selite: 'Keskellä seisova Kaaba on 13,1 metriä korkea ja pohjaltaan '
+            + '12,86 kertaa 11,03 metriä. Nykyinen moskeija on 356 000 '
+            + 'neliömetriä, ja sen kolmetoista minareettia ovat 139 '
+            + 'metriä korkeita.',
           lahde: 'Meshal Obeidallah (talk), Wikimedia Commons (PD)',
         },
       ],
@@ -11406,9 +11544,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'ZamZam tower (Mecca clock tower) 2026-05-28.jpg',
-          selite: 'Kellotorni yöllä alhaalta kuvattuna: vihreä kellotaulu '
-            + 'hehkuu tornin kyljessä, huippu on kullanvärinen, ja '
-            + 'edustalla erottuvat moskeijan minareetit.',
+          selite: 'Mekan kuninkaallinen kellotorni on 601 metriä korkea ja '
+            + 'maailman neljänneksi korkein rakennus. Sen neljä '
+            + 'kellotaulua ovat kukin 43 kertaa 43 metriä eli maailman '
+            + 'suurimmat, ja kellon katto on 450 metrin korkeudessa.',
           lahde: 'FaysaLBinDaruL, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
