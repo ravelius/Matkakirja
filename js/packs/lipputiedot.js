@@ -1862,4 +1862,499 @@ export const LIPPUTIEDOT = {
     lahde: 'Liput: Wikimedia Commons (PD). Tunnus: Hlticgh, '
       + 'Wikimedia Commons (CC BY-SA 4.0)',
   },
+  // Erä 8: Pohjois-Amerikan lauta kokonaisuudessaan (lisenssit
+  // tarkistettu Commonsin API:sta 27.8.2026, tunnukset katsottu
+  // silmin kontaktiarkilta). Kanadan vaakunakilpi on Sodacanin
+  // piirros (CC BY-SA 3.0), muut tunnukset PD. Nicaraguan tunnuksesta
+  // on käytössä vuosien 1908–1971 piirros, koska nykyisen asun ainoa
+  // Commons-kuva on Attribution-lisenssillä eikä PD/CC — sama
+  // kuvasääntö, joka jätti Omanin tunnuksen pois erässä 6.
+  'Flag of the United States.svg': {
+    maa: 'Yhdysvallat',
+    symboliikka: [
+      {
+        osa: 'Kolmetoista raitaa',
+        selite: 'kolmetoista siirtokuntaa, jotka irtautuivat '
+          + 'Britanniasta.',
+      },
+      {
+        osa: 'Viisikymmentä tähteä',
+        selite: 'osavaltiot — yksi tähti kutakin kohden.',
+      },
+      {
+        osa: 'Valkoinen',
+        selite: 'puhtaus ja viattomuus (valtionsinetin selityksen '
+          + 'mukaan).',
+      },
+      { osa: 'Punainen', selite: 'kestävyys ja urheus.' },
+      { osa: 'Sininen', selite: 'valppaus, sinnikkyys ja oikeus.' },
+    ],
+    kappaleet: [
+      'Mannermaakongressi päätti lipusta kesäkuussa 1777: '
+        + 'kolmetoista raitaa ja kolmetoista tähteä "uutena '
+        + 'tähtikuviona". Päätös ei kertonut, miten tähdet '
+        + 'sommitellaan, joten jokainen ompelija asetteli ne '
+        + 'omalla tavallaan — riveihin, kaareen tai ympyrään. '
+        + 'Tarina siitä, että Betsy Ross olisi ommellut '
+        + 'ensimmäisen lipun Washingtonin luonnoksesta, tuli '
+        + 'julkisuuteen vasta 1870 hänen pojanpojaltaan, eivätkä '
+        + 'aikalaislähteet tunne sitä.',
+      'Aluksi uusi osavaltio toi lippuun sekä raidan että tähden. '
+        + 'Vuonna 1818 kongressi palautti raidat kolmeentoista '
+        + 'alkuperäisen siirtokunnan kunniaksi ja päätti, että '
+        + 'jatkossa lisätään vain tähtiä — aina uutta itsenäisyys'
+        + 'päivää seuraavasta neljännestä heinäkuuta alkaen.',
+      'Nykyinen viidenkymmenen tähden asu tuli voimaan 4. '
+        + 'heinäkuuta 1960, kun Havaiji oli liittynyt unioniin. Se '
+        + 'on lipun pitkäikäisin versio: kaikkiaan lippu on '
+        + 'muuttunut virallisesti 26 kertaa.',
+    ],
+    versiot: [
+      {
+        nimi: 'Kolmentoista tähden lippu 1777–1795',
+        polku: 'assets/liput/versiot/usa-13-tahtea.png',
+        selite: 'Ensimmäinen tähtilippu: kolmetoista tähteä ja '
+          + 'kolmetoista raitaa. Tähtien asettelu vaihteli lipusta '
+          + 'toiseen, koska laki ei sitä määrännyt.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Yhdysvaltain suuri sinetti',
+        polku: 'assets/liput/tunnukset/usa-vaakuna.png',
+        selite: 'Kaljukotka kantaa raidallista kilpeä. Toisessa '
+          + 'kynnessä on kolmetoista nuolta, toisessa oliivinoksa — '
+          + 'sota ja rauha — ja kotkan katse on käännetty '
+          + 'oliivinoksaan päin. Nokassa on nauha, jossa lukee E '
+          + 'pluribus unum, "monesta yksi". Luku kolmetoista '
+          + 'toistuu sinetissä yhä uudelleen.',
+      },
+    ],
+    lahde: 'Liput ja sinetti: Wikimedia Commons (PD)',
+  },
+  'Flag of Canada.svg': {
+    maa: 'Kanada',
+    symboliikka: [
+      {
+        osa: 'Punainen ja valkoinen',
+        selite: 'Kanadan viralliset värit, jotka kuningas Yrjö V '
+          + 'vahvisti 1921.',
+      },
+      {
+        osa: 'Vaahteranlehti',
+        selite: 'maan tunnus jo 1800-luvulta; lehdessä on '
+          + 'yksitoista kärkeä, eikä luvulla ole omaa merkitystä — '
+          + 'se piirrettiin niin, että lehti pysyy selvänä '
+          + 'tuulessakin.',
+      },
+      {
+        osa: 'Keskisarake',
+        selite: 'valkoinen kenttä on puolet lipun leveydestä. '
+          + 'Heraldiikassa muoto sai tästä lipusta nimen "Canadian '
+          + 'pale".',
+      },
+    ],
+    kappaleet: [
+      'Kanadalla ei ollut omaa lippua vielä 1960-luvulla: '
+        + 'käytössä oli Union Jack ja epävirallisena punainen '
+        + 'Canadian Red Ensign. Pääministeri Lester B. Pearson '
+        + 'halusi tunnuksen, jota ei sekoiteta Britannian lippuun — '
+        + 'hän oli '
+        + 'kokenut Suezin kriisissä 1956, että Egypti vastusti '
+        + 'kanadalaisia rauhanturvaajia, koska näiden lipussa oli '
+        + 'sotaa käyvän maan lippu.',
+      'Vuoden 1964 "suuri lippukiista" kesti kuusi viikkoa ja 308 '
+        + 'puheenvuoroa. Voittajaksi tuli historioitsija George '
+        + 'Stanleyn ehdotus, joka pohjautui Kingstonin '
+        + 'sotilasakatemian lippuun; komitea äänesti sen puolesta '
+        + 'yksimielisesti 15–0. Alahuone hyväksyi lipun '
+        + 'joulukuussa 1964, ja se nostettiin salkoon '
+        + 'Parlamenttikukkulalla 15. helmikuuta 1965.',
+    ],
+    versiot: [
+      {
+        nimi: 'Canadian Red Ensign 1957–1965',
+        polku: 'assets/liput/versiot/can-punalippu.png',
+        selite: 'Punainen kauppalippu, jonka kulmassa on Union '
+          + 'Jack ja liepeessä Kanadan kilpi. Se oli maan '
+          + 'tosiasiallinen lippu ennen vaahteranlehteä.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Kanadan vaakunakilpi',
+        polku: 'assets/liput/tunnukset/can-vaakuna.png',
+        selite: 'Kilvessä ovat perustajamaiden tunnukset: '
+          + 'Englannin kolme leijonaa, Skotlannin leijona, Irlannin '
+          + 'harppu ja Ranskan liljat. Alimpana on kolme '
+          + 'vaahteranlehteä samasta oksasta — ne olivat aluksi '
+          + 'vihreitä ja muutettiin punaisiksi 1957.',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Vaakunakilpi: Sodacan, '
+      + 'Wikimedia Commons (CC BY-SA 3.0)',
+  },
+  'Flag of Mexico.svg': {
+    maa: 'Meksiko',
+    symboliikka: [
+      {
+        osa: 'Vihreä',
+        selite: 'itsenäisyys — nykyisin luetaan myös toivoksi.',
+      },
+      {
+        osa: 'Valkoinen',
+        selite: 'katolisen uskon puhtaus — nykyisin ykseys.',
+      },
+      {
+        osa: 'Punainen',
+        selite: 'espanjalaisten ja kreolien liitto — nykyisin '
+          + 'sankarien veri.',
+      },
+      {
+        osa: 'Kotka keskellä',
+        selite: 'atsteekkien perustamistaru: kotka syö käärmettä '
+          + 'kaktuksen päällä.',
+      },
+    ],
+    kappaleet: [
+      'Värit tulivat Kolmen takuun armeijalta, joka yhdisti 1821 '
+        + 'kapinalliset ja kuninkaan joukot. Takuut olivat uskonto, '
+        + 'itsenäisyys ja ykseys, ja niistä lippu sai vihreänsä, '
+        + 'valkoisensa ja punaisensa. Agustín de Iturbide vahvisti '
+        + 'lipun marraskuussa 1821.',
+      'Lipun keskellä on maan vanhin kuva: taru kertoo, että '
+        + 'atsteekit saivat käskyn perustaa kaupunkinsa sinne, '
+        + 'missä kotka istuu kaktuksella käärme kynsissään. Paikka '
+        + 'oli Tenochtitlán, nykyinen Mexico City. Kotkan asu on '
+        + 'vaihtunut hallitusmuodon mukana — keisarikunnan kotkalla '
+        + 'oli kruunu, tasavallan kotkalta se poistettiin 1823. '
+        + 'Nykyinen asu on vuodelta 1968.',
+      'Ilman vaakunaa lippu olisi lähes Italian lippu. Siksi '
+        + 'Meksiko luopui vaakunattomasta kauppalaivaston lipusta '
+        + 'kokonaan.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Meksikon vaakuna',
+        polku: 'assets/liput/tunnukset/mex-vaakuna.png',
+        selite: 'Kultainen kotka seisoo kaktuksella kalliolla '
+          + 'keskellä järveä ja pitää nokassaan kalkkarokäärmettä. '
+          + 'Alla ovat tammen- ja laakerinoksat kansallisvärisellä '
+          + 'nauhalla sidottuina.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of Greenland.svg': {
+    maa: 'Grönlanti',
+    symboliikka: [
+      {
+        osa: 'Valkoinen',
+        selite: 'mannerjää, joka peittää yli 80 prosenttia '
+          + 'saaresta.',
+      },
+      { osa: 'Punainen', selite: 'meri.' },
+      {
+        osa: 'Punainen puolikaari',
+        selite: 'aurinko, joka on painunut puoliksi meren taakse.',
+      },
+      {
+        osa: 'Valkoinen puolikaari',
+        selite: 'jäävuoret ja ahtojää.',
+      },
+    ],
+    kappaleet: [
+      'Erfalasorput, "meidän lippumme", on ainoa pohjoismainen '
+        + 'lippu ilman ristiä. Sen suunnitteli grönlantilainen '
+        + 'poliitikko ja opettaja Thue Christiansen, ja lippu '
+        + 'hyväksyttiin 21. kesäkuuta 1985 — täpärästi, äänin '
+        + '14–11, vihreä-valkoista ristilippua vastaan.',
+      'Värit ovat samat kuin Tanskan lipussa, ja niin kuvion on '
+        + 'tarkoituskin kertoa: Grönlanti on oma maansa Tanskan '
+        + 'kuningaskunnan sisällä. Sama kuvio sattui olemaan jo '
+        + 'käytössä tanskalaisella soutuseuralla, joka antoi '
+        + 'ystävällisesti luvan jatkaa.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Grönlannin vaakuna',
+        polku: 'assets/liput/tunnukset/grl-vaakuna.png',
+        selite: 'Valkoinen jääkarhu sinisellä kentällä. Karhu on '
+          + 'ollut Grönlannin tunnuksena 1600-luvulta, mutta Jens '
+          + 'Rosingin vuoden 1989 piirroksessa se nostaa vasenta '
+          + 'etutassuaan — inuiittiperinteen mukaan jääkarhu on '
+          + 'vasenkätinen. Tanskan vaakunassa sama karhu nostaa '
+          + 'oikeaa tassuaan.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of Cuba.svg': {
+    maa: 'Kuuba',
+    symboliikka: [
+      {
+        osa: 'Kolme sinistä raitaa',
+        selite: 'saaren silloiset kolme maakuntaa.',
+      },
+      { osa: 'Valkoiset raidat', selite: 'isänmaallisen asian puhtaus.' },
+      {
+        osa: 'Punainen kolmio',
+        selite: 'voima ja lujuus — tasasivuinen kolmio on myös '
+          + 'vapaamuurarien merkki tasa-arvosta.',
+      },
+      {
+        osa: 'Valkoinen tähti',
+        selite: 'yksinäinen tähti, itsenäinen Kuuba. Lipun '
+          + 'lempinimi on Estrella Solitaria.',
+      },
+    ],
+    kappaleet: [
+      'Lippu syntyi maanpaossa New Yorkissa 1849. Sen suunnitteli '
+        + 'runoilija Miguel Teurbe Tolón yhdessä kapinajohtaja '
+        + 'Narciso Lópezin kanssa, ja ensimmäisen kappaleen ompeli '
+        + 'Emilia Teurbe Tolón. Lippu nostettiin ensi kerran '
+        + 'Kuuban maaperällä 1850, kun Lópezin maihinnousu valtasi '
+        + 'hetkeksi Cárdenasin rannikkokaupungin.',
+      'Viralliseksi lipuksi se tuli vasta 20. toukokuuta 1902, '
+        + 'kun tasavalta itsenäistyi: kenraali Máximo Gómez nosti '
+        + 'sen Havannan Morro-linnakkeeseen. Sen jälkeen lippu on '
+        + 'säilynyt muuttumattomana — myös vuoden 1959 '
+        + 'vallankumouksen yli.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Kuuban vaakuna',
+        polku: 'assets/liput/tunnukset/cub-vaakuna.png',
+        selite: 'Kilven yläosassa kultainen avain kahden niemen '
+          + 'välissä nousevan auringon alla: Kuuba on Meksikonlahden '
+          + 'avain. Vasemmalla lipun siniset raidat, oikealla '
+          + 'kuninkaanpalmu laaksossa. Kilpeä kannattaa vitsakimppu, '
+          + 'jonka päällä on vapauden friikkalakki.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of Guatemala.svg': {
+    maa: 'Guatemala',
+    symboliikka: [
+      {
+        osa: 'Taivaansininen',
+        selite: 'asetuksen mukaan voima, oikeus, totuus ja '
+          + 'uskollisuus — ja kaksi merta saman maan rannoilla.',
+      },
+      {
+        osa: 'Valkoinen',
+        selite: 'puhtaus, rehellisyys ja valo.',
+      },
+      {
+        osa: 'Ketsaali',
+        selite: 'maan kansallislintu ja vapauden vertauskuva.',
+      },
+      {
+        osa: 'Kääry',
+        selite: 'Keski-Amerikan itsenäisyyspäivä 15. syyskuuta '
+          + '1821.',
+      },
+    ],
+    kappaleet: [
+      'Sinivalkoiset värit ovat perintöä Keski-Amerikan '
+        + 'liittotasavallalta, jonka lippua Guatemala käytti 1851 '
+        + 'asti. Silloin vallan ottanut espanjamielinen ryhmä '
+        + 'lisäsi lippuun Espanjan puna-keltaiset. Alkuperäiset '
+        + 'värit palautettiin 1871 — mutta pystyraidoiksi '
+        + 'käännettyinä, jotta lippu erottuisi naapureista.',
+      'Vaakunassa ovat ristikkäiset kiväärit ja miekat: maa on '
+        + 'valmis puolustautumaan. Guatemala on yksi harvoista '
+        + 'maista, joiden lipussa on ampuma-ase — samassa '
+        + 'joukossa ovat Mosambik, Haiti ja Bolivia.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Guatemalan vaakuna',
+        polku: 'assets/liput/tunnukset/gtm-vaakuna.png',
+        selite: 'Ketsaali istuu käärykirjeen päällä, jossa on '
+          + 'itsenäisyyden päivämäärä. Alla ovat ristikkäin kaksi '
+          + 'Remington-kivääriä ja kaksi miekkaa, ympärillä '
+          + 'laakeriseppele voiton merkkinä.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of Nicaragua.svg': {
+    maa: 'Nicaragua',
+    symboliikka: [
+      {
+        osa: 'Sininen ja valkoinen',
+        selite: 'Keski-Amerikan liittotasavallan värit; kaksi '
+          + 'sinistä raitaa ovat maata ympäröivät meret.',
+      },
+      { osa: 'Kolmio', selite: 'tasa-arvo.' },
+      {
+        osa: 'Viisi tulivuorta',
+        selite: 'liiton viisi valtiota ja niiden veljeys.',
+      },
+      { osa: 'Sateenkaari', selite: 'rauha.' },
+      { osa: 'Friikkalakki', selite: 'vapaus.' },
+    ],
+    kappaleet: [
+      'Nicaragua otti vanhan liittotasavallan lipun takaisin '
+        + 'käyttöön 1908 — se oli kannanotto: maa toivoi '
+        + 'Keski-Amerikan yhdistyvän uudelleen. Virallisesti lippu '
+        + 'vahvistettiin vasta 1971. Samasta juuresta ovat myös '
+        + 'Guatemalan, El Salvadorin, Hondurasin ja Costa Rican '
+        + 'liput.',
+      'Sateenkaaren ansiosta Nicaraguan lippu on yksi harvoista '
+        + 'maailmassa, joissa on violettia väriä.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Nicaraguan vaakuna (asu 1908–1971)',
+        polku: 'assets/liput/tunnukset/nic-vaakuna-1908.png',
+        selite: 'Kolmion sisällä on viisi tulivuorta kahden meren '
+          + 'välissä, niiden yllä sateenkaari ja säteilevä '
+          + 'friikkalakki. Ympärillä kiertää teksti REPÚBLICA DE '
+          + 'NICARAGUA — AMÉRICA CENTRAL. Nykyinen vaakuna on '
+          + 'samojen osien tarkennettu piirros.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of Panama.svg': {
+    maa: 'Panama',
+    symboliikka: [
+      { osa: 'Sininen', selite: 'konservatiivipuolue.' },
+      { osa: 'Punainen', selite: 'liberaalipuolue.' },
+      {
+        osa: 'Valkoinen',
+        selite: 'rauha, jossa puolueiden on määrä toimia.',
+      },
+      {
+        osa: 'Sininen tähti',
+        selite: 'maan puhtaus ja rehellisyys.',
+      },
+      { osa: 'Punainen tähti', selite: 'laki ja järjestys.' },
+    ],
+    kappaleet: [
+      'Panama irtautui Kolumbiasta marraskuussa 1903, ja lippu '
+        + 'tehtiin kiireessä. Ensimmäisen ehdotuksen laati '
+        + 'kanavahankkeen ranskalaisen asiamiehen Philippe '
+        + 'Bunau-Varillan vaimo: '
+        + 'siinä oli kolmetoista raitaa ja kaksi aurinkoa. Se '
+        + 'hylättiin liian Yhdysvaltain lipun näköisenä.',
+      'Nykyisen lipun luonnosteli Manuel Encarnación Amador, ja '
+        + 'María de la Ossa de Amador ompeli ensimmäiset kolme '
+        + 'kappaletta piilossa Kolumbian sotilailta. Alkuperäisessä '
+        + 'lipussa ylävasen neljännes oli sininen; se vaihdettiin '
+        + 'valkoiseksi, kun sininen oli valittu puolueen väriksi. '
+        + 'Laki vahvisti lipun 1925, ja 4. marraskuuta vietetään '
+        + 'lippupäivää.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Panaman vaakuna',
+        polku: 'assets/liput/tunnukset/pan-vaakuna.png',
+        selite: 'Kilven keskellä on Panaman kannas, jossa aurinko '
+          + 'laskee ja kuu nousee — itsenäisyysjulistuksen hetki. '
+          + 'Ylhäällä miekka ja kivääri kertovat sisällissodista '
+          + 'luopumisesta, lapio ja kuokka työstä; alhaalla '
+          + 'runsaudensarvi ja siivekäs pyörä lupaavat vaurautta ja '
+          + 'edistystä. Ylinnä on harpyija, ja tähtiä on yksi '
+          + 'kutakin maakuntaa kohti.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of Puerto Rico.svg': {
+    maa: 'Puerto Rico',
+    symboliikka: [
+      {
+        osa: 'Punaiset raidat',
+        selite: 'taistelijoiden vuodattama veri.',
+      },
+      {
+        osa: 'Valkoiset raidat',
+        selite: 'vapaus, voitto ja rauha; nykyselityksessä myös '
+          + 'hallinnon kolme haaraa.',
+      },
+      {
+        osa: 'Sininen kolmio',
+        selite: 'taivas ja rannikkovedet — kolme sivua ovat '
+          + 'lainsäädäntö-, toimeenpano- ja tuomiovalta.',
+      },
+      { osa: 'Valkoinen tähti', selite: 'saari itse.' },
+    ],
+    kappaleet: [
+      'Lippu on Kuuban lipun peilikuva: värit on vaihdettu '
+        + 'keskenään. Se tehtiin New Yorkissa 1895, kun '
+        + 'puertoricolaiset ja kuubalaiset pakolaiset taistelivat '
+        + 'yhdessä Espanjaa vastaan — kaksi viimeistä siirtomaata '
+        + 'Amerikassa, kaksi lippua samaa perhettä.',
+      'Lipun esilläpito oli rikos vuosikymmeniä: ensin Espanjan '
+        + 'ja sitten Yhdysvaltain hallinnon aikana. Virallisen '
+        + 'aseman lippu sai 1952, mutta vasta kun niin sanottu '
+        + 'suulaki kumottiin perustuslain vastaisena 1957, sitä '
+        + 'sai vapaasti liehuttaa saarella.',
+      'Sinisen sävy on yhä poliittinen kysymys, koska laki ei '
+        + 'määrää sitä: vaaleaa sinistä käyttävät '
+        + 'itsenäisyyden kannattajat, tummaa osavaltioksi '
+        + 'liittymisen kannattajat ja keskisinistä ne, joille '
+        + 'nykyinen asema kelpaa.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Puerto Ricon vaakuna',
+        polku: 'assets/liput/tunnukset/pri-vaakuna.png',
+        selite: 'Espanjan kruunu myönsi vaakunan 1511, ja se on '
+          + 'Amerikan vanhin yhä käytössä oleva vaakuna. Keskellä '
+          + 'on Jumalan Karitsa kirjan päällä, reunoilla Kastilian '
+          + 'linnat ja Leónin leijonat. Nauhassa lukee Joannes est '
+          + 'nomen ejus — "Johannes on hänen nimensä", muisto '
+          + 'saaren vanhasta nimestä San Juan Bautista.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of Bermuda.svg': {
+    maa: 'Bermuda',
+    symboliikka: [
+      {
+        osa: 'Punainen kenttä',
+        selite: 'brittiläinen Red Ensign eli kauppalaivaston lippu.',
+      },
+      {
+        osa: 'Union Jack kulmassa',
+        selite: 'Bermuda on Britannian merentakainen alue.',
+      },
+      {
+        osa: 'Vaakuna liepeessä',
+        selite: 'punainen leijona pitelee kilpeä, jossa uppoaa '
+          + 'laiva.',
+      },
+    ],
+    kappaleet: [
+      'Bermudan lippu vahvistettiin 1910. Se on brittialueiden '
+        + 'joukossa poikkeus: lähes kaikki muut käyttävät maalla '
+        + 'sinistä ensignia, Bermuda punaista. Sama tapa oli '
+        + 'aikanaan Kanadalla ennen vuotta 1965. Vuonna 1999 '
+        + 'vaakuna suurennettiin nykyiseen kokoonsa.',
+      'Kilven laiva on Sea Venture, joka ajoi hirmumyrskyssä '
+        + 'karille Bermudan riutoille kesällä 1609 matkallaan '
+        + 'Jamestowniin. Kaikki 150 matkustajaa — ja laivakoira — '
+        + 'pelastuivat, '
+        + 'rakensivat saarelle kaksi uutta alusta ja aloittivat '
+        + 'samalla saarten asuttamisen. Haaksirikon kertomusten '
+        + 'arvellaan innoittaneen Shakespearea Myrsky-näytelmään.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Bermudan vaakuna',
+        polku: 'assets/liput/tunnukset/bmu-vaakuna.png',
+        selite: 'Punainen leijona istuu vihreällä kummulla ja '
+          + 'pitelee kilpeä, jossa Sea Venture murtuu riuttaan. '
+          + 'Nauhassa lukee Quo Fata Ferunt — "minne kohtalot '
+          + 'kantavat".',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
 };

@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1176: Lippusivut era 8: koko Pohjois-Amerikan lauta (USA + 13 tahden versiolippu, Kanada + Red Ensign, Meksiko, Gronlanti, Kuuba, Guatemala, Nicaragua, Panama, Puerto Rico, Bermuda). Lippuja tehty 60/116.',
   'v1175: Tyopoydan trackpad: kahden sormen vieritys panoroi karttaa, nipistys zoomaa pehmeasti ja portaattomasti kursoriin, hiiren rullan naksu zoomaa portaan; kartan plus/miinus-napit poistettu.',
   'v1174: Kehittajatilan ylarivissa vain yksi maailma-nappi: koko lauta ja kohdekaupungit nakyviin, reitit piilossa, sumennus ja vierityslukko pois; hampurilaisen fokus/sumennus-kytkimet poistettu. Raamattuun Matkakirjan ihmeet -osio.',
   'v1173: Kohdekarttojen symbolimerkit pienemmiksi (14 -> 11 yksikkoa) ja nykyisen kaupungin laatta 23 -> 19 px. TESTAA: Kreikan kartta puhelimella - jaako kartta nyt paremmin nakyviin.',

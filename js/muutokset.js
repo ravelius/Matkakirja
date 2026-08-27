@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1176, teksti: 'Lippusivut era 8: koko Pohjois-Amerikan lauta' },
   { v: 1175, teksti: 'Trackpad: kaksi sormea panoroi, portaaton nipistys' },
   { v: 1174, teksti: 'Kehittajan maailmanappi ja Matkakirjan ihmeet -linjaus' },
   { v: 1173, teksti: 'Kohdesymbolit ja nykyisen kaupungin laatta pienemmiksi' },
