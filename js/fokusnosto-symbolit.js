@@ -212,20 +212,39 @@ function piirraNostosymPylvas(g) {
   }, g);
 }
 
-/** VUORENHUIPPU JA AALTO — luonto: vuoret, joet, järvet (sinivihreä). */
+/**
+ * VUORI, HAVUPUU JA AALTO — luonto: vuoret, metsät, joet, järvet.
+ *
+ * KOLME VÄRIÄ, EI YHTÄ (omistajan tilaus 27.8.2026: *"uusi tunnus jossa
+ * esim. sininen meri ja ruskea vuori, jossa vihreä puu"*). Vanha merkki
+ * oli kokonaan sinivihreä, ja kaukaa siitä tuli yksi tahra: huippu, puu
+ * ja vesi sulautuivat samaksi läiskäksi. Nyt jokaisella osalla on oma
+ * vaimea sävynsä (--sym-luonto-vuori / -puu / -vesi), ja kolmen värin
+ * kerros erottuu pergamentilla myös 21 pikselissä.
+ *
+ * Perheen muut merkit kantavat yhden heraldisen aksentin; luonto on
+ * tietoinen poikkeus, koska juuri värien ero kertoo mistä on kyse.
+ */
 function piirraNostosymLuonto(g) {
   el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
   el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
   // Kaksi huippua — yksi kolmio olisi teltta, kaksi on vuoristo.
   el('path', {
     class: 'nostosym-vuoristo',
-    d: 'M-7.4 2.4 L-2.6 -6.4 L0.2 -1.6 L2.6 -4.8 L7.4 2.4 Z',
+    d: 'M-7.6 2.6 L-3.4 -6.6 L-0.6 -1.8 L1.8 -5.0 L6.6 2.6 Z',
   }, g);
-  // Aalto huippujen alla: vesi kuuluu samaan kategoriaan.
+  // Havupuu vuoren kyljessä: kolme kavenevaa lapetta ja lyhyt runko.
+  el('path', {
+    class: 'nostosym-havu',
+    d: 'M5.4 -5.4 L7.8 -1.6 L6.4 -1.6 L8.4 1.8 L2.4 1.8 L4.4 -1.6 '
+      + 'L3.0 -1.6 Z',
+  }, g);
+  el('path', { class: 'nostosym-viiva', d: 'M5.4 1.8 L5.4 3.4' }, g);
+  // Aalto alimpana: vesi kuuluu samaan kategoriaan ja kantaa sinisen.
   el('path', {
     class: 'nostosym-aalto',
-    d: 'M-6.6 5.6 Q-4.95 3.4 -3.3 5.6 Q-1.65 7.8 0 5.6 '
-      + 'Q1.65 3.4 3.3 5.6 Q4.95 7.8 6.6 5.6',
+    d: 'M-7.0 5.8 Q-5.25 3.6 -3.5 5.8 Q-1.75 8.0 0 5.8 '
+      + 'Q1.75 3.6 3.5 5.8 Q5.25 8.0 7.0 5.8',
   }, g);
 }
 
@@ -269,40 +288,39 @@ function piirraNostosymLyyra(g) {
   }, g);
 }
 
-/** HAMMASRATAS — tekniikka ja keksinnöt (teräksenharmaa). */
-function piirraNostosymRatas(g) {
+/**
+ * HÖYRYVETURI — tekniikka ja keksinnöt (teräksenharmaa).
+ *
+ * HAMMASRATAS PUTOSI POIS (omistaja 27.8.2026: *"nykyinen näyttää
+ * liikaa asetusvalikon rattaalta (väärä konnotaatio) — keksi KOKONAAN
+ * TOINEN aihe"*). Ratas on nykylukijalle asetusnappi, eikä kartta saa
+ * luvata valikkoa. Veturi on 1873:n oma kone — juuri se, jolla
+ * maailmanympärimatka tehdään — ja sen ääriviiva (matala runko, korkea
+ * savupiippu, iso vetopyörä) tunnistetaan yhdellä silmäyksellä myös
+ * 21 pikselissä. Lennätinpylväs ja vauhtipyörä olivat ehdolla mutta
+ * hävisivät: pylvään langat katoavat pieneksi kutistuessa ja
+ * vauhtipyörä olisi taas kiekko.
+ */
+function piirraNostosymVeturi(g) {
   el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
   el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
-  el('path', { class: 'nostosym-ratas', d: nostosymRatasPolku() }, g);
-  // Napa on paperia: reikä keskellä tekee kiekosta rattaan.
-  el('circle', { class: 'nostosym-ratasnapa', r: 2 }, g);
-}
-
-/**
- * Rattaan polku lasketaan eikä ladota käsin: kahdeksan hammasta on 32
- * kulmapistettä, ja käsin kirjoitettuna yksikin niistä väärin särkisi
- * pyöreyden huomaamattomasti.
- */
-function nostosymRatasPolku() {
-  const hampaita = 8;
-  const ulko = 7.6;
-  const sisa = 5.4;
-  // Hampaan lape on kapeampi kuin hammasväli: näin hampaat erottuvat
-  // vielä 21 pikselissä eikä ratas puuroudu monikulmioksi.
-  const lape = (Math.PI / hampaita) * 0.44;
-  const osat = [];
-  for (let i = 0; i < hampaita; i += 1) {
-    const keski = (i / hampaita) * 2 * Math.PI - Math.PI / 2;
-    const vali = ((i + 0.5) / hampaita) * 2 * Math.PI - Math.PI / 2;
-    for (const [sade, kulma] of [
-      [ulko, keski - lape], [ulko, keski + lape],
-      [sisa, keski + lape * 1.9], [sisa, vali + Math.PI / hampaita - lape * 1.9],
-    ]) {
-      osat.push(`${osat.length ? 'L' : 'M'}${(Math.cos(kulma) * sade).toFixed(2)} `
-        + `${(Math.sin(kulma) * sade).toFixed(2)}`);
-    }
-  }
-  return `${osat.join(' ')} Z`;
+  // Runko yhtenä täyttönä: kattila edessä, ohjaamo takana, savupiippu
+  // ylös. Kulkusuunta oikealle, kuten matka.
+  el('path', {
+    class: 'nostosym-veturi',
+    d: 'M-8.2 3.6 L-8.2 -4.6 L-3.6 -4.6 L-3.6 -0.6 L-2.2 -0.6 '
+      + 'L-2.2 -5.4 L-0.6 -5.4 L-0.6 -0.6 L7.4 -0.6 L8.2 0.4 '
+      + 'L8.2 3.6 Z',
+  }, g);
+  // Höyrypilvi piipun päältä: kolme nousevaa palloa.
+  el('circle', { class: 'nostosym-hoyry', cx: -1.4, cy: -6.8, r: 1.2 }, g);
+  el('circle', { class: 'nostosym-hoyry', cx: 1.0, cy: -8.0, r: 0.9 }, g);
+  el('circle', { class: 'nostosym-hoyry', cx: 3.0, cy: -8.6, r: 0.6 }, g);
+  // Iso vetopyörä ja kaksi pikkupyörää — pyörät tekevät koneesta veturin.
+  el('circle', { class: 'nostosym-veturipyora', cx: 3.6, cy: 4.6, r: 2.9 }, g);
+  el('circle', { class: 'nostosym-veturinapa', cx: 3.6, cy: 4.6, r: 0.8 }, g);
+  el('circle', { class: 'nostosym-veturipyora', cx: -2.2, cy: 5.4, r: 1.7 }, g);
+  el('circle', { class: 'nostosym-veturipyora', cx: -6.2, cy: 5.4, r: 1.7 }, g);
 }
 
 /** VAAKA — kauppa ja raha (oliivi). */
@@ -396,29 +414,44 @@ function piirraNostosymSeppele(g) {
 /**
  * PORTTITORNI — kaupunki. Jokainen kortin avaava kohde saa symbolin
  * (omistaja 26.8.2026: "onhan kaupungille myös oma symboli, jos sen
- * takaa aukeaa popup?"): muurattu kaupunginportti kahdella tornilla
- * ja holvatulla aukolla, 1873-kartan kaupunkimerkin henkeen.
+ * takaa aukeaa popup?").
+ *
+ * YKSI TORNI, EI KAHTA (omistaja 27.8.2026: *"nykyinen näyttää kaukaa
+ * katsottuna liikaa kiikarilta"*). Kahden yhtä korkean pyöreähkön
+ * tornin pari on juuri kiikarin ääriviiva, ja kaukaa katsottuna se
+ * luki kiikariksi eikä kaupungiksi. Nyt merkki on EPÄSYMMETRINEN:
+ * yksi sakarapäinen porttitorni, sen juuressa holvattu aukko ja
+ * huipulla viiri — siluetti, jota mikään toinen taulun symboli ei
+ * muistuta.
  */
 function piirraNostosymPortti(g) {
   el('circle', { class: 'nostosym-laatta', r: 10.4 }, g);
   el('circle', { class: 'nostosym-kehys', r: 10.4 }, g);
-  // Kaksi tornia sakaroineen ja muuri niiden välissä.
+  // Yksi torni sakaroineen ja matala muuri sen oikealla puolella.
   el('path', {
     class: 'nostosym-kaupunki',
-    d: 'M-7.2 6.2 L-7.2 -3.4 L-6.2 -3.4 L-6.2 -5.2 L-4.6 -5.2 L-4.6 -3.4 L-3.4 -3.4 L-3.4 6.2 Z '
-      + 'M3.4 6.2 L3.4 -3.4 L4.6 -3.4 L4.6 -5.2 L6.2 -5.2 L6.2 -3.4 L7.2 -3.4 L7.2 6.2 Z '
-      + 'M-3.4 6.2 L-3.4 -1.2 L3.4 -1.2 L3.4 6.2 Z',
+    d: 'M-4.6 7.4 L-4.6 -4.6 L-3.4 -4.6 L-3.4 -6.0 L-1.8 -6.0 '
+      + 'L-1.8 -4.6 L-0.6 -4.6 L-0.6 -6.0 L1.0 -6.0 L1.0 -4.6 '
+      + 'L2.2 -4.6 L2.2 7.4 Z '
+      + 'M2.2 7.4 L2.2 1.4 L7.4 1.4 L7.4 7.4 Z',
   }, g);
-  // Holvattu porttiaukko muurin keskellä — paperinvärinen, jotta portti
-  // näyttää avoimelta.
+  // Holvattu porttiaukko tornin juuressa — paperinvärinen, jotta
+  // portti näyttää avoimelta.
   el('path', {
     class: 'nostosym-portinaukko',
-    d: 'M-1.7 6.2 L-1.7 1.6 Q0 -0.4 1.7 1.6 L1.7 6.2 Z',
+    d: 'M-2.8 7.4 L-2.8 2.4 Q-1.2 0.4 0.4 2.4 L0.4 7.4 Z',
+  }, g);
+  // Viiri tornin huipulta oikealle: se rikkoo symmetrian lopullisesti.
+  el('path', { class: 'nostosym-viiva', d: 'M-1.8 -6.0 L-1.8 -9.2' }, g);
+  el('path', {
+    class: 'nostosym-viiri',
+    d: 'M-1.8 -9.2 L2.6 -8.2 L-1.8 -7.2 Z',
   }, g);
   // Muurin harjan sakarat viivana.
   el('path', {
     class: 'nostosym-viiva',
-    d: 'M-3.4 -1.2 L-2.2 -1.2 L-2.2 -2.4 L-0.8 -2.4 L-0.8 -1.2 L0.8 -1.2 L0.8 -2.4 L2.2 -2.4 L2.2 -1.2 L3.4 -1.2',
+    d: 'M2.2 1.4 L3.4 1.4 L3.4 0.2 L4.8 0.2 L4.8 1.4 L6.2 1.4 '
+      + 'L6.2 0.2 L7.4 0.2 L7.4 1.4',
   }, g);
 }
 
@@ -460,7 +493,7 @@ const NOSTOSYM_PIIRTAJAT = {
   luonto: piirraNostosymLuonto,
   ruoka: piirraNostosymMalja,
   kulttuuri: piirraNostosymLyyra,
-  tekniikka: piirraNostosymRatas,
+  tekniikka: piirraNostosymVeturi,
   kauppa: piirraNostosymVaaka,
   sana: piirraNostosymSulka,
   merenkulku: piirraNostosymMeriankkuri,

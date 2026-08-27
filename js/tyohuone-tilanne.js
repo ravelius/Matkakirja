@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'Karttasymbolit: luonto nyt vuori+puu+aalto varein, tekniikka hoyryveturi (ei ratasta), kaupunki yksi porttitorni viirilla; Psiloritis-vuori Kreetalla klikattavissa',
   'Kuvatekstiremontti era 8: 15 Aasian kaupunkia Hanoista Kabuliin uuteen saantoon (130 selitetta)',
   'Pollon puhekuplan (ja muiden kelluvien pintojen) sulkeva napautus ei enaa vuoda alla olevaan karttaan — ei tahattomia kohdeavauksia tai matkoja',
   'Ihmepopup: olemassa olevilla nykytilan valokuva paakuvana ja Koe ihme -nappi kuvan alla; vanhat piirrosrekonstruktiot poistettu; Matkakirjan ihme -nauha diagonaalisena kulman yli kaariytyen',

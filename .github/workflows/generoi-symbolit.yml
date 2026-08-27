@@ -43,15 +43,22 @@ jobs:
             ['elain', 'a small owl chick facing forward with big round eyes', 'muted warm brown'],
             ['silma', 'an open human eye with iris and brow line', 'muted slate blue'],
             ['historia', 'a broken ancient Greek column, cracked at the top, base intact', 'muted terracotta red-brown'],
-            ['luonto', 'a mountain peak rising above a stylized ocean wave', 'muted teal blue-green'],
+            // Luonto on ainoa KOLMIVÄRINEN (omistaja 27.8.2026: "sininen
+            // meri ja ruskea vuori, jossa vihreä puu") — yksi sinivihreä
+            // aksentti teki merkistä tahran.
+            ['luonto', 'a rugged mountain peak with a single tall pine tree on its lower slope and three water waves at the foot of the mountain', 'warm brown for the rock, deep green for the pine and blue for the water'],
             ['ruoka', 'a steaming goblet, three wisps of steam rising', 'muted wine red'],
             ['kulttuuri', 'a classical Greek lyre with strings', 'muted violet'],
-            ['tekniikka', 'a toothed gear wheel with a hub', 'muted steel grey'],
+            // EI HAMMASRATASTA (omistaja 27.8.2026): ratas luetaan
+            // asetusvalikon nappina. Veturi on 1873:n oma kone.
+            ['tekniikka', 'an 1870s steam locomotive in side profile facing right, tall flared funnel chimney with a curl of smoke, rounded boiler, cab and one large spoked driving wheel', 'muted steel grey'],
             ['kauppa', 'a two-pan balance scale on a stand', 'muted olive green'],
             ['sana', 'a quill pen with a detailed feather, nib down', 'muted dark navy blue'],
             ['merenkulku', 'a ship anchor with crossbar, shank and curved flukes', 'muted deep sea blue'],
             ['urheilu', 'a laurel wreath of two branches, open at the top', 'muted golden green'],
-            ['kaupunki', 'a walled medieval city gate: two crenellated towers flanking an open arched gateway', 'muted wall brown'],
+            // YKSI TORNI, EI KAHTA (omistaja 27.8.2026): symmetrinen
+            // torninpari luettiin kaukaa kiikariksi.
+            ['kaupunki', 'one single tall square city gate tower with battlements on top, a dark open arched gateway at its foot and a small pennant flag at its top right corner - only one tower, never a symmetrical pair', 'muted wall brown'],
           ];
           const POHJA = (aihe, vari) => 'A single emblem in 19th-century '
             + `copperplate engraving style: ${aihe}. Fine cross-hatching and `
