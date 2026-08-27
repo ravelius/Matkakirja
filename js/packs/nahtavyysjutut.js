@@ -15093,16 +15093,21 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Mozaffariyeh, Grand Bazzar of Tabriz, IRAN.jpg',
-          selite: 'Mozaffariyehin holvikäytävä sisältä: tiilikupolien laella '
-            + 'on valoaukko, tiilet on ladottu kalanruotokuvioon, ja molemmin '
-            + 'puolin nousee kaksi kerrosta myymälöitä valkoisine puuovineen.',
+          selite: 'Mozaffariyeh on timcheh eli pienoisbasaari suuren '
+            + 'sisällä; nimen alkuosa tim viittaa karavaaniseraajiin ja '
+            + '-cheh on deminutiivipääte. Rivillä myydään mattoja '
+            + 'lajiteltuina solmun koon ja tyypin mukaan, ja holveihin '
+            + 'puhkaistut aukot tuovat valon sisään ja vaihtavat ilman.',
           lahde: 'Navid Alizadeh Sadighi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '1241.JewelryBazaar.Tabriz (1470548513).jpg',
-          selite: 'Kultasepänrivi tiiliholvin alla: käytävää reunustavat '
-            + 'lasivitriinit punaisine neonputkineen ja kultaketjuineen, ja '
-            + 'käytävä on täynnä ihmisiä.',
+          selite: 'Amirin rivi on basaarin kulta- ja korurivi: alue jakautuu '
+            + 'riveihin, joista monella on oma tavaransa ja oma nimensä. '
+            + 'Tabrizin kaava poikkeaa Isfahanin ja Teheranin yhden '
+            + 'kauppakadun mallista — se on noin 29 hehtaarin suorakaide, '
+            + 'jonka läpi kulkee ruudukko rinnakkaisia ja risteäviä '
+            + 'kauppakatuja.',
           lahde: 'Ensie & Matthias from San Diego, California, USA, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -15137,23 +15142,29 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'ConstitutionHouseTabrizIran.jpg',
-          selite: 'Perustuslakitalon sisäpihan julkisivu: viisi '
-            + 'turkoosilaattaista kaarta lepää hoikkien pylväiden varassa, ja '
-            + 'alakerrassa seisoo kaksi kullattua miespatsasta.',
+          selite: 'Talon rakennutti vuonna 1868 Haj Mehdi Koozekonani, '
+            + 'Tabrizin basaarin kauppias, ja rakentajaksi mainitaan Haj '
+            + 'Vali Me’mar-e Tabrizi. Se on tavallinen qajar-kauden '
+            + 'asuintalo aivan basaarin kyljessä: kaksi kerrosta ja tyylin '
+            + 'mukaan erilliset sisä- ja ulko-osat.',
           lahde: 'AmirAK, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Mashrute5.jpg',
-          selite: 'Näkymä Perustuslakitalon yläkerran ikkunasta: ylin ruutu '
-            + 'on punaista, vihreää ja sinistä lasia kukkakuviona, ja '
-            + 'alempien kirkkaiden ruutujen takana avautuu tiilinen sisäpiha.',
+          selite: 'Talossa kokoontuivat perustuslakiliikkeen johtajat, '
+            + 'aktivistit ja kannattajat, heidän joukossaan Sattar Khan ja '
+            + 'Bagher Khan, ja samassa talossa painettiin liikkeen '
+            + 'maanalaisia lehtiä. Perustuslakivallankumous alkoi 1905 ja '
+            + 'päättyi 1911, ja Tabriz oli sen keskuksia.',
           lahde: 'Amir.fila, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Constitution House, interior1.jpg',
-          selite: 'Perustuslakitalon kattoikkuna alhaalta: valkoiseksi '
-            + 'rapatun neliökuilun pohjassa on puinen ristikko, jonka '
-            + 'keskiympyrässä on tiheä kiemurteleva kuviointi.',
+          selite: 'Talo merkittiin Iranin kulttuuriperintöluetteloon 1975, '
+            + 'ja siinä toimii nykyään museo. Esillä on '
+            + 'vallankumouksellisten henkilökohtaisia tavaroita, maanalaisia '
+            + 'lehtiä ja shabnameja eli nimettömiä yökirjeitä sekä '
+            + 'painokone, jolla lehdet talossa tehtiin.',
           lahde: 'Meisam, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -15190,16 +15201,21 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Arg Alishah4.JPG',
-          selite: 'Argista jäljellä oleva muurinpala: leveässä '
-            + 'tiiliseinämässä on kaksi korkeaa suippokaarista aukkoa, ja '
-            + 'niiden välissä nousee koko korkeuden pyöreä muuripaksunnos.',
+          selite: 'Muurinpala on kaikki, mikä on jäljellä ilkhanidien '
+            + 'vesiirin Ali Shaahin 1310–1320 rakennuttamasta '
+            + 'rukoushuoneesta; arkkitehti oli Falaki Tabrizi. Iwanin '
+            + 'tynnyriholvin piti olla suurempi kuin Ktesifonin Taq Kasra — '
+            + '30,5 metriä leveä ja yli 45,7 metriä korkea — mutta se sortui '
+            + 'kesken rakennustyön.',
           lahde: 'Elmju, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Arg of Tabriz 01.jpg',
-          selite: 'Argin muuri läheltä: korkeasta suippokaarisesta aukosta '
-            + 'näkyy nykyinen Tabriz, ja tiilipinta on täynnä pieniä '
-            + 'neliömäisiä reikiä ja vaaleita paikkauksia.',
+          selite: 'Nimi Arg tarkoittaa linnaketta: 1800-luvulla, Iranin ja '
+            + 'Venäjän välien kiristyessä, jäänteestä tehtiin varuskunta, '
+            + 'jossa oli tykkivalimo, kasarmi, esikunta ja pieni palatsi. '
+            + 'Sotilasrakennukset purettiin 1900-luvulla ja ympäristöstä '
+            + 'tehtiin puisto, mutta pystyssä on enää pala qiblamuuria.',
           lahde: 'Valen1988, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15231,16 +15247,19 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Saat Tower (16722122147).jpg',
-          selite: 'Saat-tornin talo edestä: julkisivun keskeltä kohoaa '
-            + 'kellotorni, jonka yläosassa on vaalea kellotaulu roomalaisine '
-            + 'numeroineen ja harjalla hammaskaide ja neljä nurkkatornia.',
+          selite: 'Torni on 30,5 metriä korkea, ja se on saanut nimensä '
+            + 'yläosansa nelitauluisesta kellosta, joka lyö tasatunnein. '
+            + 'Talo tornin alla valmistui vuonna 1934 Tabrizin '
+            + 'kaupungintaloksi Avedis Ohanjanianin piirustuksin, ja '
+            + 'julkisivu on veistettyä kiveä.',
           lahde: 'Frode Ramone from Oslo, Norway, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Saat Tower 2016-12.jpg',
-          selite: 'Porrastasanne Saat-tornin talon sisällä: kaarevalla '
-            + 'valkoisella seinällä on kolme kaari-ikkunaa punaisine ja '
-            + 'vihreine laseineen ja ylimpänä pyörän muotoinen ruusuke.',
+          selite: 'Talossa on sali, kellotorni ja pieni puutarha; '
+            + 'rakennettua alaa on 6 500 neliömetriä kolmessa kerroksessa, '
+            + 'ja ylhäältä katsottuna pohjakaava muistuttaa lentävää kotkaa. '
+            + 'Osa talosta otettiin kaupunginmuseoksi 2000-luvun alussa.',
           lahde: 'AmirAK, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15278,24 +15297,28 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Azerbaijan Museum, Tabriz, Iran, and stone lions in entrance.jpg',
-          selite: 'Azerbaidžanin museon tiilijulkisivu: kaarisyvennyksen '
-            + 'portin kaarikentässä on museon nimi persialaisin kirjaimin ja '
-            + 'alla AZARBAIJAN MUSEUM, ja ovea reunustaa kaksi kulunutta '
-            + 'kivieläintä.',
+          selite: 'Museo avattiin huhtikuussa 1958 Sinisen moskeijan '
+            + 'viereen, ja sen piirsi ranskalainen André Godard, joka johti '
+            + 'Iranin arkeologista tutkimuslaitosta ja suunnitteli myös '
+            + 'Teheranin kansallismuseon. Se on Luoteis-Iranin vanhin museo.',
           lahde: 'Navid Sadighi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Azerbaijan Museum, Tabriz, Iran, 1st. floor.jpg',
-          selite: 'Museon pitkä näyttelysali: lasivitriinejä seisoo mustilla '
-            + 'jalustoilla kahdessa rivissä, ja niissä on muun muassa tummia '
-            + 'savikulhoja punaisella kankaalla.',
+          selite: 'Ensimmäinen sali etenee aikajärjestyksessä: vanhimmat '
+            + 'löydöt ovat 5. vuosituhannelta eaa., sitten seuraavat Urartu, '
+            + 'akhaimenidien valtakunta ja lopuksi sasanidikausi 224–651 '
+            + 'jaa. Esineet on enimmäkseen kaivettu Iranin Azerbaidžanista, '
+            + 'mutta kokoelmassa on löytöjä koko maasta.',
           lahde: 'Navid Sadighi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Detail of Anxiety - Sculpture by Ahad Hosseini - Azerbaijan Museum - Tabriz - Iranian Azerbaijan - Iran (7421593886).jpg',
-          selite: 'Ahad Hosseinin ruskeanharmaa veistosryhmä museon salissa: '
-            + 'kolme suomupintaista lohikäärmeen kaulaa työntyy kidat auki, '
-            + 'ja vieressä on tiivis ihmisjoukko käsiään nostamassa.',
+          selite: 'Tabrizilainen Ahad Hosseini (s. 1944) opiskeli Firenzen '
+            + 'taideakatemiassa ja teki paluunsa jälkeen viisi vuotta '
+            + 'kellarissaan kaksitoista veistosta, sarjan Misery Around the '
+            + 'World. Hän lahjoitti ne museolle, ja niille on varattu '
+            + 'kokonainen sali.',
           lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -15333,25 +15356,29 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tabriz Blue Mosque, northern view (entrance, in 2023).jpg',
-          selite: 'Sinisen moskeijan pohjoisjulkisivu lumessa: korkean '
-            + 'sisäänkäyntiholvin pinnassa on jäljellä vain laikkuja '
-            + 'tummansinistä laattaa, ja sen takaa kohoaa lumen peittämä '
-            + 'kupoli.',
+          selite: 'Moskeija valmistui lokakuussa 1465, ja sen rakennutti '
+            + 'Qara Qoyunlu -hallitsijan Jahanshahin puoliso Khatun Jan '
+            + 'Begom. Vuoden 1780 maanjäristys tuhosi Tabrizin lähes '
+            + 'kokonaan, ja moskeijasta jäi pystyyn vain iwan eli holvattu '
+            + 'sisäänkäynti.',
           lahde: 'Ahad Nejad Ebrahimi, Aylar Javadpour, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Portico of Blue (Kabud) Mosque - Tabriz - Iranian Azerbaijan - Iran (7421677298).jpg',
-          selite: 'Sinisen moskeijan sisäänkäyntiholvin laatoitusta: '
-            + 'tummansinistä pohjaa peittää kasviköynnös ja nauha valkoista '
-            + 'kalligrafiaa, ja alaosassa on kennomainen muqarnas-puolikupu.',
+          selite: 'Tiiliseinät peitettiin laatalla sisältä ja ulkoa lähes '
+            + 'kokonaan kahdella tekniikalla: mosaiikilla, jossa jokainen '
+            + 'pala leikataan erikseen muotoonsa, ja seitsemän värin '
+            + 'laatalla, johon värit poltetaan pintaan. Kuvioina ovat '
+            + 'geometriset verkot, kasviaiheet sekä kufi- ja '
+            + 'thuluth-kalligrafia.',
           lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Interior of Blue Mosque, Tabriz, Iran.jpg',
-          selite: 'Sinisen moskeijan pääsali: yläpuolella kaartuu '
-            + 'laatoittamaton tiilikupoli, ja pilarien laatoituksessa on '
-            + 'sinistä, turkoosia ja valkoista geometriaa, kasvikuvioita ja '
-            + 'kirjoitusnauhoja.',
+          selite: 'Uudelleenrakennus alkoi 1973: kaksikuorinen kupoli, '
+            + 'matalat minareetit ja porttiosa ovat uusia. Puuttuvien '
+            + 'laattojen tilalle muurattiin tiiltä — tahallaan hieman '
+            + 'erinäköistä, jotta uuden erottaa vanhasta.',
           lahde: 'Navid Alizadeh Sadighi, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15405,26 +15432,29 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'بازار تهران 2.jpg',
-          selite: 'Kadkhodan kuja, yksi basaarin nimetyistä käytävistä: kattona '
-            + 'on peräkkäisiä tiiliholveja, seinän tummansinisessä '
-            + 'emalikilvessä lukee KADKHODA ALLEY, ja myymälöissä riippuu '
-            + 'vaatteita ja kangastavaraa.',
+          selite: 'Basaari ei ole yksi halli vaan käytäväverkosto: käytäviä '
+            + 'on yhteensä yli kymmenen kilometriä, kukin erikoistunut omaan '
+            + 'tavaraansa, ja kujilla on omat nimensä. Basaari merkittiin '
+            + 'Iranin kansalliseen kulttuuriperintöluetteloon 24. lokakuuta '
+            + '1977 numerolla 1540.',
           lahde: 'Hamidreza Hasani, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Tehran farsh bazar.jpg',
-          selite: 'Basaarin mattojen osa iltavalaistuksessa: keskellä on korkea '
-            + 'pino litteäksi taiteltuja mattoja, jonka päällä seisoo mies '
-            + 'kahden muun nostaessa ylintä mattoa, ja myymälöiden seinät on '
-            + 'peitetty kuviollisilla matoilla.',
+          selite: 'Basaarin perustamisvuotta ei tiedetä, ja osa siitä on '
+            + 'vanhempi kuin safavidien aikainen Teheranin kylä; silti vielä '
+            + 'vuoden 1660 tienoilla länsimaiset matkaajat kuvasivat aluetta '
+            + 'suurelta osin avoimeksi ja vain osittain katetuksi. '
+            + '1870-luvulle saakka koko Teheran oli muurien ympäröimä '
+            + 'linnake, katettu basaari ja kolme asuinkorttelia.',
           lahde: 'Fabienkhan, Wikimedia Commons (CC BY-SA 2.5)',
         },
         {
           tiedosto: 'Mosquée du Shah, Téhéran (2).jpg',
-          selite: 'Shaahin moskeijan yläosa: kahden pyöreän minareetin kyljet on '
-            + 'ladottu kelta-, turkoosi- ja sinilaatoista vinoraidoiksi, ja '
-            + 'niiden välissä nousee kaakeloitu kellotorni, jonka '
-            + 'kellotaulussa tunnit on merkitty kiiloilla ilman numeroita.',
+          selite: 'Shaahin moskeijan perustukset laskettiin 1810 Fath-Ali '
+            + 'Shaahin käskystä ja rakennus valmistui 1825; kaksi '
+            + 'minareettia lisättiin 1879 Naser ad-Din Shaahin aikana ja '
+            + 'kellotorni 1905. Tiiliä on 18 miljoonaa ja laattoja 475 000.',
           lahde: 'ZarlokX, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15462,18 +15492,23 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Palacio de Golestán, Teherán, Irán, 2016-09-17, DD 15-19 PAN.jpg',
-          selite: 'Shams-ol-Emarehin julkisivu palatsin pihalta: keskellä on '
-            + 'kuisti, jonka takaseinä ja katto ovat peililasia, molemmin '
-            + 'puolin korkea kaarisyvennys ja sen yllä keltainen leijona '
-            + 'turkoosilla kaakelikentällä.',
+          selite: 'Shams-ol-Emareh eli auringon rakennus nousi Naser al-Din '
+            + 'Shaahin käskystä kahdessa vuodessa vuodesta 1865, kun hän '
+            + 'halusi pääkaupunkiinsa Isfahanin Ali Qapun kanssa kilpailevan '
+            + 'talon. Se on 35 metriä korkea ja viisikerroksinen ja oli '
+            + 'valmistuessaan Teheranin korkein rakennus; suunnittelijaksi '
+            + 'mainitaan Moayer ol-Mamalek ja arkkitehdiksi Ali Mohammed '
+            + 'Kashi.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Shams ol Emareh Building01.jpg',
-          selite: 'Shams-ol-Emarehin tornit: kaksi kerrosta parvekkeita '
-            + 'keltaisiksi ja oransseiksi maalattuine hoikkine pylväineen, '
-            + 'huipulla avoin kattokoju, ja seinien kukkakaakeleissa '
-            + 'keltainen leijona ja sen takaa nouseva aurinko.',
+          selite: 'Talo oli kaupungin ensimmäinen, jonka rakenteissa '
+            + 'käytettiin metallia: ylempien kerrosten pylväät ovat kaikki '
+            + 'valurautaa. Shaahi vei vieraansa katolle katsomaan '
+            + 'pääkaupunkia, ja sinne asennettiin myös kuningatar Viktorian '
+            + 'lahjoittama kello, jonka piti kertoa teheranilaisille '
+            + 'paikallinen aika.',
           lahde: 'Maziar Abidian, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15511,18 +15546,21 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Dar ul-Funun Courtyard 20120326-112041.jpg',
-          selite: 'Dar al-Fonunin sisäpiha: kaksikerroksisen vaaleantiilisen '
-            + 'siiven yläkerrassa on pitkä rivi suippokaarisia '
-            + 'syvennysikkunoita, ja pihalla kasvaa korkeita mäntyjä polun '
-            + 'johtaessa kahdeksankulmaiselle altaalle.',
+          selite: 'Naser al-Din Shaahin suurvisiiri Amir Kabir perusti Dar '
+            + 'al-Fonunin vuonna 1851, ja se oli Iranin ensimmäinen moderni '
+            + 'korkeakoulu: polytekninen oppilaitos, jossa ylimystön nuoret '
+            + 'koulutettiin lääketieteeseen, kirurgiaan, farmasiaan, '
+            + 'matematiikkaan ja geologiaan. Opettajat olivat pääosin '
+            + 'itävaltalaisia.',
           lahde: 'Sanaei Mehdi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'سر در ورودی دارالفنون.jpg',
-          selite: 'Dar al-Fonunin portin holvi: kaaren sisäpinta on laatoitettu '
-            + 'kahdeksansakaraisin tähdin ja turkoosein kasvikuvioin, ja '
-            + 'kobolttisinisessä paneelissa lukee kalligrafialla Dar al-Fonun '
-            + 'ja alla vuosiluku 1268 hijri.',
+          selite: 'Talon suunnitteli Mirza Reza Mohandes ja toteutti '
+            + 'Mohammad-Taqi Khan Memar-Bashi prinssi Bahram Mirzan '
+            + 'valvonnassa. Portin yläosassa on säepari Ferdowsin '
+            + 'Shahnamesta: voimakas on se, joka tietää, ja tiedosta vanha '
+            + 'sydän nuortuu.',
           lahde: 'Ania Mardrosyan, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15560,27 +15598,29 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'National museum of Iran, Tehran (2024).jpg',
-          selite: 'Muinaisen Iranin museon julkisivu punertavaa tiiltä: keskellä '
-            + 'on koko seinän korkuinen kaarisyvennys, jonka kaari on ladottu '
-            + 'sisäkkäisiksi renkaiksi ja jonka perällä on tumma '
-            + 'kaksilehtinen ovi leveine portaineen.',
+          selite: 'Muinaisen Iranin museo vihittiin 1937, ja sen piirsi '
+            + 'ranskalainen André Godard; muurarimestarit olivat Morad '
+            + 'Tabrizi ja Abbas Ali Memar. Julkisivun keskellä oleva soikea '
+            + 'sasanidiholvi on pienemmässä mitassa tehty Ktesifonin Taq '
+            + 'Kasran mukaan, ja tiili oli kotimaista.',
           lahde: 'Parsa 2au, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'The Islamic Museum Of National Museum of Iran Darafsh (05).jpg',
-          selite: 'Islamilaisen ajan museon sisäänkäynti: vaalean '
-            + 'travertiinijulkisivun keskellä kaksi kiillotettua '
-            + 'tummanharmaata kivipilaria kehystää ruudukkoikkunaa, jonka '
-            + 'puolivälissä on museon nimi kullanvärisin persialaisin '
-            + 'kirjaimin.',
+          selite: 'Islamilaisen ajan museo on valkoista travertiinia ja '
+            + 'pohjakaavaltaan Bishapurin mukainen kahdeksankulmainen risti. '
+            + 'Vuosiluvut hajoavat: rakennus ajoitetaan vuosiin 1944–1950 '
+            + 'tai 1958, perustamisvuodeksi merkitään 1972, ja museona se '
+            + 'avattiin 1996.',
           lahde: 'Darafsh, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Musée de l\'Ère Islamique, Téhéran (2).jpg',
-          selite: 'Islamilaisen ajan museon pääsali: keskellä valaistulla '
-            + 'korokkeella seisoo pystyssä vaalea kivilaatta täynnä '
-            + 'kaiverrettua kalligrafiaa, ja salia kiertävän parven kaide on '
-            + 'yhtenäistä koholla olevaa kalligrafianauhaa.',
+          selite: 'Islamilaisen ajan museon seitsemässä salissa on 170 '
+            + 'vitriiniä ja noin 1 500 esinettä: ylimpänä '
+            + 'varhaisislamilainen aika, seldžukit ja ilkhanidit, alempana '
+            + 'koraanisali kullattuine kufi-käsikirjoituksineen sekä '
+            + 'timuridien, safavidien ja qajarien salit.',
           lahde: 'ZarlokX, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15619,26 +15659,30 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '2018-12-31 Iran, Tehran, Masoudieh Palace.jpg',
-          selite: 'Masoudiehin talon päärakennus: yläkerran korkeita '
-            + 'suippokaari-ikkunoita ympäröivät vihreät ja punaruskeat '
-            + 'kasvikuviolaatat, ja keskeltä työntyy esiin kuisti, jonka '
-            + 'parittain asetetut kivipylväät kannattavat pyöreitä kaaria.',
+          selite: 'Talon rakennutti Naser al-Din Shaahin vanhin poika Zell-e '
+            + 'Soltan, Isfahanin kuvernööri vuosina 1872–1907, ja se '
+            + 'valmistui 1878 Baharestanin aukion laidalle; rakentajaksi '
+            + 'mainitaan Reza Qoli Khan. Tyyliksi merkitään qajar-ajan '
+            + 'uusbarokki, ja tonttia on noin 4 000 neliömetriä.',
           lahde: 'Laurens R. Krol, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Mansión Masoudieh, Teherán, Irán, 2016-09-17, DD 58.jpg',
-          selite: 'Masoudiehin sisäpiha: suuren vesialtaan takana on paviljonki, '
-            + 'jonka hoikat pylväät päättyvät lehtikoristeisiin '
-            + 'kapiteeleihin, ja molemmin puolin jatkuu vaaleankeltainen '
-            + 'tiiliarkadi pyörein kaarin.',
+          selite: 'Talo jakautuu qajar-tapaan ulko-osaan eli divanhuoneeseen '
+            + 'ja sisäosaan, ja näiden lisäksi on sivurakennuksia. Sekä '
+            + 'Iranin ensimmäinen kansalliskirjasto että ensimmäinen '
+            + 'kansallismuseo mainitaan perustetuiksi tähän taloon, ja '
+            + 'museon 270 esineen alkukokoelma siirrettiin tänne vuonna 1925.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Mansión Masoudieh, Teherán, Irán, 2016-09-17, DD 63.jpg',
-          selite: 'Masoudiehin julkisivu lähempää: neljä uurrettua pylvästä '
-            + 'nousee kivijalustoilta räystäslistaan akantuslehti- ja '
-            + 'voluuttikapiteeleineen, ja niiden takana on kaari-ikkunoita '
-            + 'värillisine laseineen.',
+          selite: 'Julkisivujen koristeluun kuuluu turkoosinvihreää '
+            + 'reikälaattaa, ja keskeltä nousevassa kaarevassa päätykentässä '
+            + 'on persiankielinen kirjoituslaatta. Rakennus annettiin '
+            + 'maaliskuussa 1998 Iranin kansallisen kulttuuriperinnön '
+            + 'seuralle ja merkittiin 17. tammikuuta 1999 kansalliseen '
+            + 'kulttuuriperintöluetteloon numerolla 2190.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15675,18 +15719,22 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Antoin-Sevruguin-Sipahsalar-Moschee-in-Teheran-im-Bau-mit-Arbeitern-Museum-Rietberg-2023.00010.73.jpg',
-          selite: 'Sepahsalarin moskeija rakenteilla mustavalkoisessa '
-            + 'valokuvassa: tiilipinta on yhä laatoiton, suuren iwanin '
-            + 'terävää kaarta tuetaan ristikkäin asetetuilla puuriu\'uilla, ja '
-            + 'katolla seisoo rivi miehiä.',
+          selite: 'Työ alkoi 1879 suurvisiiri Mirza Hosein Khan Sepahsalarin '
+            + 'käskystä ja ensimmäinen vaihe valmistui 1884; rakennuttaja '
+            + 'kuoli 1881, ja siitä eteenpäin rakennuttajaksi merkitään '
+            + 'shaahi. Esikuvina mainitaan Isfahanin perjantaimoskeija ja '
+            + 'Istanbulin Sultan Ahmedin moskeija: se on Teheranin '
+            + 'ensimmäinen moskeija, joka yhdistää persialaista ja '
+            + 'osmanilaista tyyliä.',
           lahde: 'Antoin Sevruguin, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'گلدسته های ابی و ساعت تاریخی مدرسه ودانشگاه مطهری.jpg',
-          selite: 'Sepahsalarin moskeijan kellotorni iwanin yläpuolella: '
-            + 'laattapintaisen tornin keskellä on valkoinen kellotaulu '
-            + 'roomalaisin numeroin, ja molemmin puolin nousee laatoitettu '
-            + 'minareetti tummanharmaine sipulikupoleineen.',
+          selite: 'Pohjoisen iwanin yläpuolella, kahden minareetin välissä, '
+            + 'on viisimetrinen laatoitettu huone, jossa on Ranskassa 1880 '
+            + 'tehty kellokoneisto ja kolme soittokelloa. Minareetteja on '
+            + 'kahdeksan, iranilaisessa moskeijassa poikkeuksellinen määrä, '
+            + 'ja kukin on 37 metriä korkea.',
           lahde: '0936mastali, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15735,9 +15783,13 @@ export const NAHTAVYYSJUTUT = {
          */
         {
           tiedosto: '3 Sal Dar Darbar-e Iran (page 364 crop)1.jpg',
-          selite: 'Toopkhanen aukio Qajar-kaudella ylhäältä kuvattuna: perää '
-            + 'reunustaa pitkä kaksikerroksinen kaarikäytävärakennus, ja '
-            + 'avoimella kentällä seisoo kaksi tykkiä ja rivi paljaita puita.',
+          selite: 'Aukio rakennettiin vuonna 1867, kun Naser al-Din Shaahin '
+            + 'Teheran kasvoi vanhan muurinsa yli, ja nimeksi tuli '
+            + 'Toopkhaneh eli tykkitalo: laidalla oli tykistön varasto ja '
+            + 'kasarmi, joka vartioi shaahin Golestanin palatsia parin '
+            + 'korttelin päässä. Aukion varrelle nousi 1800-luvun lopulla '
+            + 'se, mikä oli Teheranissa uutta: lennätinlaitos, kaupungintalo '
+            + 'ja Persian keisarillisen pankin talo.',
           lahde: 'Jean-Baptiste Feuvrier, Wikimedia Commons (public domain)',
         },
       ],
@@ -15772,10 +15824,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'National Garden Gate Tehran October 2017.jpg',
-          selite: 'Portin julkisivu vinosti alhaalta: keltatiilisen seinän edessä '
-            + 'on rivi paksuja pyöreitä pilareita, joiden välissä avautuu '
-            + 'korkea holvikaari koristeellisine puuovineen, ja kaaren '
-            + 'yläpuolella on maalattuja kaakelitauluja.',
+          selite: 'Portin suunnitteli Mirza Mehdi Khan Shaghaghi, '
+            + 'arvonimeltään Momtahen od-Dowleh, ja se valmistui Reza '
+            + 'Shaahin kaudella ennen toista maailmansotaa. Julkisivu on '
+            + 'keltaista tiiltä, ja siihen upotetut maalatut kaakelitaulut '
+            + 'esittävät leijonaa ja aurinkoa, sotilashahmoja ja '
+            + 'kukkakuvioita.',
           lahde: 'Behnam Badiee, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15832,25 +15886,29 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '20180301124354 IMG 4179And6more Interior 3.jpg',
-          selite: 'Neljän iwanin piha kaksikerroksisen kaarikäytävän '
-            + 'ympäröimänä: yhden kaaren puolikupolissa on kennomaista '
-            + 'muqarnasia, toisen sivuilla nousevat tiiliminareetit ja '
-            + 'kolmannen pintaa peittää kulmikas kufi-kirjoitus.',
+          selite: 'Neljän iwanin piha syntyi 1100-luvun alussa, '
+            + 'todennäköisesti vuosien 1121–1122 tulipalon jälkeen, kun '
+            + 'kupolisalin ja pihan väliin rakennettiin iwan eli toiselta '
+            + 'sivultaan avoin holvisali ja kolme muuta muiden sivujen '
+            + 'keskelle. Siitä tuli iranilaisen perjantaimoskeijan '
+            + 'perusmuoto.',
           lahde: 'Hamidespanani, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Ceiling of Jameh Mosque of Isfahan.jpg',
-          selite: 'Nizam al-Mulkin eteläkupoli suoraan alhaalta: koko '
-            + 'pinta on paljasta tiiltä ilman laattaa tai maalia, ja '
-            + 'lakeen kokoontuu kahdeksan kaarta, jotka jakavat pinnan '
-            + 'kahdeksaan lohkoon.',
+          selite: 'Malik Shaahin vesiiri Nizam al-Mulk korvasi mihrabin '
+            + 'edestä pilarit kupolisalilla vuosina 1086–1087. Se oli '
+            + 'valmistuessaan islamilaisen maailman suurin muurattu kupoli, '
+            + 'ja sen kannattaa kahdeksan kaarta.',
           lahde: 'Amir Pashaei, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Gran Mezquita de Isfahán, Isfahan, Irán, 2016-09-19, DD 43-45 HDR Alt.jpg',
-          selite: 'Taj al-Mulkin pohjoiskupoli alhaalta: paljasta tiiltä '
-            + 'sekin, mutta ristiin kulkevat kaaret piirtävät pintaan '
-            + 'viisisakaraisia tähtiä ja viisikulmioita.',
+          selite: 'Kilpailija Taj al-Mulk rakensi 1088–1089 toisen kupolin '
+            + 'moskeijan silloisten rajojen ulkopuolelle pohjoispäähän. '
+            + 'Juuri sitä pidetään keskiaikaisen iranilaisen rakennustaiteen '
+            + 'mestarityönä: kaaret kulkevat ristiin ja muodostavat '
+            + 'viisikulmioita ja viisisakaraisia tähtiä.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15884,16 +15942,21 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bricks, pillars, and vaults (2966769898).jpg',
-          selite: 'Basaarin tyhjää katettua käytävää: järeät tiilipilarit, '
-            + 'kärjekkäät kaaret peräkkäin ja tiiliholvit, joiden tiilet '
-            + 'on ladottu vinoriveihin.',
+          selite: 'Basaari on noin kahden kilometrin mittainen holvattu ja '
+            + 'katettu katu Naqsh-e Jahanin aukion ja vanhan kaupungin '
+            + 'Kohneh-aukion välillä, ja se on Lähi-idän vanhimpia ja '
+            + 'suurimpia. Nykyinen rakennus on safavidien ajalta, mutta '
+            + 'vanhin osa on 1000-luvulta seldžukkien ajalta.',
           lahde: 'dynamosquito from France, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: '201312 iran esfahan 61 (12468516185).jpg',
-          selite: 'Kohneh-aukio basaarin pohjoispäässä: aukiota reunustaa '
-            + 'kaksikerroksinen kaarikäytävä, ja edessä on sinipohjainen '
-            + 'allas kymmenine pystysuihkuineen.',
+          selite: 'Kohneh-aukio oli 1000-luvulla, Isfahanin ollessa '
+            + 'seldžukkien pääkaupunki, kaupungin pääaukio ja kaupan ja '
+            + 'seuraelämän keskus: pohjoisessa Jameh-moskeija, lännessä '
+            + 'basaari, etelässä Harun Velayatin mausoleumi ja Alin '
+            + 'moskeija, idässä seldžukkien palatsit. Juuri se oli myöhemmän '
+            + 'suuraukion esikuva.',
           lahde: 'Franco Pecchio from Milano, Italy, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -15929,26 +15992,28 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Mur et plafond de la terrasse d\'Ali Qāpu.jpg',
-          selite: 'Parvekkeen puukatossa toistuu kentittäin tähdistä ja '
-            + 'monikulmioista koottu kuvio punaisena, kullankeltaisena, '
-            + 'mustana ja valkoisena, ja puupylväiden kapiteelit on '
-            + 'veistetty kennomaisiin kerroksiin.',
+          selite: 'Aukiolle työntyvä parveke ja sen puukatto kahdeksantoista '
+            + 'puupylvään varassa olivat talon rakennusvaiheista viimeiset; '
+            + 'vaiheita oli kaikkiaan kuusi ja työ kesti katkoineen noin 70 '
+            + 'vuotta. Talo on 48 metriä korkea ja kuusikerroksinen, ja '
+            + 'kerroksiin noustaan kierreportaita.',
           lahde: 'Zythème, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Ali-Qapu 13920419 (18).JPG',
-          selite: 'Musiikkihuoneen yläseinään ja holviin on leikattu '
-            + 'stukkiin kymmeniä pullon, ruukun ja maljan muotoisia '
-            + 'syvennyksiä, ja holvin ripakaaret on maalattu '
-            + 'vaaleansinisiksi ja niiden väliset pinnat '
-            + 'oranssinpunaisiksi.',
+          selite: 'Seiniin ja holveihin leikatut ruukun, astian ja maljan '
+            + 'muotoiset syvennykset eivät ole kaappeja: stukko on niin '
+            + 'ohutta, että se murtuu kevyestä kosketuksesta. Ontot '
+            + 'syvennykset pidättivät kaiun, ja laulu ja soitto kuuluivat '
+            + 'niiden ansiosta selvinä huoneen joka kohtaan.',
           lahde: 'Mohsen Ghasemee, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Music hall of Ali Qapu Isfahan 2014.jpg',
-          selite: 'Musiikkihuone kokonaisuutena: seinässä on kaksi '
-            + 'kerrosta syvennyskenttiä, ja kolmesta korkeasta '
-            + 'suippokaari-ikkunasta tulvii päivänvaloa.',
+          selite: 'Ylimmän kerroksen huoneet ovat talon suurimmat, ja yksi '
+            + 'niistä tunnetaan musiikkihuoneena; lähde sijoittaa sen sekä '
+            + 'viidenteen että kuudenteen kerrokseen. Rakennuttaja oli Abbas '
+            + 'Suuri, joka vietti talossa persialaisen uudenvuoden 1597.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
       ],
@@ -15986,18 +16051,23 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Naghshejahan3.jpg',
-          selite: 'Ilmakuva etelästä: Shaahin moskeijan piha iwaneineen ja '
-            + 'turkoosilaattaisine minareetteineen kääntyy eri kulmaan '
-            + 'kuin aukio, jonka laidoilla erottuvat Ali Qapu ja Sheikh '
-            + 'Lotfollahin kuvioitu kupoli.',
+          selite: 'Aukio ei ole Mekan suunnassa, mutta rukoussalin on '
+            + 'oltava: holvattu eteistila kääntää kulkijan noin 45 astetta '
+            + 'lounaaseen, minkä jälkeen loput rakennuksesta on qiblan '
+            + 'suunnassa. Donald Wilber on esittänyt, että käännös oli myös '
+            + 'laskelmoitu näkymä — omalle akselilleen jäävä kupoli näkyy '
+            + 'aukiolle, kun taas samalla akselilla portti olisi peittänyt '
+            + 'sen.',
           lahde: 'Pedram forouzanfar, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Mosque Shah Portal.jpg',
-          selite: 'Pääportti alaviistosta: kaaren sisus on täynnä '
-            + 'muqarnas-kennoja, kaarta kiertää valkoinen kirjoitusnauha '
-            + 'tummansinisellä pohjalla, ja kummallakin puolella nousee '
-            + 'laatoitettu minareetti.',
+          selite: 'Portti on noin 27,5 metriä korkea ja sen kaksi '
+            + 'minareettia 33,5 metriä; työ alkoi 1611 ja rakennus valmistui '
+            + 'piirtokirjoitusten perusteella noin 1630–31. Laatat tehtiin '
+            + 'haft rangilla eli seitsemällä värillä, jotka maalataan '
+            + 'samalle laatalle ja poltetaan kerralla — nopeammin ja '
+            + 'halvemmalla kuin mosaiikkina.',
           lahde: 'Farhad Tafreshi, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -16038,24 +16108,30 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Hasht Behesht Palace, Isfahan 01.jpg',
-          selite: 'Hasht Beheshtin julkisivu altaan takana: keskellä on '
-            + 'läpi talon aukeava korkea kaari ja sen yläpuolella ohuiden '
-            + 'puupylväiden kannattama parveke pitkine räystäineen.',
+          selite: 'Hasht behesht tarkoittaa persiaksi kahdeksaa paratiisia '
+            + 'ja on Iranissa myös pohjakaavan nimi: keskussali, jonka '
+            + 'ympärille sijoittuu kahdeksan huonetta. Paviljongin '
+            + 'rakennutti safavidien kahdeksas hallitsija, shaahi Suleiman '
+            + 'I, omaksi huvimajakseen, ja valmistumisvuodeksi merkitään '
+            + '1669, samasta talosta esitetään myös vuotta 1671.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Hasht-Behesht, North-Western View.jpg',
-          selite: 'Kahdeksankulmion nurkka luoteesta: ylemmän kerroksen '
-            + 'kaaressa riippuu porrastettu stukkoholvi, sen alla on '
-            + 'puukaiteinen parveke, ja kaarien yllä kulkee sinistä, '
-            + 'turkoosia ja keltaista kaakelinauhaa.',
+          selite: 'Talo on kahdeksankulmainen ja kaksikerroksinen, ja sen '
+            + 'neljällä leveimmällä sivulla on suuri holvattu parveke eli '
+            + 'iwan. Koristeluun kuuluu seinämaalauksia, läpileikattua '
+            + 'puutyötä, stukkoa ja kaakelia, jossa on poikkeuksellisen '
+            + 'paljon keltaista.',
           lahde: 'Meincluded, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Hasht Behesht, Plan and section by Pascal Coste.jpg',
-          selite: 'Pascal Costen piirros vuodelta 1840: ylhäällä leikkaus '
-            + 'talon ja keskussalin kupolin läpi, alhaalla pohjapiirros ja '
-            + 'sitä ympäröivä puutarha.',
+          selite: 'Puutarha on taloa vanhempi: Abbas Suuren kaupunkikaavassa '
+            + 'uuden aukion ja Chahar Baghin puistokadun väliin jäi laaja '
+            + 'puutarha. Pascal Costen vuonna 1840 piirtämä pohjapiirros '
+            + 'nimeää sen osat ranskaksi — lepohuoneet, suihkualtaat, '
+            + 'kanavan, nurmikentät, hedelmätarhat ja plataanikujat.',
           lahde: 'Pascal Coste, Wikimedia Commons (PD)',
         },
       ],
@@ -16093,26 +16169,31 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Chahar bagh school drawing.jpg',
-          selite: 'Pascal Costen 1800-luvun piirros koulusta puistokadun '
-            + 'puolelta: kaksikerroksisessa julkisivussa on '
-            + 'suippokaarisyvennyksiä ja keskellä korkeampi portti, ja '
-            + 'muurin takaa kohoavat kaksi minareettia ja köynnöskuvioinen '
-            + 'kupoli.',
+          selite: 'Koulu oli safavidien viimeinen suuri rakennushanke ja '
+            + 'suurin rakennus, joka Isfahaniin oli pystytetty sitten Abbas '
+            + 'I:n hallituskauden. Sen rakennutti shaahi Soltan Hoseyn, '
+            + 'rakennusajaksi annetaan 1706–1714, ja toinen nimi on '
+            + 'Madrese-ye Madar-e Shah, shaahin äidin koulu.',
           lahde: 'Pascal Coste, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'مدرسه چهارباغ اصفهان 03.jpg',
-          selite: 'Sisäpihan halki kulkee pitkä matala vesiallas '
-            + 'suihkuineen plataanien ja tummien sypressien keskellä, ja '
-            + 'iwanien kaaret on peitetty tiheällä sinisellä mosaiikilla.',
+          selite: 'Vihkiäiset pidettiin 4. syyskuuta 1710, ja shaahin '
+            + 'käskystä paikalle kutsuttiin maan käskynhaltijat, ylimykset, '
+            + 'uskonoppineet ja opettajat; tilaisuutta on kuvattu yhdeksi '
+            + 'safavidien ajan komeimmista. Kaksitoista vuotta myöhemmin '
+            + 'Mahmud Hotakin piiritys ja nälänhätä pakottivat Soltan '
+            + 'Hoseynin antautumaan.',
           lahde: 'Alimalekzadehfar, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Chaharbagh Madrasa.jpg',
-          selite: 'Iwanin laatoitus alaviistosta: kaarta kehystää leveä '
-            + 'kobolttisininen nauha valkoisine kalligrafioineen, '
-            + 'sisäpintaa täyttää tiheä köynnöskuvio ja perällä on '
-            + 'kennomainen muqarnas-syvennys.',
+          selite: 'Kupolin ulkopinnassa on samaa monikerroksista lasitettua '
+            + 'arabeskia kuin shaahin moskeijassa, mutta pohjana '
+            + 'vaaleansininen laatta, ja koristelu on korostetun '
+            + 'geometrista: väreissä hallitsevat keltainen, vihreä ja kulta. '
+            + 'Koulu on Iranin kansallisessa kulttuuriperintöluettelossa '
+            + 'numerolla 116.',
           lahde: 'Moe Alian, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -16162,9 +16243,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Näsinneula tower 20230615.jpg',
-          selite: 'Näsinneulan huippu kesäisenä päivänä: betonivarren päällä '
-            + 'levenee tummalasinen kaksikerroksinen kori, jonka päältä '
-            + 'nousee ohut antennimasto.',
+          selite: 'Näsinneula avattiin Särkänniemen niemenkärkeen vuonna '
+            + '1971. Kokonaiskorkeus on 168 metriä, josta torniosaa on 134,5 '
+            + 'metriä ja loppu huipun antennimastoa; näkötornina se on yhä '
+            + 'Suomen korkein ja Tukholman Kaknäsin sulkemisen jälkeen 2018 '
+            + 'myös Pohjoismaiden korkein.',
           lahde: 'Santeri Viinamäki, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -16191,10 +16274,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Finlayson seen from Frenckell square.jpg',
-          selite: 'Finlaysonin pitkä punatiilinen tehdasrakennus '
-            + 'Frenckellinaukion takana ilta-auringossa: viisi kerrosta '
-            + 'kaari-ikkunoita, seinässä iso Finlayson-teksti ja oikealla '
-            + 'kohoaa yksinäinen tiilipiippu.',
+          selite: 'Skotlantilainen James Finlayson perusti konepajan '
+            + 'Tammerkosken yläjuoksun länsirannalle vuonna 1820 ja myi '
+            + 'tehtaan 1836; uudet omistajat käänsivät sen '
+            + 'puuvillatehtaaksi, joka kasvoi 1800-luvun lopulla '
+            + 'Pohjoismaiden suurimmaksi teollisuuslaitokseksi. Finlaysonin '
+            + 'omia rakennuksia ei ole enää jäljellä.',
           lahde: 'JIP, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -16220,10 +16305,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Vapriikki.jpg',
-          selite: 'Vapriikin punatiilinen verstasrakennus koskenrannalla: '
-            + 'pitkä rivi korkeita kaari-ikkunoita, päädyssä lukee '
-            + 'VAPRIIKKI, ja edessä laskeutuu kiviverhoiltu penger '
-            + 'kosken uomaan.',
+          selite: 'Vapriikki avattiin syksyllä 1996 Tampellan tehtaan '
+            + 'entiseen verstaaseen, jonka vanhimmat osat ovat 1880-luvulta; '
+            + 'nimi tulee ruotsin tehdasta tarkoittavasta sanasta fabrik. '
+            + 'Rakennuksessa on noin 14 000 neliömetriä, josta puolet on '
+            + 'näyttelytilaa, ja se suojeltiin asemakaavalla 1995.',
           lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -16250,9 +16336,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Hämeensilta, Tampere.jpg',
-          selite: 'Hämeensilta vedenpinnan tasalta: leveä graniittiholvi '
-            + 'kaartuu kosken yli, kaiteella kävelee ihmisiä ja oikeassa '
-            + 'päässä erottuu vihertävä pronssipatsas jalustallaan.',
+          selite: 'Hämeensilta on 68 metriä pitkä yksiaukkoinen holvisilta, '
+            + 'jonka julkisivut on verhoiltu Kalvolan punertavalla '
+            + 'graniitilla. Nykyinen silta valmistui 2019 mutta tehtiin '
+            + 'tarkoituksella edeltäjänsä eli vuoden 1929 kivisillan '
+            + 'näköiseksi, ja kaiteilla seisovat yhä Wäinö Aaltosen neljä '
+            + 'pronssiveistosta vuodelta 1929.',
           lahde: 'Eteil, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -16279,8 +16368,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tampereen tuomiokirkko (T02).jpg',
-          selite: 'Tuomiokirkon torni alaviistosta: harmaata lohkokiveä, jyrkkä '
-            + 'punatiilinen huippu ja pieni kuparinvihreä risti.',
+          selite: 'Kirkko rakennettiin vuosina 1902–1907 arkkitehti Lars '
+            + 'Sonckin suunnitelmien mukaan, ja Tampereen hiippakunnan '
+            + 'tuomiokirkoksi se tuli vasta 1923. Kansallisromanttiseen '
+            + 'tyyliin kuuluvat karkeaksi jätetty Uudenkaupungin harmaa '
+            + 'graniitti, jyrkät katot ja paksu nelisivuinen torni.',
           lahde: 'Old Pionear, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -16306,8 +16398,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Pyynikki tower.jpg',
-          selite: 'Pyynikin punagraniittinen näkötorni mäntyjen välissä, '
-            + 'juurellaan kahvilarakennus, pöytiä ja jonottavia ihmisiä.',
+          selite: 'Torni valmistui Pyynikinharjun laelle vuonna 1929 '
+            + 'apulaiskaupunginarkkitehti Vilho Kolhon suunnitelmien mukaan. '
+            + 'Se on 26 metriä korkea ja tehty Ahvenanmaalta louhitusta '
+            + 'punagraniitista, ja koska harjun laki on 152 metriä '
+            + 'merenpinnasta, tasanteelta näkyvät molemmat kaupungin järvet '
+            + 'yhtä aikaa.',
           lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -16336,15 +16432,22 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tampere - Tallipiha 2.jpg',
-          selite: 'Tallipihan päärakennus syksyisenä päivänä: keltaruskeaksi '
-            + 'petsattu hirsitalo, jonka päädyssä on sahalaidalla '
-            + 'koristeltu parveke ja perustus punatiiltä.',
+          selite: 'Tallipihalla olivat Nottbeckin suvun ratsutallit, '
+            + 'vaunuvajat ja talousrakennukset sekä hevosenhoitajien ja '
+            + 'kuskien asunnot. Puutalot on koristeltu runsaasti 1800-luvun '
+            + 'lopun kansallisromantiikan ja venäläis-karjalaisen '
+            + 'puusepäntyön tapaan, kaiverretuin räystäslaudoin ja '
+            + 'nurkkatolpin.',
           lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Tampere - Tallipiha.jpg',
-          selite: 'Portti Kuninkaankadulta: puuaidan yläpuolella kaartuu '
-            + 'kyltti, jossa lukee Tallipiha koristeellisin kirjaimin.',
+          selite: 'Kun Nottbeckit eivät enää 1900-luvun alussa asuneet '
+            + 'viereisessä Finlaysonin palatsissa, korttelista tuli tehtaan '
+            + 'kuorma-ajureiden tukikohta ja sitä alettiin kutsua '
+            + 'Ajurikortteliksi. Tampereen kaupunki lunasti alueen vuonna '
+            + '1995 ja kunnosti sen, ja nykyään talleissa ja vaunuvajoissa '
+            + 'on pieniä puoteja ja kahvila.',
           lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -16376,16 +16479,21 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Amuri Museum - Saarikuja - Makasiinikatu C IMG 0173.JPG',
-          selite: 'Museokortteli kadulta: matala vaaleanharmaa puutalorivi '
-            + 'mustine peltikattoineen ja punatiilisine piippuineen, ja '
-            + 'talon takaa nousee sumuun Näsinneula.',
+          selite: 'Amuri rakennettiin 1860-luvulta alkaen työväen '
+            + 'asuinalueeksi tehtaiden länsipuolelle, ja nimi on aikalaisten '
+            + 'vertaus kaukaiseen Amurinmaahan Venäjän itälaidalla. Kun '
+            + 'puutalot purettiin 1960-luvulla, yksi kortteli säästettiin '
+            + 'museoksi: viisi asuintaloa ja neljä piharakennusta.',
           lahde: 'Anneli Salo, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Room at Amuri Workers\' Museum in June 2025 picture 1.jpg',
-          selite: 'Yksi museon huoneista: lautaseinät, nurkassa kaappisänky '
-            + 'raidallisine patjoineen ja ikkunan edessä suutariksi puettu '
-            + 'nukke työpenkkinsä ääressä.',
+          selite: 'Huoneet on sisustettu eri vuosikymmenten näköisiksi '
+            + 'vuodesta 1882 vuoteen 1973, ja museo kertoo jokaisesta '
+            + 'huoneesta myös sen, kuka siinä kuvitellusti asui ja millä '
+            + 'eli. Asunnot olivat yhteiskeittiöasuntoja: kahdella tai '
+            + 'neljällä huoneella oli yksi yhteinen keittiö, ja jokaisessa '
+            + 'huoneessa asui oma perheensä.',
           lahde: 'JIP, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -16430,18 +16538,22 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kaminarimon 2020-04-19.jpg',
-          selite: 'Kaminarimonin etupuoli aamuvalossa: punaisten '
-            + 'pylväiden välissä riippuu punainen lyhty portin nimi '
-            + 'mustin merkein, ja syvennyksissä seisovat Raijin '
-            + 'rumpukehineen ja Fūjin tuulisäkkeineen.',
+          selite: 'Portin kahdessa etusyvennyksessä seisovat tuulen jumala '
+            + 'Fūjin ja ukkosen jumala Raijin, joiden kuvasto on '
+            + 'vakiintunut: Fūjin kantaa harteillaan pullistunutta '
+            + 'tuulisäkkiä ja Raijin lyö ympärilleen kaartuvaa rumpukehää. '
+            + 'Nykyinen 11,7 metriä korkea portti vihittiin joulukuussa '
+            + '1960, 95 vuotta viimeisen palon jälkeen.',
           lahde: 'Asanagi, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Dragon wood-carving in Kaminarimon, Sensōji.jpg',
-          selite: 'Lyhdyn pohja alhaalta: kullanvärisen metallikehyksen '
-            + 'sisällä kiertyy puuhun veistetty lohikäärme '
-            + 'pilvikiehkuroiden keskellä, suu auki ja punainen kieli '
-            + 'ulkona.',
+          selite: 'Lyhty on 3,9 metriä korkea ja painaa noin 700 kiloa, ja '
+            + 'sen pohjan metallikehyksen sisällä on puuhun veistetty '
+            + 'lohikäärme. Kehyksessä on nimikilpi Matsushita Denki, sillä '
+            + 'nykyisen portin rahat lahjoitti yhtiön perustaja Kōnosuke '
+            + 'Matsushita; juhlissa lyhty painetaan kokoon, jotta kulkueen '
+            + 'korkeat esineet mahtuvat portista läpi.',
           lahde: 'Puchku, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -16478,24 +16590,28 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sensoji 2023.jpg',
-          selite: 'Sensō-jin päähalli edestä: leveän harmaan tiilikaton '
-            + 'alla ovat punaiset pilarit ja kaide, keskiaukossa riippuu '
-            + 'punainen lyhty mustin kirjoitusmerkein ja portaiden edessä '
-            + 'savuaa suitsutusastia.',
+          selite: 'Sensō-ji on Tokion vanhin temppeli, ja perimätieto '
+            + 'ajoittaa sen vuoteen 628. Päähalli paloi 1642 ja nousi '
+            + 'uudelleen 1649, tuhoutui 10. maaliskuuta 1945 pommituksessa '
+            + 'ja rakennettiin nykyiseen asuunsa vuosina 1951–1958; katolla '
+            + 'on titaanitiilet.',
           lahde: 'Akonnchiroll, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Hozomon on an overcast day dllu.jpg',
-          selite: 'Hōzōmon edestä pilvisellä säällä: kaksikerroksinen '
-            + 'portti punaisine pilareineen, keskellä punamusta lyhty ja '
-            + 'uloimmissa aukoissa Niō-vartijapatsaat.',
+          selite: 'Hōzōmon on 22,7 metriä korkea, 21 leveä ja 8 syvä, ja sen '
+            + 'alakerrassa seisoo kaksi 5,45-metristä Niō-vartijapatsasta. '
+            + 'Yläkerrassa säilytetään temppelin sutrat ja takasivulla '
+            + 'riippuu kaksi 4,5 metrin olkisandaalia, kumpikin 400 kiloa; '
+            + 'nykyinen portti on vuodelta 1964.',
           lahde: 'Daniel L. Lu (user:dllu), Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Nakamise in Asakusa, Tokyo.jpg',
-          selite: 'Nakamise-dōri päiväsaikaan: rivi vihreäkattoisia '
-            + 'kauppoja punaisine kyltteineen, ja kujan päässä kohoaa '
-            + 'punainen Hōzōmon harmaine kattoineen.',
+          selite: 'Kaminarimonin portilta temppelille johtava Nakamise-dōri '
+            + 'on noin 250 metriä pitkä, ja sen varrella on noin 72 kauppaa. '
+            + 'Milloin kaupat sallittiin, on epäselvää: lähde antaa sekä '
+            + '1100-luvun alun että vuoden 1685.',
           lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -16533,18 +16649,21 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kaneiji 2012.JPG',
-          selite: 'Kan\'ei-jin päähalli Konponchūdō, jonka harmaa '
-            + 'tiilikatto kaartuu kahtena kerroksena ja jonka ylemmän '
-            + 'räystään mustalla laudalla on kolme kullanväristä '
-            + 'vaakunaa.',
+          selite: 'Munkki Tenkai rakennutti temppelin Kioton Enryaku-jin '
+            + 'malliin Edon linnan koillispuolelle, epäonnen suunnalle eli '
+            + 'kimoniin, jonka kautta pahojen henkien uskottiin tulevan. '
+            + 'Kan\'ei-ji paloi kokonaan vuoden 1868 Uenon taistelussa, ja '
+            + 'nykyinen päähalli tuotiin Kawagoesta Kita-inin temppelistä '
+            + 'entisen sivutemppelin paikalle.',
           lahde: 'Kakidai, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: '20181124 Ueno Park pagoda.jpg',
-          selite: 'Kan\'ei-jin viisikerroksinen pagodi: viisi kaartuvaa '
-            + 'tiilikattoa päällekkäin, neljä ylintä kerrosta '
-            + 'tummanruskeaa puuta ja alin kirkkaan punainen kullalla '
-            + 'helattuine kaksoisovineen.',
+          selite: 'Rakennuksia oli aikanaan yli kolmekymmentä, mutta vuoden '
+            + '1868 tulipalojen jälkeen temppeliä ei rakennettu ennalleen ja '
+            + 'maat takavarikoitiin — niillä on nyt Uenon puisto. Vanhasta '
+            + 'piiristä ovat yhä pystyssä viisikerroksinen pagodi ja Ueno '
+            + 'Tōshō-gū -pyhäkkö.',
           lahde: 'Balon Greyjoy, Wikimedia Commons (CC0)',
         },
       ],
@@ -16582,17 +16701,18 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tokyo National Museum, Honkan 2010.jpg',
-          selite: 'Honkan talvipäivänä: vaalean kivijulkisivun päällä on '
-            + 'tummanruskea tiilikatto ylöspäin kaartuvine räystäineen, '
-            + 'ja rakennus heijastuu suorakaiteen muotoiseen altaaseen.',
+          selite: 'Honkanissa on Japanin taide esihistoriasta 1800-luvun '
+            + 'loppuun, kahdessa kerroksessa ja kellarissa, kerrosalaa 21 '
+            + '500 neliömetriä. Nykyinen talo valmistui 1938 edeltäjänsä '
+            + 'tilalle, jonka vuoden 1923 Kanton maanjäristys runteli.',
           lahde: 'Wiiii, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Hyokeikan - Tokyo National Museum.jpg',
-          selite: 'Hyōkeikan edestä: valkoisen kivijulkisivun keskeltä '
-            + 'nousee vihreäksi patinoitunut kupoli pylväikköineen, ja '
-            + 'pääoven portaiden molemmin puolin istuu kivijalustalla '
-            + 'pronssileijona.',
+          selite: 'Hyōkeikan valmistui 1909, ja se avataan nykyisin vain '
+            + 'erikoisnäyttelyjä varten. Tokion kansallismuseo on Japanin '
+            + 'vanhin kansallinen museo: se laskee alkunsa vuoden 1872 '
+            + 'näyttelystä ja avattiin Uenon puistossa 20. maaliskuuta 1882.',
           lahde: 'Kakidai, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -16628,16 +16748,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sakura (cherry trees) blooming in Ueno Park in Tokyo, Japan 20140404023022 (26290773175).jpg',
-          selite: 'Uenon puiston kirsikkakuja täydessä kukassa: '
-            + 'vaaleanpunaiset ja valkoiset oksat kaartuvat polun yli '
-            + 'molemmilta puolilta, ja polkua täyttää tiivis väkijoukko.',
+          selite: 'Puiston 8 800 puusta noin 800 on kirsikkapuita, ja Ueno '
+            + 'Tōshō-gūn ja temppelirakennusten omat mukaan lukien luku '
+            + 'nousee noin 1 200:aan. Puisto avattiin 19. lokakuuta 1873 ja '
+            + 'oli Japanin ensimmäisiä julkisia puistoja; kävijöitä on yli '
+            + 'kymmenen miljoonaa vuodessa.',
           lahde: 'Yiannis Theologos Michellis, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Shinobazu pond Tokyo 2017.jpg',
-          selite: 'Shinobazun lampi kesällä: koko vesipinta on yhtenäisen '
-            + 'lootuslehtimaton peitossa, ja takarannan puiden takana '
-            + 'nousee rivi korkeita asuintorneja.',
+          selite: 'Shinobazun lampi on 16 hehtaaria laajoja lootuskasvustoja '
+            + 'ja suota, ja se on lintujen talvehtimispaikka. Tyynenmeren '
+            + 'sodan jälkeen lampi laskettiin kuivaksi ja pohjalla '
+            + 'kasvatettiin viljaa; lootuslampi palautettiin 1949 ja tyhjeni '
+            + '1968 vielä kerran vahingossa metrotyömaan takia.',
           lahde: 'Alexandar Vujadinovic, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -16674,26 +16798,27 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Alley - Shitamachi Museum- Ueno, Taito, Tokyo, Japan - DSC08717.JPG',
-          selite: 'Museoon rakennettu alakaupungin kuja: kapea '
-            + 'kivilaattapolku kulkee kahden tummaksi patinoituneen '
-            + 'puutalon välissä ja päättyy mustavalkoiseen valokuvaan '
-            + 'samanlaisesta kujasta.',
+          selite: 'Shitamachi tarkoittaa alakaupunkia: Tokion matalaa '
+            + 'tasankoa Sumida-joen tuntumassa, jossa asuivat käsityöläiset, '
+            + 'kalastajat, merimiehet ja kauppiaat. Museo avattiin 1980, ja '
+            + 'siinä esineitä ei ole aseteltu vitriineihin vaan rakennettu '
+            + 'takaisin huoneiksi ja kujiksi.',
           lahde: 'Daderot, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Coppersmith - Shitamachi Museum- Ueno, Taito, Tokyo, Japan - DSC08719.JPG',
-          selite: 'Vaskisepän työtila ja asunto samassa huoneessa: ahjon '
-            + 'edessä on kolme kuparista vesipannua puutelineillä ja '
-            + 'seinätangossa toistakymmentä talttaa, ja asuinpuolella on '
-            + 'tatamilattia ja shōji-ovi.',
+          selite: 'Alakerran pienen vuokratalon jakaa kaksi perhettä, ja '
+            + 'kummallakin puoliskolla on oma puotinsa: toisella äiti ja '
+            + 'tytär myyvät halpoja karkkeja, toisella vaskiseppä tekee ja '
+            + 'myy työnsä samassa tilassa. Kaikki esillä olevat esineet '
+            + 'olivat käytössä Taishō-kaudella 1912–1926.',
           lahde: 'Daderot, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Corner - Shitamachi Museum- Ueno, Taito, Tokyo, Japan - DSC08740.JPG',
-          selite: 'Museoon siirretty yleisen kylpylän sisäänkäynti: '
-            + 'puukorokkeella seisoo korkea puinen vahtikoju lasitettuine '
-            + 'kilpineen, ja takaseinän peittää kaksikerroksinen rivistö '
-            + 'puisia kenkälokeroita.',
+          selite: 'Yläkerrassa on yleisen kylpylän sisäänkäynti, jonka '
+            + 'kylpylän omistaja lahjoitti museolle. Kaikki museon esineet '
+            + 'on saatu lahjoituksina alakaupungin asukkailta.',
           lahde: 'Daderot, Wikimedia Commons (CC0)',
         },
       ],
@@ -16738,18 +16863,23 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ueno Tōshō-gū 1.jpg',
-          selite: 'Pyhäkön kullattu karamon-portti kuparinvihreän '
-            + 'tiilikaton alla, punaisiksi maalattujen seinien pinnat '
-            + 'täynnä kullattuja kaiverruksia ja päätykaaren alla '
-            + 'köydessä valkoisia paperisuikaleita.',
+          selite: 'Vuoden 1651 karamon-portti on kullattu joka pinnaltaan, '
+            + 'ja sen pylväisiin on veistetty kaksi lohikäärmettä, nouseva '
+            + 'Noboriryū ja laskeva Kudariryū, joiden kerrotaan käyvän joka '
+            + 'yö juomassa Shinobazu-lammelta. Portin ja sen viereisen '
+            + 'sukibei-aidan kaiverruksissa sanotaan olevan yli kaksisataa '
+            + 'kasvi- ja eläinlajia.',
           lahde: 'Fraxinus2, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Tôshôgû-schrijn in het Ueno-park in Tokyo Ueno Tôshôgû (titel op object), RP-F-F01177-G.jpg',
-          selite: 'Käsin väritetty valokuva samasta portista '
-            + '1800-luvulta: kivetty käytävä johtaa suoraan portille, ja '
-            + 'sen laidoilla seisoo kaksi kimonoon pukeutunutta hahmoa '
-            + 'sateenvarjoineen.',
+          selite: 'Pyhäkkö perustettiin vuonna 1627 Tokugawa Ieyasun '
+            + 'muistoksi, ja päärakennus uusittiin 1651; vuoteen 1868 asti '
+            + 'se oli osa viereistä Kan\'ei-jin buddhalaistemppeliä. '
+            + 'Merkittävintä on se, mitä sille ei ole tapahtunut: Uenon '
+            + 'kukkula paloi 1868, maanjäristys ja sota veivät loput '
+            + 'alakaupungista, ja portti seisoo yhä samassa 1600-luvun '
+            + 'asussa kuin 1800-luvun valokuvissa.',
           lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
         },
       ],
@@ -16783,10 +16913,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ueno Station Main Building.jpg',
-          selite: 'Uenon aseman pääjulkisivu: vaalean betonirakennuksen '
-            + 'keskellä on rivi korkeita ikkunoita ja pyöreä kello, ja '
-            + 'katolla lukee vihrein kirjaimin aseman nimi sekä japaniksi '
-            + 'että latinalaisin aakkosin.',
+          selite: 'Asema avattiin 28. heinäkuuta 1883, ja se oli sata vuotta '
+            + 'pohjoisen Japanin pääteasema. Ensimmäinen asemarakennus '
+            + 'tuhoutui vuoden 1923 maanjäristyksen tulipaloissa, ja '
+            + 'nykyinen vihittiin käyttöön 1932.',
           lahde: 'Sushiya, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -16821,10 +16951,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Asakusa Hanayashiki -03.jpg',
-          selite: 'Hanayashiki ylhäältä kuvattuna: sinivalkoinen '
-            + 'vuoristorata kiertää tiiviin tontin päästä päähän talojen '
-            + 'kattojen yli, ja ympärillä nousevat asuintalot aivan aidan '
-            + 'viereen.',
+          selite: 'Hanayashiki avattiin vuonna 1853 kukkatarhana, ja sitä '
+            + 'pidetään Japanin vanhimpana huvipuistona. Vuonna 1953 '
+            + 'valmistunut Yomiuri-vuoristorata on yhä maan vanhin käytössä '
+            + 'oleva, ja se mahtuu tontille vain siksi, että se kiertää '
+            + 'puiston omien rakennusten kattojen yli ja sukeltaa '
+            + 'naapuritalojen väliin.',
           lahde: 'Aimaimyi, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -16865,10 +16997,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kyu Iwasaki Tei Garden (180139793).jpeg',
-          selite: 'Iwasakien länsimainen päärakennus nurmikentän takaa: '
-            + 'valkoiseksi maalatun puutalon eteläsivulla on '
-            + 'kaksikerroksinen pylväskuisti ja oikealla pullistuu '
-            + 'monikulmainen lasiveranta.',
+          selite: 'Mitsubishin kolmas johtaja Iwasaki Hisaya osti tontin '
+            + 'vuonna 1896 ja palkkasi arkkitehdiksi britti Josiah Conderin. '
+            + 'Kaksikerroksisen puutalon esikuva on 1600-luvun '
+            + 'englantilainen jaakobiininen tyyli, mutta eteläsivun '
+            + 'pylväskuistin malli on Pennsylvaniasta, sillä Hisaya oli '
+            + 'juuri valmistunut Pennsylvanian yliopistosta.',
           lahde: 'Takuya Matsuyama, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -16930,19 +17064,22 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Front view of the Imperial Throne Hall Geunjeongjeon at Gyeongbokgung Palace with blue sky in Seoul.jpg',
-          selite: 'Valtaistuinsali Geunjeongjeon edestä: kaksikerroksisen '
-            + 'harmaan tiilikaton alla on kaksi kivikaiteista terassia, '
-            + 'ja laattapihalla seisoo kahdessa rivissä matalia '
-            + 'kivipaaluja, jotka merkitsivät virkamiesten '
-            + 'arvojärjestyksen.',
+          selite: 'Palatsin rakentaminen alkoi joulukuussa 1394 ja '
+            + 'ensimmäinen vaihe valmistui syyskuussa 1395; nimen antoi '
+            + 'virkamies Chŏng Tojŏn, ja se tarkoittaa suurten siunausten '
+            + 'palatsia. Valtaistuinsalin edessä olevat matalat kivipaalut '
+            + 'merkitsivät virkamiesten arvojärjestyksen.',
           lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Gyeongbokgung Gyeonghoeru 1906.png',
-          selite: 'Gyeonghoerun juhlapaviljonki vuonna 1906: '
-            + 'kaksikerroksinen puurakennus seisoo neliskulmaisen lammen '
-            + 'rannassa kymmenien kivipylväiden varassa, ja etualan vesi '
-            + 'on kokonaan lootuksenlehtien peitossa.',
+          selite: 'Palatsi paloi 1592 Imjin-sodassa ja oli raunioina lähes '
+            + 'kolmesataa vuotta, kunnes kuningas Gojong rakennutti sen '
+            + 'uudelleen 1860-luvulla — vuoden 1906 valokuvan aikaan '
+            + 'juhlapaviljonki oli siis vasta muutaman vuosikymmenen '
+            + 'ikäinen. Vuodesta 1910 Japani purki palatsia '
+            + 'järjestelmällisesti, ja noin viidestäsadasta rakennuksesta '
+            + 'oli 1945 jäljellä neljäkymmentä.',
           lahde: 'Asahi Shimbun (朝日新聞社), Wikimedia Commons (PD)',
         },
       ],
@@ -16982,18 +17119,21 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bukchon Hanok Village 01.jpg',
-          selite: 'Bukchonin kuja alamäkeen hanok-talojen harmaiden '
-            + 'tiilikattojen ja kaartuvien räystäiden välissä, ja kujan '
-            + 'päässä avautuu nykyinen Soul lasitorneineen ja '
-            + 'Namsan-vuorella seisovine torneineen.',
+          selite: 'Bukchon tarkoittaa pohjoiskylää: kaupunginosa on '
+            + 'Cheonggyecheon-puron ja Jongno-kadun pohjoispuolella. '
+            + 'Joseon-kaudella se oli korkeiden virkamiesten ja aateliston '
+            + 'asuinaluetta — vuoden 1906 väestörekisterin mukaan 43,6 '
+            + 'prosenttia asukkaista kuului tähän säätyyn — ja talot olivat '
+            + 'silloin isoja ja niitä oli harvassa.',
           lahde: 'Bgag, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Bukchon Hanok Village 05.jpg',
-          selite: 'Hanok-talon portti läheltä: leveä kaksiosainen puuovi '
-            + 'rautarenkaineen ja sen yllä kaartuva tiilikatto, ja portin '
-            + 'molemmin puolin jatkuu muuri, jonka kivipintaan on ladottu '
-            + 'punaisia kulmikkaita kuvioita.',
+          selite: 'Nykyinen tiheä hanok-kortteli syntyi 1920-luvulla, kun '
+            + 'kiinteistökehittäjä Chŏng Segwŏn rakensi Bukchonia täyteen '
+            + 'pieniä hanok-taloja estääkseen aluetta siirtymästä '
+            + 'japanilaisille. Talot olivat aiempia pienempiä mutta '
+            + 'ajanmukaisia: niissä oli lasi-ikkunat ja sähkö.',
           lahde: 'Bgag, Wikimedia Commons (CC0)',
         },
       ],
@@ -17031,18 +17171,21 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Changdeok Palace, Seoul.11.jpg',
-          selite: 'Valtaistuinsali Injeongjeon edestä auringonpaisteessa: '
-            + 'kaksikerroksisen harmaan tiilikaton alla on rivi valkoisia '
-            + 'ovipaneeleita, ja edessä nousevan kiviterassin alla '
-            + 'laattapihalla seisoo kahdessa rivissä matalia kivipaaluja.',
+          selite: 'Valtaistuinsali Injeongjeon oli paikka, jossa uusi '
+            + 'kuningas kruunattiin ja jossa vieraat lähettiläät otettiin '
+            + 'vastaan, ja pihan kivipaalut kertovat, missä järjestyksessä '
+            + 'hovin virkamiehet seisoivat. Palatsi valmistui lokakuussa '
+            + '1405 kuningas Taejongin käskystä Gyeongbokgungin rinnalle.',
           lahde: 'Rtflakfizer, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Changdeokgung, Seoul - Changdeokgung3136.jpg',
-          selite: 'Buyongji-lampi salaisessa puutarhassa: vasemmalla '
-            + 'seisoo pieni paviljonki kivipylväiden varassa osittain '
-            + 'veden päällä, keskellä on pyöreä kivireunainen saari '
-            + 'mäntyineen, ja vesi heijastaa rakennukset.',
+          selite: 'Buyongji on Huwonin eli salaisen puutarhan nelikulmainen '
+            + 'lampi, jonka keskellä on pyöreä pieni saari: muoto noudattaa '
+            + 'vanhaa käsitystä siitä, että maa on nelikulmainen ja taivas '
+            + 'pyöreä. Puutarha on kymmenien hehtaarien metsäinen rinne, '
+            + 'jota kuninkaat rakastivat, ja palatsi otettiin Unescon '
+            + 'maailmanperintöluetteloon vuonna 1997.',
           lahde: 'lumoplank, Wikimedia Commons (CC0)',
         },
       ],
@@ -17081,10 +17224,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jeongjeon, Jongmyo Shrine (oblique) - Seoul, Korea.jpg',
-          selite: 'Jeongjeon-sali viistosti: hyvin pitkä matala rakennus '
-            + 'katoaa perspektiiviin, punaisia pylväitä ja tummia '
-            + 'kaksoisovia rivi toisensa jälkeen yhtenäisen harmaan '
-            + 'tiilikaton alla korkealla kivijalustalla.',
+          selite: 'Jeongjeon oli valmistuessaan arvioiden mukaan Aasian '
+            + 'pisimpiä rakennuksia: siinä oli aluksi seitsemän kammiota, ja '
+            + 'salia jatkettiin lännestä itään aina kun uusi kuningas kuoli, '
+            + 'kunnes kammioita oli yhdeksäntoista. Japanilaiset polttivat '
+            + 'pyhäkön Imjin-sodassa, mutta sielutaulut oli piilotettu, ja '
+            + 'nykyinen rakennus valmistui 1601.',
           lahde: 'Daderot, Wikimedia Commons (PD)',
         },
       ],
@@ -17118,17 +17263,22 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Pagoda 1906.png',
-          selite: 'Puisto vuonna 1906, pian perustamisensa jälkeen: '
-            + 'kymmenkerroksinen vaalea kivipagodi kohoaa keskellä, sen '
-            + 'vieressä on tiilikattoinen paviljonki, ja soratiellä '
-            + 'kävelee vaaleisiin pukuihin pukeutuneita miehiä.',
+          selite: 'Puiston paikalla oli 1400-luvulla Wongaksan buddhalainen '
+            + 'temppeli, josta on jäljellä kymmenkerroksinen kivipagodi; se '
+            + 'antoi puistolle nimen, sillä tap tarkoittaa koreaksi pagodia. '
+            + 'Alue järjestettiin puistoksi vasta vuonna 1897 kuningas '
+            + 'Gojongin irlantilaisen neuvonantajan John McLeavy Brownin '
+            + 'ehdotuksesta.',
           lahde: 'Asahi Shimbun (朝日新聞社), Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Tapgol Park, Seoul.jpg',
-          selite: 'Puiston paviljonki sateella: kuusikulmainen '
-            + 'punapylväinen rakennus harmaine tiilikattoineen seisoo '
-            + 'matalalla kiviportaikolla, jolla istuu rivi ihmisiä.',
+          selite: 'Paviljongin portailla luettiin 1. maaliskuuta 1919 '
+            + 'ensimmäisen kerran ääneen Korean itsenäisyysjulistus, ja '
+            + 'siitä alkoi maaliskuun ensimmäisen liike, Korean '
+            + 'itsenäisyysliikkeen laajin kansannousu. Arkisin portailla '
+            + 'istuu kaupunkilaisia, ja portin ulkopuolella pelataan janggia '
+            + 'eli korealaista shakkia.',
           lahde: 'Tristan Surtel, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -17162,10 +17312,13 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bosingak, Seoul.jpg',
-          selite: 'Kellopaviljonki lännestä nähtynä: punaisten pylväiden '
-            + 'varaan nostettu avoin yläkerta punaisine kaiteineen, sen '
-            + 'yllä leveä harmaa tiilikatto kaartuvine kulmineen ja '
-            + 'etuseinässä kultakirjaiminen nimikilpi.',
+          selite: 'Jongno tarkoittaa kellokatua, ja nimi tulee tästä '
+            + 'paviljongista: ensimmäinen kellotorni pystytettiin 1395 ja '
+            + 'kello ripustettiin 1398. Kelloa lyötiin kolmekymmentäkolme '
+            + 'kertaa neljältä aamulla ja kymmeneltä illalla, ja niiden '
+            + 'lyöntien mukaan Soulin neljä kaupunginporttia avattiin ja '
+            + 'suljettiin; nimen Bosingak paviljonki sai keisari Gojongilta '
+            + '1895.',
           lahde: 'Tristan Surtel, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -17209,10 +17362,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Gwanghwamun 2012.jpg',
-          selite: 'Gwanghwamun vinosti alhaalta: vaalean kivimuurin '
-            + 'kolmen holvikaaren yllä lepää puinen porttitorni tiheään '
-            + 'maalattuine räystäineen, ja holvien edessä seisoo '
-            + 'vartiosto puvuissaan lippuineen.',
+          selite: 'Gwanghwamun on Gyeongbokgungin eteläportti ja koko '
+            + 'Joseon-kauden Soulin pääportti; se valmistui vuoden 1395 '
+            + 'yhdeksännessä kuussa ja sai nimensä 1426 kuningas Sejong '
+            + 'Suurelta. Nykyinen portti on vuodelta 2010: se siirrettiin '
+            + '14,5 metriä etelään alkuperäiselle paikalleen, ja puurakenne '
+            + 'johdettiin vuonna 1925 piirretyistä mittapiirustuksista.',
           lahde: 'Komatta, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -17249,10 +17404,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '2012-05-11 Insadong.jpg',
-          selite: 'Insadongin pääkatu iltapäivällä: kadun yllä roikkuu '
-            + 'rivi värikkäitä paperilyhtyjä puiden oksien välissä, '
-            + 'liikkeiden kylttejä on seinillä päällekkäin, ja kivetyllä '
-            + 'kadulla kävelee ihmisiä.',
+          selite: 'Insadongin nimi on kahden vanhan kaupunginosan nimien '
+            + 'alkutavuista, In ja Sa, ja niitä erotti puro, joka kulki '
+            + 'nykyisen pääkadun kohdalla. Jalankulkijoiden kadulla on '
+            + 'nykyisin arviolta neljäkymmentä prosenttia koko maan '
+            + 'antiikkiliikkeistä ja taidegallerioista sekä yhdeksänkymmentä '
+            + 'prosenttia perinteisistä paperikaupoista.',
           lahde: 'Mario Sánchez Prada, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -17290,10 +17447,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: "Jogye Temple near Buddha's birthday, Seoul.jpg",
-          selite: 'Temppelin piha lootuslyhtyjen alla: tuhannet punaiset, '
-            + 'keltaiset, vihreät ja siniset lyhdyt on ripustettu '
-            + 'tiiviiksi katoksi koko pihan yli, ja keskellä kasvaa vanha '
-            + 'kaksihaarainen puu.',
+          selite: 'Vuoden näyttävin viikko on Buddhan syntymäpäivän aika, '
+            + 'jolloin temppelin piha katetaan tuhansilla lootuslyhdyillä ja '
+            + 'Jongno-katua pitkin kulkee lyhtykulkue Dongdaemunin portilta '
+            + 'temppelille. Juhlan juuret ovat yli tuhannen vuoden takana '
+            + 'Yhdistyneen Sillan ajassa, jolloin sitä vietettiin vuoden '
+            + 'ensimmäisenä täysikuun päivänä.',
           lahde: 'Rtflakfizer, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -17359,10 +17518,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Shanghai The Bund (22219109059).jpg',
-          selite: 'Bundin julkisivurivi päivänvalossa: harmaita '
-            + 'kivijulkisivuja peräkkäin, keskellä kellotornillinen '
-            + 'kauppahuone ja oikealla vaaleampi talo, jonka katolla on '
-            + 'koristeelliset huippukaaret.',
+          selite: 'Shanghai avattiin ulkomaiselle kaupalle vuonna 1843, ja '
+            + 'ranta oli aluksi brittiläinen siirtokunta; kivinen '
+            + 'julkisivurivi nousi vasta 1900-luvun alussa, kun Bundista '
+            + 'tuli Itä-Aasian rahamarkkinoiden keskus. 1940-luvulla kadun '
+            + 'varrella oli lähes kaikkien Kiinassa toimivien suurten '
+            + 'rahalaitosten pääkonttorit.',
           lahde: 'Gary Todd from Xinzheng, China, Wikimedia Commons (CC0)',
         },
       ],
@@ -17398,18 +17559,21 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Garden Bridge & Astor House on the Hong Que Side, Shanghai.jpg',
-          selite: 'Lai Afongin valokuva 1800-luvulta: puron yli kaartuu '
-            + 'kyttyräselkäinen puusilta kaiteineen, vedessä on rivi '
-            + 'kattoineen varustettuja jokiveneitä, ja vastarannalla '
-            + 'seisoo matalia vaaleita taloja.',
+          selite: 'Vuonna 1873 kaupungin neuvosto rakennutti puron suulle '
+            + 'uuden puusillan, ja silloin syntyi myös nimi Waibaidu: erään '
+            + 'selityksen mukaan bai tarkoittaa shanghain murteessa '
+            + 'ilmaista, sillä uudesta sillasta ei enää peritty maksua. Sitä '
+            + 'edeltänyt vuoden 1856 silta oli ensimmäinen ulkomaalaisten '
+            + 'rakentama, ja sen ylityksestä maksettiin.',
           lahde: 'Lai Afong, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Pont Waibaidu (1).jpg',
-          selite: 'Nykyinen terässilta illalla punaiseksi valaistuna: '
-            + 'ristikkokaari nousee kuvan vasemmasta laidasta keskelle '
-            + 'kyttyräksi ja laskeutuu vastarannalle, ja vesi heijastaa '
-            + 'valot.',
+          selite: 'Nykyinen silta on paikan neljäs, ja se avattiin 20. '
+            + 'tammikuuta 1908. Se on Kiinan ensimmäinen kokonaan teräksinen '
+            + 'silta ja maan ainoa säilynyt kamelinselkäinen ristikkosilta, '
+            + 'ja Shanghain kaupunginhallitus julisti sen suojelluksi '
+            + 'rakennukseksi 15. helmikuuta 1994.',
           lahde: 'Guerinf, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -17449,10 +17613,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sassoon House 20250501.jpg',
-          selite: 'Sassoonin talo kadunkulmasta alaviistosta: kymmenen '
-            + 'kerrosta vaaleaa graniittia pystysuorine ikkunanauhoineen '
-            + 'ja huipulla jyrkkä, vihertäväksi hapettunut '
-            + 'kuparipyramidi.',
+          selite: 'Victor Sassoon rakennutti talon vuosina 1926–1929 '
+            + 'arkkitehtitoimisto Palmer and Turnerin piirustuksin, ja runko '
+            + 'on teräsbetonia. Se oli 77 metriä korkea kattolinjaan ja 83 '
+            + 'metriä huippuun — viisitoista metriä korkeampi kuin '
+            + 'seuraavaksi korkein talo Bundilla — ja joelle päin oleva '
+            + 'kymmenmetrinen kuparipyramidi on hapettunut vaalean vihreäksi.',
           lahde: 'Suicasmo, Wikimedia Commons (CC0)',
         },
       ],
@@ -17494,18 +17660,21 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '20090510 Shanghai Yuyan 6573.jpg',
-          selite: 'Yu-puutarhan lampi: vasemmalla kulkee katettu '
-            + 'pylväskäytävä ja siitä lähtee matala kivisilta veden yli, '
-            + 'ja oikealla kohoaa kaksikerroksinen tummanpunainen '
-            + 'paviljonki jyrkästi kaartuvine räystäänkulmineen.',
+          selite: 'Pan Yunduan aloitti puutarhan rakentamisen vuonna 1559 '
+            + 'lahjaksi isälleen, ministeri Pan Enille, ja nimi Yu '
+            + 'tarkoittaa vanhempia miellyttävää. Puutarhassa on yli '
+            + 'neljäkymmentä erillistä näkymää — paviljonkeja, '
+            + 'kivimuodostelmia, lampia ja käytäviä — jotka kaikki kiertyvät '
+            + 'keskussalin ympärille.',
           lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '2014.11.16.121201 Jiuqu Bridge Yuyuan Park Shanghai.jpg',
-          selite: 'Huxintingin teehuone keskellä lampea: kaksikerroksinen '
-            + 'puutalo seisoo pylväiden varassa suoraan vedessä, '
-            + 'katonkulmat teräviksi kärjiksi nousten, ja vasemmalla '
-            + 'näkyy kivikaiteinen silta.',
+          selite: 'Vuonna 1842 brittiarmeija käytti Huxintingin teehuonetta '
+            + 'tukikohtanaan muutaman päivän ajan. Teehuone seisoo yhä '
+            + 'lammen keskellä, ja sinne johtaa siksak-silta, jonka mutkat '
+            + 'on tehty perinteen mukaan pahoja henkiä varten: niiden '
+            + 'uskottiin kulkevan vain suoraan.',
           lahde: 'Hermann Luyken, Wikimedia Commons (CC0)',
         },
       ],
@@ -17540,10 +17709,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'East Nanjing road Shanghai.jpg',
-          selite: 'Itä-Nanjing-kadun kävelyosuus päivällä: molemmin '
-            + 'puolin nousee kerroksittain punaisia ja sinisiä '
-            + 'mainostauluja kiinalaisin kirjoitusmerkein, ja ihmisiä '
-            + 'kulkee laatoitetulla kadulla.',
+          selite: 'Kadun itäinen osuus muutettiin kävelykaduksi vuonna 2000: '
+            + '1 200 metriä pitkä ja noin 28 metriä leveä pätkä He\'nanin '
+            + 'keskikadulta Xizangin keskikadulle, ja vuosina 2019–2020 '
+            + 'kävelyalue jatkettiin aivan Bundille asti. Katua pidetään '
+            + 'yhtenä maailman vilkkaimmista ostoskaduista Fifth Avenuen ja '
+            + 'Oxford Streetin rinnalla.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -17582,18 +17753,22 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '上海博物馆.jpg',
-          selite: 'Museo Kansanaukion nurmikon takaa: neliskulmaisen '
-            + 'vaalean graniittijalustan päällä lepää matala pyöreä '
-            + 'rumpu, jonka reunasta nousee kaksi kaarevaa korvaketta '
-            + 'kuin pronssiastian sangat.',
+          selite: 'Arkkitehti Xing Tonghe muotoili rakennuksen ding-astian '
+            + 'näköiseksi; ding on muinainen kolmi- tai nelijalkainen '
+            + 'pronssinen keittoastia, ja esikuvana sanotaan olleen museon '
+            + 'sisällä esillä oleva Da Ke ding. Pohja on neliö ja yläosa '
+            + 'ympyrä, mikä toistaa vanhan kiinalaisen käsityksen pyöreästä '
+            + 'taivaasta ja neliskulmaisesta maasta.',
           lahde: 'Mir7ror, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Shanghai Museum 20609-Shanghai (32914707972).jpg',
-          selite: 'Museon aula ylhäältä kuvattuna: keskellä nousee '
-            + 'symmetrinen kaksihaarainen porrasyhdistelmä puukaiteineen, '
-            + 'ja lattiaan on ladottu vihreästä ja valkoisesta kivestä '
-            + 'suuri pyöreä kuvio.',
+          selite: 'Uusi talo on pitkälti museonjohtaja Ma Chengyuanin '
+            + 'ansiota: kaupunki antoi tontin muttei rahaa, joten Ma '
+            + 'vuokrasi vanhan talon rakennuttajalle ja keräsi loput '
+            + 'ulkomaanmatkoillaan. Rakennustyö alkoi elokuussa 1993, talo '
+            + 'vihittiin 12. lokakuuta 1996, ja kokoelmassa on yli 120 000 '
+            + 'esinettä.',
           lahde: 'xiquinhosilva, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -17637,10 +17812,13 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '20090510 Shanghai City God Temple 6514.jpg',
-          selite: 'Temppelin alttari, jolla kaksi kullattua istuvaa '
-            + 'hahmoa kohoaa lähes kattoon asti: punakasvoinen vartija '
-            + 'kättään kohottaen ja rauhallinen virkamieshahmo mustassa '
-            + 'hatussa kädet ristissä rinnalla.',
+          selite: 'Temppelin kolme jumalaa olivat kaikki eläviä ihmisiä: '
+            + 'Han-dynastian kansleri Huo Guang, shanghailainen virkamies '
+            + 'Qin Yubo, jonka keisari nimesi kuoleman jälkeen '
+            + 'kaupunginjumalaksi, ja kenraali Chen Huacheng, joka kaatui '
+            + 'puolustaessaan Shanghaita ensimmäisessä oopiumisodassa. '
+            + 'Kulttuurivallankumouksen aikana temppeli suljettiin, ja se '
+            + 'vihittiin uudelleen lokakuussa 2006.',
           lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -17675,10 +17853,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Fuyou Road Mosque - Prayer Hall.jpg',
-          selite: 'Moskeijan rukoushuone, jonka tumma puinen palkkikatto '
-            + 'ja kiinalaiset ristikkoikkunat kehystävät rivin '
-            + 'sinivalkoisia rukousmattoja ja perällä kullatun '
-            + 'mihrab-syvennyksen arabiankielisine kirjoituksineen.',
+          selite: 'Vuonna 1870 kolmekymmentäyksi miestä keräsi rahat, osti '
+            + 'neljänsadan neliömetrin tontin vanhankaupungin kujilta ja '
+            + 'rakensi tähän moskeijan. Rakennustapa on Qing-kauden '
+            + 'kiinalaista: ulkoa se on kaupunkitalo muiden joukossa, eikä '
+            + 'kadulle näy kupolia eikä minareettia.',
           lahde: 'Chongkian, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -17710,10 +17889,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Dajing Ge ramparts.jpg',
-          selite: 'Kaupunginmuurin viimeinen pala: harmaasta tiilestä '
-            + 'ladottu muuri on hammastettu ylhäältä ampuma-aukkoineen, '
-            + 'ja sen takaa nousee kaksikerroksinen paviljonki '
-            + 'punaruskeine puuseinineen.',
+          selite: 'Shanghain kaupunginmuuri rakennettiin vuonna 1553 '
+            + 'japanilaisia merirosvoja vastaan ja purettiin 1912, ja '
+            + 'Dajingin pavilonki on ainoa kohta, jossa muuria on yhä '
+            + 'pystyssä. Muurinharjan hammastus, ampuma-aukot ja harmaa '
+            + 'tiililadonta ovat alkuperäisiä; kokonaisuus luokiteltiin '
+            + 'suojelukohteeksi 1959 ja avattiin yleisölle 1995.',
           lahde: 'World Imaging, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -17781,16 +17962,22 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Marcus Aurelius Arch Tripoli Libya.jpg',
-          selite: 'Riemukaari kaivetun aukion perällä katutasoa alempana, '
-            + 'ympärillä nurmea ja kaiteella eristetty kaivausalue, jonka '
-            + 'reunoilla makaa pylväänpätkiä.',
+          selite: 'Kaari hautautui vuosisatojen mittaan osittain maahan ja '
+            + 'jäi myöhempien talojen väliin; se kaivettiin esiin ja '
+            + 'kunnostettiin vuosina 1914–1918. Arkkitehti Florestano Di '
+            + 'Fausto suunnitteli 1930-luvulla sen ympärille nykyisen '
+            + 'aukion, ja siksi kaari seisoo katutasoa alempana kuoppansa '
+            + 'pohjalla.',
           lahde: 'Daniel and Kate Pett, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Front view of Marcus Aurelius Arch.jpg',
-          selite: 'Kaaren alta katsottuna: etummaisen holvin takaa näkyy '
-            + 'vastakkainen kaariaukko, ja niiden välissä kaartuu '
-            + 'kasettikoristeltu kupoli kuluneine kivipaneeleineen.',
+          selite: 'Muoto on quadrifrons eli nelisivuinen: kaari on avoin '
+            + 'joka suuntaan, koska sen alitse kulki kaksi katua ristiin. '
+            + 'Päällä on harvinainen kahdeksankulmainen kupoli, ja '
+            + 'päätykolmioissa ajavat kaupungin suojelusjumalat Apollo ja '
+            + 'Minerva kaksivaljakoissa, joita vetävät aarnikotkat ja '
+            + 'sfinksit.',
           lahde: 'أوس, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -17826,10 +18013,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Darghut Mosque Exterior Tripoli Libya.JPG',
-          selite: 'Darghutin moskeija ja hautakammio kadulta: matala '
-            + 'valkoiseksi kalkittu rakennusryhmä, jonka katolla kohoaa '
-            + 'rivi pyöreitä kupoleita ja oikealla valkoinen minareetti '
-            + 'okrankeltaisine kärkiosineen.',
+          selite: 'Ottomaanien ensimmäinen käskynhaltija Darghut rakennutti '
+            + 'moskeijan noin vuonna 1560 johanniittaritarien kirkon '
+            + 'tontille, ja hänen hautansa on yhä toisen mihrabin vieressä; '
+            + 'minareetti muotoiltiin uudelleen 1602. Katto koostui alun '
+            + 'perin 27 pienestä kupolista, mutta toisen maailmansodan '
+            + 'pommitusten jälkeisessä jälleenrakennuksessa niitä tuli 32.',
           lahde: 'Abdul-Jawad Elhusuni, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -17863,17 +18052,21 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Old City’s Clock Tower.jpg',
-          selite: 'Kellotornin yläosa alaviistosta kirkasta taivasta '
-            + 'vasten: vaalea kaksikerroksinen huippu, jonka kulmissa on '
-            + 'parittain pylväitä ja kahdella sivulla kellotaulu.',
+          selite: 'Torni on nelisivuinen ja kapenee ylöspäin kerroksittain, '
+            + 'ja jokaisen kerroksen kulmissa on parittain pylväitä '
+            + 'koristeltuine kapiteeleineen. Ylimmässä kerroksessa on '
+            + 'kellotaulu joka sivulla, joten aika näkyy mistä tahansa '
+            + 'suunnasta.',
           lahde: 'Mohamed Hwedi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Clock tower in tripoli libya 01.jpg',
-          selite: 'Torni kujalta katsottuna: valkoinen torni kohoaa '
-            + 'kaupan sinisten ovien ja kadun yli kulkevien '
-            + 'sähköjohtojen takaa, ja vasemmalla erottuu moskeijan '
-            + 'minareetti.',
+          selite: 'Kellotorni on vanhankaupungin helpoin kiintopiste: '
+            + 'kujilla ei näy kauas, mutta torni näkyy. Se on ottomaanien '
+            + 'ajalta ja sen muotokieli on eurooppalaisen ja ottomaanisen '
+            + 'sekoitus; rakennusvuodesta liikkuu toisistaan poikkeavia '
+            + 'tietoja, eikä tornista ole Wikipedian artikkelia millään '
+            + 'kielellä.',
           lahde: 'Ridda Basheer, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -17911,17 +18104,21 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The Red Castle.jpg',
-          selite: 'Linna vedenrajasta kuvattuna iltavalossa: matala '
-            + 'hiekankeltainen linnoitusmassa kaaririveineen jatkuu koko '
-            + 'kuvan poikki, ja edessä oleva tyyni lampi heijastaa sen.',
+          selite: 'Linna seisoo vanhankaupungin kaakkoisnurkassa omalla '
+            + 'kalliollaan, ja sen epäsäännöllisen nelikulmion sivut ovat '
+            + '115, 90, 130 ja 140 metriä. Arkkitehti Armando Brasini '
+            + 'rakensi 1922–1923 itäbastionin päälle kaaririvin, josta tuli '
+            + 'linnan tunnuskuva; kaaret katsoivat alun perin suoraan '
+            + 'merelle, kunnes 1970-luvun rantatie jätti niiden alle lammen.',
           lahde: 'Abdulfatah Amr, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Tripoli - Eingang zum Nationalmuseum.jpg',
-          selite: 'Linnan porttiholvi kadulta: kaaren yläpuolella on '
-            + 'arabiankielinen kirjoitus, sivuilla vanhoja '
-            + 'pylväänpätkiä ja ylhäällä kaksi suurta kaariaukkoa, '
-            + 'joista näkyy taivas ja kasveja.',
+          selite: 'Linnan kerrotaan saaneen punamullan värinsä ja nimensä '
+            + 'vuonna 1551, kun ottomaanit ajoivat johanniittaritarit pois; '
+            + 'Karamanlien suvun aikana 1711–1835 se oli koko maan vallan '
+            + 'keskus. Nykyinen porttiholvi on Armando Brasinin vuosina '
+            + '1922–1923 tekemä uusi, vanhalta näyttävä osa.',
           lahde: 'Franzfoto, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -17953,16 +18150,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ahmed Pasha Karamanli Mosque Interior Tripoli Libya.JPG',
-          selite: 'Rukoussali sisältä: paksut vaaleat marmoripylväät '
-            + 'seisovat riveissä ja niiden päältä nousevat valkoiset holvit '
-            + 'kupoleihin, joista riippuu kristallikruunuja.',
+          selite: 'Rukoussali on hypostyyli eli pylväsmetsä: marmoripylväät '
+            + 'kannattavat kahtakymmentäviittä kupolia. Sisäpinnat on '
+            + 'peitetty lasitteen alle maalatuilla laatoilla ja veistetyllä '
+            + 'stukkokoristelulla.',
           lahde: 'Abdul-Jawad Elhusuni, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'المدينة القديمة-جامع احمد باشا.jpg',
-          selite: 'Moskeijan katupuoli: valkoinen kaarikäytävä '
-            + 'ruskeavalkoisin raidoitetuin kaarin ja lyhtyineen, ja takana '
-            + 'kohoaa minareetti vihreine suippokärkineen.',
+          selite: 'Ahmed Karamanli rakennutti moskeijan vuosina 1736–1738 '
+            + 'Souq al-Mushirin varrelle, ja se on yhä yksi kaupungin '
+            + 'suurimmista ja tärkeimmistä. Minareetti on suippo ottomaanien '
+            + 'tapaan, ja kadun puolella moskeijan kylkeä kiertää '
+            + 'kaarikäytävä, jonka alla on kauppoja: torikuja ja moskeija '
+            + 'ovat samaa rakennusta.',
           lahde: 'WisiW, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -18000,17 +18201,22 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '2 Tripoli En-Naga mosque (51791288947).jpg',
-          selite: 'Moskeijan pihakäytävä: valkoisiksi kalkitut suippokaaret '
-            + 'lepäävät paksujen kivipylväiden päällä, joiden kapiteelit '
-            + 'ovat selvästi vanhempaa ja karkeampaa kiveä kuin muu '
-            + 'rakennus.',
+          selite: 'Rukoussali on jaettu pylväsriveillä seitsemään laivaan, '
+            + 'ja sen 36 pylvästä ovat uudelleen käytettyä roomalaista ja '
+            + 'bysanttilaista marmoria ja graniittia; myös osa kapiteeleista '
+            + 'on roomalaisia. an-Naqa on Tripolin vanhin islamilaisen ajan '
+            + 'rakennus, todennäköisesti vuodelta 973.',
           lahde: 'Libyan Studies, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Naga Mosque Exterior Tripoli Libya.JPG',
-          selite: 'Moskeijan ulkosivu kujalta: umpinainen valkoiseksi '
-            + 'kalkittu seinä, jossa on vain muutama pieni ikkuna '
-            + 'korkealla, ja kujaa pitkin kävelee valkoasuinen mies.',
+          selite: 'Nimi tarkoittaa naaraskamelia: kerrotaan, että kalifi '
+            + 'al-Muizz antoi kaupunkilaisille kullalla kuormatun '
+            + 'naaraskamelin kiitokseksi vieraanvaraisuudesta, ja kullalla '
+            + 'rakennettiin tämä moskeija. Lattia on nykyään neljäkymmentä '
+            + 'senttiä katutasoa alempana, koska kaupunki on noussut '
+            + 'ympäriltä, ja käskynhaltija Safar Dey rakennutti rakennuksen '
+            + 'uudelleen vuosina 1610–1611.',
           lahde: 'Abdul-Jawad Elhusuni, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -18055,9 +18261,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tripoli - Gurgi-Moschee 1833 bis 34 erbaut, Eingangstor.jpg',
-          selite: 'Moskeijan sisäänkäynti kujalta: vihreä kaksiosainen ovi '
-            + 'valkoisine tähtinappeineen, ympärillään marmorista veistetty '
-            + 'suippokaari ja sini-vihreät kaakelinauhat.',
+          selite: 'Moskeijan rakennutti laivaston kapteeni Mustafa Gurgi, ja '
+            + 'nimi kertoo suvun taustan: gurgi on arabiaa ja tarkoittaa '
+            + 'georgialaista. Vuonna 1834 valmistunut rakennus oli '
+            + 'vanhankaupungin viimeinen suuri ennen vallanvaihtoa, ja sen '
+            + 'kaksi sisäänkäyntiä ovat kapeita ovia kalkitussa seinässä — '
+            + 'medinan rakennukset kääntävät koristeensa sisäänpäin.',
           lahde: 'Franzfoto, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -18142,9 +18351,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Persepolis – Gate of All Nations 02.jpg',
-          selite: 'Portti alaviistosta: etualalla lamassu partoineen ja '
-            + 'siipineen, takana portin kivimuuri ja yksi pystyssä oleva '
-            + 'uurrettu pylväs.',
+          selite: 'Portin nimi tulee sen omasta piirtokirjoituksesta, jota '
+            + 'tutkijat kutsuvat lyhenteellä XPa, ja rakennuttaja oli Xerxes '
+            + 'I. Oviaukkoja vartioivat lamassut, siivekkäät härkähahmot, '
+            + 'joilla on parrakkaat ihmiskasvot, ja salin katon kannatti '
+            + 'neljä pylvästä.',
           lahde: 'Skot, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -18180,9 +18391,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Persepolis - Tomb of Artaxerxes III 03.jpg',
-          selite: 'Haudan yläreliefi: kuningas seisoo korokkeella '
-            + 'tulialttarin ääressä, ja korokkeen kantaa kaksi riviä pieniä '
-            + 'hahmoja.',
+          selite: 'Yläreliefissä kuningas seisoo korokkeella tulialttarin '
+            + 'ääressä, ja korokkeen kantavat valtakunnan eri kansojen '
+            + 'sotilaat riveissä. Naapurihaudassa, Artakserkses II:n, sama '
+            + 'aihe on tehty vielä yksityiskohtaisemmin: jokaisen kantajan '
+            + 'yläpuolelle on kaiverrettu kolmikielinen teksti siitä, mistä '
+            + 'kansasta hahmo on.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -18214,8 +18428,13 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bull statue in the northern facade, Hall of hundred columns Persepolis 2014.jpg',
-          selite: 'Salin pohjoissivu: oikealla jättimäinen kivihärkä '
-            + 'muurissa ja vasemmalla yksi kokonainen uurrettu pylväs.',
+          selite: 'Sali on Apadanan naapuri ja terassin toiseksi suurin '
+            + 'rakennus: Xerxes I aloitti työn ja hänen poikansa '
+            + 'Artakserkses I sai sen päätökseen 400-luvun eKr. lopulla. '
+            + 'Nimi jäi elämään pitempään kuin koko kaupungin nimi — '
+            + 'sasanidiruhtinas Shapur Sakanshah kaiversi paikalle vuonna '
+            + '311 tekstin, jossa raunioita kutsutaan nimellä Sad-stūn eli '
+            + 'sata pylvästä.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
       ],
@@ -18252,8 +18471,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The Apadana, Persepolis, Iran (47727273482).jpg',
-          selite: 'Apadanan pylväät pilvistä taivasta vasten, ja alhaalla '
-            + 'kulkevat kolme kävijää kertovat, kuinka korkeita ne ovat.',
+          selite: 'Apadanan kattoa kannatti seitsemänkymmentäkaksi pylvästä, '
+            + 'ja jokainen niistä oli kaksikymmentäneljä metriä korkea. '
+            + 'Vuoden 330 eKr. jälkeen pylväitä alettiin purkaa '
+            + 'rakennusaineeksi lähiseudun kyliin, ja 1900-luvun alussa '
+            + 'niitä oli pystyssä enää kolmetoista; yksi kaatunut mutta ehjä '
+            + 'nostettiin takaisin 1970-luvulla.',
           lahde: 'Carole Raddato from Frankfurt, Germany, Wikimedia '
             + 'Commons (CC BY-SA 2.0)',
         },
@@ -18285,9 +18508,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The ruins of the Tripylon (or Council Hall), Persepolis, Iran (47727258352).jpg',
-          selite: 'Salin rauniot: oikealla kokonainen ovenpieli '
-            + 'metallitelineen varassa ja vasemmalla katkenneita pylväitä '
-            + 'ruohikossa.',
+          selite: 'Kolmen oven sali kuuluu Dareios I:n alkuperäiseen '
+            + 'tilaukseen Apadanan ja aarrekammion rinnalla, mutta se on '
+            + 'näistä pienin ja vähiten tunnettu. Nimet eivät ole '
+            + 'rakennuksen omia, eikä siitä ole pystyssä enää muuta kuin '
+            + 'ovenpieliä ja pylväänjalustoja.',
           lahde: 'Carole Raddato from Frankfurt, Germany, Wikimedia '
             + 'Commons (CC BY-SA 2.0)',
         },
@@ -18324,9 +18549,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The Treasury, Persepolis, Iran (33902500738).jpg',
-          selite: 'Aarrekammion perustukset ylhäältä: matalat muurit jakavat '
-            + 'alueen huoneiksi, ja yhdessä salissa on rivi pyöreitä '
-            + 'pylväänjalustoja.',
+          selite: 'Aarrekammio on terassin kaakkoisosassa ja yksi Dareios '
+            + 'I:n kolmesta alkuperäisestä tilauksesta. Nimi ei ole '
+            + 'antiikista vaan kaivauksilta: Erich Schmidtin ryhmä löysi '
+            + '1930-luvulla ohuita kultalehtiä ja savitauluja, jotka '
+            + 'kertovat vuosien 492–457 eKr. palkanmaksusta.',
           lahde: 'Carole Raddato from Frankfurt, Germany, Wikimedia '
             + 'Commons (CC BY-SA 2.0)',
         },
@@ -18367,9 +18594,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '2018-09-21 Iran, Persepolis, Tachara (from the southeast).jpg',
-          selite: 'Tachara kaakosta: terassin muurin kyljessä on rivi '
-            + 'hahmoja astiat käsissään, ja muurin päällä ovenpielet '
-            + 'seisovat suorina riveinä.',
+          selite: 'Tachara on Dareios Suuren oma palatsi, terassin vanhin ja '
+            + 'parhaiten säilynyt rakennus, sillä vuoden 330 eKr. tulipalo '
+            + 'ohitti sen lähes koskematta. Reliefeissä toistuu hovin arki: '
+            + 'keihäsmiehillä on suuret suorakaiteen muotoiset pajukilvet ja '
+            + 'palvelijat kantavat pyyhettä ja hajuvesipulloa.',
           lahde: 'Laurens R. Krol, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -18398,8 +18627,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Palace of Xerxes, Persepolis.jpg',
-          selite: 'Hadishin ovenpielet ja ikkuna-aukot rivissä, ja aukkojen '
-            + 'läpi näkyy tasanko ja kaukana vuorijono.',
+          selite: 'Hadish oli Xerxes I:n oma palatsi, ja se on terassin '
+            + 'ylimmällä tasolla suoraan paljaan kallion päällä. Juuri '
+            + 'täältä vuoden 330 eKr. tulipalon uskotaan lähteneen: liekit '
+            + 'nousivat kertomusten mukaan Xerxesin asuintiloista ja '
+            + 'levisivät sieltä muualle terassille.',
           lahde: 'Carole Raddato, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -18467,9 +18699,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Al-Bakirya Mosque, Sana\'a (2286792446).jpg',
-          selite: 'Al-Bakiriyyan suuri valkoinen kupoli iltavalossa, alla '
-            + 'nelikulmainen rumpuosa kapeine ikkunoineen ja edessä rivi '
-            + 'matalampia kupoleita.',
+          selite: 'Al-Bakiriyyan rakennutti Jemenin osmanikuvernööri Hasan '
+            + 'Pasha vuosina 1596–1597, kun osmanit olivat hallinneet '
+            + 'kaupunkia puolisen vuosisataa. Se on vanhankaupungin selvin '
+            + 'osmanirakennus, ja sen tunnistaa jo kaukaa: muiden '
+            + 'moskeijoiden matalien kattojen keskeltä nousee yksi suuri '
+            + 'pyöreä kupoli.',
           lahde: 'Dan from Brussels, Europe, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -18513,9 +18748,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sanaa, Yemen view.jpg',
-          selite: 'Torialue tornitalojen juurella hämärissä: katutasossa on '
-            + 'valaistuja kojuja ja markiiseja, ja kadulla kulkee autoja ja '
-            + 'väkeä.',
+          selite: 'Suq al-Milh eli suolatori ei ole yksi tori vaan '
+            + 'korttelillinen niitä, ja se on kaupungin vanhin yhä käytössä '
+            + 'oleva rakenne — vanhempi kuin viereinen Suuri moskeija. '
+            + 'Ympäröivistä kukkuloista louhittua onyksia, kalsedonia ja '
+            + 'karneolia työstettiin täällä, ja metallityöstä kaupunki oli '
+            + 'kuuluisa.',
           lahde: 'Александра Пугачевская (Alexandra Pugachevsky), Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -18554,9 +18792,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sana, Yemen (4324293041) (cropped).jpg',
-          selite: 'Talhan harmaa kupoli kattojen yli katsottuna, vieressä '
-            + 'valkoinen minareetti läpimurrettuine kaiteineen ja ympärillä '
-            + 'tornitalojen ruskeaa tiiltä.',
+          selite: 'Qubbat Talhan rakennutti osmanien käskynhaltija Hadji '
+            + 'Mehmed Pasha vuosina 1619–1620, ja minareetti tehtiin samaan '
+            + 'aikaan. Puoliympyrän muotoinen kupoli lepää '
+            + 'kahdeksankulmaisen rummun päällä, jota ympäröi neljä niin '
+            + 'ikään kahdeksankulmaista kulmatornia, ja rummun jokaisessa '
+            + 'sivussa on kaari-ikkuna.',
           lahde: 'yeowatzup, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -18605,9 +18846,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Yemen-2005-IMG 20181115 0014b2.jpg',
-          selite: 'Suuren moskeijan kaksi valkoista minareettia kattojen '
-            + 'yllä, molemmissa ympäröivä parveke ja kupolimainen huippu, ja '
-            + 'takana kaupunki ja vuorijono.',
+          selite: 'Minareetteja on kaksi: itäpuolen minareetti pystytettiin '
+            + '800-luvun alussa, ja läntisen teetti vuonna 1130 '
+            + 'ismaililainen kuningatar Arwa al-Sulayhi. Läntinen muistuttaa '
+            + 'saman ajan Kairon moskeijoita, sillä kuningattarella oli '
+            + 'läheiset suhteet Egyptin fatimideihin.',
           lahde: 'Angela Schoettler († 2023), Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -18641,9 +18884,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Mosque in Sana\'a.jpg',
-          selite: 'Al-Mahdin moskeija kadun päästä: kullanhohtoisen kupolin '
-            + 'takaa nousee tiiliminareetti kahtine parvekkeineen, ja '
-            + 'etualalla on savimuureja.',
+          selite: 'Moskeijassa on yksi kupoli ja yksi minareetti: kupoli on '
+            + 'ulkoa kullanvärinen ja minareetti tiilistä ladottu. '
+            + 'Vuosiluvut ovat sotkussa — lähde kertoo rakennuksen syntyneen '
+            + '1651 imaami Mahdi Abbas bin Mansourin käskystä ja haudan '
+            + 'tulleen saman imaamin kuoltua 1768, eikä sama mies ole voinut '
+            + 'tilata rakennusta 117 vuotta ennen kuolemaansa.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -18680,9 +18926,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sanaa PICT0025 (14753805424).jpg',
-          selite: 'Bab al-Yaman ylhäältä: harmaakivinen kaariaukko kahden '
-            + 'pyöreän tiilitornin välissä, muurin harjalla valkoinen '
-            + 'sahalaita ja takana tornitalojen rivistö.',
+          selite: 'Bab al-Yaman on savisen, yhdeksästä neljääntoista metriin '
+            + 'korkean kaupunginmuurin eteläpää, ja portin alkuperäinen '
+            + 'suunnitelma on perimätiedossa liitetty Nooan poikaan Seemiin. '
+            + 'Muurista ei ole enää paljon jäljellä: vuoden 1962 '
+            + 'vallankumouksen jälkeen useita vanhankaupungin porteista ja '
+            + 'pätkiä muuria purettiin.',
           lahde: 'lelebella, Wikimedia Commons (CC BY 2.0)',
         },
       ],
