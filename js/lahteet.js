@@ -19,8 +19,12 @@
  * ne on pidettävä samana.
  *
  * `lisenssi: null` tarkoittaa, ettei lisenssiä ole kirjattu repoon.
- * Se EI ole sama kuin "vapaa": rivi näkyy pelissä erikseen merkittynä,
- * jotta epäselvyys on näkyvä eikä unohdu.
+ * Se EI ole sama kuin "vapaa": rivi näkyy pelissä erikseen merkittynä
+ * ("Lisenssi epäselvä"), jotta puute on näkyvä eikä unohdu. Merkintä on
+ * uutta aineistoa varten: 27.8.2026 yhdenkään rivin lisenssi ei ole
+ * kirjaamatta, ja niin sen kuuluu perustuslain pilarin 2 mukaan pysyä.
+ * Uuden rivin lisenssi haetaan aina aineiston omalta julkaisijalta, ja
+ * `huom`-kenttään kirjataan tarkistuspäivä ja lähde.
  */
 
 /** Pelin oma tekijänoikeus. Sanamuodot ovat LICENSE-tiedostosta. */
@@ -106,9 +110,12 @@ export const LAHTEET = [
       {
         nimi: 'Liberaalin demokratian indeksi',
         tekija: 'V-Dem-instituutti, jaeltuna Our World in Datan kautta',
-        lisenssi: null,
-        huom: 'Lisenssiä ei ole kirjattu repoon; molemmat julkaisijat käyttävät '
-          + 'yleensä CC BY -ehtoja, mutta sitä ei ole tarkistettu tänne.',
+        lisenssi: 'CC BY-SA 4.0 (V-Dem); Our World in Datan oma käsittely CC BY 4.0',
+        huom: 'Tarkistettu 27.8.2026: V-Dem sanoo itse aineistosivullaan '
+          + '(v-dem.net/data/the-v-dem-dataset) lisenssiksi CC BY-SA 4.0. Our World '
+          + 'in Datan metatiedoissa (api.ourworldindata.org, muuttuja 1209797) sama '
+          + 'aineisto on merkitty CC BY 4.0:ksi. Ristiriita on lähteissä; tässä '
+          + 'noudatetaan julkaisijan omaa eli tiukempaa merkintää.',
       },
       {
         nimi: 'International Migrant Stock 2024 — muuttajakannat maittain',
@@ -138,9 +145,15 @@ export const LAHTEET = [
         nimi: 'Yale Bright Star Catalogue, 5. uudistettu laitos — 1656 tähteä',
         tekija: 'Hoffleit & Warren 1991, NASA Astronomical Data Center; '
           + 'jakelu CDS / VizieR (V/50, doi:10.26093/cds/vizier)',
-        lisenssi: null,
-        huom: 'Erillistä lisenssitekstiä ei ole. CDS jakaa luetteloa vapaasti ja '
-          + 'pyytää mainitsemaan VizieRin ja luettelon tekijät — se on tehty tässä.',
+        lisenssi: 'Public domain (NASAn Astronomical Data Center); maininta '
+          + 'VizieRistä ja tekijöistä ehtona',
+        huom: 'Tarkistettu 27.8.2026: VizieR ei kirjaa luettelolle V/50 omaa '
+          + 'lisenssiä eikä sen ReadMe sisällä tekijänoikeusmerkintää, joten CDS:n '
+          + 'käyttösäännöt (cds.unistra.fr/vizier-org/licences_vizier.html) ohjaavat '
+          + 'aineiston julkaisijaan. Julkaisija on NASAn Astronomical Data Center '
+          + '(NSSDC), jonka aineisto ei ole Yhdysvalloissa tekijänoikeuden alaista '
+          + 'ja jonka ainoa ehto on lähteen mainitseminen. Maininta VizieRistä ja '
+          + 'luettelon tekijöistä on tehty tässä.',
       },
       {
         nimi: 'ConstellationLines — 88 tähdistön tikkukuviot',
@@ -257,17 +270,24 @@ export const LAHTEET = [
         nimi: 'Suorat radiolähetykset — maailmanradio',
         tekija: 'Asemaluettelo koottu Radio Browserista (radio-browser.info); '
           + 'lähetysvirrat ovat asemien omia',
-        lisenssi: null,
-        huom: 'Asemaluettelo on avointa dataa, mutta itse lähetysten '
-          + 'edelleenvälityksen ehtoja ei ole selvitetty. Peli soittaa aseman '
-          + 'julkista virtaa suoraan eikä tallenna sitä.',
+        lisenssi: 'Asemaluettelo vapaasti käytettävä (Radio Browser); '
+          + 'lähetykset asemien omilla ehdoilla',
+        huom: 'Tarkistettu 27.8.2026: Radio Browserin oma ehto '
+          + '(docs.radio-browser.info) on "this webservice can be used freely"; '
+          + 'erillistä lisenssitekstiä ei ole. Lähetyksillä ei ole yhteistä '
+          + 'lisenssiä eikä peli välitä niitä edelleen: selain avaa aseman oman '
+          + 'julkisen virran suoraan, kuten aseman oma nettisoitin, eikä sitä '
+          + 'tallenneta.',
       },
       {
         nimi: 'Peliäänet ja avaustekstin lukuääni (efekti-*.mp3, intro-puhe.mp3)',
         tekija: 'Tuotettu ElevenLabsilla',
-        lisenssi: null,
-        huom: 'Käyttöoikeus perustuu ElevenLabsin tilausehtoihin; niitä ei ole '
-          + 'kirjattu repoon.',
+        lisenssi: 'Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy',
+        huom: 'Tarkistettu 27.8.2026: ElevenLabsin käyttöehdot (ETA-versio, '
+          + 'päivitetty 31.3.2026, elevenlabs.io/terms-of-use-eu) kohta 4(c): '
+          + '"you retain all rights in and to your Output" — tuotettu ääni jää '
+          + 'siis tekijälle. Kaupallinen käyttö edellyttää maksullista tilausta '
+          + '(kohta 1(c)).',
       },
       {
         nimi: 'Syntetisoidut tehosteet ja ambienssi (Web Audio)',
