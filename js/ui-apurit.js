@@ -1000,6 +1000,15 @@ export function asetaKehittajaTila(paalla) {
  * Sama kaava kuin KEHITTAJA_AVAIMELLA yllä: oma avain, try/catch ja ei
  * riviäkään pelitallennuksessa. Fokusmoodi on laitteen esitystapa eikä
  * pelitilanteen osa, eikä sen pidä matkustaa tallennuksen mukana.
+ *
+ * KYTKINTÄ EI ENÄÄ OLE KÄYTTÖLIITTYMÄSSÄ (omistajan tilaus 27.8.2026,
+ * ks. maailmanäkymän osio alempana): hampurilaisvalikon fokusmoodi- ja
+ * sumennuskytkimet poistettiin. Lukupuoli (fokusmoodiPaalla) on yhä
+ * koko pelin ehto kymmenissä paikoissa, ja kirjoituspuoli jäi
+ * savukevartijoiden vertailukeinoksi (tools/savuke-pollo.mjs,
+ * tools/savuke-kartan-sujuvuus.mjs, tools/savukkeet/savuke-*.mjs
+ * kirjoittavat avaimeen suoraan). Maailmanappi siivoaa avaimen, jottei
+ * valikosta jäänyt '0' jää kummittelemaan ilman kytkintä.
  */
 const FOKUSMOODI_AVAIN = 'matkakirja-fokusmoodi';
 
@@ -1021,105 +1030,84 @@ export function asetaFokusmoodi(paalla) {
 }
 
 /*
- * SUMENNUSTEN PIKAKYTKIN (kehittäjäasetus, omistaja 24.8.2026).
+ * === KEHITTÄJÄN YKSI YLÄRIVIN NAPPI: MAAILMANÄKYMÄ ==================
+ * === (omistajan tilaus 27.8.2026) ===================================
  *
- * Fokusmoodissa on kaksi erillistä asiaa: MITÄ kartalta näytetään
- * (käymättömien maiden datakerros pois) ja MILTÄ loppu näyttää
- * (himmennys ja epäterävyys). Ennen–jälkeen-vertailua varten
- * jälkimmäinen tarvitsee oman kytkimensä: sumennus pois, muu
- * fokusmoodi ennallaan.
+ * *"Kehittäjätilassa yläpalkissa saa olla vain YKSI nappi"*, ja se
+ * kytkee maailmannäkymän:
  *
- * Oletus on päällä samoin perustein kuin fokusmoodilla itselläänkin,
- * ja arvo '0' tarkoittaa pois. Kytkin näkyy vain kehittäjätilassa.
+ *   PÄÄLLÄ  koko maailmanlauta ja kohdekaupunkien laatat näkyviin,
+ *           jotta omistaja pääsee siirtymään maasta toiseen
+ *           (kaupunkilaatan napautus on vanha kehittäjätilan oikotie,
+ *           js/ui.js doKehittajaSiirto). Lento- ja maareitit PYSYVÄT
+ *           poissa: fokusmoodi jää päälle, joten vanha rasteroitu
+ *           lauta reitteineen on yhä atlaksen alla piilossa
+ *           (js/fokuskartta.js paivitaVanhaLauta) ja näkyviin tulee
+ *           atlaksen oma yleislehti. Samalla katoavat sumennus ja
+ *           kartan vieritysrajoite: panorointi on täysin vapaa.
+ *   POIS    oletus. Kaikki käyttäytyy kuten pelaajalla — sumennukset,
+ *           käymättömän maan datakerroksen katoaminen ja kameran
+ *           rajaus fokusikkunaan.
+ *
+ * TÄMÄ YKSI AVAIN KORVAA NELJÄ VANHAA KYTKINTÄ kehittäjän arjessa:
+ * ylärivin "rajat" (liikkuvuusrajoite) ja "pisteet" (kaupungit ja
+ * reittiverkko kuvan päälle, 25.8.2026) sekä hampurilaisvalikon
+ * fokusmoodi- ja sumennuskytkimet (24.–25.8.2026). Historia lyhyesti:
+ * ylärivi kytki 24.8. fokusmoodin ja sumennukset, 25.8. se sai tilalle
+ * pelitestin kaksi työkalua ja vertailukytkimet siirtyivät valikkoon —
+ * ja 27.8. omistaja totesi neljän kytkimen olevan kolme liikaa.
+ * Vanhat avaimet siivotaan pois nappia painettaessa
+ * (siivoaVanhatKehittajaAvaimet), jottei valikosta jäänyt tila jää
+ * kummittelemaan ilman kytkintä.
+ *
+ * OLETUS ON POIS, ja sama kaava kuin kehittäjätilalla ja fokusmoodilla
+ * yllä: oma avain, try/catch eikä riviäkään pelitallennuksessa —
+ * maailmanäkymä on laitteen asetus eikä pelitilanteen osa.
  */
-const FOKUSSUMENNUS_AVAIN = 'matkakirja-fokussumennus';
+const KEHITTAJA_MAAILMA_AVAIN = 'matkakirja-kehittaja-maailma';
 
-export function fokusSumennusPaalla() {
-  try {
-    return localStorage.getItem(FOKUSSUMENNUS_AVAIN) !== '0';
-  } catch {
-    return true; // yksityinen selaus: oletus on päällä
-  }
-}
-
-export function asetaFokusSumennus(paalla) {
-  try {
-    if (paalla) localStorage.removeItem(FOKUSSUMENNUS_AVAIN);
-    else localStorage.setItem(FOKUSSUMENNUS_AVAIN, '0');
-  } catch {
-    /* yksityinen selaus: tila jää vain tälle istunnolle */
-  }
-}
+/** Maailmanapin korvaamat vanhat kytkinavaimet. */
+const KORVATUT_KEHITTAJA_AVAIMET = [
+  'matkakirja-kehittaja-rajat',
+  'matkakirja-kehittaja-pisteet',
+  'matkakirja-fokussumennus',
+  'matkakirja-fokusmoodi',
+];
 
 /*
- * === KEHITTÄJÄN KAKSI YLÄRIVIN NAPPIA (omistajan tilaus 25.8.2026) ===
+ * Siivous tehdään NAPIN PAINALLUKSESSA eikä käynnistyksessä.
  *
- * Ylärivin kehittäjänapit saivat uudet tehtävät. Ennen ne kytkivät
- * fokusmoodin ja sumennukset; nyt ne ovat pelitestaajan työkalut:
- *
- *   "rajat"   — pelaajan LIIKKUVUUSRAJOITE päälle/pois. Fokusmoodissa
- *               kamera on pelin käsissä (js/kartta.js panorointiVapaa,
- *               fokusRajaukset): käsi liikkuu vain valloitetulla
- *               alueella ja fokusikkunan sisällä. Kehittäjätilassa
- *               rajoite on ollut aina pois; nyt sen saa halutessaan
- *               PÄÄLLE, jotta omistaja pelitestaa autenttisella
- *               rajoitteella ilman että kehittäjätila pitää sammuttaa.
- *   "pisteet" — laudan kaupungit ja reittiverkko näkyviin fokuskartan
- *               päälle, jotta mihin tahansa kaupunkiin näkee hypätä
- *               (hyppy itsessään on vanha kehittäjätilan oikotie,
- *               js/ui.js doKehittajaSiirto).
- *
- * OLETUS ON KUMPIKIN POIS. Kehittäjätilan nykyinen käytös (vapaa
- * panorointi, puhdas atlas) säilyy siis muuttumattomana siihen asti
- * kun nappia painetaan — eikä yksikään olemassa oleva savuke muutu.
- * Molemmat ovat laitteen asetuksia eivätkä pelitilanteen osaa: sama
- * kaava kuin kehittäjätilalla ja fokusmoodilla yllä (oma avain,
- * try/catch, ei riviäkään pelitallennuksessa).
- *
- * VANHA FOKUS/SUMENNUS EI POISTUNUT. Raamatun osio "Fokusmoodi" vaatii
- * yhä molemmat kytkimet kehittäjätilaan (*"Fokusmoodin kytkin
- * matkalaukun oikealla puolella VAIN kehittäjätilassa; lisäksi
- * kehittäjätilaan sumennukset päälle/pois -nappi"*), joten ne siirtyivät
- * hampurilaisvalikon Työhuone-koteloon (index.html #kehittaja-kotelo).
- * Ylärivi on ahdas, ja nämä kaksi ovat harvemmin tarvittavia
- * vertailukytkimiä — pelitestin työkalut kuuluvat kartan viereen.
+ * Käynnistyksessä se pyyhkisi myös sen fokusmoodiavaimen, jonka
+ * savukevartija kirjoittaa ennen sivunlatausta vertaillakseen vanhaa ja
+ * uutta näkymää (tools/savuke-pollo.mjs, tools/savuke-kartan-sujuvuus.mjs,
+ * tools/savukkeet/savuke-fokuskohteet.mjs) — vartija menettäisi ainoan
+ * keinonsa sammuttaa fokusmoodi. Napin painallus on kehittäjän oma
+ * tahdonilmaus, ja siihen siivous kuuluu.
  */
-const KEHITTAJA_RAJAT_AVAIN = 'matkakirja-kehittaja-rajat';
-
-export function kehittajaRajatPaalla() {
+function siivoaVanhatKehittajaAvaimet() {
   try {
-    return localStorage.getItem(KEHITTAJA_RAJAT_AVAIN) === '1';
+    for (const avain of KORVATUT_KEHITTAJA_AVAIMET) localStorage.removeItem(avain);
+  } catch {
+    /* yksityinen selaus: siivottavaa ei ole */
+  }
+}
+
+export function kehittajaMaailmaPaalla() {
+  try {
+    return localStorage.getItem(KEHITTAJA_MAAILMA_AVAIN) === '1';
   } catch {
     return false; // yksityinen selaus
   }
 }
 
-export function asetaKehittajaRajat(paalla) {
+export function asetaKehittajaMaailma(paalla) {
   try {
-    if (paalla) localStorage.setItem(KEHITTAJA_RAJAT_AVAIN, '1');
-    else localStorage.removeItem(KEHITTAJA_RAJAT_AVAIN);
+    if (paalla) localStorage.setItem(KEHITTAJA_MAAILMA_AVAIN, '1');
+    else localStorage.removeItem(KEHITTAJA_MAAILMA_AVAIN);
   } catch {
     /* yksityinen selaus: tila jää vain tälle istunnolle */
   }
-}
-
-const KEHITTAJA_PISTEET_AVAIN = 'matkakirja-kehittaja-pisteet';
-
-export function kehittajaPisteetPaalla() {
-  try {
-    return localStorage.getItem(KEHITTAJA_PISTEET_AVAIN) === '1';
-  } catch {
-    return false; // yksityinen selaus
-  }
-}
-
-export function asetaKehittajaPisteet(paalla) {
-  try {
-    if (paalla) localStorage.setItem(KEHITTAJA_PISTEET_AVAIN, '1');
-    else localStorage.removeItem(KEHITTAJA_PISTEET_AVAIN);
-  } catch {
-    /* yksityinen selaus: tila jää vain tälle istunnolle */
-  }
+  siivoaVanhatKehittajaAvaimet();
 }
 
 /*

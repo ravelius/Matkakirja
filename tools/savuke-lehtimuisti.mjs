@@ -256,10 +256,19 @@ async function ajo({ nimi, kuori = false, varareitti = false }) {
     Math.abs(lehti.omaMp - (varareitti ? 25.6 : 6.4)) < 0.01, `omaMp=${lehti.omaMp}`);
   await sivu.screenshot({ path: join(ULOS, `savuke-lehtimuisti-${nimi}.png`) });
 
-  /* --- atlas kartalle, sitten kauas: vapautuuko osoite? --- */
+  /* --- atlas kartalle, sitten kauas: vapautuuko osoite? ---
+   *
+   * KEHITTÄJÄTILA JA MAAILMANÄKYMÄ MOLEMMAT (omistajan tilaus
+   * 27.8.2026): kehittäjätila yksin ei enää vapauta kameraa, vaan
+   * uloszoomauksen pohja on maan fokusikkuna (js/kartta.js
+   * fokusRajaukset) — myös pelin omalle kamera-ajolle. Vapaus asuu nyt
+   * ylärivin ainoan napin takana.
+   */
   await sivu.evaluate(() => {
     localStorage.setItem('matkakirja-kehittaja', '1');
+    localStorage.setItem('matkakirja-kehittaja-maailma', '1');
     window.matkakirja.ui.paivitaKehittajaTila();
+    window.matkakirja.ui.paivitaKehittajaMaailma();
   });
   await sivu.waitForTimeout(800);
   await sivu.evaluate(async (ikkuna) => {

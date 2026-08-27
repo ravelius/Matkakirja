@@ -1,15 +1,20 @@
 /*
- * SELAINSAVUKE: JATKUVA ATLAS JA KEHITTÄJÄN YLÄRIVIN NAPIT
+ * SELAINSAVUKE: JATKUVA ATLAS JA KEHITTÄJÄN YLÄRIVIN NAPPI
  *
  *   node tools/savuke-atlas.mjs
  *
- * Omistajan tilaus 25.8.2026: (1) fokuskarttapiirros piirretään koko
- * ajan niin, että valmistuneiden maiden lehdet näkyvät kartalla
+ * Omistajan tilaus 25.8.2026: fokuskarttapiirros piirretään koko ajan
+ * niin, että valmistuneiden maiden lehdet näkyvät kartalla
  * samanaikaisesti — mutta laiskasti näkymän mukaan, koska 39 lehteä on
- * purettuna noin 3,7 gigatavua; (2) ylärivin kaksi kehittäjänappia ovat
- * "rajat" (pelaajan liikkuvuusrajoite päälle/pois) ja "pisteet" (laudan
- * kaupungit ja reittiverkko fokuskartan päälle, jotta kaupunkiin näkee
- * hypätä).
+ * purettuna noin 3,7 gigatavua.
+ *
+ * Omistajan tilaus 27.8.2026: kehittäjätilan yläpalkissa on VAIN YKSI
+ * nappi, "maailma". Se näyttää koko maailmanlaudan ja kohdekaupunkien
+ * laatat (ei lento- eikä maareittejä) sekä poistaa sumennuksen ja
+ * kartan vieritysrajoitteen. Se korvasi ylärivin "rajat"- ja
+ * "pisteet"-napit sekä hampurilaisvalikon fokusmoodi- ja
+ * sumennuskytkimet — ja käänsi oletuksen: kehittäjätila on nyt
+ * lähtökohtaisesti pelaajan näkymä.
  *
  * MIKSI SAVUKE EIKÄ YKSIKKÖTESTI. Atlaksen valinta lasketaan NÄKYVÄSTÄ
  * ALUEESTA (ui.nakyvaAlue), joka on olemassa vasta kun kartalla on
@@ -40,9 +45,13 @@
  *   5b. Vanhaa lautaa ei piirretä lehtien alla — EIKÄ yleiskuvassa;
  *       se palaa vasta kun fokusmoodi sammutetaan (omistajan linjaus
  *       25.8.2026, ilta: vanha kartta kokonaan pois pelin ajaksi).
- *   6. Ylärivissä ovat "rajat" ja "pisteet", valikossa fokus + sumennus.
- *   7. "rajat" kytkee pelaajan liikkuvuusrajoitteen päälle.
- *   8. "pisteet" piirtää kaupungit ja reittiverkon kartalle.
+ *   6. Ylärivissä on VAIN maailmanappi, eikä valikossa ole enää
+ *      fokusmoodi- tai sumennuskytkintä.
+ *   7. Kehittäjätila on OLETUKSENA pelaajan näkymä: sumu päällä,
+ *      liikkuvuusrajoite päällä, käymättömien maiden data piilossa.
+ *   8. "maailma" avaa laudan: kaupunkien laatat näkyviin, sumu ja
+ *      rajoite pois — mutta reitit pysyvät piilossa (laudan rasteroitu
+ *      taide jää atlaksen alle display:none-tilaan).
  *   9. Kaupungin napautus hyppää sinne kehittäjätilassa.
  *  10. Lehti pienenee myös silloin, kun canvas ei osaa kirjoittaa
  *      webpiä (WebKit) — pakkaus menee JPEGille.
@@ -287,10 +296,23 @@ vaadi('kohdemaan lehti on omassa ryhmässään kartalla',
 vaadi('lähikuvassa naapureita ei ladata turhaan',
   a.atlas.length <= 5, `atlas=${a.atlas}`);
 
-/* Kehittäjätila päälle, jotta kamera pääsee lehden ikkunan ulkopuolelle. */
+/*
+ * Kehittäjätila JA MAAILMANÄKYMÄ päälle, jotta kamera pääsee lehden
+ * ikkunan ulkopuolelle.
+ *
+ * PELKKÄ KEHITTÄJÄTILA EI ENÄÄ RIITÄ (omistajan tilaus 27.8.2026).
+ * Kehittäjätila oli 25.–27.8. oletuksena vapaa ja "rajat"-nappi pyysi
+ * pelaajan rajoitteen takaisin; nyt oletus on pelaajan näkymä ja
+ * ylärivin ainoa nappi (maailmanäkymä) pyytää vapauden. Ilman tätä
+ * riviä kaukozoomin väitteet mittaisivat 470 yksikön näkymää: kameran
+ * uloszoomauksen pohja on maan fokusikkuna (js/kartta.js
+ * fokusRajaukset).
+ */
 await sivu.evaluate(() => {
   localStorage.setItem('matkakirja-kehittaja', '1');
+  localStorage.setItem('matkakirja-kehittaja-maailma', '1');
   window.matkakirja.ui.paivitaKehittajaTila();
+  window.matkakirja.ui.paivitaKehittajaMaailma();
 });
 await sivu.waitForTimeout(1200);
 
@@ -710,51 +732,73 @@ const paluu = await sivu.evaluate(async () => {
 vaadi('fokusmoodin sammuttaminen tuo vanhan laudan takaisin',
   !paluu.luokka && paluu.staattinen !== 'none', JSON.stringify(paluu));
 
-/* --- kehittäjänapit (sivu uusiksi, jotta main.js näyttää kotelon) --- */
+/*
+ * --- KEHITTÄJÄN YKSI NAPPI (omistajan tilaus 27.8.2026) -------------
+ *
+ * Väite oli 25.–27.8.2026 tässä toisin: ylärivissä oli kaksi nappia
+ * ("rajat", "pisteet") ja hampurilaisvalikossa kaksi vertailukytkintä
+ * (#fokus-btn, #fokus-sumennus-btn), ja kehittäjätila oli OLETUKSENA
+ * vapaa — "rajat" pyysi pelaajan rajoitteen takaisin. Omistajan tilaus
+ * 27.8. kääntää molemmat: yläpalkissa *"saa olla vain YKSI nappi"*,
+ * valikon kytkimet poistuvat, ja oletus on pelaajan näkymä. Nappi on
+ * nyt se, joka PYYTÄÄ maailmanäkymän.
+ *
+ * Sivu uusiksi, jotta main.js näyttää kotelon — ja maailmanäkymä pois
+ * levyltä, koska aiemmat väitteet kytkivät sen päälle kameran
+ * vapauttamiseksi. Oletustilan mittaaminen on tämän osion ensimmäinen
+ * väite, eikä sitä saa mitata edellisen osion jäljiltä.
+ */
+await sivu.evaluate(() => localStorage.removeItem('matkakirja-kehittaja-maailma'));
 await sivu.reload({ waitUntil: 'load' });
 await sivu.waitForTimeout(2500);
 await ateenaan();
 
 const napit = await sivu.evaluate(() => ({
   kotelo: !document.getElementById('fokus-kytkimet').hidden,
-  rajat: document.getElementById('kehittaja-rajat-btn')?.textContent,
-  pisteet: document.getElementById('kehittaja-pisteet-btn')?.textContent,
+  maara: document.querySelectorAll('#fokus-kytkimet button').length,
+  teksti: document.getElementById('kehittaja-maailma-btn')?.textContent,
   valikossa: Boolean(document.getElementById('fokus-btn')
-    && document.getElementById('fokus-sumennus-btn')),
+    || document.getElementById('fokus-sumennus-btn')),
 }));
-vaadi('ylärivissä rajat + pisteet, valikossa fokus + sumennus',
-  napit.kotelo && napit.rajat === 'rajat' && napit.pisteet === 'pisteet' && napit.valikossa,
+vaadi('ylärivissä vain maailmanappi, valikossa ei kehittäjäkytkimiä',
+  napit.kotelo && napit.maara === 1 && napit.teksti === 'maailma' && !napit.valikossa,
   JSON.stringify(napit));
 
-const rajat = await sivu.evaluate(() => {
+/*
+ * NELJÄ ASIAA YHDESTÄ NAPISTA: sumennus pois, vieritysrajoite pois,
+ * kohdekaupunkien laatat näkyviin — ja reitit EIVÄT tule mukaan.
+ * Reittiväite mitataan laudan omasta piilotuksesta: lento- ja
+ * maareitit asuvat rasteroidussa taiteessa (.staattinen), joka pysyy
+ * atlaksen alla display:none-tilassa myös maailmanäkymässä.
+ */
+const maailma = await sivu.evaluate(() => {
   const { ui } = window.matkakirja;
-  const lue = () => ({ alue: Boolean(ui.kartta.valloitettuAlue()), sumu: ui.fokusSumuPaalla() });
+  const lue = () => ({
+    alue: Boolean(ui.kartta.valloitettuAlue()),
+    sumu: ui.fokusSumuPaalla(),
+    piilossa: document.querySelectorAll('[data-fokus-maa].fokus-piilossa').length,
+    lehdenAlla: document.querySelectorAll('.cities .fokus-lehden-alla').length,
+    reitit: getComputedStyle(document.querySelector('.staattinen')).display,
+  });
   const ennen = lue();
-  document.getElementById('kehittaja-rajat-btn').click();
-  return { ennen, jalkeen: lue() };
-});
-vaadi('"rajat" kytkee pelaajan liikkuvuusrajoitteen päälle',
-  !rajat.ennen.alue && !rajat.ennen.sumu && rajat.jalkeen.alue && rajat.jalkeen.sumu,
-  JSON.stringify(rajat));
-await sivu.evaluate(() => document.getElementById('kehittaja-rajat-btn').click());
-await sivu.waitForTimeout(400);
-
-const pisteet = await sivu.evaluate(() => {
-  const ennen = document.querySelectorAll('.dev-pisteet').length;
-  document.getElementById('kehittaja-pisteet-btn').click();
-  const g = document.querySelector('.dev-pisteet');
+  document.getElementById('kehittaja-maailma-btn').click();
   return {
     ennen,
-    kaupunkeja: g?.querySelectorAll('.dev-kaupunki').length ?? 0,
-    reitteja: g?.querySelectorAll('.dev-reitti').length ?? 0,
-    tallessa: localStorage.getItem('matkakirja-kehittaja-pisteet'),
+    jalkeen: lue(),
+    tallessa: localStorage.getItem('matkakirja-kehittaja-maailma'),
+    painettu: document.getElementById('kehittaja-maailma-btn').getAttribute('aria-pressed'),
   };
 });
-vaadi('"pisteet" piirtää kaupungit ja reittiverkon',
-  pisteet.ennen === 0 && pisteet.kaupunkeja > 50 && pisteet.reitteja > 50
-  && pisteet.tallessa === '1', JSON.stringify(pisteet));
+vaadi('oletuksena kehittäjätila on pelaajan näkymä (sumu, rajoite, piilotukset)',
+  maailma.ennen.alue && maailma.ennen.sumu && maailma.ennen.piilossa > 0,
+  JSON.stringify(maailma.ennen));
+vaadi('"maailma" avaa laudan: kaupungit näkyviin, sumu ja rajoite pois, ei reittejä',
+  !maailma.jalkeen.alue && !maailma.jalkeen.sumu && maailma.jalkeen.piilossa === 0
+  && maailma.jalkeen.lehdenAlla === 0 && maailma.jalkeen.reitit === 'none'
+  && maailma.tallessa === '1' && maailma.painettu === 'true',
+  JSON.stringify(maailma));
 await sivu.waitForTimeout(600);
-await sivu.screenshot({ path: join(ULOS, 'savuke-atlas-pisteet.png') });
+await sivu.screenshot({ path: join(ULOS, 'savuke-atlas-maailma.png') });
 
 const hyppy = await sivu.evaluate(async () => {
   const { ui, game } = window.matkakirja;

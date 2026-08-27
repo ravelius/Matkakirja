@@ -114,9 +114,10 @@ vaadi('kartta on lähikuvassa', lahikuvassa === true);
  * koko rasteroinnin (vanhaLautaPiilossa).
  *
  * TÄMÄN SAVUKKEEN RUUTUMITTARIT KOSKEVAT SITÄ TILAA, JOSSA LAUTA ON
- * NÄKYVISSÄ: yleiskuva, avausruutu, lento, katselutila ja fokusmoodin
- * kehittäjäkytkin pois päältä. Muuten ne vaatisivat työtä, jota ei
- * kuulukaan tehdä — ja mittasivat siis nimenomaan sitä vikaa, joka
+ * NÄKYVISSÄ: yleiskuva, avausruutu, lento, katselutila ja fokusmoodi
+ * pois päältä (kytkintä ei enää ole käyttöliittymässä — omistajan
+ * tilaus 27.8.2026 — mutta lippu luetaan yhä). Muuten ne vaatisivat
+ * työtä, jota ei kuulukaan tehdä — ja mittasivat siis sitä vikaa, joka
  * juuri korjattiin. Atlasnäkymän oma vaatimus on tämän tiedoston
  * lopussa (osio 14): silloin ruutuja ei saa syntyä yhtään.
  *

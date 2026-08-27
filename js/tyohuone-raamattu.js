@@ -548,7 +548,15 @@ export const RAAMATTU = {
           + '(Tutki poistui — toiminto on kaupungin laatassa). '
           + 'Fokusmoodin kytkin matkalaukun oikealla puolella '
           + 'VAIN kehittäjätilassa; lisäksi kehittäjätilaan '
-          + 'sumennukset päälle/pois -nappi. Muille aina päällä.',
+          + 'sumennukset päälle/pois -nappi. Muille aina päällä. '
+          + 'PÄIVITYS 27.8.2026 (kumoaa kytkinvaatimuksen): '
+          + 'kehittäjätilan yläpalkissa VAIN YKSI nappi — '
+          + 'maailmannäkymä, joka näyttää koko maailmanlaudan ja '
+          + 'kohdekaupungit maiden välillä siirtymistä varten, '
+          + 'pitää lento- ja maareitit piilossa sekä poistaa '
+          + 'sumennuksen ja kartan vieritysrajoitteen. Fokusmoodi- '
+          + 'ja sumennuskytkimet poistettu hampurilaisvalikosta; '
+          + 'pelaajalle fokusmoodi on yhä aina päällä.',
         'PELITESTIKIERROSTEN LINJAUKSET 25.8.2026 (toteutettu): '
           + 'KÄÄNNETTY LAATTA KORVAUTUU AARREMERKILLÄ — pieni pyöreä '
           + 'merkki löytyneen aarteen kuvalla kaupungin paikalla, ei '
@@ -1028,6 +1036,36 @@ export const RAAMATTU = {
           + 'sää- ja suunnittelulaatikot '
           + '(docs/kuvakasikirjoitukset.md + työlistan speksit).',
         'Valmiustilanne kaupungeittain: Tilastot-lehti, ei tämä.',
+      ],
+    },
+    {
+      otsikko: 'Matkakirjan ihmeet',
+      tila: 'luonnos',
+      kohdat: [
+        'YDIN (omistaja 27.8.2026): kadonnut suuruus palautetaan '
+          + 'pelaajan silmien eteen FOTOREALISTISENA KESKELLÄ '
+          + 'NYKYMAAILMAA — Faros nyky-Aleksandrian Cornichen '
+          + 'ruuhkassa, kolossi Mandrakin jahtisatamassa, värikäs '
+          + 'Parthenon nykyturistien ympäröimänä. "Saa kokea pienen '
+          + 'ihmeen kun näkee jotain mitä on jo tavallaan kadonnut '
+          + 'nykymaailmasta." Tämä on YKSI PELIN KOHOKOHDISTA ja '
+          + 'käy sellaisenaan MARKKINOINTIIN.',
+        'KAKSI ESITYSTAPAA (omistaja 27.8.2026): jos kohde on YHÄ '
+          + 'OLEMASSA (Akropolis, pyramidi, rauniokohteet), kartalla '
+          + 'on normaali merkintä ja popupin yläosassa heti oma '
+          + 'nappi, josta ihmeen pääsee kokemaan (nykyaikakuva '
+          + 'aukeaa). Jos kohde on KOKONAAN KADONNUT (Faros, '
+          + 'kolossi, mausoleumi...), kartalla on suoraan oma '
+          + 'TÄHTISYMBOLI ja popupin kuva aukeaa suoraan '
+          + 'nykyaikakuvaan.',
+        'Kuvien vasempaan yläkulmaan pelin piirtämä pieni nauha '
+          + '("Matkakirjan ihme" tms.) pelin kartuutsityylillä — '
+          + 'peli piirtää nauhan kuvan päälle, sitä ei polteta '
+          + 'kuvatiedostoon.',
+        'Kuvat generoidaan API-työnkulkuina (generoi-ihmeet.yml) '
+          + 'ja jokainen tarkistetaan silmin ennen peliä; kuvissa '
+          + 'ei tekstiä eikä vesileimaa, ja lähteeksi merkitään '
+          + 'Matkakirjan havainnekuva.',
       ],
     },
     {

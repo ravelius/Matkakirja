@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1174: Kehittajatilan ylarivissa vain yksi maailma-nappi: koko lauta ja kohdekaupungit nakyviin, reitit piilossa, sumennus ja vierityslukko pois; hampurilaisen fokus/sumennus-kytkimet poistettu. Raamattuun Matkakirjan ihmeet -osio.',
   'v1173: Kohdekarttojen symbolimerkit pienemmiksi (14 -> 11 yksikkoa) ja nykyisen kaupungin laatta 23 -> 19 px. TESTAA: Kreikan kartta puhelimella - jaako kartta nyt paremmin nakyviin.',
   'v1172: Kadonneiden ihmeiden 10 rekonstruktiokuvaa korteissa (Zeus, kolossi, Faros, mausoleumi, Artemision, puutarhat, kirjasto, Knossos, Hefaisteion ja Parthenon vareissaan). TESTAA: ihmekohteiden kortit kartoilla.',
   'v1171: Miniatyyriera 5/5 VALMIS: Vilna, Tallinna, Ankara ja Izmir (24 kuvaa) + Vapahtajan katedraalin kulta-uusinta. Koko Eurooppa-era: 20 kaupunkia, 121 kuvaa. TESTAA: kohdekartat lapi.',
