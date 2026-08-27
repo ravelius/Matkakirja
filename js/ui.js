@@ -921,6 +921,59 @@ const NAPPULAN_ANKKURI_Y = 0.918;
 /* Jalusta hitusen kaupungin pisteen alapuolella, kuten vanha varjokin. */
 const NAPPULAN_JALKA_Y = 6;
 /*
+ * VALKOINEN LAUTAPELINAPPULA (omistajan tilaus 27.8.2026: *"kokeile
+ * muuttaa tinaherra mahdollisimman yksinkertaiseksi pelinappulaksi,
+ * nykyinen on liian raskas visuaalisesti. nappula voisi olla
+ * valkoinen"*).
+ *
+ * MIKSI: tinaherra on tummaa metallia ja täynnä yksityiskohtia —
+ * silinteri, keppi, matkalaukku — ja kartalla se lukee pikkuesineenä,
+ * ei pelaajan paikkana. Laudalla nappula on kymmenkunta pikseliä
+ * korkea, jolloin yksityiskohdat menevät mössöksi ja jäljelle jää vain
+ * tumma läiskä seepiakartan päällä. Valkoinen kartionappula on
+ * SILUETTI: sen tunnistaa yhdellä silmäyksellä missä koossa tahansa, ja
+ * vaalea pinta erottuu vaaleasta kartasta ohuella tummalla ääriviivalla
+ * ilman että se painaa karttaa alleen.
+ *
+ * PIIRRETÄÄN KOODILLA, EI KUVANA. Ääriviiva skaalautuu zoomissa
+ * terävänä, tiedostoa ei tarvitse ladata eikä tallentaa välimuistiin,
+ * ja väriä voi säätää yhdestä paikasta (css .pawn-nappula).
+ *
+ * MITAT LAUDAN YKSIKÖISSÄ, ja ne on sovitettu tinaherran mittoihin:
+ * ankkuri on jalustan keskipiste (0,0 polun omassa kehyksessä) ja laki
+ * jää samaan korkeuteen kuin silinterin laki (noin 26 yksikköä
+ * jalustasta), jotta kaupungin nimikyltti nappulan yläpuolella
+ * (boardBounds ly -19) säilyy luettavana. Leveys on 13,2 eli kapeampi
+ * kuin tinaherra (19,4): nappulassa ei ole keppiä eikä laukkua.
+ *
+ * PALUU VANHAAN on yhden vakion mittainen: NAPPULA_TYYLI = 'tinaherra'
+ * palauttaa webp-kuvan (tiedosto on jätetty repoon juuri siksi).
+ */
+const NAPPULA_TYYLI = 'valkoinen';
+/*
+ * Klassinen nappulan siluetti yhtenä polkuna: pyöreä jalusta, kartioksi
+ * kapeneva runko, kaulus ja pallopää. Yksi polku eikä kolme päällekkäistä
+ * muotoa siksi, että ääriviiva kiertää hahmon ULKOREUNAA — päällekkäisistä
+ * paloista näkyisivät saumat läpi.
+ *
+ * Origo on jalustan keskipiste ja y kasvaa alaspäin (SVG), joten hahmo
+ * nousee negatiiviseen y-suuntaan. Pään kaari on yksi A-komennon puoliympyrää
+ * suurempi kaari; kaulus on kaksi lyhyttä käyrää sen alla.
+ */
+const NAPPULAN_POLKU = 'M 6.6 0'
+  + ' C 6.6 -2.4 4.7 -2.7 4.25 -4.4'
+  + ' C 3.5 -8.2 2.8 -12 2.55 -14.8'
+  + ' L 3.7 -15.8'
+  + ' C 4.4 -16.4 4.2 -17.6 2.6 -18.2'
+  + ' A 4.3 4.3 0 1 0 -2.6 -18.2'
+  + ' C -4.2 -17.6 -4.4 -16.4 -3.7 -15.8'
+  + ' L -2.55 -14.8'
+  + ' C -2.8 -12 -3.5 -8.2 -4.25 -4.4'
+  + ' C -4.7 -2.7 -6.6 -2.4 -6.6 0'
+  + ' C -6.6 1 6.6 1 6.6 0 Z';
+/* Siluetin laki jalustasta mitattuna (pään keskipiste 21,6 + säde 4,3). */
+const NAPPULAN_LAKI = 25.9;
+/*
  * Osuma-alueen katto LAUDAN yksiköissä. Ruutumitta muuttuu laudan
  * yksiköiksi jakamalla zoomilla, ja yleiskuvassa (pieni zoom) jakolasku
  * kasvattaisi alueen naapurikaupunkien päälle — 34 on sama säde kuin
@@ -7947,7 +8000,8 @@ export class UI {
   }
 
   /**
-   * Pelinappula: tinaherra, koodilla piirretty varjo ja vuoron rengas.
+   * Pelinappula: hahmo (valkoinen nappula tai tinaherra, ks.
+   * NAPPULA_TYYLI), koodilla piirretty varjo ja vuoron rengas.
    *
    * RAKENNE ON HYPPYÄ VARTEN (#100). Ryhmä on kolmiosainen, ja jako
    * on koko 3D-illuusion perusta:
@@ -7955,7 +8009,7 @@ export class UI {
    *   .pawn        paikka laudalla — VAIN vaakasuunta liikkuu
    *   .pawn-varjo  jää laudan pintaan; kutistuu ja haalenee kun
    *                nappula nousee (hyppaaAskel)
-   *   .pawn-hahmo  itse tinaherra — VAIN pystysuunta liikkuu
+   *   .pawn-hahmo  itse nappula — VAIN pystysuunta liikkuu
    *
    * Jos hahmo ja varjo olisivat samassa muunnoksessa, varjo nousisi
    * mukana eikä korkeus näkyisi mistään. Erillään ne kertovat sen
@@ -7969,7 +8023,14 @@ export class UI {
     const g = el('g', { class: 'pawn' }, parent);
     const varjo = el('g', { class: 'pawn-varjo' }, g);
     varjo.setAttribute('transform', `translate(2,${NAPPULAN_JALKA_Y})`);
-    el('ellipse', { cx: 0, cy: 0, rx: 10, ry: 3.6, class: 'pawn-shadow' }, varjo);
+    /*
+     * Varjo on nappulan jalustan levyinen: valkoinen kartionappula on
+     * kapeampi kuin tinaherra (13,2 vs. 19,4 laudan yksikköä), ja
+     * entisen kokoinen läiskä lukisi hahmoa isompana tummana pisteenä
+     * — juuri sitä painoa, josta tilaus pääsi eroon.
+     */
+    const varjonR = NAPPULA_TYYLI === 'tinaherra' ? 10 : 7.6;
+    el('ellipse', { cx: 0, cy: 0, rx: varjonR, ry: varjonR * 0.36, class: 'pawn-shadow' }, varjo);
     /*
      * VUORON RENGAS MAKAA LAUDALLA (#100). Ympyrä kiersi ennen
      * pyöreää nappulaa, mutta seisovan hahmon ympärillä se olisi
@@ -7985,7 +8046,7 @@ export class UI {
      * merkit skaalataan ruudulle, se luki punertavana hehkuna hahmon
      * jalkojen ympärillä — kolmantena kerroksena varjon ja kaupungin
      * korostuksen päällä. Pelaajan väri jäi pois nappulasta kokonaan:
-     * hahmo on kaikilla sama tinaherra, eikä sykähdys kertonut vuorosta
+     * hahmo on kaikilla sama nappula, eikä sykähdys kertonut vuorosta
      * mitään, mitä tumma kehä ei kertoisi hillitymmin.
      *
      * SAMALLA KATOSI KARTAN AINOA JATKUVA SYKE NAPPULASSA. Sykähdys oli
@@ -7995,20 +8056,41 @@ export class UI {
      * kaksi erillistä vaimennussääntöä. Ne poistuivat tämän mukana.
      */
     if (active) {
-      el('ellipse', { cy: NAPPULAN_JALKA_Y, rx: 12, ry: 4.6, class: 'pawn-active-ring' }, g);
+      const renkaanR = NAPPULA_TYYLI === 'tinaherra' ? 12 : 9.6;
+      el('ellipse', {
+        cy: NAPPULAN_JALKA_Y, rx: renkaanR, ry: renkaanR * 0.383, class: 'pawn-active-ring',
+      }, g);
     }
     const hahmo = el('g', { class: 'pawn-hahmo' }, g);
-    el('image', {
-      class: 'pawn-kuva',
-      href: NAPPULAN_KUVA,
-      x: -NAPPULAN_ANKKURI_X * NAPPULAN_LEVEYS,
-      y: NAPPULAN_JALKA_Y - NAPPULAN_ANKKURI_Y * NAPPULAN_KORKEUS,
-      width: NAPPULAN_LEVEYS,
-      height: NAPPULAN_KORKEUS,
-      preserveAspectRatio: 'xMidYMid meet',
-    }, hahmo);
+    /*
+     * HAHMON KAKSI TYYLIÄ (ks. NAPPULA_TYYLI). Molemmat asettuvat samaan
+     * ankkuriin — jalkapiste on kaupungin päällä, `NAPPULAN_JALKA_Y`
+     * verran pisteen alapuolella — ja molemmat elävät saman `.pawn-kuva`
+     * -luokan alla, jotta lehden päällä tehtävä mittaus (paivitaFokusPallot,
+     * savukkeet) löytää hahmon pinnan tyylistä riippumatta.
+     */
+    if (NAPPULA_TYYLI === 'tinaherra') {
+      el('image', {
+        class: 'pawn-kuva',
+        href: NAPPULAN_KUVA,
+        x: -NAPPULAN_ANKKURI_X * NAPPULAN_LEVEYS,
+        y: NAPPULAN_JALKA_Y - NAPPULAN_ANKKURI_Y * NAPPULAN_KORKEUS,
+        width: NAPPULAN_LEVEYS,
+        height: NAPPULAN_KORKEUS,
+        preserveAspectRatio: 'xMidYMid meet',
+      }, hahmo);
+    } else {
+      el('path', {
+        class: 'pawn-kuva pawn-nappula',
+        d: NAPPULAN_POLKU,
+        transform: `translate(0,${NAPPULAN_JALKA_Y})`,
+      }, hahmo);
+    }
+    const lakiY = NAPPULA_TYYLI === 'tinaherra'
+      ? NAPPULAN_JALKA_Y - NAPPULAN_ANKKURI_Y * NAPPULAN_KORKEUS
+      : NAPPULAN_JALKA_Y - NAPPULAN_LAKI;
     if (player.stars > 0) {
-      const y = NAPPULAN_JALKA_Y - NAPPULAN_ANKKURI_Y * NAPPULAN_KORKEUS - 5;
+      const y = lakiY - 5;
       el('text', { x: 0, y, class: 'pawn-star', 'text-anchor': 'middle' }, hahmo).textContent = '◈';
     }
     return g;

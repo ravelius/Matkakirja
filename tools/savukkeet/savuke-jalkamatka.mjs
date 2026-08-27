@@ -30,7 +30,7 @@
  *
  *   7. NAPPULA NÄKYY LEHDEN PÄÄLLÄ. v1097:n "Ota pallot pois" piilotti
  *      pelinappulan fokuslehden päältä, ja tinaherran myötä (#100)
- *      sääntö kääntyi itseään vastaan: *"tinaherra-nappula EI näy
+ *      sääntö kääntyi itseään vastaan: *"nappula EI näy
  *      Kreikan fokuslaudalla"*. Nappula ei saa enää kantaa
  *      .fokus-lehden-alla-luokkaa, ja kaupungin nimilapun on säilyttävä.
  *   8. NOPPA EI PYÖRÄHDÄ ITSESTÄÄN. *"kun aarteen on avannut, peli menee
@@ -357,7 +357,7 @@ const nappula = await sivu.evaluate(async () => {
     piilossa: oma?.classList.contains('fokus-lehden-alla') ?? null,
     naky: oma ? getComputedStyle(oma).visibility : null,
     peitto: oma ? +getComputedStyle(oma).opacity : null,
-    kuvaOsoite: kuva?.getAttribute('href') ?? null,
+    onKuva: Boolean(kuva),
     kuvanKorkeus: laatikko ? +laatikko.height.toFixed(1) : 0,
     nimilappu: Boolean([...document.querySelectorAll('.city-label')]
       .find((n) => n.dataset.kaupunki === 'ateena'
@@ -369,8 +369,14 @@ const nappula = await sivu.evaluate(async () => {
 });
 vaadi('7a nappula ei piiloudu lehden alle', nappula.piilossa === false,
   JSON.stringify(nappula));
-vaadi('7b tinaherra on näkyvissä ja mitallinen',
-  /nappula-tinaherra\.webp$/.test(nappula.kuvaOsoite ?? '')
+/*
+ * Hahmon ULKONÄKÖ ei kuulu tähän vartioon (nappula vaihtui 27.8.2026
+ * tinaherrasta valkoiseksi kartionappulaksi, js/ui.js NAPPULA_TYYLI);
+ * vartioitava asia on, että nappula on lehden PÄÄLLÄ näkyvissä ja
+ * mitallisena eikä piiloutunut sen alle.
+ */
+vaadi('7b nappula on näkyvissä ja mitallinen',
+  nappula.onKuva === true
   && nappula.naky === 'visible' && nappula.peitto === 1
   && nappula.kuvanKorkeus > 4,
   JSON.stringify(nappula));
