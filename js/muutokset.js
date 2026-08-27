@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1218, teksti: 'Kosketusnipistys seuraa sormia Safarin gesture-polulla' },
   { v: 1217, teksti: 'Kahdeksan uutta ihmetta - Libya ja Tunisia mukaan' },
   { v: 1216, teksti: 'Herot era 3: kuusi kaupunkia generoituihin avauskuviin' },
   { v: 1215, teksti: 'Karttamerkit minimalistisiksi vanhan kartan tyyliin' },

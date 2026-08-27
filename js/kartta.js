@@ -2553,7 +2553,7 @@ export class Kartta {
      * Molemmat eleet kulkevat tämän jälkeen täsmälleen samaa polkua —
      * sama CSS-esikatselu, sama ankkurointi, sama viimeistely.
      */
-    const aloitaNipistysMitasta = ({ etaisyys, keski, rulla = false }) => {
+    const aloitaNipistysMitasta = ({ etaisyys, keski, lahde = 'kosketus' }) => {
       /*
        * Kokonäkymästä nipistettäessä EI enää hypätä lähikuvatilaan
        * eleen alussa. Aiempi versio teki juuri sen: se sytytti
@@ -2576,9 +2576,16 @@ export class Kartta {
         panY: this.ui.panY ?? 0,
         kerroin: this.zoomiKerroin,
         suhde: 1,
-        // Rullaele elää wheel-virrasta eikä kosketuksista: sen pitää
-        // päästä oman wheel-käsittelijänsä läpi (ks. wheel-kuuntelija).
-        rulla,
+        /*
+         * MISTÄ ELE TULEE: 'kosketus' (sormet ruudulla), 'rulla'
+         * (trackpadin ctrl+wheel tai ⌘-vieritys) tai 'ele' (Safarin
+         * oma GestureEvent). Lähde ratkaisee, kuka saa päivittää
+         * elävää elettä: rullaele elää wheel-virrasta ja pääsee siksi
+         * oman käsittelijänsä läpi, muut torjuvat sen (ks.
+         * wheel-kuuntelija), ja Safarin ele väistää kosketusta, koska
+         * iOS lähettää molemmat samasta nipistyksestä.
+         */
+        lahde,
         /*
          * Paneelin sijainti mitataan KERRAN eleen alussa. Paneeli ei
          * liiku nipistyksen aikana (muunnos kohdistuu karttaan, ei
@@ -2825,7 +2832,33 @@ export class Kartta {
      * vasta kun ele on ohi.
      */
     const RULLAN_LOPPU_MS = 150; // tämän mittainen tauko päättää eleen
+    /*
+     * HERKKYYS EI OLE MAKUASIA VAAN SELAIMEN YKSIKKÖ. Chromium
+     * muuntaa trackpadin nipistyksen ctrl+wheeliksi niin, että eleen
+     * deltojen summa on täsmälleen −100 · ln(mittakaava). Mitattu
+     * 27.8.2026 (Chromium, CDP Input.synthesizePinchGesture,
+     * gestureSourceType 'mouse'):
+     *
+     *   scaleFactor 2   → 16 tapahtumaa, summa deltaY  −69,31
+     *   scaleFactor 0,5 → 18 tapahtumaa, summa deltaY  +69,31
+     *   scaleFactor 4   → 48 tapahtumaa, summa deltaY −138,63
+     *
+     * Kerroin exp(−deltaY · 0,01) palauttaa siis TÄSMÄLLEEN sen
+     * mittakaavan, jonka käyttöjärjestelmä luki sormista: 1:1-seuranta
+     * eikä arvattu herkkyys. Vakiota ei siksi saa virittää tunnetta
+     * kohti — se rikkoisi juuri sen suhteen, joka tässä halutaan.
+     */
     const RULLAN_NIPISTYS_HERKKYYS = 0.01; // kerroin = exp(-deltaY * tämä)
+    /*
+     * DELTAT PIKSELEIKSI ENNEN EKSPONENTTIA. Sama muunnos kuin
+     * lehden karttawidgetissä (js/karttazoom.js): rividelta (Firefoxin
+     * nipistys, deltaMode 1) on kymmeniä kertoja pikselidelttaa
+     * pienempi, ja ilman muunnosta ele hiipui siellä olemattomiin —
+     * juuri se vika, jota omistaja kuvasi sanoilla *"tuntuu kuin zoomi
+     * lukisi vain yhden zoom-komennon"*.
+     */
+    const rullanPikselit = (e) => e.deltaY
+      * (e.deltaMode === 1 ? 16 : (e.deltaMode === 2 ? 400 : 1));
     const RULLAN_NIPISTYS_LAHTO = 100; // virtuaalinen sormiväli eleen alussa
     let rullanEle = null; // 'panorointi' | 'nipistys'
     let rullanEtaisyys = RULLAN_NIPISTYS_LAHTO;
@@ -2910,7 +2943,7 @@ export class Kartta {
         aloitaNipistysMitasta({
           etaisyys: rullanEtaisyys,
           keski: { x: e.clientX, y: e.clientY },
-          rulla: true,
+          lahde: 'rulla',
         });
         rullanEle = 'nipistys';
       }
@@ -2923,12 +2956,17 @@ export class Kartta {
       const { pienin, suurin } = this.zoomiRajat();
       const ala = nipistys.etaisyys * (pienin / nipistys.kerroin);
       const yla = nipistys.etaisyys * (suurin / nipistys.kerroin);
-      const seuraava = rullanEtaisyys * Math.exp(-e.deltaY * RULLAN_NIPISTYS_HERKKYYS);
+      const seuraava = rullanEtaisyys
+        * Math.exp(-rullanPikselit(e) * RULLAN_NIPISTYS_HERKKYYS);
       rullanEtaisyys = Math.min(yla, Math.max(ala, seuraava));
       paivitaNipistysMitasta(rullanEtaisyys);
       this.ui.merkitseKartanEle();
       ajastaRullanLoppu();
     };
+
+    // Safarin gesture-eleen virtuaalinen sormiväli eleen alussa
+    // (ks. SAFARIN OMA NIPISTYS alempana).
+    const SAFARIN_LAHTO = 100;
 
     this.ui.nipistysKuuntelijat = [
       ['touchstart', (e) => {
@@ -2964,9 +3002,70 @@ export class Kartta {
       }],
       ['touchend', (e) => { if (nipistys && e.touches.length < 2) paataNipistys(); }],
       ['touchcancel', () => { if (nipistys) paataNipistys(); }],
-      // Safarin oma ele: estetään, ettei sivu zoomaa kartan alta.
-      ['gesturestart', (e) => e.preventDefault()],
-      ['gesturechange', (e) => e.preventDefault()],
+      /*
+       * --- SAFARIN OMA NIPISTYS (GestureEvent) ---------------------
+       *
+       * Omistajan mittaus 27.8.2026: *"Macilla ⌘ pohjassa kahden
+       * sormen vieritys toimii täydellisesti, mutta nipistys on aivan
+       * liian hidas — tuntuu kuin zoomi lukisi vain yhden
+       * zoom-komennon."* Molemmat kulkevat samaa rullapolkua ja samaa
+       * kaavaa, joten ero EI voi olla laskennassa — se on siinä, mitä
+       * selain lähettää. Chromiumissa trackpadin nipistys tulee
+       * ctrl+wheelinä, jonka deltojen summa on täsmälleen
+       * −100 · ln(mittakaava) (mitattu, ks. RULLAN_NIPISTYS_HERKKYYS),
+       * mutta WebKit lähettää nipistyksen ENSISIJAISESTI omina
+       * gesture-tapahtuminaan: gesturestart / gesturechange /
+       * gestureend, joissa `scale` on sormien etäisyyden suhde eleen
+       * alkuun. Ne käsiteltiin tässä pelkällä preventDefaultilla —
+       * eleen oma mitta heitettiin siis roskiin, ja zoomiksi jäi vain
+       * se, mitä Safari sattui rinnalle wheel-virtaan tiputtamaan.
+       *
+       * Nyt `scale` ajaa eleen suoraan: virtuaalinen sormiväli on
+       * LAHTO · scale, jolloin paivitaNipistysMitasta saa kertoimeksi
+       * täsmälleen sormien etäisyyden suhteen. 1:1 ilman vaimennusta,
+       * samalla ankkuroinnilla ja samalla viimeistelyllä kuin sormet
+       * ruudulla — sama kolmen funktion polku, ei omaa zoomireittiä.
+       *
+       * KOSKETUS VOITTAA ELEEN. iPadin Safari lähettää samasta
+       * nipistyksestä sekä touch- että gesture-tapahtumat, ja
+       * kosketuspolku tietää sormien oikeat paikat (ankkuri sormien
+       * alla). Kahden sormen touchstart ehtii ennen gesturestartia,
+       * joten elävä kosketusnipistys torjuu gesture-eleen tässä.
+       */
+      ['gesturestart', (e) => {
+        e.preventDefault();
+        if (kelluvaltaPinnalta(e)) return;
+        if (this.avausNakymassa() || this.ui.radioPaalla()) return;
+        // Kesken oleva rullaele viimeistellään ennen kuin ele vaihtuu
+        // — sama sääntö kuin panoroinnin ja nipistyksen välillä.
+        if (nipistys?.lahde === 'rulla' || rullanEle) paataRullanEle();
+        if (nipistys) return;
+        aloitaNipistysMitasta({
+          etaisyys: SAFARIN_LAHTO,
+          // GestureEventillä on hiiritapahtuman koordinaatit; jos ne
+          // puuttuvat, varmaAnkkuri putoaa näkymän keskipisteeseen
+          // eikä koskaan laudan origoon (ks. laudalle).
+          keski: { x: e.clientX, y: e.clientY },
+          lahde: 'ele',
+        });
+      }],
+      ['gesturechange', (e) => {
+        e.preventDefault();
+        if (nipistys?.lahde !== 'ele') return;
+        const skaala = Number(e.scale);
+        if (!(skaala > 0)) return;
+        paivitaNipistysMitasta(SAFARIN_LAHTO * skaala);
+        this.ui.merkitseKartanEle();
+      }],
+      /*
+       * Eleen loppu on oikea tapahtuma eikä tauko: ilman tätä
+       * gesture-nipistys jäisi eloon jumivahdin viiden sekunnin
+       * rajaan asti eikä uusi mittakaava lukittuisi lainkaan.
+       */
+      ['gestureend', (e) => {
+        e.preventDefault();
+        if (nipistys?.lahde === 'ele') paataNipistys();
+      }],
       /*
        * RULLA JA TRACKPAD KARTALLA (ks. TRACKPADIN ELEET yllä).
        *
@@ -2987,9 +3086,18 @@ export class Kartta {
        * olevaan pisteeseen (varmaAnkkuri).
        */
       ['wheel', (e) => {
-        // Kosketusnipistys on kesken: rulla ei saa sekaantua siihen.
-        // Oma rullanipistys sen sijaan jatkuu tästä eteenpäin.
-        if (nipistys && !nipistys.rulla) return;
+        /*
+         * Toinen lähde ajaa jo elettä (sormet ruudulla tai Safarin
+         * gesture-ele): rulla ei saa sekaantua siihen. Oma
+         * rullanipistys sen sijaan jatkuu tästä eteenpäin.
+         *
+         * TAPAHTUMA SILTI ESTETÄÄN. Safari lähettää nipistyksestä
+         * gesture-tapahtumien RINNALLA ctrl+wheeliä, ja jos se
+         * päästetään läpi, selain zoomaa koko sivun kartan alta —
+         * juuri se vika, jonka touchmoven preventDefault aikanaan
+         * korjasi kosketuspuolella.
+         */
+        if (nipistys && nipistys.lahde !== 'rulla') { e.preventDefault(); return; }
         // Rulla kortin päällä vierittää korttia, ei zoomaa karttaa.
         if (kelluvaltaPinnalta(e)) return;
         if (this.avausNakymassa() || this.ui.radioPaalla()) return;
