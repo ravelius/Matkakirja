@@ -11599,15 +11599,19 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Doha Museum of Islamic Arts Interior Hall 01.jpg',
-          selite: 'Museon keskusaula: portaat haarautuvat kahdeksi kaarevaksi '
-            + 'syöksyksi, yllä riippuu rengasmainen kattokruunu ja '
-            + 'taustalla nousee pohjoisseinän lasipinta.',
+          selite: 'Näyttelysalit on ryhmitelty tämän keskusaulan ympärille, '
+            + 'ja pohjoissivulla kaikki viisi kerrosta on verhottu '
+            + 'lasiseinällä. Salien sisustuksen suunnitteli Wilmotte & '
+            + 'Associés, sama toimisto kuin Louvren hankkeessa.',
           lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Doha Museum of Islamic Arts Interior Hall Ceiling 1.jpg',
-          selite: 'Aulan kupoli alhaalta kuvattuna: kolmiopinnoista koottu '
-            + 'holvi ja sen lakeen jätetty tähdenmuotoinen valoaukko.',
+          selite: 'Aulan valo tulee ylhäältä: monikulmainen kupoli on koottu '
+            + 'kolmiomaisista pinnoista, ja sen lakeen on jätetty '
+            + 'tähdenmuotoinen aukko, josta päivänvalo putoaa suoraan alas. '
+            + 'Museo avattiin yleisölle 8. joulukuuta 2008 ja remontin '
+            + 'jälkeen uudelleen 4. lokakuuta 2022.',
           lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -11643,15 +11647,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Corniche in Doha, Promenade.jpg',
-          selite: 'Cornichen laatoitettu kävelyraitti ja matala betonimuuri '
-            + 'kaartuvat lahden ympäri, vastarannalla West Bayn tornit.',
+          selite: 'Cornichen seitsemän kilometrin kaari piirrettiin '
+            + '1970-luvun puolivälissä lahden pohjukkaan kasatulle 630 '
+            + 'hehtaarin täyttömaalle; luonnokset teki amerikkalainen '
+            + 'arkkitehti William Pereira emiirin suunnittelutoimiston '
+            + 'kanssa. Katua reunustaa 1 440 palmunlehden muotoista '
+            + 'valaisinta.',
           lahde: 'FLASHPACKER TRAVELGUIDE, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Traditional dhows on Doha Corniche used for pearling.jpg',
-          selite: 'Kaksi puista dhow-venettä kiinni rannassa, kansilla '
-            + 'lehvistä katetut varjokatokset; takana rantakadun palmut '
-            + 'ja kaupungin talot.',
+          selite: 'Rantaan on rakennettu kolme laituria puisille '
+            + 'dhow-veneille, ja sama kaari yhdistää vanhan sataman '
+            + 'pohjoispään lasitorneihin. Sataman suulla seisoo veistos: '
+            + 'avattu simpukankuori ja sen sisällä helmi.',
           lahde: 'Larry Johnson @ Flickr, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -11686,15 +11695,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Falcon souq 03.jpg',
-          selite: 'Haukkasuukin liike Souq Waqifissa: hiekkalattian yli kulkee '
-            + 'vihreäpäällysteisiä orsirimoja, joilla istuu huputtomia '
-            + 'haukkoja, ja seinillä on suuria muotokuvia.',
+          selite: 'Torin laidalla on oma osastonsa haukoille: siellä '
+            + 'pidetään huutokauppoja ja totutetaan lintuja käsittelyyn, ja '
+            + 'myynnissä on varusteita laskeutumisalustoista '
+            + 'GPS-paikantimiin. Lintu maksaa tavallisesti 4 000–10 000 '
+            + 'dollaria, mutta vuonna 2022 yhdestä maksettiin 250 000.',
           lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Doha - Gyrfalcon at Falcon hospital.jpg',
-          selite: 'Valkoinen tunturihaukka vihreällä pylväsorrella '
-            + 'haukkasairaalan portaiden edessä Dohassa.',
+          selite: 'Tunturihaukka on tuotu laji ja lähinnä näyttölintu; kolme '
+            + 'muuta käytössä olevaa ovat aavikko-, muutto- ja '
+            + 'keltapäähaukka. Samalla kujalla toimii pelkästään haukoille '
+            + 'tarkoitettu sairaala, jossa käy kiireimpään aikaan jopa 150 '
+            + 'lintua päivässä.',
           lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -11732,16 +11746,21 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Old Palace at National Museum of Qatar.jpg',
-          selite: 'Vanha palatsi ylhäältä: sahalaitaisten muurien rajaama '
-            + 'pihapiiri, palmurivi ja kaksikerroksinen päärakennus, '
-            + 'ympärillä museon vaaleat katot ja takana meri.',
+          selite: 'Sheikki Jassim bin Mohammed Al Thanin merenrantapalatsi '
+            + 'jäi ilman tehtävää vuonna 1923, kun hallinto siirtyi '
+            + 'keskustaan, ja rapistui. Vuonna 1972 valtaan noussut Khalifa '
+            + 'bin Hamad Al Thani päätti tehdä siitä maan kansallismuseon, '
+            + 'joka avattiin 23. kesäkuuta 1975.',
           lahde: 'Manjri Saxena, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Courtyard of the Palace.jpg',
-          selite: 'Palatsin piha: palmunrunkopylväiden kannattaman katoksen '
-            + 'alla rivi isoja saviruukkuja puutelineillä, taustalla '
-            + 'päärakennuksen puuristikkoparvekkeet.',
+          selite: 'Rakennusryhmä kasvoi vuosikymmenten mittaan ilman '
+            + 'kokonaissuunnitelmaa: vuoden 2010 inventoinnissa siitä '
+            + 'tunnistettiin yhdeksän osaa, muun muassa kolmen sheikin '
+            + 'perheasunnot, vartijan talo, kaksi porttitaloa ja kaksi '
+            + 'majlista eli vierashuonetta. Berliiniläinen ZRS Architekten '
+            + 'Ingenieure kunnosti palatsin toistamiseen vuonna 2015.',
           lahde: 'Alexmounayer, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -11778,9 +11797,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Doha Souq Waqif Al Koot Fort 1.jpg',
-          selite: 'Linnake kadun puolelta: nelikulmainen kulmatorni '
-            + 'vasemmalla, pyöreät tornit keskellä ja oikealla, muurin '
-            + 'harjalla kolmiomaiset sakarat.',
+          selite: 'Paikalle rakennettiin poliisiasema vuonna 1880 ja vankila '
+            + '1906, ja sheikki Abdullah bin Jassim Al Thani rakennutti '
+            + 'linnakkeen uudelleen 1927 — osan lähteistä mukaan siksi, '
+            + 'että viereisen torin kauppiaat saisivat pitää tavaransa '
+            + 'varkailta rauhassa. Neljästä kulmatornista kolme on pyöreää '
+            + 'ja yksi nelikulmainen.',
           lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -11818,16 +11840,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Msheireb Downtown Doha tram at night.jpg',
-          selite: 'Msheirebin raitiovaunu illalla uuden korttelin '
-            + 'kivijulkisivujen välissä; kiskot on upotettu kuvioituun '
-            + 'jalankulkupintaan.',
+          selite: 'Dohan rapistuneen vanhan liikekeskustan tilalle '
+            + 'rakennettiin 2010–2022 kokonaan uusi 31 hehtaarin '
+            + 'kaupunginosa noin 5,5 miljardilla dollarilla. Matalat talot '
+            + 'seisovat lähekkäin varjostaen toisiaan, kadut on käännetty '
+            + 'ottamaan vastaan lahdelta tuleva tuuli, ja korttelin läpi '
+            + 'kulkee raitiotie.',
           lahde: 'Michael Coghlan @ Flickr, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Radwani House.jpg',
-          selite: 'Radwani Housen lattia on avattu kaivauksin: renkaan '
-            + 'muotoinen syvennys ja vanhempien muurien pohjia '
-            + 'kalkittujen seinien sisällä.',
+          selite: 'Radwani House on 1920-luvulta ja kuului Akbar Radwanin '
+            + 'perheelle. Se on yksi neljästä vanhasta talosta, joita ei '
+            + 'purettu vaan jotka kunnostettiin arkkitehti John McAslanin '
+            + 'johdolla ja avattiin museoina lokakuussa 2015.',
           lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -11877,18 +11903,22 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Selimiye Mosque (St. Sophie Cathedral) (01).JPG',
-          selite: 'Länsipäädyn eteishalli: kaksi korkeaa goottilaista '
-            + 'suippokaarta järeiden kivipilarien välissä, takana veistoksin '
-            + 'koristeltu ovipieli rukoussaliin ja sen yllä minareetti '
-            + 'parvekkeineen.',
+          selite: 'Keskilaiva ja länsijulkisivu valmistuivat arkkipiispa '
+            + 'Giovanni del Conten aikana 1319–1326, ja rakennus on '
+            + 'Kyproksen vanhin ja suurin säilynyt goottilainen kirkko. '
+            + 'Länsipäätyyn nousi kaksi minareettia vuonna 1570, samana '
+            + 'vuonna kun ensimmäinen perjantairukous pidettiin 15. '
+            + 'syyskuuta.',
           lahde: 'Chris06, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Lefkoşa Selimiye-Moschee (Sophienkathedrale) Innen Mihrab 1.jpg',
-          selite: 'Mihrab valkoiseksi kalkitun goottilaisen seinän edessä: '
-            + 'maalattu kukkakehys, kalligrafiakenttä ja tippukivimäinen '
-            + 'katos syvennyksen yllä, vasemmalla kimppupilari ja lattialla '
-            + 'punainen kuviomatto.',
+          selite: 'Kun rakennuksesta tuli moskeija 1570, muutos oli '
+            + 'käytännöllinen: patsaat ja kalusteet kannettiin ulos, '
+            + 'kivilattia peitettiin matoilla ja seinään hakattiin '
+            + 'mihrab-syvennys. Runkoon ei koskettu, ja koska Mekka on '
+            + 'Nikosiasta kaakossa eikä idässä, matot on ladottu vinoon '
+            + 'pilaririveihin nähden.',
           lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -11925,17 +11955,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Büyük Han (43722761521).jpg',
-          selite: 'Sisäpiha ylhäältä: suippokaariset holvikäytävät kiertävät '
-            + 'pihaa kahdessa kerroksessa, keskellä kohoaa kupolinen '
-            + 'rukoushuone kaarien päällä ja katonharjalla on rivi '
-            + 'kartiopäisiä savupiippuja.',
+          selite: 'Kyproksen suurin karavaaniseraaji mittaa ulkoa 50,67 × '
+            + '45,25 metriä, ja kahdessa kerroksessa on 68 huonetta. Pihan '
+            + 'keskellä on köşk mescit, kahdeksankulmainen rukoushuone '
+            + 'kupolin alla kahdeksan marmoripylvään varassa, ja katolla '
+            + 'seisoo puolentoista metrin korkuisia savupiippuja.',
           lahde: 'dronepicr, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Lefkoşa Karawanserei Büyük Han Innenhof Obere Galerie 1.jpg',
-          selite: 'Yläkerran pylväskäytävä huoneiden edessä: holvattu '
-            + 'kivikatto, vasemmalla huoneen ovi ja karkea kiviseinä, '
-            + 'oikealla kaide ja näkymä pihan yli vastapäiseen käytävään.',
+          selite: 'Yläkerran huoneet tehtiin nukkumista varten — '
+            + 'matalakaarinen ovi, tulisija, kaappina käytetty '
+            + 'seinäsyvennys ja katossa valoaukko — kun taas tavara ja '
+            + 'juhdat jäivät alakertaan maan tasalle. Britannian hallinnon '
+            + 'aikana talo toimi kaupungin keskusvankilana 1892–1903.',
           lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -11973,24 +12006,28 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Lefkosia-faneromeni-church.jpg',
-          selite: 'Kirkon kylki hiekankeltaisesta kivestä: etualalla '
-            + 'suippokaarinen kuisti, takana kellotorni, jonka molemmissa '
-            + 'kerroksissa on kaariaukkoja ja huipulla risti.',
+          selite: 'Kirkko valmistui 1872 vanhemman kirkon paikalle ja on '
+            + 'vanhankaupungin suurin. Muurikivistä suuri osa tuotiin La '
+            + 'Cavan linnasta, joka purettiin samana vuonna lähes kokonaan, '
+            + 'ja loput samalla paikalla aiemmin toimineesta '
+            + 'nunnaluostarista.',
           lahde: 'Mboesch, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Lefkosia-faneromeni-church-inside.jpg',
-          selite: 'Kirkkosali sisäänkäynniltä: pilaririvit, suippokaariset '
-            + 'holvit, perällä kullattu ikonostaasi, katosta riippuva '
-            + 'kristallikruunu ja vasemmalla puinen saarnatuoli portaineen.',
+          selite: 'Salissa on kolme tyyliä päällekkäin: uusklassinen, '
+            + 'bysanttilainen ja keskiaikainen latinalainen. Pilaririvit '
+            + 'jakavat sen kolmeen laivaan, holvit ovat suippokaarisia ja '
+            + 'perällä on kullattu ikonostaasi.',
           lahde: 'Mboesch, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'NICOSIA, 11 AUGUST, 2011 172.jpg',
-          selite: 'Marmorinen mausoleumi kirkon pihalla: pylväät kannattavat '
-            + 'kupolia risteineen, takana kohoaa Faneromenin koulun '
-            + 'uusklassinen julkisivu, ja välissä liehuu ortodoksikirkon '
-            + 'keltainen lippu kaksipäisine kotkineen.',
+          selite: 'Marmorinen mausoleumi on pystytetty neljän vuonna 1821 '
+            + 'teloitetun kirkonmiehen muistoksi, ja sen kryptassa lepäävät '
+            + 'arkkipiispa Kyprianoksen ja kolmen piispan jäännökset. '
+            + 'Vastapäätä on Faneromenin koulu, jonka arkkipiispa Makarios '
+            + 'I perusti 1857 saaren ensimmäisenä tyttökouluna.',
           lahde: 'Giorgis 2011, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -12028,17 +12065,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Hamam baths, Cyprus.jpg',
-          selite: 'Hamamin matalat valkoiset kupolit karkean '
-            + 'kalkkikivimuurin takaa: kupoleihin on upotettu rivi pyöreitä '
-            + 'lasitäpliä valoa varten, ja takana kohoaa kaksi rapattua '
-            + 'hormia ja moskeijan minareetti.',
+          selite: 'Kupoleihin on puhkaistu pieniä aukkoja, jotka päästävät '
+            + 'päivänvalon sisään ja liian höyryn ulos. Rakennus '
+            + 'kunnostettiin 2002–2004 EU:n rahoituksella, ja työ '
+            + 'palkittiin Europa Nostra -palkinnolla rakennusperinnön '
+            + 'suojelusta.',
           lahde: 'Mikettg at English Wikipedia, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Omerye - panoramio.jpg',
-          selite: 'Kylpylän laatoitettu etupiha: seinässä lukee Hamam '
-            + 'Omerye, vieressä ovat ruskeat luukkuovet, ja vanhan '
-            + 'hiekkakivimuurin takaa nousee valkoinen kupoli lyhtyineen.',
+          selite: 'Kylpylä pystytettiin vuonna 1571 osaksi kokonaisuutta, '
+            + 'jonka Lala Mustafa Pasha rakennutti kalifi Omarin muistoksi '
+            + 'tykkitulen hajottaman augustinolaiskirkon paikalle. Kirkosta '
+            + 'on yhä jäljellä pääsisäänkäynnin ovi 1300-luvulta, eikä '
+            + 'kylpylästä tehty museota: se on yhä käytössä.',
           lahde: 'Georgy Papantoniou, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -12075,16 +12115,19 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Nikosia BW 2023-09-21 11-50-51.jpg',
-          selite: 'Agia Irinin terrakottahahmot punaisen seinän edessä: '
-            + 'pienet figuurit alimmilla kiviportailla, takarivissä lähes '
-            + 'luonnollisen kokoiset hahmot kartiomaisine päähineineen.',
+          selite: 'Nämä noin kaksituhatta terrakottahahmoa kaivettiin Agia '
+            + 'Irinin pyhäköstä marraskuussa 1929 puolen metrin syvyydestä '
+            + 'hiekasta, ja ne olivat maassa juuri samassa puoliympyrässä. '
+            + 'Museo on toistanut asetelman: kämmenen kokoiset hahmot ovat '
+            + 'eturiveissä, taaimpana lähes luonnollisen kokoisia.',
           lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Nikosia BW 2023-09-21 12-04-43.jpg',
-          selite: 'Septimius Severuksen pronssipatsas pyöreän kivipaaden '
-            + 'päällä: vihertäväksi patinoitunut parrakas hahmo, kädet '
-            + 'koukussa kuin ne olisivat pitäneet asetta.',
+          selite: 'Patsas tuli esiin sattumalta vuonna 1928 Kythrean kylän '
+            + 'liepeillä. Piirtokirjoitusten mukaan saarella oli '
+            + 'roomalaisaikana runsaasti pronssiveistoksia, mutta tämä on '
+            + 'niistä ainoa säilynyt.',
           lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12122,25 +12165,27 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Leventio historic museum in Nicosia Republic of Cyprus.JPG',
-          selite: 'Museon julkisivu kadun varrella: okrankeltainen seinä, '
-            + 'siniset säleikkoluukut ja harmaat kiviset pielet, '
-            + 'takorautainen parveke veistettyjen konsolien varassa ja '
-            + 'sen alla holvikaarinen ovi rautaisine viuhkaikkunoineen.',
+          selite: 'Museo toimii vanhassa asuintalossa Hippokrateen kadun '
+            + 'varrella; A. G. Leventisin säätiö osti ja kunnosti '
+            + 'rakennuksen, ja kaupunki hallinnoi museota. Ovet avattiin '
+            + '20. huhtikuuta 1989 Kyproksen ensimmäisenä historiallisena '
+            + 'museona, ja 1991 se valittiin Euroopan vuoden museoksi.',
           lahde: 'AyianapaProtaras, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'LMM - Schüssel 14.Jhdt.jpg',
-          selite: 'Lasitettu savivati 1300-luvulta: vaalealle pohjalle on '
-            + 'kaiverrettu kiertävä kuvio ja levitetty vihreää ja '
-            + 'oranssinruskeaa, ja vati on koottu paloista.',
+          selite: 'Lasitettu savivati on 1300-luvulta ja kuuluu museon '
+            + 'keskiajan kokoelmaan, jossa ovat myös ristiretkeläisen '
+            + 'miekka noin vuodelta 1200 ja kaupunginsinetti 1200-luvulta.',
           lahde: 'Wolfgang Sauber, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Muzei Leventis-Interior.jpg',
-          selite: 'Sisustettu huone näyttelyssä: lasiovinen puukaappi '
-            + 'kirjoineen, kaksi posliinimaljakkoa sen päällä, '
-            + 'raidallinen saviruukku rautajalustalla ja veistoselkäinen '
-            + 'nojatuoli matoilla.',
+          selite: 'Näyttely kerrotaan takaperin: se alkaa nykypäivän '
+            + 'Nikosiasta ja vie kävijän kerros kerrokselta taaksepäin '
+            + 'kalkoliittiseen aikaan, vuoteen 3000 eaa. Uusin pää on '
+            + 'sisustettu huoneiksi, joissa on lasiovisia kaappeja ja '
+            + 'veistoselkäisiä tuoleja.',
           lahde: 'Молли, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12190,16 +12235,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kuwait towers -2005 2006 Winter- (302658101).jpg',
-          selite: 'Kolmikko tienvarresta nähtynä: oikealla päätorni kahtine '
-            + 'palloineen, vasemmalla yksipalloinen torni ja niiden välissä '
-            + 'kolmas, kapea ja palloton.',
+          selite: 'Tanskalaisen arkkitehdin Malene Bjørnin suunnittelema '
+            + 'ryhmä rakennettiin 1971–1976 ruotsalaisen insinööritoimisto '
+            + 'VBB:n hankkeessa. Kolmas torni on kapea neula ilman palloa: '
+            + 'siihen sijoitettiin laitteet, joilla kaksi muuta valaistaan '
+            + 'pimeän tultua.',
           lahde: 'radiant guy from Den Haag, The Netherlands, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Kuwait City\'s popular landmarks Liberty Tower & Kuwait Towers.jpg',
-          selite: 'Samat tornit mereltä keskipäivän autereessa, jolloin pallot '
-            + 'näyttävät hopeanharmailta ja kiekkojen kuvio häviää lähes '
-            + 'kokonaan.',
+          selite: 'Pallojen kuori on koottu pienistä emaloiduista '
+            + 'teräskiekoista, jotka on ladottu kierteisiksi nauhoiksi '
+            + 'pallon ympäri, joten pallo näyttää eri suunnista ja eri '
+            + 'valossa eri väriseltä. Kuvio muistuttaa vanhojen '
+            + 'moskeijoiden kaakeloituja kupoleita.',
           lahde: 'Mahrs Multiverse, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12236,16 +12285,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kuwait City Kuwait Towers View to the al-Hamra Tower.jpg',
-          selite: 'Al Hamra -torni keskustan matalampien tornien yllä: '
-            + 'lasipinta kaartuu ylöspäin ja pohjakaavasta pois leikattu '
-            + 'neljännes päättyy huipulla vinoon kärkeen.',
+          selite: 'Torni on 412 metriä korkea ja siinä on 80 kerrosta, '
+            + 'joista noin 72 toimistokerroksia. Pohjakaavasta on leikattu '
+            + 'neljännes pois, ja koska viilto siirtyy kerros kerrokselta, '
+            + 'torni näyttää kiertyvän.',
           lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Al Hamra Kuwait Mai 2010.jpg',
-          selite: 'Torni keskeneräisenä toukokuussa 2010 alhaalta kuvattuna: '
-            + 'kalkkikivellä verhotut kaarevat betoniseinät nousevat maasta '
-            + 'huipulle, ja eteläseinään on tehty vinot ikkuna-aukot.',
+          selite: 'Muodon sanelee aurinko: Kuwait City on 29. '
+            + 'leveyspiirillä, joten poistettu neljännes siirtää '
+            + 'toimistokerrokset pois eteläsivulta ja kääntää ne merelle '
+            + 'päin. Kantavat betoniseinät ovat alhaalla 1 200 millimetriä '
+            + 'paksuja ja ohenevat huipulla 300 millimetriin; torni '
+            + 'valmistui 2011.',
           lahde: 'J.Stiegler, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -12281,17 +12334,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Seif tér, az emír palotája. Fortepan 30446.jpg',
-          selite: 'Palatsin vanha pääportti vuonna 1973: teräväkaarinen aukko '
-            + 'sakaramuurissa, sen yllä tummareunainen laatta '
-            + 'arabiankielisine lauseineen ja kahden puolen vartija '
-            + 'punaisessa takissa.',
+          selite: 'Portin yläpuolelle asetettiin vuonna 1918 laatta, jossa '
+            + 'lukee arabiaksi: ”Jos se olisi pysynyt toisilla, se ei olisi '
+            + 'tullut sinulle.” Palatsi päätettiin rakentaa aivan rantaan '
+            + 'vuonna 1904, ja siitä tuli myös nimi: sif tarkoittaa '
+            + 'arabiaksi merenrantaa.',
           lahde: 'FOTO:FORTEPAN / Schiffer Pál, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Plaza Sief, ciudad de Kuwait, Kuwait, 2024-08-12, DD 45.jpg',
-          selite: 'Sama lause kiveen hakattuna uuden aukion portissa '
-            + 'hidžra-vuoden 1337 yläpuolella, ja takana kohoaa kellotorni '
-            + 'kullattuine kupoleineen.',
+          selite: 'Sama lause on hakattu uuden aukion kiviporttiin, ja sen '
+            + 'alle vuosiluku 1337 — hidžra-ajanlaskun vuosi, joka vastaa '
+            + 'vuotta 1918. Kellotornin nykyisen koneiston teki '
+            + 'englantilainen Smith of Derby, sama paja, joka rakensi '
+            + 'Lontoon Pyhän Paavalin katedraalin tornikellon 1893.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12325,17 +12381,19 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kuwait City Grand Mosque Interior 12.jpg',
-          selite: 'Rukoussalin seinustaa: marmoripilarien välissä '
-            + 'kaariaiheita ja puisia ristikkosäleikköjä, alhaalla rivi '
-            + 'puisia lukutelineitä, katossa kullattu kaiverrettu pinta '
-            + 'ja lattialla sininen matto.',
+          selite: 'Päärukoussali on neliö, jonka jokainen sivu on 72 metriä, '
+            + 'ja päivänvalo tulee saliin 144 ikkunasta korkealla seinien '
+            + 'yläosassa. Ovet ovat tiikkiä, ja seinustalla on rivi matalia '
+            + 'puisia lukutelineitä.',
           lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Kuwait City Grand Mosque Interior Dome 2.jpg',
-          selite: 'Kupoli suoraan alhaalta kuvattuna: ruskeanpunainen '
-            + 'sisäpinta, keskellä kalligrafiamedaljonki ja reunalla '
-            + 'sinisten ikkunoiden kehä.',
+          selite: 'Salin katossa on yksi ainoa kupoli, ja sen keskellä '
+            + 'olevan medaljongin kahdessa kehässä kiertää kullattu '
+            + 'kalligrafia. Moskeija peittää 20 000 neliömetriä, hanke '
+            + 'maksoi 13 miljoonaa Kuwaitin dinaaria, ja rakennus otettiin '
+            + 'käyttöön id al-fitr -juhlana.',
           lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -12371,17 +12429,21 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kuwait City Souq al-Mubarakeya 1.jpg',
-          selite: 'Torin katettu pääkuja: puupylväät molemmin puolin, '
-            + 'kattotuolit näkyvissä ja käytävän yllä opastekyltti, joka '
-            + 'luettelee kultatorin sekä vihannes-, liha- ja kalatorin '
-            + 'suunnat.',
+          selite: 'Tori on ollut samalla paikalla ainakin kaksisataa vuotta, '
+            + 'ja se jäi jäljelle, kun vuoden 1952 asemakaava purki vanhan '
+            + 'kaupungin savitiilitalot kortteli kerrallaan. Kujat on '
+            + 'jaettu ammatin mukaan, ja puukatos pitää käytävän varjossa '
+            + 'koko päivän.',
           lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Kuwait City Souq al-Mubarakeya 5.jpg',
-          selite: 'Šeikki Mubarakin kioski torin pihalla: puinen yläkerta '
-            + 'ikkunaluukkuineen, ulkoportaat ja seinässä laatta '
-            + 'rakennuksen uudelleenavaamisesta.',
+          selite: 'Šeikki Mubarakin kioski on torin kahdesta pienestä '
+            + 'museosta toinen — toinen on Kuwaitin ensimmäinen apteekki — '
+            + 'ja kumpaankin on vapaa pääsy. Maaliskuussa 2022 tulipalo '
+            + 'tuhosi osan torin kaupoista, ja vuonna 2024 '
+            + 'allekirjoitettiin urakkasopimus noin seitsemäntoista '
+            + 'rakennuksen pystyttämisestä uudelleen.',
           lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -12418,18 +12480,18 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kuwaiti embroidered rugs.png',
-          selite: 'Seinälle ripustettu kudonnainen: leveät tummanruskeat ja '
-            + 'kermanvalkoiset kentät, niiden välissä kapeat '
-            + 'mustavalkoiset kuvioraidat ja poikittain ommellut '
-            + 'punaoranssit kolmioraidat.',
+          selite: 'Sadu-kudonnan värit ovat musta, valkoinen, ruskea, beige '
+            + 'ja punainen, ja langat värjättiin kasveilla, hennalla ja '
+            + 'sahramilla. Aavikolla kutoivat naiset, kaupungissa miehet, '
+            + 'joiden työtä oli bisht eli olkaviitta.',
           lahde: 'Di7ane, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'السدو 3.jpg',
-          selite: 'Kapea kaistale museon seinällä: punaisia ja mustia '
-            + 'kolmioruutuja ja niiden välissä valkoinen keskiraita, jonka '
-            + 'viereinen kyltti ajoittaa noin vuoteen 1950 ja nimeää '
-            + 'kuvioksi shajarah.',
+          selite: 'Keskiraidan nimi on shajarah, puu, ja sen saa kutoa vasta '
+            + 'se, joka on ensin oppinut reunakuviot; kuvion hallitsevaa '
+            + 'kutojaa kutsutaan nimellä thafrah, voittoisa. Museon kyltti '
+            + 'ajoittaa kappaleen noin vuoteen 1950.',
           lahde: 'Di7ane, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12474,16 +12536,21 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Muscat Gate Museum.jpg',
-          selite: 'Maskatin portti tieltä nähtynä: kaksi suippokaarta vie '
-            + 'ajoradan muurin läpi, yläkerroksessa on rivi kapeita '
-            + 'kaari-ikkunoita ja kulmissa pyöreät tornit.',
+          selite: 'Vanhaa Maskatia kiertävä muuri rakennettiin vuonna 1625 '
+            + 'portugalilaisten kaudella, ja sen läpi vievä Al Saidiyan '
+            + 'katu on yhä se reitti, jota myöten vanhaan kaupunkiin '
+            + 'ajetaan. Muurin sisään avattiin tammikuussa 2001 Muscat Gate '
+            + 'Museum, jonka näyttely kulkee Omanin historian läpi '
+            + 'nuoremmasta kivikaudesta nykypäivään.',
           lahde: 'Tristan from Luxembourg, Luxembourg, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'The gate to Muscat (8727196402).jpg',
-          selite: 'Sama portti kauempaa rannikkotieltä: hammastettu muuri '
-            + 'jatkuu portilta oikealle kallioiselle kummulle, ja kaaren '
-            + 'läpi näkyy vanhan kaupungin kattolinjaa.',
+          selite: 'Muuri kulkee vain kaupungin länsi- ja eteläsivulla: '
+            + 'idässä ja pohjoisessa raja syntyy itsestään merestä ja '
+            + 'kalliosta. Portit suljettiin kolme tuntia hämärän jälkeen, '
+            + 'ja tapa jatkui 1900-luvun puoliväliin asti — sen jälkeen '
+            + 'kadulla liikkuvan oli kannettava mukanaan lyhtyä.',
           lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -12518,16 +12585,22 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Al Khor Mosque and Al Mirani Fort (47953967282).jpg',
-          selite: 'Al-Miranin linnake vanhassa Maskatissa: muurit ja pyöreä '
-            + 'torni nousevat suoraan paljaasta kalliosta, edessä Al '
-            + 'Khorin moskeijan sinikupolinen minareetti.',
+          selite: 'Linnake ei seiso kalliolla vaan jatkaa sitä: muurit on '
+            + 'ladottu kiinni sataman länsipuolen jyrkänteeseen, ja '
+            + 'pohjakaava on epäsäännöllinen, koska se noudattaa kallion '
+            + 'muotoa. Se oli Omanin ensimmäinen tykeillä aseistettu '
+            + 'linnoitus.',
           lahde: 'Eduard Marmet, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Fuerte de Al Mirani, Mascate, Omán, 2024-08-14, DD 43.jpg',
-          selite: 'Linnakkeen sisällä kaksi pyöreää tornia seisoo eri '
-            + 'korkeuksilla, pihalta nousee jyrkkä kapea porras muurin '
-            + 'harjalle, ja vasemmalla siintää meri.',
+          selite: 'Kallio ei suojannut ylhäältä: vuonna 1552 osmanien '
+            + 'laivasto valtasi linnakkeen kahdeksantoista päivän '
+            + 'piirityksen jälkeen yhdellä tykillä, joka hinattiin sen '
+            + 'yläpuoliselle harjanteelle, ja portugalilaiset rakensivat '
+            + 'sen uudelleen 1587. Portugalin valta Maskatissa päättyi '
+            + 'tähän linnakkeeseen, kun sinne linnoittautuneet antautuivat '
+            + '23. tammikuuta 1650.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12561,16 +12634,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Al Jalali Fort (47953954322).jpg',
-          selite: 'Linnake kalliokummulla: vasemmalla matalampi pyöreä torni, '
-            + 'oikealla korkeampi neliötorni, välissä kaariaukoin puhkaistu '
-            + 'muuri ja oikealla kalliota ylös kiemurteleva kiviportaikko.',
+          selite: 'Kummun laella seisoo kaksi tornia eri korkeudella, toinen '
+            + 'pyöreä ja toinen neliömäinen, ja niiden välisen muurin '
+            + 'kaariaukot on puhkaistu kahteen riviin tykeille. Suurimman '
+            + 'osan 1900-lukua linnake toimi Omanin päävankilana, jossa oli '
+            + 'kerrallaan noin kaksisataa vankia.',
           lahde: 'Eduard Marmet, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Fuerte de Al Jalali, Mascate, Omán, 2024-08-14, DD 37.jpg',
-          selite: 'Muuri läheltä iltavalossa: kaariaukot kahdessa rivissä, '
-            + 'tornit eri korkeudella ja oikealla rinteessä alempana '
-            + 'porrastettu bastioni.',
+          selite: 'Vankila suljettiin 1970-luvulla, ja linnake kunnostettiin '
+            + '1983 Omanin kulttuurihistorian kokoelmaksi: tykkiaukoilla '
+            + 'seisoo tykkejä ammuksineen, ja esillä on vanhoja musketteja, '
+            + 'karttoja ja mattoja. Yleisölle kokoelmaa ei ole avattu — '
+            + 'sisään pääsevät vain valtiovieraat.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12605,17 +12682,19 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Palacio de Al Alam, Mascate, Omán, 2024-08-14, DD 33.jpg',
-          selite: 'Al Alamin palatsin julkisivu portin takaa: pylväät '
-            + 'levenevät ylöspäin sienimäisiksi kannattimiksi litteän '
-            + 'kattolaatan alla, ja keskiosa on kullanvärinen, reunapylväät '
-            + 'sinisen mosaiikin peitossa.',
+          selite: 'Sulttaani Qaboos bin Saidin teettämän palatsin '
+            + 'suunnitteli ja rakensi mumbailainen Shapoorji Pallonji, ja '
+            + 'talo valmistui vuonna 1972. Nimi Qasr al-Alam tarkoittaa '
+            + 'lipun palatsia, ja katon yli nousee lipputanko.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Palacio de Al Alam, Mascate, Omán, 2024-08-14, DD 36.jpg',
-          selite: 'Sama julkisivu vinosti iltavalossa: pylväiden turkoosi '
-            + 'laattapinta ja kattolaatan hammastettu reunalista erottuvat, '
-            + 'ja taustalla näkyy matalia hallintorakennuksia.',
+          selite: 'Talossa ei asuta: se on sulttaanin seremoniallinen '
+            + 'palatsi, jossa otetaan vastaan valtiovieraita ja '
+            + 'valtionpäämiehiä, ja se seisoo 250 metriä pitkän aukion '
+            + 'pohjoispäässä vastapäätä Omanin kansallismuseota. Edeltäjä '
+            + 'Bait al-Alam purettiin 1971 uuden tieltä.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12650,23 +12729,27 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Muscat, Bait Al Zubair, ingresso.jpg',
-          selite: 'Museon sisäänkäynti vanhassa Maskatissa: valkoinen portti, '
-            + 'jonka päädyssä lukee Bait Al Zubair, ja avoimet '
-            + 'takorautaiset koristeportit pihalle.',
+          selite: 'Al Zubairin perhe rakennutti talon asuinkodikseen Al '
+            + 'Saidiyan kadun varrelle vanhaan Maskatiin, ja siitä tehtiin '
+            + 'yksityinen museo. Esineet ovat pääosin suvun omasta '
+            + 'kokoelmasta.',
           lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Al Khanjar, Bait al Zubair Museum, Oman 1.jpg',
-          selite: 'Khanjar museon vitriinissä: hopeatuppi taittuu jyrkäksi '
-            + 'koukuksi, kahvan pää on litteä ja tikari roikkuu '
-            + 'hopearenkailla kudotusta vyöstä.',
+          selite: 'Khanjarissa on kolme osaa: kahva, lyhyt kaareva terä ja '
+            + 'tuppi, joka taittuu jyrkästi J-kirjaimen muotoon; kahvan '
+            + 'litteä pää erottaa tavallisen tikarin hallitsijasuvun '
+            + 'ristinmuotoisesta. Jokainen tehdään tilaajan omien toiveiden '
+            + 'mukaan, ja työhön menee kolmesta viikosta useaan kuukauteen.',
           lahde: 'Reda Kerbush, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Bait al Zubair Museum-02.jpg',
-          selite: 'Museon pihan pienoismalli: savenvärisiä vuoria, muureja, '
-            + 'vartiotorneja ja vesiuoma, jonka varrella on pieniä '
-            + 'veneitä ja ihmishahmoja.',
+          selite: 'Museon pihalla on pienoismalli omanilaisesta '
+            + 'kylämaisemasta linnakkeineen ja vesiuomineen. Muu kokoelma '
+            + 'käsittää khanjar-tikareita, naisten hopeakoruja, pukuja, '
+            + 'aseita ja kotitaloustavaraa.',
           lahde: 'Muck, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12703,9 +12786,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Muscat-shiva temple.jpg',
-          selite: 'Motishwar Mandirin vaaleakivinen päärakennus: pystyuriin '
-            + 'jaettu kupoli kullattuine huippuineen, simpukkakaarilla '
-            + 'kehystetyt puuovet ja laatoitettu piha punaisine mattoineen.',
+          selite: 'Temppeli ei ole yksi rakennus vaan kolmen pyhäkön piha, '
+            + 'ja sen rakentajiksi mainitaan Thattan bhatia-kauppiaat, '
+            + 'joita asettui Maskatiin jo vuonna 1507. Rakennusvuodesta '
+            + 'lähteet ovat eri mieltä: luvut vaihtelevat 1892:n ja 1909:n '
+            + 'välillä, eikä millekään ole esitetty asiakirjaa.',
           lahde: 'కాసుబాబు, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -12755,11 +12840,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'شارع المتنبي صباحا.jpg',
-          selite: 'Mutanabbin katu ylhäältä aamupäivällä: kirjat on levitetty '
-            + 'riveihin katukiveykselle puisten myyntipöytien eteen, '
-            + 'oikealla nousee keltatiilinen kaariholvirivistö '
-            + 'valurautapylväineen ja vasemmalla on Shabandarin kahvilan '
-            + 'puuparvekkeinen kulmatalo.',
+          selite: 'Nykyinen katu vihittiin vuonna 1932, ja vihkijänä oli '
+            + 'kuningas Faisal I, mutta kirjakauppa on paikalla vanhaa '
+            + 'perua: tässä oli abbasidien aikaan Bagdadin ensimmäinen '
+            + 'kirjakauppiaiden tori. Täältä on lähtöisin sanonta, jonka '
+            + 'mukaan Kairo kirjoittaa, Beirut kustantaa ja Bagdad lukee.',
           lahde: 'Mondalawy, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -12804,16 +12889,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'ساعة القشلة في بغداد (4).jpg',
-          selite: 'Kellotorni nousee aukion nurmelta tuuliviireineen, ja sen '
-            + 'juurella seisoo ihmisryhmiä pergoloiden ja vihreäkattoisen '
-            + 'puisen lehtimajan välissä.',
+          selite: 'Torni on kolmekymmentä metriä korkea, ja huipulle nousee '
+            + '73 porrasta; se valmistui Midhat Pashan kaudella vuonna 1871 '
+            + 'herättämään kasarmin miehistön ja ilmoittamaan harjoitusten '
+            + 'ajat. Itse kello on lahja: Yrjö V antoi sen kuningas Faisal '
+            + 'I:lle tämän vieraillessa Britanniassa kesällä 1927.',
           lahde: 'Taisir Mahdi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Qushla2.jpg',
-          selite: 'Aukio ylhäältä: pergoloiden kattama käytävä johtaa tornille, '
-            + 'satoja ihmisiä liikkuu oliivipuiden ja palmujen välissä, ja '
-            + 'takana virtaa Tigris.',
+          selite: 'Kasarmipiha on nykyään julkinen puisto, jonne tullaan '
+            + 'Mutanabbin kadun päästä; lehtimajoissa luetaan runoja ääneen '
+            + 'ja alueella pidetään näyttelyitä. Kellotorni pantiin '
+            + 'tarkoituksella aivan Tigriksen viereen, jotta kellon ääni '
+            + 'kantaisi koko Bagdadiin.',
           lahde: 'mohammed aladdin, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12850,17 +12939,22 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'القصر العباسي قلب الحكم والفخامة في العصر الإسلامي.jpg',
-          selite: 'Abbasidipalatsin sisäpiha kivisine altaineen: pihaa kiertää '
-            + 'kaksi kerrosta suippokaarina avautuvia käytäviä, ja takaseinän '
-            + 'keskellä avautuu muita suurempi iwan.',
+          selite: 'Rakennuksen käyttötarkoituksesta ei ole yksimielisyyttä: '
+            + 'osa tutkijoista pitää sitä kalifi al-Nasirin palatsina, '
+            + 'toiset Sharabiyya-madrasana, koska molempien kerrosten '
+            + 'sivuhuoneet riittäisivät luokiksi. Itäsivua hallitsee iwan, '
+            + 'päädystään avoin holvihuone, joka on kaksi kertaa muita '
+            + 'suurempi.',
           lahde: 'Montzr 1, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'القصر العباسي رمز السلطة والفن في بغداد التاريخية.jpg',
-          selite: 'Abbasidipalatsin kaarikäytävän holvi alhaalta: muqarnas-kennot '
-            + 'lomittuvat portaittain, kunkin pohjaan on veistetty kasvikuvio '
-            + 'tai kirjoituskoriste, ja keskellä erottuu kahdeksansakarainen '
-            + 'tähti.',
+          selite: 'Tiili poltettiin kahdella lämmöllä: seinien ja holvien '
+            + 'kantavat tiilet kovassa kuumuudessa kestäviksi, '
+            + 'koristetiilet matalammassa niin että niitä pystyi '
+            + 'veistämään. Itäkäytävän holvi on sarja toisiinsa lomittuvia '
+            + 'muqarnas-kennoja, ja kukin niistä päättyy '
+            + 'kahdeksansakaraiseen tähteen.',
           lahde: 'Montzr 1, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12904,9 +12998,11 @@ export const NAHTAVYYSJUTUT = {
         },
         {
           tiedosto: 'بوابة خان مرجان.jpg',
-          selite: 'Khanin pääportaali kadulta: suippokaari, kaiverrettua '
-            + 'tiilikoristetta, arabiankielinen kirjoituspaneeli, '
-            + 'ristikkoikkuna ja kaksiosainen puuovi.',
+          selite: 'Bagdadin jalayiridikuvernööri Amin al-Din Mirjan '
+            + 'rakennutti majatalon vuosina 1356–1358, ja samalta '
+            + 'rakennuttajalta on kadun toisella puolella Mirjanin '
+            + 'moskeija. Ulkopinnan kirjoituspaneelien tekijäksi mainitaan '
+            + 'tabrizilainen Ahmad Shah, jota kutsuttiin kultakynäksi.',
           lahde: 'Zaid isam, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12944,17 +13040,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Al-Mustansriah School - SW Door.jpg',
-          selite: 'Koulun lounaissivu: kolme suippokaarista aukkoa, ja niiden '
-            + 'ympärillä seinä on ladottu tiilestä tähti- ja '
-            + 'monikulmiokuvioiksi.',
+          selite: 'Lounaisoven yllä on myöhempi piirtokirjoitus '
+            + 'ottomaanisulttaani Abdulazizista, ja seinät ovat veistettyä '
+            + 'tiiltä, johon on ladottu tähti- ja monikulmiokuvioita. '
+            + 'Koulun ovet suljettiin 1638, ja 1700-luvulla talo toimi '
+            + 'kauppiaiden majatalona nimellä Khan al-Muwasilah.',
           lahde: 'Samir Al-Ibrahem, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Old rusafa (1).jpg',
-          selite: 'Pääoven suippokaari alhaalta kuvattuna: kaaren sisään on '
-            + 'veistetty vaakasuoria kirjoitusnauhoja rivi toisensa jälkeen, '
-            + 'alimpana tähtikuvioinen kenttä, ja pieliä kiertää kapea '
-            + 'koristenauha.',
+          selite: 'Pääoven kaarta kiertävät tähti- ja monikulmiokuviot ja '
+            + 'piirtokirjoitus rakennuttajasta. Saman porttihallin seinässä '
+            + 'seisoi vuonna 1235 valmistunut vesikello, jonka kaksi '
+            + 'kultaista haukkaa pudottivat tunnin täyttyessä pronssipallon '
+            + 'kulhoon.',
           lahde: 'ZaidAiraq, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -12986,16 +13085,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'مدخل المتحف البغدادي.jpg',
-          selite: 'Bagdadin museon julkisivu kadulta: ulkoneva puinen '
-            + 'shanashil-parveke pylväineen ja ruutuikkunoineen, ja '
-            + 'kaiverretun suippokaarioven yllä arabiankielinen kivilaatta.',
+          selite: 'Museo perustettiin vuonna 1970 Tigriksen lähelle Rusafan '
+            + 'puolelle kaupunkia, ja rakennus itse on vuodelta 1869.',
           lahde: 'Ayat Jaryan, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Photos from the Al Baghdadi Museum- Baghdadi cafe.jpg',
-          selite: 'Museon kahvilakohtaus: toistakymmentä täysikokoista hahmoa '
-            + 'istuu penkeillä ja tuoleilla valkoisen puukaiteen takana, '
-            + 'päässä ruudullisia huiveja ja valkoisia kalotteja.',
+          selite: 'Museon kokoelma on 385 täysikokoista hahmoa 77 '
+            + 'kohtauksessa, ja se rajaa tarkoituksella yhden ajanjakson: '
+            + 'sen, miten bagdadilaiset perheet elivät ja miten juhlat '
+            + 'vietettiin. Kohtauksiin kuuluu hahmojen lisäksi ajan '
+            + 'työkaluja, astioita ja huonekaluja.',
           lahde: 'Mustafa alsalhi, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -13043,10 +13143,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Minaret of the Haydar-Khana Mosque.png',
-          selite: 'Moskeijan minareetti alhaalta kuvattuna: vaaleaan tiilivarteen '
-            + 'on ladottu turkoosista laatasta vinoneliökuvioita, parvekkeen '
-            + 'alla on tiheä sini-kultainen muqarnas-kennosto, ja huippu on '
-            + 'kuin uurrettu melonin puolikas.',
+          selite: 'Nykyisen moskeijan rakennutti vuosina 1819–1827 Dawud '
+            + 'Pasha, Bagdadin mamelukkihallitsijoista viimeinen; '
+            + 'ulkoseinää kiertävän kalligrafianauhan kirjoitti mestari '
+            + 'Hashem Muhammad al-Baghdadi vuoden 1972 korjauksen '
+            + 'yhteydessä. Irakilaiset kutsuvat moskeijaa vallankumouksen '
+            + 'moskeijaksi: kevään 1920 kokoontumiset alkoivat täältä.',
           lahde: 'Ayham4002, Wikimedia Commons (CC0)',
         },
       ],
@@ -13084,10 +13186,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Al-Wazeer Mosque.png',
-          selite: 'Moskeija kadulta: vasemmalla nousee tiilinen minareetti, jonka '
-            + 'pintaa kiertävät turkoosit vinoneliökuviot ja jonka huipulla '
-            + 'on sipulinmuotoinen laatoitettu kruunu, ja oikealla on matala '
-            + 'kupoli samaa vihreänsinistä laattaa.',
+          selite: 'Moskeijan rakennutti vuonna 1599 Bagdadin '
+            + 'ottomaanikäskynhaltija Hasan Pasha — vezir, mistä nimi '
+            + 'tulee. Rakennusta on uudistettu niin monta kertaa, että '
+            + 'irakilaisen tutkijan Sherif Youssefin mukaan minareetti on '
+            + 'sen ainoa alkuperäisessä asussaan säilynyt osa.',
           lahde: 'Ayham4002, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13138,19 +13241,21 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'İzmir Clock Tower, 2026.jpg',
-          selite: 'Kellotorni Konakin aukiolla: kahdeksankulmaisen '
-            + 'kaarigallerian päältä nousee kapeneva torni, kellotaulu ja '
-            + 'ylimpänä avoin pylväikkökamari, ja lähellä kohoavat '
-            + 'Yalı-moskeijan kupoli ja kuvernöörinkonak.',
+          selite: 'Torni pystytettiin sulttaani Abdülhamid II:n '
+            + 'valtaistuimelle nousun 25-vuotispäivän kunniaksi: peruskivi '
+            + 'laskettiin 1. syyskuuta 1900 ja vihkiminen tapahtui '
+            + 'täsmälleen vuosipäivänä 1. syyskuuta 1901. Korkeutta on 25 '
+            + 'metriä ja kerroksia neljä.',
           lahde: 'Koray, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Izmir Clock tower 5864.jpg',
-          selite: 'Jalusta lähempää: hevosenkenkäkaaret lepäävät '
-            + 'parittaisten hoikkien pylväiden päällä, kaarien alla on kaksi '
-            + 'marmorisuihkulähdettä altaineen, ja rautaristikko-oven '
-            + 'kummallakin puolella on ympyrämedaljonki tähtineen ja '
-            + 'puolikuineen.',
+          selite: 'Suunnittelija oli ranskalainen Raymond Charles Péré, joka '
+            + 'oli tullut kaupunkiin ranskan opettajaksi 1880 ja jäi '
+            + 'loppuiäkseen; jalustan ympärille ladottiin kehäksi neljä '
+            + 'şadırvania eli suihkulähdettä. Sivuille hakatut sulttaanin '
+            + 'tugra ja osmanien vaakuna poistettiin tasavallan julistuksen '
+            + 'jälkeen, ja tilalle veistettiin tähti ja puolikuu.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13186,17 +13291,19 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kemeraltı daytime.jpg',
-          selite: 'Kemeraltın kivetty kuja keskipäivällä: markiisien alla on '
-            + 'rivissä myymälöitä kyltteineen, ja katua varjostaa iso '
-            + 'plataani.',
+          selite: 'Basaarin pääkuja Anafartalar caddesi kaartuu leveänä '
+            + 'puolikuuna, koska se seuraa İzmirin sisälahden vanhaa '
+            + 'rantaviivaa. Basaari syntyi vasta, kun lahden matalimmat '
+            + 'kohdat täytettiin vuosina 1650–1670 ja kauppa levisi uudelle '
+            + 'maalle.',
           lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Izmir Kızlarağası Hanı 5918.jpg',
-          selite: 'Kızlarağası Hanin katettu käytävä sisältä: tiilinen '
-            + 'tynnyriholvi jatkuu perälle asti, molemmin puolin on '
-            + 'nahkatavara- ja korukauppoja valokylttien takana, ja '
-            + 'käytävällä kulkee muutama asiakas.',
+          selite: 'Kızlarağası Han valmistui täytetylle maalle vuonna 1744, '
+            + 'ja siitä tuli basaarin ydin; se on yhä pystyssä. Samaan '
+            + 'kortteliin rakennettiin 1600-luvulla myös Suuri ja Pieni '
+            + 'Vezir Han.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13230,26 +13337,28 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Hisar Mosque (October 2018).jpg',
-          selite: 'Hisarin moskeija kauppakorttelin katolta: lyijynharmaa '
-            + 'pääkupoli kuunsirppihuippuineen, ympärillä pienempiä '
-            + 'kupoleita ja minareetti, jonka ainoalla parvekkeella on '
-            + 'kaiuttimet.',
+          selite: 'Nimi Hisar tarkoittaa linnoitusta ja viittaa samalla '
+            + 'paikalla seisseeseen genovalaiseen San Pietroon. Moskeijan '
+            + 'rakennutti İzmirin osmanihallitsija Aydınoğlu Yakup Bey, ja '
+            + 'se valmistui 1598; nykyinen asu on neljän korjauksen tulos '
+            + 'vuosilta 1813, 1881, 1927 ja 1980.',
           lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Hisar Camii 2025 Şubat 1.jpg',
-          selite: 'Pääkupoli alhaalta: kehä kehältä soikeita medaljonkeja '
-            + 'kullattuine kukkakimppuineen vaalean liilalla pohjalla, '
-            + 'keskellä tumma pyörylä ruusukkeineen ja seinillä mustia '
-            + 'kalligrafiakilpiä.',
+          selite: 'Pääkupolin sisäpinta on maalattu kehä kehältä soikeiksi '
+            + 'medaljongeiksi, joissa on kullattuja kukkakimppuja vaalean '
+            + 'liilalla pohjalla, ja keskellä on tumma pyörylä kullattuine '
+            + 'ruusukkeineen. Sisustusta pidetään İzmirin näyttävimpiin '
+            + 'kuuluvana esimerkkinä osmanien islamilaisesta taiteesta.',
           lahde: 'Satirdan kahraman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Hisar Camii 2025 Şubat 14.jpg',
-          selite: 'Yksi kupolia kannattavista järeistä pylväistä kullatuiksi '
-            + 'lehtikoristeiksi veistettyine kapiteeleineen, ympärillä '
-            + 'sivukupolit ja salissa riippuva iso messinkinen '
-            + 'kynttiläkruunu.',
+          selite: 'Pääkupolia kannattaa kahdeksan järeää pylvästä, joiden '
+            + 'päät on veistetty kullatuiksi lehtikoristeiksi. Moskeijan '
+            + 'pohjakaava on suorakaide, 25 metriä kertaa 20, ja pääkupolin '
+            + 'molemmin puolin on kolme suurta kupolia.',
           lahde: 'Satirdan kahraman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13315,16 +13424,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Izmir agora substructure 6255.jpg',
-          selite: 'Torin lattiaa kannattaneet holvit: leveä kivikaari ja sen '
-            + 'takana rivi kapeampia kaaria, joiden yläpuolella näkyy '
-            + 'pylväshallin pylväitä.',
+          selite: 'Torin lattiaa kannattaa kolmikerroksinen suorakaiteen '
+            + 'muotoinen rakennus, joka on ladottu pylväiden ja kaarien '
+            + 'varaan suuren sisäpihan ympärille. Saksalainen arkeologi '
+            + 'Rudolf Naumann ja İzmirin ja Efesoksen museoiden johtaja '
+            + 'Selâhattin Kantar kaivoivat sen esiin vuosina 1931–1942.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Agora of Smyrna, built during the Hellenistic era at the base of Pagos Hill and totally rebuilt under Marcus Aurelius after the destructive 178 AD earthquake, Izmir, Turkey (18699693425).jpg',
-          selite: 'Läntisen pylväshallin korinttilaiset pylväät nurmen '
-            + 'reunassa, taustallaan vaaleanpunainen pysäköintitalo ja '
-            + 'vasemmalla kaivausalueen vihreä peltikatos.',
+          selite: 'Läntisen pylväshallin korinttilaiset pylväät seisovat yhä '
+            + 'rivissä, ja hallin toisessa kaaressa on keisarin vaimon '
+            + 'Faustinan rintakuva. Kreikkalaisten 300-luvulla eaa. '
+            + 'rakentaman torin tuhosi vuoden 178 maanjäristys, ja keisari '
+            + 'Marcus Aurelius määräsi sen rakennettavaksi uudelleen.',
           lahde: 'Carole Raddato from FRANKFURT, Germany, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -13355,17 +13468,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Salepçioğlu Mosque, October 2018.jpg',
-          selite: 'Salepçioğlun moskeija kadulta: keskellä kohoaa harmaa '
-            + 'pääkupoli, seinät ovat tummanvihreää kiveä valkoisin '
-            + 'marmorikehyksin, ja erillään rakennuksesta nousee hyvin '
-            + 'hoikka yksiparvekkeinen minareetti.',
+          selite: 'Moskeija valmistui vuonna 1905 keskelle Kemeraltın '
+            + 'basaarikorttelia, ja se on nimetty rakennuttajansa '
+            + 'Salepçizade Hoca Ahmed Efendin mukaan. Minareetti ei liity '
+            + 'rakennukseen kiinni vaan seisoo koillispuolella omalla '
+            + 'kivijalustallaan, ja sen muoto on poikkeuksellisen hoikka.',
           lahde: 'BSRF, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Salepçioğlu Camii Kubbesi.jpg',
-          selite: 'Kupoli alhaalta: vaaleansiniseltä pohjalta säteilee '
-            + 'kullanruskeita ripoja keskusmedaljonkiin, ja kupolin juurella '
-            + 'kiertää värilasi-ikkunoita mustine kalligrafialevyineen.',
+          selite: 'Rukoussali on pohjaltaan neliö, ja siirtymä neliöstä '
+            + 'kupolin ympyrään on tehty pendentiiveillä eli kolmiomaisilla '
+            + 'kaarevilla pinnoilla salin kulmissa. Valoa saliin tulee '
+            + 'kahdesta ikkunarivistä, joista ylempi kiertää kupolin '
+            + 'juurta.',
           lahde: 'Canercangul, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13412,18 +13528,19 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Castillo de Ankara, Ankara, Turquía, 2024-10-02, DD 11-13 HDR.jpg',
-          selite: 'Linnavuoren laki iltavalossa: sisemmän kehän hammastettu '
-            + 'muuri seisoo kalliojyrkänteen päällä Turkin lippu salossaan, '
-            + 'rinteessä on tiheässä punatiilikattoisia taloja, ja kauempana '
-            + 'kohoaa nykyinen keskusta tornitaloineen.',
+          selite: 'Sisempi muurikehä rajaa laavakielekkeen laelle noin 350 '
+            + 'metriä pitkän ja 150 metriä leveän alueen, ja sen tornit '
+            + 'seuraavat toisiaan lyhyin välein. Tutkija Clive Foss on '
+            + 'arvioinut kehän keisari Konstans II:n ajalta, eli vuosien '
+            + '641 ja 668 väliltä.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Ankara Ickale street view in 2011 01.jpg',
-          selite: 'Kuja muurien sisäpuolella: kapean kadun molemmin puolin '
-            + 'on valkoiseksi rapattuja taloja ristikkosäleikköineen, ja '
-            + 'kauempana yläkerrat työntyvät kadun päälle punatiilikattojen '
-            + 'alla.',
+          selite: 'Muurien sisäpuolella on Ankaran vanhin kaupunginosa: '
+            + 'kadut ovat kapeita ja mutkaisia, ja niiden varrella seisoo '
+            + 'kaupungin parhaiten säilynyttä perinteistä rakennuskantaa. '
+            + 'Osa taloista on kunnostettu ravintoloiksi.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13459,25 +13576,31 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ankara Temple of Augustus and Rome exterior from S in 2019 02.jpg',
-          selite: 'Temppelin cellan seinä etelästä: vaaleaa kalkkikiveä '
-            + 'kerroksittain ladottuna, pinnassa pieniä ristikkoikkunoita, '
-            + 'ja vieressä kohoaa Hacı Bayramin moskeijan tiiliminareetti.',
+          selite: 'Augustuksen ja Rooman temppeli rakennettiin Galatian '
+            + 'hallintokeskukseen Ancyraan noin 25–20 eaa., ja 400-luvulla '
+            + 'siitä tehtiin kirkko; pystyssä ovat enää sivuseinät ja '
+            + 'koristeltu oviaukon kehys. Viereen nousi 1400-luvun alussa '
+            + 'Hacı Bayramin moskeija.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'The Temple of Augustus and Rome with the Res Gestae Divi Augusti ("Deeds of the Divine Augustus") inscribed on the walls of the cella, Ancyra, Ankara (Turkey) (26068597826).jpg',
-          selite: 'Kreikankielinen käännös cellan ulkoseinässä: '
-            + 'kreikkalaisin suuraakkosin hakattua tekstiä tiiviinä '
-            + 'palstoina, kivipinta paikoin lohjennut ja alareunassa '
-            + 'meanderilista.',
+          selite: 'Cellan ulkoseinään hakattiin Augustuksen tekoluettelon '
+            + 'kreikankielinen käännös, joka ei ole sanatarkka; '
+            + 'latinankielinen alkuteksti on eteishallin sisäseinissä. '
+            + 'Säilyneistä kolmesta kappaleesta Ankaran seinien teksti on '
+            + 'täydellisin.',
           lahde: 'Carole Raddato from Frankfurt, Germany, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Turkey. Ankara. Temple of Augustus Caesar. Latin inscription closer up. LOC matpc.03372.jpg',
-          selite: 'Mustavalkokuva eteishallin seinästä: ylhäällä '
-            + 'latinankielisen tekstin otsikkorivi RERVM GESTARVM DIVI '
-            + 'AVGVSTI, sen alla tiheitä tekstipalstoja, ja seinässä isoja '
-            + 'lohkeamia.',
+          selite: 'Eteishallin seinään hakattu latinankielinen teksti on Res '
+            + 'Gestae Divi Augusti, jonka Augustus määräsi testamentissaan '
+            + 'senaatin pystyttämään; se valmistui kuukautta ennen hänen '
+            + 'kuolemaansa 19. elokuuta vuonna 14 jaa. Teksti on '
+            + 'minä-muodossa, eikä siinä mainita yhtäkään vastustajaa '
+            + 'nimeltä: Caesarin murhaajat ovat ”ne, jotka tappoivat isäni” '
+            + 'ja Marcus Antonius ”se, jonka kanssa kävin sotaa”.',
           lahde: 'Matson Collection, Wikimedia Commons (PD)',
         },
       ],
@@ -13514,17 +13637,22 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The Roman Baths of Ancyra, constructed in the third century during the reign of Roman Emperor Caracalla by a wealthy citizen of Ancyra called Tiberius Julius Justus Junianus, Ankara, Turkey (26211723132).jpg',
-          selite: 'Hypokaustin pilarit paikoillaan: pyöreistä ja '
-            + 'neliskulmaisista tiilistä ladotut pinot seisovat tasaisissa '
-            + 'riveissä, ympärillä kiveä ja tiiltä vuorottelevat '
-            + 'perustusmuurit, ja takana nykykaupunki nousee rinteille.',
+          selite: 'Nurmella seisovat tiilipinot ovat hypokaustin pilareita: '
+            + 'niiden päälle ladottiin tiililaatta, sen päälle betonikerros '
+            + 'ja vasta ylimmäksi lattia, joten uunin kuuma ilma kiersi '
+            + 'lattian alla ja nousi seinien sisään muurattuja tiiliputkia '
+            + 'pitkin katolle. Kylpylä rakennettiin 200-luvulla keisari '
+            + 'Caracallan aikana ja omistettiin lääketieteen jumalalle '
+            + 'Asklepiokselle.',
           lahde: 'Carole Raddato from Frankfurt, Germany, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Ankara Thermen13.jpg',
-          selite: 'Ulkoilmamuseon kivilöytöjä nurmella: korinttilaisia '
-            + 'pylväänkapiteeleja akantinlehtineen, hakattu kivitaulu '
-            + 'ihmishahmoineen ja maassa harmaita pylväänvarsia.',
+          selite: 'Vanha palaestra eli painipiha on nykyään ulkoilmamuseo, '
+            + 'jossa on esillä hautakiviä, alttareita ja piirtokirjoituksia '
+            + 'roomalaiselta, bysanttilaiselta ja myöhäishellenistiseltä '
+            + 'ajalta. Pihaa kiersi aikanaan pylväikkö, jossa oli 128 '
+            + 'marmoripylvästä, 32 kullakin sivulla.',
           lahde: 'Ingeborg Simon, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -13562,17 +13690,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Julian Column, Ankara 2024.jpg',
-          selite: 'Julianuksen pylväs aamuvalossa: vaalea kivijalusta seisoo '
-            + 'punaruskeasta kivestä muuratulla perustalla, ja ylöspäin '
-            + 'kapeneva varsi on uurrettu tiheiksi vaakarenkaiksi '
-            + 'lehtikoristeisen kapiteelin alla.',
+          selite: 'Pylväs pystytettiin keisari Julianuksen kunniaksi, kun '
+            + 'kaupunkiin tuli tieto, että hän pysähtyy siellä matkallaan '
+            + 'persialaissotaan vuonna 362; valmistumisvuodeksi merkitään '
+            + 'sekä 362 että 360. Sitä ei ole veistetty yhdestä kivestä '
+            + 'vaan muurattu kappaleista päällekkäin, ja ankaralaisten oma '
+            + 'nimi sille on Belkıs Minaresi.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
         {
           tiedosto: 'Ankara - Julianus Sütunu 0366.jpg',
-          selite: 'Pylvään latva talvella: akantinlehtiä muistuttavin lehdin '
-            + 'ja pyörein medaljongein koristellun kapiteelin päälle on '
-            + 'kertynyt iso risupesä.',
+          selite: 'Noin viisitoista metriä korkean pylvään ylimpänä on '
+            + 'lehtikoristeinen kapiteeli, jonka yläreunasta on lohjennut '
+            + 'paloja. Pylväs oli pitkään ilman korjauksia; lääninhallitus '
+            + 'kunnosti sen vuonna 2001.',
           lahde: 'Phyrexian, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13609,26 +13740,28 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Museum of Anatolian Civilizations 2024.jpg',
-          selite: 'Museon sisäänkäynti pihalta: luonnonkiviseinässä on '
-            + 'valkoinen marmorikaari, johon on hakattu ANADOLU '
-            + 'MEDENİYETLERİ MÜZESİ, takana kohoavat bedestenin '
-            + 'lyijykupolit, ja pihalla seisoo kivileijonia ja torsoja.',
+          selite: 'Museo toimii kahdessa 1400-luvun ottomaanirakennuksessa '
+            + 'Ankaran linnan eteläpuolella: Mahmut Paşan bedestenissä, '
+            + 'jonka Mehmed II:n visiiri rakennutti vuosina 1464–1471, ja '
+            + 'viereisessä Kurşunlu Hanissa. Museo valittiin Euroopan '
+            + 'vuoden museoksi 19. huhtikuuta 1997.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
         {
           tiedosto: 'Museo de las Civilizaciones Anatólicas. Interior.jpg',
-          selite: 'Kymmenkupolinen keskihalli tiiliholvien alla: seinustalla '
-            + 'jatkuu rivi kivireliefejä pitkäkaapuisine hahmoineen ja '
-            + 'hieroglyfein kirjoitettu kivipaasi, ja kaksi tummaa '
-            + 'basalttileijonaa on nostettu korokkeille.',
+          selite: 'Kymmenkupolinen bedesten, jossa oli aikanaan 102 puotia '
+            + 'vastakkain, on jätetty yhdeksi tilaksi. Siinä seisovat '
+            + 'myöhäisheettiläisen ajan suuret kivireliefit ja '
+            + 'basalttileijonat Malatya-Arslantepestä, Karkamışista ja '
+            + 'Sakçagözüstä.',
           lahde: 'José Luis Filpo Cabana, Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Museum Ankara 04.jpg',
-          selite: 'Esihistorian sivusali: valaistuissa syvennyksissä on '
-            + 'Çatalhöyükin seinämaalausten rappauspaloja punaruskeine '
-            + 'eläin- ja ihmishahmoineen, ja keskellä on lasivitriinejä '
-            + 'pienlöytöineen.',
+          selite: 'Neoliittisessa salissa ovat Çatalhöyükin seinämaalaukset '
+            + 'rappauspaloina: metsästyskohtaus 7. vuosituhannelta eaa. ja '
+            + 'purkautuva Hasan-vuori. Keskihallia kiertävissä sivusaleissa '
+            + 'aikakaudet seuraavat toisiaan paleoliittisesta klassiseen.',
           lahde: 'Ingeborg Simon, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -13668,18 +13801,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ankara Aug 2023 13 39 04 215000.jpeg',
-          selite: 'Vaaleanpunaiseksi rapattu kellotorni nousee linnan '
-            + 'pääportin vierestä pyöreän muuritornin päältä: ylinnä on '
-            + 'kahdeksankulmainen kamari kaariaukkoineen ja alempana '
-            + 'valkoinen kellotaulu roomalaisin numeroin.',
+          selite: 'Kellotorni on vuodelta 1884, ja se on rakennettu linnan '
+            + 'ulomman muurin pyöreän porttitornin päälle — torni tornin '
+            + 'päälle. Osmanien kellotorneja yleistivät vasta Abdülhamid '
+            + 'II:n valtaannousun 25-vuotisjuhlan määräykset, joita Ankaran '
+            + 'torni on vanhempi.',
           lahde: 'Robot8A, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Old Turkish Houses Ankara.jpg',
-          selite: 'Ottomaanitalo linnan kaupunginosassa: kivisen '
-            + 'pohjakerroksen päällä yläkerta työntyy ulos puupalkin '
-            + 'varassa, puurunko on täytetty kalanruotokuvioon ladotuilla '
-            + 'tiilillä, ja julkisivun yli kiipeää villiviini.',
+          selite: 'Portin ympärillä on linnan vanha kaupunginosa, jonka '
+            + 'perinteisissä taloissa kivisen pohjakerroksen päälle '
+            + 'rakennettu puurunkoinen yläkerta työntyy kadun päälle. Ne '
+            + 'ovat Ankaran parhaiten säilynyttä vanhaa rakennuskantaa, ja '
+            + 'osa on kunnostettu ravintoloiksi.',
           lahde: 'Pivox, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13731,18 +13866,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'John Henry Haynes. Gate of castle of Aleppo (id.13993458).jpg',
-          selite: 'Linnoituksen sisäänkäynti vuonna 1887: '
-            + 'hammaslaitaisesta ulkotornista lähtee kaarien varaan '
-            + 'muurattu kivisilta vallihaudan yli korkeaan '
-            + 'porttirakennukseen.',
+          selite: 'Kumpua kiertää 1100-luvulta peräisin oleva vallihauta, '
+            + 'joka on 22 metriä syvä ja 30 metriä leveä, ja sen yli vie '
+            + 'kaarien varaan muurattu kivisilta linnoitettuun '
+            + 'porttirakennukseen. Porttirakennus on vuodelta 1213 ja '
+            + 'näkyvin osa al-Zahir al-Ghazin työtä; kuva on vuodelta 1887.',
           lahde: 'John Henry Haynes, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'In de citadel van Aleppo Zicht op de hoofdpoort vanuit een binnenplaats, Bestanddeelnr 255-5951.jpg',
-          selite: 'Näkymä ulomman portin holvikaaren alta '
-            + 'porttirakennukseen vuonna 1950: kiviportaat nousevat '
-            + 'suoraan ovelle, ja julkisivulla vuorottelevat kivikotelot '
-            + 'ja kapeat pystyaukot.',
+          selite: 'Linnoitukseen pääsee vain yhtä tietä: porttirakennuksesta '
+            + 'käytävä nousee holvattua ramppia ja kääntyy viisi kertaa '
+            + 'suoraan kulmaan kolmen suuren portin läpi, ja holvin yllä on '
+            + 'parvi, jolta kuumaa nestettä kaadettiin tunkeutujien '
+            + 'niskaan. Kuva on vuodelta 1950.',
           lahde: 'Willem van de Poll, Wikimedia Commons (CC0)',
         },
       ],
@@ -13778,16 +13915,19 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Aleppo Bab Antakya 9065.jpg',
-          selite: 'Antiokian portti ulkoa: kaksi järeää kivimassaa nousee '
-            + 'rinnakkain, ja niiden jatkeena kulkee vanhankaupungin '
-            + 'korkea muuri asuintaloineen.',
+          selite: 'Kaksi kuusikulmaista bastionia nousee rinnakkain, ja '
+            + 'niiden välinen kulkuväylä mutkittelee sen sijaan että menisi '
+            + 'suoraan läpi. Nykyinen asu on 1400-luvulta mamelukkien '
+            + 'ajalta, jolloin portti nousi takaisin vanhankaupungin '
+            + 'tunnusmerkiksi.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Aleppo Bab Antakya 9106.jpg',
-          selite: 'Portin aukko lähempää: syvän kärkikaaren sisällä '
-            + 'avautuu toinen, matalampi kaari, ja sen alla käydään '
-            + 'kauppaa maahan levitetyillä paprikoilla.',
+          selite: 'Aukko on oikeanpuoleisen tornin alla puolustussyistä: '
+            + 'sisään tulija ei pääse vauhtiin eikä näe eteensä. Portista '
+            + 'alkaa katetun basaarin pääakseli, joka johtaa kaupungin '
+            + 'halki itään.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13825,10 +13965,12 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bab Qinnasrin2010.jpg',
-          selite: 'Qinnasrinin portin kivinen julkisivu kadun tasolta: '
-            + 'korkea suippokaari kehystää holvattua porttikäytävää, ja '
-            + 'seinässä vuorottelevat vaaleat ja lähes mustat '
-            + 'kivikerrokset.',
+          selite: 'Portti avautuu vanhankaupungin eteläsivulla, ja sen '
+            + 'nykyinen asu on vuodelta 1256; nimi tulee Qinnasrinista, '
+            + 'kaupungista 25 kilometriä lounaassa. Portin ovet olivat alun '
+            + 'perin bysanttilaisen Amorionin kaupunginportin ovet, jotka '
+            + 'kalifi al-Mu\'tasim otti sotasaaliiksi vuonna 838 ja jotka '
+            + 'Sayf al-Dawla haki Aleppoon vuonna 964.',
           lahde: 'Nicholas Johnson, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -13861,17 +14003,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Aleppo Khan al-Sabun 9310.jpg',
-          selite: 'Khanin tunnetuin yksityiskohta: rautaristikkoinen '
-            + 'ikkuna, jonka ympärille on ladottu lomittain mustaa, '
-            + 'vaaleaa ja kellertävää kiveä ja jonka sivuilla ovat '
-            + 'kierrepintaiset pylväät.',
+          selite: 'Sisäänkäynnin yläpuolinen ikkuna on se yksityiskohta, '
+            + 'josta khan tunnetaan: sitä kehystävät kierrepintaiset '
+            + 'pikkupylväät, ja aukon ympärillä vaaleat, mustat ja '
+            + 'kellertävät kivilohkot on leikattu toisiinsa lomittuviksi '
+            + 'paloiksi. Vuorottelevia vaaleita ja tummia kivikerroksia '
+            + 'sanotaan ablaqiksi.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Aleppo Khan al-Sabun 9331.jpg',
-          selite: 'Khanin yläkerran kaarikäytävä: teräväkärkiset '
-            + 'kivikaaret lepäävät massiivisten pilareiden päällä, ja '
-            + 'käytävällä on pinoissa valkoisia ja raidallisia säkkejä.',
+          selite: 'Khan sai nimensä tehtävästään: se on yksi Aleppon '
+            + 'saippuantuotannon päälaitoksista. Kaksikerroksinen talo on '
+            + 'kaupungin vanhimpien säilyneiden khanien nuorimpia — '
+            + 'lähteestä riippuen vuodelta 1479 tai 1500-luvun alusta.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13907,17 +14052,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bimaristan Argun 03.jpg',
-          selite: 'Yksi bimaristanin sisäpihoista: keskellä on '
-            + 'kivireunainen vesiallas, ja perällä avautuu holvattu sali, '
-            + 'jonka kaari on ladottu vuorotellen vaaleasta ja mustasta '
-            + 'kivestä.',
+          selite: 'Talo jakautuu kuuteen osastoon, joista kukin oli varattu '
+            + 'eri hoitomuodolle, ja osastot on ryhmitetty kolmen sisäpihan '
+            + 'ympärille. Hoitoon kuului runsas valo, raitis ilma, juokseva '
+            + 'vesi ja musiikki, joten pihojen mitat ja aukot ovat osa '
+            + 'hoitoa eivätkä pelkkää pohjakaavaa.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Bimaristan Argun fountain.jpg',
-          selite: 'Pienemmän pihan keskellä on kahdeksankulmainen kivinen '
-            + 'allas maljamaisine suihkulähteineen, ja pihaa kiertää rivi '
-            + 'pieniin kammioihin johtavia oviaukkoja.',
+          selite: 'Emiiri Arghun al-Kamili perusti bimaristanin vuonna 1354, '
+            + 'ja se toimi sairaalana runsaat viisisataa vuotta 1900-luvun '
+            + 'alkuun. Perustamisasiakirjat määräsivät, ettei ketään saanut '
+            + 'käännyttää pois ja että potilasta oli hoidettava '
+            + 'paranemiseen saakka.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -13954,16 +14102,19 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Aleppo Beit Ajiqbash 9348.jpg',
-          selite: 'Beit Ajiqbashin sisäpiha: ikkuna-aukkojen ylle on '
-            + 'veistetty kiveen viuhkamaisia koristekenttiä, kasviaiheisia '
-            + 'nauhoja ja ruusukkeita.',
+          selite: 'Talo valmistui vuonna 1757, ja sen rakennutti varakas '
+            + 'kauppias Qarah Ali; nimi tulee myöhemmältä ostajalta '
+            + 'Ashiqbashilta. Sisäpihan aukkojen ylle veistetyt '
+            + 'koristenauhat ja ruusukkeet yhdistävät mamelukkiaiheita ja '
+            + 'rokokoota.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Aleppo Beit Ajiqbash 9363.jpg',
-          selite: 'Pihan iwan eli holvisali, talon kesähuone, jonka koko '
-            + 'etusivu on auki pihalle ja jonka kaaren kivet ovat vuoroin '
-            + 'vaaleita ja tummia.',
+          selite: 'Iwan on talon kesähuone: korkea holvisali, jonka neljäs '
+            + 'seinä puuttuu kokonaan. Sitä vastapäätä on qaa eli '
+            + 'vastaanottohuone, ja kadulle päin talo ei näytä mitään — '
+            + 'kokoa ei arvaa ulkoa.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -14022,10 +14173,11 @@ export const NAHTAVYYSJUTUT = {
         },
         {
           tiedosto: 'Damascus north-western tower of the Citadel 1410.jpg',
-          selite: 'Luoteisnurkan torni alaviistosta: kiviladonta on '
-            + 'karkeaa ja lohkopintaista, seinässä on kapeita '
-            + 'ampuma-aukkoja, ja ylimpänä työntyy ulos kannatinkivien '
-            + 'varaan muurattuja ulokkeita.',
+          selite: 'Tornit tehtiin pyöreiden sijaan neliömäisiksi ja niiden '
+            + 'päälle tasanteet omille heittokoneille, koska uusi '
+            + 'vastapainoheittokone mursi paksunkin kivimuurin. Torneja oli '
+            + '14; kaksi läntistä sortui vuoden 1759 maanjäristyksessä, '
+            + 'joten pystyssä on 12.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -14062,23 +14214,30 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Damascus east and south side of courtyard of Umayyad Mosque 8078.jpg',
-          selite: 'Umaijadien moskeijan kivetyn pihan itä- ja eteläsivu: '
-            + 'kaksikerroksinen kaarikäytävä, pylväiden varassa lepäävä '
-            + 'kupolipaviljonki ja pihan yllä kohoava kapea minareetti.',
+          selite: 'Moskeijan pohjakaava on suorakaide, 97 metriä kertaa 156, '
+            + 'ja eteläisen puoliskon täyttää rukoussali; loput on avointa '
+            + 'kivettyä pihaa. Pihaa kiertävässä kaarikäytävässä on kahden '
+            + 'pylvään välissä aina yksi järeämpi pilari, mutta '
+            + 'pohjoissivulla rivi katkeaa: se sortui vuoden 1759 '
+            + 'maanjäristyksessä eikä pylväitä palautettu.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Damascus Barada Panel of Umayyad Mosque 8130.jpg',
-          selite: 'Pihan kultapohjaista mosaiikkia lähietäisyydeltä: '
-            + 'puita, pylväiköitä ja pieniä taloja joen varrella, eikä '
-            + 'yhtään ihmistä tai eläintä ole kuvattu.',
+          selite: 'Pihan kultapohjaisen mosaiikin aiheena on maisema — leveä '
+            + 'joki, puurivejä ja monikerroksisia pylväikkötaloja '
+            + 'myöhäisroomalaiseen tapaan — eikä ihmis- tai eläinhahmoja '
+            + 'ole yhtään. Maantieteilijä al-Muqaddasi kirjoitti '
+            + '900-luvulla, ettei seiniltä puutu juuri yhtään puuta eikä '
+            + 'mainittavaa kaupunkia.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'The Great Umayyed Mosque of Damascus, Syria, and Khazne (Treasury).jpg',
-          selite: 'Aarrekammion kahdeksankulmainen runko lepää '
-            + 'roomalaisten pylväiden korinttilaisten kapiteelien päällä, '
-            + 'ja sen pintaa peittää kultapohjainen lehtiköynnösmosaiikki.',
+          selite: 'Aarrekammion rakennutti abbasidikuvernööri vuosina '
+            + '789–790 moskeijan varoille, ja sen kahdeksankulmainen runko '
+            + 'lepää kahdeksan roomalaisen pylvään päällä pihan '
+            + 'länsipäässä.',
           lahde: 'James Gordon from Los Angeles, California, USA, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -14111,16 +14270,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Damascus Propylaeum at west of Umayyad Mosque 1420.jpg',
-          selite: 'Hamidiyyan suukin itäpää päättyy roomalaiseen '
-            + 'porttikaareen, jonka läpi näkyy Umaijadien moskeijan '
-            + 'sisäänkäynti värillisine viuhkaikkunoineen.',
+          selite: 'Kuja päättyy itäpäässä Jupiterin temppelin '
+            + 'porttirakennelmaan: roomalaiset alkoivat rakentaa temppeliä '
+            + 'ensimmäisellä vuosisadalla jaa., ja portti on sen läntisen '
+            + 'sisäänkäynnin säilynyt osa. Sen takana avautuu Umaijadien '
+            + 'moskeijan aukio.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Ingang van suq Hamidieh, Bestanddeelnr 255-5877.jpg',
-          selite: 'Suukin länsipää vuonna 1950: metalliholvin '
-            + 'puoliympyräiseen päätyyn on ripustettu suuria käsin '
-            + 'maalattuja elokuvajulisteita arabiankielisin tekstein.',
+          selite: 'Suuki on Syyrian suurin: kuja on noin 600 metriä pitkä ja '
+            + '15 metriä leveä, ja sen yllä kaartuu kymmenen metrin '
+            + 'korkuinen metalliholvi. Ottomaanien aikaan rakennettua kujaa '
+            + 'kutsuttiin jo vuoden 1898 matkaoppaassa uudeksi ja komeasti '
+            + 'koristelluksi basaariksi; kuva on vuodelta 1950.',
           lahde: 'Willem van de Poll, Wikimedia Commons (CC0)',
         },
       ],
@@ -14157,17 +14320,19 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Khan As\'ad Pasha Panorama.jpg',
-          selite: 'Khanin katettu piha holvikäytävän alta: '
-            + 'mustavalkoraidallinen pilari, kupolit ikkunarenkaineen ja '
-            + 'keskellä suihkuallas puisten ristikkoparvekkeiden '
-            + 'ympäröimänä.',
+          selite: 'Pihaa ei jätetty auki taivaalle vaan katettiin '
+            + 'kahdeksalla kupolilla, joiden keskelle jätettiin yksi suuri '
+            + 'aukko valolle ja ilmalle. Katto nostettiin korkealle, ja '
+            + 'juuri korkeus pitää katetun pihan siedettävänä sekä kuumana '
+            + 'kesänä että kylmänä talvena.',
           lahde: 'Bassel Khabbaz, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'A Dome in Khan As\'ad Pasha- قبة في خان أسعد باشا.jpg',
-          selite: 'Yksi khanin kahdeksasta kupolista alhaalta: kehä kehän '
-            + 'perään maalattuja pisara- ja neliapilamedaljonkeja okran, '
-            + 'harmaan ja violetin sävyissä.',
+          selite: 'Khanin rakennutti Damaskoksen kuvernööri As\'ad Pasha '
+            + 'al-Azm: työ alkoi 1751 ja valmistui 1752, kaksi vuotta hänen '
+            + 'oman Azm-palatsinsa jälkeen. Rakennus on vanhankaupungin '
+            + 'suurin khan, pinta-alaltaan 2 500 neliömetriä.',
           lahde: 'Hani Zaitoun, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -14203,16 +14368,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Damascus Bab Sharqi (Eastern Gate) 8210.jpg',
-          selite: 'Itäportti ulkoa: korkea keskikaari ja sen kummallakin '
-            + 'puolella matalampi jalankulkijoiden aukko, eli portin '
-            + 'alkuperäinen kolmiaukkoinen muoto.',
+          selite: 'Bab Sharqi on ainoa Damaskoksen roomalaisista porteista, '
+            + 'joka seisoo yhä, ja ainoa kaupungin kahdeksasta portista, '
+            + 'joka on säilyttänyt alkuperäisen kolmiaukkoisen muotonsa: '
+            + 'keskellä leveä aukko karavaaneille, kummallakin puolella '
+            + 'kapeampi jalankulkijoille. Portti pystytettiin noin vuonna '
+            + '200 jaa.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'De Bab Sharqi (Oostpoort) in de stadsmuur van Damascus, Bestanddeelnr 255-5863.jpg',
-          selite: 'Sama portti vuonna 1950: käytössä on vain yksi kaari, '
-            + 'ja portin vierestä nousee vaalea nelikulmainen minareetti '
-            + 'puisine parvekkeineen ja kartiohuippuineen.',
+          selite: 'Roomalaiset omistivat portin auringolle ja kutsuivat sitä '
+            + 'Auringon portiksi; Nur ad-Din Zangi teetti siihen muutoksia '
+            + '1100-luvulla. Portista alkaa suora katu, roomalaisen '
+            + 'kaupungin yli 1 500 metrin decumanus; kuva on vuodelta 1950.',
           lahde: 'Willem van de Poll, Wikimedia Commons (CC0)',
         },
       ],
@@ -14246,16 +14415,19 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Damascus-Bab Kisan.jpg',
-          selite: 'Kisanin portti edestä: kaksi ulkonevaa kivitornia '
-            + 'pyöreine punoskoristeisine medaljonkeineen, ja niiden '
-            + 'välissä umpeen muurattu porttiaukko ja tumma puuovi.',
+          selite: 'Portti seisoo vanhankaupungin muurin kaakkoiskulmassa, ja '
+            + 'roomalaiset omistivat sen Saturnukselle. Porttiaukko on '
+            + 'muurattu umpeen ja rakennus otettiin Pyhän Paavalin '
+            + 'kappeliksi, joka vihittiin vuonna 1939 ja jonka rakenteisiin '
+            + 'ladottiin kiviä itse portista.',
           lahde: 'Heretiq, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Szent Pál kapuja és kápolnája.jpg',
-          selite: 'Sama rakennus viistosti: kulmatornin lohkareet ovat eri '
-            + 'kokoisia ja käsin hakattuja, ja portaikko mustine '
-            + 'kaiteineen johtaa holvatulle ovelle.',
+          selite: 'Kristillisen perinteen mukaan Paavali laskettiin täältä '
+            + 'yöllä korissa muurin ikkuna-aukosta alas. Raamatun kohdat '
+            + 'puhuvat kuitenkin ikkunasta eivätkä portista, joten yhteys '
+            + 'tähän porttiin on perimätietoa.',
           lahde: 'Kocsis Fülöp, Hajdúdorogi Főegyházmegye, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -14305,17 +14477,21 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Louksor (Thèbes), Construction Antérieure - Pylône Colosses et Obélisque MET DP144527.jpg',
-          selite: 'Luxorin temppelin pyloni 1850-luvun alussa: obeliskin '
-            + 'jalusta on hiekan alla, ja kahden istuvan kolossin '
-            + 'kruunupäät ja hartiat pistävät esiin maasta.',
+          selite: 'Ramses II rakensi sisäänkäynnin noin sata vuotta '
+            + 'Amenhotep III:n jälkeen: 24 metriä korkean pylonin, jonka '
+            + 'kiveen hakattiin hänen sotavoittonsa. Portin edessä seisoi '
+            + 'kuusi hänen kolossiaan, joista jäljellä on kaksi istuvaa; '
+            + '1850-luvun alun kuvassa ne ja obeliskin jalusta ovat vielä '
+            + 'hiekan alla.',
           lahde: 'Félix Teynard, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Louksor (Thèbes). Construction Centrale - Grande Colonnade MET DP71345.jpg',
-          selite: 'Luxorin temppelin suuri pylväskäytävä samalla matkalla '
-            + 'kuvattuna: viisi järeää pylvästä vinossa rivissä, '
-            + 'papyruskukkakapiteelit osin lohjenneina ja juuret '
-            + 'hiekkakinoksen peitossa.',
+          selite: 'Suuri pylväskäytävä on Amenhotep III:n työtä 1300-luvulta '
+            + 'eaa.: sata metriä pitkä kulkuväylä, jota reunustaa 14 '
+            + 'papyruskukkapäistä pylvästä, ja seiniin on kuvattu '
+            + 'Opet-juhlan vaiheet. Samalla 1850-luvun matkalla kuvattaessa '
+            + 'pylväiden juuret olivat yhä hiekkakinoksen peitossa.',
           lahde: 'Félix Teynard / Imprimerie photographique H. de Fonteny et Cie, Wikimedia Commons (CC0)',
         },
       ],
@@ -14355,23 +14531,30 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Luxor Museum 1.JPG',
-          selite: 'Luxorin museo rantakadun varrella: matala punaruskea '
-            + 'seinä ilman ikkunoita, vain kapeita pystyrakoja rivissä, ja '
-            + 'nurmikolla kaksi tummaa kivipatsasta.',
+          selite: 'Museo avattiin 1975 Niilin itärannalle rantakadun '
+            + 'varteen, ja kaksikerroksisen talon piirsi Mahmud El Hakim jo '
+            + '1962. Esillä on tarkoituksella paljon vähemmän kuin Kairon '
+            + 'egyptiläisessä museossa: vähän esineitä, väljä ripustus ja '
+            + 'monikieliset selitteet.',
           lahde: 'Charlesdrakew at English Wikipedia, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Luxor Museum Amenophis III. Statue 05.jpg',
-          selite: 'Amenhotep III:n kvartsiittipatsas Luxorin museossa: '
-            + 'päässä on kaksoiskruunu, leuassa seremoniaparta ja '
-            + 'jalustana kelkka, jonka jalakset työntyvät edessä esiin.',
+          selite: 'Patsas tuli esiin vuonna 1989, kun Luxorin temppelin '
+            + 'aurinkopihan alta kaivettiin 26 patsaan kätkö; ne oli '
+            + 'haudattu, kun roomalaiset muuttivat alueen sotilasleiriksi. '
+            + 'Kartušeista on hakattu pois yksi ainoa sana, Amunin nimi — '
+            + 'Ekhnatonin jälki isänsä jumalaa vastaan.',
           lahde: 'Olaf Tausch, Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Luxor Museum Relief Talatat 06.jpg',
-          selite: 'Talatat-seinä koottuna Luxorin museossa: pienistä '
-            + 'kivilohkoista ladotuissa kuvavyöhykkeissä on nautoja, '
-            + 'uhrikasoja ja kantotankoja kantavia miehiä.',
+          selite: 'Ekhnatonin Karnakiin rakennuttamat Aten-temppelit '
+            + 'purettiin, ja vakiokokoiset talatat-lohkot — 27 × 27 × 54 '
+            + 'senttiä eli puoli kertaa puoli kertaa yksi kyynärä — '
+            + 'muurattiin pyloonien täytteeksi. Yhdeksännestä pyloonista '
+            + 'saadut kivet on tunnistettu ja koottu takaisin seinäksi kuin '
+            + 'palapeli.',
           lahde: 'Olaf Tausch, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -14407,23 +14590,29 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Luxor Temple Avenue of Sphinxes (9794899133).jpg',
-          selite: 'Sfinksikuja Luxorin temppelin päästä: vaalea kivetty '
-            + 'väylä kulkee suorana kohti taivaanrantaa ihmispäisten '
-            + 'sfinksien reunustamana.',
+          selite: 'Kuja kulkee suorana 2,7 kilometriä Luxorin temppelin ja '
+            + 'Karnakin välillä, ja sen molemmin puolin seisoi 1 057 '
+            + 'kivipatsasta: 807 sfinksiä ja 250 pässinpäistä. Koko linja '
+            + 'kaivettiin auki vuosina 1984–2000, ja kuja avattiin '
+            + 'kulkijoille marraskuussa 2021.',
           lahde: 'Gary Todd from Xinzheng, China, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Theban region, Temple Complex of Amon in Karnak, 19th century pictures, 1870-1888, photo 2 of 91 - Archivio fotografico Museo Egizio, Turin INV08 005.jpg',
-          selite: 'Karnakin pässinpäisiä sfinksejä ruskeasävyisessä '
-            + 'valokuvassa: rivi patsaita korkeilla kivijalustoilla, ja '
-            + 'suurimman leuan alla seisoo pieni kuninkaanhahmo.',
+          selite: 'Karnakin ja Mutin alueen välisellä noin 300 metrin '
+            + 'pätkällä patsailla on leijonan ruumis ja pässin pää, ja ne '
+            + 'ovat Tutankhamonin ajalta. Kuva on 1800-luvulta, jolloin '
+            + 'kuja oli suurimmaksi osaksi vielä hiekan alla.',
           lahde: 'Antonio Beato, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Karnak (Thèbes), Sphinx a Tête Humaine et a Tête de Bélier, en Y MET DP71386.jpg',
-          selite: 'Kujan kaksi patsaslajia rinnakkain maahan vajonneina: '
-            + 'pässinpäinen sfinksi ja sen takana ihmispäinen sfinksi '
-            + 'nemes-päähineessään hartioita myöten mullassa.',
+          selite: 'Kujan patsaissa on kolme muotoa: pässinpäinen sfinksi, '
+            + 'kokonainen pässipatsas ja ihmispäinen sfinksi, joita riittää '
+            + 'runsaan puolentoista kilometrin matkalle Luxorin temppelille '
+            + 'asti. Kuja hautautui vuosisatojen mittaan hiekan alle, ja '
+            + 'ensimmäiset patsaat löytyivät Luxorin päästä vasta vuonna '
+            + '1949.',
           lahde: 'Félix Teynard / Imprimerie photographique H. de Fonteny et Cie, Wikimedia Commons (CC0)',
         },
       ],
@@ -14458,17 +14647,21 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Egipto, 1882 "Las Estatuas on cabeza de Leon en Karnak" (21683939911).jpg',
-          selite: 'Mutin alueen pyhä allas vuoden 1882 kirjan '
-            + 'värilehdellä, jonka on signeerannut C. Werner: rannalla '
-            + 'istuu rivi tummia leijonapäisiä patsaita ja yksi makaa '
-            + 'kaatuneena hiekassa.',
+          selite: 'Mutin temppeliä kiertää kolmelta sivulta pitkä kaareva '
+            + 'allas, Isheru: temppelin tekstien mukaan jumalat kaivoivat '
+            + 'sen viilentämään Mutin tulista luonnetta. Alueelta on '
+            + 'kaivettu satoja mustasta granodioriitista veistettyjä '
+            + 'Sekhmet-patsaita; kuva on vuoden 1882 kirjan värilehdeltä.',
           lahde: 'Fondo Antiguo de la Biblioteca de la Universidad de Sevilla from Sevilla, España, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Ruines du temple de Mout - A3167.jpg',
-          selite: 'Mutin temppelin raunioalue vuoden 1914 '
-            + 'autokromilevyllä, johon on kirjoitettu käsin EGYPTE A 3167: '
-            + 'kaatuneita hiekkakivilohkareita ja päättömiä patsastorsoja.',
+          selite: 'Muurien sisällä on noin yhdeksän hehtaaria ja ainakin '
+            + 'kuusi temppeliä, ja Ramses III:n rakentama temppeli C '
+            + 'purettiin jo 25. dynastian aikana louhokseksi. Alueen '
+            + 'ensimmäisen ison kaivauksen teki Margaret Benson, joka sai '
+            + '1895 ensimmäisenä naisena kaivausluvan Egyptissä; kuva on '
+            + 'vuoden 1914 autokromilevyltä.',
           lahde: 'Léon Auguste, Wikimedia Commons (CC0)',
         },
       ],
@@ -14504,18 +14697,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Théodule Devéria (French - (Portal of the Temple of Khonsu, Karnak) - Google Art Project.jpg',
-          selite: 'Ptolemaios III Euergeteen portti edestäpäin noin vuonna '
-            + '1860: ovenpielet on jaettu ruutuihin, joissa kuningas '
-            + 'seisoo jumalten edessä, ja päällä on siivekäs '
-            + 'aurinkokiekko.',
+          selite: 'Portin rakennutti Ptolemaios III Euergetes, joka hallitsi '
+            + '246–222 eaa., ja se on samalla sfinksikujan pohjoispää. Sama '
+            + 'kuningas teetti myös ympärysmuurin, jota ei ole enää '
+            + 'pystyssä; kuva on noin vuodelta 1860.',
           lahde: 'Théodule Devéria, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Karnak Tempel Chons 06.jpg',
-          selite: 'Khonsun temppelin pylväspiha sisältä pylonia kohti: '
-            + 'oviaukon yllä kulkee kourulista siivekkäine '
-            + 'aurinkokiekkoineen, ja osassa pylväitä on maalit yhä '
-            + 'jäljellä.',
+          selite: 'Khonsun temppeli on säilynyt lähes kokonaisena, joten '
+            + 'siitä näkee egyptiläisen temppelin koko kaavan: pyloni, '
+            + 'avoin pylväspiha, katettu pylvässali, sivukappelit ja '
+            + 'perimmäisenä pyhäkkö. Rakennuttaja oli Ramses III, ja kiveä '
+            + 'kierrätettiin ympäröivistä rakennuksista — seinissä on '
+            + 'lohkareita, joiden kuviot eivät jatku naapurikiveen.',
           lahde: 'Olaf Tausch, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -14551,16 +14746,21 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Karnak (Thèbes), Palais - Salle Hypostyle - Fenêtre et Chapiteaux des Galeries Latérales MET DP71376.jpg',
-          selite: 'Félix Teynardin valokuva vuosilta 1851–52 sivulaivan '
-            + 'yllä kohoavasta ikkunaseinästä, jonka keskimmäisessä '
-            + 'aukossa on yhä kivipuikoista veistetty ritilä.',
+          selite: 'Keskikäytävän ja sivulaivojen korkeusero täytettiin '
+            + 'seinällä, johon hakattiin ikkunat kivestä veistettyine '
+            + 'pystyritilöineen; muualta katto oli umpinainen, joten '
+            + 'päivänvalo putosi saliin vain tästä. Félix Teynardin '
+            + 'valokuva on vuosilta 1851–52.',
           lahde: 'Félix Teynard / Imprimerie photographique H. de Fonteny et Cie, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Hall of columns, Karnac, RP-F-F25403-AG.jpg',
-          selite: 'Francis Frithin valokuva vuodelta 1857 suuresta '
-            + 'pylvässalista: pylväiden yläpäät ovat murtuneet, ja maa on '
-            + 'kaatuneiden kivilohkareiden peitossa.',
+          selite: 'Salin 5 000 neliömetrin kattoa kannatti 134 pylvästä, '
+            + 'joista keskikäytävän kaksitoista tehtiin muita korkeammiksi '
+            + 'ja paksummiksi. Francis Frithin vuoden 1857 valokuva on '
+            + 'otettu ennen vuotta 1899, jolloin yksitoista suurta pylvästä '
+            + 'kaatui ketjureaktiona pohjaveden syötyä niiden perustukset; '
+            + 'Georges Legrain sai pystytystyön valmiiksi toukokuussa 1902.',
           lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
         },
       ],
@@ -14615,16 +14815,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Masmak Fortress (6329473680).jpg',
-          selite: 'Linnoituksen pääjulkisivu: sileässä savimuurissa on rivi '
-            + 'nelikulmaisia aukkoja, päissä kolmiohampaiset pyöreät '
-            + 'nurkkatornit ja portin syvennyksessä kaksilehtinen puuovi.',
+          selite: 'Linnoitus on savitiiltä ja savilaastia, ja sen neljä '
+            + 'nurkkatornia ovat kukin noin 18 metriä korkeita ja '
+            + 'seiniltään 1,25 metriä paksuja. Länsimuurin pääportin '
+            + 'palmupuinen ovi on 3,6 metriä korkea, ja sen keskellä on '
+            + 'juuri yhden ihmisen kokoinen aukko al-Khokha, josta väki '
+            + 'kulkee ilman että porttia avataan.',
           lahde: 'Sammy Six, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Masmak Citadel, Riyadh (14372839641).jpg',
-          selite: 'Sisäpihaa kiertävä pylväskäytävä, jossa valkoiseksi '
-            + 'rapattujen nelikulmaisten pilarien päällä on kattona '
-            + 'tiiviisti vierekkäin ladottuja pyöreitä puunrunkoja.',
+          selite: 'Työ alkoi 1865 ja valmistui 1895; 13. tammikuuta 1902 '
+            + 'Abdulaziz ibn Saud palasi Kuwaitin maanpaosta ja otti '
+            + 'linnoituksen yöllisessä iskussa. Rakennus oli asevarastona '
+            + 'vuoteen 1938, ja 1995 se avattiin museona yleisölle.',
           lahde: 'Rick McCharles from Calgary, Canada, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -14656,18 +14860,21 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Deera Square and Imam Turki bin Abdullah Mosque (1).jpg',
-          selite: 'Imam Turkin moskeija Deeran aukion laidalta heinäkuussa 2024: '
-            + 'pitkässä kalkkikiviseinässä on pieniä neliöikkunoita ja rivi '
-            + 'syviä oviaukkoja, ja suorakulmaiset minareetit päättyvät '
-            + 'hammasmaiseen harjaan.',
+          selite: 'Alkuperäinen suurmoskeija rakennettiin 1826–1830 Turki '
+            + 'bin Abdullahin aikana, ja hänet surmattiin 1834 '
+            + 'perjantairukouksesta lähtiessään. Nykyinen rakennus on '
+            + 'vuodelta 1992: sisätilaa on 16 800 neliömetriä ja '
+            + 'rukoilijoita mahtuu 17 000, ja arkkitehti Rasem Badran sai '
+            + 'työstä Aga Khan -arkkitehtuuripalkinnon 1995.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
         {
           tiedosto: 'Qasr Al Hukm Palace, 2022.jpg',
-          selite: 'Aukion vastakkaisella laidalla hallintopalatsi Qasr al-Hukm '
-            + 'joulukuussa 2022: kalkkikiviseinän harjassa on hammasmainen '
-            + 'sahalaita, ja keskeltä työntyy ulos ylempi kerros kahtine '
-            + 'suurine aukkoineen.',
+          selite: 'Hallintopalatsi Qasr al-Hukm on Deeran aukion '
+            + 'vastakkaisella laidalla, ja sen ensimmäisestä kerroksesta '
+            + 'johtaa moskeijalle kaksi katettua siltaa as-Safaatin aukion '
+            + 'yli. Koko korttelin uudistus kesti vuodesta 1983 vuoteen '
+            + '1992.',
           lahde: 'Geektaker, Wikimedia Commons (CC0)',
         },
       ],
@@ -14764,17 +14971,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Murabba Palace (1).jpg',
-          selite: 'Palatsialueen savitiilimuuri kulmasta katsottuna: pinnassa '
-            + 'kulkee pystysuora harjattu kuviointi ja harjalla valkoiseksi '
-            + 'maalattu kolmiohampainen reunus.',
+          selite: 'Nimi tarkoittaa arabiaksi neliötä, ja neliö on mitta: '
+            + 'muurin ympäröimä alue on 400 metriä kertaa 400 eli runsaat '
+            + '16 hehtaaria. Seinät ovat oljella lujitettua savitiiltä, '
+            + 'pintaan on kaiverrettu kuvioita, ja muurissa on yhdeksän '
+            + 'porttia.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
         {
           tiedosto: 'Murabba Palace7.jpg',
-          selite: 'Palatsin sali museokäytössä: marmorikuvioisiksi maalatut '
-            + 'pylväät kannattavat vaaleanvihreää kattoa, ja seinien '
-            + 'vierillä kiertävät matalat istuinpenkit punakuvioisin '
-            + 'patjoin.',
+          selite: 'Kaksikerroksisessa palatsissa on 32 huonetta: alakerrassa '
+            + 'varastot, vartiointi ja hallinto, yläkerrassa '
+            + 'vastaanottosali, toimistot ja vierashuoneet. Abdulaziz '
+            + 'siirsi hovinsa Masmakin linnoituksesta tänne 1938 ja asui '
+            + 'täällä kuolemaansa 1953; vuodesta 1999 talo on ollut museo.',
           lahde: 'saudipics, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -14813,25 +15023,27 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'National Museum Riyadh (6781666263).jpg',
-          selite: 'Museon sisäänkäynti illalla: valonheittimet nostavat '
-            + 'hiekankeltaisen kiviverhouksen esiin mustaa taivasta vasten, '
-            + 'ja seinä kapenee teräväksi kärjeksi kuin veneen keula.',
+          selite: 'Talon piirsi kanadalainen Raymond Moriyama, ja esikuvana '
+            + 'olivat Riadin ulkopuolisten Punaisten hiekkojen dyynit: '
+            + 'pohjakaava kaartuu puolikuuksi, jonka kärki osoittaa '
+            + 'Mekkaan. Museo avattiin 23. tammikuuta 1999, ja '
+            + 'suunnitteluun ja rakentamiseen jäi vain 26 kuukautta.',
           lahde: 'Sammy Six, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'National Museum of Saudi Arabia 01.jpg',
-          selite: 'Rautameteoriitti graniittijalustalla, aikuisen ihmisen '
-            + 'levyinen ja rinnan korkuinen tumma möhkäle, jonka jalustan '
-            + 'kyltissä lukee ”Meteorite: Found in the Empty Quarter (2.75 '
-            + 'tons)”.',
+          selite: 'Näyttelyn aloittaa rautameteoriitti Rub al-Khalin Wabarin '
+            + 'kraattereista, nimeltään Kamelinkyttyrä. Aramcon nostoryhmä '
+            + 'punnitsi sen vuonna 1966 ja sai tulokseksi 2 045 kiloa, '
+            + 'mutta museon kyltti lupaa 2,75 tonnia.',
           lahde: 'Gryffindor, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'National Museum of Saudi Arabia 02.jpg',
-          selite: 'Ihminen ja maailmankaikkeus -sali, jossa tekokalliolla seisoo '
-            + 'norsun kokoinen luuranko suorine syöksyhampaineen ja '
-            + 'kaarevalla seinällä on kalaliskon luuranko laattaan '
-            + 'asetettuna.',
+          selite: 'Salin luurangoista toinen on kalalisko ja toinen '
+            + 'Platybelodon, norsun sukulainen, jonka alaleuka päättyi '
+            + 'leveään lapioon. Näyttely kulkee kaikkiaan kahdeksassa '
+            + 'salissa, joista kolme on pohjakerroksessa ja viisi ylhäällä.',
           lahde: 'Gryffindor, Wikimedia Commons (CC0)',
         },
       ],
