@@ -228,6 +228,23 @@ export const FOKUSKOHTEET_TUR = [
         lahde: 'Matkakirjan havainnekuva',
       },
     ],
+    /*
+     * MATKAKIRJAN IHME — säännöt js/packs/fokuskohteet-grc.js:n
+     * samannimisessä lohkossa. `kadonnut: false`: Efesos itse on yhä
+     * käveltävissä ja kohteella on oma valokuva, joten kartalla säilyy
+     * historian pylväs ja kortin yläosaan tulee "Koe ihme" -nappi.
+     */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-artemiin-temppeli.webp',
+      kadonnut: false,
+      selite: 'Artemiin temppelissä oli yli sata seitsemäntoistametristä '
+        + 'marmoripylvästä, ja se oli antiikin kuuluisin '
+        + 'pyhiinvaelluskohde. Viimeinen temppeli tuhoutui vuonna 401 '
+        + 'jaa.; paikalla on nyt soistuneella kentällä vain kivijalka ja '
+        + 'yksi kokoon kasattu pylväs.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
+    },
   },
   {
     id: 'kappadokia',
@@ -1186,6 +1203,17 @@ export const FOKUSKOHTEET_TUR = [
         + 'Museumiin viedyt veistokset — porrastettu pyramidikatto ja '
         + 'vaunuryhmä huipulla ovat antiikin kuvausten mukaisia.',
       lahde: 'Matkakirjan havainnekuva',
+    },
+    /* MATKAKIRJAN IHME (kadonnut) — säännöt fokuskohteet-grc.js:ssä. */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-halikarnassoksen-mausoleumi.webp',
+      kadonnut: true,
+      selite: 'Mausoloksen noin 45-metrinen hauta valmistui 351 eaa., ja '
+        + 'sitä ihailtiin niin, että rakennuksen nimestä tuli sana '
+        + 'mausoleumi. Maanjäristykset kaatoivat sen keskiajalla ja kivet '
+        + 'muurattiin Bodrumin linnaan, joka vartioi lahden suuta yhä.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
     },
   },
 ];

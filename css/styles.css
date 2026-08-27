@@ -19914,6 +19914,24 @@ body.fokuspohja .maa-pilleri { display: none; }
   --sym-merenkulku: #34566d;   /* meren tummansininen — merenkulku ja satamat */
   --sym-urheilu: #93893c;      /* kullanvihreä — urheilu ja kisat */
   --sym-kaupunki: #8a6d4a;  /* muurinruskea — kaupungit (porttitorni) */
+  --sym-ihme: #b8862b;      /* vanha kulta — Matkakirjan kadonneet ihmeet (tähti) */
+}
+
+/* TÄHTI — Matkakirjan ihme, kohde jota ei enää ole (Raamattu, osio
+ * "Matkakirjan ihmeet"). Kompassiruusun sakarat kullassa, ja niiden
+ * juuressa hiuksenohut musteinen kehä, joka sitoo tähden laattaan. */
+.nostosym-tahti {
+  fill: var(--sym-ihme);
+  stroke: var(--sym-muste);
+  stroke-width: 0.7;
+  stroke-linejoin: round;
+}
+
+.nostosym-tahtikeha {
+  fill: none;
+  stroke: var(--sym-muste);
+  stroke-width: 0.5;
+  stroke-opacity: 0.5;
 }
 
 /* Täkysymbolien oma osuma-alue (.nostosym-osuma) poistui 26.8.2026:

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1184, teksti: 'Matkakirjan ihmeet: nykyaikakuvat, tahtisymboli, Koe ihme' },
   { v: 1183, teksti: 'Liput era 10: Afrikan pohjoinen ja lantinen puolisko' },
   { v: 1182, teksti: 'Kuvatekstiremontti era 1: 116 selitetta 12 kaupungista' },
   { v: 1181, teksti: 'Sankarien aukion faktakorjaus ja taydennys' },

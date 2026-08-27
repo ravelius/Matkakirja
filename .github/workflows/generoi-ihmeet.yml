@@ -1,25 +1,43 @@
-# Kadonneiden ihmeiden ja loistoajan havainnekuvien eräajo OpenAI:n
-# kuva-API:lla. Omistajan tilaus 26.8.2026: "peliin voisi generoida
-# kaikki antiikin kadonneet ihmeet sekä jos on muita vastaavia
-# kadonneita, niin generoidaan ne kaikki" + Hefaistoksen temppelistä
-# "tämäkin olisi mielenkiintoinen nähdä generoituna". Lupa API-ajoon:
-# Raamattu, osio "Kuvat ja lähteet", kohta KUVAGENEROINNIN TYÖNJAKO
-# ("Saat generoida aina kaiken muun apin kautta paitsi herokuvat").
+# MATKAKIRJAN IHMEET — eräajo OpenAI:n kuva-API:lla. Raamattu, osio
+# "Matkakirjan ihmeet" (omistaja 27.8.2026): *"kadonnut suuruus
+# palautetaan pelaajan silmien eteen FOTOREALISTISENA KESKELLÄ
+# NYKYMAAILMAA — Faros nyky-Aleksandrian Cornichen ruuhkassa, kolossi
+# Mandrakin jahtisatamassa, värikäs Parthenon nykyturistien ympäröimänä.
+# 'Saa kokea pienen ihmeen kun näkee jotain mitä on jo tavallaan
+# kadonnut nykymaailmasta.'"* Lupa API-ajoon: Raamattu, osio "Kuvat ja
+# lähteet", kohta KUVAGENEROINNIN TYÖNJAKO ("Saat generoida aina kaiken
+# muun apin kautta paitsi herokuvat").
 #
-# ERO SYMBOLIAJOON (.github/workflows/generoi-symbolit.yml, tämän
-# malli): symbolit ovat läpinäkyviä neliöitä, nämä ovat MAISEMIA.
-# Siksi 3:2-vaakakuva ilman läpinäkyvyyttä ja jpg — kuvat menevät
-# kohdekortin kuvapaikkaan (js/fokuskohteet.js), joka on vaakarajattu
-# eikä koskaan tarvitse alfakanavaa. Integroija pienentää ja muuntaa
-# webpiksi polkuun assets/kartat/ihmeet/<tunnus>.webp, joka on juuri se
-# polku, jonka kohteiden `osoite`-kenttä jo lupaa.
+# TYYLI VAIHTUI 27.8.2026, ja se on koko työn ydin. Ensimmäinen erä
+# (26.8.2026) oli 1800-luvun akvarelloitu rekonstruktiolitografia, ja
+# ne kuvat ovat yhä pelissä loistoaikakuvina
+# (assets/kartat/ihmeet/<tunnus>.webp, kohteiden `kuva`/`kuvat`-kentät)
+# — vanha promptipohja on git-historiassa. Tämä pohja tekee eri asian:
+# TAVALLISEN DOKUMENTTIVALOKUVAN, jossa ehjä antiikin kohde seisoo
+# keskellä tämän päivän kaupunkia. Kaava hiottiin kolmen koesarjan
+# kautta, ja lopullinen muoto on POHJA alempana: candid documentary
+# photograph, hieman koholla oleva kuvakulma, runsaasti nykyaikaista
+# kaupunkiympäristöä, aurinkoinen valo pitkine varjoineen, natural
+# white balance, vaimeat värit, 35 mm — ja ihmisiä VAIN harvassa,
+# pieninä ja arkipuuhissa. Kuvaavat turistit, ryhmät ja etualan
+# henkilöt pilaavat kuvan: siitä tulee mainos eikä havainto.
 #
-# TYYLI ON 1800-LUVUN TIETEELLINEN REKONSTRUKTIOPIIRROS eikä
-# valokuvamainen render: akvarellilla väritetty litografia, sama
-# kuvakieli kuin isoisän matkakirjan aikakaudella. Se on myös
-# REHELLISYYSKEINO — piirros ei esitä olevansa valokuva paikasta, jota
-# ei ole. Jokaisen kohteen `selite` kertoo saman sanoin, ja lähderivi
-# on aina 'Matkakirjan havainnekuva'.
+# EI HDR:ÄÄ, EI ELOKUVAVALOA, EI PIIRROSTA. Ylikylläinen tai
+# "cinematic" kuva näyttää renderiltä, ja juuri se särkee illuusion.
+# Kielloissa on myös 'no ruins': kohde on ehjä, muuten kuva on vain
+# valokuva nykyisistä raunioista.
+#
+# REHELLISYYS EI OLE ENÄÄ TYYLISSÄ VAAN PELISSÄ. Kun kuva näyttää
+# valokuvalta, sen on sanottava itse olevansa havainnekuva: peli
+# piirtää kuvan vasempaan yläkulmaan nauhan "Matkakirjan ihme"
+# (js/fokuskohteet.js piirraIhmenauha) ja kuvatekstin lähderivi on
+# 'Matkakirjan havainnekuva: kohde loistoaikansa asussa nykymaailmassa'.
+# Kumpaakaan ei saa purkaa.
+#
+# TUNNUS = KOHTEEN `ihme.osoite`-KENTÄN TIEDOSTONIMI ilman päätettä
+# (js/packs/fokuskohteet-*.js). Integroija pienentää ja muuntaa
+# webpiksi polkuun assets/kartat/ihmeet/<tunnus>.webp. 3:2-vaakakuva
+# ilman läpinäkyvyyttä, koska kohdekortin kuvapaikka on vaakarajattu.
 #
 # EI TEKSTIÄ KUVAAN: kuvateksti ladotaan kortissa, ja generoitu teksti
 # olisi joka tapauksessa väärin kirjoitettua.
@@ -56,106 +74,110 @@ jobs:
           mkdir -p ihmekuvat
           node - <<'SKRIPTI'
           /*
-           * TUNNUS = KOHTEEN `osoite`-KENTÄN TIEDOSTONIMI. Jos tunnusta
-           * muuttaa, on muutettava myös js/packs/fokuskohteet-*.js.
+           * TUNNUS = KOHTEEN `ihme.osoite`-KENTÄN TIEDOSTONIMI. Jos
+           * tunnusta muuttaa, on muutettava myös
+           * js/packs/fokuskohteet-*.js JA sw.js:n esilatauslista.
            *
            * Aiheen kuvaus on kohteen omista tuntomerkeistä sellaisina
            * kuin en-Wikipedia ne kertoo (mitat, materiaalit, muoto) —
            * ei mielikuvituksesta. Sama tarkistus kuin teksteillä.
            */
           const IHMEET = [
-            ['zeuksen-patsas',
-              'the lost Statue of Zeus at Olympia inside its temple: a colossal '
-              + 'seated bearded Zeus, 12 metres tall, made of gold and ivory, '
-              + 'on an ornate carved cedarwood throne, an olive wreath on his '
-              + 'head, a small winged Nike figure in his right hand and a '
-              + 'sceptre with an eagle in his left, framed by tall Doric columns '
-              + 'of the temple interior, tiny human worshippers below for scale'],
-            ['rodoksen-kolossi',
+            ['ihme-zeuksen-patsas',
+              'the Statue of Zeus at Olympia, whole and in use inside its '
+              + 'temple: a colossal seated bearded Zeus, 12 metres tall, of '
+              + 'gold and ivory, on an ornate carved throne, an olive wreath '
+              + 'on his head, a small winged Nike in his right hand and a '
+              + 'sceptre with an eagle in his left, between tall Doric columns '
+              + 'of the temple hall, a present-day visitor far below for scale'],
+            ['ihme-rodoksen-kolossi',
               // 1. otto hylkaantyi OpenAI:n turvajarjestelmassa sanasta
               // "nude" — muotoiltu vaatetetuksi, muu ennallaan.
-              'the lost Colossus of Rhodes: a 33-metre bronze statue of the sun '
-              + 'god Helios standing on a white marble pedestal beside the '
-              + 'harbour of ancient Rhodes, heroic figure draped in a bronze '
-              + 'chlamys cloak, with a spiked radiate crown, one hand raised '
-              + 'shading his eyes, feet together on a single block, ancient '
-              + 'sailing ships and harbour walls far below for scale, '
-              + 'Mediterranean coastline'],
-            ['faroksen-majakka',
-              'the lost Lighthouse of Alexandria: a 110-metre stone tower in '
-              + 'three stages, a broad square base, an octagonal middle section '
-              + 'and a cylindrical top with an open fire chamber and a large '
-              + 'polished mirror, smoke and firelight at the summit, standing on '
-              + 'a rocky island at a harbour mouth, ancient ships and a causeway, '
-              + 'evening light'],
-            ['artemiin-temppeli',
-              'the lost Temple of Artemis at Ephesus: an enormous Ionic marble '
-              + 'temple with a dense double forest of over one hundred fluted '
-              + 'columns 17 metres tall, carved relief drums at the column bases, '
-              + 'a wide pedimented front with a broad flight of steps, a cult '
-              + 'statue visible in the shadowed doorway, small figures for scale'],
-            ['halikarnassoksen-mausoleumi',
-              'the lost Mausoleum at Halicarnassus: a 45-metre tomb in three '
-              + 'parts, a high rectangular podium with sculpted friezes and '
+              'the Colossus of Rhodes standing whole today beside the modern '
+              + 'harbour of Rhodes: a 33-metre bronze statue of the sun god '
+              + 'Helios on a white marble pedestal, heroic figure draped in a '
+              + 'bronze chlamys cloak, a spiked radiate crown, one hand raised '
+              + 'shading his eyes, with the present-day quay, moored yachts '
+              + 'and fishing boats, harbour buildings and windmills around it'],
+            ['ihme-faros',
+              'the Lighthouse of Alexandria standing whole today at the mouth '
+              + 'of the modern harbour of Alexandria: a 110-metre stone tower '
+              + 'in three stages, a broad square base, an octagonal middle '
+              + 'section and a cylindrical top with an open fire chamber, with '
+              + 'the present-day Corniche, its traffic and apartment blocks '
+              + 'curving away behind it'],
+            ['ihme-artemiin-temppeli',
+              'the Temple of Artemis at Ephesus standing whole today on its '
+              + 'own site: an enormous Ionic marble temple with a dense double '
+              + 'forest of over one hundred fluted columns 17 metres tall, '
+              + 'carved relief drums at the column bases, a wide pedimented '
+              + 'front and a broad flight of steps, with the present-day road, '
+              + 'fields and the town of Selcuk around it'],
+            ['ihme-halikarnassoksen-mausoleumi',
+              'the Mausoleum at Halicarnassus standing whole today in the '
+              + 'middle of modern Bodrum: a 45-metre tomb in three parts, a '
+              + 'high rectangular podium with sculpted friezes and '
               + 'free-standing statues, an Ionic colonnade of 36 columns above '
-              + 'it, and a stepped pyramid roof of 24 steps crowned by a marble '
-              + 'four-horse chariot with two standing figures, seen from below '
-              + 'against the Carian coast'],
-            ['babylonin-puutarhat',
-              'the legendary Hanging Gardens of Babylon: a stepped ziggurat-like '
-              + 'structure of mud brick, each terrace planted with trees, shrubs '
-              + 'and trailing vines so the whole resembles a green mountain, '
-              + 'arched vaults and brick piers carrying the terraces, a water '
-              + 'screw and channels irrigating the top, the Euphrates and flat '
-              + 'Mesopotamian plain beyond'],
-            ['aleksandrian-kirjasto',
-              'the lost Library of Alexandria in use: a long colonnaded hall with '
-              + 'a coffered ceiling, walls lined with pigeonhole shelves holding '
-              + 'hundreds of rolled papyrus scrolls with hanging identification '
-              + 'tags, wooden reading tables and stools, robed Greek scholars '
-              + 'unrolling scrolls, high clerestory windows casting shafts of '
-              + 'daylight'],
-            ['knossos-loistossaan',
-              'the Minoan palace of Knossos in use around 1500 BC: the great '
-              + 'central court surrounded by multi-storey wings, distinctive '
-              + 'Minoan columns of bright red painted wood tapering downwards on '
-              + 'black bases, horns of consecration on the rooftops, walls '
-              + 'covered with bright frescoes of dolphins, bulls and processions, '
-              + 'a broad flight of stone steps, Cretan hills behind'],
-            ['hefaistoksen-temppeli',
-              'the Temple of Hephaestus in Athens as it looked when new in the '
-              + '5th century BC: a complete Doric marble temple of 6 by 13 '
-              + 'columns standing on the low hill above the ancient agora, roof '
-              + 'and pediments intact with terracotta tiles, the metopes, '
-              + 'triglyphs and pediment sculptures painted in ancient '
-              + 'polychromy - deep red, strong blue and gold accents on the '
-              + 'entablature - the marble columns left plain'],
-            ['parthenon-loistossaan',
-              'the Parthenon on the Athenian Acropolis as it looked when new in '
-              + '432 BC: the complete Doric temple with its roof, pediments and '
-              + 'all sculptures in place, the metopes, triglyphs and pedimental '
+              + 'it and a stepped pyramid roof of 24 steps crowned by a marble '
+              + 'four-horse chariot, with the white houses, streets and marina '
+              + 'of the present-day town around it'],
+            ['ihme-babylonin-puutarhat',
+              'the Hanging Gardens of Babylon standing whole today: a stepped '
+              + 'structure of mud brick, each terrace planted with trees, '
+              + 'shrubs and trailing vines so the whole resembles a green '
+              + 'mountain, arched vaults and brick piers carrying the '
+              + 'terraces, with the present-day road, parked cars, palm trees '
+              + 'and low modern houses of the Iraqi plain around it'],
+            ['ihme-aleksandrian-kirjasto',
+              'the Library of Alexandria whole and in use today: a long '
+              + 'colonnaded hall with a coffered ceiling, walls lined with '
+              + 'pigeonhole shelves holding thousands of rolled papyrus '
+              + 'scrolls with hanging identification tags, wooden reading '
+              + 'tables, high clerestory windows casting shafts of daylight, '
+              + 'a few present-day readers working at the tables'],
+            ['ihme-knossos',
+              'the palace of Knossos standing whole today: the great central '
+              + 'court surrounded by multi-storey wings, Minoan columns of '
+              + 'bright red painted wood tapering downwards on black bases, '
+              + 'horns of consecration on the rooftops, walls covered with '
+              + 'bright frescoes, with the present-day car park, road and '
+              + 'olive groves of the Cretan hills around it'],
+            ['ihme-hefaistoksen-temppeli',
+              'the Temple of Hephaestus in Athens as it looked when new: a '
+              + 'complete Doric marble temple of 6 by 13 columns on the low '
+              + 'hill above the ancient agora, roof and pediments intact with '
+              + 'terracotta tiles, the metopes, triglyphs and pediment '
+              + 'sculptures painted in ancient polychromy - deep red, strong '
+              + 'blue and gold accents - the marble columns left plain, with '
+              + 'the present-day apartment blocks of central Athens and the '
+              + 'Acropolis rock behind it'],
+            ['ihme-parthenon',
+              'the Parthenon on the Athenian Acropolis as it looked when new: '
+              + 'the complete Doric temple with its roof, pediments and all '
+              + 'sculptures in place, the metopes, triglyphs and pedimental '
               + 'figures painted in ancient polychromy with deep red, strong '
-              + 'blue and gilded details, bronze shields hung on the '
-              + 'architrave, the marble columns left plain, seen from the '
-              + 'Propylaea with worshippers on the sacred rock'],
+              + 'blue and gilded details, the marble columns left plain, with '
+              + 'the present-day city of Athens spreading out below'],
           ];
           /*
            * YKSI POHJA KAIKILLE: tyyli, rajaus ja kiellot samassa
            * paikassa, jotta sarja näyttää sarjalta. Muutos tähän
            * muuttaa kaikkia kymmentä kuvaa — se on tarkoitus.
            */
-          const POHJA = (aihe) => 'A 19th-century scientific archaeological '
-            + `reconstruction plate showing ${aihe}. Hand-drawn lithograph `
-            + 'with delicate watercolour washes in the style of a Victorian '
-            + 'archaeological folio: fine ink linework, accurate architectural '
-            + 'perspective and proportion, muted earth pigments - warm stone '
-            + 'ochre, terracotta, faded sky blue, olive green - on aged '
-            + 'off-white paper. Wide horizontal landscape composition, the '
-            + 'monument whole and complete, seen in clear daylight with small '
-            + 'human figures for scale. Not photographic, not a 3D render, not '
-            + 'cinematic; no modern buildings, no ruins, no rubble, no tourists, '
-            + 'no lettering, no captions, no labels, no signature, no frame, '
-            + 'no border.';
+          const POHJA = (aihe) => 'A candid documentary photograph of '
+            + `${aihe}. Shot from a slightly elevated viewpoint with a 35mm `
+            + 'lens, wide horizontal framing that gives the surrounding '
+            + 'present-day city plenty of room - streets, traffic, ordinary '
+            + 'modern buildings, parked cars, power lines - so the monument '
+            + 'is clearly part of today\'s world. Sunny weather with long '
+            + 'shadows, natural white balance, muted colours, ordinary '
+            + 'documentary exposure. A few people only, small in the frame '
+            + 'and going about everyday business; nobody in the foreground, '
+            + 'nobody posing, no tourists photographing, no tour groups. '
+            + 'No HDR, no oversaturation, no cinematic look, no illustration '
+            + 'or painting, no 3D render, no text, no lettering, no captions, '
+            + 'no watermark, no signature, no frame, no border, and no ruins '
+            + '- the monument is whole, complete and in its original colours.';
           const vain = (process.env.VAIN ?? '').split(/\s+/).filter(Boolean);
           const jono = IHMEET.filter(([t]) => !vain.length || vain.includes(t));
           const { writeFileSync } = await import('node:fs');
@@ -168,7 +190,7 @@ jobs:
                 Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
               },
               body: JSON.stringify({
-                model: 'gpt-image-1',
+                model: 'gpt-image-2',
                 prompt: POHJA(aihe),
                 // 3:2-vaaka: kohdekortin kuvapaikka on vaakarajattu.
                 size: '1536x1024',
