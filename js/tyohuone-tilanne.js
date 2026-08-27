@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'Kuvatekstiremontti era 5: Dohan, Nikosian, Kuwaitin, Masqatin, Bagdadin, Izmirin, Ankaran, Halabin, Damaskoksen, Luxorin ja Riadin selitteet uuteen saantoon',
   'Lippusivut era 12: loput 19 maata Irlannista Ita-Timoriin — kaikki 116 lautamaata katettu; mm. Fidzin kuningaskunnan lippu 1871-1874 (isoisan matkavuosi)',
   'Noppa lukittuu karttaan ja skaalautuu zoomissa, haipyy perilla; pelinappulana tinaherra joka hyppii kaarella varjoineen ja kolahtaa laskeutuessa',
   'Kuvatekstiremontti era 4: Dubrovnikin, Riian, Vilnan, Oslon, Kobenhavnin, Jerusalemin, Dubain, Petran, Medinan ja Mekan selitteet uuteen saantoon',
