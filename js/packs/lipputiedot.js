@@ -2357,4 +2357,664 @@ export const LIPPUTIEDOT = {
     ],
     lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
   },
+  'Flag of Brazil.svg': {
+    maa: 'Brasilia',
+    symboliikka: [
+      {
+        osa: 'Vihreä kenttä',
+        selite: 'keisari Pedro I:n suvun, Braganzan huoneen väri.',
+      },
+      {
+        osa: 'Keltainen vinoneliö',
+        selite: 'keisarinna Maria Leopoldinan suvun, Habsburgien '
+          + 'väri.',
+      },
+      {
+        osa: 'Sininen pallo',
+        selite: 'Rio de Janeiron tähtitaivas 15. marraskuuta 1889, '
+          + 'tasavallan julistamisen päivänä.',
+      },
+      {
+        osa: '27 tähteä',
+        selite: 'osavaltiot ja liittopiiri. Jokainen on todellinen '
+          + 'tähti ja piirretty kirkkautensa mukaisen kokoisena.',
+      },
+      {
+        osa: 'Valkoinen nauha',
+        selite: 'tunnuslause ORDEM E PROGRESSO — "järjestys ja '
+          + 'edistys".',
+      },
+    ],
+    kappaleet: [
+      'Lippu vahvistettiin 19. marraskuuta 1889, neljä päivää '
+        + 'tasavallan julistamisen jälkeen. Nuo neljä päivää '
+        + 'liehui aivan toisenlainen lippu: juristi Ruy Barbosan '
+        + 'piirtämä, Yhdysvaltain lipun kaltainen raitalippu, '
+        + 'jonka sotamarsalkka Deodoro da Fonseca hylkäsi liian '
+        + 'toisen maan lipun näköisenä.',
+      'Fonseca halusi lipun muistuttavan keisarikunnan lippua, '
+        + 'jotta siirtymä kuningaskunnasta tasavaltaan näyttäisi '
+        + 'jatkumolta. Niinpä vihreä kenttä ja keltainen vinoneliö '
+        + 'jäivät ja keisarillisen vaakunan tilalle tuli '
+        + 'tähtitaivas. Tunnuslause on lyhennelmä Auguste Comten '
+        + 'positivismin iskulauseesta "rakkaus periaatteena, '
+        + 'järjestys perustana, edistys päämääränä".',
+      'Tähtiä oli aluksi 21; niitä on lisätty sitä mukaa kuin '
+        + 'osavaltioita on perustettu, ja vuodesta 1992 niitä on '
+        + 'ollut 27. Tuttu selitys, jonka mukaan vihreä on '
+        + 'sademetsä ja keltainen kulta, on myöhempi kansanselitys '
+        + '— alkuperäinen perustelu olivat hallitsijasuvut.',
+    ],
+    versiot: [
+      {
+        nimi: 'Keisarikunnan lippu 1870–1889',
+        polku: 'assets/liput/versiot/bra-keisarikunta.png',
+        selite: 'Sama vihreä kenttä ja keltainen vinoneliö, mutta '
+          + 'keskellä keisarikunnan vaakuna: kultainen '
+          + 'taivaanpallo Kristuksen ritarikunnan punaisen ristin '
+          + 'päällä, ympärillä kaksikymmentä tähteä ja ylinnä '
+          + 'keisarin kruunu. Tämä lippu liehui Brasiliassa myös '
+          + 'isoisän matkavuonna 1873.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Brasilian vaakuna',
+        polku: 'assets/liput/tunnukset/bra-vaakuna.png',
+        selite: 'Pyöreällä kilvellä on Etelän risti ja sen '
+          + 'ympärillä osavaltioiden tähdet. Kilpi lepää '
+          + 'miekankahvan päällä vihreä-kultaisen tähden keskellä. '
+          + 'Sivuilla ovat kahvin ja tupakan oksat — 1889 maan '
+          + 'tärkeimmät vientikasvit. Nauhassa on maan nimi ja '
+          + 'tasavallan julistamisen päivämäärä.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of Argentina.svg': {
+    maa: 'Argentiina',
+    symboliikka: [
+      {
+        osa: 'Vaaleansininen ja valkoinen',
+        selite: 'vuoden 1812 kansallisen kokardin värit. Tutuin '
+          + 'selitys on taivas ja pilvet, mutta historioitsijat '
+          + 'johtavat värit useimmiten Espanjan Bourbon-suvun '
+          + 'väreistä.',
+      },
+      {
+        osa: 'Toukokuun aurinko',
+        selite: 'keskiraidan kultainen aurinko, jossa on 32 '
+          + 'sädettä joka toinen suorana ja joka toinen '
+          + 'aaltoilevana.',
+      },
+      {
+        osa: 'Auringon kasvot',
+        selite: 'aurinko on kopio vuoden 1813 kahdeksan escudon '
+          + 'kolikon kuvasta; sitä on tulkittu myös inkojen '
+          + 'aurinkojumalaksi Intiksi.',
+      },
+    ],
+    kappaleet: [
+      'Manuel Belgrano nosti sinivalkoisen lipun ensimmäisen '
+        + 'kerran Rosariossa 27. helmikuuta 1812. Hallitus kielsi '
+        + 'sen heti: Buenos Airesin triumviraatti esiintyi yhä '
+        + 'Napoleonin vangitseman Espanjan kuninkaan Ferdinand '
+        + 'VII:n nimissä, eikä oma lippu sopinut siihen kuvaan. '
+        + 'Käsky ei tavoittanut Belgranoa pohjoisen sotaretkellä, '
+        + 'ja hän vannotti joukkonsa lipulle Jujuyssa toukokuussa.',
+      'Tucumánin kongressi teki lipusta kansallislipun 1816, ja '
+        + 'aurinko lisättiin keskiraitaan 1818. Kaiverruksen teki '
+        + 'Juan de Dios Rivera, inkojen ylimystöön kuulunut '
+        + 'hopeaseppä.',
+      'Argentiinalla on kaksi virallista asua: aurinkoinen '
+        + 'seremonialippu ja koristelippu ilman aurinkoa. '
+        + 'Kumpikin on kansallislippu, mutta koristelippu on aina '
+        + 'liputettava seremonialipun alapuolelle. Ensimmäisen '
+        + 'lipun tarkasta sävystä — sinisestä vai '
+        + 'vaaleansinisestä — kiistellään yhä.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Argentiinan vaakuna',
+        polku: 'assets/liput/tunnukset/arg-vaakuna.png',
+        selite: 'Soikealla kilvellä kaksi kättä puristavat '
+          + 'toisiaan ja pitelevät keihästä, jonka nokassa on '
+          + 'punainen friikkalakki: kädet ovat yhtenäisyys, '
+          + 'keihäs valta ja lakki vapaus. Yllä on toukokuun '
+          + 'aurinko ja ympärillä laakeriseppele. Tunnuslause on '
+          + 'en unión y libertad, "yhtenäisyydessä ja '
+          + 'vapaudessa".',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of Chile.svg': {
+    maa: 'Chile',
+    symboliikka: [
+      { osa: 'Valkoinen', selite: 'Andien lumi.' },
+      {
+        osa: 'Punainen',
+        selite: 'itsenäisyyden puolesta vuodatettu veri.',
+      },
+      { osa: 'Sininen', selite: 'taivas ja Tyynimeri.' },
+      {
+        osa: 'Valkoinen tähti',
+        selite: 'yhtenäinen valtio. Toisen tulkinnan mukaan tähti '
+          + 'on Venus, jota mapuchet kutsuvat nimellä Guñelve ja '
+          + 'joka opastaa kulkijaa.',
+      },
+    ],
+    kappaleet: [
+      'Nykyinen lippu vahvistettiin 18. lokakuuta 1817, ja sitä '
+        + 'kutsutaan nimellä La Estrella Solitaria, "yksinäinen '
+        + 'tähti". Sitä ennen käytössä oli Patria Vieja -lippu '
+        + 'vuodelta 1812: sinivalkokeltainen kolmiraita, jonka '
+        + 'perimätiedon mukaan ompeli Javiera Carrera. Tähden toi '
+        + 'lippuun Bernardo O\'Higgins.',
+      'La Araucana -eepokseen nojaavan perinteen mukaan värit '
+        + 'ovat peräisin mapuchejen sotalipuista Arauco-sodan '
+        + 'ajalta. Runoelma vuodelta 1569 on vanhin tunnettu '
+        + 'maininta mapuchejen sinisestä, valkoisesta ja '
+        + 'punaisesta; onko yhteys nykylippuun todellinen, ei ole '
+        + 'todistettavissa.',
+      'Lipun päivää vietetään 9. heinäkuuta niiden 77 sotilaan '
+        + 'muistoksi, jotka kaatuivat La Concepciónin '
+        + 'taistelussa 1882. Lippu on suojattu laissa: sen '
+        + 'julkinen häpäiseminen on rikos yleistä järjestystä '
+        + 'vastaan, ja liputus on pakollista itsenäisyyspäivänä '
+        + '18. syyskuuta.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Chilen vaakuna',
+        polku: 'assets/liput/tunnukset/chl-vaakuna.png',
+        selite: 'Vuonna 1834 vahvistettu vaakuna, jonka piirsi '
+          + 'englantilainen taiteilija Charles Wood Taylor. '
+          + 'Kilpi on lipun sininen ja punainen, keskellä '
+          + 'valkoinen tähti. Kannattajina ovat Andien kondori ja '
+          + 'huemul, vain Chilessä elävä hirvi; molemmilla on '
+          + 'kultainen laivastokruunu. Nauhassa lukee Por la '
+          + 'Razón o la Fuerza — "järjellä tai voimalla".',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of Peru.svg': {
+    maa: 'Peru',
+    symboliikka: [
+      {
+        osa: 'Punaiset reunaraidat',
+        selite: 'itsenäisyystaisteluissa vuodatettu veri.',
+      },
+      {
+        osa: 'Valkoinen keskiraita',
+        selite: 'rauha ja puhtaus.',
+      },
+      {
+        osa: 'Vaakuna keskellä',
+        selite: 'vain valtion ja puolustusvoimien lipuissa. '
+          + 'Kansalaisten lipussa keskiraita on tyhjä.',
+      },
+    ],
+    kappaleet: [
+      'Ensimmäisen lipun määräsi José de San Martín lokakuussa '
+        + '1820. Kirjailija Abraham Valdelomarin kertoman mukaan '
+        + 'San Martín sai värit Piscon rannalla nousseesta '
+        + 'parihuana-parvesta — punavalkoisista flamingoista. '
+        + 'Historioitsijat ovat esittäneet arkisempia selityksiä: '
+        + 'punainen tulisi Chilen ja valkoinen Argentiinan '
+        + 'lipusta, sillä vapautusarmeija tuli näistä maista.',
+      'Vinoneliöiksi jaettu lippu osoittautui hankalaksi ompelun '
+        + 'kannalta, ja Torre Taglen markiisi vaihtoi sen '
+        + 'maaliskuussa 1822 vaakaraitaiseksi. Se taas muistutti '
+        + 'kaukaa katsottuna liikaa Espanjan lippua, mikä sekoitti '
+        + 'taistelukentät, joten toukokuussa raidat käännettiin '
+        + 'pystyyn. Vuonna 1825 Bolívarin aikainen kongressi '
+        + 'korvasi keskellä olleen auringon uudella vaakunalla.',
+      'Nykyiseen muotoonsa lippu tuli 1950, kun presidentti '
+        + 'Manuel A. Odría poisti vaakunan kansalaisten lipusta ja '
+        + 'määräsi valtiolipulle ja sotalipulle omat, hieman eri '
+        + 'vaakunansa. Siksi Perussa on kolme lippua, jotka '
+        + 'eroavat toisistaan vain keskiraidan tunnuksesta.',
+    ],
+    versiot: [
+      {
+        nimi: 'Ensimmäinen lippu 1820',
+        polku: 'assets/liput/versiot/per-1820.png',
+        selite: 'San Martínin lippu: vinottain neljään jaettu '
+          + 'kenttä, jossa ylä- ja alaosa ovat valkoiset ja '
+          + 'sivut punaiset. Keskellä on laakeriseppele, jonka '
+          + 'sisällä aurinko nousee vuorten takaa meren yli. '
+          + 'Lippua käytettiin vain puolitoista vuotta.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Perun vaakuna',
+        polku: 'assets/liput/tunnukset/per-vaakuna.png',
+        selite: 'Kilpi on jaettu kolmeen osaan, jotka esittävät '
+          + 'maan luonnonvaroja: sinisellä vikunja eläinkuntana, '
+          + 'valkoisella kiinapuu kasvikuntana ja punaisella '
+          + 'runsaudensarvi, josta valuu kolikoita, '
+          + 'kivennäisvaroina. Kiinapuun kuoresta saatiin '
+          + 'kiniini, 1800-luvun ainoa toimiva malarialääke. '
+          + 'Kilven kummallakin puolella on Perun lippu ja '
+          + 'standaari, ylinnä tammesta punottu kansalaisseppele. '
+          + 'Tämä on Escudo Nacional, valtiolipun vaakuna; '
+          + 'sotalipussa ja laivastossa on omat muunnelmansa.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of Bolivia.svg': {
+    maa: 'Bolivia',
+    symboliikka: [
+      {
+        osa: 'Punainen',
+        selite: 'itsenäisyyden puolesta kaatuneiden veri ja '
+          + 'rohkeus.',
+      },
+      { osa: 'Keltainen', selite: 'maaperän kivennäisvarat.' },
+      { osa: 'Vihreä', selite: 'luonnon hedelmällisyys.' },
+      {
+        osa: 'Vaakuna keskellä',
+        selite: 'vain valtiolipussa. Kansalaisten lipussa on '
+          + 'pelkät kolme raitaa.',
+      },
+    ],
+    kappaleet: [
+      'Nykyinen kolmiraita vahvistettiin 31. lokakuuta 1851 '
+        + 'presidentti Manuel Isidoro Belzun aikana. Lipun '
+        + 'mittasuhteita ei määrätty lainkaan ennen vuotta 2004, '
+        + 'jolloin ne lyötiin lukkoon suhteeseen 15:22.',
+      'Vuoden 2009 perustuslaki nosti wiphalan kolmiraidan '
+        + 'rinnalle: se on nyt Bolivian toinen kansallislippu. '
+        + 'Virallisissa tilaisuuksissa wiphala liputetaan '
+        + 'kolmiraidan vasemmalle puolelle.',
+      'Bolivialla on merivoimat, vaikka maalla ei ole '
+        + 'merenrantaa — alukset liikkuvat joilla ja '
+        + 'Titicacajärvellä. Laivaston lipun yhdeksän pientä '
+        + 'tähteä ovat departementit ja suuri tähti muistuttaa '
+        + 'oikeudesta merelle, jonka Bolivia menetti Chilelle '
+        + 'Tyynenmeren sodassa 1884.',
+    ],
+    versiot: [
+      {
+        nimi: 'Wiphala',
+        polku: 'assets/liput/versiot/bol-wiphala.png',
+        selite: 'Neliön muotoinen 49 ruudun sateenkaarilippu, '
+          + 'Andien alkuperäiskansojen tunnus. Tämä asu '
+          + 'edustaa eteläistä Qullasuyua ja on Bolivian toinen '
+          + 'virallinen kansallislippu vuodesta 2009. Nykyisen '
+          + 'piirroksen suunnitteli Germán Choque Condori 1979.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Bolivian vaakuna',
+        polku: 'assets/liput/tunnukset/bol-vaakuna.png',
+        selite: 'Soikeassa kentässä kohoaa Potosín Cerro Rico, '
+          + 'hopeavuori, joka rahoitti Espanjan valtakuntaa '
+          + 'kolmen vuosisadan ajan. Aurinko nousee sen takaa; '
+          + 'edessä ovat laama, vehnälyhde ja palmu. Kehällä on '
+          + 'kymmenen tähteä, sivuilla lippuja, tykki, kiväärejä '
+          + 'ja friikkalakki, ja ylinnä Andien kondori.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of Colombia.svg': {
+    maa: 'Kolumbia',
+    symboliikka: [
+      {
+        osa: 'Keltainen',
+        selite: 'maan rikkaudet ja kulta. Raita on puolet lipun '
+          + 'korkeudesta.',
+      },
+      {
+        osa: 'Sininen',
+        selite: 'maata reunustavat kaksi valtamerta ja joet.',
+      },
+      {
+        osa: 'Punainen',
+        selite: 'itsenäisyyden puolesta vuodatettu veri.',
+      },
+      {
+        osa: 'Raitojen suhde 2:1:1',
+        selite: 'harvinaisuus kolmiraitalippujen joukossa — '
+          + 'raidat eivät ole yhtä leveitä.',
+      },
+    ],
+    kappaleet: [
+      'Värit ovat Francisco de Mirandan käsialaa. Hän pyysi '
+        + 'niitä jo vuoden 1801 suunnitelmassaan Espanjan '
+        + 'Amerikan vapauttamiseksi, ja lippu nostettiin '
+        + 'ensimmäisen kerran 12. maaliskuuta 1806 Jacmelissa '
+        + 'Haitissa. Samasta juuresta ovat myös Venezuelan ja '
+        + 'Ecuadorin liput: kaikki kolme maata kuuluivat '
+        + 'aikanaan Suur-Kolumbiaan.',
+      'Miranda kertoi itse kahdesta innoituksen lähteestä. '
+        + 'Kirjeessään hän kuvasi yöllistä keskustelua Johann '
+        + 'Wolfgang von Goethen kanssa Weimarissa talvella 1785: '
+        + 'Goethe oli selittänyt hänelle kolmen perusvärin '
+        + 'teoriaa ja sanonut, että Mirandan kohtalona on luoda '
+        + 'maa, jossa perusvärit eivät vääristy. '
+        + 'Sotapäiväkirjassaan Miranda mainitsee toisen lähteen: '
+        + 'Hampurin porvarikaartin kelta-sini-punaisen lipun.',
+      'Nykyinen värijärjestys vahvistettiin 26. marraskuuta '
+        + '1861. Vaakuna kuuluu lippuun vain virallisissa '
+        + 'yhteyksissä; tavallinen lippu on pelkkä kolmiraita.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Kolumbian vaakuna',
+        polku: 'assets/liput/tunnukset/col-vaakuna.png',
+        selite: 'Francisco de Paula Santanderin 1834 '
+          + 'suunnittelema vaakuna. Alimpana purjehtii kaksi '
+          + 'laivaa: ne muistuttavat Panaman kannaksesta, joka '
+          + 'kuului Kolumbiaan vuoteen 1903, ja nykyään maata '
+          + 'reunustavista kahdesta merestä. Keskellä on '
+          + 'friikkalakki ja ylinnä granaattiomena, Uuden '
+          + 'Granadan varakuningaskunnan tunnus, kahden '
+          + 'runsaudensarven välissä. Kondorin nokassa on '
+          + 'oliiviseppele ja nauhassa Libertad y Orden.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of Venezuela.svg': {
+    maa: 'Venezuela',
+    symboliikka: [
+      { osa: 'Keltainen', selite: 'maan rikkaudet.' },
+      {
+        osa: 'Sininen',
+        selite: 'Espanjasta erottava meri.',
+      },
+      {
+        osa: 'Punainen',
+        selite: 'kansan rohkeus ja vuodatettu veri.',
+      },
+      {
+        osa: 'Kahdeksan tähteä',
+        selite: 'itsenäisyysjulistuksen allekirjoittaneet '
+          + 'seitsemän provinssia sekä Guayana.',
+      },
+      {
+        osa: 'Vaakuna yläkulmassa',
+        selite: 'vain valtiolipussa; kauppa- ja siviililipusta '
+          + 'se puuttuu.',
+      },
+    ],
+    kappaleet: [
+      'Kelta-sini-punaisen lipun suunnitteli Francisco de '
+        + 'Miranda, ja se liehui ensimmäisen kerran Venezuelan '
+        + 'maaperällä La Vela de Corossa 3. elokuuta 1806. '
+        + 'Kansalliskongressi otti sen käyttöön 1811. Lipun '
+        + 'päivää vietettiin pitkään maaliskuussa, mutta 2006 se '
+        + 'siirrettiin elokuun kolmanteen päivään.',
+      '1800-luvun alkupuolella lippuun lisättiin seitsemän '
+        + 'tähteä itsenäisyysjulistuksen allekirjoittaneiden '
+        + 'provinssien mukaan. Simón Bolívar määräsi Angosturassa '
+        + 'marraskuussa 1817 kahdeksannen tähden vapautetulle '
+        + 'Guayanalle, mutta käsky jäi käytännössä toteutumatta. '
+        + 'Presidentti Hugo Chávez otti sen esiin lähes '
+        + 'kaksisataa vuotta myöhemmin, ja kahdeksas tähti '
+        + 'lisättiin lippuun 2006. Oppositio ilmoitti, ettei se '
+        + 'käytä uutta lippua.',
+      'Sama laki käänsi vaakunan valkoisen hevosen laukkaamaan '
+        + 'toiseen suuntaan. Lehtitietojen mukaan keskustelun '
+        + 'sytytti presidentin tyttären huomautus siitä, että '
+        + 'hevonen katsoi taaksepäin; hallituksen kannattajat '
+        + 'ovat korostaneet, että päätöksen tekivät joka '
+        + 'tapauksessa lainsäätäjät ja hallitus yhdessä.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Venezuelan vaakuna',
+        polku: 'assets/liput/tunnukset/ven-vaakuna.png',
+        selite: 'Kilpi on jaettu lipun väreihin. Punaisella on '
+          + 'vehnälyhde, osavaltioiden liitto ja maan vauraus; '
+          + 'keltaisella aseet ja kaksi lippua laakerin '
+          + 'sitomina, voitto sodassa; sinisellä laukkaa '
+          + 'valkoinen hevonen, jonka esikuvana pidetään '
+          + 'Bolívarin ratsua Palomoa. Vuonna 2006 aseiden '
+          + 'joukkoon lisättiin viidakkoveitsi ja jousi '
+          + 'nuolineen. Ylinnä ovat runsaudensarvet.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of Ecuador.svg': {
+    maa: 'Ecuador',
+    symboliikka: [
+      {
+        osa: 'Keltainen',
+        selite: 'viljelysmaa ja sadot. Raita on puolet lipun '
+          + 'korkeudesta.',
+      },
+      { osa: 'Sininen', selite: 'meri ja kirkas taivas.' },
+      {
+        osa: 'Punainen',
+        selite: 'isänmaan puolesta kaatuneiden veri.',
+      },
+      {
+        osa: 'Vaakuna keskellä',
+        selite: 'erottaa Ecuadorin lipun Kolumbian lipusta. '
+          + 'Kauppalaivaston lipusta vaakuna puuttuu.',
+      },
+    ],
+    kappaleet: [
+      'Ennen kelta-sini-punaista Ecuadorilla oli aivan toisen '
+        + 'näköinen lippu: vaaleansiniset ja valkoiset raidat '
+        + 'sekä kolme tähteä. Nykyiset värit vahvistettiin '
+        + 'laissa 1835 ja uudelleen 26. syyskuuta 1860; ne '
+        + 'periytyvät Suur-Kolumbian lipusta ja siten Francisco '
+        + 'de Mirandan värivalinnasta.',
+      'Vaakuna asetettiin lipun keskelle vasta 1900. Ilman sitä '
+        + 'lippu on käytännössä sama kuin Kolumbian, ja juuri '
+        + 'siksi Ecuadorin valtiolippu on aina vaakunallinen.',
+      'Vuoden 2009 ohjeissa lippu on mitoitettu tarkasti: '
+        + 'kokonaiskoko 2,20 × 1,47 metriä ja vaakuna puolet '
+        + 'lipun korkeudesta. Sama ohje määrää, että lipun '
+        + 'myyjän on kiinnitettävä nurjalle puolelle pieni '
+        + 'lappu, jossa lukee valmistajan nimi ja '
+        + 'valmistusvuosi.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Ecuadorin vaakuna',
+        polku: 'assets/liput/tunnukset/ecu-vaakuna.png',
+        selite: 'Kilven taustalla kohoaa Chimborazo, maan korkein '
+          + 'vuori, ja sen juurelta virtaa Guayas-joki. Joella '
+          + 'kulkee samanniminen höyrylaiva — Guayaquilissa '
+          + 'rakennettu, 1841 liikenteeseen lähtenyt Etelä-'
+          + 'Amerikan ensimmäinen merikelpoinen höyryalus. '
+          + 'Kilven yläreunassa paistaa aurinko, ja sen '
+          + 'kummallakin puolella on kaksi eläinradan merkkiä — '
+          + 'oinas, härkä, kaksoset ja rapu eli maalis–heinäkuu '
+          + '1845, vallankumouksen kuukaudet. Alla on vitsakimppu '
+          + 'tasavallan arvon merkkinä ja ylinnä Andien kondori.',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Vaakuna: Wikimedia '
+      + 'Commons (CC0)',
+  },
+  'Flag of Paraguay.svg': {
+    maa: 'Paraguay',
+    symboliikka: [
+      {
+        osa: 'Punainen, valkoinen ja sininen',
+        selite: 'värien uskotaan tulleen Ranskan trikolorista '
+          + 'itsenäisyyden ja vapauden merkkinä.',
+      },
+      {
+        osa: 'Etusivun tunnus',
+        selite: 'kansallissinetti: keltainen tähti palmun- ja '
+          + 'oliivinlehtien seppeleessä ja teksti REPÚBLICA DEL '
+          + 'PARAGUAY.',
+      },
+      {
+        osa: 'Takasivun tunnus',
+        selite: 'valtiovarain sinetti: keltainen leijona, sen '
+          + 'takana tanko ja punainen friikkalakki, ja kaaressa '
+          + 'teksti PAZ Y JUSTICIA — "rauha ja oikeus".',
+      },
+    ],
+    kappaleet: [
+      'Paraguay on maailman ainoa maa, jonka lipun etu- ja '
+        + 'takasivu ovat erilaiset. Ero periytyy diktaattori José '
+        + 'Gaspar Rodríguez de Francian ajalta, jolloin '
+        + 'tasavallalla oli kaksi eri sinettiä — toinen valtiolle '
+        + 'ja toinen valtiovarainhoidolle.',
+      'Ensimmäinen paraguaylainen lippu nostettiin Asunciónissa '
+        + '15. toukokuuta 1811, päivä toukokuun vallankumouksen '
+        + 'jälkeen: se oli sininen ja kulmassa valkoinen '
+        + 'kuusisakarainen tähti. Sininen viittasi Neitsyt Marian '
+        + 'taivaaseenottamiseen, josta pääkaupunki on saanut '
+        + 'nimensä. Punavalkosininen kolmiraita tuli käyttöön '
+        + '1812, ja nykyiseen muotoonsa lippu vahvistettiin 25. '
+        + 'marraskuuta 1842.',
+      'Viimeisin muutos tehtiin 2013, kun presidentti Federico '
+        + 'Franco vahvisti sinetille yhden standardimuodon. '
+        + 'Samalla kuvio palautettiin lähemmäs 1800-luvun asua: '
+        + 'maan nimi muuttui keltaisesta mustaksi ja tähden '
+        + 'ympäriltä katosi sininen kehä.',
+    ],
+    versiot: [
+      {
+        nimi: 'Lipun takasivu',
+        polku: 'assets/liput/versiot/pry-takasivu.png',
+        selite: 'Sama kolmiraita, mutta keskellä valtiovarain '
+          + 'sinetti: leijona vartioi vapauden friikkalakkia, ja '
+          + 'kaaressa lukee PAZ Y JUSTICIA. Tätä puolta käyttää '
+          + 'tunnuksenaan myös Paraguayn korkein oikeus.',
+      },
+    ],
+    tunnukset: [
+      {
+        nimi: 'Paraguayn kansallissinetti',
+        polku: 'assets/liput/tunnukset/pry-vaakuna.png',
+        selite: 'Paraguaylla ei ole erillistä vaakunaa vaan kaksi '
+          + 'sinettiä, ja ne ovat lipun kaksi puolta. Tässä on '
+          + 'niistä etummainen: toukokuun tähti seppeleen '
+          + 'sisällä. Sinettien ensimmäiset piirrokset ovat '
+          + 'vuodelta 1820.',
+      },
+    ],
+    lahde: 'Liput ja sinetit: Wikimedia Commons (PD)',
+  },
+  'Flag of Uruguay.svg': {
+    maa: 'Uruguay',
+    symboliikka: [
+      {
+        osa: 'Yhdeksän raitaa',
+        selite: 'maan yhdeksän ensimmäistä departementtia. Malli '
+          + 'on Yhdysvaltain lipusta, jossa raidat ovat '
+          + 'alkuperäiset kolmetoista siirtokuntaa.',
+      },
+      {
+        osa: 'Sininen ja valkoinen',
+        selite: 'Argentiinan lipun ja Belgranon joukkojen värit.',
+      },
+      {
+        osa: 'Toukokuun aurinko',
+        selite: 'toukokuun 1810 vallankumous. Sama aurinko on '
+          + 'Argentiinan lipussa ja Bolivian vaakunassa; säteitä '
+          + 'on 16, joka toinen kolmiomainen ja joka toinen '
+          + 'aaltoileva.',
+      },
+    ],
+    kappaleet: [
+      'Lippu hyväksyttiin joulukuussa 1828, kun Uruguay oli juuri '
+        + 'irronnut Brasiliasta itsenäiseksi valtioksi. '
+        + 'Suunnittelija oli väliaikainen hallitsija Joaquín '
+        + 'Suárez. Ensimmäisessä versiossa oli 19 raitaa, mutta '
+        + 'ne sulautuivat kaukaa katsottuna toisiinsa, joten '
+        + 'heinäkuussa 1830 raidat vähennettiin yhdeksään.',
+      'Uruguaylla on kolme virallista lippua. Pabellón Nacional '
+        + 'on niistä ensimmäinen; sen rinnalla ovat Artigasin '
+        + 'lippu ja Treinta y Tres -lippu, vapaussotien '
+        + 'tunnukset, jotka julistettiin virallisiksi 1952.',
+      'Sinisen sävyä ei ole koskaan määrätty laissa, ja '
+        + 'sisällissodan aikana sävy kertoi puolueen: Manuel '
+        + 'Oriben blanco-joukot käyttivät tummansinistä ja '
+        + 'piiritetyn Montevideon colorado-joukot '
+        + 'vaaleansinistä. Auringon kasvot ja kuusitoista '
+        + 'sädettä vahvistettiin virallisiksi vasta 1952.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Uruguayn vaakuna',
+        polku: 'assets/liput/tunnukset/ury-vaakuna.png',
+        selite: 'Soikea kilpi on jaettu neljään: kultainen vaaka '
+          + 'on tasa-arvo ja oikeus, Montevideon linnoitusvuori '
+          + 'voima, laukkaava musta hevonen vapaus ja kultainen '
+          + 'härkä yltäkylläisyys. Ylinnä on toukokuun aurinko, '
+          + 'ympärillä laakerin- ja oliivinoksa vaaleansinisellä '
+          + 'nauhalla sidottuina. Vaakuna vahvistettiin 1829.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
+  'Flag of the Falkland Islands.svg': {
+    maa: 'Falklandinsaaret',
+    symboliikka: [
+      {
+        osa: 'Sininen kenttä',
+        selite: 'brittiläinen Blue Ensign, merentakaisten '
+          + 'alueiden tavallinen lippupohja.',
+      },
+      {
+        osa: 'Union Jack kulmassa',
+        selite: 'saaret ovat Britannian merentakainen alue.',
+      },
+      {
+        osa: 'Pässi',
+        selite: 'lampaankasvatus, saarten pitkäaikainen '
+          + 'pääelinkeino.',
+      },
+      {
+        osa: 'Purjelaiva',
+        selite: 'Desire, jonka kapteenin John Davisin kerrotaan '
+          + 'nähneen saaret 1592.',
+      },
+      {
+        osa: 'Tunnuslause',
+        selite: 'Desire the Right — sanaleikki laivan nimestä: '
+          + '"tavoittele oikeaa".',
+      },
+    ],
+    kappaleet: [
+      'Saarilla oli oma lippu jo 1876. Sen sinetissä purjehti '
+        + 'HMS Hebe, joka oli tuonut varhaisia brittiasukkaita '
+        + '1840-luvulla, ja rannalla seisoi sonni villiintyneiden '
+        + 'karjalaumojen muistoksi. Nykyinen vaakuna vahvistettiin '
+        + '1948, ja se korvasi lipussa vanhan sinetin.',
+      'Argentiinan miehityksen aikana 2. huhtikuuta – 14. '
+        + 'kesäkuuta 1982 lippu oli kielletty ja tilalla liehui '
+        + 'Argentiinan lippu. Sodan päätteeksi kuvernöörin lippu '
+        + 'nostettiin takaisin Stanleyn kuvernöörintalon '
+        + 'salkoon. Nykyinen asu on vuodelta 1999: valkoinen '
+        + 'kiekko vaakunan takaa poistettiin ja vaakunaa '
+        + 'suurennettiin.',
+      'Saarten hallinta on kiistanalainen. Britannia on '
+        + 'hallinnut niitä vuodesta 1833, ja Argentiina pitää '
+        + 'saaria — Islas Malvinas — omanaan. Yhdistyneet '
+        + 'kansakunnat merkitsi saaret itsehallintoa vailla '
+        + 'olevien alueiden luetteloon 1946.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Falklandinsaarten vaakuna',
+        polku: 'assets/liput/tunnukset/flk-vaakuna.png',
+        selite: 'Sinisellä kentällä seisoo pässi tussokkiheinän '
+          + 'päällä; alla aaltoilevalla merellä purjehtii '
+          + 'Desire. Heinä on saarten tunnusomaista kasvillisuutta '
+          + 'ja pässi lampaankasvatuksen tunnus. Vaakuna '
+          + 'myönnettiin kuninkaallisella määräyksellä 29. '
+          + 'syyskuuta 1948.',
+      },
+    ],
+    lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
+  },
 };

@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1176';
+const CACHE = 'matkakirja-2026-08-09.1177';
 const SHELL = [
   './',
   './index.html',
@@ -710,6 +710,21 @@ const SHELL = [
   './assets/liput/tunnukset/pan-vaakuna.png',
   './assets/liput/tunnukset/pri-vaakuna.png',
   './assets/liput/tunnukset/bmu-vaakuna.png',
+  './assets/liput/versiot/bra-keisarikunta.png',
+  './assets/liput/versiot/per-1820.png',
+  './assets/liput/versiot/bol-wiphala.png',
+  './assets/liput/versiot/pry-takasivu.png',
+  './assets/liput/tunnukset/bra-vaakuna.png',
+  './assets/liput/tunnukset/arg-vaakuna.png',
+  './assets/liput/tunnukset/chl-vaakuna.png',
+  './assets/liput/tunnukset/per-vaakuna.png',
+  './assets/liput/tunnukset/bol-vaakuna.png',
+  './assets/liput/tunnukset/col-vaakuna.png',
+  './assets/liput/tunnukset/ven-vaakuna.png',
+  './assets/liput/tunnukset/ecu-vaakuna.png',
+  './assets/liput/tunnukset/pry-vaakuna.png',
+  './assets/liput/tunnukset/ury-vaakuna.png',
+  './assets/liput/tunnukset/flk-vaakuna.png',
   './assets/kartat/helsinki-varikartta.png',
   './assets/kartat/kairo-keskusta.png',
   './assets/kartat/lontoo-varikartta.png',
