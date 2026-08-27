@@ -414,24 +414,91 @@
    pienempi neliö leikkaisi kaistan kärjen tai varjon poikki keskellä
    kuvaa, ja leikkausviiva näkyisi.
 
+   ---------------------------------------------------------------------------
+   TEKSTIN MITOITUS (omistajan tilaus 27.8.2026 ilta, iPad-kaappaus
+   Feidiaan Zeuksen suurennoksesta): *"teksti MATKAKIRJAN IHME ei näy
+   kokonaan — pienennä tekstiä niin että se mahtuu kaistalle
+   kokonaan"*. Teksti oli mitoitettu KAISTAN laatikkoon, mutta kaistaa
+   ei näy koko pituudeltaan: kääre leikkaa siitä molemmista päistä
+   palan pois. Näkyvä ladontamatka on
+
+     N = pituus − 2 × ulos × √2 − 2g,
+
+   missä g on kirjainten musteen puolikorkeus. Vähennys 2g tulee siitä,
+   että leikkaus on kaistan omassa koordinaatistossa VINO: kaistan
+   yläreuna katkeaa aikaisemmin kuin alareuna, ja ensimmäisen ja
+   viimeisen kirjaimen ULKONURKKA on se, joka osuu leikkaukseen ensin.
+
+   KIRJASINTA EI SAA OLETTAA. Peli ei tuo omaa fonttia (--font-type on
+   lista järjestelmäfontteja), joten sama teksti on eri levyinen eri
+   laitteella: Chromiumin kontissa se latoutuu Courierille, iPadilla
+   American Typewriterille. Omistajan kaappauksesta mitattuna iPadin
+   ladonta on ~14 % Courieria leveämpi. Mitoitus tehdään siksi
+   PAHIMMALLE tapaukselle: harvennuksen 0,09em kanssa musteen leveys on
+   enintään ~12,7 × kirjasinkoko ja korkeus ~0,95 × kirjasinkoko
+   (versaali-J laskeutuu perusviivan alle useassa antiikvassa). Ehto on
+
+     12,7 × teksti + 0,95 × teksti + vara ≤ pituus − 2 × ulos × √2,
+
+   eli 13,65 × teksti + vara ≤ pituus − 2,8284 × ulos. Kortissa oikea
+   puoli on 7,56rem ja teksti 0,50rem (6,83rem) → varaa 0,73rem;
+   suurennoksessa 10,04rem ja 0,66rem (9,01rem) → varaa 1,03rem. Vara
+   on tahallaan reilu: se pitää kirjaimet irti taitteen varjosta.
+   (tools/savukkeet/savuke-fokuskohteet.mjs mittaa tämän oikeasta
+   pelistä nurkka nurkalta, ei kaistan laatikosta.)
+
+   ---------------------------------------------------------------------------
+   TAITE OSUU LEIKKAUSVIIVAAN LASKEMALLA, EI ARVAAMALLA (omistajan
+   tilaus 27.8.2026 ilta: *"nauha ja sen TAITTUMINEN eivät ole vielä
+   täysin kohdallaan"*). Ennen taitteen liukuvärin sävyt oli haettu
+   käsin niin että tummin osui sattumalta kohtaan 55 % — mitoista
+   riippuva luku, joka olisi karannut ensimmäisestä muutoksesta.
+   Nyt leikkausviivan paikka liu'ulla lasketaan:
+
+     taitelinja = 0,7071 × taite − ulos + 0,35355 × korkeus,
+
+   mitattuna liu'un nollakohdasta (--nauha-taitelinja). Kaikki sävyt
+   asetetaan SIITÄ taaksepäin korkeuden monikertoina, joten taite
+   näyttää samalta kortissa ja suurennoksessa, olivat mitat mitkä
+   hyvänsä.
+
+   Taitteen profiili on kolme asiaa peräkkäin — varjo, harja ja
+   taitejuova. Sävyt ja perustelut ovat .fokuskohde-ihmetaite-lohkossa.
+
+   Profiili vaatii tilaa: varjon on ehdittävä nousta nollasta liu'un
+   sisällä, eli taitelinja ≥ 1,0 × korkeus. Sijoittamalla taitelinjan
+   kaava tähän saadaan taitteen alaraja
+
+     taite ≥ (0,6465 × korkeus + ulos) / 0,7071,
+
+   joka on vanhaa `ulos × √2 + korkeus / 2` tiukempi. Taite kasvoi
+   1,9 → 2,6rem (kortti) ja 2,4 → 3,2rem (suurennos) — selvästi
+   alarajan (1,68 ja 2,09rem) yli, koska pitkä liuku antaa varjolle
+   pehmeän nousun. Yläraja on taite ≤ pituus / 2: sitä pidemmät
+   vyöhykkeet menisivät kaistan keskellä päällekkäin.
+
    NAUHA EI OTA NAPAUTUKSIA (pointer-events: none): kortissa se on
    suurennosnapin päällä, ja sormi on tarkoitettu napille.
    =========================================================================== */
 
 /* Kortin mitat. Kuvakehys on isäntä, jotta sama arvo periytyy koko
-   nauhalle. Kaista on v1195:tä leveämpi ja teksti isompi (omistajan
-   tilaus 27.8.2026): 0,98rem → 1,24rem eli neljänneksen kasvu.
+   nauhalle.
 
-   PITUUS KASVOI SAMALLA (6,9rem → 8,8rem), koska teksti mahtuu enää
-   LEIKKAUKSEN SISÄÄN: näkyvä matka on `pituus − 2 × ulos × √2`, ja
-   ennen leikkausta teksti sai jatkua reunan yli paperille. Liian
-   lyhyt kaista söisi nyt ensimmäisen ja viimeisen kirjaimen. */
+   PITUUS pysyy 8,8rem:ssä (omistaja 27.8.2026: nauhan koko oli
+   "parempaan suuntaan"), mutta KAISTA KAPENEE 1,24 → 1,16rem ja
+   TEKSTI PIENENEE 0,56 → 0,50rem, jotta "MATKAKIRJAN IHME" mahtuu
+   LEIKKAUKSEN SISÄÄN myös iPadin leveämmällä kirjasimella (ks. lohkon
+   osio TEKSTIN MITOITUS). Samasta syystä ULOS pienenee 0,55 → 0,44rem:
+   se on yhä yli alarajan 0,3536 × korkeus = 0,41rem, mutta jokainen
+   ylityksen kymmenys söi kaksi kertaa enemmän näkyvää ladontamatkaa.
+   TAITE kasvaa 1,9 → 2,6rem, koska taitteen varjolle on tultava tilaa
+   ennen leikkausviivaa. */
 .fokuskohde-kuva {
   --nauha-pituus: 8.8rem;
-  --nauha-korkeus: 1.24rem;
-  --nauha-ulos: 0.55rem;
-  --nauha-taite: 1.9rem;
-  --nauha-teksti: 0.56rem;
+  --nauha-korkeus: 1.16rem;
+  --nauha-ulos: 0.44rem;
+  --nauha-taite: 2.6rem;
+  --nauha-teksti: 0.5rem;
   /* Kortin kuva on pyöristetty (.fokuskohde-kuva img border-radius). */
   --nauha-kaari: 7px;
 }
@@ -443,6 +510,20 @@
   --nauha-juuri: calc(2 * var(--nauha-c) + 0.7071 * var(--nauha-korkeus));
   /* Kääntymävyöhykkeen keskipisteen etäisyys kaistan keskeltä. */
   --nauha-paa: calc((var(--nauha-pituus) - var(--nauha-taite)) * 0.35355);
+  /*
+   * LEIKKAUSVIIVAN PAIKKA TAITTEEN LIU'ULLA. Taitteen liuku kulkee
+   * maailmassa suoraan ylös (yläpää) tai suoraan vasemmalle (vasen
+   * pää), samansuuntaisesti kuin leikkaus, joten leikkaus osuu
+   * liu'ulle YHTEEN pisteeseen. Etäisyys liu'un nollakohdasta on
+   * kaistan keskipisteen (c), taitelaatikon keskipisteen (paa) ja
+   * laatikon oman liukupituuden erotus — sievennettynä
+   *
+   *   taitelinja = 0,7071 × taite − ulos + 0,35355 × korkeus.
+   *
+   * Kaikki taitteen sävyt asetetaan tästä taaksepäin (ks. lohko).
+   */
+  --nauha-taitelinja: calc(0.7071 * var(--nauha-taite) - var(--nauha-ulos)
+    + 0.35355 * var(--nauha-korkeus));
   position: absolute;
   top: 0;
   left: 0;
@@ -481,15 +562,53 @@
  * Kun liuku käännetään taitteen omassa koordinaatistossa 45 astetta,
  * se osoittaa maailmassa suoraan ylös (yläpää) tai suoraan vasemmalle
  * (vasen pää) — samansuuntaisesti kuin leikkaus. Silloin sävy on
- * TÄSMÄLLEEN SAMA koko reunaviivalla, ja se osuu näillä mitoilla
- * liu'un kohtaan 55 %: siksi tummin sävy on siinä eikä lopussa.
- * (Loppu jää leikkauksen taakse eikä näy.)
+ * TÄSMÄLLEEN SAMA koko reunaviivalla.
+ *
+ * SÄVYT MITATAAN LEIKKAUSVIIVASTA, EI PROSENTEISTA. Leikkaus osuu
+ * liu'ulle kohtaan --nauha-taitelinja (ks. .fokuskohde-ihmenauha), ja
+ * jokainen sävy asetetaan siitä taaksepäin kaistan KORKEUDEN
+ * monikertoina. Näin sama profiili säilyy kortissa ja suurennoksessa
+ * eikä yksikään luku ole mittoihin sidottu arvaus. Kaikki
+ * taitelinjan JÄLKEISET sävyt jäävät leikkauksen taakse — ne ovat
+ * mukana vain siksi, ettei liuku pääse vaalenemaan takaisin.
+ *
+ * PROFIILI = VARJO, HARJA, TAITEJUOVA. Kääntyvä paperi tekee
+ * järjestyksessä kolme asiaa, ja kaikki kolme ovat tässä. Ne on
+ * valittu vertaamalla neljää ehdotelmaa vierekkäin (kokeet
+ * $SP/nauha2, 27.8.2026): pelkkä tummeneva liuku luki liaksi, ja
+ * kaksi kiiltoa peräkkäin aaltoili.
+ *
+ *   1. VARJO. Pinta kaareutuu poispäin valosta, joten sävy syvenee
+ *      tasaisesti noin 0,6 korkeuden matkalla ennen taitetta. Alempi
+ *      kerros tuo samalla SÄVYERON: kääntynyt osa on viileämpi ja
+ *      himmeämpi (harmaa) kuin nauhan lämmin pintaosa, jolloin se
+ *      luetaan toiseksi tasoksi eikä saman tason varjoksi.
+ *   2. HARJA. Aivan ennen taitetta on kapea vaalea juova: taitteen
+ *      selkä kääntyy valoa kohti. Tämä on se yksityiskohta, joka
+ *      erottaa TAITTUVAN paperin varjoon häipyvästä.
+ *   3. TAITEJUOVA. Harjan jälkeen sävy putoaa jyrkästi lähes mustaan
+ *      ja pysyy siinä leikkausviivalle asti (0,12 × korkeus ≈ 2–3 px
+ *      näkyvää juovaa). Silmä lukee reunan taitteeksi eikä
+ *      katkaisuksi. Omistaja luki vanhan pehmeän häivytyksen
+ *      epämääräiseksi (27.8.2026 ilta).
  */
 .fokuskohde-ihmetaite {
   position: absolute;
   width: var(--nauha-taite);
   height: var(--nauha-korkeus);
   transform: rotate(-45deg);
+  /*
+   * SÄVYJEN PAIKAT LEIKKAUSVIIVASTA TAAKSEPÄIN, korkeuden monikertoina.
+   * t0 on puhtaan paperin viimeinen kohta, t5 taitejuovan alku.
+   * Alaraja mitoille: taitelinja ≥ 1,0 × korkeus, jotta t1:n sävy ei
+   * jää liu'un alkuun kiinni (liuku leikkaisi silloin näkyvän kulman).
+   */
+  --nauha-t0: calc(var(--nauha-taitelinja) - 1.45 * var(--nauha-korkeus));
+  --nauha-t1: calc(var(--nauha-taitelinja) - 0.62 * var(--nauha-korkeus));
+  --nauha-t2: calc(var(--nauha-taitelinja) - 0.42 * var(--nauha-korkeus));
+  --nauha-t3: calc(var(--nauha-taitelinja) - 0.30 * var(--nauha-korkeus));
+  --nauha-t4: calc(var(--nauha-taitelinja) - 0.22 * var(--nauha-korkeus));
+  --nauha-t5: calc(var(--nauha-taitelinja) - 0.12 * var(--nauha-korkeus));
 }
 
 /* Yläreunan pää: kaistan keskeltä ylöoikealle lävistäjän suunnassa,
@@ -497,14 +616,20 @@
 .fokuskohde-ihmetaite-ylos {
   left: calc(var(--nauha-c) + var(--nauha-paa) - var(--nauha-taite) / 2);
   top: calc(var(--nauha-c) - var(--nauha-paa) - var(--nauha-korkeus) / 2);
-  background: linear-gradient(45deg,
-    rgba(46, 29, 10, 0) 0%,
-    rgba(46, 29, 10, 0.05) 18%,
-    rgba(46, 29, 10, 0.18) 36%,
-    rgba(46, 29, 10, 0.36) 46%,
-    rgba(46, 29, 10, 0.56) 52%,
-    rgba(46, 29, 10, 0.72) 55%,
-    rgba(46, 29, 10, 0.78) 100%);
+  background:
+    linear-gradient(45deg,
+      rgba(46, 29, 10, 0) 0,
+      rgba(46, 29, 10, 0) var(--nauha-t0),
+      rgba(46, 29, 10, 0.16) var(--nauha-t1),
+      rgba(46, 29, 10, 0.40) var(--nauha-t2),
+      rgba(255, 248, 226, 0.26) var(--nauha-t3),
+      rgba(46, 29, 10, 0.55) var(--nauha-t4),
+      rgba(46, 29, 10, 0.88) var(--nauha-t5),
+      rgba(46, 29, 10, 0.88) 100%),
+    linear-gradient(45deg,
+      rgba(96, 92, 78, 0) var(--nauha-t0),
+      rgba(96, 92, 78, 0.16) var(--nauha-t2),
+      rgba(96, 92, 78, 0.16) 100%);
 }
 
 /* Vasemman reunan pää: sama vyöhyke peilattuna lävistäjän yli, liuku
@@ -512,14 +637,20 @@
 .fokuskohde-ihmetaite-vasen {
   left: calc(var(--nauha-c) - var(--nauha-paa) - var(--nauha-taite) / 2);
   top: calc(var(--nauha-c) + var(--nauha-paa) - var(--nauha-korkeus) / 2);
-  background: linear-gradient(315deg,
-    rgba(46, 29, 10, 0) 0%,
-    rgba(46, 29, 10, 0.05) 18%,
-    rgba(46, 29, 10, 0.18) 36%,
-    rgba(46, 29, 10, 0.36) 46%,
-    rgba(46, 29, 10, 0.56) 52%,
-    rgba(46, 29, 10, 0.72) 55%,
-    rgba(46, 29, 10, 0.78) 100%);
+  background:
+    linear-gradient(315deg,
+      rgba(46, 29, 10, 0) 0,
+      rgba(46, 29, 10, 0) var(--nauha-t0),
+      rgba(46, 29, 10, 0.16) var(--nauha-t1),
+      rgba(46, 29, 10, 0.40) var(--nauha-t2),
+      rgba(255, 248, 226, 0.26) var(--nauha-t3),
+      rgba(46, 29, 10, 0.55) var(--nauha-t4),
+      rgba(46, 29, 10, 0.88) var(--nauha-t5),
+      rgba(46, 29, 10, 0.88) 100%),
+    linear-gradient(315deg,
+      rgba(96, 92, 78, 0) var(--nauha-t0),
+      rgba(96, 92, 78, 0.16) var(--nauha-t2),
+      rgba(96, 92, 78, 0.16) 100%);
 }
 
 /*
@@ -558,7 +689,13 @@
   font-family: var(--font-type, inherit);
   font-size: var(--nauha-teksti);
   line-height: 1;
-  letter-spacing: 0.12em;
+  /*
+   * HARVENNUS 0,12em → 0,09em. Kaiverretun nauhan ilme säilyy, mutta
+   * 16 merkkiä × 0,03em = puoli kirjainleveyttä vapautuu näkyvälle
+   * ladontamatkalle. Halvempi keino kuin sama määrä kirjasinkoosta
+   * (ks. lohkon osio TEKSTIN MITOITUS).
+   */
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   white-space: nowrap;
   overflow: hidden;
@@ -567,7 +704,7 @@
 .fokuskohde-ihmekaista::before {
   content: '';
   position: absolute;
-  inset: 0.11rem 0;
+  inset: 0.1rem 0;
   border-top: 1px solid rgba(58, 38, 16, 0.2);
   border-bottom: 1px solid rgba(58, 38, 16, 0.2);
 }
@@ -595,16 +732,22 @@
    poistuu animaation jälkeen eikä sitä voi käyttää pohjana. */
 .fokuskohde-zoomkehys { position: relative; }
 
-/* Suurennoksen mitat isännälle, aivan kuten kortissa. Kaista on
-   v1195:tä leveämpi (1,25rem → 1,56rem) omistajan tilauksen mukaan;
-   koko nauha jää kuvan sisään, joten paperikehyksen pehmuste pysyy
-   puhtaana. */
+/* Suurennoksen mitat isännälle, aivan kuten kortissa. Koko nauha jää
+   kuvan sisään, joten paperikehyksen pehmuste pysyy puhtaana.
+
+   SAMA SUHDE KUIN KORTISSA (omistajan tilaus 27.8.2026 ilta): kaista
+   kapenee 1,56 → 1,44rem, teksti pienenee 0,74 → 0,66rem, ylitys
+   0,7 → 0,55rem (alaraja 0,3536 × 1,44 = 0,51rem) ja taite kasvaa
+   2,4 → 3,2rem. Suurennos oli se näkymä, jossa omistaja näki tekstin
+   leikkautuvan, mutta korjaus on tehtävä molempiin: kortti oli
+   Chromiumin kapealla kirjasimella vain kaksi pikseliä rajan
+   sisäpuolella. */
 .fokuskohde-zoomkehys {
   --nauha-pituus: 11.6rem;
-  --nauha-korkeus: 1.56rem;
-  --nauha-ulos: 0.7rem;
-  --nauha-taite: 2.4rem;
-  --nauha-teksti: 0.74rem;
+  --nauha-korkeus: 1.44rem;
+  --nauha-ulos: 0.55rem;
+  --nauha-taite: 3.2rem;
+  --nauha-teksti: 0.66rem;
   /* Suurennoksen kuvassa ei ole pyöristystä, vain 1px mustereunus. */
   --nauha-kaari: 0;
 }

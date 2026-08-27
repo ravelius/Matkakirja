@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1212, teksti: 'Ihmenauhan teksti mahtuu ja taite viilattu' },
   { v: 1211, teksti: 'Nimioiden vaisto ahtaissa ryppaissa' },
   { v: 1210, teksti: 'Kreikan lehden poltetut vuori- ja merinimet pois' },
   { v: 1209, teksti: '14 uutta ihmetta seitsemaan uuteen maahan' },

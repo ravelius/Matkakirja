@@ -868,6 +868,12 @@ await sivu.waitForTimeout(300);
  *      taas näyttäisi lipukkeelta joka loppuu kesken kuvan.
  *      Taitteita on kaksi.
  *   c) NAUHA EI OTA NAPAUTUKSIA: kortissa se on suurennosnapin päällä.
+ *   d) TEKSTI MAHTUU LEIKKAUKSEN SISÄÄN — eikä vain kaistan laatikkoon
+ *      — ja taitejuova osuu leikkausviivaan (nauhanSovitus). Omistajan
+ *      iPad-kaappaus 27.8.2026 illalla näytti "MATKAKIRJAN IHME":n
+ *      leikkautuvan molemmista päistä, vaikka vanha väite
+ *      (`scrollWidth <= clientWidth`) meni läpi: se mittasi väärää
+ *      laatikkoa, eikä kontin kapea Courier paljastanut eroa.
  *
  * Kohteet: Olympia (olemassa, oma valokuva stadionista) ja Rodoksen
  * kolossi (kadonnut, ihmekuva kortin ainoana kuvana). Olympia eikä
@@ -875,6 +881,100 @@ await sivu.waitForTimeout(300);
  * ryppäässä: erotellut osuma-alueet koskettavat toisiaan, ja napautus
  * voisi osua naapuriin. Olympia seisoo yksin.
  */
+
+/*
+ * NAUHAN SOVITUS: mahtuuko teksti LEIKKAUKSEN sisään, ja osuuko taite
+ * leikkausviivaan. Molemmat mitataan samasta funktiosta, koska kortti
+ * ja suurennos ovat sama komponentti eri luvuilla.
+ *
+ * MIKSI EI `scrollWidth <= clientWidth`: se kysyy, mahtuuko teksti
+ * KAISTAN laatikkoon — ja mahtui, vaikka omistajan iPadilla
+ * "MATKAKIRJAN IHME" leikkautui molemmista päistä (27.8.2026 ilta).
+ * Kaistaa ei näy koko pituudeltaan: kääre leikkaa siitä puolitasoihin
+ * x ≥ 0 ja y ≥ 0 palan pois kummastakin päästä, ja leikkaus on kaistan
+ * omassa koordinaatistossa VINO. Siksi tekstin nurkat lasketaan
+ * kaistan kierron läpi kääreen koordinaatistoon ja katsotaan, jääkö
+ * yksikään nurkka negatiiviselle puolelle.
+ *
+ * KIRJASINTA EI VOI OLETTAA. Peli ei tuo omaa fonttia, joten kontin
+ * Chromium latoo Courierille ja iPad American Typewriterille, joka on
+ * ~14 % leveämpi. Pelkkä "mahtuu tässä selaimessa" ei siis riitä
+ * vartioksi: mitataan myös TÄYTTÖASTE (ladonta / näkyvä matka) ja
+ * vaaditaan sille varaa.
+ */
+const nauhanSovitus = (isantaValitsin) => sivu.evaluate((sel) => {
+  const isanta = document.querySelector(sel);
+  const nauha = isanta?.querySelector('.fokuskohde-ihmenauha');
+  const kaista = nauha?.querySelector('.fokuskohde-ihmekaista');
+  if (!kaista) return null;
+  const ks = getComputedStyle(kaista);
+
+  // Tekstin ladontaleveys ilman kaistan leveysrajoitusta.
+  const klooni = kaista.cloneNode(true);
+  Object.assign(klooni.style, {
+    position: 'absolute', transform: 'none', width: 'auto',
+    left: '-9999px', top: '0', overflow: 'visible',
+    font: `${ks.fontStyle} ${ks.fontWeight} ${ks.fontSize}/${ks.lineHeight} ${ks.fontFamily}`,
+    letterSpacing: ks.letterSpacing, textTransform: ks.textTransform,
+  });
+  document.body.appendChild(klooni);
+  const ladonta = klooni.getBoundingClientRect().width;
+  klooni.remove();
+
+  // Musteen todellinen korkeus (ei riviväli): versaali-J laskeutuu
+  // monessa antiikvassa perusviivan alle, ja juuri musteen NURKKA on
+  // se, joka osuu vinoon leikkaukseen ensin.
+  const c2 = document.createElement('canvas').getContext('2d');
+  c2.font = `${ks.fontStyle} ${ks.fontWeight} ${ks.fontSize} ${ks.fontFamily}`;
+  try { c2.letterSpacing = ks.letterSpacing; } catch { /* vanha selain */ }
+  const tm = c2.measureText(kaista.textContent.toUpperCase());
+  const musteKorkeus = tm.actualBoundingBoxAscent + tm.actualBoundingBoxDescent;
+
+  // Tekstin nurkat kaistan kierron läpi kääreen koordinaatistoon.
+  const m = new DOMMatrix(ks.transform);
+  const cx = kaista.offsetLeft + kaista.offsetWidth / 2;
+  const cy = kaista.offsetTop + kaista.offsetHeight / 2;
+  const nurkat = [[-1, -1], [1, -1], [-1, 1], [1, 1]].map(([sx, sy]) => {
+    const dx = sx * ladonta / 2; const dy = sy * musteKorkeus / 2;
+    return [cx + m.a * dx + m.c * dy, cy + m.b * dx + m.d * dy];
+  });
+  const vara = Math.min(...nurkat.map((p) => Math.min(p[0], p[1])));
+
+  // Näkyvä ladontamatka: teksti plus se, mitä kummastakin päästä jäi
+  // vielä leikkaukseen (maailman vara × √2 = matka kaistan akselilla).
+  const nakyva = ladonta + 2 * vara * Math.SQRT2;
+
+  /*
+   * TAITTEEN OSUMINEN LEIKKAUSVIIVAAN. --nauha-taitelinja on
+   * leikkausviivan paikka taitteen liu'ulla; se ratkaistaan pikseleiksi
+   * mittaelementillä, koska custom propertyn laskettu arvo on calc-teksti.
+   */
+  const mitta = document.createElement('span');
+  mitta.style.cssText = 'position:absolute;height:0;width:var(--nauha-taitelinja)';
+  nauha.appendChild(mitta);
+  const taitelinja = mitta.getBoundingClientRect().width;
+  mitta.style.width = 'var(--nauha-taite)';
+  const taite = mitta.getBoundingClientRect().width;
+  mitta.style.width = 'var(--nauha-korkeus)';
+  const korkeus = mitta.getBoundingClientRect().width;
+  mitta.remove();
+  const taiteTyyli = getComputedStyle(nauha.querySelector('.fokuskohde-ihmetaite-ylos'));
+  const tummin = [...taiteTyyli.backgroundImage.matchAll(
+    /rgba\(\s*\d+,\s*\d+,\s*\d+,\s*([\d.]+)\)\s+([\d.]+)px/g,
+  )].filter((o) => Number(o[1]) >= 0.8).map((o) => Number(o[2]));
+
+  return {
+    ladonta: Math.round(ladonta * 10) / 10,
+    nakyva: Math.round(nakyva * 10) / 10,
+    vara: Math.round(vara * 10) / 10,
+    tayttoaste: Math.round((ladonta / nakyva) * 100) / 100,
+    // Liu'un koko pituus 45 asteen kulmassa laatikossa taite × korkeus.
+    liuku: Math.round(0.7071 * (taite + korkeus) * 10) / 10,
+    taitelinja: Math.round(taitelinja * 10) / 10,
+    // Tummimman sävyn alkukohta liu'ulla: sen on oltava ENNEN linjaa.
+    juova: tummin.length ? Math.round(Math.min(...tummin) * 10) / 10 : null,
+  };
+}, isantaValitsin);
 
 /** Kortin rakenne ihmeen kannalta: kuvat, nappi ja niiden järjestys. */
 const ihmekortti = () => sivu.evaluate(() => {
@@ -931,8 +1031,6 @@ const ihmezoom = () => sivu.evaluate(() => {
       return n.top >= i.top - 0.5 && n.left >= i.left - 0.5
         && n.right <= i.right + 0.5 && n.bottom <= i.bottom + 0.5;
     })() : null,
-    // Teksti ei saa jäädä leikkauksen alle: kaistan oma laatikko riittää.
-    tekstiMahtuu: kaista ? kaista.scrollWidth <= kaista.clientWidth + 1 : null,
     lahde: kehys.querySelector('.fokuskohde-zoomlahde')?.textContent ?? '',
   };
 });
@@ -986,8 +1084,27 @@ vaadi('suurennoksen nauha kääriytyy: päät kuvan reunojen yli, kaksi taitetta
 vaadi('suurennoksen nauha leikkautuu kuvan reunaan eikä leiju paperilla',
   zoom?.leikkaus === 'hidden' && zoom.kaareKuvassa === true,
   `${zoom?.leikkaus} / kääre kuvassa: ${zoom?.kaareKuvassa}`);
-vaadi('suurennoksen nauhan teksti mahtuu kaistalle',
-  zoom?.tekstiMahtuu === true);
+/*
+ * TEKSTI MAHTUU LEIKKAUKSEN SISÄÄN, EI VAIN KAISTAN LAATIKKOON, ja
+ * jäljelle jää varaa leveämmälle kirjasimelle (ks. nauhanSovitus).
+ * Täyttöasteen katto 0,85 vastaa noin 18 %:n varaa: iPadin American
+ * Typewriter on kontin Courieria ~14 % leveämpi.
+ */
+let sovitus = await nauhanSovitus('.fokuskohde-zoomkehys');
+vaadi('suurennoksen nauhan teksti mahtuu leikkauksen sisään kokonaan',
+  sovitus?.vara > 0.5, JSON.stringify(sovitus));
+vaadi('suurennoksen tekstille jää varaa leveämmälle kirjasimelle',
+  sovitus?.tayttoaste <= 0.85, `täyttöaste ${sovitus?.tayttoaste}`);
+/*
+ * TAITE OSUU LEIKKAUSVIIVAAN. Tummin sävy on alettava ENNEN
+ * leikkausviivaa (muuten taitejuova jää kokonaan kuvan taakse eikä
+ * nauha lue taittuvaksi), ja linjan on oltava liu'un sisällä (muuten
+ * osa sävyistä puristuu liu'un alkuun kiinni).
+ */
+vaadi('suurennoksen taitejuova osuu leikkausviivaan',
+  sovitus?.juova > 0 && sovitus.juova < sovitus.taitelinja
+  && sovitus.taitelinja < sovitus.liuku,
+  JSON.stringify(sovitus));
 vaadi('nauha ei nappaa napautuksia', zoom?.osoitin === 'none', zoom?.osoitin);
 
 await sivu.keyboard.press('Escape');
@@ -1015,6 +1132,17 @@ vaadi('kortin nauha jatkuu kuvan ylä- ja vasemman reunan yli',
 vaadi('kortin nauha leikkautuu kuvan reunaan eikä leiju kortin paperilla',
   ihme?.leikkaus === 'hidden' && ihme.kaareKuvassa === true,
   `${ihme?.leikkaus} / kääre kuvassa: ${ihme?.kaareKuvassa}`);
+// Sama sovitusmittaus kortille: se oli suurennosta ahtaammalla, vaikka
+// omistaja näki leikkautumisen suurennoksesta (27.8.2026 ilta).
+sovitus = await nauhanSovitus('.fokuskohde-popup .fokuskohde-kuva');
+vaadi('kortin nauhan teksti mahtuu leikkauksen sisään kokonaan',
+  sovitus?.vara > 0.5, JSON.stringify(sovitus));
+vaadi('kortin tekstille jää varaa leveämmälle kirjasimelle',
+  sovitus?.tayttoaste <= 0.85, `täyttöaste ${sovitus?.tayttoaste}`);
+vaadi('kortin taitejuova osuu leikkausviivaan',
+  sovitus?.juova > 0 && sovitus.juova < sovitus.taitelinja
+  && sovitus.taitelinja < sovitus.liuku,
+  JSON.stringify(sovitus));
 vaadi('kortin nauha ei nappaa napautuksia', ihme?.osoitin === 'none', ihme?.osoitin);
 
 /* --- 11: ilman lehteä ei merkkejä --- */
