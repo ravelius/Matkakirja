@@ -86,10 +86,19 @@ const MODULES = [
   // (kadonneiden ihmeiden erä 26.8.2026), joten paririviä ei ole.
   // Sama koskee Ranskaa ja Britanniaa (Matkakirjan ihmeiden Euroopan
   // erä 27.8.2026).
+  // Sama koskee Matkakirjan ihmeiden MAAILMAN erän seitsemää uutta
+  // maata (27.8.2026): pelkät kohteet, ei fokusvirtaa.
   'js/packs/fokuskohteet-egy.js',
   'js/packs/fokuskohteet-irq.js',
   'js/packs/fokuskohteet-fra.js',
   'js/packs/fokuskohteet-gbr.js',
+  'js/packs/fokuskohteet-syr.js',
+  'js/packs/fokuskohteet-chn.js',
+  'js/packs/fokuskohteet-mex.js',
+  'js/packs/fokuskohteet-jor.js',
+  'js/packs/fokuskohteet-irn.js',
+  'js/packs/fokuskohteet-afg.js',
+  'js/packs/fokuskohteet-zwe.js',
   'js/packs/fokusvirrat.js',
   'js/packs/uutislahteet.js',
   // uutiset vasta lähteidensä jälkeen (tuo uutislahteet.js:n).

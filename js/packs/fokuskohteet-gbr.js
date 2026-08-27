@@ -17,6 +17,11 @@
  * yhden kohteen mittainen ja odottaa ensimmäistä varsinaista
  * Britannia-erää.
  *
+ * MAAILMAN ERÄ (27.8.2026, neljätoista uutta ihmettä) toi listalle
+ * kaksi kadonnutta lisää: Crystal Palacen ja vanhan London Bridgen.
+ * Lista on siis kolmen mittainen, mutta yhä pelkkä ihme-erien jalusta
+ * — varsinainen Britannia-erä on tekemättä.
+ *
  * ── TÄMÄ ON ERÄN AINOA "KOE IHME" -KOHDE, JA SE ON TIETOINEN VALINTA ─
  *
  * Raamatun kaksi esitystapaa: kokonaan kadonnut kohde saa kartalle
@@ -51,8 +56,9 @@
  * ── FAKTAPOHJA ─────────────────────────────────────────────────────
  *
  * en-Wikipedia raakatekstinä (index.php?action=raw) artikkelit "Old St
- * Paul's Cathedral" ja "St Paul's Cathedral" 27.8.2026 — ei
- * työaineistoa, joten lähderivi osoittaa suoraan artikkeleihin.
+ * Paul's Cathedral", "St Paul's Cathedral", "The Crystal Palace" ja
+ * "London Bridge" 27.8.2026 — ei työaineistoa, joten lähderivit
+ * osoittavat suoraan artikkeleihin.
  *
  * MITÄ TEKSTI EI VÄITÄ: artikkeli merkitsee itse, että keskiaikaisen
  * huipun korkeus (perinteinen luku 489 jalkaa eli noin 149 metriä) ja
@@ -138,6 +144,152 @@ export const FOKUSKOHTEET_GBR = [
         + 'huippu paloi salamaniskussa jo 1561 eikä sitä rakennettu '
         + 'takaisin. Samalla Ludgate Hillin tontilla seisoo nyt '
         + 'Christopher Wrenin kupolikirkko.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
+    },
+  },
+  /*
+   * ── MATKAKIRJAN IHMEIDEN MAAILMAN ERÄ (27.8.2026) ────────────────
+   *
+   * Kaksi kadonnutta lontoolaista St Paulin perässä. Kumpikin on
+   * NIMETTY PAIKKA LONTOON SISÄLLÄ eikä toinen Lontoo — sama
+   * pelilaattasääntö ja sama ratkaisu kuin Forum Romanumilla Roomassa
+   * (js/packs/fokuskohteet-ita.js). Sillan ja St Paulin merkit osuvat
+   * lähes päällekkäin kaupunkimerkin kanssa, ja niputuspassi
+   * (js/fokusniput.js) kasaa ne siistiksi sarakkeeksi kaupungin
+   * oikealle puolelle katkoviivoineen — juuri sitä varten se on.
+   *
+   * KUMPIKIN ON `kadonnut: true` ERI SYYSTÄ, JA SE ON KIRJOITETTU AUKI
+   * SELITTEISIIN:
+   *
+   *   Crystal Palace paloi maan tasalle 30.11.1936. Puisto ja sen
+   *   pengerrykset ovat yhä paikallaan, mutta rakennusta ei ole.
+   *
+   *   Vanha London Bridge purettiin 1831, kun Rennien uusi silta
+   *   avattiin sen vierestä. Thamesin yli menee yhä silta samassa
+   *   kohdassa — mutta se ei ole tämä silta, ja selite sanoo sen
+   *   suoraan samasta syystä kuin vanhan St Paulin selite yllä.
+   */
+  {
+    /*
+     * CRYSTAL PALACE. −0,0756 E / 51,4226 N — en-Wikipedia "The Crystal
+     * Palace" (tietolaatikon coordinates). Piste on Sydenham Hillin
+     * paikka, jonne rakennus siirrettiin 1854 — ei Hyde Park, jossa se
+     * seisoi vain vuoden 1851 näyttelyn ajan. Ihmekuva katsoo samaa
+     * mäkeä nykyisestä Crystal Palace Parkista.
+     */
+    id: 'crystal-palace',
+    nimi: 'Crystal Palace',
+    tyyppi: 'muu',
+    symboli: 'tekniikka',
+    kysymykset: [
+      'Miten näin suuri lasirakennus saatiin pystyyn 39 viikossa?',
+      'Miksi rakennusta ei koskaan rakennettu uudelleen?',
+    ],
+    korostukset: ['maailmannäyttely|maailmannäyttelyä',
+      'Joseph Paxton|Joseph Paxtonin'],
+    nappi: 'Lasipalatsi, joka nousi 39 viikossa',
+    laudat: {
+      maailmankartta: { x: 5830.8, y: 1327.8 },
+      europe: { x: 209.7, y: 541.2 },
+    },
+    teksti: 'Crystal Palace oli valuraudasta ja tasolasista tehty '
+      + 'rakennus, joka pystytettiin Hyde Parkiin vuoden 1851 suurta '
+      + 'maailmannäyttelyä varten. Puutarhuri Joseph Paxtonin '
+      + 'suunnittelema halli oli 564 metriä pitkä ja sisältä 39 metriä '
+      + 'korkea, ja sen 293 000 lasiruutua saatiin paikoilleen 39 '
+      + 'viikossa. Seinät ja katto olivat läpinäkyvät, joten sisällä ei '
+      + 'tarvittu lamppuja lainkaan. Näyttelyn jälkeen rakennus '
+      + 'purettiin ja koottiin uudelleen Sydenham Hillille Etelä-'
+      + 'Lontooseen, missä se avattiin kesäkuussa 1854 entistä '
+      + 'suurempana: 490 metriä pitkänä ja tynnyriholvikattoisena. '
+      + 'Siellä se palveli konserttitalona ja näyttelyhallina '
+      + 'kahdeksankymmentä vuotta.',
+    lahde: 'en-Wikipedia "The Crystal Palace", johdanto, tietolaatikko '
+      + 'ja osio "Sydenham Hill" (tarkistettu 27.8.2026).',
+    /*
+     * MATKAKIRJAN IHME (kadonnut) — säännöt js/packs/fokuskohteet-grc.js:n
+     * samannimisessä lohkossa. Rakennus paloi 1936, joten
+     * `kadonnut: true` ja kortissa on vain tämä kuva.
+     *
+     * TÄMÄ KOHDE OSUU PÄIVÄKIRJAN AIKAAN SUORAAN, ja toisin kuin
+     * Tuileries se osuu siihen ONNEKKAASTI: Sydenhamin lasipalatsi
+     * seisoi 1854–1936, joten isoisä olisi vuonna 1873 voinut kävellä
+     * sen sisään. Selite sanoo sen ääneen.
+     */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-crystal-palace.webp',
+      kadonnut: true,
+      selite: 'Crystal Palace oli aikansa suurin lasirakennus: vuoden '
+        + '1851 maailmannäyttelyn halli, joka koottiin näyttelyn '
+        + 'jälkeen uudelleen Sydenham Hillin laelle Etelä-Lontooseen. '
+        + 'Siellä se seisoi kesäkuusta 1854 aina 30. marraskuuta 1936 '
+        + 'asti, jolloin tulipalo tuhosi sen — isoisä ehti siis nähdä '
+        + 'sen matkallaan 1873. Mäellä on nyt Crystal Palace Park, '
+        + 'jonka pengerrykset ja vuoden 1854 dinosauruspatsaat ovat '
+        + 'edelleen paikallaan.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
+    },
+  },
+  {
+    /*
+     * VANHA LONDON BRIDGE. −0,08778 E / 51,50806 N — en-Wikipedia
+     * "London Bridge" (tietolaatikon coordinates). Piste on nykyisen
+     * sillan paikka; keskiaikainen silta seisoi noin 30 metriä siitä
+     * itään, mikä on laudan mittakaavassa alle sadasosa yksiköstä eikä
+     * siis erotu omaksi pisteekseen. Yksi merkki riittää, ja se on
+     * oikeassa paikassa.
+     */
+    id: 'vanha-london-bridge',
+    nimi: 'Vanha London Bridge',
+    tyyppi: 'muu',
+    symboli: 'tekniikka',
+    kysymykset: [
+      'Millaista oli asua sillalla?',
+      'Miksi sillan alitse oli vaarallista soutaa?',
+    ],
+    korostukset: ['Peter de Colechurch',
+      'Nonsuch House|Nonsuch Housella'],
+    nappi: 'Silta, jolla oli oma katu ja 140 taloa',
+    laudat: {
+      maailmankartta: { x: 5830.4, y: 1324.0 },
+      europe: { x: 209.5, y: 538.9 },
+    },
+    teksti: 'Thamesin ylitse rakennettiin 1176 alkaen kivisilta, joka '
+      + 'valmistui 1209. Sen aloitti pappi Peter de Colechurch, ja '
+      + 'lopputulos oli noin 282 metriä pitkä: yhdeksäntoista pilaria '
+      + 'ja yhdeksäntoista kaarta sekä nostosilta. Sillalla oli taloja '
+      + 'alusta asti, koska niiden vuokrat maksoivat sillan '
+      + 'kunnossapidon — 1300-luvun lopulla niitä oli 140, ja '
+      + '1600-luvulla lähes kaikissa oli neljä tai viisi kerrosta. '
+      + 'Jokainen talo oli myös kauppa, ja silta oli yksi Lontoon '
+      + 'tärkeimmistä ostoskaduista. Vuosina 1577–1579 nostosillan '
+      + 'torni korvattiin Nonsuch Housella, kaksoistalolla, joka oli '
+      + 'aikanaan Lontoon toinen klassisin julkisivu. Talot purettiin '
+      + '1758–1761 ja koko silta 1831.',
+    lahde: 'en-Wikipedia "London Bridge", osio "Old London Bridge '
+      + '(1209–1831)" ja tietolaatikko (tarkistettu 27.8.2026).',
+    /*
+     * MATKAKIRJAN IHME (kadonnut) — säännöt fokuskohteet-grc.js:ssä.
+     * `kadonnut: true`, ja selite tekee saman työn kuin vanhan St
+     * Paulin selite: samassa kohdassa jokea on yhä silta, joten
+     * pelaajalle on sanottava suoraan, ettei se ole tämä silta.
+     *
+     * ISOISÄN AIKA: keskiaikainen silta purettiin 1831, joten 1873
+     * hänen alleen jäi Rennien graniittisilta — ja sekin on nyt
+     * muualla, Arizonassa. Selite kertoo ketjun loppuun asti.
+     */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-vanha-london-bridge.webp',
+      kadonnut: true,
+      selite: 'Keskiaikainen London Bridge valmistui 1209 ja kantoi '
+        + 'yli kuudensadan vuoden ajan kokonaista katua: parhaimmillaan '
+        + '140 taloa, joista jokainen oli myös kauppa. Talot purettiin '
+        + '1761 ja itse silta 1831. Samassa kohdassa jokea menee yhä '
+        + 'silta, mutta se on eri silta: isoisä kulki 1873 John '
+        + 'Rennien graniittisillan yli, joka myytiin 1968 ja pystytettiin '
+        + 'uudelleen Arizonaan, ja nykyinen betonisilta on vuodelta 1973.',
       lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
         + 'nykymaailmassa',
     },

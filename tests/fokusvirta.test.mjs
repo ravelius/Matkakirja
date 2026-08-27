@@ -459,6 +459,15 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
     ITA: (await import('../js/packs/fokuskohteet-ita.js')).FOKUSKOHTEET_ITA,
     FRA: (await import('../js/packs/fokuskohteet-fra.js')).FOKUSKOHTEET_FRA,
     GBR: (await import('../js/packs/fokuskohteet-gbr.js')).FOKUSKOHTEET_GBR,
+    // Maailman erä 27.8.2026: seitsemän uutta maata, joilla on
+    // fokuslehti mutta ei vielä omaa fokusvirtaa.
+    SYR: (await import('../js/packs/fokuskohteet-syr.js')).FOKUSKOHTEET_SYR,
+    CHN: (await import('../js/packs/fokuskohteet-chn.js')).FOKUSKOHTEET_CHN,
+    MEX: (await import('../js/packs/fokuskohteet-mex.js')).FOKUSKOHTEET_MEX,
+    JOR: (await import('../js/packs/fokuskohteet-jor.js')).FOKUSKOHTEET_JOR,
+    IRN: (await import('../js/packs/fokuskohteet-irn.js')).FOKUSKOHTEET_IRN,
+    AFG: (await import('../js/packs/fokuskohteet-afg.js')).FOKUSKOHTEET_AFG,
+    ZWE: (await import('../js/packs/fokuskohteet-zwe.js')).FOKUSKOHTEET_ZWE,
   });
 
   let ihmeita = 0;
@@ -518,11 +527,12 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
     }
   }
   /*
-   * KYMMENEN + KOLME. Ensimmäinen erä (26.–27.8.2026) oli antiikin
-   * kadonneet ihmeet, Euroopan erä (27.8.2026) toi kolme lisää:
-   * Forum Romanum, Tuileries'n palatsi ja keskiaikainen St Paul.
+   * KYMMENEN + KOLME + NELJÄTOISTA. Ensimmäinen erä (26.–27.8.2026)
+   * oli antiikin kadonneet ihmeet, Euroopan erä (27.8.2026) toi kolme
+   * lisää (Forum Romanum, Tuileries, vanha St Paul) ja MAAILMAN erä
+   * samana päivänä neljätoista viideltä mantereelta.
    */
-  assert.equal(ihmeita, 13, 'Matkakirjan ihmeitä on kolmetoista');
+  assert.equal(ihmeita, 27, 'Matkakirjan ihmeitä on kaksikymmentäseitsemän');
 });
 
 /*
@@ -539,7 +549,8 @@ test('ihmeiden kuvakansiossa on vain uudet ihme-kuvat', async () => {
   const juuri = join(dirname(fileURLToPath(import.meta.url)), '..');
   const kansio = join(juuri, 'assets/kartat/ihmeet');
   const tiedostot = readdirSync(kansio);
-  assert.equal(tiedostot.length, 13, 'kansiossa on kolmetoista ihmekuvaa');
+  assert.equal(tiedostot.length, 27,
+    'kansiossa on kaksikymmentäseitsemän ihmekuvaa');
   for (const nimi of tiedostot) {
     assert.ok(nimi.startsWith('ihme-'), `${nimi}: vanha loistoaikakuva on yhä levyllä`);
   }
@@ -578,4 +589,43 @@ test('kadonnut ihme saa kartalle tähden, olemassa oleva pitää oman merkkinsä
   assert.equal(stPaul.ihme.kadonnut, false, 'Ludgate Hillin katedraali on paikallaan');
   assert.ok(/EDELTÄJÄ/.test(stPaul.ihme.selite),
     'vanhan St Paulin selite kertoo kuvan olevan nykyisen edeltäjä');
+
+  /*
+   * MAAILMAN ERÄ 27.8.2026. Kolme vartiota, jotka kaikki koskevat
+   * esitystavan valintaa — sitä, mitä pelaaja näkee kartalla ja
+   * kortissa. Väärä valinta ei kaataisi mitään, mutta valehtelisi.
+   *
+   *   1. BAMIYAN ON TÄHTI, VAIKKA PAIKKA ON OLEMASSA. Kallio ja
+   *      syvennykset ovat pystyssä, mutta KOHDE on patsaat, ja ne
+   *      tuhottiin 2001. Perustelu kokonaisuudessaan
+   *      js/packs/fokuskohteet-afg.js:n alussa. Selitteen on silti
+   *      sanottava, että kallio ja syvennykset ovat paikallaan, tai
+   *      pelaaja luulisi koko laakson kadonneen.
+   *   2. AL-KHAZNEH JA SUURI ZIMBABWE OVAT "KOE IHME" -KOHTEITA,
+   *      koska kivi on paikallaan; kadonnut on kaupunki niiden
+   *      ympäriltä. Kummallakin on siis oltava nykytilan valokuva.
+   *   3. KHEOPSIN PYRAMIDI ON "KOE IHME", vaikka ihmekuvassa on
+   *      kadonnut kalkkikivikuori. Pyramidi itse on antiikin
+   *      seitsemästä ihmeestä ainoa pystyssä oleva, joten tähti olisi
+   *      suoranainen virhe.
+   */
+  const { FOKUSKOHTEET_AFG } = await import('../js/packs/fokuskohteet-afg.js');
+  const { FOKUSKOHTEET_JOR } = await import('../js/packs/fokuskohteet-jor.js');
+  const { FOKUSKOHTEET_ZWE } = await import('../js/packs/fokuskohteet-zwe.js');
+  const { FOKUSKOHTEET_EGY } = await import('../js/packs/fokuskohteet-egy.js');
+  const buddhat = FOKUSKOHTEET_AFG.find((k) => k.id === 'bamiyanin-buddhat');
+  const khazneh = FOKUSKOHTEET_JOR.find((k) => k.id === 'al-khazneh');
+  const zimbabwe = FOKUSKOHTEET_ZWE.find((k) => k.id === 'suuri-zimbabwe');
+  const pyramidi = FOKUSKOHTEET_EGY.find((k) => k.id === 'gizan-suuri-pyramidi');
+  assert.equal(buddhat.ihme.kadonnut, true, 'Bamiyanin patsaat tuhottiin 2001');
+  assert.equal(buddhat.kuva, undefined, 'tuhotuista patsaista ei ole valokuvaa');
+  assert.ok(/syvennykse/i.test(buddhat.ihme.selite),
+    'Bamiyanin selite kertoo kallion ja syvennysten olevan yhä paikallaan');
+  assert.equal(khazneh.ihme.kadonnut, false, 'Al-Khazneh on kalliossa tallella');
+  assert.ok(khazneh.kuva?.tiedosto, 'Al-Khaznesta on valokuva nykytilasta');
+  assert.equal(zimbabwe.ihme.kadonnut, false, 'Suuren Zimbabwen muurit ovat pystyssä');
+  assert.ok(zimbabwe.kuva?.tiedosto, 'Suuresta Zimbabwesta on valokuva nykytilasta');
+  assert.equal(pyramidi.ihme.kadonnut, false,
+    'Kheopsin pyramidi on antiikin ihmeistä ainoa pystyssä oleva');
+  assert.ok(pyramidi.kuva?.tiedosto, 'pyramidista on valokuva nykytilasta');
 });

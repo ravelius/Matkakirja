@@ -98,15 +98,22 @@ import {
 import { asetaKuva } from './media.js';
 import { html, jaaKappaleiksi, nielaiseSulkevaNapautus } from './ui-apurit.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
+import { FOKUSKOHTEET_AFG } from './packs/fokuskohteet-afg.js';
 import { FOKUSKOHTEET_BGR } from './packs/fokuskohteet-bgr.js';
 import { FOKUSKOHTEET_BIH } from './packs/fokuskohteet-bih.js';
+import { FOKUSKOHTEET_CHN } from './packs/fokuskohteet-chn.js';
 import { FOKUSKOHTEET_EGY } from './packs/fokuskohteet-egy.js';
 import { FOKUSKOHTEET_FRA } from './packs/fokuskohteet-fra.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
+import { FOKUSKOHTEET_IRN } from './packs/fokuskohteet-irn.js';
 import { FOKUSKOHTEET_IRQ } from './packs/fokuskohteet-irq.js';
 import { FOKUSKOHTEET_ITA } from './packs/fokuskohteet-ita.js';
+import { FOKUSKOHTEET_JOR } from './packs/fokuskohteet-jor.js';
+import { FOKUSKOHTEET_MEX } from './packs/fokuskohteet-mex.js';
 import { FOKUSKOHTEET_ROU } from './packs/fokuskohteet-rou.js';
+import { FOKUSKOHTEET_SYR } from './packs/fokuskohteet-syr.js';
 import { FOKUSKOHTEET_TUR } from './packs/fokuskohteet-tur.js';
+import { FOKUSKOHTEET_ZWE } from './packs/fokuskohteet-zwe.js';
 import { FOKUSKOHTEET_GRC } from './packs/fokuskohteet-grc.js';
 import { niputaFokusmerkit } from './fokusniput.js';
 import { polloKysy } from './pollo.js';
@@ -149,6 +156,26 @@ const KOHDE_MAAT = {
    */
   FRA: FOKUSKOHTEET_FRA,
   GBR: FOKUSKOHTEET_GBR,
+  /*
+   * Seitsemän maata lisää 27.8.2026 Matkakirjan ihmeiden MAAILMAN erän
+   * takia. Ehto on joka kerta sama eikä siitä ole poikettu: maa pääsee
+   * tähän tauluun vain, jos sen fokuslehti on jo FOKUS_POHJAT-taulussa
+   * (js/packs/fokus-grc.js). Kaikkien seitsemän lehti on ämpärissä
+   * (SYR.webp, CHN.webp, MEX.webp, JOR.webp, IRN.webp, AFG.webp,
+   * ZWE.webp), joten merkit saavat pohjan, jonka päälle asettua.
+   *
+   * Jokaisen tiedosto on yhden kohteen mittainen ja odottaa maan omaa
+   * varsinaista erää — nämä ovat ihme-erän jalustoja, eivät
+   * maakatsauksia. Erän muut kohteet mahtuivat jo olemassa oleviin
+   * listoihin (Kreikka, Turkki, Egypti, Ranska, Britannia).
+   */
+  SYR: FOKUSKOHTEET_SYR,
+  CHN: FOKUSKOHTEET_CHN,
+  MEX: FOKUSKOHTEET_MEX,
+  JOR: FOKUSKOHTEET_JOR,
+  IRN: FOKUSKOHTEET_IRN,
+  AFG: FOKUSKOHTEET_AFG,
+  ZWE: FOKUSKOHTEET_ZWE,
 };
 
 /** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta). */
