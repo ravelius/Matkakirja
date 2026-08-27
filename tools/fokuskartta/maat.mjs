@@ -129,8 +129,16 @@ export const FOKUSMAAT = {
      * MISSÄ vuori on silloinkin, kun kohdemerkit eivät ole päällä — ja
      * "2918 m" ei toista nimiötä vaan täydentää sitä. Merillä ei ole
      * kuvassa muuta merkintää kuin nimi, joten niistä katoaa koko
-     * merkintä; Kreetanmeri, Traakianmeri ja Smólikas jäävät siis
-     * nimeämättä, mikä on tämän linjauksen tietoinen hinta.
+     * merkintä; Kreetanmeri, Traakianmeri ja Smólikas jäivät siis
+     * nimeämättä, mikä oli tämän linjauksen tietoinen hinta.
+     *
+     * HINTA ON SITTEMMIN MAKSETTU TOISIN PÄIN (omistaja 27.8.2026,
+     * kolmikkoerä): nimipolttoa ei palautettu, vaan noista kolmesta
+     * tehtiin omat fokuskohteensa (js/packs/fokuskohteet-grc.js:
+     * `smolikas`, `kreetanmeri`, `traakianmeri`) täsmälleen näihin
+     * koordinaatteihin. Nimi tulee siis nyt nimiöstä, ja napautus avaa
+     * lisäksi kortin. ÄLÄ SIIS KÄYTÄ tätä listaa perusteena polton
+     * palauttamiselle — kohteet ovat kartalla juuri näissä pisteissä.
      */
     poltetutNimet: { meret: false, vuoret: false },
 
