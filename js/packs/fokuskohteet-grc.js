@@ -166,7 +166,11 @@
  * niiden perässä Akropolis ja Akropolis-museo (v1119–v1121),
  * symbolitaksonomian ensimmäinen sisältöerä (kuusi kohdetta) ja
  * täkypoolista siirretyt kaksi eläinkohdetta — kummallakin erällä on
- * oma kommenttinsa listan sisällä.
+ * oma kommenttinsa listan sisällä. Viimeisenä (27.8.2026) tuli
+ * KOLMIKKOERÄ, joka nimeää kohteina ne kolme paikkaa, jotka v1210 jätti
+ * lehdellä nimettä: Smólikas, Kreetanmeri ja Traakianmeri. Ne eivät ole
+ * listan lopussa vaan lajitovereidensa joukossa — Smólikas Píndoksen
+ * perässä, meret Joonianmeren perässä.
  */
 export const FOKUSKOHTEET_GRC = [
   {
@@ -468,10 +472,31 @@ export const FOKUSKOHTEET_GRC = [
     korostukset: ['Dinaariset Alpit|Dinaaristen Alppien'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Kreikan selkäranka',
-    // 20,92528 E / 40,08889 N — en-Wikipedia "Pindus".
+    /*
+     * PÍNDOS SIIRTYI POIS SMÓLIKAKSEN HUIPULTA (27.8.2026, kolmikkoerä).
+     *
+     * Kohteen entinen paikka oli en-Wikipedian "Pindus"-artikkelin
+     * koordinaatti 20,92528 E / 40,08889 N — ja se on artikkelin tapaan
+     * VUORISTON KORKEIN HUIPPU eli Smólikas, ei vuoriston keskikohta.
+     * Niin kauan kuin Smólikas ei ollut oma kohteensa, se oli harmiton
+     * kummallisuus (Psilorítiksen kommentti alempana kuvaa sen:
+     * *"Píndos, jonka merkki seisoo Smólikaksen huipulla"*). Nyt
+     * Smólikas on oma kohteensa täsmälleen siinä pisteessä, johon lehti
+     * piirtää sen kolmion, joten kaksi merkkiä nimiöineen olisi
+     * päällekkäin samalla huipulla — ja erottelupassi
+     * (js/fokuskohteet.js eritteleKohdeRyhmat) siirtäisi ne erilleen
+     * niin, että kartalla näkyisi yhden kolmion vieressä kaksi nimeä.
+     *
+     * UUSI PISTE ON VUORISTON OMA KESKIKOHTA: 21,35 E / 39,5 N, eli
+     * harjanne Metsovon ja Tzoumerkan välillä — samaa eteläistä
+     * Píndosta, josta kohteen oma valokuva alempana on otettu. Piste on
+     * lähimmästä naapurista (Ioánnina) 17,8 lautayksikön päässä, eikä
+     * lehteen ole siihen poltettu mitään, joten nimiö saa oman tilansa.
+     */
+    // 21,35 E / 39,5 N — vuoriston keskikohta (ks. kommentti yllä).
     laudat: {
-      maailmankartta: { x: 6530.8, y: 1799.4 },
-      europe: { x: 613.0, y: 839.3 },
+      maailmankartta: { x: 6545.0, y: 1822.5 },
+      europe: { x: 621.1, y: 854.8 },
     },
     teksti: 'Noin 160 kilometrin pituinen Pindos kulkee pohjoisesta etelään '
       + 'pitkin Kreikan mannerta ja tunnetaan puhekielessä "Kreikan '
@@ -490,13 +515,89 @@ export const FOKUSKOHTEET_GRC = [
     },
   },
   /*
+   * ── KOLMIKKO, JOKA JÄI LEHDELLÄ NIMEÄMÄTTÄ (omistaja 27.8.2026) ────
+   *
+   * v1210 lopetti vuorten ja merten nimien polttamisen Kreikan lehteen
+   * (tools/fokuskartta/maat.mjs GRC.poltetutNimet), koska kohdemerkkien
+   * omat nimiöt latoivat samat nimet toistamiseen viereen. Linjauksella
+   * oli tiedossa oleva hinta, jonka sama kommentti kirjaa itse:
+   * *"Kreetanmeri, Traakianmeri ja Smólikas jäävät siis nimeämättä"* —
+   * niillä kolmella ei ollut omaa kohdetta, joten poltetun nimen
+   * kadotessa niiltä katosi nimi kokonaan.
+   *
+   * OMISTAJAN RATKAISU EI OLE NIMIPOLTON PALAUTUS vaan kolme uutta
+   * kohdetta: symboli, nimiö ja lyhyt juttu, aivan kuten muillakin
+   * vuorilla ja merillä. Näin nimi liikkuu kohteen mukana ja aukeaa
+   * napautuksesta kortiksi sen sijaan, että se olisi pikseleitä kuvassa.
+   *
+   * KOORDINAATIT OVAT TÄSMÄLLEEN NE, JOISTA LEHTI ENNEN LATOI NIMEN.
+   * Smólikas saa vuoritaulun kolmion paikan (GRC.vuoret) ja meret
+   * merinimitaulun paikat (GRC.meret) — samat luvut, jotka lehden
+   * sommittelija on käsin asetellut ulapalle ja huipulle. Se on
+   * vahvempi peruste kuin Wikipedian pyöreä keskipiste: piste on
+   * valittu tälle nimenomaiselle kuvalle, ja Smólikaksella se osuu
+   * kuvaan poltetun kolmion ja sen korkeuslukeman päälle.
+   */
+  {
+    id: 'smolikas',
+    nimi: 'Smólikas',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Miten merenpohja päätyy vuoren huipulle?',
+      'Elääkö lohikäärmejärvessä mitään?',
+    ],
+    korostukset: ['ofioliitti|ofioliittia', 'Drakolímni'],
+    /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
+    nappi: 'Kreikan toiseksi korkein vuori',
+    /*
+     * 20,9142 E / 40,0894 N — tools/fokuskartta/maat.mjs GRC.vuoret,
+     * eli täsmälleen se piste, johon lehti piirtää Smólikaksen
+     * hachure-kolmion ja lukeman "2637 m". Wikipedian oma koordinaatti
+     * (20,92611 E / 40,08972 N) on runsaan kilometrin idempänä eli alle
+     * puoli lautayksikköä — kolmion päälle osuminen on tässä tärkeämpää
+     * kuin desimaali, koska merkki ja kuvan kolmio luetaan yhdessä.
+     */
+    laudat: {
+      maailmankartta: { x: 6530.5, y: 1799.4 },
+      europe: { x: 612.8, y: 839.2 },
+    },
+    teksti: 'Smólikas on Píndoksen korkein huippu ja Kreikan toiseksi '
+      + 'korkein vuori heti Olympoksen jälkeen. Lehteen painettu lukema '
+      + '2 637 metriä on vanhaa perua; uudempi mittaus antaa huipulle '
+      + '2 631,4 metriä. Vuori on ofioliittia, vanhaa merenpohjan kuorta, '
+      + 'jonka maankuoren liike on nostanut yli kahden kilometrin '
+      + 'korkeuteen, ja jäätiköt sulivat sen pohjois- ja itärinteiltä '
+      + 'vasta noin 11 500 vuotta sitten. Länsirinteellä lepää pieni '
+      + 'vuoristojärvi Drakolímni eli "lohikäärmejärvi": paikallisen '
+      + 'tarun mukaan järvien lohikäärmeet tappelivat heittelemällä '
+      + 'toisiaan männyillä ja kivillä ja muotoilivat siinä koko '
+      + 'maiseman. Isoisän matkan aikaan vuori ei ollut Kreikassa '
+      + 'lainkaan — Epeiros kuului yhä Ottomaanien valtakuntaan, ja raja '
+      + 'siirtyi tänne vasta 1913.',
+    lahde: 'en-Wikipedia "Smolikas" (johdanto-osa ja tietolaatikko), '
+      + '"Drakolimni" (johdanto-osa ja osio "Drakolimni of Smolikas") '
+      + 'sekä "Ioannina", osio "Ottoman period (1430–1913)" '
+      + '(tarkistettu 27.8.2026).',
+    // Category:Smolikas (37 tiedostoa). Kuva on artikkelin oma
+    // huippukuva ja samalta kuvaajalta kuin Píndoksen kuva yllä.
+    kuva: {
+      tiedosto: 'Smolikas IMG 0118.jpg',
+      selite: 'Smólikaksen huippu etelästä nähtynä. Kahdentuhannen metrin '
+        + 'yläpuolella metsä loppuu ja jäljelle jää ruohoa ja kalliota; '
+        + 'etualan puut ovat balkaninmäntyjä.',
+      lahde: 'Deyan Vasilev (Dido3), Wikimedia Commons (CC BY-SA 3.0)',
+    },
+  },
+  /*
    * PSILORÍTIS — KREETAN VUORI, JOKA JÄI KLIKATTAVAKSI VIIMEISENÄ.
    *
    * Omistajan havainto 27.8.2026 Kreetan kohdalta: *"vuorimerkit eivät
    * nyt ole klikattavissa — niiden pitäisi olla."* Lehteen on poltettu
    * viisi vuorikolmiota (tools/fokuskartta/maat.mjs GRC.vuoret), ja
    * neljä niistä oli jo tässä taulussa kohteena: Ólympos, Parnassós,
-   * Taÿgetos ja Píndos (jonka merkki seisoo Smólikaksen huipulla).
+   * Taÿgetos ja Píndos, jonka merkki seisoi silloin Smólikaksen
+   * huipulla — kolmikkoerä 27.8.2026 antoi Smólikakselle oman kohteen
+   * ja siirsi Píndoksen vuoriston keskikohtaan (ks. kommentti siellä).
    * VAIN PSILORÍTIS PUUTTUI — ja juuri se on Kreetan lehdellä, jota
    * omistaja katsoi. Kuvaan poltettu kolmio on pikseleitä, joten
    * ilman kohdetta sen päällä ei ole mitään napautettavaa.
@@ -615,6 +716,89 @@ export const FOKUSKOHTEET_GRC = [
         + '(1888).',
       lahde: 'Emil Jakob Schindler 1888, Österreichische Galerie Belvedere, '
         + 'Wikimedia Commons (public domain)',
+    },
+  },
+  /*
+   * KREETANMERI JA TRAAKIANMERI — kolmikkoerän kaksi merta; peruste ja
+   * koordinaattisääntö on Smólikaksen edellä olevassa kommentissa.
+   * Kummankin piste on lehden oman merinimitaulun paikka
+   * (tools/fokuskartta/maat.mjs GRC.meret), eli avovettä, johon nimi
+   * ennen ladottiin — ei rannikkopiste (ks. tiedoston alun huomio
+   * merten keskipisteistä).
+   */
+  {
+    id: 'kreetanmeri',
+    nimi: 'Kreetanmeri',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Miksi Egeanmerta jaetaan pienempiin meriin?',
+      'Mitä Kreetanmeren pohjasta on löydetty?',
+    ],
+    korostukset: ['Libyanmeri'],
+    /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
+    nappi: 'Egeanmeren eteläisin ulappa',
+    // 24,6 E / 35,9 N — tools/fokuskartta/maat.mjs GRC.meret, eli
+    // poltetun KREETANMERI-nimen paikka Kreetan pohjoispuolisella
+    // ulapalla. KOKO MEREN LIKIMÄÄRÄINEN KESKIPISTE, ei täsmäpaikka.
+    laudat: {
+      maailmankartta: { x: 6653.3, y: 1961.3 },
+      europe: { x: 683.5, y: 949.4 },
+    },
+    teksti: 'Kreetanmeri on Egeanmeren eteläisin osa: 45 000 neliökilometriä '
+      + 'ulappaa Kreetan pohjoispuolella. Lännessä sen porttia vartioivat '
+      + 'Kythira ja Antikythera, pohjoisessa ovat Kykladit ja idässä '
+      + 'Karpathos ja Kasos. Koillis-Kreetan edustalla pohja painuu '
+      + 'syvimmilleen — merikartat antavat 2 591 metriä, osa mittauksista '
+      + 'lähes 3 300. Saaren toisella puolen alkaa jo Libyanmeri. Isoisän '
+      + 'matkan aikaan tämän meren ylitys vei maasta toiseen: Kreeta oli '
+      + 'yhä Ottomaanien saari, ja itsehallintonsa se sai vasta 1898. '
+      + 'Nykyään samaa reittiä kulkevat Pireuksen ja Iraklionin lautat.',
+    lahde: 'en-Wikipedia "Sea of Crete", johdanto-osa, sekä "Crete", osio '
+      + '"Cretan State and union with Greece" (tarkistettu 27.8.2026).',
+    // Category:Sea of Crete (13 tiedostoa).
+    kuva: {
+      tiedosto: 'The coast of Crete Sea near Chania. Crete, Greece.jpg',
+      selite: 'Kreetanmeren rantaa Chanián luona Kreetan pohjoisrannikolla. '
+        + 'Saaren eteläpuolella alkaa jo toinen meri, Libyanmeri.',
+      lahde: 'Ввласенко, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+  },
+  {
+    id: 'traakianmeri',
+    nimi: 'Traakianmeri',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Miksi Dardanellit ovat olleet niin tärkeät?',
+      'Millainen eläin on Mustanmeren pyöriäinen?',
+    ],
+    korostukset: ['Dardanellit|Dardanellien'],
+    /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
+    nappi: 'Egeanmeren pohjoisin nurkka',
+    // 25,05 E / 40,4 N — tools/fokuskartta/maat.mjs GRC.meret, eli
+    // poltetun TRAAKIANMERI-nimen paikka Limnoksen pohjoispuolisella
+    // avovedellä. Keskipiste, ei täsmäpaikka.
+    laudat: {
+      maailmankartta: { x: 6668.3, y: 1787.1 },
+      europe: { x: 692.2, y: 831.1 },
+    },
+    teksti: 'Traakianmeri on Egeanmeren pohjoisin osa, ja koko sen ulappa jää '
+      + '40. leveyspiirin pohjoispuolelle. Se rajautuu Itä-Makedoniaan, '
+      + 'Etelä-Traakiaan ja Luoteis-Anatoliaan; saarina siinä ovat Thasos, '
+      + 'Samothraki ja Gökçeada, ja etelässä se päättyy Limnoksen '
+      + 'pohjoisrantaan. Nestos ja Évros laskevat siihen, ja Dardanellien '
+      + 'salmi vie siitä Marmaranmeren ja Bosporin kautta Mustallemerelle — '
+      + 'sitä kapeaa reittiä pitkin 1800-luvun laivat purjehtivat '
+      + 'Egeanmereltä Konstantinopoliin. Meren pohjoisosassa elää yhä '
+      + 'uhanalainen Mustanmeren pyöriäinen.',
+    lahde: 'en-Wikipedia "Thracian Sea", johdanto-osa (tarkistettu '
+      + '27.8.2026).',
+    // Category:Thracian Sea (2 tiedostoa) — pieni mutta tarkistettu
+    // kategoria; toinen on NASAn satelliittikuva.
+    kuva: {
+      tiedosto: 'Samothraki view from Dikella beach.JPG',
+      selite: 'Samothraki kohoaa Traakianmeren takaa, Dikellan rannalta '
+        + 'Traakian mantereelta nähtynä.',
+      lahde: 'ROFI44WIK, Wikimedia Commons (CC BY-SA 3.0)',
     },
   },
   {
