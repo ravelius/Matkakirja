@@ -1431,8 +1431,33 @@ body.aloitus-zoom .kiikari {
   width: var(--die-size);
   height: var(--die-size);
   perspective: 900px;
-  will-change: transform;
 }
+
+/*
+ * WILL-CHANGE VAIN HEITON AJAKSI (omistajan pelitesti 27.8.2026,
+ * iPhone: *"kartat eivät näy taustalla kun pelinappula hyppii"*).
+ *
+ * MIKÄ MENI RIKKI. #98 siirsi nopan kartan SIIRTOKUOREEN
+ * (.kartta-kuori), jotta panorointi kuljettaisi sen ilmaiseksi. Kuoren
+ * sisällä on kuitenkin myös koko kartan SVG, ja noppa makaa sen PÄÄLLÄ
+ * (z-index: 3). Pysyvä `will-change: transform` pitää nopan omalla
+ * kompositorikerroksellaan aina — myös levossa, eli koko sen ajan kun
+ * heitetty noppa odottaa laudalla nappulan matkan yli. Kun päällä
+ * lepää pysyvä kerros, WebKitin on nostettava sen ALLA oleva sisältö
+ * omaan kerrokseensa säilyttääkseen piirtojärjestyksen — ja se sisältö
+ * on lähikuvassa moninkertainen ruutuun nähden. iPhonen
+ * kerrospuskurikatto tulee vastaan, kerros jää varaamatta ja kartta
+ * piirtyy TYHJÄNÄ. Sama iOS:n vika kuin suodattimilla (tests/
+ * rules.test.mjs "kartan isot kerrokset eivät käytä suodatinta"), vain
+ * eri reittiä: siellä puskurin varaa suodatin, täällä will-change.
+ *
+ * KORJAUS ON AJOITUS, EI RAKENNE. Vihje on voimassa vain sen sekunnin,
+ * jonka noppa oikeasti pyörii ja pomppii (js/die.js lisää ja poistaa
+ * .noppa-vierii), ja juuri silloin se on myös hyödyllinen. Levossa
+ * makaava noppa on tavallinen elementti, eikä kartan alle jää mitään
+ * nostettavaa. Noppa pysyy kuoressa, joten #98:n panorointietu säilyy.
+ */
+.board-die.noppa-vierii { will-change: transform; }
 
 /*
  * Varjo jää laudan pintaan, kun noppa nousee ilmaan. Tavallinen pehmeä
@@ -19798,6 +19823,96 @@ body.fokuspohja .maa-pilleri { display: none; }
 
 /* Lähderivi (.fokus-maataulu-lahde) poistui 26.8.2026 — omistaja:
  * "ota se koko rivi pois joka alkoi samat luvut tekstillä". */
+
+/* ---------------------------------------------------------------------------
+   TAULUN ALLA OLEVA KARTTA SUMENEE (omistajan tilaus #102: *"tekstin alla
+   olevat kohdat saisi blurrautua"*).
+
+   MIKSI SUMENNUS VASTA NYT. Taulu on 27.8.2026 alkaen pohjaton — pelkkää
+   mustetta maaston päällä (ks. "LOPPU PAPERILAATASTA" yllä) — ja
+   luettavuus oli kolmen kerroksen halon varassa. Halo kantaa yksittäisen
+   sanan, muttei kokonaista lukutaulukkoa vuoristokartan päällä. Sumennus
+   rauhoittaa PINNAN eikä lisää yhtään paperia takaisin.
+
+   BACKDROP-FILTER, EI KARTAN OMA SUODATIN. Sama sääntö kuin Tutki-arkilla
+   (.dialog.arkki::backdrop) ja lehden alapalkilla: suodatettu SVG-kerros
+   pudottaa iOS:llä piirtopuskurinsa ja katoaa, mutta backdrop-filter ei
+   koske karttaan lainkaan — se sumentaa vain sen, mikä on TÄMÄN kerroksen
+   takana.
+
+   OMA KERROS ELEMENTIN SIJAAN. Suodatin on ::before-pseudossa eikä
+   taulussa itsessään, koska taulu SISÄLTÄÄ tekstin: maski, joka pehmentää
+   sumennuksen reunat, häivyttäisi samalla laidimmaiset numerot. Pseudo on
+   z-index: -1 eli taulun tekstin alla mutta kartan päällä (taulun oma
+   transform tekee siitä pinoamiskontekstin, joten negatiivinen z-index ei
+   karkaa kartan taakse).
+
+   REUNAT HÄIVYTETÄÄN. Ilman maskia sumennus olisi terävä suorakaide
+   maaston päällä — juuri se "neliöraja", joka fokuskartasta on
+   järjestelmällisesti poistettu. Säteittäinen maski jättää keskustan
+   täyteen sumennukseen ja liudentaa laidat olemattomiin.
+
+   VAIN AUKI OLLESSA: suljettuna taulu on visibility: hidden, mutta
+   suodatinkerros on silti turha työ joka kehyksellä.
+   --------------------------------------------------------------------------- */
+.fokus-maataulu.auki::before {
+  content: '';
+  position: absolute;
+  /*
+   * TÄSMÄLLEEN TAULUN PEHMUSTEKEHYS, EI YLI. Taulu on vierityssäiliö
+   * (overflow-y: auto), ja laitojen yli venyvä lapsi kasvattaisi
+   * vieritysaluetta ja voisi tuoda vaakapalkin. Pehmuste (0,35rem)
+   * riittää maskin liudennukselle.
+   */
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  -webkit-backdrop-filter: blur(5px) saturate(0.82);
+  backdrop-filter: blur(5px) saturate(0.82);
+  -webkit-mask-image: radial-gradient(115% 108% at 38% 55%, #000 52%, transparent 100%);
+  mask-image: radial-gradient(115% 108% at 38% 55%, #000 52%, transparent 100%);
+}
+
+/*
+ * FALLBACK ilman backdrop-filteriä (vanhat WebKitit): sumennusta ei saa,
+ * joten pinta rauhoitetaan hennolla pergamenttihunnulla — sama kaava kuin
+ * avausnäkymän verholla (.intro-verho).
+ */
+@supports not ((backdrop-filter: blur(5px)) or (-webkit-backdrop-filter: blur(5px))) {
+  .fokus-maataulu.auki::before { background: rgba(244, 232, 205, 0.55); }
+}
+
+/* ---------------------------------------------------------------------------
+   MATKUSTA-NAPPI VÄISTYY TAULUN AJAKSI (#102: *"se voisi piilottaa
+   matkusta-napin väliaikaisesti, jos se on laudalla"*).
+
+   Taulu nousee kartuutsin takaa aivan alanappirivin yläpuolelle, ja
+   fokusnäkymässä rivissä on vain tämä yksi neliö — se jäi taulun alareunan
+   viereen kilpailemaan huomiosta juuri silloin, kun pelaaja lukee maan
+   lukuja.
+
+   VISIBILITY, EI DISPLAY. Rivin ruudukko pitää paikkansa, joten kartuutsi
+   ja mittajana eivät hyppää sivusuunnassa napin kadotessa ja palatessa.
+   Peittävyys tuo pehmeän häivytyksen, ja pointer-events estää sen, että
+   näkymätöntä nappia voisi napauttaa vahingossa.
+
+   AUKI OLEVA MATKUSTUSLIUKU EI TARVITSE OMAA SÄÄNTÖÄ: taulu avataan
+   kartuutsista eli rivin ULKOPUOLELTA, ja sama napautus sulkee liu'un
+   (js/ui.js kytkeLiukuSulku).
+
+   SÄÄNTÖ EI RAJAA ITSEÄÄN FOKUSNÄKYMÄÄN, koska maataulu on olemassa vain
+   siellä — tilauksen ehto ("jos se on laudalla") toteutuu siis itsestään.
+   --------------------------------------------------------------------------- */
+body.maataulu-auki .toimintorivi .monitoimi-nappi {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.18s ease, visibility 0s linear 0.18s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.maataulu-auki .toimintorivi .monitoimi-nappi { transition: none; }
+}
 
 /* ===========================================================================
    KARTAN REUNAVIIVAIMET — dynaamiset asteviivat (js/fokusmitat.js)

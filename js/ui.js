@@ -291,6 +291,98 @@ const HYPYN_TAUKO_MS = 190; // näkymätön käsi laskee nappulan ja tarttuu uud
 const HYPYN_KAARI = 0.34; // kaaren huippu suhteessa hypyn pituuteen
 const HYPYN_KORKEUS_MIN = 9;
 const HYPYN_KORKEUS_MAX = 30;
+/*
+ * JALKAMATKAN OMA ASKEL (omistajan tilaus #96: *"Matkustusanimaatio
+ * jalan saisi olla hitaampi."*).
+ *
+ * Muutos on täsmälleen se, jota #100 varautui: kasvatetaan HYPYN
+ * LENTOAIKAA, ei taukoa. Tauko on se pieni hengähdys, joka tekee
+ * liikkeestä siirretyn pelinappulan; jos sekin venyisi, jalkamatka
+ * muuttuisi nykiväksi odotteluksi. Lento (STEP_MS, FLIGHT_MS,
+ * MANNER_LENTO_MS) jää ennalleen — tilaus koski maareittejä.
+ *
+ * 190 → 640 ms eli 3,4×. Ensimmäinen yritys oli 340 ms (1,8×), mutta
+ * omistajan pelitesti 27.8.2026 (iPhone) oikaisi sen: *"pelinappulan
+ * etenemisvauhti pitäisi olla paljon hitaampi"* — paljon, ei vähän.
+ * 640 ms on se aika, jossa silmä ehtii seurata yhden hypyn kaaren
+ * alusta loppuun ja liike lukee käden siirroksi eikä lentoradaksi.
+ *
+ * Kuuden askeleen täysi heitto kestää nyt 6 × 640 + 5 × 190 ≈ 4,8 s
+ * (ennen 1,9 s), ja juuri se on se matka, jonka ajan saattava kamera
+ * ehtii ajaa lähemmäs, kuljettaa laudan uuteen kohteeseen ja palata.
+ */
+const JALKAMATKAN_STEP_MS = 640;
+/*
+ * SAATTAVA KAMERA (omistajan tilaus #96: *"Kartta voisi samalla myös
+ * hitaasti siirtyä uuteen kohteeseen ja paljastaa sitä näkyviin sitä
+ * mukaa kun nappula etenee."*).
+ *
+ * Kamera ei seuraa nappulaa hypyittäin — se olisi nykivä, koska hyppy
+ * on paraabeli ja välissä on tauko — vaan LIUKUU koko matkan ajan
+ * kohti määränpäätä yhtenä ajona (js/kartta.js ajaKamera). Se on
+ * samalla se tapa, jolla kohde "paljastuu sitä mukaa": uutta maastoa
+ * tulee näkyviin ruudun reunasta täsmälleen sitä tahtia kuin nappula
+ * etenee.
+ *
+ * KAMERA MENEE MYÖS LÄHEMMÄS (omistajan pelitesti 27.8.2026, iPhone:
+ * *"kamera-animaatio ei seuraa järkevästi pelinappulaa. pitäisi olla
+ * ainakin lähempänä jotta lauta liikkuisi enemmän"*).
+ *
+ * Ensimmäinen toteutus piti mittakaavan ennallaan ja siirsi vain
+ * keskipistettä. Ongelma ei ollut liu'ussa vaan siinä, ETTEI LAUTA
+ * LIIKKUNUT TARPEEKSI: kaukaa katsottuna koko matka mahtuu ruudulle,
+ * ja kamera siirtyy muutaman kymmenen pikseliä — silmä ei näe sitä
+ * seuraamisena. Lähikuvassa sama matka on ruudullinen liikettä, ja
+ * juuri se on "kartta siirtyy uuteen kohteeseen".
+ *
+ * SAATTOZOOMI on kerroin nykyiseen zoomiin: 1,7× vie kartan selvästi
+ * lähemmäs mutta ei niin lähelle, että pelaaja kadottaisi paikkansa.
+ * Katon hoitaa kamera-ajo itse (kartta.zoomiRajat), joten valmiiksi
+ * lähellä oleva näkymä ei kiristy yli portaikon.
+ *
+ * JA PALAA. Perillä kamera ajaa takaisin siihen kertoimeen, josta
+ * matka alkoi — nopeammin kuin meno, koska paluu ei ole kohtaus vaan
+ * asennon palautus. Uuteen MAAHAN saavuttaessa fokuskartan oma ajo
+ * ehtii ensin ja korvaa paluun; se on oikein, koska maanvaihdoksen
+ * rajaus on tarkempi kuin vanha kerroin.
+ *
+ * Pehmennys on smoothstep eikä kamera-ajon oma kuutiokäyrä: kuutio
+ * seisoo lähes paikallaan matkan ensimmäisen neljänneksen, ja kamera
+ * jäisi jälkeen ja kirisi lopussa. Smoothstep lähtee ja pysähtyy
+ * pehmeästi mutta kulkee välillä lähes nappulan tahtia.
+ *
+ * ELE VOITTAA: ajon keskeyttää sormi kartalla, nipistys, rulla tai
+ * zoomipainike (kartta.pysaytaKameraAjo), ja kartta jää siihen mihin
+ * ajo ehti. Sitä ei yritetä jatkaa — pelaajan oma ele on viimeinen
+ * sana kartan paikasta, eikä keskeytetty matka aja paluutakaan.
+ */
+const SAATON_PEHMENNYS = (t) => t * t * (3 - 2 * t);
+const SAATON_LAHENNYS = 1.7;
+const SAATON_PALUU_MS = 900;
+/*
+ * Alle tämän jäävää siirtoa ei ajeta lainkaan: kohde on jo käytännössä
+ * ruudun keskellä, ja pikkuliike näyttäisi vain siltä että kartta
+ * värähtää nappulan lähtiessä. Mitta on RUUDUN pikseleitä.
+ */
+const SAATON_VAHIN_PX = 60;
+/*
+ * JALKAMATKAN ÄÄNIMAISEMA (#96: *"Taustalle pitää kehitellä sopiva
+ * äänimaisema siirtymän ajaksi."*).
+ *
+ * Matka kulkee maareittejä pitkin läpi kaikenlaisen maaston, joten
+ * ääneksi valittiin se laji, joka ei väitä maastosta mitään: METSÄ eli
+ * tuuli puissa ja kaukaiset linnut (js/aani-ehdokkaat.js metsa —
+ * "Tuuli puissa", CC0, ja "Linnut metsässä", CC BY). Kori on jo
+ * repossa ja peilattu ämpäriin; uutta ei ladattu eikä generoitu.
+ *
+ * Paikkatunnus on OMA ('jalkamatka') eikä kaupungin, jotta
+ * ambience-stream tunnistaa matkan omaksi tilakseen: se saa oman
+ * nopean sisääntulonsa ja kevyemmän tasonsa (ks. ambience-stream.js
+ * JALKAMATKAN_VOIMA). Tunnus ei ole vakiopaikka — matkan ääni saa
+ * arpoutua korista ja alkaa eri kohdasta joka kerta, koska sama
+ * siirtymä toistuu pelissä kymmeniä kertoja.
+ */
+const JALKAMATKAN_MAISEMA = 'metsa';
 const FLIGHT_MS = 900;
 // Mantereen sisäinen lento liukuu rauhallisemmin moottorin hurinalla.
 const MANNER_LENTO_MS = 2800;
@@ -651,7 +743,6 @@ const MATKAREITIN_PISTE_PX = 4.2;
  */
 const REVEAL_HUUDAHDUS_RIVI = false;
 
-const AUTO_ROLL_MS = 320; // tauko ennen itsestään pyörähtävää noppaa
 /*
  * PÖLLÖN PAIKALLINEN VIHJE (omistajan toive 13.8.2026: *"Pöllö voi
  * tarpeen mukaan vinkata, jos pelaaja ei osaa painaa mitään
@@ -2269,7 +2360,6 @@ export class UI {
     // Fokuskerroksen viimeksi piirretty maajoukko: sumuverho rakennetaan
     // uusiksi vain kun käytyjen maiden joukko oikeasti muuttuu.
     this.fokusAvain = null;
-    this.autoRollTimer = null;
     /*
      * NOPAN PAIKKA LAUDALLA (#98). `dieThrown` kertoo, onko heitetty
      * noppa yhä näkyvissä, ja `noppaKartalla` MISSÄ se lepää — laudan
@@ -3222,13 +3312,15 @@ export class UI {
     // Sama silta alas: ilman tätä kesken katkennut avaus jättäisi
     // uuden pelin äänimaisemaksi lentokoneen kabiinin (ks. syncAmbience).
     this.lennonAmbienssi = false;
+    // Sama jalkamatkan matkaäänelle (#96): kesken katkennut siirto
+    // jättäisi muuten metsätuulen soimaan uuden pelin kaupunkiin.
+    this.jalkamatkanAani = false;
     // Radiotila piilottaa matkakirjan ja alanapit; ilman purkua ne
     // jäisivät piiloon uudessa pelissä.
     document.body.classList.remove('radio-tila');
     for (const kalvo of document.querySelectorAll('.flight-overlay')) kalvo.remove();
     this.suljeAloitusportti();
     clearTimeout(this.botTimer);
-    clearTimeout(this.autoRollTimer);
     clearTimeout(this.lentoPuheAjastin);
     clearTimeout(this.lentoTekstiAjastin);
     clearTimeout(this.zoomAlkuAjastin);
@@ -6174,9 +6266,30 @@ export class UI {
       kiekko.classList.toggle('fokus-lehden-alla', piiloon);
     }
 
+    /*
+     * NAPPULA JÄÄ AINA LEHDEN PÄÄLLE (omistajan pelitesti 27.8.2026,
+     * iPad-kaappaus Ateenasta: *"tinaherra-nappula EI näy Kreikan
+     * fokuslaudalla — pelaajan sijainnissa näkyy vain vanha
+     * kullanvärinen rengasmerkki"*).
+     *
+     * Piilotus oli v1097:n "Ota pallot pois" -säännön viimeinen jäänne
+     * nappulassa: silloin nappula OLI pallo — valkoinen kehä, värillinen
+     * täplä ja kiilto — ja kahtena renkaana kaupungin laatan päällä se
+     * rikkoi lehden. Nappula sai näkyä vain aarrehetkellä (omaNakyy) tai
+     * matkustusvalinnan ajan (valinta), ja muun ajan lehdellä oli
+     * pelaajan paikkana pelkkä laatta. Juuri sen laatan omistaja näki.
+     *
+     * v1189 vaihtoi pallon TINAHERRAKSI (#100), ja sen myötä peruste
+     * kaatui: hahmo ei ole laudan grafiikkaa vaan pelinappula, ja
+     * pelinappula kuuluu kartalle. Sama linjaus kuin nykyisen kaupungin
+     * laatalla (sääntö 3 yllä): se jää lehden päälle aina, pienenä ja
+     * ruudulla lähes vakiokokoisena (paivitaFokusMerkkiMitat).
+     *
+     * Luokka kirjoitetaan yhä — nyt aina pois päältä — koska sama
+     * elementti voi kantaa sen edelliseltä piirrolta.
+     */
     for (const nappula of this.pawnLayer?.querySelectorAll('.pawn') ?? []) {
-      const lehdella = laudanMerkki(Number(nappula.dataset.x), Number(nappula.dataset.y));
-      nappula.classList.toggle('fokus-lehden-alla', lehdella && !omaNakyy && !valinta);
+      nappula.classList.remove('fokus-lehden-alla');
     }
 
     for (const kohde of this.targetLayer?.querySelectorAll('.target') ?? []) {
@@ -7974,24 +8087,44 @@ export class UI {
     }
 
     if (game.phase === 'roll') {
-      // Kun matkustustapa valittiin automaattisesti, ei ole valittavaa eikä
-      // mihin palata: noppa pyörähtää itsestään.
-      if (game.autoTravel) {
-        this.autoRoll();
-        return;
-      }
       /*
+       * NOPPA EI PYÖRÄHDÄ ITSESTÄÄN (omistajan pelitesti 27.8.2026,
+       * iPhone: *"kun aarteen on avannut, peli menee SUORAAN
+       * nopanheittoon. Pelaajan pitää itse saada valita matkustaako vai
+       * ei"*).
+       *
+       * Aarteen avaus päättää vuoron, ja seuraava vuoro alkaa
+       * sisämaakaupungissa yhdellä ainoalla matkustustavalla — silloin
+       * game.beginTurn valitsee tavan valmiiksi (autoTravel) ja vaihe on
+       * heti 'roll'. Tässä oli sen pari: `autoRoll`, joka heitti nopan
+       * 320 ms:n kuluttua ilman painallusta. Aarrekortin sulkeuduttua se
+       * näytti siltä, että peli lähtee matkaan pelaajan puolesta.
+       *
+       * TAVAN ESIVALINTA JÄÄ (game.js autoTravel): kun vaihtoehtoja on
+       * yksi, siitä ei ole mitään valittavaa — turha napautus ei ole
+       * valinnanvapautta. HEITTO on eri asia: se on se hetki, jossa
+       * pelaaja päättää lähteäkö vai jäädäkö tutkimaan, ja se painetaan
+       * aina itse.
+       *
        * Nopanheitto ja matkustustavan vaihto ovat monitoiminapin
        * liu'ussa kuten muutkin matkustustoiminnot (omistajan linjaus
        * 12.8.2026): alanappirivi on aina täsmälleen kolme paikkaa.
        */
       const rollBtn = this.iconButton('noppa', 'Heitä noppa', 'primary');
       rollBtn.addEventListener('click', () => this.doRoll());
+      const napit = [rollBtn];
+      /*
+       * Paluunappi vain kun on mihin palata. Esivalitulla tavalla
+       * game.actionCancelTravel torjuu paluun ("Muita matkustustapoja ei
+       * ole"), joten nappi näyttäisi vain virheilmoituksen.
+       */
+      if (!game.autoTravel) {
+        const backBtn = this.iconButton('nuoli', 'Vaihda matkustustapa');
+        backBtn.addEventListener('click', () => this.doAction(() => game.actionCancelTravel()));
+        napit.push(backBtn);
+      }
 
-      const backBtn = this.iconButton('nuoli', 'Vaihda matkustustapa');
-      backBtn.addEventListener('click', () => this.doAction(() => game.actionCancelTravel()));
-
-      this.piirraToimintorivi([rollBtn, backBtn], this.tutkiNappi());
+      this.piirraToimintorivi(napit, this.tutkiNappi());
       return;
     }
 
@@ -9007,19 +9140,6 @@ export class UI {
   }
 
   /**
-   * Heittää nopan ilman painallusta. Sallittu vain kun matkustustapa
-   * valikoitui itsestään — muuten pelaaja saa aina painaa itse.
-   */
-  autoRoll() {
-    if (this.busy || this.autoRollTimer) return;
-    this.autoRollTimer = setTimeout(() => {
-      this.autoRollTimer = null;
-      const { game } = this;
-      if (game.phase === 'roll' && game.autoTravel && !game.player.isBot) this.doRoll();
-    }, AUTO_ROLL_MS);
-  }
-
-  /**
    * Kaupunki, jonka tiedon paneeli näyttää. Reitin varrella valitaan se pää,
    * jota lähempänä pelaaja on.
    */
@@ -9920,6 +10040,17 @@ export class UI {
     // etusivun lähtöaulaa kabiinin tilalle.
     if (this.lennonAmbienssi || document.body.classList.contains('flight-active')) {
       playPlaceAmbience('lentomatka', 'lentokone', this.game.pack?.id);
+      return;
+    }
+    /*
+     * JALKAMATKAN AJAN SOI MATKAN OMA MAISEMA (#96). Sama silta kuin
+     * lennolla: peli on jo siirtänyt nappulan perille, joten ilman
+     * lippua matkan aikana osuva piirto toteaisi määränpään ja
+     * katkaisisi matkaäänen heti sen alettua. Lipun laskee
+     * lopetaJalkamatkanAani viimeisellä askeleella.
+     */
+    if (this.jalkamatkanAani) {
+      playPlaceAmbience('jalkamatka', JALKAMATKAN_MAISEMA, game.pack?.id);
       return;
     }
     if (game.phase === 'over') {
@@ -14649,7 +14780,20 @@ export class UI {
     const player = game.player;
     const from = player.pos;
     const path = move.path;
-    this.run(() => game.actionMove(key), { after: () => this.animatePawn(player, from, path) });
+    /*
+     * MATKUSTUSTAPA LUETAAN ENNEN SIIRTOA (#96). `after` ajetaan vasta
+     * kun game.actionMove on jo tehnyt siirron, ja vuoron vaihtuessa
+     * beginTurn nollaa travelModen — jälkikäteen luettuna se olisi
+     * milloin null, milloin seuraavan vuoron tapa.
+     */
+    const maitse = game.travelMode === 'land';
+    this.run(() => game.actionMove(key), {
+      after: () => this.animatePawn(
+        player, from, path,
+        maitse ? JALKAMATKAN_STEP_MS : STEP_MS,
+        { saatto: true, maitse },
+      ),
+    });
   }
 
   doFly(destination) {
@@ -16063,9 +16207,136 @@ export class UI {
     this.saapumisenKuplat(kohde);
   }
 
-  /** Siirtää nappulaa askel kerrallaan annettua polkua pitkin. */
-  async animatePawn(player, from, path, stepMs = STEP_MS) {
-    return this.isoAnimaatio(() => this.animatePawnSisalla(player, from, path, stepMs));
+  /**
+   * Siirtää nappulaa askel kerrallaan annettua polkua pitkin.
+   *
+   * `saatto` kytkee laudalla tehtävän matkan lisät (#96): kamera liukuu
+   * nappulan mukana kohti määränpäätä ja — maitse kuljettaessa
+   * (`maitse`) — matkan ajaksi nousee oma äänimaisema. Lennot kutsuvat
+   * ilman valitsimia, jolloin mikään ei muutu.
+   */
+  async animatePawn(player, from, path, stepMs = STEP_MS, valinnat = {}) {
+    return this.isoAnimaatio(
+      () => this.animatePawnSisalla(player, from, path, stepMs, valinnat),
+    );
+  }
+
+  /**
+   * Käynnistää saattavan kamera-ajon matkan ajaksi (#96).
+   *
+   * KOLME EHTOA. (1) Liikeherkkyys ohittaa: silloin nappulakaan ei
+   * liiku vaan hyppää perille. (2) Kartan on jo oltava LÄHIKUVASSA —
+   * yleiskuvasta ajo pakottaisi mannerZoomin päälle ja siis zoomaisi,
+   * mikä ei ole tilaus (tilaus on panorointi). (3) Siirron on oltava
+   * ruudulla tuntuva (SAATON_VAHIN_PX), muuten kartta vain värähtäisi.
+   *
+   * KOHDE ON MATKAN PÄÄTEPISTE eikä kaupungin muotolaatikko: kerrointa
+   * ei anneta, joten kamera pitää nykyisen mittakaavansa ja pelkkä
+   * keskipiste siirtyy. Näin nappulan käänteisskaalaus (kerroin
+   * animatePawnSisalla) pysyy voimassa koko matkan ajan.
+   *
+   * Lupausta ei odoteta: ajo saa jäädä pyörimään saapumisen yli, ja
+   * ele saa keskeyttää sen milloin tahansa.
+   */
+  aloitaSaattavaKamera(path, kesto) {
+    this.saatonPaluuKerroin = null;
+    if (this.reducedMotion || this.dead) return;
+    const kartta = this.kartta;
+    if (!kartta?.ajaKamera || !this.mannerZoom) return;
+    const maali = path[path.length - 1];
+    if (!maali) return;
+    const kohta = pixelOf(this.game.board, maali);
+    const nyt = kartta.kameranTila?.();
+    if (!nyt) return;
+    /*
+     * LÄHEMMÄS ON EHTO, EI KORISTE. Ajo tehdään myös silloin kun matka
+     * on ruudulla lyhyt, koska zoomi yksinään liikuttaa lautaa —
+     * SAATON_VAHIN_PX torjuu vain sen tapauksen, jossa EIKÄ kohde siirry
+     * EIKÄ mittakaava muutu (kamera on jo lähikuvan katossa kohteen
+     * päällä).
+     */
+    const lahtoKerroin = kartta.zoomiKerroin;
+    const kerroin = lahtoKerroin * SAATON_LAHENNYS;
+    const matka = Math.hypot(kohta.x - nyt.x, kohta.y - nyt.y) * nyt.skaala;
+    const lahenee = kartta.kameranKohde?.(
+      { x: kohta.x, y: kohta.y, kerroin },
+      this.mapPane?.clientWidth ?? 0,
+      this.mapPane?.clientHeight ?? 0,
+    );
+    const zoomaa = lahenee ? Math.abs(lahenee.kerroin / lahtoKerroin - 1) > 0.02 : false;
+    if (!(matka > SAATON_VAHIN_PX) && !zoomaa) return;
+    /*
+     * Paluu tarvitsee kaksi asiaa, ja molemmat katoavat matkan aikana:
+     * LÄHTÖKERTOIMEN (ajo kirjoittaa zoomiVapaan uuteen arvoonsa) ja
+     * tiedon siitä, PÄÄSIKÖ AJO PERILLE — lupaus ratkeaa arvolla false,
+     * jos ele keskeytti sen.
+     */
+    this.saatonPaluuKerroin = lahtoKerroin;
+    this.saatonAjo = kartta.ajaKamera(
+      { x: kohta.x, y: kohta.y, kerroin },
+      { kesto, pehmennys: SAATON_PEHMENNYS },
+    );
+  }
+
+  /**
+   * Saattozoomi purkautuu perillä (#96 + omistajan pelitesti
+   * 27.8.2026): kamera palaa siihen kertoimeen, josta matka alkoi, ja
+   * jää nappulan kohdalle.
+   *
+   * EI AJETA, JOS SAATTO KESKEYTYI. Keskeytys tarkoittaa, että pelaaja
+   * otti kartan omaan käteensä (kartta.pysaytaKameraAjo kirjaa
+   * välivaiheen oikeaksi kameratilaksi) — silloin paluu olisi toinen
+   * ohjastus samaan karttaan ja veisi sen pois siitä kohdasta, jonka
+   * pelaaja juuri valitsi.
+   *
+   * Lupausta ei odoteta: saapumisen kortit, kuplat ja mahdollinen
+   * maanvaihdoksen oma ajo saavat alkaa heti.
+   */
+  async puraSaattavaKamera(path) {
+    const kerroin = this.saatonPaluuKerroin;
+    const ajo = this.saatonAjo;
+    this.saatonPaluuKerroin = null;
+    this.saatonAjo = null;
+    if (!kerroin || !ajo || this.reducedMotion || this.dead) return;
+    // Menoajon lupaus on tässä kohtaa jo ratkennut (kesto = matkan
+    // kesto); false tarkoittaa, että ele keskeytti sen.
+    const perille = await ajo;
+    if (!perille || this.dead || !this.kartta?.ajaKamera) return;
+    const maali = path[path.length - 1];
+    if (!maali) return;
+    const kohta = pixelOf(this.game.board, maali);
+    void this.kartta.ajaKamera(
+      { x: kohta.x, y: kohta.y, kerroin },
+      { kesto: SAATON_PALUU_MS },
+    );
+  }
+
+  /**
+   * Jalkamatkan äänimaisema (#96): kevyt maastoääni matkan ajaksi.
+   *
+   * Sama kaava kuin lennon kabiiniäänellä (aloitaLennonAmbienssi): oma
+   * lippu kertoo syncAmbiencelle, ettei matkan aikana osuva piirto saa
+   * palauttaa lähtökaupungin maisemaa kesken kaiken. Ääni feidautuu
+   * sisään matkan alkaessa; ULOS se lähtee itsestään, koska viimeinen
+   * askel käynnistää määränpään maiseman (ennakoiAmbienssi) ja
+   * soittimet ristihäivytetään.
+   */
+  aloitaJalkamatkanAani() {
+    if (this.radioPaalla() || this.dead) return;
+    this.jalkamatkanAani = true;
+    playPlaceAmbience('jalkamatka', JALKAMATKAN_MAISEMA, this.game.pack?.id);
+  }
+
+  /**
+   * Lopettaa jalkamatkan äänimaiseman. Lippu nollataan AINA, mutta
+   * maisema vaihdetaan vain kun mikään muu ei ole jo ottanut ääntä
+   * haltuunsa: kaupunkiin saavuttaessa ennakoiAmbienssi on ehtinyt
+   * käynnistää määränpään maiseman, eikä sitä saa keskeyttää.
+   */
+  lopetaJalkamatkanAani({ vaihtui = false } = {}) {
+    if (!this.jalkamatkanAani) return;
+    this.jalkamatkanAani = false;
+    if (!vaihtui && !this.dead) this.syncAmbience();
   }
 
   /**
@@ -16116,7 +16387,7 @@ export class UI {
   }
 
   /** Nappulan varsinainen siirto; kääre yllä hiljentää kartan animaatiot. */
-  async animatePawnSisalla(player, from, path, stepMs = STEP_MS) {
+  async animatePawnSisalla(player, from, path, stepMs = STEP_MS, { saatto = false, maitse = false } = {}) {
     if (!path || path.length === 0) return;
     const { board } = this.game;
 
@@ -16128,13 +16399,37 @@ export class UI {
     const varjo = g.querySelector('.pawn-varjo');
 
     /*
+     * MATKAN LISÄT LAUDALLA (#96) ENNEN MITOITUSTA. Kesto lasketaan
+     * tässä, koska sekä kamera että ääni tarvitsevat saman luvun:
+     * hyppyjä on path.length ja taukoja yksi vähemmän.
+     *
+     * JÄRJESTYS ON OLEELLINEN. Saattoajo vie näkymän lopulliseen
+     * mittakaavaansa heti (kartta.ajaKamera → fitViewBox) ja piirtää
+     * matkan sen päälle kuoren muunnoksena. Nappulan käänteisskaalaus
+     * on siis luettava VASTA ajon jälkeen — muuten se olisi lähtötilan
+     * mittakaavasta ja nappula jäisi perillä väärän kokoiseksi siihen
+     * asti, kunnes seuraava piirto korjaa sen.
+     */
+    if (saatto) {
+      const kokonaiskesto = path.length * stepMs
+        + Math.max(0, path.length - 1) * HYPYN_TAUKO_MS;
+      this.aloitaSaattavaKamera(path, kokonaiskesto);
+      /*
+       * YHDEN ASKELEEN MATKA JÄÄ ILMAN OMAA ÄÄNTÄ. Maisema nousee
+       * kuuluviin 900 ms:ssa, ja viimeinen askel vaihtaa sen jo
+       * määränpään ääneen — yhdellä hypyllä siitä jäisi vain
+       * puolikas väre. Kamera saa silti saattaa: liike näkyy heti.
+       */
+      if (maitse && path.length > 1) this.aloitaJalkamatkanAani();
+    }
+
+    /*
      * LIIKKUVA NAPPULA ON YHTÄ PIENI KUIN PAIKALLAAN OLEVA. Siirron
      * paikka on TYYLISSÄ (hyppy kirjoittaa sen joka kehyksellä), ja
      * tyyli voittaa transform-määreen — fokusnäkymän käänteisskaalaus
      * on siksi kirjoitettava tähän samaan merkkijonoon eikä
-     * paivitaFokusMerkkiMitatiin. Kerroin luetaan kerran: iso animaatio
-     * hiljentää kartan muut liikkeet, joten zoomi ei muutu matkan
-     * aikana.
+     * paivitaFokusMerkkiMitatiin. Kerroin luetaan kerran, saattoajon
+     * asettamasta lopullisesta mittakaavasta (ks. yllä).
      */
     const kerroin = this.fokusMerkkiKerroin(FOKUS_NAPPULA_PX, NAPPULAN_R);
     const koko = Math.abs(kerroin - 1) < 0.0005 ? '' : ` scale(${kerroin.toFixed(4)})`;
@@ -16147,7 +16442,18 @@ export class UI {
       // Määränpään äänimaisema lähtee nousemaan jo viimeisellä
       // askeleella, jotta ristihäivytys on käynnissä saapumishetkellä
       // eikä ala vasta kertojan kanssa yhtä aikaa (omistajan toive).
-      if (viimeinen) this.ennakoiAmbienssi(pos);
+      if (viimeinen) {
+        /*
+         * Jalkamatkan ääni väistyy täsmälleen tässä: lippu alas ENNEN
+         * ennakoiAmbienssia, jotta määränpään maisema saa nousta
+         * ristihäivytyksellä matkaäänen päälle. Reitin varrelle
+         * pysähtyvä matka (pos ei ole kaupunki) ei saa määränpäätä,
+         * ja silloin lopetaJalkamatkanAani hoitaa vaihdon itse.
+         */
+        const kaupunkiin = pos.type === 'city';
+        this.lopetaJalkamatkanAani({ vaihtui: kaupunkiin });
+        this.ennakoiAmbienssi(pos);
+      }
       if (this.reducedMotion) {
         g.style.transform = `translate(${kohta.x}px, ${kohta.y}px)${koko}`;
       } else {
@@ -16180,6 +16486,9 @@ export class UI {
      * edellisen heiton noppa on tehnyt tehtävänsä.
      */
     if (path[path.length - 1]?.type === 'city') this.piilotaNoppa();
+    // Saattozoomi auki: kamera palaa lähtökertoimeensa nappulan
+    // kohdalle (ei odoteta — saapuminen saa jatkua sen päällä).
+    if (saatto) await this.puraSaattavaKamera(path);
   }
 
   /** Nopanheitto: noppa lentää nappulan vierestä laudalle ja jää siihen. */

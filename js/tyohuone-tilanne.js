@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'Jalkamatka: 3,4x hitaampi hyppy, kamera saattaa 1,7x lahennyksella, metsa-aanimaisema; noppaheitto aina pelaajan valinta; tinaherra nakyy fokuslaudalla; maataulu piilottaa Matkusta-napin ja sumentaa alla olevan; karttakato-korjaus',
   'Kuvatekstiremontti era 7: 17 kaupunkia Adenista Varanasiin (mm. Bangkok, Peking, Delhi, Kioto, Siperian kaupungit) uuteen saantoon',
   'Kuvatekstiremontti era 6: Tabrizin, Teheranin, Isfahanin, Tampereen, Tokion, Soulin, Shanghain, Tripolin, Persepoliksen ja Sanan selitteet uuteen saantoon',
   'Kuvatekstiremontti era 5: Dohan, Nikosian, Kuwaitin, Masqatin, Bagdadin, Izmirin, Ankaran, Halabin, Damaskoksen, Luxorin ja Riadin selitteet uuteen saantoon',

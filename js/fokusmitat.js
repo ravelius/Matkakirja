@@ -461,6 +461,24 @@ export function avaaMaataulu(ui, auki) {
   taulu.inert = !ui.fokusMaatauluAuki;
   ui.fokusKartuutsi?.setAttribute('aria-expanded', String(ui.fokusMaatauluAuki));
   /*
+   * MATKUSTA-NAPPI VÄISTYY TAULUN AJAKSI (omistajan tilaus #102:
+   * *"se voisi piilottaa matkusta-napin väliaikaisesti, jos se on
+   * laudalla"*).
+   *
+   * Lippu on BODYSSÄ eikä napissa, koska nappi syntyy ja katoaa joka
+   * piirrossa (piirraToimintorivi rakentaa rivin uudestaan): napin
+   * omaan luokkaan kirjattu piilotus katoaisi ensimmäisessä
+   * renderöinnissä taulun ollessa yhä auki. Tämä on samalla se yksi
+   * kytkin, jonka varassa myös taulun alle jäävän kartan sumennus on
+   * (css/styles.css body.maataulu-auki).
+   *
+   * KAIKKI VAIHDOT KULKEVAT TÄSTÄ: avaus kartuutsista, sulku
+   * kartasta/Escistä, plussan vienti maalehteen ja laudan vaihdon
+   * nollaus (nollaaFokusmitat) kutsuvat kaikki avaaMaataulua, joten
+   * luokka ei voi jäädä päälle taulun kadotessa.
+   */
+  document.body.classList.toggle('maataulu-auki', ui.fokusMaatauluAuki);
+  /*
    * Vasen viivain varaa kaistan auki olevalle taululle (ks.
    * paivitaViivaimet), joten lukemat on ladottava uudelleen heti
    * avattaessa ja suljettaessa — muuten ne palaisivat vasta seuraavan
@@ -1650,4 +1668,8 @@ export function nollaaFokusmitat(ui) {
   ui.fokusViivainPerusta = null;
   ui.fokusMitatAvain = null;
   ui.fokusMaatauluIso = null;
+  // Varmistus: taulu on nyt poissa, joten sen lippukaan ei saa jäädä
+  // piilottamaan Matkusta-nappia (#102). avaaMaataulu yllä hoitaa tämän
+  // normaalisti, mutta se palaa saman tien, jos taulua ei ollut.
+  document.body.classList.remove('maataulu-auki');
 }
