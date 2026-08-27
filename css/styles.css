@@ -17758,6 +17758,43 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
   line-height: 1.4;
 }
 
+/*
+ * ISOISÄN MAADOITUS KEVYEN KULUN SAAPUMISKUPLASSA (omistajan päätös
+ * 27.8.2026; js/pollo.js naytaMaadoitus).
+ *
+ * Sama pergamentti, kärki ja paikannus kuin muilla kuplilla — vain
+ * kaksi eroa. (1) Kupla on hitusen LEVEÄMPI: maadoitus on kokonainen
+ * puheenvuoro eikä yhden rivin ohje, ja 17 rem:n kaistalla se venyi
+ * kymmenen rivin torniksi. (2) Ylärivinä on puhujan nimilappu, koska
+ * tämä on ainoa kupla, jossa Livia sanoo jotain omissa nimissään.
+ */
+.pollo-vihje-maadoitus {
+  max-width: min(21rem, calc(100vw - 1.6rem));
+  padding: 0.55rem 0.75rem 0.6rem;
+}
+
+/*
+ * Nimilappu erottuu puheesta samalla keinolla kuin lehtien
+ * osastorivit: pieni harvennettu versaali ja ohut viiva alle. Punainen
+ * korjausveto tulee polloNimilapun omista tyyleistä
+ * (.pollo-yliviivattu), joten tässä säädetään vain rivin asu.
+ */
+.pollo-vihje-nimilappu {
+  margin: 0 0 0.35rem;
+  padding-bottom: 0.28rem;
+  border-bottom: 1px solid rgba(122, 85, 20, 0.28);
+  font-size: 0.74rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #6b5a45;
+}
+
+/* Kappaleväli vain kappaleiden VÄLIIN: ensimmäinen tulee nimilapun
+   alle, jolle väli on jo annettu ylhäältä. */
+.pollo-vihje-maadoitus .pollo-vihje-lause + .pollo-vihje-lause {
+  margin-top: 0.45rem;
+}
+
 .pollo-paneeli {
   /*
    * Paneelin oma väripaletti. Sävyt on otettu kaupunkilehdestä: paperi

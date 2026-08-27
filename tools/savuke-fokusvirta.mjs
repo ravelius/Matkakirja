@@ -29,6 +29,11 @@
  *      saapumistekstiin — ei heti (aarteen jälkisana) eikä kaupunkiin
  *      palatessa (fokusvirran oma saapumismerkintä). Omistajan bugi
  *      27.8.2026; ks. väitteiden kohdat alempana.
+ *  10. ATEENASSA EI maadoituskuplaa: aloituskaupungin kaksi ohjekuplaa
+ *      saavat tilan (omistajan päätös 27.8.2026).
+ *  11. SOFIASSA isoisän maadoitus tulee Livian saapumiskuplaan heti
+ *      matkakirjaluennan päätyttyä, nimilappuineen. Väite EI ole
+ *      FOKUSVIRTA_KORTIT-kytkimen takana — se on kevyen kulun oma.
  *
  * LIPPUTESTI (vanha virta palaa): palvelin kääntää lennossa molemmat
  * liput päinvastoin (FOKUSVIRTA_KORTIT = true, FOKUS_LEHTITEHTAVAT =
@@ -162,6 +167,84 @@ vaadi('isoisän merkintä on matkakirjakortissa',
   /torilla/i.test(saapuminen.merkinta), saapuminen.merkinta);
 
 await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-saapuminen.png') });
+
+/* ---------- isoisän maadoitus kevyen kulun saapumiskuplassa ---------- */
+
+/*
+ * VÄITE 10–11 (omistajan päätös 27.8.2026). Maadoituskommentit
+ * (packs/fokusvirta-*.js, pollo.maadoitus) kirjoitettiin v1225:ssä
+ * mutta piirtyivät vain fokusvirran kuplissa — kevyellä kululla niitä
+ * ei nähnyt kukaan. Nyt ne tulevat kevyen kulun omaan
+ * saapumiskuplaan (js/fokusvirta.js fokusvirtaMaadoituskupla).
+ *
+ * TÄMÄ VÄITE EI OLE KYTKIMEN TAKANA: se mitataan nimenomaan
+ * kokeilutilassa (FOKUSVIRTA_KORTIT = false), jossa muu
+ * korttiannostelu vaikenee.
+ *
+ * ATEENA VAIKENEE: aloituskaupungin kaksi ohjekuplaa opettavat pelin,
+ * eikä kolmas mahdu väliin. Ateenan maadoitusteksti jää odottamaan
+ * fokusvirran kytkintä.
+ */
+const ateenanKupla = await sivu.evaluate(() => {
+  const k = document.querySelector('.pollo-vihje');
+  return {
+    maadoitus: Boolean(k && !k.hidden && k.classList.contains('pollo-vihje-maadoitus')),
+    muisti: [...(window.matkakirja.ui.maadoitusNaytetty ?? [])],
+  };
+});
+vaadi('Ateenassa ei maadoituskuplaa (aloituskaupungin ohjekuplat saavat tilan)',
+  ateenanKupla.maadoitus === false && ateenanKupla.muisti.length === 0,
+  JSON.stringify(ateenanKupla));
+
+/*
+ * Sofia on lähin kaupunki, jossa maadoitus kuuluu näkyä. Luenta
+ * pysäytetään heti soiton alettua: kupla odottaa luennan loppua
+ * (js/luenta.js luennanLoppuun), ja koko äänitteen kuunteleminen
+ * venyttäisi savukkeen parillakymmenellä sekunnilla ilman että se
+ * mittaisi mitään uutta.
+ */
+const sofianKupla = await sivu.evaluate(async () => {
+  const { ui, game } = window.matkakirja;
+  game.player.pos = { type: 'city', city: 'sofia' };
+  game.world.visited.add('sofia');
+  if (!game.tokens.has('sofia')) game.world.tokens.set('sofia', 'coin');
+  ui.render();
+  /*
+   * Luenta kiinni heti kun se on OIKEASTI alkanut. Pysäytys ennen
+   * ensimmäistä sekuntia ei kelpaa: luennan loppuvahti tunnistaa
+   * lauserajahäivytyksen ehdosta "pysähtynyt JA jo soinut"
+   * (js/luenta.js luennanLoppuun), ja nollasta pysäytetty äänite vain
+   * jatkaisi hetken päästä alusta.
+   */
+  for (let i = 0; i < 60; i += 1) {
+    if (ui.diaryVoice && ui.diaryVoice.currentTime > 0.2) break;
+    await new Promise((r) => setTimeout(r, 250));
+  }
+  ui.diaryVoice?.pause();
+  for (let i = 0; i < 40; i += 1) {
+    const k = document.querySelector('.pollo-vihje');
+    if (k && !k.hidden && k.classList.contains('pollo-vihje-maadoitus')) {
+      return {
+        nimilappu: k.querySelector('.pollo-vihje-nimilappu')?.textContent ?? '',
+        yliviivaus: Boolean(k.querySelector('.pollo-vihje-nimilappu .pollo-yliviivattu')),
+        teksti: [...k.querySelectorAll('.pollo-vihje-lause')]
+          .map((p) => p.textContent).join(' '),
+      };
+    }
+    await new Promise((r) => setTimeout(r, 500));
+  }
+  return { teksti: '', nimilappu: '', yliviivaus: false };
+});
+vaadi('Sofiassa isoisän maadoitus tulee Livian saapumiskuplaan',
+  /^Isoisäsi kirjoittaa tämän kuin salaisuus/.test(sofianKupla.teksti)
+    && sofianKupla.yliviivaus === true && /Pulu/.test(sofianKupla.nimilappu),
+  JSON.stringify(sofianKupla).slice(0, 200));
+
+await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-maadoituskupla.png') });
+
+// Puhtaalta pöydältä takaisin Ateenaan: loput väitteet mittaavat
+// aloituskaupunkia, eikä Sofian käynti saa jäädä niiden alle.
+await ateenaan();
 
 // Tutki avaa lehden suoraan (lehtilukko auki).
 const lehti = await sivu.evaluate(async () => {

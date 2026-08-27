@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1232: Livian maadoituskupla saapuu ensimmaisena kuplana Sofiassa, Sarajevossa, Bukarestissa, Istanbulissa ja Roomassa - Ateenassa ei.',
   'v1231: Livian aloituspaneeli avautuu korkeampana - koko tervehdys nakyy kerralla ilman vieritysta (iPhone ja iPad).',
   'v1230: Ihmenauha rakennettu uusiksi kahden kaistan malliksi - nurja puoli jatkuu yhtenaisena marginaalin yli kehyksen alle, taite kapeampi, ihmekuvalle leveampi valkoinen reunus.',
   'v1229: Livian lisays - pulu kommentoi faktavastauksia silloin talloin omalla loppuosiollaan (noin joka 3.-4. faktavastaus).',

@@ -60,7 +60,7 @@ import { asetaKuva } from './media.js';
 // (ks. sidoKuplanNapautus). Apuri asuu ui-apureissa, koska sama vuoto
 // koskee muitakin kelluvia kuplia — ja se on niputuksessa jo ennen
 // pöllöä (tools/build-standalone.mjs MODULES).
-import { nielaiseSulkevaNapautus, polloNimilappu } from './ui-apurit.js';
+import { jaaKappaleiksi, nielaiseSulkevaNapautus, polloNimilappu } from './ui-apurit.js';
 import { POLLON_LINKKIKATTO, etsiAnkkuri, haeKatkelmat, rakennaIndeksi } from './pollo-haku.js';
 import {
   nykyinenPoimintaAvain, paivitaPillerit, poimintaKehittaja, tallennaPoiminta,
@@ -1744,7 +1744,7 @@ class Pollo {
      */
     this.kiinnita();
     const kupla = this.varmistaKupla();
-    kupla.classList.remove('pollo-vihje-juhla');
+    kupla.classList.remove('pollo-vihje-juhla', 'pollo-vihje-maadoitus');
     kupla.classList.toggle('pollo-vihje-ylos', Boolean(this.vihjeAnkkuri));
     kupla.textContent = teksti;
     kupla.hidden = false;
@@ -1791,6 +1791,51 @@ class Pollo {
     this.vihje.classList.add('pollo-vihje-parina');
     this.asetaVihjeenPaikka();
     this.kuplanAani();
+  }
+
+  /**
+   * ISOISÄN MAADOITUSKUPLA (omistajan päätös 27.8.2026).
+   *
+   * Livia vastaa isoisän merkintään heti kun matkakirjaluenta on
+   * päättynyt: hän palauttaa merkinnän SÄVYN maan tasalle. Kevyessä
+   * kulussa (js/fokusvirta.js FOKUSVIRTA_KORTIT = false) tämä on
+   * kaupungin ainoa Livian saapumiskupla, joten kupla kantaa myös
+   * puhujansa nimen — muissa kuplissa nimeä ei tarvita, koska ne ovat
+   * lyhyitä ohjeita, tämä taas on puheenvuoro.
+   *
+   * SAMA KUPLAPERHE KUIN VIHJEELLÄ eikä uusi elementti: sama paperi,
+   * sama kärki, sama paikannus (asetaVihjeenPaikka) ja ennen kaikkea
+   * sama NAPAUTUSSOPIMUS — varmistaKupla on sitonut kuplaan
+   * nielaiseSulkevaNapautuksen, joten napautus sulkee kuplan eikä vuoda
+   * kartalle (ks. sidoKuplanNapautus).
+   *
+   * Ylärivi on v1225:n yliviivattu nimilappu (ui-apurit.js
+   * polloNimilappu): pöllö-sana vedettynä yli, "Pulu" perässä.
+   *
+   * @param {string} teksti maadoituspuheenvuoro; tyhjä ei tee mitään.
+   * @returns {boolean} näkyikö kupla.
+   */
+  naytaMaadoitus(teksti) {
+    if (!teksti || this.auki || this.nappi.hidden) return false;
+    this.vihjeAnkkuri = null;
+    this.kiinnita();
+    const kupla = this.varmistaKupla();
+    kupla.classList.remove('pollo-vihje-juhla', 'pollo-vihje-parina', 'pollo-vihje-ylos');
+    kupla.classList.add('pollo-vihje-maadoitus');
+    kupla.replaceChildren();
+    kupla.appendChild(polloNimilappu(
+      polloElementti('p', 'pollo-vihje-nimilappu'), {},
+    ));
+    for (const kappale of jaaKappaleiksi(teksti)) {
+      kupla.appendChild(polloElementti('p', 'pollo-vihje-lause', kappale));
+    }
+    kupla.hidden = false;
+    // Maadoitus on oma puheenvuoronsa: mahdollinen parikupla kuului
+    // edelliseen, ja kaksi eri puheenvuoroa yhtä aikaa olisi sekava.
+    if (this.vihjeLisa) this.vihjeLisa.hidden = true;
+    this.asetaVihjeenPaikka();
+    this.kuplanAani();
+    return true;
   }
 
   /**
@@ -1880,6 +1925,7 @@ class Pollo {
     this.vihjeAnkkuri = this.doc.getElementById('turn-pill');
     const kupla = this.varmistaKupla();
     kupla.classList.toggle('pollo-vihje-ylos', Boolean(this.vihjeAnkkuri));
+    kupla.classList.remove('pollo-vihje-maadoitus');
     kupla.classList.add('pollo-vihje-juhla');
     kupla.replaceChildren();
     if (kuva) {
@@ -4132,6 +4178,17 @@ export function polloOnnittelu(sisalto) {
  */
 export function polloLisavihje(teksti) {
   nykyinenPollo?.naytaLisavihje(teksti);
+}
+
+/**
+ * Isoisän maadoitus Livian omana puheenvuorona saapumiskuplassa
+ * (js/fokusvirta.js fokusvirtaMaadoituskupla). Nimilappuinen kupla,
+ * ks. naytaMaadoitus.
+ *
+ * @returns {boolean} näkyikö kupla.
+ */
+export function polloMaadoitus(teksti) {
+  return Boolean(nykyinenPollo?.naytaMaadoitus(teksti));
 }
 
 /** Vihjekupla pois. */
