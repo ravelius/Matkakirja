@@ -5996,21 +5996,24 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'At Tallinn 2024 240 - Fat Margaret.jpg',
-          selite: 'Paksu Margareetan pyöreä tykkitorni aurinkoisessa säässä, '
-            + 'Oleviste kirkon torni siintää vasemmalla taustalla.',
+          selite: 'Tornin läpimitta on 25 metriä ja seinät paikoin viisi metriä '
+            + 'paksut, mikä tekee siitä koko Tallinnan kaupunginmuurin '
+            + 'tukevimman yksittäisen rakennelman.',
           lahde: 'Mike Peel, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Suure rannavärava eesvärav, Paks Margareete, AM N06056.jpg',
-          selite: 'Vanha mustavalkoinen valokuva Paksusta Margareetasta ja '
-            + 'portista 1930-luvulta, polku ja niittykasvillisuutta '
-            + 'edustalla.',
+          selite: 'Torni rakennettiin vuosina 1511–1530 Suuren Rantaportin '
+            + 'kylkeen osaksi kaupungin meren puoleista puolustusta, ja sen '
+            + 'toinen tehtävä oli tehdä vaikutus merta pitkin saapuviin '
+            + 'vieraisiin.',
           lahde: 'Adolf Purve, Wikimedia Commons (Public domain)',
         },
         {
           tiedosto: 'Paks Margareeta õhtul.jpg',
-          selite: 'Paksu Margareeta valaistuna talvi-iltana, lumihanki '
-            + 'edustalla.',
+          selite: 'Ruudin ja aseiden varastosta tehtiin myöhemmin vankila, ja '
+            + 'vuosien 1978–1981 perusteellisen kunnostuksen jälkeen tornista '
+            + 'tuli museo. Nykyään siinä toimii Viron merimuseo.',
           lahde: 'HartOve, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -6045,22 +6048,23 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Vanalinn päikeseloojangul. Drooni vaade.jpg',
-          selite: 'Droonikuva Tallinnan vanhastakaupungista auringonlaskussa, '
-            + 'Olevisten kirkon torni kohoaa keskellä kultaisessa '
-            + 'valossa.',
+          selite: 'Olevisten kirkko on nimetty merenkulkijoiden '
+            + 'suojeluspyhimyksen, Norjan kuningas Olavin mukaan, ja siitä on '
+            + 'maininta jo vuodelta 1267.',
           lahde: 'Aleksandr Abrosimov, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'CarlUngerSternbergOleviste1818.png',
-          selite: 'Vuonna 1818 tehty sepiasävyinen tussipiirros Olevisten '
-            + 'kirkosta ja kaupunginmuurista, etualalla puita ja '
-            + 'kävelijöitä.',
+          selite: 'Vuoteen 1818 mennessä kirkko oli jo palanut maan tasalle '
+            + 'useaan otteeseen: salamat ovat iskeneet torniin noin kymmenen '
+            + 'kertaa ja koko kirkko on tuhoutunut tulessa kolmesti.',
           lahde: 'Carl von Ungern-Sternberg, Wikimedia Commons (Public domain)',
         },
         {
           tiedosto: 'Oleviste kirik.jpg',
-          selite: 'Olevisten kirkon torni alhaalta kuvattuna sinistä taivasta '
-            + 'ja dramaattisia pilviä vasten.',
+          selite: 'Monien remonttien jälkeen torni kohoaa 123,8 metriin ja on yhä '
+            + 'Viron korkein kirkkorakennus. Vuosina 1944–1991 Neuvostoliiton '
+            + 'KGB käytti sen huippua vakoiluun ja radiolähetyksiin.',
           lahde: 'Naine, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -6094,22 +6098,24 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tallinn - Town Hall Square (Raekoja plats).jpg',
-          selite: 'Laaja panoraamanäkymä Raatihuoneentorista aurinkoisena '
-            + 'päivänä, värikkäät kauppiaantalot ja muutamia ihmisiä '
-            + 'torilla.',
+          selite: 'Tallinnan raatihuone on Itämeren alueen ja Pohjoismaiden '
+            + 'vanhin säilynyt raatihuone, ja se rakennettiin vain parissa '
+            + 'vuodessa 1402–1404 keskiaikaisen torin laidalle.',
           lahde: 'Marcin Szala (Pudelek), Wikimedia Commons (CC BY-SA 3.0 ee)',
         },
         {
           tiedosto: '1024 Reval Rathaus-8379.jpg',
-          selite: 'Tallinnan raatihuoneen rakennus ja torni kokonaisuudessaan '
-            + 'sinistä taivasta vasten, toriteltat näkyvät alareunassa.',
+          selite: 'Raatihuoneen 64 metriä korkeaan torniin nousee 115 '
+            + 'porrasaskelmaa, ja sen huipulla pyörii kaupunginvartijaa '
+            + 'esittävä tuuliviiri Vana Toomas, Tallinnan tunnuskuva vuodesta '
+            + '1530.',
           lahde: 'Hedwig Storch, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Tallinna Raekoda, AM N05985.jpg',
-          selite: 'Vanha mustavalkoinen valokuva Tallinnan raatihuoneesta '
-            + '1930-luvulta, edustalla hevosvetoisia vuokra-ajoneuvoja '
-            + 'jonossa.',
+          selite: 'Raatihuone selvisi vuoden 1944 pommituksista, vaikka sen torni '
+            + 'tuolloin syttyi palamaan; korjaustyöt saatiin valmiiksi '
+            + 'vuoteen 1952 mennessä.',
           lahde: 'Adolf Purve, Wikimedia Commons (Public domain)',
         },
       ],
@@ -6141,15 +6147,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Aleksander Nevski katedraal.jpg',
-          selite: 'Nevskin katedraali sipulikupoleineen kirkkaassa '
-            + 'auringonpaisteessa Toompean torilta kuvattuna.',
+          selite: 'Tallinnan suurin kupolikirkko rakennettiin vuosina 1894–1900 '
+            + 'arkkitehti Mihail Preobraženskin suunnitelmien mukaan, ja sen '
+            + 'perustukset tehtiin suomalaisesta graniitista.',
           lahde: 'Tammerix, Wikimedia Commons (CC BY-SA 3.0 ee)',
         },
         {
           tiedosto: 'TLA 1465 1 6689 Aleksander Nevski katedraal, taamal Niguliste kirik, ning vaade üle linna merele 1900.jpg',
-          selite: 'Vuodelta 1900 oleva mustavalkoinen ilmakuva '
-            + 'vastavalmistuneesta Nevskin katedraalista, Niguliste '
-            + 'kirkon torni ja meri taustalla.',
+          selite: 'Vuonna 1900 vihityn katedraalin tornissa soi yksitoista '
+            + 'Pietarissa valettua kelloa; suurin niistä painaa noin 16 '
+            + 'tonnia, enemmän kuin kaikki muut kymmenen yhteensä.',
           lahde: 'Tuntematon, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -6182,14 +6189,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Viru värav ja tornid.jpg',
-          selite: 'Virun portin molemmat tornit sinistä taivasta vasten, '
-            + 'ihmisiä kulkemassa portin läpi.',
+          selite: 'Portin kaksi pyöreää tornia rakennettiin vuonna 1446, kun '
+            + 'vuodesta 1345 paikalla seissyt vanha porttirakennus purettiin '
+            + 'ja tilalle nousi kaksikerroksinen porttitalo.',
           lahde: 'SofiRussia, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Viru tänav. Viru värav hoburaudtee ehitamise ajal 1888.a., AM 8612-1 F 11194.jpg',
-          selite: 'Vuodelta 1888 oleva valokuva Virun portin torneista, '
-            + 'kadulla näkyy hevosraitiotien rakennustöitä.',
+          selite: 'Vuonna 1888 suurin osa porttirakennuksista purettiin '
+            + 'hevosraitiotien tieltä, ja vain nämä kaksi pyöreää tornia '
+            + 'säästyivät, koska niitä pidettiin erityisen arvokkaina.',
           lahde: 'Charles Borchardt, Wikimedia Commons (Public domain)',
         },
       ],
@@ -6217,15 +6226,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Old City Harbour, Tallinn.jpg',
-          selite: 'Ilmakuva Tallinnan matkustajasatamasta, risteilyaluksia '
-            + 'laitureissa ja sininen meri auringonpaisteessa.',
+          selite: 'Tallinnan Vanasatama on yksi maailman vilkkaimmista '
+            + 'matkustajasatamista: laitureita on 4,2 kilometriä, ja ennen '
+            + 'koronapandemiaa satamassa kävi jopa 10,6 miljoonaa matkustajaa '
+            + 'vuodessa.',
           lahde: 'Tallinna Sadam / Port of Tallinn, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'TLA 1465 1 1954 Reval. Hafen und Zollamt M. Lewinthal postkaart.jpg',
-          selite: 'Vanha käsin väritetty postikortti Tallinnan (Revalin) '
-            + 'satamasta ja tulliasemasta purjelaivoineen, Olevisten '
-            + 'kirkon torni taustalla.',
+          selite: 'Tallinnan – tuolloin Revalin – sijainti meren äärellä '
+            + 'tunnettiin jo 900-luvulla, jolloin alueella kulki vilkasta '
+            + 'kauppaa.',
           lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
         },
       ],
@@ -6260,15 +6271,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'CentralMineralBath-Sofia-8a 3.jpg',
-          selite: 'Keskustan mineraalikylpylän pääjulkisivu ja '
-            + 'kupolikattoinen sisäänkäynti kirkkaassa '
-            + 'auringonpaisteessa, syvänsininen taivas taustalla.',
+          selite: 'Kylpylä rakennettiin lämpimien mineraalilähteiden päälle '
+            + 'samalle paikalle, jossa kaupunkilaiset olivat kylpeneet jo '
+            + 'satoja vuosia aiemmin.',
           lahde: 'MrPanyGoff, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Sofia Mineralni bani.JPG',
-          selite: 'Mineraalikylpylän rakennus kokonaisuudessaan edestä, '
-            + 'edessä suihkuava vesiallas ja puutarha.',
+          selite: 'Rakennuksessa yhdistyvät wieniläinen secessio-tyyli sekä '
+            + 'bysanttilaiset ja ortodoksiset koristeaiheet. Runko valmistui '
+            + 'vuonna 1908, mutta koko kylpylä avattiin vasta toukokuussa '
+            + '1913.',
           lahde: 'Kamburov, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -6301,14 +6314,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'StGeorgeRotundaSofia.JPG',
-          selite: 'Pyhän Yrjön pyöreä tiilikirkko aurinkoisena päivänä, '
-            + 'taustalla Bulgarian pääministerin kanslian rakennus.',
+          selite: 'Rotunda on Sofian vanhin yhä pystyssä oleva rakennus: se '
+            + 'pystytettiin 300-luvun alussa roomalaisen kylpylän '
+            + 'kupolikattoiseksi saliksi, kauan ennen kuin siitä tuli kirkko.',
           lahde: 'Preslav (Wikimedia Commons -käyttäjä), Wikimedia Commons (Public domain)',
         },
         {
           tiedosto: 'St. George church, Sofia (P1070786).jpg',
-          selite: 'Läheltä kuvattu Pyhän Yrjön rotunda, tiilipintaa ja pyöreä '
-            + 'kattokupoli selvästi esillä.',
+          selite: 'Kupoli kohoaa lähes 14 metrin korkeuteen, ja sisäseinillä on '
+            + 'viisi eri aikakauden freskokerrosta päällekkäin. 1500-luvulla '
+            + 'osmanit muuttivat kirkon moskeijaksi ja peittivät freskot '
+            + 'koristekuvioin.',
           lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -6340,22 +6356,23 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Alexander Nevsky Cathedral, Sofia (by Pudelek).JPG',
-          selite: 'Aleksanteri Nevskin katedraali viistosti edestä '
-            + 'kultaisessa ilta-auringossa, kulta- ja vihreäkupolit '
-            + 'hohtavat sinistä taivasta vasten.',
+          selite: 'Katedraali rakennettiin kiitokseksi venäläisille sotilaille, '
+            + 'jotka kaatuivat taistellessaan Bulgarian vapauttamiseksi '
+            + 'osmanien vallasta vuosien 1877–1878 sodassa.',
           lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'AlexanderNevskyCathedral-Sofia-6.jpg',
-          selite: 'Katedraali toisesta kulmasta, kellotorni ja kultakupolit '
-            + 'näkyvät selvästi lämpimässä valossa.',
+          selite: 'Kultapäällysteinen keskuskupoli kohoaa 45 metrin korkeuteen, '
+            + 'ja tornissa soi 12 kellon sarja, joista painavin painaa 12 '
+            + 'tonnia ja kevyin vain 10 kiloa.',
           lahde: 'Plamen Agov, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'BASA-237K-1-351-95-Alexander Nevsky Cathedral, Sofia.jpg',
-          selite: 'Vanha sepiansävyinen valokuva Aleksanteri Nevskin '
-            + 'katedraalista puiden keskellä, ihmishahmo '
-            + 'puistokäytävällä.',
+          selite: 'Peruskivi muurattiin vuonna 1882, rakentaminen valmistui 1912 '
+            + 'ja katedraali vihittiin käyttöön vasta 1924. Pitkään sitä '
+            + 'pidettiin maailman suurimpana valmiina ortodoksikirkkona.',
           lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
         },
       ],
@@ -6390,16 +6407,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sofia University panorama 2.jpg',
-          selite: 'Sofian yliopiston päärakennus edestä, symmetrinen '
-            + 'julkisivu ja vihreät kupolit kirkasta sinistä taivasta '
-            + 'vasten.',
+          selite: 'Yliopiston päärakennuksen rakentamisen vuosina 1924–1934 '
+            + 'maksoivat kauppiasveljekset Evlogi ja Hristo Georgiev; siinä '
+            + 'on 324 huonetta ja yli 18 000 neliömetriä tilaa.',
           lahde: 'MrPanyGoff, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Sof.University~1935.jpg',
-          selite: 'Vanha mustavalkoinen postikorttikuva Sofian yliopiston '
-            + 'juhlasalirakennuksesta 1930-luvulta, edessä puistokäytävä '
-            + 'ja penkkejä.',
+          selite: 'Bulgarian vanhin yliopisto aloitti 1. lokakuuta 1888 yhden '
+            + 'vuoden opettajankoulutuskurssina, jossa oli seitsemän '
+            + 'opettajaa ja 43 oppilasta. Ensimmäiset 16 naisopiskelijaa '
+            + 'kirjoittautuivat sisään jo vuonna 1901.',
           lahde: 'Tuntematon (postikortti n. 1934), Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -6429,15 +6447,18 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Borisova-garden-lily-lake.JPG',
-          selite: 'Borisovan puiston lampi ja suihkulähde aurinkoisena '
-            + 'kesäpäivänä, penkillä istuvia ihmisiä etualalla.',
+          selite: 'Sofian vanhin puisto sai alkunsa vuonna 1884, kun '
+            + 'sveitsiläinen puutarhuri Daniel Neff alkoi suunnitella sitä '
+            + 'kaupungin laidalle; nykyään se on yli kolme neliökilometriä '
+            + 'laaja.',
           lahde: 'Vassia Atanassova - Spiritia, Wikimedia Commons (Public domain)',
         },
         {
           tiedosto: 'Borisova gradina autumn.jpg',
-          selite: 'Syksyinen puistokäytävä Borisovan puutarhassa aamuauringon '
-            + 'valaisemana, penkillä istuva pariskunta ja keltaisia '
-            + 'lehtiä.',
+          selite: 'Puutarhuri Joseph Frei istutti 1900-luvun alussa puistoon '
+            + 'pitkät lehmus- ja kastanjakujat ja perusti ruusutarhan. Vuonna '
+            + '1986 puisto julistettiin Bulgarian puutarhataiteen '
+            + 'muistomerkiksi.',
           lahde: 'Gergana (Urbanstyle), Wikimedia Commons (CC BY-SA 2.5)',
         },
       ],
@@ -6464,20 +6485,24 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The National Palace of Culture, Sofia, 2012 - 004.jpg',
-          selite: 'Kansalliskulttuuripalatsi edestä päivänvalossa, edessä '
-            + 'heijastava allas ja suihkulähde, taustalla vuoret.',
+          selite: 'Sofian suurin kulttuurikeskus rakennettiin vuosina 1978–1981 '
+            + 'ja avattiin juuri kun Bulgaria juhli 1300-vuotista taivaltaan; '
+            + 'tilaa on 123 000 neliömetriä kahdeksassa maanpäällisessä '
+            + 'kerroksessa.',
           lahde: 'Peter Kirkov, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'National Palace of Culture (23997858848).jpg',
-          selite: 'Ilmakuva kulttuuripalatsista auringonlaskun aikaan, edessä '
-            + 'valaistu suihkulähdekäytävä ja vuoret taustalla.',
+          selite: 'Rakennuksen sisällä ja ulkopuolella on yli 80 taideteosta – '
+            + 'seinämaalauksia, mosaiikkeja ja veistoksia – jotka tunnetut '
+            + 'bulgarialaiset taiteilijat loivat.',
           lahde: 'Deensel, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'National Palace of Culture, Sofia 1.jpg',
-          selite: 'Kulttuuripalatsi hämärässä valaistuna, edessä valaistut '
-            + 'suihkulähteet ja sinipunertava iltataivas.',
+          selite: 'Idean koko palatsista antoi Ljudmila Živkova, '
+            + 'kommunistijohtaja Todor Živkovin tytär, ja vuonna 2005 '
+            + 'rakennus palkittiin maailman parhaana kongressikeskuksena.',
           lahde: 'Ivano Giambattista, Wikimedia Commons (CC0)',
         },
       ],
@@ -6514,21 +6539,23 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '2017 Romanian Athenaeum.jpg',
-          selite: 'Romanian ateneum kevätaamun valossa kukkapenkin takaa '
-            + 'kuvattuna, pylväikkö ja kupoli kokonaan näkyvissä.',
+          selite: 'Rahat konserttitaloon kerättiin tavallisilta ihmisiltä '
+            + 'tunnuslauseella ”Anna yksi leu Ateneumille!”, ja rakennus '
+            + 'vihittiin käyttöön vuonna 1888.',
           lahde: 'Babu, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Ateneul roman in lumina apusului de soare.jpg',
-          selite: 'Romanian ateneum auringonlaskun kultaisessa valossa, '
-            + 'sisäänkäynti valaistuna ja ihmisiä edustalla.',
+          selite: 'Konserttisalissa on 794 istumapaikkaa, ja katon alla kiertää '
+            + '75 metriä pitkä ja 3 metriä korkea freskomaalaus, johon Costin '
+            + 'Petrescu kuvasi koko Romanian historian.',
           lahde: 'Korinna, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Bukarest. Atheneum LOC ppmsca.52717.jpg',
-          selite: 'Väritetty photochrom-valokuva Romanian ateneumista ja sen '
-            + 'edustan puistokäytävästä noin vuodelta 1890-1900, mies '
-            + 'kävelemässä käytävällä.',
+          selite: 'Idea rakennuksesta syntyi jo vuonna 1865, kun joukko '
+            + 'sivistyneitä romanialaisia perusti kulttuuriseuran, ja '
+            + 'viimeistelytyöt jatkuivat aina vuoteen 1897 asti.',
           lahde: 'Miscellaneous Items in High Demand, PPOC, Library of Congress, Wikimedia Commons (Public domain)',
         },
       ],
@@ -6557,15 +6584,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Lake Cișmigiu.jpg',
-          selite: 'Cișmigiun puutarhan lampi syksyisessä auringonpaisteessa, '
-            + 'suihkulähde vedessä ja vanha ravintolalaituri rannalla '
-            + 'puiden keskellä.',
+          selite: 'Bukarestin vanhin ja suurin keskustan puisto avattiin '
+            + 'yleisölle syyskuussa 1847 paikalla, jossa oli aiemmin ollut '
+            + 'Dura-niminen kalastuslampi.',
           lahde: 'Turgidson, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Cismigiu 01.jpg',
-          selite: 'Cișmigiun puutarha keväällä, keltaisena kukkiva pensas '
-            + 'edustalla ja ihmisiä kävelemässä lammen rantareitillä.',
+          selite: 'Saksalainen puutarhasuunnittelija Carl Meyer toi puistoon '
+            + 'puita ympäri Eurooppaa ja rakensi mutkittelevia polkuja ja '
+            + 'pieniä kanavia; sähkövalot puisto sai jo vuonna 1882.',
           lahde: 'Calinos, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -6595,16 +6623,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bucharest University Square.jpg',
-          selite: 'Ilmakuva Yliopiston aukiosta ja Bulevardul Regina '
-            + 'Elisabetasta ympäröivine rakennuksineen kirkkaassa '
-            + 'päivänvalossa.',
+          selite: 'Aukio syntyi vuonna 1857 samaan aikaan kuin Bukarestin '
+            + 'yliopisto, mutta paikka oli ollut tärkeä risteyskohta jo '
+            + '1400-luvulta, jolloin siitä kulki kaupungin raja.',
           lahde: 'Madalin Pentelie, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Szathmari - Universitatea.jpg',
-          selite: 'Carol Szathmarin valokuva Bukarestin '
-            + 'yliopistorakennuksesta vuodelta 1864, kuvattu läheisen '
-            + 'katon yli.',
+          selite: 'Carol Szathmari ikuisti yliopistorakennuksen vuonna 1864, vain '
+            + 'seitsemän vuotta sen jälkeen kun yliopisto oli perustettu ja '
+            + 'aukio saanut nimensä.',
           lahde: 'Carol Szathmari, Wikimedia Commons (Public domain)',
         },
       ],
@@ -6632,16 +6660,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bucharest - Stavropoleos Church (28540586792).jpg',
-          selite: 'Stavropoleoksen kirkko iltapäivän auringossa, koristeltu '
-            + 'julkisivu ja pylväskäytävä kokonaan näkyvissä sinistä '
-            + 'taivasta vasten.',
+          selite: 'Kreikkalainen munkki Ioannikios Stratonikeas rakennutti '
+            + 'luostarikirkon vuonna 1724 ruhtinas Nicholas Mavrocordatoksen '
+            + 'aikana; nimi tulee kreikan sanoista ”Stavropolis”, Ristin '
+            + 'kaupunki.',
           lahde: 'Ștefan Jurcă, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Stavropoleos Preziosi.jpg',
-          selite: 'Amedeo Preziosin 1800-luvun maalaus Stavropoleoksen '
-            + 'kirkosta, edustalla ajan asuihin pukeutuneita ihmisiä ja '
-            + 'hevonen.',
+          selite: 'Kirkko edustaa koristeellista brâncoveanu-tyyliä '
+            + 'kiviveistoksineen ja kaiverruksineen, ja luostarissa on '
+            + 'Romanian suurin bysanttilaisen kirkkomusiikin kokoelma.',
           lahde: 'Amedeo Preziosi, Wikimedia Commons (Public domain)',
         },
       ],
@@ -6672,15 +6701,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Curtea Domnească din Bucureşti - panoramio.jpg',
-          selite: 'Vanhan ruhtinaanhovin tiiliraunioita ja pylväs kirkkaan '
-            + 'sinistä taivasta vasten, valkoisia kukan terälehtiä '
-            + 'maassa.',
+          selite: 'Curtea Veche oli Valakian ruhtinaiden linna vuodesta 1459, ja '
+            + 'monet hallitsijat laajensivat sitä – muun muassa Constantin '
+            + 'Brâncoveanu lisäsi siihen komean marmoriportaikon.',
           lahde: 'Валерий Дед, Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Curtea Veche (3).jpg',
-          selite: 'Ruhtinaanhovin maanalainen holvikäytävä, tiiliholvit '
-            + 'jatkuvat käytävän perspektiivissä kohti valaistua seinää.',
+          selite: 'Ruhtinaat muuttivat uuteen palatsiin vuonna 1775, ja vanha '
+            + 'hovi myytiin huutokaupalla 1798; arkeologit ovat kaivaneet '
+            + 'raunioita esiin 1950-luvulta lähtien.',
           lahde: 'Leontin l, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -6710,14 +6740,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Palatul Parlamentului 1.jpg',
-          selite: 'Parlamenttipalatsi auringonlaskun värjäämänä, kuvattuna '
-            + 'ilmasta kaupungin kattojen yli.',
+          selite: 'Diktaattori Nicolae Ceaușescun rakennuttaman palatsin piti '
+            + 'valmistua kahdessa vuodessa, mutta rakentaminen kesti 13 '
+            + 'vuotta ja päättyi vasta vuonna 1997.',
           lahde: 'Mihai Petre, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Palace București 23 BG.jpg',
-          selite: 'Parlamenttipalatsin koko julkisivu edestä kuvattuna, '
-            + 'taustalla sininen taivas ja valkoisia pilviä.',
+          selite: 'Palatsissa on 1100 huonetta, ja se ulottuu 92 metriä maan '
+            + 'alle, jonne rakennettiin ydinpommisuoja 1,5 metriä paksuine '
+            + 'betoniseinineen. Se on maailman raskain rakennus, arviolta '
+            + 'lähes 2 miljoonaa tonnia.',
           lahde: 'Bingar1234, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -6746,14 +6779,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '2023 - National Museum of Natural History "Grigore Antipa" - IMG 01.jpg',
-          selite: 'Antipan luonnontieteellinen museo kirkkaassa '
-            + 'päivänvalossa, edustalla kirahvipatsas ja puita.',
+          selite: 'Luonnontieteellisen museon komea rakennus valmistui vuonna '
+            + '1908, ja kuningas Carol I avasi sen juhlallisesti; nimensä '
+            + 'museo sai 1933 tutkija Grigore Antipan mukaan.',
           lahde: 'Chainwit., Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Belle Époque photo of the Antipa Museum in Victory Square of Bucharest, Romania.jpg',
-          selite: 'Väritetty postikortti museosta noin 1900-luvun alusta, '
-            + 'jolloin sitä kutsuttiin nimellä "Muzeul Zoologic".',
+          selite: 'Museon juuret ulottuvat vuoteen 1834, ja 1900-luvun alussa '
+            + 'sitä kutsuttiin nimellä Muzeul Zoologic. Kokoelmissa on '
+            + 'nykyään yli 2 miljoonaa näytettä.',
           lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
         },
       ],
@@ -6785,15 +6820,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bosnia Church.jpg',
-          selite: 'Katedraalin koko julkisivu kultaisessa iltavalossa, '
-            + 'molemmat tornit ja ruusuikkuna kokonaan näkyvissä.',
+          selite: 'Pyhän Sydämen katedraali vihittiin käyttöön vuonna 1889, viisi '
+            + 'vuotta rakennustöiden alkamisen jälkeen; arkkitehti Josip '
+            + 'Vancaš otti mallia Dijonin Notre-Damen kirkosta.',
           lahde: 'Talha Çakır, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Sarajevo Catholic Church 1900.jpg',
-          selite: 'Vanha puupiirros katedraalista ja sen edustalla '
-            + 'kävelevistä ihmisistä 1800-luvun lopun asuissa, koko '
-            + 'kaupunkinäkymä taustalla.',
+          selite: 'Katedraalin kaksi tornia kohoavat yli 43 metrin korkeuteen, ja '
+            + 'ne esiintyvät Sarajevon kaupungin vaakunassa ja koko kantonin '
+            + 'lipussa.',
           lahde: 'Rudolf Bernt, Wikimedia Commons (Public domain)',
         },
       ],
@@ -6823,15 +6859,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'GaziHusrev-begMosqueSarajevo.JPG',
-          selite: 'Gazi Husrev-begin moskeijan kupoli ja pylväsholvein '
-            + 'katettu eteisaula kirkkaassa päivänvalossa, puita '
-            + 'ympärillä.',
+          selite: 'Sarajevon suurin moskeija valmistui vuosina 1530–1531 '
+            + 'persialaista sukua olleen arkkitehdin suunnitelmien mukaan; '
+            + 'pääkupoli kohoaa 26 metriin ja on läpimitaltaan 13 metriä.',
           lahde: 'CeeGee, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Sarajevo Begova Mosque 1900.jpg',
-          selite: 'Vanha kaiverrus moskeijasta minareetteineen ja edustan '
-            + 'puisine suihkukaivoineen, ihmisiä pihalla.',
+          selite: 'Moskeijaan mahtuu rukoilemaan noin 1500 ihmistä, ja vuonna '
+            + '1898 siitä tuli maailman ensimmäinen moskeija, johon '
+            + 'asennettiin sähkövalot.',
           lahde: 'Rudolf Bernt, Wikimedia Commons (Public domain)',
         },
       ],
@@ -6868,21 +6905,25 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Early Morning in Bascarsija (54564806901).jpg',
-          selite: 'Baščaršijan tori aamuvalossa: Sebilj-puukaivo, moskeijan '
-            + 'minareetti taustalla ja lentäviä kyyhkysiä.',
+          selite: 'Vanha kauppatori syntyi vuonna 1462, kun Isa-bey Ishaković '
+            + 'perusti alueelle majatalon ja ensimmäiset kaupat; '
+            + 'parhaimmillaan siellä oli noin 12 000 pientä puotia ja '
+            + 'verstasta.',
           lahde: 'Jocelyn Erskine-Kellie, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Kazandziluk.jpg',
-          selite: 'Kazandžilukin kuja Baščaršijassa: kupariseppien puoteja '
-            + 'vieri vieressä, pöydillä taottuja tarjottimia, kahvipannuja '
-            + 'ja kuparimaljoja.',
+          selite: 'Jokaisella Baščaršijan kadulla tehtiin omaa käsityötä: yhdellä '
+            + 'lyötiin kuparia, toisella ommeltiin satuloita, kolmannella '
+            + 'valmistettiin kenkiä.',
           lahde: 'Francisco Antunes, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Sarajevo carsija, 1892.jpg',
-          selite: 'Aito valokuva vuodelta 1892: kauppakatu puukojuineen ja '
-            + 'minareetteineen, lapsia poseeraamassa kadulla.',
+          selite: 'Ennen 1890-lukua tori oli jo rakennettu uudelleen useaan '
+            + 'kertaan: sen olivat kohdanneet 1640-luvun maanjäristys, '
+            + 'tulipalot ja Eugen Savoyalaisen sytyttämä täydellinen tuho '
+            + 'vuonna 1697.',
           lahde: 'Tuntematon (Itävallan kansalliskirjasto), Wikimedia Commons (Public domain)',
         },
       ],
@@ -6913,20 +6954,23 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sarajevo - Gradska Vijećnica (49127275993).jpg',
-          selite: 'Vijećnican raidallinen maurilaistyylinen julkisivu joen '
-            + 'rannalla kultaisessa valossa, silta ja heijastus vedessä.',
+          selite: 'Tšekkiläinen arkkitehti Karel Pařík suunnitteli kaupungintalon '
+            + 'maurilaistyyliin, ja se valmistui vuosina 1892–1894 ja '
+            + 'avattiin juhlallisesti 1896.',
           lahde: 'Fred Romero, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Sarajevo - Gradska Vijećnica (49099920123).jpg',
-          selite: 'Lähikuva Vijećnican koristeellisista holvikaarista ja '
-            + 'parvekkeesta, liput liehumassa edustalla.',
+          selite: 'Vuonna 1949 rakennuksesta tehtiin kansallis- ja '
+            + 'yliopistokirjasto, jonka hyllyillä oli parhaimmillaan 1,5 '
+            + 'miljoonaa kirjaa.',
           lahde: 'Fred Romero, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Image from page 89 of "Durch Bosnien und die Herzegovina kreuz und quer; Wanderungen" (1897) (14594946789).jpg',
-          selite: 'Vanha kaiverrus Vijećnicasta pian sen valmistumisen '
-            + 'jälkeen, katukuva ihmisineen rakennuksen edustalla.',
+          selite: 'Elokuussa 1992 rakennus tuhoutui pommituksessa lähes kokonaan; '
+            + 'se rakennettiin uudelleen vuosina 1996–2013 ja avattiin '
+            + 'jälleen yleisölle 2014.',
           lahde: 'Internet Archive Book Images (teoksesta Durch Bosnien und die Herzegovina kreuz und quer, 1897), Wikimedia Commons (Public domain)',
         },
       ],
@@ -6960,22 +7004,23 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Miljacka and the Latin bridge (55018397907).jpg',
-          selite: 'Latinalaissilta ja Miljacka-joki kultaisessa illanvalossa, '
-            + 'taustalla kukkulalla siintää Keltainen linnake.',
+          selite: 'Ensimmäinen silta paikalla oli nahkuri Husseinin puinen silta '
+            + 'vuodelta 1541, ja nykyinen kivisilta on pääosin vuosilta '
+            + '1798–1799.',
           lahde: 'Filip Maljković, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Latin Bridge in Sarajevo.jpg',
-          selite: 'Latinalaissilta kokonaisuudessaan Miljackan yli: neljä '
-            + 'kivikaarta ja pilarien päällä pyöreät aukot, takana rinteille '
-            + 'noussut kaupunki ja minareetti.',
+          selite: 'Silta lepää neljän kivikaaren ja kolmen pilarin varassa, ja '
+            + 'pilarien yläpuolella olevat pyöreät keventävät aukot – sillan '
+            + '”silmät” – näkyvät Sarajevon vanhassa kaupunginvaakunassa.',
           lahde: 'Tumi-1983, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Friedrich Alois Schönn - An der lateinischen Brücke in Sarajewo - 171 - Österreichische Galerie Belvedere.jpg',
-          selite: '1800-luvun maalaus Latinalaissillasta ja sen lähellä '
-            + 'käytävästä torikaupasta hevosineen ja kauppiaineen '
-            + 'perinneasuissa.',
+          selite: 'Jugoslavian aikana siltaa kutsuttiin Principin sillaksi, sillä '
+            + 'sen pohjoispäässä arkkiherttua Franz Ferdinand ammuttiin '
+            + 'kesäkuussa 1914.',
           lahde: 'Alois Schönn, Wikimedia Commons (Public domain)',
         },
       ],
@@ -7005,8 +7050,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Zuta tabija.jpg',
-          selite: 'Keltaisen linnakkeen puolikaarinen kivimuuri, jonka päällä '
-            + 'seisoo ihmisiä katselemassa maisemaa iltavalossa.',
+          selite: 'Ahmed-pasha Rustempašić Skopljak rakennutti linnakkeen vuosina '
+            + '1727–1739 keltaisesta hiekkakivestä, josta se sai nimensä; se '
+            + 'oli yksi viidestä Vratnikin ympärille nousseesta '
+            + 'tykkilinnoituksesta.',
           lahde: 'Damien Smith, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -7043,15 +7090,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Contracts House (Kiev).jpg',
-          selite: 'Kontraktova-aukion klassistinen Kontraktovyi-talo '
-            + '(kauppahuone) pylväikköineen kirkkaassa iltapäivävalossa.',
+          selite: 'Aukio sai nimensä vuonna 1817, kun sille valmistui '
+            + 'Kontraktitalo eli sopimustalo; 1820-luvulla siellä vaihtoi '
+            + 'omistajaa niin viljasäkkejä kuin kokonaisia kartanoitakin.',
           lahde: 'Sergiy Klymenko, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Academy on Kontraktova square Kyiv.jpg',
-          selite: 'Vanha valokuva Kiovan mohylan akatemian rakennuksesta '
-            + 'Kontraktova-aukiolla 1900-luvun alussa, hevoskärryjä ja '
-            + 'ohikulkijoita kadulla.',
+          selite: 'Podilissa oli käyty kauppaa jo Kiovan-Venäjän ajoista, mutta '
+            + 'aukiosta tuli seudun vilkkain kauppapaikka vasta, kun keisari '
+            + 'Paavali I siirsi suuret vuotuiset messut Dubnosta Kiovaan '
+            + 'vuonna 1798.',
           lahde: 'A. Mikulin, Wikimedia Commons (Public domain)',
         },
       ],
@@ -7093,16 +7142,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Андріївська церква, липень 2020 року.jpg',
-          selite: 'Andreaksen kirkon sinivalkoinen barokkijulkisivu '
-            + 'portaineen kesäisenä päivänä, taustalla kirkas sininen '
-            + 'taivas.',
+          selite: 'Italialainen arkkitehti Bartolomeo Rastrelli suunnitteli '
+            + 'kirkon, joka rakennettiin vuosina 1747–1754 kukkulalle, jolle '
+            + 'apostoli Andreaksen kerrotaan pystyttäneen ristin.',
           lahde: 'Sergei bar, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'St. Andrew\'s Church, Kiev.jpg',
-          selite: 'Varhainen valokuva vuodelta 1852: näkymä Andreaksen '
-            + 'mäenalaiselta kadulta ylös kukkulalla kohoavaan Andreaksen '
-            + 'kirkkoon.',
+          selite: 'Kirkko seisoo 15 metriä korkealla kivijalustalla ja kohoaa 50 '
+            + 'metrin korkeuteen yhden kupolin ja viiden hoikan tornin '
+            + 'koristamana.',
           lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
         },
       ],
@@ -7143,21 +7192,23 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'St. Michael\'s Golden-Domed Monastery. Kiev, Ukraine, Eastern Europe-2.jpg',
-          selite: 'Pyhän Mikaelin kultakupolisen luostarin sinivalkoinen '
-            + 'katedraali alhaalta kuvattuna, kultaiset kupolit kirkasta '
-            + 'taivasta vasten.',
+          selite: 'Ruhtinas Svjatopolk II perusti luostarin vuosina 1108–1113 '
+            + 'arkkienkeli Mikaelin kunniaksi, ja pääkirkon kupoli kullattiin '
+            + 'ehkä ensimmäisenä koko Kiovan-Venäjällä.',
           lahde: 'Mstyslav Chernov, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Ukraine St Michael Cathedral Postcard 1.jpg',
-          selite: 'Vanha postikortti 1890-1905-luvuilta: luostarin kellotorni '
-            + 'ja kupolit sepiavärein kuvattuina.',
+          selite: '1700-luvulla kirkkoa laajennettiin ukrainalaiseen '
+            + 'barokkityyliin, ja alkuperäisestä yhdestä kupolista tuli '
+            + 'lopulta seitsemän kupolin kokonaisuus.',
           lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
         },
         {
           tiedosto: 'Saint Michael\'s Square 2025-06-30 02.jpg',
-          selite: 'Laaja näkymä koko luostarikompleksista tyhjältä aukiolta '
-            + 'kesäisenä päivänä, komeat pilvet taustalla.',
+          selite: 'Neuvostoviranomaiset purkivat kultakupolit keväällä 1935 ja '
+            + 'räjäyttivät kirkon elokuussa 1937; luostari rakennettiin '
+            + 'vanhojen piirustusten avulla uudelleen ja avattiin 1999.',
           lahde: 'Lklundin, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -7197,21 +7248,23 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '80-391-9014 Kyiv Sofia 2 RB 24.jpg',
-          selite: 'Sofian katedraali lumisena talvipäivänä kirkkaassa '
-            + 'auringonpaisteessa, paljaiden puiden kehystämänä.',
+          selite: 'Ruhtinas Jaroslav Viisas rakennutti Kiovan vanhimman säilyneen '
+            + 'suurkirkon ilmeisesti vuonna 1037 kentälle, jolla hänen '
+            + 'joukkonsa olivat vuotta aiemmin voittaneet petšenegit.',
           lahde: 'Rbrechko, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'St. Sophia Cathedral, Kiev, Russia, (i.e., Ukraine)-LCCN2001697426.jpg',
-          selite: 'Värillinen photochrom-kuva 1890-1900-luvuilta: Sofian '
-            + 'katedraalin kellotorni ja Bogdan Hmelnytskyin '
-            + 'ratsastajapatsas aukiolla.',
+          selite: 'Katedraalin 76 metriä korkea kellotorni valmistui vuonna 1699 '
+            + 'hetmani Ivan Mazepan kustannuksella, ja siinä riippuu 13 '
+            + 'tonnia painava, vuonna 1705 valettu Mazepa-kello.',
           lahde: 'Photochrom Print Collection, Wikimedia Commons (Public domain)',
         },
         {
           tiedosto: 'Kyiv-Saint Sophia Cathedral-east view.jpg',
-          selite: 'Sofian katedraalin itäsivu läheltä kuvattuna, vihreät '
-            + 'kupolit ja kullatut ristit erottuvat pilvisellä taivaalla.',
+          selite: 'Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun '
+            + 'mosaiikki- ja freskokokoelma: mosaiikkeja on 260 neliömetriä '
+            + 'ja freskoja peräti 3 000 neliömetriä.',
           lahde: 'Galvm, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -7250,15 +7303,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '2005-08-15 Maidan Nezalezhnosti Kiev 261.JPG',
-          selite: 'Itsenäisyyden aukio iltahämärässä valaistuna: '
-            + 'Riippumattomuuspatsaan pylväs, lasikupu ja hotelli Ukraina '
-            + 'taustalla.',
+          selite: 'Aukion tunnetuin nähtävyys on vuonna 2001 pystytetty 61 metriä '
+            + 'korkea Itsenäisyyspatsas, jonka huipulla seisoo kultainen '
+            + 'Berehynia, ukrainalaisen tarinaperinteen suojelijatar.',
           lahde: 'Norbert Aepli, Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Modern fountain on the Independence square (8162296734).jpg',
-          selite: 'Aukion moderni voikukka-aiheinen suihkulähde päiväsaikaan, '
-            + 'taustalla pylväikköinen rakennus.',
+          selite: 'Vuosina 1976–1977 aukion alle rakennettiin metroasema, ja '
+            + 'samalla paikalle valmistui suihkulähteitä ja avaria '
+            + 'kävelyalueita.',
           lahde: 'Guillaume Speurt, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -7299,22 +7353,24 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kiev Golden Gate.jpg',
-          selite: 'Kultainen portti puistikon laidalla: jälleenrakennettu '
-            + 'porttitorni kultakupolisine kirkkoineen, ja alaosan harmaan '
-            + 'betonikuoren sisällä ovat portin säilyneet muurinpätkät.',
+          selite: 'Jaroslav Viisas rakennutti portin vuosina 1017–1024 kaupungin '
+            + 'muurien pääsisäänkäynniksi Konstantinopolin Kultaisen portin '
+            + 'mallin mukaan; läpikulkuaukko oli noin 12 metriä korkea.',
           lahde: 'Луц Фишер-Лампрехт, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Киев. Золотые ворота. Почтовая открытка 04.jpg',
-          selite: 'Vanha postikortti vuodelta 1910: Kultaisen portin '
-            + 'keskiaikaiset rauniot suojakatoksen alla ennen 1980-luvun '
-            + 'jälleenrakennusta.',
+          selite: 'Batu-kaanin mongolijoukot vaurioittivat porttia pahoin vuonna '
+            + '1240, ja 1970-luvulle tultaessa maan päällä oli enää kaksi '
+            + 'muurinpätkää jäljellä.',
           lahde: 'Tuntematon kustantaja, Wikimedia Commons (Public domain)',
         },
         {
           tiedosto: 'Золоті ворота повний вигляд.jpg',
-          selite: 'Kultaisen portin edusta ja portaat suoraan edestä '
-            + 'kuvattuna, ohikulkijoita portailla pilvisenä päivänä.',
+          selite: 'Portti rakennettiin kokonaan uudelleen Kiovan '
+            + '1500-vuotisjuhlaan vuonna 1982; koska alkuperäisestä ei ole '
+            + 'säilynyt yhtään aitoa kuvaa, ulkonäkö jouduttiin päättelemään '
+            + 'vanhoista kirjallisista kuvauksista.',
           lahde: 'Ольжич Мушинський, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -7349,24 +7405,24 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Peter & Paul fortress in SPB 03.jpg',
-          selite: 'Aurinkoisena kesäpäivänä joen takaa kuvattu '
-            + 'Pietari-Paavalin linnoitus: kultainen kellotorni, kupolit '
-            + 'ja muurit erottuvat selvästi sinistä taivasta ja valkoisia '
-            + 'pilviä vasten.',
+          selite: 'Pietari Suuri perusti linnoituksen vuonna 1703 Jänissaarelle '
+            + 'Nevajoen suulle, ja tästä paikasta koko Pietarin kaupunki sai '
+            + 'alkunsa; katedraalin kellotorni kohoaa 122,5 metriin.',
           lahde: 'Florstein, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Saint Petersburg. Panoramic view towards the Peter and Paul Fortress (Petropavlovskaia Krepost\') across the Neva.jpg',
-          selite: 'Käsin väritetty valokuva vuodelta 1931: näkymä Nevajoen '
-            + 'yli linnoitukseen, jonka kultainen huippu ja kupolit '
-            + 'kimaltelevat iltavalossa.',
+          selite: 'Vuodesta 1873 lähtien linnoituksesta on ammuttu tykinlaukaus '
+            + 'joka päivä juuri keskipäivällä, ja kaupunkilaiset tarkistivat '
+            + 'siitä aikanaan kellonsa.',
           lahde: 'Branson DeCou, Wikimedia Commons (Public domain)',
         },
         {
           tiedosto: 'RUS-2016-Aerial-SPB-Peter and Paul Fortress.jpg',
-          selite: 'Ilmakuva linnoituksesta ylhäältä: tähdenmuotoiset '
-            + 'bastionit, sisäpiha ja katedraali erottuvat kokonaisuutena '
-            + 'joen ympäröimällä saarella.',
+          selite: 'Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli '
+            + 'linnoituksen tähdenmuotoiset muurit ja bastionit; nykyisin '
+            + 'koko alue on museo, jossa käy vuosittain miljoonia '
+            + 'vierailijoita.',
           lahde: 'Godot13, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -7401,22 +7457,24 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Winter Palace - Palace Square facade, 2006 (01).jpg',
-          selite: 'Talvipalatsin vaaleanvihreä julkisivu Palatsiaukiolta '
-            + 'kuvattuna, edustalla Aleksanterin pylväs ja aurinkoinen '
-            + 'kesätaivas.',
+          selite: 'Bartolomeo Rastrellin suunnittelemassa barokkilinnassa on 1500 '
+            + 'huonetta, 1945 ikkunaa ja 117 porrasta, ja sen pääjulkisivu '
+            + 'venyy 215 metrin pituudelta.',
           lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Winter Palace, St. Petersburg, Russia LCCN2014646334.jpg',
-          selite: 'Mustavalkoinen valokuva Talvipalatsista vuodelta 1890, '
-            + 'edustalla höyrylaiva Nevajoella.',
+          selite: 'Palatsi oli Venäjän hallitsijoiden koti lähes 150 vuoden ajan, '
+            + 'ja palvelijat pitivät jopa lehmää ullakolla, jotta keittiöön '
+            + 'riitti tuoretta maitoa joka aamu.',
           lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
         },
         {
           tiedosto: 'RUS-2016-Aerial-SPB-Winter Palace.jpg',
-          selite: 'Ilmakuva Talvipalatsin ja Palatsiaukion kokonaisuudesta '
-            + 'ylhäältä, näkyvissä myös rakennuksen sisäpiha ja ympäröivä '
-            + 'kaupunki.',
+          selite: 'Vuoden 1837 tulipalo tuhosi palatsin sisustuksen lähes '
+            + 'kokonaan, mutta se rakennettiin entiselleen vain vuodessa – '
+            + 'silloin käytettiin ensi kertaa tulta paremmin kestäviä '
+            + 'rautapalkkeja.',
           lahde: 'Godot13, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -7442,23 +7500,23 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Спас на Крови (вид с канала).jpg',
-          selite: 'Verikirkko Gribojedovin kanavan varrella aurinkoisena '
-            + 'päivänä, kultaiset ja kirjavat sipulikupolit erottuvat '
-            + 'selvästi kanavamaiseman keskellä.',
+          selite: 'Kirkko rakennettiin paikalle, jossa keisari Aleksanteri II '
+            + 'haavoittui kuolettavasti vuonna 1881, ja hänen poikansa '
+            + 'käskystä alkanut rakennustyö kesti peräti 24 vuotta.',
           lahde: 'Yaroslav Alekseev, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'The Church of the Savior on Spilled Blood in spring.jpg',
-          selite: 'Verikirkko alhaalta ylös kuvattuna kanavan rannalta, '
-            + 'kupolit ja koristeelliset julkisivut erottuvat kirkkaan '
-            + 'sinistä taivasta vasten.',
+          selite: 'Toisin kuin Pietarin muut vaaleat ja suorakulmaiset '
+            + 'rakennukset, Verikirkko on täynnä värikkäitä sipulikupoleita '
+            + 'Moskovan Pyhän Basileioksen katedraalin tapaan.',
           lahde: 'Egorchetvernin, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'SPB Saviour on the Blood 1905-1915.jpg',
-          selite: 'Prokudin-Gorskin värivalokuva Verikirkosta 1900-luvun '
-            + 'alusta, kirkko vielä uudenveroisena vähän valmistumisensa '
-            + 'jälkeen.',
+          selite: 'Kirkko valmistui vuonna 1907, ja sisällä seiniä ja kattoja '
+            + 'peittää yli 7000 neliömetriä mosaiikkeja – yksi maailman '
+            + 'suurimmista mosaiikkikokoelmista.',
           lahde: 'Sergei Prokudin-Gorski, Wikimedia Commons (Public domain)',
         },
       ],
@@ -7492,16 +7550,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'RUS-2016-SPB-Bronze Horseman 03.jpg',
-          selite: 'Vaskiratsastaja-patsas iltaruskon kultaisessa valossa: '
-            + 'Pietari Suuri hevosen selässä graniittikiven päällä, '
-            + 'taustalla kirkas taivas.',
+          selite: 'Ranskalainen kuvanveistäjä Étienne Falconet loi Pietari Suuren '
+            + 'ratsastajapatsaan Katariina Suuren tilauksesta, ja se '
+            + 'paljastettiin Senaatintorilla vuonna 1782.',
           lahde: 'Godot13, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Paterssen View Senate Square with Monument of Peter the Great 1799.jpg',
-          selite: 'Vuoden 1799 väritetty kaiverrus Senaatintorista: '
-            + 'Vaskiratsastaja-patsas keskellä toria hevoskärryjen ja '
-            + 'purjelaivojen ympäröimänä.',
+          selite: 'Patsaan jalusta on 1250 tonnia painava graniittilohkare '
+            + 'nimeltä Ukkoskivi; yli 400 miestä raahasi sitä yhdeksän '
+            + 'kuukautta kelkoilla, joissa pronssikuulat toimivat '
+            + 'kuulalaakereina.',
           lahde: 'Benjamin Patersen (jäljennös), Wikimedia Commons (Public domain)',
         },
       ],
@@ -7529,15 +7588,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kazan Cathedral Saint Petersburg.jpg',
-          selite: 'Kazanin katedraalin puolikaarinen pylväikkö ja kupoli '
-            + 'hämärän sinisessä iltavalaistuksessa, edustalla '
-            + 'suihkulähde ja puutarha.',
+          selite: 'Arkkitehti Andrei Voronihin ratkaisi tonttipulman rakentamalla '
+            + 'katedraalin sivulle puolikaaren muotoisen pylväikön, jossa on '
+            + '96 korinttilaista pylvästä neljässä rivissä.',
           lahde: 'Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Kazan Cathedral-Toselli.jpg',
-          selite: '1800-luvun alun litografia Kazanin katedraalista '
-            + 'sivukuvakulmasta, edustalla hevoskärryjä ja ohikulkijoita.',
+          selite: 'Katedraali valmistui vuonna 1811 ja kohoaa korkeimmillaan 71,6 '
+            + 'metriin; Napoleonia vastaan taistellut sotamarsalkka Mihail '
+            + 'Kutuzov haudattiin sinne vuonna 1813.',
           lahde: 'Angelo Toselli (piirros), Wikimedia Commons (Public domain)',
         },
       ],
@@ -7560,16 +7620,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Санкт-Петербург, Мариинский театр, фасад (edited version).jpg',
-          selite: 'Mariinski-teatterin vaaleanvihreä julkisivu suoraan edestä '
-            + 'kuvattuna aurinkoisena päivänä, kaareva kattoterassi ja '
-            + 'pylväät erottuvat selvästi.',
+          selite: 'Teatteri avasi ovensa vuonna 1860 ja sai nimensä keisarinna '
+            + 'Maria Aleksandrovnan mukaan; sen lavalla kantaesitettiin '
+            + 'Tšaikovskin Prinsessa Ruusunen 1890 ja Pähkinänsärkijä 1892.',
           lahde: 'Nikolai Bulykin, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '20240524 Mariinsky Theatre main building 01.jpg',
-          selite: 'Mariinski-teatterin kulmatorni läheltä kuvattuna '
-            + 'alaviistosta, koristeelliset yksityiskohdat ja kirkas '
-            + 'taivas.',
+          selite: 'Teatterin balettikoulusta ovat ponnistaneet muun muassa Anna '
+            + 'Pavlova, Vaslav Nijinski ja Mihail Baryšnikov, ja '
+            + 'päänäyttämölle mahtuu 1625 katsojaa.',
           lahde: 'Sergei A. Demidov, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -7602,15 +7662,17 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Moscow - 2025 - Facade of Big Theatre (1).jpg',
-          selite: 'Bolšoi-teatterin klassisistinen päajulkisivu '
-            + 'pylväikköineen ja Apollonin nelivaljakkoveistoksineen '
-            + 'kirkkaana kesäpäivänä.',
+          selite: 'Joseph Bovén suunnittelema teatteri avasi ovensa vuonna 1825, '
+            + 'ja sen pylväikön yläpuolella jumala Apollo ajaa nelivaljakkoa '
+            + 'pronssisessa vaunussa – veistos on Pjotr Klodtin käsialaa.',
           lahde: 'Юрий Д.К., Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Bolshoy Teatr.jpg',
-          selite: '1830–1840-luvun väritetty litografia Bolšoi-teatterista '
-            + 'talvisena päivänä, hevosajoneuvoja rakennuksen edustalla.',
+          selite: 'Edellinen teatteri tuhoutui tulipalossa vuonna 1805, ja '
+            + 'uuteenkin rakennukseen iski palo 1853; Alberto Cavos '
+            + 'suunnitteli katsomon uudelleen tuttuine punaisine ja '
+            + 'kultaisine väreineen.',
           lahde: 'Jean Baptiste Arnout (Vivienin alkuperäiskuvan mukaan), Wikimedia Commons (Public domain)',
         },
       ],
@@ -7639,22 +7701,23 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Moscow - Red Square in May 2026.jpg',
-          selite: 'Punaisen torin laaja näkymä: Kremlin muuri, Historiallinen '
-            + 'museo ja GUM-tavaratalo aurinkoisena päivänä pilvisellä '
-            + 'mutta kirkkaalla taivaalla.',
+          selite: 'Aukio syntyi 1490-luvulla, kun ruhtinas Iivana III käski '
+            + 'purkaa alueen puutalot paloturvallisuuden ja puolustuksen '
+            + 'vuoksi; tori on lähes 330 metriä pitkä ja 70 metriä leveä.',
           lahde: 'Юрий Д.К., Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Red Square at sunset (12.07.2016).jpg',
-          selite: 'Punainen tori auringonlaskun kultaisessa valossa, Kremlin '
-            + 'torni ja Historiallinen museo hehkuvana siluettina.',
+          selite: 'Nimi ”punainen” ei alun perin viitannut väriin: vanhalla '
+            + 'venäjän kielellä sana tarkoitti kaunista, ja vasta myöhemmin '
+            + 'siitä tuli myös punaisen värin nimitys.',
           lahde: 'Gennady Grachev, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Krasnaya Ploshad-19v.jpg',
-          selite: 'Väritetty postikortti 1900-luvun alusta: Punainen tori, '
-            + 'Vasili-katedraali ja Spasskajan torni hevoskärryineen ja '
-            + 'ohikulkijoineen.',
+          selite: 'Vuosisatojen ajan torilla julistettiin kuninkaallisia '
+            + 'tiedotteita ja juhlittiin tsaarien kruunajaisia, ja siellä '
+            + 'käytiin kauppaa aukion alkuajoista lähtien.',
           lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
         },
       ],
@@ -7685,20 +7748,23 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'St. Basil\'s Cathedral at autumn sunny day.jpg',
-          selite: 'Pyhän Vasilin katedraali kokonaisuudessaan värikkäine '
-            + 'sipulikupoleineen kirkkaan sinistä taivasta vasten.',
+          selite: 'Tsaari Iivana Julma käski rakentaa katedraalin muistoksi '
+            + 'Kazanin kaupungin valtauksesta vuonna 1552, ja työ kesti vain '
+            + 'kuusi vuotta, 1555–1561.',
           lahde: 'Юрий Д.К., Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: '00 0568 Saint Basil\'s Cathedral - Moscow.jpg',
-          selite: 'Läheltä alaviistosta kuvatut Pyhän Vasilin katedraalin '
-            + 'värikkäät, kuvioidut sipulikupolit.',
+          selite: 'Rakennuksen yhdeksän erimuotoista ja -väristä sipulikupolia '
+            + 'tekevät siitä ainutlaatuisen – mitään täysin samanlaista ei '
+            + 'ole rakennettu koskaan ennen tai jälkeen.',
           lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Saint Basil\'s Cathedral 1870.jpg',
-          selite: 'Vuoden 1870 kaiverrus Pyhän Vasilin katedraalista '
-            + 'hevosajoneuvoineen ja ohikulkijoineen edustalla.',
+          selite: 'Kirkko oli alun perin nimeltään Pyhän Kolminaisuuden kirkko, '
+            + 'mutta vuonna 1588 sen kylkeen lisättiin kappeli pyhän hullun '
+            + 'Vasili Siunatun haudan päälle, ja nimi vaihtui vähitellen.',
           lahde: 'K. O. Brož (piirros), L. A. Serjakov (kaiverrus), Wikimedia Commons (Public domain)',
         },
       ],
@@ -7728,20 +7794,22 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Moscow - 2026-3 - Kremlin at spring.jpg',
-          selite: 'Kremlin punatiiliset muurit ja tornit sekä Suuri Kremlin '
-            + 'palatsi Moskva-joen rannalta kuvattuna kirkkaana päivänä.',
+          selite: 'Nykyiset punatiiliset muurit ja tornit rakennettiin vuosina '
+            + '1485–1495 ruhtinas Iivana III:n käskystä; ensimmäisen linnan '
+            + 'paikalle oli rakentanut Juri Dolgorukin jo 1156.',
           lahde: 'Юрий Д.К., Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Cathedral square inside the Kremlin.jpg',
-          selite: 'Kremlin Katedraalitori ylhäältä kuvattuna: kultakupolisia '
-            + 'kirkkoja ja palatseja aurinkoisena päivänä.',
+          selite: 'Muurien sisällä seisoo vanhoja katedraaleja sekä Iivana Suuren '
+            + 'kellotorni, joka valmistui vuonna 1600 ja nousee 81 metrin '
+            + 'korkeuteen.',
           lahde: 'Pedro Szekely, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Noël Paymal Lerebours 06 Moscow.jpg',
-          selite: '1840-luvun väritetty kaiverrus Kremlin muureista ja '
-            + 'torneista Moskva-joen rannalta, soutuveneitä joella.',
+          selite: 'Muuria on yhteensä 2235 metriä, ja se on paikoin 5–19 metriä '
+            + 'korkea ja jopa 6,5 metriä paksu; torneja on kaikkiaan 20.',
           lahde: 'Johann Hürlimann, Wikimedia Commons (Public domain)',
         },
       ],
@@ -7777,15 +7845,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Moscow July 2011-34a.jpg',
-          selite: 'Vapahtajan Kristus-katedraali kultakupoleineen sinistä '
-            + 'taivasta vasten, Patriarhin silta edustalla.',
+          selite: 'Nykyinen katedraali valmistui vuonna 2000 alkuperäisen '
+            + 'tarkkana jäljennöksenä: se on 103 metriä korkea, ja sen sisään '
+            + 'mahtuu kerralla jopa 9500 ihmistä.',
           lahde: 'Alvesgaspar, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Москва. Храм Христа Спасителя 1881 Найденов t75105.jpg',
-          selite: 'Vuoden 1881 valokuva alkuperäisestä Vapahtajan '
-            + 'katedraalista pian sen valmistumisen jälkeen, '
-            + 'rakennustyömaan jälkiä edustalla.',
+          selite: 'Alkuperäisen katedraalin rakentaminen kesti yli 40 vuotta, '
+            + 'vuodesta 1839 vuoteen 1883, ja Tšaikovskin 1812-alkusoitto '
+            + 'kuultiin sen pihalla jo elokuussa 1882.',
           lahde: 'Nikolai Naidjonov, Wikimedia Commons (Public domain)',
         },
       ],
@@ -7815,9 +7884,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tretyakov and his gallery.jpg',
-          selite: 'Tretjakovin galleria Pavel Tretjakovin patsaan takaa '
-            + 'kuvattuna, satumainen punatiilinen ja koristeellinen '
-            + 'julkisivu aurinkoisena päivänä.',
+          selite: 'Kauppias Pavel Tretjakov lahjoitti kokoelmansa Moskovan '
+            + 'kaupungille elokuussa 1892, ja galleria avattiin yleisölle 15. '
+            + 'elokuuta 1893. Satumaisen punatiilisen julkisivun suunnitteli '
+            + 'taiteilija Viktor Vasnetsov vuosina 1902–1904.',
           lahde: 'Andrey, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -7848,22 +7918,23 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Воронцовський маяк DSC5033.jpg',
-          selite: 'Vorontsovin majakka merenpuolelta kuvattuna: valkoinen '
-            + 'kivimajakka punaisine lyhtyhuoneineen kohoaa sinistä '
-            + 'taivasta ja valkoisia pilviä vasten, ympärillä avomeri.',
+          selite: 'Lähes 30 metriin kohoava majakka on jo kolmas torni samalla '
+            + 'paikalla: puisen ja valurautaisen edeltäjänsä jälkeen nykyinen '
+            + 'valmistui vuonna 1955.',
           lahde: 'Konstantin Brizhnichenko, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Воронцовський маяк та грузовий порт.jpg',
-          selite: 'Vorontsovin majakka aallonmurtajan päässä omalla pyöreällä '
-            + 'jalustallaan, takana rahtisatama nostureineen.',
+          selite: 'Majakan valo näkyy merelle yli 20 kilometrin päähän ja vilkkuu '
+            + 'aina samalla tunnuksella: kolme pitkää välähdystä, mikä on '
+            + 'Morse-aakkosissa kirjain O – niin kuin Odessa.',
           lahde: 'SvetlanaM85, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Vorontsov Lighthouse.jpg',
-          selite: '1890-luvun postikorttikuva Vorontsovin majakasta: vanha '
-            + 'metallinen/kivinen majakka kivilaiturilla, ympärillä '
-            + 'soutuveneitä ajan tyylissä.',
+          selite: 'Majakka on nimetty Odessan seutua aikanaan hallinneen ruhtinas '
+            + 'Vorontsovin mukaan, ja se on yhdistetty rantaan pitkällä '
+            + 'kivisellä aallonmurtajalla.',
           lahde: 'Tuntematon, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -7892,9 +7963,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Вид на морской вокзал (Одесса).jpg',
-          selite: 'Odessan meriasema satamassa: korkea Hotel Odessa -torni, '
-            + 'matkustaja-alus ja purjeveneitä laiturissa kirkkaan '
-            + 'sinisen taivaan alla.',
+          selite: 'Satama sai alkunsa vuonna 1793, kun upseeri José de Ribas oli '
+            + 'etsinyt sille parhaan paikan Mustanmeren rannalta; nykyään '
+            + 'siellä on 46 laituripaikkaa ja 52 laituria.',
           lahde: 'Georgiy Dolgopskiy, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -7931,23 +8002,23 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Potemkin Stairs, Odessa.jpg',
-          selite: 'Potjomkinin portaat alhaalta kuvattuna: koko leveä '
-            + 'rappuskäytävä nousee ylös siniseen taivaaseen, ihmisiä '
-            + 'kävelemässä portailla.',
+          selite: 'Portaat rakennettiin vuosina 1837–1841 sveitsiläisen '
+            + 'arkkitehti Francesco Boffon suunnitelmien mukaan; alun perin '
+            + 'askelmia oli 200, nykyään 192 kymmenen tasanteen välissä.',
           lahde: 'Oleh Kushch, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Потьомкінські східці, Potemkin Stairs (11378021554).jpg',
-          selite: 'Näkymä Potjomkinin portaiden yläpäästä alas kohti satamaa '
-            + 'ja Hotel Odessa -tornia syksyisessä auringonpaisteessa, '
-            + 'puissa ruskan värejä.',
+          selite: 'Portaiden yläpää on kapeampi kuin alapää – 12,5 metriä vastaan '
+            + 'yli 21 metriä – joten ylhäältä koko 142 metriä pitkä rivistö '
+            + 'näyttää yhtenäiseltä, suoralta muurilta.',
           lahde: 'Clay Gilliland, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Potemkinstairs.jpg',
-          selite: 'Vuoden 1896 valokuva Potjomkinin portaista: portaat '
-            + 'reunustavat ajan rakennukset, portailla yksittäisiä '
-            + 'ohikulkijoita.',
+          selite: 'Portaat tulivat maailmankuuluiksi vuonna 1925, kun ohjaaja '
+            + 'Sergei Eisenstein kuvasi niillä kohtauksia mykkäelokuvaansa '
+            + 'Panssarilaiva Potjomkin.',
           lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
         },
       ],
@@ -7981,23 +8052,25 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The auditorium of the Odessa Opera House 01.jpg',
-          selite: 'Oopperatalon katsomo ennen esitystä: punakultainen '
-            + 'esirippu, aitiokerroksia päällekkäin salin molemmin puolin ja '
-            + 'kattoa kiertävät valkoiset kipsihahmot.',
+          selite: 'Hevosenkengän muotoisen salin akustiikka on niin hyvä, että '
+            + 'näyttelijän kuiskauskin kuuluu viimeiselle riville; kesäisin '
+            + 'salia viilennettiin laskemalla jäällä täytettyjä vaunuja '
+            + 'kellariholveihin.',
           lahde: 'OlenaMuzychenko (WMUA), Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Odessa Opera Theatre 2016 G2.jpg',
-          selite: 'Lähikuva oopperatalon päätykolmiosta: hevospatsasryhmä, '
-            + 'pylväät ja koristeveistokset alhaalta kuvattuna kirkkaassa '
-            + 'auringonpaisteessa.',
+          selite: 'Talon suunnittelivat itävaltalaiset arkkitehdit Ferdinand '
+            + 'Fellner ja Hermann Helmer, ja julkisivua koristavat muun '
+            + 'muassa Gogolin ja Pushkinin kuvapatsaat.',
           lahde: 'George Chernilevsky, Wikimedia Commons (Public domain)',
         },
         {
           tiedosto: 'Stadttheater in Odessa (BildID 15665727).jpg',
-          selite: 'Vuoden 1917 valokuva Odessan oopperatalosta kadulta '
-            + 'kuvattuna: katukiveys, katulyhdyt ja ajan asukkaita '
-            + 'kävelemässä rakennuksen editse.',
+          selite: 'Odessan ensimmäinen oopperatalo avattiin vuonna 1810 mutta '
+            + 'tuhoutui tulipalossa 1873; nykyinen talo avasi ovensa '
+            + 'lokakuussa 1887 ja oli kaupungin ensimmäinen sähkövaloin '
+            + 'varustettu rakennus.',
           lahde: 'K.u.k. Kriegspressequartier, Wikimedia Commons (Public domain)',
         },
       ],
@@ -8027,16 +8100,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Odessa city garden orchestra Rotunda.JPG',
-          selite: 'Kaupunginpuiston pyöreä musiikkipaviljonki (rotunda) ja '
-            + 'suihkulähde kukkapenkkien keskellä, ihmisiä istumassa '
-            + 'penkeillä auringossa.',
+          selite: 'Puistoon mahtuu vanha kesäteatterin lava, jolla orkesteri '
+            + 'soittaa kesäiltoina, pieni paviljonki, patsaita ja musiikkia '
+            + 'soittava suihkulähde.',
           lahde: 'HOBOPOCC, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Восени у міському саду, Одеса.jpg',
-          selite: 'Kaupunginpuiston käytävä syksyisessä kultaisessa '
-            + 'lehtimeressä, punaiset penkit rivissä käytävän varrella, '
-            + 'katulyhty edessä.',
+          selite: 'Odessan vanhin puisto perustettiin vuonna 1803, kun kaupungin '
+            + 'perustajan veli Felix de Ribas raivasi alueen; vuonna 1806 hän '
+            + 'lahjoitti sen koko kaupungille.',
           lahde: 'Krasnickaja Katya, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -8069,16 +8142,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Pryviz entrance.jpg',
-          selite: 'Privozin torin näyttävä kaarikattoinen sisäänkäynti '
-            + 'kadulta kuvattuna, PRIVOZ-kyltti julkisivussa, kirkas '
-            + 'kevätaurinko ja tyhjä katu edessä.',
+          selite: 'Odessan suurin ruokatori sai alkunsa vuonna 1827, kun '
+            + 'kauppiaat myivät tavaroitaan suoraan hevoskärryjen lavalta – '
+            + 'nimi ”Privoz” tarkoittaa suunnilleen tuotua tavaraa.',
           lahde: 'Hwyrd, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Privoz market in Odessa.JPG',
-          selite: 'Privozin sisäänkäynti: torin nimi ПРИВОЗ suurin kirjaimin '
-            + 'katoksen päällä ja sen alla sinivalkoisia myyntitelttoja '
-            + 'rivissä niin kauas kuin näkee.',
+          selite: 'Tulipalon jälkeen tori rakennettiin uudelleen 1900-luvun '
+            + 'alussa, ja vuonna 1904 valmistunutta Hedelmäkäytävää pidetään '
+            + 'yhä torin ainoana varsinaisena arkkitehtuurinähtävyytenä.',
           lahde: 'Garik 11, Wikimedia Commons (Public domain)',
         },
       ],
@@ -8111,14 +8184,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Polar Museum (52602951465).jpg',
-          selite: 'Punainen puinen Polarmuseet-rakennus kirkkaan sinisen '
-            + 'taivaan alla, etualalla vanhan veneen keula.',
+          selite: 'Museo toimii vuonna 1837 rakennetussa laiturimakasiinissa, '
+            + 'jonne aikoinaan varastoitiin turkiksia ja muita tavaroita.',
           lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Polar Museum.jpg',
-          selite: 'Lumipeitteinen Polarmuseet-rakennus aurinkoisena '
-            + 'talvipäivänä, katolla ja seinustalla paksu lumikerros.',
+          selite: 'Museo kertoo, miten Tromssasta tuli 1800-luvun puolivälissä '
+            + 'pohjoisen jäämeren pyynnin pääkaupunki – jo vuoden 1850 '
+            + 'tienoilla se ohitti tärkeydessä aiemman keskuksen '
+            + 'Hammerfestin.',
           lahde: 'Illustratedjc, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -8147,14 +8222,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tromsøsund bridge.jpg',
-          selite: 'Tromssan silta kaartuu salmen yli kultaisessa iltavalossa, '
-            + 'sillan pilarit heijastuvat tyyneen veteen.',
+          selite: 'Silta on 1036 metriä pitkä ja koostuu 58 peräkkäisestä '
+            + 'siltakaaresta; pisin jänneväli on 80 metriä, ja laivat '
+            + 'mahtuvat kulkemaan sen alta 38 metrin korkeudessa.',
           lahde: 'Lars Tiede, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Tromso - 02a.jpg',
-          selite: 'Tromssan silta kirkkaan sinisen taivaan alla kesäpäivänä, '
-            + 'vuoret ja laivoja taustalla.',
+          selite: 'Silta avattiin liikenteelle 3. heinäkuuta 1960, ja '
+            + 'valmistuessaan se oli Pohjois-Euroopan pisin silta sekä Norjan '
+            + 'ensimmäinen ulokerakenteinen silta.',
           lahde: 'Jojo, Wikimedia Commons (Public domain)',
         },
       ],
@@ -8183,24 +8260,25 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'TromsoDomkirkeFraRWithsPlass.JPG',
-          selite: 'Tromssan puinen tuomiokirkko vinosti sivulta kuvattuna '
-            + 'aurinkoisena päivänä, ohikulkijoita kirkon edustalla.',
+          selite: 'Kirkko valmistui vuonna 1861 arkkitehti Christian Heinrich '
+            + 'Groschin piirustusten mukaan, ja se on Norjan ainoa puusta '
+            + 'rakennettu luterilainen tuomiokirkko.',
           lahde: 'Osopolar, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           // Commonsin oma tiedostonimi on pitkä; se on pakko pitää yhdellä
           // rivillä, jotta peilaustyökalu poimii sen kokonaan.
           tiedosto: 'Tromsø Cathedral (domkirke) Norway interior. Gallery, Claus Jensen organ (orgel) 1863, chandelier (lysekrone), timber roof truss (takstoler) etc Wooden Gothic Revival style church 1861 2019-04-04 DSC02236.jpg',
-          selite: 'Kirkon sisus parven kohdalta: urkujen valkokultainen '
-            + 'julkisivu suippokaarineen, puiset kattoristikot ja '
-            + 'kruunukynttilä.',
+          selite: 'Kirkkoon mahtuu yli 600 kirkkovierasta; kellotorni valmistui '
+            + 'vuotta päärakennusta myöhemmin 1862, ja kirkkoa koristeltiin '
+            + 'lisää vielä 1880-luvulla.',
           lahde: 'Wolfmann, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Tromsø - no-nb digifoto 20160303 00124 bldsa L KK0091 (cropped).jpg',
-          selite: 'Vanha mustavalkoinen valokuva 1800-luvun lopulta: Tromssan '
-            + 'kaupunki rannasta kuvattuna, tuomiokirkon torni erottuu '
-            + 'keskellä kattojen joukosta.',
+          selite: 'Kun isoisä vieraili Tromssassa vuonna 1873, kirkko oli vasta '
+            + 'reilut kymmenen vuotta vanha. Sitä pidetään todennäköisesti '
+            + 'maailman pohjoisimpana protestanttisena tuomiokirkkona.',
           lahde: 'Knud Knudsen, Wikimedia Commons (Public domain)',
         },
       ],
@@ -8229,21 +8307,22 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'NOR-2016-Tromsø-Arctic Cathedral (Ishavskatedralen) 01 front.jpg',
-          selite: 'Jäämerenkatedraali edestä kuvattuna aurinkoisena päivänä, '
-            + 'kirkas sininen taivas ja vihreä nurmi ympärillä.',
+          selite: 'Ishavskatedralen rakennettiin vuosina 1964–1965, ja arkkitehti '
+            + 'Jan Inge Hovig antoi sille terävät harjat, jotka muistuttavat '
+            + 'läheisen Håja-saaren kaksoishuippuja.',
           lahde: 'Godot13, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Arctic Cathedral Midnight Sun.JPG',
-          selite: 'Jäämerenkatedraali sivulta kuvattuna '
-            + 'auringonlaskun/keskiyön auringon oranssissa valossa, rivat '
-            + 'kimmeltävät.',
+          selite: 'Rakennus on tehty valetusta, alumiinipäällysteisestä '
+            + 'betonista, mikä oli 1960-luvulla hyvin moderni ratkaisu.',
           lahde: 'Molde20, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Arctic Cathedral in Tromsoe.jpg',
-          selite: 'Jäämerenkatedraali iltavalossa tummaa vuorenrinnettä '
-            + 'vasten, pieniä norjalaistaloja edustalla.',
+          selite: 'Kirkossa on tilaa noin 600 hengelle, ja itäpäädyssä on vuonna '
+            + '1972 valmistunut Victor Sparren suurikokoinen lasimosaiikki '
+            + '”Kristuksen paluu”.',
           lahde: 'Henrik, Wikimedia Commons (CC BY 2.5)',
         },
       ],
@@ -8272,14 +8351,16 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Polaria museum, Tromsø, Norway.jpg',
-          selite: 'Polarian jääpaanmuotoiset vinot seinäelementit kultaisessa '
-            + 'iltavalossa, ikkunoista loistaa lämmin valo.',
+          selite: 'Maailman pohjoisin akvaario avattiin Tromssan rantaan '
+            + 'toukokuussa 1998, ja sen muoto on suunniteltu näyttämään meren '
+            + 'rantaan työntämiltä jäälautoilta.',
           lahde: 'Jeroen Komen, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Polaria winter.jpg',
-          selite: 'Polaria talvi-iltana lumisateessa, ikkunat hehkuvat '
-            + 'keltaisina lumihiutaleiden keskellä.',
+          selite: 'Akvaarion tähtiä ovat koulutetut partahylkeet, joita voi '
+            + 'katsella altaan reunalta tai läpinäkyvästä tunnelista altaan '
+            + 'pohjan alta.',
           lahde: 'Lee Dyer, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -8306,21 +8387,23 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Fjellheisen, Tromsø 2019.jpg',
-          selite: 'Fjellheisenin yläasema näköalatasanteineen, ihmisiä '
-            + 'kaiteella katsomassa Tromssan kaupunkia ja siltaa '
-            + 'alhaalla.',
+          selite: 'Köysirata nostaa matkustajat Storsteinen-vuorelle 420 metrin '
+            + 'korkeuteen merenpinnasta, ja matka kestää vain neljä '
+            + 'minuuttia.',
           lahde: 'Olivier Bruchez, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Fjellheisen view Tromsø 02.jpg',
-          selite: 'Fjellheisenin yläasema ja ravintolarakennus, taustalla '
-            + 'lumihuippuiset vuoret ja vuono.',
+          selite: 'Ylhäällä on Fjellstua-niminen ravintola, ja monet jatkavat '
+            + 'matkaa jalan vielä korkeammalle Tromsdalstindenin huipulle '
+            + '1238 metriin.',
           lahde: 'weisserstier, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Tromsø Cable cars Fjellheisen 06.jpg',
-          selite: 'Punainen köysiratakoppi matkalla ylös vihreää '
-            + 'vuorenrinnettä pitkin, pilvinen sininen taivas taustalla.',
+          selite: 'Laivayhtiö Brødrene Jakobsens Rederin rakennuttama köysirata '
+            + 'avattiin yleisölle 22. helmikuuta 1961 – lähes sata vuotta '
+            + 'isoisän matkan jälkeen.',
           lahde: 'Ad Meskens, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
