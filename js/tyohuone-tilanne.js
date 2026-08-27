@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'Kuvatekstiremontti era 7: 17 kaupunkia Adenista Varanasiin (mm. Bangkok, Peking, Delhi, Kioto, Siperian kaupungit) uuteen saantoon',
   'Kuvatekstiremontti era 6: Tabrizin, Teheranin, Isfahanin, Tampereen, Tokion, Soulin, Shanghain, Tripolin, Persepoliksen ja Sanan selitteet uuteen saantoon',
   'Kuvatekstiremontti era 5: Dohan, Nikosian, Kuwaitin, Masqatin, Bagdadin, Izmirin, Ankaran, Halabin, Damaskoksen, Luxorin ja Riadin selitteet uuteen saantoon',
   'Lippusivut era 12: loput 19 maata Irlannista Ita-Timoriin — kaikki 116 lautamaata katettu; mm. Fidzin kuningaskunnan lippu 1871-1874 (isoisan matkavuosi)',
