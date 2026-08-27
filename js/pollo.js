@@ -56,6 +56,11 @@ import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
 import { KAUPUNKIKARTAT } from './packs/maakartat.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { asetaKuva } from './media.js';
+// Napautusnielu: kuplan sulkeva klikkaus ei saa vuotaa kartalle
+// (ks. sidoKuplanNapautus). Apuri asuu ui-apureissa, koska sama vuoto
+// koskee muitakin kelluvia kuplia — ja se on niputuksessa jo ennen
+// pöllöä (tools/build-standalone.mjs MODULES).
+import { nielaiseSulkevaNapautus } from './ui-apurit.js';
 import { POLLON_LINKKIKATTO, etsiAnkkuri, haeKatkelmat, rakennaIndeksi } from './pollo-haku.js';
 import {
   nykyinenPoimintaAvain, paivitaPillerit, poimintaKehittaja, tallennaPoiminta,
@@ -1764,7 +1769,7 @@ class Pollo {
       if (!this.vihjeLisa) {
         this.vihjeLisa = polloElementti('div', 'pollo-vihje pollo-vihje-lisa');
         this.vihjeLisa.setAttribute('role', 'status');
-        this.vihjeLisa.addEventListener('pointerdown', () => this.piilotaVihje());
+        this.sidoKuplanNapautus(this.vihjeLisa);
         this.doc.body.appendChild(this.vihjeLisa);
       }
       return this.vihjeLisa;
@@ -1774,13 +1779,47 @@ class Pollo {
       // role="status": ruudunlukija kertoo vihjeen ilman että se
       // sieppaa kohdistuksen kesken vuoron.
       this.vihje.setAttribute('role', 'status');
-      // Napautus häivyttää kuplan (omistaja 18.8.2026: "Pöllön
-      // puhekuplia pitää häipyä jos sitä koskettaa") — kupla ei siis
-      // enää päästä kosketusta lävitseen, vaan ottaa sen sulkeutuakseen.
-      this.vihje.addEventListener('pointerdown', () => this.piilotaVihje());
+      this.sidoKuplanNapautus(this.vihje);
       this.doc.body.appendChild(this.vihje);
     }
     return this.vihje;
+  }
+
+  /**
+   * KUPLAN NAPAUTUSSOPIMUS: napautus sulkee kuplan EIKÄ TEE MITÄÄN MUUTA.
+   *
+   * Kupla häipyy kosketuksesta (omistaja 18.8.2026: *"Pöllön puhekuplia
+   * pitää häipyä jos sitä koskettaa"*) — se ei siis päästä kosketusta
+   * lävitseen, vaan ottaa sen sulkeutuakseen. Pelkkä sulkeminen ei
+   * kuitenkaan riitä: kupla katoaa jo pointerdownissa, ja selain etsii
+   * saman napautuksen click-kohteen vasta sormen noustessa. Kuplaa ei
+   * silloin enää ole, joten osuma valui kartalle ja avasi kohteen tai
+   * jopa valitsi matkakohteen kuplan takaa (omistajan iPad-havainto
+   * 27.8.2026). Nielu syö sen clickin kaappausvaiheessa
+   * (js/ui-apurit.js nielaiseSulkevaNapautus).
+   *
+   * Kuplan omat painikkeet ja linkit jäävät ennalleen: napautus niiden
+   * päällä on valinta eikä sulku, eikä sitä nielaista.
+   */
+  sidoKuplanNapautus(kupla) {
+    const omaHallinta = (tapahtuma) => Boolean(
+      tapahtuma.target?.closest?.('a, button, label, input, select, textarea'),
+    );
+    kupla.addEventListener('pointerdown', (tapahtuma) => {
+      if (omaHallinta(tapahtuma)) return;
+      nielaiseSulkevaNapautus(tapahtuma, { doc: this.doc });
+      this.piilotaVihje();
+    });
+    /*
+     * Toinen vartio samalle napautukselle: jos kupla on clickin
+     * hetkellä yhä osumapintana (hiiri, näppäimistö, tulevat kuplat
+     * jotka eivät katoa heti), napautus loppuu kuplaan tässä.
+     */
+    kupla.addEventListener('click', (tapahtuma) => {
+      if (omaHallinta(tapahtuma)) return;
+      tapahtuma.stopPropagation();
+      tapahtuma.preventDefault();
+    });
   }
 
   /**

@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'Pollon puhekuplan (ja muiden kelluvien pintojen) sulkeva napautus ei enaa vuoda alla olevaan karttaan — ei tahattomia kohdeavauksia tai matkoja',
   'Ihmepopup: olemassa olevilla nykytilan valokuva paakuvana ja Koe ihme -nappi kuvan alla; vanhat piirrosrekonstruktiot poistettu; Matkakirjan ihme -nauha diagonaalisena kulman yli kaariytyen',
   'Jalkamatka: 3,4x hitaampi hyppy, kamera saattaa 1,7x lahennyksella, metsa-aanimaisema; noppaheitto aina pelaajan valinta; tinaherra nakyy fokuslaudalla; maataulu piilottaa Matkusta-napin ja sumentaa alla olevan; karttakato-korjaus',
   'Kuvatekstiremontti era 7: 17 kaupunkia Adenista Varanasiin (mm. Bangkok, Peking, Delhi, Kioto, Siperian kaupungit) uuteen saantoon',

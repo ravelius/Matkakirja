@@ -458,6 +458,70 @@ export function html(tag, className, text) {
   return node;
 }
 
+/* Nielun ikkuna ja säde: ks. nielaiseSulkevaNapautus. */
+export const NAPAUTUKSEN_NIELU_MS = 500;
+export const NAPAUTUKSEN_NIELU_SADE = 32;
+
+/**
+ * SULKEVA NAPAUTUS EI SAA VUOTAA KELLUVAN KUPLAN ALLE (omistajan
+ * iPad-havainto 27.8.2026: *"kun klikkaa puhekuplaa sulkeakseen sen,
+ * sama klikkaus menee läpi kartalle ja avaa kohteen"*).
+ *
+ * Pöllön kuplat sulkeutuvat pointerdownista ja katoavat samassa
+ * silmänräpäyksessä. Selain kuitenkin etsii SAMAN napautuksen
+ * click-tapahtumalle kohteen vasta sormen noustessa — kuplaa ei
+ * silloin enää ole, ja osuma menee sen alla olevaan karttaan. iOS
+ * syntetisoi clickin touchendistä juuri näin, ja Chromiumin kosketus
+ * tekee saman: toistokokeessa pointerdown osui .pollo-vihjeeseen ja
+ * sitä seurannut click circle.target-hit-merkkiin, jolloin kuplan
+ * sulkeminen valitsi matkakohteen kuplan takaa.
+ *
+ * Nielu varaa napautuksen KOHDAN lyhyeksi hetkeksi: seuraava click
+ * saman pisteen ympäriltä syödään kaappausvaiheessa ennen kuin
+ * yksikään kartan kuuntelija näkee sen. Rajaus on sekä paikassa että
+ * ajassa, joten pelaajan seuraava, oikea napautus muualla ruudulla ei
+ * jää nielun alle. Säde on sormen liikkumavara napautuksen aikana:
+ * sitä pidempi veto ei enää tuota clickiä lainkaan.
+ *
+ * Piste eikä elementin suorakulmio: sama nielu palvelee myös koko
+ * ruudun kokoisia sulkukerroksia, joiden laatikko söisi mitä tahansa.
+ *
+ * @param {PointerEvent|MouseEvent} tapahtuma sulkeva pointerdown.
+ * @returns {() => void} nielun purku (kutsutaan itsestään ajastimesta).
+ */
+export function nielaiseSulkevaNapautus(tapahtuma, {
+  doc = typeof document === 'undefined' ? null : document,
+  kesto = NAPAUTUKSEN_NIELU_MS,
+  sade = NAPAUTUKSEN_NIELU_SADE,
+} = {}) {
+  const x = Number(tapahtuma?.clientX);
+  const y = Number(tapahtuma?.clientY);
+  if (typeof doc?.addEventListener !== 'function'
+    || !Number.isFinite(x) || !Number.isFinite(y)) return () => {};
+  let ajastin = null;
+  const lopeta = () => {
+    if (ajastin !== null) { clearTimeout(ajastin); ajastin = null; }
+    doc.removeEventListener('click', nielu, true);
+  };
+  function nielu(e) {
+    const kx = Number(e?.clientX);
+    const ky = Number(e?.clientY);
+    // Koordinaatiton click (esim. näppäimistön Enter) ei ole se
+    // napautus, jota odotetaan — se päästetään aina läpi.
+    if (!Number.isFinite(kx) || !Number.isFinite(ky)) return;
+    if (Math.abs(kx - x) > sade || Math.abs(ky - y) > sade) return;
+    // Kaappausvaihe + stopImmediatePropagation: napautus loppuu tähän
+    // eikä yksikään kuuntelija — kartan omat mukaan lukien — näe sitä.
+    e.stopPropagation();
+    e.stopImmediatePropagation?.();
+    e.preventDefault();
+    lopeta();
+  }
+  doc.addEventListener('click', nielu, true);
+  ajastin = setTimeout(lopeta, kesto);
+  return lopeta;
+}
+
 /*
  * Lähdemerkintä uudelleenkirjoitetulle tekstille (omistajan linjaus
  * 13.8.2026: "Wikipedia on käytetty lähteenä, mutta tekstit on sen
@@ -712,10 +776,11 @@ export const VIIVA_IKONIT = {
    * POLLO_IKONI), mutta ilman <svg>-kuorta — tässä sarjassa kuvakkeet
    * ovat pelkkiä polkuja, ja viivaIkoni() kääräisee ne.
    *
-   * Kaksoiskappale on tarkoituksellinen: js/pollo.js ei tuo tätä
-   * tiedostoa, ja niputettu yhden tiedoston versio (MODULES) latoisi
-   * kehäriippuvuuden. Piirros on lyhyt ja muuttumaton; jos se joskus
-   * muuttuu, molemmat on päivitettävä.
+   * Kaksoiskappale on tarkoituksellinen: pöllönappi piirtyy ennen kuin
+   * ikonikirjastoa tarvitaan, eikä js/pollo.js tuo tästä tiedostosta
+   * kuin napautusnielun (nielaiseSulkevaNapautus, 27.8.2026) — pelkän
+   * kuvakkeen takia tuontia ei kannata kasvattaa. Piirros on lyhyt ja
+   * muuttumaton; jos se joskus muuttuu, molemmat on päivitettävä.
    *
    * Käyttö: matkalaukun tietäjäpisterivi (omistajan tilaus 18.8.2026)
    * — pöllö on se, joka onnittelee tason noususta, joten sen kuvake

@@ -34,6 +34,9 @@ import {
   valitseSisainenSyote,
   vastauskuvanAihe,
 } from '../js/pollo.js';
+// Kuplan napautusnielu asuu ui-apureissa: sama vuoto koskee kaikkia
+// kelluvia kuplia (ks. tämän tiedoston loppu).
+import { nielaiseSulkevaNapautus } from '../js/ui-apurit.js';
 
 import {
   KYSYMYKSEN_KATTO,
@@ -1201,4 +1204,80 @@ test('pelkkä bluetooth-mikki ei kelpaa valinnaksi', () => {
   assert.equal(valitseSisainenSyote([
     { kind: 'audioinput', deviceId: 'bt1', label: 'AirPods Pro' },
   ]), null);
+});
+
+/* ---------------------------------------------------------------- */
+/* Puhekuplan sulkeva napautus ei vuoda kartalle                      */
+/* ---------------------------------------------------------------- */
+
+/*
+ * OMISTAJAN iPad-HAVAINTO 27.8.2026: *"kun klikkaa puhekuplaa
+ * sulkeakseen sen, sama klikkaus menee helposti läpi kartalle ja avaa
+ * kohteen popupin."*
+ *
+ * Syy on tapahtumien järjestyksessä: kupla sulkeutuu pointerdownista ja
+ * katoaa heti, mutta selain etsii SAMAN napautuksen click-kohteen vasta
+ * sormen noustessa — kuplaa ei enää ole, ja osuma menee kartalle.
+ * Chromiumin kosketuskokeessa napautus valitsi kuplan takaa
+ * matkakohteen (pointerdown .pollo-vihje → click circle.target-hit).
+ *
+ * Nielu syö juuri sen clickin: saman pisteen ympäriltä, kerran ja
+ * lyhyen hetken ajan. Kauempana osuva napautus ei kuulu nielulle —
+ * muuten pelaajan seuraava, oikea valinta jäisi väliin.
+ */
+function valeDoc() {
+  const kuulijat = [];
+  return {
+    kuulijat,
+    addEventListener(laji, kuulija, kaappaus) { kuulijat.push({ laji, kuulija, kaappaus }); },
+    removeEventListener(laji, kuulija) {
+      const i = kuulijat.findIndex((k) => k.laji === laji && k.kuulija === kuulija);
+      if (i >= 0) kuulijat.splice(i, 1);
+    },
+  };
+}
+
+function valeKlikki(x, y) {
+  const jaljet = [];
+  return {
+    clientX: x,
+    clientY: y,
+    jaljet,
+    stopPropagation() { jaljet.push('stop'); },
+    stopImmediatePropagation() { jaljet.push('heti'); },
+    preventDefault() { jaljet.push('esta'); },
+  };
+}
+
+test('kuplan sulkeva napautus syödään kaappausvaiheessa', () => {
+  const doc = valeDoc();
+  const purku = nielaiseSulkevaNapautus({ clientX: 240, clientY: 500 }, { doc, kesto: 50 });
+  assert.equal(doc.kuulijat.length, 1, 'nielua ei asennettu');
+  assert.equal(doc.kuulijat[0].laji, 'click');
+  assert.equal(doc.kuulijat[0].kaappaus, true, 'nielu ei ole kaappausvaiheessa');
+  // Sormi liikkuu napautuksen aikana muutaman pikselin: sama napautus.
+  const klikki = valeKlikki(246, 508);
+  doc.kuulijat[0].kuulija(klikki);
+  assert.deepEqual(klikki.jaljet, ['stop', 'heti', 'esta'], 'napautus pääsi kuplan ohi');
+  assert.equal(doc.kuulijat.length, 0, 'nielu jäi päälle ensimmäisen napautuksen jälkeen');
+  purku();
+});
+
+test('kauempana osuva napautus kulkee nielun läpi', () => {
+  const doc = valeDoc();
+  const purku = nielaiseSulkevaNapautus({ clientX: 240, clientY: 500 }, { doc, kesto: 50 });
+  const kaukana = valeKlikki(240, 700);
+  doc.kuulijat[0].kuulija(kaukana);
+  assert.deepEqual(kaukana.jaljet, [], 'nielu söi väärän napautuksen');
+  assert.equal(doc.kuulijat.length, 1, 'nielu purkautui liian aikaisin');
+  purku();
+  assert.equal(doc.kuulijat.length, 0, 'nielua ei saa purettua');
+});
+
+test('pöllön molemmat kuplat sitovat napautusnielun', () => {
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  assert.match(lahde, /this\.sidoKuplanNapautus\(this\.vihje\);/, 'vihjekupla ilman nielua');
+  assert.match(lahde, /this\.sidoKuplanNapautus\(this\.vihjeLisa\);/, 'toinen kupla ilman nielua');
+  assert.match(lahde, /nielaiseSulkevaNapautus\(tapahtuma, \{ doc: this\.doc \}\);/,
+    'sulkeva napautus ei kuluta clickiä');
 });

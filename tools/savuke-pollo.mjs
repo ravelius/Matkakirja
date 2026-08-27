@@ -3497,7 +3497,7 @@ await vihjeSivu.screenshot({ path: join(ULOS, 'pollo-vihjekupla-390.png') });
  * Aiemmin kuplalla oli `pointer-events: none`, jolloin kosketus meni
  * sen läpi kartalle — mutta silloin kuplaa ei saanut pois tieltä.
  * Nyt kupla itse on napautettava (css .pollo-vihje cursor: pointer,
- * js/pollo.js varmistaKupla pointerdown → piilotaVihje).
+ * js/pollo.js sidoKuplanNapautus pointerdown → piilotaVihje).
  *
  * Napautus ei nollaa vuoron vihjelippua, joten kupla ei palaa itsestään
  * — se viritetään tässä uudelleen, jotta seuraava mittaus (kartan
@@ -3523,6 +3523,68 @@ const kuplanNapautus = await vihjeSivu.evaluate(async () => {
 vaadi('napautus häivyttää kuplan tieltä',
   kuplanNapautus.osoitin !== 'none' && kuplanNapautus.haipyi === true
   && kuplanNapautus.uudestaan === true, JSON.stringify(kuplanNapautus));
+
+/*
+ * SULKEVA NAPAUTUS EI VUODA KUPLAN ALLE (omistajan iPad-havainto
+ * 27.8.2026: *"sama klikkaus menee helposti LÄPI kuplan alla olevaan
+ * karttaan ja avaa kohteen popupin"*).
+ *
+ * Kupla katoaa pointerdownissa, mutta selain etsii saman napautuksen
+ * click-kohteen vasta sormen noustessa — ennen korjausta osuma meni
+ * kartalle ja VALITSI matkakohteen kuplan takaa (vaihe move → roll).
+ * Tässä mitataan oikealla kosketuksella, ei dispatchEventilla: vain
+ * aito napautus tuottaa sen synteettisen clickin, joka vuoti.
+ *
+ * Kupla siirretään esteettömän kohdemerkin päälle, koska kartan
+ * kohteet eivät kaikissa vuoroissa satu kuplan alle — vuoto ei silti
+ * riipu paikasta, vaan tapahtumien järjestyksestä.
+ */
+const kohdistus = await vihjeSivu.evaluate(() => {
+  const vihje = document.querySelector('.pollo-vihje');
+  if (!vihje || vihje.hidden) return { virhe: 'kuplaa ei ole' };
+  const merkit = [...document.querySelectorAll(
+    '.targets .target-hit, .targets .target-ring, .targets .target-piste',
+  )];
+  vihje.hidden = true;
+  const kohde = merkit.map((m) => {
+    const laatikko = m.getBoundingClientRect();
+    const x = Math.round(laatikko.left + laatikko.width / 2);
+    const y = Math.round(laatikko.top + laatikko.height / 2);
+    return { x, y, kelpaa: Boolean(document.elementFromPoint(x, y)?.closest?.('.targets')) };
+  }).find((m) => m.kelpaa);
+  vihje.hidden = false;
+  if (!kohde) return { virhe: 'esteetöntä kohdemerkkiä ei löytynyt' };
+  const laatikko = vihje.getBoundingClientRect();
+  vihje.style.bottom = 'auto';
+  vihje.style.top = `${Math.round(kohde.y - laatikko.height / 2)}px`;
+  vihje.style.left = `${Math.round(kohde.x - laatikko.width / 2)}px`;
+  // Mittari: pääseekö napautus kuplan ohi dokumenttiin asti.
+  window.__kuplanOhi = 0;
+  document.addEventListener('click', () => { window.__kuplanOhi += 1; });
+  return { x: kohde.x, y: kohde.y, vaihe: window.matkakirja.game.phase };
+});
+if (kohdistus.virhe) {
+  vaadi('kuplan alle löytyy kohdemerkki', false, kohdistus.virhe);
+} else {
+  await vihjeSivu.touchscreen.tap(kohdistus.x, kohdistus.y);
+  await vihjeSivu.waitForTimeout(400);
+  const vuoto = await vihjeSivu.evaluate(async () => {
+    const ui = window.matkakirja.ui;
+    const tulos = {
+      ohi: window.__kuplanOhi,
+      haipyi: Boolean(document.querySelector('.pollo-vihje')?.hidden),
+      vaihe: window.matkakirja.game.phase,
+    };
+    // Sama vuoro alusta seuraavaa mittausta varten.
+    ui.valintavihjeVaihe = false;
+    ui.paivitaValintavihje();
+    await new Promise((r) => setTimeout(r, 700));
+    return tulos;
+  });
+  vaadi('kuplan napautus ei vuoda kartalle',
+    vuoto.ohi === 0 && vuoto.haipyi === true && vuoto.vaihe === kohdistus.vaihe,
+    JSON.stringify({ ...vuoto, alku: kohdistus.vaihe }));
+}
 
 const kuplanKato = await vihjeSivu.evaluate(async () => {
   const ui = window.matkakirja.ui;
