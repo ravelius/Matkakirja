@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'Kuvatekstiremontti VALMIS: paatoserä Chennai ja Mumbai (20 selitetta); koko 1133 selitteen tiedosto noudattaa nyt saantoa kuvateksti kertoo kohteesta',
   'Karttasymbolit: luonto nyt vuori+puu+aalto varein, tekniikka hoyryveturi (ei ratasta), kaupunki yksi porttitorni viirilla; Psiloritis-vuori Kreetalla klikattavissa',
   'Kuvatekstiremontti era 8: 15 Aasian kaupunkia Hanoista Kabuliin uuteen saantoon (130 selitetta)',
   'Pollon puhekuplan (ja muiden kelluvien pintojen) sulkeva napautus ei enaa vuoda alla olevaan karttaan — ei tahattomia kohdeavauksia tai matkoja',
