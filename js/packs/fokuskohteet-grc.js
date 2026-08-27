@@ -1766,6 +1766,106 @@ export const FOKUSKOHTEET_GRC = [
         + 'nykymaailmassa',
     },
   },
+  /*
+   * ── MATKAKIRJAN IHMEIDEN VÄLIMEREN ERÄ (27.8.2026) ───────────────
+   *
+   * OLYMPIEION eli Olympoksen Zeuksen temppeli. Sama ratkaisu kuin
+   * Akropoliilla ja antiikin agoralla yllä: ATEENA ON PELILAATTA,
+   * OLYMPIEION EI OLE, joten kohde on yksi nimetty paikka kaupungin
+   * sisällä eikä toinen Ateena.
+   *
+   * ESITYSTAPA ON "YHÄ OLEMASSA" (`kadonnut: false`). Viisitoista
+   * pylvästä seisoo pystyssä ja kuudestoista makaa maassa siinä,
+   * mihin se kaatui vuonna 1852 — raunioalue on Ateenan yhtenäistä
+   * muinaisjäännösaluetta ja avoinna kävijöille. Kadonnut on
+   * TEMPPELI: cella, katto ja Zeuksen patsas. Kartalla säilyy siis
+   * kohteen oma merkki, pääkuvana on nykytilan valokuva ja ihmekuva
+   * aukeaa sen alta "Koe ihme" -napista.
+   *
+   * KUVAPARI ON SAMASTA SUUNNASTA. Molemmat katsovat temppeliä
+   * lounaasta niin, että Akropolis jää vasemmalle taakse ja nykyinen
+   * Ateena sen juurelle. Sama näkymä kahdessa ajassa on juuri se,
+   * mitä Raamattu ihmeeltä pyytää.
+   *
+   * 23,733078 E / 37,963817 N — en-Wikipedia "Temple of Olympian
+   * Zeus, Athens" (artikkelin coord, 37°58′9,74″N 23°43′59,08″E).
+   * Piste on temppelialue Akropoliin kaakkoispuolella ja osuu
+   * GRC-lehden rajaukseen (x 6399–6867, y 1726–2018). Ateenan oma
+   * laatta on 6624,7 / 1882; temppeli on 0,6 kilometrin päässä
+   * Akropoliista, joten laudalla merkki asettuu käytännössä laatan
+   * viereen ja niputuspassi hoitaa erottelun esityksessä.
+   */
+  {
+    id: 'olympieion',
+    nimi: 'Olympieion',
+    tyyppi: 'muu',
+    symboli: 'historia',
+    kysymykset: [
+      'Mihin temppelin marmori lopulta päätyi?',
+      'Miksi Hadrianus rakennutti Ateenaan niin paljon?',
+    ],
+    korostukset: ['korinttilainen|korinttilaiseksi', 'cella|cellassa'],
+    nappi: 'Temppeli, jonka rakentamiseen meni 638 vuotta',
+    laudat: {
+      maailmankartta: { x: 6624.4, y: 1882.2 },
+      europe: { x: 666.9, y: 895.2 },
+    },
+    teksti: 'Olympieion oli antiikin Kreikan suurin temppeli. '
+      + 'Peisistratoksen pojat Hippias ja Hipparkhos aloittivat sen '
+      + 'noin 520 eaa., mutta työ keskeytyi tyrannivallan kaaduttua '
+      + 'vuonna 510 eaa. ja perustus jäi paikalleen 336 vuodeksi; '
+      + 'Aristoteles käytti temppeliä esimerkkinä siitä, miten tyrannit '
+      + 'sitovat kansan suurtöihin. Seleukidikuningas Antiokhos neljäs '
+      + 'jatkoi hanketta vuonna 174 eaa., vaihtoi kiven '
+      + 'pentelinmarmoriksi ja doorilaisen tyylin korinttilaiseksi — '
+      + 'ensimmäisen kerran suuren temppelin ulkopuolella. Valmiissa '
+      + 'rakennuksessa oli 104 pylvästä, kukin 17 metriä korkea, ja se '
+      + 'oli 110 metriä pitkä ja 44 metriä leveä. Keisari Hadrianus '
+      + 'vihki temppelin vuonna 132 eli 638 vuotta aloituksesta, ja '
+      + 'cellassa seisoi norsunluusta ja kullasta tehty Zeuksen patsas. '
+      + 'Herulit ryöstivät temppelin vuonna 267, eikä sitä enää '
+      + 'korjattu.',
+    lahde: 'en-Wikipedia "Temple of Olympian Zeus, Athens", johdanto '
+      + 'sekä osiot "Classical and Hellenistic periods", "Roman era", '
+      + '"Medieval and modern periods" ja "Description" (tarkistettu '
+      + '27.8.2026).',
+    /*
+     * NYKYTILAN VALOKUVA. Tarkistettu Commonsin imageinfo-rajapinnalla
+     * 27.8.2026 (1800×1200, CC BY 2.0, Jean-Pierre Dalbéra, kuvattu
+     * 26.10.2016) ja katsottu silmin: temppelin kaakkoiskulman
+     * kolmetoista pylvästä, vasemmalla lounaiskulman kaksi ja niiden
+     * takana Akropolis — ei ihmisiä. Kuva on erän pienin (1800 px),
+     * mutta lehden palsta on enintään 1280 px leveä, joten se riittää
+     * sekä sivulle että suurennokseen.
+     */
+    kuva: {
+      tiedosto: "L'Olympieion (Athènes) (30776483926).jpg",
+      selite: 'Olympieionin pystyssä olevat pylväät ja niiden takana '
+        + 'Akropolis.',
+      lahde: 'Jean-Pierre Dalbéra, Wikimedia Commons (CC BY 2.0)',
+    },
+    /*
+     * MATKAKIRJAN IHME (yhä olemassa) — säännöt tämän tiedoston
+     * lohkossa "MATKAKIRJAN IHME". `kadonnut: false`, joten "Koe ihme"
+     * -nappi tulee yllä olevan valokuvan alle.
+     */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-olympieion.webp',
+      kadonnut: false,
+      selite: 'Zeus Olympioksen temppeli oli antiikin Kreikan suurin: '
+        + '104 korinttilaista pylvästä, kukin seitsemäntoista metriä '
+        + 'korkea, marmoripihan ympäröimänä Akropoliin kaakkoispuolella. '
+        + 'Sisällä seisoi kullasta ja norsunluusta tehty Zeuksen patsas, '
+        + 'jota Pausanias piti aikansa suurimpiin kuuluvana. Herulit '
+        + 'ryöstivät temppelin vuonna 267, maanjäristys kaatoi sen '
+        + '400-luvulla ja loput louhittiin keskiajan Ateenan '
+        + 'rakennuskiveksi. Pystyssä on nyt viisitoista pylvästä, ja '
+        + 'kuudestoista makaa siinä, mihin se kaatui myrskyssä vuonna '
+        + '1852.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
+    },
+  },
 ];
 
 const TUNNUKSITTAIN = new Map(FOKUSKOHTEET_GRC.map((k) => [k.id, k]));
