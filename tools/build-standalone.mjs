@@ -103,6 +103,8 @@ const MODULES = [
   // (27.8.2026): pelkät kohteet, ei fokusvirtaa.
   'js/packs/fokuskohteet-lby.js',
   'js/packs/fokuskohteet-tun.js',
+  // Unkarin kuratoitu lehti (27.8.2026): kohteet, ei vielä fokusvirtaa.
+  'js/packs/fokuskohteet-hun.js',
   'js/packs/fokusvirrat.js',
   'js/packs/uutislahteet.js',
   // uutiset vasta lähteidensä jälkeen (tuo uutislahteet.js:n).

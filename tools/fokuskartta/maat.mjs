@@ -210,6 +210,165 @@ export const FOKUSMAAT = {
   },
 
   /* ================================================================
+   * UNKARI — TOINEN KURATOITU LEHTI, KREIKAN KAAVALLA
+   *
+   * Unkari oli tähän asti yleisen reitin kuva (HUN.webp), ja se on
+   * hyvä kartta mutta ei lehti: ikkuna on maan oma laatikko, nimiä ei
+   * ole yhtään ja kaupunkipisteet poimitaan aineistosta. Budapest on
+   * pelilauta-kaupunki, jonka fokusnäkymässä lehti täyttää ruudun,
+   * joten se ansaitsee saman käsityön kuin Ateena.
+   *
+   * KAIKKI TÄMÄN LEHDEN NIMET OVAT NAPAUTETTAVIA. Se on koko rajauksen
+   * lähtökohta eikä jälkikäteen tehty siivous: kuvaan poltetaan vain
+   * ne viisi kaupunginnimeä, joilla on oma fokuskohde samassa
+   * pisteessä (js/packs/fokuskohteet-hun.js + js/packs/fokus-grc.js
+   * FOKUS_LISANIMET.HUN), ja vuorten, jokien ja merten nimeäminen on
+   * luovutettu pelille (`poltetutNimet` alla) kuten Kreikassa v1210:n
+   * jälkeen. Naapurimaiden nimet jäävät — ne eivät ole fokuskohteita
+   * vaan lehden reunaorientaatio, täsmälleen kuten omistajan
+   * hyväksymällä Kreikan lehdellä.
+   * ================================================================ */
+  HUN: {
+    /*
+     * Lehden ikkuna.
+     *
+     * KUVASUHDE ON KREIKAN 1,6, koska Unkari mahtuu siihen ilman
+     * väkivaltaa: maa on 16,11..22,90 eli 6,79 astetta leveä ja
+     * 45,74..48,59 eli 2,85 astetta korkea. Lat 45,2..49,1 antaa
+     * Millerin lieriössä 1,6:lla pituusasteet 15,55..23,45, eli
+     * marginaali on joka reunalla noin puoli astetta — sama
+     * tasapaino kuin Kreikan lehdellä, ja 1,6 on ainoa kuvasuhde,
+     * jolla 15 %:n vuoto kattaa kaikki vaakaruudut (1,23–2,08).
+     *
+     * KESKIMERIDIAANI 19,5 on MAAN keskikohta (16,11+22,90)/2, ei
+     * Budapestin 19,04: pääkaupunki on Unkarissa selvästi lännessä, ja
+     * jos ikkuna keskitettäisiin siihen, itäraja kulkisi Nyírségin
+     * poikki. Budapest jää silti hyvin lähelle lehden keskustaa.
+     */
+    ikkuna: { lonKeski: 19.5, lat0: 45.2, lat1: 49.1, kuvasuhde: 1.6 },
+    vuoto: 0.15,
+
+    /* Jatkuva pinta kuten kaikilla muillakin lehdillä. */
+    jatkuva: true,
+
+    /*
+     * Vedet jatkuvat rajan yli (toisin kuin Kreikan pilottikuvassa).
+     * Unkarissa se on välttämättömyys eikä tyyliseikka: Tonava tulee
+     * Wienin suunnasta ja jatkaa Belgradiin, ja rajaan katkaistu uoma
+     * näyttäisi siltä kuin joki alkaisi ja loppuisi Unkarissa.
+     */
+    jatkuvatVedet: true,
+
+    /* Kartuutsin teksti — jatkuvassa pinnassa vain lehtiasun varalle. */
+    otsikko: 'UNKARI',
+    alaotsikko: 'isoisän matkakirjan mukaan · 1873',
+
+    /*
+     * Maan oma nimi unkariksi, haalea vesileima. Paikka on
+     * Kiskunságissa Tonavan ja Tiszan välissä — lehden tyhjin kohta.
+     * Koko on Kreikan 31:tä pienempi ja harvennus 11:tä tiiviimpi,
+     * koska MAGYARORSZÁG on kaksitoista merkkiä ja ΕΛΛΑΣ viisi.
+     */
+    vesileima: {
+      teksti: 'MAGYARORSZÁG', lon: 19.75, lat: 46.72, koko: 25, vali: 7,
+    },
+
+    /*
+     * Naapurit: seitsemän maata, joista jokainen näkyy lehdellä.
+     * Nimen paikka on aseteltu silmällä naapurin omalle puolelle
+     * rajaa niin, ettei se jää kuvan reunan alle.
+     */
+    naapurit: [
+      { iso: 'AUT', nimi: 'Itävalta', lon: 16.15, lat: 47.75 },
+      { iso: 'SVK', nimi: 'Slovakia', lon: 19.35, lat: 48.75 },
+      { iso: 'UKR', nimi: 'Ukraina', lon: 22.85, lat: 48.55 },
+      { iso: 'ROU', nimi: 'Romania', lon: 22.6, lat: 46.35 },
+      { iso: 'SRB', nimi: 'Serbia', lon: 20.15, lat: 45.6 },
+      { iso: 'HRV', nimi: 'Kroatia', lon: 17.1, lat: 45.5 },
+      { iso: 'SVN', nimi: 'Slovenia', lon: 15.95, lat: 46.15 },
+    ],
+
+    /*
+     * NIMEÄMINEN LUOVUTETAAN PELILLE KAIKISSA KOLMESSA LAJISSA.
+     *
+     * Sama linjaus kuin Kreikalla (omistaja 27.8.2026): kuvaan
+     * poltettu nimi on pikseleitä, eikä sen päällä ole mitään
+     * napautettavaa, kun taas fokuskohteen nimiö liikkuu merkin mukana
+     * ja avaa kortin. Unkarissa kytkin on päällä alusta asti, joten
+     * kaksoisnimiä ei synny kertaakaan:
+     *
+     *   vuoret  Kuvaan jää hachure-kolmio ja korkeuslukema — kartan
+     *           omaa merkintää, ei nimeämistä. Nimen antaa kohde
+     *           (`kekes`, `istallos-ko`, `irottko`) täsmälleen samassa
+     *           pisteessä kuin kolmio.
+     *   joet    Tonavalla, Tiszalla ja Drávalla on omat kohteensa.
+     *           Aineiston nimet ovat saksalais-serbialaisessa asussa
+     *           (Donau, Tisa, Drau), ja Tiszan unkarilainen jakso on
+     *           aineistossa kokonaan nimetön — poltettu nimi olisi
+     *           osunut vain Tonavaan ja Drávaan, mikä olisi ollut
+     *           sattumanvarainen kolmesta kahden nimeäminen.
+     *   meret   Unkari on sisämaavaltio: `meret` on tyhjä, ja kytkin
+     *           on tässä vain siksi, ettei lajia unohdeta, jos joku
+     *           joskus lisää Adrianmeren nurkkaan.
+     */
+    poltetutNimet: { meret: false, vuoret: false, joet: false },
+
+    /* Sisämaavaltio — ei yhtään ulappaa nimettäväksi. */
+    meret: [],
+
+    /*
+     * Vuoret: kolme, ja ne ovat Unkarin kolme eri ylänköä eivätkä
+     * saman harjun huippuja — Mátra, Bükk ja Kőszegi-hegység. Kékes
+     * on maan korkein piste ja saa siksi `iso`-merkinnän, aivan kuten
+     * Ólympos Kreikan lehdellä.
+     */
+    vuoret: [
+      { nimi: 'Kékes', lon: 20.01, lat: 47.8714, m: 1014, iso: true },
+      { nimi: 'Istállós-kő', lon: 20.4439, lat: 48.0831, m: 959 },
+      { nimi: 'Írott-kő', lon: 16.4261, lat: 47.3522, m: 882 },
+    ],
+
+    /*
+     * Kaupungit — EI PELILAATTOJA. Budapest on pelin oma laatta, ja
+     * kuvaan poltettu toisinto olisi tupla, joka ei liikkuisi laatan
+     * mukana (ks. tiedoston alun sääntö).
+     *
+     * Nämä viisi ovat samat viisi, joilla on oma fokuskohde
+     * (js/packs/fokuskohteet-hun.js): Debrecen, Szeged, Pécs, Eger ja
+     * Győr. Kirjoitusasu, `dx`/`dy` ja ankkuri on peilattava
+     * sellaisenaan FOKUS_LISANIMET.HUN-tauluun, koska peli laskee
+     * poltetun nimen napautuslaatikon juuri näistä luvuista
+     * (js/fokuskohteet.js kaupunginNimiLaatikko).
+     *
+     * Siirrot on valittu niin, ettei nimi mene päällekkäin naapurin
+     * eikä vuorikolmion kanssa: Eger on Mátran ja Bükin välissä ja
+     * saa nimensä ylös, Szeged Tiszan haarassa ja saa sen oikealle.
+     */
+    kaupungit: [
+      { nimi: 'Debrecen', lon: 21.6273, lat: 47.5316, dx: 10, dy: -8 },
+      { nimi: 'Szeged', lon: 20.1414, lat: 46.253, dx: 10, dy: 10 },
+      { nimi: 'Pécs', lon: 18.2323, lat: 46.0727, dx: -10, dy: 8, ank: 'right' },
+      { nimi: 'Eger', lon: 20.3772, lat: 47.9025, dx: 9, dy: -10 },
+      { nimi: 'Győr', lon: 17.6504, lat: 47.6875, dx: -10, dy: -8, ank: 'right' },
+    ],
+
+    /*
+     * Aineiston jokien nimet suomalaisessa asussa. TÄTÄ TAULUA EI
+     * KÄYTETÄ tällä lehdellä (`poltetutNimet.joet` on false), vaan se
+     * on sama silta kuin Kreikassa: ainoa paikka, joka kertoo, missä
+     * asussa nämä uomat Unkarin lehdellä nimettäisiin, jos poltto
+     * joskus palautetaan. Aineistossa Tonava on kahtena piirteenä
+     * (Danube alavirtaan, Donau ylävirtaan Wienistä).
+     */
+    jokinimet: {
+      Danube: 'Tonava',
+      Donau: 'Tonava',
+      Tisa: 'Tisza',
+      Drau: 'Dráva',
+    },
+  },
+
+  /* ================================================================
    * KAKSI JÄTTILÄISTÄ, JOILLE YLEINEN REITTI EI KELPAA
    *
    * Venäjä ja Kanada ovat ainoat maat, joiden lehti EI SYNNY yleisellä

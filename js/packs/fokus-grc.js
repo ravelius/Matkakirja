@@ -210,10 +210,21 @@ export const FOKUS_POHJAT = {
     rajaus: { x: 6247.94, y: 1506.28, w: 267.76, h: 230.38 },
     tiedosto: 'HRV.webp',
   },
+  /*
+   * UNKARI ON KREIKAN JÄLKEEN TOINEN KURATOITU LEHTI (27.8.2026).
+   * Luvut ovat yleisen reitin sijaan tools/fokuskartta/maat.mjs:n
+   * FOKUSMAAT.HUN-ikkunasta (lonKeski 19,5 · lat 45,2..49,1 ·
+   * kuvasuhde 1,6), joten ne EIVÄT ole samat kuin ennen: ikkuna ei
+   * enää ole maan oma laatikko marginaaleineen vaan Kreikan
+   * kuvasuhteeseen sommiteltu lehti. Kuva on ajettava uudelleen samalla
+   * kertaa kuin nämä luvut vaihdetaan — vanha HUN.webp osuisi väärään
+   * laatikkoon, mikä on pahin mahdollinen virhe (ks. tee-fokuskartta.mjs
+   * "KRIITTINEN KOHTA: TASAUS").
+   */
   HUN: {
     lauta: 'maailmankartta',
-    bbox: { x: 6282.97, y: 1386.05, w: 399.78, h: 250.02 },
-    rajaus: { x: 6329.1, y: 1426.16, w: 307.52, h: 169.8 },
+    bbox: { x: 6312.37, y: 1404.48, w: 341.93, h: 213.71 },
+    rajaus: { x: 6351.82, y: 1429.14, w: 263.03, h: 164.39 },
     tiedosto: 'HUN.webp',
   },
   IRL: {
@@ -1661,6 +1672,47 @@ export const FOKUS_LISANIMET = {
       { nimi: 'Chinhoyi', x: 6839.3, y: 3795.9, dx: 9, dy: -1, koko: 12.5 },
       // 30.05 E / -20.3296 N
       { nimi: 'Zvishavane', x: 6835, y: 3898.4, dx: 9, dy: -1, koko: 12.5 },
+    ],
+  },
+
+  /*
+   * UNKARI — VAIN KAUPUNGIT, JA SE ON KOKO TAULUN AJATUS.
+   *
+   * Tässä taulussa on kahdenlaista tavaraa. `vuoret` ja `meret` ovat
+   * jäänne SVG-nimeämisen ajalta (FOKUS_SVG_NIMET on false, joten
+   * js/fokuskartta.js piirraLisanimet ei piirrä niistä mitään), mutta
+   * `kaupungit` on elävää dataa: se on ainoa paikka, joka kertoo
+   * pelille, MITKÄ NIMET LEHTEEN ON POLTETTU. Peli tarvitsee sen
+   * kahteen asiaan (js/fokuskohteet.js) — nimiön vaientamiseen
+   * kohteelta, jonka nimi on jo kuvassa, ja poltetun nimen
+   * napautuslaatikon laskemiseen.
+   *
+   * Unkarin lehdellä poltettuja nimiä on täsmälleen viisi, ja rivit
+   * ovat tools/fokuskartta/maat.mjs:n HUN.kaupungit -listan peilikuva
+   * laudan koordinaateissa: sama kirjoitusasu, sama `dx`/`dy`
+   * (prototyyppipikseleitä) ja sama puoli. Jos toista listaa muuttaa,
+   * on muutettava molempia — muuten napautuslaatikko jää nimen viereen
+   * tyhjälle paperille.
+   *
+   * VUORIA JA MERIÄ EI TÄSSÄ OLE, koska niitä ei ole lehdessäkään:
+   * `poltetutNimet` on Unkarilla false kaikissa kolmessa lajissa, eli
+   * vuorten ja jokien nimet tulevat kohteiden nimiöistä ja meriä ei
+   * sisämaavaltiossa ole. Tyhjä kohta on siis oikea tieto, ei
+   * puuttuva rivi.
+   */
+  HUN: {
+    lauta: 'maailmankartta',
+    kaupungit: [
+      // 21,6273 E / 47,5316 N
+      { nimi: 'Debrecen', x: 6554.2, y: 1496.1, dx: 10, dy: -8 },
+      // 20,1414 E / 46,2530 N
+      { nimi: 'Szeged', x: 6504.7, y: 1549.8, dx: 10, dy: 10 },
+      // 18,2323 E / 46,0727 N
+      { nimi: 'Pécs', x: 6441.1, y: 1557.3, dx: -10, dy: 8, ank: 'end' },
+      // 20,3772 E / 47,9025 N
+      { nimi: 'Eger', x: 6512.6, y: 1480.4, dx: 9, dy: -10 },
+      // 17,6504 E / 47,6875 N
+      { nimi: 'Győr', x: 6421.7, y: 1489.5, dx: -10, dy: -8, ank: 'end' },
     ],
   },
 };
