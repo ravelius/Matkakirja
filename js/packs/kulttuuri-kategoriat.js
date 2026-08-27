@@ -16458,27 +16458,42 @@ export const KULTTUURI_KATEGORIAT = {
             + '(CC BY-SA 2.0)',
         },
       ],
+      /*
+       * AVAUSKUVAT (27.8.2026): omistajan generoidut herokuvat
+       * (Göremen ulkoilmamuseo, Ortahisarin kalliolinnake, Selimen
+       * luostari) korvasivat kolme Commonsin laaksopanoraamaa.
+       * Perustelu: vanhat kolme olivat kaikki sama aihe eri kulmasta
+       * (Göremen laakso auringonlaskussa), ja niiden selitteet
+       * toistivat geologiajaksoa. Uusi kolmikko esittelee kolme eri
+       * kohdetta, jotka kaikki ovat kalliorakentamista — lehden oma
+       * pääaihe. Kaikki kolme katsottu silmin: Göremessä kirkkojen
+       * julkisivut ja portaat, Ortahisarissa huonerivit paaden
+       * kyljessä ja kylä ympärillä, Selimessä Ihlaran laakson suu
+       * vasemmalla. Uçhisarin linnake pysyy kansikuvissa, joten
+       * Ortahisar ei toista sitä vaan täydentää.
+       */
       avauskuvat: [
         {
-          tiedosto: 'Cappadocia Aktepe Panorama.JPG',
-          selite: 'Kappadokian tuffi ja ignimbriitti kerrostuivat '
-            + 'tulivuorten purkauksista noin yhdeksän ja kolmen miljoonan '
-            + 'vuoden välillä.',
-          lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 3.0)',
+          ampari: 'herokoe/hero-goreme-aamu.jpg',
+          selite: 'Göremen ulkoilmamuseo kokoaa yhteen laaksoon kallioon '
+            + 'hakatut luostarikirkot, kappelit ja ruokasalit; freskot ovat '
+            + 'pääosin 900–1200-luvuilta, ja kohde on ollut Unescon '
+            + 'maailmanperintöluettelossa vuodesta 1985.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Sunset at GoremeValley with View of Uchisar.jpg',
-          selite: 'Matkailijan Kappadokia on Göremen, Uçhisarin, Avanosin '
-            + 'ja Ürgüpin väliin jäävä muutaman kymmenen kilometrin '
-            + 'kolmio.',
-          lahde: 'Emrahuygun, Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-ortahisar-aamu.jpg',
+          selite: 'Ortahisarin kylän keskellä kohoaa noin 86 metriä korkea '
+            + 'tuffipaasi, jonka sisään louhitut huoneet ja käytävät ovat '
+            + 'palvelleet sekä asumuksina että viileinä varastoina.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Sunset at Goreme Valley.jpg',
-          selite: 'Kansainvälinen geologian liitto valitsi Kappadokian '
-            + 'ignimbriittisarjan lokakuussa 2022 sadan geologisen '
-            + 'perintökohteen joukkoon.',
-          lahde: 'Emrahuygun, Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-selime-aamu.jpg',
+          selite: 'Selimen luostari Ihlaran laakson suulla on Kappadokian '
+            + 'suurin kalliokirkkokokonaisuus: 700–900-luvuilla kallioon '
+            + 'louhittiin kirkkosali, keittiö, tallit ja asuintiloja.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
