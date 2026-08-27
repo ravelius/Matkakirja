@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1208';
+const CACHE = 'matkakirja-2026-08-09.1209';
 const SHELL = [
   './',
   './index.html',
@@ -194,6 +194,14 @@ const SHELL = [
   './js/packs/fokuskohteet-irq.js',
   './js/packs/fokuskohteet-fra.js',
   './js/packs/fokuskohteet-gbr.js',
+  // Matkakirjan ihmeiden MAAILMAN erä 27.8.2026: seitsemän uutta maata.
+  './js/packs/fokuskohteet-syr.js',
+  './js/packs/fokuskohteet-chn.js',
+  './js/packs/fokuskohteet-mex.js',
+  './js/packs/fokuskohteet-jor.js',
+  './js/packs/fokuskohteet-irn.js',
+  './js/packs/fokuskohteet-afg.js',
+  './js/packs/fokuskohteet-zwe.js',
   './js/packs/paivan-kuvat.js',
   './js/packs/uutislahteet.js',
   './js/packs/pollo-asetukset.js',
@@ -648,6 +656,23 @@ const SHELL = [
   './assets/kartat/ihmeet/ihme-forum-romanum.webp',
   './assets/kartat/ihmeet/ihme-tuileries.webp',
   './assets/kartat/ihmeet/ihme-vanha-st-paul.webp',
+  // Maailman erä 27.8.2026: neljätoista ihmettä viideltä mantereelta.
+  // Kahdeksan kadonnutta (tähti kartalla):
+  './assets/kartat/ihmeet/ihme-bastilji.webp',
+  './assets/kartat/ihmeet/ihme-crystal-palace.webp',
+  './assets/kartat/ihmeet/ihme-vanha-london-bridge.webp',
+  './assets/kartat/ihmeet/ihme-hippodromi.webp',
+  './assets/kartat/ihmeet/ihme-palmyra.webp',
+  './assets/kartat/ihmeet/ihme-yuanmingyuan.webp',
+  './assets/kartat/ihmeet/ihme-templo-mayor.webp',
+  './assets/kartat/ihmeet/ihme-bamiyan.webp',
+  // Kuusi yhä olemassa olevaa ("Koe ihme" -nappi valokuvan alla):
+  './assets/kartat/ihmeet/ihme-delfoi.webp',
+  './assets/kartat/ihmeet/ihme-gizan-pyramidi.webp',
+  './assets/kartat/ihmeet/ihme-karnak.webp',
+  './assets/kartat/ihmeet/ihme-petra.webp',
+  './assets/kartat/ihmeet/ihme-persepolis.webp',
+  './assets/kartat/ihmeet/ihme-suuri-zimbabwe.webp',
   // Lippuikkunan versioliput (pilotti Suomi + Saksa, v711).
   './assets/liput/versiot/fin-valtiolippu.png',
   './assets/liput/versiot/fin-sotalippu.png',

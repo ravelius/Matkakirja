@@ -739,6 +739,33 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Delfoin pyhäkköalueen raunioita Parnassoksen rinteellä.',
       lahde: 'Holger Uwe Schmitt, Wikimedia Commons (CC BY-SA 4.0)',
     },
+    /*
+     * MATKAKIRJAN IHME (yhä olemassa), maailman erä 27.8.2026 —
+     * säännöt tämän tiedoston lohkossa "MATKAKIRJAN IHME".
+     * `kadonnut: false`, joten kartalla säilyy Delfoin oma historian
+     * pylväs ja "Koe ihme" -nappi tulee yllä olevan valokuvan alle.
+     *
+     * KUVAPARI ON SAMASTA SUUNNASTA. Valokuva katsoo pyhäkköaluetta
+     * Parnassoksen rinteeltä, ja ihmekuva katsoo samaa rinnettä
+     * ylhäältä: pyhä tie kiemurtelee aarreaittojen ohi Apollonin
+     * temppelille, ja laakson pohjalla näkyy nykyinen Delfoin kylä
+     * tienpätkineen. Sama näkymä kahdessa ajassa on juuri se, mitä
+     * Raamattu ihmeeltä pyytää.
+     */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-delfoi.webp',
+      kadonnut: false,
+      selite: 'Delfoi ei ollut kaupunki vaan pyhäkkö: Parnassoksen '
+        + 'rinteelle terassoitu alue, jonne kreikkalaiset kaupunkivaltiot '
+        + 'pystyttivät pyhän tien varrelle omat aarreaittansa ja '
+        + 'lahjapatsaansa — lahja oli usein kymmenys sotasaaliista. '
+        + 'Sulla ryösti paikan 86 eaa. ja Nero 66 jaa., ja Konstantinus '
+        + 'Suuri siirsi vuonna 324 Delfoin käärmepatsaan uuteen '
+        + 'pääkaupunkiinsa, missä se seisoo yhä. Rinteellä on nyt '
+        + 'raunioalue ja laakson pohjalla nykyinen Delfoin kylä.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
+    },
   },
   /*
    * AKROPOLIS (omistajan tilaus v1119, kohta 19).

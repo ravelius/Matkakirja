@@ -35,9 +35,26 @@
  * tarkkuudella), ja molemmat tämän tiedoston pisteet osuvat EGY-lehden
  * rajaukseen (x 6583–7137, y 2056–2527).
  *
- * ── KUVAT OVAT PELIN OMIA HAVAINNEKUVIA ────────────────────────────
+ * ── MAAILMAN ERÄ (27.8.2026) LISÄSI KAKSI KOHDETTA, JOTKA OVAT
+ *    OLEMASSA ─────────────────────────────────────────────────────
  *
- * Kummastakaan kohteesta ei ole valokuvaa, koska kohdetta ei ole:
+ * Aleksandrian kaksi kadonnutta saivat perässään Kheopsin pyramidin ja
+ * Karnakin suuren pylvässalin. Ne ovat molemmat pystyssä, joten niiden
+ * esitystapa on toinen: `kadonnut: false`, kartalla kohteen oma merkki
+ * ja kortin pääkuvana Commons-valokuva nykytilasta — ihmekuva aukeaa
+ * vasta sen alta "Koe ihme" -napista. Kummallakin on siis `kuva`-kenttä,
+ * toisin kuin listan kahdella ensimmäisellä.
+ *
+ * KUMPIKAAN EI OLE PELILAATTA. Kairo ja Luxor ovat laattoja; pyramidi
+ * ja pylvässali ovat nimettyjä paikkoja niiden sisällä, sama sääntö ja
+ * sama ratkaisu kuin Forum Romanumilla Roomassa (js/packs/
+ * fokuskohteet-ita.js). Karnakin merkki osuu Luxorin laatan viereen
+ * alle yhden yksikön päähän, joten niputuspassi (js/fokusniput.js)
+ * kasaa sen kaupungin sarakkeeseen katkoviivoineen.
+ *
+ * ── KAHDEN ENSIMMÄISEN KUVAT OVAT PELIN OMIA HAVAINNEKUVIA ─────────
+ *
+ * Kummastakaan Aleksandrian kohteesta ei ole valokuvaa, koska kohdetta ei ole:
  * majakka romahti maanjäristyksissä ja kirjaston paikkaakaan ei
  * tunneta. Kummallakin on siksi VAIN `ihme`-kenttä eikä lainkaan
  * `kuva`-kenttää (omistajan tilaus 27.8.2026 ilta: erän ensimmäiset,
@@ -52,8 +69,16 @@
  * ── FAKTAPOHJA ─────────────────────────────────────────────────────
  *
  * en-Wikipedia raakatekstinä (index.php?action=raw) artikkeli
- * kerrallaan 26.8.2026 — ei työaineistoa, joten lähderivit osoittavat
- * suoraan artikkeleihin.
+ * kerrallaan 26.8.2026 ja maailman erän kohteille 27.8.2026 ("Great
+ * Pyramid of Giza", "Karnak", "Great Hypostyle Hall") — ei
+ * työaineistoa, joten lähderivit osoittavat suoraan artikkeleihin.
+ *
+ * PYLVÄIDEN KORKEUS ON KIRJOITETTU AUKI VÄLINÄ. Artikkeli "Karnak"
+ * antaa salin keskirivien pylväille 21 metriä ja artikkeli "Great
+ * Hypostyle Hall" 24 metriä. Kumpikaan ei ole väärä lähde, joten
+ * teksti kertoo lukujen eron sen sijaan että valitsisi toisen
+ * — sama käytäntö kuin Britannian tiedostossa vanhan St Paulin
+ * torninhuipun kanssa.
  */
 export const FOKUSKOHTEET_EGY = [
   {
@@ -152,6 +177,158 @@ export const FOKUSKOHTEET_EGY = [
         + 'yli sata oppinutta. Rakennuksesta ei ole löytynyt jälkeäkään '
         + 'eikä sen paikkaa tunneta; kaupungin rannalla toimii nyt '
         + 'vuonna 2002 avattu Bibliotheca Alexandrina.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
+    },
+  },
+  {
+    /*
+     * ── MATKAKIRJAN IHMEIDEN MAAILMAN ERÄ (27.8.2026) ──────────────
+     *
+     * KHEOPSIN PYRAMIDI. 31,13417 E / 29,97917 N — en-Wikipedia "Great
+     * Pyramid of Giza" (29°58′45″N 31°08′03″E). Piste on Gizan
+     * tasangolla; Kairon laatta on 3,4 lautayksikköä koillisessa, eli
+     * merkit erottuvat toisistaan eivätkä mene päällekkäin.
+     *
+     * ESITYSTAPA ON "YHÄ OLEMASSA" (`kadonnut: false`). Pyramidi
+     * seisoo — se on antiikin seitsemästä ihmeestä ainoa, joka on
+     * säilynyt olennaisesti ehjänä. Kartalla säilyy siis kohteen oma
+     * merkki, pääkuvana on nykytilan valokuva ja ihmekuva aukeaa sen
+     * alta "Koe ihme" -napista.
+     *
+     * MITÄ IHME TÄSSÄ ON: kuori. Pyramidin sileä valkoinen Turan
+     * kalkkikivipinta on louhittu lähes kokonaan pois, ja nyt näkyvä
+     * porrastettu muoto on rakenteen sisus. Ihmekuva näyttää saman
+     * pyramidin kuoressaan — ei siis kadonnutta rakennusta vaan
+     * kadonneen pinnan.
+     */
+    id: 'gizan-suuri-pyramidi',
+    nimi: 'Kheopsin pyramidi',
+    tyyppi: 'muu',
+    symboli: 'historia',
+    kysymykset: [
+      'Mihin pyramidin valkoinen kuori joutui?',
+      'Miten näin suuri rakennus saatiin pystyyn ilman koneita?',
+    ],
+    korostukset: ['Kheops|Kheopsin', 'kalkkikivikuori'],
+    nappi: 'Ainoa antiikin ihme, joka on yhä pystyssä',
+    laudat: {
+      maailmankartta: { x: 6871.1, y: 2181.7 },
+    },
+    teksti: 'Gizan suurin pyramidi rakennettiin noin 2600 eaa. faarao '
+      + 'Kheopsin haudaksi, ja työhön meni arviolta 26 vuotta. Siihen '
+      + 'louhittiin noin 2,3 miljoonaa lohkaretta, yhteispainoltaan '
+      + 'kuusi miljoonaa tonnia. Pohjan sivu on noin 230 metriä, ja '
+      + 'valmiina rakennus kohosi 146,6 metriin — se oli maailman '
+      + 'korkein ihmisen tekemä rakennelma yli 3 700 vuoden ajan. '
+      + 'Ulkopinnan sileä valkoinen kalkkikivikuori tuotiin veneillä '
+      + 'Turasta Niilin toiselta puolelta; se on sittemmin louhittu '
+      + 'lähes kokonaan pois, ja siksi pyramidi on nykyään 138,5 metriä '
+      + 'korkea porrastettu kivimäki. Antiikin seitsemästä ihmeestä se '
+      + 'on vanhin ja ainoa, joka on säilynyt olennaisesti ehjänä.',
+    lahde: 'en-Wikipedia "Great Pyramid of Giza", johdanto ja '
+      + 'tietolaatikko (tarkistettu 27.8.2026).',
+    /*
+     * NYKYTILAN VALOKUVA. Tarkistettu Commonsin imageinfo-rajapinnalla
+     * 27.8.2026 (2000×1125, CC BY-SA 4.0, Douwe C. van der Zee) ja
+     * katsottu silmin: koko pyramidi kuvassa, etualalla vain pari
+     * kaukaista hahmoa — ei tunnistettavia ihmisiä. Suunta on sama
+     * kuin ihmekuvassa, joten pari toimii.
+     */
+    kuva: {
+      tiedosto: 'Great Pyramid of Giza - Pyramid of Khufu.jpg',
+      selite: 'Kheopsin pyramidi Gizan tasangolla. Porrastettu pinta on '
+        + 'rakenteen sisus: sileä kalkkikivikuori on louhittu pois.',
+      lahde: 'Douwe C. van der Zee, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    /*
+     * MATKAKIRJAN IHME (yhä olemassa) — säännöt js/packs/
+     * fokuskohteet-grc.js:n samannimisessä lohkossa. `kadonnut: false`,
+     * joten "Koe ihme" -nappi tulee yllä olevan valokuvan alle.
+     */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-gizan-pyramidi.webp',
+      kadonnut: false,
+      selite: 'Kheopsin pyramidin ulkopinta oli valmiina sileä ja '
+        + 'valkoinen: Turasta tuotua hiottua kalkkikiveä, joka nousi '
+        + '146,6 metriin ja hohti aavikolla kuin peili. Kuori louhittiin '
+        + 'myöhempien vuosisatojen aikana rakennusaineeksi, ja jäljelle '
+        + 'jäi 138,5 metriä korkea porrastettu sisus, joka seisoo '
+        + 'Gizan tasangolla nyky-Kairon laidalla.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
+    },
+  },
+  {
+    /*
+     * KARNAKIN SUURI PYLVÄSSALI. 32,65861 E / 25,71861 N —
+     * en-Wikipedia "Precinct of Amun-Re" (25°43′07″N 32°39′31″E);
+     * artikkelilla "Karnak" itsellään ei ole koordinaattia
+     * tietolaatikossaan. Piste on Amonin temppelialue, jonka sisällä
+     * sali on. Luxorin laatta (6921,3 / 2335,8) on alle yhden yksikön
+     * päässä, joten merkki menee niputuspassin sarakkeeseen kaupungin
+     * viereen — sama tilanne kuin Tuileries'lla Pariisissa.
+     *
+     * ESITYSTAPA ON "YHÄ OLEMASSA" (`kadonnut: false`). Sali on
+     * pystyssä ja siellä käy päivittäin tuhansia ihmisiä; kadonnut on
+     * KATTO ja maalipinta. Ihmekuva näyttää salin katettuna ja
+     * väreissään, valokuva sen taivaalle avoimena — sama paikka
+     * kahdessa ajassa.
+     */
+    id: 'karnakin-pylvassali',
+    nimi: 'Karnakin pylvässali',
+    tyyppi: 'muu',
+    symboli: 'historia',
+    kysymykset: [
+      'Miten sali valaistiin, kun katto oli paikallaan?',
+      'Mitä salin seinien kuvat kertovat?',
+    ],
+    korostukset: ['papyruspylväs|papyruskukkia', 'Seti ensimmäinen|Seti ensimmäinen'],
+    nappi: 'Kivimetsä, jossa on 134 pylvästä',
+    laudat: {
+      maailmankartta: { x: 6922.0, y: 2335.2 },
+    },
+    teksti: 'Karnakin temppelialue Luxorin pohjoispuolella oli '
+      + 'muinaisen Egyptin tärkein pyhäkkö, ja sen keskellä on suuri '
+      + 'pylvässali: 5 000 neliömetrin halli, jossa on 134 pylvästä '
+      + 'kuudessatoista rivissä. Keskikäytävän kaksitoista pylvästä '
+      + 'ovat muita korkeampia ja paksumpia — lähteet antavat niille '
+      + '21–24 metriä — ja niiden avoimet papyruskukkia jäljittelevät '
+      + 'kapiteelit kannattivat korotettua kattoa. Korkeamman ja '
+      + 'matalamman katon väliin jäi kiviristikkoikkunoiden rivi, josta '
+      + 'valo pääsi saliin. Salin rakennutti Seti ensimmäinen, joka '
+      + 'myös kaiverrutti pohjoisen puoliskon seinät; eteläisen '
+      + 'puoliskon kuvat teetti hänen poikansa Ramses toinen. '
+      + 'Pylväiden päällä lepäävien arkkitraavien arvioidaan painavan '
+      + 'seitsemänkymmentä tonnia kappaleelta.',
+    lahde: 'en-Wikipedia "Karnak", osio "Great Hypostyle Hall", ja '
+      + 'en-Wikipedia "Great Hypostyle Hall", osiot "Architecture and '
+      + 'construction" ja "Inscriptions and reliefs" (tarkistettu '
+      + '27.8.2026).',
+    /*
+     * NYKYTILAN VALOKUVA. Tarkistettu Commonsin imageinfo-rajapinnalla
+     * 27.8.2026 (2826×2322, CC0, Tsyganov Sergey) ja katsottu silmin:
+     * keskikäytävän pylväät taivasta vasten, katto poissa, ei
+     * tunnistettavia ihmisiä etualalla. Sama käytävä kuin ihmekuvassa.
+     */
+    kuva: {
+      tiedosto: 'Karnak Temple Great Hypostyle Hall 2014.jpg',
+      selite: 'Karnakin pylvässalin keskikäytävän pylväät. Katto on '
+        + 'sortunut, joten pylväät kannattelevat nykyään vain taivasta.',
+      lahde: 'Tsyganov Sergey, Wikimedia Commons (CC0)',
+    },
+    /* MATKAKIRJAN IHME (yhä olemassa) — säännöt fokuskohteet-grc.js:ssä.
+       `kadonnut: false`, joten "Koe ihme" -nappi tulee valokuvan alle. */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-karnak.webp',
+      kadonnut: false,
+      selite: 'Karnakin suuressa pylvässalissa on 134 pylvästä '
+        + 'kuudessatoista rivissä, ja aikanaan niiden päällä oli katto: '
+        + 'sali oli hämärä sisätila, jonka kaikki pinnat oli kaiverrettu '
+        + 'ja maalattu kirkkain värein, ja ainoa valo tuli '
+        + 'kiviristikkoikkunoista korkean keskikäytävän kyljessä. Katto '
+        + 'on sortunut ja värit haalistuneet auringossa, mutta pylväät '
+        + 'seisovat yhä paikoillaan Luxorin pohjoispuolella.',
       lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
         + 'nykymaailmassa',
     },

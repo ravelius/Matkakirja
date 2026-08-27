@@ -1193,6 +1193,83 @@ export const FOKUSKOHTEET_TUR = [
         + 'nykymaailmassa',
     },
   },
+  {
+    /*
+     * ── MATKAKIRJAN IHMEIDEN MAAILMAN ERÄ (27.8.2026) ──────────────
+     *
+     * KONSTANTINOPOLIN HIPPODROMI. 28,97583 E / 41,00639 N —
+     * en-Wikipedia "Hippodrome of Constantinople" (41°00′23″N
+     * 28°58′33″E). Piste on Sultanahmetin aukio, joka on radan oma
+     * paikka: aukion päälle ei koskaan rakennettu, ja obeliskit
+     * seisovat yhä samassa rivissä kuin radan keskiselänteellä.
+     *
+     * ISTANBUL ON PELILAATTA, HIPPODROMI EI OLE. Sama sääntö ja sama
+     * ratkaisu kuin Forum Romanumilla Roomassa (js/packs/
+     * fokuskohteet-ita.js): yksi nimetty paikka kaupungin sisällä, ei
+     * toinen Istanbul. Merkki on laudalla 2,7 yksikköä kaupunkilaatasta
+     * (6796,5 / 1763,0), joten niputuspassi (js/fokusniput.js) kasaa
+     * sen kaupungin viereiseen sarakkeeseen.
+     *
+     * ESITYSTAPA ON "KADONNUT" (`kadonnut: true`). Rata, katsomot ja
+     * keisarin aitio ovat poissa; jäljellä on aukio, kolme monumenttia
+     * ja etelänpään kaarrekaaren perustus. Kohde itse — hippodromi
+     * rakennuksena — ei ole olemassa, joten kartalla on tähti ja
+     * kortissa vain ihmekuva. Selite kertoo, mitä paikalla on nyt.
+     */
+    id: 'hippodromi',
+    nimi: 'Konstantinopolin hippodromi',
+    tyyppi: 'muu',
+    symboli: 'urheilu',
+    kysymykset: [
+      'Miksi vaunukilpailut olivat kaupungille niin tärkeitä?',
+      'Mihin hippodromin kivet lopulta menivät?',
+    ],
+    korostukset: ['vaunukilpailu|vaunukilpailujen', 'Septimius Severus'],
+    nappi: 'Rata, jolle mahtui satatuhatta katsojaa',
+    laudat: {
+      maailmankartta: { x: 6799.2, y: 1763.2 },
+      europe: { x: 767.5, y: 815.1 },
+    },
+    teksti: 'Hippodromi oli Konstantinopolin urheilun ja seuraelämän '
+      + 'keskus. Ensimmäisen radan rakennutti keisari Septimius '
+      + 'Severus vuonna 203, kun kaupunki oli vielä Byzantion; '
+      + 'Konstantinus Suuri laajensi sen 320-luvulla noin 450 metriä '
+      + 'pitkäksi ja 130 metriä leveäksi. Katsomoihin mahtui arviolta '
+      + 'satatuhatta ihmistä, ja keisarilla oli oma aitionsa, johon '
+      + 'pääsi käytävää pitkin suoraan palatsista. Radan '
+      + 'keskiselänteelle koottiin patsaita ja monumentteja kaikkialta '
+      + 'valtakunnasta, ja lähtöporttien päällä seisoi neljä kullattua '
+      + 'pronssihevosta. Neljännen ristiretken sotilaat veivät hevoset '
+      + 'vuonna 1204 Venetsiaan, ja vaunukilpailujen loputtua '
+      + 'rakennusta käytettiin kivilouhoksena.',
+    lahde: 'en-Wikipedia "Hippodrome of Constantinople", johdanto sekä '
+      + 'osiot "Construction", "Decoration" ja "Decline" (tarkistettu '
+      + '27.8.2026).',
+    /*
+     * MATKAKIRJAN IHME (kadonnut) — säännöt js/packs/fokuskohteet-grc.js:n
+     * samannimisessä lohkossa. Rataa ei ole, joten `kadonnut: true` ja
+     * kortissa on vain tämä kuva.
+     *
+     * MITÄ SELITE EI VÄITÄ: aukion alla on artikkelin mukaan
+     * todennäköisesti vielä paljon kaivamatta, ja etelänpään sphendonen
+     * perustus on näkyvissä. Selite sanoo "aukio ja kolme monumenttia",
+     * ei "ei mitään jäljellä".
+     */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-hippodromi.webp',
+      kadonnut: true,
+      selite: 'Hippodromi oli Konstantinopolin sydän tuhat vuotta: '
+        + 'satatuhatta katsojaa mahtui katsomaan vaunukilpailuja radan '
+        + 'ympärille, ja keskiselänteellä seisoi monumenttirivi '
+        + 'kaikkialta valtakunnasta. Katsomot on louhittu pois, mutta '
+        + 'paikan päälle ei koskaan rakennettu: siellä on nyt '
+        + 'Sultanahmetin aukio, jonka keskellä seisovat yhä Thutmosis '
+        + 'kolmannen obeliski, Delfoin käärmepatsas ja muurattu '
+        + 'obeliski — samassa rivissä kuin radan aikaan.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
+    },
+  },
 ];
 
 const TUR_TUNNUKSITTAIN = new Map(FOKUSKOHTEET_TUR.map((k) => [k.id, k]));

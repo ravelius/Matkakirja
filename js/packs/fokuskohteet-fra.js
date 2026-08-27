@@ -19,6 +19,10 @@
  * Tiedosto on siis tarkoituksella yhden kohteen mittainen ja odottaa
  * ensimmäistä varsinaista Ranska-erää.
  *
+ * MAAILMAN ERÄ (27.8.2026, neljätoista uutta ihmettä) toi listalle
+ * toisen kohteen: Bastiljin. Se ei muuta yllä olevaa — lista on yhä
+ * pelkkä ihme-erien jalusta, ja varsinainen Ranska-erä on tekemättä.
+ *
  * ── MIKSI OMA KOHDEPISTE EIKÄ IHME LOUVREN KYLKEEN ─────────────────
  *
  * Raamatun sääntö on, että KOKONAAN KADONNUT kohde saa kartalle oman
@@ -120,6 +124,88 @@ export const FOKUSKOHTEET_FRA = [
         + 'matkallaan 1873 juuri nuo mustuneet rauniot. Paikalla on nyt '
         + 'avoin terassi Tuileries\'n puutarhan ja Louvren pihan '
         + 'välissä.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
+    },
+  },
+  /*
+   * ── MATKAKIRJAN IHMEIDEN MAAILMAN ERÄ (27.8.2026) ────────────────
+   *
+   * BASTILJI, listan toinen kohde. Tuileries yllä on ennallaan; tämä
+   * on sen perässä omana eränään samaan tapaan kuin Italian ja Kreikan
+   * tiedostoissa.
+   *
+   * PARIISI ON PELILAATTA, BASTILJI EI OLE. Sama sääntö ja sama
+   * ratkaisu kuin Forum Romanumilla Roomassa (js/packs/
+   * fokuskohteet-ita.js): kohde on yksi nimetty paikka kaupungin
+   * sisällä, ei toinen Pariisi. Merkki asettuu kaupunkimerkin viereen
+   * niputuspassin sarakkeeseen (js/fokusniput.js), aivan kuten
+   * Tuileries'n merkki jo tekee.
+   *
+   * ESITYSTAPA ON "KADONNUT" (`kadonnut: true`). Linnoitus purettiin
+   * heti valtauksen jälkeen 1789–1790, eikä paikalla ole siitä enää
+   * mitään pystyssä: kartalla siis tähti ja kortissa ihmekuva
+   * ensimmäisenä ja ainoana. Aukiolla on nyt heinäkuun pylväs ja
+   * Opéra Bastille — kummastakin voisi ottaa valokuvan, mutta kumpikaan
+   * ei ole tämä kohde.
+   *
+   * 2,36917 E / 48,85333 N — en-Wikipedia "Bastille" (tietolaatikon
+   * coordinates). Piste on Place de la Bastille, aukio joka kattaa
+   * suurimman osan linnoituksen vanhasta paikasta. Laskettu samoilla
+   * kaavoilla kuin Tuileries yllä; piste osuu FRA-lehden rajaukseen
+   * (x 5574–6240, y 1265–1818).
+   */
+  {
+    id: 'bastilji',
+    nimi: 'Bastilji',
+    tyyppi: 'muu',
+    symboli: 'historia',
+    kysymykset: [
+      'Miksi juuri Bastiljista tuli vallankumouksen vertauskuva?',
+      'Millaista elämä linnoituksen sisällä oli?',
+    ],
+    korostukset: ['Porte Saint-Antoine|Saint-Antoinea',
+      'valtionvankila|valtionvankilaksi'],
+    nappi: 'Linnoitus, jota ei enää ole — mutta jonka päivää juhlitaan',
+    laudat: {
+      maailmankartta: { x: 5912.3, y: 1439.7 },
+      europe: { x: 256.7, y: 608.8 },
+    },
+    teksti: 'Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin '
+      + 'itälaidalla. Se rakennettiin satavuotisen sodan aikana '
+      + 'suojaamaan kaupungin itäistä sisääntuloa, Porte '
+      + 'Saint-Antoinea: työt olivat käynnissä jo 1357 ja pääosa nousi '
+      + 'vuodesta 1370 alkaen kahdeksantornisena kivimuurina. Vuonna '
+      + '1417 se julistettiin valtionvankilaksi, ja vuodesta 1659 se '
+      + 'toimi lähinnä siinä tehtävässä — vuoteen 1789 mennessä sen '
+      + 'porteista oli kulkenut 5 279 vankia. Heinäkuun 14. päivänä '
+      + '1789 väkijoukko valtasi linnoituksen, jonka selleissä oli '
+      + 'tuolloin enää seitsemän vankia. Purkutyöt alkoivat heti, ja '
+      + 'kivet myytiin muistoesineiksi.',
+    lahde: 'en-Wikipedia "Bastille", johdanto, tietolaatikko ja osiot '
+      + '"Storming of the Bastille" ja "Legacy" (tarkistettu '
+      + '27.8.2026).',
+    /*
+     * MATKAKIRJAN IHME (kadonnut) — säännöt js/packs/fokuskohteet-grc.js:n
+     * samannimisessä lohkossa. Linnoitusta ei ole, joten `kadonnut: true`
+     * ja kortissa on vain tämä kuva.
+     *
+     * MITÄ SELITE EI VÄITÄ: aukiolla on yhä nähtävissä hitusen
+     * alkuperäistä kiveä (artikkelin tietolaatikko: "limited stonework
+     * survives"), mutta linnoitusta itseään ei ole. Selite sanoo, mitä
+     * paikalla NYT on, eikä väitä paikkaa tyhjäksi.
+     */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-bastilji.webp',
+      kadonnut: true,
+      selite: 'Bastilji vartioi Pariisin itäistä porttia yli neljäsataa '
+        + 'vuotta ja oli viimeiset puolitoista vuosisataansa '
+        + 'valtionvankila. Väkijoukko valtasi sen 14. heinäkuuta 1789, '
+        + 'ja purkutyöt alkoivat samana kesänä. Paikalla on nyt Place '
+        + 'de la Bastille, jonka keskellä kohoaa vuoden 1830 '
+        + 'vallankumouksen muistoksi pystytetty heinäkuun pylväs — '
+        + 'sekin oli jo paikallaan, kun isoisä kulki Pariisin läpi '
+        + '1873.',
       lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
         + 'nykymaailmassa',
     },
