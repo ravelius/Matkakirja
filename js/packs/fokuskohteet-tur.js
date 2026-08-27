@@ -273,6 +273,9 @@ export const FOKUSKOHTEET_TUR = [
   {
     id: 'pamukkale',
     nimi: 'Pamukkale ja Hierapolis',
+    // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
+    // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
+    nimio: 'Pamukkale',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
     tyyppi: 'muu',
@@ -1040,6 +1043,9 @@ export const FOKUSKOHTEET_TUR = [
   {
     id: 'dolmabahce',
     nimi: 'Dolmabahçen palatsi',
+    // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
+    // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
+    nimio: 'Dolmabahçe',
     tyyppi: 'muu',
     symboli: 'historia',
     /* Valintakuplan painike: noston oma klikkiotsikko sellaisenaan. */
@@ -1153,6 +1159,9 @@ export const FOKUSKOHTEET_TUR = [
      */
     id: 'halikarnassos',
     nimi: 'Halikarnassoksen mausoleumi',
+    // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
+    // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
+    nimio: 'Mausoleumi',
     tyyppi: 'muu',
     symboli: 'historia',
     kysymykset: [
@@ -1218,6 +1227,9 @@ export const FOKUSKOHTEET_TUR = [
      */
     id: 'hippodromi',
     nimi: 'Konstantinopolin hippodromi',
+    // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
+    // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
+    nimio: 'Hippodromi',
     tyyppi: 'muu',
     symboli: 'urheilu',
     kysymykset: [
@@ -1305,6 +1317,9 @@ export const FOKUSKOHTEET_TUR = [
      */
     id: 'theodosiuksen-muurit',
     nimi: 'Theodosiuksen muurit',
+    // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
+    // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
+    nimio: 'Kaupunginmuurit',
     tyyppi: 'muu',
     symboli: 'historia',
     kysymykset: [

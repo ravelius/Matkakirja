@@ -77,6 +77,9 @@ export const FOKUSKOHTEET_GBR = [
      */
     id: 'st-paulin-katedraali',
     nimi: 'St Paulin katedraali',
+    // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
+    // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
+    nimio: 'St Paulin kirkko',
     tyyppi: 'muu',
     symboli: 'historia',
     kysymykset: [
@@ -243,6 +246,9 @@ export const FOKUSKOHTEET_GBR = [
      */
     id: 'vanha-london-bridge',
     nimi: 'Vanha London Bridge',
+    // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
+    // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
+    nimio: 'London Bridge',
     tyyppi: 'muu',
     symboli: 'tekniikka',
     kysymykset: [

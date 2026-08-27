@@ -572,6 +572,9 @@ export const FOKUSKOHTEET_BGR = [
   {
     id: 'jogurtti',
     nimi: 'Bulgarialainen jogurtti',
+    // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
+    // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
+    nimio: 'Jogurtti',
     tyyppi: 'muu',
     symboli: 'ruoka',
     kysymykset: [

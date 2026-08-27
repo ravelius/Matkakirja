@@ -161,6 +161,9 @@ export const FOKUSKOHTEET_BIH = [
   {
     id: 'blagaj',
     nimi: 'Blagajin dervissiluostari',
+    // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
+    // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
+    nimio: 'Blagajin luostari',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
     tyyppi: 'muu',
@@ -361,6 +364,9 @@ export const FOKUSKOHTEET_BIH = [
   {
     id: 'sutjeska',
     nimi: 'Sutjeskan kansallispuisto',
+    // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
+    // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
+    nimio: 'Sutjeska',
     tyyppi: 'vuori',
     kysymykset: [
       'Miten aarniometsä eroaa talousmetsästä?',

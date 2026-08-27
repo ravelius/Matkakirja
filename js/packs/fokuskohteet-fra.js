@@ -75,6 +75,9 @@ export const FOKUSKOHTEET_FRA = [
      */
     id: 'tuileries',
     nimi: 'Tuileries\'n palatsi',
+    // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
+    // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
+    nimio: 'Tuileries',
     tyyppi: 'muu',
     symboli: 'historia',
     kysymykset: [

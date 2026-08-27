@@ -142,6 +142,9 @@ export const FOKUSKOHTEET_EGY = [
      */
     id: 'aleksandrian-kirjasto',
     nimi: 'Aleksandrian kirjasto',
+    // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
+    // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
+    nimio: 'Suuri kirjasto',
     tyyppi: 'muu',
     symboli: 'sana',
     kysymykset: [
@@ -277,6 +280,9 @@ export const FOKUSKOHTEET_EGY = [
      */
     id: 'karnakin-pylvassali',
     nimi: 'Karnakin pylvässali',
+    // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
+    // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
+    nimio: 'Pylvässali',
     tyyppi: 'muu',
     symboli: 'historia',
     kysymykset: [
