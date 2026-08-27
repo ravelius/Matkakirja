@@ -272,7 +272,25 @@ const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
 // Animaatioiden rytmi millisekunteina.
 
-const STEP_MS = 190; // yksi askel kartalla
+const STEP_MS = 190; // yhden hypyn lentoaika kartalla
+/*
+ * NAPPULAN HYPPY (omistajan tilaus #100).
+ *
+ * `STEP_MS` on nyt HYPYN LENTOAIKA, ja tauko on oma lukunsa: askel
+ * kestää yhteensä lento + tauko. Jako on tarkoituksellinen, koska
+ * tulossa on erikseen hitaampi jalkamatkasiirtymä (#96) — silloin
+ * riittää kasvattaa lentoaikaa (parametri `stepMs`), ja tauko pysyy
+ * sinä pienenä hengähdyksenä, joka tekee liikkeestä siirretyn
+ * pelinappulan eikä liukuvan pisteen.
+ *
+ * Kaaren korkeus laudan yksiköinä on suhteessa hypyn pituuteen, mutta
+ * rajoissa: lyhyt askel ei saa jäädä litteäksi eikä pitkä (lento,
+ * jossa askelia on yksi) kaartaa ruudun ulkopuolelle.
+ */
+const HYPYN_TAUKO_MS = 190; // näkymätön käsi laskee nappulan ja tarttuu uudelleen
+const HYPYN_KAARI = 0.34; // kaaren huippu suhteessa hypyn pituuteen
+const HYPYN_KORKEUS_MIN = 9;
+const HYPYN_KORKEUS_MAX = 30;
 const FLIGHT_MS = 900;
 // Mantereen sisäinen lento liukuu rauhallisemmin moottorin hurinalla.
 const MANNER_LENTO_MS = 2800;
@@ -776,10 +794,38 @@ const AARREMERKKI_R = 9.4;
 const FOKUS_NAPPULA_PX = 28;
 const FOKUS_AARRE_PX = 20;
 /*
- * Nappulan oma säde laudan yksiköinä: `pawn-ring` on 13 (pawnShape),
- * ja käänteisskaalaus lasketaan siitä.
+ * Nappulan oma säde laudan yksiköinä. Luku on peräisin vanhasta
+ * `pawn-ring`-kehästä (13) ja on JÄTETTY ENNALLEEN, vaikka nappula on
+ * nyt tinaherra: fokusnäkymän mitoitus (fokusMerkkiKerroin,
+ * FOKUS_NAPPULA_PX) ja nimikyltin etäisyys on viritetty tähän lukuun,
+ * eikä hahmon vaihto saa muuttaa kokoja lehden päällä.
  */
 const NAPPULAN_R = 13;
+/*
+ * TINAHERRA PELINAPPULANA (omistajan tilaus #100).
+ *
+ * Kuva on läpinäkyvä webp ILMAN OMAA VARJOA — varjo piirretään
+ * koodilla, koska vain silloin se voi irrota hypyn laella ja kertoa
+ * korkeuden (pawnShape, hyppaaAskel).
+ *
+ * MITAT LAUDAN YKSIKÖISSÄ. Korkeus on 28 eikä enempää siksi, että
+ * kaupungin nimikyltti ladotaan laudalla nappulan YLÄPUOLELLE
+ * (boardBounds: ly oletuksena -19). Silinterin laki jää sen alle;
+ * isompi hahmo peittäisi nimen. Leveys on kuvan oma kuvasuhde
+ * (177 x 256 px), jotta herra ei veny.
+ *
+ * ANKKURI on jalustan keskipiste kuvassa (osuus leveydestä ja
+ * korkeudesta): juuri se kohta asetetaan kaupungin päälle, jolloin
+ * hahmo seisoo laudalla eikä leiju sen yllä. Luvut on mitattu
+ * kuvasta — jalusta on hieman vasemmalla, koska keppi vie tilaa.
+ */
+const NAPPULAN_KUVA = 'assets/kartat/nappula-tinaherra.webp';
+const NAPPULAN_KORKEUS = 28;
+const NAPPULAN_LEVEYS = NAPPULAN_KORKEUS * (177 / 256);
+const NAPPULAN_ANKKURI_X = 0.424;
+const NAPPULAN_ANKKURI_Y = 0.918;
+/* Jalusta hitusen kaupungin pisteen alapuolella, kuten vanha varjokin. */
+const NAPPULAN_JALKA_Y = 6;
 /*
  * Osuma-alueen katto LAUDAN yksiköissä. Ruutumitta muuttuu laudan
  * yksiköiksi jakamalla zoomilla, ja yleiskuvassa (pieni zoom) jakolasku
@@ -2224,6 +2270,15 @@ export class UI {
     // uusiksi vain kun käytyjen maiden joukko oikeasti muuttuu.
     this.fokusAvain = null;
     this.autoRollTimer = null;
+    /*
+     * NOPAN PAIKKA LAUDALLA (#98). `dieThrown` kertoo, onko heitetty
+     * noppa yhä näkyvissä, ja `noppaKartalla` MISSÄ se lepää — laudan
+     * koordinaatteina ja sen mittakaavan kanssa, jossa se heitettiin
+     * ({ x, y, perus }). Ruutupaikkaa ei säilötä lainkaan: se johdetaan
+     * näistä aina kun näkymä asettuu (js/kartta.js ankkuroiNoppa).
+     */
+    this.dieThrown = false;
+    this.noppaKartalla = null;
     this.movingPlayerId = null;
     this.revealShownFor = null;
     this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -2262,7 +2317,15 @@ export class UI {
 
   mount() {
     this.drawBoardFor(this.game.pack);
-    this.boardDie = new BoardDie(this.mapPane);
+    /*
+     * NOPPA KARTAN SIIRTOKUOREEN, EI KARTTARUUTUUN (#98). Kuori on se
+     * elementti, johon panoroinnin ja nipistyksen muunnos kirjoitetaan
+     * (js/kartta.js asetaPan), joten kuoressa asuva noppa liikkuu ja
+     * skaalautuu kartan mukana ilman yhtään laskutoimitusta
+     * kehyssilmukassa. Karttaruutu on varapaikka siltä varalta, ettei
+     * kuorta löydy — silloin noppa käyttäytyy kuten ennen.
+     */
+    this.boardDie = new BoardDie(this.karttaKuori ?? this.mapPane);
     this.kartta.asennaPanorointi();
     this.kartta.fitViewBox();
     this.observer = new ResizeObserver(() => this.kartta.fitViewBox());
@@ -7600,20 +7663,57 @@ export class UI {
     return [x, x + this.game.pack.map.width];
   }
 
-  /** Pelinappula: varjo, vaalea kehys, pelaajan väri ja kiilto. */
+  /**
+   * Pelinappula: tinaherra, koodilla piirretty varjo ja vuoron rengas.
+   *
+   * RAKENNE ON HYPPYÄ VARTEN (#100). Ryhmä on kolmiosainen, ja jako
+   * on koko 3D-illuusion perusta:
+   *
+   *   .pawn        paikka laudalla — VAIN vaakasuunta liikkuu
+   *   .pawn-varjo  jää laudan pintaan; kutistuu ja haalenee kun
+   *                nappula nousee (hyppaaAskel)
+   *   .pawn-hahmo  itse tinaherra — VAIN pystysuunta liikkuu
+   *
+   * Jos hahmo ja varjo olisivat samassa muunnoksessa, varjo nousisi
+   * mukana eikä korkeus näkyisi mistään. Erillään ne kertovat sen
+   * ilman yhtään lisäpikseliä: mitä kauempana varjo on jaloista ja
+   * mitä haaleampi se on, sitä ylempänä nappula leijuu.
+   *
+   * VARJON PAIKKA ON NAPPULAN JALKOJEN KOHDALLA eikä keskipisteessä:
+   * hahmo seisoo laudalla, ja sen kosketuskohta on jalusta.
+   */
   pawnShape(parent, player, active) {
     const g = el('g', { class: 'pawn' }, parent);
-    el('ellipse', { cx: 2, cy: 9, rx: 11, ry: 4, class: 'pawn-shadow' }, g);
+    const varjo = el('g', { class: 'pawn-varjo' }, g);
+    varjo.setAttribute('transform', `translate(2,${NAPPULAN_JALKA_Y})`);
+    el('ellipse', { cx: 0, cy: 0, rx: 10, ry: 3.6, class: 'pawn-shadow' }, varjo);
+    /*
+     * VUORON RENGAS MAKAA LAUDALLA (#100). Ympyrä kiersi ennen
+     * pyöreää nappulaa, mutta seisovan hahmon ympärillä se olisi
+     * pystyssä oleva kehä keskellä säärtä. Litistetty ellipsi lukee
+     * kartan pinnalla olevaksi valoksi — samasta perspektiivistä kuin
+     * varjo, joka on sen sisällä. Pelaajan väri jäi tähän: hahmo on
+     * kaikilla sama tinaherra.
+     */
     if (active) {
-      el('circle', { r: 15, class: 'pawn-pulse', stroke: player.color }, g);
-      el('circle', { r: 17, class: 'pawn-active-ring' }, g);
+      el('ellipse', {
+        cy: NAPPULAN_JALKA_Y, rx: 10.5, ry: 4, class: 'pawn-pulse', stroke: player.color,
+      }, g);
+      el('ellipse', { cy: NAPPULAN_JALKA_Y, rx: 12, ry: 4.6, class: 'pawn-active-ring' }, g);
     }
-    el('circle', { r: 13, class: 'pawn-ring' }, g);
-    el('circle', { r: 9.5, fill: player.color, class: 'pawn-dot' }, g);
-    el('path', { d: 'M-5,-3 a6,6 0 0 1 8,-3', class: 'pawn-gloss', fill: 'none',
-      stroke: 'rgba(255,255,255,0.6)', 'stroke-width': 2.2, 'stroke-linecap': 'round' }, g);
+    const hahmo = el('g', { class: 'pawn-hahmo' }, g);
+    el('image', {
+      class: 'pawn-kuva',
+      href: NAPPULAN_KUVA,
+      x: -NAPPULAN_ANKKURI_X * NAPPULAN_LEVEYS,
+      y: NAPPULAN_JALKA_Y - NAPPULAN_ANKKURI_Y * NAPPULAN_KORKEUS,
+      width: NAPPULAN_LEVEYS,
+      height: NAPPULAN_KORKEUS,
+      preserveAspectRatio: 'xMidYMid meet',
+    }, hahmo);
     if (player.stars > 0) {
-      el('text', { x: 0, y: -18, class: 'pawn-star', 'text-anchor': 'middle' }, g).textContent = '◈';
+      const y = NAPPULAN_JALKA_Y - NAPPULAN_ANKKURI_Y * NAPPULAN_KORKEUS - 5;
+      el('text', { x: 0, y, class: 'pawn-star', 'text-anchor': 'middle' }, hahmo).textContent = '◈';
     }
     return g;
   }
@@ -15968,6 +16068,53 @@ export class UI {
     return this.isoAnimaatio(() => this.animatePawnSisalla(player, from, path, stepMs));
   }
 
+  /**
+   * Yksi hyppy askelpisteestä toiseen (#100).
+   *
+   * KAARI ON PARAABELI, EI CSS-SIIRTYMÄ. Vaakasuunnassa liike on
+   * ease-in-out (nappula lähtee levosta ja pysähtyy lepoon), ja
+   * pystysuunnassa korkeus on `4t(1-t)` eli symmetrinen kaari, joka on
+   * nolla molemmissa päissä ja huipussaan puolivälissä. Kaksi eri
+   * käyrää samassa hypyssä on juuri se, mikä tekee liikkeestä
+   * kolmiulotteisen: käsi kiihdyttää nappulaa vaakasuunnassa, mutta
+   * korkeus noudattaa omaa lakiaan.
+   *
+   * VARJO MYY KORKEUDEN. Se jää laudan pintaan, kutistuu ja haalenee
+   * laella ja palaa laskeutuessa. Ilman sitä kaari näyttäisi pelkältä
+   * mutkalta kartalla.
+   *
+   * Palauttaa lupauksen, joka ratkeaa laskeutumishetkellä.
+   */
+  hyppaaAskel(g, hahmo, varjo, a, b, kesto, koko) {
+    const matka = Math.hypot(b.x - a.x, b.y - a.y);
+    const huippu = Math.min(HYPYN_KORKEUS_MAX, Math.max(HYPYN_KORKEUS_MIN, matka * HYPYN_KAARI));
+    return new Promise((valmis) => {
+      const alku = performance.now();
+      const kehys = (nyt) => {
+        // Kuollut peli ei enää piirrä; irronnut nappula (render pyyhki
+        // kerroksen kesken siirron) saa silti hyppynsä loppuun, jottei
+        // koko matka syöksy läpi yhdessä kehyksessä.
+        if (this.dead) { valmis(); return; }
+        const t = Math.min(1, (nyt - alku) / kesto);
+        // Vaaka: ease-in-out. Pysty: paraabeli, nolla päissä.
+        const e = t < 0.5 ? 2 * t * t : 1 - ((-2 * t + 2) ** 2) / 2;
+        const korkeus = huippu * 4 * t * (1 - t);
+        const osuus = huippu > 0 ? korkeus / huippu : 0;
+        g.style.transform =
+          `translate(${(a.x + (b.x - a.x) * e).toFixed(2)}px, ${(a.y + (b.y - a.y) * e).toFixed(2)}px)${koko}`;
+        hahmo?.setAttribute('transform', `translate(0,${(-korkeus).toFixed(2)})`);
+        varjo?.setAttribute(
+          'transform',
+          `translate(2,${NAPPULAN_JALKA_Y}) scale(${(1 - 0.4 * osuus).toFixed(3)})`,
+        );
+        if (varjo) varjo.style.opacity = (1 - 0.55 * osuus).toFixed(3);
+        if (t >= 1) { valmis(); return; }
+        requestAnimationFrame(kehys);
+      };
+      requestAnimationFrame(kehys);
+    });
+  }
+
   /** Nappulan varsinainen siirto; kääre yllä hiljentää kartan animaatiot. */
   async animatePawnSisalla(player, from, path, stepMs = STEP_MS) {
     if (!path || path.length === 0) return;
@@ -15977,37 +16124,62 @@ export class UI {
     this.drawPawns();
     const g = this.pawnShape(this.pawnLayer, player, false);
     g.classList.add('pawn-moving');
-    if (stepMs !== STEP_MS) g.style.transitionDuration = `${stepMs}ms`;
+    const hahmo = g.querySelector('.pawn-hahmo');
+    const varjo = g.querySelector('.pawn-varjo');
 
     /*
      * LIIKKUVA NAPPULA ON YHTÄ PIENI KUIN PAIKALLAAN OLEVA. Siirron
-     * paikka on TYYLISSÄ (siirtymä animoi sen), ja tyyli voittaa
-     * transform-määreen — fokusnäkymän käänteisskaalaus on siksi
-     * kirjoitettava tähän samaan merkkijonoon eikä paivitaFokusMerkki-
-     * Mitatiin. Kerroin luetaan kerran: iso animaatio hiljentää kartan
-     * muut liikkeet, joten zoomi ei muutu matkan aikana.
+     * paikka on TYYLISSÄ (hyppy kirjoittaa sen joka kehyksellä), ja
+     * tyyli voittaa transform-määreen — fokusnäkymän käänteisskaalaus
+     * on siksi kirjoitettava tähän samaan merkkijonoon eikä
+     * paivitaFokusMerkkiMitatiin. Kerroin luetaan kerran: iso animaatio
+     * hiljentää kartan muut liikkeet, joten zoomi ei muutu matkan
+     * aikana.
      */
     const kerroin = this.fokusMerkkiKerroin(FOKUS_NAPPULA_PX, NAPPULAN_R);
     const koko = Math.abs(kerroin - 1) < 0.0005 ? '' : ` scale(${kerroin.toFixed(4)})`;
-    const start = pixelOf(board, from);
-    g.style.transform = `translate(${start.x}px, ${start.y}px)${koko}`;
-    g.getBoundingClientRect(); // varmistaa, että ensimmäinenkin askel animoituu
+    let paikka = pixelOf(board, from);
+    g.style.transform = `translate(${paikka.x}px, ${paikka.y}px)${koko}`;
 
     for (const [i, pos] of path.entries()) {
-      const { x, y } = pixelOf(board, pos);
-      g.style.transform = `translate(${x}px, ${y}px)${koko}`;
+      const kohta = pixelOf(board, pos);
+      const viimeinen = i === path.length - 1;
       // Määränpään äänimaisema lähtee nousemaan jo viimeisellä
       // askeleella, jotta ristihäivytys on käynnissä saapumishetkellä
       // eikä ala vasta kertojan kanssa yhtä aikaa (omistajan toive).
-      if (i === path.length - 1) this.ennakoiAmbienssi(pos);
-      sfx.play(i === path.length - 1 ? 'arrive' : 'step');
-      await this.wait(this.reducedMotion ? 0 : stepMs);
+      if (viimeinen) this.ennakoiAmbienssi(pos);
+      if (this.reducedMotion) {
+        g.style.transform = `translate(${kohta.x}px, ${kohta.y}px)${koko}`;
+      } else {
+        await this.hyppaaAskel(g, hahmo, varjo, paikka, kohta, stepMs, koko);
+      }
+      /*
+       * NAKSAHDUS KUULUU LASKEUTUMISEEN, ei lähtöön: nappula kolahtaa
+       * lautaan silloin kun se osuu siihen. Aiemmin liike oli tasainen
+       * liuku eikä kosketushetkeä ollut, joten ääni soi askeleen
+       * alussa.
+       */
+      sfx.play(viimeinen ? 'arrive' : 'step');
+      paikka = kohta;
+      /*
+       * TAUKO VÄLIPISTEESSÄ (omistajan tilaus #100: *"kuin näkymätön
+       * käsi siirtäisi pelinappulaa laudalla aavistuksen
+       * hidastettuna"*). Tauko on nimenomaan hyppyjen VÄLISSÄ: viimeisen
+       * laskeutumisen jälkeen odottaminen vain viivyttäisi saapumista.
+       */
+      if (!viimeinen && !this.reducedMotion) await this.wait(HYPYN_TAUKO_MS);
     }
 
     g.remove();
     this.movingPlayerId = null;
     this.revealShownFor = null;
     this.drawPawns();
+    /*
+     * NOPPA POIS UUDESSA KAUPUNGISSA (#98). Matka päättyi kaupunkiin
+     * (myös lento on tällainen siirto, jossa askelia on yksi), joten
+     * edellisen heiton noppa on tehnyt tehtävänsä.
+     */
+    if (path[path.length - 1]?.type === 'city') this.piilotaNoppa();
   }
 
   /** Nopanheitto: noppa lentää nappulan vierestä laudalle ja jää siihen. */
@@ -16040,9 +16212,19 @@ export class UI {
     // kartan päällä (ks. renderActions).
     const player = this.game.player;
     this.dieJitter = { x: (Math.random() - 0.5) * 0.06, y: (Math.random() - 0.5) * 0.05 };
-    const from = this.kartta.mapToPane(pixelOf(this.game.board, player.pos));
-    const to = this.kartta.dieRestingSpot();
+    /*
+     * HEITTO AJETAAN SIIRTOKUOREN PIKSELEISSÄ (#98). Noppa asuu
+     * kuoressa, joten sen oma koordinaatisto on kuoren — ei
+     * karttaruudun. Ero on täsmälleen kartan nykyinen siirto, ja
+     * yleiskuvassa se on nolla, joten vanha käytös säilyy sellaisenaan.
+     * Lepopaikka on yhä ruudun mitoilla arvottu avomeren kolkka
+     * (dieRestingSpot); vasta pysähdyttyään noppa lukitaan siihen
+     * kohtaan KARTTAA, johon se jäi.
+     */
+    const from = this.kartta.paneKuoreen(this.kartta.mapToPane(pixelOf(this.game.board, player.pos)));
+    const to = this.kartta.paneKuoreen(this.kartta.dieRestingSpot());
     this.dieThrown = true;
+    this.kartta.merkitseNopanPaikka(to);
 
     /*
      * Noppa tuntuu kädessä kahdesti (iOS-kuori; selaimessa mykkä):
@@ -16065,6 +16247,24 @@ export class UI {
       onSettle: () => natiiviTarise('keskitaso'),
     }));
     await this.wait(this.reducedMotion ? 0 : 260);
+  }
+
+  /**
+   * Noppa pois kartalta pehmeästi häivyttäen (omistajan tilaus #98,
+   * kohta 3: *"kun saavutaan uuteen kaupunkiin, noppa häviää
+   * feidaten"*). Kutsutaan nappulan siirron päätteeksi, kun matka
+   * pysähtyi kaupunkiin — myös lennosta, joka on siirto yhdellä
+   * askeleella (animatePawnSisalla).
+   *
+   * Lippu nollataan ennen häivytystä, jotta kesken häipymisen tuleva
+   * näkymän sovitus (fitViewBox → ankkuroiNoppa) ei enää siirrä
+   * katoavaa noppaa.
+   */
+  piilotaNoppa() {
+    if (!this.dieThrown) return;
+    this.dieThrown = false;
+    this.noppaKartalla = null;
+    this.boardDie?.haivyta();
   }
 
   buildToast({ kind, text, sub, icon, token, city, linssi }) {

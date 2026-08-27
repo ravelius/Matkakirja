@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1188';
+const CACHE = 'matkakirja-2026-08-09.1189';
 const SHELL = [
   './',
   './index.html',
@@ -166,6 +166,9 @@ const SHELL = [
   './assets/kartat/symbolit/sym-tekniikka.webp',
   './assets/kartat/symbolit/sym-urheilu.webp',
   './assets/kartat/symbolit/sym-kaupunki.webp',
+  // Pelinappula (tinaherra) on aina näkyvissä, joten se kuuluu
+  // esivarastoon siinä missä kartan symbolitkin.
+  './assets/kartat/nappula-tinaherra.webp',
   './js/packs/julisteet.js',
   './js/packs/paikallisaarteet.js',
   './js/packs/lipputiedot.js',

@@ -557,7 +557,7 @@ export class Kartta {
     if (alkuun) this.ui.placeIntro(box, vy, vh, h);
     this.placeFactCard(w, h);
     // Noppa lepää kartan koordinaateissa, joten se siirretään uuteen mittakaavaan.
-    if (this.ui.dieThrown && this.ui.boardDie) this.ui.boardDie.place(this.dieRestingSpot());
+    this.ankkuroiNoppa();
     /*
      * Kartan kuva päivitetään AINA kun näkymä asettuu.
      *
@@ -654,6 +654,26 @@ export class Kartta {
        */
       const j = this.ui.panJakso;
       this.ui.panX = ((x % j) + j) % j - j;
+      /*
+       * KARTTAAN ANKKUROIDUT KAPPALEET KÄÄRITÄÄN MUKANA (#98).
+       *
+       * Kartasta on kopio yhden laudan leveyden päässä, joten sauman
+       * yli hypättäessä ruudulla ei muutu mikään. Kuoressa asuvat
+       * kappaleet (noppa) ovat kuitenkin yksittäisiä eivätkä kopioidu:
+       * ilman tätä noppa loikkaisi kokonaisen maailman leveyden juuri
+       * sillä hetkellä, kun karttaa ei näytä liikkuvan lainkaan.
+       * Korjaus on tarkka ja maksuton — sama luku toiseen suuntaan.
+       */
+      const kaari = this.ui.panX - x;
+      const skaala = this.ui.zoomSkaala;
+      if (kaari && this.ui.noppaKartalla && skaala > 0) {
+        // Sekä muistiin kirjattu laudan kohta että elävä ruutupaikka
+        // siirtyvät yhdellä laudan leveydellä — kartalla se on sama
+        // paikka, ja seuraava ankkurointi päätyy samaan lukuun.
+        this.ui.noppaKartalla.x -= kaari / skaala;
+        const noppa = this.ui.boardDie;
+        if (noppa) noppa.place({ x: noppa.spot.x - kaari, y: noppa.spot.y });
+      }
     } else {
       this.ui.panX = Math.min(0, Math.max(-(this.ui.panVara ?? 0), x));
     }
@@ -1185,7 +1205,7 @@ export class Kartta {
      */
     this.ui.paivitaFokusSumu?.(this.ui.fokusMaat?.());
     this.placeFactCard(paneW, paneH);
-    if (this.ui.dieThrown && this.ui.boardDie) this.ui.boardDie.place(this.dieRestingSpot());
+    this.ankkuroiNoppa();
   }
 
   /**
@@ -3370,6 +3390,115 @@ export class Kartta {
       x: w * (spot.x + jitter.x),
       y: h * (spot.y + jitter.y),
     };
+  }
+
+  /*
+   * --- KARTTAAN ANKKUROITU KAPPALE (#98, #100) ------------------------
+   *
+   * Kartan päällä makaavat DOM-kappaleet (toistaiseksi noppa) asuvat
+   * SIIRTOKUORESSA `.kartta-kuori`. Kuoren oma muunnos hoitaa
+   * panoroinnin ja nipistyksen ilmaiseksi, joten näitä laskureita
+   * tarvitaan vain silloin, kun kartan MITTAKAAVA vaihtuu — eli
+   * fitViewBoxissa ja sovitaMannerZoomissa. Panoroinnin kehyssilmukkaan
+   * ei siis tule yhtään asettelunlukua (vrt. paneMitat).
+   *
+   * Miksi kuoren omat pikselit eikä paneelin: kuori LIIKKUU. Paneelin
+   * pikseleissä laskettu paikka olisi oikein vain sillä hetkellä, kun
+   * panX ja panY sattuvat olemaan nollassa.
+   */
+
+  /**
+   * Kartan mittasuhde kuoren sisällä: SVG:n vasen yläkulma kuoren
+   * kulmasta mitattuna, viewBox ja pikseliä laudan yksikköä kohti.
+   *
+   * Mitta luetaan getBoundingClientRectillä eikä zoomimuuttujista
+   * samasta syystä kuin nipistyksen `laudanKuvaus`: SVG ei ala
+   * paneelin kulmasta, vaan asettelu (align-self, keskitys) siirtää
+   * sitä, eikä siirtoa voi johtaa panX:stä ja skaalasta.
+   *
+   * HUOM: kesken nipistyksen kuoressa on skaalaus, jolloin molemmat
+   * mitat ovat venytettyjä. Tätä ei kutsuta silloin — ele piirtyy
+   * puhtaana CSS-muunnoksena ja paikat lasketaan uudelleen vasta kun
+   * sormet irtoavat (paataNipistys → fitViewBox).
+   */
+  kuorenMitat() {
+    const svg = this.ui.svg;
+    const kuori = this.kuori;
+    if (!svg || !kuori) return null;
+    const vb = svg.viewBox?.baseVal;
+    const r = svg.getBoundingClientRect();
+    if (!r.width || !vb?.width) return null;
+    const kr = kuori.getBoundingClientRect();
+    return {
+      x0: r.left - kr.left,
+      y0: r.top - kr.top,
+      vb,
+      pxPerYks: r.width / vb.width,
+    };
+  }
+
+  /** Laudan koordinaatit siirtokuoren omiksi pikseleiksi. */
+  karttaKuoreen(piste, mitat = this.kuorenMitat()) {
+    if (!mitat || !Number.isFinite(piste?.x) || !Number.isFinite(piste?.y)) return null;
+    return {
+      x: mitat.x0 + (piste.x - mitat.vb.x) * mitat.pxPerYks,
+      y: mitat.y0 + (piste.y - mitat.vb.y) * mitat.pxPerYks,
+    };
+  }
+
+  /** Siirtokuoren pikselit laudan koordinaateiksi. */
+  kuoriKartalle(piste, mitat = this.kuorenMitat()) {
+    if (!mitat || !Number.isFinite(piste?.x) || !Number.isFinite(piste?.y)) return null;
+    return {
+      x: mitat.vb.x + (piste.x - mitat.x0) / mitat.pxPerYks,
+      y: mitat.vb.y + (piste.y - mitat.y0) / mitat.pxPerYks,
+    };
+  }
+
+  /**
+   * Karttaruudun pikselit siirtokuoren pikseleiksi. Ero on täsmälleen
+   * kuoren nykyinen siirto, ja se luetaan elementeiltä eikä panX:stä —
+   * yleiskuvassa panX on null, mutta kuori on silti paikallaan.
+   */
+  paneKuoreen(piste) {
+    const pane = this.ui.mapPane;
+    const kuori = this.kuori;
+    if (!pane || !kuori || !Number.isFinite(piste?.x) || !Number.isFinite(piste?.y)) return piste;
+    const pr = pane.getBoundingClientRect();
+    const kr = kuori.getBoundingClientRect();
+    return { x: piste.x - (kr.left - pr.left), y: piste.y - (kr.top - pr.top) };
+  }
+
+  /**
+   * Panee nopan sinne, mihin se laudalla jäi (ui.noppaKartalla), ja
+   * antaa sille kartan mittakaavan. Kutsutaan aina kun näkymä on
+   * asettunut; ilman heitettyä noppaa ei tehdä mitään.
+   *
+   * `perus` on se pikseliä/yksikkö-suhde, jolla noppa heitettiin. Kun
+   * kartta lähenee, suhde kasvaa ja noppa suurenee samassa suhteessa —
+   * juuri se on illuusio kappaleesta laudan pinnalla.
+   */
+  ankkuroiNoppa() {
+    const noppa = this.ui.boardDie;
+    const kohta = this.ui.noppaKartalla;
+    if (!noppa || !this.ui.dieThrown || !kohta) return;
+    const mitat = this.kuorenMitat();
+    const paikka = this.karttaKuoreen(kohta, mitat);
+    if (!paikka) return;
+    noppa.place(paikka);
+    noppa.asetaSkaala(kohta.perus > 0 ? mitat.pxPerYks / kohta.perus : 1);
+  }
+
+  /**
+   * Ottaa nopan lepopaikan talteen LAUDAN koordinaatteina heiton
+   * päätteeksi. Kutsuja antaa paikan kuoren pikseleinä — samoina, joilla
+   * heitto ajettiin.
+   */
+  merkitseNopanPaikka(kuoripiste) {
+    const mitat = this.kuorenMitat();
+    const kartalla = this.kuoriKartalle(kuoripiste, mitat);
+    if (!kartalla) return;
+    this.ui.noppaKartalla = { ...kartalla, perus: mitat.pxPerYks };
   }
 
   /** Kohdat, joihin maastokuvioita ei saa piirtää: kaupungit, nimet ja reitit. */
