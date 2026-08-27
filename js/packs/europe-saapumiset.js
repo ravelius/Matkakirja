@@ -8,6 +8,20 @@
 // hän ehti generoida niistä luennat, mutta tekstit eivät päätyneet
 // repoon. Ne on palautettu ElevenLabsin historiasta sanatarkasti, jotta
 // ruudulla lukee täsmälleen se, mitä kertoja lukee.
+// FOKUSVIRTAKAUPUNGIT EIVÄT LUE MERKINTÄÄNSÄ TÄÄLTÄ (27.8.2026).
+// Ateena, Sofia, Istanbul, Rooma, Bukarest ja Sarajevo saavat
+// matkakirjakorttinsa fokusvirran omasta merkinnästä
+// (js/packs/fokusvirta-<kaupunki>.js, kytkentä js/fokusvirta.js
+// fokusvirtaMatkakirja). Alla olevat kuusi merkintää ovat siis
+// pelaajalle näkymättömiä niin kauan kuin fokusmoodi on päällä — ne on
+// TAHALLAAN jätetty paikalleen kolmesta syystä: (1) fokusmoodin
+// lukupuoli on yhä olemassa (js/ui-apurit.js fokusmoodiPaalla), ja
+// moodin pois kytkeneellä pelaajalla nämä ovat ainoa merkintä;
+// (2) jokaisella on generoitu luenta (SAAPUMISLUENNAT,
+// assets/audio/puhe-europe-saapuminen-*.mp3), joka jäisi orvoksi;
+// (3) tests/vanha-maailma.test.mjs vaatii merkinnän jokaiselta vanhan
+// maailman kaupungilta ja tests/aanitasot.test.mjs laskee luennalliset
+// merkinnät. Poistaminen olisi siis kolmen paikan purku, ei siivous.
 export const EUROPE_SAAPUMISET = {
   /*
    * Dekkarimerkinnät (docs/isoisan-raamattu.md, 7.8.2026): viisi

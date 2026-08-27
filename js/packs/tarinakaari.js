@@ -18,6 +18,15 @@
  *
  * Luennat: assets/audio/puhe-kaari-<osa>-<id>.mp3 (Viisas Kertoja,
  * tools/generoi-kaari.mjs). Kaikilla kohteilla on kaikki kolme.
+ *
+ * SAAPUMINEN-OSA ON FOKUSVIRTAKAUPUNGEISSA VARJOSSA (27.8.2026).
+ * Ateenassa, Sofiassa, Istanbulissa, Roomassa, Bukarestissa ja
+ * Sarajevossa matkakirjakortin omistaa fokusvirran oma merkintä
+ * (js/fokusvirta.js fokusvirtaMatkakirja) — kaaren `saapuminen` ei siis
+ * päädy näissä kaupungeissa ruudulle. KOHTAAMINEN, KYSYMYS ja AARRE
+ * ovat näissäkin kaupungeissa täydessä käytössä: laatan kysymys tulee
+ * yhä täältä (js/game.js kaariTilanne, js/visa.js), joten kohteita ei
+ * saa poistaa fokusvirran perusteella.
  */
 
 import { KAARI_PAKETIT } from '../tyohuone-kehitys-data.js';

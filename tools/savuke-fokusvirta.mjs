@@ -25,6 +25,10 @@
  *      vie samaan laattakysymykseen kuin ennenkin.
  *   8. JULISTE-tehtävän oikea vastaus myöntää Ateenan julisteen ja
  *      tarjoaa Lunasta juliste -napin.
+ *   9. Laatan ratkettua matkakirjakortti EI palaa vanhaan
+ *      saapumistekstiin — ei heti (aarteen jälkisana) eikä kaupunkiin
+ *      palatessa (fokusvirran oma saapumismerkintä). Omistajan bugi
+ *      27.8.2026; ks. väitteiden kohdat alempana.
  *
  * LIPPUTESTI (vanha virta palaa): palvelin kääntää lennossa molemmat
  * liput päinvastoin (FOKUSVIRTA_KORTIT = true, FOKUS_LEHTITEHTAVAT =
@@ -344,6 +348,68 @@ const kysymys = await sivu.evaluate(async () => {
 });
 vaadi('Kyllä avaa laattakysymyksen ja sulkee kortin',
   kysymys.kortti === 0 && (kysymys.kysymys || kysymys.vaihe === 'quiz'), JSON.stringify(kysymys));
+
+/*
+ * LAATAN RATKETTUA MERKINTÄ EI VAIHDU (omistajan bugi 27.8.2026).
+ * Ateenan pulman ratkettua matkakirjakorttiin ilmestyi VANHA
+ * saapumisteksti ("Torin kauppias antoi minun maistaa oliiveja
+ * kolmesta ruukusta", js/packs/europe-saapumiset.js) fokusvirran oman
+ * merkinnän tilalle. Yksikkötesti vartioi fokusvirtaMatkakirjaa
+ * (tests/fokusvirta.test.mjs); tämä vartioi sitä, mitä KORTISSA
+ * oikeasti lukee — sinne vika ruudulla ilmestyi.
+ *
+ * Tila rakennetaan kuten js/game.js revealToken sen jättää: laatta pois
+ * ja kaupunki löydettyjen joukkoon.
+ */
+const ratkaistu = await sivu.evaluate(async () => {
+  const { ui, game } = window.matkakirja;
+  document.getElementById('quiz-dialog')?.close?.();
+  game.quiz = null;
+  game.phase = 'action';
+  game.tokens.delete('ateena');
+  game.revealed.set('ateena', 'coin');
+  ui.render();
+  await new Promise((r) => setTimeout(r, 1800));
+  return {
+    piilossa: document.querySelector('.fact-card')?.hidden !== false,
+    teksti: (document.getElementById('fact-text')?.textContent ?? '').slice(0, 60),
+  };
+});
+vaadi('laatan ratkettua kortissa on yhä isoisän fokusmerkintä',
+  !ratkaistu.piilossa
+    // Joko saapumismerkintä ("Torilla…") tai aarteen jälkisana
+    // ("Seisoin samalla kalliolla…") — kumpikin on fokusvirran omaa.
+    && /torilla|kalliolla/i.test(ratkaistu.teksti)
+    // Vanhan saapumistekstin tunnussanat EIVÄT saa palata korttiin.
+    && !/kauppias|ruuku/i.test(ratkaistu.teksti),
+  JSON.stringify(ratkaistu));
+
+/*
+ * SAMA RATKAISTUSSA KAUPUNGISSA ILMAN AARREMERKINNÄN LIPPUA. Aarteen
+ * jälkisana on kertakäyttöinen: se katoaa, kun pelaaja poistuu
+ * kaupungista (js/fokusvirta.js aarreLoytyi nollaa lipun). Juuri
+ * silloin vika näkyi — kortti putosi vanhaan saapumistekstiin. Käydään
+ * siis muualla ja palataan Ateenaan.
+ */
+const paluu = await sivu.evaluate(async () => {
+  const { ui, game } = window.matkakirja;
+  const muu = game.pack.cities.find((c) => c.id !== 'ateena');
+  game.player.pos = { type: 'city', city: muu.id };
+  ui.render();
+  await new Promise((r) => setTimeout(r, 400));
+  game.player.pos = { type: 'city', city: 'ateena' };
+  ui.render();
+  await new Promise((r) => setTimeout(r, 2500));
+  return {
+    lippu: Boolean(ui.fokusaarreMerkinta),
+    piilossa: document.querySelector('.fact-card')?.hidden !== false,
+    teksti: (document.getElementById('fact-text')?.textContent ?? '').slice(0, 60),
+  };
+});
+vaadi('ratkaistuun kaupunkiin palatessa kortissa on fokusvirran merkintä',
+  !paluu.piilossa && paluu.lippu === false
+    && /torilla/i.test(paluu.teksti) && !/kauppias|ruuku/i.test(paluu.teksti),
+  JSON.stringify(paluu));
 
 vaadi('ei sivuvirheitä kokeilutilassa', virheet.length === 0, virheet.join(' | '));
 
