@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1177: Lippusivut era 9: koko Etela-Amerikan lauta (11 maata; versioliput: Brasilian keisarikunta 1870-1889, Perun San Martin 1820, Bolivian wiphala, Paraguayn takasivu). Lippuja 79/116.',
   'v1176: Lippusivut era 8: koko Pohjois-Amerikan lauta (USA + 13 tahden versiolippu, Kanada + Red Ensign, Meksiko, Gronlanti, Kuuba, Guatemala, Nicaragua, Panama, Puerto Rico, Bermuda). Lippuja tehty 60/116.',
   'v1175: Tyopoydan trackpad: kahden sormen vieritys panoroi karttaa, nipistys zoomaa pehmeasti ja portaattomasti kursoriin, hiiren rullan naksu zoomaa portaan; kartan plus/miinus-napit poistettu.',
   'v1174: Kehittajatilan ylarivissa vain yksi maailma-nappi: koko lauta ja kohdekaupungit nakyviin, reitit piilossa, sumennus ja vierityslukko pois; hampurilaisen fokus/sumennus-kytkimet poistettu. Raamattuun Matkakirjan ihmeet -osio.',
