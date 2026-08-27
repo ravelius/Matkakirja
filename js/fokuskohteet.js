@@ -108,6 +108,7 @@ import { FOKUSKOHTEET_EGY } from './packs/fokuskohteet-egy.js';
 import { FOKUSKOHTEET_FRA } from './packs/fokuskohteet-fra.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
+import { FOKUSKOHTEET_HRV } from './packs/fokuskohteet-hrv.js';
 import { FOKUSKOHTEET_IRN } from './packs/fokuskohteet-irn.js';
 import { FOKUSKOHTEET_IRQ } from './packs/fokuskohteet-irq.js';
 import { FOKUSKOHTEET_ITA } from './packs/fokuskohteet-ita.js';
@@ -208,6 +209,18 @@ const KOHDE_MAAT = {
    * napautettava, eikä yhtään nimeä ole kahdesti.
    */
   HUN: FOKUSKOHTEET_HUN,
+  /*
+   * KROATIA 27.8.2026, ja se on tässä taulussa ensimmäinen maa, jonka
+   * LEHTI TEHTIIN TÄTÄ LISTAA VARTEN eikä toisin päin. Kaikilla
+   * edellisillä ehto oli sama — maa pääsee tauluun vain, jos sen
+   * fokuslehti on jo FOKUS_POHJAT-taulussa ja ämpärissä — ja Kroatian
+   * kohdalla ehto täyttyi siten, että lehti (HRV.webp) renderöitiin
+   * uusiksi kuratoituna samassa erässä: merten, vuorten ja jokien
+   * nimiä ei ole poltettu kuvaan lainkaan, koska nimet tulevat näiden
+   * kohteiden nimiöistä. Ks. tools/fokuskartta/maat.mjs FOKUSMAAT.HRV
+   * ja js/packs/fokuskohteet-hrv.js:n alku.
+   */
+  HRV: FOKUSKOHTEET_HRV,
 };
 
 /** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta). */

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1240, teksti: 'Kroatian fokuskartta ja karttakohteet' },
   { v: 1239, teksti: 'Unkarin fokuskartta ja karttakohteet' },
   { v: 1238, teksti: 'Nimiauditti kaikille fokusmaille ja vartio' },
   { v: 1237, teksti: 'Pelinappula yksinkertaiseksi valkoiseksi' },

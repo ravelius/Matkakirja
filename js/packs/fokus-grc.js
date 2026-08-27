@@ -204,10 +204,18 @@ export const FOKUS_POHJAT = {
     rajaus: { x: 5483.61, y: 782.19, w: 471.11, h: 696.54 },
     tiedosto: 'GBR.webp',
   },
+  /*
+   * KROATIA on Kreikan jälkeen TOINEN KURATOITU lehti (omistajan erä
+   * 27.8.2026): ikkuna, vesileima, vuoret ja kaupungit on aseteltu
+   * käsin tools/fokuskartta/maat.mjs:n FOKUSMAAT.HRV-osiossa, ja
+   * merten, vuorten ja jokien nimeäminen on luovutettu pelille.
+   * Luvut alla ovat kuratoidun ajon tulos (27.8.2026) eivätkä enää
+   * yleisen reitin geometriasta johdettuja.
+   */
   HRV: {
     lauta: 'maailmankartta',
-    bbox: { x: 6142.23, y: 1471.72, w: 479.18, h: 299.49 },
-    rajaus: { x: 6247.94, y: 1506.28, w: 267.76, h: 230.38 },
+    bbox: { x: 6177.04, y: 1495.31, w: 409.25, h: 255.78 },
+    rajaus: { x: 6224.26, y: 1524.82, w: 314.81, h: 196.75 },
     tiedosto: 'HRV.webp',
   },
   /*
@@ -1223,8 +1231,7 @@ export const FOKUS_LISANIMET = {
     ],
   },
 
-  /* ================================================================
-   * MUUT MAAT — LEHDEN PEILIKUVA, KONEEN KIRJOITTAMA
+  /* =========================================================   * MUUT MAAT — LEHDEN PEILIKUVA, KONEEN KIRJOITTAMA
    *
    * Omistajan havainto Bulgarian lehdeltä 27.8.2026: *"Plovdivin nimi
    * näkyy kahteen kertaan."* Syy oli se, että yllä oleva taulu tunsi
@@ -1713,6 +1720,52 @@ export const FOKUS_LISANIMET = {
       { nimi: 'Eger', x: 6512.6, y: 1480.4, dx: 9, dy: -10 },
       // 17,6504 E / 47,6875 N
       { nimi: 'Győr', x: 6421.7, y: 1489.5, dx: -10, dy: -8, ank: 'end' },
+    ],
+  },
+
+  /*
+   * KROATIA (27.8.2026). Tässä on VAIN `kaupungit`, eikä se ole
+   * puute vaan koko taulun tarkoitus tällä lehdellä.
+   *
+   * FOKUS_SVG_NIMET on false, joten peli ei piirrä näistä riveistä
+   * mitään (piirraLisanimet palaa heti). Ainoa käyttäjä on
+   * js/fokuskohteet.js, joka tarvitsee poltetut kaupunginnimet
+   * kahteen asiaan:
+   *
+   *   1. NIMIÖN VAIENNUS (kohteenNimio → nimiJoKartalla). Kohde, jonka
+   *      nimi on jo kuvassa, ei lado nimiötään sen viereen. Vertailu on
+   *      PAIKALLA eikä nimellä, ja toleranssi on kolme lautayksikköä.
+   *   2. NAPAUTETTAVA NIMI (kaupunginNimiLaatikko). Poltettu nimi on
+   *      kartalla se iso kohde, johon sormi osuu; peli laskee sen
+   *      laatikon näistä luvuista lehden omilla mitoilla.
+   *
+   * KROATIAN LEHDELLÄ VUORIA JA MERIÄ EI OLE TÄSSÄ, koska niiden
+   * nimiä ei ole poltettu kuvaan lainkaan (tools/fokuskartta/maat.mjs
+   * HRV `poltetutNimet`). Nimi tulee nimiöstä, ja rivi tässä taulussa
+   * olisi lupaus poltosta, jota ei ole tehty.
+   *
+   * RIVIT OVAT maat.mjs HRV.kaupungit -listan PEILIKUVA laudan
+   * koordinaateissa: sama kirjoitusasu, sama `dx`/`dy` (prototyypin
+   * pikseleitä, ks. piirto.js `S`) ja sama puoli. `ank: 'end'` on
+   * SVG:n vastine piirto.js:n `ank: 'right'` -arvolle.
+   *
+   * DUBROVNIK EI OLE TÄSSÄ. Se on pelilaatta, jonka nimen peli latoo
+   * itse, eikä sitä ole poltettu lehteen — laatan hoitaa
+   * nimiJoKartalla-tarkistuksen toinen haara (pack.cities).
+   */
+  HRV: {
+    lauta: 'maailmankartta',
+    kaupungit: [
+      // 15,9772 E / 45,8144 N
+      { nimi: 'Zagreb', x: 6365.9, y: 1568.1, dx: 10, dy: -8 },
+      // 16,4402 E / 43,5081 N
+      { nimi: 'Split', x: 6381.3, y: 1662.8, dx: 9, dy: 12 },
+      // 14,4422 E / 45,3271 N
+      { nimi: 'Rijeka', x: 6314.7, y: 1588.3, dx: -10, dy: -16, ank: 'end' },
+      // 15,2314 E / 44,1194 N
+      { nimi: 'Zadar', x: 6341, y: 1637.9, dx: -10, dy: -6, ank: 'end' },
+      // 18,6955 E / 45,5550 N
+      { nimi: 'Osijek', x: 6456.5, y: 1578.8, dx: 9, dy: 12 },
     ],
   },
 };

@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1240: Kroatian fokuskartta ja 19 karttakohdetta (Dubrovnikin lehti) - Adrianmeri, Dinara, Plitvice, Split, Zagreb ym.',
   'v1239: Unkarin fokuskartta ja 17 karttakohdetta (Budapestin lehti) - Tonava, Balaton, Kekes, Debrecen, Eger ym.',
   'v1238: Nimiauditti - 18 maan poltetut kaupunkinimet klikattaviksi (14 tuplanimea pois), 18 katkennutta nimiota korjattu, koneellinen vartio valvoo jatkossa.',
   'v1237: Pelinappula on nyt yksinkertainen valkoinen lautapelinappula (tinaherra kytkimen takana) - hyppyanimaatio ja ankkurit ennallaan.',
