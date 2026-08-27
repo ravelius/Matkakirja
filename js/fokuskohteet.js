@@ -875,9 +875,9 @@ function kysyKohteesta(ui, kysymys) {
  * NAUHAN PIIRTÄÄ PELI, EI KUVATIEDOSTO (Raamattu: *"peli piirtää nauhan
  * kuvan päälle, sitä ei polteta kuvatiedostoon"*). Nauha on DIAGONAALINEN
  * KULMANAUHA kuvan vasemmassa yläkulmassa (omistajan tilaus 27.8.2026
- * ilta): 45 asteen kaista, jonka päät jatkuvat kuvan reunojen yli ja
- * jonka juuressa on tummempi taitoskolmio kummallakin reunalla — nauha
- * näyttää kääriytyvän kuvan ympäri. Geometria on kokonaan css:ssä
+ * ilta): 45 asteen kaista, jonka päät katkeavat kuvan reunaan ja
+ * tummenevat juuri ennen sitä — nauha näyttää kääriytyvän kuvan ympäri
+ * sen sijaan että leijuisi sen päällä. Geometria on kokonaan css:ssä
  * (css/fokuskohteet.css, osio MATKAKIRJAN IHME); täällä syntyy vain
  * rakenne: kääre, kaksi taitetta ja tekstikaista.
  *
@@ -914,23 +914,29 @@ function kohteenIhmekuva(kohde) {
  * css:ssä.
  *
  * KOLME OSAA, KOSKA KÄÄRIYTYMINEN ON KOLME KAPPALETTA: kaista on
- * 45 asteen kulmaan käännetty tekstipalkki, joka jatkuu kuvan reunojen
- * yli, ja kaksi taitetta ovat pienet tummemmat kolmiot ylä- ja
- * vasemman reunan kohdalla — ne ovat se osa nauhaa, joka "menee kuvan
- * taakse". Ilman taitteita kaista näyttäisi vain vinolta lipukkeelta.
- * Kääre itse on nollan kokoinen piste kuvan kulmassa: kaikki kolme
- * asemoidaan siitä, joten sama komponentti istuu kortin kuvaan ja
- * suurennokseen pelkillä muuttujien arvoilla.
+ * 45 asteen kulmaan käännetty tekstipalkki, joka kulkee kulman yli, ja
+ * kaksi taitetta ovat kaistan päissä olevat tummenevat vyöhykkeet —
+ * ne ovat se kohta, jossa paperi kaareutuu varjoon ja katoaa kuvan
+ * reunan taakse. Ilman taitteita kaista näyttäisi vain vinolta
+ * lipukkeelta.
+ *
+ * KÄÄRE LEIKKAA NAUHAN KUVAN REUNAAN (omistajan tilaus 27.8.2026,
+ * iPad-kaappaus): kääre on kuvan kulmassa oleva neliö, jolla on
+ * `overflow: hidden`, joten kaistan päät ja niiden varjo katkeavat
+ * täsmälleen kuvan reunaan eivätkä jatku vaalean paperikehyksen
+ * päälle. Sama komponentti istuu kortin kuvaan ja suurennokseen
+ * pelkillä muuttujien arvoilla.
  */
 function piirraIhmenauha(isanta, teksti) {
   if (!teksti) return null;
   const nauha = html('span', 'fokuskohde-ihmenauha');
   nauha.setAttribute('aria-hidden', 'true');
-  // Taitteet ennen kaistaa: kaista maalautuu niiden päälle, jolloin
-  // pyöristyksen tai puolen pikselin heiton jättämä sauma ei näy.
+  // Kaista ensin, taitteet päälle: taitteet ovat läpinäkyviä varjon
+  // liukuvärejä kaistan päissä, joten ne kuuluvat kaistan PÄÄLLE —
+  // alle jäädessään ne peittyisivät kaistan omaan pohjaväriin.
+  nauha.appendChild(html('span', 'fokuskohde-ihmekaista', teksti));
   nauha.appendChild(html('span', 'fokuskohde-ihmetaite fokuskohde-ihmetaite-ylos'));
   nauha.appendChild(html('span', 'fokuskohde-ihmetaite fokuskohde-ihmetaite-vasen'));
-  nauha.appendChild(html('span', 'fokuskohde-ihmekaista', teksti));
   isanta.appendChild(nauha);
   return nauha;
 }
@@ -1030,11 +1036,11 @@ function piirraKohdeKuva(ui, sisalto, kuva) {
    * Nauha napin sisään eikä kehykseen: kehyksessä on myös kuvateksti,
    * ja nauhan on jäätävä kuvan päälle sen vasempaan yläkulmaan.
    *
-   * KEHYS SAA OMAN LUOKAN, koska kulmanauha jatkuu kuvan reunojen yli
-   * ja kortin sisältö on vieritettävä laatikko (`overflow-y: auto`),
-   * joka leikkaisi ylityksen pois. Luokka työntää kuvanapin irti
-   * sisällön ylä- ja vasemmasta reunasta juuri sen verran, että nauhan
-   * päät mahtuvat näkyviin.
+   * KEHYS SAA OMAN LUOKAN, joka kertoo että tämä kuva kantaa nauhan:
+   * css siirtää kääreen napin 1px reunuksen sisään, kuvan pinnalle.
+   * Tilaa ei enää varata mistään, koska kääre leikkaa nauhan kuvan
+   * reunaan (omistajan tilaus 27.8.2026) eikä kortin vieritettävälle
+   * sisällölle jää mitään leikattavaa.
    */
   if (kuva.nauha) kehys.classList.add('fokuskohde-kuva-nauhalla');
   piirraIhmenauha(nappi, kuva.nauha);

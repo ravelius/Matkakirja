@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1204, teksti: 'Ihmenauha istuu kuvaan: leikkaus, varjo, leveampi' },
   { v: 1203, teksti: 'Lahdeluettelon epaselvat lisenssit selvitetty' },
   { v: 1202, teksti: 'Nappulan alusta siistiksi: laatta ja sykkeet pois alta' },
   { v: 1201, teksti: 'Euroopan kadonneet: Tuileries, Vanha St Paul, Forum' },
