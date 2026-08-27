@@ -117,8 +117,11 @@ test('jokaisella kohdemaalla on lehden poltetut nimet taulussa', () => {
     assert.ok(tiedot, `${iso}: FOKUS_LISANIMET-rivi puuttuu. Aja `
       + 'tools/tee-fokus-lisanimet.mjs ja liitä lohko js/packs/fokus-grc.js:ään — '
       + 'ilman sitä maan kaupunkikohteet latovat nimensä kuvaan poltetun päälle.');
-    assert.ok(Array.isArray(tiedot.kaupungit) && tiedot.kaupungit.length > 0,
-      `${iso}: kaupungit-lista puuttuu tai on tyhjä.`);
+    // Tyhjä lista on sallittu, kun se on PÄÄTÖS: Saksan lehteen ei
+    // polteta yhtäkään nimeä (maat.mjs DEU), joten kirjaus on tyhjä.
+    // Puuttuva lista sen sijaan on yhä unohdus ja kaataa testin.
+    assert.ok(Array.isArray(tiedot.kaupungit),
+      `${iso}: kaupungit-lista puuttuu.`);
     assert.equal(tiedot.lauta, FOKUS_POHJAT[iso]?.lauta,
       `${iso}: lisänimien lauta ei ole sama kuin lehden.`);
   }

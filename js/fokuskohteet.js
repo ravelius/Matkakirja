@@ -104,6 +104,7 @@ import { FOKUSKOHTEET_AFG } from './packs/fokuskohteet-afg.js';
 import { FOKUSKOHTEET_BGR } from './packs/fokuskohteet-bgr.js';
 import { FOKUSKOHTEET_BIH } from './packs/fokuskohteet-bih.js';
 import { FOKUSKOHTEET_CHN } from './packs/fokuskohteet-chn.js';
+import { FOKUSKOHTEET_DEU } from './packs/fokuskohteet-deu.js';
 import { FOKUSKOHTEET_EGY } from './packs/fokuskohteet-egy.js';
 import { FOKUSKOHTEET_FRA } from './packs/fokuskohteet-fra.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
@@ -221,6 +222,17 @@ const KOHDE_MAAT = {
    * ja js/packs/fokuskohteet-hrv.js:n alku.
    */
   HRV: FOKUSKOHTEET_HRV,
+  /*
+   * SAKSA tuli mukaan 27.8.2026 Berliinin lehden mukana, ja se on
+   * ensimmäinen maa, jonka kohdelista on samalla LEHDEN KOKO NIMISTÖ:
+   * Saksan lehteen ei ole poltettu yhtäkään nimeä, joten jokainen
+   * kartalla näkyvä nimi tulee tästä listasta ja on napautettavissa
+   * (Raamattu, KARTTAMERKIT MINIMALISTISIKSI; perustelut
+   * js/packs/fokuskohteet-deu.js ja tools/fokuskartta/maat.mjs
+   * FOKUSMAAT.DEU). Ehto on sama kuin kaikilla edellisillä — DEU.webp
+   * on FOKUS_POHJAT-taulussa ja ämpärissä.
+   */
+  DEU: FOKUSKOHTEET_DEU,
 };
 
 /** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta). */
