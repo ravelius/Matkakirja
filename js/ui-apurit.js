@@ -458,6 +458,111 @@ export function html(tag, className, text) {
   return node;
 }
 
+/**
+ * PÖLLÖ YLIVIIVATTUNA, PULU PERÄÄN (omistajan tilaus 27.8.2026).
+ *
+ * Tietokumppanin nimilapuissa lukee nyt vitsi, jonka hahmo tekee itse
+ * itsestään: pöllö-sana on vedetty yli punaisella ja perässä lukee
+ * "Pulu". Livia on Viisaan Pöllön SIJAINEN, ja nimilappu on korjattu
+ * kuin kynällä paperiin — ei uusiksi kirjoitettu.
+ *
+ * KOLME RAJAUSTA, JOTKA PITÄVÄT:
+ *  1. Yliviivaus vain OTSIKOISSA JA NIMILAPUISSA. Aria-labelit,
+ *     title-vihjeet, placeholderit ja muut pelkkätekstipinnat saavat
+ *     pelkän sanan "Pulu" — ruudunlukija ei saa lukea yliviivattua
+ *     sotkua. Siksi <s> on myös aria-hidden: näkyvässäkin otsikossa
+ *     avustava tekniikka kuulee vain korvaavan sanan.
+ *  2. LIVIAN OMASSA PUHEESSA hän on Livia. Tervehdys, vastaukset ja
+ *     kuplien sisältö eivät tunne tätä vitsiä.
+ *  3. Tyylit ovat yhdessä paikassa (css/styles.css .pollo-yliviivattu):
+ *     ohut sinettivahan punainen viiva, yliviivattu sana himmeämpänä.
+ *
+ * Solmut rakennetaan DOM-rajapinnalla eikä innerHTML:llä, jotta
+ * kutsupaikka voi antaa vapaan tekstin ilman kuorrutusta.
+ *
+ * @param {Element} kohde  elementti, joka täytetään (tyhjennetään ensin)
+ * @param {{ennen?: string, yli?: string, tilalle?: string, jalkeen?: string}} osat
+ * @returns {Element} sama kohde
+ */
+export function polloNimilappu(kohde, osat = {}) {
+  const {
+    ennen = '', yli = 'Pöllö', tilalle = 'Pulu', jalkeen = '',
+  } = osat;
+  if (!kohde) return kohde;
+  kohde.textContent = '';
+  if (ennen) kohde.appendChild(document.createTextNode(ennen));
+  const viiva = document.createElement('s');
+  viiva.className = 'pollo-yliviivattu';
+  viiva.setAttribute('aria-hidden', 'true');
+  /*
+   * Teksti omaan span-kuoreensa, jotta HIMMENNYS koskee vain kirjaimia.
+   * Jos opacity olisi <s>-solmussa, se himmentäisi myös kynänvedon, ja
+   * veto on nimenomaan se osa, jonka pitää näkyä.
+   */
+  const sana = document.createElement('span');
+  sana.className = 'pollo-yliviivattu-sana';
+  sana.textContent = yli;
+  viiva.appendChild(sana);
+  viiva.appendChild(polloVeto());
+  kohde.appendChild(viiva);
+  kohde.appendChild(document.createTextNode(` ${tilalle}${jalkeen}`));
+  return kohde;
+}
+
+const SVG_NS = 'http://www.w3.org/2000/svg';
+
+/*
+ * KÄSIN VEDETTY KORJAUSVETO (omistajan tarkennus 27.8.2026).
+ *
+ * Suunta on YLÄOIKEALTA ALAS VASEMMALLE, kuten nopea kynänveto
+ * paperilla, ja veto ulottuu kirjainten ylä- ja alapuolelle: polku
+ * alkaa oikealta korkeudelta y≈3 ja päättyy vasemmalle y≈29
+ * (viewBoxin korkeus 32), eli lähes koko laatikon yli.
+ *
+ * KAKSI POLKUA, EI YHTÄ. Vedon paksuus vaihtelee, koska päällekkäin on
+ * leveämpi runkoveto ja sitä hieman eri kaarella seuraava ohut,
+ * läpikuultava jälkiveto — kynä painuu ja keventyy. Yksi tasapaksu
+ * palkki näyttäisi ladotulta, ja juuri sitä tässä vältetään.
+ *
+ * MIKSI preserveAspectRatio="none" JA non-scaling-stroke YHDESSÄ:
+ * viewBox venytetään sanan mittaan, jotta sama polku palvelee sekä
+ * sanaa "Pöllö" että paria "Viisas Pöllö" yhtenä yhtenäisenä vetona.
+ * Venytys skaalaisi myös viivanleveyden (pitkä sana → paksumpi veto),
+ * joten vector-effect pitää leveyden vakiona laitepikseleissä.
+ */
+const VEDON_POLUT = [
+  // Runkoveto: loiva kaari, painuu keskeltä hieman alemmas.
+  { d: 'M96.5 3.5 C 76 12, 52 17, 3.5 28.5', leveys: '2', lapi: null },
+  /*
+   * Jälkiveto KULKEE RUNGON PÄÄLLÄ, ei sen vierellä: kummankin polun
+   * keskipiste on samassa kohdassa (x ≈ 56–60, y ≈ 14,9), joten
+   * jälkiveto vain paksuntaa vetoa keskeltä. Erilleen jäävä toinen
+   * viiva näyttäisi kahdelta vedolta, ja tarkoitus on yksi.
+   */
+  { d: 'M88 6 C 72 11, 44 18, 12 26', leveys: '1', lapi: '0.45' },
+];
+
+/** Yksi yhtenäinen kynänveto sanan (tai sanaparin) päälle. */
+function polloVeto() {
+  const svg = document.createElementNS(SVG_NS, 'svg');
+  svg.setAttribute('class', 'pollo-veto');
+  svg.setAttribute('viewBox', '0 0 100 32');
+  svg.setAttribute('preserveAspectRatio', 'none');
+  svg.setAttribute('aria-hidden', 'true');
+  svg.setAttribute('focusable', 'false');
+  for (const { d, leveys, lapi } of VEDON_POLUT) {
+    const polku = document.createElementNS(SVG_NS, 'path');
+    polku.setAttribute('d', d);
+    polku.setAttribute('fill', 'none');
+    polku.setAttribute('stroke-width', leveys);
+    polku.setAttribute('stroke-linecap', 'round');
+    polku.setAttribute('vector-effect', 'non-scaling-stroke');
+    if (lapi) polku.setAttribute('opacity', lapi);
+    svg.appendChild(polku);
+  }
+  return svg;
+}
+
 /* Nielun ikkuna ja säde: ks. nielaiseSulkevaNapautus. */
 export const NAPAUTUKSEN_NIELU_MS = 500;
 export const NAPAUTUKSEN_NIELU_SADE = 32;

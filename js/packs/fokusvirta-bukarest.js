@@ -198,6 +198,32 @@ export const FOKUSVIRTA_BUKAREST = {
    * sairaala", jonka lähteet kattavat — kaanon päivitetty samalla.
    */
   pollo: {
+    /*
+     * LIVIAN MAADOITUS (Fablen kaanon 27.8.2026, TUURAAJA-KEHYS).
+     *
+     * Maadoitus koskee KIIPEÄMISEN SÄVYÄ ("Nousin tornin huipulle…
+     * Koko kaupunki levittäytyi allani"), ei tornin tarinaa. Kaarle
+     * XII:n sotilaat ja maalatut ruotsalaiset ovat takyt-bukarest.md:n
+     * täky 5:ssä merkitty VARMOIKSI suoraan lähteestä, joten niihin ei
+     * kosketa sanallakaan — niiden epäileminen olisi pelin oman
+     * kaanonin kumoamista, ei sävyn maadoittamista.
+     *
+     * MAADOITUKSEN FAKTA ON SAMASTA TÄYSTÄ: *"Vuoden 1802 maanjäristys
+     * pudotti tornin huipun ja kellon"* (en-Wikipedia "Turnul Colței",
+     * osio History). 1802 → 1873 on 71 vuotta, eli "seitsemänkymmentä
+     * vuotta ennen" on oikein pyöristettynä alaspäin. Portaikon
+     * tunnelma on nimenomaan suvun postiperimätietoa eikä lähdeväite.
+     *
+     * Loppu myöntää isoisälle sen, mikä pitää paikkansa: torni oli yli
+     * vuosisadan Bukarestin korkein rakennus (sama täky).
+     */
+    maadoitus: 'Kiipeäminen kuulostaa tässä valloitukselta. Maanjäristys '
+      + 'oli pudottanut tornin huipun ja kellon jo seitsemänkymmentä vuotta '
+      + 'ennen isoisäsi käyntiä, joten hän nousi typistettyyn tynkään pimeää '
+      + 'ja tunkkaista portaikkoa pitkin — meikäläisten muistiinpanojen '
+      + 'mukaan siellä ei viihtynyt kukaan siivekäs. Sitten hän katsoi ulos. '
+      + 'Sen myönnän: tyngästäkin näkyy kauas, jos torni on yhä kaupungin '
+      + 'korkein.',
     teksti: 'Isoisäsi toive ei toteutunut: torni purettiin 1888, ja sen '
       + 'nimeä kantaa yhä viereinen sairaala. Tornista jäi kourallinen '
       + 'valokuvia — tämä on yksi niistä. Siksi minä kannan arkistoa '

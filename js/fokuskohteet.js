@@ -98,7 +98,7 @@ import {
 } from './fokusnosto-symbolit.js';
 import { FOKUS_LISANIMET } from './packs/fokus-grc.js';
 import { asetaKuva } from './media.js';
-import { html, jaaKappaleiksi, nielaiseSulkevaNapautus } from './ui-apurit.js';
+import { html, jaaKappaleiksi, nielaiseSulkevaNapautus, polloNimilappu } from './ui-apurit.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { FOKUSKOHTEET_AFG } from './packs/fokuskohteet-afg.js';
 import { FOKUSKOHTEET_BGR } from './packs/fokuskohteet-bgr.js';
@@ -1680,8 +1680,9 @@ function puraKorostus(merkinta) {
 function piirraKorostettuSana(ui, kohde, korostus, nakyvaTeksti) {
   const nappi = html('button', 'fokuskohde-sana', nakyvaTeksti);
   nappi.type = 'button';
-  nappi.title = `Kysy Livialta lisää: ${korostus.perus}`;
-  nappi.setAttribute('aria-label', `Kysy Livialta lisää: ${korostus.perus}`);
+  // Pelkkätekstipinnat (title, aria-label): ei yliviivausta, vain "pululta".
+  nappi.title = `Kysy pululta lisää: ${korostus.perus}`;
+  nappi.setAttribute('aria-label', `Kysy pululta lisää: ${korostus.perus}`);
   nappi.addEventListener('click', (tapahtuma) => {
     tapahtuma.stopPropagation();
     kysyKohteesta(ui, `Kerro lisää: ${korostus.perus} (kohteessa ${kohde.nimi})`);
@@ -1741,10 +1742,15 @@ function piirraKohdeKysymykset(ui, sisalto, kohde) {
   if (!kysymykset.length) return;
   // Omistaja 25.8.2026: "Ennen kysymyksiä voisi olla lause: kysy
   // pöllöltä" — kertoo, mihin pisteviivanapit johtavat.
-  sisalto.appendChild(html('p', 'fokuskohde-kysy-otsikko', 'Kysy Livialta:'));
+  // Otsikkorivi on nimilappu → yliviivausvitsi (omistaja 27.8.2026):
+  // "Kysy pöllöltä pululta:", pöllöltä yli vedettynä. Ryhmän aria-label
+  // on pelkkää tekstiä eikä siinä ole yliviivausta.
+  sisalto.appendChild(polloNimilappu(html('p', 'fokuskohde-kysy-otsikko'), {
+    ennen: 'Kysy ', yli: 'pöllöltä', tilalle: 'pululta', jalkeen: ':',
+  }));
   const rivi = html('div', 'fokuskohde-kysymykset');
   rivi.setAttribute('role', 'group');
-  rivi.setAttribute('aria-label', `Kysy Livialta: ${kohde.nimi}`);
+  rivi.setAttribute('aria-label', `Kysy pululta: ${kohde.nimi}`);
   for (const kysymys of kysymykset) {
     const nappi = html('button', 'fokuskohde-kysymys', kysymys);
     nappi.type = 'button';

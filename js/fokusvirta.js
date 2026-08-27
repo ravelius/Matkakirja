@@ -81,7 +81,7 @@
 
 import {
   fokusmoodiPaalla, html, jaaKappaleiksi, lehtivinkkiPiilotettu, nielaiseSulkevaNapautus,
-  piilotaLehtivinkki, TOAST_MS,
+  piilotaLehtivinkki, polloNimilappu, TOAST_MS,
 } from './ui-apurit.js';
 import { asetaTehtavakuittaus, fokusAarreAvattu, fokusAarreVastattu } from './fokustehtavat.js';
 import { asetaKuva, julisteUrl } from './media.js';
@@ -809,9 +809,21 @@ function piirraSisalto(ui, city, data, tila, sisalto) {
   }
 }
 
+/*
+ * PUHUJAN NIMILAPPU (omistajan tilaus 27.8.2026). Kuplan ylärivi on
+ * nimilappu, ei puhetta, joten siinä lukee yliviivausvitsi: pöllö-sana
+ * vedettynä yli punaisella ja perässä "Pulu". Vakio on tässä, jotta
+ * kaikki kuusi kutsupaikkaa saavat saman lapun samalla sanalla.
+ */
+const PULU_YLARIVI = Symbol('pulu-ylarivi');
+
 /** Otsikkorivi: kuka puhuu. */
 function otsikko(kohde, ylarivi, teksti) {
-  if (ylarivi) kohde.appendChild(html('p', 'fokusvirta-ylarivi', ylarivi));
+  if (ylarivi === PULU_YLARIVI) {
+    kohde.appendChild(polloNimilappu(html('p', 'fokusvirta-ylarivi'), {}));
+  } else if (ylarivi) {
+    kohde.appendChild(html('p', 'fokusvirta-ylarivi', ylarivi));
+  }
   if (teksti) kohde.appendChild(html('h3', 'fokusvirta-otsikko', teksti));
 }
 
@@ -1281,10 +1293,27 @@ function nappi(teksti, luokka, toiminto, este = null) {
 
 /* ---------- vaihe 2 ---------- */
 function piirraPollo(ui, city, data, kohde) {
-  otsikko(kohde, 'Livia', null);
+  otsikko(kohde, PULU_YLARIVI, null);
   // Herokuva on kartalla Ateenan yllä (paivitaFokuskuvat), ei kuplassa:
   // puhekuplaan kuuluu puhe, ja kuva kuuluu sinne mistä puhutaan.
-  piirraTeksti(kohde, data.pollo.teksti);
+  /*
+   * ISOISÄN MAADOITUS ENSIN (Fablen kaanon, omistajan hyväksyntä
+   * 27.8.2026, TUURAAJA-KEHYS).
+   *
+   * Pelaaja on juuri lukenut merkinnän ylävasemmasta
+   * matkakirjakortista, ja Livia vastaa siihen ensimmäisenä: hän
+   * palauttaa isoisän ylevän SÄVYN maan tasalle — mutta ei koskaan
+   * aarrejahdin faktoja, eikä joka kaupungissa samalla tavalla. Vasta
+   * sen jälkeen tulee vaiheen oma nykypäivän huomio, joka on entisellään
+   * sanasta sanaan.
+   *
+   * Kenttä on VAPAAEHTOINEN: kaupunki ilman maadoitusta piirtyy
+   * täsmälleen kuten ennenkin. Kappalejako syntyy tyhjästä rivistä
+   * (ui-apurit.js jaaKappaleiksi).
+   */
+  const puhe = [data.pollo.maadoitus, data.pollo.teksti]
+    .filter(Boolean).join('\n\n');
+  piirraTeksti(kohde, puhe);
   piirraNapit(kohde, [nappi('Jatka', 'primary', () => {
     sfx.play('paper');
     siirry(ui, city, data, 'jatka');
@@ -1293,7 +1322,7 @@ function piirraPollo(ui, city, data, kohde) {
 
 /* ---------- vaihe 3 ---------- */
 function piirraValinta(ui, city, data, tila, kohde) {
-  otsikko(kohde, 'Livia', data.valinta?.kysymys ?? 'Mistä haluaisit kuulla?');
+  otsikko(kohde, PULU_YLARIVI, data.valinta?.kysymys ?? 'Mistä haluaisit kuulla?');
   const jaljella = fokusvirtaJaljella(tila, data);
   const napit = jaljella.map((taky) => nappi(taky.nappi, '', () => {
     sfx.play('paper');
@@ -1327,7 +1356,7 @@ function piirraValinta(ui, city, data, tila, kohde) {
 function piirraTaky(ui, city, data, tila, kohde) {
   const taky = data.takyt.find((t) => t.id === tila.taky);
   if (!taky) { piirraValinta(ui, city, data, tila, kohde); return; }
-  otsikko(kohde, 'Livia', taky.otsikko ?? taky.nappi);
+  otsikko(kohde, PULU_YLARIVI, taky.otsikko ?? taky.nappi);
   piirraKuva(ui, kohde, taky.kuva);
   piirraTeksti(kohde, taky.teksti);
   piirraMinivisa(ui, city, data, taky, kohde);
@@ -1351,7 +1380,7 @@ function piirraTaky(ui, city, data, tila, kohde) {
 function piirraKohde(ui, city, data, tila, kohde) {
   const nosto = (data.kohteet ?? []).find((k) => k.id === tila.kohde);
   if (!nosto) { piirraValinta(ui, city, data, tila, kohde); return; }
-  otsikko(kohde, 'Livia', nosto.nimi ?? null);
+  otsikko(kohde, PULU_YLARIVI, nosto.nimi ?? null);
   piirraTeksti(kohde, nosto.teksti ?? '');
   piirraNapit(kohde, [nappi(nosto.paluu ?? 'Takaisin', 'primary', () => {
     sfx.play('paper');
@@ -1444,7 +1473,7 @@ function piirraMinivisa(ui, city, data, taky, kohde) {
 
 /* ---------- vaihe 5 ---------- */
 function piirraOppitunti(ui, city, data, kohde) {
-  otsikko(kohde, 'Livia', data.oppitunti.otsikko);
+  otsikko(kohde, PULU_YLARIVI, data.oppitunti.otsikko);
   piirraKuva(ui, kohde, data.oppitunti.kuva);
   piirraTeksti(kohde, data.oppitunti.teksti);
   piirraNapit(kohde, [nappi(data.kohtaaminen?.nappi ?? 'Jatka', 'primary', () => {

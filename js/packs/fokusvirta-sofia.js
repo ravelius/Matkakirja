@@ -177,6 +177,27 @@ export const FOKUSVIRTA_SOFIA = {
    * pöllön sanamuodon — päätoimittaja päättää, palautetaanko se.
    */
   pollo: {
+    /*
+     * LIVIAN MAADOITUS (Fablen kaanon 27.8.2026, TUURAAJA-KEHYS).
+     *
+     * Kohde on merkinnän SÄVY, ei sen sisältö: isoisä kirjoittaa
+     * kohtauksen kuin salaisuus olisi uskottu juuri hänelle. Livia
+     * suhteuttaa sen kaupungin kokoiseksi — mutta ei mitätöi kynttilää,
+     * vaan päinvastoin suurentaa sen. Kaanonin sääntö 3 pätee tässä
+     * loppukäänteenä, ei suorana myönnytyksenä.
+     *
+     * FAKTAKURI: mitään tarkistamatonta ei väitetä. Kynttilöiden määrä
+     * on nimenomaan "meikäläisten muistiinpanojen mukaan" eli suvun
+     * postiperimätietoa, kuten kaanon ohjaa — ei lähdeväite. Levskin
+     * teloitus, päivämäärä ja muistomerkki jäävät koskematta
+     * (ne ovat seuraavassa kappaleessa ja täyissä).
+     */
+    maadoitus: 'Isoisäsi kirjoittaa tämän kuin salaisuus olisi uskottu '
+      + 'juuri hänelle. Meikäläisten muistiinpanojen mukaan kynttilöitä '
+      + 'paloi sinä talvena useammalla ikkunalaudalla kuin yhdellä, eikä '
+      + 'majatalon isäntä kuiskannut vieraalle mitään, mitä naapuri ei olisi '
+      + 'tiennyt. Se ei tee kynttilästä pienempää. Se tekee siitä kaupungin '
+      + 'kokoisen.',
     teksti: 'Hirttopaikalla seisoo nyt kolmentoista metrin '
       + 'graniittipatsas, ja hautaa etsitään yhä. Etsintöjä on jatkunut '
       + 'sata viisikymmentä vuotta — kynttilä ikkunalla oli '

@@ -498,6 +498,33 @@ test('workerin kehotteessa on oikaisuohje ja faktakuri', () => {
   assert.ok(/hallinnollis/i.test(kehote), 'kielto keksiä hallinnollisia väitteitä puuttuu');
 });
 
+/*
+ * TUURAAJA-KEHYS (Fablen kaanon, omistajan hyväksyntä 27.8.2026).
+ *
+ * Hahmon syvennys asuu järjestelmäkehotteessa, ei asiakkaan koodissa:
+ * Livia on Viisaan Pöllön SIJAINEN, hän kasvattaa pelaajan omaa
+ * untuvikkopöllöä, hän ajautuu välillä sivupolulle ja hän saa maadoittaa
+ * isoisän ylevän sävyn — muttei koskaan aarrejahdin faktoja. Testi
+ * vartioi, ettei jokin näistä katoa kehotetta myöhemmin siivottaessa.
+ */
+test('kehote kantaa tuuraaja-kehyksen: sijaisuus, untuvikko, sivupolku, maadoitus', () => {
+  const kehote = readFileSync(new URL('../tools/pollo/worker.js', import.meta.url), 'utf8');
+  assert.ok(/OLET SIJAINEN/.test(kehote), 'sijaisuusosio puuttuu kehotteesta');
+  assert.ok(/ERI SELITYS JOKA KERTA/.test(kehote),
+    'ohje vaihtaa pöllön poissaolon selitystä puuttuu');
+  assert.ok(/untuvikko/i.test(kehote), 'pelaajan oman pöllön kasvatus puuttuu');
+  assert.ok(/SIVUPOLKU/.test(kehote), 'sivupolkuohje puuttuu');
+  // Kehote on rivitetty kenoviivalla, joten sanaväli voi olla rivinvaihto.
+  assert.ok(/ANNOSTELLAAN[\s\\]+SATUNNAISESTI/.test(kehote),
+    'sivupolun annosteluohje puuttuu — muuten se tulee joka vastaukseen');
+  assert.ok(/ISOISÄN MAADOITUS/.test(kehote), 'isoisän maadoituksen osio puuttuu');
+  assert.ok(/AARREJAHDIN FAKTOIHIN ET KAJOA/.test(kehote),
+    'maadoituksen faktaraja puuttuu — juoni rapautuisi');
+  assert.ok(/OSOITTAUTUU OIKEAKSI/.test(kehote),
+    'sääntö siitä, että isoisä on välillä oikeassa, puuttuu');
+  assert.ok(/besserwisser/i.test(kehote), 'besserwisser-kielto puuttuu');
+});
+
 /* ---------------------------------------------------------------- */
 /* Paketin koko                                                      */
 /* ---------------------------------------------------------------- */
