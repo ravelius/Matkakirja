@@ -7553,33 +7553,40 @@ export const KULTTUURI_KATEGORIAT = {
           musiikkiNimi: 'La Marseillaise Apple Musicissa',
         },
       ],
-          /*
-       * AVAUSKUVAT (19.8.2026): kolme suuntaa. Notre-Dame de la Garden
-       * mäeltä alas vanhaansatamaan, Endoumen kattojen yli merelle ja
-       * saarille, ja pystysuoraan alas Vallon des Auffesin poukamaan.
-       * Lisenssit, tekijät ja koot todennettu Commonsin API:sta,
-       * jokainen kuva katsottu silmin.
+      /*
+       * AVAUSKUVAT (27.8.2026): omistajan generoidut herokuvat
+       * (MuCEM ja Fort Saint-Jean, La Majorin katedraali, Palais Longchamp)
+       * korvasivat kolme Commonsin maisemanäkymää. Perustelu: vanhat kolme
+       * katsoivat kaikki ylhäältä merelle päin, eikä yhdessäkään ollut nimettyä
+       * rakennusta. Uusi kolmikko on kolme taloa, joista lehti kertoo. Kaikki
+       * kolme katsottu silmin.
        */
       avauskuvat: [
         {
-          tiedosto: 'Vue Ville depuis Basilique Notre Dame Garde - Marseille (FR13) - 2023-07-22 - 4.jpg',
-          selite: 'Notre-Dame de la Garde seisoo kaupungin korkeimmalla '
-            + 'luonnonkohdalla, kalkkikivikalliolla vanhan sataman '
-            + 'eteläpuolella.',
-          lahde: 'Chabe01, Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-marseille-aamu.jpg',
+          selite: 'MuCEM eli Euroopan ja Välimeren sivilisaatioiden museo '
+            + 'avattiin 7. kesäkuuta 2013 Rudy Ricciottin ja Roland Cartan '
+            + 'suunnittelemana kuutiona, jonka kuituvahvisteinen '
+            + 'betoniverkko varjostaa julkisivut; kävelysilta yhdistää sen '
+            + 'Ludvig XIV:n 1660 rakennuttamaan Fort Saint-Jeaniin.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Frioul et toits marseillais. Vue au dessus d\'Endoume (9401141357).jpg',
-          selite: 'Frioulin saaristo on neljän saaren ryhmä Marseillen '
-            + 'edustalla, ja yksi niistä on Ifin linnan saari.',
-          lahde: 'Jeanne Menjoulet from Paris, France, Wikimedia Commons '
-            + '(CC BY 2.0)',
+          ampari: 'herokoe/hero-marseille-keskipaiva.jpg',
+          selite: 'Marseillen La Majorin katedraalin peruskiven laski '
+            + 'keisari Napoleon III vuonna 1852; bysanttilaista ja '
+            + 'romaanista tyyliä yhdistelevä kirkko otettiin käyttöön 1893 '
+            + 'ja valmistui 1896.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Marseille Vallon des Auffes 10.jpg',
-          selite: 'Vallon des Auffes on pieni kalastajasatama, jonka nimi '
-            + 'tulee auffe-heinästä, josta punottiin köysiä ja kalaverkkoja.',
-          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-marseille-ilta.jpg',
+          selite: 'Palais Longchamp rakennettiin juhlistamaan Marseillen '
+            + 'vesikanavaa, joka toi Durance-joen veden kaupunkiin: '
+            + 'Henri-Jacques Espérandieun suunnittelema vesitorni siipineen '
+            + 'valmistui 1869, ja siivissä toimivat taidemuseo ja '
+            + 'luonnonhistoriallinen museo.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -8764,36 +8771,38 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Sierra Nevada (Espanja)',
         },
       ],
-          /*
-       * AVAUSKUVAT (19.8.2026): kolme suuntaa ja kolme hetkeä.
-       * Albaicínin katoilta kaakkoon Alhambraan ja Sierra Nevadaan,
-       * Alhambran puolelta luoteeseen valkoiseen rinteeseen, ja
-       * Alhambran muureilta länteen auringonlaskun jälkeen. Lisenssit,
-       * tekijät ja koot todennettu Commonsin API:sta, jokainen kuva
-       * katsottu silmin.
+      /*
+       * AVAUSKUVAT (27.8.2026): omistajan generoidut herokuvat
+       * (San Jerónimon luostari, La Cartuja, Corral del Carbón) korvasivat
+       * kolme Commonsin panoraamaa. Perustelu: vanhat kolme olivat sama
+       * kaksikko eri suunnista — Albaicín ja Alhambra — ja Alhambra on jo
+       * kansikuvissa. Uusi kolmikko nostaa esiin kolme kohdetta, jotka jäävät
+       * Alhambran varjoon. Kaikki kolme katsottu silmin.
        */
       avauskuvat: [
         {
-          tiedosto: 'Calles Granada 02.jpg',
-          selite: 'Darron laakso erottaa Albaicínin kukkulan Alhambrasta, ja '
-            + 'joen nimen arvellaan juontuvan sen kultapitoisista '
-            + 'sedimenteistä.',
-          lahde: 'Felvalen, Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-granada-aamu.jpg',
+          selite: 'San Jerónimon kuninkaallisen luostarin perustivat '
+            + 'katoliset kuninkaat Isabella ja Ferdinand, nykyisten '
+            + 'rakennusten työ alkoi Granadassa 1504 Diego de Siloén '
+            + 'johdolla, ja kirkko oli maailman ensimmäinen Marian '
+            + 'perisynnittömälle sikiämiselle vihitty.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Blick auf Granada.jpg',
-          selite: 'Albaicín on säilyttänyt pitkälti nasridiajan keskiaikaisen '
-            + 'katuverkkonsa, ja se liitettiin Alhambran '
-            + 'maailmanperintökohteeseen vuonna 1994.',
-          lahde: 'Chrisi1964, Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-granada-keskipaiva.jpg',
+          selite: 'Granadan kartusiaaniluostari La Cartuja perustettiin 1506 '
+            + 'ja rakentaminen alkoi kymmenen vuotta myöhemmin jatkuen '
+            + 'kolmisensataa vuotta; sakaristo tehtiin 1727–1764 ja on '
+            + 'espanjalaisen churriguerismin mestariteoksia.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Night view from Alhambra de Granada, Andalousia Spain - Image Picture Photography (14691952077).jpg',
-          selite: 'Alhambra on palatsien, puutarhojen ja varustusten '
-            + 'muodostama linnoitettu kokonaisuus ja Unescon '
-            + 'maailmanperintökohde.',
-          lahde: 'Grand Parc - Bordeaux, France from France, Wikimedia '
-            + 'Commons (CC BY 2.0)',
+          ampari: 'herokoe/hero-granada-ilta.jpg',
+          selite: 'Corral del Carbón on 1300-luvun alkupuolelta säilynyt '
+            + 'funduq eli kauppiaiden majatalo ja viljavarasto — ainoa '
+            + 'nasridiajalta säilynyt lajissaan koko Iberian niemimaalla.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -11059,34 +11068,34 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       /*
-       * Avauskuvat: etusivun iso kuvapaikka selaa näitä yleisnäkymiä,
-       * kansikuvat siirtyvät pikkuriville (sama sopimus kuin
-       * Kööpenhaminassa).
-       *
-       * Karusellin avaa Flickr-valokuva järveltä (18.8.2026): se on
-       * erän ainoa kuva, jossa kaupunki näkyy kokonaisena vesirajasta
-       * — juuri sitä avauskuvalta pyydetään.
+       * AVAUSKUVAT (27.8.2026): omistajan generoidut herokuvat
+       * (Näsilinna, pääkirjasto Metso, Vanha kirkko, Näsinneulan yläosa)
+       * korvasivat kierroksen 19 generoidut kuvat ja viisi Commonsin ja
+       * Flickrin koskinäkymää. Kohde–tiedostonimi-parit pysyvät samoina kuin
+       * julkaistuissa kuvateksteissä (docs/moduulit/viitekuvat.md), joten
+       * selitteet eivät muuttuneet — vain kuvat vaihtuivat. Kaikki neljä
+       * katsottu silmin.
        */
       avauskuvat: [
-        /* GENEROIDUT HEROT, KIERROS 19 (23.8.2026, tools/hero-tyolista-14.mjs). */
         {
-          ampari: 'herokoe/hero-tampere-aamu.png',
+          ampari: 'herokoe/hero-tampere-aamu.jpg',
           selite: 'Tampereen Näsilinna valmistui 1898 Karl August Wreden '
             + 'suunnittelemaksi uusbarokkipalatsiksi tehtailijasuvun '
             + 'jäsenelle Peter von Nottbeckille, joka antoi sille nimen '
-            + 'Milavida, ja vuodesta 2015 talossa on toiminut Milavida-museo.',
+            + 'Milavida, ja vuodesta 2015 talossa on toiminut '
+            + 'Milavida-museo.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero-tampere-keskipaiva.png',
+          ampari: 'herokoe/hero-tampere-keskipaiva.jpg',
           selite: 'Tampereen pääkirjasto Metso avattiin elokuussa 1986 Reima '
-            + 'ja Raili Pietilän suunnitelmien mukaan, ja ylhäältä katsottuna '
-            + 'metsoa muistuttavan talon julkisivuissa on graniittia, '
-            + 'rapakiveä, kuparia ja lasia.',
+            + 'ja Raili Pietilän suunnitelmien mukaan, ja ylhäältä '
+            + 'katsottuna metsoa muistuttavan talon julkisivuissa on '
+            + 'graniittia, rapakiveä, kuparia ja lasia.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero-tampere-ilta.png',
+          ampari: 'herokoe/hero-tampere-ilta.jpg',
           selite: 'Tampereen Vanha kirkko valmistui puisena ristikirkkona '
             + '1824 Carlo Bassin suunnitelmien mukaan ja otettiin käyttöön '
             + '1825, sen viereinen kellotapuli valmistui 1828 Carl Ludvig '
@@ -11095,52 +11104,11 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          /*
-           * Neljäs generoitu kuva Tampereelle (24.8.2026). Ensimmäinen
-           * erä, joka tehtiin viitekuvilla: kohde tunnistettiin omasta
-           * Commons-kategoriastaan (Category:Näsinneula, 43 kelvollista
-           * kuvaa) ja generointi ankkuroitiin kolmeen niistä. Viitteet
-           * painotettiin lähikuviin, jotta näkötasanteen ja antennin
-           * mittasuhteet välittyvät — kaukainen siluetti ei olisi
-           * kertonut niistä mitään.
-           */
-          ampari: 'herokoe/hero-tampere-nasinneula.png',
+          ampari: 'herokoe/hero-tampere-nasinneula.jpg',
           selite: 'Pekka Ilveskosken suunnittelema Näsinneula avattiin 1971 '
-            + 'Särkänniemessä ja on 168 metriä korkea; sen pyörivä '
-            + 'ravintola 124 metrin korkeudessa tekee täyden kierroksen '
-            + '45 minuutissa.',
+            + 'Särkänniemessä ja on 168 metriä korkea; sen pyörivä ravintola '
+            + '124 metrin korkeudessa tekee täyden kierroksen 45 minuutissa.',
           lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          tiedosto: 'flickr-52302493222.jpg',
-          selite: 'Tampere on rakennettu kapealle kannakselle kahden järven '
-            + 'väliin, ja tehdassalit nousivat aivan kosken rantaan.',
-          lahde: 'Ninara, Flickr (CC BY 2.0)',
-        },
-        {
-          tiedosto: 'Tammerkoski view.jpg',
-          selite: 'Tammerkosken länsirannalla on Finlaysonin tehdaskortteli '
-            + 'ja itärannalla Tampella; kummassakaan ei enää tehdä kangasta.',
-          lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'Koskipuisto,Tampere.jpg',
-          selite: 'Tammerkosken rannat ovat Suomen vanhinta '
-            + 'teollisuusmaisemaa ja yksi maan kansallismaisemista.',
-          lahde: 'Callesan, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'Näsinneula from Lentävänniemi.jpg',
-          selite: 'Näsinneula avattiin 1971, se on 168 metriä korkea ja yhä '
-            + 'Suomen korkein näkötorni.',
-          lahde: 'Eemyoha, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'flickr-16744724023.jpg',
-          selite: 'Näsijärven ja Pyhäjärven pinnoilla on kahdeksantoista '
-            + 'metriä korkeuseroa, ja ero purkautuu Tammerkoskena keskustan '
-            + 'halki.',
-          lahde: 'Jorge Franganillo, Flickr (CC BY 2.0)',
         },
       ],
       ennenNyt: [
@@ -12225,33 +12193,39 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Світлана 743, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
-          /*
-       * AVAUSKUVAT (19.8.2026): kolme hetkeä saman joen äärellä.
-       * Podil ja Dnepri ylhäältä syysaamuna, jokiranta auringon
-       * noustessa, ja Hreshtshatyk yöllä sumussa. Lisenssit, tekijät
-       * ja koot todennettu Commonsin API:sta, jokainen kuva katsottu
-       * silmin.
+      /*
+       * AVAUSKUVAT (27.8.2026): omistajan generoidut herokuvat
+       * (Pyhän Sofian katedraali kellotorneineen, luolaluostari, Isänmaa-äiti)
+       * korvasivat kolme Commonsin kaupunkinäkymää. Perustelu: vanhat kolme
+       * olivat kaikki sama aihe eri kulmasta — joki ja kattojen meri ylhäältä.
+       * Uusi kolmikko nimeää kolme kohdetta, joista lehti kertoo. Kaikki kolme
+       * katsottu silmin.
        */
       avauskuvat: [
         {
-          tiedosto: 'Aerial view kyiv.jpg',
-          selite: 'Kiovan pinta-ala on 839 neliökilometriä, ja sen sisällä on '
-            + '448 vesialuetta lähes kahdeksantuhannen hehtaarin alalla.',
-          lahde: 'Arne Müseler, Wikimedia Commons (CC BY-SA 3.0 DE)',
+          ampari: 'herokoe/hero-kiova-aamu.jpg',
+          selite: 'Pyhän Sofian katedraali on Kiovan Rusin ajan '
+            + 'rakennusmuistomerkki ja Ukrainan ensimmäinen '
+            + 'maailmanperintökohde; sen viereinen barokkikellotorni kasvoi '
+            + 'neljään kerrokseen ja 76 metriin vähitellen, viimeisen '
+            + 'lisäyksen 1800-luvun alussa salaman vietyä vanhan huipun.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: '2017 - Київ - Світанок над Дніпром.jpg',
-          selite: 'Kiovan läntinen oikea ranta on jyrkkä ja kukkulainen, ja '
-            + 'siellä ovat kaupungin vanhimmat kaupunginosat.',
-          lahde: 'Moahim, Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-kiova-keskipaiva.jpg',
+          selite: 'Kiovan luolaluostarin perusti kronikoiden mukaan '
+            + 'Athos-vuorelta palannut munkki Antoni vuonna 1051, ja '
+            + 'maanalaisista käytävistä kasvanut lavra on ollut Unescon '
+            + 'maailmanperintöluettelossa vuodesta 1990.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Khreshchatyk Street, Kiev. Ukraine (45935065521).jpg',
-          selite: 'Hreshtshatyk tuhoutui vuonna 1941, ja sodan jälkeen se '
-            + 'rakennettiin uudelleen sadan metrin levyisenä entisen '
-            + 'seitsemänkymmenenviiden sijaan.',
-          lahde: 'Juan Antonio Segal from Madrid, Spain, Wikimedia '
-            + 'Commons (CC BY 2.0)',
+          ampari: 'herokoe/hero-kiova-ilta.jpg',
+          selite: 'Isänmaa-äiti on ruostumattomasta teräksestä koottu '
+            + 'veistos: hahmo on 62 metriä ja jalustoineen kokonaisuus 102 '
+            + 'metriä korkea, ja se paljastettiin 9. toukokuuta 1981 Vasyl '
+            + 'Borodain johdolla valmistuneena.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -14521,34 +14495,39 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Odessan kansallinen akateeminen ooppera- ja balettiteatteri',
         },
       ],
-          /*
-       * AVAUSKUVAT (19.8.2026): kolme kohtaa kaupunkia ilmasta —
-       * katedraali auringonlaskussa, keskustan ruutukaava aamulla ja
-       * rantaviiva merelle päin. Katutason kuvat jäivät pois, koska
-       * niissä kaikissa oli tunnistettavia ihmisiä. Kaikki kolme ovat
-       * rauhallisia kaupunkikuvia; peli ei käsittele nykysotaa eikä
-       * -politiikkaa. Lisenssit, tekijät ja koot todennettu Commonsin
-       * API:sta, jokainen kuva katsottu silmin.
+      /*
+       * AVAUSKUVAT (27.8.2026): omistajan generoidut herokuvat
+       * (oopperatalo, Vorontsovin palatsi kolonnadeineen, kaupungintalo)
+       * korvasivat kolme Commonsin ilmakuvaa. Perustelu: vanhat kolme olivat
+       * kaikki dronekuvia ylhäältä, eikä yhdessäkään näkynyt yhtään rakennusta
+       * läheltä. Uusi kolmikko on kolme nimettyä taloa katutasosta. Kaikki
+       * kolme ovat rauhallisia kaupunkikuvia; peli ei käsittele nykysotaa eikä
+       * -politiikkaa. Kaikki kolme katsottu silmin.
        */
       avauskuvat: [
         {
-          tiedosto: 'Спасо-Преображенський кафедральний собор (Одеса) DJI 0084.jpg',
-          selite: 'Kristuksen kirkastumisen katedraali perustettiin 1794 ja '
-            + 'valmistui 1808, purettiin 1936 ja rakennettiin uudelleen '
-            + 'vuoteen 2005 mennessä.',
-          lahde: 'Konstantin Brizhnichenko, Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-odessa-aamu.jpg',
+          selite: 'Odessan ooppera- ja balettiteatterin nykyinen '
+            + 'uusbarokkitalo nousi vuonna 1873 palaneen kaupunginteatterin '
+            + 'paikalle wieniläisten Ferdinand Fellnerin ja Hermann Helmerin '
+            + 'piirustusten mukaan ja avattiin 1. lokakuuta 1887.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Deribasivska-Street-aerial-1.jpg',
-          selite: 'Odessan ruutukaavan suunnitteli ranskalainen insinööri F. '
-            + 'de Volan 1700-luvun lopulla.',
-          lahde: 'Alexey M., Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-odessa-keskipaiva.jpg',
+          selite: 'Vorontsovin palatsi ja sen kaareva kolonnadi rakennettiin '
+            + '1827–1830 ruhtinas Mihail Vorontsoville sardinialaissyntyisen '
+            + 'Francesco Boffon piirustusten mukaan turkkilaisen Hacıbeyn '
+            + 'linnoituksen paikalle.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Mys-Fontan-aerial-2.jpg',
-          selite: 'Odessasta tuli 1800-luvun puolivälissä kylpyläkaupunki, '
-            + 'joka oli suosittu yläluokan keskuudessa.',
-          lahde: 'Alexey M., Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-odessa-ilta.jpg',
+          selite: 'Odessan kaupungintalo eli Dumska valmistui 1828–1834 '
+            + 'Francesco Boffon ja Gregorio Toricellin uusklassisena '
+            + 'suunnitelmana Primorskin bulevardin päähän, ja Franz Morandi '
+            + 'rakensi sen uudelleen 1871–1873.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -18644,32 +18623,38 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Kaamos',
         },
       ],
-          /*
-       * AVAUSKUVAT (19.8.2026): sama arktinen kaupunki kolmena
-       * vuodenaikana. Ilmasta keskustan yli keskiyön auringossa,
-       * vuorelta salmen yli kaamosyönä ja asuinkorttelissa
-       * tammikuussa. Lisenssit, tekijät ja koot todennettu Commonsin
-       * API:sta, jokainen kuva katsottu silmin.
+      /*
+       * AVAUSKUVAT (27.8.2026): omistajan generoidut herokuvat
+       * (Jäämeren katedraali, Polaria, Polarmuseet) korvasivat kolme Commonsin
+       * kaupunkinäkymää. Perustelu: vanhat kolme näyttivät saman kaupungin
+       * kolmena vuodenaikana, mutta yksikään ei nimennyt kohdetta. Uusi
+       * kolmikko on kirkko, akvaario ja museo — kolme taloa, joihin lehden
+       * jaksot viittaavat. Kaikki kolme katsottu silmin.
        */
       avauskuvat: [
         {
-          tiedosto: 'Tromso-Drone-20160721-092 (28276376613).jpg',
-          selite: 'Tromssan puinen tuomiokirkko valmistui 1861 ja on ainoa '
-            + 'puusta rakennettu protestanttinen tuomiokirkko Norjassa.',
-          lahde: 'CucombreLibre from New York, NY, USA, Wikimedia '
-            + 'Commons (CC BY 2.0)',
+          ampari: 'herokoe/hero-tromssa-aamu.jpg',
+          selite: 'Tromsdalenin kirkko eli Jäämeren katedraali valmistui '
+            + '1965 Jan Inge Hovigin suunnitelmien mukaan betonista ja '
+            + 'alumiinista, ja siihen mahtuu noin 600 kuulijaa; nimestään '
+            + 'huolimatta se on seurakuntakirkko eikä tuomiokirkko.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Tromsø from Fjellheisen in Winter.JPG',
-          selite: 'Tromssassa aurinko pysyy horisontin alapuolella '
-            + 'marraskuun lopusta tammikuun puoliväliin.',
-          lahde: 'Smitra0, Wikimedia Commons (CC BY-SA 3.0)',
+          ampari: 'herokoe/hero-tromssa-keskipaiva.jpg',
+          selite: 'Polaria on maailman pohjoisin akvaario, se avattiin '
+            + 'toukokuussa 1998, ja sen näyttelyt keskittyvät Huippuvuoriin '
+            + '— keskipisteenä on partahyljealtaan läpinäkyvä vedenalainen '
+            + 'käytävä.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Hamna Tromsø.jpg',
-          selite: 'Tromssan keskustan puutalot ovat vuosilta 1789–1904, '
-            + 'minkä jälkeen puurakentaminen kiellettiin.',
-          lahde: 'Harald Groven, Wikimedia Commons (CC BY-SA 3.0)',
+          ampari: 'herokoe/hero-tromssa-ilta.jpg',
+          selite: 'Polarmuseet avattiin 18. kesäkuuta 1978 tasan '
+            + 'viisikymmentä vuotta Roald Amundsenin viimeisen lennon '
+            + 'jälkeen, ja se toimii 1840-luvun tullimakasiineissa Skansenin '
+            + 'lähellä.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -19022,36 +19007,38 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Björk',
         },
       ],
-          /*
-       * AVAUSKUVAT (19.8.2026): kolme maisematyyppiä. Rannikkovuori
-       * talvella, sisämaan riolliittikentät kesällä ja itärannikon
-       * huiput auringonnousun jälkeen. Kansikuvissa ovat jo Gullfoss,
-       * Reykjavík ja Reynisfjara, joten nämä katsovat muualle.
-       * Lisenssit, tekijät ja koot todennettu Commonsin API:sta,
-       * jokainen kuva katsottu silmin.
+      /*
+       * AVAUSKUVAT (27.8.2026): omistajan generoidut herokuvat
+       * (Hallgrímskirkja, Þingvellirin Almannagjá, Strokkur) korvasivat kolme
+       * Commonsin vuorimaisemaa. Perustelu: kansikuvissa ovat jo Gullfoss,
+       * Reykjavík ja Reynisfjara, ja vanhat avauskuvat olivat kolme lisää samaa
+       * maisematyyppiä. Uusi kolmikko on kirkko, mannerlaattojen railo ja
+       * geysir — kolme eri syytä tulla saarelle. Kaikki kolme katsottu
+       * silmin.
        */
       avauskuvat: [
         {
-          tiedosto: 'Kirkjufell in winter.jpg',
-          selite: 'Kirkjufell on 463 metriä korkea nunatak Snæfellsnesin '
-            + 'pohjoisrannikolla — jääkauden jäätiköiden yli jäänyt '
-            + 'huippu, jota sanotaan Islannin valokuvatuimmaksi '
-            + 'vuoreksi.',
-          lahde: 'Beardhatcode, Wikimedia Commons (CC0)',
+          ampari: 'herokoe/hero-islanti-aamu.jpg',
+          selite: 'Reykjavíkin Hallgrímskirkja on 74,5 metriä korkea ja '
+            + 'Islannin suurin kirkko; Guðjón Samúelssonin vuonna 1937 '
+            + 'tilattu suunnitelma jäljittelee maan basalttipatsaita, ja '
+            + 'rakennus valmistui vasta 1986.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Colorful mountain slope in Landmannalaugar.jpg',
-          selite: 'Landmannalaugar on Fjallabakin luonnonsuojelualueella '
-            + 'noin vuonna 1477 syntyneen Laugahraun-laavakentän '
-            + 'reunalla, ja se tunnetaan kuumista lähteistään.',
-          lahde: 'Syony, Wikimedia Commons (CC0)',
+          ampari: 'herokoe/hero-islanti-keskipaiva.jpg',
+          selite: 'Þingvellirin laaksossa kokoontui Islannin alþingi '
+            + 'vuodesta 930 vuoteen 1798, ja laakso on Pohjois-Amerikan ja '
+            + 'Euraasian mannerlaattojen railo — sen suurin repeämä '
+            + 'Almannagjá on kokonainen kanjoni.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Vestrahorn After Sunrise - Iceland.jpg',
-          selite: 'Vestrahorn kuuluu Stokksnesin niemeen Islannin '
-            + 'kaakkoisrannikolla, ja niemen kärjessä toimii maan '
-            + 'ilmavalvonnan tutka-asema.',
-          lahde: 'Eric Kilby, Wikimedia Commons (CC BY-SA 2.0)',
+          ampari: 'herokoe/hero-islanti-ilta.jpg',
+          selite: 'Strokkur on Haukadalurin geotermisen alueen '
+            + 'suihkulähdegeysir, joka purkautuu 6–10 minuutin välein '
+            + 'tavallisesti 15–20 metrin korkeuteen.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -19411,33 +19398,41 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Inarinsaame',
         },
       ],
-          /*
-       * AVAUSKUVAT (19.8.2026): kolme vuodenaikaa. Saana jäätyneen
-       * järven takaa maaliskuussa, Kevon kanjoni kesällä ja
-       * Pallastunturit ruskan aikaan. Kansikuvissa ovat jo revontulet,
-       * Sallatunturi ja porotila. Lisenssit, tekijät ja koot todennettu
-       * Commonsin API:sta, jokainen kuva katsottu silmin.
+      /*
+       * AVAUSKUVAT (27.8.2026): omistajan generoidut herokuvat
+       * (Arktikum ja Jätkänkynttilä Rovaniemellä, Sajos Inarissa) korvasivat
+       * kolme Commonsin tunturimaisemaa. Perustelu: kansikuvissa ovat jo
+       * revontulet, Sallatunturi ja porotila, ja vanhat avauskuvat olivat
+       * kolme lisää samaa maisemaa. Uusi kolmikko on rakennettua Lappia —
+       * museo, silta ja saamelaiskulttuurikeskus. Kaikki kolme katsottu
+       * silmin.
        */
       avauskuvat: [
         {
-          tiedosto: 'Saana at Kilpisjärvi, 2012 March.jpg',
-          selite: 'Saana on Enontekiön tunturi Kilpisjärven rannalla, ja se '
-            + 'kuuluu geologisesti Skandeihin samoine liuske- ja '
-            + 'gneissikivilajeineen.',
-          lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 3.0)',
+          ampari: 'herokoe/hero-lappi-aamu.jpg',
+          selite: 'Rovaniemen Arktikum vihittiin käyttöön 2. joulukuuta '
+            + '1992, ja sen näkyvin osa on Ounasjokea kohti kurottava 172 '
+            + 'metriä pitkä lasiputki; talossa toimivat Lapin maakuntamuseo '
+            + 'ja Lapin yliopiston Arktinen keskus.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Kevo canyon from Bođosroadjá.JPG',
-          selite: 'Kevon luonnonpuisto perustettiin Utsjoelle 1956, ja sen '
-            + 'kanjonilaaksossa saa kulkea vain kahta merkittyä reittiä.',
-          lahde: 'Antti Leppänen, Wikimedia Commons (CC BY 4.0)',
+          ampari: 'herokoe/hero-lappi-keskipaiva.jpg',
+          selite: 'Rovaniemen Jätkänkynttilä on Suomen ensimmäinen '
+            + 'tieliikenteen vinoköysisilta: 320 metriä pitkä Kemijoen '
+            + 'ylitys vihittiin käyttöön 28. syyskuuta 1989, ja pylonin '
+            + 'kaksi pilaria on muotoiltu vinoon sahatun jätkänkynttilän '
+            + 'näköisiksi.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Pallastunturi peaks in september 2021.jpg',
-          selite: 'Pallastunturit kuuluvat Pallas–Yllästunturin '
-            + 'kansallispuistoon, joka on Suomen kolmanneksi suurin ja '
-            + 'kävijämäärältään suosituin.',
-          lahde: 'Htm, Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-lappi-ilta.jpg',
+          selite: 'Saamelaiskulttuurikeskus Sajos on Inarissa, se valmistui '
+            + 'tammikuussa 2012 HALO Arkkitehtien suunnittelemana, ja siinä '
+            + 'toimivat muun muassa saamelaiskäräjät ja saamelaisalueen '
+            + 'koulutuskeskus; nimi on inarinsaamea ja tarkoittaa '
+            + 'tukikohtaa.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -20567,34 +20562,41 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Lumivyöry',
         },
       ],
-          /*
-       * AVAUSKUVAT (19.8.2026): kolme alppimaisemaa — jäätikkö
-       * ylhäältä, Dolomiittien tornit pilvimeren yllä ja laakso
-       * talvella. Kansikuvissa ovat jo Matterhorn, alppiniitty ja
-       * Wetterhorn. Lisenssit, tekijät ja koot todennettu Commonsin
-       * API:sta, jokainen kuva katsottu silmin.
+      /*
+       * AVAUSKUVAT (27.8.2026): omistajan generoidut herokuvat
+       * (Sphinx-observatorio Jungfraujochilla, Landwasserin viadukti, Eigerin
+       * pohjoisseinä) korvasivat kolme Commonsin maisemakuvaa. Perustelu:
+       * kansikuvissa ovat jo Matterhorn, alppiniitty ja Wetterhorn, ja vanhat
+       * avauskuvat olivat kolmas kierros samaa aihetta. Uusi kolmikko kertoo
+       * siitä, mitä ihminen on Alpeille rakentanut ja mitä yrittänyt kiivetä.
+       * Kaikki
+       * kolme katsottu silmin.
        */
       avauskuvat: [
         {
-          tiedosto: 'Aletsch Glacier from Jungfraujoch (1).jpg',
-          selite: 'Aletsch on Alppien suurin jäätikkö: neljä pienempää '
-            + 'jäätikköä yhtyy Konkordiaplatzilla, ja siellä jää on '
-            + 'paksuimmillaan.',
-          lahde: 'Gzzz, Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-alpit-aamu.jpg',
+          selite: 'Sphinx-observatorio seisoo 3 571 metrin korkeudessa '
+            + 'Jungfraujochin yläpuolisella kalliohuipulla, ja sen luo '
+            + 'noustaan kallion läpi louhitulla hissillä Euroopan '
+            + 'korkeimmalta rautatieasemalta.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Drei Zinnen Tre Cime di Lavaredo Dolomites.jpg',
-          selite: 'Tre Cime di Lavaredon kolme dolomiittihuippua olivat '
-            + 'vuoteen 1919 asti Italian ja Itävalta-Unkarin rajalla, ja alue '
-            + 'on ollut maailmanperintökohde vuodesta 2009.',
-          lahde: 'Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0)',
+          ampari: 'herokoe/hero-alpit-keskipaiva.jpg',
+          selite: 'Landwasserin viadukti rakennettiin 1901–1902 Albula-radan '
+            + 'varteen Alexander Acatosin suunnitelmien mukaan: kuusi '
+            + 'kalkkikivikaarta, 65 metriä korkea ja 136 metriä pitkä '
+            + 'kaarre, joka päättyy suoraan kallioon louhitun tunnelin '
+            + 'suuhun.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Lauterbrunnen-valley.jpg',
-          selite: 'Lauterbrunnenin laakso mainittiin asiakirjoissa jo 1240 '
-            + 'nimellä in claro fonte, kirkas lähde, ja sen Staubbachin '
-            + 'putous innoitti Goethen runon vuonna 1779.',
-          lahde: 'Keith Halstead, Wikimedia Commons (CC BY-SA 3.0)',
+          ampari: 'herokoe/hero-alpit-ilta.jpg',
+          selite: 'Eigerin 3 967-metrisen huipun pohjoisseinä nousee 1 600–1 '
+            + '800 metriä ja on Alppien suurin pohjoisseinä; sen kiipesivät '
+            + 'ensimmäisinä 24. heinäkuuta 1938 Anderl Heckmair, Ludwig '
+            + 'Vörg, Heinrich Harrer ja Fritz Kasparek.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -20959,31 +20961,41 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Ston',
         },
       ],
-          /*
-       * AVAUSKUVAT (19.8.2026): kolme etäisyyttä. Srđ-vuorelta koko
-       * vanhaankaupunkiin ja Lokrumiin, kaupunginmuurilta kattojen
-       * tasalle, ja mereltä Gružin nykysatamaan — sama kaupunki
-       * kaukaa, läheltä ja työn puolelta. Lisenssit, tekijät ja koot
-       * todennettu Commonsin API:sta, jokainen kuva katsottu silmin.
+      /*
+       * AVAUSKUVAT (27.8.2026): omistajan generoidut herokuvat
+       * (Lovrijenacin linnake, Rehtorinpalatsi, Pyhän Blasiuksen kirkko
+       * Orlandon pylväineen) korvasivat kolme Commonsin yleisnäkymää.
+       * Perustelu: vanhat kolme olivat kaupunki kaukaa, kattojen tasalta ja
+       * satamasta — kolme etäisyyttä samaan siluettiin. Uusi kolmikko
+       * esittelee kolme nimettyä rakennusta, joista lehden omat jaksot
+       * kertovat. Kaikki kolme katsottu silmin.
        */
       avauskuvat: [
         {
-          tiedosto: 'Dubrovnik and Lokrum.jpg',
-          selite: 'Dubrovnikin vanhakaupunki liitettiin Unescon '
-            + 'maailmanperintöluetteloon vuonna 1979.',
-          lahde: 'Hibasi, Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-dubrovnik-aamu.jpg',
+          selite: 'Lovrijenacin linnake seisoo omalla kalliollaan 37 metriä '
+            + 'merenpinnan yläpuolella kaupunginmuurin ulkopuolella, ja '
+            + 'Ragusan kronikoiden mukaan se pystytettiin kolmessa '
+            + 'kuukaudessa, jotta venetsialaiset eivät ehtisi paikalle '
+            + 'ensin.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: '29.12.16 Dubrovnik Old City Walls 106 (31122279274).jpg',
-          selite: 'Muureja vahvistavat kolme pyöreää ja neljätoista '
-            + 'nelikulmaista tornia sekä suuri Pyhän Johanneksen linnake.',
-          lahde: 'donald judge, Wikimedia Commons (CC BY 2.0)',
+          ampari: 'herokoe/hero-dubrovnik-keskipaiva.jpg',
+          selite: 'Rehtorinpalatsi oli Ragusan tasavallan rehtorin, '
+            + 'pikkuneuvoston ja koko hallinnon istuntopaikka 1300-luvulta '
+            + 'vuoteen 1808, ja nykyinen talo rakennettiin vuoden 1435 '
+            + 'tulipalon jälkeen napolilaisen Onofrio della Cavan johdolla.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: '2011 Dubrownik, port (09).jpg',
-          selite: 'Dubrovnikiin ei tule rautatietä lainkaan, joten kaupunkiin '
-            + 'saavutaan meritse, maanteitse tai Čilipin lentokentän kautta.',
-          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-dubrovnik-ilta.jpg',
+          selite: 'Pyhän Blasiuksen kirkko on omistettu kaupungin '
+            + 'suojeluspyhimykselle, ja venetsialainen Marino Gropelli '
+            + 'rakensi nykyisen barokkikirkon 1715 edellisen palettua 1706; '
+            + 'sen edessä seisoo Orlandon pylväs vuodelta 1418, Dubrovnikin '
+            + 'vanhin säilynyt julkinen veistos.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -21781,33 +21793,39 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Užupis',
         },
       ],
-          /*
-       * AVAUSKUVAT (19.8.2026): kolme suuntaa. Vanhakaupunki
-       * kattojen yli näkötornista, Neris-joki ja uusi keskusta
-       * auringonlaskussa, ja Didžioji-katu sinisellä hetkellä.
-       * Lisenssit, tekijät ja koot todennettu Commonsin API:sta,
-       * jokainen kuva katsottu silmin.
+      /*
+       * AVAUSKUVAT (27.8.2026): omistajan generoidut herokuvat
+       * (tuomiokirkko kellotapuleineen, Aamunkoiton portti, Pyhien Pietarin ja
+       * Paavalin kirkko) korvasivat kolme Commonsin yleisnäkymää. Perustelu:
+       * vanhoista kolmesta kaksi oli kattojen ylitse otettua panoraamaa ja
+       * kolmas hämärä katukuva. Uusi kolmikko nostaa esiin kolme rakennusta,
+       * joista lehti kertoo. Kaikki kolme katsottu silmin.
        */
       avauskuvat: [
         {
-          tiedosto: 'View of the Vilnius Old Town from the Observation Tower of the Palace of the Grand Dukes of Lithuania.jpg',
-          selite: 'Vilnan pinta-alasta 68,8 prosenttia on viheraluetta, ja '
-            + 'vanhankaupungin kattojen keskeltä nousee yliopiston '
-            + 'kellotorni.',
-          lahde: 'Pofka, Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-vilna-aamu.jpg',
+          selite: 'Vilnan tuomiokirkko sai nykyisen uusklassisen asunsa '
+            + 'Laurynas Gucevičiuksen suunnitelmien mukaan vuosina '
+            + '1779–1783, ja sisustus valmistui 1801; erillisen kellotapulin '
+            + 'alin kerros on 1200-luvun puolivälistä, jolloin se oli '
+            + 'Alalinnan puolustustorni.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Baltasis tiltas by Augustas Didzgalvis.jpg',
-          selite: 'Neris virtaa Vilnan halki, ja Valkoinen silta ylittää sen '
-            + 'yhtenä kevyenä kaarena.',
-          lahde: 'BigHead (Augustas Didžgalvis), Wikimedia Commons '
-            + '(CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-vilna-keskipaiva.jpg',
+          selite: 'Aamunkoiton portti rakennettiin 1503–1514 yhdeksi Vilnan '
+            + 'kaupunginmuurin yhdeksästä portista, ja kun muurit purettiin '
+            + '1799–1805, se jäi ainoana pystyyn portin kappelissa palvotun '
+            + 'Neitsyt Marian kuvan takia.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Didžioji Street at dusk, Vilnius, Lithuania - Diliff.jpg',
-          selite: 'Didžioji-katu on Vilnan vanhankaupungin pääkatuja, ja sen '
-            + 'aukiolla seisoo kirkontorni.',
-          lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
+          ampari: 'herokoe/hero-vilna-ilta.jpg',
+          selite: 'Antakalnisin Pyhien Pietarin ja Paavalin kirkon '
+            + 'rakennutti hetmani Michał Kazimierz Pac, ja sen holveissa on '
+            + 'noin kaksituhatta Giovanni Pietro Pertin veistämää '
+            + 'stukkohahmoa.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -23897,30 +23915,37 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       /*
-       * AVAUSKUVAT: muuri ja vallihauta, Samanbahçen matalat rivitalot
-       * ja Kyrenian portti — kehä, sen sisäpuoli ja yksi kolmesta
-       * portista. Kansikuvat käsittelevät kattoja ja asuintaloja, joten
-       * avauskuvat pysyvät muurissa ja kaupunkirakenteessa.
+       * AVAUSKUVAT (27.8.2026): omistajan generoidut herokuvat
+       * (Faneromenin kirkko, dragomaanin talo, Büyük Han) korvasivat kolme
+       * Commonsin muuri- ja katukuvaa. Perustelu: vanhat kolme kertoivat
+       * kaikki samasta asiasta, venetsialaisesta muurikehästä, josta lehden
+       * oma jakso jo kertoo. Uusi kolmikko on kolme taloa muurien sisältä,
+       * kolmelta eri vuosisadalta. Kaikki kolme katsottu silmin.
        */
       avauskuvat: [
         {
-          tiedosto: 'CY-nikosia-stadtmauer.jpg',
-          selite: 'Venetsialaiset rakensivat vuosina 1567–1570 kaupungin '
-            + 'ympärille muurin, jonka kehä on noin viisi kilometriä ja '
-            + 'jossa on yksitoista viisikulmaista bastionia.',
-          lahde: 'Balou46, Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-nikosia-aamu.jpg',
+          selite: 'Faneromenin kirkko rakennettiin 1872 vanhan ortodoksisen '
+            + 'nunnaluostarin paikalle, ja se on Nikosian muurien sisäpuolen '
+            + 'suurin kirkko; sen tyylissä yhdistyvät uusklassinen, '
+            + 'bysanttilainen ja keskiaikainen latinalainen perinne.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Samanbahçe in North Nicosia.jpg',
-          selite: 'Muurin sisällä Nikosian kadut ovat kapeita ja '
-            + 'mutkittelevia, ulkopuolella suoria ja leveitä.',
-          lahde: 'muffinn, Wikimedia Commons (CC BY 2.0)',
+          ampari: 'herokoe/hero-nikosia-keskipaiva.jpg',
+          selite: 'Hadjigeorgakis Kornesiosin talo rakennettiin 1793 '
+            + 'dragomaanille, joka toimi sulttaanin divaanin tulkkina '
+            + 'Kyproksella vuodesta 1779; talo on nykyään etnologinen museo '
+            + 'ja sai kunnostuksestaan Europa Nostra -palkinnon 1988.',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
-          tiedosto: 'Kyrenia Gate, Nicosia, Cyprus.jpg',
-          selite: 'Kyrenian portti jäi seisomaan yksin keskelle katua, kun '
-            + 'muurit sen molemmilta puolilta purettiin vuonna 1931.',
-          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
+          ampari: 'herokoe/hero-nikosia-ilta.jpg',
+          selite: 'Büyük Han on Kyproksen suurin karavaaniserai, jonka '
+            + 'ottomaanit rakensivat 1572 vuosi saaren valtauksen jälkeen; '
+            + 'sisäpihan keskellä on pieni moskeija suihkulähteineen, ja '
+            + 'britit käyttivät taloa kaupungin ensimmäisenä vankilana.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -26073,14 +26098,18 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       /*
-       * AVAUSKUVAT: linnavuori, Hamamönün kunnostettu kortteli ja
-       * näkymä linnalta uuteen keskustaan — kaupungin kolme kerrosta
-       * vanhimmasta uusimpaan.
+       * AVAUSKUVAT (27.8.2026): omistajan generoidut herokuvat
+       * (Anıtkabir, Hacı Bayramin moskeija Augustuksen temppelin kyljessä,
+       * Atakule) korvasivat kierroksen 17 generoidut kuvat ja kolme Commonsin
+       * näkymää. Perustelu: vanhat generoidut esittivät vääriä rakennuksia —
+       * juuri se virhe, jonka estämiseksi viitekuvaputki rakennettiin
+       * (docs/moduulit/viitekuvat.md). Kohde–tiedostonimi-parit pysyvät samoina
+       * kuin julkaistuissa kuvateksteissä, joten selitteet eivät muuttuneet.
+       * Kaikki kolme katsottu silmin.
        */
       avauskuvat: [
-        /* GENEROIDUT HEROT, KIERROS 17 (23.8.2026, tools/hero-tyolista-12.mjs). */
         {
-          ampari: 'herokoe/hero-ankara-aamu.png',
+          ampari: 'herokoe/hero-ankara-aamu.jpg',
           selite: 'Anıtkabir rakennettiin 9. lokakuuta 1944 alkaen ja '
             + 'valmistui 1. syyskuuta 1953 Emin Onatin ja Orhan Ardan '
             + 'suunnitelmien mukaan Rasattepen kukkulalle, ja sen '
@@ -26088,38 +26117,18 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero-ankara-keskipaiva.png',
+          ampari: 'herokoe/hero-ankara-keskipaiva.jpg',
           selite: 'Hacı Bayramin moskeija rakennettiin 1427–1428 pyhimyksen '
             + 'haudan viereen kiinni Augustuksen ja Roman temppeliin, ja sen '
             + 'ainoa minareetti nousee viiteenkymmeneen metriin.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero-ankara-ilta.png',
+          ampari: 'herokoe/hero-ankara-ilta.jpg',
           selite: 'Atakule avattiin 13. lokakuuta 1989 Ragıp Buluçin '
             + 'suunnitelmien mukaan, se on 125 metriä korkea, ja sen '
             + 'Sevilla-ravintola tekee täyden kierroksen tunnissa.',
           lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          tiedosto: 'Ankara Castle Outer wall from outside at west side in 2017 01.jpg',
-          selite: 'Ankaran linnan muurit muurattiin uusiokäytetystä kivestä, '
-            + 'ja paikan ensimmäisen linnoituksen rakensivat fryygialaiset '
-            + '700-luvulla eaa.',
-          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'Tarihi Hamamönü Evleri, Ankara.jpg',
-          selite: 'Hamamönü on Ankaran vanhan kaupungin kortteli, jonka '
-            + 'perinteiset ottomaaniajan talot on kunnostettu.',
-          lahde: 'BIG-K006, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'Ankara Central from Ankara Kalesi, Ankara Turkey 2024.jpg',
-          selite: 'Uusi kaupunki Kızılayn ja Çankayan suunnalla piirrettiin '
-            + 'kartalle vasta sen jälkeen, kun Ankarasta tuli 13. lokakuuta '
-            + '1923 pääkaupunki.',
-          lahde: 'Zach1055, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       ennenNyt: [
