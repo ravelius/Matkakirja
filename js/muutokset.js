@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1206, teksti: 'Herot era 2: 13 kaupungin avauskuvat generoituina' },
   { v: 1205, teksti: 'Maailmannakyma piirtaa kaikki 134 maalehtea pikkukuvina' },
   { v: 1204, teksti: 'Ihmenauha istuu kuvaan: leikkaus, varjo, leveampi' },
   { v: 1203, teksti: 'Lahdeluettelon epaselvat lisenssit selvitetty' },
