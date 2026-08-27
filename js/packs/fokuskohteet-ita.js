@@ -110,6 +110,12 @@
  * puuttuvat listalta tarkoituksella (aineiston osio "Italian pelilaatat
  * — mitä kartalla JO on"). Etna on mukana omanaan, koska se on eri asia
  * kuin Sisilia-laatta.
+ *
+ * Aineiston 14 kohteen perässä on 15. kohde omana eränään: Forum
+ * Romanum, Matkakirjan ihmeiden Euroopan erä 27.8.2026. Sillä on oma
+ * kommenttinsa listan sisällä, ja se noudattaa pelilaattasääntöä
+ * samalla tavalla kuin Etna — nimetty paikka kaupungin sisällä, ei
+ * kaupunkilaatta.
  */
 export const FOKUSKOHTEET_ITA = [
   {
@@ -632,6 +638,96 @@ export const FOKUSKOHTEET_ITA = [
       selite: 'Su Nuraxin nuraghe Baruminissa. Kivitorneja seisoo yhä '
         + 'ympäri Sardiniaa.',
       lahde: 'Norbert Nagel, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+  },
+  /*
+   * ── MATKAKIRJAN IHMEIDEN EUROOPAN ERÄ (27.8.2026) ────────────────
+   *
+   * FORUM ROMANUM, listan 15. kohde. Aineiston 14 kohdetta yllä ovat
+   * ennallaan; tämä on niiden perässä omana eränään samaan tapaan kuin
+   * Kreikan tiedostossa Akropolis ja symbolierä.
+   *
+   * ROOMA ON PELILAATTA, FORUM EI OLE. Tiedoston alun sääntö sanoo,
+   * ettei listalla ole yhtään pelilaattaa — Venetsia, Firenze, Rooma ja
+   * Sisilia puuttuvat tarkoituksella. Forum Romanum ei riko sääntöä
+   * vaan noudattaa sitä samalla tavalla kuin Etna: kohde on yksi
+   * nimetty paikka kaupungin sisällä, ei kaupunkilaatta. Sen kohdalla
+   * kartalla on siis Forumin merkki eikä toista Roomaa.
+   *
+   * ESITYSTAPA ON "YHÄ OLEMASSA" (`kadonnut: false`). Forumin rauniot
+   * ovat paikallaan ja niissä käy vuosittain miljoonia ihmisiä, joten
+   * kartalla säilyy kohteen oma merkki ja pääkuvana on nykytilan
+   * valokuva; ihmekuva aukeaa sen alta "Koe ihme" -napista. Tähti
+   * kuuluu vain kohteille, joita ei ole enää lainkaan.
+   *
+   * KUVAPARI ON SAMASTA IKKUNASTA. Valokuva on otettu Palazzo
+   * Senatorion ikkunasta Capitoliumilta, ja ihmekuva katsoo samalta
+   * suunnalta samaa laaksoa: vasemmalla Septimius Severuksen
+   * riemukaari, keskellä Forumin aukio, taustalla Colosseum. Sama
+   * näkymä kahdessa ajassa on juuri se, mitä Raamattu ihmeeltä pyytää.
+   *
+   * 12,4852 E / 41,8922 N — en-Wikipedia "Roman Forum". Piste osuu
+   * ITA-lehden rajaukseen (x 5982–6522, y 1426–2055) ja on Rooman oman
+   * laatan vieressä, ei sen päällä (laatta 6249,7 / 1728,1).
+   */
+  {
+    id: 'forum-romanum',
+    nimi: 'Forum Romanum',
+    tyyppi: 'muu',
+    symboli: 'historia',
+    kysymykset: [
+      'Miksi Forum jäi lopulta autioksi?',
+      'Mitä Forumin aukiolla tehtiin tavallisena päivänä?',
+    ],
+    korostukset: ['Curia Julia|Curia Julian', 'basilika|basilikat'],
+    /* Valintakuplan painike. */
+    nappi: 'Aukio, jota on sanottu maailman kuuluisimmaksi',
+    laudat: {
+      maailmankartta: { x: 6249.5, y: 1727.9 },
+      europe: { x: 450.9, y: 791.8 },
+    },
+    teksti: 'Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen '
+      + 'ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja '
+      + 'Rooman jokapäiväisen elämän keskus: täällä kuljettiin '
+      + 'voittokulkueissa, äänestettiin, pidettiin puheita ja '
+      + 'oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat '
+      + 'kaupungin johtajille. Vanhimmat pyhäköt ovat aukion '
+      + 'kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli '
+      + 'ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät '
+      + 'vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin '
+      + '130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja '
+      + 'uuden senaatintalon Curia Julian. Nykyään paikka on laaja '
+      + 'raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.',
+    lahde: 'en-Wikipedia "Roman Forum", johdanto-osa ja tietolaatikko '
+      + '(tarkistettu 27.8.2026).',
+    /*
+     * Tarkistettu Commonsin imageinfo-rajapinnalla 27.8.2026
+     * (2848×2134, CC BY-SA 3.0, Blackcat): näkymä Palazzo Senatorion
+     * ikkunasta, sama suunta kuin ihmekuvassa.
+     */
+    kuva: {
+      tiedosto: '2012-02-17 Foro Romano da Palazzo Senatorio 1.jpg',
+      selite: 'Forum Capitoliumilta katsottuna: vasemmalla Septimius '
+        + 'Severuksen riemukaari, taustalla Colosseum.',
+      lahde: 'Blackcat, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    /*
+     * MATKAKIRJAN IHME (yhä olemassa) — säännöt js/packs/
+     * fokuskohteet-grc.js:n samannimisessä lohkossa. `kadonnut: false`,
+     * joten kartalla säilyy historian pylväs ja "Koe ihme" -nappi tulee
+     * yllä olevan valokuvan alle.
+     */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-forum-romanum.webp',
+      kadonnut: false,
+      selite: 'Forum oli valtakunnan sydän: temppeleitä, riemukaaria ja '
+        + 'kaksi valtavaa basilikaa, joiden pylväskäytävissä hoidettiin '
+        + 'Rooman kaupat ja oikeusjutut. Marmori oli maalattua ja '
+        + 'kullattua, ja aukio oli täynnä patsaita. Samassa notkossa '
+        + 'Palatinuksen ja Capitoliumin välissä on nyt raunioalue '
+        + 'keskellä nykyistä Roomaa.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
     },
   },
 ];

@@ -84,8 +84,12 @@ const MODULES = [
   'js/packs/fokusvirta-sarajevo.js',
   // Egyptillä ja Irakilla ei ole omaa fokusvirtaa: pelkät kohteet
   // (kadonneiden ihmeiden erä 26.8.2026), joten paririviä ei ole.
+  // Sama koskee Ranskaa ja Britanniaa (Matkakirjan ihmeiden Euroopan
+  // erä 27.8.2026).
   'js/packs/fokuskohteet-egy.js',
   'js/packs/fokuskohteet-irq.js',
+  'js/packs/fokuskohteet-fra.js',
+  'js/packs/fokuskohteet-gbr.js',
   'js/packs/fokusvirrat.js',
   'js/packs/uutislahteet.js',
   // uutiset vasta lähteidensä jälkeen (tuo uutislahteet.js:n).
