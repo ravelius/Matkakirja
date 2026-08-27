@@ -110,9 +110,11 @@ import { FOKUSKOHTEET_IRN } from './packs/fokuskohteet-irn.js';
 import { FOKUSKOHTEET_IRQ } from './packs/fokuskohteet-irq.js';
 import { FOKUSKOHTEET_ITA } from './packs/fokuskohteet-ita.js';
 import { FOKUSKOHTEET_JOR } from './packs/fokuskohteet-jor.js';
+import { FOKUSKOHTEET_LBY } from './packs/fokuskohteet-lby.js';
 import { FOKUSKOHTEET_MEX } from './packs/fokuskohteet-mex.js';
 import { FOKUSKOHTEET_ROU } from './packs/fokuskohteet-rou.js';
 import { FOKUSKOHTEET_SYR } from './packs/fokuskohteet-syr.js';
+import { FOKUSKOHTEET_TUN } from './packs/fokuskohteet-tun.js';
 import { FOKUSKOHTEET_TUR } from './packs/fokuskohteet-tur.js';
 import { FOKUSKOHTEET_ZWE } from './packs/fokuskohteet-zwe.js';
 import { FOKUSKOHTEET_GRC } from './packs/fokuskohteet-grc.js';
@@ -177,6 +179,18 @@ const KOHDE_MAAT = {
   IRN: FOKUSKOHTEET_IRN,
   AFG: FOKUSKOHTEET_AFG,
   ZWE: FOKUSKOHTEET_ZWE,
+  /*
+   * Libya ja Tunisia tulivat mukaan 27.8.2026 Matkakirjan ihmeiden
+   * VÄLIMEREN erän takia: Leptis Magna ja Karthagon pyöreä sotasatama
+   * olisivat muuten jääneet ilman maata. Ehto on sama kuin kaikilla
+   * edellisillä — kummankin fokuslehti on jo FOKUS_POHJAT-taulussa ja
+   * ämpärissä (LBY.webp, TUN.webp, tarkistettu 27.8.2026), joten
+   * merkit saavat pohjan, jonka päälle asettua. Erän kuusi muuta
+   * kohdetta mahtuivat jo olemassa oleviin listoihin (Italia, Kreikka,
+   * Turkki kahdella ja Irak kahdella).
+   */
+  LBY: FOKUSKOHTEET_LBY,
+  TUN: FOKUSKOHTEET_TUN,
 };
 
 /** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta). */

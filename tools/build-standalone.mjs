@@ -99,6 +99,10 @@ const MODULES = [
   'js/packs/fokuskohteet-irn.js',
   'js/packs/fokuskohteet-afg.js',
   'js/packs/fokuskohteet-zwe.js',
+  // Sama koskee Matkakirjan ihmeiden VÄLIMEREN erän kahta uutta maata
+  // (27.8.2026): pelkät kohteet, ei fokusvirtaa.
+  'js/packs/fokuskohteet-lby.js',
+  'js/packs/fokuskohteet-tun.js',
   'js/packs/fokusvirrat.js',
   'js/packs/uutislahteet.js',
   // uutiset vasta lähteidensä jälkeen (tuo uutislahteet.js:n).

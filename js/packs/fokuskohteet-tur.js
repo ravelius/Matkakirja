@@ -1270,6 +1270,199 @@ export const FOKUSKOHTEET_TUR = [
         + 'nykymaailmassa',
     },
   },
+  {
+    /*
+     * ── MATKAKIRJAN IHMEIDEN VÄLIMEREN ERÄ (27.8.2026) ─────────────
+     *
+     * THEODOSIUKSEN MUURIT. Sama ratkaisu kuin Hippodromilla yllä:
+     * Istanbul on pelilaatta, muurit eivät ole, joten kohteeksi
+     * valittiin yksi nimetty paikka kaupungin sisällä (Forum
+     * Romanum -ennakkotapaus, js/packs/fokuskohteet-ita.js).
+     *
+     * PISTE EI OLE ARTIKKELIN OMA KOORDINAATTI, ja se on tietoinen
+     * poikkeus. Artikkelin "Walls of Constantinople" tietolaatikko
+     * antaa 41,0122 / 28,9760, mutta se on koko MUURIJÄRJESTELMÄN
+     * paikannus ja osuu Sultanahmetiin — samaan pisteeseen kuin
+     * Hippodromi kolme kohdetta ylempänä. Theodosiuksen maamuurit
+     * kulkevat siitä 5,7 kilometriä lännessä, joten piste on muurien
+     * omalla linjalla: Kultaportti eli Yedikulen linnoitus muurien
+     * eteläpäässä, 28,923093 E / 40,9933525 N (en-Wikipedia "Yedikule
+     * Fortress", tietolaatikon coordinates). Muuri on viivamainen
+     * kohde, ja sama sääntö kuin Kreikan tiedoston merillä pätee:
+     * merkki on kohteen tunnetuimmalla nimetyllä pisteellä, ei
+     * artikkelin yleiskoordinaatilla.
+     *
+     * Kaava on maailmankartan Millerin lieriö (LEVEYS 12000 / LON0
+     * −175 / POHJOINEN 76) ja piste osuu TUR-lehden rajaukseen
+     * (x 6642–7350, y 1683–1998).
+     *
+     * ESITYSTAPA ON "YHÄ OLEMASSA" (`kadonnut: false`). Muuri seisoo:
+     * korjattuja osuuksia on kilometreittäin, tornit ovat paikoillaan
+     * ja linja kulkee halki Istanbulin. Kadonnut on KAUPUNKI muurin
+     * takaa — Konstantinopoli. Kartalla säilyy siis kohteen oma
+     * merkki, pääkuvana on nykytilan valokuva ja ihmekuva aukeaa sen
+     * alta "Koe ihme" -napista.
+     */
+    id: 'theodosiuksen-muurit',
+    nimi: 'Theodosiuksen muurit',
+    tyyppi: 'muu',
+    symboli: 'historia',
+    kysymykset: [
+      'Miten Konstantinopoli lopulta vallattiin, jos muuri kesti?',
+      'Kuka vastasi muurien korjaamisesta?',
+    ],
+    korostukset: ['vallihauta|vallihauta', 'Anthemios|Anthemios'],
+    nappi: 'Muuri, jota tykistökään ei murtanut',
+    laudat: {
+      maailmankartta: { x: 6797.4, y: 1763.7 },
+      europe: { x: 766.5, y: 815.5 },
+    },
+    teksti: 'Theodosiuksen muurit suojasivat Konstantinopolia mereltä '
+      + 'merelle kaupungin länsipuolella. Ensimmäinen vaihe valmistui '
+      + 'vuonna 413 keisari Theodosius toisen alaikäisyyden aikana, '
+      + 'kun idän prefekti Anthemios johti työtä; vuosien 437 ja 447 '
+      + 'maanjäristysten jälkeen eteen rakennettiin toinen, matalampi '
+      + 'muuri ja leveä vallihauta. Kokonaisuus oli kolmiportainen: '
+      + 'yli kaksikymmentä metriä leveä ja jopa kymmenen metriä syvä '
+      + 'hauta, 8,5 metriä korkea ulkomuuri ja sen takana 12 metriä '
+      + 'korkea ja 4,5–6 metriä paksu päämuuri, jota vahvisti 96 '
+      + 'tornia. Muuraus on kalkkikiveä, jonka läpi kulkee tiiliraitoja: '
+      + 'ne sitovat kivikuoren ja laastiytimen yhteen ja auttavat '
+      + 'kestämään maanjäristyksiä. Muurit torjuivat avaarien, arabien, '
+      + 'rusien ja bulgaarien piiritykset, eikä ottomaanien tykistö '
+      + 'kyennyt murtamaan niitä edes vuoden 1453 lähes kaksi kuukautta '
+      + 'kestäneessä piirityksessä.',
+    lahde: 'en-Wikipedia "Walls of Constantinople", johdanto sekä '
+      + 'osiot "Theodosian walls", "Course and topography", '
+      + '"Construction", "Later history" ja "Preservation and '
+      + 'restoration work" (tarkistettu 27.8.2026).',
+    /*
+     * NYKYTILAN VALOKUVA. Tarkistettu Commonsin imageinfo-rajapinnalla
+     * 27.8.2026 (1920×1080, CC BY-SA 3.0, en:User:Bigdaddy1204,
+     * kuvattu kesäkuussa 2006) ja katsottu silmin: korjattu osuus,
+     * jossa näkyvät kaikki kolme porrasta — vallihaudan muuri, ulkomuuri
+     * ja päämuurin torni. Kuvan oikeassa alakulmassa kulkee yksi
+     * ihminen selin ja varjossa, ei tunnistettavissa. Sama kolmiportainen
+     * rakenne kuin ihmekuvassa, joten pari toimii.
+     */
+    kuva: {
+      tiedosto: 'Walls of Constantinople.JPG',
+      selite: 'Theodosiuksen muurien korjattu osuus: edessä vallihaudan '
+        + 'muuri, keskellä ulkomuuri ja takana päämuurin torni.',
+      lahde: 'Bigdaddy1204, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    /*
+     * MATKAKIRJAN IHME (yhä olemassa) — säännöt js/packs/
+     * fokuskohteet-grc.js:n samannimisessä lohkossa. `kadonnut: false`,
+     * joten "Koe ihme" -nappi tulee valokuvan alle.
+     */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-theodosiuksen-muurit.webp',
+      kadonnut: false,
+      selite: 'Theodosiuksen muurit olivat myöhäisantiikin mahtavin '
+        + 'linnoitus: 5,7 kilometriä kolminkertaista puolustusta '
+        + 'mereltä merelle, 96 tornia päämuurissa ja niiden edessä '
+        + 'matalampi ulkomuuri ja yli kahdenkymmenen metrin levyinen '
+        + 'vallihauta. Ne pitivät kaupungin tuhat vuotta. Muuririvi '
+        + 'kulkee yhä halki Istanbulin, ja sen vieressä on nyt '
+        + 'puistokaista ja moottoritie; 1980-luvun korjauksia on '
+        + 'moitittu, sillä vuoden 1999 maanjäristyksessä juuri '
+        + 'korjatut osat sortuivat ja alkuperäinen muuraus jäi '
+        + 'pystyyn.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
+    },
+  },
+  {
+    /*
+     * PERGAMONIN ALTTARI (Välimeren erä 27.8.2026).
+     *
+     * 27,183931 E / 39,131051 N — en-Wikipedia "Pergamon Altar"
+     * (artikkelin coord). Piste on akropoliin alttariterassi Bergaman
+     * yläpuolella ja osuu TUR-lehden rajaukseen (x 6642–7350,
+     * y 1683–1998). Bergama ei ole pelilaatta, joten tässä ei ole
+     * kaupunkiristiriitaa lainkaan.
+     *
+     * ESITYSTAPA ON "KADONNUT" (`kadonnut: true`) — ja tämä on erän
+     * toinen tapaus, jossa kadonnut ei tarkoita tuhoutunutta vaan
+     * SIIRRETTYÄ (toinen on Ishtarin portti, js/packs/
+     * fokuskohteet-irq.js). Alttarirakennelmaa ei ole terassilla:
+     * jäljellä on perustus ja muutama muurinpätkä, ja friisit sekä
+     * rakenne ovat Berliinin Pergamonmuseumissa. Kohde itse ei siis
+     * ole paikallaan, joten kartalla on tähti ja kortissa vain
+     * ihmekuva. Selite sanoo suoraan, missä alttari on — omistajan
+     * linjaus 27.8.2026: siirretyn kohteen kohdalla on kerrottava,
+     * minne se siirrettiin.
+     *
+     * ISOISÄN KYTKÖS ON PÄIVÄMÄÄRÄN TARKKA. Carl Humannin viralliset
+     * kaivaukset alkoivat syyskuussa 1878 ja friisit lähtivät
+     * Berliiniin vuodesta 1879 alkaen; sitä ennen bergamalaiset
+     * käyttivät rinnettä kivilouhoksena ja polttivat marmoria
+     * kalkiksi. Vuonna 1873 alttari oli siis vielä maassa ja
+     * hajoamassa — isoisä kulki ohi juuri ennen kaivauksia.
+     */
+    id: 'pergamonin-alttari',
+    nimi: 'Pergamonin alttari',
+    tyyppi: 'muu',
+    symboli: 'historia',
+    kysymykset: [
+      'Miksi Pergamonin kuninkaat rakensivat näin suuresti?',
+      'Mitä gigantomakhia merkitsi kreikkalaisille?',
+    ],
+    korostukset: ['gigantomakhia|gigantomakhiaa', 'friisi|friisi'],
+    nappi: 'Alttari, jonka friisi on nyt Berliinissä',
+    laudat: {
+      maailmankartta: { x: 6739.5, y: 1836.9 },
+      europe: { x: 733.1, y: 864.5 },
+    },
+    teksti: 'Pergamonin suuri alttari kohosi akropoliin terassilla '
+      + 'nykyisen Bergaman yläpuolella, ja kuningas Eumenes toinen '
+      + 'rakennutti sen 100-luvun eaa. alkupuoliskolla. Alttari oli '
+      + '35,7 metriä leveä ja 33,4 metriä syvä, ja pelkkä etuportaikko '
+      + 'oli lähes kaksikymmentä metriä leveä. Jalustaa kiersi '
+      + 'korkeareliefinen friisi, jossa olympolaiset jumalat taistelevat '
+      + 'jättiläisiä vastaan — gigantomakhiaa. Portaiden päällä olevan '
+      + 'uhripihan seinillä oli toinen, pienempi friisi Telefoksen '
+      + 'elämästä; hän oli Herakleen poika ja kaupungin tarunomainen '
+      + 'perustaja. Roomalainen Lucius Ampelius luetteli alttarin '
+      + 'maailman ihmeiden joukkoon: "Pergamonissa on suuri '
+      + 'marmorialttari, neljäkymmentä jalkaa korkea, ja siinä on '
+      + 'kolossaalisia veistoksia." Rakennelma purettiin osittain '
+      + '600-luvulla, kun akropolis linnoitettiin, ja 1800-luvulla '
+      + 'paikallinen väki käytti rinnettä kivilouhoksena.',
+    lahde: 'en-Wikipedia "Pergamon Altar", johdanto sekä osiot '
+      + '"Endowment and dating", "Function", "Until the close of '
+      + 'antiquity", "From antiquity to 19th century excavations" ja '
+      + '"In Berlin" (tarkistettu 27.8.2026).',
+    /*
+     * MATKAKIRJAN IHME (kadonnut) — säännöt js/packs/
+     * fokuskohteet-grc.js:n samannimisessä lohkossa. Kortissa on vain
+     * tämä kuva.
+     *
+     * MITÄ SELITE EI VÄITÄ: terassi ja perustus ovat paikallaan ja
+     * Bergaman akropolis on avoinna kävijöille — selite sanoo
+     * "perustus ja muutama muurinpätkä", ei "ei mitään jäljellä".
+     * Myöskään friisien palauttamiskeskustelua ei kerrota: se on
+     * politiikkaa eikä kohteen historiaa, ja Perustuslain
+     * ikäsopivuuskohta pitää tekstin kohteessa.
+     */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-pergamonin-alttari.webp',
+      kadonnut: true,
+      selite: 'Pergamonin suuri alttari oli hellenistisen taiteen '
+        + 'huipentuma: 35 metriä leveä marmorirakennelma akropoliin '
+        + 'terassilla, jalustassa satojen hahmojen taistelufriisi ja '
+        + 'portaiden päällä pylväiden ympäröimä uhripiha. Rakennelmaa '
+        + 'ei ole enää paikallaan. Isoisän matkan aikaan vuonna 1873 '
+        + 'bergamalaiset yhä louhivat rinteestä kiveä ja polttivat '
+        + 'marmoria kalkiksi; Carl Humannin kaivaukset alkoivat viisi '
+        + 'vuotta myöhemmin, ja friisit vietiin sopimuksella Berliiniin, '
+        + 'missä ne ovat yhä Pergamonmuseumissa. Terassilla on nyt '
+        + 'perustus ja muutama muurinpätkä.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
+    },
+  },
 ];
 
 const TUR_TUNNUKSITTAIN = new Map(FOKUSKOHTEET_TUR.map((k) => [k.id, k]));

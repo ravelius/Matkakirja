@@ -98,4 +98,173 @@ export const FOKUSKOHTEET_IRQ = [
         + 'nykymaailmassa',
     },
   },
+  /*
+   * ── MATKAKIRJAN IHMEIDEN VÄLIMEREN ERÄ (27.8.2026) ───────────────
+   *
+   * Kaksi kohdetta lisää, ja tiedoston alun "yksi kohde" -perustelu
+   * jää siihen: Irakilla on nyt kolme fokuskohdetta. Kumpikin uusi on
+   * ihmekohde eikä maakatsaus, ja kumpikin on `kadonnut: true` —
+   * mutta eri syystä, ja se ero on kirjoitettava auki.
+   *
+   *   ISHTARIN PORTTI on SIIRRETTY. Portti ei tuhoutunut: se
+   *     kaivettiin esiin ja vietiin Berliiniin, missä pienempi
+   *     etuportti on koottu Pergamonmuseumin saliin. Paikalla
+   *     Babylonissa on vuoden 1987 jäljennös, joka on alkuperäistä
+   *     selvästi pienempi. Kohde itse — se portti, josta ihmekuva
+   *     kertoo — ei siis ole paikallaan, joten kartalla on tähti.
+   *     Selitteessä ON SANOTTAVA, missä tiilet ovat (omistajan
+   *     linjaus 27.8.2026); ilman sitä tähti valehtelisi kohteen
+   *     hävinneen. Sama esitystapa ja sama sääntö kuin Pergamonin
+   *     alttarilla (js/packs/fokuskohteet-tur.js).
+   *
+   *   SANHERIBIN LOUNAISPALATSI on TUHOUTUNUT. Palatsin salit ovat
+   *     poissa. Aihe on rajattu neutraaliksi täsmälleen kuten
+   *     Palmyran Belin temppelissä (js/packs/fokuskohteet-syr.js):
+   *     tuho kerrotaan tapahtumana ja vuosilukuna ja tekijä nimetään
+   *     niin kuin lähdeartikkeli sen nimeää, muttei kuvailla tuhoa
+   *     eikä tekijöiden muuta toimintaa. Perustuslain
+   *     ikäsopivuuskohta koskee juuri tätä: kohde kerrotaan, ei sotaa.
+   *
+   * KOORDINAATIT: kummallakin vain `maailmankartta`, koska molemmat
+   * ovat Euroopan laudan kaavan itäpuolella (kaava kattaa −11°…41°).
+   * Kaava on maailmankartan Millerin lieriö, ja molemmat pisteet
+   * osuvat IRQ-lehden rajaukseen (x 7067–7511, y 1847–2269).
+   *
+   * FAKTAPOHJA: en-Wikipedia raakatekstinä artikkelit "Ishtar Gate",
+   * "Nineveh" ja "Sennacherib" 27.8.2026.
+   */
+  {
+    /*
+     * ISHTARIN PORTTI. 44,422222 E / 32,543333 N — en-Wikipedia
+     * "Ishtar Gate" (artikkelin coord, 32°32′36″N 44°25′20″E).
+     * Piste on Babylonin raunioalue nykyisen Hillan liepeillä, ja se
+     * on lähes sama kuin riippuvien puutarhojen piste yllä (7314,0 /
+     * 2087,4) — molemmat ovat samassa kaupungissa. Niputuspassi
+     * (js/fokusniput.js) erottaa merkit esityksessä; dataan ei
+     * kosketa.
+     */
+    id: 'ishtarin-portti',
+    nimi: 'Ishtarin portti',
+    tyyppi: 'muu',
+    symboli: 'historia',
+    kysymykset: [
+      'Miksi sininen väri oli babylonialaisille niin tärkeä?',
+      'Miten portin tiilet päätyivät Berliiniin?',
+    ],
+    korostukset: ['mušhuššu|mušhuššu', 'Prosessiotie|Prosessiotie'],
+    nappi: 'Portti, jonka tiilet ovat nyt Berliinissä',
+    laudat: {
+      maailmankartta: { x: 7314.1, y: 2087.3 },
+    },
+    teksti: 'Ishtarin portti oli Babylonin sisemmän kaupunginmuurin '
+      + 'kahdeksas portti, ja Nebukadnessar toinen rakennutti sen noin '
+      + '569 eaa. kaupungin pohjoislaidalle. Portin tiilet oli '
+      + 'lasitettu syvänsiniseksi jäljittelemään lapislatsulia, ja '
+      + 'niiden pintaan oli muotoiltu vuorotellen Marduk-jumalan '
+      + 'käärmelohikäärme mušhuššu ja ukkosenjumala Adadin alkuhärkä. '
+      + 'Portista alkoi yli 800 metriä pitkä Prosessiotie, jonka '
+      + 'muureilla asteli kuusikymmentä Ishtarin leijonaa kummallakin '
+      + 'puolella. Katto ja ovet olivat setripuuta, ja tiilten saumat '
+      + 'tiivistettiin bitumilla. Kerran vuodessa, kevätpäiväntasauksen '
+      + 'aikaan alkaneena uudenvuoden juhlana, jumalten patsaat '
+      + 'kannettiin portista Prosessiotietä pitkin. Nebukadnessarin '
+      + 'vihkikirjoitus kertoo, miksi portti koristeltiin näin: "jotta '
+      + 'ihmiskunta katselisi niitä ihmeissään".',
+    lahde: 'en-Wikipedia "Ishtar Gate", johdanto sekä osiot "History", '
+      + '"Design", "Ishtar Gate and Processional Way", "Inscription of '
+      + 'Nebuchadnezzar II" ja "Excavation and display" (tarkistettu '
+      + '27.8.2026).',
+    /*
+     * MATKAKIRJAN IHME (kadonnut paikaltaan) — säännöt js/packs/
+     * fokuskohteet-grc.js:n samannimisessä lohkossa. Kortissa on vain
+     * tämä kuva.
+     */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-ishtarin-portti.webp',
+      kadonnut: true,
+      selite: 'Ishtarin portti oli Babylonin loistoportti: '
+        + 'syvänsiniseksi lasitettuja tiiliä, joiden pintaan oli '
+        + 'muotoiltu kultaisia lohikäärmeitä ja härkiä, ja portista '
+        + 'alkoi leijonien reunustama Prosessiotie. Alkuperäinen portti '
+        + 'ei ole enää paikallaan: Robert Koldeweyn retkikunta kaivoi '
+        + 'sen esiin 1900-luvun alussa, ja tiilet vietiin Berliiniin, '
+        + 'missä pienempi etuportti on koottu uudelleen '
+        + 'Pergamonmuseumin saliin. Babylonin raunioilla Hillan '
+        + 'liepeillä seisoo nyt vuonna 1987 valmistunut jäljennös, joka '
+        + 'on alkuperäistä selvästi pienempi.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
+    },
+  },
+  {
+    /*
+     * SANHERIBIN LOUNAISPALATSI. 43,152778 E / 36,359444 N —
+     * en-Wikipedia "Nineveh" (tietolaatikon coordinates, 36°21′34″N
+     * 43°09′10″E). Piste on Ninive eli Kuyunjiqin ja Nebi Yunusin
+     * kummut Tigrisin itärannalla Mosulin laidalla; palatsi on
+     * Kuyunjiqin kummulla.
+     *
+     * ISOISÄN KYTKÖS ON KOHTEEN TEKSTISSÄ eikä keksitty: George Smith
+     * kaivoi lounaispalatsissa vuosina 1873–1874 eli täsmälleen
+     * päiväkirjan vuonna.
+     */
+    id: 'niniven-lounaispalatsi',
+    nimi: 'Sanheribin lounaispalatsi',
+    tyyppi: 'muu',
+    symboli: 'historia',
+    kysymykset: [
+      'Mitä George Smith löysi Niniven savitauluista?',
+      'Miksi assyrialaiset verhosivat seinät kivireliefeillä?',
+    ],
+    korostukset: ['Sanherib|Sanherib', 'reliefi|reliefeillä'],
+    nappi: 'Palatsi vailla vertaa Tigrisin rannalla',
+    laudat: {
+      maailmankartta: { x: 7271.8, y: 1943.8 },
+    },
+    teksti: 'Assyrian kuningas Sanherib siirsi valtakuntansa '
+      + 'pääkaupungin Niniveen ja aloitti vuonna 702 eaa. '
+      + 'lounaispalatsin rakentamisen Kuyunjiqin kummulle. Hän kutsui '
+      + 'sitä nimellä "palatsi vailla vertaa". Rakennus mitattiin '
+      + 'kummun mukaan noin 500 metriä pitkäksi ja 240 metriä leveäksi, '
+      + 'ja siinä oli ainakin kahdeksankymmentä huonetta. Perustus '
+      + 'muurattiin kalkkikivestä ja savitiilestä 22 metrin korkeuteen '
+      + '— arviolta 160 miljoonaa tiiltä — ja sen päällä kohosi vielä '
+      + 'kaksikymmentä metriä savitiilimuuria. Seinät verhottiin '
+      + 'kivireliefeillä, katto tehtiin sypressistä ja setristä ja '
+      + 'porteille pystytettiin kolossaaliset härkä- ja '
+      + 'leijonapatsaat. Austen Henry Layard löysi palatsin uudelleen '
+      + 'vuonna 1849 ja George Smith kaivoi siellä vuosina 1873–1874. '
+      + 'Reliefit ovat nyt Lontoossa, Berliinissä, Bagdadissa, '
+      + 'Pariisissa ja New Yorkissa.',
+    lahde: 'en-Wikipedia "Sennacherib", osiot "Building projects" ja '
+      + '"Sources", sekä "Nineveh", osiot "Sennacherib", '
+      + '"Archaeology" ja "Threats" (tarkistettu 27.8.2026).',
+    /*
+     * MATKAKIRJAN IHME (kadonnut) — säännöt js/packs/
+     * fokuskohteet-grc.js:n samannimisessä lohkossa. Kortissa on vain
+     * tämä kuva.
+     *
+     * SELITE ON KIRJOITETTU TAPAHTUMANA EIKÄ KUVAUKSENA, kuten
+     * Palmyran Belin temppelissä. Se sanoo mikä palatsi oli, missä
+     * järjestyksessä se hävisi ja mitä paikalla tehdään nyt — ei
+     * enempää.
+     */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-niniven-palatsi.webp',
+      kadonnut: true,
+      selite: 'Sanheribin lounaispalatsi oli Assyrian mahdin '
+        + 'näyteikkuna: kahdeksankymmentä huonetta, joiden seinät oli '
+        + 'verhottu kivireliefeillä, ja porteilla siivekkäät '
+        + 'härkäkolossit. Palatsin salit ovat poissa. Rakennus oli jo '
+        + 'raunio, kun Layard kaivoi sen esiin 1800-luvulla, '
+        + '1990-luvulta alkaen jäljellä olleet reliefit kärsivät '
+        + 'ryöstelystä, ja Isis-järjestö puski valtaistuinsalin maan '
+        + 'tasalle vuonna 2016. Kuyunjiqin kumpu on yhä paikallaan '
+        + 'Mosulin laidalla Tigrisin itärannalla, ja saksalainen '
+        + 'retkikunta on vuodesta 2021 pelastanut ja korjannut '
+        + 'särkyneitä reliefejä.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
+    },
+  },
 ];

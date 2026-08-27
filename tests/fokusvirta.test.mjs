@@ -468,6 +468,10 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
     IRN: (await import('../js/packs/fokuskohteet-irn.js')).FOKUSKOHTEET_IRN,
     AFG: (await import('../js/packs/fokuskohteet-afg.js')).FOKUSKOHTEET_AFG,
     ZWE: (await import('../js/packs/fokuskohteet-zwe.js')).FOKUSKOHTEET_ZWE,
+    // Välimeren erä 27.8.2026: kaksi uutta maata, joilla on fokuslehti
+    // mutta ei vielä omaa fokusvirtaa.
+    LBY: (await import('../js/packs/fokuskohteet-lby.js')).FOKUSKOHTEET_LBY,
+    TUN: (await import('../js/packs/fokuskohteet-tun.js')).FOKUSKOHTEET_TUN,
   });
 
   let ihmeita = 0;
@@ -527,12 +531,14 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
     }
   }
   /*
-   * KYMMENEN + KOLME + NELJÄTOISTA. Ensimmäinen erä (26.–27.8.2026)
-   * oli antiikin kadonneet ihmeet, Euroopan erä (27.8.2026) toi kolme
-   * lisää (Forum Romanum, Tuileries, vanha St Paul) ja MAAILMAN erä
-   * samana päivänä neljätoista viideltä mantereelta.
+   * KYMMENEN + KOLME + NELJÄTOISTA + KAHDEKSAN. Ensimmäinen erä
+   * (26.–27.8.2026) oli antiikin kadonneet ihmeet, Euroopan erä
+   * (27.8.2026) toi kolme lisää (Forum Romanum, Tuileries, vanha
+   * St Paul), MAAILMAN erä samana päivänä neljätoista viideltä
+   * mantereelta ja VÄLIMEREN erä vielä kahdeksan antiikin Välimereltä
+   * ja Mesopotamiasta.
    */
-  assert.equal(ihmeita, 27, 'Matkakirjan ihmeitä on kaksikymmentäseitsemän');
+  assert.equal(ihmeita, 35, 'Matkakirjan ihmeitä on kolmekymmentäviisi');
 });
 
 /*
@@ -549,8 +555,8 @@ test('ihmeiden kuvakansiossa on vain uudet ihme-kuvat', async () => {
   const juuri = join(dirname(fileURLToPath(import.meta.url)), '..');
   const kansio = join(juuri, 'assets/kartat/ihmeet');
   const tiedostot = readdirSync(kansio);
-  assert.equal(tiedostot.length, 27,
-    'kansiossa on kaksikymmentäseitsemän ihmekuvaa');
+  assert.equal(tiedostot.length, 35,
+    'kansiossa on kolmekymmentäviisi ihmekuvaa');
   for (const nimi of tiedostot) {
     assert.ok(nimi.startsWith('ihme-'), `${nimi}: vanha loistoaikakuva on yhä levyllä`);
   }
@@ -628,6 +634,63 @@ test('kadonnut ihme saa kartalle tähden, olemassa oleva pitää oman merkkinsä
   assert.equal(pyramidi.ihme.kadonnut, false,
     'Kheopsin pyramidi on antiikin ihmeistä ainoa pystyssä oleva');
   assert.ok(pyramidi.kuva?.tiedosto, 'pyramidista on valokuva nykytilasta');
+
+  /*
+   * VÄLIMEREN ERÄ 27.8.2026. Neljä vartiota, jotka kaikki koskevat
+   * esitystapaa — sitä, mitä pelaaja näkee kartalla ja kortissa.
+   * Väärä valinta ei kaataisi mitään, mutta valehtelisi.
+   *
+   *   1. SIIRRETTY ON KADONNUT, MUTTA SELITTEEN ON KERROTTAVA MINNE.
+   *      Ishtarin porttia ja Pergamonin alttaria ei tuhottu: ne ovat
+   *      Berliinin Pergamonmuseumissa, ja paikalla on jäljennös tai
+   *      pelkkä perustus. Kohde itse ei ole paikallaan, joten tähti
+   *      on oikein — mutta ilman Berliini-mainintaa tähti väittäisi
+   *      kohteen hävinneen (omistajan linjaus 27.8.2026). Vartio
+   *      vaatii sanan "Berliini" kummankin selitteestä.
+   *   2. KARTHAGON SATAMA ON TÄHTI, VAIKKA ALLAS ON YHÄ MAASTOSSA.
+   *      Kohde on sotasatama rakennelmana — vajat, pylväikkö ja
+   *      amiraalin paviljonki — eikä sitä ole. Selitteen on silti
+   *      sanottava, että allas on paikallaan, tai pelaaja luulisi
+   *      koko paikan kadonneen. Sama muotoilun sääntö kuin
+   *      Bamiyanilla yllä.
+   *   3. COLOSSEUM JA THEODOSIUKSEN MUURIT OVAT "KOE IHME"
+   *      -KOHTEITA. Molemmat seisovat, joten kummallakin on oltava
+   *      nykytilan valokuva. Tähti olisi suoranainen virhe.
+   *   4. LEPTIS MAGNA ON "KOE IHME" JA SEN SELITE VIITTAA VUOTEEN
+   *      1873. Kaupunki oli isoisän matkan aikaan dyynien alla, ja
+   *      juuri se on kohteen ihme — sitä ei saa pudottaa pois
+   *      selitettä lyhennettäessä.
+   */
+  const { FOKUSKOHTEET_IRQ } = await import('../js/packs/fokuskohteet-irq.js');
+  const { FOKUSKOHTEET_TUR } = await import('../js/packs/fokuskohteet-tur.js');
+  const { FOKUSKOHTEET_TUN } = await import('../js/packs/fokuskohteet-tun.js');
+  const { FOKUSKOHTEET_LBY } = await import('../js/packs/fokuskohteet-lby.js');
+  const { FOKUSKOHTEET_ITA } = await import('../js/packs/fokuskohteet-ita.js');
+  const portti = FOKUSKOHTEET_IRQ.find((k) => k.id === 'ishtarin-portti');
+  const alttari = FOKUSKOHTEET_TUR.find((k) => k.id === 'pergamonin-alttari');
+  const satama = FOKUSKOHTEET_TUN.find((k) => k.id === 'karthagon-sotasatama');
+  const leptis = FOKUSKOHTEET_LBY.find((k) => k.id === 'leptis-magna');
+  const colosseum = FOKUSKOHTEET_ITA.find((k) => k.id === 'colosseum');
+  const muurit = FOKUSKOHTEET_TUR.find((k) => k.id === 'theodosiuksen-muurit');
+  for (const siirretty of [portti, alttari]) {
+    assert.equal(siirretty.ihme.kadonnut, true,
+      `${siirretty.id}: kohde ei ole enää paikallaan`);
+    assert.equal(siirretty.kuva, undefined,
+      `${siirretty.id}: siirretystä kohteesta ei ole paikan päällä valokuvaa`);
+    assert.ok(/Berliini/.test(siirretty.ihme.selite),
+      `${siirretty.id}: selitteen on kerrottava, että kohde on Berliinissä`);
+  }
+  assert.equal(satama.ihme.kadonnut, true, 'sotasataman rakennelmat ovat poissa');
+  assert.ok(/allas/i.test(satama.ihme.selite),
+    'Karthagon selite kertoo altaan olevan yhä maastossa');
+  assert.equal(colosseum.ihme.kadonnut, false, 'Colosseum on pystyssä');
+  assert.ok(colosseum.kuva?.tiedosto, 'Colosseumista on valokuva nykytilasta');
+  assert.equal(muurit.ihme.kadonnut, false, 'Theodosiuksen muurit ovat pystyssä');
+  assert.ok(muurit.kuva?.tiedosto, 'muureista on valokuva nykytilasta');
+  assert.equal(leptis.ihme.kadonnut, false, 'Leptis Magnan rauniot ovat pystyssä');
+  assert.ok(leptis.kuva?.tiedosto, 'Leptis Magnasta on valokuva nykytilasta');
+  assert.ok(/1873/.test(leptis.ihme.selite),
+    'Leptis Magnan selite kertoo kaupungin nukkuneen dyynien alla isoisän aikaan');
 });
 
 /*

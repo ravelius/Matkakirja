@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1216';
+const CACHE = 'matkakirja-2026-08-09.1217';
 const SHELL = [
   './',
   './index.html',
@@ -202,6 +202,9 @@ const SHELL = [
   './js/packs/fokuskohteet-irn.js',
   './js/packs/fokuskohteet-afg.js',
   './js/packs/fokuskohteet-zwe.js',
+  // Matkakirjan ihmeiden VÄLIMEREN erä 27.8.2026: kaksi uutta maata.
+  './js/packs/fokuskohteet-lby.js',
+  './js/packs/fokuskohteet-tun.js',
   './js/packs/paivan-kuvat.js',
   './js/packs/uutislahteet.js',
   './js/packs/pollo-asetukset.js',
@@ -673,6 +676,19 @@ const SHELL = [
   './assets/kartat/ihmeet/ihme-petra.webp',
   './assets/kartat/ihmeet/ihme-persepolis.webp',
   './assets/kartat/ihmeet/ihme-suuri-zimbabwe.webp',
+  // Välimeren erä 27.8.2026: kahdeksan ihmettä antiikin Välimereltä
+  // ja Mesopotamiasta. Neljä kadonnutta (tähti kartalla) — Ishtarin
+  // portti ja Pergamonin alttari ovat siirretyt, Niniven palatsi ja
+  // Karthagon satama tuhotut:
+  './assets/kartat/ihmeet/ihme-ishtarin-portti.webp',
+  './assets/kartat/ihmeet/ihme-niniven-palatsi.webp',
+  './assets/kartat/ihmeet/ihme-karthagon-satama.webp',
+  './assets/kartat/ihmeet/ihme-pergamonin-alttari.webp',
+  // Neljä yhä olemassa olevaa ("Koe ihme" -nappi valokuvan alla):
+  './assets/kartat/ihmeet/ihme-colosseum.webp',
+  './assets/kartat/ihmeet/ihme-olympieion.webp',
+  './assets/kartat/ihmeet/ihme-theodosiuksen-muurit.webp',
+  './assets/kartat/ihmeet/ihme-leptis-magna.webp',
   // Lippuikkunan versioliput (pilotti Suomi + Saksa, v711).
   './assets/liput/versiot/fin-valtiolippu.png',
   './assets/liput/versiot/fin-sotalippu.png',

@@ -730,6 +730,115 @@ export const FOKUSKOHTEET_ITA = [
         + 'nykymaailmassa',
     },
   },
+  /*
+   * ── MATKAKIRJAN IHMEIDEN VÄLIMEREN ERÄ (27.8.2026) ───────────────
+   *
+   * COLOSSEUM, listan 16. kohde. Sama ennakkotapaus kuin Forum
+   * Romanumilla yllä: ROOMA ON PELILAATTA, COLOSSEUM EI OLE, joten
+   * tiedoston alun sääntö (listalla ei ole yhtään pelilaattaa) pysyy
+   * voimassa — kohde on yksi nimetty paikka kaupungin sisällä, ei
+   * toinen Rooma. Kartalla on siis Colosseumin merkki eikä toista
+   * kaupunkilaattaa.
+   *
+   * MERKKI ON KOLMANTENA SAMASSA RYPPÄÄSSÄ. Rooman laatta on
+   * 6249,7 / 1728,1 ja Forum Romanum 6249,5 / 1727,9; Colosseum on
+   * 6249,7 / 1728,0 eli käytännössä samassa pisteessä. Se on maasto
+   * eikä virhe — Forumin ja Colosseumin väli on 500 metriä ja laudan
+   * yksikkö on kymmeniä kilometrejä. Niputuspassi (js/fokusniput.js)
+   * kasaa päällekkäin osuvat merkit ESITYKSESSÄ erilleen, ja ahtaassa
+   * ryppäässä nimiö väistyy (v1211); dataan ei kosketa.
+   *
+   * ESITYSTAPA ON "YHÄ OLEMASSA" (`kadonnut: false`). Colosseum on
+   * maailman suurin pystyssä oleva amfiteatteri ja yksi Rooman
+   * käydyimmistä kohteista, joten kartalla säilyy kohteen oma merkki
+   * ja pääkuvana on nykytilan valokuva; ihmekuva aukeaa sen alta
+   * "Koe ihme" -napista. Tähti kuuluu vain kohteille, joita ei ole
+   * enää lainkaan.
+   *
+   * KUVAPARI KATSOO SAMAA SIVUA. Valokuva on otettu luoteesta, ja
+   * siinä näkyy juuri se raja, josta ihmekuva kertoo: vasemmalla
+   * säilynyt ulkomuuri kolmine kaarikerroksineen, oikealla paljaaksi
+   * riisuttu sisämuuri. Ihmekuva katsoo samaa sivua ehjänä.
+   *
+   * 12,492222 E / 41,890278 N — en-Wikipedia "Colosseum". Artikkelin
+   * tietolaatikko lukee koordinaatit Wikidatasta (Q10285, P625:
+   * 41°53′25″N 12°29′32″E), joten ne on haettu sieltä. Piste osuu
+   * ITA-lehden rajaukseen (x 5982–6522, y 1426–2055).
+   */
+  {
+    id: 'colosseum',
+    nimi: 'Colosseum',
+    tyyppi: 'muu',
+    symboli: 'urheilu',
+    kysymykset: [
+      'Kuka maksoi Colosseumin rakentamisen?',
+      'Miksi rakennusta alettiin kutsua Colosseumiksi?',
+    ],
+    korostukset: ['velarium|velariumia', 'hypogeum|hypogeum'],
+    /* Valintakuplan painike. */
+    nappi: 'Areena, jonka päälle vedettiin purjekangaskatto',
+    laudat: {
+      maailmankartta: { x: 6249.7, y: 1728.0 },
+      europe: { x: 451.1, y: 791.9 },
+    },
+    teksti: 'Colosseum eli Flaviusten amfiteatteri rakennettiin Neron '
+      + 'tekojärven paikalle keskelle Roomaa: Vespasianus aloitti työn '
+      + 'vuonna 72 ja Titus vihki rakennuksen vuonna 80. Se on suurin '
+      + 'koskaan rakennettu antiikin amfiteatteri — soikio, joka on 189 '
+      + 'metriä pitkä ja 156 metriä leveä ja jonka ulkomuuri on 48 '
+      + 'metriä korkea. Katsomoon mahtui arvioiden mukaan '
+      + '50 000–80 000 katsojaa, ja sisään päästiin kahdeksastakymmenestä '
+      + 'numeroidusta portista. Areenan alla oli kaksikerroksinen '
+      + 'käytävä- ja häkkiverkosto hypogeum, jossa hissit ja väkipyörät '
+      + 'nostivat eläimiä ja lavasteita hiekalle. Ylimmän kerroksen 240 '
+      + 'mastonpidikettä kannattivat velariumia, köysiverkon varassa '
+      + 'lepäävää purjekangaskatosta, joka piti auringon ja sateen '
+      + 'poissa yleisön päältä. Keskiajalla holveissa asuttiin ja '
+      + 'tehtiin työtä, ja vuoden 1349 maanjäristys kaatoi eteläisen '
+      + 'ulkomuurin: sen kivet kannettiin muualle Roomaan ja marmori '
+      + 'poltettiin kalkiksi.',
+    lahde: 'en-Wikipedia "Colosseum", johdanto sekä osiot '
+      + '"Construction, inauguration, and Roman renovations", '
+      + '"Medieval", "Exterior", "Interior seating" ja "Arena and '
+      + 'hypogeum"; kolossin vaiheet artikkelista "Colossus of Nero" '
+      + '(tarkistettu 27.8.2026).',
+    /*
+     * NYKYTILAN VALOKUVA. Tarkistettu Commonsin imageinfo-rajapinnalla
+     * 27.8.2026 (12051×8442, CC BY-SA 4.0, käyttäjä FeaturedPics,
+     * kuvattu 28.10.2020) ja katsottu silmin: aamuvalossa lähes tyhjä
+     * aukio, ainoat ihmiset kolme etäistä hahmoa istumassa kivellä
+     * aitauksen takana — kukaan ei ole tunnistettavissa kortin
+     * kuvakoossa eikä kukaan ole etualalla. Sävy ja vuorokaudenaika
+     * ovat lähellä ihmekuvaa, joten pari toimii.
+     */
+    kuva: {
+      tiedosto: 'Colosseo 2020.jpg',
+      selite: 'Colosseumin luoteissivu: vasemmalla säilynyt ulkomuuri, '
+        + 'oikealla paljaaksi riisuttu sisämuuri.',
+      lahde: 'FeaturedPics, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    /*
+     * MATKAKIRJAN IHME (yhä olemassa) — säännöt js/packs/
+     * fokuskohteet-grc.js:n samannimisessä lohkossa. `kadonnut: false`,
+     * joten "Koe ihme" -nappi tulee yllä olevan valokuvan alle.
+     */
+    ihme: {
+      osoite: 'assets/kartat/ihmeet/ihme-colosseum.webp',
+      kadonnut: false,
+      selite: 'Colosseumin ulkokehä oli valmiina yhtenäinen '
+        + 'nelikerroksinen muuri, jonka kaarissa seisoi patsaita ja '
+        + 'jonka yli vedettiin purjekangaskatos. Vieressä kohosi Neron '
+        + 'kullattu pronssikolossi, jonka mukaan rakennus lopulta sai '
+        + 'nimensä. Kolossista on viimeinen varma maininta 300-luvulta '
+        + 'eikä sen jäljistä ole muuta kuin jalustan perustus; '
+        + 'eteläinen ulkomuuri kaatui vuoden 1349 maanjäristyksessä ja '
+        + 'sisus louhittiin '
+        + 'kiveksi ja kalkiksi. Pohjoinen ulkomuuri seisoo silti yhä, '
+        + 'ja rakennus on maailman suurin pystyssä oleva amfiteatteri.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
+        + 'nykymaailmassa',
+    },
+  },
 ];
 
 const ITA_TUNNUKSITTAIN = new Map(FOKUSKOHTEET_ITA.map((k) => [k.id, k]));
