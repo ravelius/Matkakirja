@@ -3,6 +3,10 @@
 # ChatGPT:n käyttöliittymässä, mutta erikseen pyydettäessä API:lla —
 # avain on repon secreteissä (OPENAI_API_KEY), ja tämä työnkulku on
 # se pyydettäessä-reitti. Kuva palautuu ajon artifaktina.
+#
+# 27.8.2026: valinnainen läpinäkyvä tausta pelispritejä varten
+# (nappulat ym.) — transparent vaatii png-muodon, joka on muutenkin
+# tämän työnkulun tulosmuoto.
 name: Generoi kuva API:lla
 
 on:
@@ -21,6 +25,11 @@ on:
         type: choice
         options: ['1024x1536', '1536x1024', '1024x1024']
         default: '1024x1536'
+      tausta:
+        description: 'Tausta'
+        type: choice
+        options: ['opaque', 'transparent']
+        default: 'opaque'
 
 permissions:
   contents: read
@@ -36,6 +45,7 @@ jobs:
           PROMPT: ${{ inputs.prompt }}
           NIMI: ${{ inputs.nimi }}
           KOKO: ${{ inputs.koko }}
+          TAUSTA: ${{ inputs.tausta }}
         run: |
           set -euo pipefail
           node - <<'SKRIPTI'
@@ -50,6 +60,8 @@ jobs:
               prompt: process.env.PROMPT,
               size: process.env.KOKO,
               quality: 'high',
+              background: process.env.TAUSTA || 'opaque',
+              output_format: 'png',
             }),
           });
           if (!vastaus.ok) {
