@@ -34,6 +34,17 @@
  * Kytkin on maakohtainen (tools/fokuskartta/maat.mjs `jatkuva`), jotta
  * vanha lehtiasu on yhä yhden lipun päässä.
  *
+ * === NIMEÄMINEN VOI KUULUA PELILLE (omistaja 27.8.2026) ===
+ *
+ * Peli latoo v1207:stä alkaen fokuskohteiden nimet kartalle merkkiensä
+ * perään (js/fokusnosto-symbolit.js), ja kohdemerkit ovat samoissa
+ * pisteissä kuin kuvan omat merkinnät — sama nimi näkyi kahdesti.
+ * Tyylitiedosto saa siksi antaa nimeämisen lajeittain pelille
+ * (maat.mjs `poltetutNimet`, ks. `poltaNimet` alempana). Kreikka on
+ * ensimmäinen ja toistaiseksi ainoa: sen lehdelle ei polteta vuorten
+ * eikä merten nimiä. Oletus on yhä "polta", joten muiden maiden
+ * ämpärissä olevat lehdet pysyvät ennallaan.
+ *
  * === KOLME ASIAA, JOTKA OVAT TOISIN KUIN PROTOTYYPISSÄ ===
  *
  * 1. PROJEKTIO ON LAUDAN, EI MERCATORIN. Kuva liimataan pelilaudalle,
@@ -1003,6 +1014,23 @@ export function piirra(canvas, aineisto, asetukset) {
     return lev;
   };
 
+  /*
+   * KUKA NIMEÄ MITÄKIN (maat.mjs `poltetutNimet`).
+   *
+   * Kuva ei ole enää ainoa kerros, jossa on nimiä: peli latoo v1207:stä
+   * alkaen jokaisen fokuskohteen perään oman nimiönsä
+   * (js/fokusnosto-symbolit.js), ja kohdemerkit istuvat samoissa
+   * pisteissä kuin kuvan omat merkinnät. Kun molemmat nimeävät saman
+   * kohteen, nimi näkyy kahdesti vierekkäin — ja kuvaan poltettua ei
+   * voi enää ottaa pois muuten kuin renderöimällä lehti uudelleen.
+   *
+   * Tyylitiedosto saa siksi luovuttaa nimeämisen lajeittain pelille.
+   * OLETUS ON YHÄ "POLTA": ilman merkintää lehti syntyy täsmälleen
+   * kuten ennenkin, joten jo ämpärissä olevia kuvia ei tarvitse ajaa
+   * uudelleen sen takia, että moottoriin tuli kytkin.
+   */
+  const poltaNimet = (laji) => tyyli.poltetutNimet?.[laji] !== false;
+
   // 8a. Kohdemaan nimi: iso harva versaali maan päällä, hyvin haaleana.
   if (tyyli.vesileima) {
     const v = tyyli.vesileima;
@@ -1013,7 +1041,7 @@ export function piirra(canvas, aineisto, asetukset) {
   }
 
   // 8b. Merten nimet: harvaa kursiivia, ei haloa — ne jäävät paperiin.
-  for (const m of tyyli.meret ?? []) {
+  for (const m of (poltaNimet('meret') ? tyyli.meret ?? [] : [])) {
     teksti(m.nimi, kuvaX(m.lon), kuvaY(m.lat), {
       koko: m.koko, tyylitys: 'italic', vari: 'rgba(120,108,84,0.72)',
       ank: 'center', vali: m.koko * 0.28, kulma: m.kulma ?? 0, halo: null,
@@ -1103,11 +1131,23 @@ export function piirra(canvas, aineisto, asetukset) {
       ctx.stroke();
     }
     ctx.restore();
-    teksti(v.nimi, x, y + r * 1.9, {
-      koko: v.iso ? 13 : 11, tyylitys: 'italic', ank: 'center',
-      vari: 'rgba(74,52,33,0.92)',
-    });
-    teksti(`${v.m} m`, x, y + r * 1.9 + (v.iso ? 15 : 13) * S, {
+    /*
+     * NIMI JA KORKEUS OVAT ERI ASIA (ks. `poltaNimet`). Kun nimeäminen
+     * on annettu pelille, kolmio ja korkeuslukema jäävät — kolmio
+     * kertoo missä vuori on, lukema kuinka korkea, eikä kumpikaan
+     * toista kohdemerkin nimiötä. Lukema nousee silloin nimen paikalle
+     * kolmion alle, jottei kolmion ja tekstin väliin jää tyhjää rakoa,
+     * josta lukema näyttäisi kuuluvan johonkin muuhun.
+     */
+    const nimea = poltaNimet('vuoret');
+    const nimirivi = (v.iso ? 15 : 13) * S;
+    if (nimea) {
+      teksti(v.nimi, x, y + r * 1.9, {
+        koko: v.iso ? 13 : 11, tyylitys: 'italic', ank: 'center',
+        vari: 'rgba(74,52,33,0.92)',
+      });
+    }
+    teksti(`${v.m} m`, x, y + r * 1.9 + (nimea ? nimirivi : 0), {
       koko: v.iso ? 10 : 9, ank: 'center', vari: 'rgba(110,88,62,0.85)',
     });
   }
