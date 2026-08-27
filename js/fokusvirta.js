@@ -91,7 +91,9 @@ import { kaupunginJuliste } from './packs/julisteet.js';
 // Vihjelinkin osiotunniste ja sen näyttönimi (ks. piirraVihjelinkki).
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 import { fokusvirtaKaupungille } from './packs/fokusvirrat.js';
+import { luennanLoppuun } from './luenta.js';
 import { natiiviVastaus } from './natiivi.js';
+import { polloMaadoitus } from './pollo.js';
 import { sfx } from './sound.js';
 
 /*
@@ -481,10 +483,16 @@ export function fokusvirtaMerkintaLuettu(ui, city) {
    * eikä molempien ääntä yhtä aikaa.
    */
   if (aarremerkintaLuettu(ui, city)) return;
-  // Kevyessä kulussa merkinnän loppu ei päästä pöllöä ääneen: kuplaa
-  // ei ole, ja vinkki lehden minitehtävästä tulee vasta lehden
-  // avautuessa (fokusvirtaLehtivinkki).
-  if (!FOKUSVIRTA_KORTIT) return;
+  /*
+   * Kevyessä kulussa merkinnän loppu ei avaa korttia — mutta se
+   * päästää Livian ääneen yhdellä kuplalla: isoisän maadoituksella
+   * (fokusvirtaMaadoituskupla). Kaikki muu odottaa yhä lehteä
+   * (fokusvirtaLehtivinkki).
+   */
+  if (!FOKUSVIRTA_KORTIT) {
+    fokusvirtaMaadoituskupla(ui, city);
+    return;
+  }
   const data = fokusvirtaSisalto(ui, city);
   if (!data) return;
   if (fokusvirtaTila(ui.game, city, data).vaihe !== 'matkakirja') return;
@@ -496,6 +504,96 @@ export function fokusvirtaMerkintaLuettu(ui, city) {
     if (fokusvirtaTila(ui.game, city, data).vaihe !== 'matkakirja') return;
     siirry(ui, city, data, 'jatka');
   }, MERKINNAN_TAUKO_MS);
+}
+
+/*
+ * ==================================================================
+ * ISOISÄN MAADOITUS KEVYEN KULUN SAAPUMISKUPLAAN
+ * (omistajan päätös 27.8.2026)
+ * ==================================================================
+ *
+ * v1225 kirjoitti kuuteen fokuskaupunkiin Livian maadoituskommentin
+ * (packs/fokusvirta-*.js, kenttä pollo.maadoitus): vastauksen isoisän
+ * merkinnän SÄVYYN, ei sen faktoihin. Kommentit piirtyivät kuitenkin
+ * vain fokusvirran kuplissa, ja koska kevyt kulku on voimassa
+ * (FOKUSVIRTA_KORTIT = false), kukaan ei nähnyt niistä yhtäkään.
+ *
+ * Kevyt kulku JATKUU. Maadoitus ei siis palaa kortiksi vaan tulee
+ * kevyen kulun omaan saapumiskuplaan: kun pelaaja on kuullut
+ * matkakirjamerkinnän loppuun, hän "pääsee kommentoimaan matkakirjaa"
+ * — ja Livia kommentoi ensimmäisenä.
+ *
+ * KAKSI RAJAUSTA:
+ *
+ *  1. VIISI KAUPUNKIA (Sofia, Sarajevo, Bukarest, Istanbul, Rooma).
+ *     Niissä kevyellä kululla ei ole yhtäkään Livian saapumiskuplaa,
+ *     joten maadoitus on kaupungin ensimmäinen ja ainoa.
+ *
+ *  2. ATEENA VAIKENEE. Aloituskaupungin saapumissekvenssillä on jo
+ *     kaksi ohjekuplaa ("Tervetuloa Kreikkaan…" ja "Klikkaa kaupungin
+ *     kultaista merkkiä", js/ui.js saapumisenKuplat), ja ne opettavat
+ *     pelin. Kolmas kupla veisi tilaa juuri siltä ohjeelta, jota
+ *     pelaaja siinä hetkessä eniten tarvitsee. Ateenan maadoitusteksti
+ *     jää odottamaan fokusvirran kytkintä eikä sitä poisteta.
+ */
+
+/** Kaupungit, joissa maadoitus ei tule kuplaan (ks. yllä). */
+const MAADOITUS_VAITI = new Set(['ateena']);
+
+/**
+ * Hengähdys luennan lopun ja kuplan välissä — sama sopimus kuin
+ * saapumissekvenssissä (js/ui.js SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS):
+ * kertoja saa lopettaa lauseensa ennen kuin Livia aloittaa omansa.
+ */
+const MAADOITUKSEN_TAUKO_MS = 900;
+
+/**
+ * Näyttää kaupungin maadoituksen Livian kuplana, kerran per saapuminen.
+ *
+ * KERRAN PER SAAPUMINEN, SAMA MUISTI KUIN KORTTIVIRRALLA. Kupla
+ * merkitään näytetyksi ui:n omaan joukkoon avaimella lauta:kaupunki —
+ * täsmälleen kuten fokusvirtaSaapuminen muistaa avaamansa kortit
+ * (ui.fokusvirtaAvattu). Merkintä syntyy vain kerran kaupunkia kohti
+ * (renderFact kirjoittaa merkinnän vain uudella korttiavaimella),
+ * mutta muisti suojaa myös paluukäynniltä: samassa istunnossa
+ * kaupunkiin palaava pelaaja ei kuule samaa puheenvuoroa uudestaan.
+ *
+ * LUENTA ENSIN. Kupla odottaa matkakirjaluennan loppua (js/luenta.js
+ * luennanLoppuun) — kirjoituskone ehtii maaliin kauan ennen kertojaa,
+ * ja ilman odotusta Livia puhuisi isoisän päälle. Ilman luentaa
+ * (mykistys, kertojatila 'ei', puuttuva äänite) kupla tulee heti
+ * tauon jälkeen.
+ *
+ * @returns {boolean} varattiinko kuplavuoro tälle kaupungille.
+ */
+export function fokusvirtaMaadoituskupla(ui, city) {
+  // Korttivirrassa maadoitus on jo pöllökortin ensimmäinen kappale
+  // (piirraPollo) — kupla toistaisi sen sanasta sanaan.
+  if (FOKUSVIRTA_KORTIT) return false;
+  if (!city || MAADOITUS_VAITI.has(city.id)) return false;
+  const teksti = fokusvirtaSisalto(ui, city)?.pollo?.maadoitus;
+  if (!teksti) return false;
+  const avain = `${ui.game.pack.id}:${city.id}`;
+  ui.maadoitusNaytetty ??= new Set();
+  if (ui.maadoitusNaytetty.has(avain)) return false;
+  ui.maadoitusNaytetty.add(avain);
+  const nayta = () => {
+    clearTimeout(ui.maadoitusAjastin);
+    ui.maadoitusAjastin = setTimeout(() => {
+      if (ui.dead) return;
+      // Pelaaja on voinut lähteä kaupungista tai aloittaa uuden pelin
+      // luennan aikana: puheenvuoro kuuluu vain tähän kaupunkiin.
+      if (ui.game?.cityOf?.()?.id !== city.id) return;
+      polloMaadoitus(teksti);
+    }, MAADOITUKSEN_TAUKO_MS);
+  };
+  const luenta = luennanLoppuun(ui);
+  if (luenta) {
+    void luenta.then(() => { if (!ui.dead) nayta(); });
+    return true;
+  }
+  nayta();
+  return true;
 }
 
 /**
