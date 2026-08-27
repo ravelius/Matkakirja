@@ -5268,6 +5268,24 @@ export const KULTTUURI_KATEGORIAT = {
             },
           ],
         },
+        {
+          otsikko: 'Puu voitti suolaisen lähteen',
+          tiedosto: 'The olive tree on the Acropolis of Athens, 28 April 2021.jpg',
+          teksti: 'Tarun mukaan Athene ja Poseidon kiistelivät siitä, kumman '
+            + 'nimeä kaupunki kantaisi, ja kumpikin antoi lahjansa Akropoliin '
+            + 'kalliolla. Poseidon iski kolmikärjellään kallioon, ja siitä '
+            + 'pulppusi suolainen lähde — vettä, jota ei voinut juoda. Athene '
+            + 'kasvatti oliivipuun, joka antoi öljyä, ruokaa ja puuta. '
+            + 'Kuningas Kekrops valitsi puun, ja kaupunki sai voittajan nimen. '
+            + 'Erekhtheionin länsiseinustalla kasvaa yhä oliivipuu, mutta se '
+            + 'on nuori: sen istutti viime vuosisadalla kuningatar Sofia '
+            + 'sinne, missä pyhän puun uskotaan kasvaneen.',
+          selite: 'Erekhtheionin länsiseinustan oliivipuu istutettiin viime '
+            + 'vuosisadalla sille kohdalle, jossa Athenen pyhän puun uskotaan '
+            + 'kasvaneen.',
+          lahde: 'George E. Koronaios, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Athene',
+        },
       ],
           /*
        * AVAUSKUVAT (18.8.2026): kolme etäisyyttä ja kolme
@@ -5912,19 +5930,21 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Medusa kannattelee pylvästä ylösalaisin',
           tiedosto: 'Medusa Head at Basilica Cistern, Istanbul, Turkey (Ank Kumar) 06.jpg',
-          teksti: 'Hagia Sofiasta parinsadan metrin päässä laskeutuu 52 porrasta '
+          teksti: 'Hagia Sofiasta 150 metrin päässä laskeutuu 52 porrasta '
             + 'maan alle. Siellä '
             + 'on Yerebatan, keisari Justinianuksen 500-luvulla rakennuttama '
-            + 'vesisäiliö: 336 pylvästä, jokainen yhdeksän metriä korkea. '
+            + 'vesisäiliö: 336 yhdeksänmetristä pylvästä. '
             + 'Kaupunki unohti sen vuosisadoiksi. Vasta 1500-luvulla '
             + 'ranskalainen matkaaja ihmetteli, miksi talojen lattioissa on '
             + 'reikiä, joista lasketaan ämpäri — ja joistakin nousee kaloja. '
             + 'Kahden pylvään jalustaksi on pantu kivi, johon on veistetty '
-            + 'Medusan kasvot. Toinen on kyljellään, toinen ylösalaisin, eikä '
-            + 'kukaan tiedä miksi.',
+            + 'Medusan kasvot: toinen kyljellään, toinen ylösalaisin. '
+            + 'Varmaa syytä ei tiedetä. Tarina kertoo, että pää käännettiin, '
+            + 'jottei kivettävä katse osuisi keneenkään; tutkijoiden mukaan '
+            + 'kivet ovat roomalaisajan rakennuksesta otettua kierrätyskiveä.',
           selite: 'Yerebatanin vesisäiliössä kahden pylvään jalustaksi on '
             + 'pantu kivi, johon on veistetty Medusan kasvot — toinen '
-            + 'kyljellään, toinen ylösalaisin, eikä kukaan tiedä miksi.',
+            + 'kyljellään, toinen ylösalaisin, eikä varmaa syytä tiedetä.',
           lahde: 'Ank Kumar, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Yerebatan Sarayı',
         },
@@ -13599,6 +13619,25 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Nicubunu, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Mititei',
         },
+        {
+          otsikko: 'Paimen, jonka nimeä kaupunki kantaa',
+          tiedosto: 'Bucur the Shepherd Church in Bucharest.jpg',
+          teksti: 'Bukarestin nimen alkuperää ei tiedetä varmasti, mutta '
+            + 'perinne yhdistää sen Bucur-nimiseen mieheen: eri taruissa hän '
+            + 'on paimen, kalastaja, metsästäjä tai ruhtinas. Katolinen '
+            + 'lähetyssaarnaaja Blasius Kleiner kirjasi tarinan vuonna 1761 — '
+            + 'Bucur paimensi lampaitaan Dâmbovițan rannalla, rakensi sinne '
+            + 'kirkon ja sen viereen muutaman talon. Romanian sana bucurie '
+            + 'tarkoittaa iloa, ja siitä kaupunki on saanut lempinimensä: '
+            + 'ilon kaupunki. Radu Vodăn kadulla seisoo yhä pieni valkoinen '
+            + 'Bucurin kirkko, jonka tutkijat tosin ajoittavat 1600- tai '
+            + '1700-luvulle.',
+          selite: 'Bucurin kirkko on pieni valkoinen kirkko Radu Vodăn '
+            + 'kadulla, ja perinne pitää sen rakentajana Bucur-paimenta, '
+            + 'jonka nimeä kaupunki kantaa.',
+          lahde: 'Alexandru Pănoiu, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Bukarest',
+        },
       ],
       /*
        * AVAUSKUVAT: omistajan ChatGPT-herot 26.8.2026 (viiteankkuroitu
@@ -13982,6 +14021,25 @@ export const KULTTUURI_KATEGORIAT = {
             + 'luettu pääsiäisaterioilla.',
           lahde: 'Wikimedia Commons (PD)',
           wiki: 'Haggada',
+        },
+        {
+          otsikko: 'Kuja, jolla kahvipannu takotaan',
+          tiedosto: 'Kazandziluk.jpg',
+          teksti: 'Baščaršijan basaari jaettiin ammateittain, ja kujat saivat '
+            + 'nimensä sen mukaan, mitä niillä tehtiin: Kovači sepistä, '
+            + 'Sarači satulasepistä, Kazandžiluk kazandžeista eli '
+            + 'kupariseppien ammatista. 1500-luvun jälkipuoliskolla '
+            + 'basaarissa oli kahdeksankymmentä eri ammattia ja noin 12 000 '
+            + 'puotia. Kazandžilukilla vasarat kalisevat yhä, ja kujan '
+            + 'tunnetuin tuote on džezva: pieni pitkävartinen kuparipannu, '
+            + 'jossa bosnialainen kahvi keitetään ja josta se kaadetaan '
+            + 'pieniin fildžan-kuppeihin. Vesi kiehautetaan ensin, osa siitä '
+            + 'otetaan sivuun, hienoksi jauhettu kahvi lisätään pannuun — ja '
+            + 'pannun kapeneva muoto nostaa juoman pinnalle vaahdon.',
+          selite: 'Kazandžiluk on yksi Baščaršijan vanhimmista ammattikujista, '
+            + 'ja se on nimetty kazandžien eli kupariseppien mukaan.',
+          lahde: 'Francisco Antunes, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Turkkilainen kahvi',
         },
       ],
       /*
