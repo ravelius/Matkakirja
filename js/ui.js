@@ -726,7 +726,8 @@ const FOKUS_KUVAN_REUNA = [0.16, 0.28, 0.42, 0.62, 1];
  * pysyy silti kartan kiinnekohtana, ja napautusalue on ennallaan
  * sormenkokoinen (FOKUS_LAATTA_OSUMA_PX).
  */
-const FOKUS_LAATTA_PX = 23;
+// 23 -> 19 (omistaja 27.8.2026 aamu: "sekä Ateenan laattaa").
+const FOKUS_LAATTA_PX = 19;
 /*
  * Napautusalue on suurempi kuin piirretty laatta: laatta on
  * fokusnäkymässä Tutki-napin paikka (alarivillä on vain Liiku), ja

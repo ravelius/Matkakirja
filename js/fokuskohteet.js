@@ -153,7 +153,7 @@ const KOHDE_OSUMA_R = 22;
  * sormisääntö perustasolla, joten napautus osuu täsmälleen yhtä
  * hyvin kuin ennen.
  */
-const KOHDE_KOROSTUS_R = 7.1;
+const KOHDE_KOROSTUS_R = 6.0;
 const KOHDE_HALO_R = 4.9;
 const KOHDE_RENGAS_R = 3.4;
 const KOHDE_PISTE_R = 1.15;
@@ -365,7 +365,12 @@ function kohteenSymboli(kohde) {
  * kartalla aina harvinaisempi kutsu. 16 → 14 (omistaja 26.8.2026
  * ilta: "Kartan kohdenapit saisi olla hieman pienempiä").
  */
-const KOHDE_SYMBOLI_SKAALA = 14 / 21;
+/*
+ * 14 -> 11 (omistaja 27.8.2026 aamu, iPhone-kaappaus Kreikasta:
+ * "Pienennä kaikkia symboleita") — merkit täyttivät kapealla ruudulla
+ * saariston niin, että kartta jäi niiden alle.
+ */
+const KOHDE_SYMBOLI_SKAALA = 11 / 21;
 
 /** Symbolilaatan säde kohdemerkin mitassa (kirjaston laatta r = 10.4). */
 const KOHDE_SYMBOLI_R = 10.4 * KOHDE_SYMBOLI_SKAALA;
