@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1224: Aarrepaljastuksen Jatka matkaa -nappi on nyt kultakehyksinen pelin tyylin nappi mustalla pohjalla (oli haalea harmaa laatikko) - tarkista aarteen avauksessa',
   'v1223: Saapuminen uuteen maahan ei saisi enaa tokkia - kohdemaan lehti esiladataan matkan aikana ja purku tapahtuu tyontekijasaikeessa; testaa matka Ateenasta Sofiaan ja takaisin',
   'v1222: Ihmenauha on nyt sinettivahan punainen, leveampi ja paat kaartuvat kuvan reunan yli marginaalille tummana nurjana puolena - tarkista ihmekuvan kortti ja suurennos laitteella',
   'v1221: PULU-KOKEILU - Viisas Pollo on nyt teksteissa Livia (Columba Livia, kirjekyyhky): tervehdys, otsikot, rajaviestit ja workerin persoona vaihtuivat; kuvat ja tasot viela polloa - pelitestaa miten Livian teksti kulkee',
