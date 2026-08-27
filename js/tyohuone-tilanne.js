@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'Kappadokian lehden avauskuvat: kolme uutta havainnekuvaa (Goreme, Ortahisar, Selime) selitteineen',
   'Lentoaani: kabiinin aani alkaa heti napautuksesta ja kovempaa; nippupisteisiin ohuet katkoviivat kaupungista; maailmannakyman karttasauma haivytetty',
   'v1178: Matkakirjakortti pitaa uuden tarinatekstin myos laatan ratkettua (Kreikan oliivit+kolme vuorta -vanhateksti ei enaa palaa; koskee kaikkia kuutta Sofia-mallin maata). Testaa: ratkaise Ateenan laatta, poistu ja palaa - kortissa pysyy uusi teksti.',
   'v1177: Lippusivut era 9: koko Etela-Amerikan lauta (11 maata; versioliput: Brasilian keisarikunta 1870-1889, Perun San Martin 1820, Bolivian wiphala, Paraguayn takasivu). Lippuja 79/116.',
