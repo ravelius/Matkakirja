@@ -299,12 +299,12 @@ pakettien otsikkokommentit).
 | Glottolog 5.2 — kielikuntien sukupuu ja sijainnit | Hammarström, Forkel, Haspelmath & Bank 2025, MPI EVA | CC BY 4.0 |
 | World Development Indicators | Maailmanpankki | CC BY 4.0 |
 | World Happiness Report 2026, Cantrilin tikapuu | Helliwell ym., University of Oxford; koosteena Our World in Data | Vapaa käyttö; OWIDin käsittely CC BY 4.0 |
-| Liberaalin demokratian indeksi | V-Dem-instituutti, Our World in Datan kautta | **Ei kirjattu repoon** |
+| Liberaalin demokratian indeksi | V-Dem-instituutti, Our World in Datan kautta | CC BY-SA 4.0 (V-Dem); OWIDin käsittely CC BY 4.0 (OWIDin metatiedot sanovat V-Demistä CC BY 4.0 — ristiriita lähteissä) |
 | International Migrant Stock 2024 | UN DESA, Population Division, © 2024 United Nations | CC BY 3.0 IGO |
 | ICOADS 2° enhanced — tuulet 1971–2000 | Freeman ym. 2017; tuote NOAA PSL | Vapaasti käytettävä (NOAA) |
 | OSCAR Sea Surface Velocity — pintavirtaukset | Bonjean & Lagerloef 2002, Earth & Space Research | Vapaasti jaeltava tutkimusaineisto |
 | Global Atmospheric Circulations — tuulivyöhykkeiden nimet | NOAA / NWS JetStream | Public domain |
-| Yale Bright Star Catalogue, 5. laitos | Hoffleit & Warren 1991, NASA ADC; jakelu CDS/VizieR (V/50) | **Ei erillistä lisenssitekstiä**; CDS pyytää mainitsemaan VizieRin ja tekijät |
+| Yale Bright Star Catalogue, 5. laitos | Hoffleit & Warren 1991, NASA ADC; jakelu CDS/VizieR (V/50) | Public domain (NASAn Astronomical Data Center); maininta VizieRistä ja tekijöistä ehtona |
 | ConstellationLines — 88 tähdistön tikkukuviot | Marc van der Sluys 2005–2023, doi:10.5281/zenodo.10397192 | CC BY 4.0 (aineistotiedosto sanoo CC BY-SA 4.0 — ristiriita lähteessä) |
 | IAU Catalog of Star Names | IAU Working Group on Star Names 2022 | CC BY |
 | Wikidata — koordinaatit, ISO-koodit, maannimet | Wikidata-yhteisö | CC0 1.0 |
@@ -331,8 +331,8 @@ pakettien otsikkokommentit).
 | Lyhytaaltoäänitteet — maailmanradion viritysäänet | archive.orgin arkistot, mm. samnewton94 | Public Domain Mark 1.0, CC0 |
 | "Pocket camera start and shut down" — zoomausääni | stephan, pdsounds.org Wikimedia Commonsin kautta | Public domain |
 | Musiikkinäytteet kulttuurinostoissa | Wikimedia Commons, archive.org (vain lisenssiosoitteella merkityt) | Kohteittain |
-| Suorat radiolähetykset | Asemaluettelo Radio Browserista (radio-browser.info); virrat asemien omia | **Edelleenvälityksen ehtoja ei selvitetty** |
-| Peliäänet ja avaustekstin lukuääni (`efekti-*.mp3`, `intro-puhe.mp3`) | Tuotettu ElevenLabsilla | **Ei kirjattu repoon** (ElevenLabsin tilausehdot) |
+| Suorat radiolähetykset | Asemaluettelo Radio Browserista (radio-browser.info); virrat asemien omia | Asemaluettelo vapaasti käytettävä (Radio Browser); lähetykset asemien omilla ehdoilla — peli ei välitä niitä edelleen |
+| Peliäänet ja avaustekstin lukuääni (`efekti-*.mp3`, `intro-puhe.mp3`) | Tuotettu ElevenLabsilla | Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy (ElevenLabsin käyttöehdot 4(c): tuotos jää tekijälle) |
 | Syntetisoidut tehosteet ja ambienssi (Web Audio) | Sami Reivinen / VVI | Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy |
 
 ### Tekstit
@@ -344,8 +344,12 @@ pakettien otsikkokommentit).
 | Internet Archive ja Wikisource — lainaukset, joita Gutenbergissa ei ole | Alkuperäisteosten kirjoittajat | Public domain (teokset) |
 | Pelin omat tekstit: tarina, päiväkirja, kysymykset, väittämät, tapahtumat, pulmat, tiivistelmät | Sami Reivinen / VVI | Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy |
 
-**Lisenssiltään epäselvät.** Neljä riviä yllä on merkitty lihavoituna: niiden
-lisenssiä ei ole kirjattu repoon eikä sitä ole tähän arvattu. Ne ovat V-Dem /
-Our World in Data, Yale Bright Star Catalogue, suorien radiolähetysten
-edelleenvälitys ja ElevenLabsilla tuotetut äänet. Lisäksi ConstellationLinesin
-lisenssistä on kaksi eri tietoa itse lähteessä.
+**Lisenssit tarkistettu 27.8.2026.** Aiemmin neljä riviä oli merkitty
+epäselväksi: V-Dem / Our World in Data, Yale Bright Star Catalogue, suorat
+radiolähetykset ja ElevenLabsilla tuotetut äänet. Kaikkien ehdot on nyt haettu
+ensisijaisesta lähteestä ja kirjattu yllä sekä `js/lahteet.js`:ään; sieltä
+löytyy myös se, mistä osoitteesta kukin tieto on. Kahdesta aineistosta on
+lähteissä yhä ristiriitainen tieto: V-Demin lisenssiksi julkaisija itse sanoo
+CC BY-SA 4.0 mutta Our World in Datan metatiedot CC BY 4.0 (tässä noudatetaan
+julkaisijan omaa), ja ConstellationLinesin repo sanoo CC BY 4.0 mutta
+aineistotiedosto CC BY-SA 4.0 (tässä noudatetaan repon virallista lisenssiä).

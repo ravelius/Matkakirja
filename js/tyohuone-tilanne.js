@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'Infosivun lahdeluettelo: kaikki Lisenssi epaselva -merkinnat korvattu tarkistetuilla lisensseilla (V-Dem, Yale BSC, Radio Browser, ElevenLabs)',
   'Fokuslaudalla nappulan alla vain tinaherra + varjo + yksi vuororengas — kaupungin laatta, syke ja varihehku pois alta (nimilappu ja Tutki-napautus sailyvat)',
   'Kolme uutta ihmetta: Tuileries (tahti Pariisissa), Vanha St Paul ja Forum Romanum (Koe ihme) — Pariisi ja Lontoo saivat ensimmaiset fokuskohteensa',
   'Periaateikkuna: VVI tekijana, uusi Tekoaly apuna -osio, copyright Visuaaliviestinnan Instituutti Tampere Oy (myos README, LICENSE, lahteet)',
