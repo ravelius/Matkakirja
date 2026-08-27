@@ -309,29 +309,40 @@ vaadi('osuma-alue on lehden perustasolla vähintään 44 px',
   m.osumat.length > 0 && m.osumat.every((o) => o.w >= 44 && o.h >= 44),
   JSON.stringify(m.osumat.slice(0, 3)));
 
-/* --- 1a: kohdemerkit kertovat kategoriansa symbolilla ---
+/* --- 1a: kohdemerkit kertovat kategoriansa symbolilla ja nimiöllä ---
  *
  * Raamattu, SYMBOLITAKSONOMIA (omistaja 26.8.2026 ilta): tyyppijohto
  * antaa vuorille/merille/saarille/jokille luontosymbolin ja
  * multimedialle silmän; kaupungit ja muut JÄÄVÄT vanhoiksi pisteiksi.
  * Symbolit piirtää sama kirjasto kuin täkysymbolit (yhteiset
  * nostosym-luokat, js/fokusnosto-symbolit.js).
+ *
+ * LÄPINÄKYVÄ MUSTETYYLI (omistajan valinta 27.8.2026, montaasin C):
+ * merkin alta katosi paperinvaalea laatta ja kehysympyrä — glyyfi on
+ * suoraan pergamentilla — ja tilalle tuli merkin PERÄÄN ladottu nimiö.
+ * Vartija kääntyi siis toisin päin: ennen vaadittiin laattaa, nyt
+ * vaaditaan ettei sitä ole ja että nimiö on.
+ *
+ * MERKKI LUETAAN RASTERIN DATA-MÄÄREISTÄ (omistajan lisätilaus
+ * 27.8.2026): glyyfi ja nimiö piirretään yhdeksi kuvaksi canvasilla, ja
+ * <image href> on siksi data-URL eikä sym-<tunnus>.webp. Piirtäjä
+ * merkitsee kuvaan `data-symboli` ja `data-nimio`, ja niistä
+ * lukemalla vartija tietää yhä, minkä merkin ja minkä nimen kohde sai.
  */
 const taksonomia = await sivu.evaluate(() => {
   const luokat = (id) => {
     const g = document.querySelector(`.fokuskohde[data-kohde="${id}"]`);
-    // v1162: glyyfi on generoitu kuva (image href sym-<tunnus>.webp);
-    // koodipiirto on varapolku, joten luokkia ei enää odoteta.
-    const kuva = g?.querySelector('image');
-    const href = kuva?.getAttribute('href') ?? '';
+    const kuva = g?.querySelector('.nostosym-rasteri');
+    const tunnus = kuva?.dataset.symboli ?? '';
     return g ? {
-      luonto: href.endsWith('sym-luonto.webp'),
-      silma: href.endsWith('sym-silma.webp'),
+      luonto: tunnus === 'luonto',
+      silma: tunnus === 'silma',
       piste: Boolean(g.querySelector('.fokuskohde-piste')),
-      laatta: Boolean(g.querySelector('.nostosym-laatta')),
-      // v1170: porttitornikin on generoitu kuva; koodiluokka on varapolku.
-      portti: href.endsWith('sym-kaupunki.webp')
-        || Boolean(g.querySelector('.nostosym-kaupunki')),
+      laatta: Boolean(g.querySelector('.nostosym-laatta, .nostosym-kehys')),
+      nimio: kuva?.dataset.nimio ?? g.querySelector('.nostosym-nimio')?.textContent ?? '',
+      rasteri: (kuva?.getAttribute('href') ?? '').startsWith('data:image/'),
+      // Koodipiirto on varapolku, jos rasteria ei saatu.
+      portti: tunnus === 'kaupunki' || Boolean(g.querySelector('.nostosym-kaupunki')),
     } : null;
   };
   return {
@@ -340,16 +351,57 @@ const taksonomia = await sivu.evaluate(() => {
     kaupunki: luokat('patras') ?? luokat('thessaloniki'),
   };
 });
-vaadi('vuorikohde sai luontosymbolin (sym-luonto-kuva laatalla)',
-  taksonomia.vuori?.luonto === true && taksonomia.vuori?.laatta === true
+vaadi('merkki on rasteroitu yhdeksi kuvaksi (ei elävää tekstiä kartalla)',
+  taksonomia.vuori?.rasteri === true, JSON.stringify(taksonomia.vuori));
+vaadi('vuorikohde sai luontosymbolin ilman laattaa',
+  taksonomia.vuori?.luonto === true && taksonomia.vuori?.laatta === false
   && taksonomia.vuori?.piste === false,
   JSON.stringify(taksonomia.vuori));
 // v1165: kaupunkikin avaa kortin, joten sekin sai merkin (porttitorni,
 // koodipiirto kunnes generoitu kuva on hyväksytty).
-vaadi('kaupunkikohde sai porttitornisymbolin',
-  taksonomia.kaupunki?.portti === true && taksonomia.kaupunki?.laatta === true
+vaadi('kaupunkikohde sai porttitornisymbolin ilman laattaa',
+  taksonomia.kaupunki?.portti === true && taksonomia.kaupunki?.laatta === false
   && taksonomia.kaupunki?.piste === false,
   JSON.stringify(taksonomia.kaupunki));
+/*
+ * NIMIÖ ON MERKIN PERÄSSÄ (27.8.2026). Neljä väitettä: teksti on
+ * olemassa, se on kohteen oma nimi eikä kategoria, se on lyhennetty
+ * kartan mittaan (enintään 18 merkkiä, js/fokusnosto-symbolit.js
+ * NOSTOSYM_NIMIO_MERKKEJA) eikä se ota napautuksia vastaan.
+ *
+ * KAUPUNKI ON RAJATTU ULOS (js/fokuskohteet.js kohteenNimio): lehti
+ * painaa kaupunkiensa nimet itse, joten nimiö olisi sama nimi kahdesti
+ * saman pisteen vieressä. Sekin on tässä oma väitteensä.
+ */
+const nimiot = await sivu.evaluate(() => [...document.querySelectorAll('.fokuskohde')]
+  .filter((g) => g.querySelector('.fokuskohde-symboli')
+    && !g.classList.contains('fokuskohde-kaupunki'))
+  .map((g) => {
+    // Rasteri kantaa nimen data-määreessä; varapolulla se on <text>.
+    const r = g.querySelector('.nostosym-rasteri');
+    const t = g.querySelector('.nostosym-nimio');
+    const kantaja = r ?? t;
+    return {
+      id: g.dataset.kohde,
+      teksti: r ? r.dataset.nimio : (t?.textContent ?? ''),
+      // Nimiö EI saa ottaa napautuksia: se on merkkiä leveämpi ja
+      // peittäisi naapurin osuma-alueen.
+      osoitin: kantaja ? getComputedStyle(kantaja).pointerEvents : '',
+    };
+  }));
+vaadi('jokainen symbolimerkki sai nimiön',
+  nimiot.length > 0 && nimiot.every((n) => n.teksti.length > 0),
+  JSON.stringify(nimiot.filter((n) => !n.teksti.length).slice(0, 3)));
+vaadi('nimiö on kartan mittaan lyhennetty (<= 18 merkkiä)',
+  nimiot.every((n) => n.teksti.length <= 18),
+  JSON.stringify(nimiot.filter((n) => n.teksti.length > 18).slice(0, 3)));
+vaadi('nimiö ei ota napautuksia vastaan',
+  nimiot.every((n) => n.osoitin === 'none'),
+  JSON.stringify(nimiot.slice(0, 2)));
+vaadi('Olympoksen nimiö on kohteen oma nimi',
+  taksonomia.vuori?.nimio === 'Ólympos', JSON.stringify(taksonomia.vuori?.nimio));
+vaadi('kaupunkimerkki jättää nimiön lehden painojäljelle',
+  taksonomia.kaupunki?.nimio === '', JSON.stringify(taksonomia.kaupunki?.nimio));
 /*
  * Silmäsymboleita EI enää odoteta (26.8.2026: Akropolis-museon
  * GA&C-kierrokset poistettiin, koska upotus ei latautunut iPadilla —
@@ -377,10 +429,28 @@ vaadi('silmäsymboli vain kierroskohteilla (nyt 0)', silmia === 0, `${silmia} si
  * ankkurit ovat yhä täsmälleen datan koordinaateissa.
  */
 const erottelu = await sivu.evaluate(() => {
-  // Näkyvin osa on symbolikohteessa aluslaatta, pistekohteessa halo.
+  /*
+   * Näkyvin osa on symbolikohteessa glyyfi, pistekohteessa halo.
+   *
+   * LEVEYS LUETAAN KORKEUDESTA. Symbolimerkin kuvassa on 27.8.2026
+   * alkaen glyyfin lisäksi nimiö, joka jatkuu merkin oikealle
+   * puolelle: laatikon leveys on siis nimen mittainen, korkeus taas
+   * täsmälleen merkin oma mitta (NOSTOSYM_R * 2 kohdemerkin
+   * mittakaavassa) — sama luku, jolla erottelupassi
+   * (eritteleKohdeRyhmat) laskee. Pistekohteen halo on ympyrä, joten
+   * sillä korkeus ja leveys ovat sama asia.
+   *
+   * KESKIPISTE OTETAAN VASEMMASTA LAIDASTA + puolet KORKEUDESTA
+   * samasta syystä: laatikon vaakakeskiö olisi nimiön verran oikealla.
+   */
   const merkit = [...document.querySelectorAll('.fokuskohde')].map((g) => {
-    const r = g.querySelector('.nostosym-laatta, .fokuskohde-halo').getBoundingClientRect();
-    return { id: g.dataset.kohde, x: r.left + r.width / 2, y: r.top + r.height / 2, w: r.width };
+    const r = g.querySelector('.fokuskohde-glyyfi, .fokuskohde-halo').getBoundingClientRect();
+    return {
+      id: g.dataset.kohde,
+      x: r.left + r.height / 2,
+      y: r.top + r.height / 2,
+      w: r.height,
+    };
   }).filter((merkki) => merkki.w > 0);
   const limittain = [];
   for (let i = 0; i < merkit.length; i += 1) {

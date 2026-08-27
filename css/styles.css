@@ -20078,8 +20078,15 @@ body.maataulu-auki .toimintorivi .monitoimi-nappi {
    (js/fokuskohteet.js) — ja kohdekerros ei lataa fokusnosto.css:ää.
    styles.css on ainoa tyylitiedosto, joka on aina paikalla.
 
-   EI SUODATTIMIA (tests/rules.test.mjs): aluslaatta on oma ympyränsä
-   eikä varjo, ja kaikki muu on pelkkää täyttöä ja viivaa.
+   LÄPINÄKYVÄ MUSTETYYLI (omistajan valinta 27.8.2026, montaasin C):
+   merkillä EI OLE aluslaattaa eikä kehysympyrää — glyyfi piirtyy
+   suoraan pergamenttikartalle, ja sen perään ladotaan lyhyt nimiö
+   (.nostosym-nimio). --sym-laatta jäi silti käyttöön niissä kohdissa,
+   joissa muoto tarvitsee paperinvaalean sisäosan: portin holvi, silmän
+   valkuainen ja pyörän napa.
+
+   EI SUODATTIMIA (tests/rules.test.mjs): kaikki on pelkkää täyttöä,
+   viivaa ja tekstiä.
    =========================================================================== */
 
 :root {
@@ -20112,28 +20119,62 @@ body.maataulu-auki .toimintorivi .monitoimi-nappi {
 }
 
 /* TÄHTI — Matkakirjan ihme, kohde jota ei enää ole (Raamattu, osio
- * "Matkakirjan ihmeet"). Kompassiruusun sakarat kullassa, ja niiden
- * juuressa hiuksenohut musteinen kehä, joka sitoo tähden laattaan. */
+ * "Matkakirjan ihmeet"). Kompassiruusun sakarat kullassa. Musteinen
+ * ääriviiva on läpinäkyvässä mustetyylissä (27.8.2026) tähden ainoa
+ * kontrasti pergamenttia vasten, ja siksi se on hiukan paksumpi kuin
+ * perheen muilla koodipiirroksilla. */
 .nostosym-tahti {
   fill: var(--sym-ihme);
   stroke: var(--sym-muste);
-  stroke-width: 0.7;
+  stroke-width: 1.2;
   stroke-linejoin: round;
-}
-
-.nostosym-tahtikeha {
-  fill: none;
-  stroke: var(--sym-muste);
-  stroke-width: 0.5;
-  stroke-opacity: 0.5;
 }
 
 /* Täkysymbolien oma osuma-alue (.nostosym-osuma) poistui 26.8.2026:
  * yksi kuplatäky per maa, muut aiheet ovat kartan tavallisia
  * kohteita (js/fokusnosto-symbolit.js). */
 
-/* Paperinvaalea aluslaatta ja musteviivainen kehä — joka symbolilla. */
-.nostosym-laatta { fill: var(--sym-laatta); }
+/* ---------------------------------------------------------------------------
+   MERKIN NIMIÖ — symbolin perään ladottu lyhyt nimi.
+   ---------------------------------------------------------------------------
+   Omistajan valinta 27.8.2026 (montaasin C): merkki piirretään suoraan
+   pergamentille ilman laattaa, ja sen perään tulee lyhyt teksti kartan
+   nimiötypografialla. Peräkkäin eikä alle, koska lehteen poltettu
+   atlaskerros latoo omat nimensä merkkiensä ALLE — perusteet
+   js/fokusnosto-symbolit.js:n osiossa NIMIÖ. Asu on siis .fokus-nimen (fokusnäkymän
+   suomenkieliset lisänimet) asu: sama kaunokirjasin, vaimea muste ja
+   ohut pergamenttihalo, joka pitää nimen luettavana myös vuoren ruskean
+   ja meren harmaan päältä.
+
+   HALO ON STROKE JA PAINT-ORDER, EI SUODATIN (tests/rules.test.mjs):
+   suodatettu kerros palaa iOS:n taustalta tyhjänä.
+
+   NIMIÖ EI OTA NAPAUTUKSIA VASTAAN. Se on merkkiä leveämpi, ja
+   napautettavana se peittäisi naapurimerkin osuma-alueen — merkin oma
+   44 px:n ympyrä (.fokuskohde-osuma) hoitaa sormen.
+   --------------------------------------------------------------------------- */
+.nostosym-nimio {
+  font-family: var(--font-kauno);
+  fill: rgba(70, 51, 31, 0.9);
+  paint-order: stroke;
+  stroke: rgba(239, 220, 180, 0.8);
+  stroke-width: 2.6px;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+/*
+ * RASTEROITU MERKKI — glyyfi ja nimiö yhtenä valmiina kuvana
+ * (js/fokusnosto-symbolit.js piirraNostosymKartalle). Kartalla merkki
+ * on tavallisesti tämä; elävä <text> yllä jää varapolulle ja antaa
+ * samalla rasterille sen värit ja kirjasimen, jotka canvas lukee
+ * .nostosym-nimiön lasketusta tyylistä.
+ *
+ * EI NAPAUTUKSIA: kuva ulottuu nimiön verran merkin oikealle puolelle
+ * ja peittäisi naapurin osuma-alueen. Sormen ottaa merkin oma 44 px:n
+ * ympyrä (.fokuskohde-osuma).
+ */
+.nostosym-rasteri { pointer-events: none; }
 
 .nostosym-kaupunki {
   fill: var(--sym-kaupunki);
@@ -20153,13 +20194,6 @@ body.maataulu-auki .toimintorivi .monitoimi-nappi {
   stroke-linejoin: round;
 }
 
-
-.nostosym-kehys {
-  fill: none;
-  stroke: var(--sym-muste);
-  stroke-width: 1.1;
-  stroke-opacity: 0.72;
-}
 
 /* Kaiverruksen apuviivat: höyry, uurteet, kielet, ripustimet, varpaat. */
 .nostosym-viiva {
