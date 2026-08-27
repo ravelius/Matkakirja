@@ -270,12 +270,20 @@ function natiiviKuoriTurvassa() {
  * kertoimeksi ja pienin voittaa. Kerroin ei koskaan ole yli yhden —
  * pientä lehteä (Kypros 5,6 Mp) ei suurenneta, koska se maksaisi
  * muistia ilman yhtäkään uutta pikseliä.
+ *
+ * KATOT OVAT PARAMETREJA, KOSKA NIITÄ ON NYT KAKSI PARIA. Pelaajan
+ * lehti pienennetään puhelimessa ja kuoressa 3200 pikseliin (tämän
+ * tiedoston oletukset); kehittäjän maailmanäkymä pienentää KAIKKI 134
+ * lehteä pikkukuviksi (ks. "MAAILMANÄKYMÄN PIKKULEHDET") eikä saa
+ * käyttää samaa kattoa. Laskusääntö on molemmille sama.
  */
-function pienennysMitat(w, h) {
+function pienennysMitat(w, h, rajat = null) {
   if (!(w > 0) || !(h > 0)) return null;
+  const pitkaSivu = rajat?.pitkaSivu ?? PIENENNYS_PITKA_SIVU;
+  const kattoMp = rajat?.kattoMp ?? PIENENNYS_KATTO_MP;
   const kerroin = Math.min(
-    PIENENNYS_PITKA_SIVU / Math.max(w, h),
-    Math.sqrt((PIENENNYS_KATTO_MP * 1e6) / (w * h)),
+    pitkaSivu / Math.max(w, h),
+    Math.sqrt((kattoMp * 1e6) / (w * h)),
   );
   if (!(kerroin < 1)) return null;
   return {
@@ -510,7 +518,7 @@ async function haeTavut(osoite) {
  * (vapautaLehti → siivoaLehtiUrlit); null tarkoittaa, että näytössä on
  * ämpärin oma osoite eikä mitään vapautettavaa.
  */
-async function pienennaLehti(lahde, blob, savy) {
+async function pienennaLehti(lahde, blob, savy, rajat = null) {
   let blobOsoite = null;
   try {
     blobOsoite = URL.createObjectURL(blob);
@@ -520,7 +528,7 @@ async function pienennaLehti(lahde, blob, savy) {
   try {
     const kuva = await lataaMitat(blobOsoite);
     if (!kuva) return null;
-    const mitat = pienennysMitat(kuva.naturalWidth, kuva.naturalHeight);
+    const mitat = pienennysMitat(kuva.naturalWidth, kuva.naturalHeight, rajat);
     if (!mitat) {
       /*
        * JO VALMIIKSI PIENI LEHTI näytetään ämpärin omasta osoitteesta:
@@ -1235,10 +1243,13 @@ function atlasRyhma(ui) {
     // ENSIMMÄISENÄ LAPSENA: nykyisen maan lehti (.fokus-lehti) on tämän
     // päällä, jotta kohdemaa ei jää naapurin vuodon alle. Yleislehti on
     // ainoa, joka menee tämänkin alle — se on koko laudan kokoinen
-    // pohja, ei naapuri.
+    // pohja, ei naapuri. Kehittäjän maailmanäkymän pikkulehdet
+    // (.fokus-maailma) ovat toinen pohjan laji ja kuuluvat sekin
+    // tämän ALLE: ne ovat sumeita eivätkä saa peittää tarkkaa lehteä.
     g = el('g', { class: 'fokus-atlas', 'pointer-events': 'none' });
-    const yleis = kerros.querySelector('.fokus-yleislehti');
-    kerros.insertBefore(g, yleis ? yleis.nextSibling : kerros.firstChild);
+    const alla = kerros.querySelector('.fokus-maailma')
+      ?? kerros.querySelector('.fokus-yleislehti');
+    kerros.insertBefore(g, alla ? alla.nextSibling : kerros.firstChild);
   }
   return g;
 }
@@ -1337,9 +1348,17 @@ export function paivitaLennonLehdet(ui) {
   if (!kuvat.length) return;
   const lennossa = Boolean(ui.aloituslentoKesken) || Boolean(ui.maailmanakyma?.());
   const maski = lennossa ? lennonHaivytysMaski(kerros) : null;
+  /*
+   * MUUTTUMATONTA MÄÄRETTÄ EI KIRJOITETA UUDELLEEN. Maailmanäkymässä
+   * kuvia on yli sata ja tämä ajetaan jokaisen saapuvan pikkulehden
+   * jälkeen (paivitaMaailmanLehdet): ilman vertailua sama maski
+   * kirjoitettaisiin kymmeniätuhansia kertoja, ja jokainen kirjoitus
+   * on selaimelle syy tarkistaa kuvan piirto uudelleen.
+   */
   for (const kuva of kuvat) {
-    if (maski) kuva.setAttribute('mask', maski);
-    else kuva.removeAttribute('mask');
+    const nyt = kuva.getAttribute('mask');
+    if (maski) { if (nyt !== maski) kuva.setAttribute('mask', maski); }
+    else if (nyt !== null) kuva.removeAttribute('mask');
   }
 }
 
@@ -1753,6 +1772,378 @@ function palautaMaalehti(ui) {
 }
 
 /*
+ * ============ MAAILMANÄKYMÄN PIKKULEHDET ============================
+ *
+ * Omistajan tilaus 27.8.2026 (iPad-kaappaus kehittäjän
+ * maailmannäkymästä): *"maailmannäkymässä pitää näkyä KAIKKI valtiot
+ * piirrettyinä"*. Kaappauksessa maastonsa saivat Ruotsi, Italia ja
+ * Turkki; muu maailma oli pergamenttia ja yleislehden haaleaa pohjaa.
+ *
+ * === MIKSI VAIN KOURALLINEN PIIRTYI ===
+ *
+ * Maailmanäkymä ei ollut koskaan oma karttansa: se avasi kameran ja
+ * poisti verhon, mutta lehtien valinta oli yhä pelaajan atlas, jonka
+ * jokainen sääntö karsii nimenomaan kaukaa katsottaessa (ks. "JATKUVA
+ * ATLAS"). Viisi porttia sulkeutuu peräkkäin:
+ *
+ *   1. ATLAS_VAHIMMAISLEVEYS — näkymään nähden kapea lehti ohitetaan.
+ *      Koko lauta on 12000 yksikköä ja tavallinen maalehti 300–900,
+ *      joten yleiskuvassa EI YKSIKÄÄN maa ylitä 12 prosentin rajaa.
+ *   2. ATLAS_UUSIA_RUUTUJA — ahne peittotesti ottaa vain lehdet, jotka
+ *      tuovat 16 x 16 -ruudukkoon viisi uutta ruutua. Kaukaa katsottuna
+ *      maa on yksi ruutu.
+ *   3. atlasEnintaan() / atlasMegapikselia() — 5–8 lehteä ja 40–96
+ *      megapikseliä. Täysi lehti on 25,6 Mp, joten katto on kolme.
+ *   4. liianKarkea — pohjaa sumeampi jättiläinen (RUS, CAN, GRL, CHL,
+ *      CHN) karsiutuu kokonaan.
+ *   5. kaukozoomissa() — kun näkymä on yli 2600 yksikköä leveä,
+ *      maalehdet PURETAAN ja kartalla on vain yleislehti.
+ *
+ * Yksikään porteista ei ole väärässä pelaajan näkymässä: ne ovat se,
+ * mikä pitää iPadin hengissä. Maailmanäkymä on kuitenkin toinen
+ * kysymys — siinä katsotaan koko lautaa kerralla eikä yhtä maata
+ * läheltä.
+ *
+ * === RATKAISU: OMA KERROS, OMA TARKKUUS ============================
+ *
+ * Omistajan täsmennys 27.8.2026: *"kartan EI tarvitse näkyä tarkasti
+ * kehittäjän maailmannäkymässä — matalampi tarkkuus saa jopa näyttää
+ * paremmalta ja auttaa suorituskykyä. Täysi tarkkuus tarvitaan vain
+ * fokusmoodissa, kun katsotaan yhtä maata läheltä."*
+ *
+ * Siksi maailmanäkymä EI kierrä atlaksen portteja vaan saa oman
+ * kerroksensa (.fokus-maailma), johon kaikki 134 lehteä piirretään
+ * PIKKUKUVINA. Atlaksen tarkat lehdet jäävät ennalleen tämän päälle,
+ * joten katsottava maa on yhä terävä.
+ *
+ * MIKSI PIKKUKUVA ON PAKKO. Täysinä lehtinä 134 kpl on 3430
+ * megapikseliä eli 13,7 gigatavua purettuna — ei hidas vaan mahdoton
+ * (sama vikaluokka kuin atlaksen johdannossa). Pitkä sivu 384
+ * pikseliä ja pinta-ala 0,12 Mp tekee tyypillisestä 6400 x 4000
+ * -lehdestä 384 x 240:n eli 0,09 Mp ≈ 0,37 Mt. KAIKKI 134 yhteensä
+ * noin 12 Mp ≈ 50 Mt — vähemmän kuin kolme pelaajan lehteä ja
+ * selvästi alle kuoren 40 megapikselin katon.
+ *
+ * 384 EI OLE NIUKKA VAAN ANTELIAS. iPadin 1024 pisteen levyisellä
+ * ruudulla koko 12000 yksikön lauta kerralla antaa 600 yksikön
+ * levyiselle maalle noin 51 ruutupikseliä: pikkukuvassa on 7,5-kertaa
+ * enemmän kuin ruudulla näkyy. Nelinkertaiseenkin lähizoomiin (3000
+ * yksikön näkymä) riittää yhä varaa, ja sitä lähempänä kehittäjä
+ * katsoo jo atlaksen tarkkoja lehtiä.
+ *
+ * === JONO, EI RYÖPPY ===
+ *
+ * Lehdet ovat ämpärissä vain täysinä (yhteensä 205 Mt, keskimäärin
+ * 1,5 Mt kappale) — thumb-versioita ei ole, joten pikkukuva tehdään
+ * selaimessa samalla putkella kuin puhelimen pienennys
+ * (haeTavut → pienennaLehti → createImageBitmap, joka purkaa JA
+ * pienentää yhdellä kertaa eikä koskaan materialisoi täyttä rasteria).
+ * Purku on jo valmiiksi sarjassa (jonossa), ja NOUTOJA pidetään
+ * kerrallaan enintään PIKKU_RINNAKKAIN — 134 yhtaikaista latausta
+ * tukehduttaisi sekä verkon että purkujonon.
+ *
+ * TÄRKEYSJÄRJESTYS ON NÄKYMÄ. Jono aloitetaan niistä lehdistä, jotka
+ * ovat juuri nyt ruudulla, ja edetään ulospäin keskipisteen
+ * etäisyyden mukaan: kartta täyttyy silmien alta ulospäin eikä
+ * aakkosjärjestyksessä.
+ *
+ * === MITÄ NAPIN SAMMUTUS VAPAUTTAA ===
+ *
+ * DOMista irrotetaan koko ryhmä, ja juuri se vapauttaa PURETUT kuvat
+ * (sama oppi kuin atlaksen LRU:lla) — noin 50 Mt. Pakatut pikkukuvat
+ * (blob-osoitteet, yhteensä pari megatavua) JÄÄVÄT varastoon
+ * istunnon loppuun: ne ovat kolmasosaprosentti siitä muistista, jonka
+ * purku vie, ja ilman niitä napin toinen painallus lataisi 205
+ * megatavua uudelleen. Kauppa on siis megatavu säästöstä sadan
+ * megatavun latausta vastaan.
+ *
+ * PELAAJAN POLKU EI MUUTU. Koko kerros on maailmanakyma()-ehdon
+ * takana, joka vaatii kehittäjätilan eikä palauta koskaan totta
+ * katselutilassa (js/ui.js maailmanakyma).
+ */
+
+/** Pikkulehden pisin sivu pikseleinä. */
+const PIKKU_PITKA_SIVU = 384;
+/** ...ja pinta-alan katto megapikseleinä (noin 0,37 Mt RGBA). */
+const PIKKU_KATTO_MP = 0.12;
+const PIKKU_RAJAT = { pitkaSivu: PIKKU_PITKA_SIVU, kattoMp: PIKKU_KATTO_MP };
+/** Kuinka monta lehteä on kerralla noudossa. */
+const PIKKU_RINNAKKAIN = 3;
+
+/**
+ * Pikkulehdet käynnin ajan muistissa: 'lauta:ISO' -> { bbox, kuva }
+ * tai 'ei'. Oma varastonsa eikä VARASTO, koska sama maa on samaan
+ * aikaan kahdessa tarkkuudessa: atlaksen tarkka lehti ja tämän
+ * kerroksen pikkukuva. Yhteinen varasto tarkoittaisi, että
+ * maailmanäkymän avaaminen korvaisi pelaajan tarkan lehden sumealla.
+ */
+const PIKKU_VARASTO = new Map();
+/** Kesken oleva pikkulehden haku, jottei samaa haeta kahdesti. */
+const PIKKU_HAUT = new Map();
+/** Montako noutoa on juuri nyt menossa (PIKKU_RINNAKKAIN on katto). */
+let pikkuKaynnissa = 0;
+
+/*
+ * KEHITTÄJÄN KERROS EI SAA VIIVYTTÄÄ SIVUN LATAUSTA (mitattu
+ * 28.8.2026 savukkeessa: sivunlataus jäi yli 30 sekunniksi kesken).
+ *
+ * Nappi on levyllä muistettu asetus, joten tallennettu peli palautuu
+ * maailmanäkymään heti käynnistyksessä — ja kerros alkoi silloin
+ * täyttää karttaa jo ennen kuin dokumentti oli valmis. SVG:n
+ * <image>-solmu on dokumentin resurssi kuten <img>: yli sata kesken
+ * olevaa kuvaa PITÄÄ `load`-tapahtumaa auki, ja sen takana on koko
+ * pelin oma käynnistysketju.
+ *
+ * Odotus on kertaluontoinen ja tapahtumapohjainen: kun sivu on
+ * valmis, täyttö jatkuu itsestään siitä mihin jäi.
+ */
+let maailmaOdottaa = false;
+function sivuValmis() {
+  try {
+    const tila = globalThis.document?.readyState;
+    // Node (yksikkötesti): dokumenttia ei ole, eikä mitään odotettavaa.
+    return !tila || tila === 'complete';
+  } catch {
+    return true;
+  }
+}
+function odotaSivunLataus(ui) {
+  if (maailmaOdottaa) return;
+  maailmaOdottaa = true;
+  try {
+    globalThis.addEventListener?.('load', () => {
+      maailmaOdottaa = false;
+      if (!ui?.dead) paivitaMaailmanLehdet(ui);
+    }, { once: true });
+  } catch {
+    maailmaOdottaa = false;
+  }
+}
+
+/** Maailmanäkymän oma ryhmä: yleislehden päällä, atlaksen alla. */
+function maailmaRyhma(ui) {
+  const kerros = ui.fokuskarttaKerros;
+  if (!kerros) return null;
+  let g = kerros.querySelector('.fokus-maailma');
+  if (!g) {
+    g = el('g', { class: 'fokus-maailma', 'pointer-events': 'none' });
+    /*
+     * PAIKKA LUETAAN NAAPUREISTA eikä lisätä loppuun: kerroksessa on
+     * jo yleislehti (pohja), atlas (tarkat naapurit), nykyisen maan
+     * lehti ja erikoispiirit, ja piirit ovat viimeisenä
+     * tarkoituksella (tools/savuke-atlas.mjs). Pikkulehdet kuuluvat
+     * pohjan päälle ja kaiken tarkan alle.
+     */
+    const atlas = kerros.querySelector('.fokus-atlas');
+    const yleis = kerros.querySelector('.fokus-yleislehti');
+    kerros.insertBefore(g, atlas ?? (yleis ? yleis.nextSibling : kerros.firstChild));
+  }
+  return g;
+}
+
+/**
+ * Hakee yhden maan pikkulehden. Palauttaa { bbox, kuva } tai null.
+ *
+ * ILMAN CORSIA EI PIKKUKUVAA. Tavut on saatava fetchillä, jotta
+ * createImageBitmap voi purkaa ne suoraan pieniksi; ämpäri lähettää
+ * otsakkeen pelin omalle osoitteelle (js/media.js, ks. "MIKSI CORS
+ * ONNISTUU"). Paikallisessa kehityksessä sääntö ei osu, ja silloin
+ * maailmanäkymä jää sille, mitä atlas ehtii piirtää — täyden lehden
+ * lataaminen varareitiksi olisi juuri se 13,7 gigatavua, jota tämä
+ * kerros on välttämässä. Puute muistetaan käynnin ajaksi (sääntö 1
+ * tiedoston alussa: puuttuva kuva ei riko mitään).
+ */
+async function haePikkulehti(iso, lauta, map = null) {
+  const avain = `${lauta}:${iso}`;
+  const ennestaan = PIKKU_VARASTO.get(avain);
+  if (ennestaan) return ennestaan === 'ei' ? null : ennestaan;
+  if (PIKKU_HAUT.has(avain)) return PIKKU_HAUT.get(avain);
+  const haku = (async () => {
+    try {
+      if (!peiliKaytossa('kuvat')) throw new Error('peili pois');
+      const tiedot = pohjanTiedot(iso);
+      const b = tiedot?.bbox;
+      if (!(b?.w > 0) || !(b?.h > 0)) throw new Error('rajaus puuttuu');
+      if (tiedot.lauta && tiedot.lauta !== lauta) throw new Error('eri lauta');
+      const lahde = fokuskarttaUrl(tiedot.tiedosto ?? `${iso}.webp`);
+      const savy = paperinSavy(map, b.x + b.w / 2, b.y + b.h / 2);
+      const blob = await haeTavut(lahde);
+      if (!blob) throw new Error('tavuja ei saada (CORS)');
+      const pieni = await jonossa(() => pienennaLehti(lahde, blob, savy, PIKKU_RAJAT));
+      if (!pieni?.url) throw new Error('pienennys ei onnistunut');
+      const pikku = {
+        bbox: b,
+        kuva: pieni.url,
+        objectURL: pieni.objectURL ?? null,
+        mp: (pieni.w * pieni.h) / 1e6 || 0,
+      };
+      PIKKU_VARASTO.set(avain, pikku);
+      return pikku;
+    } catch {
+      PIKKU_VARASTO.set(avain, 'ei');
+      return null;
+    } finally {
+      PIKKU_HAUT.delete(avain);
+    }
+  })();
+  PIKKU_HAUT.set(avain, haku);
+  return haku;
+}
+
+/**
+ * Lehdet tärkeysjärjestyksessä: ruudulla olevat ensin, sitten
+ * keskipisteen etäisyyden mukaan ulospäin.
+ *
+ * KIERTÄVÄÄ LAUTAA EI HUOMIOIDA TÄSSÄ. Pikkulehti piirretään omaan
+ * paikkaansa laudan koordinaateissa kerran; päivämäärärajan yli
+ * katsottaessa se on kartalla sauman toisella puolella kuten laudan
+ * oma grafiikkakin (js/ui.js kiertoKohdat piirtää kartan uudelleen).
+ * Järjestys on vain latausjono eikä näy lopputuloksessa.
+ *
+ * NÄKYMÄ TULEE PARAMETRINA EIKÄ nakyvaAlue():STA. Tämä ajetaan
+ * jokaisen saapuvan pikkulehden jälkeen — 134 kertaa täytön aikana —
+ * ja nakyvaAlue lukee kaksi getBoundingClientRectia eli PAKOTTAA
+ * ASETTELUN. Kesken panoroinnin se on juuri se hinta, jota v1115:n
+ * oppi (js/fokusmitat.js, tools/savuke-atlas.mjs "viivainsilmukka ei
+ * lue asettelua") kieltää maksamasta kehyksissä. Kutsuja on jo
+ * mitannut näkymän kerran; jono kelpaa hieman vanhalla luvulla.
+ */
+function pikkuJarjestys(lauta, nakyva) {
+  const kx = nakyva?.w > 0 ? nakyva.x + nakyva.w / 2 : 0;
+  const ky = nakyva?.w > 0 ? nakyva.y + nakyva.h / 2 : 0;
+  const lista = [];
+  for (const [iso, tiedot] of Object.entries(FOKUS_POHJAT)) {
+    if (tiedot.lauta && tiedot.lauta !== lauta) continue;
+    const b = tiedot.bbox;
+    if (!(b?.w > 0) || !(b?.h > 0)) continue;
+    const nakyy = nakyva?.w > 0 ? leikkausAla(b, nakyva) > 0 : false;
+    const dx = (b.x + b.w / 2) - kx;
+    const dy = (b.y + b.h / 2) - ky;
+    lista.push({ iso, bbox: b, arvo: (nakyy ? 0 : 1e9) + Math.hypot(dx, dy) });
+  }
+  lista.sort((a, b) => a.arvo - b.arvo);
+  return lista;
+}
+
+/**
+ * Piirtää yhden pikkulehden ryhmään kokojärjestykseen.
+ *
+ * ISO LEHTI POHJIMMAISEKSI, sama sääntö kuin atlaksella: pieni maa ei
+ * saa jäädä naapurinsa vuodon alle. Paikka etsitään lapsista pinta-
+ * alan mukaan (data-ala), koska lehdet saapuvat verkosta
+ * tärkeysjärjestyksessä eivätkä kokojärjestyksessä — koko listan
+ * uudelleenlajittelu jokaisesta saapuvasta lehdestä olisi 134 kertaa
+ * 134 solmusiirtoa.
+ */
+function piirraPikkulehti(ryhma, iso, pikku) {
+  const { bbox } = pikku;
+  const ala = bbox.w * bbox.h;
+  const kuva = el('image', {
+    x: bbox.x,
+    y: bbox.y,
+    width: bbox.w,
+    height: bbox.h,
+    href: pikku.kuva,
+    preserveAspectRatio: 'none',
+    class: 'fokuskartta-kuva',
+    'data-maailma-maa': iso,
+    'data-ala': String(Math.round(ala)),
+  });
+  let kohta = null;
+  for (const lapsi of ryhma.children) {
+    if (Number(lapsi.getAttribute('data-ala')) < ala) { kohta = lapsi; break; }
+  }
+  ryhma.insertBefore(kuva, kohta);
+}
+
+/**
+ * KAIKKI LEHDET KARTALLE, kun kehittäjän maailmannappi on päällä.
+ *
+ * Kutsutaan paivitaFokusAtlaksesta ennen kaukozoomin haaraa, koska
+ * tämä kerros on voimassa myös silloin kun atlaksen omat maalehdet on
+ * purettu yleislehden tieltä — juuri uloszoomattu koko lauta on se
+ * näkymä, jota tilaus koskee.
+ */
+function paivitaMaailmanLehdet(ui, nakyva = null) {
+  const kerros = ui?.fokuskarttaKerros;
+  const paalla = Boolean(ui?.maailmanakyma?.()) && atlasPaalla(ui);
+  if (!paalla) {
+    /*
+     * RYHMÄ IRTI DOMISTA = PURETUT KUVAT POIS MUISTISTA. Pakatut
+     * pikkukuvat jäävät varastoon (ks. osion johdanto), joten napin
+     * seuraava painallus piirtää kartan ilman yhtäkään latausta.
+     */
+    const vanha = kerros?.querySelector('.fokus-maailma');
+    if (vanha) vanha.remove();
+    if (ui) {
+      ui.maailmanLehdet = null;
+      ui.maailmanNakyva = null;
+      ui.maailmanValmis = null;
+    }
+    return;
+  }
+  // Kutsujan mittaama näkymä muistiin: jonon jatkokierrokset (lehden
+  // saapuminen) eivät saa lukea asettelua uudelleen (ks. pikkuJarjestys).
+  if (nakyva?.w > 0) ui.maailmanNakyva = nakyva;
+  // Tallenteesta palautunut peli voi olla tässä jo ennen kuin
+  // dokumentti on valmis: kerros odottaa vuoroaan (ks. odotaSivunLataus).
+  if (!sivuValmis()) { odotaSivunLataus(ui); return; }
+  const lauta = ui.game?.pack?.id;
+  const ryhma = lauta ? maailmaRyhma(ui) : null;
+  if (!ryhma) return;
+  ui.maailmanLehdet ??= new Set();
+  /*
+   * VALMIS LAUTA EI TARVITSE ENÄÄ LAJITTELUA. Tämä ajetaan joka
+   * piirrosta ja joka näkymän asettumisesta (paivitaFokusAtlas), mutta
+   * täyttö on kertaluontoinen työ: kun jokainen lehti on joko kartalla
+   * tai tiedetysti puuttuva, 134 laatikon lajittelu jokaisessa
+   * eleessä olisi puhdasta hukkaa. Lippu nollautuu, kun kerros
+   * puretaan tai lauta vaihtuu (nollaaFokuskartta).
+   */
+  if (ui.maailmanValmis === lauta) return;
+  const lista = pikkuJarjestys(lauta, nakyva ?? ui.maailmanNakyva);
+  let uusia = 0;
+  let kesken = false;
+  for (const { iso } of lista) {
+    if (ui.maailmanLehdet.has(iso)) continue;
+    const tallessa = PIKKU_VARASTO.get(`${lauta}:${iso}`);
+    if (tallessa === 'ei') continue;
+    if (tallessa?.kuva) {
+      piirraPikkulehti(ryhma, iso, tallessa);
+      ui.maailmanLehdet.add(iso);
+      uusia += 1;
+      continue;
+    }
+    kesken = true;
+    if (pikkuKaynnissa >= PIKKU_RINNAKKAIN) continue;
+    if (PIKKU_HAUT.has(`${lauta}:${iso}`)) continue;
+    pikkuKaynnissa += 1;
+    void haePikkulehti(iso, lauta, ui.game.pack.map).then(() => {
+      pikkuKaynnissa = Math.max(0, pikkuKaynnissa - 1);
+      if (ui.dead) return;
+      // Sama kutsu piirtää saapuneen lehden ja aloittaa seuraavan
+      // noudon: jono etenee itsestään eikä tarvitse omaa ajastintaan.
+      paivitaMaailmanLehdet(ui);
+    });
+  }
+  /*
+   * Reunahäivytys kuuluu myös pikkulehdille (paivitaLennonLehdet:
+   * maailmanäkymä on maskin toinen ehto), muuten jokainen pikkukuva
+   * loppuisi kovaan suorakulmaan naapurinsa päällä.
+   *
+   * VERHOA EI HERÄTETÄ TÄSTÄ. Atlaksen lehdet kertovat saapumisestaan
+   * verholle (paivitaAtlasVerho), mutta maailmanäkymässä verhoa ei ole
+   * lainkaan (js/ui.js fokusSumuPaalla palauttaa epätoden heti
+   * maailmanakyma():n perusteella) — 134 turhaa verhonrakennusta olisi
+   * kaikki, mitä kutsu tekisi.
+   */
+  if (uusia) paivitaLennonLehdet(ui);
+  // Jokainen lehti on nyt joko kartalla tai tiedetysti puuttuva: työ on
+  // tehty, eikä seuraavien piirtojen tarvitse laskea sitä uudelleen.
+  if (!kesken) ui.maailmanValmis = lauta;
+}
+
+/*
  * ============ ERIKOISPIIRIT: PÄIVÄNTASAAJA JA KÄÄNTÖPIIRIT ==========
  *
  * Omistajan ja päätoimittajan taidesuunta 28.8.2026: atlasnäkymään
@@ -2013,6 +2404,9 @@ export function paivitaFokusAtlas(ui) {
     // Erikoispiirit ovat atlaksen kerros: ne katoavat sen mukana
     // etusivulla, katselutilassa ja turvatilassa (ks. atlasPaalla).
     ui.fokuskarttaKerros?.querySelector('.fokus-piirit')?.remove();
+    // Sama koskee kehittäjän pikkulehtiä: tässä haarassa kartalle ei
+    // jätetä yhtäkään purettua kuvaa.
+    paivitaMaailmanLehdet(ui);
     if (ui.atlasLehdet.size) {
       for (const iso of [...ui.atlasLehdet.keys()]) vapautaLehti(ui, iso);
       ui.atlasAvain = null;
@@ -2078,6 +2472,14 @@ export function paivitaFokusAtlas(ui) {
    * silloin kun lehtivalinta ohitetaan tunnisteella (atlasAvain).
    */
   paivitaErikoispiirit(ui, kauko);
+  /*
+   * KEHITTÄJÄN PIKKULEHDET ENNEN KAUKOZOOMIN HAARAA (omistajan tilaus
+   * 27.8.2026: maailmannäkymässä pitää näkyä KAIKKI valtiot). Kerros
+   * on voimassa juuri silloin, kun atlaksen omat maalehdet puretaan
+   * yleislehden tieltä — koko lauta kerralla ruudulla on se näkymä,
+   * jota tilaus koskee (ks. "MAAILMANÄKYMÄN PIKKULEHDET").
+   */
+  paivitaMaailmanLehdet(ui, nakyva);
   if (kauko) {
     if (ui.atlasLehdet.size) {
       for (const iso of [...ui.atlasLehdet.keys()]) vapautaLehti(ui, iso);
@@ -2527,6 +2929,15 @@ export function nollaaFokuskartta(ui) {
   ui.atlasPohjaMp = 0;
   ui.yleislehtiHaku = false;
   ui.yleislehtiPalautus = false;
+  /*
+   * Maailmanäkymän pikkulehdet asuvat samassa kerroksessa: DOM meni jo,
+   * mutta kirjanpito on nollattava tai seuraava päivitys luulisi
+   * lehtien olevan yhä kartalla eikä piirtäisi yhtäkään uudelleen.
+   * Pakatut pikkukuvat jäävät varastoon (PIKKU_VARASTO), joten uusi
+   * lauta saa omansa ilman latausta.
+   */
+  ui.maailmanLehdet = null;
+  ui.maailmanValmis = null;
   // Kerros on tyhjä, joten jokainen pienennetyn lehden blob-osoite on
   // nyt käyttämätön — ne vapautuvat kaikki tässä.
   siivoaLehtiUrlit(ui);
