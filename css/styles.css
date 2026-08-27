@@ -4612,33 +4612,14 @@ body.fokuspohja .country-korostus { display: none; }
 }
 
 /* ---------------------------------------------------------------------------
-   KEHITTÄJÄN "pisteet"-KERROS (omistajan tilaus 25.8.2026, js/ui.js
-   paivitaKehittajaPisteet)
+   KEHITTÄJÄN "pisteet"-KERROS ON POISTETTU (omistajan tilaus 27.8.2026)
    ---------------------------------------------------------------------------
-   Laudan kaupungit ja reittiverkko fokuskartan päälle, jotta omistaja
-   näkee mihin voi hypätä. Väri on tarkoituksella pelin ulkopuolinen
-   punainen: kehittäjän merkintää ei saa erehtyä lukemaan kartaksi, ja
-   1873-atlaksen ruskeanvihreässä maastossa punainen erottuu joka
-   sävystä. Kerros on `pointer-events: none` — napautuksen ottaa
-   vastaan pelin oma näkymätön osuma-alue (.target-hit).
-
-   Mitat ovat laudan yksiköitä kuten muillakin kartan kerroksilla:
-   verkko skaalautuu zoomin mukana eikä jää lähikuvassa hiussuoraksi.
+   Punainen kaupunki- ja reittiverkko piirtyi 25.–27.8.2026 fokuskartan
+   päälle, jotta omistaja näki mihin voi hypätä. Tilalla on ylärivin
+   maailmanappi: siinä näkyvät laudan omat kaupunkilaatat (js/ui.js
+   maailmanakyma), ja reitit jäävät nimenomaan pois — ne olivat
+   omistajan mukaan se osa, jota ei haluta nähdä.
    ------------------------------------------------------------------------- */
-.dev-reitti {
-  fill: none;
-  stroke: rgba(176, 42, 42, 0.5);
-  stroke-width: 2.4;
-  stroke-linecap: round;
-}
-
-.dev-reitti-sea { stroke-dasharray: 9 7; }
-
-.dev-kaupunki {
-  fill: rgba(176, 42, 42, 0.72);
-  stroke: rgba(255, 245, 222, 0.85);
-  stroke-width: 2;
-}
 
 /* ---------------------------------------------------------------------------
    PALLOT POIS LEHDEN PÄÄLTÄ (omistajan pelitestipalaute v1097, iPad:

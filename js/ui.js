@@ -27,8 +27,8 @@ import {
   jaljenKehykset, kierraKehykset, kuvitukseton, lahdemerkinta, liuskaIkoniSvg,
   maahanMuoto, onVanhaKuva, paikassaMuoto, pehmeaPolku, piirraLeipateksti,
   pisteMonikulmiossa, polunPituus,
-  cachedImage, cachedSummary, fokusSumennusPaalla, fokusmoodiPaalla,
-  kehittajaPisteetPaalla, kehittajaRajatPaalla, kehittajaTilaPaalla,
+  cachedImage, cachedSummary, fokusmoodiPaalla,
+  kehittajaMaailmaPaalla, kehittajaTilaPaalla,
   shortIntro, suojaa, tallennaLinssi, tallennettuLinssi, viivaIkoni,
 } from './ui-apurit.js';
 import { onAarre } from './tokens.js';
@@ -2214,24 +2214,18 @@ export class UI {
     this.travelSuodatin = null; // 'sea' | 'air' | null — kumpi lista näytetään
     this.kehittajaTila = kehittajaTilaPaalla();
     /*
-     * KEHITTÄJÄN YLÄRIVIN KAKSI NAPPIA (omistajan tilaus 25.8.2026,
-     * js/ui-apurit.js osio "KEHITTÄJÄN KAKSI YLÄRIVIN NAPPIA"):
-     * liikkuvuusrajoite ja kaupunkipisteet. Luetaan samalla tavalla kuin
-     * kehittäjätila, ja paivitaKehittajaNapit tahdistaa ne ilman
-     * sivulatausta.
+     * KEHITTÄJÄN YLÄRIVIN AINOA NAPPI (omistajan tilaus 27.8.2026,
+     * js/ui-apurit.js osio "KEHITTÄJÄN YKSI YLÄRIVIN NAPPI:
+     * MAAILMANÄKYMÄ"). Luetaan samalla tavalla kuin kehittäjätila, ja
+     * paivitaKehittajaMaailma tahdistaa sen ilman sivulatausta.
      */
-    this.kehittajaRajat = kehittajaRajatPaalla();
-    this.kehittajaPisteet = kehittajaPisteetPaalla();
+    this.kehittajaMaailma = kehittajaMaailmaPaalla();
     /*
      * FOKUSMOODI (omistajan linjaus 24.8.2026, Raamatun osio
      * "Fokusmoodi"). Luetaan kerran tässä kuten kehittäjätilakin;
-     * kytkin päivittää kentät paivitaFokusmoodilla ilman sivulatausta.
-     *
-     * fokusSumennus on erillinen kehittäjäasetus eikä oma tilansa: se
-     * vaikuttaa vain fokusmoodin ollessa päällä (ks. fokusSumuPaalla).
+     * paivitaFokusmoodi päivittää kentän ilman sivulatausta.
      */
     this.fokusmoodi = fokusmoodiPaalla();
-    this.fokusSumennus = fokusSumennusPaalla();
     // Fokuskerroksen viimeksi piirretty maajoukko: sumuverho rakennetaan
     // uusiksi vain kun käytyjen maiden joukko oikeasti muuttuu.
     this.fokusAvain = null;
@@ -3024,8 +3018,7 @@ export class UI {
    */
   paivitaKehittajaTila() {
     this.kehittajaTila = kehittajaTilaPaalla();
-    this.kehittajaRajat = kehittajaRajatPaalla();
-    this.kehittajaPisteet = kehittajaPisteetPaalla();
+    this.kehittajaMaailma = kehittajaMaailmaPaalla();
     /*
      * Kaupunkien valmiusvärit syntyvät laudan piirrossa (drawBoard),
      * joten kytkin jäisi ilman tätä näkymättömäksi seuraavaan laudan
@@ -5678,27 +5671,48 @@ export class UI {
   }
 
   /**
+   * KEHITTÄJÄN MAAILMANÄKYMÄ PÄÄLLÄ JUURI NYT? (omistajan tilaus
+   * 27.8.2026, js/ui-apurit.js osio "KEHITTÄJÄN YKSI YLÄRIVIN NAPPI".)
+   *
+   * Yksi kysymys, johon koko näkymä nojaa neljässä paikassa: verho
+   * (fokusSumuPaalla), käymättömän maan datakerros ja lehden päällä
+   * olevat pelimerkit (paivitaFokusKerros, paivitaFokusPallot) sekä
+   * kameran vapaus (js/kartta.js panorointiVapaa, fokusRajaukset).
+   *
+   * KATSELUTILA EI OLE KEHITTÄJÄN NÄKYMÄ. Linkillä avattu lauta
+   * (?lauta=) on laudan esittelyä lukijalle, eikä kehittäjän kytkin saa
+   * muuttaa sitä miltään osin — sama raja kuin fokusmoodin muillakin
+   * kerroksilla.
+   */
+  maailmanakyma() {
+    return Boolean(this.kehittajaTila && this.kehittajaMaailma && !this.katselu);
+  }
+
+  /**
    * Onko sumuverho päällä juuri nyt?
    *
-   * KOLME EHTOA. Fokusmoodi päällä, kehittäjän sumennuskytkin päällä ja
-   * peli oikeasti käynnissä. Kolmas on tärkein: aloitusruudulla
-   * (phase 'pickstart') maailmaa vielä katsellaan kokonaisuutena eikä
-   * yhtään kaupunkia ole valittu, joten verho peittäisi koko kartan
-   * juuri silloin kun siitä pitää valita lähtöpaikka. Katselutila
-   * (?lauta=) on samaa lajia: se on laudan esittelyä eikä matkaa.
+   * KAKSI EHTOA. Fokusmoodi päällä ja peli oikeasti käynnissä.
+   * Jälkimmäinen on tärkeämpi: aloitusruudulla (phase 'pickstart')
+   * maailmaa vielä katsellaan kokonaisuutena eikä yhtään kaupunkia ole
+   * valittu, joten verho peittäisi koko kartan juuri silloin kun siitä
+   * pitää valita lähtöpaikka. Katselutila (?lauta=) on samaa lajia: se
+   * on laudan esittelyä eikä matkaa.
    */
   fokusSumuPaalla() {
     /*
-     * NELJÄS EHTO: KEHITTÄJÄN LIIKKUVUUSRAJOITE (omistajan tilaus
-     * 25.8.2026). Sumuverho on osa samaa pelaajan rajoitetta kuin
-     * kameran rajaus — se kertoo, mikä maailmasta on vielä auki. Kun
-     * kehittäjä ottaa rajoitteen pois ("rajat"-nappi ylhäällä),
-     * tilaukseen kuuluu että *"koko atlas on selattavissa vapaasti"*:
-     * verhon alla selaaminen ei ole selaamista. Rajoitteen ollessa
-     * PÄÄLLÄ (tai kehittäjätilan ollessa pois) verho on ennallaan.
+     * KOLMAS EHTO: KEHITTÄJÄN MAAILMANÄKYMÄ (omistajan tilaus
+     * 27.8.2026). Sumuverho on osa samaa pelaajan rajoitetta kuin
+     * kameran rajaus — se kertoo, mikä maailmasta on vielä auki.
+     * Maailmanäkymässä *"sama nappi poistaa sumennuksen"*: verhon alla
+     * selaaminen ei ole selaamista. Näkymän ollessa pois (tai
+     * kehittäjätilan ollessa pois) verho on ennallaan.
+     *
+     * Erillistä sumennuskytkintä ei enää ole: se oli 24.–27.8.2026
+     * oma vertailunappinsa hampurilaisvalikossa, ja maailmanappi korvasi
+     * sen.
      */
-    if (this.kehittajaTila && !this.kehittajaRajat) return false;
-    return Boolean(this.fokusmoodi && this.fokusSumennus
+    if (this.maailmanakyma()) return false;
+    return Boolean(this.fokusmoodi
       && !this.katselu && this.game.phase !== 'pickstart');
   }
 
@@ -5857,9 +5871,17 @@ export class UI {
      * fokusmoodissa ei pääsisi ensimmäisestä maasta koskaan pois.
      * Lehden PÄÄLTÄ ne piilotetaan erikseen ja vain valinnan
      * ulkopuolella (paivitaFokusPallot, v1097).
+     *
+     * KEHITTÄJÄN MAAILMANÄKYMÄ OHITTAA PIILOTUKSEN (omistajan tilaus
+     * 27.8.2026): *"KOHDEKAUPUNGIT näkyviin, jotta omistaja voi siirtyä
+     * eri maiden välillä"*. Määre on VAIN kaupungin osissa — laatta,
+     * rantarengas, porttikehä, lentokoneen merkki ja nimi (ks.
+     * fokusMaare) — joten näkyviin tulevat kaupungit eivätkä reitit:
+     * lento- ja maareitit asuvat laudan bittikartassa, joka pysyy
+     * atlaksen alla piilossa (js/fokuskartta.js paivitaVanhaLauta).
      */
     const piilota = Boolean(this.fokusmoodi && maat && !this.katselu
-      && this.game.phase !== 'pickstart');
+      && this.game.phase !== 'pickstart') && !this.maailmanakyma();
     for (const osa of this.svg.querySelectorAll('[data-fokus-maa]')) {
       const ulkona = piilota && !maat.has(osa.dataset.fokusMaa);
       osa.classList.toggle('fokus-piilossa', ulkona);
@@ -5878,8 +5900,6 @@ export class UI {
     paivitaFokusAtlas(this);
     // Avauslennon reunahäivytys päälle/pois (v1119: ei neliöreunaa).
     paivitaLennonLehdet(this);
-    // Kehittäjän "pisteet"-nappi: kaupungit ja reittiverkko kuvan päälle.
-    this.paivitaKehittajaPisteet();
     // Lehden päällä olevat pelimerkit (v1097: "Ota pallot pois").
     this.paivitaFokusPallot();
     // Ruutuun ankkuroidut mitat (v1099: mittajana ja kartuutsi).
@@ -5898,94 +5918,39 @@ export class UI {
     this.paivitaFokusSumu(this.fokusMaat());
   }
 
-  /* --- KEHITTÄJÄN "pisteet"-NAPPI (omistajan tilaus 25.8.2026) ------ */
+  /* --- KEHITTÄJÄN MAAILMANAPPI (omistajan tilaus 27.8.2026) --------- */
 
   /**
-   * KAUPUNGIT JA REITTIPISTEET FOKUSKARTAN PÄÄLLE.
+   * Kehittäjän ylärivin ainoan napin kytkin (js/main.js
+   * #kehittaja-maailma-btn).
    *
-   * *"näyttää kaikkien laudan kaupunkien pisteet ja reittiverkon
-   * fokustilankin päällä, jotta kaupunkeihin voi hypätä suoraan
-   * testaamaan"*.
+   * Sama kaava kuin paivitaFokusmoodilla: asetus luetaan uudestaan
+   * levyltä ja näkymä tahdistetaan heti ilman sivulatausta. Nappi
+   * vaikuttaa neljään kerrokseen, jotka kaikki elävät valmiin kartan
+   * päällä (verho, käymättömän maan datakerros, lehden päällä olevat
+   * pelimerkit, kameran rajaus) — karttaa ei tarvitse rakentaa uusiksi.
    *
-   * MIKSI OMA KERROS EIKÄ VANHOJEN PIILOTUSTEN PURKU. Laudan omat
-   * reitit ja askelpisteet eivät ole SVG:tä vaan osa rasteroitua
-   * karttakuvaa (js/mapart.js pilkoTaide), joka jää fokuslehden ALLE —
-   * niitä ei voi "näyttää" luokalla, koska niitä ei ole olemassa
-   * elementteinä. Kaupunkien osat taas ovat kolmen eri säännön
-   * (fokus-piilossa, fokus-lehden-alla, nimilappujen latominen) alaisia,
-   * ja niiden ohittaminen sotkisi pelinäkymän logiikan. Kevyt oma
-   * piirros on sekä yksinkertaisempi että selvästi kehittäjän merkintä:
-   * punainen verkko ei voi mennä sekaisin pelin oman grafiikan kanssa.
-   *
-   * HYPPY ON JO OLEMASSA. Kehittäjätilassa jokainen kaupunki saa
-   * näkymättömän napautusalueen (drawTargets → doKehittajaSiirto), ja
-   * paivitaFokusPallot piilottaa fokusnäkymässä vain koristeet, ei
-   * osuma-aluetta. Tämä kerros kertoo siis MISSÄ ne alueet ovat; itse
-   * hyppy toimi jo ennen tätä nappia.
-   *
-   * KERROS RAKENNETAAN VASTA TARVITTAESSA ja puretaan heti kun nappi
-   * sammuu: solmuja on laudan kokoinen määrä (maailmankartalla noin
-   * 200 kaupunkia ja 400 reittiä), eikä pelaajan piirtoon saa jäädä
-   * yhtään ylimääräistä.
+   * KORVASI vanhan paivitaKehittajaNapit-kytkimen (25.8.2026), joka
+   * tahdisti "rajat"- ja "pisteet"-nappien tilan. Purettu "pisteet"-
+   * kerros (dev-pisteet: punaiset kaupunkipisteet ja reittiverkko
+   * kuvan päälle) ei enää ole: maailmanäkymässä näkyvät laudan omat
+   * kaupunkilaatat, ja reitit jäävät omistajan tilauksen mukaan pois.
    */
-  paivitaKehittajaPisteet() {
-    const paalla = Boolean(this.kehittajaTila && this.kehittajaPisteet
-      && !this.katselu);
-    if (!paalla) {
-      if (this.kehittajaPisteetKerros) {
-        this.kehittajaPisteetKerros.remove();
-        this.kehittajaPisteetKerros = null;
-        this.kehittajaPisteetLauta = null;
-      }
-      return;
-    }
+  paivitaKehittajaMaailma() {
+    this.kehittajaMaailma = kehittajaMaailmaPaalla();
     /*
-     * isConnected EIKÄ PELKKÄ OLEMASSAOLO: laudan uudelleenpiirto
-     * rakentaa juuriryhmän tyhjästä (drawBoardFor), jolloin muistettu
-     * solmu jää irralleen puusta. Ilman tätä kerros katoaisi näkyvistä
-     * mutta kirjanpito luulisi sitä yhä piirretyksi.
+     * FOKUSMOODI SAMASSA KUTSUSSA: napin painallus siivoaa vanhat
+     * kytkinavaimet (js/ui-apurit.js siivoaVanhatKehittajaAvaimet), ja
+     * niiden joukossa on fokusmoodin avain. Ilman uudelleenlukua
+     * valikosta jäänyt '0' jäisi voimaan seuraavaan sivulataukseen asti
+     * — juuri se kummittelu, jonka siivous poistaa. Fokusmoodin
+     * vaihtuminen vaatii myös lehtien nollauksen, kuten
+     * paivitaFokusmoodissa; muuten muistettu tunniste ohittaisi työn.
      */
-    if (this.kehittajaPisteetKerros?.isConnected
-      && this.kehittajaPisteetLauta === this.game.pack.id) return;
-    this.kehittajaPisteetKerros?.remove();
-    const juuri = this.fokusKerros?.parentNode;
-    if (!juuri) return;
-    /*
-     * SUMUVERHON PÄÄLLE mutta kaupunkien ja nappuloiden alle: verkon on
-     * näyttävä myös himmennetyn maailman päällä (juuri sinne halutaan
-     * hypätä), mutta se ei saa peittää pelin omia merkkejä.
-     */
-    const g = el('g', { class: 'dev-pisteet', 'pointer-events': 'none' });
-    juuri.insertBefore(g, this.fokusKerros.nextSibling);
-    this.kehittajaPisteetKerros = g;
-    this.kehittajaPisteetLauta = this.game.pack.id;
-    const board = this.game.board;
-    const reitit = el('g', { class: 'dev-reitit' }, g);
-    for (const e of board.edges ?? []) {
-      if (!e.poly?.length) continue;
-      el('path', {
-        d: e.poly.map(([x, y], i) => `${i ? 'L' : 'M'}${x.toFixed(1)},${y.toFixed(1)}`).join(' '),
-        class: `dev-reitti dev-reitti-${e.type}`,
-      }, reitit);
-    }
-    const pisteet = el('g', { class: 'dev-kaupungit' }, g);
-    for (const c of board.cities ?? []) {
-      el('circle', { cx: c.x, cy: c.y, r: 7, class: 'dev-kaupunki' }, pisteet);
-    }
-  }
-
-  /**
-   * Kehittäjän ylärivin nappien kytkin (js/main.js #kehittaja-rajat-btn
-   * ja #kehittaja-pisteet-btn).
-   *
-   * Sama kaava kuin paivitaFokusmoodilla: asetukset luetaan uudestaan
-   * levyltä ja näkymä tahdistetaan heti ilman sivulatausta. Kumpikin
-   * nappi vaikuttaa kerroksiin, jotka elävät valmiin kartan päällä.
-   */
-  paivitaKehittajaNapit() {
-    this.kehittajaRajat = kehittajaRajatPaalla();
-    this.kehittajaPisteet = kehittajaPisteetPaalla();
-    // Verho ja rajaukset seuraavat rajoitetta: molemmat on rakennettava
+    const fokusEnnen = this.fokusmoodi;
+    this.fokusmoodi = fokusmoodiPaalla();
+    if (this.fokusmoodi !== fokusEnnen) nollaaFokuskartta(this);
+    // Verho ja rajaukset seuraavat näkymää: molemmat on rakennettava
     // uusiksi, vaikka maajoukko olisi sama.
     this.fokusAvain = null;
     this.atlasAvain = null;
@@ -6068,7 +6033,16 @@ export class UI {
    */
   paivitaFokusPallot() {
     if (!this.svg) return;
-    const pohja = this.fokusPohjaBbox ?? null;
+    /*
+     * KEHITTÄJÄN MAAILMANÄKYMÄ PITÄÄ MERKIT KARTALLA (omistajan tilaus
+     * 27.8.2026): *"KOHDEKAUPUNGIT näkyviin, jotta omistaja voi siirtyä
+     * eri maiden välillä"*. Koko tämä metodi kysyy piilotuksensa
+     * lehdeltä (`pohja`), joten yksi rivi riittää: ilman lehteä mikään
+     * ei ole "lehden alla" ja laatat, nimet, kiekot, nappula ja
+     * kohderenkaat jäävät näkyviin sellaisinaan. Kaupunkien laatat ovat
+     * juuri se, mitä omistaja napauttaa (doKehittajaSiirto).
+     */
+    const pohja = this.maailmanakyma() ? null : (this.fokusPohjaBbox ?? null);
     const nykyinen = pohja ? this.game.cityOf?.() : null;
     const valinta = pohja ? this.fokusMatkavalintaAuki() : false;
     const kohteet = valinta ? (this.fokusKohdeKaupungit ?? new Set()) : null;
@@ -7041,7 +7015,12 @@ export class UI {
   }
 
   /**
-   * Fokusmoodin kytkin (js/main.js #fokus-btn ja #fokus-sumennus-btn).
+   * Fokusmoodin tahdistus laitteen asetuksesta.
+   *
+   * Kytkintä ei enää ole käyttöliittymässä (omistajan tilaus 27.8.2026
+   * poisti hampurilaisvalikon fokusmoodi- ja sumennuskytkimet), mutta
+   * avain elää yhä (js/ui-apurit.js fokusmoodiPaalla) ja savukevartijat
+   * vertailevat sillä vanhaa ja uutta näkymää.
    *
    * Sama kaava kuin paivitaKehittajaTilalla: asetus luetaan uudestaan
    * levyltä ja näkymä tahdistetaan heti. Sivulatausta ei tarvita —
@@ -7050,7 +7029,6 @@ export class UI {
    */
   paivitaFokusmoodi() {
     this.fokusmoodi = fokusmoodiPaalla();
-    this.fokusSumennus = fokusSumennusPaalla();
     // Verho on saatettava rakentaa uusiksi, vaikka maajoukko olisi sama:
     // kytkin muuttaa tilaa eikä joukkoa. Sama fokuskartalle — mutta
     // ilman kamera-ajoa, koska kytkimen napautus ei ole saapuminen.

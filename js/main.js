@@ -4,9 +4,7 @@ import { MUUTOKSET } from './muutokset.js';
 import { Game } from './game.js';
 import { UI } from './ui.js';
 import {
-  asetaFokusSumennus, asetaFokusmoodi, asetaKehittajaPisteet, asetaKehittajaRajat,
-  asetaKehittajaTila, fokusSumennusPaalla, fokusmoodiPaalla, kehittajaPisteetPaalla,
-  kehittajaRajatPaalla, kehittajaTilaPaalla,
+  asetaKehittajaMaailma, asetaKehittajaTila, kehittajaMaailmaPaalla, kehittajaTilaPaalla,
 } from './ui-apurit.js';
 import { sfx } from './sound.js';
 import { packById } from './pack.js';
@@ -100,7 +98,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1173';
+const APP_VERSION = '2026-08-09.1174';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1219,111 +1217,56 @@ function paivitaPuheSaadin() {
   // nyt Tilastot-lehden Kiintiöt-sivulla (omistaja 21.8.2026).
   const kehittajaKotelo = document.getElementById('kehittaja-kotelo');
   if (kehittajaKotelo) kehittajaKotelo.hidden = !kehittajaTilaPaalla();
-  // Fokusmoodin kytkimet ovat samaa lajia: näkyvissä vain vivun takana.
-  paivitaFokusKytkimet();
+  // Maailmanappi on samaa lajia: näkyvissä vain vivun takana.
+  paivitaMaailmaNappi();
 }
 
-/* --- Kehittäjän kytkimet (omistajan tilaus 25.8.2026) -------------------- */
+/* --- Kehittäjän yksi nappi (omistajan tilaus 27.8.2026) ------------------ */
 
 /*
- * YLÄRIVIN KAKSI NAPPIA (index.html #fokus-kytkimet) JA VALIKON KAKSI
- * VERTAILUKYTKINTÄ (index.html #kehittaja-kotelo).
+ * YLÄRIVIN AINOA KEHITTÄJÄNAPPI (index.html #kehittaja-maailma-btn).
  *
- * YLÄRIVI = PELITESTIN TYÖKALUT (omistajan tilaus 25.8.2026):
+ * *"Kehittäjätilassa yläpalkissa saa olla vain YKSI nappi"*, ja se
+ * kytkee maailmanäkymän: koko maailmanlauta ja kohdekaupunkien laatat
+ * näkyviin (lento- ja maareitit eivät), sumennus pois ja panorointi
+ * vapaaksi. Pois kytkettynä kaikki on kuten pelaajalla.
  *
- *   #kehittaja-rajat-btn   "rajat"   — pelaajan liikkuvuusrajoite
- *       (fokusikkuna + valloitettu alue) päälle/pois kehittäjätilassa.
- *       Pois = omistaja selaa koko atlasta vapaasti; päällä = sama
- *       rajoite kuin pelaajalla ilman että kehittäjätila pitää sammuttaa.
- *   #kehittaja-pisteet-btn "pisteet" — laudan kaupungit ja reittiverkko
- *       piirtyvät fokuskartan päälle, jotta kaupunkiin näkee hypätä
- *       (hyppy on vanha kehittäjätilan oikotie: napautus vie perille).
- *
- * VALIKKO = FOKUSMOODIN VERTAILU (Raamatun osio "Fokusmoodi" vaatii
- * molemmat): #fokus-btn kytkee koko fokusmoodin ja #fokus-sumennus-btn
- * pelkät sumennukset. Ne olivat ylärivissä 24.–25.8., kunnes ylärivi
- * sai uudet tehtävät; toiminnallisuus on ennallaan, vain paikka vaihtui.
+ * NELJÄ KYTKINTÄ YHDEKSI. Ylärivin "rajat" ja "pisteet" (25.8.2026)
+ * sekä valikon fokusmoodi- ja sumennuskytkimet (24.8.2026) on poistettu;
+ * perustelu ja avainten siivous js/ui-apurit.js:n osiossa "KEHITTÄJÄN
+ * YKSI YLÄRIVIN NAPPI: MAAILMANÄKYMÄ".
  *
  * Fokusmoodi on pelin oletustila, ja tavalliselle pelaajalle se on AINA
- * päällä: molemmat kotelot ovat piilossa ilman kehittäjätilaa, joten
- * kytkintä ei ole olemassa eikä asetusta voi vahingossa sammuttaa.
+ * päällä: kotelo on piilossa ilman kehittäjätilaa, joten kytkintä ei ole
+ * olemassa eikä asetusta voi vahingossa sammuttaa.
  *
  * TILA PÄIVITTYY ILMAN SIVULATAUSTA. Fokuskerros elää valmiiksi
  * piirretyn kartan päällä (js/ui.js paivitaFokusKerros), joten kytkin
  * riittää: karttaa ei tarvitse rakentaa uusiksi eikä peliä ladata.
- * Pöllön pysyvä kellunta ja alanappirivin kaksi nappia eivät ole
- * kytkimen takana lainkaan — ne ovat omistajan nimenomaisen ohjeen
- * mukaan voimassa aina.
  */
 const fokusKotelo = document.getElementById('fokus-kytkimet');
-const fokusNappi = document.getElementById('fokus-btn');
-const fokusSumennusNappi = document.getElementById('fokus-sumennus-btn');
-const rajatNappi = document.getElementById('kehittaja-rajat-btn');
-const pisteetNappi = document.getElementById('kehittaja-pisteet-btn');
+const maailmaNappi = document.getElementById('kehittaja-maailma-btn');
 
-function paivitaFokusKytkimet() {
+function paivitaMaailmaNappi() {
   if (fokusKotelo) fokusKotelo.hidden = !kehittajaTilaPaalla();
-  const fokus = fokusmoodiPaalla();
-  const sumennus = fokusSumennusPaalla();
-  if (fokusNappi) {
-    fokusNappi.setAttribute('aria-pressed', String(fokus));
-    fokusNappi.title = fokus
-      ? 'Fokusmoodi on päällä — kytke pois nähdäksesi vanhan näkymän'
-      : 'Fokusmoodi on pois päältä — kytke päälle';
-  }
-  if (fokusSumennusNappi) {
-    fokusSumennusNappi.setAttribute('aria-pressed', String(sumennus));
-    // Sumennus vaikuttaa vain fokusmoodin ollessa päällä, ja se sanotaan
-    // suoraan: muuten napin painaminen näyttäisi rikkinäiseltä.
-    fokusSumennusNappi.title = sumennus
-      ? `Fokusmoodin sumennukset ovat päällä${fokus ? '' : ' (fokusmoodi on pois, joten mitään ei sumenneta)'}`
-      : 'Fokusmoodin sumennukset ovat pois päältä — kytke päälle';
-  }
-  if (rajatNappi) {
-    const rajat = kehittajaRajatPaalla();
-    rajatNappi.setAttribute('aria-pressed', String(rajat));
-    rajatNappi.title = rajat
-      ? 'Pelaajan liikkuvuusrajoite on PÄÄLLÄ: kamera pysyy fokusikkunassa '
-        + 'ja valloitetulla alueella — kytke pois selataksesi atlasta vapaasti'
-      : 'Liikkuvuusrajoite on pois: koko atlas on vapaasti selattavissa — '
-        + 'kytke päälle pelataksesi pelaajan rajoitteella';
-  }
-  if (pisteetNappi) {
-    const pisteet = kehittajaPisteetPaalla();
-    pisteetNappi.setAttribute('aria-pressed', String(pisteet));
-    pisteetNappi.title = pisteet
-      ? 'Kaupungit ja reittiverkko näkyvät fokuskartan päällä — napauta '
-        + 'kaupunkia hypätäksesi sinne; kytke pois puhtaan atlaksen näkemiseksi'
-      : 'Kaupungit ja reittipisteet piilossa fokuskartan alla — kytke '
-        + 'päälle nähdäksesi mihin voi hypätä';
-  }
+  if (!maailmaNappi) return;
+  const maailma = kehittajaMaailmaPaalla();
+  maailmaNappi.setAttribute('aria-pressed', String(maailma));
+  maailmaNappi.title = maailma
+    ? 'Maailmanäkymä on PÄÄLLÄ: koko lauta ja kaupunkien laatat näkyvissä '
+      + '(ei reittejä), ei sumennusta, panorointi vapaa — napauta kaupunkia '
+      + 'siirtyäksesi sinne; kytke pois pelataksesi pelaajan näkymällä'
+    : 'Maailmanäkymä on pois: näkymä on pelaajan fokusmoodi — kytke päälle '
+      + 'nähdäksesi koko laudan ja siirtyäksesi maasta toiseen';
 }
 
-fokusNappi?.addEventListener('click', () => {
-  asetaFokusmoodi(!fokusmoodiPaalla());
-  paivitaFokusKytkimet();
-  ui?.paivitaFokusmoodi();
+maailmaNappi?.addEventListener('click', () => {
+  asetaKehittajaMaailma(!kehittajaMaailmaPaalla());
+  paivitaMaailmaNappi();
+  ui?.paivitaKehittajaMaailma();
 });
 
-fokusSumennusNappi?.addEventListener('click', () => {
-  asetaFokusSumennus(!fokusSumennusPaalla());
-  paivitaFokusKytkimet();
-  ui?.paivitaFokusmoodi();
-});
-
-rajatNappi?.addEventListener('click', () => {
-  asetaKehittajaRajat(!kehittajaRajatPaalla());
-  paivitaFokusKytkimet();
-  ui?.paivitaKehittajaNapit();
-});
-
-pisteetNappi?.addEventListener('click', () => {
-  asetaKehittajaPisteet(!kehittajaPisteetPaalla());
-  paivitaFokusKytkimet();
-  ui?.paivitaKehittajaNapit();
-});
-
-paivitaFokusKytkimet();
+paivitaMaailmaNappi();
 
 document.getElementById('raamattu-lehti-btn')?.addEventListener('click', () => {
   window.matkakirja?.ui?.avaaRaamattuLehti();

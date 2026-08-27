@@ -122,35 +122,29 @@
       <button id="turn-pill" class="turn-pill" type="button"
               title="Isoisän matkalaukku: passi, leimat ja tavarat"></button>
       <!--
-        KEHITTÄJÄN PELITESTINAPIT — MATKALAUKUN OIKEALLA PUOLELLA, VAIN
-        KEHITTÄJÄTILASSA (omistajan tilaus 25.8.2026; paikka ja
+        KEHITTÄJÄN YKSI NAPPI — MATKALAUKUN OIKEALLA PUOLELLA, VAIN
+        KEHITTÄJÄTILASSA (omistajan tilaus 27.8.2026; paikka ja
         näkyvyyssääntö 24.8.2026, Raamatun osio "Fokusmoodi").
 
         Kotelo on piilossa, kunnes kehittäjätila on päällä (js/main.js
-        paivitaFokusKytkimet) — tavallinen pelaaja ei näe näitä koskaan.
+        paivitaMaailmaNappi) — tavallinen pelaaja ei näe tätä koskaan.
 
-        UUDET TEHTÄVÄT 25.8.2026. Napit kytkivät ennen fokusmoodin ja
-        sumennukset; nyt ne ovat pelitestin kaksi työkalua:
-
-          rajat   — pelaajan liikkuvuusrajoite (fokusikkuna +
-                    valloitettu alue) päälle/pois kehittäjätilassa.
-          pisteet — laudan kaupungit ja reittiverkko näkyviin
-                    fokuskartan päälle, jotta kaupunkiin näkee hypätä.
-
-        Vanhat kytkimet siirtyivät hampurilaisvalikon Työhuone-koteloon
-        (ks. #fokus-btn siellä); perustelu js/ui-apurit.js:n osiossa
-        "KEHITTÄJÄN KAKSI YLÄRIVIN NAPPIA".
+        YKSI NAPPI NELJÄN SIJASTA. *"Kehittäjätilassa yläpalkissa saa
+        olla vain YKSI nappi"*: "maailma" kytkee maailmanäkymän, jossa
+        koko maailmanlauta ja kohdekaupunkien laatat ovat näkyvissä
+        (reitit eivät), sumennus on pois ja panorointi vapaa. Se korvaa
+        vanhat "rajat"- ja "pisteet"-napit sekä hampurilaisvalikon
+        fokusmoodi- ja sumennuskytkimet; perustelu js/ui-apurit.js:n
+        osiossa "KEHITTÄJÄN YKSI YLÄRIVIN NAPPI: MAAILMANÄKYMÄ".
 
         Paikka on matkalaukun JA .topbar-actionsin välissä: laukku on
-        pelin tavaraa, hampurilainen on pelin ympäryksiä, ja nämä ovat
-        kolmas laji — kehittäjän mittatikku. Nimet ovat pieniä
-        tekstinappeja, koska kuvake ei kerro kumpi kytkin on kumpi.
+        pelin tavaraa, hampurilainen on pelin ympäryksiä, ja tämä on
+        kolmas laji — kehittäjän mittatikku. Nimi on pieni tekstinappi,
+        koska kuvake ei kerro mitä kytkin tekee.
       -->
       <div id="fokus-kytkimet" class="fokus-kytkimet" hidden>
-        <button id="kehittaja-rajat-btn" class="fokus-kytkin" type="button"
-                aria-pressed="false">rajat</button>
-        <button id="kehittaja-pisteet-btn" class="fokus-kytkin" type="button"
-                aria-pressed="false">pisteet</button>
+        <button id="kehittaja-maailma-btn" class="fokus-kytkin" type="button"
+                aria-pressed="false">maailma</button>
       </div>
       <div class="topbar-actions">
         <!-- Varusteet: kartan linssivalitsin. Kotelo on piilossa, kunnes
@@ -272,32 +266,17 @@
                 <span>Lukijaääni</span>
               </button>
               <!--
-                FOKUSMOODIN VERTAILUKYTKIMET (Raamatun osio "Fokusmoodi":
-                *"Fokusmoodin kytkin ... VAIN kehittäjätilassa; lisäksi
-                kehittäjätilaan sumennukset päälle/pois -nappi"*).
+                FOKUSMOODIN VERTAILUKYTKIMET ON POISTETTU (omistajan
+                tilaus 27.8.2026: hampurilaisvalikon kehittäjäkytkimet
+                — fokusmoodi ja sumennus — pois).
 
-                Ne olivat ylärivissä 24.–25.8.2026, kunnes omistajan
-                tilaus 25.8. antoi ylärivin kahdelle napille uudet
-                tehtävät (rajat, pisteet). Raamattu vaatii kytkimet yhä,
-                joten ne siirtyivät tänne — samaan koteloon muun
-                kehittäjän kaluston kanssa, ja samalla näkyvyyssäännöllä
-                (kotelo on piilossa ilman kehittäjätilaa).
-
-                Tunnisteet ovat entiset (#fokus-btn, #fokus-sumennus-btn),
-                joten js/main.js kytkee ne kuten ennenkin. Nappi kertoo
-                tilansa aria-pressedillä ja tekstin perässä olevalla
-                merkillä (js/main.js paivitaFokusKytkimet).
+                Ne olivat ylärivissä 24.–25.8.2026 ja tässä kotelossa
+                25.–27.8. Kehittäjän arjessa niiden tilalla on nyt
+                ylärivin yksi maailmanappi (#kehittaja-maailma-btn),
+                joka ottaa sumennukset pois osana maailmanäkymää.
+                Fokusmoodin avain on yhä olemassa savukevartijoiden
+                vertailukeinona (js/ui-apurit.js asetaFokusmoodi).
               -->
-              <button id="fokus-btn" class="ghost tyohuone-nappi" type="button"
-                      aria-pressed="true">
-                <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><circle cx="12" cy="12" r="2.6"/></svg></span>
-                <span>Fokusmoodi</span>
-              </button>
-              <button id="fokus-sumennus-btn" class="ghost tyohuone-nappi" type="button"
-                      aria-pressed="true">
-                <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 15.5c2.2-3 4.4-4.5 6.7-4.5 2.2 0 4.5 1.5 6.6 4.5"/><path d="M4 10c2.2-3 4.4-4.5 6.7-4.5 2.2 0 4.5 1.5 6.6 4.5"/><path d="M19.5 12h.5"/></svg></span>
-                <span>Sumennukset</span>
-              </button>
             </div>
             <!--
               VALIKON POHJARIVI (omistajan päätös 12.8.2026): vasemmalla

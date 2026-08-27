@@ -160,21 +160,33 @@ vaadi('pitkä veto pysyy valloitetulla alueella', sisalla,
 
 await sivu.screenshot({ path: join(ULOS, 'savuke-fokuskartta-rajattu.png') });
 
-/* ---------- kehittäjätila: rajausta ei ole ---------- */
+/* ---------- kehittäjän maailmanäkymä: rajausta ei ole ---------- */
 
+/*
+ * VÄITE PÄIVITETTY 27.8.2026. Pelkkä kehittäjätila ei enää vapauta
+ * panorointia: omistajan tilaus antoi kehittäjätilalle pelaajan
+ * oletusnäkymän ja siirsi vapauden ylärivin ainoan napin taakse
+ * (maailmanäkymä, js/ui-apurit.js kehittajaMaailmaPaalla). Rajaamaton
+ * panorointi mitataan siis kehittäjätilasta JA maailmanäkymästä
+ * yhdessä — juuri siinä yhdistelmässä omistaja selaa koko lautaa.
+ */
 const kehittajassa = await sivu.evaluate(() => {
   localStorage.setItem('matkakirja-kehittaja', '1');
+  localStorage.setItem('matkakirja-kehittaja-maailma', '1');
   return window.matkakirja.ui.kartta.valloitettuAlue();
 });
-vaadi('kehittäjätilassa panorointi on rajaamaton', kehittajassa === null,
+vaadi('kehittäjän maailmanäkymässä panorointi on rajaamaton', kehittajassa === null,
   JSON.stringify(kehittajassa));
 
 const kehittajanVeto = await veda(-1400, 0);
-vaadi('kehittäjätilassa sama veto vie alueen ulkopuolelle',
+vaadi('maailmanäkymässä sama veto vie alueen ulkopuolelle',
   kehittajanVeto.jalkeen.x < alue.x0 || kehittajanVeto.jalkeen.x > alue.x1,
   `${kehittajanVeto.jalkeen.x.toFixed(1)}`);
 
-await sivu.evaluate(() => localStorage.removeItem('matkakirja-kehittaja'));
+await sivu.evaluate(() => {
+  localStorage.removeItem('matkakirja-kehittaja');
+  localStorage.removeItem('matkakirja-kehittaja-maailma');
+});
 
 /* ---------- pelin oma kamera-ajo ei ole rajattu ---------- */
 
