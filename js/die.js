@@ -5,6 +5,20 @@
 // hidastuva pyörintä. Korkeus näkyy varjon koossa ja tummuudessa sekä nopan
 // koossa, joten heitto tuntuu kolmiulotteiselta. Noppa jää laudalle lepäämään
 // seuraavaan heittoon asti.
+//
+// NOPPA MAKAA KARTAN PÄÄLLÄ, EI RUUDUN PÄÄLLÄ (omistajan tilaus #98).
+// Kerros elää kartan siirtokuoressa (.kartta-kuori), joten panorointi ja
+// nipistys kuljettavat sen mukanaan ilman että täällä lasketaan mitään.
+// Kuoren ulkopuolelta tarvitaan vain kaksi asiaa, ja ne ovat tämän
+// luokan rajapinnassa:
+//
+//   place()        lepopaikka kuoren omina pikseleinä (js/kartta.js
+//                  ankkuroiNoppa laskee sen laudan koordinaateista)
+//   asetaSkaala()  koko kartan mittakaavassa: 1 = se koko, jossa noppa
+//                  heitettiin, 2 = kartta on siitä kaksinkertaistunut
+//
+// Kolmas lisäys on häivytys: uuteen kaupunkiin saavuttaessa noppa
+// katoaa pehmeästi (haivyta) eikä jää edellisen heiton muistoksi.
 
 const PIPS = {
   1: [4],
@@ -43,6 +57,7 @@ const SPIN_DAMP = 0.5; // pyörinnän hidastuminen pompussa
 const STOP_SPEED = 60; // tätä hitaampi pomppu ei enää nosta noppaa
 const LIFT = 0.62; // korkeus näytöllä: 1 px korkeutta = 0.62 px ylöspäin
 const SETTLE_MS = 430; // viimeinen kallahdus oikealle silmäluvulle
+const HAIPYMINEN_MS = 420; // kaupunkiin saavuttaessa noppa katoaa pehmeästi
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -128,8 +143,40 @@ export class BoardDie {
     this.draw(0);
   }
 
+  /**
+   * Nopan koko KARTAN mittakaavassa (omistajan tilaus #98: *"nopan koko
+   * skaalautuu samassa suhteessa kuin kartta"*).
+   *
+   * Kerroin kirjoitetaan CSS-muuttujaan eikä muunnokseen: `--die-size`
+   * on kuution kaikkien mittojen — tahkojen, varjon ja `--half`-syvyyden
+   * — lähde, joten yksi muuttuja riittää eikä `draw()` tarvitse tietää
+   * skaalasta mitään. Muunnokseen kirjoitettu scale kertautuisi heiton
+   * korkeusskaalan kanssa ja söisi juuri sen 3D-vihjeen.
+   */
+  asetaSkaala(kerroin) {
+    if (!(kerroin > 0) || !Number.isFinite(kerroin)) return;
+    this.layer.style.setProperty('--die-skaala', kerroin.toFixed(4));
+  }
+
   hide() {
+    clearTimeout(this.haipymisAjastin);
+    this.layer.classList.remove('noppa-haipyy');
     this.layer.hidden = true;
+  }
+
+  /**
+   * Häivyttää nopan pois (uusi kaupunki). Kerros piilotetaan vasta
+   * siirtymän jälkeen, jotta seuraava heitto ei ala puoliksi näkyvästä
+   * nopasta; `roll` nollaa luokan joka tapauksessa.
+   */
+  haivyta() {
+    if (this.layer.hidden) return;
+    clearTimeout(this.haipymisAjastin);
+    this.layer.classList.add('noppa-haipyy');
+    this.haipymisAjastin = setTimeout(() => {
+      this.layer.hidden = true;
+      this.layer.classList.remove('noppa-haipyy');
+    }, HAIPYMINEN_MS);
   }
 
   /** Pompyt: kunkin pompun alkunopeus ja kesto, kunnes vauhti loppuu. */
@@ -159,6 +206,9 @@ export class BoardDie {
    */
   async roll(value, from, to, hooks = {}) {
     const { onTick, onLand, onBounce, onSettle, reduced } = hooks;
+    // Kesken jäänyt häivytys ei saa jäädä uuden heiton päälle.
+    clearTimeout(this.haipymisAjastin);
+    this.layer.classList.remove('noppa-haipyy');
     this.layer.hidden = false;
     const [faceX, faceY] = FACE_ROTATION[value] ?? [0, 0];
 

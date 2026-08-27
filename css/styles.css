@@ -1002,6 +1002,18 @@ button, .brand, .turn-pill, .fact-card h2 {
   display: flex;
   transform-origin: 0 0;
   touch-action: none;
+  /*
+   * KARTTAAN ANKKUROIDUT KAPPALEET (#98/#100). Kuoressa asuu SVG:n
+   * lisäksi noppa (.die-layer): se on DOM-kappale, jota SVG ei voi
+   * piirtää (CSS-3D-kuutio), mutta joka silti makaa kartan päällä.
+   * Ankkurointi ei maksa mitään laskentaa — kuoren oma muunnos
+   * (js/kartta.js asetaPan, paivitaNipistys) siirtää ja skaalaa
+   * lapsensa siinä missä kartankin, joten panoroinnin kehysbudjettiin
+   * ei tule yhtään uutta riviä. `position: relative` on tässä juuri
+   * sitä varten: absoluuttisesti asemoitu lapsi laskee paikkansa
+   * KUOREN kulmasta, ja kuoren kulma on paneelin kulma (ks. yllä).
+   */
+  position: relative;
 }
 
 #board {
@@ -1385,15 +1397,32 @@ body.aloitus-zoom .kiikari {
 
 /* --- laudalla lepäävä 3D-noppa --- */
 
+/*
+ * Nopan kerros on KARTAN SIIRTOKUORESSA (.kartta-kuori, #98) eikä
+ * karttaruudussa: se panoroituu ja nipistyy kartan mukana ilman
+ * omaa laskentaa. `inset: 0` on siis kuoren laatikko eli paneelin
+ * kokoinen; lähikuvassa noppa voi jäädä sen ulkopuolelle, ja se on
+ * oikein — leikkauksen hoitaa .map-panen overflow.
+ *
+ * --die-skaala on kartan mittakaava suhteessa siihen hetkeen, jolloin
+ * noppa heitettiin (js/kartta.js ankkuroiNoppa). Perusmitta on
+ * ennallaan; vain kerroin on uusi, joten lähennettäessä noppa kasvaa
+ * kartan mukana kuten laudalla makaava kappale kasvaisi.
+ */
 .die-layer {
-  --die-size: clamp(32px, 5.4vmin, 56px);
+  --die-perus: clamp(32px, 5.4vmin, 56px);
+  --die-skaala: 1;
+  --die-size: calc(var(--die-perus) * var(--die-skaala));
   --half: calc(var(--die-size) / 2);
   position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 3;
+  transition: opacity 0.42s ease;
 }
 
+/* Uuteen kaupunkiin saavuttaessa noppa katoaa (js/die.js haivyta). */
+.die-layer.noppa-haipyy { opacity: 0; }
 
 .board-die {
   position: absolute;
@@ -1536,7 +1565,7 @@ body.aloitus-zoom .kiikari {
   .event-toast, .event-toast.leaving { animation: none; }
   .pawn-pulse { animation: none; }
   .pawn-moving { transition: none; }
-  .board-die, .die-cube, .die-shadow { transition: none !important; }
+  .board-die, .die-cube, .die-shadow, .die-layer { transition: none !important; }
 }
 
 .rail {
@@ -6532,17 +6561,29 @@ body.flight-active .fact-card {
   to { transform: rotate(360deg); }
 }
 
+/*
+ * PELINAPPULA ON TINAHERRA (omistajan tilaus #100). Väriläiskän
+ * (.pawn-ring + .pawn-dot + .pawn-gloss) tilalla on pieni
+ * tinasotilasmainen herra Fogg -hahmo: silinteri, keppi ja matkalaukku.
+ * Kuva on läpinäkyvä webp ilman omaa varjoa, koska varjo piirretään
+ * koodilla (.pawn-shadow) — vain silloin se voi irrota hypyn laella ja
+ * kertoa korkeuden (js/ui.js hyppaaAskel).
+ */
 .pawn-shadow { fill: rgba(58, 38, 16, 0.32); }
-.pawn-ring { fill: #fdf6e4; stroke: #2b1f12; stroke-width: 2; }
-.pawn-dot { stroke: #241a10; stroke-width: 2; }
-.pawn-gloss { fill: rgba(255, 255, 255, 0.4); }
+.pawn-kuva {
+  /* Kuva on nappulan ainoa pinta: se ei saa napata napautuksia
+     kaupungilta, joka on sen alla. */
+  pointer-events: none;
+}
 .pawn-star { fill: #b8860b; font-size: 20px; }
 
 .pawn-active-ring {
   fill: none;
   stroke: #2b1f12;
-  stroke-width: 2.5;
-  opacity: 0.9;
+  /* Ohuempi kuin ennen: rengas on nyt hahmon jalkojen alla oleva
+     kehä, ei nappulan ääriviiva, eikä se saa kilpailla hahmon kanssa. */
+  stroke-width: 1.8;
+  opacity: 0.75;
 }
 
 .pawn-pulse {
@@ -6574,7 +6615,16 @@ body.flight-active .fact-card {
  */
 .animaatio-kaynnissa .pawn-pulse { animation: none; opacity: 0; }
 
-.pawn-moving { transition: transform 0.19s cubic-bezier(0.34, 1.3, 0.64, 1); }
+/*
+ * LIIKKUVA NAPPULA EI SIIRRY ENÄÄ CSS-SIIRTYMÄLLÄ (#100). Hyppy on
+ * paraabeli, ja sen paikka lasketaan joka kehyksellä (js/ui.js
+ * hyppaaAskel): siirtymä pyöristäisi kaaren pehmeäksi liu'uksi ja söisi
+ * juuri sen 3D-vaikutelman, jota varten kaari on. Luokka jäi
+ * merkitsemään liikkuvaa nappulaa — siihen tarttuu vain sääntö, joka
+ * kieltää muut siirtymät.
+ */
+.pawn-moving { transition: none; }
+.pawn-hahmo, .pawn-varjo { transition: none; }
 
 /* --- dialogit: pergamenttikortit karttatyylillä --- */
 
