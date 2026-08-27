@@ -177,6 +177,20 @@ function nippuMerkit(ui) {
   return merkit;
 }
 
+/*
+ * ASETTELUN VERSIO. Kasvaa aina kun jonkin merkin nippupaikka oikeasti
+ * muuttui — kohdemerkkien nimiöväistö (js/fokuskohteet.js
+ * paivitaKohdeNimiot) tarvitsee halvan tavan tietää, onko sen laskema
+ * asettelu vanhentunut. Ilman tätä se joutuisi joko rakentamaan
+ * paikoista tunnisteen joka kutsulla tai laskemaan törmäykset turhaan.
+ */
+let NIPPU_VERSIO = 0;
+
+/** Nippuasettelun versio: kasvaa vain, kun jokin merkki oikeasti siirtyi. */
+export function nippuAsettelunVersio() {
+  return NIPPU_VERSIO;
+}
+
 /**
  * Yhden tietueen nippupaikka ja muunnos heti, jos paikka muuttui.
  *
@@ -193,6 +207,7 @@ function nippuAseta(ryhma, nippu, s) {
     && Math.abs(vanha.x - nippu.x) < 0.01 && Math.abs(vanha.y - nippu.y) < 0.01);
   ryhma.nippu = nippu;
   if (sama) return;
+  NIPPU_VERSIO += 1;
   const x = nippu ? nippu.x : ryhma.x + (ryhma.sx ?? 0);
   const y = nippu ? nippu.y : ryhma.y + (ryhma.sy ?? 0);
   ryhma.g?.setAttribute?.('transform',

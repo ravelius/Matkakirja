@@ -657,6 +657,13 @@ const NOSTOSYM_KUVAT = Object.fromEntries(
  * (paint-order: stroke), jotta nimi luetaan myös vuoren ruskean tai
  * meren harmaan päältä. Nimiö ei ota napautuksia vastaan: se on
  * leveämpi kuin merkki, ja muuten se peittäisi naapurin osuma-alueen.
+ *
+ * NIMIÖ SAA JÄÄDÄ POIS AHTAASSA RYPPÄÄSSÄ (omistajan siistintätilaus
+ * 27.8.2026, Ateenan seutu Kreikan lehdellä). Kirjasto ei itse päätä
+ * sitä — kutsuja antaa nimen tai tyhjän merkkijonon — mutta se antaa
+ * päätöstä varten nimiön MITAT (nostosymNimioLaatikko), jotta
+ * törmäystarkastus mittaa juuri sitä laatikkoa, joka kartalle
+ * oikeasti piirtyy. Ks. js/fokuskohteet.js paivitaKohdeNimiot.
  */
 
 /**
@@ -790,8 +797,16 @@ const NOSTOSYM_GLYYFIT = new Map();
 /** Nimiön asu luetaan CSS:stä kerran — väri ja kirjasin asuvat siellä. */
 let NOSTOSYM_ASU = null;
 
+/** Asu ilman karttaa (yksikkötestit, varapolku ennen ensimmäistä SVG:tä). */
+const NOSTOSYM_ASU_VARA = {
+  perhe: 'cursive', muste: '#46331f', halo: '#efdcb4', haloLeveys: 2.6,
+};
+
 /** Mittanauha tekstin leveydelle; yksi konteksti koko kirjastolle. */
 let NOSTOSYM_MITTA = null;
+
+/** Mitatut nimiöleveydet (lyhennetty teksti → kirjaston yksiköitä). */
+const NOSTOSYM_LEVEYDET = new Map();
 
 /**
  * Valitsee portaan annetulle tarpeelle. Palauttaa true, jos porras
@@ -845,17 +860,52 @@ function nostosymNimionAsu(svg) {
   return NOSTOSYM_ASU;
 }
 
+/**
+ * Nimiön leveys KIRJASTON YKSIKÖISSÄ, halo mukaan luettuna.
+ *
+ * Sama mitta sekä rasteriin (nostosymRasteroi) että törmäyslaatikkoon
+ * (nostosymNimioLaatikko) — kahdesta mittaustavasta seuraisi ennen
+ * pitkää se, että väistö laskee eri laatikkoa kuin kartalle piirtyy.
+ * Mitta otetaan portaan tarkkuudella ja jaetaan takaisin yksiköiksi,
+ * koska pieni kirjasinkoko pyöristyy canvasilla karkeasti.
+ */
+function nostosymMittaaNimio(teksti, asu, porras = 1) {
+  NOSTOSYM_MITTA ??= document.createElement('canvas').getContext('2d');
+  NOSTOSYM_MITTA.font = `${(NOSTOSYM_NIMIO_KOKO * porras).toFixed(2)}px ${asu.perhe}`;
+  return NOSTOSYM_MITTA.measureText(teksti).width / porras + asu.haloLeveys;
+}
+
+/**
+ * NIMIÖN LAATIKKO KIRJASTON YKSIKÖISSÄ merkin origon ympärillä — tai
+ * null, jos nimeä ei ole. Kutsuja (js/fokuskohteet.js) käyttää tätä
+ * väistölaskennassa, ja mitat ovat tarkoituksella SAMAT kuin
+ * rasterissa: laatikko alkaa glyyfin oikeasta reunasta (NOSTOSYM_R) ja
+ * on glyyfin korkuinen, koska nimiö ladotaan rasterin sisään juuri
+ * siihen kaistaan. Näin väistö mittaa sitä mustetta, joka kartalla on.
+ */
+export function nostosymNimioLaatikko(nimi, svg) {
+  if (typeof document === 'undefined') return null;
+  const teksti = nostosymLyhennaNimio(nimi);
+  if (!teksti) return null;
+  let leveys = NOSTOSYM_LEVEYDET.get(teksti);
+  if (leveys === undefined) {
+    const asu = nostosymNimionAsu(svg);
+    leveys = nostosymMittaaNimio(teksti, asu ?? NOSTOSYM_ASU_VARA);
+    // Ilman karttaa mitta on varakirjasimen eikä kartan omaa: sitä ei
+    // talleteta, tai koko istunto jäisi väärän mitan varaan.
+    if (asu) NOSTOSYM_LEVEYDET.set(teksti, leveys);
+  }
+  return {
+    x1: NOSTOSYM_R, x2: NOSTOSYM_NIMIO_X + leveys, y1: -NOSTOSYM_R, y2: NOSTOSYM_R,
+  };
+}
+
 /** Yksi rasteri: glyyfi ja sen perässä nimiö. Mitat kirjaston yksiköitä. */
 async function nostosymRasteroi(tunnus, nimio, svg, porras) {
   const glyyfi = await nostosymGlyyfikuva(tunnus);
-  const asu = nostosymNimionAsu(svg) ?? {
-    perhe: 'cursive', muste: '#46331f', halo: '#efdcb4', haloLeveys: 2.6,
-  };
+  const asu = nostosymNimionAsu(svg) ?? NOSTOSYM_ASU_VARA;
   const kirjasin = (yksikkoa) => `${(yksikkoa * porras).toFixed(2)}px ${asu.perhe}`;
-  NOSTOSYM_MITTA ??= document.createElement('canvas').getContext('2d');
-  NOSTOSYM_MITTA.font = kirjasin(NOSTOSYM_NIMIO_KOKO);
-  const tekstiLeveys = nimio
-    ? NOSTOSYM_MITTA.measureText(nimio).width / porras + asu.haloLeveys : 0;
+  const tekstiLeveys = nimio ? nostosymMittaaNimio(nimio, asu, porras) : 0;
   const leveys = NOSTOSYM_R * 2 + (nimio ? NOSTOSYM_NIMIO_X - NOSTOSYM_R + tekstiLeveys : 0);
   const korkeus = NOSTOSYM_R * 2;
   const kangas = document.createElement('canvas');

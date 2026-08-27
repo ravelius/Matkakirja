@@ -18,7 +18,9 @@
  *      maan kohde saa merkin — ja kiertävällä laudalla merkit ovat
  *      MOLEMMISSA kohdissa, koska <use>-kopiosta ei voi napauttaa
  *      mitään. Päällekkäin osuvat merkit (Delfoi ja Parnassos)
- *      työnnetään erilleen ESITYKSESSÄ, ei datassa.
+ *      työnnetään erilleen ESITYKSESSÄ, ei datassa. Ahtaassa
+ *      ryppäässä myös NIMIÖ väistyy: symboli näkyy aina, mutta
+ *      naapurin päälle osuva nimi jää pois (27.8.2026).
  *   2. EI SUODATTIMIA (tests/rules.test.mjs:n sääntö kartan kerroksille).
  *   3. OSUMA-ALUE ON LEHDEN PERUSTASOLLA ≥44 px, JA MERKKI ELÄÄ KARTAN
  *      MUKANA — lähennettäessä isompi, loitonnettaessa pienempi (ks.
@@ -389,19 +391,89 @@ const nimiot = await sivu.evaluate(() => [...document.querySelectorAll('.fokusko
       osoitin: kantaja ? getComputedStyle(kantaja).pointerEvents : '',
     };
   }));
-vaadi('jokainen symbolimerkki sai nimiön',
-  nimiot.length > 0 && nimiot.every((n) => n.teksti.length > 0),
-  JSON.stringify(nimiot.filter((n) => !n.teksti.length).slice(0, 3)));
+const nimiollisia = nimiot.filter((n) => n.teksti.length > 0);
+const vaienneet = nimiot.filter((n) => !n.teksti.length);
+/*
+ * VÄITE KÄÄNTYI OSITTAIN (omistajan siistintätilaus 27.8.2026): ennen
+ * vaadittiin nimiötä JOKAISELLE symbolimerkille, nyt valtaosalle.
+ * Ahtaassa ryppäässä nimiö saa jäädä pois (js/fokuskohteet.js
+ * paivitaKohdeNimiot), ja seuraava väite mittaa sen, ettei jäljelle
+ * jäänyt yksikään limittäinen nimiö. Kumpikin luku on tarpeen: pelkkä
+ * limityskoe menisi läpi myös silloin, jos kaikki nimiöt katoaisivat.
+ */
+vaadi('valtaosa symbolimerkeistä sai nimiön',
+  nimiollisia.length > 0 && nimiollisia.length > vaienneet.length * 2,
+  `${nimiollisia.length} nimiöllistä, ${vaienneet.length} vaiennutta: `
+  + JSON.stringify(vaienneet.map((n) => n.id)));
 vaadi('nimiö on kartan mittaan lyhennetty (<= 18 merkkiä)',
-  nimiot.every((n) => n.teksti.length <= 18),
-  JSON.stringify(nimiot.filter((n) => n.teksti.length > 18).slice(0, 3)));
+  nimiollisia.every((n) => n.teksti.length <= 18),
+  JSON.stringify(nimiollisia.filter((n) => n.teksti.length > 18).slice(0, 3)));
 vaadi('nimiö ei ota napautuksia vastaan',
   nimiot.every((n) => n.osoitin === 'none'),
   JSON.stringify(nimiot.slice(0, 2)));
+/*
+ * KIERTÄVÄN LAUDAN KOPIOT PÄÄTTÄVÄT SAMOIN. Väistö tehdään kohteelle,
+ * ei kopiolle — muuten sauman kahta puolta olisivat saman kohteen
+ * erinäköiset merkit.
+ */
+const kopioEro = [...new Set(nimiot.map((n) => n.id))]
+  .filter((id) => new Set(nimiot.filter((n) => n.id === id)
+    .map((n) => n.teksti)).size > 1);
+vaadi('saman kohteen molemmat kopiot ovat samanlaisia',
+  kopioEro.length === 0, kopioEro.join(', '));
 vaadi('Olympoksen nimiö on kohteen oma nimi',
   taksonomia.vuori?.nimio === 'Ólympos', JSON.stringify(taksonomia.vuori?.nimio));
 vaadi('kaupunkimerkki jättää nimiön lehden painojäljelle',
   taksonomia.kaupunki?.nimio === '', JSON.stringify(taksonomia.kaupunki?.nimio));
+
+/* --- 1a2: nimiöt eivät limity naapureihin (omistajan siistintätilaus)
+ *
+ * *"Tiheissä kohderyppäissä nimiöt limittyvät toistensa ja
+ * naapurisymbolien päälle"* (27.8.2026, Ateenan seutu). Väistö
+ * (js/fokuskohteet.js paivitaKohdeNimiot) laskee törmäykset laudan
+ * koordinaateissa; tämä koe mittaa lopputuloksen RUUDULTA, jolloin
+ * mukana on koko ketju — nipun sarake, erottelusiirrot ja merkin
+ * mittakaava.
+ *
+ * LAATIKOT LUETAAN RASTERISTA. Merkin kuva on korkeutensa levyinen
+ * neliö (glyyfi) ja sen oikealla puolella nimiön kaista; kun nimiö on
+ * vaiennut, kuva on pelkkä neliö. Symbolit saavat sipaista toisiaan
+ * (erottelupassin lupaus), joten koe koskee vain KAISTOJA: kaista ei
+ * saa mennä toisen merkin neliön eikä toisen kaistan päälle.
+ */
+const nimioLimitys = await sivu.evaluate(() => {
+  const merkit = [...document.querySelectorAll('.fokuskohde')].map((g) => {
+    const r = g.querySelector('.fokuskohde-glyyfi')?.getBoundingClientRect();
+    if (!r || !(r.height > 0)) return null;
+    return {
+      id: g.dataset.kohde,
+      sym: { x1: r.left, x2: r.left + r.height, y1: r.top, y2: r.bottom },
+      // Yli neliön menevä osa on nimiön kaista; ilman nimiötä sitä ei ole.
+      kaista: r.width > r.height + 0.5
+        ? { x1: r.left + r.height, x2: r.right, y1: r.top, y2: r.bottom } : null,
+    };
+  }).filter(Boolean);
+  // Puolen pikselin vara: pyöristys ei saa tehdä kosketuksesta osumaa.
+  const yli = (a, b) => a.x1 < b.x2 - 0.5 && b.x1 < a.x2 - 0.5
+    && a.y1 < b.y2 - 0.5 && b.y1 < a.y2 - 0.5;
+  const osumat = [];
+  for (let i = 0; i < merkit.length; i += 1) {
+    if (!merkit[i].kaista) continue;
+    for (let j = 0; j < merkit.length; j += 1) {
+      if (i === j) continue;
+      if (yli(merkit[i].kaista, merkit[j].sym)) {
+        osumat.push(`${merkit[i].id} nimiö × ${merkit[j].id} symboli`);
+      }
+      if (j > i && merkit[j].kaista && yli(merkit[i].kaista, merkit[j].kaista)) {
+        osumat.push(`${merkit[i].id} nimiö × ${merkit[j].id} nimiö`);
+      }
+    }
+  }
+  return { osumat: [...new Set(osumat)], kaistoja: merkit.filter((m) => m.kaista).length };
+});
+vaadi('ladottu nimiö ei mene naapurin symbolin eikä nimiön päälle',
+  nimioLimitys.kaistoja > 0 && nimioLimitys.osumat.length === 0,
+  nimioLimitys.osumat.join(', '));
 /*
  * Silmäsymboleita EI enää odoteta (26.8.2026: Akropolis-museon
  * GA&C-kierrokset poistettiin, koska upotus ei latautunut iPadilla —
