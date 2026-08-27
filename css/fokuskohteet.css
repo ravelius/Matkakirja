@@ -1035,6 +1035,69 @@
   height: 1.5rem;
 }
 
+/* ---------- IHME NÄHTÄVYYSIKKUNASSA (omistaja 27.8.2026 ilta) -------
+ *
+ * *"täällä pitäisi olla myöskin se ihme nähtävillä"* — sama nauha ja
+ * sama nappi myös kaupunkikartan nähtävyysjutussa (js/nahtavyydet.js)
+ * ja sen kuvasuurennoksessa (js/ui.js naytaKulttuuriKuva). Nauhan
+ * geometria ja sävyt ovat yllä yhtenä komponenttina; tässä annetaan
+ * vain MITAT UUSILLE ISÄNNILLE, aivan kuten kortti ja fokusmoodin
+ * suurennos saavat omansa (.fokuskohde-kuva, .fokuskohde-zoomkehys).
+ *
+ * PAPERIPOHJUSTUS ON OSA NAUHAA, EI KORISTE. Nauhan päät kääntyvät
+ * kuvan reunan yli marginaalille (`--nauha-ylite`); ilman marginaalia
+ * ne leikkautuisivat kuvan reunaan kuin veitsellä. Nähtävyysjutun kuva
+ * on ilman pehmustetta, joten nauhallinen kuva — ja VAIN se, luokka
+ * `kuva-nauhalla` — saa saman kerman kuin kortissa.
+ */
+.nahtavyys-kuvakehys.kuva-nauhalla,
+.karuselli-ikkuna.kuva-nauhalla,
+.suurennos-kuvakotelo.kuva-nauhalla {
+  position: relative;
+  padding: var(--nauha-marginaali);
+  background: #f6f1e4;
+}
+
+/* Jutun kuva on kortin kuvan kokoluokkaa, joten mitat ovat kortin
+   ryhmä (.fokuskohde-kuva). Kaari on .nahtavyys-kuvan oma 4px. */
+.nahtavyys-kuvakehys.kuva-nauhalla,
+.karuselli-ikkuna.kuva-nauhalla {
+  --nauha-pituus: 10.6rem;
+  --nauha-korkeus: 1.5rem;
+  --nauha-ulos: 0.56rem;
+  --nauha-taite: 3.7rem;
+  --nauha-teksti: 0.6rem;
+  --nauha-marginaali: 0.4rem;
+  --nauha-ylite: min(0.36rem, var(--nauha-marginaali));
+  --nauha-kaari: 4px;
+  --nauha-kaari-ulko: 4px;
+}
+
+/* Suurennos on iso kuva: mitat ovat fokusmoodin suurennoksen ryhmä
+   (.fokuskohde-zoomkehys). Kotelo on tarkalleen kuvan kokoinen
+   (width: fit-content), joten marginaali tulee pohjustuksesta eikä
+   kehyksen pehmusteesta — kaari on 0, koska kuvaa ei pyöristetä. */
+.suurennos-kuvakotelo.kuva-nauhalla {
+  --nauha-pituus: 13.9rem;
+  --nauha-korkeus: 1.87rem;
+  --nauha-ulos: 0.7rem;
+  --nauha-taite: 4.5rem;
+  --nauha-teksti: 0.79rem;
+  --nauha-marginaali: 0.5rem;
+  --nauha-ylite: min(0.5rem, var(--nauha-marginaali));
+  --nauha-kaari: 0;
+  --nauha-kaari-ulko: 0;
+}
+
+/* Nähtävyysjutun "Koe ihme" -nappi seuraa kuvakehystä, jonka leveys on
+   kapea (.nahtavyys-kuvakehys max-width): nappi olisi 100 %:lla yhtä
+   kapea ja katkeaisi kahdelle riville. Se saa siis palstan leveyden ja
+   jää kuvan alle omaksi rivikseen, kuten kortissa. */
+.nahtavyys-kortti .fokuskohde-ihmenappi {
+  clear: both;
+  margin: 0.2rem 0 1rem;
+}
+
 .fokuskohde-kuvateksti {
   margin: 0.3rem 0.1rem 0.4rem;
   font-size: 0.76rem;

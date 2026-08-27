@@ -1561,7 +1561,28 @@ export function avaaNahtavyys(ui, kohde, numero, {
   dialogi.classList.toggle('opas-arkki', opas);
   if (opas) ui.taitaOpas(sisalto, kohde, linkit);
   const kappaleet = opas ? [] : String(kohde.teksti ?? '').split('\n\n').filter(Boolean);
-  const kuvat = opas ? [] : (kohde.kuvat ?? []).slice(0, 5);
+  /* ---------- MATKAKIRJAN IHME MYÖS TÄHÄN IKKUNAAN ----------
+   *
+   * Omistajan tilaus 27.8.2026 ilta, kaappaus tästä näkymästä
+   * (KOHDE 1 · Antiikin agora): *"täällä pitäisi olla myöskin se ihme
+   * nähtävillä"*. Ihme oli siihen asti vain fokusmoodin kartan
+   * tietoruudussa, vaikka sama paikka on kaupunkikartalla oma juttunsa.
+   *
+   * ESITYSTAPA ON SAMA KUIN KORTISSA (js/fokuskohteet.js, osio
+   * MATKAKIRJAN IHME) — kaksi sääntöä, ei kolmatta:
+   *
+   *   • KADONNUT kohde: havainnekuva on kuvasarjan ENSIMMÄINEN kuva
+   *     nauhoineen, ja sen kuvateksti on havainnekuvan oma lähderivi.
+   *   • YHÄ OLEMASSA oleva: kuvat pysyvät ennallaan (valokuva kertoo,
+   *     mitä paikalla NYT on) ja "Koe ihme" -nappi tulee kuvan alle.
+   *
+   * Ihme haetaan NIMELLÄ fokuskohteista (ui.matkakirjanIhme), joten
+   * nähtävyysjuttuihin ei kopioida yhtään kuvaa eikä lähdettä: kun
+   * ihme lisätään pakettitiedostoon, se ilmestyy tänne itsestään.
+   */
+  const ihme = opas ? null : (ui.matkakirjanIhme?.(kohde.nimi) ?? null);
+  const omatKuvat = opas ? [] : (kohde.kuvat ?? []);
+  const kuvat = (ihme?.kadonnut ? [ihme, ...omatKuvat] : omatKuvat).slice(0, 5);
   /*
    * Useampi kuva näytetään KARUSELLINA yhden kehyksen sisällä
    * (omistajan palaute 10.8.2026: peräkkäin ladottuina lisäkuvat
@@ -1641,6 +1662,18 @@ export function avaaNahtavyys(ui, kohde, numero, {
   // kappaleväliä) päätyvät loppuun eivätkä katoa.
   for (const [paikka, kehys] of taittokuvat) {
     if (paikka >= kappaleet.length) sisalto.appendChild(kehys);
+  }
+  /*
+   * "KOE IHME" KUVAN ALLE, kuten kortissa (js/fokuskohteet.js
+   * piirraKohdeKuvat): pelaaja näkee ensin sen, mitä paikalla NYT on,
+   * ja nappi lupaa sen viereen loistoajan. Kuvattomassa jutussa nappi
+   * jää tekstin perään — lupaus ei saa kadota siksi, ettei jutussa ole
+   * valokuvaa. Kadonneella kohteella nappia ei ole: sen havainnekuva on
+   * jo kuvasarjan ensimmäisenä.
+   */
+  if (ihme && !ihme.kadonnut) {
+    const nappi = ui.piirraIhmenappi?.(sisalto, ihme);
+    if (nappi && kuvaKehys?.isConnected) kuvaKehys.after(nappi);
   }
 
   // Jutun ensimmäinen kuva saa oman luokkansa: vaakana se levenee
@@ -2068,6 +2101,14 @@ export function nahtavyydenKuva(ui, kuva) {
   if (el.complete) luokita();
   el.addEventListener('load', luokita, { once: true });
   kehys.appendChild(el);
+  /*
+   * "MATKAKIRJAN IHME" -NAUHA kuvan kulmaan, kun kuva on kadonneen
+   * kohteen havainnekuva (ks. avaaNahtavyys). Sama komponentti kuin
+   * kartan tietoruudussa; kehys on nauhan asemointipohja, koska sen
+   * yläkulma on kuvan yläkulma (css/fokuskohteet.css, luokka
+   * kuva-nauhalla).
+   */
+  if (ui.piirraIhmenauha?.(kehys, kuva.nauha)) kehys.classList.add('kuva-nauhalla');
   const teksti = html('figcaption', 'nahtavyys-kuvateksti');
   if (kuva.selite) teksti.appendChild(html('span', 'nahtavyys-selite', kuva.selite));
   // Lähderivi: pro-tuottajan kuvassa tekijän nimi on painike, joka
@@ -2100,14 +2141,21 @@ export function nahtavyydenKaruselli(ui, kuvat) {
   const teksti = html('figcaption', 'nahtavyys-kuvateksti');
   // Sarjan kaikki kuvat latautuvat taustalla heti — sama osoite ja
   // leveys kuin varustaNostonKuvassa, jotta välimuisti osuu.
-  esilataaKuvat(kuvat.map((k) => (k.ampari ? julisteUrl(k.ampari) : valokuvaUrl(k.tiedosto, 900))));
+  esilataaKuvat(kuvat.map((k) => k.osoite
+    ?? (k.ampari ? julisteUrl(k.ampari) : valokuvaUrl(k.tiedosto, 900))));
   let kohta = 0;
   let el = null;
+  // Matkakirjan ihmeen kulmanauha seuraa kuvaa, ei kehystä: sarjassa
+  // vain havainnekuva kantaa sen (ks. avaaNahtavyys).
+  let nauha = null;
 
   const nayta = (i) => {
     kohta = (i + kuvat.length) % kuvat.length;
     const kuva = kuvat[kohta];
     kehys.classList.remove('kuva-vaaka', 'kuva-pysty');
+    nauha?.remove();
+    nauha = ui.piirraIhmenauha?.(ikkuna, kuva.nauha) ?? null;
+    ikkuna.classList.toggle('kuva-nauhalla', Boolean(nauha));
     const uusi = document.createElement('img');
     uusi.className = 'nahtavyys-kuva kulttuuri-kuva-nappi';
     uusi.addEventListener('load', () => {

@@ -250,7 +250,10 @@ import {
   paivitaLennonLehdet, nollaaFokuskartta,
 } from './fokuskartta.js';
 // Fokuslehden klikattavat karttakohteet ja niiden pop-up (js/fokuskohteet.js).
-import { paivitaFokuskohteet, nollaaFokuskohteet } from './fokuskohteet.js';
+import {
+  matkakirjanIhme, nollaaFokuskohteet, paivitaFokuskohteet, piirraIhmenappi,
+  piirraIhmenauha,
+} from './fokuskohteet.js';
 /*
  * Kevyen kulun vihreä kohtaamispiste (js/fokuspiste.js). Sama kytkentä
  * kuin kohdemerkeillä: päivitys aina kun näkymä on asettunut, nollaus
@@ -11191,11 +11194,20 @@ export class UI {
      * `ampari`-polku tiedostonimen sijaan. Varareittiä ei ole —
      * ämpäri on ainoa lähde, kuten julisteillakin.
      */
-    const osoitteet = nosto.ampari
-      ? [julisteUrl(nosto.ampari)]
-      : [...new Set([
-        valokuvaUrl(nosto.tiedosto, leveys), valokuvaVara(nosto.tiedosto, leveys),
-      ])].filter(Boolean);
+    /*
+     * REPON OMA TIEDOSTO (`osoite`) on valmis polku, jolla ei ole
+     * thumb-putkea eikä varareittiä — sama sääntö kuin fokuskohteiden
+     * kuvilla (js/fokuskohteet.js asetaKohdeKuva). Matkakirjan ihmeen
+     * havainnekuvat (assets/kartat/ihmeet/) tulevat tätä tietä myös
+     * nähtävyysjuttuun.
+     */
+    const osoitteet = nosto.osoite
+      ? [nosto.osoite]
+      : (nosto.ampari
+        ? [julisteUrl(nosto.ampari)]
+        : [...new Set([
+          valokuvaUrl(nosto.tiedosto, leveys), valokuvaVara(nosto.tiedosto, leveys),
+        ])].filter(Boolean));
     let yritys = 0;
     const YRITYKSIA = 3;
     const seuraava = () => {
@@ -11309,6 +11321,8 @@ export class UI {
     const lista = (teokset?.length ?? 0) > 1 ? teokset : null;
     let indeksi = Math.max(0, Math.min(kohdalla, (lista?.length ?? 1) - 1));
     let laskuri = null;
+    // Matkakirjan ihmeen kulmanauha, kun näytössä oleva kuva kantaa sen.
+    let nauha = null;
     // Sarjan kaikki suurennokset latautuvat taustalla heti, jotta
     // selaus ei odota verkkoa (omistajan tilaus 14.8.2026).
     if (lista) {
@@ -11335,6 +11349,17 @@ export class UI {
       kuvaselite.textContent = teos.selite ?? '';
       kuvalahde.textContent = [teos.otsikko, teos.lahde].filter(Boolean).join(' · ');
       kuvateksti.hidden = !kuvaselite.textContent && !kuvalahde.textContent;
+      /*
+       * "MATKAKIRJAN IHME" -NAUHA MYÖS TÄHÄN KATSELIMEEN (omistaja
+       * 27.8.2026 ilta: *"täällä pitäisi olla myöskin se ihme
+       * nähtävillä"*). Sama komponentti kuin kartan tietoruudussa ja
+       * sen suurennoksessa (js/fokuskohteet.js piirraIhmenauha) — nauha
+       * on kuvan ominaisuus (`nauha`-kenttä), joten se seuraa kuvaa myös
+       * sarjaa selattaessa eikä jää edellisen kuvan päälle.
+       */
+      nauha?.remove();
+      nauha = piirraIhmenauha(kotelo, teos.nauha);
+      kotelo.classList.toggle('kuva-nauhalla', Boolean(nauha));
       if (laskuri) laskuri.textContent = `${indeksi + 1} / ${lista.length}`;
     };
     if (lista) {
@@ -11663,6 +11688,28 @@ export class UI {
    * ja savukevartija toi sen esiin 17.8.2026.
    */
   avaaNahtavyys(kohde, numero, asetukset) { return avaaNahtavyys(this, kohde, numero, asetukset); }
+
+  /* ---------- MATKAKIRJAN IHME NÄHTÄVYYSIKKUNAAN ----------
+   *
+   * Kolme ohutta delegaattoria, koska js/nahtavyydet.js on yhden
+   * tiedoston niputuksessa ENNEN js/fokuskohteet.js:ää eikä voi tuoda
+   * sitä suoraan (tools/tarkista-niputus.mjs sääntö 3: riippuvuus ennen
+   * tuojaansa). Sama kaava kuin nähtävyysjutun muillakin lainoilla
+   * (varustaNostonKuva, naytaKulttuuriKuva) — ui on niiden silta.
+   */
+
+  /** Nimetyn paikan Matkakirjan ihme kuvaoliona, tai null. */
+  matkakirjanIhme(nimi) { return matkakirjanIhme(nimi); }
+
+  /** "Koe ihme" -nappi tähtineen; napautus avaa ihmekuvan suurennoksen. */
+  piirraIhmenappi(sisalto, ihme) {
+    return piirraIhmenappi(sisalto, ihme.nappi,
+      () => this.naytaKulttuuriKuva(ihme));
+  }
+
+  /** Ihmenauha kuvan vasempaan yläkulmaan; isäntä on kuvan kokoinen. */
+  piirraIhmenauha(isanta, teksti) { return piirraIhmenauha(isanta, teksti); }
+
   avaaRaamattuLehti() { return avaaRaamattuLehti(this); }
 
   avaaTilanneLehti() { return avaaTilanneLehti(this); }

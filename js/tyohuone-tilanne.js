@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1226: Matkakirjan ihmeet nakyvat nyt myos kaupunkikartan nahtavyysikkunassa - kadonneilla havainnekuva nauhoineen karusellin ensimmaisena, olemassa olevilla Koe ihme -nappi kuvan alla (esim. Antiikin agora, Akropolis, Colosseum)',
   'v1225: Livia on nyt Viisaan Pollon SIJAINEN joka kasvattaa pelaajan untuvikkopolloa - uusi tervehdys, otsikoissa vino punainen yliviivaus (Pollo -> Pulu), ja kuusi isoisan maadoituskommenttia odottavat fokusvirran kytkinta',
   'v1224: Aarrepaljastuksen Jatka matkaa -nappi on nyt kultakehyksinen pelin tyylin nappi mustalla pohjalla (oli haalea harmaa laatikko) - tarkista aarteen avauksessa',
   'v1223: Saapuminen uuteen maahan ei saisi enaa tokkia - kohdemaan lehti esiladataan matkan aikana ja purku tapahtuu tyontekijasaikeessa; testaa matka Ateenasta Sofiaan ja takaisin',
