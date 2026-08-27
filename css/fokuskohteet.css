@@ -353,36 +353,24 @@
    katoavat kuvan reunan taakse.
 
    ---------------------------------------------------------------------------
-   KAKSI KAISTAA, KOLME RAJAA (Fablen käsityö 27.8.2026; omistajan
-   tilaus samana iltana: "miten tämä on niin vaikea saada oikein?
-   kokeile sinä ratkaista tämä itse"). Nauha on KAKSI päällekkäistä
-   kaistaa samalla akselilla:
+   NAUHA LOPPUU KUVAN REUNAAN JA ON TASAINEN KAISTA (omistajan
+   tarkennukset 27.8.2026 ilta): esikuva on pelin oma MATKAOPAS-nauha
+   kaupunkilehden kannessa — pelkkä vino kaista, joka leikkautuu kuvan
+   reunaan, ilman erillisiä taitekappaleita. Aiemmat mallit
+   (kääntyneet päät v1222, takakaista v1230, taitevyöhykkeet v1231)
+   piirsivät päihin "ylimääräisen kummun" ja ne on poistettu kokonaan.
 
-     1. ETUKAISTA (.fokuskohde-ihmekaista) on nauhan oikea puoli
-        teksteineen. Se asuu sisäkääreessä, joka on täsmälleen kuvan
-        kokoinen — etukaista loppuu siis AINA kuvan reunaan, ja
-        reunalla on taitteen tummeneva profiili
-        (.fokuskohde-ihmetaite), joten viiva lukee käännekohdaksi
-        eikä katkaisuksi.
-     2. TAKAKAISTA (.fokuskohde-ihmetausta) on nauhan nurja puoli:
-        kapeampi, tumma, sama keskipiste ja kierto. Kuvassa se on
-        kokonaan etukaistan alla; kuvan reunan takaa se jatkaa
-        marginaalin yli ja katoaa ulkokääreen leikkaukseen KEHYKSEN
-        nurkassa. Ei erillisiä pääkappaleita eikä ylite-mittaa:
-        kehyksen reuna itse leikkaa nurjan puolen, joten pää ei voi
-        jatkua kehyksen ohi eikä jäädä siitä vajaaksi.
+     • KÄÄRE (.fokuskohde-ihmenauha) on täsmälleen kuvan kokoinen ja
+       kuvan kulmassa; se leikkaa kaistan kuvan reunaan. Nauha ei
+       koske valkoiseen paperiin.
+     • VARJOSTUS on kaistan omassa pinnassa: poikittainen sävyliuku
+       antaa kaarevuuden, ja pituussuuntainen satiiniliuku tummentaa
+       kaistaa kevyesti kumpaakin päätä kohti, jotta kangas näyttää
+       aidolta ("voit jättää pientä varjostusta kumpaakin reunaa
+       kohden").
 
-   Kolme rajaa ovat siis: KUVAN REUNA on taite (etukaista loppuu,
-   tumma alkaa), PAPERIMARGINAALI on kääntynyt nurja puoli
-   (takakaista näkyvissä), ja KEHYKSEN REUNA on katoaminen
-   (ulkokääre alkaa kehyksen nurkasta ja leikkaa siihen).
-
-   KORTIN KUVA SAA PAPERIREUNUKSEN — MUTTA VAIN NAUHALLINEN. Kortissa
-   kuva täytti ennen napin reunoja myöten, joten marginaalia ei ollut.
-   Nauhaa kantava kuva (ja vain se, luokka .fokuskohde-kuva-nauhalla)
-   saa siksi paperipohjustuksen napin pehmusteena — sama ele kuin
-   suurennoksen paperikehyksessä, ja se antaa nauhalle marginaalin,
-   jonka yli nurja puoli kaartuu.
+   Kaista on paksu, ja teksti on juhlava antiikva ✦-koristein ("tähdet
+   sopivat hyvin ihmeeseen") — irti kaistan päistä reilulla varalla.
 
    ---------------------------------------------------------------------------
    GEOMETRIA YHDESTÄ PISTEESTÄ. Sisäkääre on KUVAN vasemmassa
@@ -393,11 +381,10 @@
 
      --nauha-pituus     kaistan pituus (myös reunan taakse jäävä osa)
      --nauha-korkeus    kaistan leveys (poikkimitta)
-     --nauha-ulos       kuinka pitkälle kaistan päät menevät KUVAN
-                        reunan yli — JOHDETTU: marginaali + 0,36 ×
-                        korkeus, jotta päät ylittävät koko marginaalin
-                        ja katoavat kehyksen leikkaukseen
-     --nauha-taite      kääntymävyöhykkeen pituus kaistan päässä
+     --nauha-ulos       kuinka pitkälle kaistan päät jatkuvat KUVAN
+                        reunan yli ennen leikkausta — JOHDETTU:
+                        0,5 × korkeus (alaraja on vinon leikkauksen
+                        0,3536 × korkeus)
      --nauha-teksti     kirjasinkoko
      --nauha-marginaali matka isännän pehmusteen nurkasta kuvan nurkkaan
      --nauha-kaari      kuvan kulman pyöristys (sisäkääre)
@@ -441,9 +428,8 @@
    viimeisen kirjaimen ULKONURKKA on se, joka osuu leikkaukseen ensin.
 
    TEKSTI EI SAA VALUA YLITTEESEEN. Mitoitus lasketaan KUVAN reunaan
-   asti, ei marginaalin ulkoreunaan: kääntynyt pää on nauhan nurja
-   puoli, eikä nurjalla puolella ole tekstiä. Sisäkääre pitää tämän
-   huolen koneellisesti — teksti on kaistassa, kaista sisäkääreessä.
+   asti — kääre leikkaa kaiken kuvan reunaan, joten teksti ei voi
+   valua paperille. Vara pitää sen lisäksi irti itse taitoskohdista.
 
    KIRJASINTA EI SAA OLETTAA. Peli ei tuo omaa fonttia (--font-type on
    lista järjestelmäfontteja), joten sama teksti on eri levyinen eri
@@ -456,57 +442,16 @@
 
      12,7 × teksti + 0,95 × teksti + vara ≤ pituus − 2 × ulos × √2,
 
-   eli 13,65 × teksti + vara ≤ pituus − 2,8284 × ulos. Kortissa oikea
-   puoli on 9,03rem ja teksti 0,60rem (8,19rem) → varaa 0,84rem;
-   suurennoksessa 11,95rem ja 0,79rem (10,78rem) → varaa 1,17rem.
-   Ulos on kahden kaistan mallissa iso (marginaali + 0,36 × korkeus),
-   joten pituudesta valtaosa on tahallaan leikkausten takana — näkyvä
-   osa on sama kuin ennen, koska keskipiste c ei muuttunut.
+   eli 15,2 × teksti + vara ≤ pituus − 2,8284 × ulos (kerroin 15,2 on
+   antiikvan, harvennuksen ja ✦-koristeiden mitattu pahin tapaus).
+   Kortissa oikea puoli on 11,15rem ja teksti 0,58rem (8,82rem) →
+   varaa 2,33rem; suurennoksessa 15,0rem ja 0,78rem (11,86rem) →
+   varaa 3,14rem.
+   Vara on tahallaan reilu: omistajan tilaus 27.8.2026 ilta oli, ettei
+   teksti saa mennä taitoskohtiin kiinni.
    Vara on tahallaan reilu: se pitää kirjaimet irti taitteen varjosta.
    (tools/savukkeet/savuke-fokuskohteet.mjs mittaa tämän oikeasta
    pelistä nurkka nurkalta, ei kaistan laatikosta.)
-
-   ---------------------------------------------------------------------------
-   TAITE OSUU LEIKKAUSVIIVAAN LASKEMALLA, EI ARVAAMALLA (omistajan
-   tilaus 27.8.2026 ilta: *"nauha ja sen TAITTUMINEN eivät ole vielä
-   täysin kohdallaan"*). Leikkausviivan paikka taitteen liu'ulla
-   lasketaan:
-
-     taitelinja = 0,7071 × taite − ulos + 0,35355 × korkeus,
-
-   mitattuna liu'un nollakohdasta (--nauha-taitelinja). Kaava on sama
-   kuin ennen ylitettä, eikä se muuttunut: sekä taitelaatikko että
-   kuvan reuna siirtyivät ulkokääreessä saman `ylite`-mitan verran,
-   joten niiden ero — ja siis taitteen paikka liu'ulla — säilyi.
-   Kaikki sävyt asetetaan taitelinjasta taaksepäin korkeuden
-   monikertoina, joten taite näyttää samalta kortissa ja
-   suurennoksessa, olivat mitat mitkä hyvänsä.
-
-   Taitteen profiili on kolme asiaa peräkkäin — varjo, harja ja
-   taitejuova. Sävyt ja perustelut ovat .fokuskohde-ihmetaite-lohkossa.
-
-   TUMMUUS ALKAA JO KUVAN PUOLELLA (omistajan tilaus 27.8.2026 ilta,
-   punaisen version tarkennus): *"tumma osuus nauhasta pitää olla jo
-   osin kuvan reunan ulkopuolella koska se näyttää sen osan mikä
-   kääntyy jo kuvan taakse"*. Ennen taitejuova oli 0,12 × korkeus eli
-   3–4 px, ja koko tumma nurja luki alkavaksi vasta marginaalilta.
-   Nyt juova alkaa 0,27 × korkeus ennen kuvan reunaa — suunnilleen
-   saman verran kuin ylite jatkuu reunan ulkopuolelle — joten tumma
-   kääntymä ASETTUU REUNAN YLI molemmin puolin ja kuvan reuna on sen
-   keskellä. Silmä lukee kääntymän alkavan kuvassa ja jatkuvan
-   paperille, ei alkavan paperilta.
-
-   Profiili vaatii tilaa: koko liu'un on mahduttava taitelaatikkoon,
-   eli taitelinja ≥ 0,95 × korkeus (t0 on liu'un ensimmäinen sävy).
-   Sijoittamalla taitelinjan kaava tähän saadaan taitteen alaraja
-
-     taite ≥ (0,5965 × korkeus + ulos) / 0,7071,
-
-   eli kortissa 2,95rem ja suurennoksessa 4,09rem → taite 3,2rem ja
-   4,3rem. Profiili on lyhyempi kuin ennen (t0 oli 1,55 × korkeus):
-   pitkä liuku työntyi tummana kiilana syvälle kuvaan (omistajan
-   lähikuva 27.8.2026 ilta). Yläraja on taite ≤ pituus / 2: sitä
-   pidemmät vyöhykkeet menisivät kaistan keskellä päällekkäin.
 
    ---------------------------------------------------------------------------
    VÄRI ON YKSI MUUTTUJARYHMÄ (omistajan tilaus 27.8.2026 ilta: *"kokeile
@@ -542,16 +487,6 @@
   --nauha-muste: #4b3a1c;
   --nauha-reunaviiva: rgb(58 38 16 / 0.5);
   --nauha-sisaviiva: rgb(58 38 16 / 0.2);
-  /* Kääntyneen pään (nurjan puolen) sävyt: kuvan reunalta kärkeen.
-     nurja-3 on taitejuovan jatke marginaalille (tummin), nurja-1
-     pään selkä valossa, nurja-2 kärki kehyksen alla. */
-  --nauha-nurja-3: #4a3a20;
-  --nauha-nurja-1: #c2a878;
-  --nauha-nurja-2: #9d8354;
-  /* Taitteen tummin muste, viileä välikerros ja harjan valo. */
-  --nauha-taite-rgb: 46 29 10;
-  --nauha-viilea-rgb: 96 92 78;
-  --nauha-harja-rgb: 255 248 226;
   /* Kaistan pudotusvarjo kuvan pinnalle ja pään varjo paperille. */
   --nauha-varjo-rgb: 30 18 4;
 }
@@ -574,35 +509,26 @@
   --nauha-muste: #f6e7c6;
   --nauha-reunaviiva: rgb(30 9 8 / 0.55);
   --nauha-sisaviiva: rgb(246 231 198 / 0.22);
-  --nauha-nurja-3: #38120f;
-  --nauha-nurja-1: #8a3a33;
-  --nauha-nurja-2: #5a201e;
-  --nauha-taite-rgb: 38 10 9;
-  --nauha-viilea-rgb: 92 62 58;
-  --nauha-harja-rgb: 255 232 198;
   --nauha-varjo-rgb: 28 8 6;
 }
 
 /* Kortin mitat. Kuvakehys on isäntä, jotta sama arvo periytyy koko
    nauhalle.
 
-   MARGINAALI 0,65rem on napin pehmuste (paperipohjustus, ks. lohkon
-   alku) — leveämpi kuin ennen (0,4rem), jotta nurjalle puolelle jää
-   oikeasti paperia (omistajan tilaus 27.8.2026 ilta: "enemmän tilaa
-   valkoiselle reunalle"). Muut mitat seuraavat laskien:
-
-     • ULOS on johdettu: 0,65 + 0,36 × 1,50 = 1,19rem.
-     • PITUUS 12,4rem, koska mitoitusehto vaatii
-       13,65 × 0,60 + 2,8284 × 1,19 = 11,56rem ja varaa on jäätävä;
-       keskipiste c = 0,35355 × 12,4 − 1,19 = 3,19rem eli sama kuin
-       ennen — nauha istuu silmälle samaan kohtaan kuin v1222:ssa.
-     • TAITE 3,2rem, alaraja (0,5965 × 1,50 + 1,19) / 0,7071 = 2,95rem. */
+   PAKSUMPI KAISTA (omistajan tilaus 27.8.2026 ilta: "nauha saisi
+   olla vielä paksumpi"): korkeus 1,8rem. Muut mitat seuraavat laskien:
+   ULOS on johdettu (0,5 × 1,8 = 0,9rem). Antiikva harvennuksineen ja
+   ✦-koristeineen latoo leveämmin kuin vanha konekirjasin: mitattu
+   pahin tapaus on ~15,2 × kirjasinkoko. PITUUS 13,7rem antaa
+   näkyväksi ladontamatkaksi 13,7 − 2,8284 × 0,9 = 11,15rem, josta
+   teksti (15,2 × 0,58 = 8,82rem) vie korkeintaan 79 % — reilu rako
+   molempiin taitoksiin. MARGINAALI 0,4rem on napin
+   paperipohjustus. */
 .fokuskohde-kuva {
-  --nauha-pituus: 12.4rem;
-  --nauha-korkeus: 1.5rem;
-  --nauha-taite: 3.2rem;
-  --nauha-teksti: 0.6rem;
-  --nauha-marginaali: 0.65rem;
+  --nauha-pituus: 13.7rem;
+  --nauha-korkeus: 1.8rem;
+  --nauha-teksti: 0.58rem;
+  --nauha-marginaali: 0.4rem;
   /* Kortin kuva on pyöristetty (.fokuskohde-kuva img border-radius),
      ja napin pehmustelaatikko sen kanssa samalla säteellä. */
   --nauha-kaari: 7px;
@@ -617,220 +543,32 @@
  */
 .fokuskohde-ihmenauha {
   /*
-   * ULOS = kuinka pitkälle kaistan päät jatkuvat KUVAN reunan yli.
-   * Kahden kaistan mallissa se ei ole enää käsin annettu luku vaan
-   * JOHDETTU: pään on ylitettävä koko marginaali ja kadottava
-   * kehyksen leikkaukseen, joten ulos = marginaali + 0,36 × korkeus
-   * (0,3536 × korkeus on vinon leikkauksen alaraja, ks. lohkon kaava).
+   * ULOS = kuinka pitkälle kaistan päät jatkuvat KUVAN reunan yli
+   * ennen leikkausta. JOHDETTU: 0,5 × korkeus riittää, koska vinon
+   * leikkauksen alaraja on 0,3536 × korkeus (ks. lohkon kaava) eikä
+   * nauha jatku enää marginaalille.
    */
-  --nauha-ulos: calc(var(--nauha-marginaali) + 0.36 * var(--nauha-korkeus));
+  --nauha-ulos: calc(0.5 * var(--nauha-korkeus));
   /* Kaistan keskipiste lävistäjällä, KUVAN nurkasta (ks. lohkon kaava). */
   --nauha-c: calc(var(--nauha-pituus) * 0.35355 - var(--nauha-ulos));
   /* Kohta, jossa kaistan ulkoreuna leikkaa kuvan reunan. */
   --nauha-juuri: calc(2 * var(--nauha-c) + 0.7071 * var(--nauha-korkeus));
-  /* Kääntymävyöhykkeen keskipisteen etäisyys kaistan keskeltä. */
-  --nauha-paa: calc((var(--nauha-pituus) - var(--nauha-taite)) * 0.35355);
-  /*
-   * LEIKKAUSVIIVAN PAIKKA TAITTEEN LIU'ULLA. Taitteen liuku kulkee
-   * maailmassa suoraan ylös (yläpää) tai suoraan vasemmalle (vasen
-   * pää), samansuuntaisesti kuin leikkaus, joten leikkaus osuu
-   * liu'ulle YHTEEN pisteeseen. Etäisyys liu'un nollakohdasta on
-   * kaistan keskipisteen (c), taitelaatikon keskipisteen (paa) ja
-   * laatikon oman liukupituuden erotus — sievennettynä
-   *
-   *   taitelinja = 0,7071 × taite − ulos + 0,35355 × korkeus.
-   *
-   * Kaikki taitteen sävyt asetetaan tästä taaksepäin (ks. lohko).
-   */
-  --nauha-taitelinja: calc(0.7071 * var(--nauha-taite) - var(--nauha-ulos)
-    + 0.35355 * var(--nauha-korkeus));
   position: absolute;
-  /* Kehyksen nurkka: ulkokääre alkaa isännän pehmustelaatikon
-     nurkasta ja leikkaa siihen — nauha painuu kehyksen alle täsmälleen
-     kehyksen reunassa, ei lasketussa välipisteessä. */
-  top: 0;
-  left: 0;
-  width: calc(var(--nauha-marginaali) + var(--nauha-juuri) + 0.55rem);
-  height: calc(var(--nauha-marginaali) + var(--nauha-juuri) + 0.55rem);
-  /* TURVARAJA pienelle kuvalle: kääre ei voi valua isäntänsä ohi
-     vaikka mitat kasvaisivat. */
-  max-width: 100%;
-  max-height: 100%;
-  overflow: hidden;
-  /* Leikkaus seuraa marginaalin omaa kulmaa. */
-  border-radius: var(--nauha-kaari-ulko, 0) 0 0 0;
-  z-index: 2;
-  pointer-events: none;
-}
-
-/*
- * SISÄKÄÄRE = KUVAN RAJA. Täsmälleen kuvan kulmassa, `ylite`
- * ulkokääreen sisällä. Kaista ja taitteet asuvat tässä, joten ne —
- * ja teksti — eivät voi valua marginaalille: kuvan reuna on niiden
- * leikkaus, ja taitejuova osuu juuri siihen viivaan.
- */
-.fokuskohde-ihmekuvaosa {
-  position: absolute;
+  /* Kuvan nurkka: kääre on täsmälleen kuvan kulmassa ja leikkaa
+     kaiken kuvan reunaan — nauha ei koske valkoiseen paperiin. */
   top: var(--nauha-marginaali);
   left: var(--nauha-marginaali);
   width: calc(var(--nauha-juuri) + 0.55rem);
   height: calc(var(--nauha-juuri) + 0.55rem);
-  max-width: calc(100% - var(--nauha-marginaali));
-  max-height: calc(100% - var(--nauha-marginaali));
+  /* TURVARAJA pienelle kuvalle: kääre ei voi valua kuvan ohi
+     vaikka mitat kasvaisivat. */
+  max-width: calc(100% - 2 * var(--nauha-marginaali));
+  max-height: calc(100% - 2 * var(--nauha-marginaali));
   overflow: hidden;
-  /* Leikkaus seuraa kuvan omaa kulmaa: nauha ei saa pistää esiin
-     pyöristetyn kulman ohi. */
+  /* Leikkaus seuraa kuvan omaa kulmaa. */
   border-radius: var(--nauha-kaari, 0) 0 0 0;
-}
-
-/*
- * TAKAKAISTA = NAUHAN NURJA PUOLI YHTENÄ KAPPALEENA. Kahden kaistan
- * malli (Fablen käsityö 27.8.2026, omistajan tilaus *"kokeile sinä
- * ratkaista tämä itse"*): erillisten kääntyneiden päiden sijaan koko
- * nauhan takana kulkee YKSI kapeampi, tumma kaista samalla akselilla
- * ja samalla keskipisteellä kuin etukaista. Kuvassa se jää kokonaan
- * etukaistan alle; kuvan reunan ulkopuolella — jossa sisäkääre on jo
- * leikannut etukaistan pois — näkyviin jää vain takakaista, ja juuri
- * se on nauhan nurja puoli, joka kääntyi kuvan taakse ja jatkaa
- * marginaalin yli kehyksen alle. Ulkokääre leikkaa sen kehyksen
- * nurkassa (top/left 0), joten pää ei voi koskaan jatkua kehyksen
- * ohi pimeälle — se oli vanhan mallin sitkein vika.
- *
- * Kolme asiaa tekee siitä nurjan puolen eikä varjon:
- *   1. KAPEAMPI (0,62 × korkeus): rullalle kääntynyt nauha näyttää
- *      kapeammalta kuin suora.
- *   2. TUMMA LIUKU AKSELIN SUUNNASSA: tummin keskellä (siellä missä
- *      se ylittää kuvan reunan molemmin puolin), hitusen vaaleampi
- *      kärjissä — rulla, ei tasainen lappu.
- *   3. OMA TIUKKA VARJO paperia vasten: paperi on ohut, joten varjo
- *      on yhden kerroksen ja alle kahden pikselin (omistajan
- *      tarkennus 27.8.2026 ilta).
- */
-.fokuskohde-ihmetausta {
-  position: absolute;
-  left: calc(var(--nauha-marginaali) + var(--nauha-c)
-    - var(--nauha-pituus) / 2);
-  top: calc(var(--nauha-marginaali) + var(--nauha-c)
-    - 0.31 * var(--nauha-korkeus));
-  width: var(--nauha-pituus);
-  height: calc(0.62 * var(--nauha-korkeus));
-  transform: rotate(-45deg);
-  background: linear-gradient(90deg,
-    var(--nauha-nurja-2) 0,
-    var(--nauha-nurja-3) 32%,
-    var(--nauha-nurja-3) 68%,
-    var(--nauha-nurja-2) 100%);
-  box-shadow: 0 1px 1.5px rgb(var(--nauha-varjo-rgb) / 0.45);
-}
-
-/*
- * TAITE = KAISTAN KÄÄNTYMÄ KUVAN REUNAN TAAKSE. Ei kolmiota kuvan
- * ulkopuolella (v1195) vaan kaistan päässä oleva tummeneva vyöhyke:
- * sama vino suorakaide kuin kaista, samassa kulmassa, mutta lyhyt ja
- * kaistan PÄÄLLE maalattu (js piirtää taitteet kaistan jälkeen).
- * Paperi kaareutuu varjoon juuri ennen kuin se katoaa kuvan taakse —
- * ja marginaalilla jatkuva kääntynyt pää kertoo, minne se meni.
- *
- * LIUKU SEURAA KUVAN REUNAA, EI KAISTAN AKSELIA. Kuvan reuna on
- * 45 asteen kulmassa kaistaan nähden, joten kaistan suuntainen liuku
- * osuisi leikkauslinjalle eri kohdassa kaistan kummallakin reunalla —
- * tummuus vaihtelisi 25 %:sta 90 %:iin saman reunaviivan matkalla.
- * Kun liuku käännetään taitteen omassa koordinaatistossa 45 astetta,
- * se osoittaa maailmassa suoraan ylös (yläpää) tai suoraan vasemmalle
- * (vasen pää) — samansuuntaisesti kuin leikkaus. Silloin sävy on
- * TÄSMÄLLEEN SAMA koko reunaviivalla.
- *
- * SÄVYT MITATAAN LEIKKAUSVIIVASTA, EI PROSENTEISTA. Leikkaus osuu
- * liu'ulle kohtaan --nauha-taitelinja (ks. .fokuskohde-ihmenauha), ja
- * jokainen sävy asetetaan siitä taaksepäin kaistan KORKEUDEN
- * monikertoina. Näin sama profiili säilyy kortissa ja suurennoksessa
- * eikä yksikään luku ole mittoihin sidottu arvaus. Kaikki
- * taitelinjan JÄLKEISET sävyt jäävät leikkauksen taakse — ne ovat
- * mukana vain siksi, ettei liuku pääse vaalenemaan takaisin.
- *
- * PROFIILI = VARJO, HARJA, TAITEJUOVA. Kääntyvä paperi tekee
- * järjestyksessä kolme asiaa, ja kaikki kolme ovat tässä. Ne on
- * valittu vertaamalla neljää ehdotelmaa vierekkäin (kokeet
- * $SP/nauha2, 27.8.2026): pelkkä tummeneva liuku luki liaksi, ja
- * kaksi kiiltoa peräkkäin aaltoili.
- *
- *   1. VARJO. Pinta kaareutuu poispäin valosta, joten sävy syvenee
- *      tasaisesti noin 0,6 korkeuden matkalla ennen taitetta. Alempi
- *      kerros tuo samalla SÄVYERON: kääntynyt osa on viileämpi ja
- *      himmeämpi kuin nauhan lämmin pintaosa, jolloin se luetaan
- *      toiseksi tasoksi eikä saman tason varjoksi.
- *   2. HARJA. Aivan ennen taitetta on kapea vaalea juova: taitteen
- *      selkä kääntyy valoa kohti. Tämä on se yksityiskohta, joka
- *      erottaa TAITTUVAN paperin varjoon häipyvästä.
- *   3. TAITEJUOVA. Harjan jälkeen sävy putoaa jyrkästi lähes mustaan
- *      ja pysyy siinä leikkausviivalle asti — 0,27 × korkeus eli
- *      6–8 px näkyvää tummaa KUVAN PUOLELLA, suunnilleen yhtä paljon
- *      kuin kääntynyt pää jatkuu paperin puolelle. Tumma kääntymä
- *      asettuu siis kuvan reunan yli molemmin puolin (ks. lohkon osio
- *      TUMMUUS ALKAA JO KUVAN PUOLELLA); ennen juova oli 0,12 ×
- *      korkeus ja kääntymä näytti alkavan vasta marginaalilta.
- */
-.fokuskohde-ihmetaite {
-  position: absolute;
-  width: var(--nauha-taite);
-  height: var(--nauha-korkeus);
-  transform: rotate(-45deg);
-  /*
-   * SÄVYJEN PAIKAT LEIKKAUSVIIVASTA TAAKSEPÄIN, korkeuden monikertoina.
-   * t0 on puhtaan paperin viimeinen kohta, t5 taitejuovan alku.
-   * Profiili on tahallaan LYHYT (t0 = 0,95 × korkeus ennen linjaa):
-   * pidempi liuku työntyi tummana kiilana syvälle kuvaan (omistajan
-   * lähikuva 27.8.2026 ilta). Alaraja mitoille: taitelinja ≥ 0,95 ×
-   * korkeus, jotta t0 ei jää liu'un ulkopuolelle.
-   */
-  --nauha-t0: calc(var(--nauha-taitelinja) - 0.95 * var(--nauha-korkeus));
-  --nauha-t1: calc(var(--nauha-taitelinja) - 0.60 * var(--nauha-korkeus));
-  --nauha-t2: calc(var(--nauha-taitelinja) - 0.46 * var(--nauha-korkeus));
-  --nauha-t3: calc(var(--nauha-taitelinja) - 0.37 * var(--nauha-korkeus));
-  --nauha-t4: calc(var(--nauha-taitelinja) - 0.31 * var(--nauha-korkeus));
-  --nauha-t5: calc(var(--nauha-taitelinja) - 0.27 * var(--nauha-korkeus));
-}
-
-/* Yläreunan pää: kaistan keskeltä ylöoikealle lävistäjän suunnassa,
-   liuku maailman yläreunaa kohti (45deg käännetyssä laatikossa). */
-.fokuskohde-ihmetaite-ylos {
-  left: calc(var(--nauha-c) + var(--nauha-paa) - var(--nauha-taite) / 2);
-  top: calc(var(--nauha-c) - var(--nauha-paa) - var(--nauha-korkeus) / 2);
-  background:
-    linear-gradient(45deg,
-      rgb(var(--nauha-taite-rgb) / 0) 0,
-      rgb(var(--nauha-taite-rgb) / 0) var(--nauha-t0),
-      rgb(var(--nauha-taite-rgb) / 0.16) var(--nauha-t1),
-      rgb(var(--nauha-taite-rgb) / 0.40) var(--nauha-t2),
-      rgb(var(--nauha-harja-rgb) / 0.26) var(--nauha-t3),
-      rgb(var(--nauha-taite-rgb) / 0.55) var(--nauha-t4),
-      rgb(var(--nauha-taite-rgb) / 0.88) var(--nauha-t5),
-      rgb(var(--nauha-taite-rgb) / 0.88) 100%),
-    linear-gradient(45deg,
-      rgb(var(--nauha-viilea-rgb) / 0) var(--nauha-t0),
-      rgb(var(--nauha-viilea-rgb) / 0.16) var(--nauha-t2),
-      rgb(var(--nauha-viilea-rgb) / 0.16) 100%);
-}
-
-/* Vasemman reunan pää: sama vyöhyke peilattuna lävistäjän yli, liuku
-   maailman vasenta reunaa kohti. */
-.fokuskohde-ihmetaite-vasen {
-  left: calc(var(--nauha-c) - var(--nauha-paa) - var(--nauha-taite) / 2);
-  top: calc(var(--nauha-c) + var(--nauha-paa) - var(--nauha-korkeus) / 2);
-  background:
-    linear-gradient(315deg,
-      rgb(var(--nauha-taite-rgb) / 0) 0,
-      rgb(var(--nauha-taite-rgb) / 0) var(--nauha-t0),
-      rgb(var(--nauha-taite-rgb) / 0.16) var(--nauha-t1),
-      rgb(var(--nauha-taite-rgb) / 0.40) var(--nauha-t2),
-      rgb(var(--nauha-harja-rgb) / 0.26) var(--nauha-t3),
-      rgb(var(--nauha-taite-rgb) / 0.55) var(--nauha-t4),
-      rgb(var(--nauha-taite-rgb) / 0.88) var(--nauha-t5),
-      rgb(var(--nauha-taite-rgb) / 0.88) 100%),
-    linear-gradient(315deg,
-      rgb(var(--nauha-viilea-rgb) / 0) var(--nauha-t0),
-      rgb(var(--nauha-viilea-rgb) / 0.16) var(--nauha-t2),
-      rgb(var(--nauha-viilea-rgb) / 0.16) 100%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 /*
@@ -849,10 +587,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg,
-    var(--nauha-pinta-1) 0%,
-    var(--nauha-pinta-2) 55%,
-    var(--nauha-pinta-3) 100%);
+  /*
+   * PINNAN VARJOSTUS on kaksi liukua päällekkäin (omistajan tilaus
+   * 27.8.2026 ilta: "nauhassa saisi olla varjostusta"): poikittainen
+   * sävyliuku antaa kaistalle kaarevuuden, ja pituussuuntainen
+   * satiiniliuku (tummat päät, vaalea keskikohta) tekee pinnasta
+   * silkkinauhan eikä maalatun palkin.
+   */
+  background:
+    linear-gradient(90deg,
+      rgb(0 0 0 / 0.30) 0%,
+      rgb(0 0 0 / 0.10) 16%,
+      rgb(0 0 0 / 0) 30%,
+      rgb(255 255 255 / 0.10) 50%,
+      rgb(0 0 0 / 0) 70%,
+      rgb(0 0 0 / 0.10) 84%,
+      rgb(0 0 0 / 0.30) 100%),
+    linear-gradient(180deg,
+      var(--nauha-pinta-1) 0%,
+      var(--nauha-pinta-2) 55%,
+      var(--nauha-pinta-3) 100%);
   border-top: 1px solid var(--nauha-reunaviiva);
   border-bottom: 1px solid var(--nauha-reunaviiva);
   /*
@@ -868,16 +622,25 @@
     0 1px 1px rgb(var(--nauha-varjo-rgb) / 0.42),
     0 3px 7px rgb(var(--nauha-varjo-rgb) / 0.3);
   color: var(--nauha-muste);
-  font-family: var(--font-type, inherit);
+  /*
+   * JUHLAVA ANTIIKVA (omistajan tilaus 27.8.2026 ilta: "teksti saisi
+   * olla toisen tyyppinen, kyse on kuitenkin ihmeestä"): kirjoitus-
+   * konekirjasimen sijaan vanha kirja-antiikva harvennettuna ja
+   * kevyellä upotusvarjolla — kullattu kaiverrus, ei lipuke. Pino
+   * kattaa iPadin (Iowan/Palatino) ja kontin (Times-vastine).
+   */
+  font-family: 'Iowan Old Style', 'Palatino', Georgia, 'Times New Roman', serif;
+  font-weight: 600;
   font-size: var(--nauha-teksti);
   line-height: 1;
+  text-shadow: 0 1px 1px rgb(0 0 0 / 0.35);
   /*
    * HARVENNUS 0,09em. Kaiverretun nauhan ilme säilyy, mutta 16 merkkiä
    * × 0,03em = puoli kirjainleveyttä säästyi näkyvälle
    * ladontamatkalle verrattuna alkuperäiseen 0,12em:ään (ks. lohkon
    * osio TEKSTIN MITOITUS).
    */
-  letter-spacing: 0.09em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   white-space: nowrap;
   overflow: hidden;
@@ -904,21 +667,16 @@
   background: #f6f1e4;
 }
 
-/* Suurennoksen mitat isännälle, aivan kuten kortissa.
-
-   MARGINAALI on ihmekehyksen pehmuste (1,05rem, ks.
-   .fokuskohde-ihmeisanta alla) ja kuvan oma mustereunus (1px): matka
-   kehyksen pehmustelaatikon nurkasta kuvan pinnan nurkkaan. ULOS on
-   johdettu (1,11 + 0,36 × 1,87 = 1,79rem), PITUUS 17rem pitää
-   keskipisteen c = 4,22rem ennallaan ja jättää tekstille varaa
-   (13,65 × 0,79 + 2,8284 × 1,79 = 15,84rem ≤ 17 − vara), TAITE
-   4,3rem (alaraja 4,09rem). */
+/* Suurennoksen mitat isännälle, aivan kuten kortissa: korkeus
+   2,4rem, ULOS johdettu 1,2rem, PITUUS 18,4rem → näkyvä matka
+   15,0rem, teksti (15,2 × 0,78 = 11,86rem) enintään 79 % siitä eli
+   ~1,5rem tyhjää molemmin puolin. MARGINAALI on kehyksen pehmuste (0,55rem) + kuvan 1px mustereunus:
+   matka kehyksen pehmustelaatikon nurkasta kuvan pinnan nurkkaan. */
 .fokuskohde-zoomkehys {
-  --nauha-pituus: 17rem;
-  --nauha-korkeus: 1.87rem;
-  --nauha-taite: 4.3rem;
-  --nauha-teksti: 0.79rem;
-  --nauha-marginaali: calc(1.05rem + 1px);
+  --nauha-pituus: 18.4rem;
+  --nauha-korkeus: 2.4rem;
+  --nauha-teksti: 0.78rem;
+  --nauha-marginaali: calc(0.55rem + 1px);
   /* Suurennoksen kuvassa ei ole pyöristystä, vain 1px mustereunus. */
   --nauha-kaari: 0;
   --nauha-kaari-ulko: 0;
@@ -932,15 +690,6 @@
    pohjana. */
 .fokuskohde-zoomkehys { position: relative; }
 
-/* IHMEKUVAN KEHYS SAA LEVEÄMMÄN VALKOISEN MARGINAALIN (omistajan
-   tilaus 27.8.2026 ilta: *"tuohon ihmekuvaan pitää ainakin tehdä
-   enemmän tilaa valkoiselle reunalle, jotta nauha mahtuu siihen
-   oikein"*). JS lisää luokan nauhaa piirtäessään; muut suurennokset
-   säilyttävät kapean pehmusteen. --nauha-marginaali (yllä) on sama
-   luku + kuvan 1px mustereunus — niiden on pysyttävä käsi kädessä. */
-.fokuskohde-zoomkehys.fokuskohde-ihmeisanta {
-  padding: 1.05rem 1.05rem 0.45rem;
-}
 
 /*
  * "KOE IHME" -NAPPI ENSIMMÄISEN KUVAN ALLA (omistajan tilaus 27.8.2026
@@ -993,9 +742,9 @@
  * vain MITAT UUSILLE ISÄNNILLE, aivan kuten kortti ja fokusmoodin
  * suurennos saavat omansa (.fokuskohde-kuva, .fokuskohde-zoomkehys).
  *
- * PAPERIPOHJUSTUS ON OSA NAUHAA, EI KORISTE. Nauhan nurja puoli
- * (takakaista) kääntyy kuvan reunan yli marginaalille; ilman
- * marginaalia se leikkautuisi kuvan reunaan kuin veitsellä. Nähtävyysjutun kuva
+ * PAPERIPOHJUSTUS EI OLE ENÄÄ NAUHAN OSA (nauha loppuu kuvan
+ * reunaan), mutta nauhallinen kuva pidetään silti paperilla:
+ * marginaali kehystää kuvan samalla eleellä kuin suurennoksessa. Nähtävyysjutun kuva
  * on ilman pehmustetta, joten nauhallinen kuva — ja VAIN se, luokka
  * `kuva-nauhalla` — saa saman kerman kuin kortissa.
  */
@@ -1011,11 +760,10 @@
    ryhmä (.fokuskohde-kuva). Kaari on .nahtavyys-kuvan oma 4px. */
 .nahtavyys-kuvakehys.kuva-nauhalla,
 .karuselli-ikkuna.kuva-nauhalla {
-  --nauha-pituus: 12.4rem;
-  --nauha-korkeus: 1.5rem;
-  --nauha-taite: 3.2rem;
-  --nauha-teksti: 0.6rem;
-  --nauha-marginaali: 0.65rem;
+  --nauha-pituus: 13.7rem;
+  --nauha-korkeus: 1.8rem;
+  --nauha-teksti: 0.58rem;
+  --nauha-marginaali: 0.4rem;
   --nauha-kaari: 4px;
   --nauha-kaari-ulko: 4px;
 }
@@ -1025,11 +773,10 @@
    (width: fit-content), joten marginaali tulee pohjustuksesta eikä
    kehyksen pehmusteesta — kaari on 0, koska kuvaa ei pyöristetä. */
 .suurennos-kuvakotelo.kuva-nauhalla {
-  --nauha-pituus: 17rem;
-  --nauha-korkeus: 1.87rem;
-  --nauha-taite: 4.3rem;
-  --nauha-teksti: 0.79rem;
-  --nauha-marginaali: 1.05rem;
+  --nauha-pituus: 18.4rem;
+  --nauha-korkeus: 2.4rem;
+  --nauha-teksti: 0.78rem;
+  --nauha-marginaali: 0.5rem;
   --nauha-kaari: 0;
   --nauha-kaari-ulko: 0;
 }
