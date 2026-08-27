@@ -41,6 +41,13 @@
  * ja Kreetan laatat nimineen itse, ja kuvaan poltettu toisinto olisi
  * tupla, joka ei liikkuisi laatan mukana.
  *
+ * SAMASTA SYYSTÄ NIMEÄMISEN VOI LUOVUTTAA PELILLE LAJEITTAIN
+ * (`poltetutNimet`, omistaja 27.8.2026): fokuskohteiden nimiöt
+ * (js/fokusnosto-symbolit.js) latovat vuorten ja merten nimet kartalle
+ * merkkiensä perään, ja Kreikan lehdellä ne osuivat kuvaan poltettujen
+ * nimien viereen. Kreikka on ainoa maa, jolla kytkin on päällä; ilman
+ * merkintää lehti syntyy täsmälleen kuten ennen.
+ *
  * Lähteet: Natural Earth 10m ja Wikipedia (sijainnit, korkeudet).
  */
 
@@ -98,6 +105,34 @@ export const FOKUSMAAT = {
       { iso: 'TUR', nimi: 'Turkki', lon: 29.6, lat: 38.9 },
       { iso: 'ITA', nimi: 'Italia', lon: 18.0, lat: 40.55 },
     ],
+
+    /*
+     * VUORTEN JA MERTEN NIMET JÄÄVÄT POLTTAMATTA (omistaja 27.8.2026).
+     *
+     * Peli latoo v1207:stä alkaen jokaisen fokuskohteen perään oman
+     * nimiönsä (js/fokusnosto-symbolit.js NIMIÖ), ja kohdemerkit
+     * istuvat täsmälleen niissä pisteissä, joihin tämä taulu latoo
+     * omat nimensä: Ólympos, Parnassós, Taÿgetos ja Psilorítis saivat
+     * nimensä kahdesti vierekkäin, samoin Egeanmeri ja Joonianmeri.
+     * Nimiö on kahdesta kerroksesta se, joka LIIKKUU KOHTEEN MUKANA ja
+     * jonka pelaaja voi napauttaa auki, joten kuvaan poltettu toisinto
+     * väistyy — ei toisin päin.
+     *
+     * KYTKIN ON MAAKOHTAINEN eikä moottorin oletus: muiden maiden
+     * lehdet ovat ämpärissä sellaisina kuin ne on renderöity, eikä
+     * niitä ajeta tässä erässä uudelleen. Puuttuva `poltetutNimet`
+     * tarkoittaa siis yhä "polta kaikki", ja tämän maan lehti on
+     * ainoa, joka on renderöity uusiksi.
+     *
+     * MITÄ KUVAAN JÄÄ: vuoren hachure-kolmio ja sen korkeuslukema.
+     * Kolmio on kartan omaa merkintää eikä nimeämistä — se kertoo
+     * MISSÄ vuori on silloinkin, kun kohdemerkit eivät ole päällä — ja
+     * "2918 m" ei toista nimiötä vaan täydentää sitä. Merillä ei ole
+     * kuvassa muuta merkintää kuin nimi, joten niistä katoaa koko
+     * merkintä; Kreetanmeri, Traakianmeri ja Smólikas jäävät siis
+     * nimeämättä, mikä on tämän linjauksen tietoinen hinta.
+     */
+    poltetutNimet: { meret: false, vuoret: false },
 
     /* Merten nimet: harvaa kursiivia ulapalle, kulma seuraa merta. */
     meret: [
