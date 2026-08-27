@@ -1432,9 +1432,10 @@ function kysyKohteesta(ui, kysymys) {
  * NAUHAN PIIRTÄÄ PELI, EI KUVATIEDOSTO (Raamattu: *"peli piirtää nauhan
  * kuvan päälle, sitä ei polteta kuvatiedostoon"*). Nauha on DIAGONAALINEN
  * KULMANAUHA kuvan vasemmassa yläkulmassa (omistajan tilaus 27.8.2026
- * ilta): 45 asteen kaista, jonka päät katkeavat kuvan reunaan ja
- * tummenevat juuri ennen sitä — nauha näyttää kääriytyvän kuvan ympäri
- * sen sijaan että leijuisi sen päällä. Geometria on kokonaan css:ssä
+ * ilta): 45 asteen kaista, joka taittuu kuvan reunalla ja jatkuu siitä
+ * kapeampana ja tummempana kehyksen paperimarginaalille — nauha
+ * näyttää kääriytyvän kuvan ympäri sen sijaan että leijuisi sen
+ * päällä tai loppuisi kuin veitsellä. Geometria on kokonaan css:ssä
  * (css/fokuskohteet.css, osio MATKAKIRJAN IHME); täällä syntyy vain
  * rakenne: kääre, kaksi taitetta ja tekstikaista.
  *
@@ -1447,6 +1448,20 @@ function kysyKohteesta(ui, kysymys) {
 
 /** Nauhan teksti — yksi totuus kortissa ja suurennoksessa. */
 const KOHDE_IHMENAUHA = 'Matkakirjan ihme';
+
+/*
+ * NAUHAN SÄVY: yksi rivi, kaksi valmista väriryhmää (omistajan tilaus
+ * 27.8.2026 ilta: *"tee kaksi väriversiota rinnakkain … molempien
+ * pitää olla valmiita"*). Tyhjä = KULTA (pergamentti);
+ * 'fokuskohde-ihmenauha--puna' = PUNA (sinettivaha). Molempien sävyt
+ * ovat css/fokuskohteet.css:n osiossa MATKAKIRJAN IHME omina
+ * muuttujaryhminään, joten vaihto ei koske mihinkään muuhun.
+ *
+ * OMISTAJAN VALINTA 27.8.2026 ILTA: PUNA. Kulta jää kytkimen taakse
+ * — se on yhä täysin toimiva ryhmä, ja tämän rivin tyhjentäminen
+ * palauttaa sen.
+ */
+const KOHDE_IHMENAUHAN_SAVY = 'fokuskohde-ihmenauha--puna';
 
 /**
  * Kohteen ihmekuva kuvaoliona, tai null jos kohteella ei ole ihmettä.
@@ -1470,30 +1485,46 @@ function kohteenIhmekuva(kohde) {
  * suurennoksessa kuvan oma kehys) — kaikki mitat ja kulmat ovat
  * css:ssä.
  *
- * KOLME OSAA, KOSKA KÄÄRIYTYMINEN ON KOLME KAPPALETTA: kaista on
- * 45 asteen kulmaan käännetty tekstipalkki, joka kulkee kulman yli, ja
- * kaksi taitetta ovat kaistan päissä olevat tummenevat vyöhykkeet —
- * ne ovat se kohta, jossa paperi kaareutuu varjoon ja katoaa kuvan
- * reunan taakse. Ilman taitteita kaista näyttäisi vain vinolta
- * lipukkeelta.
+ * KAKSI KÄÄRETTÄ, KOSKA RAJOJA ON KAKSI (omistajan tilaus 27.8.2026
+ * ilta, lähikuva suurennoksesta: *"nauhan pitäisi mennä hieman kuvan
+ * ulkopuolelle eli valkoisen paperimarginaalin päälle, jotta näyttää
+ * että se oikeasti kaartuu kuvan ympärille"*). Ulompi kääre
+ * (.fokuskohde-ihmenauha) ulottuu marginaalille ja leikkaa nauhan
+ * vasta kehyksen reunaviivaan; sisempi (.fokuskohde-ihmekuvaosa) on
+ * täsmälleen kuvan kokoinen ja pitää kaistan — ja siis TEKSTIN —
+ * kuvan sisällä. Ennen kääreitä oli yksi, ja kaista katkesi kuvan
+ * reunaan kuin veitsellä leikaten.
  *
- * KÄÄRE LEIKKAA NAUHAN KUVAN REUNAAN (omistajan tilaus 27.8.2026,
- * iPad-kaappaus): kääre on kuvan kulmassa oleva neliö, jolla on
- * `overflow: hidden`, joten kaistan päät ja niiden varjo katkeavat
- * täsmälleen kuvan reunaan eivätkä jatku vaalean paperikehyksen
- * päälle. Sama komponentti istuu kortin kuvaan ja suurennokseen
- * pelkillä muuttujien arvoilla.
+ * VIISI OSAA, KOSKA KÄÄRIYTYMINEN ON VIISI KAPPALETTA: kaista on
+ * 45 asteen kulmaan käännetty tekstipalkki, joka kulkee kulman yli;
+ * kaksi taitetta ovat kaistan päissä olevat tummenevat vyöhykkeet —
+ * ne ovat se kohta, jossa paperi kaareutuu varjoon kuvan reunalla —
+ * ja kaksi kääntynyttä päätä jatkavat taitteesta marginaalille
+ * nauhan nurjana puolena. Ilman taitteita kaista näyttäisi vinolta
+ * lipukkeelta; ilman päitä se loppuisi kuvan reunaan.
+ *
+ * Sama komponentti istuu kortin kuvaan ja suurennokseen pelkillä
+ * muuttujien arvoilla; myös väriryhmä on pelkkä luokka
+ * (KOHDE_IHMENAUHAN_SAVY).
  */
 function piirraIhmenauha(isanta, teksti) {
   if (!teksti) return null;
   const nauha = html('span', 'fokuskohde-ihmenauha');
+  if (KOHDE_IHMENAUHAN_SAVY) nauha.classList.add(KOHDE_IHMENAUHAN_SAVY);
   nauha.setAttribute('aria-hidden', 'true');
+  // Kääntyneet päät ENSIN: ne jäävät marginaalilla omilleen, mutta
+  // niiden sisäpää työntyy kuvan puolelle taitteen alle — ja siellä
+  // sen kuuluu jäädä kaistan taakse, ei sen päälle.
+  nauha.appendChild(html('span', 'fokuskohde-ihmepaa fokuskohde-ihmepaa-ylos'));
+  nauha.appendChild(html('span', 'fokuskohde-ihmepaa fokuskohde-ihmepaa-vasen'));
+  const kuvaosa = html('span', 'fokuskohde-ihmekuvaosa');
   // Kaista ensin, taitteet päälle: taitteet ovat läpinäkyviä varjon
   // liukuvärejä kaistan päissä, joten ne kuuluvat kaistan PÄÄLLE —
   // alle jäädessään ne peittyisivät kaistan omaan pohjaväriin.
-  nauha.appendChild(html('span', 'fokuskohde-ihmekaista', teksti));
-  nauha.appendChild(html('span', 'fokuskohde-ihmetaite fokuskohde-ihmetaite-ylos'));
-  nauha.appendChild(html('span', 'fokuskohde-ihmetaite fokuskohde-ihmetaite-vasen'));
+  kuvaosa.appendChild(html('span', 'fokuskohde-ihmekaista', teksti));
+  kuvaosa.appendChild(html('span', 'fokuskohde-ihmetaite fokuskohde-ihmetaite-ylos'));
+  kuvaosa.appendChild(html('span', 'fokuskohde-ihmetaite fokuskohde-ihmetaite-vasen'));
+  nauha.appendChild(kuvaosa);
   isanta.appendChild(nauha);
   return nauha;
 }
