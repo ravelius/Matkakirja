@@ -1031,14 +1031,17 @@ await sivu.waitForTimeout(300);
  *      VALOKUVA → "Koe ihme" -nappi → leipäteksti. Nappi seisoo siinä
  *      kohdassa, jossa poistettu loistoaikarekonstruktio ennen oli, eikä
  *      kortissa saa olla enää kahta kuvaa.
- *   b) NAUHA ON DIAGONAALINEN JA KÄÄRIYTYY KUVAN TAAKSE: kaista on
+ *   b) NAUHA ON DIAGONAALINEN JA KÄÄRIYTYY KUVAN YMPÄRI: kaista on
  *      käännetty 45 astetta ja sen laatikko jatkuu kuvan ylä- ja
- *      vasemman reunan YLI, mutta KÄÄRE LEIKKAA ylityksen kuvan
- *      reunaan (`overflow: hidden`, kääre kokonaan kuvan sisällä).
- *      Molemmat mitataan, koska ne kaatuvat eri virheistä:
- *      leikkaamaton nauha leijui paperikehyksen päällä (omistajan
- *      iPad-kaappaus 27.8.2026, v1195), ja pelkkä lyhennetty kaista
- *      taas näyttäisi lipukkeelta joka loppuu kesken kuvan.
+ *      vasemman reunan YLI. Rajoja on kolme ja jokainen mitataan
+ *      erikseen (nauhanRajat), koska ne kaatuvat eri virheistä:
+ *      leikkaamaton nauha leijui paperikehyksen päällä (v1195),
+ *      pelkkä lyhennetty kaista näyttäisi lipukkeelta joka loppuu
+ *      kesken kuvan, ja tarkalleen kuvan reunaan leikattu nauha
+ *      loppui *"kuin veitsellä leikaten"* (omistajan lähikuva
+ *      27.8.2026 ilta, v1212). Nyt kaista loppuu kuvan reunaan
+ *      (sisäkääre), kääntyneet päät jatkavat paperimarginaalille
+ *      (kaksi kappaletta) ja ulkokääre leikkaa vasta siellä.
  *      Taitteita on kaksi.
  *   c) NAUHA EI OTA NAPAUTUKSIA: kortissa se on suurennosnapin päällä.
  *   d) TEKSTI MAHTUU LEIKKAUKSEN SISÄÄN — eikä vain kaistan laatikkoon
@@ -1172,15 +1175,63 @@ const ihmekortti = () => sivu.evaluate(() => {
     muunnos: kaista ? getComputedStyle(kaista).transform : '',
     osoitin: nauha ? getComputedStyle(nauha).pointerEvents : '',
     yli: k && i ? { ylos: Math.round(i.top - k.top), vasen: Math.round(i.left - k.left) } : null,
-    // Leikkaus: kääre on kokonaan kuvan sisällä eikä paperin päällä.
     leikkaus: nauha ? getComputedStyle(nauha).overflow : '',
-    kaareKuvassa: nauha && kuva ? (() => {
-      const n = nauha.getBoundingClientRect();
-      return n.top >= i.top - 0.5 && n.left >= i.left - 0.5
-        && n.right <= i.right + 0.5 && n.bottom <= i.bottom + 0.5;
-    })() : null,
   };
 });
+
+/*
+ * NAUHAN KOLME RAJAA (omistajan tilaus 27.8.2026 ilta, lähikuva
+ * suurennoksen nauhasta: *"nauha leikkautuu täsmälleen kuvan reunaan …
+ * nauhan pitäisi mennä hieman kuvan ulkopuolelle eli valkoisen
+ * paperimarginaalin päälle"*). Yksi mittaus, kolme lukua — ja jokainen
+ * kaatuu eri virheestä:
+ *
+ *   • YLITE > 0: ulkokääre alkaa kuvan reunan ULKOPUOLELTA, eli
+ *     kääntyneelle päälle on tilaa marginaalilla. Nolla = v1212:n
+ *     veitsileikkaus takaisin.
+ *   • YLITE ≤ MARGINAALI: ylite ei saa syödä koko paperimarginaalia
+ *     eikä siis päästä nauhaa kehyksen ulkopuolelle (v1195:n leijuva
+ *     nauha). Marginaali mitataan isännän pehmustelaatikosta kuvaan.
+ *   • SISUS KUVASSA: kaista ja teksti ovat sisäkääreessä, joka on
+ *     kokonaan kuvan sisällä — teksti ei voi valua ylitteeseen.
+ *
+ * Lisäksi kääntyneitä päitä on kaksi ja kumpikin yltää oikeasti kuvan
+ * reunan yli: pelkkä tilan varaaminen ei vielä piirrä mitään.
+ */
+const nauhanRajat = (isantaSel, kuvaSel) => sivu.evaluate(([hs, ks]) => {
+  const isanta = document.querySelector(hs);
+  const nauha = isanta?.querySelector('.fokuskohde-ihmenauha');
+  const kuva = isanta?.querySelector(ks);
+  if (!nauha || !kuva) return null;
+  const n = nauha.getBoundingClientRect();
+  const i = kuva.getBoundingClientRect();
+  const h = isanta.getBoundingClientRect();
+  const ht = getComputedStyle(isanta);
+  const sisus = nauha.querySelector('.fokuskohde-ihmekuvaosa');
+  const s = sisus?.getBoundingClientRect();
+  const paat = [...nauha.querySelectorAll('.fokuskohde-ihmepaa')];
+  const pr = (sel) => nauha.querySelector(sel)?.getBoundingClientRect();
+  const ylos = pr('.fokuskohde-ihmepaa-ylos');
+  const vasen = pr('.fokuskohde-ihmepaa-vasen');
+  const p1 = (x) => Math.round(x * 10) / 10;
+  return {
+    // Marginaali = matka isännän pehmustelaatikon nurkasta kuvan nurkkaan.
+    marginaali: {
+      ylos: p1(i.top - h.top - parseFloat(ht.borderTopWidth)),
+      vasen: p1(i.left - h.left - parseFloat(ht.borderLeftWidth)),
+    },
+    ylite: { ylos: p1(i.top - n.top), vasen: p1(i.left - n.left) },
+    leikkaus: getComputedStyle(nauha).overflow,
+    sisusLeikkaus: sisus ? getComputedStyle(sisus).overflow : '',
+    sisusKuvassa: s ? (s.top >= i.top - 0.6 && s.left >= i.left - 0.6) : null,
+    paita: paat.length,
+    // Kuinka pitkälle kääntynyt pää oikeasti yltää kuvan reunan yli.
+    paaYli: {
+      ylos: ylos ? p1(i.top - ylos.top) : null,
+      vasen: vasen ? p1(i.left - vasen.left) : null,
+    },
+  };
+}, [isantaSel, kuvaSel]);
 
 /** Suurennoksen nauha: sama komponentti, isommat mitat. */
 const ihmezoom = () => sivu.evaluate(() => {
@@ -1199,11 +1250,6 @@ const ihmezoom = () => sivu.evaluate(() => {
     teksti: kaista?.textContent ?? '',
     yli: k && i ? { ylos: Math.round(i.top - k.top), vasen: Math.round(i.left - k.left) } : null,
     leikkaus: nauha ? getComputedStyle(nauha).overflow : '',
-    kaareKuvassa: nauha && kuva ? (() => {
-      const n = nauha.getBoundingClientRect();
-      return n.top >= i.top - 0.5 && n.left >= i.left - 0.5
-        && n.right <= i.right + 0.5 && n.bottom <= i.bottom + 0.5;
-    })() : null,
     lahde: kehys.querySelector('.fokuskohde-zoomlahde')?.textContent ?? '',
   };
 });
@@ -1254,9 +1300,20 @@ vaadi('suurennoksen nauha on 45 asteen kulmanauha, ei vaakalaatikko',
 vaadi('suurennoksen nauha kääriytyy: päät kuvan reunojen yli, kaksi taitetta',
   zoom?.taitteita === 2 && zoom.yli.ylos > 0 && zoom.yli.vasen > 0,
   JSON.stringify(zoom?.yli));
-vaadi('suurennoksen nauha leikkautuu kuvan reunaan eikä leiju paperilla',
-  zoom?.leikkaus === 'hidden' && zoom.kaareKuvassa === true,
-  `${zoom?.leikkaus} / kääre kuvassa: ${zoom?.kaareKuvassa}`);
+let rajat = await nauhanRajat('.fokuskohde-zoomkehys', '.fokuskohde-zoomkuva');
+vaadi('suurennoksen nauha jatkuu kuvan reunan yli paperimarginaalille',
+  rajat?.ylite.ylos > 0.5 && rajat.ylite.vasen > 0.5, JSON.stringify(rajat?.ylite));
+vaadi('suurennoksen ylite ei syö koko marginaalia eikä karkaa kehyksestä',
+  rajat?.leikkaus === 'hidden'
+  && rajat.ylite.ylos <= rajat.marginaali.ylos + 0.6
+  && rajat.ylite.vasen <= rajat.marginaali.vasen + 0.6,
+  JSON.stringify({ ylite: rajat?.ylite, marginaali: rajat?.marginaali }));
+vaadi('suurennoksen kaista ja teksti pysyvät kuvan sisällä (sisäkääre)',
+  rajat?.sisusLeikkaus === 'hidden' && rajat.sisusKuvassa === true,
+  `${rajat?.sisusLeikkaus} / sisus kuvassa: ${rajat?.sisusKuvassa}`);
+vaadi('suurennoksen kääntyneet päät yltävät marginaalille, kaksi kappaletta',
+  rajat?.paita === 2 && rajat.paaYli.ylos > 0.5 && rajat.paaYli.vasen > 0.5,
+  JSON.stringify({ paita: rajat?.paita, yli: rajat?.paaYli }));
 /*
  * TEKSTI MAHTUU LEIKKAUKSEN SISÄÄN, EI VAIN KAISTAN LAATIKKOON, ja
  * jäljelle jää varaa leveämmälle kirjasimelle (ks. nauhanSovitus).
@@ -1302,9 +1359,21 @@ vaadi('kortin nauha on sekin 45 asteen kulmanauha kahdella taitteella',
   `${ihme?.muunnos} / ${ihme?.taitteita} taitetta`);
 vaadi('kortin nauha jatkuu kuvan ylä- ja vasemman reunan yli',
   ihme?.yli && ihme.yli.ylos > 0 && ihme.yli.vasen > 0, JSON.stringify(ihme?.yli));
-vaadi('kortin nauha leikkautuu kuvan reunaan eikä leiju kortin paperilla',
-  ihme?.leikkaus === 'hidden' && ihme.kaareKuvassa === true,
-  `${ihme?.leikkaus} / kääre kuvassa: ${ihme?.kaareKuvassa}`);
+rajat = await nauhanRajat('.fokuskohde-popup .fokuskohde-kuvanappi',
+  '.fokuskohde-kuva img');
+vaadi('kortin nauha jatkuu kuvan reunan yli paperipohjustukselle',
+  rajat?.ylite.ylos > 0.5 && rajat.ylite.vasen > 0.5, JSON.stringify(rajat?.ylite));
+vaadi('kortin ylite ei syö koko pohjustusta eikä karkaa napin reunan yli',
+  rajat?.leikkaus === 'hidden'
+  && rajat.ylite.ylos <= rajat.marginaali.ylos + 0.6
+  && rajat.ylite.vasen <= rajat.marginaali.vasen + 0.6,
+  JSON.stringify({ ylite: rajat?.ylite, marginaali: rajat?.marginaali }));
+vaadi('kortin kaista ja teksti pysyvät kuvan sisällä (sisäkääre)',
+  rajat?.sisusLeikkaus === 'hidden' && rajat.sisusKuvassa === true,
+  `${rajat?.sisusLeikkaus} / sisus kuvassa: ${rajat?.sisusKuvassa}`);
+vaadi('kortin kääntyneet päät yltävät pohjustukselle, kaksi kappaletta',
+  rajat?.paita === 2 && rajat.paaYli.ylos > 0.5 && rajat.paaYli.vasen > 0.5,
+  JSON.stringify({ paita: rajat?.paita, yli: rajat?.paaYli }));
 // Sama sovitusmittaus kortille: se oli suurennosta ahtaammalla, vaikka
 // omistaja näki leikkautumisen suurennoksesta (27.8.2026 ilta).
 sovitus = await nauhanSovitus('.fokuskohde-popup .fokuskohde-kuva');

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1222, teksti: 'Ihmenauha sinettivahan punaiseksi ja reunan yli' },
   { v: 1221, teksti: 'Livia-kokeilu: pulun tekstit pollon tilalle' },
   { v: 1220, teksti: 'Aliakmonas Strymonas ja Evros kohteiksi' },
   { v: 1219, teksti: 'Nimiokato korjattu ja osumatestit kuntoon' },

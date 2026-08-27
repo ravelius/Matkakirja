@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1222: Ihmenauha on nyt sinettivahan punainen, leveampi ja paat kaartuvat kuvan reunan yli marginaalille tummana nurjana puolena - tarkista ihmekuvan kortti ja suurennos laitteella',
   'v1221: PULU-KOKEILU - Viisas Pollo on nyt teksteissa Livia (Columba Livia, kirjekyyhky): tervehdys, otsikot, rajaviestit ja workerin persoona vaihtuivat; kuvat ja tasot viela polloa - pelitestaa miten Livian teksti kulkee',
   'v1220: Kreikan kolme jokea (Aliakmonas, Strymonas, Evros) ovat nyt klikattavia kohteita ja poltetut joennimet pudotettu lehdesta - tarkista etta jokien kortit aukeavat ja nimet nakyvat nimioina',
   'v1219: Nimiot palasivat merkeille joilta ne puuttuivat (Marathon, Ermoupoli, Kalamata, Iraklion, Delfoi, Reunuskilpikonna, Psiloritis - nimio osaa nyt myos vasemman puolen), Parnassos ja Delfoi klikattavissa erikseen, ja kaupungin poltettu nimi (esim. Thessaloniki) avaa kortin',
