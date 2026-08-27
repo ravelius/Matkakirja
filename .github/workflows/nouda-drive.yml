@@ -1,0 +1,68 @@
+# Herokuvien nouto omistajan Google Drive -kansiosta artifaktiksi.
+# 27.8.2026: Drive-MCP-yhteys katkesi pysyvästi, ja tämä työnkulku on
+# korvaava reitti: listaa kansion tiedostot Drive API v3:lla
+# (GOOGLE_API_KEY repo-secreteistä; toimii kun kansio on
+# linkkijaossa) ja lataa kuvat artifaktiksi "drive-herot".
+# Kuvia EI committoida — integroija noutaa artifaktin, katsoo silmin
+# ja vie hyväksytyt vienti-worktreen kautta kuten ennenkin.
+name: Nouda Drive-herot
+
+on:
+  workflow_dispatch:
+    inputs:
+      kansio:
+        description: 'Drive-kansion id'
+        type: string
+        default: '1cb71_5fqmjortf13A6juJ712EK2OBom1'
+
+permissions:
+  contents: read
+
+jobs:
+  nouda:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Listaa ja lataa
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          KANSIO: ${{ inputs.kansio }}
+        run: |
+          set -euo pipefail
+          mkdir -p drive-herot
+          node - <<'SKRIPTI'
+          const avain = process.env.GOOGLE_API_KEY;
+          const kansio = process.env.KANSIO;
+          const { writeFileSync } = await import('node:fs');
+          let sivu = '';
+          const tiedostot = [];
+          do {
+            const url = 'https://www.googleapis.com/drive/v3/files'
+              + `?q='${kansio}'+in+parents+and+trashed=false`
+              + '&fields=nextPageToken,files(id,name,mimeType,size)'
+              + `&pageSize=100&key=${avain}` + (sivu ? `&pageToken=${sivu}` : '');
+            const v = await fetch(url);
+            if (!v.ok) { console.error('lista: HTTP', v.status, (await v.text()).slice(0, 300)); process.exit(1); }
+            const data = await v.json();
+            tiedostot.push(...(data.files ?? []));
+            sivu = data.nextPageToken ?? '';
+          } while (sivu);
+          console.log(`kansiossa ${tiedostot.length} tiedostoa`);
+          let virheita = 0;
+          for (const t of tiedostot) {
+            if (!/^image\//.test(t.mimeType)) { console.log(`ohitus (${t.mimeType}): ${t.name}`); continue; }
+            const v = await fetch(`https://www.googleapis.com/drive/v3/files/${t.id}?alt=media&key=${avain}`);
+            if (!v.ok) { console.error(`${t.name}: HTTP ${v.status}`); virheita += 1; continue; }
+            const puskuri = Buffer.from(await v.arrayBuffer());
+            const nimi = t.name.replace(/[^A-Za-z0-9._-]/g, '_');
+            writeFileSync(`drive-herot/${nimi}`, puskuri);
+            console.log(`${nimi} (${puskuri.length} t) ladattu`);
+          }
+          if (virheita) { console.error(`${virheita} epäonnistui`); process.exit(1); }
+          SKRIPTI
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: drive-herot
+          path: drive-herot/
+          retention-days: 7
