@@ -133,6 +133,19 @@ body.paivittyy .app { visibility: hidden; }
    */
   --font-kauno: "Snell Roundhand", "Savoye LET", "Bradley Hand",
     "Segoe Script", "Comic Sans MS", cursive;
+
+  /*
+   * ATLAKSEN LADONTA — sama antiikva, jolla lehteen poltetaan nimet.
+   *
+   * Fokuslehden kuva ladotaan Liberation Serifillä (tools/fokuskartta/
+   * piirto.js `teksti`), ja kun peli latoo kartalle SAMAAN kuvaan
+   * kuuluvia nimiä, sen on käytettävä samaa kirjasinta — muuten
+   * lehden oma ladonta ja pelin nimiöt lukevat eri käsialoina
+   * (omistajan palaute v1211). Liberation Serif on metriikaltaan
+   * Times New Romanin kaksonen, joten varapino antaa laitteilla,
+   * joilla sitä ei ole, saman rytmin ja saman kirjainleveyden.
+   */
+  --font-atlas: "Liberation Serif", "Times New Roman", Times, serif;
 }
 
 * { box-sizing: border-box; }
@@ -20225,14 +20238,81 @@ body.maataulu-auki .toimintorivi .monitoimi-nappi {
    napautettavana se peittäisi naapurimerkin osuma-alueen — merkin oma
    44 px:n ympyrä (.fokuskohde-osuma) hoitaa sormen.
    --------------------------------------------------------------------------- */
+/*
+ * NIMIÖ ON LEHDEN OMAA LADONTAA (27.8.2026 ilta, omistajan palaute laitteelta
+ * v1211: nimiö *"pitää muuttaa täsmälleen samaan tyyliin ja kokoon
+ * kuin karttaan poltetut nimet olivat (esim. poistettu Smólikas:
+ * pieni kursiivi antiikva)"*).
+ *
+ * Luvut ovat suoraan tools/fokuskartta/piirto.js:n kohdasta 8e
+ * (poltettu vuorennimi): kursiivi antiikva, muste rgba(74,52,33,0.92)
+ * ja pergamenttihalo rgba(232,220,188,0.85) leveydellä 3,2. Kaunokäsiala
+ * (--font-kauno) oli tässä 27.8.2026 asti, ja juuri se erotti pelin
+ * nimiöt lehden omista nimistä yhdellä silmäyksellä.
+ */
 .nostosym-nimio {
-  font-family: var(--font-kauno);
-  fill: rgba(70, 51, 31, 0.9);
+  font-family: var(--font-atlas);
+  font-style: italic;
+  fill: rgba(74, 52, 33, 0.92);
   paint-order: stroke;
-  stroke: rgba(239, 220, 180, 0.8);
-  stroke-width: 2.6px;
+  stroke: rgba(232, 220, 188, 0.85);
+  stroke-width: 3.1px;
   stroke-linejoin: round;
   pointer-events: none;
+}
+
+/*
+ * MEREN NIMI ON HARVENNETTU KAPITEELI ILMAN HALOA — piirto.js kohta
+ * 8b. Meren nimi jää paperiin eikä nouse sen päälle, joten sillä ei
+ * ole pergamenttivedosta; harvennuksen hoitaa canvasilla merkeittäin
+ * ladonta (js/fokusnosto-symbolit.js), ja tämä sääntö on elävän
+ * varapolun ja tyylin lukemisen tähden.
+ */
+.nostosym-nimio-meri {
+  fill: rgba(120, 108, 84, 0.72);
+  stroke: none;
+  letter-spacing: 0.28em;
+}
+
+/* ---------------------------------------------------------------------------
+   KARTAN VIIVAMERKKI (js/fokusnosto-symbolit.js NOSTOSYM_MINI)
+
+   Omistajan palaute laitteelta v1211: generoidut mustepiirrokset ovat
+   *"aivan liian raskaita"* — kartalle kuuluu *"superyksinkertainen,
+   minimalistinen, vanhan ajan kartan fiilis — kuten karttaan alunperin
+   poltettu yksinkertainen vuorisymboli (pieni kolmio
+   hachure-viivoituksella)"*.
+
+   Muste ja viivanleveydet ovat poltetun vuorimerkin omat (piirto.js
+   kohta 8e): ääriviiva rgba(58,40,25,0.8) leveydellä 1,15 ja hachure
+   rgba(58,40,25,0.4) leveydellä 0,75. Kartalla merkki piirretään
+   canvasille, joka LUKEE NÄMÄ ARVOT täältä — sävy ei siis ole
+   kahdessa paikassa.
+
+   EI KATEGORIAVÄREJÄ. Heraldiset aksentit (--sym-*) elävät kortin
+   ylärivillä, jossa merkki on 1,5 em; kartalla kaikki on samaa
+   seepiaa kuin lehden oma painojälki, ja kategorian kertoo muoto.
+   --------------------------------------------------------------------------- */
+.nostosym-mini {
+  fill: none;
+  stroke: rgba(58, 40, 25, 0.82);
+  stroke-width: 1.15px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.nostosym-mini-ohut {
+  fill: none;
+  stroke: rgba(58, 40, 25, 0.45);
+  stroke-width: 0.75px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+/* Täytetty piste — sama merkintä kuin lehden omalla kaupunkipisteellä. */
+.nostosym-mini-piste {
+  fill: rgba(58, 40, 25, 0.82);
+  stroke: none;
 }
 
 /*

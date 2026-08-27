@@ -92,7 +92,7 @@
  */
 import { el, maare } from './mapart.js';
 import {
-  NOSTOSYM_LUOKAT, NOSTOSYM_R, NOSTOSYM_TYYPIT,
+  NOSTOSYM_LUOKAT, NOSTOSYM_MINI_R, NOSTOSYM_TYYPIT,
   nostosymAsetaPorras, nostosymNimioLaatikko,
   piirraNostosymKartalle, piirraNostosymboli,
 } from './fokusnosto-symbolit.js';
@@ -440,15 +440,25 @@ function kohteenNimio(kohde) {
  * "Pienennä kaikkia symboleita") — merkit täyttivät kapealla ruudulla
  * saariston niin, että kartta jäi niiden alle.
  */
+/*
+ * LUKU EI MUUTTUNUT VIIVAMERKKIIN SIIRRYTTÄESSÄ (27.8.2026 ilta),
+ * MUTTA SEN MERKITYS TARKENTUI. Kirjasto
+ * piirtää kartalle nyt VIIVAMERKIN, jonka ruutu on 13 yksikköä
+ * (NOSTOSYM_MINI_R * 2) eikä webp-glyyfin 20,8 — merkki kutistui siis
+ * tällä samalla kertoimella noin 11 pikselistä 6,8:aan, eli poltetun
+ * vuorikolmion mittaan (13 prototyyppipikseliä). Kerroin on yhä sama,
+ * jotta lähisukuiset mitat (nimiön koko, väistön varat, nipun välit)
+ * pysyvät keskenään samassa suhteessa.
+ */
 const KOHDE_SYMBOLI_SKAALA = 11 / 21;
 
 /**
- * Symbolin säde kohdemerkin mitassa. Kirjaston merkki on
- * NOSTOSYM_R:n levyinen — ennen 27.8.2026 se oli aluslaatan säde ja
- * nyt läpinäkyvän glyyfin oma ala, mutta luku on sama, joten merkkien
- * välit eivät muuttuneet laatan poistuessa.
+ * Symbolin säde kohdemerkin mitassa. Kirjaston karttamerkki on
+ * NOSTOSYM_MINI_R:n levyinen, ja kaikki merkkien väleistä ja
+ * väistöistä laskettu nojaa tähän lukuun — kun merkki pieneni,
+ * pienenivät myös erottelusiirto ja nimiön törmäysvara sen mukana.
  */
-const KOHDE_SYMBOLI_R = NOSTOSYM_R * KOHDE_SYMBOLI_SKAALA;
+const KOHDE_SYMBOLI_R = NOSTOSYM_MINI_R * KOHDE_SYMBOLI_SKAALA;
 
 /**
  * Yksi merkki: näkymätön osuma-alue, kategorian symboli ja sen perään
@@ -499,9 +509,16 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
       tietue.glyyfi = glyyfi;
       tietue.nimi = kohde.nimi;
       tietue.symboli = symboli;
+      tietue.laji = kohde.tyyppi;
       tietue.nimioNakyy = !ui.fokuskohdePiiloNimiot?.has(kohde.id);
     }
-    piirraNostosymKartalle(glyyfi, symboli, tietue.nimioNakyy ? kohde.nimi : '');
+    /*
+     * TYYPPI KULKEE MERKILLE MUKANA (27.8.2026 ilta). Kirjasto tarvitsee sen
+     * kahteen asiaan: luontokategorian merkki on merelle aaltoviiva ja
+     * vuorelle poltettu kolmio, ja meren nimiö ladotaan harvennettuna
+     * kapiteelina kuten lehteen poltettu EGEANMERI.
+     */
+    piirraNostosymKartalle(glyyfi, symboli, tietue.nimioNakyy ? kohde.nimi : '', kohde.tyyppi);
   } else {
     el('circle', { class: 'fokuskohde-halo', r: KOHDE_HALO_R }, g);
     el('circle', { class: 'fokuskohde-rengas', r: KOHDE_RENGAS_R }, g);
@@ -563,7 +580,14 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
  * limittäin. Isompi luku heittäisi merkit kauas oikealta paikaltaan,
  * ja omistajan lupa siirtoon koski limittäisyyttä.
  */
-const KOHDE_ERO_MIN = 2 * KOHDE_SYMBOLI_R;
+/*
+ * LEVEIN MERKKI ON NYT PISTEKOHTEEN HALO (27.8.2026 ilta). Kun symbolimerkki
+ * kutistui poltetun vuorikolmion mittaan (KOHDE_SYMBOLI_R), se ei ole
+ * enää kartan levein merkintä — kategoriaton pistekohde on. Erottelun
+ * on käytettävä sitä isompaa, tai symbolin ja pisteen pari jäisi
+ * ruudulla limittäin vaikka luku sanoisi muuta.
+ */
+const KOHDE_ERO_MIN = 2 * Math.max(KOHDE_SYMBOLI_R, KOHDE_HALO_R);
 
 /**
  * Rentoutuskierrosten määrä. Kolmen merkin ryppäässä yksi työntö voi
@@ -750,7 +774,7 @@ function paivitaKohdeNimiot(ui, s) {
   const jono = new Map();
   ryhmat.forEach((r, i) => {
     if (!r.glyyfi || !r.nimi) return;
-    const laatikko = nostosymNimioLaatikko(r.nimi, r.g?.ownerSVGElement);
+    const laatikko = nostosymNimioLaatikko(r.nimi, r.g?.ownerSVGElement, r.laji);
     if (!laatikko) return;
     const rivi = jono.get(r.id) ?? { indeksit: [], kehykset: [] };
     rivi.indeksit.push(i);
@@ -780,7 +804,7 @@ function paivitaKohdeNimiot(ui, s) {
     // merkki uudestaan. Nimiötön rasteri on symbolikohtainen ja siksi
     // yhteinen kaikille saman lajin vaienneille merkeille.
     r.glyyfi.replaceChildren();
-    piirraNostosymKartalle(r.glyyfi, r.symboli, nakyy ? r.nimi : '');
+    piirraNostosymKartalle(r.glyyfi, r.symboli, nakyy ? r.nimi : '', r.laji);
   }
 }
 
