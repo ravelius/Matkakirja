@@ -18029,6 +18029,19 @@ button.pollo-ehdotus:disabled { opacity: 0.5; cursor: default; }
 
 .pollo-viesti:last-child { margin-bottom: 0; }
 
+/*
+ * PÖLLÖN VASTAUKSEN RIVINVAIHDOT NÄKYVIIN.
+ *
+ * Vastaus voi päättyä omaan osioonsa ("Livian lisäys:", ks. workerin
+ * järjestelmäkehote), joka kuuluu omalle rivilleen. Vastaus asetetaan
+ * tekstisisältönä eikä sitä tulkita merkkauksena, joten ainoa keino
+ * erottaa rivi on antaa selaimen kunnioittaa mallin rivinvaihtoa.
+ * pre-line riittää: se säilyttää rivinvaihdot mutta kutistaa
+ * ylimääräiset välilyönnit, eikä vaadi mitään uutta muotoilukerrosta.
+ * Koskee vain pöllön puheenvuoroa — pelaajan kysymys on yksi rivi.
+ */
+.pollo-viesti.pollo-pollo { white-space: pre-line; }
+
 .pollo-kayttaja {
   padding: 0.35rem 0.5rem;
   border-radius: 8px;

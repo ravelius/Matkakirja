@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1229: Livian lisays - pulu kommentoi faktavastauksia silloin talloin omalla loppuosiollaan (noin joka 3.-4. faktavastaus).',
   'v1228: Aarrekysymysten vastaukset loytyvat nyt lehdista - Ateenan oliivipuu, Bukarestin Bucur ja Sarajevon dzezva saivat jutut, Istanbulin Medusa-kysymys sovitettu tarukehykseen.',
   'v1227: Saattokamera korjattu - matkalla Ateenasta Sofiaan kartan pitaisi taas seurata nappulaa oikeaan suuntaan (pystyyn) ja saapua ilman loppunykaisya; myos fokuskohteiden merkit palasivat (v1223-regressio)',
   'v1226: Matkakirjan ihmeet nakyvat nyt myos kaupunkikartan nahtavyysikkunassa - kadonneilla havainnekuva nauhoineen karusellin ensimmaisena, olemassa olevilla Koe ihme -nappi kuvan alla (esim. Antiikin agora, Akropolis, Colosseum)',
