@@ -311,6 +311,589 @@ const NOSTO_MAAT = {
       },
     },
   ],
+
+  /*
+   * ── NELJÄ UUTTA MAATA, KYMMENEN NOSTOA (omistajan tilaus 28.8.2026:
+   *    *"muita täkyjä ja karttakohteita voisi rakentaa lisää
+   *    eurooppaan"*) ──────────────────────────────────────────────────
+   *
+   * MALLI ON SOFIAN PILOTTI (js/packs/fokusvirta-sofia.js, nosto
+   * `areena`): lyhyt `nimio` kartalle, klikkiotsikkotasoinen `otsikko`,
+   * `lunastus` KAHTENA KAPPALEENA, `lahde`, tarkistettu `valokuva` ja
+   * kolme valmiskysymystä pululle. Jokainen rivi on rakennettu
+   * VARMAKSI merkitystä ehdokkaasta työaineistossa
+   * (docs/mantereet-tyoaineisto/takynostot-espanja.md, -itavalta.md,
+   * -ranska.md ja -saksa.md), ja jokaisen aineiston oma rajaus on
+   * noudatettu — ne on merkitty rivikohtaisiin kommentteihin.
+   *
+   * LOISTOAIKAKUVAA EI OLE VIELÄ YHDELLÄKÄÄN. Sofian kortin pääkuva on
+   * repon oma generoitu havainnekuva (`kuva.osoite`), eikä tässä erässä
+   * generoitu kuvia. Kenttä on siksi jätetty kokonaan pois: kortti ja
+   * kartan liuska lukevat sitä vain `if (nosto.kuva)` -ehdon takaa
+   * (nostoKlikkiotsikko, avaaNostonKortti), joten kuvaton nosto on
+   * ehjä — otsikko ja lunastus kantavat sen, ja kuvan voi lisätä
+   * myöhemmin yhdellä kentällä. Kakkoskuva (`valokuva`) on kymmenestä
+   * yhdeksällä; se piirtyy tekstin alle omana pienempänä kehyksenään.
+   *
+   * KOHDENAPPIA EI OLE YHDELLÄKÄÄN. Kortin nappi lukee vain datan omaa
+   * `kohde`-kenttää, ja se saa osoittaa VAIN jutun omaan kohteeseen
+   * (ks. nostonKarttakohde). Saksan 21 ja Ranskan 2 kartan kohdetta
+   * eivät kata yhtäkään näistä aiheista — Neuschwansteinilla,
+   * Köpenickillä, luonnontieteellisellä museolla, Altamiralla,
+   * Cartagenalla ja Schönbrunnin tarhalla ei ole omaa karttamerkkiä —
+   * joten nappi jäisi lupaamaan väärän kohteen. Piste hakeutuu silti
+   * lähimmän kohdesymbolin päälle, koska se on esityksen sääntö
+   * (js/fokusnosto-symbolit.js) eikä datan lupaus.
+   *
+   * PAIKAT SAMALLA MENETELMÄLLÄ kuin Kreikan riveillä (ks. yllä):
+   * asteet on muunnettu laudan yksiköiksi valmiiksi ja jätetty
+   * kommenttiin. Asteluvut ovat työaineiston omia siellä missä ne on
+   * kirjattu, muuten Wikipedian `prop=coordinates`-rajapinnasta
+   * 28.8.2026 — arvattuja koordinaatteja ei ole yhtään.
+   */
+  ESP: [
+    {
+      /*
+       * takynostot-espanja.md, ehdokas 1 (VARMA). Aineiston kaksi
+       * kieltoa noudatettu: Marían huudahdusta ei ole (sitä EI ole
+       * lähteessä), eikä kahta eri lukua sekoiteta — julkaisusta
+       * peruutukseen on 22 vuotta, kuolemasta peruutukseen 14, ja
+       * teksti sanoo vain jälkimmäisen.
+       */
+      id: 'altamira',
+      nimio: 'Altamiran katto',
+      otsikko: 'Löytäjää naurettiin väärentäjäksi — anteeksipyyntö tuli, '
+        + 'kun hän oli ollut kuolleena neljätoista vuotta',
+      lunastus: [
+        'Luolan löysi 1868 tiilentekijä Modesto Cubillas, mutta kukaan ei '
+          + 'katsonut kattoon. Vuonna 1879 harrastelija-arkeologi Marcelino '
+          + 'Sanz de Sautuola meni luolaan kahdeksanvuotiaan tyttärensä '
+          + 'Marían kanssa, ja tyttö vei isänsä katsomaan seinien merkkejä. '
+          + 'Isä tajusi, että ne olivat piirroksia: katossa oli lauma '
+          + 'sukupuuttoon kuolleita arobiisoneja, kaksi hevosta, iso '
+          + 'naaraspeura ja mahdollisesti villisika.',
+        'Sautuola julkaisi löytönsä 1880 professori Juan Vilanova y Pieran '
+          + 'tuella. Ranskalaiset asiantuntijat Gabriel de Mortillet ja '
+          + 'Émile Cartailhac kiistivät sen jyrkästi: heidän mielestään '
+          + 'esihistorialliset ihmiset eivät kyenneet abstraktiin '
+          + 'ajatteluun, ja Lissabonin esihistorian kongressissa löytöä '
+          + 'naurettiin ääneen. Sautuolaa syytettiin väärennöksestä, koska '
+          + 'hän ei osannut selittää, miksi katossa ei ollut nokea. Vasta '
+          + '1902, kun vastaavia luolamaalauksia oli löytynyt lisää, '
+          + 'Cartailhac perui julkisesti artikkelissa "Mea culpa d\'un '
+          + 'sceptique". Sautuola oli silloin ollut kuolleena neljätoista '
+          + 'vuotta.',
+      ],
+      lahde: 'en-Wikipedia "Cave of Altamira", johdanto ja osio "Discovery, '
+        + 'excavation, scepticism" (tarkistettu 25.8.2026 työaineistoon '
+        + 'docs/mantereet-tyoaineisto/takynostot-espanja.md, ehdokas 1).',
+      /*
+       * Aineiston oma valinta: sama piirros, jonka takia löytäjää
+       * syytettiin väärentäjäksi. Commons 25.8.2026: 1350×682, public
+       * domain, Restrictions tyhjä.
+       */
+      valokuva: {
+        tiedosto: 'Altamira-1880.jpg',
+        selite: 'Kattomaalausten piirros vuoden 1880 julkaisusta — juuri se '
+          + 'kuva, jonka takia löytäjää syytettiin väärentäjäksi.',
+        lahde: 'Vuoden 1880 julkaisu, Wikimedia Commons (public domain)',
+      },
+      kysymykset: [
+        'Miksi tutkijat eivät uskoneet Altamiran maalauksia aidoiksi?',
+        'Mitä eläimiä Altamiran kattoon on maalattu?',
+        'Miten luolamaalausten ikä nykyään selvitetään?',
+      ],
+      // 43,3825 N / −4,12027778 E — en-Wikipedia "Cave of Altamira"
+      // (fokuskohteet-espanja.md, kohde 10).
+      paikka: {
+        nimi: 'Altamira',
+        laudat: {
+          maailmankartta: { x: 5696, y: 1667.9 },
+          europe: { x: 132.1, y: 752.6 },
+        },
+      },
+    },
+    {
+      /*
+       * ELÄINNOSTO. takynostot-espanja.md, ehdokas 6 (VARMA).
+       * Aineiston ehto noudatettu: laskentavuosi on tekstissä näkyvissä,
+       * koska luku vanhenee.
+       *
+       * PAIKKAA EI OLE, JA SE ON TIETOINEN VALINTA. Aineisto puhuu
+       * "Madridin puistoista" eikä nimeä yhtä pesäpaikkaa, eikä
+       * arvattua koordinaattia kirjoiteta datalle (ks. yllä). Ilman
+       * `paikka`-kenttää piste ottaa paikakseen kaupungin ja siirtyy
+       * laatan vasemmalle puolelle (nostonPaikka, js/fokusnosto-
+       * symbolit.js) — juuri se varapolku, jota varten kenttä on
+       * valinnainen.
+       */
+      id: 'munkkiaratit',
+      nimio: 'Madridin papukaijat',
+      otsikko: 'Madridin puistoissa asuu tuhansia villejä papukaijoja — ja '
+        + 'niiden pesät kasvavat pikkuauton kokoisiksi',
+      lunastus: [
+        'Laji on munkkiaratti, kotoisin Etelä-Amerikasta. Espanjassa elää '
+          + 'yli 80 prosenttia koko Euroopan villistä kannasta, ja '
+          + 'Madridissa niitä laskettiin kesäkuussa 2015 kymmenentuhatta '
+          + 'kahdeksansataa — enemmän kuin missään muualla Euroopassa. '
+          + 'Barcelonassa oli samaan aikaan noin 5 000, Sevillassa 6 300 '
+          + 'vuonna 2021.',
+        'Munkkiaratti on ainoa papukaija, joka rakentaa oksista oikean '
+          + 'pesän eikä tyydy puunkoloon. Yhdyskunta kutoo yhteen '
+          + 'jättipesän, jossa jokaisella parilla on oma sisäänkäynti ja '
+          + 'oma huoneisto. Pesä voi kasvaa pienen auton kokoiseksi, ja '
+          + 'siihen muuttaa alivuokralaisia: kyyhkyjä, varpusia, jopa '
+          + 'oravia. Espanja kielsi lajin pidon ja kaupan vuonna 2013.',
+      ],
+      lahde: 'en-Wikipedia "Monk parakeet", osiot pesinnästä ja '
+        + 'vieraslajistatuksesta (tarkistettu 25.8.2026 työaineistoon '
+        + 'docs/mantereet-tyoaineisto/takynostot-espanja.md, ehdokas 6).',
+      /* Commons 25.8.2026: 6024×4016, CC BY-SA 4.0, Restrictions tyhjä. */
+      valokuva: {
+        tiedosto: 'Cotorra Argentina - Parque del Oeste - Madrid 03.jpg',
+        selite: 'Munkkiaratti Madridin Parque del Oestessa.',
+        lahde: 'Javier Perez Montes, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      kysymykset: [
+        'Miten eteläamerikkalaiset papukaijat päätyivät Madridiin?',
+        'Millainen on munkkiaratin yhteispesä?',
+        'Mitä haittaa vieraslajista on kaupungille?',
+      ],
+    },
+    {
+      /*
+       * takynostot-espanja.md, ehdokas 4 (VARMA yksityiskohdista).
+       * Aineiston kaksi ohjetta noudatettu: otsikko nojaa
+       * merirosvojulistukseen, joka on molemmissa lähdeartikkeleissa,
+       * eikä lippukiistaan, josta artikkelit kertovat eri tarinan;
+       * piirityksen uhreja ei kuvata (13+ -rajaus).
+       */
+      id: 'cartagenan-kantoni',
+      nimio: 'Cartagenan kantoni',
+      otsikko: 'Kaupunki julistautui omaksi valtioksi — ja oma hallitus '
+        + 'julisti sen laivaston merirosvoiksi',
+      lunastus: [
+        'Kun Espanjan tasavalta ei saanut ohjia käsiinsä, Cartagena — maan '
+          + 'Välimeren päälaivastotukikohta — nousi aseelliseen kapinaan '
+          + '12. heinäkuuta 1873 ja julistautui itsenäiseksi kantoniksi. '
+          + 'Kapinalliset saivat puolelleen sataman sota-alukset, jotka '
+          + 'olivat Espanjan parhaita. Kantonin laivasto lähti keräämään '
+          + 'rahaa "ulkovallalta", Almerían kaupungilta, ja kun kaupunki ei '
+          + 'maksanut, se pommitettiin. Madridin hallitus julisti kantonin '
+          + 'johtajan merirosvoksi ja pani hänen päästään palkkion.',
+        'Fregatit Almansa ja Vitoria otettiin lopulta kiinni merirosvoina, '
+          + 'mutta ei espanjalaisten toimesta: kiinniottajat olivat '
+          + 'brittiläinen HMS Swiftsure ja saksalainen SMS Friedrich Karl. '
+          + 'Kantoni kesti puoli vuotta, löi omaa rahaa ja otti '
+          + 'loppuvaiheessa vastaan keskimäärin 1 200 kranaattia päivässä. '
+          + '16. joulukuuta 1873 sen johtaja Roque Barcia kirjoitti '
+          + 'Yhdysvaltain presidentille Ulysses S. Grantille ja pyysi lupaa '
+          + 'nostaa Yhdysvaltain lippu, jotta pommitukset lakkaisivat. '
+          + 'Lupaa ei tullut. Kaupunki antautui 12. tammikuuta 1874.',
+      ],
+      lahde: 'en-Wikipedia "Canton of Cartagena", osiot "Establishment", '
+        + '"Expansion" ja "Defeat", sekä "First Spanish Republic" '
+        + '(tarkistettu 25.8.2026 työaineistoon docs/mantereet-tyoaineisto/'
+        + 'takynostot-espanja.md, ehdokas 4).',
+      /* Commons 25.8.2026: 1216×928, public domain, Restrictions tyhjä. */
+      valokuva: {
+        tiedosto: 'Vista de la ciudad, puerto y Arsenal de Cartagena.jpg',
+        selite: 'Cartagenan satama ja arsenaali vuoden 1778 kaiverruksessa. '
+          + 'Juuri se arsenaali nousi kapinaan.',
+        lahde: 'Juan Fernando Palomino 1778, Wikimedia Commons (public domain)',
+      },
+      kysymykset: [
+        'Mikä oli Cartagenan kantoni?',
+        'Miksi Espanjassa oli vuonna 1873 useita hallituksia peräkkäin?',
+        'Miten kaupunki pystyi lyömään omaa rahaa?',
+      ],
+      // 37,6019 N / −0,9842 E — en-Wikipedia "Cartagena, Spain"
+      // (fokuskohteet-espanja.md, kohde 7).
+      paikka: {
+        nimi: 'Cartagena',
+        laudat: {
+          maailmankartta: { x: 5800.5, y: 1896.2 },
+          europe: { x: 192.3, y: 904.7 },
+        },
+      },
+    },
+  ],
+
+  AUT: [
+    {
+      /*
+       * takynostot-itavalta.md, ehdokas 1 (VARMA). Aineiston rajaus
+       * noudatettu sanatarkasti: romahdusta seurannutta
+       * antisemitististä aaltoa EI oteta otsikkoon eikä lunastukseen.
+       *
+       * ISOISÄN MATKAVUOSI MAINITAAN VAIN LUKUNA. Kaanoni antaa Wienin
+       * 1873-ankkuriksi vuoristovesijohdon (docs/isoisan-raamattu.md:
+       * *"Wien (hengähdys: kahvila, vesijohto 1873)"*), joten näyttelyä
+       * ei sidota isoisän omaan matkaan — vuosiluku riittää, ja pelaaja
+       * tunnistaa sen päiväkirjan vuodeksi itse.
+       */
+      id: 'maailmannayttely-1873',
+      nimio: 'Näyttely ja pörssi',
+      otsikko: 'Keisari avasi maailmannäyttelyn — kahdeksan päivää '
+        + 'myöhemmin poliisi sulki pörssin',
+      lunastus: [
+        'Keisari Franz Joseph avasi maailmannäyttelyn 1. toukokuuta 1873 '
+          + 'sanoen, että Itävalta-Unkari on kaikin puolin ilahduttavassa '
+          + 'nousussa. Kupla oli jo puhkeamassa: maan suurin pankki oli '
+          + 'juuri irtisanonut pörssitalletukset ja myynyt 20 miljoonan '
+          + 'guldenin arvosta arvopapereita.',
+        'Yhdeksäntenä toukokuuta aamulla ilmoitti maksukyvyttömyydestään '
+          + 'meklari Adolf Petschek, jota kutsuttiin meklarikaupan '
+          + 'kuninkaaksi. Samana aamupäivänä kaatui 120 muuta pankkia, ja '
+          + 'kello 13 poliisi sulki pörssin — päivä on Itävallan historian '
+          + '"musta perjantai". Romahdus levisi Berliiniin ja syyskuussa '
+          + 'New Yorkiin, jonka pörssi suljettiin ensimmäistä kertaa '
+          + 'historiassaan kymmeneksi päiväksi. Näyttelylle odotettiin 20 '
+          + 'miljoonaa kävijää; tuli 7,25 miljoonaa, ja tappiota kertyi '
+          + 'noin 15 miljoonaa guldenia.',
+      ],
+      lahde: 'de-Wikipedia "Gründerkrach" ja "Weltausstellung 1873" sekä '
+        + 'en-Wikipedia "Panic of 1873" (tarkistettu 25.8.2026 '
+        + 'työaineistoon docs/mantereet-tyoaineisto/takynostot-itavalta.md, '
+        + 'ehdokas 1).',
+      /* Commons 25.8.2026: 2166×1503, public domain, Restrictions tyhjä. */
+      valokuva: {
+        tiedosto: 'Weltausstellungsgelände-Wien-1873.jpg',
+        selite: 'Maailmannäyttelyn alue Praterissa vuonna 1873.',
+        lahde: 'Historisches Museum der Stadt Wien 1873, Wikimedia Commons '
+          + '(public domain)',
+      },
+      kysymykset: [
+        'Mitä maailmannäyttelyssä 1873 oli nähtävänä?',
+        'Mikä aiheutti Wienin pörssiromahduksen?',
+        'Miten romahdus levisi Wienistä New Yorkiin asti?',
+      ],
+      // 48,21222222 N / 16,40944444 E — de-Wikipedia "Rotunde (Wien)",
+      // näyttelyn tunnusrakennus Praterin alueella.
+      paikka: {
+        nimi: 'Prater',
+        laudat: {
+          maailmankartta: { x: 6380.3, y: 1467.2 },
+          europe: { x: 526.3, y: 625.6 },
+        },
+      },
+    },
+    {
+      /*
+       * ELÄINNOSTO. takynostot-itavalta.md, ehdokas 4 (VARMA).
+       * Aineiston huomautus noudatettu: eläintarhan ikää ja
+       * Kaiserpavillonia ei toisteta, koska ne ovat jo pelissä
+       * (js/packs/kulttuuri-kategoriat.js) — tästä kerrotaan vain se,
+       * mitä kirahvi sai aikaan.
+       */
+      id: 'kirahvimuoti',
+      nimio: 'Kirahvi ja muoti',
+      otsikko: 'Yksi kirahvi muutti koko kaupungin muodin — kampaukset, '
+        + 'hajuveden ja näytelmän',
+      lunastus: [
+        'Schönbrunnin eläintarha sai ensimmäisen kirahvinsa vuonna 1828 '
+          + 'lahjaksi Egyptin varakuninkaalta. Eläin herätti sellaisen '
+          + 'innostuksen, että se levisi muotiin, käsitöihin ja '
+          + 'seuraelämään.',
+        'Kirahvikuvioita ilmestyi vaatteisiin, kenkiin ja käyttöesineisiin, '
+          + 'ja kirahvin innoittamina keksittiin uusia kampauksia, hajuvesi, '
+          + 'näytelmä ja kaksi sävellystä. Tarha itse oli tuolloin yhä '
+          + 'keisariperheen yksityisomaisuutta, ja se pysyi sellaisena aina '
+          + 'Itävalta-Unkarin hajoamiseen 1918 asti.',
+      ],
+      lahde: 'en-Wikipedia "Schönbrunn Zoo", osiot "Founding and early '
+        + 'years" ja "In the 19th century" (tarkistettu 25.8.2026 '
+        + 'työaineistoon docs/mantereet-tyoaineisto/takynostot-itavalta.md, '
+        + 'ehdokas 4).',
+      /* Commons 25.8.2026: 3702×2718, public domain, Restrictions tyhjä. */
+      valokuva: {
+        tiedosto: 'Eduard Gurk - Die erste Giraffe im Schönbrunner Tiergarten - 1828.jpeg',
+        selite: 'Schönbrunnin ensimmäinen kirahvi Eduard Gurkin maalauksessa '
+          + 'samalta vuodelta, jona se saapui.',
+        lahde: 'Eduard Gurk 1828, Wikimedia Commons (public domain)',
+      },
+      kysymykset: [
+        'Miksi kirahvi oli 1800-luvun Euroopassa niin suuri uutinen?',
+        'Miten eläimiä kuljetettiin Egyptistä Wieniin?',
+        'Millainen paikka Schönbrunnin eläintarha oli 1800-luvulla?',
+      ],
+      // 48,1845 N / 16,3119 E — takyt-wien.md, täky 10
+      // (Tiergarten Schönbrunn).
+      paikka: {
+        nimi: 'Schönbrunn',
+        laudat: {
+          maailmankartta: { x: 6377.1, y: 1468.4 },
+          europe: { x: 524.4, y: 626.3 },
+        },
+      },
+    },
+  ],
+
+  FRA: [
+    {
+      /*
+       * takynostot-ranska.md, ehdokas 2 (VARMA). Aineiston sanamuoto
+       * noudatettu: lähde ei anna toiselle yritykselle kuukautta, joten
+       * teksti sanoo "samana vuonna".
+       *
+       * KUVAA EI OLE. Aineiston ainoa tarkistettu tiedosto on Lustigin
+       * pidätyskuva, ja aineisto jättää sen käytön nimenomaisesti
+       * päätoimittajan ratkaistavaksi (*"Fablen on päätettävä, sopiiko
+       * poliisikuva pelin sävyyn"*). Sitä päätöstä ei tehdä tässä.
+       */
+      id: 'lustig-eiffel',
+      nimio: 'Torni romuraudaksi',
+      otsikko: 'Mies myi Eiffel-tornin romuraudaksi — ja palasi samana '
+        + 'vuonna myymään sen uudelleen',
+      lunastus: [
+        'Huijari Victor Lustig luki Pariisissa 1925 lehtijutun siitä, kuinka '
+          + 'kallista Eiffel-tornin kunnossapito on. Hän palkkasi '
+          + 'väärentäjän tekemään valtion kirjelomakkeita, kutsui joukon '
+          + 'romukauppiaita luottamukselliseen kokoukseen kalliiseen '
+          + 'hotelliin ja esittäytyi posti- ja lennätinministeriön '
+          + 'varapääjohtajana: valtio aikoo myydä tornin romuksi, mutta asia '
+          + 'on arkaluontoinen eikä siitä saa puhua.',
+        'Uhrikseen hän valitsi André Poissonin, joka halusi nousta Pariisin '
+          + 'liike-elämän sisäpiiriin, ja sai tältä sekä lahjuksen että '
+          + 'kauppasumman — noin 70 000 frangia. Sitten hän pakeni '
+          + 'Itävaltaan ja luki lehtiä: Poisson ei ollut ilmoittanut '
+          + 'poliisille, koska häpesi. Niinpä Lustig palasi Pariisiin saman '
+          + 'vuoden puolella tekemään saman tempun uudestaan. Tällä kertaa '
+          + 'joku ilmoitti, ja hän pakeni Yhdysvaltoihin.',
+      ],
+      lahde: 'en-Wikipedia "Victor Lustig", osio Eiffel-tornin huijauksesta '
+        + '(tarkistettu 25.8.2026 työaineistoon docs/mantereet-tyoaineisto/'
+        + 'takynostot-ranska.md, ehdokas 2).',
+      kysymykset: [
+        'Miten Eiffel-tornin romukauppa saatiin kuulostamaan uskottavalta?',
+        'Miksi huijauksen uhri ei ilmoittanut poliisille?',
+        'Oliko Eiffel-tornin purkamisesta oikeasti puhetta?',
+      ],
+      // 48,85822222 N / 2,2945 E — en-Wikipedia "Eiffel Tower".
+      paikka: {
+        nimi: 'Eiffel-torni',
+        laudat: {
+          maailmankartta: { x: 5909.8, y: 1439.5 },
+          europe: { x: 255.3, y: 608.6 },
+        },
+      },
+    },
+    {
+      /*
+       * ELÄINNOSTO. takynostot-ranska.md, ehdokas 3 (VARMA). Aineiston
+       * nimikielto noudatettu: nimeä "Zarafa" ei käytetä, koska se
+       * annettiin vasta 1985 — aikalaisten nimi kerrotaan sen sijaan.
+       *
+       * LÄHETYSVUOTTA EI MAINITA. Aineistossa lukee sekä "lähetti 1827"
+       * että "saapui Marseilleen 31.10.1826"; kumpaakaan ei ole
+       * muutettu, vaan tekstiin on otettu vain se päivämäärä, jonka
+       * lähde antaa täsmällisenä.
+       */
+      id: 'kirahvin-kavelymatka',
+      nimio: 'Kirahvin kävelymatka',
+      otsikko: 'Kirahvi käveli 900 kilometriä Marseillesta Pariisiin — '
+        + 'takki päällä ja kengät jalassa',
+      lunastus: [
+        'Egyptin varakuningas lähetti kirahvin Ranskan kuninkaalle '
+          + 'Kaarle X:lle. Eläin saapui laivalla Marseilleen 31. lokakuuta '
+          + '1826 — kannessa oli sahattu reikä, josta kaula mahtui ulos. '
+          + 'Merimatkaa Atlantin ympäri pidettiin liian vaarallisena, joten '
+          + 'päätettiin, että kirahvi kävelee Pariisiin. Luonnontieteilijä '
+          + 'Étienne Geoffroy Saint-Hilaire, 55, käveli mukana ja teetti '
+          + 'eläimelle kaksiosaisen keltaisen takin ja kengät.',
+        'Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja '
+          + 'Pariisissa kirahvia kävi katsomassa yli 100 000 — joka '
+          + 'kahdeksas kaupunkilainen. Hiukset kammattiin torneiksi, '
+          + 'kankaisiin ilmestyi täpliä ja väri nimeltä "kirahvin vatsa" myi '
+          + 'kaiken. Aikalaiset kutsuivat eläintä nimellä la Belle '
+          + 'Africaine, ja se eli Jardin des Plantes\'ssa 18 vuotta.',
+      ],
+      lahde: 'en-Wikipedia "Zarafa (giraffe)", osiot matkasta ja '
+        + 'vastaanotosta (tarkistettu 25.8.2026 työaineistoon '
+        + 'docs/mantereet-tyoaineisto/takynostot-ranska.md, ehdokas 3).',
+      /* Commons 25.8.2026: 4793×6392, public domain, Restrictions tyhjä. */
+      valokuva: {
+        tiedosto: 'Nicolas Hüet, the Younger - Study of the Giraffe Given to Charles X by the Viceroy of Egypt - Google Art Project.jpg',
+        selite: 'Sama kirahvi Nicolas Hüet nuoremman tutkielmassa vuodelta '
+          + '1827.',
+        lahde: 'Nicolas Hüet nuorempi 1827, Wikimedia Commons (public domain)',
+      },
+      kysymykset: [
+        'Miksi kirahvi käveli Marseillesta Pariisiin eikä matkustanut meritse?',
+        'Miten eläin selvisi 900 kilometrin kävelystä?',
+        'Mitä muuta Jardin des Plantes\'n eläintarhassa oli 1800-luvulla?',
+      ],
+      // 48,8447 N / 2,3597 E — en-Wikipedia "Ménagerie du Jardin des
+      // plantes" (takyt-pariisi.md, täky 2).
+      paikka: {
+        nimi: 'Jardin des Plantes',
+        laudat: {
+          maailmankartta: { x: 5912, y: 1440.1 },
+          europe: { x: 256.5, y: 609 },
+        },
+      },
+    },
+  ],
+
+  DEU: [
+    {
+      /* takynostot-saksa.md, ehdokas 1 (VARMA). Henkilö kuollut 1922. */
+      id: 'kopenickin-kapteeni',
+      nimio: 'Köpenickin kapteeni',
+      otsikko: 'Suutari osti univormun palasina ja valtasi kaupungintalon '
+        + '— keisari armahti hänet',
+      lunastus: [
+        'Wilhelm Voigt oli istunut elämänsä aikana yhteensä 25 vuoden '
+          + 'edestä tuomioita ja päässyt vapaaksi helmikuussa 1906. '
+          + 'Elokuussa Berliinin poliisi karkotti hänet kaupungista '
+          + 'pelkästään siksi, että hän oli entinen vanki. Lokakuun 16. '
+          + 'päivänä hän puki ylleen preussilaisen kaartinkapteenin '
+          + 'univormun, jonka oli ostanut palasina eri kaupoista ja jonka '
+          + 'vaikutusta sotilaisiin hän oli ensin koekäyttänyt.',
+        'Hän pysäytti kadulla neljä krenatööriä ja kersantin, otti kuusi '
+          + 'lisää ampumaradalta, vei joukkonsa junalla Köpenickiin, '
+          + 'miehitti kaupungintalon, käski poliisin huolehtia '
+          + 'järjestyksestä ja estää puhelut Berliiniin tunnin ajaksi, '
+          + 'pidätytti pormestarin ja rahastonhoitajan ja takavarikoi '
+          + 'kassasta 4 002 markkaa ja 37 penniä — antaen kuitin, jonka '
+          + 'allekirjoitti entisen vanginvartijansa nimellä. Kiinni '
+          + 'jäätyään hänet tuomittiin neljäksi vuodeksi, mutta keisari '
+          + 'Wilhelm II armahti hänet 1908. Neljä päivää vapautumisensa '
+          + 'jälkeen hän oli jo vahakabinetissa Unter den Lindenillä '
+          + 'signeeraamassa kuviaan.',
+      ],
+      lahde: 'en-Wikipedia "Wilhelm Voigt", johdanto ja osiot "Early life", '
+        + '"Captain of Köpenick", "Unraveling and capture" ja "Aftermath" '
+        + '(tarkistettu 25.8.2026 työaineistoon docs/mantereet-tyoaineisto/'
+        + 'takynostot-saksa.md, ehdokas 1).',
+      /* Commons 25.8.2026: 562×856, public domain, Restrictions tyhjä. */
+      valokuva: {
+        tiedosto: 'Wilhelm Voigt 1906 10 26.jpg',
+        selite: 'Wilhelm Voigt poliisin kuvassa kymmenen päivää tempun '
+          + 'jälkeen.',
+        lahde: 'Preussin poliisi 1906, Wikimedia Commons (public domain)',
+      },
+      kysymykset: [
+        'Miksi sotilaat tottelivat vierasta miestä univormussa?',
+        'Miksi keisari armahti Köpenickin kapteenin?',
+        'Mitä univormu merkitsi keisarillisessa Saksassa?',
+      ],
+      // 52,44583333 N / 13,57722222 E — en-Wikipedia "Köpenick"
+      // (takynostot-saksa.md, ehdokas 1: Rathaus Köpenick).
+      paikka: {
+        nimi: 'Köpenick',
+        laudat: {
+          maailmankartta: { x: 6285.9, y: 1282.2 },
+          europe: { x: 471.9, y: 514.3 },
+        },
+      },
+    },
+    {
+      /*
+       * ELÄINNOSTO. takynostot-saksa.md, ehdokas 2 (VARMA lehmän,
+       * hinnan ja rahoittajan osalta). Aineiston kielto noudatettu:
+       * LÖYTÖVUOTTA EI MAINITA kummassakaan kappaleessa, koska
+       * en-Wikipedian kaksi artikkelia antavat sille eri vuoden.
+       */
+      id: 'archaeopteryx',
+      nimio: 'Fossiili lehmän hinnalla',
+      otsikko: 'Maanviljelijä myi maailman kuuluisimman fossiilin — hinta '
+        + 'oli yksi lehmä',
+      lunastus: [
+        'Berliinin luonnontieteellisessä museossa on lasin alla kivilaatta, '
+          + 'jossa näkyy pieni hampaallinen olento siipineen, kynsineen ja '
+          + 'pitkine liskomaisine häntineen — ja höyhenten painaumat '
+          + 'kivessä. Se on Archaeopteryxin Berliinin yksilö, lajin '
+          + 'kahdestatoista löydetystä yksilöstä täydellisin ja ensimmäinen, '
+          + 'jolla on kokonainen pää.',
+        'Löytäjä oli maanviljelijä Jakob Niemeyer Eichstättin lähellä. '
+          + 'Vuonna 1876 hän myi fossiilin majatalonpitäjä Johann Dörrille '
+          + '— saadakseen rahat lehmän ostoon. Dörr myi sen eteenpäin, ja '
+          + 'vuosina 1877–1881 fossiili oli myynnissä; ostajaehdokkaisiin '
+          + 'kuului Yalen O. C. Marsh. Lopulta Berliinin museo osti sen '
+          + '20 000 kultamarkalla, ja kaupan rahoitti Ernst Werner von '
+          + 'Siemens — sama mies, jonka yhtiö oli rakentanut Berliinin '
+          + 'putkipostin.',
+      ],
+      lahde: 'en-Wikipedia "Archaeopteryx", osio yksilöistä (tarkistettu '
+        + '25.8.2026 työaineistoon docs/mantereet-tyoaineisto/'
+        + 'takynostot-saksa.md, ehdokas 2).',
+      /* Commons 25.8.2026: 3926×4691, CC BY-SA 4.0, Restrictions tyhjä. */
+      valokuva: {
+        tiedosto: 'Berlin Archaeopteryx.jpg',
+        selite: 'Archaeopteryxin Berliinin yksilö: höyhenten painaumat '
+          + 'näkyvät kivessä.',
+        lahde: 'Emily Willoughby, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      kysymykset: [
+        'Miksi Archaeopteryx on niin kuuluisa fossiili?',
+        'Miten höyhenet voivat säilyä kivessä?',
+        'Paljonko 20 000 kultamarkkaa oli 1800-luvulla?',
+      ],
+      // 52,53 N / 13,37944444 E — en-Wikipedia "Museum für Naturkunde"
+      // (takynostot-saksa.md, ehdokas 2).
+      paikka: {
+        nimi: 'Luonnontieteellinen museo',
+        laudat: {
+          maailmankartta: { x: 6279.3, y: 1278.4 },
+          europe: { x: 468.1, y: 512.1 },
+        },
+      },
+    },
+    {
+      /*
+       * takynostot-saksa.md, ehdokas 7 (VARMA). Aineiston
+       * IKÄSOPIVUUSRAJAUS noudatettu sanatarkasti: kuninkaan viimeiset
+       * päivät, hallitsemiskyvyttömäksi julistaminen ja kuolema
+       * Starnberginjärvessä ovat oma kiistelty aihepiirinsä, jota
+       * aineistossa EI tarkistettu — nosto ei koske sitä eikä vihjaa
+       * siihen, vaan siihen että linna maksettiin omista rahoista ja
+       * avattiin yleisölle heti.
+       */
+      id: 'neuschwanstein',
+      nimio: 'Velkojen linna',
+      otsikko: 'Kuningas rakensi satulinnan omilla rahoillaan ja veloillaan '
+        + '— ovet avattiin yleisölle heti hänen kuoltuaan',
+      lunastus: [
+        'Baijerin kuningas Ludwig II halusi pois Münchenin hovin '
+          + 'rajoituksista ja rakennutti Alppien reunalle linnan, joka '
+          + 'näyttää keskiaikaiselta ritarilinnalta mutta on 1800-luvun '
+          + 'työtä ja rakennettu kunnianosoituksena Richard Wagnerille. '
+          + 'Peruskivi laskettiin 5. syyskuuta 1869. Vuonna 1872 kellari '
+          + 'oli valmis, 1876 kaikki ensimmäiseen kerrokseen asti, 1880 '
+          + 'vietettiin harjannostajaisia, ja vasta 1884 kuningas muutti '
+          + 'sisään.',
+        'Hän maksoi kaiken omista varoistaan ja laajalla lainanotolla, ei '
+          + 'Baijerin julkisista varoista. Linna oli tarkoitettu kuninkaan '
+          + 'yksityiseksi asunnoksi — mutta hän kuoli 1886, ja se avattiin '
+          + 'yleisölle pian sen jälkeen. Sen jälkeen siellä on käynyt yli '
+          + '61 miljoonaa ihmistä.',
+      ],
+      lahde: 'en-Wikipedia "Neuschwanstein Castle", johdanto ja osio '
+        + '"Construction" (tarkistettu 25.8.2026 työaineistoon '
+        + 'docs/mantereet-tyoaineisto/takynostot-saksa.md, ehdokas 7).',
+      /* Commons 25.8.2026: 2024×1443, public domain, Restrictions tyhjä. */
+      valokuva: {
+        tiedosto: 'Johannes Bernhard Neuschwanstein Baustelle 1882-85 (01).jpg',
+        selite: 'Linna työmaana 1880-luvun alussa, telineet vielä pystyssä.',
+        lahde: 'Johannes Bernhard 1882–85, Wikimedia Commons (public domain)',
+      },
+      kysymykset: [
+        'Miksi 1800-luvulla rakennettiin keskiaikaisen näköisiä linnoja?',
+        'Mistä Ludwig II sai rahat rakennustöihin?',
+        'Mitä Neuschwansteinista oli valmiina 1870-luvulla?',
+      ],
+      // 47,5575 N / 10,74944444 E — en-Wikipedia "Neuschwanstein Castle"
+      // (fokuskohteet-saksa.md, kohde 2).
+      paikka: {
+        nimi: 'Neuschwanstein',
+        laudat: {
+          maailmankartta: { x: 6191.6, y: 1495 },
+          europe: { x: 417.6, y: 642.8 },
+        },
+      },
+    },
+  ],
 };
 
 /* ==================== LUETUT LAITTEEN MUISTIIN ==================== */
@@ -391,7 +974,9 @@ function nostoMaanPooli(ui, city) {
    * Kaupungin oma pooli packista ensin (Sofia 25.8.2026: kenttä
    * `takynostot` js/packs/fokusvirta-sofia.js:ssä käyttää lunastus-
    * nimeä tekstille) — näin uusi maa ei vaadi riviä tähän tiedostoon.
-   * NOSTO_MAAT jää Kreikan poolille ja varapoluksi.
+   * NOSTO_MAAT on sen MAAKOHTAINEN vastine: pooli, joka ei ole minkään
+   * yksittäisen kaupungin annostelusisältöä vaan koko maan (Kreikka
+   * 25.8.2026, Espanja, Itävalta, Ranska ja Saksa 28.8.2026).
    *
    * PACKIN POOLI SAA SAMAT KENTÄT: valinnainen `paikka` (pisteen
    * paikka kartalla) kulkee levityksen mukana sellaisenaan, joten
@@ -406,13 +991,28 @@ function nostoMaanPooli(ui, city) {
    * eteenpäin, ei toista haaraa ladontaan.
    */
   const oma = fokusvirtaSisalto(ui, city)?.takynostot;
-  if (Array.isArray(oma) && oma.length) {
-    return oma.map((n) => (n.teksti ? n : { ...n, teksti: nostonLunastusteksti(n.lunastus) }));
-  }
+  if (Array.isArray(oma) && oma.length) return nostoLevitaLunastus(oma);
   const taulu = ui?.game?.pack?.map?.cityCountry;
   const iso = (taulu && city && taulu[city.id]) || null;
   const pooli = iso ? NOSTO_MAAT[iso] : null;
-  return (Array.isArray(pooli) && pooli.length) ? pooli : null;
+  return (Array.isArray(pooli) && pooli.length) ? nostoLevitaLunastus(pooli) : null;
+}
+
+/**
+ * SAMA MUOTO MOLEMMISTA LÄHTEISTÄ: `lunastus` (merkkijono tai
+ * kappaleiden taulukko) puretaan `teksti`-kentäksi, jonka ladonta
+ * osaa jakaa kappaleiksi.
+ *
+ * Levitys koski 28.8.2026 asti vain pakettien poolia, koska maapooli
+ * (NOSTO_MAAT) oli pelkkää Kreikkaa ja kirjoitettu suoraan
+ * `teksti`-kenttään. Espanjan, Itävallan, Ranskan ja Saksan pooleissa
+ * lunastus on Sofian pilotin mukaisesti KAHTENA KAPPALEENA, ja kahta
+ * eri datamuotoa samalle asialle ei kannata pitää yllä: sama levitys
+ * ajetaan siksi kummallekin lähteelle. Valmis `teksti` voittaa yhä,
+ * joten Kreikan rivit kulkevat läpi koskemattomina.
+ */
+function nostoLevitaLunastus(pooli) {
+  return pooli.map((n) => (n.teksti ? n : { ...n, teksti: nostonLunastusteksti(n.lunastus) }));
 }
 
 /*
