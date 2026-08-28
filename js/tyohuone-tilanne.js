@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1251: Aarrevinkin voi nyt ostaa pullalla - Osta tsoureki Livialle (25 puntaa) aarrekysymyksen laatikossa, kerran per aarre, maakohtainen pullan nimi.',
   'v1250: Livia pysyvaksi - hopotysaloitus joka vastaukseen, pullapersous, Columba Livia -proystaily, hassut saapumisrepliikit 10 kaupunkiin, yliviivaus himmeammaksi ja Pollo-sana vahvemmaksi.',
   'v1249: Euroopan pikkuaarre on nyt Itameren meripihka (otsikko seuraa kuvaa) ja kaikkien lautojen pikkuaarteet nayttavat oman nimensa hopeakolikoiden sijaan.',
   'v1248: Heropohjaisen kaupunkilehden isoin kuva on taas etukateispuskurissa - saapuminen ei odota karusellin latausta.',

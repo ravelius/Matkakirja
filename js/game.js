@@ -20,6 +20,21 @@ export const HINT_PRICE = 40; // sanallinen vihje kysymykseen
  * halvempi kuin vihje.
  */
 export const KAVERIAPU_HINTA = 25;
+/*
+ * PULLA LIVIALLE (omistajan tilaus 28.8.2026: *"aarretehtävässä vinkin
+ * voisi saada jatkossa ostamalla pullan pululle"*).
+ *
+ * HINNAN MITTAKAAVA. Pelin apukeinot maksavat 25–80 puntaa
+ * (KAVERIAPU_HINTA 25, HINT_PRICE 40, FIFTY_FIFTY_PRICE 80) ja
+ * halvinkin matkalippu 100 (SEA_FARE). Pulla on niistä halvin luokka:
+ * se on kohteliaisuus eikä oikotie, ja sama luku kuin kaveriavulla —
+ * kumpikin ostaa toiselta hahmolta pienen palveluksen. Alkukassa on
+ * 300 puntaa, joten yksi pulla tuntuu mutta ei kaada matkaa.
+ *
+ * Hinta on tarkoituksella YKSI vakio: jos pelitesti sanoo sen liian
+ * kalliiksi tai liian halvaksi, muuttuu tämä rivi eikä mikään muu.
+ */
+export const PULLA_HINTA = 25;
 export const QUIZ_SECONDS = 45; // vastausaika tiimalasin verran
 export const STRANDED_AID = 100; // kotisääntö: jumiin jäänyt saa pankilta 100
 export const HARD_BONUS = 100; // palkkio vaikeasta kysymyksestä oikein vastattaessa
@@ -305,6 +320,15 @@ export class Game {
      * (ks. ui.js piirraMinitehtava, takautuva myöntö).
      */
     this.minitehtavatOikein = new Set();
+    /*
+     * LIVIALLE OSTETUT PULLAT (omistajan tilaus 28.8.2026), avaimena
+     * 'pakka:kaupunki'. Osto on vaihtoehtoinen tie samaan vinkkiin,
+     * jonka lehden AARTEEN AVAUS -tehtävä antaa (js/fokustehtavat.js
+     * fokusAarreAvattu), joten se on pelitilannetta eikä laitteen
+     * asetus: ostettu vinkki ei saa kadota tallennuksen yli, eikä
+     * samaa pullaa myydä kahdesti.
+     */
+    this.pullaVinkit = new Set();
     /*
      * Voitetut aikakausjulisteet: minitehtävän palkinto, avaimena
      * pelkkä KAUPUNGIN tunnus (js/packs/julisteet.js). Pakan tunnusta
@@ -1068,6 +1092,41 @@ export class Game {
       this.say(this.player.id, `${this.player.name} ratkaisi lehden minitehtävän (+${palkkio} puntaa).`);
     }
     return { ok: true, palkittu: !!oikein };
+  }
+
+  /**
+   * PULLA LIVIALLE — VINKKI RAHALLA (omistajan tilaus 28.8.2026:
+   * *"aarretehtävässä vinkin voisi saada jatkossa ostamalla pullan
+   * pululle"*).
+   *
+   * Sama vinkki kuin lehden AARTEEN AVAUS -tehtävästä (vihreä piste
+   * kartalle), mutta hinta on puntia eikä oikea vastaus. Tie on
+   * VAIHTOEHTO eikä korvaaja: kysymys jää sivulle auki, ja sen
+   * rahapalkkion saa yhä vastaamalla.
+   *
+   * KERRAN PER AARRE. Avain on 'pakka:kaupunki' kuten kulttuurivisalla,
+   * eli sama kaupunki eri laudalla on eri aarre. Toinen ostoyritys
+   * palaa virheellä eikä veloita mitään — nappi katoaa pinnalta
+   * (js/fokustehtavat.js), mutta portti on tässä.
+   *
+   * EI VUOROVAIKUTUSTA VUORON KANSSA. Ostos ei kuluta vuoroa eikä
+   * heittoa: se tehdään lehden sisällä, jossa peli muutenkin odottaa
+   * pelaajaa. Sama linja kuin visan 50:50:llä ja vihjeellä.
+   */
+  actionPullaVinkki(cityId, hinta = PULLA_HINTA) {
+    const avain = `${this.pack.id}:${cityId}`;
+    if (this.pullaVinkit.has(avain)) return { ok: false, error: 'Jo ostettu' };
+    const p = this.player;
+    if (p.money < hinta) return { ok: false, error: 'Rahat eivät riitä' };
+    p.money -= hinta;
+    this.pullaVinkit.add(avain);
+    this.say(p.id, `${p.name} osti Livialle pullan ${hinta} punnalla ja sai vinkin aarteen paikasta.`);
+    return { ok: true, hinta };
+  }
+
+  /** Onko tämän kaupungin pullavinkki jo ostettu? */
+  pullaVinkkiOstettu(cityId) {
+    return this.pullaVinkit.has(`${this.pack.id}:${cityId}`);
   }
 
   /**
@@ -2711,6 +2770,7 @@ export class Game {
       kulttuuriVastatut: [...this.kulttuuriVastatut],
       minitehtavatVastatut: [...this.minitehtavatVastatut],
       minitehtavatOikein: [...this.minitehtavatOikein],
+      pullaVinkit: [...this.pullaVinkit],
       julisteet: [...this.julisteet],
       fokusvirrat: this.fokusvirrat,
       explored: [...this.explored],
@@ -2842,6 +2902,12 @@ export class Game {
      * julistetta, ja mennyttä vastausta ei voi enää tarkistaa.
      */
     game.minitehtavatOikein = new Set(data.minitehtavatOikein ?? data.minitehtavatVastatut ?? []);
+    /*
+     * Vanha tallennus ei tunne pullavinkkiä: joukko alkaa tyhjänä ja
+     * tarjous on kesken olevassa pelissä yhä ostamatta. Se on oikea
+     * oletus — pullaa ei ollut olemassa, joten sitä ei ole ostettukaan.
+     */
+    game.pullaVinkit = new Set(data.pullaVinkit ?? []);
     // Vanha tallennus ei tunne julisteita: kokoelma alkaa tyhjänä ja
     // täyttyy takautuvasti, kun pelaaja avaa ratkaisemansa lehtisivun
     // uudelleen (js/ui.js piirraMinitehtava).

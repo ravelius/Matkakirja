@@ -86,6 +86,8 @@ import { fokusmoodiPaalla, html, TOAST_MS } from './ui-apurit.js';
 import { juliste as julisteAvaimella, kaupunginJuliste } from './packs/julisteet.js';
 import { fokusvirtaKaupungille } from './packs/fokusvirrat.js';
 import { natiiviVastaus } from './natiivi.js';
+// Pullavinkin hinta ja kirjanpito ovat pelin omia (ks. PULLA LIVIALLE).
+import { PULLA_HINTA } from './game.js';
 // Kulttuurivisan kysymysdata: visa on lehden aarteen avaava kysymys,
 // mutta sen kysymys asuu yhä sisältötauluissa (ks. fokusVisanKehys).
 import { KULTTUURIT } from './sisaltotaulut.js';
@@ -296,8 +298,17 @@ function aarteenAvaajat(ui, city) {
  * yhtä hyvin kulttuurivisasta kuin sivun nimetystä tehtävästä. Yksi
  * oikea vastaus riittää, eikä toisen kysymyksen väärä vastaus sammuta
  * jo syttynyttä jälkeä.
+ *
+ * PULLA ON KOLMAS AVAAJA (omistajan tilaus 28.8.2026). Livialle ostettu
+ * pulla antaa saman vinkin kuin oikea vastaus, joten se luetaan tästä
+ * yhdestä paikasta — silloin vihreä piste, pelinappula ja kortti ovat
+ * kaikki samaa mieltä siitä, että jälki on kartalla (js/fokuspiste.js,
+ * js/fokusvirta.js fokusvirtaKohtaaminenPisteessa). Kirjanpito on
+ * pelitallenteessa (js/game.js pullaVinkit), ei laitteen muistissa:
+ * maksettu vinkki ei saa kadota selaimen siivouksessa.
  */
 export function fokusAarreAvattu(ui, city) {
+  if (city && ui?.game?.pullaVinkkiOstettu?.(city.id)) return true;
   return aarteenAvaajat(ui, city)
     .some((t) => ui.game.minitehtavatOikein?.has(tehtavanAvain(ui, city, t)));
 }
@@ -336,6 +347,234 @@ export function fokusAarreVastattu(ui, city) {
 function aarreAuki(ui, city) {
   if (fokusAarreAvattu(ui, city)) return true;
   return !ui?.game?.tokens?.has(city.id);
+}
+
+/* ==================== PULLA LIVIALLE ==================== */
+
+/*
+ * VINKKI PULLAA VASTAAN (omistajan tilaus 28.8.2026: *"aarretehtävässä
+ * vinkin voisi saada jatkossa ostamalla pullan pululle"*).
+ *
+ * Aarteen jäljen sai tähän asti vain yhdellä tavalla: vastaamalla
+ * oikein lehden AARTEEN AVAUS -kysymykseen. Se on hyvä tie, mutta se on
+ * myös ainoa tie — väärin vastannut jäi odottamaan toista kysymystä, ja
+ * viimeisen jälkeen ei ollut mitään. Pulla on TOINEN TIE samaan
+ * vinkkiin: hinta on puntia eikä oikea vastaus.
+ *
+ * KOLME SÄÄNTÖÄ:
+ *   1. TARJOUS EI KORVAA KYSYMYSTÄ. Kysymys jää sivulle auki
+ *      rahapalkkioineen; pulla ostaa vain sen, minkä oikea vastaus
+ *      antaisi kaupan päälle — vihreän pisteen kartalle.
+ *   2. KERRAN PER AARRE. Kirjanpito on pelitallenteessa
+ *      (js/game.js pullaVinkit, avain 'pakka:kaupunki'), joten ostettu
+ *      vinkki säilyy tallennuksen yli eikä samaa pullaa myydä kahdesti.
+ *   3. EI VAHINGOSSA. Nappi istuu vastauslipukkeiden alapuolella, ja
+ *      sormi osuu siihen helposti ohi lipukkeen. Osto vaatii siksi
+ *      KAKSI napautusta: ensimmäinen vaihtaa napin varmistukseksi ja
+ *      toinen maksaa. Varmistus raukeaa itsestään (PULLA_VARMISTUS_MS),
+ *      jottei nappi jää odottamaan toista painallusta seuraavalle
+ *      sivulle asti.
+ *
+ * ── LIVIA, EI PÖLLÖ ────────────────────────────────────────────────
+ *
+ * Raamattu (PULU-KOKEILU ja LIVIA TUURAAJANA, omistaja 27.8.2026):
+ * hahmo on kirjekyyhky Columba Livia, joka "loukkaantuu sanasta pulu
+ * mutta antaa heti anteeksi" ja jonka komiikka syntyy arvostuksen
+ * puutteesta, ei tyhmyydestä. Siksi kuittaus ottaa pullan vastaan
+ * mutta muistuttaa samassa lauseessa suvun ansioista — ja siksi
+ * tyhjä kassa ei ole moite vaan pettymys, joka koetetaan peittää.
+ * Ei huutomerkkejä (Raamatun karaktäärisääntö).
+ */
+
+/**
+ * MAAKOHTAINEN PULLAVASTINE.
+ *
+ * Pelaaja ei osta abstraktia "pullaa" vaan sen, mitä kadulta oikeasti
+ * saa: Ateenassa tsourekin, Roomassa maritozzon. Taulu on ISO-koodilla
+ * kuten kaikki muukin maakohtainen (js/fokusnosto.js NOSTO_MAAT,
+ * js/fokuskohteet.js), ja maa luetaan laudan omasta cityCountry
+ * -taulusta — yksi totuus siitä, minkä maan sisältöä ruudulla on.
+ *
+ * Taulussa on beta-reitin maat ja lähinaapurit, joihin reitti on
+ * kasvamassa. Maa, jota ei ole taulussa, saa yleisnimen: väärä
+ * paikallisnimi olisi pahempi kuin rehellinen yleisnimi.
+ */
+const PULLA_NIMET = {
+  GRC: 'tsoureki',
+  BGR: 'kozunak',
+  BIH: 'hurmašica',
+  ROU: 'cozonac',
+  TUR: 'simit',
+  ITA: 'maritozzo',
+  DEU: 'Franzbrötchen',
+  HUN: 'kakaós csiga',
+  HRV: 'kroštule',
+};
+
+/** Maa, jota taulussa ei ole. */
+const PULLA_YLEISNIMI = 'makea pulla';
+
+/** Kuinka kauan varmistusnappi odottaa toista napautusta. */
+const PULLA_VARMISTUS_MS = 6000;
+
+/** Kaupungin pullavastine — aina jokin, koskaan tyhjä. */
+function pullanNimi(ui, city) {
+  const iso = ui?.game?.pack?.map?.cityCountry?.[city?.id] ?? null;
+  return (iso && PULLA_NIMET[iso]) || PULLA_YLEISNIMI;
+}
+
+/** Sama nimi virkkeen alkuun. Vieraskieliset isot kirjaimet säilyvät. */
+function pullaIsolla(nimi) {
+  return nimi.charAt(0).toUpperCase() + nimi.slice(1);
+}
+
+/** Tarjousnappi vastaamattomana. */
+function pullaNapinTeksti(nimi) {
+  return `Osta ${nimi} Livialle (${PULLA_HINTA} £)`;
+}
+
+/** Sama nappi varmistusta odottamassa. */
+function pullaVarmistusTeksti(nimi) {
+  return `Varmista: ${nimi} Livialle, ${PULLA_HINTA} £`;
+}
+
+/** Kassa ei riitä — nappi kertoo sen itse eikä jätä arvailtavaksi. */
+function pullaKoyhaTeksti(nimi) {
+  return `Kassa ei riitä: ${nimi} ${PULLA_HINTA} £`;
+}
+
+/*
+ * LIVIAN PETTYMYS ON HIENOVARAINEN (omistajan tilaus): hän ei moiti
+ * pelaajaa vaan vakuuttaa ymmärtävänsä — hieman liian nopeasti.
+ */
+const PULLA_KOYHA_LIVIA = 'Livia sanoo ymmärtävänsä. Sanoo sen hieman liian nopeasti.';
+
+/** Ohje varmistuksen alle: toinen napautus maksaa. */
+const PULLA_VARMISTUS_OHJE = 'Toinen napautus maksaa. Muuten tarjous raukeaa.';
+
+/** Kauppa tehty — rivi jää laatikkoon napin tilalle. */
+function pullaTehtyTeksti(nimi) {
+  return `Livia sai maksunsa (${nimi}, ${PULLA_HINTA} £) ja näytti paikan kartalta.`;
+}
+
+/**
+ * LIVIAN KIITOS JA VINKKI YHDESSÄ KUPLASSA.
+ *
+ * Sama kupla ja sama viive kuin oikean vastauksen kuittauksella
+ * (js/fokusvirta.js fokusvirtaKuittaus), koska tapahtuma on pelaajan
+ * kannalta sama: aarteen jälki syttyi kartalle lehden taakse. Toinen
+ * virke on AARRE_SYTTYI omin sanoin — vinkin sisältö ei saa muuttua
+ * sen mukaan, kummalla tiellä se ostettiin.
+ *
+ * Kahden virkkeen katto pitää (Raamattu, PÖLLÖN KARAKTÄÄRI).
+ */
+function pullaKuittausTeksti(nimi) {
+  return `${pullaIsolla(nimi)}. Sukuni kantoi kuninkaiden kirjeitä, mutta `
+    + 'tämä kelpaa maksuksi — aarteen jälki syttyi, ja vihreä piste '
+    + 'kartalla näyttää paikan.';
+}
+
+/**
+ * ONKO PULLA TARJOLLA TÄSSÄ KAUPUNGISSA JUURI NYT?
+ *
+ * Kaksi ehtoa, samat kuin aarteen avaavalla kysymyksellä:
+ *   1. kaupungissa on kohtaaminen ja sille paikka tällä laudalla
+ *      (aarteenAvausMahdollista) — muuten pulla ostaisi tyhjän
+ *      lupauksen, eikä mikään syttyisi;
+ *   2. aarre on yhä auki eli jälki puuttuu kartalta (aarreAuki).
+ *      Jo ostettu pulla sammuttaa tarjouksen tätä kautta:
+ *      fokusAarreAvattu lukee saman kirjanpidon.
+ */
+function pullaTarjolla(ui, city) {
+  if (!aarteenAvausMahdollista(ui, city)) return false;
+  return !aarreAuki(ui, city);
+}
+
+/**
+ * TARJOUSRIVI LAATIKON LOPPUUN — nappi ja Livian ääni.
+ *
+ * @param {object}   ui
+ * @param {object}   city
+ * @param {Element}  kotelo         laatikko, jonka loppuun rivi tulee
+ * @param {Function} aarreAvattiin  laatikon oma siivous oston jälkeen
+ * @returns {Element|null} rivi, tai null jos tarjousta ei ole
+ */
+function piirraPullaOstos(ui, city, kotelo, aarreAvattiin) {
+  if (!pullaTarjolla(ui, city)) return null;
+  const nimi = pullanNimi(ui, city);
+  const rivi = html('div', 'fokus-pulla');
+  const nappi = html('button', 'fokus-pulla-nappi');
+  nappi.type = 'button';
+  const huomio = html('p', 'fokus-pulla-huomio');
+  let varmistus = false;
+  let ajastin = 0;
+
+  const koyha = () => (ui.game.player?.money ?? 0) < PULLA_HINTA;
+
+  const paivita = () => {
+    if (koyha()) {
+      varmistus = false;
+      nappi.disabled = true;
+      nappi.classList.remove('fokus-pulla-varmistus');
+      nappi.textContent = pullaKoyhaTeksti(nimi);
+      huomio.textContent = PULLA_KOYHA_LIVIA;
+      huomio.hidden = false;
+      return;
+    }
+    nappi.disabled = false;
+    nappi.classList.toggle('fokus-pulla-varmistus', varmistus);
+    nappi.textContent = varmistus ? pullaVarmistusTeksti(nimi) : pullaNapinTeksti(nimi);
+    huomio.textContent = varmistus ? PULLA_VARMISTUS_OHJE : '';
+    huomio.hidden = !varmistus;
+  };
+
+  nappi.addEventListener('click', () => {
+    if (!varmistus) {
+      varmistus = true;
+      paivita();
+      sfx.play('click');
+      clearTimeout(ajastin);
+      ajastin = setTimeout(() => {
+        varmistus = false;
+        paivita();
+      }, PULLA_VARMISTUS_MS);
+      return;
+    }
+    clearTimeout(ajastin);
+    const vastaus = ui.game.actionPullaVinkki(city.id, PULLA_HINTA);
+    if (!vastaus.ok) {
+      // Kassa ehti tyhjentyä tai pulla on jo ostettu: nappi kertoo
+      // tilanteen eikä jätä pelaajaa varmistustilaan.
+      varmistus = false;
+      paivita();
+      return;
+    }
+    sfx.play('coin');
+    rivi.replaceChildren(html('p', 'fokus-pulla-tehty', pullaTehtyTeksti(nimi)));
+    const box = ui.buildToast?.({
+      kind: 'stamp',
+      icon: 'kukkaro',
+      text: `−${PULLA_HINTA} puntaa`,
+      sub: `${nimi} Livialle`,
+    });
+    if (box) setTimeout(() => ui.removeToast(box), TOAST_MS.default);
+    /*
+     * SAMA JÄRJESTYS KUIN OIKEALLA VASTAUKSELLA: tallennus ja
+     * rahapilleri ensin, sitten piste kartalle, ja pöllön kupla
+     * viimeisenä — kupla ei saa luvata mitään, mitä kartalla ei vielä
+     * ole. Koko render() sulkisi lehden, joten sitä ei kutsuta.
+     */
+    ui.onChange?.(ui.game);
+    ui.renderTurnPill?.();
+    ui.paivitaFokuspiste?.();
+    aarreAvattiin?.();
+    kuittausPinta?.(ui, pullaKuittausTeksti(nimi));
+  });
+
+  paivita();
+  rivi.append(nappi, huomio);
+  kotelo.appendChild(rivi);
+  return rivi;
 }
 
 /**
@@ -496,7 +735,8 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
     'div',
     `minitehtava fokus-tehtava${juliste ? ' minitehtava-palkinnollinen' : ''}`,
   );
-  laatikko.appendChild(html('p', 'minitehtava-otsikko', nimilaatta));
+  const otsikko = html('p', 'minitehtava-otsikko', nimilaatta);
+  laatikko.appendChild(otsikko);
   const avain = tehtavanAvain(ui, city, tehtava);
 
   if (ui.game.minitehtavatVastatut?.has(avain)) {
@@ -515,6 +755,18 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
     }
     laatikko.appendChild(html('p', 'minitehtava-kysymys',
       visa.fakta ?? 'Tämän sivun minitehtävä on jo ratkaistu.'));
+    /*
+     * PULLA JUURI TÄSSÄ ON UMPIKUJAN AVAIN. Väärin vastannut ei voi
+     * enää sytyttää jälkeä tästä kysymyksestä — mutta pullan hän voi
+     * yhä ostaa, ja tarjous kuuluu siihen laatikkoon, josta lupaus
+     * juuri meni. (Tarjous piirtyy vain jos aarre on yhä auki; ks.
+     * pullaTarjolla.)
+     */
+    if (avaaAarteen(tehtava)) {
+      piirraPullaOstos(ui, city, laatikko, () => {
+        otsikko.textContent = AARRE_AUKI_OTSAKE;
+      });
+    }
     kohde.appendChild(laatikko);
     return;
   }
@@ -599,6 +851,19 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
   });
   laatikko.appendChild(vaihtoehdot);
   laatikko.appendChild(tulos);
+  /*
+   * TARJOUS VASTAUSLIPUKKEIDEN ALLE, EI NIIDEN SEKAAN. Se on eri asia
+   * kuin vastaaminen — toinen tie samaan vinkkiin — ja sen on näytettävä
+   * siltä myös laatikossa (css/fokusvirta.css .fokus-pulla).
+   */
+  if (avaaAarteen(tehtava)) {
+    piirraPullaOstos(ui, city, laatikko, () => {
+      // Lupaus on lunastettu rahalla: nimilaatta ja vihje kertovat
+      // saman kuin sivun seuraava piirto kertoisi (rahaaVain).
+      otsikko.textContent = AARRE_AUKI_OTSAKE;
+      if (vihjerivi) vihjerivi.textContent = AARRE_AUKI_VIHJE;
+    });
+  }
   kohde.appendChild(laatikko);
 }
 
@@ -630,6 +895,13 @@ export function fokusVisanKehys(ui) {
   if (!laatikko) return;
   laatikko.classList.remove('fokus-visa', 'fokus-visa-aarre');
   laatikko.querySelector('.fokus-tehtava-vihje')?.remove();
+  /*
+   * PULLARIVI SIIVOTAAN SAMOIN KUIN VIHJERIVI. Visan laatikko on
+   * js/ui.js:n oma elementti, joka elää sivulta toiselle — ilman tätä
+   * edellisen kaupungin tarjous jäisi roikkumaan seuraavan lehteen ja
+   * sama nappi kertyisi laatikkoon monta kertaa.
+   */
+  laatikko.querySelector('.fokus-pulla')?.remove();
   if (ui.lehtitila?.tutkiTila !== 'kaupunki') return;
   const city = ui.game?.cityOf?.();
   if (!city || ui.lehtitila.arrivalShownFor !== city.id) return;
@@ -637,15 +909,30 @@ export function fokusVisanKehys(ui) {
   lataaTehtavaTyyli();
   laatikko.classList.add('fokus-visa');
   kytkeVisanNapit(ui, city);
+  /*
+   * TARJOUS ON VOIMASSA MYÖS VASTATUSSA LAATIKOSSA (umpikujan esto).
+   * Visaan vastataan kerran: väärin vastannut ei voi enää sytyttää
+   * jälkeä täältä, ja juuri silloin pulla on ainoa jäljellä oleva tie.
+   * Tarjous piirtyy vain jos aarre on yhä auki (pullaTarjolla).
+   */
+  const pullaSiivous = () => {
+    laatikko.classList.remove('fokus-visa-aarre');
+    const vihje = laatikko.querySelector('.fokus-tehtava-vihje');
+    if (vihje) vihje.textContent = AARRE_AUKI_VIHJE;
+  };
   // Vastattuun laatikkoon ei kuulu lupausta: sen otsake on lehden oma
   // ja tilalla lukee jo js/ui.js:n kuittaus.
-  if (visaanVastattu(ui, city)) return;
+  if (visaanVastattu(ui, city)) {
+    piirraPullaOstos(ui, city, laatikko, pullaSiivous);
+    return;
+  }
   const rahaaVain = aarreAuki(ui, city);
   if (!rahaaVain) laatikko.classList.add('fokus-visa-aarre');
   laatikko.insertBefore(
     html('p', 'fokus-tehtava-vihje', rahaaVain ? AARRE_AUKI_VIHJE : AARTEEN_VIHJE),
     laatikko.firstChild,
   );
+  piirraPullaOstos(ui, city, laatikko, pullaSiivous);
 }
 
 /**
