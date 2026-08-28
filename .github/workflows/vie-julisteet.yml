@@ -1,0 +1,41 @@
+# Kertakäyttöinen vienti: lataa julisteet/-kansion R2-ämpärin
+# julisteet/-kansioon ja kuvat/-kansion kuvat/-kansioon. Ajetaan
+# workflow_dispatchilla tältä haaralta; haara poistetaan viennin
+# jälkeen. Secretit ovat repo-secreteinä (samat kuin peilaa.yml
+# käyttää). PNG ja JPG viedään omilla content-typeillään.
+name: Vie julisteet R2:een
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  vie:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+    steps:
+      - uses: actions/checkout@v4
+      - name: Vie ämpäriin
+        run: |
+          set -euo pipefail
+          paate="https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com"
+          aws s3 sync julisteet "s3://${{ secrets.R2_BUCKET }}/julisteet" \
+            --endpoint-url "$paate" --exclude "*.jpg" \
+            --content-type image/png --no-progress
+          aws s3 sync julisteet "s3://${{ secrets.R2_BUCKET }}/julisteet" \
+            --endpoint-url "$paate" --exclude "*" --include "*.jpg" \
+            --content-type image/jpeg --no-progress
+          if [ -d kuvat ]; then
+            aws s3 sync kuvat "s3://${{ secrets.R2_BUCKET }}/kuvat" \
+              --endpoint-url "$paate" --exclude "*" --include "*.jpg" \
+              --content-type image/jpeg --no-progress
+          fi
+          echo "Viety: $(find julisteet -type f | wc -l) julistetiedostoa, $(find kuvat -type f 2>/dev/null | wc -l) kuvaa."
