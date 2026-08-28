@@ -642,9 +642,20 @@ export const EUROPE = {
         name: 'Ritarin hopeamiekka', color: '#aeb6c2',
         kuva: 'assets/aarteet/aarre-europe-emerald.jpg',
       },
+      /*
+       * Kuva on meripihkaa — kokkareita, joista yhteen on jäänyt
+       * hyönteinen — joten nimi ja fakta ovat meripihkaa (omistajan
+       * päätös 28.8.2026: otsikko seuraa kuvaa, ei toisin päin).
+       */
       pieniAarre: {
-        name: 'Meripihka', color: '#d98f2b',
+        name: 'Itämeren meripihka', color: '#d98f2b',
         kuva: 'assets/aarteet/aarre-europe-topaz.jpg',
+        fakta: 'Meripihka ei ole kivi vaan havupuiden pihkaa, joka '
+          + 'kovettui noin 40 miljoonaa vuotta sitten. Maailman suurin '
+          + 'esiintymä on Itämeren rannalla Samlandin niemimaalla, ja '
+          + 'myrsky heittää kokkareita yhä rantahiekkaan. Etelään sitä '
+          + 'kuljetettiin meripihkatietä pitkin Itämereltä Adrianmerelle '
+          + 'asti, ja kirkkaimpiin paloihin on jäänyt hyönteisiä kiinni.',
       },
     }),
     // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (45). Uusi

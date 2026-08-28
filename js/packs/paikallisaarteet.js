@@ -19,31 +19,33 @@
  *     isoAarre:   { name: '…', fakta: '…' },
  *   },
  *
- * `name` korvaa laattatyypin varanimen ja `fakta` on löytötekstin tosi
+ * `name` korvaa laudan oman nimen ja `fakta` on löytötekstin tosi
  * puolisko (Raamattu: *"Löytöteksti: lyhyt tosi fakta aarteesta +
  * onnentoivotus"*). Rivi saa antaa myös `kuva`-kentän samassa muodossa
- * kuin laudan omat aarrekuvat. Puuttuva kenttä palaa varanimeen, joten
+ * kuin laudan omat aarrekuvat. Puuttuva kenttä jää laudan omaksi, joten
  * taulun saa täyttää maa kerrallaan ilman että peli hajoaa välissä.
+ *
+ * NIMEN JÄRJESTYS ON NIMENOMAAN TÄMÄ (omistajan päätös 28.8.2026,
+ * kysymyskortti "hopeakolikot vai meripihka"): maan oma pari → laudan
+ * oma teema (nimi JA kuva samasta rivistä, js/packs/*.js
+ * themedTokenTypes) → js/tokens.js yleinen varanimi. Yleinen varanimi
+ * ei saa mennä laudan oman nimen edelle, koska AARREKUVA TULEE
+ * LAUDALTA: jos varanimi voittaisi, Euroopan meripihkakuvan päällä
+ * lukisi "Kourallinen hopeakolikoita" ja Afrikan kaurikotiloiden
+ * päällä sama. Laudoilla, jotka eivät nimeä pariaan (maailma,
+ * maailmankartta), ei ole kuvaakaan, joten yleisnimi on siellä
+ * turvallinen.
  */
 
 export const PAIKALLISAARTEET = {};
 
-/*
- * Varanimet: YKSI yleisnimi kummallekin kokoluokalle, aikakauden
- * henkinen mutta paikaton. Näin pelaaja saa kätköstä aina jotain
- * uskottavaa, vaikka maan omaa paria ei vielä olisi kirjoitettu — eikä
- * peli väitä mitään sellaista, mitä kukaan ei ole tarkistanut.
- */
-export const VARA_PARI = {
-  pieniAarre: { name: 'Kourallinen hopeakolikoita' },
-  isoAarre: { name: 'Kätketty matka-arkku' },
-};
-
 /**
- * Maan oma paikallisaarre tai varanimi. Palauttaa null muille kuin
- * paikallisaarteille (pääaarre ja mantereen aarre ovat laudan omia).
+ * Maan oma paikallisaarre tai null, jos maalle ei ole vielä kirjoitettu
+ * paria — silloin näytetään laudan oma nimi ja kuva. Palauttaa null myös
+ * muille kuin paikallisaarteille (pääaarre ja mantereen aarre ovat
+ * laudan omia).
  */
 export function paikallisaarre(type, maaIso) {
   if (type !== 'pieniAarre' && type !== 'isoAarre') return null;
-  return PAIKALLISAARTEET[maaIso]?.[type] ?? VARA_PARI[type] ?? null;
+  return PAIKALLISAARTEET[maaIso]?.[type] ?? null;
 }
