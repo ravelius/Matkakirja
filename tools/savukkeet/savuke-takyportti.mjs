@@ -17,15 +17,26 @@
  * FOKUSVIRTAA — eikä siihen tarvita fokuslehteä: piste piirtyy kartan
  * omaan kerrokseen (fokusnosto-symbolit), ei lehden päälle.
  *
+ * KAUPUNGIT VAIHTUIVAT v1301:SSÄ. Savuke ajoi Madridissa ja Pariisissa,
+ * mutta molemmat saivat oman fokusvirtansa (Eurooppa kauttaaltaan
+ * valmiiksi, aalto 1), eivätkä ne siis enää ole esimerkkejä kaupungista
+ * ILMAN fokusvirtaa. Samalla maapoolin ESP- ja FRA-rivit alkoivat
+ * osoittaa noiden kaupunkien pakettien `takynostot`-kenttiin
+ * (js/fokusnosto.js NOSTO_MAAT). Savuke ajaa siksi nyt SEVILLASSA ja
+ * MARSEILLESSA: ne ovat saman maan kaupunkeja ilman omaa fokusvirtaa,
+ * joten ne mittaavat yhtä aikaa vanhan portin JA sen, ettei siirto
+ * paketteihin vienyt täkyjä maan muilta kaupungeilta.
+ *
  * VARTIOT:
- *   1. PORTTI AUKI. Madridissa (Euroopan lauta, ei fokusvirtaa) Espanjan
+ *   1. PORTTI AUKI. Sevillassa (Euroopan lauta, ei fokusvirtaa) Espanjan
  *      poolin kaikki kolme pistettä ovat kartalla, jokaisella kartan
  *      nimiö, ja niistä TASAN YKSI tuikkii (huomio yksi kerrallaan).
  *   2. PISTEET EIVÄT OLE PÄÄLLEKKÄIN. Varapolulla ei ole kohdemerkkien
  *      kasauspassia, joten kaksi lähekkäistä täkyä osuisi samaan
- *      varapaikkaan laatan kyljessä — ja alempi jäisi tavoittamattomiin
+ *      paikkaan — ja alempi jäisi tavoittamattomiin
  *      (js/fokusnosto-symbolit.js nostosymOmaanRiviin). Mitataan
- *      Pariisissa, jonka molemmat täyt ovat laatan sormialueella.
+ *      Ranskassa, jonka molempien täkyjen oma paikka on Pariisissa
+ *      runsaan lautayksikön päässä toisistaan.
  *   3. KORTTI AUKEAA PISTEESTÄ, ja siinä on LUNASTUS (monikappaleinen
  *      teksti, ei pelkkä otsikko) sekä pöllön kysymysnapit.
  *   4. LUETTU JÄÄ KARTALLE. Kortin sulun jälkeen luettu piste on yhä
@@ -147,9 +158,9 @@ const kortti = (sivu) => sivu.evaluate(() => {
   };
 });
 
-/* --- 1: portti auki Madridissa (Espanja, ei fokusvirtaa) --- */
+/* --- 1: portti auki Sevillassa (Espanja, ei fokusvirtaa) --- */
 
-const madrid = await avaaSivu('madrid');
+const madrid = await avaaSivu('sevilla');
 const espanja = await pisteet(madrid);
 vaadi('maapoolin täkypisteet ovat kartalla ilman fokusvirtaa',
   espanja.length === 3 && espanja.every((p) => !p.luettu && p.keski),
@@ -201,11 +212,11 @@ vaadi('luetun pisteen napautus avaa kortin uudelleen',
 await madrid.evaluate(() => document.querySelector('.fokusnosto-kortti-sulje')?.click());
 await madrid.context().close();
 
-/* --- 4: kaksi lähekkäistä täkyä eivät jää päällekkäin (Pariisi) --- */
+/* --- 4: kaksi lähekkäistä täkyä eivät jää päällekkäin (Marseille) --- */
 
-const pariisi = await avaaSivu('pariisi');
+const pariisi = await avaaSivu('marseille');
 const ranska = await pisteet(pariisi);
-vaadi('Pariisin molemmat täyt ovat kartalla',
+vaadi('Ranskan molemmat täyt ovat kartalla',
   ranska.length === 2 && ranska.every((p) => p.keski),
   JSON.stringify(ranska.map((p) => p.id)));
 const etaisyys = ranska.length === 2 && ranska[0].keski && ranska[1].keski
@@ -221,7 +232,7 @@ await pariisi.context().close();
 
 /* --- 5: portin toinen puoli — fokusmoodi pois, ei pisteitä --- */
 
-const pois = await avaaSivu('madrid', false);
+const pois = await avaaSivu('sevilla', false);
 const ilmanFokusta = await pisteet(pois);
 vaadi('fokusmoodi pois: ei täkypisteitä',
   ilmanFokusta.length === 0, `${ilmanFokusta.length} pistettä`);

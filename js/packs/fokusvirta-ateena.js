@@ -432,11 +432,20 @@ export const FOKUSVIRTA_ATEENA = {
    * isoisä kuuli torilla miehestä, joka löysi kullan mutta jota kukaan
    * ei nähnyt kaivamassa — tässä hän myöntää seisseensa itse saman
    * kysymyksen äärellä ja jättäneensä kaivamatta.
+   *
+   * MUOTO ON OLIO EIKÄ MERKKIJONO (v1301). Moottori on aina kelpuuttanut
+   * molemmat (js/fokusvirta.js aarremerkinnanTeksti kääntää merkkijonon
+   * olioksi), mutta Ateena oli viimeinen paikka, jossa vanha muoto
+   * eli — jokainen muu kaupunki kirjoittaa `{ teksti }`. Yksi muoto
+   * riittää: näin uusi lauta ei joudu arvaamaan kumpaa kopioida, eikä
+   * kukaan lukija tarvitse haaraa. TEKSTI ON SAMA SANASTA SANAAN.
    */
-  aarremerkinta: 'Seisoin samalla kalliolla enkä uskaltanut kaivaa '
-    + 'vartijan nähden — piirsin vain ristin luettelon reunaan. Jos sinä '
-    + 'pitelet nyt sitä, mitä minä vain katselin, olemme molemmat '
-    + 'löytäneet omamme.',
+  aarremerkinta: {
+    teksti: 'Seisoin samalla kalliolla enkä uskaltanut kaivaa '
+      + 'vartijan nähden — piirsin vain ristin luettelon reunaan. Jos '
+      + 'sinä pitelet nyt sitä, mitä minä vain katselin, olemme '
+      + 'molemmat löytäneet omamme.',
+  },
 
   /*
    * NIMETYT MINITEHTÄVÄT KAUPUNKILEHDEN SIVUILLE 2 JA 3.

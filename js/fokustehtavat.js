@@ -409,6 +409,22 @@ const PULLA_NIMET = {
   DEU: 'Franzbrötchen',
   HUN: 'kakaós csiga',
   HRV: 'kroštule',
+  /*
+   * ITÄVALTA JA RANSKA (v1301): Wien ja Pariisi saivat oman
+   * fokusvirtansa, joten pullatarjous näkyy niissä nyt ensimmäistä
+   * kertaa. Kumpikaan nimi ei ole uusi keksintö vaan pelin omaa,
+   * hyväksyttyä Livia-aineistoa: hän kertoo Wienissä laskeneensa
+   * Buchtelneja ikkunalaudalta ja Pariisissa isoäitinsä saaneen
+   * palkakseen briossia (js/fokusvirta.js LIVIAN_SAAPUMISET).
+   *
+   * ESPANJA JÄÄ TARKOITUKSELLA POIS: pelin aineisto nimeää espanjalaisen
+   * leivoksen vain Granadan naapurin piononona (js/packs/
+   * maa-kategoriat.js, ESP/herkut), eikä sitä tarjota Madridissa.
+   * Rehellinen yleisnimi on parempi kuin väärään kaupunkiin siirretty
+   * paikallisnimi.
+   */
+  AUT: 'Buchtel',
+  FRA: 'brioche',
 };
 
 /** Maa, jota taulussa ei ole. */

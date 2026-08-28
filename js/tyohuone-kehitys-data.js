@@ -122,21 +122,48 @@ export const KAARI_PAKETIT = {
         + 'olalleen. "Saattajien kirjassa on isoisäsi nimi: he '
         + 'laskeutuivat kolmen lyhdyn kanssa, ja ylös palasi kaksi. '
         + 'Vastaa hänen kysymykseensä, niin kerron, minne kolmas jäi."',
+      /*
+       * ISOISÄN PULMA — UUDEN PELITEHTÄVÄTYYPIN PILOTTI (v1301).
+       *
+       * Raamattu, osio "Fokusmoodi" (omistaja 28.8.2026 ilta):
+       * *"PELITEHTÄVÄN AIHE RATKAISEE, EI MEKANIIKKA … isoisän
+       * väittämä- ja pulmatyypit kylvetään suoraan saman kaupungin
+       * merkintään … Uudet tyypit pilotoidaan Wienissä
+       * (maailmannäyttelymerkintä jättää pulman ilmaan)."*
+       *
+       * Wienin fokusvirran matkakirjamerkintä (js/packs/
+       * fokusvirta-wien.js) sanoo: *"Kahdeksan päivää avajaisten
+       * jälkeen pörssi kaatui"* — päivien lukumäärän muttei
+       * päivämäärää. Puuttuva pala, avajaispäivä 1.5.1873, on saman
+       * paketin oppitunnissa, joka on tarkoituksella vaiti
+       * romahduspäivästä. Pelaaja siis LASKEE vastauksen kahdesta
+       * pelissä olevasta tiedosta.
+       *
+       * Vanha kysymys (Habsburgien kolmiosainen hautaus) oli hyvä
+       * tietovisa muttei kytkeytynyt merkintään mitenkään; sen
+       * aineisto elää yhä pelissä (js/packs/nahtavyysjutut.js,
+       * Hofburgin Sydänten krypta ja Stephansdomin katakombit).
+       *
+       * FAKTAT: takynostot-itavalta.md, ehdokas 1 ja takyt-wien.md,
+       * täky 3 (de-Wikipedia "Gründerkrach", "Weltausstellung 1873").
+       */
       kysymys: {
-        q: 'Wienin keisarit haudattiin tavalla, jota ei tunneta '
-          + 'juuri missään muualla. Miten?',
+        q: 'Isoisän merkintä laskee päivät muttei sano päivämäärää: '
+          + 'pörssi kaatui kahdeksan päivää maailmannäyttelyn '
+          + 'avajaisten jälkeen. Minä päivänä miehet itkivät kadulla?',
         vaihtoehdot: [
-          'Ruumis, sydän ja sisälmykset haudattiin kolmeen eri kirkkoon',
-          'Arkku laskettiin Tonavan pohjaan',
-          'Keisari haudattiin istualleen valtaistuimelleen',
-          'Hauta muurattiin umpeen tornin huippuun',
+          '9. toukokuuta 1873',
+          '1. toukokuuta 1873',
+          '8. kesäkuuta 1873',
+          '17. syyskuuta 1873',
         ],
         oikea: 0,
-        fakta: 'Habsburgien ruumiit lepäävät kapusiinien kryptassa, '
-          + 'sydämet augustinolaiskirkossa ja sisälmykset '
-          + 'Tapaninkirkon katakombeissa. Kryptan ovella saattue '
-          + 'kolkutti, ja keisari päästettiin sisään vasta kun hänet '
-          + 'oli kuulutettu pelkäksi kuolevaiseksi ihmiseksi.',
+        fakta: 'Keisari Franz Joseph avasi näyttelyn 1. toukokuuta '
+          + '1873 sanoen, että maa on kaikin puolin ilahduttavassa '
+          + 'nousussa. Kahdeksan päivää myöhemmin, 9. toukokuuta, '
+          + 'kaatui aamupäivän aikana 120 pankkia, ja kello 13 '
+          + 'poliisi sulki pörssin. Päivä on Itävallan historian '
+          + 'musta perjantai.',
       },
       aarre: 'Kätkön päällä seisoi kolmas lyhty, ja Anton puhui portaita '
         + 'kohti: "Veto tulee ovesta, jota ei minun aikanani ole avattu '
