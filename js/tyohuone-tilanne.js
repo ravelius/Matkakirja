@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1275: Kaupunkilehden kohdekartan merkit eivat enaa katoa kun karttakuva latautuu hitaasti (v1038:sta asti maannut ajoitusansa; osui 24 kaupunkiin, mm. Ateena, Istanbul, Sofia). Avaa Ateenan lehden kaupunkikartta kylmalla valimuistilla - kuusi kohdetta nakyy.',
   'v1274: Nouda Drive-herot -tyokulku laskeutuu nyt alikansioihin (herot, aarre...) ja etuliittaa alikansion nimen tiedostonimeen. Ei pelimuutoksia - vain tyokulku.',
   'v1273: Panoroinnin nykays korjattu: viivainten kehyssilmukka ei enaa tuota roskaa (varaukset -58 %, fokusmitat -79 %), joten V8:n taysi GC-pysahdys (mitattu 0,4-0,5 s kesken eleen) laukeaa selvasti harvemmin; pisin kehys 433 -> 333 ms (iPhone-fokus) ja 367 -> 83 ms (maailmankartta). Testaa edestakainen vieritys puhelimella.',
   'v1272: Euroopan 29 maalle omat paikallisaarreparit (pieni herkku ~150 p, iso kadonnut kansallisaarre ~600 p) faktoineen - esim. FIN mustikat/Sammon siru, DNK wienerleivat/Gallehusin kultasarvet. HUOM: kortin kuva on viela mantereen yleiskuva (maakuvat generoidaan erikseen) eika fakta viela nay kortilla. Kaanna laatta eri maissa.',

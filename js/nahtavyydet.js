@@ -1373,21 +1373,39 @@ export function piirraMatkailijalle(ui, kohde) {
  */
 export function hajautaPiirrospisteet(kotelo, pisteet, ydin) {
   if (pisteet.length < 2) return;
+  // 46 px ≈ 40 px:n laatikko + ilmarako (koko on elänyt omistajan
+  // palautteiden mukana: 64 → 48 → 40 px; väli vastaavasti
+  // 72 → 54 → 46). Pieni väli tarkoittaa pieniä siirtymiä, mikä
+  // sopii nuolettomaan karttaan.
+  const MIN = 46;
+  // Piirrokset pysyvät lepotilassa näkyvällä ydinalueella.
+  const M = 24;
   const asettele = () => {
     const mitat = kotelo.getBoundingClientRect();
-    // Etukäteispuskurin lehti renderöityy piilossa (leveys 0) —
-    // palautetaan epätosi ja jäädään odottamaan kokovahtia.
-    if (mitat.width < 40) return false;
+    /*
+     * Etukäteispuskurin lehti renderöityy piilossa (leveys 0) —
+     * palautetaan epätosi ja jäädään odottamaan kokovahtia.
+     *
+     * KORKEUS SAMAAN VARTIOON (omistajan bugiraportti 28.8.2026,
+     * iPad v1274: *"Ateenan kaupunki kohteet eivät näy tässä
+     * kartalla ollenkaan"*). Lava saa korkeutensa karttakuvasta,
+     * joka on virrassa; jos kuva ei ole vielä latautunut, lava on
+     * kuvan tyhjä rivilaatikko, vaikka leveys on jo täysi. Mitattu
+     * Chromiumilla (iPad 834×1112, Ateena): W 643,6, K 13,5,
+     * img.complete false. Silloin reunarajauksen ikkuna [M, K−M] on
+     * NURINPÄIN, jokainen piste puristuu arvoon K−M < 0 (top
+     * −78,03 % kaikilla kuudella kohteella) ja .kartta-kehyksen
+     * overflow: hidden leikkaa koko merkkikerroksen näkymättömiin.
+     * Vanha vartio päästi tämän läpi ja palautti tosi, joten
+     * kokovahtia ei koskaan viritetty eikä paikkoja laskettu
+     * uudelleen kuvan latauduttua. Vaadittava korkeus on juuri se,
+     * jolla ikkuna on olemassa: kaksi reunapuskuria ja yksi
+     * vähimmäisväli.
+     */
+    if (mitat.width < 40 || mitat.height < 2 * M + MIN) return false;
     const W = mitat.width;
     const K = mitat.height;
-    // 46 px ≈ 40 px:n laatikko + ilmarako (koko on elänyt
-    // omistajan palautteiden mukana: 64 → 48 → 40 px; väli
-    // vastaavasti 72 → 54 → 46). Pieni väli tarkoittaa pieniä
-    // siirtymiä, mikä sopii nuolettomaan karttaan.
-    const MIN = 46;
     const paikat = pisteet.map((m) => ({ ...m, X: (m.x / 100) * W, Y: (m.y / 100) * K }));
-    // Piirrokset pysyvät lepotilassa näkyvällä ydinalueella.
-    const M = 24;
     const x0 = (ydin.x / 100) * W + M;
     const x1 = ((ydin.x + ydin.leveys) / 100) * W - M;
     const y0 = (ydin.y / 100) * K + M;

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1275, teksti: 'Kohdekartan merkit palaavat matalalta lavalta' },
   { v: 1274, teksti: 'Drive-nouto laskeutuu alikansioihin' },
   { v: 1273, teksti: 'Kehyssilmukka ilman roskaa: GC-nykays harvemmaksi' },
   { v: 1272, teksti: 'Euroopan 29 maan paikallisaarreparit' },
