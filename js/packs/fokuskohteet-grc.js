@@ -1122,7 +1122,10 @@ export const FOKUSKOHTEET_GRC = [
       osoite: 'assets/kartat/ihmeet/ihme-delfoi.webp',
       kadonnut: false,
       selite: 'Delfoi ei ollut kaupunki vaan pyhäkkö: Parnassoksen '
-        + 'rinteelle terassoitu alue, jonne kreikkalaiset kaupunkivaltiot '
+        + 'rinteelle terassoitu alue, jonne tultiin kysymään Apollonin '
+        + 'neuvoa. Kaupunkivaltioiden lähettiläät uhrasivat vuohen ja '
+        + 'odottivat vuoroaan, ja Pythia-papitar vastasi kysymyksiin '
+        + 'temppelin sisällä; kiitokseksi kaupungit '
         + 'pystyttivät pyhän tien varrelle omat aarreaittansa ja '
         + 'lahjapatsaansa — lahja oli usein kymmenys sotasaaliista. '
         + 'Sulla ryösti paikan 86 eaa. ja Nero 66 jaa., ja Konstantinus '
@@ -1194,7 +1197,13 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Parthenon valmistui 432 eaa., ja sen päätykolmiot, '
         + 'metoopit ja friisi olivat alun perin kirkkaasti maalattuja — '
         + 'nykyinen valkoinen marmori on kahdenkymmenenviiden vuosisadan '
-        + 'jälki. Temppeli seisoo yhä Akropoliin kalliolla keskellä '
+        + 'jälki. Temppeli ei ollut kokoontumistila vaan aarreholvi: '
+        + 'salissa seisoi Feidiaan noin kaksitoistametrinen kullasta ja '
+        + 'norsunluusta tehty Athene Parthenos, ja rakennuksessa '
+        + 'säilytettiin Ateenan liittolaisiltaan keräämiä varoja, jotka '
+        + 'virkamiehet luetteloivat vuosittain kiveen hakattuihin '
+        + 'listoihin. Uhrit toimitettiin ulkona alttarilla. '
+        + 'Temppeli seisoo yhä Akropoliin kalliolla keskellä '
         + 'nykyistä Ateenaa.',
       lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
         + 'nykymaailmassa',
@@ -1348,7 +1357,11 @@ export const FOKUSKOHTEET_GRC = [
       kadonnut: false,
       selite: 'Feidiaan Zeus-patsas istui Olympian temppelissä kullasta '
         + 'ja norsunluusta tehtynä ja oli 12,4 metriä korkea — yksi '
-        + 'antiikin seitsemästä ihmeestä. Patsaasta ei ole säilynyt '
+        + 'antiikin seitsemästä ihmeestä. Kisoihin tulleet kävivät '
+        + 'katsomassa sitä hämärässä salissa, johon se tuskin mahtui, ja '
+        + 'Feidiaan sukua olleet papit hoitivat patsasta: lattian '
+        + 'öljyallas piti kostean laakson ilman halkeamasta norsunluuta. '
+        + 'Patsaasta ei ole säilynyt '
         + 'palaakaan, ja temppelin pylväät makaavat nykyään kaatuneina '
         + 'rivissä pyhäkköalueen kentällä.',
       lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
@@ -1796,11 +1809,14 @@ export const FOKUSKOHTEET_GRC = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-rodoksen-kolossi.webp',
       kadonnut: true,
-      selite: 'Helioksen 33-metrinen pronssipatsas pystytettiin Rodoksen '
-        + 'kaupunkiin 280 eaa., ja se oli antiikin maailman korkein '
-        + 'patsas. Maanjäristys kaatoi sen jo 54 vuotta myöhemmin, ja '
-        + 'palaset myytiin pois vuonna 653 — patsaan tarkasta paikasta '
-        + 'kiistellään yhä.',
+      selite: 'Helioksen 33-metrinen pronssipatsas oli kiitosuhri: '
+        + 'rodoslaiset pystyttivät sen 280 eaa. ja maksoivat sen myymällä '
+        + 'piirittäjänsä jälkeensä jättämät piirityskoneet. Se oli '
+        + 'antiikin maailman korkein patsas. Maanjäristys kaatoi sen jo '
+        + '54 vuotta myöhemmin, mutta kaatuneenakin se veti katsojia — '
+        + 'Plinius kertoo, että harvan kädet ylsivät peukalon ympäri — '
+        + 'kunnes palaset myytiin pois vuonna 653. Patsaan tarkasta '
+        + 'paikasta kiistellään yhä.',
       lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
         + 'nykymaailmassa',
     },
@@ -1873,7 +1889,11 @@ export const FOKUSKOHTEET_GRC = [
       kadonnut: false,
       selite: 'Knossoksen palatsi oli minolaisen Kreetan suurin keskus: '
         + 'noin 14 000 neliömetriä pihoja, portaikkoja ja varastoja, '
-        + 'joissa seisoi ihmisen kokoisia pithos-ruukkuja. Palatsi '
+        + 'joissa seisoi ihmisen kokoisia pithos-ruukkuja. Se oli ennen '
+        + 'kaikkea varasto ja virasto: ruukkuihin kerättiin maaseudun '
+        + 'öljy ja vilja, ja kirjurit merkitsivät saapuneet erät '
+        + 'savitauluihin. Keskuspihaa arvellaan juhlamenojen näyttämöksi, '
+        + 'ja palatsin seinämaalauksissa hypätään härän yli. Palatsi '
         + 'tuhoutui noin 1350 eaa. ja nukkui maan alla isoisäsi matkan '
         + 'ohi — kaivaukset alkoivat vasta 1878.',
       lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
@@ -2038,7 +2058,10 @@ export const FOKUSKOHTEET_GRC = [
         + '104 korinttilaista pylvästä, kukin seitsemäntoista metriä '
         + 'korkea, marmoripihan ympäröimänä Akropoliin kaakkoispuolella. '
         + 'Sisällä seisoi kullasta ja norsunluusta tehty Zeuksen patsas, '
-        + 'jota Pausanias piti aikansa suurimpiin kuuluvana. Herulit '
+        + 'jota Pausanias piti aikansa suurimpiin kuuluvana. Hadrianus '
+        + 'vihki temppelin vuonna 131, ja kreikkalaiset kaupungit '
+        + 'pystyttivät pihalle hänelle kiitospatsaita: pyhäköstä tuli '
+        + 'hänen perustamansa kaupunkien liiton keskus. Herulit '
         + 'ryöstivät temppelin vuonna 267, maanjäristys kaatoi sen '
         + '400-luvulla ja loput louhittiin keskiajan Ateenan '
         + 'rakennuskiveksi. Pystyssä on nyt viisitoista pylvästä, ja '

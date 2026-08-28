@@ -123,7 +123,11 @@ export const FOKUSKOHTEET_EGY = [
       osoite: 'assets/kartat/ihmeet/ihme-faros.webp',
       kadonnut: true,
       selite: 'Faroksen majakka seisoi sataman suulla runsaat tuhat '
-        + 'vuotta, ja sen tuli näkyi merelle noin 47 kilometrin päähän. '
+        + 'vuotta ja opasti viljalaivat Aleksandrian satamaan: sen tuli '
+        + 'näkyi merelle noin 47 kilometrin päähän. Keskiaikaisten '
+        + 'arabimatkaajien kuvausten mukaan polttoaine vedettiin ylös '
+        + 'tornin sisällä kiertävää ramppia, joka oli kyllin leveä '
+        + 'kahdelle kuormajuhdalle rinnakkain. '
         + 'Saaren kärjessä on nyt Qaitbayn linnoitus, joka muurattiin '
         + 'vuonna 1480 majakan omista kivistä — loput lohkareet makaavat '
         + 'sataman pohjassa.',
@@ -177,7 +181,11 @@ export const FOKUSKOHTEET_EGY = [
       kadonnut: true,
       selite: 'Aleksandrian kirjasto kokosi papyruskääröjä koko '
         + 'tunnetusta maailmasta, ja sen saleissa työskenteli aikanaan '
-        + 'yli sata oppinutta. Rakennuksesta ei ole löytynyt jälkeäkään '
+        + 'yli sata oppinutta valtion palkkaamana. Keruu oli '
+        + 'järjestelmällistä: Galenoksen mukaan satamaan saapuneiden '
+        + 'laivojen kirjat takavarikoitiin ja kopioitiin, ja alkuperäinen '
+        + 'jäi kirjastoon — omistaja sai lähteä kopion kanssa. '
+        + 'Rakennuksesta ei ole löytynyt jälkeäkään '
         + 'eikä sen paikkaa tunneta; kaupungin rannalla toimii nyt '
         + 'vuonna 2002 avattu Bibliotheca Alexandrina.',
       lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
@@ -254,7 +262,12 @@ export const FOKUSKOHTEET_EGY = [
       kadonnut: false,
       selite: 'Kheopsin pyramidin ulkopinta oli valmiina sileä ja '
         + 'valkoinen: Turasta tuotua hiottua kalkkikiveä, joka nousi '
-        + '146,6 metriin ja hohti aavikolla kuin peili. Kuori louhittiin '
+        + '146,6 metriin ja hohti aavikolla kuin peili. Se oli hauta: '
+        + 'faaraon ruumis tuotiin jokea pitkin laaksotemppeliin ja '
+        + 'kannettiin katettua, lähes kilometrin mittaista pengertietä '
+        + 'ylös, ja pyramidin kupeeseen rakennetussa temppelissä papit '
+        + 'toivat kuolleelle kuninkaalle ruoka- ja juomauhreja vielä '
+        + 'satoja vuosia hautajaisten jälkeen. Kuori louhittiin '
         + 'myöhempien vuosisatojen aikana rakennusaineeksi, ja jäljelle '
         + 'jäi 138,5 metriä korkea porrastettu sisus, joka seisoo '
         + 'Gizan tasangolla nyky-Kairon laidalla.',
@@ -332,7 +345,11 @@ export const FOKUSKOHTEET_EGY = [
         + 'kuudessatoista rivissä, ja aikanaan niiden päällä oli katto: '
         + 'sali oli hämärä sisätila, jonka kaikki pinnat oli kaiverrettu '
         + 'ja maalattu kirkkain värein, ja ainoa valo tuli '
-        + 'kiviristikkoikkunoista korkean keskikäytävän kyljessä. Katto '
+        + 'kiviristikkoikkunoista korkean keskikäytävän kyljessä. '
+        + 'Sisimpiin saleihin pääsivät vain papit; kansa näki jumalansa '
+        + 'kerran vuodessa Opet-juhlassa, kun Amonin pyhä vene '
+        + 'kannettiin Karnakista Luxorin temppeliin väkijoukkojen '
+        + 'reunustamaa tietä. Katto '
         + 'on sortunut ja värit haalistuneet auringossa, mutta pylväät '
         + 'seisovat yhä paikoillaan Luxorin pohjoispuolella.',
       lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1261, teksti: 'Ihmeselitteisiin loistoaikojen kaytto' },
   { v: 1260, teksti: 'Nippumerkit lehden mittoihin kapealla ruudulla' },
   { v: 1259, teksti: 'Takypiste symbolin paalle ja pooli kolmeen' },
   { v: 1258, teksti: 'Reaktiot: viisi symbolia ja jaetut laskurit' },

@@ -222,7 +222,12 @@ export const FOKUSKOHTEET_TUR = [
       kadonnut: false,
       selite: 'Artemiin temppelissä oli yli sata seitsemäntoistametristä '
         + 'marmoripylvästä, ja se oli antiikin kuuluisin '
-        + 'pyhiinvaelluskohde. Viimeinen temppeli tuhoutui vuonna 401 '
+        + 'pyhiinvaelluskohde: väkeä tuli koko Välimeren piiristä, ja '
+        + 'kaupungin hopeasepät elivät jumalattaren pienoismallien '
+        + 'myynnistä. Temppeli oli myös Vähän-Aasian pankki — kaupungit, '
+        + 'kuninkaat ja yksityiset säilyttivät siellä rahansa ja '
+        + 'sopimuksensa — ja turvapaikka, josta pakolaista ei saanut '
+        + 'hakea. Viimeinen temppeli tuhoutui vuonna 401 '
         + 'jaa.; paikalla on nyt soistuneella kentällä vain kivijalka ja '
         + 'yksi kokoon kasattu pylväs.',
       lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
@@ -1194,8 +1199,12 @@ export const FOKUSKOHTEET_TUR = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-halikarnassoksen-mausoleumi.webp',
       kadonnut: true,
-      selite: 'Mausoloksen noin 45-metrinen hauta valmistui 351 eaa., ja '
-        + 'sitä ihailtiin niin, että rakennuksen nimestä tuli sana '
+      selite: 'Mausoloksen noin 45-metrinen hauta valmistui 351 eaa. Se '
+        + 'ei ollut temppeli vaan muistomerkki: leski Artemisia hautasi '
+        + 'miehensä komein juhlin, joissa kilpailtiin ja uhrattiin suuri '
+        + 'määrä eläimiä, ja lopuksi portaat haudan sisään suljettiin '
+        + 'kivillä ja soralla. Rakennusta ihailtiin niin, että sen '
+        + 'nimestä tuli sana '
         + 'mausoleumi. Maanjäristykset kaatoivat sen keskiajalla ja kivet '
         + 'muurattiin Bodrumin linnaan, joka vartioi lahden suuta yhä.',
       lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
@@ -1378,7 +1387,12 @@ export const FOKUSKOHTEET_TUR = [
         + 'linnoitus: 5,7 kilometriä kolminkertaista puolustusta '
         + 'mereltä merelle, 96 tornia päämuurissa ja niiden edessä '
         + 'matalampi ulkomuuri ja yli kahdenkymmenen metrin levyinen '
-        + 'vallihauta. Ne pitivät kaupungin tuhat vuotta. Muuririvi '
+        + 'vallihauta. Ne pitivät kaupungin tuhat vuotta, ja kaupunki '
+        + 'piti niistä huolta: kun maanjäristys kaatoi vuonna 447 puoli '
+        + 'sataa tornia juuri kun hunnit lähestyivät, työhön pantiin '
+        + 'kilpa-ajoradan kannattajajoukot. Siniset ja vihreät korjasivat '
+        + 'kumpikin oman osuutensa, ja muuri oli pystyssä kahdessa '
+        + 'kuukaudessa. Muuririvi '
         + 'kulkee yhä halki Istanbulin, ja sen vieressä on nyt '
         + 'puistokaista ja moottoritie; 1980-luvun korjauksia on '
         + 'moitittu, sillä vuoden 1999 maanjäristyksessä juuri '
@@ -1467,7 +1481,9 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Pergamonin suuri alttari oli hellenistisen taiteen '
         + 'huipentuma: 35 metriä leveä marmorirakennelma akropoliin '
         + 'terassilla, jalustassa satojen hahmojen taistelufriisi ja '
-        + 'portaiden päällä pylväiden ympäröimä uhripiha. Rakennelmaa '
+        + 'edessä kaksikymmentä metriä leveä portaikko, jota myöten '
+        + 'kulkue nousi pylväiden ympäröimälle uhripihalle. Siellä '
+        + 'poltettiin uhrit Zeukselle. Rakennelmaa '
         + 'ei ole enää paikallaan. Isoisän matkan aikaan vuonna 1873 '
         + 'bergamalaiset yhä louhivat rinteestä kiveä ja polttivat '
         + 'marmoria kalkiksi; Carl Humannin kaivaukset alkoivat viisi '

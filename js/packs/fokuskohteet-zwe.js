@@ -115,7 +115,11 @@ export const FOKUSKOHTEET_ZWE = [
       kadonnut: false,
       selite: 'Suuren Zimbabwen suuri aitaus rakennettiin 1200- ja '
         + '1300-luvuilla kuningashuoneen asunnoksi, ja muurien sisällä '
-        + 'seisoi savimajoja olkikattoineen. Kivityö tehtiin ilman '
+        + 'seisoi savimajoja olkikattoineen. Kaupunki eli kaukokaupasta: '
+        + 'sen kulta ja norsunluu kulkivat Intian valtameren rannikolle, '
+        + 'ja raunioista on kaivettu kiinalaista selaadonia, '
+        + 'persialaista lasia ja Kilwan sulttaanikunnan kolikoita. '
+        + 'Kivityö tehtiin ilman '
         + 'laastia: lohkot ladottiin niin tarkasti, että muuri on '
         + 'seissyt seitsemän vuosisataa. Majat ovat maatuneet pois ja '
         + 'kaupunki hylättiin 1500- tai 1600-luvulla, mutta muuri ja '
