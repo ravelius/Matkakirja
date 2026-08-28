@@ -1417,7 +1417,13 @@ export const RAAMATTU = {
           + 'matkakirja-kansioon, nouto nouda-drive.yml:lla ja Fable '
           + 'silmatarkistaa ennen pelia. API-tyonkulut jaavat '
           + 'VARAKANAVAKSI (kaytto vaatii syyn, esim. kiire tai '
-          + 'referenssikuvaohjaus).',
+          + 'referenssikuvaohjaus). PROMPTIEN TOIMITUSMUOTO (omistaja '
+          + '28.8.2026 ilta): promptit annetaan chatissa AINA '
+          + 'KOODILOHKONA (kopiointinappi), ja koko satsi YHTENA '
+          + 'ISONA LOHKONA aihetta kohti - jokaisen promptin edella '
+          + 'oma rivinsa jarjestysnumerolle ja tiedostonimelle, ja '
+          + 'tyylikaare leivottuna valmiiksi jokaiseen promptiin '
+          + '(yksi kopiointi = yksi valmis prompti).',
         'KUVAGENEROINNIN TYÖNJAKO (omistaja 26.8.2026 ilta: "Saat '
           + 'generoida aina kaiken muun apin kautta paitsi '
           + 'herokuvat" — laajentaa saman päivän pyydettäessä-'
