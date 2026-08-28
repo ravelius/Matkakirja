@@ -3402,6 +3402,16 @@ export class UI {
     // Trackpadin eleen päättymisajastin (kartta.js ajastaRullanLoppu)
     // ei saa viimeistellä elettä kuolleessa pelissä.
     clearTimeout(this.rullanEleAjastin);
+    /*
+     * Eleen ajaksi piilotetut merkkikerrokset (kartta.js piilotaMerkit)
+     * palautetaan tässä eikä ajastimen varassa: kuolleen pelin ajastin
+     * ei laukea, ja runkoon jäänyt luokka piilottaisi seuraavan pelin
+     * merkit heti alkuun.
+     */
+    clearTimeout(this.merkkiPaluuAjastin);
+    this.merkkiPaluuAjastin = 0;
+    this.merkitPiilossa = false;
+    document.body.classList.remove('kartta-merkit-piilossa');
     // Lehden avauksen mittavarmistuksen jälkitarkistukset samoin.
     clearTimeout(this.lehtitila.lehtiMittaAjastin);
     clearTimeout(this.lehtitila.lehtiMittaJalkiajastin);
@@ -3957,6 +3967,17 @@ export class UI {
         // Kesken jäänyt sarja saa jatkua heti, ei vasta seuraavasta
         // eleestä: juuri se kaista on nyt piirtämättä.
         this.taideOdottaa = true;
+      }
+      /*
+       * Eleen ajaksi piilotetut merkkikerrokset (kartta.js
+       * piilotaMerkit) palaavat samalla: jumiin jäänyt ele ei saa
+       * jättää karttaa merkittömäksi lopuksi istunnoksi — merkit ovat
+       * napautuskohteita.
+       */
+      if (this.merkitPiilossa) {
+        this.kartta?.naytaMerkit?.(true);
+        document.body.classList.remove('kartta-merkit-piilossa');
+        this.merkitPiilossa = false;
       }
     }
     return Boolean(this.osoitinKartalla || this.kartanRaahaus);
@@ -5953,7 +5974,16 @@ export class UI {
      */
     const polut = renkaat.map((d) => el('path', { d, class: 'country-korostus' },
       this.countryLayer));
-    if (uusiMaa) this.animoiMaanAariviiva(polut, key);
+    /*
+     * PIILOTETTUA ÄÄRIVIIVAA EI ANIMOIDA (28.8.2026, sama tutkinta kuin
+     * css: body.fokus-atlas-nakyma .country-korostus). Atlasnäkymässä
+     * viiva on display: none, mutta piirtoanimaatio ajettiin silti:
+     * jokaiselle renkaalle getTotalLength (asettelun luku) ja kaksi
+     * WAAPI-animaatiota, saaristomaassa kymmeniä — työtä, jota kukaan
+     * ei näe. Viiva on valmiina paikallaan, jos näkymästä joskus
+     * poistutaan.
+     */
+    if (uusiMaa && !this.vanhaLautaPiilossa()) this.animoiMaanAariviiva(polut, key);
   }
 
   /**
