@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1245, teksti: 'Raamattuun motivaatioteoria ja pysyva Livia' },
   { v: 1244, teksti: 'Nippusarake tiivistyy kapealla ruudulla' },
   { v: 1243, teksti: 'Ihmenauha skaalautuu kuvan mukana' },
   { v: 1242, teksti: 'Raamattuun paivan linjaukset' },
