@@ -1165,6 +1165,25 @@ const NOSTOSYM_PORTAAT = [1.5, 3, 6, 9];
 let NOSTOSYM_PORRAS = NOSTOSYM_PORTAAT[0];
 const NOSTOSYM_RASTERIT = new Map();
 
+/**
+ * EDELLISEN PORTAAN RASTERIT JÄÄVÄT VÄLIMUISTIIN.
+ *
+ * MITATTU SYY (nipistys Kreikan fokusnäkymässä, iPhone 390×844 dpr3,
+ * 4× kuristus, 12 s): `toDataURL` vei 903 ms pääsäiettä. Nipistys
+ * kulkee edestakaisin saman portaanrajan yli, ja välimuisti
+ * tyhjennettiin jokaisella ylityksellä — samat seitsemänkymmentä
+ * rasteria paistettiin uudestaan, vaikka ne oli juuri tehty.
+ *
+ * Avain kantaa portaan jo valmiiksi (`${porras}|…`), joten kahden
+ * portaan rasterit eivät voi sekaantua keskenään.
+ *
+ * KAKSI EIKÄ KAIKKI NELJÄ. Nipistys heiluu naapuriportaiden välillä,
+ * joten kaksi kattaa juuri sen tapauksen, jonka takia tämä on. Pidempi
+ * muisti maksaisi vain muistia: yksi rasteri on PNG-data-URL, ja
+ * lähimmällä portaalla niitä on merkkien verran.
+ */
+let NOSTOSYM_EDELLINEN = null;
+
 /** Nimiön asu luetaan CSS:stä kerran per asu — väri ja kirjasin asuvat siellä. */
 const NOSTOSYM_ASUT = new Map();
 
@@ -1197,8 +1216,14 @@ const NOSTOSYM_LEVEYDET = new Map();
 export function nostosymAsetaPorras(tarve) {
   const uusi = NOSTOSYM_PORTAAT.find((p) => p >= tarve) ?? NOSTOSYM_PORTAAT.at(-1);
   if (uusi === NOSTOSYM_PORRAS) return false;
+  NOSTOSYM_EDELLINEN = NOSTOSYM_PORRAS;
   NOSTOSYM_PORRAS = uusi;
-  NOSTOSYM_RASTERIT.clear();
+  // Nykyisen ja edellisen portaan rasterit jäävät (ks. NOSTOSYM_EDELLINEN),
+  // vanhemmat lähtevät — muuten muistiin kertyisi kaikkien portaiden kuvat.
+  for (const avain of [...NOSTOSYM_RASTERIT.keys()]) {
+    const porras = Number(avain.slice(0, avain.indexOf('|')));
+    if (porras !== uusi && porras !== NOSTOSYM_EDELLINEN) NOSTOSYM_RASTERIT.delete(avain);
+  }
   return true;
 }
 
