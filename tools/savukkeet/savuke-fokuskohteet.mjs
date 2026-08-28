@@ -89,13 +89,29 @@ async function avaaSivu(fokus = true) {
     viewport: { width: 834, height: 1112 },
     reducedMotion: 'reduce',
   });
-  await ctx.addInitScript(([data, paalla]) => {
+  /*
+   * TÄKYNOSTOT MERKITÄÄN KATSOTUIKSI (28.8.2026 ilta).
+   *
+   * Omistajan linjauksen jälkeen maan täkypisteet ovat kartalla heti
+   * eivätkä vasta aarteen jälkeen (js/fokusnosto.js), ja piste
+   * RATSASTAA oman kohteensa merkin päällä ja vie sen napautuksen
+   * (js/fokusnosto-symbolit.js, osio PISTE AINA SYMBOLIN PÄÄLLE). Tämä
+   * savuke mittaa KOHDEMERKKEJÄ, ja napautus tehdään merkin
+   * ruutupaikkaan juuri siksi, ettei sen päällä saa olla mitään muuta —
+   * täky peittäisi Delfoin ja Olympoksen ja koe mittaisi väärää asiaa.
+   * Katsotut täyt eivät nouse kartalle (localStorage, sama avain kuin
+   * js/fokusnosto.js NOSTO_AVAIN), joten kokeen kohde eristetään
+   * merkitsemällä Kreikan pooli luetuksi.
+   */
+  const TAYT_LUETUT = ['sofia-korut', 'kastrin-kyla', 'olympoksen-huippu'];
+  await ctx.addInitScript(([data, paalla, tayt]) => {
     try {
       localStorage.setItem('matkakirja-save-v1', data);
+      localStorage.setItem('matkakirja-takynostot-luetut', JSON.stringify(tayt));
       if (paalla) localStorage.removeItem('matkakirja-fokusmoodi');
       else localStorage.setItem('matkakirja-fokusmoodi', '0');
     } catch { /* yksityinen tila — savuke kaatuu myöhemmin selvemmin */ }
-  }, [tallenne, fokus]);
+  }, [tallenne, fokus, TAYT_LUETUT]);
   const sivu = await ctx.newPage();
   /*
    * KUVAPALVELIN KORVATAAN PIKSELILLÄ. Kontin selain ei pääse ämpäriin
