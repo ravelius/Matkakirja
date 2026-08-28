@@ -119,9 +119,9 @@ const vaalea = (vari) => {
   return (osat[0] * 0.299 + osat[1] * 0.587 + osat[2] * 0.114) > 190;
 };
 
-/* Valmis peli: Herra Fogg seisoo Ateenassa, laatta kääntämättä. */
+/* Valmis peli: Fogg seisoo Ateenassa, laatta kääntämättä. */
 const peli = new Game({
-  players: [{ name: 'Herra Fogg', color: '#c9a227', start: 'ateena' }],
+  players: [{ name: 'Fogg', color: '#c9a227', start: 'ateena' }],
   pack: packById('europe'),
   seed: 11,
 });

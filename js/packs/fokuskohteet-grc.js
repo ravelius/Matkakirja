@@ -1006,7 +1006,7 @@ export const FOKUSKOHTEET_GRC = [
      * (fokuskohteet-kreikka.md, kohta 12) sellaisenaan, paitsi että
      * koostajan "HUOM 1873:" -tunniste on kirjoitettu auki omaksi
      * lauseekseen — juuri niin kuin dokumentti itse ehdottaa — ja
-     * pöllö puhuttelee herra Foggia. Faktat: Periandros 600-luvulla
+     * pöllö puhuttelee Foggia. Faktat: Periandros 600-luvulla
      * eaa. ja vetotie, kolme roomalaishallitsijaa ja heidän loppunsa,
      * Neron kuokka 67 jaa., valmistuminen 1881–1893.
      */

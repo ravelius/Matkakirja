@@ -37,7 +37,7 @@ if (!avain) {
 }
 
 /* Paketin v2 osat: saapuminen (isoisä), kohtaaminen (henkilö) ja
- * aarre (henkilö + nuoren herran mietintö). Kysymystä ei lueta —
+ * aarre (henkilö + nuoren Foggin mietintö). Kysymystä ei lueta —
  * se on pelaajan interaktiivinen visa. Jos luenta*-kenttää ei ole,
  * käytetään tekstikenttää sellaisenaan. */
 const OSAT = [

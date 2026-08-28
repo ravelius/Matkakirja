@@ -15,7 +15,7 @@ const AVAIN = 'matkakirja-aanivalinnat';
 
 
 /*
- * Nuoren herran huudahdukset aarteen paljastukseen. Avaimena on
+ * Nuoren Foggin huudahdukset aarteen paljastukseen. Avaimena on
  * LAATTATYYPPI (js/tokens.js), ei enää aarteen arvo: pienen ja ison
  * paikallisaarteen arvo arvotaan löytöhetkellä, joten se ei kelpaa
  * avaimeksi.
@@ -1086,7 +1086,7 @@ export function valitseAani(slot, url) {
 }
 
 // Kertojan tila (omistajan toive, yläpalkin valikko): 'pitka' lukee
-// kaiken kuten ennenkin, 'lyhyt' vain matkakirjan nuoren herran
+// kaiken kuten ennenkin, 'lyhyt' vain matkakirjan nuoren Foggin
 // osuuden, 'ei' mykistää kertojan mutta jättää muut äänet soimaan
 // (matkakirjan kaiutinnappi yliajaa hetkellisesti). Täysi mykistys on
 // erikseen sound.js:n enabled-tilassa.

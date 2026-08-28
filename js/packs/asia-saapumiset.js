@@ -1,7 +1,7 @@
 // Matkakirjan saapumistekstit (Aasia ja Lähi-itä) — sama muoto ja sama
 // ääni kuin Euroopan ja Afrikan teksteissä.
 //
-//  - `kuvaus` on nuoren herran tuore fiilis paikasta. Ensimmäinen lause
+//  - `kuvaus` on nuoren Foggin tuore fiilis paikasta. Ensimmäinen lause
 //    näkyy lihavoituna ja lukija lukee koko merkinnän ääneen tunteella.
 //  - `nosto` päättää merkinnän isoisän kirjan lainaukseen niin, että
 //    lähde käy ilmi tekstistä itsestään — erillistä otsikkoa ei ole.

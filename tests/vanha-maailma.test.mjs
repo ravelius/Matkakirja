@@ -265,7 +265,7 @@ test('jokaisella vanhan maailman kaupungilla on saapumisteksti', async () => {
 
 test('saapumistekstissä on molemmat äänet', async () => {
   const { ASIA_SAAPUMISET } = await import('../js/packs/asia-saapumiset.js');
-  // Merkintä on kahden äänen vuoropuhelu: nuoren herran tuore havainto
+  // Merkintä on kahden äänen vuoropuhelu: nuoren Foggin tuore havainto
   // ja isoisän kirjan lainaus. Ilman jälkimmäistä kortti on pelkkä
   // matkaopas, ja koko kehyskertomus katoaa.
   for (const [id, t] of Object.entries(ASIA_SAAPUMISET)) {

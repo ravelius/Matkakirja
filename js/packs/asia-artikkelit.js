@@ -21,7 +21,7 @@
 // kirjoitettu Wikipedian pohjalta, joten lähdemaininta säilyy
 // dialogissa.
 //
-// Ei ylisanoja eikä huutomerkkejä: nuoren herran innostus kuuluu
+// Ei ylisanoja eikä huutomerkkejä: nuoren Foggin innostus kuuluu
 // saapumistekstissä, ja tämä on se rauhallinen ääni, joka kertoo
 // taustan.
 //

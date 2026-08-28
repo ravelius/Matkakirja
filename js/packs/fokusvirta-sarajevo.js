@@ -535,7 +535,7 @@ export const FOKUSVIRTA_SARAJEVO = {
     teksti: 'Emirin paja on Kazandžilukin kujalla, ja hänen sukunsa on '
       + 'takonut saman oven takana kolmesataa vuotta. Hän tunnistaa '
       + 'tulijan askelista ennen kuin nostaa katseensa: kuka on tullut '
-      + 'ostamaan ja kuka katsomaan. Herra Foggia hän ei hoputa. Emir '
+      + 'ostamaan ja kuka katsomaan. Matkustajaa hän ei hoputa. Emir '
       + 'laskee vasaransa vasta kun on varma, että vieras on ymmärtänyt, '
       + 'mitä näiden pöytien esineistä yksi merkitsee kaupungille '
       + 'enemmän kuin muut.',

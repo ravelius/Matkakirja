@@ -70,9 +70,9 @@ const osoite = `http://localhost:${palvelin.address().port}/`;
 let lapi = 0; let kaikki = 0;
 const vaadi = (nimi, ehto, lisa = '') => { kaikki += 1; if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`); };
 
-/* Valmis peli: Herra Fogg seisoo Ateenassa maailmankartalla. */
+/* Valmis peli: Fogg seisoo Ateenassa maailmankartalla. */
 const peli = new Game({
-  players: [{ name: 'Herra Fogg', color: '#c9a227', start: 'ateena' }],
+  players: [{ name: 'Fogg', color: '#c9a227', start: 'ateena' }],
   pack: packById('maailmankartta'),
   seed: 11,
 });

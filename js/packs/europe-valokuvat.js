@@ -907,7 +907,7 @@ export const EUROPE_VALOKUVAT = {
 
         selite: 'Ha\'penny Bridge kaartuu Liffeyn yli keskellä Dublinia. Se on '
 
-          + 'vain yksi joen monista silloista, joita nuori herra ei ehtinyt '
+          + 'vain yksi joen monista silloista, joita Fogg ei ehtinyt '
 
           + 'laskea.',
 

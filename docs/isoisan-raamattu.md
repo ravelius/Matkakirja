@@ -51,7 +51,7 @@ Mitä tämä tarkoittaa käytännössä:
 
 ## Isoisä: Horatio Fogg
 
-Reginaldin isoisä saa nimen: **Horatio Fogg**, nimikirjaimet **H.F.**
+Foggin perillisen isoisä saa nimen: **Horatio Fogg**, nimikirjaimet **H.F.**
 Kuninkaallisen laivaston kartanpiirtäjä, joka erosi virastaan keväällä
 1873. Hänen oma perustelunsa matkakirjan alkulehdellä: *"He käskivät
 piirtää rannikon. Minä halusin tietää, mitä rannikon takana on."*
@@ -62,7 +62,7 @@ tunnistetaan:
 - **Mittaa kaiken.** Askeleet, asteet, minuutit, kirkontornit. Joka
   sivun ylälaidassa on sää ja ilmanpuntarin lukema ("seesteistä,
   764 mmHg"). Messinkibarometri kulkee aina mukana — ja on nyt
-  Reginaldin laukussa.
+  nuoren Foggin laukussa.
 - **Pelkää hevosia, ei myrskyjä.** Nousee mihin tahansa laivaan missä
   tahansa kelissä, mutta kiertää hevosrattaat kadun toista laitaa.
   Tästä ei tehdä numeroa joka kaupungissa; se välähtää harvakseltaan.
@@ -74,7 +74,7 @@ tunnistetaan:
   selityksiä.
 - **Kirjoittaa aina jollekulle.** Merkinnöissä toistuu puhuttelu
   *"sinä, joka tätä luet"*. Horatio ei tiennyt kenelle kirjoitti —
-  Reginald tajuaa matkalla, että se tarkoittaa häntä. Tämä on koko
+  perillinen tajuaa matkalla, että se tarkoittaa häntä. Tämä on koko
   tarinan tunneydin, ja luennoissa juuri nämä kohdat luetaan
   lämpimimmin.
 
@@ -129,7 +129,7 @@ varovainen, ja myöhäisissä merkinnöissä melkein haikea — *"Ilman herra
 G:tä olisin luovuttanut jo Wienissä. Kilpailija on epäkohtelias tapa
 sanoa: joku toinen uskoo samaan kuin sinä."*
 
-**Nykyajan taso: tummansininen sateenvarjo.** Reginald alkaa huomata
+**Nykyajan taso: tummansininen sateenvarjo.** Nuori Fogg alkaa huomata
 saman tummansinisen sateenvarjon eri kaupungeissa — myös poutasäällä.
 Kantajaa ei näytetä eikä nimetä. PALJASTUSTA EI TEHDÄ ilman omistajan
 kanssa sovittua linjaa; suunniteltu suunta on, että seuraaja on
@@ -156,10 +156,10 @@ saa olla ketju. Säännöt:
    Grimshawin sähkeet, sateenvarjo, barometrilukemat, puuttuvat ja
    revityt sivut. Kun samat esineet palaavat eri kaupungeissa, tarina
    tuntuu yhtenäiseltä vaikka järjestys vaihtuu.
-3. **Kaksi aikatasoa joka merkinnässä:** kuvaus on Reginaldin nykyhetki,
+3. **Kaksi aikatasoa joka merkinnässä:** kuvaus on nuoren Foggin nykyhetki,
    nosto on Horation vuosi 1873. Paras jännite syntyy, kun tasot
-   koskettavat: Horatio kätki — Reginald löytää jäljen; Horatio
-   menetti — Reginaldille ojennetaan.
+   koskettavat: Horatio kätki — perillinen löytää jäljen; Horatio
+   menetti — perilliselle ojennetaan.
 4. **Aarrevihjeet ovat eri asia.** Taitetut sivut (tarina.md) ohjaavat
    aarteen etsintää; dekkarikoukut eivät saa naamioitua aarrevihjeiksi
    eikä päinvastoin.
@@ -176,7 +176,7 @@ aloittaisin suoraan tarinasta. Ja loppukin kannattaa lyhentää.")*
   avausta ("Kaupunki seisoo...", "Kaupungissa tuoksui...") —
   ensimmäinen virke on jo tarinassa: jotain tapahtuu, löytyy tai
   ojennetaan.
-- **nosto:** Horation sitaatti + korkeintaan yksi lyhyt Reginaldin
+- **nosto:** Horation sitaatti + korkeintaan yksi lyhyt nuoren Foggin
   virke, enintään ~160 merkkiä. Loppu on yksi isku, ei kahta.
 - tarina.md:n vaihtelusäännöt voimassa: korkeintaan kolmasosa
   merkinnöistä alkaa isoisällä, aloitustapoja kierrätetään, sama
@@ -241,7 +241,7 @@ ei seuraa missään.
    avain, kortti. Yleisin sävel, silti alle kolmannes.
 3. **Lämpö** — joku muistaa isoisän hyvällä: tarjoilija, teenmyyjä,
    kauppias. Isoisä jätti jälkeensä ystäviä, ei vain arvoituksia.
-4. **Huumori** — Horation kuivat huomiot, Reginaldin kömmähdykset,
+4. **Huumori** — Horation kuivat huomiot, nuoren Foggin kömmähdykset,
    ajan patina (Horatio ei tiennyt tulevasta).
 5. **Haikeus** — paikat, jonne isoisä ei ehtinyt; "sinulle, joka
    tätä luet". Tunnelmista arvokkain — säästetään oikeisiin kohtiin.
@@ -299,7 +299,7 @@ valmis teksti. Vierekkäiset kaupungit saavat eri keinon.
   syntyvän 1873) · Krakova (haikeus: torvi joka vaikenee kesken)
 - **Balkan ja kaakko:** Dubrovnik (hengähdys/viisaus: ostettu
   rauha) · Sarajevo (haikeus: "Bosniaan, jos aika riittää" —
-  Reginald käy viivalla hänen puolestaan; SÄILYTETÄÄN, vain
+  perillinen käy viivalla hänen puolestaan; SÄILYTETÄÄN, vain
   lyhennys) · Sofia (arvoitus: kaupunki itsensä päällä, lähteet) ·
   Ateena ✓ · Kreeta (arvoitus/huumori: labyrintti, eksyminen) ·
   Istanbul ✓
@@ -366,7 +366,7 @@ saavat jäädä legendoiksi kaupungin oman aarteen kohdalla.
   kuuluu samaan mysteeriin ja saa viitata kulkijan jälkiin — ei
   koskaan uusiin, erillisiin arvoituksiin.
 - **Jännitys ei tule mysteeristä** (omistajan linjaus): se tulee
-  isoisän hurjista tilanteista 1873 ja nuoren herran hurjista
+  isoisän hurjista tilanteista 1873 ja nuoren Foggin hurjista
   tilanteista nykyhetkessä. Kulkija on ihminen, jolla on tikkaat ja
   öljykannu — säiekoukut kirjoitetaan havaintoina ilman
   aavemaisuutta.
@@ -417,17 +417,17 @@ luonnolliset kodit — kunnioitussäännöt ennallaan.
 
 **Uudet beat-työkalut (1–2 per lauta):** väärä johtolanka (outo
 jälki osoittautuu arkiseksi — liituristi olikin ruutuhyppelyä) ja
-Reginaldin nolo hetki (kätkö löytyy kerran kömpelösti). 1873-ankkurit:
+nuoren Foggin nolo hetki (kätkö löytyy kerran kömpelösti). 1873-ankkurit:
 ME-saapumisiin 2–3 aitoa vuoden 1873 tositapahtumaa (Suezin kanava on
 kaksivuotias). Aistikierto: haju tai maku joka kolmanteen kohteeseen.
 
-### Nuori herra Reginald paperilla (kaanon 10.8.2026)
+### Nuori Fogg paperilla (kaanon 10.8.2026)
 
 - **Yrittää maksaa isoisän punnilla** — tottumuksesta, puoliksi
   vitsinä; hämmentyy aidosti, jos joku ottaa setelin vastaan.
 - **Latauspaniikki:** puhelin on aina 4 %:ssa juuri kun tarvitsisi,
   offline-kartta lakkaa kujien kohdalla — isoisän paperikartta
-  voittaa aina, ja Reginald vihaa sitä hieman.
+  voittaa aina, ja nuori Fogg vihaa sitä hieman.
 - **Muuttuu isoisäkseen huomaamattaan:** lataa barometrisovelluksen
   "vertailun vuoksi", alkaa laskea portaita, kirjaa säätä. Tunneytimen
   kevyt kääntöpuoli: takaa-ajaja alkaa kirjoittaa samaa kirjaa.

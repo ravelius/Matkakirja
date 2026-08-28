@@ -7,7 +7,7 @@
  * kysymys vaihtoehtoineen; aarre ja henkilön cliffhanger-vihje
  * yhdistetty. Kohtaamisia ja aarteita lyhennetty vielä lauseella
  * (omistajan palaute 9.8. myöhäisilta), ja aarteita lyhennetty
- * vielä kerran + nuoren herran mietintö kolmeen (Praha, Venetsia,
+ * vielä kerran + nuoren Foggin mietintö kolmeen (Praha, Venetsia,
  * Budapest). Saapumiset ennallaan
  * (omistaja: "Matkakirjan koetekstit ovat hyvät"). Vanhat versiot
  * git-historiassa. Omistaja hyväksyi mallin ja tilasi koko Euroopan

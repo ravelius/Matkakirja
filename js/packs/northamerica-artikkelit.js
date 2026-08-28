@@ -21,7 +21,7 @@
 // City'. Taulu yhdistetään muiden lautojen tauluihin
 // js/sisaltotaulut.js:ssä.
 //
-// Ei ylisanoja eikä huutomerkkejä: nuoren herran innostus kuuluu
+// Ei ylisanoja eikä huutomerkkejä: nuoren Foggin innostus kuuluu
 // saapumistekstissä, ja tämä on se rauhallinen ääni, joka kertoo
 // taustan.
 //

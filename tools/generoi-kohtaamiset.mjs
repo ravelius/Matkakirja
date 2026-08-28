@@ -6,7 +6,7 @@
  *
  * Roolien äänet (valittu tilin suomenkielisistä äänistä 7.8.2026):
  *   kertoja — "Viisas Kertoja", sama kuin saapumisluennoissa
- *   pelaaja — "Jaakko", nuori vakava ääni: nuori herra Fogg
+ *   pelaaja — "Jaakko", nuori vakava ääni: nuori Fogg
  *   hahmo   — kaupungin paikallinen, taulukko alla kaupungeittain
  *
  * Käyttö:  ELEVEN_API_KEY=... node tools/generoi-kohtaamiset.mjs lontoo
@@ -30,7 +30,7 @@ const MALLI = 'eleven_v3';
 const STABILITY = 0.5; // sama kuin saapumisluennoissa (0.4 hyppi liikaa — omistaja 7.8.2026)
 
 const KERTOJA = 'Sz0tRTEpybtDJ9ru2kgD'; // Viisas Kertoja
-const PELAAJA = 'JMfkzZiSsox62UXcXUqM'; // Jaakko — nuori herra Fogg
+const PELAAJA = 'JMfkzZiSsox62UXcXUqM'; // Jaakko — nuori Fogg
 // Hahmoääni per kaupunki. Uusi kaupunki tarvitsee rivin tänne —
 // valitse tilin äänistä hahmon ikään ja luonteeseen sopiva.
 const HAHMOT = {

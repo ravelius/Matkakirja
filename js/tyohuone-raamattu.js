@@ -20,7 +20,7 @@ export const RAAMATTU = {
       kohdat: [
         'LAATU ON AINA TÄRKEIN PRIORITEETTI. Laatu voittaa vauhdin, '
           + 'määrän ja kustannuksen. Vähemmän ja viimeisteltyä.',
-        'Suomenkielinen selainseikkailu: Reginald Fogg kiertää '
+        'Suomenkielinen selainseikkailu: Foggin perillinen kiertää '
           + 'maailman isoisänsä 1873-päiväkirjan jäljillä ja etsii '
           + 'Aarnin luettelon unohdettuja aarteita.',
         'Kohderyhmä 13+ ja aikuiset. Ei lastenpeli.',
@@ -37,13 +37,13 @@ export const RAAMATTU = {
         'Tekoäly kuratoi valtavan PD/CC-aineiston — ihminen valitsee '
           + 'ja hyväksyy.',
         'SYDÄNTEEMA: ihminen on peruskysymysten äärellä yhtä pihalla '
-          + 'kuin ennenkin. Poika yrittää ymmärtää isoisäänsä — siihen '
+          + 'kuin ennenkin. Lapsenlapsi yrittää ymmärtää isoisäänsä — siihen '
           + 'pelin loppu päättyy.',
         'NIMEN KAKSI TASOA (omistaja 26.8.2026): Unohdetulla '
           + 'aarteella on kaksi tasoa. (a) PELIN MAAILMASSA: Aarnin '
           + 'luettelon aarteet ovat oikeasti olemassa — ne on vain '
           + 'unohdettu. Samaa etsintää on isoisä itse: hänen '
-          + 'tarinansa on pojanpojalle aluksi yhtä kadoksissa ja '
+          + 'tarinansa on lapsenlapselle aluksi yhtä kadoksissa ja '
           + 'löytyy matkan varrella (sydänteeman jatke). (b) PELIN '
           + 'YDINIDEANA: unohdettu aarre on kaikki se '
           + 'kulttuuriperimän, taiteen, tieteen, löydösten ja '
@@ -89,21 +89,42 @@ export const RAAMATTU = {
       otsikko: 'Tarina ja hahmot',
       tila: 'luonnos',
       kohdat: [
-        'ASETELMA: Reginald perii isoisän matkalaukun — kartta 1872, '
+        'PAAHAHMO ON NIMETON PERILLINEN (omistajan paatos 28.8.2026 '
+          + 'ilta, inventaarion jalkeen): pelaajan etunimea ja '
+          + 'sukupuolta ei koskaan paljasteta - peli on samaistuttava '
+          + 'kaikille. Sukunimi FOGG sailyy kehyksena (OSA II '
+          + '-kytkos): pelaaja on Foggin suvun perillinen, UI-nimena '
+          + 'pelkka Fogg. Isoisa Horatio ja Grimshaw ennallaan; '
+          + 'sydanteema on lapsenlapsen ja isoisan suhde; piikittely '
+          + 'osuu isoisaan ja taman aikalaisherroihin, ei koskaan '
+          + 'pelaajaan. KUMOAA aiemmat Reginald-maininnat; '
+          + 'kaanondokumentit paivitetty samassa erassa. '
+          + 'AVAUSKERTOMUS ON SINA-MUODOSSA (omistajan kortti '
+          + '28.8.2026, tasmentaa alkukohtaus V5:n sanamuotoa): '
+          + 'kertoja puhuttelee pelaajaa ("Juokset sisalle '
+          + 'terminaaliin ja olet varma...") - mies aani on nain '
+          + 'yksiselitteisesti ulkopuolinen kertoja eika '
+          + 'paahenkilo, eika avausluenta maarita pelaajan '
+          + 'sukupuolta. Isoisan 1873-luennat pysyvat mina-muodossa '
+          + '(ne ovat hanen aantaan). AVOINNA: avauksen, Venetsian '
+          + 'ja Edinburghin luentojen uusinta (3 kpl, ElevenLabs) '
+          + 'omistajan ajoluvalla.',
+        'ASETELMA: nuori Fogg perii isoisän matkalaukun — kartta 1872, '
           + 'puntia, passi, päiväkirja 1873. Hän päättää tehdä matkan '
           + 'samassa ajassa: alle 80 päivässä.',
         'MATKAKIRJA on isoisän päiväkirja: ei kirjoitettu kenellekään, '
           + 'ei puhuttele lukijaa. Revitty viimeinen sivu ajaa '
           + 'matkaan — arvoitus EI koskaan ratkea.',
         'HORATIO FOGG (isoisä): laivaston kartanpiirtäjä, erosi 1873. '
-          + 'Mittaa kaiken (barometri nyt Reginaldin laukussa), pelkää '
+          + 'Mittaa kaiken (barometri nyt nuoren Foggin laukussa), pelkää '
           + 'hevosia, ei myrskyjä, kohtelias kaikille. Persoona '
           + 'välittyy merkinnöistä.',
-        'KAKSI ÄÄNTÄ: isoisä 1873, nuori herra nyt. Huumori syntyy '
+        'KAKSI ÄÄNTÄ: isoisä 1873, nuori Fogg nyt. Huumori syntyy '
           + 'välistä. Isoisä on joskus yhä oikeassa — ei narri. Ivaa '
-          + 'paikallisille ei koskaan; piikki herroihin itseensä.',
+          + 'paikallisille ei koskaan; piikki isoisään ja tämän '
+          + 'aikalaisherroihin.',
         'VASTUSTAJAT: isoisällä Ezekiel Grimshaw (mahtipontinen, aina '
-          + 'myöhässä, ei koskaan vaarallinen). Reginaldilla NÄKYMÄTÖN '
+          + 'myöhässä, ei koskaan vaarallinen). Nuorella Foggilla NÄKYMÄTÖN '
           + 'seuraaja: tummansininen sateenvarjo tunnusmerkkinä, ei '
           + 'näyttäydy, ei paljastu koskaan — jää auki kuten revitty '
           + 'sivu.',
@@ -113,10 +134,10 @@ export const RAAMATTU = {
         'AARREVIHJEET: ei symboleja eikä järjestelmiä — vain harvat '
           + 'sivuhuomiot (muutama per manner) vihjaavat pääaarteen '
           + 'olevan totta. Loksahtavat paikoilleen löydössä.',
-        'KAANON: kukaan ei ole odottanut poikaa 150 vuotta, eikä '
+        'KAANON: kukaan ei ole odottanut lapsenlasta 150 vuotta, eikä '
           + 'isoisä virittänyt mitään ajan yli. Kirja saa olla '
           + 'arvoitus, koska vanhan päiväkirjan lukeminen on hidasta.',
-        'Tekstit: isoisän seikkailut + nuoren herran tarkat '
+        'Tekstit: isoisän seikkailut + nuoren Foggin tarkat '
           + 'arkihavainnot ja kommellukset. Tarina avaa kaupungin '
           + 'tunnelman; lehti syventää tiedoksi.',
         'Herroille saa luonnostella uusia piirteitä '
@@ -135,12 +156,13 @@ export const RAAMATTU = {
           + 'suojatusta SUOMENNOKSESTA ei lainata tekstiä (kääntäjän '
           + 'oikeudet), eikä mihinkään elokuva-/tv-sovitukseen '
           + 'vihjata. "V2.0" hylättiin — ei istu 1873-typografiaan.',
-        'ALKUKOHTAUS V5 (omistajan teksti 25.8.2026, sanasta '
+        'ALKUKOHTAUS V5 (omistajan teksti 25.8.2026; sanamuoto '
+          + 'päivitetty 28.8.2026 sinä-muotoon, sanasta '
           + 'sanaan pelissä): paikkarivi "Heathrow, Lontoo, '
           + '<kuukausi vuosi>:" naputetaan kirjoituskoneella ilman '
           + 'luentaa; sitten kertoja: "Vintiltä löytyi isoisän '
-          + 'matkalaukku ja kulunut matkakirja. Juoksen sisälle '
-          + 'terminaaliin ja olen varma, että ukko oli löytänyt '
+          + 'matkalaukku ja kulunut matkakirja. Juokset sisälle '
+          + 'terminaaliin ja olet varma, että ukko oli löytänyt '
           + 'jotain. Mutta kuka on repinyt kirjasta viimeisen '
           + 'sivun?"; aloitusnappi on KEHYSTETTY 1873-NAPPI ilman '
           + 'sykettä, tekstinä "Valitse aloituskaupunki" (omistaja '
@@ -164,7 +186,7 @@ export const RAAMATTU = {
       tila: 'luonnos',
       kohdat: [
         'Isoisä loistaa pysyvissä (joet, tuoksut, satamat), '
-          + 'vanhentuu nimissä ja tekniikassa. Nuori herra ei ole '
+          + 'vanhentuu nimissä ja tekniikassa. Nuori Fogg ei ole '
           + 'viisaampi — elää vain 150 vuotta myöhemmin.',
         'Vaara tulee maailmasta ja kilpajuoksusta, ei ihmisten '
           + 'pahuudesta. Seuraaja kaihertaa, ei uhkaa.',
@@ -230,7 +252,7 @@ export const RAAMATTU = {
           + 'aukeaa pelaajan valinnoista (ks. Fokusmoodi). Vapaa '
           + 'vaellus.',
         'LOPPU: seitsemäs pääaarre. Revitty sivu ja seuraaja jäävät '
-          + 'auki — Reginald ymmärtää vihdoin isoisäänsä '
+          + 'auki — perillinen ymmärtää vihdoin isoisäänsä '
           + '(sydänteeman lunastus).',
         '80 PÄIVÄN PALKINTO: SEITSEMÄN PENINKULMAN LINSSI — vapaa '
           + 'siirtyminen mihin tahansa kaupunkiin ilman noppaa; '
@@ -402,7 +424,7 @@ export const RAAMATTU = {
           + 'MERKINTÄ juuri tästä aarteesta — aina: kuinka lähelle '
           + 'isoisä pääsi ja miksi jäi kesken — ja heti perään '
           + 'pöllön toimintakuittaus (matkusta/tutki + täkynosto). '
-          + 'NUORI HERRA juhlii vain virstanpylväissä yhdellä '
+          + 'NUORI FOGG juhlii vain virstanpylväissä yhdellä '
           + 'lauseella (ensimmäinen aarre koskaan, mantereen '
           + 'viimeinen, pelin päätös); arkinen jälki on tekoja. '
           + 'Joka 3.-4. maan aarremerkintä vihjaa vaanijasta tai '

@@ -1,4 +1,4 @@
-# Tarina: herra Reginald Fogg
+# Tarina: Foggin perillinen
 
 > **Laajennos 7.8.2026:** saapumismerkintöjen dekkarikaanon — isoisä
 > Horatio Fogg, herra Grimshaw, tähtäinristi ja luentaohjeet — on
@@ -7,16 +7,16 @@
 
 ## Hahmo
 
-**Reginald Fogg** on nuori mies, joka perii sukukartanon vintiltä isoisänsä
+**Foggin perillinen** perii sukukartanon vintiltä isoisänsä
 matkalaukun: vuoden 1872 maailmankartan, kukkarollisen puntia, vihreän
 passin ja paksun, kuluneen matkapäiväkirjan vuodelta 1873.
 
-Nuori herra Fogg lähtee matkaan täpinöissään. Isoisä ei lähde minnekään —
+Nuori Fogg lähtee matkaan täpinöissään. Isoisä ei lähde minnekään —
 hän kuoli aikaa sitten. Matkustava osapuoli on hänen päiväkirjansa, jota
-pojanpoika lukee junissa, laivoissa ja lentokentillä, ja jonka merkinnät
+lapsenlapsi lukee junissa, laivoissa ja lentokentillä, ja jonka merkinnät
 ovat vuoroin hämmentävän tarkkoja ja vuoroin toivottoman vanhentuneita.
 
-Nuori herra olettaa maailman olevan suunnilleen siinä kunnossa kuin isoisä
+Nuori Fogg olettaa maailman olevan suunnilleen siinä kunnossa kuin isoisä
 sen jätti.
 
 Se ei ole.
@@ -30,12 +30,12 @@ rakenne, ei koriste:
   ovat yhä totta: joet, vuoret, monsuuni, keskiyön aurinko, basaarin
   tuoksut, satamien järjestys. Saa olla toivottoman vanhentunut nimissä,
   rajoissa, tekniikassa ja oletuksissa siitä, kuka maailmaa hallitsee.
-- **Nuoren herran havainto** — nykyaika. Faktat, lähteet ja kuiva
-  huvittuneisuus isoisän merkinnöistä. Nuori herra ei ole isoisäänsä
+- **Nuoren Foggin havainto** — nykyaika. Faktat, lähteet ja kuiva
+  huvittuneisuus isoisän merkinnöistä. Nuori Fogg ei ole isoisäänsä
   viisaampi ihmisenä; hän vain sattuu elämään sata viisikymmentä vuotta
   myöhemmin ja tietää siksi enemmän.
 
-Vitsi syntyy näiden välistä. Joskus isoisä on oikeassa ja nuori herra
+Vitsi syntyy näiden välistä. Joskus isoisä on oikeassa ja nuori Fogg
 yllättyy siitä — se on tärkeää, jottei vanha ääni ole pelkkä narri.
 
 ## Aarni ja unohdetut aarteet
@@ -59,7 +59,7 @@ aarteen päällä, ja *aarnihauta* on aarrekumpu.
 taskussaan, ja hänen matkansa jäi aarteiden osalta kesken. Matkakirjan
 revitty viimeinen sivu ("…voinut uskoa, siellä olikin…") vihjaa, että
 yhden hän löysi — sivu ei koskaan kerro minkä, eikä sitä paljasteta.
-Nuori herra Fogg jatkaa siitä, mihin isoisä jäi.
+Nuori Fogg jatkaa siitä, mihin isoisä jäi.
 
 Sanasto (sitova, myös käännöksiin):
 
@@ -86,7 +86,7 @@ ks. isoisan-raamattu.md.)*
 
 ## Sävy: särmää, mutta piikki osoittaa aina oikeaan suuntaan
 
-Ironian kohde on **herra Fogg ja hänen vanha maailmansa** — ei koskaan maat
+Ironian kohde on **isoisä Fogg ja hänen vanha maailmansa** — ei koskaan maat
 tai ihmiset, joita hän kohtaa. Tämä on tarinan tärkein sääntö (ja periaate
 3: kunnioitus ja tasapuolisuus).
 
@@ -124,8 +124,8 @@ näkyvät — ja se sanotaan ääneen kevyesti, ei saarnaten.
 ## Kirjoitusohjeet uusille merkinnöille
 
 - Minä-muoto, kuiva brittiläinen alivireisyys, korkeintaan kolme virkettä.
-- Vitsi rakentuu: vanha oletus → nykyhavainto → nuoren herran laconinen
-  reaktio. Saapumismerkinnässä isoisän sitaatti ja pojanpojan vastaus
+- Vitsi rakentuu: vanha oletus → nykyhavainto → nuoren Foggin laconinen
+  reaktio. Saapumismerkinnässä isoisän sitaatti ja lapsenlapsen vastaus
   samassa merkinnässä toimii hyvin.
 - Isoisän äänessä: 1870-luvun sanasto, varma sävy, mittaukset ja
   havainnot. Nuoren äänessä: nykyfaktat ja lähteet.
@@ -134,7 +134,7 @@ näkyvät — ja se sanotaan ääneen kevyesti, ei saarnaten.
 - Faktat pidetään oikeina silloinkin, kun ne ovat vitsin sisällä
   (esim. järvien määrä).
 
-## Vaihtelun paletti (nuoren herran havainnot)
+## Vaihtelun paletti (nuoren Foggin havainnot)
 
 Kaikki tekstit eivät saa alkaa samalla tavalla — eivätkä varsinkaan kaikki
 isoisällä. Nyrkkisäännöt lautaa kohden:
@@ -145,7 +145,7 @@ isoisällä. Nyrkkisäännöt lautaa kohden:
 
 Avaustapoja (sekoita vapaasti):
 
-1. Nuoren herran tuuletus: miten mahtavaa oli tulla laivalla meren yli,
+1. Nuoren Foggin tuuletus: miten mahtavaa oli tulla laivalla meren yli,
    millaiset näkymät aukesivat.
 2. Aistihavainto: tuoksu, ääni, valo, lämpötila.
 3. Pieni arkinen sattumus: portaikko, lippujono, teelasi, lenkkeilijät.
@@ -164,7 +164,7 @@ kahdenlaisia tekstejä:
 - **Pienet** — arkinen, yllättävä yksityiskohta, joka jää mieleen juuri
   siksi, ettei sitä odota. Nämä ovat vastapainoa, eivät koko ruokalista.
 
-Nyrkkisääntö: kaupungin kahdesta nuoren herran tekstistä toinen saa olla
+Nyrkkisääntö: kaupungin kahdesta nuoren Foggin tekstistä toinen saa olla
 iso ja toinen pieni. Pelaaja näkee kerralla vain yhden tekstin, joten
 vaihtelu ratkeaa koko laudan tasolla.
 

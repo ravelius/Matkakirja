@@ -97,13 +97,13 @@ export function factSource(fact) {
 
 // --- kaksi ääntä -----------------------------------------------------------
 //
-// Tietoruudussa puhuu vuorotellen kaksi hahmoa: nuori herra Fogg, joka on
+// Tietoruudussa puhuu vuorotellen kaksi hahmoa: nuori Fogg, joka on
 // matkalla juuri nyt, ja hänen isoisänsä, jonka 1870-luvun päiväkirjaa nuori
 // herra lukee matkalla. Merkitsemätön teksti on nuoren havainto, jolloin
 // vanha sisältö kelpaa sellaisenaan.
 
 export const VOICES = {
-  nuori: 'Nuoren herran havainto',
+  nuori: 'Nuoren Foggin havainto',
   isoisa: 'Isoisän päiväkirjasta, 1873',
 };
 

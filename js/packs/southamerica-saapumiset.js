@@ -1,5 +1,5 @@
 // Matkakirjan saapumistekstit (Etelä-Amerikka) — sama muoto ja ääni
-// kuin muissa maanosissa: nuoren herran tuore fiilis (kuvaus) ja
+// kuin muissa maanosissa: nuoren Foggin tuore fiilis (kuvaus) ja
 // isoisän kirjan lainaus (nosto). Yksi kantava idea per kaupunki.
 // Luennat: puhe-southamerica-saapuminen-<id>.mp3.
 export const SOUTHAMERICA_SAAPUMISET = {

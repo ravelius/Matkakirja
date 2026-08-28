@@ -402,7 +402,7 @@ export const MAAILMA = {
   ],
 
   texts: {
-    // Lentorepliikit: nuori herra puhuu koneessa matkan ajan. Noin puolet
+    // Lentorepliikit: nuori Fogg puhuu koneessa matkan ajan. Noin puolet
     // riveistä on kohteen odotusta, puolet isoisän päiväkirjan hehkutusta —
     // kirjarivit saavat viitata pelin oikeisiin asioihin (merkityt kaupungit,
     // luonnoskirjan kaaviot, taitetut sivut) muttei paljastaa mitään.

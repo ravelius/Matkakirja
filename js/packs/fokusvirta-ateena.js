@@ -370,7 +370,7 @@ export const FOKUSVIRTA_ATEENA = {
     teksti: 'Vartija Nikos on kiertänyt Akropoliin ja Agoran kujia jo '
       + 'kaksikymmentä vuotta, ja hän on nähnyt tarpeeksi ulkomaalaisia, '
       + 'jotka haaveilevat löytävänsä oman Priamoksensa jo ensimmäisellä '
-      + 'kaivauksella. Hän ei naura herra Foggille vasten kasvoja, mutta '
+      + 'kaivauksella. Hän ei naura vieraalleen vasten kasvoja, mutta '
       + 'hänen katseessaan on huvittunut kärsivällisyys, kun nuori '
       + 'matkustaja jo vilkuilee seuraavaa kiveä kääntääkseen. Ennen kuin '
       + 'Nikos suostuu kertomaan mitään todella hyödyllistä, hän haluaa '

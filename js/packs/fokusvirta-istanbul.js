@@ -582,7 +582,7 @@ export const FOKUSVIRTA_ISTANBUL = {
       + 'sulttaanien ajoista asti, ja tuntee pylväsmetsän niin hyvin, '
       + 'ettei tarvitse lyhtyä löytääkseen perille. Portaita on tullut '
       + 'alas matkailijoita satamäärin: useimmat laskevat pylväitä, '
-      + 'valokuvaavat vettä ja nousevat takaisin. Herra Foggia hän ei '
+      + 'valokuvaavat vettä ja nousevat takaisin. Vierastaan hän ei '
       + 'päästä veneeseen heti. Ennen kuin airo koskee veteen, hän haluaa '
       + 'tietää, onko vieras pysähtynyt miettimään, miksi kivikasvot '
       + 'makaavat juuri siinä asennossa, jossa ne makaavat.',
