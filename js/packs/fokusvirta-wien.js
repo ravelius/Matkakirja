@@ -524,7 +524,29 @@ export const FOKUSVIRTA_WIEN = {
         + 'en-Wikipedia "Panic of 1873" (tarkistettu 25.8.2026 '
         + 'työaineistoon docs/mantereet-tyoaineisto/takynostot-itavalta.md, '
         + 'ehdokas 1).',
-      /* Commons 25.8.2026: 2166×1503, public domain, Restrictions tyhjä. */
+      /*
+       * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin Sofian
+       * areenalla ja v1307:n neljällä nostolla): repon oma generoitu
+       * havainnekuva, jolla ei ole Commons-nimeä eikä varareittiä,
+       * joten kenttä on `osoite` eikä `tiedosto` (js/fokusnosto.js
+       * asetaNostonKuva).
+       *
+       * Kuva on näyttely auki: Rotunde, lippurivit ja kävijöitä — se
+       * loisto, jonka rinnalla noston toinen puoli (pörssin sulkeminen
+       * kahdeksan päivää myöhemmin) tekee vaikutuksensa.
+       */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-maailmannayttely-1873-loistoaika.webp',
+        selite: 'Maailmannäyttelyn Rotunde Praterissa: lippurivit, '
+          + 'paviljongit ja kävijöitä hiekkakäytävillä.',
+        lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
+      },
+      /*
+       * KAKKOSKUVA tekstin alle on entinen ainoa kuva. Tiedosto, selite
+       * ja lähde ennallaan.
+       *
+       * Commons 25.8.2026: 2166×1503, public domain, Restrictions tyhjä.
+       */
       valokuva: {
         tiedosto: 'Weltausstellungsgelände-Wien-1873.jpg',
         selite: 'Maailmannäyttelyn alue Praterissa vuonna 1873.',
@@ -573,7 +595,27 @@ export const FOKUSVIRTA_WIEN = {
         + 'years" ja "In the 19th century" (tarkistettu 25.8.2026 '
         + 'työaineistoon docs/mantereet-tyoaineisto/takynostot-itavalta.md, '
         + 'ehdokas 4).',
-      /* Commons 25.8.2026: 3702×2718, public domain, Restrictions tyhjä. */
+      /*
+       * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin yllä): repon
+       * oma generoitu havainnekuva, joten kenttä on `osoite` eikä
+       * `tiedosto`.
+       *
+       * Kuva kertoo noston molemmat puolet yhdellä kertaa: eläin
+       * aitauksessaan JA yleisö, jonka kampauksiin ja huiveihin
+       * kirahvi on jo ehtinyt.
+       */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-kirahvimuoti-loistoaika.webp',
+        selite: 'Schönbrunnin kirahvi aitauksessaan ja yleisö, jonka '
+          + 'kampaukset ja huivit ovat jo kirahvin mukaisia.',
+        lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
+      },
+      /*
+       * KAKKOSKUVA tekstin alle on entinen ainoa kuva. Tiedosto, selite
+       * ja lähde ennallaan.
+       *
+       * Commons 25.8.2026: 3702×2718, public domain, Restrictions tyhjä.
+       */
       valokuva: {
         tiedosto: 'Eduard Gurk - Die erste Giraffe im Schönbrunner Tiergarten - 1828.jpeg',
         selite: 'Schönbrunnin ensimmäinen kirahvi Eduard Gurkin maalauksessa '

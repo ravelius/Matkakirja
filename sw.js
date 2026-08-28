@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1307';
+const CACHE = 'matkakirja-2026-08-09.1308';
 const SHELL = [
   './',
   './index.html',
@@ -794,6 +794,18 @@ const SHELL = [
   './assets/kartat/nostot/nosto-pyramidi-loistoaika.webp',
   './assets/kartat/nostot/nosto-kissat-loistoaika.webp',
   './assets/kartat/nostot/nosto-antikythera-kone-loistoaika.webp',
+  // C-sarja: v1297:n kymmenen täkynostoa Madridissa, Wienissä,
+  // Pariisissa ja Berliinissä saivat pääkuvansa 28.8.2026.
+  './assets/kartat/nostot/nosto-altamira-loistoaika.webp',
+  './assets/kartat/nostot/nosto-munkkiaratit-loistoaika.webp',
+  './assets/kartat/nostot/nosto-cartagenan-kantoni-loistoaika.webp',
+  './assets/kartat/nostot/nosto-maailmannayttely-1873-loistoaika.webp',
+  './assets/kartat/nostot/nosto-kirahvimuoti-loistoaika.webp',
+  './assets/kartat/nostot/nosto-lustig-eiffel-loistoaika.webp',
+  './assets/kartat/nostot/nosto-kirahvin-kavelymatka-loistoaika.webp',
+  './assets/kartat/nostot/nosto-kopenickin-kapteeni-loistoaika.webp',
+  './assets/kartat/nostot/nosto-archaeopteryx-loistoaika.webp',
+  './assets/kartat/nostot/nosto-neuschwanstein-loistoaika.webp',
   // Lippuikkunan versioliput (pilotti Suomi + Saksa, v711).
   './assets/liput/versiot/fin-valtiolippu.png',
   './assets/liput/versiot/fin-sotalippu.png',
