@@ -72,7 +72,7 @@ const LOPPUTAUKO = ' <break time="1.0s" />';
  * sitä ei lueta, kuten ei paikkariviäkään.
  */
 export const INTRO_RUUTU = 'Vintiltä löytyi isoisän matkalaukku ja '
-  + 'kulunut matkakirja. Juoksen sisälle terminaaliin ja olen varma, '
+  + 'kulunut matkakirja. Juokset sisälle terminaaliin ja olet varma, '
   + 'että ukko oli löytänyt jotain. Mutta kuka on repinyt kirjasta '
   + 'viimeisen sivun?';
 // HUOM (historia): ennen 25.8.2026 vakion viimeinen rivi oli pelaajan
@@ -95,7 +95,7 @@ const TYOT = [
   {
     tiedosto: 'assets/audio/intro-puhe.mp3',
     luenta: '[curious] Vintiltä löytyi isoisän matkalaukku ja kulunut '
-      + 'matkakirja. Juoksen sisälle terminaaliin ja olen varma, että '
+      + 'matkakirja. Juokset sisälle terminaaliin ja olet varma, että '
       + 'ukko oli löytänyt jotain. '
       + '[whispers] Mutta kuka on repinyt kirjasta viimeisen sivun? '
       + '[long pause]',

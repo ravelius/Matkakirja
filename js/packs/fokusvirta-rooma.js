@@ -531,7 +531,7 @@ export const FOKUSVIRTA_ROOMA = {
       + 'hänen isänsä ja isoisänsä nostivat ennen häntä. Hansikas '
       + 'kädessä hän tunnistaa kolikon maan ja vuoden pelkästä reunasta, '
       + 'ja hän on nähnyt altaan pohjalta kaiken, mitä ihminen voi '
-      + 'pudottaa. Herra Foggia hän ei kiirehdi. Ennen kuin hän avaa '
+      + 'pudottaa. Matkustajaa hän ei kiirehdi. Ennen kuin hän avaa '
       + 'huoltoluukun, hän haluaa tietää, ymmärtääkö vieras miksi '
       + 'kolikko ylipäänsä heitetään: tavan tuntee jokainen tulija, '
       + 'mutta harva osaa sanoa, mitä se lupaa.',

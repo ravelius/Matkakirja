@@ -69,7 +69,7 @@ ostanut vuosisataa. Vuosisadan mittainen ylläpidetty perinne on
 sallittu **kerran laudalla**, ja silloinkin suvun omasta syystä
 (Euroopassa: Prahan kynttilä).
 
-**Reginald Fogg** (nuori herra): yrittää maksaa isoisän punnilla,
+**Foggin perillinen** (nuori Fogg): yrittää maksaa isoisän punnilla,
 puhelin aina 4 %:ssa kun tarvitsisi, muuttuu isoisäkseen
 huomaamattaan (lataa barometrisovelluksen "vertailun vuoksi"),
 surkea tinkijä kuten isoisä. Hänen äänensä paikka on aarteen
@@ -247,8 +247,8 @@ sadaksi vuodeksi", "käski pitämään", pysähdy.
 
 **Aarre (löytö + koukku).** Ensin kätkön konkreettinen paikka ja
 löytymisen hetki, sitten vartijan viimeinen repliikki tai
-Reginaldin mietintö, joka jättää YHDEN asian auki. Beat valitaan
-jakotaulusta — ei oletuksena "tuore jälki". Mietintö on Reginaldin
+Nuoren Foggin mietintö, joka jättää YHDEN asian auki. Beat valitaan
+jakotaulusta — ei oletuksena "tuore jälki". Mietintö on nuoren Foggin
 äänen paikka: huumori, nykymaailma tai ihmetys, ei aina
 väristys. Viimeinen virke jää soimaan, joten sen rytmiä
 vaihdellaan: joskus kahden sanan isku ("Tuore."), joskus pitkä

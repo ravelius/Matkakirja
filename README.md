@@ -2,7 +2,7 @@
 
 *(lyhyesti Matkakirja)*
 
-**Suomenkielinen seikkailupeli selaimessa.** Nuori herra Fogg perii
+**Suomenkielinen seikkailupeli selaimessa.** Nuori Fogg perii
 vintiltä isoisänsä matkalaukun ja lähtee maailman ympäri isoisän vuoden
 1873 matkapäiväkirjan jäljillä — etsimään **Aarnin luettelon**
 unohdettuja aarteita. Matkalla oppii maailmasta enemmän kuin huomaakaan.
@@ -72,7 +72,7 @@ Vintiltä löytyi isoisän matkalaukku: kartta vuodelta 1872,
 kukkarollinen puntia, vihreä passi ja kulunut matkakirja. Viimeinen
 sivu oli revitty kesken lauseen.
 
-Nuori herra Fogg lähtee kirjoittamaan sen loppuun, mielellään
+Nuori Fogg lähtee kirjoittamaan sen loppuun, mielellään
 nopeammin kuin isoisä. Mukana matkustaa isoisän päiväkirja vuodelta
 1873: sen merkinnät ovat vuoroin hämmentävän tarkkoja ja vuoroin
 toivottoman vanhentuneita, ja juuri siitä jännitteestä pelin huumori
@@ -85,7 +85,7 @@ luonnostelija: kamera hänellä ei ollut, joten kuvakieli on kirkas —
 **Aarni** luetteloi 1800-luvun alussa maailman kuuluisat kadonneet
 aarteet, ja aikalaiset pitivät luetteloa satukirjana. Isoisä uskoi.
 
-Sydänteema on yksinkertainen: poika yrittää ymmärtää isoisäänsä.
+Sydänteema on yksinkertainen: lapsenlapsi yrittää ymmärtää isoisäänsä.
 
 Tarinan kaanon on tiedostoissa [docs/tarina.md](docs/tarina.md) ja
 [docs/isoisan-raamattu.md](docs/isoisan-raamattu.md).

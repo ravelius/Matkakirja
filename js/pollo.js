@@ -751,7 +751,7 @@ export const POLLO_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
  * alta omana aarteenaan — ja KORVAA sen laatan aarteen kokonaan
  * (omistaja 18.8.2026): laatan omaa sisältöä ei näytetä eikä anneta,
  * pelaaja saa ensimmäisestä laatasta vain pöllön. Kortin tekstit ovat
- * samassa muodossa kuin muidenkin aarteiden: nuoren herran huudahdus,
+ * samassa muodossa kuin muidenkin aarteiden: nuoren Foggin huudahdus,
  * aarteen nimi, lyhyt selite ja esittely (js/ui.js naytaPolloAarre).
  *
  * Kohderyhmä on 13 vuotta täyttäneet ja aikuiset, joten pöllö on

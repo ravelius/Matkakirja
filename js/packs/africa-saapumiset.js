@@ -1,11 +1,11 @@
 // Matkakirjan saapumistekstit (kaikki Afrikan kaupungit) — lopullinen
-// tyyli omistajan A/B-vertailun jälkeen (30.7.): nuoren herran osuus
+// tyyli omistajan A/B-vertailun jälkeen (30.7.): nuoren Foggin osuus
 // on tiivis (huudahdus + pari lausetta) ja siinä on selvää tunne-
 // ilmaisua, joka ohjaa myös lukijan ääntä. Kaupunkien välillä on
 // tarkoituksella vaihtelua: riemua, hiljaista kunnioitusta, pelonsekaista
 // ihailua, naurua ja vakavuutta — kaikki eivät ala samalla tavalla.
 //
-//  - `kuvaus` on nuoren herran tuore fiilis paikasta. Ensimmäinen lause
+//  - `kuvaus` on nuoren Foggin tuore fiilis paikasta. Ensimmäinen lause
 //    näkyy lihavoituna ja lukija lukee koko merkinnän ääneen tunteella.
 //  - `nosto` päättää merkinnän isoisän kirjan lainaukseen niin, että
 //    lähde käy ilmi tekstistä itsestään — erillistä otsikkoa ei ole.

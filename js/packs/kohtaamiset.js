@@ -48,7 +48,7 @@
  * jotka ElevenLabsin text-to-dialogue lukee peräkkäin eri äänillä
  * (tools/generoi-kohtaamiset.mjs; roolien äänet siellä). Roolit:
  * 'kertoja', 'hahmo' (kaupungin paikallinen) ja 'pelaaja' (nuori
- * herra Fogg). Tekstin on vastattava ruudun tekstiä sanasta sanaan
+ * Fogg). Tekstin on vastattava ruudun tekstiä sanasta sanaan
  * tunnetageja ja ajatusviivoja lukuun ottamatta — talon sääntö,
  * sama kuin saapumisluennoissa. Luennallinen tervehdys pidetään
  * lyhyenä: ~140 merkkiä (omistaja 7.8.2026: "puolet lyhyempi"),

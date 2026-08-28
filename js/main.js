@@ -98,7 +98,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1294';
+const APP_VERSION = '2026-08-09.1295';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -408,7 +408,7 @@ function clearSave() {
 //
 // Peli on yksin pelattava vaellus eikä aloitusdialogia enää ole: uusi peli
 // avautuu suoraan maailmankartalle, jolta ensimmäinen kohde valitaan
-// ilmaiseksi. Matkaaja on aina herra Fogg.
+// ilmaiseksi. Matkaaja on aina Fogg, isoisän perillinen.
 //
 // Kysymysten helpotustila on toistaiseksi pois käytöstä — kaikki pelaavat
 // tasolla 'normal'. Kysymyspankkien level-kentät ja moottorin tuki jäävät
@@ -416,7 +416,7 @@ function clearSave() {
 
 function newPlayer() {
   return {
-    name: 'Herra Fogg',
+    name: 'Fogg',
     start: null, // lähtöpiste valitaan maailmankartalta
     quizLevel: 'normal',
     color: PLAYER_COLOR,

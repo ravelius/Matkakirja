@@ -215,7 +215,7 @@ export const REVEAL_SUB = {
 };
 
 /*
- * Nuoren herran huudahdus paljastushetkellä (omistajan tilaus
+ * Nuoren Foggin huudahdus paljastushetkellä (omistajan tilaus
  * 9.8.2026): lyhyt spontaani repliikki heti kun aarre kääntyy esiin,
  * ENNEN varsinaista cliffhanger-tekstiä. Arvotaan joka kerta, jotta
  * toisto ei kulu.

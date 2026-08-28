@@ -1,4 +1,4 @@
-// Euroopan matkakirjamerkinnät: nuoren herran tunnepitoinen kuvaus ja
+// Euroopan matkakirjamerkinnät: nuoren Foggin tunnepitoinen kuvaus ja
 // isoisän nosto, samaan malliin kuin Afrikassa. Rakentuu kaupunki
 // kerrallaan. Luennat: puhe-europe-saapuminen-<id>.mp3 (ks.
 // SAAPUMISLUENNAT js/sisaltotaulut.js:ssä — vain siellä listatuilla kaupungeilla
@@ -178,14 +178,14 @@ export const EUROPE_SAAPUMISET = {
 
   venetsia: {
     kuvaus: 'Rialton laiturilla gondolieeri ojensi kirjekuoren: '
-      + '"Teille, herra Fogg." Kukaan ei tiennyt tulostani. Kuoressa '
-      + 'oli puolikas sivu — ja käsialan minä tunnen.',
+      + '"Fogg? Tämä kuuluu teille." Kukaan ei tiennyt tulostani. '
+      + 'Kuoressa oli puolikas sivu — ja käsialan minä tunnen.',
     nosto: 'Isoisä kirjoitti täältä: "Jos jonkin kadotan, toivon '
       + 'kadottavani sen Venetsiassa — täällä mikään ei huku. Se vain '
       + 'odottaa oikeaa nostajaa."',
     luenta: '[curious] Rialton laiturilla gondolieeri ojensi '
-      + 'kirjekuoren: "Teille, herra Fogg." ... Kukaan ei tiennyt '
-      + 'tulostani. [whispers] Kuoressa oli puolikas sivu — ja '
+      + 'kirjekuoren: "Fogg? Tämä kuuluu teille." ... Kukaan ei '
+      + 'tiennyt tulostani. [whispers] Kuoressa oli puolikas sivu — ja '
       + 'käsialan minä tunnen. [softly] Isoisä kirjoitti täältä: "Jos '
       + 'jonkin kadotan, toivon kadottavani sen Venetsiassa — täällä '
       + 'mikään ei huku. [warmly] Se vain odottaa oikeaa nostajaa."',
@@ -276,19 +276,19 @@ export const EUROPE_SAAPUMISET = {
    */
   /*
    * Uusi malli (omistajan päätös 8.8.2026 illalla): saapuminen on
-   * pelkkää Reginaldia koko välimitassa, isoisä puhuu visassa ja
+   * pelkkää nuorta Foggia koko välimitassa, isoisä puhuu visassa ja
    * aarteessa (europe-kaari.js). Pilotti: Edinburgh ja Pietari.
    */
   edinburgh: {
     kuvaus: 'Kujalla kaasulyhdyn valoympyrän reunalla seisoi hahmo '
       + 'liikkumatta, ja omat askeleeni kuuluivat liian kovaa. '
       + 'Astuin lähemmäs — yövartija nosti lakkiaan: "Eksyitte, '
-      + 'nuori herra. Täällä kaikki eksyvät ensin." Kävelin hänen '
+      + 'matkalainen. Täällä kaikki eksyvät ensin." Kävelin hänen '
       + 'perässään valosta valoon.',
     luenta: '[whispers] Kujalla kaasulyhdyn valoympyrän reunalla '
       + 'seisoi hahmo liikkumatta, ja omat askeleeni kuuluivat '
       + 'liian kovaa. [curious] Astuin lähemmäs — [warmly] '
-      + 'yövartija nosti lakkiaan: "Eksyitte, nuori herra. Täällä '
+      + 'yövartija nosti lakkiaan: "Eksyitte, matkalainen. Täällä '
       + 'kaikki eksyvät ensin." [softly] Kävelin hänen perässään '
       + 'valosta valoon.',
   },

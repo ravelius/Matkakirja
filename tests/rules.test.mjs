@@ -2166,7 +2166,7 @@ test('kysymyksen lähde kulkeutuu tietovisaan ja kaksintaisteluun', () => {
 
 // --- kaksi ääntä (paketti 4) -----------------------------------------------
 
-test('merkitsemätön tieto on nuoren herran havainto, merkitty isoisän', () => {
+test('merkitsemätön tieto on nuoren Foggin havainto, merkitty isoisän', () => {
   assert.equal(factVoice('Pelkkä merkkijono on vanhaa sisältöä.'), 'nuori');
   assert.equal(factVoice({ text: 'Ilman merkintää.' }), 'nuori');
   assert.equal(factVoice({ text: 'Merkitty.', voice: 'isoisa' }), 'isoisa');
@@ -2174,7 +2174,7 @@ test('merkitsemätön tieto on nuoren herran havainto, merkitty isoisän', () =>
   assert.equal(factVoice({ text: 'Outo.', voice: 'kapteeni' }), 'nuori');
 
   assert.match(voiceTitle('isoisa'), /Isoisän päiväkirjasta/);
-  assert.match(voiceTitle('nuori'), /Nuoren herran havainto/);
+  assert.match(voiceTitle('nuori'), /Nuoren Foggin havainto/);
   assert.equal(voiceTitle(undefined), voiceTitle('nuori'));
 });
 

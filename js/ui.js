@@ -738,7 +738,7 @@ const MATKAREITIN_KATKO_PX = 8;
 const MATKAREITIN_PISTE_PX = 4.2;
 
 /*
- * NUOREN HERRAN HUUDAHDUSRIVI PALJASTUSKORTILLA (omistajan
+ * NUOREN FOGGIN HUUDAHDUSRIVI PALJASTUSKORTILLA (omistajan
  * pelitestipalaute v1119: *"'Taskuun!'-rivi POIS toistaiseksi (koodia
  * ei poisteta, piilotus/lippu)"*).
  *
@@ -1275,7 +1275,7 @@ const INTRO_HAIVYTYS_EM = 2.2;
  * kirjoituskoneella ja luenta alkaa vasta tästä kappaleesta.
  */
 const INTRO_TEXT = 'Vintiltä löytyi isoisän matkalaukku ja kulunut '
-  + 'matkakirja. Juoksen sisälle terminaaliin ja olen varma, että ukko '
+  + 'matkakirja. Juokset sisälle terminaaliin ja olet varma, että ukko '
   + 'oli löytänyt jotain. Mutta kuka on repinyt kirjasta viimeisen '
   + 'sivun?';
 /*
@@ -9957,7 +9957,7 @@ export class UI {
 
   /**
    * Tietoruutu pelaajan sijainnista. Siinä puhuu vuorotellen kaksi ääntä:
-   * isoisän 1870-luvun päiväkirja ja nuoren herran nykyhavainto. Teksti
+   * isoisän 1870-luvun päiväkirja ja nuoren Foggin nykyhavainto. Teksti
    * vaihtuu kierroksittain mutta pysyy samana saman vuoron ajan, jotta sen
    * ehtii lukea.
    */
@@ -10336,7 +10336,7 @@ export class UI {
       if (document.body.classList.contains('flight-active')) return;
       const kaupunki = game.board.cityById.get(saapuminen.cityId);
 
-      // Uusi malli (pilotti): nuoren herran fiiliskuvaus lihavoituna,
+      // Uusi malli (pilotti): nuoren Foggin fiiliskuvaus lihavoituna,
       // perässä isoisän nosto, ja lukija lukee koko merkinnän tunteella.
       // Teksti ei vaihdu kaupungissa olon aikana.
       // Aikataulurivi elää merkinnän perässä: sen ilmestyminen muuttaa
@@ -13374,7 +13374,7 @@ export class UI {
       + 'maan tunnusluvut, kaupungin musiikkia ja ruokaa.');
 
     valiotsikko('Kaksi ääntä');
-    kappale('Isoisän päiväkirja vuodelta 1873 ja nuoren herran havainto '
+    kappale('Isoisän päiväkirja vuodelta 1873 ja nuoren Foggin havainto '
       + 'tänään. Vanha ääni loistaa siinä, mikä ei ole muuttunut, ja on '
       + 'toivottoman vanhentunut nimissä ja rajoissa.');
 
@@ -15043,7 +15043,7 @@ export class UI {
 
 
   /**
-   * Nuoren herran hihkaisu aarteen paljastushetkellä (omistajan
+   * Nuoren Foggin hihkaisu aarteen paljastushetkellä (omistajan
    * tilaus 10.8.2026: "pitäisi kuulua se lyhyt hihkaisu jee").
    * Kolme sävyä kierrossa (riemu, hämmästys, hykertely). Vain
    * arvokkaille löydöille, ja ei kertojattomassa tilassa —
@@ -15268,7 +15268,7 @@ export class UI {
       overlay, caption, kuvaEl, jatka, pohja, leima,
     } = this.rakennaPaljastus(kuva, token.name, malli, lisat);
 
-    // Nuoren herran huudahdus ensin — se kuuluu juuri siihen hetkeen,
+    // Nuoren Foggin huudahdus ensin — se kuuluu juuri siihen hetkeen,
     // kun aarre tulee näkyviin; cliffhanger-teksti vasta sen jälkeen.
     const huudahdus = arvoHuudahdus(type);
     // Huudahdusrivi ("Taskuun!") on lipun takana (REVEAL_HUUDAHDUS_RIVI):
@@ -15997,7 +15997,7 @@ export class UI {
   }
 
   /**
-   * Nuoren herran repliikki lennon ajaksi, kirjoituskoneella. Rivi elää
+   * Nuoren Foggin repliikki lennon ajaksi, kirjoituskoneella. Rivi elää
    * kalvon kelluvassa alaosassa ja poistuu kalvon mukana.
    *
    * SAMA KÄSI KUIN ETUSIVULLA (omistajan tilaus 12.8.2026). Ennen rivi

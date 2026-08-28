@@ -53456,7 +53456,7 @@ export const KULTTUURI_KATEGORIAT = {
    * valittaisiin toinen (spec-mantereet.md kohta 5).
    *
    * SARMIENTO EI OLE SANKARIKEHYKSESSÄ (spec-mantereet.md kohta 2,
-   * "piikki herroihin itseensä"): nosto K3 kertoo hänet aikansa
+   * "piikki isoisään ja tämän aikalaisherroihin"): nosto K3 kertoo hänet aikansa
    * uudistajana ja murhayrityksen uhrina, mutta sanoo myös, että hänen
    * Facundossa muotoiltua sivilisaatio–barbaria-jakoaan ja hänen
    * alkuperäiskansoja koskenutta politiikkaansa on jälkikäteen

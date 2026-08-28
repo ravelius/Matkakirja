@@ -519,7 +519,7 @@ export const FOKUSVIRTA_SOFIA = {
       + 'lähteestä ja tuntee jokaisen suonen kaupungin alla. Hän on '
       + 'seissyt höyryssä niin kauan, että tunnistaa tulijan kädestä '
       + 'ennen kuin tämä ehtii sanoa mitään: kuka on tullut hakemaan '
-      + 'vettä ja kuka vastauksia. Herra Foggia hän ei kiirehdi. Ennen '
+      + 'vettä ja kuka vastauksia. Matkustajaa hän ei kiirehdi. Ennen '
       + 'kuin hän laskee kauhansa ja avaa vihkonsa, hän haluaa tietää, '
       + 'onko vieras tajunnut, miksi juuri tähän kohtaan on rakennettu '
       + 'kaupunki toisensa perään.',

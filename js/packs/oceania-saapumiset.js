@@ -1,5 +1,5 @@
 // Matkakirjan saapumistekstit (Oseania) — sama muoto ja ääni kuin
-// muissa maanosissa: nuoren herran tuore fiilis (kuvaus) ja isoisän
+// muissa maanosissa: nuoren Foggin tuore fiilis (kuvaus) ja isoisän
 // kirjan lainaus (nosto). Yksi kantava idea per kaupunki, teksti
 // kirjoitettu korvalle. Luennat: puhe-oceania-saapuminen-<id>.mp3.
 export const OCEANIA_SAAPUMISET = {

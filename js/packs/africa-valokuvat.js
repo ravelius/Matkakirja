@@ -558,7 +558,7 @@ export const AFRICA_VALOKUVAT = {
         lahde: 'Rod Waddington, Commons (CC BY-SA 2.0)',
         selite: 'Ruskea maki katsoo kameraan Madagaskarilla. Makeja ei elä '
           + 'luonnonvaraisena missään muualla maailmassa — juuri niitä silmiä '
-          + 'nuori herra metsässä tapasi.',
+          + 'Fogg metsässä tapasi.',
       },
     ],
     tiedosto: "Tananarive-Temple d'Andohalo.jpg",

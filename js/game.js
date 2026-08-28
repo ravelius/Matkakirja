@@ -46,7 +46,7 @@ export const DUEL_PRIZE = 200; // rosvon saalis, jos kaksintaistelun voittaa suo
  * paikassa eivätkä pakkausten texts-taulussa, koska mannerlento on
  * laudan sisäinen mekaniikka eikä kuulu yhdellekään mantereelle.
  *
- * Ilmoitus on nuoren herran ääni: nykymaailmassa lentokenttä on joka
+ * Ilmoitus on nuoren Foggin ääni: nykymaailmassa lentokenttä on joka
  * kaupungin naapurissa — siksi lento ei vaadi lentokenttälaattaa, ja
  * ilmoitus sanoo sen ääneen.
  */

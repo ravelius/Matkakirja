@@ -3,7 +3,7 @@
  * löytyy, niin siinä pitäisi kuulua se lyhyt hihkaisu 'jee' tai
  * jotain vastaavaa").
  *
- * Nämä ovat nuoren herran tunnereaktioita, EIVÄT kertojan luentoja —
+ * Nämä ovat nuoren Foggin tunnereaktioita, EIVÄT kertojan luentoja —
  * ääneen ei lueta ruututekstiä, joten ruututeksti=luenta-sääntö ei
  * koske näitä, eikä omistajan luentajäädytys (10.8.2026) estä
  * generointia.
