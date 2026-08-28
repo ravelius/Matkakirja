@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1270, teksti: 'Raamattu: puhekielen painopiste reunoille' },
   { v: 1269, teksti: 'Julistekuittaus mainitsee matkalaukun' },
   { v: 1268, teksti: 'Chatin kehysmalli: kaksi aanta ja jatkosignaali' },
   { v: 1267, teksti: 'Nippuraja nakyvasta laatasta ja lahin voittaa' },
