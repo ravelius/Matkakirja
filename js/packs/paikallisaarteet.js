@@ -31,11 +31,21 @@
  * oma teema (nimi JA kuva samasta rivistä, js/packs/*.js
  * themedTokenTypes) → js/tokens.js yleinen varanimi. Yleinen varanimi
  * ei saa mennä laudan oman nimen edelle, koska AARREKUVA TULEE
- * LAUDALTA: jos varanimi voittaisi, Euroopan meripihkakuvan päällä
- * lukisi "Kourallinen hopeakolikoita" ja Afrikan kaurikotiloiden
- * päällä sama. Laudoilla, jotka eivät nimeä pariaan (maailma,
- * maailmankartta), ei ole kuvaakaan, joten yleisnimi on siellä
- * turvallinen.
+ * LAUDALTA aina kun maan omaa kuvaa ei ole: jos varanimi voittaisi,
+ * Euroopan meripihkakuvan päällä lukisi "Kourallinen hopeakolikoita"
+ * ja Afrikan kaurikotiloiden päällä sama. Laudoilla, jotka eivät nimeä
+ * pariaan (maailma, maailmankartta), ei ole kuvaakaan, joten yleisnimi
+ * on siellä turvallinen.
+ *
+ * KUVA TULEE MAALTA, KUN MAALLA ON OMANSA (28.8.2026): Euroopan 58
+ * paikallisaarteella on nyt oma kuva (`kuva`-kenttä alla), ja se
+ * VOITTAA laudan kuvan — sama nimi ja sama kuva samasta rivistä, joten
+ * mustikkakorin päällä lukee "Korillinen mustikoita" eikä laudan
+ * "Itämeren meripihka". Logiikka ei kaivannut muutosta: yhdistely on
+ * `{ ...pohja, ...oma }` (js/game.js aarreMantereella), joten rivin
+ * jokainen annettu kenttä — name, fakta JA kuva — syrjäyttää laudan
+ * oman, ja puuttuva kenttä jää laudalta. Uuden mantereen rivit saa
+ * siksi yhä kirjoittaa ilman kuvaa: silloin näkyy laudan yleiskuva.
  */
 
 /*
@@ -56,6 +66,7 @@ export const PAIKALLISAARTEET = {
   FIN: {
     pieniAarre: {
       name: 'Korillinen mustikoita',
+      kuva: 'assets/aarteet/paikallis/fin-pieni.jpg',
       fakta: 'Metsämustikka on mustikkaa läpikotaisin: mehu värjää sekä sormet '
         + 'että kielen, toisin kuin puutarhojen pensasmustikassa, jonka malto on '
         + 'vaalea. Marjaa saa poimia jokamiehenoikeudella kenen tahansa metsästä, '
@@ -63,6 +74,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Sammon siru',
+      kuva: 'assets/aarteet/paikallis/fin-iso.jpg',
       fakta: 'Kalevalan mukaan seppä Ilmarinen takoi Sammon, joka jauhoi viljaa, '
         + 'suolaa ja rahaa. Runoissa se särkyy meritaistelussa, ja Väinämöinen '
         + 'kerää rantaan huuhtoutuneet sirut Suomen onneksi. Sampo on myytti eikä '
@@ -73,6 +85,7 @@ export const PAIKALLISAARTEET = {
   SWE: {
     pieniAarre: {
       name: 'Kori kanelipullia',
+      kuva: 'assets/aarteet/paikallis/swe-pieni.jpg',
       fakta: 'Ruotsissa vietetään kanelipullan päivää 4. lokakuuta; leipomisen '
         + 'edistämisyhdistys keksi päivän vuonna 1999, ja siitä tuli pysyvä tapa. '
         + 'Pulla kuuluu fikaan, kahvitaukoon, joka on Ruotsissa sekä sana että '
@@ -80,6 +93,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Kronan-laivan kultakolikot',
+      kuva: 'assets/aarteet/paikallis/swe-iso.jpg',
       fakta: 'Ruotsin laivaston lippulaiva Kronan räjähti ja upposi Öölannin '
         + 'edustalle 1. kesäkuuta 1676, ja mukana meni satoja miehiä. Hylky '
         + 'löytyi vasta 1980 samalta tutkijalta, joka oli aikanaan löytänyt '
@@ -90,6 +104,7 @@ export const PAIKALLISAARTEET = {
   NOR: {
     pieniAarre: {
       name: 'Tuubi ruskeaa mesostia',
+      kuva: 'assets/aarteet/paikallis/nor-pieni.jpg',
       fakta: 'Ruskea juusto ei ole varsinaista juustoa vaan heraa, jota keitetään '
         + 'tuntikausia, kunnes maitosokeri karamellisoituu makeaksi ja ruskeaksi. '
         + 'Rasva ja sokeri tekevät siitä myös palavaa: vuonna 2013 lastillinen '
@@ -97,6 +112,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Viikinkien hopeakätkö',
+      kuva: 'assets/aarteet/paikallis/nor-iso.jpg',
       fakta: 'Viikinkiajalla hopea oli painotavaraa: koruja ja kolikoita hakattiin '
         + 'paloiksi ja punnittiin vaa\'alla, mistä nimi hakkohopea. Kätköistä '
         + 'löytyy usein arabialaisia dirhameja, jotka olivat kulkeneet idän '
@@ -108,6 +124,7 @@ export const PAIKALLISAARTEET = {
   DNK: {
     pieniAarre: {
       name: 'Pussi wienerleipiä',
+      kuva: 'assets/aarteet/paikallis/dnk-pieni.jpg',
       fakta: 'Tanskassa wienerleipä on wienerbrød, koska tekniikka tuli Wienistä: '
         + 'vuoden 1850 leipurilakon aikana kööpenhaminalaiset palkkasivat '
         + 'itävaltalaisia leipureita, ja voitaikina jäi taloon. Wienissä sama '
@@ -116,6 +133,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Gallehusin kultasarvet',
+      kuva: 'assets/aarteet/paikallis/dnk-iso.jpg',
       fakta: 'Kaksi kultaista sarvea löytyi Etelä-Jyllannin pelloilta 1639 ja '
         + '1734, ja ne oli tehty rautakaudella. Vuonna 1802 kultaseppä varasti '
         + 'ne kuninkaan kokoelmasta ja sulatti kullan rahaksi. Jäljellä ovat vain '
@@ -126,6 +144,7 @@ export const PAIKALLISAARTEET = {
   ISL: {
     pieniAarre: {
       name: 'Purkki hákarl-haita',
+      kuva: 'assets/aarteet/paikallis/isl-pieni.jpg',
       fakta: 'Grönlanninhain liha on tuoreena myrkyllistä, koska siinä on runsaasti '
         + 'ureaa ja trimetyyliamiinioksidia. Siksi liha käytetään ensin viikkoja ja '
         + 'kuivataan sitten kuukausia, ennen kuin sen voi syödä. Sama hai on '
@@ -134,6 +153,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Egillin hopea-arkku',
+      kuva: 'assets/aarteet/paikallis/isl-iso.jpg',
       fakta: 'Egilin saagan mukaan vanha Egill Skallagrímsson vei kaksi hopea-arkkua '
         + 'yön selkään, kätki ne ja tappoi mukanaan olleet orjat, jottei kukaan '
         + 'tietäisi paikkaa. Saaga kertoo hopean tulleen palkkiona Englannin '
@@ -144,6 +164,7 @@ export const PAIKALLISAARTEET = {
   EST: {
     pieniAarre: {
       name: 'Kimppu savusilakoita',
+      kuva: 'assets/aarteet/paikallis/est-pieni.jpg',
       fakta: 'Itämeren silakka on Atlantin sillin murtoveteen sopeutunut alalaji ja '
         + 'jää selvästi valtamerten sukulaisiaan pienemmäksi. Virossa se '
         + 'savustetaan tavallisesti lepän savussa, ja kaloja myydään yhä '
@@ -151,6 +172,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Hansakauppiaan hopeakätkö',
+      kuva: 'assets/aarteet/paikallis/est-iso.jpg',
       fakta: 'Hansa-aikaan hopea oli kauppiaan pankki: kolikot ja astiat olivat '
         + 'säästöjä, jotka kaivettiin kellarin lattian alle heti kun sota uhkasi. '
         + 'Viron pelloista ja vanhoista taloista on löytynyt useita keskiaikaisia '
@@ -162,6 +184,7 @@ export const PAIKALLISAARTEET = {
   LVA: {
     pieniAarre: {
       name: 'Pullo Riian mustaa balsamia',
+      kuva: 'assets/aarteet/paikallis/lva-pieni.jpg',
       fakta: 'Riian musta balsami on väkevä yrttiuute, jonka reseptin laati '
         + 'apteekkari Abraham Kunze 1700-luvun puolivälissä. Sitä myydään yhä '
         + 'läpinäkymättömässä keramiikkapullossa, joka suojaa juomaa valolta ja '
@@ -170,6 +193,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Kuramaan herttuan aarre',
+      kuva: 'assets/aarteet/paikallis/lva-iso.jpg',
       fakta: 'Kuramaan pienestä herttuakunnasta tuli 1600-luvulla merivalta: '
         + 'herttua Jaakobilla oli oma laivasto, telakat ja siirtokunnat Tobagossa '
         + 'ja Gambiajoella. Ruotsalaiset valtasivat maan 1658 ja veivät herttuan '
@@ -180,6 +204,7 @@ export const PAIKALLISAARTEET = {
   LTU: {
     pieniAarre: {
       name: 'Šakotis-kakku',
+      kuva: 'assets/aarteet/paikallis/ltu-pieni.jpg',
       fakta: 'Šakotis paistetaan avotulen päällä pyörivän vartaan ympärille: '
         + 'taikinaa valellaan ohuina kerroksina, ja valuva taikina jähmettyy '
         + 'piikeiksi. Yhteen kakkuun menee kymmeniä munia, ja se on häiden ja '
@@ -188,6 +213,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Vilnan katedraalin kätkö',
+      kuva: 'assets/aarteet/paikallis/ltu-iso.jpg',
       fakta: 'Vilnan katedraalin kirkkoaarteet muurattiin 1939 piiloon seinän '
         + 'onkaloon, kun sota lähestyi. Kätkö löytyi vasta 1985 korjaustöissä, ja '
         + 'neuvostoaikana löydöstä vaiettiin. Kalkit, monstranssit ja '
@@ -197,6 +223,7 @@ export const PAIKALLISAARTEET = {
   POL: {
     pieniAarre: {
       name: 'Krakovan obwarzanek-rinkeli',
+      kuva: 'assets/aarteet/paikallis/pol-pieni.jpg',
       fakta: 'Obwarzanek keitetään ennen paistamista, ja siitä tulee nimikin: '
         + 'obwarzać tarkoittaa keittämistä. Rinkeli mainitaan Krakovan hovin '
         + 'tileissä jo 1300-luvulla, ja EU on suojannut nimen '
@@ -205,6 +232,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Rafaelin kadonnut muotokuva',
+      kuva: 'assets/aarteet/paikallis/pol-iso.jpg',
       fakta: 'Rafaelin Nuoren miehen muotokuva kuului Krakovassa Czartoryskien '
         + 'kokoelmaan, kunnes miehittäjät veivät sen 1939. Teos nähtiin viimeksi '
         + 'kenraalikuvernööri Hans Frankin hallussa, ja jälki katkeaa sodan '
@@ -215,6 +243,7 @@ export const PAIKALLISAARTEET = {
   CZE: {
     pieniAarre: {
       name: 'Korillinen humalankäpyjä',
+      kuva: 'assets/aarteet/paikallis/cze-pieni.jpg',
       fakta: 'Žatecin eli Saazin humala on yksi maailman arvostetuimmista jaloista '
         + 'humalalajikkeista, ja se antaa tšekkiläiselle vaalealle oluelle sen '
         + 'yrttisen tuoksun. Plzeňissä pantiin 1842 ensimmäinen kirkas pilsner, ja '
@@ -223,6 +252,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Rudolf II:n kabinetin helmi',
+      kuva: 'assets/aarteet/paikallis/cze-iso.jpg',
       fakta: 'Keisari Rudolf II kokosi Prahan linnaan Euroopan kuuluisimman '
         + 'kuriositeettikabinetin: taidetta, koneita, kiviä ja luonnonihmeitä '
         + 'samoissa saleissa. Kolmikymmenvuotisen sodan viimeisenä syksynä 1648 '
@@ -234,6 +264,7 @@ export const PAIKALLISAARTEET = {
   DEU: {
     pieniAarre: {
       name: 'Pussi pretzeleitä',
+      kuva: 'assets/aarteet/paikallis/deu-pieni.jpg',
       fakta: 'Saksalainen laugenbrezel kastetaan ennen paistamista laimeaan '
         + 'lipeäliuokseen, ja juuri se antaa kuoren tumman värin ja oman makunsa. '
         + 'Solmun sanotaan esittävän ristissä olevia rukoilevia käsivarsia, mutta '
@@ -242,6 +273,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Nibelungein aarre',
+      kuva: 'assets/aarteet/paikallis/deu-iso.jpg',
       fakta: 'Nibelungenlaulun mukaan Hagen upotti Siegfriedin perinnön, koko '
         + 'Nibelungein kulta-aarteen, Reiniin lähelle Wormsia eikä kertonut '
         + 'paikkaa kenellekään. Runoelma kirjoitettiin noin vuonna 1200, ja '
@@ -252,6 +284,7 @@ export const PAIKALLISAARTEET = {
   AUT: {
     pieniAarre: {
       name: 'Sacher-kakku puulaatikossa',
+      kuva: 'assets/aarteet/paikallis/aut-pieni.jpg',
       fakta: 'Sacherkakun keksi vuonna 1832 kuusitoistavuotias oppipoika Franz '
         + 'Sacher, kun ruhtinas Metternichin keittiömestari sairastui. Hotel '
         + 'Sacher ja konditoria Demel riitelivät nimestä oikeudessa seitsemän '
@@ -260,6 +293,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Florentiner-timantti',
+      kuva: 'assets/aarteet/paikallis/aut-iso.jpg',
       fakta: 'Florentiner oli 137 karaatin keltainen timantti ja Habsburgien '
         + 'kruununjalokivi. Keisariperhe otti sen mukaan maanpakoon 1918, ja '
         + 'Sveitsissä kivi katosi; sen uskotaan päätyneen varkaan mukana '
@@ -270,6 +304,7 @@ export const PAIKALLISAARTEET = {
   CHE: {
     pieniAarre: {
       name: 'Kiekko alppijuustoa',
+      kuva: 'assets/aarteet/paikallis/che-pieni.jpg',
       fakta: 'Yhteen emmentalkiekkoon menee toistatuhatta litraa maitoa, ja valmis '
         + 'kiekko painaa lähes sata kiloa. Reiät syntyvät bakteereista, jotka '
         + 'tuottavat kypsymisen aikana hiilidioksidia; tutkijoiden mukaan maidon '
@@ -278,6 +313,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Wilhelm Tellin varsijousi',
+      kuva: 'assets/aarteet/paikallis/che-iso.jpg',
       fakta: 'Legendan mukaan Wilhelm Tell ampui varsijousella omenan poikansa '
         + 'päästä ja piti toista nuolta takkinsa alla vouti Gessleriä varten. '
         + 'Tarina kirjattiin ensi kerran noin 1470 Sarnenin valkoiseen kirjaan, ja '
@@ -288,6 +324,7 @@ export const PAIKALLISAARTEET = {
   NLD: {
     pieniAarre: {
       name: 'Kori tulppaanisipuleita',
+      kuva: 'assets/aarteet/paikallis/nld-pieni.jpg',
       fakta: 'Tulppaani ei ole alkujaan hollantilainen vaan tuotiin 1500-luvulla '
         + 'Osmanien valtakunnasta. Vuosien 1636–37 huippuhinnoilla harvinaisimmasta '
         + 'sipulista maksettiin saman verran kuin kanaalitalosta, ja helmikuussa '
@@ -296,6 +333,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'VOC-kauppalaivan hopealasti',
+      kuva: 'assets/aarteet/paikallis/nld-iso.jpg',
       fakta: 'Hollannin Itä-Intian kauppakomppania VOC oli 1600-luvulla maailman '
         + 'suurin yhtiö ja lähetti Aasiaan tuhansia laivalasteja hopeaa, jolla '
         + 'mausteet maksettiin. Osa laivoista ei koskaan palannut, ja hylkyjä on '
@@ -307,6 +345,7 @@ export const PAIKALLISAARTEET = {
   GBR: {
     pieniAarre: {
       name: 'Purkki marmeladia',
+      kuva: 'assets/aarteet/paikallis/gbr-pieni.jpg',
       fakta: 'Marmeladi tarvitsee katkeraa sevillanappelsiinia, joka kypsyy vain '
         + 'talvella, ja valtaosa Sevillan sadosta viedään Britanniaan '
         + 'keitettäväksi. Sana tulee portugalin kvittenihilloa tarkoittavasta '
@@ -316,6 +355,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Kuningas Juhanan jalokivet',
+      kuva: 'assets/aarteet/paikallis/gbr-iso.jpg',
       fakta: 'Kuningas Juhana menetti lokakuussa 1216 kuormastonsa ylittäessään '
         + 'Washin matalaa lahtea nousuveden aikaan, ja mukana meni kruunun '
         + 'aarteisto. Kuningas kuoli muutamaa päivää myöhemmin. Aarretta ei ole '
@@ -327,6 +367,7 @@ export const PAIKALLISAARTEET = {
   IRL: {
     pieniAarre: {
       name: 'Korillinen turvetta',
+      kuva: 'assets/aarteet/paikallis/irl-pieni.jpg',
       fakta: 'Turvetta on nostettu soista polttoaineeksi vuosisatoja, ja palat '
         + 'kuivataan pystyyn ladottuina tuulessa. Suo säilöö, mitä sinne joutuu: '
         + 'irlantilaisista soista on löytynyt puuastioissa niin sanottua suovoita, '
@@ -336,6 +377,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Irlannin kruununjalokivet',
+      kuva: 'assets/aarteet/paikallis/irl-iso.jpg',
       fakta: 'Pyhän Patrickin ritarikunnan tähti ja solki varastettiin Dublinin '
         + 'linnasta heinäkuussa 1907 juuri ennen kuninkaan vierailua. '
         + 'Kassakaappia ei murrettu vaan avattiin avaimella, eikä syyllistä '
@@ -347,6 +389,7 @@ export const PAIKALLISAARTEET = {
   FRA: {
     pieniAarre: {
       name: 'Kori tuoreita croissanteja',
+      kuva: 'assets/aarteet/paikallis/fra-pieni.jpg',
       fakta: 'Croissant ei ole alkuperältään ranskalainen vaan itävaltalaisen '
         + 'kipferlin jälkeläinen: wieniläinen leipuri avasi Pariisiin leipomonsa '
         + '1839, ja siitä lähtien lehtitaikinaleivonnaisia sanotaan Ranskassa '
@@ -355,6 +398,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Kruununjalokivien safiiri',
+      kuva: 'assets/aarteet/paikallis/fra-iso.jpg',
       fakta: 'Ranskan kruununjalokivet varastettiin Garde-Meublen varastosta '
         + 'syyskuussa 1792 useana yönä peräkkäin, ennen kuin kukaan huomasi mitään. '
         + 'Osa kivistä saatiin takaisin, mutta moni katosi jäljettömiin: kuninkaan '
@@ -366,6 +410,7 @@ export const PAIKALLISAARTEET = {
   ESP: {
     pieniAarre: {
       name: 'Verkkokassi appelsiineja',
+      kuva: 'assets/aarteet/paikallis/esp-pieni.jpg',
       fakta: 'Espanja on maailman suurimpia tuoreen appelsiinin viejiä, ja suuri osa '
         + 'hedelmistä kasvaa Valencian kastelluilla huerta-mailla. Kastelusta on '
         + 'kiistelty niin kauan, että Valenciassa kokoontuu yhä joka torstai '
@@ -375,6 +420,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Vigon lahden hopealasti',
+      kuva: 'assets/aarteet/paikallis/esp-iso.jpg',
       fakta: 'Espanjan hopealaivasto tuhoutui Vigon lahdella lokakuussa 1702, kun '
         + 'englantilais-hollantilainen laivasto murtautui sataman puomin läpi. '
         + 'Suuri osa hopeasta oli kuitenkin purettu maihin jo ennen taistelua, mikä '
@@ -385,6 +431,7 @@ export const PAIKALLISAARTEET = {
   PRT: {
     pieniAarre: {
       name: 'Rasia pastel de nata -leivoksia',
+      kuva: 'assets/aarteet/paikallis/prt-pieni.jpg',
       fakta: 'Portugalin munakeltuaisleivonnaisten synty selitetään luostareilla: '
         + 'valkuaista kului muun muassa vaatteiden tärkkäykseen ja viinin '
         + 'kirkastamiseen, ja keltuaiset piti käyttää johonkin. Belémin luostarin '
@@ -394,6 +441,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Kuninkaan kirjaston nide',
+      kuva: 'assets/aarteet/paikallis/prt-iso.jpg',
       fakta: 'Lissabonin maanjäristys 1. marraskuuta 1755 kaatoi kaupungin, ja mitä '
         + 'järistys ja hyökyaalto jättivät, sen vei tulipalo. Kuninkaallinen '
         + 'kirjasto — arviolta 70 000 nidettä — paloi, ja mukana meni arkistoja, '
@@ -404,6 +452,7 @@ export const PAIKALLISAARTEET = {
   ITA: {
     pieniAarre: {
       name: 'Parmesaanitahko',
+      kuva: 'assets/aarteet/paikallis/ita-pieni.jpg',
       fakta: 'Yhteen parmigiano reggiano -tahkoon menee noin 550 litraa maitoa, ja '
         + 'se kypsyy vähintään vuoden ennen kuin kuoreen lyödään leima. Kypsyys '
         + 'tarkistetaan koputtelemalla kuorta pienellä vasaralla. '
@@ -412,6 +461,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Caravaggion kadonnut maalaus',
+      kuva: 'assets/aarteet/paikallis/ita-iso.jpg',
       fakta: 'Caravaggion Kristuksen syntymä varastettiin Palermon Pyhän '
         + 'Laurentiuksen rukoushuoneesta lokakuun yönä 1969 leikkaamalla kangas '
         + 'irti kehyksestään. Mafiakäännynnäiset ovat kertoneet teoksen '
@@ -423,6 +473,7 @@ export const PAIKALLISAARTEET = {
   GRC: {
     pieniAarre: {
       name: 'Ruukku Hymettoksen hunajaa',
+      kuva: 'assets/aarteet/paikallis/grc-pieni.jpg',
       fakta: 'Hymettoksen vuoren timjamihunaja oli kuuluisaa jo antiikin aikana, ja '
         + 'sitä kehuttiin sekä kreikkalaisissa että roomalaisissa teksteissä. '
         + 'Timjami kukkii kuivalla rinteellä keskikesällä, ja siitä tulee hunajan '
@@ -431,6 +482,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Antikytheran koneen osa',
+      kuva: 'assets/aarteet/paikallis/grc-iso.jpg',
       fakta: 'Sukeltajat löysivät 1901 Antikytheran saaren edustalta hylyn, josta '
         + 'nousi vihreä pronssimöhkäle: se osoittautui yli kahdentuhannen vuoden '
         + 'ikäiseksi hammasrataskoneeksi, joka ennusti auringon- ja '
@@ -442,6 +494,7 @@ export const PAIKALLISAARTEET = {
   BGR: {
     pieniAarre: {
       name: 'Pullo Ruusulaakson ruusuöljyä',
+      kuva: 'assets/aarteet/paikallis/bgr-pieni.jpg',
       fakta: 'Kilo ruusuöljyä vaatii tonnittain terälehtiä, ja siksi se on painonsa '
         + 'arvoisena maailman kalleimpia raaka-aineita. Terälehdet poimitaan '
         + 'Kazanlakin Ruusulaaksossa käsin aamuyöllä ennen auringonnousua, koska '
@@ -450,6 +503,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Traakialaiskuninkaan kulta',
+      kuva: 'assets/aarteet/paikallis/bgr-iso.jpg',
       fakta: 'Vuonna 1949 kolme veljestä kaivoi savea tiilitehtaalle Panagjuriŝten '
         + 'lähellä ja löysi yhdeksän puhtaasta kullasta tehtyä juoma-astiaa, '
         + 'yhteensä yli kuusi kiloa, 300-luvulta eaa. Traakialaiset hautasivat '
@@ -461,6 +515,7 @@ export const PAIKALLISAARTEET = {
   ROU: {
     pieniAarre: {
       name: 'Purkki Karpaattien hunajaa',
+      kuva: 'assets/aarteet/paikallis/rou-pieni.jpg',
       fakta: 'Romania on Euroopan suurimpia hunajantuottajia, ja tunnetuin laatu on '
         + 'vaalea akaasiahunaja. Pesiä kuljetetaan kesällä kuorma-autolla kukinnan '
         + 'perässä laaksosta toiseen. Karpaateilla tarhaajan naapurina on Euroopan '
@@ -469,6 +524,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Daakialainen kultarannekas',
+      kuva: 'assets/aarteet/paikallis/rou-iso.jpg',
       fakta: 'Sarmizegetusa Regian raunioista ryöstettiin 1990-luvulla kilon '
         + 'painoisia daakialaisia kultarannekkeita, jotka päätyivät salakauppaan '
         + 'ulkomaille. Romania on saanut toistakymmentä niistä takaisin '
@@ -480,6 +536,7 @@ export const PAIKALLISAARTEET = {
   HUN: {
     pieniAarre: {
       name: 'Pussi paprikajauhetta',
+      kuva: 'assets/aarteet/paikallis/hun-pieni.jpg',
       fakta: 'Paprika tuli Unkariin osmanien mukana 1500-luvulla, ja Szeged ja '
         + 'Kalocsa ovat yhä sen kaksi kotikaupunkia. Szegediläinen Albert '
         + 'Szent-Györgyi eristi C-vitamiinin juuri paprikasta ja sai työstään '
@@ -488,6 +545,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Attilan hauta-aarre',
+      kuva: 'assets/aarteet/paikallis/hun-iso.jpg',
       fakta: 'Gootti Jordanes kertoo 500-luvulla kirjoittamassaan historiassa, että '
         + 'Attila haudattiin kolmeen sisäkkäiseen arkkuun — kultaan, hopeaan ja '
         + 'rautaan — ja että haudan tekijät surmattiin, jottei paikka paljastuisi. '
@@ -499,6 +557,7 @@ export const PAIKALLISAARTEET = {
   HRV: {
     pieniAarre: {
       name: 'Pussi Pagin saaren suolaa',
+      kuva: 'assets/aarteet/paikallis/hrv-pieni.jpg',
       fakta: 'Pagin saarella on tehty merisuolaa haihduttamalla antiikin ajoista '
         + 'asti, ja suola-altaat ovat Adrianmeren vanhimpia. Bura-tuuli kantaa '
         + 'suolaa myös laitumille, joten saaren lampaat syövät suolan maustamia '
@@ -507,6 +566,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Ragusan laivaston kulta',
+      kuva: 'assets/aarteet/paikallis/hrv-iso.jpg',
       fakta: 'Ragusa eli Dubrovnik oli itsenäinen merenkulkutasavalta, jonka '
         + 'kauppalaivasto oli 1500-luvulla Välimeren suurimpia; englannin suurta '
         + 'kauppalaivaa tarkoittava sana argosy tulee kaupungin nimestä. '
@@ -518,6 +578,7 @@ export const PAIKALLISAARTEET = {
   BIH: {
     pieniAarre: {
       name: 'Säkki bosnialaista kahvia',
+      kuva: 'assets/aarteet/paikallis/bih-pieni.jpg',
       fakta: 'Bosnialainen kahvi jauhetaan lähes jauhoksi ja keitetään kuparisessa '
         + 'džezvassa: vesi kiehautetaan ensin, jauhe lisätään sitten ja astia '
         + 'nostetaan vielä kerran tulelle. Kahvi tuli Sarajevoon osmanien mukana '
@@ -527,6 +588,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Bosnian kuninkaan kruunu',
+      kuva: 'assets/aarteet/paikallis/bih-iso.jpg',
       fakta: 'Bosnian viimeinen kuningas Stjepan Tomašević kruunattiin 1461 '
         + 'kruunulla, jonka paavi lähetti Roomasta. Kaksi vuotta myöhemmin '
         + 'osmanit valtasivat maan ja kuningas mestattiin. Kruunua ei ole nähty '
@@ -537,6 +599,7 @@ export const PAIKALLISAARTEET = {
   UKR: {
     pieniAarre: {
       name: 'Purkki hunajaa',
+      kuva: 'assets/aarteet/paikallis/ukr-pieni.jpg',
       fakta: 'Ukraina on Euroopan suurimpia hunajan tuottajia ja maailman '
         + 'suurimpia viejiä. Nykyaikaisen kehyspesän kehitti ukrainalainen Petro '
         + 'Prokopovytš vuonna 1814, ja hän perusti myös ensimmäisen '
@@ -545,6 +608,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Hetmani Polubotokin kultakätkö',
+      kuva: 'assets/aarteet/paikallis/ukr-iso.jpg',
       fakta: 'Legendan mukaan hetmani Pavlo Polubotok lähetti ennen vangitsemistaan '
         + 'tynnyrillisen kultaa Englannin pankkiin ja määräsi, että talletus '
         + 'korkoineen kuuluu itsenäiselle Ukrainalle. Polubotok oli todellinen '
@@ -557,6 +621,7 @@ export const PAIKALLISAARTEET = {
   RUS: {
     pieniAarre: {
       name: 'Tuohikori puolukoita',
+      kuva: 'assets/aarteet/paikallis/rus-pieni.jpg',
       fakta: 'Puolukka säilyy vedessä pilaantumatta läpi talven, koska marjassa on '
         + 'luonnostaan bentsoehappoa. Sama happo hillitsee käymistä, joten hilloa '
         + 'saattoi ennen tehdä keittämättä. Metsästä marjat kannettiin '
@@ -564,6 +629,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Tsaarin kadonnut pääsiäismuna',
+      kuva: 'assets/aarteet/paikallis/rus-iso.jpg',
       fakta: 'Fabergén verstas teki keisariperheelle viisikymmentä pääsiäismunaa '
         + 'vuosina 1885–1916, ja jokaisessa oli sisällä yllätys. Vallankumouksen '
         + 'jälkeen munia myytiin ulkomaille, ja osa katosi matkalla; muutama on '
@@ -575,6 +641,7 @@ export const PAIKALLISAARTEET = {
   TUR: {
     pieniAarre: {
       name: 'Rasia lokumia',
+      kuva: 'assets/aarteet/paikallis/tur-pieni.jpg',
       fakta: 'Lokum on tärkkelyksestä ja sokerista keitettyä hyytelöä, jota '
         + 'maustetaan ruusuvedellä tai mastiksilla ja tomutetaan tomusokerilla. '
         + 'Istanbulissa toimii yhä 1700-luvun lopulla perustettu makeiskauppa, '
@@ -584,6 +651,7 @@ export const PAIKALLISAARTEET = {
     },
     isoAarre: {
       name: 'Priamoksen aarteen korut',
+      kuva: 'assets/aarteet/paikallis/tur-iso.jpg',
       fakta: 'Heinrich Schliemann kaivoi aarteen esiin Hisarlıkin kummulta 1873 ja '
         + 'vei sen salaa pois maasta; osmanit haastoivat hänet oikeuteen. Kokoelma '
         + 'katosi Berliinistä sodan lopussa 1945 ja ilmestyi vasta 1993 Moskovaan, '
