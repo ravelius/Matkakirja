@@ -48,6 +48,8 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1297: Kymmenen takynostoa: Madrid 3, Wien 2, Pariisi 2, Berliini 3 (mm. Altamira, Eiffel-huijaus, Kopenickin kapteeni, 2 kirahvia). Nakyvat kartalla portinavauksen jalkeen - katso silloin.',
+  'v1296: Laitemittari: lisaa osoitteeseen ?mittari=1 -> lukulaatikko kartan kulmaan (kehysaika, tukokset, lavan koko). Ota kuvakaappaus tokkimishetkella. Pois: ?mittari=0.',
   'v1295: Paahahmo on nimeton Foggin perillinen: Reginald-nimi pois kaikkialta, avauskertomus sina-muodossa. Lue etusivu ja Venetsian/Edinburghin saapumiset.',
   'v1294: LAVAIKKUNA - kartan SVG-lava ikkunoidaan nakymaan (iPhonen zoom/scroll-jankin juurisyykorjaus). RATKAISEVA LAITETESTI: zoomaa ja vierita Euroopan karttaa iPhonella.',
   'v1292: Luettu taky pysyy kartalla nimion kanssa (44 px siirto ankkurista); tuike vain ensimmaisella lukemattomalla. Katso Sofia lukemisen jalkeen.',
