@@ -43,6 +43,29 @@
  */
 .fokuskohteet-piilossa { display: none; }
 
+/*
+ * SAAPUMISEN PEHMEÄ SYTTYMINEN (omistajan tilaus 28.8.2026: merkit
+ * vasta perillä, *"mieluiten … pehmeällä feidauksella"*).
+ *
+ * Portin avaa js/fokuskohteet.js saapumisPortti heti kun saapumisen
+ * kamera-ajo on ohi, ja luokka on kertakäyttöinen: se lähtee pois
+ * animaation päätyttyä. Peittävyys YHDELLE ryhmälle on kompositorin
+ * työtä eikä pakota kartan piirtoa uudelleen — sama syy, jolla
+ * suodattimet on kartan kerroksilta kielletty, koskee vain
+ * suodattimia.
+ */
+@keyframes fokuskohteet-syttyy {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fokuskohteet-syttyy { animation: fokuskohteet-syttyy 620ms ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  /* Liikeherkkyys: merkit ovat perillä paikallaan ilman häivytystä. */
+  .fokuskohteet-syttyy { animation: none; }
+}
+
 .fokuskohde {
   pointer-events: auto;
   cursor: pointer;
