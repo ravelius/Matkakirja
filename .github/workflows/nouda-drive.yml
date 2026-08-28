@@ -25,7 +25,10 @@ jobs:
     steps:
       - name: Listaa ja lataa
         env:
-          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          # Oma Drive-avain (omistaja 28.8.2026): GOOGLE_API_KEY:n
+          # rajoitus esti Drive-listauksen (403), joten Drivella on
+          # nyt oma secret.
+          GOOGLE_API_KEY: ${{ secrets.SAMIREIVINEN_DRIVE_API }}
           KANSIO: ${{ inputs.kansio }}
         run: |
           set -euo pipefail
