@@ -470,9 +470,9 @@ function pullaTehtyTeksti(nimi) {
  * Kahden virkkeen katto pitää (Raamattu, PÖLLÖN KARAKTÄÄRI).
  */
 function pullaKuittausTeksti(nimi) {
-  return `${pullaIsolla(nimi)}. Sukuni kantoi kuninkaiden kirjeitä, mut kyl `
-    + 'tää kelpaa maksuks — aarteen jälki syttyi, ja se vihreä piste '
-    + 'kartalla näyttää paikan.';
+  return `${pullaIsolla(nimi)}. Sukuni kantoi kuninkaiden kirjeitä, mut `
+    + 'kyllä tämä kelpaa maksuksi — aarteen jälki syttyi, ja se vihreä '
+    + 'piste kartalla näyttää paikan.';
 }
 
 /**

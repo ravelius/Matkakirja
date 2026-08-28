@@ -204,24 +204,30 @@ export const FOKUSVIRTA_SOFIA = {
      * ja muistomerkki jäävät koskematta (ne ovat seuraavassa
      * kappaleessa, kuvatekstissä ja täyissä).
      *
-     * PUHEKIELIPASSI (Raamattu v1265 "LIVIAN PUHEKIELI"): kirjakielinen
-     * abstraktio *"se asettaa sen kauas"* oli omistajan nimeämä virhe
-     * Livian suussa, ja koko kupla on kirjoitettu puhuttuun muotoon.
-     * Kolme faktaa, säikähdysavaus ja välittäjäote ovat entisellään —
-     * vain kieli vaihtui. Savuke mittaa tätä kuplaa sanasta sanaan
-     * (tools/savuke-fokusvirta.mjs, väite "Sofiassa isoisän maadoitus").
+     * PUHEKIELIPASSI (Raamattu v1270 "LIVIAN PUHEKIELI", sääntö 1
+     * PAINOPISTE REUNOILLA): kirjakielinen abstraktio *"se asettaa sen
+     * kauas"* oli omistajan nimeämä virhe Livian suussa, ja kupla on
+     * kirjoitettu puhuttuun muotoon. Tämä on OMISTAJAN HYVÄKSYMÄ
+     * MALLIESIMERKKI koko painopistesäännöstä: lyhentymät ovat vain
+     * alussa ("No johan oli") ja lopussa ("Mut kyllä sen kestää
+     * lukea"), kun taas keskellä sanat ovat auki — sitten, silloin,
+     * sataviisikymmentä, kuusi. Kolme faktaa, säikähdysavaus ja
+     * välittäjäote ovat entisellään. Savuke mittaa tätä kuplaa sanasta
+     * sanaan (tools/savuke-fokusvirta.mjs, väite "Sofiassa isoisän
+     * maadoitus"): se vaatii sekä auki kirjoitetun keskikohdan että
+     * puhekielisen lopun, joten kumpaankin suuntaan lipsuminen kaataa
+     * savukkeen.
      */
-    maadoitus: 'Kääk. No johan oli hurja juttu — luin sen kahdesti enkä '
-      + 'nukkunut sen jälkeen kunnolla. Sit minä katsoin vuosilukua: '
-      + 'helmikuu 1873. Onhan siit aikaa jo yli sataviiskyt vuotta. Laki '
-      + 'oli sillon ihan eri, ja kuolemantuomioita jaettiin melkein joka '
-      + 'maassa; Sofiaakin komennettiin kokonaan toisesta pääkaupungista, '
-      + 'ja omansa siit tuli vasta kuus vuotta myöhemmin. Ei se siitä '
-      + 'yhtään pienempää juttua tee. Mut kun muistaa miten kaukana se on, '
-      + 'niin kyllä sen kestää lukea.',
+    maadoitus: 'Kääk. No johan oli hurja juttu — luin sen kahdesti. '
+      + 'Sitten minä katsoin vuosilukua: helmikuu 1873, siitä on yli '
+      + 'sataviisikymmentä vuotta. Laki oli silloin ihan eri, ja '
+      + 'kuolemantuomioita jaettiin melkein joka maassa. Sofiaakin '
+      + 'komennettiin toisesta pääkaupungista, ja omansa siitä tuli vasta '
+      + 'kuusi vuotta myöhemmin. Ei se juttua pienennä. Mut kyllä sen '
+      + 'kestää lukea, kun muistaa miten kaukana se on.',
     teksti: 'Hirttopaikalla seisoo nyt kolmentoista metrin '
       + 'graniittipatsas, ja sitä hautaa etsitään vieläkin. Etsintöjä on '
-      + 'jatkunut sataviiskyt vuotta — se kynttilä ikkunalla oli '
+      + 'jatkunut sataviisikymmentä vuotta — se kynttilä ikkunalla oli '
       + 'lähempänä totuutta kuin yksikään lapio.',
     /*
      * Commons 25.8.2026: 1000×667, CC BY-SA 3.0, Edal Anton Lefterov,

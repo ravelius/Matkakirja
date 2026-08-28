@@ -218,16 +218,16 @@ export const FOKUSVIRTA_BUKAREST = {
      * vuosisadan Bukarestin korkein rakennus (sama täky).
      */
     maadoitus: 'Kiipeäminen kuulostaa täs ihan valloitukselta. Mut '
-      + 'maanjäristys oli pudottanut tornin huipun ja kellon jo seitkyt '
-      + 'vuotta ennen kun isoisäsi tuli, eli hän kiipes typistettyyn tynkään '
-      + 'pimeetä ja tunkkasta portaikkoa pitkin — meikäläisten '
-      + 'muistiinpanojen mukaan siel ei viihtynyt yksikään siivekäs. Sit hän '
-      + 'katsoi ulos. Ja sen minä myönnän: tyngästäkin näkyy kauas, jos '
-      + 'torni on yhä koko kaupungin korkein.',
+      + 'maanjäristys oli pudottanut tornin huipun ja kellon jo '
+      + 'seitsemänkymmentä vuotta ennen kuin isoisäsi tuli, eli hän kiipesi '
+      + 'typistettyyn tynkään pimeää ja tunkkaista portaikkoa pitkin — '
+      + 'meikäläisten muistiinpanojen mukaan siellä ei viihtynyt yksikään '
+      + 'siivekäs. Sit hän katsoi ulos. Ja sen minä myönnän: tyngästäkin '
+      + 'näkyy kauas, jos torni on yhä koko kaupungin korkein.',
     teksti: 'Isoisäsi toive ei toteutunut: torni purettiin 1888, ja sen '
-      + 'nimee kantaa yhä viereinen sairaala. Tornista jäi kourallinen '
-      + 'valokuvia — tässä on yks niistä. Just tän takia minä kannan '
-      + 'arkistoo siivissäni.',
+      + 'nimeä kantaa yhä viereinen sairaala. Tornista jäi kourallinen '
+      + 'valokuvia — tässä on yksi niistä. Just tän takia minä kannan '
+      + 'arkistoa siivissäni.',
     /*
      * Commons 25.8.2026: 2397×3339, public domain, kuvaus "Photo of
      * Turnul Colței, Bucharest, before the demolition", Category:Turnul

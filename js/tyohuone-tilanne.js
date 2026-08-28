@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1271: Livian lyhentymat siirretty tekstien reunoille (Raamattu v1270): keskella sanat auki (sataviisikymmenta, silloin, mutta), alussa ja lopussa lyhentymat sailyvat. Sofia hyvaksytyn mallin mukainen. Sama saanto chat-kehotteeseen (worker julkaistuu mergessa). Lue Sofian ja Bukarestin kuplat.',
   'v1270: Raamattuun tasmennys Livian kieleen: lyhentymat vain tekstin alussa ja lopussa, keskella sanat kirjoitetaan auki (mutta, silloin, sataviisikymmenta). Tekstien ja chat-kehotteen saato tulee erikseen.',
   'v1269: Julisteen lunastuskuittaus kertoo nyt minne juliste menee: "Laitetaanpa taa matkalaukkuun talteen, kun on noin hieno. Hyva silma." (vinkillisessa muodossa "Juliste talteen matkalaukkuun."). Testaa JULISTE-tehtavan lunastus.',
   'v1268: Chatin kehysmalli: uuden aiheen vastaus = Livian puhekielinen alustus + ydin taydella kirjakielella + loppukommentti omalla aanella; jatkokysymysnapit tuottavat vastauksen kokonaan pollon aanella; suora puhuttelu (Pulu, tiedatko...) kehystetaan. Worker julkaistuu automaattisesti mergessa (pollo-julkaisu.yml). Testaa chat: uusi kysymys, jatkonappi, puhuttelu.',

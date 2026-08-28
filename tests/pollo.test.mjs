@@ -612,9 +612,9 @@ test('worker tuntee kehyslajit ja putoaa tuntemattomalla aloitukseen', () => {
 });
 
 /*
- * Kehotteen kaksi ääntä: omalla äänellä puhutaan vahvaa puhekieltä,
- * ydinvastaus on täyttä kirjakieltä, ja jatkokysymysvastauksesta kehys
- * jää pois. Nämä ovat omistajan sitovia linjauksia (Raamattu v1265),
+ * Kehotteen kaksi ääntä: omalla äänellä puhutaan puhekieltä painopiste
+ * reunoilla, ydinvastaus on täyttä kirjakieltä, ja jatkokysymysvastauksesta
+ * kehys jää pois. Nämä ovat omistajan sitovia linjauksia (Raamattu v1270),
  * joten testi vartioi niitä samalla tavalla kuin tuuraaja-kehystä.
  */
 test('kehote kantaa kehysmallin ja Livian puhekielen', () => {
@@ -623,7 +623,10 @@ test('kehote kantaa kehysmallin ja Livian puhekielen', () => {
   assert.ok(/YDINVASTAUS TÄYSIN KIRJAKIELELLÄ/.test(kehote),
     'ydinvastauksen kirjakielisyys puuttuu');
   assert.ok(/JATKOKYSYMYS — EI KEHYSTÄ/.test(kehote), 'jatkokysymysosio puuttuu');
-  assert.ok(/OMA ÄÄNESI — VAHVA PUHEKIELI/.test(kehote), 'puhekieliosio puuttuu');
+  assert.ok(/OMA ÄÄNESI — PUHEKIELI, PAINO REUNOILLA/.test(kehote),
+    'puhekieliosio puuttuu');
+  assert.ok(/PAINOPISTE REUNOILLA/.test(kehote),
+    'painopistesääntö puuttuu — lyhentymät valuisivat takaisin keskelle');
   assert.ok(/PRONOMINIT[\s\\]+KOKONAISINA/.test(kehote),
     'minä/sinä-sääntö puuttuu — Livia lipsuisi mä/sä-muotoihin');
   assert.ok(/LOPPUKOMMENTTI/.test(kehote), 'loppukommentin ohje puuttuu');

@@ -254,13 +254,13 @@ export const FOKUSVIRTA_SARAJEVO = {
      */
     maadoitus: 'Kaunis lause. Mut postinkantajan kannalta se näytti vähän '
       + 'toiselta: monta uskoa tarkoitti montaa kalenteria, montaa pyhien '
-      + 'sarjaa ja ikuista laskemista siit, minä päivänä mikäkin luukku on '
-      + 'auki. Meikäläiset valitti siit ääneen. Herätä sai silti minkä '
+      + 'sarjaa ja ikuista laskemista siitä, minä päivänä mikäkin luukku on '
+      + 'auki. Meikäläiset valitti siitä ääneen. Herätä sai silti minkä '
       + 'kellon mukaan halus — se osa piti kyl paikkansa.',
     teksti: 'Joen varrella on nykyään talo nimeltä Inat kuća — Uhman '
       + 'talo. Kun keisarin virkamiehet halusivat sen tontin, omistaja '
-      + 'purki talonsa ja kokos sen uudestaan joen toiselle puolelle, lauta '
-      + 'laudalta. Minä ihailen sitä miestä ammatikseni.',
+      + 'purki talonsa ja kokosi sen uudestaan joen toiselle puolelle, '
+      + 'lauta laudalta. Minä ihailen sitä miestä ammatikseni.',
     /*
      * Commons 25.8.2026: 5184×3456, CC BY 2.0, Fred Romero, kuvattu
      * 20.8.2019, kategoria Inat kuća; tiedoston oma kuvaus kertoo saman

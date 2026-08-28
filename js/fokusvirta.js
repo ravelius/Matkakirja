@@ -576,11 +576,14 @@ const SAAPUMISKUPLA_VAITI = new Set(['ateena']);
  *     kehotteen ISOISÄN MAADOITUS -osiossa.
  *  3. EI HUUTOMERKKEJÄ eikä juonipaljastuksia. Livia ei tiedä
  *     aarteista mitään eikä vihjaa niihin.
- *  4. PUHEKIELI KIRJOITUSASUSSA (Raamattu v1265 "LIVIAN PUHEKIELI"):
- *     loppuheitot ja lyhentymät (mut, siit, sillon, yks, ekana), mutta
- *     PRONOMINIT KOKONAISINA — minä ja sinä, ei mä eikä sä. Kevyet
- *     täytesanat (no, niin, kato) säästellen, ja Kääk vain aidossa
- *     säikähdyksessä. Kirjakielinen abstraktio on tässä virhe.
+ *  4. PUHEKIELI, PAINO REUNOILLA (Raamattu v1270 "LIVIAN PUHEKIELI",
+ *     sääntö 1): loppuheitot ja lyhentymät (mut, siit, sillon, yks,
+ *     ekana) kuuluvat repliikin ALKUUN ja LOPPUUN. Keskellä rytmi ja
+ *     arkisanasto säilyvät, mutta sanat kirjoitetaan auki (yksi,
+ *     kuin, kaksisataa) — enintään yksi lyhentymä keskellä
+ *     tehokeinona. PRONOMINIT KOKONAISINA — minä ja sinä, ei mä eikä
+ *     sä. Kevyet täytesanat (no, niin, kato) säästellen, ja Kääk vain
+ *     aidossa säikähdyksessä. Kirjakielinen abstraktio on tässä virhe.
  */
 const LIVIAN_SAAPUMISET = {
   /* (b) pröystäily — Venetsian torilla suku on kotonaan. */
@@ -597,19 +600,19 @@ const LIVIAN_SAAPUMISET = {
 
   /* (d) pukeutuminen + (a) herkku. */
   dubrovnik: 'Dubrovnik. Muurilta näkee heti, kuka on pukenut juhlavaatteet: '
-    + 'valkonen liina, punanen liivi, hopeanapit. Ja sit fritulet — pieniä '
+    + 'valkoinen liina, punainen liivi, hopeanapit. Ja sit fritulet — pieniä '
     + 'paistettuja palleroita, joita kukaan ei laske. Minä lasken.',
 
   /* (e) 1873 on Budapestin oma vuosi. */
   budapest: 'Budapest. Just tänä vuonna kolmesta tuli yks: Buda, Pest '
     + 'ja Óbuda samaan nimeen. Sitä ennen kirjeeseen piti valita niistä '
-    + 'yks. Kürtőskalács kiertää yhä vartaan ympäri, niinku sekin ois '
+    + 'yksi. Kürtőskalács kiertää yhä vartaan ympäri, niinku sekin ois '
     + 'suostunut yhdistymiseen.',
 
   /* (a) herkku — Buchteln on kehotteen pullalistalla. */
   wien: 'Wien. Täällä leivotaan Buchtelnia: pehmeitä hiivapullia, jotka '
-    + 'nostetaan vuoasta yks kerrallaan. Minä olen laskenut niitä '
-    + 'ikkunalaudalta enemmän kun kehtaan sanoa. Kirjeitäkin kannoin. Siin '
+    + 'nostetaan vuoasta yksi kerrallaan. Minä olen laskenut niitä '
+    + 'ikkunalaudalta enemmän kuin kehtaan sanoa. Kirjeitäkin kannoin. Siin '
     + 'järjestyksessä.',
 
   /* (a) herkku + (c) sukutarina. */
@@ -632,7 +635,7 @@ const LIVIAN_SAAPUMISET = {
   /* (a) herkku + (c) sukutarina. */
   marseille: 'Marseille. Navette: kapea, kova, appelsiininkukalta '
     + 'tuoksuva veneenmuotoinen leivos, jota paistetaan samassa uunissa '
-    + 'kun kakssataa vuotta sitten. Meikäläisten muistiinpanojen mukaan '
+    + 'kuin kaksisataa vuotta sitten. Meikäläisten muistiinpanojen mukaan '
     + 'tästä satamasta lähti moni kirje nopeemmin kun postivaunuista.',
 
   /* (c) sukutarina — isoäidin oma sota, kehotteen kaanonia. */
