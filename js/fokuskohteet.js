@@ -1281,21 +1281,65 @@ function paivitaRasteriporras(ui, skaala) {
   return nostosymAsetaPorras(KOHDE_SYMBOLI_SKAALA * skaala * perus * Math.min(tiheys, 3));
 }
 
+/**
+ * PORRAS VAIHTUU VASTA KUN NÄKYMÄ ON OIKEASTI JÄÄNYT RAUHAAN.
+ *
+ * Portaan vaihto purkaa koko merkkikerroksen ja rakentaa sen uusiksi
+ * (avain nollataan alempana). Se on oikea hinta kerran zoomausta
+ * kohti — mutta ei kerran ELETTÄ kohti: `paivitaFokuskohteet` ajetaan
+ * jokaisen eleen päätteeksi (js/ui.js paivitaMaastonimet), ja
+ * peräkkäiset nipistykset ovat toisilleen "lepoa".
+ *
+ * MITATTU (nipistys Kreikan fokusnäkymässä, iPhone 390×844 dpr3, 4×
+ * kuristus, 12 s): näkymä asettui 32 kertaa ja merkkikerros purettiin
+ * ja rakennettiin 16 kertaa — `paivitaFokuskohteet` 2655 ms
+ * pääsäiettä, siitä `piirraKohdemerkki` 1916 ms. Sormi oli koko sen
+ * ajan menossa takaisin toiseen suuntaan, eikä yksikään näistä
+ * portaista ehtinyt näkyä.
+ *
+ * VIIVE ON SAMA HENKI KUIN MERKKIEN PALUULLA (js/kartta.js
+ * MERKKIEN_PALUU_MS) ja asteikoilla (js/fokusmitat.js LEPO_MS): eleen
+ * loppuun kuuluu vielä liuku ja näkymän asettuminen, eikä kalleinta
+ * työtä kannata tehdä sen keskellä. Väliaikana merkit ovat edellisen
+ * portaan tarkkuudella — sama KOKO, vain karkeampi kuva (rasterin
+ * mitat lasketaan portaalla jaettuna, js/fokusnosto-symbolit.js
+ * nostosymRasteroi), joten mikään ei liiku eikä hyppää.
+ *
+ * SISÄLLÖN MUUTTUESSA PORRAS OTETAAN HETI (ks. kutsupaikka alempana):
+ * kun kerros joka tapauksessa rakennetaan uusiksi — maahan saavuttaessa
+ * tai kohdejoukon vaihtuessa — viivyttäminen tekisi vain sen, että
+ * ensiesitys olisi hetken karkea ja maksaisi toisen purkukierroksen.
+ */
+const PORTAAN_LEPO_MS = 350;
+
+function ajastaRasteriporras(ui) {
+  clearTimeout(ui.fokusPorrasAjastin);
+  ui.fokusPorrasAjastin = setTimeout(() => {
+    ui.fokusPorrasAjastin = 0;
+    if (ui.dead) return;
+    if (!paivitaRasteriporras(ui, ui.nakyvaAlue?.()?.skaala)) return;
+    ui.fokuskohdeAvain = null;
+    paivitaFokuskohteet(ui);
+  }, PORTAAN_LEPO_MS);
+}
+
 export function paivitaFokuskohteet(ui) {
   if (typeof document === 'undefined') return;
   const kerros = varmistaKohdekerros(ui);
   if (!kerros) return;
-  /*
-   * Porras ENNEN avaimen vertailua: portaan vaihtuessa merkit on
-   * piirrettävä uusiksi, ja se hoituu tyhjentämällä avain — sama
-   * mekanismi kuin sisällön muuttuessa, ei omaa purkupolkua.
-   */
-  if (paivitaRasteriporras(ui, ui.nakyvaAlue?.()?.skaala)) ui.fokuskohdeAvain = null;
   const kohteet = nykyisenMaanKohteet(ui);
   const avain = kohteet.length
     ? `${ui.game.pack.id}:${kohteet.map(({ kohde }) => kohde.id).join('|')}`
     : 'tyhja';
   if (ui.fokuskohdeAvain !== avain) {
+    /*
+     * Kerros rakennetaan joka tapauksessa: porras otetaan HETI, jottei
+     * ensiesitys jäisi karkeaksi ja vaatisi kohta toista purkua
+     * (ks. PORTAAN_LEPO_MS). Ajastin pois alta samasta syystä.
+     */
+    clearTimeout(ui.fokusPorrasAjastin);
+    ui.fokusPorrasAjastin = 0;
+    paivitaRasteriporras(ui, ui.nakyvaAlue?.()?.skaala);
     ui.fokuskohdeAvain = avain;
     kerros.textContent = '';
     ui.fokuskohdeRyhmat = [];
@@ -1330,6 +1374,10 @@ export function paivitaFokuskohteet(ui) {
         merkki.classList.add('auki');
       } else suljeFokuskohde(ui);
     }
+  } else {
+    // Sisältö ennallaan: pelkkä zoomin tuoma tarkkuusporras odottaa
+    // levon yli (ks. PORTAAN_LEPO_MS).
+    ajastaRasteriporras(ui);
   }
   const nakyva = ui.nakyvaAlue?.();
   const skaala = nakyva?.skaala;
