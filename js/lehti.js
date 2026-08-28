@@ -28,6 +28,10 @@ import {
   sivunOtsikko,
 } from './maalehti.js';
 import { asetaKuva, julisteUrl } from './media.js';
+// Reaktiolaskurit työhuoneen arviointinäkymään (js/reaktiot.js).
+import {
+  REAKTIO_SYMBOLIT, haeReaktiolista, merkitseVirheKorjatuksi,
+} from './reaktiot.js';
 import {
   nahtavyydenKaruselli, nahtavyydenKuva, piirraKaupunkiKartta,
   piirraMatkailijalle,
@@ -1256,6 +1260,120 @@ function proSivut(ui, tuottajat, avain) {
   return [yhteenveto, ...sivut];
 }
 
+/* ------------------------------------------------------------------ *
+ * REAKTIOT Lukijoilta-lehden perässä (js/reaktiot.js).
+ *
+ * Kaksi sivua, koska omistaja kysyy laskureilta kahta eri asiaa:
+ * "mistä pidetään" (Reaktiot) ja "mikä on rikki" (Virheilmoitukset).
+ * Jälkimmäisellä on nappi, jolla tahra nollataan korjatusta
+ * kohteesta — omistajan linjaus: korjattu virhe häviää, sitä ennen se
+ * on julkisesti näkyvissä.
+ *
+ * Vapaateksti EI ole näillä sivuilla: virheen selitys kulkee
+ * ehdotuskanavaa ja näkyy lehden alkupään ehdotussivuilla
+ * REAKTIO/VIRHE-etuliitteellä. Näin yksi ilmoitus on yhdessä paikassa
+ * eikä kahdessa hieman eri muodossa.
+ * ------------------------------------------------------------------ */
+
+/** Yhden kohteen äänet yhdelle riville: "Hieno 4 · Ihana 2". */
+function reaktioRivi(aanet) {
+  const osat = REAKTIO_SYMBOLIT
+    .filter((s) => (aanet?.[s.id] ?? 0) > 0)
+    .map((s) => `${s.nimi} ${aanet[s.id]}`);
+  return osat.length ? osat.join(' · ') : 'ei ääniä';
+}
+
+/** Yhden kohteen tiedot leipätekstiksi. */
+function reaktioTiedot(k) {
+  const rivit = [reaktioRivi(k.aanet)];
+  if (k.otsikko && k.otsikko !== k.kohde) rivit.push(`Otsikko: ${k.otsikko}`);
+  rivit.push(`Kohdeavain: ${k.kohde}`);
+  if (k.paivitetty) rivit.push(`Viimeisin ääni: ${ehdotusAika(k.paivitetty)}`);
+  if (k.korjattu) rivit.push(`Merkitty korjatuksi: ${ehdotusAika(k.korjattu)}`);
+  return rivit.join('\n\n');
+}
+
+/**
+ * Reaktiosivut: yhteenveto ja virheilmoitusten arviointinäkymä.
+ *
+ * @param {object} ui pelin käyttöliittymä (lehden uudelleenavaus)
+ * @param {Array<object>} kohteet workerin listaus
+ * @param {string} avain kuratointiavain
+ * @returns {Array<object>} lehden sivut
+ */
+function reaktioSivut(ui, kohteet, avain) {
+  const tahralliset = kohteet.filter((k) => (k.aanet?.virhe ?? 0) > 0);
+  const summa = Object.fromEntries(REAKTIO_SYMBOLIT.map((s) => [
+    s.id, kohteet.reduce((n, k) => n + (k.aanet?.[s.id] ?? 0), 0),
+  ]));
+
+  const yhteenveto = {
+    id: 'lukijoilta-reaktiot',
+    nimi: 'Reaktiot',
+    yksipalsta: true,
+    nostot: [
+      {
+        otsikko: `${kohteet.length} kohdetta on saanut ääniä`,
+        teksti: `${reaktioRivi(summa)}\n\n`
+          + 'Pelaajat äänestävät jokaista popupia ja lehden väliotsikkoa '
+          + 'viidellä symbolilla: laakeriseppele (Hieno), sydän (Ihana), '
+          + 'suurennuslasi (Mielenkiintoinen), tiimalasi (Tylsä) ja '
+          + 'mustetahra (Virhe). Yksi ääni laitetta ja kohdetta kohti, '
+          + 'vaihdettavissa. Laskurit ovat yhteisiä; laitteista ei '
+          + 'tallenneta mitään.\n\n'
+          + (tahralliset.length
+            ? `${tahralliset.length} kohteessa on mustetahra — ne ovat `
+              + 'seuraavalla sivulla omine korjausnappeineen.'
+            : 'Yhdessäkään kohteessa ei ole mustetahraa.'),
+      },
+      ...kohteet.slice(0, 60).map((k) => ({
+        otsikko: k.otsikko || k.kohde,
+        teksti: reaktioTiedot(k),
+      })),
+    ],
+  };
+
+  const virheet = {
+    id: 'lukijoilta-reaktiovirheet',
+    nimi: `Virheilmoitukset (${tahralliset.length})`,
+    yksipalsta: true,
+    nostot: [
+      {
+        otsikko: tahralliset.length
+          ? `${tahralliset.length} kohdetta odottaa korjausta`
+          : 'Ei avoimia mustetahroja',
+        teksti: 'Virheen SELITYS on lehden alkupään ehdotussivuilla '
+          + 'etuliitteellä REAKTIO/VIRHE — sama kohdeavain löytyy '
+          + 'ehdotuksen Sisältö-riviltä. Kun virhe on korjattu peliin, '
+          + 'paina alta "Merkitse korjatuksi": tahralaskuri nollautuu ja '
+          + 'tahra häviää pelaajien näkymästä. Muut äänet jäävät '
+          + 'koskematta.',
+      },
+      ...tahralliset.map((k) => ({
+        otsikko: `${k.otsikko || k.kohde} — ${k.aanet.virhe} tahraa`,
+        teksti: reaktioTiedot(k),
+        toiminnot: [{
+          nimi: 'Merkitse korjatuksi',
+          tehtava: async (nappi) => {
+            nappi.disabled = true;
+            try {
+              await merkitseVirheKorjatuksi(avain, k.kohde);
+              // Lehti haetaan uudestaan, jotta luvut ovat varmasti ne,
+              // mitä workerissa on — ei arvausta paikallisesta tilasta.
+              avaaLukijoiltaLehti(ui);
+            } catch (virhe) {
+              nappi.disabled = false;
+              nappi.textContent = `Ei onnistunut: ${virhe.message}`;
+            }
+          },
+        }],
+      })),
+    ],
+  };
+
+  return [yhteenveto, virheet];
+}
+
 /** Ehdotuslistasta lehden sivut: etusivu + yksi sivu per ehdotus. */
 function lukijoiltaSivut(ehdotukset, avain) {
   const etusivu = {
@@ -1329,10 +1447,17 @@ export async function avaaLukijoiltaLehti(ui) {
      * tunne pro-reittejä vielä), joten sen virhe niellään tyhjäksi
      * listaksi.
      */
-    const [ehdotukset, tuottajat] = await Promise.all([
+    const [ehdotukset, tuottajat, reaktiot] = await Promise.all([
       haeEhdotukset(avain),
       haeProTuottajat(avain).catch((virhe) => {
         console.warn('Pro-tuottajien haku ei onnistunut:', virhe);
+        return [];
+      }),
+      // Sama syy kuin pro-listalla: vanha worker ei tunne
+      // reaktioreittejä vielä, eikä sen 404 saa viedä ehdotuksia
+      // mukanaan.
+      haeReaktiolista(avain).catch((virhe) => {
+        console.warn('Reaktiolaskurien haku ei onnistunut:', virhe);
         return [];
       }),
     ]);
@@ -1340,6 +1465,7 @@ export async function avaaLukijoiltaLehti(ui) {
     if (!ui.arrivalDialog?.open || ui.lehtitila.tutkiTila !== 'kehittaja') return;
     avaaKehittajaLehti(ui, 'Lukijoilta', [
       ...lukijoiltaSivut(ehdotukset, avain),
+      ...reaktioSivut(ui, reaktiot, avain),
       ...proSivut(ui, tuottajat, avain),
     ]);
   } catch (virhe) {

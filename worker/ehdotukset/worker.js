@@ -16,7 +16,11 @@
  *   EHDOTUS_ORIGINIT  muuttuja: sallitut originit pilkulla erotettuna
  *
  * Sama worker palvelee myös pro-sisällöntuottajia (worker/ehdotukset/
- * pro.js): tuottajien koodit, profiilit ja julkiset tekijäsivut.
+ * pro.js): tuottajien koodit, profiilit ja julkiset tekijäsivut — ja
+ * REAKTIOLASKUREITA (worker/ehdotukset/reaktiot.js): viisi symbolia
+ * kohdetta kohti samassa ämpärissä etuliitteen reaktiot/ alla. Kumpikin
+ * jatke käyttää samaa sidosta ja samaa salaisuutta; uutta käyttöönottoa
+ * ei tarvita, pelkkä uudelleenjulkaisu riittää.
  */
 
 import { kasittele } from './kasittelija.js';

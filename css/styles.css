@@ -8722,6 +8722,12 @@ body.katselu #newgame-btn { display: none; }
  * erottaa toisistaan ohut viiva eikä väli.
  */
 .vinkki-ryhma {
+  /* Otsikkoteksti vasemmalle, reaktionappi (js/reaktiot.js) rivin
+     päähän: baseline pitää tekstin viivan paikallaan, vaikka nappi on
+     korkeampi kuin versaalirivi. */
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
   margin: 1.5rem 0 0.5rem;
   font-family: var(--font-type);
   font-size: 0.78rem;
@@ -19401,13 +19407,14 @@ dialog.minipopup:focus-visible { outline: none; }
 }
 
 /* ------------------------------------------------------------------ *
- * REAKTIOT — peukku ja virheilmoitus sisällön alalaidassa
- * (js/reaktiot.js).
+ * REAKTIOT — viisi kaiverrettua symbolia sisällön alalaidassa ja
+ * lehden väliotsikoiden päässä (js/reaktiot.js).
  *
- * Rivi on lehden reunamerkintä eikä somen nappirivi: kaksi kuvaketta
- * lähderivin kokoisina, samaa mustetta kuin krediitti, ilman taustaa
- * ja ilman kehystä ennen kuin niihin koskee. Väri kirkastuu vasta
- * osoitettaessa — silloin nappi kertoo olevansa nappi.
+ * LEPOTILASSA YKSI NAPPI: voittajasymboli ja äänimäärä lähderivin
+ * kokoisena, samaa mustetta kuin krediitti, ilman taustaa ja ilman
+ * kehystä ennen kuin siihen koskee. Napautus levittää viisi symbolia
+ * äänimäärineen samalle riville. Väri kirkastuu vasta osoitettaessa —
+ * silloin nappi kertoo olevansa nappi.
  *
  * Rivi kelluu kuvien alapuolelle (clear) kuten lähderivi ja
  * pöllöpoiminnat, jottei se päädy kainalokuvan viereen.
@@ -19461,10 +19468,104 @@ button.reaktionappi:disabled {
   cursor: default;
 }
 
-.reaktio-ikoni {
+.reaktio-ikoni,
+.reaktio-lepoikoni {
   display: inline-flex;
   pointer-events: none;
 }
+
+/* Äänimäärä kuvakkeen perässä: tabulaarinen, jottei luku hyppää
+   napissa, kun 9:stä tulee 10. */
+.reaktio-luku {
+  margin-left: 0.18rem;
+  font-family: var(--font-type);
+  font-size: 0.66rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.reaktio-luku:empty { display: none; }
+
+/*
+ * LEPOTILAN NAPPI. Ilman ääniä se on haalea seppele ilman lukua —
+ * kutsu eikä ilmoitus. Oma ääni tummentaa sen, jotta pelaaja näkee
+ * yhdellä silmäyksellä äänestäneensä jo.
+ */
+button.reaktio-lepo.tyhja { opacity: 0.42; }
+
+button.reaktio-lepo.oma {
+  color: rgba(70, 51, 31, 0.92);
+  border-color: rgba(70, 51, 31, 0.3);
+}
+
+/*
+ * AVATTU RIVI: viisi symbolia lukuineen. Kevyt pergamenttikapseli
+ * erottaa valikon leipätekstistä ilman että se muuttuu valikkolaatikoksi.
+ */
+.reaktio-valikko {
+  display: flex;
+  align-items: center;
+  gap: 0.05rem;
+  padding: 0.1rem 0.25rem;
+  border: 1px solid rgba(70, 51, 31, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 252, 244, 0.6);
+}
+
+.reaktio-valikko[hidden] { display: none; }
+
+button.reaktio-symboli {
+  min-width: 28px;
+  padding: 0.18rem 0.2rem;
+}
+
+/* Oma ääni: tummempi muste ja kevyt kehä — ei täytettyä nappia. */
+button.reaktio-symboli.oma {
+  color: #7a5514;
+  border-color: rgba(122, 85, 20, 0.45);
+  background: rgba(156, 107, 23, 0.1);
+}
+
+/* Jo ilmoitettu virhe: tahran saa yhä äänestää, mutta kenttä ei aukea
+   uudestaan — himmennys kertoo sen ilman erillistä tekstiä. */
+button.reaktio-symboli.ilmoitettu:not(.oma) { opacity: 0.55; }
+
+/*
+ * VÄLIOTSIKON NAPPI (js/reaktiot.js piirraOtsikonReaktio). Rivin
+ * PÄÄSSÄ eikä leipätekstin päällä: margin-left: auto työntää sen
+ * otsikkorivin oikeaan reunaan, ja pienempi kuvake pitää sen otsikon
+ * mittasuhteissa. Ei clearia — otsikkorivi ei kellu.
+ */
+.reaktiorivi.reaktiot-otsikko {
+  clear: none;
+  flex: 0 0 auto;
+  margin: 0 0 0 auto;
+  gap: 0.2rem;
+}
+
+.reaktiot-otsikko button.reaktionappi {
+  min-width: 26px;
+  min-height: 26px;
+  padding: 0.1rem 0.2rem;
+}
+
+/* Pienemmässä koossa hiusviiva katoaa pergamenttiin: kuvake kutistuu
+   mutta muste vahvistuu, jotta seppeleen lehdet erottuvat vielä
+   16 pikselissä. CSS voittaa SVG:n oman stroke-width-attribuutin. */
+.reaktiot-otsikko .reaktio-ikoni svg,
+.reaktiot-otsikko .reaktio-lepoikoni svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 1.75;
+}
+
+/* Väliotsikon lepotila saa hiukan enemmän mustetta kuin leipätekstin:
+   otsikkorivi on tiheämpi, ja 0.42 hukkui siihen kokonaan. */
+.reaktiot-otsikko button.reaktio-lepo.tyhja { opacity: 0.5; }
+
+/* Otsikkorivin kuittaus veisi tilaa otsikolta: ääni riittää kuvitukseksi. */
+.reaktiot-otsikko .reaktio-kuittaus { display: none; }
 
 /* Napautuksen kuittaus: kuvake nytkähtää kerran, ei enempää. */
 @keyframes reaktio-poks {
@@ -19491,14 +19592,37 @@ button.reaktio-poks .reaktio-ikoni {
 
 .reaktio-kuittaus:empty { display: none; }
 
-/* Virhelomake: kenttä on vapaaehtoinen, joten se on pieni ja hiljainen. */
-.reaktio-lomake {
-  flex: 1 0 100%;
+/*
+ * VIRHEIKKUNA. Mustetahra avaa minipopupin (js/minipopup.js — sama
+ * komponentti kuin pöllörivin i-nappi), koska virheilmoitus tarvitsee
+ * tilaa ja kohdistuksen: lehden marginaaliin avautuva textarea jäi
+ * puhelimella näppäimistön alle.
+ */
+.reaktio-virheikkuna {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
-  margin-top: 0.15rem;
+  gap: 0.5rem;
 }
+
+.reaktio-virheohje {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.4;
+  color: rgba(50, 36, 22, 0.9);
+}
+
+/* Livian ääni: kursiivi erottaa sen ohjeesta — tämä on hahmo, ei
+   käyttöliittymän teksti. */
+.reaktio-livia {
+  margin: 0;
+  font-family: var(--font-type);
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.4;
+  color: rgba(70, 51, 31, 0.85);
+}
+
+.reaktio-livia[hidden] { display: none; }
 
 textarea.reaktio-teksti {
   width: 100%;
@@ -19531,7 +19655,12 @@ textarea.reaktio-teksti {
   cursor: pointer;
 }
 
-.reaktio-lomakenapit button:hover { border-color: rgba(70, 51, 31, 0.7); }
+.reaktio-lomakenapit button:hover:not(:disabled) { border-color: rgba(70, 51, 31, 0.7); }
+
+.reaktio-lomakenapit button:disabled { opacity: 0.45; cursor: default; }
+
+/* Virheikkuna on kapea: se on yksi kenttä ja kaksi nappia, ei näkymä. */
+.minipopup-kortti.minipopup-reaktio { max-width: 30rem; }
 
 /*
  * KUVASUURENNOS. Postikortin ja kartan suurennoksen paperi on tummempi

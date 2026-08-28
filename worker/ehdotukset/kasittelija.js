@@ -25,6 +25,12 @@
  * jatke omassa moduulissaan: worker/ehdotukset/pro.js. Reititys on
  * täällä, jotta CORS-, avain- ja origin-portit ovat yhdessä paikassa.
  *
+ * REAKTIOLASKURIT (/reaktiot, /reaktio, /reaktio-lista,
+ * /reaktio-korjattu) ovat toinen jatke samalla periaatteella:
+ * worker/ehdotukset/reaktiot.js. Ne käyttävät samaa ämpäriä omalla
+ * etuliitteellään (reaktiot/) eivätkä tallenna mitään henkilötietoa —
+ * vain "montako ääntä tällä symbolilla on tässä kohteessa".
+ *
  * SÄHKÖPOSTI ei vuoda mihinkään muualle kuin meta.jsoniin yksityisessä
  * ämpärissä: sitä ei kirjoiteta lokiin eikä palauteta kenellekään
  * ilman avainta.
@@ -34,6 +40,10 @@ import {
   MATERIAALIN_LISENSSIT, normalisoiSahkoposti, proOmistajanPolku, proPolku, proReitti,
   proSelaimenPolku, siivoaLinkki, tunnista as tunnistaPro,
 } from './pro.js';
+import {
+  haeReaktiot, kirjaaReaktio, listaaReaktiot, merkitseKorjatuksi,
+  reaktioOmistajanPolku, reaktioPolku,
+} from './reaktiot.js';
 
 /** Sallitut kuvatyypit ja niiden tiedostopäätteet. */
 export const KUVA_TYYPIT = {
@@ -529,6 +539,40 @@ export async function kasittele(pyynto, env, apurit = {}) {
       kors,
       apu: { vastaa, otsakkeet: korsOtsakkeet, vertaa: vertaaSalaisuus },
     });
+  }
+
+  /*
+   * REAKTIOLASKURIT. Portit ovat samat kuin muualla: omistajan
+   * listaus ja korjausmerkintä avaimella, pelaajan haku ja äänestys
+   * origin-tarkistuksella. Ääni on selaimesta tuleva kirjoitus, joten
+   * ilman origin-porttia laskurit olisivat kenen tahansa täytettävissä.
+   */
+  if (reaktioPolku(url.pathname)) {
+    const omistajan = reaktioOmistajanPolku(url.pathname);
+    if (omistajan && !avainKelpaa(url, env)) {
+      return vastaa({ virhe: 'Avain puuttuu tai ei kelpaa' }, { status: 401, ...kors });
+    }
+    if (!omistajan && !sallittuOrigin(origin, sallitut)) {
+      return vastaa({ virhe: 'Origin ei ole sallittu' }, { status: 403, ...kors });
+    }
+    if (!env.EHDOTUKSET) {
+      return vastaa({ virhe: 'Ämpäri ei ole kytketty' }, { status: 503, ...kors });
+    }
+    const apu = { vastaa, kors };
+    if (url.pathname === '/reaktiot') {
+      if (pyynto.method !== 'GET') return vastaa({ virhe: 'Vain GET' }, { status: 405, ...kors });
+      return haeReaktiot(url, env, apu);
+    }
+    if (url.pathname === '/reaktio') {
+      if (pyynto.method !== 'POST') return vastaa({ virhe: 'Vain POST' }, { status: 405, ...kors });
+      return kirjaaReaktio(pyynto, env, apu);
+    }
+    if (url.pathname === '/reaktio-lista') {
+      if (pyynto.method !== 'GET') return vastaa({ virhe: 'Vain GET' }, { status: 405, ...kors });
+      return listaaReaktiot(env, apu);
+    }
+    if (pyynto.method !== 'PUT') return vastaa({ virhe: 'Vain PUT' }, { status: 405, ...kors });
+    return merkitseKorjatuksi(pyynto, env, apu);
   }
 
   const avaimellinen = url.pathname === '/lista' || url.pathname === '/kommentti'
