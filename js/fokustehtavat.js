@@ -624,9 +624,14 @@ const AARRE_SYTTYI = 'Aarteen jälki syttyi: vihreä piste kartalla näyttää p
 const AARRE_RAHAA = 'Oikein. Puntia matkakassaan — niitä ei laske kukaan muu kuin minä.';
 /** Sama asia yhdellä virkkeellä, kun perään tulee vielä julistevinkki. */
 const AARRE_RAHAA_LYHYT = 'Oikein, puntia matkakassaan.';
-/** Juliste irtosi. Kehu jää pois, jos tilalle tulee vinkki. */
-const JULISTE_TALTEEN = 'Juliste talteen.';
-const JULISTE_KEHU = 'Juliste talteen. Hyvä silmä.';
+/*
+ * Juliste irtosi. Matkalaukku mainitaan aina (omistaja 28.8.2026:
+ * pelaajalle kerrotaan minne juliste menee ja mistä sen löytää);
+ * kehu jää pois, jos tilalle tulee vinkki.
+ */
+const JULISTE_TALTEEN = 'Juliste talteen matkalaukkuun.';
+const JULISTE_KEHU =
+  'Laitetaanpa tää matkalaukkuun talteen, kun on noin hieno. Hyvä silmä.';
 
 function kuittausTeksti(ui, city, tehtava, auki) {
   const vastattu = (t) => Boolean(ui.game.minitehtavatVastatut?.has(tehtavanAvain(ui, city, t)));
