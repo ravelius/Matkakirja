@@ -678,9 +678,9 @@ function avaaNosto(ui, nosto) {
  * kuluu umpeen, lippu palautuu ja seuraava piirto yrittää uudelleen —
  * kupla ei siis huku pöllön kuittauksen tai lehden alle.
  */
-const NOSTO_LIVIAN_VIHJE = 'Kartalla tuikkii keltainen piste. Se on '
-  + 'minun leikekirjastani, ja tarkistin sen kahdesti — kannattaa käydä '
-  + 'katsomassa ennen kuin matkustat eteenpäin.';
+const NOSTO_LIVIAN_VIHJE = 'Kartalla tuikkii keltanen piste. Se on '
+  + 'minun leikekirjastani, ja minä tarkistin sen kahdesti — kannattaa '
+  + 'käydä kattomassa ennen kun matkustat eteenpäin.';
 
 function nostoLivianVihje(ui) {
   if (!ui || ui.fokusnostoVihjeNahty) return;

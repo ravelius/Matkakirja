@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1266, teksti: 'Livian tekstit vahvaan puhekieleen' },
   { v: 1265, teksti: 'Raamattu: Livian puhekieli ja kehysmalli' },
   { v: 1264, teksti: 'Sofian valittajaote ja synkan aiheen saanto' },
   { v: 1263, teksti: 'Lehtisauma pois ja merkit vasta saapumisen jalkeen' },

@@ -252,15 +252,15 @@ export const FOKUSVIRTA_SARAJEVO = {
      * Loppu myöntää isoisälle sen osan, joka piti paikkansa — kaanonin
      * sääntö 3 kevyempänä muotona (varsinainen myönnytys on Ateenassa).
      */
-    maadoitus: 'Kaunis lause. Postinkantajan kannalta asia näytti '
-      + 'toiselta: monta uskoa tarkoitti monta kalenteria, monta pyhien '
-      + 'sarjaa ja jatkuvaa laskutoimitusta siitä, minä päivänä mikäkin '
-      + 'luukku on auki. Meikäläiset valittivat siitä ääneen. Herätä sai '
-      + 'silti minkä kellon mukaan halusi — se osa piti paikkansa.',
-    teksti: 'Joen varrella seisoo nykyään talo nimeltä Inat kuća — Uhman '
-      + 'talo. Kun keisarin virkamiehet halusivat tontin, omistaja purki '
-      + 'talonsa ja kokosi sen uudelleen joen toiselle puolelle, lauta '
-      + 'laudalta. Ihailen sitä miestä ammatikseni.',
+    maadoitus: 'Kaunis lause. Mut postinkantajan kannalta se näytti vähän '
+      + 'toiselta: monta uskoa tarkoitti montaa kalenteria, montaa pyhien '
+      + 'sarjaa ja ikuista laskemista siit, minä päivänä mikäkin luukku on '
+      + 'auki. Meikäläiset valitti siit ääneen. Herätä sai silti minkä '
+      + 'kellon mukaan halus — se osa piti kyl paikkansa.',
+    teksti: 'Joen varrella on nykyään talo nimeltä Inat kuća — Uhman '
+      + 'talo. Kun keisarin virkamiehet halusivat sen tontin, omistaja '
+      + 'purki talonsa ja kokos sen uudestaan joen toiselle puolelle, lauta '
+      + 'laudalta. Minä ihailen sitä miestä ammatikseni.',
     /*
      * Commons 25.8.2026: 5184×3456, CC BY 2.0, Fred Romero, kuvattu
      * 20.8.2019, kategoria Inat kuća; tiedoston oma kuvaus kertoo saman

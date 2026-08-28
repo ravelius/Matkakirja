@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1266: Kaikki Livian pelitekstit vahvaan puhekieleen (Raamattu v1265): 6 maadoituskuplaa, 10 saapumisrepliikkia, takyvihje, reaktiokiitokset, pullavinkki. Sofian moitittu kirjakielilause korvattu (Ei se siita yhtaan pienempaa juttua tee...). Isoisan kirjakieli ennallaan. Kuuntele/lue Sofian ja Venetsian kuplat.',
   'v1265: Raamattuun Livian tyylimaarittely (vahva puhekieli, mina/sina, kevyet taytesanat, harva kaak) ja chatin kehysmalli (oma aani alkuun ja loppuun, ydinvastaus kirjakielella kuin pollo, jatkokysymykset kokonaan pollon aanella). Tekstien tyylipassi ja workerin kehys tulevat erikseen.',
   'v1264: Sofian maadoituskupla sai valittajaotteen (Kaak-avaus + helmikuu 1873, yli 150 vuotta, oikeudenkaytto oli toisenlainen - ei enaa piikkia isoisalle) ja chat-Livialle uusi SYNKKA AIHE JA PARIPERIAATE -saanto. Muut viisi maadoitusta ja 10 saapumisrepliikkia auditoitu - ennallaan.',
   'v1263: BGR-lehden terava alareuna (iPhone) sulaa nyt hivytysmaskilla myos perilla; fokusmerkit, nimiot ja katkoviivat tulevat nakyviin vasta kun kamera-ajo on ohi ja nappula perilla (1,4 s maanvaihdosta), 620 ms feidauksella. Testaa siirtyma Ateenasta Sofiaan puhelimella.',

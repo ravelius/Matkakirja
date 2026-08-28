@@ -576,64 +576,70 @@ const SAAPUMISKUPLA_VAITI = new Set(['ateena']);
  *     kehotteen ISOISÄN MAADOITUS -osiossa.
  *  3. EI HUUTOMERKKEJÄ eikä juonipaljastuksia. Livia ei tiedä
  *     aarteista mitään eikä vihjaa niihin.
+ *  4. PUHEKIELI KIRJOITUSASUSSA (Raamattu v1265 "LIVIAN PUHEKIELI"):
+ *     loppuheitot ja lyhentymät (mut, siit, sillon, yks, ekana), mutta
+ *     PRONOMINIT KOKONAISINA — minä ja sinä, ei mä eikä sä. Kevyet
+ *     täytesanat (no, niin, kato) säästellen, ja Kääk vain aidossa
+ *     säikähdyksessä. Kirjakielinen abstraktio on tässä virhe.
  */
 const LIVIAN_SAAPUMISET = {
   /* (b) pröystäily — Venetsian torilla suku on kotonaan. */
-  venetsia: 'Venetsia. Tässä kaupungissa minun sukuni istuu torilla '
-    + 'kuin virkamiehet: Columba Livia, jos joku kysyy, ja täällä kysytään. '
-    + 'Karnevaaliin leivotaan fritolea, pientä ja pyöreää — ja mennyttä '
-    + 'ennen kuin ehdin laskeutua.',
+  venetsia: 'Venetsia. Täs kaupungissa minun sukuni istuu torilla '
+    + 'kuin virkamiehet: Columba Livia, jos joku kysyy — ja täällä '
+    + 'kysytään. Karnevaaliin leivotaan fritolea, pientä ja pyöreää. Ne on '
+    + 'menneet ennen kun minä ehdin edes laskeutua.',
 
   /* (c) sukutarina — Verona ei ole laudalla, mutta se on tuolla. */
-  firenze: 'Firenze. Täältä pohjoiseen on Verona, ja sukuni kertoo '
-    + 'kantaneensa siellä kahden nuoren kirjeitä puutarhan yli. Se on '
-    + 'tarina eikä arkisto, mutta hyvä tarina. Toscanassa palkka '
-    + 'maksettiin bomboloneina. Se taas on totta.',
+  firenze: 'Firenze. Täältä pohjoiseen on Verona, ja sukuni mukaan siellä '
+    + 'kannettiin kahden nuoren kirjeitä puutarhan yli. Se on tarina eikä '
+    + 'arkisto, mut hyvä tarina. Toscanassa palkka maksettiin bomboloneina. '
+    + 'Se taas on ihan totta.',
 
   /* (d) pukeutuminen + (a) herkku. */
-  dubrovnik: 'Dubrovnik. Muurilta näkee heti, kuka on pukeutunut juhlaan: '
-    + 'valkoinen liina, punainen liivi, hopeanapit. Ja fritulet — pieniä '
+  dubrovnik: 'Dubrovnik. Muurilta näkee heti, kuka on pukenut juhlavaatteet: '
+    + 'valkonen liina, punanen liivi, hopeanapit. Ja sit fritulet — pieniä '
     + 'paistettuja palleroita, joita kukaan ei laske. Minä lasken.',
 
   /* (e) 1873 on Budapestin oma vuosi. */
-  budapest: 'Budapest. Juuri tänä vuonna kolmesta tuli yksi: Buda, Pest '
+  budapest: 'Budapest. Just tänä vuonna kolmesta tuli yks: Buda, Pest '
     + 'ja Óbuda samaan nimeen. Sitä ennen kirjeeseen piti valita niistä '
-    + 'yksi. Kürtőskalács kiertää yhä vartaan ympäri, kuin sekin olisi '
+    + 'yks. Kürtőskalács kiertää yhä vartaan ympäri, niinku sekin ois '
     + 'suostunut yhdistymiseen.',
 
   /* (a) herkku — Buchteln on kehotteen pullalistalla. */
   wien: 'Wien. Täällä leivotaan Buchtelnia: pehmeitä hiivapullia, jotka '
-    + 'nostetaan vuoasta yksi kerrallaan. Olen laskenut niitä ikkunalaudalta '
-    + 'enemmän kuin kehtaan sanoa. Kirjeitäkin kannoin. Siinä järjestyksessä.',
+    + 'nostetaan vuoasta yks kerrallaan. Minä olen laskenut niitä '
+    + 'ikkunalaudalta enemmän kun kehtaan sanoa. Kirjeitäkin kannoin. Siin '
+    + 'järjestyksessä.',
 
   /* (a) herkku + (c) sukutarina. */
   kreeta: 'Kreeta. Kalitsounia: ohut taikina, tuoretta juustoa, hunajaa '
-    + 'päälle. Sukuni mukaan saarelle vietiin ennen tieto satamasta '
-    + 'siivin, koska vuoret eivät päästä ratsua läpi yhtä nopeasti.',
+    + 'päälle. Sukuni mukaan tieto vietiin täällä satamasta sisämaahan '
+    + 'siivin, koska vuoret ei päästä ratsua läpi yhtä nopeesti.',
 
   /* (a) herkku + (d) pukeutuminen. */
-  sisilia: 'Sisilia. Aamiaiseksi brioche col tuppo — pulla, jolla on oma '
-    + 'nuttura — ja sen sisään lusikoidaan jäätelöä. Kuulostaa väärältä ja '
-    + 'on oikein. Vanhemmat herrat istuvat baarissa paita napitettuna '
-    + 'kaulaan asti, vaikka on kolmekymmentä astetta.',
+  sisilia: 'Sisilia. Aamiaiseks brioche col tuppo — pulla, jolla on oma '
+    + 'nuttura — ja sen sisään lusikoidaan jäätelöä. Kuulostaa ihan '
+    + 'väärältä ja on silti oikein. Vanhemmat herrat istuu baarissa paita '
+    + 'napitettuna kaulaan asti, vaikka on kolkyt astetta.',
 
   /* (e) satamakaupunki ennen ja nyt + (a) herkku. */
   odessa: 'Odessa. Isoisäsi aikaan täältä lähti vilja puolelle Eurooppaa '
     + 'ja laiturilla puhuttiin kuutta kieltä yhtä aikaa. Pampuški — pehmeä '
     + 'sämpylä, valkosipulia päälle — on yhä se, mitä minulle heitetään '
-    + 'ensimmäisenä. Ei jälkiruoka. Silti pulla.',
+    + 'ekana. Ei jälkiruoka. Mut pulla silti.',
 
   /* (a) herkku + (c) sukutarina. */
   marseille: 'Marseille. Navette: kapea, kova, appelsiininkukalta '
     + 'tuoksuva veneenmuotoinen leivos, jota paistetaan samassa uunissa '
-    + 'kuin kaksisataa vuotta sitten. Meikäläisten muistiinpanojen mukaan '
-    + 'tästä satamasta lähti moni kirje nopeammin kuin postivaunuista.',
+    + 'kun kakssataa vuotta sitten. Meikäläisten muistiinpanojen mukaan '
+    + 'tästä satamasta lähti moni kirje nopeemmin kun postivaunuista.',
 
   /* (c) sukutarina — isoäidin oma sota, kehotteen kaanonia. */
   pariisi: 'Pariisi. Täällä isoäitini teki työnsä. Talvella 1870 '
-    + 'saarrettuun kaupunkiin ei päässyt kukaan, ja kirjeet menivät sisään '
-    + 'kyyhkyn mukana mikrofilmille kutistettuina. Palkinnoksi hän sai '
-    + 'briossia. Sen hän kertoi joka kerta.',
+    + 'saarrettuun kaupunkiin ei päässyt kukaan, ja kirjeet meni sisään '
+    + 'kyyhkyn mukana mikrofilmille kutistettuina. Palkinnoks hän sai '
+    + 'briossia. Sen hän kertoi joka ikinen kerta.',
 };
 
 /**

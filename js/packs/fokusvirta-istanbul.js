@@ -282,22 +282,27 @@ export const FOKUSVIRTA_ISTANBUL = {
      * Brysselin väliä ennen lennätintä. Mitään uutta historiallista
      * väitettä ei esitetä, ja vartijan hinnankorotus on Livian oma
      * kuiva heitto, ei tieto.
+     *
+     * PUHEKIELIPASSI (Raamattu v1265 "LIVIAN PUHEKIELI"): kupla oli
+     * laudan pisin (76 sanaa muiden 45–62 rinnalla), ja puhuttuun muotoon
+     * kirjoitettaessa se lyhennettiin samaan kokoluokkaan. Sivupolun
+     * kaava säilyy: maadoitus, suvun puolustus, yksi lause takaisin
+     * asiaan. Pois jäi isoäidin kolme ohilaukausta — sivupolku kestää
+     * kaksi esimerkkiä yhtä hyvin kuin kolme.
      */
-    maadoitus: 'Vartija sanoo tuon jokaiselle, joka pysähtyy pylvään '
-      + 'kohdalla ennen puoltapäivää; iltapäivällä hinta nousee. Ja mitä '
-      + 'ottamiseen tulee — meidän sukuamme on otettu ja pidetty '
-      + 'kaksituhatta vuotta, eikä siitä ole sepitetty yhtään aforismia. '
-      + 'Isoäitini kantoi mikrofilmiä saarretun Pariisin yli, ja häntä '
-      + 'ammuttiin ohi kolmesti samana aamuna. Setäni vei pörssikursseja '
-      + 'Aachenista Brysseliin, ja hänet korvattiin kuparilangalla. Kukaan '
-      + 'ei kohauttanut olkiaan meidän puolestamme kauniisti. Pylväs. Se '
-      + 'seisoo yhä siinä, mihin se aikoinaan siirrettiin. Se oli pointti, '
-      + 'ja hyvä pointti olikin.',
-    teksti: 'Pylväästä puuttuu kolme päätä, ja yksi niistä makaa '
+    maadoitus: 'Vartija sanoo ton jokaiselle, joka pysähtyy pylvään '
+      + 'kohdalle ennen puoltapäivää. Ja mitä ottamiseen tulee — meidän '
+      + 'sukua on otettu ja pidetty kaksituhatta vuotta, eikä siit ole '
+      + 'sepitetty yhtään aforismia. Isoäitini kantoi mikrofilmiä saarretun '
+      + 'Pariisin yli. Setäni vei pörssikursseja Aachenista Brysseliin, ja '
+      + 'hänet korvattiin kuparilangalla. Meidän puolesta ei kukaan '
+      + 'kohautellut olkiaan kauniisti. — Niin. Se pylväs. Se seisoo yhä '
+      + 'siin, mihin se aikanaan siirrettiin. Se oli tän pointti.',
+    teksti: 'Pylväästä puuttuu kolme päätä, ja yks niistä makaa '
       + 'parinsadan metrin päässä museossa. Pylvään jalusta kaivettiin '
-      + 'esiin 1855. Paikalla en ollut, mutta sukuni kantoi noihin '
-      + 'aikoihin uutisia Aachenista Brysseliin — uutisen kulusta tiedän '
-      + 'siis jotakin.',
+      + 'esiin 1855. Paikalla minä en ollut, mut sukuni kanto siihen '
+      + 'aikaan uutisia Aachenista Brysseliin — uutisen kulusta minä siis '
+      + 'tiedän jotain.',
     /*
      * Commons (takyt-istanbul.md, täky 1, varmennettu 25.8.2026):
      * 640×480, CC BY-SA 4.0, Gryffindor. Juuri se säilynyt käärmeenpää,

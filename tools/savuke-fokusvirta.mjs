@@ -245,14 +245,20 @@ const sofianKupla = await sivu.evaluate(async () => {
  * laudan synkin, joten kuplassa pitää näkyä KAKSI asiaa peräkkäin —
  * säikähdysavaus ja sen jälkeen aikasiirtymän välitys eli konkreettinen
  * historiakonteksti. Toinen ehto tarkistaa siksi, että kuplassa on
- * vuosiluku 1873 ja etäisyys nykyhetkeen ("sataviisikymmentä vuotta").
+ * vuosiluku 1873 ja etäisyys nykyhetkeen ("sataviiskyt vuotta").
  * Jos joku kirjoittaa kontekstin pois ja jättää pelkän säikähdyksen,
  * savuke kaatuu tähän.
+ *
+ * MUOTO ON PUHEKIELINEN (Raamattu v1265 "LIVIAN PUHEKIELI"): väite
+ * kysyy Kääk-säikähdystä ja puhuttua 150 vuoden muotoa, ei enää vanhaa
+ * kirjakielistä "sataviisikymmentä". Jos joku kirjoittaa kuplan
+ * takaisin kirjakielelle, savuke kaatuu tähän.
  */
 vaadi('Sofiassa isoisän maadoitus tulee Livian saapumiskuplaan',
-  /^Kääk\. Olipas hurja juttu/.test(sofianKupla.teksti)
+  /^Kääk\./.test(sofianKupla.teksti)
+    && /hurja juttu/.test(sofianKupla.teksti)
     && /1873/.test(sofianKupla.teksti)
-    && /sataviisikymmentä vuotta/.test(sofianKupla.teksti)
+    && /sataviiskyt vuotta/.test(sofianKupla.teksti)
     && sofianKupla.yliviivaus === true && /Pulu/.test(sofianKupla.nimilappu),
   JSON.stringify(sofianKupla).slice(0, 200));
 

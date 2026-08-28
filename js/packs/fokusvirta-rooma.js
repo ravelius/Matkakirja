@@ -239,13 +239,14 @@ export const FOKUSVIRTA_ROOMA = {
      */
     maadoitus: '"Kumpi meistä on vanki." Kaunis kysymys, ja siihen on tylsä '
       + 'vastaus: ei kumpikaan. Isoisäsi käveli muurin alta pois heti kun '
-      + 'sade yltyi. Muurin sisäpuolella taas oli puutarha, palvelusväkeä ja '
-      + 'posti, joka kulki portista kuin ennenkin — meikäläisillä on siitä '
-      + 'muistiinpanoja, koska sitäkin postia kannettiin. Vankeus, jonka voi '
-      + 'valita ja jonka ohi kulkee kirjeposti, on eri sana kuin vankeus.',
-    teksti: 'Muurin sisään jäätiin viideksikymmeneksiyhdeksäksi '
-      + 'vuodeksi — vasta 1929 paavi astui taas Rooman puolelle. '
-      + 'Ikkunat ovat yhä samat.',
+      + 'sade yltyi. Ja muurin sisäpuolella oli puutarha, palvelusväkeä ja '
+      + 'posti, joka kulki portista niinku ennenkin — meikäläisillä on siit '
+      + 'muistiinpanoja, koska sitäkin postia kannettiin. Sellanen vankeus, '
+      + 'jonka voi itse valita ja jonka ohi kulkee kirjeposti, on kyl vähän '
+      + 'eri sana kun vankeus.',
+    teksti: 'Muurin sisällä pysyttiin viiskyt yheksän vuotta — vasta '
+      + '1929 paavi astui taas Rooman puolelle. Ikkunat on yhä ihan '
+      + 'samat.',
     /*
      * Takyt-rooma.md, täky 15: 3031×4592, CC0, Jebulon, 2013. Kuva on
      * nykypäivän Pietarinaukio — juuri se aukio, jolle päin antavalle

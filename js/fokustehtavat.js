@@ -447,7 +447,8 @@ function pullaKoyhaTeksti(nimi) {
  * LIVIAN PETTYMYS ON HIENOVARAINEN (omistajan tilaus): hän ei moiti
  * pelaajaa vaan vakuuttaa ymmärtävänsä — hieman liian nopeasti.
  */
-const PULLA_KOYHA_LIVIA = 'Livia sanoo ymmärtävänsä. Sanoo sen hieman liian nopeasti.';
+const PULLA_KOYHA_LIVIA = 'Ei se mitään, kyllä minä ymmärrän. '
+  + '— Livia sanoo sen vähän liian nopeasti.';
 
 /** Ohje varmistuksen alle: toinen napautus maksaa. */
 const PULLA_VARMISTUS_OHJE = 'Toinen napautus maksaa. Muuten tarjous raukeaa.';
@@ -469,8 +470,8 @@ function pullaTehtyTeksti(nimi) {
  * Kahden virkkeen katto pitää (Raamattu, PÖLLÖN KARAKTÄÄRI).
  */
 function pullaKuittausTeksti(nimi) {
-  return `${pullaIsolla(nimi)}. Sukuni kantoi kuninkaiden kirjeitä, mutta `
-    + 'tämä kelpaa maksuksi — aarteen jälki syttyi, ja vihreä piste '
+  return `${pullaIsolla(nimi)}. Sukuni kantoi kuninkaiden kirjeitä, mut kyl `
+    + 'tää kelpaa maksuks — aarteen jälki syttyi, ja se vihreä piste '
     + 'kartalla näyttää paikan.';
 }
 
