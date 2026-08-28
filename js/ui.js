@@ -10249,9 +10249,25 @@ export class UI {
         this.factImageTitle = null;
         this.factImage.hidden = true;
         stopDiaryVoice(this);
-        // Vanha valokuva kortin kylkeen suoraan virran datasta: kuvaa
-        // ei ole kaupunkien kuvastossa (VALOKUVAT), se on virran oma.
-        this.naytaFactValokuva(virtaKaupunki.id, virtaKaupunki.name, merkinta.kuva);
+        /*
+         * Vanha valokuva kortin kylkeen suoraan virran datasta: kuvaa
+         * ei ole kaupunkien kuvastossa (VALOKUVAT), se on virran oma.
+         *
+         * KUVATON MERKINTÄ JÄÄ KUVATTOMAKSI (v1301). Omistajan linjaus
+         * 28.8.2026 (Raamattu, "SAAPUMISKULUN KOLME TÄSMENNYSTÄ"):
+         * *"MATKAKIRJAAN EI TULE KUVAA — kuvat kuuluvat
+         * kaupunkilehteen."* Aallon 1 kaupungeissa (Madrid, Wien,
+         * Pariisi, Berliini) matkakirjalla ei siksi ole kuvakenttää
+         * lainkaan — ja ilman tätä ehtoa kortti putoaisi kaupungin
+         * VAKIOVALOKUVAAN, jolloin kuva palaisi takaovesta. Vanhat
+         * fokusvirrat antavat kuvansa yhä itse, eikä niiden kortti
+         * muutu.
+         */
+        if (merkinta.kuva) {
+          this.naytaFactValokuva(virtaKaupunki.id, virtaKaupunki.name, merkinta.kuva);
+        } else {
+          this.naytaFactValokuva(null);
+        }
         this.typeText(this.factText, merkinta.teksti, 'fact', () => {
           fokusvirtaMerkintaLuettu(this, virtaKaupunki);
         });

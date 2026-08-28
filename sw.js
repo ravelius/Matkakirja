@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1304';
+const CACHE = 'matkakirja-2026-08-09.1306';
 const SHELL = [
   './',
   './index.html',
@@ -190,6 +190,13 @@ const SHELL = [
   './js/packs/fokusvirta-bukarest.js',
   './js/packs/fokuskohteet-bih.js',
   './js/packs/fokusvirta-sarajevo.js',
+  // Eurooppa kauttaaltaan valmiiksi, aalto 1 (28.8.2026): neljä uutta
+  // fokusvirtaa. Näillä ei ole omaa kohdepakettia poimittavanaan
+  // (kohdenostoja ei ole), joten paririviä ei tarvita.
+  './js/packs/fokusvirta-madrid.js',
+  './js/packs/fokusvirta-wien.js',
+  './js/packs/fokusvirta-pariisi.js',
+  './js/packs/fokusvirta-berliini.js',
   // Maat ilman omaa fokusvirtaa: kadonneiden ihmeiden erä 26.8.2026
   // ja Matkakirjan ihmeiden Euroopan erä 27.8.2026.
   './js/packs/fokuskohteet-egy.js',
