@@ -48,6 +48,10 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1289: Sofian merkkikasa korjattu: loydetyn kaupungin laatta varjaytyy pronssikultaan, ei aarremerkkia/tahtea/nappulan vinoneliota kartalla. Katso Sofia aarteen loydon jalkeen ja arvioi savy.',
+  'v1288: Takypisteet nakyvat kartalla heti hiljaisina ja avattavina; tuike + Livian vihje vasta aarteen jalkeen, yksi kerrallaan. Valitila: piste vie ankkurikohteensa napautuksen (esim. Delfoi) ennen aarretta.',
+  'v1286: Lehden juttusivut saavat omat Pulu-kysymysehdotukset myos sivua kaannettaessa; generoinnin ajan odotusrivi. Testaa: avaa lehti, kaanna sivua chat auki.',
+  'v1285: Sofian takynostokortti rikastettu (pilotti): loistoaikakuva + valokuva, 2 kappaletta, 3 Pulu-kysymysnappia, harhaanjohtava karttanappi pois. Kuittaa malli niin monistetaan muihin maihin.',
   'v1282: Ihmekuvat vaihdettu ChatGPT-versioihin 31 kohteessa (4 jaa viela API-kuvaan: Aleksandrian kirjasto, Hefaistos, Rodoksen kolossi, Zeuksen patsas). Avaa esim. Faros, Templo Mayor, Old London Bridge.',
   'v1281: Tampereen herot ja 7 korjattua herokuvaa R2:ssa (Nasilinna, Atumashi, Kuwait x2, Damaskos, Karnak, Atakule); 5 kuvaa odottaa tekstikytkentaa (Tammerkoski, tuomiokirkko, Keskustori, Nasinneula, Id Kah). Huom: Vanhan kirkon julkisivu kivimaisempi kuin todellinen puukirkko - arvioi kelpaako.',
   'v1280: Karttamerkit piiloon eleen ajaksi (layerize -47/-51 %) ja punainen maan aariviiva pois matkatilasta. Testaa zoomi+vieritys laitteella ja nopanheiton jalkeinen matkatila.',
