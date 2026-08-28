@@ -140,7 +140,17 @@ export const ISTANBUL = {
   tokens: {
     // Pääaarre on Topkapın kuuluisan timantin henkinen sukulainen.
     types: themedTokenTypes({
-      star: { name: 'Sulttaanin timantti' },
+      /*
+       * KUVA 28.8.2026: omistajan generoima pääaarrekuva vaalealla
+       * pergamenttitaustalla (sarja A, docs/mantereet-tyoaineisto/
+       * aarreleiskat/promptit-paaaarteet-ja-ihmeet.md). Katselulaudalla
+       * ei pelata, mutta paljastuskortti on sama diplomi kuin muillakin
+       * pääaarteilla — kuva kuuluu siis myös tänne.
+       */
+      star: {
+        name: 'Sulttaanin timantti',
+        kuva: 'assets/aarteet/aarre-istanbul-star.jpg',
+      },
       mannerAarre: { name: 'Turkoosi', color: '#3aaea6' },
     }),
     // 17 kaupunkia, yksi laatta kussakin.

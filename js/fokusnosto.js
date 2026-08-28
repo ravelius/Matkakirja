@@ -271,6 +271,18 @@ const NOSTO_MAAT = {
         + 'maanvyöryjen massat ja paljasti Apollonin pyhäkön.',
       lahde: 'en-Wikipedia "Delphi", osio "Archaeology of the precinct" '
         + '(tarkistettu 28.8.2026).',
+      /*
+       * LOISTOAIKAKUVA PÄÄKUVAKSI (28.8.2026, sama malli kuin Sofian
+       * areenalla): repon oma generoitu havainnekuva, jolla ei ole
+       * Commons-nimeä eikä varareittiä, joten kenttä on `osoite` eikä
+       * `tiedosto` (js/fokusnosto.js asetaNostonKuva).
+       */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-kastrin-kyla-loistoaika.webp',
+        selite: 'Kastrin kylä pyhäkön päällä: kivitalot rinteessä, antiikin '
+          + 'pylväänpaloja pihojen välissä ja laakso alapuolella.',
+        lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
+      },
       paikka: {
         nimi: 'Delfoi',
         laudat: {
@@ -302,6 +314,13 @@ const NOSTO_MAAT = {
         + 'eli vuoteen 1976 asti.',
       lahde: 'en-Wikipedia "Mount Olympus", osio "History" '
         + '(tarkistettu 28.8.2026).',
+      /* Sama kuvalaji ja sama kenttä kuin Kastrin kylällä yllä. */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-olympoksen-huippu-loistoaika.webp',
+        selite: 'Vuoden 1913 nousu Mytikakselle: kolme miestä ajan '
+          + 'vaatteissa kiipeää kalliota, pilvet jäävät alapuolelle.',
+        lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
+      },
       paikka: {
         nimi: 'Ólympos',
         laudat: {

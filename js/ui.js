@@ -15247,16 +15247,25 @@ export class UI {
     const loyto = this.game.viimeAarre;
     const arvo = loyto?.type === type ? loyto.arvo : token.value;
     /*
-     * MALLIN VALINTA (omistajan leiskapäätökset 28.8.2026 +
-     * pohjapäätös kortilla: diplomiin tumma → vaalea siirtymä):
-     * pääaarre saa aina Aarnin luettelon diplomin; maan oma
-     * paikallisaarrekuva (vaalea pergamenttipohja) saa
+     * MALLIN VALINTA (omistajan leiskapäätökset 28.8.2026; PÄÄAARRE
+     * PALASI TUMMAAN 28.8.2026 ilta: *"yksinkertainen tumma tausta
+     * jatkamaan esineen tummaa taustaa on paras"* — Aarnin luettelon
+     * diplomipohja otsakkeineen, kehyksineen ja leimoineen jää siis
+     * pois, kun pääaarrekuvat on generoitu tummalle taustalle, joka
+     * jatkuu saumattomasti overlayn mustaan).
+     *
+     * DIPLOMIMALLI JÄÄ KOODIIN (rakennaPaljastus + .reveal-overlay
+     * .diplomi), vaikka mikään ei kutsu sitä: se on hiottu leiska,
+     * jonka omistaja voi ottaa takaisin käyttöön yhdellä rivillä.
+     * Poisto on oma eränsä, jos sellainen joskus päätetään.
+     *
+     * Maan oma paikallisaarrekuva (vaalea pergamenttipohja) saa
      * vinjetointimallin; kaikki muut — laudan mustapohjaiset kuvat,
-     * kirjoittamattomien mantereiden parit — jäävät tummaan malliin,
-     * koska vaalea malli olettaa kuvalta vaalean pohjan.
+     * kirjoittamattomien mantereiden parit ja nyt myös pääaarteet —
+     * ovat tummassa mallissa.
      */
-    const malli = type === 'star' ? 'diplomi'
-      : (kuva?.startsWith('assets/aarteet/paikallis/') ? 'paikallis' : 'tumma');
+    const malli = kuva?.startsWith('assets/aarteet/paikallis/')
+      ? 'paikallis' : 'tumma';
     let lisat = {};
     if (malli === 'diplomi') {
       const manner = this.game.quiz?.cityId
