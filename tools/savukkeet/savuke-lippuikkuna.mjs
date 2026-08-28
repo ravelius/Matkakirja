@@ -143,7 +143,34 @@ for (const [asento, viewport] of ASENNOT) {
       const kehys = document.querySelector('.lippu-kehys');
       const kehyksenTyyli = kehys && getComputedStyle(kehys);
       const kortinTyyli = getComputedStyle(kortti);
+      /*
+       * VAAKARAJAUS JOKAISELLE LAATALLE (omistajan bugiraportti
+       * 28.8.2026: "lippuikkunan suurennoksen kuvateksti leikkautuu
+       * vasemmalta"). Yllä oleva mittaus koskee vain ensimmäistä
+       * laattaa, ja vika osui nimenomaan ruudukon REUNIMMAISIIN
+       * sarakkeisiin: keskipisteensä ympäri kasvava laatta ja sitä
+       * leveämpi selite venyivät kortin leikkauksen ulkopuolelle
+       * (mitattu ennen korjausta 390 px ruudulla 68,2 px ja 834 px
+       * ruudulla 74,7 px vasemmalle). Vaakasiirto lasketaan jo
+       * napautuksessa, joten tässä riittää odottaa siirtymä (200 ms)
+       * loppuun — pystyvieritystä ei tarvitse jäädä vahtimaan.
+       */
+      let ohiSivulta = -Infinity;
+      for (const laatta2 of document.querySelectorAll('.lippu-versio, .lippu-tunnus')) {
+        if (!laatta2.classList.contains('tarkennettu')) laatta2.click();
+        await new Promise((valmis) => { setTimeout(valmis, 320); });
+        const kk = kortti.getBoundingClientRect();
+        const osat = [laatta2, ...laatta2.querySelectorAll('.lippu-versio-selite')]
+          .map((el) => el.getBoundingClientRect())
+          .filter((r) => r.width > 0 && r.height > 0);
+        ohiSivulta = Math.max(
+          ohiSivulta,
+          kk.left - Math.min(...osat.map((r) => r.left)),
+          Math.max(...osat.map((r) => r.right)) - kk.right,
+        );
+      }
       return {
+        ohiSivulta: +ohiSivulta.toFixed(1),
         ...mitta,
         rakenne: {
           kehysOnVanhempi: kortti.parentElement === kehys,
@@ -192,6 +219,11 @@ for (const [asento, viewport] of ASENNOT) {
         && tulos.tarkennus.ohiPaalta <= 0
         && tulos.tarkennus.ohiOikealta <= 0,
       JSON.stringify(tulos.tarkennus));
+    if (tulos.tarkennus) {
+      vaadi(`${maa} ${asento}: jokainen tarkennettu laatta mahtuu kortin leveyteen`,
+        tulos.ohiSivulta <= 0,
+        `pahin sivuylitys ${tulos.ohiSivulta} px (selite tai laatta leikkautuu reunasta)`);
+    }
   }
   await ctx.close();
 }
