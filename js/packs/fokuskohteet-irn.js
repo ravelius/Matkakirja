@@ -109,10 +109,12 @@ export const FOKUSKOHTEET_IRN = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-persepolis.webp',
       kadonnut: false,
-      selite: 'Apadanan kattoa kannatti 72 pylvästä, jokainen '
+      selite: 'Apadana oli suurkuninkaan vastaanottosali: kattoa '
+        + 'kannatti 72 pylvästä, jokainen '
         + 'kaksikymmentäneljä metriä korkea, ja saliin noustiin kahta '
         + 'leveää portaikkoa, joiden reliefeissä valtakunnan kansojen '
-        + 'lähetystöt tuovat lahjojaan suurkuninkaalle. Katto paloi '
+        + 'lähetystöt tuovat lahjojaan suurkuninkaalle — meedialaiset '
+        + 'hevosia, arabit kamelin, nubialaiset norsunluuta. Katto paloi '
         + 'vuonna 331 eaa., ja pylväitä alettiin purkaa rakennusaineeksi. '
         + '1900-luvun alkuun mennessä niitä oli pystyssä enää '
         + 'kolmetoista; yksi kaatunut mutta ehjä pylväs nostettiin '

@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1261: 29 ihmeselitetta taydennetty kertomaan miten kohdetta kaytettiin loistonsa paivina (esim. Faros, Colosseum, Delfoi, Ishtarin portti); 6 kertoi sen jo. Epavarmuudet merkitty (mm. Babylonin puutarhat). Pistokokeita ihmekortteihin eri maissa.',
   'v1260: Kapealla ruudulla nippumerkit, viivat ja nimiot on katettu lehden omiin mittoihin (n. kolmasosa entisesta), sarake matalampi, kaupunkilaatta ja pelinappula pienemmat. Tyopoydan ja iPadin nakyma ei muutu. Sormialueet sailyvat 44 px.',
   'v1259: Takypiste vilkkuu aina kohdesymbolin paalla (ei koskaan kaupungin), on vihrean pisteen kokoinen, ja Kreikan pooliin kaksi uutta takya (Kastrin kyla Delfoissa, Olympos) - ketju sytyttaa seuraavan kun edellinen on luettu. Lunastuskortissa Katso kohde kartalla -nappi.',
   'v1258: Reaktiot laajana: viisi symbolia (seppele/sydan/suurennuslasi/tiimalasi/mustetahra) joka sisaltoon ja valiotsikoihin, jaetut laskurit, tyohuoneen Reaktiot+Virheilmoitukset-sivut. HUOM: laskurit heraavat vasta kun omistaja ajaa Actions-tyokulun "Lukijoiden ehdotukset: julkaise worker" - siihen asti napit toimivat mutta luvut ovat nollia.',

@@ -120,8 +120,13 @@ export const FOKUSKOHTEET_LBY = [
       osoite: 'assets/kartat/ihmeet/ihme-leptis-magna.webp',
       kadonnut: false,
       selite: 'Leptis Magna oli Rooman Afrikan komeimpia kaupunkeja: '
-        + 'marmorista rakennettu Severuksen forum, valtava basilika, '
-        + 'pylväskatu satamaan ja teatteri meren äärellä. Kun kaupunki '
+        + 'marmorista rakennettu Severuksen forum, pylväskatu satamaan '
+        + 'ja teatteri meren äärellä. Kaupunki eli oliiviöljystä: Caesar '
+        + 'määräsi sen maksamaan veronsa öljynä, kolme miljoonaa naulaa '
+        + 'vuodessa, ja amforat lastattiin satamasta Roomaan. Torilla '
+        + 'kaupat tehtiin kivipöydän ääressä, johon oli hakattu '
+        + 'rinnakkain puunilainen kyynärä, roomalainen jalka ja '
+        + 'ptolemaiolainen kyynärä. Kun kaupunki '
         + 'hylättiin 600-luvulla, hiekkadyynit peittivät sen — ja juuri '
         + 'siksi se säilyi. Italialaiset arkeologit kaivoivat kaupungin '
         + 'esiin 1920- ja 1930-luvuilla, ja rauniot ovat nyt Välimeren '

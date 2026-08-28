@@ -105,7 +105,10 @@ export const FOKUSKOHTEET_SYR = [
       selite: 'Belin temppeli oli Palmyran uskonnollinen keskus lähes '
         + 'kaksituhatta vuotta: pylväikön ympäröimä temppelirakennus '
         + 'keskellä 200 metrin levyistä pihaa, ensin pyhäkkönä, sitten '
-        + 'kirkkona ja vuodesta 1132 moskeijana. Sen rauniot olivat '
+        + 'kirkkona ja vuodesta 1132 moskeijana. Pihalle nousi loiva '
+        + 'ramppi, jota myöten uhrieläimet talutettiin sisään, ja pihan '
+        + 'laidalla oli sali pyhiä juhla-aterioita varten. '
+        + 'Sen rauniot olivat '
         + 'Palmyran parhaiten säilyneitä, kunnes Isis-järjestö tuhosi '
         + 'rakennuksen räjähteillä 30. elokuuta 2015. Pihan ulkomuurit '
         + 'ja kaareva pääportti ovat yhä pystyssä keskellä keidasta.',

@@ -111,11 +111,17 @@ export const FOKUSKOHTEET_MEX = [
       kadonnut: true,
       selite: 'Templo Mayor oli Tenochtitlánin kaksoispyhäkkö: yksi '
         + 'pyramidi, kaksi portaikkoa ja huipulla kaksi temppeliä, '
-        + 'Huitzilopochtlin ja Tlálocin. Espanjalaiset purkivat sen '
+        + 'Huitzilopochtlin ja Tlálocin. Juhlissa portaita nousivat '
+        + 'kulkueet, ja huipulla uhrattiin jumalille myös sotavankeja. '
+        + 'Pyramidin perustusten sisään haudattiin uhrikätköjä, joihin '
+        + 'ladottiin verolahjoja valtakunnan joka kolkasta: koralleja, '
+        + 'simpukoita sekä jaguaarien ja kotkien luita. '
+        + 'Espanjalaiset purkivat temppelin '
         + 'vuonna 1521, ja paikan sijainti unohtui vuosisadoiksi. '
         + 'Vuonna 1978 sähkötyömiehet osuivat kaivaessaan valtavaan '
-        + 'kivikiekkoon, ja siitä alkaneissa kaivauksissa temppelin '
-        + 'perustukset kaivettiin esiin: ne ovat nyt nähtävissä '
+        + 'kivikiekkoon, ja siitä alkaneissa kaivauksissa löytyi yli '
+        + 'kaksisataa kätköä ja temppelin perustukset: ne ovat nyt '
+        + 'nähtävissä '
         + 'katutason alapuolella Zócalon kulmassa katedraalin vieressä.',
       lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
         + 'nykymaailmassa',

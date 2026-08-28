@@ -114,10 +114,14 @@ export const FOKUSKOHTEET_AFG = [
       selite: 'Bamiyanin kaksi kalliobuddhaa olivat maailman '
         + 'suurimmat seisovat buddhapatsaat: 55 ja 38 metriä korkeat, '
         + 'veistetty 500- ja 600-luvuilla laakson pohjoisseinämään '
-        + 'Silkkitien varrelle. Taleban tuhosi ne maaliskuussa 2001. '
-        + 'Kallio, patsaiden tyhjät syvennykset ja niitä ympäröivät '
-        + 'maalatut luolat ovat yhä paikallaan, ja laakso on vuodesta '
-        + '2003 ollut Unescon maailmanperintökohde.',
+        + 'Silkkitien varrelle. Kiinalainen pyhiinvaeltaja Xuanzang laski '
+        + 'laaksossa vuonna 630 toistakymmentä luostaria ja yli tuhat '
+        + 'munkkia, jotka asuivat kallioon hakatuissa luolissa; patsaat '
+        + 'olivat silloin kullattuja ja koristeltuja, ja niitä ympäröivät '
+        + 'kirkkaanväriset taivaskohtaukset. Taleban tuhosi patsaat '
+        + 'maaliskuussa 2001. Kallio, tyhjät syvennykset ja maalatut '
+        + 'luolat ovat yhä paikallaan, ja laakso on vuodesta 2003 ollut '
+        + 'Unescon maailmanperintökohde.',
       lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
         + 'nykymaailmassa',
     },

@@ -830,7 +830,12 @@ export const FOKUSKOHTEET_ITA = [
       kadonnut: false,
       selite: 'Colosseumin ulkokehä oli valmiina yhtenäinen '
         + 'nelikerroksinen muuri, jonka kaarissa seisoi patsaita ja '
-        + 'jonka yli vedettiin purjekangaskatos. Vieressä kohosi Neron '
+        + 'jonka yli merimiehet vetivät purjekangaskatoksen varjoksi. '
+        + 'Sisään mahtui noin 50 000 katsojaa, jotka pääsivät ilmaiseksi '
+        + 'mutta säädyn mukaan: pääsymerkki ohjasi senaattorit alimmille '
+        + 'riveille ja naiset ylimmille. Aamupäivä kului '
+        + 'eläintaisteluissa, iltapäivä gladiaattoreissa. '
+        + 'Vieressä kohosi Neron '
         + 'kullattu pronssikolossi, jonka mukaan rakennus lopulta sai '
         + 'nimensä. Kolossista on viimeinen varma maininta 300-luvulta '
         + 'eikä sen jäljistä ole muuta kuin jalustan perustus; '
