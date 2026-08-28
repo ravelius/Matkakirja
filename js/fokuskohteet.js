@@ -1328,17 +1328,115 @@ export function paivitaFokuskohteet(ui) {
  */
 const LEHDEN_VAHIN_OSUUS = 0.5;
 
+/*
+ * ...JA VASTA KUN ON SAAVUTTU (omistajan pelitestipalaute 28.8.2026,
+ * iPhone, matka Ateenasta Sofiaan: *"symbolit, nimiöt ja nippujen
+ * katkoviivat näkyvät Sofiassa jo siirtymän aikana kaukaa"*).
+ *
+ * Portin nostaa maanvaihto (js/fokuskartta.js paivitaFokuskartta)
+ * juuri ennen saapumisen kamera-ajoa, ja se aukeaa vasta kun KAIKKI
+ * KOLME on tosi:
+ *
+ *   1. saapumisen kamera-ajo on ohi (kartta.kameraAjo),
+ *   2. nappula ei enää liiku (ui.movingPlayerId),
+ *   3. maanvaihdosta on kulunut PORTIN_VIIVE_MS.
+ *
+ * MIKSI MYÖS VIIVE EIKÄ PELKKÄ AJO. Mitattuna (Chromium, iPhone-mitat,
+ * matka Ateenasta Sofiaan) saapumisen kamera-ajo jää usein KOKONAAN
+ * TEKEMÄTTÄ: matkan ajan kameraa saattava ajo (js/ui.js
+ * aloitaSaattavaKamera) on jo vienyt näkymän lehden ikkunaan, ja
+ * ajaKamera hylkää ajon, joka ei liikuta mitään. Silloin ehdot 1 ja 2
+ * ovat tosia samassa kehyksessä kuin lehti asetetaan, ja merkit
+ * syttyisivät edelleen yhtä aikaa lehden kanssa. Viive on se osa, jonka
+ * omistaja pyysi ("mieluiten muutaman sekunnin viiveellä"), ja ehdot 1
+ * ja 2 huolehtivat siitä, ettei viive lopu KESKEN ajon silloin kun ajo
+ * on pitkä.
+ *
+ * PORTTI HERÄTTÄÄ ITSENSÄ. Viiveen päättyessä ei ole mitään muuta
+ * syytä piirtää merkkejä uudelleen, joten portti varaa yhden ajastimen
+ * ja kutsuu itse paivitaFokuskohteet. Kamera-ajon päättyminen herättää
+ * piirron muutenkin (js/kartta.js → ui.taydennaTaide →
+ * paivitaMaastonimet), joten ajastin on tarpeen vain viivettä varten.
+ */
+const PORTIN_VIIVE_MS = 1400;
+
+function saapumisPortti(ui) {
+  if (!ui.fokuskohteetPortti) return false;
+  const kesken = Boolean(ui.kartta?.kameraAjo) || ui.movingPlayerId != null;
+  const jaljella = kesken
+    ? PORTIN_VIIVE_MS
+    : ui.fokuskohteetPortti + PORTIN_VIIVE_MS - Date.now();
+  if (jaljella > 0) {
+    /*
+     * Yksi ajastin kerrallaan: portti tikittää samasta kutsusta, josta
+     * merkit muutenkin päivitetään, eikä ajastimia saa kertyä jokaisesta
+     * piirrosta. Kesken olevan ajon aikana herätys tulee ajolta itseltään
+     * (ks. yllä), joten silloin varataan vain yksi varmistus.
+     */
+    if (!ui.fokuskohdePorttiAjastin) {
+      ui.fokuskohdePorttiAjastin = setTimeout(() => {
+        ui.fokuskohdePorttiAjastin = null;
+        if (!ui.dead) paivitaFokuskohteet(ui);
+      }, Math.min(jaljella, PORTIN_VIIVE_MS));
+    }
+    return true;
+  }
+  ui.fokuskohteetPortti = 0;
+  // Portin avaus on se hetki, jossa merkit saavat syttyä pehmeästi
+  // (ks. sytytaKohteet); tavallinen lähennys ei sitä tee.
+  ui.fokuskohteetSyttyvat = true;
+  return false;
+}
+
+/*
+ * PEHMEÄ SYTTYMINEN on YKSI CSS-animaatio YHDELLE ryhmälle (css/
+ * fokuskohteet.css). Merkit ovat kaikki saman kerroksen lapsia, joten
+ * peittävyys on kompositorin työtä eikä maksa piirtoa; luokka lähtee
+ * pois animaation päätyttyä, jotta seuraava saapuminen sytyttää sen
+ * uudelleen. Liikeherkkyys hoituu tyylitiedoston omalla säännöllä.
+ */
+const KOHTEIDEN_SYTTYMINEN_MS = 700;
+
+function sytytaKohteet(ui, kerros) {
+  kerros.classList.remove('fokuskohteet-syttyy');
+  // Uudelleenkäynnistys vaatii välikehyksen: ilman tätä sama luokka
+  // takaisin samassa kehyksessä ei ole selaimelle muutos lainkaan.
+  void kerros.getBoundingClientRect();
+  kerros.classList.add('fokuskohteet-syttyy');
+  clearTimeout(ui.fokuskohdeSytytysAjastin);
+  ui.fokuskohdeSytytysAjastin = setTimeout(() => {
+    kerros.classList.remove('fokuskohteet-syttyy');
+  }, KOHTEIDEN_SYTTYMINEN_MS);
+}
+
 function paivitaNakyvyys(ui, kerros, nakyva) {
   const pohja = ui.fokusPohjaBbox;
   const osuus = pohja && nakyva?.w > 0 ? pohja.w / nakyva.w : 0;
-  const piiloon = osuus < LEHDEN_VAHIN_OSUUS;
+  // Portti ensin, jotta se ehtii tikittää myös yleiskuvassa.
+  const odottaa = saapumisPortti(ui);
+  const piiloon = odottaa || osuus < LEHDEN_VAHIN_OSUUS;
   kerros.classList.toggle('fokuskohteet-piilossa', piiloon);
-  if (piiloon) suljeFokuskohde(ui);
+  if (piiloon) {
+    suljeFokuskohde(ui);
+    return;
+  }
+  if (ui.fokuskohteetSyttyvat) {
+    ui.fokuskohteetSyttyvat = false;
+    sytytaKohteet(ui, kerros);
+  }
 }
 
 /** Laudan vaihto tai uusi peli: merkit pois ja muisti nollille. */
 export function nollaaFokuskohteet(ui) {
   suljeFokuskohde(ui);
+  // Saapumisportti ja sen ajastimet eivät saa jäädä roikkumaan uudelle
+  // laudalle (ks. saapumisPortti).
+  ui.fokuskohteetPortti = 0;
+  ui.fokuskohteetSyttyvat = false;
+  clearTimeout(ui.fokuskohdePorttiAjastin);
+  ui.fokuskohdePorttiAjastin = null;
+  clearTimeout(ui.fokuskohdeSytytysAjastin);
+  ui.fokuskohdeSytytysAjastin = null;
   ui.fokuskohdeAvain = null;
   ui.fokuskohdeEroAvain = null;
   ui.fokuskohdeRyhmat = [];

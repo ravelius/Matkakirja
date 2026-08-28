@@ -1434,17 +1434,79 @@ function atlasRyhma(ui) {
  *
  * Maski on voimassa vain avauslennon ajan (ui.aloituslentoKesken);
  * perillä lehti on kartta, jolla pelataan, ja sen reunan hoitaa verho.
+ *
+ * ==================================================================
+ * ...JA SAMA MASKI PERILLÄKIN, KUN LEHTIÄ ON KAKSI PÄÄLLEKKÄIN
+ * (omistajan pelitestipalaute 28.8.2026, iPhone: matka Ateenasta
+ * Sofiaan, *"Bulgarian lehti loppuu kuin veitsellä leikaten ja alla
+ * näkyy Kreikan lehti eri sävyisenä"*)
+ * ==================================================================
+ *
+ * MITTAUS. Sauma on täsmälleen leveyspiirillä 39,85 (BGR-lehden bboxin
+ * alareuna); sauman yläpuolella on tasainen pergamentin sävy ilman
+ * liukumaa ja alapuolella Kreikan lehti. Askel on kaksi pikseliä leveä
+ * ja noin 17 sävyaskelta korkea.
+ *
+ * MIKSI KUVAN OMA REUNAHÄIVYTYS EI RIITÄ. Jokaisessa lehdessä on
+ * häivytetty vuotoreuna (tools/fokuskartta/piirto.js REUNAHÄIVYTYS:
+ * alfa laskee nollaan uloimmalla kolmanneksella vuotoa), ja
+ * työpöytäselaimessa se hoitaa sauman — siellä lehti näytetään
+ * webpinä ja alfa säilyy. PUHELIMESSA JA KUORESSA lehti pienennetään
+ * canvasille, WebKit ei kirjoita canvasista webpiä, pakkaus menee
+ * JPEGille eikä alfaa ole; silloin häivytys latistetaan pergamentin
+ * sävyyn (ks. "ALFA EI SÄILY JPEGISSÄ"). Se korjasi mustat kaistat,
+ * mutta teki lehdestä samalla OPAAKIN SUORAKAITEEN: paljasta lautaa
+ * vasten latistus on näkymätön, naapurilehden päällä se on veitsen
+ * jälki.
+ *
+ * PYSTYRUUDULLA REUNA ON AINA KATSOTTAVANA. Vuoto (0,15) on mitoitettu
+ * vaakakuvasuhteille 1,23–2,08 (tools/fokuskartta/maat.mjs), ja kamera
+ * sovittaa lehden ikkunan LEVEYDEN mukaan: puhelimen pystyruudulla
+ * näkyvää korkeutta on yli kaksi kertaa ikkunan verran, joten lehden
+ * ylä- ja alareuna ovat ruudulla joka ikinen kerta.
+ *
+ * KORJAUS ON SAMA MASKI, EI UUSI KONEISTO. Maski ei lue kuvan alfaa
+ * vaan häivyttää sen reunan riippumatta siitä, kummalla pakkauspolulla
+ * lehti tuli — ja koska se on maski eikä suodatin, se on sallittua
+ * kartan kerroksella (ks. yllä). Perillä osuus on VUODON osuus eikä
+ * lennon 0,16: häivytys pysyy silloin kokonaan ikkunan ulkopuolella
+ * eikä syö lehdestä sitä, mitä lehti esittää.
+ *
+ * MASKI KUULUU VAIN MAALEHDILLE. Kaukozoomin yleislehti ja kehittäjän
+ * maailmanäkymän pikkulehdet ovat POHJA, jonka alla ei ole toista
+ * lehteä: yleislehden häivytetty reuna olisi laudan reuna ja
+ * paljastaisi tyhjää pergamenttia. Ne saavat maskin yhä lennossa ja
+ * maailmanäkymässä kuten ennenkin (siellä ehto on eri: pikkulehti on
+ * naapurinsa vieressä).
  */
 const LENNON_HAIVYTYS_ID = 'lento-lehden-haivytys';
 /** Kuinka suuri osuus lehden leveydestä/korkeudesta häivytetään. */
 const LENNON_HAIVYTYS_OSUUS = 0.16;
+/** Perillä häivytettävän kaistan tunnus (ks. VUODON_HAIVYTYS_OSUUS). */
+const VUODON_HAIVYTYS_ID = 'lehden-vuotohaivytys';
+/*
+ * VUODON OSUUS KUVAN MITASTA. Yleisen reitin kaava on
+ * `bbox = ikkuna * (1 + 2 * 0,15)`, joten vuotoa on kummallakin
+ * reunalla 0,15 / 1,30 = 0,1154 kuvan mitasta — ja kuratoiduilla
+ * lehdillä (Kreikka, Saksa, Venäjä, Kanada) sekä ruudun kuvasuhteen
+ * takia levennetyillä vähintään sen verran. 0,115 on siis se suurin
+ * kaista, joka on varmasti PELKKÄÄ VUOTOA jokaisella lehdellä: maski
+ * ei yllä ikkunan puolelle eikä siis himmennä sitä, mitä lehti
+ * esittää.
+ */
+const VUODON_HAIVYTYS_OSUUS = 0.115;
 
-/** Luo häivytysmaskin fokuskerrokseen kerran; palauttaa viittauksen. */
-function lennonHaivytysMaski(kerros) {
+/**
+ * Luo reunahäivytysmaskin fokuskerrokseen kerran; palauttaa
+ * viittauksen. Maskeja on kaksi (lento ja vuoto) ja ne eroavat vain
+ * häivytettävän kaistan osuudesta — sisältö on rajauslaatikon
+ * yksiköissä, joten kumpikin kelpaa kaiken kokoisille lehdille.
+ */
+function haivytysMaski(kerros, tunniste, osuus) {
   if (!kerros) return null;
-  if (!kerros.querySelector(`#${LENNON_HAIVYTYS_ID}`)) {
+  if (!kerros.querySelector(`#${tunniste}`)) {
     const maski = el('mask', {
-      id: LENNON_HAIVYTYS_ID,
+      id: tunniste,
       maskUnits: 'objectBoundingBox',
       maskContentUnits: 'objectBoundingBox',
       x: 0,
@@ -1456,7 +1518,7 @@ function lennonHaivytysMaski(kerros) {
     // haalistuu paperiin. Neljä liukua, yksi kullekin reunalle;
     // nurkissa ne kertautuvat, mikä pyöristää kulman itsestään.
     el('rect', { x: 0, y: 0, width: 1, height: 1, fill: '#fff' }, maski);
-    const r = LENNON_HAIVYTYS_OSUUS;
+    const r = osuus;
     const reunat = [
       { id: 'vasen', x1: 0, y1: 0, x2: 1, y2: 0, x: 0, y: 0, w: r, h: 1 },
       { id: 'oikea', x1: 1, y1: 0, x2: 0, y2: 0, x: 1 - r, y: 0, w: r, h: 1 },
@@ -1464,7 +1526,7 @@ function lennonHaivytysMaski(kerros) {
       { id: 'alas', x1: 0, y1: 1, x2: 0, y2: 0, x: 0, y: 1 - r, w: 1, h: r },
     ];
     for (const reuna of reunat) {
-      const tunnus = `${LENNON_HAIVYTYS_ID}-${reuna.id}`;
+      const tunnus = `${tunniste}-${reuna.id}`;
       const liuku = el('linearGradient', {
         id: tunnus, x1: reuna.x1, y1: reuna.y1, x2: reuna.x2, y2: reuna.y2,
       }, maski);
@@ -1475,7 +1537,27 @@ function lennonHaivytysMaski(kerros) {
       }, maski);
     }
   }
-  return `url(#${LENNON_HAIVYTYS_ID})`;
+  return `url(#${tunniste})`;
+}
+
+/** Avauslennon leveä häivytys: lehti istuu paperiin ilman laatikkoa. */
+function lennonHaivytysMaski(kerros) {
+  return haivytysMaski(kerros, LENNON_HAIVYTYS_ID, LENNON_HAIVYTYS_OSUUS);
+}
+
+/** Perillä: vuotokaista häivytetään, jottei lehti katkea naapuriin. */
+function vuodonHaivytysMaski(kerros) {
+  return haivytysMaski(kerros, VUODON_HAIVYTYS_ID, VUODON_HAIVYTYS_OSUUS);
+}
+
+/**
+ * Onko kuva MAALEHTI (nykyisen maan tai atlaksen naapurin) eikä
+ * pohjalehti? Vain maalehti saa perillä vuotohäivytyksen: yleislehti ja
+ * maailmanäkymän pikkulehdet ovat pohja, jonka alla ei ole mitään.
+ */
+function maalehdenKuva(kuva) {
+  const luokat = kuva?.parentElement?.classList;
+  return Boolean(luokat && (luokat.contains('fokus-lehti') || luokat.contains('fokus-atlas')));
 }
 
 /**
@@ -1496,6 +1578,12 @@ function lennonHaivytysMaski(kerros) {
  * PELAAJAN POLKU EI MUUTU: maailmanakyma() vaatii kehittäjätilan eikä
  * palauta koskaan totta katselutilassa (js/ui.js maailmanakyma).
  * Valinnainen kutsu siltä varalta, että ui on kevyempi kuin UI-olio.
+ *
+ * PERILLÄ MASKI EI LÄHDE VAAN KAPENEE (28.8.2026, ks. maskien
+ * johdanto): lennon leveän häivytyksen tilalle tulee maalehdille
+ * VUOTOKAISTAN häivytys, jottei lehti katkea terävään viivaan
+ * naapurilehden päälle. Pohjalehdet (yleislehti, maailmanäkymän
+ * pikkulehdet) jäävät perillä ilman maskia kuten ennenkin.
  */
 export function paivitaLennonLehdet(ui) {
   const kerros = ui?.fokuskarttaKerros;
@@ -1503,7 +1591,11 @@ export function paivitaLennonLehdet(ui) {
   const kuvat = kerros.querySelectorAll('.fokuskartta-kuva');
   if (!kuvat.length) return;
   const lennossa = Boolean(ui.aloituslentoKesken) || Boolean(ui.maailmanakyma?.());
-  const maski = lennossa ? lennonHaivytysMaski(kerros) : null;
+  const lennonMaski = lennossa ? lennonHaivytysMaski(kerros) : null;
+  // Vuotomaski syntyy vasta ensimmäiselle maalehdelle: pelkkää
+  // yleislehteä katsottaessa sitä ei tarvita eikä siis luoda.
+  let vuodonMaski = null;
+  const vuoto = () => (vuodonMaski ??= vuodonHaivytysMaski(kerros));
   /*
    * MUUTTUMATONTA MÄÄRETTÄ EI KIRJOITETA UUDELLEEN. Maailmanäkymässä
    * kuvia on yli sata ja tämä ajetaan jokaisen saapuvan pikkulehden
@@ -1512,6 +1604,7 @@ export function paivitaLennonLehdet(ui) {
    * on selaimelle syy tarkistaa kuvan piirto uudelleen.
    */
   for (const kuva of kuvat) {
+    const maski = lennonMaski ?? (maalehdenKuva(kuva) ? vuoto() : null);
     const nyt = kuva.getAttribute('mask');
     if (maski) { if (nyt !== maski) kuva.setAttribute('mask', maski); }
     else if (nyt !== null) kuva.removeAttribute('mask');
@@ -2870,6 +2963,13 @@ function piirra(ui, iso, pohja) {
     preserveAspectRatio: 'none',
     class: 'fokuskartta-kuva',
   }, ryhma);
+  /*
+   * Reunahäivytys heti kuvan mukana, ei vasta seuraavasta piirrosta:
+   * maanvaihdossa lehti asetetaan tässä ja kamera on jo matkalla, joten
+   * yksikin maskiton kehys olisi se terävä suorakaide, jonka takia
+   * häivytys on olemassa (ks. LENNON_HAIVYTYS_ID -johdanto).
+   */
+  paivitaLennonLehdet(ui);
   // Nimet päällimmäisenä tässä kerroksessa — mutta yhä kaupunkien ja
   // laattojen alla, koska koko kerros on niiden alla. Nykyisellä
   // lipulla (FOKUS_SVG_NIMET) tämä ei tee mitään: nimet ovat kuvassa.
@@ -3159,7 +3259,37 @@ export function paivitaFokuskartta(ui) {
       const y = Math.min(Math.max(cy - h / 2, b.y), b.y + b.h - h);
       kohde = { bbox: { x, y, w, h }, marginaali: 0 };
     }
-    if (kohde) ui.kartta?.ajaKamera?.(kohde, ui.saapumisAsettuu ? { kesto: 0 } : {});
+    /*
+     * === MERKIT ODOTTAVAT PERILLE PÄÄSYÄ ==========================
+     *
+     * Omistajan pelitestipalaute 28.8.2026 (iPhone, matka Ateenasta
+     * Sofiaan): *"kohteiden symbolit, nimiöt ja nippujen katkoviivat
+     * näkyvät Sofiassa jo siirtymän aikana kaukaa"* — koko Bulgarian
+     * kohdesarja oli ruudulla, vaikka kartta oli vielä matkalla.
+     * Tilaus: merkit vasta kun on saavuttu ja kartta on zoomannut
+     * lähemmäs.
+     *
+     * MIKSI NE EHTIVÄT ENSIN. ajaKamera asettaa LOPULLISEN näkymän
+     * heti ja piirtää liikkeen sen päälle kuoren muunnoksena
+     * (js/kartta.js), joten merkkien oma näkyvyysehto — kuinka suuren
+     * osan ruudusta lehti täyttää (js/fokuskohteet.js paivitaNakyvyys)
+     * — täyttyy jo ajon ensimmäisessä kehyksessä. Merkit syttyivät
+     * siis samalla hetkellä kuin lehti, kaukaa katsottuna.
+     *
+     * PORTIN EHDOT JA SEN AUKEAMINEN OVAT js/fokuskohteet.js:ssä
+     * (saapumisPortti); tässä kirjataan vain se hetki, jolloin maa
+     * vaihtui. Hetki eikä pelkkä lippu, koska portti on osaksi viive:
+     * saapumisen kamera-ajo jää usein kokonaan tekemättä, kun matkan
+     * saattoajo on jo vienyt näkymän lehden ikkunaan.
+     *
+     * VAIN MAANVAIHDOSSA: tämä haara on `!ensimmainen`-ehdon sisällä,
+     * joten sivun lataus kesken pelin ja kehittäjän omat kamera-ajot
+     * eivät sytytä porttia.
+     */
+    if (kohde) {
+      ui.fokuskohteetPortti = Date.now();
+      ui.kartta?.ajaKamera?.(kohde, ui.saapumisAsettuu ? { kesto: 0 } : {});
+    }
   }
   // Jo muistissa JA yhä osoitteineen: piirretään samassa kehyksessä,
   // jottei kuva välähdä vasta seuraavalla ruudunpäivityksellä. Ilman
