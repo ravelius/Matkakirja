@@ -17,7 +17,12 @@
  *   5. sama maa ei esiinny taulussa kahdesti (JS pitäisi hiljaa
  *      jälkimmäisen, ja ensimmäinen jäisi näyttämään voimassa
  *      olevalta — sama ansa kuin muissa pakettitauluissa);
- *   6. legenda sanoo olevansa legenda. Aarteet, jotka ovat tarua eivätkä
+ *   6. jokaisella aarteella on OMA KUVA: `kuva`-kenttä, jonka polku on
+ *      muotoa assets/aarteet/paikallis/<iso3 pienellä>-(pieni|iso).jpg
+ *      ja joka on oikeasti repossa. Kirjoitusvirhe polussa ei kaadu
+ *      testeihin vaan näkyisi pelaajalle rikkinäisenä paljastuskorttina;
+ *      väärän maan polku taas näyttäisi naapurin aarteen;
+ *   7. legenda sanoo olevansa legenda. Aarteet, jotka ovat tarua eivätkä
  *      löytöjä, on merkitty tekstissä sanalla ("tarun mukaan", "saagan
  *      mukaan", "legendan mukaan", "myytti") — Raamatun linja on, ettei
  *      pelaajalle koskaan kerrota tarua faktana.
@@ -25,7 +30,7 @@
 
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 
 import { PAIKALLISAARTEET, paikallisaarre } from '../js/packs/paikallisaarteet.js';
 import { EUROPE_CITY_COUNTRY } from '../js/packs/europe-countries.js';
@@ -80,6 +85,20 @@ test('jokaisella maalla on molemmat aarteet nimineen ja faktoineen', () => {
   }
 });
 
+test('jokaisella aarteella on oma kuva olemassa olevassa polussa', () => {
+  for (const [iso, pari] of Object.entries(PAIKALLISAARTEET)) {
+    for (const [tyyppi, laji] of [['pieniAarre', 'pieni'], ['isoAarre', 'iso']]) {
+      const { kuva } = pari[tyyppi];
+      const odotettu = `assets/aarteet/paikallis/${iso.toLowerCase()}-${laji}.jpg`;
+      assert.equal(
+        kuva, odotettu,
+        `${iso} ${tyyppi}: kuvapolku ei ole ${odotettu} — väärä maa tai laji`,
+      );
+      assert.ok(existsSync(kuva), `${iso} ${tyyppi}: kuvaa ${kuva} ei ole repossa`);
+    }
+  }
+});
+
 test('avaimet ovat pelin omia ISO3-maakoodeja', () => {
   for (const iso of Object.keys(PAIKALLISAARTEET)) {
     assert.match(iso, /^[A-Z]{3}$/, `${iso}: avaimen pitää olla ISO3-koodi`);
@@ -116,6 +135,7 @@ test('taru on merkitty taruksi', () => {
 
 test('paikallisaarre palauttaa parin vain paikallisaarteille', () => {
   assert.equal(paikallisaarre('pieniAarre', 'FIN')?.name, PAIKALLISAARTEET.FIN.pieniAarre.name);
+  assert.equal(paikallisaarre('pieniAarre', 'FIN')?.kuva, 'assets/aarteet/paikallis/fin-pieni.jpg');
   assert.equal(paikallisaarre('isoAarre', 'ITA')?.name, PAIKALLISAARTEET.ITA.isoAarre.name);
   assert.equal(paikallisaarre('star', 'FIN'), null);
   assert.equal(paikallisaarre('mannerAarre', 'FIN'), null);
