@@ -194,6 +194,11 @@ vaadi('4d varjo haaleni hypyn laella', hyppy.peittoMin < 0.7, String(hyppy.peitt
  * 25,9:stä 18,1:een leveyden pysyessä lähes ennallaan (13,2 -> 10).
  * Suhde 1,81 on juuri se, mikä tilauksessa muuttui; jos joku palauttaa
  * vanhat mitat, hahmo on taas kaupungin laatan kokoinen.
+ *
+ * SAMAN ILLAN JATKOTILAUS (*"Myös Ateenan laatta ja pelinappula voi
+ * olla vielä pienempi"*) kutisti koko siluetin 78 prosenttiin
+ * (14,1 x 7,8), mutta SUHDE ON YHÄ 1,81: se on tämän kohdan vartioima
+ * asia, ei absoluuttinen koko.
  */
 const kuva = await sivu.evaluate(() => {
   const i = document.querySelector('.pawn .pawn-kuva');
@@ -217,7 +222,7 @@ vaadi('5d hahmo seisoo jaloillaan laudan pinnassa',
   kuva.jalkaEro !== null && Math.abs(kuva.jalkaEro) < 0.6 * kuva.korkeus,
   JSON.stringify(kuva));
 const suhde = kuva.leveys > 0 ? kuva.korkeus / kuva.leveys : 0;
-vaadi('5e siluetti on matala nappula (korkeus/leveys 18,1/10 = 1,81)',
+vaadi('5e siluetti on matala nappula (korkeus/leveys 14,1/7,8 = 1,81)',
   suhde > 1.68 && suhde < 1.95, `${suhde.toFixed(3)} — ${JSON.stringify(kuva)}`);
 
 // --- 6. uuteen kaupunkiin saavuttaessa noppa häipyy ---

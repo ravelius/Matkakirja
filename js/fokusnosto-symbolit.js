@@ -1750,30 +1750,44 @@ export function asemoiNostosymbolit(ui, suhde = 1) {
    * merkitsevä vain lehdettömällä varapolulla — ks. js/ui.js
    * fokusMerkkiSkaala.
    */
-  const s = ui?.fokusMerkkiSkaala?.(suhde);
+  /*
+   * MERKIN NÄKYVÄ KOKO ON KATETTU LEHDEN OMIIN MITTOIHIN (omistaja
+   * 28.8.2026, js/ui.js fokusMerkkiSkaalaKartalle): kapea ruutu ei saa
+   * paisuttaa täkysymbolia yli kartan poltettujen symbolien. Sormen
+   * mitta (osuma-alue, nipun etäisyydet) elää kattamattomassa
+   * skaalassa — ks. js/fokusniput.js sääntö 8.
+   */
+  const s = ui?.fokusMerkkiSkaalaKartalle?.(suhde) ?? ui?.fokusMerkkiSkaala?.(suhde);
   // Ilman mitattavaa näkymää muunnos jätetään entiselleen: väärä
   // mittakaava olisi pahempi kuin yhden kehyksen viive.
   if (!(s > 0)) return;
+  const sRuutu = ui?.fokusMerkkiSkaala?.(suhde) ?? s;
   /*
    * Kaupungin päälle osuvat symbolit siirtyvät yhteiseen nippuun
    * kaupungin oikealle puolelle (js/fokusniput.js — sama passi kuin
    * kohdemerkeillä, jotta sarake on yksi). Passi kirjoittaa ryhmiin
    * `nippu`-kentän; muut merkit pysyvät omilla paikoillaan.
    */
-  niputaFokusmerkit(ui, s);
+  niputaFokusmerkit(ui, s, sRuutu);
   const zoom = s.toFixed(4);
   /*
    * PAIKKA LASKETAAN VASTA PASSIN JÄLKEEN. Täyn piste ratsastaa
    * kohdemerkin päällä, ja merkin paikka on juuri se, jonka kasauspassi
    * yllä kirjoitti — passi ajetaan siis ennen tätä silmukkaa, ei sen
-   * jälkeen (ks. sääntö PISTE AINA SYMBOLIN PÄÄLLE).
+   * jälkeen (ks. sääntö PISTE AINA SYMBOLIN PÄÄLLE). Sormen mitat
+   * (ankkurietäisyys, laattaväistö) kulkevat kattamattomassa skaalassa,
+   * siksi paikanhaku saa sRuutu:n (ks. js/fokusniput.js sääntö 8).
    */
+  // Osuma-ympyrä takaisin sormen mittaan, kun katto puree (ks. yllä).
+  const osumaR = NOSTOSYM_TUIKE_OSUMA_R * (sRuutu > 0 ? sRuutu / s : 1);
   let ankkuri = null;
   for (const ryhma of ui.nostosymRyhmat ?? []) {
-    const paikka = ryhma.nippu ?? nostosymTuikkeenPaikka(ui, ryhma, s);
+    const paikka = ryhma.nippu ?? nostosymTuikkeenPaikka(ui, ryhma, sRuutu);
     ankkuri = paikka.kohde ?? ankkuri;
     ryhma.g.setAttribute('transform',
       `translate(${paikka.x.toFixed(2)} ${paikka.y.toFixed(2)}) scale(${zoom})`);
+    const osuma = ryhma.g.querySelector?.('.nostosym-tuike-osuma');
+    if (osuma) maare(osuma, 'r', osumaR.toFixed(2));
   }
   // Lunastuskortin "Katso X kartalla" -nappi lukee tämän, jottei pisteen
   // alle jäänyt kohde jää tavoittamattomiin (js/fokusnosto.js).

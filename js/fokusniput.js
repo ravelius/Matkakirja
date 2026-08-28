@@ -111,6 +111,34 @@
  *    kahden tai neljän merkin nippu ei muutu lainkaan: tiivistys alkaa
  *    vasta siitä, missä sarake muuten karkaisi kartalta.
  *
+ * 8. KAKSI MITTAA: MERKIN OMA JA SORMEN.
+ *
+ *    Omistajan pelitesti 28.8.2026 (jatko kohtaan 7): *"Viivat
+ *    pisteisiin ovat isompia, varsinkin ne pisteet ja symbolit, ovat
+ *    isompia kuin muut symbolit kartalla. --- selitetekstit, symbolit
+ *    ja tekstit voisivat olla pienemmällä ja paljon lähempänä silloin
+ *    Ateenaan."*
+ *
+ *    Merkkien NÄKYVÄ koko sai katon lehden omista mitoista (js/ui.js
+ *    fokusMerkkiSkaalaKartalle): kapea ruutu ei enää paisuta merkkiä yli
+ *    kartan omien symbolien. Nipun mitat jakautuvat siksi kahtia:
+ *
+ *      s       KATETTU merkkiskaala — rivien väli, yhdysviivan paksuus
+ *              ja katkot sekä merkkien omat aluslaatat. Kun merkki
+ *              pienenee, sarake tiivistyy samassa suhteessa ja rypäs
+ *              kutistuu kaupungin viereen — juuri se, mitä tilattiin.
+ *
+ *      sRuutu  KATTAMATON skaala eli sormen mitta lehden perustasolla.
+ *              Sillä lasketaan kaikki, mikä koskee NAPAUTUSTA:
+ *              kaupungin osuma-alue (NIPPU_LAATTA_R), sarakkeen etäisyys
+ *              (NIPPU_DX), vihreän pisteen väistövara (NIPPU_VAPAA) ja
+ *              se raja, jonka sisällä merkki katsotaan kaupungin päälle
+ *              osuneeksi. Nämä EIVÄT saa kutistua merkin mukana, tai
+ *              sarake palaisi kaupungin sormialueen päälle — se oli
+ *              koko nipun alkuperäinen tilaus (sääntö 1).
+ *
+ *    Leveällä ruudulla katto ei pure ja mitat ovat samat kuin ennen.
+ *
  * ── NIMET ON PREFIKSOITU ───────────────────────────────────────────
  *
  * Yhden tiedoston versio ketjuttaa moduulit samaan näkyvyysalueeseen
@@ -180,8 +208,23 @@ const NIPPU_VAISTOJA = 8;
  * ruutua. Isompi luku päästäisi sarakkeen taas ulos kuvasta, pienempi ei
  * enää muuttaisi mitään: alaraja tulee merkkien omasta koosta
  * (NIPPU_VALI_RAKO).
+ *
+ * 0,5 -> 0,3 (omistaja 28.8.2026: *"selitetekstit, symbolit ja tekstit
+ * voisivat olla pienemmällä ja paljon lähempänä silloin Ateenaan. Nyt ne
+ * haukkaavat liian ison osan kuva-alasta."*).
+ *
+ * PUOLIKAS OLI MITOITETTU ISOILLE MERKEILLE. Kun merkki oli iPhonella
+ * 9,7 lautayksikköä leveä, tiiviimpi sarake olisi ollut merkkikasa; nyt
+ * merkki on lehden oman symbolin mittainen 4,5 (sääntö 8), ja kolmannes
+ * lehden korkeudesta riittää hyvin: Ateenan kahdeksan merkin sarake on
+ * 12,5 yksikön välein eli lähes kolme merkinleveyttä harvassa.
+ * Alaraja on yhä merkkien omissa aluslaatoissa (NIPPU_VALI_RAKO), joten
+ * luku ei voi puristaa niitä päällekkäin.
+ *
+ * MITATTU (iPhone 390 x 844, Kreikan lehti, Ateena): sarakkeen korkeus
+ * 146 -> 87 lautayksikköä ja pisin yhdysviiva 55 -> 33.
  */
-const NIPPU_KORKEUS_OSUUS = 0.5;
+const NIPPU_KORKEUS_OSUUS = 0.3;
 
 /*
  * Tiivistetyn rivivälin alaraja: merkkien aluslaattojen väliin jäävä
@@ -315,7 +358,7 @@ function nippuViivakerros(ui) {
  * määreetkin kirjoitetaan vain muutoksessa (js/mapart.js maare) — sama
  * sääntö ja sama syy kuin kohdemerkkien muunnoksilla.
  */
-function nippuPiirraViivat(ui, viivat, s) {
+function nippuPiirraViivat(ui, viivat, s, sRuutu = s) {
   const kerros = nippuViivakerros(ui);
   if (!kerros) return;
   let i = 0;
@@ -324,8 +367,12 @@ function nippuPiirraViivat(ui, viivat, s) {
     const dy = v.y - v.cy;
     const pituus = Math.hypot(dx, dy);
     if (!(pituus > 0)) continue;
-    // Alkupää kaupungin laatan reunalta, loppupää merkin laatan reunaan.
-    const alku = NIPPU_LAATTA_R * s;
+    /*
+     * Alkupää kaupungin sormialueen reunalta (sRuutu, ks. sääntö 8),
+     * loppupää merkin oman aluslaatan reunaan (s) — kumpikin pää siis
+     * omassa mitassaan, jottei viiva jää minkään alle.
+     */
+    const alku = NIPPU_LAATTA_R * sRuutu;
     const loppu = pituus - (v.sade + NIPPU_VIIVA_RAKO) * s;
     if (loppu - alku < NIPPU_VIIVA_MIN * s) continue;
     const yx = dx / pituus;
@@ -392,19 +439,21 @@ function nippuRiviVali(jono, s, ikkuna) {
  * sattui asemoitumaan ensin. Työ on muutaman merkin lajittelu ilman
  * yhtäkään mittausta, joten passin voi ajaa huoletta joka kutsulla.
  */
-export function niputaFokusmerkit(ui, s) {
+export function niputaFokusmerkit(ui, s, sRuutu = s) {
   if (!ui || !(s > 0)) return;
+  // Sormen mitta ei saa jäädä nollaksi, jos kutsuja ei sitä anna.
+  const ruutu = sRuutu > 0 ? sRuutu : s;
   const merkit = nippuMerkit(ui);
   // Tyhjä kerros myös silloin kun nippua ei ole: vanhat viivat eivät saa
   // jäädä kartalle merkkien lähdettyä (ks. sääntö 6).
   if (!merkit.length) {
-    nippuPiirraViivat(ui, [], s);
+    nippuPiirraViivat(ui, [], s, ruutu);
     return;
   }
   const city = ui.fokusmoodi && !ui.katselu ? ui.game?.cityOf?.() : null;
   if (!city || !Number.isFinite(city.x) || !Number.isFinite(city.y)) {
     for (const { ryhma } of merkit) nippuAseta(ryhma, null, s);
-    nippuPiirraViivat(ui, [], s);
+    nippuPiirraViivat(ui, [], s, ruutu);
     return;
   }
   /*
@@ -421,8 +470,12 @@ export function niputaFokusmerkit(ui, s) {
       const e = Math.hypot(merkki.ryhma.x - kohta, merkki.ryhma.y - city.y);
       if (e < etaisyys) { etaisyys = e; cx = kohta; }
     }
-    // Törmäysraja merkkien perustason säteistä (ks. sääntö 1).
-    if (etaisyys < (NIPPU_LAATTA_R + merkki.sade) * s) {
+    /*
+     * Törmäysraja merkkien perustason säteistä (ks. sääntö 1):
+     * kaupungin sormialue kattamattomassa mitassa, merkin oma aluslaatta
+     * katetussa (sääntö 8).
+     */
+    if (etaisyys < NIPPU_LAATTA_R * ruutu + merkki.sade * s) {
       const jold = niput.get(cx) ?? [];
       jold.push({ merkki, jono });
       niput.set(cx, jold);
@@ -434,14 +487,16 @@ export function niputaFokusmerkit(ui, s) {
   const pisteet = (ui.fokuspisteRyhmat ?? [])
     .map(({ x, y }) => ({ x, y }))
     .filter((p) => Number.isFinite(p.x) && Number.isFinite(p.y));
-  const vapaa = NIPPU_VAPAA * s;
+  // Väistövara on kahden sormialueen summa — kattamaton mitta (sääntö 8).
+  const vapaa = NIPPU_VAPAA * ruutu;
   // Yhdysviivat kerätään samassa silmukassa ja piirretään kerralla.
   const viivat = [];
   for (const [cx, jono] of niput) {
     jono.sort((a, b) => (a.merkki.ryhma.y - b.merkki.ryhma.y)
       || (a.merkki.ryhma.x - b.merkki.ryhma.x)
       || (a.jono - b.jono));
-    const x = cx + NIPPU_DX * s;
+    // Sarakkeen etäisyys on kahden sormialueen summa (sääntö 8).
+    const x = cx + NIPPU_DX * ruutu;
     /*
      * RIVIVÄLI TIIVISTYY, JOS SARAKE EI MUUTEN MAHDU LEHTEEN (sääntö 7).
      * Väli lasketaan kerran koko sarakkeelle eikä riveittäin: eri
@@ -489,5 +544,5 @@ export function niputaFokusmerkit(ui, s) {
       }
     }
   }
-  nippuPiirraViivat(ui, viivat, s);
+  nippuPiirraViivat(ui, viivat, s, ruutu);
 }

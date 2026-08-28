@@ -45,7 +45,7 @@
  * (fokusvirtaKohtaamispiste), jotta piste, pelinappula ja kortti ovat
  * aina samaa mieltä siitä, onko kohtaaminen auki.
  */
-import { el } from './mapart.js';
+import { el, maare } from './mapart.js';
 import { avaaFokusKohtaaminen, fokusvirtaKohtaamispiste } from './fokusvirta.js';
 import { sfx } from './sound.js';
 
@@ -218,13 +218,23 @@ export function paivitaFokuspiste(ui) {
  * Vain lehdetön varapolku (js/ui.js fokusMerkkiSkaala) käyttää sitä.
  */
 function asetaPisteMittakaava(ui, suhde) {
-  const s = ui.fokusMerkkiSkaala?.(suhde);
+  /*
+   * KATETTU SKAALA (omistaja 28.8.2026, js/ui.js
+   * fokusMerkkiSkaalaKartalle): piste on kartan merkintä muiden
+   * joukossa, eikä kapea ruutu saa paisuttaa sitä yli lehden omien
+   * symbolien. Osuma-ympyrä pidetään sormen mitassa kertomalla säde
+   * takaisin ylös — sama kahden mitan sääntö kuin kohdemerkeillä.
+   */
+  const s = ui.fokusMerkkiSkaalaKartalle?.(suhde) ?? ui.fokusMerkkiSkaala?.(suhde);
   // Ilman mitattavaa näkymää muunnos jätetään entiselleen: väärä
   // mittakaava olisi pahempi kuin yhden kehyksen viive.
   if (!(s > 0)) return;
+  const osumaR = PISTE_OSUMA_R * (ui.fokusMerkkiOsumaKerroin?.(suhde) ?? 1);
   const zoom = s.toFixed(4);
   for (const ryhma of ui.fokuspisteRyhmat ?? []) {
     ryhma.g.setAttribute('transform', `translate(${ryhma.x} ${ryhma.y}) scale(${zoom})`);
+    const osuma = ryhma.g.querySelector?.('.fokuspiste-osuma');
+    if (osuma) maare(osuma, 'r', osumaR.toFixed(2));
   }
 }
 

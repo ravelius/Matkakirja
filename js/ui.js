@@ -844,7 +844,39 @@ const FOKUS_KUVAN_REUNA = [0.16, 0.28, 0.42, 0.62, 1];
  * sormenkokoinen (FOKUS_LAATTA_OSUMA_PX).
  */
 // 23 -> 19 (omistaja 27.8.2026 aamu: "sekä Ateenan laattaa").
-const FOKUS_LAATTA_PX = 19;
+/*
+ * 19 -> 15 (omistajan pelitesti 28.8.2026, iPhone: *"Myös Ateenan
+ * laatta ja pelinappula voi olla vielä pienempi."*). Laatta on yhä
+ * selvästi nappulaa leveämpi — perustasolla 15 px, kun kartalle
+ * piirretty nappula on 7,8 lautayksikköä leveä (NAPPULAN_POLKU) —
+ * joten sen reuna kiertää hahmon kuten ennenkin.
+ */
+const FOKUS_LAATTA_PX = 15;
+/*
+ * LEHDEN OMA PROTOTYYPPILEVEYS PIKSELEINÄ (tools/fokuskartta/piirto.js
+ * `S`): lehden kaikki ladonta — kirjainkoot, viivanleveydet,
+ * vuorikolmiot — on annettu 1600 pikselin levyisen lehden pikseleinä.
+ * Yksi lehden oma pikseli on siis `rajaus.w / 1600` lautayksikköä.
+ * Sama luku on js/fokuskohteet.js KOHDE_POLTETTU_PROTO, joka mittaa
+ * kuvaan poltettuja kaupunginnimiä.
+ */
+const FOKUS_LEHTI_PROTO = 1600;
+/*
+ * MERKIN KATTO LEHDEN OMINA PIKSELEINÄ (ks. fokusMerkkiSkaalaKartalle).
+ *
+ * Yksi merkin perustason pikseli saa olla enintään tämän verran lehden
+ * omia pikseleitä. 2,0 on mitoitettu kartan omista merkinnöistä: sillä
+ * katolla kohdemerkin symboli on lehden vuorikolmion mittainen (4,5 vs.
+ * 3,8 lautayksikköä Kreikan lehdellä) ja nimiö poltetun vuorennimen
+ * kokoinen (3,4 vs. 3,2) — merkki on kartan merkintä eikä nappi sen
+ * päällä. iPhonella kertoimeksi tulee 2,1 (9,7 -> 4,5), kun ennen
+ * merkki oli 2,6-kertainen kolmioon nähden.
+ *
+ * KATTO EI PURE LEVEÄLLÄ RUUDULLA. Kreikan lehdellä katto on 0,585,
+ * kun skaala on työpöydällä (1440 x 900) 0,356 ja iPadilla
+ * (834 x 1112) 0,572 — kummankaan näkymä ei siis muutu lainkaan.
+ */
+const FOKUS_MERKKI_KATTO = 2.0;
 /*
  * Napautusalue on suurempi kuin piirretty laatta: laatta on
  * fokusnäkymässä Tutki-napin paikka (alarivillä on vain Liiku), ja
@@ -856,12 +888,12 @@ const FOKUS_LAATTA_OSUMA_PX = 48;
  * 25.8.2026: *"Ateenan laatta sykkii kevyesti houkutellen
  * klikkaamaan"*). Laatan säde on FOKUS_LAATTA_PX / 2 = 11,5, joten 15
  * jättää kehän laatan ulkopuolelle mutta sen mittasuhteisiin — kehä
- * kutistui laatan mukana (17 → 15, ks. FOKUS_LAATTA_PX); CSS
+ * kutistui laatan mukana (17 → 15 → 12, ks. FOKUS_LAATTA_PX); CSS
  * kasvattaa sitä sykkeen huipussa muutaman pikselin
  * (css .fokuslaatta-syke). Kehä on olemassa vain silloin, kun laatan
  * napautus oikeasti tekee jotain (fokusLaattaTutkii).
  */
-const FOKUS_LAATTA_SYKE_PX = 15;
+const FOKUS_LAATTA_SYKE_PX = 12;
 /*
  * AARREMERKIN SÄDE LAUDAN YKSIKÖINÄ (omistajan pelitestitilaus
  * 26.8.2026: käännetty laatta korvaa kaupungin laatan *"vain
@@ -1000,20 +1032,28 @@ const NAPPULA_TYYLI = 'puinen';
  * siitä tulisi neula. Pää on suhteessa hitusen pienempi (halkaisija
  * 6,1 vs. jalusta 10) kuin ennen (8,6 vs. 13,2), jottei siitä tule
  * pienessä koossa nuppineulan päätä.
+ *
+ * VIELÄ 22 % PIENEMPI (omistajan pelitesti 28.8.2026, iPhone: *"Myös
+ * Ateenan laatta ja pelinappula voi olla vielä pienempi."*). Siluetti
+ * on nyt 7,8 x 14,1 yksikköä, eli koko polku on kerrottu 0,78:lla —
+ * mittasuhteet säilyvät täsmälleen, ja kaupungin laattaa (23,2)
+ * jää hahmon molemmin puolin entistä enemmän näkyviin. Fokusnäkymässä
+ * laatta on 15 px eli sekin kutistui (FOKUS_LAATTA_PX), joten hahmon
+ * ja laatan suhde pysyi.
  */
-const NAPPULAN_POLKU = 'M 5 0'
-  + ' C 5 -1.7 3.55 -1.9 3.2 -3.1'
-  + ' C 2.65 -5.75 2.1 -8.4 1.93 -10.35'
-  + ' L 2.8 -11.05'
-  + ' C 3.33 -11.45 3.18 -12.3 1.97 -12.7'
-  + ' A 3.05 3.05 0 1 0 -1.97 -12.7'
-  + ' C -3.18 -12.3 -3.33 -11.45 -2.8 -11.05'
-  + ' L -1.93 -10.35'
-  + ' C -2.1 -8.4 -2.65 -5.75 -3.2 -3.1'
-  + ' C -3.55 -1.9 -5 -1.7 -5 0'
-  + ' C -5 0.8 5 0.8 5 0 Z';
-/* Siluetin laki jalustasta mitattuna (pään keskipiste 15,03 + säde 3,05). */
-const NAPPULAN_LAKI = 18.1;
+const NAPPULAN_POLKU = 'M 3.9 0'
+  + ' C 3.9 -1.33 2.77 -1.48 2.5 -2.42'
+  + ' C 2.07 -4.49 1.64 -6.55 1.51 -8.07'
+  + ' L 2.18 -8.62'
+  + ' C 2.6 -8.93 2.48 -9.59 1.54 -9.91'
+  + ' A 2.38 2.38 0 1 0 -1.54 -9.91'
+  + ' C -2.48 -9.59 -2.6 -8.93 -2.18 -8.62'
+  + ' L -1.51 -8.07'
+  + ' C -1.64 -6.55 -2.07 -4.49 -2.5 -2.42'
+  + ' C -2.77 -1.48 -3.9 -1.33 -3.9 0'
+  + ' C -3.9 0.62 3.9 0.62 3.9 0 Z';
+/* Siluetin laki jalustasta mitattuna (pään keskipiste 11,72 + säde 2,38). */
+const NAPPULAN_LAKI = 14.1;
 /*
  * Osuma-alueen katto LAUDAN yksiköissä. Ruutumitta muuttuu laudan
  * yksiköiksi jakamalla zoomilla, ja yleiskuvassa (pieni zoom) jakolasku
@@ -6603,6 +6643,72 @@ export class UI {
     return 1 / (skaala * ele);
   }
 
+  /**
+   * KARTALLE PIIRRETTÄVIEN MERKKIEN SKAALA — SAMA, MUTTA KATOLLA.
+   *
+   * === MIKÄ VIKA OLI (omistajan pelitesti 28.8.2026, iPhone) ===
+   *
+   * *"Viivat pisteisiin ovat isompia, varsinkin ne pisteet ja symbolit,
+   * ovat isompia kuin muut symbolit kartalla. Samoin selitetekstit."*
+   *
+   * Merkit mitoitetaan RUUDUN PIKSELEINÄ lehden perustasolla
+   * (fokusMerkkiSkaala), ja perustaso on lehden ikkuna sovitettuna
+   * karttaruutuun. Puhelimen ruutu on kapea, joten sovitus tulee
+   * LEVEYDESTÄ: Kreikan lehti (468 × 292 lautayksikköä) on 374 pikselin
+   * ruudulla vain 374 pikseliä leveä, kun se työpöydän 1419 × 821
+   * ruudulla on 1313. Sama 6,8 pikselin merkki on siis puhelimella
+   * KARTALLA 3,5-kertainen — mitattuna 9,7 lautayksikköä, kun lehteen
+   * poltettu vuorikolmio on 3,8. Työpöydällä sama merkki on 2,7 eli
+   * kolmion mittainen, ja juuri siksi vika näkyi vain puhelimella.
+   * (Sama juurisyy kuin nippurivien välillä, ks. js/fokusniput.js
+   * sääntö 7.)
+   *
+   * === KATTO ON LEHDEN OMA TYPOGRAFIA ===
+   *
+   * Lehti ladotaan 1600 pikselin levyiselle prototyypille
+   * (tools/fokuskartta/piirto.js `S`), joten yksi LEHDEN OMA pikseli on
+   * `rajaus.w / 1600` lautayksikköä — sama muunnos, jolla poltettujen
+   * kaupunginnimien laatikot lasketaan (js/fokuskohteet.js
+   * KOHDE_POLTETTU_PROTO). Lehden omat merkinnät ovat sen pikseleitä:
+   * vuorikolmion säde 6,5, vuorennimen kirjasinkoko 11.
+   *
+   * Merkin skaala saa siksi katon LAUTAYKSIKÖISSÄ: yksi merkin
+   * perustason pikseli saa olla enintään FOKUS_MERKKI_KATTO lehden omaa
+   * pikseliä. Kapea ruutu ei silloin voi paisuttaa merkkejä yli kartan
+   * omien symbolien — leveällä ruudulla katto ei pure lainkaan, eikä
+   * työpöytänäkymä muutu.
+   *
+   * === OSUMA-ALUEET EIVÄT KUTISTU ===
+   *
+   * Katto koskee NÄKYVÄÄ merkkiä. Sormen 44 px:n sääntö elää edelleen
+   * kattamattomassa skaalassa: kerrokset kertovat osuma-ympyränsä säteen
+   * kahden arvon suhteella (fokusMerkkiOsumaKerroin, tai sama jakolasku
+   * siellä missä kattamatonta arvoa tarvitaan muutenkin), jolloin merkki
+   * pienenee mutta napautusala pysyy. Nipun etäisyydet jakautuvat samaa
+   * rajaa pitkin — ks. js/fokusniput.js sääntö 8.
+   */
+  fokusMerkkiSkaalaKartalle(suhde = 1) {
+    const s = this.fokusMerkkiSkaala(suhde);
+    if (!(s > 0)) return s;
+    const rajaus = this.fokusPohjaRajaus;
+    if (!(rajaus?.w > 0)) return s;
+    return Math.min(s, FOKUS_MERKKI_KATTO * rajaus.w / FOKUS_LEHTI_PROTO);
+  }
+
+  /**
+   * Paljonko osuma-ympyrää on kasvatettava, kun katto puree.
+   *
+   * Merkkiryhmä skaalataan katetulla arvolla, joten sormen mitta
+   * säilyy vain jos ympyrän säde kerrotaan tällä: 1 kun katto ei pure,
+   * ja katetun ja kattamattoman suhde silloin kun se puree.
+   */
+  fokusMerkkiOsumaKerroin(suhde = 1) {
+    const s = this.fokusMerkkiSkaala(suhde);
+    const katolla = this.fokusMerkkiSkaalaKartalle(suhde);
+    if (!(s > 0) || !(katolla > 0)) return 1;
+    return s / katolla;
+  }
+
   /* --- LAATTA ON FOKUSNÄKYMÄN TUTKI-NAPPI (omistaja 24.8.2026) ------- */
 
   /**
@@ -8065,12 +8171,13 @@ export class UI {
      * Varjo on nappulan jalustan levyinen — eikä leveämpi. Varjo on
      * ainoa TÄYTETTY osa hahmon ulkopuolella (vuororengas on pelkkä
      * viiva), joten se on myös ainoa, joka voi peittää kaupungin
-     * laattaa. 5 on täsmälleen jalustan puolikas: varjo on hahmon
+     * laattaa. 3,9 on täsmälleen jalustan puolikas: varjo on hahmon
      * kosketuskohta eikä sitä isompi läiskä, ja laatan reuna (11,6
      * laudan yksikköä) jää sen ympärille joka suunnasta näkyviin,
-     * kuten omistaja 28.8.2026 pyysi.
+     * kuten omistaja 28.8.2026 pyysi. Luku kutistui hahmon mukana
+     * (5 -> 3,9, ks. NAPPULAN_POLKU).
      */
-    const varjonR = NAPPULA_TYYLI === 'tinaherra' ? 10 : 5;
+    const varjonR = NAPPULA_TYYLI === 'tinaherra' ? 10 : 3.9;
     el('ellipse', { cx: 0, cy: 0, rx: varjonR, ry: varjonR * 0.36, class: 'pawn-shadow' }, varjo);
     /*
      * VUORON RENGAS MAKAA LAUDALLA (#100). Ympyrä kiersi ennen
@@ -8106,12 +8213,12 @@ export class UI {
        * ellipsin kaari kulkisi silti laatan yli — joten se mahtuu
        * sisään.
        *
-       * JA SELVÄSTI VARJOA ISOMPI (7,2 vs. varjonR 5). Yhtä suurina
+       * JA SELVÄSTI VARJOA ISOMPI (5,6 vs. varjonR 3,9). Yhtä suurina
        * rengas ja varjo asettuivat päällekkäin ja hahmon jalusta muuttui
        * yhdeksi tummaksi möhkäleeksi — sama pino, jota vastaan koko
        * tilaus tehtiin. Nyt rengas kiertää varjon ympäri renkaana.
        */
-      const renkaanR = NAPPULA_TYYLI === 'tinaherra' ? 12 : 7.2;
+      const renkaanR = NAPPULA_TYYLI === 'tinaherra' ? 12 : 5.6;
       el('ellipse', {
         cy: NAPPULAN_JALKA_Y, rx: renkaanR, ry: renkaanR * 0.383, class: 'pawn-active-ring',
       }, g);
@@ -8145,9 +8252,9 @@ export class UI {
       ? NAPPULAN_JALKA_Y - NAPPULAN_ANKKURI_Y * NAPPULAN_KORKEUS
       : NAPPULAN_JALKA_Y - NAPPULAN_LAKI;
     if (player.stars > 0) {
-      // Väli lakeen kutistui nappulan mukana (5 -> 3,4): merkki kuuluu
-      // hahmolle, ja entinen väli jättäisi sen leijumaan irralleen.
-      const y = lakiY - 3.4;
+      // Väli lakeen kutistui nappulan mukana (5 -> 3,4 -> 2,65): merkki
+      // kuuluu hahmolle, ja entinen väli jättäisi sen leijumaan irralleen.
+      const y = lakiY - 2.65;
       el('text', { x: 0, y, class: 'pawn-star', 'text-anchor': 'middle' }, hahmo).textContent = '◈';
     }
     return g;
