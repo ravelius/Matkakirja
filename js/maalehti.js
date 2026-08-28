@@ -21,7 +21,7 @@ import { karttapiste } from './packs/maakartat.js';
 import { radioMaalle } from './packs/radiot.js';
 import { vanhaTallenne } from './packs/vanhat-aanet.js';
 import { aiheAvain, piirraPoimintapillerit } from './pollopoiminnat.js';
-import { piirraReaktiot } from './reaktiot.js';
+import { piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.js';
 import { KIELET, MAATIEDOT } from './sisaltotaulut.js';
 import { taytaLahderivi } from './tekijakortti.js';
 import {
@@ -686,9 +686,15 @@ export function rakennaSisallysLista(ui, sisallys, { suljeValikko = null, etusiv
   return lista;
 }
 
-export function piirraVinkkilista(ui, kohde, ryhmat) {
+export function piirraVinkkilista(ui, kohde, ryhmat, sivuAvain = null) {
   for (const ryhma of ryhmat ?? []) {
-    if (ryhma.otsikko) kohde.appendChild(html('h4', 'vinkki-ryhma', ryhma.otsikko));
+    if (ryhma.otsikko) {
+      const ryhmanOtsikko = html('h4', 'vinkki-ryhma', ryhma.otsikko);
+      // Vinkkisivun ryhmäotsikko on väliotsikko siinä missä
+      // nostojenkin — sama nappi rivin päähän (js/reaktiot.js).
+      piirraOtsikonReaktio(ryhmanOtsikko, sivuAvain, ryhma.otsikko);
+      kohde.appendChild(ryhmanOtsikko);
+    }
     const lista = html('ul', 'vinkkilista');
     for (const k of ryhma.kohteet ?? []) {
       const rivi = html('li', `vinkki${k.tiedosto ? '' : ' kuvaton'}`);
@@ -797,29 +803,42 @@ export function aiheenOtsikko(ui, kategoria) {
  * samalla logiikalla kuin minitehtävän avain (js/ui.js).
  */
 function piirraAiheenPoiminnat(ui, kohde, kategoria, otsikko) {
-  if (!otsikko || kohde !== ui.arrivalKategoria) return;
-  if (ui.lehtitila?.tutkiTila === 'kehittaja' || !kategoria?.id) return;
+  piirraPoimintapillerit(kohde, aihesivunAvain(ui, kohde, kategoria, otsikko));
+}
+
+/**
+ * AIHESIVUN VAKAA TUNNISTE, tai null jos sivu ei ole pelaajan sivu.
+ *
+ * Kolme rajausta yhdessä paikassa, koska poiminnat, sivun reaktiorivi
+ * ja VÄLIOTSIKOIDEN reaktionapit tarvitsevat kaikki saman vastauksen:
+ * kehittäjän liitteistä (Raamattu, Tilanne, Tilastot) ei kerätä
+ * mitään, karttasivun nostokotelo ei ole oma juttunsa, eikä
+ * otsikoton esikatselukopio ole näkyvä sivu.
+ *
+ * @param {object} ui pelin käyttöliittymä
+ * @param {HTMLElement} kohde säiliö, johon sivu piirtyy
+ * @param {object} kategoria sivun kategoria
+ * @param {boolean} otsikko piirretäänkö sivulle otsikko
+ * @returns {string|null} aiheavain tai null
+ */
+function aihesivunAvain(ui, kohde, kategoria, otsikko) {
+  if (!otsikko || kohde !== ui.arrivalKategoria) return null;
+  if (ui.lehtitila?.tutkiTila === 'kehittaja' || !kategoria?.id) return null;
   const omistaja = ui.lehtitila?.tutkiTila === 'maa' && ui.lehtitila?.tutkiMaaLehti
     ? ui.lehtitila.tutkiMaaLehti : ui.lehtitila?.arrivalShownFor;
-  piirraPoimintapillerit(kohde, aiheAvain(omistaja, kategoria.id));
+  return aiheAvain(omistaja, kategoria.id);
 }
 
 /*
- * REAKTIORIVI AIHESIVULLE (js/reaktiot.js): peukku ja virheilmoitus
- * sivun lopussa, poimintapillerien EDELLÄ.
+ * REAKTIONAPPI AIHESIVULLE (js/reaktiot.js): viisi symbolia sivun
+ * lopussa, poimintapillerien EDELLÄ.
  *
- * Rajaus on sama kuin poiminnoilla ja samasta syystä: kehittäjän
- * liitteistä (Raamattu, Tilanne, Tilastot) ei anneta palautetta
- * pelaajan kanavaan, eikä karttasivun nostokotelo ole oma juttunsa.
  * Tunniste on sama aiheavain, jolla poiminnat kiinnittyvät — sama
  * sivu, sama nimi omistajan Lukijoilta-lehdessä.
  */
 function piirraAiheenReaktiot(ui, kohde, kategoria, otsikko) {
-  if (!otsikko || kohde !== ui.arrivalKategoria) return;
-  if (ui.lehtitila?.tutkiTila === 'kehittaja' || !kategoria?.id) return;
-  const omistaja = ui.lehtitila?.tutkiTila === 'maa' && ui.lehtitila?.tutkiMaaLehti
-    ? ui.lehtitila.tutkiMaaLehti : ui.lehtitila?.arrivalShownFor;
-  piirraReaktiot(kohde, aiheAvain(omistaja, kategoria.id), { otsikko: kategoria.nimi ?? '' });
+  piirraReaktiot(kohde, aihesivunAvain(ui, kohde, kategoria, otsikko),
+    { otsikko: kategoria?.nimi ?? '' });
 }
 
 export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { otsikko = true } = {}) {
@@ -837,8 +856,13 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
    * musiikkilinkit, ääninäytteet ja "Lue lisää aiheesta" -napit,
    * joita kategorianostoissa ei ole.
    */
+  // Sivun vakaa tunniste kerran: sekä sivun oma reaktionappi että
+  // jokaisen väliotsikon nappi johdetaan tästä (js/reaktiot.js
+  // otsikkoAvain). Null = kehittäjän liite tai esikatselukopio, jolloin
+  // nappeja ei piirretä lainkaan.
+  const sivuAvain = aihesivunAvain(ui, kohde, kategoria, otsikko);
   if (kategoria.litteä) {
-    ui.piirraKulttuuriNostot(kohde, kategoria.nostot ?? []);
+    ui.piirraKulttuuriNostot(kohde, kategoria.nostot ?? [], sivuAvain);
     return;
   }
   /*
@@ -921,7 +945,7 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
       // Hero johdannon perään, ennen ryhmiä.
       kohde.appendChild(hero);
     }
-    piirraVinkkilista(ui, kohde, kategoria.lista);
+    piirraVinkkilista(ui, kohde, kategoria.lista, sivuAvain);
     piirraAiheenReaktiot(ui, kohde, kategoria, otsikko);
     piirraAiheenPoiminnat(ui, kohde, kategoria, otsikko);
     // Kevyen kulun nimetty tehtävä voittaa sivun oman; ilman kumpaakaan
@@ -956,6 +980,15 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
     // merkitä jotenkin otsikkorivillä") — kenttä on vapaaehtoinen
     // ja toimii millä tahansa sivulla.
     if (nosto.aika) otsikkoRivi.appendChild(html('span', 'nosto-aika', nosto.aika));
+    /*
+     * VÄLIOTSIKON REAKTIONAPPI (omistajan tilaus 27.8.2026:
+     * "reaktionappi jokaiseen popupiin ja lehtien jokaiseen
+     * väliotsikkoon"). Nappi on rivin PÄÄSSÄ eikä leipätekstin päällä:
+     * lepotilassa se on yksi himmeä merkki, ja vasta napautus levittää
+     * viisi symbolia. Ajankohta jää sen vasemmalle puolelle, koska
+     * ajankohta kuuluu otsikkoon ja nappi ei.
+     */
+    piirraOtsikonReaktio(otsikkoRivi, sivuAvain, nosto.otsikko);
     lohko.appendChild(otsikkoRivi);
     let kuva = null;
     if (nosto.tiedosto) {

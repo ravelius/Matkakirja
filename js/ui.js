@@ -116,10 +116,11 @@ import {
   polloVihje, polloVihjePois,
 } from './pollo.js';
 import { ajastaEhdotusKupla, ehdotusOsio, proHakuRasti, proOsio } from './ehdotukset.js';
-// Peukku ja virheilmoitus sisällön kylkeen (js/reaktiot.js). ui.js
-// tarvitsee tästä vain kuvasuurennoksen rivin; lehden ja jutun omat
-// rivit piirretään niiden omissa moduuleissa.
-import { piirraReaktiot } from './reaktiot.js';
+// Viiden symbolin reaktionappi sisällön kylkeen (js/reaktiot.js).
+// ui.js tarvitsee tästä kuvasuurennoksen napin ja litteiden
+// kulttuurinostojen väliotsikkonapit; lehden ja jutun omat napit
+// piirretään niiden omissa moduuleissa.
+import { piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.js';
 /*
  * SÄHKEPINTA (Raamattu, osio SÄHKEJÄRJESTELMÄ): retkikunta, sähkeet ja
  * kaveriapu asuvat omassa moduulissaan (js/sahke.js). ui.js kutsuu
@@ -11238,7 +11239,7 @@ export class UI {
    * muutoksella — ja juuri musiikkilinkit ja ääninäytteet ovat se osa,
    * jota muutetaan useimmin.
    */
-  piirraKulttuuriNostot(lista, nostot) {
+  piirraKulttuuriNostot(lista, nostot, sivuAvain = null) {
     lista.textContent = '';
     // Nostot tulevat parametrina. Tässä luki aiemmin `tiedot.nostot`,
     // joka jäi metodia irrotettaessa osoittamaan kutsuvan funktion
@@ -11254,6 +11255,13 @@ export class UI {
       // Ääninäyte, Apple Music ja ilmainen musiikkinäyte — yhteinen
       // toteutus kategorianostojen kanssa (lisaaNostonNapit).
       this.lisaaNostonNapit(otsikkoRivi, nosto);
+      /*
+       * VÄLIOTSIKON REAKTIONAPPI (js/reaktiot.js) rivin päähän, sama
+       * kuin kategorianostoilla (js/maalehti.js). Sivuavain tulee
+       * kutsujalta: Tutki-ikkunan liuska tietää, mikä sivu on auki,
+       * eikä sitä voi päätellä täältä ilman lehtitilan kaivamista.
+       */
+      piirraOtsikonReaktio(otsikkoRivi, sivuAvain, nosto.otsikko);
       lohko.appendChild(otsikkoRivi);
       if (nosto.tyyppi === 'kuva' && nosto.tiedosto) {
         const kuva = document.createElement('img');
