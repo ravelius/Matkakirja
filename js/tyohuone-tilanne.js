@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1264: Sofian maadoituskupla sai valittajaotteen (Kaak-avaus + helmikuu 1873, yli 150 vuotta, oikeudenkaytto oli toisenlainen - ei enaa piikkia isoisalle) ja chat-Livialle uusi SYNKKA AIHE JA PARIPERIAATE -saanto. Muut viisi maadoitusta ja 10 saapumisrepliikkia auditoitu - ennallaan.',
   'v1263: BGR-lehden terava alareuna (iPhone) sulaa nyt hivytysmaskilla myos perilla; fokusmerkit, nimiot ja katkoviivat tulevat nakyviin vasta kun kamera-ajo on ohi ja nappula perilla (1,4 s maanvaihdosta), 620 ms feidauksella. Testaa siirtyma Ateenasta Sofiaan puhelimella.',
   'v1262: Raamattuun kaksi uutta linjausta: Livia aikasiirtyman valittajana (reaktiot isoisan merkintoihin suunnitellaan pareittain, hurjissa tarinoissa valittaja eika naljailija) ja ihmeselitteiden mittakaava + isoisan mittausviittaukset. Sisaltotyot tulevat erikseen.',
   'v1261: 29 ihmeselitetta taydennetty kertomaan miten kohdetta kaytettiin loistonsa paivina (esim. Faros, Colosseum, Delfoi, Ishtarin portti); 6 kertoi sen jo. Epavarmuudet merkitty (mm. Babylonin puutarhat). Pistokokeita ihmekortteihin eri maissa.',

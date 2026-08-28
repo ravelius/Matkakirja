@@ -32,8 +32,10 @@
  *  10. ATEENASSA EI maadoituskuplaa: aloituskaupungin kaksi ohjekuplaa
  *      saavat tilan (omistajan päätös 27.8.2026).
  *  11. SOFIASSA isoisän maadoitus tulee Livian saapumiskuplaan heti
- *      matkakirjaluennan päätyttyä, nimilappuineen. Väite EI ole
- *      FOKUSVIRTA_KORTIT-kytkimen takana — se on kevyen kulun oma.
+ *      matkakirjaluennan päätyttyä, nimilappuineen — ja kuplassa on
+ *      säikähdyksen JÄLKEEN aikasiirtymän konteksti (pariperiaate,
+ *      Raamattu v1262). Väite EI ole FOKUSVIRTA_KORTIT-kytkimen
+ *      takana — se on kevyen kulun oma.
  *  12. VENETSIASSA sama kupla kertoo kaupungin oman saapumisrepliikin:
  *      fokusvirrattomassa kaupungissa puheenvuoro tulee tavallisen
  *      saapumismerkinnän perästä (omistajan laajennus 28.8.2026).
@@ -238,9 +240,19 @@ const sofianKupla = await sivu.evaluate(async () => {
   }
   return { teksti: '', nimilappu: '', yliviivaus: false };
 });
+/*
+ * VÄITE MITTAA PARIPERIAATTEEN (Raamattu v1262): Sofian merkintä on
+ * laudan synkin, joten kuplassa pitää näkyä KAKSI asiaa peräkkäin —
+ * säikähdysavaus ja sen jälkeen aikasiirtymän välitys eli konkreettinen
+ * historiakonteksti. Toinen ehto tarkistaa siksi, että kuplassa on
+ * vuosiluku 1873 ja etäisyys nykyhetkeen ("sataviisikymmentä vuotta").
+ * Jos joku kirjoittaa kontekstin pois ja jättää pelkän säikähdyksen,
+ * savuke kaatuu tähän.
+ */
 vaadi('Sofiassa isoisän maadoitus tulee Livian saapumiskuplaan',
   /^Kääk\. Olipas hurja juttu/.test(sofianKupla.teksti)
-    && /Isoisäsi kirjoittaa tämän kuin salaisuus/.test(sofianKupla.teksti)
+    && /1873/.test(sofianKupla.teksti)
+    && /sataviisikymmentä vuotta/.test(sofianKupla.teksti)
     && sofianKupla.yliviivaus === true && /Pulu/.test(sofianKupla.nimilappu),
   JSON.stringify(sofianKupla).slice(0, 200));
 

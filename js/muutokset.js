@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1264, teksti: 'Sofian valittajaote ja synkan aiheen saanto' },
   { v: 1263, teksti: 'Lehtisauma pois ja merkit vasta saapumisen jalkeen' },
   { v: 1262, teksti: 'Raamattu: pariperiaate ja ihmeiden mittakaava' },
   { v: 1261, teksti: 'Ihmeselitteisiin loistoaikojen kaytto' },
