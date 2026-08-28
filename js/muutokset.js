@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1285, teksti: 'Lehden juttusivun kysymysehdotukset ja odotusrivi' },
   { v: 1283, teksti: 'Tilannetaulu ajan tasalle ja ihmesavukkeen odotukset' },
   { v: 1282, teksti: 'Ihmekuvat uusiksi 31 kohteeseen' },
   { v: 1281, teksti: 'Tampereen herot ja korjatut herokuvat' },

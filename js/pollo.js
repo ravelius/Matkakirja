@@ -1298,6 +1298,8 @@ class Pollo {
     this.ehdotukset = polloElementti('div', 'pollo-ehdotukset');
     this.ehdotukset.hidden = true;
     this.virta.appendChild(this.ehdotukset);
+    // Kesken olevan ehdotushaun odotusrivi, tai null (naytaEhdotusOdotus).
+    this.ehdotusOdotus = null;
 
     /*
      * Vastauksen alle varattava tyhjä (viritaTyhjaTila). Lohko on
@@ -1358,17 +1360,51 @@ class Pollo {
    * ja sen alla oleva kaupunkilehti olisivat pöllölle sama tilanne,
    * eivätkä edellisen kohteen kysymyskuplat väistyisi — ja juuri niin
    * kävi (omistajan bugiraportti 21.8.2026).
+   *
+   * MYÖS KAUPUNKILEHDEN SIVU ON OMA TILANTEENSA (omistajan tilaus
+   * 28.8.2026: *"Kaupunkilehden juttuihin ja niiden alijuttuihin ei
+   * pöllö vielä osaa generoida kysymyksiä"*). Lehden jokainen aihesivu
+   * on oma juttunsa alijuttuineen, ja sen teksti menee kontekstiin
+   * (LEHTI_LOHKOT `#arrival-kategoria`) — mutta avain oli koko lehdelle
+   * yhteinen `kaupunki:lehti`. Kun pelaaja käänsi sivua paneeli auki,
+   * tilanne ei siis muuttunut miksikään: ruudulle jäivät EDELLISEN
+   * jutun kysymykset, eikä uudelle jutulle generoitu mitään. Sivu on
+   * nyt osa avainta, jolloin sama koneisto (tarkistaKonteksti) siivoaa
+   * naapurijutun tarjokkaat ja hakee uudet.
    */
   kysymysAvain() {
     const juttu = paallimmainenJuttu(this.doc);
     if (juttu) return `${juttu.id}:${juttu.aihe ?? ''}`;
     const tilanne = this.valmiskysymysTilanne();
-    if (tilanne) return `${tilanne.kaupunki}:${tilanne.konteksti}`;
+    if (tilanne) {
+      const sivu = tilanne.konteksti === 'lehti' ? this.lehdenSivuTunnus() : '';
+      return `${tilanne.kaupunki}:${tilanne.konteksti}${sivu ? `:${sivu}` : ''}`;
+    }
     const ui = this.haeUi?.() ?? null;
     const lehti = this.doc.getElementById?.('arrival-dialog') ?? null;
     const maa = lehti?.open ? ui?.lehtitila?.tutkiMaaLehti ?? '' : '';
     const kaupunki = ui?.game?.player?.pos?.city ?? '';
     return `${kaupunki}:${maa ? `maa-${maa}` : 'muu'}`;
+  }
+
+  /**
+   * Auki oleva kaupunkilehden sivu yhtenä tunnisteena.
+   *
+   * Sivu 0 on lehden etusivu ja aiheet alkavat sivulta 1, joten sivun
+   * n sisältö on `tutkiSivut[n - 1]` (sama laskenta kuin js/lehti.js
+   * naytaTutkiSivu). Tunniste otetaan aiheen omasta id:stä tai
+   * nimestä, koska sivunumero yksin vaihtaisi merkitystään heti kun
+   * kaupunkiin kirjoitetaan uusi aihe. Numero on vain varalla.
+   *
+   * @returns {string} tunniste, tai '' jos lehtitilaa ei ole
+   */
+  lehdenSivuTunnus() {
+    const lehtitila = this.haeUi?.()?.lehtitila ?? null;
+    if (!lehtitila) return '';
+    const i = lehtitila.tutkiSivu ?? 0;
+    if (!i) return 'etusivu';
+    const sivu = lehtitila.tutkiSivut?.[i - 1] ?? null;
+    return String(sivu?.id ?? sivu?.nimi ?? i);
   }
 
   /**
@@ -1388,6 +1424,7 @@ class Pollo {
    */
   siivoaTarjokkaat() {
     for (const vanha of this.virta.querySelectorAll('.pollo-jatkot')) vanha.remove();
+    this.ehdotusOdotus = null;
     this.ehdotukset.replaceChildren();
     this.ehdotukset.hidden = true;
     this.poistaValmiit();
@@ -2121,7 +2158,25 @@ class Pollo {
       new MutationObserver(() => {
         this.kiinnita();
         if (!dialogi.open && this.auki) this.sulje();
+        // Juttuikkunan avautuminen lehden päälle on uusi tilanne
+        // (kysymysAvain): paneeli seuraa perässä, joten myös tarjonnan
+        // pitää — muuten jutun päällä näkyvät lehden kysymykset.
+        else this.tarkistaKonteksti();
       }).observe(dialogi, { attributes: true, attributeFilter: ['open'] });
+    }
+    /*
+     * LEHDEN SIVUNVAIHTO on tilanteen vaihdos siinä missä ikkunan
+     * avautuminen, mutta se ei liikuta yhtään dialogia eikä lähetä omaa
+     * tapahtumaansa: aihesivu piirtyy `#arrival-kategoria`-koteloon
+     * (js/lehti.js naytaTutkiSivu → piirraKategoria). Kotelon lapsien
+     * vaihtuminen on siis se signaali, jonka varassa auki oleva paneeli
+     * huomaa siirtyneensä juttuun. tarkistaKonteksti vertaa avaimet, ja
+     * saman sivun uudelleenpiirto ei siksi tee mitään.
+     */
+    const kategoria = this.doc.getElementById('arrival-kategoria');
+    if (kategoria) {
+      new MutationObserver(() => this.tarkistaKonteksti())
+        .observe(kategoria, { childList: true });
     }
     if (intro) {
       new MutationObserver(() => this.paivitaNakyvyys())
@@ -2258,6 +2313,30 @@ class Pollo {
      * ehdotuslistaa olisi yksi liikaa. Kaupungeissa, joille valmiita
      * ei vielä ole kirjoitettu, kaikki toimii täsmälleen kuten ennen.
      */
+    if (!this.naytaValmiit(avain)) this.haeEhdotukset();
+  }
+
+  /**
+   * TILANNE VAIHTUI PANEELIN ALLA (omistajan tilaus 28.8.2026).
+   *
+   * Avaus virittää tarjonnan kerran (avaa), mutta pelaaja lukee lehteä
+   * paneeli auki: hän kääntää sivua, avaa nähtävyysjutun ja palaa
+   * takaisin. Ennen tätä mikään noista ei muuttanut mitään — ruudulla
+   * roikkuivat EDELLISEN jutun kysymykset, eikä uudelle jutulle
+   * generoitu omia. Nyt sama sääntö kuin avauksessa: jos tilanteen
+   * avain vaihtui, vanhat tarjokkaat siivotaan ja uudet haetaan.
+   *
+   * YKSI MEKANISMI, EI ERIKOISTAPAUSTA. Vertailu on kysymysAvain, joten
+   * kaikki näkymänvaihdot — lehden sivu, nähtävyysjuttu, "Lue lisää"
+   * -artikkeli, kaupungin vaihtuminen — kulkevat tästä samasta portista.
+   * Suljetun paneelin kanssa ei tehdä mitään: avaa hoitaa sen.
+   */
+  tarkistaKonteksti() {
+    if (!this.auki || !this.palvelin) return;
+    const avain = this.kysymysAvain();
+    if (avain === this.tarjottuAvain) return;
+    this.siivoaTarjokkaat();
+    this.tarjottuAvain = avain;
     if (!this.naytaValmiit(avain)) this.haeEhdotukset();
   }
 
@@ -3445,8 +3524,9 @@ class Pollo {
 
   async haeEhdotukset() {
     if (this.kesken || !this.palvelin) return;
-    this.ehdotukset.replaceChildren();
-    this.ehdotukset.hidden = true;
+    // Ehdotusrivin paikalle odotusrivi koko haun ajaksi: tyhjä väli oli
+    // pelaajalle sama asia kuin "ei kysymyksiä" (ks. naytaEhdotusOdotus).
+    const odotus = this.naytaEhdotusOdotus();
     /*
      * Ehdotushaku EI lukitse syöteriviä (omistaja 13.8.2026: "saisiko
      * pöllön mikrofonin käyttöön heti? Nyt se odottaa muutaman
@@ -3459,13 +3539,61 @@ class Pollo {
     const poletti = (this.ehdotusPoletti = (this.ehdotusPoletti ?? 0) + 1);
     try {
       const data = await this.pyyda({ tehtava: 'ehdotukset', konteksti: this.konteksti() });
-      if (poletti !== this.ehdotusPoletti || this.kesken) return;
+      if (poletti !== this.ehdotusPoletti || this.kesken) {
+        // Vanhentunut haku vie mennessään vain OMAN odotusrivinsä:
+        // tuoreempi haku on jo pannut oman tilalle.
+        this.poistaEhdotusOdotus(odotus);
+        return;
+      }
       this.naytaEhdotukset(Array.isArray(data?.ehdotukset) ? data.ehdotukset : []);
     } catch {
       // Ehdotukset ovat lisä, eivät välttämättömiä: jos ne eivät tule,
       // sanelu ja kirjoituskenttä riittävät eikä pelaajalle valiteta.
-      this.ehdotukset.hidden = true;
+      // Odotusrivi lähtee joka tapauksessa: epäonnistunut haku ei saa
+      // jättää animaatiota pyörimään tyhjän päälle.
+      this.poistaEhdotusOdotus(odotus);
+      if (!this.ehdotukset.childElementCount) this.ehdotukset.hidden = true;
     }
+  }
+
+  /**
+   * ODOTUSRIVI EHDOTUSTEN PAIKALLE (omistajan tilaus 28.8.2026:
+   * *"Generoinnin aikana saisi näkyä pieni odotusanimaatio"*).
+   *
+   * Ehdotukset syntyvät palvelimella, ja siihen menee sekunteja. Ennen
+   * tätä rivi oli sen ajan tyhjä, eikä pelaaja voinut tietää, onko
+   * kysymyksiä tulossa vai eikö niitä tässä kohtaa ole lainkaan.
+   *
+   * SAMA KIELI KUIN VASTAUSTA ODOTTAESSA, pienempänä: rivi on sama
+   * `.pollo-viesti.pollo-odottaa` -nimilappu kuin kysymyksen alla
+   * ("Pöllö Pulu miettii…", pöllö yli vedettynä — polloNimilappu), vain
+   * ehdotusrivin kokoon kutistettuna ja hitaasti hengittävänä (css
+   * `.pollo-ehdotus-odotus`). Uutta odotuskieltä ei keksitä.
+   *
+   * Rivi asuu ehdotuskotelossa, joten se katoaa itsestään samoista
+   * paikoista kuin kuplatkin: naytaEhdotukset, siivoaTarjokkaat ja
+   * kysy tyhjentävät kotelon.
+   *
+   * @returns {object} luotu rivi (kutsuja poistaa juuri sen)
+   */
+  naytaEhdotusOdotus() {
+    this.ehdotukset.replaceChildren();
+    const rivi = polloElementti('p', 'pollo-viesti pollo-odottaa pollo-ehdotus-odotus');
+    polloNimilappu(rivi, { jalkeen: ' miettii kysymyksiä…' });
+    this.ehdotusOdotus = rivi;
+    this.ehdotukset.appendChild(rivi);
+    this.ehdotukset.hidden = false;
+    // Sama paikka kuin valmiilla ehdotuksilla: viimeisen viestin perässä.
+    this.virta.appendChild(this.ehdotukset);
+    this.virta.scrollTop = this.virta.scrollHeight;
+    return rivi;
+  }
+
+  /** Odotusrivi pois. Poistaa vain annetun rivin, ei tuoreempaa. */
+  poistaEhdotusOdotus(rivi = this.ehdotusOdotus) {
+    if (!rivi) return;
+    if (this.ehdotusOdotus === rivi) this.ehdotusOdotus = null;
+    rivi.remove?.();
   }
 
   naytaEhdotukset(lista) {
@@ -3473,6 +3601,8 @@ class Pollo {
     // ehdotusjoukko. Ilman tätä paneelin uudelleenavaus jätti edellisen
     // vastauksen jatkokysymykset pinoon uusien ylle (omistaja 13.8.2026).
     for (const vanha of this.virta.querySelectorAll('.pollo-jatkot')) vanha.remove();
+    // Odotusrivi lähtee kotelon mukana: haku on valmis.
+    this.ehdotusOdotus = null;
     this.ehdotukset.replaceChildren();
     for (const teksti of lista.slice(0, 2)) {
       const nappi = polloElementti('button', 'pollo-ehdotus', teksti);
@@ -3508,6 +3638,7 @@ class Pollo {
     // Tilarivi tyhjenee: kysymys on jo keskustelussa, eikä sanelun
     // väliaikainen teksti saa jäädä vastauksen alle.
     this.saneluTila.textContent = '';
+    this.ehdotusOdotus = null;
     this.ehdotukset.replaceChildren();
     this.ehdotukset.hidden = true;
     // Valmiskysymykset koskevat vain kontekstinsa keskustelun alkua:

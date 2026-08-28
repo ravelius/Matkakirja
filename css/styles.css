@@ -18670,6 +18670,42 @@ button.pollo-ehdotus:disabled { opacity: 0.5; cursor: default; }
 .pollo-viesti.pollo-odottaa { color: var(--pollo-muste-himmea); font-style: italic; }
 
 /*
+ * ── EHDOTUSTEN ODOTUSRIVI (omistajan tilaus 28.8.2026: "Generoinnin
+ * aikana saisi näkyä pieni odotusanimaatio"). ──
+ *
+ * Kysymysehdotukset generoidaan palvelimella, ja sen ajan ehdotusrivi
+ * oli tyhjä — pelaajalle sama asia kuin "ei kysymyksiä". Rivin paikalle
+ * tulee nyt SAMA odotusnimilappu kuin vastausta odottaessa (yllä), vain
+ * ehdotusnapin kokoon kutistettuna: uutta odotuskieltä ei ole, ja rivi
+ * perii kursiivin ja himmeän musteen .pollo-odottaa-säännöstä.
+ *
+ * Animaatio on hidas hengitys eikä pyörivä ratas: pöllön pinta on
+ * paperia ja mustetta, eikä latauskiekko kuulu siihen. Liike on myös
+ * ainoa merkki siitä, että jotain on tulossa — pysähtynyt rivi
+ * näyttäisi virheeseen jääneeltä.
+ */
+.pollo-ehdotukset .pollo-ehdotus-odotus {
+  margin: 0;
+  padding: 0.4rem 0.55rem;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  animation: pollo-odotus-hengitys 1.8s ease-in-out infinite;
+}
+
+@keyframes pollo-odotus-hengitys {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 1; }
+}
+
+/*
+ * Liikeherkälle lukijalle rivi jää paikalleen luettavana: teksti
+ * kertoo saman kuin liike (sama sääntö kuin muualla pelissä).
+ */
+@media (prefers-reduced-motion: reduce) {
+  .pollo-ehdotukset .pollo-ehdotus-odotus { animation: none; opacity: 0.85; }
+}
+
+/*
  * ── PÖLLÖ IRTI REUNASTA JA VÄLJEMPI ISOLLA RUUDULLA (omistaja
  * 13.8.2026 ilta: "Pöllö saisi olla hieman irti reunasta. Teksti
  * aavistuksen isompaa ja aavistuksen isompi marginaali"). ──
