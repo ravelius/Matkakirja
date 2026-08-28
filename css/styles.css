@@ -7545,6 +7545,119 @@ body.flight-active .fact-card {
   color: #cbb992;
 }
 
+/* --- pääaarteen luettelotekstit tummassa mallissa (28.8.2026 ilta) --
+ *
+ * Omistajan tilaus: *"laita kaikki tekstit mukaan tuohon aarteen
+ * esikatseluun"*. Kun pääaarre siirtyi diplomista tummaan malliin,
+ * Aarnin luettelon otsake, manner, arvorivi ja LÖYDETTY-leima jäivät
+ * pois. Ne palaavat tähän TUMMAN MALLIN OMANA ulkoasuna: kullansävyistä
+ * versaalia suoraan mustan päälle. EI pergamenttiarkkia, EI
+ * kaiverruskehystä ja EI vaalenevaa pohjaa — kuvan tumma tausta jatkuu
+ * saumatta overlayn mustaan, mikä oli koko siirron syy.
+ *
+ * Diplomin `.reveal-otsake`, `.reveal-alaotsake` ja `.reveal-alanauha`
+ * on ladottu absoluuttisesti kehyskuvan kartussiin ja nauhaan, joten
+ * tumma malli ei voi käyttää niitä: sillä on omat luokkansa, jotka ovat
+ * scene-gridin tavallisia rivejä.
+ */
+
+/* Nimiö ja jalka tuovat kortille viisi riviä kolmen sijaan; scenen
+ * 1.5 rem:n väli venyttäisi pinon matalalla näytöllä vieritykseen.
+ * Merkkiluokan antaa rakennaPaljastus. */
+.reveal-scene.luettelo { gap: 1.05rem; }
+
+.reveal-tunnus {
+  display: grid;
+  justify-items: center;
+  gap: 0.3rem;
+  text-align: center;
+  /* Nimiö nousee kuvan mukana: tummassa mallissa pohja === scene, joten
+     sama `.shown` kantaa molemmat. */
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.reveal-scene.shown .reveal-tunnus { opacity: 1; transform: none; }
+
+.reveal-tunnus-otsake {
+  font-family: var(--font-type);
+  font-weight: 700;
+  font-size: clamp(0.74rem, 2.6vmin, 0.94rem);
+  letter-spacing: 0.26em;
+  /* Versaalin viimeinen välike työntäisi rivin vasemmalle ilman tätä. */
+  text-indent: 0.26em;
+  text-transform: uppercase;
+  color: #e8c98a;
+}
+
+/* Ohut kultaviiva otsakkeen alle — sama ele kuin diplomin
+ * jakoviivalla, mutta piirrettynä kirjaimeen eikä arkille. */
+.reveal-tunnus-otsake::after {
+  content: '';
+  display: block;
+  width: 3.6rem;
+  height: 1px;
+  margin: 0.36rem auto 0;
+  background: linear-gradient(
+    90deg,
+    rgba(232, 201, 138, 0) 0%,
+    rgba(232, 201, 138, 0.72) 50%,
+    rgba(232, 201, 138, 0) 100%
+  );
+}
+
+.reveal-tunnus-alaotsake {
+  font-family: var(--font-type);
+  font-size: clamp(0.6rem, 2.2vmin, 0.78rem);
+  letter-spacing: 0.2em;
+  text-indent: 0.2em;
+  color: #bda87e;
+}
+
+/*
+ * JALKA: arvorivi ja leima tekstien alle. Jalka on caption-lohkon
+ * sisarus, joten yleinen sisarvalitsin tuo sen esiin samalla kahvalla
+ * kuin tekstit — JS ei tarvitse omaa luokkaa. Leima jää silti pimeään
+ * jalan sisällä, kunnes playTokenReveal lyö sen.
+ */
+.reveal-loyto {
+  display: grid;
+  justify-items: center;
+  gap: 0.55rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+}
+
+.reveal-caption.shown ~ .reveal-loyto { opacity: 1; transform: none; }
+
+.reveal-arvo {
+  font-family: var(--font-type);
+  font-size: clamp(0.84rem, 2.8vmin, 1.02rem);
+  letter-spacing: 0.16em;
+  text-indent: 0.16em;
+  text-transform: uppercase;
+  color: #e0be7c;
+}
+
+/*
+ * LÖYDETTY-LEIMA MUSTALLA POHJALLA: sama kumileima kuin diplomilla
+ * (epätasainen painauma maskissa, sama lyöntianimaatio), mutta gridin
+ * rivinä eikä arkin kulmassa — ja punainen nostettuna kirkkaammaksi,
+ * koska diplomin musteenpunainen katoaisi mustaan.
+ */
+.reveal-leima.tumma {
+  position: static;
+  color: #e2664c;
+  border-color: #b8412e;
+  font-size: clamp(0.8rem, 2.9vmin, 1.06rem);
+  /* Kevyt hehku irrottaa leiman mustasta ilman että siitä tulee
+     laatikko — sama kaava kuin Jatka matkaa -napin kultakajossa. */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 20px rgba(184, 65, 46, 0.16);
+}
+
 /* --- vaaleat paljastusmallit (leiskapäätökset 28.8.2026) ------------
  *
  * Yhteinen tausta molemmille: pelin näkymä kuultaa purppuraan

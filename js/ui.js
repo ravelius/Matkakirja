@@ -15098,13 +15098,22 @@ export class UI {
    *    kaiverruskehyksineen, kartussissa otsake, alanauhassa arvo ja
    *    punainen LÖYDETTY-leima. Aarnin luettelossa ovat kaanonin
    *    mukaan vain pääaarteet, joten paikallisaarre ei koskaan saa
-   *    diplomia.
+   *    diplomia. Malli jäi koodiin varalle (ks. playTokenReveal).
+   *
+   * LUETTELON TEKSTIT KUULUVAT MYÖS TUMMAAN MALLIIN (omistajan tilaus
+   * 28.8.2026 ilta: *"laita kaikki tekstit mukaan tuohon aarteen
+   * esikatseluun"*). Kun pääaarre siirtyi diplomista tummaan malliin,
+   * otsake, manner, arvo ja leima jäivät pois. Ne palaavat samasta
+   * `lisat`-oliosta, mutta tumman mallin omalla ulkoasulla:
+   * kullansävyinen versaali suoraan mustan päälle, EI pergamenttiarkkia
+   * eikä kehystä — kuvan tumma tausta jatkuu saumatta overlayn mustaan.
    *
    * @param {string|null} kuva kuvan polku (assets/…) tai null
    * @param {string} alt kuvan tekstivastine
    * @param {string} [malli] 'tumma' | 'paikallis' | 'diplomi'
    * @param {{otsake?: string, alaotsake?: string, alanauha?: string,
-   *   leima?: string, leimaPvm?: string}} [lisat] diplomin tekstit
+   *   leima?: string, leimaPvm?: string}} [lisat] luettelon tekstit
+   *   (diplomi ja tumman mallin pääaarre)
    * @returns {{overlay: HTMLElement, scene: HTMLElement, caption: HTMLElement,
    *   kuvaEl: HTMLImageElement|null, jatka: HTMLElement,
    *   pohja: HTMLElement, leima: HTMLElement|null}}
@@ -15156,6 +15165,25 @@ export class UI {
       pohja.appendChild(html('hr', 'reveal-jakoviiva'));
       scene.appendChild(pohja);
     }
+    /*
+     * LUETTELON NIMIÖ KUVAN YLLE (tumma malli). Diplomin `.reveal-otsake`
+     * ja `.reveal-alaotsake` on ladottu absoluuttisesti kehyskuvan
+     * kartussiin, joten tumma malli ei voi käyttää niitä: se saa omat
+     * luokkansa, jotka ovat scene-gridin tavallisia rivejä. Merkkiluokka
+     * `.luettelo` kertoo tyylille, että kortilla on nyt viisi riviä
+     * kolmen sijaan — rivivälit tiivistyvät sen mukaan.
+     */
+    if (malli === 'tumma' && (lisat.otsake || lisat.alaotsake)) {
+      scene.classList.add('luettelo');
+      const tunnus = html('div', 'reveal-tunnus');
+      if (lisat.otsake) {
+        tunnus.appendChild(html('div', 'reveal-tunnus-otsake', lisat.otsake));
+      }
+      if (lisat.alaotsake) {
+        tunnus.appendChild(html('div', 'reveal-tunnus-alaotsake', lisat.alaotsake));
+      }
+      scene.appendChild(tunnus);
+    }
     if (kuvaEl) pohja.appendChild(kuvaEl);
     const caption = html('div', 'reveal-caption');
     pohja.appendChild(caption);
@@ -15168,6 +15196,22 @@ export class UI {
         leima.appendChild(html('small', '', lisat.leimaPvm ?? ''));
         pohja.appendChild(leima);
       }
+    } else if (malli === 'tumma' && (lisat.alanauha || lisat.leima)) {
+      /*
+       * ARVO JA LEIMA TEKSTIEN ALLE omana jalkanaan. Jalka on caption-
+       * lohkon sisarus, joten se tulee esiin samalla kahvalla kuin
+       * tekstit (`.reveal-caption.shown ~ .reveal-loyto`) eikä JS
+       * tarvitse omaa luokkaansa. Leima jää silti pimeään, kunnes
+       * playTokenReveal lyö sen (`.lyoty`).
+       */
+      const jalka = html('div', 'reveal-loyto');
+      if (lisat.alanauha) jalka.appendChild(html('div', 'reveal-arvo', lisat.alanauha));
+      if (lisat.leima) {
+        leima = html('div', 'reveal-leima tumma', lisat.leima);
+        leima.appendChild(html('small', '', lisat.leimaPvm ?? ''));
+        jalka.appendChild(leima);
+      }
+      pohja.appendChild(jalka);
     }
     overlay.appendChild(scene);
     /*
@@ -15267,7 +15311,20 @@ export class UI {
     const malli = kuva?.startsWith('assets/aarteet/paikallis/')
       ? 'paikallis' : 'tumma';
     let lisat = {};
-    if (malli === 'diplomi') {
+    /*
+     * LUETTELON TEKSTIT SEURASIVAT PÄÄAARRETTA TUMMAAN MALLIIN
+     * (omistajan tilaus 28.8.2026 ilta: *"laita kaikki tekstit mukaan
+     * tuohon aarteen esikatseluun"*). Ennen tämä ehto oli
+     * `malli === 'diplomi'`, joten kun pääaarre siirtyi tummaan,
+     * otsake, manner, arvo ja leima katosivat kortilta kokonaan.
+     * Sisältö on sama kuin diplomilla — ulkoasusta vastaa
+     * rakennaPaljastus ja css/styles.css (tumman mallin omat luokat).
+     *
+     * Vain pääaarre: Aarnin luettelossa ovat kaanonin mukaan vain
+     * unohdetut aarteet, joten nimiötä ei saa mantereen aarre eikä
+     * paikallisaarre.
+     */
+    if (type === 'star') {
       const manner = this.game.quiz?.cityId
         ? this.game.mannerOf(this.game.quiz.cityId) : null;
       const mannerNimi = MANNER_NIMET[manner]?.nimi;
@@ -15351,7 +15408,9 @@ export class UI {
       kuvaEl?.classList.add('shown');
       caption.classList.add('shown');
       leima?.classList.add('lyoty');
-      overlay.classList.add('kirkas');
+      // Kirkastuminen kuuluu vain diplomille: tumman mallin pääaarre
+      // pysyy mustassa, jotta kuvan tausta jatkuu saumatta overlayhin.
+      if (malli === 'diplomi') overlay.classList.add('kirkas');
       sfx.play(treasureSound(type));
       if (hihkaisu) this.soitaHihkaisu(hihkaisu);
       await odota(900);
@@ -15369,18 +15428,22 @@ export class UI {
       caption.classList.add('shown');
       if (leima) {
         /*
-         * LEIMAN LYÖNTI JA KIRKASTUMINEN (omistajan pohjapäätös
-         * 28.8.2026): diplomi luetaan hetki tummassa valokeilassa,
-         * LÖYDETTY-leima lyödään siihen, ja vasta leiman jälkeen
-         * pohja kirkastuu vaaleaan lopputilaan. Napautus ohittaa
-         * odotukset muttei animaatioita — kortti jää silloin heti
-         * valmiiseen vaaleaan tilaan.
+         * LEIMAN LYÖNTI (omistajan pohjapäätös 28.8.2026): kortti
+         * luetaan hetki, ja vasta sitten LÖYDETTY-leima lyödään sen
+         * jalkaan. Napautus ohittaa odotukset muttei animaatioita.
+         *
+         * KIRKASTUMINEN ON DIPLOMIN OMA (28.8.2026 ilta): tumman
+         * mallin pääaarre jää mustaan, koska juuri siitä saumasta
+         * omistaja piti — vaalea valokerros nousisi kuvan tumman
+         * taustan alle ja tekisi siitä laatikon.
          */
         await odota(700);
         leima.classList.add('lyoty');
         natiiviTarise('juhla');
-        await odota(650);
-        overlay.classList.add('kirkas');
+        if (malli === 'diplomi') {
+          await odota(650);
+          overlay.classList.add('kirkas');
+        }
       }
       await this.odotaPaljastuksenSulku(overlay, jatka);
       overlay.classList.add('leaving');
