@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1279: Aarrepaljastuksen uudet mallit: paikallisaarre vinjetointimallilla (pergamenttikeila + fakta oppimistekstina + purppurakartta taustalla), paaaarre Aarnin luettelon diplomilla (kaiverruskehys, LOYDETTY-leima, tumma -> vaalea siirtyma). Kaanna laatta Euroopan maissa ja loyda paaaarre.',
   'v1278: Euroopan 58 paikallisaarretta saivat omat kuvansa (assets/aarteet/paikallis/, 640x640); maan kuva voittaa laudan kuvan. Kaanna laatta eri maissa ja katso loytokortin kuva.',
   'v1277: Nipistyszoomi kevennetty: vastaskaalaajat eivat enaa aja kolmea merkkikerrosta joka kehyksella lehden nakymassa (skriptiaika -58 %, tyylinlaskut -49 %, pitkat tehtavat 7 -> 0), kehittajakytkinten levyluku pois pointermovesta (iOS-hyoty), nipistyksen roskat pois. Nakymat pikselintarkasti samat. Testaa zoomi ja vieritys laitteella.',
   'v1276: Aarteen paljastuksen leiskat, generoitu kaiverruskehys ja paatokset tallennettu docs/mantereet-tyoaineisto/aarreleiskat/-kansioon (paikallisaarteille vinjetointimalli, Aarnin diplomi vain paaaarteille). Ei pelimuutoksia.',
