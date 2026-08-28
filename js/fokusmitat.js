@@ -95,9 +95,69 @@ const TAVOITE_OSUUS = 0.2;
 const OSUUS_MIN = 0.15;
 const OSUUS_MAX = 0.25;
 
+/*
+ * ============ KEHYSSILMUKKA EI SAA TUOTTAA ROSKAA (28.8.2026) =======
+ *
+ * Omistajan pelitesti 28.8.2026 (v1268): *"Kartan vieritys tökkii
+ * vieläkin vaikka liikuttaisin samaa näkymää vain edestakaisin
+ * kohtuullisen määrän."* Sama näkymä edestakaisin tarkoittaa, että
+ * ruudut ja lehdet ovat jo muistissa — verkkoa ja rasterointia ei
+ * siis ollut syyllisiksi.
+ *
+ * MITATTU SYY (Chromium, iPhone-mitat 390x844 dpr3, 4x CPU-kuristus,
+ * 10 s panorointia Kreikan fokusnäkymässä, CDP-trace):
+ *
+ *     MajorGC          448 ms, josta YKSI 417 ms:n tauko
+ *     ajon pisin kehys 417 ms  (mediaani 16,7 ms)
+ *
+ * Kehysajat olivat siis mediaaniltaan moitteettomat, mutta eleen
+ * keskellä laukesi täysi merkkaus-tiivistys, ja juuri se tuntuu
+ * sormen alla nykäisynä. Ablaatio osoitti lähteen: kun viivainten
+ * elävä kehyssilmukka kytkettiin kokonaan pois, MajorGC putosi
+ * NOLLAAN ja pisin kehys 417 → 33 ms.
+ *
+ * Silmukkaa ei voi poistaa — lukemien on omistajan tilauksesta
+ * elettävä reaaliajassa (ks. "LUKEMAT PÄIVITTYVÄT REAALIAJASSA") —
+ * joten poistettiin sen ROSKA. Silmukka tuotti joka kehyksellä:
+ * projektiokaavat (olio + 5 sulkeumaa), ruutukaavat (olio + 4
+ * sulkeumaa), nauhahaun (2 querySelectoria + olio), kameran
+ * muunnoksen (2 exec-taulukkoa + olio), kaksi ladontasulkeumaa ja
+ * kaksi muunnosmerkkijonoa. Nyt jokainen niistä syntyy kerran, ja
+ * lisäksi liikkumaton kehys ohitetaan kokonaan (elavaKehys).
+ *
+ * YHDENKÄÄN LUKEMAN EI PIDÄ MUUTTUA. Jokainen muutos on joko
+ * välimuisti muuttumattomalle syötteelle tai saman olion
+ * uudelleenkäyttö; kaavat ja kirjoitetut arvot ovat merkki merkiltä
+ * samat kuin ennen. tools/savukkeet/savuke-panorointi.mjs mittaa
+ * saman ajon jälkeen samat luvut kuin ennen (0,33 asettelua/kehys,
+ * 0,91 merkkikirjoitusta/kehys, 0,99 nauhakirjoitusta/kehys).
+ */
+
 /**
  * Laudan projektio numeroina: montako lautayksikköä yksi PITUUSASTE on,
  * ja mikä leveysaste on laudan y-koordinaatilla.
+ *
+ * KAAVAT SYNTYVÄT KERRAN LAUTAA KOHTI, EIVÄT KERRAN KEHYKSESSÄ (ks.
+ * osio yllä). Tulos riippuu VAIN projektiotaulun rivistä
+ * (FOKUS_LAUTAPROJEKTIOT), joka on vakiodataa — sama syöte antaa aina
+ * saman tuloksen, joten välimuistitus ei voi muuttaa yhtäkään lukemaa.
+ *
+ * WeakMap eikä Map: projektiotaulu elää moduulin ikuisesti, mutta jos
+ * lautoja joskus rakennetaan lennossa, avain ei jää kiinni muistiin.
+ */
+const kaavaMuisti = new WeakMap();
+
+function projektionKaavat(p) {
+  if (!p) return null;
+  const valmis = kaavaMuisti.get(p);
+  if (valmis) return valmis;
+  const tulos = teeProjektionKaavat(p);
+  kaavaMuisti.set(p, tulos);
+  return tulos;
+}
+
+/**
+ * Kaavat yhdelle projektiolle. Kutsutaan kerran lautaa kohti.
  *
  * KAAVA ON SAMA KUIN KUVAN RENDERÖINNISSÄ (tools/fokuskartta/piirto.js
  * laudanProjektio). Se on tässä toistettuna eikä tuotuna, koska
@@ -109,8 +169,7 @@ const OSUUS_MAX = 0.25;
  * leveys), mutta leveysaste ei — siksi lat lasketaan käänteiskaavalla.
  * Tasavälisessä projektiossa molemmat ovat suoria kertoimia.
  */
-function projektionKaavat(p) {
-  if (!p) return null;
+function teeProjektionKaavat(p) {
   if (p.tyyppi === 'miller') {
     const skaala = p.leveys / (2 * Math.PI);
     const millerY = (lat) => -1.25 * Math.log(Math.tan(Math.PI / 4 + 0.4 * lat * RAD));
@@ -851,24 +910,43 @@ function rakennaViivaimet(ui) {
  * mittaa perustan silloin uudelleen; silmukka ei mittaa koskaan.
  */
 
+/*
+ * Lausekkeet ja paluuolio syntyvät kerran, eivät kerran kehyksessä:
+ * tätä kutsutaan joka kehyksellä (ruutuKaavat), ja jokainen kutsu
+ * tuotti ennen kaksi exec-tulostaulukkoa ja uuden olion (ks.
+ * "KEHYSSILMUKKA EI SAA TUOTTAA ROSKAA").
+ */
+const SIIRTO_RE = /translate3d\(\s*(-?[\d.]+)px\s*,\s*(-?[\d.]+)px/;
+const KERROIN_RE = /scale\(\s*(-?[\d.]+)/;
+const siirtoTulos = { tx: 0, ty: 0, s: 1 };
+
 /**
  * Kartan nykyinen CSS-muunnos lukuina. Ei kosketa asetteluun.
  *
  * Muunnos luetaan SIIRTOKUORESTA eikä laudasta (wrapper-siirto
  * 26.8.2026): kuori on se elementti, jota kartta liikuttaa, ja lauta
  * seuraa mukana sen sisällä.
+ *
+ * PALUUOLIO ON LAINASSA: kutsuja saa lukea kentät mutta ei säilyttää
+ * oliota. Molemmat kutsupaikat (mittaaPerusta, ruutuKaavat) purkavat
+ * arvot heti omiin muuttujiinsa, joten jaettu olio ei voi vanhentua
+ * kenenkään käsissä. Luvut ovat samat kuin ennen, merkki merkiltä.
  */
 function kameranSiirto(ui) {
   const teksti = (ui?.karttaKuori ?? ui?.svg)?.style?.transform ?? '';
-  if (!teksti) return { tx: 0, ty: 0, s: 1 };
-  const siirto = /translate3d\(\s*(-?[\d.]+)px\s*,\s*(-?[\d.]+)px/.exec(teksti);
-  const kerroin = /scale\(\s*(-?[\d.]+)/.exec(teksti);
+  siirtoTulos.tx = 0;
+  siirtoTulos.ty = 0;
+  siirtoTulos.s = 1;
+  if (!teksti) return siirtoTulos;
+  const siirto = SIIRTO_RE.exec(teksti);
+  const kerroin = KERROIN_RE.exec(teksti);
   const s = kerroin ? Number(kerroin[1]) : 1;
-  return {
-    tx: siirto ? Number(siirto[1]) : 0,
-    ty: siirto ? Number(siirto[2]) : 0,
-    s: Number.isFinite(s) && s > 0 ? s : 1,
-  };
+  if (siirto) {
+    siirtoTulos.tx = Number(siirto[1]);
+    siirtoTulos.ty = Number(siirto[2]);
+  }
+  if (Number.isFinite(s) && s > 0) siirtoTulos.s = s;
+  return siirtoTulos;
 }
 
 /**
@@ -902,6 +980,42 @@ function mittaaPerusta(ui) {
   };
 }
 
+/*
+ * KEHYKSEN KAAVAT OVAT YKSI OLIO, JOKA PÄIVITETÄÄN PAIKALLAAN.
+ *
+ * Ennen tästä palautui joka kehyksellä uusi olio ja sen mukana neljä
+ * uutta sulkeumaa. Nyt olio ja sen neljä funktiota syntyvät kerran, ja
+ * kehys kirjoittaa niihin vain luvut — funktiot lukevat arvot oliosta
+ * itsestään, joten laskukaava on merkki merkiltä sama kuin ennen.
+ *
+ * OLIO ON LAINASSA YHDEN KEHYKSEN AJAN. Ainoa kutsuja on
+ * piirraViivaimet, joka käyttää sen samassa tehtävässä eikä säilytä
+ * sitä; nauhan tilaan (paivitaNauha) tallentuu vain lukuja. Perustelu
+ * roskan poistamiselle on osiossa "KEHYSSILMUKKA EI SAA TUOTTAA
+ * ROSKAA".
+ */
+const ruutuTulos = {
+  skaala: 0,
+  /*
+   * Kameran nollakohta ruudulla. Viivainnauhat liu'uttavat itsensä
+   * juuri tämän muutoksella (ks. paivitaNauha): kun mittakaava pysyy,
+   * JOKAINEN laudan piste siirtyy ruudulla saman x0/y0-erotuksen
+   * verran, joten koko nauhan saa yhdellä muunnoksella oikeaan
+   * kohtaan — merkkeihin koskematta.
+   */
+  x0: 0,
+  y0: 0,
+  leveys: 0,
+  korkeus: 0,
+  vbX: 0,
+  vbY: 0,
+  px(bx) { return this.x0 + (bx - this.vbX) * this.skaala; },
+  py(by) { return this.y0 + (by - this.vbY) * this.skaala; },
+  // Käänteissuunta: ruudun reuna laudan yksiköiksi.
+  lautaX(sx) { return this.vbX + (sx - this.x0) / this.skaala; },
+  lautaY(sy) { return this.vbY + (sy - this.y0) / this.skaala; },
+};
+
 /**
  * Laudan koordinaatti ruudun pikseleiksi — perustasta ja elävästä
  * siirrosta. Ei yhtäkään asettelunlukua.
@@ -909,30 +1023,17 @@ function mittaaPerusta(ui) {
 function ruutuKaavat(ui) {
   const perusta = ui.fokusViivainPerusta;
   if (!perusta || perusta.lautaOsa !== ui.svg) return null;
-  const { tx, ty, s } = kameranSiirto(ui);
-  const skaala = perusta.pxPerYks * s;
+  const siirto = kameranSiirto(ui);
+  const skaala = perusta.pxPerYks * siirto.s;
   if (!(skaala > 0)) return null;
-  const x0 = perusta.asetteluX + tx;
-  const y0 = perusta.asetteluY + ty;
-  return {
-    skaala,
-    /*
-     * Kameran nollakohta ruudulla. Viivainnauhat liu'uttavat itsensä
-     * juuri tämän muutoksella (ks. paivitaNauha): kun mittakaava pysyy,
-     * JOKAINEN laudan piste siirtyy ruudulla saman x0/y0-erotuksen
-     * verran, joten koko nauhan saa yhdellä muunnoksella oikeaan
-     * kohtaan — merkkeihin koskematta.
-     */
-    x0,
-    y0,
-    leveys: perusta.leveys,
-    korkeus: perusta.korkeus,
-    px: (bx) => x0 + (bx - perusta.vbX) * skaala,
-    py: (by) => y0 + (by - perusta.vbY) * skaala,
-    // Käänteissuunta: ruudun reuna laudan yksiköiksi.
-    lautaX: (sx) => perusta.vbX + (sx - x0) / skaala,
-    lautaY: (sy) => perusta.vbY + (sy - y0) / skaala,
-  };
+  ruutuTulos.skaala = skaala;
+  ruutuTulos.x0 = perusta.asetteluX + siirto.tx;
+  ruutuTulos.y0 = perusta.asetteluY + siirto.ty;
+  ruutuTulos.leveys = perusta.leveys;
+  ruutuTulos.korkeus = perusta.korkeus;
+  ruutuTulos.vbX = perusta.vbX;
+  ruutuTulos.vbY = perusta.vbY;
+  return ruutuTulos;
 }
 
 /** Lukema atlaksen asussa: "22°", "37,5°" ja pallonpuolisko kirjaimena. */
@@ -1132,7 +1233,11 @@ function naytaMerkki(merkki) {
 function nauhanTila(nauha) {
   if (!nauha.__lado) {
     nauha.__lado = {
-      skaala: 0, pohja: 0, kaistat: null, raja: 0, siirto: null, merkit: [],
+      skaala: 0, pohja: 0, kaistat: null, raja: 0, siirto: null,
+      // Viimeksi kirjoitettu liuku lukuna: merkkijono ladotaan vain kun
+      // tämä muuttuu (ks. paivitaNauha).
+      siirtoRaaka: null,
+      merkit: [],
     };
   }
   return nauha.__lado;
@@ -1141,11 +1246,13 @@ function nauhanTila(nauha) {
 /**
  * Yksi nauha nykyiseen näkymään: joko liu'utetaan tai ladotaan uudelleen.
  *
- * `laske` on funktio, joka tuottaa parit [paikka, lukema] — sitä
+ * `laske(kaavat, ruutu)` tuottaa parit [paikka, lukema] — sitä
  * kutsutaan VAIN uudelleenladonnassa, joten liukukehyksessä ei lasketa
- * projektioita eikä ladota merkkijonoja.
+ * projektioita eikä ladota merkkijonoja. Kaavat ja ruutu kulkevat
+ * parametreina, jottei kutsuja tarvitse tehdä sulkeumaa joka
+ * kehyksessä (ks. "KEHYSSILMUKKA EI SAA TUOTTAA ROSKAA").
  */
-function paivitaNauha(nauha, pysty, ruutu, kaistat, laske) {
+function paivitaNauha(nauha, pysty, kaavat, ruutu, kaistat, laske) {
   const tila = nauhanTila(nauha);
   const pohja = pysty ? ruutu.y0 : ruutu.x0;
   const raja = pysty ? ruutu.korkeus : ruutu.leveys;
@@ -1163,21 +1270,43 @@ function paivitaNauha(nauha, pysty, ruutu, kaistat, laske) {
     || tila.raja !== raja
     || !(Math.abs(siirto) <= LIUKUVARA);
   if (uusi) {
-    ladoNauha(nauha, laske(), pysty, tila);
+    ladoNauha(nauha, laske(kaavat, ruutu), pysty, tila);
     tila.skaala = ruutu.skaala;
     tila.pohja = pohja;
     tila.kaistat = kaistat;
     tila.raja = raja;
     siirto = 0;
   }
-  const muunnos = siirto
-    ? (pysty ? `translate3d(0, ${siirto.toFixed(1)}px, 0)` : `translate3d(${siirto.toFixed(1)}px, 0, 0)`)
-    : '';
-  if (tila.siirto !== muunnos) {
-    nauha.style.transform = muunnos;
-    tila.siirto = muunnos;
+  /*
+   * MERKKIJONO LADOTAAN VAIN KUN LIUKU ON MUUTTUNUT (28.8.2026, ks.
+   * "KEHYSSILMUKKA EI SAA TUOTTAA ROSKAA"). Sama liuku tuottaa aina
+   * saman merkkijonon, joten muuttumattomassa kehyksessä se ladottiin
+   * ennen vain heitettäväksi pois vertailun jälkeen. Vertailu tehdään
+   * nyt LUVULLA — tarkalla, ei pyöristetyllä, jottei pyöristysraja
+   * voisi jättää yhtäkään kirjoitusta tekemättä. Kirjoitettu arvo on
+   * merkki merkiltä sama.
+   */
+  if (tila.siirtoRaaka !== siirto) {
+    tila.siirtoRaaka = siirto;
+    const muunnos = siirto
+      ? (pysty
+        ? `translate3d(0, ${siirto.toFixed(1)}px, 0)`
+        : `translate3d(${siirto.toFixed(1)}px, 0, 0)`)
+      : '';
+    if (tila.siirto !== muunnos) {
+      nauha.style.transform = muunnos;
+      tila.siirto = muunnos;
+    }
   }
-  for (const merkki of tila.merkit) {
+  /*
+   * INDEKSISILMUKKA, EI `for...of` (ks. kaistallaVarattu). Taulukon
+   * iterointi varaa iteraattorin ja tulosolion joka merkille joka
+   * kehyksessä; indeksointi käy läpi täsmälleen samat merkit samassa
+   * järjestyksessä ilman varauksia.
+   */
+  const merkit = tila.merkit;
+  for (let i = 0; i < merkit.length; i++) {
+    const merkki = merkit[i];
     const paikka = merkki.__paikka + siirto;
     if (paikka >= reuna && paikka <= raja - reuna && !kaistallaVarattu(paikka, kaistat)) {
       naytaMerkki(merkki);
@@ -1274,15 +1403,48 @@ function varatutKaistat(laatikot, kaista, pysty) {
   return varatut;
 }
 
-const kaistallaVarattu = (paikka, varatut) => varatut
-  .some(([alku, loppu]) => paikka > alku && paikka < loppu);
+/*
+ * INDEKSISILMUKKA, EI `some` + PURKUSIJOITUS.
+ *
+ * Tämä ajetaan joka kehyksellä kerran per merkki per nauha (noin
+ * kolmekymmentä kutsua kehyksessä). Purkusijoitus `([alku, loppu])`
+ * käyttää iteraattoriprotokollaa, eli se varaa jokaista kaistaa kohti
+ * iteraattorin ja kaksi tulosoliota — mitattuna (ks. "KEHYSSILMUKKA EI
+ * SAA TUOTTAA ROSKAA") juuri nämä `next`-kutsut olivat panoroinnin
+ * suurin yksittäinen varaaja. Indeksointi lukee samat kaksi lukua
+ * samasta taulukosta ilman yhtäkään varausta; ehto on merkki merkiltä
+ * sama.
+ */
+function kaistallaVarattu(paikka, varatut) {
+  for (let i = 0; i < varatut.length; i++) {
+    const kaista = varatut[i];
+    if (paikka > kaista[0] && paikka < kaista[1]) return true;
+  }
+  return false;
+}
 
-/** Nauhat nimineen; haetaan kerran ja pidetään perustan rinnalla. */
+/**
+ * Nauhat nimineen; haetaan kerran ja pidetään perustan rinnalla.
+ *
+ * HAKU ON SÄILIÖN OMASSA MUISTISSA. Tätä kutsutaan joka kehyksellä
+ * (piirraViivaimet), ja kaksi querySelectoria plus uusi olio kehystä
+ * kohti on juuri sitä roskaa, joka ajoi kesken eleen täyden GC:n (ks.
+ * "KEHYSSILMUKKA EI SAA TUOTTAA ROSKAA"). Muisti tarkistetaan
+ * solmuista eikä lipusta: jos
+ * rakenna() on vaihtanut nauhat uusiin, vanhat eivät ole enää säiliön
+ * lapsia ja haku tehdään uudestaan — sama tulos kuin ennen, aina.
+ */
 function viivainNauhat(sailio) {
-  return {
+  const muisti = sailio.__nauhat;
+  if (muisti && muisti.yla?.parentNode === sailio && muisti.vasen?.parentNode === sailio) {
+    return muisti;
+  }
+  const nauhat = {
     yla: sailio.querySelector('.fokus-viivain-yla'),
     vasen: sailio.querySelector('.fokus-viivain-vasen'),
   };
+  sailio.__nauhat = nauhat;
+  return nauhat;
 }
 
 /**
@@ -1305,6 +1467,53 @@ function paivitaPerusta(ui) {
     vasen: varatutKaistat(laatikot, nauhanKaista(nauhat.vasen), true),
   };
   return perusta;
+}
+
+/*
+ * ASKEL VALITAAN RUUDUSTA, MERKIT LADOTAAN RUUDUN YLI. Tiheys on
+ * ruudun ominaisuus (valitseAskel), joten se lasketaan näkyvästä
+ * alueesta — mutta merkit ulottuvat LIUKUVARAn verran yli molempien
+ * laitojen, jotta nauha voi liukua ilman aukkoa (ks. paivitaNauha).
+ *
+ * MODUULIN FUNKTIOITA EIKÄ KEHYKSEN SULKEUMIA. Nämä olivat aiemmin
+ * kaksi nuolifunktiota piirraViivaimetin sisällä, eli kaksi uutta
+ * sulkeumaa joka kehyksellä — vaikka niitä kutsutaan vain
+ * uudelleenladonnassa. Sisältö on siirretty sellaisenaan; kaavat ja
+ * ruutu tulevat nyt parametreina (ks. "KEHYSSILMUKKA EI SAA TUOTTAA
+ * ROSKAA").
+ */
+function laskeVaakaParit(kaavat, ruutu) {
+  const lonAlku = kaavat.lon(ruutu.lautaX(0));
+  const lonLoppu = kaavat.lon(ruutu.lautaX(ruutu.leveys));
+  const pxAsteessa = Math.abs(ruutu.leveys / (lonLoppu - lonAlku));
+  const parit = [];
+  if (!Number.isFinite(pxAsteessa) || !(pxAsteessa > 0)) return parit;
+  const askel = valitseAskel(pxAsteessa);
+  const reunaA = kaavat.lon(ruutu.lautaX(-LIUKUVARA));
+  const reunaB = kaavat.lon(ruutu.lautaX(ruutu.leveys + LIUKUVARA));
+  const alku = Math.ceil(Math.min(reunaA, reunaB) / askel) * askel;
+  const loppu = Math.max(reunaA, reunaB);
+  for (let lon = alku; lon <= loppu + 1e-9; lon += askel) {
+    parit.push([ruutu.px(kaavat.x(lon)), asteTeksti(lon, ['I', 'L'])]);
+  }
+  return parit;
+}
+
+function laskePystyParit(kaavat, ruutu) {
+  const latYla = kaavat.lat(ruutu.lautaY(0));
+  const latAla = kaavat.lat(ruutu.lautaY(ruutu.korkeus));
+  const pxLeveysasteessa = Math.abs(ruutu.korkeus / (latYla - latAla));
+  const parit = [];
+  if (!Number.isFinite(pxLeveysasteessa) || !(pxLeveysasteessa > 0)) return parit;
+  const askel = valitseAskel(pxLeveysasteessa);
+  const reunaA = kaavat.lat(ruutu.lautaY(-LIUKUVARA));
+  const reunaB = kaavat.lat(ruutu.lautaY(ruutu.korkeus + LIUKUVARA));
+  const alku = Math.ceil(Math.min(reunaA, reunaB) / askel) * askel;
+  const loppu = Math.max(reunaA, reunaB);
+  for (let lat = alku; lat <= loppu + 1e-9; lat += askel) {
+    parit.push([ruutu.py(kaavat.y(lat)), asteTeksti(lat, ['P', 'E'])]);
+  }
+  return parit;
 }
 
 /**
@@ -1335,45 +1544,8 @@ function piirraViivaimet(ui) {
   }
   sailio.hidden = false;
 
-  /*
-   * ASKEL VALITAAN RUUDUSTA, MERKIT LADOTAAN RUUDUN YLI. Tiheys on
-   * ruudun ominaisuus (valitseAskel), joten se lasketaan näkyvästä
-   * alueesta — mutta merkit ulottuvat LIUKUVARAn verran yli molempien
-   * laitojen, jotta nauha voi liukua ilman aukkoa (ks. paivitaNauha).
-   */
-  paivitaNauha(nauhat.yla, false, ruutu, perusta.kaistat.yla, () => {
-    const lonAlku = kaavat.lon(ruutu.lautaX(0));
-    const lonLoppu = kaavat.lon(ruutu.lautaX(ruutu.leveys));
-    const pxAsteessa = Math.abs(ruutu.leveys / (lonLoppu - lonAlku));
-    const parit = [];
-    if (!Number.isFinite(pxAsteessa) || !(pxAsteessa > 0)) return parit;
-    const askel = valitseAskel(pxAsteessa);
-    const reunaA = kaavat.lon(ruutu.lautaX(-LIUKUVARA));
-    const reunaB = kaavat.lon(ruutu.lautaX(ruutu.leveys + LIUKUVARA));
-    const alku = Math.ceil(Math.min(reunaA, reunaB) / askel) * askel;
-    const loppu = Math.max(reunaA, reunaB);
-    for (let lon = alku; lon <= loppu + 1e-9; lon += askel) {
-      parit.push([ruutu.px(kaavat.x(lon)), asteTeksti(lon, ['I', 'L'])]);
-    }
-    return parit;
-  });
-
-  paivitaNauha(nauhat.vasen, true, ruutu, perusta.kaistat.vasen, () => {
-    const latYla = kaavat.lat(ruutu.lautaY(0));
-    const latAla = kaavat.lat(ruutu.lautaY(ruutu.korkeus));
-    const pxLeveysasteessa = Math.abs(ruutu.korkeus / (latYla - latAla));
-    const parit = [];
-    if (!Number.isFinite(pxLeveysasteessa) || !(pxLeveysasteessa > 0)) return parit;
-    const askel = valitseAskel(pxLeveysasteessa);
-    const reunaA = kaavat.lat(ruutu.lautaY(-LIUKUVARA));
-    const reunaB = kaavat.lat(ruutu.lautaY(ruutu.korkeus + LIUKUVARA));
-    const alku = Math.ceil(Math.min(reunaA, reunaB) / askel) * askel;
-    const loppu = Math.max(reunaA, reunaB);
-    for (let lat = alku; lat <= loppu + 1e-9; lat += askel) {
-      parit.push([ruutu.py(kaavat.y(lat)), asteTeksti(lat, ['P', 'E'])]);
-    }
-    return parit;
-  });
+  paivitaNauha(nauhat.yla, false, kaavat, ruutu, perusta.kaistat.yla, laskeVaakaParit);
+  paivitaNauha(nauhat.vasen, true, kaavat, ruutu, perusta.kaistat.vasen, laskePystyParit);
 }
 
 /** Mittaus ja ladonta yhdessä: näkymän asettuminen ja taulun avaus. */
@@ -1477,9 +1649,43 @@ function elavaKehys(ui) {
   if (!vahti.liikkeessa) return;
   const sailio = ui.fokusViivaimet;
   if (sailio?.isConnected && !sailio.hidden && ui.fokusViivainPerusta?.kaistat) {
-    piirraViivaimet(ui);
+    /*
+     * LIIKKUMATON KEHYS OHITETAAN KOKONAAN (28.8.2026).
+     *
+     * Silmukka pyörii kehysnopeudella, mutta kartta liikkuu vain
+     * silloin kun osoitin liikkuu. Sormen levätessä, liu'un lepovaran
+     * aikana (LEPO_MS) ja aina kun laite tuottaa osoitintapahtumia
+     * ruudunpäivitystä harvemmin — mikä on puhelimella tavallista —
+     * kehys laski TÄSMÄLLEEN samat luvut kuin edellinen ja kirjoitti
+     * ne samoihin paikkoihin. Tulos oli identtinen, työ ei.
+     *
+     * Tunniste on juuri se, mistä lukemat lasketaan: kartan siirto
+     * (kuoren inline-muunnos, jota vain kartta kirjoittaa) ja perusta
+     * (mitataan uudelleen zoomiportaassa ja kalusteiden muuttuessa).
+     * Kumpikaan ei voi muuttua ilman että tunniste muuttuu, joten
+     * ohitus ei voi jättää yhtäkään oikeasti tarvittua piirtoa
+     * tekemättä. Inline-tyylin lukeminen ei koske asetteluun (ks.
+     * "KAMERAN LUVUT ILMAN ASETTELUN LUKEMISTA").
+     *
+     * Mitattu (Chromium, iPhone-mitat, 4x CPU-kuristus, 10 s
+     * panorointia Kreikassa): tämä ja roskanpoistot yhdessä
+     * pudottivat kesken eleen laukeavan täyden GC:n ja sen mukana
+     * ajon pisimmän kehyksen (ks. "KEHYSSILMUKKA EI SAA TUOTTAA
+     * ROSKAA").
+     */
+    const perusta = ui.fokusViivainPerusta;
+    // Suora merkkijonoviite, ei mallipohjaa: mallipohja latoisi uuden
+    // merkkijonon joka kehyksellä pelkkää vertailua varten.
+    const tunniste = (ui.karttaKuori ?? ui.svg)?.style?.transform ?? '';
+    if (tunniste !== vahti.piirretty || perusta !== vahti.piirrettyPerusta) {
+      vahti.piirretty = tunniste;
+      vahti.piirrettyPerusta = perusta;
+      piirraViivaimet(ui);
+    }
   }
-  vahti.kehys = requestAnimationFrame(() => elavaKehys(ui));
+  // Sama takaisinkutsu joka kehyksellä: uusi nuolifunktio kehystä kohti
+  // olisi taas roskaa (ks. "KEHYSSILMUKKA EI SAA TUOTTAA ROSKAA").
+  vahti.kehys = requestAnimationFrame(vahti.askel ??= () => elavaKehys(ui));
 }
 
 /**
@@ -1497,7 +1703,9 @@ function merkitseViivainLiike(ui, asettelu) {
   vahti.liikkeessa = true;
   clearTimeout(vahti.ajastin);
   vahti.ajastin = setTimeout(() => viivaimetLepoon(ui), LEPO_MS);
-  if (!vahti.kehys) vahti.kehys = requestAnimationFrame(() => elavaKehys(ui));
+  if (!vahti.kehys) {
+    vahti.kehys = requestAnimationFrame(vahti.askel ??= () => elavaKehys(ui));
+  }
 }
 
 /**
@@ -1547,7 +1755,16 @@ function vahdiKartanLiiketta(ui) {
   if (vanha && vanha.lautaOsa === ui.svg) return;
   puraViivainVahti(vanha);
   const vahti = {
-    lautaOsa: ui.svg, ajastin: 0, kehys: 0, liikkeessa: false,
+    lautaOsa: ui.svg,
+    ajastin: 0,
+    kehys: 0,
+    liikkeessa: false,
+    // Viimeksi piirretty kamera ja perusta: liikkumaton kehys ohitetaan
+    // (ks. elavaKehys). Tyhjinä ensimmäinen kehys piirtyy aina.
+    piirretty: null,
+    piirrettyPerusta: null,
+    // Kehyssilmukan takaisinkutsu; luodaan kerran, ks. elavaKehys.
+    askel: null,
   };
   if (ui.svg) {
     vahti.lauta = new MutationObserver((muutokset) => {
