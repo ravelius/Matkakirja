@@ -110,7 +110,8 @@ async function avaaSivu(fokus = true) {
    * mittaa saman asian toisesta päästä: pisteet ovat kartalla ja niistä
    * aukeaa kortti uudelleen.
    */
-  const TAYT_LUETUT = ['sofia-korut', 'kastrin-kyla', 'olympoksen-huippu'];
+  const TAYT_LUETUT = ['sofia-korut', 'kastrin-kyla', 'olympoksen-huippu',
+    'antikythera-kone'];
   await ctx.addInitScript(([data, paalla, tayt]) => {
     try {
       localStorage.setItem('matkakirja-save-v1', data);
