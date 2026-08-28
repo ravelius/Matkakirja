@@ -61,10 +61,21 @@
  * kerroksessa, koska se ankkuroituu laudan koordinaatteihin ja elää
  * kartan mukana.
  *
+ * MUTTA EI KOSKAAN KAUPUNGIN LAATAN PÄÄLLE (omistajan pelitestipalaute
+ * v1234). Juttu tapahtui useimmiten kaupungissa, ja kaupungin kohdalla
+ * kaksi merkkiä samassa pisteessä on yksi merkki: Kreikan täky tuikki
+ * suoraan Ateenan laatan päällä. Piste PIIRRETÄÄN siksi aina jonkin
+ * kartan kohdesymbolin päälle — täyn oman `kohde`-merkin, tai sen
+ * puuttuessa lähimmän kohdemerkin, joka kaupungin ryppäässä on jo
+ * siirretty katkoviivan päähän kasauspassilla (js/fokusniput.js).
+ * Valinnan tekee kerros, joka tietää merkkien nykyiset paikat
+ * (js/fokusnosto-symbolit.js, osio PISTE AINA SYMBOLIN PÄÄLLE); tämä
+ * tiedosto kertoo vain, missä juttu tapahtui.
+ *
  * ILMAN PAIKKAA KAUPUNKI, JA VASTA SEN JÄLKEEN LIUSKA. Täyllä ei ole
- * pakko olla `paikka`-kenttää; ilman sitä piste menee kaupunkiin, jossa
- * pelaaja on (nostonPaikka), ja yhteinen kasauspassi siirtää sen
- * kaupungin viereen omaan sarakkeeseensa (js/fokusniput.js). Vanha
+ * pakko olla `paikka`-kenttää; ilman sitä paikaksi otetaan kaupunki,
+ * jossa pelaaja on (nostonPaikka) — ja koska piste hakeutuu sieltä
+ * lähimmän kohdesymbolin päälle, se ei jää laatan päälle. Vanha
  * alalaidan liuska on yhä olemassa varapolkuna sille tapaukselle, ettei
  * kaupunkiakaan ole — esimerkiksi katselutilassa.
  *
@@ -121,15 +132,35 @@ import { sfx } from './sound.js';
 /* ==================== POOLI ==================== */
 
 /*
- * KREIKAN TÄKYNOSTO (omistajan valinta 25.8.2026).
+ * KREIKAN TÄKYNOSTOT (omistajan valinta 25.8.2026).
  *
- * YKSI NOSTO, EI ENEMPÄÄ (omistaja 26.8.2026 ilta: *"Täkyjä josta tulee
- * puhekupla pitää olla vain yksi per maa. Kaikki muut normaaleita. …
- * Kreikassa vielä useampi."*). Poolissa oli viisi nostoa, joista yksi
- * nousi kuplaan ja neljä jäi kartalle täkysymboleiksi. Nyt jäljellä on
- * omistajan kärkivalinta eli poolin ensimmäinen, ja loput ovat kartan
- * tavallisia kohteita (js/packs/fokuskohteet-grc.js, oma erälohkonsa) —
- * kaksi niistä jäi kokonaan pois, koska niiden paikalla on jo kohde.
+ * KOLME NOSTOA, EI YKSI (omistajan pelitestipalaute v1234: *"sitten kun
+ * sen kävi lukemassa, ei ilmestynyt enää uutta vilkkuvaa pistettä"*).
+ *
+ * Poolissa oli 26.8.2026 alkaen tasan YKSI nosto, koska silloin täky oli
+ * PUHEKUPLA ja omistaja rajasi: *"Täkyjä josta tulee puhekupla pitää olla
+ * vain yksi per maa."* Kupla poistui 27.8.2026 ja tilalle tuli sääntö
+ * YKSI KERRALLAAN: *"uusi piste tuikkii kun edellinen on katsottu."*
+ * Yhden mittainen pooli ei kuitenkaan voi vuorotella — luettu täky
+ * katosi eikä mitään syttynyt tilalle, ja mekaniikka näytti rikkinäiseltä
+ * vaikka koodi teki juuri niin kuin oli kirjoitettu. Poolin pituus oli
+ * siis vika, ei koodi: kartalla tuikkii yhä vain YKSI piste kerrallaan,
+ * mutta luetun jälkeen on jotain, mikä syttyy.
+ *
+ * Kaksi lisättyä nostoa ovat samasta tarkistetusta aineistosta kuin
+ * ensimmäinen (docs/mantereet-tyoaineisto/takynostot-kreikka.md,
+ * ehdokkaat 10 ja 12, molemmat merkitty VARMOIKSI) ja niiden faktat on
+ * tarkistettu uudelleen lähdeartikkeleista 28.8.2026. Kummallakin on
+ * `kohde`, joten piste tuikkii nimenomaan sen kohteen symbolin päällä ja
+ * kortin nappi vie kohteen omaan tietoruutuun — täky *"houkuttelee
+ * kohteen auki"* kuten alkuperäisessä tilauksessa.
+ *
+ * KUVAA EI OLE KAHDELLA UUDELLA. Aineisto ehdottaa niille Commons-
+ * tiedostoja, mutta niiden lisenssi- ja tekijätiedot on tarkistettava
+ * Commonsin rajapinnasta ennen käyttöä (omistajan sääntö: ei arvattuja
+ * tiedostonimiä). Kuvaton nosto on korttina täysin ehjä — otsikko ja
+ * lunastus kantavat sen — ja kuvan voi lisätä myöhemmin yhdellä
+ * kentällä.
  *
  * Lunastus on aineiston omaa, lähteestä tarkistettua tekstiä
  * (docs/mantereet-tyoaineisto/takynostot-kreikka.md, ehdokas 2) —
@@ -196,6 +227,71 @@ const NOSTO_MAAT = {
         selite: 'Sofia Schliemann "Helenan koruissa". Juuri tämä kuva '
           + 'kertoi viranomaisille, missä Troijan kulta oli.',
         lahde: 'Tuntematon kuvaaja n. 1873, Wikimedia Commons (public domain)',
+      },
+    },
+    {
+      /*
+       * Aineiston ehdokas 10. Paikka ja kohde ovat kartan oma Delfoi
+       * (js/packs/fokuskohteet-grc.js `delfoi`), joten piste tuikkii
+       * Delfoin symbolin päällä — kaukana Ateenan laatasta, kuten
+       * omistaja pyysi.
+       *
+       * LUPAUS LUNASTETAAN OMASSA KORTISSA eikä Delfoin tietoruudussa:
+       * tietoruutu kertoo Omfaloksesta ja Pythiasta, ei kylästä joka
+       * istui oraakkelin päällä. Kortin nappi vie sinne vasta sitten,
+       * kun otsikon lupaus on maksettu.
+       */
+      id: 'kastrin-kyla',
+      kohde: 'delfoi',
+      otsikko: 'Kokonainen kylä istui oraakkelin päällä — eikä lähtenyt '
+        + 'ennen kuin maa järisi',
+      teksti: 'Kun ranskalaiset halusivat kaivaa Delfoin pyhäkön esiin, '
+        + 'sen päällä seisoi Kastrin kylä: noin sata taloa ja 200 asukasta, '
+        + 'jotka olivat louhineet antiikin kiviä omiin seiniinsä siitä '
+        + 'asti kun paikka tuhottiin 300-luvulla.\n\n'
+        + 'Kylä olisi pitänyt siirtää ennen kaivauksia, mutta asukkaat '
+        + 'kieltäytyivät. Tilaisuus tuli vasta kun maanjäristys vaurioitti '
+        + 'kylää pahoin: asukkaille tarjottiin kokonaan uusi kylä vanhan '
+        + 'paikan tilalle, ja 1893 Ranskan arkeologinen koulu kuori pois '
+        + 'maanvyöryjen massat ja paljasti Apollonin pyhäkön.',
+      lahde: 'en-Wikipedia "Delphi", osio "Archaeology of the precinct" '
+        + '(tarkistettu 28.8.2026).',
+      paikka: {
+        nimi: 'Delfoi',
+        laudat: {
+          maailmankartta: { x: 6583.4, y: 1862.2 },
+          europe: { x: 643.2, y: 881.5 },
+        },
+      },
+    },
+    {
+      /*
+       * Aineiston ehdokas 12. Aineiston oma varoitus noudatettu: lähde
+       * puhuu ensimmäisestä KIRJATUSTA noususta, joten teksti sanoo
+       * "tiettävästi ensimmäinen" eikä väitä, ettei kukaan olisi
+       * koskaan käynyt huipulla.
+       */
+      id: 'olympoksen-huippu',
+      kohde: 'olympos',
+      otsikko: 'Jumalten vuorelle noustiin vasta 1913 — ja huipulla oli '
+        + 'ensimmäisenä vuohenmetsästäjä',
+      teksti: 'Olympos oli koko antiikin ajan jumalten koti, mutta sen '
+        + 'korkeimmalle huipulle Mytikakselle noustiin tiettävästi '
+        + 'ensimmäisen kerran vasta 2. elokuuta 1913 — vuosi sen jälkeen, '
+        + 'kun Pohjois-Kreikka vapautui ottomaanivallasta.\n\n'
+        + 'Retken maksoivat sveitsiläiset Frédéric Boissonnas ja Daniel '
+        + 'Baud-Bovy, mutta kolmikosta huipulle astui ensimmäisenä heidän '
+        + 'oppaansa Christos Kakkalos, villivuohien metsästäjä Litohoron '
+        + 'kylästä. Hän toimi Olympoksen virallisena oppaana kuolemaansa '
+        + 'eli vuoteen 1976 asti.',
+      lahde: 'en-Wikipedia "Mount Olympus", osio "History" '
+        + '(tarkistettu 28.8.2026).',
+      paikka: {
+        nimi: 'Ólympos',
+        laudat: {
+          maailmankartta: { x: 6578.6, y: 1799.5 },
+          europe: { x: 640.5, y: 839.3 },
+        },
       },
     },
   ],
@@ -366,10 +462,11 @@ function nostoVuorossa(ui, jaljella) {
  * pahempi kuin ankkuroimaton liuska. Piste ei ole samalla tavalla
  * vaativa: sen lupaus on *"tässä maassa on jotain katsottavaa"*, ja
  * kaupunki on maan oikea osoite silloinkin, kun jutun tarkkoja
- * koordinaatteja ei ole laskettu. Päällekkäisyyden hoitaa yhteinen
- * kasauspassi, joka siirtää kaupungin päälle osuvan merkin sen viereen
- * omaan sarakkeeseensa katkoviivan päähän (js/fokusniput.js) — sama
- * ratkaisu kuin kartan kohdemerkeillä.
+ * koordinaatteja ei ole laskettu. PÄÄLLEKKÄISYYS EI JÄÄ TÄHÄN: piste
+ * piirtyy lähimmän kohdesymbolin päälle (js/fokusnosto-symbolit.js),
+ * ja kaupungin ryppään symbolit ovat jo katkoviivan päässä omassa
+ * sarakkeessaan (js/fokusniput.js) — laatan päälle piste ei siis päädy
+ * silloinkaan, kun sen oma paikka on kaupungin koordinaatti.
  *
  * Ilman kaupunkiakin (katselutila, laudan vaihto) palautuu null, ja
  * silloin piirtyy vanha alalaidan liuska.
@@ -402,7 +499,17 @@ function nostonPaikka(ui, nosto) {
 function nostonMerkinta(ui, nosto) {
   const paikka = nosto ? nostonPaikka(ui, nosto) : null;
   if (!paikka) return null;
-  return { id: nosto.id, otsikko: nosto.otsikko, paikka };
+  /*
+   * `kohde` kulkee kerrokselle asti, koska PISTE RATSASTAA SYMBOLIN
+   * PÄÄLLÄ (js/fokusnosto-symbolit.js, osio PISTE AINA SYMBOLIN
+   * PÄÄLLE): nimetty kohde on pisteen ankkuri, ja ilman sitä ankkuriksi
+   * kelpaa lähin kohdemerkki. Kumpikaan valinta ei kuulu tänne — tämä
+   * tiedosto kertoo missä juttu tapahtui, kerros kertoo minkä merkin
+   * päällä se näytetään.
+   */
+  return {
+    id: nosto.id, otsikko: nosto.otsikko, paikka, kohde: nosto.kohde ?? null,
+  };
 }
 
 /**
@@ -538,8 +645,14 @@ function avaaNosto(ui, nosto) {
   if (!nosto) return;
   sfx.play('paper');
   nostoMerkitseLuetuksi(nosto.id);
+  /*
+   * ANKKURIKOHDE TALTEEN ENNEN SULKUA. Piste tuikkii kohdemerkin päällä
+   * (js/fokusnosto-symbolit.js), ja kerroksen nollaus unohtaa sen —
+   * kortti tarvitsee tiedon sen jälkeen (nostonKarttakohde).
+   */
+  const ankkuri = ui?.nostosymAnkkuriKohde ?? null;
   suljeFokusnosto(ui);
-  avaaNostonKortti(ui, nosto);
+  avaaNostonKortti(ui, nosto, ankkuri);
 }
 
 /* ==================== LIVIAN HUOMAUTUS ==================== */
@@ -756,7 +869,7 @@ function nostoRasti(ui, nosto) {
  * sen päällä. Napautus kortin ulkopuolelle tai Esc sulkee, ja
  * sulkemisen jälkeen poolin seuraava nosto saa nousta.
  */
-function avaaNostonKortti(ui, nosto) {
+function avaaNostonKortti(ui, nosto, ankkuri = null) {
   nostoLataaTyyli();
   suljeNostonKortti(ui);
 
@@ -793,7 +906,7 @@ function avaaNostonKortti(ui, nosto) {
    * pinnalla. Kortti sulkeutuu samalla: kaksi korttia päällekkäin olisi
    * juuri sitä raskautta, jota kevyt kulku purkaa.
    */
-  const kohde = nostonKarttakohde(ui, nosto);
+  const kohde = nostonKarttakohde(ui, nosto, ankkuri);
   if (kohde) {
     const nappi = html('button', 'fokusnosto-kohdenappi', `Katso ${kohde.nimi} kartalla`);
     nappi.type = 'button';
@@ -854,11 +967,21 @@ function avaaNostonKortti(ui, nosto) {
  * Kummassakin tapauksessa nappi jää pois eikä lupaa mitään, mitä
  * napautus ei tekisi.
  */
-function nostonKarttakohde(ui, nosto) {
-  if (!nosto?.kohde) return null;
-  if (!ui?.fokuskohdeMerkit?.get(nosto.kohde)?.length) return null;
+function nostonKarttakohde(ui, nosto, ankkuri = null) {
+  /*
+   * ANKKURIKOHDE KELPAA MYÖS. Piste piirtyy kohdemerkin päälle
+   * (js/fokusnosto-symbolit.js) ja vie sen napautuksen niin kauan kuin
+   * täky on lukematta; kutsuja kertoo tässä, minkä merkin päällä se
+   * istui, jotta kortti tarjoaa sinne oven. Datan oma `kohde` voittaa:
+   * se on täyn oikea aihe, ankkuri vain lähin naapuri.
+   */
+  const tunnus = nosto?.kohde ?? ankkuri ?? null;
+  if (!tunnus) return null;
+  if (!ui?.fokuskohdeMerkit?.get(tunnus)?.length) return null;
   if (ui.fokuskohdeKerros?.classList?.contains('fokuskohteet-piilossa')) return null;
-  return fokuskohteet([nosto.kohde])[0] ?? null;
+  // Nykyisen maan taulu ensin (js/fokuskohteet.js): se palvelee kaikkia
+  // maita, kun taas suora tuonti tuntee vain Kreikan kohteet.
+  return ui.fokuskohdeTiedot?.get(tunnus) ?? fokuskohteet([tunnus])[0] ?? null;
 }
 
 /** Kortti pois, kuuntelijat puretaan ja poolin seuraava saa nousta. */

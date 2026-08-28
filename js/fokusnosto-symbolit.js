@@ -1501,7 +1501,11 @@ export function piirraNostosymKartalle(g, symboli, nimio, laji, vasemmalle = fal
 /** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta perustasolla). */
 const NOSTOSYM_TUIKE_OSUMA_R = 22;
 /* Mitat ovat vihreän pisteen mitat (js/fokuspiste.js PISTE_*_R): kaksi
- * saman kokoluokan pistettä samalla lehdellä, ei kahta eri kokoa. */
+ * saman kokoluokan pistettä samalla lehdellä, ei kahta eri kokoa.
+ * MITAT ON MITATTU SELAIMESTA 28.8.2026 (Kreikan lehti, Chromium):
+ * ydin 1,8 px, kehä 3,2 px, hehku 5,5 px — kummallakin pisteellä
+ * täsmälleen sama luku. Osuma-alue pysyy 44 px:ssä saavutettavuuden
+ * takia; se on näkymätön eikä kuulu merkin kokoon. */
 const NOSTOSYM_TUIKE_HEHKU_R = 5.5;
 const NOSTOSYM_TUIKE_KEHA_R = 3.2;
 const NOSTOSYM_TUIKE_YDIN_R = 1.8;
@@ -1532,6 +1536,133 @@ function piirraNostosymTuike(g, avaa) {
   g.addEventListener('keydown', (tapahtuma) => {
     if (tapahtuma.key === 'Enter' || tapahtuma.key === ' ') nappaa(tapahtuma);
   });
+}
+
+/* ============ PISTE AINA SYMBOLIN PÄÄLLE, EI KOSKAAN KAUPUNGIN ======
+ *
+ * Omistajan pelitestipalaute v1234 (iPhone): *"Pulun täkyvihje vilkkui
+ * suoraan Ateenan pisteen päällä … Ensimmäinen vinkki, tai mikään
+ * vinkki, ei saa olla suoraan kaupungin päällä, vaan se pitää olla
+ * vaikka viivalla vedetty kauemmas tai mieluiten hieman eri paikassa
+ * lähtökohtaisesti. Jos se on viivalla vedetyssä paikassa, niin silloin
+ * piste voisi vilkkua symbolin päällä. Tai siis se voisi aina vilkkua
+ * symbolin päällä, oli tilanne mikä tahansa."*
+ *
+ * ── MIKSI PISTE OLI KAUPUNGIN PÄÄLLÄ ───────────────────────────────
+ *
+ * Täyn koordinaatit ovat sen jutun paikka (js/fokusnosto.js paikka), ja
+ * useimmiten juttu tapahtui KAUPUNGISSA: Kreikan täyn Iliou Melathron
+ * on laudalla (6624,5 / 1881,6) ja Ateenan laatta (6624,7 / 1882) —
+ * käytännössä sama piste. Kartan kohdemerkit väistävät sen tilanteen
+ * yhteisellä kasauspassilla (js/fokusniput.js), joka siirtää kaupungin
+ * päälle osuvat merkit katkoviivan päähän sarakkeeseen, MUTTA passi
+ * ohittaa täyn ankkurin tarkoituksella (nippuMerkit): kuplan aikaan
+ * ankkuri oli mykkä pikkumerkki, joka ei ollut kenenkään tiellä.
+ * Kuplan mukana se peruste katosi — piste on nyt itse painike ja yhtä
+ * iso kuin kaupungin sormialue.
+ *
+ * ── SÄÄNTÖ: PISTE RATSASTAA KOHDESYMBOLIN PÄÄLLÄ ───────────────────
+ *
+ * Piste ei enää etsi omaa vapaata paikkaa vaan asettuu KARTAN OMAN
+ * KOHDEMERKIN päälle (js/fokuskohteet.js), ja merkin nykyinen paikka
+ * luetaan sieltä missä se oikeasti on — myös silloin kun kasauspassi on
+ * juuri siirtänyt sen katkoviivan päähän. Kolme askelta, tässä
+ * järjestyksessä:
+ *
+ *   1. TÄYN OMA KOHDE (`kohde`-kenttä) — merkki on nimetty datassa, ja
+ *      silloin etäisyydellä ei ole väliä: juttu koskee juuri sitä
+ *      kohdetta.
+ *   2. LÄHIN KOHDEMERKKI täyn oman paikan ympäriltä (NOSTOSYM_ANKKURI_PX).
+ *      Tämä hoitaa sekä paikattoman täyn (paikka = kaupunki) että
+ *      kaupungin päälle osuvan jutun: molemmissa lähin merkki on
+ *      kaupungin ryppäässä, ja rypäs on jo katkoviivan päässä.
+ *   3. EI MERKKEJÄ (yleiskuva piilottaa kerroksen, tai maassa ei ole
+ *      kohteita): piste jää omaan paikkaansa — paitsi jos se osuisi
+ *      kaupungin sormialueelle, jolloin se siirtyy laatan VASEMMALLE
+ *      puolelle. Vasemmalle siksi, että kasauspassin sarake on oikealla:
+ *      näin varapolku ei voi asettua sarakkeen rivin päälle.
+ *
+ * SIIRTO ON ESITYSTÄ, EI DATAA — sama sopimus kuin kasauspassilla ja
+ * vihreällä pisteellä (js/fokuspiste.js PISTE_ERO_MIN): pakettien
+ * koordinaatteihin ei kosketa, ja osuma-alue seuraa pistettä, koska se
+ * on saman ankkuriryhmän lapsi.
+ *
+ * KOHDE JÄÄ SAAVUTETTAVAKSI. Piste on kohdemerkin päällä ja vie sen
+ * napautuksen niin kauan kuin täky on lukematta. Siksi kerros kertoo
+ * ankkurikohteensa täkynostolle (ui.nostosymAnkkuriKohde), joka nostaa
+ * siitä lunastuskorttiin "Katso X kartalla" -napin — täky *"houkuttelee
+ * kohteen auki"* (omistajan alkuperäinen tilaus) eikä sulje siltä ovea.
+ */
+
+/** Kuinka läheltä täyn omaa paikkaa symboli kelpaa ankkuriksi (px). */
+const NOSTOSYM_ANKKURI_PX = 60;
+
+/*
+ * Kaupungin sormialueen säde (js/ui.js FOKUS_LAATTA_OSUMA_PX / 2) plus
+ * pisteen oma osuma-alue: tätä lähempänä piste lepäisi laatan päällä.
+ * Vakiota ei voi tuoda js/ui.js:stä (ui.js tuo tämän kerroksen, ja
+ * tuonti toisin päin olisi kehä) — sama perustelu ja sama luku kuin
+ * js/fokusniput.js NIPPU_LAATTA_R:llä.
+ */
+const NOSTOSYM_LAATTA_R = 24;
+/** Varapolun sivusiirto kaupungista VASEMMALLE (sarake on oikealla). */
+const NOSTOSYM_SIVUUN_PX = 48;
+
+/** Kohdemerkkien ankkuriryhmät, tai tyhjä lista kun merkit ovat piilossa. */
+function nostosymAnkkurit(ui) {
+  if (ui?.fokuskohdeKerros?.classList?.contains('fokuskohteet-piilossa')) return [];
+  return ui?.fokuskohdeRyhmat ?? [];
+}
+
+/** Kohdemerkin NYKYINEN piirtopaikka: nippu, erottelusiirto tai data. */
+function nostosymMerkinPaikka(ryhma) {
+  return {
+    x: ryhma.nippu?.x ?? ryhma.x + (ryhma.sx ?? 0),
+    y: ryhma.nippu?.y ?? ryhma.y + (ryhma.sy ?? 0),
+  };
+}
+
+/**
+ * TÄKYPISTEEN PIIRTOPAIKKA — ks. sääntö yllä.
+ *
+ * @param {object} ui
+ * @param {object} ryhma  täyn ankkuriryhmän tietue ({ x, y, kohde })
+ * @param {number} s      merkkien vakioskaala (px → laudan yksiköt)
+ * @returns {{x:number, y:number, kohde:?string}}
+ */
+function nostosymTuikkeenPaikka(ui, ryhma, s) {
+  let paras = null;
+  let etaisyys = Infinity;
+  for (const merkki of nostosymAnkkurit(ui)) {
+    if (ryhma.kohde && merkki.id !== ryhma.kohde) continue;
+    const e = Math.hypot(merkki.x - ryhma.x, merkki.y - ryhma.y);
+    if (e < etaisyys) { etaisyys = e; paras = merkki; }
+  }
+  // Nimetty kohde kelpaa etäältäkin; nimeämätön vain omasta naapurustosta.
+  if (paras && (ryhma.kohde || etaisyys <= NOSTOSYM_ANKKURI_PX * s)) {
+    return { ...nostosymMerkinPaikka(paras), kohde: paras.id ?? null };
+  }
+  return { ...nostosymKaupungistaSivuun(ui, ryhma, s), kohde: null };
+}
+
+/**
+ * VARAPOLKU: oma paikka, mutta ei koskaan kaupungin laatan päällä.
+ *
+ * Kiertävällä laudalla kaupunki on kartalla kahdesti, ja väistö
+ * mitataan siitä kopiosta, jonka luona tämä merkin kopio on.
+ */
+function nostosymKaupungistaSivuun(ui, ryhma, s) {
+  const oma = { x: ryhma.x, y: ryhma.y };
+  const city = ui?.fokusmoodi && !ui.katselu ? ui.game?.cityOf?.() : null;
+  if (!city || !Number.isFinite(city.x) || !Number.isFinite(city.y)) return oma;
+  let cx = null;
+  let etaisyys = Infinity;
+  for (const kohta of ui.kiertoKohdat?.(city.x) ?? [city.x]) {
+    const e = Math.hypot(ryhma.x - kohta, ryhma.y - city.y);
+    if (e < etaisyys) { etaisyys = e; cx = kohta; }
+  }
+  if (etaisyys >= (NOSTOSYM_LAATTA_R + NOSTOSYM_TUIKE_OSUMA_R) * s) return oma;
+  return { x: cx - NOSTOSYM_SIVUUN_PX * s, y: city.y };
 }
 
 /* ==================== KERROS ==================== */
@@ -1591,7 +1722,12 @@ export function paivitaNostosymbolit(ui, tila = {}) {
     for (const x of merkinta
       ? ui.kiertoKohdat?.(merkinta.paikka.x) ?? [merkinta.paikka.x] : []) {
       const ryhma = el('g', { class: 'fokusnosto-symboliryhma' }, kerros);
-      ui.nostosymRyhmat.push({ g: ryhma, x, y: merkinta.paikka.y });
+      // `kohde` on täyn oma karttakohde, jos data nimeää sellaisen:
+      // silloin piste ratsastaa juuri sen merkin päällä (ks. sääntö
+      // PISTE AINA SYMBOLIN PÄÄLLE).
+      ui.nostosymRyhmat.push({
+        g: ryhma, x, y: merkinta.paikka.y, kohde: merkinta.kohde ?? null,
+      });
       const ankkuri = el('g', { class: 'fokusnosto-ankkuri nostosym-tuike' }, ryhma);
       ankkuri.setAttribute('aria-label', merkinta.otsikko
         ? `${merkinta.otsikko} — lue lisää` : 'Täky kartalla: lue lisää');
@@ -1626,11 +1762,22 @@ export function asemoiNostosymbolit(ui, suhde = 1) {
    */
   niputaFokusmerkit(ui, s);
   const zoom = s.toFixed(4);
+  /*
+   * PAIKKA LASKETAAN VASTA PASSIN JÄLKEEN. Täyn piste ratsastaa
+   * kohdemerkin päällä, ja merkin paikka on juuri se, jonka kasauspassi
+   * yllä kirjoitti — passi ajetaan siis ennen tätä silmukkaa, ei sen
+   * jälkeen (ks. sääntö PISTE AINA SYMBOLIN PÄÄLLE).
+   */
+  let ankkuri = null;
   for (const ryhma of ui.nostosymRyhmat ?? []) {
-    const x = ryhma.nippu?.x.toFixed(2) ?? ryhma.x;
-    const y = ryhma.nippu?.y.toFixed(2) ?? ryhma.y;
-    ryhma.g.setAttribute('transform', `translate(${x} ${y}) scale(${zoom})`);
+    const paikka = ryhma.nippu ?? nostosymTuikkeenPaikka(ui, ryhma, s);
+    ankkuri = paikka.kohde ?? ankkuri;
+    ryhma.g.setAttribute('transform',
+      `translate(${paikka.x.toFixed(2)} ${paikka.y.toFixed(2)}) scale(${zoom})`);
   }
+  // Lunastuskortin "Katso X kartalla" -nappi lukee tämän, jottei pisteen
+  // alle jäänyt kohde jää tavoittamattomiin (js/fokusnosto.js).
+  ui.nostosymAnkkuriKohde = ankkuri;
   // Rekisteröinti nipistykseen jää (js/kartta.js vastaskaalaaMerkit):
   // varapolku on yhä ruutumitassa ja tarvitsee vastaskaalan.
   (ui.nipistysVastaskaalaajat ??= new Set())
@@ -1650,5 +1797,6 @@ export function nollaaNostosymbolit(ui) {
   if (!ui) return;
   ui.nostosymAvain = null;
   ui.nostosymRyhmat = [];
+  ui.nostosymAnkkuriKohde = null;
   if (ui.nostosymKerros?.isConnected) ui.nostosymKerros.textContent = '';
 }
