@@ -1,0 +1,115 @@
+# Generoi ElevenLabs-luennat suoraan secretistä — avainta ei liikutella
+# chatissa eikä koneelta toiselle (omistajan linjaus 28.8.2026, Raamattu
+# → "Äänet ja luennat": ELEVEN-AVAIN ON GITHUB-SECRETISSA).
+#
+# Ajo on KÄSIAJETTAVA (workflow_dispatch): luenta on sanasta sanaan
+# sidottu pelidataan, joten se generoidaan vasta kun teksti on mainissa
+# — automaattinen ajo joka pushista polttaisi rahaa ja voisi äänittää
+# keskeneräisen tekstin.
+#
+# KAKSI TYÖKALUA, SAMA RESEPTI (Viisas Kertoja, eleven_v3):
+#   tools/generoi-avaus.mjs    etusivun ja avauslennon luennat
+#                              (intro-puhe.mp3, puhe-lento-alku.mp3);
+#                              vaatii mpg123-decoder + lamejs
+#                              (hännän hiljaisuusmittaus + paddaus).
+#   tools/generoi-luennat.mjs  kaupunkien saapumisluennat
+#                              (puhe-<lauta>-saapuminen-<id>.mp3).
+#
+# TUOTOS EI MENE SUORAAN MAINIIN. Ajo committoi uudet mp3:t omalle
+# haaralleen (claude/luennat-<ajonumero>) ja jättää ne PR:ää varten:
+# luennat KUUNNELLAAN ennen julkaisua (generoi-avaus.mjs:n oma sääntö
+# "Kuuntele molemmat ennen julkaisua"), ja mp3 assets/audio-kansiossa
+# vaatii versionoston harkintoineen (sw-esilataus vai R2). Kun PR
+# mergetään, vie-aanet.yml vie tiedostot R2:een automaattisesti.
+#
+# Salaisuus on tämän repon Actions-asetuksissa: ELEVEN_API_KEY.
+# Avain ei koskaan tulostu lokiin (työkalut eivät tulosta sitä, eikä
+# tämä ajo echoa sitä) — GitHub peittää secretit lokista joka
+# tapauksessa, mutta siihen ei nojata.
+
+name: Generoi luennat
+
+on:
+  workflow_dispatch:
+    inputs:
+      kaupungit:
+        description: >-
+          Kaupunkien avaimet välilyönnein (esim. "venetsia edinburgh").
+          Tyhjä = ei kaupunkiluentoja.
+        required: false
+        default: ''
+      avaus:
+        description: Generoi myös etusivun ja avauslennon luennat
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generoi-luennat
+  cancel-in-progress: false
+
+jobs:
+  generoi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Tarkista että avain on tallessa
+        env:
+          AVAIN: ${{ secrets.ELEVEN_API_KEY }}
+        run: |
+          set -euo pipefail
+          if [ -z "$AVAIN" ]; then
+            echo "::error::ELEVEN_API_KEY-salaisuutta ei löydy tästä reposta."
+            echo "Lisää se: Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          echo "Avain löytyy."
+
+      - name: Tarkista että jotain on tilattu
+        if: ${{ inputs.kaupungit == '' && inputs.avaus == false }}
+        run: |
+          echo "::error::Ei mitään generoitavaa — anna kaupungit ja/tai avaus."
+          exit 1
+
+      # Vain avaus-työkalu tarvitsee paketteja (hännän mittaus +
+      # hiljaisuuspaddaus). Asennus ilman package.json-muutosta:
+      # --no-save, jotta työhakemisto pysyy puhtaana committia varten.
+      - name: Asenna avaustyökalun paketit
+        if: ${{ inputs.avaus == true }}
+        run: npm install --no-save --no-audit --no-fund mpg123-decoder lamejs
+
+      - name: Generoi avausluennat
+        if: ${{ inputs.avaus == true }}
+        env:
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+        run: node tools/generoi-avaus.mjs
+
+      - name: Generoi kaupunkiluennat
+        if: ${{ inputs.kaupungit != '' }}
+        env:
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+        run: node tools/generoi-luennat.mjs ${{ inputs.kaupungit }}
+
+      - name: Committoi tuotos omalle haaralleen
+        run: |
+          set -euo pipefail
+          git add assets/audio
+          if git diff --cached --quiet; then
+            echo "::error::Yhtään tiedostoa ei syntynyt eikä muuttunut."
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          haara="claude/luennat-${{ github.run_number }}"
+          git checkout -b "$haara"
+          git commit -m "Luennat: ${{ inputs.avaus == true && 'avaus ' || '' }}${{ inputs.kaupungit }}"
+          git push -u origin "$haara"
+          echo "Valmis. Haara: $haara — kuuntele luennat ja tee PR."
