@@ -79,6 +79,38 @@
  *    osuma-alueet seuraavat merkkiä, koska ne ovat saman ankkuriryhmän
  *    lapsia. Viiva on saman esityksen jälki eikä uutta tietoa.
  *
+ * 7. SARAKE MAHTUU AINA LEHDEN IKKUNAAN — RIVIVÄLI TIIVISTYY.
+ *
+ *    Omistajan pelitesti 28.8.2026 (iPhone, Kreikan fokuskartta):
+ *    *"Miksi iphonella näkyy näin monia pisteitä viivan kanssa?"* —
+ *    Ateenan ryppään merkit sinkoutuivat katkoviivoineen ympäri lautaa,
+ *    Epidauros Kreetan alapuolelle ja Akropolis Santorínin eteläpuolelle,
+ *    vaikka niiden pitäisi asettua pieneen viuhkaan kaupungin viereen.
+ *
+ *    SYY ON SÄÄNNÖN 3 MITTA KAPEALLA RUUDULLA. Kaikki tämän tiedoston
+ *    luvut ovat ruudun pikseleitä LEHDEN PERUSTASOLLA, ja perustaso on
+ *    lehden ikkuna sovitettuna karttaruutuun (js/ui.js
+ *    fokusMerkkiSkaala: `Math.min(paneW / w, paneH / h)`). Puhelimen
+ *    ruutu on kapea ja korkea, joten sovitus tulee LEVEYDESTÄ: Kreikan
+ *    lehti on 468 × 292 lautayksikköä ja 374 pikselin ruudulla yksi
+ *    pikseli on 1,25 lautayksikköä, kun se työpöydän 1419 pikselin
+ *    ruudulla on 0,36. Sama 30 pikselin riviväli on siis puhelimella
+ *    3,5-kertainen SUHTEESSA KARTTAAN — ja yhdeksän merkin sarake
+ *    (8 × 30 px = 300 yksikköä) on puhelimella PIDEMPI KUIN KOKO LEHTI,
+ *    joka on 292 yksikköä korkea. Mitattuna: alin rivi y = 2032, lehden
+ *    alareuna y = 2018. Sarake valui kirjaimellisesti ulos kuvasta.
+ *    Työpöydällä sama sarake on 85 yksikköä eli neljännes lehdestä, ja
+ *    juuri siksi vika näkyi vain puhelimella.
+ *
+ *    KORJAUS ON RIVIVÄLISSÄ, EI MITTAKAAVASSA. Sääntö 3 pysyy: merkit ja
+ *    sarake elävät kartan mukana eikä nippu hajoa zoomatessa. Riviväli
+ *    saa kuitenkin TIIVISTYÄ, kun rivejä on niin monta, ettei sarake
+ *    muuten mahtuisi lehden ikkunaan (nippuRiviVali,
+ *    NIPPU_KORKEUS_OSUUS) — alarajana merkkien omat aluslaatat, jotka
+ *    eivät saa mennä päällekkäin (NIPPU_VALI_RAKO). Tavallinen yhden,
+ *    kahden tai neljän merkin nippu ei muutu lainkaan: tiivistys alkaa
+ *    vasta siitä, missä sarake muuten karkaisi kartalta.
+ *
  * ── NIMET ON PREFIKSOITU ───────────────────────────────────────────
  *
  * Yhden tiedoston versio ketjuttaa moduulit samaan näkyvyysalueeseen
@@ -116,6 +148,14 @@ const NIPPU_DX = 48;
  * osuma-alueet menevät naapureidensa kanssa hiukan limittäin,
  * napautus merkin NÄKYVÄÄN kohtaan osuu aina oikeaan: naapurin alue
  * (r = 22) ei yllä 30 px:n päähän eli merkin omaan keskustaan asti.
+ *
+ * TÄMÄ ON TAVOITE, EI POHJA (sääntö 7). Ahtaassa ryppäässä väli
+ * tiivistyy, jottei sarake karkaisi lehdestä (nippuRiviVali), ja silloin
+ * naapurin osuma-alue kyllä yltää merkin keskustaan asti. Napautus osuu
+ * silti oikeaan, koska voittajan ratkaisee LÄHIN OSUMAMUODON KESKIPISTE
+ * eikä piirtojärjestys (js/fokuskohteet.js lahinKohde, v1218) — sama
+ * sääntö, jolla Parnassós ja Delfoi elävät viiden yksikön päässä
+ * toisistaan.
  */
 const NIPPU_VALI = 30;
 
@@ -129,6 +169,27 @@ const NIPPU_VAPAA = 44;
 
 /** Varmistin: montako riviä väistö saa enintään hypätä. */
 const NIPPU_VAISTOJA = 8;
+
+/*
+ * SARAKE EI SAA OLLA LEHTEÄ PIDEMPI (ks. sääntö 7).
+ *
+ * Osuus lehden IKKUNAN (ui.fokusPohjaRajaus) korkeudesta, jonka sarake
+ * saa enimmillään viedä. Puolikas on mitoitettu Ateenan ryppäästä:
+ * yhdeksän merkkiä mahtuu kaupungin viereen niin, että ylin ja alin rivi
+ * jäävät selvästi lehden sisään eikä yksikään yhdysviiva ylitä puolta
+ * ruutua. Isompi luku päästäisi sarakkeen taas ulos kuvasta, pienempi ei
+ * enää muuttaisi mitään: alaraja tulee merkkien omasta koosta
+ * (NIPPU_VALI_RAKO).
+ */
+const NIPPU_KORKEUS_OSUUS = 0.5;
+
+/*
+ * Tiivistetyn rivivälin alaraja: merkkien aluslaattojen väliin jäävä
+ * rako ruudun pikseleinä lehden perustasolla. Väli ei siis koskaan
+ * kutistu niin pieneksi, että laatat menisivät päällekkäin — ahtaassa
+ * ryppäässä sarake on tiivis mutta merkit ovat yhä erillisiä.
+ */
+const NIPPU_VALI_RAKO = 3;
 
 /*
  * YHDYSVIIVAN MITAT JA SÄVY (ks. sääntö 6).
@@ -288,6 +349,36 @@ function nippuPiirraViivat(ui, viivat, s) {
 }
 
 /**
+ * Yhden sarakkeen riviväli laudan yksiköinä (ks. sääntö 7).
+ *
+ * Tavallisesti NIPPU_VALI ruudun pikseleinä lehden perustasolla, kuten
+ * kaikki muutkin tämän tiedoston mitat. Jos rivejä on niin monta, ettei
+ * sarake mahtuisi lehden ikkunaan, väli tiivistyy juuri sen verran, että
+ * se mahtuu — mutta ei koskaan merkkien omia aluslaattoja tiheämmäksi,
+ * jottei sarakkeesta tule päällekkäisten laattojen kasaa.
+ *
+ * @param {Array} jono     sarakkeen tietueet ({ merkki, jono })
+ * @param {number} s       merkkien vakioskaala
+ * @param {?object} ikkuna lehden rajaus laudan yksiköinä tai null
+ */
+function nippuRiviVali(jono, s, ikkuna) {
+  const tavoite = NIPPU_VALI * s;
+  const rivit = jono.length;
+  // Yksi merkki ei tarvitse väliä, eikä lehdetön varapolku tiedä
+  // ikkunasta mitään: silloin entinen mitta on ainoa mitta.
+  if (rivit < 2 || !(ikkuna?.h > 0)) return tavoite;
+  const mahtuu = (ikkuna.h * NIPPU_KORKEUS_OSUUS) / (rivit - 1);
+  if (mahtuu >= tavoite) return tavoite;
+  /*
+   * Alaraja on nipun SUURIN aluslaatta: täkysymbolin laatta on
+   * kohdemerkin laattaa isompi, ja jos väli mitoitettaisiin pienimmän
+   * mukaan, täky peittäisi naapurinsa.
+   */
+  const suurin = jono.reduce((m, { merkki }) => Math.max(m, merkki.sade), 0);
+  return Math.max((2 * suurin + NIPPU_VALI_RAKO) * s, mahtuu);
+}
+
+/**
  * KASAUSPASSI — kutsutaan kerrosten asemoinnista ennen muunnoksia.
  *
  * @param {object} ui  Pelin UI-olio (fokuskohdeRyhmat, nostosymRyhmat,
@@ -352,6 +443,12 @@ export function niputaFokusmerkit(ui, s) {
       || (a.jono - b.jono));
     const x = cx + NIPPU_DX * s;
     /*
+     * RIVIVÄLI TIIVISTYY, JOS SARAKE EI MUUTEN MAHDU LEHTEEN (sääntö 7).
+     * Väli lasketaan kerran koko sarakkeelle eikä riveittäin: eri
+     * mittaiset välit lukisivat sotkuna, ei nippuna.
+     */
+    const vali = nippuRiviVali(jono, s, ui.fokusPohjaRajaus);
+    /*
      * SARAKE KESKITETÄÄN KAUPUNGIN KORKEUDELLE (rivit 0, +1, −1, +2, …
      * — omistaja 26.8.2026, Akropolis: "piste on liian kaukana
      * ateenasta"). Ennen rivit laskivat vain alaspäin, ja kun vihreä
@@ -361,7 +458,7 @@ export function niputaFokusmerkit(ui, s) {
      * laatan viereen samalle korkeudelle.
      */
     const riviY = (i) => city.y
-      + (i === 0 ? 0 : (i % 2 ? (i + 1) / 2 : -(i / 2))) * NIPPU_VALI * s;
+      + (i === 0 ? 0 : (i % 2 ? (i + 1) / 2 : -(i / 2))) * vali;
     let indeksi = 0;
     for (const { merkki } of jono) {
       let y = riviY(indeksi);
