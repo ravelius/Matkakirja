@@ -1411,6 +1411,21 @@ const jatkoKlikki = await sivu.evaluate(async () => {
 vaadi('jatkokysymyksen napautus lähettää sen', jatkoKlikki.kysytty === true,
   JSON.stringify(jatkoKlikki));
 
+/*
+ * KEHYSMALLIN SIGNAALI OIKEASSA PYYNTÖRUNGOSSA (Raamattu v1265).
+ *
+ * Kaksi edellistä pyyntöä ovat samasta keskustelusta: ensin
+ * kirjoitettu kysymys (uusi aihe), sitten jatkokysymysnapin napautus
+ * (sama aihe). Vain jälkimmäinen saa olla 'jatko' — jos merkintä
+ * lipsuisi kirjoitettuun kysymykseen, Livian oma ääni katoaisi
+ * pelistä kokonaan eikä se näkyisi missään muualla kuin vastauksissa.
+ */
+const kehysRungot = rungot.filter((r) => r.tehtava === 'vastaus').slice(-2);
+vaadi('kirjoitettu kysymys menee uutena aiheena',
+  kehysRungot[0]?.kehys === 'aloitus', JSON.stringify(kehysRungot[0]?.kehys));
+vaadi('jatkokysymysnapin kysymys menee jatkona',
+  kehysRungot[1]?.kehys === 'jatko', JSON.stringify(kehysRungot[1]?.kehys));
+
 // Vipu pois: luenta lakkaa ja tila unohtuu talletuksesta.
 const kaiutinPois = await sivu.evaluate(async () => {
   const kaiutin = document.querySelector('.pollo-kaiutin');
