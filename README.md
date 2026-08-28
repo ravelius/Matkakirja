@@ -2,124 +2,200 @@
 
 *(lyhyesti Matkakirja)*
 
-Selaimessa pelattava seikkailupeli maailman ympäri. Matkakirja on oma
-pelinsä: se on saanut inspiraatiota Jules Vernen teoksista ja
-monista muista, mutta se ei jäljittele mitään niistä eikä sillä ole
-yhteyttä niiden oikeudenhaltijoihin. Ei riippuvuuksia, ei
-käännösvaihetta — pelkkää HTML:ää, CSS:ää ja JavaScriptiä. Pelin ideana
-on oppia ja opettaa maiden kulttuurista, arjesta ja maantieteestä
-kiinnostavasti. Peliä kehittää Visuaaliviestinnän Instituutti Tampere Oy
-(VVI), tamperelainen visuaalisen viestinnän koulutus- ja sisältöyhtiö.
+**Suomenkielinen seikkailupeli selaimessa.** Nuori herra Fogg perii
+vintiltä isoisänsä matkalaukun ja lähtee maailman ympäri isoisän vuoden
+1873 matkapäiväkirjan jäljillä — etsimään **Aarnin luettelon**
+unohdettuja aarteita. Matkalla oppii maailmasta enemmän kuin huomaakaan.
 
-Nimen loppuosa tulee pelin ytimestä, **unohdetuista aarteista** (engl. *forgotten
-treasures*): tutkimusmatkailija Aarni luetteloi aikoinaan maailman
-kuuluisat kadonneet aarteet — Meripihkahuoneen, El Doradon, keisarin
-jadesinetin ja muut — eikä kukaan uskonut häntä. Isoisä uskoi, ja hänen
-matkansa jäi kesken. **Aarnin luettelo** (*Aarni's Catalogue*) on pelin
-keskeinen ajojahti: jokaisella laudalla yksi luettelon aarre odottaa
-löytäjäänsä ([docs/tarina.md](docs/tarina.md)).
+**Kohderyhmä on 13 vuotta täyttäneet ja aikuiset. Tämä ei ole
+lastenpeli:** vaikeita aiheita ei kaunistella eikä kauhistella, huumori
+on kuivaa, ja kaikki pelin esittämä tieto on tarkistettua.
+
+Peliä kehittää Visuaaliviestinnän Instituutti Tampere Oy (VVI),
+tamperelainen visuaalisen viestinnän koulutus- ja sisältöyhtiö. Peli on
+saanut inspiraatiota Jules Vernen teoksista ja monista muista, mutta se
+on oma pelinsä eikä sillä ole yhteyttä niiden oikeudenhaltijoihin.
+
+**Pelattavissa selaimessa:** <https://ravelius.github.io/Matkakirja/>
+— peli on beta-vaiheessa ja muuttuu päivittäin. Kartalla näkyvää
+versionumeroa napauttamalla aukeaa tiivis päivitysloki.
+
+## Miksi peli on olemassa
+
+Peli edistää tietoa maailmasta — elinoloista, kulttuurista,
+maantieteestä, historiasta ja geopolitiikasta. Väline on koukuttava
+peli, ei oppikirja johon on liimattu noppa: sisältö, joka ei ole
+hauskaa pelata, ei kuulu peliin.
+
+Nimen jälkiosa on kaksitasoinen. Pelin maailmassa unohdetut aarteet
+ovat Aarnin luettelon kadonneita kohteita, joita kukaan ei enää etsi.
+Pelin ideana unohdettu aarre on kaikki se kulttuuriperimän, taiteen,
+tieteen ja maailman epäkummallisuuksien rikkaus, joka tekee ihmisenä
+olemisesta kiinnostavaa — ja joka some- ja AI-moskan keskellä äkkiä
+unohtuu. Peli valjastaa tekoälyn nimenomaan **löytämään** tuota
+rikkautta: se on vastavoima sisältömoskalle, ei sen lähde. Ihminen
+valitsee ja hyväksyy jokaisen kuvan, äänen ja väitteen.
+
+### Oppiminen kiinnostuksen kautta
+
+Pelin ydin on motivaatioteoria siitä, miten eri ihmiset kiinnostuvat
+eri asioista. Peli ei kysy suoraan "mikä on Makedonia". Se lähtee
+liikkeelle vaikka siitä, mitä siellä syödään ja mikä on paikallinen
+herkkuruoka — ja kun kiinnostus on herännyt, oppiminen laajenee
+helposti maan historiaan, kieleen, luontoon ja nykypäivään. Pieni
+yksityiskohta laajenee ymmärrykseksi koko maasta.
+
+Sama koukku toistuu maasta toiseen. **Pulla ja pulu kulkevat mukana
+tämän periaatteen kantajina.**
+
+### Livia, joka tuuraa Viisasta Pöllöä
+
+Pelin tekoälyavustaja on **Livia** — täydeltä nimeltään *Columba
+Livia*, kalliokyyhkyn tieteellinen nimi, jolla hän mielellään
+pröystäilee ("suku on vanhaa roomalaista"). Livia on kirjekyyhky ja
+viestinviejäsukua: isoäiti lensi Pariisin piirityksen kyyhkypostia
+1870–71, setä kantoi kursseja Reuterille ennen lennätintä.
+
+Livia on Viisaan Pöllön **sijainen**. Pöllö on matkoilla, ja Livia on
+luvannut kasvattaa pelaajan untuvikkopöllöä sillä välin — pöllöä
+odotetaan hetkenä minä hyvänsä, mutta hetki siirtyy aina. Hän on
+aidosti asiantunteva, hieman herkkä sille ettei hänen sukuaan
+arvosteta, ja **perso pullalle**: varsinkin eri maiden pullavastineille
+(tsoureki, kozunak, simit). Livia vastaa pelaajan kysymyksiin,
+maadoittaa isoisän 150 vuotta vanhat merkinnät nykypäivään ja lisää
+faktavastauksiin oman näkökulmansa — mutta fakta ei koskaan väänny
+persoonan takia.
 
 ## Tarina
 
-Vintiltä löytyi isoisän matkalaukku: kartta vuodelta 1872, kukkarollinen
-puntia ja kulunut matkakirja: *"Maailman ympäri kahdeksassakymmenessä
-päivässä"*. Viimeinen sivu oli revitty kesken lauseen.
+Vintiltä löytyi isoisän matkalaukku: kartta vuodelta 1872,
+kukkarollinen puntia, vihreä passi ja kulunut matkakirja. Viimeinen
+sivu oli revitty kesken lauseen.
 
-Nuori herra Fogg lähtee kirjoittamaan sen loppuun, mielellään nopeammin.
-Mukana matkustaa isoisän päiväkirja vuodelta 1873: sen merkinnät ovat
-vuoroin hämmentävän tarkkoja ja vuoroin toivottoman vanhentuneita, ja juuri
-siitä jännitteestä pelin tarina syntyy. Piikki osuu aina Foggiin, klubiin
-tai imperiumiin — ei koskaan maihin ja ihmisiin, joita matkalla kohdataan
-([docs/tarina.md](docs/tarina.md), perustuslaki Raamatussa: [js/tyohuone-raamattu.js](js/tyohuone-raamattu.js)).
+Nuori herra Fogg lähtee kirjoittamaan sen loppuun, mielellään
+nopeammin kuin isoisä. Mukana matkustaa isoisän päiväkirja vuodelta
+1873: sen merkinnät ovat vuoroin hämmentävän tarkkoja ja vuoroin
+toivottoman vanhentuneita, ja juuri siitä jännitteestä pelin huumori
+syntyy. Piikki osuu aina Foggiin, klubiin tai imperiumiin — ei koskaan
+maihin ja ihmisiin, joita matkalla kohdataan.
 
-Peli alkaa maailmankartalta: napauta kaupunkia, ja kone lentää Lontoosta
-kohteeseen vanhan seikkailufilmin karttakohtauksena — punainen viiva piirtyy
-koneen perässä isoisän karttalehdelle, jolla kulkevat kääntöpiirit ja himmeät
-päiväkirjamerkinnät. Matka jatkuu, kun astut ulos koneesta.
+Isoisä Horatio Fogg oli laivaston kartanpiirtäjä ja taitava
+luonnostelija: kamera hänellä ei ollut, joten kuvakieli on kirkas —
+1873 on isoisän piirros, nykyhetki on valokuva. Tutkimusmatkailija
+**Aarni** luetteloi 1800-luvun alussa maailman kuuluisat kadonneet
+aarteet, ja aikalaiset pitivät luetteloa satukirjana. Isoisä uskoi.
 
-## Peli pähkinänkuoressa
+Sydänteema on yksinkertainen: poika yrittää ymmärtää isoisäänsä.
 
-- **Yksinpeli ilman loppua:** vaellus alkaa maailmankartalta ja jatkuu
-  porttikaupunkien kautta laudalta toiselle — mantereille, maihin ja
-  kaupunkitasolle. Löytöjä voi kerätä niin kauan kuin huvittaa.
-- **Kymmenen pelilautaa**, jokaisella oma unohdettu aarre: Maailma (Magellanin
-  kompassi), Afrikka (Suuren Zimbabwen kivilintu), Eurooppa
-  (Meripihkahuoneen aarre), Aasia (Keisarin jadesinetti), Oseania
-  (Eteläristin helmi), Pohjois-Amerikka (Montezuman aarre), Etelä-Amerikka
-  (El Doradon aarre), Lähi-itä (Sheban kuningattaren aarre), Suomi (Lapin
-  kulta) ja Istanbul (Sulttaanin timantti).
-- **Afrikka on viimeistelty pisimmälle** ("Afrikka ensin"): elävät
-  kahden äänen tekstit joka kaupungille, isoisän väittämät, tapahtumakortit,
-  karttakysymykset, luonnoskirjan pulmat ja kartalle piirretyt maamerkit
-  (Gizan pyramidit, Pöytävuori, Kilimandžaro, dhow). Muut laudat saavat
-  saman käsittelyn lauta kerrallaan.
-- **Aika on vastustaja, ei rangaistus:** vuoro on kuusi tuntia ja yläpalkissa
-  kulkee päiväkirjan päivämäärä ("Päivä 14, ilta"). Isoisän aikataulu
-  kommentoi matkaa samoilta päiviltä, ja 80 päivän ennätyksen alittamisesta
-  saa kunniamerkinnän passiin — ajan loppuminen ei päätä peliä koskaan.
-- **Pysähdykset vaihtelevat:** tavallisen monivalinnan rinnalla isoisän
-  väittämät (totta vai tarua), karttakysymykset (mikä näistä on pohjoisin?
-  mihin pääsee suoraan yhtä reittiä?) ja tapahtumakortit, joissa ei kysytä
-  mitään vaan matkalla sattuu jotain pientä ja reilua.
-- **Isoisän luonnoskirjan pulmat:** viisi kauniisti piirrettyä
-  päättelytehtävää Afrikassa — hieroglyfiluvut, Ashantien kultapunnukset,
-  xhosan naksutusmerkit, käsikirjoituksen kuunvaiheet ja karavaanin
-  vesileilit. Pulmat avautuvat kerran pelissä kaupunkiin saavuttaessa ja
-  varioituvat pelikerrasta toiseen: sama grafiikka, eri tehtävä.
-- **Isoisä on merkinnyt paikkoja karttaansa:** aarrekaupunkiin saapuessa
-  kortti näyttää paikan valokuvan ja kysyy, tutkitko paikan. Aarteet
-  avataan tiedolla, ei rahalla.
-- **Lue lisää:** jokaisesta Afrikan kaupungista voi avata Wikipedian
-  artikkelin kuvineen suoraan pelistä (lähdemaininta CC BY-SA;
-  montaasipääkuvat vaihdetaan automaattisesti yhteen valokuvaan).
-- **Kaksi ääntä:** kartan päiväkirjassa vuorottelevat isoisän merkinnät
-  vuodelta 1873 ja nuoren herran nykyhavainnot — yli 1000 paikkatietoa,
-  Afrikassa pieniä yllättäviä arkihuomioita isojen nähtävyyksien rinnalla.
-  Harvakseltaan päiväkirjasta löytyy taitettu sivu, joka vihjaa unohdetun aarteen
-  suunnasta nimeämättä kaupunkia.
-- **Yli 1500 kysymystä ja väittämää** kolmella vaikeustasolla: paikan omat
-  kysymykset arvotaan aina ennen laudan yleispakkaa, joten kysymys liittyy
-  maahan jossa seisot. Vaikeasta kysymyksestä 100 punnan bonus; 40 punnan
-  vihje, 80 punnan 50:50 ja 45 sekunnin tiimalasi auttavat pinteessä.
-- **Rosvon kaksintaistelu:** rosvolaatta ei vie rahoja suoraan, vaan rosvo
-  esittää kiperän kysymyksen kahdeksalla vaihtoehdolla — oikea vastaus tuo
-  200 punnan saaliin, ja helpotus maksaa puolet rahoista.
-- **Tietäjäpisteet ja tietäjätasot:** uusi kaupunki 10, uusi lauta 50,
-  vaikea kysymys 25, pulma 25 ja unohdettu aarre 100 pistettä; tietoprosentti
-  kertoo osumatarkkuuden. Pisteet nostavat nimikettä Untuvikosta (0 tp)
-  Tietäjäksi iänikuiseksi (2400 tp) — nousu ei anna muuta kuin nimikkeen, ja
-  pöllö onnittelee jokaisesta omalla muotokuvallaan ja kalevalaisella
-  värssyllä. Matkalaukun tietäjärivi näyttää nykyisen tason avatarin ja
-  edistymispalkin, ja rivin i-nappi avaa kaikki kymmenen tasoa gallerian. Passi saa leiman jokaisesta laudasta, ja leimat
-  säilyvät pelikertojen yli.
-- **Käsin piirretyn aarrekartan ulkoasu:** pergamentti, mustepiirretty
-  rannikko, kompassiruusu, maamerkit ja filmivinjetti; tekstit naksuvat
-  ruudulle kuin vanhalla matkakirjoituskoneella, ja kolmiulotteinen noppa
-  heitetään kartan merelle. Kartta näkyy aina kokonaan — ei raahausta.
-- **Syntetisoidut äänet** kaikille toiminnoille (Web Audio, ei
-  äänitiedostoja): noppa, askeleet, laiva, lento, vastaukset, paljastus.
-- **Asennettava sovellus (PWA):** toimii offline, jatkaa keskeytyneen pelin
-  automaattisesti, ja **Päivitä**-painike hakee uusimman version peliä
-  menettämättä. Mitoitettu iPadille ja iPhonelle.
+Tarinan kaanon on tiedostoissa [docs/tarina.md](docs/tarina.md) ja
+[docs/isoisan-raamattu.md](docs/isoisan-raamattu.md).
 
-## Julkaisu puhelimeen (GitHub Pages)
+## Mitä pelissä on
 
-Peli on staattinen sivusto, joten sen voi julkaista sellaisenaan GitHub Pagesiin.
-Silloin kotivalikkoon lisätty kuvake avaa pelin kokonaan ilman selaimen palkkeja.
+- **Yksi lauta: koko maailma.** Peli alkaa Lontoosta, ja ensimmäinen
+  kohde valitaan kartalta. Tavoite on maailman ympäri alle 80 päivässä
+  — raja on tavoite, ei tuomio: ylityksestä ei rangaista, alitus
+  palkitaan.
+- **Fokuskartat.** Kartta näyttää tarkkana sen maan, jossa seisot;
+  käymättömät maat ovat himmeitä ja epäteräviä, ja käydyt jäävät
+  tarkoiksi. Tarinaperustelu on isoisän 1873-atlas: kartoittamaton
+  päiväkirja tarkentuu vasta kun jäljillä kuljetaan. Karttoja on yli
+  kahdellekymmenelle maalle, ja niillä on klikattavia kohteita —
+  vuoria, jokia, raunioita, kaupunkeja — omine tietoruutuineen.
+- **Kaupunkilehdet ja maalehdet.** Kaupunki taittuu paikallislehdeksi:
+  masto, sää, kuvataitto, nähtävyysjutut ja kohdekartta
+  numeropisteineen. Maalehti kertoo maan perustiedot, kielet, mediat ja
+  kulttuurinostot. Lehden jokaisella sivulla on kysymys, ja jokaisesta
+  saa rahaa.
+- **Matkakirjan ihmeet.** Kadonnut suuruus palautetaan silmien eteen
+  keskelle nykymaailmaa: Faros nyky-Aleksandrian ruuhkassa, värikäs
+  Parthenon nykyturistien ympäröimänä. Yksi pelin kohokohdista.
+- **Aarretehtävät.** Kaupungin aarre ei aukea rahalla vaan tiedolla.
+  Lehden **aarteen avaus** -tehtävä sytyttää kartalle pisteen, josta
+  tapaa paikallisen ihmisen — ja hän kertoo hiljaisen tietonsa vasta,
+  kun tietämys hänen maastaan on todistettu. **Juliste**-tehtävästä saa
+  aiheeseen sidotun julisteen kokoelmaan. Yrityksiä on kaksi.
+- **Lukijaääni.** Isoisän matkakirjamerkinnät ja lehtien leipätekstit
+  luetaan ääneen; kytkin on kortin kaiutinkuvake. Lukija lukee vain
+  varsinaiset tekstit — taulukot, kuvatekstit ja napit jäävät
+  hiljaisiksi.
+- **Tietäjätasot.** Tietäjäpisteistä nousee nimike Untuvikosta
+  Tietäjäksi iänikuiseksi kymmenen tason kautta. Nousu ei anna muuta
+  kuin nimikkeen ja oman pöllömuotokuvan — se on matkan mitta, ei
+  palkinto. Vihreään passiin kertyvät leimat säilyvät pelikertojen yli.
+- **Yli 1600 kysymystä ja väittämää** kolmella vaikeustasolla: paikan
+  omat kysymykset arvotaan aina ennen yleispakkaa, joten kysymys
+  liittyy maahan jossa seisot. Vihje maksaa 40 puntaa, 50:50 maksaa 80.
+- **Karttalinssit.** Animoituja karttakerroksia juoksevine
+  vuosilukuineen: ihmisen leviäminen, silkkitiet, imperiumit, kielet,
+  ilmasto, tähtitaivas. Kartta on pelin keskusesine, ei valikko —
+  pelaaja oppii näkemään siitä yhä uusia asioita.
+- **Äänimaailma.** Syntetisoidut tehosteet (Web Audio), äänimaisemat,
+  kenttä-äänityksiä ja maailmanradion asemia kuunneltavaksi.
+- **Käsin piirretyn aarrekartan ulkoasu.** Pergamentti, mustepiirretty
+  rannikko, 1873-atlaksen akvarellityyli, kompassiruusu ja
+  filmivinjetti; tekstit naksuvat ruudulle kuin matkakirjoituskoneella.
 
-1. Tee reposta julkinen (ilmaisella tilillä Pages toimii vain julkisista repoista).
-2. *Settings → Pages → Source: **GitHub Actions***.
-3. Työnkulku `.github/workflows/pages.yml` ajaa testit, kokoaa yhden tiedoston
-   version ja julkaisee sivuston osoitteeseen `https://<käyttäjä>.github.io/Afrikan-t-hti/`.
-4. Avaa osoite puhelimessa ja valitse *Lisää Koti-valikkoon*.
+Moninpeli rakennetaan kokonaan **ilman vapaata tekstiä**: retkikunta
+liittymiskoodilla, valmispohjaiset 1873-sähkeet ("AARRE LÖYTYNYT
+SOFIASTA STOP") ja kaveriapu aarrekysymyksessä. Pelissä ei ole yhtään
+pelaajan kirjoittamaa vapaata merkkiä.
 
-Vaihtoehtoisesti *Settings → Pages → Source: Deploy from a branch* julkaisee valitun
-haaran juuren ilman työnkulkua.
+## Sisällön tila
+
+Peli on beta-vaiheessa. Sisältö rakennetaan maa kerrallaan
+fokusmallilla, ja kuudella kaupungilla on jo koko ketju valmiina —
+saapumismerkintä, kohteet, lehtitehtävät, aarremerkintä ja luennat:
+
+| Maa | Kaupunki |
+| --- | --- |
+| Kreikka | Ateena (pilotti) |
+| Bulgaria | Sofia |
+| Turkki | Istanbul |
+| Bosnia ja Hertsegovina | Sarajevo |
+| Romania | Bukarest |
+| Italia | Rooma |
+
+Fokuskartat ja kuratoidut kohteet ulottuvat jo laajemmalle (mm.
+Unkari, Kroatia, Saksa, Ranska, Britannia, Egypti, Iran, Irak, Jordania,
+Kiina, Meksiko, Tunisia, Libya, Syyria, Zimbabwe, Afganistan). Loput
+maailmasta saa saman käsittelyn maa kerrallaan — vähemmän ja
+viimeisteltyä, sillä laatu on aina tärkein prioriteetti.
+
+## Pelin kulku
+
+**Tavoite.** Etsi maan unohdettu aarre, jatka matkaa ja kierrä maailma.
+Peli ei pääty ajan loppumiseen — isoisän 80 päivän ennätyksen
+alittamisesta saa kunniamerkinnän passiin.
+
+1. **Saapuminen.** Uuteen kaupunkiin saavuttaessa isoisän merkintä
+   luetaan ääneen ja Livia maadoittaa sen nykypäivään. Sen jälkeen
+   pelaaja valitsee itse, mikä kiinnostaa.
+2. **Tutkiminen.** Kaupungin lehti, kartan kohteet ja Livian
+   vastaukset avautuvat vapaassa järjestyksessä. Vähintään yksi
+   minitehtävä on tehtävä ennen aarteen jäljille pääsyä.
+3. **Aarre.** Kartalle syttyvästä pisteestä tapaa paikallisen, joka
+   esittää maasta vaikeamman kysymyksen. Oikea vastaus paljastaa
+   aarteen, ja isoisän matkakirjaan aukeaa hänen oma merkintänsä
+   samasta aarteesta.
+4. **Matkusta.** Valitse matkustustapa (jalan, laiva 100 p tai lento
+   300 p), heitä noppa ja valitse kohde kartalta. Jokainen siirto vie
+   kuusi tuntia päiväkirjan kelloa. Uudelle mantereelle pääsee, kun
+   mantereen pääaarre on löytynyt.
+
+Jokainen aloittaa 300 punnalla. Laatan alta löytyy aina aarre: pieni
+paikallisaarre (100–250 p), iso paikallisaarre (500–800 p), mantereen
+aarre (1000 p) tai pääaarre (2000 p). Rahalla ostetaan matkoja,
+vihjeitä ja varusteita — ei aarteita.
+
+Kartat ja reitit ovat oma tulkintamme: kaupungit on sijoitettu
+todellisten koordinaattiensa mukaan ja reittien pituudet on
+tasapainotettu peliä varten.
 
 ## Pelin käynnistys
 
-Peli käyttää ES-moduuleja, joten se tarvitsee pienen web-palvelimen (pelkkä
-`index.html`-tiedoston avaaminen selaimeen ei riitä):
+Peli on staattinen sivusto ES-moduuleilla, joten se tarvitsee pienen
+web-palvelimen (pelkkä `index.html`-tiedoston avaaminen ei riitä):
 
 ```bash
 npm start          # käynnistää python3 -m http.server 8000
@@ -129,145 +205,138 @@ npx http-server -p 8000
 
 Avaa sitten <http://localhost:8000/>.
 
-**Asennus sovellukseksi.** Kun peli on avattu selaimessa (https tai localhost), sen voi
-lisätä kotivalikkoon: iPadilla ja iPhonella *Jaa → Lisää kotivalikkoon*, Chromessa
-osoitepalkin asennuskuvake. Tällöin peli avautuu ilman selaimen palkkeja ja toimii myös
-lentokonetilassa. Kesken jäänyt peli tallentuu selaimen muistiin ja jatkuu automaattisesti
-seuraavalla avauskerralla; *Uusi peli* aloittaa alusta.
+Peli ei tarvitse käännösvaihetta eikä ajonaikaisia riippuvuuksia —
+pelkkää HTML:ää, CSS:ää ja JavaScriptiä. Palvelutyöntekijä
+välimuistittaa pelin rungon nopeutta ja päivityksiä varten; kuvat,
+äänet ja lehtimedia haetaan verkosta, joten peli olettaa yhteyden.
+Yläpalkin **Päivitä** hakee uusimman version peliä menettämättä, ja
+kesken jäänyt peli jatkuu automaattisesti seuraavalla avauskerralla.
 
-## Säännöt
+**Asennus sovellukseksi.** Selaimessa avatun pelin voi lisätä
+kotivalikkoon (iPadilla ja iPhonella *Jaa → Lisää kotivalikkoon*,
+Chromessa osoitepalkin asennuskuvake). Mitoitettu iPadille ja
+iPhonelle.
 
-**Tavoite.** Löydä laudan unohdettu aarre — Afrikassa Suuren Zimbabwen kivilintu —
-ja vie se johonkin laudan aloituskaupungeista. Vaelluksessa peli ei pääty:
-unohdettu aarre on 2000 punnan arvoinen löytö, ja matka jatkuu porttikaupunkien
-kautta uusille laudoille. Isoisän 80 päivän ennätyksen alittaminen tuo kunniamerkinnän.
+## Julkaisu
 
-**Vuoron kulku.**
+Työnkulku `.github/workflows/pages.yml` ajaa testit, kokoaa yhden
+tiedoston version ja julkaisee sivuston GitHub Pagesiin
+(<https://ravelius.github.io/Matkakirja/>) jokaisesta mainiin menneestä
+muutoksesta.
 
-1. **Valitse matkustustapa.** Näkyvillä on kerrallaan vain muutama nappi:
+Peliä pelataan ensisijaisesti **TestFlightin** kautta: iOS-kuori
+(SwiftUI + WKWebView) lataa saman sivuston laitteelle ja lisää
+iCloud-synkan, widgetin ja haptiikan. Kuoren lähdekoodi on tässä
+repossa kansiossa `ios/` (ks. [ios/OHJE.md](ios/OHJE.md)); pelin
+puoleiset kytkennät ovat `js/natiivi.js`. Selain ilman kuorta on aina
+tuettu varapolku.
 
-| Tapa | Selitys |
-| --- | --- |
-| 🥾 Jalan | Ilmainen; lähtee heti ja heittää nopan samalla painalluksella |
-| ⛵✈ Laiva & lento… | Avaa loput: laiva (100 p), lennot (300 p), portit ja tietoportit |
-| 🔍 Tutki paikka | Isoisän merkitsemässä kaupungissa: kokeile liikkumatta |
+## Testit ja tarkistukset
 
-   Jos vaihtoehtoja on vain yksi — esimerkiksi sisämaassa tai kesken reitin —
-   noppa pyörähtää itsestään.
+```bash
+node --test tests/*.test.mjs    # = npm test
+```
 
-2. **Heitä noppa** — noppa jää lepäämään kartan merelle. Silmäluku on
-   askelten enimmäismäärä: tasalukua ei tarvita, ja kaupunkiin saa pysähtyä
-   jo matkan varrella. Kesken reitin ei saa kääntyä takaisin.
-3. **Valitse kohde** kartalta napauttamalla.
-4. **Tutki paikka**, jos saavuit isoisän merkitsemään kaupunkiin — pysähdys
-   voi olla tietovisa, isoisän väittämä, karttakysymys tai tapahtumakortti.
-   Sen jälkeen vuoro vaihtuu ja kello siirtyy kuusi tuntia.
+Testit kattavat laudan yhtenäisyyden, siirtojen laskennan, aarteiden ja
+tehtävien kulun, kysymyspankkien eheyden, fokuskarttojen nimet ja
+kohteet, lehtien rakenteen, äänitasot, lukijan valkolistan, ajan
+kirjanpidon, tallennuksen palautuksen sekä sen, että ohjedokumenttien
+kartta pysyy täydellisenä.
 
-**Portit.** Porttikaupungin tunnistaa katkoviivakehästä: sieltä pääsee
-lennolla (300 p) toiselle laudalle. Maakohtaiset kartat (esim. Suomi) eivät
-aukea rahalla vaan tiedolla — mantereen pääkaupungissa vastataan vaikeaan
-kysymykseen, ja oikea vastaus avaa portin ilmaiseksi.
+Käyttöliittymän savutestit (`tools/savukkeet/`) ajavat pelin oikeassa
+selaimessa ja vartioivat asioita, joita yksikkötesti ei näe — lehden
+nimiö, kartan geometria, kuvien esilataus, fokusvirran kulku:
 
-**Aarteet.** Jokaisessa kaupungissa on yksi laatta, ja sen alta löytyy aina
-aarre. Oikea vastaus kääntää laatan; väärästä vuoro päättyy ja samassa
-kaupungissa saa uuden kysymyksen seuraavalla vuorolla. Aarteita on neljää
-kokoa: pieni paikallisaarre (100–250 p), iso paikallisaarre (500–800 p),
-mantereen oma aarre (kiinteä 1000 p) ja unohdettu aarre (2000 p, jää
-matkalaukkuun ja avaa mannerlennon). Paikallisaarteiden arvo arvotaan
-löytöhetkellä, ja jokaisella maalla on aikanaan oma parinsa. Ainoa laatta,
-joka ei ole aarre, on ryöstäjä. Varusteet — kuten karttalinssit — ostetaan
-kaupasta, eivät löydy laatoista.
+```bash
+node tools/savukkeet/savuke-lehtiotsikko.mjs
+```
 
-**Rahan käyttö.** Rahalla ei osteta aarteita vaan matkoja ja apuja: laiva
-100 p, lento 300 p, vihje 40 p ja 50:50 80 p. Jokainen aloittaa 300 punnalla.
-Rahaton ja jumiin jäänyt matkaaja saa pankilta 100 puntaa (kotisääntö, jota
-alkuperäisessä pelissä ei ole).
+Yhden tiedoston version voi koota paikallisesti:
 
-Kartat ja reitit ovat oma tulkintamme: kaupungit on sijoitettu todellisten
-koordinaattiensa mukaan ja reittien pituudet on tasapainotettu peliä varten.
+```bash
+node tools/build-standalone.mjs   # → dist/matkakirja.html
+```
+
+`dist/` ei ole repossa — se rakennetaan Pages-julkaisussa.
 
 ## Projektin rakenne
 
 ```
-index.html          runko ja dialogit
-css/styles.css      ulkoasu
-js/pack.js          karttapakettien rekisteri (laudat)
-js/packs/           yksi paketti per lauta: kartta, kaupungit, reitit,
-                    laatat, kysymykset, tekstit ja teema — Afrikalla myös
-                    väittämät, tapahtumat, pulmat (africa-puzzles.js),
-                    isoisän aikataulu ja wiki-otsikot
-js/tokens.js        laattatyypit ja pinon sekoitus
-js/rules.js         puhdas sääntölogiikka (siirrot, etäisyydet) — testattavissa Nodella
-js/game.js          pelitila, vuorot, aika, laatat, pulmat ja voittoehdot
-js/wiki.js          Lue lisää: Wikipedian tiivistelmä, artikkeli ja kuvavalinta
-js/mapart.js        aarrekartan grafiikka (pergamentti, rannikko, maamerkit)
-js/sound.js         syntetisoidut ääniefektit
-js/ui.js            kartan ja korttien piirto, tietovisa, lentokohtaus
-js/main.js          käynnistys ja pelin tallennus
-js/ai.js            kysymysvalinnan apurit (testien käytössä; botit poistettu pelistä)
-sw.js               palvelutyöntekijä (offline-tuki)
-manifest.webmanifest  sovelluksen tiedot kotivalikkoa varten
-assets/             sovelluskuvakkeet
-tools/              yhden tiedoston koonti ja kuvakkeiden generointi
-tests/              node --test -testit säännöille ja kokonaiselle pelille
-docs/               tarina, roolitus ja työohjeet
+index.html               runko, dialogit ja säännöt
+css/                     ulkoasu (kartta, lehti, fokusnäkymä)
+js/main.js               käynnistys, tallennus ja päivitykset
+js/game.js               pelitila, vuorot, aika, aarteet, voittoehdot
+js/rules.js              puhdas sääntölogiikka — testattavissa Nodella
+js/kartta.js             maailmanlaudan piirto ja kamera
+js/fokuskartta.js        fokusnäkymän atlaskartta
+js/fokusvirta.js         kaupunkiin saapumisen annostelu
+js/fokuskohteet.js       kartan klikattavat kohteet ja pop-upit
+js/fokustehtavat.js      lehtien minitehtävät (aarre, juliste)
+js/lehti.js              kaupunkilehden taitto ja sivupino
+js/maalehti.js           maalehti, tunnusluvut ja liput
+js/nahtavyydet.js        nähtävyysjutut, kohdekartta, Matkakirjan ihmeet
+js/opas.js               Matkailijan opas
+js/visa.js               tietovisat, pulmat ja tiimalasi
+js/pollo.js              Livia — chat-avustaja
+js/luenta.js js/lukija.js  lukijaääni ja luennat
+js/sound.js js/aani-tausta.js  tehosteet ja äänimaisemat
+js/linssit/              karttalinssit ja aikajana-ajot
+js/packs/                kaikki sisältö: kaupungit, kysymykset, lehdet,
+                         fokuskohteet, kuvat, äänet, aarteet
+js/tyohuone-raamattu.js  RAAMATTU — pelin idea ja kaikki linjaukset
+js/muutokset.js          tiivis päivitysloki (versionumero kartalla)
+sw.js                    palvelutyöntekijä
+manifest.webmanifest     sovelluksen tiedot kotivalikkoa varten
+ios/                     TestFlight-kuori (SwiftUI + WKWebView)
+tools/                   koonti, kuvatyökalut, savukkeet, worker-palvelut
+tests/                   node --test -testit
+docs/                    roolitus, tarinan kaanon ja moduuliohjeet
 ```
 
-## Periaatteet
+## Miten peliä kehitetään
 
-Projektin arvopohja — miksi peli on olemassa ja millä perusteilla sisältö
-hyväksytään — on kirjattu Raamattuun ([js/tyohuone-raamattu.js](js/tyohuone-raamattu.js)) ja [CONTRIBUTING.md](CONTRIBUTING.md):hen.
-Tarinan säännöt ja kirjoitusohjeet ovat tiedostossa [docs/tarina.md](docs/tarina.md).
+Peliä kehitetään kolmen Claude-session työnjaolla
+([docs/roolitus.md](docs/roolitus.md)): **Fable** vastaa tarinasta,
+kaanonista ja koordinaatiosta, **Opus** lehdistä ja koodista, **Sonnet**
+tarkistuksista ja QA:sta. Omistaja ohjaa kaikkea Fablen kautta.
 
-## Uuden laudan lisääminen
+Kaikkien linjausten ytimessä on **Raamattu**
+([js/tyohuone-raamattu.js](js/tyohuone-raamattu.js)): koko pelin idea
+yhdessä tiiviissä tiedostossa. Uudet oleelliset linjaukset kirjataan
+vain sinne, ja ristiriidassa hyväksytty Raamattu-osio voittaa muut
+dokumentit. Raamattu näkyy myös pelissä kehittäjätilan lehtenä. Sen
+viimeinen osio on täydellinen kartta kaikkiin muihin ohjedokumentteihin
+— testi `tests/dokumentit.test.mjs` valvoo tätä koneellisesti.
 
-Peli on rakennettu niin, että uusi manner tai alue on oma *karttapakettinsa* —
-moottoriin ei tarvitse koskea. Ohjeet ovat tiedostossa
+Sisääntulo Claude-sessiolle on [CLAUDE.md](CLAUDE.md); tekniset
+periaatteet ja uuden sisällön lisääminen ovat tiedostossa
 [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Testit
+### Perustuslaki
 
-```bash
-npm test
-```
+Viisi pilaria (Raamatun osio "Perustuslaki"), joita muutetaan vain
+yhdessä:
 
-Testit kattavat laudan yhtenäisyyden, siirtojen laskennan, laattojen
-vaikutukset, tietovisan ja sen erikoismuotojen kulun, pulmien generoinnin,
-kysymyspankkien eheyden (mm. ettei oikea vastaus lue saman laudan kartalla),
-ajan kirjanpidon, tallennuksen palautuksen ja voittoehdot.
-
-## Yhden tiedoston versio
-
-```bash
-node tools/build-standalone.mjs
-```
-
-Kokoaa kaiken tiedostoon `dist/matkakirja.html`, jonka voi avata selaimessa
-suoraan ilman palvelinta (Lue lisää -toiminto tarvitsee silti verkon).
-
-## Kuvakkeet
-
-Sovelluskuvakkeet on generoitu pelin omasta rannikkoviivasta:
-
-```bash
-node tools/make-icons.mjs                                   # päivittää assets/icon.svg
-node tools/make-icons.mjs --png <polku/playwright/index.mjs>  # myös PNG:t
-```
-
-Valmiit tiedostot ovat repossa, joten skriptiä tarvitaan vain kuvakkeen muuttuessa.
+1. **Peli edellä** — ei oppikirja, johon on liimattu noppa.
+2. **Totuus ja lähteet** — jokainen väittämä tarkistettavissa.
+   Epävarmaa ei väitetä.
+3. **Kunnioitus** — jokainen maa asukkaidensa silmin. Ei
+   stereotypioita, pilkkaa, säälittelyä eikä pelkkiä turistikliseitä.
+4. **Ikäsopivuus** — vaikeita aiheita ei kaunistella eikä kauhistella.
+5. **Avoimuus** — vapaat lisenssit, julkiset päätökset,
+   automaattitestit valvovat mitattavan.
 
 ## Lisenssi
 
 Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy. Kaikki
-oikeudet pidätetään — ks.
-[LICENSE](LICENSE).
+oikeudet pidätetään — ks. [LICENSE](LICENSE).
 
-Peliä saa pelata ja lähdekoodia lukea vapaasti. Julkaisuun, levitykseen
-tai omaan tuotteeseen tarvitaan lupa.
+Peliä saa pelata ja lähdekoodia lukea vapaasti. Julkaisuun,
+levitykseen tai omaan tuotteeseen tarvitaan lupa.
 
-Pelin näyttämät valokuvat, äänet ja tiedot eivät ole tekijän omaisuutta:
-ne tulevat Wikimedia Commonsista, Freesoundista, radio aporeesta,
-Wikipediasta, Maailmanpankilta ja V-Demiltä omilla avoimilla
+Pelin näyttämät valokuvat, äänet ja tiedot eivät ole tekijän
+omaisuutta: ne tulevat Wikimedia Commonsista, Freesoundista, radio
+aporeesta, Wikipediasta, Maailmanpankilta ja V-Demiltä omilla avoimilla
 lisensseillään. Jokaisen lähde, tekijä ja lisenssi on merkitty pelin
 sisältötiedostoihin.
 

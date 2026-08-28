@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1246: README kirjoitettu ajan tasalle - motivaatioteoria, Livia, fokusmalli, oikea julkaisuosoite; vanhentuneet laudat, rosvo ja offline-lupaus pois.',
   'v1245: Raamattuun kirjattu pelin ydin (motivaatioteoria - liikkeelle kiinnostavasta, esim. maan pullasta), Livia pysyvaksi pullapersoonalla, pullavinkki ja jalkikommentaattori.',
   'v1244: Ateenan ryppaan merkit eivat enaa sinkoile ympari karttaa iPhonella - nippusarake tiivistyy niin etta se mahtuu lehden sisaan kaupungin viereen.',
   'v1243: Ihmenauha skaalautuu kuvan leveyden mukana kuin kuvaan poltettu - iPhonella nauha on nyt pienempi samassa suhteessa kuin kuva.',
