@@ -13,7 +13,11 @@
  *     metodilla, ja kuva latautuu oikeasti (naturalWidth > 0) — rikkinäinen
  *     polku putoaisi tässä, sillä pelin oma virhepolku poistaa kuvan.
  *  4. Kirjoittamaton manner ei saa maan kuvaa vaan laudan oman (Tanger).
- * Kaappaukset: aarrekuva-fin-pieni.png ja aarrekuva-dnk-iso.png.
+ *  5. Pääaarre (star) on tummassa mallissa ILMAN diplomin ulkoasua,
+ *     mutta luettelon TEKSTIT ovat mukana ja näkyvissä: otsake, manner,
+ *     arvo ja LÖYDETTY-leima (omistajan tilaus 28.8.2026 ilta).
+ * Kaappaukset: aarrekuva-fin-pieni.png, aarrekuva-dnk-iso.png ja
+ * aarrekuva-star-tumma.png.
  */
 import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
@@ -61,6 +65,8 @@ const paljasta = (kaupunki, tyyppi) => sivu.evaluate(async ([city, type]) => {
   const { Game } = await import('./js/game.js');
   const { packById } = await import('./js/pack.js');
   const { UI } = await import('./js/ui.js');
+  const { REVEAL_SUB } = await import('./js/ui-apurit.js');
+  const { arvoAarteenArvo } = await import('./js/tokens.js');
   const peli = new Game({
     players: [{ name: 'Savuke', color: '#f00', start: null }],
     pack: packById('europe'),
@@ -73,7 +79,9 @@ const paljasta = (kaupunki, tyyppi) => sivu.evaluate(async ([city, type]) => {
   // lukien — tumman. Diplomi jäi koodiin, muttei enää käyttöön.
   const malli = token.kuva?.startsWith('assets/aarteet/paikallis/')
     ? 'paikallis' : 'tumma';
-  const lisat = malli === 'diplomi' ? {
+  // Luettelon tekstit kuuluvat pääaarteelle myös tummassa mallissa
+  // (omistajan tilaus 28.8.2026 ilta) — sama `lisat` kuin pelissä.
+  const lisat = type === 'star' ? {
     otsake: 'Aarnin luettelo',
     alaotsake: 'EUROOPPA · UNOHDETTU AARRE',
     alanauha: 'Arvo 2000 puntaa',
@@ -83,10 +91,15 @@ const paljasta = (kaupunki, tyyppi) => sivu.evaluate(async ([city, type]) => {
   // rakennaPaljastus ei käytä this:iä — kortin saa siksi pelin omalla
   // metodilla ilman koko UI:n käynnistämistä.
   const {
-    overlay, kuvaEl, caption, pohja, leima,
+    overlay, kuvaEl, caption, pohja, leima, jatka,
   } = UI.prototype.rakennaPaljastus(token.kuva, token.name, malli, lisat);
   caption.appendChild(Object.assign(document.createElement('strong'), {
     textContent: token.name,
+  }));
+  // Sama selite kuin playTokenReveal ladoo: pääaarteella oma rivinsä,
+  // muilla löytöhetken arvo. Kaappaus näyttää siten koko kortin.
+  caption.appendChild(Object.assign(document.createElement('span'), {
+    textContent: REVEAL_SUB[type] ?? `+${arvoAarteenArvo(type, () => 0.5)} puntaa`,
   }));
   if (token.fakta) {
     const p = document.createElement('p');
@@ -104,15 +117,21 @@ const paljasta = (kaupunki, tyyppi) => sivu.evaluate(async ([city, type]) => {
     });
   }
   // Sama kahva kuin playTokenReveal: .shown tuo kuvan ja tekstin esiin;
-  // diplomilla myös leima lyödään ja pohja kirkastuu lopputilaansa.
+  // leima lyödään erikseen. Kirkastuminen on vain diplomin.
   pohja.classList.add('shown');
   kuvaEl?.classList.add('shown');
   caption.classList.add('shown');
   leima?.classList.add('lyoty');
+  // Jatka matkaa -nappi kuuluu valmiiseen korttiin (odotaPaljastuksenSulku
+  // lisää saman luokan pelissä) — kaappaus näyttää siten lopputilan.
+  jatka.classList.add('nakyy');
   if (malli === 'diplomi') overlay.classList.add('kirkas');
   await new Promise((v) => setTimeout(v, 1600));
   const yha = document.querySelector('.reveal-aarrekuva');
   const kehys = document.querySelector('.reveal-kehys');
+  const leimaEl = document.querySelector('.reveal-leima');
+  const nakyy = (el) => !!el && getComputedStyle(el).opacity > 0.05;
+  const teksti = (valitsin) => document.querySelector(valitsin)?.textContent ?? null;
   return {
     nimi: token.name,
     kuva: token.kuva,
@@ -121,7 +140,19 @@ const paljasta = (kaupunki, tyyppi) => sivu.evaluate(async ([city, type]) => {
     leveys: yha?.naturalWidth ?? 0,
     malli,
     kehysLadattu: !!kehys && kehys.naturalWidth > 0,
-    leimaNakyy: !!document.querySelector('.reveal-leima'),
+    leimaNakyy: !!leimaEl,
+    // Tumman mallin luettelotekstit: teksti JA se, että ne ovat
+    // oikeasti näkyvissä (läpinäkyvä rivi olisi sama kuin puuttuva).
+    otsake: teksti('.reveal-tunnus-otsake'),
+    alaotsake: teksti('.reveal-tunnus-alaotsake'),
+    arvo: teksti('.reveal-arvo'),
+    leimaTeksti: leimaEl?.textContent ?? null,
+    tunnusNakyy: nakyy(document.querySelector('.reveal-tunnus')),
+    jalkaNakyy: nakyy(document.querySelector('.reveal-loyto')),
+    leimaLyoty: nakyy(leimaEl),
+    // Vaalean diplomin jäljet: näitä EI saa olla tummalla kortilla.
+    plansiNakyy: !!document.querySelector('.reveal-plansi'),
+    kirkas: overlay.classList.contains('kirkas'),
   };
 }, [kaupunki, tyyppi]);
 
@@ -140,19 +171,41 @@ vaadi('DNK iso: vinjetointimalli', dnk.malli === 'paikallis', dnk.malli);
 await sivu.screenshot({ path: join(KAAPPAUKSET, 'aarrekuva-dnk-iso.png') });
 
 /*
- * PÄÄAARRE ON TUMMASSA MALLISSA (omistaja 28.8.2026 ilta:
- * *"yksinkertainen tumma tausta jatkamaan esineen tummaa taustaa on
- * paras"*). Vartiot ovat siksi käänteiset entiseen: diplomin kehystä
- * ja leimaa EI saa olla kortilla, ja kuvan on silti latauduttava.
+ * PÄÄAARRE ON TUMMASSA MALLISSA, MUTTA TEKSTIT MUKANA (omistaja
+ * 28.8.2026 ilta: *"yksinkertainen tumma tausta jatkamaan esineen
+ * tummaa taustaa on paras"* ja *"laita kaikki tekstit mukaan tuohon
+ * aarteen esikatseluun"*). Kaksi vartiosarjaa siis samasta kortista:
+ *  - diplomin ULKOASUA ei saa olla (kaiverruskehys, pergamenttiarkki,
+ *    vaaleneva pohja) — kuvan tumman taustan on jatkuttava overlayhin;
+ *  - luettelon TEKSTIEN on oltava paikallaan ja näkyvissä (otsake,
+ *    manner, arvo, LÖYDETTY-leima roomalaisine kuukausineen).
  */
 const tahti = await paljasta('ateena', 'star');
 vaadi('star: tumma malli', tahti.malli === 'tumma', tahti.malli);
 vaadi('star: ei diplomin kaiverruskehystä', !tahti.kehysLadattu);
-vaadi('star: ei LÖYDETTY-leimaa', !tahti.leimaNakyy);
+vaadi('star: ei pergamenttiarkkia', !tahti.plansiNakyy);
+vaadi('star: pohja ei vaalene', !tahti.kirkas);
 vaadi('star: aarrekuva latautui', tahti.ladattu, tahti.kuva);
 vaadi('star: kuva on laudan pääaarrekuva',
   /assets\/aarteet\/aarre-europe-star\.jpg$/.test(tahti.kuva ?? ''), tahti.kuva);
+vaadi('star: otsake on Aarnin luettelo', tahti.otsake === 'Aarnin luettelo', tahti.otsake);
+vaadi('star: alaotsake on manner ja unohdettu aarre',
+  tahti.alaotsake === 'EUROOPPA · UNOHDETTU AARRE', tahti.alaotsake);
+vaadi('star: nimiö on näkyvissä', tahti.tunnusNakyy);
+vaadi('star: arvorivi on STAR_PRIZE', tahti.arvo === 'Arvo 2000 puntaa', tahti.arvo);
+vaadi('star: jalka on näkyvissä', tahti.jalkaNakyy);
+vaadi('star: LÖYDETTY-leima roomalaisin kuukausin',
+  /^Löydetty\d+ · [IVX]+$/.test(tahti.leimaTeksti ?? ''), tahti.leimaTeksti);
+vaadi('star: leima on lyöty näkyviin', tahti.leimaLyoty);
 await sivu.screenshot({ path: join(KAAPPAUKSET, 'aarrekuva-star-tumma.png') });
+
+/*
+ * Luettelon nimiö on VAIN pääaarteella: mantereen aarre ja
+ * paikallisaarteet eivät ole Aarnin luettelossa (kaanoni).
+ */
+vaadi('FIN pieni: ei luettelon nimiötä', fin.otsake === null, fin.otsake);
+vaadi('DNK iso: ei luettelon nimiötä', dnk.otsake === null, dnk.otsake);
+vaadi('DNK iso: ei LÖYDETTY-leimaa', !dnk.leimaNakyy);
 
 // Kirjoittamaton manner: kuva jää laudan omaksi (Afrikka, Tanger).
 const mar = await sivu.evaluate(async () => {
