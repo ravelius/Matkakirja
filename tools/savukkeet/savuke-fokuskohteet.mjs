@@ -34,6 +34,9 @@
  *   8. FOKUSVIRTA VOITTAA: kortin tai kuplan ilmestyminen sulkee
  *      tietoruudun.
  *   9. EI LEHTEÄ, EI MERKKEJÄ — kumpikaan suunta ei jää päälle.
+ *  10. LUETTU TÄKYPISTE ON KARTALLA MERKIN VIERESSÄ, ei sen päällä:
+ *      kortti aukeaa pisteestä uudelleen eikä ankkurikohteen tietoruutu
+ *      jää pisteen alle (28.8.2026 ilta).
  *
  * Peli istutetaan Ateenaan MAAILMANKARTALLE, koska Kreikan fokuslehti
  * on tehty sille laudalle (js/packs/fokus-grc.js FOKUS_POHJAT.lauta) —
@@ -90,18 +93,22 @@ async function avaaSivu(fokus = true) {
     reducedMotion: 'reduce',
   });
   /*
-   * TÄKYNOSTOT MERKITÄÄN KATSOTUIKSI (28.8.2026 ilta).
+   * KREIKAN TÄYT ON LUETTU — EI KIERTOTIENÄ VAAN PELITILANTEENA.
    *
-   * Omistajan linjauksen jälkeen maan täkypisteet ovat kartalla heti
-   * eivätkä vasta aarteen jälkeen (js/fokusnosto.js), ja piste
-   * RATSASTAA oman kohteensa merkin päällä ja vie sen napautuksen
-   * (js/fokusnosto-symbolit.js, osio PISTE AINA SYMBOLIN PÄÄLLE). Tämä
-   * savuke mittaa KOHDEMERKKEJÄ, ja napautus tehdään merkin
-   * ruutupaikkaan juuri siksi, ettei sen päällä saa olla mitään muuta —
-   * täky peittäisi Delfoin ja Olympoksen ja koe mittaisi väärää asiaa.
-   * Katsotut täyt eivät nouse kartalle (localStorage, sama avain kuin
-   * js/fokusnosto.js NOSTO_AVAIN), joten kokeen kohde eristetään
-   * merkitsemällä Kreikan pooli luetuksi.
+   * Lähtötila on pelaaja, joka on jo katsonut maan täyt (localStorage,
+   * sama avain kuin js/fokusnosto.js NOSTO_AVAIN). 28.8.2026 illan
+   * korjaukseen asti tämä oli kokeen KIERTOTIE: luettu täky katosi
+   * kartalta, ja koe mittasi kohdemerkkejä tyhjällä pöydällä.
+   *
+   * Omistajan löydös samana iltana päätti sen: luettu täky PYSYY
+   * kartalla, jotta kortin saa auki uudelleen. Piste ei siis ole enää
+   * poissa vaan ankkurisymbolinsa VIERESSÄ (js/fokusnosto-symbolit.js,
+   * osio PISTE AINA SYMBOLIN PÄÄLLE → LUETTU PISTE ASTUU SIVUUN), ja
+   * juuri siksi tämä on nyt kokeen kovin lähtötila eikä helpoin: kun
+   * Delfoi ja Olympos aukeavat merkkinsä ruutupaikasta, mittaus todistaa
+   * että luettu piste jättää ankkurikohteensa napautettavaksi. Vartio 10
+   * mittaa saman asian toisesta päästä: pisteet ovat kartalla ja niistä
+   * aukeaa kortti uudelleen.
    */
   const TAYT_LUETUT = ['sofia-korut', 'kastrin-kyla', 'olympoksen-huippu'];
   await ctx.addInitScript(([data, paalla, tayt]) => {
@@ -1339,6 +1346,96 @@ vaadi('kortin nauhan teksti mahtuu leikkauksen sisään kokonaan',
 vaadi('kortin tekstille jää varaa leveämmälle kirjasimelle',
   sovitus?.tayttoaste <= 0.85, `täyttöaste ${sovitus?.tayttoaste}`);
 vaadi('kortin nauha ei nappaa napautuksia', ihme?.osoitin === 'none', ihme?.osoitin);
+
+/* --- 10b: luettu täkypiste elää kohdemerkin VIERESSÄ --- */
+
+/*
+ * Omistajan löydös 28.8.2026 ilta: katsottu täky katosi kartalta eikä
+ * rikastettua korttia päässyt enää avaamaan. Piste jää nyt kartalle, ja
+ * koska se on painike, se ei saa jäädä ankkurisymbolinsa päälle
+ * viemään sen napautusta pysyvästi (js/fokusnosto-symbolit.js).
+ *
+ * Kolme mittausta samasta asiasta: piste on kartalla, se on merkin
+ * VIERESSÄ eivätkä sormialueet limity, ja kortti aukeaa siitä
+ * uudelleen. Ankkurikohteen oma napautus on jo mitattu ylempänä (koe 3
+ * ja 5 avaavat Olympoksen ja Delfoin merkkinsä ruutupaikasta, ja juuri
+ * ne kaksi ovat luettujen täkyjen ankkureita).
+ */
+await sivu.keyboard.press('Escape');
+await sivu.waitForTimeout(300);
+
+const takypisteet = await sivu.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  const keskipiste = (el) => {
+    const r = el?.getBoundingClientRect?.();
+    return r && r.width > 0 ? { x: r.left + r.width / 2, y: r.top + r.height / 2 } : null;
+  };
+  const ruudulla = (p) => p && p.x > 0 && p.y > 0
+    && p.x < window.innerWidth && p.y < window.innerHeight;
+  const pisteet = (ui.nostosymRyhmat ?? []).map((r) => ({
+    id: r.id,
+    kohde: r.kohde,
+    luettu: !!r.luettu,
+    vaimea: !!r.g.querySelector('.nostosym-luettu'),
+    nimio: r.g.querySelector('.nostosym-takynimio text')?.textContent ?? '',
+    nimioNakyy: Boolean(r.nimio?.nakyy),
+    keski: keskipiste(r.g.querySelector('.nostosym-tuike-osuma')),
+    sade: (r.g.querySelector('.nostosym-tuike-osuma')?.getBoundingClientRect().width ?? 0) / 2,
+    tuikkii: Boolean(r.g.querySelector('.nostosym-tuike-paalla')),
+  }));
+  // Ankkurimerkin ruutupaikka samasta kiertokohdasta kuin piste.
+  for (const p of pisteet) {
+    if (!p.kohde || !p.keski) continue;
+    let lahin = null;
+    for (const g of document.querySelectorAll(`.fokuskohde[data-kohde="${p.kohde}"]`)) {
+      const k = keskipiste(g.querySelector('.fokuskohde-osuma'));
+      if (!k) continue;
+      const e = Math.hypot(k.x - p.keski.x, k.y - p.keski.y);
+      if (!lahin || e < lahin.etaisyys) lahin = { etaisyys: e, ...k };
+    }
+    p.ankkuri = lahin;
+  }
+  return { pisteet, ruudulla: pisteet.filter((p) => ruudulla(p.keski)) };
+});
+
+vaadi('luetut täkypisteet ovat kartalla',
+  takypisteet.pisteet.length >= 3 && takypisteet.pisteet.every((p) => p.luettu),
+  `${takypisteet.pisteet.length} pistettä: ${JSON.stringify(takypisteet.pisteet.map((p) => p.id))}`);
+vaadi('luettu piste on vaimea eikä tuiki',
+  takypisteet.pisteet.every((p) => p.vaimea && !p.tuikkii),
+  JSON.stringify(takypisteet.pisteet.map((p) => ({ v: p.vaimea, t: p.tuikkii }))));
+
+const ankkuroidut = takypisteet.pisteet.filter((p) => p.ankkuri);
+vaadi('luettu piste astui ankkurisymbolinsa viereen, ei sen päälle',
+  ankkuroidut.length >= 2 && ankkuroidut.every((p) => p.ankkuri.etaisyys >= p.sade),
+  JSON.stringify(ankkuroidut.map((p) => ({
+    id: p.id, etaisyys: Math.round(p.ankkuri.etaisyys), sade: Math.round(p.sade),
+  }))));
+
+/*
+ * Nimiö on kartalla pisteen kyljessä (omistajan lisätilaus 28.8.2026
+ * ilta). Väistö saa vaientaa yksittäisen nimiön ahtaassa ryppäässä,
+ * joten vaatimus on: jokaisella on nimiö ladottuna, ja ainakin yksi
+ * niistä on näkyvissä.
+ */
+vaadi('täkypisteillä on kartan nimiö',
+  takypisteet.pisteet.every((p) => p.nimio.length > 0)
+  && takypisteet.pisteet.some((p) => p.nimioNakyy),
+  JSON.stringify(takypisteet.pisteet.map((p) => `${p.nimio}${p.nimioNakyy ? '' : ' (piilossa)'}`)));
+
+const luettuRuudulla = takypisteet.ruudulla[0] ?? null;
+if (luettuRuudulla) {
+  await sivu.mouse.click(Math.round(luettuRuudulla.keski.x), Math.round(luettuRuudulla.keski.y));
+  await sivu.waitForTimeout(600);
+}
+const kortti = await sivu.evaluate(
+  () => document.querySelector('.fokusnosto-kortti-otsikko')?.textContent ?? null,
+);
+vaadi('luetun täkypisteen napautus avaa kortin uudelleen',
+  Boolean(luettuRuudulla) && typeof kortti === 'string' && kortti.length > 0,
+  `piste ${luettuRuudulla?.id ?? 'ei ruudulla'}, kortti ${JSON.stringify(kortti)}`);
+await sivu.evaluate(() => document.querySelector('.fokusnosto-kortti-sulje')?.click());
+await sivu.waitForTimeout(400);
 
 /* --- 11: ilman lehteä ei merkkejä --- */
 

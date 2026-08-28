@@ -644,6 +644,8 @@ export const FOKUSVIRTA_ROOMA = {
   takynostot: [
     {
       id: 'kissat',
+      // Kartan nimiö täkypisteen kylkeen (päätoimittaja 28.8.2026).
+      nimio: 'Caesarin kissat',
       /* Kaanon, kohta 6, nosto 1 (eläin). */
       otsikko: 'Kissat asuvat paikassa, jossa Caesar murhattiin — ja '
         + 'arkeologit yrittivät häätää ne',

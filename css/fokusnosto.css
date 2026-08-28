@@ -223,6 +223,18 @@ body.kartalento .fokusnosto { opacity: 0; pointer-events: none; }
 }
 
 /*
+ * TÄKYPISTEEN NIMIÖ (omistajan lisätilaus 28.8.2026 ilta: *"täkypisteessä
+ * saisi olla myös teksti näkyvissä"*). Ladonta on kartan omaa
+ * (.nostosym-nimio, css/styles.css); tässä on vain se, mikä koskee
+ * täkyä: nimiö on mykkää mustetta pisteen kyljessä, eikä se saa
+ * kasvattaa painikkeen osuma-aluetta. Ahtaassa ryppäässä nimiö väistyy
+ * kokonaan (js/fokusnosto-symbolit.js nostosymTakynimiot) — piste
+ * näkyy aina, nimiö ei.
+ */
+.nostosym-takynimio { pointer-events: none; }
+.nostosym-nimio-piilossa { display: none; }
+
+/*
  * PISTE ON AINA SAMANNÄKÖINEN — TUIKE ON ERI ASIA (omistajan linjaus
  * 28.8.2026 ilta: *"Täkyt voisi olla aina näkyvissä. Niihin vain
  * kiinnitetään huomio aarteen löytymisen jälkeen."*).
@@ -257,6 +269,20 @@ body.kartalento .fokusnosto { opacity: 0; pointer-events: none; }
 .nostosym-tuike-paalla .nostosym-tuike-ydin {
   animation: nostosym-kimallus 1500ms ease-in-out infinite;
 }
+
+/*
+ * LUETTU PISTE ON VAIMEA (omistajan löydös 28.8.2026 ilta: luettu täky
+ * pysyy kartalla, jotta kortin saa auki uudelleen). Sama muste ja sama
+ * muoto — vain hiljaisempi: piste on kartalla muistona eikä
+ * houkutuksena, eikä se saa kilpailla katsomattomien kanssa. Tuiketta
+ * sillä ei ole koskaan (js/fokusnosto-symbolit.js nostosymTuike), ja
+ * kartalla se seisoo ankkurisymbolinsa VIERESSÄ, jottei se vie sen
+ * napautusta (sama tiedosto, osio PISTE AINA SYMBOLIN PÄÄLLE).
+ */
+.nostosym-luettu .nostosym-tuike-hehku { opacity: 0.12; }
+.nostosym-luettu .nostosym-tuike-keha { opacity: 0.34; }
+.nostosym-luettu .nostosym-tuike-ydin { opacity: 0.62; }
+.nostosym-luettu .nostosym-nimio { opacity: 0.62; }
 
 .nostosym-tuike:hover .nostosym-tuike-keha,
 .nostosym-tuike:focus-visible .nostosym-tuike-keha { opacity: 0.9; }
