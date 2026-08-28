@@ -140,7 +140,7 @@ export const RAAMATTU = {
         'Tekstit: isoisän seikkailut + nuoren Foggin tarkat '
           + 'arkihavainnot ja kommellukset. Tarina avaa kaupungin '
           + 'tunnelman; lehti syventää tiedoksi.',
-        'Herroille saa luonnostella uusia piirteitä '
+        'Isoisälle ja Grimshawlle saa luonnostella uusia piirteitä '
           + '(etikettivirheet, hassu asu) — yhdessä omistajan kanssa.',
         'ISOISÄ ON PIIRTÄJÄ, EI VALOKUVAAJA (25.8.2026): kuvakieli '
           + 'on kirkas — 1873 = isoisän piirros, nykyhetki = '
