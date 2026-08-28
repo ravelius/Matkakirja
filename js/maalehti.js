@@ -21,6 +21,7 @@ import { karttapiste } from './packs/maakartat.js';
 import { radioMaalle } from './packs/radiot.js';
 import { vanhaTallenne } from './packs/vanhat-aanet.js';
 import { aiheAvain, piirraPoimintapillerit } from './pollopoiminnat.js';
+import { piirraReaktiot } from './reaktiot.js';
 import { KIELET, MAATIEDOT } from './sisaltotaulut.js';
 import { taytaLahderivi } from './tekijakortti.js';
 import {
@@ -803,6 +804,24 @@ function piirraAiheenPoiminnat(ui, kohde, kategoria, otsikko) {
   piirraPoimintapillerit(kohde, aiheAvain(omistaja, kategoria.id));
 }
 
+/*
+ * REAKTIORIVI AIHESIVULLE (js/reaktiot.js): peukku ja virheilmoitus
+ * sivun lopussa, poimintapillerien EDELLÄ.
+ *
+ * Rajaus on sama kuin poiminnoilla ja samasta syystä: kehittäjän
+ * liitteistä (Raamattu, Tilanne, Tilastot) ei anneta palautetta
+ * pelaajan kanavaan, eikä karttasivun nostokotelo ole oma juttunsa.
+ * Tunniste on sama aiheavain, jolla poiminnat kiinnittyvät — sama
+ * sivu, sama nimi omistajan Lukijoilta-lehdessä.
+ */
+function piirraAiheenReaktiot(ui, kohde, kategoria, otsikko) {
+  if (!otsikko || kohde !== ui.arrivalKategoria) return;
+  if (ui.lehtitila?.tutkiTila === 'kehittaja' || !kategoria?.id) return;
+  const omistaja = ui.lehtitila?.tutkiTila === 'maa' && ui.lehtitila?.tutkiMaaLehti
+    ? ui.lehtitila.tutkiMaaLehti : ui.lehtitila?.arrivalShownFor;
+  piirraReaktiot(kohde, aiheAvain(omistaja, kategoria.id), { otsikko: kategoria.nimi ?? '' });
+}
+
 export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { otsikko = true } = {}) {
   kohde.replaceChildren();
   if (!kategoria) return;
@@ -903,6 +922,7 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
       kohde.appendChild(hero);
     }
     piirraVinkkilista(ui, kohde, kategoria.lista);
+    piirraAiheenReaktiot(ui, kohde, kategoria, otsikko);
     piirraAiheenPoiminnat(ui, kohde, kategoria, otsikko);
     // Kevyen kulun nimetty tehtävä voittaa sivun oman; ilman kumpaakaan
     // ei piirretä mitään (js/fokustehtavat.js piirraSivunTehtava).
@@ -1091,6 +1111,9 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
     }
     kohde.appendChild(lohko);
   }
+  // Reaktiorivi (peukku ja virheilmoitus) juttujen perään, poimintojen
+  // edelle: se kuuluu luettavan puolelle kuten pilleritkin.
+  piirraAiheenReaktiot(ui, kohde, kategoria, otsikko);
   // Pöllöpoiminnat jutun perään, ennen minitehtävää (omistajan tilaus
   // 23.8.2026): tehtävälaatikko erottaa luettavan sivun pelitoiminnosta,
   // ja pillerit kuuluvat luettavan puolelle.

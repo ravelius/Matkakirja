@@ -116,6 +116,10 @@ import {
   polloVihje, polloVihjePois,
 } from './pollo.js';
 import { ajastaEhdotusKupla, ehdotusOsio, proHakuRasti, proOsio } from './ehdotukset.js';
+// Peukku ja virheilmoitus sisällön kylkeen (js/reaktiot.js). ui.js
+// tarvitsee tästä vain kuvasuurennoksen rivin; lehden ja jutun omat
+// rivit piirretään niiden omissa moduuleissa.
+import { piirraReaktiot } from './reaktiot.js';
 /*
  * SÄHKEPINTA (Raamattu, osio SÄHKEJÄRJESTELMÄ): retkikunta, sähkeet ja
  * kaveriapu asuvat omassa moduulissaan (js/sahke.js). ui.js kutsuu
@@ -11451,6 +11455,13 @@ export class UI {
     let laskuri = null;
     // Matkakirjan ihmeen kulmanauha, kun näytössä oleva kuva kantaa sen.
     let nauha = null;
+    /*
+     * REAKTIORIVI (js/reaktiot.js) sille kuvalle, jolla on oma
+     * tunniste — käytännössä Matkakirjan ihme, joka aukeaa
+     * nähtävyysjutun "Koe ihme" -napista. Rivi seuraa kuvaa kuten
+     * nauhakin: sarjaa selattaessa se vaihtuu tai katoaa.
+     */
+    let reaktiot = null;
     // Sarjan kaikki suurennokset latautuvat taustalla heti, jotta
     // selaus ei odota verkkoa (omistajan tilaus 14.8.2026).
     if (lista) {
@@ -11488,6 +11499,11 @@ export class UI {
       nauha?.remove();
       nauha = piirraIhmenauha(kotelo, teos.nauha);
       kotelo.classList.toggle('kuva-nauhalla', Boolean(nauha));
+      reaktiot?.remove();
+      reaktiot = piirraReaktiot(kortti, teos.reaktio, {
+        otsikko: teos.reaktioOtsikko ?? teos.otsikko ?? '',
+        luokka: 'reaktiot-suurennos',
+      });
       if (laskuri) laskuri.textContent = `${indeksi + 1} / ${lista.length}`;
     };
     if (lista) {
@@ -11539,6 +11555,9 @@ export class UI {
     });
     kortti.addEventListener('click', (e) => {
       if (ohitaSulku) { ohitaSulku = false; return; }
+      // Reaktiorivi on kortin oma toiminto: peukku ei sulje katselinta,
+      // eikä virhelomakkeen kenttään pääsisi muuten kirjoittamaan.
+      if (e.target?.closest?.('.reaktiorivi')) return;
       /*
        * Sarjassa napautus KUVAAN siirtyy seuraavaan (omistaja
        * 13.8.2026: "kuva sulkeutui myös sitä painettaessa vaikka

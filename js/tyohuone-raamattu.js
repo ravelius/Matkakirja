@@ -666,6 +666,17 @@ export const RAAMATTU = {
           + 'localStorage sailyvat polloasuisina kunnes pelitesti '
           + 'ratkaisee jatkon (taysvaihto / pollo takaisin / pari). '
           + 'Ateenan pikkupollo-karttakohde on faktasisaltoa ja sailyy.',
+        'REAKTIOJARJESTELMA (omistaja 28.8.2026: "lahinna tuo '
+          + 'reaktiojarjestelma kiinnostaa saada toimimaan"): jokaisessa '
+          + 'sisallossa (lehtijutut, kohdekortit, nahtavyydet, ihmeet) on '
+          + 'pieni huomaamaton reaktiorivi - peukku (tasta pidin) ja '
+          + 'lippu (tassa on virhe + vapaaehtoinen teksti). Lahetys menee '
+          + 'ehdotuskanavan workeriin etuliittein REAKTIO/PEUKKU ja '
+          + 'REAKTIO/VIRHE, tunnistemuodot aihe:/juttu:/kohde:/ihme:. '
+          + 'Peukkuja saa monta, virheilmoitus yksi per sisalto per '
+          + 'istunto; epaonnistunut lahetys jonoon (localStorage). Ei '
+          + 'koskaan blokkaa pelaamista. Jatkotyo: sama rivi Livian '
+          + 'chat-vastauksiin.',
         'MOTIVAATIOTEORIA ON PELIN YDIN (omistaja 28.8.2026 aamu, '
           + 'TARKEA): peli hyodyntaa motivaatioteoriaa siita, miten eri '
           + 'ihmiset kiinnostuvat eri asioista - ja se on taman pelin '

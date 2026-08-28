@@ -308,6 +308,14 @@ const MODULES = [
   // Lukijoiden ehdotukset ennen pollopoiminnat/lehteä/ui:ta (kaikki
   // tuovat sen; moduuli tuo ui-apurit ja minipopupin, jotka ovat yllä).
   'js/ehdotukset.js',
+  /*
+   * Reaktiot (peukku ja virheilmoitus) ennen artikkeleiden piirtäjiä:
+   * nähtävyydet, maalehti, fokuskohteet ja ui tuovat sen. Moduuli tuo
+   * vain ui-apurit ja ehdotukset, jotka ovat yllä — versio luetaan
+   * DOMista juuri siksi, ettei muutosloki (js/muutokset.js, listan
+   * lopussa) sitoisi tätä listan häntään.
+   */
+  'js/reaktiot.js',
   'js/pollopoiminnat.js',
   // Pro-tuottajan tekijäsivu ennen lähderivien piirtäjiä (nähtävyydet
   // ja maalehti tuovat sen; moduuli tuo ehdotukset ja ui-apurit, jotka
