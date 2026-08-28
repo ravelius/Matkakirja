@@ -1137,15 +1137,61 @@ export function piirraLeipa(kohde, teksti, { anfangi = false } = {}) {
  */
 const KEHITTAJA_AVAIN = 'matkakirja-kehittaja';
 
+/*
+ * ============ LEVYLTÄ EI LUETA KEHYSSILMUKASSA (28.8.2026) =========
+ *
+ * Omistajan pelitesti 28.8.2026 (v1273): *"edelleen kyllä tökkii sekä
+ * ZOOMATESSA että scrollatessa."*
+ *
+ * Kartan kameran rajaus (js/kartta.js fokusRajaukset, panorointiVapaa)
+ * kysyy näitä kahta kytkintä JOKA pointermovella ja joka touchmovella —
+ * eli kehysnopeudella koko eleen ajan. Kumpikin kysymys oli
+ * `localStorage.getItem`, ja localStorage on SYNKRONINEN levyrajapinta:
+ * Chromiumissa lukema tulee muistivälimuistista mutta iOS Safarissa
+ * kalliimmin, eikä kumpikaan kuulu kehysbudjettiin, jossa mitataan
+ * kymmenesosamillisekunteja (sama oppi kuin js/fokusmitat.js
+ * "KEHYSSILMUKKA EI SAA TUOTTAA ROSKAA").
+ *
+ * ARVO EI VOI MUUTTUA HUOMAAMATTA. Muisti tyhjennetään joka kohdassa,
+ * josta arvo voi vaihtua:
+ *   - tämän moduulin omat kirjoittajat (asetaKehittajaTila,
+ *     asetaKehittajaMaailma, siivoaVanhatKehittajaAvaimet),
+ *   - toisen välilehden kirjoitus (`storage`-tapahtuma; se ei laukea
+ *     kirjoittajan omassa dokumentissa, siksi kohta yllä),
+ *   - savukevartijoiden suora `localStorage.setItem` sivun sisällä
+ *     (tools/savuke-atlas.mjs) — ne kutsuvat kirjoituksen perään
+ *     `ui.paivitaKehittajaMaailma()` / `ui.paivitaKehittajaTila()`,
+ *     ja ne tahdistimet unohtavat muistin ensimmäisenä työnään.
+ * Sivunlataus alkaa aina tyhjästä muistista, joten ennen latausta
+ * kirjoitettu avain luetaan yhä levyltä.
+ */
+let kehittajaMuisti = null;
+let kehittajaMaailmaMuisti = null;
+
+/** Kytkinten muisti tyhjäksi: seuraava kysyjä lukee levyltä. */
+export function unohdaKehittajaKytkimet() {
+  kehittajaMuisti = null;
+  kehittajaMaailmaMuisti = null;
+}
+
+try {
+  window.addEventListener('storage', unohdaKehittajaKytkimet);
+} catch {
+  /* ei ikkunaa (testiajo Nodessa): muistia ei tarvitse mitätöidä */
+}
+
 export function kehittajaTilaPaalla() {
+  if (kehittajaMuisti !== null) return kehittajaMuisti;
   try {
-    return localStorage.getItem(KEHITTAJA_AVAIN) === '1';
+    kehittajaMuisti = localStorage.getItem(KEHITTAJA_AVAIN) === '1';
   } catch {
-    return false; // yksityinen selaus
+    kehittajaMuisti = false; // yksityinen selaus
   }
+  return kehittajaMuisti;
 }
 
 export function asetaKehittajaTila(paalla) {
+  unohdaKehittajaKytkimet();
   try {
     if (paalla) localStorage.setItem(KEHITTAJA_AVAIN, '1');
     else localStorage.removeItem(KEHITTAJA_AVAIN);
@@ -1255,6 +1301,7 @@ const KORVATUT_KEHITTAJA_AVAIMET = [
  * tahdonilmaus, ja siihen siivous kuuluu.
  */
 function siivoaVanhatKehittajaAvaimet() {
+  unohdaKehittajaKytkimet();
   try {
     for (const avain of KORVATUT_KEHITTAJA_AVAIMET) localStorage.removeItem(avain);
   } catch {
@@ -1262,15 +1309,19 @@ function siivoaVanhatKehittajaAvaimet() {
   }
 }
 
+/* Muisti eikä levyluku joka kehyksessä — ks. kehittajaTilaPaalla. */
 export function kehittajaMaailmaPaalla() {
+  if (kehittajaMaailmaMuisti !== null) return kehittajaMaailmaMuisti;
   try {
-    return localStorage.getItem(KEHITTAJA_MAAILMA_AVAIN) === '1';
+    kehittajaMaailmaMuisti = localStorage.getItem(KEHITTAJA_MAAILMA_AVAIN) === '1';
   } catch {
-    return false; // yksityinen selaus
+    kehittajaMaailmaMuisti = false; // yksityinen selaus
   }
+  return kehittajaMaailmaMuisti;
 }
 
 export function asetaKehittajaMaailma(paalla) {
+  unohdaKehittajaKytkimet();
   try {
     if (paalla) localStorage.setItem(KEHITTAJA_MAAILMA_AVAIN, '1');
     else localStorage.removeItem(KEHITTAJA_MAAILMA_AVAIN);

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1277, teksti: 'Nipistyszoomin skriptiaika alas 58 prosenttia' },
   { v: 1276, teksti: 'Aarreleiskat ja paatokset talteen tyoaineistoon' },
   { v: 1275, teksti: 'Kohdekartan merkit palaavat matalalta lavalta' },
   { v: 1274, teksti: 'Drive-nouto laskeutuu alikansioihin' },
