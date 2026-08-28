@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1244: Ateenan ryppaan merkit eivat enaa sinkoile ympari karttaa iPhonella - nippusarake tiivistyy niin etta se mahtuu lehden sisaan kaupungin viereen.',
   'v1243: Ihmenauha skaalautuu kuvan leveyden mukana kuin kuvaan poltettu - iPhonella nauha on nyt pienempi samassa suhteessa kuin kuva.',
   'v1242: Raamattuun kirjattu paivan linjaukset - Livia tuuraajana, lisays+mauste, maadoituskuplat, takypiste, nauhan lopullinen malli, valkoinen nappula, klikattavuusvartio.',
   'v1241: Saksan fokuskartta ja 21 karttakohdetta (Berliinin lehti) - Zugspitze, Rein, Brandenburgin portti, Kolnin tuomiokirkko ym.',
