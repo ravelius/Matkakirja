@@ -129,6 +129,26 @@ jobs:
           npm install --prefix "$RUNNER_TEMP/wrangler" --no-fund --no-audit "$WRANGLER_VERSIO"
           echo "WRANGLER=$RUNNER_TEMP/wrangler/node_modules/.bin/wrangler" >> "$GITHUB_ENV"
 
+      # DIAGNOOSI (lisätty 28.8.2026, kun code 10000 jatkui uudella
+      # tokenilla JA vanhalla wrangler-versiolla): whoami kertoo, minkä
+      # tilin token oikeasti näkee. Salaisuuksia ei paljastu — Actions
+      # peittää secret-arvot lokista, ja tässä tulostetaan vain
+      # täsmääkö CLOUDFLARE_ACCOUNT_ID tokenin tileihin. Askel ei
+      # kaada ajoa: varsinainen virhe tulee entiseen tapaan KV-
+      # listauksesta, tämä vain nimeää syyllisen.
+      - name: Tunnuksen tarkistus (whoami)
+        run: |
+          set -euo pipefail
+          "$WRANGLER" whoami > "$RUNNER_TEMP/whoami.txt" 2>&1 || true
+          cat "$RUNNER_TEMP/whoami.txt"
+          if ! grep -qi "You are logged in" "$RUNNER_TEMP/whoami.txt"; then
+            echo "::error title=Token ei kelpaa lainkaan::wrangler whoami ei tunnistanut tokenia — CLOUDFLARE_API_TOKEN on kelvoton (kopioitu väärin tai luotu keskeneräisenä)."
+          elif grep -q "$CLOUDFLARE_ACCOUNT_ID" "$RUNNER_TEMP/whoami.txt"; then
+            echo "CLOUDFLARE_ACCOUNT_ID täsmää tokenin näkemään tiliin."
+          else
+            echo "::error title=Tili ei täsmää::Token on voimassa, mutta se ei näe tiliä, jonka tunnus on CLOUDFLARE_ACCOUNT_ID-salaisuudessa. Joko secret-tunnus on väärä (oikea: dash.cloudflare.com → Workers & Pages → oikean palstan Account ID) tai token on luotu eri Cloudflare-tilillä / rajattu eri tiliin."
+          fi
+
       # KV-säilö on käyttörajojen laskurien muisti. Jos säilöä ei vielä
       # ole, se luodaan; olemassa olevaa ei kosketa, jotta laskurit
       # eivät nollaudu jokaisella julkaisulla.
