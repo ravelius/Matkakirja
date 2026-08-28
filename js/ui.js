@@ -4740,6 +4740,31 @@ export class UI {
     this.paivitaFokusNimilaput();
     if (!this.maastonimiKerros) return;
     if (!this.maastonimet) return;
+    /*
+     * FOKUSLEHDEN PÄÄLLÄ LADONTAA EI LADOTA LAINKAAN.
+     *
+     * himmennaMaastonimet piilottaa JOKAISEN laudan maastonimen niin
+     * kauan kuin lehti on kartalla (`maastonimi-kuvan-alla`,
+     * css/styles.css `display: none`) — lehdessä on omat nimensä omalla
+     * kirjasimellaan, eivätkä laudan nimet saa kellua niiden päällä.
+     * Ladonta ajettiin silti jokaisessa zoomiportaassa, ja koko tulos
+     * meni suoraan piiloon.
+     *
+     * KERROS TYHJENNETÄÄN KERRAN. Piilotetut solmut eivät maalaudu,
+     * mutta ne ovat yhä osa sitä SVG:tä, jonka selain pilkkoo
+     * maalipaloihin jokaisella kartan muunnoksella (layerize). Tyhjennys
+     * tapahtuu vain kun kerroksessa on jotain, joten tämä haara on
+     * toisesta kutsusta alkaen pelkkä paluu.
+     *
+     * PALUU LEHDESTÄ RAKENTAA NIMET UUSIKSI: tunniste nollataan, joten
+     * seuraava kutsu ilman pohjaa ei osu välimuistiin vaan latoo.
+     * Varapolku (lehdetön kartta) kulkee tästä ohi koskemattomana.
+     */
+    if (this.fokusPohjaBbox) {
+      if (this.maastonimiKerros.firstChild) this.maastonimiKerros.textContent = '';
+      this.maastonimiTunniste = null;
+      return;
+    }
     const nakyva = this.nakyvaAlue();
     if (!nakyva) return;
     // Tunniste karkealla tarkkuudella: pienempi liike ei muuta yhtään
