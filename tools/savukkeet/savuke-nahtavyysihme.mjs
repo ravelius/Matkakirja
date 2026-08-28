@@ -178,12 +178,20 @@ let zoom = await suurennos();
 vaadi('"Koe ihme" avaa suurennoksen nähtävyysikkunan sisään (ei sen taakse)',
   zoom.auki === true && /assets\/kartat\/ihmeet\//.test(zoom.osoite),
   JSON.stringify({ auki: zoom.auki, osoite: zoom.osoite }));
+/*
+ * ODOTUKSET PÄIVITETTY 28.8.2026: nauhan teksti on ollut v1255:stä
+ * asti "Unohdettu aarre" (pelin alaotsikko, js/fokuskohteet.js
+ * KOHDE_IHMENAUHA), ja ihmenauhan lopullinen malli (Raamattu
+ * 27.8.2026) on TASAINEN vino kaista ILMAN taitekappaleita —
+ * savuke vaati tässä välissä vanhaa "Matkakirjan ihme" -tekstiä ja
+ * kahta taitetta ja näytti punaista, vaikka peli oli oikeassa.
+ */
 vaadi('suurennoksessa on ihmenauha ja havainnekuvan lähderivi',
-  zoom.nauha && /Matkakirjan ihme/i.test(zoom.teksti)
+  zoom.nauha && /Unohdettu aarre/i.test(zoom.teksti)
   && /Matkakirjan havainnekuva/.test(zoom.lahde),
   JSON.stringify({ teksti: zoom.teksti, lahde: zoom.lahde }));
-vaadi('suurennoksen nauha on 45 asteen kulmanauha kahdella taitteella',
-  vino(zoom.muunnos) && zoom.taitteita === 2,
+vaadi('suurennoksen nauha on 45 asteen tasainen kaista ilman taitteita',
+  vino(zoom.muunnos) && zoom.taitteita === 0,
   `${zoom.muunnos} / ${zoom.taitteita} taitetta`);
 await suljeKohde();
 
