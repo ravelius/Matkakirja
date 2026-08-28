@@ -48,6 +48,9 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1282: Ihmekuvat vaihdettu ChatGPT-versioihin 31 kohteessa (4 jaa viela API-kuvaan: Aleksandrian kirjasto, Hefaistos, Rodoksen kolossi, Zeuksen patsas). Avaa esim. Faros, Templo Mayor, Old London Bridge.',
+  'v1281: Tampereen herot ja 7 korjattua herokuvaa R2:ssa (Nasilinna, Atumashi, Kuwait x2, Damaskos, Karnak, Atakule); 5 kuvaa odottaa tekstikytkentaa (Tammerkoski, tuomiokirkko, Keskustori, Nasinneula, Id Kah). Huom: Vanhan kirkon julkisivu kivimaisempi kuin todellinen puukirkko - arvioi kelpaako.',
+  'v1280: Karttamerkit piiloon eleen ajaksi (layerize -47/-51 %) ja punainen maan aariviiva pois matkatilasta. Testaa zoomi+vieritys laitteella ja nopanheiton jalkeinen matkatila.',
   'v1279: Aarrepaljastuksen uudet mallit: paikallisaarre vinjetointimallilla (pergamenttikeila + fakta oppimistekstina + purppurakartta taustalla), paaaarre Aarnin luettelon diplomilla (kaiverruskehys, LOYDETTY-leima, tumma -> vaalea siirtyma). Kaanna laatta Euroopan maissa ja loyda paaaarre.',
   'v1278: Euroopan 58 paikallisaarretta saivat omat kuvansa (assets/aarteet/paikallis/, 640x640); maan kuva voittaa laudan kuvan. Kaanna laatta eri maissa ja katso loytokortin kuva.',
   'v1277: Nipistyszoomi kevennetty: vastaskaalaajat eivat enaa aja kolmea merkkikerrosta joka kehyksella lehden nakymassa (skriptiaika -58 %, tyylinlaskut -49 %, pitkat tehtavat 7 -> 0), kehittajakytkinten levyluku pois pointermovesta (iOS-hyoty), nipistyksen roskat pois. Nakymat pikselintarkasti samat. Testaa zoomi ja vieritys laitteella.',
