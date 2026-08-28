@@ -23,6 +23,7 @@ import {
 import { MINIATYYRIT } from './packs/miniatyyrit.js';
 import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
 import { juttuAvain, piirraPoimintapillerit } from './pollopoiminnat.js';
+import { piirraReaktiot } from './reaktiot.js';
 import { sfx } from './sound.js';
 import { taytaLahderivi } from './tekijakortti.js';
 import { esilataaKuvat, html, lahdemerkinta, vuosiluku } from './ui-apurit.js';
@@ -1713,6 +1714,14 @@ export function avaaNahtavyys(ui, kohde, numero, {
     sade: 500,
   });
   if (galleria) sisalto.appendChild(galleria);
+  /*
+   * REAKTIOT LÄHDERIVIN KYLKEEN (js/reaktiot.js): peukku ja
+   * virheilmoitus. Paikka on tarkoituksella krediittien vieressä eikä
+   * jutun aivan pohjalla — se on lehden reunamerkintä, ja poiminnat
+   * saavat pitää jutun viimeisen sanan.
+   */
+  piirraReaktiot(sisalto, juttuAvain(ui.lehtitila.arrivalShownFor, kohde.nimi),
+    { otsikko: kohde.nimi });
   /*
    * PÖLLÖPOIMINNAT jutun loppuun, lähderivin jälkeen (omistajan tilaus
    * 23.8.2026): kysymyspillerit, joista aukeaa tallennettu vastaus.

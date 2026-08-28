@@ -99,6 +99,7 @@ import {
 import { FOKUS_LISANIMET } from './packs/fokus-grc.js';
 import { asetaKuva } from './media.js';
 import { html, jaaKappaleiksi, nielaiseSulkevaNapautus, polloNimilappu } from './ui-apurit.js';
+import { piirraReaktiot } from './reaktiot.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { FOKUSKOHTEET_AFG } from './packs/fokuskohteet-afg.js';
 import { FOKUSKOHTEET_BGR } from './packs/fokuskohteet-bgr.js';
@@ -1560,6 +1561,26 @@ const KOHDE_IHMENAUHAN_SAVY = 'fokuskohde-ihmenauha--puna';
  * Palautettu olio on kuvalistan kanssa samaa muotoa (`osoite`, `selite`,
  * `lahde`) ja kantaa lisäksi nauhan tekstin.
  */
+/*
+ * REAKTIOTUNNISTEET (js/reaktiot.js). Kaksi lyhyttä funktiota, jotta
+ * sama sisältö saa saman nimen riippumatta siitä, mistä ikkunasta
+ * pelaaja sen näkee: kohteen kortti kartalla ja sama kohde
+ * nähtävyysikkunassa osoittavat samaan tunnisteeseen, ja ihme on oma
+ * sisältönsä (yksi kuva, yksi selite) eikä sama asia kuin kortti,
+ * jossa se asuu.
+ *
+ * Kohteen id on koko maailmassa yksilöllinen (js/packs/fokuskohteet-*),
+ * ihmeen tunnisteeksi kelpaa kohteen nimi — sillä se haetaankin
+ * (matkakirjanIhme).
+ */
+function kohdeReaktioTunniste(kohde) {
+  return kohde?.id ? `kohde:${kohde.id}` : null;
+}
+
+function ihmeReaktioTunniste(nimi) {
+  return nimi ? `ihme:${nimi}` : null;
+}
+
 function kohteenIhmekuva(kohde) {
   const ihme = kohde?.ihme;
   if (!ihme?.osoite) return null;
@@ -1568,6 +1589,10 @@ function kohteenIhmekuva(kohde) {
     selite: ihme.selite ?? '',
     lahde: ihme.lahde ?? '',
     nauha: KOHDE_IHMENAUHA,
+    // Suurennos saa oman reaktiorivinsä (avaaKohdeSuurennos ja
+    // js/ui.js naytaKulttuuriKuva lukevat tämän kentän).
+    reaktio: ihmeReaktioTunniste(kohde?.nimi),
+    reaktioOtsikko: kohde?.nimi ?? '',
   };
 }
 
@@ -2238,6 +2263,19 @@ function avaaKohdeSuurennos(ui, kuva, ankkuri) {
   // kuin kortissa (ks. lohko MATKAKIRJAN IHME). Kehys on nauhan
   // asemointipohja, ja css nostaa sen kuvan vasempaan yläkulmaan.
   piirraIhmenauha(kehys, kuva.nauha);
+  /*
+   * REAKTIORIVI SUURENNOKSEN PAPERILLE (js/reaktiot.js), kun kuvalla on
+   * oma tunniste — käytännössä Matkakirjan ihme, joka on oma
+   * sisältönsä eikä sama kuin kortti, jonka napista se aukesi.
+   *
+   * Kehys ohittaa eleet (css pointer-events: none), jotta napautus
+   * paperin päällä sulkee suurennoksen; rivi ottaa ne takaisin omalla
+   * luokallaan, ja kerroksen sulkukuuntelija väistää sen (ks. alempana).
+   */
+  piirraReaktiot(kehys, kuva.reaktio, {
+    otsikko: kuva.reaktioOtsikko ?? kuva.selite ?? '',
+    luokka: 'reaktiot-suurennos',
+  });
   kerros.appendChild(kehys);
 
   /*
@@ -2412,6 +2450,9 @@ function avaaKohdeSuurennos(ui, kuva, ankkuri) {
   document.addEventListener('keydown', nappain, true);
   kerros.addEventListener('click', (tapahtuma) => {
     tapahtuma.stopPropagation();
+    // Reaktiorivi on paperin oma toiminto: peukku ei saa sulkea kuvaa,
+    // eikä virhelomakkeen kenttään pääsisi muuten kirjoittamaan.
+    if (tapahtuma.target?.closest?.('.reaktiorivi')) return;
     sulje();
   });
 
@@ -2632,6 +2673,13 @@ export function avaaFokuskohde(ui, kohde) {
   piirraKohdeKysymykset(ui, sisalto, kohde);
   piirraKierrosnappi(ui, sisalto, kohde);
   if (kohde.lahde) sisalto.appendChild(html('p', 'fokuskohde-lahde', kohde.lahde));
+  /*
+   * REAKTIOT LÄHDERIVIN PERÄÄN (js/reaktiot.js): peukku ja
+   * virheilmoitus samasta kortista, jossa teksti on. Tunniste on
+   * kohteen oma id, joka on sama kaikissa kaupungeissa — kohde ei
+   * kuulu yhdelle kaupungille (ks. pakettien lohkon alku).
+   */
+  piirraReaktiot(sisalto, kohdeReaktioTunniste(kohde), { otsikko: kohde.nimi });
   popup.appendChild(sisalto);
   koti.appendChild(popup);
 
