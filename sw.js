@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1285';
+const CACHE = 'matkakirja-2026-08-09.1286';
 const SHELL = [
   './',
   './index.html',
@@ -765,6 +765,12 @@ const SHELL = [
   './assets/kartat/ihmeet/ihme-olympieion.webp',
   './assets/kartat/ihmeet/ihme-theodosiuksen-muurit.webp',
   './assets/kartat/ihmeet/ihme-leptis-magna.webp',
+  // Täkynostojen loistoaikakuvat (omistajan päätös 28.8.2026: noston
+  // pääkuvaksi sama kohde loistoaikansa asussa, nykytilan valokuva
+  // kakkoseksi). Sama sarja ja sama syy kuin ihmekuvilla yllä: repon
+  // oma generoitu kuva, jolla ei ole varareittiä — ilman esilatausta
+  // kortin pääkuva jäisi lentokoneessa tyhjäksi.
+  './assets/kartat/nostot/nosto-areena-loistoaika.webp',
   // Lippuikkunan versioliput (pilotti Suomi + Saksa, v711).
   './assets/liput/versiot/fin-valtiolippu.png',
   './assets/liput/versiot/fin-sotalippu.png',

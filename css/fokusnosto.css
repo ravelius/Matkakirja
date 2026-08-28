@@ -421,6 +421,20 @@ body.kartta-raahaus .nostosym-tuike-ydin { animation-play-state: paused; }
   color: rgba(33, 29, 24, 0.6);
 }
 
+/*
+ * KAKKOSKUVA TEKSTIN ALLE, PIENEMPÄNÄ (omistajan päätös 28.8.2026).
+ * Pääkuva on loistoaikahavainnekuva; nykytilan valokuva on todiste
+ * jäljelle jääneestä, ja se kuuluu jutun jälkeen sivummalle. Kapeampi
+ * ja matalampi kuin pääkuva, mutta sama kehys ja sama kuvateksti —
+ * CC-attribuutio ei jousta koon mukaan.
+ */
+.fokusnosto-valokuva {
+  max-width: 62%;
+  margin: 0.8rem 0 0;
+}
+
+.fokusnosto-valokuva img { max-height: 20vh; }
+
 .fokusnosto-teksti p {
   margin: 0 0 0.5rem;
   font-size: 0.98rem;
@@ -468,4 +482,69 @@ body.kartta-raahaus .nostosym-tuike-ydin { animation-play-state: paused; }
 .fokusnosto-kohdenappi:focus-visible {
   background: rgba(122, 85, 20, 0.1);
   color: #16130f;
+}
+
+/*
+ * VALMIIT KYSYMYKSET PULULLE kortin alaosaan. Sama pisteviivainen
+ * ilme kuin kartan kohdetietoruudussa (css/fokuskohteet.css), jotta
+ * pelaaja tunnistaa merkin: katkoviivainen laatikko on tässä pelissä
+ * aina "tästä pääsee juttelemaan pulun kanssa". Allekkain eikä
+ * vierekkäin — kysymys on kokonainen lause eikä mahdu sarakkeeseen.
+ */
+.fokusnosto-kysy-otsikko {
+  margin: 0.75rem 0 0;
+  font-family: var(--font-type);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7a5514;
+}
+
+.fokusnosto-kysymykset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin: 0.35rem 0 0;
+}
+
+.fokusnosto-kysymys {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0.4rem 0.55rem;
+  border: 1px dashed rgba(122, 85, 20, 0.5);
+  border-radius: 8px;
+  background: rgba(236, 226, 200, 0.6);
+  box-shadow: none;
+  color: #46331f;
+  font-family: var(--font-luku);
+  font-size: 0.88rem;
+  line-height: 1.35;
+  text-align: left;
+  text-shadow: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/*
+ * OSOITETTU NAPPI EI SAA NIELLÄ TEKSTIÄÄN (css/styles.css, samanniminen
+ * osio). Tiedoston alun yleissääntö `button:hover:not(:disabled)`
+ * maalaa jokaisen napin taustan tummanruskeaksi, ja se on TARKEMPI kuin
+ * paljas luokka — pelkkä `.fokusnosto-kysymys:hover` häviäisi sille ja
+ * jättäisi tumman musteen tummalle taustalle. Valitsin on siksi
+ * yhtä tarkka: teksti ja tausta liikkuvat aina yhdessä.
+ */
+button.fokusnosto-kysymys:hover:not(:disabled),
+button.fokusnosto-kysymys:focus-visible {
+  border-color: rgba(122, 85, 20, 0.8);
+  background: rgba(236, 226, 200, 0.92);
+  color: #211d18;
+}
+
+.fokusnosto-kysymys:focus { outline: none; }
+
+.fokusnosto-kysymys:focus-visible {
+  outline: 2px solid #9c6b17;
+  outline-offset: -2px;
 }

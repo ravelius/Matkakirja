@@ -117,7 +117,9 @@
  * (tools/tarkista-niputus.mjs), joten kaikki top-level-nimet alkavat
  * NOSTO_/nosto-etuliitteellä.
  */
-import { html, jaaKappaleiksi, nielaiseSulkevaNapautus } from './ui-apurit.js';
+import {
+  html, jaaKappaleiksi, nielaiseSulkevaNapautus, polloNimilappu,
+} from './ui-apurit.js';
 import { asetaKuva } from './media.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { avaaFokuskohde, suljeFokuskohde } from './fokuskohteet.js';
@@ -126,7 +128,7 @@ import {
   asemoiNostosymbolit, nollaaNostosymbolit, paivitaNostosymbolit,
 } from './fokusnosto-symbolit.js';
 import { asetaNostopinta, fokusvirtaLukitseeLehden, fokusvirtaSisalto } from './fokusvirta.js';
-import { polloVihje } from './pollo.js';
+import { polloKysy, polloVihje } from './pollo.js';
 import { sfx } from './sound.js';
 
 /* ==================== POOLI ==================== */
@@ -359,6 +361,17 @@ const NOSTO_KUVA_PX = 800;
  * kohteilla (js/fokuskohteet.js nykyisenMaanKohteet) — yksi totuus,
  * ei toista tulkintaa siitä, minkä maan sisältöä ruudulla on.
  */
+/**
+ * Lunastus yhdeksi tekstiksi: merkkijono kelpaa sellaisenaan, taulukko
+ * liitetään kappalerajalla (tyhjä rivi), jonka ladonta tunnistaa.
+ */
+function nostonLunastusteksti(lunastus) {
+  if (Array.isArray(lunastus)) {
+    return lunastus.map((k) => String(k ?? '').trim()).filter(Boolean).join('\n\n');
+  }
+  return lunastus;
+}
+
 function nostoMaanPooli(ui, city) {
   /*
    * Kaupungin oma pooli packista ensin (Sofia 25.8.2026: kenttä
@@ -371,10 +384,16 @@ function nostoMaanPooli(ui, city) {
    * kentän lisääminen pakettiin ei vaadi riviä tänne. Vanha
    * `symboli`-kenttä säilyy datassa, mutta kartalla sitä ei enää lueta
    * (ks. nostonMerkinta).
+   *
+   * LUNASTUS SAA OLLA KAPPALEIDEN TAULUKKO (omistajan päätös
+   * 28.8.2026: *"Lisäksi vähän enemmän juttua"*). Kortin ladonta jakaa
+   * tekstin kappaleiksi tyhjän rivin kohdalta (jaaKappaleiksi), joten
+   * taulukko liitetään yhteen juuri sillä erottimella — yksi muoto
+   * eteenpäin, ei toista haaraa ladontaan.
    */
   const oma = fokusvirtaSisalto(ui, city)?.takynostot;
   if (Array.isArray(oma) && oma.length) {
-    return oma.map((n) => (n.teksti ? n : { ...n, teksti: n.lunastus }));
+    return oma.map((n) => (n.teksti ? n : { ...n, teksti: nostonLunastusteksti(n.lunastus) }));
   }
   const taulu = ui?.game?.pack?.map?.cityCountry;
   const iso = (taulu && city && taulu[city.id]) || null;
@@ -645,14 +664,8 @@ function avaaNosto(ui, nosto) {
   if (!nosto) return;
   sfx.play('paper');
   nostoMerkitseLuetuksi(nosto.id);
-  /*
-   * ANKKURIKOHDE TALTEEN ENNEN SULKUA. Piste tuikkii kohdemerkin päällä
-   * (js/fokusnosto-symbolit.js), ja kerroksen nollaus unohtaa sen —
-   * kortti tarvitsee tiedon sen jälkeen (nostonKarttakohde).
-   */
-  const ankkuri = ui?.nostosymAnkkuriKohde ?? null;
   suljeFokusnosto(ui);
-  avaaNostonKortti(ui, nosto, ankkuri);
+  avaaNostonKortti(ui, nosto);
 }
 
 /* ==================== LIVIAN HUOMAUTUS ==================== */
@@ -833,8 +846,7 @@ function nostoKlikkiotsikko(ui, nosto, nappi = html('button', 'fokusnosto-nappi'
     mini.draggable = false;
     // Rikkinäinen kuva ei saa jättää tyhjää laatikkoa otsikon perään:
     // otsikko kantaa noston yksinkin.
-    asetaKuva(mini, valokuvaUrl(nosto.kuva.tiedosto, NOSTO_MINI_PX),
-      valokuvaVara(nosto.kuva.tiedosto, NOSTO_MINI_PX), () => mini.remove());
+    asetaNostonKuva(mini, nosto.kuva, NOSTO_MINI_PX, () => mini.remove());
     nappi.appendChild(mini);
   }
   nappi.addEventListener('click', () => avaaNosto(ui, nosto));
@@ -869,7 +881,7 @@ function nostoRasti(ui, nosto) {
  * sen päällä. Napautus kortin ulkopuolelle tai Esc sulkee, ja
  * sulkemisen jälkeen poolin seuraava nosto saa nousta.
  */
-function avaaNostonKortti(ui, nosto, ankkuri = null) {
+function avaaNostonKortti(ui, nosto) {
   nostoLataaTyyli();
   suljeNostonKortti(ui);
 
@@ -897,6 +909,7 @@ function avaaNostonKortti(ui, nosto, ankkuri = null) {
     teksti.appendChild(html('p', '', kappale));
   }
   sisalto.appendChild(teksti);
+  if (nosto.valokuva) piirraNostonValokuva(sisalto, nosto.valokuva);
   if (nosto.lahde) sisalto.appendChild(html('p', 'fokusnosto-lahde', nosto.lahde));
 
   /*
@@ -906,7 +919,7 @@ function avaaNostonKortti(ui, nosto, ankkuri = null) {
    * pinnalla. Kortti sulkeutuu samalla: kaksi korttia päällekkäin olisi
    * juuri sitä raskautta, jota kevyt kulku purkaa.
    */
-  const kohde = nostonKarttakohde(ui, nosto, ankkuri);
+  const kohde = nostonKarttakohde(ui, nosto);
   if (kohde) {
     const nappi = html('button', 'fokusnosto-kohdenappi', `Katso ${kohde.nimi} kartalla`);
     nappi.type = 'button';
@@ -916,6 +929,8 @@ function avaaNostonKortti(ui, nosto, ankkuri = null) {
     });
     sisalto.appendChild(nappi);
   }
+
+  piirraNostonKysymykset(ui, sisalto, nosto);
 
   kortti.appendChild(sisalto);
   kerros.appendChild(kortti);
@@ -966,16 +981,19 @@ function avaaNostonKortti(ui, nosto, ankkuri = null) {
  * osaa näkymästä, ja silloin niiden kerros sulkee avatun ruudun heti.
  * Kummassakin tapauksessa nappi jää pois eikä lupaa mitään, mitä
  * napautus ei tekisi.
+ *
+ * VAIN DATAN OMA `kohde` (omistajan päätös 28.8.2026). Nappi luki ennen
+ * myös sitä kohdemerkkiä, jonka PÄÄLLÄ piste sattui tuikkimaan
+ * (js/fokusnosto-symbolit.js valitsee ankkuriksi lähimmän merkin, kun
+ * täyllä ei ole omaa kohdetta). Ankkuri on esityksen apuväline eikä
+ * täyn aihe, ja lähin naapuri on usein aivan toinen asia: Sofian
+ * areenakortti tarjosi *"Katso Sofian moskeijat kartalla"*. Nappi lupasi
+ * siis jutun kohteen ja vei muualle, mikä on juuri se klikkihuijaus,
+ * jota tämän kortin ensimmäinen sääntö kieltää. PISTEEN SIJOITTELUUN EI
+ * KOSKETA: ankkuri ohjaa yhä sitä, minkä merkin päällä piste piirtyy.
  */
-function nostonKarttakohde(ui, nosto, ankkuri = null) {
-  /*
-   * ANKKURIKOHDE KELPAA MYÖS. Piste piirtyy kohdemerkin päälle
-   * (js/fokusnosto-symbolit.js) ja vie sen napautuksen niin kauan kuin
-   * täky on lukematta; kutsuja kertoo tässä, minkä merkin päällä se
-   * istui, jotta kortti tarjoaa sinne oven. Datan oma `kohde` voittaa:
-   * se on täyn oikea aihe, ankkuri vain lähin naapuri.
-   */
-  const tunnus = nosto?.kohde ?? ankkuri ?? null;
+function nostonKarttakohde(ui, nosto) {
+  const tunnus = nosto?.kohde ?? null;
   if (!tunnus) return null;
   if (!ui?.fokuskohdeMerkit?.get(tunnus)?.length) return null;
   if (ui.fokuskohdeKerros?.classList?.contains('fokuskohteet-piilossa')) return null;
@@ -995,16 +1013,35 @@ export function suljeNostonKortti(ui) {
   if (auki) paivitaFokusnosto(ui);
 }
 
+/**
+ * KAKSI KUVALÄHDETTÄ, KAKSI PORRASTA (sama jako kuin kartan kohteilla,
+ * js/fokuskohteet.js asetaKohdeKuva).
+ *
+ * `tiedosto` on Commons-nimi ja kulkee median asettajan läpi, joka
+ * uusii pyynnön ennen kuin luovuttaa — oikea sääntö yskähtävälle
+ * palvelimelle. `osoite` on repon oma generoitu havainnekuva
+ * (assets/kartat/nostot/), jolla ei ole varareittiä: se joko on tai ei
+ * ole, joten uusinta vain jättäisi kortille tyhjän kehyksen.
+ */
+function asetaNostonKuva(img, kuva, leveys, onVirhe) {
+  if (kuva.osoite) {
+    img.addEventListener('error', () => onVirhe(), { once: true });
+    img.src = kuva.osoite;
+    return;
+  }
+  asetaKuva(img, valokuvaUrl(kuva.tiedosto, leveys),
+    valokuvaVara(kuva.tiedosto, leveys), onVirhe);
+}
+
 /** Kortin kuva selitteineen ja lähteineen (CC BY vaatii tekijän). */
-function piirraNostonKuva(kohde, kuva) {
-  const kehys = html('figure', 'fokusnosto-kuva');
+function piirraNostonKuva(kohde, kuva, luokka = 'fokusnosto-kuva', leveys = NOSTO_KUVA_PX) {
+  const kehys = html('figure', luokka);
   const img = document.createElement('img');
   img.alt = kuva.selite ?? '';
   img.decoding = 'async';
   img.draggable = false;
   const piilota = () => { kehys.hidden = true; };
-  asetaKuva(img, valokuvaUrl(kuva.tiedosto, NOSTO_KUVA_PX),
-    valokuvaVara(kuva.tiedosto, NOSTO_KUVA_PX), piilota);
+  asetaNostonKuva(img, kuva, leveys, piilota);
   kehys.appendChild(img);
   const teksti = html('figcaption', 'fokusnosto-kuvateksti');
   teksti.append(
@@ -1013,6 +1050,61 @@ function piirraNostonKuva(kohde, kuva) {
   );
   kehys.appendChild(teksti);
   kohde.appendChild(kehys);
+}
+
+/**
+ * KAKKOSKUVA TEKSTIN ALLE — "näin se löytyi" (omistajan päätös
+ * 28.8.2026).
+ *
+ * Pääkuva on nyt loistoaikahavainnekuva, joka kertoo mitä paikassa
+ * TAPAHTUI; nykytilan valokuva on todiste siitä, mitä siitä on jäljellä,
+ * ja se kuuluu vasta jutun jälkeen ja pienempänä. Sama kehys ja sama
+ * kuvateksti kuin pääkuvalla, joten CC-attribuutio kulkee mukana
+ * sellaisenaan — lisenssiehto ei jousta koon mukaan.
+ */
+function piirraNostonValokuva(kohde, kuva) {
+  piirraNostonKuva(kohde, kuva, 'fokusnosto-kuva fokusnosto-valokuva', NOSTO_MINI_PX * 3);
+}
+
+/**
+ * VALMIIT KYSYMYKSET PULULLE kortin alaosaan (omistajan päätös
+ * 28.8.2026: *"muutama valmis kysymys Pululle jatko jutustelua
+ * varten"*).
+ *
+ * NAPAUTUS SULKEE KORTIN. Kartan kohdetietoruutu jättää itsensä auki
+ * chatin viereen (js/fokuskohteet.js kysyKohteesta), mutta täkynoston
+ * kortti on kartan keskellä kelluva paperi eikä väistä paneelia —
+ * lukeminen on tässä kohtaa jo tehty, ja keskustelu jatkuu chatissa.
+ *
+ * KYSYMYS MENEE UUTENA AIHEENA (js/pollo.js polloKysy) eikä
+ * jatkokysymyksenä: pelaaja aloittaa uuden puheenaiheen, ei jatka
+ * edellistä vastausta. Reitti on sama kuin pelaajan itse
+ * kirjoittamalla kysymyksellä, eikä se riipu chatin omien
+ * avausvalmiskysymysten lipusta.
+ */
+function piirraNostonKysymykset(ui, sisalto, nosto) {
+  const kysymykset = (Array.isArray(nosto.kysymykset) ? nosto.kysymykset : [])
+    .map((k) => String(k ?? '').trim()).filter(Boolean).slice(0, 3);
+  if (!kysymykset.length) return;
+  // Sama nimilappuvitsi kuin kartan kohdekortissa (omistaja 27.8.2026):
+  // "Kysy pöllöltä pululta:", pöllöltä yli vedettynä.
+  sisalto.appendChild(polloNimilappu(html('p', 'fokusnosto-kysy-otsikko'), {
+    ennen: 'Kysy ', yli: 'pöllöltä', tilalle: 'pululta', jalkeen: ':',
+  }));
+  const rivi = html('div', 'fokusnosto-kysymykset');
+  rivi.setAttribute('role', 'group');
+  rivi.setAttribute('aria-label', `Kysy pululta: ${nosto.otsikko}`);
+  for (const kysymys of kysymykset) {
+    const nappi = html('button', 'fokusnosto-kysymys', kysymys);
+    nappi.type = 'button';
+    nappi.addEventListener('click', (tapahtuma) => {
+      tapahtuma.stopPropagation();
+      suljeNostonKortti(ui);
+      polloKysy(kysymys);
+    });
+    rivi.appendChild(nappi);
+  }
+  sisalto.appendChild(rivi);
 }
 
 /* ==================== KYTKENTÄ ==================== */
