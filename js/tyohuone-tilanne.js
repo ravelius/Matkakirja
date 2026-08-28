@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1250: Livia pysyvaksi - hopotysaloitus joka vastaukseen, pullapersous, Columba Livia -proystaily, hassut saapumisrepliikit 10 kaupunkiin, yliviivaus himmeammaksi ja Pollo-sana vahvemmaksi.',
   'v1249: Euroopan pikkuaarre on nyt Itameren meripihka (otsikko seuraa kuvaa) ja kaikkien lautojen pikkuaarteet nayttavat oman nimensa hopeakolikoiden sijaan.',
   'v1248: Heropohjaisen kaupunkilehden isoin kuva on taas etukateispuskurissa - saapuminen ei odota karusellin latausta.',
   'v1247: Sahkepinnan tyylit palasivat yhden tiedoston versioon - CSS-niputuksen katkennut ketju korjattu listaksi.',

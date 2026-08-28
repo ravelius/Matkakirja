@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1250, teksti: 'Livia pysyvaksi pullapersoonalla ja saapumisrepliikit' },
   { v: 1249, teksti: 'Itameren meripihka ja pikkuaarteiden nimijarjestys' },
   { v: 1248, teksti: 'Esilataussavuke vihreaksi ja heropuskuri kuntoon' },
   { v: 1247, teksti: 'Sahke-tyylit takaisin standaloneen' },

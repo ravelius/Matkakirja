@@ -1742,6 +1742,13 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
  * väriin, jotta silmä lukee "Pulu" ensin. Himmennys on sanan omassa
  * kuoressa eikä <s>-solmussa: muuten se himmentäisi myös vedon.
  *
+ * SÄVYSÄÄTÖ 28.8.2026 (omistaja: *"pöllön yliviivaus saisi olla vähän
+ * himmeämmällä ja pöllö sanan taas hieman vahvemmalla"*). Punainen veto
+ * oli niin kylläinen, että se peitti sanan alleen — nyt viiva on
+ * himmeämpi (alfa 0,82 → 0,55) ja sana vahvempi (himmennys 0,55 →
+ * 0,78). Vitsi säilyy: veto näkyy yhä selvästi, mutta "Pöllö" luetaan
+ * sen alta ilman että sitä tarvitsee arvata.
+ *
  * <s> on aria-hidden (js/ui-apurit.js polloNimilappu): ruudunlukija
  * kuulee vain korvaavan sanan, eikä yliviivattua sotkua lueta koskaan
  * ääneen.
@@ -1756,7 +1763,7 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   text-decoration: none;
 }
 
-.pollo-yliviivattu-sana { opacity: 0.55; }
+.pollo-yliviivattu-sana { opacity: 0.78; }
 
 /*
  * MITAT KIRJOITETAAN AUKI, EI JÄTETÄ AUTOLLE. SVG on korvattu elementti
@@ -1773,7 +1780,7 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   height: calc(100% + 0.24em);
   overflow: visible;
   pointer-events: none;
-  stroke: rgb(161 82 74 / 0.82);
+  stroke: rgb(161 82 74 / 0.55);
 }
 
 /*

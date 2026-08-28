@@ -137,7 +137,7 @@ import {
   fokusvirtaOhittaaLehden, fokusvirtaSaapuminen, fokusvirtaLukitseeLehden,
   fokusvirtaMatkakirja, fokusvirtaMerkintaLuettu, fokusvirtaLaattaNakyy,
   fokusvirtaKohtaaminenPisteessa, fokusvirtaLehtivinkki, fokusvirtaSisalto,
-  paivitaFokuskuvat, nollaaFokuskuvat,
+  fokusvirtaSaapumiskupla, paivitaFokuskuvat, nollaaFokuskuvat,
 } from './fokusvirta.js';
 
 const wikiGalleryCache = new Map();
@@ -10052,6 +10052,15 @@ export class UI {
           this.typeText(jatko, jatkoTeksti, 'fact', () => {
             const rivi = this.aikatauluRivi();
             if (rivi) this.factText.appendChild(rivi);
+            /*
+             * LIVIA SAA KOMMENTOIDA MYÖS TAVALLISESSA KAUPUNGISSA
+             * (omistajan laajennus 28.8.2026): sama puheenvuoro kuin
+             * fokuskaupungin maadoitus, vain eri sisältö — kaupungin
+             * oma saapumisrepliikki (js/fokusvirta.js
+             * LIVIAN_SAAPUMISET). Kupla odottaa itse luennan loppua ja
+             * vaikenee, jos kaupungille ei ole kirjoitettu repliikkiä.
+             */
+            fokusvirtaSaapumiskupla(this, kaupunki);
           });
         });
         /*

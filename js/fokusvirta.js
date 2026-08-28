@@ -93,7 +93,7 @@ import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 import { fokusvirtaKaupungille } from './packs/fokusvirrat.js';
 import { luennanLoppuun } from './luenta.js';
 import { natiiviVastaus } from './natiivi.js';
-import { polloMaadoitus } from './pollo.js';
+import { polloSaapumiskupla } from './pollo.js';
 import { sfx } from './sound.js';
 
 /*
@@ -485,12 +485,12 @@ export function fokusvirtaMerkintaLuettu(ui, city) {
   if (aarremerkintaLuettu(ui, city)) return;
   /*
    * Kevyessä kulussa merkinnän loppu ei avaa korttia — mutta se
-   * päästää Livian ääneen yhdellä kuplalla: isoisän maadoituksella
-   * (fokusvirtaMaadoituskupla). Kaikki muu odottaa yhä lehteä
-   * (fokusvirtaLehtivinkki).
+   * päästää Livian ääneen yhdellä kuplalla (fokusvirtaSaapumiskupla:
+   * maadoitus tai kaupungin saapumisrepliikki). Kaikki muu odottaa yhä
+   * lehteä (fokusvirtaLehtivinkki).
    */
   if (!FOKUSVIRTA_KORTIT) {
-    fokusvirtaMaadoituskupla(ui, city);
+    fokusvirtaSaapumiskupla(ui, city);
     return;
   }
   const data = fokusvirtaSisalto(ui, city);
@@ -508,8 +508,8 @@ export function fokusvirtaMerkintaLuettu(ui, city) {
 
 /*
  * ==================================================================
- * ISOISÄN MAADOITUS KEVYEN KULUN SAAPUMISKUPLAAN
- * (omistajan päätös 27.8.2026)
+ * LIVIAN SAAPUMISKUPLA — YKSI PUHEENVUORO JOKA KAUPUNGISSA
+ * (omistajan päätös 27.8.2026, laajennus 28.8.2026)
  * ==================================================================
  *
  * v1225 kirjoitti kuuteen fokuskaupunkiin Livian maadoituskommentin
@@ -517,38 +517,142 @@ export function fokusvirtaMerkintaLuettu(ui, city) {
  * merkinnän SÄVYYN, ei sen faktoihin. Kommentit piirtyivät kuitenkin
  * vain fokusvirran kuplissa, ja koska kevyt kulku on voimassa
  * (FOKUSVIRTA_KORTIT = false), kukaan ei nähnyt niistä yhtäkään.
+ * v1232 toi ne kevyen kulun omaan saapumiskuplaan: kun pelaaja on
+ * kuullut matkakirjamerkinnän loppuun, Livia kommentoi ensimmäisenä.
  *
- * Kevyt kulku JATKUU. Maadoitus ei siis palaa kortiksi vaan tulee
- * kevyen kulun omaan saapumiskuplaan: kun pelaaja on kuullut
- * matkakirjamerkinnän loppuun, hän "pääsee kommentoimaan matkakirjaa"
- * — ja Livia kommentoi ensimmäisenä.
+ * LAAJENNUS 28.8.2026 (omistaja): *"AINA kun isoisän
+ * matkakirjamerkinnän luenta loppuu, Livia saa kommentoida jotain
+ * lisäksi."* Puheenvuoro ei siis ole enää kuuden fokuskaupungin oma
+ * vaan sama paikka joka kaupungissa — vain SISÄLTÖ vaihtuu:
  *
- * KAKSI RAJAUSTA:
+ *   - Kaupunki, jolla on maadoitusteksti  → maadoitus, kuten ennenkin.
+ *   - Muu kaupunki, jolle repliikki on kirjoitettu → LIVIAN_SAAPUMISET.
+ *   - Kaupunki ilman kumpaakaan → ei kuplaa. Geneeristä täytettä ei
+ *     kirjoiteta: hiljaisuus on parempi kuin sama vitsi joka kerta.
  *
- *  1. VIISI KAUPUNKIA (Sofia, Sarajevo, Bukarest, Istanbul, Rooma).
- *     Niissä kevyellä kululla ei ole yhtäkään Livian saapumiskuplaa,
- *     joten maadoitus on kaupungin ensimmäinen ja ainoa.
+ * YKSI KUPLA PER SAAPUMINEN, EI KAHTA PÄÄLLEKKÄIN. Maadoitus ja
+ * saapumisrepliikki ovat sama puheenvuoro eri sisällöllä, ja muisti
+ * (ui.saapumiskuplaNaytetty) on niille yhteinen.
  *
- *  2. ATEENA VAIKENEE. Aloituskaupungin saapumissekvenssillä on jo
- *     kaksi ohjekuplaa ("Tervetuloa Kreikkaan…" ja "Klikkaa kaupungin
- *     kultaista merkkiä", js/ui.js saapumisenKuplat), ja ne opettavat
- *     pelin. Kolmas kupla veisi tilaa juuri siltä ohjeelta, jota
- *     pelaaja siinä hetkessä eniten tarvitsee. Ateenan maadoitusteksti
- *     jää odottamaan fokusvirran kytkintä eikä sitä poisteta.
+ * ATEENA VAIKENEE YHÄ. Aloituskaupungin saapumissekvenssillä on jo
+ * kaksi ohjekuplaa ("Tervetuloa Kreikkaan…" ja "Klikkaa kaupungin
+ * kultaista merkkiä", js/ui.js saapumisenKuplat), ja ne opettavat
+ * pelin — kolmas kupla veisi tilaa juuri siltä ohjeelta, jota pelaaja
+ * siinä hetkessä eniten tarvitsee. Sama kuplaperhe kun on kyseessä,
+ * kolmas kupla myös KORVAISI ohjeen ruudulla. Ateenan maadoitusteksti
+ * jää odottamaan fokusvirran kytkintä eikä sitä poisteta.
  */
 
-/** Kaupungit, joissa maadoitus ei tule kuplaan (ks. yllä). */
-const MAADOITUS_VAITI = new Set(['ateena']);
+/** Kaupungit, joissa saapumiskupla vaikenee (ks. yllä). */
+const SAAPUMISKUPLA_VAITI = new Set(['ateena']);
+
+/*
+ * ------------------------------------------------------------------
+ * LIVIAN SAAPUMISREPLIIKIT (omistajan tilaus 28.8.2026)
+ * ------------------------------------------------------------------
+ *
+ * *"pulu voisi aina jutella jotain hassua kun tullaan uuteen
+ * kaupunkiin … esitellä kansallisherkun tai Italiassa kertoa miten
+ * kuljetti Romeon ja Julian kirjeitä … mutta pulun persous voisi
+ * tasaisin väliajoin toistua eri muodoissa."*
+ *
+ * REPLIIKIT KIRJOITETAAN KÄSIN, kaupunki kerrallaan, täsmälleen kuten
+ * maadoitukset — mallia ei päästetä keksimään kansallisherkkuja eikä
+ * kansanpukuja. Kaupunki, jolle ei ole keksitty hyvää repliikkiä, jää
+ * ilman kuplaa.
+ *
+ * SISÄLTÖ KIERTÄÄ, ei toista samaa muotoa peräkkäisissä kaupungeissa:
+ *   (a) kansallisherkku pullapersoudella,
+ *   (b) Columba Livia -pröystäily,
+ *   (c) sukutarina (kyyhkypostin historia),
+ *   (d) paikallinen pukeutuminen ja arjen tapa,
+ *   (e) mitä vuoden 1873 ja nykyhetken välissä tapahtui.
+ *
+ * KOLME KURIA, JOTKA PITÄVÄT:
+ *  1. LYHYT. Kupla on saapumisen sivuhuomio, ei luento: 2–3 virkettä.
+ *  2. FAKTAT KESTÄVÄT. Leivonnaiset, vaatteet ja vuosiluvut ovat
+ *     tarkistettavia; kaikki, mitä kukaan ei voi tarkistaa, sanotaan
+ *     suvun perimätietona ("sukuni mukaan") — sama sääntö kuin
+ *     kehotteen ISOISÄN MAADOITUS -osiossa.
+ *  3. EI HUUTOMERKKEJÄ eikä juonipaljastuksia. Livia ei tiedä
+ *     aarteista mitään eikä vihjaa niihin.
+ */
+const LIVIAN_SAAPUMISET = {
+  /* (b) pröystäily — Venetsian torilla suku on kotonaan. */
+  venetsia: 'Venetsia. Tässä kaupungissa minun sukuni istuu torilla '
+    + 'kuin virkamiehet: Columba Livia, jos joku kysyy, ja täällä kysytään. '
+    + 'Karnevaaliin leivotaan fritolea, pientä ja pyöreää — ja mennyttä '
+    + 'ennen kuin ehdin laskeutua.',
+
+  /* (c) sukutarina — Verona ei ole laudalla, mutta se on tuolla. */
+  firenze: 'Firenze. Täältä pohjoiseen on Verona, ja sukuni kertoo '
+    + 'kantaneensa siellä kahden nuoren kirjeitä puutarhan yli. Se on '
+    + 'tarina eikä arkisto, mutta hyvä tarina. Toscanassa palkka '
+    + 'maksettiin bomboloneina. Se taas on totta.',
+
+  /* (d) pukeutuminen + (a) herkku. */
+  dubrovnik: 'Dubrovnik. Muurilta näkee heti, kuka on pukeutunut juhlaan: '
+    + 'valkoinen liina, punainen liivi, hopeanapit. Ja fritulet — pieniä '
+    + 'paistettuja palleroita, joita kukaan ei laske. Minä lasken.',
+
+  /* (e) 1873 on Budapestin oma vuosi. */
+  budapest: 'Budapest. Juuri tänä vuonna kolmesta tuli yksi: Buda, Pest '
+    + 'ja Óbuda samaan nimeen. Sitä ennen kirjeeseen piti valita niistä '
+    + 'yksi. Kürtőskalács kiertää yhä vartaan ympäri, kuin sekin olisi '
+    + 'suostunut yhdistymiseen.',
+
+  /* (a) herkku — Buchteln on kehotteen pullalistalla. */
+  wien: 'Wien. Täällä leivotaan Buchtelnia: pehmeitä hiivapullia, jotka '
+    + 'nostetaan vuoasta yksi kerrallaan. Olen laskenut niitä ikkunalaudalta '
+    + 'enemmän kuin kehtaan sanoa. Kirjeitäkin kannoin. Siinä järjestyksessä.',
+
+  /* (a) herkku + (c) sukutarina. */
+  kreeta: 'Kreeta. Kalitsounia: ohut taikina, tuoretta juustoa, hunajaa '
+    + 'päälle. Sukuni mukaan saarelle vietiin ennen tieto satamasta '
+    + 'siivin, koska vuoret eivät päästä ratsua läpi yhtä nopeasti.',
+
+  /* (a) herkku + (d) pukeutuminen. */
+  sisilia: 'Sisilia. Aamiaiseksi brioche col tuppo — pulla, jolla on oma '
+    + 'nuttura — ja sen sisään lusikoidaan jäätelöä. Kuulostaa väärältä ja '
+    + 'on oikein. Vanhemmat herrat istuvat baarissa paita napitettuna '
+    + 'kaulaan asti, vaikka on kolmekymmentä astetta.',
+
+  /* (e) satamakaupunki ennen ja nyt + (a) herkku. */
+  odessa: 'Odessa. Isoisäsi aikaan täältä lähti vilja puolelle Eurooppaa '
+    + 'ja laiturilla puhuttiin kuutta kieltä yhtä aikaa. Pampuški — pehmeä '
+    + 'sämpylä, valkosipulia päälle — on yhä se, mitä minulle heitetään '
+    + 'ensimmäisenä. Ei jälkiruoka. Silti pulla.',
+
+  /* (a) herkku + (c) sukutarina. */
+  marseille: 'Marseille. Navette: kapea, kova, appelsiininkukalta '
+    + 'tuoksuva veneenmuotoinen leivos, jota paistetaan samassa uunissa '
+    + 'kuin kaksisataa vuotta sitten. Meikäläisten muistiinpanojen mukaan '
+    + 'tästä satamasta lähti moni kirje nopeammin kuin postivaunuista.',
+
+  /* (c) sukutarina — isoäidin oma sota, kehotteen kaanonia. */
+  pariisi: 'Pariisi. Täällä isoäitini teki työnsä. Talvella 1870 '
+    + 'saarrettuun kaupunkiin ei päässyt kukaan, ja kirjeet menivät sisään '
+    + 'kyyhkyn mukana mikrofilmille kutistettuina. Palkinnoksi hän sai '
+    + 'briossia. Sen hän kertoi joka kerta.',
+};
 
 /**
  * Hengähdys luennan lopun ja kuplan välissä — sama sopimus kuin
  * saapumissekvenssissä (js/ui.js SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS):
  * kertoja saa lopettaa lauseensa ennen kuin Livia aloittaa omansa.
  */
-const MAADOITUKSEN_TAUKO_MS = 900;
+const SAAPUMISKUPLAN_TAUKO_MS = 900;
 
 /**
- * Näyttää kaupungin maadoituksen Livian kuplana, kerran per saapuminen.
+ * Livian saapumispuheenvuoro kuplana, kerran per saapuminen.
+ *
+ * SISÄLTÖ VALITAAN TÄSSÄ, EI KUTSUPAIKASSA: fokuskaupungin maadoitus
+ * voittaa, muuten käytetään kaupungin omaa saapumisrepliikkiä
+ * (LIVIAN_SAAPUMISET). Kutsupaikkoja on kaksi — fokusvirran oma
+ * merkintä (fokusvirtaMerkintaLuettu) ja tavallinen saapumismerkintä
+ * (js/ui.js renderFact) — ja kumpikin kysyy samaa: onko Livialla tähän
+ * kaupunkiin sanottavaa. Yhteinen muisti pitää huolen siitä, ettei
+ * kahta kuplaa tule päällekkäin.
  *
  * KERRAN PER SAAPUMINEN, SAMA MUISTI KUIN KORTTIVIRRALLA. Kupla
  * merkitään näytetyksi ui:n omaan joukkoon avaimella lauta:kaupunki —
@@ -566,26 +670,31 @@ const MAADOITUKSEN_TAUKO_MS = 900;
  *
  * @returns {boolean} varattiinko kuplavuoro tälle kaupungille.
  */
-export function fokusvirtaMaadoituskupla(ui, city) {
-  // Korttivirrassa maadoitus on jo pöllökortin ensimmäinen kappale
-  // (piirraPollo) — kupla toistaisi sen sanasta sanaan.
-  if (FOKUSVIRTA_KORTIT) return false;
-  if (!city || MAADOITUS_VAITI.has(city.id)) return false;
-  const teksti = fokusvirtaSisalto(ui, city)?.pollo?.maadoitus;
+export function fokusvirtaSaapumiskupla(ui, city) {
+  if (!city || SAAPUMISKUPLA_VAITI.has(city.id)) return false;
+  if (!ui?.game?.pack) return false;
+  const maadoitus = fokusvirtaSisalto(ui, city)?.pollo?.maadoitus ?? null;
+  /*
+   * Korttivirrassa maadoitus on jo pöllökortin ensimmäinen kappale
+   * (piirraPollo) — kupla toistaisi sen sanasta sanaan. Saapumisrepliikki
+   * ei ole millään kortilla, joten se tulee kuplaan kummallakin virralla.
+   */
+  if (FOKUSVIRTA_KORTIT && maadoitus) return false;
+  const teksti = maadoitus ?? LIVIAN_SAAPUMISET[city.id] ?? '';
   if (!teksti) return false;
   const avain = `${ui.game.pack.id}:${city.id}`;
-  ui.maadoitusNaytetty ??= new Set();
-  if (ui.maadoitusNaytetty.has(avain)) return false;
-  ui.maadoitusNaytetty.add(avain);
+  ui.saapumiskuplaNaytetty ??= new Set();
+  if (ui.saapumiskuplaNaytetty.has(avain)) return false;
+  ui.saapumiskuplaNaytetty.add(avain);
   const nayta = () => {
-    clearTimeout(ui.maadoitusAjastin);
-    ui.maadoitusAjastin = setTimeout(() => {
+    clearTimeout(ui.saapumiskuplaAjastin);
+    ui.saapumiskuplaAjastin = setTimeout(() => {
       if (ui.dead) return;
       // Pelaaja on voinut lähteä kaupungista tai aloittaa uuden pelin
       // luennan aikana: puheenvuoro kuuluu vain tähän kaupunkiin.
       if (ui.game?.cityOf?.()?.id !== city.id) return;
-      polloMaadoitus(teksti);
-    }, MAADOITUKSEN_TAUKO_MS);
+      polloSaapumiskupla(teksti);
+    }, SAAPUMISKUPLAN_TAUKO_MS);
   };
   const luenta = luennanLoppuun(ui);
   if (luenta) {
