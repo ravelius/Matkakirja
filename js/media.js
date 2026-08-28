@@ -108,8 +108,25 @@ export function aaniUrl(polku) {
   const nimi = omaAaniPolku(polku);
   if (!nimi || YDINAANI.test(nimi)) return polku;
   if (!peiliKaytossa('aanet')) return polku;
-  return `${AANI_JUURI}${AANI_ALIPOLKU}${nimi}`;
+  const versio = UUSITUT_AANET[nimi];
+  return `${AANI_JUURI}${AANI_ALIPOLKU}${nimi}${versio ? `?v=${versio}` : ''}`;
 }
+
+/*
+ * UUSIKSI ÄÄNITETYT tiedostot. Ämpäri ja välimuistit (selaimen HTTP,
+ * r2.dev-reuna, sw:n äänikori) pitävät ääntä osoitteen perusteella
+ * jopa 30 vrk, joten SAMALLA NIMELLÄ korvattu äänite jäisi pelaajilla
+ * vanhaksi viikoiksi. Nimi pysyy nimisäännön takia samana molemmin
+ * puolin (ks. vie-aanet.yml), ja tuoreus hoidetaan kyselyversiolla:
+ * kun äänite äänitetään uusiksi, sen numero nousee tässä. Ämpäri
+ * ohittaa kyselyn, välimuistit näkevät uuden osoitteen.
+ */
+const UUSITUT_AANET = {
+  // 28.8.2026: avaus ja avauslento uusiksi (nimetön perillinen,
+  // sinä-muoto).
+  'intro-puhe.mp3': 2,
+  'puhe-lento-alku.mp3': 2,
+};
 
 /*
  * AIKAKAUSJULISTEET (21.8.2026): pelin oma painotuote, joka asuu vain

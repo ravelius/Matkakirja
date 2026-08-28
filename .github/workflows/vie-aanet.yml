@@ -48,6 +48,15 @@ on:
       # peilaa.yml:ssä).
       - '.github/workflows/vie-aanet.yml'
   workflow_dispatch:
+    inputs:
+      pakota:
+        description: >-
+          Tiedostonimet välilyönnein (esim. "intro-puhe.mp3"), jotka
+          kopioidaan ämpäriin ohi --size-only-vertailun. Tarvitaan kun
+          äänite on korvattu SAMANKOKOISELLA uudella versiolla — sync
+          ei silloin huomaa muutosta.
+        required: false
+        default: ''
 
 permissions:
   contents: read
@@ -125,6 +134,17 @@ jobs:
             --size-only --no-progress \
             --content-type audio/mpeg \
             --cache-control "public, max-age=2592000"
+          # Käsiajon pakotetut tiedostot: samankokoiseksi korvattu
+          # äänite ei erotu --size-only-vertailussa, joten se kopioidaan
+          # nimeltä mainiten. Tyhjä syöte = ei mitään.
+          for nimi in ${{ inputs.pakota || '' }}; do
+            aws s3 cp "assets/audio/$nimi" \
+              "s3://${{ secrets.R2_BUCKET }}/audio/$nimi" \
+              --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+              --no-progress \
+              --content-type audio/mpeg \
+              --cache-control "public, max-age=2592000"
+          done
           # --delete on tarkoituksella pois, samasta syystä kuin
           # peilauksessa: vanha tiedosto ämpärissä ei haittaa ketään,
           # mutta vahingossa tyhjentynyt ämpäri veisi pelin äänet

@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1298';
+const CACHE = 'matkakirja-2026-08-09.1299';
 const SHELL = [
   './',
   './index.html',
@@ -1145,6 +1145,11 @@ const OMA_VALOKUVA = (osoite) => osoite.pathname.includes('/assets/valokuvat/');
  * Kori on kuvista ERILLÄÄN tarkoituksella. Luennat ovat satoja
  * kilotavuja kappale, ja jos selaimen kiintiö täyttyy, kaadettavaksi
  * pitää voida valita se kori, joka ei riko lehtien ulkoasua.
+ *
+ * Uusiksi äänitetty tiedosto EI vaadi korin numeron nostoa: js/media.js
+ * UUSITUT_AANET antaa sille uuden kyselyversio-osoitteen, jolloin vain
+ * se latautuu uudelleen — koko korin kaataminen latauttaisi kaikki
+ * kuullut luennat kaikilla pelaajilla turhaan.
  */
 const AANICACHE = 'matkakirja-aanet-v1';
 
