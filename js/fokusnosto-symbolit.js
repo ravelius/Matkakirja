@@ -1496,6 +1496,12 @@ export function piirraNostosymKartalle(g, symboli, nimio, laji, vasemmalle = fal
  * EI SUODATTIMIA (js/fokuskartta.js sääntö 3, tests/rules.test.mjs):
  * tuike on kolme ympyrää ja CSS-animaatio, jossa liikkuvat vain
  * `opacity` ja `transform` — kompositorin työtä, ei uudelleenmaalausta.
+ *
+ * PISTEITÄ ON MONTA, TUIKE ON YHDELLÄ (omistajan linjaus 28.8.2026
+ * ilta): kerros piirtää kaikkien maan katsomattomien täkyjen pisteet, ja
+ * animaatio on kytketty erilliseen luokkaan `.nostosym-tuike-paalla`,
+ * joka siirtyy pisteeltä toiselle ilman uutta piirtoa. Hiljainen piste
+ * on täsmälleen samannäköinen, se ei vain liiku.
  */
 
 /** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta perustasolla). */
@@ -1726,53 +1732,80 @@ function nostosymKerros(ui) {
 }
 
 /**
- * VUOROSSA OLEVAN TÄYN PISTE KARTALLE.
+ * MAAN KATSOMATTOMAT TÄYT KARTALLE — ja niistä yksi tuikkimaan.
  *
  * @param {object} ui
  * @param {object} tila
- * @param {?object} tila.merkinta  { id, otsikko, paikka:{x,y} } — se
- *   yksi täky, joka juuri nyt tuikkii, tai null/puuttuva kun kartalla
- *   ei ole yhtään katsomatonta täkyä.
- * @param {?Function} tila.avaa  napautuksen työ: avaa täyn lunastus
- *   (js/fokusnosto.js). Ilman sitä piste on mykkä merkintä.
+ * @param {object[]} tila.merkinnat  { id, otsikko, paikka:{x,y}, kohde,
+ *   avaa } jokaisesta täystä, joka on kartalla katsottavissa. Tyhjä
+ *   lista tyhjentää kerroksen.
+ * @param {?string} tila.tuikkiva  sen täyn tunnus, joka saa tuikkia, tai
+ *   null kun kartalla on vain hiljaisia pisteitä.
  *
- * YKSI KERRALLAAN (omistajan tilaus 27.8.2026 ilta): kerroksella on
- * aina korkeintaan yksi merkintä, ja seuraava syttyy vasta kun edellinen
- * on katsottu. Valinnan tekee js/fokusnosto.js (nostoVuorossa) — tämä
- * kerros piirtää sen, mitä sille annetaan.
+ * KAIKKI NÄKYVIIN HETI, HUOMIO YKSI KERRALLAAN (omistajan linjaus
+ * 28.8.2026 ilta: *"Täkyt voisi olla aina näkyvissä. Niihin vain
+ * kiinnitetään huomio aarteen löytymisen jälkeen."*). Kerroksella oli
+ * 27.8.2026 alkaen aina korkeintaan YKSI merkintä, koska tuike ja
+ * näkyvyys olivat sama asia; nyt ne on eriytetty. Kartalla on siis
+ * kaikkien katsomattomien täkyjen pisteet — samannäköisinä ja yhtä
+ * napautettavina — ja tuike on niistä yhden päällä oleva huomiokeino.
+ * Valinnat (mitkä ovat jäljellä, kuka on vuorossa) tekee
+ * js/fokusnosto.js; tämä kerros piirtää sen, mitä sille annetaan.
  *
  * TYÖ TEHDÄÄN VAIN KUN SISÄLTÖ MUUTTUI, kuten muillakin kerroksilla:
  * zoomi muuttaa vain ankkuriryhmien muunnosta, ei yhtäkään solmua.
+ * TUIKE VAIHTUU ILMAN UUTTA PIIRTOA (luokan vaihto pisteen ryhmässä):
+ * jos tuike olisi osa avainta, koko kerros purettaisiin aina kun huomio
+ * siirtyy — ja se katkaisisi paikallaan pysyvien pisteiden animaation.
  */
 export function paivitaNostosymbolit(ui, tila = {}) {
   if (typeof document === 'undefined') return;
   const kerros = nostosymKerros(ui);
   if (!kerros) return;
-  const merkinta = tila.merkinta ?? null;
-  const avain = merkinta
-    ? `${ui.game?.pack?.id}:${merkinta.id}@${merkinta.paikka.x},${merkinta.paikka.y}`
+  const merkinnat = tila.merkinnat ?? (tila.merkinta ? [tila.merkinta] : []);
+  const avain = merkinnat.length
+    ? `${ui.game?.pack?.id}|${merkinnat
+      .map((m) => `${m.id}@${m.paikka.x},${m.paikka.y}`).join('|')}`
     : 'tyhja';
   if (ui.nostosymAvain !== avain) {
     ui.nostosymAvain = avain;
     kerros.textContent = '';
     ui.nostosymRyhmat = [];
-    // Kiertävällä laudalla sama merkki molempiin kohtiin (ks. sääntö 1).
-    for (const x of merkinta
-      ? ui.kiertoKohdat?.(merkinta.paikka.x) ?? [merkinta.paikka.x] : []) {
-      const ryhma = el('g', { class: 'fokusnosto-symboliryhma' }, kerros);
-      // `kohde` on täyn oma karttakohde, jos data nimeää sellaisen:
-      // silloin piste ratsastaa juuri sen merkin päällä (ks. sääntö
-      // PISTE AINA SYMBOLIN PÄÄLLE).
-      ui.nostosymRyhmat.push({
-        g: ryhma, x, y: merkinta.paikka.y, kohde: merkinta.kohde ?? null,
-      });
-      const ankkuri = el('g', { class: 'fokusnosto-ankkuri nostosym-tuike' }, ryhma);
-      ankkuri.setAttribute('aria-label', merkinta.otsikko
-        ? `${merkinta.otsikko} — lue lisää` : 'Täky kartalla: lue lisää');
-      piirraNostosymTuike(ui, ankkuri, tila.avaa);
+    for (const merkinta of merkinnat) {
+      // Kiertävällä laudalla sama merkki molempiin kohtiin (ks. sääntö 1).
+      for (const x of ui.kiertoKohdat?.(merkinta.paikka.x) ?? [merkinta.paikka.x]) {
+        const ryhma = el('g', { class: 'fokusnosto-symboliryhma' }, kerros);
+        // `kohde` on täyn oma karttakohde, jos data nimeää sellaisen:
+        // silloin piste ratsastaa juuri sen merkin päällä (ks. sääntö
+        // PISTE AINA SYMBOLIN PÄÄLLE).
+        ui.nostosymRyhmat.push({
+          g: ryhma, x, y: merkinta.paikka.y, kohde: merkinta.kohde ?? null, id: merkinta.id,
+        });
+        const ankkuri = el('g', { class: 'fokusnosto-ankkuri nostosym-tuike' }, ryhma);
+        ankkuri.setAttribute('aria-label', merkinta.otsikko
+          ? `${merkinta.otsikko} — lue lisää` : 'Täky kartalla: lue lisää');
+        piirraNostosymTuike(ui, ankkuri, merkinta.avaa ?? tila.avaa);
+      }
     }
   }
+  nostosymTuike(ui, tila.tuikkiva ?? null);
   asemoiNostosymbolit(ui);
+}
+
+/**
+ * HUOMIO YHDEN PISTEEN PÄÄLLE — luokka päälle sille, pois muilta.
+ *
+ * Tuike on CSS-animaatio, joka on kytketty luokkaan
+ * `.nostosym-tuike-paalla` (css/fokusnosto.css): ilman sitä piste on
+ * täsmälleen samannäköinen mutta liikkumaton. Luokka vaihdetaan
+ * paikallaan eikä solmuja pureta, joten pisteen animaatio ei ala alusta
+ * silloin kun jokin toinen täky luetaan.
+ */
+function nostosymTuike(ui, tuikkiva) {
+  for (const ryhma of ui.nostosymRyhmat ?? []) {
+    const ankkuri = ryhma.g?.firstElementChild;
+    ankkuri?.classList?.toggle('nostosym-tuike-paalla', !!tuikkiva && ryhma.id === tuikkiva);
+  }
 }
 
 /**
