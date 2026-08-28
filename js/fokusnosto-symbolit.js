@@ -134,7 +134,9 @@
  * eikä isoisän kaunokäsialalla (ks. osio NIMIÖ).
  */
 import { el, maare } from './mapart.js';
-import { niputaFokusmerkit, nippuAvaaKaupunki, nippuLaatanEtaisyys } from './fokusniput.js';
+import {
+  niputaFokusmerkit, nippuAsettelunVersio, nippuAvaaKaupunki, nippuLaatanEtaisyys,
+} from './fokusniput.js';
 
 /**
  * WEBP-GLYYFIN SÄDE ruudun pikseleinä lehden perustasolla — sama luku
@@ -1056,20 +1058,24 @@ const NOSTOSYM_NIMIO_MERKKEJA = 18;
  * määrite ("Bulgarialainen jogurtti" → "Bulgarialainen."). Silloin
  * kohteelle kirjoitetaan oma `nimio` (js/fokuskohteet.js
  * kohteenKarttanimi), ja testi katsoo että se on tehty.
+ *
+ * `enintaan` on kutsujan oma mitta samalle säännölle: täkypisteen nimiö
+ * on päätoimittajan kirjoittama lyhyt nimi eikä kohteen oma nimi, ja
+ * sille sovittiin väljempi katto (NOSTOSYM_TAKY_NIMIO_MERKKEJA).
  */
-export function nostosymLyhennaNimio(nimi) {
+export function nostosymLyhennaNimio(nimi, enintaan = NOSTOSYM_NIMIO_MERKKEJA) {
   const siisti = String(nimi ?? '').trim().replace(/\s+/g, ' ');
-  if (!siisti || siisti.length <= NOSTOSYM_NIMIO_MERKKEJA) return siisti;
+  if (!siisti || siisti.length <= enintaan) return siisti;
   const sanat = siisti.split(' ');
   const rinnastus = sanat.findIndex((s) => s === 'ja' || s === 'sekä');
   const kelpaavat = rinnastus > 0 ? sanat.slice(0, rinnastus) : sanat;
   let ulos = kelpaavat[0];
-  if (ulos.length > NOSTOSYM_NIMIO_MERKKEJA) {
+  if (ulos.length > enintaan) {
     // Yksikin sana voi olla liian pitkä; silloin lyhennys osuu sanaan.
-    return `${ulos.slice(0, NOSTOSYM_NIMIO_MERKKEJA - 1)}.`;
+    return `${ulos.slice(0, enintaan - 1)}.`;
   }
   for (const sana of kelpaavat.slice(1)) {
-    if (`${ulos} ${sana}`.length > NOSTOSYM_NIMIO_MERKKEJA) break;
+    if (`${ulos} ${sana}`.length > enintaan) break;
     ulos += ` ${sana}`;
   }
   return ulos === siisti ? ulos : `${ulos}.`;
@@ -1081,8 +1087,8 @@ export function nostosymLyhennaNimio(nimi) {
  * lyhennys tehdään ENNEN versaalia, "18 merkkiä" tarkoittaa yhä samaa
  * kuin muillakin.
  */
-function nostosymNimioTeksti(nimi, asu) {
-  const lyhyt = nostosymLyhennaNimio(nimi);
+function nostosymNimioTeksti(nimi, asu, enintaan = NOSTOSYM_NIMIO_MERKKEJA) {
+  const lyhyt = nostosymLyhennaNimio(nimi, enintaan);
   return asu.versaali ? lyhyt.toUpperCase() : lyhyt;
 }
 
@@ -1092,9 +1098,9 @@ function nostosymNimioTeksti(nimi, asu) {
  * varapolku tyhjentää oman ryhmänsä (piirraNostosymboli) eikä saa
  * viedä nimiötä mukanaan. Palauttaa null, jos nimeä ei ole.
  */
-export function piirraNostosymNimio(g, nimi, laji, vasemmalle = false) {
+export function piirraNostosymNimio(g, nimi, laji, vasemmalle = false, enintaan) {
   const asu = NOSTOSYM_NIMIO_ASUT[nostosymNimionLaji(laji)];
-  const teksti = nostosymNimioTeksti(nimi, asu);
+  const teksti = nostosymNimioTeksti(nimi, asu, enintaan ?? NOSTOSYM_NIMIO_MERKKEJA);
   if (!teksti) return null;
   const t = el('text', {
     class: `nostosym-nimio ${asu.luokka}`.trim(),
@@ -1333,10 +1339,12 @@ function nostosymMittaaNimio(teksti, asu, porras = 1) {
  * ja Ioánnina saavat `ank: 'right'`) — ja kun oikea kaista on tukossa,
  * vasen on usein tyhjä. `vasemmalle` peilaa laatikon origon ympäri.
  */
-export function nostosymNimioLaatikko(nimi, svg, laji, vasemmalle = false) {
+export function nostosymNimioLaatikko(nimi, svg, laji, vasemmalle = false, enintaan) {
   if (typeof document === 'undefined') return null;
   const nimionLaji = nostosymNimionLaji(laji);
-  const teksti = nostosymNimioTeksti(nimi, NOSTOSYM_NIMIO_ASUT[nimionLaji]);
+  const teksti = nostosymNimioTeksti(
+    nimi, NOSTOSYM_NIMIO_ASUT[nimionLaji], enintaan ?? NOSTOSYM_NIMIO_MERKKEJA,
+  );
   if (!teksti) return null;
   const avain = `${nimionLaji}|${teksti}`;
   let leveys = NOSTOSYM_LEVEYDET.get(avain);
@@ -1653,6 +1661,33 @@ function piirraNostosymTuike(ui, g, avaa) {
  * ankkurikohteensa täkynostolle (ui.nostosymAnkkuriKohde), joka nostaa
  * siitä lunastuskorttiin "Katso X kartalla" -napin — täky *"houkuttelee
  * kohteen auki"* (omistajan alkuperäinen tilaus) eikä sulje siltä ovea.
+ *
+ * ── LUETTU PISTE ASTUU SIVUUN ──────────────────────────────────────
+ *
+ * Omistajan löydös 28.8.2026 ilta: Sofian katsottu areenatäky katosi
+ * kartalta eikä rikastettua korttia päässyt enää avaamaan. Linjaus
+ * *"täkyt aina näkyvissä"* koskee myös luettuja, joten piste jää
+ * kartalle — mutta ratsastaminen on huomiokeino, ei pysyvä paikka:
+ * luettu piste symbolin päällä tukkisi ankkurikohteen tietoruudun
+ * LOPULLISESTI, koska mikään ei enää poista pistettä sen päältä.
+ *
+ * Siksi LUETTU piste piirtyy ankkurinsa VIEREEN vakiosiirrolla
+ * (NOSTOSYM_LUETTU_DX). Siirto on ESITYSTÄ, EI DATAA — sama sopimus
+ * kuin kasauspassilla (js/fokusniput.js) ja tämän tiedoston varapolun
+ * sivusiirrolla: pakettien koordinaatteihin ei kosketa, ja osuma-alue
+ * seuraa pistettä, koska se on saman ankkuriryhmän lapsi.
+ *
+ * SIIRTO ON OSUMA-ALUEEN LÄPIMITTA, joten kummankin sormialue jää
+ * omakseen: napautus kohdemerkin keskellä on pisteen osuma-ympyrän
+ * ULKOPUOLELLA ja avaa kohteen, ja napautus pisteen keskellä on
+ * kohteen alueen ulkopuolella ja avaa kortin uudelleen. Kumpikin on
+ * siis napautettavissa ilman uutta kilpailusääntöä.
+ *
+ * SUUNTA ON OIKEALLE, koska kaupungin kasausrypäs kasvaa oikealle
+ * (js/fokusniput.js NIPPU_DX) ja sen rivit ovat päällekkäin yhdessä
+ * sarakkeessa: oikea kylki on ainoa suunta, joka ei vie pistettä
+ * kaupungin laatan päälle (vasen) eikä sarakkeen naapuririville (ylä
+ * ja ala). Lukematon ratsastaa kuten ennen.
  */
 
 /** Kuinka läheltä täyn omaa paikkaa symboli kelpaa ankkuriksi (px). */
@@ -1676,6 +1711,14 @@ const NOSTOSYM_ANKKURI_PX = 60;
 const NOSTOSYM_LAATTA_R = 24;
 /** Varapolun sivusiirto kaupungista VASEMMALLE (sarake on oikealla). */
 const NOSTOSYM_SIVUUN_PX = 48;
+
+/*
+ * LUETUN PISTEEN ESITYSSIIRTO ankkurisymbolista OIKEALLE (ks. sääntö
+ * yllä). Luku on osuma-alueen LÄPIMITTA (2 × NOSTOSYM_TUIKE_OSUMA_R):
+ * pienempi jättäisi sormialueet limittäin, isompi veisi pisteen irti
+ * siitä merkistä, jonka juttua se kertoo.
+ */
+const NOSTOSYM_LUETTU_DX = NOSTOSYM_TUIKE_OSUMA_R * 2;
 
 /** Kohdemerkkien ankkuriryhmät, tai tyhjä lista kun merkit ovat piilossa. */
 function nostosymAnkkurit(ui) {
@@ -1709,7 +1752,10 @@ function nostosymTuikkeenPaikka(ui, ryhma, s) {
   }
   // Nimetty kohde kelpaa etäältäkin; nimeämätön vain omasta naapurustosta.
   if (paras && (ryhma.kohde || etaisyys <= NOSTOSYM_ANKKURI_PX * s)) {
-    return { ...nostosymMerkinPaikka(paras), kohde: paras.id ?? null };
+    const paikka = nostosymMerkinPaikka(paras);
+    // LUETTU ASTUU SIVUUN, lukematon ratsastaa (ks. sääntö yllä).
+    if (ryhma.luettu) paikka.x += NOSTOSYM_LUETTU_DX * s;
+    return { ...paikka, kohde: ryhma.luettu ? null : (paras.id ?? null) };
   }
   return { ...nostosymKaupungistaSivuun(ui, ryhma, s), kohde: null };
 }
@@ -1732,6 +1778,231 @@ function nostosymKaupungistaSivuun(ui, ryhma, s) {
   }
   if (etaisyys >= (NOSTOSYM_LAATTA_R + NOSTOSYM_TUIKE_OSUMA_R) * s) return oma;
   return { x: cx - NOSTOSYM_SIVUUN_PX * s, y: city.y };
+}
+
+/* ============ TÄKYPISTEEN NIMIÖ ====================================
+ *
+ * Omistajan lisätilaus 28.8.2026 ilta: *"täkypisteessä saisi olla myös
+ * teksti näkyvissä"*. Piste kertoi tähän asti vain *"tässä on jotain"*;
+ * nimiö kertoo MITÄ, ja se on päätoimittajan kirjoittama lyhyt
+ * pelaajateksti (`nimio`) eikä kortin otsikko — otsikko on lause, ja
+ * lause kartalla on nauha.
+ *
+ * KARTAN OMA NIMIÖKIELI, EI UUTTA (KARTTAMERKIT MINIMALISTISIKSI):
+ * sama muste, sama kirjasin ja sama kaista kuin kohdemerkkien nimiöillä
+ * (piirraNostosymNimio, .nostosym-nimio) — nimiö vain ladotaan pisteen
+ * kylkeen kohdemerkin kyljen sijaan. Koko on sama kuin kartan
+ * merkeillä: kohdemerkki latoo nimiönsä rasteriin, jota se kutistaa
+ * NOSTOSYM_TAKY_NIMIO_SKAALAlla, ja täkypisteen kaista saa saman
+ * kutistuksen omana muunnoksenaan.
+ *
+ * NIMIÖ VÄISTÄÄ, PISTE EI (sama sääntö kuin kohdemerkeillä,
+ * js/fokuskohteet.js paivitaKohdeNimiot): kaista kokeillaan ensin
+ * pisteen oikealta ja sitten vasemmalta puolelta, ja nimi jää pois vain
+ * jos kumpikin osuisi kartan omaan mustetta — kohdemerkkiin, sen
+ * näkyvään nimiöön, toiseen täkypisteeseen tai jo hyväksyttyyn
+ * täkynimiöön. TÄKYNIMIÖ VÄISTÄÄ KARTTAA EIKÄ PÄINVASTOIN: lehti ja
+ * sen kohdemerkit ovat kartan omaa tietoa, täky on vieras niiden
+ * päällä.
+ *
+ * EI JOKA KEHYKSELLE: passi on välimuistissa avaimen takana (kerroksen
+ * oma avain, merkkien skaala, nippuasettelun versio ja kohdenimiöiden
+ * oma avain). Kun mikään niistä ei muuttunut — eli panoroinnissa ja
+ * nipistyksessä — passi ei mittaa eikä kirjoita mitään.
+ */
+
+/**
+ * Täkynimiön kaistan kutistus. Sama luku kuin kohdemerkin symbolilla
+ * (js/fokuskohteet.js KOHDE_SYMBOLI_SKAALA = 11/21), jotta kartan
+ * kaikki nimiöt ovat SAMAN KOKOISIA. Lukua ei voi tuoda sieltä:
+ * js/fokuskohteet.js tuo tämän tiedoston, ja tuonti toisin päin olisi
+ * kehä — sama perustelu kuin NOSTOSYM_LAATTA_R:llä.
+ */
+const NOSTOSYM_TAKY_NIMIO_SKAALA = 11 / 21;
+
+/**
+ * Täkynimiön enimmäispituus. Väljempi kuin kohdenimiöllä (18), koska
+ * täyn nimiö on kirjoitettu nimiöksi eikä lyhennetty kohteen nimestä:
+ * päätoimittajan mitta on *"lyhyt, ≤ ~22 merkkiä"*.
+ */
+const NOSTOSYM_TAKY_NIMIO_MERKKEJA = 22;
+
+/**
+ * Kaistan siirto pisteen keskeltä, kirjaston yksiköissä. Kohdenimiö
+ * alkaa merkin reunasta (NOSTOSYM_NIMIO_X); täkypisteen hehku on sitä
+ * leveämpi, joten kaistaa työnnetään sen verran ulommas, ettei
+ * ensimmäinen kirjain lepää hehkun päällä.
+ */
+const NOSTOSYM_TAKY_NIMIO_DX = Math.max(
+  0, NOSTOSYM_TUIKE_HEHKU_R + 1 - NOSTOSYM_NIMIO_X * NOSTOSYM_TAKY_NIMIO_SKAALA,
+);
+
+/** Väljyysvara nimiön ympärille, ruudun pikseleinä (kuten kohteilla). */
+const NOSTOSYM_TAKY_NIMIO_VARA = 2;
+
+/**
+ * NIMIÖN KAISTAT KOKEILUJÄRJESTYKSESSÄ: ensin pisteen oikea kylki,
+ * sitten vasen — ja jos kumpikin on tukossa, SAMAT KYLJET RIVIN VERRAN
+ * ALEMPANA.
+ *
+ * Kohdemerkillä kaistoja on kaksi (js/fokuskohteet.js
+ * KOHDE_NIMIO_PUOLET), ja se riittää, koska merkin oma nimiö on kaistan
+ * ainoa asukas. Täkypiste on eri tilanteessa: LUKEMATTOMANA se
+ * ratsastaa kohdemerkin päällä, jolloin ankkurin oma nimiö on jo
+ * kummallakin kyljellä samalla perusviivalla — kartalla mitattuna
+ * (Delfoi, Ólympos) se vei täyn nimiön joka kerta. Alempi rivi on siis
+ * sama kaista, ei uusi paikka: nimi on yhä pisteen kyljessä, rivin
+ * verran alempana. Järjestys on kiinteä, joten sama lehti antaa saman
+ * kartan eikä nimiö vilku panoroinnissa.
+ */
+const NOSTOSYM_TAKY_NIMIO_KAISTAT = [
+  { vasemmalle: false, alas: 0 },
+  { vasemmalle: true, alas: 0 },
+  { vasemmalle: false, alas: 1 },
+  { vasemmalle: true, alas: 1 },
+];
+
+/** Rivinsiirto kirjaston yksiköissä: nimiön korkeus ja pieni rako. */
+const NOSTOSYM_TAKY_NIMIO_RIVI = NOSTOSYM_MINI_RUUTU * 2 + 1;
+
+/** Laatikot laudan koordinaateissa. Kosketus ei ole vielä limitystä. */
+function nostosymLimittyy(a, b) {
+  return a.x1 < b.x2 && b.x1 < a.x2 && a.y1 < b.y2 && b.y1 < a.y2;
+}
+
+/**
+ * NIMIÖ TÄKYPISTEEN KYLKEEN. Palauttaa tietueen, jonka väistöpassi
+ * asettaa paikalleen — tai null, jos täyllä ei ole nimiötä.
+ */
+function piirraNostosymTakynimio(g, nimi, luettu) {
+  const teksti = nostosymLyhennaNimio(nimi, NOSTOSYM_TAKY_NIMIO_MERKKEJA);
+  if (!teksti) return null;
+  const kaistaG = el('g', {
+    class: `nostosym-takynimio${luettu ? ' nostosym-luettu' : ''}`,
+  }, g);
+  const t = piirraNostosymNimio(kaistaG, teksti, 'vuori', false, NOSTOSYM_TAKY_NIMIO_MERKKEJA);
+  if (!t) { kaistaG.remove(); return null; }
+  return {
+    g: kaistaG, teksti, kaista: null, nakyy: null,
+  };
+}
+
+/** Kaistan muunnos: kylki, rivi ja kartan kanssa yhteinen kutistus. */
+function nostosymTakynimioAsento(nimio, kaista) {
+  if (nimio.kaista === kaista) return;
+  nimio.kaista = kaista;
+  const k = NOSTOSYM_TAKY_NIMIO_SKAALA;
+  const dx = (NOSTOSYM_NIMIO_X + NOSTOSYM_TAKY_NIMIO_DX) * k;
+  const dy = kaista.alas * NOSTOSYM_TAKY_NIMIO_RIVI * k;
+  const teksti = nimio.g.firstElementChild;
+  maare(nimio.g, 'transform',
+    `translate(${(kaista.vasemmalle ? -dx : dx).toFixed(2)} ${dy.toFixed(2)}) scale(${k.toFixed(4)})`);
+  // Teksti itse ankkuroidaan kyljen mukaan; x on kaistan omassa nollassa.
+  maare(teksti, 'x', '0');
+  maare(teksti, 'text-anchor', kaista.vasemmalle ? 'end' : 'start');
+}
+
+/** Nimiön törmäyslaatikko laudan yksiköissä pisteen ympärillä. */
+function nostosymTakynimionLaatikko(nimio, svg, paikka, kaista, s, vara) {
+  const { vasemmalle } = kaista;
+  const laatikko = nostosymNimioLaatikko(
+    nimio.teksti, svg, 'vuori', vasemmalle, NOSTOSYM_TAKY_NIMIO_MERKKEJA,
+  );
+  if (!laatikko) return null;
+  const k = NOSTOSYM_TAKY_NIMIO_SKAALA * s;
+  const dx = NOSTOSYM_TAKY_NIMIO_DX * (vasemmalle ? -k : k);
+  const dy = kaista.alas * NOSTOSYM_TAKY_NIMIO_RIVI * k;
+  return {
+    x1: paikka.x + laatikko.x1 * k + dx - (vasemmalle ? vara : 0),
+    x2: paikka.x + laatikko.x2 * k + dx + (vasemmalle ? 0 : vara),
+    y1: paikka.y + laatikko.y1 * k + dy,
+    y2: paikka.y + laatikko.y2 * k + dy,
+  };
+}
+
+/**
+ * Kartan oma muste esteinä: kohdemerkit ja niiden näkyvät nimiöt.
+ *
+ * Symbolin laatikko kantaa kohteen TUNNUKSEN, koska lukematon piste
+ * ratsastaa merkin päällä: silloin sen oma ankkurisymboli on laatikko
+ * pisteen alla, ja jos se laskettaisiin esteeksi, ratsastavan täyn
+ * nimiö jäisi aina pois molemmilta puolilta. Ankkurin oma NIMIÖ on
+ * este niin kuin kaikkien muidenkin — kaksi nimeä päällekkäin on juuri
+ * se nimikasa, jota väistö purkaa.
+ */
+function nostosymKartanMuste(ui, s, vara) {
+  const esteet = [];
+  const svg = ui?.svg;
+  for (const r of nostosymAnkkurit(ui)) {
+    const paikka = nostosymMerkinPaikka(r);
+    const sade = NOSTOSYM_MINI_R * NOSTOSYM_TAKY_NIMIO_SKAALA * s + vara;
+    esteet.push({
+      x1: paikka.x - sade,
+      x2: paikka.x + sade,
+      y1: paikka.y - sade,
+      y2: paikka.y + sade,
+      ankkuri: r.id ?? null,
+    });
+    if (!r.nimi || r.nimioNakyy === false) continue;
+    const laatikko = nostosymNimioLaatikko(r.nimi, svg, r.laji, !!r.nimioVasemmalle);
+    if (!laatikko) continue;
+    const k = NOSTOSYM_TAKY_NIMIO_SKAALA * s;
+    esteet.push({
+      x1: paikka.x + laatikko.x1 * k,
+      x2: paikka.x + laatikko.x2 * k,
+      y1: paikka.y + laatikko.y1 * k,
+      y2: paikka.y + laatikko.y2 * k,
+    });
+  }
+  return esteet;
+}
+
+/**
+ * VÄISTÖPASSI: kummalle puolelle nimiö latoutuu, vai jääkö se pois.
+ * Ajetaan asemoinnista, mutta vain kun asettelu oikeasti muuttui.
+ */
+function nostosymTakynimiot(ui, s, paikat) {
+  const ryhmat = ui.nostosymRyhmat ?? [];
+  if (!ryhmat.some((r) => r.nimio)) return;
+  const avain = `${ui.nostosymAvain}|${s.toFixed(4)}|${nippuAsettelunVersio()}`
+    + `|${ui.fokuskohdeNimioAvain ?? ''}`;
+  if (ui.nostosymNimioAvain === avain) return;
+  ui.nostosymNimioAvain = avain;
+  const vara = NOSTOSYM_TAKY_NIMIO_VARA * s;
+  const varatut = nostosymKartanMuste(ui, s, vara);
+  /*
+   * Täkypisteet ovat esteitä toisilleen — mutta EI ITSELLEEN: nimiö
+   * ladotaan oman pisteensä kylkeen ja alkaa kaistana sen vierestä,
+   * joten oma piste hylkäisi joka ainoan nimiön. Sama poikkeus on
+   * kohdemerkeillä (js/fokuskohteet.js: `j !== rivi.indeksit[n]`).
+   */
+  const pisteR = NOSTOSYM_TUIKE_HEHKU_R * s + vara;
+  const pisteet = paikat.map((paikka) => ({
+    x1: paikka.x - pisteR,
+    x2: paikka.x + pisteR,
+    y1: paikka.y - pisteR,
+    y2: paikka.y + pisteR,
+  }));
+  for (const [i, r] of ryhmat.entries()) {
+    if (!r.nimio) continue;
+    const kehykset = NOSTOSYM_TAKY_NIMIO_KAISTAT
+      .map((kaista) => nostosymTakynimionLaatikko(r.nimio, ui.svg, paikat[i], kaista, s, vara));
+    // Oma ankkurisymboli ei ole este (ks. nostosymKartanMuste); luetulla
+    // pisteellä ankkuria ei ole, koska se on jo astunut sen vierestä pois.
+    const oma = paikat[i].kohde ?? null;
+    const valittu = kehykset.findIndex((kehys) => kehys
+      && !varatut.some((e) => (!e.ankkuri || e.ankkuri !== oma) && nostosymLimittyy(kehys, e))
+      && !pisteet.some((e, j) => j !== i && nostosymLimittyy(kehys, e)));
+    const nakyy = valittu >= 0;
+    nostosymTakynimioAsento(
+      r.nimio, NOSTOSYM_TAKY_NIMIO_KAISTAT[nakyy ? valittu : 0],
+    );
+    if (r.nimio.nakyy !== nakyy) {
+      r.nimio.nakyy = nakyy;
+      r.nimio.g.classList.toggle('nostosym-nimio-piilossa', !nakyy);
+    }
+    if (nakyy) varatut.push(kehykset[valittu]);
+  }
 }
 
 /* ==================== KERROS ==================== */
@@ -1762,8 +2033,8 @@ function nostosymKerros(ui) {
  * @param {object} ui
  * @param {object} tila
  * @param {object[]} tila.merkinnat  { id, otsikko, paikka:{x,y}, kohde,
- *   avaa } jokaisesta täystä, joka on kartalla katsottavissa. Tyhjä
- *   lista tyhjentää kerroksen.
+ *   nimio, luettu, avaa } jokaisesta täystä, joka on kartalla
+ *   katsottavissa. Tyhjä lista tyhjentää kerroksen.
  * @param {?string} tila.tuikkiva  sen täyn tunnus, joka saa tuikkia, tai
  *   null kun kartalla on vain hiljaisia pisteitä.
  *
@@ -1777,11 +2048,15 @@ function nostosymKerros(ui) {
  * Valinnat (mitkä ovat jäljellä, kuka on vuorossa) tekee
  * js/fokusnosto.js; tämä kerros piirtää sen, mitä sille annetaan.
  *
- * TYÖ TEHDÄÄN VAIN KUN SISÄLTÖ MUUTTUI, kuten muillakin kerroksilla:
- * zoomi muuttaa vain ankkuriryhmien muunnosta, ei yhtäkään solmua.
- * TUIKE VAIHTUU ILMAN UUTTA PIIRTOA (luokan vaihto pisteen ryhmässä):
- * jos tuike olisi osa avainta, koko kerros purettaisiin aina kun huomio
- * siirtyy — ja se katkaisisi paikallaan pysyvien pisteiden animaation.
+ * LUETTU ON OSA AVAINTA, TUIKE EI. Luettu piste vaihtaa sekä paikkaa
+ * (esityssiirto ankkurin viereen) että asua (vaimeampi muste), joten
+ * lunastus on kerrokselle uusi sisältö ja kerros rakennetaan uudelleen
+ * — kerran, sillä hetkellä kun kortti luetaan. TUIKE VAIHTUU ILMAN
+ * UUTTA PIIRTOA (luokan vaihto pisteen ryhmässä): jos tuike olisi osa
+ * avainta, koko kerros purettaisiin aina kun huomio siirtyy — ja se
+ * katkaisisi paikallaan pysyvien pisteiden animaation. Muuten TYÖ
+ * TEHDÄÄN VAIN KUN SISÄLTÖ MUUTTUI, kuten muillakin kerroksilla: zoomi
+ * muuttaa vain ankkuriryhmien muunnosta, ei yhtäkään solmua.
  */
 export function paivitaNostosymbolit(ui, tila = {}) {
   if (typeof document === 'undefined') return;
@@ -1790,7 +2065,8 @@ export function paivitaNostosymbolit(ui, tila = {}) {
   const merkinnat = tila.merkinnat ?? (tila.merkinta ? [tila.merkinta] : []);
   const avain = merkinnat.length
     ? `${ui.game?.pack?.id}|${merkinnat
-      .map((m) => `${m.id}@${m.paikka.x},${m.paikka.y}`).join('|')}`
+      .map((m) => `${m.id}@${m.paikka.x},${m.paikka.y}${m.luettu ? '!' : ''}`)
+      .join('|')}`
     : 'tyhja';
   if (ui.nostosymAvain !== avain) {
     ui.nostosymAvain = avain;
@@ -1802,14 +2078,27 @@ export function paivitaNostosymbolit(ui, tila = {}) {
         const ryhma = el('g', { class: 'fokusnosto-symboliryhma' }, kerros);
         // `kohde` on täyn oma karttakohde, jos data nimeää sellaisen:
         // silloin piste ratsastaa juuri sen merkin päällä (ks. sääntö
-        // PISTE AINA SYMBOLIN PÄÄLLE).
-        ui.nostosymRyhmat.push({
-          g: ryhma, x, y: merkinta.paikka.y, kohde: merkinta.kohde ?? null, id: merkinta.id,
-        });
-        const ankkuri = el('g', { class: 'fokusnosto-ankkuri nostosym-tuike' }, ryhma);
+        // PISTE AINA SYMBOLIN PÄÄLLE) — luettuna sen VIERESSÄ.
+        const tietue = {
+          g: ryhma,
+          x,
+          y: merkinta.paikka.y,
+          kohde: merkinta.kohde ?? null,
+          id: merkinta.id,
+          luettu: !!merkinta.luettu,
+        };
+        ui.nostosymRyhmat.push(tietue);
+        const ankkuri = el('g', {
+          class: `fokusnosto-ankkuri nostosym-tuike${merkinta.luettu ? ' nostosym-luettu' : ''}`,
+        }, ryhma);
         ankkuri.setAttribute('aria-label', merkinta.otsikko
-          ? `${merkinta.otsikko} — lue lisää` : 'Täky kartalla: lue lisää');
+          ? `${merkinta.otsikko} — ${merkinta.luettu ? 'lue uudelleen' : 'lue lisää'}`
+          : 'Täky kartalla: lue lisää');
         piirraNostosymTuike(ui, ankkuri, merkinta.avaa ?? tila.avaa);
+        // Nimiö on ankkurin SISARUS eikä sen lapsi: piste on painike ja
+        // nimiö mykkää mustetta, eikä leveä teksti saa kasvattaa
+        // painikkeen osuma-aluetta (sama jako kuin kohdemerkeillä).
+        tietue.nimio = piirraNostosymTakynimio(ryhma, merkinta.nimio, merkinta.luettu);
       }
     }
   }
@@ -1829,7 +2118,12 @@ export function paivitaNostosymbolit(ui, tila = {}) {
 function nostosymTuike(ui, tuikkiva) {
   for (const ryhma of ui.nostosymRyhmat ?? []) {
     const ankkuri = ryhma.g?.firstElementChild;
-    ankkuri?.classList?.toggle('nostosym-tuike-paalla', !!tuikkiva && ryhma.id === tuikkiva);
+    // LUETTU EI TUIKI KOSKAAN: huomio kuuluu sille, mitä ei ole vielä
+    // katsottu (js/fokusnosto.js valitsee vuorossa olevan, tämä on
+    // kerroksen oma varmistus samasta säännöstä).
+    ankkuri?.classList?.toggle(
+      'nostosym-tuike-paalla', !!tuikkiva && ryhma.id === tuikkiva && !ryhma.luettu,
+    );
   }
 }
 
@@ -1877,14 +2171,26 @@ export function asemoiNostosymbolit(ui, suhde = 1) {
   // Osuma-ympyrä takaisin sormen mittaan, kun katto puree (ks. yllä).
   const osumaR = NOSTOSYM_TUIKE_OSUMA_R * (sRuutu > 0 ? sRuutu / s : 1);
   let ankkuri = null;
+  /*
+   * Paikat talteen nimiöiden väistöpassia varten SAMAAN LISTAAN joka
+   * kerta (ui.nostosymPaikat): kehyssilmukka ei saa tuottaa roskaa
+   * (js/fokusmitat.js), joten listaa ei luoda uudelleen vaan
+   * tyhjennetään.
+   */
+  const paikat = (ui.nostosymPaikat ??= []);
+  paikat.length = 0;
   for (const ryhma of ui.nostosymRyhmat ?? []) {
     const paikka = ryhma.nippu ?? nostosymTuikkeenPaikka(ui, ryhma, sRuutu);
     ankkuri = paikka.kohde ?? ankkuri;
+    paikat.push(paikka);
     ryhma.g.setAttribute('transform',
       `translate(${paikka.x.toFixed(2)} ${paikka.y.toFixed(2)}) scale(${zoom})`);
     const osuma = ryhma.g.querySelector?.('.nostosym-tuike-osuma');
     if (osuma) maare(osuma, 'r', osumaR.toFixed(2));
   }
+  // Nimiöiden puolet ja piiloutumiset — passi tekee työtä vain, kun
+  // asettelu oikeasti muuttui (ks. osio TÄKYPISTEEN NIMIÖ).
+  nostosymTakynimiot(ui, s, paikat);
   // Lunastuskortin "Katso X kartalla" -nappi lukee tämän, jottei pisteen
   // alle jäänyt kohde jää tavoittamattomiin (js/fokusnosto.js).
   ui.nostosymAnkkuriKohde = ankkuri;
@@ -1906,6 +2212,7 @@ export function asemoiNostosymbolit(ui, suhde = 1) {
 export function nollaaNostosymbolit(ui) {
   if (!ui) return;
   ui.nostosymAvain = null;
+  ui.nostosymNimioAvain = null;
   ui.nostosymRyhmat = [];
   ui.nostosymAnkkuriKohde = null;
   if (ui.nostosymKerros?.isConnected) ui.nostosymKerros.textContent = '';

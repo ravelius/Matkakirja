@@ -636,6 +636,8 @@ export const FOKUSVIRTA_SOFIA = {
   takynostot: [
     {
       id: 'areena',
+      // Kartan nimiö täkypisteen kylkeen (päätoimittaja 28.8.2026).
+      nimio: 'Areena hotellin alla',
       otsikko: 'Hotellin aulassa on aukko lattiassa — sen alla '
         + 'taistelivat krokotiilit ja karhut',
       /*

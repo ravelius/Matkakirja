@@ -678,6 +678,8 @@ export const FOKUSVIRTA_SARAJEVO = {
   takynostot: [
     {
       id: 'pyramidi',
+      // Kartan nimiö täkypisteen kylkeen (päätoimittaja 28.8.2026).
+      nimio: 'Pyramidihuijaus',
       otsikko: 'Seitsemän arkeologia allekirjoitti julkilausuman: '
         + 'pyramidi on julma huijaus',
       /* Faktat: takynostot-bosnia.md, ehdokas 1 (VARMA). */

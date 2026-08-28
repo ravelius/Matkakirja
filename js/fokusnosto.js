@@ -210,6 +210,9 @@ const NOSTO_MAAT = {
   GRC: [
     {
       id: 'sofia-korut',
+      // Kartan nimiö: lyhyt pelaajateksti pisteen kylkeen (omistajan
+      // lisätilaus 28.8.2026 ilta). Otsikko on lause, nimiö on nimi.
+      nimio: 'Helenan korut',
       otsikko: 'Valokuva paljasti aarrevarkauden — rouva poseerasi Troijan koruissa',
       teksti: 'Heinrich Schliemann salakuljetti Priamoksen aarteen ulos '
         + 'Ottomaanien valtakunnasta. Viranomaisille asia paljastui vasta, kun '
@@ -253,6 +256,7 @@ const NOSTO_MAAT = {
        * kun otsikon lupaus on maksettu.
        */
       id: 'kastrin-kyla',
+      nimio: 'Kastrin kylä',
       kohde: 'delfoi',
       otsikko: 'Kokonainen kylä istui oraakkelin päällä — eikä lähtenyt '
         + 'ennen kuin maa järisi',
@@ -283,6 +287,7 @@ const NOSTO_MAAT = {
        * koskaan käynyt huipulla.
        */
       id: 'olympoksen-huippu',
+      nimio: 'Vuohenmetsästäjä',
       kohde: 'olympos',
       otsikko: 'Jumalten vuorelle noustiin vasta 1913 — ja huipulla oli '
         + 'ensimmäisenä vuohenmetsästäjä',
@@ -548,7 +553,7 @@ function nostonPaikka(ui, nosto) {
  * tässä lukematta — datassa se säilyy, ja taksonomia elää kartan
  * kohdemerkeissä ja korttien ylärivillä entiseen tapaan.
  */
-function nostonMerkinta(ui, nosto) {
+function nostonMerkinta(ui, nosto, luetut) {
   const paikka = nosto ? nostonPaikka(ui, nosto) : null;
   if (!paikka) return null;
   /*
@@ -559,8 +564,26 @@ function nostonMerkinta(ui, nosto) {
    * tiedosto kertoo missä juttu tapahtui, kerros kertoo minkä merkin
    * päällä se näytetään.
    */
+  /*
+   * LUETTU KULKEE MERKINNÄSSÄ (omistajan löydös 28.8.2026 ilta). Luettu
+   * täky pysyy kartalla, mutta se ei saa viedä ankkurikohteensa
+   * napautusta pysyvästi: kerros siirtää luetun pisteen symbolin
+   * VIEREEN ja piirtää sen vaimeana (js/fokusnosto-symbolit.js, osio
+   * PISTE AINA SYMBOLIN PÄÄLLE). Tieto luetaan laitteen muistista
+   * kerran koko piirtoa kohti ja annetaan tässä valmiina, jottei kerros
+   * tarvitse tietoa muistin avaimesta.
+   *
+   * `nimio` on täyn LYHYT NIMI KARTALLA (omistajan lisätilaus 28.8.2026
+   * ilta: *"täkypisteessä saisi olla myös teksti näkyvissä"*).
+   * Valinnainen: ilman kenttää piste on entiseen tapaan pelkkä piste.
+   */
   return {
-    id: nosto.id, otsikko: nosto.otsikko, paikka, kohde: nosto.kohde ?? null,
+    id: nosto.id,
+    otsikko: nosto.otsikko,
+    paikka,
+    kohde: nosto.kohde ?? null,
+    nimio: nosto.nimio ?? null,
+    luettu: !!luetut?.has(nosto.id),
   };
 }
 
@@ -635,8 +658,9 @@ export function paivitaFokusnosto(ui, yritys = 0) {
    * jotta kerros ei tarvitse tietoa poolista eikä lunastuksesta.
    */
   const merkinnat = [];
+  const luetut = nostoLuetut();
   for (const n of jaljella) {
-    const m = nostonMerkinta(ui, n);
+    const m = nostonMerkinta(ui, n, luetut);
     if (m) merkinnat.push({ ...m, avaa: () => avaaNosto(ui, n) });
   }
   /*

@@ -689,6 +689,8 @@ export const FOKUSVIRTA_ISTANBUL = {
   takynostot: [
     {
       id: 'schliemann',
+      // Kartan nimiö täkypisteen kylkeen (päätoimittaja 28.8.2026).
+      nimio: 'Troijan tuhoaja',
       otsikko: 'Troijan löytäjä tuhosi Troijan',
       /* Faktat: takynostot-turkki.md, ehdokas 6 (VARMA, useassa osiossa). */
       lunastus: 'Schliemann kaivoi Hisarlıkin kummulla ja päätti, että '

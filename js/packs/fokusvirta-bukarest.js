@@ -615,6 +615,8 @@ export const FOKUSVIRTA_BUKAREST = {
   takynostot: [
     {
       id: 'dracula',
+      // Kartan nimiö täkypisteen kylkeen (päätoimittaja 28.8.2026).
+      nimio: 'Draculan alaviite',
       otsikko: 'Dracula syntyi alaviitteestä — kirjailija ei käynyt koskaan '
         + 'Itä-Euroopassa',
       /* Faktat: takynostot-romania.md, ehdokas 1 (VARMA). */
