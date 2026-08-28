@@ -203,18 +203,25 @@ export const FOKUSVIRTA_SOFIA = {
      * tuli 1879 eli kuusi vuotta myöhemmin. Levskin nimi, päivämäärä
      * ja muistomerkki jäävät koskematta (ne ovat seuraavassa
      * kappaleessa, kuvatekstissä ja täyissä).
+     *
+     * PUHEKIELIPASSI (Raamattu v1265 "LIVIAN PUHEKIELI"): kirjakielinen
+     * abstraktio *"se asettaa sen kauas"* oli omistajan nimeämä virhe
+     * Livian suussa, ja koko kupla on kirjoitettu puhuttuun muotoon.
+     * Kolme faktaa, säikähdysavaus ja välittäjäote ovat entisellään —
+     * vain kieli vaihtui. Savuke mittaa tätä kuplaa sanasta sanaan
+     * (tools/savuke-fokusvirta.mjs, väite "Sofiassa isoisän maadoitus").
      */
-    maadoitus: 'Kääk. Olipas hurja juttu — luin sen kahdesti ja nukuin '
-      + 'huonosti. Sitten katsoin vuosilukua: helmikuu 1873, siitä on yli '
-      + 'sataviisikymmentä vuotta. Maailma oli toinen ja niin oli '
-      + 'oikeudenkäyttö — kuolemanrangaistus oli useimmissa maissa '
-      + 'tavallinen tuomio, ja Sofiaa hallittiin toisesta pääkaupungista; '
-      + 'omansa siitä tuli vasta kuusi vuotta myöhemmin. Se ei tee '
-      + 'tapahtuneesta pienempää, mutta se asettaa sen kauas — ja tästä '
-      + 'etäisyydestä sen kestää lukea.',
+    maadoitus: 'Kääk. No johan oli hurja juttu — luin sen kahdesti enkä '
+      + 'nukkunut sen jälkeen kunnolla. Sit minä katsoin vuosilukua: '
+      + 'helmikuu 1873. Onhan siit aikaa jo yli sataviiskyt vuotta. Laki '
+      + 'oli sillon ihan eri, ja kuolemantuomioita jaettiin melkein joka '
+      + 'maassa; Sofiaakin komennettiin kokonaan toisesta pääkaupungista, '
+      + 'ja omansa siit tuli vasta kuus vuotta myöhemmin. Ei se siitä '
+      + 'yhtään pienempää juttua tee. Mut kun muistaa miten kaukana se on, '
+      + 'niin kyllä sen kestää lukea.',
     teksti: 'Hirttopaikalla seisoo nyt kolmentoista metrin '
-      + 'graniittipatsas, ja hautaa etsitään yhä. Etsintöjä on jatkunut '
-      + 'sata viisikymmentä vuotta — kynttilä ikkunalla oli '
+      + 'graniittipatsas, ja sitä hautaa etsitään vieläkin. Etsintöjä on '
+      + 'jatkunut sataviiskyt vuotta — se kynttilä ikkunalla oli '
       + 'lähempänä totuutta kuin yksikään lapio.',
     /*
      * Commons 25.8.2026: 1000×667, CC BY-SA 3.0, Edal Anton Lefterov,

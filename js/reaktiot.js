@@ -202,11 +202,18 @@ const REAKTIO_VALIMUISTI = new Map();
  * yhteyttä. Ääni on Livian (kirjekyyhky Columba Livia, hieman
  * pröystäilevä ja juuri nyt hieman nolo): ei huutomerkkejä, ei
  * anteeksipyytelyä, kuiva toteamus.
+ *
+ * PUHEKIELI JA LAVASTEOHJE (Raamattu v1265 "LIVIAN PUHEKIELI"): Livia
+ * puhuu itse puhekieltä ja pronominit kokonaisina (minä, ei mä).
+ * Ajatusviivan jälkeen tuleva osa ei ole Livian puhetta vaan huomio
+ * hänestä — juuri se, mitä hän ei itse sanoisi ääneen, ja siinä nolous
+ * asuu.
  */
 const LIVIAN_KIITOKSET = [
-  'Livia kiittää. Se merkitsee tämän muistiin ja katsoo hetken tarkasti muualle.',
-  'Ohhoh. Livia kiittää — ja huomauttaa, että virhe on nyt matkalla oikeaan osoitteeseen.',
-  'Livia kiittää ja sanoo, ettei tämä ollut sen vika. Se sanoo sen hieman liian nopeasti.',
+  'Kiitos. Minä merkitsen tän ylös. — Livia katsoo hetken tosi tarkasti muualle.',
+  'Ohhoh. No kiitos, nyt se virhe on ainakin matkalla oikeaan osoitteeseen. '
+    + '— Livia painottaa sanaa oikeaan.',
+  'Kiitos. Ei tää muuten ollut minun vika. — Livia sanoo sen vähän liian nopeasti.',
 ];
 
 /**
@@ -217,8 +224,8 @@ const LIVIAN_KIITOKSET = [
  * varma tapaus on tyhjä ilmoitus, josta ei voi korjata mitään, ja
  * siihen Livia vastaa kysymyksellä eikä väitteellä.
  */
-const LIVIAN_JATKOKYSYMYS = 'Livia kallistaa päätään: mikä kohta oli väärin? '
-  + 'Yksi rivi riittää — muuten se ei löydä sitä.';
+const LIVIAN_JATKOKYSYMYS = 'Livia kallistaa päätään: no mikä kohta siin '
+  + 'oli väärin? Yks rivi riittää — muuten minä en löydä sitä.';
 
 /* ------------------------------------------------------------------ *
  * Pienet apurit
