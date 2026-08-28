@@ -25,13 +25,22 @@
  *
  * Kolme seurausta, jotka on hyvä tietää:
  *
- *   1. YKSI KERRALLAAN. Kartalla tuikkii poolin ENSIMMÄINEN KATSOMATON
- *      täky (nostoVuorossa). Kun se on luettu, se katoaa laitteen
- *      muistiin (nostoMerkitseLuetuksi) ja seuraava katsomaton syttyy
- *      heti kun kortti sulkeutuu. Vanha "yksi täky per maa" -leikkaus
- *      ja "yksi kupla per istunto" -kiintiö poistuivat kuplan mukana:
- *      molemmat olivat sääntöjä ruudulle ponnahtavasta pinnasta, ja
- *      piste ei ponnahda mihinkään.
+ *   1. KAIKKI NÄKYVIIN, HUOMIO YKSI KERRALLAAN (omistajan linjaus
+ *      28.8.2026 ilta: *"Täkyt voisi olla aina näkyvissä. Niihin vain
+ *      kiinnitetään huomio aarteen löytymisen jälkeen."*). Maan kaikkien
+ *      katsomattomien täkyjen pisteet piirtyvät kartalle samasta
+ *      hetkestä kuin maan muutkin kohteet, ja jokainen aukeaa
+ *      napautuksesta heti. AARRE EI AVAA OVEA VAAN SYTYTTÄÄ VALON:
+ *      ennen aarretta pisteet ovat hiljaisia (ei tuiketta, ei Livian
+ *      vihjettä), sen jälkeen niistä TUIKKII YKSI KERRALLAAN — poolin
+ *      ensimmäinen katsomaton (nostoVuorossa). Kun se on luettu, se
+ *      katoaa laitteen muistiin (nostoMerkitseLuetuksi) ja seuraava
+ *      katsomaton alkaa tuikkia heti kun kortti sulkeutuu; ennen
+ *      aarretta katsotut eivät palaa tuikkimaan, koska ne eivät ole enää
+ *      jäljellä. Vanha "yksi täky per maa" -leikkaus ja "yksi kupla per
+ *      istunto" -kiintiö poistuivat kuplan mukana: molemmat olivat
+ *      sääntöjä ruudulle ponnahtavasta pinnasta, ja piste ei ponnahda
+ *      mihinkään.
  *   2. PISTE ON PAINIKE. Kupla otti ennen napautuksen ja ankkurisymboli
  *      oli mykkä; nyt piste tekee sen työn itse (osuma-alue on sormen
  *      mitta, ks. symbolitiedosto).
@@ -419,26 +428,32 @@ function nostoMaanPooli(ui, city) {
  * MITKÄ POOLIN NOSTOT OVAT YHÄ TARJOLLA — riippumatta siitä, onko ruutu
  * vapaa?
  *
- * NÄKYVYYSEHDOT OVAT TÄSMÄLLEEN LIUSKAN AIKAISET (omistajan tilaus:
- * sama hetki, sama pooli, sama kirjanpito). Kolme ehtoa, kaikki
- * pakollisia:
+ * AARRE EI ENÄÄ OLE NÄKYVYYDEN EHTO (omistajan linjaus 28.8.2026 ilta:
+ * *"Täkyt voisi olla aina näkyvissä. Niihin vain kiinnitetään huomio
+ * aarteen löytymisen jälkeen."*). Ennen tätä lista oli tyhjä niin kauan
+ * kuin lehtilukko oli kiinni, ja koko maan täkyaineisto oli piilossa
+ * pelaajalta, joka olisi halunnut tutkia karttaa ensin. Nyt pisteet
+ * piirtyvät samasta hetkestä kuin kartan muutkin kohteet siinä maassa ja
+ * ovat avattavissa heti; AARRE RATKAISEE VAIN HUOMION — tuikkeen ja
+ * Livian vihjeen (nostoTuikeSallittu).
+ *
+ * Kaksi ehtoa, molemmat pakollisia:
  *   1. kaupungilla on fokusvirtasisältö (eli fokusmoodi on päällä,
  *      pelaaja on ihminen ja laudalla on kevyt kulku käytössä);
- *   2. MAAN AARRE ON LÖYTYNYT — laatta on käännetty, eli lehtilukko on
- *      auennut (fokusvirtaLukitseeLehden palauttaa false). Ennen sitä
- *      pelaajalla on kesken toinen asia, eikä nosto saa kilpailla siitä;
- *   3. nosto on lukematon (laitteen muisti) ja ohittamaton (istunto).
+ *   2. nosto on lukematon (laitteen muisti) ja ohittamaton (istunto).
  *
  * LUNASTETTU TÄKY EI PALAA KARTALLE: luetut karsitaan tästä yhdestä
- * listasta, ja juuri se tekee "yksi kerrallaan" -vuorottelun — kun
- * ensimmäinen katoaa listasta, seuraava on listan uusi ensimmäinen.
+ * listasta, ja juuri se tekee "yksi kerrallaan" -huomionvuorottelun —
+ * kun ensimmäinen katoaa listasta, seuraava on listan uusi ensimmäinen.
+ * Sama karsinta hoitaa myös sen, että ENNEN AARRETTA katsotut täyt eivät
+ * ala tuikkia jälkikäteen: katsottu on katsottu, eikä listalla ole enää
+ * mitään mille tuike voisi syttyä.
  */
 function nostoJaljella(ui) {
   if (typeof document === 'undefined') return [];
   if (!ui || ui.dead || ui.katselu) return [];
   const city = ui.game?.cityOf?.();
   if (!city || !fokusvirtaSisalto(ui, city)) return [];
-  if (fokusvirtaLukitseeLehden(ui, city)) return [];
   const pooli = nostoMaanPooli(ui, city);
   if (!pooli) return [];
   const luetut = nostoLuetut();
@@ -464,6 +479,22 @@ function nostoJaljella(ui) {
  */
 function nostoVuorossa(ui, jaljella) {
   return jaljella[0] ?? null;
+}
+
+/**
+ * SAAKO KARTALLA TUIKKIA — eli onko MAAN AARRE LÖYTYNYT?
+ *
+ * Omistajan linjaus 28.8.2026 ilta: *"Täkyt voisi olla aina näkyvissä.
+ * Niihin vain kiinnitetään huomio aarteen löytymisen jälkeen."* Ennen
+ * aarretta pisteet ovat siis kartalla hiljaisina merkintöinä — samat
+ * merkit, sama napautus, ei tuiketta eikä Livian vihjettä — koska
+ * pelaajalla on kesken toinen asia eikä täky saa kilpailla siitä.
+ * Laatan kääntyessä lehtilukko aukeaa (fokusvirtaLukitseeLehden
+ * palauttaa false), ja samasta hetkestä huomio-ohjaus kytkeytyy päälle.
+ */
+function nostoTuikeSallittu(ui) {
+  const city = ui?.game?.cityOf?.();
+  return !!city && !fokusvirtaLukitseeLehden(ui, city);
 }
 
 /* ==================== PAIKKA LAUDALLA ==================== */
@@ -595,19 +626,39 @@ export function paivitaFokusnosto(ui, yritys = 0) {
   }
   nostoLataaTyyli();
   const nosto = nostoVuorossa(ui, jaljella);
-  const merkinta = nostonMerkinta(ui, nosto);
   /*
-   * PISTE KARTALLE. Kerros vertaa omaa avaintaan ja tekee työtä vain
-   * kun täky vaihtuu — napautuksen työ annetaan sille valmiina, jotta
-   * kerros ei tarvitse tietoa poolista eikä lunastuksesta.
+   * KAIKKI MAAN KATSOMATTOMAT PISTEET KARTALLE (omistajan linjaus
+   * 28.8.2026 ilta). Kerros saa listan ja sen lisäksi tiedon siitä, MIKÄ
+   * niistä tuikkii — napautuksen työ annetaan merkinnän mukana valmiina,
+   * jotta kerros ei tarvitse tietoa poolista eikä lunastuksesta.
    */
-  paivitaNostosymbolit(ui, { merkinta, avaa: () => avaaNosto(ui, nosto) });
-  if (merkinta) {
-    // Piste on kartalla: vahti pitää sen mittakaavan ajan tasalla, eikä
+  const merkinnat = [];
+  for (const n of jaljella) {
+    const m = nostonMerkinta(ui, n);
+    if (m) merkinnat.push({ ...m, avaa: () => avaaNosto(ui, n) });
+  }
+  /*
+   * HUOMIO VASTA AARTEEN JÄLKEEN: ennen sitä `tuikkiva` on null, jolloin
+   * kaikki pisteet ovat kartalla hiljaisina eikä Livia sano mitään.
+   */
+  const tuike = nostoTuikeSallittu(ui);
+  const vuorossa = tuike && merkinnat.some((m) => m.id === nosto?.id) ? nosto.id : null;
+  paivitaNostosymbolit(ui, { merkinnat, tuikkiva: vuorossa });
+  if (merkinnat.length) {
+    // Pisteet ovat kartalla: vahti pitää mittakaavan ajan tasalla, eikä
     // ruudulle jää mitään pintaa — ei kuplaa eikä liuskaa.
     nostoVahdiKarttaa(ui);
     nostoPintaPois(ui);
-    nostoLivianVihje(ui);
+    if (vuorossa) nostoLivianVihje(ui);
+    return;
+  }
+  /*
+   * VARAPOLUN LIUSKA ON HUOMIOKEINO, joten se odottaa aarretta kuten
+   * tuikekin: ilman aarretta paikaton täky jää yksinkertaisesti pois.
+   */
+  if (!tuike) {
+    nostoLopetaVahti(ui);
+    nostoPintaPois(ui);
     return;
   }
   /*

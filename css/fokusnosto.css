@@ -222,9 +222,24 @@ body.kartalento .fokusnosto { opacity: 0; pointer-events: none; }
   cursor: pointer;
 }
 
+/*
+ * PISTE ON AINA SAMANNÄKÖINEN — TUIKE ON ERI ASIA (omistajan linjaus
+ * 28.8.2026 ilta: *"Täkyt voisi olla aina näkyvissä. Niihin vain
+ * kiinnitetään huomio aarteen löytymisen jälkeen."*).
+ *
+ * Kartalla on nyt kaikkien maan katsomattomien täkyjen pisteet, ja
+ * niistä korkeintaan yksi tuikkii. Väri, koko ja osuma-alue ovat siksi
+ * pisteen perustyylissä, ja ANIMAATIO YKSIN on kytketty luokkaan
+ * `.nostosym-tuike-paalla`, jonka js/fokusnosto-symbolit.js siirtää
+ * pisteeltä toiselle. Hiljainen piste näyttää täsmälleen samalta kuin
+ * tuikkiva pysähtyneenä — sama asu kuin liikeherkkyystilassa alempana.
+ */
 .nostosym-tuike-hehku {
   fill: #d9a520;
   opacity: 0.32;
+}
+
+.nostosym-tuike-paalla .nostosym-tuike-hehku {
   animation: nostosym-tuike 1500ms ease-in-out infinite;
 }
 
@@ -237,6 +252,9 @@ body.kartalento .fokusnosto { opacity: 0; pointer-events: none; }
   fill: #fdf3cf;
   stroke: #8a5f12;
   stroke-width: 0.55;
+}
+
+.nostosym-tuike-paalla .nostosym-tuike-ydin {
   animation: nostosym-kimallus 1500ms ease-in-out infinite;
 }
 
@@ -275,16 +293,18 @@ body.kartalento .fokusnosto { opacity: 0; pointer-events: none; }
    paikallaan ja näkyvänä myös silloin kun liikettä on pyydetty
    vähemmän. */
 @media (prefers-reduced-motion: reduce) {
-  .nostosym-tuike-hehku { animation: none; opacity: 0.35; }
-  .nostosym-tuike-ydin { animation: none; opacity: 1; }
+  .nostosym-tuike-paalla .nostosym-tuike-hehku { animation: none; opacity: 0.35; }
+  .nostosym-tuike-paalla .nostosym-tuike-ydin { animation: none; opacity: 1; }
 }
 
 /* Raahauksen ajaksi tuike vaikenee — sama mitattu syy kuin vihreällä
    pisteellä (css/fokusvirta.css): SVG-lapsen transform-animaatio likaa
    koko laudan asettelun joka kehyksellä. PAUSSI EIKÄ POISTO: `animation:
    none` mitätöisi asettelun eleen alussa ja lopussa. */
-body.kartta-raahaus .nostosym-tuike-hehku,
-body.kartta-raahaus .nostosym-tuike-ydin { animation-play-state: paused; }
+body.kartta-raahaus .nostosym-tuike-paalla .nostosym-tuike-hehku,
+body.kartta-raahaus .nostosym-tuike-paalla .nostosym-tuike-ydin {
+  animation-play-state: paused;
+}
 
 /* ===========================================================================
    4. LUNASTUSKORTTI
