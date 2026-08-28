@@ -614,7 +614,13 @@ export const FOKUSVIRTA_SOFIA = {
    * sanamuotoja ei ole muutettu. `lunastus` on rakentajan kokoama
    * lyhyt fakta, joka pitää otsikon lupauksen (takynostot-kreikka.md,
    * sääntö 1: otsikon lupaus lunastetaan tai se on klikkihuijaus).
-   * `avaa` osoittaa tämän tiedoston täkyyn, jos sellainen on.
+   * `lunastus` saa olla myös kappaleiden taulukko (omistajan päätös
+   * 28.8.2026), ja kortti tuntee lisäksi valinnaiset `valokuva`- ja
+   * `kysymykset`-kentät (js/fokusnosto.js).
+   *
+   * VANHA `avaa`-KENTTÄ ON POISTETTU (28.8.2026): moottori ei koskaan
+   * lukenut sitä, eli se oli kuollutta dataa. Kortin karttanappi lukee
+   * `kohde`-kentän, jota tällä nostolla ei ole.
    *
    * VAIN YKSI NOSTO PER MAA (omistaja 26.8.2026 ilta: *"Täkyjä josta
    * tulee puhekupla pitää olla vain yksi per maa. Kaikki muut
@@ -632,17 +638,61 @@ export const FOKUSVIRTA_SOFIA = {
       id: 'areena',
       otsikko: 'Hotellin aulassa on aukko lattiassa — sen alla '
         + 'taistelivat krokotiilit ja karhut',
-      lunastus: 'Hotellin perustustöissä 2004 paljastui Bulgarian suurin '
-        + 'roomalainen amfiteatteri, ja 1919 löytynyt kivilaatta mainostaa '
-        + 'siellä käytyjä taisteluja krokotiilien, karhujen, härkien ja '
-        + 'villikissojen kanssa.',
-      avaa: 'areena',
-      // Sama tarkistettu tiedosto kuin täyllä 'areena'.
+      /*
+       * LUNASTUS KAHTENA KAPPALEENA (omistajan päätös 28.8.2026:
+       * *"Lisäksi vähän enemmän juttua"*). Kappaleet ovat kertojan
+       * yleiskieltä, eivät puhekieltä, ja jokainen väite on täkyn 6
+       * lähteestä (docs/mantereet-tyoaineisto/takyt-sofia.md, VARMA;
+       * en-Wikipedia "Amphitheatre of Serdica") — sama faktapohja kuin
+       * tämän tiedoston täyllä 'areena'. Uusia väittämiä ei ole.
+       */
+      lunastus: [
+        'Vuonna 2004 kaivettiin Sofian keskustassa hotellin perustuksia, '
+          + 'ja maasta paljastui roomalainen amfiteatteri — Bulgarian '
+          + 'suurin ja yksi Rooman valtakunnan itäosan suurimmista. Se oli '
+          + 'rakennettu 300–400-luvulla vanhan teatterin päälle, jonka '
+          + 'gootit olivat polttaneet vuonna 268.',
+        'Vuonna 1919 löytyi kivilaatta, joka aikoinaan mainosti täkäläisiä '
+          + 'taisteluja: siihen on kuvattu krokotiileja, karhuja, härkiä ja '
+          + 'villikissoja. Löytöä ei peitetty umpeen. Kuudesosa areenasta '
+          + 'säilytettiin ja liitettiin hotellin pohjakerrokseen, ja sinne '
+          + 'kävelee päivisin sisään kuka tahansa maksutta katsomaan '
+          + 'kolikko- ja keramiikkanäyttelyä.',
+      ],
+      /*
+       * PÄÄKUVAKSI LOISTOAIKA (omistajan päätös 28.8.2026). Sama sarja
+       * kuin assets/kartat/ihmeet/: repon oma generoitu havainnekuva,
+       * jolla ei ole Commons-nimeä eikä varareittiä, joten kenttä on
+       * `osoite` eikä `tiedosto` (ks. js/fokusnosto.js asetaNostonKuva).
+       */
       kuva: {
+        osoite: 'assets/kartat/nostot/nosto-areena-loistoaika.webp',
+        selite: 'Serdican amfiteatteri loistoaikanaan: kivilaatan '
+          + 'mainostamat pedot areenalla ja katsomo täynnä.',
+        lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
+      },
+      /*
+       * KAKKOSKUVA on nykytilan valokuva, rooli "näin se löytyi" —
+       * pienempänä tekstin alle, CC-attribuutio mukana. Sama tarkistettu
+       * tiedosto kuin täyllä 'areena'.
+       */
+      valokuva: {
         tiedosto: 'Amphitheatre of Serdica - General view.jpg',
-        selite: 'Serdican amfiteatteri hotellin pohjakerroksessa.',
+        selite: 'Näin se löytyi: säilynyt osa areenasta hotellin '
+          + 'pohjakerroksessa.',
         lahde: 'Epaunov72, Wikimedia Commons (CC BY-SA 4.0)',
       },
+      /*
+       * VALMISKYSYMYKSET PULULLE (omistajan päätös 28.8.2026: *"muutama
+       * valmis kysymys Pululle jatko jutustelua varten"*). Pelaajan
+       * ääntä, ei repliikkiä pulun suuhun, ja aiheet ovat kortin omista
+       * — ei visan vastausta paljastavaa kysymystä.
+       */
+      kysymykset: [
+        'Miksi hotelli rakennettiin amfiteatterin päälle?',
+        'Mitä Serdican amfiteatterille tapahtui antiikin jälkeen?',
+        'Taistelivatko areenoilla oikeasti krokotiilit?',
+      ],
     },
   ],
 
