@@ -98,12 +98,20 @@ export const FOKUSVIRTA_PARIISI = {
       + 'raunioina, mutta bulevardeilla nauretaan jo. Tämä kaupunki '
       + 'nousee aina. Louvren vartija vannoi, että kruununjalokivet '
       + 'ovat tallessa — hänen äänensä sanoi muuta.',
-    /* Luenta on sama teksti tunnetagein; äänitettä ei ole vielä. */
+    /*
+     * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
+     * kentästä työnkulussa .github/workflows/generoi-luennat.yml
+     * (tools/generoi-luennat.mjs pariisi), joka kirjoittaa täsmälleen
+     * alla nimetyn tiedoston. Nimi on kirjoitettu etukäteen: kenttä on
+     * kytkentä, ja ennen ajoa puuttuva mp3 jättää kaiuttimen vaiti
+     * kaatamatta mitään (js/luenta.js playDiaryVoice).
+     */
     luenta: '[curious] Pariisi paikkaa vielä haavojaan: Tuileriat ovat '
       + 'mustana raunioina, mutta bulevardeilla nauretaan jo. [warmly] '
       + 'Tämä kaupunki nousee aina. [whispers] Louvren vartija vannoi, '
       + 'että kruununjalokivet ovat tallessa — [softly] hänen äänensä '
       + 'sanoi muuta.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-pariisi.mp3',
   },
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
