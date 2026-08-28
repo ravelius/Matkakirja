@@ -48,6 +48,10 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1295: Paahahmo on nimeton Foggin perillinen: Reginald-nimi pois kaikkialta, avauskertomus sina-muodossa. Lue etusivu ja Venetsian/Edinburghin saapumiset.',
+  'v1294: LAVAIKKUNA - kartan SVG-lava ikkunoidaan nakymaan (iPhonen zoom/scroll-jankin juurisyykorjaus). RATKAISEVA LAITETESTI: zoomaa ja vierita Euroopan karttaa iPhonella.',
+  'v1292: Luettu taky pysyy kartalla nimion kanssa (44 px siirto ankkurista); tuike vain ensimmaisella lukemattomalla. Katso Sofia lukemisen jalkeen.',
+  'v1291: Kartan rasteriporras-valimuisti + maastonimet kevennetty. Tuntuma-arvio zoomatessa.',
   'v1289: Sofian merkkikasa korjattu: loydetyn kaupungin laatta varjaytyy pronssikultaan, ei aarremerkkia/tahtea/nappulan vinoneliota kartalla. Katso Sofia aarteen loydon jalkeen ja arvioi savy.',
   'v1288: Takypisteet nakyvat kartalla heti hiljaisina ja avattavina; tuike + Livian vihje vasta aarteen jalkeen, yksi kerrallaan. Valitila: piste vie ankkurikohteensa napautuksen (esim. Delfoi) ennen aarretta.',
   'v1286: Lehden juttusivut saavat omat Pulu-kysymysehdotukset myos sivua kaannettaessa; generoinnin ajan odotusrivi. Testaa: avaa lehti, kaanna sivua chat auki.',
