@@ -6401,27 +6401,38 @@ body.flight-active .fact-card {
 .airport.aarre-laatan-alla { display: none; }
 
 /*
- * LAATTA POIS PELINAPPULAN ALTA (omistajan pelitesti 27.8.2026,
- * iPad-kaappaus Sofian fokuslaudalta: *"nappulan alla näkyy monta
- * päällekkäistä kerrosta"* — kullanvärinen laatta, sykekehä, tumma
- * rengas ja punertava hehku samassa pinossa).
+ * LAATTA JÄÄ NAPPULAN ALLE NÄKYVIIN (omistajan tilaus 28.8.2026:
+ * *"sen alta saisi näkyä kaupungin laatta (nyt ei näy ollenkaan). eli
+ * nappula saa olla pienempi"*).
  *
- * SAMA SÄÄNTÖ, SAMA SYY KUIN AARREMERKIN ALLA yllä: kaksi merkkiä
- * täsmälleen samassa pisteessä on yksi liikaa. Fokuslaudalla pelaajan
- * sijainnin kertoo tinaherra, joka seisoo laatan päällä
- * (js/ui.js paivitaFokusLaatta, nappulaKaupungissa) — silloin laatta,
- * sen porttikehä, lentokonemerkki ja houkutteleva sykekehä jäävät pois.
- * Kaupungin NIMI jää: se kertoo paikasta, ei laatasta.
+ * MITÄ TÄSSÄ OLI ENNEN: koko laatta — ellipsi, rantarengas, porttikehä,
+ * lentokonemerkki ja sykekehä — piilotettiin nappulan kohdalta
+ * (27.8.2026, iPad-kaappaus Sofian fokuslaudalta: *"nappulan alla näkyy
+ * monta päällekkäistä kerrosta"*). Se oli oikea korjaus SILLOISELLE
+ * nappulalle: hahmo oli 13,2 yksikköä leveä ja laatta 23,2, joten
+ * laatasta jäi näkyviin vain ohut sirppi hahmon molemmin puolin — pino
+ * eikä kerros.
+ *
+ * MIKSI SE EI OLE ENÄÄ OIKEA KORJAUS: nappula on nyt 10 x 18,1
+ * yksikköä (js/ui.js NAPPULAN_POLKU) ja sen varjo laatan sisällä
+ * (varjonR 5,7). Laatan reuna kiertää hahmon joka suunnasta, jolloin
+ * kaksi merkkiä samassa pisteessä ei ole kaksi merkkiä vaan yksi:
+ * NAPPULA SEISOO LAATALLA. Piilotus tekisi kaupungista sen ainoan
+ * paikan kartalla, jolla ei ole laattaa — juuri sitä omistaja katsoi.
+ *
+ * KAKSI OSAA JÄÄ YHÄ POIS, ja molemmat samasta syystä kuin ennen:
+ *   .airport      lentokoneen merkki on laatan KESKELLÄ, täsmälleen
+ *                 nappulan takana. Siitä näkyisi vain siivenkärjet
+ *                 hahmon molemmin puolin.
+ *   .fokuslaatta-syke  houkutteleva, jatkuvasti sykkivä kehä. Se
+ *                 kutsuu napauttamaan tyhjää laattaa; nappulan alla
+ *                 pelaaja on jo siinä kaupungissa.
  *
  * VAIN NAPPULAN KOHDALTA. Luokka kirjoitetaan geometrisen ehdon
- * mukaan, joten muiden kaupunkien laatat ja sykkeet ovat ennallaan —
- * samoin oma laatta silloin, kun nappuloita on samassa kaupungissa
- * useampi ja ne on levitetty kehälle laatan viereen.
+ * mukaan (nappulaKaupungissa), joten muiden kaupunkien merkit ovat
+ * ennallaan — samoin oma laatta silloin, kun nappuloita on samassa
+ * kaupungissa useampi ja ne on levitetty kehälle laatan viereen.
  */
-.city.nappulan-alla,
-.city-start.nappulan-alla,
-.coast-soft.nappulan-alla,
-.city-gate.nappulan-alla,
 .airport.nappulan-alla,
 .fokuslaatta-syke.nappulan-alla { display: none; }
 .airport { font-size: 14px; fill: #8d3a2c; }
@@ -6729,15 +6740,20 @@ body.flight-active .fact-card {
 /*
  * PELINAPPULA. Väriläiskän (.pawn-ring + .pawn-dot + .pawn-gloss)
  * tilalle tuli tilauksessa #100 tinaherra — pieni tinasotilasmainen
- * herra Fogg, silinteri ja keppi — ja sen tilalle 27.8.2026 valkoinen
+ * herra Fogg, silinteri ja keppi — ja sen tilalle 27.8.2026
  * lautapelinappula (.pawn-nappula alla), koska tinaherra luki kartalla
  * raskaana tummana läiskänä. Tyyli valitaan js/ui.js:n NAPPULA_TYYLI
  * -vakiosta; webp-kuva on yhä repossa paluuta varten.
  *
  * VARJO PIIRRETÄÄN AINA KOODILLA (.pawn-shadow) — vain silloin se voi
  * irrota hypyn laella ja kertoa korkeuden (js/ui.js hyppaaAskel).
+ *
+ * VARJO ON HAALEAMPI KUIN ENNEN (0,32 -> 0,22). Kun kaupungin laatta
+ * tuli takaisin nappulan alle (28.8.2026, ks. .nappulan-alla), varjo ei
+ * enää makaa pergamentilla vaan laatan omalla vaalealla pinnalla, jossa
+ * entinen tummuus luki toisena laattana laatan sisällä.
  */
-.pawn-shadow { fill: rgba(58, 38, 16, 0.32); }
+.pawn-shadow { fill: rgba(58, 38, 16, 0.22); }
 .pawn-kuva {
   /* Kuva on nappulan ainoa pinta: se ei saa napata napautuksia
      kaupungilta, joka on sen alla. */
@@ -6745,30 +6761,39 @@ body.flight-active .fact-card {
 }
 
 /*
- * VALKOINEN LAUTAPELINAPPULA (omistajan tilaus 27.8.2026: tinaherra oli
- * *"liian raskas visuaalisesti"*). Muoto piirretään koodilla
- * (js/ui.js NAPPULAN_POLKU), joten koko ulkonäkö on näissä kolmessa
- * ominaisuudessa:
+ * PUINEN LAUTAPELINAPPULA (omistajan tilaus 27.8.2026: tinaherra oli
+ * *"liian raskas visuaalisesti"* — ja 28.8.2026: *"pelinappulasta voisi
+ * tehdä puun värisen ja matalamman"*). Muoto piirretään koodilla
+ * (js/ui.js NAPPULAN_POLKU), joten koko ulkonäkö on näissä
+ * ominaisuuksissa:
  *
- *   fill     lämmin valkoinen, ei puhdas #fff — seepiakartan päällä
- *            kylmä valkoinen loistaisi irrallisena paperinpalana.
- *   stroke   sama tumma ruskea kuin laudan muissa ääriviivoissa. Se on
- *            ainoa asia, joka erottaa vaalean nappulan vaaleasta
- *            kartasta, joten se on nappulan tärkein viiva — mutta ohut,
- *            koska paksu reunus tekisi siitä taas painavan.
+ *   fill     sorvattua vaaleaa pyökkiä: liuku ylhäältä alas (js/ui.js
+ *            puuliuku, #d9b47c -> #c49a63 -> #a87e4c). Ensimmäinen
+ *            versio oli lämmin valkoinen #fbf7ef, mutta seepiakartan
+ *            päällä se oli laudan vaalein asia ja luki paperinpalana.
+ *            Puun sävy on samasta paletista kuin kartta ja selvästi
+ *            tummempi kuin kaupungin laatta (#f3e5c4), jonka päällä
+ *            nappula seisoo. VARAVÄRI ensin omalla rivillään: jos
+ *            määrittelyä ei jostain syystä ole, hahmo on litteä eikä
+ *            näkymätön.
+ *   stroke   sama tumma ruskea kuin laudan muissa ääriviivoissa —
+ *            ohut, koska paksu reunus tekisi nappulasta taas painavan.
  *   vector-effect  ääriviiva pysyy saman levyisenä zoomista riippumatta.
  *            Ilman tätä laudan mittakaava paksuntaisi viivan
  *            fokusnäkymässä tussiksi ja ohentaisi sen yleiskuvassa
  *            olemattomiin.
  */
 .pawn-nappula {
-  fill: #fbf7ef;
+  fill: #c49a63;
+  fill: url(#nappula-puu) #c49a63;
   stroke: #2b1f12;
   stroke-width: 1.1;
   vector-effect: non-scaling-stroke;
   stroke-linejoin: round;
 }
-.pawn-star { fill: #b8860b; font-size: 20px; }
+/* Tähti on nappulan oma merkki: koko seuraa hahmoa (20 -> 13 px, kun
+   siluetti madaltui 25,9:stä 18,1:een), muuten se olisi nappulaa isompi. */
+.pawn-star { fill: #b8860b; font-size: 13px; }
 
 /*
  * VUORON AINOA RENGAS (omistajan pelitesti 27.8.2026). Nappulan alla oli
@@ -6784,9 +6809,11 @@ body.flight-active .fact-card {
   fill: none;
   stroke: #2b1f12;
   /* Ohuempi kuin ennen: rengas on nyt hahmon jalkojen alla oleva
-     kehä, ei nappulan ääriviiva, eikä se saa kilpailla hahmon kanssa. */
-  stroke-width: 1.8;
-  opacity: 0.75;
+     kehä, ei nappulan ääriviiva, eikä se saa kilpailla hahmon kanssa —
+     eikä kaupungin laatan oman reunan kanssa, jonka sisään se
+     28.8.2026 alkaen mahtuu (js/ui.js renkaanR). */
+  stroke-width: 1.4;
+  opacity: 0.68;
 }
 
 /*

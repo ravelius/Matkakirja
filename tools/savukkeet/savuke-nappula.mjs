@@ -9,9 +9,10 @@
  *   3. Zoomaus skaalaa nopan samassa suhteessa kuin kartan.
  *   4. Nappula hyppii: paraabelikaari nousee ja palaa, ja koodilla
  *      piirretty varjo kutistuu ja haalenee laella.
- *   5. Nappula on hahmo, jolla on mitat: valkoinen kartionappula
+ *   5. Nappula on hahmo, jolla on mitat: puinen kartionappula
  *      (koodilla piirretty polku) tai vanha tinaherra-kuva.
  *   6. Uuteen kaupunkiin saavuttaessa noppa häipyy pois.
+ *   7. Nappula seisoo kaupungin laatalla PEITTÄMÄTTÄ sitä.
  *
  * MIKSI VARTIO: kaikki kolme takeista (ankkurointi, skaalaus,
  * häivytys) ovat sellaisia, jotka rikkoutuvat hiljaa. Väärään
@@ -179,13 +180,20 @@ vaadi('4d varjo haaleni hypyn laella', hyppy.peittoMin < 0.7, String(hyppy.peitt
 /*
  * --- 5. nappulalla on hahmo, ja se seisoo jaloillaan ---
  *
- * ULKONÄKÖÄ EI LUKITA TÄHÄN. Nappula oli tilauksessa #100 tinaherra-webp
- * ja on 27.8.2026 lähtien koodilla piirretty valkoinen kartionappula
- * (js/ui.js NAPPULA_TYYLI). Vartioitava asia ei kummassakaan tapauksessa
- * ole tiedostonimi vaan se, että hahmo on OLEMASSA, MITALLINEN ja
- * ANKKUROITU JALKAPISTEESTÄÄN kaupunkiin — juuri ne rikkoutuvat hiljaa,
- * jos hahmon piirto vaihtuu. Väriläiskä ei tätä läpäisisi: sillä ei ole
+ * VÄRIÄ EI LUKITA TÄHÄN. Nappula oli tilauksessa #100 tinaherra-webp,
+ * 27.8.2026 lähtien koodilla piirretty valkoinen kartionappula ja
+ * 28.8.2026 lähtien saman muodon puunvärinen versio (js/ui.js
+ * NAPPULA_TYYLI). Vartioitava asia ei missään näistä ole tiedostonimi
+ * eikä sävy vaan se, että hahmo on OLEMASSA, MITALLINEN ja ANKKUROITU
+ * JALKAPISTEESTÄÄN kaupunkiin — juuri ne rikkoutuvat hiljaa, jos hahmon
+ * piirto vaihtuu. Väriläiskä ei tätä läpäisisi: sillä ei ole
  * jalkapistettä nappulan alareunassa.
+ *
+ * MITTASUHDE SEN SIJAAN LUKITAAN (5e). Omistajan tilaus 28.8.2026 oli
+ * *"matalampi ... nappula saa olla pienempi"*, ja siluetti madallettiin
+ * 25,9:stä 18,1:een leveyden pysyessä lähes ennallaan (13,2 -> 10).
+ * Suhde 1,81 on juuri se, mikä tilauksessa muuttui; jos joku palauttaa
+ * vanhat mitat, hahmo on taas kaupungin laatan kokoinen.
  */
 const kuva = await sivu.evaluate(() => {
   const i = document.querySelector('.pawn .pawn-kuva');
@@ -208,6 +216,9 @@ vaadi('5c hahmo on pystymallinen', kuva.korkeus > kuva.leveys, JSON.stringify(ku
 vaadi('5d hahmo seisoo jaloillaan laudan pinnassa',
   kuva.jalkaEro !== null && Math.abs(kuva.jalkaEro) < 0.6 * kuva.korkeus,
   JSON.stringify(kuva));
+const suhde = kuva.leveys > 0 ? kuva.korkeus / kuva.leveys : 0;
+vaadi('5e siluetti on matala nappula (korkeus/leveys 18,1/10 = 1,81)',
+  suhde > 1.68 && suhde < 1.95, `${suhde.toFixed(3)} — ${JSON.stringify(kuva)}`);
 
 // --- 6. uuteen kaupunkiin saavuttaessa noppa häipyy ---
 const saapuminen = await sivu.evaluate(async () => {
@@ -234,7 +245,62 @@ vaadi('6b noppa on lopulta piilossa', saapuminen.piilossa === true);
 vaadi('6c nopan muisti nollattiin',
   saapuminen.dieThrown === false && !saapuminen.kartalla);
 
-vaadi('7 ei sivuvirheitä', virheet.length === 0, virheet.join(' | '));
+/*
+ * --- 7. nappula seisoo laatalla peittämättä sitä ---
+ *
+ * OMISTAJAN TILAUS 28.8.2026: *"sen alta saisi näkyä kaupungin laatta
+ * (nyt ei näy ollenkaan). eli nappula saa olla pienempi"*. Laatta oli
+ * piilotettu kokonaan nappulan kohdalta (css .nappulan-alla), koska
+ * silloinen hahmo oli lähes laatan levyinen; nyt piilotus koskee enää
+ * lentokoneen merkkiä ja sykekehää, ja nappula on kutistettu niin, että
+ * laatan reuna kiertää sen joka suunnasta.
+ *
+ * VARTIO ON GEOMETRINEN, EI LUOKKALISTA. Sääntö voi rikkoutua kahdesta
+ * suunnasta — joku palauttaa piilotuksen, tai joku kasvattaa nappulaa,
+ * varjoa tai vuororengasta niin että laatta jää taas alle. Molemmat
+ * näkyvät samassa mitassa: koko nappularyhmän (hahmo + varjo +
+ * vuororengas) on mahduttava laatan leveyteen, ja laatan on oltava
+ * piirrossa mukana.
+ *
+ * NAPPULA VIEDÄÄN VARMUUDEN VUOKSI KAUPUNKIIN. Kohdan 4 hyppy jätti sen
+ * reitin varrelle, eikä reitin varrella ole laattaa lainkaan.
+ */
+const laatalla = await sivu.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  const g = ui.game;
+  const p = g.player;
+  const board = g.board;
+  const kohde = p.pos.type === 'city' ? p.pos.city : board.edgeById.get(p.pos.edge).b;
+  p.pos = { type: 'city', city: kohde };
+  ui.movingPlayerId = null;
+  ui.render();
+  const c = g.cityOf();
+  const laatta = document.querySelector(
+    `.city[data-kaupunki="${c.id}"], .city-start[data-kaupunki="${c.id}"]`);
+  const ryhma = document.querySelector('.pawn');
+  const hahmo = document.querySelector('.pawn .pawn-kuva');
+  const lr = laatta?.getBoundingClientRect();
+  const rr = ryhma?.getBoundingClientRect();
+  const hr = hahmo?.getBoundingClientRect();
+  return {
+    laattaPiirretty: Boolean(laatta),
+    laattaNakyy: laatta ? getComputedStyle(laatta).display !== 'none' : false,
+    laatta: lr ? +lr.width.toFixed(2) : 0,
+    ryhma: rr ? +rr.width.toFixed(2) : 0,
+    hahmo: hr ? +hr.width.toFixed(2) : 0,
+    // Paljonko laattaa jää nappularyhmän molemmin puolin näkyviin.
+    vasen: lr && rr ? +(rr.left - lr.left).toFixed(2) : null,
+    oikea: lr && rr ? +(lr.right - rr.right).toFixed(2) : null,
+  };
+});
+vaadi('7a kaupungin laatta on piirretty ja näkyvissä nappulan alla',
+  laatalla.laattaPiirretty && laatalla.laattaNakyy, JSON.stringify(laatalla));
+vaadi('7b laatta on selvästi hahmoa leveämpi',
+  laatalla.hahmo > 0 && laatalla.laatta > laatalla.hahmo * 1.6, JSON.stringify(laatalla));
+vaadi('7c koko nappularyhmä varjoineen mahtuu laatan leveyteen',
+  laatalla.vasen > 0.5 && laatalla.oikea > 0.5, JSON.stringify(laatalla));
+
+vaadi('8 ei sivuvirheitä', virheet.length === 0, virheet.join(' | '));
 
 console.log(`\n${lapi}/${kaikki} läpi`);
 await selain.close();

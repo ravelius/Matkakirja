@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1254: Pelinappula on nyt puunvarinen ja matalampi, ja kaupungin laatta nakyy sen alta joka suunnasta.',
   'v1253: Lippuikkunan tarkennettu laatta ja sen kuvateksti pysyvat kortin sisalla - reunalaatta liukuu vaakaan suurentuessaan.',
   'v1252: Reaktiorivi kaikkeen sisaltoon - peukku ja virheilmoitus lehtijutuissa, kohdekorteissa, nahtavyyksissa ja ihmeissa; lahetys ehdotuskanavaan.',
   'v1251: Aarrevinkin voi nyt ostaa pullalla - Osta tsoureki Livialle (25 puntaa) aarrekysymyksen laatikossa, kerran per aarre, maakohtainen pullan nimi.',
