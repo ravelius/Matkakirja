@@ -127,7 +127,7 @@
  * NOSTO_/nosto-etuliitteellä.
  */
 import {
-  html, jaaKappaleiksi, nielaiseSulkevaNapautus, polloNimilappu,
+  fokusmoodiPaalla, html, jaaKappaleiksi, nielaiseSulkevaNapautus, polloNimilappu,
 } from './ui-apurit.js';
 import { asetaKuva } from './media.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
@@ -796,7 +796,7 @@ const NOSTO_MAAT = {
        * en-Wikipedian kaksi artikkelia antavat sille eri vuoden.
        */
       id: 'archaeopteryx',
-      nimio: 'Fossiili lehmän hinnalla',
+      nimio: 'Lehmän hinnalla',
       otsikko: 'Maanviljelijä myi maailman kuuluisimman fossiilin — hinta '
         + 'oli yksi lehmä',
       lunastus: [
@@ -1043,9 +1043,21 @@ function nostoLevitaLunastus(pooli) {
  * Livian vihjeen (nostoTuikeSallittu).
  *
  * Kaksi ehtoa, molemmat pakollisia:
- *   1. kaupungilla on fokusvirtasisältö (eli fokusmoodi on päällä,
- *      pelaaja on ihminen ja laudalla on kevyt kulku käytössä);
+ *   1. fokusmoodi on päällä ja pelaaja on ihminen;
  *   2. nosto on lukematon (laitteen muisti) ja ohittamaton (istunto).
+ *
+ * FOKUSVIRTASISÄLTÖ EI OLE ENÄÄ EHTO (v1298). Ehto 1 luettiin tähän asti
+ * kaupungin fokusvirtarivin olemassaolosta (fokusvirtaSisalto), mikä oli
+ * oikea mitta niin kauan kuin täkyjä oli vain kaupungeilla, joilla se
+ * rivi on: Ateenalla ja Sofialla. Kun maapooliin (NOSTO_MAAT) tuli
+ * v1297:ssä kymmenen täkyä neljään maahan, portti jäi kiinni — Madridilla,
+ * Wienillä, Pariisilla eikä Berliinillä ole riviä js/packs/fokusvirrat.js:
+ * ssä, joten niiden pisteet eivät piirtyneet kartalle lainkaan. Raamatun
+ * linjaus on kuitenkin *"pisteet ovat aina näkyvissä kartalla"*, eikä
+ * täyn näkyvyys saa riippua siitä, annosteleeko kaupunki lisäksi
+ * fokusvirtaa. Ehto 1 mitataan siksi suoraan siitä, mitä se tarkoitti:
+ * fokusmoodi päällä (fokusmoodiPaalla) ja pelaaja ihminen — samat kaksi
+ * tarkistusta, jotka fokusvirtaSisalto teki ennen kaupunkihakua.
  *
  * LUNASTETTU TÄKY PYSYY KARTALLA (omistajan löydös 28.8.2026 ilta:
  * Sofian katsottu areenatäky katosi kartalta eikä rikastettua korttia
@@ -1059,7 +1071,8 @@ function nostoJaljella(ui) {
   if (typeof document === 'undefined') return [];
   if (!ui || ui.dead || ui.katselu) return [];
   const city = ui.game?.cityOf?.();
-  if (!city || !fokusvirtaSisalto(ui, city)) return [];
+  if (!city || !ui.game || ui.game.player?.isBot) return [];
+  if (!fokusmoodiPaalla()) return [];
   const pooli = nostoMaanPooli(ui, city);
   if (!pooli) return [];
   const ohitetut = ui.fokusnostoOhitetut ?? new Set();

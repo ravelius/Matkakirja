@@ -1742,7 +1742,7 @@ function nostosymMerkinPaikka(ryhma) {
  * @param {number} s      merkkien vakioskaala (px → laudan yksiköt)
  * @returns {{x:number, y:number, kohde:?string}}
  */
-function nostosymTuikkeenPaikka(ui, ryhma, s) {
+function nostosymTuikkeenPaikka(ui, ryhma, s, paikat = null) {
   let paras = null;
   let etaisyys = Infinity;
   for (const merkki of nostosymAnkkurit(ui)) {
@@ -1757,7 +1757,50 @@ function nostosymTuikkeenPaikka(ui, ryhma, s) {
     if (ryhma.luettu) paikka.x += NOSTOSYM_LUETTU_DX * s;
     return { ...paikka, kohde: ryhma.luettu ? null : (paras.id ?? null) };
   }
-  return { ...nostosymKaupungistaSivuun(ui, ryhma, s), kohde: null };
+  return {
+    ...nostosymOmaanRiviin(nostosymKaupungistaSivuun(ui, ryhma, s), paikat, s),
+    kohde: null,
+  };
+}
+
+/*
+ * VARAPOLUN PISTEET OMILLE RIVEILLEEN (v1298).
+ *
+ * Ankkuroitu piste saa paikkansa kohdemerkiltä, ja merkit on jo eroteltu
+ * toisistaan kasauspassilla (js/fokusniput.js). VARAPOLULLA sitä
+ * erottelua ei ole: passi ohittaa täyn ankkurin tarkoituksella
+ * (nippuMerkit), joten kaksi täkyä, joiden oma paikka on käytännössä
+ * sama, päätyivät täsmälleen päällekkäin — ja koska molemmat ovat
+ * napautettavia painikkeita, alempi jäi tavoittamattomiin ja molempien
+ * nimiö väistyi toistensa tieltä.
+ *
+ * Ennen v1298:aa tilannetta ei ollut olemassa: varapolulla oli vain
+ * Kreikan ja Sofian täkyjä, joilla on kohdemerkki ankkurinaan. Maapoolin
+ * portin auettua Pariisin kaksi täkyä (Eiffel-torni 255,3/608,6 ja
+ * Jardin des Plantes 256,5/609,0) ovat molemmat kaupungin laatan
+ * sormialueella, jolloin kumpikin siirtyy samaan varapaikkaan laatan
+ * vasemmalle puolelle.
+ *
+ * Väistö on YKSI SARAKE ALASPÄIN, rivinä sormialueen läpimitta: sama
+ * mitta kuin luetun pisteen sivuaskeleella (NOSTOSYM_LUETTU_DX) ja sama
+ * peruste — tätä pienempi jättäisi sormialueet limittäin. Alaspäin,
+ * koska varapaikka on jo laatan vasemmalla ja kasauspassin oma sarake
+ * kasvaa oikealla: kolmas suunta ei veisi pistettä kummankaan päälle.
+ *
+ * SIIRTO ON ESITYSTÄ, EI DATAA, ja se on deterministinen: ryhmien
+ * järjestys on vakaa (js/fokusnosto.js poolin järjestys), joten sama
+ * lauta antaa aina saman rivityksen.
+ */
+function nostosymOmaanRiviin(paikka, paikat, s) {
+  if (!Array.isArray(paikat) || !paikat.length) return paikka;
+  const rivi = NOSTOSYM_LUETTU_DX * s;
+  const osuu = (y) => paikat.some(
+    (p) => Math.hypot(p.x - paikka.x, p.y - y) < rivi,
+  );
+  let y = paikka.y;
+  // Katto: pooli on lyhyt, eikä silmukka saa jäädä pyörimään.
+  for (let n = 0; n < paikat.length && osuu(y); n += 1) y += rivi;
+  return { x: paikka.x, y };
 }
 
 /**
@@ -2180,7 +2223,9 @@ export function asemoiNostosymbolit(ui, suhde = 1) {
   const paikat = (ui.nostosymPaikat ??= []);
   paikat.length = 0;
   for (const ryhma of ui.nostosymRyhmat ?? []) {
-    const paikka = ryhma.nippu ?? nostosymTuikkeenPaikka(ui, ryhma, sRuutu);
+    // Jo asetetut paikat kulkevat mukana, jotta varapolun piste löytää
+    // oman rivinsä eikä asetu toisen täyn päälle (nostosymOmaanRiviin).
+    const paikka = ryhma.nippu ?? nostosymTuikkeenPaikka(ui, ryhma, sRuutu, paikat);
     ankkuri = paikka.kohde ?? ankkuri;
     paikat.push(paikka);
     ryhma.g.setAttribute('transform',

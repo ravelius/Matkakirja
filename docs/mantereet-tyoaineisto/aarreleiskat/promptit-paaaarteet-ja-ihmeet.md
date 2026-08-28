@@ -67,3 +67,23 @@ asussa, ei tekstiä/vesileimaa.
 Kohdistus: 33=ihme-aleksandrian-kirjasto.webp,
 34=ihme-hefaistoksen-temppeli.webp, 35=ihme-rodoksen-kolossi.webp,
 36=ihme-zeuksen-patsas.webp (assets/kartat/ihmeet/).
+
+## Sarja C — täkynostojen loistoaikakuvat (10, vaaka 3:2, JPG)
+
+Annettu omistajalle chatissa 28.8.2026 (v1297-erän 10 nostoa:
+ESP/AUT/FRA/DEU). Kuvat Driveen matkakirja/Ihmeet-kansioon alla
+olevilla tiedostonimillä; IHME-putki (havainnekuva, kevyt syynäys).
+
+- **nosto-altamira-loistoaika.jpg** — Altamiran katto soihtujen valossa
+- **nosto-munkkiaratit-loistoaika.jpg** — Madridin jättipesä
+- **nosto-cartagena-loistoaika.jpg** — kantonin fregatit satamassa
+- **nosto-maailmannayttely-loistoaika.jpg** — Praterin Rotunde 1873
+- **nosto-kirahvimuoti-loistoaika.jpg** — Schönbrunnin kirahvi 1828
+- **nosto-lustig-loistoaika.jpg** — tornikauppa kokoushuoneessa
+- **nosto-kirahvimatka-loistoaika.jpg** — kirahvi maantiellä
+- **nosto-kopenick-loistoaika.jpg** — kaupungintalo miehitettynä 1906
+- **nosto-archaeopteryx-loistoaika.jpg** — jurakauden laguuni
+- **nosto-neuschwanstein-loistoaika.jpg** — linna telineissä 1880-luku
+
+Täydet promptit annettiin chatissa; sama tyyli kuin sarjassa B
+(fotorealistinen, ei tekstiä/vesileimaa, Landscape 3:2).
