@@ -3849,10 +3849,28 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
     var(--panel);
 }
 
+/*
+ * OTSIKKORIVI VARAA TILAN KAIUTTIMELLE (omistajan bugiraportti
+ * 28.8.2026 iPhonesta: kuvake istui merkinnän paikkarivin päällä,
+ * "762":n kohdalla).
+ *
+ * Kaiutin on kortin oikeassa yläkulmassa absoluuttisesti aseteltuna
+ * (.fact-kuuntele), joten se ei itse varaa tilaa asettelusta. Rivin
+ * mitat annetaan siis TÄSSÄ, ja ne on sidottu samaan --kaiutin-koko
+ * -mittaan kuin nappi:
+ *  - line-height: kuvakkeen korkuinen rivilaatikko, joten nappi mahtuu
+ *    kokonaan otsikkorivin kohdalle eikä ylety paikkariville;
+ *  - padding-inline-end: kuvakkeen leveys + väli, joten pitkäkään
+ *    otsikko ei mene kuvakkeen alle millään ruudunleveydellä.
+ * Kirjasinkoko vaihtuu ruudun mukaan (media-lohko), rivimitta ei —
+ * kuvake on molemmilla sama.
+ */
 .fact-card h2 {
   margin: 0 0 0.35rem;
   font-family: var(--font-type);
   font-size: 0.78rem;
+  line-height: var(--kaiutin-koko);
+  padding-inline-end: calc(var(--kaiutin-koko) + 0.4rem);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--accent);
@@ -7727,6 +7745,10 @@ body[data-mode] .fact-card.pieni > #fact-voice {
   order: -2;
   opacity: 1;
   margin: 0;
+  /* Kaiuttimen tilanvaraus on auki olevan kortin otsikkorivin asia
+   * (.fact-card h2). Lapussa kaiutin on häivytetty pois, ja varaus
+   * jättäisi kaupungin nimen eteen tyhjän kaistaleen pergamenttia. */
+  padding-inline-end: 0;
   font-size: var(--pieni-rivi);
   line-height: 1.5;
   white-space: nowrap;
@@ -7847,6 +7869,19 @@ body[data-mode] .fact-card {
   padding: 0.2rem 0.35rem;
   color: var(--map-ink);
   text-shadow: 0 1px 0 rgba(247, 237, 216, 0.9), 0 0 6px rgba(247, 237, 216, 0.75);
+}
+
+/*
+ * Kortin pehmuste myös mittana: kaiutin ripustetaan otsikkoriville
+ * juuri tämän verran kortin reunasta (.fact-card .fact-kuuntele),
+ * joten luku ei saa asua kahdessa paikassa eri arvoina. Perusarvo on
+ * .card-luokan oma pehmuste; kelluvalla kartalla se on pienempi.
+ */
+.fact-card { --kortti-pehmuste-y: 0.6rem; --kortti-pehmuste-x: 0.7rem; }
+
+body[data-mode] .fact-card {
+  --kortti-pehmuste-y: 0.2rem;
+  --kortti-pehmuste-x: 0.35rem;
 }
 
 body[data-mode] .fact-card h2 {
@@ -8393,13 +8428,42 @@ body.katselu #newgame-btn { display: none; }
 }
 
 /* Kaiutin kortin oikeassa yläkulmassa: hillitty viivapiirros samaan
- * tapaan kuin kuvakuvake — jatkaa merkinnän luentaa. */
-.fact-kuuntele {
+ * tapaan kuin kuvakuvake — jatkaa merkinnän luentaa.
+ *
+ * KAIUTIN ON OTSIKKORIVILLÄ, EI TEKSTIN PÄÄLLÄ (omistajan bugiraportti
+ * 28.8.2026 iPhonesta). Kaksi asiaa piti korjata:
+ *
+ *  1. `button.ghost` (min-height: 36px, padding: 0.35rem 0.7rem) on
+ *     tarkempi valitsin kuin pelkkä `.fact-kuuntele`, joten tämän
+ *     lohkon `min-height: 0` ja `padding: 0.15rem` EIVÄT päteneet.
+ *     Napin laatikko oli 40 × 36 px, ja 18 pikselin kuvake keskittyi
+ *     siihen — eli kaksi riviä alemmas kuin oli tarkoitus, keskelle
+ *     merkinnän paikkariviä. Valitsin on nyt `.fact-card
+ *     .fact-kuuntele`, joka voittaa `button.ghost`in.
+ *  2. Ankkuri seuraa kortin OMAA pehmustetta (--kortti-pehmuste-*),
+ *     jolloin kuvake osuu otsikkorivin kohdalle eikä sen ylä- tai
+ *     alapuolelle, vaikka pehmuste vaihtuisi.
+ *
+ * Otsikkorivi varaa kuvakkeelle sekä korkeuden että leveyden
+ * (.fact-card h2), joten leipä- ja paikkarivi jäävät aina kuvakkeen
+ * alapuolelle — ruudunleveydestä riippumatta.
+ *
+ * Kosketusala pidetään sormen kokoisena läpinäkyvällä ::before-alalla:
+ * näkyvä kuvake on rivin korkuinen, mutta osuma-ala on entisen napin
+ * mittainen. (Vinoviiva mykistetystä tilasta on ::after, ks. alempana.)
+ */
+.fact-card { --kaiutin-koko: 1.2rem; }
+
+.fact-card .fact-kuuntele {
   position: absolute;
-  top: 0.4rem;
-  right: 0.5rem;
-  padding: 0.15rem;
+  top: var(--kortti-pehmuste-y);
+  right: var(--kortti-pehmuste-x);
+  width: var(--kaiutin-koko);
+  height: var(--kaiutin-koko);
+  padding: 0;
   min-height: 0;
+  display: grid;
+  place-items: center;
   background: none;
   border: 0;
   box-shadow: none;
@@ -8407,6 +8471,16 @@ body.katselu #newgame-btn { display: none; }
   line-height: 0;
   cursor: pointer;
 }
+
+.fact-card .fact-kuuntele svg { width: 1.1rem; height: 1.1rem; }
+
+/* Sormen kokoinen osuma-ala ilman että kuvake kasvaa. */
+.fact-card .fact-kuuntele::before {
+  content: '';
+  position: absolute;
+  inset: -0.55rem;
+}
+
 .fact-kuuntele:hover:not(:disabled) { background: none; color: #9c6f1e; }
 
 .fact-image-btn {
