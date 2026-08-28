@@ -882,6 +882,114 @@ body.fokuszoom-paalla .fokusvirta-kortti {
   grid-row: 3 / span 3;
 }
 
+/* ---------- pulla Livialle: vinkki rahalla ---------- */
+
+/*
+ * TARJOUS ON LAATIKON JÄLKIKIRJOITUS (omistajan tilaus 28.8.2026:
+ * *"aarretehtävässä vinkin voisi saada jatkossa ostamalla pullan
+ * pululle"*). Markup on js/fokustehtavat.js:ssä (piirraPullaOstos).
+ *
+ * KATKOVIIVA EROTTAA SEN VASTAAMISESTA. Vastauslipukkeet ovat yhtenäistä
+ * musteviivoitusta laidasta laitaan, ja tarjous on eri asia kuin
+ * vastaus: katkoviiva ja kehystetty nappi sanovat sen ilman sanoja.
+ * Nappi on samaa sukua kuin "Lunasta juliste" (css/styles.css
+ * .minitehtava-lunastus) mutta katkoreunuksinen — se ei ole palkinto
+ * vaan kauppa.
+ */
+.minitehtava.fokus-tehtava .fokus-pulla,
+.dialog.lehti .arrival-kulttuuri #arrival-kulttuuri-visa.fokus-visa .fokus-pulla {
+  margin-top: 0.8rem;
+  padding-top: 0.65rem;
+  border-top: 1px dashed rgba(60, 44, 26, 0.38);
+}
+
+/* Palkinnollinen laatikko on ruudukko: tarjous ottaa koko leveyden. */
+.minitehtava.fokus-tehtava.minitehtava-palkinnollinen > .fokus-pulla {
+  grid-column: 1 / -1;
+}
+
+.dialog .minitehtava.fokus-tehtava .fokus-pulla-nappi,
+.dialog.lehti .arrival-kulttuuri #arrival-kulttuuri-visa.fokus-visa .fokus-pulla-nappi {
+  display: block;
+  width: 100%;
+  /* Sormisääntö: kosketuskoko vähintään 44 px myös lehden sisällä. */
+  min-height: 44px;
+  margin: 0;
+  padding: 0.5rem 1.05rem;
+  border: 1px dashed rgba(60, 44, 26, 0.6);
+  border-radius: 4px;
+  background: rgba(255, 253, 245, 0.72);
+  box-shadow: none;
+  font-family: var(--font-luku);
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  text-align: center;
+  color: #211d18;
+  cursor: pointer;
+}
+
+.dialog .minitehtava.fokus-tehtava .fokus-pulla-nappi:hover:not(:disabled),
+.dialog .minitehtava.fokus-tehtava .fokus-pulla-nappi:focus-visible,
+.dialog.lehti .arrival-kulttuuri #arrival-kulttuuri-visa.fokus-visa
+  .fokus-pulla-nappi:hover:not(:disabled),
+.dialog.lehti .arrival-kulttuuri #arrival-kulttuuri-visa.fokus-visa
+  .fokus-pulla-nappi:focus-visible {
+  background: #fffdf5;
+  border-color: rgba(60, 44, 26, 0.85);
+  color: #16130f;
+}
+
+/*
+ * VARMISTUS ON ERI NAPPI KUIN TARJOUS. Toinen napautus maksaa, joten
+ * napin on näytettävä toiselta: katkoviiva umpeutuu ja pohja saa saman
+ * lämpimän sävyn kuin kortin varmistusnappi (fokusvirta-varmistusnapit).
+ */
+.dialog .minitehtava.fokus-tehtava .fokus-pulla-nappi.fokus-pulla-varmistus,
+.dialog.lehti .arrival-kulttuuri #arrival-kulttuuri-visa.fokus-visa
+  .fokus-pulla-nappi.fokus-pulla-varmistus {
+  border-style: solid;
+  border-color: rgba(122, 85, 20, 0.75);
+  background: linear-gradient(180deg, #f0c76a, #dda63a);
+  font-weight: 700;
+  color: #2c1e07;
+}
+
+/* Tyhjä kassa: nappi jää näkyviin mutta ei ota napautusta vastaan. */
+.dialog .minitehtava.fokus-tehtava .fokus-pulla-nappi:disabled,
+.dialog.lehti .arrival-kulttuuri #arrival-kulttuuri-visa.fokus-visa
+  .fokus-pulla-nappi:disabled {
+  border-style: dotted;
+  background: none;
+  color: rgba(33, 29, 24, 0.55);
+  cursor: default;
+}
+
+/*
+ * LIVIAN ÄÄNI NAPIN ALLA — sama pieni kursiivi kuin vihjerivillä, koska
+ * se on samaa äänensävyä: laatikon selittävä reunahuomautus eikä
+ * pelitapahtuma.
+ */
+.minitehtava.fokus-tehtava .fokus-pulla-huomio,
+.minitehtava.fokus-tehtava .fokus-pulla-tehty,
+.dialog.lehti .arrival-kulttuuri #arrival-kulttuuri-visa.fokus-visa .fokus-pulla-huomio,
+.dialog.lehti .arrival-kulttuuri #arrival-kulttuuri-visa.fokus-visa .fokus-pulla-tehty {
+  margin: 0.45rem 0 0;
+  font-family: var(--font-luku);
+  font-size: 0.82rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.35;
+  text-align: center;
+  color: rgba(60, 44, 26, 0.72);
+}
+
+/* Kauppa tehty: rivi on yksin laatikon lopussa eikä kaipaa yläväliä. */
+.minitehtava.fokus-tehtava .fokus-pulla-tehty,
+.dialog.lehti .arrival-kulttuuri #arrival-kulttuuri-visa.fokus-visa .fokus-pulla-tehty {
+  margin-top: 0;
+}
+
 /* ---------- vihreä hehkuva kohtaamispiste ---------- */
 
 /*
