@@ -24255,14 +24255,26 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero-kuwait-keskipaiva.png',
+          /*
+           * KUVA UUSITTU 28.8.2026 (omistajan parannettu versio,
+           * Kuwaitin suurmoskeija). Kohde ja kuvateksti pysyvät
+           * samoina — vain tiedosto vaihtui, ja pääte on nyt jpg
+           * kuten muissakin uusituissa heroissa.
+           */
+          ampari: 'herokoe/hero-kuwait-keskipaiva.jpg',
           selite: 'Kuwaitin suurmoskeija rakennettiin 1979–1986, sen kupoli '
             + 'on 26 metriä leveä ja 43 metriä korkea, minareetti nousee 74 '
             + 'metriin, ja rukoussaliin mahtuu kymmenentuhatta ihmistä.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero-kuwait-ilta.png',
+          /*
+           * KUVA UUSITTU 28.8.2026 (omistajan parannettu versio,
+           * Seifin palatsi). Kohde ja kuvateksti pysyvät
+           * samoina — vain tiedosto vaihtui, ja pääte on nyt jpg
+           * kuten muissakin uusituissa heroissa.
+           */
+          ampari: 'herokoe/hero-kuwait-ilta.jpg',
           selite: 'Seifin palatsin rakentaminen alkoi 1880 ja siihen '
             + 'käytettiin paikallista savea, kiveä, kalkkikiveä, puuta ja '
             + 'metallia, ja sen kellotorni on päällystetty sinisillä '
@@ -26879,7 +26891,13 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero-damaskos-ilta.png',
+          /*
+           * KUVA UUSITTU 28.8.2026 (omistajan parannettu versio,
+           * näkymä Qasiun-vuorelta). Kohde ja kuvateksti pysyvät
+           * samoina — vain tiedosto vaihtui, ja pääte on nyt jpg
+           * kuten muissakin uusituissa heroissa.
+           */
+          ampari: 'herokoe/hero-damaskos-ilta.jpg',
           selite: 'Damaskos on maailman vanhimpia yhtäjaksoisesti '
             + 'asuttuja kaupunkeja, ja Qasiun-vuoren rinteeltä sen '
             + 'vanhakaupunki näyttäytyy kattojen ja kupolien mattona '
@@ -27321,7 +27339,13 @@ export const KULTTUURI_KATEGORIAT = {
        */
       avauskuvat: [
         {
-          ampari: 'herokoe/hero-luxor-aamu.png',
+          /*
+           * KUVA UUSITTU 28.8.2026 (omistajan parannettu versio,
+           * Karnakin pylvässali). Kohde ja kuvateksti pysyvät
+           * samoina — vain tiedosto vaihtui, ja pääte on nyt jpg
+           * kuten muissakin uusituissa heroissa.
+           */
+          ampari: 'herokoe/hero-luxor-aamu.jpg',
           selite: 'Karnakin Amonin temppelialuetta rakennettiin ja '
             + 'laajennettiin yli kahden vuosituhannen ajan Keskimmästä '
             + 'valtakunnasta ptolemaiolaisaikaan, ja sen 134 pylvään sali on '
@@ -43942,7 +43966,13 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         /* GENEROIDUT HEROT, KIERROS 17 (23.8.2026, tools/hero-tyolista-12.mjs). */
         {
-          ampari: 'herokoe/hero-mandalay-aamu.png',
+          /*
+           * KUVA UUSITTU 28.8.2026 (omistajan parannettu versio,
+           * Atumashin luostari). Kohde ja kuvateksti pysyvät
+           * samoina — vain tiedosto vaihtui, ja pääte on nyt jpg
+           * kuten muissakin uusituissa heroissa.
+           */
+          ampari: 'herokoe/hero-mandalay-aamu.jpg',
           selite: 'Kuningas Mindon rakennutti Atumashin luostarin 1857 puolen '
             + 'miljoonan rupian hinnalla, tulipalo tuhosi sen 1890, ja se '
             + 'rakennettiin uudelleen 1996 — katto nousee viitenä '
