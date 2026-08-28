@@ -753,7 +753,13 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
   g.setAttribute('role', 'button');
   g.setAttribute('tabindex', '0');
   g.setAttribute('aria-label', `${kohde.nimi}: avaa tietoruutu`);
-  el('circle', { class: 'fokuskohde-osuma', r: KOHDE_OSUMA_R }, g);
+  /*
+   * SÄDE ELÄÄ MITTAKAAVAPASSISSA (asetaKohdeMittakaava): kun merkin
+   * näkyvä koko on katettu lehden omiin mittoihin, osuma-ympyrä
+   * kasvatetaan takaisin sormen mittaan. Tässä kirjoitetaan lähtöarvo,
+   * jotta merkillä on osuma-alue jo ennen ensimmäistä passia.
+   */
+  tietue.osuma = el('circle', { class: 'fokuskohde-osuma', r: KOHDE_OSUMA_R }, g);
   /*
    * TOINEN OSUMA-ALUE POLTETULLE NIMELLE (v1218). Kaupungin nimi on
    * kartan iso kohde, ja se on kuvassa eikä solmuna — laatikko tulee
@@ -971,12 +977,22 @@ function eritteleKohdeRyhmat(ui, s) {
  * ryöpyssä, korjauksen jälkeen 0.
  */
 function asetaKohdeMittakaava(ui, suhde) {
-  const s = ui.fokusMerkkiSkaala?.(suhde);
+  /*
+   * KAKSI MITTAA (omistaja 28.8.2026, ks. js/ui.js
+   * fokusMerkkiSkaalaKartalle): merkin NÄKYVÄ koko on katettu lehden
+   * omiin mittoihin, mutta sormen 44 px:n sääntö elää kattamattomassa
+   * skaalassa. Ryhmä skaalataan katetulla arvolla, ja osuma-ympyrän säde
+   * kerrotaan suhteella takaisin ylös — merkki pienenee, napautusala ei.
+   */
+  const s = ui.fokusMerkkiSkaalaKartalle?.(suhde) ?? ui.fokusMerkkiSkaala?.(suhde);
   if (!(s > 0)) return;
+  const sRuutu = ui.fokusMerkkiSkaala?.(suhde) ?? s;
+  const osumaR = KOHDE_OSUMA_R * (sRuutu > 0 ? sRuutu / s : 1);
   eritteleKohdeRyhmat(ui, s);
-  niputaFokusmerkit(ui, s);
+  niputaFokusmerkit(ui, s, sRuutu);
   const zoom = s.toFixed(4);
   for (const ryhma of ui.fokuskohdeRyhmat ?? []) {
+    if (ryhma.osuma) maare(ryhma.osuma, 'r', osumaR.toFixed(2));
     const px = ryhma.nippu?.x ?? ryhma.x + (ryhma.sx ?? 0);
     const py = ryhma.nippu?.y ?? ryhma.y + (ryhma.sy ?? 0);
     maare(ryhma.g, 'transform', `translate(${px.toFixed(2)} ${py.toFixed(2)}) scale(${zoom})`);
@@ -1191,7 +1207,9 @@ function paivitaKohdeNimiot(ui, s) {
  * eivät siis synny uudelleen kesken panoroinnin tai nipistyksen.
  */
 function paivitaRasteriporras(ui, skaala) {
-  const perus = ui.fokusMerkkiSkaala?.();
+  // Katettu skaala: rasterin tarve on merkin NÄKYVÄ koko ruudulla, ja
+  // katon purressa merkki on pienempi kuin kattamaton mitta lupaisi.
+  const perus = ui.fokusMerkkiSkaalaKartalle?.() ?? ui.fokusMerkkiSkaala?.();
   if (!(perus > 0) || !(skaala > 0)) return false;
   const tiheys = typeof window === 'undefined' ? 1 : (window.devicePixelRatio || 1);
   return nostosymAsetaPorras(KOHDE_SYMBOLI_SKAALA * skaala * perus * Math.min(tiheys, 3));
@@ -1272,7 +1290,9 @@ export function paivitaFokuskohteet(ui) {
    * jää muuten välimuistin taakse. Nipistyksen vastaskaalaus ei kutsu
    * sitä lainkaan — ks. osio NIMIÖIDEN VÄISTÖ.
    */
-  const merkkiSkaala = ui.fokusMerkkiSkaala?.();
+  // Väistö mittaa NÄKYVÄÄ merkkiä ja nimiötä, joten mitta on katettu
+  // skaala — sama, jolla merkit juuri asemoitiin.
+  const merkkiSkaala = ui.fokusMerkkiSkaalaKartalle?.() ?? ui.fokusMerkkiSkaala?.();
   if (merkkiSkaala > 0) paivitaKohdeNimiot(ui, merkkiSkaala);
   // Rekisteröinti nipistykseen jää (js/kartta.js vastaskaalaaMerkit),
   // vaikka vakioskaala ei enää tarvitse vastaskaalaa: varapolku
