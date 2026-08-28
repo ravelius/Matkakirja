@@ -7161,10 +7161,24 @@ export class UI {
    * sekin vakio, joten merkki skaalautuu kartan mukana silloinkin kun
    * katto puree.
    */
+  /*
+   * SKAALA ON KATETTU (omistajan iPhone-palaute 28.8.2026 ilta:
+   * *"pelinappula on aivan liian ison kokoinen"* — kaappauksessa
+   * nappula peitti Vitošan ja puolet Sofian ympäristöstä). Juurisyy on
+   * sama kuin kohdemerkeillä aiemmin (ks. fokusMerkkiSkaalaKartalle):
+   * kapealla ruudulla lehden perustaso sovittuu LEVEYDESTÄ, jolloin
+   * ruutupikseleinä annettu mitta on kartalla moninkertainen
+   * työpöytään nähden. Katto on lehden oma typografia
+   * (FOKUS_MERKKI_KATTO), ja se puree käytännössä vain alle ~800
+   * pikselin ruudulla — työpöydän ja iPadin näkymät eivät muutu.
+   * Nappula ei ota napautuksia vastaan (css .pawn-kuva
+   * pointer-events: none), joten osuma-aluekompensaatiota ei tarvita;
+   * laatan oma napautusalue on erillinen ja ennallaan.
+   */
   fokusMerkkiKerroin(px, omaR) {
     if (!this.fokusmoodi || this.katselu) return 1;
     if (!(omaR > 0)) return 1;
-    const s = this.fokusMerkkiSkaala();
+    const s = this.fokusMerkkiSkaalaKartalle();
     if (!(s > 0)) return 1;
     return Math.min(1, (px / 2) * s / omaR);
   }

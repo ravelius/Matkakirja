@@ -98,6 +98,26 @@ const MANNER_ZOOM = 2.3;        // vanha kiinteä kerroin; nykyään portaat las
 const ZOOMI_ASKEL = 1.5;
 // Lähin porras: yhden kaupungin ympäristö millä tahansa laudalla.
 const ZOOMI_LAHIN = 88;
+/*
+ * KAPEALLA RUUDULLA PYKÄLÄ LÄHEMMÄS (omistajan iPhone-palaute
+ * 28.8.2026: *"nykyisestä maksimizoomista ei pääse tarpeeksi lähelle —
+ * kartan tekstit jäävät liian pieniksi luettavaksi"*, kuvakaappaus
+ * Bulgariasta pystynäytöllä).
+ *
+ * 88 yksikön näkymä on 390 pikselin ruudulla 4,4 px/yksikkö, jolloin
+ * lehteen poltettu 11 prototyyppipikselin nimiö (~3,2 yksikköä) on
+ * ruudulla ~14 px — työpöydällä sama porras antaa yli 30 px. Kapea
+ * ruutu saa siksi yhden ZOOMI_ASKELeen lisää: 58 yksikön näkymä
+ * nostaa nimiön ~21 pikseliin. Atlas-lehden tarkkuus (6400 px /
+ * lehden bbox, esim. Kreikka 10,5 px/yksikkö) riittää tähän vielä
+ * kohtuudella: laitepikseleinä (dpr 3) suurennos on ~1,9-kertainen —
+ * pehmeä mutta luettava, kun 88 yksikön porras oli jo 1,3-kertainen.
+ * Toinen lisäporras olisi ~2,8x eli selvästi mössöä, joten vain yksi.
+ */
+const ZOOMI_LAHIN_KAPEA = 58;
+// Sama raja kuin saapumisportaalla (saapumisPorras): tätä kapeampi
+// karttaruutu on puhelin.
+const KAPEAN_RAJA = 700;
 
 /*
  * Mihin saapumiszoom pysähtyy.
@@ -746,15 +766,26 @@ export class Kartta {
    */
   zoomiTasot() {
     const leveys = this.ui.contentBox?.w ?? 1000;
-    if (this.tasotLeveys === leveys && this.tasotMuisti) return this.tasotMuisti;
+    /*
+     * Kapea ruutu saa yhden portaan lisää (ZOOMI_LAHIN_KAPEA): nimiöt
+     * jäävät muuten lukukelvottomiksi (omistajan iPhone-palaute
+     * 28.8.2026). Mitta tulee paneMitat-välimuistista eikä
+     * asettelusta — tätä kysytään eleiden silmukoissa (v1115:n
+     * sääntö), ja välimuistin avain kattaa nyt myös rajan: ruudun
+     * koon muutos ajaa aina fitViewBoxin, joka päivittää paneKoon.
+     */
+    const kapea = this.paneMitat(this.ui.mapPane).w < KAPEAN_RAJA;
+    const lahin = kapea ? ZOOMI_LAHIN_KAPEA : ZOOMI_LAHIN;
+    const avain = `${leveys}:${lahin}`;
+    if (this.tasotAvain === avain && this.tasotMuisti) return this.tasotMuisti;
     const tasot = [1];
     let nakyva = leveys / ZOOMI_ASKEL;
-    while (nakyva > ZOOMI_LAHIN * 1.05) {
+    while (nakyva > lahin * 1.05) {
       tasot.push(leveys / nakyva);
       nakyva /= ZOOMI_ASKEL;
     }
-    tasot.push(leveys / ZOOMI_LAHIN);
-    this.tasotLeveys = leveys;
+    tasot.push(leveys / lahin);
+    this.tasotAvain = avain;
     this.tasotMuisti = tasot;
     return tasot;
   }
