@@ -67,6 +67,8 @@ import {
   avaaNahtavyys, mitoitaNahtavyysDialogi, nahtavyydenKaruselli,
 } from './nahtavyydet.js';
 import { taitaOpas } from './opas.js';
+// Laitemittari (?mittari=1): pois päältä se ei tee eikä maksa mitään.
+import { kaynnistaKarttamittari } from './karttamittari.js';
 // Lautojen yhdistetyt sisältötaulut, luentajoukot ja kuratoidut
 // galleriat (siirretty tästä tiedostosta 17.8.2026, remontin M1).
 import {
@@ -2555,6 +2557,13 @@ export class UI {
     // Karttaruutu, ei siirtokuori: kuori on ruudun kokoinen mutta
     // liikkuu, ja koon muutos tulee aina ruudulta (wrapper-siirto).
     this.observer.observe(this.mapPane);
+    /*
+     * LAITEMITTARI vasta kun kartta on paikallaan: laatikko asuu
+     * karttaruudussa ja lukee lavan mitat. Ilman `?mittari=1`-kytkintä
+     * kutsu palaa saman tien eikä jätä jälkeensä mitään (ks.
+     * js/karttamittari.js) — käyttöohje on PR:ssä, ei työhuoneessa.
+     */
+    this.laitemittari = kaynnistaKarttamittari(this);
     this.vahdiNakymanKokoa();
     this.render();
     this.esilataaAarrekuvat();
@@ -3504,6 +3513,10 @@ export class UI {
     this.linssiSelite = null;
     if (this.linssiKotelo) this.linssiKotelo.hidden = true;
     this.observer?.disconnect();
+    // Laitemittarin kehyssilmukka ja tarkkailija seuraisivat muuten
+    // uuteen peliin kahtena (ks. js/karttamittari.js).
+    this.laitemittari?.sammuta();
+    this.laitemittari = null;
   }
 
   /**

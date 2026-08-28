@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1296, teksti: 'Karttaan kytkettava laitemittari' },
   { v: 1295, teksti: 'Paahahmo on nimeton Foggin perillinen' },
   { v: 1294, teksti: 'Kartan lava ikkunoidaan nakymaan' },
   { v: 1293, teksti: 'Kapea naytto: syvempi zoomiporras ja pienempi nappula' },
