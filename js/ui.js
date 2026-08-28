@@ -922,38 +922,54 @@ const NAPPULAN_KORKEUS = 28;
 const NAPPULAN_LEVEYS = NAPPULAN_KORKEUS * (177 / 256);
 const NAPPULAN_ANKKURI_X = 0.424;
 const NAPPULAN_ANKKURI_Y = 0.918;
-/* Jalusta hitusen kaupungin pisteen alapuolella, kuten vanha varjokin. */
-const NAPPULAN_JALKA_Y = 6;
 /*
- * VALKOINEN LAUTAPELINAPPULA (omistajan tilaus 27.8.2026: *"kokeile
+ * Jalusta hitusen kaupungin pisteen alapuolella, kuten vanha varjokin:
+ * ilman tätä hahmo leijuisi pisteen päällä eikä seisoisi siinä.
+ *
+ * 6 -> 3,5 (omistaja 28.8.2026). Kun kaupungin laatta tuli takaisin
+ * nappulan alle, kuuden yksikön siirto vei jalustan, varjon ja
+ * vuororenkaan laatan alalaitaan — ne rikkoivat laatan reunan juuri
+ * siitä, mistä laatan piti näkyä. 3,5 pitää perspektiivin (jalusta on
+ * yhä pisteen alapuolella) mutta jättää hahmon laatan päälle.
+ */
+const NAPPULAN_JALKA_Y = 3.5;
+/*
+ * PUINEN LAUTAPELINAPPULA (omistajan tilaus 27.8.2026: *"kokeile
  * muuttaa tinaherra mahdollisimman yksinkertaiseksi pelinappulaksi,
- * nykyinen on liian raskas visuaalisesti. nappula voisi olla
- * valkoinen"*).
+ * nykyinen on liian raskas visuaalisesti"* — ja 28.8.2026: *"puun
+ * värisen ja matalamman"*).
  *
  * MIKSI: tinaherra on tummaa metallia ja täynnä yksityiskohtia —
  * silinteri, keppi, matkalaukku — ja kartalla se lukee pikkuesineenä,
  * ei pelaajan paikkana. Laudalla nappula on kymmenkunta pikseliä
  * korkea, jolloin yksityiskohdat menevät mössöksi ja jäljelle jää vain
- * tumma läiskä seepiakartan päällä. Valkoinen kartionappula on
- * SILUETTI: sen tunnistaa yhdellä silmäyksellä missä koossa tahansa, ja
- * vaalea pinta erottuu vaaleasta kartasta ohuella tummalla ääriviivalla
- * ilman että se painaa karttaa alleen.
+ * tumma läiskä seepiakartan päällä. Kartionappula on SILUETTI: sen
+ * tunnistaa yhdellä silmäyksellä missä koossa tahansa.
+ *
+ * PUUN VÄRI EIKÄ VALKOINEN. Ensimmäinen versio oli lämmin valkoinen, ja
+ * seepiakartan päällä se luki paperinpalana: vaalein asia laudalla oli
+ * pelaajan oma nappula, ja katse tarttui siihen ennen karttaa. Sorvatun
+ * pyökin sävy (css .pawn-nappula) on samasta paletista kuin kartta
+ * itse — se on lautapelin osa kartan päällä, ei reikä kartassa — mutta
+ * selvästi tummempi ja kylläisempi kuin kaupungin laatta (#f3e5c4),
+ * joten hahmo erottuu siitä laatasta, jonka päällä se seisoo.
  *
  * PIIRRETÄÄN KOODILLA, EI KUVANA. Ääriviiva skaalautuu zoomissa
  * terävänä, tiedostoa ei tarvitse ladata eikä tallentaa välimuistiin,
  * ja väriä voi säätää yhdestä paikasta (css .pawn-nappula).
  *
- * MITAT LAUDAN YKSIKÖISSÄ, ja ne on sovitettu tinaherran mittoihin:
- * ankkuri on jalustan keskipiste (0,0 polun omassa kehyksessä) ja laki
- * jää samaan korkeuteen kuin silinterin laki (noin 26 yksikköä
- * jalustasta), jotta kaupungin nimikyltti nappulan yläpuolella
- * (boardBounds ly -19) säilyy luettavana. Leveys on 13,2 eli kapeampi
- * kuin tinaherra (19,4): nappulassa ei ole keppiä eikä laukkua.
+ * MITAT LAUDAN YKSIKÖISSÄ, ja ne on sovitettu KAUPUNGIN LAATTAAN, ei
+ * enää tinaherran silinteriin (omistajan tilaus 28.8.2026, ks.
+ * NAPPULAN_POLKU alla): laki 18,1 ja leveys 10 laudan yksikköä, kun
+ * tavallisen kaupungin laatta on 23,2 yksikköä leveä (drawCities, rx
+ * 11,6) ja kaupunkilaudalla 19,0 (nodeScale 0,82). Nappula seisoo
+ * laatan päällä peittämättä sitä, ja kaupungin nimikyltti nappulan
+ * yläpuolella (boardBounds ly -19) jää entistä väljemmälle.
  *
  * PALUU VANHAAN on yhden vakion mittainen: NAPPULA_TYYLI = 'tinaherra'
  * palauttaa webp-kuvan (tiedosto on jätetty repoon juuri siksi).
  */
-const NAPPULA_TYYLI = 'valkoinen';
+const NAPPULA_TYYLI = 'puinen';
 /*
  * Klassinen nappulan siluetti yhtenä polkuna: pyöreä jalusta, kartioksi
  * kapeneva runko, kaulus ja pallopää. Yksi polku eikä kolme päällekkäistä
@@ -963,20 +979,40 @@ const NAPPULA_TYYLI = 'valkoinen';
  * Origo on jalustan keskipiste ja y kasvaa alaspäin (SVG), joten hahmo
  * nousee negatiiviseen y-suuntaan. Pään kaari on yksi A-komennon puoliympyrää
  * suurempi kaari; kaulus on kaksi lyhyttä käyrää sen alla.
+ *
+ * MATALAMPI JA KAPEAMPI KUIN ENSIMMÄINEN VERSIO (omistaja 28.8.2026:
+ * *"pelinappulasta voisi tehdä puun värisen ja matalamman. ja lisäksi
+ * sen alta saisi näkyä kaupungin laatta (nyt ei näy ollenkaan). eli
+ * nappula saa olla pienempi"*).
+ *
+ * MITTA TULEE LAATASTA. Nappula oli 13,2 x 25,9 yksikköä, eli sen
+ * jalusta oli lähes yhtä leveä kuin kaupungin laatta (23,2) ja hahmo
+ * ylsi kaupungin nimen tasalle. Silloin laatasta ei jäänyt nappulan
+ * ympärille reunaa, ja laatta piti piilottaa kokonaan hahmon alta
+ * (css .nappulan-alla) — juuri se on omistajan havainto "ei näy
+ * ollenkaan". Nyt siluetti on 10 x 18,1 eli laatan levyinen vain
+ * 43-prosenttisesti: laatan reunaa jää molemmin puolin noin kuusi
+ * yksikköä, ja laatta piirretään taas nappulan alle.
+ *
+ * SUHTEET EIVÄT OLE PELKKÄ SKAALAUS. Korkeus kutistui 70 %:iin mutta
+ * leveys vain 76 %:iin: matalampi nappula on myös TUKEVAMPI, muuten
+ * siitä tulisi neula. Pää on suhteessa hitusen pienempi (halkaisija
+ * 6,1 vs. jalusta 10) kuin ennen (8,6 vs. 13,2), jottei siitä tule
+ * pienessä koossa nuppineulan päätä.
  */
-const NAPPULAN_POLKU = 'M 6.6 0'
-  + ' C 6.6 -2.4 4.7 -2.7 4.25 -4.4'
-  + ' C 3.5 -8.2 2.8 -12 2.55 -14.8'
-  + ' L 3.7 -15.8'
-  + ' C 4.4 -16.4 4.2 -17.6 2.6 -18.2'
-  + ' A 4.3 4.3 0 1 0 -2.6 -18.2'
-  + ' C -4.2 -17.6 -4.4 -16.4 -3.7 -15.8'
-  + ' L -2.55 -14.8'
-  + ' C -2.8 -12 -3.5 -8.2 -4.25 -4.4'
-  + ' C -4.7 -2.7 -6.6 -2.4 -6.6 0'
-  + ' C -6.6 1 6.6 1 6.6 0 Z';
-/* Siluetin laki jalustasta mitattuna (pään keskipiste 21,6 + säde 4,3). */
-const NAPPULAN_LAKI = 25.9;
+const NAPPULAN_POLKU = 'M 5 0'
+  + ' C 5 -1.7 3.55 -1.9 3.2 -3.1'
+  + ' C 2.65 -5.75 2.1 -8.4 1.93 -10.35'
+  + ' L 2.8 -11.05'
+  + ' C 3.33 -11.45 3.18 -12.3 1.97 -12.7'
+  + ' A 3.05 3.05 0 1 0 -1.97 -12.7'
+  + ' C -3.18 -12.3 -3.33 -11.45 -2.8 -11.05'
+  + ' L -1.93 -10.35'
+  + ' C -2.1 -8.4 -2.65 -5.75 -3.2 -3.1'
+  + ' C -3.55 -1.9 -5 -1.7 -5 0'
+  + ' C -5 0.8 5 0.8 5 0 Z';
+/* Siluetin laki jalustasta mitattuna (pään keskipiste 15,03 + säde 3,05). */
+const NAPPULAN_LAKI = 18.1;
 /*
  * Osuma-alueen katto LAUDAN yksiköissä. Ruutumitta muuttuu laudan
  * yksiköiksi jakamalla zoomilla, ja yleiskuvassa (pieni zoom) jakolasku
@@ -6669,24 +6705,21 @@ export class UI {
     for (const osa of osat) this.asetaLaatanKoko(osa, kerroin);
     this.fokusLaattaOsat = osat;
     /*
-     * LAATTA POIS NAPPULAN ALTA (omistajan pelitesti 27.8.2026,
-     * iPad-kaappaus Sofian fokuslaudalta: *"nappulan alla näkyy monta
-     * päällekkäistä kerrosta"*).
+     * MERKINTÄ SIITÄ, ETTÄ NAPPULA SEISOO TÄMÄN LAATAN PÄÄLLÄ.
      *
-     * Fokuslaudalla pelaajan sijainti oli merkitty kahdesti: ensin
-     * kaupungin omalla laatalla ja sen sykekehällä, sitten — v1194:stä
-     * lähtien, kun nappulan piilotussääntö poistui — tinaherralla, joka
-     * seisoo täsmälleen saman pisteen päällä. Päällekkäin ne lukivat
-     * sotkuisena pinona: kullanvärinen rengas, sykekehä, nappulan varjo
-     * ja vuoron rengas. Omistajan tilaus on yksiselitteinen: pelaajan
-     * sijainnissa näkyy VAIN tinaherra, sen oma varjo ja vuorossa
-     * ollessa yksi hillitty rengas.
+     * MITÄ LUOKKA TEKEE, ON CSS:SSÄ (.nappulan-alla). Se piilotti
+     * 27.8.2026 koko laatan — silloinen nappula oli laatan levyinen
+     * eikä laatasta jäänyt sen ympärille reunaa — ja piilottaa
+     * 28.8.2026 alkaen enää lentokoneen merkin (se on täsmälleen
+     * hahmon takana) ja houkuttelevan sykekehän (se kutsuu
+     * napauttamaan tyhjää laattaa). Laatta itse jää näkyviin:
+     * omistajan tilaus 28.8.2026 on, että nappula seisoo laatalla
+     * peittämättä sitä, ja nappula kutistettiin sitä varten.
      *
-     * PIILOTUS KOSKEE VAIN SITÄ KOHTAA, JOSSA NAPPULA ON. Ehto on
+     * EHTO KOSKEE VAIN SITÄ KOHTAA, JOSSA NAPPULA ON. Se on
      * geometrinen eikä "tämä on nykyinen kaupunki": jos samassa
      * kaupungissa on useampi pelaaja, nappulat levitetään kehälle
-     * (drawPawns, spread 17) eikä kukaan seiso enää laatan päällä —
-     * silloin laatta kuuluu näkyä, koska se ei ole kenenkään alla.
+     * (drawPawns, spread 17) eikä kukaan seiso enää laatan päällä.
      *
      * SÄÄNTÖ ON LUOKKA EIKÄ SUODATIN (sama iOS-sääntö kuin kartan
      * muillakin kerroksilla, tests/rules.test.mjs) ja sama keino kuin
@@ -6695,9 +6728,8 @@ export class UI {
      * NAPAUTUSALUE JÄÄ: laatta on fokusnäkymän Tutki-nappi
      * (fokusLaattaTutkii), ja sen näkymätön osuma-ympyrä piirretään
      * omaan kerrokseensa alla. Nappula ei ota napautuksia vastaan
-     * (css .pawn-kuva pointer-events: none), joten tinaherran
-     * napauttaminen avaa tutkinnan täsmälleen kuten laatan napautus
-     * ennenkin — nyt hahmo itse on se, mitä napautetaan.
+     * (css .pawn-kuva pointer-events: none), joten nappulan
+     * napauttaminen avaa tutkinnan täsmälleen kuten laatan napautus.
      */
     const nappulanAlla = this.nappulaKaupungissa(city);
     for (const osa of osat) osa.classList.toggle('nappulan-alla', nappulanAlla);
@@ -7118,8 +7150,9 @@ export class UI {
     if (!this.fokusLaattaOsat?.length) return;
     for (const osa of this.fokusLaattaOsat) {
       this.asetaLaatanKoko(osa, 1);
-      // Laatta myös takaisin näkyviin: fokusnäkymän ulkopuolella
-      // nappula ei peitä sitä (ks. paivitaFokusLaatta, .nappulan-alla).
+      // Merkintä pois: fokusnäkymän ulkopuolella laatan osia ei
+      // piiloteta nappulan takia (ks. paivitaFokusLaatta,
+      // css .nappulan-alla).
       osa.classList.remove('nappulan-alla');
     }
     this.fokusLaattaOsat = [];
@@ -8026,14 +8059,17 @@ export class UI {
   pawnShape(parent, player, active) {
     const g = el('g', { class: 'pawn' }, parent);
     const varjo = el('g', { class: 'pawn-varjo' }, g);
-    varjo.setAttribute('transform', `translate(2,${NAPPULAN_JALKA_Y})`);
+    varjo.setAttribute('transform', `translate(1.2,${NAPPULAN_JALKA_Y})`);
     /*
-     * Varjo on nappulan jalustan levyinen: valkoinen kartionappula on
-     * kapeampi kuin tinaherra (13,2 vs. 19,4 laudan yksikköä), ja
-     * entisen kokoinen läiskä lukisi hahmoa isompana tummana pisteenä
-     * — juuri sitä painoa, josta tilaus pääsi eroon.
+     * Varjo on nappulan jalustan levyinen — eikä leveämpi. Varjo on
+     * ainoa TÄYTETTY osa hahmon ulkopuolella (vuororengas on pelkkä
+     * viiva), joten se on myös ainoa, joka voi peittää kaupungin
+     * laattaa. 5 on täsmälleen jalustan puolikas: varjo on hahmon
+     * kosketuskohta eikä sitä isompi läiskä, ja laatan reuna (11,6
+     * laudan yksikköä) jää sen ympärille joka suunnasta näkyviin,
+     * kuten omistaja 28.8.2026 pyysi.
      */
-    const varjonR = NAPPULA_TYYLI === 'tinaherra' ? 10 : 7.6;
+    const varjonR = NAPPULA_TYYLI === 'tinaherra' ? 10 : 5;
     el('ellipse', { cx: 0, cy: 0, rx: varjonR, ry: varjonR * 0.36, class: 'pawn-shadow' }, varjo);
     /*
      * VUORON RENGAS MAKAA LAUDALLA (#100). Ympyrä kiersi ennen
@@ -8060,7 +8096,21 @@ export class UI {
      * kaksi erillistä vaimennussääntöä. Ne poistuivat tämän mukana.
      */
     if (active) {
-      const renkaanR = NAPPULA_TYYLI === 'tinaherra' ? 12 : 9.6;
+      /*
+       * RENGAS MAHTUU LAATAN SISÄÄN (28.8.2026). Kun kaupungin laatta
+       * tuli takaisin nappulan alle, entisen kokoinen rengas (9,6)
+       * leikkasi laatan poikki: litistetty ellipsi on jalkapisteen
+       * korkeudella laattaa leveämpi, ja lopputulos luki kuminauhana
+       * laatan ympärillä. Ulkopuolelle sitä ei voi siirtää — matalan
+       * ellipsin kaari kulkisi silti laatan yli — joten se mahtuu
+       * sisään.
+       *
+       * JA SELVÄSTI VARJOA ISOMPI (7,2 vs. varjonR 5). Yhtä suurina
+       * rengas ja varjo asettuivat päällekkäin ja hahmon jalusta muuttui
+       * yhdeksi tummaksi möhkäleeksi — sama pino, jota vastaan koko
+       * tilaus tehtiin. Nyt rengas kiertää varjon ympäri renkaana.
+       */
+      const renkaanR = NAPPULA_TYYLI === 'tinaherra' ? 12 : 7.2;
       el('ellipse', {
         cy: NAPPULAN_JALKA_Y, rx: renkaanR, ry: renkaanR * 0.383, class: 'pawn-active-ring',
       }, g);
@@ -8094,15 +8144,47 @@ export class UI {
       ? NAPPULAN_JALKA_Y - NAPPULAN_ANKKURI_Y * NAPPULAN_KORKEUS
       : NAPPULAN_JALKA_Y - NAPPULAN_LAKI;
     if (player.stars > 0) {
-      const y = lakiY - 5;
+      // Väli lakeen kutistui nappulan mukana (5 -> 3,4): merkki kuuluu
+      // hahmolle, ja entinen väli jättäisi sen leijumaan irralleen.
+      const y = lakiY - 3.4;
       el('text', { x: 0, y, class: 'pawn-star', 'text-anchor': 'middle' }, hahmo).textContent = '◈';
     }
     return g;
   }
 
+  /**
+   * Nappulan puuliuku kerran koko kerrokselle.
+   *
+   * MIKSI DEFS EIKÄ CSS-VÄRI: sorvattu puu on ylhäältä vaaleampi kuin
+   * alhaalta, ja juuri se ero erottaa nappulan litteästä läiskästä
+   * pienessäkin koossa. Liuku on `objectBoundingBox`-mitoissa, joten se
+   * seuraa hahmoa muunnoksesta ja fokusnäkymän skaalauksesta
+   * riippumatta — userSpaceOnUse vaatisi polun omat koordinaatit.
+   *
+   * KERRAN KERROKSEEN, EI NAPPULAA KOHTI: sama tunnus kelpaa kaikille
+   * nappuloille, ja kahdella samannimisellä määrittelyllä olisi sama
+   * loppu kuin kahdella id-määreellä yleensä. Kerros tyhjennetään joka
+   * piirrossa (drawPawns), joten liuku on rakennettava uudelleen sen
+   * mukana; hinta on kolme elementtiä.
+   *
+   * CSS:ssä on VARAVÄRI (.pawn-nappula fill), joka puree jos määrittely
+   * jostain syystä puuttuu — esimerkiksi irrotetussa SVG:ssä. Tyhjä
+   * hahmo olisi pahempi vika kuin litteä hahmo.
+   */
+  puuliuku(parent) {
+    const defs = el('defs', {}, parent);
+    const liuku = el('linearGradient', {
+      id: 'nappula-puu', x1: 0, y1: 0, x2: 0, y2: 1,
+    }, defs);
+    el('stop', { offset: 0, 'stop-color': '#d9b47c' }, liuku);
+    el('stop', { offset: 0.55, 'stop-color': '#c49a63' }, liuku);
+    el('stop', { offset: 1, 'stop-color': '#a87e4c' }, liuku);
+  }
+
   drawPawns() {
     const { game } = this;
     this.pawnLayer.textContent = '';
+    this.puuliuku(this.pawnLayer);
     const groups = new Map();
     for (const p of game.players) {
       if (p.id === this.movingPlayerId) continue; // liikkuva nappula piirretään erikseen
