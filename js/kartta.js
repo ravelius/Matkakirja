@@ -2360,6 +2360,85 @@ export class Kartta {
     let liikkui = false;
 
     /*
+     * --- MERKKIKERROKSET PIILOON ELEEN AJAKSI ------------------------
+     *
+     * v1277 vei nipistyksen SKRIPTIajan alas 58 %, ja jäljelle jäi se,
+     * mitä profiili kutsuu layerize-kustannukseksi: kartan CSS-muunnos
+     * pakottaa selaimen jakamaan koko SVG:n uudestaan maalipaloihin
+     * joka kehyksellä, ja merkkikerrokset ovat siinä kalleimmat —
+     * kymmeniä pieniä ryhmiä, joilla kullakin on oma muunnos, ympyrät,
+     * glyyfit ja nimiöt. Kartta itse on yksi iso kuva, merkit ovat
+     * kymmeniä pieniä. Omistajan ennakkomittaus: merkkiryhmien
+     * piilotus `display: none`-tyylillä eleen ajaksi pudottaa paintin
+     * noin 22-kertaisesti.
+     *
+     * DISPLAY, EI OPACITY tai visibility. Vain `display: none` ottaa
+     * solmut pois maalikierroksesta kokonaan; läpinäkyväkin kerros
+     * pilkotaan ja maalataan. Sama keino on jo käytössä samoilla
+     * kerroksilla toisesta syystä (js/fokuskohteet.js
+     * .fokuskohteet-piilossa yleiskuvassa), joten paluu on koeteltu:
+     * merkit ovat SVG-ryhmiä, joiden paikka on muunnosmääreessä eikä
+     * asettelussa — piilotus ei siirrä mitään, ja esiin tullessaan
+     * jokainen on pikselilleen siinä missä oli.
+     *
+     * ENNAKKOTAPAUS on asteikkojen entinen käytös (js/fokusmitat.js):
+     * mitta, joka ei voi olla oikeassa liikkeen aikana, väistyy eleen
+     * ajaksi ja palaa pienen levon jälkeen. Merkeillä syy on toinen —
+     * ne OVAT oikeassa, mutta maksavat liikaa — mutta oppi sama.
+     *
+     * KAKSI KYNNYSTÄ, ETTEI RÄPSY. Napautus ja mikroliike eivät saa
+     * vilauttaa merkkejä pois:
+     *   - panoroinnissa piilotus on saman 6 pikselin kynnyksen takana,
+     *     joka muutenkin erottaa napautuksen raahauksesta (liikkui)
+     *   - nipistyksessä kahden sormen kosketus ei vielä riitä, vaan
+     *     mittakaavan on oikeasti muututtava (MERKKIPIILON_KYNNYS)
+     *
+     * PALUU ON VIIVEEN TAKANA (MERKKIEN_PALUU_MS) samasta syystä kuin
+     * asteikoilla: eleen loppuun kuuluu vielä liuku, fitViewBox ja
+     * bittikartan täydennys, eikä merkkejä kannata maalata takaisin
+     * kesken sen. Uusi kosketus kuitenkin tuo ne heti (ks.
+     * pointerdown): merkki on napautuskohde, ja osumatesti — sekä
+     * selaimen oma että moduulin ruutulaatikkovertailu
+     * (js/fokuskohteet.js lahinKohde) — vaatii näkyvän solmun.
+     *
+     * AUKI OLEVA KORTTI ESTÄÄ PIILOTUKSEN: kortti seuraa merkkinsä
+     * ruutupaikkaa (js/fokuskohteet.js asetaKohteenPaikka), ja
+     * piilotetun merkin laatikko on nollissa — kortti hyppäisi ruudun
+     * nurkkaan. Kortti on auki harvoin ja silloin karttaa harvoin
+     * nipistetään, joten hinta on olematon.
+     *
+     * KEHYSSILMUKKA EI SAA TUOTTAA ROSKAA (js/fokusmitat.js): tässä
+     * kirjoitetaan yksi luokka eleen alussa ja poistetaan se eleen
+     * jälkeen — ei mitään per kehys, ei yhtään uutta oliota.
+     */
+    const MERKKIEN_PALUU_MS = 320;
+    /** Nipistyksen mittakaava saa heilahtaa tämän verran ilman piiloa. */
+    const MERKKIPIILON_KYNNYS = 0.03;
+    const paljastaMerkit = () => {
+      this.ui.merkkiPaluuAjastin = 0;
+      this.ui.merkitPiilossa = false;
+      document.body.classList.remove('kartta-merkit-piilossa');
+    };
+    /** Ele on aidosti käynnissä: merkkikerrokset pois maalikierroksesta. */
+    const piilotaMerkit = () => {
+      if (this.ui.merkitPiilossa || this.ui.fokuskohdeAuki) return;
+      clearTimeout(this.ui.merkkiPaluuAjastin);
+      this.ui.merkkiPaluuAjastin = 0;
+      this.ui.merkitPiilossa = true;
+      document.body.classList.add('kartta-merkit-piilossa');
+    };
+    /** Ele ohi: merkit takaisin — heti vain uuden kosketuksen alta. */
+    const naytaMerkit = (heti = false) => {
+      if (!this.ui.merkitPiilossa) return;
+      clearTimeout(this.ui.merkkiPaluuAjastin);
+      if (heti) { paljastaMerkit(); return; }
+      this.ui.merkkiPaluuAjastin = setTimeout(paljastaMerkit, MERKKIEN_PALUU_MS);
+    };
+    // Kentäksi asti: ui.js:n jumivahti ja destroy palauttavat merkit
+    // silloinkin, kun ele ei pääse omaan loppuunsa.
+    this.naytaMerkit = naytaMerkit;
+
+    /*
      * --- KARTAN PÄÄLLÄ KELLUVA UI EI OLE KARTTA ----------------------
      *
      * Omistajan pelitestipalaute 24.8.2026 (v1098, puhelin): *"Kartta
@@ -2689,6 +2768,9 @@ export class Kartta {
       if (!Number.isFinite(tx) || !Number.isFinite(ty)) return;
       this.kuori.style.transform =
         `translate3d(${tx.toFixed(1)}px, ${ty.toFixed(1)}px, 0) scale(${nipistys.suhde.toFixed(4)})`;
+      // Kahden sormen kosketus ei vielä ole ele: merkit väistyvät vasta
+      // kun mittakaava oikeasti muuttuu (ks. MERKKIPIILON_KYNNYS).
+      if (Math.abs(nipistys.suhde - 1) > MERKKIPIILON_KYNNYS) piilotaMerkit();
       vastaskaalaaMerkit(nipistys.suhde);
     };
 
@@ -2709,6 +2791,9 @@ export class Kartta {
       document.body.classList.remove('kartta-raahaus');
       this.kuori.style.transform = '';
       vastaskaalaaMerkit(1);
+      // Merkit takaisin vasta kun eleen loppuun kuuluva sovitus,
+      // ankkurointi ja bittikartan täydennys on tehty (naytaMerkit).
+      naytaMerkit();
       // Napautus eleen jälkeen ei saa valita kaupunkia.
       this.ui.raahattiin = true;
       setTimeout(() => { this.ui.raahattiin = false; }, 0);
@@ -2850,6 +2935,7 @@ export class Kartta {
       // lähikuvissa), joten eleen jälki pyyhitään ensin käsin.
       this.kuori.style.transform = '';
       vastaskaalaaMerkit(1);
+      naytaMerkit();
       this.fitViewBox();
     };
     // Kentäksi asti: ui.js:n jumivahti (eleKesken) ja taustapaluun
@@ -2960,6 +3046,7 @@ export class Kartta {
       if (tila !== 'panorointi') return;
       this.ui.kartanRaahaus = false;
       document.body.classList.remove('kartta-raahaus');
+      naytaMerkit();
       this.ui.merkitseKartanEle();
       // Sama sääntö kuin raahauksen lopussa: piilossa olevalle sivulle
       // ei rasteroida, vaan työ jää odottamaan taustapaluuta.
@@ -2985,6 +3072,7 @@ export class Kartta {
         document.body.classList.remove('kartta-raahaus');
         this.ui.taideOdottaa = true;
       }
+      naytaMerkit();
       rullanEle = null;
     };
     // Kentäksi asti: ui.js:n jumivahti ja destroy purkavat eleen tästä.
@@ -3014,6 +3102,9 @@ export class Kartta {
       const dy = this.ui.panVaraY ? -e.deltaY : 0;
       const rajattu = this.rajaaKasinPan((this.ui.panX ?? 0) + dx, (this.ui.panY ?? 0) + dy);
       this.asetaPan(rajattu.x, rajattu.y);
+      // Trackpadin vieritys on jatkuva virta eikä napautus: ele on
+      // käynnissä heti ensimmäisestä deltasta (ks. merkkien piilotus).
+      piilotaMerkit();
       ajastaRullanLoppu();
     };
 
@@ -3252,6 +3343,9 @@ export class Kartta {
       liuku = null;
       this.ui.kartanRaahaus = false;
       document.body.classList.remove('kartta-raahaus');
+      // Liuku on samaa elettä kuin raahaus, joten merkit palaavat vasta
+      // sen loputtua — eivät sormen irrotessa.
+      naytaMerkit();
       if (keskeytys) this.ui.taideOdottaa = true;
     };
     // Laudan nollaus ja zoomipainikkeet pysäyttävät liu'un tästä.
@@ -3332,6 +3426,15 @@ export class Kartta {
       // tarttuu hiireen: viimeistellään se heti, ettei uusi veto jää
       // odottamaan debouncea (rullaele varaa nipistys-tilan).
       if (rullanEle) paataRullanEle();
+      /*
+       * UUSI KOSKETUS TUO MERKIT HETI. Paluuviive (MERKKIEN_PALUU_MS)
+       * on eleen jälkihoitoa varten, mutta merkki on napautuskohde:
+       * piilotettuna sitä ei osu selaimen osumatesti eikä moduulin oma
+       * ruutulaatikkovertailu (js/fokuskohteet.js lahinKohde). Kesken
+       * elettä ei kuitenkaan paljasteta — toinen sormi ruudulla ei saa
+       * räpsäyttää merkkejä esiin nipistyksen keskellä.
+       */
+      if (!nipistetaan() && !alku) naytaMerkit(true);
       if (nipistetaan()) return;
       // Kortin, kuplan tai suurennoksen päältä alkava veto jää kortin
       // omaksi vieritykseksi — kartta ei liiku (ks. KELLUVA_UI).
@@ -3371,6 +3474,9 @@ export class Kartta {
         // peruuntua (iOS peruu osoittimet oman eleensä alta) — raahaus
         // toimii silloinkin, kaappaus vain jää tekemättä.
         try { pane.setPointerCapture?.(e.pointerId); } catch { /* ei kaappausta */ }
+        // Sama kynnys erottaa napautuksen raahauksesta myös merkeille:
+        // vasta tässä ele on aidosti käynnissä (ks. MERKKIEN_PALUU_MS).
+        piilotaMerkit();
         /*
          * Päiväkirja yhdelle riville heti kun kartta lähtee liikkeelle
          * — ja vain kerran eleen aikana (omistajan toive: kortti ei saa
@@ -3412,6 +3518,7 @@ export class Kartta {
       if (salliLiuku && liikkui && aloitaLiuku()) return;
       // Sykähdykset palaavat heti kun sormi irtoaa.
       document.body.classList.remove('kartta-raahaus');
+      naytaMerkit();
       /*
        * Bittikartta täydennetään VAIN tässä: heti kun sormi irtoaa
        * (tai liukuAskeleessa, kun liuku on pysähtynyt — se on saman
