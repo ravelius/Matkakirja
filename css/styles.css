@@ -13277,6 +13277,10 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 }
 
 .lippu-kortti {
+  /* Tarkennetun versiolipun suurennoskerroin YHDESSÄ PAIKASSA: sekä
+   * transform että js/liput.js:n vaakasiirron laskenta lukevat tämän,
+   * jottei kerroin voi karata eri arvoihin. */
+  --lippu-tarkennus-skaala: 1.7;
   width: 100%;
   /* min-height: 0 sallii vierityskotelon kutistua kehyksen 66vh:n
    * sisään; ilman sitä flex-lapsen vähimmäiskorkeus on sen sisältö,
@@ -13445,7 +13449,20 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 .lippu-kortti .lippu-versio.tarkennettu {
   position: relative;
   z-index: 6;
-  transform: scale(1.7);
+  /*
+   * VAAKASIIRTO ENNEN SUURENNUSTA (omistajan bugiraportti 28.8.2026:
+   * "lippuikkunan suurennoksen kuvateksti leikkautuu vasemmalta").
+   *
+   * Laatat ovat ruudukossa ja kasvavat KESKIPISTEENSÄ ympäri, joten
+   * reunimmaisen sarakkeen laatta — ja etenkin sen laattaa leveämpi
+   * selite — venyy kortin näkyvän alueen ulkopuolelle. Kortti leikkaa
+   * (clip-path), joten teksti katkesi kesken sanan. js/liput.js mittaa
+   * ylityksen ja kirjoittaa tarvittavan siirron tähän muuttujaan;
+   * oletus 0 pitää keskisarakkeet ennallaan. Siirto on transform-
+   * listan ENSIMMÄINEN osa, joten se on skaalaamattomia CSS-pikseleitä
+   * eikä siihen tarvitse laskea 1,7-kerrointa.
+   */
+  transform: translateX(var(--tarkennus-x, 0px)) scale(var(--lippu-tarkennus-skaala));
   transform-origin: center;
   /* Paperi pysyy läpikuultamattomana myös tarkennettuna: transform-
    * kerros on juuri se paikka, jossa WebKitin reikä syntyy herkimmin.
@@ -13474,7 +13491,17 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   top: calc(100% + 0.15rem);
   left: 50%;
   transform: translateX(-50%);
-  width: 10rem;
+  /*
+   * Selite on leveämpi kuin laatta, mutta se EI saa olla leveämpi kuin
+   * kortin näkyvä alue: vaakasiirto voi työntää selitteen sisään vain
+   * jos se ylipäätään mahtuu sinne. Yläraja on kortin sisäleveys
+   * (kehys min(27rem, 100vw − 1.4rem) miinus pehmusteet 1.6rem ja
+   * vieritysvarat 1.25rem) jaettuna suurennoskertoimella 1,7 — selite
+   * elää skaalatun laatan koordinaatistossa. 390 ja 834 pikselin
+   * ruuduilla 10rem voittaa, eli ulkoasu ei muutu; vasta noin 305 px
+   * kapeammalla ruudulla raja puree.
+   */
+  width: min(10rem, calc((min(27rem, 100vw - 1.4rem) - 2.85rem) / 1.7));
   padding: 0.1rem 0.3rem 0.15rem;
   font-family: var(--font-luku);
   font-size: 0.55rem;

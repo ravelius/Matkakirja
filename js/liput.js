@@ -136,7 +136,58 @@ export function avaaLippuikkuna(tiedosto) {
   const tyhjennaTarkennus = () => {
     kortti.classList.remove('tarkennus');
     kortti.querySelectorAll('.tarkennettu, .terava-haara')
-      .forEach((t) => t.classList.remove('tarkennettu', 'terava-haara'));
+      .forEach((t) => {
+        t.classList.remove('tarkennettu', 'terava-haara');
+        t.style.removeProperty('--tarkennus-x');
+      });
+  };
+  /*
+   * TARKENNETTU SIIRRETÄÄN VAAKASUUNNASSA KORTIN SISÄÄN.
+   *
+   * Omistajan bugiraportti 28.8.2026: "lippuikkunan suurennoksen
+   * kuvateksti leikkautuu vasemmalta". Versioliput ovat ruudukossa ja
+   * kasvavat KESKIPISTEENSÄ ympäri, joten reunimmaisen sarakkeen laatta
+   * venyy kortin näkyvän alueen ulkopuolelle — ja sen alla kelluva
+   * selite on vielä laattaa leveämpi. Kortti leikkaa sisällön
+   * (clip-path), joten ylimenevä osa katosi: mitattu Chromiumilla ennen
+   * korjausta 390 px ruudulla vasemman sarakkeen selite 68,2 px ja
+   * 834 px ruudulla 74,7 px kortin vasemman reunan ulkopuolella.
+   *
+   * Siirto lasketaan HETI napautuksessa, ei kasvun jälkeen: näin laatta
+   * kasvaa ja liukuu paikalleen samalla siirtymällä eikä pelaaja näe
+   * välillä katkennutta tekstiä. Se on mahdollista, koska geometria on
+   * tiedossa ilman mittausta skaalatusta tilasta:
+   *
+   *  - transform-origin on center, joten laatan KESKIPISTE ei liiku
+   *    suurennuksessa — getBoundingClientRect kelpaa keskipisteen
+   *    lähteeksi riippumatta siitä, onko transform jo maalattu.
+   *  - offsetWidth on taittoleveys eikä näe transformia, joten
+   *    skaalattu puolileveys on offsetWidth × kerroin ÷ 2. Selite on
+   *    laattaa leveämpi ja keskitetty samaan keskipisteeseen, joten
+   *    leveämpi voittaa.
+   *
+   * Kerroin luetaan CSS-muuttujasta (--lippu-tarkennus-skaala), jottei
+   * sama luku ole kahdessa paikassa. Jos laatta ei mahdu kortin sisään
+   * kummallakaan reunalla, VASEN voittaa: teksti luetaan vasemmalta.
+   */
+  const siirraVaakaan = (elementti) => {
+    if (!elementti.classList.contains('lippu-versio')) return;
+    const kerroin = Number.parseFloat(
+      getComputedStyle(kortti).getPropertyValue('--lippu-tarkennus-skaala'),
+    ) || 1;
+    const r = elementti.getBoundingClientRect();
+    if (!r.width) return;
+    const keski = r.left + r.width / 2;
+    const selite = elementti.querySelector('.lippu-versio-selite');
+    const leveys = Math.max(elementti.offsetWidth, selite?.offsetWidth ?? 0) * kerroin;
+    const k = kehys.getBoundingClientRect();
+    const oikea = keski + leveys / 2;
+    const vasen = keski - leveys / 2;
+    let siirto = 0;
+    if (oikea > k.right - TARKENNUS_REUNUS) siirto = oikea - (k.right - TARKENNUS_REUNUS);
+    if (vasen - siirto < k.left + TARKENNUS_REUNUS) siirto = vasen - (k.left + TARKENNUS_REUNUS);
+    if (Math.abs(siirto) < 1) return;
+    elementti.style.setProperty('--tarkennus-x', `${(-siirto).toFixed(1)}px`);
   };
   /*
    * TARKENNETTU VIERITETÄÄN NÄKYVIIN VASTA TÄYDESSÄ KOOSSAAN.
@@ -202,6 +253,7 @@ export function avaaLippuikkuna(tiedosto) {
     kortti.classList.add('tarkennus');
     elementti.classList.add('tarkennettu');
     elementti.parentElement.classList.add('terava-haara');
+    siirraVaakaan(elementti);
     vieritaKunKasvanut(elementti);
   };
   kortti.addEventListener('click', (e) => {
