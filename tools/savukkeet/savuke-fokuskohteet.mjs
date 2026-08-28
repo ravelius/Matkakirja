@@ -350,9 +350,15 @@ vaadi('osuma-alue on lehden perustasolla vähintään 44 px',
  *
  * MERKKI LUETAAN RASTERIN DATA-MÄÄREISTÄ (omistajan lisätilaus
  * 27.8.2026): merkki ja nimiö piirretään yhdeksi kuvaksi canvasilla, ja
- * <image href> on siksi data-URL. Piirtäjä merkitsee kuvaan
+ * <image href> on siksi generoitu kuvaosoite. Piirtäjä merkitsee kuvaan
  * `data-symboli` ja `data-nimio`, ja niistä lukemalla vartija tietää
  * yhä, minkä merkin ja minkä nimen kohde sai.
+ *
+ * OSOITE ON NYKYÄÄN BLOB (28.8.2026, js/fokusnosto-symbolit.js
+ * kangasOsoitteeksi): `toDataURL` pakkasi ja base64-koodasi rasterin
+ * synkronisesti pääsäikeessä, ja porrasvaihdossa se näkyi 346–416 ms:n
+ * piikkeinä. Väite hyväksyy molemmat muodot, koska varareitti
+ * (`toBlob` puuttuu) kirjoittaa yhä data-URLin.
  *
  * VIIVAMERKKI (27.8.2026 ilta, omistajan palaute laitteelta v1211: generoidut
  * mustepiirrokset ovat *"aivan liian raskaita"*): kartalla merkki on
@@ -373,7 +379,7 @@ const taksonomia = await sivu.evaluate(() => {
       piste: Boolean(g.querySelector('.fokuskohde-piste')),
       laatta: Boolean(g.querySelector('.nostosym-laatta, .nostosym-kehys')),
       nimio: kuva?.dataset.nimio ?? g.querySelector('.nostosym-nimio')?.textContent ?? '',
-      rasteri: (kuva?.getAttribute('href') ?? '').startsWith('data:image/'),
+      rasteri: /^(data:image\/|blob:)/.test(kuva?.getAttribute('href') ?? ''),
       // Koodipiirto on varapolku, jos rasteria ei saatu.
       portti: tunnus === 'kaupunki' || Boolean(g.querySelector('.nostosym-kaupunki')),
     } : null;

@@ -230,28 +230,59 @@ function lataaKuva(osoite) {
  * osoitteesta (ios/Matkakirja/Resurssit/Config.plist). Paikallisessa
  * kehityksessä sääntö ei osu, ja silloin polku 3 hoitaa asian.
  *
- * PIENENNYS EI KOSKE TYÖPÖYTÄSELAINTA. Siellä muisti riittää, ja lehti
- * kuuluu nähdä täytenä (mitattu 25.8.2026: sama polku kulkee
- * pöytäselaimessa puhtaasti läpi). Kytkin on kuori TAI kapea ruutu.
+ * PIENENNYS KOSKEE NYT MYÖS TYÖPÖYTÄÄ — VAIN KATTO ON ERI (Fablemaxin
+ * diagnoosi 28.8.2026: kartan jaksottainen jankki tökkii KAIKILLA
+ * laitteilla, myös M4:llä). Täysi 6400 x 4000 lehti on 25,6 Mp eli
+ * 102 Mt purettua RGBA:ta, ja rajanylityksessä niitä saapuu näkymään
+ * useampi peräkkäin: mitattuna `Decode Image` 508–1256 ms, pääsäikeen
+ * MajorGC 131–540 ms ja 85–120 ms:n commit-odotuksia joka kerta, kun
+ * lehti ilmestyy kartalle. Muisti ei työpöydällä lopu, mutta PURKU JA
+ * ROSKIENKERUU eivät ole muistikysymys vaan kehysaikakysymys — ja
+ * pienennetty lehti on purkuna ja jätteenä murto-osa.
+ *
+ * TYÖPÖYDÄN KATTO ON KORKEAMPI KUIN PUHELIMEN, koska ruutu on iso eikä
+ * lehti saa sumentua: pitkä sivu 4096 ja pinta-ala 15 Mp, eli
+ * tyypillinen lehti kutistuu 6400 x 4000:sta 4096 x 2560:een — 25,6
+ * megapikselistä 10,5:een, muistissa 102 Mt → 42 Mt. Puhelin ja kuori
+ * pitävät entiset lukunsa (3200 / 8 Mp), koska niillä kyse on yhä
+ * hengissä pysymisestä eikä pelkästä sujuvuudesta.
  */
 
 /** Pienennetyn lehden pisin sivu pikseleinä (iOS-canvasraja 4096). */
 const PIENENNYS_PITKA_SIVU = 3200;
 /** ...ja pinta-alan katto megapikseleinä (noin 32 Mt RGBA). */
 const PIENENNYS_KATTO_MP = 8;
+/** Työpöydän ja iPadin väljemmät katot (ks. yllä): 4096 px / 15 Mp. */
+const PIENENNYS_TYOPOYTA_PITKA_SIVU = 4096;
+const PIENENNYS_TYOPOYTA_KATTO_MP = 15;
 /** Uudelleenpakkauksen laatu; lehti on akvarellia, ei tekstiä. */
 const PIENENNYS_LAATU = 0.8;
 
 /**
- * Pienennetäänkö lehdet? Kuoressa aina, selaimessa vain kapealla
- * ruudulla (sama puhelinvihje kuin atlaksen katoilla, ATLAS_PUHELIN).
+ * Pienennetäänkö lehdet? KYLLÄ, KAIKKIALLA (28.8.2026, ks. yllä).
  *
- * Kysytään joka kerta eikä muisteta: silta ruiskutetaan sivulle ennen
- * pelin skriptejä, mutta muistettu "ei kuorta" olisi väärä ikuisesti,
- * jos se joskus saapuisi myöhässä.
+ * Funktio jää olemaan, koska rajaus on sen myötä yhden rivin muutos,
+ * jos jokin laite joskus osoittaa toisin.
  */
 function pienennysPaalla() {
-  return natiiviKuoriTurvassa() || ATLAS_PUHELIN;
+  return true;
+}
+
+/**
+ * Pienennyksen katot tälle laitteelle.
+ *
+ * Kysytään joka kerta eikä muisteta: kuoren silta ruiskutetaan sivulle
+ * ennen pelin skriptejä, mutta muistettu "ei kuorta" olisi väärä
+ * ikuisesti, jos se joskus saapuisi myöhässä.
+ */
+function pienennysRajat() {
+  if (natiiviKuoriTurvassa() || ATLAS_PUHELIN) {
+    return { pitkaSivu: PIENENNYS_PITKA_SIVU, kattoMp: PIENENNYS_KATTO_MP };
+  }
+  return {
+    pitkaSivu: PIENENNYS_TYOPOYTA_PITKA_SIVU,
+    kattoMp: PIENENNYS_TYOPOYTA_KATTO_MP,
+  };
 }
 
 /** Kuoren kysely ilman kaatumista (silta puuttuu selaimessa ja Nodessa). */
@@ -735,23 +766,74 @@ function jonossa(tyo) {
 /**
  * Lehti näyttökuntoon: `{ url, w, h, objectURL }` tai null.
  *
- * Kuoressa ja puhelimessa purku pienennetään ja sarjoitetaan; muualla
- * tämä on entinen lataaKuva mittoineen.
+ * Purku pienennetään ja sarjoitetaan kaikilla laitteilla (katot
+ * pienennysRajat); varareitti on entinen lataaKuva mittoineen.
  */
 async function lataaLehti(lahde, savy) {
   if (pienennysPaalla()) {
     const blob = await haeTavut(lahde);
     const pienennetty = blob
-      ? await jonossa(() => pienennaLehti(lahde, blob, savy)) : null;
-    if (pienennetty) return pienennetty;
+      ? await jonossa(() => pienennaLehti(lahde, blob, savy, pienennysRajat())) : null;
+    if (pienennetty) {
+      // Purku pois maalauspolulta ENNEN kuin osoite päätyy kenellekään
+      // (ks. esipura): kutsuja kirjoittaa sen suoraan <image href>:iin.
+      await esipura(pienennetty.url);
+      return pienennetty;
+    }
     // Varareitti: tavuja ei saatu CORSilla tai pienennys ei onnistunut.
     // Lehti on tärkeämpi kuin sen koko (sääntö 1 tiedoston alussa).
   }
+  // lataaKuva purkaa kuvan itse (decode) ennen kuin palauttaa sen.
   const kuva = await lataaKuva(lahde);
   if (!kuva) return null;
   return {
     url: lahde, w: kuva.naturalWidth, h: kuva.naturalHeight, objectURL: null,
   };
+}
+
+/*
+ * ============ LEHTI PURETAAN ENNEN KUIN SE MAALATAAN ================
+ *
+ * FABLEMAXIN DIAGNOOSI 28.8.2026. Kun lehden osoite kirjoitetaan
+ * suoraan `<image href>`-määreeseen, selain purkaa kuvan vasta silloin
+ * kun se maalaa sen — WebKitissä pääsäikeessä, keskellä sitä kehystä,
+ * jossa pelaaja liikuttaa karttaa. Jäljityksessä joka kerta, kun lehti
+ * saapui näkymään: `Decode Image` 508–1256 ms, sen perässä MajorGC
+ * 131–540 ms ja 85–120 ms:n commit-odotus. Juuri tämä on se
+ * jaksottainen jankki, joka toistuu rajanylityksissä.
+ *
+ * KORJAUS: osoite ladataan ensin irralliseen `Image`-olioon ja
+ * `decode()`-lupausta odotetaan. Purku tapahtuu silloin selaimen omassa
+ * purkusäikeessä ja on VALMIS siihen mennessä, kun kuva ilmestyy
+ * karttaan — maalaus saa käyttöönsä valmiin bittikartan.
+ *
+ * ODOTUS ON LATAUKSESSA EIKÄ PIIRROSSA (lataaLehti ja haePikkulehti),
+ * jotta kartan piirtojärjestys pysyy ennallaan: piirto on yhä
+ * synkroninen, ja sen sivuvaikutukset (ui.paivitaFokusPohja ja sitä
+ * kautta merkkikerrosten synty) tapahtuvat samassa järjestyksessä kuin
+ * ennenkin. Mitattuna kerran toisin päin: kun piirto jäi odottamaan
+ * purkua, täkypisteiden ja kohdemerkkien kerrokset syntyivät eri
+ * järjestyksessä ja täyn osuma-alue söi Parnassóksen napautuksen
+ * (savuke-fokuskohteet).
+ *
+ * ODOTUS EI VIIVÄSTÄ MITÄÄN NÄKYVÄÄ. Kuva ei olisi kartalla hetkeäkään
+ * aiemmin ilman tätä: ilman purkua se olisi näkymätön siihen asti,
+ * kunnes selain purkaa sen — ero on vain siinä, kenen säikeessä
+ * odotetaan.
+ *
+ * EI KAADU MISTÄÄN. Vanha selain ilman `decode()`:ia, kuollut
+ * blob-osoite tai purun keskeytys palauttaa lupauksen normaalisti;
+ * osoite kirjoitetaan silti, ja pahin mahdollinen lopputulos on
+ * täsmälleen entinen käytös.
+ */
+async function esipura(osoite) {
+  if (!osoite || typeof Image !== 'function') return;
+  try {
+    const kuva = new Image();
+    kuva.src = osoite;
+    if (typeof kuva.decode !== 'function') return;
+    await kuva.decode();
+  } catch { /* purkamaton osoite kirjoitetaan silti (ks. yllä) */ }
 }
 
 /**
@@ -767,9 +849,38 @@ async function lataaLehti(lahde, savy) {
  * VAPAUTETTU POHJA PURETAAN UUDELLEEN, jos lehti palaa kartalle:
  * `kuva` nollataan, mutta mitattu `mp` jää talteen, jotta atlaksen
  * muistibudjetti laskee yhä oikeilla luvuilla eikä arviolla.
+ *
+ * === ARMONAIKA: IRRONNUT LEHTI EI KUOLE HETI (28.8.2026) ===
+ *
+ * MITATTU VIKA (Fablemaxin diagnoosi): atlas vapautti lehden samassa
+ * hetkessä, kun se poistui näkymästä ja varasta — ja rajan molemmin
+ * puolin panoroitaessa SAMA lehti pura-lataa-pura -kiersi kierroksen
+ * toisensa jälkeen. Jokainen kierros on nouto, purku (satoja
+ * millisekunteja) ja sen jälkeen roskienkeruu. Juuri tästä syntyy
+ * kartan jaksottainen jankki: pelaaja maksaa saman lehden kolmesti
+ * minuutissa liikkumatta mihinkään.
+ *
+ * Nyt irronnut lehti jää muistiin ARMONAJAKSI (30 s): jos se palaa
+ * kartalle sitä ennen, paluu on ilmainen (`haePohja` löytää `kuva`n
+ * varastosta eikä pura mitään). Vasta armonajan jälkeen — tai heti, jos
+ * muistibudjetti sitä vaatii — osoite vapautetaan. Budjetti on sama
+ * atlaksen katto kuin ennenkin, ja se lasketaan kartalla olevien JA
+ * odottavien lehtien summasta, joten armonaika ei nosta muistin
+ * huippua (ks. alempana).
+ *
+ * `pakota` on maanvaihdon ja laudan purun kytkin: silloin lehdet
+ * lähtevät kuten ennenkin, koska paluuta ei ole tulossa.
  */
-function siivoaLehtiUrlit(ui) {
+const LEHDEN_ARMONAIKA_MS = 30000;
+
+function siivoaLehtiUrlit(ui, pakota = false) {
   let kaytossa = null;
+  const nyt = Date.now();
+  // Irronneet lehdet armonajassaan: purettuina, mutta yhä muistissa.
+  const odottavat = [];
+  let odottavaMp = 0;
+  // ...ja se, mitä kartalla oleva kuva jo maksaa (ks. budjetti alla).
+  let kaytossaMp = 0;
   for (const pohja of VARASTO.values()) {
     if (!pohja || pohja === 'ei' || !pohja.objectURL || !pohja.piirretty) continue;
     if (!kaytossa) {
@@ -780,12 +891,66 @@ function siivoaLehtiUrlit(ui) {
         if (osoite) kaytossa.add(osoite);
       }
     }
-    if (kaytossa.has(pohja.objectURL)) continue;
-    try { URL.revokeObjectURL(pohja.objectURL); } catch { /* ei URLia */ }
-    pohja.objectURL = null;
-    pohja.kuva = null;
-    pohja.piirretty = false;
+    if (kaytossa.has(pohja.objectURL)) {
+      // Lehti on taas kartalla: armonaika alkaa alusta, jos se joskus
+      // irtoaa uudelleen.
+      pohja.irronnut = 0;
+      kaytossaMp += pohja.mp ?? ATLAS_OLETUS_MP;
+      continue;
+    }
+    if (!pakota) {
+      if (!pohja.irronnut) pohja.irronnut = nyt;
+      if (nyt - pohja.irronnut < LEHDEN_ARMONAIKA_MS) {
+        odottavat.push(pohja);
+        odottavaMp += pohja.mp ?? ATLAS_OLETUS_MP;
+        continue;
+      }
+    }
+    vapautaLehdenOsoite(pohja);
   }
+  /*
+   * BUDJETTI VOITTAA ARMONAJAN — JA BUDJETTI ON SAMA KUIN ENNEN.
+   * Armonaika on sujuvuutta varten, ei muistivuotoa varten: kartalla
+   * olevat ja armonaikaa odottavat lehdet lasketaan YHTEEN, ja summan
+   * on mahduttava atlaksen omaan kattoon (atlasMegapikselia). Näin
+   * odotus ei koskaan nosta purettuna olevan kuvan huippua — juuri se
+   * huippu tappoi kuoren prosessin iOS:llä. Jos katto on jo täynnä
+   * kartalla olevista lehdistä, armonaikaa ei ole lainkaan ja käytös on
+   * täsmälleen entinen.
+   */
+  const vara = atlasMegapikselia() - kaytossaMp;
+  if (odottavaMp > vara) {
+    odottavat.sort((a, b) => (a.irronnut ?? 0) - (b.irronnut ?? 0));
+    for (const pohja of odottavat) {
+      if (odottavaMp <= vara) break;
+      odottavaMp -= pohja.mp ?? ATLAS_OLETUS_MP;
+      vapautaLehdenOsoite(pohja);
+    }
+  }
+  if (odottavaMp > 0) ajastaLehtiSiivous(ui);
+}
+
+/** Yksi lehti pois muistista: osoite vapaaksi ja kentät nollille. */
+function vapautaLehdenOsoite(pohja) {
+  try { URL.revokeObjectURL(pohja.objectURL); } catch { /* ei URLia */ }
+  pohja.objectURL = null;
+  pohja.kuva = null;
+  pohja.piirretty = false;
+  pohja.irronnut = 0;
+}
+
+/**
+ * Armonajan päätyttyä siivous ajetaan vielä kerran, vaikka kartalla ei
+ * tapahtuisi mitään: muuten viimeinen irronnut lehti jäisi muistiin
+ * siihen asti, kunnes pelaaja seuraavan kerran liikuttaa karttaa.
+ */
+function ajastaLehtiSiivous(ui) {
+  if (!ui || ui.lehtiSiivousAjastin) return;
+  ui.lehtiSiivousAjastin = setTimeout(() => {
+    ui.lehtiSiivousAjastin = 0;
+    if (ui.dead) return;
+    siivoaLehtiUrlit(ui);
+  }, LEHDEN_ARMONAIKA_MS + 500);
 }
 
 /**
@@ -2220,6 +2385,9 @@ async function haePikkulehti(iso, lauta, map = null) {
       if (!blob) throw new Error('tavuja ei saada (CORS)');
       const pieni = await jonossa(() => pienennaLehti(lahde, blob, savy, PIKKU_RAJAT));
       if (!pieni?.url) throw new Error('pienennys ei onnistunut');
+      // Purku pois maalauspolulta (ks. esipura): pikkulehtiä ilmestyy
+      // kartalle 134, ja jokainen purkaisi itsensä maalatessaan.
+      await esipura(pieni.url);
       const pikku = {
         bbox: b,
         kuva: pieni.url,
@@ -2943,7 +3111,12 @@ export function fokusAtlasIkkunat(ui, maat) {
   return ulos;
 }
 
-/** Piirtää lehden ja kertoo kartalle, että sen alue on nyt kuvan alla. */
+/**
+ * Piirtää lehden ja kertoo kartalle, että sen alue on nyt kuvan alla.
+ *
+ * OSOITE ON JO PURETTU (ks. esipura ja lataaLehti), joten tässä
+ * kirjoitettu href ei enää pura kuvaa maalauksen keskellä.
+ */
 function piirra(ui, iso, pohja) {
   const ryhma = lehtiRyhma(ui);
   if (!ryhma || !pohja.kuva) return;
@@ -3354,8 +3527,14 @@ export function nollaaFokuskartta(ui) {
    */
   ui.maailmanLehdet = null;
   ui.maailmanValmis = null;
-  // Kerros on tyhjä, joten jokainen pienennetyn lehden blob-osoite on
-  // nyt käyttämätön — ne vapautuvat kaikki tässä.
-  siivoaLehtiUrlit(ui);
+  /*
+   * Kerros on tyhjä, joten jokainen pienennetyn lehden blob-osoite on
+   * nyt käyttämätön — ne vapautuvat kaikki tässä ARMONAIKAA ODOTTAMATTA
+   * (`pakota`): lauta vaihtui, eikä yksikään näistä lehdistä ole
+   * palaamassa kartalle (ks. LEHDEN_ARMONAIKA_MS).
+   */
+  clearTimeout(ui.lehtiSiivousAjastin);
+  ui.lehtiSiivousAjastin = 0;
+  siivoaLehtiUrlit(ui, true);
   ui.paivitaFokusPohja?.(null);
 }
