@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paikallisaarteen paljastus — yksinkertainen leiska</title>
+<style>
+  :root {
+    --font-type: "American Typewriter", "Courier Prime", "Courier New", Courier, monospace;
+    --font-antiqua: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --tumma: #171020;
+    --paperi: #e9dcba;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--tumma);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-antiqua);
+    position: relative;
+    overflow: hidden;
+  }
+  /* Kartta taustalla: tummennettu ja purppuraan taitettu */
+  .karttatausta {
+    position: fixed; inset: 0;
+    background: url('kartta-tausta.png') center / cover no-repeat;
+    filter: brightness(0.34) saturate(0.6) hue-rotate(-24deg) blur(2.5px);
+    transform: scale(1.04);
+  }
+  .karttatausta::after {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 85% 70% at 50% 44%,
+        rgba(80, 46, 116, 0.30) 0%,
+        rgba(43, 22, 66, 0.58) 60%,
+        rgba(18, 9, 30, 0.85) 100%);
+  }
+
+  /*
+   * Aarre: kuvan oma pergamenttitausta jatkuu laajemmalle ja
+   * vinjetoituu reunoilta tummaan - ei paperiarkkia, ei kehysta.
+   */
+  .aarre {
+    position: relative;
+    width: 720px;
+    padding: 64px 90px 56px;
+    text-align: center;
+    color: #3a2d1c;
+    /* pergamentti keskella, reunat sulavat sivun tummaan */
+    background: radial-gradient(ellipse 78% 74% at 50% 42%,
+      #ecdfb8 0%, #e7d9ae 42%, #d0bc8e 60%,
+      rgba(120, 98, 80, 0.5) 78%,
+      rgba(23, 16, 32, 0) 97%);
+  }
+  .aarre-kuva {
+    width: 380px; height: 380px;
+    margin: 0 auto;
+    mix-blend-mode: multiply;
+    /* kuvan omat reunat sulavat pergamenttiin */
+    -webkit-mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, #000 45%, rgba(0,0,0,0.55) 68%, transparent 92%);
+            mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, #000 45%, rgba(0,0,0,0.55) 68%, transparent 92%);
+  }
+  .aarre-nimi {
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 4px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.25);
+  }
+  .aarre-arvo {
+    font-family: var(--font-type);
+    font-size: 15px;
+    letter-spacing: 0.14em;
+    margin-top: 10px;
+    color: #574430;
+  }
+  .aarre-fakta {
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.55;
+    margin: 18px auto 0;
+    max-width: 440px;
+    color: #443520;
+  }
+  .jatka {
+    position: relative;
+    font-family: var(--font-type);
+    font-size: 15px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #e8d5a8;
+    background: linear-gradient(#241a10, #1a120a);
+    border: 1.5px solid #b28d4e;
+    border-radius: 4px;
+    padding: 15px 44px;
+    margin-top: 6px;
+    box-shadow: 0 0 0 3px rgba(178, 141, 78, 0.18), 0 6px 20px rgba(0,0,0,0.6);
+  }
+  .keskio {
+    position: relative;
+    display: flex; flex-direction: column; align-items: center; gap: 18px;
+  }
+  .livia {
+    position: fixed;
+    right: 26px; bottom: 26px;
+    display: flex; align-items: flex-end; gap: 10px;
+  }
+  .livia .kupla {
+    background: #f2ead6;
+    color: #33291a;
+    font-size: 15.5px;
+    line-height: 1.4;
+    padding: 12px 16px;
+    border-radius: 10px 10px 2px 10px;
+    max-width: 250px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.5);
+  }
+  .livia .naama {
+    width: 46px; height: 46px; border-radius: 50%;
+    background: #2b2015;
+    border: 1.5px solid #b28d4e;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+  }
+</style>
+</head>
+<body>
+  <div class="karttatausta"></div>
+  <div class="keskio">
+    <div class="aarre">
+      <img class="aarre-kuva" src="meripihka-vaalea.png" alt="">
+      <div class="aarre-nimi">Itämeren meripihka</div>
+      <div class="aarre-arvo">+150 puntaa</div>
+      <p class="aarre-fakta">Meripihka ei ole kivi vaan havupuiden pihkaa,
+        joka kovettui noin 40 miljoonaa vuotta sitten. Myrsky heittää
+        kokkareita yhä Itämeren rantahiekkaan, ja etelään sitä kuljetettiin
+        meripihkatietä pitkin Adrianmerelle asti. Kirkkaimpiin paloihin on
+        jäänyt hyönteisiä kiinni.</p>
+    </div>
+    <button class="jatka">Jatka matkaa</button>
+  </div>
+  <div class="livia">
+    <div class="kupla">Kato. Meripihkaa. Meikäläisen pesään päätyy yleensä vaan oksia — tää menee sinulle.</div>
+    <div class="naama">🦉</div>
+  </div>
+</body>
+</html>
