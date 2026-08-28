@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1268: Chatin kehysmalli: uuden aiheen vastaus = Livian puhekielinen alustus + ydin taydella kirjakielella + loppukommentti omalla aanella; jatkokysymysnapit tuottavat vastauksen kokonaan pollon aanella; suora puhuttelu (Pulu, tiedatko...) kehystetaan. Worker julkaistuu automaattisesti mergessa (pollo-julkaisu.yml). Testaa chat: uusi kysymys, jatkonappi, puhuttelu.',
   'v1267: Nippusarake kutistui: raja lasketaan nakyvasta laatasta katetussa mitassa, joten iPhone ja tyopoyta niputtavat samat 4 ydinmerkkia (ennen 8/5) - Marathon, Epidauros, Korintin kanava ja Reunuskilpikonna pysyvat omilla paikoillaan. Paallekkaiset napautukset ratkoo lahin keskipiste voittaa. Testaa Ateenan laatan ja lahimerkkien napautus puhelimella.',
   'v1266: Kaikki Livian pelitekstit vahvaan puhekieleen (Raamattu v1265): 6 maadoituskuplaa, 10 saapumisrepliikkia, takyvihje, reaktiokiitokset, pullavinkki. Sofian moitittu kirjakielilause korvattu (Ei se siita yhtaan pienempaa juttua tee...). Isoisan kirjakieli ennallaan. Kuuntele/lue Sofian ja Venetsian kuplat.',
   'v1265: Raamattuun Livian tyylimaarittely (vahva puhekieli, mina/sina, kevyet taytesanat, harva kaak) ja chatin kehysmalli (oma aani alkuun ja loppuun, ydinvastaus kirjakielella kuin pollo, jatkokysymykset kokonaan pollon aanella). Tekstien tyylipassi ja workerin kehys tulevat erikseen.',

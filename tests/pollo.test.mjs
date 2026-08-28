@@ -24,6 +24,7 @@ import { readFileSync } from 'node:fs';
 import {
   KONTEKSTIN_ENIMMAISPITUUS,
   jasennaKasitteet,
+  kehysLaji,
   kokoaKonteksti,
   lueNakyma,
   luettavaRaja,
@@ -31,6 +32,7 @@ import {
   poimiLohkot,
   poistaKasiteMerkinnat,
   tekstiIlmanSpoilereita,
+  tunnistaPuhuttelu,
   valitseSisainenSyote,
   vastauskuvanAihe,
 } from '../js/pollo.js';
@@ -523,6 +525,121 @@ test('kehote kantaa tuuraaja-kehyksen: sijaisuus, untuvikko, sivupolku, maadoitu
   assert.ok(/OSOITTAUTUU OIKEAKSI/.test(kehote),
     'sääntö siitä, että isoisä on välillä oikeassa, puuttuu');
   assert.ok(/besserwisser/i.test(kehote), 'besserwisser-kielto puuttuu');
+});
+
+/* ---------------------------------------------------------------- */
+/* Kehysmalli: kumpi ääni tähän vastaukseen kuuluu                   */
+/* ---------------------------------------------------------------- */
+
+/*
+ * LIVIAN KEHYSMALLI (Raamattu v1265, omistajan tilaus 28.8.2026 ilta).
+ *
+ * Uuden aiheen ensimmäinen kysymys saa kehystetyn vastauksen (oma
+ * puhekielinen alustus + kirjakielinen ydin + oma loppukommentti),
+ * jatkokysymysnapin napautus taas paljaan pöllövastauksen. Asiakas
+ * päättää lajin — ja päätöksen on oltava karkea ja ennustettava, koska
+ * väärä "jatko" veisi Livian äänen kokonaan pois.
+ */
+test('kehyslaji: napista tullut on jatko, kaikki muu uusi aihe', () => {
+  assert.equal(kehysLaji('Miten tunnelit kaivettiin?', true), 'jatko');
+  assert.equal(kehysLaji('Miten tunnelit kaivettiin?', false), 'aloitus');
+  // Ilman toista argumenttia oletus on uusi aihe: kehys on turvallinen
+  // oletus, kehyksettömyys ei.
+  assert.equal(kehysLaji('Mikä on Vesuvius?'), 'aloitus');
+  assert.equal(kehysLaji('Kerro lisää: Vesuvius'), 'aloitus');
+  assert.equal(kehysLaji(''), 'aloitus');
+  assert.equal(kehysLaji(null), 'aloitus');
+});
+
+test('kehyslaji: suora puhuttelu voittaa jatkon', () => {
+  assert.equal(kehysLaji('Pulu, tiedätkö mikä on Vesuvius?'), 'puhuttelu');
+  // Napista tullut teksti ei käytännössä puhuttele, mutta jos se
+  // puhuttelisi, oma ääni voittaa: puhuttelu kohdellaan kuin
+  // ensimmäinen kysymys.
+  assert.equal(kehysLaji('Livia, entä Pompeiji?', true), 'puhuttelu');
+});
+
+test('puhuttelun tunnistus osuu vokatiiviin eikä puheeseen Liviasta', () => {
+  // Alussa, tervehdyksen kanssa tai ilman.
+  assert.equal(tunnistaPuhuttelu('Pulu, tiedätkö mikä on Vesuvius?'), true);
+  assert.equal(tunnistaPuhuttelu('Hei Livia, mitä täällä syödään?'), true);
+  assert.equal(tunnistaPuhuttelu('Pöllö — kerro Roomasta'), true);
+  assert.equal(tunnistaPuhuttelu('Livia?'), true);
+  assert.equal(tunnistaPuhuttelu('Columba Livia, mikä on Etna?'), true);
+  // Keskellä ja lopussa pilkun jälkeen.
+  assert.equal(tunnistaPuhuttelu('Mikä tuo tuolla on, pulu?'), true);
+  assert.equal(tunnistaPuhuttelu('Tiedätkö, Livia, milloin metro avattiin?'), true);
+  // EI puhuttelua: nimi on kysymyksen AIHE eikä puhuteltava. Nämä ovat
+  // se puoli, jossa virhe maksaa — turha "puhuttelu" ei riko mitään,
+  // mutta jokainen väärä osuma tekisi tunnistuksesta arvaamattoman.
+  assert.equal(tunnistaPuhuttelu('Onko pulu lintu?'), false);
+  assert.equal(tunnistaPuhuttelu('Mikä on pöllö?'), false);
+  assert.equal(tunnistaPuhuttelu('Kerro Livian suvusta'), false);
+  assert.equal(tunnistaPuhuttelu('Mitä kyyhkyset syövät?'), false);
+  assert.equal(tunnistaPuhuttelu('Miten tunnelit kaivettiin?'), false);
+  assert.equal(tunnistaPuhuttelu(''), false);
+  assert.equal(tunnistaPuhuttelu(null), false);
+});
+
+/*
+ * Signaali on hyödytön, jos se ei mene pyyntöön asti tai jos worker ei
+ * osaa lukea sitä. Kumpikin pää tarkistetaan lähdetekstistä: asiakas
+ * lähettää kentän `kehys` ja merkitsee jatkokysymysnapin jatkoksi,
+ * worker tuntee kolme lajia ja putoaa tuntemattomalla arvolla
+ * aloitukseen (vanha peli, joka ei kenttää lähetä, saa siis entisen
+ * käytöksen).
+ */
+test('kehyslaji kulkee pyyntörunkoon ja jatkonappi on ainoa jatko', () => {
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  assert.ok(/kehys: kehysLaji\(kysymys, jatko\)/.test(lahde),
+    'kehyslaji ei mene pyyntörunkoon');
+  assert.ok(/pollo-jatko'[\s\S]{0,400}?this\.kysy\(teksti, \{ jatko: true \}\)/.test(lahde),
+    'jatkokysymysnappi ei merkitse kysymystä jatkoksi');
+  // Yksikään muu kysy-kutsu ei saa väittää jatkoa: valmiskysymykset,
+  // avausehdotukset, käsitelinkit ja sanelu ovat uusia aiheita.
+  const jatkoKutsuja = lahde.match(/kysy\([^)]*jatko: true/g) ?? [];
+  assert.equal(jatkoKutsuja.length, 1, 'jatkoksi merkittyjä kutsuja on muualla');
+});
+
+test('worker tuntee kehyslajit ja putoaa tuntemattomalla aloitukseen', () => {
+  const kehote = readFileSync(new URL('../tools/pollo/worker.js', import.meta.url), 'utf8');
+  assert.ok(/KEHYS_LAJIT = new Set\(\['aloitus', 'jatko', 'puhuttelu'\]\)/.test(kehote),
+    'workerin kehyslajit puuttuvat');
+  assert.ok(/KEHYS_LAJIT\.has\(arvo\) \? arvo : 'aloitus'/.test(kehote),
+    'tuntematon kehyslaji ei putoa aloitukseen — vanha peli rikkoutuisi');
+  assert.ok(/kehysOhje\(kehysLaji\(runko\?\.kehys\)\)/.test(kehote),
+    'kehyslajia ei liitetä järjestelmäkehotteeseen');
+});
+
+/*
+ * Kehotteen kaksi ääntä: omalla äänellä puhutaan vahvaa puhekieltä,
+ * ydinvastaus on täyttä kirjakieltä, ja jatkokysymysvastauksesta kehys
+ * jää pois. Nämä ovat omistajan sitovia linjauksia (Raamattu v1265),
+ * joten testi vartioi niitä samalla tavalla kuin tuuraaja-kehystä.
+ */
+test('kehote kantaa kehysmallin ja Livian puhekielen', () => {
+  const kehote = readFileSync(new URL('../tools/pollo/worker.js', import.meta.url), 'utf8');
+  assert.ok(/KAKSI ÄÄNTÄ — KEHYSMALLI/.test(kehote), 'kehysmalliosio puuttuu');
+  assert.ok(/YDINVASTAUS TÄYSIN KIRJAKIELELLÄ/.test(kehote),
+    'ydinvastauksen kirjakielisyys puuttuu');
+  assert.ok(/JATKOKYSYMYS — EI KEHYSTÄ/.test(kehote), 'jatkokysymysosio puuttuu');
+  assert.ok(/OMA ÄÄNESI — VAHVA PUHEKIELI/.test(kehote), 'puhekieliosio puuttuu');
+  assert.ok(/PRONOMINIT[\s\\]+KOKONAISINA/.test(kehote),
+    'minä/sinä-sääntö puuttuu — Livia lipsuisi mä/sä-muotoihin');
+  assert.ok(/LOPPUKOMMENTTI/.test(kehote), 'loppukommentin ohje puuttuu');
+  // Loppukommentti ei saa olla kiinteä lista: toisto puuduttaa.
+  assert.ok(/VAIHTELE TAPAA, ÄLÄ PELKKIÄ SANOJA/.test(kehote),
+    'loppukommentin variointiohje puuttuu');
+  // Livian lisäys ja mauste koskevat vain kehystettyjä vastauksia.
+  assert.ok(/EI KOSKAAN[\s\\]+JATKOKYSYMYSVASTAUKSEEN/.test(kehote),
+    'Livian lisäyksen rajaus kehystettyihin puuttuu');
+  assert.ok(/EI MAUSTETTA JATKOKYSYMYSVASTAUKSESSA/.test(kehote),
+    'mausteen rajaus kehystettyihin puuttuu');
+  // Vanhat säännöt eivät saa kadota kehysmallin tieltä.
+  assert.ok(/TÄYSI NIMI JA SUKU/.test(kehote), 'nimipröystäily puuttuu');
+  assert.ok(/PULLA-PERSOUS/.test(kehote), 'pullapersous puuttuu');
+  assert.ok(/VUOSI 1873 JA NYKYHETKI/.test(kehote), 'aikavertailu puuttuu');
+  assert.ok(/VAIKEAT NYKYAIHEET/.test(kehote), 'vaikeiden nykyaiheiden ohje puuttuu');
 });
 
 /* ---------------------------------------------------------------- */

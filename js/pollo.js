@@ -626,6 +626,86 @@ export function vastauskuvanAihe(teksti, kysymys = '') {
 }
 
 /* ------------------------------------------------------------------ */
+/* Kehysmalli: mistä lajista kysymys on                                */
+/* ------------------------------------------------------------------ */
+
+/**
+ * LIVIAN KEHYSMALLI (Raamattu v1265, omistajan tilaus 28.8.2026 ilta).
+ *
+ * Vastauksia on kahta lajia, ja ero syntyy siitä, MITEN kysymys tuli:
+ *
+ *   KEHYSTETTY — uuden aiheen ensimmäinen kysymys. Livia alustaa omalla
+ *   puhekielellään, vastaa sitten täysin kirjakielellä kuin viisas
+ *   pöllö ja päättää lyhyeen omaan kommenttiin.
+ *
+ *   JATKO — vastauksen alle ilmestyneen jatkokysymysnapin napautus.
+ *   Sama aihe jatkuu, joten kehystä ei toisteta: vastaus tulee
+ *   kokonaan pöllön kirjakielellä.
+ *
+ * AIHEEN VAIHTUMISEN MÄÄRITELMÄ on tarkoituksella karkea, koska se on
+ * ainoa, jonka asiakas voi tietää varmasti: SAMA AIHE = napautus
+ * jatkokysymysnappiin (naytaJatkot). KAIKKI MUU on uusi aihe — oma
+ * kirjoitettu tai saneltu kysymys, valmiskysymys, palvelimen
+ * avausehdotus, käsitelinkin "Kerro lisää", pikakysymys kuoresta.
+ * Malli ei arvaile aiheen samuutta tekstistä: väärin arvattu jatko
+ * veisi Livian äänen pois kokonaan, ja se on pahempi virhe kuin yksi
+ * ylimääräinen kehys.
+ *
+ * PUHUTTELU on oma lajinsa vain siksi, että se kertoo kehotteelle
+ * pelaajan puhuneen Livialle suoraan ("pulu, tiedätkö mikä on
+ * Vesuvius"). Kehyksen kannalta se käyttäytyy kuin ensimmäinen
+ * kysymys — ja se voittaa jatkon: suora puhuttelu ansaitsee vastauksen
+ * omalla äänellä, vaikka nappi olisi mikä.
+ */
+export const KEHYS_ALOITUS = 'aloitus';
+export const KEHYS_JATKO = 'jatko';
+export const KEHYS_PUHUTTELU = 'puhuttelu';
+
+/*
+ * Nimet, joilla pelaaja Liviaa puhuttelee. "Pulu" on mukana, vaikka
+ * Livia siitä loukkaantuu — nimenomaan silloin puhuttelu kannattaa
+ * huomata. Taivutusmuotoja ei oteta mukaan (\b katkaisee "pulusta" ja
+ * "Livian"), koska ne ovat puhetta HÄNESTÄ eivätkä HÄNELLE.
+ */
+const PUHUTTELU_NIMI = '(?:pulu|pöllö|pollo|livia|columba(?:\\s+livia)?|kyyhky)';
+
+/*
+ * Kaksi kuviota riittää — tunnistus saa olla kevyt. Alku: nimi heti
+ * alussa (mahdollisen tervehdyksen jälkeen) ja perässä välimerkki tai
+ * viestin loppu, jolloin "Onko pulu lintu?" ei osu. Kutsu: pilkun
+ * jälkeen tuleva nimi lauseen keskellä tai lopussa ("Mikä tuo on,
+ * pulu?", "Tiedätkö, Livia, milloin...").
+ */
+const PUHUTTELU_ALKU = new RegExp(
+  `^(?:hei|no|kuule|kuulehan|kuulepas|moi|terve|anteeksi)?[\\s,]*${PUHUTTELU_NIMI}`
+  + '(?:\\s*[,:;!?…—-]|\\s*$)',
+  'i',
+);
+const PUHUTTELU_KUTSU = new RegExp(
+  `[,;]\\s*${PUHUTTELU_NIMI}\\s*(?:[,;]|[.!?…]*\\s*$)`,
+  'i',
+);
+
+/** Puhutteliko pelaaja Liviaa nimeltä? Kevyt tunnistus, ei jäsennystä. */
+export function tunnistaPuhuttelu(teksti) {
+  const siisti = String(teksti ?? '').trim();
+  if (!siisti) return false;
+  return PUHUTTELU_ALKU.test(siisti) || PUHUTTELU_KUTSU.test(siisti);
+}
+
+/**
+ * Pyyntöön menevä kehyslaji.
+ *
+ * @param {string} kysymys pelaajan kysymys sellaisenaan
+ * @param {boolean} [jatko] tuliko kysymys jatkokysymysnapista
+ * @returns {'aloitus'|'jatko'|'puhuttelu'}
+ */
+export function kehysLaji(kysymys, jatko = false) {
+  if (tunnistaPuhuttelu(kysymys)) return KEHYS_PUHUTTELU;
+  return jatko ? KEHYS_JATKO : KEHYS_ALOITUS;
+}
+
+/* ------------------------------------------------------------------ */
 /* Käyttöliittymä                                                      */
 /* ------------------------------------------------------------------ */
 
@@ -2809,7 +2889,9 @@ class Pollo {
     for (const teksti of jatkot) {
       const nappi = polloElementti('button', 'pollo-ehdotus pollo-jatko', teksti);
       nappi.type = 'button';
-      nappi.addEventListener('click', () => this.kysy(teksti));
+      // AINOA jatkoksi merkitty polku: sama aihe jatkuu, joten Livia
+      // vastaa ilman kehystä (ks. kehysLaji).
+      nappi.addEventListener('click', () => this.kysy(teksti, { jatko: true }));
       laatikko.appendChild(nappi);
     }
     /*
@@ -3407,7 +3489,16 @@ class Pollo {
     }
   }
 
-  async kysy(raakaKysymys) {
+  /**
+   * Yksi kysymys pöllölle.
+   *
+   * @param {string} raakaKysymys
+   * @param {{jatko?: boolean}} [asetukset] `jatko: true` VAIN silloin,
+   *   kun kysymys tuli vastauksen alla olevasta jatkokysymysnapista
+   *   (naytaJatkot). Kaikki muut polut ovat uusi aihe — ks.
+   *   kehysLaji ja sen yllä oleva selitys.
+   */
+  async kysy(raakaKysymys, { jatko = false } = {}) {
     const kysymys = String(raakaKysymys ?? '').trim();
     if (!kysymys || this.kesken || !this.palvelin) return;
     // Kesken oleva ehdotushaku mitätöidään: pelaajan kysymys voittaa,
@@ -3462,6 +3553,13 @@ class Pollo {
       kysymys,
       konteksti: this.konteksti(kysymys),
       historia: this.historia.slice(-HISTORIAN_KATTO),
+      /*
+       * KEHYSLAJI on pelkkä vihje palvelimen kehotteelle, ei komento:
+       * vanha worker jättää tuntemattoman kentän huomiotta ja vastaa
+       * kuten ennenkin, ja uusi worker olettaa puuttuvan kentän
+       * kohdalla aloituksen — kumpikin suunta pysyy ehjänä.
+       */
+      kehys: kehysLaji(kysymys, jatko),
     };
     /*
      * Vastauskupla syntyy vasta ensimmäisestä palasta: siihen asti
