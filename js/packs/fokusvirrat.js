@@ -16,11 +16,15 @@
  * Ateenasta yksi askel jalan pelin maantieteessä.
  */
 import { FOKUSVIRTA_ATEENA } from './fokusvirta-ateena.js';
+import { FOKUSVIRTA_BERLIINI } from './fokusvirta-berliini.js';
 import { FOKUSVIRTA_ISTANBUL } from './fokusvirta-istanbul.js';
 import { FOKUSVIRTA_BUKAREST } from './fokusvirta-bukarest.js';
+import { FOKUSVIRTA_MADRID } from './fokusvirta-madrid.js';
+import { FOKUSVIRTA_PARIISI } from './fokusvirta-pariisi.js';
 import { FOKUSVIRTA_ROOMA } from './fokusvirta-rooma.js';
 import { FOKUSVIRTA_SARAJEVO } from './fokusvirta-sarajevo.js';
 import { FOKUSVIRTA_SOFIA } from './fokusvirta-sofia.js';
+import { FOKUSVIRTA_WIEN } from './fokusvirta-wien.js';
 
 export const FOKUSVIRRAT = {
   ateena: FOKUSVIRTA_ATEENA,
@@ -29,6 +33,18 @@ export const FOKUSVIRRAT = {
   rooma: FOKUSVIRTA_ROOMA,
   bukarest: FOKUSVIRTA_BUKAREST,
   sarajevo: FOKUSVIRTA_SARAJEVO,
+  /*
+   * EUROOPPA KAUTTAALTAAN VALMIIKSI, AALTO 1 (Raamattu, osio
+   * "Fokusmoodi", omistaja 28.8.2026 ilta): Madrid, Wien, Pariisi ja
+   * Berliini nostettiin vanhasta mallista fokusvirtamalliin. Kaikki
+   * neljä ovat maansa aarrekaupunkeja, joten ne saavat Raamatun
+   * syvyysportaikon TÄYDEN pinon — matkakirja, Livia, herokuva, kolme
+   * täkyä, oppitunti, kohtaaminen ja lehtitehtävät.
+   */
+  madrid: FOKUSVIRTA_MADRID,
+  wien: FOKUSVIRTA_WIEN,
+  pariisi: FOKUSVIRTA_PARIISI,
+  berliini: FOKUSVIRTA_BERLIINI,
 };
 
 /** Kaupungin fokusvirta tai null, jos kaupungille ei ole sisältöä. */

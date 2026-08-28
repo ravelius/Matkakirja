@@ -432,7 +432,9 @@ test('aarremerkintä voittaa saapumismerkinnän myös laatan ratkettua', () => {
   // Lipun nostaa js/fokusvirta.js avaaAarremerkinta aarteen löytyessä.
   ui.fokusaarreMerkinta = { avain: 'europe:ateena', kuitattu: false };
   const merkinta = fokusvirtaMatkakirja(ui, city);
-  assert.equal(merkinta.teksti, ATEENA.aarremerkinta,
+  // Aarremerkintä on olio (`{ teksti }`) jokaisessa kaupungissa v1301:stä
+  // lähtien; moottori kelpuuttaa yhä myös vanhan merkkijonomuodon.
+  assert.equal(merkinta.teksti, ATEENA.aarremerkinta.teksti,
     'aarteen jälkeen kortissa on isoisän myöhempi sivu');
   assert.ok(merkinta.avain.startsWith('fokusaarre:'),
     'aarremerkinnällä on oma korttiavain (ui.js tunnistaa siitä äänitesäännön)');

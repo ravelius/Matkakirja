@@ -82,6 +82,16 @@ const MODULES = [
   'js/packs/fokusvirta-bukarest.js',
   'js/packs/fokuskohteet-bih.js',
   'js/packs/fokusvirta-sarajevo.js',
+  // Eurooppa kauttaaltaan valmiiksi, aalto 1 (28.8.2026): Madrid,
+  // Wien, Pariisi ja Berliini. Näillä ei ole kohdenostoja, joten
+  // kohdepakettia ei tarvitse ladata ennen niitä — mutta js/
+  // fokusnosto.js lukee niiden takynostot-kentän maapooliinsa, joten
+  // paketit on niputettava ennen sitä (moduulijärjestys hoituu, koska
+  // packit tulevat listalla ennen pelin omia moduuleja).
+  'js/packs/fokusvirta-madrid.js',
+  'js/packs/fokusvirta-wien.js',
+  'js/packs/fokusvirta-pariisi.js',
+  'js/packs/fokusvirta-berliini.js',
   // Egyptillä ja Irakilla ei ole omaa fokusvirtaa: pelkät kohteet
   // (kadonneiden ihmeiden erä 26.8.2026), joten paririviä ei ole.
   // Sama koskee Ranskaa ja Britanniaa (Matkakirjan ihmeiden Euroopan
