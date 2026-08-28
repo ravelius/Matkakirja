@@ -1540,7 +1540,10 @@ function kysyKohteesta(ui, kysymys) {
  * =================================================================== */
 
 /** Nauhan teksti — yksi totuus kortissa ja suurennoksessa. */
-const KOHDE_IHMENAUHA = 'Matkakirjan ihme';
+// Nauhan teksti on pelin alaotsikko (omistajan valinta 28.8.2026:
+// "Unohdettu aarre, kaytetaan sita kaikkiin") - sama kaikilla
+// ihmekuvilla, kadonneilla ja sailyneilla.
+const KOHDE_IHMENAUHA = 'Unohdettu aarre';
 
 /*
  * NAUHAN SÄVY: yksi rivi, kaksi valmista väriryhmää (omistajan tilaus

@@ -1255,7 +1255,7 @@ if (ihme?.nappeja) await sivu.locator('.fokuskohde-ihmenappi').click();
 await sivu.waitForTimeout(600);
 let zoom = await ihmezoom();
 vaadi('"Koe ihme" avaa suurennoksen, jossa on ihmenauha ja havainnekuvamerkintä',
-  zoom?.nauha === true && /Matkakirjan ihme/i.test(zoom.teksti)
+  zoom?.nauha === true && /Unohdettu aarre/i.test(zoom.teksti)
   && /Matkakirjan havainnekuva/.test(zoom.lahde), JSON.stringify(zoom?.teksti));
 vaadi('suurennoksen nauha on 45 asteen kulmanauha, ei vaakalaatikko',
   vino(zoom?.muunnos), zoom?.muunnos);

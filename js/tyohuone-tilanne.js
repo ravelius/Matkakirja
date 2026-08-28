@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1255: Ihmenauhassa lukee nyt Unohdettu aarre (pelin alaotsikko) kaikilla ihmekuvilla.',
   'v1254: Pelinappula on nyt puunvarinen ja matalampi, ja kaupungin laatta nakyy sen alta joka suunnasta.',
   'v1253: Lippuikkunan tarkennettu laatta ja sen kuvateksti pysyvat kortin sisalla - reunalaatta liukuu vaakaan suurentuessaan.',
   'v1252: Reaktiorivi kaikkeen sisaltoon - peukku ja virheilmoitus lehtijutuissa, kohdekorteissa, nahtavyyksissa ja ihmeissa; lahetys ehdotuskanavaan.',
