@@ -178,35 +178,40 @@ export const FOKUSVIRTA_SOFIA = {
    */
   pollo: {
     /*
-     * LIVIAN MAADOITUS (Fablen kaanon 27.8.2026, TUURAAJA-KEHYS).
+     * LIVIAN MAADOITUS — VÄLITTÄJÄOTE (Raamattu v1262 "LIVIA
+     * AIKASIIRTYMÄN VÄLITTÄJÄNÄ — PARIPERIAATE", omistaja 28.8.2026
+     * ilta).
      *
-     * Kohde on merkinnän SÄVY, ei sen sisältö: isoisä kirjoittaa
-     * kohtauksen kuin salaisuus olisi uskottu juuri hänelle. Livia
-     * suhteuttaa sen kaupungin kokoiseksi — mutta ei mitätöi kynttilää,
-     * vaan päinvastoin suurentaa sen. Kaanonin sääntö 3 pätee tässä
-     * loppukäänteenä, ei suorana myönnytyksenä.
+     * PARI: isoisän merkintä on laudan synkin — hirttäminen,
+     * nimetön mies, kynttilä ikkunalla. Siihen ei vastata naljalla.
+     * Livia säikähtää ensin aidosti (v1257:n pehmennys säilyy) ja
+     * siirtyy sitten VÄLITTÄJÄN rooliin: hän kertoo, kuinka kaukana
+     * tuo helmikuu on ja millainen maailma silloin oli. Etäisyys on
+     * pehmennys, mitätöinti ei olisi — siksi lopussa sanotaan ääneen,
+     * ettei konteksti tee tapahtuneesta pienempää.
      *
-     * FAKTAKURI: mitään tarkistamatonta ei väitetä. Kynttilöiden määrä
-     * on nimenomaan "meikäläisten muistiinpanojen mukaan" eli suvun
-     * postiperimätietoa, kuten kaanon ohjaa — ei lähdeväite. Levskin
-     * teloitus, päivämäärä ja muistomerkki jäävät koskematta
-     * (ne ovat seuraavassa kappaleessa ja täyissä).
-     */
-    /*
-     * PEHMENNYS (omistaja 28.8.2026, kaappaus Sofian kuplasta):
-     * merkintä puhuu hirttämisestä, joten Livia saa ensin säikähtää
-     * pulumaisesti ennen asiaansa — "kääk, olipas tuo hurja juttu".
-     * Säikähdys pehmentää synkän aiheen 13+-yleisölle mitätöimättä
-     * sitä; sama keino muihin maadoituksiin vain jos merkintä on
-     * yhtä synkkä (muut neljä eivät ole).
+     * MIKÄ VAIHTUI v1257:stä: pois jäi kevyt piikki isoisälle
+     * ("kirjoittaa tämän kuin salaisuus olisi uskottu juuri hänelle")
+     * ja kynttilöiden laskeminen; tilalle tuli aikasiirtymä. Kynttilä
+     * jää seuraavaan kappaleeseen, jossa se on jo loppukärki.
+     *
+     * FAKTAKURI: kolme väitettä, kaikki tarkistettavia. (1) Helmikuu
+     * 1873 on yli 150 vuoden takana. (2) Kuolemanrangaistus oli
+     * vuonna 1873 voimassa useimmissa Euroopan maissa — "useimmissa",
+     * koska muutama oli jo luopunut siitä. (3) Sofiaa hallittiin
+     * silloin toisesta pääkaupungista, ja Bulgarian pääkaupungiksi se
+     * tuli 1879 eli kuusi vuotta myöhemmin. Levskin nimi, päivämäärä
+     * ja muistomerkki jäävät koskematta (ne ovat seuraavassa
+     * kappaleessa, kuvatekstissä ja täyissä).
      */
     maadoitus: 'Kääk. Olipas hurja juttu — luin sen kahdesti ja nukuin '
-      + 'huonosti. Isoisäsi kirjoittaa tämän kuin salaisuus olisi uskottu '
-      + 'juuri hänelle. Meikäläisten muistiinpanojen mukaan kynttilöitä '
-      + 'paloi sinä talvena useammalla ikkunalaudalla kuin yhdellä, eikä '
-      + 'majatalon isäntä kuiskannut vieraalle mitään, mitä naapuri ei olisi '
-      + 'tiennyt. Se ei tee kynttilästä pienempää. Se tekee siitä kaupungin '
-      + 'kokoisen.',
+      + 'huonosti. Sitten katsoin vuosilukua: helmikuu 1873, siitä on yli '
+      + 'sataviisikymmentä vuotta. Maailma oli toinen ja niin oli '
+      + 'oikeudenkäyttö — kuolemanrangaistus oli useimmissa maissa '
+      + 'tavallinen tuomio, ja Sofiaa hallittiin toisesta pääkaupungista; '
+      + 'omansa siitä tuli vasta kuusi vuotta myöhemmin. Se ei tee '
+      + 'tapahtuneesta pienempää, mutta se asettaa sen kauas — ja tästä '
+      + 'etäisyydestä sen kestää lukea.',
     teksti: 'Hirttopaikalla seisoo nyt kolmentoista metrin '
       + 'graniittipatsas, ja hautaa etsitään yhä. Etsintöjä on jatkunut '
       + 'sata viisikymmentä vuotta — kynttilä ikkunalla oli '
