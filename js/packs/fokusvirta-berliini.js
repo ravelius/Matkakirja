@@ -525,7 +525,30 @@ export const FOKUSVIRTA_BERLIINI = {
         + '"Captain of Köpenick", "Unraveling and capture" ja "Aftermath" '
         + '(tarkistettu 25.8.2026 työaineistoon docs/mantereet-tyoaineisto/'
         + 'takynostot-saksa.md, ehdokas 1).',
-      /* Commons 25.8.2026: 562×856, public domain, Restrictions tyhjä. */
+      /*
+       * PÄÄKUVAKSI HAVAINNEKUVA (28.8.2026, sama malli kuin Sofian
+       * areenalla ja v1307:n neljällä nostolla): repon oma generoitu
+       * kuva, jolla ei ole Commons-nimeä eikä varareittiä, joten kenttä
+       * on `osoite` eikä `tiedosto` (js/fokusnosto.js asetaNostonKuva).
+       *
+       * Kuva ei esitä rakennusta vaan HETKEN, josta nosto kertoo:
+       * univormu portailla komentamassa ja sotilaat tottelemassa.
+       * Lähderivi sanoo sen itse, jottei kukaan lue kuvaa 1906
+       * otetuksi valokuvaksi.
+       */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-kopenickin-kapteeni-loistoaika.webp',
+        selite: 'Kaartinkapteenin univormuun pukeutunut mies komentaa '
+          + 'sotilaita kaupungintalon portailla.',
+        lahde: 'Matkakirjan havainnekuva: hetki, jona univormu otti '
+          + 'kaupungintalon',
+      },
+      /*
+       * KAKKOSKUVA tekstin alle on entinen ainoa kuva — todiste siitä,
+       * kuka mies oli. Tiedosto, selite ja lähde ennallaan.
+       *
+       * Commons 25.8.2026: 562×856, public domain, Restrictions tyhjä.
+       */
       valokuva: {
         tiedosto: 'Wilhelm Voigt 1906 10 26.jpg',
         selite: 'Wilhelm Voigt poliisin kuvassa kymmenen päivää tempun '
@@ -577,7 +600,28 @@ export const FOKUSVIRTA_BERLIINI = {
       lahde: 'en-Wikipedia "Archaeopteryx", osio yksilöistä (tarkistettu '
         + '25.8.2026 työaineistoon docs/mantereet-tyoaineisto/'
         + 'takynostot-saksa.md, ehdokas 2).',
-      /* Commons 25.8.2026: 3926×4691, CC BY-SA 4.0, Restrictions tyhjä. */
+      /*
+       * PÄÄKUVAKSI HAVAINNEKUVA (28.8.2026, sama malli kuin yllä):
+       * repon oma generoitu kuva, joten kenttä on `osoite` eikä
+       * `tiedosto`.
+       *
+       * Kuva ei esitä kivilaattaa vaan ELÄIMEN elossa jurakauden
+       * laguunilla — juuri sen, mitä laatasta on luettu. Nykytilan
+       * kuva (fossiili lasin alla) on kakkosena tekstin jälkeen, ja
+       * lähderivi kertoo kumpi on kumpi.
+       */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-archaeopteryx-loistoaika.webp',
+        selite: 'Archaeopteryx liitämässä matalan laguunin yllä: siivissä '
+          + 'kynnet ja perässä pitkä höyhenpeitteinen häntä.',
+        lahde: 'Matkakirjan havainnekuva: eläin jurakauden laguunilla',
+      },
+      /*
+       * KAKKOSKUVA tekstin alle on entinen ainoa kuva. Tiedosto, selite
+       * ja lähde ennallaan.
+       *
+       * Commons 25.8.2026: 3926×4691, CC BY-SA 4.0, Restrictions tyhjä.
+       */
       valokuva: {
         tiedosto: 'Berlin Archaeopteryx.jpg',
         selite: 'Archaeopteryxin Berliinin yksilö: höyhenten painaumat '
@@ -631,7 +675,29 @@ export const FOKUSVIRTA_BERLIINI = {
       lahde: 'en-Wikipedia "Neuschwanstein Castle", johdanto ja osio '
         + '"Construction" (tarkistettu 25.8.2026 työaineistoon '
         + 'docs/mantereet-tyoaineisto/takynostot-saksa.md, ehdokas 7).',
-      /* Commons 25.8.2026: 2024×1443, public domain, Restrictions tyhjä. */
+      /*
+       * PÄÄKUVAKSI HAVAINNEKUVA (28.8.2026, sama malli kuin yllä):
+       * repon oma generoitu kuva, joten kenttä on `osoite` eikä
+       * `tiedosto`.
+       *
+       * Kuva on TYÖMAA, ei valmis linna — juuri se, mistä nosto
+       * kertoo: nosturit ja telineet tornien ympärillä, vuoret ja
+       * järvi takana. Lähderivi ei siis puhu loistoajasta.
+       * Nykytilan Commons-kuva rajaa saman työmaan läheltä, joten
+       * kaksi kuvaa kertovat eri asian: laajuuden ja lähikuvan.
+       */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-neuschwanstein-loistoaika.webp',
+        selite: 'Neuschwanstein työmaana: nosturit ja telineet tornien '
+          + 'ympärillä, Alpit ja järvi takana.',
+        lahde: 'Matkakirjan havainnekuva: linna keskeneräisenä työmaana',
+      },
+      /*
+       * KAKKOSKUVA tekstin alle on entinen ainoa kuva. Tiedosto, selite
+       * ja lähde ennallaan.
+       *
+       * Commons 25.8.2026: 2024×1443, public domain, Restrictions tyhjä.
+       */
       valokuva: {
         tiedosto: 'Johannes Bernhard Neuschwanstein Baustelle 1882-85 (01).jpg',
         selite: 'Linna työmaana 1880-luvun alussa, telineet vielä pystyssä.',

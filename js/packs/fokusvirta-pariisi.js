@@ -473,10 +473,13 @@ export const FOKUSVIRTA_PARIISI = {
        * noudatettu: lähde ei anna toiselle yritykselle kuukautta, joten
        * teksti sanoo "samana vuonna".
        *
-       * KUVAA EI OLE. Aineiston ainoa tarkistettu tiedosto on Lustigin
-       * pidätyskuva, ja aineisto jättää sen käytön nimenomaisesti
-       * päätoimittajan ratkaistavaksi (*"Fablen on päätettävä, sopiiko
-       * poliisikuva pelin sävyyn"*). Sitä päätöstä ei tehdä tässä.
+       * VALOKUVAA EI OLE. Aineiston ainoa tarkistettu tiedosto on
+       * Lustigin pidätyskuva, ja aineisto jättää sen käytön
+       * nimenomaisesti päätoimittajan ratkaistavaksi (*"Fablen on
+       * päätettävä, sopiiko poliisikuva pelin sävyyn"*). Sitä päätöstä
+       * ei tehdä tässä — 28.8.2026 lisätty pääkuva on repon oma
+       * havainnekuva eikä koske poliisikuvaan mitenkään, joten tämä
+       * nosto jää ainoaksi ilman `valokuva`-kakkoskuvaa.
        */
       id: 'lustig-eiffel',
       nimio: 'Torni romuraudaksi',
@@ -501,6 +504,23 @@ export const FOKUSVIRTA_PARIISI = {
       lahde: 'en-Wikipedia "Victor Lustig", osio Eiffel-tornin huijauksesta '
         + '(tarkistettu 25.8.2026 työaineistoon docs/mantereet-tyoaineisto/'
         + 'takynostot-ranska.md, ehdokas 2).',
+      /*
+       * PÄÄKUVA (28.8.2026, sama malli kuin Sofian areenalla ja
+       * v1307:n neljällä nostolla): repon oma generoitu havainnekuva,
+       * jolla ei ole Commons-nimeä eikä varareittiä, joten kenttä on
+       * `osoite` eikä `tiedosto` (js/fokusnosto.js asetaNostonKuva).
+       *
+       * Kuva ei esitä tornia vaan HETKEN, jossa se myytiin: hotellin
+       * salonki, väärennetyt kirjelomakkeet pöydällä ja torni vain
+       * ikkunan takana. Lähderivi sanoo sen itse, jottei kukaan lue
+       * kuvaa valokuvaksi tapahtumasta.
+       */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-lustig-eiffel-loistoaika.webp',
+        selite: 'Hotellin salonki: väärennetyt asiakirjat pöydällä, '
+          + 'romukauppiaat kuuntelemassa ja torni ikkunan takana.',
+        lahde: 'Matkakirjan havainnekuva: hetki, jona torni myytiin',
+      },
       kysymykset: [
         'Miten Eiffel-tornin romukauppa saatiin kuulostamaan uskottavalta?',
         'Miksi huijauksen uhri ei ilmoittanut poliisille?',
@@ -548,7 +568,27 @@ export const FOKUSVIRTA_PARIISI = {
       lahde: 'en-Wikipedia "Zarafa (giraffe)", osiot matkasta ja '
         + 'vastaanotosta (tarkistettu 25.8.2026 työaineistoon '
         + 'docs/mantereet-tyoaineisto/takynostot-ranska.md, ehdokas 3).',
-      /* Commons 25.8.2026: 4793×6392, public domain, Restrictions tyhjä. */
+      /*
+       * PÄÄKUVAKSI HAVAINNEKUVA (28.8.2026, sama malli kuin yllä):
+       * repon oma generoitu kuva, joten kenttä on `osoite` eikä
+       * `tiedosto`.
+       *
+       * Kuva ei esitä paikkaa vaan MATKAA, josta nosto kertoo:
+       * kirahvi takki päällä maantiellä, saattue mukana ja kyläläiset
+       * tien vierellä. Lähderivi sanoo sen itse.
+       */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-kirahvin-kavelymatka-loistoaika.webp',
+        selite: 'Kirahvi kävelemässä maantietä takki päällä, saattajat '
+          + 'rinnalla ja kyläläiset tien vierellä katsomassa.',
+        lahde: 'Matkakirjan havainnekuva: hetki kirahvin kävelymatkalta',
+      },
+      /*
+       * KAKKOSKUVA tekstin alle on entinen ainoa kuva. Tiedosto, selite
+       * ja lähde ennallaan.
+       *
+       * Commons 25.8.2026: 4793×6392, public domain, Restrictions tyhjä.
+       */
       valokuva: {
         tiedosto: 'Nicolas Hüet, the Younger - Study of the Giraffe Given to Charles X by the Viceroy of Egypt - Google Art Project.jpg',
         selite: 'Sama kirahvi Nicolas Hüet nuoremman tutkielmassa vuodelta '

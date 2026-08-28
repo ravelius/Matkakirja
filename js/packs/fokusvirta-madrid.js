@@ -568,6 +568,25 @@ export const FOKUSVIRTA_MADRID = {
         + 'excavation, scepticism" (tarkistettu 25.8.2026 työaineistoon '
         + 'docs/mantereet-tyoaineisto/takynostot-espanja.md, ehdokas 1).',
       /*
+       * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin Sofian
+       * areenalla ja v1307:n neljällä nostolla): repon oma generoitu
+       * havainnekuva, jolla ei ole Commons-nimeä eikä varareittiä,
+       * joten kenttä on `osoite` eikä `tiedosto` (js/fokusnosto.js
+       * asetaNostonKuva).
+       *
+       * Kuva näyttää katon siinä hetkessä, jota koko riita koski:
+       * maalari työssään, valonaan kivilamppu ja pieni tuli.
+       */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-altamira-loistoaika.webp',
+        selite: 'Altamiran katto syntymässä: maalari polvillaan holvin '
+          + 'alla, kivilamppu ja pieni tuli ainoana valona.',
+        lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
+      },
+      /*
+       * KAKKOSKUVA tekstin alle on entinen ainoa kuva — todiste siitä,
+       * mistä juttu kertoo. Tiedosto, selite ja lähde ennallaan.
+       *
        * Aineiston oma valinta: sama piirros, jonka takia löytäjää
        * syytettiin väärentäjäksi. Commons 25.8.2026: 1350×682, public
        * domain, Restrictions tyhjä.
@@ -628,7 +647,28 @@ export const FOKUSVIRTA_MADRID = {
       lahde: 'en-Wikipedia "Monk parakeet", osiot pesinnästä ja '
         + 'vieraslajistatuksesta (tarkistettu 25.8.2026 työaineistoon '
         + 'docs/mantereet-tyoaineisto/takynostot-espanja.md, ehdokas 6).',
-      /* Commons 25.8.2026: 6024×4016, CC BY-SA 4.0, Restrictions tyhjä. */
+      /*
+       * PÄÄKUVAKSI HAVAINNEKUVA (28.8.2026, sama malli kuin yllä):
+       * repon oma generoitu kuva, joten kenttä on `osoite` eikä
+       * `tiedosto`.
+       *
+       * Kuva näyttää sen, mitä valokuva ei mahduta kehykseensä: koko
+       * yhdyskunnan pesän sisäänkäynteineen. Lähderivi ei puhu
+       * loistoajasta, koska nosto kertoo tästä päivästä.
+       */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-munkkiaratit-loistoaika.webp',
+        selite: 'Munkkiarattien jättipesä puistopuun oksistossa: monta '
+          + 'omaa sisäänkäyntiä ja Madridin julkisivut takana.',
+        lahde: 'Matkakirjan havainnekuva: yhdyskunnan pesä Madridin '
+          + 'puistossa',
+      },
+      /*
+       * KAKKOSKUVA tekstin alle on entinen ainoa kuva. Tiedosto, selite
+       * ja lähde ennallaan.
+       *
+       * Commons 25.8.2026: 6024×4016, CC BY-SA 4.0, Restrictions tyhjä.
+       */
       valokuva: {
         tiedosto: 'Cotorra Argentina - Parque del Oeste - Madrid 03.jpg',
         selite: 'Munkkiaratti Madridin Parque del Oestessa.',
@@ -675,7 +715,26 @@ export const FOKUSVIRTA_MADRID = {
         + '"Expansion" ja "Defeat", sekä "First Spanish Republic" '
         + '(tarkistettu 25.8.2026 työaineistoon docs/mantereet-tyoaineisto/'
         + 'takynostot-espanja.md, ehdokas 4).',
-      /* Commons 25.8.2026: 1216×928, public domain, Restrictions tyhjä. */
+      /*
+       * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin yllä): repon
+       * oma generoitu havainnekuva, joten kenttä on `osoite` eikä
+       * `tiedosto`.
+       *
+       * Kuva on satama kantonin puolena vuotena: kapinallisten
+       * sota-alukset punaisten lippujen alla ja väki laiturilla.
+       */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-cartagenan-kantoni-loistoaika.webp',
+        selite: 'Kantonin laivasto Cartagenan satamassa punaiset liput '
+          + 'mastoissa, väki katsomassa laiturilta.',
+        lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
+      },
+      /*
+       * KAKKOSKUVA tekstin alle on entinen ainoa kuva. Tiedosto, selite
+       * ja lähde ennallaan.
+       *
+       * Commons 25.8.2026: 1216×928, public domain, Restrictions tyhjä.
+       */
       valokuva: {
         tiedosto: 'Vista de la ciudad, puerto y Arsenal de Cartagena.jpg',
         selite: 'Cartagenan satama ja arsenaali vuoden 1778 kaiverruksessa. '
