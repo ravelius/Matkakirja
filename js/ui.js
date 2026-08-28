@@ -4073,8 +4073,16 @@ export class UI {
      * väistämättä avainta.
      */
     const kuori = this.karttaKuori ?? this.svg;
+    /*
+     * VIEWBOX KUULUU AVAIMEEN (lavaikkuna, js/kartta.js LAVAIKKUNA).
+     * Lava mitoitetaan näkymään eikä koko lautaan, ja reunatäydennys
+     * siirtää lavaa laudan yli MUUTTAMATTA sen inline-mittoja: sama
+     * leveys ja korkeus, eri origo. Ilman viewBoxia avain ei silloin
+     * muuttuisi ja vanhat laatikot jäisivät voimaan.
+     */
     const avain = `${document.body.className}|${this.svg.style.width}|${this.svg.style.height}`
-      + `|${this.svg.style.alignSelf}|${kuori.style.transform}`;
+      + `|${this.svg.style.alignSelf}|${kuori.style.transform}`
+      + `|${this.svg.getAttribute('viewBox') ?? ''}`;
     let mitat = this.nakyvanMitat;
     if (!mitat || mitat.avain !== avain) {
       mitat = {
@@ -6889,6 +6897,23 @@ export class UI {
     // Ilman mitattavaa näkymää mittakaava jäisi arvaukseksi: entinen
     // koko on parempi kuin väärä (sama sääntö kuin kuvavinjeteillä).
     if (!(s > 0)) return;
+    /*
+     * LAATAN NÄKYVÄ KOKO SAA MERKKIEN KATON (omistajan iPhone-palaute
+     * 28.8.2026 ilta, sama katto kuin nappula sai v1293:ssa).
+     *
+     * Kapealla ruudulla kattamaton skaala paisutti kaupungin kultaisen
+     * kiekon lähizoomilla noin 120 pikselin levyiseksi, eli se hallitsi
+     * koko näkymää (Fablemaxin maksimizoomikaappaus). Katto
+     * (fokusMerkkiSkaalaKartalle) sitoo merkin lehden omaan
+     * typografiaan, joten laatta kutistuu samassa suhteessa kuin
+     * nappula ja kohdemerkit — leveällä ruudulla katto ei pure
+     * lainkaan eikä työpöytänäkymä muutu.
+     *
+     * OSUMA-ALUE EI KUTISTU: alla oleva säde lasketaan yhä
+     * KATTAMATTOMASTA arvosta (sormen 44 px:n sääntö, ks.
+     * fokusMerkkiOsumaKerroin).
+     */
+    const sKartalle = this.fokusMerkkiSkaalaKartalle?.() ?? s;
 
     const osat = [...this.svg.querySelectorAll('.cities [data-kaupunki]')]
       .filter((osa) => osa.dataset.kaupunki === city.id
@@ -6911,7 +6936,7 @@ export class UI {
      * kohdemerkeillä (fokusKohdeMerkit): fokusmoodi ja pelinäkymä.
      */
     const kerroin = Number.isFinite(rx) && rx > 0
-      ? (FOKUS_LAATTA_PX / 2) * s / rx
+      ? (FOKUS_LAATTA_PX / 2) * sKartalle / rx
       : 1;
     // Edellisen kaupungin osat takaisin omaan kokoonsa — ja näkyviin,
     // jos nappula seisoi niiden päällä (nappulanAlla alla).
@@ -7574,7 +7599,28 @@ export class UI {
     kerros.textContent = '';
     if (!paalla) return;
 
-    const maski = el('mask', { id: 'fokus-sumu-maski', maskUnits: 'userSpaceOnUse' }, kerros);
+    /*
+     * MASKIN ALUE KIRJOITETAAN AUKI (lavaikkuna, js/kartta.js
+     * LAVAIKKUNA).
+     *
+     * SVG:n maskilla on oletusalue x=-10% y=-10% leveys=120%
+     * korkeus=120%, ja `userSpaceOnUse` tulkitsee prosentit NÄKYMÄN
+     * (viewBoxin) mitoista — ei verhon laatikosta. Koko laudan
+     * kokoisella lavalla alue kattoi laudan sattumalta, mutta kun lava
+     * ikkunoitiin näkymään, alue kutistui ruudullisen kokoiseksi
+     * laudan vasempaan yläkulmaan ja verho katosi kaikkialta muualta
+     * (mitattu Ateenan saapumisnäkymässä: sumu hävisi Kreikan
+     * ulkopuolelta). Alue on siksi nyt laudan oma laatikko, joka on
+     * täsmälleen verhon suorakaide.
+     */
+    const maski = el('mask', {
+      id: 'fokus-sumu-maski',
+      maskUnits: 'userSpaceOnUse',
+      x: 0,
+      y: 0,
+      width: map.width,
+      height: map.height,
+    }, kerros);
     // Valkoinen pohja = harso näkyy; mustat aukot = maa jää tarkaksi.
     el('rect', {
       x: 0, y: 0, width: map.width, height: map.height, fill: '#fff',

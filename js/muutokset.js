@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1294, teksti: 'Kartan lava ikkunoidaan nakymaan' },
   { v: 1293, teksti: 'Kapea naytto: syvempi zoomiporras ja pienempi nappula' },
   { v: 1292, teksti: 'Luetut takypisteet pysyvat kartalla' },
   { v: 1291, teksti: 'Kohdemerkit eivat rakennu uusiksi joka eleessa' },

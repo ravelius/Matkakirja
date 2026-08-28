@@ -158,6 +158,68 @@ const YLAKAISTA = 0.26;
  */
 const SAUMAN_VARA = 0.03;
 /*
+ * ============ LAVAIKKUNA ==========================================
+ *
+ * SVG-LAVA MITOITETAAN NÄKYMÄÄN, EI KOKO LAUTAAN (omistajan iPhone-
+ * palaute 28.8.2026 "kartta tökkii", diagnoosi PR #1715).
+ *
+ * Ennen tätä lähikuvan lava (svg.style.width/height) oli aina koko
+ * pelilaudan kokoinen nykyisellä mittakaavalla: saapumisnäkymässä
+ * 9 966 x 4 501 css-px ja syvimmällä portaalla 51 374 x 22 069.
+ * Chromium sietää sen (rasterointi omissa säikeissään), mutta peliä
+ * pelataan WKWebView'ssä, jossa jättikerroksen tiilien maalaus ja
+ * hallinta tapahtuu web-prosessin PÄÄSÄIKEESSÄ — samassa, joka
+ * käsittelee eleet. Mitattu WebKitillä (iPhone-profiili 390x844 dpr3,
+ * Ateenan lähikuva): panorointi p50 82 ms, nipistys p50 97 ms.
+ *
+ * RATKAISEVA ABLAATIO: kun lava pakotettiin ruudun kokoiseksi mutta
+ * sisältö jätettiin ennalleen, sama ele mitattiin 16 ms:iin. Kun taas
+ * KAIKKI sisältö piilotettiin täysikokoiselta lavalta, ele pysyi
+ * hitaana (95 ms). Juurisyy on siis lavan koko, ei yksikään
+ * sisältökerros.
+ *
+ * IKKUNA ON NÄKYMÄ + YHDEN PYYHKÄISYN MARGINAALI joka reunalle. Se on
+ * sama puskurioppi, jolla bittikartta jo ladataan (js/ui.js
+ * taydennaTaide sääntö 2): yksi ele ei voi siirtää karttaa enempää
+ * kuin ruudullisen, joten kesken eleen ei tarvitse tehdä mitään.
+ * Marginaalille on lattia LAVA_LIUKUVARA, koska ele ei pääty sormen
+ * irrotessa: liuku jatkaa matkaa vielä LIUKU_KATTO-vauhdilla
+ * (2,5 px/ms) eksponentiaalisesti vaimentuen, eli enintään noin
+ * 690 px. Ilman lattiaa hurja heitto törmäisi kapealla ruudulla
+ * lavan reunaan kesken liu'un ja pysähtyisi kuin seinään.
+ *
+ * REUNATÄYDENNYS tehdään eleen JÄLKEEN (ikkunoiLava): kun näkymä on
+ * syönyt puolet marginaalistaan, lava ikkunoidaan uudelleen näkymän
+ * ympärille. Sovitus säilyttää ruudun keskipisteen pikselilleen
+ * (sovitaMannerZoom laskee panin keskipisteestä), joten täydennys ei
+ * siirrä kuvaa.
+ *
+ * KIERTÄVÄ LAUTA (pelin oma maailmanlauta) IKKUNOIDAAN MYÖS
+ * VAAKASUUNNASSA — se on juuri se lauta, jolla peliä pelataan.
+ *
+ * Loputon vieritys hoidettiin ennen jaksolla: lava oli tasan laudan
+ * levyinen, panX normalisoitiin välille [-jakso, 0) ja sauman yli
+ * hypättiin <use>-kopion turvin (js/ui.js laudanKierto). Ikkunoituna
+ * kierto siirtyy IKKUNAN paikkaan: ikkunan keskus normalisoidaan
+ * laudan leveyteen, ja jos ikkuna alkaisi laudan vasemmalta puolelta,
+ * koko ikkuna siirretään yhden laudan leveyden verran oikealle
+ * kopion päälle. Sisältöä on siis aina — alkuperäinen kattaa
+ * [0, leveys) ja kopio [leveys, 2 x leveys) — ja ruudulla kohta on
+ * sama kohta laudalla. Eleen aikana jaksoa ei tarvita: ikkunan
+ * marginaali riittää yhteen eleeseen, ja seuraava ikkunointi vie
+ * kierron eteenpäin.
+ *
+ * Napautettavat kappaleet ovat kierrolla valmiiksi kolmena kopiona
+ * (js/ui.js kiertoKohdat, [-leveys, 0, +leveys]), joten ne osuvat
+ * siirretyssäkin ikkunassa. Ainoa kuoressa asuva kappale, noppa,
+ * siirretään lähimpään kopioonsa ankkuroinnissa (ankkuroiNoppa).
+ *
+ * Kun ikkuna olisi laudan levyinen tai leveämpi (loitonnettu näkymä),
+ * palataan vanhaan jaksomalliin sellaisenaan.
+ */
+const LAVA_MARGINAALI = 1;      // ruudullista lavaa näkymän kummallekin puolelle
+const LAVA_LIUKUVARA = 720;     // px: pisin matka, jonka liuku voi vielä viedä
+/*
  * Saapumisnäkymän siirto kohdemantereen suuntaan (ks. mantereenKeskitys).
  * OSUUS on matka mantereen painopisteeseen; SIIRTO_X ja SIIRTO_Y
  * rajaavat sen osuuteen näkyvästä alasta, jottei kaupunki karkaa
@@ -643,8 +705,17 @@ export class Kartta {
     this.ui.svg.style.flex = '0 0 auto';
     this.ui.svg.style.alignSelf = 'center';
     this.ui.viewBoxSize = { vw: nakyvaYks, vh: nakyvaKorkeus };
+    /*
+     * Aloituskartan lava on jo valmiiksi ruudun korkuinen ja vain
+     * runsaan ruudullisen levyinen (yleiskuva x ALOITUS_ZOOM), joten
+     * sitä ei ikkunoida — ja se on nimenomaan se kiertävä maailmanlauta,
+     * jonka vaakasuunta EI saa ikkunoitua (ks. LAVAIKKUNA). Lavan origo
+     * kirjataan silti, jotta kaikki muunnokset lukevat saman kentän.
+     */
+    this.ui.zoomVasenReuna = box.x;
     this.ui.zoomYlaReuna = vy;
     this.ui.zoomSkaala = skaala;
+    this.ui.lavaIkkunaTila = null;
     // Panorointivara: kuinka paljon karttaa jää ruudun ulkopuolelle.
     // Kiertävällä kartalla varaa ei ole — on jakso, joka kiertää ympäri.
     this.ui.panJakso = this.kiertava() ? leveys : 0;
@@ -861,8 +932,11 @@ export class Kartta {
     const pane = this.ui.mapPane;
     if (!pane || !this.ui.zoomSkaala || !this.ui.mannerZoom) return null;
     const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
+    // Lavan origo, EI laudan: lava on ikkunoitu näkymän ympärille
+    // (ks. LAVAIKKUNA), ja pan mitataan sen vasemmasta ylänurkasta.
     return {
-      x: box.x + (pane.clientWidth / 2 - (this.ui.panX ?? 0)) / this.ui.zoomSkaala,
+      x: (this.ui.zoomVasenReuna ?? box.x)
+        + (pane.clientWidth / 2 - (this.ui.panX ?? 0)) / this.ui.zoomSkaala,
       y: (this.ui.zoomYlaReuna ?? box.y)
         + (pane.clientHeight / 2 - (this.ui.panY ?? 0)) / this.ui.zoomSkaala,
     };
@@ -1049,6 +1123,10 @@ export class Kartta {
     this.ui.panVaraY = 0;
     this.ui.panJakso = 0;
     this.ui.zoomiVapaa = 0;
+    // Lavaikkuna katoaa lähikuvan mukana: yleiskuvassa lava on paneelin
+    // kokoinen eikä sillä ole omaa origoa (ks. LAVAIKKUNA).
+    this.ui.lavaIkkunaTila = null;
+    this.ui.lavaUnioni = null;
     // Muunnos ja sen siirtymä ovat kuoressa, inline-mitat SVG:ssä
     // (wrapper-siirto): molemmat on nollattava.
     this.kuori.style.transition = '';
@@ -1155,6 +1233,116 @@ export class Kartta {
     };
   }
 
+  /**
+   * LAVAIKKUNA: se pala lautaa, joka lavalle mitoitetaan (ks. tiedoston
+   * alun LAVAIKKUNA-osio).
+   *
+   * Ikkuna on näkymä + marginaali joka reunalle, leikattuna lavan omaan
+   * alueeseen (`lauta` = laudan rajaus kaistoineen). Kiertävällä
+   * laudalla vaakasuunta palautetaan kokonaisena: sen loputon vieritys
+   * nojaa siihen, että lava on tasan laudan levyinen ja <use>-kopio
+   * jatkaa sitä.
+   *
+   * KAMERA-AJON UNIONI (ui.lavaUnioni) laajentaa ikkunaa ajon ajaksi:
+   * ajo piirtyy CSS-muunnoksena lopullisen näkymän päälle, joten myös
+   * ajon ALKUNÄKYMÄN on oltava lavalla. Unioni puretaan perillä.
+   */
+  lavaIkkuna(keskiX, keskiY, paneW, paneH, skaala, lauta) {
+    const margX = Math.max(paneW * LAVA_MARGINAALI, LAVA_LIUKUVARA) / skaala;
+    const margY = Math.max(paneH * LAVA_MARGINAALI, LAVA_LIUKUVARA) / skaala;
+    const u = this.ui.lavaUnioni;
+    /** Yksi akseli: ikkunan alku ja koko laudan yksiköissä. */
+    const akseli = (keski, nakyva, marg, a0, pituus, u0, u1) => {
+      let alku = keski - nakyva / 2 - marg;
+      let loppu = keski + nakyva / 2 + marg;
+      if (Number.isFinite(u0) && Number.isFinite(u1)) {
+        alku = Math.min(alku, u0 - marg);
+        loppu = Math.max(loppu, u1 + marg);
+      }
+      alku = Math.max(a0, alku);
+      loppu = Math.min(a0 + pituus, loppu);
+      return { alku, koko: Math.max(0, loppu - alku) };
+    };
+    const y = akseli(keskiY, paneH / skaala, margY, lauta.y, lauta.h, u?.y0, u?.y1);
+    const pohja = {
+      y: y.alku, h: y.koko, margX, margY, keski: keskiX, kiertoX: false,
+    };
+    if (this.kiertava()) {
+      /*
+       * Kierrolla ikkuna ei rajaudu laudan laitaan vaan siirtyy sen
+       * yli kopion päälle (ks. LAVAIKKUNA). Ajon unioni saa kasvattaa
+       * ikkunaa, mutta silloin palataan aina koko laudan levyiseen
+       * lavaan — unioni voi ulottua sauman molemmin puolin.
+       */
+      const jaksoYks = lauta.jakso;
+      const leveys = paneW / skaala + 2 * margX;
+      if (u || !(jaksoYks > 0) || leveys >= jaksoYks) {
+        return { ...pohja, x: lauta.x, w: lauta.w, kokoLeveys: true };
+      }
+      const c = ((keskiX % jaksoYks) + jaksoYks) % jaksoYks;
+      let alku = c - leveys / 2;
+      let keski = c;
+      if (alku < lauta.x) {
+        // Ikkuna jäisi laudan vasemmalle puolelle, jossa ei ole
+        // sisältöä: siirretään se kokonaisuudessaan kopion päälle.
+        alku += jaksoYks;
+        keski += jaksoYks;
+      }
+      return {
+        ...pohja, x: alku, w: leveys, keski, kokoLeveys: false, kiertoX: true,
+      };
+    }
+    const x = akseli(keskiX, paneW / skaala, margX, lauta.x, lauta.w, u?.x0, u?.x1);
+    return {
+      ...pohja, x: x.alku, w: x.koko, kokoLeveys: x.koko >= lauta.w - 0.001,
+    };
+  }
+
+  /**
+   * REUNATÄYDENNYS: lava ikkunoidaan uudelleen näkymän ympärille, kun
+   * ele on syönyt puolet marginaalistaan.
+   *
+   * Kutsutaan VAIN eleen tai liu'un päätyttyä (raahaus, nipistys,
+   * liuku, rullaeleen tauko) — ei koskaan kesken eleen: uusi lava
+   * tarkoittaa uutta rasterointia, ja se on juuri se työ, jota sormen
+   * alla ei tehdä (js/ui.js taydennaTaide sääntö 1).
+   *
+   * Sovitus säilyttää ruudun keskipisteen (sovitaMannerZoom laskee
+   * panin näkymän keskipisteestä), joten täydennys EI siirrä kuvaa
+   * pikseliäkään.
+   */
+  ikkunoiLava() {
+    const ikkuna = this.ui.lavaIkkunaTila;
+    const skaala = this.ui.zoomSkaala;
+    if (!ikkuna || !this.ui.mannerZoom || !(skaala > 0)) return false;
+    if (this.kameraAjossa()) return false;
+    const mitat = this.paneMitat(this.ui.mapPane);
+    if (!mitat.w || !mitat.h) return false;
+    // Näkymän vasen ylänurkka lavan koordinaateissa.
+    const nakyvaX = (this.ui.zoomVasenReuna ?? ikkuna.x) - (this.ui.panX ?? 0) / skaala;
+    const nakyvaY = (this.ui.zoomYlaReuna ?? ikkuna.y) - (this.ui.panY ?? 0) / skaala;
+    /*
+     * Onko marginaalista jäljellä alle puolet — ja onko sillä laidalla
+     * ylipäätään mitään täydennettävää? Laudan laitaan asti ikkunoitu
+     * reuna ei voi kasvaa, eikä siitä siis saa syntyä ikuista sovitusta.
+     */
+    const vajaa = (nakyvanAlku, nakyvanKoko, ikkAlku, ikkKoko, marg, lautaAlku, lautaKoko, kierto) => {
+      // Kiertävällä laudalla vaakasuunnassa ei ole laitaa lainkaan.
+      const laidassaAlussa = !kierto && ikkAlku <= lautaAlku + 0.001;
+      const laidassaLopussa = !kierto && ikkAlku + ikkKoko >= lautaAlku + lautaKoko - 0.001;
+      if (!laidassaAlussa && nakyvanAlku - ikkAlku < marg / 2) return true;
+      return !laidassaLopussa && (ikkAlku + ikkKoko) - (nakyvanAlku + nakyvanKoko) < marg / 2;
+    };
+    const lauta = ikkuna.lauta;
+    const tarve = vajaa(nakyvaX, mitat.w / skaala, ikkuna.x, ikkuna.w,
+      ikkuna.margX, lauta.x, lauta.w, ikkuna.kiertoX)
+      || vajaa(nakyvaY, mitat.h / skaala, ikkuna.y, ikkuna.h,
+        ikkuna.margY, lauta.y, lauta.h, false);
+    if (!tarve) return false;
+    this.fitViewBox();
+    return true;
+  }
+
   /** Mantereen lähikuvan mitat ja rajat. */
   sovitaMannerZoom(paneW, paneH) {
     /*
@@ -1199,20 +1387,27 @@ export class Kartta {
      */
     const jakso = Math.round(box.w * skaala);
     const yliLeveys = this.kiertava() ? Math.ceil(paneW) : 0;
-    const nakyvaYks = box.w + yliLeveys / skaala;
-    const leveys = jakso + yliLeveys;
-    const korkeus = Math.round(korkeusYks * skaala);
-    this.ui.svg.setAttribute('viewBox', `${box.x} ${ylaReuna} ${nakyvaYks} ${korkeusYks}`);
-    this.ui.svg.style.width = `${leveys}px`;
-    this.ui.svg.style.height = `${korkeus}px`;
-    this.ui.svg.style.flex = '0 0 auto';
-    this.ui.svg.style.alignSelf = 'flex-start';
-    this.ui.viewBoxSize = { vw: nakyvaYks, vh: korkeusYks };
+    // Koko lava ilman ikkunointia: tästä lavaikkuna leikataan.
+    const taysiLeveysYks = box.w + yliLeveys / skaala;
+    const lauta = {
+      x: box.x, y: ylaReuna, w: taysiLeveysYks, h: korkeusYks, jakso: box.w,
+    };
+    /*
+     * NÄKYMÄN KESKIPISTE ENSIN, IKKUNA VASTA SITTEN.
+     *
+     * Pan lasketaan aluksi laudan omassa origossa täsmälleen kuten
+     * ennen ikkunointia, koska myös fokusrajaus (rajaaFokusPan) lukee
+     * saman origon. Vasta rajattu keskipiste ikkunoidaan, ja pan
+     * kirjoitetaan lopuksi uudelleen ikkunan origoon.
+     */
+    const vanhaVasen = this.ui.zoomVasenReuna;
+    const vanhaYla = this.ui.zoomYlaReuna;
+    const vanhaSkaala = this.ui.zoomSkaala;
     this.ui.zoomSkaala = skaala;
+    this.ui.zoomVasenReuna = box.x;
     this.ui.zoomYlaReuna = ylaReuna;
-    this.ui.panJakso = this.kiertava() ? jakso : 0;
-    this.ui.panVara = this.kiertava() ? 0 : Math.max(0, leveys - paneW);
-    this.ui.panVaraY = Math.max(0, korkeus - paneH);
+    let panX;
+    let panY;
     if (this.ui.panX == null || this.ui.panY == null) {
       /*
        * Ilman asetettua kohdetta keskitetään PELAAJAAN, ei laudan
@@ -1223,8 +1418,22 @@ export class Kartta {
       const kohde = this.ui.zoomKohde ?? this.pelaajanKohta()
         ?? { x: box.x + box.w / 2, y: box.y + box.h / 2 };
       const keskus = this.mantereenKeskitys(kohde, paneW, paneH, skaala);
-      this.ui.panX = paneW / 2 - (keskus.x - box.x) * skaala;
-      this.ui.panY = paneH / 2 - (keskus.y - ylaReuna) * skaala;
+      panX = paneW / 2 - (keskus.x - box.x) * skaala;
+      panY = paneH / 2 - (keskus.y - ylaReuna) * skaala;
+    } else {
+      /*
+       * Vanha panorointi on EDELLISEN lavaikkunan origossa. Siitä
+       * luetaan sama näkymän keskipiste ja kirjoitetaan se laudan
+       * origoon: näin ruudulla oleva kohta ei siirry pikseliäkään,
+       * vaikka lava ikkunoitaisiin uudelleen (reunatäydennys).
+       */
+      const vs = vanhaSkaala > 0 ? vanhaSkaala : skaala;
+      const keskiX = (Number.isFinite(vanhaVasen) ? vanhaVasen : box.x)
+        + (paneW / 2 - this.ui.panX) / vs;
+      const keskiY = (Number.isFinite(vanhaYla) ? vanhaYla : ylaReuna)
+        + (paneH / 2 - this.ui.panY) / vs;
+      panX = paneW / 2 - (keskiX - box.x) * skaala;
+      panY = paneH / 2 - (keskiY - ylaReuna) * skaala;
     }
     /*
      * FOKUSIKKUNA RAJAA MYÖS PELIN OMAN NÄKYMÄN (v1101). Zoomaus pitää
@@ -1235,10 +1444,57 @@ export class Kartta {
      */
     const fokus = this.fokusRajaukset();
     if (fokus) {
-      const rajattu = this.rajaaFokusPan(this.ui.panX, this.ui.panY, fokus.kuva);
-      this.ui.panX = rajattu.x;
-      this.ui.panY = rajattu.y;
+      const rajattu = this.rajaaFokusPan(panX, panY, fokus.kuva);
+      panX = rajattu.x;
+      panY = rajattu.y;
     }
+    // Lopullinen näkymän keskipiste laudan koordinaateissa — ikkunan keskus.
+    const keskiX = box.x + (paneW / 2 - panX) / skaala;
+    const keskiY = ylaReuna + (paneH / 2 - panY) / skaala;
+    const ikkuna = this.lavaIkkuna(keskiX, keskiY, paneW, paneH, skaala, lauta);
+    /*
+     * MITAT PIKSELEINÄ JA VIEWBOX NIISTÄ TAKAISIN, jotta mittakaava on
+     * täsmälleen `skaala` eikä pyöristys jätä SVG:hen kirjelaatikkoa
+     * (preserveAspectRatio keskittäisi sisällön ja siirtäisi kaiken
+     * puoli pikseliä). Kiertävällä laudalla vaakamitta on entisellään:
+     * jakso ja <use>-kopio ovat sen varassa.
+     */
+    const kokoLeveys = ikkuna.kokoLeveys && this.kiertava();
+    const leveys = kokoLeveys ? jakso + yliLeveys : Math.round(ikkuna.w * skaala);
+    const korkeus = Math.round(ikkuna.h * skaala);
+    const nakyvaYks = kokoLeveys ? taysiLeveysYks : leveys / skaala;
+    const nakyvaKorkeus = korkeus / skaala;
+    this.ui.svg.setAttribute('viewBox', `${ikkuna.x} ${ikkuna.y} ${nakyvaYks} ${nakyvaKorkeus}`);
+    this.ui.svg.style.width = `${leveys}px`;
+    this.ui.svg.style.height = `${korkeus}px`;
+    this.ui.svg.style.flex = '0 0 auto';
+    this.ui.svg.style.alignSelf = 'flex-start';
+    this.ui.viewBoxSize = { vw: nakyvaYks, vh: nakyvaKorkeus };
+    this.ui.zoomVasenReuna = ikkuna.x;
+    this.ui.zoomYlaReuna = ikkuna.y;
+    // Ikkunan tila reunatäydennykselle (ikkunoiLava). Yksi olio
+    // sovitusta kohti, ei kehystä kohti (js/fokusmitat.js sääntö).
+    this.ui.lavaIkkunaTila = {
+      x: ikkuna.x,
+      y: ikkuna.y,
+      w: nakyvaYks,
+      h: nakyvaKorkeus,
+      margX: ikkuna.margX,
+      margY: ikkuna.margY,
+      kiertoX: ikkuna.kiertoX,
+      lauta,
+    };
+    /*
+     * JAKSO VAIN KOKO LAUDAN LEVYISELLÄ LAVALLA. Ikkunoituna kierto on
+     * ikkunan paikassa eikä panorointiarvossa (ks. LAVAIKKUNA), ja pan
+     * rajataan tavalliseen tapaan lavan reunoihin.
+     */
+    this.ui.panJakso = kokoLeveys ? jakso : 0;
+    this.ui.panVara = kokoLeveys ? 0 : Math.max(0, leveys - paneW);
+    this.ui.panVaraY = Math.max(0, korkeus - paneH);
+    // Sama keskipiste, uusi origo: ruudulla ei muutu mikään.
+    this.ui.panX = paneW / 2 - (ikkuna.keski - ikkuna.x) * skaala;
+    this.ui.panY = paneH / 2 - (keskiY - ikkuna.y) * skaala;
     this.asetaPan(this.ui.panX, this.ui.panY);
     /*
      * Fokuskuvan verho tahdistetaan tästä: se on voimassa vain
@@ -1603,7 +1859,37 @@ export class Kartta {
       return Promise.resolve(true);
     }
 
+    /*
+     * LAVA KATTAA KOKO AJON (ks. LAVAIKKUNA).
+     *
+     * Ajo piirretään CSS-muunnoksena LOPULLISEN näkymän päälle, joten
+     * lavalla on oltava myös se alue, jonka ajo näyttää matkalla —
+     * ennen kaikkea alkunäkymä. Lava ikkunoidaan siksi ajon ajaksi
+     * alku- ja loppunäkymän UNIONIIN; se voi olla iso, mutta se on
+     * täsmälleen nykytila eikä siis taantuma. Perillä unioni puretaan
+     * ja lava kutistuu takaisin näkymän ympärille.
+     */
+    const kehys = (tila) => ({
+      x0: tila.x - paneW / (2 * tila.skaala),
+      x1: tila.x + paneW / (2 * tila.skaala),
+      y0: tila.y - paneH / (2 * tila.skaala),
+      y1: tila.y + paneH / (2 * tila.skaala),
+    });
+    const a = kehys(alku);
+    const b = kehys(loppu);
+    this.ui.lavaUnioni = {
+      x0: Math.min(a.x0, b.x0),
+      x1: Math.max(a.x1, b.x1),
+      y0: Math.min(a.y0, b.y0),
+      y1: Math.max(a.y1, b.y1),
+    };
+    // Sovitus säilyttää näkymän keskipisteen, joten tämä vain kasvattaa
+    // lavaa — ruudulla ei muutu mikään.
+    this.fitViewBox();
+
     const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
+    // Lavan origo (ks. LAVAIKKUNA), ei laudan.
+    const vasenReuna = this.ui.zoomVasenReuna ?? box.x;
     const ylaReuna = this.ui.zoomYlaReuna ?? box.y;
     const loppuSkaala = this.ui.zoomSkaala || loppu.skaala;
     // Ajo piirretään siirtokuoreen kuten panorointikin (ks. `get kuori`).
@@ -1614,7 +1900,7 @@ export class Kartta {
     /** Välivaihe ruudulle: keskipiste `x,y` mittakaavassa `s`. */
     const piirra = (x, y, s) => {
       const k = s / loppuSkaala;
-      const ex = (x - box.x) * loppuSkaala;
+      const ex = (x - vasenReuna) * loppuSkaala;
       const ey = (y - ylaReuna) * loppuSkaala;
       const tx = paneW / 2 - k * ex;
       const ty = paneH / 2 - k * ey;
@@ -1659,6 +1945,10 @@ export class Kartta {
         kuori.style.transform = '';
         kuori.style.transition = '';
         document.body.classList.remove('zoom-kaynnissa');
+        // Ajon unioni pois ja lava takaisin näkymän ympärille: sovitus
+        // säilyttää keskipisteen, joten kuva ei liiku (ks. LAVAIKKUNA).
+        this.ui.lavaUnioni = null;
+        this.fitViewBox();
         this.asetaPan(this.ui.panX, this.ui.panY);
         this.ui.taydennaTaide?.({ heti: true });
         valmis(true);
@@ -1794,6 +2084,9 @@ export class Kartta {
     if (!ajo) return false;
     this.kameraAjo = null;
     cancelAnimationFrame(ajo.kehys);
+    // Ajon lavaunioni raukeaa aina ajon mukana (ks. LAVAIKKUNA):
+    // seuraava sovitus ikkunoi lavan takaisin näkymän ympärille.
+    this.ui.lavaUnioni = null;
     const kuori = this.kuori;
     if (kuori) {
       kuori.style.transform = '';
@@ -2304,23 +2597,34 @@ export class Kartta {
     const skaala = this.ui.zoomSkaala;
     if (!pane || !skaala || !Number.isFinite(skaala) || skaala <= 0) return { x, y };
     const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
+    // Lavan origo (ks. LAVAIKKUNA), ei laudan.
+    const vasenReuna = this.ui.zoomVasenReuna ?? box.x;
     const ylaReuna = this.ui.zoomYlaReuna ?? box.y;
+    /*
+     * KIERTÄVÄN LAUDAN KÄÄRIMINEN. Rajattavat alueet ovat laudan omalla
+     * välillä [0, leveys), mutta lavaikkuna voi olla siirretty kopion
+     * päälle (ks. LAVAIKKUNA). Näkyvä reuna kääritään siksi laudan
+     * välille ennen rajausta, ja tulos palautetaan SIIRTYMÄNÄ — se on
+     * sama luku kummassakin kopiossa.
+     */
+    const jakso = this.kiertava() ? box.w : 0;
     /** Yksi akseli: pan sisään, rajattu pan ulos. */
-    const rajaa = (pan, mitta, origo, a0, pituus) => {
+    const rajaa = (pan, mitta, origo, a0, pituus, kierto) => {
       const nakyva = mitta / skaala;
-      const alku = origo - pan / skaala;
+      let alku = origo - pan / skaala;
+      if (kierto > 0) alku = ((alku % kierto) + kierto) % kierto;
       // Ruutua pienempi alue lukitaan keskelle: vuoto tasan molemmin
       // puolin eikä pelaajan vedettävissä toiseen laitaan.
       const kohde = nakyva >= pituus
         ? a0 + pituus / 2 - nakyva / 2
         : Math.min(a0 + pituus - nakyva, Math.max(a0, alku));
-      return Math.abs(kohde - alku) < 0.001 ? pan : -(kohde - origo) * skaala;
+      return Math.abs(kohde - alku) < 0.001 ? pan : pan - (kohde - alku) * skaala;
     };
     const mitat = this.paneMitat(pane);
     if (!mitat.w || !mitat.h) return { x, y };
     return {
-      x: rajaa(x, mitat.w, box.x, alue.x, alue.w),
-      y: rajaa(y, mitat.h, ylaReuna, alue.y, alue.h),
+      x: rajaa(x, mitat.w, vasenReuna, alue.x, alue.w, jakso),
+      y: rajaa(y, mitat.h, ylaReuna, alue.y, alue.h, 0),
     };
   }
 
@@ -2351,6 +2655,8 @@ export class Kartta {
     const skaala = this.ui.zoomSkaala;
     if (!alue || !pane || !skaala || !Number.isFinite(skaala) || skaala <= 0) return { x, y };
     const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
+    // Lavan origo (ks. LAVAIKKUNA), ei laudan.
+    const vasenReuna = this.ui.zoomVasenReuna ?? box.x;
     const ylaReuna = this.ui.zoomYlaReuna ?? box.y;
     // Välimuistista, ei asettelusta: tämä ajetaan joka pointermovella
     // (ks. paneMitat).
@@ -2358,11 +2664,17 @@ export class Kartta {
     if (!paneW || !paneH) return { x, y };
 
     let uusiX = x;
-    const jakso = this.ui.panJakso;
-    let dx = (paneW / 2 - x) / skaala;
-    if (jakso && box.w > 0) dx = ((dx % box.w) + box.w) % box.w;
-    const cx = Math.min(alue.x1, Math.max(alue.x0, box.x + dx));
-    if (Math.abs(cx - (box.x + dx)) > 0.001) uusiX = paneW / 2 - (cx - box.x) * skaala;
+    /*
+     * Keskipiste kääritään laudan omalle välille aina kun lauta kiertää
+     * — sekä vanhassa jaksomallissa (panX on jaksossa) että ikkunoidulla
+     * lavalla, joka voi olla siirretty kopion päälle (ks. LAVAIKKUNA).
+     * Rajaus palautetaan siirtymänä, joka on sama kummassakin kopiossa.
+     */
+    const kierto = this.kiertava() ? box.w : 0;
+    let keskusX = vasenReuna + (paneW / 2 - x) / skaala;
+    if (kierto > 0) keskusX = ((keskusX % kierto) + kierto) % kierto;
+    const cx = Math.min(alue.x1, Math.max(alue.x0, keskusX));
+    if (Math.abs(cx - keskusX) > 0.001) uusiX = x - (cx - keskusX) * skaala;
 
     let uusiY = y;
     const cyRaaka = ylaReuna + (paneH / 2 - y) / skaala;
@@ -2879,6 +3191,10 @@ export class Kartta {
         );
       }
       this.paivitaZoomiNapit();
+      // Eleen jälkeinen reunatäydennys: lava takaisin näkymän ympärille
+      // (ks. LAVAIKKUNA). Ankkurointi yllä on jo asettanut lopullisen
+      // näkymän, ja sovitus säilyttää sen pikselilleen.
+      this.ikkunoiLava();
       this.ui.taydennaTaide({ heti: true });
     };
 
@@ -3079,6 +3395,8 @@ export class Kartta {
       document.body.classList.remove('kartta-raahaus');
       naytaMerkit();
       this.ui.merkitseKartanEle();
+      // Ele ohi: lava ikkunoidaan tarvittaessa uudelleen (LAVAIKKUNA).
+      this.ikkunoiLava();
       // Sama sääntö kuin raahauksen lopussa: piilossa olevalle sivulle
       // ei rasteroida, vaan työ jää odottamaan taustapaluuta.
       if (document.hidden) this.ui.taideOdottaa = true;
@@ -3421,6 +3739,9 @@ export class Kartta {
         // Liuku päättyi: lepo alkaa nyt, ja kuva täydennetään kuten
         // sormen irrotessa — täsmälleen yksi loppukirjaus.
         this.ui.merkitseKartanEle();
+        // Sama reunatäydennys kuin sormen irrotessa (ks. LAVAIKKUNA):
+        // liuku on eleen jatke, ja lepo alkaa vasta tässä.
+        this.ikkunoiLava();
         this.ui.taydennaTaide({ heti: true });
         return;
       }
@@ -3561,6 +3882,9 @@ export class Kartta {
        */
       this.ui.kartanRaahaus = false;
       if (!liikkui) return;
+      // Ele päättyi ilman liukua: lava ikkunoidaan tarvittaessa
+      // uudelleen ennen kuvan täydennystä (ks. LAVAIKKUNA).
+      this.ikkunoiLava();
       /*
        * Piilossa olevalle sivulle ei rasteroida. Sarja jäisi kesken
        * heti (iOS jäädyttää taustalle jääneen webapin) ja jättäisi
@@ -3766,6 +4090,28 @@ export class Kartta {
     };
   }
 
+  /**
+   * Laudan piste siihen kopioon, joka on lavan ikkunassa.
+   *
+   * Kiertävällä laudalla sama paikka esiintyy laudan leveyden välein
+   * (js/ui.js laudanKierto ja kiertoKohdat), ja lavaikkuna voi olla
+   * siirretty kopion päälle (ks. LAVAIKKUNA). SVG:n oma sisältö ja sen
+   * kopiot hoituvat itsestään, mutta siirtokuoressa asuva noppa on
+   * yksittäinen DOM-kappale: se on siirrettävä lähimpään kopioonsa,
+   * tai se jäisi ruudun ulkopuolelle. Muilla laudoilla palautetaan
+   * piste sellaisenaan.
+   */
+  kierronKohta(piste, mitat = this.kuorenMitat()) {
+    const jakso = this.kiertava() ? (this.ui.game?.pack?.map?.width ?? 0) : 0;
+    const vb = mitat?.vb;
+    if (!(jakso > 0) || !vb?.width || !Number.isFinite(piste?.x)) return piste;
+    const keski = vb.x + vb.width / 2;
+    let x = piste.x;
+    while (x - keski > jakso / 2) x -= jakso;
+    while (x - keski < -jakso / 2) x += jakso;
+    return x === piste.x ? piste : { ...piste, x };
+  }
+
   /** Laudan koordinaatit siirtokuoren omiksi pikseleiksi. */
   karttaKuoreen(piste, mitat = this.kuorenMitat()) {
     if (!mitat || !Number.isFinite(piste?.x) || !Number.isFinite(piste?.y)) return null;
@@ -3812,7 +4158,7 @@ export class Kartta {
     const kohta = this.ui.noppaKartalla;
     if (!noppa || !this.ui.dieThrown || !kohta) return;
     const mitat = this.kuorenMitat();
-    const paikka = this.karttaKuoreen(kohta, mitat);
+    const paikka = this.karttaKuoreen(this.kierronKohta(kohta, mitat), mitat);
     if (!paikka) return;
     noppa.place(paikka);
     noppa.asetaSkaala(kohta.perus > 0 ? mitat.pxPerYks / kohta.perus : 1);
