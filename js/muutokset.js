@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1273, teksti: 'Kehyssilmukka ilman roskaa: GC-nykays harvemmaksi' },
   { v: 1272, teksti: 'Euroopan 29 maan paikallisaarreparit' },
   { v: 1271, teksti: 'Livian lyhentymat reunoille teksteissa' },
   { v: 1270, teksti: 'Raamattu: puhekielen painopiste reunoille' },
