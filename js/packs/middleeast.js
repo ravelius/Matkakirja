@@ -207,6 +207,9 @@ export const MIDDLE_EAST = {
     types: themedTokenTypes({
       star: {
         name: 'Sheban kuningattaren aarre',
+        fakta: 'Saban kuningatar hallitsi suitsukereittien rikkainta '
+          + 'valtakuntaa nykyisen Jemenin mailla — sen kulta ja pihka '
+          + 'tuoksuivat temppeleissä Roomaa myöten.',
         kuva: 'assets/aarteet/aarre-middleeast-star.jpg',
       },
       mannerAarre: {

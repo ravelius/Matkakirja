@@ -306,6 +306,9 @@ export const OCEANIA = {
     types: themedTokenTypes({
       star: {
         name: 'Eteläristin helmi',
+        fakta: 'Eteläristi on yhdeksän luonnonhelmen ristinmuotoinen ryhmä, '
+          + 'joka löytyi Länsi-Australiasta 1883 — sitä kierrätettiin '
+          + 'maailmannäyttelyissä ihmeenä.',
         kuva: 'assets/aarteet/aarre-oceania-star.jpg',
       },
       mannerAarre: {

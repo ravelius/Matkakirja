@@ -309,6 +309,9 @@ export const SOUTHAMERICA = {
     types: themedTokenTypes({
       star: {
         name: 'El Doradon aarre',
+        fakta: 'Muiscat upottivat kultaesineitä Guatavitan järveen uuden '
+          + 'hallitsijan riittinä — tarina kullatusta miehestä, El '
+          + 'Doradosta, syntyi juuri tästä.',
         kuva: 'assets/aarteet/aarre-southamerica-star.jpg',
       },
       mannerAarre: {

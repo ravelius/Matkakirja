@@ -629,6 +629,9 @@ export const EUROPE = {
     types: themedTokenTypes({
       star: {
         name: 'Meripihkahuoneen aarre',
+        fakta: 'Meripihkahuone oli kokonainen huone meripihkapaneeleista: '
+          + 'Preussin kuningas lahjoitti sen Pietari Suurelle 1716, ja '
+          + 'vuonna 1945 se katosi Königsbergistä jäljettömiin.',
         kuva: 'assets/aarteet/aarre-europe-star.jpg',
       },
       mannerAarre: {
