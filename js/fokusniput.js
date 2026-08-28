@@ -22,18 +22,23 @@
  * ── SÄÄNNÖT (omistajan tilaus + Raamatun fokuslinjaukset) ──────────
  *
  * 1. KAUPUNKIMERKKI EI SIIRRY KOSKAAN — vain kohde- ja täkymerkit
- *    väistävät. Merkki katsotaan liian lähelle osuneeksi, kun sen
- *    keskipiste on kaupungin napautusalueen (js/ui.js
- *    FOKUS_LAATTA_OSUMA_PX) ja merkin oman aluslaatan säteiden summaa
- *    lähempänä kaupungin keskipistettä: silloin merkin laatta lepäisi
- *    kaupungin sormialueen päällä ja söisi sen napautuksen, koska
- *    merkkikerrokset ovat piirtojärjestyksessä laattakerroksen päällä.
+ *    väistävät. Merkki katsotaan kaupungin päälle osuneeksi, kun sen
+ *    keskipiste on laatan NÄKYVÄN kiekon ja merkin oman aluslaatan
+ *    säteiden summaa lähempänä kaupungin keskipistettä (sääntö 10).
  *
  * 2. NIPPU ON PYSTYSARAKE KAUPUNGIN OIKEALLA PUOLELLA, ylin merkki
  *    kaupunkimerkin korkeudella ja loput vakiovälein allekkain.
- *    Sarakkeen etäisyys on mitoitettu niin, että merkkien 44 px:n
- *    osuma-alueet (r = 22) jäävät kokonaan irti kaupungin 48 px:n
- *    alueesta (r = 24) — juuri se oli tilauksen vika.
+ *
+ *    SARAKE ON KIINNI KAUPUNGISSA (omistajan päätös 28.8.2026,
+ *    kysymyskortti "rypäs paljon lähemmäs"). Etäisyys oli aiemmin kahden
+ *    SORMIALUEEN summa (24 + 22 + 2 = 48), koska napautuksen ratkaisi
+ *    piirtojärjestys ja päällimmäinen merkki söi laatan napautuksen.
+ *    Nyt ratkaisee LÄHIN KESKIPISTE (sääntö 9), joten sormialueet saavat
+ *    mennä limittäin ja etäisyys mitoitetaan NÄKYVÄSTÄ merkinnästä:
+ *    kaupungin sykekehä (12) + merkin osuma-alue (22) + 3 px varaa = 37
+ *    (NIPPU_DX). Rypäs on siis puolta lähempänä kaupunkia kuin ennen,
+ *    eikä yksikään nipun merkki peitä laatan näkyvää osaa. Napautuksen
+ *    limittäisyyden hoitaa sääntö 9.
  *
  * 3. KARTAN MITTAKAAVASSA (omistajan LOPULLINEN linjaus 26.8.2026,
  *    Raamattu): kaikki mitat ovat ruudun pikseleitä LEHDEN
@@ -65,9 +70,9 @@
  *    näyttävät omilta paikoiltaan kaupungin vierestä.
  *
  *    Viiva on kartan kevyttä apuviivastoa eikä nuoli: ohut, haalistunut
- *    muste, lyhyet katkot, ei nuolenpäitä. Se alkaa kaupungin laatan
- *    reunalta (NIPPU_LAATTA_R) eikä laatan alta ja päättyy merkin oman
- *    aluslaatan reunaan, joten kumpikaan pää ei jää minkään alle. Kerros
+ *    muste, lyhyet katkot, ei nuolenpäitä. Se alkaa kaupungin NÄKYVÄN
+ *    merkinnän reunalta (NIPPU_SYKE_R) eikä laatan alta ja päättyy
+ *    merkin oman aluslaatan reunaan: kumpikaan pää ei jää minkään alle. Kerros
  *    on LAATTOJEN ALLA (nippuViivakerros) eikä ota napautuksia vastaan,
  *    joten kaupungin sormialue säilyy koskemattomana — juuri se oli
  *    koko nipun alkuperäinen tilaus.
@@ -130,14 +135,88 @@
  *
  *      sRuutu  KATTAMATON skaala eli sormen mitta lehden perustasolla.
  *              Sillä lasketaan kaikki, mikä koskee NAPAUTUSTA:
- *              kaupungin osuma-alue (NIPPU_LAATTA_R), sarakkeen etäisyys
- *              (NIPPU_DX), vihreän pisteen väistövara (NIPPU_VAPAA) ja
- *              se raja, jonka sisällä merkki katsotaan kaupungin päälle
- *              osuneeksi. Nämä EIVÄT saa kutistua merkin mukana, tai
- *              sarake palaisi kaupungin sormialueen päälle — se oli
- *              koko nipun alkuperäinen tilaus (sääntö 1).
+ *              sarakkeen etäisyys (NIPPU_DX), yhdysviivan alkupää ja
+ *              vihreän pisteen väistövara (NIPPU_VAPAA). Nämä EIVÄT saa
+ *              kutistua merkin mukana, koska laatta itse ja vihreä piste
+ *              piirretään samassa kattamattomassa mitassa.
+ *
+ *    NIPUTUSRAJA VAIHTOI PUOLTA 28.8.2026 (sääntö 10): se laskettiin
+ *    ennen kattamattomasta sormialueesta, ja juuri siksi kapea ruutu
+ *    niputti kolminkertaisen alueen verran kohteita. Nyt se on katetussa
+ *    mitassa kuten merkki itse.
  *
  *    Leveällä ruudulla katto ei pure ja mitat ovat samat kuin ennen.
+ *
+ * 9. NAPAUTUKSEN VOITTAA LÄHIN KESKIPISTE — MYÖS KAUPUNKI.
+ *
+ *    OMISTAJAN PÄÄTÖS 28.8.2026 (kysymyskortti "rypäs paljon lähemmäs",
+ *    valittu vaihtoehto *"lähin keskipiste voittaa"*).
+ *
+ *    Kohdemerkit ovat ratkoneet päällekkäiset napautuksensa v1218:sta
+ *    asti lähimmän osumamuodon keskipisteen mukaan (js/fokuskohteet.js
+ *    lahinKohde). Nyt samaan ratkontaan tulee mukaan KAUPUNGIN LAATTA:
+ *    kun napautus osuu sekä laatan että merkin osuma-alueelle, voittaa
+ *    se, jonka keskipiste on lähempänä. Laatan keskustaa lähempi
+ *    napautus avaa kaupungin, merkin keskustaa lähempi avaa merkin.
+ *
+ *    JUURI TÄMÄ VAPAUTTI SARAKKEEN LÄHEMMÄS (sääntö 2). Ennen etäisyys
+ *    oli kahden sormialueen summa, koska päällimmäinen kerros voitti
+ *    napautuksen aina — merkkikerrokset piirtyvät laattakerroksen
+ *    (js/ui.js fokusLaattaKerros) päälle, joten sarakkeen merkki söi
+ *    laatan napautuksen heti kun alueet koskettivat. Nyt limittäisyys on
+ *    sallittua, ja ainoa mitta on se, ettei merkki peitä laatan NÄKYVÄÄ
+ *    osaa.
+ *
+ *    RATKONTA ASUU TÄSSÄ TIEDOSTOSSA (nippuLaatanEtaisyys,
+ *    nippuAvaaKaupunki), koska molemmat merkkikerrokset tarvitsevat sen
+ *    ja kumpikin tuo jo tämän moduulin. Vakioita ei voi tuoda
+ *    js/ui.js:stä (ui.js tuo merkkikerrokset, ja tuonti toisin päin
+ *    olisi kehä) — sama perustelu kuin muillakin laatan mitoilla.
+ *
+ * 10. NIPPUUN PÄÄSEE VAIN SE, MIKÄ ON KAUPUNGIN PÄÄLLÄ — SAMOILLA
+ *    EHDOILLA JOKA RUUDULLA.
+ *
+ *    OMISTAJAN PELITESTI 28.8.2026 (kaksi kaappausta v1265:stä):
+ *    *"työpöydän ratkaisu on paljon parempi"* — työpöydällä Ateenan
+ *    lisäkohteet ovat omilla maantieteellisillä paikoillaan, iPhonella
+ *    KAIKKI KAHDEKSAN kasautuivat pitkäksi katkoviivasarakkeeksi.
+ *    *"Miksi ero on noin iso?"*
+ *
+ *    MITATTU SYY (Kreikan lehti, Ateena, zoom 2,7; lautayksiköitä
+ *    kaupungin keskipisteestä): kaupungin päällä on oikeasti VAIN NELJÄ
+ *    kohdetta — Olympieion 0,36, Akropolis-museo 0,40, Akropolis 0,51 ja
+ *    Antiikin agora 0,63. Loput ovat kaukana: Marathon 10,3, Reunus-
+ *    kilpikonna 22,2, Korintin kanava 25,2, Epidauros 26,5. Ketjuuntumista
+ *    ei ole — sarakkeeseen siirtynyt merkki ei vedä naapureitaan mukaan,
+ *    vaan jokainen mitataan erikseen kaupungista. Poimijana oli YKSIN
+ *    RAJA, ja raja laskettiin kaupungin näkymättömästä SORMIALUEESTA
+ *    kattamattomassa mitassa (24 * sRuutu): iPhonella 33,3 lautayksikköä
+ *    mutta työpöydällä 10,5, koska sRuutu on 1,25 vastaan 0,36. Sama
+ *    näkymätön 48 pikselin ympyrä on siis puhelimella lähes kymmenesosa
+ *    koko lehden leveydestä, ja se nielaisi Marathonin, Epidauroksen ja
+ *    Korintin kanavan asti.
+ *
+ *    KORJAUS: raja lasketaan NÄKYVÄSTÄ KIEKOSTA (NIPPU_KIEKKO_R) ja
+ *    merkin omasta aluslaatasta, molemmat KATETUSSA merkkimitassa (s).
+ *    Silloin se kertoo juuri sen, mitä niputus on varten: peittääkö
+ *    merkki kaupungin. Uusi raja on iPhonella 7,7 ja työpöydällä 4,7
+ *    lautayksikköä — molemmat samassa välissä 0,63 ja 10,3, joten
+ *    KUMPIKIN RUUTU NIPUTTAA TÄSMÄLLEEN SAMAT NELJÄ, ja Marathon,
+ *    Epidauros, Korintin kanava ja Reunuskilpikonna jäävät omille
+ *    paikoilleen niin kuin työpöydällä.
+ *
+ *    NAPAUTUS EI ENÄÄ TARVITSE SIIRTOA. Sormialue sai ennen määrätä
+ *    rajan, koska päällimmäinen merkki söi laatan napautuksen; sääntö 9
+ *    poisti sen syyn. Merkkien keskinäiset päällekkäisyydet ratkeavat
+ *    samalla säännöllä (js/fokuskohteet.js lahinKohde, v1218), joten
+ *    44 px:n tapattavuus säilyy ilman että merkkiä pitää siirtää.
+ *
+ *    JÄÄNNÖSERO ON LAATAN OMASSA KOOSSA, EI TÄSSÄ. Laatta ja sen
+ *    sykekehä piirretään yhä kattamattomassa mitassa (js/ui.js
+ *    paivitaFokusLaatta), joten kapealla ruudulla ne ovat suhteessa
+ *    karttaan 2,1-kertaiset työpöytään nähden. Se on oma linjauksensa
+ *    (nappula seisoo laatalla) eikä kuulu tähän tiedostoon — mutta se on
+ *    myös syy siihen, ettei rajaa voi laskea laatan piirretystä koosta.
  *
  * ── NIMET ON PREFIKSOITU ───────────────────────────────────────────
  *
@@ -151,24 +230,61 @@ import { el, maare } from './mapart.js';
 /*
  * MITAT RUUDUN PIKSELEINÄ LEHDEN PERUSTASOLLA (ks. sääntö 3).
  *
- * NIPPU_LAATTA_R on kaupungin napautusalueen säde — sama luku kuin
- * js/ui.js FOKUS_LAATTA_OSUMA_PX / 2 (48/2; vakiota ei voi tuoda
- * sieltä, koska ui.js tuo merkkikerrokset ja tuonti toisin päin olisi
- * kehä). NIPPU_KOHDE_R ja NIPPU_TAKY_R ovat kerrosten aluslaattojen
- * säteet (js/fokuskohteet.js KOHDE_HALO_R, js/fokusnosto-symbolit.js
- * laatan r) — törmäysraja lasketaan näistä perustason säteistä.
+ * NIPPU_KOHDE_R ja NIPPU_TAKY_R ovat kerrosten aluslaattojen säteet
+ * (js/fokuskohteet.js KOHDE_HALO_R, js/fokusnosto-symbolit.js laatan r)
+ * — törmäysraja lasketaan näistä perustason säteistä.
  */
-const NIPPU_LAATTA_R = 24;
 const NIPPU_KOHDE_R = 5.6;
 const NIPPU_TAKY_R = 10.4;
 
 /*
- * Sarakkeen etäisyys kaupungin keskipisteestä oikealle. Vähintään
- * kaupungin osuma-alue (24) + merkin osuma-alue (22), jotta sormialueet
- * eivät mene limittäin eikä sarakkeen merkki voi enää varastaa
- * kaupungin napautusta; kaksi pikseliä varaa päälle.
+ * KAUPUNGIN KAKSI NÄKYVÄÄ SÄDETTÄ, ruudun pikseleinä perustasolla.
+ * Kumpaakaan ei voi tuoda js/ui.js:stä (ui.js tuo merkkikerrokset, ja
+ * tuonti toisin päin olisi kehä), joten luvut on toistettu tässä.
+ *
+ *   NIPPU_KIEKKO_R  laatan oma kiekko: js/ui.js FOKUS_LAATTA_PX (15) on
+ *                   LÄPIMITTA, joten säde on 7,5. Tämä on se pinta,
+ *                   jonka merkki voi oikeasti peittää — siitä lasketaan,
+ *                   onko merkki "kaupungin päällä" (sääntö 10).
+ *
+ *   NIPPU_SYKE_R    houkuttelevan sykekehän säde (js/ui.js
+ *                   FOKUS_LAATTA_SYKE_PX = 12). Kehä on merkinnän
+ *                   ulkoreuna, jota pelaaja katsoo, joten siitä
+ *                   lasketaan sarakkeen etäisyys (NIPPU_DX) ja
+ *                   yhdysviivan alkupää: kumpikaan ei mene näkyvän
+ *                   merkinnän alle.
+ *
+ * Kaupungin näkymätön SORMIALUE (js/ui.js FOKUS_LAATTA_OSUMA_PX / 2 =
+ * 24) ei ole enää yhdessäkään tämän tiedoston laskussa: napautusten
+ * limittäisyyden ratkoo lähin keskipiste (sääntö 9), eikä näkymätön
+ * ympyrä saa määrätä sitä, mikä näyttää olevan kaupungin päällä
+ * (sääntö 10).
  */
-const NIPPU_DX = 48;
+const NIPPU_KIEKKO_R = 7.5;
+const NIPPU_SYKE_R = 12;
+
+/*
+ * Sarakkeen etäisyys kaupungin keskipisteestä oikealle.
+ *
+ * 48 -> 37 (OMISTAJAN PÄÄTÖS 28.8.2026: rypäs paljon lähemmäs
+ * kaupunkia; ks. säännöt 2 ja 9).
+ *
+ * VANHA PERUSTE oli kahden SORMIALUEEN summa: kaupungin osuma-alue (24)
+ * + merkin osuma-alue (22) + 2 varaa. Se oli pakko pitää, koska
+ * napautuksen voitti piirtojärjestyksessä päällimmäinen kerros — ja
+ * merkit ovat laattakerroksen päällä, joten limittäinen sormialue olisi
+ * syönyt kaupungin napautuksen kokonaan.
+ *
+ * UUSI PERUSTE on NÄKYVÄ merkintä: kaupungin sykekehä (NIPPU_SYKE_R
+ * = 12) + merkin osuma-alue (22) + 3 px varaa = 37. Merkin sormialue
+ * ulottuu siis 15 pikselin päähän kaupungin keskipisteestä eli jää
+ * kolmen pikselin päähän sykekehästä: nipun merkki ei peitä laatasta
+ * mitään näkyvää. Sormialueet menevät limittäin, ja voittajan ratkaisee
+ * lähin keskipiste (sääntö 9) — laatan keskustaa lähempi napautus avaa
+ * kaupungin, merkin keskustaa lähempi merkin, ja raja kulkee tasan
+ * puolivälissä (18,5 px), selvästi sykekehän ulkopuolella.
+ */
+const NIPPU_DX = 37;
 
 /*
  * Rivien pystyväli. Täkysymbolin laatta on 20,8 px — 30 px:n välillä
@@ -295,6 +411,64 @@ export function nippuAsettelunVersio() {
   return NIPPU_VERSIO;
 }
 
+/* ============ LÄHIN KESKIPISTE VOITTAA — MYÖS KAUPUNKI (sääntö 9) ====
+ *
+ * Kaksi pientä palvelua merkkikerroksille. Kumpikin kerros kysyy ennen
+ * oman napautuksensa työtä: "onko kaupungin laatan keskipiste lähempänä
+ * kuin minun?" — ja jos on, työ luovutetaan laatalle. Kerrokset eivät
+ * siis tarvitse tietoa toistensa mitoista, vain saman mittatikun.
+ */
+
+/**
+ * Kaupungin laatan osuma-ympyrän keskipisteen etäisyys napautuksesta
+ * ruudun pikseleinä, tai Infinity jos napautus ei osu yhteenkään.
+ *
+ * Mitta luetaan DOMista (getBoundingClientRect) eikä laudan
+ * koordinaateista, koska sitä verrataan merkkien omiin ruutumittoihin
+ * — sama tapa ja sama syy kuin js/fokuskohteet.js lahinKohde -haussa.
+ *
+ * KIERTÄVÄ LAUTA HOITUU ITSESTÄÄN: js/ui.js piirtää laatalle oman
+ * osuma-ympyrän jokaiseen kiertokohtaan (kiertoKohdat), joten silmukka
+ * käy ne kaikki läpi ja palauttaa lähimmän. Jos Tutki ei ole tarjolla,
+ * kerros on tyhjä (fokusLaattaTutkii) eikä laatta kilpaile lainkaan.
+ *
+ * @param {object} ui
+ * @param {object} tapahtuma  hiiri-/kosketustapahtuma (clientX/clientY)
+ * @returns {number}
+ */
+export function nippuLaatanEtaisyys(ui, tapahtuma) {
+  const x = tapahtuma?.clientX;
+  const y = tapahtuma?.clientY;
+  if (!Number.isFinite(x) || !Number.isFinite(y)) return Infinity;
+  let lyhin = Infinity;
+  const muodot = ui?.fokusLaattaKerros?.querySelectorAll?.('.fokuslaatta-osuma') ?? [];
+  for (const muoto of muodot) {
+    const r = muoto.getBoundingClientRect();
+    if (!(r.width > 0) || !(r.height > 0)) continue;
+    const etaisyys = Math.hypot(x - (r.left + r.width / 2), y - (r.top + r.height / 2));
+    // Ympyrän laatikko on sen neliö: nurkat eivät kuulu alueeseen.
+    if (etaisyys > r.width / 2) continue;
+    if (etaisyys < lyhin) lyhin = etaisyys;
+  }
+  return lyhin;
+}
+
+/**
+ * Kaupungin laatan napautuksen työ: sama kuin fokusnäkymän Tutki-napin.
+ *
+ * Kiireen esto on tässä samasta syystä kuin laatan omassa
+ * kuuntelijassa (js/ui.js paivitaFokusLaatta): kartta ottaa napautuksia
+ * vastaan myös kesken animaation, toisin kuin alarivin napit.
+ *
+ * @returns {boolean} tehtiinkö työ
+ */
+export function nippuAvaaKaupunki(ui) {
+  const city = ui?.fokusmoodi && !ui.katselu ? ui.game?.cityOf?.() : null;
+  if (!city || ui.busy || typeof ui.avaaTutkinta !== 'function') return false;
+  ui.avaaTutkinta(city);
+  return true;
+}
+
 /**
  * Yhden tietueen nippupaikka ja muunnos heti, jos paikka muuttui.
  *
@@ -368,11 +542,21 @@ function nippuPiirraViivat(ui, viivat, s, sRuutu = s) {
     const pituus = Math.hypot(dx, dy);
     if (!(pituus > 0)) continue;
     /*
-     * Alkupää kaupungin sormialueen reunalta (sRuutu, ks. sääntö 8),
-     * loppupää merkin oman aluslaatan reunaan (s) — kumpikin pää siis
-     * omassa mitassaan, jottei viiva jää minkään alle.
+     * Alkupää kaupungin NÄKYVÄN merkinnän reunalta (sykekehä,
+     * NIPPU_SYKE_R; sRuutu, koska laatta ja kehä skaalataan
+     * kattamattomalla mitalla — ks. sääntö 8), loppupää merkin oman
+     * aluslaatan reunaan (s) — kumpikin pää siis omassa mitassaan,
+     * jottei viiva jää minkään alle.
+     *
+     * ALKU OLI ENNEN NÄKYMÄTÖN SORMIALUE (24). Se kelpasi niin
+     * kauan kuin sarake oli 48 pikselin päässä, mutta 37 pikselin
+     * etäisyydellä (sääntö 2) viiva alkaisi vasta merkin alta ja
+     * katoaisi kokonaan samalla korkeudella olevalta riviltä
+     * (NIPPU_VIIVA_MIN). Sormialue on näkymätön eikä siksi ollut
+     * koskaan se reuna, jolta viivan kuuluu lähteä — sääntö 6 sanoo
+     * "kaupungin laatan reunalta", ja se reuna on sykekehä.
      */
-    const alku = NIPPU_LAATTA_R * sRuutu;
+    const alku = NIPPU_SYKE_R * sRuutu;
     const loppu = pituus - (v.sade + NIPPU_VIIVA_RAKO) * s;
     if (loppu - alku < NIPPU_VIIVA_MIN * s) continue;
     const yx = dx / pituus;
@@ -471,11 +655,16 @@ export function niputaFokusmerkit(ui, s, sRuutu = s) {
       if (e < etaisyys) { etaisyys = e; cx = kohta; }
     }
     /*
-     * Törmäysraja merkkien perustason säteistä (ks. sääntö 1):
-     * kaupungin sormialue kattamattomassa mitassa, merkin oma aluslaatta
-     * katetussa (sääntö 8).
+     * NIPPUUN PÄÄSEE VAIN SE, MIKÄ PEITTÄÄ KAUPUNGIN (säännöt 1 ja 10).
+     *
+     * Raja on laatan näkyvän kiekon ja merkin oman aluslaatan säteiden
+     * summa — MOLEMMAT KATETUSSA MITASSA (s). Kattamaton sormialue
+     * (24 * sRuutu) poimi kapealla ruudulla mukaan koko maakunnan:
+     * iPhonella se oli 33 lautayksikköä, työpöydällä 10. Kun mitta on
+     * sama kuin merkin piirtomitta, raja kertoo sen mitä pitääkin —
+     * peittääkö merkki laatan — ja kumpikin ruutu niputtaa samat merkit.
      */
-    if (etaisyys < NIPPU_LAATTA_R * ruutu + merkki.sade * s) {
+    if (etaisyys < (NIPPU_KIEKKO_R + merkki.sade) * s) {
       const jold = niput.get(cx) ?? [];
       jold.push({ merkki, jono });
       niput.set(cx, jold);
@@ -495,7 +684,8 @@ export function niputaFokusmerkit(ui, s, sRuutu = s) {
     jono.sort((a, b) => (a.merkki.ryhma.y - b.merkki.ryhma.y)
       || (a.merkki.ryhma.x - b.merkki.ryhma.x)
       || (a.jono - b.jono));
-    // Sarakkeen etäisyys on kahden sormialueen summa (sääntö 8).
+    // Sarakkeen etäisyys on sormen mitassa (sääntö 8): merkin osuma-alue
+    // ei saa kutistua kartan mukana, tai rypäs valuisi laatan päälle.
     const x = cx + NIPPU_DX * ruutu;
     /*
      * RIVIVÄLI TIIVISTYY, JOS SARAKE EI MUUTEN MAHDU LEHTEEN (sääntö 7).

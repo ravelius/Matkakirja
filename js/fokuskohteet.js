@@ -123,7 +123,9 @@ import { FOKUSKOHTEET_TUN } from './packs/fokuskohteet-tun.js';
 import { FOKUSKOHTEET_TUR } from './packs/fokuskohteet-tur.js';
 import { FOKUSKOHTEET_ZWE } from './packs/fokuskohteet-zwe.js';
 import { FOKUSKOHTEET_GRC } from './packs/fokuskohteet-grc.js';
-import { niputaFokusmerkit, nippuAsettelunVersio } from './fokusniput.js';
+import {
+  niputaFokusmerkit, nippuAsettelunVersio, nippuAvaaKaupunki, nippuLaatanEtaisyys,
+} from './fokusniput.js';
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
 
@@ -723,11 +725,19 @@ const KOHDE_SYMBOLI_R = NOSTOSYM_MINI_R * KOHDE_SYMBOLI_SKAALA;
  * poltetun nimen suorakaide. Kumpikin kilpailee omalla keskipisteellään,
  * jolloin nimen keskeltä napautettu nimi voittaa lähelläkin olevan
  * toisen merkin ympyrän.
+ *
+ * KAUPUNGIN LAATTA ON MUKANA SAMASSA RATKONNASSA (omistajan päätös
+ * 28.8.2026, ks. js/fokusniput.js sääntö 9): kilpailijoita ei ole enää
+ * kaksi lajia vaan yksi mitta. Ks. kohdeNapautuksenVoittaja alla.
+ *
+ * @returns {{kohde: ?object, etaisyys: number}} lähin kohde ja sen
+ *   keskipisteen etäisyys napautuksesta ruudun pikseleinä (Infinity,
+ *   kun napautus ei osu yhteenkään kohteeseen).
  */
 function lahinKohde(ui, tapahtuma) {
   const x = tapahtuma?.clientX;
   const y = tapahtuma?.clientY;
-  if (!Number.isFinite(x) || !Number.isFinite(y)) return null;
+  if (!Number.isFinite(x) || !Number.isFinite(y)) return { kohde: null, etaisyys: Infinity };
   let paras = null;
   let lyhin = Infinity;
   // DOM-järjestys on datajärjestys: ensimmäinen voittaa tasatilanteen.
@@ -744,7 +754,60 @@ function lahinKohde(ui, tapahtuma) {
       if (etaisyys < lyhin) { lyhin = etaisyys; paras = kohde; }
     }
   }
-  return paras;
+  return { kohde: paras, etaisyys: lyhin };
+}
+
+/**
+ * Merkin OMAN osumamuodon keskipisteen etäisyys napautuksesta.
+ *
+ * Varapolku sille pikselin murto-osan levyiselle reunakaistalle, jossa
+ * selaimen osumatesti hyväksyy napautuksen mutta tämän moduulin
+ * ruutulaatikkomatematiikka hylkää sen (lahinKohde vertaa etäisyyttä
+ * laatikon puolikkaaseen). Ilman tätä kilpailu jäisi käymättä ja
+ * kaupunki voittaisi kaistalla aina, vaikka merkki oli sormen alla.
+ */
+function omanMerkinEtaisyys(g, tapahtuma) {
+  const x = tapahtuma?.clientX;
+  const y = tapahtuma?.clientY;
+  if (!Number.isFinite(x) || !Number.isFinite(y)) return Infinity;
+  let lyhin = Infinity;
+  for (const muoto of g?.querySelectorAll?.('.fokuskohde-osuma') ?? []) {
+    const r = muoto.getBoundingClientRect();
+    if (!(r.width > 0) || !(r.height > 0)) continue;
+    const etaisyys = Math.hypot(x - (r.left + r.width / 2), y - (r.top + r.height / 2));
+    if (etaisyys < lyhin) lyhin = etaisyys;
+  }
+  return lyhin;
+}
+
+/**
+ * NAPAUTUKSEN VOITTAJA: lähin kohde vai kaupungin laatta?
+ *
+ * Merkkikerrokset piirtyvät laattakerroksen päälle, joten selain antaa
+ * limittäisen napautuksen aina merkille. Omistajan päätös 28.8.2026
+ * (js/fokusniput.js sääntö 9) tekee tästä valinnan eikä sattumaa: kun
+ * napautus osuu myös kaupungin osuma-alueelle ja laatan keskipiste on
+ * lähempänä kuin yhdenkään merkin, työ luovutetaan laatalle. Juuri tämä
+ * sallii nipun asettua kaupungin viereen (NIPPU_DX 48 -> 37).
+ *
+ * TASATILANTEESSA VOITTAA MERKKI (`<` eikä `<=`): merkki on laattaa
+ * pienempi ja sitä hankalampi osua, ja kaupunki on tavoitettavissa myös
+ * ilman merkkien kanssa kilpailua koko laatan alalta.
+ *
+ * @param {object} oma  merkki, jonka kuuntelija tapahtuman sai.
+ * @param {Element} g   saman merkin ryhmä — varapolun mitta (ks.
+ *   omanMerkinEtaisyys) ja se merkki, joka voittaa ilman napautuskohtaa
+ *   (näppäimistön Enter).
+ * @returns {?object} voittanut kohde, tai null kun kaupunki voitti.
+ */
+function kohdeNapautuksenVoittaja(ui, tapahtuma, oma, g) {
+  const osuma = lahinKohde(ui, tapahtuma);
+  // Jos yksikään muoto ei mitannut, kilpailijaksi tulee se merkki, jonka
+  // kuuntelija tapahtuman sai — ei Infinity, joka antaisi voiton
+  // laatalle ilman kilpailua.
+  const kohde = osuma.kohde ?? oma;
+  const etaisyys = osuma.kohde ? osuma.etaisyys : omanMerkinEtaisyys(g, tapahtuma);
+  return nippuLaatanEtaisyys(ui, tapahtuma) < etaisyys ? null : kohde;
 }
 
 function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
@@ -830,7 +893,10 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
     tapahtuma.preventDefault();
     // Osuma-alueet limittyvät (KOHDE_OSUMA_R on sormen mitta, ei
     // merkin): voittajan valitsee etäisyys eikä piirtojärjestys.
-    const valittu = lahinKohde(ui, tapahtuma) ?? kohde;
+    // Null = kaupungin laatta oli lähempänä, ja napautus kuuluu sille
+    // (omistaja 28.8.2026, js/fokusniput.js sääntö 9).
+    const valittu = kohdeNapautuksenVoittaja(ui, tapahtuma, kohde, g);
+    if (!valittu) { nippuAvaaKaupunki(ui); return; }
     if (ui.fokuskohdeAuki?.id === valittu.id) suljeFokuskohde(ui);
     else avaaFokuskohde(ui, valittu);
   };

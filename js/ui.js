@@ -6904,10 +6904,21 @@ export class UI {
         const osuma = el('circle', {
           cx: x, cy: city.y, r, class: 'fokuslaatta-osuma',
         }, this.fokusLaattaKerros);
-        // Kesken animaation (nopan pyörähdys, siirtymä) kartta ottaa yhä
-        // napautuksia vastaan toisin kuin alarivin napit, jotka ovat
-        // silloin poissa — siksi kiireen esto on tässä eikä
-        // avaaTutkinnassa (napin polku pysyy ennallaan).
+        /*
+         * Kesken animaation (nopan pyörähdys, siirtymä) kartta ottaa yhä
+         * napautuksia vastaan toisin kuin alarivin napit, jotka ovat
+         * silloin poissa — siksi kiireen esto on tässä eikä
+         * avaaTutkinnassa (napin polku pysyy ennallaan).
+         *
+         * TÄMÄ PUOLI EI TARVITSE LÄHIN-KESKIPISTE-RATKONTAA (omistajan
+         * päätös 28.8.2026, js/fokusniput.js sääntö 9). Ratkonta on
+         * merkkien puolella, koska merkkikerrokset piirtyvät TÄMÄN
+         * kerroksen päälle: kun napautus osuu sekä laattaan että
+         * merkkiin, tapahtuman saa aina merkki, ja se luovuttaa työn
+         * tänne (nippuAvaaKaupunki), jos laatan keskipiste oli lähempänä.
+         * Tänne asti pääsevät vain ne napautukset, joita yksikään merkin
+         * osuma-alue ei peitä — ja silloin kilpailua ei ole.
+         */
         osuma.addEventListener('click', () => {
           if (!this.busy) this.avaaTutkinta(city);
         });

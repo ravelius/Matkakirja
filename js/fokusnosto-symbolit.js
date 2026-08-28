@@ -134,7 +134,7 @@
  * eikä isoisän kaunokäsialalla (ks. osio NIMIÖ).
  */
 import { el, maare } from './mapart.js';
-import { niputaFokusmerkit } from './fokusniput.js';
+import { niputaFokusmerkit, nippuAvaaKaupunki, nippuLaatanEtaisyys } from './fokusniput.js';
 
 /**
  * WEBP-GLYYFIN SÄDE ruudun pikseleinä lehden perustasolla — sama luku
@@ -1511,6 +1511,26 @@ const NOSTOSYM_TUIKE_KEHA_R = 3.2;
 const NOSTOSYM_TUIKE_YDIN_R = 1.8;
 
 /**
+ * Onko kaupungin laatan keskipiste lähempänä napautusta kuin täyn oma?
+ *
+ * Sama mittatikku kuin kohdemerkeillä (js/fokusniput.js
+ * nippuLaatanEtaisyys): etäisyys osumamuodon keskipisteeseen ruudun
+ * pikseleinä. Tasatilanteessa voittaa täky, koska se on laattaa
+ * pienempi merkki.
+ */
+function nostosymLaattaVoittaa(ui, tapahtuma, osuma) {
+  const x = tapahtuma?.clientX;
+  const y = tapahtuma?.clientY;
+  // Näppäimistön Enter ei osoita mihinkään kohtaan: silloin merkki on
+  // se, jota käyttäjä on juuri kohdistanut, eikä laatta kilpaile.
+  if (!Number.isFinite(x) || !Number.isFinite(y)) return false;
+  const r = osuma?.getBoundingClientRect?.();
+  if (!(r?.width > 0)) return false;
+  const oma = Math.hypot(x - (r.left + r.width / 2), y - (r.top + r.height / 2));
+  return nippuLaatanEtaisyys(ui, tapahtuma) < oma;
+}
+
+/**
  * AKTIIVISEN TÄYN MERKKI: näkymätön osuma-alue, kaksi hehkukehää ja
  * ydin — ja `avaa`, joka vie suoraan lunastuskorttiin.
  *
@@ -1518,11 +1538,20 @@ const NOSTOSYM_TUIKE_YDIN_R = 1.8;
  * koska sen päällä oleva kupla otti napautuksen; kuplan mukana lähti
  * myös se napautuspinta, joten piste tekee sen työn itse. Osuma-alue on
  * sormen mitta eikä merkin, kuten kartan muillakin merkeillä.
+ *
+ * KAUPUNKI VOITTAA OMALTA KESKUSTALTAAN (omistaja 28.8.2026, ks.
+ * js/fokusniput.js sääntö 9). Piste ratsastaa nipun merkin päällä, ja
+ * kun sarake tuli lähemmäs kaupunkia (NIPPU_DX 48 -> 37), pisteen
+ * sormialue yltää laatan päälle. Sama sääntö kuin kohdemerkeillä
+ * ratkaisee limittäisyyden: laatan keskustaa lähempi napautus avaa
+ * kaupungin, pisteen keskustaa lähempi täyn. V1259:n ankkurisääntö
+ * (piste vie ALLEEN JÄÄVÄN kohdemerkin napautuksen) ei muutu — kilpailu
+ * on pisteen ja laatan välillä, ei pisteen ja sen oman kohteen.
  */
-function piirraNostosymTuike(g, avaa) {
+function piirraNostosymTuike(ui, g, avaa) {
   g.setAttribute('role', 'button');
   g.setAttribute('tabindex', '0');
-  el('circle', { class: 'nostosym-tuike-osuma', r: NOSTOSYM_TUIKE_OSUMA_R }, g);
+  const osuma = el('circle', { class: 'nostosym-tuike-osuma', r: NOSTOSYM_TUIKE_OSUMA_R }, g);
   el('circle', { class: 'nostosym-tuike-hehku', r: NOSTOSYM_TUIKE_HEHKU_R }, g);
   el('circle', { class: 'nostosym-tuike-keha', r: NOSTOSYM_TUIKE_KEHA_R }, g);
   el('circle', { class: 'nostosym-tuike-ydin', r: NOSTOSYM_TUIKE_YDIN_R }, g);
@@ -1530,6 +1559,7 @@ function piirraNostosymTuike(g, avaa) {
   const nappaa = (tapahtuma) => {
     tapahtuma.stopPropagation();
     tapahtuma.preventDefault();
+    if (nostosymLaattaVoittaa(ui, tapahtuma, osuma) && nippuAvaaKaupunki(ui)) return;
     avaa();
   };
   g.addEventListener('click', nappaa);
@@ -1603,6 +1633,14 @@ const NOSTOSYM_ANKKURI_PX = 60;
  * Vakiota ei voi tuoda js/ui.js:stä (ui.js tuo tämän kerroksen, ja
  * tuonti toisin päin olisi kehä) — sama perustelu ja sama luku kuin
  * js/fokusniput.js NIPPU_LAATTA_R:llä.
+ *
+ * LUKU EI MUUTTUNUT 28.8.2026, VAIKKA NIPPU TULI LÄHEMMÄS. Sarakkeen
+ * etäisyys (NIPPU_DX) putosi, koska napautuksen ratkaisee nyt lähin
+ * keskipiste (js/fokusniput.js sääntö 9) — mutta tämä varapolku ei ole
+ * napautussääntö vaan PIIRTOSÄÄNTÖ: piste ei saa jäädä lepäämään laatan
+ * päälle, koska se peittäisi kaupungin merkinnän silloinkin kun
+ * napautus menisi oikein. Napautuspuoli on erikseen hoidettu
+ * (nostosymLaattaVoittaa), ja mitat pysyvät siksi eri luvuissa.
  */
 const NOSTOSYM_LAATTA_R = 24;
 /** Varapolun sivusiirto kaupungista VASEMMALLE (sarake on oikealla). */
@@ -1731,7 +1769,7 @@ export function paivitaNostosymbolit(ui, tila = {}) {
       const ankkuri = el('g', { class: 'fokusnosto-ankkuri nostosym-tuike' }, ryhma);
       ankkuri.setAttribute('aria-label', merkinta.otsikko
         ? `${merkinta.otsikko} — lue lisää` : 'Täky kartalla: lue lisää');
-      piirraNostosymTuike(ankkuri, tila.avaa);
+      piirraNostosymTuike(ui, ankkuri, tila.avaa);
     }
   }
   asemoiNostosymbolit(ui);
