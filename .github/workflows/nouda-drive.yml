@@ -34,20 +34,36 @@ jobs:
           const avain = process.env.GOOGLE_API_KEY;
           const kansio = process.env.KANSIO;
           const { writeFileSync } = await import('node:fs');
-          let sivu = '';
-          const tiedostot = [];
-          do {
-            const url = 'https://www.googleapis.com/drive/v3/files'
-              + `?q='${kansio}'+in+parents+and+trashed=false`
-              + '&fields=nextPageToken,files(id,name,mimeType,size)'
-              + `&pageSize=100&key=${avain}` + (sivu ? `&pageToken=${sivu}` : '');
-            const v = await fetch(url);
-            if (!v.ok) { console.error('lista: HTTP', v.status, (await v.text()).slice(0, 300)); process.exit(1); }
-            const data = await v.json();
-            tiedostot.push(...(data.files ?? []));
-            sivu = data.nextPageToken ?? '';
-          } while (sivu);
-          console.log(`kansiossa ${tiedostot.length} tiedostoa`);
+          // Alikansiot mukaan (28.8.2026): omistaja jarjestaa kuvat
+          // matkakirja-kansion alikansioihin (herot, aarre, ...), joten
+          // listaus laskeutuu kansiopuuhun ja etuliittaa alikansion nimen
+          // tiedostonimeen (aarre__kuva.png) - artifakti pysyy litteana.
+          const KANSIO_MIME = 'application/vnd.google-apps.folder';
+          async function listaa(id, etuliite) {
+            const loydot = [];
+            let sivu = '';
+            do {
+              const url = 'https://www.googleapis.com/drive/v3/files'
+                + `?q='${id}'+in+parents+and+trashed=false`
+                + '&fields=nextPageToken,files(id,name,mimeType,size)'
+                + `&pageSize=100&key=${avain}` + (sivu ? `&pageToken=${sivu}` : '');
+              const v = await fetch(url);
+              if (!v.ok) { console.error('lista: HTTP', v.status, (await v.text()).slice(0, 300)); process.exit(1); }
+              const data = await v.json();
+              for (const t of data.files ?? []) {
+                if (t.mimeType === KANSIO_MIME) {
+                  console.log(`alikansio: ${etuliite}${t.name}/`);
+                  loydot.push(...await listaa(t.id, `${etuliite}${t.name}__`));
+                } else {
+                  loydot.push({ ...t, name: `${etuliite}${t.name}` });
+                }
+              }
+              sivu = data.nextPageToken ?? '';
+            } while (sivu);
+            return loydot;
+          }
+          const tiedostot = await listaa(kansio, '');
+          console.log(`puussa ${tiedostot.length} tiedostoa`);
           let virheita = 0;
           for (const t of tiedostot) {
             if (!/^image\//.test(t.mimeType)) { console.log(`ohitus (${t.mimeType}): ${t.name}`); continue; }
