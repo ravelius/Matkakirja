@@ -347,7 +347,18 @@ export const MAAILMA = {
     // Aloitusnäytön lauta: mantereen aarre jää yleisnimelle, koska
     // tällä laudalla ei pelata (js/pack.js) eikä sille ole kirjoitettu
     // omaa aarretta.
-    types: themedTokenTypes({ star: { name: 'Magellanin kompassi' } }),
+    /*
+     * KUVA 28.8.2026: omistajan generoima pääaarrekuva vaalealla
+     * pergamenttitaustalla (sarja A, docs/mantereet-tyoaineisto/
+     * aarreleiskat/promptit-paaaarteet-ja-ihmeet.md) — sama diplomi
+     * kuin mantereiden pääaarteilla.
+     */
+    types: themedTokenTypes({
+      star: {
+        name: 'Magellanin kompassi',
+        kuva: 'assets/aarteet/aarre-maailma-star.jpg',
+      },
+    }),
     // 14 kaupunkia: laattoja on oltava täsmälleen yhtä monta.
     counts: { star: 1, mannerAarre: 1, isoAarre: 4, pieniAarre: 8 },
   },

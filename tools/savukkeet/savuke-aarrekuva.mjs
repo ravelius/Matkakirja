@@ -68,10 +68,11 @@ const paljasta = (kaupunki, tyyppi) => sivu.evaluate(async ([city, type]) => {
   });
   const token = peli.aarreTyyppi(type, city);
   document.querySelector('.reveal-overlay')?.remove();
-  // Sama mallivalinta kuin playTokenReveal (28.8.2026): pääaarre saa
-  // diplomin, maan oma paikalliskuva vinjetointimallin, muut tumman.
-  const malli = type === 'star' ? 'diplomi'
-    : (token.kuva?.startsWith('assets/aarteet/paikallis/') ? 'paikallis' : 'tumma');
+  // Sama mallivalinta kuin playTokenReveal (28.8.2026 ilta): maan oma
+  // paikalliskuva saa vinjetointimallin, kaikki muut — pääaarre mukaan
+  // lukien — tumman. Diplomi jäi koodiin, muttei enää käyttöön.
+  const malli = token.kuva?.startsWith('assets/aarteet/paikallis/')
+    ? 'paikallis' : 'tumma';
   const lisat = malli === 'diplomi' ? {
     otsake: 'Aarnin luettelo',
     alaotsake: 'EUROOPPA · UNOHDETTU AARRE',
@@ -138,14 +139,20 @@ vaadi('DNK iso: nimi on kultasarvet', /sarve/i.test(dnk.nimi), dnk.nimi);
 vaadi('DNK iso: vinjetointimalli', dnk.malli === 'paikallis', dnk.malli);
 await sivu.screenshot({ path: join(KAAPPAUKSET, 'aarrekuva-dnk-iso.png') });
 
-// Pääaarre: Aarnin luettelon diplomi kehyksineen ja leimoineen
-// (leiskapäätökset 28.8.2026 — diplomi VAIN pääaarteille).
+/*
+ * PÄÄAARRE ON TUMMASSA MALLISSA (omistaja 28.8.2026 ilta:
+ * *"yksinkertainen tumma tausta jatkamaan esineen tummaa taustaa on
+ * paras"*). Vartiot ovat siksi käänteiset entiseen: diplomin kehystä
+ * ja leimaa EI saa olla kortilla, ja kuvan on silti latauduttava.
+ */
 const tahti = await paljasta('ateena', 'star');
-vaadi('star: diplomimalli', tahti.malli === 'diplomi', tahti.malli);
-vaadi('star: kaiverruskehys latautui', tahti.kehysLadattu, 'aarnin-luettelo-kehys.jpg');
-vaadi('star: LÖYDETTY-leima kortilla', tahti.leimaNakyy);
+vaadi('star: tumma malli', tahti.malli === 'tumma', tahti.malli);
+vaadi('star: ei diplomin kaiverruskehystä', !tahti.kehysLadattu);
+vaadi('star: ei LÖYDETTY-leimaa', !tahti.leimaNakyy);
 vaadi('star: aarrekuva latautui', tahti.ladattu, tahti.kuva);
-await sivu.screenshot({ path: join(KAAPPAUKSET, 'aarrekuva-star-diplomi.png') });
+vaadi('star: kuva on laudan pääaarrekuva',
+  /assets\/aarteet\/aarre-europe-star\.jpg$/.test(tahti.kuva ?? ''), tahti.kuva);
+await sivu.screenshot({ path: join(KAAPPAUKSET, 'aarrekuva-star-tumma.png') });
 
 // Kirjoittamaton manner: kuva jää laudan omaksi (Afrikka, Tanger).
 const mar = await sivu.evaluate(async () => {

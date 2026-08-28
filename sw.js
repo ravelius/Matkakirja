@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1299';
+const CACHE = 'matkakirja-2026-08-09.1300';
 const SHELL = [
   './',
   './index.html',
@@ -315,6 +315,11 @@ const SHELL = [
   './assets/aarteet/aarre-northamerica-star.jpg',
   './assets/aarteet/aarre-southamerica-star.jpg',
   './assets/aarteet/aarre-oceania-star.jpg',
+  // Katselulautojen pääaarteet (28.8.2026): Istanbulin sulttaanin
+  // timantti ja maailmankartan Magellanin kompassi saivat omat kuvansa
+  // samassa erässä kuin mantereet.
+  './assets/aarteet/aarre-istanbul-star.jpg',
+  './assets/aarteet/aarre-maailma-star.jpg',
   // Aarnin luettelon kaiverruskehys: pääaarteen diplomi (28.8.2026)
   // piirtää sen paljastuskortille heti laatan käännyttyä.
   './assets/aarteet/aarnin-luettelo-kehys.jpg',
@@ -772,6 +777,9 @@ const SHELL = [
   // oma generoitu kuva, jolla ei ole varareittiä — ilman esilatausta
   // kortin pääkuva jäisi lentokoneessa tyhjäksi.
   './assets/kartat/nostot/nosto-areena-loistoaika.webp',
+  // Kreikan kaksi nostoa saivat omat loistoaikakuvansa 28.8.2026.
+  './assets/kartat/nostot/nosto-kastrin-kyla-loistoaika.webp',
+  './assets/kartat/nostot/nosto-olympoksen-huippu-loistoaika.webp',
   // Lippuikkunan versioliput (pilotti Suomi + Saksa, v711).
   './assets/liput/versiot/fin-valtiolippu.png',
   './assets/liput/versiot/fin-sotalippu.png',
