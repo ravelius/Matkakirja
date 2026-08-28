@@ -13,7 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 1304, teksti: 'Fokusvirrat Madridiin Wieniin Pariisiin ja Berliiniin' },
+  { v: 1305, teksti: 'Fokusvirrat Madridiin Wieniin Pariisiin ja Berliiniin' },
+  { v: 1304, teksti: 'Uudet herokuvat kaupunkien avauskaruselleihin' },
   { v: 1303, teksti: 'Atlaslehtien purku ja porrasvaihto ilman piikkeja' },
   { v: 1302, teksti: 'Faktarivit yhdeksalle paaaarteelle' },
   { v: 1301, teksti: 'Tekstit tummaan aarrepaljastukseen' },

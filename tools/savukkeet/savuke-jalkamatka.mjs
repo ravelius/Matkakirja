@@ -23,7 +23,9 @@
  *   4. MATKAN ÄÄNI. Oma äänilippu on päällä matkan ajan ja laskeutuu
  *      viimeisellä askeleella, jotta määränpään maisema saa nousta.
  *   5. MAATAULU. Auki ollessaan se piilottaa Matkusta-napin ja piirtää
- *      alleen sumennuskerroksen; sulkeutuessa nappi palaa.
+ *      alleen sumennuskerroksen; sulkeutuessa nappi palaa ja sumennus
+ *      vapautuu. Sumennus on OMA ELEMENTTINSÄ .fokus-maatauluhuntu
+ *      taulun rinnalla — ei taulun ::before-pseudo (ks. 5c).
  *
  * OMISTAJAN PELITESTI 27.8.2026 (iPhone ja iPad) toi samaan savukkeeseen
  * kolme korjausta lisää:
@@ -130,14 +132,22 @@ const taulu = await sivu.evaluate(async () => {
   document.querySelector('.fokus-kartuutsi')?.click();
   await new Promise((r) => setTimeout(r, 500));
   const t = document.querySelector('.fokus-maataulu');
-  const pseudo = t ? getComputedStyle(t, '::before') : null;
+  const h = document.querySelector('.fokus-maatauluhuntu');
+  const hs = h ? getComputedStyle(h) : null;
   const auki = {
     lippu: document.body.classList.contains('maataulu-auki'),
     taulu: t?.classList.contains('auki') ?? false,
     nappi: tila(nappi()),
-    sumennus: pseudo ? (pseudo.backdropFilter || pseudo.webkitBackdropFilter) : '',
-    maski: pseudo ? (pseudo.maskImage || pseudo.webkitMaskImage) : '',
-    z: pseudo?.zIndex ?? null,
+    onHuntu: Boolean(h),
+    huntuAuki: h?.classList.contains('auki') ?? false,
+    // Huntu EI saa olla taulun sisällä (ks. 5c ja 5d).
+    huntuUlkona: Boolean(h) && Boolean(t) && !t.contains(h),
+    sumennus: hs ? (hs.backdropFilter || hs.webkitBackdropFilter) : '',
+    maski: hs ? (hs.maskImage || hs.webkitMaskImage) : '',
+    z: hs?.zIndex ?? null,
+    tauluZ: t ? getComputedStyle(t).zIndex : null,
+    huntuKorkeus: h ? +h.getBoundingClientRect().height.toFixed(1) : 0,
+    tauluKorkeus: t ? +t.getBoundingClientRect().height.toFixed(1) : 0,
     vaakavieritys: t ? t.scrollWidth - t.clientWidth : null,
   };
   // Sulku: napautus kartalle (sama polku kuin pelaajalla).
@@ -150,6 +160,8 @@ const taulu = await sivu.evaluate(async () => {
       lippu: document.body.classList.contains('maataulu-auki'),
       nappi: tila(nappi()),
       auki: Boolean(ui.fokusMaatauluAuki),
+      huntuAuki: h?.classList.contains('auki') ?? null,
+      huntuNaky: h ? getComputedStyle(h).visibility : null,
     },
   };
 });
@@ -159,15 +171,41 @@ vaadi('5b Matkusta-nappi näkyi ennen ja piiloutui taulun ajaksi',
   taulu.ennen?.naky === 'visible' && taulu.ennen?.peitto === 1
   && taulu.auki.nappi?.naky === 'hidden' && taulu.auki.nappi?.peitto === 0,
   JSON.stringify({ ennen: taulu.ennen, auki: taulu.auki.nappi }));
+/*
+ * 5c ODOTUS PÄIVITETTY: SUMENNUS EI OLE ENÄÄ TAULUN ::before-PSEUDO.
+ *
+ * Vanha odotus luki `getComputedStyle(taulu, '::before')` ja vaati
+ * z-index: -1. Omistajan pelitestipalaute 27.8.2026 iltapäivällä muutti
+ * käytöksen: pseudo kattoi vain taulun ja loppui juuri ennen KREIKKA-
+ * kartuutsia (eri elementti, .fokusmitat), joten sumennuksen alareuna
+ * piirsi terävän viivan ruudun poikki. Pseudoa ei voi venyttää
+ * kartuutsin yli, koska taulu on vierityssäiliö (overflow-y: auto) ja
+ * yli venyvä lapsi kasvattaisi sen vieritysaluetta — siksi sumennus on
+ * nyt karttaruudun oma lapsi .fokus-maatauluhuntu, jonka mitat lasketaan
+ * molemmista kalusteista (js/fokusmitat.js luoMaataulu +
+ * paivitaMaatauluHuntu, css/styles.css .fokus-maatauluhuntu).
+ *
+ * Vartioitava asia on sama kuin ennen — pehmeäreunainen sumennus taulun
+ * ALLA — mutta mitattuna oikeasta elementistä: huntu on taulun
+ * ULKOPUOLELLA, sen z-indeksin ALLA (muuten sumennus söisi oman
+ * tekstinsä) ja aidosti mitattu (mittaamaton huntu jää CSS:n
+ * lähtöarvoihin 0 × 0 eikä sumenna mitään).
+ */
 vaadi('5c taulun alla on pehmeäreunainen sumennuskerros',
-  /blur/.test(taulu.auki.sumennus) && /gradient/.test(taulu.auki.maski)
-  && taulu.auki.z === '-1',
-  JSON.stringify({ s: taulu.auki.sumennus, z: taulu.auki.z }));
+  taulu.auki.onHuntu === true && taulu.auki.huntuAuki === true
+  && taulu.auki.huntuUlkona === true
+  && /blur/.test(taulu.auki.sumennus) && /gradient/.test(taulu.auki.maski)
+  && Number(taulu.auki.z) < Number(taulu.auki.tauluZ)
+  && taulu.auki.huntuKorkeus > taulu.auki.tauluKorkeus,
+  JSON.stringify(taulu.auki));
+// Yhä voimassa, ja nyt myös vartio paluulle pseudoratkaisuun: taulun
+// laitojen yli venyvä lapsi kasvattaisi vieritysalueen (ks. 5c).
 vaadi('5d sumennuskerros ei kasvata taulun vieritysaluetta',
   taulu.auki.vaakavieritys === 0, String(taulu.auki.vaakavieritys));
-vaadi('5e taulun sulkeutuessa nappi palaa',
+vaadi('5e taulun sulkeutuessa nappi palaa ja sumennus vapautuu',
   taulu.kiinni.lippu === false && taulu.kiinni.auki === false
-  && taulu.kiinni.nappi?.naky === 'visible' && taulu.kiinni.nappi?.peitto === 1,
+  && taulu.kiinni.nappi?.naky === 'visible' && taulu.kiinni.nappi?.peitto === 1
+  && taulu.kiinni.huntuAuki === false && taulu.kiinni.huntuNaky === 'hidden',
   JSON.stringify(taulu.kiinni));
 
 /* --- 1., 2. ja 4. jalkamatka -------------------------------------- */

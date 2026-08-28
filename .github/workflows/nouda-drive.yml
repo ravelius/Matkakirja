@@ -5,15 +5,33 @@
 # linkkijaossa) ja lataa kuvat artifaktiksi "drive-herot".
 # Kuvia EI committoida — integroija noutaa artifaktin, katsoo silmin
 # ja vie hyväksytyt vienti-worktreen kautta kuten ennenkin.
+#
+# 28.8.2026 (rate limit -korjaus): puu kasvoi 247 tiedostoon ja Drive
+# alkoi palauttaa 403:a noin 150 latauksen jälkeen — noin 50 latausta
+# kaatui ja ajo osui 10 minuutin aikakatkaisuun. Kolme korjausta:
+#   1. `alikansio`-syöte rajaa noudon yhteen alikansioon (nimi tai id),
+#      jolloin yksi erä on kymmeniä eikä satoja tiedostoja.
+#   2. Jokainen pyyntö yritetään uudelleen eksponentiaalisella
+#      viiveellä, kun Drive vastaa 403 rate limit / 429 / 5xx, ja
+#      latausten väliin jää kevyt tahtiviive.
+#   3. Aikakatkaisu 10 -> 45 min, jotta tahtiviive ja uusinnat mahtuvat.
 name: Nouda Drive-herot
 
 on:
   workflow_dispatch:
     inputs:
       kansio:
-        description: 'Drive-kansion id'
+        description: 'Drive-kansion id (puun juuri)'
         type: string
         default: '1cb71_5fqmjortf13A6juJ712EK2OBom1'
+      alikansio:
+        description: 'Rajaa nouto tähän alikansioon (nimi, esim. hero-uudet, tai kansion id). Tyhjä = koko puu.'
+        type: string
+        default: ''
+      tahti:
+        description: 'Tahtiviive latausten välissä (ms)'
+        type: string
+        default: '400'
 
 permissions:
   contents: read
@@ -21,7 +39,9 @@ permissions:
 jobs:
   nouda:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    # 45 min: tahtiviive + uusintayritykset vievät aikaa, ja koko puun
+    # nouto (satoja kuvia) ei saa enää katketa kesken.
+    timeout-minutes: 45
     steps:
       - name: Listaa ja lataa
         env:
@@ -30,18 +50,62 @@ jobs:
           # nyt oma secret.
           GOOGLE_API_KEY: ${{ secrets.SAMIREIVINEN_DRIVE_API }}
           KANSIO: ${{ inputs.kansio }}
+          ALIKANSIO: ${{ inputs.alikansio }}
+          TAHTI: ${{ inputs.tahti }}
         run: |
           set -euo pipefail
           mkdir -p drive-herot
           node - <<'SKRIPTI'
           const avain = process.env.GOOGLE_API_KEY;
           const kansio = process.env.KANSIO;
+          const rajaus = (process.env.ALIKANSIO ?? '').trim();
+          const tahti = Number(process.env.TAHTI ?? '400') || 0;
           const { writeFileSync } = await import('node:fs');
           // Alikansiot mukaan (28.8.2026): omistaja jarjestaa kuvat
           // matkakirja-kansion alikansioihin (herot, aarre, ...), joten
           // listaus laskeutuu kansiopuuhun ja etuliittaa alikansion nimen
           // tiedostonimeen (aarre__kuva.png) - artifakti pysyy litteana.
           const KANSIO_MIME = 'application/vnd.google-apps.folder';
+          const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+
+          /*
+           * Drive palauttaa rate limitin 403:na (reason
+           * userRateLimitExceeded / rateLimitExceeded), ei 429:nä, joten
+           * pelkkä statusnumero ei riitä erotteluun: aito oikeusvirhe
+           * ("The caller does not have permission") ei parane odottamalla
+           * ja se on turha yrittaa uudelleen viisi kertaa. Siksi 403:n
+           * runko luetaan ja uusinta tehdään vain kiintiösyistä.
+           */
+          const KIINTIOSYYT = /rateLimit|userRateLimit|quotaExceeded|backendError|internalError/i;
+          async function pyyda(url, kuvaus, { binaari = false, yritykset = 6 } = {}) {
+            let viive = 1000;
+            for (let yritys = 1; yritys <= yritykset; yritys += 1) {
+              let v;
+              try {
+                v = await fetch(url);
+              } catch (virhe) {
+                if (yritys === yritykset) { console.error(`${kuvaus}: verkkovirhe ${virhe.message}`); return null; }
+                console.log(`${kuvaus}: verkkovirhe ${virhe.message}, uusinta ${yritys}/${yritykset} ${viive} ms kuluttua`);
+                await odota(viive); viive *= 2; continue;
+              }
+              if (v.ok) return binaari ? Buffer.from(await v.arrayBuffer()) : await v.json();
+              const runko = (await v.text()).slice(0, 300);
+              const uusittava = v.status === 429 || v.status >= 500
+                || (v.status === 403 && KIINTIOSYYT.test(runko));
+              if (!uusittava || yritys === yritykset) {
+                console.error(`${kuvaus}: HTTP ${v.status} ${runko}`);
+                return null;
+              }
+              // Eksponentiaalinen viive + hajonta, jottei koko era osu
+              // samaan hetkeen kiintion vapautuessa.
+              const nyt = viive + Math.floor(Math.random() * 500);
+              console.log(`${kuvaus}: HTTP ${v.status} (kiintio), uusinta ${yritys}/${yritykset} ${nyt} ms kuluttua`);
+              await odota(nyt);
+              viive *= 2;
+            }
+            return null;
+          }
+
           async function listaa(id, etuliite) {
             const loydot = [];
             let sivu = '';
@@ -50,34 +114,67 @@ jobs:
                 + `?q='${id}'+in+parents+and+trashed=false`
                 + '&fields=nextPageToken,files(id,name,mimeType,size)'
                 + `&pageSize=100&key=${avain}` + (sivu ? `&pageToken=${sivu}` : '');
-              const v = await fetch(url);
-              if (!v.ok) { console.error('lista: HTTP', v.status, (await v.text()).slice(0, 300)); process.exit(1); }
-              const data = await v.json();
+              const data = await pyyda(url, `lista ${etuliite || '/'}`);
+              if (!data) { console.error('listaus epäonnistui'); process.exit(1); }
               for (const t of data.files ?? []) {
                 if (t.mimeType === KANSIO_MIME) {
                   console.log(`alikansio: ${etuliite}${t.name}/`);
                   loydot.push(...await listaa(t.id, `${etuliite}${t.name}__`));
                 } else {
-                  loydot.push({ ...t, name: `${etuliite}${t.name}` });
+                  loydot.push({ ...t, name: `${etuliite}${t.name}`, kansio: etuliite });
                 }
               }
               sivu = data.nextPageToken ?? '';
             } while (sivu);
             return loydot;
           }
-          const tiedostot = await listaa(kansio, '');
+
+          /*
+           * Rajaus: id-näköinen syöte on kansion id, jolloin puu
+           * kuljetaan suoraan sieltä. Muuten syöte on kansion NIMI, ja
+           * koko puu listataan (listaus on halpaa, muutama pyyntö) mutta
+           * ladataan vain ne tiedostot, joiden polkuetuliitteessä nimi
+           * esiintyy — myös silloin kun kansio on syvemmällä puussa.
+           *
+           * Raja on 28 merkkiä eikä esimerkiksi 20, koska Driven
+           * kansio-id on 33 merkkiä: pidempi raja pitää tavallisen
+           * kansionimen (myös pitkän, kuten "aarrekuvat-europe-2026")
+           * varmasti nimipuolella.
+           */
+          const idMainen = /^[A-Za-z0-9_-]{28,}$/.test(rajaus);
+          const juuri = idMainen ? rajaus : kansio;
+          if (rajaus) console.log(idMainen ? `rajaus: kansio-id ${rajaus}` : `rajaus: alikansion nimi "${rajaus}"`);
+          let tiedostot = await listaa(juuri, '');
+          if (rajaus && !idMainen) {
+            const osuu = (t) => t.kansio.split('__').filter(Boolean)
+              .some((osa) => osa.toLowerCase() === rajaus.toLowerCase());
+            const ennen = tiedostot.length;
+            tiedostot = tiedostot.filter(osuu);
+            console.log(`rajaus "${rajaus}": ${tiedostot.length}/${ennen} tiedostoa`);
+            if (!tiedostot.length) { console.error(`::error::alikansiota "${rajaus}" ei löytynyt puusta`); process.exit(1); }
+          }
           console.log(`puussa ${tiedostot.length} tiedostoa`);
+
           let virheita = 0;
+          let ladattu = 0;
           for (const t of tiedostot) {
             if (!/^image\//.test(t.mimeType)) { console.log(`ohitus (${t.mimeType}): ${t.name}`); continue; }
-            const v = await fetch(`https://www.googleapis.com/drive/v3/files/${t.id}?alt=media&key=${avain}`);
-            if (!v.ok) { console.error(`${t.name}: HTTP ${v.status}`); virheita += 1; continue; }
-            const puskuri = Buffer.from(await v.arrayBuffer());
+            const puskuri = await pyyda(
+              `https://www.googleapis.com/drive/v3/files/${t.id}?alt=media&key=${avain}`,
+              t.name,
+              { binaari: true },
+            );
+            if (!puskuri) { virheita += 1; continue; }
             const nimi = t.name.replace(/[^A-Za-z0-9._-]/g, '_');
             writeFileSync(`drive-herot/${nimi}`, puskuri);
+            ladattu += 1;
             console.log(`${nimi} (${puskuri.length} t) ladattu`);
+            // Kevyt tahtirajoitus: Driven kiintio on pyyntoa/sekunti
+            // kohti, ja tasainen tahti pitaa erän 403-rajan alapuolella.
+            if (tahti) await odota(tahti);
           }
-          if (virheita) { console.error(`${virheita} epäonnistui`); process.exit(1); }
+          console.log(`ladattu ${ladattu}, virheitä ${virheita}`);
+          if (virheita) { console.error(`::error::${virheita} epäonnistui`); process.exit(1); }
           SKRIPTI
       - uses: actions/upload-artifact@v4
         if: always()
