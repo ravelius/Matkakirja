@@ -10929,11 +10929,23 @@ export class UI {
     const kansikuvat = this.lehtitila.tutkiKansi?.kansikuvat ?? [];
     const avauskuvat = this.lehtitila.tutkiKansi?.avauskuvat ?? [];
     const ennenNyt = this.lehtitila.tutkiKansi?.ennenNyt ?? [];
-    // Avauskuvakaupungissa iso paikka on panoraamakaruselli (900,
-    // sama leveys kuin nahtavyydenKarusellissa) ja pikkurivillä ovat
-    // kansikuvien kaksi ensimmäistä; muuten entinen taitto.
+    /*
+     * Avauskuvakaupungissa iso paikka on panoraamakaruselli (900,
+     * sama leveys kuin nahtavyydenKarusellissa) ja pikkurivillä ovat
+     * kansikuvien kaksi ensimmäistä; muuten entinen taitto.
+     *
+     * ÄMPÄRIKUVA MUKAAN (korjaus 28.8.2026): heropohjaisilla
+     * avauskuvilla ei ole Commons-tiedostoa vaan `ampari`-polku
+     * (js/packs/kulttuuri-kategoriat.js, herokoe/...), ja pelkkä
+     * `tiedosto`-ehto pudotti juuri lehden ISOIMMAN kuvan puskurista.
+     * Osoite johdetaan samalla säännöllä kuin piirto sen johtaa
+     * (nahtavyydenKaruselli/varustaNostonKuva), jotta välimuisti osuu.
+     */
+    const avausOsoite = (teos) => teos.osoite
+      ?? (teos.ampari ? julisteUrl(teos.ampari) : (teos.tiedosto ? valokuvaUrl(teos.tiedosto, 900) : null));
     for (const teos of avauskuvat) {
-      if (teos.tiedosto) kuvat.push(valokuvaUrl(teos.tiedosto, 900));
+      const url = avausOsoite(teos);
+      if (url) kuvat.push(url);
     }
     if (!avauskuvat.length && kansikuvat[0]?.tiedosto) {
       kuvat.push(valokuvaUrl(kansikuvat[0].tiedosto, 1200));

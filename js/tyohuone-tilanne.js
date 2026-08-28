@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1248: Heropohjaisen kaupunkilehden isoin kuva on taas etukateispuskurissa - saapuminen ei odota karusellin latausta.',
   'v1247: Sahkepinnan tyylit palasivat yhden tiedoston versioon - CSS-niputuksen katkennut ketju korjattu listaksi.',
   'v1246: README kirjoitettu ajan tasalle - motivaatioteoria, Livia, fokusmalli, oikea julkaisuosoite; vanhentuneet laudat, rosvo ja offline-lupaus pois.',
   'v1245: Raamattuun kirjattu pelin ydin (motivaatioteoria - liikkeelle kiinnostavasta, esim. maan pullasta), Livia pysyvaksi pullapersoonalla, pullavinkki ja jalkikommentaattori.',
