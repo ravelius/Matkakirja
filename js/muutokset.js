@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1282, teksti: 'Ihmekuvat uusiksi 31 kohteeseen' },
   { v: 1281, teksti: 'Tampereen herot ja korjatut herokuvat' },
   { v: 1280, teksti: 'Karttamerkit piiloon eleen ajaksi' },
   { v: 1279, teksti: 'Aarrepaljastus: vinjetointi, fakta ja Aarnin diplomi' },
