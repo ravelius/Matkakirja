@@ -135,8 +135,13 @@ jobs:
            * koko puu listataan (listaus on halpaa, muutama pyyntö) mutta
            * ladataan vain ne tiedostot, joiden polkuetuliitteessä nimi
            * esiintyy — myös silloin kun kansio on syvemmällä puussa.
+           *
+           * Raja on 28 merkkiä eikä esimerkiksi 20, koska Driven
+           * kansio-id on 33 merkkiä: pidempi raja pitää tavallisen
+           * kansionimen (myös pitkän, kuten "aarrekuvat-europe-2026")
+           * varmasti nimipuolella.
            */
-          const idMainen = /^[A-Za-z0-9_-]{20,}$/.test(rajaus);
+          const idMainen = /^[A-Za-z0-9_-]{28,}$/.test(rajaus);
           const juuri = idMainen ? rajaus : kansio;
           if (rajaus) console.log(idMainen ? `rajaus: kansio-id ${rajaus}` : `rajaus: alikansion nimi "${rajaus}"`);
           let tiedostot = await listaa(juuri, '');
