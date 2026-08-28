@@ -380,6 +380,8 @@ const MODULES = [
   // M7a: laudan kamera ennen ui:ta (ui tuo Kartan; kartta tuo äänet ja
   // luennan, jotka ovat yllä).
   'js/kartta.js',
+  // Laitemittari ennen ui:ta (ui tuo sen). Ei tuo itse mitään.
+  'js/karttamittari.js',
   // Fokusmoodin maakohtainen topografiapohja ennen ui:ta (ui tuo sen;
   // se itse tuo mapartin, median ja lisänimet, jotka ovat yllä).
   'js/packs/fokus-grc.js',
