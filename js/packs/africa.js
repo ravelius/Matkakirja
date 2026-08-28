@@ -276,6 +276,8 @@ export const AFRICA = {
     types: themedTokenTypes({
       star: {
         name: 'Suuren Zimbabwen kivilintu',
+        fakta: 'Suuren Zimbabwen rauniokaupungista löydettiin kahdeksan '
+          + 'vuolukivilintua — yksi niistä on nykyään Zimbabwen lipussa.',
         kuva: 'assets/aarteet/aarre-africa-star.jpg',
       },
       mannerAarre: {

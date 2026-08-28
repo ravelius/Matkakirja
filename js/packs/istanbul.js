@@ -149,6 +149,9 @@ export const ISTANBUL = {
        */
       star: {
         name: 'Sulttaanin timantti',
+        fakta: 'Topkapın palatsin Lusikantekijän timantti painaa 86 karaattia '
+          + '— tarun mukaan kalastaja vaihtoi sen kolmeen lusikkaan '
+          + 'tietämättä, mitä piteli.',
         kuva: 'assets/aarteet/aarre-istanbul-star.jpg',
       },
       mannerAarre: { name: 'Turkoosi', color: '#3aaea6' },

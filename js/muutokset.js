@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1302, teksti: 'Faktarivit yhdeksalle paaaarteelle' },
   { v: 1301, teksti: 'Tekstit tummaan aarrepaljastukseen' },
   { v: 1300, teksti: 'Paaaarteet tummina, uudet ihme- ja nostokuvat' },
   { v: 1299, teksti: 'Uudet luennat: avaus, lento, Venetsia ja Edinburgh' },

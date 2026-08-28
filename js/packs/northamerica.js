@@ -304,6 +304,9 @@ export const NORTHAMERICA = {
     types: themedTokenTypes({
       star: {
         name: 'Montezuman aarre',
+        fakta: 'Kun espanjalaiset pakenivat Tenochtitlanista \'surullisena '
+          + 'yönä\' 1520, suuri osa Montezuman kullasta upposi järveen — '
+          + 'sitä etsitään yhä.',
         kuva: 'assets/aarteet/aarre-northamerica-star.jpg',
       },
       mannerAarre: {

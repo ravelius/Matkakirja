@@ -337,6 +337,9 @@ export const ASIA = {
     types: themedTokenTypes({
       star: {
         name: 'Keisarin jadesinetti',
+        fakta: 'Valtakunnan perintösinetti kaiverrettiin taruksi tulleesta '
+          + 'jadesta, ja se siirtyi dynastialta toiselle yli tuhat vuotta — '
+          + 'kunnes katosi 900-luvulla jäljettömiin.',
         kuva: 'assets/aarteet/aarre-asia-star.jpg',
       },
       mannerAarre: {

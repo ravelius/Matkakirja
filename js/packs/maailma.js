@@ -356,6 +356,9 @@ export const MAAILMA = {
     types: themedTokenTypes({
       star: {
         name: 'Magellanin kompassi',
+        fakta: 'Magellanin laivue lähti 1519 viidellä laivalla ja noin 270 '
+          + 'miehellä — kolme vuotta myöhemmin maailman ympäri palasi yksi '
+          + 'laiva ja kahdeksantoista miestä.',
         kuva: 'assets/aarteet/aarre-maailma-star.jpg',
       },
     }),
