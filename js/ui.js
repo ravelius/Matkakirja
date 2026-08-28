@@ -28,7 +28,7 @@ import {
   maahanMuoto, onVanhaKuva, paikassaMuoto, pehmeaPolku, piirraLeipateksti,
   pisteMonikulmiossa, polloNimilappu, polunPituus,
   cachedImage, cachedSummary, fokusmoodiPaalla,
-  kehittajaMaailmaPaalla, kehittajaTilaPaalla,
+  kehittajaMaailmaPaalla, kehittajaTilaPaalla, unohdaKehittajaKytkimet,
   shortIntro, suojaa, tallennaLinssi, tallennettuLinssi, viivaIkoni,
 } from './ui-apurit.js';
 import { onAarre } from './tokens.js';
@@ -3301,6 +3301,10 @@ export class UI {
    * numero on jo se paikka, josta pelin tila luetaan.
    */
   paivitaKehittajaTila() {
+    // Kytkinten muisti ensin pois (js/ui-apurit.js unohdaKehittajaKytkimet):
+    // savukevartijat kirjoittavat avaimen suoraan levylle ja kutsuvat
+    // tämän tahdistimen, joten muistin on annettava periksi tässä.
+    unohdaKehittajaKytkimet();
     this.kehittajaTila = kehittajaTilaPaalla();
     this.kehittajaMaailma = kehittajaMaailmaPaalla();
     /*
@@ -6303,6 +6307,9 @@ export class UI {
    * kaupunkilaatat, ja reitit jäävät omistajan tilauksen mukaan pois.
    */
   paivitaKehittajaMaailma() {
+    // Sama syy kuin paivitaKehittajaTilassa: suora levykirjoitus + tämä
+    // tahdistin on savukevartijoiden tapa vaihtaa tila ilman latausta.
+    unohdaKehittajaKytkimet();
     this.kehittajaMaailma = kehittajaMaailmaPaalla();
     /*
      * FOKUSMOODI SAMASSA KUTSUSSA: napin painallus siivoaa vanhat
@@ -6693,6 +6700,61 @@ export class UI {
     const rajaus = this.fokusPohjaRajaus;
     if (!(rajaus?.w > 0)) return s;
     return Math.min(s, FOKUS_MERKKI_KATTO * rajaus.w / FOKUS_LEHTI_PROTO);
+  }
+
+  /**
+   * ONKO MERKKIEN MITTAKAAVA VAKIO ELI RIIPPUMATON NIPISTYSELEESTÄ?
+   *
+   * === MIKSI TÄTÄ KYSYTÄÄN (mitattu 28.8.2026) ===
+   *
+   * Omistajan pelitesti 28.8.2026 (v1273): *"edelleen kyllä tökkii sekä
+   * ZOOMATESSA että scrollatessa."*
+   *
+   * Nipistyksen vastaskaalaajat (js/kartta.js vastaskaalaaMerkit) ajavat
+   * joka kehyksellä kolme merkkikerrosta läpi — kohteet, nostosymbolit
+   * ja täyn pisteen — ja jokainen niistä laskee mittansa tästä parista
+   * (fokusMerkkiSkaala / fokusMerkkiSkaalaKartalle). LEHDEN OMASSA
+   * NÄKYMÄSSÄ molemmat OHITTAVAT `suhde`-argumentin kokonaan: kerroin
+   * on lehden rajauksen ja ruudun suhde, ja se on eleen aikana vakio
+   * (ks. fokusMerkkiSkaalan osio "VÄLIMUISTI"). Silmukka siis laski ja
+   * kirjoitti joka kehyksellä TÄSMÄLLEEN samat luvut kuin edellisellä.
+   *
+   * Mitattu (Chromium, iPhone-mitat 390x844 dpr3, 4x CPU-kuristus, 12 s
+   * nipistystä Kreikan fokusnäkymässä, CDP-trace) ablaatiolla, jossa
+   * vastaskaalaus kytkettiin kokonaan pois:
+   *
+   *                              ennen    ilman vastaskaalausta
+   *     skriptiaika              3676 ms  1460 ms
+   *     tyylinlaskuja/kehys      1,38     0,69
+   *     kehyksiä yli 50 ms       7        1
+   *     pitkiä tehtäviä          7        0
+   *
+   * Ero on puhdasta hukkaa: yhdenkään merkin paikka tai koko ei
+   * muuttunut ablaatiossa, koska kirjoitetut arvot olivat jo samat.
+   *
+   * === VARAPOLKU TARVITSEE VASTASKAALAN YHÄ ===
+   *
+   * Ilman lehden ikkunaa (muu lauta, katselutila, maa jolle pohjaa ei
+   * ole) merkit ovat RUUTUMITASSA, ja silloin `suhde` on niiden ainoa
+   * suoja eleen skaalausta vastaan. Tämä palauttaa siis false juuri
+   * siinä haarassa, ja kartta ajaa vastaskaalaajat kuten ennenkin.
+   *
+   * EHTO ON SAMA KUIN VAKIOHAARAN EHTO fokusMerkkiSkaalassa — yksi
+   * kysymys, yksi vastaus: on lehden rajaus ja on mitattu ruutu.
+   *
+   * RUUDUN MITTA VÄLIMUISTISTA, EI ASETTELUSTA. Tätä kysytään eleen
+   * silmukassa, ja `clientWidth` pakottaisi siellä ison laudan
+   * asettelun (v1115:n sääntö, ks. js/kartta.js paneMitat). Vasta jos
+   * välimuistia ei vielä ole — ele ennen ensimmäistä sovitusta —
+   * mitataan kerran, kuten paneMitat tekee.
+   */
+  fokusMerkkiSkaalaVakio() {
+    const rajaus = this.fokusPohjaRajaus;
+    if (!(rajaus?.w > 0) || !(rajaus?.h > 0)) return false;
+    const koko = this.paneKoko;
+    if (koko?.w > 0 && koko?.h > 0) return true;
+    const pane = this.mapPane;
+    return (pane?.clientWidth || 0) > 0 && (pane?.clientHeight || 0) > 0;
   }
 
   /**

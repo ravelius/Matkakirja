@@ -733,9 +733,20 @@ export class Kartta {
    * lähelle kaikilla laudoilla. Portaat, jotka olisivat kokonäkymää
    * kauempana, jätetään pois: pienellä laudalla ei ole mieltä tarjota
    * porrasta, joka näyttäisi lautaa enemmän kuin sitä on.
+   *
+   * PORTAIKKO SYNTYY KERRAN LAUDAN LEVEYTTÄ KOHTI, EI KERRAN
+   * KEHYKSESSÄ (28.8.2026, sama sääntö kuin js/fokusmitat.js
+   * "KEHYSSILMUKKA EI SAA TUOTTAA ROSKAA"). Nipistys kysyy tätä
+   * kolmesti joka kehyksellä — zoomiRajat, zoomiKerroin ja
+   * fokusZoomMinimi — ja jokainen kysymys latoi ennen uuden
+   * taulukon. Tulos riippuu VAIN laudan leveydestä, joten sama syöte
+   * antaa aina saman taulukon eikä välimuisti voi muuttaa yhtäkään
+   * lukua. Kaikki kutsujat pelkästään lukevat taulukkoa (`[0]`,
+   * `at(-1)`, `findIndex`, `length`); yksikään ei muuta sitä.
    */
   zoomiTasot() {
     const leveys = this.ui.contentBox?.w ?? 1000;
+    if (this.tasotLeveys === leveys && this.tasotMuisti) return this.tasotMuisti;
     const tasot = [1];
     let nakyva = leveys / ZOOMI_ASKEL;
     while (nakyva > ZOOMI_LAHIN * 1.05) {
@@ -743,6 +754,8 @@ export class Kartta {
       nakyva /= ZOOMI_ASKEL;
     }
     tasot.push(leveys / ZOOMI_LAHIN);
+    this.tasotLeveys = leveys;
+    this.tasotMuisti = tasot;
     return tasot;
   }
 
@@ -2095,8 +2108,34 @@ export class Kartta {
     if (!(kuva?.w > 0) || !(kuva?.h > 0)) return null;
     const ikkuna = this.ui.fokusPohjaRajaus ?? kuva;
     const kohteet = this.matkakohteidenAlue();
-    if (!kohteet) return { ikkuna, kuva };
-    return { ikkuna: yhdistaAlue(ikkuna, kohteet), kuva: yhdistaAlue(kuva, kohteet) };
+    /*
+     * VASTAUS SYNTYY KERRAN SYÖTETTÄ KOHTI, EI KERRAN KEHYKSESSÄ
+     * (28.8.2026, sama sääntö kuin js/fokusmitat.js "KEHYSSILMUKKA EI
+     * SAA TUOTTAA ROSKAA"). Tätä kysytään panoroinnissa ja
+     * nipistyksessä useasti joka kehyksellä (rajaaKasinPan,
+     * fokusZoomMinimi, panorointiVapaa), ja jokainen kysymys latoi
+     * ennen uuden paluuolion — ja matkavalinnan ollessa auki vielä
+     * kaksi laatikko-oliota päälle.
+     *
+     * TUNNISTE ON OLIOIDEN IDENTITEETTI eikä sisältö: kaikki kolme
+     * syötettä ovat valmiiksi rakennettuja laatikoita, jotka
+     * VAIHDETAAN uuteen kun ne muuttuvat (fokusPohjaBbox ja
+     * fokusPohjaRajaus tulevat lehden JSONista, kohdealue
+     * matkakohteidenAlueen omasta välimuistista). Sama kolmikko
+     * tarkoittaa siis aina samaa vastausta.
+     *
+     * PALUUOLIO ON PYSYVÄ, EI LAINASSA: kutsujat saavat säilyttää sen
+     * (tarkistaFokusZoom antaa rajat.ikkunan kamera-ajolle), koska
+     * välimuistin olio elää niin kauan kuin sen syötteet.
+     */
+    const muisti = this.rajausMuisti;
+    if (muisti && muisti.kuva === kuva && muisti.ikkuna === ikkuna
+      && muisti.kohteet === kohteet) return muisti.arvo;
+    const arvo = kohteet
+      ? { ikkuna: yhdistaAlue(ikkuna, kohteet), kuva: yhdistaAlue(kuva, kohteet) }
+      : { ikkuna, kuva };
+    this.rajausMuisti = { kuva, ikkuna, kohteet, arvo };
+    return arvo;
   }
 
   /**
@@ -2471,6 +2510,19 @@ export class Kartta {
      */
     let nipistys = null;
 
+    /*
+     * Pelkkä sormiväli, ilman olioita. Elävä ele tarvitsee joka
+     * kehyksellä VAIN tämän luvun; keskipiste luetaan kerran eleen
+     * alussa. kaksiSormea latoi ennen kaksi oliota ja taulukon jokaista
+     * touchmovea kohti (ks. js/fokusmitat.js "KEHYSSILMUKKA EI SAA
+     * TUOTTAA ROSKAA"). Kaava on merkki merkiltä sama.
+     */
+    const sormivali = (e) => {
+      const a = e.touches[0];
+      const b = e.touches[1];
+      return Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY);
+    };
+
     const kaksiSormea = (e) => {
       const [a, b] = [e.touches[0], e.touches[1]];
       return {
@@ -2625,9 +2677,13 @@ export class Kartta {
       nipistys.suhde = kerroin / nipistys.kerroin;
       // Eleen alussa mitattu paneelin sijainti (ks. aloitaNipistysMitasta).
       const laatikko = nipistys.laatikko ?? pane.getBoundingClientRect();
-      const m = { x: nipistys.keski.x - laatikko.left, y: nipistys.keski.y - laatikko.top };
-      const tx = m.x - (m.x - nipistys.panX) * nipistys.suhde;
-      const ty = m.y - (m.y - nipistys.panY) * nipistys.suhde;
+      // Kaksi lukua kahtena muuttujana, ei oliona: tämä ajetaan joka
+      // kehyksellä, eikä kehyssilmukka saa tuottaa roskaa (ks.
+      // js/fokusmitat.js "KEHYSSILMUKKA EI SAA TUOTTAA ROSKAA").
+      const mx = nipistys.keski.x - laatikko.left;
+      const my = nipistys.keski.y - laatikko.top;
+      const tx = mx - (mx - nipistys.panX) * nipistys.suhde;
+      const ty = my - (my - nipistys.panY) * nipistys.suhde;
       // Kelvoton luku muunnoksessa hylkäisi koko tyylin ja kartta
       // nykäisisi takaisin — parempi jättää edellinen asento voimaan.
       if (!Number.isFinite(tx) || !Number.isFinite(ty)) return;
@@ -2638,7 +2694,7 @@ export class Kartta {
 
     const paivitaNipistys = (e) => {
       if (!nipistys || e.touches.length < 2) return;
-      paivitaNipistysMitasta(kaksiSormea(e).etaisyys);
+      paivitaNipistysMitasta(sormivali(e));
     };
 
     const paataNipistys = () => {
@@ -2750,8 +2806,35 @@ export class Kartta {
      * suurentua eleen mukana — silloin rekisteröity funktio kirjoittaa
      * saman vakiomuunnoksen ja `suhde` ohitetaan. Vastaskaala on
      * voimassa vain lehdettömällä varapolulla, joka on yhä ruutumitassa.
+     *
+     * === JA SILLOIN SILMUKKAA EI AJETA LAINKAAN (28.8.2026) ==========
+     *
+     * Omistajan pelitesti 28.8.2026 (v1273): *"edelleen kyllä tökkii
+     * sekä ZOOMATESSA että scrollatessa."*
+     *
+     * "Kirjoittaa saman vakiomuunnoksen" ei ole ilmaista. Kolme
+     * kerrosta kävi joka kehyksellä läpi kymmeniä merkkiryhmiä, laski
+     * niille erottelu- ja nippupaikat ja VERTASI jokaista kirjoitusta
+     * (js/mapart.js maare) — pelkkä vertailu on getAttribute-kutsu
+     * solmua ja määrettä kohti. Lisäksi kerrokset kysyivät mittansa
+     * uudestaan, ja lehdettömässä haarassa se kysymys lukee ruudun
+     * laatikon eli pakottaa asettelun.
+     *
+     * Mitattu (Chromium, iPhone 390x844 dpr3, 4x CPU-kuristus, 12 s
+     * nipistystä Kreikan fokusnäkymässä) ablaatiolla, jossa silmukka
+     * kytkettiin pois: skriptiaika 3676 → 1460 ms, tyylinlaskuja
+     * 1,38 → 0,69 kehystä kohti, yli 50 ms:n kehyksiä 7 → 1 ja pitkiä
+     * tehtäviä 7 → 0. Yksikään merkki ei liikkunut, koska arvot olivat
+     * jo valmiiksi samat.
+     *
+     * EHTO ON VAKIOSKAALA, EI FOKUSMOODI (js/ui.js
+     * fokusMerkkiSkaalaVakio): täsmälleen se haara, jossa kaikki kolme
+     * kerrosta ohittavat `suhde`-argumentin. Lehdettömällä varapolulla
+     * silmukka ajaa kuten ennenkin — siellä `suhde` on merkkien ainoa
+     * suoja eleen skaalausta vastaan.
      */
     const vastaskaalaaMerkit = (suhde) => {
+      if (this.ui.fokusMerkkiSkaalaVakio?.()) return;
       for (const f of this.ui.nipistysVastaskaalaajat ?? []) {
         try { f(suhde); } catch { /* yksi merkki ei saa kaataa elettä */ }
       }

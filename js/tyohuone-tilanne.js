@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1277: Nipistyszoomi kevennetty: vastaskaalaajat eivat enaa aja kolmea merkkikerrosta joka kehyksella lehden nakymassa (skriptiaika -58 %, tyylinlaskut -49 %, pitkat tehtavat 7 -> 0), kehittajakytkinten levyluku pois pointermovesta (iOS-hyoty), nipistyksen roskat pois. Nakymat pikselintarkasti samat. Testaa zoomi ja vieritys laitteella.',
   'v1276: Aarteen paljastuksen leiskat, generoitu kaiverruskehys ja paatokset tallennettu docs/mantereet-tyoaineisto/aarreleiskat/-kansioon (paikallisaarteille vinjetointimalli, Aarnin diplomi vain paaaarteille). Ei pelimuutoksia.',
   'v1275: Kaupunkilehden kohdekartan merkit eivat enaa katoa kun karttakuva latautuu hitaasti (v1038:sta asti maannut ajoitusansa; osui 24 kaupunkiin, mm. Ateena, Istanbul, Sofia). Avaa Ateenan lehden kaupunkikartta kylmalla valimuistilla - kuusi kohdetta nakyy.',
   'v1274: Nouda Drive-herot -tyokulku laskeutuu nyt alikansioihin (herot, aarre...) ja etuliittaa alikansion nimen tiedostonimeen. Ei pelimuutoksia - vain tyokulku.',
