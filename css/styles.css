@@ -1194,6 +1194,22 @@ body.kartta-raahaus .target-ring,
 body.kartta-raahaus .target-halo,
 body.kartta-raahaus .fokuslaatta-syke { animation-play-state: paused; }
 
+/* MERKKIKERROKSET POIS MAALIKIERROKSESTA ELEEN AJAKSI (js/kartta.js
+   piilotaMerkit — koko perustelu ja mittausluvut siellä).
+
+   Kartan CSS-muunnos pakottaa selaimen pilkkomaan koko SVG:n uudestaan
+   maalipaloihin joka kehyksellä, ja kymmenet pienet merkkiryhmät ovat
+   siinä kalleimmat. `display: none` on ainoa keino, joka oikeasti
+   poistaa ne kierroksesta: läpinäkyväkin kerros pilkotaan ja maalataan.
+
+   Luokka on rungossa vain sen ajan, kun ele on aidosti käynnissä, ja
+   merkkien paikat ovat muunnosmääreissä eivätkä asettelussa — piilo ei
+   siirrä mitään, ja jokainen merkki palaa pikselilleen entiselleen. */
+body.kartta-merkit-piilossa .fokuskohteet,
+body.kartta-merkit-piilossa .fokuspisteet,
+body.kartta-merkit-piilossa .fokusnosto-symbolit,
+body.kartta-merkit-piilossa .nippuviivat { display: none; }
+
 /*
  * Vanhan kiikarin vääristymä (omistajan toive): maailmankartan
  * lähikuvassa ruudun reunat sumenevat, saavat vihertävän linssin sävyn
@@ -4638,6 +4654,27 @@ body.radio-tila .actions {
  */
 body.fokuspohja .country-tint,
 body.fokuspohja .country-korostus { display: none; }
+
+/*
+ * ...JA KOKO ATLASNÄKYMÄSSÄ, EI VAIN LEHDEN PÄÄLLÄ (omistajan
+ * pelitestihavainto 28.8.2026: *"nopanheiton jälkeen Kreikan ympärille
+ * piirtyy paksu punaruskea raja"* — kuvakaappaus matkatilasta).
+ *
+ * Yllä oleva sääntö riippuu lehdestä (body.fokuspohja), ja juuri
+ * matkatilassa lehteä ei siinä hetkessä ole: korostus palasi
+ * "itsestään" näkyviin, aivan kuten sääntö lupasi. Näkyviin palasi
+ * kuitenkin laudan karkeasta 50m-rannikosta piirretty viiva eli sama
+ * epätarkka jälki, jonka omistaja otti pois — ja "VANHA KARTTA
+ * KOKONAAN POIS" -linjauksen (Raamattu, v1115) mukaan pelilaudan vanhaa
+ * piirrosta ei näytetä pelin aikana missään.
+ *
+ * body.fokus-atlas-nakyma on päällä pelilaudalla AINA fokusmoodissa
+ * (js/fokuskartta.js paivitaVanhaLauta), joten tämä kattaa myös
+ * yleiskuvan ja lennon — ja katselulaudoilla sekä etusivulla, joilla
+ * atlasta ei ole, korostus säilyy ennallaan.
+ */
+body.fokus-atlas-nakyma .country-tint,
+body.fokus-atlas-nakyma .country-korostus { display: none; }
 
 .country-korostus {
   fill: none;

@@ -13,7 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 1280, teksti: 'Tampereen herot ja korjatut herokuvat' },
+  { v: 1281, teksti: 'Tampereen herot ja korjatut herokuvat' },
+  { v: 1280, teksti: 'Karttamerkit piiloon eleen ajaksi' },
   { v: 1279, teksti: 'Aarrepaljastus: vinjetointi, fakta ja Aarnin diplomi' },
   { v: 1278, teksti: 'Kaikki 58 paikallisaarrekuvaa peliin' },
   { v: 1277, teksti: 'Nipistyszoomin skriptiaika alas 58 prosenttia' },
