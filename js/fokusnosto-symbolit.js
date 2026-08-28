@@ -1172,7 +1172,7 @@ let NOSTOSYM_PORRAS = NOSTOSYM_PORTAAT[0];
 const NOSTOSYM_RASTERIT = new Map();
 
 /**
- * EDELLISEN PORTAAN RASTERIT JÄÄVÄT VÄLIMUISTIIN.
+ * KÄYDYT PORTAAT JÄÄVÄT VÄLIMUISTIIN.
  *
  * MITATTU SYY (nipistys Kreikan fokusnäkymässä, iPhone 390×844 dpr3,
  * 4× kuristus, 12 s): `toDataURL` vei 903 ms pääsäiettä. Nipistys
@@ -1180,15 +1180,23 @@ const NOSTOSYM_RASTERIT = new Map();
  * tyhjennettiin jokaisella ylityksellä — samat seitsemänkymmentä
  * rasteria paistettiin uudestaan, vaikka ne oli juuri tehty.
  *
- * Avain kantaa portaan jo valmiiksi (`${porras}|…`), joten kahden
- * portaan rasterit eivät voi sekaantua keskenään.
+ * Avain kantaa portaan jo valmiiksi (`${porras}|…`), joten eri
+ * portaiden rasterit eivät voi sekaantua keskenään.
  *
- * KAKSI EIKÄ KAIKKI NELJÄ. Nipistys heiluu naapuriportaiden välillä,
- * joten kaksi kattaa juuri sen tapauksen, jonka takia tämä on. Pidempi
- * muisti maksaisi vain muistia: yksi rasteri on PNG-data-URL, ja
- * lähimmällä portaalla niitä on merkkien verran.
+ * NELJÄ EIKÄ KAKSI (28.8.2026). Ensimmäinen versio piti kahta porrasta,
+ * koska rasteri oli PNG-data-URL ja niistä maksettiin JS-kasassa.
+ * Rasteri on nyt blob (ks. kangasOsoitteeksi), eikä nipistyssarja pysy
+ * kahden naapuriportaan välissä: sormi käy koko matkan yleiskuvasta
+ * lähikuvaan ja takaisin, ja kolmannen portaan ylitys paistoi koko
+ * merkkijoukon uudestaan. Portaita on kaikkiaan neljä, joten tämä
+ * tarkoittaa käytännössä: kerran paistettu rasteri kelpaa istunnon
+ * loppuun.
  */
-let NOSTOSYM_EDELLINEN = null;
+const NOSTOSYM_PITO = 4;
+/** Viimeksi käytetyt portaat, tuorein ensin (enintään NOSTOSYM_PITO). */
+let NOSTOSYM_TUOREET = [NOSTOSYM_PORTAAT[0]];
+/** Vapautuksen armonaika: kesken oleva paikkapäivitys saa valmistua. */
+const NOSTOSYM_VAPAUTUS_MS = 5000;
 
 /** Nimiön asu luetaan CSS:stä kerran per asu — väri ja kirjasin asuvat siellä. */
 const NOSTOSYM_ASUT = new Map();
@@ -1222,15 +1230,35 @@ const NOSTOSYM_LEVEYDET = new Map();
 export function nostosymAsetaPorras(tarve) {
   const uusi = NOSTOSYM_PORTAAT.find((p) => p >= tarve) ?? NOSTOSYM_PORTAAT.at(-1);
   if (uusi === NOSTOSYM_PORRAS) return false;
-  NOSTOSYM_EDELLINEN = NOSTOSYM_PORRAS;
   NOSTOSYM_PORRAS = uusi;
-  // Nykyisen ja edellisen portaan rasterit jäävät (ks. NOSTOSYM_EDELLINEN),
-  // vanhemmat lähtevät — muuten muistiin kertyisi kaikkien portaiden kuvat.
+  NOSTOSYM_TUOREET = [uusi, ...NOSTOSYM_TUOREET.filter((p) => p !== uusi)]
+    .slice(0, NOSTOSYM_PITO);
+  // Pidon sisällä olevat portaat jäävät (ks. NOSTOSYM_PITO), vanhemmat
+  // lähtevät — muuten muistiin kertyisi kaikkien portaiden kuvat.
   for (const avain of [...NOSTOSYM_RASTERIT.keys()]) {
     const porras = Number(avain.slice(0, avain.indexOf('|')));
-    if (porras !== uusi && porras !== NOSTOSYM_EDELLINEN) NOSTOSYM_RASTERIT.delete(avain);
+    if (NOSTOSYM_TUOREET.includes(porras)) continue;
+    const valmis = NOSTOSYM_RASTERIT.get(avain);
+    NOSTOSYM_RASTERIT.delete(avain);
+    vapautaRasteri(valmis);
   }
   return true;
+}
+
+/**
+ * Välimuistista pudonneen rasterin blob-osoite vapaaksi — mutta vasta
+ * armonajan päästä: kartalla voi yhä olla <image>, jonka paikkapäivitys
+ * (nostosymVirkistaRasterit) on kesken, ja vapautettu osoite näkyisi
+ * pelaajalle tyhjänä merkkinä.
+ */
+function vapautaRasteri(valmis) {
+  if (!valmis?.then || typeof URL?.revokeObjectURL !== 'function') return;
+  void valmis.then((r) => {
+    const osoite = r?.osoite;
+    if (typeof osoite !== 'string' || !osoite.startsWith('blob:')) return;
+    setTimeout(() => { try { URL.revokeObjectURL(osoite); } catch { /* ohi */ } },
+      NOSTOSYM_VAPAUTUS_MS);
+  }, () => {});
 }
 
 /**
@@ -1373,6 +1401,42 @@ export function nostosymNimioLaatikko(nimi, svg, laji, vasemmalle = false, enint
  * puolikas, vasemmanpuoleisella koko nimiökaistan mitta — <image> on
  * asemoitava sen mukaan, tai peilattu merkki hyppäisi sivuun.
  */
+/*
+ * RASTERI ULOS BLOBINA, EI DATA-URLINA (Fablemaxin diagnoosi
+ * 28.8.2026).
+ *
+ * `canvas.toDataURL('image/png')` pakkaa PNG:n JA base64-koodaa sen
+ * PÄÄSÄIKEESSÄ, synkronisesti. Jäljityksessä porrasvaihdon
+ * TimerFire-piikit olivat 346–416 ms 350 ms:n levon jälkeen — juuri
+ * silloin kun sormi oli jo nostettu ja kartan pitäisi olla rauhassa —
+ * ja piikin suurin itsekulun erä oli tämä kutsu. Merkkejä on
+ * kymmeniä, ja jokainen maksaa oman pakkauksensa.
+ *
+ * `toBlob` tekee saman pakkauksen ILMAN base64-vaihetta ja palauttaa
+ * tuloksen takaisinkutsuna, jolloin selain saa jakaa työn kehysten
+ * kesken. Osoite on blob-osoite, ja koska funktio on jo async ja sen
+ * kutsuja asettaa osoitteen jälkikäteen, mikään kutsupolku ei muutu.
+ *
+ * VANHA POLKU ON VARAREITTI: ilman `toBlob`ia (tai jos se palauttaa
+ * tyhjän) palataan `toDataURL`iin, eli täsmälleen siihen mitä ennenkin.
+ */
+function kangasOsoitteeksi(kangas) {
+  return new Promise((valmis) => {
+    if (typeof kangas.toBlob !== 'function') {
+      valmis(kangas.toDataURL('image/png'));
+      return;
+    }
+    try {
+      kangas.toBlob((blob) => {
+        if (!blob) { valmis(kangas.toDataURL('image/png')); return; }
+        try { valmis(URL.createObjectURL(blob)); } catch { valmis(kangas.toDataURL('image/png')); }
+      }, 'image/png');
+    } catch {
+      valmis(kangas.toDataURL('image/png'));
+    }
+  });
+}
+
 async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji, vasemmalle = false) {
   const asu = nostosymAsuTai(svg, nimionLaji);
   const muste = nostosymMustelajit(svg);
@@ -1426,7 +1490,7 @@ async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji, vasemmal
    * laatikkoaan. Näin laatikko on tarkalleen bittikartan muotoinen.
    */
   return {
-    osoite: kangas.toDataURL('image/png'),
+    osoite: await kangasOsoitteeksi(kangas),
     leveys: kangas.width / porras,
     korkeus: kangas.height / porras,
     /*
@@ -1477,7 +1541,31 @@ export function piirraNostosymKartalle(g, symboli, nimio, laji, vasemmalle = fal
   kuva.dataset.symboli = NOSTOSYM_PIIRTAJAT[symboli] ? symboli : 'huuto';
   kuva.dataset.nimio = teksti;
   kuva.dataset.puoli = puoli ? 'vasen' : 'oikea';
+  /*
+   * RESEPTI JÄÄ KUVAAN KIINNI, jotta sama merkki voidaan paistaa
+   * uudelleen TARKEMMALLA PORTAALLA purkamatta kerrosta
+   * (nostosymVirkistaRasterit). Datamääreissä on kategoria eikä
+   * minitunnus (ks. yllä), joten resepti ei mahdu niihin.
+   */
+  kuva.__nostosym = { tunnus, teksti, nimionLaji, puoli, elavana };
+  asetaRasteri(kuva, g);
+}
+
+/**
+ * Paistaa (tai hakee välimuistista) yhden merkin rasterin nykyisellä
+ * portaalla ja kirjoittaa sen kuvaan, kun se on valmis.
+ *
+ * VANHA KUVA JÄÄ NÄKYVIIN ODOTUKSEN AJAKSI. Määreet kirjoitetaan
+ * kertarysäyksellä valmiiseen rasteriin, joten porrasvaihto ei koskaan
+ * jätä kerrokseen tyhjää merkkiä — sama koko, vain karkeampi kuva,
+ * kunnes tarkempi saapuu (js/fokuskohteet.js PORTAAN_LEPO_MS).
+ */
+function asetaRasteri(kuva, g) {
+  const resepti = kuva.__nostosym;
+  if (!resepti) return;
+  const { tunnus, teksti, nimionLaji, puoli, elavana } = resepti;
   const porras = NOSTOSYM_PORRAS;
+  kuva.__nostosymPorras = porras;
   const avain = `${porras}|${tunnus}|${nimionLaji}|${puoli ? 'v' : 'o'}|${teksti}`;
   let valmis = NOSTOSYM_RASTERIT.get(avain);
   if (!valmis) {
@@ -1486,6 +1574,9 @@ export function piirraNostosymKartalle(g, symboli, nimio, laji, vasemmalle = fal
   }
   valmis.then((r) => {
     if (!kuva.isConnected) return;
+    // Väliin ehti uudempi porras: sen kirjoitus voittaa, eikä tämä
+    // vanhempi rasteri saa enää palata kuvaan.
+    if (kuva.__nostosymPorras !== porras) return;
     maare(kuva, 'x', (-r.origoX).toFixed(2));
     maare(kuva, 'y', (-NOSTOSYM_MINI_RUUTU).toFixed(2));
     maare(kuva, 'width', r.leveys.toFixed(2));
@@ -1497,6 +1588,52 @@ export function piirraNostosymKartalle(g, symboli, nimio, laji, vasemmalle = fal
     NOSTOSYM_RASTERIT.delete(avain);
     if (kuva.isConnected) elavana();
   });
+}
+
+/**
+ * PORRASVAIHTO ILMAN PURKUA (Fablemaxin diagnoosi 28.8.2026).
+ *
+ * MITATTU VIKA. Tarkkuusportaan vaihtuessa `paivitaFokuskohteet`
+ * tyhjensi koko merkkikerroksen (`kerros.textContent = ''`) ja rakensi
+ * sen uudestaan: kymmeniä ryhmiä, kymmeniä rasterointeja ja koko
+ * kerroksen asettelu YHDESSÄ ajastintehtävässä, 350 ms:n levon
+ * jälkeen. Jäljityksessä 346–416 ms:n TimerFire-piikit juuri siinä
+ * hetkessä, jossa kartan pitäisi olla rauhassa.
+ *
+ * Nyt kerros jää paikoilleen ja VAIN OSOITTEET vaihtuvat sitä mukaa
+ * kuin uudet rasterit valmistuvat. Merkin mitat ovat kirjaston
+ * yksiköitä (rasterin pikselit jaettuna portaalla), joten mikään ei
+ * liiku eikä hyppää — sama koko, tarkempi kuva.
+ *
+ * ERISSÄ, EI KERRALLA. Rasterointi on canvas-työtä ja tapahtuu
+ * kutsuhetkellä; kymmenet merkit yhdessä tehtävässä olisi sama piikki
+ * uudessa paikassa. Erä on kahdeksan merkkiä kehystä kohti, eli
+ * seitsemänkymmenen merkin kerros valmistuu yhdeksässä kehyksessä
+ * eikä yhdessä 400 ms:n lohkossa.
+ */
+export function nostosymVirkistaRasterit(juuri) {
+  if (!juuri?.querySelectorAll) return;
+  const jono = [...juuri.querySelectorAll('image.nostosym-rasteri')]
+    .filter((kuva) => kuva.__nostosym && kuva.__nostosymPorras !== NOSTOSYM_PORRAS);
+  if (!jono.length) return;
+  const era = () => {
+    for (let i = 0; i < NOSTOSYM_VIRKISTYS_ERA && jono.length; i += 1) {
+      const kuva = jono.shift();
+      if (!kuva.isConnected || kuva.__nostosymPorras === NOSTOSYM_PORRAS) continue;
+      asetaRasteri(kuva, kuva.parentNode);
+    }
+    if (jono.length) pyydaKehys(era);
+  };
+  pyydaKehys(era);
+}
+
+/** Montako merkkiä yhdessä kehyksessä (ks. nostosymVirkistaRasterit). */
+const NOSTOSYM_VIRKISTYS_ERA = 8;
+
+/** rAF jos on, muuten ajastin (Node ja testit). */
+function pyydaKehys(tyo) {
+  if (typeof requestAnimationFrame === 'function') requestAnimationFrame(tyo);
+  else setTimeout(tyo, 16);
 }
 
 /* ==================== TÄYN TUIKKIVA PISTE ==================== */

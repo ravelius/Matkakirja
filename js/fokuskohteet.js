@@ -93,7 +93,7 @@
 import { el, maare } from './mapart.js';
 import {
   NOSTOSYM_LUOKAT, NOSTOSYM_MINI_R, NOSTOSYM_TYYPIT,
-  nostosymAsetaPorras, nostosymNimioLaatikko,
+  nostosymAsetaPorras, nostosymNimioLaatikko, nostosymVirkistaRasterit,
   piirraNostosymKartalle, piirraNostosymboli,
 } from './fokusnosto-symbolit.js';
 import { FOKUS_LISANIMET } from './packs/fokus-grc.js';
@@ -1318,8 +1318,17 @@ function ajastaRasteriporras(ui) {
     ui.fokusPorrasAjastin = 0;
     if (ui.dead) return;
     if (!paivitaRasteriporras(ui, ui.nakyvaAlue?.()?.skaala)) return;
-    ui.fokuskohdeAvain = null;
-    paivitaFokuskohteet(ui);
+    /*
+     * KERROSTA EI PURETA (28.8.2026, ks. PORTAAN_LEPO_MS). Ennen tässä
+     * nollattiin `fokuskohdeAvain` ja rakennettiin koko merkkikerros
+     * uusiksi — kymmeniä ryhmiä ja rasterointeja yhdessä
+     * ajastintehtävässä, mitattuna 346–416 ms:n TimerFire-piikki juuri
+     * eleen levon jälkeen. Sisältö ei ole muuttunut, vain tarkkuus, ja
+     * tarkkuus asuu rasterin osoitteessa: kerros jää paikoilleen ja
+     * osoitteet vaihtuvat erissä sitä mukaa kuin uudet rasterit
+     * valmistuvat (nostosymVirkistaRasterit).
+     */
+    nostosymVirkistaRasterit(varmistaKohdekerros(ui));
   }, PORTAAN_LEPO_MS);
 }
 
