@@ -1436,6 +1436,12 @@ export const RAAMATTU = {
           + 'kesken luennan; erillistä kelluvaa kaiutinta ei ole '
           + '(v868:n kelluva kahva poistettu — kaksi kaiutinta samassa '
           + 'kulmassa).',
+        'ELEVEN-AVAIN ON GITHUB-SECRETISSA (omistaja 28.8.2026 ilta): '
+          + 'ELEVEN_API_KEY sailyy repon secreteissa, ja luennat '
+          + 'generoidaan kasiajettavalla Actions-tyonkululla suoraan '
+          + 'secretista - avainta ei liikutella chatissa eika '
+          + 'kierrateta joka ajon jalkeen. Avain ei koskaan tulostu '
+          + 'lokiin.',
         'LUENTAPOLKU: äänite soi kun luenta-kenttä vastaa '
           + 'näyttötekstiä; muuttunut teksti striimataan. '
           + 'Matkakirjaluennat generoidaan maittain kaanonin '
