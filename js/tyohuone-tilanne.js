@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1257: Sofian maadoituskupla alkaa Livian saikahdyksella (Kaak. Olipas hurja juttu) - synkka hirttoaihe pehmenee.',
   'v1256: Paivakirjakortin kaiutin istuu nyt MATKAPAIVAKIRJA-otsikkorivilla eika mene tekstin paalle millaan ruudunleveydella.',
   'v1255: Ihmenauhassa lukee nyt Unohdettu aarre (pelin alaotsikko) kaikilla ihmekuvilla.',
   'v1254: Pelinappula on nyt puunvarinen ja matalampi, ja kaupungin laatta nakyy sen alta joka suunnasta.',
