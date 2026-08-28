@@ -9,8 +9,10 @@
  *     (kirjanpito muistaa jo pyydetyt).
  *
  * ETUKÄTEISPUSKURI (omistajan tilaus 15.8.2026, docs/periaatteet.md):
- *  5. Kaupunkilehden etusivun kansikuva pyydetään jo saapumisesta, ja
- *     piirto käyttää samaa osoitetta (sama leveys → ei tuplalatausta).
+ *  5. Kaupunkilehden etusivun ISON KUVAPAIKAN kuva (avauskuvien
+ *     karuselli, tai kansikuva jos avauskuvia ei ole) pyydetään jo
+ *     saapumisesta, ja piirto käyttää samaa osoitetta (sama leveys →
+ *     ei tuplalatausta).
  *  6. Maalehden etusivun kartta pyydetään jo saapumisesta — siis ennen
  *     kuin liitelinkkiä on painettu — ja sekin samalla leveydellä.
  *  7. Sivunvaihto ei odota verkkoa: seuraavan sivun nostokuva on
@@ -238,19 +240,42 @@ await sivu.evaluate(async () => {
   await new Promise((r) => setTimeout(r, 3500));
 });
 
-// 5. Kaupunkilehden etusivun kansikuva: pyydetty saapumisesta, ja
-//    piirretty kuva käyttää TÄSMÄLLEEN samaa osoitetta.
+/*
+ * 5. Kaupunkilehden etusivun ISO KUVAPAIKKA: pyydetty saapumisesta, ja
+ *    piirretty kuva käyttää TÄSMÄLLEEN samaa osoitetta.
+ *
+ *    Iso paikka ei ole enää aina kansikuva: avauskuvakaupungissa
+ *    (kulttuuri-kategoriat.js `avauskuvat`) siellä pyörii
+ *    panoraamakaruselli 900:lla, ja Lontoon avauskuvat ovat
+ *    ämpärissä asuvia heroja (`ampari` → julisteUrl) ilman
+ *    Commons-tiedostoa. Odotus johdetaan siis samalla säännöllä kuin
+ *    piirto (nahtavyydenKaruselli) ja vasta ilman avauskuvia
+ *    kansikuvasta 1200:lla.
+ *
+ *    Lisäksi vaaditaan, että osoite on etukäteispuskurin OMALLA
+ *    listalla (kaupunkilehdenEtusivunKuvat): pelkkä pyyntö tulisi
+ *    karusellin omasta esilatauksesta, eikä puskurin aukko näkyisi.
+ */
 const kansi = await sivu.evaluate(async () => {
   const kuvat = await import('/js/packs/africa-valokuvat.js');
+  const media = await import('/js/media.js');
   const { ui } = window.matkakirja;
-  const teos = ui.lehtitila.tutkiKansi?.kansikuvat?.[0];
+  const kansiTiedot = ui.lehtitila.tutkiKansi;
+  const avaus = kansiTiedot?.avauskuvat?.[0];
+  const teos = kansiTiedot?.kansikuvat?.[0];
+  const osoite = avaus
+    ? (avaus.osoite ?? (avaus.ampari
+      ? media.julisteUrl(avaus.ampari)
+      : kuvat.valokuvaUrl(avaus.tiedosto, 900)))
+    : (teos ? kuvat.valokuvaUrl(teos.tiedosto, 1200) : null);
   return {
-    odotettu: teos ? kuvat.valokuvaUrl(teos.tiedosto, 1200) : null,
+    odotettu: osoite,
+    puskurissa: ui.kaupunkilehdenEtusivunKuvat().includes(osoite),
     piirretty: document.querySelector('#arrival-lehti-paakuva img')?.getAttribute('src') ?? null,
   };
 });
-vaadi('kaupunkilehden kansikuva pyydetään saapumisesta oikealla leveydellä',
-  Boolean(kansi.odotettu) && pyynnot.includes(kansi.odotettu)
+vaadi('kaupunkilehden ison kuvapaikan kuva pyydetään saapumisesta oikealla leveydellä',
+  Boolean(kansi.odotettu) && pyynnot.includes(kansi.odotettu) && kansi.puskurissa
   && kansi.piirretty === kansi.odotettu, JSON.stringify(kansi));
 
 // 6. Maalehden etusivun kartta on pyydetty jo saapumisessa — lehteä ei
@@ -303,23 +328,39 @@ vaadi('lukijan ensimmäinen pala esihaetaan molempiin lehtiin (2 hakua)',
 
 /*
  * 9. AVAINOSUMA. Kaupunkilehden etusivun luenta alkaa ensimmäisestä
- *    leipätekstistä eli esittelykappaleesta (#arrival-intro), ja
- *    ensimmäinen soiva pala on sen ENSIMMÄINEN VIRKE. Virke luetaan
- *    tässä suoraan ruudulta pelin omalla virkesäännöllä — niin koe ei
- *    nojaa samaan koodiin, jota se mittaa.
+ *    leipätekstistä eli esittelykappaleesta (#arrival-intro).
+ *
+ *    PALA ON KOKO KAPPALE (omistaja 18.8.2026, js/puhe.js
+ *    kappaleenPalat: palaraja kesken kappaleen kuului
+ *    intonaatiohyppynä), joten esihaettu pala ei ole enää yksi virke.
+ *    Vartio siirtyy vartioimaan tätä todellisuutta löysäämättä:
+ *    esihaetun palan on oltava kappaleen ALKUOSA merkilleen ja
+ *    alettava kappaleen ensimmäisestä virkkeestä — eli täsmälleen se
+ *    teksti, jonka luenta ensimmäisenä pyytää.
+ *
+ *    Kappale ja sen ensimmäinen virke luetaan suoraan ruudulta pelin
+ *    omalla virkesäännöllä — niin koe ei nojaa samaan koodiin, jota
+ *    se mittaa.
  */
 await sivu.evaluate(() => window.matkakirja.ui.naytaTutkiSivu(0, { heti: true }));
 await sivu.waitForTimeout(400);
-const ekaVirke = await sivu.evaluate(() => {
-  const teksti = (document.querySelector('#arrival-intro')?.textContent ?? '')
+const alku = await sivu.evaluate(() => {
+  const kappale = (document.querySelector('#arrival-intro')?.textContent ?? '')
     .replace(/\s+/g, ' ').trim();
-  const virke = teksti.split(/(?<=[.!?\u2026])\s+/)[0] ?? '';
-  // Sama pääte kuin lukijalla: pisteetön kohta saa pisteen.
-  return virke && !/[.!?:;\u2026]$/.test(virke) ? `${virke}.` : virke;
+  const virke = kappale.split(/(?<=[.!?\u2026])\s+/)[0] ?? '';
+  return {
+    kappale,
+    // Sama pääte kuin lukijalla: pisteetön kohta saa pisteen.
+    virke: virke && !/[.!?:;\u2026]$/.test(virke) ? `${virke}.` : virke,
+  };
 });
-vaadi('esihaku osui juuri siihen virkkeeseen, josta luenta alkaa',
-  Boolean(ekaVirke) && esihaut.includes(ekaVirke),
-  JSON.stringify({ ekaVirke, esihaut }));
+const ekaVirke = alku.virke;
+// Esihaettu pala on kappaleen ALKUOSA merkilleen (lyhyellä kappaleella
+// koko kappale), ja sen on alettava kappaleen ensimmäisestä virkkeestä.
+const ekaPala = esihaut.find((t) => t && alku.kappale.startsWith(t));
+vaadi('esihaku osui juuri siihen kappaleen alkuun, josta luenta alkaa',
+  Boolean(ekaVirke) && Boolean(ekaPala) && ekaPala.startsWith(ekaVirke),
+  JSON.stringify({ ...alku, ekaPala, esihaut }));
 const ennenLuentaa = puhePyynnot.length;
 await sivu.evaluate(() => {
   document.querySelector('#arrival-dialog .lukija-nappi')?.click();
@@ -344,6 +385,12 @@ vaadi('esihaettua palaa ei generoida uudelleen (välimuistiavain osuu)',
  *     maalehdenEtusivuRunko), koska lehteä ei ole vielä avattu.
  *     Verrataan sitä nyt OIKEAAN maalehden ensimmäiseen sivuun: sen
  *     ensimmäisen palan on oltava sama teksti, joka esihaettiin.
+ *
+ *     Pala on kappaleenPalat-mittainen (18.8.2026: koko kappale,
+ *     ellei se ylitä palakattoa), joten vertailukin lasketaan siitä —
+ *     vartio pysyy tiukkana, koska ratkaisevaa on OIKEA SIVU: teksti
+ *     luetaan avatun maalehden omasta DOMista, ei siitä irrallisesta
+ *     rungosta, johon puskuri sen johti.
  */
 const maalehti = await sivu.evaluate(async (iso) => {
   const lukija = await import('/js/lukija.js');
@@ -351,9 +398,14 @@ const maalehti = await sivu.evaluate(async (iso) => {
   const { ui } = window.matkakirja;
   ui.avaaMaalehti(iso);
   const kohdat = lukija.kokoaLuettavatKohdat(document.querySelector('#arrival-dialog .dialog-card'));
+  // Sama johto kuin soittimella: ensimmäinen ei-tyhjä rivi, ja siitä
+  // ensimmäinen pala.
+  const ekaRivi = kohdat.length
+    ? String(kohdat[0].teksti).split('\n').find((r) => r.trim())
+    : null;
   return {
     sivuja: kohdat.length,
-    eka: kohdat.length ? puhe.paloitteleVirkkeiksi(kohdat[0].teksti)[0] : null,
+    eka: ekaRivi ? puhe.kappaleenPalat(ekaRivi)[0]?.teksti ?? null : null,
   };
 }, odotetut.iso);
 vaadi('maalehden esihaku osui lehden oikean ensimmäisen sivun alkuun',
