@@ -245,20 +245,25 @@ const sofianKupla = await sivu.evaluate(async () => {
  * laudan synkin, joten kuplassa pitää näkyä KAKSI asiaa peräkkäin —
  * säikähdysavaus ja sen jälkeen aikasiirtymän välitys eli konkreettinen
  * historiakonteksti. Toinen ehto tarkistaa siksi, että kuplassa on
- * vuosiluku 1873 ja etäisyys nykyhetkeen ("sataviiskyt vuotta").
+ * vuosiluku 1873 ja etäisyys nykyhetkeen ("sataviisikymmentä vuotta").
  * Jos joku kirjoittaa kontekstin pois ja jättää pelkän säikähdyksen,
  * savuke kaatuu tähän.
  *
- * MUOTO ON PUHEKIELINEN (Raamattu v1265 "LIVIAN PUHEKIELI"): väite
- * kysyy Kääk-säikähdystä ja puhuttua 150 vuoden muotoa, ei enää vanhaa
- * kirjakielistä "sataviisikymmentä". Jos joku kirjoittaa kuplan
- * takaisin kirjakielelle, savuke kaatuu tähän.
+ * MUOTO ON PUHEKIELINEN, PAINO REUNOILLA (Raamattu v1270 "LIVIAN
+ * PUHEKIELI", sääntö 1): tämä kupla on omistajan hyväksymä
+ * malliesimerkki koko säännöstä, joten väite mittaa MOLEMMAT reunat
+ * ja keskikohdan kerralla. Alku on Livian omaa ääntä ("Kääk", "hurja
+ * juttu"), KESKELLÄ luku on auki kirjoitettuna ("sataviisikymmentä
+ * vuotta") ja LOPUSSA lyhentymä palaa ("Mut kyllä sen kestää lukea").
+ * Kirjakielelle palauttaminen kaataa lopun ehdon, ja lyhentymien
+ * valuttaminen takaisin keskelle (sataviiskyt) kaataa keskiehdon.
  */
 vaadi('Sofiassa isoisän maadoitus tulee Livian saapumiskuplaan',
   /^Kääk\./.test(sofianKupla.teksti)
     && /hurja juttu/.test(sofianKupla.teksti)
     && /1873/.test(sofianKupla.teksti)
-    && /sataviiskyt vuotta/.test(sofianKupla.teksti)
+    && /sataviisikymmentä vuotta/.test(sofianKupla.teksti)
+    && /Mut kyllä sen kestää lukea/.test(sofianKupla.teksti)
     && sofianKupla.yliviivaus === true && /Pulu/.test(sofianKupla.nimilappu),
   JSON.stringify(sofianKupla).slice(0, 200));
 

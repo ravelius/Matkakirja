@@ -240,11 +240,11 @@ export const FOKUSVIRTA_ROOMA = {
     maadoitus: '"Kumpi meistä on vanki." Kaunis kysymys, ja siihen on tylsä '
       + 'vastaus: ei kumpikaan. Isoisäsi käveli muurin alta pois heti kun '
       + 'sade yltyi. Ja muurin sisäpuolella oli puutarha, palvelusväkeä ja '
-      + 'posti, joka kulki portista niinku ennenkin — meikäläisillä on siit '
-      + 'muistiinpanoja, koska sitäkin postia kannettiin. Sellanen vankeus, '
-      + 'jonka voi itse valita ja jonka ohi kulkee kirjeposti, on kyl vähän '
-      + 'eri sana kun vankeus.',
-    teksti: 'Muurin sisällä pysyttiin viiskyt yheksän vuotta — vasta '
+      + 'posti, joka kulki portista niin kuin ennenkin — meikäläisillä on '
+      + 'siitä muistiinpanoja, koska sitäkin postia kannettiin. Sellanen '
+      + 'vankeus, jonka voi itse valita ja jonka ohi kulkee kirjeposti, on '
+      + 'kyl vähän eri sana kun vankeus.',
+    teksti: 'Muurin sisällä pysyttiin viisikymmentäyhdeksän vuotta — vasta '
       + '1929 paavi astui taas Rooman puolelle. Ikkunat on yhä ihan '
       + 'samat.',
     /*

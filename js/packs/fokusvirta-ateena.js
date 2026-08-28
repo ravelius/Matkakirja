@@ -152,13 +152,13 @@ export const FOKUSVIRTA_ATEENA = {
      */
     maadoitus: '"Molemmat puolet saattavat olla oikeassa yhtä aikaa." No, '
       + 'isoisälläsi oli tapana tehdä toriuutisesta elämänohje, ja yleensä '
-      + 'minä kutistan sellaisen takas sen torin kokoiseksi. Mut en tällä '
+      + 'minä kutistan sellaisen takaisin sen torin kokoiseksi. Mut en tällä '
       + 'kertaa. Hän osui, ja se harmittaa minua just sen verran kun '
       + 'kohtuullista on.',
     teksti: 'Isoisäsi ei koskaan saanut tietää, miten sen kullan kävi. '
       + 'Aitoa se oli — mut ei Priamoksen. Ja löytäjä rakensi palatsinsa '
-      + 'tonne kadun varteen; sen friisissä se kaivaa vieläkin. Katso ensin '
-      + 'tonne ylös.',
+      + 'tuonne kadun varteen; sen friisissä se kaivaa vieläkin. Katso '
+      + 'ensin tonne ylös.',
     kuva: {
       ampari: 'herokoe/hero-ateena-aamu.png',
       selite: 'Parthenon aamuvalossa. Temppeli rakennettiin Athena '

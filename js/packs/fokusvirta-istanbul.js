@@ -283,7 +283,7 @@ export const FOKUSVIRTA_ISTANBUL = {
      * väitettä ei esitetä, ja vartijan hinnankorotus on Livian oma
      * kuiva heitto, ei tieto.
      *
-     * PUHEKIELIPASSI (Raamattu v1265 "LIVIAN PUHEKIELI"): kupla oli
+     * PUHEKIELIPASSI (Raamattu v1270 "LIVIAN PUHEKIELI"): kupla oli
      * laudan pisin (76 sanaa muiden 45–62 rinnalla), ja puhuttuun muotoon
      * kirjoitettaessa se lyhennettiin samaan kokoluokkaan. Sivupolun
      * kaava säilyy: maadoitus, suvun puolustus, yksi lause takaisin
@@ -292,7 +292,7 @@ export const FOKUSVIRTA_ISTANBUL = {
      */
     maadoitus: 'Vartija sanoo ton jokaiselle, joka pysähtyy pylvään '
       + 'kohdalle ennen puoltapäivää. Ja mitä ottamiseen tulee — meidän '
-      + 'sukua on otettu ja pidetty kaksituhatta vuotta, eikä siit ole '
+      + 'sukua on otettu ja pidetty kaksituhatta vuotta, eikä siitä ole '
       + 'sepitetty yhtään aforismia. Isoäitini kantoi mikrofilmiä saarretun '
       + 'Pariisin yli. Setäni vei pörssikursseja Aachenista Brysseliin, ja '
       + 'hänet korvattiin kuparilangalla. Meidän puolesta ei kukaan '
@@ -300,7 +300,7 @@ export const FOKUSVIRTA_ISTANBUL = {
       + 'siin, mihin se aikanaan siirrettiin. Se oli tän pointti.',
     teksti: 'Pylväästä puuttuu kolme päätä, ja yks niistä makaa '
       + 'parinsadan metrin päässä museossa. Pylvään jalusta kaivettiin '
-      + 'esiin 1855. Paikalla minä en ollut, mut sukuni kanto siihen '
+      + 'esiin 1855. Paikalla minä en ollut, mut sukuni kantoi siihen '
       + 'aikaan uutisia Aachenista Brysseliin — uutisen kulusta minä siis '
       + 'tiedän jotain.',
     /*

@@ -203,11 +203,13 @@ const REAKTIO_VALIMUISTI = new Map();
  * pröystäilevä ja juuri nyt hieman nolo): ei huutomerkkejä, ei
  * anteeksipyytelyä, kuiva toteamus.
  *
- * PUHEKIELI JA LAVASTEOHJE (Raamattu v1265 "LIVIAN PUHEKIELI"): Livia
+ * PUHEKIELI JA LAVASTEOHJE (Raamattu v1270 "LIVIAN PUHEKIELI"): Livia
  * puhuu itse puhekieltä ja pronominit kokonaisina (minä, ei mä).
- * Ajatusviivan jälkeen tuleva osa ei ole Livian puhetta vaan huomio
- * hänestä — juuri se, mitä hän ei itse sanoisi ääneen, ja siinä nolous
- * asuu.
+ * Nämä ovat yhden tai kahden virkkeen repliikkejä, joten koko teksti
+ * on painopistesäännön mielessä "reunaa" — lyhentymä saa olla, mutta
+ * yksi riittää. Ajatusviivan jälkeen tuleva osa ei ole Livian puhetta
+ * vaan huomio hänestä — juuri se, mitä hän ei itse sanoisi ääneen, ja
+ * siinä nolous asuu.
  */
 const LIVIAN_KIITOKSET = [
   'Kiitos. Minä merkitsen tän ylös. — Livia katsoo hetken tosi tarkasti muualle.',
@@ -224,7 +226,7 @@ const LIVIAN_KIITOKSET = [
  * varma tapaus on tyhjä ilmoitus, josta ei voi korjata mitään, ja
  * siihen Livia vastaa kysymyksellä eikä väitteellä.
  */
-const LIVIAN_JATKOKYSYMYS = 'Livia kallistaa päätään: no mikä kohta siin '
+const LIVIAN_JATKOKYSYMYS = 'Livia kallistaa päätään: no mikä kohta siinä '
   + 'oli väärin? Yks rivi riittää — muuten minä en löydä sitä.';
 
 /* ------------------------------------------------------------------ *
