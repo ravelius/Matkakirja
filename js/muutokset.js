@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1243, teksti: 'Ihmenauha skaalautuu kuvan mukana' },
   { v: 1242, teksti: 'Raamattuun paivan linjaukset' },
   { v: 1241, teksti: 'Saksan fokuskartta ja karttakohteet' },
   { v: 1240, teksti: 'Kroatian fokuskartta ja karttakohteet' },

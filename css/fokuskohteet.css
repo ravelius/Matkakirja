@@ -372,6 +372,21 @@
    Kaista on paksu, ja teksti on juhlava antiikva ✦-koristein ("tähdet
    sopivat hyvin ihmeeseen") — irti kaistan päistä reilulla varalla.
 
+   NAUHA SKAALAUTUU KUVAN MUKANA (omistaja 28.8.2026 aamu, iPhone-
+   kaappaus: "pienemmällä ruudulla nauha pitää olla pienempi. Koon
+   voisi sitoa kuvan mittasuhteisiin — aivan kuin olisi poltettu
+   kuvaan kiinni"): pituus, korkeus ja kirjasinkoko ovat cqw-
+   yksiköitä, ja jokainen nauhaisäntä on `container-type: inline-size`
+   -mittasäiliö, jonka sisältölaatikko on käytännössä kuva. Nauha on
+   siis kiinteä OSUUS kuvan leveydestä — iPhonen 354 px:n kuvalla
+   sama osuus kuin iPadin 798 px:n kuvalla — eikä koskaan kiinteä
+   rem-mitta. Referenssi on iPadin ulkoasu: suurennos 294/798 px →
+   36,8 cqw (korkeus 4,8, teksti 1,56), kortti 219/334 px → 65,7 cqw
+   (korkeus 8,6, teksti 2,78). Tekstin täyttöaste ei muutu skaalassa,
+   koska teksti ja pituus skaalautuvat samalla kertoimella —
+   savuke-fokuskohteet vartioi tämän joka koossa. MARGINAALI pysyy
+   fyysisenä (rem): se on paperikehyksen pehmuste, ei kuvan osa.
+
    ---------------------------------------------------------------------------
    GEOMETRIA YHDESTÄ PISTEESTÄ. Sisäkääre on KUVAN vasemmassa
    yläkulmassa, ja kaista ja taitteet asemoidaan sen origosta.
@@ -525,9 +540,9 @@
    molempiin taitoksiin. MARGINAALI 0,4rem on napin
    paperipohjustus. */
 .fokuskohde-kuva {
-  --nauha-pituus: 13.7rem;
-  --nauha-korkeus: 1.8rem;
-  --nauha-teksti: 0.58rem;
+  --nauha-pituus: 65.7cqw;
+  --nauha-korkeus: 8.6cqw;
+  --nauha-teksti: 2.78cqw;
   --nauha-marginaali: 0.4rem;
   /* Kortin kuva on pyöristetty (.fokuskohde-kuva img border-radius),
      ja napin pehmustelaatikko sen kanssa samalla säteellä. */
@@ -665,6 +680,10 @@
 .fokuskohde-kuva-nauhalla > .fokuskohde-kuvanappi {
   padding: var(--nauha-marginaali);
   background: #f6f1e4;
+  /* Mittasäiliö: nauhan cqw-mitat lukevat tämän sisältölaatikon
+     leveyttä eli käytännössä kuvaa (ks. NAUHA SKAALAUTUU KUVAN
+     MUKANA lohkon alussa). */
+  container-type: inline-size;
 }
 
 /* Suurennoksen mitat isännälle, aivan kuten kortissa: korkeus
@@ -673,9 +692,9 @@
    ~1,5rem tyhjää molemmin puolin. MARGINAALI on kehyksen pehmuste (0,55rem) + kuvan 1px mustereunus:
    matka kehyksen pehmustelaatikon nurkasta kuvan pinnan nurkkaan. */
 .fokuskohde-zoomkehys {
-  --nauha-pituus: 18.4rem;
-  --nauha-korkeus: 2.4rem;
-  --nauha-teksti: 0.78rem;
+  --nauha-pituus: 36.8cqw;
+  --nauha-korkeus: 4.8cqw;
+  --nauha-teksti: 1.56cqw;
   --nauha-marginaali: calc(0.55rem + 1px);
   /* Suurennoksen kuvassa ei ole pyöristystä, vain 1px mustereunus. */
   --nauha-kaari: 0;
@@ -688,7 +707,11 @@
    asemointipohja — `position: relative` on lisättävä erikseen, koska
    FLIP-muunnos poistuu animaation jälkeen eikä sitä voi käyttää
    pohjana. */
-.fokuskohde-zoomkehys { position: relative; }
+.fokuskohde-zoomkehys {
+  position: relative;
+  /* Mittasäiliö nauhan cqw-mitoille (sisältölaatikko = kuva). */
+  container-type: inline-size;
+}
 
 
 /*
@@ -754,15 +777,17 @@
   position: relative;
   padding: var(--nauha-marginaali);
   background: #f6f1e4;
+  /* Mittasäiliö nauhan cqw-mitoille (sisältölaatikko = kuva). */
+  container-type: inline-size;
 }
 
 /* Jutun kuva on kortin kuvan kokoluokkaa, joten mitat ovat kortin
    ryhmä (.fokuskohde-kuva). Kaari on .nahtavyys-kuvan oma 4px. */
 .nahtavyys-kuvakehys.kuva-nauhalla,
 .karuselli-ikkuna.kuva-nauhalla {
-  --nauha-pituus: 13.7rem;
-  --nauha-korkeus: 1.8rem;
-  --nauha-teksti: 0.58rem;
+  --nauha-pituus: 65.7cqw;
+  --nauha-korkeus: 8.6cqw;
+  --nauha-teksti: 2.78cqw;
   --nauha-marginaali: 0.4rem;
   --nauha-kaari: 4px;
   --nauha-kaari-ulko: 4px;
@@ -773,9 +798,9 @@
    (width: fit-content), joten marginaali tulee pohjustuksesta eikä
    kehyksen pehmusteesta — kaari on 0, koska kuvaa ei pyöristetä. */
 .suurennos-kuvakotelo.kuva-nauhalla {
-  --nauha-pituus: 18.4rem;
-  --nauha-korkeus: 2.4rem;
-  --nauha-teksti: 0.78rem;
+  --nauha-pituus: 36.8cqw;
+  --nauha-korkeus: 4.8cqw;
+  --nauha-teksti: 1.56cqw;
   --nauha-marginaali: 0.5rem;
   --nauha-kaari: 0;
   --nauha-kaari-ulko: 0;
