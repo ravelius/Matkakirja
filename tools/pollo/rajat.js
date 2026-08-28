@@ -230,7 +230,14 @@ export function vertaaSalaisuus(annettu, oikea) {
  * TÄÄLLÄ PALVELIMELLA, jotta raaka merkintä ei voi missään tilanteessa
  * päätyä pelaajan ruudulle: peli saa erikseen vastauksen ja listan.
  */
-const JATKOT_MERKKI = /^\s*jatkot\s*:?\s*$/i;
+/*
+ * Hyväksyy myös mallin lipsahdukset "JATKO" ja "JATKO:" (omistajan
+ * kaappaus 28.8.2026: Livian vastauksen loppuun vuoti paljas rivi
+ * "JATKO" — kehote pyytää "JATKOT:", mutta malli taipui yksikköön
+ * eikä tiukka merkki osunut, jolloin rivi jäi pelaajan ruudulle).
+ * Pelkkä "jatko(t)" omana rivinään ei ole koskaan asiatekstiä.
+ */
+const JATKOT_MERKKI = /^\s*jatkot?\s*:?\s*$/i;
 
 /**
  * Erottaa vastauksesta jatkokysymykset.
