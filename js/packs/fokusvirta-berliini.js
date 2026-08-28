@@ -111,12 +111,20 @@ export const FOKUSVIRTA_BERLIINI = {
       + 'lyödään perustuksia ja puhutaan rahasta. Vanha kirjastonhoitaja '
       + 'luki minulle Nibelungein laulua ja sanoi: aarre on Reinissä, '
       + 'herra, mutta Rein ei kerro missä.',
-    /* Luenta on sama teksti tunnetagein; äänitettä ei ole vielä. */
+    /*
+     * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
+     * kentästä työnkulussa .github/workflows/generoi-luennat.yml
+     * (tools/generoi-luennat.mjs berliini), joka kirjoittaa täsmälleen
+     * alla nimetyn tiedoston. Nimi on kirjoitettu etukäteen: kenttä on
+     * kytkentä, ja ennen ajoa puuttuva mp3 jättää kaiuttimen vaiti
+     * kaatamatta mitään (js/luenta.js playDiaryVoice).
+     */
     luenta: '[curious] Berliini on nuoren keisarikunnan työmaa: joka '
       + 'kadulla lyödään perustuksia ja puhutaan rahasta. [softly] '
       + 'Vanha kirjastonhoitaja luki minulle Nibelungein laulua ja '
       + 'sanoi: [whispers] aarre on Reinissä, herra, mutta Rein ei '
       + 'kerro missä.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-berliini.mp3',
   },
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */

@@ -114,15 +114,19 @@ export const FOKUSVIRTA_WIEN = {
       + 'kaatui — näin rikkaita miehiä itkemässä kadulla, enkä unohda '
       + 'sitä koskaan.',
     /*
-     * Luenta on sama teksti tunnetagein. Äänitettä ei ole vielä
-     * generoitu, joten `aanite` puuttuu ja js/ui.js piilottaa
-     * kaiuttimen.
+     * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
+     * kentästä työnkulussa .github/workflows/generoi-luennat.yml
+     * (tools/generoi-luennat.mjs wien), joka kirjoittaa täsmälleen
+     * alla nimetyn tiedoston. Nimi on kirjoitettu etukäteen: kenttä on
+     * kytkentä, ja ennen ajoa puuttuva mp3 jättää kaiuttimen vaiti
+     * kaatamatta mitään (js/luenta.js playDiaryVoice).
      */
     luenta: '[curious] Wien on rakentanut maailmannäyttelyn ja sen ylle '
       + 'kupolin, jota sanotaan maailman suurimmaksi. Kävelin Rotunden '
       + 'alla hattu kädessä. [softly] Kahdeksan päivää avajaisten '
       + 'jälkeen pörssi kaatui — [whispers] näin rikkaita miehiä '
       + 'itkemässä kadulla, enkä unohda sitä koskaan.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-wien.mp3',
   },
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */

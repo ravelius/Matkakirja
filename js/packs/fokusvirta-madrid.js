@@ -125,15 +125,23 @@ export const FOKUSVIRTA_MADRID = {
       + 'kirkko arkiaamuna — seisoin Velázquezin edessä yksin, ja se '
       + 'oli matkani hiljaisin tunti.',
     /*
-     * Luenta on sama teksti tunnetagein — sanat eivät muutu. Äänitettä
-     * EI ole vielä generoitu (assets/audio/puhe-fokus-matkakirja-
-     * madrid.mp3 puuttuu), joten `aanite`-kenttä on jätetty pois:
-     * js/ui.js piilottaa kaiuttimen, kun äänitettä ei ole.
+     * Luenta on sama teksti tunnetagein — sanat eivät muutu. Äänite
+     * generoidaan tästä kentästä työnkulussa .github/workflows/
+     * generoi-luennat.yml (tools/generoi-luennat.mjs madrid), joka
+     * kirjoittaa täsmälleen alla nimetyn tiedoston.
+     *
+     * NIMI ON KIRJOITETTU ETUKÄTEEN (sama ratkaisu kuin Roomassa):
+     * kenttä on kytkentä eikä lupaus tiedoston olemassaolosta. Ennen
+     * generointiajoa mp3 puuttuu, jolloin kortin kaiutin näkyy mutta
+     * jää soimatta — js/luenta.js playDiaryVoice kokeilee ämpärin
+     * jälkeen repon polun ja vaikenee siististi (audion 'error' →
+     * varareitti → catch), eikä mikään muu hajoa.
      */
     luenta: '[curious] Madrid kiehuu: tasavalta on nuori ja kahvilat '
       + 'täynnä huutoa. Minä kuuntelin ja kirjoitin. [softly] Prado oli '
       + 'tyhjä kuin kirkko arkiaamuna — [whispers] seisoin Velázquezin '
       + 'edessä yksin, ja se oli matkani hiljaisin tunti.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-madrid.mp3',
   },
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */

@@ -12,8 +12,24 @@
 #                              (intro-puhe.mp3, puhe-lento-alku.mp3);
 #                              vaatii mpg123-decoder + lamejs
 #                              (hännän hiljaisuusmittaus + paddaus).
-#   tools/generoi-luennat.mjs  kaupunkien saapumisluennat
-#                              (puhe-<lauta>-saapuminen-<id>.mp3).
+#   tools/generoi-luennat.mjs  kaupunkien matkakirjaluennat.
+#
+# SYÖTE ON YHÄ PELKKIÄ KAUPUNKIAVAIMIA ("madrid wien"), mutta työkalu
+# valitsee lähteen itse — kaupungin ei siis tarvitse tietää, kummasta
+# pakasta sen merkintä tulee:
+#   FOKUSVIRTA (js/packs/fokusvirta-<id>.js) VOITTAA, jos kaupungilla
+#     on fokusvirta → assets/audio/puhe-fokus-matkakirja-<id>.mp3.
+#     Sama sääntö kuin pelissä: fokusvirtakaupungin matkakirjakortin
+#     omistaa virta, joten vanhan saapumisluennan generointi olisi
+#     rahaa tiedostoon, jota kukaan ei kuule.
+#   SAAPUMISET (js/packs/<lauta>-saapumiset.js) muille
+#     → assets/audio/puhe-<lauta>-saapuminen-<id>.mp3.
+#
+# MITÄ AJO TEKISI, ILMAN APIA: ELEVEN_KUIVA=1 node tools/
+# generoi-luennat.mjs madrid venetsia — tulostaa kaupungin, lähteen,
+# kohdetiedoston ja tekstin pituuden sekä huomauttaa, jos fokusvirran
+# `aanite`-kenttä ja työkalun kohdetiedosto eivät täsmää. Avainta ei
+# tarvita. Kannattaa ajaa ennen oikeaa ajoa, kun kaupunkilista on uusi.
 #
 # TUOTOS EI MENE SUORAAN MAINIIN. Ajo committoi uudet mp3:t omalle
 # haaralleen (claude/luennat-<ajonumero>) ja jättää ne PR:ää varten:
@@ -34,8 +50,9 @@ on:
     inputs:
       kaupungit:
         description: >-
-          Kaupunkien avaimet välilyönnein (esim. "venetsia edinburgh").
-          Tyhjä = ei kaupunkiluentoja.
+          Kaupunkien avaimet välilyönnein (esim. "madrid wien pariisi
+          berliini"). Fokusvirtakaupunki saa matkakirjaluennan, muut
+          saapumisluennan. Tyhjä = ei kaupunkiluentoja.
         required: false
         default: ''
       avaus:
