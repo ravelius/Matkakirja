@@ -239,7 +239,8 @@ const sofianKupla = await sivu.evaluate(async () => {
   return { teksti: '', nimilappu: '', yliviivaus: false };
 });
 vaadi('Sofiassa isoisän maadoitus tulee Livian saapumiskuplaan',
-  /^Isoisäsi kirjoittaa tämän kuin salaisuus/.test(sofianKupla.teksti)
+  /^Kääk\. Olipas hurja juttu/.test(sofianKupla.teksti)
+    && /Isoisäsi kirjoittaa tämän kuin salaisuus/.test(sofianKupla.teksti)
     && sofianKupla.yliviivaus === true && /Pulu/.test(sofianKupla.nimilappu),
   JSON.stringify(sofianKupla).slice(0, 200));
 

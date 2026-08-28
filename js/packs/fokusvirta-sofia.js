@@ -192,7 +192,16 @@ export const FOKUSVIRTA_SOFIA = {
      * teloitus, päivämäärä ja muistomerkki jäävät koskematta
      * (ne ovat seuraavassa kappaleessa ja täyissä).
      */
-    maadoitus: 'Isoisäsi kirjoittaa tämän kuin salaisuus olisi uskottu '
+    /*
+     * PEHMENNYS (omistaja 28.8.2026, kaappaus Sofian kuplasta):
+     * merkintä puhuu hirttämisestä, joten Livia saa ensin säikähtää
+     * pulumaisesti ennen asiaansa — "kääk, olipas tuo hurja juttu".
+     * Säikähdys pehmentää synkän aiheen 13+-yleisölle mitätöimättä
+     * sitä; sama keino muihin maadoituksiin vain jos merkintä on
+     * yhtä synkkä (muut neljä eivät ole).
+     */
+    maadoitus: 'Kääk. Olipas hurja juttu — luin sen kahdesti ja nukuin '
+      + 'huonosti. Isoisäsi kirjoittaa tämän kuin salaisuus olisi uskottu '
       + 'juuri hänelle. Meikäläisten muistiinpanojen mukaan kynttilöitä '
       + 'paloi sinä talvena useammalla ikkunalaudalla kuin yhdellä, eikä '
       + 'majatalon isäntä kuiskannut vieraalle mitään, mitä naapuri ei olisi '
