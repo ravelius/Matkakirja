@@ -450,17 +450,27 @@ const bundle = MODULES.map((file) => `// ===== ${file} =====\n${stripModuleSynta
   .join('\n\n');
 
 /*
- * Fokusmoodin annostelukortilla on oma tyylitiedostonsa (css/styles.css
- * on toisen työvaiheen hallussa, ks. js/fokusvirta.js). Selaimessa
- * moduuli lataa sen itse <link>-elementillä; yhden tiedoston versiossa
- * linkkiä ei ole eikä verkkoa oleteta, joten tyyli liitetään tähän
- * samaan <style>-lohkoon.
+ * Osa pinnoista lataa oman tyylitiedostonsa selaimessa itse
+ * <link>-elementillä, koska css/styles.css on toisen työvaiheen
+ * hallussa (ks. js/fokusvirta.js, js/fokusnosto.js, js/sahke.js).
+ * Yhden tiedoston versiossa linkkiä ei ole eikä verkkoa oleteta, joten
+ * nämä tyylit liitetään samaan <style>-lohkoon.
+ *
+ * Lista, ei käsin ketjutettuja +-lausekkeita: aiemmin ketjun keskelle
+ * jäi puolipiste, jolloin sen jälkeiset rivit muuttuivat kuolleeksi
+ * lausekkeeksi ja css/sahke.css jäi hiljaa pois nipusta.
  */
-const css = `${read('css/styles.css')}\n\n${read('css/fokusvirta.css')}`
-  + `\n\n${read('css/fokuskohteet.css')}\n\n${read('css/fokusnosto.css')}`;
-  + `\n\n${read('css/fokuskohteet.css')}`
-  // Sähkepinnan oma tyyli samasta syystä (js/sahke.js sahkeLataaTyyli).
-  + `\n\n${read('css/sahke.css')}`;
+const STYLES = [
+  'css/styles.css',
+  'css/fokusvirta.css',
+  'css/fokuskohteet.css',
+  'css/fokusnosto.css',
+  // Sähkepinta on osa peruspeliä (js/ui.js ja js/main.js tuovat
+  // js/sahke.js:n), eikä css/styles.css sisällä yhtään sahke-sääntöä.
+  'css/sahke.css',
+];
+
+const css = STYLES.map((file) => read(file)).join('\n\n');
 const indexHtml = read('index.html');
 
 const body = indexHtml
