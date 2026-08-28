@@ -34,6 +34,9 @@
  *  11. SOFIASSA isoisän maadoitus tulee Livian saapumiskuplaan heti
  *      matkakirjaluennan päätyttyä, nimilappuineen. Väite EI ole
  *      FOKUSVIRTA_KORTIT-kytkimen takana — se on kevyen kulun oma.
+ *  12. VENETSIASSA sama kupla kertoo kaupungin oman saapumisrepliikin:
+ *      fokusvirrattomassa kaupungissa puheenvuoro tulee tavallisen
+ *      saapumismerkinnän perästä (omistajan laajennus 28.8.2026).
  *
  * LIPPUTESTI (vanha virta palaa): palvelin kääntää lennossa molemmat
  * liput päinvastoin (FOKUSVIRTA_KORTIT = true, FOKUS_LEHTITEHTAVAT =
@@ -175,7 +178,7 @@ await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-saapuminen.png') });
  * (packs/fokusvirta-*.js, pollo.maadoitus) kirjoitettiin v1225:ssä
  * mutta piirtyivät vain fokusvirran kuplissa — kevyellä kululla niitä
  * ei nähnyt kukaan. Nyt ne tulevat kevyen kulun omaan
- * saapumiskuplaan (js/fokusvirta.js fokusvirtaMaadoituskupla).
+ * saapumiskuplaan (js/fokusvirta.js fokusvirtaSaapumiskupla).
  *
  * TÄMÄ VÄITE EI OLE KYTKIMEN TAKANA: se mitataan nimenomaan
  * kokeilutilassa (FOKUSVIRTA_KORTIT = false), jossa muu
@@ -189,7 +192,7 @@ const ateenanKupla = await sivu.evaluate(() => {
   const k = document.querySelector('.pollo-vihje');
   return {
     maadoitus: Boolean(k && !k.hidden && k.classList.contains('pollo-vihje-maadoitus')),
-    muisti: [...(window.matkakirja.ui.maadoitusNaytetty ?? [])],
+    muisti: [...(window.matkakirja.ui.saapumiskuplaNaytetty ?? [])],
   };
 });
 vaadi('Ateenassa ei maadoituskuplaa (aloituskaupungin ohjekuplat saavat tilan)',
@@ -241,6 +244,46 @@ vaadi('Sofiassa isoisän maadoitus tulee Livian saapumiskuplaan',
   JSON.stringify(sofianKupla).slice(0, 200));
 
 await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-maadoituskupla.png') });
+
+/*
+ * VÄITE 12 (omistajan laajennus 28.8.2026): sama saapumiskupla toimii
+ * myös kaupungissa, jolla EI ole fokusvirtaa — silloin siinä on
+ * Livian oma saapumisrepliikki (js/fokusvirta.js LIVIAN_SAAPUMISET).
+ * Venetsia on lähin sellainen, ja sen repliikki alkaa kaupungin
+ * nimellä. Kytkentäkohta on eri kuin Sofialla (js/ui.js renderFactin
+ * tavallinen saapumismerkintä), joten se on mitattava erikseen.
+ */
+const venetsianKupla = await sivu.evaluate(async () => {
+  const { ui, game } = window.matkakirja;
+  game.player.pos = { type: 'city', city: 'venetsia' };
+  game.world.visited.add('venetsia');
+  game.arrivalFact = { packId: game.pack.id, cityId: 'venetsia' };
+  ui.render();
+  // Sama luennan pysäytys kuin Sofiassa: kupla odottaa luennan loppua.
+  for (let i = 0; i < 40; i += 1) {
+    if (ui.diaryVoice && ui.diaryVoice.currentTime > 0.2) break;
+    await new Promise((r) => setTimeout(r, 250));
+  }
+  ui.diaryVoice?.pause();
+  for (let i = 0; i < 40; i += 1) {
+    const k = document.querySelector('.pollo-vihje');
+    if (k && !k.hidden && k.classList.contains('pollo-vihje-maadoitus')) {
+      return {
+        teksti: [...k.querySelectorAll('.pollo-vihje-lause')]
+          .map((p) => p.textContent).join(' '),
+        nimilappu: k.querySelector('.pollo-vihje-nimilappu')?.textContent ?? '',
+      };
+    }
+    await new Promise((r) => setTimeout(r, 500));
+  }
+  return { teksti: '', nimilappu: '' };
+});
+vaadi('Venetsiassa Livia kertoo kaupungin oman saapumisrepliikin',
+  /^Venetsia\./.test(venetsianKupla.teksti)
+    && /Pulu/.test(venetsianKupla.nimilappu),
+  JSON.stringify(venetsianKupla).slice(0, 200));
+
+await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-saapumisrepliikki.png') });
 
 // Puhtaalta pöydältä takaisin Ateenaan: loput väitteet mittaavat
 // aloituskaupunkia, eikä Sofian käynti saa jäädä niiden alle.

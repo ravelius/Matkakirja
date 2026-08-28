@@ -1794,14 +1794,17 @@ class Pollo {
   }
 
   /**
-   * ISOISÄN MAADOITUSKUPLA (omistajan päätös 27.8.2026).
+   * LIVIAN SAAPUMISKUPLA (omistajan päätös 27.8.2026, laajennus
+   * 28.8.2026).
    *
-   * Livia vastaa isoisän merkintään heti kun matkakirjaluenta on
-   * päättynyt: hän palauttaa merkinnän SÄVYN maan tasalle. Kevyessä
-   * kulussa (js/fokusvirta.js FOKUSVIRTA_KORTIT = false) tämä on
-   * kaupungin ainoa Livian saapumiskupla, joten kupla kantaa myös
-   * puhujansa nimen — muissa kuplissa nimeä ei tarvita, koska ne ovat
-   * lyhyitä ohjeita, tämä taas on puheenvuoro.
+   * Livia saa puheenvuoron heti kun matkakirjaluenta on päättynyt.
+   * Fokuskaupungissa hän palauttaa isoisän merkinnän SÄVYN maan
+   * tasalle (maadoitus); muualla hän juttelee kaupungista jotain omaa
+   * — kansallisherkun, sukutarinan tai sen, mikä on muuttunut vuoden
+   * 1873 jälkeen (js/fokusvirta.js LIVIAN_SAAPUMISET). Kummallakin
+   * sisällöllä tämä on kaupungin AINOA Livian saapumiskupla, joten
+   * kupla kantaa myös puhujansa nimen — muissa kuplissa nimeä ei
+   * tarvita, koska ne ovat lyhyitä ohjeita, tämä taas on puheenvuoro.
    *
    * SAMA KUPLAPERHE KUIN VIHJEELLÄ eikä uusi elementti: sama paperi,
    * sama kärki, sama paikannus (asetaVihjeenPaikka) ja ennen kaikkea
@@ -1812,10 +1815,10 @@ class Pollo {
    * Ylärivi on v1225:n yliviivattu nimilappu (ui-apurit.js
    * polloNimilappu): pöllö-sana vedettynä yli, "Pulu" perässä.
    *
-   * @param {string} teksti maadoituspuheenvuoro; tyhjä ei tee mitään.
+   * @param {string} teksti saapumispuheenvuoro; tyhjä ei tee mitään.
    * @returns {boolean} näkyikö kupla.
    */
-  naytaMaadoitus(teksti) {
+  naytaSaapumiskupla(teksti) {
     if (!teksti || this.auki || this.nappi.hidden) return false;
     this.vihjeAnkkuri = null;
     this.kiinnita();
@@ -1830,7 +1833,7 @@ class Pollo {
       kupla.appendChild(polloElementti('p', 'pollo-vihje-lause', kappale));
     }
     kupla.hidden = false;
-    // Maadoitus on oma puheenvuoronsa: mahdollinen parikupla kuului
+    // Saapumiskupla on oma puheenvuoronsa: mahdollinen parikupla kuului
     // edelliseen, ja kaksi eri puheenvuoroa yhtä aikaa olisi sekava.
     if (this.vihjeLisa) this.vihjeLisa.hidden = true;
     this.asetaVihjeenPaikka();
@@ -4181,14 +4184,14 @@ export function polloLisavihje(teksti) {
 }
 
 /**
- * Isoisän maadoitus Livian omana puheenvuorona saapumiskuplassa
- * (js/fokusvirta.js fokusvirtaMaadoituskupla). Nimilappuinen kupla,
- * ks. naytaMaadoitus.
+ * Livian saapumispuheenvuoro kuplassa (js/fokusvirta.js
+ * fokusvirtaSaapumiskupla): isoisän maadoitus tai kaupungin oma
+ * saapumisrepliikki. Nimilappuinen kupla, ks. naytaSaapumiskupla.
  *
  * @returns {boolean} näkyikö kupla.
  */
-export function polloMaadoitus(teksti) {
-  return Boolean(nykyinenPollo?.naytaMaadoitus(teksti));
+export function polloSaapumiskupla(teksti) {
+  return Boolean(nykyinenPollo?.naytaSaapumiskupla(teksti));
 }
 
 /** Vihjekupla pois. */
