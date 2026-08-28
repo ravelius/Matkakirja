@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1289, teksti: 'Aarteen loydyttya laatta vain vaihtaa varia' },
   { v: 1288, teksti: 'Takynostot nakyviin heti ilman tuiketta' },
   { v: 1287, teksti: 'Raamattuun promptien toimitusmuoto' },
   { v: 1286, teksti: 'Lehden juttusivun kysymysehdotukset ja odotusrivi' },

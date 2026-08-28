@@ -6437,23 +6437,29 @@ body.flight-active .fact-card {
  * ------------------------------------------------------------------ */
 
 /*
- * AVATTU LAATTA POIS AARREMERKIN ALTA (omistajan pelitestitilaus
- * 26.8.2026: *"jokaisessa avatussa laatassa näkyy vain suoraan se
- * aarre ... alkuperäinen laatta katoaa näkyvistä. Jäljelle ei jää
- * koskaan kahta irrallista laattaa vierekkäin."*).
+ * AVATTU LAATTA VAIHTAA VÄRIÄ (omistajan linjaus 28.8.2026 ilta,
+ * kuvakaappaus Sofiasta: *"Pitäisi olla vain nappi ja laatta"* — kumoaa
+ * 26.8.2026 aarremerkkilinjan).
  *
- * Aarremerkki piirtyy täsmälleen kaupungin laatan paikalle ja on sitä
- * PIENEMPI (js/ui.js drawTokens), joten laatan reuna jäisi näkyviin
- * renkaana merkin ympärille. Piilotus on luokka eikä suodatin (sama
- * iOS-sääntö kuin kartan muillakin kerroksilla) ja se koskee vain
- * laatan omia ellipsejä: nimi, porttikehä ja lentokentän merkki
- * kertovat kaupungista, eivät kääntämättömästä laatasta.
+ * ENNEN TÄSSÄ OLI PIILOTUS (.aarre-laatan-alla): kaupungin laatta
+ * katosi ja tilalle piirtyi aarremerkki, pergamenttikiekko ja
+ * kaiverrettu kuvake. Nappulan alla kiekon tumma kehä luki tyhjänä
+ * renkaana ja kuvake pilkotti sen takaa — juuri se pino, jonka
+ * omistaja näki.
+ *
+ * NYT: laatta on entisellään ja LÖYTÖ ON PELKKÄ SÄVY. Pergamentin
+ * (#f3e5c4) tilalle lämmin kullansävy, sama kieli kuin lähtökaupungin
+ * kullatulla laatalla (#eec66b) mutta astetta kypsempi pronssi, jotta
+ * löytö ei sekaannu lähtöpaikkaan. Kehä tummenee saman verran kuin
+ * muissakin kullatuissa merkeissä (#6d4d12).
+ *
+ * Väri on luokka eikä suodatin (sama iOS-sääntö kuin kartan muillakin
+ * kerroksilla) ja koskee vain laatan omaa ellipsiä: rantarengas,
+ * porttikehä ja lentokentän merkki kertovat kaupungista, eivät
+ * löydöstä.
  */
-.city.aarre-laatan-alla,
-.city-start.aarre-laatan-alla,
-.coast-soft.aarre-laatan-alla,
-.city-gate.aarre-laatan-alla,
-.airport.aarre-laatan-alla { display: none; }
+.city.aarre-loydetty { fill: #c98a37; stroke: #6d4d12; }
+.city-start.aarre-loydetty { fill: #c98a37; stroke: #6d4d12; }
 
 /*
  * LAATTA JÄÄ NAPPULAN ALLE NÄKYVIIN (omistajan tilaus 28.8.2026:
@@ -6846,8 +6852,10 @@ body.flight-active .fact-card {
   vector-effect: non-scaling-stroke;
   stroke-linejoin: round;
 }
-/* Tähti on nappulan oma merkki: koko seuraa hahmoa (20 -> 13 px, kun
-   siluetti madaltui 25,9:stä 18,1:een), muuten se olisi nappulaa isompi. */
+/* Nappulan oma ◈ poistui kartalta 28.8.2026 illalla (js/ui.js pawnShape:
+   kaupungin kohdalla on vain laatta ja nappula). Tyyli jää tähän, koska
+   merkin piirto voi palata: mitta on hahmon mukainen (20 -> 13 px, kun
+   siluetti madaltui 25,9:stä 18,1:een). */
 .pawn-star { fill: #b8860b; font-size: 13px; }
 
 /*

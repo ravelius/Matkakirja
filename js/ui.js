@@ -220,7 +220,6 @@ import {
   drawPaperPohja,
   drawParchment,
   drawTerrain,
-  drawTokenIcon,
   drawWaves,
   paperi,
   kasinPiirretty,
@@ -895,13 +894,10 @@ const FOKUS_LAATTA_OSUMA_PX = 48;
  */
 const FOKUS_LAATTA_SYKE_PX = 12;
 /*
- * AARREMERKIN SÄDE LAUDAN YKSIKÖINÄ (omistajan pelitestitilaus
- * 26.8.2026: käännetty laatta korvaa kaupungin laatan *"vain
- * pienempänä"*). Tavallisen kaupungin laatta on 11,6 yksikköä
- * (drawBoard, base) ja lähtökaupungin 20 — 9,4 on kummankin sisällä,
- * eikä laatan reuna siis jää merkin ympärille renkaaksi.
+ * AARREMERKIN SÄDE LAUDAN YKSIKÖINÄ oli täällä 26.8.2026 lähtien. Kartan
+ * aarremerkki poistui 28.8.2026 illalla (drawTokens: laatta vain vaihtaa
+ * väriä), joten mittaa ei enää tarvita.
  */
-const AARREMERKKI_R = 9.4;
 /*
  * FOKUSNÄKYMÄN NAPPULA JA AARREMERKKI RUUDUN PIKSELEINÄ (omistajan
  * pelitestitilaus 26.8.2026, iPhone-kuvakaappaus Kreikasta: *"Nämä
@@ -5801,9 +5797,8 @@ export class UI {
       const fokus = fokusMaare(c);
       /*
        * LAATAN OMA TUNNUS AINA MUKANA, myös laudan ulkopuolisille
-       * kaupungeille. Käännetyn laatan aarremerkki piirtyy nyt tähän
-       * samaan kohtaan ja laatta piilotetaan sen alta
-       * (piilotaAarreLaatat) — ja piilotus tarvitsee tiedon siitä,
+       * kaupungeille. Löydetyn kaupungin laatta vaihtaa väriä
+       * (merkitseAarreLaatat) — ja värjäys tarvitsee tiedon siitä,
        * kenen laatta tämä on. Maatunniste (data-fokus-maa, data-kx,
        * data-ky) jää fokusMaareen: se tulee laudan kaupunki–maa-
        * taulusta, jota kaikilla kaupungeilla ei ole.
@@ -6922,7 +6917,7 @@ export class UI {
      *
      * SÄÄNTÖ ON LUOKKA EIKÄ SUODATIN (sama iOS-sääntö kuin kartan
      * muillakin kerroksilla, tests/rules.test.mjs) ja sama keino kuin
-     * aarremerkin alle jäävällä laatalla (.aarre-laatan-alla).
+     * löydetyn kaupungin laatan värillä (.aarre-loydetty).
      *
      * NAPAUTUSALUE JÄÄ: laatta on fokusnäkymän Tutki-nappi
      * (fokusLaattaTutkii), ja sen näkymätön osuma-ympyrä piirretään
@@ -7822,105 +7817,61 @@ export class UI {
   }
 
   /**
-   * KÄÄNNETTY LAATTA = PIENI AARREMERKKI KAUPUNGIN LAATAN PAIKALLA.
+   * KÄÄNNETTY LAATTA VAIN VAIHTAA VÄRIÄ — EI OMAA MERKKIÄ.
    *
-   * Omistajan pelitestitilaus 26.8.2026 (iPhone, Ateena): *"aarteen
-   * löytämisen merkin voisi siirtää suoraan kaupungin laatan päälle,
-   * eli se korvaisi sen, mutta vain pienempänä. Eli jokaisessa avatussa
-   * laatassa näkyy vain suoraan se aarre. Mikä sieltä on löytynyt ja
-   * alkuperäinen laatta katoaa näkyvistä. Jäljelle ei jää koskaan
-   * kahta irrallista laattaa vierekkäin."*
+   * Omistajan linjaus 28.8.2026 ilta (kuvakaappaus Sofiasta: *"Miksi
+   * tämä on näin kummallisen näköinen? Ihan kuin olisi monta
+   * elementtiä päällekkäin. Pitäisi olla vain nappi ja laatta."*).
+   * Linjaus kumoaa 25.–26.8.2026 aarremerkkilinjan: löydön jälkeen
+   * kaupungin kohdalla on NORMAALI KAUPUNKILAATTA LÖYTÖVÄRISSÄ ja sen
+   * päällä pelinappula, eikä mitään muuta symbolia.
    *
-   * ENNEN: kiekko piirrettiin 22 yksikköä oikealle ja 18 alas laatan
-   * vierestä, jolloin kartalla oli kaksi pyöreää merkkiä vierekkäin —
-   * kaupungin laatta ja sen löytö. Fokusnäkymän zoomilla pari oli
-   * puolen ruudun kokoinen kaksoiskiekko.
+   * MIKÄ PINOSSA OLI (mitattu Playwrightilla samasta tilanteesta):
+   * kaupungin oma laatta piilotettiin (.aarre-laatan-alla) ja tilalle
+   * piirtyi tästä metodista aarremerkki — pergamenttikiekko
+   * (.token-disc, tumma 2,5 yksikön kehä) ja sen sisään laatan
+   * kuvake, mantereen aarteella kultainen tähti (.icon-star). Kun
+   * nappula seisoi kiekon päällä, kehä luki tyhjänä renkaana hahmon
+   * ympärillä ja tähti pilkotti sen takaa. Nyt kiekkoa ei piirretä.
    *
-   * NYT: merkki on kaupungin keskipisteessä ja LAATTA PIILOTETAAN sen
-   * alta (piilotaAarreLaatat). Merkki on tarkoituksella laattaa
-   * pienempi (AARREMERKKI_R vs. laudan 11,6 yksikköä): avattu paikka
-   * on kevyempi kuin avaamaton, eikä kartalle jää rengasta merkin
-   * ympärille.
+   * KERROS JÄÄ (tyhjänä): fokusnäkymän mitoitus ja lehden
+   * pallonpiilotus etsivät täältä .token-found -merkkejä, ja
+   * aarremerkin piirtokoodi (mapart.js drawTokenIcon) elää yhä
+   * paneeleissa ja matkalaukussa. Vain kartan käyttö poistui.
    *
    * KIRJANPITO EI MUUTU. Tämä on esitys: game.revealed ja game.tokens
    * ovat tismalleen ennallaan, ja laatan kääntö vie yhä samaan
    * paikkaan pelissä (tools/savuke-pollo.mjs).
    */
   drawTokens() {
-    const { game } = this;
     this.tokenLayer.textContent = '';
-    for (const [cityId, type] of game.revealed) {
-      const city = game.board.cityById.get(cityId);
-      // Toisen laudan löytö ei ole tällä kartalla: ilman kaupunkia ei
-      // ole paikkaa, johon merkki kuuluisi.
-      if (!city) continue;
-      const r = AARREMERKKI_R + hash01(`token:r:${cityId}`) * 0.8;
-      const kierto = vary(`token:${cityId}`, 8).toFixed(1);
-      const g = el('g', {
-        class: 'token-found',
-        transform: `translate(${city.x},${city.y}) rotate(${kierto})`,
-        // Fokuslehden pallonpiilotus lukee paikan ja kaupungin täältä
-        // (paivitaFokusPallot), fokusnäkymän mitoitus lisäksi säteen ja
-        // heilunnan (paivitaFokusMerkkiMitat); muuten merkki on laudan
-        // yksiköissä vain muunnoksen sisällä.
-        'data-kaupunki': cityId,
-        'data-x': city.x,
-        'data-y': city.y,
-        'data-r': r.toFixed(2),
-        'data-kierto': kierto,
-      }, this.tokenLayer);
-      el('circle', { r, class: 'token-disc' }, g);
-      /*
-       * KÄÄNNETTY LAATTA PUHUU KARTAN KAIVERRUSKIELTÄ (omistaja
-       * 26.8.2026 ilta, kuvakaappaus Ateenasta: "Miksi Ateenan laatta
-       * muuttuu aarteen löytymisen jälkeen tällaiseksi? Tämä pitää
-       * yhtenäistää myös" — kumoaa 10.8.2026 päätöksen näyttää
-       * aarrekuva kiekossa). Tarinalliset aarrekuvat on maalattu
-       * mustalle pohjalle, ja pieneen kiekkoon rajattuna niistä jäi
-       * musta täplä — 1873-kaiverrusten keskellä se näytti punaisen
-       * pelinappulan alla maalitaululta. Merkki on nyt aina samaa
-       * kieltä kuin muut karttamerkit: pergamenttikiekko ja
-       * kaiverrettu kuvake (drawTokenIcon — aarteille kätköarkku).
-       * Aarteen oma kuva elää siellä, missä se on suuri ja mustalla
-       * pohjallaan saumaton: paljastuksessa ja matkalaukussa.
-       */
-      const icon = drawTokenIcon(g, type);
-      // Piirrosikonit on mitoitettu vanhaan 16,4 yksikön kiekkoon.
-      icon.setAttribute('transform', `scale(${(0.88 * r / 16.4).toFixed(3)})`);
-    }
-    this.piilotaAarreLaatat();
+    this.merkitseAarreLaatat();
   }
 
   /**
-   * AVATUN KAUPUNGIN OMA LAATTA POIS AARREMERKIN ALTA.
+   * AVATUN KAUPUNGIN LAATTA LÖYTÖVÄRIIN.
    *
-   * Aarremerkki piirtyy laatan paikalle (drawTokens), joten laatasta
-   * jäisi näkyviin rengas merkin ympärille — juuri se, mitä omistaja
-   * ei halua nähdä (*"alkuperäinen laatta katoaa näkyvistä"*).
+   * Luokka `.aarre-loydetty` on ainoa ero löydetyn ja löytämättömän
+   * kaupungin välillä kartalla (css: lämmin kullansävy pergamentin
+   * tilalle). Laatta itse — koko, kehä, nimi, rantarengas, porttikehä
+   * — pysyy täsmälleen ennallaan: omistajan tilaus 28.8.2026 illalla
+   * oli *"laatta vain vaihtaa väriä, ei mitään muuta symbolia"*.
    *
-   * PIILOTUS ON TÄSSÄ EIKÄ PIIRROSSA, koska lauta piirretään vain kun
+   * MERKINTÄ ON TÄSSÄ EIKÄ PIIRROSSA, koska lauta piirretään vain kun
    * pakkaus vaihtuu (drawBoardFor) mutta laattoja käännetään kesken
    * pelin. Sama syy kuin muillakin kartan tilaluokilla.
    *
-   * MYÖS PORTTIKEHÄ JA LENTOKONEMERKKI (laajennus 27.8.2026,
-   * omistajan kaappaus Ateenasta: "Ateenan laatta muuttuu vieläkin
-   * liian isoksi ja vääräksi aarteen löytymisen jälkeen"). Ne jäivät
-   * ennen näkyviin, ja fokusnäkymän laattasuurennos
-   * (paivitaFokusLaatta) skaalasi porttikaupungin kaksoiskehän
-   * isoiksi renkaiksi nappulan ympärille — juuri se kahden
-   * irrallisen laatan vaikutelma, jonka piti kadota. Vain kaupungin
-   * NIMI jää: se kertoo paikasta, ei kääntämättömästä laatasta.
+   * VÄRI VAIN KAUPUNGIN OMAAN LAATTAAN (.city / .city-start).
+   * Rantarengas, porttikehä ja lentokonemerkki ovat kartan omaa
+   * kieltä eivätkä kerro löydöstä; ne jäävät ennalleen.
    */
-  piilotaAarreLaatat() {
+  merkitseAarreLaatat() {
     if (!this.svg) return;
     const auki = this.game?.revealed;
-    for (const osa of this.svg.querySelectorAll(
-      '.cities .city, .cities .city-start, .cities .coast-soft, '
-      + '.cities .city-gate, .cities .airport',
-    )) {
+    for (const osa of this.svg.querySelectorAll('.cities .city, .cities .city-start')) {
       // dataset.kaupunki puuttuu vain laudoilta, joita ei ole piirretty
       // tässä versiossa; Map.has(undefined) on silloin epätosi.
-      osa.classList.toggle('aarre-laatan-alla', Boolean(auki?.has(osa.dataset.kaupunki)));
+      osa.classList.toggle('aarre-loydetty', Boolean(auki?.has(osa.dataset.kaupunki)));
     }
   }
 
@@ -8351,15 +8302,15 @@ export class UI {
         transform: `translate(0,${NAPPULAN_JALKA_Y})`,
       }, hahmo);
     }
-    const lakiY = NAPPULA_TYYLI === 'tinaherra'
-      ? NAPPULAN_JALKA_Y - NAPPULAN_ANKKURI_Y * NAPPULAN_KORKEUS
-      : NAPPULAN_JALKA_Y - NAPPULAN_LAKI;
-    if (player.stars > 0) {
-      // Väli lakeen kutistui nappulan mukana (5 -> 3,4 -> 2,65): merkki
-      // kuuluu hahmolle, ja entinen väli jättäisi sen leijumaan irralleen.
-      const y = lakiY - 2.65;
-      el('text', { x: 0, y, class: 'pawn-star', 'text-anchor': 'middle' }, hahmo).textContent = '◈';
-    }
+    /*
+     * NAPPULAN PÄÄN YLLE EI TULE MERKKIÄ (omistajan linjaus 28.8.2026
+     * ilta, kuvakaappaus Sofiasta: kaupungin kohdalla on vain laatta ja
+     * nappula, *"ei mitään muuta symbolia"*). Tässä oli kannettujen
+     * unohdettujen aarteiden ◈ hahmon laen yläpuolella (lakiY − 2,65),
+     * ja se oli yksi kuvan päällekkäisistä kerroksista: kullattu
+     * vinoneliö leijumassa nappulan yllä. Sama tieto on matkalaukun
+     * Aarnin luettelossa (◈ löytyi -rivit), eikä se katoa pelistä.
+     */
     return g;
   }
 
