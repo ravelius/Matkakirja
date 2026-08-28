@@ -49,8 +49,14 @@ env:
   # https://ravelius.github.io/Matkakirja/ mutta Origin on
   # https://ravelius.github.io. Useampi arvo erotetaan pilkulla.
   POLLO_ORIGINIT: 'https://ravelius.github.io'
-  # Wranglerin suurversio lukittuna, jotta ajo ei muutu itsestään.
-  WRANGLER_VERSIO: 'wrangler@4'
+  # Wrangler TÄSMÄVERSIOON lukittuna (28.8.2026): pelkkä suurversio
+  # ei riittänyt — 27.8. alkaen jokainen ajo kaatui Cloudflaren
+  # virheeseen "Authentication error [code: 10000]" heti kv namespace
+  # list -kutsussa, vaikka repo, token ja tili olivat samat kuin
+  # 25.8. onnistuneessa ajossa (wrangler 4.125.0). Uusi tokenkaan ei
+  # auttanut, joten vika on wranglerin tuoreemmassa 4.x-julkaisussa.
+  # Versiota saa nostaa, kun uudempi todetaan käsiajolla toimivaksi.
+  WRANGLER_VERSIO: 'wrangler@4.125.0'
   # Ei käyttötilastoja eikä interaktiivisia kysymyksiä ajurilla.
   WRANGLER_SEND_METRICS: 'false'
   CI: 'true'
