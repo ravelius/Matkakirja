@@ -442,12 +442,13 @@ function nostoMaanPooli(ui, city) {
  *      pelaaja on ihminen ja laudalla on kevyt kulku käytössä);
  *   2. nosto on lukematon (laitteen muisti) ja ohittamaton (istunto).
  *
- * LUNASTETTU TÄKY EI PALAA KARTALLE: luetut karsitaan tästä yhdestä
- * listasta, ja juuri se tekee "yksi kerrallaan" -huomionvuorottelun —
- * kun ensimmäinen katoaa listasta, seuraava on listan uusi ensimmäinen.
- * Sama karsinta hoitaa myös sen, että ENNEN AARRETTA katsotut täyt eivät
- * ala tuikkia jälkikäteen: katsottu on katsottu, eikä listalla ole enää
- * mitään mille tuike voisi syttyä.
+ * LUNASTETTU TÄKY PYSYY KARTALLA (omistajan löydös 28.8.2026 ilta:
+ * Sofian katsottu areenatäky katosi kartalta eikä rikastettua korttia
+ * päässyt enää avaamaan — "aina näkyvissä" tarkoittaa myös luettuja).
+ * Luettuja EI siis karsita piirtolistasta: kortin saa auki uudelleen.
+ * Karsinta koskee vain istunnossa ohitettuja. Huomionvuorottelu ("yksi
+ * kerrallaan") ja "ennen aarretta katsotut eivät ala tuikkia" hoituvat
+ * nostoVuorossa-valinnassa, joka lukee laitteen luetut-muistin itse.
  */
 function nostoJaljella(ui) {
   if (typeof document === 'undefined') return [];
@@ -456,19 +457,19 @@ function nostoJaljella(ui) {
   if (!city || !fokusvirtaSisalto(ui, city)) return [];
   const pooli = nostoMaanPooli(ui, city);
   if (!pooli) return [];
-  const luetut = nostoLuetut();
   const ohitetut = ui.fokusnostoOhitetut ?? new Set();
-  return pooli.filter((n) => !luetut.has(n.id) && !ohitetut.has(n.id));
+  return pooli.filter((n) => !ohitetut.has(n.id));
 }
 
 /**
  * MIKÄ TÄKY TUIKKII JUURI NYT?
  *
  * POOLIN ENSIMMÄINEN KATSOMATON (omistajan tilaus 27.8.2026 ilta:
- * *"uusi piste tuikkii kun edellinen on katsottu"*). Katsotut on jo
- * karsittu listasta (nostoJaljella lukee saman laitteen muistin, johon
- * lunastus kirjaa), joten järjestys on poolin oma järjestys ja
- * seuraavan sytyttää yksin se, että edellinen on luettu.
+ * *"uusi piste tuikkii kun edellinen on katsottu"*). Piirtolista
+ * sisältää 28.8. illasta alkaen myös luetut (ne pysyvät kartalla ja
+ * aukeavat uudelleen), joten katsomattomuus tarkistetaan tässä:
+ * vuorossa on listan ensimmäinen, jota laitteen muisti ei tunne
+ * luetuksi. Kaikki luettu → ei vuorossa olevaa, ei tuiketta.
  *
  * ISTUNTOKIINTIÖ POISTUI KUPLAN MUKANA. Lippu `fokusnostoKuplaNahty`
  * salli istunnossa vain yhden täyn (omistajan tilaus v1119: *"Ruudulle
@@ -478,7 +479,8 @@ function nostoJaljella(ui) {
  * napautusta, joten kiintiölle ei ole enää perustetta.
  */
 function nostoVuorossa(ui, jaljella) {
-  return jaljella[0] ?? null;
+  const luetut = nostoLuetut();
+  return jaljella.find((n) => !luetut.has(n.id)) ?? null;
 }
 
 /**
@@ -666,8 +668,16 @@ export function paivitaFokusnosto(ui, yritys = 0) {
    * eikä liiku kartan mukana, joten vahtia ei tarvita — ja koska se
    * peittää kartan alalaidan, se väistää kaiken, mikä on pelaajalla
    * kesken (nostoRuutuVapaa) täsmälleen kuten ennen.
+   *
+   * Liuska on huomiokeino: kun kaikki on jo luettu, vuorossa olevaa ei
+   * ole (nosto on null) eikä liuskaa nosteta — luetut elävät vain
+   * kartan pisteinä.
    */
   nostoLopetaVahti(ui);
+  if (!nosto) {
+    nostoPintaPois(ui);
+    return;
+  }
   if (!nostoRuutuVapaa()) {
     nostoPintaPois(ui);
     ui.fokusnostoRuutuOliVarattu = true;
