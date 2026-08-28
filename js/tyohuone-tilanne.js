@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1298: Takynostojen portti auki: Madridin/Wienin/Pariisin/Berliinin 10 takypistetta nakyvat kartalla nimioineen ja kortteineen. Kokeile Madrid ja Pariisi (2 pistetta paallekkaisyyskorjattu).',
   'v1297: Kymmenen takynostoa: Madrid 3, Wien 2, Pariisi 2, Berliini 3 (mm. Altamira, Eiffel-huijaus, Kopenickin kapteeni, 2 kirahvia). Nakyvat kartalla portinavauksen jalkeen - katso silloin.',
   'v1296: Laitemittari: lisaa osoitteeseen ?mittari=1 -> lukulaatikko kartan kulmaan (kehysaika, tukokset, lavan koko). Ota kuvakaappaus tokkimishetkella. Pois: ?mittari=0.',
   'v1295: Paahahmo on nimeton Foggin perillinen: Reginald-nimi pois kaikkialta, avauskertomus sina-muodossa. Lue etusivu ja Venetsian/Edinburghin saapumiset.',

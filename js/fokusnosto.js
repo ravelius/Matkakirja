@@ -796,7 +796,7 @@ const NOSTO_MAAT = {
        * en-Wikipedian kaksi artikkelia antavat sille eri vuoden.
        */
       id: 'archaeopteryx',
-      nimio: 'Fossiili lehmän hinnalla',
+      nimio: 'Lehmän hinnalla',
       otsikko: 'Maanviljelijä myi maailman kuuluisimman fossiilin — hinta '
         + 'oli yksi lehmä',
       lunastus: [
