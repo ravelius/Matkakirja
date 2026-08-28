@@ -1056,6 +1056,13 @@ export const RAAMATTU = {
       otsikko: 'Karttalinssit',
       tila: 'luonnos',
       kohdat: [
+        'LINSSEJA EI TAUOTETA (omistajan kortti 28.8.2026): epailtiin '
+          + 'etta linssit pitavat vanhaa maailmankarttaa hengissa ja '
+          + 'kuluttavat resursseja. Mittaus (v1280-eran tutkinta) '
+          + 'osoitti ettei nain ole: vanhan laudan vektorikuva on '
+          + 'fokusnakymassa tyhja, joutilas nakyma hiljainen, eika '
+          + 'yksikaan linssi pida vanhaa karttaa elossa. Linssit '
+          + 'sailyvat pelissa sellaisinaan.',
         'LINSSIT KYTKETÄÄN VAIN MATKALAUKUSTA (omistaja '
           + '18.8.2026): hampurilaisvalikko on pelin ympäryksiä '
           + '(äänet, uusi peli, ehdota sisältöä, versio), ei '
@@ -1193,6 +1200,17 @@ export const RAAMATTU = {
           + 'JULKAISUPUTKESSA sisältötunnisteella (vaihe 2) — ei '
           + 'pelinaikaista generointia eikä pelinaikaista tallennusta; '
           + 'lennossa generoidaan vain jatkokysymykset.',
+        'LEHTIJUTTUJEN KYSYMYKSET RUNTIME-HAULLA (omistajan kortti + '
+          + 'tilaus 28.8.2026): kun juttu tai alijuttu on auki ja '
+          + 'chat avataan, Livia generoi ehdotuskysymykset LENNOSSA '
+          + 'jutun sisallosta (js/pollo.js haeEhdotukset; generoinnin '
+          + 'ajan pieni odotusanimaatio). Etukateiskuratointiin '
+          + 'siirrytaan vain jos runtime-laatu ei riita - paatos '
+          + 'tehdaan pelitestin, ei arvauksen pohjalta. '
+          + 'Takynostokorteilla on LISAKSI kasin kirjoitetut '
+          + '2-3 kysymysnappia (nostorikastus, kortti 28.8.2026). '
+          + 'Chatin AVAUSVALMISKYSYMYKSET (laatat, etusivut) sailyvat '
+          + 'omana pakettisisaltonaan entiseen tapaan.',
         'Ehdota sisältöä -nappi on myös pöllön chatissa (lehdillä '
           + 'hampurilaista ei näy) — sama lomake, sivukonteksti '
           + 'mukana.',
@@ -1389,6 +1407,17 @@ export const RAAMATTU = {
       otsikko: 'Kuvat ja lähteet',
       tila: 'luonnos',
       kohdat: [
+        'CHATGPT-IKKUNA ENSISIJAISEKSI KAIKESSA KUVAGENEROINNISSA '
+          + '(omistaja 28.8.2026: "Generoidaan kuvat mieluiten minun '
+          + 'chatgpt ikkunassa... Tulee paljon edullisemmaksi kuin '
+          + 'apilla" - KUMOAA alla olevan 26.8. API-vakioluvan '
+          + 'oletuksena): Fable antaa promptit NIPUSSA chatissa '
+          + '(tyylikaare + kohdelista + tiedostonimiehdotukset), '
+          + 'omistaja generoi ChatGPT:ssa ja vie kuvat Driven '
+          + 'matkakirja-kansioon, nouto nouda-drive.yml:lla ja Fable '
+          + 'silmatarkistaa ennen pelia. API-tyonkulut jaavat '
+          + 'VARAKANAVAKSI (kaytto vaatii syyn, esim. kiire tai '
+          + 'referenssikuvaohjaus).',
         'KUVAGENEROINNIN TYÖNJAKO (omistaja 26.8.2026 ilta: "Saat '
           + 'generoida aina kaiken muun apin kautta paitsi '
           + 'herokuvat" — laajentaa saman päivän pyydettäessä-'
