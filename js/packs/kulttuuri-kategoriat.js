@@ -92,7 +92,13 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero-lontoo-westminster.jpg',
+          /*
+           * KUVA VAIHDETTU 28.8.2026 (heroerä 31, Drive/hero-uudet):
+           * uusi kuva näyttää koko palatsin Thamesin yli, Big Benin ja
+           * Westminsterin sillan. Kohde ja kuvateksti ennallaan — sama
+           * kohde, uusi kuva voittaa.
+           */
+          ampari: 'herokoe/hero-lontoo-westminster-thames.jpg',
           selite: 'Westminsterin palatsi rakennettiin uudelleen vuoden '
             + '1834 palon jälkeen, ja sen kellotornin Big Ben on '
             + 'lyönyt tunteja vuodesta 1859.',
@@ -1279,7 +1285,13 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero-praha-charles-bridge.jpg',
+          /*
+           * KUVA VAIHDETTU 28.8.2026 (heroerä 31, Drive/hero-uudet):
+           * uudessa kuvassa näkyvät sillan koko kaarisarja patsaineen,
+           * vanhankaupungin siltatorni ja linna takana. Kohde ja
+           * kuvateksti ennallaan — sama kohde, uusi kuva voittaa.
+           */
+          ampari: 'herokoe/hero-praha-kaarlensilta-linna.jpg',
           selite: 'Kaarlensillan peruskivi laskettiin vuonna 1357 ja silta '
             + 'valmistui 1400-luvun alussa; se oli Vltavan ainoa kiinteä ylitys '
             + 'Prahassa aina 1840-luvulle asti.',
@@ -2032,7 +2044,13 @@ export const KULTTUURI_KATEGORIAT = {
        */
       avauskuvat: [
         {
-          ampari: 'herokoe/hero-wien-st-stephens.jpg',
+          /*
+           * KUVA VAIHDETTU 28.8.2026 (heroerä 31, Drive/hero-uudet):
+           * uudessa kuvassa koko kirjava tiilikatto ja etelätorni
+           * näkyvät kokonaan, ja edessä ajaa fiakkeri. Kohde ja
+           * kuvateksti ennallaan — sama kohde, uusi kuva voittaa.
+           */
+          ampari: 'herokoe/hero-wien-stephansdom-fiaker.jpg',
           selite: 'Stephansdomin etelätorni valmistui 1433 ja oli '
             + 'vuosisatoja Euroopan korkeimpia; kirkon kirjava '
             + 'tiilikatto on ladottu yli 230 000 laatasta.',
@@ -2499,6 +2517,22 @@ export const KULTTUURI_KATEGORIAT = {
        */
       avauskuvat: [
         /* GENEROIDUT HEROT, KIERROS 11 (23.8.2026, tools/hero-tyolista-6.mjs). */
+        {
+          /*
+           * HEROERÄ 31 (28.8.2026, Drive/hero-uudet): kattojen yli
+           * Almudenan katedraalille ja kuninkaanlinnalle. Linnasta on jo
+           * oma hero alla ja Commonsin kuvassa pari yhdessä, joten
+           * selite kertoo tässä katedraalista — uusi kohde karuselliin.
+           */
+          ampari: 'herokoe/hero-madrid-almudena.jpg',
+          selite: 'Almudenan katedraalin rakentaminen alkoi 1883 markiisi '
+            + 'Francisco de Cubasin suunnitelmilla ja valmistui vasta 1993; '
+            + 'paavi Johannes Paavali II vihki sen 15. kesäkuuta 1993 '
+            + 'ainoana Espanjan katedraalina, ja se on käännetty '
+            + 'poikkeuksellisesti pohjois–eteläsuuntaan kuninkaanlinnaa '
+            + 'vastapäätä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           ampari: 'herokoe/hero-madrid-aamu.png',
           selite: 'Madridin kuninkaanlinna valmistui 1755 tulipalossa '
@@ -4151,10 +4185,16 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Arild Vågen, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
-          tiedosto: 'Skeppsbrokajen Gamla Stan from Skeppsholmen Stockholm 2016 01.jpg',
+          /*
+           * KUVA VAIHDETTU 28.8.2026 (heroerä 31, Drive/hero-uudet):
+           * sama kohde eli vanhankaupungin rantajulkisivu vedeltä
+           * katsottuna, uusi generoitu hero Commonsin valokuvan tilalle.
+           * Kuvateksti ennallaan.
+           */
+          ampari: 'herokoe/hero-tukholma-gamlastan.jpg',
           selite: 'Tukholma on rakennettu neljälletoista saarelle siihen '
             + 'kohtaan, jossa makea Mälaren purkautuu suolaiseen Itämereen.',
-          lahde: 'Julian Herzog (Website), Wikimedia Commons (CC BY 4.0)',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
           tiedosto: 'Stockholm (15103231170).jpg',
@@ -4304,6 +4344,21 @@ export const KULTTUURI_KATEGORIAT = {
        * kohteen eikä vuorokaudenaikaa. Kaikki kolme katsottu silmin.
        */
       avauskuvat: [
+        {
+          /*
+           * HEROERÄ 31 (28.8.2026, Drive/hero-uudet): sinkkikattojen yli
+           * Invalidien kullatulle kupolille. Eiffel näkyy taustalla,
+           * mutta sillä on jo oma hero alla, joten selite kertoo
+           * Invalideista — uusi kohde Pariisin karuselliin.
+           */
+          ampari: 'herokoe/hero-pariisi-invalidit.jpg',
+          selite: 'Invalidien kirkon kullattu kupoli valmistui 1706 Jules '
+            + 'Hardouin-Mansartin suunnitelmien mukaan ja nousee 107 '
+            + 'metriin; Napoleonin arkku tuotiin sen alle 1840 ja hauta '
+            + 'valmistui 1861, ja kupoli kullattiin viimeksi 1989 lähes '
+            + 'kolmellatoista kilolla lehtikultaa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           ampari: 'herokoe/hero-pariisi-eiffel.jpg',
           selite: 'Eiffel-torni rakennettiin vuoden 1889 '
@@ -5296,6 +5351,21 @@ export const KULTTUURI_KATEGORIAT = {
        * todennettu Commonsin API:sta, kuvat katsottu silmin.
        */
       avauskuvat: [
+        /*
+         * HEROERÄ 31 (28.8.2026, Drive/hero-uudet): omistajan generoima
+         * kaupunkipanoraama, joka katsoo Akropolista kattojen yli.
+         * Parthenon-hero jää alle omana lähikuvanaan — selite kertoo
+         * tässä kalliosta ja muureista, ei temppelistä.
+         */
+        {
+          ampari: 'herokoe/hero-ateena-akropoliskallio.jpg',
+          selite: 'Akropoliin kalliotasanne kohoaa noin 150 metriin '
+            + 'merenpinnasta, ja sen kolmen hehtaarin laella on ollut '
+            + 'linnoitus jo pronssikaudella; nykyiset pohjois- ja '
+            + 'etelämuurit rakennettiin persialaissotien tuhojen jälkeen '
+            + '400-luvulla eaa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           ampari: 'herokoe/hero-ateena-aamu.png',
           selite: 'Parthenon rakennettiin Athena Parthenoksen temppeliksi '
@@ -5746,6 +5816,21 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         /* GENEROIDUT HEROT, KIERROS 12 (23.8.2026, tools/hero-tyolista-7.mjs). */
         {
+          /*
+           * HEROERÄ 31 (28.8.2026, Drive/hero-uudet): kanaalikehän
+           * perusnäkymä — tiilikaarisilta, kuistigaavelit ja pyörät.
+           * Ei nimettyä yksittäistä kohdetta, joten selite kertoo
+           * kanaalikehästä; yksikään vanha kuva ei jää alle.
+           */
+          ampari: 'herokoe/hero-amsterdam-kanaalikeha.jpg',
+          selite: 'Kanaalikehän kaivaminen alkoi 1613 kaupungin '
+            + 'suunniteltuna laajennuksena, ja 1600-luvun kehä pääsi '
+            + 'Unescon maailmanperintöluetteloon 2010; kanavia on noin 165 '
+            + 'ja niitä on yhteensä satakunta kilometriä, ja rantatalot '
+            + 'seisovat maahan lyötyjen puupaalujen varassa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
           ampari: 'herokoe/hero-amsterdam-aamu.png',
           selite: 'Westerkerkin torni valmistui 1638 ja on Amsterdamin '
             + 'korkein kirkontorni — sen huipulla kimaltaa keisari '
@@ -5994,6 +6079,20 @@ export const KULTTUURI_KATEGORIAT = {
          * pelin omia havainnekuvia peiliämpäristä, kolme
          * vuorokaudenaikaa ja kolme eri pääkohdetta.
          */
+        /*
+         * HEROERÄ 31 (28.8.2026, Drive/hero-uudet): Kultaisen sarven
+         * iltapanoraama Galatan puolelta. Galatan torni ja Süleymaniyen
+         * moskeija näkyvät kuvassa, mutta aihe on lahti itse, joten
+         * kummankaan omaa heroa tai kansikuvaa ei poistettu.
+         */
+        {
+          ampari: 'herokoe/hero-istanbul-kultainensarvi.jpg',
+          selite: 'Kultainen sarvi on noin seitsemän kilometrin pituinen '
+            + 'luonnonsatama, joka teki Konstantinopolista merivallan: sen '
+            + 'suu voitiin sulkea rannalta rannalle vedetyllä ketjulla, ja '
+            + 'niin tehtiin vielä vuoden 1453 piirityksessä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           ampari: 'herokoe/hero-istanbul-aamu.png',
           selite: 'Hagia Sofia oli valmistuessaan 537 maailman suurin '
@@ -6641,6 +6740,19 @@ export const KULTTUURI_KATEGORIAT = {
        */
       avauskuvat: [
         /* GENEROIDUT HEROT, KIERROS 16 (23.8.2026, tools/hero-tyolista-11.mjs). */
+        {
+          /*
+           * HEROERÄ 31 (28.8.2026, Drive/hero-uudet): Ha’penny Bridge on
+           * uusi kohde Dublinin karuselliin — Trinity, Pyhä Patrick ja
+           * tullitalo jäävät alle omina heroinaan.
+           */
+          ampari: 'herokoe/hero-dublin-hapenny.jpg',
+          selite: 'Ha’penny Bridge avattiin 1816 Liffeyn ensimmäisenä '
+            + 'jalankulkusiltana, sen valurautainen 43 metrin kaari '
+            + 'valettiin Coalbrookdalessa, ja nimensä silta sai puolen '
+            + 'pennyn tiemaksusta, jota perittiin vuoteen 1919.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           ampari: 'herokoe/hero-dublin-aamu.png',
           selite: 'Trinity Collegen kellotorni valmistui 1853 Charles '
@@ -7868,6 +7980,20 @@ export const KULTTUURI_KATEGORIAT = {
        */
       avauskuvat: [
         /* GENEROIDUT HEROT, KIERROS 15 (23.8.2026, tools/hero-tyolista-10.mjs). */
+        {
+          /*
+           * HEROERÄ 31 (28.8.2026, Drive/hero-uudet): Alfaman kattojen
+           * yli São Jorgen linnalle, ratikka etualalla. Uusi kohde —
+           * Belém, Jerónimos ja Kauppatori jäävät alle omina heroinaan.
+           */
+          ampari: 'herokoe/hero-lissabon-alfama.jpg',
+          selite: 'São Jorgen linna on seisonut Lissabonin korkeimmalla '
+            + 'kukkulalla maurien 1000-luvulta asti, Afonso Henriques '
+            + 'valtasi kaupungin 1147, ja linna oli kuninkaan asuntona '
+            + '1500-luvun alkuun saakka; sen juurella levittäytyy Alfama, '
+            + 'jonka kujia kiipeää raitiolinja 28.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           ampari: 'herokoe/hero-lissabon-aamu.png',
           selite: 'Belémin torni valmistui 1519 vartioimaan Tejon suuta: '
@@ -9113,7 +9239,13 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Matkakirjan havainnekuva',
         },
         {
-          ampari: 'herokoe/hero-budapest-chain-bridge.jpg',
+          /*
+           * KUVA VAIHDETTU 28.8.2026 (heroerä 31, Drive/hero-uudet):
+           * uusi sinihetken kuva näyttää sillan kivileijonan etualalla
+           * ja parlamenttitalon takana. Kohde ja kuvateksti ennallaan —
+           * sama kohde, uusi kuva voittaa.
+           */
+          ampari: 'herokoe/hero-budapest-lanchid.jpg',
           selite: 'Széchenyin ketjusilta valmistui 1849 ensimmäisenä '
             + 'pysyvänä siltana Tonavan yli Budan ja Pestin välillä — '
             + 'kivileijonat ovat vartioineet sen päitä vuodesta 1852.',
@@ -9644,6 +9776,20 @@ export const KULTTUURI_KATEGORIAT = {
          * pelin omia havainnekuvia peiliämpäristä, kolme
          * vuorokaudenaikaa ja kolme eri pääkohdetta.
          */
+        /*
+         * HEROERÄ 31 (28.8.2026, Drive/hero-uudet): näkymä antiikin
+         * keskustan yli Colosseumille. Colosseumista on jo oma
+         * lähikuvahero alla, joten selite kertoo etualan Forumista.
+         */
+        {
+          ampari: 'herokoe/hero-rooma-forum.jpg',
+          selite: 'Forum Romanum oli tasavallan ja keisariajan Rooman tori, '
+            + 'oikeuspaikka ja uskonnollinen keskus; keskiajalla se '
+            + 'hautautui maan alle ja tunnettiin nimellä Campo Vaccino eli '
+            + 'lehmäkenttä, ja järjestelmällinen kaivaminen alkoi vasta '
+            + '1803.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           ampari: 'herokoe/hero-rooma-aamu.png',
           selite: 'Colosseum valmistui vuonna 80, ja noin '
@@ -10442,6 +10588,21 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         /* GENEROIDUT HEROT, KIERROS 18 (23.8.2026, tools/hero-tyolista-13.mjs). */
         {
+          /*
+           * HEROERÄ 31 (28.8.2026, Drive/hero-uudet): vanhankaupungin
+           * tori merenneitoineen. Uusi kohde — kuninkaanlinna, Wilanów
+           * ja Saaripalatsi jäävät alle omina heroinaan.
+           */
+          ampari: 'herokoe/hero-varsova-vanhatori.jpg',
+          selite: 'Vanhankaupungin tori kaavoitettiin 1200-luvun lopulla, '
+            + 'saksalaiset polttivat sen 1944, ja se rakennettiin uudelleen '
+            + '1949–1953 muun muassa Bernardo Bellotton maalausten avulla; '
+            + 'keskellä seisova merenneito on kopio Konstanty Hegelin '
+            + 'vuoden 1855 veistoksesta, jonka alkuperäinen on '
+            + 'kaupunginmuseossa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
           ampari: 'herokoe/hero-varsova-aamu.png',
           selite: 'Varsovan kuninkaanlinna sai barokkiasunsa 1598–1619, se '
             + 'tuhoutui syyskuussa 1944 ja koottiin uudelleen 1971–1984 '
@@ -10609,7 +10770,13 @@ export const KULTTUURI_KATEGORIAT = {
          * tekoälymainintaa.
          */
         {
-          ampari: 'herokoe/hero7-tuomiokirkko.png',
+          /*
+           * KUVA VAIHDETTU 28.8.2026 (heroerä 31, Drive/hero-uudet):
+           * uudessa kuvassa Tuomiokirkko näkyy koko Senaatintorin yli
+           * portaineen, sivukupoleineen ja Aleksanteri II:n patsaineen.
+           * Kohde ja kuvateksti ennallaan — sama kohde, uusi voittaa.
+           */
+          ampari: 'herokoe/hero-helsinki-senaatintori.jpg',
           selite: 'Carl Ludvig Engelin piirtämä Tuomiokirkko valmistui '
             + '1852, ja siitä tuli merelle näkyvä Helsingin tunnus jo '
             + 'purjelaivojen aikana.',
@@ -11693,6 +11860,21 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         /* GENEROIDUT HEROT, KIERROS 19 (23.8.2026, tools/hero-tyolista-14.mjs). */
         {
+          /*
+           * HEROERÄ 31 (28.8.2026, Drive/hero-uudet): kaupunginmuurin
+           * tornit Toompealta katsottuna. Olevisten torni näkyy
+           * taustalla, mutta sillä on jo oma hero alla, joten selite
+           * kertoo muurista — uusi kohde karuselliin.
+           */
+          ampari: 'herokoe/hero-tallinna-kaupunginmuuri.jpg',
+          selite: 'Tallinnan kaupunginmuuria oli parhaimmillaan 2,4 '
+            + 'kilometriä ja siinä 46 tornia; nykyään muuria on jäljellä '
+            + 'noin 1,9 kilometriä ja torneista pystyssä 20, ja se on '
+            + 'Pohjois-Euroopan parhaiten säilyneitä keskiaikaisia '
+            + 'kaupunginmuureja.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
           ampari: 'herokoe/hero-tallinna-aamu.png',
           selite: 'Tallinnan Oleviste eli Pyhän Olavin kirkko mainitaan '
             + 'asiakirjoissa ensi kerran 1267, sen torni nousee nykyään 123,8 '
@@ -12083,6 +12265,21 @@ export const KULTTUURI_KATEGORIAT = {
        * katsottu silmin.
        */
       avauskuvat: [
+        {
+          /*
+           * HEROERÄ 31 (28.8.2026, Drive/hero-uudet): näkymä Pyhän
+           * Sofian kellotornilta Mihaelin luostarille ja Dneprille.
+           * Kellotorni on kuvan etualalla, mutta siitä kertoo jo
+           * alla oleva hero, joten selite kertoo Mihaelin luostarista —
+           * uusi kohde Kiovan karuselliin.
+           */
+          ampari: 'herokoe/hero-kiova-mihaelin-luostari.jpg',
+          selite: 'Pyhän Mihaelin kultakupolinen luostari rakennettiin ensi '
+            + 'kerran vuosina 1108–1113, neuvostovalta purki sen '
+            + '1930-luvulla, ja nykyinen kirkko rakennettiin uudelleen '
+            + '1997–1998 vanhojen mittausten ja piirustusten mukaan.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           ampari: 'herokoe/hero-kiova-aamu.jpg',
           selite: 'Pyhän Sofian katedraali on Kiovan Rusin ajan '
@@ -13260,6 +13457,38 @@ export const KULTTUURI_KATEGORIAT = {
        * jokainen kuva katsottu silmin.
        */
       avauskuvat: [
+        /*
+         * HEROERÄ 31 (28.8.2026, Drive/hero-uudet): Sofia oli ainoa
+         * Euroopan kaupunki ilman yhtäkään generoitua heroa, joten se
+         * sai erän kolme kuvaa kärkeen. Commonsin kolme valokuvaa
+         * jäävät perään — ne kertovat eri kohteista (Largo, näkymä
+         * Vitosalta) eikä yksikään uusi hero korvaa niitä.
+         */
+        {
+          ampari: 'herokoe/hero-sofia-nevski.jpg',
+          selite: 'Aleksanteri Nevskin katedraalin rakentaminen alkoi 1882 '
+            + 'Aleksandr Pomerantsevin suunnitelmien mukaan ja päättyi 1912; '
+            + 'se pystytettiin vuosien 1877–1878 sodassa kaatuneiden '
+            + 'muistoksi, ja sen kullattu kupoli nousee 45 metriin ja '
+            + 'kellotorni 53 metriin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-sofia-banya-bashi.jpg',
+          selite: 'Banja Bashin moskeija on rakennettu kuumien lähteiden '
+            + 'päälle ja sai nimensä viereisistä kylpylöistä; se on ainoa '
+            + 'Sofiassa yhä toimiva moskeija, ja sen leveä lyijykupoli '
+            + 'lepää tiilikuution päällä kolmiholvisen eteiskatoksen '
+            + 'takana.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          ampari: 'herokoe/hero-sofia-vitosa.jpg',
+          selite: 'Sofian raitiotie avattiin 1. tammikuuta 1901, ja suurin '
+            + 'osa verkosta kulkee poikkeuksellisella 1 009 millimetrin '
+            + 'raideleveydellä — kadun päässä kohoaa Vitosa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           tiedosto: 'Sofia (37139621884).jpg',
           selite: 'Sofia oli vielä 1878 pieni maakuntakaupunki, ja nykyään '
@@ -13646,6 +13875,19 @@ export const KULTTUURI_KATEGORIAT = {
        * ilman heroja. Korvasi 19.8. Commons-yleisnäkymät.
        */
       avauskuvat: [
+        /*
+         * HEROERÄ 31 (28.8.2026, Drive/hero-uudet): Parlamentin palatsi
+         * Unirii-bulevardin päässä. Uusi kohde — Arcul de Triumf,
+         * Stavropoleos ja CEC-palatsi jäävät alle omina heroinaan.
+         */
+        {
+          ampari: 'herokoe/hero-bukarest-parlamentti.jpg',
+          selite: 'Parlamentin palatsin rakentaminen alkoi 1984 Anca '
+            + 'Petrescun johdolla, siinä on noin 1 100 huonetta ja 365 000 '
+            + 'neliömetriä lattiaa, ja betoni-, teräs- ja marmorimassansa '
+            + 'takia sitä pidetään maailman painavimpana rakennuksena.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           ampari: 'herokoe/hero-bukarest-aamu.jpg',
           selite: 'Arcul de Triumf pystytettiin Kiseleff-bulevardille '
@@ -14049,6 +14291,20 @@ export const KULTTUURI_KATEGORIAT = {
        * pelattavista fokusvirroista viimeinen ilman heroja.
        */
       avauskuvat: [
+        /*
+         * HEROERÄ 31 (28.8.2026, Drive/hero-uudet): Baščaršija kattojen
+         * yli. Aihe on kortteli kokonaisuutena, ei sen yksittäinen
+         * rakennus, joten Gazi Husrev-begin moskeijan ja Sebiljin omat
+         * kuvat jäävät paikoilleen — selite kertoo korttelin koosta.
+         */
+        {
+          ampari: 'herokoe/hero-sarajevo-bascarsija.jpg',
+          selite: 'Baščaršija oli 1800-luvulla lähes kaksi kertaa nykyistä '
+            + 'laajempi, ja vuoden 1879 suurpalo vei siitä noin puolet; '
+            + 'kortteli rakentuu yhä pienistä yhden huoneen myymälöistä, '
+            + 'joista jokaisella on oma kattonsa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           ampari: 'herokoe/hero-sarajevo-aamu.jpg',
           selite: 'Gazi Husrev-begin moskeija valmistui 1531 Baščaršijan '
@@ -14424,6 +14680,20 @@ export const KULTTUURI_KATEGORIAT = {
        * -politiikkaa. Kaikki kolme katsottu silmin.
        */
       avauskuvat: [
+        {
+          /*
+           * HEROERÄ 31 (28.8.2026, Drive/hero-uudet): Potemkinin portaat
+           * ylhäältä satamaan. Uusi kohde — ooppera, Vorontsovin palatsi
+           * ja Dumska jäävät alle omina heroinaan.
+           */
+          ampari: 'herokoe/hero-odessa-potemkinin-portaat.jpg',
+          selite: 'Potemkinin portaat rakennettiin 1837–1841, ja niissä oli '
+            + 'alun perin 200 askelmaa; nykyään niitä on 192, koska alimmat '
+            + 'jäivät sataman laajennuksen alle. Portaat kapenevat ylöspäin '
+            + 'niin, että ylhäältä katsottuna näkyvät vain tasanteet ja '
+            + 'alhaalta vain askelmat.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           ampari: 'herokoe/hero-odessa-aamu.jpg',
           selite: 'Odessan ooppera- ja balettiteatterin nykyinen '
@@ -18937,7 +19207,13 @@ export const KULTTUURI_KATEGORIAT = {
        */
       avauskuvat: [
         {
-          ampari: 'herokoe/hero-islanti-aamu.jpg',
+          /*
+           * KUVA VAIHDETTU 28.8.2026 (heroerä 31, Drive/hero-uudet):
+           * uudessa kuvassa kirkon porrastettu basalttijulkisivu näkyy
+           * kokonaan Reykjavíkin peltikattojen yllä. Kohde ja kuvateksti
+           * ennallaan — sama kohde, uusi kuva voittaa.
+           */
+          ampari: 'herokoe/hero-islanti-hallgrimskirkja.jpg',
           selite: 'Reykjavíkin Hallgrímskirkja on 74,5 metriä korkea ja '
             + 'Islannin suurin kirkko; Guðjón Samúelssonin vuonna 1937 '
             + 'tilattu suunnitelma jäljittelee maan basalttipatsaita, ja '
@@ -20891,6 +21167,20 @@ export const KULTTUURI_KATEGORIAT = {
        */
       avauskuvat: [
         {
+          /*
+           * HEROERÄ 31 (28.8.2026, Drive/hero-uudet): koko muuriniemi
+           * ilmasta, Lokrum takana. Lovrijenac näkyy vasemmalla, mutta
+           * sillä on jo oma hero alla — selite kertoo muureista.
+           */
+          ampari: 'herokoe/hero-dubrovnik-kaupunginmuurit.jpg',
+          selite: 'Dubrovnikin kaupunginmuurit kiertävät vanhankaupungin '
+            + 'noin 1 940 metrin matkalta, ne nousevat paikoin 25 metriin '
+            + 'ja ovat maan puolella 4–6 metriä paksut; vanhakaupunki '
+            + 'pääsi Unescon maailmanperintöluetteloon 1979, ja edustalla '
+            + 'on Lokrumin saari.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
           ampari: 'herokoe/hero-dubrovnik-aamu.jpg',
           selite: 'Lovrijenacin linnake seisoo omalla kalliollaan 37 metriä '
             + 'merenpinnan yläpuolella kaupunginmuurin ulkopuolella, ja '
@@ -21296,6 +21586,20 @@ export const KULTTUURI_KATEGORIAT = {
        */
       avauskuvat: [
         /* GENEROIDUT HEROT, KIERROS 18 (23.8.2026, tools/hero-tyolista-13.mjs). */
+        {
+          /*
+           * HEROERÄ 31 (28.8.2026, Drive/hero-uudet): vanhankaupungin
+           * siluetti Daugavan yli. Mustapäiden talo, Pyhä Pietari ja
+           * tuomiokirkko näkyvät kaikki, mutta aihe on siluetti
+           * kokonaisuutena — vanhat herot jäävät alle omina lähikuvinaan.
+           */
+          ampari: 'herokoe/hero-riika-vanhakaupunki.jpg',
+          selite: 'Riian vanhankaupungin siluetin muodostavat kolme tornia: '
+            + '123-metrinen Pyhän Pietarin kirkko, vuonna 1211 perustettu '
+            + 'tuomiokirkko ja Pyhän Jaakobin katedraali. Vanhakaupunki '
+            + 'otettiin Unescon maailmanperintöluetteloon 1997.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
         {
           ampari: 'herokoe/hero-riika-aamu.png',
           selite: 'Mustapäiden talo pystytettiin 1334 kauppiaiden varastoksi '
@@ -21722,6 +22026,20 @@ export const KULTTUURI_KATEGORIAT = {
        */
       avauskuvat: [
         {
+          /*
+           * HEROERÄ 31 (28.8.2026, Drive/hero-uudet): Gediminaan torni
+           * kukkulallaan, alla suurruhtinaiden palatsi ja vanhakaupunki.
+           * Uusi kohde — tuomiokirkko, Aamunkoiton portti ja
+           * Antakalnisin kirkko jäävät alle omina heroinaan.
+           */
+          ampari: 'herokoe/hero-vilna-gediminas.jpg',
+          selite: 'Gediminaan torni on ainoa jäljellä oleva osa Vilnan '
+            + 'ylälinnasta, ja nykyinen tiilitorni on 1400-luvun '
+            + 'puolivälistä; sen salkoon nostettiin Liettuan trikolori ensi '
+            + 'kerran 1. tammikuuta 1919 ja uudelleen 7. lokakuuta 1988.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
           ampari: 'herokoe/hero-vilna-aamu.jpg',
           selite: 'Vilnan tuomiokirkko sai nykyisen uusklassisen asunsa '
             + 'Laurynas Gucevičiuksen suunnitelmien mukaan vuosina '
@@ -22133,6 +22451,19 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         /* GENEROIDUT HEROT, KIERROS 17 (23.8.2026, tools/hero-tyolista-12.mjs). */
         {
+          /*
+           * HEROERÄ 31 (28.8.2026, Drive/hero-uudet): oopperatalo
+           * vuonon rannalla, Akershus takana vasemmalla. Uusi kohde —
+           * Akershus, Holmenkollen ja kuninkaanlinna jäävät alle.
+           */
+          ampari: 'herokoe/hero-oslo-oopperatalo.jpg',
+          selite: 'Oslon oopperatalo avattiin 12. huhtikuuta 2008 Snøhettan '
+            + 'suunnittelemana: 38 500 neliömetrin talon vino katto on '
+            + 'päällystetty valkoisella marmorilla ja graniitilla, ja sitä '
+            + 'pitkin kuka tahansa voi kävellä vuonon rantaan.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
           ampari: 'herokoe/hero-oslo-aamu.png',
           selite: 'Akershusin linnoitus rakennettiin 1290-luvun lopulla '
             + 'kuningas Haakon V:n käskystä, se kesti kaikki piiritykset, ja '
@@ -22349,10 +22680,16 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: '. Ray in Manila, Flickr (CC BY 2.0)',
         },
         {
-          tiedosto: 'Panorama di Firenze centro visto dal Piazzale Michelangelo.jpg',
+          /*
+           * KUVA VAIHDETTU 28.8.2026 (heroerä 31, Drive/hero-uudet):
+           * täsmälleen sama näkymä eli panoraama Piazzale
+           * Michelangelolta, uusi generoitu hero Commonsin valokuvan
+           * tilalle. Kuvateksti ennallaan.
+           */
+          ampari: 'herokoe/hero-firenze-piazzale-michelangelo.jpg',
           selite: 'Piazzale Michelangelo rakennettiin vuonna 1869, kun Firenze '
             + 'oli Italian pääkaupunki ja kaupunkia uudistettiin laajasti.',
-          lahde: 'PROPOLI87, Wikimedia Commons (CC BY-SA 4.0)',
+          lahde: 'Matkakirjan havainnekuva',
         },
         {
           tiedosto: 'View from Giotto IMG 4586.JPG',
@@ -22932,10 +23269,16 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Panorama of Nyhavn (24047322088).jpg',
+          /*
+           * KUVA VAIHDETTU 28.8.2026 (heroerä 31, Drive/hero-uudet):
+           * sama kohde eli Nyhavn, uusi generoitu hero Commonsin
+           * valokuvan tilalle. Kuvateksti ennallaan; karuselliin ei
+           * jätetty kahta Nyhavnia.
+           */
+          ampari: 'herokoe/hero-kobenhavn-nyhavn.jpg',
           selite: 'Nyhavn kaivettiin 1670-luvulla kanavaksi, jotta laivat '
             + 'pääsisivät purkamaan lastinsa keskelle kaupunkia.',
-          lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
