@@ -7486,6 +7486,273 @@ body.flight-active .fact-card {
 
 .reveal-aarrekuva.shown { opacity: 1; transform: none; }
 
+/*
+ * FAKTA ON OPPIMISTEKSTI (omistajan leiskapäätös 28.8.2026): lyhyt
+ * tosi fakta aarteesta kortin alaosassa. Tummassa mallissa vaalea,
+ * vaaleissa malleissa musteen sävy (alempana).
+ */
+.reveal-caption .reveal-fakta {
+  font-style: italic;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  max-width: 27rem;
+  margin-top: 0.5rem;
+  color: #cbb992;
+}
+
+/* --- vaaleat paljastusmallit (leiskapäätökset 28.8.2026) ------------
+ *
+ * Yhteinen tausta molemmille: pelin näkymä kuultaa purppuraan
+ * taitettuna tummennoksen läpi (leiskan brightness/hue-rotate siirtyi
+ * backdrop-filteriin — overlayn takana on aito pelinäkymä, ei
+ * kuvakaappaus). Säteittäinen liukuväri painaa laidat pimeään.
+ */
+.reveal-overlay.paikallis,
+.reveal-overlay.diplomi {
+  background: radial-gradient(
+    ellipse 85% 70% at 50% 42%,
+    rgba(80, 46, 116, 0.3) 0%,
+    rgba(43, 22, 66, 0.6) 60%,
+    rgba(18, 9, 30, 0.88) 100%
+  );
+  -webkit-backdrop-filter: blur(3px) brightness(0.38) saturate(0.6) hue-rotate(-24deg);
+  backdrop-filter: blur(3px) brightness(0.38) saturate(0.6) hue-rotate(-24deg);
+}
+
+/*
+ * VINJETOINTIMALLI (paikallisaarteet): EI paperiarkkia eikä kehystä —
+ * kuvan oma pergamenttitausta jatkuu valokeilaksi, jonka reunat
+ * sulavat overlayn pimeään. Koko keila nousee esiin yhtenä kappaleena.
+ */
+.reveal-pergamentti {
+  padding: clamp(2rem, 6vmin, 4rem) clamp(2.4rem, 9vmin, 5.6rem)
+    clamp(1.6rem, 5vmin, 3.5rem);
+  text-align: center;
+  background: radial-gradient(
+    ellipse 78% 74% at 50% 42%,
+    #ecdfb8 0%, #e7d9ae 42%, #d0bc8e 60%,
+    rgba(120, 98, 80, 0.5) 78%,
+    rgba(23, 16, 32, 0) 97%
+  );
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.reveal-pergamentti.shown { opacity: 1; transform: none; }
+
+/* Kuvan omat reunat sulavat pergamenttiin: multiply-mood ja leveämpi
+ * maski korvaavat tumman mallin mustaan häivytyksen. */
+.reveal-overlay.paikallis .reveal-aarrekuva {
+  mix-blend-mode: multiply;
+  width: min(76vw, 22rem, 44vh);
+  -webkit-mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, #000 45%, rgba(0, 0, 0, 0.55) 68%, transparent 92%);
+  mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, #000 45%, rgba(0, 0, 0, 0.55) 68%, transparent 92%);
+}
+
+/* Tekstit musteella pergamenttia vasten — vaaleat overlay-värit
+ * kumotaan samalla tarkkuudella kuin ne asetettiin. */
+.reveal-overlay.paikallis .reveal-caption strong,
+.reveal-overlay.diplomi .reveal-caption strong { color: #2f2008; }
+
+.reveal-overlay.paikallis .reveal-caption span,
+.reveal-overlay.paikallis .reveal-caption .reveal-huudahdus,
+.reveal-overlay.diplomi .reveal-caption span,
+.reveal-overlay.diplomi .reveal-caption .reveal-huudahdus { color: #574430; }
+
+.reveal-overlay.paikallis .reveal-caption .reveal-isoisa,
+.reveal-overlay.paikallis .reveal-caption .reveal-fakta,
+.reveal-overlay.diplomi .reveal-caption .reveal-isoisa,
+.reveal-overlay.diplomi .reveal-caption .reveal-fakta { color: #443520; }
+
+/*
+ * AARNIN LUETTELON DIPLOMI (vain pääaarteet — kaanoni: luettelossa
+ * ovat vain ne). Paperiarkki kaiverruskehyksineen; kehyskuvan oma
+ * yläkartussi kantaa otsakkeen ja alanauha arvon, joten niiden
+ * paikat on sidottu kehyksen mittasuhteisiin (kuva 2:3).
+ */
+.reveal-plansi {
+  position: relative;
+  width: min(94vw, 30rem, 60vh);
+  aspect-ratio: 2 / 3;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  row-gap: 0.55rem;
+  /* Kehyskuvan kartussi (ylä ~13 %) ja nauha (ala ~10 %) jäävät
+   * padding-alueelle — leipäsisältö keskittyy niiden väliin. */
+  padding: 19% 13% 13%;
+  text-align: center;
+  color: #3a2d1c;
+  background: radial-gradient(ellipse 120% 90% at 50% 30%, #f4ecd8 0%, #ece0c4 55%, #decfae 100%);
+  border-radius: 3px;
+  transform: rotate(-0.4deg) scale(0.92);
+  box-shadow:
+    0 0 70px 10px rgba(210, 170, 240, 0.1),
+    0 24px 60px rgba(0, 0, 0, 0.65);
+  opacity: 0;
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.reveal-plansi.shown { opacity: 1; transform: rotate(-0.4deg); }
+
+/* Generoitu kaiverruskehys koko arkin päälle; multiply upottaa sen
+ * valkoisen pohjan paperiin. */
+.reveal-kehys {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* Otsake kehyksen yläkartussiin, arvo alanauhaan — prosentit
+ * seuraavat kehyskuvan piirrosta. */
+.reveal-otsake {
+  position: absolute;
+  top: 6.6%;
+  left: 30%;
+  right: 30%;
+  font-weight: 700;
+  font-size: clamp(0.5rem, 1.9vmin, 0.6rem);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.reveal-alaotsake {
+  position: absolute;
+  top: 13.2%;
+  left: 12%;
+  right: 12%;
+  font-family: var(--font-type);
+  font-size: clamp(0.58rem, 2.2vmin, 0.74rem);
+  letter-spacing: 0.18em;
+  color: #5d4b31;
+}
+
+.reveal-alanauha {
+  position: absolute;
+  bottom: 5.8%;
+  left: 30%;
+  right: 30%;
+  font-family: var(--font-type);
+  font-size: clamp(0.52rem, 2vmin, 0.62rem);
+  letter-spacing: 0.08em;
+  color: #4c3c25;
+}
+
+.reveal-jakoviiva {
+  position: absolute;
+  top: 16.6%;
+  left: 29%;
+  right: 29%;
+  margin: 0;
+  border: 0;
+  border-top: 1px solid rgba(58, 45, 28, 0.55);
+}
+
+/* Pääaarteen kuva on maalattu mustalle pohjalle, joten diplomilla se
+ * on kehystetty laatta — multiply tai maski tekisi siitä mustan
+ * läiskän paperilla. Vaihtuu upotukseen, kun vaaleapohjaiset
+ * pääaarrekuvat on generoitu. */
+.reveal-overlay.diplomi .reveal-aarrekuva {
+  width: min(62%, 34vh);
+  border-radius: 4px;
+  -webkit-mask-image: none;
+  mask-image: none;
+  /* Kermanvärinen paspis ja ohut musteviiva: mustapohjainen kuva
+   * istuu paperille kehystettynä laattana kuin kiinnitetty
+   * valokuvalevy. */
+  border: 0.45rem solid #f6efdd;
+  outline: 1px solid rgba(58, 45, 28, 0.45);
+  box-shadow: 0 6px 22px rgba(58, 45, 28, 0.4);
+}
+
+.reveal-overlay.diplomi .reveal-caption { gap: 0.35rem; }
+
+.reveal-overlay.diplomi .reveal-caption .reveal-fakta,
+.reveal-overlay.diplomi .reveal-caption .reveal-isoisa {
+  font-size: clamp(0.78rem, 2.6vmin, 0.95rem);
+  max-width: 100%;
+}
+
+/*
+ * LÖYDETTY-LEIMA: punainen kumileima päiväyksineen lyödään diplomiin
+ * vasta hetken luvun jälkeen (playTokenReveal). Epätasainen painauma
+ * on maskissa; lyönti tulee isosta pienempään pehmeällä rekyylillä.
+ */
+.reveal-leima {
+  position: absolute;
+  bottom: 13.5%;
+  right: 7%;
+  transform: rotate(-14deg);
+  color: #a02c22;
+  border: 3px solid #a02c22;
+  border-radius: 6px;
+  padding: 0.3rem 0.9rem 0.25rem;
+  font-family: var(--font-type);
+  font-weight: 700;
+  font-size: clamp(0.9rem, 3.4vmin, 1.3rem);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0;
+  -webkit-mask-image: radial-gradient(ellipse 130% 120% at 45% 50%, #000 62%, rgba(0, 0, 0, 0.7) 82%, rgba(0, 0, 0, 0.45) 100%);
+  mask-image: radial-gradient(ellipse 130% 120% at 45% 50%, #000 62%, rgba(0, 0, 0, 0.7) 82%, rgba(0, 0, 0, 0.45) 100%);
+}
+
+.reveal-leima small {
+  display: block;
+  font-size: 0.55em;
+  letter-spacing: 0.3em;
+  text-align: center;
+  margin-top: 1px;
+}
+
+.reveal-leima.lyoty { animation: leima-lyonti 0.4s ease-in forwards; }
+
+@keyframes leima-lyonti {
+  from { opacity: 0; transform: rotate(-14deg) scale(2.2); }
+  62% { opacity: 0.9; transform: rotate(-14deg) scale(0.94); }
+  to { opacity: 0.82; transform: rotate(-14deg) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-leima.lyoty { animation: none; opacity: 0.82; }
+}
+
+/*
+ * TUMMA → VAALEA SIIRTYMÄ (omistajan pohjapäätös 28.8.2026): leiman
+ * jälkeen overlay saa luokan .kirkas ja valokerros häivyttää
+ * purppurapimeyden vaaleaan pergamenttiin — sama lopputila kuin
+ * leiskassa aarreleiska-vaalea2.html. Kerros on scenen alla, joten
+ * diplomi ja nappi jäävät päälle.
+ */
+.reveal-valo {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 110% 80% at 50% 40%, #f3ead4 0%, #e9dcbc 55%, #d9c69c 100%);
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  pointer-events: none;
+}
+
+.reveal-overlay.kirkas .reveal-valo { opacity: 1; }
+
+/* Vaalealla lopputilalla plansin purppurahehku vaihtuu paperivarjoon
+ * ja Jatka matkaa -napin kultakajo pysyy luettavana. */
+.reveal-overlay.kirkas .reveal-plansi {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.6) inset,
+    0 18px 44px rgba(74, 55, 28, 0.35),
+    0 4px 12px rgba(74, 55, 28, 0.25);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out,
+    box-shadow 1.2s ease-in-out;
+}
+
+.reveal-scene { position: relative; }
+
 .reveal-caption strong {
   font-family: var(--font-type);
   font-size: clamp(1.4rem, 4.5vmin, 2rem);

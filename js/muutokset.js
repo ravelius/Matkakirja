@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1279, teksti: 'Aarrepaljastus: vinjetointi, fakta ja Aarnin diplomi' },
   { v: 1278, teksti: 'Kaikki 58 paikallisaarrekuvaa peliin' },
   { v: 1277, teksti: 'Nipistyszoomin skriptiaika alas 58 prosenttia' },
   { v: 1276, teksti: 'Aarreleiskat ja paatokset talteen tyoaineistoon' },

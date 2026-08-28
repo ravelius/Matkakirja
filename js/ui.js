@@ -12,7 +12,7 @@ import {
 } from './ai.js';
 import {
   DUEL_PRIZE, FLIGHT_PRICE,
-  HINT_PRICE, MANNERLENTO_NAPPI, MANNER_NIMET, RECORD_DAYS, SEA_FARE,
+  HINT_PRICE, MANNERLENTO_NAPPI, MANNER_NIMET, RECORD_DAYS, SEA_FARE, STAR_PRIZE,
 } from './game.js';
 import {
   factSource, factText, factVoice, isSourceUrl, PACKS, packById, sourceLabel, voiceTitle,
@@ -15007,13 +15007,32 @@ export class UI {
    * Pöllöä, jottei kahta erilaista aarreikkunaa pääse syntymään
    * uudestaan.
    *
+   * KOLME MALLIA, YKSI RUNKO (omistajan leiskapäätökset 28.8.2026,
+   * docs/mantereet-tyoaineisto/aarreleiskat/README.md):
+   *  - 'tumma' — entinen malli: kuva nousee mustasta (laudan omat
+   *    mustapohjaiset kuvat, ryöstäjä, pöllö).
+   *  - 'paikallis' — vinjetointimalli maan omille aarrekuville: kuvan
+   *    vaalea pergamenttitausta jatkuu valokeilaksi ja vinjetoituu
+   *    tummaan; taustalla pelin kartta purppuraan taitettuna. EI
+   *    paperiarkkia eikä kehystä.
+   *  - 'diplomi' — VAIN pääaarteille: Aarnin luettelon sivu
+   *    kaiverruskehyksineen, kartussissa otsake, alanauhassa arvo ja
+   *    punainen LÖYDETTY-leima. Aarnin luettelossa ovat kaanonin
+   *    mukaan vain pääaarteet, joten paikallisaarre ei koskaan saa
+   *    diplomia.
+   *
    * @param {string|null} kuva kuvan polku (assets/…) tai null
    * @param {string} alt kuvan tekstivastine
+   * @param {string} [malli] 'tumma' | 'paikallis' | 'diplomi'
+   * @param {{otsake?: string, alaotsake?: string, alanauha?: string,
+   *   leima?: string, leimaPvm?: string}} [lisat] diplomin tekstit
    * @returns {{overlay: HTMLElement, scene: HTMLElement, caption: HTMLElement,
-   *   kuvaEl: HTMLImageElement|null, jatka: HTMLElement}}
+   *   kuvaEl: HTMLImageElement|null, jatka: HTMLElement,
+   *   pohja: HTMLElement, leima: HTMLElement|null}}
    */
-  rakennaPaljastus(kuva, alt) {
-    const overlay = html('div', 'reveal-overlay');
+  rakennaPaljastus(kuva, alt, malli = 'tumma', lisat = {}) {
+    const overlay = html('div', malli === 'tumma'
+      ? 'reveal-overlay' : `reveal-overlay ${malli}`);
     const scene = html('div', 'reveal-scene');
     let kuvaEl = null;
     if (kuva) {
@@ -15024,10 +15043,53 @@ export class UI {
       // Puuttuva tiedosto (yhden tiedoston versio levyltä) ei saa
       // jättää rikkinäistä kuvaketta — kortti jatkaa tekstillä.
       asetaKuva(kuvaEl, osoite, vara, () => kuvaEl.remove());
-      scene.appendChild(kuvaEl);
     }
+    /*
+     * `pohja` on se pinta, jolle kuva ja tekstit ladotaan: tummassa
+     * mallissa suoraan scene, vaaleissa malleissa oma kerros, joka
+     * nousee esiin yhtenä kappaleena (pergamenttikeila tai diplomi).
+     */
+    let pohja = scene;
+    let leima = null;
+    if (malli === 'paikallis') {
+      pohja = html('div', 'reveal-pergamentti');
+      scene.appendChild(pohja);
+    } else if (malli === 'diplomi') {
+      /*
+       * Valokerros overlayn pohjalle: tumma siirtymä kirkastuu
+       * vaaleaan lopputilaan (omistajan kortti 28.8.2026 — pimennys
+       * ja leima tummassa, sitten pohja vaalenee), kun overlay saa
+       * luokan .kirkas.
+       */
+      overlay.appendChild(html('div', 'reveal-valo'));
+      pohja = html('div', 'reveal-plansi');
+      const kehys = document.createElement('img');
+      kehys.className = 'reveal-kehys';
+      kehys.alt = '';
+      // Kehys on koriste: jos tiedosto puuttuu, diplomi jatkaa ilman.
+      asetaKuva(kehys, 'assets/aarteet/aarnin-luettelo-kehys.jpg', null,
+        () => kehys.remove());
+      pohja.appendChild(kehys);
+      if (lisat.otsake) pohja.appendChild(html('div', 'reveal-otsake', lisat.otsake));
+      if (lisat.alaotsake) {
+        pohja.appendChild(html('div', 'reveal-alaotsake', lisat.alaotsake));
+      }
+      pohja.appendChild(html('hr', 'reveal-jakoviiva'));
+      scene.appendChild(pohja);
+    }
+    if (kuvaEl) pohja.appendChild(kuvaEl);
     const caption = html('div', 'reveal-caption');
-    scene.appendChild(caption);
+    pohja.appendChild(caption);
+    if (malli === 'diplomi') {
+      if (lisat.alanauha) {
+        pohja.appendChild(html('div', 'reveal-alanauha', lisat.alanauha));
+      }
+      if (lisat.leima) {
+        leima = html('div', 'reveal-leima', lisat.leima);
+        leima.appendChild(html('small', '', lisat.leimaPvm ?? ''));
+        pohja.appendChild(leima);
+      }
+    }
     overlay.appendChild(scene);
     /*
      * KULMAN RUKSIA EI ENÄÄ OLE (omistaja 26.8.2026 ilta: "Yläkulman
@@ -15049,7 +15111,7 @@ export class UI {
     jatka.type = 'button';
     scene.appendChild(jatka);
     return {
-      overlay, scene, caption, kuvaEl, jatka,
+      overlay, scene, caption, kuvaEl, jatka, pohja, leima,
     };
   }
 
@@ -15096,9 +15158,49 @@ export class UI {
      */
     if (AARRELAATAT.has(type)) natiiviTarise('juhla');
     const kuva = token.kuva ?? null;
+    /*
+     * ARVO ON LÖYTÖHETKEN OMA (Raamattu: *"Arvo vaihtelee
+     * löytöhetkellä"*). revealToken jätti sen viimeAarre-kenttään;
+     * ilman sitä kortti näyttäisi laattatyypin nollan, koska pienen ja
+     * ison paikallisaarteen arvoa ei lueta taulusta. Luetaan ennen
+     * kortin rakentamista, koska diplomin alanauha tarvitsee arvon.
+     */
+    const loyto = this.game.viimeAarre;
+    const arvo = loyto?.type === type ? loyto.arvo : token.value;
+    /*
+     * MALLIN VALINTA (omistajan leiskapäätökset 28.8.2026 +
+     * pohjapäätös kortilla: diplomiin tumma → vaalea siirtymä):
+     * pääaarre saa aina Aarnin luettelon diplomin; maan oma
+     * paikallisaarrekuva (vaalea pergamenttipohja) saa
+     * vinjetointimallin; kaikki muut — laudan mustapohjaiset kuvat,
+     * kirjoittamattomien mantereiden parit — jäävät tummaan malliin,
+     * koska vaalea malli olettaa kuvalta vaalean pohjan.
+     */
+    const malli = type === 'star' ? 'diplomi'
+      : (kuva?.startsWith('assets/aarteet/paikallis/') ? 'paikallis' : 'tumma');
+    let lisat = {};
+    if (malli === 'diplomi') {
+      const manner = this.game.quiz?.cityId
+        ? this.game.mannerOf(this.game.quiz.cityId) : null;
+      const mannerNimi = MANNER_NIMET[manner]?.nimi;
+      // Leiman päiväys ladotaan 1873-asiakirjan tapaan: päivä ja
+      // kuukausi roomalaisin numeroin ("28 · VIII").
+      const nyt = new Date();
+      const KUUT = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'];
+      lisat = {
+        otsake: 'Aarnin luettelo',
+        alaotsake: mannerNimi
+          ? `${mannerNimi.toUpperCase()} · UNOHDETTU AARRE` : 'UNOHDETTU AARRE',
+        // Pääaarteen arvo on kiinteä eikä revealToken arvo sitä
+        // (arvoAarteenArvo antaa tähdelle laattataulun nollan).
+        alanauha: `Arvo ${STAR_PRIZE} puntaa`,
+        leima: 'Löydetty',
+        leimaPvm: `${nyt.getDate()} · ${KUUT[nyt.getMonth()]}`,
+      };
+    }
     const {
-      overlay, caption, kuvaEl, jatka,
-    } = this.rakennaPaljastus(kuva, token.name);
+      overlay, caption, kuvaEl, jatka, pohja, leima,
+    } = this.rakennaPaljastus(kuva, token.name, malli, lisat);
 
     // Nuoren herran huudahdus ensin — se kuuluu juuri siihen hetkeen,
     // kun aarre tulee näkyviin; cliffhanger-teksti vasta sen jälkeen.
@@ -15109,15 +15211,15 @@ export class UI {
       caption.appendChild(html('span', 'reveal-huudahdus', huudahdus.teksti));
     }
     caption.appendChild(html('strong', '', token.name));
-    /*
-     * ARVO ON LÖYTÖHETKEN OMA (Raamattu: *"Arvo vaihtelee
-     * löytöhetkellä"*). revealToken jätti sen viimeAarre-kenttään;
-     * ilman sitä kortti näyttäisi laattatyypin nollan, koska pienen ja
-     * ison paikallisaarteen arvoa ei lueta taulusta.
-     */
-    const loyto = this.game.viimeAarre;
-    const arvo = loyto?.type === type ? loyto.arvo : token.value;
     caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+${arvo} puntaa`));
+    /*
+     * FAKTA ON OPPIMISTEKSTI (Raamattu: *"Löytöteksti: lyhyt tosi
+     * fakta aarteesta"*; omistajan leiskapäätös 28.8.2026 nosti sen
+     * löytökortille). Kenttä tulee maan omalta pariteilta
+     * (js/packs/paikallisaarteet.js) tai laudan laattatyypiltä; ilman
+     * kenttää rivi jää pois eikä kortti muutu.
+     */
+    if (token.fakta) caption.appendChild(html('p', 'reveal-fakta', token.fakta));
     /*
      * Tarinakaaren aarreteksti paljastuksen alle: kätkön löytyessä
      * kaaren henkilö sulkee kohtaamisen ja jättää auki jäävän vihjeen
@@ -15157,20 +15259,41 @@ export class UI {
      * korttia. `odota` jää kuvan nousun rytmiin.
      */
     if (this.reducedMotion) {
+      pohja.classList.add('shown');
       kuvaEl?.classList.add('shown');
       caption.classList.add('shown');
+      leima?.classList.add('lyoty');
+      overlay.classList.add('kirkas');
       sfx.play(treasureSound(type));
       if (hihkaisu) this.soitaHihkaisu(hihkaisu);
       await odota(900);
       await this.odotaPaljastuksenSulku(overlay, jatka);
     } else {
-      // Kuva nousee mustasta: hidas häivytys ja kasvu, ei kääntöä.
+      // Kuva nousee pimeästä: hidas häivytys ja kasvu, ei kääntöä.
+      // Vaaleissa malleissa koko pohja (pergamenttikeila tai diplomi)
+      // nousee yhtenä kappaleena kuvan mukana.
       await this.wait(420);
+      pohja.classList.add('shown');
       kuvaEl?.classList.add('shown');
       sfx.play(treasureSound(type));
       if (hihkaisu) this.soitaHihkaisu(hihkaisu);
       await this.wait(760);
       caption.classList.add('shown');
+      if (leima) {
+        /*
+         * LEIMAN LYÖNTI JA KIRKASTUMINEN (omistajan pohjapäätös
+         * 28.8.2026): diplomi luetaan hetki tummassa valokeilassa,
+         * LÖYDETTY-leima lyödään siihen, ja vasta leiman jälkeen
+         * pohja kirkastuu vaaleaan lopputilaan. Napautus ohittaa
+         * odotukset muttei animaatioita — kortti jää silloin heti
+         * valmiiseen vaaleaan tilaan.
+         */
+        await odota(700);
+        leima.classList.add('lyoty');
+        natiiviTarise('juhla');
+        await odota(650);
+        overlay.classList.add('kirkas');
+      }
       await this.odotaPaljastuksenSulku(overlay, jatka);
       overlay.classList.add('leaving');
       await this.wait(300);

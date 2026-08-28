@@ -7,7 +7,7 @@
  */
 
 export const RAAMATTU = {
-  paivitetty: '25.8.2026',
+  paivitetty: '28.8.2026',
   johdanto: 'Koko pelin idea yhdessä dokumentissa — tämän lukeminen '
     + 'riittää pelin kehittämiseen. Käydään läpi omistajan kanssa osio '
     + 'kerrallaan; valmis Raamattu laukaisee kaikkien '
@@ -1021,9 +1021,23 @@ export const RAAMATTU = {
           + 'Polubotok) merkitaan faktateksteissa rehellisesti '
           + 'taruiksi. LISTA ASUU paikallisaarteet.js:ssa - se on '
           + 'totuuden lahde, ei tama osio. Muut mantereet viela '
-          + 'valiaikaisilla laudan pareilla. AVOINNA: maakuvien '
-          + 'generointi (vaalea plansilinja) ja fakta-kentan nosto '
-          + 'loytokortille.',
+          + 'valiaikaisilla laudan pareilla.',
+        'AARREPALJASTUKSEN KOLME MALLIA (leiskapaatokset 28.8.2026, '
+          + 'toteutettu peliin samana paivana; leiskat docs/mantereet-'
+          + 'tyoaineisto/aarreleiskat/): paikallisaarre maan omalla '
+          + 'vaalealla kuvalla saa VINJETOINTIMALLIN (ei paperiarkkia '
+          + 'eika kehysta - kuvan pergamentti jatkuu valokeilaksi, '
+          + 'taustalla pelin kartta purppuraan taitettuna) ja FAKTA '
+          + 'nakyy oppimistekstina kortilla; PAAAARRE saa AARNIN '
+          + 'LUETTELON DIPLOMIN (kaiverruskehys, kartussiotsake, '
+          + 'alanauhan arvo, punainen LOYDETTY-leima paivayksella) - '
+          + 'kaanoni: luettelossa ovat VAIN paaaarteet; muut kuvat '
+          + '(laudan mustapohjaiset) jaavat tummaan malliin. '
+          + 'POHJAPAATOS (omistajan kortti 28.8.2026): diplomissa '
+          + 'TUMMA -> VAALEA siirtyma - leima lyodaan tummassa '
+          + 'valokeilassa ja pohja kirkastuu vasta sitten vaaleaan '
+          + 'lopputilaan. AVOINNA: vaaleapohjaiset paaaarrekuvat '
+          + '(7+2) ja Livian jalkikommentit paljastukselle.',
         'Löytöteksti: lyhyt tosi fakta aarteesta + onnentoivotus '
           + '(fakta-kenttä valmiina; kortille kun parit tulevat).',
         'Huudahdukset: pääaarteen luetut säilyvät; muut ovat '
