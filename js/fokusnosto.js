@@ -154,7 +154,7 @@ import { sfx } from './sound.js';
 /*
  * KREIKAN TÄKYNOSTOT (omistajan valinta 25.8.2026).
  *
- * KOLME NOSTOA, EI YKSI (omistajan pelitestipalaute v1234: *"sitten kun
+ * NELJÄ NOSTOA, EI YKSI (omistajan pelitestipalaute v1234: *"sitten kun
  * sen kävi lukemassa, ei ilmestynyt enää uutta vilkkuvaa pistettä"*).
  *
  * Poolissa oli 26.8.2026 alkaen tasan YKSI nosto, koska silloin täky oli
@@ -175,12 +175,18 @@ import { sfx } from './sound.js';
  * kortin nappi vie kohteen omaan tietoruutuun — täky *"houkuttelee
  * kohteen auki"* kuten alkuperäisessä tilauksessa.
  *
- * KUVAA EI OLE KAHDELLA UUDELLA. Aineisto ehdottaa niille Commons-
- * tiedostoja, mutta niiden lisenssi- ja tekijätiedot on tarkistettava
- * Commonsin rajapinnasta ennen käyttöä (omistajan sääntö: ei arvattuja
- * tiedostonimiä). Kuvaton nosto on korttina täysin ehjä — otsikko ja
- * lunastus kantavat sen — ja kuvan voi lisätä myöhemmin yhdellä
- * kentällä.
+ * NELJÄS NOSTO on Antikytheran kone (päätoimittajan kaanonteksti
+ * 28.8.2026): sama kaava kuin kahdella edellisellä — oma `kohde`, oma
+ * loistoaikakuva ja nykytilan valokuva kakkosena. Poolissa on siis
+ * Ateena, Delfoi, Olympos ja Antikythera, neljä eri kolkkaa laudasta,
+ * eikä kaksi pistettä osu samaan paikkaan.
+ *
+ * KUVAT OVAT NYT KAIKILLA. Kolme viimeistä saivat pääkuvakseen repon
+ * oman generoidun loistoaikakuvan (assets/kartat/nostot/), ja
+ * kaikkien Commons-kuvien lisenssi- ja tekijätiedot on kysytty
+ * imageinfo-rajapinnalta ennen käyttöä (omistajan sääntö: ei arvattuja
+ * tiedostonimiä). Kuvaton nosto olisi korttina yhä täysin ehjä —
+ * otsikko ja lunastus kantavat sen.
  *
  * Lunastus on aineiston omaa, lähteestä tarkistettua tekstiä
  * (docs/mantereet-tyoaineisto/takynostot-kreikka.md, ehdokas 2) —
@@ -335,6 +341,99 @@ const NOSTO_MAAT = {
         laudat: {
           maailmankartta: { x: 6578.6, y: 1799.5 },
           europe: { x: 640.5, y: 839.3 },
+        },
+      },
+    },
+    {
+      /*
+       * ANTIKYTHERAN KONE (päätoimittajan kaanonteksti 28.8.2026).
+       * Otsikko, nimiö, molemmat lunastuskappaleet ja kolme kysymystä
+       * ovat päätoimittajan omaa tekstiä sanatarkasti — tässä
+       * tiedostossa niistä ei muuteta sanaakaan.
+       *
+       * TAVALLINEN TÄKYPISTE, EI KUPLATÄKY. Raamattu merkitsee Kreikan
+       * kuplatäkyehdokkaaksi Antikytheran, mutta maan kuplatäky on jo
+       * Sofia Schliemann -aihe (tämän taulukon ensimmäinen rivi), eikä
+       * maalle tehdä toista. Kupla-aika on muutenkin ohi: kartalla on
+       * vain piste, ja tämä on poolin neljäs.
+       *
+       * KOHDE ON KARTAN OMA ANTIKYTHERA (js/packs/fokuskohteet-grc.js
+       * `antikythera`), samalla kaavalla kuin Kastrin kylä osoittaa
+       * Delfoihin ja Olympoksen huippu Olympokseen: piste tuikkii
+       * kohteen symbolin päällä, ja kortin nappi vie kohteen omaan
+       * tietoruutuun VASTA kun otsikon lupaus on maksettu. Lupaus ja
+       * tietoruutu eivät ole sama juttu — tietoruutu kertoo koneesta ja
+       * saaresta, tämä kortti siitä hetkestä, jona möykky nousi
+       * pinnalle.
+       */
+      id: 'antikythera-kone',
+      nimio: 'Kone ennen aikaansa',
+      kohde: 'antikythera',
+      otsikko: 'Sienisukeltajat nostivat merenpohjasta koneen, joka '
+        + 'ennusti taivaan liikkeet',
+      lunastus: [
+        'Vuonna 1901 sienisukeltajat tutkivat haaksirikkoa Antikytheran '
+          + 'saaren edustalla ja nostivat pintaan pronssimöykyn, jota kukaan '
+          + 'ei osannut selittää. Vasta röntgenkuvat paljastivat sen sisältä '
+          + 'kymmenien hammasrattaiden koneiston — yli kaksituhatta vuotta '
+          + 'vanhan laskukoneen, joka ennusti auringon- ja kuunpimennykset '
+          + 'ja planeettojen liikkeet.',
+        'Mitään yhtä monimutkaista ei tunneta muualta yli tuhanteen vuoteen '
+          + 'sen jälkeen. Koneen palaset ovat esillä Ateenan kansallisessa '
+          + 'arkeologisessa museossa — ja tutkijat kiistelevät yhä siitä, '
+          + 'mihin kaikkeen se pystyi ja kuka sen rakensi.',
+      ],
+      lahde: 'en-Wikipedia "Antikythera mechanism", johdanto ja osio '
+        + '"Discovery" (tarkistettu 28.8.2026).',
+      /* Sama kuvalaji ja sama kenttä kuin kahdella nostolla yllä. */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-antikythera-kone-loistoaika.webp',
+        selite: 'Antikytheran kone uutena: puurasia auki, pronssiset '
+          + 'hammasrattaat ja kaiverretut kehät esillä pajan pöydällä.',
+        lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
+      },
+      /*
+       * KAKKOSKUVA on nykytila — se, mitä koneesta on jäljellä.
+       * Commonsin imageinfo 28.8.2026: 1036×924, CC BY 2.5, tekijä
+       * Marsyas, Restrictions tyhjä, kuvaus "Main Antikythera mechanism
+       * fragment (fragment A)". Katsottu silmin: korrodoitunut
+       * pronssikappale vitriinissä, iso hammasratas selvästi näkyvissä,
+       * ei ihmisiä eikä vesileimaa.
+       *
+       * EI SAMA KUVA KUIN KARTAN KOHTEELLA (fokuskohteet-grc.js käyttää
+       * Zden vitriinikuvaa): kortin nappi vie kohteeseen, ja sama kuva
+       * kahdesti peräkkäin näyttäisi siltä, ettei mitään uutta tullut.
+       * Fragmentti A näyttää lisäksi juuri sen, mistä lunastus puhuu —
+       * hammasrattaat möykyn sisällä.
+       */
+      valokuva: {
+        tiedosto: 'NAMA Machine d\'Anticythère 1.jpg',
+        selite: 'Näin se säilyi: mekanismin pääkappale eli fragmentti A, '
+          + 'jonka pinnan läpi iso hammasratas erottuu.',
+        lahde: 'Marsyas, Wikimedia Commons (CC BY 2.5)',
+      },
+      kysymykset: [
+        'Miten kone löytyi?',
+        'Mihin konetta käytettiin?',
+        'Miksi mitään vastaavaa ei tunneta tuhanteen vuoteen?',
+      ],
+      /*
+       * PAIKKA ON HYLYN SAARI, EI MUSEO. Juttu tapahtui merenpohjassa
+       * Antikytheran edustalla, ja piste kuuluu sinne (osio PISTE SIIHEN
+       * KOHTAAN KARTTAA). Museo on lunastuksen toinen kappale, ei jutun
+       * tapahtumapaikka — ja Ateenassa on jo tämän poolin Sofia-piste.
+       *
+       * Luvut ovat SAMAT kuin kartan kohteella `antikythera`
+       * (js/packs/fokuskohteet-grc.js): 23,3 E / 35,86667 N,
+       * en-Wikipedia "Antikythera" (35°52′N 23°18′E). Sama ankkuri kuin
+       * Kastrin kylällä ja Olympoksen huipulla — kohteen ja sen täyn
+       * koordinaatit eivät saa ajautua erilleen.
+       */
+      paikka: {
+        nimi: 'Antikythera',
+        laudat: {
+          maailmankartta: { x: 6610.0, y: 1962.6 },
+          europe: { x: 658.6, y: 950.3 },
         },
       },
     },

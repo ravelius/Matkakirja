@@ -628,12 +628,32 @@ export const FOKUSVIRTA_BUKAREST = {
         + 'means devil". Vlad Seivästäjää ei mainita muistiinpanoissa '
         + 'lainkaan.',
       /*
+       * PÄÄKUVAKSI HAVAINNEKUVA (28.8.2026, sama malli kuin Sofian
+       * areenalla ja Kreikan kahdella nostolla): repon oma generoitu
+       * kuva, jolla ei ole Commons-nimeä eikä varareittiä, joten kenttä
+       * on `osoite` eikä `tiedosto` (js/fokusnosto.js asetaNostonKuva).
+       *
+       * Kuva ei esitä paikkaa vaan HETKEN, jossa juttu tapahtui:
+       * kirjailijan työpöytä muistiinpanojen aikaan. Lähderivi sanoo
+       * sen itse, jottei kukaan lue sitä valokuvaksi.
+       */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-dracula-loistoaika.webp',
+        selite: 'Kirjailijan työpöytä muistiinpanojen aikaan: avattu '
+          + 'historiateos, käsin kirjoitettuja arkkeja ja öljylamppu.',
+        lahde: 'Matkakirjan havainnekuva: hetki, jona myytti syntyi',
+      },
+      /*
+       * KAKKOSKUVA on nyt entinen pääkuva — todiste siitä, mistä juttu
+       * kertoo. Tiedosto, selite ja lähde ovat sanasta sanaan samat kuin
+       * ennen; vain kentän nimi vaihtui.
+       *
        * Commons 25.8.2026: 1484×2360, public domain, Bram Stoker,
        * päiväys "before 1897", kuvaus "Bram Stoker's Notes on the
        * personal for his novel Dracula" — juuri se paperi, jolla myytti
        * syntyi.
        */
-      kuva: {
+      valokuva: {
         tiedosto: 'Stoker Dracula Notes Personal.jpg',
         selite: 'Bram Stokerin omat muistiinpanot romaaninsa henkilöistä.',
         lahde: 'Bram Stoker ennen 1897, Wikimedia Commons (public domain)',

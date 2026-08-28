@@ -703,11 +703,31 @@ export const FOKUSVIRTA_ISTANBUL = {
         + 'Schliemann oli yksityisesti samaa mieltä. Hän ei koskaan '
         + 'julkaissut sitä.',
       /*
+       * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin Sofian
+       * areenalla ja Kreikan kahdella nostolla): repon oma generoitu
+       * havainnekuva, jolla ei ole Commons-nimeä eikä varareittiä,
+       * joten kenttä on `osoite` eikä `tiedosto` (js/fokusnosto.js
+       * asetaNostonKuva).
+       *
+       * Kuva näyttää juuri sen, minkä lunastus sanoo tuhotun: kummun
+       * kaupungin muureineen ennen kuin lapio kävi siihen.
+       */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-schliemann-loistoaika.webp',
+        selite: 'Troija kummullaan loistoaikanaan: muurien takana talot '
+          + 'rinteessä, alapuolella tasanko ja meri.',
+        lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
+      },
+      /*
+       * KAKKOSKUVA on nyt entinen pääkuva — jutun toinen puoli, mies
+       * itse. Tiedosto, selite ja lähde ovat sanasta sanaan samat kuin
+       * ennen; vain kentän nimi vaihtui.
+       *
        * Commons (takynostot-turkki.md, ehdokas 6, varmennettu
        * 25.8.2026): 3226×4096, public domain, Library of Congress,
        * 1870 — kaivausten alkuvuodelta.
        */
-      kuva: {
+      valokuva: {
         tiedosto: 'Heinrich Schliemann, half-length portrait, facing front LCCN96516246.tif',
         selite: 'Heinrich Schliemann vuonna 1870, vuosi ennen Troijan '
           + 'kaivauskausien alkua.',

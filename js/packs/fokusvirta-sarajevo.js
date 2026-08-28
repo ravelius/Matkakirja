@@ -695,12 +695,35 @@ export const FOKUSVIRTA_SARAJEVO = {
        * Tälle nostolle ei ole omaa täkyä tässä tiedostossa, joten `avaa`
        * puuttuu tarkoituksella — lunastus kannattelee noston yksinään.
        *
+       * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin Sofian
+       * areenalla ja Kreikan kahdella nostolla): repon oma generoitu
+       * havainnekuva, jolla ei ole Commons-nimeä eikä varareittiä,
+       * joten kenttä on `osoite` eikä `tiedosto` (js/fokusnosto.js
+       * asetaNostonKuva).
+       *
+       * Kuva näyttää lunastuksen viimeisen virkkeen: kukkulan päällä on
+       * AITO keskiaikainen linnoitus. Kukkulan muoto on kuvassa se, mikä
+       * se luonnossakin on — havainnekuva ei saa piirtää pyramidia,
+       * jota siellä ei ole.
+       */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-pyramidi-loistoaika.webp',
+        selite: 'Visočican kukkula keskiajalla: huipulla Bosnian '
+          + 'kuninkaallinen linnoitus, alapuolella joki ja kylä.',
+        lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
+      },
+      /*
+       * KAKKOSKUVA on nyt entinen pääkuva — nykytilan valokuva, jossa
+       * pelaaja näkee kukkulan sellaisena kuin se on. Tiedosto, selite
+       * ja lähde ovat sanasta sanaan samat kuin ennen; vain kentän nimi
+       * vaihtui.
+       *
        * Commons 25.8.2026: 4000×3000, CC BY-SA 4.0, Mhare, kuvattu
        * 2.6.2013, kuvaus "Visočica hill from the road", kategoria
        * Visočica (hill near Visoko). Kuvassa pelaaja näkee itse kukkulan
        * ja saa tehdä oman päätelmänsä.
        */
-      kuva: {
+      valokuva: {
         tiedosto: 'Visočica hill from the road.jpg',
         selite: 'Visočican kukkula Visokon lähellä. Geologien mukaan se on '
           + 'luonnonmuodostuma.',

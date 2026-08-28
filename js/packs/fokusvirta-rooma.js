@@ -657,8 +657,28 @@ export const FOKUSVIRTA_ROOMA = {
         + 'kissasuojan häätöä; vetoomukseen kerättiin yli 30 000 nimeä, '
         + 'ja kissat jäivät.',
       avaa: 'kissat',
-      // Sama tarkistettu tiedosto kuin täyllä 'kissat'.
+      /*
+       * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin Sofian
+       * areenalla ja Kreikan kahdella nostolla): repon oma generoitu
+       * havainnekuva, jolla ei ole Commons-nimeä eikä varareittiä,
+       * joten kenttä on `osoite` eikä `tiedosto` (js/fokusnosto.js
+       * asetaNostonKuva).
+       *
+       * Kuva on aukio tasavallan aikaan — samat neljä temppeliä, jotka
+       * kuopasta 1927 paljastuivat — ja portailla istuu kissoja, jotka
+       * ovat noston toinen puoli.
+       */
       kuva: {
+        osoite: 'assets/kartat/nostot/nosto-kissat-loistoaika.webp',
+        selite: 'Largo di Torre Argentinan temppelit loistoaikanaan, '
+          + 'kissoja portailla.',
+        lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
+      },
+      /*
+       * KAKKOSKUVA on nyt entinen pääkuva — nykytila. Sama tarkistettu
+       * tiedosto kuin täyllä 'kissat'; selite ja lähde ennallaan.
+       */
+      valokuva: {
         tiedosto: 'Cat Sanctuary, Cats, Largo di Torre Argentina, Rome - 398 (19257774921).jpg',
         selite: 'Kissoja Largo di Torre Argentinan raunioilla.',
         lahde: 'Andy Rusch, Wikimedia Commons (CC BY 2.0)',
