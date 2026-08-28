@@ -68,12 +68,31 @@ const paljasta = (kaupunki, tyyppi) => sivu.evaluate(async ([city, type]) => {
   });
   const token = peli.aarreTyyppi(type, city);
   document.querySelector('.reveal-overlay')?.remove();
+  // Sama mallivalinta kuin playTokenReveal (28.8.2026): pääaarre saa
+  // diplomin, maan oma paikalliskuva vinjetointimallin, muut tumman.
+  const malli = type === 'star' ? 'diplomi'
+    : (token.kuva?.startsWith('assets/aarteet/paikallis/') ? 'paikallis' : 'tumma');
+  const lisat = malli === 'diplomi' ? {
+    otsake: 'Aarnin luettelo',
+    alaotsake: 'EUROOPPA · UNOHDETTU AARRE',
+    alanauha: 'Arvo 2000 puntaa',
+    leima: 'Löydetty',
+    leimaPvm: '28 · VIII',
+  } : {};
   // rakennaPaljastus ei käytä this:iä — kortin saa siksi pelin omalla
   // metodilla ilman koko UI:n käynnistämistä.
-  const { overlay, kuvaEl, caption } = UI.prototype.rakennaPaljastus(token.kuva, token.name);
+  const {
+    overlay, kuvaEl, caption, pohja, leima,
+  } = UI.prototype.rakennaPaljastus(token.kuva, token.name, malli, lisat);
   caption.appendChild(Object.assign(document.createElement('strong'), {
     textContent: token.name,
   }));
+  if (token.fakta) {
+    const p = document.createElement('p');
+    p.className = 'reveal-fakta';
+    p.textContent = token.fakta;
+    caption.appendChild(p);
+  }
   document.body.appendChild(overlay);
   if (kuvaEl) {
     await new Promise((valmis) => {
@@ -83,17 +102,25 @@ const paljasta = (kaupunki, tyyppi) => sivu.evaluate(async ([city, type]) => {
       setTimeout(valmis, 4000);
     });
   }
-  // Sama kahva kuin playTokenReveal: .shown tuo kuvan ja tekstin esiin.
+  // Sama kahva kuin playTokenReveal: .shown tuo kuvan ja tekstin esiin;
+  // diplomilla myös leima lyödään ja pohja kirkastuu lopputilaansa.
+  pohja.classList.add('shown');
   kuvaEl?.classList.add('shown');
   caption.classList.add('shown');
-  await new Promise((v) => setTimeout(v, 1000));
+  leima?.classList.add('lyoty');
+  if (malli === 'diplomi') overlay.classList.add('kirkas');
+  await new Promise((v) => setTimeout(v, 1600));
   const yha = document.querySelector('.reveal-aarrekuva');
+  const kehys = document.querySelector('.reveal-kehys');
   return {
     nimi: token.name,
     kuva: token.kuva,
     fakta: token.fakta ?? null,
     ladattu: !!yha && yha.naturalWidth > 0,
     leveys: yha?.naturalWidth ?? 0,
+    malli,
+    kehysLadattu: !!kehys && kehys.naturalWidth > 0,
+    leimaNakyy: !!document.querySelector('.reveal-leima'),
   };
 }, [kaupunki, tyyppi]);
 
@@ -108,7 +135,17 @@ const dnk = await paljasta('kobenhavn', 'isoAarre');
 vaadi('DNK iso: kuva on maan oma', dnk.kuva === 'assets/aarteet/paikallis/dnk-iso.jpg', dnk.kuva);
 vaadi('DNK iso: kuva latautui', dnk.ladattu && dnk.leveys === 640, `leveys ${dnk.leveys}`);
 vaadi('DNK iso: nimi on kultasarvet', /sarve/i.test(dnk.nimi), dnk.nimi);
+vaadi('DNK iso: vinjetointimalli', dnk.malli === 'paikallis', dnk.malli);
 await sivu.screenshot({ path: join(KAAPPAUKSET, 'aarrekuva-dnk-iso.png') });
+
+// Pääaarre: Aarnin luettelon diplomi kehyksineen ja leimoineen
+// (leiskapäätökset 28.8.2026 — diplomi VAIN pääaarteille).
+const tahti = await paljasta('ateena', 'star');
+vaadi('star: diplomimalli', tahti.malli === 'diplomi', tahti.malli);
+vaadi('star: kaiverruskehys latautui', tahti.kehysLadattu, 'aarnin-luettelo-kehys.jpg');
+vaadi('star: LÖYDETTY-leima kortilla', tahti.leimaNakyy);
+vaadi('star: aarrekuva latautui', tahti.ladattu, tahti.kuva);
+await sivu.screenshot({ path: join(KAAPPAUKSET, 'aarrekuva-star-diplomi.png') });
 
 // Kirjoittamaton manner: kuva jää laudan omaksi (Afrikka, Tanger).
 const mar = await sivu.evaluate(async () => {

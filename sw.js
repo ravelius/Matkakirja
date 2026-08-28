@@ -314,6 +314,9 @@ const SHELL = [
   './assets/aarteet/aarre-northamerica-star.jpg',
   './assets/aarteet/aarre-southamerica-star.jpg',
   './assets/aarteet/aarre-oceania-star.jpg',
+  // Aarnin luettelon kaiverruskehys: pääaarteen diplomi (28.8.2026)
+  // piirtää sen paljastuskortille heti laatan käännyttyä.
+  './assets/aarteet/aarnin-luettelo-kehys.jpg',
   /*
    * Euroopan 58 paikallisaarretta (pieni + iso joka maalle,
    * js/packs/paikallisaarteet.js kuva-kentat, 28.8.2026). Sama laji
