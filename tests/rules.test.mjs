@@ -829,9 +829,10 @@ test('vanha tallennus poistuneilla laattatyypeillä latautuu paikallisaarteina',
 
 test('paikallisaarteen nimi tulee maasta ja putoaa laudan omaan nimeen', async () => {
   /*
-   * Maakohtaiset parit (js/packs/paikallisaarteet.js) tulevat
-   * päätoimittajalta myöhemmin. Mekaniikan on oltava valmis ottamaan
-   * ne vastaan maakoodilla, ja ilman paria näkyy laudan oma nimi.
+   * Maakohtaiset parit (js/packs/paikallisaarteet.js) kirjoitetaan
+   * manner kerrallaan: Eurooppa on kirjoitettu, muut odottavat. Siksi
+   * mekaniikkaa testataan molemmista päistä — kirjoitetulla maalla
+   * (Suomi) ja maalla, jolla paria ei vielä ole (Marokko).
    *
    * NIMI JA KUVA TULEVAT SAMASTA RIVISTÄ (omistajan päätös 28.8.2026):
    * kun maan omaa paria ei ole, laudan oma teema ratkaisee — muuten
@@ -846,20 +847,32 @@ test('paikallisaarteen nimi tulee maasta ja putoaa laudan omaan nimeen', async (
     seed: 12,
   });
   const eurooppa = packById('europe').tokens.types;
-  assert.equal(game.aarreTyyppi('pieniAarre', 'helsinki').name, eurooppa.pieniAarre.name);
-  assert.equal(game.aarreTyyppi('pieniAarre', 'helsinki').kuva, eurooppa.pieniAarre.kuva);
-  assert.equal(game.aarreTyyppi('isoAarre', 'helsinki').name, eurooppa.isoAarre.name);
+  const afrikka = packById('africa').tokens.types;
+  // Kirjoittamaton maa: laudan oma nimi JA kuva samasta rivistä.
+  assert.equal(game.aarreTyyppi('pieniAarre', 'tanger').name, afrikka.pieniAarre.name);
+  assert.equal(game.aarreTyyppi('pieniAarre', 'tanger').kuva, afrikka.pieniAarre.kuva);
+  assert.equal(game.aarreTyyppi('isoAarre', 'tanger').name, afrikka.isoAarre.name);
 
-  PAIKALLISAARTEET.FIN = { pieniAarre: { name: 'Koelöytö', fakta: 'Testifakta.' } };
+  /*
+   * Kirjoitettu maa: nimi ja fakta tulevat maan omasta parista, mutta
+   * kuva jää laudan omaksi niin kauan kuin pari ei anna omaansa.
+   */
+  const suomi = game.aarreTyyppi('pieniAarre', 'helsinki');
+  assert.equal(suomi.name, PAIKALLISAARTEET.FIN.pieniAarre.name);
+  assert.equal(suomi.fakta, PAIKALLISAARTEET.FIN.pieniAarre.fakta);
+  assert.equal(suomi.kuva, eurooppa.pieniAarre.kuva);
+  assert.equal(suomi.id, 'pieniAarre', 'tunniste ei saa muuttua nimen mukana');
+
+  PAIKALLISAARTEET.MAR = { pieniAarre: { name: 'Koelöytö', fakta: 'Testifakta.' } };
   try {
-    const aarre = game.aarreTyyppi('pieniAarre', 'helsinki');
+    const aarre = game.aarreTyyppi('pieniAarre', 'tanger');
     assert.equal(aarre.name, 'Koelöytö', 'maan oma pari ei mennyt laudan nimen edelle');
     assert.equal(aarre.fakta, 'Testifakta.');
     assert.equal(aarre.id, 'pieniAarre', 'tunniste ei saa muuttua nimen mukana');
-    // Toinen maa käyttää yhä laudan omaa nimeä.
-    assert.equal(game.aarreTyyppi('pieniAarre', 'pariisi').name, eurooppa.pieniAarre.name);
+    // Saman mantereen toinen maa käyttää yhä laudan omaa nimeä.
+    assert.equal(game.aarreTyyppi('pieniAarre', 'timbuktu').name, afrikka.pieniAarre.name);
   } finally {
-    delete PAIKALLISAARTEET.FIN;
+    delete PAIKALLISAARTEET.MAR;
   }
 });
 
