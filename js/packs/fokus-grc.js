@@ -977,10 +977,24 @@ export const FOKUS_POHJAT = {
  * näyttää sen kaukozoomissa ja purkaa maalehdet siksi aikaa pois
  * (js/fokuskartta.js "KAUKOZOOMIN YLEISLEHTI").
  *
- * BBOX ON KOKO LAUTA (12000 x 5399) eikä siinä ole vuotoa — lehden
- * reunat OVAT laudan reunat, eikä sen ulkopuolella ole lautaa, johon
- * jäisi sauma. Luvut ovat suoraan työkalun kirjoittamasta
- * MAAILMA.json-tiedostosta (tasauksen ankkurit alle 1,7 lautayksikköä).
+ * BBOX ON LAUTA JA SEN ATLASKEHYS (omistajan tilaus 29.8.2026: *"ei näy
+ * sitä kartan reunapaperia ja lisämerkintöjä?"*). Lehti on kiertävällä
+ * laudalla tasan laudan levyinen — sivureunaa ei ole missään zoomissa —
+ * mutta sen ylä- ja alapuolelle on poltettu painetun atlaslehden
+ * PAPERIMARGINAALI kaksoisviivakehyksineen, kartusseineen,
+ * mittakaavajanoineen ja painajanriveineen. Marginaali on 435
+ * lautayksikköä ylhäällä ja 450 alhaalla, joten laatikko alkaa laudan
+ * yläpuolelta (y = −435) ja on 6284 yksikköä korkea.
+ *
+ * MARGINAALI NÄKYY VAIN ULOIMMASSA ZOOMISSA, eikä se vaadi
+ * liikerajaukselta mitään: uloimmalla tasolla näkymän leveys on laudan
+ * leveys (js/kartta.js rajaaSkaala), jolloin 16:9-ruudulle mahtuu
+ * pystysuunnassa 6547 yksikköä eli laudan lisäksi 574 yksikköä ylä- ja
+ * alapuolelle — juuri se kaista, jolla arkin reuna lepää pergamentin
+ * päällä. Lähempänä näkymä kapenee ja marginaali jää ruudun ulkopuolelle.
+ *
+ * Luvut ovat suoraan työkalun kirjoittamasta MAAILMA.json-tiedostosta
+ * (tools/tee-yleislehti.mjs; tasauksen ankkurit alle 1,7 lautayksikköä).
  *
  * TÄMÄ EI OLE FOKUS_POHJAT-TAULUSSA. Se ei ole minkään maan lehti:
  * atlaksen valinta, sumuverho ja kameran ajot lukevat FOKUS_POHJAT-
@@ -989,7 +1003,9 @@ export const FOKUS_POHJAT = {
  */
 export const YLEISLEHTI = {
   lauta: 'maailmankartta',
-  bbox: { x: 0, y: 0, w: 12000, h: 5399 },
+  bbox: { x: 0, y: -435, w: 12000, h: 6284 },
+  // Kameran ikkuna on kartta-ala eli tasan lauta — marginaaliin ei ajeta.
+  rajaus: { x: 0, y: 0, w: 12000, h: 5399 },
   tiedosto: 'MAAILMA.webp',
 };
 

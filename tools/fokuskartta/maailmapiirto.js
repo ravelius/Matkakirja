@@ -27,13 +27,44 @@
  * === MITÄ TÄSSÄ ON JA MITÄ EI ===
  *
  *   ON     opaakki paperi, meren syvyysporrastus, akvarellihypsometria
- *          varjostuksineen, rannikko, isot järvet, harva asteverkko ja
- *          muutama valtameren nimi kursiivilla.
+ *          varjostuksineen, rannikko, isot järvet, harva asteverkko,
+ *          muutama valtameren nimi kursiivilla — ja ATLASKEHYS
+ *          (paperimarginaali, kaksoisviivakehys, kartussi,
+ *          kompassiruusu, mittakaavajana, painajanrivi).
  *
- *   EI OLE maakorostusta, rajaviivoja, naapurien sumennusta,
- *          kartuutsia, mittajanaa, kehystä eikä yhtäkään kaupunkia.
- *          Kaupunkien nimet ovat pelin omia laattoja (js/ui.js), ja
- *          kaukozoomissa niitä ei muutenkaan lueta.
+ *   EI OLE maakorostusta, rajaviivoja, naapurien sumennusta eikä
+ *          yhtäkään kaupunkia. Kaupunkien nimet ovat pelin omia
+ *          laattoja (js/ui.js), ja kaukozoomissa niitä ei muutenkaan
+ *          lueta.
+ *
+ * === ATLASKEHYS: MIKSI VAIN YLÄ- JA ALAMARGINAALI ===
+ *
+ * Omistajan tilaus 29.8.2026: *"ei näy sitä kartan reunapaperia ja
+ * lisämerkintöjä?"* — kaukaisimmalla zoomtasolla kartan pitää maata
+ * paperilla kuten oikean atlaksen lehti.
+ *
+ * Paperia voi olla vain YLÄ- JA ALAREUNASSA, ei sivuilla. Lauta on
+ * kiertävä (js/packs/maailmankartta.js `kiertava`): peli toistaa
+ * kartan laudan leveyden päässä (js/ui.js kiertoKohdat) ja rajaa
+ * loitonnuksen niin, ettei sama paikka näy kahdesti
+ * (js/kartta.js rajaaSkaala) — vaakasuunnassa laudan reunaa EI OLE
+ * missään zoomissa, ja pystysuora marginaali piirtyisi kermanvaaleana
+ * kaistaleena keskelle Tyyntämerta. Sama syy pitää reunahäivytyksen
+ * pelkästään ylä- ja alareunassa (osio 10).
+ *
+ * Siksi kehys on se, mikä kiertävälle lehdelle kuuluukin: ylä- ja
+ * alamarginaali kaksoisviivoin, kartussi ylämarginaalissa (aikakauden
+ * atlaslehdissä otsikko ladottiin juuri reunaviivan yläpuolelle),
+ * mittakaavajana ja painajanrivi alamarginaalissa sekä kompassiruusu
+ * kartan omalle tyhjälle merialueelle eteläiselle Tyynellemerelle.
+ * Kulmakoristeet ovat kartussin kulmissa — kehyksellä itsellään ei
+ * kiertävällä laudalla ole kulmia.
+ *
+ * Marginaali on MITOITETTU NÄKYMÄÄN: 232 ja 240 kuvapikseliä ovat 435
+ * ja 450 lautayksikköä, ja uloimmalla zoomilla (näkyvä leveys = laudan
+ * leveys) 16:9-ruudulle jää laudan ylä- ja alapuolelle 574 yksikköä.
+ * Marginaali siis mahtuu näkyviin juuri siellä missä sen kuuluukin —
+ * ja lähempänä zoomattaessa se jää ruudun ulkopuolelle.
  *
  * === LAUTA KIERTÄÄ, JA SE ON PIIRRON ASIA ===
  *
@@ -76,6 +107,19 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * isompaa tekstiä, aivan kuten maalehdillä.
    */
   const S = leveys / 6400;
+
+  /*
+   * ATLASKEHYKSEN MARGINAALIT KUVAPIKSELEINÄ.
+   *
+   * Kartta-ala on kuvassa `yYla`..`yAla`; sen ulkopuoli on paperia.
+   * Luvut tulevat työkalulta (tools/tee-yleislehti.mjs KEHYS) samassa
+   * 6400 pikselin viitetarkkuudessa kuin kaikki muutkin tämän moottorin
+   * mitat, ja niistä on JOHDETTU myös kuvan bbox — työkalu ja moottori
+   * eivät siis voi olla eri mieltä siitä, missä kartan reuna on.
+   */
+  const kehys = tyyli.kehys ?? null;
+  const yYla = kehys ? Math.round(kehys.yla * S) : 0;
+  const yAla = kehys ? H - Math.round(kehys.ala * S) : H;
 
   // --- projektio: asteet -> lauta -> kuvapikselit ja takaisin --------
   const { lautaX, lautaY, lautaLon, lautaLat } = laudanProjektio(projektio);
@@ -161,8 +205,34 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
       parseInt(PAPERI.slice(3, 5), 16),
       parseInt(PAPERI.slice(5, 7), 16),
     ];
+    /*
+     * MARGINAALIN KERMA on eri sävy kuin kartta-alan paperi, ja niin
+     * kuuluukin: painetussa lehdessä marginaali on PAINAMATONTA paperia
+     * ja siksi vaaleampi kuin merensinen tai maastonruskea kartta-ala.
+     *
+     * SÄVY ON LÄMMIN EIKÄ NEUTRAALI, JA SE ON MITTA EIKÄ MAKUASIA.
+     * Patinapassin merimaski (tools/patina.mjs VESIVIIVOITUS ja SYVYYS,
+     * `kromaVali: [34, 44]`) lukee mereksi jokaisen vaalean pinnan,
+     * jonka kroma — suurimman ja pienimmän värikanavan ero — jää alle
+     * 44:n. Kerma rgb(245,237,214) on kromaltaan 31 eli patinan silmissä
+     * ulappaa, ja passi vetää marginaaliin rantaviivat kartussin
+     * kirjainten ja mittajanan ympärille (mitattu 29.8.2026: mittajanan
+     * palkkien ympärillä samankeskiset renkaat). Kroma 48 nostaa
+     * marginaalin maskin yläpuolelle, jolloin patina jättää sen
+     * rauhaan — ja silmälle ero on vain hitusen lämpimämpi norsunluu.
+     */
+    const kerma = [246, 237, 198];
     for (let y = 0; y < H; y++) {
-      const lat = latPikselista(y + 0.5);
+      const marginaalissa = y < yYla || y >= yAla;
+      const lat = marginaalissa ? 0 : latPikselista(y + 0.5);
+      /*
+       * PAPERIN LEIKATTU REUNA. Muutaman pikselin tummennus uloimmalla
+       * laidalla erottaa arkin siitä pergamentista, jonka päällä se
+       * laudalla lepää — ilman sitä kerma vain loppuu kesken.
+       */
+      const reuna = kehys
+        ? Math.min(1, Math.min(y + 0.5, H - 0.5 - y) / (11 * S))
+        : 1;
       for (let x = 0; x < W; x++) {
         const i = (y * W + x) * 4;
         // --- paperi: kuitujuovat, rae ja laikut ---
@@ -170,6 +240,14 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         const rae = KOHINA2(x / (1.7 * S), y / (1.7 * S)) - 0.5;
         const laikka = fbm(KOHINA2, x / (260 * S), y / (260 * S), 3) - 0.5;
         const v = kuitu * 9 + rae * 11 + laikka * 16;
+        if (marginaalissa) {
+          const s = (1 - reuna) * 15;
+          d[i] = Math.max(0, Math.min(255, kerma[0] + v * 0.85 - s));
+          d[i + 1] = Math.max(0, Math.min(255, kerma[1] + v * 0.8 - s));
+          d[i + 2] = Math.max(0, Math.min(255, kerma[2] + v * 0.7 - s * 0.85));
+          d[i + 3] = 255;
+          continue;
+        }
         let r = pohja[0] + v * 1.05;
         let g = pohja[1] + v;
         let b = pohja[2] + v * 0.82;
@@ -232,6 +310,21 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
       if (suljettu) g.closePath();
     }
   };
+
+  /*
+   * KARTTA-ALAN LEIKKURI (osiot 4–7).
+   *
+   * Rannikkoaineisto ulottuu asteen laudan reunojen yli (maailma.mjs
+   * `rannikot`) ja asteverkon meridiaanit vedetään koko kuvan yli, joten
+   * ilman leikkuria rantaviiva ja hilaviivat vuotaisivat kermaiseen
+   * marginaaliin. Leikkuri on yhdessä paikassa eikä jokaisessa
+   * kerroksessa: kartta-ala on yksi laatikko, ja kaikki kartan sisältö
+   * kuuluu sen sisään.
+   */
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(0, yYla, W, yAla - yYla);
+  ctx.clip();
 
   /* ================================================== 4. RANNIKKO
    *
@@ -343,7 +436,293 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     });
   }
 
-  /* ================================================== 8. PAPERIN RAE
+  /* ================================================== 8. KOMPASSIRUUSU
+   *
+   * Kartan omalle tyhjälle merialueelle, ei marginaaliin: aikakauden
+   * atlaksessa ruusu on kartan sisällä siellä, missä ulappaa riittää.
+   * Paikka tulee työkalulta (tools/tee-yleislehti.mjs KOMPASSI) ja on
+   * eteläinen Tyynimeri — laudan suurin yhtenäinen tyhjä vesi, jolla ei
+   * ole yhtään kaupunkia, laattaa eikä valtameren nimeä.
+   *
+   * KAIVERRUSTYYLI syntyy kahdesta puoliskosta: jokainen sakara on
+   * jaettu keskiviivastaan valoon ja varjoon, kuten teräskaiverruksessa,
+   * jossa kolmiulotteisuus tehdään sävyllä eikä varjostuksella.
+   */
+  if (tyyli.kompassi) {
+    const k = tyyli.kompassi;
+    const r = (k.sade ?? 130) * S;
+    const cx = kuvaX(k.lon);
+    const cy = kuvaY(k.lat);
+    /*
+     * VALO JA VARJO OVAT ERI MAALIA, EIVÄT ERI VOIMAKKUUTTA. Kaiverruksen
+     * kolmiulotteisuus syntyy siitä, että sakaran toinen puolisko on
+     * paperinvaaleaa ja toinen mustetta; pelkkä sävyero samasta
+     * musteesta latistaa ruusun harmaaksi tähdeksi.
+     */
+    const varjo = 'rgba(74,52,33,0.66)';
+    const valo = 'rgba(250,244,226,0.62)';
+    const viiva = 'rgba(74,52,33,0.6)';
+    ctx.save();
+    ctx.translate(cx, cy);
+    ctx.lineJoin = 'miter';
+    ctx.lineWidth = 0.75 * S;
+    const sakara = (kulma, pituus, kanta) => {
+      const a = kulma * Math.PI / 180;
+      const kx = Math.sin(a) * pituus;
+      const ky = -Math.cos(a) * pituus;
+      const bx = Math.cos(a) * kanta;
+      const by = Math.sin(a) * kanta;
+      for (const puoli of [-1, 1]) {
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(kx, ky);
+        ctx.lineTo(bx * puoli, by * puoli);
+        ctx.closePath();
+        ctx.fillStyle = puoli > 0 ? varjo : valo;
+        ctx.fill();
+        ctx.strokeStyle = viiva;
+        ctx.stroke();
+      }
+    };
+    // Väli-ilmansuunnat ensin, jotta pääsakarat jäävät päälle.
+    for (let i = 0; i < 4; i++) sakara(i * 90 + 45, r * 0.6, r * 0.1);
+    for (let i = 0; i < 4; i++) sakara(i * 90, r, r * 0.135);
+    // Napa peittää sakaroiden risteyksen, joka jäisi muuten sotkuiseksi.
+    ctx.beginPath();
+    ctx.arc(0, 0, r * 0.055, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(74,52,33,0.8)';
+    ctx.fill();
+    ctx.strokeStyle = viiva;
+    ctx.lineWidth = 0.8 * S;
+    ctx.beginPath();
+    ctx.arc(0, 0, r * 1.16, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.lineWidth = 1.5 * S;
+    ctx.beginPath();
+    ctx.arc(0, 0, r * 1.24, 0, Math.PI * 2);
+    ctx.stroke();
+    // Asteripsut kehän väliin: 32 kompassipiirtoa kuten merikartassa.
+    ctx.lineWidth = 0.8 * S;
+    ctx.beginPath();
+    for (let i = 0; i < 32; i++) {
+      const a = (i * 360 / 32) * Math.PI / 180;
+      const pitka = i % 4 === 0;
+      const r0 = r * 1.16;
+      const r1 = r * (pitka ? 1.24 : 1.205);
+      ctx.moveTo(Math.sin(a) * r0, -Math.cos(a) * r0);
+      ctx.lineTo(Math.sin(a) * r1, -Math.cos(a) * r1);
+    }
+    ctx.stroke();
+    ctx.restore();
+    teksti('N', cx, cy - r * 1.45, {
+      koko: (k.sade ?? 130) * 0.2, vari: 'rgba(74,52,33,0.62)', ank: 'center',
+    });
+  }
+
+  ctx.restore();                       // kartta-alan leikkuri auki
+
+  /* ================================================== 9. ATLASKEHYS
+   *
+   * Kaikki painetun lehden kalusteet marginaaleissa: kaksoisviivakehys,
+   * kartussi, mittakaavajana ja painajanrivi. Piirretään VASTA
+   * leikkurin purun jälkeen, koska ne kuuluvat kartan ulkopuolelle — ja
+   * ENNEN paperin rakeen viimeistä kierrosta (osio 10), jotta rae sitoo
+   * kehyksen musteen samaan paperiin kuin rantaviivan.
+   */
+  if (kehys) {
+    /*
+     * TURVAVYÖHYKE — MITATTU PELISTÄ, EI ARVATTU.
+     *
+     * Marginaalia EI näy koko leveydeltään millään ruudulla: uloimmassa
+     * zoomissa näkyvä leveys on laudan leveys, joten näkyvä korkeus
+     * riippuu karttaruudun kuvasuhteesta. Mitattu 29.8.2026 selaimessa
+     * (koko lauta ruudulle ajettuna):
+     *
+     *   1920 x 1080  karttaruutu 1901 x 1003  → 371 lautayksikköä eli
+     *                198 kuvapikseliä laudan ylä- ja alapuolelle
+     *   1180 x 820   karttaruutu 1161 x 743   → 551 px, koko marginaali
+     *   430 x 930    puhelin                  → moninkertaisesti
+     *
+     * Siksi KAIKKI kalusteet — kartussi, jana, painajanrivi — mahtuvat
+     * 198 kuvapikselin sisään reunaviivasta. Paperia on sen ulkopuolella
+     * vielä hitusen (232 ja 240 px), jotta korkeammilla ruuduilla näkyy
+     * arkin oma leikattu reuna eikä kesken loppuva kerma.
+     */
+    const MUSTE_KEHYS = 'rgba(74,52,33,0.86)';
+    const MUSTE_HENTO = 'rgba(74,52,33,0.62)';
+
+    /** Vaakaviiva koko lehden yli. */
+    const vaaka = (y, paksuus, vari = MUSTE_KEHYS) => {
+      ctx.save();
+      ctx.strokeStyle = vari;
+      ctx.lineWidth = paksuus * S;
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(W, y);
+      ctx.stroke();
+      ctx.restore();
+    };
+
+    /*
+     * KAKSOISVIIVA: ohut reunaviiva kartan laidassa ja sen ulkopuolella
+     * paksumpi kehysviiva. Järjestys on aikakauden painotyön oma —
+     * hiusviiva rajaa kuvan, vahva viiva rajaa lehden.
+     */
+    const RAKO = 14 * S;
+    vaaka(yYla - 0.7 * S, 1.4);
+    vaaka(yYla - RAKO, 3.0);
+    vaaka(yAla + 0.7 * S, 1.4);
+    vaaka(yAla + RAKO, 3.0);
+
+    /* ---------------------------------------------------- kartussi */
+
+    /*
+     * Kartussi ylämarginaalin keskelle. Keskikohta on laudan keskus
+     * (x = 6000 eli 5° itäistä pituutta), joka on myös se kohta, johon
+     * pelin uloin näkymä keskittyy (js/kartta.js fitViewBox) — otsake
+     * on siis ruudun keskellä silloin kun se ylipäätään näkyy.
+     */
+    const kx = W / 2;
+    const kLev = 980 * S;
+    const kYla = 44 * S;
+    const kAla = yYla - RAKO - 24 * S;
+    const kKork = kAla - kYla;
+    ctx.save();
+    ctx.lineJoin = 'miter';
+    /*
+     * Kartussin oma kermalaikku: painettu otsake istuu hitusen
+     * vaaleammalla paperilla kuin ympäröivä marginaali. Sävy on SAMAA
+     * lämmintä norsunluuta kuin marginaali (ks. osio 1-3): neutraalin
+     * valkoinen jäisi patinan merimaskin alle, ja passi vetäisi
+     * kartussin sisään rantaviivat otsakkeen ympärille.
+     */
+    ctx.fillStyle = 'rgba(250,242,203,0.7)';
+    ctx.fillRect(kx - kLev / 2, kYla, kLev, kKork);
+    const kehysSuora = (sisennys, paksuus) => {
+      ctx.strokeStyle = paksuus > 1.6 ? MUSTE_KEHYS : MUSTE_HENTO;
+      ctx.lineWidth = paksuus * S;
+      ctx.strokeRect(kx - kLev / 2 + sisennys, kYla + sisennys,
+        kLev - sisennys * 2, kKork - sisennys * 2);
+    };
+    kehysSuora(0, 2.4);
+    kehysSuora(7 * S, 1.0);
+    /*
+     * KULMAKORISTEET. Kehyksellä itsellään ei kiertävällä laudalla ole
+     * kulmia (ks. tiedoston johdanto), joten koristeet ovat siellä
+     * missä kulmat ovat: kartussin nurkissa. Muoto on kaiverruksen oma
+     * — nurkan yli vedetty viiste ja sen keskellä pieni vinoneliö.
+     */
+    const KULMA = 26 * S;
+    ctx.strokeStyle = MUSTE_HENTO;
+    ctx.lineWidth = 1.1 * S;
+    for (const sx of [-1, 1]) {
+      for (const sy of [-1, 1]) {
+        const nx = kx + sx * (kLev / 2);
+        const ny = sy < 0 ? kYla : kAla;
+        ctx.beginPath();
+        ctx.moveTo(nx - sx * KULMA, ny);
+        ctx.lineTo(nx, ny - sy * KULMA);
+        ctx.stroke();
+        ctx.beginPath();
+        const mx = nx - sx * KULMA * 0.5;
+        const my = ny - sy * KULMA * 0.5;
+        const d2 = 3.6 * S;
+        ctx.moveTo(mx, my - d2);
+        ctx.lineTo(mx + d2, my);
+        ctx.lineTo(mx, my + d2);
+        ctx.lineTo(mx - d2, my);
+        ctx.closePath();
+        ctx.fillStyle = MUSTE_HENTO;
+        ctx.fill();
+      }
+    }
+    ctx.restore();
+
+    teksti(kehys.otsikko ?? 'MATKAKIRJA', kx, kYla + kKork * 0.36, {
+      koko: 46, vari: 'rgba(58,40,25,0.9)', ank: 'center', vali: 46 * 0.28,
+    });
+    // Otsakkeen ja alaotsakkeen väliin pieni jakoviiva vinoneliöineen.
+    {
+      const jy = kYla + kKork * 0.6;
+      const jl = kLev * 0.24;
+      ctx.save();
+      ctx.strokeStyle = MUSTE_HENTO;
+      ctx.lineWidth = 0.9 * S;
+      ctx.beginPath();
+      ctx.moveTo(kx - jl, jy); ctx.lineTo(kx - 9 * S, jy);
+      ctx.moveTo(kx + 9 * S, jy); ctx.lineTo(kx + jl, jy);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(kx, jy - 4.2 * S);
+      ctx.lineTo(kx + 4.2 * S, jy);
+      ctx.lineTo(kx, jy + 4.2 * S);
+      ctx.lineTo(kx - 4.2 * S, jy);
+      ctx.closePath();
+      ctx.fillStyle = MUSTE_HENTO;
+      ctx.fill();
+      ctx.restore();
+    }
+    teksti(kehys.alaotsikko ?? 'Unohdettu aarre', kx, kYla + kKork * 0.79, {
+      koko: 25, tyylitys: 'italic', vari: 'rgba(74,52,33,0.78)',
+      ank: 'center', vali: 25 * 0.2,
+    });
+
+    /* ------------------------------------------------- mittakaavajana */
+
+    /*
+     * JANA ON MITTA EIKÄ KORISTE. Millerin lieriössä mittakaava on tosi
+     * päiväntasaajalla, joten jana lasketaan siitä: laudan leveys on
+     * täysi kierros eli 40 075 km, ja kuvapikselin pituus saadaan
+     * suoraan kuvan ja laudan suhteesta.
+     */
+    const kmPerPikseli = 40075.017 / (projektio.leveys * px);
+    const askelKm = 1000;
+    const askelPx = askelKm / kmPerPikseli;
+    const askelia = 5;
+    const janaLev = askelPx * askelia;
+    const jx = W / 2 - janaLev / 2;
+    const jy = yAla + RAKO + 50 * S;
+    const jKork = 15 * S;
+    teksti('MITTAKAAVA PÄIVÄNTASAAJALLA', W / 2, jy - 18 * S, {
+      koko: 16, vari: 'rgba(74,52,33,0.66)', ank: 'center', vali: 16 * 0.3,
+    });
+    ctx.save();
+    ctx.lineWidth = 1.1 * S;
+    ctx.strokeStyle = MUSTE_KEHYS;
+    for (let i = 0; i < askelia; i++) {
+      // Vaalea ruutu samaa norsunluuta kuin marginaali — sama syy kuin
+      // kartussin laikussa: valkoinen ruutu vesiviivoittuisi patinassa.
+      ctx.fillStyle = i % 2 === 0 ? 'rgba(74,52,33,0.82)' : 'rgba(250,242,203,0.92)';
+      ctx.fillRect(jx + i * askelPx, jy, askelPx, jKork);
+      ctx.strokeRect(jx + i * askelPx, jy, askelPx, jKork);
+    }
+    ctx.restore();
+    for (let i = 0; i <= askelia; i++) {
+      teksti(String(i * askelKm), jx + i * askelPx, jy + jKork + 17 * S, {
+        koko: 15, vari: 'rgba(74,52,33,0.7)', ank: 'center',
+      });
+    }
+    teksti('kilometriä', jx + janaLev + 22 * S, jy + jKork / 2, {
+      koko: 16, tyylitys: 'italic', vari: 'rgba(74,52,33,0.7)',
+    });
+
+    /* -------------------------------------------------- painajanrivi */
+
+    /*
+     * Aikakauden asu: kustantamo ja painovuosi roomalaisin numeroin.
+     * Tekijänoikeusmerkintä on tarkoituksella HUOMAAMATON — se on
+     * nykyajan välttämättömyys vanhan lehden reunassa, ei osa lehteä.
+     */
+    teksti(kehys.painaja ?? '', W / 2, yAla + RAKO + 118 * S, {
+      koko: 21, tyylitys: 'italic', vari: 'rgba(74,52,33,0.66)',
+      ank: 'center', vali: 21 * 0.06,
+    });
+    teksti(kehys.oikeudet ?? '', W / 2, yAla + RAKO + 150 * S, {
+      koko: 13, vari: 'rgba(74,52,33,0.34)', ank: 'center', vali: 13 * 0.16,
+    });
+  }
+
+  /* ================================================== 10. PAPERIN RAE
    *
    * Viimeinen kerros koko lehden yli: rae sitoo maalin ja musteen
    * yhteen, jottei mikään osa näytä liimatulta.
@@ -364,19 +743,26 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     ctx.putImageData(img, 0, 0);
   }
 
-  /* ================================================== 9. REUNAHÄIVYTYS
+  /* ================================================== 11. REUNAHÄIVYTYS
    *
    * VAIN YLÄ- JA ALAREUNA, EI SIVUJA.
    *
-   * Lehti on tasan laudan kokoinen, joten sen sivut ovat laudan sauma:
-   * peli piirtää kartan uudelleen laudan leveyden päähän (js/ui.js
-   * kiertoKohdat), ja häivytetty pystyreuna näkyisi siinä kohtaa
-   * vaaleana raitana keskellä Tyyntämerta. Ylä- ja alareunassa lehti
-   * sen sijaan kohtaa laudan oman pergamentin, ja muutaman pikselin
-   * häivytys sulattaa sauman siihen.
+   * Lehti on vaakasuunnassa tasan laudan levyinen, joten sen sivut ovat
+   * laudan sauma: peli piirtää kartan uudelleen laudan leveyden päähän
+   * (js/ui.js kiertoKohdat), ja häivytetty pystyreuna näkyisi siinä
+   * kohtaa vaaleana raitana keskellä Tyyntämerta. Ylä- ja alareunassa
+   * lehti sen sijaan kohtaa laudan oman pergamentin.
+   *
+   * ATLASKEHYKSEN KANSSA HÄIVYTYS ON KAPEA. Ilman kehystä reuna oli
+   * kartan reuna ja se piti sulattaa pergamenttiin leveällä liu'ulla.
+   * Kehyksellisessä lehdessä reuna on ARKIN LEIKATTU LAITA, jonka
+   * kuuluu näkyä: pari pikseliä riittää poistamaan porrastuksen, ja
+   * loput hoitaa paperin oma reunatummennus (osio 1-3).
    */
   {
-    const hy = Math.max(1, Math.round(H * 0.004));
+    const hy = kehys
+      ? Math.max(1, Math.round(2.5 * S))
+      : Math.max(1, Math.round(H * 0.004));
     const img = ctx.getImageData(0, 0, W, H);
     const d = img.data;
     for (let y = 0; y < H; y++) {
