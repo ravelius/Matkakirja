@@ -189,7 +189,7 @@ const FOKUS_ALIPOLKU = 'julisteet/fokus/';
  *     lehdet latautuvat uudelleen kerran — kymmeniä megatavuja
  *     kertaluontoista liikennettä, ei sen enempää.
  */
-const FOKUS_VUOSIKERTA = 3;
+const FOKUS_VUOSIKERTA = 4;
 
 /** Fokuskartan osoite ämpärissä (esim. 'GRC.webp' tai 'GRC.json'). */
 export function fokuskarttaUrl(tiedosto) {
