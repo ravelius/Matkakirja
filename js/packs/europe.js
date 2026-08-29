@@ -356,9 +356,31 @@ const EU_CITIES = [
   // Granadan nimikyltti käännettiin oikealle, jotta Sevilla mahtuu sen
   // länsipuolelle Guadalquivirin suunnalle.
   { id: 'granada', name: 'Granada', ambience: 'kaupunki', wiki: 'Granada', x: 142, y: 916, la: 'start', lx: 16, ly: 5 },
-  // Sevilla on kartalla noin 70 km todellista paikkaansa lounaassa, Doñanan
-  // suunnalla: kaavan mukainen piste jäisi 46 yksikön päähän Granadasta,
-  // kun laudan vähimmäisväli on 60.
+  /*
+   * SEVILLA ON KARTALLA noin 70 km todellista paikkaansa lounaassa,
+   * Doñanan suunnalla: kaavan mukainen piste jäisi 46 yksikön päähän
+   * Granadasta, kun laudan vähimmäisväli on 60.
+   *
+   * TARKISTETTU UUDELLEEN AALLON 4A INTEGROINNISSA (29.8.2026), koska
+   * siirto luetaan helposti virheeksi. Laudan projektiolla
+   * x = (lon + 11) × 19,2 ja y = (72 − lat) × 26,3 Sevilla (37,389 N,
+   * 5,985 W) osuu pisteeseen (96,3, 910,3). Se piste AJETTIIN LÄPI
+   * tests/rules.test.mjs:llä ja se kaatuu: *"Granada ja Sevilla ovat
+   * liian lähekkäin (46)"*.
+   *
+   * EIKÄ TOSIPAIKAN LÄHELLE OLE MITÄÄN SALLITTUA PISTETTÄ, mikä on
+   * syytä sanoa ääneen: Lissabonin (36, 875) ja Granadan (142, 916)
+   * väli on 113,7 yksikköä, eli niiden 60 yksikön ympyrät LEIKKAAVAT
+   * (60 + 60 = 120 > 113,7). Yhtään kaupunkien yhdysviivalla olevaa
+   * pistettä ei siis ole olemassa — Sevillan on pakko istua viivan
+   * etelä- tai pohjoispuolella. Koko sallitun alueen läpikäynti
+   * (isOnLand + kaikki kaupunkivälit) antaa tosipaikkaa lähimmäksi
+   * sallituksi pisteeksi (82, 914), joka on 14,8 yksikön päässä;
+   * nykyinen (81, 917) on 16,7:n päässä. Ero on kaksi yksikköä eli
+   * laudan mitassa muutama kilometri, joten paikkaa EI siirretty:
+   * hyöty on olematon ja siirto liikuttaisi laattaa Tutki-kortin
+   * minikartalla ilman syytä (vrt. Sarajevon rajakommentti alempana).
+   */
   { id: 'sevilla', name: 'Sevilla', wiki: 'Sevilla', ambience: 'kaupunki', x: 81, y: 917, la: 'end', lx: -16, ly: 5 },
   { id: 'amsterdam', name: 'Amsterdam', wiki: 'Amsterdam', ambience: 'satama', x: 305, y: 516, la: 'start', lx: 16, ly: 5 },
   { id: 'berliini', name: 'Berliini', wiki: 'Berliini', ambience: 'kaupunki', x: 468, y: 512, airport: true },

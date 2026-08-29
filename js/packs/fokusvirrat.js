@@ -33,6 +33,13 @@ import { FOKUSVIRTA_SOFIA } from './fokusvirta-sofia.js';
 import { FOKUSVIRTA_TALLINNA } from './fokusvirta-tallinna.js';
 import { FOKUSVIRTA_TUKHOLMA } from './fokusvirta-tukholma.js';
 import { FOKUSVIRTA_WIEN } from './fokusvirta-wien.js';
+import { FOKUSVIRTA_SEVILLA } from './fokusvirta-sevilla.js';
+import { FOKUSVIRTA_BERGEN } from './fokusvirta-bergen.js';
+import { FOKUSVIRTA_AMSTERDAM } from './fokusvirta-amsterdam.js';
+import { FOKUSVIRTA_DUBLIN } from './fokusvirta-dublin.js';
+import { FOKUSVIRTA_EDINBURGH } from './fokusvirta-edinburgh.js';
+import { FOKUSVIRTA_LISSABON } from './fokusvirta-lissabon.js';
+import { FOKUSVIRTA_RIIKA } from './fokusvirta-riika.js';
 
 export const FOKUSVIRRAT = {
   ateena: FOKUSVIRTA_ATEENA,
@@ -84,6 +91,32 @@ export const FOKUSVIRRAT = {
   kobenhavn: FOKUSVIRTA_KOBENHAVN,
   helsinki: FOKUSVIRTA_HELSINKI,
   tallinna: FOKUSVIRTA_TALLINNA,
+  /*
+   * AALTO 4A (sama Raamatun osio, 29.8.2026): seitsemän kaupunkia,
+   * jotka täydentävät Länsi- ja Pohjois-Euroopan rannikon — Sevilla,
+   * Bergen, Amsterdam, Dublin, Edinburgh, Lissabon ja Riika. Sama
+   * TÄYSI pino ja sama faktapohja kuin aalloilla 2 ja 3 (kuratoitu
+   * pelidata + kahden riippumattoman lähteen tarkistus). Kunkin
+   * paketin omat perustelut ja lähteet ovat sen omissa kommenteissa.
+   *
+   * SEVILLA JA EDINBURGH EIVÄT OLE MAANSA AARREKAUPUNKEJA (ne ovat
+   * Madrid ja Lontoo), joten ne ovat ensimmäiset fokuskaupungit, jotka
+   * syventävät maata jo avatun aarteen rinnalla. Rekisteri ei huomaa
+   * siitäkään mitään — ero on paketin sisällössä, ei täällä.
+   *
+   * LIVIAN MAADOITUS on tässä aallossa jaettu Fablen kaanontekstistä
+   * virkkeen rajaa pitkin kenttiin `maadoitus` ja `teksti` niissä
+   * paketeissa, joissa kaanoni antaa yhden puheenvuoron (Dublin,
+   * Lissabon, Riika; Edinburgh teki jaon jo omalla haarallaan).
+   * Yhtäkään Livian sanaa ei ole kirjoitettu lisää.
+   */
+  sevilla: FOKUSVIRTA_SEVILLA,
+  bergen: FOKUSVIRTA_BERGEN,
+  amsterdam: FOKUSVIRTA_AMSTERDAM,
+  dublin: FOKUSVIRTA_DUBLIN,
+  edinburgh: FOKUSVIRTA_EDINBURGH,
+  lissabon: FOKUSVIRTA_LISSABON,
+  riika: FOKUSVIRTA_RIIKA,
 };
 
 /** Kaupungin fokusvirta tai null, jos kaupungille ei ole sisältöä. */
