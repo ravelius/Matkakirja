@@ -47,6 +47,20 @@ await sivu.evaluate(() => {
   // Peli käynnistyy automaattisesti tallennuksesta tai startGamesta.
 });
 
+/*
+ * LEHTILUKKO AUKI ENNEN AVAUSTA (v1323-linjaus, 29.8.2026 —
+ * "Fokusvirran kortit pelaajan polkuun", FOKUSVIRTA_KORTIT = true).
+ * Lontoo on aallon 2 fokusvirtakaupunki: korttiannostelun päällä
+ * lehtilukko (js/fokusvirta.js fokusvirtaOhittaaLehden) ottaa lehden
+ * paikan niin kauan kuin laatta on kääntämättä, jolloin openArrival
+ * palaa heti eikä #arrival-dialogia avata lainkaan — ja koko savuke
+ * mittasi tyhjää (0/4 mainissa: leveys 0, auki false). Laatta
+ * poistetaan siis kerran ennen ensimmäistä avausta: se on täsmälleen
+ * se tila, jossa pelaaja lehden oikeasti avaa. Mitattava asia on
+ * lehden mittavarmistus, ei se kumpi pinta saapumisen omistaa.
+ */
+await sivu.evaluate(() => { window.matkakirja.game.tokens?.delete('lontoo'); });
+
 // 1. Vanhentunut mittakirjaus korjautuu avauksessa
 const avaus = await sivu.evaluate(async () => {
   const ui = window.matkakirja.ui;
@@ -54,8 +68,15 @@ const avaus = await sivu.evaluate(async () => {
   ui.openArrival(ui.game.board.cityById.get('lontoo'));
   await new Promise((r) => setTimeout(r, 300));
   const kortti = document.querySelector('#arrival-dialog .dialog-card');
-  return { mitta: ui.nakymanLeveys, leveys: kortti?.clientWidth ?? 0 };
+  return {
+    mitta: ui.nakymanLeveys,
+    leveys: kortti?.clientWidth ?? 0,
+    auki: Boolean(document.getElementById('arrival-dialog')?.open),
+  };
 });
+// Vartio vartioille: ilman auki olevaa lehteä kaikki kolme tapausta
+// mittaisivat tyhjää (juuri niin kävi v1323:n jälkeen).
+vaadi('lehti on auki mittaushetkellä (lehtilukko ei ohita)', avaus.auki, JSON.stringify(avaus));
 vaadi('avaus korjaa vanhentuneen mitan ilman tapahtumia', avaus.mitta === 1024, JSON.stringify(avaus));
 vaadi('lehti sivutetaan leveänä', avaus.leveys > 900, JSON.stringify(avaus));
 
@@ -73,10 +94,16 @@ const elvytys = await sivu.evaluate(async () => {
   // tapahtumaa tullut. 1600 ms:n jälkitarkistuksen pitää huomata ero.
   ui.nakymanLeveys = 390;
   await new Promise((r) => setTimeout(r, 1400));
-  const tulos = { elvytyksia, mitta: ui.nakymanLeveys };
+  const tulos = {
+    elvytyksia,
+    mitta: ui.nakymanLeveys,
+    auki: Boolean(document.getElementById('arrival-dialog')?.open),
+  };
   ui.elvytaNakyma = alkuperainen;
   return tulos;
 });
+vaadi('lehti on auki jälkitarkistuksen ajan (lehtilukko ei ohita)', elvytys.auki,
+  JSON.stringify(elvytys));
 vaadi('jälkitarkistus elvyttää ilman tapahtumia', elvytys.elvytyksia >= 1 && elvytys.mitta === 1024,
   JSON.stringify(elvytys));
 

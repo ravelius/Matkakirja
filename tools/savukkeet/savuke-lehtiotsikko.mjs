@@ -60,11 +60,33 @@ const kaynnista = async (viewport) => {
 
 const sivu = await kaynnista({ width: 390, height: 844 });
 
+/*
+ * LEHTILUKKO AUKI ENNEN AVAUSTA (v1323-linjaus, 29.8.2026 —
+ * "Fokusvirran kortit pelaajan polkuun", FOKUSVIRTA_KORTIT = true).
+ * Lontoo on aallon 2 fokusvirtakaupunki: korttiannostelun päällä
+ * lehtilukko (js/fokusvirta.js fokusvirtaOhittaaLehden) ottaa lehden
+ * paikan niin kauan kuin laatta on kääntämättä, jolloin openArrival
+ * palaa heti eikä #arrival-dialogia avata lainkaan — savuke kaatui
+ * mainissa poikkeukseen ennen ensimmäistäkään väitettä. Laatta
+ * poistetaan siis ennen avausta: se on täsmälleen se tila, jossa
+ * pelaaja lehden oikeasti avaa. Mitattava asia on lehden nimiö, ei se
+ * kumpi pinta saapumisen omistaa.
+ */
+const avaaLehti = (s) => s.evaluate(() => {
+  window.matkakirja.game.tokens?.delete('lontoo');
+  window.matkakirja.ui.openArrival(window.matkakirja.ui.game.board.cityById.get('lontoo'));
+});
+/** Vartio vartioille: tyhjää mittaava savuke kaatuu ääneen. */
+const vaadiLehtiAuki = async (s, missa) => vaadi(`lehti on auki ${missa} (lehtilukko ei ohita)`,
+  await s.evaluate(() => Boolean(document.getElementById('arrival-dialog')?.open)));
+
+await avaaLehti(sivu);
+await sivu.waitForTimeout(800);
+await vaadiLehtiAuki(sivu, 'kaupunkilehden mittauksissa');
+
 const kaupunki = await sivu.evaluate(async () => {
   const { ui } = window.matkakirja;
   const odota = (ms) => new Promise((r) => setTimeout(r, ms));
-  ui.openArrival(ui.game.board.cityById.get('lontoo'));
-  await odota(800);
   const kortti = document.querySelector('#arrival-dialog .dialog-card');
   const nimi = document.getElementById('arrival-city');
   const hampurilainen = nimi.querySelector(':scope > .lehti-hampurilainen');
@@ -237,11 +259,12 @@ vaadi('maalehden alapalkin hampurilainen on ennallaan',
 
 // Leveä ruutu (iPad): sumea kaista nimiön yläpuolisessa raossa.
 const ipad = await kaynnista({ width: 834, height: 1194 });
+// Sama v1323-linjaus kuin yllä: laatta pois, muuten lehti ei aukea.
+await avaaLehti(ipad);
+await ipad.waitForTimeout(800);
+await vaadiLehtiAuki(ipad, 'iPadin kaistamittauksessa');
 const kaista = await ipad.evaluate(async () => {
-  const { ui } = window.matkakirja;
   const odota = (ms) => new Promise((r) => setTimeout(r, ms));
-  ui.openArrival(ui.game.board.cityById.get('lontoo'));
-  await odota(800);
   const kortti = document.querySelector('#arrival-dialog .dialog-card');
   const tyyli = getComputedStyle(kortti, '::before');
   kortti.scrollTop = 600;

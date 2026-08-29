@@ -60,8 +60,22 @@ async function avaaKortti(id) {
     ui.suljeKulttuuriKuva();
     const kohde = ui.game.board.cityById.get(kaupunki);
     if (!kohde) return null;
+    /*
+     * LEHTILUKKO AUKI ENNEN AVAUSTA (v1323-linjaus, 29.8.2026 —
+     * "Fokusvirran kortit pelaajan polkuun", FOKUSVIRTA_KORTIT = true).
+     * Fokusvirtakaupungissa (Lontoo on aallon 2 sellainen) lehtilukko
+     * (js/fokusvirta.js fokusvirtaOhittaaLehden) ottaa lehden paikan
+     * niin kauan kuin laatta on kääntämättä, jolloin openArrival palaa
+     * heti eikä #arrival-dialogia avata lainkaan — säärivi jää
+     * syntymättä ja koko savuke mittasi mainissa tyhjää. Laatta
+     * poistetaan siis ennen avausta: se on täsmälleen se tila, jossa
+     * pelaaja lehden oikeasti avaa. Mitattava asia on vuosisääkortti,
+     * ei se kumpi pinta saapumisen omistaa.
+     */
+    ui.game.tokens?.delete(kohde.id);
     ui.openArrival(kohde);
     await new Promise((r) => setTimeout(r, 500));
+    const lehtiAuki = Boolean(document.getElementById('arrival-dialog')?.open);
     const rivi = document.querySelector('.lehti-saa');
     const vihje = rivi?.querySelector('.saa-vihje')?.textContent ?? '';
     /*
@@ -86,6 +100,7 @@ async function avaaKortti(id) {
     const kaistaBox = kaistaEl?.getBBox?.();
     const viivaBox = viivaEl?.getBBox?.();
     return {
+      lehtiAuki,
       vihje,
       kortti: Boolean(document.querySelector('.vuosisaa-kortti')),
       kayra: Boolean(viivaEl),
@@ -111,6 +126,9 @@ async function avaaKortti(id) {
 }
 
 const tulos = await avaaKortti('lontoo');
+// Vartio vartioille: ilman auki olevaa lehteä säärivi ei ole olemassa
+// eikä yksikään alla oleva väite mittaa mitään.
+vaadi('lehti on auki mittaushetkellä (lehtilukko ei ohita)', tulos?.lehtiAuki === true);
 vaadi('säärivin vihjeessä lukee vuosiennuste', /vuosiennuste/i.test(tulos.vihje), tulos.vihje);
 vaadi('vuosisääkortti aukeaa', tulos.kortti);
 vaadi('käyrä on pehmeä polku ja sen alla on liukuvärialue',
@@ -140,6 +158,9 @@ await sivu.locator('.vuosisaa-kortti').screenshot({ path: `${ULOS}/vuosisaa.png`
  */
 for (const id of ['kairo', 'moskova', 'tokio', 'ateena']) {
   const otos = await avaaKortti(id);
+  // Kaupunki puuttuu laudalta = hiljainen ohitus. Kaupunki on laudalla
+  // mutta lehti ei auennut = savukkeen oma vika, ja se sanotaan ääneen.
+  if (otos && !otos.lehtiAuki) { vaadi(`lehti aukeaa myös kaupungissa ${id}`, false); continue; }
   if (!otos?.kortti) { console.log(`ohi   ${id} — ei tällä laudalla`); continue; }
   await sivu.locator('.vuosisaa-kortti').screenshot({ path: `${ULOS}/vuosisaa-${id}.png` });
   console.log(`kuva  ${id}: asteikko ${otos.asteikko.join(' ')}`

@@ -77,13 +77,32 @@ const mittaa = () => sivu.evaluate(() => {
   };
 });
 
+/** Onko lehti oikeasti auki juuri nyt? */
+const lehtiAuki = () => sivu.evaluate(() => Boolean(document.getElementById('arrival-dialog')?.open));
+
 // 1. Leveä ruutu: ankkuri-invariantti ja ei inline-korkeuksia.
 await sivu.evaluate(async () => {
   const ui = window.matkakirja.ui;
+  /*
+   * LEHTILUKKO AUKI ENNEN AVAUSTA (v1323-linjaus, 29.8.2026 —
+   * "Fokusvirran kortit pelaajan polkuun", FOKUSVIRTA_KORTIT = true).
+   * Lontoo on aallon 2 fokusvirtakaupunki: korttiannostelun päällä
+   * lehtilukko (js/fokusvirta.js fokusvirtaOhittaaLehden) ottaa lehden
+   * paikan niin kauan kuin laatta on kääntämättä, jolloin openArrival
+   * palaa heti eikä #arrival-dialogia avata lainkaan — ja kaikki
+   * arkkigeometrian väitteet mittasivat mainissa olematonta korttia
+   * (ylaVirhe 36.8, alaVirhe 1079.2 = 1e9:n sijaan puolityhjä mitta).
+   * Laatta poistetaan siis ennen avausta: se on täsmälleen se tila,
+   * jossa pelaaja lehden oikeasti avaa. Mitattava asia on lehtiarkin
+   * alareuna, ei se kumpi pinta saapumisen omistaa.
+   */
+  ui.game.tokens?.delete('lontoo');
   ui.openArrival(ui.game.board.cityById.get('lontoo'));
   await new Promise((r) => setTimeout(r, 400));
 });
 await sivu.waitForTimeout(600);
+// Vartio vartioille: ilman auki olevaa lehteä tapaukset 1–4 mittaavat tyhjää.
+vaadi('lehti on auki arkkimittausten ajan (lehtilukko ei ohita)', await lehtiAuki());
 let t = await mittaa();
 vaadi('leveä: yläreuna = turva-ylä + 0.8rem', t.ylaVirhe <= 2, JSON.stringify(t));
 vaadi('leveä: alareuna = näkyvä alareuna − turva-ala − 0.8rem', t.alaVirhe <= 2, JSON.stringify(t));
@@ -120,6 +139,7 @@ vaadi('pysty kierron jälkeen: alareuna ankkurissa', t.alaVirhe <= 2, JSON.strin
 // 4. Kapea ruutu: kortti täyttää näkymän tarkalleen (turvat pehmusteena).
 await sivu.setViewportSize({ width: 390, height: 844 });
 await sivu.waitForTimeout(900);
+vaadi('lehti on yhä auki kierrosten jälkeen (lehtilukko ei ohita)', await lehtiAuki());
 t = await mittaa();
 vaadi('kapea: kortti täyttää näkymän', t.kapeaYla <= 1 && t.kapeaAla <= 1, JSON.stringify(t));
 await sivu.setViewportSize({ width: 834, height: 1112 });

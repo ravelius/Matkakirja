@@ -236,9 +236,26 @@ const odotetut = await sivu.evaluate(async () => {
 const ennenSaapumista = puhePyynnot.length;
 await sivu.evaluate(async () => {
   const { ui, game } = window.matkakirja;
+  /*
+   * LEHTILUKKO AUKI ENNEN AVAUSTA (v1323-linjaus, 29.8.2026 —
+   * "Fokusvirran kortit pelaajan polkuun", FOKUSVIRTA_KORTIT = true).
+   * Lontoo on aallon 2 fokusvirtakaupunki: korttiannostelun päällä
+   * lehtilukko (js/fokusvirta.js fokusvirtaOhittaaLehden) ottaa lehden
+   * paikan niin kauan kuin laatta on kääntämättä, jolloin openArrival
+   * palaa heti eikä #arrival-dialogia avata lainkaan — eikä yhtään
+   * etukäteispuskuria käynnistetä. Laatta poistetaan siis ennen
+   * avausta: se on täsmälleen se tila, jossa pelaaja lehden oikeasti
+   * avaa (aarre löydetty, kaupunki vapaana tutkittavaksi). Mitattava
+   * asia on puskurointi, ei se kumpi pinta saapumisen omistaa.
+   */
+  game.tokens?.delete('lontoo');
   ui.openArrival(game.board.cityById.get('lontoo'));
   await new Promise((r) => setTimeout(r, 3500));
 });
+// Vartio vartioille: jos lehti ei aukea, kaikki puskuriväitteet
+// mittaisivat tyhjää (juuri niin kävi v1323:n jälkeen).
+vaadi('kaupunkilehti on auki puskurimittausten ajan (lehtilukko ei ohita)',
+  await sivu.evaluate(() => Boolean(document.getElementById('arrival-dialog')?.open)));
 
 /*
  * 5. Kaupunkilehden etusivun ISO KUVAPAIKKA: pyydetty saapumisesta, ja
