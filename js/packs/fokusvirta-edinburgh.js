@@ -82,14 +82,6 @@
  * `matkakirja.teksti`- että `matkakirja.luenta`-kenttään sanasta
  * sanaan samana; muuhun merkintään ei ole koskettu.
  *
- * FABLE, YKSI JÄLKISEURAUS KATSELMOITAVAKSI: Bobby-täky (takyt[0])
- * päättyy virkkeeseen "Hän ehti siis kirjata patsaan, jota ei vielä
- * ollut pystytetty." Se oli tosi vanhan kaanonin kanssa, mutta
- * korjatun merkinnän kanssa se on turha — isoisä ei enää väitä
- * patsasta pystytetyksi. Opus EI koske pelaajalle näkyvään
- * tarinatekstiin, joten virke on jätetty ennalleen; poisto tai
- * uudelleenmuotoilu on päätoimittajan kynän alla.
- *
  * ── ÄÄNITE ─────────────────────────────────────────────────────────
  *
  * Luentaa EI ole vielä generoitu, joten `matkakirja.aanite` puuttuu.
@@ -296,12 +288,12 @@ export const FOKUSVIRTA_EDINBURGH = {
         + 'pormestari Sir William Chambers oli maksanut sen koiraveron ja '
         + 'antanut sille kaulapannan, joka on nyt kaupunginmuseossa; '
         + 'pannan ansiosta se ei ollut kenenkään silmissä isännätön. '
-        + 'Patsas, jonka isoisäsi mainitsee, on '
+        + 'Muistomerkki, jonka isoisäsi mainitsee, on '
         + 'oikeastaan juomakaivo: lady Burdett-Coutts tilasi sen vähän '
         + 'ennen koiran kuolemaa, kuvanveistäjä William Brodie veisti '
         + 'pronssin elävästä mallista, ja koko laite paljastettiin 15. '
         + 'marraskuuta 1873 — kolme kuukautta isoisäsi käynnin jälkeen. '
-        + 'Hän ehti siis kirjata patsaan, jota ei vielä ollut pystytetty. '
+        + 'Hän ehti siis kirjata muistomerkin, jota ei vielä ollut pystytetty. '
         + 'Ja tässä on se osa, jonka matkailuoppaat kertovat harvemmin: '
         + 'tarinasta on kiistelty koko sen iän. Kaksi eri John Grayta käy '
         + 'isännästä, ja yksi tutkija on laskenut, että 1800-luvun '
@@ -674,7 +666,7 @@ export const FOKUSVIRTA_EDINBURGH = {
     vihjeOsio: 'kaupunki',
     teksti: 'Ewan tulee vallille kaksikymmentä minuuttia ennen aikaa, '
       + 'koska hänen isoisänsä tuli kaksikymmentäviisi ja hän pitää sitä '
-      + 'liioitteluna. Työ on kolme minuuttia pitkä ja sata vuotta '
+      + 'liioitteluna. Työ on kolme minuuttia pitkä ja puolitoistasataa vuotta '
       + 'vanha: panos sisään, kello silmällä, käsi ylhäällä, ja alas '
       + 'juuri niin että laukaus lähtee sekunnilla eikä sekunnin '
       + 'jälkeen. Hän puhuu vähän ja katsoo enemmän lahdelle kuin '
