@@ -75,19 +75,34 @@ const NAPPIMITAT = `(() => {
   };
 })()`;
 
+/*
+ * LEHTILUKKO AUKI ENNEN AVAUSTA (v1323-linjaus, 29.8.2026 —
+ * "Fokusvirran kortit pelaajan polkuun", FOKUSVIRTA_KORTIT = true).
+ * Lontoo on aallon 2 fokusvirtakaupunki: korttiannostelun päällä
+ * lehtilukko (js/fokusvirta.js fokusvirtaOhittaaLehden) ottaa lehden
+ * paikan niin kauan kuin laatta on kääntämättä, jolloin openArrival
+ * palaa heti eikä #arrival-dialogia avata lainkaan — savuke mittasi
+ * mainissa nullia ja kaatui lopulta poikkeukseen. Laatta poistetaan
+ * siis ennen avausta: se on täsmälleen se tila, jossa pelaaja lehden
+ * oikeasti avaa. Mitattava asia on lehden asettelu, ei se kumpi pinta
+ * saapumisen omistaa.
+ */
 const kaupunki = await sivu.evaluate(async (NAPPI) => {
   const { ui } = window.matkakirja;
   const odota = (ms) => new Promise((r) => setTimeout(r, ms));
   const mittaa = () => eval(NAPPI); // eslint-disable-line no-eval
+  ui.game.tokens?.delete('lontoo');
   ui.openArrival(ui.game.board.cityById.get('lontoo'));
   await odota(800);
   const dialogi = document.getElementById('arrival-dialog');
+  const lehtiAuki = dialogi.open;
   const etusivu = mittaa();
   ui.vaihdaTutkiSivu(1);
   await odota(500);
   const aihesivu = mittaa();
   const aiheNimessa = Boolean(document.querySelector('.aihe-nimi > .lukija-nappi'));
   return {
+    lehtiAuki,
     eiPilleria: !dialogi.querySelector('.tutki-navi'),
     eiVakasta: !dialogi.querySelector('.tutki-pohjaan'),
     etusivu,
@@ -95,6 +110,8 @@ const kaupunki = await sivu.evaluate(async (NAPPI) => {
     aiheNimessa,
   };
 }, NAPPIMITAT);
+// Vartio vartioille: ilman auki olevaa lehteä koko savuke mittaa tyhjää.
+vaadi('lehti on auki mittausten ajan (lehtilukko ei ohita)', kaupunki.lehtiAuki === true);
 vaadi('sivupilleri ja pohjaväkänen poissa', kaupunki.eiPilleria && kaupunki.eiVakasta,
   JSON.stringify({ pilleri: !kaupunki.eiPilleria, vakanen: !kaupunki.eiVakasta }));
 vaadi('etusivulla kaiutin on nimiössä otsikon rivillä (ero ≤ 3 px)',

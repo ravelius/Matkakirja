@@ -85,11 +85,27 @@ await sivu.waitForTimeout(1500);
 await sivu.evaluate(async () => {
   const { ui } = window.matkakirja;
   const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  /*
+   * LEHTILUKKO AUKI ENNEN AVAUSTA (v1323-linjaus, 29.8.2026 —
+   * "Fokusvirran kortit pelaajan polkuun", FOKUSVIRTA_KORTIT = true).
+   * Lontoo on aallon 2 fokusvirtakaupunki: korttiannostelun päällä
+   * lehtilukko (js/fokusvirta.js fokusvirtaOhittaaLehden) ottaa lehden
+   * paikan niin kauan kuin laatta on kääntämättä, jolloin openArrival
+   * palaa heti eikä #arrival-dialogia avata lainkaan — eikä lehden
+   * sivulta löydy yhtään luettavaa kohtaa. Laatta poistetaan siis
+   * ennen avausta: se on täsmälleen se tila, jossa pelaaja lehden
+   * oikeasti avaa. Mitattava asia on lukijan sivunseuranta, ei se
+   * kumpi pinta saapumisen omistaa.
+   */
+  ui.game.tokens?.delete('lontoo');
   ui.openArrival(ui.game.board.cityById.get('lontoo'));
   await odota(800);
   ui.vaihdaTutkiSivu(1);
   await odota(500);
 });
+// Vartio vartioille: ilman auki olevaa lehteä koko savuke mittaa tyhjää.
+vaadi('lehti on auki luentamittausten ajan (lehtilukko ei ohita)',
+  await sivu.evaluate(() => Boolean(document.getElementById('arrival-dialog')?.open)));
 
 // 1. Kohtien rakenne oikeassa DOMissa.
 const kohtia = await sivu.evaluate(async () => {
