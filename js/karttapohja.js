@@ -527,6 +527,22 @@ export class Karttapohja {
      * 1036 ms rajaa 750 vastaan. Se on omistajan oma tarkastelutila
      * eikä pelaajan polku, joten sen pohja piirtyy kuten ennenkin.
      *
+     * KOE UUSITTIIN KOLMANNEN KERRAN 29.8.2026 (omistajan Mac 1470x923
+     * dpr2, Kreikan näkymä maailmanappi päällä). Silloin selvisi, ettei
+     * tämä poikkeus ollutkaan se, mikä maailmanäkymää hidasti: koko
+     * kerros rasteroitui uudelleen joka kehyksessä siksi, että
+     * pikkulehdet käynnistivät esiinhäivähdyksensä alusta aina kun
+     * näkymärajaus toi ne takaisin näkyviin. Häivähdyksen poisto
+     * (css/styles.css `.fokus-maailma .fokuskartta-kuva`) pudotti
+     * panoroinnin RasterTaskin 10 990 → 1 058 ms.
+     *
+     * SEN JÄLKEEN TÄMÄ RIVI MITATTIIN VIELÄ A/B:NÄ, ja poikkeus voitti
+     * yhä: panoroinnin longtask-summa 1567 ja 1734 ms (poikkeus
+     * voimassa) vastaan 2041, 2193 ja 2183 ms (kooste päällä). Syy on
+     * sama kuin ennenkin — näkymärajaus vaihtaa lehtijoukkoa
+     * panoroinnin edetessä, ja jokainen vaihdos mitätöi koko koosteen.
+     * Poikkeus jää.
+     *
      * Tämän poistaa vasta vaihe 4 (laattapyramidi): silloin lehteä ei
      * koosteta kokonaisena vaan laatta kerrallaan, ja zoomin muutos
      * mitätöi vain sen tason laatat.

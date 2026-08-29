@@ -283,7 +283,7 @@ import { paivitaElaintakyt, nollaaElaintakyt } from './elaintaky.js';
  * eivät ole laudalla vaan kartan päällä HTML:nä, koska ne eivät saa
  * skaalautua zoomissa — ks. js/fokusmitat.js.
  */
-import { nollaaFokusmitat, paivitaFokusmitat } from './fokusmitat.js';
+import { nollaaFokusmitat, paivitaFokusmitat, projisoiLaudalle } from './fokusmitat.js';
 
 const DIE_FACES = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 const BOT_DELAY = 650;
@@ -1168,6 +1168,17 @@ const FOKUS_NIMI_NAPPULAN_ALLE_PX = 28 / 2 + 4 + 9;
  * täyttää sen mitä jää. Tämä on lattia, jonka alle koko ei mene.
  */
 const FOKUS_NIMI_VAHIN_PX = 11;
+/*
+ * KUINKA LEVEÄ NÄKYMÄ SAA OLLA, JOTTA KAUPUNKIEN NIMET NÄKYVÄT
+ * (pituusasteina, ks. paivitaKaupunkinimienNakyvyys).
+ *
+ * SAMA LUKU KUIN ELÄINTÄYILLÄ (js/elaintaky.js
+ * ELAINTAKY_NAKYY_ASTETTA), samasta syystä ja samalla mittauksella:
+ * raja kulkee siitä, mahtuuko maanosa ruudulle. Luku on tarkoituksella
+ * toisinto eikä jaettu vakio — kerrokset ovat eri moduuleissa ja
+ * saavat erota, jos omistaja haluaa nimille toisen rajan kuin täyille.
+ */
+const KAUPUNKINIMET_NAKYY_ASTETTA = 90;
 /* Askelpiste ilman kaupunkia on pelkkä reitin nasta — puolet merkistä. */
 const FOKUS_KOHDE_PISTE_PX = 10;
 /* Napautusalue: sama sormisääntö kuin laatalla, sama katto laudalla. */
@@ -4816,6 +4827,8 @@ export class UI {
      * seuraavalla.
      */
     this.paivitaMaailmanRajaus(nakyvaNyt);
+    // Kaupunkien nimet pois yleiskuvasta (ks. paivitaKaupunkinimienNakyvyys).
+    this.paivitaKaupunkinimienNakyvyys(nakyvaNyt);
     /*
      * Fokusnäkymän lisänimet tahdistetaan ENNEN varhaisia paluita:
      * ne elävät omassa kerroksessaan eivätkä riipu nimipaketista,
@@ -6771,6 +6784,74 @@ export class UI {
     }
   }
 
+  /**
+   * KAUPUNKIEN NIMET POIS YLEISKUVASTA.
+   *
+   * === TILAUS (omistaja 29.8.2026, maailman yleiskuva) ===
+   *
+   * *"älä näytä kaupunkien nimiä tällä zoom tasolla"* — kaappauksessa
+   * koko maailma kerralla ruudulla ja sen päällä 261 nimilappua
+   * päällekkäin: puuromainen näkymä, jossa yksikään nimi ei ole
+   * luettavissa. Nimi on kartan merkintä, ja kartan merkintä on
+   * hyödyllinen vasta kun sen kohde erottuu.
+   *
+   * === RAJA ON SAMA KUIN ELÄINTÄYILLÄ ===
+   *
+   * Näkymän leveys PITUUSASTEINA (js/elaintaky.js
+   * ELAINTAKY_NAKYY_ASTETTA, 90°) — ei lautayksikköinä, koska sama
+   * yksikkö tarkoittaa eri asiaa maailmankartalla ja Euroopan laudalla.
+   * Mitattu samalla ruudulla (1100 px):
+   *
+   *     maailmankartan yleiskuva      349°  → nimet piilossa
+   *     maailmankartta neljä porrasta  70°  → nimet näkyvissä
+   *     Euroopan laudan yleiskuva      80°  → nimet näkyvissä
+   *
+   * Raja kulkee siis siitä, mahtuuko maanosa ruudulle. Euroopan lauta
+   * ei siis menetä nimiään koskaan — se lauta ON maanosan kartta —
+   * eikä pelaajan oma lähikuva muutu millään laudalla.
+   *
+   * LÄHTÖ- JA KOHDEKAUPUNGIT JÄÄVÄT. Ne ovat pelin omia paikkoja
+   * (.start-label) eikä niitä ole ruudulla kuin kourallinen, joten ne
+   * eivät puurouta mitään — ja juuri niitä yleiskuvasta etsitään.
+   *
+   * SÄÄNTÖ ON LUOKKA, EI SUODATIN (sama iOS-sääntö kuin kartan
+   * muillakin kerroksilla, tests/rules.test.mjs), ja luokka menee
+   * KERROKSEEN eikä lappuihin: yksi määrekirjoitus 261:n sijaan.
+   */
+  paivitaKaupunkinimienNakyvyys(tiedettyNakyva = null) {
+    const cities = this.svg?.querySelector('.cities');
+    if (!cities) return;
+    const nakyva = tiedettyNakyva ?? this.nakyvaAlue();
+    const asteenLeveys = this.kaupunkinimiAsteenLeveys();
+    /*
+     * Ilman mitattavaa näkymää tai tuntematonta projektiota nimet
+     * jäävät näkyviin: väärä piilotus olisi pahempi kuin puuro (sama
+     * varapolku kuin eläintäyillä).
+     */
+    const piiloon = nakyva?.w > 0 && asteenLeveys > 0
+      && nakyva.w / asteenLeveys > KAUPUNKINIMET_NAKYY_ASTETTA;
+    cities.classList.toggle('kaupunkinimet-piilossa', Boolean(piiloon));
+  }
+
+  /**
+   * Montako lautayksikköä on yksi pituusaste — laudan omasta
+   * projektiosta luettuna, ei taulukoituna (sama tapa kuin
+   * js/elaintaky.js elaintakyAsteenLeveys ja mittajana).
+   *
+   * Vastaus riippuu vain laudasta, joten se muistetaan: tätä kysytään
+   * jokaisesta näkymän asettumisesta.
+   */
+  kaupunkinimiAsteenLeveys() {
+    const lauta = this.game?.pack?.id;
+    if (!lauta) return 0;
+    if (this.kaupunkinimiAsteLauta === lauta) return this.kaupunkinimiAste ?? 0;
+    const a = projisoiLaudalle(lauta, 0, 0);
+    const b = projisoiLaudalle(lauta, 1, 0);
+    this.kaupunkinimiAsteLauta = lauta;
+    this.kaupunkinimiAste = (a && b) ? Math.abs(b.x - a.x) : 0;
+    return this.kaupunkinimiAste;
+  }
+
   /* --- PALLOT POIS LEHDEN PÄÄLTÄ (omistaja 24.8.2026, v1097) -------- */
 
   /**
@@ -7345,6 +7426,8 @@ export class UI {
     }
     for (const osa of osat) this.asetaLaatanKoko(osa, kerroin);
     this.fokusLaattaOsat = osat;
+    // Maailmanäkymässä sama mitta koskee KAIKKIA kaupunkeja (ks. alla).
+    this.paivitaMaailmanLaattaKoot(kerroin);
     /*
      * MERKINTÄ SIITÄ, ETTÄ NAPPULA SEISOO TÄMÄN LAATAN PÄÄLLÄ.
      *
@@ -7523,6 +7606,84 @@ export class UI {
   }
 
   /**
+   * MAAILMANÄKYMÄSSÄ KAIKKI KAUPUNKIPALLOT SAMAAN MITTAAN.
+   *
+   * === MIKÄ VIKA OLI (omistajan laiteraportti 29.8.2026, Mac) ===
+   *
+   * *"kaupunkipallot hervottoman kokoisia"* — kaappauksessa
+   * Dubrovnikin, Sofian ja Istanbulin ympyrät olivat moninkertaisia
+   * kartan omiin merkintöihin nähden, Istanbulin rengas noin 180
+   * pikseliä ruudulla.
+   *
+   * Vika ei ole mittakaavassa vaan siinä, KETÄ mitoitus koskee.
+   * Fokusnäkymässä kaupunkien laatat ovat piilossa lehden alla
+   * (paivitaFokusPallot, .fokus-lehden-alla) ja näkyvissä on vain
+   * nykyisen kaupungin laatta — se, ja vain se, kutistetaan ruudulla
+   * vakiokokoiseksi (paivitaFokusLaatta, FOKUS_LAATTA_PX = 15 px).
+   *
+   * KEHITTÄJÄN MAAILMANÄKYMÄ PITÄÄ KAIKKI LAATAT NÄKYVISSÄ (omistajan
+   * tilaus 27.8.2026: kohdekaupungit näkyviin, jotta maasta toiseen
+   * pääsee siirtymään). Piilotus katosi, mutta mitoitus ei tullut
+   * tilalle: muut kaupungit jäivät LAUDAN yksiköihin, ja fokuszoomi
+   * suurentaa laudan yksikön moninkertaiseksi. Mitattuna Kreikan
+   * näkymässä (1470 x 923, dpr 2) nykyisen kaupungin laatta oli 15 px
+   * ja naapurikaupungin 47 px — omistajan omalla lähizoomilla
+   * kolminkertaisesti siitä.
+   *
+   * Sama juurisyy kuin nappulalla v1293:ssa ja kohdemerkeillä
+   * v1291:ssä: laudan yksiköissä annettu mitta fokusnäkymässä.
+   *
+   * === SÄÄNTÖ ===
+   *
+   * Maailmanäkymässä JOKAINEN kaupungin osa saa saman kertoimen kuin
+   * nykyisen kaupungin laatta. Kerroin on yhteinen eikä osakohtainen,
+   * jotta laudan oma kokohierarkia säilyy: lähtökaupungin laatta on
+   * yhä isompi kuin tavallisen, kuten laudallakin.
+   *
+   * NIMILAPUT OVAT JO OIKEIN eivätkä kuulu tänne: ne mitoitetaan
+   * ruutumittaan omassa silmukassaan (paivitaFokusNimilaput), ja juuri
+   * siksi omistajan kaappauksessa nimet olivat oikean kokoisia ja
+   * pallot eivät. Sama koskee eläintäkyjä (js/elaintaky.js) ja
+   * kohdemerkkejä.
+   *
+   * TUNNISTE OHITTAA TOISTON. Kerroin on vakio niin kauan kuin lehti ja
+   * ruutukoko pysyvät, joten 600 osan silmukka ajetaan vain kun se
+   * oikeasti muuttuu — sama kuri kuin näkymärajauksella
+   * (paivitaMaailmanRajaus sääntö 3).
+   */
+  paivitaMaailmanLaattaKoot(kerroin) {
+    const cities = this.svg?.querySelector('.cities');
+    const paalla = Boolean(cities) && Boolean(this.maailmanakyma?.())
+      && this.fokusmoodi && !this.katselu && kerroin > 0;
+    if (!paalla) {
+      // Näkymä sammui: kaikki paitsi nykyisen kaupungin omat osat
+      // (fokusLaattaOsat, hoidettu paivitaFokusLaatassa) takaisin
+      // laudan omaan kokoonsa.
+      if (this.maailmanLaattaOsat?.size) {
+        const omat = new Set(this.fokusLaattaOsat ?? []);
+        for (const osa of this.maailmanLaattaOsat) {
+          if (!omat.has(osa)) this.asetaLaatanKoko(osa, 1);
+        }
+        this.maailmanLaattaOsat.clear();
+      }
+      this.maailmanLaattaAvain = null;
+      return;
+    }
+    const avain = `${kerroin.toFixed(4)}:${cities.childElementCount}`;
+    if (this.maailmanLaattaAvain === avain && this.maailmanLaattaKerros === cities) return;
+    this.maailmanLaattaAvain = avain;
+    this.maailmanLaattaKerros = cities;
+    const joukko = (this.maailmanLaattaOsat ??= new Set());
+    joukko.clear();
+    for (const osa of cities.children) {
+      // Nimet mitoitetaan muualla (ks. sääntö yllä).
+      if (osa.classList.contains('city-label')) continue;
+      this.asetaLaatanKoko(osa, kerroin);
+      joukko.add(osa);
+    }
+  }
+
+  /**
    * Yhden laatan osan koko: skaalaus keskipisteen ympäri tai palautus.
    *
    * Alkuperäinen muunnos (heilunta) talletetaan ensimmäisellä kerralla
@@ -7546,8 +7707,17 @@ export class UI {
       else osa.removeAttribute('transform');
       return;
     }
-    const x = Number(osa.dataset.kx);
-    const y = Number(osa.dataset.ky);
+    /*
+     * ANKKURI OMISTA MÄÄREISTÄ, JOS KAUPUNKITUNNISTETTA EI OLE. data-kx
+     * kirjoitetaan vain kaupungeille, jotka löytyvät laudan cityCountry-
+     * taulusta (ks. fokusMaare); maailmankartalla ulkopuolelle jää mm.
+     * Jerusalem. Maailmanäkymässä nekin ovat kartalla ja niiden pallot
+     * paisuisivat samalla tavalla, joten skaalauskeskiö luetaan silloin
+     * osan omasta ankkurista — sama varapolku kuin näkymärajauksella
+     * (paivitaMaailmanRajaus).
+     */
+    const x = Number(osa.dataset.kx ?? osa.getAttribute('cx') ?? osa.getAttribute('x'));
+    const y = Number(osa.dataset.ky ?? osa.getAttribute('cy') ?? osa.getAttribute('y'));
     if (!Number.isFinite(x) || !Number.isFinite(y)) return;
     osa.setAttribute('transform', `translate(${x} ${y}) scale(${kerroin.toFixed(4)}) `
       + `translate(${-x} ${-y}) ${perus}`.trimEnd());
@@ -7753,8 +7923,20 @@ export class UI {
      * poistuttaessa alkuperäinen ladonta on palautettava kaikille.
      */
     const rajatut = paalla ? this.maailmanRajatut : null;
+    /*
+     * YLEISKUVASSA PIILOTETTUA NIMEÄ EI LADOTA — sama peruste kuin
+     * näkymärajatulla lapulla rivi ylempänä: se on `display: none`
+     * (css .cities.kaupunkinimet-piilossa) eikä maalaudu, joten sen
+     * määreiden kirjoittaminen olisi pelkkä asettelun mitätöinti.
+     * Lähtökaupungit jäävät näkyviin ja siis myös ladottaviksi.
+     * Näkyvyys päivitetään ENNEN tätä (paivitaMaastonimet), joten
+     * lähikuvaan palaava nimi saa mittansa samalla asettumisella.
+     */
+    const yleiskuva = paalla
+      && Boolean(this.svg.querySelector('.cities.kaupunkinimet-piilossa'));
     for (const lappu of laput) {
       if (rajatut?.has(lappu)) continue;
+      if (yleiskuva && !lappu.classList.contains('start-label')) continue;
       if (!paalla) {
         if (lappu.dataset.nimiPerus === undefined) continue;
         const perus = JSON.parse(lappu.dataset.nimiPerus);
@@ -7826,6 +8008,8 @@ export class UI {
   tyhjennaFokusLaatta() {
     if (this.fokusLaattaKerros?.firstChild) this.fokusLaattaKerros.textContent = '';
     this.fokusLaattaAvain = null;
+    // Maailmanäkymän yhteismitoitus puretaan samalla (kerroin 0 = pois).
+    this.paivitaMaailmanLaattaKoot(0);
     if (!this.fokusLaattaOsat?.length) return;
     for (const osa of this.fokusLaattaOsat) {
       this.asetaLaatanKoko(osa, 1);
