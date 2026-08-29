@@ -731,9 +731,11 @@ export const FOKUSVIRTA_RIIKA = {
        * matala putous joen poikki, metsäinen ranta, ei tunnistettavia
        * ihmisiä.
        *
-       * LOISTOAIKAKUVAA EI VIELÄ OLE (sama huomautus kuin Tukholmassa ja
-       * Tallinnassa): putous kutuaikaan ja tiilisilta ovat vasta
-       * promptinipussa, joten pääkuvaksi jää valokuva.
+       * LOISTOAIKAKUVAA EI VIELÄ OLE: putous kutuaikaan ja tiilisilta
+       * ovat vasta promptinipussa, joten pääkuvaksi jää valokuva.
+       * Kun kuva on generoitu, se tulee `osoite`-kenttään ja tämä
+       * valokuva siirtyy `valokuva`-kenttään — sama kaava kuin
+       * Tallinnan ja Tukholman nostoilla (v1333).
        */
       kuva: {
         tiedosto: 'Venta Rapid from the left bank.jpg',

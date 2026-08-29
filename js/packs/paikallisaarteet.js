@@ -73,22 +73,24 @@ export const PAIKALLISAARTEET = {
    * nimi ja isoisän merkintä ovat eri asiaa, kaupungin koko kaari
    * hajoaa löytöhetkellä — siksi pari seuraa nyt merkintöjä.
    *
-   * KUVAT OVAT VANHAN PARIN OMAT eikä niitä ole vielä generoitu
-   * uusiksi: assets/aarteet/paikallis/fin-pieni.jpg on mustikkakori ja
-   * fin-iso.jpg Sammon siru. Ne EIVÄT käy uusiin nimiin, joten
-   * `kuva`-kenttä on poistettu — silloin peli näyttää laudan oman
-   * aarrekuvan (js/game.js aarreMantereella), joka on oikea eikä väärä.
-   * Kummankin uuden aiheen kuvaprompti on raportoitu promptinippuun, ja
-   * kun kuvat on generoitu, `kuva`-rivit palautetaan tähän.
+   * KUVAT GENEROITIIN UUSIKSI v1333:ssa ja `kuva`-rivit palautettiin
+   * (v1320 poisti ne, koska tiedostoissa oli vielä vanhan parin
+   * mustikkakori ja Sammon siru, jotka eivät käyneet uusiin nimiin).
+   * Samat tiedostonimet, sama kaava kuin 58 muulla paikallisaarteella:
+   * 640x640 JPEG q82. fin-pieni.jpg on nyt tervatynnyrin pohja ja
+   * siihen tarttunut hopeariksi, fin-iso.jpg vaskooli, jossa mustan
+   * hiekan seassa on yksi kultahippu.
    */
   FIN: {
     pieniAarre: {
       name: 'Tervatynnyrin pohjalta löytynyt hopeariksi',
+      kuva: 'assets/aarteet/paikallis/fin-pieni.jpg',
       fakta: 'Terva oli 1800-luvun Suomen tärkein vientitavara, ja Oulu oli '
         + 'maailman suurimpia tervasatamia.',
     },
     isoAarre: {
       name: 'Ivalojoen kultahippu',
+      kuva: 'assets/aarteet/paikallis/fin-iso.jpg',
       fakta: 'Ivalojoen kultaryntäys alkoi 1870, ja huippuvuonna 1871 joelta '
         + 'huuhdottiin yli 50 kiloa kultaa.',
     },

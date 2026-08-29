@@ -469,6 +469,12 @@ test('vähintään yhdessä maadoituksessa isoisä osoittautuu oikeaksi', () => 
  * jota kaksi muuta eivät ole — väärin kirjoitettu polku ei näy missään
  * ennen kuin kortti on auki pelissä — joten sille luetaan myös levy,
  * kuten karttaliitteelle.
+ *
+ * MYÖS TÄKYNOSTOT (v1333). Aallon 3 nostot (Kaali, Oulun terva,
+ * Trelleborg, Vasaloppet) toivat `osoite`-pääkuvan myös
+ * `takynostot`-korteille, jotka jäivät tästä vartiosta ulos: levylukua
+ * ei tehty, joten rikki kirjoitettu polku olisi mennyt läpi kaikista
+ * porteista ja näkynyt vasta pelaajalle. Nyt ne ovat mukana.
  */
 test('jokaisella fokusvirran kuvalla on selite ja lähde', () => {
   for (const [kaupunki, virta] of Object.entries(FOKUSVIRRAT)) {
@@ -476,6 +482,7 @@ test('jokaisella fokusvirran kuvalla on selite ja lähde', () => {
       virta.matkakirja?.kuva, virta.pollo?.kuva,
       virta.oppitunti?.kuva, virta.oppitunti?.valokuva,
       ...(virta.takyt ?? []).flatMap((t) => [t.kuva, t.valokuva]),
+      ...(virta.takynostot ?? []).flatMap((t) => [t.kuva, t.valokuva]),
       ...(virta.kohteet ?? []).map((k) => k.kuva),
     ].filter(Boolean);
     assert.ok(kuvat.length >= 4, `${kaupunki}: kuvia on liian vähän`);
@@ -506,6 +513,7 @@ test('jokaisella fokusvirran kuvalla on selite ja lähde', () => {
 test('syvennyksen kakkoskuva on eri kuva kuin pääkuva', () => {
   const parit = Object.entries(FOKUSVIRRAT).flatMap(([kaupunki, virta]) => [
     ...(virta.takyt ?? []).map((t) => [`${kaupunki}/${t.id}`, t]),
+    ...(virta.takynostot ?? []).map((t) => [`${kaupunki}/${t.id}`, t]),
     ...(virta.oppitunti ? [[`${kaupunki}/oppitunti`, virta.oppitunti]] : []),
   ].filter(([, kortti]) => kortti.valokuva));
   assert.ok(parit.length >= 4, 'kakkoskuvallisia syvennyksiä ei löytynyt');

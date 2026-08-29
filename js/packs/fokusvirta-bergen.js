@@ -831,9 +831,11 @@ export const FOKUSVIRTA_BERGEN = {
        * nykyihmisiä. Lippu on sama yksityiskohta, jonka pelin oma nosto
        * mainitsee.
        *
-       * LOISTOAIKAKUVAA EI VIELÄ OLE (sama huomautus kuin Tukholmassa ja
-       * Helsingissä): tämän erän generoidut kuvat ovat vasta
-       * promptinipussa, joten pääkuvaksi jää valokuva.
+       * LOISTOAIKAKUVAA EI VIELÄ OLE: tämän erän generoidut kuvat ovat
+       * vasta promptinipussa, joten pääkuvaksi jää valokuva. Kun kuva
+       * on generoitu, se tulee `osoite`-kenttään ja tämä valokuva
+       * siirtyy `valokuva`-kenttään — sama kaava kuin Helsingin ja
+       * Tukholman nostoilla (v1333).
        */
       kuva: {
         tiedosto: 'Amundsen Expedition at South Pole.jpg',
