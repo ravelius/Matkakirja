@@ -1628,6 +1628,65 @@ export class Game {
   }
 
   /**
+   * PÖLLÖN SÄHKETEHTÄVÄ AVAA LAATAN ILMAN VISAA (Raamattu, PÖLLÖN
+   * SÄHKETEHTÄVÄ; pilotti Tukholmassa, js/packs/fokusvirta-tukholma.js).
+   *
+   * Sähketehtävä on kohtaamisen SIJAINEN, ei sen rinnalla: pöllö on jo
+   * löytänyt paikan ja lähettää sähkeen, pelaaja täyttää vastaussähkeen
+   * ja Livia vie sen perille. Kun vastaus on oikein, laatta kääntyy —
+   * eikä välissä ole visadialogia, jolle kaksi yritystä laskettaisiin.
+   *
+   * KOLME EROA VISAPOLKUUN, KAIKKI OMISTAJAN LINJAUSTA (29.8.2026):
+   *   1. YRITYKSIÄ EI RAJATA eikä aarre lukitu koskaan — tämä metodi
+   *      kutsutaan vasta oikeasta vastauksesta, joten `kaariYritykset`
+   *      ja `lukitseAarre` eivät ole tässä polussa lainkaan mukana.
+   *   2. PALKKIO PIENENEE OHILYÖNNEISTÄ. Summan laskee kutsuja
+   *      (js/fokusvirta.js sahkePalkkio) ja antaa tässä valmiina, koska
+   *      ohilyöntien kirjanpito on lomakkeen omaa istuntotietoa.
+   *   3. VUORO PÄÄTETÄÄN KUTEN closeQuiz sen päättäisi. Sähke korvaa
+   *      koko kysymyksen, joten sen jälkeen pitää tapahtua täsmälleen
+   *      sama kuin visan sulkemisen jälkeen: rosvon kaksintaistelu, jos
+   *      laatan alta löytyi ryöstäjä, muuten vuoro vaihtuu. Ilman tätä
+   *      `duelArmed` jäisi päälle ja laukeaisi myöhemmin väärässä
+   *      kaupungissa.
+   *
+   * @param {string} cityId  kaupunki, jonka laatta käännetään
+   * @param {number} palkkio sähkeestä maksettava summa (0 = ei mitään)
+   * @returns {{ok:boolean, found:?string, palkkio:number, duel:boolean}}
+   */
+  avaaAarreSahkeella(cityId, palkkio = 0) {
+    if (this.phase !== 'action' && this.phase !== 'offer') {
+      return { ok: false, error: 'Väärä vaihe' };
+    }
+    if (!this.tokens.has(cityId)) return { ok: false, error: 'Täällä ei ole laattaa' };
+    const p = this.player;
+    const city = this.board.cityById.get(cityId);
+    this.say(p.id, `${p.name} lähetti pöllölle oikean sähkeen kaupungista ${city?.name ?? cityId}.`);
+    /*
+     * PALKKIO ENNEN LAATAN KÄÄNTÖÄ, kuten vaikean kysymyksen bonus
+     * (answerQuiz): ryöstäjä vie senkin, jos kätkössä sattuu olemaan
+     * rosvo. Tietäjäpisteet tulevat samasta taskusta kuin vaikeasta
+     * kysymyksestä — sähke on työläin yksittäinen tehtävä pelissä.
+     */
+    if (palkkio > 0) {
+      p.money += palkkio;
+      this.say(p.id, `Sähkeestä ${p.name} saa ${palkkio} puntaa.`);
+      this.emit('aid', `Sähkepalkkio +${palkkio} puntaa`, { icon: 'kukkaro' });
+    }
+    this.awardXp(p, XP_HARD_ANSWER);
+    const found = this.revealToken(cityId);
+    if (this.phase === 'over') return { ok: true, found, palkkio, duel: false };
+    if (this.duelArmed) {
+      this.duelArmed = false;
+      this.beginDuel();
+      return { ok: true, found, palkkio, duel: true };
+    }
+    this.phase = 'action';
+    this.endTurn();
+    return { ok: true, found, palkkio, duel: false };
+  }
+
+  /**
    * Avaa pysähdyksen: monivalinta, isoisän väittämä, karttakysymys tai
    * tapahtumakortti. Oikea vastaus kääntää laatan ilmaiseksi.
    * `hard: true` arpoo vaikean kysymyksen, josta oikein vastattaessa saa

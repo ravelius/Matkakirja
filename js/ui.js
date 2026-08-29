@@ -15546,10 +15546,16 @@ export class UI {
    * Aarteen paljastus ruudun keskellä. Kuva on laattatyypin oma
    * generoitu aarrekuva (packs/*.js kuva-kenttä) tai taikalasin
    * varustekuva. Maailmankartalla aarre on löytömantereen aarre
-   * (aarreTyyppi; kaupunki on visan kaupunki, sillä paljastus tulee
-   * aina visan voitosta).
+   * (aarreTyyppi; kaupunki on oletuksena visan kaupunki, koska
+   * paljastus tulee lähes aina visan voitosta).
+   *
+   * KAUPUNKI SAA TULLA MYÖS PARAMETRINA (v1320). Pöllön sähketehtävä
+   * kääntää laatan ilman visaa (js/game.js avaaAarreSahkeella), jolloin
+   * `game.quiz` on null eikä maakohtaista paikallisaarretta löytyisi —
+   * kortissa lukisi laudan yleisnimi maan oman nimen sijasta. Oletus
+   * pitää kaikki vanhat kutsupaikat ennallaan.
    */
-  async playTokenReveal(type) {
+  async playTokenReveal(type, cityId = this.game.quiz?.cityId) {
     /*
      * PÖLLÖ KORVAA ENSIMMÄISEN LAATAN AARTEEN KOKONAAN (omistajan
      * tilaus 18.8.2026). Kun revealToken palautti pöllön, laatan omaa
@@ -15562,7 +15568,7 @@ export class UI {
       await this.naytaPolloAarre();
       return;
     }
-    const token = this.game.aarreTyyppi(type, this.game.quiz?.cityId);
+    const token = this.game.aarreTyyppi(type, cityId);
     /*
      * Aarre tuntuu kädessä (iOS-kuori). Juhla on pelin voimakkain
      * tärähdys, ja siksi se on varattu löydölle: rosvo ei saa sitä,

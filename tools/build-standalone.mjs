@@ -100,6 +100,13 @@ const MODULES = [
   'js/packs/fokusvirta-budapest.js',
   'js/packs/fokusvirta-dubrovnik.js',
   'js/packs/fokusvirta-praha.js',
+  // Aalto 3 (29.8.2026): Tukholma, Kööpenhamina, Helsinki ja Tallinna.
+  // Sama sääntö kuin aalloilla 1 ja 2 — ei kohdenostoja, mutta
+  // js/fokusnosto.js lukee näidenkin takynostot-kentän maapooliinsa.
+  'js/packs/fokusvirta-tukholma.js',
+  'js/packs/fokusvirta-kobenhavn.js',
+  'js/packs/fokusvirta-helsinki.js',
+  'js/packs/fokusvirta-tallinna.js',
   // Egyptillä ja Irakilla ei ole omaa fokusvirtaa: pelkät kohteet
   // (kadonneiden ihmeiden erä 26.8.2026), joten paririviä ei ole.
   // Sama koskee Ranskaa ja Britanniaa (Matkakirjan ihmeiden Euroopan

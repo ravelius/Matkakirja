@@ -25,7 +25,17 @@ import {
   FOKUSVIRRAN_VAIHEET, asetaFokusvirtaTila, fokusvirtaAlkutila, fokusvirtaJaljella,
   fokusvirtaKohteetJaljella, fokusvirtaMatkakirja, fokusvirtaNahdytKohteet,
   fokusvirtaPorttiAuki, fokusvirtaSiirto, fokusvirtaSiivoa, fokusvirtaTila,
+  sahkePalkkio, sisaltohakemisto,
 } from '../js/fokusvirta.js';
+/*
+ * KOHDEHAKEMISTON KYTKENTÄ TUODAAN MUKANA, EI JÄLJITELLÄ. Sähkelomakkeen
+ * valintalista saa kartan kohteet takaisinkutsulla, jonka
+ * js/fokuskohteet.js asettaa latautuessaan (asetaKohdehakemisto).
+ * Ilman tätä tuontia testi mittaisi vain puolikkaan hakemiston ja
+ * pilotin todellinen lista jäisi vartioimatta — ja juuri sen pituus on
+ * se, joka ratkaisee kannattaako arvata.
+ */
+import '../js/fokuskohteet.js';
 import { EUROPE_SAAPUMISET } from '../js/packs/europe-saapumiset.js';
 import { FOKUSVIRRAT, fokusvirtaKaupungille } from '../js/packs/fokusvirrat.js';
 import { FOKUSKOHTEET_GRC, fokuskohteet } from '../js/packs/fokuskohteet-grc.js';
@@ -479,6 +489,142 @@ test('Wienin maailmannäyttelytäky kantaa pilotin karttaliitteen', () => {
 
 /** Kevyt ui-tynkä: fokusvirta tarvitsee korttiin vain pelin. */
 const uiTynka = (game) => ({ game });
+
+/* ---------- 6b. pöllön sähketehtävä (pilotti: Tukholma) ---------- */
+
+/*
+ * SÄHKETEHTÄVÄ ON KOHTAAMISEN SIJAINEN (Raamattu, PÖLLÖN SÄHKETEHTÄVÄ).
+ * Vartioitavia asioita on neljä, ja kolme niistä on sellaisia, jotka
+ * eivät näkyisi ruudulla vaan vasta pelaajan turhautumisena:
+ *
+ *   1. Jokaisella kaupungilla on aarrevaiheelle sisältö, ja jos
+ *      molemmat ovat datassa, se on TIETOINEN pilottivalinta eikä
+ *      vahinko.
+ *   2. Sähkelomakkeen aukot ovat rakenteeltaan ehjiä ja oikea vastaus
+ *      on OIKEASTI maan sisältöhakemistossa — muuten tehtävä olisi
+ *      ratkaisematon eikä sitä huomaisi kukaan ennen pelitestiä.
+ *   3. Palkkio pienenee ohilyönneistä ja pysähtyy nollaan.
+ *   4. Vihreä piste tunnistaa sähkekaupungin kohtaamiskaupungiksi.
+ */
+
+/*
+ * KAUPUNGIT, JOISSA SÄHKE JA KOHTAAMINEN OVAT DATASSA YHTÄ AIKAA.
+ *
+ * Sofia on omistajan pilottiehto (29.8.2026): Nadian kohtaaminen jää
+ * paikoilleen mutta pois käytöstä, jotta pilotin peruminen on yhden
+ * rivin kommentointi paketissa. Lista on tässä nimeltä, jottei
+ * kaksoiskirjoitus pääse syntymään huomaamatta johonkin muuhun
+ * kaupunkiin — siellä se olisi vahinko, ei valinta.
+ */
+const SAHKE_JA_KOHTAAMINEN = new Set(['sofia']);
+
+test('aarrevaiheelle on sisältö, ja kaksoiskirjoitus on tietoinen', () => {
+  for (const [cityId, virta] of Object.entries(FOKUSVIRRAT)) {
+    assert.ok(
+      virta.kohtaaminen || virta.sahketehtava,
+      `${cityId}: aarrevaiheelle ei ole sisältöä kummallakaan tavalla`,
+    );
+    if (virta.kohtaaminen && virta.sahketehtava) {
+      assert.ok(
+        SAHKE_JA_KOHTAAMINEN.has(cityId),
+        `${cityId}: sekä kohtaaminen että sähketehtävä, mutta kaupunkia ei ole merkitty pilotiksi`,
+      );
+    }
+  }
+});
+
+/*
+ * SÄHKEPILOTIT KÄYVÄT SAMAN TARKISTUKSEN LÄPI (Tukholma ja Sofia).
+ * Sisältö on eri, mutta rakenteen ja ratkaistavuuden on oltava
+ * molemmissa sama — juuri siksi kaupunkeja luetaan silmukassa eikä
+ * nimeltä: kolmas pilotti tulee tarkistetuksi ilman uutta testiä.
+ */
+test('sähkepilottien molemmat aukot ovat ratkaistavissa', () => {
+  const pilotit = Object.entries(FOKUSVIRRAT).filter(([, v]) => v.sahketehtava);
+  assert.ok(pilotit.length >= 2, 'sähkepilotteja pitäisi olla vähintään kaksi');
+  // Hakemisto rakennetaan ajonaikaisesti pelidatasta; ui-tynkä riittää,
+  // koska funktio lukee vain laudan cityCountry-taulun.
+  const game = ateenaPeli();
+
+  for (const [cityId, virta] of pilotit) {
+    const tehtava = virta.sahketehtava;
+    assert.ok(tehtava.sahke.includes('STOP'), `${cityId}: sähke ei ole sähketyylinen`);
+    assert.ok(tehtava.johdanto?.length > 80, `${cityId}: Livian saate puuttuu`);
+    assert.ok(tehtava.vinkki?.length > 20, `${cityId}: lähdevinkki puuttuu`);
+    assert.ok(tehtava.paluu?.length > 20, `${cityId}: paluukupla puuttuu`);
+    assert.equal(tehtava.aukot.length, 2, `${cityId}: lomakkeessa on oltava kaksi aukkoa`);
+
+    const hakemisto = sisaltohakemisto(uiTynka(game), tehtava.hakemistoMaa);
+    assert.ok(hakemisto.length >= 20,
+      `${cityId}: sisältöhakemistossa on vain ${hakemisto.length} riviä — arvaaminen kannattaisi`);
+    assert.deepEqual([...hakemisto].sort((a, b) => a.localeCompare(b, 'fi')), hakemisto,
+      `${cityId}: hakemiston on oltava aakkosjärjestyksessä`);
+    assert.equal(new Set(hakemisto).size, hakemisto.length, `${cityId}: sama otsikko kahdesti`);
+
+    for (const aukko of tehtava.aukot) {
+      assert.ok(aukko.otsake && aukko.sahkeSana,
+        `${cityId}/${aukko.id}: otsake tai sähkesana puuttuu`);
+      if (aukko.tyyppi === 'luku') {
+        assert.equal(typeof aukko.oikea, 'number',
+          `${cityId}/${aukko.id}: oikea vastaus ei ole luku`);
+        continue;
+      }
+      assert.ok(aukko.oikeat?.length >= 1, `${cityId}/${aukko.id}: oikeaa vastausta ei ole`);
+      for (const oikea of aukko.oikeat) {
+        assert.ok(hakemisto.includes(oikea),
+          `${cityId}/${aukko.id}: vastausta "${oikea}" ei ole maan sisältöhakemistossa`);
+      }
+    }
+  }
+});
+
+/*
+ * SOFIAN MUU SISÄLTÖ EI SAA MUUTTUA (omistajan ehto 29.8.2026:
+ * *"varmista että Sofian muut testatut sisällöt eivät muutu miltään
+ * osin"*). Sofia on omistajan vakiotestipolun toinen kaupunki, ja sen
+ * areena-täky, lehtitehtävät ja aarremerkintä on jo pelitestattu —
+ * sähkepilotti ei saa liikuttaa niistä yhtäkään merkkiä. Testi naulaa
+ * ne tunnussanoilla, jotka rikkoutuisivat heti jos tekstiä muokataan.
+ */
+test('Sofian pelitestattu sisältö on ennallaan sähkepilotin jälkeen', () => {
+  const sofia = fokusvirtaKaupungille('sofia');
+  assert.deepEqual(sofia.takyt.map((t) => t.id),
+    ['levski', 'areena', 'pollopatsas', 'elaintarha'], 'Sofian täkyjen joukko tai järjestys muuttui');
+  const areena = sofia.takyt.find((t) => t.id === 'areena');
+  assert.equal(areena.otsikko, 'Serdican amfiteatteri', 'areena-täyn otsikko muuttui');
+  assert.match(areena.visa.kysymys, /vuonna 2004/, 'areena-täyn visa muuttui');
+  assert.deepEqual(sofia.lehtitehtavat.map((t) => [t.id, t.sivu, t.otsake]),
+    [['aarre', 2, 'AARTEEN AVAUS'], ['juliste', 3, 'JULISTE']], 'lehtitehtävät muuttuivat');
+  assert.match(sofia.lehtitehtavat[0].visa.kysymys, /banitsa/i, 'AARTEEN AVAUS -visa muuttui');
+  assert.match(sofia.aarremerkinta.teksti, /^Konakin varjossa punnitsin lapion ostamista/,
+    'aarremerkintä muuttui');
+  assert.match(sofia.aarremerkinta.teksti, /jotkut aarteet saavat odottaa rohkeampaa\.$/,
+    'aarremerkintä muuttui');
+  // Nadia on tallessa, vaikka sähke voittaa hänet kortilla: pilotin
+  // peruminen on yksi rivi vain, jos data on yhä paikallaan.
+  assert.equal(sofia.kohtaaminen?.hahmo, 'Lähteenvartija Nadia',
+    'Nadian kohtaaminen katosi — pilotin palautus ei ole enää yksi rivi');
+  assert.equal(sofia.kohtaamispiste?.nimi, 'Vasil Levskin muistomerkki',
+    'kohtaamispiste muuttui');
+});
+
+test('sähkepalkkio pienenee ohilyönneistä ja pysähtyy nollaan', () => {
+  assert.equal(sahkePalkkio(0, 200), 200);
+  assert.equal(sahkePalkkio(1, 200), 150);
+  assert.equal(sahkePalkkio(2, 200), 100);
+  assert.equal(sahkePalkkio(3, 200), 50);
+  assert.equal(sahkePalkkio(4, 200), 0);
+  assert.equal(sahkePalkkio(9, 200), 0, 'palkkio ei saa mennä miinukselle');
+});
+
+test('sähkekaupungin vihreä piste on olemassa ja sen teko on sähke', () => {
+  const tukholma = fokusvirtaKaupungille('tukholma');
+  for (const lauta of ['maailmankartta', 'europe']) {
+    const paikka = tukholma.kohtaamispiste?.laudat?.[lauta];
+    assert.ok(Number.isFinite(paikka?.x) && Number.isFinite(paikka?.y),
+      `tukholma: ${lauta}-koordinaatit puuttuvat`);
+  }
+});
 
 /** Kaupunki "löydettyyn" tilaan — täsmälleen kuten revealToken jättää sen. */
 function laattaRatkaistu(game, cityId, tyyppi = 'topaz') {

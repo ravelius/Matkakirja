@@ -21,6 +21,8 @@ import { FOKUSVIRTA_BUDAPEST } from './fokusvirta-budapest.js';
 import { FOKUSVIRTA_DUBROVNIK } from './fokusvirta-dubrovnik.js';
 import { FOKUSVIRTA_ISTANBUL } from './fokusvirta-istanbul.js';
 import { FOKUSVIRTA_BUKAREST } from './fokusvirta-bukarest.js';
+import { FOKUSVIRTA_HELSINKI } from './fokusvirta-helsinki.js';
+import { FOKUSVIRTA_KOBENHAVN } from './fokusvirta-kobenhavn.js';
 import { FOKUSVIRTA_LONTOO } from './fokusvirta-lontoo.js';
 import { FOKUSVIRTA_MADRID } from './fokusvirta-madrid.js';
 import { FOKUSVIRTA_PRAHA } from './fokusvirta-praha.js';
@@ -28,6 +30,8 @@ import { FOKUSVIRTA_PARIISI } from './fokusvirta-pariisi.js';
 import { FOKUSVIRTA_ROOMA } from './fokusvirta-rooma.js';
 import { FOKUSVIRTA_SARAJEVO } from './fokusvirta-sarajevo.js';
 import { FOKUSVIRTA_SOFIA } from './fokusvirta-sofia.js';
+import { FOKUSVIRTA_TALLINNA } from './fokusvirta-tallinna.js';
+import { FOKUSVIRTA_TUKHOLMA } from './fokusvirta-tukholma.js';
 import { FOKUSVIRTA_WIEN } from './fokusvirta-wien.js';
 
 export const FOKUSVIRRAT = {
@@ -65,6 +69,21 @@ export const FOKUSVIRRAT = {
   budapest: FOKUSVIRTA_BUDAPEST,
   dubrovnik: FOKUSVIRTA_DUBROVNIK,
   praha: FOKUSVIRTA_PRAHA,
+  /*
+   * AALTO 3 (sama Raamatun osio, 29.8.2026): Pohjola ja Baltia —
+   * Tukholma, Kööpenhamina, Helsinki ja Tallinna. Sama TÄYSI pino ja
+   * sama faktapohja kuin aallolla 2 (kuratoitu pelidata + kahden
+   * riippumattoman lähteen tarkistus).
+   *
+   * TUKHOLMA POIKKEAA YHDESSÄ ASIASSA: se pilotoi PÖLLÖN SÄHKETEHTÄVÄN
+   * kohtaamisen sijasta (Raamattu, PÖLLÖN SÄHKETEHTÄVÄ). Rekisteri ei
+   * huomaa siitä mitään — valinta on datassa (`sahketehtava` kentän
+   * `kohtaaminen` tilalla), ei täällä.
+   */
+  tukholma: FOKUSVIRTA_TUKHOLMA,
+  kobenhavn: FOKUSVIRTA_KOBENHAVN,
+  helsinki: FOKUSVIRTA_HELSINKI,
+  tallinna: FOKUSVIRTA_TALLINNA,
 };
 
 /** Kaupungin fokusvirta tai null, jos kaupungille ei ole sisältöä. */

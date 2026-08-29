@@ -96,6 +96,9 @@ import {
   nostosymAsetaPorras, nostosymNimioLaatikko, nostosymVirkistaRasterit,
   piirraNostosymKartalle, piirraNostosymboli,
 } from './fokusnosto-symbolit.js';
+// Sähketehtävän sisältöhakemisto tarvitsee maan kohdelistan (ks.
+// asetaKohdehakemisto-kutsu KOHDE_MAAT-taulun alla).
+import { asetaKohdehakemisto } from './fokusvirta.js';
 import { FOKUS_LISANIMET } from './packs/fokus-grc.js';
 import { asetaKuva } from './media.js';
 import { html, jaaKappaleiksi, nielaiseSulkevaNapautus, polloNimilappu } from './ui-apurit.js';
@@ -237,6 +240,26 @@ const KOHDE_MAAT = {
    */
   DEU: FOKUSKOHTEET_DEU,
 };
+
+/*
+ * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN
+ * SÄHKETEHTÄVÄ).
+ *
+ * Sähkelomakkeen valintalista on KOKO MAAN SISÄLTÖHAKEMISTO
+ * (js/fokusvirta.js sisaltohakemisto), ja monessa maassa sen paksuin
+ * aineisto on juuri tämä taulu — kartan kohteet, jotka pelaaja avaa
+ * itse. Bulgariassa niitä on kahdeksantoista ja lehtijuttuja seitsemän,
+ * joten ilman tätä riviä hakemisto olisi vain kolmasosa siitä, mitä
+ * maasta on luettavissa.
+ *
+ * KYTKENTÄ ON TAKAISINKUTSU EIKÄ IMPORT, koska js/fokusvirta.js on
+ * niputusjärjestyksessä ENNEN tätä tiedostoa (tools/build-standalone.mjs
+ * MODULES): suora tuonti sieltä tänne kääntäisi järjestyksen väärin
+ * päin. Sama ratkaisu ja sama syy kuin täkynoston piirtopinnalla
+ * (asetaNostopinta) ja lehtitehtävien kuittauksella
+ * (asetaTehtavakuittaus), vain vastakkaiseen suuntaan.
+ */
+asetaKohdehakemisto((iso) => KOHDE_MAAT[iso] ?? []);
 
 /** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta). */
 const KOHDE_OSUMA_R = 22;
