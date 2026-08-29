@@ -413,6 +413,9 @@ const MODULES = [
   'js/kartta.js',
   // Laitemittari ennen ui:ta (ui tuo sen). Ei tuo itse mitään.
   'js/karttamittari.js',
+  // Lavan pohjakerrosten kooste ennen ui:ta (ui tuo sen). Ei tuo itse
+  // mitään: geometria luetaan svg:stä ja lehdet DOMista.
+  'js/karttapohja.js',
   // Fokusmoodin maakohtainen topografiapohja ennen ui:ta (ui tuo sen;
   // se itse tuo mapartin, median ja lisänimet, jotka ovat yllä).
   'js/packs/fokus-grc.js',

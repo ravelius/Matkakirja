@@ -69,6 +69,8 @@ import {
 import { taitaOpas } from './opas.js';
 // Laitemittari (?mittari=1): pois päältä se ei tee eikä maksa mitään.
 import { kaynnistaKarttamittari, mittariPaalla } from './karttamittari.js';
+// Lavan pohjakerrosten kooste yhdeksi bittikartaksi (js/karttapohja.js).
+import { Karttapohja } from './karttapohja.js';
 // Lautojen yhdistetyt sisältötaulut, luentajoukot ja kuratoidut
 // galleriat (siirretty tästä tiedostosta 17.8.2026, remontin M1).
 import {
@@ -2590,6 +2592,12 @@ export class UI {
      * kuorta löydy — silloin noppa käyttäytyy kuten ennen.
      */
     this.boardDie = new BoardDie(this.karttaKuori ?? this.mapPane);
+    /*
+     * LAVAN POHJACANVAS (js/karttapohja.js). Olio syntyy tässä mutta ei
+     * varaa vielä mitään: canvas luodaan vasta ensimmäisessä
+     * koosteessa, ja kooste ajetaan vain pelilaudan fokusnäkymässä.
+     */
+    this.karttapohja = new Karttapohja(this);
     this.kartta.asennaPanorointi();
     this.kartta.fitViewBox();
     this.observer = new ResizeObserver(() => this.kartta.fitViewBox());
@@ -3388,6 +3396,9 @@ export class UI {
     // uuden pelin rinnalle, ja ilman lippua ne piirtäisivät vanhan pelin
     // tilaa uuden päälle (esim. edellisen pelin kysymyksen tekstin).
     this.dead = true;
+    // Pohjacanvas on jaetussa DOM:issa (karttakuori): kuollut instanssi
+    // ei saa jättää sitä uuden pelin lavan alle (js/karttapohja.js).
+    this.karttapohja?.pura();
     // Ehdotuskuplan ajastin voi olla kymmenen minuutin päässä: uusi
     // peli ei saa periä vanhan instanssin kuplaa.
     clearTimeout(this.ehdotusKuplaAjastin);
@@ -4233,6 +4244,16 @@ export class UI {
       const nakyvaNyt = this.nakyvaAlue();
       this.paivitaLahivesi(nakyvaNyt);
       this.paivitaMaastonimet(nakyvaNyt);
+      /*
+       * LAVAN POHJACANVAS SAMASTA KOHDASTA (js/karttapohja.js).
+       *
+       * Tämä on se kohta, jossa näkymä on ASETTUNUT — sama peruste kuin
+       * maastonimillä ja atlaksella yllä. Kooste tarvitsee myös
+       * ensimmäisen ajonsa (saapuminen, zoomipainike), eikä
+       * ikkunoiLavan kutsupaikoissa sellaista ole: ne laukeavat vasta
+       * ensimmäisestä eleestä. Moduuli päättää itse, onko koostettavaa.
+       */
+      this.karttapohja?.paivita('taide');
     }
     if (!this.taide || !this.taideRyhma) return;
     /*
@@ -5427,6 +5448,13 @@ export class UI {
     const { board, pack } = this.game;
     const { decor } = pack;
     this.contentBox = this.kartta.boardBounds();
+    /*
+     * Pohjacanvas puretaan laudan mukana: sen sisältö on edellisen
+     * laudan pergamenttia ja lehtiä, ja svg:n pohjat on juuri
+     * palautettava näkyviin, jotta uusi lauta piirtyy tavalliseen
+     * tapaan (js/karttapohja.js).
+     */
+    this.karttapohja?.pura();
     this.svg.textContent = '';
 
     const maarittelyt = drawDefs(this.svg);

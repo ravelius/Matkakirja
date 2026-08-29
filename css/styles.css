@@ -4914,6 +4914,50 @@ body.fokus-atlas-nakyma .taide-pohja { display: none; }
  */
 body.fokus-atlas-nakyma .grain { display: none; }
 
+/* ---------------------------------------------------------------------------
+   BITTIKARTTAKARTAN POHJACANVAS (js/karttapohja.js, vaihe 1).
+
+   Lavan pohjakuvat — pergamentti ja neljä lehtiryhmää — koostetaan
+   yhdelle canvakselle, ja svg:n omat pohjat piilotetaan. Mitattu syy
+   js/karttapohja.js:n johdannossa: samaa aluetta peittää jopa 25
+   päällekkäistä bittikarttaa, ja WebKit purkaa ja maalaa ne uudestaan
+   joka tiililtä (Decode Image 448 ms Puolan tiheikössä).
+
+   CANVAS ON KUORESSA SVG:N ALLA. Kuoren oma translate3d (js/kartta.js
+   asetaPan) siirtää molempia yhtä aikaa, joten panoroinnille ei synny
+   uutta synkronoitavaa. `z-index: -1` pitää sen svg:n alla, ja kuoren
+   `isolation: isolate` pitää sen kuoren OMASSA pinossa — ilman sitä
+   negatiivinen taso karkaisi karttaruudun pergamenttitaustan taakse.
+
+   `display: none` eikä opacity, samasta syystä kuin .fokus-piilossa
+   yllä: piilossa oleva kuva ei saa jäädä selaimen purettavaksi.
+   --------------------------------------------------------------------------- */
+/*
+ * CANVAS ON OLEMASSA VAIN KUN SE ON KÄYTÖSSÄ.
+ *
+ * Täyden koosteen ajaksi svg ottaa pohjan takaisin (js/karttapohja.js
+ * piilota), ja jos canvas jäisi silloin näkyviin, selain maalaisi
+ * MOLEMMAT: mitattuna Ateenan lähikuvassa kehyksen p50 nousi 16,7 →
+ * 116 ms juuri siitä. `display: none` ei tyhjennä canvaksen puskuria,
+ * joten kooste jatkuu piilossa ja kuva on valmis kun luokka palaa.
+ */
+.karttapohja {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  pointer-events: none;
+  transform-origin: 0 0;
+}
+
+body.karttapohja-canvas .karttapohja { display: block; }
+
+body.karttapohja-canvas .kartta-kuori { isolation: isolate; }
+
+body.karttapohja-canvas .fokuskartta image.karttapohja-poltettu,
+body.karttapohja-canvas .paper-pohja { display: none; }
+
 /*
  * LAATTA ON FOKUSNÄKYMÄN TUTKI-NAPPI (omistajan pelitestitilaus
  * 24.8.2026): alarivillä on vain Liiku, ja tutkiminen alkaa nykyisen
