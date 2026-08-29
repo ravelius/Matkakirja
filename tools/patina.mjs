@@ -122,14 +122,25 @@ const SAVYT = {
  * omia koordinaatteja, jolloin kuitu aaltoilee kuten käsinammennetussa
  * paperissa eikä kohinataulun 512 yksikön kierto näy toistona.
  *
+ * KUIDUN MITTAKAAVA — omistajan bandinghavainto 29.8.2026. Ensimmäiset
+ * mitat olivat 90 x 6, 47 x 3,3 ja 151 x 11,5 eli satoja pikseliä
+ * pitkiä ja 6-23 pikselin jaksolla toistuvia vaakakerroksia. Juuri
+ * tuolla jaksolla silmän kontrastiherkkyys on huipussaan, joten kun
+ * voima nostettiin näkyväksi, laakea meri luki vaakabandingina.
+ * Mittakaava pudotettiin 2,6-kertaisesti: kuitu on nyt noin 2 pikselin
+ * paksuista ja muutaman kymmenen pikselin mittaista. Se on myös
+ * lähempänä totuutta — lumpun kuitu on millimetrejä, ei senttejä —
+ * ja se siirtää energian pois bandingkaistalta rakenteen katoamatta.
+ * Katkontaa hoitaa lisäksi `klimppi`.
+ *
  * Rae on kahdessa osassa: pikselikohtainen hajautusrae (näkyy 1:1) ja
  * muutaman pikselin nyppy (näkyy myös pienennettynä). Kumpikaan ei ole
  * suuntautunut, joten kumpikaan ei voi tuottaa juovaa.
  *
  * Kerros = [skaalaX, skaalaY, paino, faasiX, faasiY]. Skaala on
  * pikseleitä kohinataulun yksikköä kohti 6400 pikselin lehdellä:
- * 90 x 6 tarkoittaa noin kuuden pikselin korkuisia, satojen pikselien
- * mittaisia kuituja.
+ * 34 x 2,3 tarkoittaa noin kahden pikselin korkuisia, muutaman
+ * kymmenen pikselin mittaisia kuituja.
  */
 const PAPERI_KEVYT = {
   /* Pikselikohtainen rae, ±osuus. */
@@ -138,28 +149,41 @@ const PAPERI_KEVYT = {
    * pienennyksen. Skaala on pikseleitä kohinayksikköä kohti. */
   raeKarkea: 0.038,
   raeKarkeaSkaala: 2.4,
-  kuitu: 0.042,
+  kuitu: 0.038,
   kuituKerrokset: [
-    [90, 6.0, 1.00, 0, 0],
-    [47, 3.3, 0.62, 613, 271],
-    [151, 11.5, 0.45, 2287, 1499],
+    [34, 2.3, 1.00, 0, 0],
+    [20, 1.5, 0.62, 613, 271],
+    [58, 4.4, 0.45, 2287, 1499],
   ],
   /* Toinen kuitusuunta hennompana — käsintehdyssä paperissa syy ei
    * ole yhdensuuntainen. */
-  kuituRisti: 0.026,
+  kuituRisti: 0.022,
   kuituRistiKerrokset: [
-    [7.0, 70, 1.00, 1000, 500],
-    [4.3, 38, 0.55, 3121, 907],
+    [3.5, 35, 1.00, 1000, 500],
+    [2.2, 19, 0.55, 3121, 907],
   ],
-  /* Domain warp: [skaala pikseleinä, siirtymä kohinayksikköinä]. */
+  /* Domain warp: [skaala pikseleinä, siirtymä kohinayksikköinä].
+   * Siirtymä on kohinayksikköinä, joten hienompi kuitu heiluu
+   * pikseleissä mitattuna vähemmän: voima nostettu sen mukana. */
   warpSkaala: 300,
-  warpVoima: 2.2,
+  warpVoima: 3.4,
+  /*
+   * Kuitukimppujen katkonta (ks. selainkoodin kohta 7). Voima on
+   * kertoimen heitto ylös ja alas ykkösestä: 0,9 tarkoittaa, että
+   * kuitu vaihtelee lähes olemattomasta lähes kaksinkertaiseen.
+   * Skaala on kimpun koko pikseleinä 6400 pikselin lehdellä — sen on
+   * oltava selvästi kuidun pituutta (noin 68 px) lyhyempi mutta
+   * kuidun paksuutta (noin 2 px) suurempi, muuten katkonta joko ei
+   * pure juovaan tai syö itse kuidun.
+   */
+  klimppi: 0.9,
+  klimppiSkaala: 14,
 };
 
 /* Sama syy vahvempana täydellä tasolla. */
 const PAPERI_TAYSI = {
   ...PAPERI_KEVYT,
-  rae: 0.072, raeKarkea: 0.054, kuitu: 0.058, kuituRisti: 0.036,
+  rae: 0.072, raeKarkea: 0.054, kuitu: 0.052, kuituRisti: 0.030,
 };
 
 /*
@@ -671,10 +695,14 @@ async function patinoiSelaimessa({
   /* Kuiduille iso taulu (512): pieninkin kuituskaala kiertää vasta
    * lehden korkeuden mittaisin välein, ja warp rikkoo lopunkin
    * jaksollisuuden. Muille 256 riittää. */
-  const kohinaKuitu = teeKohina(20260829, 512);
-  const kohinaRisti = teeKohina(51217, 512);
+  /* Kuidun taulut ovat 1024 yksikköä: hienoksi pudotetulla
+   * mittakaavalla (2,3 px / yksikkö) 512 olisi toistunut pystyssä jo
+   * 1180 pikselin välein eli kolmesti lehden korkeudella. */
+  const kohinaKuitu = teeKohina(20260829, 1024);
+  const kohinaRisti = teeKohina(51217, 1024);
   const kohinaWarp = teeKohina(880301, 256);
   const kohinaRae = teeKohina(133742, 256);
+  const kohinaKlimppi = teeKohina(606061, 256);
   const kohinaIka = teeKohina(77003);
   const kohinaRoso = teeKohina(4242);
   const kohinaTaite = teeKohina(9191);
@@ -838,7 +866,21 @@ async function patinoiSelaimessa({
         const raeN = rae(x, y, 1337) - 0.5;
         const karkea = kohinaRae(x / (pa.raeKarkeaSkaala * s),
           y / (pa.raeKarkeaSkaala * s)) - 0.5;
-        kerroin += (kuitu / pk) * pa.kuitu + (risti / pr) * pa.kuituRisti
+        /*
+         * KUITUKIMPUT. Kuitu on rakenteeltaan pitkä ja matala (34 x 2,3),
+         * joten ilman katkoja se piirtää laakealle merelle yhtenäisiä
+         * vaakajuovia koko lehden mitalta — silmä lukee ne
+         * bandingina, ei paperina. Isotrooppinen kerroin katkoo kuidun
+         * muutaman kymmenen pikselin kimpuiksi: paikallinen rakenne
+         * säilyy, mutta yksikään juova ei enää jatku lehden yli.
+         * Kerroin on nollakeskisen signaalin päällä ja keskiarvoltaan
+         * 1, joten se ei muuta paperin keskisävyä.
+         */
+        const kl = pa.klimppi
+          ? Math.max(0, 1 + pa.klimppi * 2 * (kohinaKlimppi(x / (pa.klimppiSkaala * s),
+            y / (pa.klimppiSkaala * s)) - 0.5))
+          : 1;
+        kerroin += ((kuitu / pk) * pa.kuitu + (risti / pr) * pa.kuituRisti) * kl
           + raeN * pa.rae + karkea * pa.raeKarkea;
       }
 
@@ -885,6 +927,21 @@ async function patinoiSelaimessa({
         b = tausta[2] + (b - tausta[2]) * t;
         d[i + 3] = 255;
       }
+      /*
+       * DITHER ENNEN 8-BITTIIN PYÖRISTYSTÄ. Koko putki laskee
+       * liukuluvuilla, mutta Uint8ClampedArray pyöristää lopuksi
+       * lähimpään kokonaislukuun. Ilman ditheriä pehmeä gradientti
+       * (vinjetti, ikääntymislaikku, reunakertymä, pohjan omat
+       * syvyysvyöhykkeet) kvantisoituu porrasaskelmiksi, jotka näkyvät
+       * laakealla merellä. Kolmiojakautunut ±1 askelman kohina kahdesta
+       * riippumattomasta hajautuksesta hajottaa askelman rajan: virhe
+       * irtoaa signaalista ja muuttuu tasaiseksi kohinaksi.
+       *
+       * Sama dither kaikille kanaville, jottei syntyisi väriräiskettä;
+       * kvantisointivirheen irrottamiseen se riittää.
+       */
+      const dth = rae(x, y, 0x5eed1) + rae(x, y, 0x5eed2) - 1;
+      r += dth; gg += dth; b += dth;
       d[i] = r < 0 ? 0 : (r > 255 ? 255 : r);
       d[i + 1] = gg < 0 ? 0 : (gg > 255 ? 255 : gg);
       d[i + 2] = b < 0 ? 0 : (b > 255 ? 255 : b);
