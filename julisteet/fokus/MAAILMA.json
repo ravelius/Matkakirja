@@ -3,9 +3,9 @@
   "lauta": "maailmankartta",
   "bbox": {
     "x": 0,
-    "y": 0,
+    "y": -435,
     "w": 12000,
-    "h": 5399
+    "h": 6284
   },
   "rajaus": {
     "x": 0,
@@ -13,12 +13,25 @@
     "w": 12000,
     "h": 5399
   },
+  "kehys": {
+    "yla": 232,
+    "ala": 240,
+    "otsikko": "MATKAKIRJA",
+    "alaotsikko": "Unohdettu aarre",
+    "painaja": "Painettu Matkakirjan kustantamossa MDCCCLXXIII",
+    "oikeudet": "© Matkakirja"
+  },
+  "kompassi": {
+    "lon": -132,
+    "lat": -38,
+    "sade": 132
+  },
   "kuva": {
     "w": 6400,
-    "h": 2879
+    "h": 3351
   },
   "tiedosto": "MAAILMA.webp",
-  "tehty": "2026-08-26",
+  "tehty": "2026-08-29",
   "laatikko": {
     "lon0": -175.5,
     "lon1": 185.5,
