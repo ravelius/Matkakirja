@@ -14,7 +14,10 @@
 #                              (hännän hiljaisuusmittaus + paddaus).
 #   tools/generoi-luennat.mjs  kaupunkien matkakirjaluennat.
 #
-# SYÖTE ON YHÄ PELKKIÄ KAUPUNKIAVAIMIA ("madrid wien"), mutta työkalu
+# SYÖTE ON YHÄ PELKKIÄ KAUPUNKIAVAIMIA ("madrid wien" tai
+# "madrid,wien" — työkalu erottelee kummallakin; pilkullinen lista
+# meni ennen läpi yhtenä avaimena ja ajo kaatui vasta commit-vaiheeseen
+# "Yhtään tiedostoa ei syntynyt eikä muuttunut"), mutta työkalu
 # valitsee lähteen itse — kaupungin ei siis tarvitse tietää, kummasta
 # pakasta sen merkintä tulee:
 #   FOKUSVIRTA (js/packs/fokusvirta-<id>.js) VOITTAA, jos kaupungilla
@@ -50,8 +53,9 @@ on:
     inputs:
       kaupungit:
         description: >-
-          Kaupunkien avaimet välilyönnein (esim. "madrid wien pariisi
-          berliini"). Fokusvirtakaupunki saa matkakirjaluennan, muut
+          Kaupunkien avaimet välilyönnein TAI pilkuin (esim. "madrid wien
+          pariisi" tai "madrid,wien,pariisi" — työkalu erottelee
+          kummallakin). Fokusvirtakaupunki saa matkakirjaluennan, muut
           saapumisluennan. Tyhjä = ei kaupunkiluentoja.
         required: false
         default: ''
