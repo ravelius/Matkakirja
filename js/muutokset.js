@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1337, teksti: 'Eurooppa: pikkukorjaukset' },
   { v: 1336, teksti: 'Karttaselitteet ja aihevalot' },
   { v: 1335, teksti: 'Maastokohteet avattaviksi Euroopassa' },
   { v: 1334, teksti: 'Maailmatilan nopeus ja merkkikoko' },
