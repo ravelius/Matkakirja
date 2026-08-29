@@ -226,27 +226,45 @@ export const FOKUSVIRTA_VENETSIA = {
      * ensimmäinen lause — portaat päättyvät mereen — jää muuten
      * kokonaan vastaamatta, ja juuri siihen tämä maadoitus tarttuu.
      *
-     * FAKTAKURI: neljä väitettä, kaikki pelin omasta jo hyväksytystä
+     * FAKTAKURI: kolme väitettä, kaikki pelin omasta jo hyväksytystä
      * Venetsia-aineistosta (js/packs/kulttuuri-kategoriat.js, nosto
      * "Kaupunki seisoo puunrunkojen päällä"). (1) Talot seisovat
-     * laguunin mutaan lyödyillä lepänrungoilla, jotka ylsivät kovaan
-     * savikerrokseen. (2) Paalujen päälle ladottiin istrialaiset
-     * kalkkikivilaatat ja vasta niiden päälle tiilet. (3) Hapettomassa
-     * mudassa puu ei lahoa vaan kovettuu. (4) Santa Maria della Saluten
-     * alle lyötiin yli miljoona paalua.
+     * tiheinä riveinä alas lyötyjen puupaalujen päällä. (2) Paalujen
+     * päälle ladottiin istrialaiset kalkkikivilaatat ja vasta niiden
+     * päälle tiilet. (3) Ilman happea puu ei lahoa vaan kovettuu, ja
+     * Santa Maria della Saluten alle lyötiin yli miljoona paalua.
+     *
+     * ── SPOILERIKORJAUS (Fable hyväksyi 29.8.2026) ────────────────────
+     *
+     * Maadoituksen ensimmäinen väite kuului aallon 4B integrointiin asti
+     * *"Tämä kaupunki ei seiso kalliolla vaan puussa: laguunin mutaan
+     * lyötiin tiheät rivit lepänrunkoja, kunnes ne ylsivät kovaan
+     * savikerrokseen asti"*, ja kolmas alkoi sanoilla *"Hapettomassa
+     * mudassa"*. Yhdessä ne antoivat js/packs/europe-questions.js:n
+     * `venetsia`-lohkon viidennen laattakysymyksen vastauksen — *"Miksi
+     * Venetsia vajoaa hitaasti?"* → *"se on rakennettu laguunin
+     * pehmeälle pohjalle"* — ennen kysymystä.
+     *
+     * Tämä kenttä EI OLE KAANONIA vaan paketin omaa Livia-tekstiä, joten
+     * päätoimittaja antoi luvan kirjoittaa paljastavan kohdan uusiksi.
+     * Paalufakta on jäljellä sellaisenaan, mutta MAAPERÄ ei enää esiinny
+     * missään muodossa: ei laguunia, ei mutaa, ei savikerrosta eikä
+     * vastakohtaa kalliolle. Livian puhekielisäännöt pitävät: lyhentymät
+     * vain reunoilla ("Jep", "mut"), pronominit kokonaisina, ei
+     * huutomerkkejä.
      */
-    maadoitus: 'Jep, ne portaat päättyvät mereen ihan oikeasti. Tämä '
-      + 'kaupunki ei seiso kalliolla vaan puussa: laguunin mutaan lyötiin '
-      + 'tiheät rivit lepänrunkoja, kunnes ne ylsivät kovaan '
-      + 'savikerrokseen asti, ja niiden päälle ladottiin ensin '
-      + 'kalkkikivilaatat ja vasta sitten tiilet. Hapettomassa mudassa '
+    /* FABLE HYVAKSYI: maadoituskorjaus */
+    maadoitus: 'Jep, ne portaat päättyvät mereen ihan oikeasti. Tämän '
+      + 'kaupungin talot seisovat puupaalujen päällä: paaluja lyötiin '
+      + 'tiheinä riveinä alas, ja niiden päälle ladottiin ensin '
+      + 'kalkkikivilaatat ja vasta sitten tiilet. Ilman happea '
       + 'puu ei lahoa vaan kovettuu, ja Santa Maria della Saluten alle '
-      + 'niitä lyötiin yli miljoona. Se alin askelma ei siis ole vahinko '
-      + '— mut se on vasta kaupungin pintaa.',
+      + 'niitä paaluja lyötiin yli miljoona. Se alin askelma ei siis ole '
+      + 'vahinko — mut se on vasta kaupungin pintaa.',
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      */
-    teksti: 'Vesi nousee Markuksen torille edelleen, useammin kuin '
+    teksti: 'Vesi nousee sille kuuluisalle torille edelleen, useammin kuin '
       + 'isoisäsi aikaan, ja nykyään sitä vastaan on rakennettu '
       + 'liikuteltavat padot mereen.. Ne hevoset ovat nykyään kirkon '
       + 'sisällä ja kopiot ulkona — ja se ylpeys tuodusta tavarasta ei '

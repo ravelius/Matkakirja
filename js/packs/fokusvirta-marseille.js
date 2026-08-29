@@ -86,17 +86,22 @@
  * jonne Dumas sijoitti Monte-Criston kreivin vankilan"*, eli vastaus oli
  * ruudulla ennen kysymystä, ja asia kirjattiin Fablelle.
  *
- * FABLE KORJASI KAANONIN AALLON 4B INTEGROINNISSA (29.8.2026):
- * repliikki kiusoittelee nyt kirjan nimellä sen sijaan että antaisi sen
- * — *"se linnoitussaari on If — ja se kirja, jonka takia koko maailma
- * sen tuntee.. sen nimen saat kaivaa esiin itse, ihan kohta."* Virke on
- * vaihdettu tähän tiedostoon sanatarkasti hänen muodossaan.
- *
- * YKSI KOHTA JÄÄ YHÄ PÄÄTOIMITTAJAN TIEDOKSI: kaanon nimeää saaren
- * ("on If"), ja js/packs/europe-questions.js:n `marseille`-lohkon viides
+ * FABLE KORJASI KAANONIN KAHDESTI AALLON 4B INTEGROINNISSA (29.8.2026).
+ * Ensimmäinen korjaus jätti saaren nimen vielä paikalleen, ja koska
+ * js/packs/europe-questions.js:n `marseille`-lohkon viides
  * laattakysymys kysyy asian TOISIN PÄIN — *"Millä linnoitussaarella
  * Marseillen edustalla Monte-Criston kreivi istui vankina?"*, vastaus
- * *Ifin saarella*. Kaanoniin ei kosketa täällä; havainto on raportissa.
+ * *Ifin saarella* — havainto raportoitiin uudelleen. Sama koski keiton
+ * nimeä: neljäs laattakysymys kysyy *"Mikä keitto on Marseillen
+ * kuuluisin ruoka?"*, ja repliikki avasi sanalla *"bouillabaisse"*.
+ *
+ * TOINEN KORJAUS POISTI MOLEMMAT NIMET. Repliikki kiusoittelee nyt sekä
+ * keitolla että saarella ja kirjalla: *"Sillä kalakeitolla on nykyään
+ * kuuluisa nimi, jonka opit ihan kohta…"* ja *"Ja se linnoitussaari, ja
+ * se kirja jonka takia koko maailma sen tuntee — molempien nimet saat
+ * kaivaa esiin itse, ihan kohta."* Kumpikaan sana — *bouillabaisse* tai
+ * *If* — ei enää esiinny tämän tiedoston kaanonkentissä. Virkkeet on
+ * vaihdettu sanatarkasti päätoimittajan muodossa.
  *
  * TÄMÄ PAKETTI EI SYVENNÄ SPOILERIA. Yksikään täky, oppitunti eikä
  * lehtitehtävä ei koske Ifin saarta, Dumas'ta eikä Monte-Criston
@@ -205,8 +210,9 @@ export const FOKUSVIRTA_MARSEILLE = {
      * sen jälkeen.
      *
      * MIKSI SAIPPUA EIKÄ KEITTO, SATAMA TAI SAARI: kaanoninen `teksti`
-     * ottaa heti perään kaikki kolme muuta (bouillabaisse, saippuan
-     * nykytila yhdellä lauseella, If ja Dumas), ja oppitunti ottaa
+     * ottaa heti perään kaikki kolme muuta (kalakeitto nimeämättä,
+     * saippuan nykytila yhdellä lauseella, saari ja kirja nimeämättä),
+     * ja oppitunti ottaa
      * Suezin. Merkinnän ensimmäinen virke — se haju ja ne vihreät harkot
      * — jää muuten kokonaan vastaamatta. Maadoitus vastaa siihen ja
      * luovuttaa vuoron keitolle viimeisellä virkkeellään, jotta kaanonin
@@ -237,13 +243,14 @@ export const FOKUSVIRTA_MARSEILLE = {
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. Kaksi
      * pistettä ensimmäisen virkkeen lopussa on kaanonin oma kirjoitusasu.
      */
-    teksti: 'Se kalakeitto on bouillabaisse, ja sen nimistä kiistellään '
-      + 'edelleen — oikeaoppiset vaativat vähintään neljää kalalajia.. '
+    teksti: 'Sillä kalakeitolla on nykyään kuuluisa nimi, jonka opit ihan '
+      + 'kohta — sen verran sanon, että oikeaoppiset vaativat siihen '
+      + 'vähintään neljää kalalajia.. '
       + 'Saippuaa keitetään yhä, tosin enemmän turisteille kuin '
-      + 'maailmalle. Ja se linnoitussaari on If — ja se kirja, jonka '
-      + 'takia koko maailma sen tuntee.. sen nimen saat kaivaa esiin '
-      + 'itse, ihan kohta. Vankia ei koskaan ollut, mut '
-      + 'selli näytetään silti. Satamaan sitten.',
+      + 'maailmalle. Ja se linnoitussaari, ja se kirja jonka takia koko '
+      + 'maailma sen tuntee — molempien nimet saat kaivaa esiin itse, '
+      + 'ihan kohta. Vankia ei koskaan ollut, mut selli näytetään silti. '
+      + 'Satamaan sitten.',
     /*
      * PÖLLÖN KUVA ON KAUPUNKILEHDEN HEROKUVA (omistajan linjaus): tämä
      * on Marseillen avauskarusellin ensimmäinen generoitu hero

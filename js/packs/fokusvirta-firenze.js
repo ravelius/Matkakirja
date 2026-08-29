@@ -178,8 +178,9 @@ export const FOKUSVIRTA_FIRENZE = {
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Tämä kaupunki oli vielä äsken kuningaskunnan pääkaupunki, '
       + 'ja nyt hovi on muuttanut Roomaan ja jättänyt jälkeensä '
-      + 'hiljaisuuden, joka sopii sille paremmin. Sillalla kultasepät '
-      + 'takovat kuten ovat takoneet neljäsataa vuotta. Signorian '
+      + 'hiljaisuuden, joka sopii sille paremmin. Sillalla, jonka päälle '
+      + 'on rakennettu puoteja, on käyty samaa kimaltavaa kauppaa '
+      + 'neljäsataa vuotta. Signorian '
       + 'aukiolla seisoin Davidin edessä niin kauan, että kyyhkyset '
       + 'ehtivät vaihtaa vahtivuoroa — mutta patsas seisoi kauemmin. '
       + 'Sitä aiotaan kuulemma siirtää sisälle sateilta suojaan; toivon '
@@ -194,8 +195,9 @@ export const FOKUSVIRTA_FIRENZE = {
     luenta: '[softly] Tämä kaupunki oli vielä äsken kuningaskunnan '
       + 'pääkaupunki, ja nyt hovi on muuttanut Roomaan ja jättänyt '
       + 'jälkeensä hiljaisuuden, joka sopii sille paremmin. [curious] '
-      + 'Sillalla kultasepät takovat kuten ovat takoneet neljäsataa '
-      + 'vuotta. [warmly] Signorian aukiolla seisoin Davidin edessä niin '
+      + 'Sillalla, jonka päälle on rakennettu puoteja, on käyty samaa '
+      + 'kimaltavaa kauppaa neljäsataa vuotta. '
+      + '[warmly] Signorian aukiolla seisoin Davidin edessä niin '
       + 'kauan, että kyyhkyset ehtivät vaihtaa vahtivuoroa — mutta '
       + 'patsas seisoi kauemmin. Sitä aiotaan kuulemma siirtää sisälle '
       + 'sateilta suojaan; toivon että se ehtii nähdä vielä yhden '
@@ -254,7 +256,8 @@ export const FOKUSVIRTA_FIRENZE = {
       + 'ja vei mukanaan kirjastoja ja maalauksia, ja vapaaehtoiset '
       + 'ympäri maailmaa tulivat kaivamaan taidetta mudasta.. Heitä '
       + 'sanotaan mudan enkeleiksi. David seisoo edelleen, tosin '
-      + 'nykyään sisällä suojassa, ja sillan kultasepät takovat yhä. '
+      + 'nykyään sisällä suojassa, ja sillan puodit kimaltavat yhä — '
+      + 'kohta näet keiden käsissä. '
       + 'Katsotaan mitä hän täältä kirjasi.',
     /*
      * Selite on lehden oman avauskuvan selite sellaisenaan (js/packs/
@@ -718,10 +721,21 @@ export const FOKUSVIRTA_FIRENZE = {
    * pitää vartijakuoron hajallaan — Ginevra ei usko omaa perinnettään
    * mutta jatkaa sitä silti.
    *
-   * MIKSI KULTASEPPÄ: merkinnän toinen virke on sillan kultasepistä,
-   * jotka ovat takoneet neljäsataa vuotta. Kohtaamispiste on sama
-   * silta, ja ammatti on ainoa Firenzessä, jonka jatkuvuudesta isoisä
-   * itse kirjoittaa.
+   * MIKSI KULTASEPPÄ: merkinnän toinen virke on sillan puodeista, joissa
+   * on käyty samaa kimaltavaa kauppaa neljäsataa vuotta. Kohtaamispiste
+   * on sama silta, ja ammatti on ainoa Firenzessä, jonka jatkuvuudesta
+   * isoisä itse kirjoittaa.
+   *
+   * AMMATIN SAA SANOA TÄSSÄ, JA JUURI TÄSSÄ. Fablen kaanonkorjaus
+   * 29.8.2026 poisti sanan "kultaseppä" sekä merkinnästä että Livian
+   * repliikistä, koska se antoi js/packs/europe-questions.js:n
+   * `firenze`-lohkon kolmannen laattakysymyksen vastauksen
+   * (*"Mitä Ponte Vecchion kaupoissa on myyty vuodesta 1593 lähtien?"*
+   * → *kultasepäntöitä*) ennen kysymystä. KOHTAAMINEN ON KYSYMYKSEN
+   * TAKANA — pelaaja on jo vastannut siihen päästessään tänne — joten
+   * hahmon ammatti saa lukea kortissa. Livian repliikki päättyy
+   * tarkoituksella vihjeeseen *"kohta näet keiden käsissä"*, joka
+   * osoittaa juuri tähän korttiin.
    *
    * VARALLISUUSSÄÄNTÖ tarkistettu virke virkkeeltä: isoisä ei maksa
    * mitään, ei tilaa mitään eikä käske ketään. Suvun syy pitää kirjaa
