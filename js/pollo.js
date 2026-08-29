@@ -1001,6 +1001,122 @@ const TERVEHDYS = 'Olen pöllö. Sijaisena. Eli pulu — kirjekyyhky, jos '
   + 'kartalla tai lehdessä juuri nyt näkyy, tai muusta maailmasta. Pelin '
   + 'tehtäviä en ratkaise puolestasi.';
 
+/*
+ * ── LIVIAN MIETINTÄMUODOT (omistajan hyväksyntä 29.8.2026) ───────────
+ *
+ * Odotusrivi oli ennen NIMILAPPU — "Pöllö Pulu miettii…", pöllö yli
+ * vedettynä — ja sama teksti joka kerta. Odotus on kuitenkin juuri se
+ * hetki, jolloin pelaaja tuijottaa ruutua eikä muuta tapahdu, ja siihen
+ * mahtuu Livian ääni viemättä tilaa itse vastaukselta. Rivi on siis nyt
+ * Livian oma repliikki, ja se arvotaan joka odotukseen erikseen.
+ *
+ * KOLME LISTAA, YKSI PAIKKA. `yleiset` käyvät mihin tahansa odotukseen:
+ * Livia vain puuhaa jotain. `vastaus` viittaavat pelaajan juuri
+ * esittämään kysymykseen, joten ne kuuluvat vain vastausta odottavaan
+ * riviin — kysymysehdotuksia generoitaessa kukaan ei ole vielä kysynyt
+ * mitään, ja "hyvä kysymys" olisi siinä kohtaa valhe. `pitkat` ovat
+ * jatkorepliikkejä: pitkä odotus vaihtaa rivin KERRAN (ks.
+ * mietintarivi), jotta pysähtynyt ruutu ei näytä jumittuneelta.
+ *
+ * PUHEKIELISÄÄNNÖT (Raamattu, "LIVIAN PUHEKIELI"): loppuheitot ja
+ * lyhentymät vain rivin alussa ja lopussa, pronominit kokonaisina
+ * (minä, ei mä), ei huutomerkkejä, ja Kaak-lintuäänne vain aidoissa
+ * säikähdyksissä — odotus ei ole säikähdys, joten sitä ei täällä ole.
+ * Rivit päättyvät kahteen pisteeseen: se on vaimeampi kuin kolme, ja
+ * kuulostaa siltä että lause vain jäi kesken lähtiessä.
+ */
+export const LIVIAN_MIETINNAT = {
+  yleiset: [
+    'Hetki, pululla pulla suussa..',
+    'Odotas, sulka jäi mustepulloon..',
+    'Kaivan sähkeitä, siellä oli jotain tästä..',
+    'Hetkinen, lento vastatuuleen..',
+    'Annas kun mietin. Tai ei — kysyn joltain viisaammalta..',
+    'Odota, järjestän ajatukseni oksalle..',
+    'Muistan lukeneeni tästä. Mistäs se nyt olikaan..',
+    'Setä tiesi tästä jotain. Mietin hetken..',
+    'Pieni hetki, untuvia sähkekoneessa..',
+    'Katsotaas. Nokka kirjaan, siipi kartalle..',
+    'Hetki vain, kynä on väärässä siivessä..',
+    'Odotas, luen omat muistiinpanoni. Käsiala on kanan..',
+    'Hetkinen, kirjastonhoitaja on pöllö ja pöllö nukkuu päivisin..',
+    'Pieni hetki, arkiston ovi on jumissa..',
+  ],
+  vastaus: [
+    'Hyvä kysymys. Käyn kysymässä pöllöltä, pieni hetki..',
+    'Tää on pöllön heiniä. Vien viestin, palaan pian..',
+    'Minä tiedän kenelle tämä kuuluu. Käyn lentämässä..',
+    'Otan tämän kysymyksen mukaani. Kaksi kaartoa ja palaan..',
+  ],
+  pitkat: [
+    'No nyt kesti. Pöllöllä on pitkä puheenvuoro..',
+    'Vieläkin menossa. Vastatuuli oli luvattua kovempi..',
+    'Kohta tulee. Arkistossa oli enemmän pölyä kuin muistin..',
+  ],
+};
+
+/** Kuinka kauan odotus saa kestää ennen kuin rivi vaihtuu jatkorepliikkiin. */
+export const MIETINNAN_JATKOVIIVE = 6000;
+
+/*
+ * Edellinen arvottu repliikki muistissa koko chatin osalta (yksi
+ * paneeli kerrallaan): sama mietintä ei saa osua kahdesti peräkkäin,
+ * koska juuri toisto paljastaa rivin koneeksi. Muisti on yhteinen
+ * vastaus- ja ehdotusriville — ne seuraavat toisiaan ruudulla.
+ */
+let viimeisinMietinta = '';
+
+/**
+ * Arpoo repliikin listasta niin, ettei edellinen toistu.
+ *
+ * Suodatus ennen arvontaa (eikä uusinta-arvonta) pitää jakauman
+ * tasaisena ja hoituu yhdellä kierroksella. Yhden alkion lista
+ * palauttaa sen alkion — mahdoton lupaus ei kaada mitään.
+ *
+ * @param {string[]} lista repliikit
+ * @param {string} edellinen viimeksi näytetty repliikki
+ * @returns {string} arvottu repliikki
+ */
+export function arvoMietinta(lista, edellinen = '') {
+  const kaikki = (Array.isArray(lista) ? lista : []).filter(Boolean);
+  if (!kaikki.length) return '';
+  const muut = kaikki.filter((teksti) => teksti !== edellinen);
+  const joukko = muut.length ? muut : kaikki;
+  return joukko[Math.floor(Math.random() * joukko.length)];
+}
+
+/** Arpoo ja merkitsee muistiin: seuraava arvonta väistää tätä. */
+function seuraavaMietinta(lista) {
+  viimeisinMietinta = arvoMietinta(lista, viimeisinMietinta);
+  return viimeisinMietinta;
+}
+
+/**
+ * Odotusrivin teksti ja pitkän odotuksen jatkorepliikki.
+ *
+ * Ajastinta ei tarvitse siivota erikseen: rivi tarkistaa itse, onko se
+ * yhä dokumentissa. Odotusrivi poistetaan monesta kohdasta (ensimmäinen
+ * striimin pala, virhe, vanhentunut ehdotushaku, kotelon tyhjennys),
+ * eikä yksikään niistä saa unohtua — siksi ehto on rivissä itsessään
+ * eikä jokaisessa poistokohdassa.
+ *
+ * @param {object} rivi odotusrivin elementti
+ * @param {'vastaus'|'ehdotukset'} laji mitä odotetaan
+ * @returns {object} sama rivi
+ */
+function mietintarivi(rivi, laji = 'vastaus') {
+  const lista = laji === 'vastaus'
+    ? [...LIVIAN_MIETINNAT.yleiset, ...LIVIAN_MIETINNAT.vastaus]
+    : LIVIAN_MIETINNAT.yleiset;
+  rivi.textContent = seuraavaMietinta(lista);
+  setTimeout(() => {
+    // Odotus jo ohi: rivi on poistettu virrasta, eikä sitä herätetä.
+    if (rivi.isConnected === false) return;
+    rivi.textContent = seuraavaMietinta(LIVIAN_MIETINNAT.pitkat);
+  }, MIETINNAN_JATKOVIIVE);
+  return rivi;
+}
+
 const EI_HEREILLA = 'Livia ei ole vielä hereillä.';
 const EI_HEREILLA_LISA = 'Tietokumppani odottaa vielä käyttöönottoa. '
   + 'Peli toimii normaalisti ilman sitä.';
@@ -3249,7 +3365,7 @@ class Pollo {
     /*
      * Paneelin odotustila on OMA luokkansa (omistaja 13.8.2026:
      * *"saisiko strimitekstin ilman kursiivia"*). Tässä oli aiemmin
-     * .pollo-odottaa — sama nimi kuin "Pöllö miettii…" -kuplalla — ja
+     * .pollo-odottaa — sama nimi kuin odotusrivin kuplalla — ja
      * sen kursiivi ja himmeä muste periytyivät paneelista koko
      * striimattuun vastaukseen. Teksti kirjoittui siis kursiivilla ja
      * suoristui vasta valmistuessaan.
@@ -3565,10 +3681,11 @@ class Pollo {
    * kysymyksiä tulossa vai eikö niitä tässä kohtaa ole lainkaan.
    *
    * SAMA KIELI KUIN VASTAUSTA ODOTTAESSA, pienempänä: rivi on sama
-   * `.pollo-viesti.pollo-odottaa` -nimilappu kuin kysymyksen alla
-   * ("Pöllö Pulu miettii…", pöllö yli vedettynä — polloNimilappu), vain
-   * ehdotusrivin kokoon kutistettuna ja hitaasti hengittävänä (css
-   * `.pollo-ehdotus-odotus`). Uutta odotuskieltä ei keksitä.
+   * `.pollo-viesti.pollo-odottaa` kuin kysymyksen alla — vaihtuva
+   * Livian mietintämuoto (LIVIAN_MIETINNAT) — vain ehdotusrivin kokoon
+   * kutistettuna ja hitaasti hengittävänä (css `.pollo-ehdotus-odotus`).
+   * Uutta odotuskieltä ei keksitä. Laji on 'ehdotukset': kysymykseen
+   * viittaavat repliikit jäävät pois, koska kukaan ei ole vielä kysynyt.
    *
    * Rivi asuu ehdotuskotelossa, joten se katoaa itsestään samoista
    * paikoista kuin kuplatkin: naytaEhdotukset, siivoaTarjokkaat ja
@@ -3578,8 +3695,10 @@ class Pollo {
    */
   naytaEhdotusOdotus() {
     this.ehdotukset.replaceChildren();
-    const rivi = polloElementti('p', 'pollo-viesti pollo-odottaa pollo-ehdotus-odotus');
-    polloNimilappu(rivi, { jalkeen: ' miettii kysymyksiä…' });
+    const rivi = mietintarivi(
+      polloElementti('p', 'pollo-viesti pollo-odottaa pollo-ehdotus-odotus'),
+      'ehdotukset',
+    );
     this.ehdotusOdotus = rivi;
     this.ehdotukset.appendChild(rivi);
     this.ehdotukset.hidden = false;
@@ -3658,16 +3777,17 @@ class Pollo {
      * 13.8.2026). Ks. avaa: alkutila koskee vain tuoretta keskustelua.
      */
     this.paneeli.classList?.remove('pollo-alku');
-    // Edellisen vastauksen varaus pois, jotta kysymys ja "Pöllö miettii…"
+    // Edellisen vastauksen varaus pois, jotta kysymys ja odotusrivi
     // kelaavat vielä pohjaan — uusi varaus viritetään heti perään.
     this.nollaaTyhjaTila();
     const kysymysViesti = this.lisaaViesti('kayttaja', kysymys);
     /*
-     * ODOTUSRIVI ON NIMILAPPU, ei Livian puhetta: siihen kuuluu
-     * yliviivausvitsi ("Pöllö Pulu miettii…", pöllö yli vedettynä).
-     * Ruudunlukija kuulee vain "Pulu miettii…" (polloNimilappu).
+     * ODOTUSRIVI ON LIVIAN PUHETTA (omistajan hyväksyntä 29.8.2026).
+     * Aiemmin tässä oli nimilappu ja sen yliviivausvitsi ("Pöllö Pulu
+     * miettii…") joka kerta samana; nyt rivi on vaihtuva mietintämuoto
+     * (LIVIAN_MIETINNAT), ja pitkä odotus vaihtaa sen kerran.
      */
-    const odotus = polloNimilappu(this.lisaaViesti('odottaa', ''), { jalkeen: ' miettii…' });
+    const odotus = mietintarivi(this.lisaaViesti('odottaa', ''), 'vastaus');
     this.asetaKesken(true);
     this.viimeisetKatkelmat = [];
     /*
@@ -3694,7 +3814,7 @@ class Pollo {
     };
     /*
      * Vastauskupla syntyy vasta ensimmäisestä palasta: siihen asti
-     * ruudulla on "Pöllö miettii…". Kupla luodaan tyhjänä, ja striimin
+     * ruudulla on Livian mietintärivi. Kupla luodaan tyhjänä, ja striimin
      * teksti kirjoitetaan siihen suodatettuna (hakasulkeet pois).
      */
     let viesti = null;
