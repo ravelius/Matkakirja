@@ -113,7 +113,22 @@ export function kohdeTiedosto(id) {
   return null;
 }
 
-const kaupungit = process.argv.slice(2);
+/*
+ * KAUPUNKILISTA SIEDÄTTÄÄ PILKUN. Ohje puhuu välilyönneistä, mutta
+ * työnkulun syötekenttään kirjoitetaan käsin ja lista tulee usein
+ * pilkullisena ("helsinki,kobenhavn,tallinna,tukholma"). Workflow
+ * välittää syötteen sellaisenaan komentoriville, jolloin koko lista
+ * osui tänne YHTENÄ avaimena, jolle ei tietenkään löytynyt luentaa:
+ * ajo ohitti sen, generoi nolla tiedostoa ja kaatui vasta commit-
+ * vaiheessa harhaanjohtavaan virheeseen "Yhtään tiedostoa ei syntynyt
+ * eikä muuttunut" (ajo 33277398508, 29.8.2026). Erotin on siksi tässä
+ * kumpi tahansa — pilkku tai välilyönti — eikä kutsujan muistin varassa.
+ */
+const kaupungit = process.argv
+  .slice(2)
+  .flatMap((pala) => pala.split(','))
+  .map((pala) => pala.trim())
+  .filter(Boolean);
 if (!kaupungit.length) {
   console.error('Anna kaupungit: node tools/generoi-luennat.mjs lontoo madrid …');
   process.exit(1);
@@ -137,6 +152,14 @@ if (!avain && !kuiva) {
 
 if (kuiva) console.log('KUIVA AJO (ELEVEN_KUIVA=1) — APIa ei kutsuta, tiedostoja ei kirjoiteta.');
 
+/*
+ * KOHTEET RATKAISTAAN ENSIN, VASTA SITTEN SOITETAAN APILLE. Tunnistamaton
+ * avain (kirjoitusvirhe, kaupunki ilman luentaa, koko lista yhtenä
+ * pötkönä) huomataan näin ennen kuin yksikään krediitti palaa, eikä ajo
+ * voi enää päättyä hiljaa nollaan tiedostoon: puuttuva kohde on virhe
+ * heti tässä työkalussa, siinä vaiheessa jossa syy myös näkyy.
+ */
+const tyot = [];
 let puuttuvia = 0;
 for (const id of kaupungit) {
   const tyo = kohdeTiedosto(id);
@@ -145,8 +168,12 @@ for (const id of kaupungit) {
     puuttuvia += 1;
     continue;
   }
-  if (kuiva) {
-    console.log(`${id}: lähde ${tyo.lahde} → ${tyo.polku} (${tyo.luenta.length} merkkiä)`);
+  tyot.push({ id, ...tyo });
+}
+
+if (kuiva) {
+  for (const tyo of tyot) {
+    console.log(`${tyo.id}: lähde ${tyo.lahde} → ${tyo.polku} (${tyo.luenta.length} merkkiä)`);
     // Kytkennän tarkistus: pelin `aanite` ja työkalun kohde samaksi.
     if (tyo.lahde === 'fokusvirta') {
       if (!tyo.kentta) {
@@ -157,8 +184,22 @@ for (const id of kaupungit) {
         puuttuvia += 1;
       }
     }
-    continue;
   }
+  console.log(puuttuvia
+    ? `Kuiva ajo valmis — ${puuttuvia} kaupunkia jäi ilman kelvollista kohdetta.`
+    : `Kuiva ajo valmis — kaikille ${tyot.length} kaupungille löytyi luenta ja kohdetiedosto.`);
+  process.exit(puuttuvia ? 1 : 0);
+}
+
+if (puuttuvia) {
+  console.error(`Tunnistamattomia kaupunkiavaimia: ${puuttuvia} — ei generoida mitään.`);
+  console.error('Anna avaimet erikseen (pilkku tai välilyöntikin kelpaa) ja tarkista');
+  console.error('kirjoitusasu js/packs/fokusvirrat.js:stä tai saapumispakasta.');
+  process.exit(1);
+}
+
+for (const tyo of tyot) {
+  const { id } = tyo;
   console.log(`${id}: generoidaan lähteestä ${tyo.lahde} (${tyo.luenta.length} merkkiä)…`);
   const vastaus = await fetch(
     'https://api.elevenlabs.io/v1/text-to-dialogue?output_format=mp3_44100_128',
@@ -183,10 +224,4 @@ for (const id of kaupungit) {
   writeFileSync(polku, data);
   console.log(`${id}: ${(data.length / 1024).toFixed(0)} kt → ${polku}`);
 }
-if (kuiva) {
-  console.log(puuttuvia
-    ? `Kuiva ajo valmis — ${puuttuvia} kaupunkia jäi ilman kelvollista kohdetta.`
-    : 'Kuiva ajo valmis — kaikille kaupungeille löytyi luenta ja kohdetiedosto.');
-  process.exit(puuttuvia ? 1 : 0);
-}
-console.log('Valmis. Muista: tiedostot repoon ja kuuntele ne ennen julkaisua.');
+console.log(`Valmis, ${tyot.length} tiedostoa. Muista: tiedostot repoon ja kuuntele ne ennen julkaisua.`);
