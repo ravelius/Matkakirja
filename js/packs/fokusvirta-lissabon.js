@@ -70,10 +70,11 @@
  *
  * ── ÄÄNITE ─────────────────────────────────────────────────────────
  *
- * Luentaa EI ole vielä generoitu, joten `matkakirja.aanite` puuttuu —
- * sama kaava kuin aallossa 3. Teksti ja luenta ovat sanasta sanaan
- * samat, joten luennan voi ajaa suoraan (generoi-luennat-tyonkulku)
- * ilman että tekstiin kosketaan.
+ * Luenta on generoitu 29.8.2026 (tools/generoi-luennat.mjs, lähteenä
+ * tämän lohkon oma `matkakirja.luenta`) ja `matkakirja.aanite`
+ * osoittaa siihen: assets/audio/puhe-fokus-matkakirja-lissabon.mp3.
+ * Teksti ja luenta ovat sanasta sanaan samat, joten tekstin muutos
+ * vaatii uuden generoinnin.
  */
 
 /*
@@ -167,6 +168,7 @@ export const FOKUSVIRTA_LISSABON = {
       + 'sinivalkoisia, joilla täällä verhotaan kokonaiset talonseinät — '
       + 'köyhän miehen freskot, sanoi isäntäni, [warmly] mutta minusta ne '
       + 'ovat kauniimpia kuin moni palatsi.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-lissabon.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

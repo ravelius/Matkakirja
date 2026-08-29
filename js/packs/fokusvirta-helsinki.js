@@ -45,9 +45,11 @@
  *
  * ── ÄÄNITE ─────────────────────────────────────────────────────────
  *
- * Luentaa EI ole vielä generoitu, joten `matkakirja.aanite` puuttuu.
- * Teksti ja luenta ovat sanasta sanaan samat, joten luennan voi ajaa
- * suoraan (generoi-luennat-tyonkulku) ilman että tekstiin kosketaan.
+ * Luenta on generoitu 29.8.2026 (tools/generoi-luennat.mjs, lähteenä
+ * tämän lohkon oma `matkakirja.luenta`) ja `matkakirja.aanite`
+ * osoittaa siihen: assets/audio/puhe-fokus-matkakirja-helsinki.mp3.
+ * Teksti ja luenta ovat sanasta sanaan samat, joten tekstin muutos
+ * vaatii uuden generoinnin.
  */
 
 /*
@@ -115,6 +117,7 @@ export const FOKUSVIRTA_HELSINKI = {
       + 'ja valkoinen kirkko seisoo kukkulallaan kuin keisarin '
       + 'allekirjoitus. [softly] Satamassa tuoksui terva — sitä lastattiin '
       + 'laivoihin kuin kultaa, [whispers] ja tavallaan se sitä olikin.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-helsinki.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

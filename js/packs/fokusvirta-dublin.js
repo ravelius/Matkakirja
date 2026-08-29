@@ -78,15 +78,11 @@
  *
  * ── ÄÄNITE ─────────────────────────────────────────────────────────
  *
- * Luentaa EI ole vielä generoitu, joten `matkakirja.aanite` puuttuu —
- * sama ratkaisu kuin Tukholmassa. Kenttä on kytkin, ei koriste:
- * js/ui.js näyttää kaiutinnapin heti kun kenttä on olemassa, joten
- * olemattomaan tiedostoon osoittava polku antaisi pelaajalle mykän
- * napin. Työkalu kirjoittaa äänitteen polkuun
- * `assets/audio/puhe-fokus-matkakirja-dublin.mp3`
- * (tools/generoi-luennat.mjs kohdeTiedosto), ja juuri se rivi lisätään
- * `aanite`-kentäksi, kun generointi on ajettu. Teksti ja luenta ovat
- * sanasta sanaan samat, joten luennan voi ajaa koskematta tekstiin.
+ * Luenta on generoitu 29.8.2026 (tools/generoi-luennat.mjs, lähteenä
+ * tämän lohkon oma `matkakirja.luenta`) ja `matkakirja.aanite`
+ * osoittaa siihen: assets/audio/puhe-fokus-matkakirja-dublin.mp3.
+ * Teksti ja luenta ovat sanasta sanaan samat, joten tekstin muutos
+ * vaatii uuden generoinnin.
  *
  * ── KYTKENTÄ PELIIN ────────────────────────────────────────────────
  *
@@ -211,6 +207,7 @@ export const FOKUSVIRTA_DUBLIN = {
       + 'kiemurtelevat kuviot ovat hienommat kuin yhdenkään kultasepän työ. '
       + '[softly] Vahtimestari käänsi sivua valkoisin käsinein [whispers] ja '
       + 'katsoi minua kuin varasta.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-dublin.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

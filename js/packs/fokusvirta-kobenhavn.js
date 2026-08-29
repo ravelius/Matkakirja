@@ -45,9 +45,11 @@
  *
  * ── ÄÄNITE ─────────────────────────────────────────────────────────
  *
- * Luentaa EI ole vielä generoitu, joten `matkakirja.aanite` puuttuu.
- * Teksti ja luenta ovat sanasta sanaan samat, joten luennan voi ajaa
- * suoraan (generoi-luennat-tyonkulku) ilman että tekstiin kosketaan.
+ * Luenta on generoitu 29.8.2026 (tools/generoi-luennat.mjs, lähteenä
+ * tämän lohkon oma `matkakirja.luenta`) ja `matkakirja.aanite`
+ * osoittaa siihen: assets/audio/puhe-fokus-matkakirja-kobenhavn.mp3.
+ * Teksti ja luenta ovat sanasta sanaan samat, joten tekstin muutos
+ * vaatii uuden generoinnin.
  */
 
 /*
@@ -113,6 +115,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
       + 'silti täällä käydään illat huvipuistossa. [softly] Kävelin Tivolin '
       + 'portista sisään ja ymmärsin: [whispers] tämä kansa päätti surra '
       + 'valot päällä.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-kobenhavn.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
