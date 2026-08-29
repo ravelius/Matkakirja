@@ -48,6 +48,12 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1310: Prahan merkinnan anakronismi korjattu: ajurin kyyti, ei raitiovaunua (1873).',
+  'v1309: AALTO 2 - Lontoo, Budapest, Dubrovnik ja Praha taysia fokuskaupunkeja (matkakirja isoisan aanella, Livian kupla, takyt+visat, kohtaaminen, lehtitehtavat, maan takynosto). Prahan kohtaaminen on isoisan pulma. Kay lapi yksi naista.',
+  'v1308: C-sarjan 10 loistoaikakuvaa aallon 1 takyihin (Altamira, Lustig, Kopenick ym.). Avaa Madridin tai Berliinin takypiste.',
+  'v1307: Neljan vanhan noston loistoaikakuvat (Dracula, Schliemann, pyramidi, kissat) + UUSI Antikythera-taky Kreikkaan (piste hylyn saarella). Luennat: aalto 1 kuuluu Madridissa/Wienissa/Pariisissa/Berliinissa.',
+  'v1306: Luentatyokalu tuntee fokusvirrat; aallon 1 aanite-kentat valmiina.',
+  'v1305: AALTO 1 - Madrid, Wien, Pariisi ja Berliini taysia fokuskaupunkeja. Wienin kohtaaminen pilotoi isoisan pulman (paivamaarapulma 1873). Kay lapi yksi naista. Raamatussa illan linjaukset.',
   'v1304: 30 uutta heroa 28 kaupungin avauskaruselliin. Katso ensin SOFIA (3 ensimmaista kuvaa), sitten korvatut: Wien, Praha, Lontoo, Budapest, Helsinki, Islanti, Kobenhavn, Tukholma, Firenze.',
   'v1303: JANKKIKORJAUS - atlaslehtien purku pois maalauspolusta, porrasvaihto ilman taysipurkua, lehdet kiertoon 30 s armonajalla. RATKAISEVA: zoomaa ja vierita karttaa laitteella - jaatymien pitaisi kadota. ?mittari=1 nayttaa luvut.',
   'v1302: Faktarivit yhdeksalla paaaarteella (tumma paljastus). Avaa jokin paaaarre ja lue fakta.',

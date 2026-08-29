@@ -46,10 +46,9 @@
  *   2. Livian kuva on kaupunkilehden avauskarusellin generoitu hero.
  *   3. Valinta-askelta ei ole: `valinta`-kenttää ei kirjoiteta.
  *
- * ÄÄNITE PUUTTUU VIELÄ: `matkakirja.aanite` kirjoitetaan samassa
- * erässä kuin assets/audio/puhe-fokus-matkakirja-budapest.mp3
- * (tools/generoi-luennat.mjs budapest). Ilman kenttää js/ui.js
- * piilottaa kaiuttimen.
+ * ÄÄNITE: luenta generoitiin 29.8.2026 ja matkakirja.aanite osoittaa
+ * siihen. Teksti ja luenta sanasta sanaan samat — tekstimuutos vaatii
+ * uuden generoinnin.
  *
  * ── KUVAT ──────────────────────────────────────────────────────────
  *
@@ -121,16 +120,12 @@ export const FOKUSVIRTA_BUDAPEST = {
       + 'ja Pest liitettiin yhteen, ja nimi on nyt Budapest. '
       + 'Kartantekijöille riittää töitä. Tonavan rannalla vanha mies '
       + 'sanoi, että uusi nimi tai ei — joki muistaa kaiken.',
-    /*
-     * Luenta on sama teksti tunnetagein — sanat eivät muutu. Äänitettä
-     * ei ole vielä generoitu, joten `aanite` puuttuu (ks. tiedoston
-     * alku).
-     */
     luenta: '[curious] Saavuin kaupunkiin, jota ei vielä eilen ollut: '
       + 'Buda, Óbuda ja Pest liitettiin yhteen, ja nimi on nyt Budapest. '
       + '[laughs] Kartantekijöille riittää töitä. [softly] Tonavan '
       + 'rannalla vanha mies sanoi, että uusi nimi tai ei — [whispers] '
       + 'joki muistaa kaiken.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-budapest.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
