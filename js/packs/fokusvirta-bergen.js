@@ -67,28 +67,25 @@
  * äänite on generoitu, riville tulee
  * `aanite: 'assets/audio/puhe-fokus-matkakirja-bergen.mp3'`.
  *
- * ── KUVIEN SILMÄTARKISTUS — MITÄ ON TEHTY JA MITÄ EI ───────────────
+ * ── KUVIEN TARKISTUS ───────────────────────────────────────────────
  *
  * LISENSSI, TEKIJÄ, KOKO JA RAJOITUKSET on luettu Commonsin
- * rajapinnan `extmetadata`-kentistä 29.8.2026 KAIKISTA kuudesta
+ * rajapinnan `extmetadata`-kentistä 29.8.2026 KAIKISTA seitsemästä
  * kuvasta. Yhtään nimeä ei ole arvattu, ja jokaisen Restrictions-kenttä
  * oli tyhjä.
  *
- * SILMÄTARKISTUS 900–960 px:n esikatselusta on tehty KOLMESTA:
- *   - Tørrfisk.jpg (oppitunti, UUSI kuva tässä paketissa)
- *   - Bergen Bryggen 1017.jpg (Livian kuva)
- *   - Ekofisk (TELE.1990-2-438).jpg (täkynosto)
+ * SILMÄTARKISTUS 960 px:n esikatselusta on tehty KAIKISTA seitsemästä,
+ * ja havainto on kirjattu kunkin kuvan omaan kommenttiin. Yhdessäkään
+ * ei ole tunnistettavia nykyihmisiä; ainoat ihmishahmot ovat
+ * Amundsenin vuoden 1911 valokuvassa, jossa neljä turkkeihin
+ * pukeutunutta retkeläistä seisoo kaukana teltan vieressä.
  *
- * NELJÄSTÄ MUUSTA SE JÄI TEKEMÄTTÄ. Commonsin kuvapalvelin
- * (upload.wikimedia.org) vastasi 429:llä kaikilla yrityksillä useiden
- * minuuttien ajan — samasta ympäristöstä hakee rinnakkain useampi
- * sessio, ja sama ilmiö on kirjattu jo Bergenin faktapohjaan
- * (docs/mantereet-tyoaineisto/faktapohja-bergen.md, osio 7 kohta 6).
- * Kaikki neljä — Borgundin sauvakirkko, myskihärkä, Geirangervuono ja
- * Amundsenin retkikunta — ovat kuitenkin jo pelissä Norjan maalehden
- * nostoina (js/packs/maa-kategoriat.js, NOR), eli ne ovat läpäisseet
- * kuvasäännöt kertaalleen eikä tämä paketti tuo niitä peliin
- * ensimmäistä kertaa. QA voi halutessaan uusia katselun.
+ * HUOMIO TYÖKALUSTA (QA:lle ja seuraaville kirjoittajille):
+ * upload.wikimedia.org palauttaa 400:n, jos esikatselun leveydeksi
+ * pyytää muuta kuin vakiokokoa — 640 px ja 900 px kaatuivat, 960 px
+ * toimi. Virhe näyttää helposti nopeusrajoitukselta, vaikka kyse on
+ * väärästä leveydestä; rajapinnan `iiurlwidth`-vastauksen antamaa
+ * thumburlia kannattaa käyttää sellaisenaan.
  */
 
 /*
@@ -294,12 +291,10 @@ export const FOKUSVIRTA_BERGEN = {
        * js/packs/maa-kategoriat.js) — siis jo kertaalleen tarkistettu ja
        * hyväksytty. Commons 29.8.2026: 2260×3500, CC BY-SA 3.0, Ximonic
        * (Simo Räsänen), kuvaus "Borgund Stave Church in Lærdalen …".
-       * Restrictions tyhjä.
-       *
-       * SILMÄTARKISTUSTA EI VOITU UUSIA (ks. KUVIEN SILMÄTARKISTUS
-       * tiedoston lopussa): Commonsin kuvapalvelin vastasi 429:llä koko
-       * työvaiheen ajan. Kuva on jo pelissä maalehden nostona, eli se on
-       * läpäissyt kuvasäännöt kertaalleen.
+       * Restrictions tyhjä. SILMÄTARKISTUS tehty: musta tervattu
+       * puukirkko kirkkomaan keskellä, katonharjalla erottuu
+       * lohikäärmeenpää ja takana vihreä vuorenrinne; ei ihmisiä. Kuva
+       * näyttää siis täsmälleen ne kaksi asiaa, jotka teksti nimeää.
        */
       kuva: {
         tiedosto: 'Borgund Stave Church in Lærdalen, 2013 June.jpg',
@@ -375,10 +370,9 @@ export const FOKUSVIRTA_BERGEN = {
        * Kuva on pelin omasta aineistosta (sama tiedosto NOR/luonto).
        * Commons 29.8.2026: 4322×2882, CC BY-SA 4.0, Charles J. Sharp,
        * kuvaus "Muskox (Ovibos moschatus) male, Dovrefjell National Park,
-       * Norway". Restrictions tyhjä.
-       *
-       * SILMÄTARKISTUSTA EI VOITU UUSIA (ks. KUVIEN SILMÄTARKISTUS
-       * tiedoston lopussa). Kuva on jo pelissä maalehden nostona.
+       * Norway". Restrictions tyhjä. SILMÄTARKISTUS tehty: yksittäinen
+       * uros makaa tunturikankaalla, turkki karvanvaihdossa ja sarvet
+       * selvästi näkyvissä; ei ihmisiä.
        */
       kuva: {
         tiedosto: 'Muskox (Ovibos moschatus) male Dovrefjell 1.jpg',
@@ -462,10 +456,9 @@ export const FOKUSVIRTA_BERGEN = {
        * Kuva on pelin omasta aineistosta (sama tiedosto NOR/luonto).
        * Commons 29.8.2026: 6520×3660, CC BY-SA 3.0, Ximonic (Simo
        * Räsänen), kuvaus "A view to Geirangerfjord from Ørnesvingen …".
-       * Restrictions tyhjä.
-       *
-       * SILMÄTARKISTUSTA EI VOITU UUSIA (ks. KUVIEN SILMÄTARKISTUS
-       * tiedoston lopussa). Kuva on jo pelissä maalehden nostona.
+       * Restrictions tyhjä. SILMÄTARKISTUS tehty: laaja näkymä vuonon
+       * mutkaan, seinät nousevat suoraan vedestä ja pohjukassa näkyy
+       * pieni alus kaukana; ei tunnistettavia ihmisiä.
        */
       kuva: {
         tiedosto: 'Geirangerfjord from Ørnesvingen, 2013 June.jpg',
@@ -832,11 +825,11 @@ export const FOKUSVIRTA_BERGEN = {
        * (1863–1961), päiväys 17.12.1911, kuvaus "Amundsen Expedition at
        * the South Pole (from left to right): Roald Amundsen, Helmer
        * Hanssen, Sverre Hassel and Oscar Wisting". Restrictions tyhjä.
-       *
-       * SILMÄTARKISTUSTA EI VOITU UUSIA (ks. KUVIEN SILMÄTARKISTUS
-       * tiedoston lopussa). Kuva on jo pelissä maalehden nostona, ja
-       * rajapinnan kuvauksen mukaan siinä on neljä nimeltä tunnettua
-       * historiallista henkilöä vuodelta 1911, ei nykyihmisiä.
+       * SILMÄTARKISTUS tehty: rakeinen aikalaisvalokuva lumikentältä,
+       * neljä turkkeihin pukeutunutta hahmoa kaukana teltan vieressä ja
+       * teltan päällä Norjan lippu — kasvoja ei erota, eikä kuvassa ole
+       * nykyihmisiä. Lippu on sama yksityiskohta, jonka pelin oma nosto
+       * mainitsee.
        *
        * LOISTOAIKAKUVAA EI VIELÄ OLE (sama huomautus kuin Tukholmassa ja
        * Helsingissä): tämän erän generoidut kuvat ovat vasta
