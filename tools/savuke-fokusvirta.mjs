@@ -58,6 +58,34 @@ import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
+
+/*
+ * KORTTIANNOSTELUN OHITUSVAHTI — TARKKA PEILIKUVA raskaan virran
+ * savukkeelle (tools/savukkeet/savuke-fokusvirta.mjs). Tämä savuke
+ * mittaa juuri niitä pintoja, jotka kortit sammuttavat: lehti aukeaa
+ * suoraan, lehdessä on nimetyt tehtävät, kartalle syttyy vihreä piste.
+ * Kortit päälle -päätöksen (omistaja 29.8.2026, "Päälle — koko kulku
+ * testiin") jälkeen yksikään niistä ei ole olemassa, joten savuke
+ * nukkuu.
+ *
+ * Kumpikin savuke nukkuu siis silloin, kun sen mittaama virta on pois,
+ * ja herää itsestään lipun kääntyessä — kumpaakaan ei tarvitse muistaa
+ * poistaa eikä palauttaa käsin. Vahti lukee EXPORT-RIVIN eikä pelkkää
+ * mainintaa: moduulin historiakommentit puhuvat lipusta molemmilla
+ * arvoilla, ja pelkkä maininta nukutti raskaan savukkeen väärin
+ * (havaittu 29.8.2026).
+ */
+{
+  const lahde = readFileSync(join(JUURI, 'js/fokusvirta.js'), 'utf8');
+  const maaritys = lahde.match(/^export const FOKUSVIRTA_KORTIT = (\w+);$/m);
+  if (!maaritys) throw new Error('FOKUSVIRTA_KORTIT-lipun määritystä ei löydy');
+  if (maaritys[1] === 'true') {
+    console.log('OHITETTU: korttiannostelu päällä (FOKUSVIRTA_KORTIT=true) — '
+      + 'kevyen kulun pintoja ei ole. Kattavuus: tools/savukkeet/savuke-fokusvirta.mjs.');
+    process.exit(0);
+  }
+}
+
 const ULOS = process.env.KAAPPAUSKANSIO ?? '/tmp/matkakirja-kaappaukset';
 mkdirSync(ULOS, { recursive: true });
 
