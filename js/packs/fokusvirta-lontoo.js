@@ -637,7 +637,29 @@ export const FOKUSVIRTA_LONTOO = {
       lahde: 'en-Wikipedia "Sutton Hoo", johdanto sekä osiot kaivauksesta '
         + 'ja kummusta 1 (lähteinä Carver 1998 ja Bruce-Mitford 1975); '
         + 'tarkistettu 29.8.2026.',
-      /* Commons 29.8.2026: 1949×2791, public domain, käyttäjä Geni,
+      /*
+       * PÄÄKUVAKSI LOISTOAIKA (29.8.2026, sama malli kuin v1307:n ja
+       * v1308:n nostoilla): repon oma generoitu havainnekuva, jolla ei
+       * ole Commons-nimeä eikä varareittiä, joten kenttä on `osoite`
+       * eikä `tiedosto` (js/fokusnosto.js asetaNostonKuva).
+       *
+       * Kuva näyttää sen, mistä juttu kertoo: kaivauskesän kummun,
+       * jossa laivasta on jäljellä vain hiekkaan värjäytynyt muoto ja
+       * riviin jääneet niitit — yksi kaivaja, kottikärryt ja lapio.
+       * Siksi lähderivi kertoo hetken eikä sano "loistoaikansa asussa".
+       */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-sutton-hoo-loistoaika.webp',
+        selite: 'Laivan muoto paljaana kummun alla: puu on poissa, '
+          + 'mutta hiekka ja niittirivit pitävät aluksen mitat '
+          + 'tallessa.',
+        lahde: 'Matkakirjan havainnekuva: laivahauta kaivauskesänä 1939',
+      },
+      /*
+       * KAKKOSKUVA tekstin alle on entinen ainoa kuva. Tiedosto, selite
+       * ja lähde ennallaan.
+       *
+       * Commons 29.8.2026: 1949×2791, public domain, käyttäjä Geni,
        * kuvaus "Photo of the Sutton Hoo helmet from the front in 2015".
        * Restrictions tyhjä. SILMÄTARKISTUS tehty: kuvassa on pelkkä
        * kypärä mustalla pohjalla. */

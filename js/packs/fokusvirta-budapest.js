@@ -638,7 +638,29 @@ export const FOKUSVIRTA_BUDAPEST = {
       lahde: 'js/packs/fokuskohteet-hun.js (szeged ja tisza, pelin omaa '
         + 'tarkistettua aineistoa) sekä en-Wikipedia "Szeged", osio '
         + 'historiasta (tarkistettu 29.8.2026).',
-      /* Commons 29.8.2026: 3072×2304, CC BY-SA 3.0, maalaus Pál Vágó,
+      /*
+       * PÄÄKUVAKSI LOISTOAIKA (29.8.2026, sama malli kuin v1307:n ja
+       * v1308:n nostoilla): repon oma generoitu havainnekuva, jolla ei
+       * ole Commons-nimeä eikä varareittiä, joten kenttä on `osoite`
+       * eikä `tiedosto` (js/fokusnosto.js asetaNostonKuva).
+       *
+       * Kuva näyttää sen, mihin juttu päättyy: tulvan jälkeen
+       * uudelleenrakennetun kaupungin kehäkatuineen, ei tulvaa itseään
+       * (se on kakkoskuvan maalauksessa). Siksi lähderivi kertoo, mitä
+       * kuva oikeasti näyttää.
+       */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-szegedin-tulva-loistoaika.webp',
+        selite: 'Uudelleenrakennettu Szeged: leveä kehäkatu uusine '
+          + 'taloineen, hevosraitiovaunu ja Tisza kadun päässä.',
+        lahde: 'Matkakirjan havainnekuva: uudelleenrakennettu kaupunki '
+          + 'kehäkatuineen',
+      },
+      /*
+       * KAKKOSKUVA tekstin alle on entinen ainoa kuva. Tiedosto, selite
+       * ja lähde ennallaan.
+       *
+       * Commons 29.8.2026: 3072×2304, CC BY-SA 3.0, maalaus Pál Vágó,
        * kuvaus "Pál Vágó: In 1879 the great flood in Szeged (Painting)".
        * Restrictions tyhjä. SILMÄTARKISTUS tehty: aikalaismaalaus
        * tulvasta; ihmiset ovat pieniä hahmoja veneissä. */
