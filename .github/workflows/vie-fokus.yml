@@ -3,6 +3,12 @@
 # (omistajan linjaus 21.8.2026: media ämpäriin eikä repoon).
 # Malli: vie-julisteet.yml. Ajetaan workflow_dispatchilla; webp ja
 # json viedään omilla content-typeillään kahdella sync-ajolla.
+#
+# VAROITUS 29.8.2026: tämä vie POHJAT sellaisenaan. Pelin lehdet ovat
+# ämpärissä PATINOITUINA (patinoi-fokus.yml ajaa patinapassin pohjien
+# päälle matkalla ämpäriin), joten tämän ajaminen palauttaisi
+# patinoimattomat lehdet peliin. Käytä tätä vain uusien pohjien
+# lisäämiseen ja aja patinoi-fokus.yml aina perään.
 name: Vie fokuslehdet R2:een
 
 on:
