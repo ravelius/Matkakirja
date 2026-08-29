@@ -60,7 +60,7 @@ import { teePistenaytto, merkinRivit, FONTTI } from './pistenaytto.js';
 import { teeViritysaani, esilataaViritysaanet, unohdaViritysaanet } from './viritin.js';
 import { sfx } from '../sound.js';
 import { lisaaTaustaVaimennus } from '../aani-tausta.js';
-import { lisaaVaistaja, stopPlaceStream } from '../ambience-stream.js';
+import { lisaaVaistaja, stopPlaceStream, stopPohjaMusiikki } from '../ambience-stream.js';
 
 /*
  * NÄYTÖN MITAT.
@@ -1625,8 +1625,10 @@ export function paalle({
   (juuri ?? document.body)?.appendChild(soitin.juuri);
 
   // Kaupungin ääni väistyy kokonaan, ei väisty vaimentamalla: radiotilassa
-  // radio on ainoa ääni.
+  // radio on ainoa ääni. Sama koskee musiikkipaletin pohjavirettä —
+  // radiotilasta poistuttaessa syncAmbience käynnistää sen uudelleen.
   stopPlaceStream();
+  stopPohjaMusiikki();
   sfx.setAmbience(null);
 
   /*

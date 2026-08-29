@@ -181,6 +181,10 @@ class TynkaAudio {
     this.reititetty = false;
     this.kuuntelijat = new Map();
     this.yritykset = [];
+    // Alkuperäinen osoite jää talteen, koska removeAttribute pyyhkii
+    // srcin: ilman tätä purettua soitinta ei voisi enää tunnistaa
+    // (ks. maisemat-suodatin pystyta():ssa).
+    this.alkuSrc = src ?? '';
     if (src) this.src = src;
     soittimet.push(this);
   }
@@ -270,6 +274,7 @@ async function pystyta({ ctxTila = 'suspended', mykkaGraafi = false, iosVolume =
   globalThis.window = { AudioContext: function Ctx() { return konteksti; } };
 
   const virta = await import(`${juuri}ambience-stream.js?ajo=${seuraavaId++}`);
+  virta.nollaaPohjaMusiikki?.();
   return {
     virta,
     sfx,
@@ -277,6 +282,15 @@ async function pystyta({ ctxTila = 'suspended', mykkaGraafi = false, iosVolume =
     soittimet,
     asetaSoitto: (tila) => { soittoTila = tila; },
     viimeinen: () => soittimet[soittimet.length - 1],
+    /*
+     * MAISEMAN SOITTIMET, EI KAIKKI SOITTIMET (musiikkipaletti
+     * 29.8.2026). playPlaceAmbience käynnistää maiseman rinnalle
+     * musiikkipaletin pohjavireen omana soittimenaan
+     * (js/ambience-stream.js kaynnistaPohjaMusiikki). Nämä testit
+     * mittaavat maiseman soitinketjua, joten pohjavire suodatetaan
+     * pois tiedostonimen (musa-*.mp3) perusteella.
+     */
+    maisemat: () => soittimet.filter((a) => !/musa-/.test(a.alkuSrc)),
   };
 }
 
@@ -316,7 +330,7 @@ test('myöhään saapuva ele käynnistää eston jälkeen saman äänitteen', as
   await mikrotehtavat();
   ajaRuudut();
   const a = s.viimeinen();
-  assert.equal(s.soittimet.length, 1, 'eleen pitää jatkaa samalla soittimella');
+  assert.equal(s.maisemat().length, 1, 'eleen pitää jatkaa samalla soittimella');
   assert.ok(a.kuuluu > 0, `eleen jälkeen taustan pitää kuulua, nyt ${a.kuuluu}`);
 });
 
@@ -380,7 +394,7 @@ test('kuuluva reititetty ketju jätetään rauhaan', async () => {
   const eka = s.viimeinen();
   kelloEteenpain(6000);
   await mikrotehtavat();
-  assert.equal(s.soittimet.length, 1, 'toimivaa ketjua ei saa rakentaa uudelleen');
+  assert.equal(s.maisemat().length, 1, 'toimivaa ketjua ei saa rakentaa uudelleen');
   assert.ok(eka.kuuluu > 0);
 });
 
@@ -405,7 +419,7 @@ test('järjestelmän keskeyttämä soitin jatkaa itsestään', async () => {
 
   // Sama paikka pyydettynä ei saa rakentaa toista soitinta päälle.
   await soitaEtusivu(s);
-  assert.equal(s.soittimet.length, 1);
+  assert.equal(s.maisemat().length, 1);
 });
 
 test('keskeytys eston aikana odottaa elettä eikä jää yrittämään', async () => {

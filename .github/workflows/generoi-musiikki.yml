@@ -1,0 +1,110 @@
+# Generoi pelin musiikkipaletti suoraan secretistä — avainta ei
+# liikutella chatissa eikä koneelta toiselle (omistajan linjaus
+# 28.8.2026, Raamattu → "Äänet ja luennat": ELEVEN-AVAIN ON
+# GITHUB-SECRETISSA). Sama malli kuin generoi-luennat.yml.
+#
+# Ajo on KÄSIAJETTAVA (workflow_dispatch): musiikki maksaa rahaa ja
+# raidat ovat pysyviä — automaattinen ajo joka pushista polttaisi
+# kumpaakin. Neljä raitaa, jotka pelin koodi jo osaa hakea:
+#
+#   pohja     assets/audio/musa-pohja.mp3     ambienssin alla soiva
+#                                             pohjavire (looppi)
+#   visa      assets/audio/musa-visa-2.mp3    tietovisan kysymysmusiikki
+#   aarre     assets/audio/musa-aarre.mp3     tavallisen aarteen aihe
+#   paaaarre  assets/audio/musa-paaaarre.mp3  sama aihe pääaarteelle
+#
+# AARRE JA PAAAARRE OVAT PARI. Ne ovat sama sävelaihe kahdessa asussa,
+# ja jos toinen generoidaan uusiksi, kannattaa generoida molemmat —
+# muuten musiikillinen sukulaisuus katoaa (ks. tools/generoi-musiikki.mjs).
+#
+# MITÄ AJO TEKISI, ILMAN APIA:
+#   ELEVEN_KUIVA=1 node tools/generoi-musiikki.mjs kaikki
+# — tulostaa jokaisen raidan kohdetiedoston, keston ja koko promptin.
+# Avainta ei tarvita. Kannattaa ajaa, kun promptia on muutettu.
+#
+# TUOTOS EI MENE SUORAAN MAINIIN. Ajo committoi uudet mp3:t omalle
+# haaralleen (claude/musiikki-<ajonumero>) ja jättää ne PR:ää varten:
+# musiikki KUUNNELLAAN ennen julkaisua (looppiraidoilta sauma,
+# aarreraidoilta se että aihe on kuultavasti sama). Kun PR mergetään,
+# vie-aanet.yml vie tiedostot R2:een automaattisesti — musiikkia ei
+# esiladata service workerissa, joten mp3 ei kasvata asennusta.
+#
+# JOS MUSIIKKIRAJAPINTA EI OLE AUKI TÄLLÄ AVAIMELLA, ajo kaatuu
+# työkalun tulostamaan HTTP-virheeseen (401/403) eikä committoi mitään.
+# Pelikytkennät ovat silloinkin jo paikallaan ja hiljenevät siististi:
+# puuttuva mp3 ei riko yhtään äänipolkua.
+#
+# Salaisuus on tämän repon Actions-asetuksissa: ELEVEN_API_KEY.
+# Avain ei koskaan tulostu lokiin (työkalu ei tulosta sitä, eikä tämä
+# ajo echoa sitä) — GitHub peittää secretit lokista joka tapauksessa,
+# mutta siihen ei nojata.
+
+name: Generoi musiikki
+
+on:
+  workflow_dispatch:
+    inputs:
+      raidat:
+        description: >-
+          Raitojen avaimet välilyönnein (pohja visa aarre paaaarre) tai
+          "kaikki" koko paletille.
+        required: true
+        default: 'kaikki'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generoi-musiikki
+  cancel-in-progress: false
+
+jobs:
+  generoi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Tarkista että avain on tallessa
+        env:
+          AVAIN: ${{ secrets.ELEVEN_API_KEY }}
+        run: |
+          set -euo pipefail
+          if [ -z "$AVAIN" ]; then
+            echo "::error::ELEVEN_API_KEY-salaisuutta ei löydy tästä reposta."
+            echo "Lisää se: Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          echo "Avain löytyy."
+
+      # Kuiva ajo ensin: väärä raita-avain paljastuu ennen kuin
+      # yhtäkään maksullista kutsua on tehty.
+      - name: Kuiva ajo (mitä generoitaisiin)
+        env:
+          ELEVEN_KUIVA: '1'
+        run: node tools/generoi-musiikki.mjs ${{ inputs.raidat }}
+
+      - name: Generoi musiikki
+        env:
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+        run: node tools/generoi-musiikki.mjs ${{ inputs.raidat }}
+
+      - name: Committoi tuotos omalle haaralleen
+        run: |
+          set -euo pipefail
+          git add assets/audio
+          if git diff --cached --quiet; then
+            echo "::error::Yhtään tiedostoa ei syntynyt eikä muuttunut."
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          haara="claude/musiikki-${{ github.run_number }}"
+          git checkout -b "$haara"
+          git commit -m "Musiikki: ${{ inputs.raidat }}"
+          git push -u origin "$haara"
+          echo "Valmis. Haara: $haara — kuuntele raidat ja tee PR."

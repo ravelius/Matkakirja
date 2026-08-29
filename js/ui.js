@@ -753,6 +753,37 @@ const MATKAREITIN_PISTE_PX = 4.2;
 const REVEAL_HUUDAHDUS_RIVI = false;
 
 /*
+ * MUSIIKKIPALETIN AARREPARI (omistajan tilaus 29.8.2026: "generoi
+ * ääniä ja musiikkeja ja laita suoraan peliin").
+ *
+ * Kaksi tiedostoa, yksi sävelaihe: tavallinen löytö saa aiheen
+ * pienenä, pääaarre saman aiheen koko kamarikokoonpanolla. Juuri se
+ * sitoo pelin kymmenet pienet löydöt siihen yhteen, jota koko matka
+ * on etsitty. Promptit ja generointi: tools/generoi-musiikki.mjs.
+ *
+ * TIEDOSTONIMI ON KYTKENTÄ, ja se on tässä yhdessä paikassa. Raidat
+ * generoidaan jälkikäteen (.github/workflows/generoi-musiikki.yml)
+ * eikä niitä esiladata service workerissa, joten peli hakee ne
+ * ämpäristä — puuttuva tiedosto on hiljainen eikä riko paljastusta.
+ */
+const AARRE_MUSIIKKI = {
+  tavallinen: 'assets/audio/musa-aarre.mp3',
+  paa: 'assets/audio/musa-paaaarre.mp3',
+};
+/*
+ * Aihe soi paljastuskortin päällä eikä taustalla, joten sen taso on
+ * lähempänä hihkaisua kuin ambienssia. Kuulokokeen nuppi kuten muutkin
+ * äänitasot: omistaja kuulee sen ensimmäisenä oikeasta laitteesta.
+ */
+const AARRE_MUSIIKIN_VOIMA = 0.5;
+/*
+ * Hiljennyksen syy on merkkijono, koska js/ambience-stream.js pitää
+ * syistä JOUKKOA: sama syy kahdesti ei kerry, ja toisen syyn
+ * purkautuminen (lehti, pöllö) ei nosta taustaa kesken aiheen.
+ */
+const AARRE_MUSIIKIN_SYY = 'aarremusiikki';
+
+/*
  * PÖLLÖN PAIKALLINEN VIHJE (omistajan toive 13.8.2026: *"Pöllö voi
  * tarpeen mukaan vinkata, jos pelaaja ei osaa painaa mitään
  * nappia."*).
@@ -15362,6 +15393,78 @@ export class UI {
   }
 
   /**
+   * AARTEEN OMA MUSIIKKI (musiikkipaletti, omistajan tilaus
+   * 29.8.2026). Tavallinen aarre saa lyhyen lämpimän aiheen
+   * (musa-aarre.mp3), pääaarre saman aiheen juhlavampana
+   * (musa-paaaarre.mp3) — sukulaisuus on tarkoituksellinen ja se
+   * kirjoitetaan jo promptiin (tools/generoi-musiikki.mjs).
+   *
+   * KYTKIN ON TAUSTAÄÄNET, EI KERTOJA. Musiikki ei ole ääninäyttelyä:
+   * hihkaisu (soitaHihkaisu yllä) on kertojan asia ja vaikenee
+   * kertojattomassa tilassa, mutta paljastuksen musiikki kuuluu
+   * pelin taustaääniin ja seuraa sfx.enabled-kytkintä. Ne soivat
+   * usein yhtä aikaa, ja se on tarkoitus: huudahdus aiheen päällä.
+   *
+   * EI UUTTA SOITINTA. Sama malli kuin hihkaisulla — pelkkä
+   * <audio>-elementti aaniUrl-osoitteesta, jolloin raita tulee
+   * ämpäristä (js/media.js) eikä kasvata service workerin
+   * esilatausta. Taustalle jäävän pelin hiljentää js/aani-tausta.js:n
+   * turvaverkko, joka tuntee jokaisen soittimen jolle play() on
+   * kutsuttu, ja antaa kertaluontoiselle äänelle 'ended'-tapahtuman
+   * paluussa — juuri siitä väistön purku alla saa merkkinsä.
+   *
+   * PUUTTUVA TIEDOSTO ON HILJAINEN: kytkentä on pelissä ennen kuin
+   * mp3 on generoitu (.github/workflows/generoi-musiikki.yml), ja
+   * silloin virhetapahtuma purkaa väistön eikä mitään muuta tapahdu.
+   */
+  soitaAarreMusiikki(lahde) {
+    if (!sfx.enabled) return;
+    // Edellinen aihe pois, jos pelaaja ehti seuraavaan paljastukseen:
+    // kaksi fanfaaria päällekkäin ei ole juhla vaan sotku.
+    this.pysaytaAarreMusiikki();
+    const audio = new Audio(aaniUrl(lahde));
+    audio.volume = AARRE_MUSIIKIN_VOIMA;
+    /*
+     * Tausta madaltuu aiheen ajaksi. Hiljennys (syyjoukko) eikä väistö
+     * (laskuri): pääaarteella soi samaan aikaan luettu huudahdus, joka
+     * pitää puheväistöä yllä omalla laskurillaan, eivätkä ne saa
+     * kumota toisiaan. Syvin voittaa (js/ambience-stream.js
+     * voimassaVaisto).
+     */
+    hiljennaAmbienssi(AARRE_MUSIIKIN_SYY);
+    this.aarreMusiikki = audio;
+    /*
+     * Purku VAIN jos tämä aihe on yhä se soiva. Pysäytys asettaa
+     * `aarreMusiikki`-kentän nolliin ja purkaa hiljennyksen jo itse, ja
+     * sen jälkeen elementin `src`:n irrotus laukaisee vielä virheen —
+     * ilman tätä ehtoa se purkaisi seuraavan aiheen hiljennyksen, joka
+     * ehti jo alkaa.
+     */
+    const ohi = () => {
+      if (this.aarreMusiikki !== audio) return;
+      this.aarreMusiikki = null;
+      palautaAmbienssi(AARRE_MUSIIKIN_SYY);
+    };
+    audio.addEventListener('ended', ohi);
+    audio.addEventListener('error', ohi);
+    audio.play().catch(ohi);
+  }
+
+  /** Katkaisee soivan aarremusiikin ja purkaa taustan hiljennyksen. */
+  pysaytaAarreMusiikki() {
+    const audio = this.aarreMusiikki;
+    this.aarreMusiikki = null;
+    if (!audio) return;
+    try {
+      audio.pause();
+      audio.removeAttribute('src');
+    } catch {
+      /* soitin oli jo purettu */
+    }
+    palautaAmbienssi(AARRE_MUSIIKIN_SYY);
+  }
+
+  /**
    * PALJASTUSKORTIN RUNKO — YKSI AINOA MALLI (omistajan linjaus
    * 18.8.2026: "käytä jatkossa vain uudenlaista aarteenpaljastumis-
    * näkymää … vanhat aarteet ja vanha aarreikkuna poistetaan
@@ -15678,6 +15781,17 @@ export class UI {
      */
     const hihkaisu = (huudahdus && sfx.enabled && kertojaTila() !== 'ei')
       ? huudahdus.tiedosto : null;
+    /*
+     * MUSIIKKIPALETIN AIHE (29.8.2026). Pääaarre saa fanfaarin, muut
+     * aarteet saman aiheen pienenä; rosvo ja sisäinen tyhjä merkki
+     * eivät saa mitään — onAarre erottaa ne (js/tokens.js). Valinta on
+     * tässä eikä soittokohdassa, koska soittokohtia on kaksi
+     * (reducedMotion ja animoitu polku) eikä sääntö saa elää kahdessa
+     * paikassa.
+     */
+    const aihe = onAarre(type)
+      ? (type === 'star' ? AARRE_MUSIIKKI.paa : AARRE_MUSIIKKI.tavallinen)
+      : null;
     if (kaari?.aarre) caption.appendChild(html('p', 'reveal-isoisa', kaari.aarre));
 
     // Dialogi on top layerissa, joten paljastus lisätään sen sisään.
@@ -15707,6 +15821,7 @@ export class UI {
       // pysyy mustassa, jotta kuvan tausta jatkuu saumatta overlayhin.
       if (malli === 'diplomi') overlay.classList.add('kirkas');
       sfx.play(treasureSound(type));
+      if (aihe) this.soitaAarreMusiikki(aihe);
       if (hihkaisu) this.soitaHihkaisu(hihkaisu);
       await odota(900);
       await this.odotaPaljastuksenSulku(overlay, jatka);
@@ -15718,6 +15833,7 @@ export class UI {
       pohja.classList.add('shown');
       kuvaEl?.classList.add('shown');
       sfx.play(treasureSound(type));
+      if (aihe) this.soitaAarreMusiikki(aihe);
       if (hihkaisu) this.soitaHihkaisu(hihkaisu);
       await this.wait(760);
       caption.classList.add('shown');
