@@ -472,6 +472,19 @@ const MODULES = [
    * tuo vain mapartin ja äänet, jotka ovat jo yllä.
    */
   'js/fokusnosto-symbolit.js',
+  /*
+   * Aihevalojen koneisto ennen kaikkia merkkikerroksia: kohdemerkit,
+   * ja eläintäyt piirtävät kumpikin valotäplänsä sillä
+   * (js/karttavalot.js). Se tuo mapartin ja symbolikirjaston (aiheiden
+   * ryhmittely, NOSTOSYM_PAAKATEGORIAT) — molemmat jo yllä.
+   */
+  'js/karttavalot.js',
+  /*
+   * Karttaselitevalikko ennen ui:ta (ui tuo sen käynnistys- ja
+   * päivityskutsun). Se tuo valojen koneiston, symbolikirjaston,
+   * mapartin ja ui-apurit — kaikki jo yllä.
+   */
+  'js/karttaselite.js',
   // Fokuslehden klikattavat karttakohteet ennen ui:ta (ui tuo sen
   // päivitys- ja nollauskutsun; kohteiden lista, symbolikirjasto,
   // mapart, media, ui-apurit, valokuvat ja äänet ovat kaikki jo yllä).
