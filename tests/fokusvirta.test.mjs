@@ -33,6 +33,19 @@ import { packById } from '../js/pack.js';
 
 const ATEENA = fokusvirtaKaupungille('ateena');
 
+/*
+ * VIRRATON VERTAILUKAUPUNKI (v1308).
+ *
+ * Puolet tämän paketin säännöistä koskee sitä, mitä TAPAHTUU
+ * KAUPUNGISSA, JOLLA EI OLE VIRTAA: fokusvirtaKaupungille palauttaa
+ * nullin ja js/ui.js jatkaa vanhaa saapumispolkua. Vertailukaupunkia
+ * ei voi naulata nimellä, koska jokainen uusi aalto vie yhden nimen
+ * lisää — v1305 vei Madridin, Wienin, Pariisin ja Berliinin, v1308
+ * Lontoon, Budapestin, Dubrovnikin ja Prahan. Kaupunki poimitaan
+ * siksi laudalta ajon aikana: ensimmäinen, jolla virtaa ei ole.
+ */
+const VIRRATON = packById('europe').cities.find((city) => !FOKUSVIRRAT[city.id])?.id;
+
 /** Lyhyt koesisältö: kaksi täkyä riittää portin ja paluun testaamiseen. */
 const KOE = {
   matkakirja: { teksti: 'a' },
@@ -242,7 +255,8 @@ test('sama kaupunki eri laudalla on eri matka', () => {
 test('Ateenan fokusvirta on rakenteeltaan ehjä', () => {
   assert.ok(ATEENA, 'Ateenalle ei löydy fokusvirtaa');
   assert.equal(ATEENA.kaupunki, 'ateena');
-  assert.equal(fokusvirtaKaupungille('lontoo'), null, 'muut kaupungit jäävät ennalleen');
+  assert.ok(VIRRATON, 'laudalta pitää löytyä ainakin yksi kaupunki ilman virtaa');
+  assert.equal(fokusvirtaKaupungille(VIRRATON), null, 'muut kaupungit jäävät ennalleen');
 
   for (const kohta of ['matkakirja', 'pollo', 'oppitunti']) {
     assert.ok(ATEENA[kohta]?.teksti?.length > 80, `${kohta}: teksti puuttuu tai on liian lyhyt`);
@@ -442,13 +456,14 @@ test('aarremerkintä voittaa saapumismerkinnän myös laatan ratkettua', () => {
 
 test('kaupunki ilman fokusvirtaa jää vanhan saapumispolun varaan', () => {
   const game = ateenaPeli();
-  const city = game.board.cityById.get('lontoo');
-  assert.equal(fokusvirtaKaupungille('lontoo'), null, 'Lontoolla ei ole virtaa');
+  const city = game.board.cityById.get(VIRRATON);
+  assert.ok(city, `${VIRRATON}: kaupunkia ei ole Euroopan laudalla`);
+  assert.equal(fokusvirtaKaupungille(VIRRATON), null, `${VIRRATON}:lla ei ole virtaa`);
   // Sekä kääntämättömänä että ratkaistuna: null tarkoittaa ui.js:lle
   // "jatka tavalliseen tapaan" (SAAPUMISTEKSTIT / TARINAKAARI).
-  game.tokens.set('lontoo', 'topaz');
+  game.tokens.set(VIRRATON, 'topaz');
   assert.equal(fokusvirtaMatkakirja(uiTynka(game), city), null);
-  laattaRatkaistu(game, 'lontoo');
+  laattaRatkaistu(game, VIRRATON);
   assert.equal(fokusvirtaMatkakirja(uiTynka(game), city), null);
 });
 

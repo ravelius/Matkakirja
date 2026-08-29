@@ -425,6 +425,24 @@ const PULLA_NIMET = {
    */
   AUT: 'Buchtel',
   FRA: 'brioche',
+  /*
+   * BRITANNIA (v1308): Lontoo sai oman fokusvirtansa, joten
+   * pullatarjous näkyy siellä nyt ensimmäistä kertaa. Nimi ei ole uusi
+   * keksintö vaan pelin omaa, hyväksyttyä Lontoo-aineistoa: kaupungin
+   * oppaassa iltapäivätee tarjoillaan scone-leivosten kanssa
+   * (js/packs/kulttuuri-kategoriat.js, lontoo).
+   *
+   * UNKARI JA KROATIA olivat taulussa jo ennen tätä erää, joten
+   * Budapest ja Dubrovnik saavat kakaós csigan ja kroštulen entiseen
+   * tapaan.
+   *
+   * TŠEKKI JÄÄ TARKOITUKSELLA POIS: pelin aineisto nimeää tšekkiläisen
+   * välipalan vain chlebíčekinä, joka on suolainen voileipä eikä
+   * pullavastine (js/packs/maa-kategoriat.js, CZE/arki). Rehellinen
+   * yleisnimi on parempi kuin väärä paikallisnimi — sama päätös kuin
+   * Espanjalla.
+   */
+  GBR: 'scone',
 };
 
 /** Maa, jota taulussa ei ole. */

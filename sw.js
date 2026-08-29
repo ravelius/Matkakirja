@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1308';
+const CACHE = 'matkakirja-2026-08-09.1309';
 const SHELL = [
   './',
   './index.html',
@@ -197,6 +197,14 @@ const SHELL = [
   './js/packs/fokusvirta-wien.js',
   './js/packs/fokusvirta-pariisi.js',
   './js/packs/fokusvirta-berliini.js',
+  // Aalto 2 (29.8.2026): Lontoo, Budapest, Dubrovnik ja Praha. Näillä
+  // ei ole kohdenostoja, joten paririviä ei tarvita — Britannian,
+  // Unkarin ja Kroatian fokuskohdepaketit ovat omalla rivillään
+  // alempana ihme-erien jäljiltä.
+  './js/packs/fokusvirta-lontoo.js',
+  './js/packs/fokusvirta-budapest.js',
+  './js/packs/fokusvirta-dubrovnik.js',
+  './js/packs/fokusvirta-praha.js',
   // Maat ilman omaa fokusvirtaa: kadonneiden ihmeiden erä 26.8.2026
   // ja Matkakirjan ihmeiden Euroopan erä 27.8.2026.
   './js/packs/fokuskohteet-egy.js',

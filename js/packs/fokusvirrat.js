@@ -17,9 +17,13 @@
  */
 import { FOKUSVIRTA_ATEENA } from './fokusvirta-ateena.js';
 import { FOKUSVIRTA_BERLIINI } from './fokusvirta-berliini.js';
+import { FOKUSVIRTA_BUDAPEST } from './fokusvirta-budapest.js';
+import { FOKUSVIRTA_DUBROVNIK } from './fokusvirta-dubrovnik.js';
 import { FOKUSVIRTA_ISTANBUL } from './fokusvirta-istanbul.js';
 import { FOKUSVIRTA_BUKAREST } from './fokusvirta-bukarest.js';
+import { FOKUSVIRTA_LONTOO } from './fokusvirta-lontoo.js';
 import { FOKUSVIRTA_MADRID } from './fokusvirta-madrid.js';
+import { FOKUSVIRTA_PRAHA } from './fokusvirta-praha.js';
 import { FOKUSVIRTA_PARIISI } from './fokusvirta-pariisi.js';
 import { FOKUSVIRTA_ROOMA } from './fokusvirta-rooma.js';
 import { FOKUSVIRTA_SARAJEVO } from './fokusvirta-sarajevo.js';
@@ -45,6 +49,22 @@ export const FOKUSVIRRAT = {
   wien: FOKUSVIRTA_WIEN,
   pariisi: FOKUSVIRTA_PARIISI,
   berliini: FOKUSVIRTA_BERLIINI,
+  /*
+   * AALTO 2 (sama Raamatun osio, 29.8.2026): Lontoo, Budapest,
+   * Dubrovnik ja Praha. Nämäkin ovat maansa aarrekaupunkeja ja saavat
+   * saman TÄYDEN pinon.
+   *
+   * AALTO 2 EROAA AALLOSTA 1 YHDESSÄ ASIASSA: näille neljälle maalle
+   * ei ollut takynostot-työaineistoa, joten täyt, oppitunnit,
+   * lehtitehtävät ja maakohtaiset täkynostot on rakennettu pelin omasta
+   * kuratoidusta aineistosta ja siihen erikseen tarkistetuista
+   * lisätiedoista. Perustelut ja lähteet ovat kunkin paketin omissa
+   * kommenteissa.
+   */
+  lontoo: FOKUSVIRTA_LONTOO,
+  budapest: FOKUSVIRTA_BUDAPEST,
+  dubrovnik: FOKUSVIRTA_DUBROVNIK,
+  praha: FOKUSVIRTA_PRAHA,
 };
 
 /** Kaupungin fokusvirta tai null, jos kaupungille ei ole sisältöä. */
