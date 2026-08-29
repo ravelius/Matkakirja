@@ -1,0 +1,78 @@
+{
+  "_": "Britannian maastokohteet. Faktat en-Wikipediasta 29.8.2026.",
+  "vuoret": [
+    {
+      "nimi": "Ben Nevis",
+      "lon": -5.0035,
+      "lat": 56.7969,
+      "m": 1345,
+      "lahdeKoordinaatti": "en-Wikipedia \"Ben Nevis\"",
+      "nappi": "Brittein saarten korkein",
+      "kysymykset": [
+        "Mikä on felsenmeer?",
+        "Millainen on Ben Neviksen pohjoisseinämä talvella?"
+      ],
+      "korostukset": ["felsenmeer|felsenmeer"],
+      "teksti": "Ben Nevis on Skotlannin, Yhdistyneen kuningaskunnan ja koko Brittein saarten korkein vuori: huippu on 1 345 metriä merenpinnasta, eikä mihinkään suuntaan ole 739 kilometriin korkeampaa maata. Huippu itsessään on kivinen tasanne, felsenmeer, ja pohjoisseinämän seitsemänsataametriset kalliot ovat Skotlannin tärkein jääkiipeilypaikka. Vuorella on juostu kilpaa vuodesta 1898.",
+      "lahde": "en-Wikipedia \"Ben Nevis\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Snowdon",
+      "lon": -4.0762,
+      "lat": 53.0685,
+      "m": 1085,
+      "lahdeKoordinaatti": "en-Wikipedia \"Snowdon\"",
+      "nappi": "Walesin korkein, kymriksi Yr Wyddfa",
+      "kysymykset": [
+        "Mitä nimi Yr Wyddfa tarkoittaa?",
+        "Miten jäätiköt muotoilivat Snowdonin?"
+      ],
+      "korostukset": ["arête|arêtet"],
+      "teksti": "Snowdon eli kymrinkielisellä nimellään Yr Wyddfa kohoaa 1 085 metriin ja on Walesin korkein vuori sekä Brittein saarten korkein Skotlannin ylämaiden eteläpuolella. Kalliot syntyivät tulivuorenpurkauksissa ordovikikaudella, ja jäätiköt veistivät niistä pyramidihuipun ja terävät harjanteet eli arêtet Crib Gochin ja Y Lliweddin. Vuorta on kutsuttu Yhdistyneen kuningaskunnan vilkkaimmaksi: vuonna 2022 sen nousi 543 541 kävelijää.",
+      "lahde": "en-Wikipedia \"Snowdon\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Pohjanmeri",
+      "lon": 1.8,
+      "lat": 55.6,
+      "lahdeKoordinaatti": "ulappa Britannian itärannikon edustalla; artikkelin oma keskipiste on 3 / 56",
+      "nappi": "Meri seitsemän maan välissä",
+      "kysymykset": [
+        "Miksi Pohjanmeri on niin matala?",
+        "Milloin Pohjanmereltä löydettiin öljy?"
+      ],
+      "teksti": "Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä ja leveyttä 580, ja pinta-alaa 570 000 neliökilometriä.",
+      "lahde": "en-Wikipedia \"North Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Irlanninmeri",
+      "lon": -4.2,
+      "lat": 53.7,
+      "lahdeKoordinaatti": "ulappa Walesin ja Irlannin välissä; artikkelin oma keskipiste on -5 / 53,5",
+      "nappi": "Kahden saaren välinen meri",
+      "kysymykset": [
+        "Mikä Mansaari on?",
+        "Miksi merta kutsutaan joskus Manxinmereksi?"
+      ],
+      "teksti": "Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.",
+      "lahde": "en-Wikipedia \"Irish Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Thames",
+      "lon": -0.97,
+      "lat": 51.46,
+      "lahdeKoordinaatti": "Readingin kohta joen keskijuoksulla; artikkelin koordinaatti 0,61 / 51,5 on suistossa",
+      "nappi": "Joki, jolla on kaksi nimeä",
+      "kysymykset": [
+        "Miksi jokea kutsutaan paikoin Isisiksi?",
+        "Mikä joki on Yhdistyneen kuningaskunnan pisin?"
+      ],
+      "teksti": "Thames virtaa Etelä-Englannin halki ja Lontoon läpi, ja sen pituus on 346 kilometriä. Se on Englannin pisin kokonaan maan sisällä virtaava joki ja koko Yhdistyneen kuningaskunnan toiseksi pisin Severnin jälkeen. Osalla matkaa jokea kutsutaan yhä vanhalla nimellä Isis.",
+      "lahde": "en-Wikipedia \"River Thames\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ]
+}

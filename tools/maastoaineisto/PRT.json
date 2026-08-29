@@ -1,0 +1,63 @@
+{
+  "_": "Portugalin maastokohteet. Faktat en-Wikipediasta 29.8.2026. HUOM: Pico (2 351 m) on Portugalin korkein, mutta se on Azoreilla (lon -28) eikä mahdu maan fokuslehden ikkunaan. Listalla on siksi Torre, jonka artikkeli itse nimeää mannermaisen Portugalin korkeimmaksi pisteeksi.",
+  "vuoret": [
+    {
+      "nimi": "Torre",
+      "lon": -7.613,
+      "lat": 40.3219,
+      "m": 1993,
+      "lahdeKoordinaatti": "en-Wikipedia \"Serra da Estrela\"",
+      "nappi": "Huippu, jolle pääsee autolla",
+      "kysymykset": [
+        "Miksi Torre ei ole tavallinen huippu?",
+        "Sataako Serra da Estrelalla lunta?"
+      ],
+      "korostukset": ["Serra da Estrela|Serra da Estrela"],
+      "teksti": "Serra da Estrela on mannermaisen Portugalin korkein vuoristo ja Sistema Centralin läntisin osa. Sen korkein kohta, 1 993 metriä, ei ole erillinen huippu vaan ylätasangon korkein piste, ja sitä kutsutaan nimellä Torre. Se on epätavallinen huippu siinäkin, että sinne pääsee päällystettyä tietä pitkin.",
+      "lahde": "en-Wikipedia \"Serra da Estrela\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Atlantti",
+      "lon": -11.0,
+      "lat": 39.6,
+      "lahdeKoordinaatti": "ulappa Portugalin rannikon edustalla; artikkelin oma keskipiste on -25 / 0",
+      "nappi": "Valtameri, jonka takaa löytyi uusi maailma",
+      "kysymykset": [
+        "Miksi juuri portugalilaiset lähtivät Atlantille ensimmäisinä?",
+        "Kuinka syvä Atlantti on?"
+      ],
+      "teksti": "Atlantti on maailman valtamerista toiseksi suurin: pinta-alaa noin 85 133 000 neliökilometriä eli noin 17 prosenttia maapallon pinnasta ja lähes neljännes sen vesialasta. Löytöretkien aikaan se tunnettiin merenä, joka erotti Amerikan uuden maailman Afro-Euraasian vanhasta. Portugalin koko rannikko on tätä merta.",
+      "lahde": "en-Wikipedia \"Atlantic Ocean\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Tejo",
+      "lon": -8.68,
+      "lat": 39.24,
+      "lahdeKoordinaatti": "Santarém joen alajuoksulla Portugalin puolella; artikkelilla ei ole koordinaattia",
+      "nappi": "Iberian pisin joki",
+      "kysymykset": [
+        "Miksi Lissabon rakennettiin juuri joen suulle?",
+        "Millä nimellä joki tunnetaan Espanjassa?"
+      ],
+      "teksti": "Tejo on Iberian niemimaan pisin joki. Se saa alkunsa Montes Universales -vuoristosta Keski-Espanjasta, virtaa 1 007 kilometriä pääosin länteen ja laskee Atlanttiin Lissabonin kohdalla. Espanjan puolella sen nimi on Tajo.",
+      "lahde": "en-Wikipedia \"Tagus\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Douro",
+      "lon": -7.79,
+      "lat": 41.16,
+      "lahdeKoordinaatti": "Peso da Régua viinilaaksossa; artikkelin koordinaatti -8,669 / 41,143 on suistossa Portossa",
+      "nappi": "Iberian vesirikkain joki",
+      "kysymykset": [
+        "Miksi Douron laakso on kuuluisa viinistään?",
+        "Mistä joki saa alkunsa?"
+      ],
+      "teksti": "Douro on virtaamaltaan Iberian niemimaan suurin joki. Se nousee Pico de Urbiónilta Espanjan Sorian maakunnassa, virtaa länteen Kastilia ja Leónin pohjoisosan halki ja jatkaa Pohjois-Portugaliin, missä se laskee Atlanttiin Portossa, maan toiseksi suurimmassa kaupungissa. Sen suurin sivujoki on oikealta tuleva Esla.",
+      "lahde": "en-Wikipedia \"Douro\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ]
+}

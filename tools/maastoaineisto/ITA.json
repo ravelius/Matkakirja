@@ -1,0 +1,46 @@
+{
+  "_": "Italian maastokohteet — TÄYDENNYS. Maalla on jo fokuskohteet-ita.js (Vesuvius, Etna, Dolomiitit, Po, Sardinia), joten tässä ovat vain puuttuvat rantameret. Faktat en-Wikipediasta 29.8.2026.",
+  "meret": [
+    {
+      "nimi": "Adrianmeri",
+      "lon": 15.0,
+      "lat": 43.0,
+      "lahdeKoordinaatti": "en-Wikipedia \"Adriatic Sea\" — koko meren likimääräinen keskipiste, ei täsmäpaikka",
+      "nappi": "Välimeren pohjoisin haara",
+      "kysymykset": [
+        "Miksi Venetsia rakennettiin juuri tänne?",
+        "Mikä Otranton salmi on?"
+      ],
+      "korostukset": ["Otranton salmi|Otranton salmesta"],
+      "teksti": "Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla: Albanialla, Bosnia ja Hertsegovinalla, Kroatialla, Italialla, Montenegrolla ja Slovenialla.",
+      "lahde": "en-Wikipedia \"Adriatic Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Tyrrhenanmeri",
+      "lon": 12.0,
+      "lat": 40.0,
+      "lahdeKoordinaatti": "en-Wikipedia \"Tyrrhenian Sea\" — meren keskipiste",
+      "nappi": "Meri, joka on nimetty etruskien mukaan",
+      "kysymykset": [
+        "Keitä tyrrhenialaiset olivat?",
+        "Mitkä saaret ovat Tyrrhenanmerellä?"
+      ],
+      "korostukset": ["etruskit|etruskeihin"],
+      "teksti": "Tyrrhenanmeri on osa Välimerta Italian länsirannikolla. Sen nimi tulee tyrrhenialaisista, jotka on samastettu Italian etruskeihin. Meri jää Apenniinien niemimaan, Sardinian, Korsikan ja Sisilian väliin.",
+      "lahde": "en-Wikipedia \"Tyrrhenian Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Ligurianmeri",
+      "lon": 9.0,
+      "lat": 43.5,
+      "lahdeKoordinaatti": "en-Wikipedia \"Ligurian Sea\" — meren keskipiste",
+      "nappi": "Meri, joka muistaa muinaisen kansan",
+      "kysymykset": [
+        "Keitä liguurit olivat?",
+        "Mitä eroa on Ligurianmerellä ja Tyrrhenanmerellä?"
+      ],
+      "teksti": "Ligurianmeri on Välimeren haara Luoteis-Italian ja Korsikan välissä. Sen uskotaan saaneen nimensä muinaisesta liguurien kansasta, joka asui näillä rannoilla ennen roomalaisia. Meri jää Tyrrhenanmeren pohjoispuolelle.",
+      "lahde": "en-Wikipedia \"Ligurian Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ]
+}

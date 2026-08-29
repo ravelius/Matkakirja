@@ -1,0 +1,48 @@
+{
+  "_": "Tšekin maastokohteet. Faktat en-Wikipediasta 29.8.2026. Sisämaavaltio: ei meriä.",
+  "vuoret": [
+    {
+      "nimi": "Sněžka",
+      "lon": 15.7403,
+      "lat": 50.7361,
+      "m": 1603,
+      "lahdeKoordinaatti": "en-Wikipedia \"Sněžka\"",
+      "nappi": "Tšekin korkein piste",
+      "kysymykset": [
+        "Miksi vuorella on kaksi nimeä?",
+        "Mitä huipulla on nykyään?"
+      ],
+      "korostukset": ["Sudeetit|Sudeettien"],
+      "teksti": "Sněžka eli puolaksi Śnieżka on Tšekin ja Puolan rajalla ja Jättiläisvuorten Sleesian harjanteen hallitsevin kohta. Sen 1 603 metrin huippu on samalla Tšekin korkein piste, Ala-Sleesian voivodikunnan korkein kohta ja koko Sudeettien katto. Sama huippu on siis kahden maan korkein vuori omalla puolellaan rajaa.",
+      "lahde": "en-Wikipedia \"Sněžka\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Labe",
+      "lon": 14.13,
+      "lat": 50.53,
+      "lahdeKoordinaatti": "Litoměřice Böömin puolella; artikkelin koordinaatti 8,722 / 53,922 on suistossa Cuxhavenissa",
+      "nappi": "Joki, joka on Saksassa Elbe",
+      "kysymykset": [
+        "Missä Elben lähde tarkalleen on?",
+        "Miksi joella on kaksi nimeä?"
+      ],
+      "teksti": "Labe eli saksaksi Elbe on yksi Keski-Euroopan suurista joista. Se saa alkunsa Jättiläisvuorilta Pohjois-Tšekistä, virtaa suuren osan Böömiä ja jatkaa Saksaan, missä se laskee Pohjanmereen Cuxhavenissa 110 kilometriä Hampurista luoteeseen. Kokonaispituutta sillä on 1 094 kilometriä.",
+      "lahde": "en-Wikipedia \"Elbe\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Vltava",
+      "lon": 14.32,
+      "lat": 48.81,
+      "lahdeKoordinaatti": "Český Krumlov joen yläjuoksulla; artikkelin koordinaatti 14,475 / 50,341 on yhtymäkohdassa Elbeen",
+      "nappi": "Tšekin kansallisjoki",
+      "kysymykset": [
+        "Miksi Vltavaa sanotaan kansallisjoeksi?",
+        "Kuinka moneen mutkaan joki kiertyy Českýn Krumlovissa?"
+      ],
+      "teksti": "Vltava on Tšekin pisin joki ja Elben vasen sivujoki. Se virtaa ensin kaakkoon Böömin metsän suuntaisesti ja kääntyy sitten pohjoiseen Böömin halki Českýn Krumlovin, České Budějovicen ja Prahan kautta. Sitä kutsutaan yleisesti Tšekin kansallisjoeksi.",
+      "lahde": "en-Wikipedia \"Vltava\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ]
+}

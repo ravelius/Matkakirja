@@ -1,0 +1,49 @@
+{
+  "_": "Tanskan maastokohteet. Faktat en-Wikipediasta 29.8.2026. Pieni maa: kolme kohdetta.",
+  "vuoret": [
+    {
+      "nimi": "Møllehøj",
+      "lon": 9.8262,
+      "lat": 55.9772,
+      "m": 171,
+      "lahdeKoordinaatti": "en-Wikipedia \"Møllehøj\"",
+      "nappi": "Tanskan katto — 170,86 metriä",
+      "kysymykset": [
+        "Miten näin matala kumpu voi olla maan korkein?",
+        "Mikä on Grönlannin korkein vuori?"
+      ],
+      "korostukset": ["Jyllanti|Jyllannin"],
+      "teksti": "Møllehøj on emämaan Tanskan korkein luonnollinen kohta: 170,86 metriä merenpinnasta. Se kohoaa Jyllannin sisämaan viljelysmaisemassa, eikä maassa ole yhtään vuorta — koko Tanska on jääkauden jälkeensä jättämää alavaa moreenimaata. Tanskan kuningaskunnan korkein kohta on aivan muualla, Grönlannin jäätiköiden keskellä.",
+      "lahde": "en-Wikipedia \"Møllehøj\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Pohjanmeri",
+      "lon": 7.4,
+      "lat": 56.2,
+      "lahdeKoordinaatti": "ulappa Jyllannin länsirannikon edustalla; artikkelin oma keskipiste on 3 / 56",
+      "nappi": "Jyllannin läntinen meri",
+      "kysymykset": [
+        "Mikä Vattimeri on?",
+        "Miksi Jyllannin länsirannikko on niin suora?"
+      ],
+      "teksti": "Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Tanska on ainoa maa, jonka rannat ovat sekä tällä merellä että Itämerellä.",
+      "lahde": "en-Wikipedia \"North Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Itämeri",
+      "lon": 12.6,
+      "lat": 54.9,
+      "lahdeKoordinaatti": "ulappa Tanskan saarten eteläpuolella; artikkelin oma keskipiste on 20 / 58",
+      "nappi": "Maailman suurin murtovesiallas",
+      "kysymykset": [
+        "Miksi Itämeren vesi on murtovettä?",
+        "Mitkä salmet yhdistävät Itämeren Pohjanmereen?"
+      ],
+      "korostukset": ["murtovesi|murtovesiallas"],
+      "teksti": "Itämeri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Se on maailman suurin murtovesiallas. Tanskan salmet ovat sen ainoa yhteys Pohjanmerelle, ja siksi juuri ne ovat aina olleet Itämeren avain.",
+      "lahde": "en-Wikipedia \"Baltic Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ]
+}

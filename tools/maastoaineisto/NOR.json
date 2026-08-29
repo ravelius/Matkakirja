@@ -1,0 +1,64 @@
+{
+  "_": "Norjan maastokohteet. Faktat en-Wikipediasta 29.8.2026.",
+  "vuoret": [
+    {
+      "nimi": "Galdhøpiggen",
+      "lon": 8.3125,
+      "lat": 61.6364,
+      "m": 2469,
+      "lahdeKoordinaatti": "en-Wikipedia \"Galdhøpiggen\"",
+      "nappi": "Pohjois-Euroopan korkein",
+      "kysymykset": [
+        "Mitä Jotunheimen tarkoittaa?",
+        "Onko Galdhøpiggenilla jäätikköä?"
+      ],
+      "korostukset": ["Jotunheimen|Jotunheimenin"],
+      "teksti": "Galdhøpiggen on Norjan, Skandinavian ja koko Pohjois-Euroopan korkein vuori: 2 469 metriä. Se sijaitsee Lomin kunnassa Innlandetin maakunnassa Jotunheimenin vuoristossa Jotunheimenin kansallispuiston sisällä. Ympärillä kohoaa tiheä joukko muita huippuja — Keilhaus topp, Store Styggehøe, Storjuvtinden ja Skardstinden muiden muassa.",
+      "lahde": "en-Wikipedia \"Galdhøpiggen\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Norjanmeri",
+      "lon": 6.0,
+      "lat": 66.4,
+      "lahdeKoordinaatti": "ulappa Norjan länsirannikon edustalla; artikkelin oma keskipiste on 2 / 69",
+      "nappi": "Meri, joka ei jäädy",
+      "kysymykset": [
+        "Miksi Norjan rannikko pysyy sulana talvella?",
+        "Mikä Jan Mayenin harjanne on?"
+      ],
+      "teksti": "Norjanmeri on reunameri Norjasta luoteeseen, Pohjanmeren ja Grönlanninmeren välissä, ja se rajautuu koillisessa Barentsinmereen. Lounaassa sen erottaa Atlantista Islannin ja Färsaarten välinen vedenalainen harjanne, pohjoisessa Jan Mayenin harjanne erottaa sen Grönlanninmerestä. Meri luetaan joko Atlanttiin tai Jäämereen kuuluvaksi.",
+      "lahde": "en-Wikipedia \"Norwegian Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Barentsinmeri",
+      "lon": 26.0,
+      "lat": 71.3,
+      "lahdeKoordinaatti": "ulappa Finnmarkin rannikon edustalla; artikkelin oma keskipiste on 40 / 75",
+      "nappi": "Meri, joka on nimetty hollantilaiselta",
+      "kysymykset": [
+        "Kuka Willem Barentsz oli?",
+        "Miksi merta kutsuttiin ennen Murmanskinmereksi?"
+      ],
+      "korostukset": ["Willem Barentsz|Willem Barentszin"],
+      "teksti": "Barentsinmeri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, ja se on jaettu Norjan ja Venäjän aluevesiksi. Venäläiset tunsivat sen aiemmin Murmanskinmerenä. Nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta.",
+      "lahde": "en-Wikipedia \"Barents Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Glomma",
+      "lon": 11.56,
+      "lat": 60.88,
+      "lahdeKoordinaatti": "Elverum joen keskijuoksulla; artikkelin koordinaatti 10,931 / 59,218 on suistossa",
+      "nappi": "Norjan pisin joki",
+      "kysymykset": [
+        "Miksi Glommaa käytettiin tukinuittoon?",
+        "Mihin Glomma laskee?"
+      ],
+      "teksti": "Glomma eli Glåma on Norjan pisin ja vesirikkain joki. Sen kokonaispituus on 621 kilometriä, ja valuma-alue kattaa 13 prosenttia koko Norjan pinta-alasta — kaikki maan eteläosassa.",
+      "lahde": "en-Wikipedia \"Glomma\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ]
+}

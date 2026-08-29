@@ -1,0 +1,51 @@
+{
+  "_": "Alankomaiden maastokohteet. Faktat en-Wikipediasta 29.8.2026. Pieni maa: kolme kohdetta.",
+  "vuoret": [
+    {
+      "nimi": "Vaalserberg",
+      "lon": 6.0208,
+      "lat": 50.7547,
+      "m": 322,
+      "lahdeKoordinaatti": "en-Wikipedia \"Vaalserberg\"",
+      "nappi": "Maan korkein kohta — 322 metriä",
+      "kysymykset": [
+        "Mikä Saba on?",
+        "Mitä NAP tarkoittaa?"
+      ],
+      "korostukset": ["Limburg|Limburgin"],
+      "teksti": "Vaalserberg on 322,4 metriä NAP-tason yläpuolella ja Alankomaiden Euroopan-puoleisen osan korkein kohta. Se on Limburgin maakunnassa maan kaakkoisimmassa kolkassa lähellä Vaalsin kaupunkia, jonka mukaan se on nimetty. Se oli koko kuningaskunnan korkein kohta aina vuoteen 2010, jolloin Karibian Saba 887-metrisine tulivuorineen liitettiin maahan erityiskuntana.",
+      "lahde": "en-Wikipedia \"Vaalserberg\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Pohjanmeri",
+      "lon": 4.2,
+      "lat": 53.4,
+      "lahdeKoordinaatti": "ulappa Alankomaiden rannikon edustalla; artikkelin oma keskipiste on 3 / 56",
+      "nappi": "Meri, jolta maa on otettu",
+      "kysymykset": [
+        "Miten hollantilaiset ovat vallanneet maata mereltä?",
+        "Miksi Pohjanmeri on niin matala?"
+      ],
+      "teksti": "Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä, leveyttä 580 ja pinta-alaa 570 000 neliökilometriä.",
+      "lahde": "en-Wikipedia \"North Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Maas",
+      "lon": 6.17,
+      "lat": 51.37,
+      "lahdeKoordinaatti": "Venlo joen Alankomaiden-puoleisella osuudella; artikkelilla ei ole koordinaattia",
+      "nappi": "Joki kolmen maan läpi",
+      "kysymykset": [
+        "Mikä Rein–Maas–Schelde-suisto on?",
+        "Missä Maas saa alkunsa?"
+      ],
+      "korostukset": ["suisto|suistosta"],
+      "teksti": "Maas eli ranskaksi Meuse on 925 kilometrin pituinen joki, joka nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi. Se laskee Pohjanmereen Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin ohella maan kaksi suurta vesireittiä.",
+      "lahde": "en-Wikipedia \"Meuse\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ]
+}
