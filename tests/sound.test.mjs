@@ -533,6 +533,10 @@ function tekoAudio(rekisteri) {
   return class {
     constructor(src) {
       this.src = src;
+      // Alkuperäinen osoite jää talteen, koska removeAttribute pyyhkii
+      // srcin: ilman tätä purettua soitinta ei voisi enää tunnistaa
+      // (ks. maisemat-suodatin lataaAmbienssissa).
+      this.alkuSrc = src ?? '';
       this.volume = 1;
       this.paused = true;
       this.loop = false;
@@ -580,15 +584,27 @@ async function lataaAmbienssi() {
   const mod = await import(`../js/ambience-stream.js?kerta=${soittimet.length}-${Math.random()}`);
   const { sfx } = await import('../js/sound.js');
   sfx.enabled = true;
-  return { mod, soittimet, kello };
+  mod.nollaaPohjaMusiikki?.();
+  /*
+   * MAISEMAN SOITTIMET, EI KAIKKI SOITTIMET (musiikkipaletti
+   * 29.8.2026). playPlaceAmbience käynnistää maiseman rinnalle
+   * musiikkipaletin pohjavireen omana soittimenaan
+   * (js/ambience-stream.js kaynnistaPohjaMusiikki), ja se syntyy
+   * ENNEN maiseman soitinta. Nämä testit koskevat maisemaa — sen
+   * silmukan saumaa, väistöä ja hiljennystä — joten indeksin sijaan
+   * käytetään suodatinta. Pohjavire tunnistuu tiedostonimestä
+   * (musa-*.mp3), joka on paletin oma etuliite.
+   */
+  const maisemat = () => soittimet.filter((a) => !/musa-/.test(a.alkuSrc));
+  return { mod, soittimet, kello, maisemat };
 }
 
 test('silmukan sauma ristihäivytetään: uusi kierros alkaa ennen nauhan loppua', async () => {
-  const { mod, soittimet, kello } = await lataaAmbienssi();
+  const { mod, kello, maisemat } = await lataaAmbienssi();
   mod.playPlaceAmbience('lontoo', 'kaupunki', 'europe');
   await Promise.resolve();
-  assert.equal(soittimet.length, 1, 'ensimmäinen soitin ei käynnistynyt');
-  const eka = soittimet[0];
+  assert.equal(maisemat().length, 1, 'ensimmäinen soitin ei käynnistynyt');
+  const eka = maisemat()[0];
   eka.laukaise('loadedmetadata');
   await ajaHaivytykset(kello);
   assert.ok(eka.volume > 0, 'ensimmäinen kierros ei noussut kuuluviin');
@@ -597,8 +613,8 @@ test('silmukan sauma ristihäivytetään: uusi kierros alkaa ennen nauhan loppua
   eka.currentTime = eka.duration - 1;
   eka.laukaise('timeupdate');
   await Promise.resolve();
-  assert.equal(soittimet.length, 2, 'uusi kierros ei alkanut ennen nauhan loppua');
-  const toka = soittimet[1];
+  assert.equal(maisemat().length, 2, 'uusi kierros ei alkanut ennen nauhan loppua');
+  const toka = maisemat()[1];
   assert.equal(toka.paused, false, 'uusi kierros ei lähtenyt soimaan');
   assert.ok(!eka.paused, 'edellinen kierros katkaistiin heti — ei ristihäivytystä');
 
@@ -611,10 +627,10 @@ test('silmukan sauma ristihäivytetään: uusi kierros alkaa ennen nauhan loppua
 });
 
 test('väistö säilyy silmukan sauman yli', async () => {
-  const { mod, soittimet, kello } = await lataaAmbienssi();
+  const { mod, kello, maisemat } = await lataaAmbienssi();
   mod.playPlaceAmbience('praha', 'kaupunki', 'europe');
   await Promise.resolve();
-  const eka = soittimet[0];
+  const eka = maisemat()[0];
   eka.laukaise('loadedmetadata');
   await ajaHaivytykset(kello);
   const taysi = eka.volume;
@@ -627,7 +643,7 @@ test('väistö säilyy silmukan sauman yli', async () => {
   eka.currentTime = eka.duration - 1;
   eka.laukaise('timeupdate');
   await Promise.resolve();
-  const toka = soittimet[1];
+  const toka = maisemat()[1];
   toka.laukaise('loadedmetadata');
   await ajaHaivytykset(kello);
   // Ilman väistön muistamista uusi kierros nousisi täyteen voimaan ja
@@ -643,11 +659,11 @@ test('väistö säilyy silmukan sauman yli', async () => {
  * ei saa nostaa taustaa takaisin niin kauan kuin toinen on auki.
  */
 test('lukunäkymä hiljentää taustan ja palauttaa sen vasta viimeisen sulkeuduttua', async () => {
-  const { mod, soittimet, kello } = await lataaAmbienssi();
+  const { mod, kello, maisemat } = await lataaAmbienssi();
   mod.nollaaHiljennykset();
   mod.playPlaceAmbience('lontoo', 'kaupunki', 'europe');
   await Promise.resolve();
-  const soi = soittimet[0];
+  const soi = maisemat()[0];
   soi.laukaise('loadedmetadata');
   await ajaHaivytykset(kello);
   const taysi = soi.volume;
@@ -676,11 +692,11 @@ test('lukunäkymä hiljentää taustan ja palauttaa sen vasta viimeisen sulkeudu
 });
 
 test('sama hiljennyssyy kahdesti ei jää päälle, ja tuntematon purku on turvallinen', async () => {
-  const { mod, soittimet, kello } = await lataaAmbienssi();
+  const { mod, kello, maisemat } = await lataaAmbienssi();
   mod.nollaaHiljennykset();
   mod.playPlaceAmbience('praha', 'kaupunki', 'europe');
   await Promise.resolve();
-  const soi = soittimet[0];
+  const soi = maisemat()[0];
   soi.laukaise('loadedmetadata');
   await ajaHaivytykset(kello);
   const taysi = soi.volume;
@@ -697,13 +713,13 @@ test('sama hiljennyssyy kahdesti ei jää päälle, ja tuntematon purku on turva
 });
 
 test('paneelin ollessa auki alkava ambienssi alkaa hiljennettynä', async () => {
-  const { mod, soittimet, kello } = await lataaAmbienssi();
+  const { mod, kello, maisemat } = await lataaAmbienssi();
   mod.nollaaHiljennykset();
   // Kaupungin vaihto pöllö auki: uusi maisema ei saa nousta täyteen.
   mod.hiljennaAmbienssi('pollo');
   mod.playPlaceAmbience('wien', 'kaupunki', 'europe');
   await Promise.resolve();
-  const hiljainen = soittimet[0];
+  const hiljainen = maisemat()[0];
   hiljainen.laukaise('loadedmetadata');
   await ajaHaivytykset(kello);
   const hiljaaTaso = hiljainen.volume;
