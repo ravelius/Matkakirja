@@ -537,6 +537,69 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 59.918, etela: 59.901, lansi: 10.7135, ita: 10.761 },
     meri: true,
   },
+  sevilla: {
+    // Guadalquivirin itäranta katedraalista Plaza de Españaan:
+    // Giralda ja katedraali keskellä, Alcázarin puutarhat sen alla,
+    // Plaza de España kaakossa Maria Luisan puiston laidalla,
+    // Kultatorni joen rannassa lännessä ja Setas pohjoisessa.
+    //
+    // Joen länsipuolinen Triana on mukana kokonaan: Sevillassa joki
+    // EI ole kuvan reuna vaan sen selkäranka, ja Trianan ilman kartta
+    // näyttäisi kaupungilta, joka loppuu veteen.
+    //
+    // EI meri: true. Guadalquivir on OSM:ssä vesimonikulmio
+    // (riverbank), joten se piirtyy vetenä ilman merentäyttöä —
+    // ja merentäyttö on tehty rantaviivalle, jota joella ei ole.
+    // RAJAUS ON VAAKA, kuten kaikilla muillakin kohdekartoilla
+    // (mitattu 29.8.2026: kapein entinen on Marseille 1,16, ja lehden
+    // kuvapaikka on vaakasuora). Ensimmäinen yritys 37,3745–37,396 ×
+    // -6,006…-5,982 oli PYSTY (0,89) ja olisi ollut paketin ainoa
+    // sellainen, joten leveyttä lisättiin ja korkeutta vähennettiin
+    // saman keskipisteen ympärillä.
+    // Eteläreuna 37,3745 eikä 37,376: Plaza de España on 37,3769, ja
+    // tiukemmalla reunalla se jäi sadan metrin päähän kuvan alalaidasta
+    // eli käytännössä reunaan kiinni. Nyt sen puistokaari on kokonaan
+    // kuvassa. Kaikki faktapohjan kymmenen kohdetta
+    // (docs/mantereet-tyoaineisto/faktapohja-sevilla.md, jakso 4)
+    // mahtuvat tähän rajaukseen.
+    rajat: {
+      pohjoinen: 37.3945, etela: 37.3745, lansi: -6.0137, ita: -5.9784,
+    },
+  },
+  bergen: {
+    // Vågen-lahti keskellä kuvaa: Bryggen sen itärannalla, Bergenhusin
+    // linnoitus pohjoisessa niemen kärjessä, kalatori lahden pohjukassa
+    // ja Lille Lungegårdsvannetin nelikulmainen lampi kaakossa.
+    // Fløibanen lähtee kalatorin takaa itään.
+    //
+    // meri: true, koska Vågen on vuonon haara ja OSM:ssä pelkkää
+    // rantaviivaa — sama tilanne kuin Marseillessa ja Oslossa. Ilman
+    // täyttöä lahti jäisi paperin väriseksi, ja juuri se lahti on
+    // Bergenin kartan tunnistettava muoto.
+    // Vaakarajaus samasta syystä kuin Sevillassa: leveys on mitoitettu
+    // korkeudesta niin, että kuvasuhde asettuu muiden joukkoon.
+    //
+    // RAJAUSTA EI OLE VIELÄ KATSOTTU SILMIN, koska kuvaa ei 29.8.2026
+    // saatu piirrettyä lainkaan: Overpass kaatui kolmella peräkkäisellä
+    // ajolla (30 uusintayritystä: 500, 502, aikakatkaisuja ja katkenneita
+    // yhteyksiä), kun Sevilla meni läpi samoilta palvelimilta samaan
+    // aikaan. Rajaus on siis laskettu ja kohteet tarkistettu sen sisään
+    // (faktapohja-bergen.md, jakso 4, kohteet 1–8), mutta ensimmäinen
+    // onnistunut ajo on yhä katsomatta — KATSO KUVA ennen kuin lisäät
+    // rivin js/packs/maakartat.js:ään, kuten tämän tiedoston
+    // alkukommentti vaatii.
+    // Eteläreuna 60,3865: faktapohjan kohde 8 (yliopisto, Muséplass,
+    // 60,38809) jäi tiukemman reunan 60,3893 ulkopuolelle, ja kaupungin
+    // keskipiste 60,38944 osui käytännössä reunaviivalle. Nyt
+    // faktapohjan kohteet 1–8 ovat kaikki kuvassa; Troldhaugen ja
+    // Lysøen jäävät tarkoituksella pois, koska ne ovat 7,8 ja 19,5 km
+    // etelässä (docs/mantereet-tyoaineisto/faktapohja-bergen.md,
+    // jakso 4, sama suositus).
+    rajat: {
+      pohjoinen: 60.4018, etela: 60.3865, lansi: 5.3013, ita: 5.3447,
+    },
+    meri: true,
+  },
   tampere: {
     /*
      * Kannas kahden järven välissä: Näsijärvi työntyy kuvan

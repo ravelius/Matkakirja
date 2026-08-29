@@ -2258,4 +2258,68 @@ export const SAATIEDOT = {
       + 'eikä kuivaa kautta ole lainkaan. Vuodessa kertyy runsaat 1 100 '
       + 'millimetriä.',
   },
+  /*
+   * Sevilla ja Bergen 29.8.2026: kaupunkilehti oli molemmilla jo
+   * olemassa, mutta säärivi puuttui, ja lehden valmiusaste jäi siksi
+   * "lähes" (js/tyohuone-tilastot.js lehtiValmius). Rivit on laskettu
+   * samalla tavalla kuin muidenkin: Open-Meteon ERA5-arkistosta
+   * jaksolta 1991–2020, keskilämpö kuukauden päiväkeskiarvojen
+   * keskiarvona ja sade kuukausisummien vuosikeskiarvona.
+   *
+   * Kaupungit ovat paketin kaksi ääripäätä Euroopassa, ja se näkyy
+   * luvuissa: Sevillan vuosisade on 478 millimetriä ja Bergenin
+   * 2 379 eli viisinkertainen.
+   *
+   * LUVUT ON RISTIINTARKISTETTU RIIPPUMATTOMASTA LÄHTEESTÄ. Työaineiston
+   * (docs/mantereet-tyoaineisto/faktapohja-sevilla.md ja -bergen.md,
+   * kummankin jakso 5) sääasemataulut antavat Sevillalle AEMET:in
+   * 1991–2020 normaalit lentokentän asemalta ja Bergenille met.no:n
+   * Florida-aseman luvut samalta jaksolta:
+   *   Sevilla  heinäkuu 28,5 °C ja vuosisade 502 mm
+   *            (tämä rivi: 28,1 °C ja 478 mm)
+   *   Bergen   heinäkuu 15,6 °C ja vuosisade 2 496 mm
+   *            (tämä rivi: 14,4 °C ja 2 379 mm)
+   * Ero on tavanomainen kaupunkiaseman ja kymmenien kilometrien
+   * levyisen ERA5-hilaruudun välillä, ja samaan suuntaan kuin New Yorkin
+   * rivillä alempana selitetään: Bergenin hilaruutuun mahtuu myös
+   * ympäröivä tunturi, joten se on asemaa viileämpi.
+   *
+   * YLIN JA ALIN PUUTTUVAT TARKOITUKSELLA — kentät ovat valinnaisia (ks.
+   * tiedoston alkukommentti), ja ilman niitä vuosigraafi piirtyy ilman
+   * vaihteluvyöhykettä. Sama tilanne on jo sanfranciscolla. Kaista
+   * yritettiin hakea 29.8.2026, mutta Open-Meteon ilmaiskiintiö on
+   * jaettu ulosmenevän osoitteen kesken ja se oli tuolloin täynnä
+   * ("Daily API request limit exceeded"): 36 pyynnön ajosta valmistui
+   * kuusi tunnissa. Kaistan saa myöhemmin lisättyä ilman että muuhun
+   * tarvitsee koskea:
+   *   NODE_USE_ENV_PROXY=1 node tools/hae-saanormaalit.mjs \
+   *     --vain sevilla,bergen
+   */
+  sevilla: {
+    lat: 37.39,
+    lon: -5.99,
+    keskilampo: [10.3, 11.7, 14.4, 16.6, 20.5, 25.1, 28.1, 28.1, 24.3, 19.6, 14.3, 11.4],
+    sade: [49, 46, 55, 49, 34, 8, 2, 2, 27, 67, 63, 76],
+    luonnehdinta: 'Sevillan kesä on Euroopan kuumimpia ja samalla lähes '
+      + 'sateeton: heinä- ja elokuussa keskilämpö on 28,1 astetta ja '
+      + 'sadetta kertyy kumpanakin kuukautena kaksi millimetriä. Vesi '
+      + 'tulee talvipuolella, sateisimpana joulukuuna 76 millimetriä, ja '
+      + 'koko vuoden kertymä jää alle viidensadan. Talvi on silti leuto: '
+      + 'kylmimmässäkin tammikuussa keskilämpö on runsaat kymmenen '
+      + 'astetta.',
+  },
+  bergen: {
+    lat: 60.39,
+    lon: 5.32,
+    keskilampo: [0.7, 0.6, 2.2, 5.6, 9.1, 12.2, 14.4, 14.3, 11.6, 7.3, 3.5, 1.2],
+    sade: [246, 209, 192, 133, 117, 118, 149, 187, 245, 258, 256, 269],
+    luonnehdinta: 'Bergenissä sataa joka kuukausi: kuivimmassakin '
+      + 'toukokuussa kertyy 117 millimetriä, ja vuoden summa nousee '
+      + 'lähes kahteentuhanteenneljäänsataan millimetriin. Märin aika on '
+      + 'syksy ja alkutalvi, jolloin kuukausikertymä pysyy neljän '
+      + 'kuukauden ajan yli kahdensadanviidenkymmenen millimetrin. '
+      + 'Lämpötilassa on sitä vähemmän vaihtelua: helmikuun 0,6 '
+      + 'asteesta noustaan heinäkuun 14,4 asteeseen, eikä yksikään '
+      + 'kuukausi ole keskimäärin pakkasella.',
+  },
 };

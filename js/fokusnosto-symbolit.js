@@ -873,6 +873,58 @@ export const NOSTOSYM_LUOKAT = {
   ihme: 'Kadonneet ihmeet',
 };
 
+/*
+ * PÄÄKATEGORIAT — KARTAN SELITE, EI KORTIN LUOKKA.
+ *
+ * Omistajan lopullinen jako 29.8.2026: karttaselitevalikossa
+ * (js/karttaselite.js) on KAHDEKSAN riviä, ei neljätoista. Perustelu
+ * on valikon oma: selite luetaan kartan päältä yhdellä silmäyksellä,
+ * ja neljätoista riviä on lista, jota selataan. Kortin ylärivi sen
+ * sijaan nimeää kohteen tarkasti — sen taulu on yllä
+ * (NOSTOSYM_LUOKAT), eikä se muutu tästä.
+ *
+ * SAMA SYMBOLI KUIN KARTALLA, VÄHEMMÄN RIVEJÄ. Merkkien ja korttien
+ * omat tarkat symbolit pysyvät ennallaan; valikko vain RYHMITTELEE ne.
+ * Jokaisen pääkategorian symboli on sen sukukunnan tunnetuin merkki
+ * (portti, lehvä, pöllö, pylväs, tähti, lyyra, vaaka, huutomerkki),
+ * joten rivin kuva löytyy kartalta sellaisenaan silloinkin, kun
+ * ryhmässä on useampi merkki.
+ *
+ * Taulu asuu tässä samasta syystä kuin NOSTOSYM_LUOKAT: symboli, sen
+ * nimi ja sen sukukunta pysyvät yhdessä paikassa. Avaimet ovat
+ * symbolikategorioita (NOSTOSYM_TYYPIT), arvot pääkategorian tunnuksia
+ * (KARTTAVALO_AIHEET js/karttavalot.js).
+ *
+ * MAASTOTYYPIT (vuori, joki, meri, saari) EIVÄT TARVITSE OMAA RIVIÄ:
+ * ne piirtyvät kartalle jo 'luonto'-symbolilla
+ * (js/fokuskohteet.js KOHDE_TYYPPISYMBOLIT), joten ne osuvat Luonnon
+ * alle tämän taulun kautta ilman erillistä sääntöä.
+ */
+export const NOSTOSYM_PAAKATEGORIAT = {
+  kaupunki: 'kaupungit',
+  luonto: 'luonto',
+  elain: 'elaimet',
+  historia: 'historia',
+  // Sulkakynä on historian sukua: legenda ja kirjallisuus ovat
+  // kartalla mennyttä aikaa siinä missä raunio.
+  sana: 'historia',
+  // Silmä on nähtävyys, ja kartalla ne ovat rakennettuja: kierros
+  // kulkee kaupungin läpi eikä metsässä (js/fokuskohteet.js
+  // kohteenSymboli — silmä on kierrosten varamerkki).
+  silma: 'historia',
+  ihme: 'ihmeet',
+  kulttuuri: 'kulttuuri',
+  ruoka: 'kulttuuri',
+  urheilu: 'kulttuuri',
+  kauppa: 'kauppa',
+  tekniikka: 'kauppa',
+  merenkulku: 'kauppa',
+  huuto: 'skandaalit',
+};
+
+/** Symbolin pääkategoria; tuntematon symboli ei kuulu mihinkään. */
+export const nostosymPaakategoria = (symboli) => NOSTOSYM_PAAKATEGORIAT[symboli] ?? null;
+
 /**
  * KIRJASTON OVI: piirtää kategorian symbolin ryhmään origon ympärille
  * (~21 px merkki lehden perustasolla). Sekä täkysymbolit (tämä

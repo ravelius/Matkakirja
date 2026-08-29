@@ -13,7 +13,9 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 1337, teksti: 'Aallon 3 loistoaikakuvat ja Suomen aarrepari' },
+  { v: 1338, teksti: 'Aallon 3 loistoaikakuvat ja Suomen aarrepari' },
+  { v: 1337, teksti: 'Eurooppa: pikkukorjaukset' },
+  { v: 1336, teksti: 'Karttaselitteet ja aihevalot' },
   { v: 1335, teksti: 'Maastokohteet avattaviksi Euroopassa' },
   { v: 1334, teksti: 'Maailmatilan nopeus ja merkkikoko' },
   { v: 1333, teksti: 'Atlaskehys maailmalehteen' },
