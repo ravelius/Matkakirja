@@ -11,9 +11,10 @@
  * saman päivän illan linjaus oli ehdoton: *"näkymän pitää näyttää
  * TÄSMÄLLEEN hyväksytyltä prototyyppikuvalta pieniä yksityiskohtia
  * myöten (mittajana ym.)"*. Siksi tässä on prototyypin KOKO ulkoasu —
- * opaakki paperi, meren syvyysporrastus, naapurien sumenevat
- * ääriviivat, merten ja vuorten nimet — eikä pelkkä maastorasteri
- * kuten v1091–v1095:ssä.
+ * opaakki paperi, meren syvyysporrastus, naapurien ääriviivat, merten
+ * ja vuorten nimet — eikä pelkkä maastorasteri kuten v1091–v1095:ssä.
+ * (Naapurien SUMENNUS oli osa prototyyppiä, mutta siitä luovuttiin
+ * 29.8.2026; ks. himmennaNaapurit.)
  *
  * === JATKUVA PINTA (omistaja 25.8.2026, Raamatun osio "JATKUVA KARTTA
  * JA DYNAAMISET MITAT") ===
@@ -143,12 +144,16 @@ export const MUSTE = '#4a3421';
 /*
  * Naapurit piirretään PUOLIKKAALLA tarkkuudella ja venytetään paikalleen.
  *
- * Ne ovat pelkkiä ääriviivoja, jotka sumennetaan neljässä vyöhykkeessä
- * — sumennettua ei kannata laskea täydellä tarkkuudella. Puolikkaalla
- * lehti on yhä tarkempi kuin prototyypin oma 3200 pikselin canvas, ja
- * viisi koko kuvan kokoista ImageDataa ja viisi sumennusta jäävät
- * neljäsosaan muistista ja ajasta. Täydellä tarkkuudella Chromium
- * kaatui muistiin 6400 pikselin lehdellä.
+ * Ne ovat pelkkiä ääriviivoja. Puolikas tarkkuus valittiin, kun ne vielä
+ * sumennettiin viidessä vyöhykkeessä — sumennettua ei kannata laskea
+ * täydellä tarkkuudella, ja viisi koko kuvan kokoista ImageDataa ja
+ * viisi sumennusta jäivät neljäsosaan muistista ja ajasta. Täydellä
+ * tarkkuudella Chromium kaatui muistiin 6400 pikselin lehdellä.
+ *
+ * Jako pidetään, vaikka sumennuksesta on luovuttu (himmennaNaapurit):
+ * puolikkaalla lehti on yhä tarkempi kuin prototyypin oma 3200 pikselin
+ * canvas, ja rajaviiva on 2,3 yksikköä leveä eli kaksi pikseliä
+ * puolikkaallakin — teräväksi se ei tästä muutu.
  */
 const NAAPURI_JAKO = 2;
 
@@ -294,6 +299,22 @@ export function piirra(canvas, aineisto, asetukset) {
    * reunalukemat, vinjetti) pois. Ne kuuluvat nyt pelille.
    */
   const jatkuva = Boolean(tyyli.jatkuva);
+  /*
+   * NAAPURIEN HIMMENNYS — OLETUKSENA POIS (Raamattu, omistaja
+   * 29.8.2026 ilta: *"MUIDEN MAIDEN SUMENNUKSESTA LUOVUTAAN —
+   * liikuttelualueen rajaus riittää fokukseksi"*).
+   *
+   * Kun himmennys on pois, naapurimaat saavat TÄSMÄLLEEN saman maaston
+   * kuin kohdemaa: sama hypsometria, sama varjostuksen liioittelu,
+   * sama rakeisuus, täysi peitto — eikä rajaviivaa sumenneta
+   * etäisyysvyöhykkeittäin. Lehti on silloin yksi yhtenäinen maasto,
+   * jonka fokuksen hoitaa pelin oma liikerajaus.
+   *
+   * Kytkin jätetään olemassa maan tyyliin (`naapuriHimmennys: true`),
+   * koska vanha ulkoasu on yhden rivin päässä, jos jatkuva pinta
+   * joskus osoittautuu vääräksi — sama syy kuin `jatkuva`-kytkimellä.
+   */
+  const himmennaNaapurit = tyyli.naapuriHimmennys === true;
   /*
    * Yksi kuvapikseli laudan yksikköinä ja päinvastoin. Kuvan on
    * istuttava bboxiin PIKSELILLEEN: peli asettaa <image>-elementin
@@ -671,6 +692,39 @@ export function piirra(canvas, aineisto, asetukset) {
   })();
 
   /*
+   * MAASTON SÄVY — YKSI KAAVA, KAKSI KÄYTTÄJÄÄ.
+   *
+   * Hypsometria, varjostus ja akvarellin rakeisuus yhdessä funktiossa,
+   * koska sekä kohdemaa (osio 5) että himmentämättömät naapurit (osio
+   * 2b) tarvitsevat TÄSMÄLLEEN saman sävyn. Kaksi kopiota ajautuisivat
+   * erilleen ensimmäisessä säädössä, ja ero näkyisi juuri siinä
+   * kohdassa, jossa se ei saa näkyä: valtakunnan rajalla.
+   *
+   * Tulos kirjoitetaan `ulos`-taulukkoon, jotta silmukka ei varaa
+   * kymmentä miljoonaa lyhytikäistä taulukkoa.
+   */
+  const maastoSavy = (x, y, lon, lat, m, ulos) => {
+    /*
+     * Vyöhykkeen raja aaltoilee: korkeuteen lisätään kohinaa ENNEN
+     * värihakua. Tämä on koko akvarellivaikutelman ydin — mekaaninen
+     * ääriviiva katoaa ilman että muoto muuttuu.
+     */
+    const n1 = fbm(KOHINA, x / (26 * S), y / (26 * S), 4) - 0.5;
+    const n2 = fbm(KOHINA2, x / (7 * S), y / (7 * S), 3) - 0.5;
+    const v = lerpVari(ASTEIKKO, Math.max(0, m + n1 * 190 + n2 * 60));
+    const varjo = (0.5 - varjostus(lon, lat)) * 0.46;   // + = tummenna
+    // Rakeisuus: pigmentti kasautuu paperin kuoppiin.
+    const rae = (KOHINA2(x / (2.1 * S), y / (2.1 * S)) - 0.5) * 13;
+    const laikka = (fbm(KOHINA, x / (95 * S), y / (95 * S), 3) - 0.5) * 12;
+    const t = (k) => Math.max(0, Math.min(255,
+      k * (1 - varjo) + rae + laikka + (varjo > 0 ? 0 : varjo * 30)));
+    ulos[0] = t(v[0]);
+    ulos[1] = t(v[1] * (1 - varjo * 0.12));
+    ulos[2] = t(v[2] * (1 - varjo * 0.3));
+    return ulos;
+  };
+
+  /*
    * ================================ 2b. NAAPURIEN MAASTO (jatkuva pinta)
    *
    * Omistaja 25.8.2026: *"maasto ja meri jatkuvat koko kuvan alueelle:
@@ -684,28 +738,39 @@ export function piirra(canvas, aineisto, asetukset) {
    * Libyan rannikko, joista lehdellä ei ole yhtään monikulmiota. Sama
    * temppu toimii siis millä tahansa maalla ilman uutta aineistoa.
    *
-   * KOLME ASIAA TEKEE PINNASTA HAALEAN:
-   *   1. väri sekoitetaan harmaaseen paperiin (HIMMEA),
-   *   2. varjostus on kolmasosa kohdemaan liioittelusta,
-   *   3. peitto laskee etäisyyden mukaan kohdemaan rannikosta
-   *      (kentta), joten kaukainen manner on pelkkä aavistus.
+   * KOLME ASIAA TEKI PINNASTA HAALEAN, KUN HIMMENNYS OLI PÄÄLLÄ:
+   *   1. väri sekoitettiin harmaaseen paperiin (HIMMEA),
+   *   2. varjostus oli kolmasosa kohdemaan liioittelusta,
+   *   3. peitto laski etäisyyden mukaan kohdemaan rannikosta
+   *      (kentta), joten kaukainen manner oli pelkkä aavistus.
+   * Oletuksena (ks. himmennaNaapurit) mikään niistä ei ole voimassa:
+   * naapuri saa saman maaston kuin kohdemaa.
    *
    * Kohdemaan alue maalataan tässä turhaan, mutta sen oma maastokerros
    * (osio 5) peittää sen täydellä peitolla — erillinen maski maksaisi
    * koko kuvan kokoisen ImageDatan säästämättä mitään.
    */
   if (jatkuva) {
-    // Paperinharmaa, johon naapurin hypsometria sekoitetaan.
+    // Paperinharmaa, johon naapurin hypsometria sekoitetaan (vain
+    // himmennettäessä).
     const HIMMEA = [205, 197, 178];
     const SEKOITUS = 0.45;
     const img = ctx.getImageData(0, 0, W, H);
     const d = img.data;
+    const savy = [0, 0, 0];
     for (let y = 0; y < H; y++) {
       for (let x = 0; x < W; x++) {
         const lon = lonPikselista(x + 0.5);
         const lat = latPikselista(y + 0.5);
         const m = korkeus(lon, lat);
         if (!Number.isFinite(m) || vetta(lon, lat, m)) continue;
+        const i = (y * W + x) * 4;
+        if (!himmennaNaapurit) {
+          /* Sama kaava kuin kohdemaalla (osio 5), samasta funktiosta. */
+          maastoSavy(x, y, lon, lat, m, savy);
+          d[i] = savy[0]; d[i + 1] = savy[1]; d[i + 2] = savy[2];
+          continue;
+        }
         /*
          * Etäisyys kohdemaan rannikosta prototyyppipikseleinä. Sama
          * kenttä kuin naapurien ääriviivoilla, joten maasto ja viiva
@@ -718,11 +783,10 @@ export function piirra(canvas, aineisto, asetukset) {
         const v = lerpVari(ASTEIKKO, Math.max(0, m + n1 * 190 + n2 * 60));
         const varjo = (0.5 - varjostus(lon, lat)) * 0.16;
         const rae = (KOHINA2(x / (2.1 * S), y / (2.1 * S)) - 0.5) * 9;
-        const i = (y * W + x) * 4;
         for (let k = 0; k < 3; k++) {
           const sekoitettu = v[k] * (1 - SEKOITUS) + HIMMEA[k] * SEKOITUS;
-          const savy = Math.max(0, Math.min(255, sekoitettu * (1 - varjo) + rae));
-          d[i + k] = d[i + k] * (1 - peitto) + savy * peitto;
+          const sv = Math.max(0, Math.min(255, sekoitettu * (1 - varjo) + rae));
+          d[i + k] = d[i + k] * (1 - peitto) + sv * peitto;
         }
       }
     }
@@ -757,13 +821,20 @@ export function piirra(canvas, aineisto, asetukset) {
      * Ensimmäinen on rajaviivan tuntumassa lähes terävä, viimeinen
      * pelkkä aavistus. Reunapehmennys tehdään maskiin, jotta
      * vyöhykkeiden väliin ei jää näkyvää saumaa.
+     *
+     * ILMAN HIMMENNYSTÄ VYÖHYKKEITÄ EI OLE: rajaviiva on koko kuvassa
+     * yhtä terävä ja yhtä vahva, ja koko kuoriliuskarakennelma
+     * kutistuu yhdeksi piirroksi. Sama silmukka hoitaa molemmat, joten
+     * kytkin ei voi unohtaa mitään vaihetta väliin.
      */
-    const vyot = [
+    const vyot = himmennaNaapurit ? [
       { d0: 0, d1: 26, blur: 0.4, alpha: 1 },
       { d0: 26, d1: 62, blur: 1.8, alpha: 0.82 },
       { d0: 62, d1: 120, blur: 4.5, alpha: 0.58 },
       { d0: 120, d1: 210, blur: 9.5, alpha: 0.36 },
       { d0: 210, d1: 1e9, blur: 17, alpha: 0.2 },
+    ] : [
+      { d0: 0, d1: 1e9, blur: 0.4, alpha: 1 },
     ];
 
     const maskiC = uusiCanvas(nw, nh);
@@ -846,6 +917,7 @@ export function piirra(canvas, aineisto, asetukset) {
     const g = maasto.getContext('2d');
     const img = g.createImageData(W, H);
     const d = img.data;
+    const savy = [0, 0, 0];
     for (let y = 0; y < H; y++) {
       for (let x = 0; x < W; x++) {
         const i = (y * W + x) * 4;
@@ -862,25 +934,10 @@ export function piirra(canvas, aineisto, asetukset) {
          */
         if (Number.isFinite(m) && vetta(lon, lat, m)) { d[i + 3] = 0; continue; }
         if (!Number.isFinite(m)) m = 60;
-        /*
-         * Vyöhykkeen raja aaltoilee: korkeuteen lisätään kohinaa ENNEN
-         * värihakua. Tämä on koko akvarellivaikutelman ydin —
-         * mekaaninen ääriviiva katoaa ilman että muoto muuttuu.
-         */
-        const n1 = fbm(KOHINA, x / (26 * S), y / (26 * S), 4) - 0.5;
-        const n2 = fbm(KOHINA2, x / (7 * S), y / (7 * S), 3) - 0.5;
-        const v = lerpVari(ASTEIKKO, Math.max(0, m + n1 * 190 + n2 * 60));
-
-        const s = varjostus(lon, lat);
-        const varjo = (0.5 - s) * 0.46;                 // + = tummenna
-        // Rakeisuus: pigmentti kasautuu paperin kuoppiin.
-        const rae = (KOHINA2(x / (2.1 * S), y / (2.1 * S)) - 0.5) * 13;
-        const laikka = (fbm(KOHINA, x / (95 * S), y / (95 * S), 3) - 0.5) * 12;
-        const t = (k) => Math.max(0, Math.min(255,
-          k * (1 - varjo) + rae + laikka + (varjo > 0 ? 0 : varjo * 30)));
-        d[i] = t(v[0]);
-        d[i + 1] = t(v[1] * (1 - varjo * 0.12));
-        d[i + 2] = t(v[2] * (1 - varjo * 0.3));
+        maastoSavy(x, y, lon, lat, m, savy);
+        d[i] = savy[0];
+        d[i + 1] = savy[1];
+        d[i + 2] = savy[2];
         d[i + 3] = Math.min(255, maanMaski[y * W + x]);
       }
     }
