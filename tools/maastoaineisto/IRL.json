@@ -1,0 +1,50 @@
+{
+  "_": "Irlannin maastokohteet. Faktat en-Wikipediasta 29.8.2026. Pieni maa: kolme kohdetta.",
+  "vuoret": [
+    {
+      "nimi": "Carrauntoohil",
+      "lon": -9.7427,
+      "lat": 51.9994,
+      "m": 1039,
+      "lahdeKoordinaatti": "en-Wikipedia \"Carrauntoohil\"",
+      "nappi": "Irlannin korkein vuori",
+      "kysymykset": [
+        "Mitä nimi Corrán Tuathail tarkoittaa?",
+        "Mikä on Devil's Ladder?"
+      ],
+      "korostukset": ["MacGillycuddy's Reeks|MacGillycuddy's Reeks"],
+      "teksti": "Carrauntoohil on Irlannin korkein vuori, 1 038,6 metriä. Se on Iveraghin niemimaalla Kerryn kreivikunnassa lähellä maan korkeimman vuorijonon MacGillycuddy's Reeksin keskustaa. Vuori on pääosin hiekkakiveä, jonka jäätiköityminen on veistänyt jyrkiksi rotkoiksi ja teräviksi harjanteiksi itä- ja koillisseinämiin. Irlanninkielinen nimi Corrán Tuathail tarkoittaa Tuathalin sirppiä.",
+      "lahde": "en-Wikipedia \"Carrauntoohil\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Irlanninmeri",
+      "lon": -5.6,
+      "lat": 53.4,
+      "lahdeKoordinaatti": "ulappa Irlannin itärannikon edustalla; artikkelin oma keskipiste on -5 / 53,5",
+      "nappi": "Kahden saaren välinen meri",
+      "kysymykset": [
+        "Mikä Yrjönkanaali on?",
+        "Miksi Mansaari on oma alueensa?"
+      ],
+      "teksti": "Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.",
+      "lahde": "en-Wikipedia \"Irish Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Shannon",
+      "lon": -8.66,
+      "lat": 52.657,
+      "lahdeKoordinaatti": "en-Wikipedia \"River Shannon\" (Limerickin seutu joen alajuoksulla)",
+      "nappi": "Brittein saarten pisin joki",
+      "kysymykset": [
+        "Miksi Shannon jakaa Irlannin kahtia?",
+        "Kuinka suuri Shannonin valuma-alue on?"
+      ],
+      "teksti": "Shannon on Irlannin saaren tärkein joki ja 360 kilometrin pituisena Brittein saarten pisin. Sen valuma-alue on 16 900 neliökilometriä eli noin viidennes koko Irlannin pinta-alasta. Joki erottaa saaren länsiosan muusta maasta lähes koko pituudeltaan.",
+      "lahde": "en-Wikipedia \"River Shannon\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ]
+}

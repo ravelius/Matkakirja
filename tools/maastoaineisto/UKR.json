@@ -1,0 +1,79 @@
+{
+  "_": "Ukrainan maastokohteet. Faktat en-Wikipediasta 29.8.2026.",
+  "vuoret": [
+    {
+      "nimi": "Hoverla",
+      "lon": 24.5003,
+      "lat": 48.16,
+      "m": 2061,
+      "lahdeKoordinaatti": "en-Wikipedia \"Hoverla\"",
+      "nappi": "Ukrainan korkein vuori",
+      "kysymykset": [
+        "Mikä polonyna on?",
+        "Mikä joki saa alkunsa Hoverlalta?"
+      ],
+      "korostukset": ["polonyna|polonyna"],
+      "teksti": "Hoverla on 2 061 metriä korkea ja Ukrainan korkein vuori sekä osa Ukrainan Karpaatteja. Se sijaitsee Itä-Beskideilla Tšornohoran alueella. Rinteitä peittävät pyökki- ja kuusimetsät, joiden yläpuolelle jää subalpiinisten niittyjen vyöhyke, jota ukrainaksi kutsutaan nimellä polonyna. Prut-joen päälähde on vuoren itärinteellä.",
+      "lahde": "en-Wikipedia \"Hoverla\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Mustameri",
+      "lon": 32.0,
+      "lat": 44.4,
+      "lahdeKoordinaatti": "ulappa Krimin eteläpuolella; artikkelin oma keskipiste on 35 / 44",
+      "nappi": "Meri, jonka valuma-alue on 24 maassa",
+      "kysymykset": [
+        "Miksi Mustameren syvyys on hapeton?",
+        "Mistä meri sai nimensä?"
+      ],
+      "korostukset": ["valuma-alue|valuma-alue"],
+      "teksti": "Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.",
+      "lahde": "en-Wikipedia \"Black Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Asovanmeri",
+      "lon": 36.5,
+      "lat": 46.3,
+      "lahdeKoordinaatti": "en-Wikipedia \"Sea of Azov\" (37 / 46), siirretty hieman länteen Ukrainan rannikon puolelle",
+      "nappi": "Meri kapean salmen takana",
+      "kysymykset": [
+        "Mikä Kertšinsalmi on?",
+        "Miksi Asovanmeri on niin matala?"
+      ],
+      "korostukset": ["Kertšinsalmi|Kertšinsalmen"],
+      "teksti": "Asovanmeri on Itä-Euroopan sisämannerjalustameri, joka yhtyy Mustaanmereen kapean Kertšinsalmen kautta ja jota pidetään toisinaan Mustanmeren pohjoisena jatkeena. Sitä rajaavat idässä Venäjä sekä luoteessa ja lounaassa Ukraina. Se on tärkeä kulkureitti Keski-Aasiaan Kaspianmereltä Volga–Don-kanavan kautta.",
+      "lahde": "en-Wikipedia \"Sea of Azov\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Dnepr",
+      "lon": 35.14,
+      "lat": 47.84,
+      "lahdeKoordinaatti": "Zaporižžjan kohta joen suuressa mutkassa; artikkelin koordinaatti 32,333 / 46,5 on suistossa",
+      "nappi": "Euroopan neljänneksi pisin joki",
+      "kysymykset": [
+        "Miksi Kiova rakennettiin Dneprin varrelle?",
+        "Mitkä olivat Dneprin kosket?"
+      ],
+      "korostukset": ["Valdai|Valdain"],
+      "teksti": "Dnepr on yksi Euroopan suurista rajat ylittävistä joista. Se nousee Valdain kukkuloilta Smolenskin luota Venäjältä ja virtaa Valko-Venäjän ja Ukrainan halki Mustaanmereen. Pituutta sillä on noin 2 200 kilometriä ja valuma-alueella 504 000 neliökilometriä, joten se on sekä Ukrainan että Valko-Venäjän pisin joki ja Euroopan neljänneksi pisin Volgan, Tonavan ja Uralin jälkeen.",
+      "lahde": "en-Wikipedia \"Dnieper\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Dnestr",
+      "lon": 30.23,
+      "lat": 46.35,
+      "lahdeKoordinaatti": "en-Wikipedia \"Dniester\" — joen suu Ukrainan puolella",
+      "nappi": "Joki, joka palaa takaisin",
+      "kysymykset": [
+        "Miksi joki kulkee kahdesti Ukrainan läpi?",
+        "Missä Dnestrin lähde on?"
+      ],
+      "teksti": "Dnestr on Itä-Euroopan rajat ylittävä joki. Se virtaa ensin Ukrainan halki, sitten Moldovan läpi ja laskee lopulta Mustaanmereen jälleen Ukrainan puolella. Sama joki käy siis kahdessa maassa ja palaa takaisin siihen, mistä lähti.",
+      "lahde": "en-Wikipedia \"Dniester\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ]
+}

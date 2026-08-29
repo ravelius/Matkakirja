@@ -1,0 +1,123 @@
+{
+  "_": "Venäjän maastokohteet. Faktat en-Wikipediasta 29.8.2026. Venäjällä on KURATOITU fokuslehti (tools/fokuskartta/maat.mjs FOKUSMAAT.RUS), jonka meret ovat JÄÄMERI, BARENTSINMERI, OHOTANMERI ja BERINGINMERI — Barentsinmeren merkki istuu siis lehteen poltetun nimen päälle. Vuoria lehdellä ei ole yhtään. Suurin osa maasta on Euroopan laudan kaavan (lon -11...41) itäpuolella, joten useimmat kohteet saavat vain maailmankartan rivin.",
+  "vuoret": [
+    {
+      "nimi": "Elbrus",
+      "lon": 42.4392,
+      "lat": 43.355,
+      "m": 5642,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Elbrus\"",
+      "nappi": "Euroopan korkein vuori",
+      "kysymykset": [
+        "Onko Elbrus Euroopassa vai Aasiassa?",
+        "Milloin Elbrus viimeksi purkautui?"
+      ],
+      "korostukset": ["Kaukasus|Kaukasuksen"],
+      "teksti": "Elbrus on Venäjän ja Euroopan korkein vuori. Se on sammunut kerrostulivuori, joka kohoaa 5 642 metriin, ja samalla Euraasian korkein tulivuori sekä maailman kymmenenneksi hallitsevin huippu. Se sijaitsee Kabardi-Balkarian tasavallassa Etelä-Venäjällä ja on Kaukasuksen vuoriston korkein huippu.",
+      "lahde": "en-Wikipedia \"Mount Elbrus\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Narodnaja",
+      "lon": 60.1167,
+      "lat": 65.0333,
+      "m": 1894,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Narodnaya\"",
+      "nappi": "Uralin korkein huippu",
+      "kysymykset": [
+        "Miksi Uralia pidetään maanosien rajana?",
+        "Mistä vuoren nimi tulee?"
+      ],
+      "korostukset": ["Ural|Uralin"],
+      "teksti": "Narodnaja on Uralin korkein huippu, 1 894 metriä. Se on Hanti-Mansian autonomisen piirikunnan ja Komin tasavallan rajalla, ja korkein kohta on puoli kilometriä rajasta itään Tutkimusharjanteella. Nimi saattaa viitata Naroda-jokeen, joka saa alkunsa vuorelta.",
+      "lahde": "en-Wikipedia \"Mount Narodnaya\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Barentsinmeri",
+      "lon": 40.0,
+      "lat": 75.0,
+      "lahdeKoordinaatti": "en-Wikipedia \"Barents Sea\" — sama piste kuin lehteen poltettu nimi BARENTSINMERI",
+      "nappi": "Meri, joka on nimetty hollantilaiselta",
+      "kysymykset": [
+        "Kuka Willem Barentsz oli?",
+        "Miksi Murmansk ei jäädy talvella?"
+      ],
+      "korostukset": ["Willem Barentsz|Willem Barentszilta"],
+      "teksti": "Barentsinmeri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, ja se on jaettu Norjan ja Venäjän aluevesiksi. Venäläiset tunsivat sen aiemmin Murmanskinmerenä. Nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta. Venäjän puoleisella rannalla se on maan ainoa pohjoinen meri, jonka satamia lämmin merivirta pitää auki läpi talven.",
+      "lahde": "en-Wikipedia \"Barents Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Jäämeri",
+      "lon": 120,
+      "lat": 81,
+      "lahdeKoordinaatti": "lehteen poltetun nimen JÄÄMERI paikka (FOKUSMAAT.RUS.meret)",
+      "nappi": "Valtameristä pienin ja matalin",
+      "kysymykset": [
+        "Kuinka paksua Jäämeren jää on?",
+        "Miksi jotkut kutsuvat sitä Atlantin suistoksi?"
+      ],
+      "korostukset": ["Beringinsalmi|Beringinsalmi"],
+      "teksti": "Jäämeri on maailman viidestä valtamerestä pienin, matalin ja kylmin: pinta-alaa noin 14 060 000 neliökilometriä. Se ulottuu pohjoisnavan ympäriltä etelään noin 60. leveyspiirille ja sitä ympäröivät Euraasia ja Pohjois-Amerikka; rajat kulkevat maastonmuotoja pitkin, Tyynenmeren puolella Beringinsalmi ja Atlantin puolella Grönlanti–Skotlanti-harjanne. Suurimman osan vuodesta se on merijään peitossa. Osa tutkijoista kutsuu sitä Pohjoiseksi napamereksi tai jopa Atlantin suistoksi.",
+      "lahde": "en-Wikipedia \"Arctic Ocean\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Ohotanmeri",
+      "lon": 150,
+      "lat": 54.3,
+      "lahdeKoordinaatti": "lehteen poltetun nimen OHOTANMERI paikka (FOKUSMAAT.RUS.meret)",
+      "nappi": "Meri, joka on nimetty satamalta",
+      "kysymykset": [
+        "Mitkä ovat Kuriilit?",
+        "Miksi Sahalin on niin pitkä ja kapea?"
+      ],
+      "korostukset": ["Kamtšatka|Kamtšatkan"],
+      "teksti": "Ohotanmeri on Luoteis-Tyynenmeren reunameri. Sitä rajaavat idässä Venäjän Kamtšatkan niemimaa, kaakossa Kuriilit, etelässä Japanin Hokkaido, lännessä Sahalinin saari sekä lännessä ja pohjoisessa Itä-Siperian rannikko. Koillisnurkassa on Šelihovinlahti. Meri on saanut nimensä Ohotskin satamasta, joka puolestaan on nimetty Ohota-joen mukaan.",
+      "lahde": "en-Wikipedia \"Sea of Okhotsk\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Beringinmeri",
+      "lon": 180,
+      "lat": 58.5,
+      "lahdeKoordinaatti": "lehteen poltetun nimen BERINGINMERI paikka (FOKUSMAAT.RUS.meret)",
+      "nappi": "Kahden mantereen raja",
+      "kysymykset": [
+        "Kuka Vitus Bering oli?",
+        "Kuinka kapea Beringinsalmi on?"
+      ],
+      "korostukset": ["Vitus Bering|Vitus Beringin"],
+      "teksti": "Beringinmeri on Pohjois-Tyynenmeren reunameri, ja yhdessä Beringinsalmen kanssa se muodostaa rajan maailman kahden suurimman mantereen, Euraasian ja Amerikan, välille. Sen pinta-ala on yli 2 000 000 neliökilometriä: idässä ja koillisessa on Alaska, lännessä Venäjän Kaukoitä ja Kamtšatka. Nimi tulee Tanskassa syntyneeltä venäläiseltä merenkulkijalta Vitus Beringiltä, joka vuonna 1728 purjehti ensimmäisenä eurooppalaisena sen halki Tyyneltämereltä pohjoiseen Jäämerelle.",
+      "lahde": "en-Wikipedia \"Bering Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Volga",
+      "lon": 47.8975,
+      "lat": 45.695,
+      "lahdeKoordinaatti": "en-Wikipedia \"Volga\" — joen suisto Kaspianmerellä",
+      "nappi": "Euroopan pisin joki",
+      "kysymykset": [
+        "Miksi Volga ei laske mereen vaan järveen?",
+        "Mikä Rusin kaganaatti oli?"
+      ],
+      "korostukset": ["Kaspianmeri|Kaspianmereen"],
+      "teksti": "Volga on Euroopan pisin joki ja maailman pisin sisävaluma-alueen joki: 3 531 kilometriä ja valuma-alue 1 360 000 neliökilometriä. Se virtaa Keski-Venäjältä Etelä-Venäjälle ja laskee Kaspianmereen, ei valtamereen. Sitä pidetään yleisesti Venäjän kansallisjokena, ja sen varrelle syntyi noin vuonna 830 varhainen valtiomuodostelma Rusin kaganaatti.",
+      "lahde": "en-Wikipedia \"Volga\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Ob",
+      "lon": 71.3947,
+      "lat": 66.5339,
+      "lahdeKoordinaatti": "en-Wikipedia \"Ob (river)\" — joen suu Obinlahdella",
+      "nappi": "Kolmesta Siperian suuresta läntisin",
+      "kysymykset": [
+        "Mitkä ovat Siperian kolme suurta jokea?",
+        "Miksi Siperian joet virtaavat pohjoiseen?"
+      ],
+      "korostukset": ["Altai|Altain"],
+      "teksti": "Ob on Länsi-Siperian suuri joki, ja yhdessä sivujokensa Irtyšin kanssa se muodostaa maailman seitsemänneksi pisimmän jokijärjestelmän: 5 410 kilometriä. Joki syntyy Bijan ja Katunin yhtymäkohdassa, ja molemmat saavat alkunsa Altain vuorilta. Se on läntisin kolmesta suuresta Siperian joesta, jotka laskevat Jäämereen.",
+      "lahde": "en-Wikipedia \"Ob (river)\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ]
+}

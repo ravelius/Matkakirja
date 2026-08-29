@@ -1,0 +1,52 @@
+{
+  "_": "Romanian maastokohteet — TÄYDENNYS. Maalla on jo fokuskohteet-rou.js, jossa on Moldoveanu; tässä ovat puuttuvat. Faktat en-Wikipediasta 29.8.2026.",
+  "vuoret": [
+    {
+      "nimi": "Negoiu",
+      "lon": 24.5557,
+      "lat": 45.587,
+      "m": 2535,
+      "lahdeKoordinaatti": "en-Wikipedia \"Negoiu\"",
+      "nappi": "Romanian toiseksi korkein",
+      "kysymykset": [
+        "Mitkä ovat Făgărașin vuoret?",
+        "Kuinka lähellä toisiaan Negoiu ja Moldoveanu ovat?"
+      ],
+      "korostukset": ["Făgăraș|Făgărașin"],
+      "teksti": "Negoiu on 2 535 metriä korkea huippu Făgărașin vuorilla Eteläisissä Karpaateissa Sibiun piirikunnassa. Se on Romanian toiseksi korkein huippu heti 2 544-metrisen Moldoveanun jälkeen — yhdeksän metrin ero erottaa maan kaksi korkeinta.",
+      "lahde": "en-Wikipedia \"Negoiu\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Mustameri",
+      "lon": 29.8,
+      "lat": 44.2,
+      "lahdeKoordinaatti": "ulappa Constanțan edustalla; artikkelin oma keskipiste on 35 / 44",
+      "nappi": "Meri, jonka valuma-alue on 24 maassa",
+      "kysymykset": [
+        "Miksi Mustanmeren syvyys on hapeton?",
+        "Mistä meri sai nimensä?"
+      ],
+      "korostukset": ["valuma-alue|valuma-alue"],
+      "teksti": "Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.",
+      "lahde": "en-Wikipedia \"Black Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Tonava",
+      "lon": 25.97,
+      "lat": 43.9,
+      "lahdeKoordinaatti": "Giurgiun kohta Romanian ja Bulgarian rajalla; artikkelin koordinaatti 29,761 / 45,218 on suistossa, liian lähellä Mustanmeren merkkiä",
+      "nappi": "Euroopan toiseksi pisin joki",
+      "kysymykset": [
+        "Mikä Tonavan suisto on?",
+        "Kuinka monen pääkaupungin läpi Tonava virtaa?"
+      ],
+      "korostukset": ["Rooman valtakunta|Rooman valtakunnan"],
+      "teksti": "Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Romanian suiston kautta Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Romaniassa se muodostaa pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan viimeinen ja laajin osa.",
+      "lahde": "en-Wikipedia \"Danube\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ]
+}

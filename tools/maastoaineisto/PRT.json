@@ -20,9 +20,9 @@
   "meret": [
     {
       "nimi": "Atlantti",
-      "lon": -11.0,
+      "lon": -9.95,
       "lat": 39.6,
-      "lahdeKoordinaatti": "ulappa Portugalin rannikon edustalla; artikkelin oma keskipiste on -25 / 0",
+      "lahdeKoordinaatti": "ulappa Portugalin rannikon edustalla, lehden ikkunan länsireunassa; artikkelin oma keskipiste on -25 / 0",
       "nappi": "Valtameri, jonka takaa löytyi uusi maailma",
       "kysymykset": [
         "Miksi juuri portugalilaiset lähtivät Atlantille ensimmäisinä?",

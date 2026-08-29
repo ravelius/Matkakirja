@@ -1,0 +1,52 @@
+{
+  "_": "Latvian maastokohteet. Faktat en-Wikipediasta 29.8.2026. Pieni maa: kolme kohdetta.",
+  "vuoret": [
+    {
+      "nimi": "Gaiziņkalns",
+      "lon": 25.9594,
+      "lat": 56.8703,
+      "m": 312,
+      "lahdeKoordinaatti": "en-Wikipedia \"Gaiziņkalns\"",
+      "nappi": "Mäki, jolle rakennettiin torni kilpailusta",
+      "kysymykset": [
+        "Miksi tornia ei koskaan saatu valmiiksi?",
+        "Millainen on Vidzemen ylänkö?"
+      ],
+      "korostukset": ["Vidzeme|Vidzemen"],
+      "teksti": "Gaiziņkalns on 312 metriä merenpinnasta ja Latvian korkein kohta. Se on Vidzemen ylängöllä lyhyen matkan päässä Madonan kaupungista länteen. Naapurimaan Viron korkein kohta Suur Munamägi on kuusi metriä korkeampi, ja kilpailu siitä johti tornihankkeeseen: torni ylsi virolaisen ohi, mutta se jäi kesken, suljettiin turvallisuussyistä ja purettiin joulukuussa 2012.",
+      "lahde": "en-Wikipedia \"Gaiziņkalns\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Itämeri",
+      "lon": 21.0,
+      "lat": 57.0,
+      "lahdeKoordinaatti": "ulappa Kuurinmaan rannikon edustalla; artikkelin oma keskipiste on 20 / 58",
+      "nappi": "Maailman suurin murtovesiallas",
+      "kysymykset": [
+        "Miksi Itämeren vesi on murtovettä?",
+        "Miksi Riianlahti on erillinen?"
+      ],
+      "korostukset": ["murtovesi|murtovesiallas"],
+      "teksti": "Itämeri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Maantieteellisesti se jää Skandinavian niemimaan sekä Pohjois- ja Keski-Euroopan tasangon väliin. Se on maailman suurin murtovesiallas.",
+      "lahde": "en-Wikipedia \"Baltic Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Väinäjoki",
+      "lon": 25.86,
+      "lat": 56.5,
+      "lahdeKoordinaatti": "Jēkabpils joen keskijuoksulla Latviassa; artikkelin koordinaatti 24,031 / 57,062 on suistossa Riianlahdella",
+      "nappi": "Joki kolmen maan halki",
+      "kysymykset": [
+        "Miksi joella on kolme eri nimeä?",
+        "Missä Väinäjoen lähde on?"
+      ],
+      "korostukset": ["Valdai|Valdain"],
+      "teksti": "Väinäjoki, jota kutsutaan myös Länsi-Dvinaksi ja latviaksi Daugavaksi, nousee Valdain kukkuloilta Venäjältä ja virtaa Valko-Venäjän ja Latvian halki Itämeren Riianlahteen. Pituutta sillä on 1 020 kilometriä, josta 352 kilometriä Latviassa ja 325 Venäjällä. Sen lähde on aivan Volgan lähteen naapurissa, mutta se kääntyy länteen ja piirtää matkallaan Pohjois-Valko-Venäjän halki suuren etelään taipuvan kaaren.",
+      "lahde": "en-Wikipedia \"Daugava\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ]
+}

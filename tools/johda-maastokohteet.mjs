@@ -88,6 +88,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { FOKUSMAAT } from './fokuskartta/maat.mjs';
+import { FOKUS_POHJAT } from '../js/packs/fokus-grc.js';
 
 const TAALLA = dirname(fileURLToPath(import.meta.url));
 const JUURI = join(TAALLA, '..');
@@ -196,6 +197,44 @@ export function aineisto(iso) {
   return JSON.parse(readFileSync(polku, 'utf8'));
 }
 
+/* ----------------------------------------------- osuuko kohde lehteen */
+
+/*
+ * OSUUKO KOHDE MAAN FOKUSLEHDEN IKKUNAAN?
+ *
+ * Tämä on erän tärkein koneellinen tarkistus, ja se löysi heti kaksi
+ * oikeaa virhettä. Kohteen merkki on laudan koordinaateissa, mutta
+ * fokusnäkymässä kamera ajetaan lehden RAJAUKSEEN (js/packs/fokus-grc.js
+ * FOKUS_POHJAT). Rajauksen ulkopuolelle jäävä kohde on siis olemassa
+ * mutta pelaajan ulottumattomissa: merkki on ruudun takana eikä sitä voi
+ * napauttaa.
+ *
+ * Juuri niin olisi käynyt Espanjan Teidelle (Kanariansaaret, lon -16,6)
+ * ja Portugalin Picolle (Azorit, lon -28). Ne ovat maidensa korkeimmat
+ * huiput, mutta lehden ikkuna rakennetaan maan omasta laatikosta
+ * (maat.mjs YLEINEN.saarenEtaisyys 2,5 astetta), eivätkä nuo saaret
+ * mahdu siihen. Kummankin tilalla on siksi mantereen korkein huippu,
+ * jonka artikkeli itse nimeää sellaiseksi — ei keksitty kiertotie vaan
+ * lähteen oma rajaus.
+ *
+ * Rajaus on annettu vain sillä laudalla, jolle lehti on tehty; muille
+ * laudoille tarkistusta ei tehdä.
+ */
+export function lehdenRajaus(iso) {
+  const pohja = FOKUS_POHJAT[iso];
+  if (!pohja?.rajaus || !pohja?.lauta) return null;
+  return { lauta: pohja.lauta, ...pohja.rajaus };
+}
+
+/** Onko kohde lehden rajauksen sisällä? null = lehteä ei tunneta. */
+export function osuuLehteen(iso, kohteenLaudat) {
+  const r = lehdenRajaus(iso);
+  if (!r) return null;
+  const p = kohteenLaudat[r.lauta];
+  if (!p) return false;
+  return p.x >= r.x && p.x <= r.x + r.w && p.y >= r.y && p.y <= r.y + r.h;
+}
+
 /* ------------------------------------------------- kaksoiskappaleet */
 
 /*
@@ -256,12 +295,14 @@ export function ehdokkaat(iso) {
   const { tunnukset, nimet } = olemassaOlevat(iso);
   return [...yhdessa.values()].map((k) => {
     const id = k.id ?? tunnusNimesta(k.nimi);
+    const paikat = laudat(k.lon, k.lat);
     return {
       ...k,
       id,
-      laudat: laudat(k.lon, k.lat),
+      laudat: paikat,
       jo: tunnukset.has(id) || nimet.has(k.nimi.toLowerCase()),
       lehdella: Boolean(k.lehdella),
+      ikkunassa: osuuLehteen(iso, paikat),
     };
   });
 }
@@ -280,49 +321,84 @@ function laudatRivi(l) {
   return rivit.join('\n');
 }
 
-/** Yhden ehdokkaan olio pakkitiedoston asussa, tekstikentät aihioina. */
+/*
+ * PITKÄ MERKKIJONO KATKAISTUNA. Pakit kirjoitetaan `'...' + '...'`
+ * -ketjuina, koska rivin pituusraja on 100 merkkiä (.eslintrc) ja koska
+ * kaikki maan olemassa olevat kohteet on ladottu samalla tavalla —
+ * generoidun tiedoston on näytettävä käsin kirjoitetulta.
+ */
+function katko(teksti, sisennys) {
+  const tila = 96 - sisennys.length - 6;
+  const sanat = String(teksti).split(' ');
+  const rivit = [];
+  let nyt = '';
+  for (const sana of sanat) {
+    if (nyt && (nyt.length + 1 + sana.length) > tila) { rivit.push(nyt); nyt = sana; } else nyt = nyt ? `${nyt} ${sana}` : sana;
+  }
+  if (nyt) rivit.push(nyt);
+  return rivit
+    .map((r, i) => (i === rivit.length - 1 ? lainaus(r) : `${lainaus(`${r} `)}`))
+    .map((r, i) => (i === 0 ? r : `${sisennys}  + ${r}`))
+    .join('\n');
+}
+
+/** Yhden ehdokkaan olio pakkitiedoston asussa. */
 export function kohdeRunko(k) {
   const asteet = `    // ${k.lon} E / ${k.lat} N`
     + (k.lahdeKoordinaatti ? ` — ${k.lahdeKoordinaatti}` : '');
-  return [
-    '  {',
-    `    id: ${lainaus(k.id)},`,
-    `    nimi: ${lainaus(k.nimi)},`,
-    `    tyyppi: ${lainaus(k.tyyppi)},`,
-    '    kysymykset: [',
-    "      'AIHIO — kysymys 1',",
-    "      'AIHIO — kysymys 2',",
-    '    ],',
-    `    nappi: 'AIHIO — napin lupaus',`,
-    asteet,
-    '    laudat: {',
-    laudatRivi(k.laudat),
-    '    },',
-    "    teksti: 'AIHIO — 2-4 lausetta tarkistettua tekstiä.',",
-    "    lahde: 'AIHIO — en-Wikipedia \"...\" (tarkistettu).',",
-    '  },',
-  ].join('\n');
+  const rivit = ['  {', `    id: ${lainaus(k.id)},`, `    nimi: ${lainaus(k.nimi)},`,
+    `    tyyppi: ${lainaus(k.tyyppi)},`];
+  const kysymykset = k.kysymykset ?? ['AIHIO — kysymys 1', 'AIHIO — kysymys 2'];
+  rivit.push('    kysymykset: [', ...kysymykset.map((q) => `      ${lainaus(q)},`), '    ],');
+  if (k.korostukset?.length) {
+    rivit.push(`    korostukset: [${k.korostukset.map(lainaus).join(', ')}],`);
+  }
+  rivit.push(`    nappi: ${lainaus(k.nappi ?? 'AIHIO — napin lupaus')},`);
+  for (const rivi of asteet.split('\n')) rivit.push(rivi);
+  rivit.push('    laudat: {', laudatRivi(k.laudat), '    },');
+  rivit.push(`    teksti: ${katko(k.teksti ?? 'AIHIO — teksti puuttuu.', '    ')},`);
+  rivit.push(`    lahde: ${katko(k.lahde ?? 'AIHIO — lähde puuttuu.', '    ')},`);
+  rivit.push('  },');
+  return rivit.join('\n');
 }
 
 /** Koko maan pakkitiedoston runko. */
-export function pakkiRunko(iso, kohteet) {
-  const pienet = iso.toLowerCase();
+export function pakkiRunko(iso, kohteet, huomio) {
+  const lehdella = kohteet.filter((k) => k.lehdella).length;
+  const reitti = FOKUSMAAT[iso]
+    ? ` Maa on KURATOIDULLA reitillä (tools/fokuskartta/maat.mjs\n * FOKUSMAAT.${iso}), joten ${lehdella} kohdetta istuu suoraan lehteen poltetun\n * nimen tai hachure-kolmion päälle.`
+    : ' Maa on YLEISELLÄ reitillä: lehdellä ei ole poltettuja\n * maastonimiä lainkaan, joten merkin nimiö on maastonimen ainoa\n * esiintymä kartalla. Kaksoisnimen vaaraa ei siis ole.';
   return `/*
  * MAASTOKOHTEET — ${iso}. Maan vuoret, meret ja joet napautettaviksi.
  *
  * Omistajan päätös 29.8.2026: *"Tee vuoret ja meret avattaviksi
- * kaikkiin maihin."* Runko on tuotettu työkalulla
- * (node tools/johda-maastokohteet.mjs ${iso} --runko); koordinaatit ovat
- * sen laskemat, tekstit on kirjoitettu käsin tarkistetusta lähteestä.
+ * kaikkiin maihin."* Tähän asti maasto on ollut fokuslehdellä pelkkää
+ * kuvaa: Kreikan Ólympos on ollut napautettava, mutta useimpien maiden
+ * huiput ja vesistöt eivät ole olleet mitään.
+ *
+ * KOORDINAATIT ON LASKETTU KONEELLA, TEKSTIT KIRJOITETTU KÄSIN.
+ * Tiedoston runko on tuotettu työkalulla
+ * \`node tools/johda-maastokohteet.mjs ${iso} --runko\`, jonka lähtöaineisto
+ * on tools/maastoaineisto/${iso}.json. Työkalu laskee laudan
+ * projektiot (maailmankartta = Millerin lieriö, europe = tasaväli),
+ * jättää pois laudan, jonka kaavan ulkopuolelle kohde jää, ja
+ * tarkistaa että jokainen kohde osuu maan fokuslehden rajaukseen —
+ * ikkunan ulkopuolinen merkki olisi olemassa mutta pelaajan
+ * ulottumattomissa. Faktat on tarkistettu en-Wikipediasta lähde
+ * kerrallaan, ja jokaisen kohteen \`lahde\`-rivi kertoo mistä artikkelin
+ * osasta se on.
+ *
+ *${reitti}
  *
  * Lista yhdistyy maan muihin kohteisiin js/packs/maastokohteet.js
- * -hakemiston kautta, joten olemassa olevaa fokuskohteet-pakkia ei
- * tarvinnut koskea.
+ * -hakemiston kautta (js/fokuskohteet.js KOHDE_MAAT), joten maan
+ * mahdollista olemassa olevaa fokuskohteet-pakkia EI ole tarvinnut
+ * koskea eikä yhtään sen kohdetta ole toistettu täällä.${huomio ? `\n *\n * ${huomio}` : ''}
  */
 export const MAASTOKOHTEET_${iso} = [
 ${kohteet.map(kohdeRunko).join('\n')}
 ];
-`.replace('${pienet}', pienet);
+`;
 }
 
 /* ------------------------------------------------------------- ajo */
@@ -338,7 +414,8 @@ function taulukko(iso) {
     + ` (${lista.filter((k) => k.jo).length} jo pakissa)`);
   for (const k of lista) {
     const e = k.laudat.europe ? `europe ${k.laudat.europe.x}/${k.laudat.europe.y}` : 'europe —';
-    console.log(`  ${k.jo ? 'JO ' : '   '}${k.lehdella ? '▲' : ' '} `
+    console.log(`  ${k.jo ? 'JO ' : '   '}${k.lehdella ? '▲' : ' '}`
+      + `${k.ikkunassa === false ? '!' : ' '} `
       + `${k.tyyppi.padEnd(5)} ${k.nimi.padEnd(24)} `
       + `${k.m ? `${String(k.m).padStart(5)} m` : '       '} `
       + `maailma ${k.laudat.maailmankartta.x}/${k.laudat.maailmankartta.y}  ${e}`);
@@ -355,9 +432,11 @@ function kaikki() {
     const lista = ehdokkaat(iso);
     const uudet = lista.filter((k) => !k.jo);
     kohteita += uudet.length;
+    const ulkona = lista.filter((k) => k.ikkunassa === false);
     console.log(`${iso}  ehdokkaita ${String(lista.length).padStart(2)}`
       + `  uusia ${String(uudet.length).padStart(2)}`
-      + `  lehdellä ${String(lista.filter((k) => k.lehdella).length).padStart(2)}`);
+      + `  lehdellä ${String(lista.filter((k) => k.lehdella).length).padStart(2)}`
+      + (ulkona.length ? `  IKKUNAN ULKOPUOLELLA: ${ulkona.map((k) => k.nimi).join(', ')}` : ''));
   }
   console.log(`\nyhteensä ${kohteita} uutta ehdokasta ${kaikkiIsot.length} maasta`);
 }
@@ -375,7 +454,7 @@ function main(argv) {
   for (const iso of isot) {
     const lista = ehdokkaat(iso).filter((k) => !k.jo);
     if (liput.includes('--json')) console.log(JSON.stringify(lista, null, 2));
-    else if (liput.includes('--runko')) console.log(pakkiRunko(iso, lista));
+    else if (liput.includes('--runko')) console.log(pakkiRunko(iso, lista, aineisto(iso)?._));
     else taulukko(iso);
   }
   return undefined;

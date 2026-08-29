@@ -1,0 +1,51 @@
+{
+  "_": "Islannin maastokohteet. Faktat en-Wikipediasta 29.8.2026. HUOM: Islanti on Euroopan laudan kaavan (lon -11...41) ULKOPUOLELLA, joten kohteet saavat vain maailmankartan rivin — sama sääntö kuin laudan omalla Islanti-pisteellä (js/packs/europe.js).",
+  "vuoret": [
+    {
+      "nimi": "Hvannadalshnúkur",
+      "lon": -16.6747,
+      "lat": 64.0158,
+      "lahdeKoordinaatti": "en-Wikipedia \"Hvannadalshnjúkur\"",
+      "nappi": "Islannin korkein piste",
+      "kysymykset": [
+        "Mikä Öræfajökull on?",
+        "Mitä ultraprominentti huippu tarkoittaa?"
+      ],
+      "korostukset": ["Vatnajökull|Vatnajökullin"],
+      "teksti": "Hvannadalshnúkur on pyramidin muotoinen huippu Öræfajökull-tulivuoren huippukraatterin luoteisreunalla Vatnajökullin kansallispuistossa. Se on Islannin korkein kohta ja maan ainoa ultraprominentti huippu — ainoa, joka kohoaa ympäristöstään yli puolentoista kilometrin verran. Huippu ei siis ole oma vuorensa vaan jäätikön peittämän tulivuoren reuna.",
+      "lahde": "en-Wikipedia \"Hvannadalshnjúkur\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Grönlanninmeri",
+      "lon": -18.5,
+      "lat": 67.0,
+      "lahdeKoordinaatti": "meren eteläreuna Islannin pohjoispuolella; artikkelin oma keskipiste on -8 / 76",
+      "nappi": "Meri, joka ei tiedä mihin kuuluu",
+      "kysymykset": [
+        "Kuuluuko Grönlanninmeri Jäämereen vai Atlanttiin?",
+        "Mikä Framinsalmi on?"
+      ],
+      "korostukset": ["Framinsalmi|Framinsalmi"],
+      "teksti": "Grönlanninmeri rajautuu lännessä Grönlantiin, idässä Huippuvuoriin, pohjoisessa Framinsalmeen ja Jäämereen sekä etelässä Norjanmereen ja Islantiin. Se määritellään joskus osaksi Jäämerta ja joskus osaksi Atlanttia — Jäämeren ja sen sivumerten rajat ovat epätarkkoja. Merentutkimuksessa se luetaan Norjanmeren kanssa Pohjoisiin meriin.",
+      "lahde": "en-Wikipedia \"Greenland Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Þjórsá",
+      "lon": -20.813,
+      "lat": 63.774,
+      "lahdeKoordinaatti": "en-Wikipedia \"Þjórsá\" — joen suu Atlantilla",
+      "nappi": "Härkäjoki",
+      "kysymykset": [
+        "Mikä Stöng on?",
+        "Mikä oli þing?"
+      ],
+      "korostukset": ["jäätikköjoki|jäätikköjoki"],
+      "teksti": "Þjórsá on Islannin pisin joki, 230 kilometriä, ja se virtaa saaren eteläosassa. Se on jäätikköjoki, joka saa alkunsa Hofsjökullilta, kulkee kapeiden rotkojen läpi Islannin ylängöillä ja levenee alangolla. Nimi tulee sanoista á, joki, ja þjór, härkä: Landnámabókin mukaan joki nimettiin erään ensimmäisistä uudisasukaslaivoista keulakuvan mukaan, joka esitti härkää.",
+      "lahde": "en-Wikipedia \"Þjórsá\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ]
+}
