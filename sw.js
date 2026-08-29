@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1311';
+const CACHE = 'matkakirja-2026-08-09.1312';
 const SHELL = [
   './',
   './index.html',
@@ -814,6 +814,12 @@ const SHELL = [
   './assets/kartat/nostot/nosto-kopenickin-kapteeni-loistoaika.webp',
   './assets/kartat/nostot/nosto-archaeopteryx-loistoaika.webp',
   './assets/kartat/nostot/nosto-neuschwanstein-loistoaika.webp',
+  // Aallon 2 neljä täkynostoa saivat pääkuvansa 29.8.2026 (Lontoo,
+  // Budapest, Dubrovnik, Praha).
+  './assets/kartat/nostot/nosto-sutton-hoo-loistoaika.webp',
+  './assets/kartat/nostot/nosto-szegedin-tulva-loistoaika.webp',
+  './assets/kartat/nostot/nosto-pulan-areena-loistoaika.webp',
+  './assets/kartat/nostot/nosto-karlstejn-loistoaika.webp',
   // Lippuikkunan versioliput (pilotti Suomi + Saksa, v711).
   './assets/liput/versiot/fin-valtiolippu.png',
   './assets/liput/versiot/fin-sotalippu.png',

@@ -629,7 +629,27 @@ export const FOKUSVIRTA_DUBROVNIK = {
       lahde: 'js/packs/fokuskohteet-hrv.js (pulan-areena, pelin omaa '
         + 'tarkistettua aineistoa) sekä Wikimedia Commonsin kohdekuvaus '
         + 'kuvalle "Anfiteatro de Pula" (tarkistettu 29.8.2026).',
-      /* Commons 29.8.2026: 7398×4184, CC BY-SA 4.0, Diego Delso,
+      /*
+       * PÄÄKUVAKSI LOISTOAIKA (29.8.2026, sama malli kuin v1307:n ja
+       * v1308:n nostoilla): repon oma generoitu havainnekuva, jolla ei
+       * ole Commons-nimeä eikä varareittiä, joten kenttä on `osoite`
+       * eikä `tiedosto` (js/fokusnosto.js asetaNostonKuva).
+       *
+       * Kuva näyttää areenan siinä asussa, jota kakkoskuvan tyhjä
+       * ulkomuuri enää muistuttaa: katsomo täynnä, purjekankainen
+       * aurinkokatos pingotettuna ja meri takana.
+       */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-pulan-areena-loistoaika.webp',
+        selite: 'Areena käytössä: katsomo täynnä, aurinkokatos '
+          + 'pingotettuna mastojen varaan ja meri aivan muurin takana.',
+        lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
+      },
+      /*
+       * KAKKOSKUVA tekstin alle on entinen ainoa kuva. Tiedosto, selite
+       * ja lähde ennallaan.
+       *
+       * Commons 29.8.2026: 7398×4184, CC BY-SA 4.0, Diego Delso,
        * kuvattu 17.4.2017. Restrictions tyhjä. SILMÄTARKISTUS tehty:
        * kuvassa on areenan ulkomuuri, ihmiset kaukaisina hahmoina. */
       valokuva: {
