@@ -5140,6 +5140,35 @@ body.karttapohja-canvas .paper-pohja { display: none; }
 }
 
 /*
+ * MAAILMANÄKYMÄN PIKKULEHDET EIVÄT HÄIVÄHDÄ (mitattu 29.8.2026,
+ * omistajan Mac 1470x923 dpr2, kehittäjätila + maailmanappi).
+ *
+ * Häivähdys on tehty PELAAJAN atlakselle: lehti saapuu verkosta kerran
+ * ja liukuu paperiin. Maailmanäkymän 134 pikkulehteä eivät saavu
+ * kerran vaan syttyvät ja sammuvat lakkaamatta, koska näkymärajaus
+ * (js/ui.js paivitaMaailmanRajaus) piilottaa ne `display: none`
+ * -luokalla ja palauttaa ne panoroinnin edetessä. Näytöltä pois ja
+ * takaisin KÄYNNISTÄÄ CSS-animaation alusta, ja siitä seurasi kaksi
+ * vikaa:
+ *
+ *   1. VÄLKKYMINEN. Jokainen näkymään palaava maa aloitti oman 420 ms:n
+ *      häivähdyksensä keskellä panorointia.
+ *   2. POHJACANVAS EI KÄYNNISTYNYT KOSKAAN. js/karttapohja.js
+ *      keraaKuvat keskeyttää KOKO koosteen, jos yksi lehti on kesken
+ *      häivähdystään (puolikas peittävyys jäätyisi koosteeseen). Kun
+ *      kartalla on 90 lehteä, joista aina joku on juuri palannut
+ *      näkyviin, ehto oli pysyvästi tosi: kooste jäi pois päältä ja
+ *      selain rasteroi jokaisen lehden erikseen joka kehyksessä.
+ *      Mitattu panoroinnissa RasterTask 206 ms (nappi pois) vastaan
+ *      10 990 ms (nappi päällä).
+ *
+ * Pikkulehti on 384 pikselin pienennös eikä sillä ole mitään
+ * häivähdettävää: se on kehittäjän tarkastelukerros, ei pelaajan
+ * atlaksen sivu.
+ */
+.fokus-maailma .fokuskartta-kuva { animation: none; }
+
+/*
  * LEHTI ISTUU PAPERIIN AVAUSLENNON AJAN (omistajan pelitestipalaute
  * v1119: *"Kreikan minikartan ympärillä on yhä NELIÖREUNA — pois (kuva
  * saa istua paperiin häivytettynä, ei laatikkoa)"*).
@@ -6641,6 +6670,22 @@ body.flight-active .fact-card {
 }
 
 .city-label.start-label { font-size: 21px; letter-spacing: 0.1em; text-transform: uppercase; }
+
+/*
+ * YLEISKUVASSA EI KAUPUNKIEN NIMIÄ (omistajan tilaus 29.8.2026:
+ * *"älä näytä kaupunkien nimiä tällä zoom tasolla"*).
+ *
+ * Luokka tulee kerrokseen näkymän leveydestä (js/ui.js
+ * paivitaKaupunkinimienNakyvyys): kun ruudulla on yli 90 pituusastetta,
+ * nimiä on päällekkäin satoja eikä yksikään ole luettavissa.
+ * Lähtökaupungit (.start-label) jäävät — niitä on kourallinen ja juuri
+ * niitä yleiskuvasta etsitään.
+ *
+ * `display: none` eikä `visibility`/`opacity`: piilotetun tekstin pitää
+ * jäädä pois myös maalauksesta, ei vain näkyvistä (sama iOS-sääntö kuin
+ * kartan muillakin kerroksilla, tests/rules.test.mjs).
+ */
+.cities.kaupunkinimet-piilossa .city-label:not(.start-label) { display: none; }
 
 /* Kaupunkilaudalla nimet ovat astetta pienempiä: mittakaava on kortteleissa. */
 #board[data-style='city'] .city-label { font-size: 16px; }
