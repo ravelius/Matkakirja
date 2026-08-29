@@ -144,6 +144,30 @@ import { FOKUSVIRTA_BERLIINI } from './packs/fokusvirta-berliini.js';
 import { FOKUSVIRTA_MADRID } from './packs/fokusvirta-madrid.js';
 import { FOKUSVIRTA_PARIISI } from './packs/fokusvirta-pariisi.js';
 import { FOKUSVIRTA_WIEN } from './packs/fokusvirta-wien.js';
+/*
+ * LOPUTKIN TÄKYNOSTOPOOLIT MAAPOOLEIKSI (aalto 4B, 29.8.2026). Sama
+ * syy kuin neljällä yllä: taulu osoittaa samaan taulukkoon kuin
+ * kaupungin paketti, eikä nostoja kopioida tiedostosta toiseen.
+ */
+import { FOKUSVIRTA_AMSTERDAM } from './packs/fokusvirta-amsterdam.js';
+import { FOKUSVIRTA_BERGEN } from './packs/fokusvirta-bergen.js';
+import { FOKUSVIRTA_BUDAPEST } from './packs/fokusvirta-budapest.js';
+import { FOKUSVIRTA_BUKAREST } from './packs/fokusvirta-bukarest.js';
+import { FOKUSVIRTA_DUBLIN } from './packs/fokusvirta-dublin.js';
+import { FOKUSVIRTA_DUBROVNIK } from './packs/fokusvirta-dubrovnik.js';
+import { FOKUSVIRTA_HELSINKI } from './packs/fokusvirta-helsinki.js';
+import { FOKUSVIRTA_ISTANBUL } from './packs/fokusvirta-istanbul.js';
+import { FOKUSVIRTA_KOBENHAVN } from './packs/fokusvirta-kobenhavn.js';
+import { FOKUSVIRTA_LISSABON } from './packs/fokusvirta-lissabon.js';
+import { FOKUSVIRTA_LONTOO } from './packs/fokusvirta-lontoo.js';
+import { FOKUSVIRTA_PRAHA } from './packs/fokusvirta-praha.js';
+import { FOKUSVIRTA_RIIKA } from './packs/fokusvirta-riika.js';
+import { FOKUSVIRTA_ROOMA } from './packs/fokusvirta-rooma.js';
+import { FOKUSVIRTA_SARAJEVO } from './packs/fokusvirta-sarajevo.js';
+import { FOKUSVIRTA_SOFIA } from './packs/fokusvirta-sofia.js';
+import { FOKUSVIRTA_TALLINNA } from './packs/fokusvirta-tallinna.js';
+import { FOKUSVIRTA_TUKHOLMA } from './packs/fokusvirta-tukholma.js';
+import { FOKUSVIRTA_VILNA } from './packs/fokusvirta-vilna.js';
 import {
   asemoiNostosymbolit, nollaaNostosymbolit, paivitaNostosymbolit,
 } from './fokusnosto-symbolit.js';
@@ -469,6 +493,51 @@ const NOSTO_MAAT = {
   AUT: FOKUSVIRTA_WIEN.takynostot,
   FRA: FOKUSVIRTA_PARIISI.takynostot,
   DEU: FOKUSVIRTA_BERLIINI.takynostot,
+  /*
+   * ---------- LOPUTKIN MAAT TAULUUN (aalto 4B, 29.8.2026) ----------
+   *
+   * Taulussa oli tähän asti viisi maata, vaikka `takynostot`-kenttä oli
+   * ehtinyt kertyä kahteenkymmeneenneljään kaupunkipakettiin aalloissa
+   * 1–4A. Seuraus näkyi pelaajalle: nostot olivat maan AARREKAUPUNGISSA
+   * mutta katosivat heti, kun hän siirtyi saman maan toiseen kaupunkiin
+   * — Rooman täky ei näkynyt Firenzessä, Helsingin ei Tampereella,
+   * Bergenin ei Oslossa. Rivi per maa korjaa sen, ja Edinburghin
+   * paketti pyysi juuri tätä ("jos GBR halutaan joskus yhdeksi
+   * pooliksi, se tehdään NOSTO_MAAT-rivillä, ei kopioimalla nostoja").
+   *
+   * SAMA SÄÄNTÖ KUIN NELJÄLLÄ YLLÄ: rivi osoittaa samaan taulukkoon
+   * kuin kaupungin paketti, ei kopioon.
+   *
+   * KUMPI KAUPUNKI ON MAAN LÄHDE, KUN NIITÄ ON KAKSI: maan
+   * AARREKAUPUNKI, kuten neljällä ensimmäiselläkin rivillä. Siksi
+   * GBR osoittaa Lontooseen eikä Edinburghiin ja ESP Madridiin eikä
+   * Sevillaan. Kaupungin oma pooli voittaa maapoolin joka tapauksessa
+   * (nostoMaanPooli lukee `takynostot`-kentän ENSIN), joten Edinburghissa
+   * näkyvät yhä Edinburghin neljä ja Sevillassa Sevillan viisi — rivi
+   * lisää nostot vain niihin maan kaupunkeihin, joilla ei ole omia.
+   *
+   * LTU ON UUSI MAA (aalto 4B): Vilna on Liettuan ainoa fokuskaupunki
+   * ja sen paketti maan ainoa täkynostojen lähde.
+   */
+  BGR: FOKUSVIRTA_SOFIA.takynostot,
+  BIH: FOKUSVIRTA_SARAJEVO.takynostot,
+  CZE: FOKUSVIRTA_PRAHA.takynostot,
+  DNK: FOKUSVIRTA_KOBENHAVN.takynostot,
+  EST: FOKUSVIRTA_TALLINNA.takynostot,
+  FIN: FOKUSVIRTA_HELSINKI.takynostot,
+  GBR: FOKUSVIRTA_LONTOO.takynostot,
+  HRV: FOKUSVIRTA_DUBROVNIK.takynostot,
+  HUN: FOKUSVIRTA_BUDAPEST.takynostot,
+  IRL: FOKUSVIRTA_DUBLIN.takynostot,
+  ITA: FOKUSVIRTA_ROOMA.takynostot,
+  LTU: FOKUSVIRTA_VILNA.takynostot,
+  LVA: FOKUSVIRTA_RIIKA.takynostot,
+  NLD: FOKUSVIRTA_AMSTERDAM.takynostot,
+  NOR: FOKUSVIRTA_BERGEN.takynostot,
+  PRT: FOKUSVIRTA_LISSABON.takynostot,
+  ROU: FOKUSVIRTA_BUKAREST.takynostot,
+  SWE: FOKUSVIRTA_TUKHOLMA.takynostot,
+  TUR: FOKUSVIRTA_ISTANBUL.takynostot,
 };
 
 /* ==================== LUETUT LAITTEEN MUISTIIN ==================== */

@@ -75,18 +75,28 @@
  * oikea EI ole pisin vaihtoehto yhdessäkään tämän tiedoston visassa —
  * se on tarinakaaren mittausvaatimus, ja se on tarkistettu käsin.
  *
- * ── SPOILERIHUOMIO, JOKA ON PAKKO KIRJATA FABLELLE ─────────────────
+ * ── SPOILERIHUOMIO, JONKA FABLE ON JO RATKAISSUT ───────────────────
  *
  * Marseillella ON tarinakaaren paketti (js/tyohuone-kehitys-data.js
  * KAARI_PAKETIT, 'marseille' → js/packs/tarinakaari.js), ja sen
  * laattakysymys kuuluu: *"Ifin linnoitussaari Marseillen edustalla
  * tunnetaan kaikkialla yhden kirjan ansiosta. Minkä?"* — oikea vastaus
- * *Monte-Criston kreivin*. Kaanoninen `pollo.teksti` sanoo saman asian
- * sanoin *"se linnoitussaari on If, jonne Dumas sijoitti Monte-Criston
- * kreivin vankilan"*, eli vastaus on ruudulla ennen kysymystä. Kaanon on
- * sanatarkka eikä sitä muuteta täällä, joten ristiriita on kirjattu
- * raporttiin Fablelle päätettäväksi (vaihtoehdot: kaanonin virke,
- * laattakysymys tai kumpikaan).
+ * *Monte-Criston kreivin*. Tämän paketin haaralla kaanoninen
+ * `pollo.teksti` sanoi saman asian sanoin *"se linnoitussaari on If,
+ * jonne Dumas sijoitti Monte-Criston kreivin vankilan"*, eli vastaus oli
+ * ruudulla ennen kysymystä, ja asia kirjattiin Fablelle.
+ *
+ * FABLE KORJASI KAANONIN AALLON 4B INTEGROINNISSA (29.8.2026):
+ * repliikki kiusoittelee nyt kirjan nimellä sen sijaan että antaisi sen
+ * — *"se linnoitussaari on If — ja se kirja, jonka takia koko maailma
+ * sen tuntee.. sen nimen saat kaivaa esiin itse, ihan kohta."* Virke on
+ * vaihdettu tähän tiedostoon sanatarkasti hänen muodossaan.
+ *
+ * YKSI KOHTA JÄÄ YHÄ PÄÄTOIMITTAJAN TIEDOKSI: kaanon nimeää saaren
+ * ("on If"), ja js/packs/europe-questions.js:n `marseille`-lohkon viides
+ * laattakysymys kysyy asian TOISIN PÄIN — *"Millä linnoitussaarella
+ * Marseillen edustalla Monte-Criston kreivi istui vankina?"*, vastaus
+ * *Ifin saarella*. Kaanoniin ei kosketa täällä; havainto on raportissa.
  *
  * TÄMÄ PAKETTI EI SYVENNÄ SPOILERIA. Yksikään täky, oppitunti eikä
  * lehtitehtävä ei koske Ifin saarta, Dumas'ta eikä Monte-Criston

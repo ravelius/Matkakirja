@@ -99,13 +99,20 @@
  * AARTEEN AVAUS kysyy sardanan coblasta ja JULISTE vuoden 1888
  * maailmannäyttelystä.
  *
- * POIKKEUS, JOKA ON PAKKO KIRJATA: KANONINEN Livian repliikki sanoo
- * *"sen kulmat on viistetty jotta hevoskärryt mahtuivat kääntymään"*,
- * eli se antaa laattakysymyksen barcelona[3] vastauksen ennen kysymystä.
- * Kaanoniin ei kosketa tässä tiedostossa; asia on raportoitu Fablelle.
- * Vaihtoehtoja on kaksi ja molemmat ovat hänen tai omistajan: joko
- * repliikki jää sellaisenaan (kysymys muuttuu kertaukseksi) tai
- * laattakysymys vaihdetaan. Tämä paketti ei tee kumpaakaan.
+ * POIKKEUS, JONKA FABLE ON JO RATKAISSUT: tämän paketin haaralla
+ * kanoninen Livian repliikki sanoi *"sen kulmat on viistetty jotta
+ * hevoskärryt mahtuivat kääntymään"*, eli se antoi laattakysymyksen
+ * barcelona[3] vastauksen ennen kysymystä, ja asia raportoitiin
+ * Fablelle.
+ *
+ * FABLE KORJASI KAANONIN AALLON 4B INTEGROINNISSA (29.8.2026):
+ * repliikki kiusoittelee nyt syyllä sen sijaan että kertoisi sen —
+ * *"sen kulmissa on erikoisuus, jonka syyn annan sun päätellä ihan
+ * kohta itse — sen verran vihjaan, että nykyään niissä viisteissä
+ * parkkeeraa skoottereita.."* Korjattu virke on sovitettu tämän
+ * paketin omaan kenttäjakoon (`maadoitus` + `teksti`) sanoja
+ * muuttamatta: se on kaanonin ensimmäinen virke sellaisenaan, aivan
+ * kuten ennen korjaustakin.
  *
  * ── KUVAT ──────────────────────────────────────────────────────────
  *

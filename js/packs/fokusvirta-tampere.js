@@ -14,10 +14,19 @@
  * KAANON (päätoimittaja-Fable 29.8.2026, aallon 4B kaanonpaperi, osio
  * TAMPERE). NELJÄ KENTTÄÄ ON SANATARKASTI HÄNEN: matkakirja.paikkarivi,
  * matkakirja.teksti, pollo.teksti ja aarremerkinta.teksti. Niitä ei ole
- * lyhennetty, pilkkuakaan siirretty eikä sanajärjestystä muutettu —
- * myöskään kaanonin oma pieni kirjoitusasu ("pohjolan Manchester"
- * merkinnässä, "Pohjolan Manchester" Livialla) ei ole yhdenmukaistettu.
+ * lyhennetty, pilkkuakaan siirretty eikä sanajärjestystä muutettu.
  * Luenta on sama teksti tunnetagein; yksikään sana ei vaihdu.
+ *
+ * KAANONKORJAUS AALLON 4B INTEGROINNISSA (Fable 29.8.2026). Haaran
+ * teksti sanoi lisänimen ääneen kahdesti — merkinnässä *"Tämä on
+ * pohjolan Manchester, sanoi isäntäni ylpeänä"* ja Livialla *"Pohjolan
+ * Manchester on edelleen Tampereen lempinimi"* — ja antoi siten
+ * laattakysymyksen tampere[4] vastauksen ennen kysymystä. Fablen
+ * korjatut virkkeet jättävät lisänimen sanomatta: merkinnässä
+ * *"Isäntäni vertasi kaupunkiaan ylpeänä Manchesteriin"* ja Livialla
+ * *"Se isäntäväen vertaus jäi elämään lempinimenä, jonka kuulet kohta
+ * itsekin"*. Molemmat on vaihdettu sanatarkasti, merkintä myös
+ * `matkakirja.luenta`-kenttään.
  *
  * ISO AARRE: Ivalojoen kultahippu (aarremerkintä). Sama pari on
  * kirjattu maan paikallisaarteisiin (js/packs/paikallisaarteet.js, FIN:
@@ -93,6 +102,11 @@
  * lisänimi Pohjolan Manchester. Kaupungilla EI ole tarinakaaren
  * pakettia (js/tyohuone-kehitys-data.js KAARI_PAKETIT), joten
  * kohtaamisen takana on juuri tuo laattakysymys.
+ *
+ * VIIDES (lisänimi) oli haaran teksteissä paljastettuna; Fablen
+ * kaanonkorjaus poisti paljastuksen ja jätti tilalle vihjeen (ks.
+ * tiedoston alku). Sana "Manchester" on korjatussakin merkinnässä
+ * vertauksena, joten kysymys on pohjustettu muttei vastattu.
  *
  * Oppitunti pohjustaa niistä TOISEN (kaupunkioikeudet 1779) — se on
  * ainoa viidestä, jota kaupunkilehti ei käsittele lainkaan. Visasääntö
