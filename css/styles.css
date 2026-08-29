@@ -22000,3 +22000,278 @@ body.maataulu-auki .toimintorivi .monitoimi-nappi {
   stroke-width: 0.9;
   stroke-linecap: round;
 }
+
+/* ===========================================================================
+   KARTTASELITEVALIKKO JA AIHEVALOT
+   (js/karttaselite.js, js/karttavalot.js)
+   ---------------------------------------------------------------------------
+   Omistajan tilaus 29.8.2026: kartan oikeaan yläkulmaan popup-valikko,
+   josta rullautuu alas karttaselitteet, ja jokaisen rivin väripallo
+   sytyttää valon kaikkiin sen aiheen kohteisiin kartalla.
+
+   --- AIHEVALOT ------------------------------------------------------------
+
+   Valo on piirretty jokaisen merkin alle aina, ja NÄKYVYYS ON YKSI
+   LUOKKA BODYSSÄ. Siksi sytytys ja sammutus ovat luokanvaihto eivätkä
+   DOM-kierros, eikä merkkikerroksen uudelleenrakennus voi hukata
+   valotilaa: uusi merkki syntyy valoineen ja tämä sääntö päättää,
+   näkyykö se.
+
+   Aihe–luokka-parit on pakko luetella: CSS ei osaa yhdistää bodyn
+   luokkaa ja lapsen luokkaa muuten kuin kirjoittamalla pari näkyviin.
+   Pareja on kahdeksan eikä neljätoista, koska valikon rivi on
+   symbolien SUKUKUNTA (js/fokusnosto-symbolit.js
+   NOSTOSYM_PAAKATEGORIAT): merkin oma luokka on jo ryhmitelty siellä,
+   kun valo piirretään, joten tänne riittää yksi pari ryhmää kohti.
+   Lista on sama ja samassa järjestyksessä kuin KARTTAVALO_AIHEET.
+   =========================================================================== */
+
+.karttavalo { display: none; }
+
+body.valot-kaupungit .karttavalo-kaupungit,
+body.valot-luonto .karttavalo-luonto,
+body.valot-elaimet .karttavalo-elaimet,
+body.valot-historia .karttavalo-historia,
+body.valot-ihmeet .karttavalo-ihmeet,
+body.valot-kulttuuri .karttavalo-kulttuuri,
+body.valot-kauppa .karttavalo-kauppa,
+body.valot-skandaalit .karttavalo-skandaalit { display: block; }
+
+/* ---------------------------------------------------------------- valikko */
+
+/*
+ * KOTELO OIKEAAN YLÄKULMAAN, MAAKYLTIN ALLE. Kyltti (.maa-pilleri) on
+ * kartan oikean yläkulman vanha asukas (top 0.4rem, korkeus 1.2rem),
+ * ja se katoaa vain fokusnäkymässä. Nappi ei saa hypätä paikasta
+ * toiseen näkymän mukana, joten se asuu aina kyltin alapuolella —
+ * 2rem jättää kyltin alareunan ja napin väliin 0,4rem raon.
+ */
+.karttaselite {
+  position: absolute;
+  top: 2rem;
+  right: 0.4rem;
+  z-index: 6;
+}
+
+/*
+ * NAPPI ON KARTAN NAPPIEN PERHETTÄ: sama pyöreä pergamenttilaatta ja
+ * sama sormimitta kuin maalehtinapilla (.maalehti-nappi) — pehmuste
+ * nollassa ja keskitys gridillä, koska 20 px:n kuvake ei mahdu
+ * 40 px:n ympyrän pehmustettuun sisältöalueeseen.
+ */
+.karttaselite-nappi {
+  display: grid;
+  width: 2.15rem;
+  height: 2.15rem;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: rgba(239, 220, 180, 0.9);
+  color: var(--map-ink);
+  cursor: pointer;
+}
+
+.karttaselite-nappi svg { display: block; }
+
+/*
+ * HOVER-SÄÄNNÖT TARVITSEVAT `:not(:disabled)`-LISÄN, eivät koristeeksi
+ * vaan painoksi: pelin oma yleissääntö on `button:hover:not(:disabled)
+ * { background: #43331f; }` (tumma muste), ja sen painoarvo on kaksi
+ * pseudoluokkaa + elementti. Pelkkä `.karttaselite-rivi:hover` häviää
+ * sille, jolloin sormen alla oleva rivi maalautuu tummaksi ja sen oma
+ * tumma teksti katoaa kokonaan — juuri se näkyi kaappauksessa
+ * ensimmäisellä savukeajolla. Sama lisä nostaa nämä säännöt yleisen
+ * yläpuolelle ilman !importantia.
+ */
+.karttaselite-nappi:hover:not(:disabled) { background: rgba(245, 231, 200, 0.95); }
+
+.karttaselite-nappi[aria-expanded='true'] {
+  background: var(--map-ink);
+  color: rgba(245, 231, 200, 0.95);
+}
+
+/*
+ * LEVY LIUKUU YLÖS PIILOON (omistaja: *"Popup LIUKUU YLÖS PIILOON kun
+ * karttaa klikataan"*), joten sitä ei poisteta DOM:sta — poistettu
+ * solmu ei voi liukua mihinkään. Suljettuna se on `visibility:
+ * hidden`, jolloin se on poissa myös näppäimistöltä ja
+ * ruudunlukijalta; näkyvyyden siirtymä viivästetään liu'un loppuun,
+ * jotta liuku ehtii näkyä ennen katoamista.
+ *
+ * Origo on YLHÄÄLLÄ: levy rullautuu napin alta esiin ja vetäytyy
+ * takaisin sen alle.
+ */
+.karttaselite-levy {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  max-width: min(78vw, 20rem);
+  max-height: min(60vh, 26rem);
+  overflow-y: auto;
+  padding: 0.35rem;
+  transform: translateY(-0.6rem) scaleY(0.86);
+  transform-origin: top right;
+  opacity: 0;
+  border: 1px solid rgba(70, 51, 31, 0.35);
+  border-radius: 8px;
+  background: #f5f0e2;
+  box-shadow: 0 8px 24px rgba(20, 14, 6, 0.35);
+  visibility: hidden;
+  transition: transform 220ms ease, opacity 180ms ease, visibility 0s linear 220ms;
+}
+
+.karttaselite-levy.auki {
+  transform: none;
+  opacity: 1;
+  visibility: visible;
+  transition: transform 220ms ease, opacity 180ms ease, visibility 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .karttaselite-levy { transition: opacity 1ms linear, visibility 0s linear 1ms; }
+  .karttaselite-levy.auki { transition: opacity 1ms linear, visibility 0s; }
+}
+
+/* Otsikkorivi: nimi vasemmalle, OFF ja ALL oikeaan laitaan. */
+.karttaselite-ylarivi {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.15rem 0.35rem 0.4rem;
+  border-bottom: 1px solid rgba(70, 51, 31, 0.18);
+}
+
+.karttaselite-otsikko {
+  flex: 1 1 auto;
+  color: rgba(70, 51, 31, 0.92);
+  font-family: var(--font-type);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.karttaselite-kaikki {
+  min-height: 0;
+  padding: 0.2rem 0.45rem;
+  border: 1px solid rgba(70, 51, 31, 0.3);
+  border-radius: 5px;
+  background: rgba(255, 252, 242, 0.7);
+  color: rgba(70, 51, 31, 0.85);
+  font-family: var(--font-type);
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+
+.karttaselite-kaikki:hover:not(:disabled) {
+  background: rgba(255, 252, 242, 1);
+  color: rgba(70, 51, 31, 1);
+}
+
+.karttaselite-lista {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.2rem;
+}
+
+/* Neljä saraketta: pallo, symboli, selite, luku. Selite venyy, joten
+   luku asettuu joka rivillä samaan kohtaan oikeaan laitaan. */
+.karttaselite-rivi {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 0;
+  padding: 0.3rem 0.4rem;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  color: rgba(70, 51, 31, 0.92);
+  font: inherit;
+  font-size: 0.86rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.karttaselite-rivi:hover:not(:disabled) {
+  background: rgba(70, 51, 31, 0.07);
+  color: rgba(70, 51, 31, 0.92);
+}
+
+/*
+ * VÄRIPALLO ON KYTKIN JA TILANÄYTTÖ (omistajan täsmennys 29.8.2026:
+ * *"päälle kytketyn aiheen väripallo syttyy myös valikon
+ * seliterivillä — valikko näyttää aina mitkä valot ovat päällä"*).
+ *
+ * Sammuneena pallo on pelkkä ääriviiva aiheen omassa värissä; syttyneenä
+ * se on täytetty ja saa ympärilleen saman himmeän kehän kuin kartan
+ * valotäplä.
+ *
+ * KEHÄ ON PSEUDOELEMENTTI EIKÄ color-mix-varjo: läpinäkyvyys pitäisi
+ * silloin laskea CSS:n omalla funktiolla, jota vanhempi WebKit ei
+ * tunne — ja peliä pelataan iOS:n kotivalikkosovelluksessa. Sama väri
+ * `opacity`lla on sama jälki ilman uutta funktiota.
+ */
+.karttaselite-pallo {
+  position: relative;
+  width: 0.85rem;
+  height: 0.85rem;
+  border: 2px solid var(--valo, #8a6d4a);
+  border-radius: 50%;
+  background: transparent;
+}
+
+.karttaselite-rivi[aria-pressed='true'] .karttaselite-pallo {
+  background: var(--valo, #8a6d4a);
+}
+
+.karttaselite-rivi[aria-pressed='true'] .karttaselite-pallo::after {
+  content: '';
+  position: absolute;
+  inset: -0.3rem;
+  border-radius: 50%;
+  background: var(--valo, #8a6d4a);
+  opacity: 0.24;
+}
+
+.karttaselite-rivi[aria-pressed='true'],
+.karttaselite-rivi[aria-pressed='true']:hover:not(:disabled) {
+  background: rgba(70, 51, 31, 0.06);
+}
+
+.karttaselite-symboli {
+  width: 1.35rem;
+  height: 1.35rem;
+  display: block;
+}
+
+.karttaselite-nimi { line-height: 1.25; }
+
+/* Kappalemäärä (omistajan lisätilaus 29.8.2026): montako tämän aiheen
+   merkkiä kartalla juuri nyt on. Numerot ladotaan tabulaarisina, jotta
+   sarake ei heilu rivien välillä. */
+.karttaselite-luku {
+  color: rgba(70, 51, 31, 0.6);
+  font-family: var(--font-type);
+  font-size: 0.74rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+
+/* Aihe, jota tällä kartalla ei ole: rivi jää selitteeksi mutta
+   himmenee — selitelista ei saa vaihtua maan mukana, sillä se on
+   kartan selite eikä sisällysluettelo. */
+.karttaselite-tyhja { opacity: 0.45; }
+
+.karttaselite-vihje {
+  margin: 0.35rem 0.4rem 0.1rem;
+  color: rgba(70, 51, 31, 0.62);
+  font-size: 0.7rem;
+  line-height: 1.35;
+}
