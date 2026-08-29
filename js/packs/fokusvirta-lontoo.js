@@ -50,13 +50,11 @@
  *      (js/packs/kulttuuri-kategoriat.js, lontoo/avauskuvat).
  *   3. Valinta-askelta ei ole: `valinta`-kenttää ei kirjoiteta.
  *
- * ── ÄÄNITE PUUTTUU VIELÄ, JA SE ON TARKOITUS ───────────────────────
+ * ── ÄÄNITE ──────────────────────────────────────────────────────────
  *
- * `matkakirja.aanite` on jätetty pois, koska assets/audio/
- * puhe-fokus-matkakirja-lontoo.mp3:a ei ole vielä generoitu. js/ui.js
- * piilottaa kaiuttimen, kun kenttää ei ole — kenttä kirjoitetaan
- * samassa erässä kuin äänite (tools/generoi-luennat.mjs lontoo).
- *
+ * Luenta generoitiin 29.8.2026 (generoi-luennat-tyonkulku, ajo 3) ja
+ * `matkakirja.aanite` osoittaa siihen. Teksti ja luenta ovat sanasta
+ * sanaan samat — jos tekstia muutetaan, luenta generoidaan uusiksi.
  * ── KUVAT ──────────────────────────────────────────────────────────
  *
  * Jokainen Commons-tiedosto on kysytty imageinfo-rajapinnasta
@@ -132,16 +130,12 @@ export const FOKUSVIRTA_LONTOO = {
       + 'ensimmäiselle sivulle säännön, jonka annan sinullekin: älä usko '
       + 'ketään, joka väittää, ettei aarteita ole. Piirsin kulmaan pienen '
       + 'ristin liidulla — merkiksi itselleni, että tarkoitan sitä.',
-    /*
-     * Luenta on sama teksti tunnetagein — sanat eivät muutu. Äänitettä
-     * ei ole vielä generoitu, joten `aanite` puuttuu (ks. tiedoston
-     * alku) ja js/ui.js piilottaa kaiuttimen.
-     */
     luenta: '[curious] Lontoossa sumu syö äänet ja kaupunki puhuu silti. '
       + '[softly] Kirjasin ensimmäiselle sivulle säännön, jonka annan '
       + 'sinullekin: älä usko ketään, joka väittää, ettei aarteita ole. '
       + '[whispers] Piirsin kulmaan pienen ristin liidulla — merkiksi '
       + 'itselleni, että tarkoitan sitä.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-lontoo.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
