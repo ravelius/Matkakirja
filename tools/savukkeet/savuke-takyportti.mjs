@@ -155,6 +155,12 @@ const kortti = (sivu) => sivu.evaluate(() => {
     kappaleita: [...k.querySelectorAll('.fokusnosto-teksti p')]
       .filter((p) => (p.textContent ?? '').trim().length > 60).length,
     kysymyksia: k.querySelectorAll('.fokusnosto-kysymykset button').length,
+    // Isoisän karttaliite: onko arkkia, ja onko sillä otsake, kuva ja
+    // lähderivi. Kortti ilman `kartta`-kenttää palauttaa liite: false.
+    liite: Boolean(k.querySelector('.fokusnosto-liite')),
+    liiteOtsake: k.querySelector('.fokusnosto-liite-otsake')?.textContent ?? '',
+    liiteLahde: k.querySelector('.fokusnosto-liite .fokusnosto-kuvalahde')?.textContent ?? '',
+    liiteKuva: k.querySelector('.fokusnosto-liitekuva')?.getAttribute('src') ?? '',
   };
 });
 
@@ -188,6 +194,10 @@ vaadi('kortissa on lunastusteksti eikä pelkkä otsikko',
   (avattu?.kappaleita ?? 0) >= 2, `${avattu?.kappaleita} kappaletta`);
 vaadi('kortissa on pöllön kysymysnapit',
   (avattu?.kysymyksia ?? 0) === 3, `${avattu?.kysymyksia} nappia`);
+// Karttaliite on valinnainen kenttä: ilman sitä kortti latoutuu kuten
+// ennenkin eikä arkkia synny tyhjänä (ks. vartio 6).
+vaadi('täky ilman karttaliitettä latoo kortin ilman liitearkkia',
+  avattu?.liite === false, JSON.stringify(avattu));
 
 /* --- 3: luettu jää kartalle, seuraava syttyy, kortti aukeaa uudelleen --- */
 
@@ -237,6 +247,59 @@ const ilmanFokusta = await pisteet(pois);
 vaadi('fokusmoodi pois: ei täkypisteitä',
   ilmanFokusta.length === 0, `${ilmanFokusta.length} pistettä`);
 await pois.context().close();
+
+/* --- 6: isoisän karttaliite Wienin maailmannäyttelytäyssä --- */
+
+/*
+ * KOLMAS KUVA, JOTA LUETAAN. Raamatun linjaus 29.8.2026 antaa
+ * kaiverretulle aikalaiskartalle oman roolinsa (paikka sellaisena kuin
+ * isoisä sen tunsi), ja pilotti on Wienin maailmannäyttely 1873. Liite
+ * on repon oma tiedosto ilman Commons-varareittiä, ja sen suurennos
+ * kulkee kartan kohteiden mekanismilla (js/fokuskohteet.js
+ * avaaKohdeSuurennos) — kumpikaan ei näy yhdessäkään datatestissä.
+ */
+const wien = await avaaSivu('wien');
+const itavalta = await pisteet(wien);
+const nayttely = itavalta.find((p) => p.id === 'maailmannayttely-1873');
+vaadi('Wienin maailmannäyttelytäky on kartalla',
+  Boolean(nayttely?.keski), JSON.stringify(itavalta.map((p) => p.id)));
+if (nayttely?.keski) {
+  await wien.mouse.click(Math.round(nayttely.keski.x), Math.round(nayttely.keski.y));
+  await wien.waitForTimeout(900);
+}
+const liitekortti = await kortti(wien);
+vaadi('kortissa on isoisän karttaliite otsakkeineen',
+  Boolean(liitekortti?.liite) && /liite/i.test(liitekortti?.liiteOtsake ?? ''),
+  JSON.stringify(liitekortti));
+vaadi('karttaliitteen kuva on repon oma tiedosto',
+  (liitekortti?.liiteKuva ?? '').includes('karttaliitteet/'),
+  liitekortti?.liiteKuva ?? '(ei kuvaa)');
+vaadi('karttaliitteessä on lähderivi lisensseineen',
+  /public domain|CC /i.test(liitekortti?.liiteLahde ?? ''),
+  liitekortti?.liiteLahde ?? '(ei lähdettä)');
+
+await wien.evaluate(() => document.querySelector('.fokusnosto-liitenappi')?.click());
+await wien.waitForTimeout(900);
+const suurennettu = await wien.evaluate(() => ({
+  zoom: Boolean(document.querySelector('.fokuskohde-zoom')),
+  kuva: document.querySelector('.fokuskohde-zoom img')?.getAttribute('src') ?? '',
+  kortti: Boolean(document.querySelector('.fokusnosto-kortti')),
+}));
+vaadi('liitteen napautus avaa kartan suurennoksen',
+  suurennettu.zoom && suurennettu.kuva.includes('karttaliitteet/'),
+  JSON.stringify(suurennettu));
+vaadi('kortti jää suurennoksen taakse auki', suurennettu.kortti, JSON.stringify(suurennettu));
+
+// Escape sulkee ENSIN suurennoksen — ei koko korttia sen alta.
+await wien.keyboard.press('Escape');
+await wien.waitForTimeout(700);
+const escin_jalkeen = await wien.evaluate(() => ({
+  zoom: Boolean(document.querySelector('.fokuskohde-zoom')),
+  kortti: Boolean(document.querySelector('.fokusnosto-kortti')),
+}));
+vaadi('Esc sulkee suurennoksen mutta jättää kortin auki',
+  !escin_jalkeen.zoom && escin_jalkeen.kortti, JSON.stringify(escin_jalkeen));
+await wien.context().close();
 
 await selain.close();
 palvelin.close();

@@ -131,7 +131,9 @@ import {
 } from './ui-apurit.js';
 import { asetaKuva } from './media.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
-import { avaaFokuskohde, suljeFokuskohde } from './fokuskohteet.js';
+import {
+  avaaFokuskohde, avaaKohdeSuurennos, suljeFokuskohde, suljeKohdeSuurennos,
+} from './fokuskohteet.js';
 import { fokuskohteet } from './packs/fokuskohteet-grc.js';
 /*
  * NELJÄN MAAN POOLIT ASUVAT NYT KAUPUNKIEN OMISSA PAKETEISSA (v1301).
@@ -1184,6 +1186,10 @@ function avaaNostonKortti(ui, nosto) {
   sisalto.appendChild(teksti);
   if (nosto.valokuva) piirraNostonValokuva(sisalto, nosto.valokuva);
   if (nosto.lahde) sisalto.appendChild(html('p', 'fokusnosto-lahde', nosto.lahde));
+  // Karttaliite tulee jutun JÄLKEEN, myös lähderivin jälkeen: se ei ole
+  // jutun kuvitusta vaan erillinen arkki jutun välissä (ks.
+  // piirraNostonKarttaliite).
+  if (nosto.kartta) piirraNostonKarttaliite(ui, sisalto, nosto.kartta);
 
   /*
    * KOHDENAPPI, KUN KARTALLA ON SAMA PAIKKA. Nosto *"houkuttelee
@@ -1231,6 +1237,14 @@ function avaaNostonKortti(ui, nosto) {
   });
   const nappain = (tapahtuma) => {
     if (tapahtuma.key !== 'Escape') return;
+    /*
+     * KARTTALIITTEEN SUURENNOS SULKEUTUU ENSIN. Kortin kuuntelija on
+     * rekisteröity ennen suurennoksen omaa (js/fokuskohteet.js
+     * avaaKohdeSuurennos) ja ehtisi siis ensin — ja Escape sulkisi koko
+     * kortin suurennoksen alta. Sama väistösääntö on kartan
+     * tietoruudulla (kuunteleKohdetta).
+     */
+    if (ui?.fokusnostoZoom) return;
     tapahtuma.stopPropagation();
     suljeNostonKortti(ui);
   };
@@ -1280,6 +1294,10 @@ export function suljeNostonKortti(ui) {
   const auki = ui?.fokusnostoKortti;
   if (ui) ui.fokusnostoKortti = null;
   auki?.purku?.();
+  // Karttaliitteen suurennos on kortin oma jatke (ks.
+  // piirraNostonKarttaliite): ilman tätä se jäisi kellumaan tyhjän
+  // kartan päälle, kun kortti sen alta katoaa.
+  suljeKohdeSuurennos(ui, 'fokusnostoZoom');
   if (typeof document !== 'undefined') {
     for (const vanha of document.querySelectorAll('.fokusnosto-kerros')) vanha.remove();
   }
@@ -1337,6 +1355,66 @@ function piirraNostonKuva(kohde, kuva, luokka = 'fokusnosto-kuva', leveys = NOST
  */
 function piirraNostonValokuva(kohde, kuva) {
   piirraNostonKuva(kohde, kuva, 'fokusnosto-kuva fokusnosto-valokuva', NOSTO_MINI_PX * 3);
+}
+
+/**
+ * ISOISÄN KARTTALIITE — KOLMAS KUVA, JOKA EI OLE KUVITUSTA.
+ *
+ * Raamattu (osio "Fokusmoodi", ISOISÄN KARTTALIITE, omistajan linjaus
+ * 29.8.2026) antaa kolmelle kuvatyypille eri roolin: valokuva on
+ * nykyhetki, loistoaikakuva on mennyt elävänä ja KAIVERRUSKARTTA on
+ * paikka sellaisena kuin isoisä sen tunsi. Liite on siis oma
+ * sisältölajinsa, ja siksi se saa oman otsakkeensa ja oman kehyksensä
+ * eikä latoudu kolmanneksi kuvaksi jutun sekaan: fiktio on, että arkki
+ * on TAITETTU MATKAKIRJAN VÄLIIN, ja se luetaan jutun jälkeen kuten
+ * liite luetaan.
+ *
+ * NAPAUTUS SUURENTAA. Kartta on ainoa kortin kuvista, jota oikeasti
+ * LUETAAN: 1400 pikselin arkki kortin leveydellä on harmaa laatta,
+ * kunnes sen avaa isoksi. Suurennos on kartan kohteiden oma
+ * (js/fokuskohteet.js avaaKohdeSuurennos) eikä uusi kopio — se osaa jo
+ * repon oman `osoite`-kuvan, kasvaa ankkuristaan ja kantaa selitteen ja
+ * lähderivin mukanaan.
+ *
+ * VIRHE VIE KOKO LIITTEEN. Puuttuva tiedosto jättäisi muuten otsakkeen
+ * ja tyhjän kehyksen lupaamaan liitettä, jota ei ole.
+ */
+function piirraNostonKarttaliite(ui, kohde, kartta) {
+  const liite = html('div', 'fokusnosto-liite');
+  liite.appendChild(html('p', 'fokusnosto-liite-otsake', 'Isoisän matkakirjan liite'));
+  const kehys = html('figure', 'fokusnosto-liitekehys');
+  const nappi = html('button', 'fokusnosto-liitenappi');
+  nappi.type = 'button';
+  nappi.title = 'Avaa kartta suurena';
+  nappi.setAttribute('aria-label', `${kartta.selite ?? 'Kartta'} — avaa suurena`);
+  const img = document.createElement('img');
+  img.className = 'fokusnosto-liitekuva';
+  img.alt = kartta.selite ?? '';
+  img.decoding = 'async';
+  img.draggable = false;
+  asetaNostonKuva(img, kartta, NOSTO_KUVA_PX, () => liite.remove());
+  nappi.appendChild(img);
+  nappi.addEventListener('click', (tapahtuma) => {
+    tapahtuma.stopPropagation();
+    /*
+     * OMA UI-KENTTÄ, EI TIETORUUDUN. Kohdekerroksen näkyvyysvahti
+     * sulkee `ui.fokuskohdeZoom`-suurennoksen joka piirrossa, kun
+     * kerros on piilossa — ja täkynoston kortti on auki juuri silloin.
+     * Ks. js/fokuskohteet.js avaaKohdeSuurennos, kohta ELINKAARI.
+     */
+    avaaKohdeSuurennos(ui, kartta, () => nappi, 'fokusnostoZoom');
+  });
+  kehys.appendChild(nappi);
+  // Sama kuvatekstipari kuin muillakin kortin kuvilla: selite ja lähde
+  // samalla rivillä (v1040), jotta PD/CC-merkintä kulkee aina mukana.
+  const teksti = html('figcaption', 'fokusnosto-kuvateksti');
+  teksti.append(
+    html('span', 'fokusnosto-kuvaselite', kartta.selite ?? ''),
+    html('span', 'fokusnosto-kuvalahde', kartta.lahde ?? ''),
+  );
+  kehys.appendChild(teksti);
+  liite.appendChild(kehys);
+  kohde.appendChild(liite);
 }
 
 /**

@@ -19,6 +19,7 @@
 
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { existsSync } from 'node:fs';
 
 import {
   FOKUSVIRRAN_VAIHEET, asetaFokusvirtaTila, fokusvirtaAlkutila, fokusvirtaJaljella,
@@ -382,6 +383,41 @@ test('jokaisella fokusvirran kuvalla on selite ja lähde', () => {
       assert.ok(kuva.lahde?.length > 10, `${kaupunki}: kuvan lähde puuttuu`);
     }
   }
+});
+
+/*
+ * ISOISÄN KARTTALIITE (Raamattu, 29.8.2026). Liite on AITO
+ * PD-aikalaiskartta repon omana tiedostona, ja juuri se tekee siitä
+ * rikkoutuvan tavalla, jota Commons-kuva ei ole: väärin kirjoitettu
+ * polku ei näy missään ennen kuin kortti on auki pelissä. Testi lukee
+ * siis myös levyn.
+ */
+test('karttaliitteellä on tiedosto levyllä, selite ja lähde', () => {
+  const liitteet = Object.entries(FOKUSVIRRAT).flatMap(([kaupunki, virta]) => (virta.takynostot ?? [])
+    .filter((n) => n.kartta)
+    .map((n) => [`${kaupunki}/${n.id}`, n.kartta]));
+  assert.ok(liitteet.length >= 1, 'yhtään karttaliitettä ei löytynyt');
+  for (const [mista, kartta] of liitteet) {
+    assert.ok(kartta.osoite, `${mista}: karttaliitteellä ei ole osoitetta`);
+    assert.ok(existsSync(new URL(`../${kartta.osoite}`, import.meta.url)),
+      `${mista}: karttaliitteen tiedostoa ei ole (${kartta.osoite})`);
+    assert.ok(kartta.selite?.length > 20, `${mista}: karttaliitteen selite puuttuu`);
+    // PD/CC-sääntö (CLAUDE.md): lähde ja lisenssi kulkevat kuvan mukana.
+    assert.ok(/public domain|CC |PD/i.test(kartta.lahde ?? ''),
+      `${mista}: karttaliitteen lähderivistä puuttuu lisenssi`);
+  }
+});
+
+test('Wienin maailmannäyttelytäky kantaa pilotin karttaliitteen', () => {
+  const nosto = (fokusvirtaKaupungille('wien')?.takynostot ?? [])
+    .find((n) => n.id === 'maailmannayttely-1873');
+  assert.ok(nosto, 'Wienin maailmannäyttelytäkyä ei löytynyt');
+  assert.ok(nosto.kartta?.osoite?.includes('karttaliitteet/'),
+    'pilotin karttaliite ei ole karttaliitteet-kansiossa');
+  // Kolme kuvaa, kolme roolia (Raamattu: valokuva = nykyhetki,
+  // loistoaikakuva = mennyt elävänä, kaiverruskartta = isoisän aika).
+  assert.ok(nosto.kuva && nosto.valokuva && nosto.kartta,
+    'pilottitäystä puuttuu jokin kolmesta kuvaroolista');
 });
 
 /* ---------- 7. matkakirjakortti ei vaihdu laatan ratkettua ---------- */

@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1313';
+const CACHE = 'matkakirja-2026-08-09.1314';
 const SHELL = [
   './',
   './index.html',
@@ -820,6 +820,14 @@ const SHELL = [
   './assets/kartat/nostot/nosto-szegedin-tulva-loistoaika.webp',
   './assets/kartat/nostot/nosto-pulan-areena-loistoaika.webp',
   './assets/kartat/nostot/nosto-karlstejn-loistoaika.webp',
+  /*
+   * ISOISÄN KARTTALIITTEET (29.8.2026, pilottina Wienin
+   * maailmannäyttely). Sama syy kuin loistoaikakuvilla yllä: liite on
+   * repon oma tiedosto ilman Commons-varareittiä, joten ilman
+   * esilatausta kortin kolmas kuva jäisi lentokoneessa tyhjäksi — ja
+   * juuri se on kuvista se, jota luetaan.
+   */
+  './assets/kartat/karttaliitteet/liite-maailmannayttely-1873.webp',
   // Lippuikkunan versioliput (pilotti Suomi + Saksa, v711).
   './assets/liput/versiot/fin-valtiolippu.png',
   './assets/liput/versiot/fin-sotalippu.png',

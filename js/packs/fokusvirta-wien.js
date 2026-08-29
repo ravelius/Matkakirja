@@ -553,6 +553,38 @@ export const FOKUSVIRTA_WIEN = {
         lahde: 'Historisches Museum der Stadt Wien 1873, Wikimedia Commons '
           + '(public domain)',
       },
+      /*
+       * ISOISÄN KARTTALIITE — PILOTTI (Raamattu, osio "Fokusmoodi":
+       * *"1800-luvun kaiverrettu ... kartta ... ikään kuin isoisä olisi
+       * taittanut sen matkakirjan väliin"*, omistajan linjaus
+       * 29.8.2026).
+       *
+       * KUVATYYPPIEN ROOLIJAKO on Raamatun oma: valokuva = nykyhetki,
+       * loistoaikakuva = mennyt elävänä, KAIVERRUSKARTTA = paikka
+       * sellaisena kuin isoisä sen tunsi. Tämän noston kolme kuvaa ovat
+       * juuri ne kolme roolia, tässä järjestyksessä.
+       *
+       * AITO AIKALAISKARTTA, EI GENEROITU (linjauksen ensisijaisuus).
+       * Commons 29.8.2026: "Montage Plan Weltausstellung 1873.jpg",
+       * 3920×2812, public domain (PD-old, tekijä tuntematon, teos 1873),
+       * Restrictions tyhjä. Lehti on koko näyttelyalueen virallinen
+       * kartta: ylälaidassa keisarin mitalikuva ja Rotunden julkisivu,
+       * alla Prater vyöhykkeineen — ja arkin poikki kulkevat taitteet,
+       * jotka tekevät fiktion itsestään selväksi.
+       *
+       * KENTTÄ ON `osoite` EIKÄ `tiedosto`: kartta on repossa omana
+       * webp-liitteenään (assets/kartat/karttaliitteet/), koska sitä
+       * luetaan suurentaen — verkon varassa oleva Commons-thumb jättäisi
+       * lentokoneessa kortin kolmannen kuvan tyhjäksi.
+       */
+      kartta: {
+        osoite: 'assets/kartat/karttaliitteet/liite-maailmannayttely-1873.webp',
+        selite: 'Näyttelyalueen kartta vuodelta 1873: Rotunde keskellä, '
+          + 'teollisuuspalatsin siivet itään ja länteen, sisäänkäynnit '
+          + 'Hauptalleelta ja oma rautatieasema pohjoisessa.',
+        lahde: '"Weltausstellung Wien im Jahre 1873", tuntematon tekijä '
+          + '1873, Wikimedia Commons (public domain)',
+      },
       kysymykset: [
         'Mitä maailmannäyttelyssä 1873 oli nähtävänä?',
         'Mikä aiheutti Wienin pörssiromahduksen?',
