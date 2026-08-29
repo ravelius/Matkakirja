@@ -98,14 +98,31 @@ const alku = await sivu.evaluate(async () => {
 vaadi('fokusmoodi päällä ja nappula Ateenassa',
   alku.kaupunki === 'ateena' && alku.fokus, JSON.stringify(alku));
 
-/** Näkymän keskipiste laudan yksiköissä — sama kaava kuin kartta.js:ssä. */
+/**
+ * Näkymän keskipiste laudan yksiköissä — sama kaava kuin kartta.js:ssä.
+ *
+ * ORIGO ON LAVAN, EI LAUDAN (korjattu 29.8.2026, savuke oli punainen
+ * 7/9). Kaava kopioitiin tänne ennen v1294:ää, jolloin SVG-lava oli
+ * aina koko laudan kokoinen ja pan mitattiin laudan nurkasta
+ * (contentBox.x). v1294 ikkunoi lavan näkymän ympärille (js/kartta.js
+ * LAVAIKKUNA), ja siitä lähtien pan mitataan LAVAN vasemmasta
+ * ylänurkasta — Ateenan lähikuvassa ui.zoomVasenReuna on 4882, ei 0.
+ * Pystyakseli luki lavan origon jo valmiiksi (zoomYlaReuna), joten vain
+ * vaaka jäi jälkeen ja näytti keskipisteen 5000 yksikköä liian
+ * lännessä: rajaus toimi täsmälleen oikein (keskipiste pysähtyi
+ * alueen kulmaan 7010/2287), mutta mittari luki 2127.
+ *
+ * Kaava on nyt sama kuin pelin oma kartta.nykyinenKeskipiste(); sitä ei
+ * kutsuta suoraan, koska se palauttaa null ilman mannerZoomia.
+ */
 const keskipiste = () => sivu.evaluate(() => {
   const { ui } = window.matkakirja;
   const pane = ui.mapPane;
   const box = ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
+  const vasenReuna = ui.zoomVasenReuna ?? box.x;
   const ylaReuna = ui.zoomYlaReuna ?? box.y;
   return {
-    x: box.x + (pane.clientWidth / 2 - (ui.panX ?? 0)) / ui.zoomSkaala,
+    x: vasenReuna + (pane.clientWidth / 2 - (ui.panX ?? 0)) / ui.zoomSkaala,
     y: ylaReuna + (pane.clientHeight / 2 - (ui.panY ?? 0)) / ui.zoomSkaala,
     panX: ui.panX,
     panY: ui.panY,
@@ -169,11 +186,23 @@ await sivu.screenshot({ path: join(ULOS, 'savuke-fokuskartta-rajattu.png') });
  * (maailmanäkymä, js/ui-apurit.js kehittajaMaailmaPaalla). Rajaamaton
  * panorointi mitataan siis kehittäjätilasta JA maailmanäkymästä
  * yhdessä — juuri siinä yhdistelmässä omistaja selaa koko lautaa.
+ *
+ * TAHDISTUS KIRJOITUKSEN PERÄÄN (lisätty 29.8.2026, savuke oli
+ * punainen 7/9). Kytkimet luetaan levyltä vain kerran ja pidetään
+ * muistissa (js/ui-apurit.js kehittajaTilaPaalla) — silmukat kysyvät
+ * niitä joka kehyksellä, eikä levyä lueta joka kysymyksellä. Sivun
+ * OMA setItem ei laukaise storage-tapahtumaa, joten muisti jäi tähän
+ * asti vanhaksi ja valloitettuAlue palautti yhä laatikon. Sama kaava
+ * kuin muillakin savukevartijoilla (tools/savuke-atlas.mjs): kirjoitus,
+ * sitten ui.paivitaKehittajaTila() + ui.paivitaKehittajaMaailma().
  */
 const kehittajassa = await sivu.evaluate(() => {
+  const { ui } = window.matkakirja;
   localStorage.setItem('matkakirja-kehittaja', '1');
   localStorage.setItem('matkakirja-kehittaja-maailma', '1');
-  return window.matkakirja.ui.kartta.valloitettuAlue();
+  ui.paivitaKehittajaTila();
+  ui.paivitaKehittajaMaailma();
+  return ui.kartta.valloitettuAlue();
 });
 vaadi('kehittäjän maailmanäkymässä panorointi on rajaamaton', kehittajassa === null,
   JSON.stringify(kehittajassa));
@@ -183,9 +212,14 @@ vaadi('maailmanäkymässä sama veto vie alueen ulkopuolelle',
   kehittajanVeto.jalkeen.x < alue.x0 || kehittajanVeto.jalkeen.x > alue.x1,
   `${kehittajanVeto.jalkeen.x.toFixed(1)}`);
 
+// Sama tahdistus myös purkaessa, muuten rajaus jäisi pois päältä
+// lopputarkistusten ajaksi.
 await sivu.evaluate(() => {
+  const { ui } = window.matkakirja;
   localStorage.removeItem('matkakirja-kehittaja');
   localStorage.removeItem('matkakirja-kehittaja-maailma');
+  ui.paivitaKehittajaTila();
+  ui.paivitaKehittajaMaailma();
 });
 
 /* ---------- pelin oma kamera-ajo ei ole rajattu ---------- */
@@ -210,7 +244,9 @@ const ajo = await sivu.evaluate(async (raja) => {
   const box = ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
   return {
     kohde,
-    keskiX: box.x + (pane.clientWidth / 2 - (ui.panX ?? 0)) / ui.zoomSkaala,
+    // Lavan origo, ei laudan — ks. keskipiste() yllä.
+    keskiX: (ui.zoomVasenReuna ?? box.x)
+      + (pane.clientWidth / 2 - (ui.panX ?? 0)) / ui.zoomSkaala,
   };
 }, alue);
 vaadi('pelin kamera-ajo vie näkymän alueen ulkopuolellekin',
