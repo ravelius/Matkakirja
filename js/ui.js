@@ -6247,20 +6247,21 @@ export class UI {
    */
   fokusSumuPaalla() {
     /*
-     * KOLMAS EHTO: KEHITTÄJÄN MAAILMANÄKYMÄ (omistajan tilaus
-     * 27.8.2026). Sumuverho on osa samaa pelaajan rajoitetta kuin
-     * kameran rajaus — se kertoo, mikä maailmasta on vielä auki.
-     * Maailmanäkymässä *"sama nappi poistaa sumennuksen"*: verhon alla
-     * selaaminen ei ole selaamista. Näkymän ollessa pois (tai
-     * kehittäjätilan ollessa pois) verho on ennallaan.
+     * SUMENNUKSESTA ON LUOVUTTU (omistajan linjaus 29.8.2026,
+     * bittikarttakartan vaihe 2).
      *
-     * Erillistä sumennuskytkintä ei enää ole: se oli 24.–27.8.2026
-     * oma vertailunappinsa hampurilaisvalikossa, ja maailmanappi korvasi
-     * sen.
+     * *"Sumennuksesta luovutaan kokonaan — fokus on liikerajaus."*
+     * Verho oli fokusmoodin toinen puoli: kamera rajaa sen, mihin
+     * pelaaja pääsee, ja verho kertoi mikä maailmasta on vielä auki.
+     * Rajaus jää (js/kartta.js fokusRajaukset), verho ei — maailma on
+     * kartalla näkyvissä alusta asti.
+     *
+     * KONEISTO JÄÄ YHDEKSI VAIMENNETUKSI METODIKSI (paivitaFokusSumu):
+     * se lukee tämän ehdon, tyhjentää kerroksen ja palaa. Yksi ehto on
+     * pienempi jälki kuin kahdeksan kutsupaikan purku, ja se on myös
+     * ainoa kohta, joka pitäisi muuttaa jos verho joskus palaisi.
      */
-    if (this.maailmanakyma()) return false;
-    return Boolean(this.fokusmoodi
-      && !this.katselu && this.game.phase !== 'pickstart');
+    return false;
   }
 
   /**
@@ -6427,11 +6428,27 @@ export class UI {
      * lento- ja maareitit asuvat laudan bittikartassa, joka pysyy
      * atlaksen alla piilossa (js/fokuskartta.js paivitaVanhaLauta).
      */
-    const piilota = Boolean(this.fokusmoodi && maat && !this.katselu
-      && this.game.phase !== 'pickstart') && !this.maailmanakyma();
-    for (const osa of this.svg.querySelectorAll('[data-fokus-maa]')) {
-      const ulkona = piilota && !maat.has(osa.dataset.fokusMaa);
-      osa.classList.toggle('fokus-piilossa', ulkona);
+    /*
+     * KAIKKI NÄKYVISSÄ ALUSTA (omistajan linjaus 29.8.2026,
+     * bittikarttakartan vaihe 2).
+     *
+     * Käymättömän maan datakerros — laatta, rantarengas, porttikehä,
+     * lentokoneen merkki ja nimi — katosi ennen kartalta kokonaan, ja
+     * kehittäjän maailmanappi oli ainoa tapa nähdä se. *"Kehittäjän
+     * maailma-napin näkymästä tulee oletus"*: kaupungit, reittipisteet
+     * ja kohteet piirretään koko maailmasta ilman näkyvyysgatteja.
+     *
+     * Piilotusluokka pyyhitään silti joka kierroksella: tallennuksesta
+     * palaava peli voi kantaa sen mukanaan, ja piilossa oleva kaupunki
+     * ilman kytkintä olisi näkymätön vika.
+     *
+     * MAAILMANAPPI JÄÄ, mutta se ohjaa enää kameran rajausta
+     * (js/kartta.js fokusRajaukset, panorointiVapaa) — näkyvyyteen se
+     * ei enää vaikuta.
+     */
+    void maat;
+    for (const osa of this.svg.querySelectorAll('.fokus-piilossa')) {
+      osa.classList.remove('fokus-piilossa');
     }
     this.paivitaFokusSumu(maat);
     // Maastonimet myös tässä eikä vain nimien piirrossa: maa vaihtuu
@@ -6624,7 +6641,34 @@ export class UI {
    */
   paivitaMaailmanRajaus(tiedettyNakyva = null) {
     if (!this.svg) return;
-    const paalla = Boolean(this.maailmanakyma?.());
+    /*
+     * NÄKYMÄRAJAUS KOSKEE NYT KAIKKIA (29.8.2026, bittikarttakartan
+     * vaihe 2).
+     *
+     * Rajaus rakennettiin kehittäjän maailmanäkymää varten: siinä
+     * kartalla on 602 kaupunkisolmua, ja WebKit käy jokaisen läpi joka
+     * kehyksellä riippumatta siitä osuuko se ruudulle. Pelaajan omassa
+     * lähikuvassa sitä ei tarvittu, koska käymättömien maiden
+     * datakerros oli piilossa.
+     *
+     * NYT SE EI OLE PIILOSSA (paivitaFokusKerros: KAIKKI NÄKYVISSÄ
+     * ALUSTA), joten pelaajan lähikuva sai täsmälleen saman kuorman —
+     * ja siksi sama lääke. Rajaus on näkymätön: se piilottaa vain
+     * solmuja, jotka ovat ruudullisen päässä näkymästä.
+     *
+     * KAMERA-AJON JA LENNON AJAKSI RAJAUS PURETAAN. Ajo piirtyy
+     * CSS-muunnoksena lopullisen näkymän päälle, joten ruudulla on
+     * hetkittäin aivan muu ala kuin `nakyvaAlue` kertoo; rajattu
+     * kaupunki puuttuisi kuvasta juuri lennon ajan. Lavaunioni on
+     * olemassa vain ajon ajan, joten se kelpaa yhdeksi ehdoksi
+     * sellaisenaan.
+     */
+    const ajossa = Boolean(this.kartta?.kameraAjossa?.()
+      || this.aloituslentoKesken
+      || this.lavaUnioni
+      || globalThis.document?.body?.classList?.contains('kartalento'));
+    const paalla = !ajossa
+      && Boolean(this.maailmanakyma?.() || this.mannerZoom);
     if (!paalla) {
       if (this.maailmanRajatut?.size) {
         for (const osa of this.maailmanRajatut) {

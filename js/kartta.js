@@ -916,6 +916,54 @@ export class Kartta {
     };
   }
 
+  /**
+   * KIINTEÄT ZOOMTASOT: lähin porras vapaalle kertoimelle
+   * (bittikarttakartta vaihe 3).
+   *
+   * Nipistys tuotti ennen minkä tahansa kertoimen portaiden välistä
+   * (`zoomiVapaa`), ja jokainen niistä oli oma mittakaavansa: oma
+   * kooste, oma lehtitarkkuus, oma ruutujen sarja. Kiinteillä tasoilla
+   * niitä on laudan koosta riippuen kymmenkunta, ja sama taso palaa
+   * uudestaan — ele päättyy siis näkymään, jolle on jo kertaalleen
+   * tehty työ. Juuri sitä vaiheen 3 pyramidi tarvitsee.
+   *
+   * PORTAIKKO ON SAMA KUIN PAINIKKEILLA. Pelissä oli tähän asti kaksi
+   * eri tapaa zoomata samaan lukuun, eikä niiden tarvinnut olla samaa
+   * mieltä (ks. zoomiKerroin). Nyt ne ovat, ja se on koko idea: mihin
+   * tahansa pelaaja nipistääkin, hän päätyy portaaseen, jonka
+   * loitonnusnappi vie takaisin.
+   *
+   * FOKUSIKKUNA ON YKSI EHDOKAS MUIDEN JOUKOSSA. Se on portaikon pohja
+   * fokusnäkymässä (zoomiRajat) eikä yleensä osu portaalle, joten se on
+   * tässä oma tasonsa — sama poikkeus, joka loitonnusnapin viimeisellä
+   * askeleella on jo (zoomaaPainikkeella).
+   *
+   * LÄHIN MITATAAN LOGARITMISESTI. Zoomiportaat ovat kertoimia, ja
+   * 1,5:n askeleessa aritmeettinen "lähin" vetäisi aina alaspäin:
+   * portaiden 4 ja 6 puoliväli on 5, mutta suhteessa se on 4,9.
+   */
+  napsautaTasoon(kerroin) {
+    const tasot = this.zoomiTasot();
+    const { pienin, suurin } = this.zoomiRajat();
+    const pohja = this.fokusZoomMinimi();
+    const ehdokkaat = [];
+    for (let i = 0; i < tasot.length; i += 1) {
+      if (tasot[i] >= pienin * 0.999 && tasot[i] <= suurin * 1.001) {
+        ehdokkaat.push({ kerroin: tasot[i], porras: i });
+      }
+    }
+    if (pohja > 0 && pohja <= suurin * 1.001) ehdokkaat.push({ kerroin: pohja, porras: -1 });
+    const k = Math.min(suurin, Math.max(pienin, kerroin));
+    if (!ehdokkaat.length) return { kerroin: k, porras: -1 };
+    let paras = ehdokkaat[0];
+    let ero = Infinity;
+    for (const e of ehdokkaat) {
+      const d = Math.abs(Math.log(e.kerroin / k));
+      if (d < ero) { ero = d; paras = e; }
+    }
+    return paras;
+  }
+
   /** Onko yleiskuva (porras 0) juuri nyt sallittu määränpää? */
   yleiskuvaSallittu() {
     return this.fokusZoomMinimi() <= (this.zoomiTasot()[0] ?? 1) * 1.001;
@@ -1518,6 +1566,16 @@ export class Kartta {
      * sen tunniste oikeasti muuttui.
      */
     this.ui.paivitaFokusSumu?.(this.ui.fokusMaat?.());
+    /*
+     * POHJACANVAKSEN PAIKOITUS UUTEEN LAVAAN (js/karttapohja.js).
+     *
+     * Kooste on rakennettu OMASSA lavassaan, ja tämä sovitus vaihtoi
+     * lavan. Paikoitus venyttää vanhan koosteen CSS-muunnoksella
+     * uuteen mittakaavaan, jotta ruudulla on kartta — pehmeänä — koko
+     * sen ajan, kun uutta koostetta rakennetaan. Kutsu on kaksi
+     * tyylikirjoitusta eikä lue asettelua.
+     */
+    this.ui.karttapohja?.paikoita();
     this.placeFactCard(paneW, paneH);
     this.ankkuroiNoppa();
   }
@@ -1909,6 +1967,15 @@ export class Kartta {
     // Sovitus säilyttää näkymän keskipisteen, joten tämä vain kasvattaa
     // lavaa — ruudulla ei muutu mikään.
     this.fitViewBox();
+    /*
+     * NÄKYMÄRAJAUS PURETAAN AJON AJAKSI (js/ui.js
+     * paivitaMaailmanRajaus). Ajo piirtyy CSS-muunnoksena lopullisen
+     * näkymän päälle, ja rajaus laskee ruudun `nakyvaAlue`-luvusta:
+     * ilman purkua lennon aikana ruudulla olisi kaupungittomia
+     * alueita. Lavaunioni on tässä kohtaa jo asetettu, joten kutsu
+     * purkaa rajauksen eikä laske sitä uusiksi.
+     */
+    this.ui.paivitaMaailmanRajaus?.();
 
     const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
     // Lavan origo (ks. LAVAIKKUNA), ei laudan.
@@ -3148,7 +3215,13 @@ export class Kartta {
     const paataNipistys = () => {
       if (!nipistys) return;
       const { pienin } = this.zoomiRajat();
-      const kerroin = nipistys.kerroin * nipistys.suhde;
+      /*
+       * ELE PÄÄTTYY KIINTEÄÄN TASOON (vaihe 3). Vapaa kerroin oli se,
+       * mikä teki jokaisesta nipistyksestä oman mittakaavansa; nyt ele
+       * napsahtaa lähimpään portaaseen (napsautaTasoon).
+       */
+      const napsu = this.napsautaTasoon(nipistys.kerroin * nipistys.suhde);
+      const kerroin = napsu.kerroin;
       const kohde = nipistys.kohde;
       const keski = nipistys.keski;
       nipistys = null;
@@ -3198,7 +3271,18 @@ export class Kartta {
        * tyhjäksi ja sovitaMannerZoom keskittää pelaajan nappulaan —
        * ei koskaan laudan origoon (Grönlanti-hyppy, ks. laudalle).
        */
-      this.ui.zoomiVapaa = kerroin;
+      /*
+       * PORRAS TAI POHJA. Portaalle napsahtanut ele kirjataan
+       * portaikkoon (zoomiVapaa nollaan), jolloin loitonnusnappi jatkaa
+       * siitä, mihin sormet jäivät. Fokusikkunan pohja ei ole porras, ja
+       * se jää vapaaksi kertoimeksi kuten ennenkin.
+       */
+      if (napsu.porras >= 0) {
+        this.ui.zoomiVapaa = 0;
+        this.ui.zoomiPorras = napsu.porras;
+      } else {
+        this.ui.zoomiVapaa = kerroin;
+      }
       this.ui.zoomKohde = kelpaa(kohde) ? kohde : null;
       this.ui.panX = null;
       this.ui.panY = null;
