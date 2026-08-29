@@ -60,11 +60,13 @@
  * Kulmakoristeet ovat kartussin kulmissa — kehyksellä itsellään ei
  * kiertävällä laudalla ole kulmia.
  *
- * Marginaali on MITOITETTU NÄKYMÄÄN: 232 ja 240 kuvapikseliä ovat 435
- * ja 450 lautayksikköä, ja uloimmalla zoomilla (näkyvä leveys = laudan
- * leveys) 16:9-ruudulle jää laudan ylä- ja alapuolelle 574 yksikköä.
- * Marginaali siis mahtuu näkyviin juuri siellä missä sen kuuluukin —
- * ja lähempänä zoomattaessa se jää ruudun ulkopuolelle.
+ * Marginaali on 232 ja 240 kuvapikseliä eli 435 ja 450 lautayksikköä.
+ * KARTTA-ALAN LAAJENNUKSEN JÄLKEEN (tools/tee-yleislehti.mjs KARTTA_ALA,
+ * 84 °N…66 °S) se ei enää mahdu 16:9-työpöydän uloimpaan näkymään:
+ * kartta-ala yksin on 6422 yksikköä ja näkyvä korkeus 6150. Se on
+ * tarkoitus eikä vika — omistaja pyysi juuri karttaa reunaan asti — ja
+ * marginaali tulee näkyviin korkeammalla ruudulla (tabletilla näkyvä
+ * korkeus on 7466 eli koko arkki 7307) sekä panoroitaessa.
  *
  * === LAUTA KIERTÄÄ, JA SE ON PIIRRON ASIA ===
  *
@@ -547,6 +549,12 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
      * 198 kuvapikselin sisään reunaviivasta. Paperia on sen ulkopuolella
      * vielä hitusen (232 ja 240 px), jotta korkeammilla ruuduilla näkyy
      * arkin oma leikattu reuna eikä kesken loppuva kerma.
+     *
+     * MITTAUS ON KARTTA-ALAN LAAJENNUKSEN JÄLKEEN VANHENTUNUT SIINÄ,
+     * MISSÄ SE PUHUU TYÖPÖYDÄSTÄ: kartta-ala täyttää nyt 16:9-ruudun
+     * kokonaan (ks. tiedoston johdanto). Kalusteiden mitat pidetään
+     * silti ennallaan, koska ne on ladottu marginaalin omiin mittoihin
+     * ja marginaali näkyy yhä sekä tabletilla että panoroitaessa.
      */
     const MUSTE_KEHYS = 'rgba(74,52,33,0.86)';
     const MUSTE_HENTO = 'rgba(74,52,33,0.62)';

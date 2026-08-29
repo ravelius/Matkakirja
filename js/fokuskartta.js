@@ -1337,8 +1337,14 @@ function atlasMegapikselia() {
  * mahtuu enemmän jo seuraavassa päivityksessä.
  */
 const ATLAS_OLETUS_MP = 25.6;
-/** ...ja yleislehden oma arvio: koko lauta on maalehteä pienempi kuva. */
-const YLEISLEHDEN_OLETUS_MP = 18.4;
+/*
+ * ...ja yleislehden oma arvio. Luku on lehden todellinen koko: 6400 x
+ * 3897 = 24,9 Mp (atlaskehys ja 84 °N…66 °S:n kartta-ala, v1333 ja
+ * tämä erä). Se on yhä maalehden pessimististä arviota pienempi, mutta
+ * ei enää paljon — ja juuri siksi luku pidetään ajan tasalla: liian
+ * pieni arvio veisi budjetin yli heti, kun pohja puretaan täytenä.
+ */
+const YLEISLEHDEN_OLETUS_MP = 24.9;
 /** Esilatausvara näkymän ympärille, osuutena näkymän mitasta. */
 const ATLAS_VARA = 0.3;
 /** Lehti sivuutetaan, jos se on tätä kapeampi osuus näkymästä. */
@@ -1382,7 +1388,7 @@ const ATLAS_UUSIA_RUUTUJA = 5;
  * lehden leveyteen lautayksikköinä, koska KAIKKI lehdet renderöidään
  * samaan 6400 pikselin leveyteen (tools/tee-fokuskartta.mjs; mitattu
  * ämpäristä 27.8.2026: RUS 6400 x 2520, BGR 6400 x 4003, MAAILMA
- * 6400 x 2879 — vain pikkuruiset maat kuten Kypros jäävät alle, eikä
+ * 6400 x 3897 — vain pikkuruiset maat kuten Kypros jäävät alle, eikä
  * niitä tämä sääntö koske). Kolminkertainen tarkkuus on vähin, mikä
  * ruudulla erottuu; se karsii 134 lehdestä viisi (RUS, CAN, GRL, CHL,
  * CHN) ja vapauttaa niiden megapikselit tarkoille naapureille.
@@ -1791,8 +1797,8 @@ function lehdenMp(iso, lauta) {
   if (tallessa && tallessa !== 'ei' && tallessa.mp) return tallessa.mp;
   /*
    * YLEISLEHDELLÄ ON OMA ARVIONSA. Se on koko laudan kuva eikä
-   * maalehti: 6400 x 2879 = 18,4 Mp (mitattu ämpäristä 27.8.2026),
-   * pienennettynä 3200 x 1440 = 4,6 Mp. Maalehden 25,6 Mp:n arvio
+   * maalehti: 6400 x 3897 = 24,9 Mp, pienennettynä 3200 x 1949 =
+   * 6,2 Mp. Maalehden 25,6 Mp:n arvio
    * veisi pohjakerrokselta paikan puhelimen budjetissa ennen kuin
    * lehti on kertaakaan mitattu.
    */
@@ -2050,9 +2056,9 @@ function karsiAtlas(ui, lauta, suojatut) {
  * tarkkojen naapurien valinnan. Ks. "JÄTTILÄISLEHTI EI ANSAITSE
  * PAIKKAANSA POHJAN PÄÄLLÄ" — nämä kaksi sääntöä ovat yksi korjaus.
  *
- * MUISTI PYSYY KATTOJEN VARASSA. Yleislehti on 6400 x 2879 = 18,4 Mp ≈ 74 Mt
- * (pienennettynä 3200 x 1440 = 4,6 Mp ≈ 18 Mt) eli PIENEMPI kuin
- * tavallinen maalehti, ja se varaa paikkansa katoista (atlasPohjaMp) —
+ * MUISTI PYSYY KATTOJEN VARASSA. Yleislehti on 6400 x 3897 = 24,9 Mp ≈ 100 Mt
+ * (pienennettynä 3200 x 1949 = 6,2 Mp ≈ 25 Mt) eli yhä pienempi kuin
+ * tavallisen maalehden pessimistinen arvio, ja se varaa paikkansa katoista (atlasPohjaMp) —
  * atlakseen mahtuu yksi naapuri vähemmän ja tilalle tulee koko
  * maailman kartta. Karkeiden lehtien karsinta vetää samaan suuntaan:
  * Venäjän 16 megapikseliä siirtyy tarkoille naapurilehdille.

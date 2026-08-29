@@ -72,10 +72,14 @@ const JUURI = join(TAALLA, '..');
  * LAUTA JA SEN PROJEKTIO.
  *
  * Luvut ovat tools/tee-maailmankartta.mjs:n vakioita (LEVEYS 12000,
- * LON0 −175, POHJOINEN 76) ja kaava sen käyttämä Millerin lieriö. Laudan
- * MITAT luetaan laudasta itsestään eikä toisteta tässä: korkeus (5399)
- * on laskettu aikanaan etelärajasta −58, ja jos lauta joskus muuttuu,
- * kuvan on muututtava sen mukana eikä tämän tiedoston vakion.
+ * LON0 −175, POHJOINEN 76) ja kaava sen käyttämä Millerin lieriö. Ne
+ * ovat pelin koko koordinaatiston perusta, eikä niitä muuteta: y = 0 on
+ * 76. leveyspiiri kaikelle, mitä laudalle on esilaskettu.
+ *
+ * LEVEYS luetaan laudasta itsestään (12 000), koska kiertävällä laudalla
+ * lehden on oltava tasan yhden kierroksen levyinen. KORKEUTTA ei lueta:
+ * laudan 5399 yksikköä on vain se pala, jolla pelataan, ja lehti
+ * piirretään sitä korkeammalle alalle (ks. KARTTA_ALA).
  */
 const LAUTA = {
   id: 'maailmankartta',
@@ -137,8 +141,11 @@ const MEDIAANIN_RAJA = 20;
  * aikakauden kartoissa, joissa sama valtameri ladottiin kahdesti.
  *
  * Nimet ovat suomeksi (sama sääntö kuin maalehtien merillä,
- * tools/fokuskartta/maat.mjs). Jäämeri jää pois: lauta päättyy
- * pohjoisessa 76. leveysasteelle, eikä nimelle ole siellä ulappaa.
+ * tools/fokuskartta/maat.mjs). JÄÄMERI JA ETELÄINEN JÄÄMERI TULIVAT
+ * MUKAAN VASTA KARTTA-ALAN LAAJENNUKSESSA (ks. KARTTA_ALA): 76.
+ * leveyspiirillä päättyneellä lehdellä kummallekaan ei ollut ulappaa,
+ * mutta 84 °N…66 °S:n lehdessä on — Siperian pohjoispuolinen selkä ja
+ * eteläkärkien alapuolinen vyö ovat molemmat aukkoa vailla rantaa.
  */
 const MERET = [
   { nimi: 'TYYNIMERI', lon: -142, lat: 4, koko: 26 },
@@ -146,6 +153,8 @@ const MERET = [
   { nimi: 'ATLANTIN VALTAMERI', lon: -38, lat: 26, koko: 22 },
   { nimi: 'ETELÄINEN ATLANTTI', lon: -18, lat: -30, koko: 19 },
   { nimi: 'INTIAN VALTAMERI', lon: 78, lat: -28, koko: 22 },
+  { nimi: 'JÄÄMERI', lon: 110, lat: 80.5, koko: 20 },
+  { nimi: 'ETELÄINEN JÄÄMERI', lon: 60, lat: -61.5, koko: 18 },
 ];
 
 /*
@@ -172,6 +181,36 @@ const MERET = [
  * Alamarginaali on ylempää korkeampi, kuten painetuissa lehdissä: sinne
  * mahtuvat sekä mittakaavajana että painajanrivi.
  */
+/*
+ * ============ KARTTA-ALAN LEVEYSPIIRIT (omistaja 29.8.2026 ilta) =====
+ *
+ * *"alhaalta ja varsinkin ylhäältä leikkautuu liikaa karttaa pois"* —
+ * atlaskehyksen reunaviiva viilsi Grönlannin poikki ja jätti
+ * Huippuvuoret kokonaan lehden ulkopuolelle.
+ *
+ * SYY EI OLLUT KEHYKSESSÄ VAAN SIINÄ, ETTÄ LEHTI OLI TASAN LAUDAN
+ * KOKOINEN. Lauta on 12 000 x 5399 yksikköä, ja sen korkeus vastaa
+ * Millerin lieriössä leveyspiirejä 76 °N…58 °S — juuri Grönlannin
+ * (pohjoisin kärki 83,7 °N), Huippuvuorten (80,8 °N) ja Etelämantereen
+ * niemimaan (63 °S) yli. Kartta-ala irrotettiin siksi laudan mitasta:
+ * lehti piirretään NÄILLE leveyspiireille, ja laudan yläpuoli on kuvassa
+ * negatiivista y:tä aivan kuten paperimarginaali jo oli (KEHYS).
+ *
+ * MIKSI TÄMÄ EI RIKO YHTÄÄN KOORDINAATTIA. Projektion vakiot (LEVEYS
+ * 12000, LON0 −175, POHJOINEN 76) pysyvät koskemattomina, joten y = 0 on
+ * yhä 76. leveyspiiri ja jokainen laudalle esilaskettu piste — kaupungit,
+ * fokuskohteet, eläintäyt, kohtaamispisteet — on täsmälleen entisellä
+ * paikallaan. Miller jatkuu luonnollisesti nollan yläpuolelle; vain
+ * KUVAN laatikko kasvaa. Vaihtoehto (POHJOINEN-vakion muuttaminen) olisi
+ * siirtänyt jokaisen esilasketun luvun sadoilla yksiköillä.
+ *
+ * RAJAT: 84 °N ottaa mukaan koko Grönlannin ja Huippuvuoret mutta jättää
+ * varsinaisen napa-alueen pois (Miller venyttää sitä kohti ääretöntä);
+ * 66 °S vie eteläkärkien — Kap Hornin, Etelä-Georgian — ohi
+ * Etelämantereen niemimaan tyveen asti.
+ */
+const KARTTA_ALA = { pohjoinen: 84, etela: -66 };
+
 const KEHYS = {
   yla: 232,
   ala: 240,
@@ -230,7 +269,7 @@ const kaava = laudanProjektio(projektio);
 /*
  * KAKSI LAATIKKOA: KARTTA-ALA JA KOKO ARKKI.
  *
- * `laudanBbox` on kartta-ala eli tasan lauta. Sen mukaan lasketaan
+ * `laudanBbox` on kartta-ala (ks. KARTTA_ALA). Sen mukaan lasketaan
  * aineiston laatikko asteina ja se kirjataan JSONiin `rajaus`-kenttänä
  * (kameran ikkuna, sama kenttä kuin maalehdillä).
  *
@@ -245,7 +284,11 @@ const kaava = laudanProjektio(projektio);
  * kiertävällä laudalla ei ole sivureunaa (ks. KEHYS).
  */
 const laudanBbox = {
-  x: 0, y: 0, w: pack.map.width, h: pack.map.height,
+  x: 0,
+  y: Math.round(kaava.lautaY(KARTTA_ALA.pohjoinen)),
+  w: pack.map.width,
+  h: Math.round(kaava.lautaY(KARTTA_ALA.etela))
+    - Math.round(kaava.lautaY(KARTTA_ALA.pohjoinen)),
 };
 /** Lautayksikköä yhtä kuvapikseliä kohti valmiissa lehdessä. */
 const YKSIKKOA_PER_PIKSELI = laudanBbox.w / 6400;
@@ -253,7 +296,7 @@ const kehyksenYla = KEHYS.yla * YKSIKKOA_PER_PIKSELI;
 const kehyksenAla = KEHYS.ala * YKSIKKOA_PER_PIKSELI;
 const arkinBbox = {
   x: 0,
-  y: -kehyksenYla,
+  y: laudanBbox.y - kehyksenYla,
   w: laudanBbox.w,
   h: laudanBbox.h + kehyksenYla + kehyksenAla,
 };
@@ -269,8 +312,8 @@ const snap = (v, alas) => (alas ? Math.floor(v / RUUTU) : Math.ceil(v / RUUTU)) 
 const laatikko = {
   lon0: snap(kaava.lautaLon(0) - 0.5, true),
   lon1: snap(kaava.lautaLon(laudanBbox.w) + 0.5, false),
-  lat0: snap(kaava.lautaLat(laudanBbox.h) - 0.5, true),
-  lat1: snap(kaava.lautaLat(0) + 0.5, false),
+  lat0: snap(kaava.lautaLat(laudanBbox.y + laudanBbox.h) - 0.5, true),
+  lat1: snap(kaava.lautaLat(laudanBbox.y) + 0.5, false),
 };
 
 /* ------------------------------------------------------------ tasaus */

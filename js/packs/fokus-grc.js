@@ -977,21 +977,35 @@ export const FOKUS_POHJAT = {
  * näyttää sen kaukozoomissa ja purkaa maalehdet siksi aikaa pois
  * (js/fokuskartta.js "KAUKOZOOMIN YLEISLEHTI").
  *
- * BBOX ON LAUTA JA SEN ATLASKEHYS (omistajan tilaus 29.8.2026: *"ei näy
- * sitä kartan reunapaperia ja lisämerkintöjä?"*). Lehti on kiertävällä
- * laudalla tasan laudan levyinen — sivureunaa ei ole missään zoomissa —
- * mutta sen ylä- ja alapuolelle on poltettu painetun atlaslehden
- * PAPERIMARGINAALI kaksoisviivakehyksineen, kartusseineen,
- * mittakaavajanoineen ja painajanriveineen. Marginaali on 435
- * lautayksikköä ylhäällä ja 450 alhaalla, joten laatikko alkaa laudan
- * yläpuolelta (y = −435) ja on 6284 yksikköä korkea.
+ * LEHTI ON LAUTAA KORKEAMPI — KAHDESTA SYYSTÄ.
  *
- * MARGINAALI NÄKYY VAIN ULOIMMASSA ZOOMISSA, eikä se vaadi
- * liikerajaukselta mitään: uloimmalla tasolla näkymän leveys on laudan
- * leveys (js/kartta.js rajaaSkaala), jolloin 16:9-ruudulle mahtuu
- * pystysuunnassa 6547 yksikköä eli laudan lisäksi 574 yksikköä ylä- ja
- * alapuolelle — juuri se kaista, jolla arkin reuna lepää pergamentin
- * päällä. Lähempänä näkymä kapenee ja marginaali jää ruudun ulkopuolelle.
+ * 1. KARTTA-ALA (omistaja 29.8.2026 ilta: *"alhaalta ja varsinkin
+ *    ylhäältä leikkautuu liikaa karttaa pois"*). Lauta on 5399
+ *    yksikköä korkea, mikä vastaa leveyspiirejä 76 °N…58 °S — juuri
+ *    Grönlannin ja Huippuvuorten yli. Lehti piirretään siksi laudan
+ *    ULKOPUOLELLE asti, leveyspiireille 84 °N…66 °S: y = −611 … 5811.
+ *
+ *    PROJEKTIO EI MUUTU. Millerin lieriön vakiot (LEVEYS 12000, LON0
+ *    −175, POHJOINEN 76) ovat koskemattomat, joten y = 0 on yhä 76.
+ *    leveyspiiri ja jokainen laudalle esilaskettu piste — kaupungit,
+ *    fokuskohteet, eläintäyt, kohtaamiset — on entisellä paikallaan
+ *    yksikön tarkkuudella. Vain kuvan laatikko kasvoi; Miller jatkuu
+ *    nollan yläpuolelle itsestään.
+ *
+ * 2. ATLASKEHYS (omistajan tilaus 29.8.2026: *"ei näy sitä kartan
+ *    reunapaperia ja lisämerkintöjä?"*). Kartta-alan ylä- ja
+ *    alapuolelle on poltettu painetun atlaslehden PAPERIMARGINAALI
+ *    kaksoisviivakehyksineen, kartusseineen, mittakaavajanoineen ja
+ *    painajanriveineen: 435 yksikköä ylhäällä ja 450 alhaalla. Lehti on
+ *    kiertävällä laudalla tasan laudan levyinen — sivureunaa ei ole
+ *    missään zoomissa — joten marginaalia on vain ylhäällä ja alhaalla.
+ *
+ * KUMPI NÄKYY MISSÄKIN. Uloimmalla zoomilla näkymän leveys on laudan
+ * leveys (js/kartta.js rajaaSkaala), joten näkyvä KORKEUS on ruudun
+ * kuvasuhteen asia: 16:9-työpöydällä 6150 yksikköä, tabletilla (1180 x
+ * 820) 7466. Kartta-ala (6422) täyttää siis leveän ruudun reunasta
+ * reunaan — juuri se, mitä omistaja pyysi — ja arkin marginaali tulee
+ * näkyviin korkeammalla ruudulla ja panoroitaessa.
  *
  * Luvut ovat suoraan työkalun kirjoittamasta MAAILMA.json-tiedostosta
  * (tools/tee-yleislehti.mjs; tasauksen ankkurit alle 1,7 lautayksikköä).
@@ -1003,9 +1017,9 @@ export const FOKUS_POHJAT = {
  */
 export const YLEISLEHTI = {
   lauta: 'maailmankartta',
-  bbox: { x: 0, y: -435, w: 12000, h: 6284 },
-  // Kameran ikkuna on kartta-ala eli tasan lauta — marginaaliin ei ajeta.
-  rajaus: { x: 0, y: 0, w: 12000, h: 5399 },
+  bbox: { x: 0, y: -1046, w: 12000, h: 7307 },
+  // Kameran ikkuna on kartta-ala (84 °N…66 °S) — marginaaliin ei ajeta.
+  rajaus: { x: 0, y: -611, w: 12000, h: 6422 },
   tiedosto: 'MAAILMA.webp',
 };
 
