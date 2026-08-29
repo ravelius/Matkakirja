@@ -57,12 +57,19 @@
  * ── ELÄINTÄKY: KISSAT OVAT LIVIAN, EIVÄT TÄKYJEN ──────────────────
  *
  * Kaanoninen Livian repliikki kertoo jo museon kellareiden kissoista
- * ("ihan virallisesti"), ja sama juttu on kaupunkilehdessä (nosto
- * "Museon virkakissat") sekä kulttuurivisassa (js/packs/
+ * ("ihan virallisissa viroissa"), ja sama juttu on kaupunkilehdessä
+ * (nosto "Museon virkakissat") sekä kulttuurivisassa (js/packs/
  * europe-kulttuuri.js, pietari). Kolmas kertaus samassa kulussa olisi
  * kaava, joten TÄSSÄ PAKETISSA EI OLE KISSATÄKYÄ. Raamatun
  * eläinlinjaus täyttyy täkynostopoolissa: `baikal` kertoo
  * baikalinnorpasta ja sen kuva on norppakuva.
+ *
+ * FABLEN KORJAUS 30.8.2026: repliikki sanoi ensin, että kissat ovat
+ * kellareissa "vartioimassa aarteita, ihan virallisesti" — ja juuri
+ * VARTIOINTI on kulttuurivisan oikea vaihtoehto (visa kysyy, MIKSI
+ * kissat siellä asuvat). Nyt repliikki kertoo vain viran ja jättää
+ * syyn auki: *"minkä takia, se selviää sulle perillä."* Kissat ovat
+ * yhä Livian, mutta vastaus on visan.
  *
  * ── FAKTAPOHJA ─────────────────────────────────────────────────────
  *
@@ -263,9 +270,9 @@ export const FOKUSVIRTA_PIETARI = {
     teksti: 'Ne valoisat kesäyöt ovat edelleen kaupungin juhla-aikaa, ja '
       + 'siltojen nousua kerääntyy katsomaan väkeä kuin ilotulitusta.. '
       + 'Se palatsin taidekokoelma on nykyään yksi maailman suurimmista '
-      + 'museoista — ja sen kellareissa asuu kissoja vartioimassa '
-      + 'aarteita, ihan virallisesti. Rantakadulle siis, vaikka kello '
-      + 'olisi mitä.',
+      + 'museoista — ja sen kellareissa asuu kissoja ihan virallisissa '
+      + 'viroissa.. minkä takia, se selviää sulle perillä. Rantakadulle '
+      + 'siis, vaikka kello olisi mitä.',
     kuva: {
       ampari: 'herokoe/hero-pietari-aamu.png',
       /* Selite on lehden oman avauskuvan selite sellaisenaan; yksikään

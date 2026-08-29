@@ -691,7 +691,7 @@ export const FOKUSVIRTA_VARSOVA = {
    * ---------- 4. Oppitunti ----------
    *
    * Pohjustaa KOHTAAMISEN (Vilnan kaava, ei Sevillan): antikvaari
-   * Halina haluaa tietää, tunteeko vieras sen, mitä tässä kaupungissa
+   * Jadwiga haluaa tietää, tunteeko vieras sen, mitä tässä kaupungissa
    * on tapana tehdä kirjoille. Oppitunti kertoo, mitä niille on tehty.
    * Laattakysymystä se ei pohjusta — kaanoninen Livia-teksti pohjustaa
    * jo kaksi niistä, ja kolmas (Skłodowska-Curie) on kaupunkilehden
@@ -825,11 +825,26 @@ export const FOKUSVIRTA_VARSOVA = {
    * FABLE KATSELMOI: kohtaamisluonnos
    *
    * Varsovalla ei ole riviä js/packs/kohtaamiset.js:ssä eikä
-   * tarinakaaren pakettia (js/tyohuone-kehitys-data.js KAARI_PAKETIT),
-   * joten tälle kaupungille ei ole valmista hahmoa: alla oleva Halina
+   * KAARI_PAKETIT-listassa (js/tyohuone-kehitys-data.js), joten tälle
+   * kaupungille kirjoitettiin oma hahmo: alla oleva Antikvaari Jadwiga
    * on EHDOTUS, ei kaanonia. Kortti on esittely; VARSINAINEN KYSYMYS on
    * ennallaan laattamekaniikassa (game.actionQuiz lukee js/packs/
    * europe-questions.js, varsova), eikä tämä paketti kosketa sitä.
+   *
+   * *** HUOM FABLELLE: NIMITOISTO KAUPUNGIN SISÄLLÄ. ***
+   *
+   * Yllä oleva perustelu oli integroinnissa osin väärä, ja virhe on
+   * kirjattu tähän näkyviin: Varsovalla EI OLE riviä KAARI_PAKETIT-
+   * listassa, mutta sillä ON elävä tarinakaari js/packs/tarinakaari.js:n
+   * TARINAKAARI-taulussa (`varsova`), jonka lukevat js/game.js, js/ui.js,
+   * js/visa.js ja js/fokusvirta.js. Sen kaaren hahmo on **Kalastaja
+   * Jadwiga**. Nimi vaihdettiin 30.8.2026 Fablen ohjeella Halinasta
+   * Jadwigaksi, jotta Krakovan Szopkanrakentaja Halinan kanssa ei olisi
+   * nimitoistoa Puolan kahden kaupungin välillä — mutta tuloksena
+   * Varsovassa on nyt KAKSI Jadwigaa: kaaren kalastaja ja tämän
+   * paketin antikvaari. Saman kaupungin sisäinen toisto osuu pelaajaan
+   * lähempää kuin kahden kaupungin välinen. Vaihto on yhä yhden lohkon
+   * työ (hahmo, varmistus, teksti ja tämän lohkon kommentit).
    *
    * KUVAA EI OLE (omistajan linjaus): kohtaamiskortissa on vain hahmo,
    * nappi, varmistus, vihjeOsio ja teksti.
@@ -841,7 +856,7 @@ export const FOKUSVIRTA_VARSOVA = {
    * toistona, vaihto on yhden lohkon työ.
    *
    * ÄÄNIPROFIILI (tarinakaari, luku 3): PUHELIAS, ja lisäksi se, joka
-   * HÄMMÄSTYY ITSEKIN — Halina vastaa kysymykseen kolmella, ja kesken
+   * HÄMMÄSTYY ITSEKIN — Jadwiga vastaa kysymykseen kolmella, ja kesken
    * puheen hän tajuaa jotain, mitä ei ole ennen ajatellut. Vilnan Rasa
    * ja Sevillan Amparo ovat molemmat epäuskoisia, joten tämä paketti
    * ottaa toisen profiilin tarkoituksella.
@@ -853,16 +868,16 @@ export const FOKUSVIRTA_VARSOVA = {
    * ammattiylpeys. Vuosisataista ylläpidettyä perinnettä EI ole: lukua
    * ei ole jatkettu, ja juuri se on vitsi.
    *
-   * LUPAUS, JONKA AARRETEKSTIN ON LUNASTETTAVA: Halina avaa kirjan
+   * LUPAUS, JONKA AARRETEKSTIN ON LUNASTETTAVA: Jadwiga avaa kirjan
    * siltä lehdeltä, jossa on vieras käsiala.
    *
    * EI SPOILERIA: kortti ei mainitse Chopinia, sydäntä, jälleen-
    * rakennusta, Skłodowska-Curieta, pierogeja eikä merenneitoa.
    */
   kohtaaminen: {
-    hahmo: 'Antikvaari Halina',
+    hahmo: 'Antikvaari Jadwiga',
     nappi: 'Tapaa antikvaari',
-    varmistus: 'Haluatko varmasti tavata Halinan juuri nyt?',
+    varmistus: 'Haluatko varmasti tavata Jadwigan juuri nyt?',
     /*
      * VIHJELINKIN OSIO (omistajan pelitestipalaute v1119, kohta 13):
      * rivi kertoo, MISTÄ PÄIN LEHTEÄ ratkaisu löytyy, vastausta
@@ -875,7 +890,7 @@ export const FOKUSVIRTA_VARSOVA = {
      * yhtä.
      */
     vihjeOsio: 'kaupunki',
-    teksti: 'Halinan antikvariaatti on Kuninkaiden talon kulmalla, ja hän '
+    teksti: 'Jadwigan antikvariaatti on Kuninkaiden talon kulmalla, ja hän '
       + 'puhuu kolme asiaa siinä ajassa, jossa toinen ehtisi yhden: mistä '
       + 'kirja on tullut, kenen kädestä, ja miksi kukaan ei nykyään enää '
       + 'sido kirjoja kunnolla. Hyllyjen takana on yksi teos, jota hän ei '
@@ -885,7 +900,7 @@ export const FOKUSVIRTA_VARSOVA = {
       + 'silloisen omistajan mielestä oli nöyryyttävää, ettei hän tiennyt '
       + 'kirjojensa lukumäärää. Sukupolvet ovat säilyttäneet kirjan siitä '
       + 'yksinkertaisesta syystä, että alaa arvostava ei heitä pois '
-      + 'kirjanpitoa. Halina keskeyttää itsensä ja sanoo, ettei kukaan '
+      + 'kirjanpitoa. Jadwiga keskeyttää itsensä ja sanoo, ettei kukaan '
       + 'heistä ole jatkanut laskemista — ja näyttää siltä, ettei ole '
       + 'tullut ajatelleeksi sitä ennen tätä hetkeä. Kirjan hän kyllä '
       + 'ottaa esiin. Mutta ei ennen kuin vieras osoittaa tietävänsä '
@@ -899,7 +914,7 @@ export const FOKUSVIRTA_VARSOVA = {
 
   /*
    * KOHTAAMISPAIKKA: KUNINKAIDEN TALO, entinen Załuskien kirjasto.
-   * Halinan puoti on sen kulmalla, ja oppitunti kertoo juuri siitä
+   * Jadwigan puoti on sen kulmalla, ja oppitunti kertoo juuri siitä
    * talosta — vihreä piste osoittaa siis paikkaa, jonka pelaaja on jo
    * tavannut tekstissä.
    *
