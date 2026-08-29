@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1331';
+const CACHE = 'matkakirja-2026-08-09.1332';
 const SHELL = [
   './',
   './index.html',
@@ -215,6 +215,16 @@ const SHELL = [
   './js/packs/fokusvirta-kobenhavn.js',
   './js/packs/fokusvirta-helsinki.js',
   './js/packs/fokusvirta-tallinna.js',
+  // Aalto 4A (29.8.2026): Sevilla, Bergen, Amsterdam, Dublin,
+  // Edinburgh, Lissabon ja Riika. Sama sääntö kuin aalloilla 2 ja 3 —
+  // ei kohdenostoja, joten paririviä ei tarvita.
+  './js/packs/fokusvirta-sevilla.js',
+  './js/packs/fokusvirta-bergen.js',
+  './js/packs/fokusvirta-amsterdam.js',
+  './js/packs/fokusvirta-dublin.js',
+  './js/packs/fokusvirta-edinburgh.js',
+  './js/packs/fokusvirta-lissabon.js',
+  './js/packs/fokusvirta-riika.js',
   // Maat ilman omaa fokusvirtaa: kadonneiden ihmeiden erä 26.8.2026
   // ja Matkakirjan ihmeiden Euroopan erä 27.8.2026.
   './js/packs/fokuskohteet-egy.js',
