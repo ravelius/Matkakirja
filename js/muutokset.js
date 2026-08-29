@@ -13,7 +13,11 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 1333, teksti: 'Maastokohteet avattaviksi Euroopassa' },
+  { v: 1335, teksti: 'Maastokohteet avattaviksi Euroopassa' },
+  { v: 1334, teksti: 'Maailmatilan nopeus ja merkkikoko' },
+  { v: 1333, teksti: 'Atlaskehys maailmalehteen' },
+  { v: 1332, teksti: 'Aalto 4A: seitseman uutta fokuskaupunkia' },
+  { v: 1331, teksti: 'Koko maailman kartat: vesiviivat ja sumuton pohja' },
   { v: 1330, teksti: 'Euroopan lehdet ilman sumennusta, pehmeampi maasto' },
   { v: 1329, teksti: 'Kartat: patina keskitaso koko maailmaan' },
   { v: 1328, teksti: 'Elaintakyt: 29 maan elaimet kartalle' },

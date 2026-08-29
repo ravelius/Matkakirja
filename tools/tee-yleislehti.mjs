@@ -148,6 +148,49 @@ const MERET = [
   { nimi: 'INTIAN VALTAMERI', lon: 78, lat: -28, koko: 22 },
 ];
 
+/*
+ * ATLASKEHYS (omistajan tilaus 29.8.2026: *"ei näy sitä kartan
+ * reunapaperia ja lisämerkintöjä?"*).
+ *
+ * Uloimmalla zoomtasolla kartan pitää maata paperilla kuten oikean
+ * atlaksen lehti. Marginaali on VAIN ylhäällä ja alhaalla — lauta on
+ * kiertävä, eikä sillä ole vaakasuunnassa reunaa lainkaan (perustelu
+ * kokonaisuudessaan tools/fokuskartta/maailmapiirto.js johdannossa).
+ *
+ * MITAT OVAT KUVAPIKSELEITÄ 6400 PIKSELIN LEHDELLÄ, ja ne on valittu
+ * pelin näkymästä eikä silmämääräisesti:
+ *
+ *   1 kuvapikseli = 12000 / 6400 = 1,875 lautayksikköä
+ *   ylämarginaali 232 px = 435 yksikköä, alamarginaali 240 px = 450
+ *
+ * Uloimmassa zoomissa näkyvä leveys on laudan leveys (js/kartta.js
+ * rajaaSkaala), joten 16:9-ruudulla näkyvä korkeus on 6547 yksikköä ja
+ * laudan (5399) ylä- ja alapuolelle jää 574 yksikköä. Marginaali mahtuu
+ * siis näkyviin juuri siellä missä sen kuuluu — ja koska lähemmäs
+ * zoomattaessa näkymä kapenee, se katoaa ruudulta itsestään.
+ *
+ * Alamarginaali on ylempää korkeampi, kuten painetuissa lehdissä: sinne
+ * mahtuvat sekä mittakaavajana että painajanrivi.
+ */
+const KEHYS = {
+  yla: 232,
+  ala: 240,
+  otsikko: 'MATKAKIRJA',
+  alaotsikko: 'Unohdettu aarre',
+  painaja: 'Painettu Matkakirjan kustantamossa MDCCCLXXIII',
+  oikeudet: '© Matkakirja',
+};
+
+/*
+ * KOMPASSIRUUSU eteläiselle Tyynellemerelle.
+ *
+ * Paikka on laudan suurin yhtenäinen tyhjä vesi: ei kaupunkeja, ei
+ * laattoja, ei valtameren nimeä (lähin on TYYNIMERI 33 astetta
+ * pohjoisempana). Ruusu on kartan sisällä eikä marginaalissa, kuten
+ * aikakauden atlaksissa.
+ */
+const KOMPASSI = { lon: -132, lat: -38, sade: 132 };
+
 /* ------------------------------------------------------------ argumentit */
 
 const argv = process.argv.slice(2);
@@ -185,15 +228,34 @@ const { projektio } = LAUTA;
 const kaava = laudanProjektio(projektio);
 
 /*
- * KUVA ON KOKO LAUTA. Maalehdillä on kaksi laatikkoa — kuva ja sen
- * sisällä kameran ikkuna — koska kuvan reunan ympärille tarvitaan
- * vuotoa. Yleislehdellä vuotoa ei ole eikä tarvita: lehti on tasan
- * laudan kokoinen, eikä sen ulkopuolella ole lautaa, johon jäisi sauma.
- * `rajaus` kirjataan silti samaksi laatikoksi, jotta JSON on
- * samanmuotoinen kuin maalehtien.
+ * KAKSI LAATIKKOA: KARTTA-ALA JA KOKO ARKKI.
+ *
+ * `laudanBbox` on kartta-ala eli tasan lauta. Sen mukaan lasketaan
+ * aineiston laatikko asteina ja se kirjataan JSONiin `rajaus`-kenttänä
+ * (kameran ikkuna, sama kenttä kuin maalehdillä).
+ *
+ * `arkinBbox` on koko painettu arkki: kartta-ala ja sen ylä- ja
+ * alapuolella atlaskehyksen paperimarginaali (KEHYS). Se on kuvan
+ * paikka laudalla, ja juuri se menee JSONin `bbox`-kenttään ja pelin
+ * pakkaan (js/packs/fokus-grc.js YLEISLEHTI) — peli venyttää kuvan
+ * siihen laatikkoon sellaisenaan, joten marginaali asettuu laudan ylä-
+ * ja alapuolelle pergamentin päälle.
+ *
+ * LEVEYS ON MOLEMMILLA SAMA. Marginaalia ei ole sivuilla, koska
+ * kiertävällä laudalla ei ole sivureunaa (ks. KEHYS).
  */
 const laudanBbox = {
   x: 0, y: 0, w: pack.map.width, h: pack.map.height,
+};
+/** Lautayksikköä yhtä kuvapikseliä kohti valmiissa lehdessä. */
+const YKSIKKOA_PER_PIKSELI = laudanBbox.w / 6400;
+const kehyksenYla = KEHYS.yla * YKSIKKOA_PER_PIKSELI;
+const kehyksenAla = KEHYS.ala * YKSIKKOA_PER_PIKSELI;
+const arkinBbox = {
+  x: 0,
+  y: -kehyksenYla,
+  w: laudanBbox.w,
+  h: laudanBbox.h + kehyksenYla + kehyksenAla,
 };
 
 /*
@@ -257,8 +319,11 @@ const tasaus = tarkistaProjektio();
 
 const alkoi = Date.now();
 console.log(`Yleislehti — lauta ${LAUTA.id}`);
-console.log(`  kuva laudalla   x ${laudanBbox.x} y ${laudanBbox.y} `
+console.log(`  kartta-ala      x ${laudanBbox.x} y ${laudanBbox.y} `
   + `w ${laudanBbox.w} h ${laudanBbox.h}`);
+console.log(`  arkki laudalla  x ${arkinBbox.x} y ${arkinBbox.y} `
+  + `w ${arkinBbox.w} h ${arkinBbox.h} `
+  + `(atlaskehys ${KEHYS.yla}+${KEHYS.ala} px)`);
 console.log(`  asteina         lon ${laatikko.lon0}..${laatikko.lon1} `
   + `lat ${laatikko.lat0}..${laatikko.lat1}`);
 console.log(`  aineisto        ${dataKansio}`);
@@ -381,11 +446,13 @@ async function renderoi(asetukset) {
 
 mkdirSync(kohdekansio, { recursive: true });
 
+const TYYLI = { meret: MERET, kehys: KEHYS, kompassi: KOMPASSI };
+
 const { puskuri, mitat } = await renderoi({
-  bbox: laudanBbox,
+  bbox: arkinBbox,
   projektio,
   leveys: kuvaLeveys,
-  tyyli: { meret: MERET },
+  tyyli: TYYLI,
 });
 const kuvaPolku = join(kohdekansio, `MAAILMA.${MUOTO}`);
 writeFileSync(kuvaPolku, puskuri);
@@ -395,9 +462,14 @@ writeFileSync(jsonPolku, `${JSON.stringify({
   id: 'MAAILMA',
   lauta: LAUTA.id,
   // Kuvan paikka LAUDAN koordinaateissa: peli asettaa <image>-elementin
-  // tähän laatikkoon sellaisenaan. Yleislehdellä se on koko lauta.
-  bbox: laudanBbox,
+  // tähän laatikkoon sellaisenaan. Yleislehdellä se on lauta ja sen
+  // ylä- ja alapuolelle ulottuva atlaskehyksen paperimarginaali, joten
+  // laatikko alkaa laudan yläpuolelta (y on negatiivinen).
+  bbox: arkinBbox,
+  // Kameran ikkuna on kartta-ala eli tasan lauta — marginaaliin ei ajeta.
   rajaus: laudanBbox,
+  kehys: KEHYS,
+  kompassi: KOMPASSI,
   kuva: mitat,
   tiedosto: `MAAILMA.${MUOTO}`,
   tehty: new Date().toISOString().slice(0, 10),
@@ -417,10 +489,10 @@ if (lippu('esikatselu')) {
   // Sama kuva pergamentin päällä: häivytetty reuna näyttää katselimessa
   // mustalta, eikä kuvaa voi sillä taustalla arvioida.
   const { puskuri: e } = await renderoi({
-    bbox: laudanBbox,
+    bbox: arkinBbox,
     projektio,
     leveys: kuvaLeveys,
-    tyyli: { meret: MERET },
+    tyyli: TYYLI,
     esikatseluTausta: '#e9d8b0',
   });
   writeFileSync(join(kohdekansio, `MAAILMA-esikatselu.${MUOTO}`), e);

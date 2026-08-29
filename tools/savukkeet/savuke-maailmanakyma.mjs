@@ -173,6 +173,29 @@ const tila = () => sivu.evaluate(() => {
     citiesSolmut: ui.svg.querySelectorAll('.cities > *').length,
     citiesNakyvia: nakyvia('.cities > *'),
     rajattuja: ui.svg.querySelectorAll('.fokus-ikkunan-ulkona').length,
+    /*
+     * KAUPUNKIPALLOJEN LEVEYS RUUDULLA. Mitataan ruudulta eikä
+     * määreistä: juuri se on kysymys, jonka omistaja esitti
+     * kuvakaappauksella. Nykyisen kaupungin laatta on mittatikku —
+     * se on ainoa, joka oli oikein jo ennen korjausta.
+     */
+    pallot: (() => {
+      const oma = ui.game?.cityOf?.()?.id ?? null;
+      let omaLeveys = 0;
+      let suurin = 0;
+      for (const osa of ui.svg.querySelectorAll('.cities > .city, .cities > .city-start')) {
+        if (getComputedStyle(osa).display === 'none') continue;
+        const w = osa.getBoundingClientRect().width;
+        if (!(w > 0)) continue;
+        if (osa.dataset.kaupunki === oma) omaLeveys = w;
+        if (w > suurin) suurin = w;
+      }
+      return { oma: Math.round(omaLeveys), suurin: Math.round(suurin) };
+    })(),
+    // Yleiskuvan nimiportti (js/ui.js paivitaKaupunkinimienNakyvyys).
+    nimetPiilossa: Boolean(ui.svg.querySelector('.cities.kaupunkinimet-piilossa')),
+    nimiaNakyvissa: nakyvia('.cities .city-label'),
+    nakyvanLeveys: Math.round(ui.nakyvaAlue?.()?.w ?? 0),
   };
 });
 
@@ -362,6 +385,75 @@ vaadi('8 merkit palaavat kun näkymä siirtyy niiden ylle',
   ennenSiirtoa !== siirronJalkeen && siirtoTila.citiesNakyvia > 0
     && siirtoTila.citiesNakyvia < 250,
   `vaihtui ${ennenSiirtoa !== siirronJalkeen}, näkyviä ${siirtoTila.citiesNakyvia}`);
+
+/*
+ * Väite 9: KAUPUNKIPALLOT OVAT SAMAA MITTAA KUIN NYKYISEN KAUPUNGIN
+ * LAATTA (omistajan laiteraportti 29.8.2026: *"kaupunkipallot
+ * hervottoman kokoisia"*).
+ *
+ * Fokusnäkymässä nykyisen kaupungin laatta kutistetaan ruudulla
+ * vakiokokoiseksi (js/ui.js paivitaFokusLaatta, FOKUS_LAATTA_PX), ja
+ * muut kaupungit ovat piilossa lehden alla. Maailmanäkymä pitää ne
+ * kaikki kartalla — ja ennen korjausta ne jäivät LAUDAN yksiköihin,
+ * jolloin fokuszoomi suurensi ne moninkertaisiksi (mitattu Kreikassa
+ * 1470x923-ruudulla: nykyinen 15 px, naapuri 47 px).
+ *
+ * Korjauksen jälkeen kaikilla on sama kerroin
+ * (paivitaMaailmanLaattaKoot), joten suurimman ja nykyisen suhde on
+ * enää laudan oma kokoero: lähtökaupungin laatta on isompi kuin
+ * tavallisen. Raja 2,0 päästää sen läpi mutta kaatuu heti, jos
+ * mitoitus katoaa — silloin suhde on vähintään kolme.
+ */
+// Takaisin Ateenan ylle: väite 8 panoroi kauas, ja mittatikku on
+// nykyisen kaupungin laatta — sen on oltava ruudulla.
+for (let i = 0; i < 6; i++) {
+  await pyyhkaisy(60, 420, 340, 420);
+  await sivu.waitForTimeout(300);
+}
+await sivu.waitForTimeout(1500);
+const pallot = (await tila()).pallot;
+console.log(`      mitattu: nykyisen kaupungin laatta ${pallot.oma} px,`
+  + ` suurin kaupunkipallo ${pallot.suurin} px`);
+vaadi('9 kaupunkipallot ovat nykyisen laatan mittaluokassa',
+  pallot.oma > 0 && pallot.suurin > 0 && pallot.suurin / pallot.oma < 2.0,
+  `oma ${pallot.oma} px, suurin ${pallot.suurin} px`);
+
+/*
+ * Väite 10: YLEISKUVASSA EI KAUPUNKIEN NIMIÄ (omistajan tilaus
+ * 29.8.2026: *"älä näytä kaupunkien nimiä tällä zoom tasolla"*).
+ *
+ * Kaksi mittausta samasta kartasta: lähikuva (nimet näkyvissä) ja
+ * koko maailma kerralla (nimet piilossa). Raja on näkymän leveys
+ * pituusasteina (js/ui.js KAUPUNKINIMET_NAKYY_ASTETTA), joten väite
+ * mittaa molemmat puolet — pelkkä piilotus läpäisisi testin myös
+ * silloin, jos nimet katoaisivat kokonaan.
+ */
+const lahikuva = await tila();
+console.log(`      mitattu: lähikuva ${lahikuva.nakyvanLeveys} yks,`
+  + ` nimiä ${lahikuva.nimiaNakyvissa}, portti ${lahikuva.nimetPiilossa}`);
+vaadi('10a lähikuvassa kaupunkien nimet ovat kartalla',
+  !lahikuva.nimetPiilossa && lahikuva.nimiaNakyvissa > 0,
+  `portti ${lahikuva.nimetPiilossa}, nimiä ${lahikuva.nimiaNakyvissa}`);
+
+// Koko lauta ruudulle: napsautetaan uloimpaan zoomtasoon asti.
+await sivu.evaluate(() => {
+  const k = window.matkakirja.ui.kartta;
+  for (let i = 0; i < 10; i++) k.zoomaaPainikkeella(-1);
+});
+await sivu.waitForTimeout(3000);
+const yleiskuva = await tila();
+console.log(`      mitattu: yleiskuva ${yleiskuva.nakyvanLeveys} yks,`
+  + ` nimiä ${yleiskuva.nimiaNakyvissa}, portti ${yleiskuva.nimetPiilossa}`);
+/*
+ * Lähtökaupunkien nimet (.start-label) jäävät tarkoituksella, joten
+ * väite ei vaadi nollaa vaan romahdusta: yleiskuvassa nimiä on
+ * murto-osa lähikuvan määrästä.
+ */
+vaadi('10b yleiskuvassa kaupunkien nimet ovat poissa',
+  yleiskuva.nimetPiilossa
+    && yleiskuva.nimiaNakyvissa < lahikuva.nimiaNakyvissa,
+  `portti ${yleiskuva.nimetPiilossa}, nimiä ${yleiskuva.nimiaNakyvissa}`
+  + ` (lähikuvassa ${lahikuva.nimiaNakyvissa})`);
 
 await selain.close();
 palvelin.close();

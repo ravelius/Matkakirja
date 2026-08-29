@@ -107,6 +107,18 @@ const MODULES = [
   'js/packs/fokusvirta-kobenhavn.js',
   'js/packs/fokusvirta-helsinki.js',
   'js/packs/fokusvirta-tallinna.js',
+  // Aalto 4A (29.8.2026): Sevilla, Bergen, Amsterdam, Dublin,
+  // Edinburgh, Lissabon ja Riika. Sama sääntö kuin aalloilla 1–3 — ei
+  // kohdenostoja, mutta js/fokusnosto.js lukee näidenkin
+  // takynostot-kentän maapooliinsa, joten paketit on niputettava
+  // ennen sitä.
+  'js/packs/fokusvirta-sevilla.js',
+  'js/packs/fokusvirta-bergen.js',
+  'js/packs/fokusvirta-amsterdam.js',
+  'js/packs/fokusvirta-dublin.js',
+  'js/packs/fokusvirta-edinburgh.js',
+  'js/packs/fokusvirta-lissabon.js',
+  'js/packs/fokusvirta-riika.js',
   // Egyptillä ja Irakilla ei ole omaa fokusvirtaa: pelkät kohteet
   // (kadonneiden ihmeiden erä 26.8.2026), joten paririviä ei ole.
   // Sama koskee Ranskaa ja Britanniaa (Matkakirjan ihmeiden Euroopan
