@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1325: SAHKETEHTAVAN VAIHE 2 - vapaa tekstikentta lomakkeen rinnalla (Sofia + Tukholma). Kokeile "vasa 1961" (ilmainen paikallinen tunnistus) ja sitten omin sanoin kiertaen. VAATII "Pollon julkaisu" -ajon, tai vastaus ohjaa lomakkeeseen.',
   'v1324: BITTIKARTTA VAIHE 1 - pohjacanvas: WebKitin pahin kehys 1780->885 ms, purku 1105->73 ms. RATKAISEVA LAITETESTI: edestakainen liike irrottamatta (kaannostokkays) + yleistuntuma.',
   'v1323: KORTIT PAALLA - koko annostelukulku pelattavissa: taky + visa (+50 puntaa) -> oppitunti -> kohtaaminen/sahke. Kay Sofia tai Madrid lapi.',
   'v1322: Livia mukaan aloitusvalinnassa (5 kuplaa) + ensisaapumisen tuurausparjastus + mannerivihje. Aloita uusi peli.',

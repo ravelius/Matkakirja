@@ -151,6 +151,9 @@ const BANITSA_VISA = {
  * yksi rivi (ks. sahketehtava-kentän kommentti alempana).
  */
 const SAHKE_SOFIA = {
+  /* Vapaan vastauksen (vaihe 2) tunnus; ks. fokusvirta-tukholma.js. */
+  id: 'sofia-varna',
+
   hahmo: 'Pöllöltä, jostain maan alta',
 
   sahke: 'LIVIALLE STOP\n'
@@ -194,6 +197,12 @@ const SAHKE_SOFIA = {
        * ovat NIMELLÄ, koska juuri nimi lukee kohdekortin otsikkona.
        */
       oikeat: ['Varna'],
+      /*
+       * Vapaan tekstin tunnetut kirjoitusasut (vaihe 2): sijamuodot ja
+       * se, mitä kohteesta useimmiten sanotaan. Suppea lista riittää —
+       * kaikki muu menee pöllön tulkittavaksi eikä siis kaadu tähän.
+       */
+      vapaat: ['Varnan', 'Varnassa', 'Varnasta', 'Varnan nekropoli', 'Varnan kalmisto'],
     },
     {
       id: 'vuosi',
@@ -209,6 +218,10 @@ const SAHKE_SOFIA = {
   ],
 
   laheta: 'Lähetä sähke pöllölle',
+  /* Vapaan vastauksen kenttä ja sen oma nappi (vaihe 2). */
+  vapaaOtsake: 'Tai kirjoita vastaus omin sanoin',
+  vapaaVihje: 'Esimerkiksi: se paikka jossa kulta löytyi, ja vuosi',
+  lahetaVapaa: 'Lähetä omin sanoin',
   vaarinSahke: 'EI TÄSMÄÄ STOP TARKISTA KOHDE JA VUOSILUKU STOP',
 
   vinkki: 'Kato, minä sanon sen nyt suoraan: se kohde on kartalla '

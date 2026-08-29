@@ -99,6 +99,14 @@
  * kahden ohilyönnin jälkeen Livia sanoo lähteen suoraan.
  */
 const SAHKE_TUKHOLMA = {
+  /*
+   * TEHTÄVÄN TUNNUS on vapaan vastauksen (vaihe 2) avain: peli lähettää
+   * VAIN tämän tunnuksen ja pelaajan tekstin välityspalvelimelle, joka
+   * tietää oikean vastauksen (tools/pollo/rajat.js SAHKE_VASTAUKSET).
+   * Tunnus ja taulu pidetään synkassa yksikkötestillä.
+   */
+  id: 'tukholma-vasa',
+
   hahmo: 'Pöllöltä, meren yli',
 
   /*
@@ -151,6 +159,15 @@ const SAHKE_TUKHOLMA = {
        * Ruotsin maalehden Historia-sivulta.
        */
       oikeat: ['Laiva, joka upposi ja nousi', 'Laiva, joka kaatui tuhannen metrin jälkeen'],
+      /*
+       * VAPAAN TEKSTIN TUNNETUT KIRJOITUSASUT (vaihe 2). Nämä ovat
+       * pelin ILMAINEN oikopolku: jos pelaajan omin sanoin kirjoitettu
+       * vastaus sisältää jonkin näistä ja oikean vuosiluvun, se
+       * hyväksytään paikallisesti eikä Livian tarvitse lentää.
+       * Lista saa olla suppea — kaikki muu menee pöllön tulkittavaksi,
+       * eikä siitä siis seuraa hylkäys.
+       */
+      vapaat: ['Vasa', 'Wasa', 'Vaasa', 'Vasan', 'Vasaa'],
     },
     {
       id: 'vuosi',
@@ -167,6 +184,10 @@ const SAHKE_TUKHOLMA = {
   ],
 
   laheta: 'Lähetä sähke pöllölle',
+  /* Vapaan vastauksen kenttä ja sen oma nappi (vaihe 2). */
+  vapaaOtsake: 'Tai kirjoita vastaus omin sanoin',
+  vapaaVihje: 'Esimerkiksi: se laiva joka nostettiin merestä, ja vuosi',
+  lahetaVapaa: 'Lähetä omin sanoin',
   vaarinSahke: 'EI TÄSMÄÄ STOP TARKISTA KOHDE JA VUOSILUKU STOP',
 
   /* Kahden ohilyönnin jälkeen Livia sanoo lähteen suoraan. */

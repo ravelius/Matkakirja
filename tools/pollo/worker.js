@@ -29,6 +29,7 @@ import {
   KUVA_PAIVARAJA_OLETUS,
   KUVA_PROMPTIN_KATTO,
   PUHE_TEKSTIN_KATTO,
+  SAHKE_VASTAUKSET,
   kuukausiAvain,
   lueLista,
   lueLuku,
@@ -36,11 +37,15 @@ import {
   paivaAvain,
   poimiEhdotukset,
   poimiJatkot,
+  poimiSahkeTuomio,
   puheKuukausiAvain,
   puhePaivaAvain,
+  sahkeKehote,
+  sahkeViesti,
   sallittuOrigin,
   siivoaHistoria,
   siivoaTeksti,
+  siivoaVapaaVastaus,
   tarkistaPuheRajat,
   tarkistaRajat,
   vertaaSalaisuus,
@@ -963,7 +968,9 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
 }
 
 /** Yksi kutsu Anthropicin rajapintaan. `striimi` avaa SSE-vastauksen. */
-async function kutsuRajapintaa(env, { jarjestelma, viestit, maxTokens, striimi = false }) {
+async function kutsuRajapintaa(env, {
+  jarjestelma, viestit, maxTokens, striimi = false, lampotila = null,
+}) {
   return fetch(RAJAPINTA, {
     method: 'POST',
     headers: {
@@ -976,14 +983,19 @@ async function kutsuRajapintaa(env, { jarjestelma, viestit, maxTokens, striimi =
       max_tokens: maxTokens,
       system: jarjestelma,
       messages: viestit,
+      // Lämpötila annetaan vain kun se on tarkoituksella asetettu:
+      // chat-vastaukset saavat mallin oletuksen, tuomiot temperature 0.
+      ...(lampotila === null ? {} : { temperature: lampotila }),
       ...(striimi ? { stream: true } : {}),
     }),
   });
 }
 
 /** Yksi kutsu Anthropicin rajapintaan. Palauttaa pelkän tekstin. */
-async function kysyMallilta(env, { jarjestelma, viestit, maxTokens }) {
-  const vastaus = await kutsuRajapintaa(env, { jarjestelma, viestit, maxTokens });
+async function kysyMallilta(env, { jarjestelma, viestit, maxTokens, lampotila = null }) {
+  const vastaus = await kutsuRajapintaa(env, {
+    jarjestelma, viestit, maxTokens, lampotila,
+  });
   if (!vastaus.ok) {
     /*
      * Virhevastauksen runkoa EI lokiteta eikä välitetä pelaajalle:
@@ -1556,6 +1568,104 @@ async function hoidaTila(env, kors) {
   return vastaa(tila, kors);
 }
 
+/* ------------------------------------------------------------------ */
+/* Sähketehtävän vapaa vastaus                                         */
+/* ------------------------------------------------------------------ */
+
+/*
+ * PÖLLÖN SÄHKETEHTÄVÄ, VAIHE 2 (Raamattu, POLLON SAHKETEHTAVA; omistaja
+ * 29.8.2026: "Tee 2, haluan nahda miten toimii").
+ *
+ * Pelaaja voi vastata sähkeeseen omin sanoin. Peli tulkitsee tekstin
+ * ENSIN itse ilmaiseksi (js/fokusvirta.js tulkitseVapaaSahke), ja vain
+ * tulkinnanvarainen teksti lentää tänne. Livian lento kortilla on tämän
+ * kutsun tarinallinen kuori: sama odotus, sama paluu.
+ *
+ * MIKSI ARVIOINTI ON TÄÄLLÄ EIKÄ PELISSÄ. Oikea vastaus on workerin
+ * vakio (rajat.js SAHKE_VASTAUKSET) eikä koskaan kulje asiakkaan
+ * kautta — muuten sen näkisi selaimen verkkovälilehdestä ja koko
+ * tehtävä olisi ohitettavissa. Asiakas lähettää vain tehtävän
+ * tunnuksen ja oman tekstinsä.
+ *
+ * TAAKSEPÄIN YHTEENSOPIVA. Vanha peli ei lähetä `tehtava: 'sahke'`
+ * -pyyntöä lainkaan, joten uusi haara ei muuta yhtään vanhaa polkua.
+ * Uusi peli vanhaa workeria vasten saa tuntemattomasta tehtävästä
+ * tavallisen vastauspolun 400:n, ja kortti ohjaa silloin lomakkeeseen
+ * täsmälleen kuten aikakatkaisussa.
+ *
+ * PALKKIOLOGIIKKA EI OLE TÄÄLLÄ. Worker kertoo vain, osuiko kohde ja
+ * osuiko vuosi; ohilyöntien laskenta, palkkion pienennys ja sähkeiden
+ * sanamuodot pysyvät pelissä, missä ne ovat lomakkeellakin.
+ */
+
+/** Tuomio on kaksi totuusarvoa — pidempi vastaus on jo virhe. */
+const SAHKE_MAX_TOKENS = 40;
+
+async function hoidaSahke(pyynto, env, kors, runko) {
+  const oikea = SAHKE_VASTAUKSET[String(runko?.id ?? '')];
+  if (!oikea) {
+    return vastaa({ virhe: 'kysely', viesti: 'Tuntematon tehtävä.' }, { status: 400, ...kors });
+  }
+  const vastausTeksti = siivoaVapaaVastaus(runko?.vastaus);
+  if (!vastausTeksti) {
+    return vastaa({ virhe: 'kysely', viesti: 'Vastaus puuttuu.' }, { status: 400, ...kors });
+  }
+  if (!env.ANTHROPIC_API_KEY) {
+    return vastaa({
+      virhe: 'asetus',
+      viesti: 'Livia ei ole vielä hereillä.',
+    }, { status: 503, ...kors });
+  }
+
+  // Sama laskuri kuin chat-kysymyksillä: tämä on yhtä lailla maksullinen
+  // mallikutsu, eikä sitä saa voida ajaa rajattomasti lomakkeen ohi.
+  const kv = env.POLLO_KV ?? null;
+  const nyt = new Date();
+  const pAvain = paivaAvain(pyynto.headers.get('cf-connecting-ip'), nyt);
+  const kAvain = kuukausiAvain(nyt);
+  const raja = kehittajaOhitus(pyynto, env) ? { ok: true } : tarkistaRajat({
+    paiva: await lueLaskuri(kv, pAvain),
+    kuukausi: await lueLaskuri(kv, kAvain),
+    paivaraja: lueLuku(env.POLLO_PAIVARAJA, PAIVARAJA_OLETUS),
+    kuukausiraja: lueLuku(env.POLLO_KUUKAUSIRAJA, KUUKAUSIRAJA_OLETUS),
+  });
+  if (!raja.ok) {
+    return vastaa({ virhe: raja.syy, viesti: raja.viesti }, { status: 429, ...kors });
+  }
+  await kasvataLaskuri(kv, pAvain, 60 * 60 * 30);
+  await kasvataLaskuri(kv, kAvain, 60 * 60 * 24 * 40);
+
+  try {
+    const teksti = await kysyMallilta(env, {
+      jarjestelma: sahkeKehote(oikea),
+      viestit: [{ role: 'user', content: sahkeViesti(vastausTeksti) }],
+      maxTokens: SAHKE_MAX_TOKENS,
+      // Tuomio ei ole luovaa työtä: sama teksti, sama tuomio.
+      lampotila: 0,
+    });
+    const tuomio = poimiSahkeTuomio(teksti);
+    /*
+     * EI TULKITTAVISSA on oma tilansa eikä virhe: peli näyttää
+     * tavallisen EI TÄSMÄÄ -sähkeen, lomake jää auki eikä mikään
+     * lukitu. Rakenteeton vastaus ei siis koskaan pääse läpi
+     * hyväksyntänä, kävipä mallille mitä tahansa.
+     */
+    if (!tuomio) return vastaa({ tulkittu: false, kohde: false, vuosi: false }, kors);
+    return vastaa({
+      tulkittu: true,
+      kohde: tuomio.kohde_oikein,
+      vuosi: tuomio.vuosi_oikein,
+    }, kors);
+  } catch (virhe) {
+    // Vain tilakoodi lokiin — ei avainta, ei pelaajan tekstiä.
+    console.log(`pollo: sähketuomio epäonnistui (${virhe?.status ?? 'verkko'})`);
+    return vastaa({
+      virhe: 'palvelin',
+      viesti: 'Pöllö ei vastannut.',
+    }, { status: 502, ...kors });
+  }
+}
+
 export default {
   async fetch(pyynto, env, ctx) {
     const sallitut = lueLista(env.POLLO_ORIGINIT);
@@ -1594,6 +1704,13 @@ export default {
     // Kuvagenerointi: kehittäjän eräajot (ks. hoidaKuva yllä).
     if (runko?.tehtava === 'kuva') {
       return hoidaKuva(pyynto, env, kors, runko);
+    }
+
+    // Sähketehtävän vapaa vastaus (ks. hoidaSahke yllä). Oma haaransa,
+    // koska kehote, tuomio ja vastausmuoto ovat aivan toiset kuin
+    // chatissa — ja koska oikeat vastaukset asuvat vain siellä.
+    if (runko?.tehtava === 'sahke') {
+      return hoidaSahke(pyynto, env, kors, runko);
     }
 
     /*

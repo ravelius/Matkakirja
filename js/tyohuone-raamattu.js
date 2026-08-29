@@ -980,7 +980,15 @@ export const RAAMATTU = {
           + 'ratkaisu loytyy; (c) pulun lento ei lukitse pelia - pelaaja '
           + 'jatkaa vapaasti ja Livia palaa kuplalla. Maassa jossa on '
           + 'sahketehtava EI ole kohtaamista. PILOTTI: aallon 3 '
-          + 'ensimmainen maa (Ruotsi/Tukholma).',
+          + 'ensimmainen maa (Ruotsi/Tukholma). '
+          + 'VAIHE 2 (omistaja 29.8.2026: "Tee 2, haluan nahda miten '
+          + 'toimii"): vapaa tekstikenttä lomakkeen rinnalle - '
+          + 'paikallinen normalisointi ensin ilmaiseksi, '
+          + 'tulkinnanvaraiset vie Livian lento workerille '
+          + '(LLM-arviointi tiukkana JSON-tuomiona; oikeat vastaukset '
+          + 'ja arviointi workerissa, ei clientissa; pelaajan teksti '
+          + 'datana, ei keskusteluna; timeout ohjaa lomakkeeseen). '
+          + 'Livian lento on API-kutsun tarinallinen kuori.',
         'LIVIAN MIETINTAMUODOT (omistaja 29.8.2026): chatin ja '
           + 'popuppien odotushetket saavat vaihtelevat Livian '
           + 'puhekieliset mietintarepliikit, joista osa vie kysymyksen '
