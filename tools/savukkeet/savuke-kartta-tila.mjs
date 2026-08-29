@@ -109,11 +109,40 @@ const kunnossa = (g) => !g.transform.includes('scale(')
   && g.suhdeVirhe < 0.02;
 
 // --- 1. Lehtikierros: avaa → muuta kokoa → vanhennus → sulje ----------
+/*
+ * LEHTILUKKO AUKI ENNEN AVAUSTA (juurisyy 29.8.2026, v1323 —
+ * "Fokusvirran kortit pelaajan polkuun", FOKUSVIRTA_KORTIT = true).
+ *
+ * Tämä vartio oli mainissa punainen 16/18 kahdella väitteellä, joilla ei
+ * ole karttageometrian kanssa mitään tekemistä. Syy ei ollut pelissä
+ * vaan savukkeen vanhentuneessa oletuksessa: korttiannostelun päällä
+ * fokusvirran lehtilukko (js/fokusvirta.js fokusvirtaOhittaaLehden)
+ * ottaa lehden paikan niin kauan kuin kaupungin laatta on kääntämättä,
+ * jolloin openArrival palaa heti EIKÄ #arrival-dialogia avata lainkaan.
+ * Silloin `dialog.close()` ei tee mitään eikä lähetä close-tapahtumaa,
+ * dokumenttitason peitevahti (js/ui.js peiteVahti) ei koskaan herää, ja
+ * käsin kirjoitettu vanhentunut muunnos jäi paikalleen. Toinen kaatunut
+ * väite oli pelkkä jälkiseuraus: tapauksen 2 lähtötilaksi mitattiin se
+ * sama siivoamatta jäänyt muunnos. Peitevahti itse on ehjä — tapaukset
+ * 4a–4c ajavat saman sovituksen ja ovat vihreitä.
+ *
+ * Laatta poistetaan siis kerran ennen mittausta (sama kaava kuin
+ * tools/savukkeet/savuke-katselin-pollo.mjs). Se on täsmälleen se tila,
+ * jossa pelaaja lehden oikeasti avaa: aarre löydetty, kaupunki vapaana
+ * tutkittavaksi. Mitattava asia on kartan geometria lehden sulkeuduttua,
+ * ei se kumpi pinta saapumisen omistaa.
+ */
 await sivu.evaluate(() => {
   const ui = window.matkakirja.ui;
-  ui.openArrival(ui.game.cityOf());
+  const oma = ui.game.cityOf();
+  ui.game.tokens?.delete(oma.id);
+  ui.openArrival(oma);
 });
 await sivu.waitForTimeout(600);
+// Vartio vartiolle: jos lehti ei aukea, koko tapaus 1 mittaisi tyhjää
+// (juuri niin kävi v1323:n jälkeen). Kaatuu ääneen eikä hiljaa.
+vaadi('lehti on auki ennen kokomuutosta (lehtilukko ei ohita)',
+  await sivu.evaluate(() => Boolean(document.getElementById('arrival-dialog')?.open)));
 // Näkymän koko muuttuu lehden ollessa auki (Stage Manager / split
 // view / näppäimistö). Pystysuuntainen koko on savukkeen vakio, jotta
 // mitatut geometriat pysyvät vertailukelpoisina ajosta toiseen.
