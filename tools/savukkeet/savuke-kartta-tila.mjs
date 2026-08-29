@@ -443,9 +443,31 @@ const jalkeenKosketus = await zoomiKerroin();
 const kosketusSuhde = jalkeenKosketus / ennenKosketus;
 console.log(`      mitattu: kosketusnipistys ${kosketusSuhde.toFixed(3)}x`
   + ` (${kosketusKirjoituksia} muunnoskirjoitusta / ${ASKELIA} tapahtumaa)`);
-vaadi('6a kosketusnipistys 2x kaksinkertaistaa mittakaavan',
-  Math.abs(kosketusSuhde / 2 - 1) <= 0.05,
-  `${kosketusSuhde.toFixed(3)}x (raja ±5 %, rajat ${JSON.stringify(rajatKartalla)})`);
+/*
+ * ELE PÄÄTTYY KIINTEÄÄN TASOON (bittikarttakartta vaihe 3,
+ * js/kartta.js napsautaTasoon).
+ *
+ * Väite oli aiemmin "2x kaksinkertaistaa mittakaavan täsmälleen".
+ * Nipistys ei enää tuota mitä tahansa kerrointa portaiden välistä:
+ * ele napsahtaa lähimpään portaaseen, ja 1,5:n askeleessa kahden
+ * lähin porras on 2,25. Väite mittaa nyt sen, mikä on olennaista —
+ * että ELE VIE OIKEAAN SUUNTAAN JA OIKEAAN SUURUUSLUOKKAAN ja että
+ * lopputulos on portaikon taso eikä satunnainen luku.
+ */
+const askelKatto = 1.5;
+vaadi('6a kosketusnipistys 2x vie lähimpään portaaseen kahden ympäriltä',
+  kosketusSuhde > 1.05 && kosketusSuhde <= 2 * askelKatto * 1.01
+  && kosketusSuhde >= 2 / askelKatto * 0.99,
+  `${kosketusSuhde.toFixed(3)}x (odotettu 1,33…3,0, rajat ${JSON.stringify(rajatKartalla)})`);
+vaadi('6a2 ele päätyy portaikon tasoon eikä vapaaseen kertoimeen',
+  await sivu.evaluate(() => {
+    const ui = window.matkakirja.ui;
+    const tasot = ui.kartta.zoomiTasot();
+    const k = ui.kartta.zoomiKerroin;
+    const pohja = ui.kartta.fokusZoomMinimi();
+    return tasot.some((t) => Math.abs(t / k - 1) < 0.01)
+      || (pohja > 0 && Math.abs(pohja / k - 1) < 0.01);
+  }), 'kerroin ei osu portaaseen');
 vaadi('6b jokainen touchmove näkyy esikatselussa (ei harvennusta)',
   kosketusKirjoituksia >= ASKELIA,
   `${kosketusKirjoituksia} kirjoitusta / ${ASKELIA} tapahtumaa`);
@@ -479,9 +501,11 @@ const eleKirjoituksia = await kirjoituksia();
 const eleSuhde = (await zoomiKerroin()) / ennenEle;
 console.log(`      mitattu: gesture-nipistys ${eleSuhde.toFixed(3)}x`
   + ` (${eleKirjoituksia} muunnoskirjoitusta / ${ASKELIA} tapahtumaa)`);
-vaadi('6c WebKitin gesture-nipistys (scale 1→2) kaksinkertaistaa mittakaavan',
-  Math.abs(eleSuhde / 2 - 1) <= 0.05,
-  `${eleSuhde.toFixed(3)}x (raja ±5 %; ennen korjausta 1,00x)`);
+// Sama napsautus kuin 6a:ssa (vaihe 3): ele vie lähimpään portaaseen.
+vaadi('6c WebKitin gesture-nipistys (scale 1→2) vie lähimpään portaaseen',
+  eleSuhde > 1.05 && eleSuhde <= 2 * askelKatto * 1.01
+  && eleSuhde >= 2 / askelKatto * 0.99,
+  `${eleSuhde.toFixed(3)}x (odotettu 1,33…3,0; ennen korjausta 1,00x)`);
 vaadi('6d jokainen gesturechange näkyy esikatselussa',
   eleKirjoituksia >= ASKELIA,
   `${eleKirjoituksia} kirjoitusta / ${ASKELIA} tapahtumaa`);

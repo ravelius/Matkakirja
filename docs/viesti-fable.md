@@ -386,3 +386,118 @@ PÄIVITYS: omistaja antoi lehtisessiolle päätoimittajan valtuudet
 samana päivänä — linjaus on KIRJATTU Raamattuun (Kuvat ja lähteet)
 ja Mosul/Halab/Damaskos päivitetään v948:ssa. Tämä merkintä jää
 tiedoksi.
+
+---
+
+## Bittikarttakartta, vaiheet 2 ja 3 (Opus, 29.8.2026)
+
+**Haara `claude/bittikartta-2`.** Vaihe 1 (v1324) poisti piikit muttei
+perustasoa. Vaiheen 2 resepti oli RUUTUAVARUUDEN CANVAS. Se
+rakennettiin, mitattiin — ja mittaus kaatoi sekä reseptin että sen
+perustelun. Alla mitä mitattiin, mitä tilalle tehtiin ja mikä jää
+Fablen päätettäväksi.
+
+### 1. Ruutuavaruuden canvas on 8 kertaa hitaampi (mitattu)
+
+Ruudun kokoinen, kuoren ULKOPUOLELLA elävä canvas, johon blitataan joka
+kehyksellä vastasiirrolla — täsmälleen speksin mukaan. WebKit, Ateenan
+syväzoom, HOLD-ele ±170 px, iPhone-mitat 390×844 dpr 3:
+
+| | p50 | p95 | max |
+| --- | --- | --- | --- |
+| kooste kuoressa (vaihe 1) | **16 ms** | 113 | 348 |
+| ruutucanvas, blitti joka kehys | **131 ms** | 175 | 253 |
+| sama ilman per-kehys-blittiä | **16 ms** | 153 | 661 |
+| blitin oma JS-hinta | 0,02 ms | | |
+
+Syy ei ole blitissä vaan kompositorissa: kuoren `translate3d` on SIIRTO
+(selain siirtää valmista kerrosta), mutta kuoren ulkopuolinen canvas ei
+voi siirtyä — sen sisältö on kirjoitettava uusiksi joka kehyksellä, ja
+kirjoitus mitätöi kerroksen. Sama tulos Chromium 4x:llä (Puolan
+tiheikkö: p95 33,3 → 16,8 kun per-kehys-blitti otettiin pois).
+
+### 2. Maalattava ala ei ole enää syy mihinkään (ablaatio)
+
+Reseptin perustelu oli "lava on 4,6 ruudullista ja selain maalaa
+canvaksesta koko pinnan". Se testattiin ablaatiolla, WebKit, sama ele:
+
+| näkymä | p50 | p95 | yli 40 ms |
+| --- | --- | --- | --- |
+| täysi kartta + kooste | 16 | 139 | 29/173 |
+| ilman kaupunkeja ja nimiä | 16 | 128 | 27/161 |
+| ilman koko svg-sisältöä | 16 | 135 | 25/193 |
+| **täysin tyhjä kartta** | **16** | **102** | **36/211** |
+| pelkkä svg, ei canvasta | 16 | 101 | 38/205 |
+
+Tyhjä kartta tökkii yhtä paljon kuin täysi. WebKitin käännöskohtien
+~100 ms:n kehykset tulevat eleen omasta koneistosta, eivät kartan
+maalauksesta. **Kartan piirtoa optimoimalla ei tästä eteenpäin saada
+lisää** — seuraava mittaus pitäisi tehdä oikealla iOS-laitteella, ei
+Playwrightin ohjelmistorenderöijällä.
+
+### 3. Mitä tilalle tehtiin
+
+* **Atominen vaihto.** Täysi kooste rakennetaan taustapuskuriin, ja
+  vanha kooste jää ruudulle CSS-muunnoksella venytettynä. Ennen ruutu
+  palasi täyden koosteen ajaksi svg:lle — juuri sille hitaalle polulle,
+  jota koko moduuli on olemassa välttämään. Omistajan linjaus
+  *"tökkiminen on pahempi kuin pehmeä kuva"* toteutuu nyt kirjaimellisesti.
+* **Kiinteät zoomtasot.** Nipistys napsahtaa portaikon tasoon
+  (`napsautaTasoon`) eikä jätä vapaata kerrointa. Painikkeet ja nipistys
+  ovat vihdoin samaa mieltä.
+* **Sumennus pois** ja **kaikki näkyvissä alusta** (ks. 4).
+* **Näkymärajaus kaikille**: käymättömien maiden datakerroksen paljastuminen
+  toi lähikuvaan 600 solmua, ja `paivitaMaailmanRajaus` (ennen vain
+  kehittäjän maailmanäkymässä) on nyt voimassa aina. Maailmanäkymän
+  nipistyksen pitkät tehtävät 1036 → 392 ms.
+* **`willReadFrequently` pois** koosteen kontekstista: se pakotti
+  canvaksen ohjelmistolle, eikä tuotantopolulla ole yhtään
+  getImageData-luentaa.
+
+### 4. Omistajan kaksi linjausta toteutettu
+
+* **Sumennuksesta luovuttu.** `fokusSumuPaalla()` palauttaa aina
+  epätoden; koneisto jäi yhdeksi vaimennetuksi metodiksi
+  (`paivitaFokusSumu`), joka on myös ainoa kohta, jota pitäisi muuttaa
+  jos verho palaisi. Kahdeksan kutsupaikan purku olisi ollut isompi
+  jälki kuin yksi ehto.
+* **Kaikki näkyvissä alusta.** `.fokus-piilossa` ei enää koskaan asetu;
+  luokka pyyhitään joka kierroksella (tallennuksesta palaava peli voi
+  kantaa sitä). Maailmanappi jäi, mutta se ohjaa enää KAMERAN RAJAUSTA
+  — ja se rajaus on vaiheen 3 zoomtasojen pohja (T0), joten sitä ei voi
+  poistaa.
+
+### 5. Mitä EI tehty, ja miksi
+
+* **Merkkien täyspoltto koosteeseen.** Ablaatio (kohta 2) osoittaa,
+  ettei merkeistä ole mitään saatavissa: niiden mitattu hinta on 11 ms,
+  ja poltto vaatisi svg-piirtimen toisinnon canvakselle (tekstit,
+  viivatyylit, maskit, zoomin mukana elävät maastonimet). Osumatestaus
+  jäisi silti svg:hen, eli kerroksia tulisi lisää eikä vähemmän.
+* **Fablemaxin tarkka portaikko** (kapea 5 tasoa suhteella 1,68, leveä
+  4 tasoa suhteella 1,75). Nykyinen portaikko (`zoomiTasot`) on
+  jaettu zoomipainikkeiden, saapumisportaan ja fokusikkunan pohjan
+  kesken; sen korvaaminen on oma testattava muutoksensa. Nykyinen
+  portaikko antaa fokusnäkymässä Kreikan ikkunasta maksimiin
+  6 tasoa suhteella 1,5 — käytännössä sama tiheys kuin speksin 5 × 1,68.
+  **Päätös Fablelle:** tehdäänkö tarkka portaikko omana eränään?
+* **Vaihe 4 (laattapyramidi)** kokonaan. Se on myös se, joka poistaisi
+  kehittäjän maailmanäkymän svg-poikkeuksen: siellä lavalla on 25 lehteä
+  eikä koko lavan koostetta kannata rakentaa (mitattu uudelleen vaiheiden
+  2–3 jälkeen: 1036 ms rajaa 750 vastaan).
+
+### 6. Raamattuun (vain Fable kirjoittaa)
+
+> **BITTIKARTTAKARTTA, MITATTU RAJA (29.8.2026).** Kartan pohja
+> koostetaan yhdeksi bittikartaksi karttakuoreen, ja kuoren oma
+> `translate3d` siirtää sitä. Ruutuavaruudessa elävää canvasta EI
+> tehdä: se mitattiin kahdeksan kertaa hitaammaksi, koska kuoren
+> ulkopuolinen canvas ei voi siirtyä kompositorilla. Kartan
+> maalattava ala ei ole enää kehyksen kustannus — tyhjä kartta tökkii
+> WebKitissä yhtä paljon kuin täysi — joten seuraava mittaus tehdään
+> oikealla laitteella eikä emulaattorilla.
+
+> **KIINTEÄT ZOOMTASOT (29.8.2026).** Nipistys päättyy aina portaikon
+> tasoon, ei vapaaseen kertoimeen: mittakaavoja on kourallinen, ja
+> sama taso palaa uudestaan. Portaikon pohja fokusnäkymässä on maan
+> ikkuna ruudulle.

@@ -550,9 +550,24 @@ vaadi('vanha kalvokohtaus on poissa', kartta.skene === false,
 vaadi('rajaukseen mahtuvat sekä lähtömaa että kohdemaa',
   Boolean(kartta.lahtoNakyy && kartta.kohdeNakyy),
   `Lontoo ${kartta.lahtoNakyy}, ${lento.kaupunki} ${kartta.kohdeNakyy}`);
-vaadi('kartta on lennon aikana niukka: sumu päällä, pelitila piilossa',
-  Boolean(kartta.sumu) && kartta.himmennettyja > 0 && kartta.nappula === '0',
-  `sumu ${kartta.sumu}, himmennettyjä ${kartta.himmennettyja}, nappulan peittävyys ${kartta.nappula}`);
+/*
+ * NIUKKUUS ILMAN MAAKOHTAISTA HIMMENNYSTÄ (29.8.2026,
+ * bittikarttakartan vaihe 2).
+ *
+ * Väite vaati ennen kolme asiaa: lennon harso, käymättömien maiden
+ * himmennys ja nappula piilossa. Keskimmäinen poistui pelistä
+ * omistajan linjauksella (js/ui.js paivitaFokusKerros: KAIKKI
+ * NÄKYVISSÄ ALUSTA), ja väite vartioi nyt sitä nimenomaisesti:
+ * himmennettyjä on oltava NOLLA.
+ *
+ * LENNON OMA HARSO EI OLE FOKUSMOODIN SUMUVERHO. `.fokus-sumu-harso`
+ * on aloituslennon oma kerros (js/kartta.js), ja se jää — juuri se
+ * tekee lennon kartasta niukan nyt kun maakohtaista himmennystä ei
+ * enää ole.
+ */
+vaadi('kartta on lennon aikana niukka: lennon harso päällä, nappula ja himmennykset pois',
+  Boolean(kartta.sumu) && kartta.himmennettyja === 0 && kartta.nappula === '0',
+  `harso ${kartta.sumu}, himmennettyjä ${kartta.himmennettyja}, nappulan peittävyys ${kartta.nappula}`);
 /*
  * VANHA KARTTA POIS MYÖS LENNOSTA (omistajan linjaus 25.8.2026, ilta:
  * *"Lennon aikana taidetaan käyttää sitä vanhaa karttaa. Vanha kartta

@@ -1,5 +1,6 @@
 /*
- * Savuke: LAVAN POHJACANVAS (js/karttapohja.js, bittikarttakartta vaihe 1).
+ * Savuke: LAVAN POHJACANVAS (js/karttapohja.js, bittikarttakartta
+ * vaiheet 1–3).
  *
  * === MIKÄ VIKA OLI (mitattu 29.8.2026) ===============================
  *
@@ -26,6 +27,28 @@
  *       reunatäydennys siirrä näkymän keskipistettä pikseliäkään.
  *   K5  Mitoitus pysyy profiilibudjetissa (8/12/20 Mp) ja sivu 4096:ssa.
  *   K6  Canvas-pohja näyttää samalta kuin svg-pohja.
+ *
+ * === VAIHEIDEN 2 JA 3 LISÄVÄITTEET (29.8.2026) =======================
+ *
+ *   K7  ATOMINEN VAIHTO: täyden koosteen ajaksi ruudulle jää VANHA
+ *       kooste CSS-muunnoksella venytettynä — svg ei ota pohjaa
+ *       takaisin. Kuoressa on silloin kaksi canvasta, ja näkyvän
+ *       ratkaisee luokka .karttapohja-nakyva.
+ *   K8  KIINTEÄT ZOOMTASOT: nipistys napsahtaa portaikon tasoon
+ *       (js/kartta.js napsautaTasoon) eikä jätä vapaata kerrointa.
+ *   K9  SUMENNUSTA EI OLE: .fokus-sumu on tyhjä joka tilassa
+ *       (omistajan linjaus 29.8.2026).
+ *   K10 KAIKKI NÄKYVISSÄ ALUSTA: yksikään kartan osa ei ole
+ *       .fokus-piilossa — käymättömän maan datakerros näkyy.
+ *
+ * === MIKSI RUUTUAVARUUDEN CANVASTA EI OLE ============================
+ *
+ * Vaiheen 2 resepti oli ruudun kokoinen, kuoren ulkopuolella elävä
+ * canvas, johon blitataan joka kehyksellä. Se rakennettiin ja
+ * mitattiin: WebKit p50 16 → 131 ms, koska kuoren ulkopuolinen
+ * canvas ei voi siirtyä kompositorilla vaan sen sisältö on
+ * kirjoitettava uusiksi joka kehyksellä. Tämä savuke vartioi siksi
+ * sitä, että canvas ON kuoressa (K1a).
  *
  * === MITATTU KORJAUKSEN JÄLKEEN (sama ajo) ===========================
  *
@@ -217,8 +240,11 @@ const alku = await tilasto();
 const rakenne = await sivu.evaluate(() => {
   const ui = window.matkakirja.ui;
   const kuori = ui.karttaKuori;
-  const canvas = kuori?.querySelector('canvas.karttapohja');
+  const canvas = kuori?.querySelector('canvas.karttapohja-nakyva');
   const kuvia = ui.fokuskarttaKerros?.querySelectorAll('image.fokuskartta-kuva').length ?? 0;
+  const puskureita = kuori?.querySelectorAll('canvas.karttapohja').length ?? 0;
+  const sumua = ui.svg.querySelector('.fokus-sumu')?.childElementCount ?? 0;
+  const piilossaMaita = ui.svg.querySelectorAll('.fokus-piilossa').length;
   const poltettuja = ui.fokuskarttaKerros?.querySelectorAll('image.karttapohja-poltettu').length ?? 0;
   const piilossa = [...(ui.fokuskarttaKerros?.querySelectorAll('image.karttapohja-poltettu') ?? [])]
     .every((k) => getComputedStyle(k).display === 'none');
@@ -248,6 +274,9 @@ const rakenne = await sivu.evaluate(() => {
     piilossa,
     paperiPiilossa: paperi ? getComputedStyle(paperi).display === 'none' : null,
     merkkejaNakyvissa: ui.svg.querySelectorAll('.cities > *').length,
+    puskureita,
+    sumua,
+    piilossaMaita,
   };
 });
 console.log(`      ${JSON.stringify(rakenne)}`);
@@ -273,6 +302,98 @@ vaadi('K1d pergamentin pohja on canvaksella eikä svg:ssä',
   rakenne.paperiPiilossa === true);
 vaadi('K1e merkit jäävät svg:hen eläviksi', rakenne.merkkejaNakyvissa > 0,
   `${rakenne.merkkejaNakyvissa}`);
+/*
+ * K9/K10: sumennuksesta luovuttiin ja käymättömien maiden datakerros
+ * jäi näkyviin (omistajan linjaus 29.8.2026). Molemmat ovat
+ * kartalla NÄKEMISEN väitteitä, ja siksi ne mitataan samasta
+ * näkymästä kuin kooste.
+ */
+vaadi('K9 sumuverho on tyhjä', rakenne.sumua === 0, `solmuja ${rakenne.sumua}`);
+vaadi('K10 yksikään kartan osa ei ole fokus-piilossa',
+  rakenne.piilossaMaita === 0, `piilossa ${rakenne.piilossaMaita}`);
+
+/* --- K8: nipistys napsahtaa kiinteään tasoon ---------------------- */
+
+console.log('\n--- kiinteät zoomtasot ---');
+const tasot = await sivu.evaluate(() => {
+  const k = window.matkakirja.ui.kartta;
+  const portaat = k.zoomiTasot();
+  const { pienin, suurin } = k.zoomiRajat();
+  const pohja = k.fokusZoomMinimi();
+  // Kolme mielivaltaista kerrointa portaiden välistä: jokaisen on
+  // napsahdettava johonkin ehdokkaaseen (porras tai fokusikkuna).
+  const kokeet = [pienin * 1.13, Math.sqrt(pienin * suurin), suurin * 0.77];
+  return {
+    portaat: portaat.length,
+    pienin,
+    suurin,
+    pohja,
+    tulokset: kokeet.map((x) => ({ x, ...k.napsautaTasoon(x) })),
+  };
+});
+console.log(`      portaita ${tasot.portaat}, rajat ${tasot.pienin.toFixed(2)}…`
+  + `${tasot.suurin.toFixed(2)}, fokusikkuna ${tasot.pohja.toFixed(2)}`);
+for (const t of tasot.tulokset) {
+  console.log(`      ${t.x.toFixed(2)} → ${t.kerroin.toFixed(2)} (porras ${t.porras})`);
+}
+vaadi('K8a napsautus osuu aina portaaseen tai fokusikkunaan',
+  tasot.tulokset.every((t) => t.porras >= 0 || Math.abs(t.kerroin - tasot.pohja) < 1e-6),
+  JSON.stringify(tasot.tulokset));
+vaadi('K8b napsautus pysyy rajojen sisällä',
+  tasot.tulokset.every((t) => t.kerroin >= tasot.pienin * 0.999
+    && t.kerroin <= tasot.suurin * 1.001),
+  JSON.stringify(tasot.tulokset));
+vaadi('K8c portaikossa on ainakin kolme tasoa fokusnäkymässä',
+  tasot.portaat >= 3, `${tasot.portaat}`);
+
+/* --- K7: atominen vaihto zoomin napsahduksessa -------------------- */
+
+console.log('\n--- atominen vaihto ---');
+const vaihto = await sivu.evaluate(async () => {
+  const ui = window.matkakirja.ui;
+  const kp = ui.karttapohja;
+  const ennen = { ...kp.tilasto };
+  // Yksi porras lähemmäs: sovitus vaihtaa lavan ja pakottaa täyden
+  // koosteen — juuri se hetki, jonka ajaksi ruudulle pitää jäädä
+  // vanha kooste eikä svg:n hidas pohja.
+  ui.kartta.zoomaaPainikkeella(1);
+  const otokset = [];
+  for (let i = 0; i < 24; i++) {
+    await new Promise((ok) => setTimeout(ok, 120));
+    otokset.push({
+      luokka: document.body.classList.contains('karttapohja-canvas'),
+      muunnos: kp.tilasto.nakyvaMuunnos,
+      puskureita: kp.tilasto.puskureita,
+      taydet: kp.tilasto.taydet,
+    });
+    if (kp.tilasto.taydet > ennen.taydet && !kp.tyoKesken) break;
+  }
+  return { ennen, otokset, lopussa: { ...kp.tilasto } };
+});
+const kesken = vaihto.otokset.filter((o) => o.muunnos !== '');
+console.log(`      otoksia ${vaihto.otokset.length}, muunnos päällä ${kesken.length},`
+  + ` täysiä ${vaihto.ennen.taydet} → ${vaihto.lopussa.taydet},`
+  + ` vaihtoja ${vaihto.lopussa.vaihtoja}`);
+vaadi('K7a pohja ei palaa svg:lle kesken täyden koosteen',
+  vaihto.otokset.every((o) => o.luokka),
+  JSON.stringify(vaihto.otokset.map((o) => o.luokka)));
+vaadi('K7b vanha kooste näkyy venytettynä uuden rakentuessa',
+  kesken.length > 0 || vaihto.lopussa.vaihtoja > vaihto.ennen.vaihtoja,
+  JSON.stringify(vaihto.lopussa));
+/*
+ * ASETTUNUT NÄKYMÄ, EI KESKEN OLEVA. Zoomin napsahdus voi käynnistää
+ * peräkkäin kaksi koostetta (lava ikkunoituu vielä kertaalleen), ja
+ * väite koskee lopputilaa: kun kartta on rauhassa, ruudulla on
+ * kooste ILMAN venytystä eli täydellä tarkkuudella.
+ */
+const asettunut = await odotaVakaa();
+console.log(`      asettunut: muunnos "${asettunut.nakyvaMuunnos}",`
+  + ` puskureita ${asettunut.puskureita}`);
+vaadi('K7c asettuneessa näkymässä kooste vastaa lavaa (ei muunnosta)',
+  asettunut.nakyvaMuunnos === '', asettunut.nakyvaMuunnos);
+await sivu.evaluate(() => { window.matkakirja.ui.kartta.zoomaaPainikkeella(-1); });
+await sivu.waitForTimeout(2500);
+await odotaVakaa();
 
 /* --- K2: HOLD 10 s — ei yhtään koostetta eikä ikkunointia ---------- */
 

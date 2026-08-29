@@ -302,13 +302,24 @@ console.log(`      mitattu: napin klikkauskäsittely ${pois} ms`);
 vaadi('5 maailma-napin kytkentä ei jää jättikehykseksi',
   pois > 0 && pois < 200, `${pois} ms (raja 200)`);
 /*
- * Väite 6: rajaus ei jätä yhtäkään solmua pysyvästi piiloon. Kun
- * maailmanäkymä sammuu, luokka on purettava kokonaan — muuten pelin
- * oma näkymä perisi kehittäjätilan piilotukset.
+ * Väite 6: rajaus EI OLE ENÄÄ KEHITTÄJÄN NÄKYMÄN OSA (29.8.2026,
+ * bittikarttakartan vaihe 2).
+ *
+ * Ennen väite kuului "näkymän sammuessa rajausluokka puretaan
+ * kokonaan": rajaus oli olemassa vain maailmanäkymää varten, ja
+ * pelaajan oma näkymä olisi perinyt kehittäjätilan piilotukset.
+ *
+ * Nyt käymättömien maiden datakerros näkyy pelaajallekin
+ * (js/ui.js paivitaFokusKerros: KAIKKI NÄKYVISSÄ ALUSTA), joten
+ * lähikuvassa on samat 600 solmua kytkimestä riippumatta ja rajaus
+ * on voimassa aina. Väite mittaa siksi sitä, mikä on olennaista:
+ * rajaus ei jätä yhtäkään NÄKYMÄN SISÄLLÄ olevaa kaupunkia piiloon —
+ * eli kytkimen jälkeen kartalla on yhä merkkejä.
  */
-vaadi('6 näkymän sammuessa rajausluokka puretaan kokonaan',
-  !poisTila.maailmanakyma && poisTila.rajattuja === 0,
-  `maailmanakyma ${poisTila.maailmanakyma}, rajattuja ${poisTila.rajattuja}`);
+vaadi('6 rajaus jää voimaan myös näkymän sammuttua eikä tyhjennä karttaa',
+  !poisTila.maailmanakyma && poisTila.citiesNakyvia > 0,
+  `maailmanakyma ${poisTila.maailmanakyma}, näkyviä ${poisTila.citiesNakyvia},`
+  + ` rajattuja ${poisTila.rajattuja}`);
 
 // Takaisin päälle: rajaus on laskettava uudestaan heti kytkimestä eikä
 // vasta ensimmäisestä eleestä.

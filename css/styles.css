@@ -4915,7 +4915,7 @@ body.fokus-atlas-nakyma .taide-pohja { display: none; }
 body.fokus-atlas-nakyma .grain { display: none; }
 
 /* ---------------------------------------------------------------------------
-   BITTIKARTTAKARTAN POHJACANVAS (js/karttapohja.js, vaihe 1).
+   BITTIKARTTAKARTAN RUUTUCANVAS (js/karttapohja.js, vaiheet 1 ja 2).
 
    Lavan pohjakuvat — pergamentti ja neljä lehtiryhmää — koostetaan
    yhdelle canvakselle, ja svg:n omat pohjat piilotetaan. Mitattu syy
@@ -4928,6 +4928,17 @@ body.fokus-atlas-nakyma .grain { display: none; }
    uutta synkronoitavaa. `z-index: -1` pitää sen svg:n alla, ja kuoren
    `isolation: isolate` pitää sen kuoren OMASSA pinossa — ilman sitä
    negatiivinen taso karkaisi karttaruudun pergamenttitaustan taakse.
+
+   VAIHE 2 MITTASI RUUDUN KOKOISEN CANVAKSEN — JA HYLKÄSI SEN.
+   Kuoren ulkopuolella elävän canvaksen sisältö on kirjoitettava
+   uusiksi joka kehyksellä, ja se on WebKitissä kahdeksan kertaa
+   hitaampaa kuin kuoren siirto (p50 16 → 131 ms; luvut ja ablaatio
+   js/karttapohja.js:n johdannossa).
+
+   VAIHEEN 2 KAKSI PUSKURIA. Kuoressa voi olla kaksi canvasta: näkyvä
+   ja rakenteilla oleva. Näkyvän ratkaisee `.karttapohja-nakyva`, ei
+   pelkkä `.karttapohja` — piilossa oleva puskuri säilyttää sisältönsä
+   ja on valmis heti kun se vuorollaan palaa.
 
    `display: none` eikä opacity, samasta syystä kuin .fokus-piilossa
    yllä: piilossa oleva kuva ei saa jäädä selaimen purettavaksi.
@@ -4951,7 +4962,7 @@ body.fokus-atlas-nakyma .grain { display: none; }
   transform-origin: 0 0;
 }
 
-body.karttapohja-canvas .karttapohja { display: block; }
+body.karttapohja-canvas .karttapohja.karttapohja-nakyva { display: block; }
 
 body.karttapohja-canvas .kartta-kuori { isolation: isolate; }
 

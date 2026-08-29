@@ -847,10 +847,21 @@ const maailma = await sivu.evaluate(() => {
     painettu: document.getElementById('kehittaja-maailma-btn').getAttribute('aria-pressed'),
   };
 });
-vaadi('oletuksena kehittäjätila on pelaajan näkymä (sumu, rajoite, piilotukset)',
-  maailma.ennen.alue && maailma.ennen.sumu && maailma.ennen.piilossa > 0,
+/*
+ * MAAILMANAPPI OHJAA ENÄÄ KAMERAA (29.8.2026, bittikarttakartan
+ * vaihe 2).
+ *
+ * Väite kuului ennen: pelaajan näkymässä on sumu, kamerarajoite ja
+ * käymättömien maiden piilotus; nappi poistaa kaikki kolme. Kaksi
+ * niistä poistui pelistä kokonaan omistajan linjauksella:
+ * sumennuksesta luovuttiin (js/ui.js fokusSumuPaalla) ja kaikki on
+ * näkyvissä alusta (paivitaFokusKerros). Jäljelle jäi KAMERAN RAJAUS
+ * — ja se on nyt napin koko merkitys.
+ */
+vaadi('oletuksena kamera on rajattu fokusikkunaan, sumua ja piilotuksia ei ole',
+  maailma.ennen.alue && !maailma.ennen.sumu && maailma.ennen.piilossa === 0,
   JSON.stringify(maailma.ennen));
-vaadi('"maailma" avaa laudan: kaupungit näkyviin, sumu ja rajoite pois, ei reittejä',
+vaadi('"maailma" vapauttaa kameran ja avaa lehden päältä pelimerkit',
   !maailma.jalkeen.alue && !maailma.jalkeen.sumu && maailma.jalkeen.piilossa === 0
   && maailma.jalkeen.lehdenAlla === 0 && maailma.jalkeen.reitit === 'none'
   && maailma.tallessa === '1' && maailma.painettu === 'true',

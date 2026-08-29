@@ -1,5 +1,5 @@
 /*
- * ============ BITTIKARTTAKARTAN POHJACANVAS (vaihe 1) ================
+ * ===== BITTIKARTTAKARTAN POHJACANVAS (vaiheet 1–3) ==================
  *
  * === MIKÄ VIKA ON (mitattu 29.8.2026, Fablemaxin mittausspeksi) ======
  *
@@ -16,22 +16,61 @@
  * Elävä vektorisisältö EI ole syy: kun kaikki kartan merkit, nappula,
  * tuikkeet ja nimet piilotettiin, kehys parani vain 109 → 98 ms.
  *
- * === KORJAUS ==========================================================
+ * === VAIHEEN 1 KORJAUS JA SEN MITATTU RAJA ============================
  *
  * Lavan POHJAKERROKSET koostetaan kerran yhdelle canvakselle, ja svg:n
  * omat pohjakuvat piilotetaan (display: none — sama mekanismi kuin
  * body.fokus-atlas-nakyma .staattinen). Sen jälkeen selaimella on
  * tiiltä rasteroidessaan yksi valmis bittikartta 25:n purettavan
- * sijaan.
+ * sijaan. Piikit katosivat (WebKit max 1780 → 885 ms), mutta PERUSTASO
+ * EI PARANTUNUT — ja juurisyy mitattiin:
  *
- * CANVAS ON LAVAN KOKOINEN JA LAVAN PAIKALLA, karttakuoren sisällä
- * svg:n alla. Kuoren oma translate3d (js/kartta.js asetaPan) siirtää
- * molempia yhtä aikaa, joten panorointiin ei tule yhtään uutta
- * synkronointia — canvas on lavan varjo, ei toinen liikkuva kappale.
+ *     OLETUS: lava on monta ruudullista (mitattu 14,5 kertaa
+ *     karttaruudun ala), ja selain maalaa canvaksesta koko pinnan —
+ *     svg:stä se rasteroi vain tarvitsemansa tiilet.
+ *
+ * === RUUTUAVARUUDEN CANVAS MITATTIIN — JA OLETUS KAATUI =============
+ *
+ * Vaiheen 2 resepti oli ruudun kokoinen canvas, joka EI liiku kuoren
+ * mukana: joka kehyksellä siihen blitattaisiin koosteesta se ikkuna,
+ * joka juuri nyt on ruudulla (vastasiirto). Se rakennettiin ja
+ * mitattiin 29.8.2026 — ja se on 8 kertaa HITAAMPI:
+ *
+ *     WebKit, Ateenan syväzoom, HOLD-ele ±170 px
+ *       kooste kuoressa (vaihe 1)         p50 16 ms
+ *       ruutucanvas, blitti joka kehys    p50 131 ms
+ *       sama ilman per-kehys-blittiä      p50 16 ms
+ *       blitin oma JS-hinta                   0,02 ms
+ *
+ * Syy on kompositorissa eikä blitissä. Kuoren `translate3d` on
+ * SIIRTO: selain siirtää valmista kerrosta eikä maalaa mitään. Kun
+ * canvas asuu kuoren ULKOPUOLELLA, se ei voi siirtyä — sen sisältö on
+ * kirjoitettava uusiksi joka kehyksellä, ja kirjoitus mitätöi
+ * kerroksen. Se mitätöinti maksaa satakertaisesti sen, mitä
+ * itse pikselikopio.
+ *
+ * MAALATTAVA ALA EI OLLUT SYY. Sama ajo tehtiin TYHJÄLLÄ kartalla
+ * (ei svg-sisältöä, ei canvasta): p95 102 ms ja 17 % kehyksistä yli
+ * 40 ms — käytännössä sama kuin täydellä kartalla (p95 101 ms).
+ * WebKitin käännöskohtien piikit tulevat siis eleen omasta
+ * koneistosta, eivät kartan maalauksesta.
+ *
+ * CANVAS PYSYY SIIS KUORESSA, ja vaiheen 2 työ meni sinne, missä
+ * mitattu hyöty on: kooste ei enää katoa ruudulta kesken
+ * uudelleenrakennuksen (ATOMINEN VAIHTO alla), zoomeja on kiinteä
+ * määrä (js/kartta.js napsautaTasoon), ja maailmanäkymä on mukana.
  *
  * MERKIT JÄÄVÄT SVG:HEN. Kaupungit, nappula, kohderenkaat, tuikkeet ja
- * osumatestaus elävät entiseen tapaan; mitattu hinta on 11 ms, eikä
- * niiden polttaminen kuvaan kuulu tähän vaiheeseen.
+ * osumatestaus elävät entiseen tapaan; mitattu hinta on 11 ms.
+ *
+ * === ATOMINEN VAIHTO ==================================================
+ *
+ * Täysi kooste rakennetaan TAUSTAPUSKURIIN, ja vanha kooste jää
+ * ruudulle sen ajaksi — CSS-muunnos venyttää sen uuteen mittakaavaan
+ * (paikoitaCanvas). Ennen ruutu palasi tuoksi ajaksi svg:lle eli
+ * juuri sille hitaalle polulle, jota tämä moduuli on olemassa
+ * välttämään. Omistajan linjaus: *"tökkiminen on pahempi kuin pehmeä
+ * kuva"*.
  *
  * === STRIPE-REBAKE ====================================================
  *
@@ -44,19 +83,32 @@
  *
  * === MITÄ TÄHÄN EI KOOSTETA ===========================================
  *
- * Vain paperin pohja ja neljä pohjakuvaryhmää. Sumuverho (.fokus-sumu)
- * jää svg:hen: se on maan korostuksen (.country-borders) PÄÄLLÄ, ja jos
- * verho siirtyisi canvakselle, korostus nousisi verhon yli — sama
- * maalausjärjestys on tässä tärkeämpi kuin verhon (mitattu: olematon)
- * hinta. Vaihe 2 polttaa loput.
+ * Vain paperin pohja ja neljä pohjakuvaryhmää.
+ *
+ * SUMUVERHOA EI ENÄÄ OLE. Vaiheessa 1 verho jäi svg:hen, koska se on
+ * maan korostuksen PÄÄLLÄ eikä maalausjärjestys sallinut sen siirtoa.
+ * Omistajan linjaus 29.8.2026 poisti sumennuksen kokonaan pelistä
+ * (fokus = liikerajaus), joten kysymystä ei enää ole.
+ *
+ * MERKIT JÄÄVÄT SVG:HEN — ks. yllä. Mitattu hinta on 11 ms, ja
+ * merkkien polttaminen vaatisi koko svg-piirtimen toisintamisen
+ * canvakselle (tekstit, viivatyylit, maskit). Ablaatio osoitti, ettei
+ * kartan maalaus ole enää kehyksen kustannus lainkaan, joten poltosta
+ * ei ole mitään saatavissa.
  *
  * === MUISTIKURI =======================================================
  *
  * Lehdet puretaan ImageBitmapeiksi YKSI KERRALLAAN ja suljetaan heti
  * piirron jälkeen (close()). Puhelimessa yksi lehti on 3200 x 3200 eli
- * 41 Mt purettuna; kymmenen samanaikaista tappaisi välilehden. Canvas
+ * 41 Mt purettuna; kymmenen samanaikaista tappaisi välilehden. Kooste
  * itse mitoitetaan profiilikohtaiseen kattoon (mitoitaKarttapohja).
  * getImageData-luentaa ei tuotantopolulla ole yhtään.
+ *
+ * KAKSI PUSKURIA ON TRANSIENTTI. Atominen vaihto tarvitsee hetkeksi
+ * kaksi lavan kokoista canvasta (puhelimessa 2 x 32 Mt), ja se on
+ * täsmälleen se huippu, jonka mitoitus sallii (huippuBudjettiTavut).
+ * Toinen puskuri vapautetaan, kun kartta on ollut PUSKURIN_RAUHA_MS
+ * verran rauhassa — pysyvästi kahta ei pidetä.
  */
 
 /*
@@ -196,6 +248,9 @@ const TAYDEN_RAUHA_MS = 900;
  */
 const KOHDISTUKSEN_KATTO = 0.51;
 
+/** Näin kauan rauhaa ennen kuin koosteen taustapuskuri vapautetaan. */
+const PUSKURIN_RAUHA_MS = 4000;
+
 /**
  * Lavan pohjacanvas.
  *
@@ -204,14 +259,30 @@ const KOHDISTUKSEN_KATTO = 0.51;
 export class Karttapohja {
   constructor(ui) {
     this.ui = ui;
+    /** Työn kohteena oleva kooste (ei välttämättä se, joka näkyy). */
     this.canvas = null;
     this.ctx = null;
+    /** Toinen puskuri: kooste rakennetaan tähän vanhan alla. */
+    this.toinenCanvas = null;
     this.apu = null;
     /** Viimeksi koostettu tila (lavaikkuna + resoluutio + sisältöavain). */
     this.tila = null;
+    /*
+     * NÄKYVÄ KOOSTE ON ERI ASIA KUIN RAKENTEILLA OLEVA (vaihe 3).
+     *
+     * Täysi kooste rakennetaan TAUSTAPUSKURIIN, ja vanha kooste jää
+     * ruudulle siihen asti kunnes uusi on valmis — silloin ne
+     * vaihdetaan yhdellä sijoituksella. Zoomin napsahduksessa ruudulla
+     * näkyy siis vanha kuva venytettynä uuteen mittakaavaan (pehmeä),
+     * ei tyhjää eikä svg:n hidasta piirtoa. Omistajan linjaus:
+     * *"tökkiminen on pahempi kuin pehmeä kuva"*.
+     */
+    this.nakyva = null;
+    this.takaAjastin = 0;
     /** Mittarit savukkeelle ja kehittäjätyökaluille. */
     this.rebakeja = 0;
     this.taydet = 0;
+    this.vaihtoja = 0;
     this.kaistat = 0;
     this.ohitukset = 0;
     this.viimeisinKesto = 0;
@@ -225,6 +296,82 @@ export class Karttapohja {
     this.varasto = new Map();
     this.varastonTavut = 0;
     this.tyoLaskuri = 0;
+  }
+
+  /* --- näkyvä kooste (vaihe 2) --------------------------------------- */
+
+  /**
+   * NÄKYVÄ KOOSTE PAIKALLEEN — MYÖS SILLOIN, KUN SE ON VANHENTUNUT.
+   *
+   * Canvas asuu karttakuoressa svg:n alla ja on koostettu OMASSA
+   * lavassaan: sen pikseli (0,0) on laudan piste (tila.x, tila.y) ja
+   * sen mittakaava on tila.pxPerYks. Kun lava sen jälkeen vaihtuu —
+   * zoomin napsahdus, reunatäydennys — kooste on hetken väärässä
+   * mittakaavassa, ja se hetki kestää niin kauan kuin uuden koosteen
+   * rakentaminen.
+   *
+   * CSS-MUUNNOS VENYTTÄÄ VANHAN KUVAN UUTEEN LAVAAN. Muunnos on
+   * kompositorin työtä eikä maalausta: se ei maksa kehysbudjetista
+   * mitään, ja ruudulla näkyy pehmeä mutta OIKEASSA KOHDASSA oleva
+   * kartta sen sijaan että svg ottaisi pohjan takaisin.
+   *
+   * Kun kooste vastaa lavaa, muunnos on tyhjä — silloin canvas on
+   * pikselilleen lavan päällä, kuten vaiheessa 1 (ks. laskeTila:
+   * murto-osapikselin paikka maksaa joka maalauksessa).
+   */
+  paikoitaCanvas() {
+    const n = this.nakyva;
+    if (!n?.canvas || !n.tila) return;
+    const c = n.canvas;
+    const t = n.tila;
+    const leveys = `${t.leveysCss}px`;
+    const korkeus = `${t.korkeusCss}px`;
+    if (c.style.width !== leveys) c.style.width = leveys;
+    if (c.style.height !== korkeus) c.style.height = korkeus;
+    const ui = this.ui;
+    const skaala = ui?.zoomSkaala;
+    const vasen = ui?.zoomVasenReuna;
+    const yla = ui?.zoomYlaReuna;
+    let muunnos = '';
+    if (skaala > 0 && t.pxPerYks > 0 && Number.isFinite(vasen) && Number.isFinite(yla)) {
+      const k = skaala / t.pxPerYks;
+      const tx = (t.x - vasen) * skaala;
+      const ty = (t.y - yla) * skaala;
+      if (Math.abs(k - 1) > 1e-4 || Math.abs(tx) > 0.01 || Math.abs(ty) > 0.01) {
+        muunnos = `translate3d(${tx.toFixed(1)}px, ${ty.toFixed(1)}px, 0) scale(${k.toFixed(4)})`;
+      }
+    }
+    if (c.style.transform !== muunnos) c.style.transform = muunnos;
+  }
+
+  /** Kutsutaan lavan geometrian muuttuessa (js/kartta.js sovitaMannerZoom). */
+  paikoita() {
+    this.paikoitaCanvas();
+  }
+
+  /**
+   * Peittääkö kooste sen, mitä ruudulla juuri nyt on?
+   *
+   * Vain silloin vanha kooste kelpaa näytettäväksi uuden rakentuessa.
+   * Lähennettäessä peittää aina, loitonnettaessa ei — ja silloin svg
+   * ottaa pohjan takaisin kuten ennenkin, koska tyhjä reunus olisi
+   * pahempi kuin hidas mutta oikea kuva.
+   */
+  peittaaNakyvan(t) {
+    const ui = this.ui;
+    const skaala = ui?.zoomSkaala;
+    const mitat = ui?.paneKoko;
+    if (!t || !(skaala > 0) || !(mitat?.w > 0) || !(mitat?.h > 0)) return false;
+    if (!Number.isFinite(ui.zoomVasenReuna) || !Number.isFinite(ui.zoomYlaReuna)) return false;
+    const x0 = ui.zoomVasenReuna - (ui.panX ?? 0) / skaala;
+    const y0 = ui.zoomYlaReuna - (ui.panY ?? 0) / skaala;
+    const x1 = x0 + mitat.w / skaala;
+    const y1 = y0 + mitat.h / skaala;
+    const leveysYks = t.leveysCss / t.pxPerYks;
+    const korkeusYks = t.korkeusCss / t.pxPerYks;
+    const vara = 0.5 / t.pxPerYks;
+    return x0 >= t.x - vara && y0 >= t.y - vara
+      && x1 <= t.x + leveysYks + vara && y1 <= t.y + korkeusYks + vara;
   }
 
   /* --- julkinen rajapinta ------------------------------------------- */
@@ -295,7 +442,17 @@ export class Karttapohja {
   /** Canvas pois ja svg:n pohjat takaisin (laudan vaihto, purku). */
   pura() {
     this.poistaKaytosta();
-    if (this.canvas?.parentNode) this.canvas.parentNode.removeChild(this.canvas);
+    // Nollamitta kertoo selaimelle heti, ettei puskuria enää tarvita.
+    for (const c of [this.canvas, this.toinenCanvas]) {
+      if (!c) continue;
+      c.width = 0;
+      c.height = 0;
+      c.parentNode?.removeChild(c);
+    }
+    clearTimeout(this.takaAjastin);
+    this.takaAjastin = 0;
+    this.toinenCanvas = null;
+    this.nakyva = null;
     this.canvas = null;
     this.ctx = null;
     this.vapautaApu();
@@ -311,11 +468,20 @@ export class Karttapohja {
     return {
       rebakeja: this.rebakeja,
       taydet: this.taydet,
+      vaihtoja: this.vaihtoja,
       kaistat: this.kaistat,
       ohitukset: this.ohitukset,
       kaytossa: Boolean(this.tila),
       viimeisinKesto: Math.round(this.viimeisinKesto * 10) / 10,
       canvas: this.canvas ? `${this.canvas.width}x${this.canvas.height}` : null,
+      /*
+       * NÄKYVÄ KOOSTE JA SEN MUUNNOS. Tyhjä muunnos tarkoittaa, että
+       * kooste vastaa lavaa pikselilleen; muunnos päällä tarkoittaa,
+       * että ruudulla on VANHA kooste venytettynä sillä aikaa kun uusi
+       * rakentuu (ks. paikoitaCanvas).
+       */
+      nakyvaMuunnos: this.nakyva?.canvas?.style?.transform || '',
+      puskureita: [this.canvas, this.toinenCanvas].filter(Boolean).length,
       kerroin: this.tila?.kerroin ?? null,
       // Koostoruudukon origo laudan yksiköissä ja ruudukon askel: origo
       // on lavaikkunan origosta enintään yhden askeleen verran alkuun.
@@ -347,17 +513,23 @@ export class Karttapohja {
     if (ui.aloituslentoKesken) return null;
     if (doc.body?.classList?.contains('kartalento')) return null;
     /*
-     * KEHITTÄJÄN MAAILMANÄKYMÄ JÄÄ SVG:LLE (mitattu 29.8.2026).
+     * KEHITTÄJÄN MAAILMANÄKYMÄ JÄÄ SVG:LLE — MITATTU KAHDESTI.
      *
-     * Maailmanäkymä (js/main.js #kehittaja-maailma-btn) ohittaa
-     * käymättömien maiden piilotuksen ja tuo lavalle 25 lehteä yhtä
-     * aikaa. Jokainen zoomin muutos mitätöi koko koosteen, ja neljän
-     * nipistyksen sarjassa kooste ehti alkaa ja kuolla neljästi:
-     * pitkiä tehtäviä 426 → 1015 ms (savuke-maailmanakyma väite 4).
-     * Se on omistajan oma tarkastelutila eikä pelaajan polku, joten
-     * sen pohja piirtyy kuten ennenkin. Vaihe 2 (ruudun kokoinen
-     * canvas) poistaa syyn — koko lavan kooste on se, mikä tässä on
-     * liian kallis.
+     * Maailmanäkymä (js/main.js #kehittaja-maailma-btn) tuo lavalle
+     * 25 lehteä yhtä aikaa, ja jokainen zoomin muutos mitätöi koko
+     * koosteen. Vaiheessa 1 mitattiin: neljän nipistyksen sarjassa
+     * pitkiä tehtäviä 426 → 1015 ms.
+     *
+     * VAIHEIDEN 2 JA 3 JÄLKEEN KOE UUSITTIIN. Kiinteät zoomtasot
+     * (js/kartta.js napsautaTasoon) ja atominen vaihto poistivat
+     * kuolleena syntyvät koosteet, mutta lehtiä on yhä 25 ja lava
+     * yhä lavan kokoinen: savuke-maailmanakyma väite 4 mittasi
+     * 1036 ms rajaa 750 vastaan. Se on omistajan oma tarkastelutila
+     * eikä pelaajan polku, joten sen pohja piirtyy kuten ennenkin.
+     *
+     * Tämän poistaa vasta vaihe 4 (laattapyramidi): silloin lehteä ei
+     * koosteta kokonaisena vaan laatta kerrallaan, ja zoomin muutos
+     * mitätöi vain sen tason laatat.
      */
     if (ui.maailmanakyma?.()) return null;
     const kerros = ui.fokuskarttaKerros;
@@ -557,27 +729,42 @@ export class Karttapohja {
   async koostaTila(tavoite, syy) {
     this.tyoKesken = true;
     const alku = performance.now();
+    /*
+     * TÄYSI KOOSTE RAKENNETAAN TAUSTAPUSKURIIN (vaihe 3, atominen
+     * vaihto).
+     *
+     * Vaiheessa 1 täyden koosteen ajaksi svg otti pohjan takaisin: se
+     * oli oikein mutta hidasta, ja juuri se oli zoomin napsahduksen
+     * pahin hetki. Nyt vanha kooste jää ruudulle — ruutucanvas blittaa
+     * siitä uudella mittakaavalla, jolloin kuva on hetken pehmeä mutta
+     * paikallaan — ja uusi kooste kirjoitetaan toiseen puskuriin.
+     * Vaihto on yksi sijoitus (this.nakyva), joten ruudulla ei ole
+     * koskaan puolivalmista koostetta.
+     *
+     * SVG PALAA VAIN JOS VANHAA EI OLE. Ensimmäisellä koosteella
+     * ruudulla ei ole mitään näytettävää, ja silloin svg hoitaa
+     * välihetken kuten ennenkin.
+     */
+    const vaihto = this.taysiTarpeen(tavoite)
+      && Boolean(this.nakyva?.canvas)
+      && this.peittaaNakyvan(this.nakyva.tila);
+    const paluu = { canvas: this.canvas, ctx: this.ctx, tila: this.tila };
     try {
+      if (vaihto) this.otaTaustapuskuri();
       const canvas = this.varmistaCanvas(tavoite);
-      if (!canvas) return;
+      if (!canvas) { if (vaihto) this.palautaPuskuri(paluu); return; }
       const alueet = this.valmisteleAlueet(tavoite);
-      /*
-       * TÄYSI KOOSTE NÄYTTÄÄ SVG:N SEN AJAN, KUN SE KESTÄÄ.
-       *
-       * Lehden purku on asynkroninen, ja täydessä koosteessa canvas on
-       * sen ajan tyhjä tai väärässä mittakaavassa (zoomin jälkeen se
-       * venytettäisiin uuteen lavakokoon). Svg piirtää saman pohjan
-       * oikein — hitaasti, mutta oikein — joten se saa hoitaa
-       * välihetken. Kaistaa varten tätä ei tehdä: kaista on aina
-       * ruudullisen päässä näkyvästä alueesta.
-       */
-      if (alueet.taysi) this.piilota();
+      if (alueet.taysi && !vaihto) this.piilota();
       this.rebakeja += 1;
       if (alueet.taysi) this.taydet += 1; else this.kaistat += 1;
+      if (alueet.taysi && vaihto) this.vaihtoja += 1;
       await this.piirraAlueet(tavoite, alueet.osat);
       this.tila = tavoite;
+      // ATOMINEN VAIHTO: tästä hetkestä ruudulla on uusi kooste.
+      this.asetaNakyva(this.canvas, tavoite);
       this.merkitsePoltetut(tavoite);
       this.otaKayttoon();
+      if (vaihto) this.ajastaPuskurinVapautus();
     } finally {
       this.viimeisinKesto = performance.now() - alku;
       this.tyoKesken = false;
@@ -588,7 +775,89 @@ export class Karttapohja {
     void syy;
   }
 
-  /** Canvas oikean kokoisena kuoreen svg:n alle. */
+  /**
+   * Näkyvä kooste vaihtuu YHDELLÄ SIJOITUKSELLA: luokka toiselle
+   * canvakselle, ja paikoitus perään.
+   */
+  asetaNakyva(canvas, tila) {
+    for (const c of [this.canvas, this.toinenCanvas]) {
+      if (c) c.classList.toggle('karttapohja-nakyva', c === canvas);
+    }
+    this.nakyva = { canvas, tila };
+    this.paikoitaCanvas();
+  }
+
+  /**
+   * Rakenteille toinen puskuri; vanha kooste jää näkyviin.
+   *
+   * Molemmat puskurit ovat kuoressa; näkyvyyden ratkaisee luokka
+   * `karttapohja-nakyva` (css/styles.css), koska `display: none` ei
+   * tyhjennä canvaksen puskuria — piilossa oleva kooste säilyy
+   * sellaisenaan ja on valmis heti kun se vuorollaan palaa.
+   */
+  otaTaustapuskuri() {
+    const doc = globalThis.document;
+    const kuori = this.ui.karttaKuori;
+    if (!doc || !kuori) return;
+    clearTimeout(this.takaAjastin);
+    this.takaAjastin = 0;
+    let uusi = this.toinenCanvas;
+    if (!uusi) {
+      uusi = doc.createElement('canvas');
+      uusi.className = 'karttapohja';
+      uusi.setAttribute('aria-hidden', 'true');
+      kuori.insertBefore(uusi, kuori.firstChild);
+    }
+    this.toinenCanvas = this.canvas;
+    this.canvas = uusi;
+    this.ctx = uusi.getContext('2d', { alpha: true });
+    if (this.ctx) this.ctx.imageSmoothingQuality = 'high';
+    // Tyhjä tila pakottaa valmisteleAlueet tekemään täyden koosteen:
+    // uudessa puskurissa ei ole mitään siirrettävää.
+    this.tila = null;
+  }
+
+  /** Vaihto peruuntui (canvasta ei saatu): vanha jää työkohteeksi. */
+  palautaPuskuri(paluu) {
+    this.toinenCanvas = this.canvas;
+    this.canvas = paluu.canvas;
+    this.ctx = paluu.ctx;
+    this.tila = paluu.tila;
+  }
+
+  /*
+   * TAUSTAPUSKURI EI JÄÄ MUISTIIN. Kaksi lavan kokoista canvasta on
+   * puhelimessa 64 Mt, ja se on kaksinkertainen profiilibudjettiin
+   * nähden (mitoitaKarttapohja huippuBudjettiTavut sallii sen vain
+   * transienttina). Puskuri elää siis vain zoomailun ympärillä ja
+   * vapautuu, kun kartta on ollut hetken rauhassa.
+   */
+  ajastaPuskurinVapautus() {
+    clearTimeout(this.takaAjastin);
+    this.takaAjastin = setTimeout(() => {
+      this.takaAjastin = 0;
+      const taka = this.toinenCanvas;
+      if (!taka || taka === this.canvas || taka === this.nakyva?.canvas) return;
+      taka.width = 0;
+      taka.height = 0;
+      taka.parentNode?.removeChild(taka);
+      this.toinenCanvas = null;
+    }, PUSKURIN_RAUHA_MS);
+  }
+
+  /**
+   * Kooste oikean kokoisena karttakuoreen svg:n alle.
+   *
+   * KUORESSA JA VAIN KUORESSA. Kuoren oma translate3d (js/kartta.js
+   * asetaPan) siirtää canvaksen ja svg:n yhtä aikaa, eikä panorointi
+   * maalaa kummastakaan mitään — se on kompositorin siirto. Ruudun
+   * kokoinen, kuoren ulkopuolella elävä canvas kokeiltiin ja mitattiin
+   * (ks. tiedoston johdanto): se on kahdeksan kertaa hitaampi, koska
+   * sen sisältö on kirjoitettava uusiksi joka kehyksellä.
+   *
+   * `willReadFrequently` on POIS: se pakottaa canvaksen ohjelmistolle,
+   * eikä tuotantopolulla ole yhtään getImageData-luentaa.
+   */
   varmistaCanvas(tavoite) {
     const doc = globalThis.document;
     const kuori = this.ui.karttaKuori;
@@ -601,7 +870,7 @@ export class Karttapohja {
       // sille z-index: -1 kuoren omassa pinossa (css/styles.css).
       kuori.insertBefore(c, kuori.firstChild);
       this.canvas = c;
-      this.ctx = c.getContext('2d', { alpha: true, willReadFrequently: true });
+      this.ctx = c.getContext('2d', { alpha: true });
       if (this.ctx) this.ctx.imageSmoothingQuality = 'high';
     }
     const c = this.canvas;
@@ -611,11 +880,6 @@ export class Karttapohja {
       if (this.ctx) this.ctx.imageSmoothingQuality = 'high';
       tavoite.koonMuutos = true;
     }
-    // Css-mitat lavan mitoiksi ja paikka lavan origoon: canvas ja svg
-    // ovat pikselilleen päällekkäin, ja kuoren muunnos siirtää molempia
-    // yhtä aikaa. Murto-osapikselin paikkaa EI koskaan (ks. laskeTila).
-    c.style.width = `${tavoite.leveysCss}px`;
-    c.style.height = `${tavoite.korkeusCss}px`;
     return c;
   }
 
@@ -1115,8 +1379,9 @@ export class Karttapohja {
 
   otaKayttoon() {
     const body = globalThis.document?.body;
-    if (!body || !this.tila || body.classList.contains(KAYTOSSA_LUOKKA)) return;
-    body.classList.add(KAYTOSSA_LUOKKA);
+    if (!body || !this.tila) return;
+    if (!body.classList.contains(KAYTOSSA_LUOKKA)) body.classList.add(KAYTOSSA_LUOKKA);
+    this.paikoitaCanvas();
   }
 
   /**
@@ -1146,7 +1411,7 @@ export class Karttapohja {
     }
   }
 
-  /** Svg:n pohjat esiin, canvaksen SISÄLTÖ säilyy (ks. paivita). */
+  /** Svg:n pohjat esiin, koosteen SISÄLTÖ säilyy (ks. paivita). */
   piilota() {
     const body = globalThis.document?.body;
     if (body?.classList.contains(KAYTOSSA_LUOKKA)) body.classList.remove(KAYTOSSA_LUOKKA);
@@ -1156,6 +1421,7 @@ export class Karttapohja {
     this.piilota();
     this.puhdistaPoltetut();
     this.tila = null;
+    this.nakyva = null;
     this.vapautaApu();
     this.tyhjennaVarasto();
   }
