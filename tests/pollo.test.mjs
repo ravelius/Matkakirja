@@ -23,6 +23,9 @@ import { readFileSync } from 'node:fs';
 
 import {
   KONTEKSTIN_ENIMMAISPITUUS,
+  LIVIAN_MIETINNAT,
+  MIETINNAN_JATKOVIIVE,
+  arvoMietinta,
   jasennaKasitteet,
   kehysLaji,
   kokoaKonteksti,
@@ -643,6 +646,68 @@ test('kehote kantaa kehysmallin ja Livian puhekielen', () => {
   assert.ok(/PULLA-PERSOUS/.test(kehote), 'pullapersous puuttuu');
   assert.ok(/VUOSI 1873 JA NYKYHETKI/.test(kehote), 'aikavertailu puuttuu');
   assert.ok(/VAIKEAT NYKYAIHEET/.test(kehote), 'vaikeiden nykyaiheiden ohje puuttuu');
+});
+
+/* ---------------------------------------------------------------- */
+/* Livian mietintämuodot                                             */
+/* ---------------------------------------------------------------- */
+
+/*
+ * ODOTUSRIVI ON LIVIAN PUHETTA (omistajan hyväksyntä 29.8.2026), eikä
+ * enää sama nimilappu joka kerta. Repliikit ovat pelin sisältöä, joten
+ * niitä koskevat samat puhekielisäännöt kuin muutakin Livian puhetta
+ * (Raamattu, "LIVIAN PUHEKIELI"): ei huutomerkkejä, pronominit
+ * kokonaisina ja Kaak vain aidoissa säikähdyksissä — odotus ei ole
+ * sellainen. Testi vartioi sääntöjä, koska rivi on helppo lisätä
+ * huolimattomasti.
+ */
+test('Livian mietintämuodot noudattavat puhekielisääntöjä', () => {
+  const kaikki = [
+    ...LIVIAN_MIETINNAT.yleiset,
+    ...LIVIAN_MIETINNAT.vastaus,
+    ...LIVIAN_MIETINNAT.pitkat,
+  ];
+  assert.ok(LIVIAN_MIETINNAT.yleiset.length >= 12,
+    'yleisiä mietintämuotoja on liian vähän — toisto paljastaisi koneen');
+  assert.ok(LIVIAN_MIETINNAT.vastaus.length >= 3, 'vastausrepliikkejä on liian vähän');
+  assert.ok(LIVIAN_MIETINNAT.pitkat.length >= 2, 'jatkorepliikkejä on liian vähän');
+  assert.equal(new Set(kaikki).size, kaikki.length, 'sama repliikki on listalla kahdesti');
+  for (const rivi of kaikki) {
+    assert.ok(!rivi.includes('!'), `${rivi}: Livia ei käytä huutomerkkejä`);
+    // Sanaraja kirjoitetaan auki: JS:n \b ei tunne ä:tä sanan osaksi,
+    // joten \bsä\b osuisi myös sanaan "sähkeitä".
+    assert.ok(!/(^|[\s(—"'])(mä|sä|mun|sun|mua|sua)($|[\s.,;:?)—"'])/i.test(rivi),
+      `${rivi}: pronominit kokonaisina (minä, ei mä)`);
+    assert.ok(!/kaak/i.test(rivi), `${rivi}: Kaak kuuluu vain säikähdyksiin`);
+    assert.ok(rivi.endsWith('..') && !rivi.endsWith('...'),
+      `${rivi}: odotusrepliikki päättyy kahteen pisteeseen`);
+    assert.ok(rivi.length <= 70, `${rivi}: rivi on liian pitkä odotusriville`);
+  }
+});
+
+test('arvoMietinta ei toista edellistä repliikkiä', () => {
+  const lista = LIVIAN_MIETINNAT.yleiset;
+  let edellinen = lista[0];
+  for (let i = 0; i < 200; i += 1) {
+    const seuraava = arvoMietinta(lista, edellinen);
+    assert.notEqual(seuraava, edellinen, 'sama mietintä osui kahdesti peräkkäin');
+    assert.ok(lista.includes(seuraava), `${seuraava} ei ole listalla`);
+    edellinen = seuraava;
+  }
+  // Mahdoton lupaus ei saa kaataa mitään: yhden alkion lista palauttaa sen.
+  assert.equal(arvoMietinta(['ainoa..'], 'ainoa..'), 'ainoa..');
+  assert.equal(arvoMietinta([], ''), '');
+  assert.equal(arvoMietinta(undefined, ''), '');
+});
+
+test('odotusrivit käyttävät mietintämuotoja eikä vanhaa nimilappua', () => {
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  assert.equal((lahde.match(/mietintarivi\(/g) ?? []).length, 3,
+    'mietintarivi kuuluu kahteen odotusriviin (vastaus + ehdotukset) + määrittely');
+  assert.ok(!/jalkeen: ' miettii/.test(lahde),
+    'vanha staattinen odotusnimilappu on yhä koodissa');
+  assert.ok(MIETINNAN_JATKOVIIVE >= 4000 && MIETINNAN_JATKOVIIVE <= 12000,
+    'jatkorepliikin viive on liian lyhyt tai liian pitkä');
 });
 
 /* ---------------------------------------------------------------- */

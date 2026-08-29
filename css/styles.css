@@ -18793,7 +18793,8 @@ button.pollo-ehdotus:disabled { opacity: 0.5; cursor: default; }
  * *"saisiko strimitekstin ilman kursiivia"*.
  *
  * JUURISYY: tämä sääntö osui kahteen paikkaan yhdellä nimellä.
- * "Pöllö miettii…" on viestikupla, jolla luokka kuuluu olla — mutta
+ * Odotusrivi (Livian mietintämuoto) on viestikupla, jolla luokka
+ * kuuluu olla — mutta
  * js/pollo.js asetti saman luokan myös PANEELIIN odotuksen ajaksi, ja
  * paneelista kursiivi ja himmeä muste periytyivät kaikkeen sisältöön.
  * Striimattu vastaus kirjoittui siis kursiivilla ja muuttui pystyksi
@@ -18811,9 +18812,10 @@ button.pollo-ehdotus:disabled { opacity: 0.5; cursor: default; }
  *
  * Kysymysehdotukset generoidaan palvelimella, ja sen ajan ehdotusrivi
  * oli tyhjä — pelaajalle sama asia kuin "ei kysymyksiä". Rivin paikalle
- * tulee nyt SAMA odotusnimilappu kuin vastausta odottaessa (yllä), vain
- * ehdotusnapin kokoon kutistettuna: uutta odotuskieltä ei ole, ja rivi
- * perii kursiivin ja himmeän musteen .pollo-odottaa-säännöstä.
+ * tulee nyt SAMA odotusrivi kuin vastausta odottaessa (yllä) eli Livian
+ * vaihtuva mietintämuoto, vain ehdotusnapin kokoon kutistettuna: uutta
+ * odotuskieltä ei ole, ja rivi perii kursiivin ja himmeän musteen
+ * .pollo-odottaa-säännöstä.
  *
  * Animaatio on hidas hengitys eikä pyörivä ratas: pöllön pinta on
  * paperia ja mustetta, eikä latauskiekko kuulu siihen. Liike on myös
