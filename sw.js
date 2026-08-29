@@ -16,6 +16,7 @@ const SHELL = [
   './js/ui.js',
   './js/kartta.js',
   './js/karttamittari.js',
+  './js/karttapohja.js',
   './js/fokuskartta.js',
   './js/fokusmitat.js',
   './js/packs/fokus-grc.js',

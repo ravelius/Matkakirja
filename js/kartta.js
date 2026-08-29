@@ -1312,7 +1312,7 @@ export class Kartta {
    * panin näkymän keskipisteestä), joten täydennys EI siirrä kuvaa
    * pikseliäkään.
    */
-  ikkunoiLava() {
+  ikkunoiLava({ liukuu = false } = {}) {
     const ikkuna = this.ui.lavaIkkunaTila;
     const skaala = this.ui.zoomSkaala;
     if (!ikkuna || !this.ui.mannerZoom || !(skaala > 0)) return false;
@@ -1339,8 +1339,21 @@ export class Kartta {
       ikkuna.margX, lauta.x, lauta.w, ikkuna.kiertoX)
       || vajaa(nakyvaY, mitat.h / skaala, ikkuna.y, ikkuna.h,
         ikkuna.margY, lauta.y, lauta.h, false);
-    if (!tarve) return false;
+    /*
+     * POHJACANVAS TAHDISTETAAN TÄSTÄ (js/karttapohja.js).
+     *
+     * Sama kutsupaikka kuin reunatäydennyksellä, koska kyse on samasta
+     * asiasta: näkymä on asettunut ja lava on siirtynyt. Kutsu tulee
+     * MYÖS silloin kun ikkunointia ei tarvittu — lehti on voinut
+     * saapua verkosta ilman että lava liikahti, ja moduuli päättää itse
+     * onko koostettavaa (sisältöavain).
+     */
+    if (!tarve) {
+      this.ui.karttapohja?.paivita('lepo', { pakota: liukuu });
+      return false;
+    }
     this.fitViewBox();
+    this.ui.karttapohja?.paivita(liukuu ? 'liuku' : 'ikkunointi', { pakota: liukuu });
     return true;
   }
 
@@ -3744,6 +3757,25 @@ export class Kartta {
       const vaimennus = 0.5 ** (dt / LIUKU_PUOLIINTUMIS_MS);
       liuku.vx *= vaimennus;
       liuku.vy *= vaimennus;
+      /*
+       * LIU'UN PUOLIVÄLI: POHJAN KAISTA AJETAAN JO TÄSSÄ.
+       *
+       * Liuku elää irrotuksen jälkeen noin 1,2 s, ja koko sen ajan
+       * lava on paikallaan — vasta lopussa reunatäydennys siirtää sen
+       * kerralla koko matkan. Pohjacanvaksella siirto on kaistan
+       * kooste, ja kaista on mitattu halvaksi kesken liu'unkin
+       * (WebKit 0–33 ms). Ajamalla se puolivälissä työ ei kasaudu
+       * siihen samaan kehykseen, jossa liuku pysähtyy.
+       *
+       * KERRAN LIUKUA KOHTI, ja vain jos ikkunointia oikeasti
+       * tarvitaan — ikkunoiLava päättää sen itse, ja se säilyttää
+       * keskipisteen pikselilleen (sovitaMannerZoom).
+       */
+      if (!liuku.puolivali && liuku.nopeus0 > 0
+        && Math.hypot(liuku.vx, liuku.vy) <= liuku.nopeus0 / 2) {
+        liuku.puolivali = true;
+        this.ikkunoiLava({ liukuu: true });
+      }
       if (Math.hypot(liuku.vx, liuku.vy) < LIUKU_SAMMUU) {
         pysaytaLiuku();
         // Liuku päättyi: lepo alkaa nyt, ja kuva täydennetään kuten
@@ -3778,7 +3810,9 @@ export class Kartta {
         vx *= LIUKU_KATTO / vauhti;
         vy *= LIUKU_KATTO / vauhti;
       }
-      liuku = { vx, vy, viime: nyt, pyynto: 0 };
+      liuku = {
+        vx, vy, viime: nyt, pyynto: 0, nopeus0: Math.hypot(vx, vy), puolivali: false,
+      };
       liuku.pyynto = requestAnimationFrame(liukuAskel);
       return true;
     };
