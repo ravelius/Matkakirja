@@ -234,6 +234,17 @@
   color: rgba(33, 29, 24, 0.6);
 }
 
+/* Kakkoskuva tekstin alla: sama kehys ja sama kuvateksti, matalampi
+   rajaus. Sama suhde kuin täkynostoilla (css/fokusnosto.css
+   .fokusnosto-valokuva) — pääkuva johtaa, todistekuva seuraa. */
+.fokusvirta-jalkikuva {
+  margin: 0.7rem 0 0.6rem;
+}
+
+.fokusvirta-jalkikuva .fokusvirta-kuva img {
+  height: min(20vh, 9rem);
+}
+
 /* --- teksti --- */
 
 .fokusvirta-teksti p {

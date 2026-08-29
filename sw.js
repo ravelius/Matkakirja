@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1318';
+const CACHE = 'matkakirja-2026-08-09.1319';
 const SHELL = [
   './',
   './index.html',
@@ -820,6 +820,16 @@ const SHELL = [
   './assets/kartat/nostot/nosto-szegedin-tulva-loistoaika.webp',
   './assets/kartat/nostot/nosto-pulan-areena-loistoaika.webp',
   './assets/kartat/nostot/nosto-karlstejn-loistoaika.webp',
+  /*
+   * AALLON 1 TÄKYSYVENNYKSET (29.8.2026). Ensimmäiset loistoaikakuvat,
+   * jotka eivät mene täkynostoon vaan fokusvirran omaan syvennys- tai
+   * oppituntikorttiin (js/fokusvirta.js piirraKuva tuntee nyt myös
+   * repon oman `osoite`-kuvan). Sama esilatauksen syy kuin yllä.
+   */
+  './assets/kartat/nostot/nosto-retiro-loistoaika.webp',
+  './assets/kartat/nostot/nosto-rotunde-loistoaika.webp',
+  './assets/kartat/nostot/nosto-tuileriat-loistoaika.webp',
+  './assets/kartat/nostot/nosto-voitonpylvas-loistoaika.webp',
   /*
    * ISOISÄN KARTTALIITTEET (29.8.2026, pilottina Wienin
    * maailmannäyttely). Sama syy kuin loistoaikakuvilla yllä: liite on

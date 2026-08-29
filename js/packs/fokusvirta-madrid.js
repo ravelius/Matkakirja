@@ -221,12 +221,35 @@ export const FOKUSVIRTA_MADRID = {
         + 'kaupunginkirjasto — sen seinissä ovat yhä ne kalterit, '
         + 'joiden läpi pedoille heitettiin ruokaa yläkerrasta.',
       /*
+       * PÄÄKUVAKSI LOISTOAIKA (29.8.2026, aalto 1). Sama malli kuin
+       * täkynostoilla v1307:stä alkaen: repon oma generoitu
+       * havainnekuva, jolla ei ole Commons-nimeä eikä varareittiä,
+       * joten kenttä on `osoite` eikä `tiedosto` (js/fokusvirta.js
+       * kuvanOsoite).
+       *
+       * Kuva on tarha auki: norsu aitauksessaan, iso lintuhäkki ja
+       * kävijöitä käytävillä — juuri se puisto, johon täkyn mukaan
+       * isoisä pääsi sisään maksamatta hoville mitään.
+       *
+       * SILMÄTARKISTUS 29.8.2026: ei tekstiä, ei nykyaikaa; asut ja
+       * häkkirakenteet 1870-lukua.
+       */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-retiro-loistoaika.webp',
+        selite: 'Casa de Fieras Retirossa: norsu aitauksessaan, iso '
+          + 'lintuhäkki ja kävijöitä hiekkakäytävillä.',
+        lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
+      },
+      /*
+       * KAKKOSKUVA tekstin alle on entinen ainoa kuva. Tiedosto, selite
+       * ja lähde ennallaan.
+       *
        * Commons 28.8.2026: 4001×2952, public domain, Josep Lluis
        * Pellicer / Bernardo Rico, julkaistu 22.12.1879 lehdessä La
        * Ilustración Española y Americana. Restrictions tyhjä.
        * Aikalaiskuva kuudelta vuodelta isoisän matkan jälkeen.
        */
-      kuva: {
+      valokuva: {
         tiedosto: '1879-12-22, La Ilustración Española y Americana, Madrid.—El cercado de los llamas, en la Casa de Fieras del parque de Madrid.jpg',
         selite: 'Laamatarha Retiron eläintarhassa. Kuvalaitos on '
           + 'vuodelta 1879, kuusi vuotta isoisän käynnin jälkeen.',

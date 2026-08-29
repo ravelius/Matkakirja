@@ -367,21 +367,63 @@ test('vähintään yhdessä maadoituksessa isoisä osoittautuu oikeaksi', () => 
     'ainakin yhdessä kaupungissa Livian on myönnettävä isoisän olleen oikeassa');
 });
 
+/*
+ * KOLMAS KUVALÄHDE `osoite` (29.8.2026, aallon 1 täkysyvennykset).
+ *
+ * Syvennys- ja oppituntikortti tuntevat nyt saman kolmen lähteen
+ * porrastuksen kuin täkynostot (js/fokusvirta.js kuvanOsoite):
+ * `tiedosto` on Commons-nimi, `ampari` ämpärin painotuote ja `osoite`
+ * REPON OMA generoitu havainnekuva. Viimeinen on rikkoutuva tavalla,
+ * jota kaksi muuta eivät ole — väärin kirjoitettu polku ei näy missään
+ * ennen kuin kortti on auki pelissä — joten sille luetaan myös levy,
+ * kuten karttaliitteelle.
+ */
 test('jokaisella fokusvirran kuvalla on selite ja lähde', () => {
   for (const [kaupunki, virta] of Object.entries(FOKUSVIRRAT)) {
     const kuvat = [
-      virta.matkakirja?.kuva, virta.pollo?.kuva, virta.oppitunti?.kuva,
-      ...(virta.takyt ?? []).map((t) => t.kuva),
+      virta.matkakirja?.kuva, virta.pollo?.kuva,
+      virta.oppitunti?.kuva, virta.oppitunti?.valokuva,
+      ...(virta.takyt ?? []).flatMap((t) => [t.kuva, t.valokuva]),
       ...(virta.kohteet ?? []).map((k) => k.kuva),
     ].filter(Boolean);
     assert.ok(kuvat.length >= 4, `${kaupunki}: kuvia on liian vähän`);
     for (const kuva of kuvat) {
-      assert.ok(kuva.tiedosto || kuva.ampari,
-        `${kaupunki}: kuvalla ei ole tiedostoa eikä ämpäripolkua`);
+      assert.ok(kuva.tiedosto || kuva.ampari || kuva.osoite,
+        `${kaupunki}: kuvalla ei ole tiedostoa, ämpäripolkua eikä osoitetta`);
+      if (kuva.osoite) {
+        assert.ok(existsSync(new URL(`../${kuva.osoite}`, import.meta.url)),
+          `${kaupunki}: repon oman kuvan tiedostoa ei ole (${kuva.osoite})`);
+      }
       assert.ok(kuva.selite?.length > 20, `${kaupunki}: kuvaselite puuttuu`);
       // Lisenssi ja tekijä ovat pakolliset: PD/CC-sääntö (CLAUDE.md).
       assert.ok(kuva.lahde?.length > 10, `${kaupunki}: kuvan lähde puuttuu`);
     }
+  }
+});
+
+/*
+ * KAKKOSKUVA EI SAA OLLA PÄÄKUVAN KOPIO (aalto 1, 29.8.2026).
+ *
+ * Kun syvennyksen entinen ainoa kuva siirretään `valokuva`-kenttään ja
+ * pääkuvaksi nousee loistoaikahavainnekuva, virhe jota kukaan ei
+ * huomaisi selaimessa on se, että siirto tehtiin puolittain: sama kuva
+ * jäisi molempiin kenttiin ja kortti latoisi sen kahdesti. Pääkuvan on
+ * lisäksi oltava juuri se repon oma havainnekuva, jonka takia kenttä
+ * ylipäätään on olemassa.
+ */
+test('syvennyksen kakkoskuva on eri kuva kuin pääkuva', () => {
+  const parit = Object.entries(FOKUSVIRRAT).flatMap(([kaupunki, virta]) => [
+    ...(virta.takyt ?? []).map((t) => [`${kaupunki}/${t.id}`, t]),
+    ...(virta.oppitunti ? [[`${kaupunki}/oppitunti`, virta.oppitunti]] : []),
+  ].filter(([, kortti]) => kortti.valokuva));
+  assert.ok(parit.length >= 4, 'kakkoskuvallisia syvennyksiä ei löytynyt');
+  for (const [mista, kortti] of parit) {
+    assert.ok(kortti.kuva?.osoite,
+      `${mista}: kakkoskuvallisen kortin pääkuvan pitää olla repon oma havainnekuva`);
+    assert.notEqual(kortti.valokuva.tiedosto, kortti.kuva.tiedosto,
+      `${mista}: sama tiedosto sekä pää- että kakkoskuvana`);
+    assert.ok(kortti.valokuva.tiedosto || kortti.valokuva.ampari,
+      `${mista}: kakkoskuva on todistekuva, ei toinen havainnekuva`);
   }
 });
 

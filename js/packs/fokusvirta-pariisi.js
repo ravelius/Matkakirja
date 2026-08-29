@@ -184,13 +184,39 @@ export const FOKUSVIRTA_PARIISI = {
         + 'kokonainen palatsi, Château de la Punta. Paloja on nykyään '
         + 'Berliinissä, Italiassa ja Quitossa asti.',
       /*
+       * PÄÄKUVAKSI HAVAINNEKUVA (29.8.2026, aalto 1). Sama malli kuin
+       * täkynostoilla v1307:stä alkaen: repon oma generoitu kuva, jolla
+       * ei ole Commons-nimeä eikä varareittiä, joten kenttä on `osoite`
+       * eikä `tiedosto` (js/fokusvirta.js kuvanOsoite).
+       *
+       * LÄHDERIVI ON SOVITETTU, KOSKA KUVASSA EI OLE LOISTOAIKAA (sama
+       * ratkaisu kuin v1307:n draculalla ja v1312:n Szegedillä):
+       * palatsin loisto oli ohi 1871, ja koko täkyn juttu on nimenomaan
+       * se, että raunio jäi seisomaan yksitoista vuotta. Kuva on siis
+       * se, mitä isoisä näki: katoton kivirunko lauta-aidan takana ja
+       * pariisilaisia jatkamassa elämäänsä sen edessä.
+       *
+       * SILMÄTARKISTUS 29.8.2026: ei tekstiä, ei nykyaikaa; raunio +
+       * 1873 asuinen kävelijäjoukko on juuri oikein tähän täkyyn.
+       */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-tuileriat-loistoaika.webp',
+        selite: 'Tuileriain palatsin palanut runko puutarhan puolelta: '
+          + 'katto poissa, kivimuurit ehjät, lauta-aita raunion edessä '
+          + 'ja kaupunkilaisia altaan äärellä.',
+        lahde: 'Matkakirjan havainnekuva: rauniot isoisän matkavuonna',
+      },
+      /*
+       * KAKKOSKUVA tekstin alle on entinen ainoa kuva. Tiedosto, selite
+       * ja lähde ennallaan.
+       *
        * Commons 28.8.2026: 3000×2285, CC0, Henri Emile Cimarosa
        * Godefroy, kuvattu 1871–1883, kuvaus "Vue des Tuileries après
        * l'incendie de 1871". Restrictions tyhjä. SILMÄTARKISTUS tehty:
        * kuvassa on raunio aidan takana, ei tunnistettavia ihmisiä.
        * Tämä on juuri se näkymä, jonka isoisä näki.
        */
-      kuva: {
+      valokuva: {
         tiedosto: "Vue des Tuileries après l'incendie de 1871, PH83415.jpg",
         selite: 'Tuileriain palatsi palon jälkeen. Valokuva on samalta '
           + 'ajalta, jona rauniot seisoivat kaupungin keskellä.',
