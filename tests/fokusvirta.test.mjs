@@ -25,8 +25,12 @@ import {
   FOKUSVIRRAN_VAIHEET, asetaFokusvirtaTila, fokusvirtaAlkutila, fokusvirtaJaljella,
   fokusvirtaKohteetJaljella, fokusvirtaMatkakirja, fokusvirtaNahdytKohteet,
   fokusvirtaPorttiAuki, fokusvirtaSiirto, fokusvirtaSiivoa, fokusvirtaTila,
-  sahkePalkkio, sisaltohakemisto,
+  normalisoiSahketeksti, sahkePalkkio, sisaltohakemisto, tulkitseVapaaSahke,
 } from '../js/fokusvirta.js';
+// Vapaan vastauksen oikeat vastaukset asuvat välityspalvelimella eivätkä
+// pelissä; taulu luetaan tänne vain sen tarkistamiseksi, että pelidatan
+// tehtävätunnukset ja palvelimen taulu pysyvät synkassa.
+import { SAHKE_VASTAUKSET } from '../tools/pollo/rajat.js';
 /*
  * KOHDEHAKEMISTON KYTKENTÄ TUODAAN MUKANA, EI JÄLJITELLÄ. Sähkelomakkeen
  * valintalista saa kartan kohteet takaisinkutsulla, jonka
@@ -606,6 +610,93 @@ test('Sofian pelitestattu sisältö on ennallaan sähkepilotin jälkeen', () => 
     'Nadian kohtaaminen katosi — pilotin palautus ei ole enää yksi rivi');
   assert.equal(sofia.kohtaamispiste?.nimi, 'Vasil Levskin muistomerkki',
     'kohtaamispiste muuttui');
+});
+
+/* ---------- 6c. vapaa vastaus (vaihe 2) ---------- */
+
+/*
+ * VAPAA TEKSTIKENTTÄ LOMAKKEEN RINNALLA (Raamattu, PÖLLÖN SÄHKETEHTÄVÄ,
+ * VAIHE 2; omistaja 29.8.2026: *"Tee 2, haluan nähdä miten toimii"*).
+ *
+ * Testattavaa on kaksi, ja molemmat ovat sellaisia, jotka eivät näkyisi
+ * ruudulla vaan vasta laskussa tai pelaajan turhautumisena:
+ *
+ *   1. PAIKALLINEN NORMALISOINTI on se, joka pitää tehtävän ILMAISENA.
+ *      Jos se lakkaa osumasta, peli toimii yhä — mutta jokainen vastaus
+ *      lentää mallille ja maksaa. Sitä ei huomaisi mistään.
+ *   2. TEHTÄVÄTUNNUS on ainoa side pelidatan ja välityspalvelimen
+ *      vastaustaulun välillä. Jos ne eroavat, vapaa polku vastaa
+ *      "tuntematon tehtävä" eikä kukaan huomaa ennen pelitestiä.
+ */
+
+test('sähketekstin normalisointi riisuu ääkköset, välimerkit ja versaalit', () => {
+  assert.equal(normalisoiSahketeksti('Vasa'), 'vasa');
+  assert.equal(normalisoiSahketeksti('  VASA!  '), 'vasa');
+  assert.equal(normalisoiSahketeksti('Laiva, joka upposi ja nousi'),
+    'laiva joka upposi ja nousi');
+  // Ääkköset ja muut diakriitit riisutaan: puhelimella kirjoitetaan
+  // usein ilman niitä, eikä se saa muuttaa oikeaa vastausta vääräksi.
+  assert.equal(normalisoiSahketeksti('Väsä-Wåsa'), 'vasa wasa');
+  assert.equal(normalisoiSahketeksti('vuonna 1961.'), 'vuonna 1961');
+  assert.equal(normalisoiSahketeksti(null), '');
+});
+
+test('vapaa vastaus hyväksytään paikallisesti tunnetuilla kirjoitusasuilla', () => {
+  const tukholma = fokusvirtaKaupungille('tukholma').sahketehtava;
+  const sofia = fokusvirtaKaupungille('sofia').sahketehtava;
+
+  // Sama teksti yhtenä kenttänä: kohde ja vuosi rinnakkain.
+  assert.ok(tulkitseVapaaSahke('vasa 1961', tukholma).osui, 'vasa 1961');
+  assert.ok(tulkitseVapaaSahke('Wasa, nostettiin 1961', tukholma).osui, 'Wasa-kirjoitusasu');
+  assert.ok(tulkitseVapaaSahke('se oli Vaasa ja vuosi 1961', tukholma).osui, 'Vaasa');
+  assert.ok(tulkitseVapaaSahke('Laiva, joka upposi ja nousi — 1961', tukholma).osui,
+    'lehden virallinen otsikko');
+  assert.ok(tulkitseVapaaSahke('varna 1974', sofia).osui, 'varna 1974');
+  assert.ok(tulkitseVapaaSahke('Varnan nekropoli, löytyi 1974', sofia).osui, 'sijamuoto');
+
+  // Puolikas vastaus ei osu paikallisesti — se lentää pöllölle.
+  assert.equal(tulkitseVapaaSahke('vasa', tukholma).osui, false, 'pelkkä kohde');
+  assert.equal(tulkitseVapaaSahke('1961', tukholma).osui, false, 'pelkkä vuosi');
+  assert.equal(tulkitseVapaaSahke('vasa 1961', sofia).osui, false, 'toisen kaupungin vastaus');
+  assert.equal(tulkitseVapaaSahke('', tukholma).osui, false, 'tyhjä teksti');
+  // Kokonaisia sanoja, ei osumaa keskeltä toista sanaa.
+  assert.equal(tulkitseVapaaSahke('vasaramies 1961', tukholma).osui, false, 'sananosa');
+});
+
+test('vapaa vastaus ei koskaan hylkää: paikallinen tulkinta vain hyväksyy', () => {
+  const tukholma = fokusvirtaKaupungille('tukholma').sahketehtava;
+  // Oikea vastaus oudolla kirjoitusasulla ei osu paikallisesti — ja
+  // juuri siksi se menee pöllön tulkittavaksi eikä hylätyksi. Testi
+  // naulaa sen, että "ei osu" tarkoittaa lentoa eikä tuomiota.
+  const tulos = tulkitseVapaaSahke('se sotalaiva joka nostettiin 1961', tukholma);
+  assert.equal(tulos.osui, false);
+  assert.deepEqual(tulos.vaarat.map((a) => a.id), ['kohde'],
+    'vuosi tunnistettiin, kohde jäi mallille');
+});
+
+test('sähkepilottien tunnukset ja välityspalvelimen vastaustaulu ovat synkassa', () => {
+  const pilotit = Object.entries(FOKUSVIRRAT).filter(([, v]) => v.sahketehtava);
+  for (const [cityId, virta] of pilotit) {
+    const tehtava = virta.sahketehtava;
+    assert.ok(tehtava.id, `${cityId}: sähketehtävältä puuttuu tunnus (vapaa vastaus ei toimi)`);
+    const oikea = SAHKE_VASTAUKSET[tehtava.id];
+    assert.ok(oikea, `${cityId}: tunnusta "${tehtava.id}" ei ole workerin vastaustaulussa`);
+    // Aukkojen tunnukset ovat myös tuomion avaimet (worker vastaa
+    // {kohde, vuosi}), joten ne eivät ole vapaasti valittavia.
+    assert.deepEqual(tehtava.aukot.map((a) => a.id), ['kohde', 'vuosi'],
+      `${cityId}: aukkojen tunnukset eivät vastaa workerin tuomion avaimia`);
+    const vuosi = tehtava.aukot.find((a) => a.id === 'vuosi');
+    assert.equal(oikea.vuosi, vuosi.oikea,
+      `${cityId}: workerin vuosi ja pelidatan vuosi eroavat`);
+    assert.ok(String(oikea.kohde ?? '').length > 20,
+      `${cityId}: workerin kohdekuvaus on liian ohut mallin arvioitavaksi`);
+  }
+  // Taulussa ei saa olla kuollutta riviä: jokainen vastaus kuuluu
+  // jollekin pelidatan tehtävälle.
+  const tunnukset = new Set(pilotit.map(([, v]) => v.sahketehtava.id));
+  for (const id of Object.keys(SAHKE_VASTAUKSET)) {
+    assert.ok(tunnukset.has(id), `workerin vastaustaulussa on tunnus "${id}" ilman pelidataa`);
+  }
 });
 
 test('sähkepalkkio pienenee ohilyönneistä ja pysähtyy nollaan', () => {

@@ -35,6 +35,21 @@
  *      aarremerkintä aukeaa matkakirjakorttiin.
  *  10. Ei sivuvirheitä koko kulun aikana.
  *
+ * VAPAA VASTAUS (vaihe 2, omistaja 29.8.2026: *"Tee 2, haluan nähdä
+ * miten toimii"*) lisää neljä väitettä, ja ne ajetaan MOCK-WORKERIA
+ * vasten: oikeaa Anthropicin rajapintaa vasten ei voi testata, koska
+ * avain elää vain tuotannossa.
+ *
+ *  11. Lomakkeen rinnalla on vapaa tekstikenttä ja sille oma nappi.
+ *  12. SOTKU: pöllö tulkitsee eikä hyväksy → tavallinen EI TÄSMÄÄ,
+ *      lomake jää auki, aarre ei lukitu, palkkio pienenee kuten
+ *      lomakkeellakin.
+ *  13. AIKAKATKAISU: kun pöllö ei vastaa, kortti ohjaa lomakkeeseen
+ *      EIKÄ laske ohilyöntiä — peli ei jää jumiin missään kohtaa.
+ *  14. OIKEA VASTAUS OMIN SANOIN kelpaa: Tukholmassa aarre avataan
+ *      vapaalla tekstillä (tulkinta mock-workerilta), Sofiassa
+ *      lomakkeella kuten ennenkin, jotta kumpikin tie pysyy mitattuna.
+ *
  * SOFIALLA ON YKSI VÄITE LISÄÄ: Nadian kohtaaminen on yhä datassa,
  * vaikka sähke voittaa sen kortilla. Se on omistajan pilottiehto —
  * palautus on yksi rivi vain, jos data on tallessa.
@@ -90,8 +105,56 @@ if (!LIPPURIVI) throw new Error('FOKUSVIRTA_KORTIT-lipun määritystä ei löydy
 const KORTIT = LIPPURIVI[1] === 'true';
 console.log(`Reitti aarrevaiheeseen: ${KORTIT ? 'oppitunnin jatkonappi (kortit)' : 'kartan vihreä piste (kevyt kulku)'}`);
 
+/*
+ * MOCK-WORKER (vaihe 2). Peli osoitetaan tähän ajon alussa
+ * (js/fokusvirta.js asetaSahkepalvelin), koska oikea worker vaatii
+ * Anthropicin avaimen eikä sitä ole kehityskontissa.
+ *
+ * Mock jäljittelee VAIN vastausmuotoa ja karkeaa semantiikkaa: se ei
+ * ole malli eikä yritä olla. Sillä on kolme tehtävää — kertoa
+ * hyväksytystä vastauksesta, hylätä sotku ja HILJETÄ kokonaan, kun
+ * pyynnössä on sana "hidas", jotta aikakatkaisupolun voi mitata.
+ *
+ * Oikeat vastaukset ovat mockissa samasta syystä kuin oikeassa
+ * workerissa: ne eivät kuulu selaimeen.
+ */
+const MOCK_SAANNOT = {
+  'tukholma-vasa': { kohde: /vasa|wasa|sotalaiva|laiva/i, vuosi: /\b1961\b/ },
+  'sofia-varna': { kohde: /varna|nekropoli|vanhin kulta/i, vuosi: /\b1974\b/ },
+};
+let mockPyyntoja = 0;
+
+function mockPollo(req, res) {
+  let runko = '';
+  req.on('data', (pala) => { runko += pala; });
+  req.on('end', () => {
+    mockPyyntoja += 1;
+    let data = {};
+    try { data = JSON.parse(runko); } catch { data = {}; }
+    const saanto = MOCK_SAANNOT[data.id];
+    const teksti = String(data.vastaus ?? '');
+    const vastaa = (koodi, sisalto) => {
+      res.writeHead(koodi, { 'content-type': 'application/json' });
+      res.end(JSON.stringify(sisalto));
+    };
+    if (!saanto) { vastaa(400, { virhe: 'kysely', viesti: 'Tuntematon tehtävä.' }); return; }
+    // "hidas" = pöllö ei vastaa ajoissa. Vastaus tulee vasta pelin
+    // aikakatkaisun jälkeen, eikä sitä siis kuunnella enää. Viive on
+    // reilusti savukkeen aikakatkaisua pidempi, koska Playwrightin
+    // reitityskuuntelija hidastaa jokaista pyyntöä sekunneilla (ks.
+    // SAHKE_TULKINTA_MS-korvaus alempana).
+    const viive = /hidas/i.test(teksti) ? 12000 : 0;
+    setTimeout(() => vastaa(200, {
+      tulkittu: true,
+      kohde: saanto.kohde.test(teksti),
+      vuosi: saanto.vuosi.test(teksti),
+    }), viive);
+  });
+}
+
 const palvelin = createServer((req, res) => {
   const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html';
+  if (suhteellinen === 'mock-pollo') { mockPollo(req, res); return; }
   const polku = join(JUURI, suhteellinen);
   if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   let sisalto = readFileSync(polku);
@@ -102,6 +165,15 @@ const palvelin = createServer((req, res) => {
     let teksti = String(sisalto);
     teksti = korvaa(teksti, 'const SAHKE_LENTO_MS = 6500;', 'const SAHKE_LENTO_MS = 900;');
     teksti = korvaa(teksti, 'const SAHKE_PALUU_MS = 3200;', 'const SAHKE_PALUU_MS = 600;');
+    /*
+     * Aikakatkaisu lyhenee, muttei paljon: Playwrightin
+     * reitityskuuntelija (sivu.route alempana) vie JOKAISELTA
+     * pyynnöltä Node-kierroksen, ja ensimmäinen mock-pyyntö on
+     * mitattu pariksi sekunniksi. Liian lyhyt katkaisu mittaisi
+     * silloin testivälineistöä eikä peliä — kaikista vastauksista
+     * tulisi aikakatkaisuja.
+     */
+    teksti = korvaa(teksti, 'const SAHKE_TULKINTA_MS = 10000;', 'const SAHKE_TULKINTA_MS = 4000;');
     sisalto = teksti;
   }
   res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
@@ -151,6 +223,14 @@ const KAUPUNGIT = [
     vaaraKohde: 'Kanelipullalla on oma päivänsä',
     vinkkiSana: /ensimmäisellä sivulla/i,
     merkinta: /kalastaja|kronan/i,
+    /*
+     * TUKHOLMA AVAA AARTEEN OMIN SANOIN. Teksti on tarkoituksella
+     * sellainen, jota PAIKALLINEN normalisointi ei tunnista (ei sanaa
+     * Vasa), joten se lentää mock-workerin tulkittavaksi — juuri se
+     * polku on tämän vaiheen uusi osa. Sofia avaa aarteen lomakkeella
+     * kuten ennenkin, jotta vanha tie pysyy mitattuna.
+     */
+    vapaaOikein: 'se sotalaiva joka nostettiin merestä vuonna 1961',
   },
   {
     id: 'sofia',
@@ -181,6 +261,14 @@ await sivu.evaluate(() => {
   if (game.phase === 'pickstart') {
     game.actionPickStart(game.pack.cities.find((c) => c.links?.length).id, 0);
   }
+});
+
+// Vapaan vastauksen välityspalvelin osoitetaan mockiin. Ilman tätä
+// pyyntö lähtisi oikealle workerille, joka ei vastaa kehityskontista —
+// ja koko vapaa polku mittaisi vain aikakatkaisua.
+await sivu.evaluate(async () => {
+  const fv = await import('/js/fokusvirta.js');
+  fv.asetaSahkepalvelin('http://127.0.0.1:8741/mock-pollo');
 });
 
 for (const kaupunki of KAUPUNGIT) {
@@ -324,6 +412,10 @@ for (const kaupunki of KAUPUNGIT) {
       valintoja: optiot.length,
       aakkosissa: optiot.every((v, i) => i === 0 || optiot[i - 1].localeCompare(v, 'fi') <= 0),
       palkkiorivi: k?.querySelector('.fokusvirta-varoitus')?.textContent ?? '',
+      // Vaihe 2: vapaa kenttä ja sen oma nappi lomakkeen RINNALLA.
+      vapaakenttia: k?.querySelectorAll('.fokusvirta-sahkevapaakentta').length ?? 0,
+      vapaaNappi: [...(k?.querySelectorAll('button') ?? [])]
+        .map((b) => b.textContent.trim()).find((t) => /omin sanoin/i.test(t)) ?? '',
     };
   }, KORTIT);
   vaadi(`${kaupunki.nimi}: reitti aarrevaiheeseen avaa sähkekortin`,
@@ -339,6 +431,9 @@ for (const kaupunki of KAUPUNGIT) {
     kortti.valintoja >= 20 && kortti.aakkosissa, `${kortti.valintoja} riviä`);
   vaadi(`${kaupunki.nimi}: kortti kertoo palkkion nykyisen suuruuden`,
     /200 puntaa/.test(kortti.palkkiorivi), kortti.palkkiorivi);
+  vaadi(`${kaupunki.nimi}: lomakkeen rinnalla on vapaa tekstikenttä ja oma nappi`,
+    kortti.vapaakenttia === 1 && /omin sanoin/i.test(kortti.vapaaNappi),
+    JSON.stringify({ kenttia: kortti.vapaakenttia, nappi: kortti.vapaaNappi }));
 
   await sivu.screenshot({ path: join(ULOS, `savuke-sahke-${kaupunki.id}-lomake.png`) });
 
@@ -365,6 +460,71 @@ for (const kaupunki of KAUPUNGIT) {
     };
   }, [kohde, vuosi]);
 
+  /**
+   * Kirjoittaa vapaan vastauksen ja painaa sen oman napin.
+   *
+   * ODOTETAAN TULOSTA, EI KELLOA. Kiinteä odotus ei kelpaa tässä:
+   * hyväksytty vastaus vie Livian heti lennolle, ja savukkeessa
+   * lyhennetty lento (0,9 s) ehtisi kiinteän odotuksen aikana viedä
+   * kuittauskortin jo pois ruudulta. Silmukka lopettaa heti kun kortti
+   * on päätynyt johonkin: kuittaukseen, paluusähkeeseen tai
+   * lomakevihjeeseen. Odotusrivi (fokusvirta-sahkeodotus) ei kelpaa
+   * lopputulokseksi — se on juuri se hetki, jota odotetaan.
+   */
+  const lahetaVapaa = async (teksti) => {
+    await sivu.evaluate((t) => {
+      const kortti2 = document.querySelector('.fokusvirta-kortti');
+      kortti2.querySelector('.fokusvirta-sahkevapaakentta').value = t;
+      [...kortti2.querySelectorAll('button')]
+        .find((b) => /omin sanoin/i.test(b.textContent))?.click();
+    }, teksti);
+    /*
+     * ODOTUS AJETAAN NODESTA, EI SIVULTA. Pitkä `evaluate` pitää
+     * Playwrightin reitityskuuntelijan varattuna, jolloin sivun oma
+     * verkkopyyntö EI etene ennen kuin evaluate on palannut — mitattu:
+     * mock-worker sai pyynnön vasta silmukan päätyttyä, ja jokainen
+     * vapaa vastaus näytti aikakatkaisulta. Lyhyet kyselyt Nodesta
+     * jättävät kuuntelijalle tilaa.
+     */
+    for (let i = 0; i < 150; i += 1) {
+      // eslint-disable-next-line no-await-in-loop
+      const valmis = await sivu.evaluate(() => {
+        const k = document.querySelector('.fokusvirta-kortti');
+        if (!k) return false;
+        /*
+         * HYVÄKSYTTY VASTAUS TUNNISTETAAN LOMAKKEEN KATOAMISESTA, EI
+         * SANASTA. Kuittauskortilla ei ole lomaketta. Sanaan
+         * "TUNNUSSANA" ei voi nojata: Tukholman oma sähke sanoo
+         * "VIERAASI VASTATKOON TUNNUSSANALLA", joten silmukka
+         * lopettaisi heti ensimmäisellä kierroksella.
+         */
+        if (!k.querySelector('.fokusvirta-sahkelomake')) return true;
+        const rivi = k.querySelector('.fokusvirta-visa-tulos');
+        return Boolean(rivi && rivi.textContent.trim()
+          && !rivi.classList.contains('fokusvirta-sahkeodotus'));
+      });
+      if (valmis) break;
+      // eslint-disable-next-line no-await-in-loop
+      await sivu.waitForTimeout(100);
+    }
+    return sivu.evaluate(() => {
+      const uusi = document.querySelector('.fokusvirta-kortti');
+      return {
+        tulos: uusi?.querySelector('.fokusvirta-visa-tulos')?.textContent ?? '',
+        palkkiorivi: uusi?.querySelector('.fokusvirta-varoitus')?.textContent ?? '',
+        lomakeYha: Boolean(uusi?.querySelector('.fokusvirta-sahkelomake')),
+        vapaaYha: Boolean(uusi?.querySelector('.fokusvirta-sahkevapaakentta')),
+        kuittaus: [...(uusi?.querySelectorAll('.fokusvirta-sahkerivi') ?? [])]
+          .map((p) => p.textContent).join(' '),
+        nappi: [...(uusi?.querySelectorAll('button') ?? [])]
+          .map((b) => b.textContent.trim()).find((t2) => /livian/i.test(t2)) ?? '',
+        napitAuki: [...(uusi?.querySelectorAll('button') ?? [])].every((b) => !b.disabled),
+        laatta: window.matkakirja.game.tokens.has(window.matkakirja.game.cityOf().id),
+        busy: Boolean(window.matkakirja.ui.busy),
+      };
+    });
+  };
+
   const vaaraVuosi = await laheta(kaupunki.kohde, kaupunki.vuosi + 1);
   vaadi(`${kaupunki.nimi}: väärä vuosi — pöllö nimeää vuosiluvun`,
     /VUOSILUKU/.test(vaaraVuosi.tulos) && !/KOHDE/.test(vaaraVuosi.tulos), vaaraVuosi.tulos);
@@ -384,9 +544,55 @@ for (const kaupunki of KAUPUNGIT) {
 
   await sivu.screenshot({ path: join(ULOS, `savuke-sahke-${kaupunki.id}-ohilyonti.png`) });
 
+  /* ---------- vapaa vastaus: sotku ja aikakatkaisu ---------- */
+
+  const pyyntojaEnnen = mockPyyntoja;
+  const sotku = await lahetaVapaa('en tiedä yhtään, joku vene varmaan');
+  vaadi(`${kaupunki.nimi}: sotku omin sanoin — pöllö sähköttää EI TÄSMÄÄ`,
+    /EI TÄSMÄÄ/i.test(sotku.tulos), sotku.tulos);
+  vaadi(`${kaupunki.nimi}: sotku ei lukitse aarretta eikä vie lomaketta`,
+    sotku.laatta === true && sotku.lomakeYha === true && sotku.vapaaYha === true,
+    JSON.stringify({ laatta: sotku.laatta, lomake: sotku.lomakeYha, vapaa: sotku.vapaaYha }));
+  // Vähennys on neljännes POHJASTA eikä jäljellä olevasta, joten
+  // kolmas ohilyönti vie sadasta viiteenkymmeneen (js/fokusvirta.js
+  // sahkePalkkio) — sama kaava kummallakin vastaustavalla.
+  vaadi(`${kaupunki.nimi}: sotku syö palkkiota kuten lomakkeen ohilyönti (100 → 50)`,
+    /50 puntaa/.test(sotku.palkkiorivi), sotku.palkkiorivi);
+  vaadi(`${kaupunki.nimi}: vapaa vastaus kävi pöllöllä asti`,
+    mockPyyntoja === pyyntojaEnnen + 1, `${mockPyyntoja - pyyntojaEnnen} pyyntöä`);
+
+  const hidas = await lahetaVapaa('hidas vastaus jota ei kuulu');
+  vaadi(`${kaupunki.nimi}: aikakatkaisu ohjaa lomakkeeseen eikä jätä jumiin`,
+    /Pöllö ei vastannut\. Kokeile lomaketta\./.test(hidas.tulos)
+      && hidas.lomakeYha === true && hidas.napitAuki === true && hidas.busy === false,
+    JSON.stringify({ tulos: hidas.tulos, napit: hidas.napitAuki, busy: hidas.busy }));
+  vaadi(`${kaupunki.nimi}: aikakatkaisu ei laske ohilyöntiä (palkkio yhä 50)`,
+    /50 puntaa/.test(hidas.palkkiorivi), hidas.palkkiorivi);
+
+  // Kortti vieritetään pohjaan ennen kaappausta: vapaa kenttä on
+  // lomakkeen alla, eikä se muuten näy kuvassa lainkaan — ja kuvat on
+  // tarkoitettu katsottaviksi.
+  await sivu.evaluate(() => {
+    const sisalto = document.querySelector('.fokusvirta-kortti .fokusvirta-sisalto');
+    if (sisalto) sisalto.scrollTop = sisalto.scrollHeight;
+  });
+  await sivu.waitForTimeout(300);
+  await sivu.screenshot({ path: join(ULOS, `savuke-sahke-${kaupunki.id}-vapaa.png`) });
+
   /* ---------- oikea vastaus: Livia lentää ---------- */
 
-  const oikein = await laheta(kaupunki.kohde, kaupunki.vuosi);
+  /*
+   * Tukholma avaa aarteen VAPAALLA TEKSTILLÄ (tulkinta mock-workerilta),
+   * Sofia lomakkeella — kumpikin tie on siis mitattu, ja loppuosa
+   * (lento, paluu, aarre) on sama molemmille.
+   */
+  const oikein = kaupunki.vapaaOikein
+    ? await lahetaVapaa(kaupunki.vapaaOikein)
+    : await laheta(kaupunki.kohde, kaupunki.vuosi);
+  if (kaupunki.vapaaOikein) {
+    vaadi(`${kaupunki.nimi}: oikea vastaus omin sanoin kelpaa pöllölle`,
+      /TUNNUSSANA TÄSMÄÄ/i.test(oikein.kuittaus), oikein.kuittaus);
+  }
   vaadi(`${kaupunki.nimi}: oikea vastaus vaihtaa kortin kuittaukseksi`,
     /TUNNUSSANA TÄSMÄÄ/i.test(oikein.kuittaus) && /Livian/i.test(oikein.nappi),
     JSON.stringify({ k: oikein.kuittaus, n: oikein.nappi }));

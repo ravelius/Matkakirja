@@ -1,5 +1,20 @@
 # Viisaan Pöllön käyttöönotto (omistajalle, n. 10 min puhelimella)
 
+> **Päivitys 29.8.2026 (sähketehtävän vapaa vastaus):** sama worker
+> arvioi nyt myös sähketehtävän vapaamuotoiset vastaukset
+> (`tehtava: 'sahke'`). Peli tulkitsee tekstin ensin itse ilmaiseksi ja
+> lähettää tänne vain tulkinnanvaraiset; worker kysyy mallilta tiukan
+> JSON-tuomion ja vastaa `{tulkittu, kohde, vuosi}`. **Oikeat
+> vastaukset ovat workerissa** (`tools/pollo/rajat.js`
+> `SAHKE_VASTAUKSET`), eivät koskaan pelissä — muuten ne näkyisivät
+> selaimessa. Ei uusia salaisuuksia: sama `ANTHROPIC_API_KEY`, sama
+> malli, samat päivä- ja kuukausirajat kuin chatilla (yksi vastaus =
+> yksi kysymys laskurissa). **Käyttöönotto: aja "Pöllön julkaisu" -ajo
+> uudelleen**, niin uusi reitti menee Cloudflareen. Ennen ajoa peli
+> toimii normaalisti: vapaa vastaus, jota paikallinen tulkinta ei
+> tunnista, saa siistin "Pöllö ei vastannut. Kokeile lomaketta."
+> -viestin eikä lomake katoa mistään.
+>
 > **Päivitys 22.8.2026 (kuvagenerointi):** sama worker osaa nyt myös
 > generoida pelitaiteen kuvia (`tehtava: 'kuva'`, OpenAI gpt-image-2)
 > — mutta VAIN kehittäjäkoodilla: pelaajille haaraa ei ole, ja ilman

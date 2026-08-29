@@ -99,7 +99,16 @@ import { FOKUSVIRRAT, fokusvirtaKaupungille } from './packs/fokusvirrat.js';
 import { livianPaljastusOdottaa } from './livia.js';
 import { luennanLoppuun } from './luenta.js';
 import { natiiviVastaus } from './natiivi.js';
-import { polloSaapumiskupla } from './pollo.js';
+// Sähketehtävän vapaa vastaus lainaa pöllöltä kaksi asiaa: odotusrivin
+// mietintärepliikit ja saman välityspalvelinosoitteen kuin chat.
+import {
+  LIVIAN_MIETINNAT,
+  POLLO_KEHITTAJAKOODI_AVAIN,
+  POLLO_KEHITTAJA_OTSAKE,
+  arvoMietinta,
+  polloSaapumiskupla,
+} from './pollo.js';
+import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
 import { sfx } from './sound.js';
 
 /*
@@ -2055,6 +2064,146 @@ function aukkoOsuu(aukko, arvo) {
   return oikeat.some((o) => o === arvo);
 }
 
+/* ==================== VAPAA VASTAUS (vaihe 2) =======================
+ *
+ * Raamattu, PÖLLÖN SÄHKETEHTÄVÄ, VAIHE 2 (omistaja 29.8.2026: *"Tee 2,
+ * haluan nähdä miten toimii"*): lomakkeen RINNALLE tuli vapaa
+ * tekstikenttä. Lomake ei poistu mistään — se on aina se varma tie,
+ * johon vapaa polku palauttaa, jos jokin menee pieleen.
+ *
+ * KAKSI PORRASTA, JA ENSIMMÄINEN ON ILMAINEN.
+ *
+ *   1. PAIKALLINEN NORMALISOINTI. Teksti pienennetään, ääkköset ja muut
+ *      diakriitit riisutaan, välimerkit vaihtuvat välilyönneiksi — ja
+ *      sitten katsotaan, esiintyykö siinä oikea KOHDE (virallinen
+ *      otsikko tai jokin tunnettu kirjoitusasu, `vapaat`) ja oikea
+ *      VUOSI omina sanoinaan. "vasa 1961" yhdessä kentässä riittää.
+ *      Tämä ei maksa mitään eikä koske verkkoon.
+ *   2. LIVIAN LENTO = API-KUTSU. Vasta jos paikallinen tulkinta ei osu,
+ *      Livia vie vastauksen pöllölle: pyyntö menee samalle
+ *      välityspalvelimelle kuin chat, ja WORKER tietää oikean
+ *      vastauksen (tools/pollo/rajat.js SAHKE_VASTAUKSET). Peli
+ *      lähettää vain tehtävän tunnuksen ja pelaajan tekstin — oikea
+ *      vastaus ei siis kulje selaimen kautta kumpaankaan suuntaan.
+ *
+ * PAIKALLINEN TULKINTA VAIN HYVÄKSYY, EI KOSKAAN HYLKÄÄ. Se on portti
+ * ilmaiseen läpipääsyyn, ei tuomari: kaikki muu menee pöllölle. Näin
+ * kapea sanalista ei voi tehdä oikeasta vastauksesta väärää.
+ *
+ * PALKKIOLOGIIKKA ON TÄÄLLÄ, ARVIOINTI EI. Ohilyönti syö palkkiosta
+ * saman neljänneksen kuin lomakkeellakin ja pöllö sähköttää samalla
+ * sanamuodolla; vain se, OSUIKO vastaus, päätetään palvelimella.
+ */
+
+/**
+ * Vertailumuoto: pienet kirjaimet, ei diakriitteja, ei välimerkkejä.
+ *
+ * Ääkköset riisutaan tarkoituksella (ä → a): pelaaja kirjoittaa
+ * puhelimella ja usein ilman ääkkösiä, eikä "Vasa" saa jäädä
+ * hyväksymättä siksi, että joku kirjoitti sen "Väsä". Sanat erotetaan
+ * välilyönnein, jotta vertailu voi vaatia kokonaisia sanoja eikä
+ * hyväksy sattumalta osumaa keskeltä toista sanaa.
+ */
+export function normalisoiSahketeksti(teksti) {
+  return String(teksti ?? '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^0-9a-z]+/g, ' ')
+    .trim();
+}
+
+/** Aukon hyväksytyt kirjoitusasut vapaassa tekstissä. */
+function vapaatVariantit(aukko) {
+  const raa = aukko?.tyyppi === 'luku'
+    ? [aukko.oikea, ...(aukko.vapaat ?? [])]
+    : [...(aukko?.oikeat ?? [aukko?.oikea]), ...(aukko?.vapaat ?? [])];
+  return raa.map(normalisoiSahketeksti).filter(Boolean);
+}
+
+/** Esiintyykö variantti kokonaisina sanoina normalisoidussa tekstissä? */
+function sanoinaMukana(normalisoitu, variantti) {
+  return ` ${normalisoitu} `.includes(` ${variantti} `);
+}
+
+/**
+ * Paikallinen tulkinta vapaasta vastauksesta.
+ *
+ * @returns {{osui: boolean, vaarat: object[]}} `vaarat` on niiden
+ *   aukkojen lista, joita tekstistä EI löytynyt — mutta se on vain
+ *   tieto siitä, kannattaako lentää: pelaajaa ei tuomita täällä.
+ */
+export function tulkitseVapaaSahke(teksti, tehtava) {
+  const normalisoitu = normalisoiSahketeksti(teksti);
+  const aukot = tehtava?.aukot ?? [];
+  const vaarat = aukot.filter(
+    (aukko) => !vapaatVariantit(aukko).some((v) => sanoinaMukana(normalisoitu, v)),
+  );
+  return { osui: Boolean(normalisoitu) && aukot.length > 0 && vaarat.length === 0, vaarat };
+}
+
+/**
+ * Kauanko Livian lentoa odotetaan, ennen kuin peli ohjaa lomakkeeseen.
+ *
+ * Peli ei jää koskaan jumiin: aikakatkaisu on kova, lomake pysyy
+ * ruudulla eikä ohilyöntiä lasketa — verkon reistailu ei ole pelaajan
+ * virhe.
+ */
+const SAHKE_TULKINTA_MS = 10000;
+
+/** Mitä kortti sanoo, kun pöllöä ei tavoitettu. */
+const SAHKE_EI_VASTAUSTA = 'Pöllö ei vastannut. Kokeile lomaketta.';
+
+/*
+ * Palvelinosoite on muuttujassa, jotta savuke voi ohjata sen omaan
+ * mock-workeriinsa (tools/savuke-sahketehtava.mjs): oikeaa rajapintaa
+ * vasten ei testata, koska avain elää vain tuotannossa.
+ */
+let sahkepalvelin = POLLOPALVELIN;
+
+export function asetaSahkepalvelin(osoite) {
+  sahkepalvelin = String(osoite ?? '');
+}
+
+/**
+ * Livian lento: pelaajan teksti pöllön arvioitavaksi.
+ *
+ * @returns {Promise<{kohde: boolean, vuosi: boolean}|null>} `null` =
+ *   pöllöä ei tavoitettu (aikakatkaisu, verkkovirhe, uinuva worker,
+ *   vanha worker joka ei tunne tätä tehtävää). Silloin kortti ohjaa
+ *   lomakkeeseen eikä ohilyöntiä lasketa.
+ */
+async function kysySahketuomio(tehtava, teksti) {
+  if (!sahkepalvelin || !tehtava?.id) return null;
+  const katkaisin = new AbortController();
+  const ajastin = setTimeout(() => katkaisin.abort(), SAHKE_TULKINTA_MS);
+  try {
+    const otsakkeet = { 'content-type': 'application/json' };
+    // Kehittäjäkoodi mukaan samalla säännöllä kuin pöllön chatissa:
+    // vain jos se on laitteelle talletettu (js/pollo.js).
+    const koodi = (globalThis.localStorage?.getItem(POLLO_KEHITTAJAKOODI_AVAIN) ?? '').trim();
+    if (koodi) otsakkeet[POLLO_KEHITTAJA_OTSAKE] = koodi;
+    const vastaus = await fetch(sahkepalvelin, {
+      method: 'POST',
+      headers: otsakkeet,
+      body: JSON.stringify({ tehtava: 'sahke', id: tehtava.id, vastaus: teksti }),
+      signal: katkaisin.signal,
+    });
+    if (!vastaus.ok) return null;
+    const data = await vastaus.json().catch(() => null);
+    // Rakenne tarkistetaan täälläkin: peli ei luota siihen, että
+    // vastaus on sen muotoinen kuin pitäisi.
+    if (typeof data?.kohde !== 'boolean' || typeof data?.vuosi !== 'boolean') return null;
+    return { kohde: data.kohde, vuosi: data.vuosi };
+  } catch {
+    // Aikakatkaisu ja verkkovirhe ovat sama asia pelaajalle: pöllö ei
+    // vastannut. Konsoliin ei kirjoiteta mitään.
+    return null;
+  } finally {
+    clearTimeout(ajastin);
+  }
+}
+
 /**
  * Pöllön paluusähke ohilyönnistä. Sanamuoto on sähkettä: mitä
  * vähemmän sanoja, sitä enemmän se kuulostaa sähkeeltä.
@@ -2150,6 +2299,28 @@ function piirraSahketehtava(ui, city, data, kohde) {
   }
   kohde.appendChild(lomake);
 
+  /*
+   * KOLMAS TAPA: OMIN SANOIN (vaihe 2). Kenttä on lomakkeen RINNALLA
+   * eikä sen tilalla — lomake on se varma tie, ja juuri siihen vapaa
+   * polku ohjaa takaisin, jos pöllöä ei tavoiteta. Teksti muistetaan
+   * ohilyönnin yli, koska kortti piirretään silloin kokonaan uudelleen
+   * eikä pelaajan kirjoitusta saa hukata.
+   */
+  const vapaaKentta = document.createElement('textarea');
+  let vapaaLohko = null;
+  if (tehtava.aukot?.length) {
+    vapaaLohko = html('div', 'fokusvirta-sahkevapaa');
+    const vapaaNimio = html('label', 'fokusvirta-sahkeotsake',
+      `${tehtava.vapaaOtsake ?? 'Tai kirjoita vastaus omin sanoin'} `);
+    vapaaKentta.className = 'fokusvirta-sahkevapaakentta';
+    vapaaKentta.rows = 2;
+    vapaaKentta.placeholder = tehtava.vapaaVihje ?? 'Yhdellä lauseella, omin sanoin';
+    if (ui.sahkeVapaaTeksti?.avain === avain) vapaaKentta.value = ui.sahkeVapaaTeksti.teksti;
+    vapaaNimio.appendChild(vapaaKentta);
+    vapaaLohko.appendChild(vapaaNimio);
+    kohde.appendChild(vapaaLohko);
+  }
+
   const tulos = html('p', 'fokusvirta-visa-tulos');
   kohde.appendChild(tulos);
   // Ohilyönnin jälkeen kortti muistaa, mitä pöllö vastasi viimeksi.
@@ -2164,18 +2335,74 @@ function piirraSahketehtava(ui, city, data, kohde) {
     `Sähkeen palkkio nyt ${sahkePalkkio(ohi, tehtava.palkkio ?? SAHKE_PALKKIO)} puntaa. `
     + 'Jokainen ohilyönti pienentää sitä — mutta aarre ei lukitu koskaan.'));
 
+  /** Ohilyönti: sama kirjanpito ja sama paluusähke kummallakin tavalla. */
+  const ohilyonti = (vaarat) => {
+    sfx.play('wrong');
+    natiiviVastaus(false);
+    ui.sahkeOhi.set(avain, ohi + 1);
+    ui.sahkeViimeSahke = { avain, teksti: ohilyonninSahke(tehtava, vaarat) };
+    piirraKortti(ui, city, data, { vaihe: 'kohtaaminen', taky: null, tehdyt: [] });
+  };
+
+  /**
+   * VAPAA VASTAUS. Paikallinen tulkinta ensin ilmaiseksi; vasta jos se
+   * ei osu, Livia lentää pöllölle. Lennon ajan kortti on odotustilassa
+   * — napit kiinni ja Livian mietintärivi näkyvissä — mutta peli itse
+   * ei lukitu mistään: kortin voi sulkea ja jatkaa matkaa.
+   */
+  const lahetaVapaa = async () => {
+    const teksti = vapaaKentta.value.trim();
+    if (!teksti) {
+      tulos.className = 'fokusvirta-visa-tulos';
+      tulos.textContent = 'Kirjoita ensin vastaus omin sanoin.';
+      return;
+    }
+    ui.sahkeVapaaTeksti = { avain, teksti };
+    if (tulkitseVapaaSahke(teksti, tehtava).osui) { sahkeOsui(ui, city, data); return; }
+
+    const napit = [...kohde.querySelectorAll('button')];
+    for (const n of napit) n.disabled = true;
+    vapaaKentta.disabled = true;
+    tulos.className = 'fokusvirta-visa-tulos fokusvirta-sahkeodotus';
+    tulos.textContent = arvoMietinta(LIVIAN_MIETINNAT.vastaus)
+      || 'Vien tämän pöllölle, pieni hetki..';
+    sfx.play('paper');
+
+    const tuomio = await kysySahketuomio(tehtava, teksti);
+    // Kortti on voitu sulkea tai piirtää uudelleen lennon aikana.
+    if (!kohde.isConnected) return;
+    for (const n of napit) n.disabled = false;
+    vapaaKentta.disabled = false;
+    if (!tuomio) {
+      // Pöllöä ei tavoitettu: EI ohilyöntiä, EI lukkoa — lomake auki.
+      tulos.className = 'fokusvirta-visa-tulos vaarin-tulos';
+      tulos.textContent = SAHKE_EI_VASTAUSTA;
+      return;
+    }
+    const vaarat = (tehtava.aukot ?? []).filter((aukko) => tuomio[aukko.id] !== true);
+    if (vaarat.length === 0) { sahkeOsui(ui, city, data); return; }
+    ohilyonti(vaarat);
+  };
+
+  /*
+   * VAPAAN VASTAUKSEN NAPPI ON KENTÄN VIERESSÄ, EI ALARIVILLÄ. Kolme
+   * nappia vierekkäin puristuu puhelimella kolmiriviseksi tekstiksi, ja
+   * nappi kuuluu joka tapauksessa sinne, mihin se vaikuttaa: kentän
+   * alle. Alarivi pysyy siis kaksinappisena kuten ennenkin.
+   */
+  if (vapaaLohko) {
+    piirraNapit(vapaaLohko, [
+      nappi(tehtava.lahetaVapaa ?? 'Lähetä omin sanoin', '', () => { lahetaVapaa(); }),
+    ], 'fokusvirta-varmistusnapit fokusvirta-vapaanapit');
+  }
+
   piirraNapit(kohde, [
     nappi(tehtava.laheta ?? 'Lähetä sähke', 'primary', () => {
       const vaarat = [...valinnat.entries()]
         .filter(([aukko, lue]) => !aukkoOsuu(aukko, lue()))
         .map(([aukko]) => aukko);
       if (vaarat.length === 0) { sahkeOsui(ui, city, data); return; }
-      sfx.play('wrong');
-      natiiviVastaus(false);
-      const uusi = ohi + 1;
-      ui.sahkeOhi.set(avain, uusi);
-      ui.sahkeViimeSahke = { avain, teksti: ohilyonninSahke(tehtava, vaarat) };
-      piirraKortti(ui, city, data, { vaihe: 'kohtaaminen', taky: null, tehdyt: [] });
+      ohilyonti(vaarat);
     }),
     nappi('Myöhemmin', '', () => suljeKasin(ui)),
   ], 'fokusvirta-varmistusnapit');

@@ -475,6 +475,52 @@
 }
 
 /*
+ * VAPAA VASTAUS (vaihe 2) on lomakkeen RINNALLA, ei sen tilalla, ja se
+ * näyttää siltä: sama otsakerivi ja sama kenttäasu kuin aukoilla, mutta
+ * ohut yläviiva kertoo, että tämä on toinen tapa vastata samaan
+ * sähkeeseen. Teksti on tavallista leipäkirjasinta eikä sähkekonetta —
+ * pelaaja kirjoittaa omin sanoin, ei sähkötä.
+ */
+.fokusvirta-sahkevapaa {
+  margin: 0.75rem 0 0;
+  padding: 0.7rem 0 0;
+  border-top: 1px dashed rgba(58, 38, 16, 0.3);
+}
+
+.fokusvirta-sahkevapaakentta {
+  width: 100%;
+  min-height: 3.2rem;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid rgba(58, 38, 16, 0.5);
+  border-radius: 3px;
+  background: rgba(255, 255, 250, 0.9);
+  font-family: inherit;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #211d18;
+  resize: vertical;
+}
+
+/*
+ * Kentän oma nappi lainaa varmistusnappien asun (sama pyöristys ja
+ * reuna), mutta istuu tiukemmin kentän alla: se on kentän jatke eikä
+ * kortin lopetus. Alarivi pysyy kortin viimeisenä rivinä.
+ */
+.fokusvirta-napit.fokusvirta-vapaanapit { margin-top: 0.5rem; }
+
+/*
+ * Odotusrivi Livian lennon ajaksi. Ei omaa animaatiota: lento ITSE on
+ * odotus, ja rivi on vain sen ääni. Kursivointi erottaa sen pöllön
+ * paluusähkeestä, joka on samassa paikassa.
+ */
+.fokusvirta-sahkeodotus {
+  font-style: italic;
+  color: rgba(58, 38, 16, 0.75);
+}
+
+/*
  * Vihjelinkki on tekstiä eikä nappilaatikkoa: se on lehden reunaan
  * kirjoitettu muistutus, ei kolmas valinta kahden napin rinnalle.
  * Alleviivaus kertoo painettavuuden, ja kosketusala on silti sormen
