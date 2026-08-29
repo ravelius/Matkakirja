@@ -68,12 +68,11 @@
  *
  * ── ÄÄNITE ─────────────────────────────────────────────────────────
  *
- * Luentaa EI ole vielä generoitu, joten `matkakirja.aanite` puuttuu —
- * sama kaava kuin aallossa 3 (Tallinna, Tukholma, Helsinki, København).
- * Kenttä on moottorissa valinnainen (js/ui.js), ja teksti ja luenta ovat
- * sanasta sanaan samat, joten luennan voi ajaa suoraan
- * (generoi-luennat-tyonkulku) ilman että tekstiin kosketaan. Valmis
- * äänite menisi polkuun assets/audio/puhe-fokus-matkakirja-riika.mp3.
+ * Luenta on generoitu 29.8.2026 (tools/generoi-luennat.mjs, lähteenä
+ * tämän lohkon oma `matkakirja.luenta`) ja `matkakirja.aanite`
+ * osoittaa siihen: assets/audio/puhe-fokus-matkakirja-riika.mp3.
+ * Teksti ja luenta ovat sanasta sanaan samat, joten tekstin muutos
+ * vaatii uuden generoinnin.
  */
 
 /*
@@ -159,6 +158,7 @@ export const FOKUSVIRTA_RIIKA = {
       + 'erehdykseltä. [softly] Hän vannoi sen parantavan kaiken. '
       + '[whispers] Kirjoitan tämän varmuuden vuoksi ylös, jos se '
       + 'paikkansa pitää.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-riika.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

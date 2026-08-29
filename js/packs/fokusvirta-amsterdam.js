@@ -57,14 +57,13 @@
  * KAARI_PAKETIT, 'amsterdam'): siltavahti Willem ja kysymys
  * kanavatalojen päädyissä olevasta koukusta.
  *
- * ── ÄÄNITE ODOTTAA GENEROINTIA ─────────────────────────────────────
+ * ── ÄÄNITE ─────────────────────────────────────────────────────────
  *
- * `matkakirja.luenta` on valmis ja `matkakirja.aanite` osoittaa aallon
- * kaavan mukaiseen polkuun (assets/audio/puhe-fokus-matkakirja-
- * amsterdam.mp3). TIEDOSTOA EI OLE VIELÄ REPOSSA: se syntyy aallon
- * yhteisessä luentaerässä (tools/generoi-luennat.mjs). Ennen sitä
- * kytkin osoittaa puuttuvaan tiedostoon, joten julkaisijan on joko
- * ajettava generointi tai kommentoitava rivi pois.
+ * `matkakirja.luenta` on valmis ja `matkakirja.aanite` osoittaa
+ * polkuun assets/audio/puhe-fokus-matkakirja-amsterdam.mp3. Luenta on
+ * generoitu 29.8.2026 (tools/generoi-luennat.mjs) ja tiedosto on sekä
+ * repossa että ämpärissä, joten kaiutin soi. Teksti ja luenta ovat
+ * sanasta sanaan samat: tekstin muutos vaatii uuden generoinnin.
  *
  * ── REKISTERÖINTI ──────────────────────────────────────────────────
  *
@@ -159,7 +158,6 @@ export const FOKUSVIRTA_AMSTERDAM = {
       + 'Vanhat miehet puhuvat yhä Kompaniasta, jonka laivat toivat '
       + 'idän rikkaudet — [whispers] ja veivät monta miestä, jotka '
       + 'eivät palanneet.',
-    // ÄÄNITETTÄ EI OLE VIELÄ GENEROITU, ks. tiedoston alku.
     aanite: 'assets/audio/puhe-fokus-matkakirja-amsterdam.mp3',
   },
 

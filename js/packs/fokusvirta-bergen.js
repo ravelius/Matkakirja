@@ -60,12 +60,11 @@
  *
  * ── ÄÄNITE ─────────────────────────────────────────────────────────
  *
- * Aallon 3 kaava: luenta on kirjoitettu valmiiksi, mutta sitä EI ole
- * vielä generoitu, joten `matkakirja.aanite` puuttuu. Teksti ja luenta
- * ovat sanasta sanaan samat, joten luennan voi ajaa suoraan
- * (generoi-luennat-tyonkulku) ilman että tekstiin kosketaan. Kun
- * äänite on generoitu, riville tulee
- * `aanite: 'assets/audio/puhe-fokus-matkakirja-bergen.mp3'`.
+ * Luenta on generoitu 29.8.2026 (tools/generoi-luennat.mjs, lähteenä
+ * tämän lohkon oma `matkakirja.luenta`) ja `matkakirja.aanite`
+ * osoittaa siihen: assets/audio/puhe-fokus-matkakirja-bergen.mp3.
+ * Teksti ja luenta ovat sanasta sanaan samat, joten tekstin muutos
+ * vaatii uuden generoinnin.
  *
  * ── KUVIEN TARKISTUS ───────────────────────────────────────────────
  *
@@ -163,6 +162,7 @@ export const FOKUSVIRTA_BERGEN = {
       + 'tämän kaupungin kulta. [warmly] Sitä riippuu telineillä '
       + 'tuhansittain, kuivana ja kovana kuin lauta, ja sillä on ostettu '
       + 'nämä talot, kirkot ja puolet Norjan purjeista.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-bergen.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden avauskuva) ----- */

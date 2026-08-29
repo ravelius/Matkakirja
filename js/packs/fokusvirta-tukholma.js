@@ -56,9 +56,11 @@
  *
  * ── ÄÄNITE ─────────────────────────────────────────────────────────
  *
- * Luentaa EI ole vielä generoitu, joten `matkakirja.aanite` puuttuu.
- * Teksti ja luenta ovat sanasta sanaan samat, joten luennan voi ajaa
- * suoraan (generoi-luennat-tyonkulku) ilman että tekstiin kosketaan.
+ * Luenta on generoitu 29.8.2026 (tools/generoi-luennat.mjs, lähteenä
+ * tämän lohkon oma `matkakirja.luenta`) ja `matkakirja.aanite`
+ * osoittaa siihen: assets/audio/puhe-fokus-matkakirja-tukholma.mp3.
+ * Teksti ja luenta ovat sanasta sanaan samat, joten tekstin muutos
+ * vaatii uuden generoinnin.
  */
 
 /*
@@ -283,6 +285,7 @@ export const FOKUSVIRTA_TUKHOLMA = {
       + 'kruununsa, ja tungos vei minulta kaksi nappia ja sivun neljätoista. '
       + '[softly] Sivulla oli puolikas kartta. [whispers] Kirjoitan tämän '
       + 'muistiin siltä varalta, että joku vielä kysyy.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-tukholma.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

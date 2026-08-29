@@ -99,13 +99,13 @@
  *
  * ── ÄÄNITE ─────────────────────────────────────────────────────────
  *
- * Luentaa EI ole vielä generoitu. `matkakirja.aanite` on silti
- * kirjoitettu etukäteen (sama ratkaisu kuin Roomassa ja Madridissa):
- * kenttä on KYTKENTÄ eikä lupaus tiedoston olemassaolosta. Ennen
- * generointiajoa mp3 puuttuu, jolloin kortin kaiutin näkyy mutta jää
- * soimatta — js/luenta.js playDiaryVoice kokeilee ämpärin jälkeen repon
- * polun ja vaikenee siististi. Työnkulku .github/workflows/
- * generoi-luennat.yml kirjoittaa täsmälleen alla nimetyn tiedoston.
+ * Luenta on generoitu 29.8.2026 (.github/workflows/generoi-luennat.yml,
+ * tools/generoi-luennat.mjs) ja `matkakirja.aanite` osoittaa siihen:
+ * assets/audio/puhe-fokus-matkakirja-sevilla.mp3. Kenttä on KYTKENTÄ:
+ * js/ui.js näyttää kaiuttimen heti kun se on olemassa, ja js/luenta.js
+ * playDiaryVoice hakee tiedoston ämpäristä repon polku varareittinä.
+ * Teksti ja luenta ovat sanasta sanaan samat, joten tekstin muutos
+ * vaatii uuden generoinnin.
  */
 
 /*

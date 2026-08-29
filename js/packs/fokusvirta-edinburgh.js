@@ -84,9 +84,11 @@
  *
  * ── ÄÄNITE ─────────────────────────────────────────────────────────
  *
- * Luentaa EI ole vielä generoitu, joten `matkakirja.aanite` puuttuu.
- * Teksti ja luenta ovat sanasta sanaan samat, joten luennan voi ajaa
- * suoraan (generoi-luennat-tyonkulku) ilman että tekstiin kosketaan.
+ * Luenta on generoitu 29.8.2026 (tools/generoi-luennat.mjs, lähteenä
+ * tämän lohkon oma `matkakirja.luenta`) ja `matkakirja.aanite`
+ * osoittaa siihen: assets/audio/puhe-fokus-matkakirja-edinburgh.mp3.
+ * Teksti ja luenta ovat sanasta sanaan samat, joten tekstin muutos
+ * vaatii uuden generoinnin.
  *
  * ── KUVAT ──────────────────────────────────────────────────────────
  *
@@ -178,6 +180,7 @@ export const FOKUSVIRTA_EDINBURGH = {
       + 'vartioineen isäntänsä hautaa neljätoista vuotta. Se kuoli viime '
       + 'vuonna. [whispers] Kaupunki aikoo pystyttää sille muistomerkin — '
       + 'ennen kuin pystyttää sellaisen monelle ihmiselle.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-edinburgh.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
