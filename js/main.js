@@ -6,6 +6,8 @@ import { UI } from './ui.js';
 import {
   asetaKehittajaMaailma, asetaKehittajaTila, kehittajaMaailmaPaalla, kehittajaTilaPaalla,
 } from './ui-apurit.js';
+// Laitemittarin muistettu kytkin (hammasratasvalikko = ?mittari=1/0).
+import { asetaMittari, mittariPaalla } from './karttamittari.js';
 import { sfx } from './sound.js';
 import { packById } from './pack.js';
 import { startQuizMusic, stopPlaceStream, stopQuizMusic } from './ambience-stream.js';
@@ -13,7 +15,7 @@ import {
   AANITILA_TAPAHTUMA, kertojaTila, asetaKertojaTila,
 } from './aani-ehdokkaat.js';
 import { stopDiaryVoice, stopIntroVoice } from './luenta.js';
-import { asennaPollo } from './pollo.js';
+import { asennaPollo, polloGeneroiEhdotukset } from './pollo.js';
 // Sähkejärjestelmä: retkikunta, sähkeet ja kaveriapu (js/sahke.js).
 import { kytkeSahke, nollaaSahke } from './sahke.js';
 // Lukijaäänen säädin (kehittäjätila): asetukset ja näytekuuntelu.
@@ -98,7 +100,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1317';
+const APP_VERSION = '2026-08-09.1318';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1217,56 +1219,164 @@ function paivitaPuheSaadin() {
   // nyt Tilastot-lehden Kiintiöt-sivulla (omistaja 21.8.2026).
   const kehittajaKotelo = document.getElementById('kehittaja-kotelo');
   if (kehittajaKotelo) kehittajaKotelo.hidden = !kehittajaTilaPaalla();
-  // Maailmanappi on samaa lajia: näkyvissä vain vivun takana.
-  paivitaMaailmaNappi();
+  // Hammasratasvalikko on samaa lajia: näkyvissä vain vivun takana.
+  paivitaKehittajaValikko();
 }
 
-/* --- Kehittäjän yksi nappi (omistajan tilaus 27.8.2026) ------------------ */
+/* --- Kehittäjän hammasratasvalikko (omistaja 29.8.2026) ------------------ */
 
 /*
- * YLÄRIVIN AINOA KEHITTÄJÄNAPPI (index.html #kehittaja-maailma-btn).
+ * OMA TOINEN HAMPURILAINEN, SYMBOLINA HAMMASRATAS (index.html
+ * #kehittaja-valikko-kotelo). Näkyy VAIN kehittäjätilassa, ja
+ * yläpalkkiin jää siitä yksi kuvake — omistajan sääntö *"yläpalkissa
+ * saa olla vain YKSI nappi"* (27.8.2026) pysyy siis voimassa, vaikka
+ * kytkimiä on nyt kolme.
  *
- * *"Kehittäjätilassa yläpalkissa saa olla vain YKSI nappi"*, ja se
- * kytkee maailmanäkymän: koko maailmanlauta ja kohdekaupunkien laatat
- * näkyviin (lento- ja maareitit eivät), sumennus pois ja panorointi
- * vapaaksi. Pois kytkettynä kaikki on kuten pelaajalla.
+ * KOLME TOIMINTOA:
  *
- * NELJÄ KYTKINTÄ YHDEKSI. Ylärivin "rajat" ja "pisteet" (25.8.2026)
- * sekä valikon fokusmoodi- ja sumennuskytkimet (24.8.2026) on poistettu;
- * perustelu ja avainten siivous js/ui-apurit.js:n osiossa "KEHITTÄJÄN
- * YKSI YLÄRIVIN NAPPI: MAAILMANÄKYMÄ".
+ *   maailma     Maailmanäkymä: koko lauta ja kohdekaupunkien laatat
+ *               näkyviin (lento- ja maareitit eivät), sumennus pois ja
+ *               panorointi vapaaksi. Tämä oli ylärivin irtonappi
+ *               27.–29.8.2026 (#fokus-kytkimet); tunniste ja koko
+ *               kytkentä ovat entiset, vain paikka vaihtui. Perustelu
+ *               ja vanhojen avainten siivous js/ui-apurit.js:n osiossa
+ *               "KEHITTÄJÄN YKSI YLÄRIVIN NAPPI: MAAILMANÄKYMÄ".
+ *   mittari     Laitemittari (js/karttamittari.js) päälle ja pois SAMAN
+ *               muistetun avaimen kautta kuin `?mittari=1/0`. Kytkin on
+ *               olemassa iOS:n kotivalikkosovellusta varten: siellä ei
+ *               ole osoiteriviä, joten parametria ei voi naputella.
+ *               Mittari syntyy ja kuolee ajonaikaisesti (js/ui.js
+ *               paivitaKarttamittari) — sivua ei ladata uudelleen.
+ *   kysymykset  Pöllön kysymysehdotukset heti nykyiselle näkymälle,
+ *               myös uudelleen jo generoidulle (js/pollo.js
+ *               generoiEhdotuksetHeti). Sama polku kuin sivunvaihdolla:
+ *               odotusrivi ilmestyy ja tulokset tulevat sen tilalle.
  *
- * Fokusmoodi on pelin oletustila, ja tavalliselle pelaajalle se on AINA
- * päällä: kotelo on piilossa ilman kehittäjätilaa, joten kytkintä ei ole
- * olemassa eikä asetusta voi vahingossa sammuttaa.
+ * TILA NÄKYY VALIKOSSA: kytkinrivin aria-pressed kultaa nimen, ja
+ * rivin oikeassa laidassa lukee "päällä" tai "pois".
  *
- * TILA PÄIVITTYY ILMAN SIVULATAUSTA. Fokuskerros elää valmiiksi
- * piirretyn kartan päällä (js/ui.js paivitaFokusKerros), joten kytkin
- * riittää: karttaa ei tarvitse rakentaa uusiksi eikä peliä ladata.
+ * MIKÄÄN NÄISTÄ EI VAADI SIVULATAUSTA. Maailmakytkin elää valmiin
+ * kartan päällä (js/ui.js paivitaFokusKerros), mittari on oma
+ * moduulinsa, ja pöllö on pystyssä koko pelin ajan.
  */
-const fokusKotelo = document.getElementById('fokus-kytkimet');
+const kehittajaValikkoKotelo = document.getElementById('kehittaja-valikko-kotelo');
+const kehittajaValikkoNappi = document.getElementById('kehittaja-valikko-btn');
+const kehittajaValikko = document.getElementById('kehittaja-valikko');
+const kehittajaVihje = document.getElementById('kehittaja-valikko-vihje');
 const maailmaNappi = document.getElementById('kehittaja-maailma-btn');
+const mittariNappi = document.getElementById('kehittaja-mittari-btn');
+const polloGenerointiNappi = document.getElementById('kehittaja-pollo-btn');
 
-function paivitaMaailmaNappi() {
-  if (fokusKotelo) fokusKotelo.hidden = !kehittajaTilaPaalla();
-  if (!maailmaNappi) return;
-  const maailma = kehittajaMaailmaPaalla();
-  maailmaNappi.setAttribute('aria-pressed', String(maailma));
-  maailmaNappi.title = maailma
-    ? 'Maailmanäkymä on PÄÄLLÄ: koko lauta ja kaupunkien laatat näkyvissä '
-      + '(ei reittejä), ei sumennusta, panorointi vapaa — napauta kaupunkia '
-      + 'siirtyäksesi sinne; kytke pois pelataksesi pelaajan näkymällä'
-    : 'Maailmanäkymä on pois: näkymä on pelaajan fokusmoodi — kytke päälle '
-      + 'nähdäksesi koko laudan ja siirtyäksesi maasta toiseen';
+/** Yhden rivin vihje valikon alalaitaan; katoaa itsestään. */
+let vihjeAjastin = 0;
+function naytaKehittajaVihje(teksti) {
+  if (!kehittajaVihje) return;
+  kehittajaVihje.textContent = teksti;
+  kehittajaVihje.hidden = !teksti;
+  clearTimeout(vihjeAjastin);
+  if (teksti) vihjeAjastin = setTimeout(() => { kehittajaVihje.hidden = true; }, 6000);
 }
 
+/** Kytkinrivin tila valikkoon: kulta + sana "päällä"/"pois". */
+function merkitseKytkin(nappi, paalla) {
+  if (!nappi) return;
+  nappi.setAttribute('aria-pressed', String(paalla));
+  const tila = nappi.querySelector('.kehittaja-kytkin-tila');
+  if (tila) tila.textContent = paalla ? 'päällä' : 'pois';
+}
+
+function paivitaKehittajaValikko() {
+  if (kehittajaValikkoKotelo) kehittajaValikkoKotelo.hidden = !kehittajaTilaPaalla();
+  const maailma = kehittajaMaailmaPaalla();
+  merkitseKytkin(maailmaNappi, maailma);
+  if (maailmaNappi) {
+    maailmaNappi.title = maailma
+      ? 'Maailmanäkymä on PÄÄLLÄ: koko lauta ja kaupunkien laatat näkyvissä '
+        + '(ei reittejä), ei sumennusta, panorointi vapaa — napauta kaupunkia '
+        + 'siirtyäksesi sinne; kytke pois pelataksesi pelaajan näkymällä'
+      : 'Maailmanäkymä on pois: näkymä on pelaajan fokusmoodi — kytke päälle '
+        + 'nähdäksesi koko laudan ja siirtyäksesi maasta toiseen';
+  }
+  const mittari = mittariPaalla();
+  merkitseKytkin(mittariNappi, mittari);
+  if (mittariNappi) {
+    mittariNappi.title = mittari
+      ? 'Laitemittari on PÄÄLLÄ: kartan yläkulmassa kehysaika, tukokset, '
+        + 'lavan mitat ja solmumäärät — sama kuin ?mittari=1'
+      : 'Laitemittari on pois — kytke päälle mitataksesi kartan sujuvuutta '
+        + 'tällä laitteella (sama kuin ?mittari=1)';
+  }
+  if (polloGenerointiNappi) {
+    polloGenerointiNappi.title = 'Generoi pöllön kysymysehdotukset heti tälle näkymälle '
+      + '(myös uudelleen jo generoidulle)';
+  }
+}
+
+/* Valikon avaus ja sulku — sama kaava kuin hampurilaisella yllä. */
+const suljeKehittajaValikko = () => {
+  if (!kehittajaValikko || kehittajaValikko.hidden) return;
+  kehittajaValikko.hidden = true;
+  kehittajaValikkoNappi?.setAttribute('aria-expanded', 'false');
+};
+
+kehittajaValikkoNappi?.addEventListener('click', () => {
+  if (!kehittajaValikko) return;
+  // Tila luetaan avaushetkellä: mittari ja maailma voivat vaihtua myös
+  // savukevartijan tai toisen välilehden kirjoituksesta.
+  paivitaKehittajaValikko();
+  naytaKehittajaVihje('');
+  kehittajaValikko.hidden = !kehittajaValikko.hidden;
+  kehittajaValikkoNappi.setAttribute('aria-expanded', String(!kehittajaValikko.hidden));
+});
+
+document.addEventListener('pointerdown', (event) => {
+  if (!event.target.closest?.('.kehittaja-valikko-kotelo')) suljeKehittajaValikko();
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') suljeKehittajaValikko();
+});
+
+/*
+ * KYTKIMET EIVÄT SULJE VALIKKOA. Ne ovat säätimiä kuten äänirivit:
+ * mittari pannaan päälle, katsotaan lukemat ja pannaan pois, ja
+ * kysymyksiä generoidaan usein peräkkäin. Tila näkyy rivillä, joten
+ * valikko on myös se paikka, josta kytkennän tulos luetaan.
+ */
 maailmaNappi?.addEventListener('click', () => {
   asetaKehittajaMaailma(!kehittajaMaailmaPaalla());
-  paivitaMaailmaNappi();
+  paivitaKehittajaValikko();
   ui?.paivitaKehittajaMaailma();
 });
 
-paivitaMaailmaNappi();
+mittariNappi?.addEventListener('click', () => {
+  const halutaan = !mittariPaalla();
+  asetaMittari(halutaan);
+  paivitaKehittajaValikko();
+  /*
+   * Mittari käynnistyy ja sammuu ilman sivulatausta, KUN KARTTA ON
+   * PYSTYSSÄ: laatikko asuu karttaruudussa. Aloitusruudussa (ei vielä
+   * peliä) kytkin jää voimaan ja mittari syntyy kartan mukana —
+   * silloin ja vain silloin vihje kehottaa lataamaan sivun uudelleen.
+   */
+  const kaynnissa = ui?.paivitaKarttamittari?.() ?? false;
+  if (!halutaan) naytaKehittajaVihje('Mittari pois.');
+  else if (kaynnissa) naytaKehittajaVihje('Mittari kartan yläkulmassa.');
+  else naytaKehittajaVihje('Mittari kytketty: näkyy kartalla — lataa sivu uudelleen.');
+});
+
+polloGenerointiNappi?.addEventListener('click', () => {
+  const tulos = polloGeneroiEhdotukset();
+  naytaKehittajaVihje({
+    ok: 'Kysymyksiä generoidaan…',
+    'ei-pollo': 'Pöllöä ei ole vielä asennettu.',
+    'ei-loydetty': 'Pöllöä ei ole vielä löydetty aarteena.',
+    'ei-palvelinta': 'Pöllöpalvelinta ei ole kytketty.',
+    kesken: 'Edellinen vastaus on kesken.',
+  }[tulos] ?? 'Generointi ei lähtenyt.');
+});
+
+paivitaKehittajaValikko();
 
 document.getElementById('raamattu-lehti-btn')?.addEventListener('click', () => {
   window.matkakirja?.ui?.avaaRaamattuLehti();

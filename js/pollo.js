@@ -2456,6 +2456,45 @@ class Pollo {
     if (!this.naytaValmiit(avain)) this.haeEhdotukset();
   }
 
+  /**
+   * KYSYMYSGENEROINTI HETI (kehittäjän hammasratasvalikko, omistajan
+   * tilaus 29.8.2026).
+   *
+   * Tavallisesti generointi lähtee itsestään kahdesta portista: pöllön
+   * avaus (avaa) ja tilanteen vaihtuminen paneelin alla
+   * (tarkistaKonteksti). Kumpikin AVAA VAIN KERRAN kutakin tilannetta
+   * kohti — juuri niin kuin pitääkin, koska ehdotukset maksavat
+   * kiintiötä. Kehittäjä tarvitsee silti kolmannen sisäänkäynnin:
+   * kirjoitetun jutun kysymykset halutaan nähdä NYT, ja usein
+   * uudelleen samalle sivulle, kun tekstiä on juuri muutettu.
+   *
+   * Tämä on se sisäänkäynti, ja se ajaa saman polun kuin sivunvaihto —
+   * siivoaTarjokkaat + haeEhdotukset — kahdella erolla:
+   *   1. valmiskysymyspakka EI ohita hakua (naytaValmiit),
+   *      koska juuri palvelimen generointi on se, mitä katsotaan,
+   *   2. sama tilanne kelpaa uudelleen, vaikka avain ei vaihtuisi.
+   * Odotusrivi ja tulokset ilmestyvät täsmälleen kuten normaalisti.
+   *
+   * @returns {string} 'ok' | 'ei-palvelinta' | 'kesken'
+   */
+  generoiEhdotuksetHeti() {
+    if (!this.palvelin) return 'ei-palvelinta';
+    // Kesken oleva vastaus voittaa: haeEhdotukset hylkäisi haun joka
+    // tapauksessa, eikä kesken olevaa vastausta saa sotkea.
+    if (this.kesken) return 'kesken';
+    if (!this.auki) this.avaa();
+    this.siivoaTarjokkaat();
+    this.tarjottuAvain = this.kysymysAvain();
+    /*
+     * Avaus saattoi juuri panna oman hakunsa liikkeelle; tämä haku
+     * kasvattaa polettia, joten vanhempi putoaa pois omine
+     * odotusriveineen (haeEhdotukset). Lupausta ei odoteta — kutsuva
+     * ele on jo mennyt, ja tulos näkyy pinnassa.
+     */
+    Promise.resolve(this.haeEhdotukset()).catch(() => {});
+    return 'ok';
+  }
+
   sulje() {
     // Naputus katkeaa ENNEN mitään muuta: kesken jäänyt striimi ei saa
     // jäädä naputtamaan suljetun paneelin takana. Kello ei soi, koska
@@ -4499,6 +4538,27 @@ export function polloKysy(kysymys) {
   // muissakin kuorikutsuissa (js/natiivi.js nielaise).
   Promise.resolve(pollo.kysy(teksti)).catch(() => {});
   return true;
+}
+
+/**
+ * Kysymysehdotukset heti nykyiselle näkymälle (kehittäjän
+ * hammasratasvalikko, js/main.js #kehittaja-pollo-btn).
+ *
+ * Avaa paneelin tarvittaessa ja ajaa generoinnin samaa polkua kuin
+ * sivunvaihto — myös silloin, kun tälle tilanteelle on jo generoitu
+ * tai kun kaupungilla on käsin kirjoitettu valmiskysymyspakka.
+ *
+ * @returns {string} 'ok' kun haku lähti; muuten syy sanana:
+ *   'ei-pollo' (peliä ei ole), 'ei-loydetty' (pöllöä ei ole vielä
+ *   löydetty aarteena), 'ei-palvelinta', 'kesken'.
+ */
+export function polloGeneroiEhdotukset() {
+  const pollo = nykyinenPollo;
+  if (!pollo) return 'ei-pollo';
+  // Pöllö on aarre: sitä ei paljasteta etuajassa edes kehittäjän
+  // pikatoiminnolla (sama sääntö kuin polloKysyssä).
+  if (!pollo.nakyyko()) return 'ei-loydetty';
+  return pollo.generoiEhdotuksetHeti();
 }
 
 /**
