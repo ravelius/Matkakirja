@@ -96,6 +96,7 @@ import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
 // Rekisteri myös kokonaisena: sähketehtävän sisältöhakemisto kerää
 // maan kaupunkien virroista täkyjen ja nostojen otsikot.
 import { FOKUSVIRRAT, fokusvirtaKaupungille } from './packs/fokusvirrat.js';
+import { livianPaljastusOdottaa } from './livia.js';
 import { luennanLoppuun } from './luenta.js';
 import { natiiviVastaus } from './natiivi.js';
 import { polloSaapumiskupla } from './pollo.js';
@@ -687,6 +688,14 @@ const SAAPUMISKUPLAN_TAUKO_MS = 900;
 export function fokusvirtaSaapumiskupla(ui, city) {
   if (!city || SAAPUMISKUPLA_VAITI.has(city.id)) return false;
   if (!ui?.game?.pack) return false;
+  /*
+   * ENSISAAPUMISEN TUURAUSPALJASTUS VOITTAA (omistaja 29.8.2026).
+   * Livian kahden kuplan paljastus ON sen saapumisen puheenvuoro, ja
+   * yksi puheenvuoro per saapuminen on kuplien sääntö — maadoitus
+   * väistyy sen tieltä ja palaa seuraavissa kaupungeissa
+   * (js/livia.js livianPaljastusOdottaa).
+   */
+  if (livianPaljastusOdottaa(ui)) return false;
   const maadoitus = fokusvirtaSisalto(ui, city)?.pollo?.maadoitus ?? null;
   /*
    * Korttivirrassa maadoitus on jo pöllökortin ensimmäinen kappale

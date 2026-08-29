@@ -118,6 +118,14 @@ import {
   polloVihje, polloVihjePois,
 } from './pollo.js';
 import { ajastaEhdotusKupla, ehdotusOsio, proHakuRasti, proOsio } from './ehdotukset.js';
+/*
+ * Livian omat kuplat (js/livia.js): avausesittely aloitusvalinnassa
+ * lähtee kartasta (zoomaaAloituskartta), mutta sen peruminen ja
+ * mannerivihjeen tilannelaukaisin kuuluvat pelin kulkuun.
+ */
+import {
+  naytaLivianPaljastus, nollaaLivianVihjeet, paivitaMannerivihje, peruLivianAvaus,
+} from './livia.js';
 // Viiden symbolin reaktionappi sisällön kylkeen (js/reaktiot.js).
 // ui.js tarvitsee tästä kuvasuurennoksen napin ja litteiden
 // kulttuurinostojen väliotsikkonapit; lehden ja jutun omat napit
@@ -2619,6 +2627,13 @@ export class UI {
      * jäisi riviin uudenkin pelin alkuun.
      */
     polloPaivitaNakyvyys();
+    /*
+     * Livian kertavihjeet istunnon alkuun: uusi peli ei peri edellisen
+     * mannerivihjettä eikä kesken jäänyttä avaussarjaa. Avausesittelyn
+     * laitelippu on tarkoituksella tämän ulkopuolella — se on kerran
+     * per laite, ei kerran per peli.
+     */
+    nollaaLivianVihjeet();
   }
 
   /**
@@ -9875,6 +9890,12 @@ export class UI {
    */
   async doPickStart(city) {
     const { game } = this;
+    /*
+     * Livian avausesittely väistyy heti, kun pelaaja tekee valintansa
+     * (omistaja 29.8.2026: kuplat eivät estä valintaa). Kaupungin voi
+     * napauttaa kesken minkä tahansa repliikin.
+     */
+    peruLivianAvaus();
     const portti = (city.links ?? []).length > 0;
     // Ei ääniefektiä lähtövalinnassa (omistajan päätös 10.8.2026):
     // moottoriääni feidautuu sisään vasta lentokalvolla.
@@ -11179,6 +11200,12 @@ export class UI {
     // Odottaako peli valintaa kartalta? Jos odottaa eikä mitään tapahdu,
     // pöllö vinkkaa hetken kuluttua.
     this.paivitaValintavihje();
+    /*
+     * Onko pelaaja jäänyt samaan maahan pitkäksi aikaa aarteen
+     * löydyttyä, rahaa kertyneenä? Silloin Livia muistuttaa kerran
+     * mannerlennosta (js/livia.js; kaikki portit ovat siellä).
+     */
+    paivitaMannerivihje(this);
     // Game Centerin saavutukset (iOS-kuori; selaimessa ei tee mitään).
     this.paivitaSaavutukset();
 
@@ -16940,12 +16967,18 @@ export class UI {
     const naytaKuplat = (viive) => {
       this.saapumisKuplaAjastin = setTimeout(() => {
         if (this.dead) return;
-        polloVihje(tervetuloa || SAAPUMISEN_KUPLA_TOINEN);
-        if (!tervetuloa) return;
-        this.saapumisKupla2Ajastin = setTimeout(() => {
-          if (this.dead) return;
-          polloLisavihje(SAAPUMISEN_KUPLA_TOINEN);
-        }, SAAPUMISEN_KUPLA_VALI_MS);
+        /*
+         * LIVIAN TUURAUSPALJASTUS ENSIN (omistaja 29.8.2026): aivan
+         * ensimmäisessä kohdemaassa Livia kertoo kahdella kuplalla,
+         * ettei pöllö ehtinytkään paikalle. Se on sen saapumisen
+         * puheenvuoro, ja ohjeet tulevat vasta sen jälkeen — ohje ei
+         * saa syödä hetkeä eikä hetki ohjetta. Muilla saapumisilla
+         * kutsu palaa saman tien epätotena (js/livia.js).
+         */
+        if (naytaLivianPaljastus(this, {
+          jalkeen: () => this.saapumisenOhjekuplat(tervetuloa),
+        })) return;
+        this.saapumisenOhjekuplat(tervetuloa);
       }, viive);
     };
     // Luenta soi tai ei soi — kumpikin haara on olemassa (ks. metodin
@@ -16959,6 +16992,26 @@ export class UI {
       return;
     }
     naytaKuplat(SAAPUMISEN_KUPLA_MS);
+  }
+
+  /**
+   * Saapumisen kaksi ohjekuplaa allekkain: mihin tultiin ja mitä
+   * sormella tehdään. Erotettu omaksi metodikseen, koska Livian
+   * tuurauspaljastus ajaa saman parin vasta oman sarjansa jälkeen
+   * (ks. saapumisenKuplat).
+   *
+   * @param {string} tervetuloa ensimmäinen kupla; tyhjänä näytetään
+   *   pelkkä toimintaohje yhtenä kuplana.
+   */
+  saapumisenOhjekuplat(tervetuloa) {
+    if (this.dead) return;
+    polloVihje(tervetuloa || SAAPUMISEN_KUPLA_TOINEN);
+    if (!tervetuloa) return;
+    clearTimeout(this.saapumisKupla2Ajastin);
+    this.saapumisKupla2Ajastin = setTimeout(() => {
+      if (this.dead) return;
+      polloLisavihje(SAAPUMISEN_KUPLA_TOINEN);
+    }, SAAPUMISEN_KUPLA_VALI_MS);
   }
 
   /*

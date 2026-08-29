@@ -378,6 +378,12 @@ const MODULES = [
    */
   'js/pollo-haku.js',
   'js/pollo.js',
+  /*
+   * Livian omat kuplat heti pöllön jälkeen: moduuli tuo pöllöstä
+   * kuplan näyttäjät, ja sen tuovat kartta (avausesittely) ja ui
+   * (mannerivihje) — molemmat ovat listalla myöhempänä.
+   */
+  'js/livia.js',
   'js/visa.js',
   // Tilastot-lehti ennen lehteä (lehti.js tuo sen staattisesti). Se
   // lukee pack.js:n, sisältötaulut ja ui-apurit, jotka ovat yllä —

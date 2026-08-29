@@ -19,6 +19,7 @@
 import {
   vaimennaTausta, palautaTausta,
 } from './ambience-stream.js';
+import { naytaLivianAvaus } from './livia.js';
 import { stopDiaryVoice, stopIntroVoice } from './luenta.js';
 import { el } from './mapart.js';
 import { sfx } from './sound.js';
@@ -1662,6 +1663,15 @@ export class Kartta {
     this.asetaPan(this.ui.panX, this.ui.panY);
     document.body.classList.remove('manner-odottaa');
     this.ui.taydennaTaide?.({ heti: true });
+    /*
+     * LIVIA LENNÄHTÄÄ MUKAAN (omistaja 29.8.2026): tämä on se
+     * ENSIMMÄINEN KARTTAIKKUNA, josta pelaaja valitsee ensimmäisen
+     * lentonsa kohteen — ja juuri siinä hetkessä Livia esittäytyy.
+     * Portit (kerran per laite, vaihe pickstart) ovat js/livia.js:ssä,
+     * joten tämä kutsu on turvallinen myös silloin, kun samaan
+     * lähikuvaan palataan kesken matkan.
+     */
+    naytaLivianAvaus(this.ui);
   }
 
   /*
