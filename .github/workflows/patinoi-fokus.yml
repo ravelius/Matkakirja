@@ -138,7 +138,14 @@ jobs:
           done
           echo "Patinoitu $n lehtea tasolla $TASO (laatu $LAATU)."
           du -sh ulos
-          ls -la ulos | head -20
+          # EI `ls | head`. head sulkee putken 20 rivin jalkeen, ls saa
+          # SIGPIPEn, ja `set -o pipefail` nostaa sen koko askeleen
+          # virheeksi — jolloin "Vie ampariin" jaa ajamatta ja 82
+          # minuutin patinointi menee hukkaan. Nain kavi ajossa 33256091495
+          # (29.8.2026): kaikki 135 lehtea oli patinoitu, ja ajo kaatui
+          # tahan riviin. Sama koski naytteenottoa alempana.
+          ls -la ulos > ulos-lista.txt
+          head -20 ulos-lista.txt
 
       # Muutama lehti katsottavaksi ilman ampariin vientia. Koko sato
       # olisi satoja megatavuja, joten artefaktiin menee vain nayte.
@@ -150,8 +157,11 @@ jobs:
             [ -f "ulos/$m.webp" ] && cp "ulos/$m.webp" nayte/ || true
           done
           # Jos naita kolmea ei ajettu, otetaan kolme ensimmaista.
+          # Sama SIGPIPE-ansa kuin edellisessa askeleessa: lista
+          # tiedostoon ensin, vasta sitten head.
           if [ -z "$(ls nayte)" ]; then
-            ls ulos/*.webp | head -3 | xargs -r cp -t nayte/
+            ls ulos/*.webp > kaikki-webpit.txt
+            head -3 kaikki-webpit.txt | xargs -r cp -t nayte/
           fi
 
       - uses: actions/upload-artifact@v4

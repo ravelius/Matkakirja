@@ -182,8 +182,14 @@ const FOKUS_ALIPOLKU = 'julisteet/fokus/';
  * taulukkoa (vrt. UUSITUT_AANET) ei tarvita.
  *
  * 2 = patina keskitaso koko maailman lehdille (29.8.2026).
+ * 3 = Euroopan 39 lehteä uusittu ilman naapurisumennusta (29.8.2026).
+ *     Vain Euroopan lehtien SISÄLTÖ muuttui, mutta numero on yhteinen
+ *     koko sarjalle: maakohtainen taulukko olisi uusi kirjanpito, jota
+ *     joutuisi ylläpitämään jokaisen erän jälkeen, ja muiden maiden
+ *     lehdet latautuvat uudelleen kerran — kymmeniä megatavuja
+ *     kertaluontoista liikennettä, ei sen enempää.
  */
-const FOKUS_VUOSIKERTA = 2;
+const FOKUS_VUOSIKERTA = 3;
 
 /** Fokuskartan osoite ämpärissä (esim. 'GRC.webp' tai 'GRC.json'). */
 export function fokuskarttaUrl(tiedosto) {

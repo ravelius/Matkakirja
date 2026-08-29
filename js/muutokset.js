@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1330, teksti: 'Euroopan lehdet ilman sumennusta, pehmeampi maasto' },
   { v: 1329, teksti: 'Kartat: patina keskitaso koko maailmaan' },
   { v: 1328, teksti: 'Elaintakyt: 29 maan elaimet kartalle' },
   { v: 1327, teksti: 'Bittikartta 2-3: atominen vaihto ja kiinteat zoomtasot' },
