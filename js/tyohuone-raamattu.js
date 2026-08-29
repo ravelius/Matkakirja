@@ -333,6 +333,14 @@ export const RAAMATTU = {
         'PÖLLÖ-CHAT: ensisijaisesti kuratoitua sisältöä (lehdet, '
           + 'tarkistetut faktat); mallin oma selittely selvästi '
           + 'kehystettynä. Sonnet nyt, Haiku 5 kun julkaistaan.',
+        'KEVYT KULKU -KOKEILU PAATTYI - KORTIT OVAT PAALLA (omistaja '
+          + '29.8.2026: "Paalle - koko kulku testiin"): FOKUSVIRTA_KORTIT '
+          + 'kaannettiin paalle ja fokusvirran takysyvennyskortit + '
+          + 'oppitunnit ovat pelaajan polussa kaikissa fokuskaupungeissa. '
+          + 'Kevyen kulun elementit (lehtilukko, lehtitehtavat, '
+          + 'takynostot) sailyvat rinnalla. Omistaja pelitestaa ja '
+          + 'paattaa lopullisesti. Alla oleva alkuperainen kokeilukirjaus '
+          + 'sailytetaan historiana.',
         'KEVYT KULKU -KOKEILU (omistaja 24.8.2026, ilta): '
           + 'kaupunkilehden ALIN KOHTA (josta pääsi tapaamaan '
           + 'henkilön) POIS. Tilalle: kun kaupunkilehti AUKEAA, '
