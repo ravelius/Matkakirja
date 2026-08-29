@@ -27,8 +27,7 @@
  *              valkoinen kermaksi, sävykäyrä pehmeäksi, maaston
  *              pastellointi, lumppupaperin syy.
  * `keskitaso`  edelliset + epätasainen ikääntymissävy + akvarellin
- *              reunakertymä värialueiden rajoilla + rannikon
- *              vesiviivoitus.
+ *              reunakertymä värialueiden rajoilla.
  * `taysi`      kaikki + viivojen mikrorosoisuus + painolaattojen
  *              kohdistusheitto + musteen leviäminen nimissä +
  *              vinjetointi.
@@ -36,9 +35,11 @@
  * Taso ei ole kytkinlista vaan valmis resepti: jokainen taso on
  * itsenäinen parametriolio, jota voi säätää rikkomatta muita.
  *
- * Yksi passi on kaikilla tasoilla sama eikä kuulu tähän portaikkoon:
- * meren SYVYYSVYÖHYKKEET (litistys + kaiverrusviivat). Se korjaa
- * pohjakuvan bandingin eikä annostele tyyliä — ks. SYVYYS.
+ * Kolme passia on kaikilla tasoilla samat eivätkä kuulu tähän
+ * portaikkoon: meren SYVYYSVYÖHYKKEIDEN litistys, sen tilalle tuleva
+ * rannikon VESIVIIVOITUS ja MAANRAJOJEN tummennus. Ne korjaavat
+ * pohjakuvaa eivätkä annostele tyyliä — ks. SYVYYS, VESIVIIVOITUS ja
+ * MAANRAJA.
  *
  * === LUETTAVUUS ON ETUSIJALLA ===
  *
@@ -129,7 +130,7 @@ const SAVYT = {
 };
 
 /*
- * MEREN SYVYYSVYÖHYKKEET: PORTAAT LITISTETÄÄN, KAIVERRUSVIIVAT TILALLE.
+ * MEREN SYVYYSVYÖHYKKEET: PORTAAT LITISTETÄÄN.
  *
  * === MISTÄ ONGELMA TULEE ===
  *
@@ -152,43 +153,20 @@ const SAVYT = {
  *     puoleentoista. Ei nollaan — hento vihje syvyydestä kuuluu
  *     karttaan, banding ei.
  *
- *  2. KAIVERRUSVIIVAT. Vyöhykkeiden rajat piirretään takaisin ohuina
- *     musteviivoina, kuten 1800-luvun kaiverretuissa kartoissa, joissa
- *     vesi on rantaviivaa myötäileviä rinnakkaisviivoja eikä sävypintaa
- *     (omistajan esikuva). Rajaa ei tarvitse arvata: se on jo kuvassa,
- *     ja koska se seuraa rantaa, seuraavat viivatkin.
+ *  2. TILALLE VESIVIIVOITUS. Sävyporras ei ole se, mistä 1800-luvun
+ *     kaivertaja piirsi syvyyden — hän veti rantaviivan myötäisiä
+ *     rinnakkaisviivoja. Ne piirretään omassa passissaan
+ *     rantaetäisyydestä (ks. VESIVIIVOITUS), eivät tästä.
  *
- * === MITEN RAJA LÖYDETÄÄN: DoG-NOLLAKOHTA ===
+ * === MIKSI PORRASPOHJAISET VIIVAT HYLÄTTIIN ===
  *
- * Neljäsosakuvan merisävystä vähennetään sen oma sumennus (V - blur V).
- * Erotus on negatiivinen portaan tummalla ja positiivinen sen vaalealla
- * puolella, ja se leikkaa nollan TÄSMÄLLEEN portaan kohdalla — myös
- * kaltevalla pohjalla, jossa pelkkä kynnysarvo eksyisi. Etäisyys
- * nollakohtaan saadaan jakamalla erotus omalla gradientillaan, ja
- * viivan leveys on siten pikseleissä eikä sävyyksiköissä: yhtä ohut
- * hennon ja jyrkän portaan kohdalla.
- *
- * Nollakohtia on kuitenkin kaikkialla: laakealla merelläkin kohina
- * leikkaa nollan, ja pelkkä nollakohta piirtäisi ulapalle madonjälkiä.
- * Siksi portti (`kynnys`) katsoo, onko nollakohdan alla oikea porras —
- * eli kuinka jyrkkä KENTTÄ ITSE on samassa kohdassa.
- *
- * KYNNYS ON MITATTAVA JUURI SIITÄ KENTÄSTÄ, JOTA PORTTI LUKEE. Raaka
- * neljäsosakuva antaa gradientin mediaaniksi 1,3 ja 99.
- * prosenttipisteeksi 12,4 yksikköä neljäsosapikseliä kohti, ja niistä
- * luvuista johdettu kynnys [3,6 … 10,5] jätti viivat lähes kokonaan
- * piirtymättä. Syy: kenttä on ennen porttia sumennettu kahdesti (kerran
- * pohjan raetta vastaan, kerran itse gradientti), ja sumennus leikkaa
- * juuri huiput. Samasta kentästä, jota koodi oikeasti lukee, mitattuna
- * jakauma on mediaani 0,68 · 90 % 1,77 · 95 % 3,29 · 99 % 7,09 — ja
- * kynnys kuuluu sen mukaan.
- *
- * === MIKSI VAIN MUUTAMA VIIVA ===
- *
- * Esikuvassa viivat ovat tiheimmillään rannassa ja loppuvat parin
- * kolmen jälkeen. `haipyma` vaimentaa viivan eksponentiaalisesti
- * etäisyydellä rannasta, joten uloimmat rajat jäävät piirtymättä
- * itsestään — ilman että vyöhykkeitä tarvitsee laskea tai numeroida.
+ * Ensimmäinen yritys (29.8.2026) etsi portaan paikan DoG-nollakohtana
+ * ja piirsi viivan siihen. Se oli tarkka mutta väärä: pohjan portaita
+ * on kolme neljä ja ne ovat siellä, minne piirtomoottori ne laski,
+ * joten viivoja tuli kolme neljä eikä niitä voinut tihentää. Omistajan
+ * arvio: *"nyt syvyys ei näy oikein ollenkaan"*. Etäisyyskenttä antaa
+ * viivat sinne, minne kaivertaja ne vetäisi, ja niin monta kuin
+ * halutaan. Koneisto on poistettu; litistys jäi.
  */
 const SYVYYS = {
   /* Osuus porrasaskeleesta, joka jää jäljelle (0 = tasainen meri). */
@@ -202,32 +180,6 @@ const SYVYYS = {
   /* Rantavyöhyke, jolla litistys vaimenee nollaan (täysiä pikseleitä):
    * rantaviivan antialiasointi ja sen oma varjostus jäävät koskematta. */
   rantaVali: [1, 7],
-
-  /* --- kaiverrusviivat --- */
-  /* Viivan tummennus. Selvästi vesiviivoitusta hennompi: omistaja
-   * pyysi nimenomaan matalaa kontrastia. */
-  viivaVoima: 0.085,
-  /* Viivan puolileveys täysinä pikseleinä 6400 pikselin lehdellä. */
-  viivaLeveys: 1.7,
-  /* Porrasjyrkkyys, jolla viiva syttyy [ei mitään, täysi]. Yksikkö on
-   * luminanssia neljäsosapikseliä kohti SUMENNETUSSA kentässä (ks.
-   * kynnyksen mittausvaroitus yllä): 1,0 osuu 90. prosenttipisteen
-   * tienoille ja 3,2 vähän 95. yläpuolelle, joten viivan saa vain
-   * meren jyrkin kymmenys. */
-  kynnys: [1.0, 3.2],
-  /* Viivan vaimeneminen etäisyydellä rannasta (täysiä pikseleitä):
-   * exp(-et/haipyma). 170 jättää näkyviin kaksi tai kolme rengasta. */
-  haipyma: 170,
-  /* Ei viivaa aivan rantaviivan päälle, jottei se paksunna rantaa. */
-  aloitus: 12,
-  /* Käsivaraheilunta: viivan näytepiste siirtyy tämän verran (täysiä
-   * pikseleitä) matalataajuisen kohinan mukaan. Ilman tätä viiva on
-   * konemaisen siisti — mitä kaiverrus ei ole. */
-  huojunta: 3.4,
-  huojuntaSkaala: 85,
-  /* Viivan voiman satunnaisvaihtelu: muste ei kanna tasaisesti. */
-  roso: 0.5,
-  rosoSkaala: 20,
 };
 
 /*
@@ -333,12 +285,18 @@ const PAPERI_TAYSI = {
  */
 const PASTELLI_KEVYT = {
   /* Kylläisyyden lasku maskin täydellä painolla. */
-  kyllaisyys: 0.26,
+  kyllaisyys: 0.34,
   /* Kohti mitä desaturoidaan: luminanssin kerroin kanavittain.
    * Lämmin harmaa, ei neutraali. */
   paperiSavy: [1.045, 0.995, 0.905],
-  /* Tummien nosto kohti kermaa. */
-  vaalennus: 0.10,
+  /* Tummien nosto kohti kermaa. Tämä on korkeuserojen KONTRASTISÄÄDIN:
+   * vuoristovarjostus on lehden tummin maasävy, ja kun sitä nostetaan
+   * kohti kermaa, rinteiden ero alankoon kutistuu. Omistajan pyyntö
+   * 29.8.2026 (*"korkeuserot saisivat näkyä matalammalla
+   * kontrastilla"*) nosti tämän 0,10:stä 0,21:een ja kylläisyyden
+   * 0,26:sta 0,34:ään: maasto jää hennoksi mutta lukee yhä. Muste ja
+   * nimet eivät liiku — maski pitää ne (lumVali, kromaVali) ulkona. */
+  vaalennus: 0.21,
   vaalennusKohde: [246, 239, 219],
   /* Nosto painottuu tähän luminanssivyöhykkeeseen: täysi alarajalla,
    * nolla ylärajalla. Vuoristo on tummaa, alanko jo valmiiksi vaaleaa. */
@@ -351,11 +309,11 @@ const PASTELLI_KEVYT = {
 };
 
 const PASTELLI_KESKI = {
-  ...PASTELLI_KEVYT, kyllaisyys: 0.35, vaalennus: 0.15,
+  ...PASTELLI_KEVYT, kyllaisyys: 0.45, vaalennus: 0.30,
 };
 
 const PASTELLI_TAYSI = {
-  ...PASTELLI_KEVYT, kyllaisyys: 0.43, vaalennus: 0.19,
+  ...PASTELLI_KEVYT, kyllaisyys: 0.55, vaalennus: 0.37,
 };
 
 /*
@@ -397,42 +355,157 @@ const REUNAKERTYMA = {
 };
 
 /*
- * RANNIKON VESIVIIVOITUS.
+ * RANNIKON VESIVIIVOITUS — LEHDEN SYVYYSILMAISU.
  *
- * 1800-luvun atlaksen tunnusmerkki: rantaviivan myötäiset ohuet
- * viivat merenpuolella, tiheimmät rannassa ja harvenevat ulospäin.
+ * === ESIKUVA ===
  *
- * Meri tunnistetaan KROMASTA, ei sinisestä: tämän lehden meri on
- * viileää paperia (piirto.js SYVYYS), ei sinistä. Mitattu
- * pohjakuvasta: meren kroma (max-min) on 28-34, maan 45-91 myös
- * häivytetyillä naapureilla. Raja 34...42 erottaa ne varmasti.
+ * Omistajan malli on 1800-luvun kaiverrettu kartta (*Valley of
+ * Tenochtitlan, as seen by Cortez* -tyyliä). Siinä vettä ei ole
+ * maalattu sävypinnaksi vaan PIIRRETTY: rantaa kiertää kymmeniä
+ * lähekkäisiä samankeskisiä musteviivoja, jotka muodostavat leveän
+ * tumman reunusvyön. Vyön tummuus tulee viivojen TIHEYDESTÄ eikä
+ * yksittäisen viivan paksuudesta — viivat ovat hiuksenohuita, mutta
+ * rannassa ne ovat lähes kiinni toisissaan ja harvenevat vähitellen,
+ * kunnes loppuvat avomerelle. Kapea salmi jää kokonaan viivoitetuksi,
+ * ja saarten vyöt sulautuvat yhteen.
  *
- * Etäisyys rannasta lasketaan neljäsosatarkkuudella kahden pyyhkäisyn
- * chamfer-muunnoksella ja haetaan täydelle tarkkuudelle
- * bilineaarisesti. Neljäsosan kvantisointi näkyy viivan pienenä
- * huojuntana — mikä on käsin piirretyssä kartassa oikein.
+ * === MITEN SE TEHDÄÄN ===
+ *
+ * Viivan paikka luetaan RANTAETÄISYYDESTÄ (chamfer-muunnos meren
+ * puolella, puolikkaalla tarkkuudella). Siitä seuraa kolme asiaa
+ * ilmaiseksi: viivat ovat samankeskisiä rantaviivan kanssa, ne
+ * myötäilevät jokaisen poukaman, ja kapeikossa kahden rannan vyöt
+ * kohtaavat luontevasti.
+ *
+ * VIIVAVÄLI KASVAA LINEAARISESTI: k. viivan väli on `vali + k *
+ * kasvu`. Kumulatiivinen etäisyys on siis toisen asteen polynomi, ja
+ * viivanumero saadaan etäisyydestä sen juurella (ks. pääsilmukka).
+ * Vakiokasvu on tarkoituksella yksinkertainen: se on säädettävissä
+ * kahdella luvulla eikä vaadi taulukkoa etäisyyksiä.
+ *
+ * MIKSI PUOLIKAS ETÄISYYSKENTTÄ: chamferin askel on yksi kenttäpikseli,
+ * joten neljäsosakentästä ei saa kolmen pikselin viivaväliä ulos (ks.
+ * etäisyyskentän kommentti pääkoodissa).
+ *
+ * === LUETTAVUUS ===
+ *
+ * Vyö on tiheä, joten yksittäisen viivan on oltava hento: `voima` on
+ * kertova tummennus eikä musteen sävy. Luminanssiportti pitää viivat
+ * poissa meressä olevien nimien, symbolien ja rantaviivan päältä —
+ * viiva ei saa syödä lehden omaa merkintää.
+ *
+ * === KAKSI VARIANTTIA ===
+ *
+ * `VESIVIIVAT_TIHEA` on esikuvan mukainen leveä vyö: 16 viivaa, vyö
+ * noin 195 px 6400 pikselin lehdellä, sisin viivaväli kolme pikseliä.
+ * `VESIVIIVAT_HARVA` on saman koneiston harva tulkinta: 8 selvästi
+ * erillistä piirtoa, vyö noin 165 px. Vaihto on yksi rivi alempana —
+ * omistaja valitsee kummasta pidetään.
  */
-const VESIVIIVOITUS = {
-  /* Viivaväli täysillä pikseleillä 6400 pikselin leveydellä. */
-  vali: 15,
+const VESIVIIVAT_TIHEA = {
+  /* Ensimmäisen viivan etäisyys rantaviivasta (täysiä pikseleitä
+   * 6400 pikselin lehdellä). Ei nollaan asti: rantaviiva on oma
+   * piirtonsa eikä saa paksuuntua. */
+  aloitus: 4,
+  /* Ensimmäinen viivaväli ja välin kasvu viivaa kohti. 2,9 + 1,25
+   * antaa 16 viivalla vyön, joka ulottuu noin 195 pikseliin: sisin väli
+   * kolme pikseliä, uloin kaksikymmentäkaksi.
+   *
+   * VYÖN LEVEYS ON KAHDEN VIRHEEN VÄLISSÄ. 95 pikselin vyö katosi
+   * kokolehdestä: puolentoista prosentin kaistale rannassa, eikä meri
+   * lukenut viivoitetulta. 240 pikselin vyö taas ulottui niin kauas,
+   * että uloimmat viivat sulkeutuivat avomerellä renkaiksi
+   * pikkuluotojen ympäri ja meri näytti lammikolta, johon on
+   * pudotettu kiviä. 195 pikseliä pitää tiheän osan rannassa ja näkyy
+   * kokolehdessä — sen jälkeen viivaston katkaisee lähimaan
+   * tiheysportti (`tiheysVali`) eikä pelkkä pituus. */
+  vali: 2.9,
+  kasvu: 1.25,
   /* Montako viivaa rannasta ulospäin. */
-  viivoja: 7,
-  /* Ensimmäisen viivan tummennus; loput vaimenevat. Laskettu 0,085:stä
-   * omistajan kontrastitoiveen mukana (29.8.2026) ja siksi, että
-   * syvyysvyöhykkeiden kaiverrusviivat piirtyvät samalle rannikolle:
-   * kahden viivaston on luettava yhtenä, ei kilpailevana. */
-  voima: 0.07,
-  /*
-   * Viivan paksuus osuutena välistä. 0,2 x 15 px = kolme pikseliä
-   * 6400 pikselin lehdellä. Leveämpi (0,3) luki sumeana huntuna eikä
-   * viivana — vesiviivoituksen on oltava terävää ollakseen viivaa.
-   */
-  leveys: 0.2,
+  viivoja: 16,
+  /* Viivan puolileveys täysinä pikseleinä. Vakio: vain tiheys
+   * harvenee ulospäin, ei viivan paksuus. 0,95 tekee 6400 pikselin
+   * lehdellä noin kahden pikselin viivan — ohut mutta terävä, ja
+   * sisimmällä kolmen pikselin välillä viiva peittää kaksi kolmasosaa
+   * pinnasta: rannassa vyö on lähes umpeen viivoitettu. */
+  paksuus: 0.95,
+  /* Kertova tummennus viivan keskellä: meren 200:sta noin 145:een,
+   * kun rantaviivan muste on 65. Viiva on siis selvästi näkyvä mutta
+   * yhä vaaleampi kuin rantaviiva, kuten esikuvassa. */
+  voima: 0.28,
+  /* Uloimman viivan häipyminen: (1 - k/maara)^haipyma, missä `maara`
+   * on tiheysportin lyhentämä viivamäärä. */
+  haipyma: 1.25,
+  /* Lähimaan tiheysportti [luoto, manner] ja vyön lyhin osuus. Luodon
+   * rannalla maata on 70 pikselin laatikossa pari prosenttia ja vyöstä
+   * piirtyy kolmasosa (viisi rengasta); mantereen rannalla osuus on
+   * lähellä puolta ja vyö on täysi. */
+  tiheysVali: [0.05, 0.42],
+  lyhinOsuus: 0.33,
   /* Meren kromaraja [täysi meri, ei enää meri]. */
   kromaVali: [34, 44],
-  /* Viivaa ei piirretä aivan rantaviivan päälle, jottei se paksunna
-   * itse rantaviivaa: ensimmäinen viiva alkaa tästä etäisyydestä. */
-  aloitus: 8,
+  /* Luminanssiportti: viiva ei piirry musteen (nimet, symbolit,
+   * rantaviiva) päälle. Sama akseli kuin SYVYYS-litistyksessä. */
+  lumVali: [150, 178],
+  /* Käsivaraheilunta: näytepisteen siirtymä täysinä pikseleinä, kolme
+   * oktaavia skaalasta `huojuntaSkaala` alaspäin (140 / 68 / 33 px).
+   * Amplitudi saa olla viivaväliä suurempi, koska siirtymä on
+   * PAIKALLISESTI YHTENÄINEN: viivat liikkuvat yhdessä eivätkä mene
+   * ristiin. Vasta amplitudin ja skaalan SUHDE (tässä noin 0,05)
+   * vääntäisi viivastoa. */
+  huojunta: 7,
+  huojuntaSkaala: 140,
+  huojuntaOktaavit: 3,
+  /* Viivan voiman satunnaisvaihtelu pitkin viivaa: muste ei kanna
+   * tasaisesti. */
+  roso: 0.55,
+  rosoSkaala: 26,
+};
+
+/* Harva tulkinta vertailua varten: samat kentät, harvempi vyö. */
+const VESIVIIVAT_HARVA = {
+  ...VESIVIIVAT_TIHEA,
+  aloitus: 6,
+  vali: 9,
+  kasvu: 3.2,
+  viivoja: 8,
+  paksuus: 1.2,
+  voima: 0.24,
+  haipyma: 1.0,
+  huojunta: 9,
+};
+
+/* VALINTA: kumpi vesiviivoitus ajetaan. */
+const VESIVIIVOITUS = VESIVIIVAT_TIHEA;
+
+/*
+ * MAANRAJAT ASTEEN TUMMEMMIKSI.
+ *
+ * Omistaja 29.8.2026: *"maanrajat saavat olla asteen tummemmalla"*.
+ *
+ * MIKSI PATINAPASSISSA EIKÄ PIIRTIMESSÄ. Rajaviivan väri on yksi
+ * literaali piirtimessä (tools/fokuskartta/piirto.js, naapurien
+ * ääriviiva `rgba(56,38,24,1)`), ja sieltä sen voisi tummentaa
+ * suoraan. Mutta pohjalehdet ovat esirenderöityjä: piirtimen muutos
+ * vaatisi jokaisen maan lehden ajamisen uudelleen (ETOPO-aineisto,
+ * selainajo, ämpäri) yhden sävyaskeleen takia. Patinapassi ajetaan
+ * joka tapauksessa valmiille lehdelle, joten askel maksaa tässä
+ * nolla. Jos rajaviivaa joskus muutetaan muutenkin, oikea paikka on
+ * piirrin ja tämä passi voidaan poistaa.
+ *
+ * MITEN RAJA TUNNISTETAAN. Pohjakuvasta mitattuna (GRC 6400 px) muste
+ * jakautuu kahteen selvään kasaan: naapurien ääriviiva on
+ * luminanssiltaan 35-49 ja kaikki muu muste — rantaviiva, nimet, joet,
+ * symbolit — 50-64. Pelkkä luminanssiportti [40 … 52] osuu siis
+ * täsmälleen rajaviivaan. Todennettu maskikuvasta: portin alle jäävät
+ * vain naapurirenkaat.
+ */
+const MAANRAJA = {
+  /* Kertova tummennus viivan ytimessä. 0,11 vie patinoidun rajan
+   * noin 65:stä 58:aan — asteen, ei mustaksi. */
+  voima: 0.11,
+  /* Luminanssiportti pohjakuvan sävyssä [täysi tummennus, ei mitään]. */
+  lumVali: [40, 52],
 };
 
 /* Viivojen mikrorosoisuus: musteen reuna ei ole tasainen. */
@@ -494,11 +567,12 @@ export const RESEPTIT = {
     nimi: 'hillitty',
     savyt: SAVYT,
     syvyys: SYVYYS,
+    vesiviivoitus: VESIVIIVOITUS,
+    maanraja: MAANRAJA,
     pastelli: PASTELLI_KEVYT,
     paperi: PAPERI_KEVYT,
     ikaantyminen: null,
     reunakertyma: null,
-    vesiviivoitus: null,
     rosoisuus: null,
     kohdistus: null,
     leviaminen: null,
@@ -511,11 +585,12 @@ export const RESEPTIT = {
     nimi: 'keskitaso',
     savyt: SAVYT,
     syvyys: SYVYYS,
+    vesiviivoitus: VESIVIIVOITUS,
+    maanraja: MAANRAJA,
     pastelli: PASTELLI_KESKI,
     paperi: PAPERI_KEVYT,
     ikaantyminen: IKAANTYMINEN,
     reunakertyma: REUNAKERTYMA,
-    vesiviivoitus: VESIVIIVOITUS,
     rosoisuus: null,
     kohdistus: null,
     leviaminen: null,
@@ -526,11 +601,12 @@ export const RESEPTIT = {
     nimi: 'taysi',
     savyt: SAVYT,
     syvyys: SYVYYS,
+    vesiviivoitus: VESIVIIVOITUS,
+    maanraja: MAANRAJA,
     pastelli: PASTELLI_TAYSI,
     paperi: PAPERI_TAYSI,
     ikaantyminen: IKAANTYMINEN,
     reunakertyma: REUNAKERTYMA,
-    vesiviivoitus: VESIVIIVOITUS,
     rosoisuus: ROSOISUUS,
     kohdistus: KOHDISTUS,
     leviaminen: LEVIAMINEN,
@@ -701,98 +777,216 @@ async function patinoiSelaimessa({
   };
 
   /* ------------------------------------------------ meren etäisyyskenttä */
-  /* Sekä vesiviivoitus että syvyysvyöhykkeet tarvitsevat etäisyyden
-   * rannasta, joten kenttä lasketaan kummalle tahansa. */
+  /*
+   * Sekä vesiviivoitus että syvyysvyöhykkeet tarvitsevat etäisyyden
+   * rannasta, joten kenttä lasketaan kummalle tahansa.
+   *
+   * KENTTÄ ON PUOLIKKAALLA TARKKUUDELLA, EI NELJÄSOSALLA. Chamferin
+   * askel on yksi kenttäpikseli, joten neljäsosakentän etäisyys
+   * kvantisoituu NELJÄN täyden pikselin portaisiin. Se riitti, kun
+   * viivaväli oli 15 pikseliä, mutta ei enää: vesiviivoituksen sisin
+   * väli on kolmisen pikseliä (ks. VESIVIIVOITUS), eikä kolmen pikselin
+   * viivaväliä voi poimia neljän pikselin portaista. Puolikas antaa
+   * kahden pikselin kvantin ja bilineaarisella haulla jatkuvan rampin —
+   * ja samalla rantaviivan mutkat säilyvät: neljäsosakentässä kapea
+   * poukama katosi kokonaan, ja viivat oikaisivat sen ohi.
+   *
+   * Hinta on muisti ja aika: puolikas kenttä on 4 x neljäsosakentän
+   * kokoinen (6400 pikselin lehdellä 30 MB) ja väliaikaiset
+   * väriakkumulaattorit sen verran lisää. Ne vapautetaan heti
+   * maskin laskennan jälkeen.
+   */
   const meriParam = resepti.vesiviivoitus ?? resepti.syvyys;
-  let etaisyys4 = null;
+  const J2 = 2;
+  const L2 = Math.ceil(L / J2); const K2 = Math.ceil(K / J2);
+  let etaisyys2 = null;
   if (meriParam) {
     const vv = meriParam;
-    const meri = new Uint8Array(L4 * K4);
-    for (let j = 0; j < meri.length; j++) {
-      const kroma = Math.max(r4[j], g4[j], b4[j]) - Math.min(r4[j], g4[j], b4[j]);
-      /* Meri: matala kroma, riittävä peitto ja järkevä kirkkaus. */
-      const onMeri = kroma < vv.kromaVali[1] && a4[j] > 200
-        && lum(r4[j], g4[j], b4[j]) > 120;
-      meri[j] = onMeri ? 1 : 0;
+    let meri = new Uint8Array(L2 * K2);
+    {
+      /* Puolikas alaskaalaus, MUSTE POIS KESKIARVOSTA kuten
+       * neljäsosakentässä: muuten rantaviiva ja nimet vetäisivät
+       * ympäristönsä kroman musteen puolelle. */
+      const rr = new Float32Array(L2 * K2); const gg2 = new Float32Array(L2 * K2);
+      const bb = new Float32Array(L2 * K2); const aa = new Float32Array(L2 * K2);
+      const nn = new Float32Array(L2 * K2);
+      for (let y = 0; y < K; y++) {
+        const ry = (y / J2) | 0;
+        for (let x = 0; x < L; x++) {
+          const i = (y * L + x) * 4;
+          const j = ry * L2 + ((x / J2) | 0);
+          aa[j] += d[i + 3];
+          if (lum(d[i], d[i + 1], d[i + 2]) < 150) continue;
+          rr[j] += d[i]; gg2[j] += d[i + 1]; bb[j] += d[i + 2]; nn[j] += 1;
+        }
+      }
+      for (let j = 0; j < meri.length; j++) {
+        const a = aa[j] / (J2 * J2);
+        if (nn[j] === 0) { meri[j] = 0; continue; }
+        const r = rr[j] / nn[j]; const g2 = gg2[j] / nn[j]; const b2 = bb[j] / nn[j];
+        const kroma = Math.max(r, g2, b2) - Math.min(r, g2, b2);
+        /* Meri: matala kroma, riittävä peitto ja järkevä kirkkaus. */
+        meri[j] = (kroma < vv.kromaVali[1] && a > 200 && lum(r, g2, b2) > 120) ? 1 : 0;
+      }
     }
     /* Yksi avaus + sulkeminen 3x3: yksittäiset pikselit pois, jotta
      * viivoitus ei syty vaalean maan sisälle. */
     const morf = (lahde, laajenna) => {
       const ulos = new Uint8Array(lahde.length);
-      for (let y = 0; y < K4; y++) {
-        for (let x = 0; x < L4; x++) {
+      for (let y = 0; y < K2; y++) {
+        for (let x = 0; x < L2; x++) {
           let arvo = laajenna ? 0 : 1;
           for (let dy = -1; dy <= 1; dy++) {
             for (let dx = -1; dx <= 1; dx++) {
-              const xx = Math.max(0, Math.min(L4 - 1, x + dx));
-              const yy = Math.max(0, Math.min(K4 - 1, y + dy));
-              const v = lahde[yy * L4 + xx];
+              const xx = Math.max(0, Math.min(L2 - 1, x + dx));
+              const yy = Math.max(0, Math.min(K2 - 1, y + dy));
+              const v = lahde[yy * L2 + xx];
               if (laajenna) arvo = arvo || v; else arvo = arvo && v;
             }
           }
-          ulos[y * L4 + x] = arvo ? 1 : 0;
+          ulos[y * L2 + x] = arvo ? 1 : 0;
         }
       }
       return ulos;
     };
     const siisti = morf(morf(morf(meri, false), true), true);
-    /* Chamfer-etäisyysmuunnos: 0 maalla, kasvaa merellä. */
+    meri = null;
+    /*
+     * TARKKA EUKLIDINEN ETÄISYYSMUUNNOS (Felzenszwalb-Huttenlocher).
+     *
+     * Chamfer (1 / 1,41) riitti, kun kentästä luettiin vain "kaukana vai
+     * lähellä rantaa". Vesiviivoitus lukee siitä VIIVOJEN PAIKAN, ja
+     * chamferin kulmavirhe (noin 6 %) piirtyi silloin suoraan kuvaan:
+     * avomerelle jäävät uloimmat viivat kaartuivat kahdeksankulmioiksi.
+     * Tämä muunnos on tarkka — kaksi 1D-parabelipyyhkäisyä, sarakkeet ja
+     * sitten rivit — ja yhtä nopea. Viiva kaartuu siis niin kuin ranta,
+     * ei niin kuin ruudukko.
+     */
     const ISO = 1e9;
-    etaisyys4 = new Float32Array(L4 * K4);
-    for (let j = 0; j < etaisyys4.length; j++) etaisyys4[j] = siisti[j] ? ISO : 0;
-    const A = 1; const B = 1.41421356;
-    for (let y = 0; y < K4; y++) {
-      for (let x = 0; x < L4; x++) {
-        const j = y * L4 + x; let m = etaisyys4[j];
-        if (m === 0) continue;
-        if (x > 0) m = Math.min(m, etaisyys4[j - 1] + A);
-        if (y > 0) m = Math.min(m, etaisyys4[j - L4] + A);
-        if (x > 0 && y > 0) m = Math.min(m, etaisyys4[j - L4 - 1] + B);
-        if (x < L4 - 1 && y > 0) m = Math.min(m, etaisyys4[j - L4 + 1] + B);
-        etaisyys4[j] = m;
+    const nMax = Math.max(L2, K2);
+    const kentta = new Float64Array(L2 * K2);
+    for (let j = 0; j < kentta.length; j++) kentta[j] = siisti[j] ? ISO : 0;
+    const f = new Float64Array(nMax); const dd = new Float64Array(nMax);
+    const vv2 = new Int32Array(nMax); const zz = new Float64Array(nMax + 1);
+    const edt1d = (n) => {
+      let k = 0; vv2[0] = 0; zz[0] = -1e20; zz[1] = 1e20;
+      for (let q = 1; q < n; q++) {
+        let sj = ((f[q] + q * q) - (f[vv2[k]] + vv2[k] * vv2[k]))
+          / (2 * q - 2 * vv2[k]);
+        while (sj <= zz[k]) {
+          k -= 1;
+          sj = ((f[q] + q * q) - (f[vv2[k]] + vv2[k] * vv2[k])) / (2 * q - 2 * vv2[k]);
+        }
+        k += 1; vv2[k] = q; zz[k] = sj; zz[k + 1] = 1e20;
+      }
+      k = 0;
+      for (let q = 0; q < n; q++) {
+        while (zz[k + 1] < q) k += 1;
+        dd[q] = (q - vv2[k]) * (q - vv2[k]) + f[vv2[k]];
+      }
+    };
+    for (let x = 0; x < L2; x++) {
+      for (let y = 0; y < K2; y++) f[y] = kentta[y * L2 + x];
+      edt1d(K2);
+      for (let y = 0; y < K2; y++) kentta[y * L2 + x] = dd[y];
+    }
+    etaisyys2 = new Float32Array(L2 * K2);
+    for (let y = 0; y < K2; y++) {
+      const p = y * L2;
+      for (let x = 0; x < L2; x++) f[x] = kentta[p + x];
+      edt1d(L2);
+      for (let x = 0; x < L2; x++) {
+        /* Neliöjuuri ja takaisin täysiksi pikseleiksi. */
+        etaisyys2[p + x] = dd[x] > 1e8 ? 1e8 : Math.sqrt(dd[x]) * J2;
       }
     }
-    for (let y = K4 - 1; y >= 0; y--) {
-      for (let x = L4 - 1; x >= 0; x--) {
-        const j = y * L4 + x; let m = etaisyys4[j];
-        if (x < L4 - 1) m = Math.min(m, etaisyys4[j + 1] + A);
-        if (y < K4 - 1) m = Math.min(m, etaisyys4[j + L4] + A);
-        if (x < L4 - 1 && y < K4 - 1) m = Math.min(m, etaisyys4[j + L4 + 1] + B);
-        if (x > 0 && y < K4 - 1) m = Math.min(m, etaisyys4[j + L4 - 1] + B);
-        etaisyys4[j] = m;
+  }
+  /* --------------------------------------------- lähimaan tiheyskenttä */
+  /*
+   * KUINKA ISON MAAN RANNALLA OLLAAN.
+   *
+   * Vesiviivoitus on rantaviivan etäisyyden funktio, eikä etäisyys
+   * tiedä mitään siitä, mikä ranta on kyseessä. Yhden pikselin luoto
+   * keskellä ulappaa sai siksi saman viisitoista rengasta kuin
+   * Peloponnesos, ja meri näytti lammikolta, johon on pudotettu kiviä.
+   * Kaivertaja ei tee niin: luodon ympärille tulee pari viivaa,
+   * mantereen rannalle koko vyö.
+   *
+   * Kentän arvo on maan osuus laatikossa, jonka säde on `TIHEYS_SADE`
+   * täyttä pikseliä: mantereen rannalla noin puolet, luodon rannalla
+   * prosentteja. Kenttä LUETAAN PIKSELIN LÄHIMMÄSTÄ RANTAPISTEESTÄ
+   * eikä pikselin omasta kohdasta (ks. pääsilmukka) — muuten luoto,
+   * joka sattuu olemaan lähellä mannerta, perisi mantereen vyön.
+   * Kenttä ei siirrä yhtäkään viivaa; se vain katkaisee viivaston
+   * aikaisemmin siellä, missä maata on vähän.
+   */
+  let tiheys2 = null;
+  if (resepti.vesiviivoitus && etaisyys2) {
+    const TIHEYS_SADE = 70;
+    const R = Math.max(1, Math.round(TIHEYS_SADE * s / J2));
+    const maa = new Float32Array(L2 * K2);
+    /* Maa = ei merta. Etäisyys 0 tarkoittaa maata (tai kuvan ulkopuolta). */
+    for (let j = 0; j < maa.length; j++) maa[j] = etaisyys2[j] === 0 ? 1 : 0;
+    const apu = new Float32Array(L2 * K2);
+    const n = 2 * R + 1;
+    for (let y = 0; y < K2; y++) {
+      const p = y * L2;
+      let summa = 0;
+      for (let k = -R; k <= R; k++) summa += maa[p + Math.max(0, Math.min(L2 - 1, k))];
+      for (let x = 0; x < L2; x++) {
+        apu[p + x] = summa / n;
+        summa += maa[p + Math.max(0, Math.min(L2 - 1, x + R + 1))]
+          - maa[p + Math.max(0, Math.min(L2 - 1, x - R))];
       }
     }
-    for (let j = 0; j < etaisyys4.length; j++) {
-      if (etaisyys4[j] > 1e8) etaisyys4[j] = 1e8;
-      etaisyys4[j] *= J4; /* takaisin täysiksi pikseleiksi */
+    tiheys2 = new Float32Array(L2 * K2);
+    for (let x = 0; x < L2; x++) {
+      let summa = 0;
+      for (let k = -R; k <= R; k++) summa += apu[Math.max(0, Math.min(K2 - 1, k)) * L2 + x];
+      for (let y = 0; y < K2; y++) {
+        tiheys2[y * L2 + x] = summa / n;
+        summa += apu[Math.max(0, Math.min(K2 - 1, y + R + 1)) * L2 + x]
+          - apu[Math.max(0, Math.min(K2 - 1, y - R)) * L2 + x];
+      }
     }
   }
 
-  /* ------------------------------ syvyysvyöhykkeet: keskisävy ja porrasrajat */
+  /** Bilineaarinen haku puolikkaasta kentästä täysillä koordinaateilla. */
+  const hae2 = (kentta, x, y) => {
+    const fx = Math.max(0, Math.min(L2 - 1.001, x / J2 - 0.5));
+    const fy = Math.max(0, Math.min(K2 - 1.001, y / J2 - 0.5));
+    const x0 = fx | 0; const y0 = fy | 0; const tx = fx - x0; const ty = fy - y0;
+    const i0 = y0 * L2 + x0; const i1 = i0 + L2;
+    return (kentta[i0] * (1 - tx) + kentta[i0 + 1] * tx) * (1 - ty)
+      + (kentta[i1] * (1 - tx) + kentta[i1 + 1] * tx) * ty;
+  };
+
+  /* ------------------------------------- syvyysvyöhykkeet: meren keskisävy */
   /*
-   * Kolme kenttää neljäsosatarkkuudella (ks. SYVYYS-reseptin selitys):
-   *   meriRef  meren keskiväri sävytyksen JÄLKEEN — se, mitä kohti
-   *            porrasaskeleet litistetään;
-   *   syvH4    DoG-erotus V - blur(V), jonka NOLLAKOHTA on portaan
-   *            kohdalla ja siten kaiverrusviivan paikka;
-   *   syvG4    saman erotuksen gradientti, jolla etäisyys nollakohtaan
-   *            muuttuu sävyyksiköistä pikseleiksi;
-   *   syvA4    alkuperäisen kentän gradientti = portaan jyrkkyys, jolla
-   *            portaat erotetaan meren omasta kohinasta.
+   * Yksi kenttä riittää: meren keskiväri sävytyksen JÄLKEEN — se, mitä
+   * kohti porrasaskeleet litistetään.
+   *
+   * Tässä oli aiemmin myös DoG-koneisto (V - blur V, sen gradientti ja
+   * portaan jyrkkyys), jolla porrasrajat piirrettiin takaisin
+   * kaiverrusviivoina. Omistaja hylkäsi sen 29.8.2026: viivoja tuli
+   * kolme neljä ja nekin niin haaleina, että *"syvyys ei näy oikein
+   * ollenkaan"*. Vika oli mekanismissa eikä säädössä — pohjan portaat
+   * ovat siellä, minne piirtomoottori ne sattui laskemaan, eivät siellä,
+   * mihin kaivertaja vetäisi viivansa. Vesiviivoitus piirretään nyt
+   * rantaviivan ETÄISYYSKENTÄSTÄ (ks. VESIVIIVOITUS), joka antaa niin
+   * monta samankeskistä viivaa kuin halutaan. Litistys jäi: renkaat
+   * eivät saa palata.
    */
   let meriRef = null;
-  let syvH4 = null; let syvG4 = null; let syvA4 = null;
   if (resepti.syvyys) {
     const sy0 = resepti.syvyys;
-    const tunnettu = new Uint8Array(L4 * K4);
-    const V = new Float32Array(L4 * K4);
     let sR = 0; let sG = 0; let sB = 0; let sN = 0;
-    for (let j = 0; j < V.length; j++) {
+    for (let j = 0; j < r4.length; j++) {
       const kr = Math.max(r4[j], g4[j], b4[j]) - Math.min(r4[j], g4[j], b4[j]);
       const Lv = lum(r4[j], g4[j], b4[j]);
-      const onMeri = kr < sy0.kromaVali[1] && a4[j] > 200 && Lv > 120;
-      tunnettu[j] = onMeri ? 1 : 0;
-      if (onMeri) { V[j] = Lv; sR += r4[j]; sG += g4[j]; sB += b4[j]; sN += 1; }
+      if (kr < sy0.kromaVali[1] && a4[j] > 200 && Lv > 120) {
+        sR += r4[j]; sG += g4[j]; sB += b4[j]; sN += 1;
+      }
     }
     /*
      * Meren keskiväri sävykäyrän läpi. Käyrä on affiini, ja meri jää
@@ -805,90 +999,6 @@ async function patinoiSelaimessa({
       ? [sR / sN * kk.kerroin + kk.nosto, sG / sN * kk.kerroin + kk.nosto,
         sB / sN * kk.kerroin + kk.nosto]
       : [200, 200, 200];
-    const meriRefL = sN ? lum(sR / sN, sG / sN, sB / sN) : 200;
-
-    /*
-     * MAA TÄYTETÄÄN MERELLÄ ennen sumennusta. Ilman tätä rantaviiva
-     * olisi kentän ylivoimaisesti jyrkin porras ja saisi oman
-     * kaiverrusviivansa juuri siihen, missä sitä ei haluta. Täyttö on
-     * diffuusio tunnetuista naapureista: rannikon oma sävy jatkuu
-     * maalle, joten uloin oikea porras löytyy vielä rannan tuntumasta.
-     */
-    {
-      const tila = Uint8Array.from(tunnettu);
-      for (let kierros = 0; kierros < 6; kierros++) {
-        const uusi = Uint8Array.from(tila);
-        for (let y = 0; y < K4; y++) {
-          for (let x = 0; x < L4; x++) {
-            const j = y * L4 + x;
-            if (tila[j]) continue;
-            let summa = 0; let n = 0;
-            for (let dy = -1; dy <= 1; dy++) {
-              for (let dx = -1; dx <= 1; dx++) {
-                const xx = x + dx; const yy = y + dy;
-                if (xx < 0 || yy < 0 || xx >= L4 || yy >= K4) continue;
-                const jj = yy * L4 + xx;
-                if (!tila[jj]) continue;
-                summa += V[jj]; n += 1;
-              }
-            }
-            if (n) { V[j] = summa / n; uusi[j] = 1; }
-          }
-        }
-        tila.set(uusi);
-      }
-      for (let j = 0; j < V.length; j++) if (!tila[j]) V[j] = meriRefL;
-    }
-
-    /** Erotteleva laatikkosumennus neljäsosakentälle, paikan päällä. */
-    const laatikko4 = (kentta, sade) => {
-      const n = 2 * sade + 1;
-      const apu = new Float32Array(kentta.length);
-      for (let y = 0; y < K4; y++) {
-        const p = y * L4;
-        let summa = 0;
-        for (let k = -sade; k <= sade; k++) summa += kentta[p + Math.max(0, Math.min(L4 - 1, k))];
-        for (let x = 0; x < L4; x++) {
-          apu[p + x] = summa / n;
-          summa += kentta[p + Math.max(0, Math.min(L4 - 1, x + sade + 1))]
-            - kentta[p + Math.max(0, Math.min(L4 - 1, x - sade))];
-        }
-      }
-      for (let x = 0; x < L4; x++) {
-        let summa = 0;
-        for (let k = -sade; k <= sade; k++) summa += apu[Math.max(0, Math.min(K4 - 1, k)) * L4 + x];
-        for (let y = 0; y < K4; y++) {
-          kentta[y * L4 + x] = summa / n;
-          summa += apu[Math.max(0, Math.min(K4 - 1, y + sade + 1)) * L4 + x]
-            - apu[Math.max(0, Math.min(K4 - 1, y - sade)) * L4 + x];
-        }
-      }
-    };
-    /** Keskeisdifferenssin itseisarvo neljäsosakentästä. */
-    const gradientti = (kentta) => {
-      const ulos = new Float32Array(kentta.length);
-      for (let y = 0; y < K4; y++) {
-        for (let x = 0; x < L4; x++) {
-          const j = y * L4 + x;
-          const gx = (kentta[x < L4 - 1 ? j + 1 : j] - kentta[x > 0 ? j - 1 : j]) / 2;
-          const gy = (kentta[y < K4 - 1 ? j + L4 : j] - kentta[y > 0 ? j - L4 : j]) / 2;
-          ulos[j] = Math.hypot(gx, gy);
-        }
-      }
-      return ulos;
-    };
-
-    /* Neljäsosakuva on jo keskiarvoistettu, mutta yksi lisäsumennus vie
-     * pohjan oman rakeen pois: muuten rae tuottaisi omia nollakohtiaan. */
-    laatikko4(V, 1);
-    syvA4 = gradientti(V);
-    laatikko4(syvA4, 1);
-    const B = Float32Array.from(V);
-    laatikko4(B, 3);
-    syvH4 = new Float32Array(L4 * K4);
-    for (let j = 0; j < syvH4.length; j++) syvH4[j] = V[j] - B[j];
-    syvG4 = gradientti(syvH4);
-    laatikko4(syvG4, 1);
   }
 
   /* ------------------------------------------ värilaatta kohdistusta varten */
@@ -968,7 +1078,7 @@ async function patinoiSelaimessa({
   const kohinaKlimppi = teeKohina(606061, 256);
   const kohinaIka = teeKohina(77003);
   const kohinaRoso = teeKohina(4242);
-  const kohinaKaiverrus = teeKohina(18730829);
+  const kohinaVesiviiva = teeKohina(18730829);
   const kohinaTaite = teeKohina(9191);
 
   /* ---------------------------------------------------------- pääsilmukka */
@@ -983,6 +1093,7 @@ async function patinoiSelaimessa({
   const ika = resepti.ikaantyminen;
   const rk = resepti.reunakertyma;
   const vv = resepti.vesiviivoitus;
+  const mr = resepti.maanraja;
   const ro = resepti.rosoisuus;
   const ko = resepti.kohdistus;
   const le = resepti.leviaminen;
@@ -1036,13 +1147,11 @@ async function patinoiSelaimessa({
       /*
        * Meren paino kolmesta ehdosta: matala kroma (meri), riittävä
        * luminanssi (ei mustetta) ja etäisyys rannasta (ei rantaviivan
-       * antialiasointia). Sama paino ohjaa alempana kaiverrusviivat,
-       * joten viiva ei voi syttyä sellaisen pikselin päälle, jota
-       * litistys ei koske.
+       * antialiasointia).
        */
       let syvW = 0;
       if (sy) {
-        const rantaEt = hae4(etaisyys4, x, y);
+        const rantaEt = hae2(etaisyys2, x, y);
         syvW = pehmene(sy.kromaVali[1], sy.kromaVali[0], kroma0)
           * pehmene(sy.lumVali[0], sy.lumVali[1], Lp)
           * pehmene(sy.rantaVali[0] * s, sy.rantaVali[1] * s, rantaEt);
@@ -1103,55 +1212,81 @@ async function patinoiSelaimessa({
         }
       }
 
-      /* --- 3b. syvyysvyöhykkeiden kaiverrusviivat --- */
+      /* --- 3b. maanrajojen tummennus --- */
       /*
-       * Viiva on siellä, missä DoG-erotus leikkaa nollan. Etäisyys
-       * nollakohtaan on |h| / |grad h| neljäsosapikseleinä, ja kerrottuna
-       * J4:llä se on täysiä pikseleitä — viivan leveys tulee siis
-       * PIKSELEISTÄ eikä portaan korkeudesta, joten hento ja jyrkkä
-       * porras saavat yhtä ohuen viivan.
+       * Naapurien ääriviivat ovat pohjakuvan tummin muste (ks.
+       * MAANRAJA); pelkkä luminanssiportti erottaa ne nimistä ja
+       * rantaviivasta. Tummennus on kertova ja koskee vain viivan
+       * ydintä, joten viiva ei myöskään levene.
        */
-      if (sy && sy.viivaVoima > 0 && syvW > 0.02) {
-        const et = hae4(etaisyys4, x, y);
-        if (et > sy.aloitus * s * 0.5 && et < 1e7) {
-          /* Käsivaraheilunta: näytepistettä siirretään, jolloin viiva
-           * huojuu geometrisesti eikä portaan korkeuden mukaan. */
-          const hx = x / (sy.huojuntaSkaala * s); const hy = y / (sy.huojuntaSkaala * s);
-          const wx = (kohinaKaiverrus(hx, hy) - 0.5) * sy.huojunta * s;
-          const wy = (kohinaKaiverrus(hx + 137.3, hy + 71.9) - 0.5) * sy.huojunta * s;
-          const h = hae4(syvH4, x + wx, y + wy);
-          const gh = hae4(syvG4, x + wx, y + wy);
-          if (gh > 0.02) {
-            const nollaan = Math.abs(h) / gh * J4;
-            const viiva = pehmene(sy.viivaLeveys * s, 0, nollaan);
-            if (viiva > 0.01) {
-              const portti = pehmene(sy.kynnys[0], sy.kynnys[1],
-                hae4(syvA4, x + wx, y + wy));
-              const haip = Math.exp(-Math.max(0, et - sy.aloitus * s) / (sy.haipyma * s));
-              const alku = pehmene(sy.aloitus * s * 0.5, sy.aloitus * s, et);
-              const roso = Math.max(0, 1 + sy.roso * 2
-                * (kohinaKaiverrus(x / (sy.rosoSkaala * s) + 900.5,
-                  y / (sy.rosoSkaala * s) + 401.5) - 0.5));
-              kerroin -= sy.viivaVoima * viiva * portti * haip * alku * roso * syvW;
-            }
-          }
-        }
+      if (mr) {
+        const ydin = pehmene(mr.lumVali[1], mr.lumVali[0], Lp);
+        if (ydin > 0.01) kerroin -= mr.voima * ydin;
       }
 
       /* --- 4. rannikon vesiviivoitus --- */
+      /*
+       * Viivan paikka luetaan rantaetäisyydestä: viivat ovat
+       * samankeskisiä rantaviivan kanssa, koska etäisyyskenttä on.
+       * Viivaväli kasvaa lineaarisesti ulospäin, joten viivanumero
+       * saadaan etäisyydestä toisen asteen yhtälöllä (ks.
+       * VESIVIIVOITUS).
+       */
       if (vv) {
-        const et = hae4(etaisyys4, x, y);
-        if (et > 0.5 && et < 1e7) {
-          const meriW = pehmene(vv.kromaVali[1], vv.kromaVali[0], kroma0);
-          if (meriW > 0.01) {
-            const alku = vv.aloitus * s;
-            const vali = vv.vali * s;
-            const nro = (et - alku) / vali;
-            if (nro > -0.5 && nro < vv.viivoja) {
-              const vaihe = Math.abs(nro - Math.round(nro));
-              const viiva = pehmene(vv.leveys / 2, 0, vaihe);
-              const vaimennus = Math.max(0, 1 - Math.max(0, Math.round(nro)) / vv.viivoja) ** 1.3;
-              kerroin -= vv.voima * viiva * vaimennus * meriW;
+        const meriW = pehmene(vv.kromaVali[1], vv.kromaVali[0], kroma0)
+          * pehmene(vv.lumVali[0], vv.lumVali[1], Lp);
+        if (meriW > 0.01) {
+          /* Käsivaraheilunta kolmella oktaavilla: pisin aalto siirtää
+           * koko viivastoa yhtenä (kaivertajan käsi), lyhimmät mutkittavat
+           * yksittäistä viivaa. Heilunta osuu NÄYTEPISTEESEEN, joten
+           * viivat huojuvat rikkomatta samankeskisyyttään: viereiset
+           * pikselit saavat lähes saman siirtymän, eivätkä viivat siksi
+           * mene ristiin vaikka siirtymä on viivaväliä suurempi. */
+          const hx = x / (vv.huojuntaSkaala * s); const hy = y / (vv.huojuntaSkaala * s);
+          const wx = (fbm(kohinaVesiviiva, hx, hy, vv.huojuntaOktaavit) - 0.5)
+            * vv.huojunta * s;
+          const wy = (fbm(kohinaVesiviiva, hx + 137.3, hy + 71.9, vv.huojuntaOktaavit) - 0.5)
+            * vv.huojunta * s;
+          const et = hae2(etaisyys2, x + wx, y + wy);
+          const e = et - vv.aloitus * s;
+          const v0 = vv.vali * s; const kasvu = vv.kasvu * s;
+          const juuri = (v0 - kasvu / 2) ** 2 + 2 * kasvu * e;
+          if (e > -v0 && juuri > 0 && et < 1e7) {
+            /* nro = viivanumero murtolukuna; kokonaisluku osuu viivalle */
+            const nro = (Math.sqrt(juuri) - (v0 - kasvu / 2)) / kasvu;
+            const k = Math.round(nro);
+            if (k >= 0 && k < vv.viivoja) {
+              /* Paikallinen viivaväli kasvaa ulospäin, joten murto-osa
+               * muunnetaan pikseleiksi sillä välillä, jolla ollaan —
+               * viivan PAKSUUS pysyy samana, vain tiheys harvenee. */
+              const vali = v0 + k * kasvu;
+              const poikkeama = Math.abs(nro - k) * vali;
+              const viiva = pehmene(vv.paksuus * s, vv.paksuus * s * 0.3, poikkeama);
+              if (viiva > 0.01) {
+                /* Uloin viiva häipyy: vyö loppuu avomerelle. Vyön pituus
+                 * suhteutetaan lähimaan kokoon (ks. tiheyskenttä), jotta
+                 * pikkuluoto saa parin renkaan halon eikä mantereen vyötä. */
+                /* Lähin rantapiste: etäisyyskentän gradientti osoittaa
+                 * merelle päin, joten askel gradienttia vastaan etäisyyden
+                 * verran osuu rantaan. */
+                let tih = 1;
+                if (tiheys2) {
+                  const gx = hae2(etaisyys2, x + 2, y) - hae2(etaisyys2, x - 2, y);
+                  const gy = hae2(etaisyys2, x, y + 2) - hae2(etaisyys2, x, y - 2);
+                  const gl = Math.hypot(gx, gy);
+                  tih = gl > 0.05
+                    ? hae2(tiheys2, x - (gx / gl) * et, y - (gy / gl) * et)
+                    : hae2(tiheys2, x, y);
+                }
+                const maara = vv.viivoja * (vv.lyhinOsuus
+                  + (1 - vv.lyhinOsuus) * pehmene(vv.tiheysVali[0], vv.tiheysVali[1], tih));
+                const haip = Math.max(0, 1 - k / maara) ** vv.haipyma;
+                /* Voiman vaihtelu pitkin viivaa: muste ei kanna tasaisesti. */
+                const roso = Math.max(0, 1 + vv.roso * 2
+                  * (kohinaVesiviiva(x / (vv.rosoSkaala * s) + 900.5,
+                    y / (vv.rosoSkaala * s) + 401.5) - 0.5));
+                kerroin -= vv.voima * viiva * haip * roso * meriW;
+              }
             }
           }
         }
