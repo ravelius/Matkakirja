@@ -1059,7 +1059,16 @@ export const RAAMATTU = {
           + 'kohdan "kaymattomat maat ilman dataa (ei reitteja, '
           + 'kaupunkeja, kohteita)" kokonaan. Fokus = pelkka '
           + 'liikerajaus. Kehittajan maailma-napin nakymasta tulee '
-          + 'pelin oletus; merkkien nakyvyysgatet poistuvat.',
+          + 'pelin oletus; merkkien nakyvyysgatet poistuvat. '
+          + 'ATLASKEHYS (omistaja 29.8.2026 ilta): kaukaisimmalla '
+          + 'zoomtasolla kartta makaa paperilla - kermanvalkoinen '
+          + 'paperimarginaali reunoilla, ohut kaksoisviivakehys '
+          + 'kulmakoristein, kartussi "MATKAKIRJA - Unohdettu aarre" '
+          + 'kaiverrustyylilla, painajanrivi aikakauden asussa '
+          + '("Painettu Matkakirjan kustantamossa MDCCCLXXIII" + '
+          + 'huomaamaton (c) Matkakirja), kompassiruusu tyhjalle '
+          + 'merialueelle, mittakaavajana. Poltetaan uloimman tason '
+          + 'laattoihin; liikerajaus paattyy paperiin.',
         'LOISTOAIKAKUVAT PUHTAASTI OMASSA AJASSAAN (omistaja 29.8.2026 '
           + 'aamu, Parthenonin v3-havainto: "ei ole sotkettu nykyaikaa ja '
           + 'loistoaikaa keskenaan ja se sopii minusta paremmin... jatkossa '
