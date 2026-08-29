@@ -48,6 +48,13 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1324: BITTIKARTTA VAIHE 1 - pohjacanvas: WebKitin pahin kehys 1780->885 ms, purku 1105->73 ms. RATKAISEVA LAITETESTI: edestakainen liike irrottamatta (kaannostokkays) + yleistuntuma.',
+  'v1323: KORTIT PAALLA - koko annostelukulku pelattavissa: taky + visa (+50 puntaa) -> oppitunti -> kohtaaminen/sahke. Kay Sofia tai Madrid lapi.',
+  'v1322: Livia mukaan aloitusvalinnassa (5 kuplaa) + ensisaapumisen tuurausparjastus + mannerivihje. Aloita uusi peli.',
+  'v1321: Musiikkipaletti: uusi kysymysmusiikki, aarrepaljastus, paaaarre-fanfaari, pohja-ambient. Vertaa vanhaan visamusiikkiin.',
+  'v1320: SAHKETEHTAVAT Sofia + Tukholma: pollon STOP-sahke, sahkelomake, Livian lento, aarremerkinta. Kokeile Ateena -> Sofia.',
+  'v1313-v1319: kuvaerat - kuusi korjattua ihmekuvaa (+5 puhdasta omaa aikaa v1317), aallon 2 nostokuvat, takysyvennysten kuvat, Wienin karttaliite (v1314).',
+  'v1312: Aallon 2 loistoaikakuvat (Sutton Hoo, Szeged, Pula, Karlstejn).',
   'v1310: Prahan merkinnan anakronismi korjattu: ajurin kyyti, ei raitiovaunua (1873).',
   'v1309: AALTO 2 - Lontoo, Budapest, Dubrovnik ja Praha taysia fokuskaupunkeja (matkakirja isoisan aanella, Livian kupla, takyt+visat, kohtaaminen, lehtitehtavat, maan takynosto). Prahan kohtaaminen on isoisan pulma. Kay lapi yksi naista.',
   'v1308: C-sarjan 10 loistoaikakuvaa aallon 1 takyihin (Altamira, Lustig, Kopenick ym.). Avaa Madridin tai Berliinin takypiste.',
