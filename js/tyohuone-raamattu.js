@@ -1042,7 +1042,16 @@ export const RAAMATTU = {
           + 'Yksinkertaistaa pelitilakerroksen: jaljelle jaavat vain '
           + 'laattavarit, elavat merkit, nappula ja vinjetointi. '
           + 'Toteutus viimeistaan pyramidin yhteydessa; saa poistaa '
-          + 'aiemmin jos kevyt.',
+          + 'aiemmin jos kevyt. TASMENNYS (omistaja 29.8.2026 ilta: '
+          + '"kaikki reittipisteet ja kaupungit yms voidaan piirtaa '
+          + 'suoraan yhteen karttaan, eika tarvita muita kikkoja kuin '
+          + 'rajoitettu liikkuvuus"): KAIKKI PYSYVA nakyy alusta asti '
+          + 'kaikkialla - kaupungit, reittipisteet, kohteet, nimet '
+          + 'poltetaan laattoihin koko maailmasta. Kumoaa 24.8. KARTTA-'
+          + 'kohdan "kaymattomat maat ilman dataa (ei reitteja, '
+          + 'kaupunkeja, kohteita)" kokonaan. Fokus = pelkka '
+          + 'liikerajaus. Kehittajan maailma-napin nakymasta tulee '
+          + 'pelin oletus; merkkien nakyvyysgatet poistuvat.',
         'LOISTOAIKAKUVAT PUHTAASTI OMASSA AJASSAAN (omistaja 29.8.2026 '
           + 'aamu, Parthenonin v3-havainto: "ei ole sotkettu nykyaikaa ja '
           + 'loistoaikaa keskenaan ja se sopii minusta paremmin... jatkossa '
