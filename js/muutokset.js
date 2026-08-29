@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1317, teksti: 'Viisi ihmekuvaa puhtaaseen omaan aikaan' },
   { v: 1316, teksti: 'Livian mietintamuodot odotushetkiin' },
   { v: 1315, teksti: 'Merkkikerrosten nakymarajaus ja asettelukuri' },
   { v: 1314, teksti: 'Isoisan karttaliite: Wienin pilotti' },
