@@ -501,3 +501,62 @@ Playwrightin ohjelmistorenderöijällä.
 > tasoon, ei vapaaseen kertoimeen: mittakaavoja on kourallinen, ja
 > sama taso palaa uudestaan. Portaikon pohja fokusnäkymässä on maan
 > ikkuna ruudulle.
+
+## Atlaskehys maailman yleislehteen (29.8.2026, PR #1770)
+
+Omistajan kysymys maailman yleiskuvasta — *"ei näy sitä kartan
+reunapaperia ja lisämerkintöjä?"* — on toteutettu. Lehti on ämpärissä
+patinoituna ja pelipuolen pari odottaa mergeä PR:ssä #1770 (v1333).
+
+**Mitä lehteen poltettiin.** Kermanvalkoinen paperimarginaali laudan
+ylä- ja alapuolelle, ohut kaksoisviivakehys kartta-alan reunassa,
+kartussi MATKAKIRJA / *Unohdettu aarre* kaiverrustyylisenä
+kulmakoristein, mittakaavajana ja painajanrivi *"Painettu Matkakirjan
+kustantamossa MDCCCLXXIII"* + huomaamaton © Matkakirja
+alamarginaaliin, sekä kompassiruusu eteläiselle Tyynellemerelle kartan
+sisään.
+
+**Yksi poikkeama tilauksesta, ja se on rakenteellinen.** Tilaus sanoi
+"paperimarginaali reunoilla". Marginaali on nyt VAIN ylhäällä ja
+alhaalla. Lauta on kiertävä: peli toistaa kartan laudan leveyden
+päässä (js/ui.js kiertoKohdat) ja rajaa loitonnuksen niin, ettei sama
+paikka näy kahdesti (js/kartta.js rajaaSkaala) — vaakasuunnassa laudan
+reunaa ei ole missään zoomissa, ja pystysuora marginaali piirtyisi
+kermaisena kaistaleena keskelle Tyyntämerta. Samasta syystä lehden
+reunahäivytys on alusta asti ollut vain ylä- ja alareunassa. Siksi myös
+kulmakoristeet ovat kartussin kulmissa: kehyksellä itsellään ei
+kiertävällä laudalla ole kulmia. Jos omistaja haluaa kehyksen myös
+sivuille, se tarkoittaa laudan kierron katkaisemista uloimmalla
+tasolla — erillinen päätös, ei tämän erän asia.
+
+**Liikerajaus ei tarvinnut muutosta.** Mitattu selaimessa koko lauta
+ruudulle ajettuna: 1920 x 1080 näyttää laudan ylä- ja alapuolelta 371
+lautayksikköä (198 kuvapikseliä), 1180 x 820 koko marginaalin ja arkin
+reunan, puhelin moninkertaisesti. Kaikki kalusteet mahtuvat 198
+kuvapikselin sisään reunaviivasta, joten ne näkyvät jo nykyisillä
+zoomirajoilla — ja katoavat itsestään lähemmäs zoomattaessa.
+
+**Kaksi asiaa Raamattuun / patinan omistajalle:**
+
+1. Marginaalin kerma on lämpimämpi kuin tilauksen rgb(245,237,214).
+   Patinapassin merimaski (tools/patina.mjs VESIVIIVOITUS ja SYVYYS,
+   `kromaVali: [34, 44]`) lukee mereksi jokaisen vaalean pinnan, jonka
+   kroma jää alle 44:n. Kerman kroma 31 tarkoitti, että passi veti
+   marginaaliin rantaviivat kartussin kirjainten ja mittajanan
+   palkkien ympärille. Kroma 48 nostaa marginaalin maskin yläpuolelle.
+   Sama koskee kartussin laikkua ja mittajanan vaaleita ruutuja.
+   tools/patina.mjs itseään ei koskettu — mutta jos joku joskus
+   säätää kromaVali-arvoja, tämä kytkös on syytä muistaa.
+2. vie-fokus.yml jätettiin AJAMATTA tarkoituksella. Se synkkaa koko
+   julisteet/fokus-kansion patinoimattomina pohjina, ja tuore checkout
+   antaa jokaiselle tiedostolle uuden aikaleiman — ajo palauttaisi 134
+   muuta lehteä patinoimattomiksi (työnkulun oma varoitus). patinoi-
+   fokus.yml lukee pohjat suoraan vientihaaralta, joten se riittää
+   yksin: ajo 33276439113 (maat: MAAILMA) meni läpi kahdessa
+   minuutissa ja R2:sta ladattu MAAILMA.webp on 6400 x 3351 kehyksineen.
+
+**Havainto ohimennen, ei korjattu:** tools/savuke-atlas.mjs kaatuu
+tässä konttiympäristössä myös muuttamattomasta origin/mainista
+(`loitonna`, TypeError undefined '.x'; kohdemaan lehti ei ilmesty
+kartalle). Ei siis tästä erästä — mutta savuke ei tällä hetkellä
+vartioi mitään.

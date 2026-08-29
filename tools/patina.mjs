@@ -4,7 +4,7 @@
  *   node tools/patina.mjs <pohjakuva> <ulos-kansio> \
  *        [--taso hillitty|keskitaso|taysi|kaikki] [--tunnus GRC] \
  *        [--leveys 6400] [--laatu 0.9] [--muoto jpeg|webp|png] \
- *        [--vertailu] [--pala x,y,w,h]
+ *        [--vertailu] [--pala x,y,w,h] [--bbox x,y,w,h]
  *
  * Työkalu EI piirrä karttaa. Se ottaa valmiin lehden
  * (tools/tee-fokuskartta.mjs tuottama GRC.webp tai vastaava) ja lisää
@@ -77,6 +77,46 @@
  * koska koko putki tekee jo niin (tools/savyta-miniatyyrit.mjs,
  * tools/tee-fokuskartta.mjs) eikä repossa ole natiivikirjastoja
  * (sharp, canvas) eikä asennusvaihetta.
+ *
+ * === LEHTI EI OLE SIVU VAAN PALA MAAILMAA ===
+ *
+ * Maalehdet ovat laudan päällekkäisiä paloja: keskizoomissa niitä on
+ * monta vierekkäin, ja avomeri jatkuu lehdestä toiseen. Siksi mikään
+ * patinan efekti ei saa olla LEHTIKOHTAINEN silloin, kun sen tulos
+ * näkyy avomerellä. Omistajan havainto 29.8.2026: *"meren päällä
+ * outoja viivoja — onko kartta yhdistetty paloista joissa hieman eri
+ * sävyt?"* Havainto oli kirjaimellisesti oikea molemmilta osiltaan:
+ * viivoja oli, ja sävyt erosivat. Mitattuna (ESP, FRA, GBR, ämpärin
+ * lehdet ?v=4, ja samat lehdet pohjina vientihaaralta):
+ *
+ *  - VIIVAT: vesiviivoitus piirsi jokaisen lehden ympäri
+ *    suorakulmaisen vyön rinnakkaisia viivoja, koska meren tunnistus
+ *    luki lehden läpinäkyvän vuotoreunan MAAKSI ja etäisyyskenttä sai
+ *    siitä "rannan" (ks. meriParam-lohkon alfakommentti). Pohjissa
+ *    viivoja ei ole lainkaan: ne syntyivät vasta tässä passissa;
+ *  - jokainen lehti tummeni keskeltä reunaan 10-12 sävyaskelta
+ *    (IKAANTYMISEN `reunapaino`, säteittäinen kuten vinjetti). Vieretysten
+ *    ladottuna se piirsi jokaisen lehden ympärille tumman kehyksen:
+ *    juuri ne "oudot viivat";
+ *  - saman maailmankoordinaatin avomeri erosi lehtien välillä 1,1-2,4
+ *    askelta, vaikka POHJISSA ero oli 0,6-1,1 — patina siis kasvatti
+ *    eroa. Syy oli SYVYYS-passin litistys, joka veti meren kohti
+ *    LEHDEN OMAA keskisävyä; 23 lehden otoksessa se vaihteli välillä
+ *    L=199,9 (BRA) ... 211,2 (NLD);
+ *  - kohinat (kuitu, rae, klimppi, vesiviivan huojunta) siemennettiin
+ *    lehden omasta pikselikoordinaatista, joten jokainen lehti sai
+ *    TÄSMÄLLEEN saman paperikuvion samaan kohtaan.
+ *
+ * Korjaus on nelijakoinen ja se on tässä tiedostossa neljässä
+ * paikassa: meren maskin alfaehto (poistettu), `IKAANTYMINEN.reunapaino`
+ * (0), `SYVYYS.tavoite` (kiinteä globaali meren sävy) ja
+ * `maailma`-parametri (kohinoiden faasi lehden bbox:sta). Kaikki neljä
+ * on pakko pitää yhdessä: yhden palauttaminen tuo saumat takaisin.
+ *
+ * Mitattuna korjatulla reseptillä samoista pohjista (keskitaso, laatu
+ * 0,8): saman maailmankoordinaatin avomeren ero ESP-FRA 1,13 -> 0,16 ja
+ * FRA-GBR 2,43 -> 0,16 sävyaskelta (mediaani 0,00 molemmissa), ja
+ * lehden sisäinen keskeltä reunaan -muutos 10-12 -> alle 1 askel.
  */
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { basename, extname, resolve } from 'node:path';
@@ -147,11 +187,22 @@ const SAVYT = {
  *
  * === MITÄ TÄSSÄ TEHDÄÄN ===
  *
- *  1. LITISTYS. Jokainen meripikseli vedetään kohti meren omaa
- *     keskisävyä. `litistys` on se osuus porrasaskeleesta, joka jää
+ *  1. LITISTYS. Jokainen meripikseli vedetään kohti KIINTEÄÄ GLOBAALIA
+ *     meren sävyä. `litistys` on se osuus porrasaskeleesta, joka jää
  *     jäljelle: 0,2 tarkoittaa, että seitsemän yksikön hyppy kutistuu
  *     puoleentoista. Ei nollaan — hento vihje syvyydestä kuuluu
  *     karttaan, banding ei.
+ *
+ *     TAVOITESÄVY ON GLOBAALI EIKÄ LEHTIKOHTAINEN. Aiemmin tässä
+ *     laskettiin lehden oman meren keskiväri ja vedettiin kohti sitä.
+ *     Yhtä lehteä katsottaessa se on oikein, mutta lehdet ovat laudan
+ *     paloja: 23 pohjalehden otoksessa oman meren keskisävy vaihteli
+ *     L=199,9 (BRA, syvää valtamerta) ... 211,2 (NLD, pelkkää matalaa
+ *     Pohjanmerta), eli litistys vei naapurilehtien avomeren ERI
+ *     sävyyn ja sauma näkyi. Kiinteä tavoite on saman otoksen
+ *     keskiarvo, ja koska litistys vie 80 % matkasta, kaikkien lehtien
+ *     avomeri asettuu samaan sävyyn — 20 % paikallista syvyysvihjettä
+ *     jää jäljelle kuten ennenkin.
  *
  *  2. TILALLE VESIVIIVOITUS. Sävyporras ei ole se, mistä 1800-luvun
  *     kaivertaja piirsi syvyyden — hän veti rantaviivan myötäisiä
@@ -171,6 +222,20 @@ const SAVYT = {
 const SYVYYS = {
   /* Osuus porrasaskeleesta, joka jää jäljelle (0 = tasainen meri). */
   litistys: 0.20,
+  /*
+   * GLOBAALI MEREN TAVOITESÄVY pohjakuvan sävyssä, ENNEN sävykäyrää —
+   * käyrä ajetaan sen yli samalla kaavalla kuin meripikselille, jotta
+   * tavoite pysyy oikeassa paikassa myös käyrää säädettäessä.
+   *
+   * Mitattu 29.8.2026 tästä tiedostosta kopioidulla logiikalla
+   * (neljäsosakenttä, muste pois, sama meriportti) 23 pohjalehdestä:
+   * ESP FRA GBR ITA PRT IRL DZA MAR NLD DNK GRC NOR ISL JPN AUS FJI
+   * USA BRA ZAF IND CHN RUS TUR. Lehtien keskiarvo on
+   * rgb(210,6 / 203,1 / 180,1), L=202,7; hajonta L=199,9 ... 211,2.
+   * Pyöristetty kokonaislukuihin: yhden yksikön tarkkuus riittää, kun
+   * litistyksen jälkeen jäljelle jää 20 % paikallista vaihtelua.
+   */
+  tavoite: [211, 203, 180],
   /* Meren kromaraja [täysi meri, ei enää meri] — sama akseli kuin
    * vesiviivoituksessa, mitattu pohjakuvasta sävytyksen jälkeen. */
   kromaVali: [34, 44],
@@ -322,11 +387,37 @@ const PASTELLI_TAYSI = {
  * Matalataajuinen kohina, joka tummentaa ja lämmittää laikuittain.
  * `lampo` kertoo, kuinka paljon enemmän sininen kanava tummuu kuin
  * punainen: ikääntyminen on kellastumista, ei harmaantumista.
+ *
+ * LAIKKU ELÄÄ MAAILMANKOORDINAATEISSA, EI LEHDEN OMISSA. Laikun
+ * mittakaava (`skaala`) on niin matala taajuus, että lehden mittainen
+ * pala näkyy kokonaisena: jos kenttä siemennetään lehden omasta
+ * kulmasta, naapurilehti saa samaan maailmankohtaan eri laikun ja
+ * lehtien rajalle syntyy sävyhyppy. Maailmankoordinaateista johdettuna
+ * kaksi lehteä näkee saman kohdan samanlaisena ja laikku jatkuu
+ * lehdestä toiseen — myös silloin, kun lehdet ovat eri mittakaavassa
+ * (pieni lehti on vain suurennos samasta laikusta).
  */
 const IKAANTYMINEN = {
   voima: 0.075, skaala: 2.6, oktaavit: 3, lampo: 0.55,
-  /* Reunat vanhenevat enemmän kuin keskusta (käsittely, valo, pöly). */
-  reunapaino: 0.5,
+  /*
+   * REUNOJEN TUMMENNUS — NOLLA MAALEHDILLÄ.
+   *
+   * Ajatus oli oikea yksittäiselle sivulle: reunat vanhenevat enemmän
+   * kuin keskusta (käsittely, valo, pöly). Maalehti ei kuitenkaan ole
+   * sivu vaan laudan pala, ja arvolla 0,5 jokainen lehti tummeni
+   * keskeltä reunaan MITATUSTI 10-12 sävyaskelta (ESP 201,7 -> 190,8;
+   * FRA 203,8 -> 193,8; GBR 206,2 -> 194,1). Vieretysten ladottuna
+   * lehden reuna (tumma) osui naapurin keskustaan (vaalea), ja meren
+   * yli piirtyi suorakulmainen ruudukko — omistajan "oudot viivat".
+   * Rajauksen sisällä näkyvä osa kattaa säteestä noin 0,7, eli sauman
+   * yli hyppy oli silti noin viisi askelta.
+   *
+   * Kenttä jätetään paikalleen nollattuna: MAAILMA-yleislehti on aito
+   * yksittäinen sivu, jolla säteittäinen vanheneminen on perusteltua,
+   * ja sille voi antaa oman reseptin ilman että koodia kaivetaan esiin.
+   * Maalehdille arvo on 0 eikä siitä neuvotella — sauma on virhe.
+   */
+  reunapaino: 0,
 };
 
 /*
@@ -551,7 +642,17 @@ const TAITTEET = {
   huojunta: 6,
 };
 
-/* Vinjetointi: reunat tummenevat ja lämpenevät. */
+/*
+ * VINJETOINTI — POIS MAALEHDILTÄ (reunat tummenevat ja lämpenevät).
+ *
+ * Sama rakenteellinen virhe kuin IKAANTYMISEN reunapainossa, vain
+ * voimakkaampana: 0,1 tummentaa lehden kulman kymmenisen prosenttia.
+ * Yksittäisellä vedoksella se on kaunis, laudan palassa se on kehys,
+ * ja vieretysten ladottuna kehyksistä tulee ruudukko meren päälle.
+ * Siksi `taysi`-reseptin kenttä on nyt `null`. Vakio jätetään tähän
+ * MAAILMA-yleislehteä varten: se on ainoa lehti, jolla on oikeat
+ * reunat.
+ */
 const VINJETTI = { voima: 0.1, eksponentti: 2.4, lampo: 0.4 };
 
 /*
@@ -611,7 +712,9 @@ export const RESEPTIT = {
     kohdistus: KOHDISTUS,
     leviaminen: LEVIAMINEN,
     taitteet: false,
-    vinjetti: VINJETTI,
+    /* Ks. VINJETTI: maalehti on laudan pala, ei sivu — reunatummennus
+     * piirtää sauman. Arvoksi VINJETTI vain yksittäiselle lehdelle. */
+    vinjetti: null,
   },
 };
 
@@ -638,7 +741,7 @@ export const VERTAILUPALA = {
  * sisällä ja kaikki parametrit tulevat argumenttina.
  */
 async function patinoiSelaimessa({
-  b64, tyyppi, resepti, leveys, muoto, laatu, tausta,
+  b64, tyyppi, resepti, leveys, muoto, laatu, tausta, maailma,
 }) {
   /* --------------------------------------------------------- apurit */
   const mulberry32 = (a) => function satunnainen() {
@@ -703,6 +806,48 @@ async function patinoiSelaimessa({
 
   const lum = (r, gg, b) => 0.299 * r + 0.587 * gg + 0.114 * b;
 
+  /* ------------------------------------------------- maailmankoordinaatit */
+  /*
+   * KOHINAN FAASI TULEE LAUDALTA, EI LEHDEN KULMASTA.
+   *
+   * `maailma` on lehden bbox laudan koordinaateissa (julisteet/fokus/
+   * <ISO>.json, kenttä `bbox`). Ilman sitä kaikki menee kuten ennenkin,
+   * lehden omasta kulmasta — yksittäistä koekuvaa patinoidessa se on
+   * juuri oikein.
+   *
+   * KAKSI ERI MUUNNOSTA, KOSKA EFEKTEJÄ ON KAHTA LAJIA:
+   *
+   *  1. PAPERI on lehden oma esine. Kuidun, rakeen ja klimpin on
+   *     pysyttävä samankokoisena joka lehdellä, tai pikkulehdellä (NLD:
+   *     21,6 px laudan yksikköä kohti) syy katoaisi alle pikselin ja
+   *     isolla (DZA: 3,4 px/yksikkö) muuttuisi klimpeiksi. Näille
+   *     annetaan siis vain FAASISIIRTO (`faasiX/faasiY`): mittakaava
+   *     säilyy, mutta jokainen lehti nappaa kohinataulusta eri kohdan
+   *     eikä sama paperikuvio toistu 135 kertaa laudan yli.
+   *
+   *  2. IKÄÄNTYMISEN LAIKKU on maailman ominaisuus: se on niin matalaa
+   *     taajuutta, että lehden mittainen pala näkyy kokonaisena, ja
+   *     naapurin eri laikku näkyisi sävyhyppynä rajalla. Sille annetaan
+   *     KOKO MUUNNOS (`maailmaX/maailmaY`) eli sekä faasi että
+   *     mittakaava laudalta: sama maailmankohta on kummallakin lehdellä
+   *     saman laikun sisällä.
+   *
+   * `VIITE_PX` sitoo laudan yksikön pikseleihin: 6,4 px yksikköä kohti
+   * on lehti, joka kattaa 1000 laudan yksikköä 6400 pikselillä (ESP,
+   * FRA, GBR, ITA ovat 956-1449). Sillä maailmaan sidotut mitat
+   * pysyvät samoina kuin ennen muutosta tyypillisellä lehdellä.
+   */
+  const mk = (maailma && maailma.w > 0 && maailma.h > 0) ? maailma : null;
+  const VIITE_PX = 6.4;
+  /* Lehden vasen yläkulma TÄMÄN lehden pikseleinä: yhtenäinen faasi
+   * yli laudan aina, kun naapureilla on sama mittakaava. */
+  const faasiX = mk ? mk.x * (L / mk.w) : 0;
+  const faasiY = mk ? mk.y * (K / mk.h) : 0;
+  /* Laudalle sidottu koordinaatti 6400 px:n lehden pikseliyksikössä.
+   * Ilman bbox:ia palautuu lehden omaksi koordinaatiksi (x / s). */
+  const maailmaX = (x) => (mk ? (mk.x + x * (mk.w / L)) * VIITE_PX : x / s);
+  const maailmaY = (y) => (mk ? (mk.y + y * (mk.h / K)) * VIITE_PX : y / s);
+
   /* ------------------------------------------------- pienennetyt kentät */
   /*
    * Neljäsosakuva (meri ja kohdistus) ja kahdeksasosakuva (reunat).
@@ -713,7 +858,7 @@ async function patinoiSelaimessa({
   const J4 = 4;
   const L4 = Math.ceil(L / J4); const K4 = Math.ceil(K / J4);
   const r4 = new Float32Array(L4 * K4); const g4 = new Float32Array(L4 * K4);
-  const b4 = new Float32Array(L4 * K4); const a4 = new Float32Array(L4 * K4);
+  const b4 = new Float32Array(L4 * K4);
   {
     const n4 = new Float32Array(L4 * K4);
     for (let y = 0; y < K; y++) {
@@ -721,13 +866,11 @@ async function patinoiSelaimessa({
       for (let x = 0; x < L; x++) {
         const i = (y * L + x) * 4;
         const j = ry * L4 + ((x / J4) | 0);
-        a4[j] += d[i + 3];
         if (lum(d[i], d[i + 1], d[i + 2]) < 150) continue;
         r4[j] += d[i]; g4[j] += d[i + 1]; b4[j] += d[i + 2]; n4[j] += 1;
       }
     }
     for (let j = 0; j < r4.length; j++) {
-      a4[j] /= (J4 * J4);
       if (n4[j] > 0) { r4[j] /= n4[j]; g4[j] /= n4[j]; b4[j] /= n4[j]; } else { r4[j] = 210; g4[j] = 200; b4[j] = 180; }
     }
   }
@@ -822,11 +965,31 @@ async function patinoiSelaimessa({
       }
       for (let j = 0; j < meri.length; j++) {
         const a = aa[j] / (J2 * J2);
+        /*
+         * ALFA EI OLE MAAN TUNTOMERKKI — TÄSTÄ SYNTYIVÄT "OUDOT VIIVAT".
+         *
+         * Lehden laita häivytetään läpinäkyväksi, jotta se sulaa lautaan
+         * (vuotoreuna, ks. ui.js paivitaFokusPohja). Reuna on leveä:
+         * mitattuna ESP 377 px ja GBR 718 px, eli 15-28 % lehden alasta.
+         * Ehto `a > 200` luki koko tuon vyön MAAKSI, jolloin
+         * etäisyyskenttä sai rannan lehden omalle laidalle ja
+         * vesiviivoitus piirsi sen ympäri suorakulmaisen vyön
+         * rinnakkaisia viivoja — omistajan havainto 29.8.2026
+         * (*"meren päällä outoja viivoja"*). Pohjissa niitä ei ole:
+         * ne syntyivät vasta tässä passissa.
+         *
+         * Väri kelpaa läpi vuotoreunan: mitattuna alfan 255 -> 14 yli
+         * meren rgb pysyy 204-209 / 198-203 / 174-183 ja kroma 25-33,
+         * eli sama sävy kuin täysin peittävällä alueella. Vain täysin
+         * läpinäkyvä (alfa 0) pikseli on rgb(0,0,0) eli väritön; se
+         * luetaan mereksi, jottei kuvan uloin kehys ole "rantaa".
+         */
+        if (a < 8) { meri[j] = 1; continue; }
         if (nn[j] === 0) { meri[j] = 0; continue; }
         const r = rr[j] / nn[j]; const g2 = gg2[j] / nn[j]; const b2 = bb[j] / nn[j];
         const kroma = Math.max(r, g2, b2) - Math.min(r, g2, b2);
-        /* Meri: matala kroma, riittävä peitto ja järkevä kirkkaus. */
-        meri[j] = (kroma < vv.kromaVali[1] && a > 200 && lum(r, g2, b2) > 120) ? 1 : 0;
+        /* Meri: matala kroma ja järkevä kirkkaus. */
+        meri[j] = (kroma < vv.kromaVali[1] && lum(r, g2, b2) > 120) ? 1 : 0;
       }
     }
     /* Yksi avaus + sulkeminen 3x3: yksittäiset pikselit pois, jotta
@@ -979,26 +1142,22 @@ async function patinoiSelaimessa({
    */
   let meriRef = null;
   if (resepti.syvyys) {
-    const sy0 = resepti.syvyys;
-    let sR = 0; let sG = 0; let sB = 0; let sN = 0;
-    for (let j = 0; j < r4.length; j++) {
-      const kr = Math.max(r4[j], g4[j], b4[j]) - Math.min(r4[j], g4[j], b4[j]);
-      const Lv = lum(r4[j], g4[j], b4[j]);
-      if (kr < sy0.kromaVali[1] && a4[j] > 200 && Lv > 120) {
-        sR += r4[j]; sG += g4[j]; sB += b4[j]; sN += 1;
-      }
-    }
     /*
-     * Meren keskiväri sävykäyrän läpi. Käyrä on affiini, ja meri jää
+     * TAVOITESÄVY ON VAKIO (ks. SYVYYS.tavoite), ei lehden oma
+     * keskiarvo. Tässä laskettiin ennen lehden meren keskiväri
+     * neljäsosakentästä; se teki jokaisesta lehdestä oman sävyisen ja
+     * näkyi saumana naapurin rajalla (mitattu 23 lehden otoksesta:
+     * L=199,9 ... 211,2). Vakio vie kaikkien lehtien avomeren samaan.
+     *
+     * Tavoite ajetaan sävykäyrän läpi. Käyrä on affiini, ja meri jää
      * sekä muste- että kermaikkunan väliin (L noin 180-215), joten
      * pääsilmukan kohta 1 tekee meripikselille TÄSMÄLLEEN tämän saman
      * muunnoksen — litistys osuu siis oikeaan sävyyn eikä siirrä merta.
      */
     const kk = resepti.savyt.kayra;
-    meriRef = sN
-      ? [sR / sN * kk.kerroin + kk.nosto, sG / sN * kk.kerroin + kk.nosto,
-        sB / sN * kk.kerroin + kk.nosto]
-      : [200, 200, 200];
+    const tv = resepti.syvyys.tavoite ?? [211, 203, 180];
+    meriRef = [tv[0] * kk.kerroin + kk.nosto, tv[1] * kk.kerroin + kk.nosto,
+      tv[2] * kk.kerroin + kk.nosto];
   }
 
   /* ------------------------------------------ värilaatta kohdistusta varten */
@@ -1242,7 +1401,8 @@ async function patinoiSelaimessa({
            * viivat huojuvat rikkomatta samankeskisyyttään: viereiset
            * pikselit saavat lähes saman siirtymän, eivätkä viivat siksi
            * mene ristiin vaikka siirtymä on viivaväliä suurempi. */
-          const hx = x / (vv.huojuntaSkaala * s); const hy = y / (vv.huojuntaSkaala * s);
+          const hx = (x + faasiX) / (vv.huojuntaSkaala * s);
+          const hy = (y + faasiY) / (vv.huojuntaSkaala * s);
           const wx = (fbm(kohinaVesiviiva, hx, hy, vv.huojuntaOktaavit) - 0.5)
             * vv.huojunta * s;
           const wy = (fbm(kohinaVesiviiva, hx + 137.3, hy + 71.9, vv.huojuntaOktaavit) - 0.5)
@@ -1283,8 +1443,8 @@ async function patinoiSelaimessa({
                 const haip = Math.max(0, 1 - k / maara) ** vv.haipyma;
                 /* Voiman vaihtelu pitkin viivaa: muste ei kanna tasaisesti. */
                 const roso = Math.max(0, 1 + vv.roso * 2
-                  * (kohinaVesiviiva(x / (vv.rosoSkaala * s) + 900.5,
-                    y / (vv.rosoSkaala * s) + 401.5) - 0.5));
+                  * (kohinaVesiviiva((x + faasiX) / (vv.rosoSkaala * s) + 900.5,
+                    (y + faasiY) / (vv.rosoSkaala * s) + 401.5) - 0.5));
                 kerroin -= vv.voima * viiva * haip * roso * meriW;
               }
             }
@@ -1305,7 +1465,7 @@ async function patinoiSelaimessa({
         const w = pehmene(158, 70, Lp);
         const reunapaino = 4 * w * (1 - w); /* huippu viivan reunalla */
         if (reunapaino > 0.02) {
-          const n = kohinaRoso(x / (s * 1.6), y / (s * 1.6)) - 0.5;
+          const n = kohinaRoso((x + faasiX) / (s * 1.6), (y + faasiY) / (s * 1.6)) - 0.5;
           kerroin += ro.voima * reunapaino * n * 0.6;
         }
       }
@@ -1314,23 +1474,31 @@ async function patinoiSelaimessa({
       if (pa) {
         /* Domain warp: sama siirtymä molemmille kuitusuunnille, jotta
          * syy aaltoilee yhtenä paperina eikä kahtena kerroksena. */
-        const wp = (kohinaWarp(x / (pa.warpSkaala * s), y / (pa.warpSkaala * s)) - 0.5)
+        /* Paperin kohinat lehden omassa mittakaavassa, mutta laudalta
+         * saadulla faasilla (ks. maailmankoordinaatit): syy on joka
+         * lehdellä samankokoista, mutta kuvio ei toistu lehdestä
+         * toiseen. */
+        const px = x + faasiX; const py = y + faasiY;
+        const wp = (kohinaWarp(px / (pa.warpSkaala * s), py / (pa.warpSkaala * s)) - 0.5)
           * pa.warpVoima;
         let kuitu = 0; let pk = 0;
         for (const [sx, sy, w, fx, fy] of pa.kuituKerrokset) {
-          kuitu += w * (kohinaKuitu(fx + x / (sx * s) + wp * 0.35,
-            fy + y / (sy * s) + wp) - 0.5);
+          kuitu += w * (kohinaKuitu(fx + px / (sx * s) + wp * 0.35,
+            fy + py / (sy * s) + wp) - 0.5);
           pk += w;
         }
         let risti = 0; let pr = 0;
         for (const [sx, sy, w, fx, fy] of pa.kuituRistiKerrokset) {
-          risti += w * (kohinaRisti(fx + x / (sx * s) + wp,
-            fy + y / (sy * s) + wp * 0.35) - 0.5);
+          risti += w * (kohinaRisti(fx + px / (sx * s) + wp,
+            fy + py / (sy * s) + wp * 0.35) - 0.5);
           pr += w;
         }
+        /* Pikselikohtainen rae ja alempana dither ovat valkoista
+         * kohinaa ilman rakennetta: niissä ei ole faasia, jonka voisi
+         * katkaista lehden rajalla, joten ne pysyvät pikselissä. */
         const raeN = rae(x, y, 1337) - 0.5;
-        const karkea = kohinaRae(x / (pa.raeKarkeaSkaala * s),
-          y / (pa.raeKarkeaSkaala * s)) - 0.5;
+        const karkea = kohinaRae(px / (pa.raeKarkeaSkaala * s),
+          py / (pa.raeKarkeaSkaala * s)) - 0.5;
         /*
          * KUITUKIMPUT. Kuitu on rakenteeltaan pitkä ja matala (34 x 2,3),
          * joten ilman katkoja se piirtää laakealle merelle yhtenäisiä
@@ -1342,8 +1510,8 @@ async function patinoiSelaimessa({
          * 1, joten se ei muuta paperin keskisävyä.
          */
         const kl = pa.klimppi
-          ? Math.max(0, 1 + pa.klimppi * 2 * (kohinaKlimppi(x / (pa.klimppiSkaala * s),
-            y / (pa.klimppiSkaala * s)) - 0.5))
+          ? Math.max(0, 1 + pa.klimppi * 2 * (kohinaKlimppi(px / (pa.klimppiSkaala * s),
+            py / (pa.klimppiSkaala * s)) - 0.5))
           : 1;
         kerroin += ((kuitu / pk) * pa.kuitu + (risti / pr) * pa.kuituRisti) * kl
           + raeN * pa.rae + karkea * pa.raeKarkea;
@@ -1351,8 +1519,13 @@ async function patinoiSelaimessa({
 
       /* --- 8. epätasainen ikääntymissävy --- */
       if (ika) {
-        const n = fbm(kohinaIka, x / (ika.skaala * 640 * s), y / (ika.skaala * 640 * s), ika.oktaavit) - 0.5;
-        const reunaEt = Math.hypot(x - kesX, y - kesY) / kulmaEt;
+        /* Laikku laudan koordinaateista: sama maailmankohta saa saman
+         * laikun jokaisella lehdellä (ks. IKAANTYMINEN). */
+        const n = fbm(kohinaIka, maailmaX(x) / (ika.skaala * 640),
+          maailmaY(y) / (ika.skaala * 640), ika.oktaavit) - 0.5;
+        /* `reunapaino` on maalehdillä 0 — säteittäinen tummennus piirsi
+         * lehden ympärille kehyksen (ks. IKAANTYMINEN). */
+        const reunaEt = ika.reunapaino ? Math.hypot(x - kesX, y - kesY) / kulmaEt : 0;
         const laikku = n + ika.reunapaino * (reunaEt ** 2 - 0.35);
         kerroin -= ika.voima * laikku;
         lampo += ika.voima * ika.lampo * Math.max(0, laikku);
@@ -1361,7 +1534,8 @@ async function patinoiSelaimessa({
       /* --- 9. taitejäljet --- */
       if (ta) {
         let taite = 0;
-        const heilu = (kohinaTaite(x / (40 * s), y / (40 * s)) - 0.5) * ta.huojunta * s;
+        const heilu = (kohinaTaite((x + faasiX) / (40 * s), (y + faasiY) / (40 * s)) - 0.5)
+          * ta.huojunta * s;
         for (const p of ta.pysty) {
           const et = Math.abs(x - p * L + heilu);
           taite += Math.exp(-((et / (ta.ydin * s)) ** 2))
@@ -1464,7 +1638,7 @@ const valitsin = (nimi, oletus) => {
 const lippu = (nimi) => argv.includes(`--${nimi}`);
 /* Arvolliset valitsimet erotetaan lipuista, jotta valitsimen arvoa ei
  * lueta vahingossa tiedostopoluksi. */
-const ARVOLLISET = ['taso', 'tunnus', 'leveys', 'laatu', 'muoto', 'pala'];
+const ARVOLLISET = ['taso', 'tunnus', 'leveys', 'laatu', 'muoto', 'pala', 'bbox'];
 const vapaat = argv.filter((a, n) => !a.startsWith('--')
   && !(n > 0 && argv[n - 1].startsWith('--') && ARVOLLISET.includes(argv[n - 1].slice(2))));
 
@@ -1473,7 +1647,8 @@ const ulosKansio = vapaat[1];
 if (!pohja || !ulosKansio) {
   console.error('Käyttö: node tools/patina.mjs <pohjakuva> <ulos-kansio> '
     + '[--taso hillitty|keskitaso|taysi|kaikki] [--tunnus GRC] [--leveys 6400] '
-    + '[--laatu 0.9] [--muoto jpeg|webp|png] [--vertailu] [--pala x,y,w,h]');
+    + '[--laatu 0.9] [--muoto jpeg|webp|png] [--vertailu] [--pala x,y,w,h] '
+    + '[--bbox x,y,w,h]');
   process.exit(1);
 }
 const tasoValinta = valitsin('taso', 'kaikki');
@@ -1494,6 +1669,34 @@ const pala = (() => {
 /* JPEG ei kanna läpinäkyvyyttä: lehden häivytetty vuotoreuna
  * ladotaan paperin väriin, ei mustaan (kuten canvas tekisi). */
 const TAUSTA = [232, 220, 188];
+
+/*
+ * LEHDEN PAIKKA LAUDALLA — KOHINOIDEN FAASI.
+ *
+ * Luetaan pohjakuvan vierestä samannimisestä JSON:sta (julisteet/fokus/
+ * <ISO>.json, kenttä `bbox`), koska patinoi-fokus.yml ajaa työkalun
+ * juuri siitä kansiosta, jossa pari on. `--bbox x,y,w,h` ohittaa, ja
+ * ilman kumpaakaan patinointi menee kuten ennen, lehden omasta
+ * kulmasta — yksittäistä koekuvaa varten se on oikein.
+ */
+const maailma = (() => {
+  const p = valitsin('bbox', null);
+  if (p) {
+    const [x, y, w, h] = p.split(',').map(Number);
+    if ([x, y, w, h].every(Number.isFinite) && w > 0 && h > 0) return { x, y, w, h };
+    console.error(`Virheellinen --bbox: ${p}`); process.exit(1);
+  }
+  const vieri = resolve(pohja).replace(/\.[^.]+$/, '.json');
+  try {
+    const j = JSON.parse(readFileSync(vieri, 'utf8'));
+    const b = j?.bbox;
+    if (b && b.w > 0 && b.h > 0) return { x: b.x, y: b.y, w: b.w, h: b.h };
+  } catch { /* ei metatietoa vieressä — lehden oma faasi kelpaa */ }
+  return null;
+})();
+console.log(maailma
+  ? `Maailmanfaasi bbox:sta ${maailma.x},${maailma.y} ${maailma.w}x${maailma.h}`
+  : 'Ei bbox-metatietoa: kohinat lehden omasta kulmasta.');
 
 mkdirSync(resolve(ulosKansio), { recursive: true });
 
@@ -1529,6 +1732,7 @@ for (const taso of tasot) {
     muoto,
     laatu,
     tausta: TAUSTA,
+    maailma,
   });
   const nimi = `${tunnus}-patina-${taso}.${paate}`;
   const polku = resolve(ulosKansio, nimi);

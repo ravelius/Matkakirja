@@ -188,8 +188,12 @@ const FOKUS_ALIPOLKU = 'julisteet/fokus/';
  *     joutuisi ylläpitämään jokaisen erän jälkeen, ja muiden maiden
  *     lehdet latautuvat uudelleen kerran — kymmeniä megatavuja
  *     kertaluontoista liikennettä, ei sen enempää.
+ * 5 = Kaukozoomin yleislehteen poltettu ATLASKEHYS (29.8.2026):
+ *     MAAILMA.webp on nyt 6400 x 3351 eikä 6400 x 2879, ja sen bbox
+ *     alkaa laudan yläpuolelta. Vanha välimuistikopio piirtyisi
+ *     venytettynä uuteen laatikkoon, joten numero on pakko nostaa.
  */
-const FOKUS_VUOSIKERTA = 4;
+const FOKUS_VUOSIKERTA = 5;
 
 /** Fokuskartan osoite ämpärissä (esim. 'GRC.webp' tai 'GRC.json'). */
 export function fokuskarttaUrl(tiedosto) {
