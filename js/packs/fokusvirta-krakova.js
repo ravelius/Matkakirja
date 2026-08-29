@@ -321,7 +321,7 @@ export const FOKUSVIRTA_KRAKOVA = {
         + 'oikein: Sukiennice on seissyt torin keskellä keskiajalta asti. '
         + 'Krakova oli Hansan ja idän karavaanireittien risteyskohta, ja '
         + 'halli oli kansainvälisen kaupan keskus, jossa kiertelevät '
-        + 'kauppiaat tapasivat toisensa. Neljäsataaluvun kukoistuskaudella '
+        + 'kauppiaat tapasivat toisensa. 1400-luvun kukoistuskaudella '
         + 'idästä tuotiin mausteita, silkkiä, nahkaa ja vahaa; ulos lähti '
         + 'kangasta, lyijyä ja Wieliczkan kaivoksen suolaa. Aivan hallin '
         + 'vieressä seisoivat Iso ja Pieni vaakatalo, joita ei enää ole. '
