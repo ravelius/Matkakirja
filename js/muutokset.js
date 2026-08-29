@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1313, teksti: 'Kuusi ihmekuvaa uusiksi ilman heikkouksia' },
   { v: 1312, teksti: 'Aallon 2 loistoaikakuvat neljalle takylle' },
   { v: 1311, teksti: 'Aallon 2 luennat ja aanite-kentat' },
   { v: 1310, teksti: 'Prahan merkinnan anakronismi pois' },
