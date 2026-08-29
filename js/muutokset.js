@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1326, teksti: 'Valintakupla pois kaytosta valiaikaisesti' },
   { v: 1325, teksti: 'Sahketehtavan vapaa vastaus pollon tulkinnalla' },
   { v: 1324, teksti: 'Bittikarttakartta vaihe 1: pohjacanvas' },
   { v: 1323, teksti: 'Fokusvirran kortit pelaajan polkuun' },
