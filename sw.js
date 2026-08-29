@@ -814,9 +814,11 @@ const SHELL = [
   './assets/kartat/nostot/nosto-kopenickin-kapteeni-loistoaika.webp',
   './assets/kartat/nostot/nosto-archaeopteryx-loistoaika.webp',
   './assets/kartat/nostot/nosto-neuschwanstein-loistoaika.webp',
-  // Aallon 2 täkynostot saivat pääkuvansa 29.8.2026 (Lontoo, Budapest).
+  // Aallon 2 täkynostot saivat pääkuvansa 29.8.2026 (Lontoo, Budapest,
+  // Dubrovnik).
   './assets/kartat/nostot/nosto-sutton-hoo-loistoaika.webp',
   './assets/kartat/nostot/nosto-szegedin-tulva-loistoaika.webp',
+  './assets/kartat/nostot/nosto-pulan-areena-loistoaika.webp',
   // Lippuikkunan versioliput (pilotti Suomi + Saksa, v711).
   './assets/liput/versiot/fin-valtiolippu.png',
   './assets/liput/versiot/fin-sotalippu.png',
