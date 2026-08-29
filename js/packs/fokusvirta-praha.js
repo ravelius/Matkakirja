@@ -33,13 +33,13 @@
  * sen. Pelaaja siis PÄÄTTELEE vastauksen kahdesta pelissä olevasta
  * tiedosta.
  *
- * ── MERKINNÄN RAITIOVAUNU ──────────────────────────────────────────
+ * ── MERKINNÄN KYYTI (anakronismi korjattu 29.8.2026) ───────────────
  *
- * Kaanonin merkintä sanoo isoisän myöhästyneen raitiovaunusta. Prahan
- * ensimmäinen hevosraitiotie avattiin vasta 1875, joten tämän paketin
- * MIKÄÄN teksti ei nojaa raitiovaunuun eikä laske sen varaan mitään:
- * ei Livian kupla, ei täky, ei oppitunti, ei kohtaaminen. Kaanoniin ei
- * kosketa — huomio on kirjattu päätoimittajalle erikseen.
+ * Kaanonin merkintä sanoi alun perin isoisän myöhästyneen
+ * raitiovaunusta, mutta Prahan ensimmäinen hevosraitiotie avattiin
+ * vasta 1875 — isoisän matkavuonna 1873 sellaista ei ollut. Fable
+ * korjasi kaanonin muotoon "ajurin kyydistä" ennen luennan
+ * generointia. Mikään muu teksti ei nojaa kulkuneuvoon.
  *
  * FAKTAPOHJA. Aalto 2:n maille EI ole takynostot-työaineistoa, joten
  * täyt, oppitunti, lehtitehtävät ja täkynosto on rakennettu kahdesta
@@ -129,7 +129,7 @@ export const FOKUSVIRTA_PRAHA = {
       + 'ensimmäinen halla.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Prahassa on kello, joka näyttää auringon ja kuun paikan '
-      + 'mutta ei kiirettä. Myöhästyin sen takia raitiovaunusta enkä '
+      + 'mutta ei kiirettä. Myöhästyin sen takia ajurin kyydistä enkä '
       + 'kadu. Tässä kaupungissa keisari keräsi aikoinaan kaiken '
       + 'maailman ihmeet yhteen saliin — ja sali on yhä olemassa, vaikka '
       + 'ihmeet ovat hajallaan.',
@@ -140,7 +140,7 @@ export const FOKUSVIRTA_PRAHA = {
      */
     luenta: '[curious] Prahassa on kello, joka näyttää auringon ja kuun '
       + 'paikan mutta ei kiirettä. [laughs] Myöhästyin sen takia '
-      + 'raitiovaunusta enkä kadu. [softly] Tässä kaupungissa keisari '
+      + 'ajurin kyydistä enkä kadu. [softly] Tässä kaupungissa keisari '
       + 'keräsi aikoinaan kaiken maailman ihmeet yhteen saliin — '
       + '[whispers] ja sali on yhä olemassa, vaikka ihmeet ovat '
       + 'hajallaan.',

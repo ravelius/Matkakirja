@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1310, teksti: 'Prahan merkinnan anakronismi pois' },
   { v: 1309, teksti: 'Fokusvirrat Lontooseen Budapestiin Dubrovnikiin ja Prahaan' },
   { v: 1308, teksti: 'C-sarjan loistoaikakuvat kymmenelle takylle' },
   { v: 1307, teksti: 'Nostojen loistoaikakuvat ja Antikytheran taky' },
