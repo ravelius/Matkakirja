@@ -1107,7 +1107,12 @@ export const RAAMATTU = {
           + 'pois tai kaikki paalle. Kayttotarkoitus: pelaaja loytaa '
           + 'haluamansa aiheen kohteet helposti (esim. "sopot kohteet" '
           + 'kuten elaintakyt). Valotila talletetaan laitteelle. '
-          + 'Toteutus elaintakyeran jalkeen samalle merkkikerrokselle.',
+          + 'TASMENNYS (omistaja 29.8.2026 ilta): paalle kytketyn '
+          + 'aiheen varipallo syttyy myos valikon seliterivilla - '
+          + 'valikko nayttaa aina mitka valot ovat paalla. Popup '
+          + 'LIUKUU YLOS PIILOON kun karttaa klikataan; valot jaavat '
+          + 'paalle. Toteutus elaintakyeran jalkeen samalle '
+          + 'merkkikerrokselle.',
         'LOISTOAIKAKUVAT PUHTAASTI OMASSA AJASSAAN (omistaja 29.8.2026 '
           + 'aamu, Parthenonin v3-havainto: "ei ole sotkettu nykyaikaa ja '
           + 'loistoaikaa keskenaan ja se sopii minusta paremmin... jatkossa '
