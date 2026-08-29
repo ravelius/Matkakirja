@@ -76,6 +76,7 @@
 import { html, jaaKappaleiksi, nielaiseSulkevaNapautus, TOAST_MS } from './ui-apurit.js';
 import { el, maare } from './mapart.js';
 import { piirraNostosymboli } from './fokusnosto-symbolit.js';
+import { piirraKarttavalo } from './karttavalot.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { ELAINTAKYT } from './packs/elaintakyt.js';
 import { sfx } from './sound.js';
@@ -214,6 +215,17 @@ function elaintakyPiirraMerkki(ui, ryhma, tieto) {
   g.setAttribute('tabindex', '0');
   g.setAttribute('aria-label', `${elaintakyMaanNimi(ui, tieto.iso)}: ${tieto.taky.elain}`);
   if (ui.game?.elaintakyLunastettu?.(tieto.iso)) g.classList.add('lunastettu');
+  /*
+   * AIHEVALO MERKIN ALLE (js/karttavalot.js): selitevalikon "Eläimet"
+   * sytyttää sen. Valo on aina piirretty ja oletuksena `display: none`,
+   * joten kerroksen uudelleenrakennus (lunastus, laudan vaihto) ei voi
+   * hukata valotilaa — bodyn luokka päättää näkyvyyden.
+   *
+   * AVAIN ON MAAKOODI EIKÄ SOLMU: kiertävällä laudalla sama eläin
+   * piirretään kahteen kiertokohtaan, ja selitevalikon laskuri laskee
+   * kappaleet eikä solmuja (karttavalotLaskurit).
+   */
+  piirraKarttavalo(g, 'elain', tieto.iso);
   el('circle', { class: 'elaintaky-osuma', r: ELAINTAKY_OSUMA_R }, g);
   const symboli = el('g', { class: 'elaintaky-symboli' }, g);
   piirraNostosymboli(symboli, 'elain');

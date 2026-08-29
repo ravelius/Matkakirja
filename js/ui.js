@@ -277,6 +277,9 @@ import {
  */
 import { paivitaFokuspiste, nollaaFokuspiste } from './fokuspiste.js';
 import { paivitaElaintakyt, nollaaElaintakyt } from './elaintaky.js';
+// Karttaselitevalikko ja sen aihevalot (js/karttaselite.js,
+// js/karttavalot.js): nappi kartan oikeaan yläkulmaan, valot merkkien alle.
+import { kaynnistaKarttaselite, paivitaKarttaselite } from './karttaselite.js';
 /*
  * Fokusnäkymän RUUTUUN ankkuroidut atlas-elementit: mittajana, maan
  * kartuutsi ja sen takaa liukuva maataulu (omistaja 25.8.2026). Ne
@@ -2623,6 +2626,14 @@ export class UI {
      * js/karttamittari.js) — käyttöohje on PR:ssä, ei työhuoneessa.
      */
     this.laitemittari = kaynnistaKarttamittari(this);
+    /*
+     * KARTTASELITEVALIKKO (js/karttaselite.js) samasta syystä samassa
+     * kohdassa: nappi ja levy asuvat karttaruudussa, joten ne
+     * perustetaan vasta kun ruutu on olemassa. Aihevalojen tila luetaan
+     * samalla levyltä bodyn luokiksi, jotta edellisen istunnon valot
+     * palavat heti ensimmäisessä piirrossa.
+     */
+    kaynnistaKarttaselite(this);
     this.vahdiNakymanKokoa();
     this.render();
     this.esilataaAarrekuvat();
@@ -4858,6 +4869,12 @@ export class UI {
     // mittakaavassa ja katoavat yleiskuvassa, joten ne lasketaan
     // samassa kohtaa kuin muutkin merkkikerrokset.
     paivitaElaintakyt(this);
+    /*
+     * Selitevalikon kappalemäärät kertovat, mitä KARTALLA nyt on, joten
+     * ne lasketaan vasta merkkikerrosten jälkeen. Suljettuna valikko ei
+     * laske mitään (js/karttaselite.js paivita).
+     */
+    paivitaKarttaselite(this);
     /*
      * Mittajana on ruudun ominaisuus eikä kuvan: se on laskettava
      * uudelleen aina kun zoomi tai panorointi on ASETTUNUT. Tämä on
@@ -8092,6 +8109,9 @@ export class UI {
     paivitaFokuspiste(this);
     // Sama kerrosjono jatkuu maiden eläintäyillä (js/elaintaky.js).
     paivitaElaintakyt(this);
+    // Maan vaihduttua selitevalikon kappalemäärät ovat vanhat: uudet
+    // luvut luetaan juuri piirretyistä kerroksista (js/karttaselite.js).
+    paivitaKarttaselite(this);
     /*
      * Viides kerros: ruutuun ankkuroidut mitat (mittajana ja
      * kartuutsi). Kutsu on tässä samasta syystä kuin pallojen: pohja

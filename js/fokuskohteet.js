@@ -100,6 +100,7 @@ import {
 // asetaKohdehakemisto-kutsu KOHDE_MAAT-taulun alla).
 import { asetaKohdehakemisto } from './fokusvirta.js';
 import { FOKUS_LISANIMET } from './packs/fokus-grc.js';
+import { piirraKarttavalo } from './karttavalot.js';
 import { asetaKuva } from './media.js';
 import { html, jaaKappaleiksi, nielaiseSulkevaNapautus, polloNimilappu } from './ui-apurit.js';
 import { piirraReaktiot } from './reaktiot.js';
@@ -301,6 +302,14 @@ const KOHDE_KOROSTUS_R = 6.0;
 const KOHDE_HALO_R = 4.9;
 const KOHDE_RENGAS_R = 3.4;
 const KOHDE_PISTE_R = 1.15;
+
+/*
+ * Aihevalon koko tämän merkin mittakaavassa (js/karttavalot.js).
+ * Kohdemerkin näkyvä ala on korostuskehän luokkaa (r = 6), kun
+ * eläintäyn kaiverrus on täydet 10,4 — 0,6 asettaa valon täpläksi
+ * merkin alle molemmissa.
+ */
+const KOHDE_VALO_KOKO = 0.6;
 
 /** Pop-upin reunavara ja merkin ja kortin väliin jäävä rako. */
 const KOHDE_MARGINAALI = 8;
@@ -878,6 +887,24 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
   }
   el('circle', { class: 'fokuskohde-korostus', r: KOHDE_KOROSTUS_R }, g);
   const symboli = kohteenSymboli(kohde);
+  /*
+   * AIHEVALO MERKIN ALLE (js/karttavalot.js). Valo on aina piirretty ja
+   * oletuksena `display: none`; selitevalikon väripallo kytkee sen
+   * bodyn luokalla, joten kerroksen uudelleenrakennus ei voi hukata
+   * valotilaa eikä valoista tule kehyskohtaista työtä.
+   *
+   * MERKKI ANTAA OMAN SYMBOLINSA, ei valikon riviä: ryhmittely
+   * kahdeksaan aiheeseen tehdään yhdessä paikassa
+   * (js/fokusnosto-symbolit.js NOSTOSYM_PAAKATEGORIAT). SYMBOLITON
+   * KOHDE EI SAA VALOA — kartalla se on musteympyrä eikä
+   * kategoriamerkki (alempi haara), eikä sillä siis ole aihetta, jonka
+   * selite sen nimeäisi.
+   *
+   * KOKO ON MERKIN KOKO. Kirjaston symboli kutistetaan kohdemerkillä
+   * KOHDE_SYMBOLI_SKAALAlla, joten sama kutistus koskee valoa: ilman
+   * sitä sama täplä olisi eläintäyn alla täplä ja tässä lautanen.
+   */
+  piirraKarttavalo(g, symboli, kohde.id, KOHDE_VALO_KOKO);
   if (symboli) {
     /*
      * Alaryhmä kutistaa kirjaston merkin kohdemerkin mittaan; symbolin
