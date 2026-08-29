@@ -698,3 +698,115 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
   outline: 2px solid #9c6b17;
   outline-offset: 2px;
 }
+
+/* ===========================================================================
+   6. ELÄINTÄKY — maan eläin kartalla (js/elaintaky.js)
+   ---------------------------------------------------------------------------
+   Eläintäky lainaa lunastuskortin sisuksen (.fokusnosto-ylarivi,
+   -kortti-otsikko, -kuva, -teksti) sellaisenaan; vain KUORI on omalla
+   luokallaan, koska js/fokusnosto.js sulkee oman korttinsa pyyhkimällä
+   jokaisen .fokusnosto-kerros-solmun sivulta. Kuoren säännöt ovat siksi
+   tässä samat kuin osiossa 4 — kaksi luokkaa, yksi ilme.
+
+   EI SUODATTIMIA (tests/rules.test.mjs): löydetty merkki haalistuu
+   `opacity`illa, ei harmaasuodattimella.
+   =========================================================================== */
+
+.elaintakyt {
+  /* Kerros ei ota napautuksia vastaan; osuma-alue ottaa (ks. alla). */
+  pointer-events: none;
+}
+
+/* Yleiskuvassa merkit ovat poissa kokonaan (js/elaintaky.js
+   ELAINTAKY_NAKYY_ASTETTA) — `display` eikä `opacity`, jottei
+   näkymätön merkki jää nappaamaan napautuksia. */
+.elaintakyt-piilossa { display: none; }
+
+/*
+ * NÄKYMÄTÖN OSUMA-ALUE, VÄHINTÄÄN 44 px — sama sormisääntö ja sama
+ * kaava kuin täkypisteellä (.nostosym-tuike-osuma yllä).
+ */
+.elaintaky-osuma {
+  fill: none;
+  /* `fill: none` ei ota napautuksia ilman tätä. */
+  pointer-events: all;
+  cursor: pointer;
+}
+
+/* Merkki on kartan oma kaiverrettu eläinsymboli; se ei ota napautuksia
+   itse, jottei osuma riipu glyyfin muodosta. */
+.elaintaky-symboli { pointer-events: none; }
+
+/* Löydetty eläin jää kartalle vaimeana — sama kieli kuin luetulla
+   täkypisteellä (.nostosym-luettu). */
+.elaintaky-merkki.lunastettu .elaintaky-symboli { opacity: 0.45; }
+
+.elaintaky-merkki:focus { outline: none; }
+
+.elaintaky-merkki:hover .elaintaky-symboli,
+.elaintaky-merkki:focus-visible .elaintaky-symboli { opacity: 1; }
+
+.elaintaky-kerros {
+  position: fixed;
+  inset: 0;
+  z-index: 46;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(18, 12, 4, 0);
+  transition: background 220ms ease-out;
+}
+
+.elaintaky-auki { background: rgba(18, 12, 4, 0.3); }
+
+.elaintaky-kortti {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(34rem, 100%);
+  max-height: min(80vh, 44rem);
+  padding: 0.7rem 0.8rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid rgba(122, 85, 20, 0.32);
+  background: #f5f0e2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34);
+  color: #211d18;
+  text-shadow: none;
+  font-family: var(--font-luku);
+  /* Kartta ottaa eleet itselleen (.map-pane touch-action: none); kortin
+     sisällä pystyvieritys on saatava takaisin. */
+  touch-action: pan-y;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 220ms ease-out, transform 220ms cubic-bezier(0.22, 0.9, 0.24, 1);
+}
+
+.elaintaky-auki .elaintaky-kortti {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .elaintaky-kerros,
+  .elaintaky-kortti { transition: none; }
+}
+
+/*
+ * LÖYTÖRIVI on kortin viimeinen rivi ja erotettu musteviivalla samoin
+ * kuin kohdenappi (.fokusnosto-kohdenappi): löytö on jutun jälkeen
+ * tuleva kuittaus eikä osa juttua.
+ */
+.elaintaky-palkkio {
+  margin: 0.7rem 0 0;
+  padding: 0.45rem 0 0;
+  border-top: 1px solid rgba(122, 85, 20, 0.28);
+  color: #7a5514;
+  font-family: var(--font-type);
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+}
+
+/* Jo löydetty eläin: sama rivi vaimeampana — kortti kertoo, ettei
+   punnat tule kahdesti. */
+.elaintaky-palkkio-vanha { color: rgba(33, 29, 24, 0.58); }

@@ -453,6 +453,15 @@ const MODULES = [
    */
   'js/fokusmitat.js',
   /*
+   * Eläintäyt ennen ui:ta (ui tuo niiden päivitys- ja nollauskutsun).
+   * Data ensin, kerros perässä. Kerros lukee laudan projektion
+   * fokusmitat.js:stä — juuri siksi se on listalla vasta tässä — ja
+   * tuo lisäksi symbolikirjaston, mapartin, ui-apurit ja äänet, jotka
+   * ovat kaikki jo yllä.
+   */
+  'js/packs/elaintakyt.js',
+  'js/elaintaky.js',
+  /*
    * Sähkepinta ennen ui:ta (ui tuo siitä retkikuntaosion ja
    * piirtokutsun staattisesti). Se tuo pelin, visan, äänet ja
    * ui-apurit — kaikki jo yllä; visa erityisesti, koska kaveriapu

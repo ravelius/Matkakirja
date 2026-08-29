@@ -252,6 +252,32 @@ export function laskeMittajana(ui) {
   };
 }
 
+/**
+ * ASTEET LAUDAN KOORDINAATEIKSI — sama kaava kuin mittajanalla, toisin
+ * päin.
+ *
+ * Mittajana kysyy laudalta asteita; eläintäky (js/elaintaky.js) kysyy
+ * asteilta laudan paikkaa. Kaava on sama taulu (FOKUS_LAUTAPROJEKTIOT)
+ * ja sama välimuisti, joten kaksi kerrosta ei voi ajautua eri
+ * projektioon — ja uusi lauta saa molemmat yhdellä rivillä.
+ *
+ * Palauttaa { x, y } tai null, jos laudan projektiota ei tunneta.
+ * LAUDAN REUNAT TARKISTAA KUTSUJA: projektio ei tiedä laudan mittoja,
+ * ja piste voi jäädä reunan ulkopuolelle ilman että se on virhe —
+ * Euroopan laudan itäreuna on 41° itäistä pituutta, joten Vanjärven
+ * kissa ei mahdu sille laudalle lainkaan ja merkki jätetään siellä
+ * piirtämättä.
+ */
+export function projisoiLaudalle(lauta, lon, lat) {
+  const projektio = FOKUS_LAUTAPROJEKTIOT[lauta];
+  const kaavat = projektionKaavat(projektio);
+  if (!kaavat || !Number.isFinite(lon) || !Number.isFinite(lat)) return null;
+  const x = kaavat.x(lon);
+  const y = kaavat.y(lat);
+  if (!Number.isFinite(x) || !Number.isFinite(y)) return null;
+  return { x, y };
+}
+
 /* ---------------------------------------------------- maan faktarivit */
 
 /*

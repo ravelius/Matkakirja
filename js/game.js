@@ -330,6 +330,14 @@ export class Game {
      */
     this.pullaVinkit = new Set();
     /*
+     * LUNASTETUT ELÄINTÄYT (js/elaintaky.js), avaimena MAATUNNUS ilman
+     * pakan tunnusta: eläin on maan eläin eikä laudan, ja sama
+     * saimaannorppa maailmankartalla ja Euroopan laudalla on sama
+     * löytö. Palkkio maksetaan siis kerran per maa koko matkan aikana —
+     * toinen napautus avaa saman kortin ilman uutta punnankaan.
+     */
+    this.elaintakyLunastetut = new Set();
+    /*
      * Voitetut aikakausjulisteet: minitehtävän palkinto, avaimena
      * pelkkä KAUPUNGIN tunnus (js/packs/julisteet.js). Pakan tunnusta
      * ei ole avaimessa, koska juliste on matkamuisto kaupungista eikä
@@ -1127,6 +1135,44 @@ export class Game {
   /** Onko tämän kaupungin pullavinkki jo ostettu? */
   pullaVinkkiOstettu(cityId) {
     return this.pullaVinkit.has(`${this.pack.id}:${cityId}`);
+  }
+
+  /**
+   * ELÄINTÄYN LÖYTÖPALKKIO (omistajan tilaus 29.8.2026: *"klikkaus avaa
+   * kuvan + lyhyen faktatekstin + pienen puntapalkkion"*).
+   *
+   * KERRAN PER MAA, EI PER LAUTA. Avain on pelkkä maatunnus, koska
+   * eläin on maan eläin: Suomen norppa on sama löytö maailmankartalla
+   * ja katselutilan Euroopan laudalla. Sama sääntö kuin julisteilla
+   * (myonnaJuliste), eri sääntö kuin minitehtävillä.
+   *
+   * PIENEMPI KUIN TÄKYVISA. Fokusvirran täky maksaa 50 puntaa
+   * (js/fokusvirta.js TAKY_PALKKIO) ja vaatii minivisan; eläintäky on
+   * yksi kuva ja yksi kappale, joten palkkio on 20 (js/elaintaky.js
+   * ELAINTAKY_PALKKIO). Se on kutsujan luku eikä oletus tässä: pelin
+   * puoli ei päätä sisällön hintaa.
+   *
+   * EI VUOROVAIKUTUSTA VUORON KANSSA. Kortin avaus ei kuluta vuoroa
+   * eikä heittoa — sama linja kuin pullavinkillä ja minivisalla.
+   *
+   * Vastaus kertoo, oliko löytö uusi: kutsuja näyttää leiman vain
+   * silloin (js/elaintaky.js).
+   */
+  actionElaintaky(iso, palkkio) {
+    if (!iso) return { ok: false, error: 'Maa puuttuu' };
+    if (this.elaintakyLunastetut.has(iso)) return { ok: true, uusi: false, palkkio: 0 };
+    this.elaintakyLunastetut.add(iso);
+    const maksu = Number.isFinite(palkkio) && palkkio > 0 ? palkkio : 0;
+    this.player.money += maksu;
+    if (maksu) {
+      this.say(this.player.id, `${this.player.name} löysi eläintäyn (+${maksu} puntaa).`);
+    }
+    return { ok: true, uusi: true, palkkio: maksu };
+  }
+
+  /** Onko tämän maan eläintäky jo lunastettu? */
+  elaintakyLunastettu(iso) {
+    return this.elaintakyLunastetut.has(iso);
   }
 
   /**
@@ -2830,6 +2876,7 @@ export class Game {
       minitehtavatVastatut: [...this.minitehtavatVastatut],
       minitehtavatOikein: [...this.minitehtavatOikein],
       pullaVinkit: [...this.pullaVinkit],
+      elaintakyLunastetut: [...this.elaintakyLunastetut],
       julisteet: [...this.julisteet],
       fokusvirrat: this.fokusvirrat,
       explored: [...this.explored],
@@ -2967,6 +3014,13 @@ export class Game {
      * oletus — pullaa ei ollut olemassa, joten sitä ei ole ostettukaan.
      */
     game.pullaVinkit = new Set(data.pullaVinkit ?? []);
+    /*
+     * Vanha tallennus ei tunne eläintäkyjä: joukko alkaa tyhjänä ja
+     * jokainen maa on vielä löytämättä. Kesken oleva peli saa siis
+     * kaikki 29 löytöä eteensä, mikä on tarkoitus — eläin on uutta
+     * sisältöä eikä menetetty tilaisuus.
+     */
+    game.elaintakyLunastetut = new Set(data.elaintakyLunastetut ?? []);
     // Vanha tallennus ei tunne julisteita: kokoelma alkaa tyhjänä ja
     // täyttyy takautuvasti, kun pelaaja avaa ratkaisemansa lehtisivun
     // uudelleen (js/ui.js piirraMinitehtava).
