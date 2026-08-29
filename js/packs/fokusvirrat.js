@@ -40,6 +40,13 @@ import { FOKUSVIRTA_DUBLIN } from './fokusvirta-dublin.js';
 import { FOKUSVIRTA_EDINBURGH } from './fokusvirta-edinburgh.js';
 import { FOKUSVIRTA_LISSABON } from './fokusvirta-lissabon.js';
 import { FOKUSVIRTA_RIIKA } from './fokusvirta-riika.js';
+import { FOKUSVIRTA_BARCELONA } from './fokusvirta-barcelona.js';
+import { FOKUSVIRTA_FIRENZE } from './fokusvirta-firenze.js';
+import { FOKUSVIRTA_VENETSIA } from './fokusvirta-venetsia.js';
+import { FOKUSVIRTA_MARSEILLE } from './fokusvirta-marseille.js';
+import { FOKUSVIRTA_OSLO } from './fokusvirta-oslo.js';
+import { FOKUSVIRTA_TAMPERE } from './fokusvirta-tampere.js';
+import { FOKUSVIRTA_VILNA } from './fokusvirta-vilna.js';
 
 export const FOKUSVIRRAT = {
   ateena: FOKUSVIRTA_ATEENA,
@@ -117,6 +124,38 @@ export const FOKUSVIRRAT = {
   edinburgh: FOKUSVIRTA_EDINBURGH,
   lissabon: FOKUSVIRTA_LISSABON,
   riika: FOKUSVIRTA_RIIKA,
+  /*
+   * AALTO 4B (sama Raamatun osio, 29.8.2026): seitsemän kaupunkia
+   * Välimereltä, Pohjolasta ja Baltiasta — Barcelona, Firenze,
+   * Venetsia, Marseille, Oslo, Tampere ja Vilna. Sama TÄYSI pino ja
+   * sama faktapohja kuin aalloilla 2–4A (kuratoitu pelidata + kahden
+   * riippumattoman lähteen tarkistus); perustelut ja lähteet ovat
+   * kunkin paketin omissa kommenteissa.
+   *
+   * VILNA AVAA UUDEN MAAN. Liettua (LTU) ei ollut ennen tätä aaltoa
+   * yhdenkään fokuskaupungin maa, joten Vilnan paketti tuo mukanaan
+   * oman `takynostot`-poolinsa ja LTU on lisätty js/fokusnosto.js:n
+   * NOSTO_MAAT-tauluun. Kuusi muuta kaupunkia nojaavat maansa jo
+   * olemassa olevaan pooliin (ESP, ITA, FRA, NOR, FIN).
+   *
+   * OSLO, FIRENZE, VENETSIA, BARCELONA, MARSEILLE JA TAMPERE EIVÄT OLE
+   * MAANSA AARREKAUPUNKEJA (ne ovat Bergen, Rooma, Madrid, Pariisi ja
+   * Helsinki), eli aallon 4A tapaan ne syventävät maata jo avatun
+   * aarteen rinnalla. Rekisteri ei huomaa siitä mitään.
+   *
+   * LIVIAN MAADOITUS on tässä aallossa jaettu Fablen kaanontekstistä
+   * virkkeen rajaa pitkin kenttiin `maadoitus` ja `teksti` niissä
+   * paketeissa, joissa kaanoni antaa yhden puheenvuoron (Barcelona ja
+   * Vilna); muissa maadoitus on paketin omaa Livia-tekstiä kaanonin
+   * edellä. Yhtäkään Livian sanaa ei ole kirjoitettu kaanoniin lisää.
+   */
+  barcelona: FOKUSVIRTA_BARCELONA,
+  firenze: FOKUSVIRTA_FIRENZE,
+  venetsia: FOKUSVIRTA_VENETSIA,
+  marseille: FOKUSVIRTA_MARSEILLE,
+  oslo: FOKUSVIRTA_OSLO,
+  tampere: FOKUSVIRTA_TAMPERE,
+  vilna: FOKUSVIRTA_VILNA,
 };
 
 /** Kaupungin fokusvirta tai null, jos kaupungille ei ole sisältöä. */

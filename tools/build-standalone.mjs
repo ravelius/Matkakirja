@@ -119,6 +119,17 @@ const MODULES = [
   'js/packs/fokusvirta-edinburgh.js',
   'js/packs/fokusvirta-lissabon.js',
   'js/packs/fokusvirta-riika.js',
+  // Aalto 4B (29.8.2026): Barcelona, Firenze, Venetsia, Marseille,
+  // Oslo, Tampere ja Vilna. Sama sääntö kuin aalloilla 1–4A; Vilnan
+  // takynostot-kenttä on Liettuan (LTU) ainoa lähde js/fokusnosto.js:n
+  // maapoolille, joten sekin on niputettava ennen sitä.
+  'js/packs/fokusvirta-barcelona.js',
+  'js/packs/fokusvirta-firenze.js',
+  'js/packs/fokusvirta-venetsia.js',
+  'js/packs/fokusvirta-marseille.js',
+  'js/packs/fokusvirta-oslo.js',
+  'js/packs/fokusvirta-tampere.js',
+  'js/packs/fokusvirta-vilna.js',
   // Egyptillä ja Irakilla ei ole omaa fokusvirtaa: pelkät kohteet
   // (kadonneiden ihmeiden erä 26.8.2026), joten paririviä ei ole.
   // Sama koskee Ranskaa ja Britanniaa (Matkakirjan ihmeiden Euroopan
