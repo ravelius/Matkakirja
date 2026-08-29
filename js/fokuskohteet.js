@@ -2463,13 +2463,17 @@ function kohdeLiikeVahennetty() {
 
 /*
  * Sulkee auki olevan suurennoksen ilman animaatiota (kortti sulkeutuu).
- * EI VIENTILISTALLE: ainoa tie ulos on suljeFokuskohde, joka kutsuu tätä
- * — niin kortti ja sen kuva katoavat aina yhdessä eikä kutsujan tarvitse
+ * Kartan tietoruudun oma tie ulos on suljeFokuskohde, joka kutsuu tätä —
+ * niin kortti ja sen kuva katoavat aina yhdessä eikä kutsujan tarvitse
  * muistaa kahta sulkua.
+ *
+ * `avain` KERTOO, KENEN SUURENNOS SULJETAAN (29.8.2026). Täkynoston
+ * karttaliite avaa saman suurennoksen omalla avaimellaan, koska sen
+ * elinkaari ei ole tietoruudun elinkaari — ks. avaaKohdeSuurennos.
  */
-function suljeKohdeSuurennos(ui) {
-  ui?.fokuskohdeZoom?.heti?.();
-  if (ui) ui.fokuskohdeZoom = null;
+export function suljeKohdeSuurennos(ui, avain = 'fokuskohdeZoom') {
+  ui?.[avain]?.heti?.();
+  if (ui) ui[avain] = null;
 }
 
 /**
@@ -2480,10 +2484,30 @@ function suljeKohdeSuurennos(ui) {
  * @param {() => Element|null} ankkuri mistä ruudun kohdasta kuva kasvaa
  *   ja mihin se kutistuu. Funktio eikä valmis elementti, koska kortti voi
  *   liikkua kartan mukana suurennoksen ollessa auki.
+ *
+ * @param {string} avain mihin ui-kenttään auki oleva suurennos
+ *   talletetaan.
+ *
+ * VIENTILISTALLA 29.8.2026: isoisän karttaliite (js/fokusnosto.js
+ * piirraNostonKarttaliite) suurentuu samalla mekanismilla. Kartta on
+ * luettavaa sisältöä, ei koriste — pienenä se olisi vain harmaa laatta —
+ * ja tämä on pelin ainoa suurennos, joka osaa sekä Commons-tiedoston
+ * että repon oman `osoite`-kuvan, kasvaa ankkuristaan ja kantaa
+ * lähderivin mukanaan. Kopio fokusnostoon olisi ollut sama koodi
+ * toiseen kertaan.
+ *
+ * MUTTA ELINKAARI ON KUTSUJAN, EI TÄMÄN PAKETIN (löydös savukkeesta
+ * 29.8.2026). `ui.fokuskohdeZoom` on tietoruudun oma kenttä, ja
+ * paivitaNakyvyys sulkee sen JOKA PIIRROSSA, kun kohdekerros on
+ * piilossa — ja täkynoston kortti elää juuri silloin, kun kartta on
+ * yleiskuvassa eikä kerrosta ole. Karttaliitteen suurennos katosi siis
+ * runsaassa sadassa millisekunnissa itsestään. Siksi avain on
+ * parametri: nosto pitää omansa omassa kentässään
+ * (`fokusnostoZoom`) ja sulkee sen itse.
  */
-function avaaKohdeSuurennos(ui, kuva, ankkuri) {
+export function avaaKohdeSuurennos(ui, kuva, ankkuri, avain = 'fokuskohdeZoom') {
   if (typeof document === 'undefined' || (!kuva?.tiedosto && !kuva?.osoite)) return;
-  suljeKohdeSuurennos(ui);
+  suljeKohdeSuurennos(ui, avain);
   lataaKohdeTyyli();
   let suljettu = false;
 
@@ -2670,7 +2694,7 @@ function avaaKohdeSuurennos(ui, kuva, ankkuri) {
   const sulje = () => {
     if (suljettu) return;
     suljettu = true;
-    if (ui?.fokuskohdeZoom?.kerros === kerros) ui.fokuskohdeZoom = null;
+    if (ui?.[avain]?.kerros === kerros) ui[avain] = null;
     kerros.classList.remove('fokuskohde-zoom-auki');
     const takaisin = ankkuriMuunnos();
     if (!takaisin) { poista(); return; }
@@ -2709,7 +2733,7 @@ function avaaKohdeSuurennos(ui, kuva, ankkuri) {
    * näkyi pomppu.
    */
   document.body.appendChild(kerros);
-  if (ui) ui.fokuskohdeZoom = { kerros, sulje, heti: poista };
+  if (ui) ui[avain] = { kerros, sulje, heti: poista };
   /*
    * MITTA HETI, EI VASTA KASVUN ALKAESSA. Kehyksen muoto ei saa riippua
    * siitä, ehtiikö kuva latautua tai ajastin laueta: ilman tätä paperi
