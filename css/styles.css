@@ -1257,6 +1257,7 @@ body.kartta-raahaus .fokuslaatta-syke { animation-play-state: paused; }
 body.kartta-merkit-piilossa .fokuskohteet,
 body.kartta-merkit-piilossa .fokuspisteet,
 body.kartta-merkit-piilossa .fokusnosto-symbolit,
+body.kartta-merkit-piilossa .elaintakyt,
 body.kartta-merkit-piilossa .nippuviivat { display: none; }
 
 /* NÄKYMÄN ULKOPUOLISET MERKIT POIS (js/ui.js paivitaMaailmanRajaus —

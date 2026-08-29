@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1328, teksti: 'Elaintakyt: 29 maan elaimet kartalle' },
   { v: 1327, teksti: 'Bittikartta 2-3: atominen vaihto ja kiinteat zoomtasot' },
   { v: 1326, teksti: 'Valintakupla pois kaytosta valiaikaisesti' },
   { v: 1325, teksti: 'Sahketehtavan vapaa vastaus pollon tulkinnalla' },

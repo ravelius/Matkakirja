@@ -276,6 +276,7 @@ import {
  * laudan vaihdossa.
  */
 import { paivitaFokuspiste, nollaaFokuspiste } from './fokuspiste.js';
+import { paivitaElaintakyt, nollaaElaintakyt } from './elaintaky.js';
 /*
  * Fokusnäkymän RUUTUUN ankkuroidut atlas-elementit: mittajana, maan
  * kartuutsi ja sen takaa liukuva maataulu (omistaja 25.8.2026). Ne
@@ -4840,6 +4841,10 @@ export class UI {
     paivitaFokuskohteet(this, nakyvaNyt);
     // Sama koskee kevyen kulun vihreää kohtaamispistettä.
     paivitaFokuspiste(this);
+    // Ja maiden eläintäkyjä (js/elaintaky.js): merkit elävät kartan
+    // mittakaavassa ja katoavat yleiskuvassa, joten ne lasketaan
+    // samassa kohtaa kuin muutkin merkkikerrokset.
+    paivitaElaintakyt(this);
     /*
      * Mittajana on ruudun ominaisuus eikä kuvan: se on laskettava
      * uudelleen aina kun zoomi tai panorointi on ASETTUNUT. Tämä on
@@ -5772,6 +5777,7 @@ export class UI {
     nollaaFokuskuvat(this);
     nollaaFokuskohteet(this);
     nollaaFokuspiste(this);
+    nollaaElaintakyt(this);
     // Uusi lauta, tyhjä kerros: muistettu näkymätunniste ei saa jäädä
     // voimaan, tai nimet jäisivät piirtymättä kun sama näkymä palaa.
     this.maastonimiTunniste = null;
@@ -7900,6 +7906,8 @@ export class UI {
     paivitaFokuskohteet(this);
     // Kuudes kerros: kevyen kulun vihreä kohtaamispiste (js/fokuspiste.js).
     paivitaFokuspiste(this);
+    // Sama kerrosjono jatkuu maiden eläintäyillä (js/elaintaky.js).
+    paivitaElaintakyt(this);
     /*
      * Viides kerros: ruutuun ankkuroidut mitat (mittajana ja
      * kartuutsi). Kutsu on tässä samasta syystä kuin pallojen: pohja
@@ -12579,6 +12587,14 @@ export class UI {
    * joten kutsu kulkee ui-olion kautta kuten lehden muutkin.
    */
   paivitaFokuspiste() { return paivitaFokuspiste(this); }
+
+  /*
+   * Sama ohut delegaattori eläintäyille (js/elaintaky.js): kortti
+   * maksaa löytöpalkkion ja haluaa merkin haalistuvan heti, ja savuke
+   * ajaa merkkikerroksen näkyvyyden ui-olion kautta kuten muutkin
+   * kartan kerrokset.
+   */
+  paivitaElaintakyt() { return paivitaElaintakyt(this); }
 
   naytaTutkiSivu(indeksi, asetukset) { return naytaTutkiSivu(this, indeksi, asetukset); }
 
