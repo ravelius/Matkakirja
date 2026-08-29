@@ -767,18 +767,31 @@ export const FOKUSVIRTA_TUKHOLMA = {
       lahde: 'sv-Wikipedia "Vasaloppet", johdanto sekä osiot ensimmäisestä '
         + 'kisasta ja 1900-luvun lopusta; tarkistettu 29.8.2026.',
       /*
-       * PÄÄKUVA on pelin omasta aineistosta (sama tiedosto SWE/historia,
-       * js/packs/maa-kategoriat.js) — jo tarkistettu ja hyväksytty.
-       * Commons 29.8.2026: CC BY 3.0, Vasaloppet/Nisse Schmidt.
-       * SILMÄTARKISTUS tehty: hiihtäjä ladulla, yksi tunnistettava
-       * kilpailija julkisessa urheilutapahtumassa.
+       * PÄÄKUVAKSI LOISTOAIKA (29.8.2026, sama malli kuin Sofian
+       * areenalla ja v1307/v1312:n nostoilla): repon oma generoitu
+       * havainnekuva, jolla ei ole Commons-nimeä eikä varareittiä,
+       * joten kenttä on `osoite` eikä `tiedosto` (js/fokusnosto.js
+       * asetaNostonKuva).
        *
-       * LOISTOAIKAKUVAA EI VIELÄ OLE. Aallon 2 nostoilla pääkuva on repon
-       * oma generoitu havainnekuva; tämän erän kuvat ovat vasta
-       * promptinipussa, joten pääkuvaksi jää valokuva kunnes generointi
-       * on ajettu. Aihe on kirjattu raporttiin.
+       * Kuva näyttää kisan varhaisilta vuosilta: joukkolähtö puusuksilla
+       * ja arkivaatteissa, lähettäjä lippu kädessä. Loistoaika on se,
+       * kun kisasta tuli kansanjuhla — ei nykyinen suurtapahtuma.
        */
       kuva: {
+        osoite: 'assets/kartat/nostot/nosto-vasaloppet-loistoaika.webp',
+        selite: 'Vasaloppetin joukkolähtö kisan varhaisvuosina: puusukset, '
+          + 'arkivaatteet ja lähettäjän lippu.',
+        lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
+      },
+      /*
+       * KAKKOSKUVA tekstin alle on entinen ainoa kuva — pelin omasta
+       * aineistosta (sama tiedosto SWE/historia,
+       * js/packs/maa-kategoriat.js). Tiedosto, selite ja lähde
+       * ennallaan. Commons 29.8.2026: CC BY 3.0, Vasaloppet/Nisse
+       * Schmidt. SILMÄTARKISTUS tehty: hiihtäjä ladulla, yksi
+       * tunnistettava kilpailija julkisessa urheilutapahtumassa.
+       */
+      valokuva: {
         tiedosto: 'Jørgen Aukland Vasaloppet 2013 002.jpg',
         selite: 'Vasaloppet hiihdetään maaliskuun ensimmäisenä sunnuntaina '
           + 'Bergasta Moraan, ja 90 kilometrin kisa on maailman vanhin ja '

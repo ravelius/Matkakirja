@@ -574,17 +574,32 @@ export const FOKUSVIRTA_TALLINNA = {
       lahde: 'en-Wikipedia "Kaali crater", johdanto sekä osiot syntymästä, '
         + 'vaikutuksista ja kulttipaikasta; tarkistettu 29.8.2026.',
       /*
-       * PÄÄKUVA. Virolla ei ole pelidatassa kraatterikuvaa, joten
-       * nostolle jää maan oma, jo hyväksytty kartta-aineisto: Joan
-       * Blaeun vuoden 1667 Livonia-kartta, joka näyttää saman saaren
-       * siihen aikaan, kun kraatteria pidettiin vielä järvenä.
-       * Commons 29.8.2026: public domain, Joan Blaeu. SILMÄTARKISTUS
-       * tehty: vanha kartta, ei ihmisiä.
+       * PÄÄKUVAKSI LOISTOAIKA (29.8.2026, sama malli kuin Sofian
+       * areenalla ja v1307/v1312:n nostoilla): repon oma generoitu
+       * havainnekuva, jolla ei ole Commons-nimeä eikä varareittiä,
+       * joten kenttä on `osoite` eikä `tiedosto` (js/fokusnosto.js
+       * asetaNostonKuva).
        *
-       * LOISTOAIKAKUVAA EI VIELÄ OLE (ks. sama huomautus Tukholmassa):
-       * kraatterijärvi ja palanut metsä ovat promptinipussa.
+       * Kuva näyttää sen hetken, josta koko nosto kertoo: tuore
+       * kraatteri savuavan, kaatuneen metsän keskellä. Kohteen
+       * loistoaika ei ole kraatterijärvi vaan törmäys itse.
+       *
+       * LÄHDERIVI on sovitettu (v1307:n dracula-malli), koska kuva ei
+       * näytä kohdetta yleisesti loistoaikanaan vaan yhden hetken.
        */
       kuva: {
+        osoite: 'assets/kartat/nostot/nosto-kaali-loistoaika.webp',
+        selite: 'Kaalin kraatteri tuoreena: metsä on kaatunut ja savuaa '
+          + 'kilometrien säteellä, ja kuopan reunalle on tultu katsomaan.',
+        lahde: 'Matkakirjan havainnekuva: kohde törmäyksen jälkeisenä hetkenä',
+      },
+      /*
+       * KAKKOSKUVA tekstin alle on entinen ainoa kuva — Viron oma,
+       * jo hyväksytty kartta-aineisto. Tiedosto, selite ja lähde
+       * ennallaan. Commons 29.8.2026: public domain, Joan Blaeu.
+       * SILMÄTARKISTUS tehty: vanha kartta, ei ihmisiä.
+       */
+      valokuva: {
         tiedosto: 'Livonia, Vulgo Lyefland - Atlas Maior, vol 2, map 10 - Joan Blaeu, 1667 - BL 114.h(star).2.(10).jpg',
         selite: 'Joan Blaeun vuoden 1667 kartta Liivinmaasta: Saarenmaa on '
           + 'siinä jo tarkasti piirretty, mutta kraatterijärvi on vain '

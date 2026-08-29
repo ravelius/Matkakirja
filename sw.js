@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1337';
+const CACHE = 'matkakirja-2026-08-09.1338';
 const SHELL = [
   './',
   './index.html',
@@ -879,6 +879,13 @@ const SHELL = [
   './assets/kartat/nostot/nosto-rotunde-loistoaika.webp',
   './assets/kartat/nostot/nosto-tuileriat-loistoaika.webp',
   './assets/kartat/nostot/nosto-voitonpylvas-loistoaika.webp',
+  // Aallon 3 neljä täkynostoa saivat pääkuvansa 29.8.2026 (Tallinna,
+  // Helsinki, Kööpenhamina, Tukholma). Riika ja Bergen odottavat yhä
+  // omaa kuvaansa.
+  './assets/kartat/nostot/nosto-kaali-loistoaika.webp',
+  './assets/kartat/nostot/nosto-tervakauppa-loistoaika.webp',
+  './assets/kartat/nostot/nosto-trelleborg-loistoaika.webp',
+  './assets/kartat/nostot/nosto-vasaloppet-loistoaika.webp',
   /*
    * ISOISÄN KARTTALIITTEET (29.8.2026, pilottina Wienin
    * maailmannäyttely). Sama syy kuin loistoaikakuvilla yllä: liite on

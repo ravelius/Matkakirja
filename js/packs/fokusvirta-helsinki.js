@@ -592,18 +592,31 @@ export const FOKUSVIRTA_HELSINKI = {
         + 'fi-Wikipedia "Oulu", osio kaupungin historiasta; tarkistettu '
         + '29.8.2026.',
       /*
-       * PÄÄKUVA on pelin omasta aineistosta (sama tiedosto FIN,
-       * js/packs/maa-kategoriat.js — runonlaulajien kuva EI kelpaa
-       * tähän, joten kuva on Suomenlinnan sukellusvenekuvan sijasta
-       * Helsingin oman lehden silakkamarkkinakuva: satama, veneet ja
-       * lasti). Commons 29.8.2026: CC BY 4.0, tekijä tuntematon,
-       * Helsingin kaupunginmuseon kokoelma. SILMÄTARKISTUS tehty:
-       * aikalaisvalokuva satamatorista, ihmiset kaukaisina hahmoina.
+       * PÄÄKUVAKSI LOISTOAIKA (29.8.2026, sama malli kuin Sofian
+       * areenalla ja v1307/v1312:n nostoilla): repon oma generoitu
+       * havainnekuva, jolla ei ole Commons-nimeä eikä varareittiä,
+       * joten kenttä on `osoite` eikä `tiedosto` (js/fokusnosto.js
+       * asetaNostonKuva).
        *
-       * LOISTOAIKAKUVAA EI VIELÄ OLE (ks. sama huomautus Tukholmassa):
-       * tervahovi ja tervavene Oulujoella ovat promptinipussa.
+       * Kuva näyttää juuri sen, mistä nosto kertoo: tervavene
+       * tynnyrilastissa Oulun tervahovin rannassa, tynnyrit
+       * kaupattavina laiturilla.
        */
       kuva: {
+        osoite: 'assets/kartat/nostot/nosto-tervakauppa-loistoaika.webp',
+        selite: 'Tervavene tulee Oulujokea alas täydessä lastissa, ja '
+          + 'tynnyrit nostetaan tervahovin rantaan punnittaviksi.',
+        lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
+      },
+      /*
+       * KAKKOSKUVA tekstin alle on entinen ainoa kuva — pelin omasta
+       * aineistosta (sama tiedosto FIN, js/packs/maa-kategoriat.js).
+       * Tiedosto, selite ja lähde ennallaan. Commons 29.8.2026:
+       * CC BY 4.0, tekijä tuntematon, Helsingin kaupunginmuseon
+       * kokoelma. SILMÄTARKISTUS tehty: aikalaisvalokuva
+       * satamatorista, ihmiset kaukaisina hahmoina.
+       */
+      valokuva: {
         tiedosto: 'Kauppatori, syys- eli silakkamarkkinat - G30676 - hkm.HKMS000005-km0000pheu.jpg',
         selite: 'Eteläsataman rantaan purjehdittiin lasteineen kauan ennen '
           + 'höyrylaivoja; samoja laitureita myöten kulki myös terva.',

@@ -600,13 +600,30 @@ export const FOKUSVIRTA_KOBENHAVN = {
       lahde: 'en-Wikipedia "Trelleborg (Slagelse)", johdanto sekä osiot '
         + 'rakenteesta ja ajoituksesta; tarkistettu 29.8.2026.',
       /*
-       * PÄÄKUVA on pelin omasta aineistosta (sama tiedosto DNK/historia).
-       * Commons 29.8.2026: CC BY-SA 3.0, Thue C. Leibrandt.
-       * SILMÄTARKISTUS tehty: ilmakuva rengasvallista, ei ihmisiä.
+       * PÄÄKUVAKSI LOISTOAIKA (29.8.2026, sama malli kuin Sofian
+       * areenalla ja v1307/v1312:n nostoilla): repon oma generoitu
+       * havainnekuva, jolla ei ole Commons-nimeä eikä varareittiä,
+       * joten kenttä on `osoite` eikä `tiedosto` (js/fokusnosto.js
+       * asetaNostonKuva).
        *
-       * LOISTOAIKAKUVAA EI VIELÄ OLE (ks. sama huomautus Tukholmassa).
+       * Kuva näyttää saman rengasvallin asuttuna: neljä pihaa,
+       * kuusitoista pitkää taloa ja mittaan tehty portti — se mistä
+       * nykyisessä ilmakuvassa on jäljellä vain nurmivalli.
        */
       kuva: {
+        osoite: 'assets/kartat/nostot/nosto-trelleborg-loistoaika.webp',
+        selite: 'Trelleborg asuttuna: neljä pihaa, kuusitoista pitkää taloa '
+          + 'täsmälleen samassa mitassa ja portti jokaiseen ilmansuuntaan.',
+        lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
+      },
+      /*
+       * KAKKOSKUVA tekstin alle on entinen ainoa kuva — pelin omasta
+       * aineistosta (sama tiedosto DNK/historia). Tiedosto, selite ja
+       * lähde ennallaan. Commons 29.8.2026: CC BY-SA 3.0, Thue C.
+       * Leibrandt. SILMÄTARKISTUS tehty: ilmakuva rengasvallista, ei
+       * ihmisiä.
+       */
+      valokuva: {
         tiedosto: 'Trelleborg airphoto.JPG',
         selite: 'Trelleborg on yksi seitsemästä tunnetusta '
           + 'viikinkiaikaisesta rengaslinnoituksesta, ja sen rakennutti '
