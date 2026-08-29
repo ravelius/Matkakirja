@@ -150,8 +150,28 @@ export const TAKY_PALKKIO = 50;
  * minitehtävät — on js/fokustehtavat.js:n FOKUS_LEHTITEHTAVAT. Liput
  * ovat toistensa vastakohdat: vanha virta palautetaan kääntämällä tämä
  * `true`ksi ja se `false`ksi.
+ *
+ * ── KORTIT PÄÄLLE (omistajan päätös 29.8.2026: *"Päälle — koko kulku
+ *    testiin"*) ────────────────────────────────────────────────────
+ *
+ * Syvennyskortit, minivisat ja oppitunnit rakennettiin kahdessatoista
+ * fokuskaupungissa (Ateena, Sofia, Istanbul, Rooma, Bukarest, Sarajevo
+ * + aallot 1–3), mutta lipun ollessa pois kukaan ei nähnyt niistä
+ * yhtäkään riviä. Lippu on nyt `true`, ja kulku on jälleen Raamatun
+ * ANNOSTELU-osion kuusivaiheinen:
+ *
+ *   matkakirja → Livian kupla → valinta → täky + minivisa → oppitunti
+ *   → kohtaaminen (tai sähketehtävä) → laattakysymys
+ *
+ * KEVYEN KULUN LIPPU JÄÄ PÄÄLLE. FOKUS_LEHTITEHTAVAT ei kääntynyt
+ * `false`ksi, vaikka lippujen kommentit lupasivat liput toistensa
+ * vastakohdiksi: lehden nimetyt tehtävät (AARTEEN AVAUS, JULISTE) ja
+ * täkynostot ovat pelaajalle sisältöä, joka odottaa aarteen jälkeisessä
+ * vapaassa tutkinnassa. Lehtilukko pitää huolen siitä, ettei kahta
+ * annostelijaa ole yhtä aikaa auki: lehti — ja sen tehtävät — aukeaa
+ * vasta laatan käännyttyä.
  */
-export const FOKUSVIRTA_KORTIT = false;
+export const FOKUSVIRTA_KORTIT = true;
 
 /**
  * Virran vaiheet. Viimeinen on "virta pelattu läpi".
@@ -521,10 +541,12 @@ export function fokusvirtaMerkintaLuettu(ui, city) {
  * v1225 kirjoitti kuuteen fokuskaupunkiin Livian maadoituskommentin
  * (packs/fokusvirta-*.js, kenttä pollo.maadoitus): vastauksen isoisän
  * merkinnän SÄVYYN, ei sen faktoihin. Kommentit piirtyivät kuitenkin
- * vain fokusvirran kuplissa, ja koska kevyt kulku on voimassa
- * (FOKUSVIRTA_KORTIT = false), kukaan ei nähnyt niistä yhtäkään.
- * v1232 toi ne kevyen kulun omaan saapumiskuplaan: kun pelaaja on
- * kuullut matkakirjamerkinnän loppuun, Livia kommentoi ensimmäisenä.
+ * vain fokusvirran kuplissa, ja koska korttiannostelu oli silloin
+ * lipun takana, kukaan ei nähnyt niistä yhtäkään. v1232 toi ne kevyen
+ * kulun omaan saapumiskuplaan: kun pelaaja on kuullut
+ * matkakirjamerkinnän loppuun, Livia kommentoi ensimmäisenä. Kortit
+ * päälle -päätöksen (29.8.2026) jälkeen maadoitus tulee taas pöllön
+ * kortilta, ja kupla jää kaupunkien omille saapumisrepliikeille.
  *
  * LAAJENNUS 28.8.2026 (omistaja): *"AINA kun isoisän
  * matkakirjamerkinnän luenta loppuu, Livia saa kommentoida jotain
@@ -1753,12 +1775,34 @@ function piirraMinivisa(ui, city, data, taky, kohde) {
 }
 
 /* ---------- vaihe 5 ---------- */
+
+/**
+ * OPPITUNNIN JATKONAPPI LUPAA SEN, MIKÄ SEURAAVAKSI TULEE.
+ *
+ * Nappi luki ennen aina `kohtaaminen.nappi` ("Tapaa Nadia"), mutta
+ * sähkekaupungissa sen takana ei ole ketään tavattavaa vaan pöllön
+ * sähke — ja sähke voittaa kohtaamisen myös silloin, kun molemmat ovat
+ * datassa (Sofian pilottiehto, ks. piirraSisalto). Kortit päälle
+ * -pelitestissä 29.8.2026 juuri se näkyi: Sofian oppitunti tarjosi
+ * "Tapaa Nadia" ja seuraava kortti olikin sähke.
+ *
+ * Järjestys on siis sama kuin piirtäjän valinnassa: sähke ensin,
+ * kohtaaminen sen jälkeen, ja viimeisenä väritön "Jatka". Sanamuoto on
+ * sama kuin vihreän pisteen ruudunlukijalapussa
+ * (fokusvirtaKohtaamispiste), jotta pelaaja lukee saman lupauksen
+ * kummalta pinnalta tahansa.
+ */
+function aarrevaiheenNappi(data) {
+  if (data.sahketehtava) return data.sahketehtava.nappi ?? 'Lue pöllön sähke';
+  return data.kohtaaminen?.nappi ?? 'Jatka';
+}
+
 function piirraOppitunti(ui, city, data, kohde) {
   otsikko(kohde, PULU_YLARIVI, data.oppitunti.otsikko);
   piirraKuva(ui, kohde, data.oppitunti.kuva);
   piirraTeksti(kohde, data.oppitunti.teksti);
   piirraJalkikuva(ui, kohde, data.oppitunti.valokuva);
-  piirraNapit(kohde, [nappi(data.kohtaaminen?.nappi ?? 'Jatka', 'primary', () => {
+  piirraNapit(kohde, [nappi(aarrevaiheenNappi(data), 'primary', () => {
     sfx.play('paper');
     siirry(ui, city, data, 'jatka');
   })]);
@@ -2551,9 +2595,24 @@ function kerroAarteesta(ui, avain, yritys) {
  * kerrottu. Vanhaan tallennukseen palaava pelaaja ei siis saa kuittausta
  * aarteista, jotka hän löysi eilen — laatta oli jo poissa, kun istunto
  * alkoi.
+ *
+ * ── EI KYTKIMEN TAKANA (korjaus 29.8.2026, kortit päälle) ──────────
+ *
+ * Tässä luki ennen `if (FOKUSVIRTA_KORTIT) return`, koska aarremerkintä
+ * ja aarrekuittaus kirjoitettiin kevyttä kulkua varten. Kortit päälle
+ * -pelitestissä se olisi vienyt KAIKISTA kahdeksastatoista
+ * fokuskaupungista isoisän aarremerkinnän ja Livian jälkisanan — ja
+ * samalla katkaissut sähketehtävän dokumentoidun lopun, joka nojaa
+ * juuri tähän kutsuun (ks. PÖLLÖN SÄHKETEHTÄVÄ, "LENTO EI LUKITSE
+ * PELIÄ").
+ *
+ * Mitta on laatta eikä virran vaihe, joten kutsu käyttäytyy
+ * kummallakin virralla samoin: löytöhetki on se, jona laatta katoaa
+ * kartalta. Aarremerkintä on lisäksi samaa kirjaa kuin saapumismerkintä
+ * — ja se on nimenomaisesti se osa, jonka lipun oli määrä säilyttää.
  */
 function aarreLoytyi(ui) {
-  if (FOKUSVIRTA_KORTIT || typeof document === 'undefined') return;
+  if (typeof document === 'undefined') return;
   const city = ui?.game?.cityOf?.();
   // Aarremerkintä kuuluu sille kaupungille, jossa aarre löytyi: kun
   // pelaaja matkustaa eteenpäin, matkakirjakortti palaa omilleen.

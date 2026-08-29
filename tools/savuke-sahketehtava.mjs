@@ -70,6 +70,26 @@ function korvaa(lahde, etsi, tilalle) {
   return lahde.replace(etsi, tilalle);
 }
 
+/*
+ * VAIN REITTI LUETAAN LIPUSTA, EI TEHTÄVÄ.
+ *
+ * Sähketehtävä itse on sama molemmilla virroilla: sama kortti, sama
+ * lomake, sama lento ja sama aarremerkintä. Eroa on vain siinä, MITÄ
+ * KAUTTA kortille tullaan. Kevyessä kulussa reitti on kartan vihreä
+ * piste (js/fokuspiste.js), joka syttyy lehden AARTEEN AVAUS
+ * -tehtävästä. Korttiannostelussa (omistajan päätös 29.8.2026, "Päälle
+ * — koko kulku testiin") pistettä ei ole lainkaan: pelaaja tulee
+ * sähkeelle oppitunnin jatkonapista.
+ *
+ * Savuke lukee EXPORT-RIVIN eikä pelkkää mainintaa — moduulien
+ * historiakommentit puhuvat lipusta molemmilla arvoilla.
+ */
+const LIPPURIVI = readFileSync(join(JUURI, 'js/fokusvirta.js'), 'utf8')
+  .match(/^export const FOKUSVIRTA_KORTIT = (\w+);$/m);
+if (!LIPPURIVI) throw new Error('FOKUSVIRTA_KORTIT-lipun määritystä ei löydy');
+const KORTIT = LIPPURIVI[1] === 'true';
+console.log(`Reitti aarrevaiheeseen: ${KORTIT ? 'oppitunnin jatkonappi (kortit)' : 'kartan vihreä piste (kevyt kulku)'}`);
+
 const palvelin = createServer((req, res) => {
   const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html';
   const polku = join(JUURI, suhteellinen);
@@ -191,34 +211,74 @@ for (const kaupunki of KAUPUNGIT) {
   vaadi(`${kaupunki.nimi}: vihreää pistettä ei ole ennen aarteen avausta`,
     alku.pisteita === 0, String(alku.pisteita));
 
-  /* ---------- AARTEEN AVAUS sytyttää pisteen ---------- */
+  /* ---------- reitti aarrevaiheeseen ---------- */
 
-  const aarre = await sivu.evaluate(async (vastaus) => {
-    const { ui, game } = window.matkakirja;
-    ui.avaaTutkinta(game.cityOf());
-    await new Promise((r) => setTimeout(r, 900));
-    ui.naytaTutkiSivu(2, { heti: true });
-    await new Promise((r) => setTimeout(r, 600));
-    const napit = [...document.querySelectorAll('#arrival-dialog .kulttuuri-vaihtoehdot button')];
-    const oikea = napit.find((b) => new RegExp(vastaus, 'i').test(b.textContent));
-    if (!oikea) return { virhe: napit.map((b) => b.textContent) };
-    oikea.click();
-    await new Promise((r) => setTimeout(r, 700));
-    document.getElementById('arrival-dialog')?.close();
-    ui.render();
-    await new Promise((r) => setTimeout(r, 700));
-    const piste = document.querySelector('.fokuspiste');
-    return {
-      pisteita: document.querySelectorAll('.fokuspiste').length,
-      nimi: piste?.getAttribute('aria-label') ?? '',
-    };
-  }, kaupunki.aarreVastaus.source);
-  vaadi(`${kaupunki.nimi}: AARTEEN AVAUS sytyttää vihreän pisteen`,
-    aarre.pisteita >= 1, JSON.stringify(aarre));
-  vaadi(`${kaupunki.nimi}: pisteen lappu kertoo sähkeestä eikä tapaamisesta`,
-    kaupunki.piste.test(aarre.nimi) && /sähke/i.test(aarre.nimi)
-      && !/tapaa paikallinen/i.test(aarre.nimi),
-    aarre.nimi);
+  if (KORTIT) {
+    /*
+     * KORTTIANNOSTELU: virta ajetaan portille asti tilan kautta ja
+     * oppitunnin jatkonappi painetaan. Tila kirjoitetaan suoraan, koska
+     * savukkeen mittauskohde on aarrevaihe eikä täkyjen läpikäynti —
+     * yksi tehty täky riittää avaamaan portin (fokusvirtaPorttiAuki).
+     *
+     * Nappi on kortin VIIMEINEN: oppituntikortilla se on ainoa, ja
+     * kortin muut linkit ovat sen edellä. Sen tekstin on luvattava
+     * sähke eikä tapaamista — Sofiassa datassa on omistajan
+     * pilottiehdon takia MOLEMMAT (Nadian kohtaaminen ja pöllön sähke),
+     * ja sähke voittaa (js/fokusvirta.js aarrevaiheenNappi).
+     */
+    const portti = await sivu.evaluate(async () => {
+      const { ui, game } = window.matkakirja;
+      const fv = await import('/js/fokusvirta.js');
+      const city = game.cityOf();
+      const data = fv.fokusvirtaSisalto(ui, city);
+      fv.asetaFokusvirtaTila(game, city, {
+        vaihe: 'oppitunti', taky: null, tehdyt: [data.takyt[0].id], kohde: null, kohteet: [],
+      });
+      fv.avaaFokusvirta(ui, city);
+      await new Promise((r) => setTimeout(r, 500));
+      const napit = [...document.querySelectorAll('.fokusvirta-kortti .fokusvirta-napit button')];
+      const viimeinen = napit[napit.length - 1];
+      const teksti = viimeinen?.textContent ?? '';
+      viimeinen?.click();
+      await new Promise((r) => setTimeout(r, 700));
+      return {
+        teksti,
+        vaihe: fv.fokusvirtaTila(game, city, data).vaihe,
+        pisteita: document.querySelectorAll('.fokuspiste').length,
+      };
+    });
+    vaadi(`${kaupunki.nimi}: oppitunnin nappi lupaa sähkeen eikä tapaamista`,
+      /sähke/i.test(portti.teksti) && !/tapaa/i.test(portti.teksti), portti.teksti);
+    vaadi(`${kaupunki.nimi}: virta siirtyi aarrevaiheeseen`,
+      portti.vaihe === 'kohtaaminen', JSON.stringify(portti));
+  } else {
+    const aarre = await sivu.evaluate(async (vastaus) => {
+      const { ui, game } = window.matkakirja;
+      ui.avaaTutkinta(game.cityOf());
+      await new Promise((r) => setTimeout(r, 900));
+      ui.naytaTutkiSivu(2, { heti: true });
+      await new Promise((r) => setTimeout(r, 600));
+      const napit = [...document.querySelectorAll('#arrival-dialog .kulttuuri-vaihtoehdot button')];
+      const oikea = napit.find((b) => new RegExp(vastaus, 'i').test(b.textContent));
+      if (!oikea) return { virhe: napit.map((b) => b.textContent) };
+      oikea.click();
+      await new Promise((r) => setTimeout(r, 700));
+      document.getElementById('arrival-dialog')?.close();
+      ui.render();
+      await new Promise((r) => setTimeout(r, 700));
+      const piste = document.querySelector('.fokuspiste');
+      return {
+        pisteita: document.querySelectorAll('.fokuspiste').length,
+        nimi: piste?.getAttribute('aria-label') ?? '',
+      };
+    }, kaupunki.aarreVastaus.source);
+    vaadi(`${kaupunki.nimi}: AARTEEN AVAUS sytyttää vihreän pisteen`,
+      aarre.pisteita >= 1, JSON.stringify(aarre));
+    vaadi(`${kaupunki.nimi}: pisteen lappu kertoo sähkeestä eikä tapaamisesta`,
+      kaupunki.piste.test(aarre.nimi) && /sähke/i.test(aarre.nimi)
+        && !/tapaa paikallinen/i.test(aarre.nimi),
+      aarre.nimi);
+  }
 
   await sivu.screenshot({ path: join(ULOS, `savuke-sahke-${kaupunki.id}-piste.png`) });
 
@@ -239,10 +299,14 @@ for (const kaupunki of KAUPUNGIT) {
 
   /* ---------- sähkekortti ja lomake ---------- */
 
-  const kortti = await sivu.evaluate(async () => {
+  const kortti = await sivu.evaluate(async (kortit) => {
     window.matkakirja.ui.busy = false;
-    document.querySelector('.fokuspiste')
-      ?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    // Korttiannostelussa sähkekortti on jo auki (oppitunnin jatkonappi
+    // avasi sen); kevyessä kulussa se avataan kartan pisteestä.
+    if (!kortit) {
+      document.querySelector('.fokuspiste')
+        ?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    }
     await new Promise((r) => setTimeout(r, 600));
     const k = document.querySelector('.fokusvirta-kortti');
     const valinta = k?.querySelector('.fokusvirta-sahkevalinta');
@@ -261,8 +325,8 @@ for (const kaupunki of KAUPUNGIT) {
       aakkosissa: optiot.every((v, i) => i === 0 || optiot[i - 1].localeCompare(v, 'fi') <= 0),
       palkkiorivi: k?.querySelector('.fokusvirta-varoitus')?.textContent ?? '',
     };
-  });
-  vaadi(`${kaupunki.nimi}: pisteen napautus avaa sähkekortin`,
+  }, KORTIT);
+  vaadi(`${kaupunki.nimi}: reitti aarrevaiheeseen avaa sähkekortin`,
     kortti.kortti && /sähke/i.test(kortti.ylarivi) && /pöllö/i.test(kortti.otsikko),
     JSON.stringify([kortti.ylarivi, kortti.otsikko]));
   vaadi(`${kaupunki.nimi}: sähke on sähketyylinen (STOP-rivit)`,

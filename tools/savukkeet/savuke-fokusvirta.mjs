@@ -62,16 +62,23 @@
  */
 /*
  * KEVYT KULKU -KOKEILUN OHITUSVAHTI (Fable 24.8.2026): tama savuke
- * mittaa korttiannostelua ja lehtinakymaa, jotka ovat kokeilun ajan
- * lipun takana (js/fokusvirta.js FOKUSVIRTA_KORTIT = false). Lipun
- * ollessa pois savuke ohitetaan; kun vanha virta palautetaan, vahti
- * paastaa savukkeen ajoon sellaisenaan. Kokeilutilan oma kattavuus:
+ * mittaa korttiannostelua ja lehtinakymaa, jotka olivat kokeilun ajan
+ * lipun takana (js/fokusvirta.js FOKUSVIRTA_KORTIT). Lipun ollessa pois
+ * savuke ohitetaan; kun vanha virta palautetaan, vahti paastaa
+ * savukkeen ajoon sellaisenaan. Kokeilutilan oma kattavuus:
  * tools/savuke-fokusvirta.mjs ja tools/savuke-fokuskartta.mjs.
+ *
+ * OMISTAJAN PAATOS 29.8.2026 ("Paalle - koko kulku testiin"): lippu on
+ * nyt paalla, joten tama savuke ajaa taas. Vahti lukee EXPORT-RIVIN eika
+ * pelkkaa mainintaa — moduulin historiakommentti riitti aiemmin
+ * ohittamaan savukkeen vaikka lippu oli paalla (havaittu 29.8.2026).
  */
 {
   const { readFileSync } = await import('node:fs');
   const virta = readFileSync(new URL('../../js/fokusvirta.js', import.meta.url), 'utf8');
-  if (/FOKUSVIRTA_KORTIT\s*=\s*false/.test(virta)) {
+  const maaritys = virta.match(/^export const FOKUSVIRTA_KORTIT = (\w+);$/m);
+  if (!maaritys) throw new Error('FOKUSVIRTA_KORTIT-lipun maaritysta ei loydy');
+  if (maaritys[1] === 'false') {
     console.log('OHITETTU: kevyt kulku -kokeilu paalla (FOKUSVIRTA_KORTIT=false)');
     process.exit(0);
   }
@@ -333,15 +340,28 @@ await sivu.evaluate(() => {
 await sivu.waitForTimeout(500);
 let kirja = await matkakirja();
 let tila = await kortti();
+/*
+ * OTSAKE LYHENI (v1119): äänilähteen nimilappu on nyt pelkkä
+ * "Matkapäiväkirja" (js/ui.js factVoiceEl), ei "Matkapäiväkirjasta".
+ * Savuke nukkui lipun takana 24.8.2026 alkaen eikä nähnyt muutosta;
+ * väite päivitettiin kortit päälle -päätöksen yhteydessä 29.8.2026.
+ */
 vaadi('vaihe 1: merkintä on ylävasemmassa matkakirjakortissa',
-  kirja?.nurkka === 'tl' && kirja.aani.includes('Matkapäiväkirjasta')
+  kirja?.nurkka === 'tl' && kirja.aani.includes('Matkapäiväkirja')
   && kirja.paikka.includes('1873') && kirja.teksti.includes('Troijan kullan'),
   JSON.stringify(kirja));
 vaadi('vaihe 1: vanha valokuva on kortin kyljessä',
   kirja?.kuvaNakyy === true && /sophia[-_ ]schliemann/i.test(kirja.kuvaOsoite),
   JSON.stringify(kirja?.kuvaOsoite));
-vaadi('vaihe 1: saapumisluenta on vaiennettu (kuuntelunappi piilossa)',
-  kirja?.kuunteluPiilossa === true, JSON.stringify(kirja?.kuunteluPiilossa));
+/*
+ * KAIUTIN NÄKYY, KOSKA MERKINNÄLLÄ ON ÄÄNITE. Väite luki ennen, että
+ * saapumisluenta on vaiennettu ja kuuntelunappi piilossa. Ateenan
+ * matkakirjamerkinnälle äänitettiin sittemmin puhe
+ * (assets/audio/puhe-fokus-matkakirja-ateena.mp3), joten nappi on
+ * paikallaan — päivitetty 29.8.2026 kortit päälle -päätöksen yhteydessä.
+ */
+vaadi('vaihe 1: kaiutin näkyy, koska merkinnällä on äänite',
+  kirja?.kuunteluPiilossa === false, JSON.stringify(kirja?.kuunteluPiilossa));
 vaadi('vaihe 1: virralla ei ole omaa korttia — vain yksi matkakirja',
   tila === null, JSON.stringify(tila));
 
@@ -375,9 +395,15 @@ vaadi('vaihe 2 alkaa Livian maadoituksella isoisän merkintään',
   tila?.teksti.startsWith('"Molemmat puolet saattavat olla oikeassa yhtä aikaa."')
   && tila.teksti.includes('Hän osui, ja se harmittaa minua'),
   JSON.stringify(tila?.teksti));
+/*
+ * LAINAUKSET PUHEKIELISTYIVÄT savukkeen nukkuessa: "miten kullan kävi"
+ * → "miten sen kullan kävi", "tuonne ylös" → "tonne ylös"
+ * (js/packs/fokusvirta-ateena.js). Pituusraja pysyy ennallaan;
+ * päivitetty 29.8.2026 kortit päälle -päätöksen yhteydessä.
+ */
 vaadi('pöllön teksti on lyhennetty päätoimittajan versioon',
-  tila?.teksti.includes('Isoisäsi ei koskaan saanut tietää, miten kullan kävi.')
-  && tila.teksti.includes('Katso ensin tuonne ylös.') && tila.teksti.length < 560,
+  tila?.teksti.includes('Isoisäsi ei koskaan saanut tietää, miten sen kullan kävi.')
+  && tila.teksti.includes('Katso ensin tonne ylös.') && tila.teksti.length < 560,
   JSON.stringify(tila?.teksti));
 vaadi('kupla on pöllönapin yläpuolella eikä peitä sitä',
   Boolean(pollonappi) && tila?.laatikko.alin <= pollonappi.ylin,
@@ -637,7 +663,13 @@ tila = await kortti();
 vaadi('vaihe 6 esittelee paikallisen',
   tila?.vaihe === 'kohtaaminen' && tila.otsikko.includes('Nikos'), JSON.stringify(tila?.vaihe));
 
-await paina('Tapaa Nikos');
+/*
+ * KOHTAAMISEEN TULI KYLLÄ/EI-VARMISTUS 26.8.2026 (js/fokusvirta.js,
+ * "KYLLÄ JA EI OVAT OIKEITA NAPPEJA"): "Tapaa Nikos" avaa varmistuksen,
+ * ja luovutus laattamekaniikalle tapahtuu vasta Kyllä-napista. Väite
+ * päivitettiin 29.8.2026 kortit päälle -päätöksen yhteydessä.
+ */
+await paina('Kyllä', '.fokusvirta-varmistusnapit');
 await sivu.waitForTimeout(900);
 const luovutus = await sivu.evaluate(() => ({
   kortti: Boolean(document.querySelector('.fokusvirta-kortti, .fokusvirta-kupla')),

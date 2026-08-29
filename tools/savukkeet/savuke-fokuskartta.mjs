@@ -70,16 +70,23 @@
  */
 /*
  * KEVYT KULKU -KOKEILUN OHITUSVAHTI (Fable 24.8.2026): tama savuke
- * mittaa korttiannostelua ja lehtinakymaa, jotka ovat kokeilun ajan
- * lipun takana (js/fokusvirta.js FOKUSVIRTA_KORTIT = false). Lipun
- * ollessa pois savuke ohitetaan; kun vanha virta palautetaan, vahti
- * paastaa savukkeen ajoon sellaisenaan. Kokeilutilan oma kattavuus:
+ * mittaa korttiannostelua ja lehtinakymaa, jotka olivat kokeilun ajan
+ * lipun takana (js/fokusvirta.js FOKUSVIRTA_KORTIT). Lipun ollessa pois
+ * savuke ohitetaan; kun vanha virta palautetaan, vahti paastaa
+ * savukkeen ajoon sellaisenaan. Kokeilutilan oma kattavuus:
  * tools/savuke-fokusvirta.mjs ja tools/savuke-fokuskartta.mjs.
+ *
+ * OMISTAJAN PAATOS 29.8.2026 ("Paalle - koko kulku testiin"): lippu on
+ * nyt paalla, joten tama savuke ajaa taas. Vahti lukee EXPORT-RIVIN eika
+ * pelkkaa mainintaa — moduulin historiakommentti riitti aiemmin
+ * ohittamaan savukkeen vaikka lippu oli paalla (havaittu 29.8.2026).
  */
 {
   const { readFileSync } = await import('node:fs');
   const virta = readFileSync(new URL('../../js/fokusvirta.js', import.meta.url), 'utf8');
-  if (/FOKUSVIRTA_KORTIT\s*=\s*false/.test(virta)) {
+  const maaritys = virta.match(/^export const FOKUSVIRTA_KORTIT = (\w+);$/m);
+  if (!maaritys) throw new Error('FOKUSVIRTA_KORTIT-lipun maaritysta ei loydy');
+  if (maaritys[1] === 'false') {
     console.log('OHITETTU: kevyt kulku -kokeilu paalla (FOKUSVIRTA_KORTIT=false)');
     process.exit(0);
   }

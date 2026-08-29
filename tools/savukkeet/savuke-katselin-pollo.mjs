@@ -65,6 +65,24 @@ await sivu.route('**samireivinen.workers.dev/**', async (route) => {
 await sivu.goto(`http://localhost:${palvelin.address().port}/`, { waitUntil: 'load' });
 await sivu.waitForTimeout(1500);
 
+/*
+ * LEHTILUKKO AUKI LONTOOSSA. Tämä savuke käyttää Lontoon lehteä
+ * pelkkänä ISÄNTÄDIALOGINA kuvakatselimelle — mitattava asia on
+ * katselin, ei lehti. Lontoo on kuitenkin aallon 2 fokusvirtakaupunki,
+ * ja korttiannostelun päällä (omistajan päätös 29.8.2026) lehtilukko
+ * pitää lehden kiinni, kunnes laatta on käännetty — jolloin
+ * openArrival ei avaa mitään ja katselin jää ilman isäntää.
+ *
+ * Laatta poistetaan siis kerran ennen mittausta. Se on täsmälleen se
+ * tila, jossa pelaaja lehden oikeasti avaa: aarre löydetty, kaupunki
+ * vapaana tutkittavaksi.
+ */
+await sivu.evaluate(() => {
+  window.matkakirja.game.world.tokens.delete('lontoo');
+  window.matkakirja.ui.render();
+});
+await sivu.waitForTimeout(300);
+
 const katselin = await sivu.evaluate(async () => {
   const { ui } = window.matkakirja;
   const odota = (ms) => new Promise((r) => setTimeout(r, ms));
