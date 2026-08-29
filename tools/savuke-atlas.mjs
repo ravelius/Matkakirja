@@ -819,10 +819,24 @@ const maailma = await sivu.evaluate(() => {
     piilossa: document.querySelectorAll('[data-fokus-maa].fokus-piilossa').length,
     lehdenAlla: document.querySelectorAll('.cities .fokus-lehden-alla').length,
     reitit: getComputedStyle(document.querySelector('.staattinen')).display,
-    // Lehtien reunahäivytys: montako kuvaa on maskin alla (ks. alla).
+    /*
+     * Lehtien reunahäivytys (ks. väite alla). Maskeja on KAKSI ja ne
+     * erotetaan tunnisteesta, koska pelkkä olemassaolo ei enää kerro
+     * mitään: perillä maalehdillä on vuotomaski aina.
+     */
     kuvia: document.querySelectorAll('.fokuskartta-kuva').length,
     maskattu: [...document.querySelectorAll('.fokuskartta-kuva')]
       .filter((k) => k.getAttribute('mask')).length,
+    lennonMaski: [...document.querySelectorAll('.fokuskartta-kuva')]
+      .filter((k) => k.getAttribute('mask') === 'url(#lento-lehden-haivytys)').length,
+    vuodonMaski: [...document.querySelectorAll('.fokuskartta-kuva')]
+      .filter((k) => k.getAttribute('mask') === 'url(#lehden-vuotohaivytys)').length,
+    // Maalehdet = oman maan lehti ja atlaksen naapurit; yleislehti ja
+    // maailmanäkymän pikkulehdet ovat pohjaa (js/fokuskartta.js
+    // maalehdenKuva).
+    maalehtia: document.querySelectorAll(
+      '.fokus-lehti .fokuskartta-kuva, .fokus-atlas .fokuskartta-kuva',
+    ).length,
   });
   const ennen = lue();
   document.getElementById('kehittaja-maailma-btn').click();
@@ -850,13 +864,25 @@ vaadi('"maailma" avaa laudan: kaupungit näkyviin, sumu ja rajoite pois, ei reit
  * suorakulmainen reuna näkyy kokonaan kerralla tarkkana laikkuna
  * karkean yleiskartan päällä. Sama maski kuin avauslennolla korjaa
  * saman vian (js/fokuskartta.js paivitaLennonLehdet,
- * LENNON_HAIVYTYS_ID) — väite mittaa maskin OLEMASSAOLON kummassakin
- * suunnassa, koska napin toinen painallus purkaa näkymän ja maskin on
- * lähdettävä mukana.
+ * LENNON_HAIVYTYS_ID).
+ *
+ * MASKEJA ON KAKSI, JOTEN VÄITE LUKEE TUNNISTEEN (v1263, 28.8.2026:
+ * "Lehtisauma pois"). Ennen sitä maski purettiin perillä kokonaan ja
+ * tämä väite mittasi pelkkää olemassaoloa (`maskattu === 0`) — nyt
+ * lennon leveän häivytyksen tilalle tulee maalehdille VUOTOKAISTAN
+ * kapea häivytys, jottei lehti katkea terävään viivaan naapurilehden
+ * päälle, ja `maskattu` on perillä 3/4 eikä nolla. Peli on siis oikein;
+ * väite oli jäänyt jälkeen. Mitattava ero on maskin LAATU: pelaajan
+ * näkymässä ei ole yhtäkään lennon maskia mutta jokaisella maalehdellä
+ * on vuotomaski, maailmanäkymässä lennon maski on jokaisella kuvalla
+ * (myös pohjalehdillä).
  */
-vaadi('maailmanäkymä häivyttää lehtien reunat, pelaajan näkymässä maskia ei ole',
-  maailma.ennen.kuvia > 0 && maailma.ennen.maskattu === 0
-  && maailma.jalkeen.maskattu === maailma.jalkeen.kuvia,
+vaadi('maailmanäkymä häivyttää lehtien reunat lennon maskilla, pelaajan näkymässä vain vuotomaski',
+  maailma.ennen.kuvia > 0 && maailma.ennen.maalehtia > 0
+  && maailma.ennen.lennonMaski === 0
+  && maailma.ennen.vuodonMaski === maailma.ennen.maalehtia
+  && maailma.ennen.maskattu === maailma.ennen.maalehtia
+  && maailma.jalkeen.lennonMaski === maailma.jalkeen.kuvia,
   JSON.stringify({ ennen: maailma.ennen, jalkeen: maailma.jalkeen }));
 await sivu.waitForTimeout(600);
 await sivu.screenshot({ path: join(ULOS, 'savuke-atlas-maailma.png') });
@@ -983,10 +1009,14 @@ const sammutus = await sivu.evaluate(async () => {
   return {
     ryhmia: document.querySelectorAll('.fokus-maailma').length,
     pikku: document.querySelectorAll('.fokus-maailma image').length,
+    // Lennon maskin on lähdettävä näkymän mukana (ks. maskiväite yllä).
+    lennonMaski: [...document.querySelectorAll('.fokuskartta-kuva')]
+      .filter((k) => k.getAttribute('mask') === 'url(#lento-lehden-haivytys)').length,
   };
 });
-vaadi('napin sammutus vie pikkulehdet DOMista (purettu kuva vapautuu)',
-  sammutus.ryhmia === 0 && sammutus.pikku === 0, JSON.stringify(sammutus));
+vaadi('napin sammutus vie pikkulehdet DOMista (purettu kuva vapautuu) ja purkaa lennon maskin',
+  sammutus.ryhmia === 0 && sammutus.pikku === 0 && sammutus.lennonMaski === 0,
+  JSON.stringify(sammutus));
 
 /* ===================================================================
  * 10–11. ALFATON PAKKAUS EI SAA JÄTTÄÄ MUSTAA (omistajan pelitesti
