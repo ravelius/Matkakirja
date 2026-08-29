@@ -728,6 +728,16 @@ export function kehysLaji(kysymys, jatko = false) {
 const POLLO_ALANAPPIRIVISSA = false;
 
 /**
+ * KELLUVAN NAPIN VARAPAIKKA pikseleinä, kun nappia ei ole piirretty
+ * (ks. ankkuriLaatikko). Luvut vastaavat css/styles.css:n sääntöä
+ * `.pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla`: oikea reuna
+ * 1,1rem, halkaisija 2,9rem ja alareuna 5,3rem — 16 px:n juurikoolla
+ * 18, 46 ja 85 pikseliä. Tarkkuus riittää: kupla vain asettuu tähän
+ * kohtaan, mitään ei kohdisteta napin pikseleihin.
+ */
+const KELLUVAN_NAPIN_VARAPAIKKA = { reuna: 18, koko: 46, pohja: 85 };
+
+/**
  * Seepiapöllö. Viivapiirros samaan tapaan kuin pelin muut kuvakkeet
  * (.viiva-ikoni): pelkkä ääriviiva, täyttö vain silmäterissä, jotta se
  * istuu kartan mustekynätyyliin.
@@ -1977,7 +1987,7 @@ class Pollo {
      */
     this.kiinnita();
     const kupla = this.varmistaKupla();
-    kupla.classList.remove('pollo-vihje-juhla', 'pollo-vihje-maadoitus');
+    this.nollaaKuplanAsu(kupla);
     kupla.classList.toggle('pollo-vihje-ylos', Boolean(this.vihjeAnkkuri));
     kupla.textContent = teksti;
     kupla.hidden = false;
@@ -2049,14 +2059,18 @@ class Pollo {
    * polloNimilappu): pöllö-sana vedettynä yli, "Pulu" perässä.
    *
    * @param {string} teksti saapumispuheenvuoro; tyhjä ei tee mitään.
+   * @param {object} [asetukset]
+   * @param {(() => void)|null} [asetukset.kuittaus] napautus kuplaan vie
+   *   sarjan seuraavaan repliikkiin (js/livia.js ensisaapumisen
+   *   paljastus); yksittäinen puheenvuoro jättää tämän pois.
    * @returns {boolean} näkyikö kupla.
    */
-  naytaSaapumiskupla(teksti) {
+  naytaSaapumiskupla(teksti, { kuittaus = null } = {}) {
     if (!teksti || this.auki || this.nappi.hidden) return false;
     this.vihjeAnkkuri = null;
     this.kiinnita();
     const kupla = this.varmistaKupla();
-    kupla.classList.remove('pollo-vihje-juhla', 'pollo-vihje-parina', 'pollo-vihje-ylos');
+    this.nollaaKuplanAsu(kupla);
     kupla.classList.add('pollo-vihje-maadoitus');
     kupla.replaceChildren();
     kupla.appendChild(polloNimilappu(
@@ -2069,9 +2083,113 @@ class Pollo {
     // Saapumiskupla on oma puheenvuoronsa: mahdollinen parikupla kuului
     // edelliseen, ja kaksi eri puheenvuoroa yhtä aikaa olisi sekava.
     if (this.vihjeLisa) this.vihjeLisa.hidden = true;
+    this.kuplanKuittaus = kuittaus;
     this.asetaVihjeenPaikka();
     this.kuplanAani();
     return true;
+  }
+
+  /**
+   * LIVIAN AVAUSKUPLA ALOITUSVALINNASSA (omistaja 29.8.2026: *"Livia
+   * lennähtää mukaan jo aloitusvalinnassa"*).
+   *
+   * KAKSI EROA saapumiskuplaan, kaikki muu on samaa kuplaperhettä —
+   * sama paperi, sama kärki, sama paikannus ja sama napautussopimus:
+   *
+   *  1. KUPLA PUHUU, VAIKKA NAPPIA EI OLE. Aloitusvalinnassa
+   *     pöllönappi on piilossa (nakyyko: #intro on näkyvissä), joten
+   *     `nappi.hidden`-portti jättäisi muuten koko sarjan pois.
+   *     Paikannuksen varapaikka hoitaa ankkurin (ks. ankkuriLaatikko).
+   *  2. KUVAPAIKKA PUHEEN VIERESSÄ. Livialle generoidaan myöhemmin oma
+   *     kasvokuva juuri tähän näkymään (omistaja 29.8.2026); siihen
+   *     asti paikassa on sama viivakuvake kuin pöllönapissa. Kuvan
+   *     vaihto on yhden vakion muutos (js/livia.js LIVIAN_KASVOKUVA).
+   *
+   * NAPAUTUS VIE ETEENPÄIN: kuittaus-takaisinkutsu kerrotaan
+   * napautussopimukselle (sidoKuplanNapautus), joka sulkee kuplan ja
+   * antaa vuoron sarjan seuraavalle repliikille.
+   *
+   * @param {string} teksti repliikki (kaanonia, js/livia.js).
+   * @param {object} [asetukset]
+   * @param {string} [asetukset.kuva] kasvokuvan polku; tyhjä = viivakuvake.
+   * @param {boolean} [asetukset.lennahda] kevyt saapumisliike (sarjan avaus).
+   * @param {(() => void)|null} [asetukset.kuittaus] pelaajan napautus kuplaan.
+   * @returns {boolean} näkyikö kupla.
+   */
+  naytaAvauskupla(teksti, { kuva = '', lennahda = false, kuittaus = null } = {}) {
+    if (!teksti || this.auki) return false;
+    this.vihjeAnkkuri = null;
+    const kupla = this.varmistaKupla();
+    this.nollaaKuplanAsu(kupla);
+    kupla.classList.add('pollo-vihje-maadoitus', 'pollo-vihje-avaus');
+    // Liike aloittaa uudestaan vain kun sarja alkaa: luokka pois ja
+    // takaisin pakottaisi animaation joka repliikillä, ja Livia
+    // lennähtää paikalle kerran.
+    if (lennahda) kupla.classList.add('pollo-vihje-lennahtaa');
+    kupla.replaceChildren();
+    kupla.appendChild(this.avauksenKuvapaikka(kuva));
+    const puhe = polloElementti('div', 'pollo-vihje-puhe');
+    puhe.appendChild(polloNimilappu(
+      polloElementti('p', 'pollo-vihje-nimilappu'), {},
+    ));
+    for (const kappale of jaaKappaleiksi(teksti)) {
+      puhe.appendChild(polloElementti('p', 'pollo-vihje-lause', kappale));
+    }
+    kupla.appendChild(puhe);
+    kupla.hidden = false;
+    if (this.vihjeLisa) this.vihjeLisa.hidden = true;
+    this.kuplanKuittaus = kuittaus;
+    this.asetaVihjeenPaikka();
+    this.kuplanAani();
+    return true;
+  }
+
+  /**
+   * Kuvapaikka avauskuplaan: kasvokuva jos sellainen on, muuten sama
+   * viivapöllö kuin napissa. Paikka on aina samankokoinen, joten
+   * kuvan pudottaminen paikalleen ei muuta kuplan asettelua.
+   */
+  avauksenKuvapaikka(kuva = '') {
+    const paikka = polloElementti('div', 'pollo-vihje-kuvapaikka');
+    paikka.setAttribute('aria-hidden', 'true');
+    if (kuva) {
+      const kuvake = this.doc.createElement('img');
+      kuvake.className = 'pollo-vihje-kasvot';
+      kuvake.src = kuva;
+      kuvake.alt = '';
+      kuvake.decoding = 'async';
+      kuvake.draggable = false;
+      // Kuva muuttaa kuplan korkeutta latautuessaan, ja kupla on
+      // asemoitu alareunastaan — ilman uutta mittausta se hyppäisi.
+      kuvake.addEventListener('load', () => this.asetaVihjeenPaikka(), { once: true });
+      paikka.appendChild(kuvake);
+      return paikka;
+    }
+    const merkki = polloElementti('span', 'pollo-vihje-kuvake viiva-ikoni');
+    merkki.innerHTML = POLLO_IKONI;
+    paikka.appendChild(merkki);
+    return paikka;
+  }
+
+  /**
+   * Kuplan asu ja kuittaus perustilaan ennen uutta puheenvuoroa.
+   *
+   * Sama elementti palvelee vihjettä, juhlaa, saapumista ja avausta,
+   * joten edellisen asun luokat on siivottava — muuten juhlakupla
+   * perisi avauksen kuvapaikan asettelun. Kuittaus nollataan samalla:
+   * se kuuluu sille puheenvuorolle, joka sen asetti.
+   *
+   * Parikupla kuuluu myös edelliseen puheenvuoroon: kun ylempi kupla
+   * luopuu parisuhteestaan (luokka pois), alempi ei saa jäädä yksin
+   * kertomaan puolikasta lausetta.
+   */
+  nollaaKuplanAsu(kupla) {
+    kupla.classList.remove(
+      'pollo-vihje-juhla', 'pollo-vihje-maadoitus', 'pollo-vihje-parina',
+      'pollo-vihje-ylos', 'pollo-vihje-avaus', 'pollo-vihje-lennahtaa',
+    );
+    if (this.vihjeLisa) this.vihjeLisa.hidden = true;
+    this.kuplanKuittaus = null;
   }
 
   /**
@@ -2122,7 +2240,17 @@ class Pollo {
     kupla.addEventListener('pointerdown', (tapahtuma) => {
       if (omaHallinta(tapahtuma)) return;
       nielaiseSulkevaNapautus(tapahtuma, { doc: this.doc });
+      /*
+       * KUITTAUS OTETAAN TALTEEN ENNEN SULKUA. Napautus vie
+       * kuplasarjan seuraavaan repliikkiin (js/livia.js), mutta
+       * piilotaVihje voi tulla myös muualta — silloin sarja ei saa
+       * edetä. Siksi takaisinkutsu laukeaa vain tästä eleestä, ja se
+       * kelpaa kerran.
+       */
+      const kuittaus = this.kuplanKuittaus;
+      this.kuplanKuittaus = null;
       this.piilotaVihje();
+      kuittaus?.();
     });
     /*
      * Toinen vartio samalle napautukselle: jos kupla on clickin
@@ -2160,8 +2288,8 @@ class Pollo {
      */
     this.vihjeAnkkuri = this.doc.getElementById('turn-pill');
     const kupla = this.varmistaKupla();
+    this.nollaaKuplanAsu(kupla);
     kupla.classList.toggle('pollo-vihje-ylos', Boolean(this.vihjeAnkkuri));
-    kupla.classList.remove('pollo-vihje-maadoitus');
     kupla.classList.add('pollo-vihje-juhla');
     kupla.replaceChildren();
     if (kuva) {
@@ -2201,7 +2329,7 @@ class Pollo {
     // joten kupla asemoidaan topilla — bottom ja top nollataan
     // ristiin, koska sama elementti kiertää molemmissa asennoissa.
     const ankkuri = this.vihjeAnkkuri ?? this.nappi;
-    const nappi = ankkuri.getBoundingClientRect();
+    const nappi = this.ankkuriLaatikko(ankkuri, ikkuna);
     /*
      * KUPLA IRTI SIVURAJOISTA (omistajan pelitestipalaute v1119:
      * *"kuplat hieman irti sivurajoista — nyt kiinni oikeassa
@@ -2245,6 +2373,35 @@ class Pollo {
       return;
     }
     kupla.style.bottom = `${alaReuna}px`;
+  }
+
+  /**
+   * Ankkurin ruutulaatikko — ja varapaikka, jos ankkuria ei ole piirretty.
+   *
+   * Aloitusvalinnassa pöllönappi on PIILOSSA (nakyyko: #intro on
+   * näkyvissä), joten sen laatikko on nollan kokoinen ruudun
+   * vasemmassa yläkulmassa. Livian avauskupla puhuu juuri siinä
+   * näkymässä, ja ilman varapaikkaa se asettuisi ruudun yläreunan
+   * ulkopuolelle. Varapaikka on se kohta, jossa kelluva nappi
+   * muutenkin on (css/styles.css .pollo-kelluu-kartalla: oikea reuna,
+   * 5,3rem alalaidasta) — kupla puhuu siis siitä paikasta, johon
+   * pöllö ilmestyy myöhemmin.
+   *
+   * Muut kuplat eivät päädy tänne piilotetulla napilla: ne palaavat
+   * jo omissa `nappi.hidden`-porteissaan.
+   */
+  ankkuriLaatikko(ankkuri, ikkuna) {
+    const laatikko = ankkuri?.getBoundingClientRect?.() ?? null;
+    if (laatikko && (laatikko.width || laatikko.height)) return laatikko;
+    const leveys = ikkuna.innerWidth || 0;
+    const korkeus = ikkuna.innerHeight || 0;
+    const { reuna, koko, pohja } = KELLUVAN_NAPIN_VARAPAIKKA;
+    const oikea = leveys - reuna;
+    const ala = korkeus - pohja;
+    return {
+      left: oikea - koko, right: oikea, width: koko,
+      top: ala - koko, bottom: ala, height: koko,
+    };
   }
 
   /** Kupla pois: pelaaja teki valinnan, koski karttaa tai vaihe vaihtui. */
@@ -4599,8 +4756,20 @@ export function polloLisavihje(teksti) {
  *
  * @returns {boolean} näkyikö kupla.
  */
-export function polloSaapumiskupla(teksti) {
-  return Boolean(nykyinenPollo?.naytaSaapumiskupla(teksti));
+export function polloSaapumiskupla(teksti, asetukset = {}) {
+  return Boolean(nykyinenPollo?.naytaSaapumiskupla(teksti, asetukset));
+}
+
+/**
+ * Livian avausrepliikki aloitusvalinnassa (js/livia.js): sama kupla
+ * kuin saapumisella, mutta kuvapaikan kanssa ja ilman
+ * näkyvyysporttia — pöllönappi on siinä näkymässä vielä piilossa
+ * (ks. naytaAvauskupla).
+ *
+ * @returns {boolean} näkyikö kupla.
+ */
+export function polloAvauskupla(teksti, asetukset = {}) {
+  return Boolean(nykyinenPollo?.naytaAvauskupla(teksti, asetukset));
 }
 
 /** Vihjekupla pois. */
