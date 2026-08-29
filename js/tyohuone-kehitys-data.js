@@ -47,21 +47,49 @@ export const KAARI_PAKETIT = {
         + 'viimeisenä — savu oli jo portailla. Siitä yöstä talon '
         + 'kahdeksan kynttilä on palanut etsijälle. Vastaa — tämän '
         + 'illan sytytys on sinun."',
+      /*
+       * ISOISÄN PULMA (v1308) — Wienin pilotin toinen kaupunki.
+       *
+       * Raamattu, osio "Fokusmoodi" (omistaja 28.8.2026 ilta):
+       * *"PELITEHTÄVÄN AIHE RATKAISEE, EI MEKANIIKKA … isoisän
+       * väittämä- ja pulmatyypit kylvetään suoraan saman kaupungin
+       * merkintään, jossa merkintä väittää jotain tai jättää pulman
+       * auki ja kohtaaminen lunastaa sen."*
+       *
+       * Prahan fokusvirran matkakirjamerkintä (js/packs/
+       * fokusvirta-praha.js) päättyy avoimeen pulmaan: *"keisari keräsi
+       * aikoinaan kaiken maailman ihmeet yhteen saliin — ja sali on yhä
+       * olemassa, vaikka ihmeet ovat hajallaan."* Se ei sano, kuka ne
+       * hajotti. Puuttuva pala on saman paketin oppitunnissa, jossa
+       * kerrotaan vuoden 1648 ryöstöretki ja se, että saalis vietiin
+       * proomuilla Elbeä alas Ruotsiin.
+       *
+       * Vanha kysymys (Kultaisen kujan talojen asukkaat) oli hyvä
+       * tietovisa muttei kytkeytynyt merkintään mitenkään; sen aineisto
+       * elää yhä pelissä kaaren omassa saapumistekstissä ja
+       * kohtaamisessa, jotka pysyvät ennallaan.
+       *
+       * FAKTAT: en-Wikipedia "Battle of Prague (1648)" ja "Vertumnus
+       * (Arcimboldo)" (tarkistettu 29.8.2026; lähdeviitteet
+       * js/packs/fokusvirta-praha.js:n oppitunnin kommentissa).
+       */
       kysymys: {
-        q: 'Kultaisen kujan talot ovat nukkekodin kokoisia. Kenelle ne '
-          + 'alun perin rakennettiin?',
+        q: 'Isoisän merkintä jättää kysymättä yhden asian: keisarin '
+          + 'ihmeet ovat hajallaan, mutta sali on yhä paikallaan. Kuka '
+          + 'kokoelman vei ja milloin?',
         vaihtoehdot: [
-          'Linnan vartijoille, muurin holvikaarien väliin',
-          'Keisarin alkemisteille, lähelle laboratorioita',
-          'Kellonsoittajille, joiden piti asua tornin alla',
-          'Hovin räätäleille, joiden pajat olivat linnassa',
+          'Ruotsalaiset sotasaaliina vuonna 1648',
+          'Napoleonin joukot Pariisiin vuonna 1805',
+          'Linnanmäen tulipalo tuhosi sen vuonna 1541',
+          'Kaupunki myi sen tasavallan alkaessa 1918',
         ],
         oikea: 0,
-        fakta: 'Talot rakennettiin 1500-luvun lopulla linnanmuurin '
-          + 'holvikaarien väliin linnan vartijoille — siksi ne ovat niin '
-          + 'kapeita ja matalia. Tarina alkemisteista antoi kujalle '
-          + 'kultaisen nimen, ja talossa 22 kirjoitti myöhemmin Franz '
-          + 'Kafka.',
+        fakta: 'Kolmikymmenvuotisen sodan viimeisessä sotatoimessa '
+          + 'ruotsalaiset ottivat yöllisellä yllätyshyökkäyksellä joen '
+          + 'länsipuolen ja linnan heinäkuussa 1648. Rudolf II:n '
+          + 'kokoelman parhaat osat vietiin proomuilla Elbeä alas '
+          + 'Ruotsiin. Vanhakaupunki joen toisella rannalla piti '
+          + 'pintansa, kunnes tieto Westfalenin rauhasta saapui.',
       },
       aarre: 'Kynttilän valossa pöydän laatikko aukesi, ja kirjan alta '
         + 'löytyi kätkö. Tomáš katsoi liekkiä: "Lupauksia on kaksi — '
@@ -221,19 +249,47 @@ export const KAARI_PAKETIT = {
         + 'kuin vanhaa tuttua. "Isoisoäitini opetti kirjasi omistajalle '
         + 'säännön, jolla linnan alta palataan — sääntö on sinun, kun '
         + 'vastaat hänen kysymykseensä."',
+      /*
+       * AIHE VAIHDETTU YHDISTYMISEEN (v1308).
+       *
+       * Raamattu, osio "Fokusmoodi" (omistaja 28.8.2026 ilta):
+       * *"aarretehtävän aihe kytketään aina kaupungin muuhun
+       * tarinaverkkoon (matkakirjamerkintä, täyt, lehdet)."*
+       *
+       * Vanha kysymys alkoi sanoilla *"Labyrintin seinät ovat lämpimät
+       * kuin iho"* ja nojasi siis kaaren omaan saapumistekstiin.
+       * Fokusmoodissa pelaaja ei lue sitä: kaupungin matkakirjakortin
+       * omistaa fokusvirta (js/packs/fokusvirta-budapest.js), jonka
+       * merkintä kertoo kaupungista, jota ei eilen ollut. Kysymys
+       * viittasi siis tekstiin, jota kukaan ei ollut nähnyt.
+       *
+       * Uusi kysymys tulee suoraan siitä merkinnästä ja saa
+       * vastauksensa saman paketin oppitunnista (Ketjusilta 1849 ja
+       * yhdistyminen 17.11.1873). Kaaren saapuminen, kohtaaminen ja
+       * aarre pysyvät ennallaan, samoin kuumien lähteiden aineisto,
+       * joka elää lehden omassa nostossa (js/packs/
+       * kulttuuri-kategoriat.js, budapest, "Shakkia lämpimässä
+       * altaassa").
+       *
+       * FAKTAT: js/packs/nahtavyysjutut.js "Ketjusilta" (pelin omaa
+       * tarkistettua aineistoa) ja en-Wikipedia "Budapest",
+       * tietolaatikko (tarkistettu 29.8.2026).
+       */
       kysymys: {
-        q: 'Labyrintin seinät ovat lämpimät kuin iho. Mikä lämmittää '
-          + 'Budapestin maanalaiset käytävät?',
+        q: 'Buda, Óbuda ja Pest saivat yhteisen nimen vasta 1873, mutta '
+          + 'jokin oli yhdistänyt puoliskot jo aiemmin. Mikä?',
         vaihtoehdot: [
-          'Maan alta nousevat kuumat lähteet',
-          'Kylpylöiden kupariputket seinien takana',
-          'Maanalaisen tulivuoren hehkuva kivi',
-          'Linnan suuret takat ja niiden savusolat',
+          'Tonavan yli rakennettu Ketjusilta',
+          'Kaupunkeja kiertänyt yhteinen muuri',
+          'Joen alitse kaivettu rautatietunneli',
+          'Kaikille yhteinen kuninkaanlinna',
         ],
         oikea: 0,
-        fakta: 'Budapestin alla kumpuaa yli sata kuumaa lähdettä. Sama vesi '
-          + 'täyttää kaupungin kuuluisat kylpylät — ja lämmittää '
-          + 'linnanalaisen labyrintin seinät.',
+        fakta: 'Ketjusilta valmistui 1849 ensimmäisenä pysyvänä siltana '
+          + 'Budan ja Pestin välillä; kreivi István Széchenyi tilasi sen '
+          + 'englantilaiselta William Tierney Clarkilta, ja se on 375 '
+          + 'metriä pitkä. Kaupungit yhdistettiin nimellä Budapest 17. '
+          + 'marraskuuta 1873 — isoisän matkavuonna.',
       },
       aarre: 'Sääntö piti: lämmin seinä oikealla, ja kätkö odotti '
         + 'liituristin alla irtokiven takana. Márta katsoi merkkiä: '
@@ -257,19 +313,46 @@ export const KAARI_PAKETIT = {
         + '"Suvussani sanotaan: joki antaa takaisin sen, minkä '
         + 'omistaja unohti. Kannessa on kaksi kirjainta — H. F. '
         + 'Vastaa kirjan kysymykseen, niin kello on sinun."',
+      /*
+       * AIHE VAIHDETTU SUMUUN (v1308).
+       *
+       * Raamattu, osio "Fokusmoodi" (omistaja 28.8.2026 ilta):
+       * *"aarretehtävän aihe kytketään aina kaupungin muuhun
+       * tarinaverkkoon (matkakirjamerkintä, täyt, lehdet)."*
+       *
+       * Vanha kysymys Big Benin nimestä oli hyvä tietovisa muttei
+       * kytkeytynyt mihinkään: fokusmoodissa kaupungin matkakirjakortin
+       * omistaa fokusvirta (js/packs/fokusvirta-lontoo.js), ja sen
+       * merkintä alkaa sanoilla *"Lontoossa sumu syö äänet ja kaupunki
+       * puhuu silti"*. Uusi kysymys tulee siitä lauseesta ja saa
+       * vastauksensa saman paketin oppitunnista, joka kertoo
+       * joulukuun 1873 sumusta ja siitä, mistä se oli tehty. Big Benin
+       * aineisto elää yhä pelissä (js/packs/nahtavyysjutut.js, "Big
+       * Ben") ja Livian herokuplassa.
+       *
+       * Kaaren saapuminen, kohtaaminen ja aarre pysyvät ennallaan.
+       *
+       * FAKTAT: en-Wikipedia "19th-century London", sumua käsittelevä
+       * osio (lähteenä Peter Ackroyd, London: The Biography, 2000),
+       * sekä js/packs/maa-kategoriat.js GBR/luonto (pelin omaa
+       * tarkistettua aineistoa). Lähdeviitteet kokonaisuudessaan
+       * js/packs/fokusvirta-lontoo.js:n oppitunnin kommentissa.
+       */
       kysymys: {
-        q: 'Kaikki tuntevat nimen Big Ben. Mitä se alun perin '
-          + 'tarkoittaa?',
+        q: 'Isoisä kirjoitti, että Lontoossa sumu syö äänet. Mistä se '
+          + 'sumu oikeasti syntyi?',
         vaihtoehdot: [
-          'Tornin suurinta kelloa',
-          'Koko kellotornia',
-          'Kellon rakentajaa',
-          'Westminsterin palatsin porttia',
+          'Kivihiilen savusta, joka sekoittui joen kosteuteen',
+          'Mereltä ajautuneesta suolausvasta',
+          'Höyryveturien päästämästä vesihöyrystä',
+          'Kaasulyhtyjen palamisjätteestä',
         ],
         oikea: 0,
-        fakta: 'Big Ben on tornin 13,7 tonnin painoinen suurin kello. Torni '
-          + 'itse on nimeltään Elizabeth Tower — mutta kellon nimi '
-          + 'tarttui koko torniin.',
+        fakta: 'Rikkidioksidi ja noki sekoittuivat Thamesin laakson '
+          + 'kosteuteen. Isoisän matkavuoden sumu makasi kaupungin '
+          + 'päällä 7.–13. joulukuuta 1873, ja pahimpana päivänä koko '
+          + 'liikenne pysähtyi. Kaupungin oma nimi ilmiölle oli London '
+          + 'particular.',
       },
       aarre: 'Ned avasi kellon ja antoi sen: sisällä oli isoisän '
         + 'käsialalla pelkkä kellonaika, sama johon viisarit '
