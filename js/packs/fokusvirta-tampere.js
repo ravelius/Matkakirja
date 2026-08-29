@@ -186,7 +186,16 @@ const AMURI_VISA = {
     + 'tavallisesti useampi perhe.',
 };
 
-const SILTA_VISA = {
+/*
+ * NIMI ON HAMEENSILTA_VISA EIKA SILTA_VISA: yhden tiedoston niputus
+ * (tools/build-standalone.mjs) latoo kaikki moduulit samaan
+ * nakyvyysalueeseen, ja js/packs/fokusvirta-praha.js:ssa on jo oma
+ * `SILTA_VISA` (Kaarlensilta). Kaksi samannimista const-maaritysta
+ * kaatoi dist-nipun kokonaan ("Identifier 'SILTA_VISA' has already
+ * been declared") — havaittu aallon 4B integroinnissa savukkeella
+ * tools/savukkeet/savuke-dist.mjs. Visan sisalto ei muutu.
+ */
+const HAMEENSILTA_VISA = {
   kysymys: 'Hämeensillan kaiteilla seisoo neljä Wäinö Aaltosen '
     + 'pronssiveistosta vuodelta 1929. Mitä ne esittävät?',
   vaihtoehdot: [
@@ -834,7 +843,7 @@ export const FOKUSVIRTA_TAMPERE = {
       id: 'aarre', sivu: 2, otsake: 'AARTEEN AVAUS', palkinto: 'piste', visa: AMURI_VISA,
     },
     {
-      id: 'juliste', sivu: 3, otsake: 'JULISTE', palkinto: 'juliste', visa: SILTA_VISA,
+      id: 'juliste', sivu: 3, otsake: 'JULISTE', palkinto: 'juliste', visa: HAMEENSILTA_VISA,
     },
   ],
 
