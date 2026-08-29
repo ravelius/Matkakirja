@@ -1034,7 +1034,15 @@ export const RAAMATTU = {
           + 'TYYLIPARAMETRIT: Kreikasta 3 versiota (hillitty/keskitaso/'
           + 'taysi patina), omistaja valitsee laitteella, valittu '
           + 'resepti ajetaan koko maailmaan. Toteutus vaiheen 1 '
-          + '(pohjacanvas) laitemittauksen jalkeen.',
+          + '(pohjacanvas) laitemittauksen jalkeen. LISAYS (omistaja '
+          + '29.8.2026 ilta): MUIDEN MAIDEN SUMENNUKSESTA LUOVUTAAN - '
+          + 'liikuttelualueen rajaus riittaa fokukseksi (kumoaa 24.8. '
+          + 'kohdan "kaymattomat maat himmeina ja epaterrevina" '
+          + 'sumennusosan; liikerajaus ja 1873-atlas-fiktio sailyvat). '
+          + 'Yksinkertaistaa pelitilakerroksen: jaljelle jaavat vain '
+          + 'laattavarit, elavat merkit, nappula ja vinjetointi. '
+          + 'Toteutus viimeistaan pyramidin yhteydessa; saa poistaa '
+          + 'aiemmin jos kevyt.',
         'LOISTOAIKAKUVAT PUHTAASTI OMASSA AJASSAAN (omistaja 29.8.2026 '
           + 'aamu, Parthenonin v3-havainto: "ei ole sotkettu nykyaikaa ja '
           + 'loistoaikaa keskenaan ja se sopii minusta paremmin... jatkossa '
