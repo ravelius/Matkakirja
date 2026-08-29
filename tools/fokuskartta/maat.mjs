@@ -99,9 +99,11 @@ export const FOKUSMAAT = {
     vesileima: { teksti: 'ΕΛΛΑΣ', lon: 22.15, lat: 39.45, koko: 31, vali: 11 },
 
     /*
-     * Naapurit: ääriviiva, joka himmenee ja sumenee rajasta poispäin.
-     * Nimen paikka on aseteltu silmällä sinne, missä se mahtuu maan
-     * päälle jäämättä kehysviivan alle.
+     * Naapurit: rajaviiva ja nimi. Ääriviiva himmeni ja sumeni ennen
+     * rajasta poispäin; siitä luovuttiin 29.8.2026 (ks. piirto.js
+     * `himmennaNaapurit`), ja naapuri saa nyt saman maaston kuin
+     * kohdemaa. Nimen paikka on aseteltu silmällä sinne, missä se
+     * mahtuu maan päälle jäämättä kehysviivan alle.
      */
     naapurit: [
       { iso: 'ALB', nimi: 'Albania', lon: 20.1, lat: 40.85 },
