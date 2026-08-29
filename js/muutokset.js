@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1324, teksti: 'Bittikarttakartta vaihe 1: pohjacanvas' },
   { v: 1323, teksti: 'Fokusvirran kortit pelaajan polkuun' },
   { v: 1322, teksti: 'Livia mukaan jo aloitusvalinnassa' },
   { v: 1321, teksti: 'Musiikkipaletti ja kytkennat' },
