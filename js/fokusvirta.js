@@ -12,6 +12,11 @@
  *   5 oppitunti    nosto, joka pohjustaa varsinaista kysymystä
  *   6 kohtaaminen  paikallinen esittäytyy → nykyinen laattakysymys
  *
+ * VAIHEET 3 JA 4 OVAT 29.8.2026 ALKAEN VÄLIAIKAISESTI POIS (omistajan
+ * tilaus + Raamatun 28.8. linjaus): ks. lippu FOKUSVIRTA_VALINTA
+ * alempana. Kulku on sen ollessa `false` matkakirja → Livian kupla →
+ * oppitunti → kohtaaminen (tai sähketehtävä) → laattakysymys.
+ *
  * KOHDENOSTO (omistajan tilaus 24.8.2026) on valinnan sivupolku, ei
  * seitsemäs vaihe: pöllö kertoo kuplasta MUUSTA paikasta kuin
  * pelikaupungista, kartalle kasvaa vinjetti kohteen omaan sijaintiin,
@@ -183,6 +188,57 @@ export const TAKY_PALKKIO = 50;
 export const FOKUSVIRTA_KORTIT = true;
 
 /**
+ * ===== VALINTA-ASKEL POIS KÄYTÖSTÄ (VÄLIAIKAINEN, 29.8.2026) =========
+ *
+ * VÄLIAIKAINEN POISKYTKENTÄ 29.8.2026 — omistajan tilaus + Raamatun
+ * 28.8.2026 linjaus (osio SAAPUMISKULUN KOLME TASMENNYSTA, kohta 3:
+ * *"VALINTA-ASKEL POIS — Livia ei kysy 2-3 painikkeella mikä kiinnostaa
+ * (ei kysy Ateenassakaan); täkypisteet kartalla hoitavat houkuttelun."*).
+ * PALAUTUS ON TÄMÄN LIPUN KÄÄNTÖ takaisin `true`ksi — koodia ei ole
+ * poistettu riviäkään.
+ *
+ * v1323 toi korttiannostelun pelaajan polkuun (FOKUSVIRTA_KORTIT), ja
+ * sen mukana ruudulle ilmestyi valintakupla: Pulu kysyy saapumisen
+ * jälkeen, mikä kartalla kiinnostaisi, tarjoaa 3–4 täkyä sekä
+ * kohdenoston, ja "Jatka aarteelle" on lukossa kunnes yksi täky on
+ * tehty. Juuri se on Raamatun linjauksen vastainen.
+ *
+ * MITÄ LIPPU TEKEE, KUN SE ON `false`:
+ *
+ *   1. VALINTAVAIHE OHITETAAN KOKONAAN. Livian kuplan "Jatka" vie
+ *      suoraan oppituntiin (fokusvirtaSiirto, vaihe 'pollo'), eikä
+ *      Pulu kysy mitään. Matkakirjamerkintä ylävasemmassa kortissa ja
+ *      Livian maadoituskupla säilyvät sellaisinaan.
+ *   2. AARREPORTTI ON AUKI ILMAN TÄKYVAATIMUSTA
+ *      (fokusvirtaPorttiAuki). Ilman tätä eteneminen jumittuisi:
+ *      portin mitta on tehtyjen täkyjen määrä, ja täkyihin pääsi vain
+ *      valintakuplasta.
+ *   3. VANHA TALLENNUS EI JÄÄ KUPLAAN. Valinnan vaiheet ('valinta',
+ *      'taky', 'kohde') siivotaan luettaessa oppitunniksi
+ *      (fokusvirtaSiivoa) — muuten kesken jäänyt kaupunki avaisi yhä
+ *      sen kuplan, jota omistaja ei halua nähdä.
+ *
+ * MIKÄ JÄÄ LIPUN TAAKSE ODOTTAMAAN: syvennyskortit minivisoineen
+ * (`takyt`) ja niiden 50 punnan palkkiot. Muuta luontevaa reittiä
+ * niihin EI ole — kartan tuikkivat täkypisteet ovat oma aineistonsa
+ * (js/fokusnosto.js `takynostot` / NOSTO_MAAT), eivät nämä kortit — ja
+ * uutta reittiä ei tässä erässä rakenneta (omistajan rajaus).
+ *
+ * MIKÄ SÄILYY ENNALLAAN: kohdenostot (`kohteet`) ovat maan yhteisiä
+ * karttakohteita (js/packs/fokuskohteet-grc.js), ja ne aukeavat yhä
+ * kartan omista kohdemerkeistä; oppitunti, kohtaaminen, sähketehtävä
+ * ja laattakysymys kulkevat kuten ennenkin.
+ */
+export const FOKUSVIRTA_VALINTA = false;
+
+/**
+ * Valinnan omat vaiheet — se, mitä lippu FOKUSVIRTA_VALINTA kytkee.
+ * Kolme yhdessä, koska täky ja kohdenosto ovat valinnan sivupolkuja:
+ * niihin mennään valinnasta ja niistä palataan valintaan.
+ */
+const VALINNAN_VAIHEET = new Set(['valinta', 'taky', 'kohde']);
+
+/**
  * Virran vaiheet. Viimeinen on "virta pelattu läpi".
  *
  * KOHDE on kuudennen vaiheen sivupolku eikä seitsemäs vaihe: siihen
@@ -220,6 +276,16 @@ export function fokusvirtaSiivoa(tila, data) {
   const taky = tunnukset.has(tila?.taky) ? tila.taky : null;
   const kohde = kohdeTunnukset.has(tila?.kohde) ? tila.kohde : null;
   const pohja = { vaihe, taky, tehdyt, kohde, kohteet };
+  /*
+   * VALINTA POIS KÄYTÖSTÄ (väliaikainen 29.8.2026, ks. lippu
+   * FOKUSVIRTA_VALINTA): kesken valintaa tallentunut kaupunki ei saa
+   * avata kuplaa uudelleen, joten valinnan vaiheet luetaan
+   * oppitunniksi. Tehdyt täyt jäävät talteen, jotta lipun kääntö
+   * takaisin ei nollaa pelaajan etenemistä.
+   */
+  if (!FOKUSVIRTA_VALINTA && VALINNAN_VAIHEET.has(vaihe)) {
+    return { ...pohja, vaihe: 'oppitunti', taky: null, kohde: null };
+  }
   if (vaihe === 'taky' && !taky) return { ...pohja, vaihe: 'valinta' };
   if (vaihe === 'kohde' && !kohde) return { ...pohja, vaihe: 'valinta' };
   return pohja;
@@ -227,6 +293,13 @@ export function fokusvirtaSiivoa(tila, data) {
 
 /** Onko portti aarrekysymykselle auki (ETENEMINEN: vähintään yksi täky)? */
 export function fokusvirtaPorttiAuki(tila, data) {
+  /*
+   * VALINTA POIS KÄYTÖSTÄ (väliaikainen 29.8.2026): ilman
+   * valintakuplaa täkyihin ei ole reittiä, joten täkyvaatimus jättäisi
+   * portin ikuisesti kiinni eikä pelaaja pääsisi aarteelle lainkaan.
+   * Portti on siksi auki; lipun kääntö palauttaa mitan sellaisenaan.
+   */
+  if (!FOKUSVIRTA_VALINTA) return true;
   const vaadittuja = data?.valinta?.vaadittuja ?? 1;
   return (tila?.tehdyt?.length ?? 0) >= vaadittuja;
 }
@@ -276,7 +349,13 @@ export function fokusvirtaSiirto(tila, teko, data) {
     case 'matkakirja':
       return t.tyyppi === 'jatka' ? { ...nyt, vaihe: 'pollo' } : nyt;
     case 'pollo':
-      return t.tyyppi === 'jatka' ? { ...nyt, vaihe: 'valinta' } : nyt;
+      /*
+       * VALINTA POIS KÄYTÖSTÄ (väliaikainen 29.8.2026, lippu
+       * FOKUSVIRTA_VALINTA): Livian kuplasta jatketaan suoraan
+       * oppituntiin — Pulu ei kysy painikkeilla, mikä kiinnostaa.
+       */
+      if (t.tyyppi !== 'jatka') return nyt;
+      return { ...nyt, vaihe: FOKUSVIRTA_VALINTA ? 'valinta' : 'oppitunti' };
     case 'valinta':
       if (t.tyyppi === 'taky') {
         const kelpaa = fokusvirtaJaljella(nyt, data).some((x) => x.id === t.id);

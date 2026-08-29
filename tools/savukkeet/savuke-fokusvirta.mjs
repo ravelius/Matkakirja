@@ -25,7 +25,11 @@
  *      napin yläpuolella eikä valu ruudun ulkopuolelle.
  *   4. Valintavaihe on samassa kuplassa painikkeineen; portti on kiinni
  *      ennen ensimmäistä täkyä ja aukeaa sen jälkeen (Raamattu,
- *      ETENEMINEN).
+ *      ETENEMINEN). VÄLIAIKAISESTI POIS 29.8.2026 (js/fokusvirta.js
+ *      FOKUSVIRTA_VALINTA = false): lipun ollessa pois vartio on
+ *      päinvastainen — kuplan Jatka vie suoraan oppituntiin eikä Pulu
+ *      kysy mitään. Molemmat väitejoukot ovat tiedostossa, ja lippu
+ *      valitsee kumpi ajetaan.
  *   5. Täky on KORTTI: iso kuva heti kortin yläosassa, minivisa ja raha
  *      oikeasta vastauksesta. Kortti on VAALEAA PAPERIA eikä tumma
  *      massa (omistajan pelitestipalaute 24.8.2026: *"Liian raskaan
@@ -46,7 +50,8 @@
  *   9. KOHDENOSTO (omistajan tilaus 24.8.2026): valintakuplan neljäs
  *      valinta kertoo MUUSTA paikasta kuin pelikaupungista — kupla
  *      ilman visaa, ja vinjetti kartalle KOHTEEN OMAAN sijaintiin eikä
- *      kaupungin viuhkaan. Portti ei aukea siitä.
+ *      kaupungin viuhkaan. Portti ei aukea siitä. (Odottaa lipun
+ *      takana 29.8.2026 alkaen, ks. kohta 4.)
  *  10. Tila säilyy: kuplan sulku napautuksella ja uusi avaus jatkavat
  *      samasta vaiheesta eivätkä ala alusta.
  *  11. Saapuminen avaa virran itsestään (ANNOSTELU-poikkeus "mikään ei
@@ -73,8 +78,19 @@
  * pelkkaa mainintaa — moduulin historiakommentti riitti aiemmin
  * ohittamaan savukkeen vaikka lippu oli paalla (havaittu 29.8.2026).
  */
-{
-  const { readFileSync } = await import('node:fs');
+/*
+ * VALINTAKUPLA VALIAIKAISESTI POIS (omistajan tilaus 29.8.2026 +
+ * Raamatun 28.8. linjaus SAAPUMISKULUN KOLME TASMENNYTA kohta 3):
+ * js/fokusvirta.js FOKUSVIRTA_VALINTA = false ohittaa valintavaiheen ja
+ * avaa aarreportin ilman takyvaatimusta. Savukkeen valintaa, takyja ja
+ * kohdenostoja koskevat osiot (5b, 6, 9, 9b) EIVAT ole poistettuja —
+ * ne odottavat lipun takana kuten koodikin, ja lipun kaanto takaisin
+ * `true`ksi herattaa ne sellaisinaan. Lipun ollessa pois ajetaan
+ * tilalle osio 5a: kupla EI kysy mitaan, vaan Jatka vie oppituntiin.
+ */
+const VALINTA = (() => {
+  // readFileSync tulee alempaa staattisesta tuonnista: ES-moduulin
+  // tuonnit nostetaan tiedoston alkuun, joten se on jo käytettävissä.
   const virta = readFileSync(new URL('../../js/fokusvirta.js', import.meta.url), 'utf8');
   const maaritys = virta.match(/^export const FOKUSVIRTA_KORTIT = (\w+);$/m);
   if (!maaritys) throw new Error('FOKUSVIRTA_KORTIT-lipun maaritysta ei loydy');
@@ -82,7 +98,11 @@
     console.log('OHITETTU: kevyt kulku -kokeilu paalla (FOKUSVIRTA_KORTIT=false)');
     process.exit(0);
   }
-}
+  const valinta = virta.match(/^export const FOKUSVIRTA_VALINTA = (\w+);$/m);
+  if (!valinta) throw new Error('FOKUSVIRTA_VALINTA-lipun maaritysta ei loydy');
+  return valinta[1] === 'true';
+})();
+console.log(`Valintavaihe: ${VALINTA ? 'kaytossa' : 'POIS (valiaikainen 29.8.2026)'}`);
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
@@ -429,63 +449,100 @@ vaadi('herokuva ilmestyy vinjettinä kartalle',
   kuvat.maara === 1 && kuvat.kerroksenMuunnos.includes('scale'), JSON.stringify(kuvat));
 vaadi('vinjetissä ei ole suodattimia (iOS-sääntö)', kuvat.suodattimia === 0);
 
-/* --- 5: valintavaihe samassa kuplassa + portti --- */
+/* --- 5: mihin Livian kuplan "Jatka" vie --- */
 await paina('Jatka');
 tila = await kortti();
-const aarreNappi = tila?.napit.find((n) => n.teksti.includes('aarteelle'));
-vaadi('vaihe 3 on valintakupla: kolme täkyä, kohdenosto ja aarrenappi',
-  tila?.vaihe === 'valinta' && tila.kupla === true && tila.napit.length === 5,
-  JSON.stringify(tila));
-vaadi('kohdenosto on tarjolla valintakuplassa',
-  tila?.napit.some((n) => n.teksti.includes('Kanava, jota ei vielä ollut')),
-  JSON.stringify(tila?.napit));
-vaadi('portti kiinni: aarteelle ei pääse ilman täkyä',
-  aarreNappi?.pois === true, JSON.stringify(tila?.napit));
+if (!VALINTA) {
+  /*
+   * 5a: VALINTA-ASKEL POIS (väliaikainen 29.8.2026). Pulu ei kysy
+   * painikkeilla mitään: kuplan Jatka avaa suoraan oppituntikortin, eikä
+   * ruudulla ole yhtäkään täky- tai kohdenostonappia. Väitteet mittaavat
+   * juuri sen — että kuplaa EI tule.
+   */
+  vaadi('valinta pois: kuplan Jatka vie suoraan oppituntiin',
+    tila?.vaihe === 'oppitunti' && tila.kupla === false,
+    JSON.stringify({ vaihe: tila?.vaihe, kupla: tila?.kupla }));
+  vaadi('valinta pois: Pulu ei kysy täkyjä eikä kohdenostoja',
+    Boolean(tila) && !tila.napit.some((n) => /Filosofi|Kanava, jota ei vielä ollut/.test(n.teksti)),
+    JSON.stringify(tila?.napit));
+  vaadi('valinta pois: oppitunnin kuva liittyi kartan viuhkaan',
+    (await vinjetit()).maara === 2, JSON.stringify(await vinjetit()));
+  /*
+   * Kortin ulkoasuväitteet ajetaan oppituntikortilla: se on sama kehys,
+   * sama iso kuva ja sama paperipohja kuin täkykortissa (piirraKehys),
+   * joten omistajan 24.8.2026 pelitestipalautteen vartiot eivät jää
+   * lipun ajaksi mittaamatta.
+   */
+  kirja = await matkakirja();
+  vaadi('kortin kuva näkyy heti isona, koko kortin levyisenä',
+    tila?.kuvaEnsin === true && tila.kuvanLeveys >= tila.sisus * 0.9
+    && tila.kuvanKorkeus >= 90,
+    JSON.stringify({
+      ensin: tila?.kuvaEnsin, leveys: tila?.kuvanLeveys,
+      korkeus: tila?.kuvanKorkeus, sisus: tila?.sisus,
+    }));
+  vaadi('kortti on vaalealla paperipohjalla, ei tummalla massalla',
+    vaalea(tila?.pohja), JSON.stringify(tila?.pohja));
+  vaadi('kortti ei ole koko ruudun modaali: kartta näkyy sen yli',
+    Boolean(kirja) && tila?.laatikko.ylin > tila.ikkuna.h * 0.1,
+    JSON.stringify({ kortti: tila?.laatikko, ikkuna: tila?.ikkuna }));
+} else {
+  /* 5b: valintavaihe samassa kuplassa + portti (lippu päällä). */
+  const aarreNappi = tila?.napit.find((n) => n.teksti.includes('aarteelle'));
+  vaadi('vaihe 3 on valintakupla: kolme täkyä, kohdenosto ja aarrenappi',
+    tila?.vaihe === 'valinta' && tila.kupla === true && tila.napit.length === 5,
+    JSON.stringify(tila));
+  vaadi('kohdenosto on tarjolla valintakuplassa',
+    tila?.napit.some((n) => n.teksti.includes('Kanava, jota ei vielä ollut')),
+    JSON.stringify(tila?.napit));
+  vaadi('portti kiinni: aarteelle ei pääse ilman täkyä',
+    aarreNappi?.pois === true, JSON.stringify(tila?.napit));
 
-/* --- 6: täky on kortti kuvaviitteineen ja minivisoineen --- */
-const rahatEnnen = tila.rahat;
-await paina('Filosofi');
-tila = await kortti();
-kirja = await matkakirja();
-vaadi('vaihe 4 on KORTTI kuvineen ja minivisoineen',
-  tila?.vaihe === 'taky' && tila.kupla === false && tila.karttapinnassa === true
-  && tila.dialogissa === false && tila.kuvia === 1 && tila.vaihtoehdot.length === 3,
-  JSON.stringify(tila));
-/*
- * OMISTAJAN PELITESTIPALAUTE 24.8.2026 (iPad): *"Liian raskaan oloinen
- * visuaalisesti. Kuva saisi tässä näkyä heti isolla."* Kaksi väitettä
- * korvaa entisen "kuvaviite"-väitteen:
- *   - kuva on kortin ensimmäinen asia ja lähes kortin sisuksen levyinen
- *     (ennen 5,6 rem pikkuviite tekstin vieressä),
- *   - kortin pinta on vaaleaa paperia eikä tummaa massaa.
- */
-vaadi('kortin kuva näkyy heti isona, koko kortin levyisenä',
-  tila?.kuvaEnsin === true && tila.kuvanLeveys >= tila.sisus * 0.9
-  && tila.kuvanKorkeus >= 90,
-  JSON.stringify({
-    ensin: tila?.kuvaEnsin, leveys: tila?.kuvanLeveys,
-    korkeus: tila?.kuvanKorkeus, sisus: tila?.sisus,
-  }));
-vaadi('kortti on vaalealla paperipohjalla, ei tummalla massalla',
-  vaalea(tila?.pohja), JSON.stringify(tila?.pohja));
-/*
- * ENTINEN VÄITE "kortti ei peitä ylävasenta matkakirjakorttia" ON
- * POISTETTU. Omistaja päinvastoin sallii peiton: *"Kortin korkeus saa
- * kasvaa kuvan takia … matkakirjakortti ylävasemmalla saa jäädä kortin
- * alle tässä vaiheessa jos tila ei muuten riitä (kuva on nyt pääasia)"*.
- * Tilalle jää fokusmoodin oma perussääntö: kortti EI ole koko ruudun
- * modaali, vaan kartta näkyy sen ylälaidan yli.
- */
-vaadi('kortti ei ole koko ruudun modaali: kartta näkyy sen yli',
-  Boolean(kirja) && tila?.laatikko.ylin > tila.ikkuna.h * 0.1,
-  JSON.stringify({ kortti: tila?.laatikko, ikkuna: tila?.ikkuna }));
-vaadi('täyn kuva liittyi kartan viuhkaan', (await vinjetit()).maara === 2);
+  /* --- 6: täky on kortti kuvaviitteineen ja minivisoineen --- */
+  const rahatEnnen = tila.rahat;
+  await paina('Filosofi');
+  tila = await kortti();
+  kirja = await matkakirja();
+  vaadi('vaihe 4 on KORTTI kuvineen ja minivisoineen',
+    tila?.vaihe === 'taky' && tila.kupla === false && tila.karttapinnassa === true
+    && tila.dialogissa === false && tila.kuvia === 1 && tila.vaihtoehdot.length === 3,
+    JSON.stringify(tila));
+  /*
+   * OMISTAJAN PELITESTIPALAUTE 24.8.2026 (iPad): *"Liian raskaan oloinen
+   * visuaalisesti. Kuva saisi tässä näkyä heti isolla."* Kaksi väitettä
+   * korvaa entisen "kuvaviite"-väitteen:
+   *   - kuva on kortin ensimmäinen asia ja lähes kortin sisuksen levyinen
+   *     (ennen 5,6 rem pikkuviite tekstin vieressä),
+   *   - kortin pinta on vaaleaa paperia eikä tummaa massaa.
+   */
+  vaadi('kortin kuva näkyy heti isona, koko kortin levyisenä',
+    tila?.kuvaEnsin === true && tila.kuvanLeveys >= tila.sisus * 0.9
+    && tila.kuvanKorkeus >= 90,
+    JSON.stringify({
+      ensin: tila?.kuvaEnsin, leveys: tila?.kuvanLeveys,
+      korkeus: tila?.kuvanKorkeus, sisus: tila?.sisus,
+    }));
+  vaadi('kortti on vaalealla paperipohjalla, ei tummalla massalla',
+    vaalea(tila?.pohja), JSON.stringify(tila?.pohja));
+  /*
+   * ENTINEN VÄITE "kortti ei peitä ylävasenta matkakirjakorttia" ON
+   * POISTETTU. Omistaja päinvastoin sallii peiton: *"Kortin korkeus saa
+   * kasvaa kuvan takia … matkakirjakortti ylävasemmalla saa jäädä kortin
+   * alle tässä vaiheessa jos tila ei muuten riitä (kuva on nyt pääasia)"*.
+   * Tilalle jää fokusmoodin oma perussääntö: kortti EI ole koko ruudun
+   * modaali, vaan kartta näkyy sen ylälaidan yli.
+   */
+  vaadi('kortti ei ole koko ruudun modaali: kartta näkyy sen yli',
+    Boolean(kirja) && tila?.laatikko.ylin > tila.ikkuna.h * 0.1,
+    JSON.stringify({ kortti: tila?.laatikko, ikkuna: tila?.ikkuna }));
+  vaadi('täyn kuva liittyi kartan viuhkaan', (await vinjetit()).maara === 2);
 
-await paina('lyhty', '.fokusvirta-vaihtoehdot');
-tila = await kortti();
-vaadi('oikea vastaus palkitaan rahalla',
-  tila?.tulos.startsWith('Oikein!') && tila.rahat > rahatEnnen,
-  JSON.stringify({ tulos: tila?.tulos, ennen: rahatEnnen, nyt: tila?.rahat }));
+  await paina('lyhty', '.fokusvirta-vaihtoehdot');
+  tila = await kortti();
+  vaadi('oikea vastaus palkitaan rahalla',
+    tila?.tulos.startsWith('Oikein!') && tila.rahat > rahatEnnen,
+    JSON.stringify({ tulos: tila?.tulos, ennen: rahatEnnen, nyt: tila?.rahat }));
+}
 
 /* --- 7: vinjetti pysyy samankokoisena zoomatessa --- */
 // Vertailukoko otetaan VASTA TÄSSÄ: viuhkassa on nyt kaksi kallistettua
@@ -577,53 +634,69 @@ vaadi('kortti palaa näkyviin suurennoksen sulkeuduttua',
       && !document.body.classList.contains('fokuszoom-paalla');
   }));
 
-/* --- 9: portti aukeaa --- */
-await paina('Takaisin');
-tila = await kortti();
-const aarreNyt = tila?.napit.find((n) => n.teksti.includes('aarteelle'));
-vaadi('portti aukeaa yhdestä täystä', aarreNyt?.pois === false, JSON.stringify(tila?.napit));
-vaadi('tehtyä täkyä ei tarjota uudelleen',
-  !tila?.napit.some((n) => n.teksti.includes('Filosofi')), JSON.stringify(tila?.napit));
+/*
+ * OSIOT 9 JA 9b ODOTTAVAT LIPUN TAKANA (väliaikainen 29.8.2026).
+ * Portti (≥1 täky) ja kohdenosto ovat valintakuplan omia sääntöjä, ja
+ * kuplaa ei ole; lipun kääntö takaisin herättää nämä sellaisinaan.
+ */
+if (VALINTA) {
+  /* --- 9: portti aukeaa --- */
+  await paina('Takaisin');
+  tila = await kortti();
+  const aarreNyt = tila?.napit.find((n) => n.teksti.includes('aarteelle'));
+  vaadi('portti aukeaa yhdestä täystä', aarreNyt?.pois === false, JSON.stringify(tila?.napit));
+  vaadi('tehtyä täkyä ei tarjota uudelleen',
+    !tila?.napit.some((n) => n.teksti.includes('Filosofi')), JSON.stringify(tila?.napit));
 
-/* --- 9b: KOHDENOSTO — huomio muualle kuin pelikaupunkiin --- */
-const ryhmatEnnen = (await vinjetit()).ryhmat.length;
-await paina('Kanava, jota ei vielä ollut');
-tila = await kortti();
-kuvat = await vinjetit();
-// Korintin kanava Euroopan laudalla: x = (22,98389 + 11) × 19,2 ja
-// y = (72 − 37,93472) × 26,3 (js/packs/fokuskohteet-grc.js).
-const kanavaRyhma = kuvat.ryhmat.find((m) => /translate\(652\.5\s+895\.9\)/.test(m));
-vaadi('kohdenosto on pöllön KUPLA ilman minivisaa',
-  tila?.vaihe === 'kohde' && tila.kupla === true && tila.vaihtoehdot.length === 0
-  && tila.napit.length === 1, JSON.stringify(tila));
-vaadi('kupla kertoo kohteesta 1873-kulmasta',
-  tila?.otsikko.includes('Korintin kanava')
-  && tila.teksti.includes('Periandros') && tila.teksti.includes('1881'),
-  JSON.stringify(tila?.teksti));
-vaadi('kartalle tuli oma ryhmä KOHTEEN sijaintiin, ei kaupungin viuhkaan',
-  kuvat.ryhmat.length === ryhmatEnnen + 1 && Boolean(kanavaRyhma),
-  JSON.stringify(kuvat.ryhmat));
-vaadi('kohteen vinjetti on kiinteän kokoinen kuten muutkin',
-  /scale\(/.test(kanavaRyhma ?? ''), JSON.stringify(kanavaRyhma));
+  /* --- 9b: KOHDENOSTO — huomio muualle kuin pelikaupunkiin --- */
+  const ryhmatEnnen = (await vinjetit()).ryhmat.length;
+  await paina('Kanava, jota ei vielä ollut');
+  tila = await kortti();
+  kuvat = await vinjetit();
+  // Korintin kanava Euroopan laudalla: x = (22,98389 + 11) × 19,2 ja
+  // y = (72 − 37,93472) × 26,3 (js/packs/fokuskohteet-grc.js).
+  const kanavaRyhma = kuvat.ryhmat.find((m) => /translate\(652\.5\s+895\.9\)/.test(m));
+  vaadi('kohdenosto on pöllön KUPLA ilman minivisaa',
+    tila?.vaihe === 'kohde' && tila.kupla === true && tila.vaihtoehdot.length === 0
+    && tila.napit.length === 1, JSON.stringify(tila));
+  vaadi('kupla kertoo kohteesta 1873-kulmasta',
+    tila?.otsikko.includes('Korintin kanava')
+    && tila.teksti.includes('Periandros') && tila.teksti.includes('1881'),
+    JSON.stringify(tila?.teksti));
+  vaadi('kartalle tuli oma ryhmä KOHTEEN sijaintiin, ei kaupungin viuhkaan',
+    kuvat.ryhmat.length === ryhmatEnnen + 1 && Boolean(kanavaRyhma),
+    JSON.stringify(kuvat.ryhmat));
+  vaadi('kohteen vinjetti on kiinteän kokoinen kuten muutkin',
+    /scale\(/.test(kanavaRyhma ?? ''), JSON.stringify(kanavaRyhma));
 
-await paina('Takaisin');
-tila = await kortti();
-kuvat = await vinjetit();
-vaadi('kohteesta palataan valintaan eikä kohdetta tarjota uudelleen',
-  tila?.vaihe === 'valinta'
-  && !tila.napit.some((n) => n.teksti.includes('Kanava, jota ei vielä ollut')),
-  JSON.stringify(tila?.napit));
-vaadi('kohteen vinjetti jää kartalle muistoksi',
-  kuvat.ryhmat.some((m) => /translate\(652\.5\s+895\.9\)/.test(m)),
-  JSON.stringify(kuvat.ryhmat));
+  await paina('Takaisin');
+  tila = await kortti();
+  kuvat = await vinjetit();
+  vaadi('kohteesta palataan valintaan eikä kohdetta tarjota uudelleen',
+    tila?.vaihe === 'valinta'
+    && !tila.napit.some((n) => n.teksti.includes('Kanava, jota ei vielä ollut')),
+    JSON.stringify(tila?.napit));
+  vaadi('kohteen vinjetti jää kartalle muistoksi',
+    kuvat.ryhmat.some((m) => /translate\(652\.5\s+895\.9\)/.test(m)),
+    JSON.stringify(kuvat.ryhmat));
+}
 
-/* --- 10: kuplan napautus sulkee, tila säilyy --- */
+/* --- 10: pinnan napautus sulkee, tila säilyy ---
+ *
+ * Lipun ollessa pois ruudulla on kupla sijasta oppituntikortti, joten
+ * sulku tehdään kortin rastista ja odotettu vaihe on 'oppitunti'.
+ * Väite on sama molemmilla: suljettu pinta palaa samaan vaiheeseen. */
+const ODOTETTU_VAIHE = VALINTA ? 'valinta' : 'oppitunti';
 await sivu.evaluate(() => {
   const kupla = document.querySelector('.fokusvirta-kupla');
-  kupla?.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true }));
+  if (kupla) {
+    kupla.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true }));
+    return;
+  }
+  document.querySelector('.fokusvirta-kortti .fokusvirta-sulje')?.click();
 });
 await sivu.waitForTimeout(300);
-vaadi('napautus kuplaan sulkee sen', (await kortti()) === null);
+vaadi('napautus pintaan sulkee sen', (await kortti()) === null);
 await sivu.evaluate(() => {
   const ui = window.matkakirja.ui;
   ui.openArrival(ui.game.cityOf());
@@ -631,7 +704,7 @@ await sivu.evaluate(() => {
 await sivu.waitForTimeout(400);
 tila = await kortti();
 vaadi('uusi avaus jatkaa samasta vaiheesta, ei alusta',
-  tila?.vaihe === 'valinta', JSON.stringify(tila));
+  tila?.vaihe === ODOTETTU_VAIHE, JSON.stringify(tila));
 
 /* --- 11: saapuminen avaa virran itsestään --- */
 await sivu.evaluate(() => {
@@ -649,14 +722,20 @@ tila = await kortti();
 vaadi('saapuminen avaa virran ilman nappia', Boolean(tila), JSON.stringify(tila));
 
 /* --- vaiheet 5–6 ja luovutus laattamekaniikalle --- */
-await paina('aarteelle');
+// Lipun ollessa pois oppitunnilla ollaan jo (kuplan Jatka toi tänne).
+if (VALINTA) await paina('aarteelle');
 tila = await kortti();
 vaadi('vaihe 5 on oppituntikortti, joka pohjustaa laattakysymystä',
   tila?.vaihe === 'oppitunti' && tila.kupla === false && tila.teksti.includes('demokratia'),
   JSON.stringify(tila?.vaihe));
-// Kartalla on nyt neljä kuvaa: herokuva, täky, kohdenosto ja oppitunti
-// — kolme Ateenan viuhkassa ja yksi Korintin kannaksella.
-vaadi('oppitunnin kuva liittyi kartan viuhkaan', (await vinjetit()).maara === 4);
+/*
+ * Kartalla on lipun ollessa PÄÄLLÄ neljä kuvaa: herokuva, täky,
+ * kohdenosto ja oppitunti — kolme Ateenan viuhkassa ja yksi Korintin
+ * kannaksella. Lipun ollessa POIS täkyä ja kohdenostoa ei ole, joten
+ * viuhkassa on herokuva ja oppitunti.
+ */
+vaadi('oppitunnin kuva liittyi kartan viuhkaan',
+  (await vinjetit()).maara === (VALINTA ? 4 : 2), JSON.stringify(await vinjetit()));
 
 await paina('Nikos');
 tila = await kortti();
@@ -801,21 +880,27 @@ vaadi('kuplan tekstin veto ei panoroi karttaa',
   Boolean(kohta?.kupla) && samaKartta(ennen, await kartanTila()),
   JSON.stringify({ kohta, ennen, jalkeen: await kartanTila() }));
 
-/* 12b: täkykortti — pysty- ja vaakaveto jäävät kortin sisään. */
+/*
+ * 12b: annostelukortti — pysty- ja vaakaveto jäävät kortin sisään.
+ *
+ * Mitattava kortti on lipun ollessa PÄÄLLÄ täkykortti ja POIS
+ * oppituntikortti: sama kehys, sama vieritettävä sisus (piirraKehys),
+ * joten vartio ei riipu siitä kummasta vaiheesta kortti tulee.
+ */
 await puhelin.evaluate(() => {
   const ui = window.matkakirja.ui;
   ui.openArrival(ui.game.cityOf());
 });
 await puhelin.waitForTimeout(500);
 await paina('Jatka', '.fokusvirta-napit', puhelin);
-await paina('Filosofi', '.fokusvirta-napit', puhelin);
+if (VALINTA) await paina('Filosofi', '.fokusvirta-napit', puhelin);
 await puhelin.waitForTimeout(400);
 kohta = await pinnanKohta();
 const kortinPinta = await puhelin.evaluate(() => {
   const el = document.querySelector('.fokusvirta-kortti');
   return Boolean(el) && Boolean(el.closest('.map-pane'));
 });
-vaadi('täkykortti on kartan päällä ja sen sisältö on vieritettävä',
+vaadi('annostelukortti on kartan päällä ja sen sisältö on vieritettävä',
   kortinPinta && kohta?.kupla === false && kohta.vieritettava === true,
   JSON.stringify({ kortinPinta, kohta }));
 
