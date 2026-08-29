@@ -1111,7 +1111,9 @@ export const RAAMATTU = {
           + 'aiheen varipallo syttyy myos valikon seliterivilla - '
           + 'valikko nayttaa aina mitka valot ovat paalla. Popup '
           + 'LIUKUU YLOS PIILOON kun karttaa klikataan; valot jaavat '
-          + 'paalle. Toteutus elaintakyeran jalkeen samalle '
+          + 'paalle. Seliterivilla nakyy myos KAPPALEMAARA - montako '
+          + 'sen aiheen kohdetta nykyisen nakyman maassa on '
+          + '(omistaja 29.8.2026 ilta). Toteutus elaintakyeran jalkeen samalle '
           + 'merkkikerrokselle.',
         'SYVENNYSTARINAT KARTALLE (omistaja 29.8.2026 ilta, "Sopii"): '
           + 'v1326:ssa reitittomiksi jaaneet fokusvirtatakyt - '
