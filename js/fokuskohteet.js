@@ -1332,7 +1332,7 @@ function ajastaRasteriporras(ui) {
   }, PORTAAN_LEPO_MS);
 }
 
-export function paivitaFokuskohteet(ui) {
+export function paivitaFokuskohteet(ui, tiedettyNakyva = null) {
   if (typeof document === 'undefined') return;
   const kerros = varmistaKohdekerros(ui);
   if (!kerros) return;
@@ -1348,7 +1348,7 @@ export function paivitaFokuskohteet(ui) {
      */
     clearTimeout(ui.fokusPorrasAjastin);
     ui.fokusPorrasAjastin = 0;
-    paivitaRasteriporras(ui, ui.nakyvaAlue?.()?.skaala);
+    paivitaRasteriporras(ui, (tiedettyNakyva ?? ui.nakyvaAlue?.())?.skaala);
     ui.fokuskohdeAvain = avain;
     kerros.textContent = '';
     ui.fokuskohdeRyhmat = [];
@@ -1388,7 +1388,10 @@ export function paivitaFokuskohteet(ui) {
     // levon yli (ks. PORTAAN_LEPO_MS).
     ajastaRasteriporras(ui);
   }
-  const nakyva = ui.nakyvaAlue?.();
+  // Kutsujan mittaama näkymä kelpaa: kerroksen rakennus yllä on
+  // pelkkää kirjoitusta eikä liikuta karttaa (ks. js/ui.js
+  // taydennaTaide, "NÄKYMÄ MITATAAN KERRAN").
+  const nakyva = tiedettyNakyva ?? ui.nakyvaAlue?.();
   const skaala = nakyva?.skaala;
   if (!skaala || !Number.isFinite(skaala) || skaala <= 0) return;
   /*

@@ -4166,9 +4166,27 @@ export class UI {
      * jossa bittikarttaa ei saada tehtyä (rasteroiRuutu palauttaa
      * silloin nullin eikä this.taide ole olemassa).
      */
+    /*
+     * NÄKYMÄ MITATAAN KERRAN JA KULKEE PARAMETRINA ALAS (mitattu
+     * 29.8.2026, nipistys kehittäjän maailmanäkymässä, 4x kuristus).
+     *
+     * Tämä ketju on juuri se kohta, jossa fitViewBox on VASTA
+     * KIRJOITTANUT viewBoxin, SVG:n inline-mitat ja siirtokuoren
+     * muunnoksen — eli mitätöinyt nakyvaAlueen välimuistiavaimen. Sen
+     * jälkeen ketjun jokainen alifunktio (paivitaMaastonimet,
+     * paivitaFokusAtlas, paivitaFokuskohteet, paivitaFokusNimilaput,
+     * maastonimien ladonta) luki näkymän omin päin, ja koska ne
+     * KIRJOITTAVAT DOMiin lukujen välissä, jokainen luku pakotti tuoreen
+     * asettelun: mitattuna 1409 v8-näytettä nakyvaAlue-ketjussa ja
+     * 507 ms itsekulua yhdessä ajossa.
+     *
+     * Yksi luku heti kirjoitusten jälkeen kelpaa kaikille: näkymä ei
+     * muutu ketjun aikana, koska ketju ei liikuta karttaa.
+     */
     if (!this.kartanRaahaus && !document.body.classList.contains('flight-active')) {
-      this.paivitaLahivesi();
-      this.paivitaMaastonimet();
+      const nakyvaNyt = this.nakyvaAlue();
+      this.paivitaLahivesi(nakyvaNyt);
+      this.paivitaMaastonimet(nakyvaNyt);
     }
     if (!this.taide || !this.taideRyhma) return;
     /*
@@ -4692,14 +4710,14 @@ export class UI {
    * häivytyksen välivaiheet piirtyvät mutta paikallaan seisominen ei
    * piirrä mitään uudelleen.
    */
-  paivitaLahivesi() {
+  paivitaLahivesi(tiedettyNakyva = null) {
     /*
      * LÄHIVESI ON POIS KÄYTÖSTÄ. Joet ja järvet siirtyivät omaan
      * linssiinsä (ks. mapart.js drawMaasto), eikä pohjakartalla ole enää
      * vettä piirrettävänä. Kerrosta ei luoda, joten tämä palaa heti.
      */
     if (!this.lahivesiKerros) return;
-    const nakyva = this.nakyvaAlue();
+    const nakyva = tiedettyNakyva ?? this.nakyvaAlue();
     if (!nakyva) return;
     const voima = lahivedenVoima(nakyva.w);
     const tunniste = voima
@@ -4715,7 +4733,21 @@ export class UI {
     });
   }
 
-  paivitaMaastonimet() {
+  paivitaMaastonimet(tiedettyNakyva = null) {
+    /*
+     * NÄKYMÄ KERRAN, KAIKILLE (ks. taydennaTaide: "NÄKYMÄ MITATAAN
+     * KERRAN"). Ilman kutsujan mittausta luetaan tässä yhden kerran ja
+     * annetaan sama luku eteenpäin — ei kertaakaan alempana.
+     */
+    const nakyvaNyt = tiedettyNakyva ?? this.nakyvaAlue();
+    /*
+     * MERKKIKERROSTEN NÄKYMÄRAJAUS ENSIMMÄISENÄ. Alempana ajettavat
+     * silmukat (nimilaput) ohittavat rajatut solmut, joten rajaus on
+     * oltava ajan tasalla ennen niitä: näkymän alle juuri tullut
+     * kaupunki saa merkintänsä samalla asettumisella eikä vasta
+     * seuraavalla.
+     */
+    this.paivitaMaailmanRajaus(nakyvaNyt);
     /*
      * Fokusnäkymän lisänimet tahdistetaan ENNEN varhaisia paluita:
      * ne elävät omassa kerroksessaan eivätkä riipu nimipaketista,
@@ -4730,7 +4762,7 @@ export class UI {
      * aikana ei ladata mitään — sama sääntö kuin kartan bittikartalla
      * (taydennaTaide: "kesken eleen ei ladata").
      */
-    paivitaFokusAtlas(this);
+    paivitaFokusAtlas(this, nakyvaNyt);
     /*
      * Fokusvirran kuvavinjetit ovat kiinteän KOKOISIA RUUDULLA, joten
      * niiden mittakaava on laskettava uudelleen aina kun zoomi muuttuu
@@ -4738,7 +4770,7 @@ export class UI {
      */
     paivitaFokuskuvat(this);
     // Kartan kohdemerkit ovat samoin kiinteän kokoisia ruudulla.
-    paivitaFokuskohteet(this);
+    paivitaFokuskohteet(this, nakyvaNyt);
     // Sama koskee kevyen kulun vihreää kohtaamispistettä.
     paivitaFokuspiste(this);
     /*
@@ -4758,7 +4790,7 @@ export class UI {
     this.paivitaFokusKohdeMitat();
     // Ja kaupunkien omia nimilappuja: ne ladotaan fokusnäkymässä laatan
     // alle ruudulla vakiokokoisina (paivitaFokusNimilaput).
-    this.paivitaFokusNimilaput();
+    this.paivitaFokusNimilaput(nakyvaNyt);
     if (!this.maastonimiKerros) return;
     if (!this.maastonimet) return;
     /*
@@ -4786,7 +4818,7 @@ export class UI {
       this.maastonimiTunniste = null;
       return;
     }
-    const nakyva = this.nakyvaAlue();
+    const nakyva = nakyvaNyt;
     if (!nakyva) return;
     // Tunniste karkealla tarkkuudella: pienempi liike ei muuta yhtään
     // nimeä, koska nimet ilmestyvät ja katoavat kokonaisina.
@@ -6378,6 +6410,21 @@ export class UI {
    * kaupunkilaatat, ja reitit jäävät omistajan tilauksen mukaan pois.
    */
   paivitaKehittajaMaailma() {
+    /*
+     * KAIKKI ASETTELUNLUVUT ENSIN, KIRJOITUKSET VASTA SEN JÄLKEEN
+     * (mitattu 29.8.2026: napin klikkauskäsittely oli 3,2 sekunnin
+     * jättikehys 4x kuristuksella).
+     *
+     * Kytkin ajaa yhdessä synkronisessa tehtävässä koko fokuskerroksen:
+     * 601 luokkakirjoitusta käymättömille maille, koko kaupunkikerroksen
+     * läpikäynnin ja atlaksen uudelleenvalinnan. Niiden LOMASSA luettiin
+     * näkymä ja paneelin mitat, ja jokainen luku pakotti tuoreen
+     * asettelun juuri kirjoitettuun DOMiin. Yksi mittaus tässä alussa
+     * lämmittää molemmat välimuistit (nakyvanMitat tehtävärajaan asti,
+     * paneKoko fitViewBoxiin asti), jolloin loppu on pelkkiä
+     * kirjoituksia.
+     */
+    this.nakyvaAlue();
     // Sama syy kuin paivitaKehittajaTilassa: suora levykirjoitus + tämä
     // tahdistin on savukevartijoiden tapa vaihtaa tila ilman latausta.
     unohdaKehittajaKytkimet();
@@ -6399,7 +6446,173 @@ export class UI {
     this.fokusAvain = null;
     this.atlasAvain = null;
     this.paivitaFokusKerros();
+    /*
+     * NÄKYMÄRAJAUS HETI KYTKIMESTÄ. Rajaus lasketaan muuten vain
+     * näkymän asettuessa (paivitaMaastonimet), eikä napin painallus
+     * liikuta karttaa — ilman tätä maailmanäkymä avautuisi kaikki 602
+     * solmua kerralla kartalla ja rajautuisi vasta ensimmäisestä
+     * eleestä. Sammuessaan sama kutsu palauttaa piilotetut solmut.
+     */
+    this.paivitaMaailmanRajaus();
     this.kartta?.tarkistaFokusZoom?.();
+  }
+
+  /* --- MERKKIKERROSTEN NÄKYMÄRAJAUS (mitattu 29.8.2026) ------------- */
+
+  /**
+   * MAAILMANÄKYMÄSSÄ KARTALLE VAIN NE MERKIT, JOTKA VOIVAT NÄKYÄ.
+   *
+   * === MIKÄ VIKA OLI (mitattu 29.8.2026, Chromium 390x844 dpr3, 4x) ===
+   *
+   * Kehittäjän maailmanäkymä (paivitaKehittajaMaailma) ohittaa
+   * käymättömien maiden piilotuksen, jotta omistaja voi siirtyä maasta
+   * toiseen. Sen hintana kartalla on KOKO laudan kaupunkikerros: 602
+   * näkyvää solmua siinä missä pelissä on muutama kymmenen. Eleen
+   * aikainen piilotus (js/kartta.js piilotaMerkit,
+   * body.kartta-merkit-piilossa) ei kata niitä lainkaan — se koskee
+   * fokuskohteita, fokuspisteitä, nostosymboleita ja nippuviivoja.
+   *
+   * Mitattuna sama Kreikan-sisäinen ele nappi pois vs. päällä:
+   *
+   *                        nappi pois   nappi päällä
+   *     Layerize                  1x          7,4x
+   *     Paint                     1x        4–11x
+   *     panoroinnin longtaskit  ~0 ms        668 ms
+   *
+   * Kustannus on LINEAARINEN näkyvissä solmuissa (varmistettu
+   * kloonikokeella): kartan CSS-muunnos pakottaa selaimen pilkkomaan
+   * koko SVG:n uudestaan maalipaloihin joka kehyksellä, ja jokainen
+   * solmu on siinä oma erikseen käsiteltävä kappaleensa riippumatta
+   * siitä, osuuko se ruudulle.
+   *
+   * === SÄÄNTÖ ===
+   *
+   * Ruudullisen päähän näkymästä jäävät solmut saavat luokan
+   * `.fokus-ikkunan-ulkona` (css/styles.css, display: none). Puskuri on
+   * sama kuin kartan bittikartalla (taydennaTaide sääntö 2): yksi
+   * pyyhkäisy siirtää karttaa korkeintaan ruudullisen, koska sormi ei
+   * mahdu kulkemaan ruutua pidemmälle — eleen aikana ei siis koskaan
+   * paljastu solmua, jota ei olisi jo laskettu mukaan.
+   *
+   * KOLME EHTOA, JOTKA PITÄVÄT TÄMÄN HALPANA:
+   *
+   *   1. VAIN NÄKYMÄN ASETTUESSA. Kutsutaan paivitaMaastonimistä (eli
+   *      taydennaTaiteen ketjusta) ja kytkimestä — ei kehyksessä eikä
+   *      pointermovessa.
+   *   2. EI YHTÄKÄÄN ASETTELUNLUKUA. Rajat ovat LAUDAN yksiköissä
+   *      (kutsujan mittaama nakyvaAlue), ja solmun paikka luetaan sen
+   *      omista määreistä (data-kx/ky, cx/cy, x/y) — ei
+   *      getBoundingClientRectillä. Sama v1115:n sääntö kuin
+   *      viivainsilmukalla.
+   *   3. TUNNISTE OHITTAA TOISTON. Karkea avain (kahdeksasosaruutu)
+   *      tarkoittaa, ettei pieni panorointi käy 600:aa solmua läpi.
+   *
+   * KIERTÄVÄ LAUTA: sama piste piirtyy laudan leveyden päähän
+   * (kiertoKohdat), joten solmu on näkyvissä jos MIKÄ TAHANSA kolmesta
+   * kopiosta osuu ikkunaan — sama testi kuin fokusPohjanAlla.
+   *
+   * PIILOTETTU SOLMU EI OLE PYSYVÄSTI PIILOSSA: joukko `maailmanRajatut`
+   * on totuus siitä, mikä on piilotettu, ja jokainen asettuminen
+   * laskee sen uusiksi. Näkymän sammuessa (maailmanappi pois, paluu
+   * peliin) joukko puretaan kokonaan.
+   */
+  paivitaMaailmanRajaus(tiedettyNakyva = null) {
+    if (!this.svg) return;
+    const paalla = Boolean(this.maailmanakyma?.());
+    if (!paalla) {
+      if (this.maailmanRajatut?.size) {
+        for (const osa of this.maailmanRajatut) {
+          osa.classList.remove('fokus-ikkunan-ulkona');
+        }
+        this.maailmanRajatut.clear();
+      }
+      this.maailmanRajausAvain = null;
+      return;
+    }
+    const nakyva = tiedettyNakyva ?? this.nakyvaAlue();
+    if (!(nakyva?.w > 0) || !(nakyva?.h > 0)) return;
+    const cities = this.svg.querySelector('.cities');
+    const lehdet = this.svg.querySelectorAll('.fokus-maailma image');
+    if (!cities && !lehdet.length) return;
+    // Ruudullinen puskuria joka suuntaan (ks. sääntö yllä).
+    const raja = {
+      x: nakyva.x - nakyva.w,
+      y: nakyva.y - nakyva.h,
+      x2: nakyva.x + nakyva.w * 2,
+      y2: nakyva.y + nakyva.h * 2,
+    };
+    /*
+     * TUNNISTE PUOLIKKAAN RUUDUN TARKKUUDELLA. Puskuri on kokonainen
+     * ruutu, joten luokitus kestää puolen ruudun liikkeen ennen kuin se
+     * voi olla väärässä — ja juuri niin paljon karkeutta tunnisteeseen
+     * uskalletaan panna. Panoroinnissa yksi pyyhkäisy siirtää karttaa
+     * kolmanneksen ruudusta, joten 600 solmun silmukka ohitetaan
+     * useimmissa eleissä kokonaan.
+     */
+    const avain = [
+      Math.round(raja.x / (nakyva.w / 2)), Math.round(raja.y / (nakyva.h / 2)),
+      Math.round(raja.x2 / (nakyva.w / 2)), Math.round(raja.y2 / (nakyva.h / 2)),
+    ].join(':')
+      // Zoomi kuuluu tunnisteeseen omana lukunaan: karkeus on näkymän
+      // omissa yksiköissä, joten pelkät rajat voisivat pyöristyä samaksi
+      // vaikka mittakaava muuttui.
+      + `:${Math.round(nakyva.w)}:${cities?.childElementCount ?? 0}:${lehdet.length}`;
+    if (this.maailmanRajausAvain === avain) return;
+    this.maailmanRajausAvain = avain;
+    /*
+     * KERROKSEN VAIHTUESSA JOUKKO NOLLATAAN. Kaupunkikerros rakennetaan
+     * uusiksi laudan vaihdossa, ja vanhat solmut jäisivät muuten
+     * joukkoon ikuisiksi ajoiksi — nimilappujen ohitus (rajatut.has)
+     * lukee samaa joukkoa, joten se ei saa täyttyä irronneista solmuista.
+     */
+    if (this.maailmanRajausKerros !== cities) {
+      this.maailmanRajausKerros = cities;
+      for (const vanha of this.maailmanRajatut ?? []) {
+        vanha.classList.remove('fokus-ikkunan-ulkona');
+      }
+      this.maailmanRajatut?.clear();
+    }
+    const kierto = this.kartta?.kiertava?.() ? (this.game.pack.map?.width ?? 0) : 0;
+    /** Osuuko [x1, x2] ikkunaan — myös kiertävän laudan kopioina? */
+    const xOsuu = (x1, x2) => {
+      for (const dx of kierto > 0 ? [0, kierto, -kierto] : [0]) {
+        if (x2 + dx >= raja.x && x1 + dx <= raja.x2) return true;
+      }
+      return false;
+    };
+    const rajatut = (this.maailmanRajatut ??= new Set());
+    const merkitse = (osa, ulkona) => {
+      if (ulkona) {
+        if (rajatut.has(osa)) return;
+        osa.classList.add('fokus-ikkunan-ulkona');
+        rajatut.add(osa);
+      } else if (rajatut.delete(osa)) {
+        osa.classList.remove('fokus-ikkunan-ulkona');
+      }
+    };
+    for (const osa of cities?.children ?? []) {
+      /*
+       * LAATAN KESKIPISTE ENSIN (data-kx/ky): se on sama kaikille saman
+       * kaupungin osille — laatta, rantarengas, porttikehä, lentokoneen
+       * merkki ja nimilappu — joten koko kaupunki katoaa ja palaa
+       * yhtenä. Ilman maatunnistetta (laudan ulkopuoliset kaupungit)
+       * käytetään osan omaa ankkuria.
+       */
+      const x = Number(osa.dataset.kx ?? osa.getAttribute('cx') ?? osa.getAttribute('x'));
+      const y = Number(osa.dataset.ky ?? osa.getAttribute('cy') ?? osa.getAttribute('y'));
+      // Ilman koordinaattia ei ole mitä rajata: osa jää näkyviin.
+      if (!Number.isFinite(x) || !Number.isFinite(y)) { merkitse(osa, false); continue; }
+      merkitse(osa, !(y >= raja.y && y <= raja.y2) || !xOsuu(x, x));
+    }
+    for (const kuva of lehdet) {
+      const bx = Number(kuva.getAttribute('x'));
+      const by = Number(kuva.getAttribute('y'));
+      const bw = Number(kuva.getAttribute('width'));
+      const bh = Number(kuva.getAttribute('height'));
+      if (!Number.isFinite(bx) || !Number.isFinite(by)
+        || !(bw > 0) || !(bh > 0)) { merkitse(kuva, false); continue; }
+      merkitse(kuva, !(by + bh >= raja.y && by <= raja.y2) || !xOsuu(bx, bx + bw));
+    }
   }
 
   /* --- PALLOT POIS LEHDEN PÄÄLTÄ (omistaja 24.8.2026, v1097) -------- */
@@ -6685,18 +6898,33 @@ export class UI {
    * vasta varapolulla (lehdetön näkymä), jossa vastaus on ruutukoon
    * käänteisluku. Välimuistiosuma ei enää koske asettelua ollenkaan.
    *
-   * PANEELIN MITAT (clientWidth/clientHeight) OVAT SILTI MITTAUS —
-   * mutta paneeli on tavallinen div, jota kartan muunnokset eivät
-   * liikuta, ja sen lukeminen maksoi mittauksissa alle kymmenesosan
-   * SVG:n laatikosta. Ne jäävät, koska juuri niistä välimuistin avain
-   * huomaa ruudun koon muutoksen (kääntö, näppäimistö).
+   * PANEELIN MITAT LUETAAN VÄLIMUISTISTA, EI RUUDULTA (mitattu
+   * 29.8.2026, kehittäjän maailmanäkymä, 4x kuristus).
+   *
+   * Aiempi versio luki `pane.clientWidth/clientHeight` JOKA kutsulla
+   * sillä perusteella, että paneeli on tavallinen div, jota kartan
+   * muunnokset eivät liikuta. Peruste pitää paikkansa vasta silloin,
+   * kun asettelu on puhdas: clientWidth on asettelunluku siinä missä
+   * getBoundingClientRect, ja kun kutsuja on juuri KIRJOITTANUT DOMiin
+   * (nimilaput, merkkien muunnokset, luokkien vaihdot), selain laskee
+   * koko dokumentin asettelun uudelleen ennen kuin vastaa. Mitattu
+   * yhdessä ajossa 828 v8-näytettä tästä kutsusta, pahimmillaan 70 ms
+   * yhdellä kutsulla.
+   *
+   * `ui.paneKoko` on täsmälleen sama luku KERRAN mitattuna: js/kartta.js
+   * fitViewBox tallettaa sen jokaisesta näkymän asettumisesta, ja
+   * ruudun koon muutos ajaa aina fitViewBoxin (ResizeObserver), joten
+   * välimuisti ei vanhene käsiin — sama sopimus kuin eleiden silmukoilla
+   * (rajaaFokusPan, fokusZoomMinimi). Ruudulta luetaan enää silloin, kun
+   * fitViewBox ei ole vielä kertaakaan ehtinyt ajaa.
    */
   fokusMerkkiSkaala(suhde = 1) {
     const ele = suhde > 0 ? suhde : 1;
     const rajaus = this.fokusPohjaRajaus;
     const pane = this.mapPane;
-    const paneW = pane?.clientWidth || 0;
-    const paneH = pane?.clientHeight || 0;
+    const muistettu = this.paneKoko;
+    const paneW = (muistettu?.w > 0 ? muistettu.w : pane?.clientWidth) || 0;
+    const paneH = (muistettu?.h > 0 ? muistettu.h : pane?.clientHeight) || 0;
     if (rajaus?.w > 0 && rajaus?.h > 0 && paneW > 0 && paneH > 0) {
       const avain = `${rajaus.x}:${rajaus.y}:${rajaus.w}:${rajaus.h}`
         + `:${Math.round(paneW)}x${Math.round(paneH)}`;
@@ -7335,7 +7563,7 @@ export class UI {
    * voittaisi määreen. Palautus poistaa tyylin, jolloin sääntö palaa
    * voimaan sellaisenaan.
    */
-  paivitaFokusNimilaput() {
+  paivitaFokusNimilaput(tiedettyNakyva = null) {
     if (!this.svg) return;
     const laput = this.svg.querySelectorAll('.cities .city-label');
     if (!laput.length) return;
@@ -7355,9 +7583,22 @@ export class UI {
     if (paalla && !(kerroin > 0)) return;
     // Näkymän oma mittakaava (px laudan yksikköä kohti) nimikoon
     // ruutulattiaa varten; luetaan kerran kuten kerroinkin.
-    const skaala = paalla ? (this.nakyvaAlue()?.skaala ?? 0) : 0;
+    const skaala = paalla
+      ? ((tiedettyNakyva ?? this.nakyvaAlue())?.skaala ?? 0) : 0;
     const oma = paalla ? this.game.cityOf?.() : null;
+    /*
+     * NÄKYMÄRAJATTUA LAPPUA EI LADOTA (paivitaMaailmanRajaus). Se on
+     * display: none eikä maalaudu, joten sen määreiden kirjoittaminen
+     * olisi pelkkä asettelun mitätöinti — ja juuri niitä tässä
+     * silmukassa laskettiin, 261 lappua kerrallaan. Rajaus ajetaan
+     * ENNEN tätä (paivitaMaastonimet), joten näkyviin palaava lappu saa
+     * mittansa samalla asettumisella. Restaurointihaara (paalla ===
+     * false) käy jokaisen lapun läpi, myös rajatut: fokusnäkymästä
+     * poistuttaessa alkuperäinen ladonta on palautettava kaikille.
+     */
+    const rajatut = paalla ? this.maailmanRajatut : null;
     for (const lappu of laput) {
+      if (rajatut?.has(lappu)) continue;
       if (!paalla) {
         if (lappu.dataset.nimiPerus === undefined) continue;
         const perus = JSON.parse(lappu.dataset.nimiPerus);

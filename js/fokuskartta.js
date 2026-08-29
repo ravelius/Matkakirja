@@ -2794,7 +2794,7 @@ function paivitaErikoispiirit(ui, yleislehdella) {
  * (atlasAvain) ohittaa koko valinnan. Tunniste on karkea tarkoituksella
  * — pienen panoroinnin jälkeen sama joukko lehtiä on yhä oikea.
  */
-export function paivitaFokusAtlas(ui) {
+export function paivitaFokusAtlas(ui, tiedettyNakyva = null) {
   /*
    * VANHAN LAUDAN PIIRTO ENSIMMÄISENÄ ja ennen kaikkia varhaisia
    * paluita: tämä funktio on ainoa paikka, joka tietää atlaksen tilan,
@@ -2831,7 +2831,13 @@ export function paivitaFokusAtlas(ui) {
     }
     return;
   }
-  const nakyva = ui.nakyvaAlue?.();
+  /*
+   * NÄKYMÄ KUTSUJALTA, JOS SE ON JO MITATTU (js/ui.js taydennaTaide:
+   * "NÄKYMÄ MITATAAN KERRAN"). paivitaVanhaLauta yllä VAIHTAA
+   * body-luokan, mikä mitätöi nakyvaAlueen välimuistiavaimen — oma luku
+   * tässä pakottaisi siis asettelun juuri kirjoituksen perään.
+   */
+  const nakyva = tiedettyNakyva ?? ui.nakyvaAlue?.();
   if (!nakyva?.w) return;
   const lauta = ui.game.pack.id;
 

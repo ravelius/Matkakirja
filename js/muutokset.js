@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1315, teksti: 'Merkkikerrosten nakymarajaus ja asettelukuri' },
   { v: 1314, teksti: 'Isoisan karttaliite: Wienin pilotti' },
   { v: 1313, teksti: 'Kuusi ihmekuvaa uusiksi ilman heikkouksia' },
   { v: 1312, teksti: 'Aallon 2 loistoaikakuvat neljalle takylle' },

@@ -1210,6 +1210,21 @@ body.kartta-merkit-piilossa .fokuspisteet,
 body.kartta-merkit-piilossa .fokusnosto-symbolit,
 body.kartta-merkit-piilossa .nippuviivat { display: none; }
 
+/* NÄKYMÄN ULKOPUOLISET MERKIT POIS (js/ui.js paivitaMaailmanRajaus —
+   koko perustelu ja mittausluvut siellä).
+
+   Eleen ajan piilotus (yllä) kattaa vain ne kerrokset, jotka ovat
+   kymmeniä solmuja. Kehittäjän maailmanäkymässä kartalla on lisäksi
+   KOKO laudan kaupunkikerros — 602 näkyvää solmua — ja sen kaikki
+   ryhmittely maalipaloihin tehdään joka kehyksellä riippumatta siitä,
+   osuuko solmu ruudulle. Rajaus jättää kierrokseen vain ne, jotka
+   ovat ruudulla tai ruudullisen päässä siitä.
+
+   PIILOTUS ON LUOKKA, EI SUODATIN (sama iOS-sääntö kuin muillakin
+   kartan kerroksilla, tests/rules.test.mjs), ja se lasketaan vain
+   näkymän asettuessa — ei kehyksessä eikä pointermovessa. */
+.fokus-ikkunan-ulkona { display: none; }
+
 /*
  * Vanhan kiikarin vääristymä (omistajan toive): maailmankartan
  * lähikuvassa ruudun reunat sumenevat, saavat vihertävän linssin sävyn
