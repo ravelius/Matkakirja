@@ -192,8 +192,12 @@ const FOKUS_ALIPOLKU = 'julisteet/fokus/';
  *     MAAILMA.webp on nyt 6400 x 3351 eikä 6400 x 2879, ja sen bbox
  *     alkaa laudan yläpuolelta. Vanha välimuistikopio piirtyisi
  *     venytettynä uuteen laatikkoon, joten numero on pakko nostaa.
+ * 6 = Yleislehden kartta-ala 84 °N…66 °S (29.8.2026, omistaja: *"alhaalta
+ *     ja varsinkin ylhäältä leikkautuu liikaa karttaa pois"*).
+ *     MAAILMA.webp on 6400 x 3897 ja sen bbox alkaa 1046 yksikköä laudan
+ *     yläpuolelta — sama pakko kuin kohdassa 5.
  */
-const FOKUS_VUOSIKERTA = 5;
+const FOKUS_VUOSIKERTA = 6;
 
 /** Fokuskartan osoite ämpärissä (esim. 'GRC.webp' tai 'GRC.json'). */
 export function fokuskarttaUrl(tiedosto) {
