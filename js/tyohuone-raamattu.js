@@ -923,6 +923,17 @@ export const RAAMATTU = {
           + 'mustaan - ei Aarnin luettelo -kehysta, otsakkeita eika '
           + 'leimaa. Diplomikoodi jai paikoilleen kuolleena (poisto '
           + 'oma eransa). Toteutettu v1300.',
+        'LOISTOAIKAKUVAT PUHTAASTI OMASSA AJASSAAN (omistaja 29.8.2026 '
+          + 'aamu, Parthenonin v3-havainto: "ei ole sotkettu nykyaikaa ja '
+          + 'loistoaikaa keskenaan ja se sopii minusta paremmin... jatkossa '
+          + 'voisi melkein suosia noita autenttisia nakymia omassa ajassaan, '
+          + 'ne toimivat varmemmin"): loistoaikakuvaan EI sekoiteta nykyajan '
+          + 'elementteja - aikasiirtyman hoitaa kortin KUVAPARI (loistoaika '
+          + '+ aito nykyvalokuva), ei yksi kuva. Kaksoisversioita ei tehda '
+          + 'samasta syysta. Vanhat sekoitetut ihmekuvat vaihdetaan puhtaisiin '
+          + 'sita mukaa kun uusinnat generoituvat (jono: hefaistos, kolossi, '
+          + 'zeus, ninive, theodosius). Kumoaa aiempien promptien "modern '
+          + 'surroundings" -kaytannon.',
         'ISOISAN KARTTALIITE (omistaja 29.8.2026 aamu, idea X-postauksesta '
           + '"Valley of Tenochtitlan as seen by Cortez": "sopisiko tallainen '
           + 'tyyli peliin" + "joo ja kirjataan raamattuun"): uusi pieni '
