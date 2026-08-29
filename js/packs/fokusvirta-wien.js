@@ -374,13 +374,38 @@ export const FOKUSVIRTA_WIEN = {
       + 'takia, ja kolme minuuttia myöhemmin kupoli romahti. Seuraavan '
       + 'päivän lehden otsikko kuului: Wienillä ei ole enää Rotundea.',
     /*
+     * PÄÄKUVAKSI LOISTOAIKA (29.8.2026, aalto 1). Sama malli kuin
+     * täkynostoilla v1307:stä alkaen: repon oma generoitu havainnekuva,
+     * jolla ei ole Commons-nimeä eikä varareittiä, joten kenttä on
+     * `osoite` eikä `tiedosto` (js/fokusvirta.js kuvanOsoite).
+     *
+     * EI PÄÄLLEKKÄINEN TÄMÄN TIEDOSTON NOSTOKUVAN KANSSA. Noston
+     * maailmannayttely-1873 pääkuva näyttää alueen ULKOA (Rotunde,
+     * lippurivit ja paviljongit hiekkakäytävineen); tämä on kupolin
+     * SISUS, eli juuri se, mistä oppitunti kertoo — 108 metrin
+     * halkaisija ja rautapylväiden varassa lepäävä katto.
+     *
+     * SILMÄTARKISTUS 29.8.2026: ei tekstiä, ei nykyaikaa; liput ovat
+     * pelkkiä värikenttiä ilman kirjaimia, asut ja osastot 1870-lukua.
+     */
+    kuva: {
+      osoite: 'assets/kartat/nostot/nosto-rotunde-loistoaika.webp',
+      selite: 'Rotunden sisus näyttelyn ollessa auki: rautarakenteinen '
+        + 'kupoli valoaukkoineen, lippurivit ja näytteilleasettajien '
+        + 'osastot keskussuihkulähteen ympärillä.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
+    },
+    /*
+     * KAKKOSKUVA tekstin alle on entinen ainoa kuva. Tiedosto, selite
+     * ja lähde ennallaan.
+     *
      * Commons 28.8.2026: 1404×1098, public domain, Wiener
      * Photographen-Association, 1873, kuvaus "Main Entrance of the
      * Rotunde with topping-out decoration, Expo 1873". Restrictions
      * tyhjä. SILMÄTARKISTUS tehty: portilla seisoo aikalaisia
      * kaukaisina hahmoina, kaikki 1873.
      */
-    kuva: {
+    valokuva: {
       tiedosto: 'Rotunde Weltausstellung 1873.jpg',
       selite: 'Rotunden pääsisäänkäynti harjannostajaisköynnöksin '
         + 'vuonna 1873. Kupolin halkaisija oli 108 metriä.',

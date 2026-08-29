@@ -199,12 +199,41 @@ export const FOKUSVIRTA_BERLIINI = {
         + 'korotettiin samalla kuudella ja puolella metrillä, kun '
         + 'keskustaa suunniteltiin uusiksi.',
       /*
+       * PÄÄKUVAKSI HAVAINNEKUVA (29.8.2026, aalto 1). Sama malli kuin
+       * täkynostoilla v1307:stä alkaen: repon oma generoitu kuva, jolla
+       * ei ole Commons-nimeä eikä varareittiä, joten kenttä on `osoite`
+       * eikä `tiedosto` (js/fokusvirta.js kuvanOsoite).
+       *
+       * LÄHDERIVI ON SOVITETTU HETKEKSI (sama ratkaisu kuin v1312:n
+       * Szegedillä ja Karlštejnillä): kuva ei näytä pylvästä yleisesti
+       * loistoaikanaan vaan sen YHDEN PÄIVÄN, jonka ympärille täky on
+       * rakennettu — vihkiäiset 2. syyskuuta 1873, isoisän matkavuonna,
+       * pylväs vielä alkuperäisellä paikallaan Königsplatzilla.
+       *
+       * TÄYDENTÄÄ KAKKOSKUVAA, EI TOISTA SITÄ: Commonsin aikalaiskuva
+       * on pystykuva pylvään juurelta, tämä koko juhlakentän yli.
+       *
+       * SILMÄTARKISTUS 29.8.2026: ei tekstiä, ei nykyaikaa; kullattu
+       * Victoria harjalla, jalustan reliefit kuvallisia ilman
+       * kirjaimia, asut ja univormut 1870-lukua.
+       */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-voitonpylvas-loistoaika.webp',
+        selite: 'Voitonpylvään vihkiäiset Königsplatzilla: kullattu '
+          + 'Victoria harjalla, sotaväkeä rivissä ja juhlayleisöä koko '
+          + 'kentän ympärillä.',
+        lahde: 'Matkakirjan havainnekuva: kohde vihkiäispäivänään 1873',
+      },
+      /*
+       * KAKKOSKUVA tekstin alle on entinen ainoa kuva. Tiedosto, selite
+       * ja lähde ennallaan.
+       *
        * Commons 28.8.2026: 1000×1435, public domain, tekijä
        * tuntematon, päiväys 2.9.1873 — aikalaiskuva tasan
        * vihkiäispäivältä. Restrictions tyhjä. SILMÄTARKISTUS tehty:
        * aikalaispiirros, jossa juhlaväkeä ja ratsastajia, kaikki 1873.
        */
-      kuva: {
+      valokuva: {
         tiedosto: 'Einweihung Siegessaeule Berlin.jpg',
         selite: 'Voitonpylvään vihkiäiset 2. syyskuuta 1873. Kuvassa '
           + 'pylväs seisoo vielä alkuperäisellä paikallaan '

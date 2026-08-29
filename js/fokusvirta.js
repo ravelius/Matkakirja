@@ -1043,9 +1043,28 @@ function otsikko(kohde, ylarivi, teksti) {
   if (teksti) kohde.appendChild(html('h3', 'fokusvirta-otsikko', teksti));
 }
 
-/** Kuvan pikkukuvan osoite; ämpärin painotuote vai Commonsin valokuva. */
+/**
+ * Kuvan pikkukuvan osoite. Kolme lähdettä, sama porrastus kuin
+ * täkynostoilla (js/fokusnosto.js asetaNostonKuva):
+ *
+ *   `osoite`   repon oma generoitu havainnekuva (assets/kartat/nostot/).
+ *              Ei Commons-nimeä eikä varareittiä — se joko on tai ei ole.
+ *   `ampari`   ämpärissä oleva painotuote (julisteet, herokuvat).
+ *   `tiedosto` Commons-nimi, joka kulkee median asettajan läpi.
+ */
 function kuvanOsoite(kuva, koko) {
+  if (kuva.osoite) return kuva.osoite;
   return kuva.ampari ? julisteUrl(kuva.ampari) : valokuvaUrl(kuva.tiedosto, koko);
+}
+
+/**
+ * Kuvan varaosoite, tai null jos sellaista ei ole. Vain Commonsin
+ * `tiedosto` tuntee varareitin; ämpärin ja repon omat kuvat eivät —
+ * niiden kohdalla uusinta jättäisi vain tyhjän kehyksen roikkumaan.
+ */
+function kuvanVara(kuva, koko) {
+  if (kuva.osoite || kuva.ampari) return null;
+  return valokuvaVara(kuva.tiedosto, koko);
 }
 
 /**
@@ -1056,8 +1075,13 @@ function kuvanOsoite(kuva, koko) {
  */
 const KORTIN_KUVA_PX = 800;
 
-/** Sama kuva suurennoksena, pelin omaan katselimeen. */
+/**
+ * Sama kuva suurennoksena, pelin omaan katselimeen. Repon omasta
+ * kuvasta on vain yksi koko (1024 px), joten suurennos on sama tiedosto
+ * — se on jo välimuistissa, ja katselin skaalaa sen ruudun mittaan.
+ */
 function kuvanSuurennos(kuva) {
+  if (kuva.osoite) return kuva.osoite;
   return kuva.ampari ? julisteUrl(kuva.ampari) : valokuvaSuurennos(kuva.tiedosto, 1600);
 }
 
@@ -1082,9 +1106,9 @@ function kuvanSuurennos(kuva) {
  * maininnan), ja napautus avaa saman suurennoksen kuin ennenkin
  * (avaaSuurennos) — kuva kasvaa paikaltaan kartan päälle.
  */
-function piirraKuva(ui, kohde, kuva) {
+function piirraKuva(ui, kohde, kuva, luokka = 'fokusvirta-viite') {
   if (!kuva) return;
-  const viite = html('div', 'fokusvirta-viite');
+  const viite = html('div', luokka);
   const nappi = html('button', 'fokusvirta-kuva');
   nappi.type = 'button';
   nappi.title = 'Katso kuva suurempana';
@@ -1102,12 +1126,8 @@ function piirraKuva(ui, kohde, kuva) {
    * ydin, ja se toimii ilman kuvaakin.
    */
   const piilota = () => { viite.hidden = true; };
-  if (kuva.ampari) {
-    asetaKuva(img, kuvanOsoite(kuva, KORTIN_KUVA_PX), null, piilota);
-  } else {
-    asetaKuva(img, kuvanOsoite(kuva, KORTIN_KUVA_PX),
-      valokuvaVara(kuva.tiedosto, KORTIN_KUVA_PX), piilota);
-  }
+  asetaKuva(img, kuvanOsoite(kuva, KORTIN_KUVA_PX),
+    kuvanVara(kuva, KORTIN_KUVA_PX), piilota);
   nappi.appendChild(img);
   nappi.addEventListener('click', () => avaaSuurennos(ui, [kuva], 0, () => nappi));
   kuvateksti.append(
@@ -1116,6 +1136,21 @@ function piirraKuva(ui, kohde, kuva) {
   );
   viite.append(nappi, kuvateksti);
   kohde.appendChild(viite);
+}
+
+/**
+ * KAKKOSKUVA TEKSTIN ALLE — sama malli kuin täkynostoilla
+ * (js/fokusnosto.js piirraNostonValokuva, omistajan päätös 28.8.2026).
+ *
+ * Kun syvennyksen pääkuvaksi nousee loistoaikahavainnekuva, joka kertoo
+ * mitä paikassa TAPAHTUI, aikalais- tai nykytilan valokuva on todiste
+ * siitä, mitä siitä on jäljellä — ja se kuuluu vasta jutun jälkeen ja
+ * pienempänä. Kehys, kuvateksti ja suurennos ovat pääkuvan omat, joten
+ * CC-attribuutio kulkee mukana sellaisenaan: lisenssiehto ei jousta
+ * koon mukaan.
+ */
+function piirraJalkikuva(ui, kohde, kuva) {
+  piirraKuva(ui, kohde, kuva, 'fokusvirta-viite fokusvirta-jalkikuva');
 }
 
 /* ==================== KUVAN SUURENNOS KARTAN PÄÄLLE ==================
@@ -1236,8 +1271,7 @@ function avaaSuurennos(ui, lista, alku, ankkuri) {
   const nayta = () => {
     const kuva = lista[i];
     img.alt = kuva.selite ?? '';
-    asetaKuva(img, kuvanOsoite(kuva, 320),
-      kuva.ampari ? null : valokuvaVara(kuva.tiedosto, 320), null);
+    asetaKuva(img, kuvanOsoite(kuva, 320), kuvanVara(kuva, 320), null);
     /*
      * PIKKUKUVA ENSIN, ISO PERÄSSÄ. Vinjetin pikkukuva on jo selaimen
      * välimuistissa, joten se on ruudulla samassa kehyksessä — ja mikä
@@ -1575,6 +1609,7 @@ function piirraTaky(ui, city, data, tila, kohde) {
   otsikko(kohde, PULU_YLARIVI, taky.otsikko ?? taky.nappi);
   piirraKuva(ui, kohde, taky.kuva);
   piirraTeksti(kohde, taky.teksti);
+  piirraJalkikuva(ui, kohde, taky.valokuva);
   piirraMinivisa(ui, city, data, taky, kohde);
 }
 
@@ -1692,6 +1727,7 @@ function piirraOppitunti(ui, city, data, kohde) {
   otsikko(kohde, PULU_YLARIVI, data.oppitunti.otsikko);
   piirraKuva(ui, kohde, data.oppitunti.kuva);
   piirraTeksti(kohde, data.oppitunti.teksti);
+  piirraJalkikuva(ui, kohde, data.oppitunti.valokuva);
   piirraNapit(kohde, [nappi(data.kohtaaminen?.nappi ?? 'Jatka', 'primary', () => {
     sfx.play('paper');
     siirry(ui, city, data, 'jatka');
@@ -2530,7 +2566,7 @@ function piirraPinni(ui, kerros, kuva, kaikki, indeksi, siirto, kulma, uusi = fa
    */
   let yritetty = false;
   img.addEventListener('error', () => {
-    const vara = kuva.ampari ? null : valokuvaVara(kuva.tiedosto, 320);
+    const vara = kuvanVara(kuva, 320);
     if (!yritetty && vara) {
       yritetty = true;
       img.setAttribute('href', vara);
