@@ -227,6 +227,16 @@ const SHELL = [
   './js/packs/fokusvirta-edinburgh.js',
   './js/packs/fokusvirta-lissabon.js',
   './js/packs/fokusvirta-riika.js',
+  // Aalto 4B (29.8.2026): Barcelona, Firenze, Venetsia, Marseille,
+  // Oslo, Tampere ja Vilna. Sama sääntö kuin aalloilla 2–4A — ei
+  // kohdenostoja, joten paririviä ei tarvita.
+  './js/packs/fokusvirta-barcelona.js',
+  './js/packs/fokusvirta-firenze.js',
+  './js/packs/fokusvirta-venetsia.js',
+  './js/packs/fokusvirta-marseille.js',
+  './js/packs/fokusvirta-oslo.js',
+  './js/packs/fokusvirta-tampere.js',
+  './js/packs/fokusvirta-vilna.js',
   // Maat ilman omaa fokusvirtaa: kadonneiden ihmeiden erä 26.8.2026
   // ja Matkakirjan ihmeiden Euroopan erä 27.8.2026.
   './js/packs/fokuskohteet-egy.js',
