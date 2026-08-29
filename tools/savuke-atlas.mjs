@@ -763,15 +763,21 @@ vaadi('fokusmoodin sammuttaminen tuo vanhan laudan takaisin',
   !paluu.luokka && paluu.staattinen !== 'none', JSON.stringify(paluu));
 
 /*
- * --- KEHITTÄJÄN YKSI NAPPI (omistajan tilaus 27.8.2026) -------------
+ * --- KEHITTÄJÄN HAMMASRATASVALIKKO (omistaja 29.8.2026) -------------
  *
  * Väite oli 25.–27.8.2026 tässä toisin: ylärivissä oli kaksi nappia
  * ("rajat", "pisteet") ja hampurilaisvalikossa kaksi vertailukytkintä
  * (#fokus-btn, #fokus-sumennus-btn), ja kehittäjätila oli OLETUKSENA
  * vapaa — "rajat" pyysi pelaajan rajoitteen takaisin. Omistajan tilaus
- * 27.8. kääntää molemmat: yläpalkissa *"saa olla vain YKSI nappi"*,
- * valikon kytkimet poistuvat, ja oletus on pelaajan näkymä. Nappi on
- * nyt se, joka PYYTÄÄ maailmanäkymän.
+ * 27.8. käänsi molemmat: yläpalkissa *"saa olla vain YKSI nappi"*,
+ * valikon kytkimet poistuivat, ja oletus on pelaajan näkymä. Nappi on
+ * se, joka PYYTÄÄ maailmanäkymän.
+ *
+ * 29.8.2026 maailmakytkin muutti ylärivin irtonapista kehittäjän omaan
+ * hammasratasvalikkoon (#kehittaja-valikko-kotelo). Ylärivissä on yhä
+ * yksi kuvake, ja tunniste #kehittaja-maailma-btn on entinen — kytkin
+ * vain asuu nyt pudotusvalikossa mittarikytkimen ja pöllön
+ * generointinapin seurassa.
  *
  * Sivu uusiksi, jotta main.js näyttää kotelon — ja maailmanäkymä pois
  * levyltä, koska aiemmat väitteet kytkivät sen päälle kameran
@@ -784,14 +790,18 @@ await sivu.waitForTimeout(2500);
 await ateenaan();
 
 const napit = await sivu.evaluate(() => ({
-  kotelo: !document.getElementById('fokus-kytkimet').hidden,
-  maara: document.querySelectorAll('#fokus-kytkimet button').length,
-  teksti: document.getElementById('kehittaja-maailma-btn')?.textContent,
-  valikossa: Boolean(document.getElementById('fokus-btn')
-    || document.getElementById('fokus-sumennus-btn')),
+  kotelo: !document.getElementById('kehittaja-valikko-kotelo').hidden,
+  ylarivi: document.querySelectorAll('#kehittaja-valikko-kotelo > button').length,
+  valikossa: document.querySelectorAll('#kehittaja-valikko .kehittaja-kytkin').length,
+  teksti: document.querySelector('#kehittaja-maailma-btn .kehittaja-kytkin-nimi')
+    ?.textContent,
+  vanhat: Boolean(document.getElementById('fokus-btn')
+    || document.getElementById('fokus-sumennus-btn')
+    || document.getElementById('fokus-kytkimet')),
 }));
-vaadi('ylärivissä vain maailmanappi, valikossa ei kehittäjäkytkimiä',
-  napit.kotelo && napit.maara === 1 && napit.teksti === 'maailma' && !napit.valikossa,
+vaadi('ylärivissä yksi hammasratas, sen valikossa kolme kehittäjäkytkintä',
+  napit.kotelo && napit.ylarivi === 1 && napit.valikossa === 3
+  && napit.teksti === 'maailma' && !napit.vanhat,
   JSON.stringify(napit));
 
 /*

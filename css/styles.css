@@ -638,47 +638,96 @@ button, .brand, .turn-pill, .fact-card h2 {
 }
 
 /*
- * FOKUSMOODIN KYTKIMET YLÄRIVILLÄ (omistaja 24.8.2026, index.html
- * #fokus-kytkimet). Kotelo näkyy vain kehittäjätilassa, joten se ei saa
- * varata ylärivistä tilaa muilta: `hidden` piilottaa sen kokonaan, ja
- * `flex: 0 0 auto` estää sitä venymästä kun se on näkyvissä.
+ * KEHITTÄJÄN HAMMASRATASVALIKKO (omistajan tilaus 29.8.2026,
+ * index.html #kehittaja-valikko-kotelo).
  *
- * Ulkoasu on tarkoituksella vaatimaton — pieni kirjasin, ohut kehys,
- * sama pillerin muoto kuin matkalaukulla. Nämä ovat mittatikkuja eivätkä
- * pelin nappeja, eivätkä ne saa kilpailla logon tai laukun kanssa.
- * Päällä oleva kytkin erottuu kullalla (aria-pressed="true"), pois
- * kytketty jää himmeäksi: tila luetaan yhdellä vilkaisulla.
+ * Kotelo näkyy vain kehittäjätilassa, joten se ei saa varata ylärivistä
+ * tilaa muilta: `hidden` piilottaa sen kokonaan, ja `flex: 0 0 auto`
+ * estää sitä venymästä kun se on näkyvissä. Ylärivissä on siis yhä
+ * kehittäjänkin silmissä vain YKSI kuvake (omistajan sääntö
+ * 27.8.2026) — kytkimet asuvat sen alla.
+ *
+ * Pudotusvalikko lainaa hampurilaisen tyylin sellaisenaan
+ * (index.html: class="paavalikko kehittaja-valikko"), joten kaksi
+ * valikkoa vierekkäin näyttää yhdeltä perheeltä eikä sääntöjä
+ * kirjoiteta kahteen kertaan. Tässä on vain se, mikä on kehittäjän
+ * omaa: rivin kolme saraketta ja tilateksti.
+ *
+ * Valikko avautuu OIKEASTA laidastaan (`right: 0`, peritty
+ * .paavalikosta) eli vasemmalle päin — hammasratas on ylärivin
+ * oikeassa reunassa, ja vasemmalle avautuva levy pysyy ruudulla myös
+ * kapeimmalla puhelimella. Se on kartan päällä (.paavalikon z-index),
+ * mutta laitemittari asuu karttaruudussa omalla z-indexillään 9999,
+ * joten valikko ei peitä mitattavaa laatikkoa.
  */
-.fokus-kytkimet {
-  display: flex;
-  gap: 0.3rem;
+.kehittaja-valikko-kotelo {
+  position: relative;
   flex: 0 0 auto;
 }
 
-.fokus-kytkimet[hidden] { display: none; }
+.kehittaja-valikko-kotelo[hidden] { display: none; }
 
-.fokus-kytkin {
-  /* Omistaja 24.8.2026: "Tee näistä mahd pienet" — kehittäjän
-   * mittatikut kutistettiin minimiin, jotta ylärivi jää pelille. */
-  font-size: 0.55rem;
+/*
+ * VALIKKO LAITEMITTARIN PÄÄLLE, EI SEN ALLE.
+ *
+ * Mittarin laatikko asuu karttaruudussa omalla z-indexillään 9999
+ * (js/karttamittari.js) ja alkaa saman ylänurkan tuntumasta, joten
+ * avattu valikko jäisi oletusarvoillaan mittarin alle luettavaksi
+ * kelpaamattomana — juuri sen kytkimen alle, jota valikosta ollaan
+ * kääntämässä. Suljettuna valikko on pelkkä kuvake ylärivissä, joten
+ * mittari näkyy kokonaan aina kun sitä luetaan; avattuna se on
+ * hetkellinen levy mittarin päällä, kuten pudotusvalikon kuuluukin.
+ */
+.kehittaja-valikko { z-index: 10000; }
+
+/*
+ * Kolme saraketta: kuvake, nimi ja tila. Nimi vie jäljelle jäävän
+ * tilan, joten tilateksti asettuu aina samaan kohtaan oikeaan laitaan
+ * eikä rivistä tule portaikkoa.
+ */
+.kehittaja-valikko .kehittaja-kytkin {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.55rem;
+  text-align: left;
+}
+
+.kehittaja-kytkin-nimi {
+  font-size: 0.92rem;
   letter-spacing: 0.02em;
-  padding: 0.08rem 0.3rem;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: none;
+}
+
+/*
+ * Tila luetaan yhdellä vilkaisulla: päällä oleva kytkin kultaa sekä
+ * nimen että tilatekstin, pois kytketty jää himmeäksi.
+ */
+.kehittaja-kytkin-tila {
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: var(--muted);
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-tap-highlight-color: transparent;
 }
 
-.fokus-kytkin[aria-pressed='true'] {
+.kehittaja-valikko .kehittaja-kytkin[aria-pressed='true'] {
   color: var(--kulta, #eab84e);
-  border-color: var(--kulta, #eab84e);
+  border-color: rgba(176, 138, 60, 0.55);
 }
 
-.fokus-kytkin:hover,
-.fokus-kytkin:focus-visible { border-color: var(--kulta, #eab84e); }
+.kehittaja-valikko .kehittaja-kytkin[aria-pressed='true'] .kehittaja-kytkin-tila {
+  color: var(--kulta, #eab84e);
+}
+
+/* Yhden rivin vihje (mittarin uudelleenlataus, generoinnin tulos). */
+.kehittaja-valikko-vihje {
+  margin: 0.35rem 0 0;
+  max-width: 15rem;
+  font-size: 0.7rem;
+  line-height: 1.3;
+  color: var(--muted);
+}
+
+.kehittaja-valikko-vihje[hidden] { display: none; }
 
 
 /*

@@ -68,7 +68,7 @@ import {
 } from './nahtavyydet.js';
 import { taitaOpas } from './opas.js';
 // Laitemittari (?mittari=1): pois päältä se ei tee eikä maksa mitään.
-import { kaynnistaKarttamittari } from './karttamittari.js';
+import { kaynnistaKarttamittari, mittariPaalla } from './karttamittari.js';
 // Lautojen yhdistetyt sisältötaulut, luentajoukot ja kuratoidut
 // galleriat (siirretty tästä tiedostosta 17.8.2026, remontin M1).
 import {
@@ -6391,11 +6391,43 @@ export class UI {
     this.paivitaFokusSumu(this.fokusMaat());
   }
 
+  /* --- KEHITTÄJÄN HAMMASRATASVALIKKO (omistaja 29.8.2026) ---------- */
+
+  /**
+   * LAITEMITTARI PÄÄLLE TAI POIS KESKEN PELIN (hammasratasvalikon
+   * mittarikytkin, index.html #kehittaja-mittari-btn).
+   *
+   * Mittari on kokonaan oman moduulinsa sisällä (js/karttamittari.js):
+   * käynnistys luo laatikon ja kehyssilmukan, `sammuta` vie molemmat.
+   * Kytkeminen on siis vain näiden kahden kutsuminen oikeassa
+   * järjestyksessä — SIVUA EI TARVITSE LADATA UUDELLEEN, mikä on koko
+   * kytkimen tarkoitus: mittaria luetaan iOS:n
+   * kotivalikkosovelluksessa, jossa osoiteriviä ei ole.
+   *
+   * Kytkin luetaan levyltä (mittariPaalla) eikä parametrina, jotta
+   * osoiterivin `?mittari=1` ja valikon nappi ovat sama totuus.
+   *
+   * @returns {boolean} onko mittari nyt käynnissä. Epätosi päällä
+   *   kytkettynä tarkoittaa, ettei karttaruutua ole (aloitusnäkymä):
+   *   kytkin jäi voimaan ja mittari syntyy kartan mukana.
+   */
+  paivitaKarttamittari() {
+    const halutaan = mittariPaalla();
+    if (!halutaan) {
+      this.laitemittari?.sammuta();
+      this.laitemittari = null;
+      return false;
+    }
+    // Kahta silmukkaa ei saa syntyä: jo käynnissä oleva riittää.
+    if (!this.laitemittari) this.laitemittari = kaynnistaKarttamittari(this);
+    return Boolean(this.laitemittari);
+  }
+
   /* --- KEHITTÄJÄN MAAILMANAPPI (omistajan tilaus 27.8.2026) --------- */
 
   /**
-   * Kehittäjän ylärivin ainoan napin kytkin (js/main.js
-   * #kehittaja-maailma-btn).
+   * Kehittäjän maailmakytkin (js/main.js #kehittaja-maailma-btn;
+   * 29.8.2026 alkaen hammasratasvalikossa, ei ylärivin irtonappina).
    *
    * Sama kaava kuin paivitaFokusmoodilla: asetus luetaan uudestaan
    * levyltä ja näkymä tahdistetaan heti ilman sivulatausta. Nappi

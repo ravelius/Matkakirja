@@ -22,6 +22,12 @@
  *     parametria tarvitse naputella uudelleen joka latauksella —
  *     puhelimella osoiterivin muokkaus on juuri sitä työtä, jota
  *     mittarin lukija ei jaksa tehdä.
+ *   - SAMA KYTKIN ON KEHITTÄJÄN HAMMASRATASVALIKOSSA (29.8.2026,
+ *     index.html #kehittaja-mittari-btn → asetaMittari): iOS:n
+ *     kotivalikkosovelluksessa osoiteriviä ei ole lainkaan, joten
+ *     parametri on siellä mahdoton naputella. Valikko myös käynnistää
+ *     ja sammuttaa mittarin ajonaikaisesti (js/ui.js
+ *     paivitaKarttamittari) — sivua ei tarvitse ladata uudelleen.
  *
  * MITTARI EI SAA ITSE OLLA KUORMA. Kehyssilmukka tekee vain
  * aikaleiman talteenoton valmiiksi varattuihin taulukoihin (ei roskaa
@@ -78,6 +84,30 @@ export function mittariPaalla() {
     return localStorage.getItem(MITTARI_AVAIN) === '1';
   } catch {
     return false; // yksityinen selaus
+  }
+}
+
+/**
+ * Kytkin päälle tai pois LAITTEELLE (kehittäjän hammasratasvalikko,
+ * omistajan tilaus 29.8.2026).
+ *
+ * MIKSI VALIKOSTA EIKÄ VAIN OSOITERIVILTÄ: mittarin lukija on
+ * omistajan iPhone, ja siellä peli ajetaan kotivalikkosovelluksena,
+ * jossa OSOITERIVIÄ EI OLE. `?mittari=1` on siis juuri siinä
+ * laitteessa mahdoton naputella, jossa mittaria tarvitaan. Sama
+ * muistettu avain, sama merkitys — vain toinen sisäänkäynti.
+ *
+ * Kirjoitus ei käynnistä eikä sammuta mitään: se on kytkin, ja
+ * käynnistyksen hoitaa js/ui.js paivitaKarttamittari saman tien.
+ *
+ * @param {boolean} paalla
+ */
+export function asetaMittari(paalla) {
+  try {
+    if (paalla) localStorage.setItem(MITTARI_AVAIN, '1');
+    else localStorage.removeItem(MITTARI_AVAIN);
+  } catch {
+    /* yksityinen selaus: kytkin jää vain tälle istunnolle */
   }
 }
 

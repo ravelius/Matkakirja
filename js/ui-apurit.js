@@ -1250,7 +1250,11 @@ export function asetaFokusmoodi(paalla) {
  * === (omistajan tilaus 27.8.2026) ===================================
  *
  * *"Kehittäjätilassa yläpalkissa saa olla vain YKSI nappi"*, ja se
- * kytkee maailmannäkymän:
+ * kytkee maailmannäkymän. PAIKKA VAIHTUI 29.8.2026: kytkin muutti
+ * ylärivin irtonapista kehittäjän hammasratasvalikkoon (index.html
+ * #kehittaja-valikko), jolloin ylärivissä on yhä yksi kuvake ja
+ * valikossa kolme kehittäjän työkalua. Tunniste, avain ja merkitys
+ * ovat entiset:
  *
  *   PÄÄLLÄ  koko maailmanlauta ja kohdekaupunkien laatat näkyviin,
  *           jotta omistaja pääsee siirtymään maasta toiseen
