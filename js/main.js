@@ -1265,7 +1265,7 @@ const kehittajaValikko = document.getElementById('kehittaja-valikko');
 const kehittajaVihje = document.getElementById('kehittaja-valikko-vihje');
 const maailmaNappi = document.getElementById('kehittaja-maailma-btn');
 const mittariNappi = document.getElementById('kehittaja-mittari-btn');
-const polloNappi = document.getElementById('kehittaja-pollo-btn');
+const polloGenerointiNappi = document.getElementById('kehittaja-pollo-btn');
 
 /** Yhden rivin vihje valikon alalaitaan; katoaa itsestään. */
 let vihjeAjastin = 0;
@@ -1306,8 +1306,8 @@ function paivitaKehittajaValikko() {
       : 'Laitemittari on pois — kytke päälle mitataksesi kartan sujuvuutta '
         + 'tällä laitteella (sama kuin ?mittari=1)';
   }
-  if (polloNappi) {
-    polloNappi.title = 'Generoi pöllön kysymysehdotukset heti tälle näkymälle '
+  if (polloGenerointiNappi) {
+    polloGenerointiNappi.title = 'Generoi pöllön kysymysehdotukset heti tälle näkymälle '
       + '(myös uudelleen jo generoidulle)';
   }
 }
@@ -1365,7 +1365,7 @@ mittariNappi?.addEventListener('click', () => {
   else naytaKehittajaVihje('Mittari kytketty: näkyy kartalla — lataa sivu uudelleen.');
 });
 
-polloNappi?.addEventListener('click', () => {
+polloGenerointiNappi?.addEventListener('click', () => {
   const tulos = polloGeneroiEhdotukset();
   naytaKehittajaVihje({
     ok: 'Kysymyksiä generoidaan…',
