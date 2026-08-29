@@ -130,6 +130,18 @@ const MODULES = [
   'js/packs/fokusvirta-oslo.js',
   'js/packs/fokusvirta-tampere.js',
   'js/packs/fokusvirta-vilna.js',
+  // Aalto 4C (30.8.2026): Granada, Kiova, Krakova, Moskova, Odessa,
+  // Pietari ja Varsova. Sama sääntö kuin aalloilla 1–4B; Kiovan,
+  // Krakovan ja Pietarin takynostot-kentät ovat Ukrainan (UKR),
+  // Puolan (POL) ja Venäjän (RUS) ainoat lähteet js/fokusnosto.js:n
+  // maapoolille, joten nekin on niputettava ennen sitä.
+  'js/packs/fokusvirta-granada.js',
+  'js/packs/fokusvirta-kiova.js',
+  'js/packs/fokusvirta-krakova.js',
+  'js/packs/fokusvirta-moskova.js',
+  'js/packs/fokusvirta-odessa.js',
+  'js/packs/fokusvirta-pietari.js',
+  'js/packs/fokusvirta-varsova.js',
   // Egyptillä ja Irakilla ei ole omaa fokusvirtaa: pelkät kohteet
   // (kadonneiden ihmeiden erä 26.8.2026), joten paririviä ei ole.
   // Sama koskee Ranskaa ja Britanniaa (Matkakirjan ihmeiden Euroopan

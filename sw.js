@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1342';
+const CACHE = 'matkakirja-2026-08-09.1343';
 const SHELL = [
   './',
   './index.html',
@@ -237,6 +237,20 @@ const SHELL = [
   './js/packs/fokusvirta-oslo.js',
   './js/packs/fokusvirta-tampere.js',
   './js/packs/fokusvirta-vilna.js',
+  // Aalto 4C (30.8.2026): Euroopan viimeiset seitsemän fokuskaupunkia
+  // — Granada, Kiova, Krakova, Moskova, Odessa, Pietari ja Varsova.
+  // Sama sääntö kuin aalloilla 2–4B: ei kohdenostoja, joten paririviä
+  // ei tarvita. Kiovan, Krakovan ja Pietarin paketit ovat lisäksi
+  // Ukrainan, Puolan ja Venäjän täkynostopoolien ainoat lähteet
+  // (js/fokusnosto.js NOSTO_MAAT), joten ne kuuluvat kuoreen myös
+  // silloin, kun pelaaja avaa maan toisen kaupungin.
+  './js/packs/fokusvirta-granada.js',
+  './js/packs/fokusvirta-kiova.js',
+  './js/packs/fokusvirta-krakova.js',
+  './js/packs/fokusvirta-moskova.js',
+  './js/packs/fokusvirta-odessa.js',
+  './js/packs/fokusvirta-pietari.js',
+  './js/packs/fokusvirta-varsova.js',
   // Maat ilman omaa fokusvirtaa: kadonneiden ihmeiden erä 26.8.2026
   // ja Matkakirjan ihmeiden Euroopan erä 27.8.2026.
   './js/packs/fokuskohteet-egy.js',

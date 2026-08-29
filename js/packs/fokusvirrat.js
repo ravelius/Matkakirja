@@ -47,6 +47,13 @@ import { FOKUSVIRTA_MARSEILLE } from './fokusvirta-marseille.js';
 import { FOKUSVIRTA_OSLO } from './fokusvirta-oslo.js';
 import { FOKUSVIRTA_TAMPERE } from './fokusvirta-tampere.js';
 import { FOKUSVIRTA_VILNA } from './fokusvirta-vilna.js';
+import { FOKUSVIRTA_GRANADA } from './fokusvirta-granada.js';
+import { FOKUSVIRTA_KIOVA } from './fokusvirta-kiova.js';
+import { FOKUSVIRTA_KRAKOVA } from './fokusvirta-krakova.js';
+import { FOKUSVIRTA_MOSKOVA } from './fokusvirta-moskova.js';
+import { FOKUSVIRTA_ODESSA } from './fokusvirta-odessa.js';
+import { FOKUSVIRTA_PIETARI } from './fokusvirta-pietari.js';
+import { FOKUSVIRTA_VARSOVA } from './fokusvirta-varsova.js';
 
 export const FOKUSVIRRAT = {
   ateena: FOKUSVIRTA_ATEENA,
@@ -156,6 +163,43 @@ export const FOKUSVIRRAT = {
   oslo: FOKUSVIRTA_OSLO,
   tampere: FOKUSVIRTA_TAMPERE,
   vilna: FOKUSVIRTA_VILNA,
+  /*
+   * AALTO 4C (sama Raamatun osio, 30.8.2026): EUROOPAN VIIMEISET
+   * SEITSEMÄN FOKUSKAUPUNKIA — Granada, Kiova, Krakova, Moskova,
+   * Odessa, Pietari ja Varsova. Tämän erän jälkeen manner on valmis:
+   * 39 fokuskaupunkia. Sama TÄYSI pino ja sama faktapohja kuin
+   * aalloilla 2–4B (kuratoitu pelidata + kahden riippumattoman lähteen
+   * tarkistus); perustelut ja lähteet ovat kunkin paketin omissa
+   * kommenteissa.
+   *
+   * KOLME UUTTA MAATA. Ukraina (UKR), Puola (POL) ja Venäjä (RUS)
+   * eivät olleet ennen tätä aaltoa yhdenkään fokuskaupungin maita.
+   * Kolme paketeista tuo mukanaan oman `takynostot`-poolinsa — Kiova
+   * (UKR), Krakova (POL) ja Pietari (RUS) — ja kaikki kolme maata on
+   * lisätty js/fokusnosto.js:n NOSTO_MAAT-tauluun, jotta nostot
+   * näkyvät myös maan toisessa kaupungissa (Odessa, Varsova, Moskova).
+   * Granada nojaa Espanjan jo olemassa olevaan pooliin (ESP).
+   *
+   * GRANADA, ODESSA, VARSOVA JA MOSKOVA EIVÄT OLE MAANSA
+   * TÄKYNOSTOLÄHTEITÄ (ne ovat Madrid, Kiova, Krakova ja Pietari),
+   * eli aaltojen 4A–4B tapaan ne syventävät maata toisen kaupungin
+   * rinnalla. Rekisteri ei huomaa siitä mitään.
+   *
+   * FABLEN KAANONKORJAUKSET 30.8.2026 on ajettu sisään kolmeen
+   * pakettiin: Granadan matkakirjan avaus ilman värisanaa, Krakovan
+   * aarremerkintä kokonaan uutena (kokoelma evakossa Pariisissa,
+   * mikä poistaa 1873/1876-törmäyksen) ja Varsovan Livia-repliikki
+   * ilman säveltäjän nimeä ja ilman jälleenrakennuksen menetelmää.
+   * Kussakin paketissa on kentän vieressä kommentti siitä, mikä
+   * muuttui ja miksi.
+   */
+  granada: FOKUSVIRTA_GRANADA,
+  kiova: FOKUSVIRTA_KIOVA,
+  krakova: FOKUSVIRTA_KRAKOVA,
+  moskova: FOKUSVIRTA_MOSKOVA,
+  odessa: FOKUSVIRTA_ODESSA,
+  pietari: FOKUSVIRTA_PIETARI,
+  varsova: FOKUSVIRTA_VARSOVA,
 };
 
 /** Kaupungin fokusvirta tai null, jos kaupungille ei ole sisältöä. */

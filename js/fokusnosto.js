@@ -168,6 +168,14 @@ import { FOKUSVIRTA_SOFIA } from './packs/fokusvirta-sofia.js';
 import { FOKUSVIRTA_TALLINNA } from './packs/fokusvirta-tallinna.js';
 import { FOKUSVIRTA_TUKHOLMA } from './packs/fokusvirta-tukholma.js';
 import { FOKUSVIRTA_VILNA } from './packs/fokusvirta-vilna.js';
+/*
+ * KOLME UUTTA MAATA TAULUUN (aalto 4C, 30.8.2026). Sama syy ja sama
+ * sääntö kuin yllä: rivi osoittaa samaan taulukkoon kuin kaupungin
+ * paketti, eikä yhtäkään nostoa kopioida tiedostosta toiseen.
+ */
+import { FOKUSVIRTA_KIOVA } from './packs/fokusvirta-kiova.js';
+import { FOKUSVIRTA_KRAKOVA } from './packs/fokusvirta-krakova.js';
+import { FOKUSVIRTA_PIETARI } from './packs/fokusvirta-pietari.js';
 import {
   asemoiNostosymbolit, nollaaNostosymbolit, paivitaNostosymbolit,
 } from './fokusnosto-symbolit.js';
@@ -538,6 +546,29 @@ const NOSTO_MAAT = {
   ROU: FOKUSVIRTA_BUKAREST.takynostot,
   SWE: FOKUSVIRTA_TUKHOLMA.takynostot,
   TUR: FOKUSVIRTA_ISTANBUL.takynostot,
+  /*
+   * ---------- KOLME UUTTA MAATA (aalto 4C, 30.8.2026) ----------
+   *
+   * Ukraina, Puola ja Venäjä tulivat peliin vasta tässä aallossa, ja
+   * kussakin maassa on kaksi fokuskaupunkia. Täkynostopoolin kirjoitti
+   * kummastakin parista TOINEN — Kiova, Krakova ja Pietari — ja nämä
+   * kolme riviä tekevät niistä koko maan poolin. Ilman rivejä nostot
+   * näkyisivät vain poolin kirjoittaneessa kaupungissa ja katoaisivat
+   * heti, kun pelaaja siirtyy Odessaan, Varsovaan tai Moskovaan; juuri
+   * se vika korjattiin aallossa 4B lopuilta mailta.
+   *
+   * KAUPUNGIN OMA POOLI VOITTAA MAAPOOLIN, eikä sääntö riko mitään
+   * täällä: nostoMaanPooli lukee kaupungin `takynostot`-kentän ENSIN,
+   * ja aallon 4C kuudesta muusta kaupungista yhdelläkään ei ole omaa
+   * kenttää (Granada, Moskova, Odessa ja Varsova nojaavat maapooliin).
+   * Granadan maa ESP osoittaa yhä Madridiin, kuten ennenkin.
+   *
+   * TUNNUSTEN TÖRMÄYSTÄ EI OLE: kolmen uuden poolin yhdeksän nostoa
+   * tarkistettiin tunnuksittain koko taulua vasten integroinnissa.
+   */
+  UKR: FOKUSVIRTA_KIOVA.takynostot,
+  POL: FOKUSVIRTA_KRAKOVA.takynostot,
+  RUS: FOKUSVIRTA_PIETARI.takynostot,
 };
 
 /* ==================== LUETUT LAITTEEN MUISTIIN ==================== */
