@@ -156,11 +156,22 @@ const paljasta = (kaupunki, tyyppi) => sivu.evaluate(async ([city, type]) => {
   };
 }, [kaupunki, tyyppi]);
 
+/*
+ * SUOMEN PARI SEURAA NYT HELSINGIN KAANONTEKSTEJÄ (v1320): pieni aarre
+ * on tervatynnyrin pohjalta löytynyt hopeariksi ja iso Ivalojoen
+ * kultahippu, samat esineet jotka isoisän merkintä ja aarremerkintä
+ * nimeävät (js/packs/paikallisaarteet.js FIN). MAAN OMAA KUVAA EI VIELÄ
+ * OLE — vanhat fin-*.jpg esittävät edellistä paria — joten kuvakenttä on
+ * tyhjä ja peli näyttää laudan oman aarrekuvan. Väite mittaa siksi
+ * nimenomaan sitä: nimi ja fakta tulevat maalta, kuva laudalta, ja
+ * kortti piirtyy silti ehjänä.
+ */
 const fin = await paljasta('helsinki', 'pieniAarre');
-vaadi('FIN pieni: nimi on maan oma', fin.nimi === 'Korillinen mustikoita', fin.nimi);
-vaadi('FIN pieni: kuva on maan oma', fin.kuva === 'assets/aarteet/paikallis/fin-pieni.jpg', fin.kuva);
-vaadi('FIN pieni: kuva latautui', fin.ladattu && fin.leveys === 640, `leveys ${fin.leveys}`);
-vaadi('FIN pieni: fakta tuli mukaan', (fin.fakta ?? '').includes('mustikka'), fin.fakta);
+vaadi('FIN pieni: nimi on maan oma', /hopeariksi/i.test(fin.nimi ?? ''), fin.nimi);
+vaadi('FIN pieni: maan omaa kuvaa ei ole, laudan kuva kelpaa',
+  !String(fin.kuva ?? '').includes('/paikallis/fin-'), fin.kuva);
+vaadi('FIN pieni: kuva latautui', fin.ladattu, `leveys ${fin.leveys}`);
+vaadi('FIN pieni: fakta tuli mukaan', (fin.fakta ?? '').includes('Terva'), fin.fakta);
 await sivu.screenshot({ path: join(KAAPPAUKSET, 'aarrekuva-fin-pieni.png') });
 
 const dnk = await paljasta('kobenhavn', 'isoAarre');

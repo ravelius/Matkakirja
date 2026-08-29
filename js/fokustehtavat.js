@@ -443,6 +443,27 @@ const PULLA_NIMET = {
    * Espanjalla.
    */
   GBR: 'scone',
+  /*
+   * RUOTSI JA TANSKA (v1320): Tukholma ja Kööpenhamina saivat oman
+   * fokusvirtansa, joten pullatarjous näkyy niissä nyt ensimmäistä
+   * kertaa. Kumpikaan nimi ei ole uusi keksintö vaan pelin omaa,
+   * hyväksyttyä aineistoa: Ruotsin maalehden Ruoka-sivu kertoo
+   * kanelipullasta ja sen omasta juhlapäivästä, ja Tanskan
+   * Ruoka-sivun nosto "Wienerleipä ei ole Wienistä" kertoo juuri tästä
+   * leivonnaisesta (js/packs/maa-kategoriat.js, SWE/ruoka ja
+   * DNK/ruoka). Nimi on annettu maan omalla kielellä samalla
+   * periaatteella kuin Ranskan brioche ja Itävallan Buchtel.
+   *
+   * SUOMI JA VIRO JÄÄVÄT TARKOITUKSELLA POIS. Suomen kohdalla
+   * yleisnimi on jo oikea suomea — "makea pulla" on täsmälleen se, mitä
+   * kadulta saa — eikä pelin oma aineisto nimeä yhtäkään suomalaista
+   * leivonnaista, jonka voisi laittaa tähän. Viron aineisto nimeää vain
+   * marsipaanin, joka on makeinen eikä pullavastine. Rehellinen
+   * yleisnimi on parempi kuin keksitty paikallisnimi — sama päätös kuin
+   * Espanjalla ja Tšekillä.
+   */
+  SWE: 'kanelbulle',
+  DNK: 'wienerbrød',
 };
 
 /** Maa, jota taulussa ei ole. */

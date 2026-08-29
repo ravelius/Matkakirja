@@ -126,6 +126,115 @@ const BANITSA_VISA = {
     + 'löytää.',
 };
 
+/*
+ * =====================================================================
+ * PÖLLÖN SÄHKETEHTÄVÄ — SOFIA ON TOINEN PILOTTI (omistajan lisätilaus
+ * 29.8.2026: *"tee sähketehtävä MYÖS BULGARIAAN … omistaja haluaa
+ * kokeilla mekaniikkaa läheltä pelin alkua"*)
+ * =====================================================================
+ *
+ * Sama lomakemalli kuin Tukholmassa (js/packs/fokusvirta-tukholma.js):
+ * kaksi aukkoa, joista toinen poimitaan KOKO BULGARIAN
+ * SISÄLTÖHAKEMISTOSTA ja toinen kirjoitetaan lukuna. Hakemisto
+ * rakennetaan ajonaikaisesti pelidatasta (js/fokusvirta.js
+ * sisaltohakemisto): Bulgarian maalehden ja Sofian kaupunkilehden
+ * nostot, Sofian oman virran täkyjen ja nostojen otsikot sekä maan
+ * KAIKKI karttakohteet — yhteensä kolmisenkymmentä riviä, eli
+ * arvaaminen ei kannata.
+ *
+ * SÄHKE KERTOO MINKÄ TYYPPISESTÄ AINEISTOSTA RATKAISU LÖYTYY —
+ * kartan kohteista — muttei sitä, mikä vastaus on.
+ *
+ * KAKSI KAUPUNKIA, YKSI MEKANIIKKA. Sofia ja Tukholma käyttävät
+ * täsmälleen samaa moottoria ja samaa palkkiokaavaa; ainoa ero on
+ * sisältö. Jos pilotti ei miellytä, kummankin kaupungin palautus on
+ * yksi rivi (ks. sahketehtava-kentän kommentti alempana).
+ */
+const SAHKE_SOFIA = {
+  hahmo: 'Pöllöltä, jostain maan alta',
+
+  sahke: 'LIVIALLE STOP\n'
+    + 'OLEN KAIVANUT SOFIAN ALLA KOLME PÄIVÄÄ STOP\n'
+    + 'TÄÄLTÄ LÖYTYY KAIKKEA MUTTA EI SITÄ MITÄ ETSIN STOP\n'
+    + 'ENNEN KUIN KERRON PAIKAN HALUAN TIETÄÄ ETTÄ VIERAASI OSAA LUKEA KARTTAA STOP\n'
+    + 'MISSÄ BULGARIASSA NOUSI MAASTA MAAILMAN VANHIN KULTA STOP\n'
+    + 'JA MINÄ VUONNA SE LÖYTYI STOP\n'
+    + 'KOHDE ON KARTALLE MERKITTY STOP\n'
+    + 'PÖLLÖ STOP',
+
+  /*
+   * LIVIAN SAATE. Puhekielisäännöt (Raamattu, LIVIAN PUHEKIELI):
+   * lyhentymät reunoilla ("No", "mut"), keskellä sanat auki,
+   * pronominit kokonaisina, ei huutomerkkejä.
+   *
+   * SAATE SITOO TEHTÄVÄN AARREMERKINTÄÄN kertomatta merkintää:
+   * isoisä punnitsi lapiota ja lähti, pöllö osti lapion.
+   */
+  johdanto: 'No. Isoisäsi seisoi tässä samassa kaupungissa ja mietti '
+    + 'lapion ostamista, eikä ostanut. Pöllö osti. Nyt se istuu jossain '
+    + 'kuopassa ja vaatii tunnussanan ennen kuin kertoo, mihin se on '
+    + 'päätynyt.\n\n'
+    + 'Kaksi aukkoa: yksi kohde Bulgarian luettelosta ja yksi vuosiluku. '
+    + 'Kumpikin lukee kartan omissa kohteissa — ne merkit, joita sinä '
+    + 'olet napautellut auki. Väärä vastaus ei sulje mitään, mut se syö '
+    + 'palkkiota ja minä lennän turhaan.',
+
+  hakemistoMaa: 'BGR',
+
+  aukot: [
+    {
+      id: 'kohde',
+      otsake: 'KOHDE',
+      sahkeSana: 'KOHDE',
+      tyyppi: 'hakemisto',
+      vihje: '— valitse Bulgarian luettelosta —',
+      /*
+       * Kartan kohde 'varna' (js/packs/fokuskohteet-bgr.js), jonka
+       * klikkiotsikko on "Maailman vanhin kulta". Hakemistossa kohteet
+       * ovat NIMELLÄ, koska juuri nimi lukee kohdekortin otsikkona.
+       */
+      oikeat: ['Varna'],
+    },
+    {
+      id: 'vuosi',
+      otsake: 'VUOSI',
+      sahkeSana: 'VUOSILUKU',
+      tyyppi: 'luku',
+      vihje: '____',
+      pienin: 1000,
+      suurin: 2100,
+      // Varnan nekropoli löytyi 1974 (pelidata: fokuskohteet-bgr.js).
+      oikea: 1974,
+    },
+  ],
+
+  laheta: 'Lähetä sähke pöllölle',
+  vaarinSahke: 'EI TÄSMÄÄ STOP TARKISTA KOHDE JA VUOSILUKU STOP',
+
+  vinkki: 'Kato, minä sanon sen nyt suoraan: se kohde on kartalla '
+    + 'Mustanmeren rannalla, ja sen kortin otsikkona lukee maailman '
+    + 'vanhin kulta. Vuosiluku on saman kortin ensimmäisessä '
+    + 'kappaleessa.',
+
+  vastaussahke: 'PÖLLÖLLE STOP\nTUNNUSSANA TÄSMÄÄ STOP\nLIVIA TULEE STOP',
+  oikein: 'Se on se. Yli kolmetuhatta kultaesinettä yhdestä '
+    + 'hautausmaasta, ja ne olivat maassa ennen kuin kukaan oli keksinyt '
+    + 'kirjoittamista. Minä vien tämän pöllölle nyt heti. Älä sinä jää '
+    + 'tähän seisomaan, minä palaan kyllä.',
+  fakta: 'Varnan nekropoli löytyi 1974, ja siitä on kaivettu esiin yli '
+    + '3 000 kultaesinettä. Löytö on ajoitettu vuosille 4600–4200 eaa., '
+    + 'eli se on maailman vanhin tunnettu kulta-aarre.',
+  lento: 'Anna Livian mennä',
+
+  lahetetty: 'SÄHKE LÄHETETTY STOP\nODOTA VASTAUSTA STOP',
+  odotus: 'Livia on matkalla. Se palaa kun se palaa — ja sillä välin '
+    + 'sinä saat tehdä mitä huvittaa.',
+
+  paluu: 'Perillä oltiin. Pöllö oli kuoppansa pohjalla mullassa ja '
+    + 'sanoi, että lapio oli hyvä sijoitus. Sitten se kertoi paikan. Se '
+    + 'on tässä, sinun jalkojesi alla — katso alas.',
+};
+
 export const FOKUSVIRTA_SOFIA = {
   kaupunki: 'sofia',
 
@@ -524,6 +633,56 @@ export const FOKUSVIRTA_SOFIA = {
       + 'onko vieras tajunnut, miksi juuri tähän kohtaan on rakennettu '
       + 'kaupunki toisensa perään.',
   },
+
+  /*
+   * ---------- 6b. SÄHKETEHTÄVÄ (pilotti, omistajan lisätilaus
+   * 29.8.2026) ----------
+   *
+   * Toinen pilottikaupunki Tukholman rinnalle (Raamattu, PÖLLÖN
+   * SÄHKETEHTÄVÄ). Omistaja halusi kokeilla mekaniikkaa läheltä pelin
+   * alkua, koska Ateena → Sofia on hänen vakiotestipolkunsa.
+   *
+   * ── PALAUTUS ON YKSI RIVI ──────────────────────────────────────────
+   *
+   * NADIAN KOHTAAMINEN YLLÄ EI OLE POISTETTU EIKÄ MUUTETTU. Data on
+   * paikallaan kokonaisuudessaan, ja moottori valitsee kortin sisällön
+   * datasta: kun `sahketehtava` on olemassa, se voittaa kohtaamisen
+   * (js/fokusvirta.js piirraSisalto). Pilotin peruminen on siis
+   * TÄSMÄLLEEN YKSI RIVI — kommentoi alla oleva rivi
+   *
+   *     sahketehtava: SAHKE_SOFIA,
+   *
+   * pois, ja Nadia palaa vihreän pisteen taakse sekunnissa. Mikään muu
+   * Sofian sisältö ei riipu tästä valinnasta.
+   *
+   * MIKÄÄN MUU EI MUUTU. Areena-täky, kolme muuta täkyä, oppitunti,
+   * lehtitehtävät, kohdenosto, kohtaamispiste ja aarremerkintä ovat
+   * kirjaimelleen ennallaan — tämä lisäys on yksi kenttä ja yksi vakio.
+   *
+   * ── MIKSI TÄMÄ TEHTÄVÄ ─────────────────────────────────────────────
+   *
+   * Aarremerkintä kertoo, että isoisä punnitsi lapion ostamista mutta
+   * lähti aamulla: *"jotkut aarteet saavat odottaa rohkeampaa."* Pöllö
+   * ON se rohkeampi — se kaivaa, ja se kysyy vastapalvelukseksi
+   * tunnussanan. Vastaus on Bulgarian oma aarrelöytö: Varnan
+   * nekropolista kaivettu maailman vanhin tunnettu kulta.
+   *
+   * VASTAUS EI OLE MISSÄÄN SOFIAN OMASSA SISÄLLÖSSÄ. Kaupungin neljä
+   * täkyä (Levski, areena, Sofia-patsas, eläintarha), oppitunti
+   * (Serdica ja lähteet) ja lehtitehtävät (banitsa, keltaiset kadun
+   * kivet) eivät mainitse Varnaa eivätkä vuotta 1974 — tehtävä on siis
+   * oikeasti kaivamista eikä sen kertaamista, mitä kortti juuri kertoi.
+   * Vastaus löytyy KARTALTA: Bulgarian kohdemerkki Varnan kohdalla
+   * (js/packs/fokuskohteet-bgr.js, kohde 'varna', otsikko "Maailman
+   * vanhin kulta"), ja sama kohde on sähkelomakkeen valintalistassa,
+   * koska lista on koko maan sisältöhakemisto.
+   *
+   * FAKTAT (pelidataa, js/packs/fokuskohteet-bgr.js kohde 'varna' —
+   * jo kertaalleen tarkistettu ja hyväksytty peliin): Varnan
+   * nekropoli löytyi vuonna 1974, siitä on kaivettu esiin yli 3 000
+   * kultaesinettä, ja löytö on ajoitettu vuosille 4600–4200 eaa.
+   */
+  sahketehtava: SAHKE_SOFIA,
 
   /*
    * ---------- KEVYT KULKU ----------

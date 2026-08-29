@@ -63,23 +63,34 @@
  * ei aakkosjärjestys: pari löytyy naapureidensa vierestä.
  */
 export const PAIKALLISAARTEET = {
+  /*
+   * SUOMEN PARI KIRJOITETTIIN UUSIKSI v1320:ssa (päätoimittajan kaanon
+   * 29.8.2026, aalto 3). Vanha pari — korillinen mustikoita ja Sammon
+   * siru — oli hyvää sisältöä, mutta se EI vastannut Helsingin
+   * fokusvirran kaanontekstejä: matkakirjamerkintä päättyy tervaan
+   * ("sitä lastattiin laivoihin kuin kultaa") ja aarremerkintä nimeää
+   * Ivalojoen kullan, jonka isoisä jätti perilliselleen. Kun löytökortin
+   * nimi ja isoisän merkintä ovat eri asiaa, kaupungin koko kaari
+   * hajoaa löytöhetkellä — siksi pari seuraa nyt merkintöjä.
+   *
+   * KUVAT OVAT VANHAN PARIN OMAT eikä niitä ole vielä generoitu
+   * uusiksi: assets/aarteet/paikallis/fin-pieni.jpg on mustikkakori ja
+   * fin-iso.jpg Sammon siru. Ne EIVÄT käy uusiin nimiin, joten
+   * `kuva`-kenttä on poistettu — silloin peli näyttää laudan oman
+   * aarrekuvan (js/game.js aarreMantereella), joka on oikea eikä väärä.
+   * Kummankin uuden aiheen kuvaprompti on raportoitu promptinippuun, ja
+   * kun kuvat on generoitu, `kuva`-rivit palautetaan tähän.
+   */
   FIN: {
     pieniAarre: {
-      name: 'Korillinen mustikoita',
-      kuva: 'assets/aarteet/paikallis/fin-pieni.jpg',
-      fakta: 'Metsämustikka on mustikkaa läpikotaisin: mehu värjää sekä sormet '
-        + 'että kielen, toisin kuin puutarhojen pensasmustikassa, jonka malto on '
-        + 'vaalea. Marjaa saa poimia jokamiehenoikeudella kenen tahansa metsästä, '
-        + 'ja valtaosa vuotuisesta sadosta jää silti korjaamatta.',
+      name: 'Tervatynnyrin pohjalta löytynyt hopeariksi',
+      fakta: 'Terva oli 1800-luvun Suomen tärkein vientitavara, ja Oulu oli '
+        + 'maailman suurimpia tervasatamia.',
     },
     isoAarre: {
-      name: 'Sammon siru',
-      kuva: 'assets/aarteet/paikallis/fin-iso.jpg',
-      fakta: 'Kalevalan mukaan seppä Ilmarinen takoi Sammon, joka jauhoi viljaa, '
-        + 'suolaa ja rahaa. Runoissa se särkyy meritaistelussa, ja Väinämöinen '
-        + 'kerää rantaan huuhtoutuneet sirut Suomen onneksi. Sampo on myytti eikä '
-        + 'löytö: tutkijat ovat arvelleet sen tarkoittaneen milloin myllyä, '
-        + 'milloin maailmanpatsasta tai taivaankantta.',
+      name: 'Ivalojoen kultahippu',
+      fakta: 'Ivalojoen kultaryntäys alkoi 1870, ja huippuvuonna 1871 joelta '
+        + 'huuhdottiin yli 50 kiloa kultaa.',
     },
   },
   SWE: {

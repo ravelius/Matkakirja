@@ -39,7 +39,19 @@ import { kaksoisavaimet } from '../tools/tarkista-kaksoisavaimet.mjs';
 
 const LAHDE = 'js/packs/paikallisaarteet.js';
 const FAKTAN_KATTO = 450;
-const NIMEN_KATTO = 40;
+/*
+ * NIMEN KATTO NOUSI 40 → 44 (v1320).
+ *
+ * Päätoimittajan kaanon antaa Suomen pienelle aarteelle nimen
+ * "Tervatynnyrin pohjalta löytynyt hopeariksi" (42 merkkiä), ja
+ * kaanonteksti on sanatarkka — nimeä ei lyhennetä katon takia. Katto on
+ * paljastuskortin otsikkorivin suoja eikä tyylisääntö, joten se
+ * nostettiin juuri sen verran, että kaanon mahtuu, ja kortti
+ * tarkistettiin silmin selaimessa (tools/savukkeet/savuke-aarrekuva.mjs,
+ * kaappaus aarrekuva-fin-pieni.png): otsikko taittuu kahdelle riville
+ * eikä leikkaudu.
+ */
+const NIMEN_KATTO = 44;
 
 /** Kaikkien lautojen maat: pari kelpaa vain, jos maahan pääsee. */
 const PELIN_MAAT = new Set();
@@ -49,7 +61,14 @@ for (const pack of PACKS) {
 
 /** Aarteet, jotka ovat tarua — teksti ei saa esittää niitä löytönä. */
 const TARUT = {
-  FIN: 'Sammon siru',
+  /*
+   * SUOMI EI OLE ENÄÄ TÄSSÄ LISTASSA (v1320). Maan iso aarre oli
+   * Sammon siru eli myytti; nyt se on Ivalojoen kultahippu, joka on
+   * oikea löytö oikealta joelta (js/packs/paikallisaarteet.js FIN,
+   * päätoimittajan kaanon Helsingin aarremerkintään). Todellista
+   * löytöä ei saa merkitä taruksi, joten rivi on poistettu eikä
+   * kommentoitu pois.
+   */
   ISL: 'Egillin hopea-arkku',
   DEU: 'Nibelungein aarre',
   CHE: 'Wilhelm Tellin varsijousi',
@@ -85,10 +104,33 @@ test('jokaisella maalla on molemmat aarteet nimineen ja faktoineen', () => {
   }
 });
 
-test('jokaisella aarteella on oma kuva olemassa olevassa polussa', () => {
+/*
+ * KUVATON PARI ON SALLITTU, VÄÄRÄ KUVA EI (v1320).
+ *
+ * Kun maan pari kirjoitetaan uusiksi kaanonin perässä, esineet
+ * vaihtuvat ennen kuin kuvat ehditään generoida — ja silloin vanha kuva
+ * olisi suoraan väärä väite: mustikkakorin päällä lukisi "Tervatynnyrin
+ * pohjalta löytynyt hopeariksi". `kuva`-kenttä saa siis puuttua,
+ * jolloin peli näyttää laudan oman aarrekuvan (js/game.js
+ * aarreMantereella). Sääntö säilyy muuten entisellään: JOS kuva on, sen
+ * on oltava maan oma polku ja tiedoston on oltava repossa.
+ *
+ * ODOTTAVAT KUVAT on lueteltu tässä nimeltä, jotta lista ei kasva
+ * huomaamatta: uusi kuvaton pari on lisättävä tähän tietoisesti.
+ */
+const KUVAA_ODOTTAVAT = new Set(['FIN']);
+
+test('kuva on maan oma ja olemassa — tai sitä ei ole vielä lainkaan', () => {
   for (const [iso, pari] of Object.entries(PAIKALLISAARTEET)) {
     for (const [tyyppi, laji] of [['pieniAarre', 'pieni'], ['isoAarre', 'iso']]) {
       const { kuva } = pari[tyyppi];
+      if (kuva === undefined) {
+        assert.ok(
+          KUVAA_ODOTTAVAT.has(iso),
+          `${iso} ${tyyppi}: kuva puuttuu, mutta maata ei ole merkitty odottavaksi`,
+        );
+        continue;
+      }
       const odotettu = `assets/aarteet/paikallis/${iso.toLowerCase()}-${laji}.jpg`;
       assert.equal(
         kuva, odotettu,
@@ -135,7 +177,9 @@ test('taru on merkitty taruksi', () => {
 
 test('paikallisaarre palauttaa parin vain paikallisaarteille', () => {
   assert.equal(paikallisaarre('pieniAarre', 'FIN')?.name, PAIKALLISAARTEET.FIN.pieniAarre.name);
-  assert.equal(paikallisaarre('pieniAarre', 'FIN')?.kuva, 'assets/aarteet/paikallis/fin-pieni.jpg');
+  // Kuvapolku luetaan maalta, jolla kuva on: Suomi odottaa omaansa
+  // (ks. KUVAA_ODOTTAVAT yllä), eikä kuvaton pari saa naulata testiä.
+  assert.equal(paikallisaarre('pieniAarre', 'SWE')?.kuva, 'assets/aarteet/paikallis/swe-pieni.jpg');
   assert.equal(paikallisaarre('isoAarre', 'ITA')?.name, PAIKALLISAARTEET.ITA.isoAarre.name);
   assert.equal(paikallisaarre('star', 'FIN'), null);
   assert.equal(paikallisaarre('mannerAarre', 'FIN'), null);

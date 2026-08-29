@@ -90,7 +90,12 @@ import { valokuvaUrl, valokuvaVara, valokuvaSuurennos } from './packs/africa-val
 import { kaupunginJuliste } from './packs/julisteet.js';
 // Vihjelinkin osiotunniste ja sen näyttönimi (ks. piirraVihjelinkki).
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
-import { fokusvirtaKaupungille } from './packs/fokusvirrat.js';
+// Sähketehtävän sisältöhakemisto lukee maan lehden otsikot (ks.
+// sisaltohakemisto) — sama taulu, josta maalehti itse piirretään.
+import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
+// Rekisteri myös kokonaisena: sähketehtävän sisältöhakemisto kerää
+// maan kaupunkien virroista täkyjen ja nostojen otsikot.
+import { FOKUSVIRRAT, fokusvirtaKaupungille } from './packs/fokusvirrat.js';
 import { luennanLoppuun } from './luenta.js';
 import { natiiviVastaus } from './natiivi.js';
 import { polloSaapumiskupla } from './pollo.js';
@@ -1019,8 +1024,24 @@ function piirraSisalto(ui, city, data, tila, sisalto) {
     case 'taky': piirraTaky(ui, city, data, tila, sisalto); break;
     case 'kohde': piirraKohde(ui, city, data, tila, sisalto); break;
     case 'oppitunti': piirraOppitunti(ui, city, data, sisalto); break;
+    /*
+     * SÄHKETEHTÄVÄ ON KOHTAAMISEN SIJAINEN (Raamattu, PÖLLÖN
+     * SÄHKETEHTÄVÄ). Sama vaihe, sama kortti, sama vihreä piste — vain
+     * sisältö vaihtuu, ja valinnan tekee data eikä koodi.
+     *
+     * SÄHKE VOITTAA KOHTAAMISEN, JA JUURI SIKSI KUMPIKIN SAA OLLA
+     * DATASSA YHTÄ AIKAA (omistajan pilottiehto 29.8.2026: *"Sofian
+     * NYKYINEN kohtaaminen EI poisteta — jätä data paikoilleen mutta
+     * pois käytöstä, jotta palautus on yksi rivi"*). Kaupunki, joka
+     * pilotoi sähkettä, pitää kohtaamisensa kirjoitettuna, ja pilotin
+     * peruminen on yhden rivin kommentointi paketissa — ei tekstien
+     * kaivamista takaisin versiohistoriasta.
+     */
     case 'kohtaaminen':
-    case 'valmis': piirraKohtaaminen(ui, city, data, sisalto); break;
+    case 'valmis':
+      if (data.sahketehtava) piirraSahketehtava(ui, city, data, sisalto);
+      else piirraKohtaaminen(ui, city, data, sisalto);
+      break;
     default: piirraValinta(ui, city, data, tila, sisalto); break;
   }
 }
@@ -1834,6 +1855,347 @@ function piirraKohtaaminen(ui, city, data, kohde) {
   piirraVihjelinkki(ui, city, kohtaaminen, kohde);
 }
 
+/* ============ PÖLLÖN SÄHKETEHTÄVÄ (pilotti: Tukholma) ===============
+ *
+ * Raamattu, PÖLLÖN SÄHKETEHTÄVÄ (omistaja 29.8.2026): kaupungissa voi
+ * kohtaamisen SIJASTA olla sähketehtävä. Pöllö on jo selvittänyt
+ * aarteen paikan ja sähköttää sen Livialle — mutta ei kerro sitä ennen
+ * kuin vieras vastaa tunnussanalla, joka KAIVETAAN maan omista
+ * peliaineistoista. Kyse on käänteisestä oppimisesta: peli ei kerro
+ * vastausta ja kysy sitä perään, vaan antaa lehdet ja kysyy niistä.
+ *
+ * ── VASTAUSMUOTO ON SÄHKELOMAKE (omistajan päätös 29.8.2026) ────────
+ *
+ * Pelaaja täyttää VASTAUSSÄHKEEN, jossa on KAKSI AUKKOA. Kumpikin
+ * aukko täytetään yhdellä kahdesta tavasta:
+ *
+ *   1. HAKEMISTOPOIMINTA (`tyyppi: 'hakemisto'`). Valintalista on KOKO
+ *      MAAN SISÄLTÖHAKEMISTO — aakkostettu lista kaikista maan
+ *      pelisisällön juttujen otsikoista — eikä kuratoitu neljän
+ *      vaihtoehdon lista. Lista rakennetaan AJONAIKAISESTI pelidatasta
+ *      (sisaltohakemisto alla), joten käsin ylläpidettävää kopiota ei
+ *      ole eikä pääse syntymään.
+ *   2. TARKKA LUKU (`tyyppi: 'luku'`). Numerosyöttö, esimerkiksi
+ *      vuosiluku.
+ *
+ * Ruotsin hakemistossa on 31 otsikkoa, joten kahden aukon yhdistelmiä
+ * on satoja: arvaaminen ei kannata, mutta lehdestä löytäneelle täyttö
+ * on sekunttien työ.
+ *
+ * ── VÄÄRÄ YRITYS EI RIKO MITÄÄN, MUTTA MAKSAA ──────────────────────
+ *
+ * Yrityksiä EI rajata eikä aarre lukitu koskaan (toisin kuin
+ * kohtaamisessa, jossa kaksi väärää sulkee kätkön). Sen sijaan pöllö
+ * sähköttää takaisin sähketyylillä ja kertoo KUMPI aukko on pielessä
+ * ("EI TÄSMÄÄ STOP TARKISTA VUOSILUKU STOP"), ja RAHAPALKKIO pienenee
+ * neljänneksellä joka ohilyönnistä (lattia 0). Kahden ohilyönnin
+ * jälkeen Livia vinkkaa tarkan lähteen.
+ *
+ * ── LENTO EI LUKITSE PELIÄ ─────────────────────────────────────────
+ *
+ * Oikean vastauksen jälkeen Livia lentää viemään sähkeen. Peli EI jää
+ * odottamaan: kortti sulkeutuu, pelaaja jatkaa vapaasti, ja Livia
+ * palaa viiveen päästä kuplalla — sen jälkeen laatta kääntyy
+ * (js/game.js avaaAarreSahkeella) ja isoisän aarremerkintä aukeaa
+ * täsmälleen kuten visapolussa (aarreLoytyi).
+ *
+ * ── MIKSI TÄMÄ ON KOHTAAMISEN RINNALLA EIKÄ SEN TILALLA KOODISSA ───
+ *
+ * Vihreä piste, kortti, kuplat ja aarremerkintä ovat samat molemmilla
+ * poluilla; vain kortin sisältö ja loppu vaihtuvat. Siksi tässä on
+ * yksi uusi piirtäjä ja kolme ehtoa, ei toista mekaniikkaa: kaupunki,
+ * jolla on `sahketehtava`, saa sähkepolun, ja kaupunki, jolla on
+ * `kohtaaminen`, saa entisen. Molempia ei kirjoiteta samaan
+ * kaupunkiin (tests/fokusvirta.test.mjs vahtii).
+ */
+
+/** Sähkepalkkion pohja, kun vastaus osuu ensimmäisellä yrityksellä. */
+export const SAHKE_PALKKIO = 200;
+
+/** Paljonko yksi ohilyönti syö palkkiosta (omistaja: −25 % / ohilyönti). */
+const SAHKE_VAHENNYS = 0.25;
+
+/** Monenko ohilyönnin jälkeen Livia vinkkaa tarkan lähteen. */
+const SAHKE_VINKKI_OHI = 2;
+
+/**
+ * Livian lennon kesto. Lento ei lukitse peliä — tämä on vain se aika,
+ * jonka kupla odottaa ennen paluutaan, ja pelaaja saa sillä välin
+ * tehdä mitä haluaa.
+ */
+const SAHKE_LENTO_MS = 6500;
+
+/** Paluukuplan ja aarteen paljastuksen väli: kupla ehditään lukea. */
+const SAHKE_PALUU_MS = 3200;
+
+/** Palkkio ohilyöntien jälkeen — neljännes kerrallaan, lattia 0. */
+export function sahkePalkkio(ohi, pohja = SAHKE_PALKKIO) {
+  return Math.max(0, Math.round(pohja * (1 - SAHKE_VAHENNYS * (ohi ?? 0))));
+}
+
+/**
+ * MAAN KARTTAKOHTEIDEN HAKU — js/fokuskohteet.js asettaa tämän.
+ *
+ * Miksi takaisinkutsu eikä import: kohdetaulu (KOHDE_MAAT) asuu
+ * js/fokuskohteet.js:ssä, joka on niputusjärjestyksessä VASTA tämän
+ * moduulin jälkeen (tools/build-standalone.mjs MODULES). Sama ratkaisu
+ * ja sama syy kuin täkynoston piirtopinnalla (asetaNostopinta) ja
+ * lehtitehtävien kuittauksella (asetaTehtavakuittaus).
+ */
+let kohdehakemisto = null;
+
+export function asetaKohdehakemisto(fn) {
+  kohdehakemisto = typeof fn === 'function' ? fn : null;
+}
+
+/**
+ * MAAN SISÄLTÖHAKEMISTO — aakkostettu lista kaikesta, mitä maasta on
+ * pelissä luettavissa.
+ *
+ * Lähteitä on neljä ja kaikki ovat jo hyväksyttyä pelidataa:
+ *
+ *   1. maan oman lehden nostot (js/packs/maa-kategoriat.js),
+ *   2. maan JOKAISEN kaupungin kaupunkilehden nostot
+ *      (js/packs/kulttuuri-kategoriat.js),
+ *   3. maan kaupunkien fokusvirtojen omat otsikot — täkyjen otsikot,
+ *      kohdenostojen nimet ja täkynostojen nimiöt (js/packs/
+ *      fokusvirta-*.js),
+ *   4. maan karttakohteet (js/packs/fokuskohteet-*.js), jotka pelaaja
+ *      avaa kartalta — ne ovat monessa maassa sen paksuin aineisto.
+ *
+ * Lista ei siis ole kopio vaan NÄKYMÄ: kun lehteen kirjoitetaan uusi
+ * juttu tai kartalle uusi kohde, se ilmestyy hakemistoon itsestään
+ * eikä käsin ylläpidettävää kaksoiskappaletta pääse syntymään.
+ *
+ * KAUPUNGIT LUETAAN LAUDALTA (`pack.map.cityCountry`), joten sama
+ * funktio palvelee mitä tahansa maata millä tahansa laudalla.
+ */
+export function sisaltohakemisto(ui, iso) {
+  if (!iso) return [];
+  const otsikot = new Set();
+  const lisaa = (teksti) => { if (teksti) otsikot.add(teksti); };
+  for (const kategoria of MAA_KATEGORIAT[iso] ?? []) {
+    for (const nosto of kategoria.nostot ?? []) lisaa(nosto.otsikko);
+  }
+  const maat = ui?.game?.pack?.map?.cityCountry ?? {};
+  for (const [cityId, maa] of Object.entries(maat)) {
+    if (maa !== iso) continue;
+    for (const kategoria of KULTTUURI_KATEGORIAT[cityId] ?? []) {
+      for (const nosto of kategoria.nostot ?? []) lisaa(nosto.otsikko);
+    }
+    const virta = FOKUSVIRRAT[cityId];
+    for (const taky of virta?.takyt ?? []) lisaa(taky.otsikko);
+    for (const kohde of virta?.kohteet ?? []) lisaa(kohde.nimi);
+    for (const nosto of virta?.takynostot ?? []) lisaa(nosto.nimio);
+  }
+  // Karttakohteet nimellä, koska juuri se lukee kohdekortin otsikkona
+  // (js/fokuskohteet.js avaaFokuskohde) — sillä nimellä pelaaja sen
+  // muistaa, ei painikkeen klikkiotsikolla.
+  for (const kohde of kohdehakemisto?.(iso) ?? []) lisaa(kohde.nimi);
+  return [...otsikot].sort((a, b) => a.localeCompare(b, 'fi'));
+}
+
+/** Onko aukkoon annettu vastaus oikein? */
+function aukkoOsuu(aukko, arvo) {
+  if (aukko.tyyppi === 'luku') return Number(arvo) === Number(aukko.oikea);
+  const oikeat = aukko.oikeat ?? [aukko.oikea];
+  return oikeat.some((o) => o === arvo);
+}
+
+/**
+ * Pöllön paluusähke ohilyönnistä. Sanamuoto on sähkettä: mitä
+ * vähemmän sanoja, sitä enemmän se kuulostaa sähkeeltä.
+ */
+function ohilyonninSahke(tehtava, vaarat) {
+  if (tehtava.vaarinSahke && vaarat.length === tehtava.aukot.length) return tehtava.vaarinSahke;
+  const sanat = vaarat.map((a) => a.sahkeSana ?? a.otsake).join(' JA ');
+  return `EI TÄSMÄÄ STOP TARKISTA ${sanat} STOP`;
+}
+
+/** Istunnon ohilyöntikirjanpito: lauta:kaupunki → ohilyöntien määrä. */
+function sahkeAvain(ui, city) {
+  return `${ui.game.pack.id}:${city.id}`;
+}
+
+/** Sähkeen oma tekstipinta: versaalit rivit STOP-välein. */
+function piirraSahke(kohde, teksti, luokka = '') {
+  const laatikko = html('div', luokka ? `fokusvirta-sahke ${luokka}` : 'fokusvirta-sahke');
+  for (const rivi of String(teksti).split(/\s*\n\s*/).filter(Boolean)) {
+    laatikko.appendChild(html('p', 'fokusvirta-sahkerivi', rivi));
+  }
+  kohde.appendChild(laatikko);
+  return laatikko;
+}
+
+/**
+ * SÄHKEKORTTI — pöllön sähke, Livian saate ja vastauslomake.
+ *
+ * Kortti rakennetaan aina tilasta, joten sama kutsu palvelee kolmea
+ * hetkeä: ensimmäistä avausta, ohilyönnin jälkeistä paluuta ja
+ * tilannetta, jossa Livia on jo matkalla.
+ */
+function piirraSahketehtava(ui, city, data, kohde) {
+  const tehtava = data.sahketehtava ?? {};
+  const avain = sahkeAvain(ui, city);
+  ui.sahkeOhi ??= new Map();
+  ui.sahkeVastattu ??= new Set();
+  otsikko(kohde, 'Sähke', tehtava.hahmo ?? 'Pöllöltä');
+
+  /*
+   * LIVIA ON JO MATKALLA. Vihreä piste jää palamaan lennon ajaksi (se
+   * sammuu vasta laatan kääntyessä), joten pelaaja voi napauttaa sitä
+   * uudelleen — silloin kortti kertoo tilanteen eikä tarjoa lomaketta
+   * toista kertaa. Sama pinta palvelee myös tilannetta, jossa pelaaja
+   * poistui kaupungista kesken lennon: paluunappi jatkaa siitä.
+   */
+  if (ui.sahkeVastattu.has(avain)) {
+    piirraSahke(kohde, tehtava.lahetetty ?? 'SÄHKE LÄHETETTY STOP ODOTA VASTAUSTA STOP');
+    piirraTeksti(kohde, tehtava.odotus ?? 'Livia on matkalla. Se palaa kun se palaa.');
+    piirraNapit(kohde, [nappi('Selvä', 'primary', () => suljeKasin(ui))]);
+    return;
+  }
+
+  piirraSahke(kohde, tehtava.sahke ?? '');
+  piirraTeksti(kohde, tehtava.johdanto ?? '');
+
+  const ohi = ui.sahkeOhi.get(avain) ?? 0;
+  const lomake = html('div', 'fokusvirta-sahkelomake');
+  const valinnat = new Map();
+  const hakemisto = sisaltohakemisto(ui, tehtava.hakemistoMaa);
+
+  for (const aukko of tehtava.aukot ?? []) {
+    const rivi = html('div', 'fokusvirta-sahkeaukko');
+    const nimio = html('label', 'fokusvirta-sahkeotsake', `${aukko.otsake} `);
+    if (aukko.tyyppi === 'luku') {
+      const kentta = document.createElement('input');
+      kentta.type = 'number';
+      kentta.className = 'fokusvirta-sahkeluku';
+      kentta.inputMode = 'numeric';
+      kentta.placeholder = aukko.vihje ?? '____';
+      if (Number.isFinite(aukko.pienin)) kentta.min = String(aukko.pienin);
+      if (Number.isFinite(aukko.suurin)) kentta.max = String(aukko.suurin);
+      nimio.appendChild(kentta);
+      valinnat.set(aukko, () => kentta.value.trim());
+    } else {
+      const kentta = document.createElement('select');
+      kentta.className = 'fokusvirta-sahkevalinta';
+      const tyhja = document.createElement('option');
+      tyhja.value = '';
+      tyhja.textContent = aukko.vihje ?? '— valitse luettelosta —';
+      kentta.appendChild(tyhja);
+      for (const nimi of hakemisto) {
+        const vaihtoehto = document.createElement('option');
+        vaihtoehto.value = nimi;
+        vaihtoehto.textContent = nimi;
+        kentta.appendChild(vaihtoehto);
+      }
+      nimio.appendChild(kentta);
+      valinnat.set(aukko, () => kentta.value);
+    }
+    rivi.appendChild(nimio);
+    lomake.appendChild(rivi);
+  }
+  kohde.appendChild(lomake);
+
+  const tulos = html('p', 'fokusvirta-visa-tulos');
+  kohde.appendChild(tulos);
+  // Ohilyönnin jälkeen kortti muistaa, mitä pöllö vastasi viimeksi.
+  if (ohi > 0 && ui.sahkeViimeSahke?.avain === avain) {
+    tulos.className = 'fokusvirta-visa-tulos vaarin-tulos';
+    tulos.textContent = ui.sahkeViimeSahke.teksti;
+  }
+  if (ohi >= SAHKE_VINKKI_OHI && tehtava.vinkki) {
+    kohde.appendChild(html('p', 'fokusvirta-varmistus', tehtava.vinkki));
+  }
+  kohde.appendChild(html('p', 'fokusvirta-varoitus',
+    `Sähkeen palkkio nyt ${sahkePalkkio(ohi, tehtava.palkkio ?? SAHKE_PALKKIO)} puntaa. `
+    + 'Jokainen ohilyönti pienentää sitä — mutta aarre ei lukitu koskaan.'));
+
+  piirraNapit(kohde, [
+    nappi(tehtava.laheta ?? 'Lähetä sähke', 'primary', () => {
+      const vaarat = [...valinnat.entries()]
+        .filter(([aukko, lue]) => !aukkoOsuu(aukko, lue()))
+        .map(([aukko]) => aukko);
+      if (vaarat.length === 0) { sahkeOsui(ui, city, data); return; }
+      sfx.play('wrong');
+      natiiviVastaus(false);
+      const uusi = ohi + 1;
+      ui.sahkeOhi.set(avain, uusi);
+      ui.sahkeViimeSahke = { avain, teksti: ohilyonninSahke(tehtava, vaarat) };
+      piirraKortti(ui, city, data, { vaihe: 'kohtaaminen', taky: null, tehdyt: [] });
+    }),
+    nappi('Myöhemmin', '', () => suljeKasin(ui)),
+  ], 'fokusvirta-varmistusnapit');
+}
+
+/**
+ * OIKEA VASTAUS: Livia lähtee lennolle.
+ *
+ * Kortti vaihtuu kuittaukseksi ja sulkeutuu napista; peli EI jää
+ * odottamaan. Ajastin herättää paluukuplan, ja vasta se kääntää
+ * laatan.
+ */
+function sahkeOsui(ui, city, data) {
+  const tehtava = data.sahketehtava ?? {};
+  const avain = sahkeAvain(ui, city);
+  ui.sahkeVastattu ??= new Set();
+  ui.sahkeVastattu.add(avain);
+  sfx.play('correct');
+  natiiviVastaus(true);
+  suljeFokusvirta(ui);
+  lataaTyyli();
+  piirraKehys(ui, city, data, { vaihe: 'kohtaaminen', taky: null, tehdyt: [] });
+  const sisalto = ui.fokusvirtaKortti?.querySelector('.fokusvirta-sisalto');
+  if (sisalto) {
+    sisalto.replaceChildren();
+    otsikko(sisalto, 'Sähke', tehtava.hahmo ?? 'Pöllöltä');
+    piirraSahke(sisalto, tehtava.vastaussahke ?? 'VASTAUS LÄHETETTY STOP');
+    piirraTeksti(sisalto, [tehtava.oikein, tehtava.fakta].filter(Boolean).join('\n\n'));
+    piirraNapit(sisalto, [nappi(tehtava.lento ?? 'Anna Livian mennä', 'primary', () => {
+      sfx.play('paper');
+      suljeFokusvirta(ui);
+    })]);
+  }
+  aloitaSahkelento(ui, city, data);
+}
+
+/** Ajastin, joka tuo Livian takaisin — ja aarteen mukanaan. */
+function aloitaSahkelento(ui, city, data) {
+  clearTimeout(ui.sahkeLentoAjastin);
+  ui.sahkeLentoAjastin = setTimeout(() => {
+    if (ui.dead) return;
+    // Pelaaja on voinut lähteä kaupungista tai laatta on jo käännetty
+    // muuta tietä: paluu odottaa silloin seuraavaa pisteen napautusta.
+    if (ui.game?.cityOf?.()?.id !== city.id) return;
+    if (!ui.game.tokens?.has(city.id)) return;
+    const tehtava = data.sahketehtava ?? {};
+    naytaPolloKupla(ui, tehtava.paluu ?? 'Perillä oltiin. Pöllö kertoi paikan.');
+    clearTimeout(ui.sahkeAarreAjastin);
+    ui.sahkeAarreAjastin = setTimeout(() => paljastaSahkeAarre(ui, city, data), SAHKE_PALUU_MS);
+  }, SAHKE_LENTO_MS);
+}
+
+/**
+ * Laatan käännös sähkeen voimalla.
+ *
+ * Sama kaksivaiheinen kulku kuin visan voitossa (js/visa.js
+ * answerQuiz): pelin oma metodi tekee kirjanpidon, käyttöliittymä
+ * näyttää paljastuksen — ja piirron lopussa aarreLoytyi avaa isoisän
+ * aarremerkinnän ja Livian jälkisanan kuten aina.
+ */
+function paljastaSahkeAarre(ui, city, data) {
+  if (ui.dead || !ui.game?.tokens?.has(city.id)) return;
+  const tehtava = data.sahketehtava ?? {};
+  const ohi = ui.sahkeOhi?.get(sahkeAvain(ui, city)) ?? 0;
+  const palkkio = sahkePalkkio(ohi, tehtava.palkkio ?? SAHKE_PALKKIO);
+  suljeFokusvirta(ui);
+  ui.run(() => ui.game.avaaAarreSahkeella(city.id, palkkio), {
+    after: async (tulos) => {
+      if (tulos?.found) await ui.playTokenReveal(tulos.found, city.id);
+    },
+  });
+}
+
 /* ============ KEVYEN KULUN OMAT PINNAT (kokeilu 24.8.2026) ==========
  *
  * Kaksi kutsua, joita raskaassa virrassa ei ole:
@@ -1874,7 +2236,17 @@ export function fokusvirtaKohtaamispiste(ui, city) {
   if (!fokusAarreAvattu(ui, city)) return null;
   const data = fokusvirtaSisalto(ui, city);
   const paikka = data.kohtaamispiste?.laudat?.[ui.game?.pack?.id];
-  return { x: paikka.x, y: paikka.y, nimi: data.kohtaamispiste?.nimi ?? city.name };
+  /*
+   * TEKO KERTOO, MITÄ PISTEEN TAKANA ON. Ruudunlukija sanoo pisteestä
+   * "tapaa paikallinen" — sähkekaupungissa (Tukholma) sen takana ei
+   * ole ketään tavattavaa vaan pöllön sähke, ja lappu kertoo sen.
+   */
+  return {
+    x: paikka.x,
+    y: paikka.y,
+    nimi: data.kohtaamispiste?.nimi ?? city.name,
+    teko: data.sahketehtava ? 'lue pöllön sähke' : 'tapaa paikallinen',
+  };
 }
 
 /**
@@ -1898,7 +2270,8 @@ export function fokusvirtaKohtaamispiste(ui, city) {
 export function fokusvirtaKohtaaminenPisteessa(ui, city) {
   if (FOKUSVIRTA_KORTIT) return false;
   const data = fokusvirtaSisalto(ui, city);
-  if (!data?.kohtaaminen) return false;
+  // Sähketehtävä kelpaa kohtaamisen sijaan (ks. PÖLLÖN SÄHKETEHTÄVÄ).
+  if (!data?.kohtaaminen && !data?.sahketehtava) return false;
   // Laatta käännetty → kohtaaminen on ohi, piste sammuu.
   if (!fokusvirtaLukitseeLehden(ui, city)) return false;
   const paikka = data.kohtaamispiste?.laudat?.[ui.game?.pack?.id];
@@ -1917,7 +2290,8 @@ export function fokusvirtaKohtaaminenPisteessa(ui, city) {
 export function avaaFokusKohtaaminen(ui, city) {
   if (typeof document === 'undefined') return false;
   const data = fokusvirtaSisalto(ui, city);
-  if (!data?.kohtaaminen) return false;
+  // Sähketehtävä kelpaa kohtaamisen sijaan (ks. PÖLLÖN SÄHKETEHTÄVÄ).
+  if (!data?.kohtaaminen && !data?.sahketehtava) return false;
   lataaTyyli();
   piirraKortti(ui, city, data, { vaihe: 'kohtaaminen', taky: null, tehdyt: [] });
   return true;

@@ -856,14 +856,28 @@ test('paikallisaarteen nimi tulee maasta ja putoaa laudan omaan nimeen', async (
   /*
    * Kirjoitettu maa, jolla on OMA KUVA (Euroopan 58 kuvaa 28.8.2026):
    * nimi, fakta ja kuva tulevat kaikki maan omasta parista, eli maan
-   * kuva voittaa laudan yleiskuvan — muuten mustikkakorin tilalla
+   * kuva voittaa laudan yleiskuvan — muuten kanelipullakorin tilalla
    * näkyisi Euroopan meripihka.
+   */
+  const ruotsi = game.aarreTyyppi('pieniAarre', 'tukholma');
+  assert.equal(ruotsi.name, PAIKALLISAARTEET.SWE.pieniAarre.name);
+  assert.equal(ruotsi.fakta, PAIKALLISAARTEET.SWE.pieniAarre.fakta);
+  assert.equal(ruotsi.kuva, PAIKALLISAARTEET.SWE.pieniAarre.kuva);
+  assert.notEqual(ruotsi.kuva, eurooppa.pieniAarre.kuva, 'maan kuva ei voittanut laudan kuvaa');
+  assert.equal(ruotsi.id, 'pieniAarre', 'tunniste ei saa muuttua nimen mukana');
+
+  /*
+   * Kirjoitettu maa, jolla EI VIELÄ OLE OMAA KUVAA (v1320): Suomen pari
+   * kirjoitettiin uusiksi Helsingin kaanontekstien perässä, ja vanhat
+   * fin-*.jpg esittävät edellistä paria — siksi `kuva` on jätetty pois
+   * kunnes uudet on generoitu. Nimi ja fakta tulevat silti maalta, ja
+   * kuva putoaa laudan omaan. Väärä kuva olisi väärä väite; puuttuva
+   * kuva ei ole.
    */
   const suomi = game.aarreTyyppi('pieniAarre', 'helsinki');
   assert.equal(suomi.name, PAIKALLISAARTEET.FIN.pieniAarre.name);
   assert.equal(suomi.fakta, PAIKALLISAARTEET.FIN.pieniAarre.fakta);
-  assert.equal(suomi.kuva, PAIKALLISAARTEET.FIN.pieniAarre.kuva);
-  assert.notEqual(suomi.kuva, eurooppa.pieniAarre.kuva, 'maan kuva ei voittanut laudan kuvaa');
+  assert.ok(suomi.kuva, 'kuvattoman parin on peritty laudan oma kuva');
   assert.equal(suomi.id, 'pieniAarre', 'tunniste ei saa muuttua nimen mukana');
 
   PAIKALLISAARTEET.MAR = { pieniAarre: { name: 'Koelöytö', fakta: 'Testifakta.' } };

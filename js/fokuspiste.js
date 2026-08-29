@@ -131,11 +131,13 @@ function varmistaPistekerros(ui) {
 }
 
 /** Yksi merkki: näkymätön osuma-alue, kaksi hehkukehää ja ydin. */
-function piirraPiste(ui, ryhma, city, nimi) {
+function piirraPiste(ui, ryhma, city, nimi, teko = 'tapaa paikallinen') {
   const g = el('g', { class: 'fokuspiste' }, ryhma);
   g.setAttribute('role', 'button');
   g.setAttribute('tabindex', '0');
-  g.setAttribute('aria-label', `${nimi}: tapaa paikallinen`);
+  // Teko tulee datasta: sähkekaupungissa pisteen takana ei ole ketään
+  // tavattavaa vaan pöllön sähke (js/fokusvirta.js kohtaamispiste).
+  g.setAttribute('aria-label', `${nimi}: ${teko}`);
   el('circle', { class: 'fokuspiste-osuma', r: PISTE_OSUMA_R }, g);
   // Pieni merkki, joka löytyy tuikkeesta eikä koosta (ks. PISTE_*_R).
   el('circle', { class: 'fokuspiste-hehku', r: PISTE_HEHKU_R }, g);
@@ -198,7 +200,7 @@ export function paivitaFokuspiste(ui) {
       for (const x of ui.kiertoKohdat?.(piste.x) ?? [piste.x]) {
         const ryhma = el('g', { class: 'fokuspiste-ryhma' }, kerros);
         ui.fokuspisteRyhmat.push({ g: ryhma, x: x + sx, y: piste.y + sy });
-        piirraPiste(ui, ryhma, city, piste.nimi);
+        piirraPiste(ui, ryhma, city, piste.nimi, piste.teko);
       }
     }
   }

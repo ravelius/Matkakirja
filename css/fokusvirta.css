@@ -398,6 +398,82 @@
   color: rgba(58, 38, 16, 0.72);
 }
 
+/* ==================== PÖLLÖN SÄHKETEHTÄVÄ ====================
+ *
+ * Sähke näyttää sähkeeltä: kapea liuska, versaalit, harva riviväli ja
+ * konekirjoituskirjasin. Asu on tarkoituksella eri kuin kortin muu
+ * teksti — pöllön sähke ei ole Livian puhetta eikä isoisän käsialaa,
+ * vaan konetta.
+ *
+ * VÄRIT ON POIMITTU KORTIN OMASTA PALETISTA (ei uusia sävyjä): sama
+ * ruskea muste ja sama pergamentti kuin muualla, vain vaaleampi
+ * pohjalappu ja katkoviivareuna erottavat liuskan.
+ */
+.fokusvirta-sahke {
+  margin: 0.7rem 0 0;
+  padding: 0.55rem 0.7rem;
+  border: 1px dashed rgba(58, 38, 16, 0.45);
+  background: rgba(255, 252, 240, 0.72);
+}
+
+.fokusvirta-sahkerivi {
+  margin: 0 0 0.3rem;
+  font-family: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #3a2610;
+}
+
+.fokusvirta-sahkerivi:last-child { margin-bottom: 0; }
+
+/* Lomake on osa sähkettä: aukot ovat rivejä, ei lomakelaatikoita. */
+.fokusvirta-sahkelomake {
+  margin: 0.75rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fokusvirta-sahkeaukko { display: block; }
+
+.fokusvirta-sahkeotsake {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-family: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(58, 38, 16, 0.85);
+}
+
+/*
+ * Kentät ovat sormen mittaisia (44 px) ja täyttä leveyttä: valintalista
+ * on pitkä (koko maan sisältöhakemisto), eikä kapea kenttä näyttäisi
+ * otsikoita puhelimella.
+ */
+.fokusvirta-sahkevalinta,
+.fokusvirta-sahkeluku {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid rgba(58, 38, 16, 0.5);
+  border-radius: 3px;
+  background: rgba(255, 255, 250, 0.9);
+  font-family: inherit;
+  font-size: 0.95rem;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #211d18;
+}
+
+.fokusvirta-sahkeluku {
+  font-family: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace;
+  letter-spacing: 0.12em;
+}
+
 /*
  * Vihjelinkki on tekstiä eikä nappilaatikkoa: se on lehden reunaan
  * kirjoitettu muistutus, ei kolmas valinta kahden napin rinnalle.
