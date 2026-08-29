@@ -189,10 +189,31 @@ export const EHDOKKAAT = {
   // yleinen valinta soi kaikkialla, ellei maanosalla ole omaansa.
   'musiikki:tietovisa': {
     otsikko: 'Yleinen — soi ellei maanosalla ole omaa valintaa',
-    // Omistajan valinta (31.7.) kirjattu oletukseksi kaksinkertaisella
-    // voimalla — näin se soi myös kotivalikon sovelluksessa.
-    oletus: 'https://cdn.freesound.org/previews/176/176134_334810-lq.mp3#voima=0.32',
+    /*
+     * PELIN OMA KYSYMYSMUSIIKKI (omistajan tilaus 29.8.2026:
+     * musiikkipaletti ElevenLabsilla). Kevyt tikittävä uteliaisuus
+     * samasta kamarikokoonpanosta kuin muukin paletti — ks.
+     * tools/generoi-musiikki.mjs, raita `visa`.
+     *
+     * VANHAA EI YLIKIRJOITETTU. Uusi raita on eri nimellä
+     * (musa-visa-2.mp3), ja vaihdettu on vain tämä yksi rivi: entinen
+     * oletus on yhä ehdokaslistan ensimmäisenä, joten PALUU ON TÄMÄN
+     * RIVIN VAIHTO takaisin osoitteeseen
+     * https://cdn.freesound.org/previews/176/176134_334810-lq.mp3#voima=0.32
+     *
+     * Ennen tätä oletus oli omistajan valinta 31.7. (rummut,
+     * kaksinkertaisella voimalla). Afrikan oma valinta
+     * ('musiikki:tietovisa:africa') voittaa yhä tämän Afrikassa —
+     * se on maanosan tarkoituksellinen oma sävy eikä yleinen oletus.
+     *
+     * Voimaa ei anneta: raita on generoitu valmiiksi taustatasolle,
+     * eikä sitä ole LUFS-mitattu (mittaus koskee ulkoisia äänitteitä,
+     * tools/mittaa-aanet.mjs). Jos se kuulostaa liian hiljaiselta tai
+     * kovalta, kerroin lisätään tähän muodossa #voima=1.2.
+     */
+    oletus: 'assets/audio/musa-visa-2.mp3',
     ehdokkaat: [
+      { url: 'assets/audio/musa-visa-2.mp3', nimi: 'Tikittävä uteliaisuus — ElevenLabs-luuppi' },
       { url: 'https://cdn.freesound.org/previews/176/176134_334810-lq.mp3#voima=0.32', nimi: '6_drums_luangprabang.WAV — LukeIRL, CC BY' },
       { url: 'https://cdn.freesound.org/previews/713/713120_14632469-lq.mp3#voima=0.27', nimi: 'Arabialainen huilu — DYEKHO, CC0' },
       { url: 'https://cdn.freesound.org/previews/466/466570_197130-lq.mp3#voima=0.46', nimi: 'Kalimba-luuppi — CarlosCarty, CC BY' },

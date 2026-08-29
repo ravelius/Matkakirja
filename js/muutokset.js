@@ -13,7 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 1321, teksti: 'Livia mukaan jo aloitusvalinnassa' },
+  { v: 1322, teksti: 'Livia mukaan jo aloitusvalinnassa' },
+  { v: 1321, teksti: 'Musiikkipaletti ja kytkennat' },
   { v: 1320, teksti: 'Fokusvirrat Pohjolaan ja sahketehtavan pilotti' },
   { v: 1319, teksti: 'Takysyvennysten loistoaikakuvat aaltoon 1' },
   { v: 1318, teksti: 'Kehittajan hammasratasvalikko' },

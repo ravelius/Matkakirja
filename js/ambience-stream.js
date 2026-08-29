@@ -12,7 +12,9 @@ import {
   valittuTaiOletus, jaaAlku, tyyppiKori, kaupunkiKori, maaKori,
 } from './aani-ehdokkaat.js';
 import { lisaaTaustaVaimennus } from './aani-tausta.js';
-import { aaniOsoite, onPeilista, peiliPetti } from './media.js';
+import {
+  aaniOsoite, omaAaniPolku, onPeilista, peiliPetti,
+} from './media.js';
 // Lukijaäänen piiri kuuluu samaan sanelun kovaan taukoon kuin
 // tehosteet ja maisema (ks. taukoaSanelunAjaksi).
 import { jatkaPuhePiiri, taukoaPuhePiiri } from './puhe.js';
@@ -447,6 +449,15 @@ export function stopPlaceStream() {
  * ja seuraava renderöinti yrittää striimiä uudelleen.
  */
 export function playPlaceAmbience(cityId, fallbackType, lauta, cityCountry = null) {
+  /*
+   * Pohjavire kulkee maiseman rinnalla eikä sen sisällä: se soi myös
+   * silloin, kun paikalla ei ole omaa äänitettä eikä edes
+   * syntetisoitua tyyppiä. Käynnistys on tässä, koska tämä on se yksi
+   * kohta, josta koko peli pyytää taustaääntä — kytkimen sammuttamana
+   * se ei lähde soimaan eikä jää soimaan.
+   */
+  if (sfx.enabled) kaynnistaPohjaMusiikki();
+  else stopPohjaMusiikki();
   // Kaupungin oma äänitys ensin, maisematyypin maanosakohtainen
   // arvontakori varalle. Tyhjä kori tarkoittaa syntetisoitua ambienssia.
   const url = arvoAani(cityId, fallbackType, lauta, cityCountry);
@@ -939,7 +950,18 @@ export function startQuizMusic(lauta) {
   const petti = () => {
     if (varareittiKokeiltu || !onPeilista(audio.getAttribute('src'))) { luovuta(); return; }
     varareittiKokeiltu = true;
-    peiliPetti('aanet');
+    /*
+     * PUUTTUVA OMA ÄÄNITE EI OLE PEILIN VIKA (29.8.2026, musiikki-
+     * paletti). Katkaisija (peiliPetti) sulkee koko äänipeilin
+     * kolmen virheen jälkeen, ja siihen mennessä se on jo lukenut
+     * kolme kertaa saman puuttuvan tiedoston vikana palvelimessa,
+     * joka toimii moitteetta. Pelin oma äänite voi puuttua ihan
+     * laillisesti — juuri niin on aina siinä välissä, kun kytkentä
+     * on mainissa ja mp3 vasta generoidaan (ks.
+     * .github/workflows/generoi-musiikki.yml). Ulkoisilla lähteillä
+     * käytös on ennallaan: sieltä 404 kertoo oikeasti peilistä.
+     */
+    if (!omaAaniPolku(alkuperainen)) peiliPetti('aanet');
     if (musiikki !== audio) return;
     audio.src = alkuperainen;
     audio.load();
@@ -947,6 +969,126 @@ export function startQuizMusic(lauta) {
   };
   audio.addEventListener('error', petti);
   soi();
+}
+
+/*
+ * ── POHJAVIRE (musiikkipaletti, omistajan tilaus 29.8.2026) ──────────
+ *
+ * *"generoi ääniä ja musiikkeja ja laita suoraan peliin"* — paletin
+ * ensimmäinen raita on hyvin harva, hidas pohjavire, joka soi
+ * ambienssiäänten ALLA koko matkan ajan. Se ei ole maisema eikä
+ * kohtausmusiikki vaan pelin oma pohjaväri: sen kuuluu jäädä
+ * huomaamatta, ja huomata vasta kun se lakkaa.
+ *
+ * OMA SOITIN, EI AMBIENSSIN KERROS. Maisemakoneisto (nykyinen,
+ * luoSoitin, vahdiSilmukka) on rakennettu YHDELLE soivalle paikalle:
+ * arvonta, ristihäivytettävä silmukka, aloituskohdan arvonta,
+ * hiljaisuusvahti ja kahden portaan varareitti kuuluvat kaikki siihen,
+ * että ääni kertoo missä ollaan. Pohjavire ei kerro paikasta mitään —
+ * se on sama Ateenassa ja Timbuktussa, sillä ei ole arvontakoria eikä
+ * aloituskohtaa, ja se saa jatkua saumatta kaupungin vaihtuessa.
+ * Kerrostaminen `nykyinen`-olioon olisi siis tehnyt kahdesta eri
+ * asiasta yhden ehdollisen — sen sijaan tämä on visamusiikin
+ * (`musiikki`) veli: oma elementti, sama väistö, sama taustatauko.
+ *
+ * KYTKIN ON TAUSTAÄÄNET (sfx.enabled), koska pohjavire on taustaa eikä
+ * kertojaa. Käynnistys tulee playPlaceAmbiencesta — samasta kohdasta,
+ * josta maisemakin — ja sammutus samoista paikoista kuin maiseman:
+ * taustaäänten kytkin pois (js/main.js kaannaTausta) ja radiotila
+ * (js/linssit/radio.js paalle), jossa radio on ainoa ääni.
+ */
+const POHJA_MUSIIKKI = 'assets/audio/musa-pohja.mp3';
+/*
+ * Taso ≈ −19 dB suhteessa ambienssiin. Maiseman efektiivinen taso on
+ * VOIMA (0,14) kertaa äänitteen oma mitattu kerroin, joka on
+ * tyypillisesti ykkösen kahta puolta — käytännön keskitaso on siis
+ * noin 0,17. Siitä −19 dB on 0,17 × 10^(−19/20) ≈ 0,019.
+ *
+ * LOPULLINEN TASO SÄÄDETÄÄN KUULOKOKEELLA, kuten ETUSIVUN_VOIMA ja
+ * LENNON_VOIMA aikanaan: tämä on laskettu lähtöarvo tilaukselle
+ * "soi hiljaa ambienssiäänten alla", ei mitattu totuus. Pohjavire on
+ * generoitu raita eikä LUFS-mitattu äänite (mittaus koskee ulkoisia
+ * lähteitä, tools/mittaa-aanet.mjs), joten sen oma taso riippuu siitä
+ * mitä malli tuotti — omistaja kuulee sen ensimmäisenä oikeasta
+ * laitteesta ja saa siirtää lukemaa suuntaan tai toiseen.
+ */
+const POHJA_VOIMA = 0.019;
+// Pohjavire nousee hitaammin kuin maisema: se ei ole vaihdos vaan tila,
+// joka on ollut siellä koko ajan.
+const POHJA_NOUSU_MS = 4000;
+
+let pohja = null;
+/*
+ * Puuttuva raita hiljenee LOPULLISESTI (ei joka renderöinnillä uutta
+ * yritystä). Kytkentä on mainissa ennen kuin mp3 on generoitu — juuri
+ * se on tarkoituskin, sama etukäteisnimeäminen kuin luentojen
+ * `aanite`-kentässä — ja ilman tätä lippua peli rakentaisi uuden
+ * epäonnistuvan soittimen jokaisesta paikanvaihdosta.
+ *
+ * VAIN LATAUSVIRHE nostaa lipun. play():n hylkäys on eri asia: se on
+ * yleensä selaimen eleen odotus, ja siitä on määrä toipua seuraavasta
+ * renderöinnistä täsmälleen kuten maisemankin.
+ */
+let pohjaPuuttuu = false;
+
+/** Käynnistää pohjavireen, jos taustaäänet ovat päällä eikä se jo soi. */
+export function kaynnistaPohjaMusiikki() {
+  if (!sfx.enabled || pohja || pohjaPuuttuu) return;
+  const audio = new Audio(aaniOsoite(POHJA_MUSIIKKI));
+  // Raita on generoitu saumattomaksi silmukaksi, joten selaimen oma
+  // loop riittää — maiseman ristihäivytystä (vahdiSilmukka) ei tarvita.
+  audio.loop = true;
+  audio.preload = 'auto';
+  audio.volume = 0;
+  pohja = audio;
+  let varareittiKokeiltu = false;
+  const luovuta = () => {
+    if (pohja === audio) pohja = null;
+    vapautaSoitin(audio);
+  };
+  const soi = () => audio.play().then(() => {
+    if (pohja !== audio) {
+      audio.pause();
+      return;
+    }
+    haivyta(audio, POHJA_VOIMA * voimassaVaisto(), undefined, POHJA_NOUSU_MS);
+  }).catch(() => {
+    // Ele puuttui tai laite kieltäytyi: seuraava renderöinti yrittää
+    // uudestaan (lippua ei nosteta).
+    luovuta();
+  });
+  const petti = () => {
+    // Ämpäri ensin, repon polku perään — ja jos kumpikaan ei vastaa,
+    // peli on hiljainen tämän raidan osalta. Katkaisijaa (peiliPetti)
+    // ei kutsuta: puuttuva oma äänite ei ole peilin vika, ks.
+    // startQuizMusicin sama perustelu.
+    if (varareittiKokeiltu || !onPeilista(audio.getAttribute('src'))) {
+      pohjaPuuttuu = true;
+      luovuta();
+      return;
+    }
+    varareittiKokeiltu = true;
+    if (pohja !== audio) return;
+    audio.src = POHJA_MUSIIKKI;
+    audio.load();
+    soi();
+  };
+  audio.addEventListener('error', petti);
+  soi();
+}
+
+/** Sammuttaa pohjavireen pehmeästi (taustaäänet pois, radiotila). */
+export function stopPohjaMusiikki() {
+  const vanha = pohja;
+  pohja = null;
+  if (!vanha) return;
+  haivyta(vanha, 0, () => vapautaSoitin(vanha));
+}
+
+/** Vain testejä varten: unohtaa puuttuvan raidan lipun. */
+export function nollaaPohjaMusiikki() {
+  pohjaPuuttuu = false;
+  pohja = null;
 }
 
 /**
@@ -1096,6 +1238,20 @@ export function taukoaSanelunAjaksi() {
       /* soitin oli jo pysähtynyt */
     }
   }
+  /*
+   * Pohjavire on soiva mediaelementti siinä missä maisemakin, ja juuri
+   * soiva elementti on se este, jonka takia mikrofoni ei lähde käyntiin
+   * (ks. yllä). Visamusiikki ei ole tässä siksi, ettei kysymys ole auki
+   * sanelun aikana; pohjavire sen sijaan soi aina.
+   */
+  if (pohja && !pohja.paused) {
+    pohja.saneluTauolla = true;
+    try {
+      pohja.pause();
+    } catch {
+      /* soitin oli jo pysähtynyt */
+    }
+  }
 }
 
 export function jatkaSanelunJalkeen() {
@@ -1103,6 +1259,14 @@ export function jatkaSanelunJalkeen() {
   sanelunTauko = false;
   sfx.jatkaKonteksti?.();
   jatkaPuhePiiri();
+  if (pohja?.saneluTauolla) {
+    pohja.saneluTauolla = false;
+    try {
+      pohja.play()?.catch?.(() => { /* seuraava paikanvaihto yrittää */ });
+    } catch {
+      /* jatko epäonnistui — pohjavire palaa seuraavasta renderöinnistä */
+    }
+  }
   const oma = nykyinen;
   if (!oma?.saneluTauolla) return;
   oma.saneluTauolla = false;
@@ -1191,6 +1355,9 @@ function taustanSoittimet() {
     if (nykyinen.vaistyva) parit.push([nykyinen.vaistyva, nykyinen.vaistyva]);
   }
   if (musiikki) parit.push([musiikki, musiikki]);
+  // Pohjavire on samaa tilaa kuin maisema ja visamusiikki: pelaaja on
+  // paluussa samassa kaupungissa, joten raita jatkaa siitä mihin jäi.
+  if (pohja) parit.push([pohja, pohja]);
   return parit;
 }
 
@@ -1256,6 +1423,16 @@ function ajaVaisto(kesto = HAIVYTYS_MS) {
   // Tietovisan musiikki on oma raitansa: se ei saa jäädä jyräämään
   // ääninäytettä, mutta ei myöskään kokonaan vaieta kysymyksen ajaksi.
   if (musiikki && kerroin < 1) haivyta(musiikki, MUSIIKKI_VOIMA * kerroin, undefined, kesto);
+  /*
+   * Pohjavire väistyy samalla kertoimella. Se on jo valmiiksi hyvin
+   * hiljainen, mutta juuri siksi sen pitää väistyä: kertojan alla
+   * kaikki muu madaltuu, ja yksin täydellä tasollaan jäävä raita
+   * nousisi suhteessa esiin vaikka sen oma lukema ei muutu.
+   * Palautuksen (kerroin === 1) on oltava mukana toisin kuin
+   * visamusiikilla, joka sammuu kysymyksen mukana — pohjavire jää
+   * soimaan ja jäisi muuten pysyvästi väistöön.
+   */
+  if (pohja) haivyta(pohja, POHJA_VOIMA * kerroin, undefined, kesto);
   if (!nykyinen) return;
   nykyinen.vaimennus = kerroin;
   const kohde = taso(nykyinen);

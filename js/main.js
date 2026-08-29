@@ -10,7 +10,9 @@ import {
 import { asetaMittari, mittariPaalla } from './karttamittari.js';
 import { sfx } from './sound.js';
 import { packById } from './pack.js';
-import { startQuizMusic, stopPlaceStream, stopQuizMusic } from './ambience-stream.js';
+import {
+  startQuizMusic, stopPlaceStream, stopPohjaMusiikki, stopQuizMusic,
+} from './ambience-stream.js';
 import {
   AANITILA_TAPAHTUMA, kertojaTila, asetaKertojaTila,
 } from './aani-ehdokkaat.js';
@@ -100,7 +102,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1321';
+const APP_VERSION = '2026-08-09.1322';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -528,13 +530,21 @@ const kaannaKertoja = (paalle) => {
 const kaannaTausta = (paalle) => {
   if (!paalle) {
     sfx.setEnabled(false);
-    // Kaikki soiva hiljenee heti: striimit, visamusiikki ja lentomoottori.
+    // Kaikki soiva hiljenee heti: striimit, visamusiikki, pohjavire ja
+    // lentomoottori.
     stopPlaceStream();
     stopQuizMusic();
+    stopPohjaMusiikki();
+    // Aarteen paljastusaihe soi omasta soittimestaan paljastuskortilla
+    // (js/ui.js soitaAarreMusiikki), joten se ei ole minkään yllä
+    // olevan pysäytyksen ulottuvilla.
+    ui?.pysaytaAarreMusiikki?.();
     sfx.stopFlight();
     return;
   }
   sfx.setEnabled(true); // palatessa kuuluu kuittausklikki
+  // Pohjavire palaa syncAmbiencen kautta (playPlaceAmbience käynnistää
+  // sen), joten sille ei tarvita omaa käynnistystä tähän.
   ui?.syncAmbience();
   if (ui?.game?.quiz) startQuizMusic(ui.game.pack.id);
 };
