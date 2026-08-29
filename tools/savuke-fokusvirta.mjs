@@ -276,9 +276,40 @@ await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-maadoituskupla.png') });
  * Venetsia on lähin sellainen, ja sen repliikki alkaa kaupungin
  * nimellä. Kytkentäkohta on eri kuin Sofialla (js/ui.js renderFactin
  * tavallinen saapumismerkintä), joten se on mitattava erikseen.
+ *
+ * ── SOFIAN KUPLA PYYHITÄÄN ENSIN (korjaus 29.8.2026) ────────────────
+ *
+ * YKSI KUPLA PER SAAPUMINEN (omistajan päätös 27.8.2026) tarkoittaa
+ * myös yhtä ELEMENTTIÄ: maadoitus ja saapumisrepliikki ovat sama
+ * puheenvuoro eri sisällöllä, ja pollo.js varmistaKupla palauttaa
+ * niille saman .pollo-vihje-solmun. Kuplalla ei ole omaa
+ * aikakatkaisua — se jää ruudulle, kunnes pelaaja napauttaa sen pois
+ * tai seuraava puheenvuoro korvaa sen sisällön. Sofian kupla oli siis
+ * yhä näkyvissä, kun tämä väite alkoi lukea samaa solmua, ja
+ * hakusilmukka osui siihen ensimmäisellä kierroksella — ENNEN kuin
+ * Venetsian oma kupla ehti korvata sen (kupla odottaa luennan loppua
+ * ja SAAPUMISKUPLAN_TAUKO_MS:n, js/fokusvirta.js).
+ *
+ * MIKSI VÄITE OLI SILTI VIHREÄ v1250:stä v1298:aan: Venetsialla ei
+ * ollut matkakirjaluentaa, joten ui.diaryVoice jäi nulliksi ja alla
+ * oleva ääniodotus paloi täydet 40 × 250 ms. Sofian kupla ehti niiden
+ * kymmenen sekunnin sisällä väistyä Venetsian kuplan tieltä, ja väite
+ * mittasi oikean tekstin vahingossa. v1299 (#1722, "Uudet luennat:
+ * avaus, lento, Venetsia ja Edinburgh") toi Venetsialle äänitteen —
+ * ääniodotus katkeaa nyt ~1,5 sekunnissa, eikä vanha kupla ehdi
+ * väistyä. Peli ei siis rikkoutunut: Venetsian repliikki tulee
+ * ruudulle täsmälleen kuten ennenkin, mutta savuke luki väärää
+ * puheenvuoroa.
+ *
+ * Vanha kupla pannaan siksi piiloon ennen mittausta (piilotaVihje on
+ * sama kutsu kuin pelaajan napautus tekee). Silloin väite mittaa sen,
+ * mitä se lupaa: että Venetsiaan saavuttaessa kupla NOUSEE UUDESTAAN
+ * ja siinä on kaupungin oma repliikki.
  */
 const venetsianKupla = await sivu.evaluate(async () => {
   const { ui, game } = window.matkakirja;
+  // Sofian puheenvuoro pois samasta solmusta (ks. yllä).
+  window.matkakirjaPollo?.piilotaVihje();
   game.player.pos = { type: 'city', city: 'venetsia' };
   game.world.visited.add('venetsia');
   game.arrivalFact = { packId: game.pack.id, cityId: 'venetsia' };
