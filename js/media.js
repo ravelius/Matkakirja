@@ -167,9 +167,27 @@ export function julisteUrl(tiedosto) {
  */
 const FOKUS_ALIPOLKU = 'julisteet/fokus/';
 
-/** Fokuskartan osoite ämpärissä (esim. 'GRC.png' tai 'GRC.json'). */
+/*
+ * LEHTIEN VUOSIKERTA — sama tuoreusongelma kuin uusituilla äänillä.
+ *
+ * Lehti korvataan ämpärissä SAMALLA NIMELLÄ (GRC.webp), koska nimi on
+ * maan tunnus eikä sitä voi vaihtaa kuvan mukana. Ämpäri, r2.dev-reuna
+ * ja selaimen HTTP-välimuisti pitävät kuvaa osoitteen perusteella
+ * viikkoja, joten pelaajalle jäisi vanha lehti pitkäksi aikaa siitä
+ * huolimatta, että ämpärissä on uusi.
+ *
+ * Numero nostetaan AINA, kun lehdet ajetaan uusiksi ämpäriin
+ * (.github/workflows/patinoi-fokus.yml). Se koskee kaikkia lehtiä
+ * kerralla — lehdet ajetaan aina koko sarjana, joten maakohtaista
+ * taulukkoa (vrt. UUSITUT_AANET) ei tarvita.
+ *
+ * 2 = patina keskitaso koko maailman lehdille (29.8.2026).
+ */
+const FOKUS_VUOSIKERTA = 2;
+
+/** Fokuskartan osoite ämpärissä (esim. 'GRC.webp' tai 'GRC.json'). */
 export function fokuskarttaUrl(tiedosto) {
-  return `${PEILI_JUURI}${FOKUS_ALIPOLKU}${tiedosto}`;
+  return `${PEILI_JUURI}${FOKUS_ALIPOLKU}${tiedosto}?v=${FOKUS_VUOSIKERTA}`;
 }
 
 /**

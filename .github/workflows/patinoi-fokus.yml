@@ -1,0 +1,180 @@
+# Patinoi fokuslehdet ja vie ne R2-ämpäriin — YHDELLÄ NAPILLA.
+#
+# MITÄ TÄMÄ TEKEE: ottaa vientihaaran valmiit karttalehden POHJAT
+# (claude/julisteet-vienti, julisteet/fokus/*.webp), ajaa jokaiselle
+# tools/patina.mjs:n valitulla tasolla ja työntää tuloksen ämpäriin
+# samaan osoitteeseen, josta peli lehdet lataa (js/media.js
+# fokuskarttaUrl). Pohjia ei muuteta eikä committoida mihinkään.
+#
+# === MIKSI PATINA AJETAAN TÄÄLLÄ EIKÄ HAARALLE ===
+#
+# Haara on POHJIEN arkisto ja ämpäri on PELIN kopio. Kun patina jää
+# vain matkalle ämpäriin, kaksi asiaa pysyy kunnossa:
+#
+#  1. AJO ON TOISTETTAVA. Uusi patinaresepti tarkoittaa napin
+#     painallusta, ei 135 lehden uudelleengenerointia — pohja on
+#     tallessa ja passi ajetaan sen päälle uudestaan.
+#  2. PATINA EI KASAANNU. Jos patinoitu lehti tallennettaisiin haaralle,
+#     seuraava ajo patinoisi jo patinoidun lehden ja kuva tummuisi joka
+#     kierroksella. Lähde on aina pohja, joten tulos on sama ajokerrasta
+#     riippumatta.
+#
+# Sivuvaikutus, joka on syytä tietää: vie-fokus.yml vie samat POHJAT
+# ämpäriin sellaisenaan, eli sen ajaminen tämän jälkeen PALAUTTAA
+# patinoimattomat lehdet peliin. Ks. varoitus vie-fokus.yml:n alussa.
+#
+# === LAATU ===
+#
+# Patinan rae kasvattaa webp-tiedostoa selvästi: mitattuna Kreikan
+# lehdestä 29.8.2026 (6400 x 4000) laatu 0,9 antoi 4481 kt, 0,85 antoi
+# 2553 kt ja 0,8 antoi 1495 kt. Pohjat itse ovat noin 1,6 Mt, joten 0,8
+# pitää lehden entisen kokoisena eikä silmällä eroa erottanut:
+# Thessaloníki, korkeuslukemat ja ΕΛΛΑΣ olivat yhtä teräviä. Siksi
+# oletus on 0,8 eikä patina.mjs:n oma 0,92.
+#
+# KÄYTTÖ: Actions → "Patinoi fokuslehdet" → Run workflow. Kaikkien 135
+# lehden ajo kestää toista tuntia (noin 35 s lehti). Yksittäiset maat
+# voi ajaa `maat`-kenttään välilyönnein (esim. "GRC RUS FJI"), ja
+# `vie`-ruudun voi ottaa pois, jolloin ajo on pelkkä kenraaliharjoitus
+# ja tulokset jäävät artefaktiin katsottavaksi.
+
+name: Patinoi fokuslehdet
+
+on:
+  workflow_dispatch:
+    inputs:
+      haara:
+        description: 'Haara jolla julisteet/fokus/-pohjat ovat'
+        type: string
+        default: 'claude/julisteet-vienti'
+      taso:
+        description: 'Patinan taso'
+        type: choice
+        options: [keskitaso, hillitty, taysi]
+        default: keskitaso
+      laatu:
+        description: 'webp-laatu (0,8 pitää lehden pohjan kokoisena)'
+        type: string
+        default: '0.8'
+      maat:
+        description: 'Vain nämä ISO-tunnukset välilyönnein (tyhjä = kaikki)'
+        type: string
+        default: ''
+      vie:
+        description: 'Vie tulos ämpäriin (pois = pelkkä harjoitus)'
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  patinoi:
+    runs-on: ubuntu-latest
+    # 135 lehteä a 35 s on noin 80 min omalla koneella; ajurin
+    # varalle kaksinkertainen vara.
+    timeout-minutes: 330
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+    steps:
+      # Työkalut mainista: patinaresepti on koodia ja elää mainissa,
+      # ei vientihaaralla.
+      - uses: actions/checkout@v4
+
+      # Pohjat vientihaaralta omaan kansioonsa.
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.haara }}
+          path: pohjat
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Playwright tulee repon omasta package.jsonista; Chromium on
+      # patina.mjs:n kuvankäsittelykanvaasi.
+      - name: Asenna riippuvuudet ja Chromium
+        run: |
+          set -euo pipefail
+          npm install --no-fund --no-audit
+          npx playwright install --with-deps chromium
+          echo "CHROMIUM=$(find ~/.cache/ms-playwright -name chrome -path '*chrome-linux*' -type f | head -1)" >> "$GITHUB_ENV"
+
+      - name: Patinoi lehdet
+        env:
+          TASO: ${{ inputs.taso }}
+          LAATU: ${{ inputs.laatu }}
+          MAAT: ${{ inputs.maat }}
+        run: |
+          set -euo pipefail
+          LAHDE=pohjat/julisteet/fokus
+          [ -d "$LAHDE" ] || { echo "::error::julisteet/fokus-kansiota ei ole haaralla"; exit 1; }
+          mkdir -p ulos
+          if [ -n "${MAAT// /}" ]; then
+            LISTA=""
+            for m in $MAAT; do
+              if [ -f "$LAHDE/$m.webp" ]; then LISTA="$LISTA $m"; else
+                echo "::warning title=Tuntematon lehti::$m.webp puuttuu haaralta"; fi
+            done
+          else
+            LISTA=$(ls "$LAHDE"/*.webp | sed 's|.*/||;s|\.webp$||' | tr '\n' ' ')
+          fi
+          [ -n "${LISTA// /}" ] || { echo "::error::Yhtään lehteä ei valittu"; exit 1; }
+          n=0
+          for m in $LISTA; do
+            node tools/patina.mjs "$LAHDE/$m.webp" ulos \
+              --taso "$TASO" --tunnus "$m" --muoto webp --laatu "$LAATU"
+            # patina.mjs nimeaa tuloksen tason mukaan; peli hakee lehden
+            # maan tunnuksella, joten nimi palautetaan.
+            mv "ulos/$m-patina-$TASO.webp" "ulos/$m.webp"
+            # JSON on lehden paikka laudalla eika patina koske siihen —
+            # se kulkee mukana, jotta ampari pysyy parina.
+            [ -f "$LAHDE/$m.json" ] && cp "$LAHDE/$m.json" ulos/
+            n=$((n + 1))
+          done
+          echo "Patinoitu $n lehtea tasolla $TASO (laatu $LAATU)."
+          du -sh ulos
+          ls -la ulos | head -20
+
+      # Muutama lehti katsottavaksi ilman ampariin vientia. Koko sato
+      # olisi satoja megatavuja, joten artefaktiin menee vain nayte.
+      - name: Nayte artefaktiin
+        run: |
+          set -euo pipefail
+          mkdir -p nayte
+          for m in GRC RUS FJI; do
+            [ -f "ulos/$m.webp" ] && cp "ulos/$m.webp" nayte/ || true
+          done
+          # Jos naita kolmea ei ajettu, otetaan kolme ensimmaista.
+          if [ -z "$(ls nayte)" ]; then
+            ls ulos/*.webp | head -3 | xargs -r cp -t nayte/
+          fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fokus-nayte
+          path: nayte/
+          retention-days: 7
+          if-no-files-found: warn
+
+      - name: Vie ämpäriin
+        if: ${{ inputs.vie }}
+        run: |
+          set -euo pipefail
+          if [ -z "${AWS_ACCESS_KEY_ID:-}" ]; then
+            echo "::error title=R2-tunnukset puuttuvat::Lisää R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_BUCKET ja R2_ACCOUNT_ID Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+          aws s3 sync ulos "s3://${{ secrets.R2_BUCKET }}/julisteet/fokus" \
+            --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+            --exclude '*' --include '*.webp' \
+            --content-type image/webp --no-progress
+          aws s3 sync ulos "s3://${{ secrets.R2_BUCKET }}/julisteet/fokus" \
+            --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+            --exclude '*' --include '*.json' \
+            --content-type application/json --no-progress
+          echo "Viety $(ls ulos | wc -l) tiedostoa."
