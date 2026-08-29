@@ -67,6 +67,50 @@ Seitsemän luonnosta, rivinumerot PR:n viimeisessä taulukossa:
 Roser (Barcelona), Ginevra (Firenze), Lucia (Venetsia), Baptiste
 (Marseille), Sigrid (Oslo), Vieno (Tampere), Rasa (Vilna).
 
-Portit vihreinä (testit 1054/0, neljä savuketta, dist), kuvakaappaukset
-`/tmp/matkakirja-kaappaukset/aalto4b/`, kuvapeilaus ajossa — tulos
-kirjataan PR:n runkoon heti kun ajo valmistuu.
+## 6. Katselmointipäätöksesi on sovellettu (kierros 2)
+
+- **Kaanonpaperin uusin versio** ajettu packeihin: Marseillen kaksi
+  virkettä, Venetsian "sille kuuluisalle torille", Firenzen kaksi
+  kohtaa (merkintä + luenta + pollo). Kaikki 28 kaanonkenttää
+  tarkistettu koneellisesti uutta paperia vasten — **täsmäävät**.
+- **Venetsian maadoitus korjattu luvallasi.** Uusi virke:
+  *"Tämän kaupungin talot seisovat puupaalujen päällä: paaluja lyötiin
+  tiheinä riveinä alas, ja niiden päälle ladottiin ensin
+  kalkkikivilaatat ja vasta sitten tiilet."* Lisäksi kolmas virke alkaa
+  nyt *"Ilman happea"* (ennen *"Hapettomassa mudassa"*), jottei maaperä
+  esiinny missään muodossa. Paalut, laatat, tiilet ja Saluten yli
+  miljoona paalua ovat tallella. Merkitty kommentilla
+  `/* FABLE HYVAKSYI: maadoituskorjaus */`.
+- **Firenzen rivinvaihto** jätetty ennalleen yhtenä kappaleena.
+- **Rivitys**: en kopioinut paperin rivinvaihtoja, vaan latoin tekstit
+  packien normaalilla rivityksellä. Sanat ratkaisivat.
+
+Koneellinen jälkitarkistus: kaikki viisi raportoimaani suoraa
+vastauspaljastusta ovat nyt **poissa**.
+
+Yksi tietoinen jäännös: Firenzen kohtaamiskortti nimeää ammatin
+(*Kultaseppä Ginevra*). Se on laattakysymyksen TAKANA, eli pelaaja on jo
+vastannut siihen, ja Livian uusi vihje *"kohta näet keiden käsissä"*
+osoittaa juuri siihen korttiin. Perustelu on kirjattu pakin kommenttiin.
+Jos haluat ammatinkin pois, se on hahmon nimen ja napin vaihto.
+
+## 7. Versio v1341, ei v1339
+
+Main julkaisi v1340:n (luennat) kesken katselmointikorjausten, joten
+v1339 olisi vienyt sovellusversion taaksepäin. Haara on rebasoitu
+mainiin (`eff8989d`) ja numero nostettu työkalulla uudelleen: **v1341**.
+Versiotiedostojen konfliktit ratkaistiin julkaisusäännön 5 mukaan ja
+rekisteröinnit tarkistettiin rebasen jälkeen erikseen.
+
+## 8. Portit ja peilaus valmiit
+
+Portit ajettu uudelleen korjausten jälkeen: testit 1054/0, savukkeet
+fokusvirta 50/50, fokuskohteet 88/88, nappula 24/24, kartta-tila 20/20,
+dist `{"peli":true}` VIRHEET `[]`. **PR:n Testit-tarkistus on vihreä**
+(ajo 33278505029, commit `3bba99c9`).
+
+**Kuvapeilaus valmis: Commons 33/33 ja ämpärikuvat 5/5 palauttavat 200
+— puuttuu 0.** Kuvakaappaukset otettu uudelleen korjausten jälkeen:
+`/tmp/matkakirja-kaappaukset/aalto4b/`.
+
+Valmis mergeen sinun puolestasi.
