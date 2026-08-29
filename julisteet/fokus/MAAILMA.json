@@ -3,15 +3,15 @@
   "lauta": "maailmankartta",
   "bbox": {
     "x": 0,
-    "y": -435,
+    "y": -1046,
     "w": 12000,
-    "h": 6284
+    "h": 7307
   },
   "rajaus": {
     "x": 0,
-    "y": 0,
+    "y": -611,
     "w": 12000,
-    "h": 5399
+    "h": 6422
   },
   "kehys": {
     "yla": 232,
@@ -28,27 +28,29 @@
   },
   "kuva": {
     "w": 6400,
-    "h": 3351
+    "h": 3897
   },
   "tiedosto": "MAAILMA.webp",
   "tehty": "2026-08-29",
   "laatikko": {
     "lon0": -175.5,
     "lon1": 185.5,
-    "lat0": -58.5,
-    "lat1": 76.5
+    "lat0": -66.5,
+    "lat1": 84.5
   },
   "ruutu": 0.05,
   "korkeusruudukko": {
     "w": 7221,
-    "h": 2701
+    "h": 3021
   },
   "meret": [
     "TYYNIMERI",
     "TYYNIMERI",
     "ATLANTIN VALTAMERI",
     "ETELÄINEN ATLANTTI",
-    "INTIAN VALTAMERI"
+    "INTIAN VALTAMERI",
+    "JÄÄMERI",
+    "ETELÄINEN JÄÄMERI"
   ],
   "tasaus": [
     {
