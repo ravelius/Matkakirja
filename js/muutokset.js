@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1332, teksti: 'Aalto 4A: seitseman uutta fokuskaupunkia' },
   { v: 1331, teksti: 'Koko maailman kartat: vesiviivat ja sumuton pohja' },
   { v: 1330, teksti: 'Euroopan lehdet ilman sumennusta, pehmeampi maasto' },
   { v: 1329, teksti: 'Kartat: patina keskitaso koko maailmaan' },
