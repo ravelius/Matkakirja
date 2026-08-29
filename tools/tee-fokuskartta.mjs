@@ -271,6 +271,21 @@ const LAATU = Number(valitsin('laatu', 0.9));
  * tyylitiedostosta; `--vuoto` on vain kokeilua varten.
  */
 const vuotoValitsin = valitsin('vuoto', null);
+/*
+ * KORKEUSRUUDUKON KARKEUS KAARIMINUUTTEINA (omistaja 29.8.2026: *"Sen
+ * voisi pudottaa heti 3 kaariminuuttiin jo euroopassa"*).
+ *
+ * ETOPO1:n oma ruutu on yksi kaariminuutti. Varjostus lasketaan
+ * naapuriruutujen erosta, joten hienoin ruutu tuo mukanaan kaiken
+ * aineiston kohinan — karkeampi ruudukko on pehmeämpi pinta eikä
+ * köyhempi. Harvennus on n x n -lohkon KESKIARVO (etopo.mjs
+ * `harvenna`), ei joka n:nnen pisteen poiminta.
+ *
+ * TÄMÄ EI PIENENNÄ KUVAA. Kuvan pikselileveys (`yleinenLeveys`) ja
+ * kaikki vektorista piirretty — rantaviiva, rajat, joet, nimet —
+ * pysyvät ennallaan; vain varjostuksen lähtöruudukko harvenee.
+ */
+const KAARIMINUUTIT = Number(valitsin('kaariminuutit', 1));
 
 /* ------------------------------------------------------------ lauta ja bbox */
 
@@ -531,12 +546,13 @@ const aineisto = keraaAineisto({
       poisLahelta: laudanKaupungitAsteina,
     }
     : null,
+  kaariminuutit: KAARIMINUUTIT,
 });
 console.log(`  renkaat ${aineisto.maa.renkaat.length} · joet ${aineisto.joet.length} `
   + `· järvet ${aineisto.jarvet.length} · paikat `
   + `${aineisto.paikat.map((p) => p.nimi).join(', ') || '–'} · naapurit `
   + `${Object.keys(aineisto.naapurit).join(' ') || '–'} · korkeusruudukko `
-  + `${aineisto.korkeus.w}x${aineisto.korkeus.h} `
+  + `${aineisto.korkeus.w}x${aineisto.korkeus.h} @ ${KAARIMINUUTIT}' `
   + `(lon ${aineisto.korkeus.lon0}..${aineisto.korkeus.lon1} `
   + `lat ${aineisto.korkeus.lat0}..${aineisto.korkeus.lat1})`);
 /*

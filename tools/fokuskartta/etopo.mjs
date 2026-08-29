@@ -259,3 +259,77 @@ export function leikkaa(levy, laatikko) {
     b64: Buffer.from(ulos.buffer).toString('base64'),
   };
 }
+
+/**
+ * Harventaa leikatun ruudukon n kertaa karkeammaksi KESKIARVOISTAMALLA.
+ *
+ * Omistajan linjaus 29.8.2026: *"Sen voisi pudottaa heti 3
+ * kaariminuuttiin jo euroopassa"*. ETOPO1:n oma ruutu on yksi
+ * kaariminuutti, ja se on lehden mittakaavassa tarkempi kuin mitä
+ * silmä erottaa — mutta kaikki sen kohina näkyy varjostuksessa, koska
+ * varjo lasketaan naapuriruutujen EROSTA. Karkeampi ruudukko on siis
+ * pehmeämpi pinta, ei köyhempi.
+ *
+ * KESKIARVO EIKÄ POIMINTA. Joka kolmannen pisteen ottaminen olisi
+ * aliasointia: yksi terävä huippu jäisi ruudukkoon täydellä
+ * korkeudellaan ja sen vieressä oleva laakso katoaisi, jolloin
+ * varjostus saisi UUTTA rakeisuutta sen sijaan että menettäisi sitä.
+ * n x n -lohkon keskiarvo on alipäästösuodatin, ja juuri se on tässä
+ * haluttu: vuoriston muoto säilyy, yksittäisen ruudun kohina ei.
+ *
+ * REUNA TÄYDENNETÄÄN TOISTAMALLA, EI PUDOTETA. Jos viimeinen lohko
+ * jäisi vajaaksi, sen keskipiste ei osuisi tasavälisen ruudukon
+ * kohtaan, ja koko ruudukon georeferointi vinoutuisi kuvan oikeassa
+ * ja alalaidassa. Siksi ruudukkoa jatketaan reuna-arvolla täyteen
+ * lohkoon asti: väli pysyy tasaisena ja kate kasvaa hivenen, mikä on
+ * turvallinen suunta (kuvan reuna ei jää ilman korkeutta).
+ *
+ * KULMAT SIIRTYVÄT PUOLI LOHKOA SISÄÄNPÄIN, koska karkean ruudun arvo
+ * edustaa lohkonsa KESKIPISTETTÄ eikä sen vasenta ylänurkkaa. Ilman
+ * tätä siirtoa maasto luisuisi puoli lohkoa (3' hilalla noin 1,8 km)
+ * koilliseen suhteessa rantaviivaan, joka tulee vektoreista.
+ *
+ * RANTAVIIVA EI OLE TÄSSÄ RUUDUKOSSA. Rannan ääriviivan piirtää
+ * piirto.js Natural Earthin monikulmioista (`rantaPolku`), ja meren
+ * ala rasteroidaan omaksi maskikseen (aineisto.mjs `meriruudukko`)
+ * SAMOISTA vektoreista tähän ruudukkoon. Harvennus tehdään siis ennen
+ * maskia, jolloin maski syntyy suoraan karkeaan ruudukkoon eikä
+ * hienoa maskia jouduta keskiarvoistamaan — ja itse rantaviiva pysyy
+ * yhtä terävänä kuin ennen, koska se ei tule korkeushilasta.
+ */
+export function harvenna(pala, n) {
+  if (!Number.isInteger(n) || n < 1) throw new Error(`Harvennus ${n} ei ole kelvollinen.`);
+  if (n === 1) return pala;
+  const puskuri = Buffer.from(pala.b64, 'base64');
+  const hieno = new Int16Array(puskuri.buffer, puskuri.byteOffset, puskuri.byteLength / 2);
+  const w = Math.ceil(pala.w / n);
+  const h = Math.ceil(pala.h / n);
+  const ulos = new Int16Array(w * h);
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      let summa = 0;
+      for (let dy = 0; dy < n; dy++) {
+        // Reunan täydennys: viimeisen rivin/sarakkeen arvo toistuu.
+        const sy = Math.min(pala.h - 1, y * n + dy);
+        for (let dx = 0; dx < n; dx++) {
+          const sx = Math.min(pala.w - 1, x * n + dx);
+          summa += hieno[sy * pala.w + sx];
+        }
+      }
+      ulos[y * w + x] = Math.round(summa / (n * n));
+    }
+  }
+  // Karkean ruudun arvo edustaa lohkonsa keskipistettä.
+  const puoli = (n - 1) / 2 / 60;
+  return {
+    w,
+    h,
+    lon0: pala.lon0 + puoli,
+    lon1: pala.lon0 + ((w - 1) * n) / 60 + puoli,
+    lat1: pala.lat1 - puoli,
+    lat0: pala.lat1 - ((h - 1) * n) / 60 - puoli,
+    aukkoja: pala.aukkoja,
+    kaariminuutit: n,
+    b64: Buffer.from(ulos.buffer, ulos.byteOffset, ulos.byteLength).toString('base64'),
+  };
+}

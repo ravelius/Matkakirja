@@ -70,7 +70,9 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
-import { avaaLevy, leikkaa, LEVY_JSON } from './etopo.mjs';
+import {
+  avaaLevy, harvenna, leikkaa, LEVY_JSON,
+} from './etopo.mjs';
 
 /** Pyöristys neljään desimaaliin: noin 11 metriä, aivan riittävä. */
 const pyorista = (n) => Math.round(n * 1e4) / 1e4;
@@ -170,7 +172,7 @@ function lue(kansio, nimi) {
  * Ruudukko käännetään kuvakoordinaatteihin: y = 0 on POHJOISIN rivi.
  * Palautuksessa mukana kulmat, jotta hakija osaa laskea indeksinsä.
  */
-function korkeusruudukko(kansio, laatikko) {
+function korkeusruudukko(kansio, laatikko, kaariminuutit = 1) {
   /*
    * YHTEINEN LEVY VOITTAA. Jos kansiossa on Euroopan kokoinen
    * ETOPO-levy (tools/fokuskartta/etopo.mjs), ruudukko leikataan siitä
@@ -185,7 +187,12 @@ function korkeusruudukko(kansio, laatikko) {
         + 'pistettä tämän kuvan alueella — paikattu lähimmällä arvolla. '
         + 'Aja tools/hae-etopo-eurooppa.mjs loppuun.');
     }
-    return pala;
+    /*
+     * Harvennus tehdään ENNEN merimaskia (ks. keraaAineisto), jotta
+     * maski rasteroidaan suoraan karkeaan ruudukkoon vektoreista eikä
+     * hienoa maskia jouduta keskiarvoistamaan.
+     */
+    return harvenna(pala, kaariminuutit);
   }
   const tiedostot = readdirSync(kansio)
     .filter((n) => /^etopo-band-\d+\.csv$/.test(n))
@@ -694,7 +701,7 @@ export function paikat(kansio, {
  * kelvollinen: silloin lehdessä on vain kohdemaa ja merta.
  */
 export function keraaAineisto({
-  kansio, iso, laatikko, naapurit = [], paikkoja = null,
+  kansio, iso, laatikko, naapurit = [], paikkoja = null, kaariminuutit = 1,
 }) {
   const maat = lue(kansio, 'ne_10m_admin_0_countries.geojson');
   const tunnus = (f) => f.properties.ADM0_A3 ?? f.properties.ISO_A3;
@@ -737,7 +744,7 @@ export function keraaAineisto({
     if (r.length) jarvet.push({ nimi: f.properties.name ?? '', renkaat: r });
   }
 
-  const korkeus = korkeusruudukko(kansio, laatikko);
+  const korkeus = korkeusruudukko(kansio, laatikko, kaariminuutit);
 
   return {
     iso,
