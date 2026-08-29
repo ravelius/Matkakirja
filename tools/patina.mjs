@@ -24,14 +24,14 @@
  * === KOLME TASOA ===
  *
  * `hillitty`   vain sävyt: viivat tummanruskeiksi (ei mustiksi),
- *              valkoinen kermaksi, sävykäyrä pehmeäksi, kevyt
- *              lumppupaperin syy.
+ *              valkoinen kermaksi, sävykäyrä pehmeäksi, maaston
+ *              pastellointi, lumppupaperin syy.
  * `keskitaso`  edelliset + epätasainen ikääntymissävy + akvarellin
  *              reunakertymä värialueiden rajoilla + rannikon
  *              vesiviivoitus.
  * `taysi`      kaikki + viivojen mikrorosoisuus + painolaattojen
  *              kohdistusheitto + musteen leviäminen nimissä +
- *              kevyet taitejäljet + vinjetointi.
+ *              vinjetointi.
  *
  * Taso ei ole kytkinlista vaan valmis resepti: jokainen taso on
  * itsenäinen parametriolio, jota voi säätää rikkomatta muita.
@@ -49,6 +49,10 @@
  *  2. MUSTEEN LEVIÄMINEN sumentaa nimet, jos säde ylittää noin
  *     kolme pikseliä 6400 pikselin leveydellä. Se on tarkoitettu
  *     hiuksenhienoksi kehäksi kirjaimen ympärille, ei sumennukseksi.
+ *  3. PASTELLOINTI vaalentaa ja desaturoi maaston. Se on rajattu
+ *     luminanssi- JA kromamaskilla keskisävyihin, jotta muste (tumma)
+ *     ja meri (matala kroma) jäävät koskematta. Jos maskin alarajaa
+ *     laskee alle 110:n, se alkaa haalistaa nimien reunapikseleitä.
  *
  * === PROSEDURAALINEN KOHINA, EI ULKOISIA TEKSTUUREJA ===
  *
@@ -103,31 +107,108 @@ const SAVYT = {
   kayra: { kerroin: 0.9, nosto: 15 },
 };
 
-/* Kevyt lumppupaperin syy: hienojakoinen rae + pitkät kuidut. */
+/*
+ * LUMPPUPAPERIN SYY JA RAE.
+ *
+ * MIKSI KOLME KERROSTA EIKÄ YKSI. Ensimmäinen versio oli yksi
+ * venytetty kohina, ja kun sen voiman nosti näkyväksi, koko lehden yli
+ * kulki säännöllinen vaakasyy: se luki skannerin juovana eikä
+ * paperina. Voiman puolittaminen poisti juovan mutta samalla paperin.
+ *
+ * Oikea korjaus ei ole voima vaan SKAALAHAJONTA. Kolme kuitukerrosta
+ * eri taajuuksilla (ei toistensa kerrannaisia) ja eri faaseilla
+ * summautuvat epäjaksolliseksi syyksi, jota silmä ei lue rasterina.
+ * Päälle tulee DOMAIN WARP: matalataajuinen kohina heiluttaa kuidun
+ * omia koordinaatteja, jolloin kuitu aaltoilee kuten käsinammennetussa
+ * paperissa eikä kohinataulun 512 yksikön kierto näy toistona.
+ *
+ * Rae on kahdessa osassa: pikselikohtainen hajautusrae (näkyy 1:1) ja
+ * muutaman pikselin nyppy (näkyy myös pienennettynä). Kumpikaan ei ole
+ * suuntautunut, joten kumpikaan ei voi tuottaa juovaa.
+ *
+ * Kerros = [skaalaX, skaalaY, paino, faasiX, faasiY]. Skaala on
+ * pikseleitä kohinataulun yksikköä kohti 6400 pikselin lehdellä:
+ * 90 x 6 tarkoittaa noin kuuden pikselin korkuisia, satojen pikselien
+ * mittaisia kuituja.
+ */
 const PAPERI_KEVYT = {
   /* Pikselikohtainen rae, ±osuus. */
-  rae: 0.016,
-  /*
-   * Kuitu: voimakkaasti venytetty arvokohina, joka lukee lumpun
-   * syynä. Skaala [x, y] on pikseleitä kohinataulun yksikköä kohti
-   * 6400 pikselin lehdellä — 90 x 6 tarkoittaa noin kuuden pikselin
-   * korkuisia, satojen pikselien mittaisia kuituja.
-   *
-   * VOIMA ON PIENI TARKOITUKSELLA. Ensimmäinen kokeilu oli 0,020, ja
-   * koko lehden yli kulkeva säännöllinen vaakasyy luki skannerin
-   * juovana eikä paperina. Puolet siitä on paperia.
-   */
-  kuitu: 0.013,
-  kuituSkaala: [90, 6],
+  rae: 0.050,
+  /* Muutaman pikselin nyppy: karkeampi rakeisuus, joka kestää
+   * pienennyksen. Skaala on pikseleitä kohinayksikköä kohti. */
+  raeKarkea: 0.038,
+  raeKarkeaSkaala: 2.4,
+  kuitu: 0.042,
+  kuituKerrokset: [
+    [90, 6.0, 1.00, 0, 0],
+    [47, 3.3, 0.62, 613, 271],
+    [151, 11.5, 0.45, 2287, 1499],
+  ],
   /* Toinen kuitusuunta hennompana — käsintehdyssä paperissa syy ei
    * ole yhdensuuntainen. */
-  kuituRisti: 0.008,
-  kuituRistiSkaala: [7, 70],
+  kuituRisti: 0.026,
+  kuituRistiKerrokset: [
+    [7.0, 70, 1.00, 1000, 500],
+    [4.3, 38, 0.55, 3121, 907],
+  ],
+  /* Domain warp: [skaala pikseleinä, siirtymä kohinayksikköinä]. */
+  warpSkaala: 300,
+  warpVoima: 2.2,
 };
 
-/* Sama syy hitusen vahvempana täydellä tasolla. */
+/* Sama syy vahvempana täydellä tasolla. */
 const PAPERI_TAYSI = {
-  ...PAPERI_KEVYT, rae: 0.022, kuitu: 0.018, kuituRisti: 0.011,
+  ...PAPERI_KEVYT,
+  rae: 0.072, raeKarkea: 0.054, kuitu: 0.058, kuituRisti: 0.036,
+};
+
+/*
+ * KORKEUSVARJOSTUKSEN PASTELLOINTI.
+ *
+ * Pohjan hypsometria ja rinnevarjostus ovat piirtomoottorissa
+ * täysvahvoja: vuoristo on kylläistä oranssinruskeaa ja alanko
+ * kirkasta keltaista. Painetussa 1873-vedoksessa maasto on samat
+ * sävyt PUOLIKKAALLA kylläisyydellä ja korkeammalla vaaleudella —
+ * väri on nostettu paperista eikä ruiskutettu sen päälle. Ilman tätä
+ * passia lehti lukee digitaalisena reliefinä, ei litografiana.
+ *
+ * Efekti on kaksiosainen: kylläisyys lasketaan kohti pikselin omaa
+ * luminanssia (LÄMPIMÄNÄ, ks. paperiSavy — kohti neutraalia harmaata
+ * vedettynä maasto muuttuisi likaiseksi) ja tummat päät nostetaan
+ * kohti kermaa.
+ *
+ * MASKI ON KOKO EFEKTIN TURVA. Se on kahden ehdon tulo:
+ *  - luminanssi keskisävyissä: muste (L noin 65 sävytyksen jälkeen)
+ *    jää alarajan alle eikä haalistu;
+ *  - kroma riittävän suuri: meri on viileää paperia kromalla noin 30
+ *    ja jää alarajan alle, joten vesiviivoitus ja meren sävy säilyvät.
+ * Kumpikin raja on pehmeä, jotta maski ei piirrä omaa reunaansa.
+ */
+const PASTELLI_KEVYT = {
+  /* Kylläisyyden lasku maskin täydellä painolla. */
+  kyllaisyys: 0.26,
+  /* Kohti mitä desaturoidaan: luminanssin kerroin kanavittain.
+   * Lämmin harmaa, ei neutraali. */
+  paperiSavy: [1.045, 0.995, 0.905],
+  /* Tummien nosto kohti kermaa. */
+  vaalennus: 0.10,
+  vaalennusKohde: [246, 239, 219],
+  /* Nosto painottuu tähän luminanssivyöhykkeeseen: täysi alarajalla,
+   * nolla ylärajalla. Vuoristo on tummaa, alanko jo valmiiksi vaaleaa. */
+  vaalennusVali: [120, 225],
+  /* Maskin luminanssi-ikkuna [ala, ylä] ja reunojen pehmeys. */
+  lumVali: [118, 238],
+  lumPehmeys: 26,
+  /* Maskin kromaikkuna: alle ala ei mitään (meri), yli ylä täysi. */
+  kromaVali: [36, 72],
+};
+
+const PASTELLI_KESKI = {
+  ...PASTELLI_KEVYT, kyllaisyys: 0.35, vaalennus: 0.15,
+};
+
+const PASTELLI_TAYSI = {
+  ...PASTELLI_KEVYT, kyllaisyys: 0.43, vaalennus: 0.19,
 };
 
 /*
@@ -224,13 +305,21 @@ const KOHDISTUS = { dx: 2.6, dy: -1.8, voima: 0.85 };
 const LEVIAMINEN = { sade: 2, voima: 0.3 };
 
 /*
- * KEVYET TAITEJÄLJET.
+ * KEVYET TAITEJÄLJET — POIS KÄYTÖSTÄ KAIKISSA RESEPTEISSÄ.
  *
- * Lehti on ollut taitettuna: yksi pystytaite keskellä ja kaksi
- * vaakataitetta kolmanneksissa. Taite on kapea tummempi ydin ja sen
- * molemmin puolin leveä, tuskin havaittava vaalea vyöhyke (paperi on
- * kohonnut). Voima on tarkoituksella niin pieni, ettei taite katkaise
- * yhtään nimeä.
+ * Ajatus: lehti on ollut taitettuna, yksi pystytaite keskellä ja kaksi
+ * vaakataitetta kolmanneksissa; kapea tummempi ydin ja sen molemmin
+ * puolin leveä vaalea vyöhyke (paperi on kohonnut).
+ *
+ * MIKSI POIS. Omistajan arvio 29.8.2026: "taitteet näyttävät
+ * feikiltä". Syy on rakenteellinen eikä parametreissa: gaussinen viiva
+ * kulkee koko lehden yli yhtä vahvana riippumatta siitä, mitä sen alla
+ * on, kun oikeassa taitteessa muste on kulunut ytimestä pois ja
+ * vaurio vaihtelee koko matkalla. Voiman pienentäminen ei korjaa
+ * ilmiötä, se vain tekee siitä himmeän. Koodi jätetään paikalleen: jos
+ * toteutus joskus paranee (musteen kuluminen ytimessä, epätasainen
+ * vaurio, taitteen katkeaminen), riittää vaihtaa reseptin kenttä
+ * `taitteet: false` arvoksi `TAITTEET`.
  */
 const TAITTEET = {
   pysty: [0.5], vaaka: [0.34, 0.68],
@@ -246,6 +335,7 @@ export const RESEPTIT = {
   hillitty: {
     nimi: 'hillitty',
     savyt: SAVYT,
+    pastelli: PASTELLI_KEVYT,
     paperi: PAPERI_KEVYT,
     ikaantyminen: null,
     reunakertyma: null,
@@ -253,12 +343,15 @@ export const RESEPTIT = {
     rosoisuus: null,
     kohdistus: null,
     leviaminen: null,
-    taitteet: null,
+    /* Ks. TAITTEET: pois kaikista resepteistä, koodi jätetty lipun
+     * taakse. Arvoksi TAITTEET, jos toteutus joskus paranee. */
+    taitteet: false,
     vinjetti: null,
   },
   keskitaso: {
     nimi: 'keskitaso',
     savyt: SAVYT,
+    pastelli: PASTELLI_KESKI,
     paperi: PAPERI_KEVYT,
     ikaantyminen: IKAANTYMINEN,
     reunakertyma: REUNAKERTYMA,
@@ -266,12 +359,13 @@ export const RESEPTIT = {
     rosoisuus: null,
     kohdistus: null,
     leviaminen: null,
-    taitteet: null,
+    taitteet: false,
     vinjetti: null,
   },
   taysi: {
     nimi: 'taysi',
     savyt: SAVYT,
+    pastelli: PASTELLI_TAYSI,
     paperi: PAPERI_TAYSI,
     ikaantyminen: IKAANTYMINEN,
     reunakertyma: REUNAKERTYMA,
@@ -279,7 +373,7 @@ export const RESEPTIT = {
     rosoisuus: ROSOISUUS,
     kohdistus: KOHDISTUS,
     leviaminen: LEVIAMINEN,
-    taitteet: TAITTEET,
+    taitteet: false,
     vinjetti: VINJETTI,
   },
 };
@@ -574,7 +668,13 @@ async function patinoiSelaimessa({
   }
 
   /* ------------------------------------------------------- kohinakentät */
-  const kohinaKuitu = teeKohina(20260829);
+  /* Kuiduille iso taulu (512): pieninkin kuituskaala kiertää vasta
+   * lehden korkeuden mittaisin välein, ja warp rikkoo lopunkin
+   * jaksollisuuden. Muille 256 riittää. */
+  const kohinaKuitu = teeKohina(20260829, 512);
+  const kohinaRisti = teeKohina(51217, 512);
+  const kohinaWarp = teeKohina(880301, 256);
+  const kohinaRae = teeKohina(133742, 256);
   const kohinaIka = teeKohina(77003);
   const kohinaRoso = teeKohina(4242);
   const kohinaTaite = teeKohina(9191);
@@ -585,6 +685,7 @@ async function patinoiSelaimessa({
     const l = lum(sv.muste[0], sv.muste[1], sv.muste[2]);
     return [sv.muste[0] / l, sv.muste[1] / l, sv.muste[2] / l];
   })();
+  const pl = resepti.pastelli;
   const pa = resepti.paperi;
   const ika = resepti.ikaantyminen;
   const rk = resepti.reunakertyma;
@@ -625,6 +726,33 @@ async function patinoiSelaimessa({
       gg = gg * sv.kayra.kerroin + sv.kayra.nosto;
       b = b * sv.kayra.kerroin + sv.kayra.nosto;
 
+      /* Meren tunnistus vesiviivoitusta varten tehdään TÄSTÄ kromasta,
+       * ennen pastellointia: pastellointi laskee maaston kromaa, ja
+       * jälkeenpäin mitattuna osa maasta osuisi meren kromaikkunaan. */
+      const kroma0 = Math.max(r, gg, b) - Math.min(r, gg, b);
+
+      /* --- 1b. korkeusvarjostuksen pastellointi --- */
+      if (pl) {
+        const Ln = lum(r, gg, b);
+        const maski = pehmene(pl.lumVali[0], pl.lumVali[0] + pl.lumPehmeys, Ln)
+          * pehmene(pl.lumVali[1], pl.lumVali[1] - pl.lumPehmeys, Ln)
+          * pehmene(pl.kromaVali[0], pl.kromaVali[1], kroma0);
+        if (maski > 0.004) {
+          const w = pl.kyllaisyys * maski;
+          r += (Ln * pl.paperiSavy[0] - r) * w;
+          gg += (Ln * pl.paperiSavy[1] - gg) * w;
+          b += (Ln * pl.paperiSavy[2] - b) * w;
+          /* Nosto painottuu tummiin: vuoristo vaalenee, alanko ei. */
+          const tummuus = pehmene(pl.vaalennusVali[1], pl.vaalennusVali[0], Ln);
+          const v = pl.vaalennus * maski * tummuus;
+          if (v > 0) {
+            r += (pl.vaalennusKohde[0] - r) * v;
+            gg += (pl.vaalennusKohde[1] - gg) * v;
+            b += (pl.vaalennusKohde[2] - b) * v;
+          }
+        }
+      }
+
       /* --- 2. painolaattojen kohdistusheitto (vain matala väritieto) --- */
       if (ko) {
         const oR = hae4(r4, x, y); const oG = hae4(g4, x, y); const oB = hae4(b4, x, y);
@@ -656,8 +784,7 @@ async function patinoiSelaimessa({
       if (vv) {
         const et = hae4(etaisyys4, x, y);
         if (et > 0.5 && et < 1e7) {
-          const kroma = Math.max(r, gg, b) - Math.min(r, gg, b);
-          const meriW = pehmene(vv.kromaVali[1], vv.kromaVali[0], kroma);
+          const meriW = pehmene(vv.kromaVali[1], vv.kromaVali[0], kroma0);
           if (meriW > 0.01) {
             const alku = vv.aloitus * s;
             const vali = vv.vali * s;
@@ -692,10 +819,27 @@ async function patinoiSelaimessa({
 
       /* --- 7. paperin syy --- */
       if (pa) {
-        const kuitu = kohinaKuitu(x / (pa.kuituSkaala[0] * s), y / (pa.kuituSkaala[1] * s)) - 0.5;
-        const risti = kohinaKuitu(1000 + x / (pa.kuituRistiSkaala[0] * s), 500 + y / (pa.kuituRistiSkaala[1] * s)) - 0.5;
+        /* Domain warp: sama siirtymä molemmille kuitusuunnille, jotta
+         * syy aaltoilee yhtenä paperina eikä kahtena kerroksena. */
+        const wp = (kohinaWarp(x / (pa.warpSkaala * s), y / (pa.warpSkaala * s)) - 0.5)
+          * pa.warpVoima;
+        let kuitu = 0; let pk = 0;
+        for (const [sx, sy, w, fx, fy] of pa.kuituKerrokset) {
+          kuitu += w * (kohinaKuitu(fx + x / (sx * s) + wp * 0.35,
+            fy + y / (sy * s) + wp) - 0.5);
+          pk += w;
+        }
+        let risti = 0; let pr = 0;
+        for (const [sx, sy, w, fx, fy] of pa.kuituRistiKerrokset) {
+          risti += w * (kohinaRisti(fx + x / (sx * s) + wp,
+            fy + y / (sy * s) + wp * 0.35) - 0.5);
+          pr += w;
+        }
         const raeN = rae(x, y, 1337) - 0.5;
-        kerroin += kuitu * pa.kuitu + risti * pa.kuituRisti + raeN * pa.rae;
+        const karkea = kohinaRae(x / (pa.raeKarkeaSkaala * s),
+          y / (pa.raeKarkeaSkaala * s)) - 0.5;
+        kerroin += (kuitu / pk) * pa.kuitu + (risti / pr) * pa.kuituRisti
+          + raeN * pa.rae + karkea * pa.raeKarkea;
       }
 
       /* --- 8. epätasainen ikääntymissävy --- */
