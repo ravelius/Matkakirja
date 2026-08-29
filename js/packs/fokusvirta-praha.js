@@ -695,7 +695,29 @@ export const FOKUSVIRTA_PRAHA = {
       ],
       lahde: 'en-Wikipedia "Karlštejn", johdanto sekä osiot sijainnista '
         + 'ja historiasta (tarkistettu 29.8.2026).',
-      /* Commons 29.8.2026: 5936×3920, CC BY-SA 4.0, Radomír Šalda,
+      /*
+       * PÄÄKUVAKSI LOISTOAIKA (29.8.2026, sama malli kuin v1307:n ja
+       * v1308:n nostoilla): repon oma generoitu havainnekuva, jolla ei
+       * ole Commons-nimeä eikä varareittiä, joten kenttä on `osoite`
+       * eikä `tiedosto` (js/fokusnosto.js asetaNostonKuva).
+       *
+       * Kuva näyttää sen, mitä kakkoskuvan suuri torni kätkee:
+       * Pyhän Ristin kappelin, jota varten koko linna rakennettiin —
+       * kullatut paneelimaalaukset, puolijalokivi-inkrustaatio ja
+       * tähtiholvi kynttilänvalossa.
+       */
+      kuva: {
+        osoite: 'assets/kartat/nostot/nosto-karlstejn-loistoaika.webp',
+        selite: 'Pyhän Ristin kappeli: kullatut paneelit, seiniin '
+          + 'upotetut puolijalokivet ja tähtiholvi kynttilänvalossa.',
+        lahde: 'Matkakirjan havainnekuva: aarrekammio vihkiäisvuonnaan '
+          + '1365',
+      },
+      /*
+       * KAKKOSKUVA tekstin alle on entinen ainoa kuva. Tiedosto, selite
+       * ja lähde ennallaan.
+       *
+       * Commons 29.8.2026: 5936×3920, CC BY-SA 4.0, Radomír Šalda,
        * kuvattu 9.1.2021. Restrictions tyhjä. SILMÄTARKISTUS tehty:
        * kuvassa on linna talvimaisemassa, ei ihmisiä. */
       valokuva: {
