@@ -146,6 +146,37 @@ const MODULES = [
   // Ei fokusvirtaa, joten paririviä ei ole.
   'js/packs/fokuskohteet-hrv.js',
   'js/packs/fokuskohteet-deu.js',
+  /*
+   * MAASTOKOHTEET 29.8.2026 (omistaja: 'Tee vuoret ja meret avattaviksi
+   * kaikkiin maihin'). Maakohtaiset tiedostot ENSIN, hakemisto vasta
+   * niiden jälkeen — se tuo ne kaikki, ja niputuksessa tuotavan on
+   * oltava tuojaansa ennen (sama sääntö kuin fokusvirroilla alla).
+   */
+  'js/packs/maastokohteet-aut.js',
+  'js/packs/maastokohteet-bih.js',
+  'js/packs/maastokohteet-che.js',
+  'js/packs/maastokohteet-cze.js',
+  'js/packs/maastokohteet-dnk.js',
+  'js/packs/maastokohteet-esp.js',
+  'js/packs/maastokohteet-est.js',
+  'js/packs/maastokohteet-fin.js',
+  'js/packs/maastokohteet-fra.js',
+  'js/packs/maastokohteet-gbr.js',
+  'js/packs/maastokohteet-irl.js',
+  'js/packs/maastokohteet-isl.js',
+  'js/packs/maastokohteet-ita.js',
+  'js/packs/maastokohteet-ltu.js',
+  'js/packs/maastokohteet-lva.js',
+  'js/packs/maastokohteet-nld.js',
+  'js/packs/maastokohteet-nor.js',
+  'js/packs/maastokohteet-pol.js',
+  'js/packs/maastokohteet-prt.js',
+  'js/packs/maastokohteet-rou.js',
+  'js/packs/maastokohteet-rus.js',
+  'js/packs/maastokohteet-swe.js',
+  'js/packs/maastokohteet-tur.js',
+  'js/packs/maastokohteet-ukr.js',
+  'js/packs/maastokohteet.js',
   'js/packs/fokusvirrat.js',
   'js/packs/uutislahteet.js',
   // uutiset vasta lähteidensä jälkeen (tuo uutislahteet.js:n).

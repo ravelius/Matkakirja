@@ -1,0 +1,52 @@
+{
+  "_": "Liettuan maastokohteet. Faktat en-Wikipediasta 29.8.2026. Pieni maa: kolme kohdetta.",
+  "vuoret": [
+    {
+      "nimi": "Aukštojas",
+      "lon": 25.6261,
+      "lat": 54.5271,
+      "m": 294,
+      "lahdeKoordinaatti": "en-Wikipedia \"Aukštojas Hill\"",
+      "nappi": "Mäki, joka vaihtui vasta 2004",
+      "kysymykset": [
+        "Miksi maan korkein kohta vaihtui vasta 2004?",
+        "Mikä Medininkain ylänkö on?"
+      ],
+      "korostukset": ["Medininkai|Medininkain"],
+      "teksti": "Aukštojas on Liettuan korkein kohta. Se on Medininkain ylängöllä noin 24 kilometriä Vilnasta kaakkoon. Korkeus mitattiin vuonna 2004 Vilnan Gediminas-teknillisen yliopiston geodesian laitoksella GPS:n avulla, ja tulos oli 293,84 metriä — sitä ennen maan korkeimpana pidettiin viidensadan metrin päässä olevaa Juozapinėä, 292,7 metriä.",
+      "lahde": "en-Wikipedia \"Aukštojas Hill\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Itämeri",
+      "lon": 20.6,
+      "lat": 55.7,
+      "lahdeKoordinaatti": "ulappa Kuurinkynnään edustalla; artikkelin oma keskipiste on 20 / 58",
+      "nappi": "Maailman suurin murtovesiallas",
+      "kysymykset": [
+        "Mikä Kuurinkynnäs on?",
+        "Miksi Itämeren vesi on murtovettä?"
+      ],
+      "korostukset": ["murtovesi|murtovesiallas"],
+      "teksti": "Itämeri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Maantieteellisesti se jää Skandinavian niemimaan sekä Pohjois- ja Keski-Euroopan tasangon väliin. Se on maailman suurin murtovesiallas.",
+      "lahde": "en-Wikipedia \"Baltic Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Nemunas",
+      "lon": 23.9,
+      "lat": 54.9,
+      "lahdeKoordinaatti": "Kaunas joen keskijuoksulla; artikkelin koordinaatti 21,247 / 55,337 on suistossa",
+      "nappi": "Joki, jolla on viisi nimeä",
+      "kysymykset": [
+        "Miksi joella on niin monta nimeä?",
+        "Mikä Kuurinlahti on?"
+      ],
+      "korostukset": ["Kuurinlahti|Kuurinlahteen"],
+      "teksti": "Nemunas — valkovenäjäksi Nioman, puolaksi Niemen, saksaksi Memel — nousee Keski-Valko-Venäjältä ja virtaa Liettuan halki. Sen eteläinen haara muodostaa Venäjän Kaliningradin alueen pohjoisrajan, ja lopulta joki laskee Kuurinlahteen, joka on kapean salmen kautta yhteydessä Itämereen. Sen 937 kilometriä tekevät siitä yhden Itä-Euroopan suurista joista: se virtaa länteen Grodnoon, pohjoiseen Kaunasiin ja siitä taas länteen merelle.",
+      "lahde": "en-Wikipedia \"Neman\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ]
+}

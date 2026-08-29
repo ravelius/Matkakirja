@@ -1,0 +1,66 @@
+{
+  "_": "Suomen maastokohteet. Faktat en-Wikipediasta 29.8.2026.",
+  "vuoret": [
+    {
+      "nimi": "Halti",
+      "lon": 21.2789,
+      "lat": 69.3228,
+      "m": 1324,
+      "lahdeKoordinaatti": "en-Wikipedia \"Halti\"",
+      "nappi": "Suomen korkein kohta — mutta ei huippu",
+      "kysymykset": [
+        "Miksi Suomen korkein kohta ei ole huippu?",
+        "Mikä on korkein kokonaan Suomessa oleva tunturi?"
+      ],
+      "korostukset": ["Enontekiö|Enontekiön"],
+      "teksti": "Halti on tunturi Norjan ja Suomen rajalla. Sen varsinainen huippu Ráisduottarháldi on Norjan puolella, noin kilometrin päässä rajasta, ja Suomen puolen korkein kohta on 1 324 metrissä oleva Hálditšohkka — maan korkein piste, mutta rinteellä eikä huipulla. Rajan mutka juontuu Ruotsin ja Tanskan rajasopimuksesta vuodelta 1734, jolloin rajapyykit lyötiin sinne minne oli kätevintä ja raja sovittiin kulkevaksi suoraan niiden välillä.",
+      "lahde": "en-Wikipedia \"Halti\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Pohjanlahti",
+      "lon": 21.6,
+      "lat": 62.8,
+      "lahdeKoordinaatti": "ulappa Merenkurkun pohjoispuolella; artikkelin oma keskipiste on 20 / 63",
+      "nappi": "Itämeren pohjoisin haara",
+      "kysymykset": [
+        "Mikä Merenkurkku on?",
+        "Miksi Pohjanlahden rannat nousevat yhä?"
+      ],
+      "korostukset": ["Merenkurkku|Merenkurkkuun"],
+      "teksti": "Pohjanlahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä. Se jakautuu kolmeen osaan: Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä.",
+      "lahde": "en-Wikipedia \"Gulf of Bothnia\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Suomenlahti",
+      "lon": 25.2,
+      "lat": 59.9,
+      "lahdeKoordinaatti": "en-Wikipedia \"Gulf of Finland\" (26 / 59,83), siirretty hieman länteen lahden keskiulapalle",
+      "nappi": "Itämeren itäisin haara",
+      "kysymykset": [
+        "Mikä joki laskee Suomenlahden pohjukkaan?",
+        "Miksi lahden ympäristöongelmat ovat pahimpia juuri täällä?"
+      ],
+      "korostukset": ["Neva|Neva"],
+      "teksti": "Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.",
+      "lahde": "en-Wikipedia \"Gulf of Finland\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Kemijoki",
+      "lon": 25.6,
+      "lat": 66.4,
+      "lahdeKoordinaatti": "keskijuoksu Rovaniemen yläpuolella; artikkelin koordinaatti 24,45 / 65,77 on suistossa Kemissä",
+      "nappi": "Suomen pisin joki",
+      "kysymykset": [
+        "Miksi Kemijoella uitettiin tukkeja?",
+        "Mikä Ounasjoki on?"
+      ],
+      "korostukset": ["Ounasjoki|Ounasjoki"],
+      "teksti": "Kemijoki on 550 kilometrin pituinen ja Suomen pisin joki. Se virtaa etelään Kemijärven ja Rovaniemen kautta ja laskee Pohjanlahteen Kemissä. Rovaniemen kohdalla siihen yhtyy Ounasjoki.",
+      "lahde": "en-Wikipedia \"Kemijoki\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ]
+}

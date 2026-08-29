@@ -1,0 +1,79 @@
+{
+  "_": "Puolan maastokohteet. Faktat en-Wikipediasta 29.8.2026.",
+  "vuoret": [
+    {
+      "nimi": "Rysy",
+      "lon": 20.0881,
+      "lat": 49.1794,
+      "m": 2501,
+      "lahdeKoordinaatti": "en-Wikipedia \"Rysy\"",
+      "nappi": "Puolan korkein piste",
+      "kysymykset": [
+        "Miksi Rysyllä on kolme huippua?",
+        "Mikä on Puolan vuorten kruunu?"
+      ],
+      "korostukset": ["Tatrat|Tatroilla"],
+      "teksti": "Rysy on Korkeiden Tatrojen harjanteella Puolan ja Slovakian rajalla. Sillä on kolme huippua: keskimmäinen 2 501 metriä, luoteinen 2 500 ja kaakkoinen 2 473. Luoteinen huippu on Puolan korkein piste ja kuuluu Puolan vuorten kruunuun; kaksi muuta ovat Slovakian puolella.",
+      "lahde": "en-Wikipedia \"Rysy\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Śnieżka",
+      "lon": 15.7403,
+      "lat": 50.7361,
+      "m": 1603,
+      "lahdeKoordinaatti": "en-Wikipedia \"Sněžka\"",
+      "nappi": "Ala-Sleesian katto",
+      "kysymykset": [
+        "Miksi vuorella on kaksi nimeä?",
+        "Mitkä ovat Jättiläisvuoret?"
+      ],
+      "teksti": "Śnieżka eli tšekiksi Sněžka on Puolan ja Tšekin rajalla ja Jättiläisvuorten Sleesian harjanteen hallitsevin kohta. Sen 1 603 metrin huippu on Ala-Sleesian voivodikunnan korkein kohta ja koko Sudeettien katto. Rajan toisella puolella sama huippu on Tšekin korkein piste.",
+      "lahde": "en-Wikipedia \"Sněžka\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Itämeri",
+      "lon": 17.5,
+      "lat": 55.2,
+      "lahdeKoordinaatti": "ulappa Puolan rannikon edustalla; artikkelin oma keskipiste on 20 / 58",
+      "nappi": "Maailman suurin murtovesiallas",
+      "kysymykset": [
+        "Miksi Itämeren vesi on murtovettä?",
+        "Miksi Itämerellä ei ole vuorovettä?"
+      ],
+      "korostukset": ["murtovesi|murtovesiallas"],
+      "teksti": "Itämeri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Maantieteellisesti se jää Skandinavian niemimaan sekä Pohjois- ja Keski-Euroopan tasangon väliin. Se on maailman suurin murtovesiallas: makea jokivesi ja suolainen merivesi sekoittuvat siinä jatkuvasti.",
+      "lahde": "en-Wikipedia \"Baltic Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Veiksel",
+      "lon": 18.6,
+      "lat": 53.01,
+      "lahdeKoordinaatti": "Toruń joen keskijuoksulla; artikkelin koordinaatti 18,952 / 54,362 on suistossa",
+      "nappi": "Puolan pisin joki",
+      "kysymykset": [
+        "Miksi Krakova ja Varsova ovat molemmat Veikselin varrella?",
+        "Mihin kolmeen muuhun maahan valuma-alue ulottuu?"
+      ],
+      "teksti": "Veiksel eli puolaksi Wisła on Puolan pisin joki ja pisin Itämereen laskeva joki: 1 047 kilometriä. Sen valuma-alue on 193 960 neliökilometriä ja ulottuu Puolan lisäksi kolmeen muuhun maahan, mutta 168 868 neliökilometriä siitä on Puolan puolella.",
+      "lahde": "en-Wikipedia \"Vistula\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Odra",
+      "lon": 17.03,
+      "lat": 51.11,
+      "lahdeKoordinaatti": "Wrocław joen keskijuoksulla; artikkelin koordinaatti 14,524 / 53,672 on suistossa",
+      "nappi": "Joki, joka on myös raja",
+      "kysymykset": [
+        "Mikä Oder–Neisse-linja on?",
+        "Mikä on Odran suurin sivujoki?"
+      ],
+      "korostukset": ["Oder–Neisse-linja|Oder–Neisse-linjan"],
+      "teksti": "Odra eli saksaksi Oder on Puolan toiseksi pisin joki ja rajojensa sisällä kolmanneksi pisin Veikselin ja sen suurimman sivujoen Wartan jälkeen. Se nousee Tšekistä ja virtaa 742 kilometriä Länsi-Puolan halki, ja siitä 187 kilometriä on Puolan ja Saksan rajaa osana Oder–Neisse-linjan rajaa. Lopulta se laskee Szczecinin laguuniin ja kolmena haarana Itämeren Pommerinlahteen.",
+      "lahde": "en-Wikipedia \"Oder\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ]
+}

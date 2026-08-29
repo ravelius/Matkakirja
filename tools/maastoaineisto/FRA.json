@@ -1,0 +1,92 @@
+{
+  "_": "Ranskan maastokohteet. Faktat en-Wikipediasta 29.8.2026; koordinaatit artikkelien omia paitsi merillä ja joilla, joilla piste on valittu käsin lehden ikkunan sisältä (ks. lahdeKoordinaatti).",
+  "vuoret": [
+    {
+      "nimi": "Mont Blanc",
+      "lon": 6.865,
+      "lat": 45.8328,
+      "m": 4807,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mont Blanc\"",
+      "nappi": "Alppien korkein huippu",
+      "kysymykset": [
+        "Kuka nousi Mont Blancille ensimmäisenä?",
+        "Kummalle maalle huippu oikeastaan kuuluu?"
+      ],
+      "korostukset": ["Alpit|Alpeilla"],
+      "teksti": "Mont Blanc kohoaa Alpeilla 4 807 metriin ja on Kaukasuksen ulkopuolisen Euroopan korkein vuori. Huippu on täsmälleen Ranskan ja Italian rajalla, ja se on myös maailman yhdenneksitoista topografisesti hallitsevin vuori. Isoisän matkan aikaan huipulle nousu oli jo vakiintunut urheilulaji: alppikiipeily oli syntynyt Chamonix'n laaksossa vuoren juurella.",
+      "lahde": "en-Wikipedia \"Mont Blanc\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Vignemale",
+      "lon": -0.1431,
+      "lat": 42.7767,
+      "m": 3298,
+      "lahdeKoordinaatti": "en-Wikipedia \"Vignemale\"",
+      "nappi": "Pyreneiden korkein Ranskan puolella",
+      "kysymykset": [
+        "Miksi huippu on jaettu kahden maan kesken?",
+        "Millaista on Pyreneiden jäätikkö nykyään?"
+      ],
+      "teksti": "Vignemale on 3 298 metriä korkea ja Ranskan puolen Pyreneiden korkein huippu. Se seisoo suoraan rajalla: läntinen puoli kuuluu Hautes-Pyrénées'n departementtiin Ranskassa ja itäinen Huescan maakuntaan Aragoniassa Espanjassa, ja itse huippu on jaettu kahtia maiden kesken.",
+      "lahde": "en-Wikipedia \"Vignemale\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Välimeri",
+      "lon": 5.5,
+      "lat": 42.6,
+      "lahdeKoordinaatti": "Lioninlahden ulappa Ranskan rannikon edustalla — nimikilven paikka lehdellä, ei täsmäpiste",
+      "nappi": "Meri kolmen maanosan välissä",
+      "kysymykset": [
+        "Kuinka kapea Gibraltarinsalmi todella on?",
+        "Miksi Välimeri on niin suolainen?"
+      ],
+      "korostukset": ["Gibraltarinsalmi|Gibraltarinsalmen"],
+      "teksti": "Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.",
+      "lahde": "en-Wikipedia \"Mediterranean Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Biskajanlahti",
+      "lon": -3.2,
+      "lat": 45.3,
+      "lahdeKoordinaatti": "lahden ulappa Ranskan ja Espanjan rannikoiden välissä; artikkelin oma keskipiste on -4,4 / 45,5",
+      "nappi": "Atlantin myrskyisä poukama",
+      "kysymykset": [
+        "Miksi Biskajanlahti on niin pahamaineinen merenkulkijoille?",
+        "Mitä eläimiä lahdella tapaa?"
+      ],
+      "teksti": "Biskajanlahti on Koillis-Atlantin lahti Kelttienmeren eteläpuolella. Se ulottuu Espanjan pohjoisrannikkoa pitkin Ranskan rajalta Ortegalinniemelle ja Ranskan länsirannikkoa pitkin Penmarc'hinniemeltä etelään Espanjan rajalle asti. Purjelaivojen aikaan lahti oli merimiesten pelätyimpiä paikkoja Euroopassa.",
+      "lahde": "en-Wikipedia \"Bay of Biscay\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Loire",
+      "lon": 1.909,
+      "lat": 47.902,
+      "lahdeKoordinaatti": "Orléans, joen suuren mutkan pohjoisin kohta — piste valittu uoman keskijuoksulta, jotta nimiö saa tilaa",
+      "nappi": "Ranskan pisin joki",
+      "kysymykset": [
+        "Miksi Loiren varrella on niin paljon linnoja?",
+        "Miksi Loire on niin matala kesäisin?"
+      ],
+      "teksti": "Loire on Ranskan pisin joki: 1 006 kilometriä ja maailman jokien pituusjärjestyksessä sadaskahdeksaskymmenesensimmäinen. Sen valuma-alue on 117 054 neliökilometriä eli yli viidennes koko Ranskasta, mutta virtaama on silti vain puolet Rhônen vastaavasta. Joki kaartaa Keskiylängöltä pohjoiseen Orléansiin asti ja kääntyy siellä länteen kohti Atlanttia.",
+      "lahde": "en-Wikipedia \"Loire\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Rhône",
+      "lon": 4.83,
+      "lat": 44.93,
+      "lahdeKoordinaatti": "Rhônen laakso Valencen kohdalla; artikkelin koordinaatti 4,846 / 43,331 on suistossa Arles'n luona",
+      "nappi": "Joki, joka tulee jäätiköltä",
+      "kysymykset": [
+        "Mikä Camargue on?",
+        "Miten Rhône muuttuu Genevenjärvessä?"
+      ],
+      "korostukset": ["Camargue|Camargue-alueen"],
+      "teksti": "Rhône saa alkunsa Alpeilta, virtaa Genevenjärven läpi ja kääntyy Kaakkois-Ranskan halki etelään Välimerelle. Arles'n kohdalla lähellä suistoa joki jakautuu kahdeksi haaraksi, Suureksi ja Pieneksi Rhôneksi, ja niiden väliin jäävä suistomaa on Camargue-alueen kosteikko. Se on Ranskan ja Sveitsin yhteinen joki: alkulähde on Sveitsin puolella.",
+      "lahde": "en-Wikipedia \"Rhône\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ]
+}

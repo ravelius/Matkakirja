@@ -1,0 +1,50 @@
+{
+  "_": "Viron maastokohteet. Faktat en-Wikipediasta 29.8.2026. Pieni maa: kolme kohdetta.",
+  "vuoret": [
+    {
+      "nimi": "Suur Munamägi",
+      "lon": 27.0592,
+      "lat": 57.7144,
+      "m": 318,
+      "lahdeKoordinaatti": "en-Wikipedia \"Suur Munamägi\"",
+      "nappi": "Baltian korkein kohta",
+      "kysymykset": [
+        "Mitä nimi Suur Munamägi tarkoittaa?",
+        "Millainen on Haanjan ylänkö?"
+      ],
+      "korostukset": ["Haanjan ylänkö|Haanjan ylänkö"],
+      "teksti": "Suur Munamägi on Viron ja koko Baltian korkein kohta, 318 metriä merenpinnasta. Se on Haanjan kylän lähellä Võrumaalla Viron kaakkoiskolkassa, aivan Latvian ja Venäjän rajojen tuntumassa. Nimi tarkoittaa suomeksi suurta munamäkeä, ja ympäröivä Haanjan ylänkö on loivasti kumpuilevaa.",
+      "lahde": "en-Wikipedia \"Suur Munamägi\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Itämeri",
+      "lon": 22.4,
+      "lat": 58.4,
+      "lahdeKoordinaatti": "ulappa Saarenmaan länsipuolella; artikkelin oma keskipiste on 20 / 58",
+      "nappi": "Maailman suurin murtovesiallas",
+      "kysymykset": [
+        "Miksi Itämeren vesi on murtovettä?",
+        "Miksi Viron saaret ovat niin matalia?"
+      ],
+      "korostukset": ["murtovesi|murtovesiallas"],
+      "teksti": "Itämeri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Maantieteellisesti se jää Skandinavian niemimaan sekä Pohjois- ja Keski-Euroopan tasangon väliin. Se on maailman suurin murtovesiallas.",
+      "lahde": "en-Wikipedia \"Baltic Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Suomenlahti",
+      "lon": 25.4,
+      "lat": 59.6,
+      "lahdeKoordinaatti": "en-Wikipedia \"Gulf of Finland\" (26 / 59,83), siirretty Viron rannikon puolelle",
+      "nappi": "Itämeren itäisin haara",
+      "kysymykset": [
+        "Miksi Tallinnasta tuli hansakaupunki?",
+        "Kuinka syvä Suomenlahti on?"
+      ],
+      "korostukset": ["Neva|Neva"],
+      "teksti": "Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.",
+      "lahde": "en-Wikipedia \"Gulf of Finland\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ]
+}

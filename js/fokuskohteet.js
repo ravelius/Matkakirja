@@ -126,6 +126,7 @@ import { FOKUSKOHTEET_TUN } from './packs/fokuskohteet-tun.js';
 import { FOKUSKOHTEET_TUR } from './packs/fokuskohteet-tur.js';
 import { FOKUSKOHTEET_ZWE } from './packs/fokuskohteet-zwe.js';
 import { FOKUSKOHTEET_GRC } from './packs/fokuskohteet-grc.js';
+import { MAASTOKOHTEET } from './packs/maastokohteet.js';
 import {
   niputaFokusmerkit, nippuAsettelunVersio, nippuAvaaKaupunki, nippuLaatanEtaisyys,
 } from './fokusniput.js';
@@ -240,6 +241,24 @@ const KOHDE_MAAT = {
    */
   DEU: FOKUSKOHTEET_DEU,
 };
+
+/*
+ * MAASTOKOHTEET (omistajan päätös 29.8.2026: *"Tee vuoret ja meret
+ * avattaviksi kaikkiin maihin."*) — maan vuoret, meret ja joet omana
+ * tiedostoperheenään. Perustelut sille, miksi ne eivät ole rivejä yllä
+ * olevissa pakeissa, ovat js/packs/maastokohteet.js:n alussa; lyhyesti:
+ * kahdeksallatoista tämän erän maalla ei ollut pakkia lainkaan, ja
+ * niillä kuudella joilla oli, käsin kirjoitettuun sisältöön ei haluttu
+ * koskea.
+ *
+ * Liitos on TÄSSÄ eikä hakemistossa, koska KOHDE_MAAT on tämän
+ * tiedoston oma taulu. Maa, jolla on jo pakki, saa maastokohteensa sen
+ * listan PERÄÄN; maa, jolla ei ole, saa listan kokonaan tästä.
+ * Kumpikaan alkuperäinen lista ei muutu — ne vain katsotaan yhdessä.
+ */
+for (const [iso, kohteet] of Object.entries(MAASTOKOHTEET)) {
+  KOHDE_MAAT[iso] = [...(KOHDE_MAAT[iso] ?? []), ...kohteet];
+}
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN

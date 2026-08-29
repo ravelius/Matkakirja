@@ -1,0 +1,63 @@
+{
+  "_": "Itävallan maastokohteet. Faktat en-Wikipediasta 29.8.2026. Sisämaavaltio: ei meriä.",
+  "vuoret": [
+    {
+      "nimi": "Großglockner",
+      "lon": 12.6953,
+      "lat": 47.0749,
+      "m": 3798,
+      "lahdeKoordinaatti": "en-Wikipedia \"Grossglockner\"",
+      "nappi": "Itävallan korkein huippu",
+      "kysymykset": [
+        "Mikä Pasterze on?",
+        "Miksi korkeus mitataan Adrianmerestä?"
+      ],
+      "korostukset": ["Hohe Tauern|Hohe Tauernin"],
+      "teksti": "Großglockner on 3 798 metriä Adrianmeren pinnasta ja siten Itävallan korkein vuori sekä Alppien korkein Brennerin solan itäpuolella. Se kuuluu Hohe Tauernin vuoriston Glockner-ryhmään Keski-Itäalppien pääharjanteella. Sen itärinteellä lepää Pasterze, Itävallan laajin jäätikkö.",
+      "lahde": "en-Wikipedia \"Grossglockner\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Wildspitze",
+      "lon": 10.8672,
+      "lat": 46.8853,
+      "m": 3768,
+      "lahdeKoordinaatti": "en-Wikipedia \"Wildspitze\"",
+      "nappi": "Ötztalin Alppien katto",
+      "kysymykset": [
+        "Mitä topografinen dominanssi tarkoittaa?",
+        "Millainen on Ötztalin Alppien jäätikkö?"
+      ],
+      "teksti": "Wildspitze on Ötztalin Alppien ja Pohjois-Tirolin korkein vuori sekä Itävallan toiseksi korkein heti Großglocknerin jälkeen. Topografiselta dominanssiltaan — 2 261 metriä — se on Alppien neljäs ja koko Euroopan viidestoista huippu.",
+      "lahde": "en-Wikipedia \"Wildspitze\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Tonava",
+      "lon": 15.42,
+      "lat": 48.37,
+      "lahdeKoordinaatti": "Wachaun laakso Itävallan puolella; artikkelin koordinaatti 29,761 / 45,218 on suistossa Romaniassa",
+      "nappi": "Euroopan toiseksi pisin joki",
+      "kysymykset": [
+        "Kuinka monen pääkaupungin läpi Tonava virtaa?",
+        "Mikä Wachaun laakso on?"
+      ],
+      "korostukset": ["Rooman valtakunta|Rooman valtakunnan"],
+      "teksti": "Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Sen varrella on neljä pääkaupunkia — Wien, Bratislava, Budapest ja Belgrad — ja valuma-alue on 817 000 neliökilometriä.",
+      "lahde": "en-Wikipedia \"Danube\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Inn",
+      "lon": 11.75,
+      "lat": 47.3,
+      "lahdeKoordinaatti": "Innin laakso Innsbruckin alapuolella; artikkelin koordinaatti 13,477 / 48,574 on yhtymäkohdassa Passaussa",
+      "nappi": "Tonavan kolmanneksi suurin sivujoki",
+      "kysymykset": [
+        "Mikä Engadin on?",
+        "Miksi Inn on niin vetinen?"
+      ],
+      "teksti": "Inn on 518 kilometrin pituinen joki Sveitsissä, Itävallassa ja Saksassa ja virtaamaltaan Tonavan kolmanneksi suurin sivujoki. Sen valuma-alueen korkein kohta on Piz Berninan huippu 4 049 metrissä. Engadin, joen laakso Sveitsin puolella, on maan ainoa laakso, jonka vedet päätyvät Mustallemerelle.",
+      "lahde": "en-Wikipedia \"Inn (river)\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ]
+}

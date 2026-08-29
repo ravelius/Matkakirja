@@ -1,0 +1,78 @@
+{
+  "_": "Espanjan maastokohteet. Faktat en-Wikipediasta 29.8.2026. HUOM: Teide (3 715 m) on Espanjan korkein, mutta se on Kanariansaarilla eikä siten mahdu maan fokuslehden ikkunaan (YLEINEN.saarenEtaisyys 2,5 astetta) — merkki jäisi kuvan ulkopuolelle. Siksi listalla on Mulhacén, jonka artikkeli itse nimeää mannermaisen Espanjan korkeimmaksi.",
+  "vuoret": [
+    {
+      "nimi": "Mulhacén",
+      "lon": -3.3114,
+      "lat": 37.0533,
+      "m": 3479,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mulhacén\"",
+      "nappi": "Iberian niemimaan korkein",
+      "kysymykset": [
+        "Kuka oli Muley Hacén?",
+        "Miksi Sierra Nevadassa on lunta niin etelässä?"
+      ],
+      "korostukset": ["Sierra Nevada|Sierra Nevadan"],
+      "teksti": "Mulhacén kohoaa 3 479 metriin ja on mannermaisen Espanjan sekä koko Iberian niemimaan korkein vuori. Se kuuluu Sierra Nevadan vuoristoon Penibeettisessä järjestelmässä. Nimi tulee Granadan toiseksi viimeiseltä muslimihallitsijalta Abu'l-Hasan Alilta, jota espanjaksi kutsuttiin Muley Hacéniksi ja joka tarun mukaan haudattiin vuoren huipulle.",
+      "lahde": "en-Wikipedia \"Mulhacén\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Aneto",
+      "lon": 0.6578,
+      "lat": 42.6322,
+      "m": 3404,
+      "lahdeKoordinaatti": "en-Wikipedia \"Aneto\"",
+      "nappi": "Pyreneiden korkein huippu",
+      "kysymykset": [
+        "Mikä Maladeta-massiivi on?",
+        "Onko Anetolla vielä jäätikköä?"
+      ],
+      "teksti": "Aneto on 3 404 metriä korkea, Pyreneiden ja Aragonian korkein huippu ja Espanjan kolmanneksi korkein vuori. Se sijaitsee Huescan maakunnassa kuusi kilometriä Ranskan rajasta etelään ja muodostaa Maladeta-massiivin eteläisimmän osan.",
+      "lahde": "en-Wikipedia \"Aneto\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Välimeri",
+      "lon": 0.6,
+      "lat": 38.6,
+      "lahdeKoordinaatti": "ulappa Espanjan itärannikon edustalla; artikkelin oma keskipiste on 18 / 35",
+      "nappi": "Meri kolmen maanosan välissä",
+      "kysymykset": [
+        "Kuinka kapea Gibraltarinsalmi todella on?",
+        "Mitä Espanjan Välimeren rannikolla kalastetaan?"
+      ],
+      "korostukset": ["Gibraltarinsalmi|Gibraltarinsalmen"],
+      "teksti": "Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Espanja on ainoa maa, jolla on rantaa sekä tällä merellä että Atlantilla.",
+      "lahde": "en-Wikipedia \"Mediterranean Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Tajo",
+      "lon": -4.02,
+      "lat": 39.86,
+      "lahdeKoordinaatti": "Toledo, joen mutka kaupungin ympäri — piste valittu keskijuoksulta; artikkelilla ei ole koordinaattia",
+      "nappi": "Iberian pisin joki",
+      "kysymykset": [
+        "Miksi Toledo rakennettiin joen mutkaan?",
+        "Millä nimellä joki tunnetaan Portugalissa?"
+      ],
+      "teksti": "Tajo on Iberian niemimaan pisin joki. Se saa alkunsa Montes Universales -vuoristosta Cuencan ja Teruelin välissä Keski-Espanjassa, virtaa 1 007 kilometriä pääosin länteen ja laskee Atlanttiin Lissabonin kohdalla. Portugalin puolella sen nimi on Tejo.",
+      "lahde": "en-Wikipedia \"Tagus\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Ebro",
+      "lon": -0.88,
+      "lat": 41.65,
+      "lahdeKoordinaatti": "Zaragoza joen keskijuoksulla; artikkelin koordinaatti 0,863 / 40,72 on suistossa",
+      "nappi": "Espanjan oma pisin joki",
+      "kysymykset": [
+        "Miksi Ebron suisto on niin laaja?",
+        "Mitä Ebron laaksossa kasvatetaan?"
+      ],
+      "teksti": "Ebro nousee Kantabriasta ja virtaa 930 kilometriä lähes koko matkan itäkaakkoon, kunnes laskee Välimereen ja muodostaa suiston Etelä-Kataloniaan. Iberian niemimaalla se on pituudeltaan toinen Tajon jälkeen sekä virtaamaltaan ja valuma-alueeltaan toinen Douron jälkeen. Se on kuitenkin pisin kokonaan Espanjan sisällä virtaava joki: kaksi muuta jatkavat Portugaliin.",
+      "lahde": "en-Wikipedia \"Ebro\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ]
+}

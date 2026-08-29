@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1334';
+const CACHE = 'matkakirja-2026-08-09.1335';
 const SHELL = [
   './',
   './index.html',
@@ -250,6 +250,33 @@ const SHELL = [
   './js/packs/fokuskohteet-hrv.js',
   // Saksa 27.8.2026: Berliinin lehti ja sen koko nimistö.
   './js/packs/fokuskohteet-deu.js',
+  // Maastokohteet 29.8.2026: maiden vuoret, meret ja joet napautettaviksi
+  // (omistajan päätös). Hakemisto viimeisenä, se tuo maakohtaiset.
+  './js/packs/maastokohteet-aut.js',
+  './js/packs/maastokohteet-bih.js',
+  './js/packs/maastokohteet-che.js',
+  './js/packs/maastokohteet-cze.js',
+  './js/packs/maastokohteet-dnk.js',
+  './js/packs/maastokohteet-esp.js',
+  './js/packs/maastokohteet-est.js',
+  './js/packs/maastokohteet-fin.js',
+  './js/packs/maastokohteet-fra.js',
+  './js/packs/maastokohteet-gbr.js',
+  './js/packs/maastokohteet-irl.js',
+  './js/packs/maastokohteet-isl.js',
+  './js/packs/maastokohteet-ita.js',
+  './js/packs/maastokohteet-ltu.js',
+  './js/packs/maastokohteet-lva.js',
+  './js/packs/maastokohteet-nld.js',
+  './js/packs/maastokohteet-nor.js',
+  './js/packs/maastokohteet-pol.js',
+  './js/packs/maastokohteet-prt.js',
+  './js/packs/maastokohteet-rou.js',
+  './js/packs/maastokohteet-rus.js',
+  './js/packs/maastokohteet-swe.js',
+  './js/packs/maastokohteet-tur.js',
+  './js/packs/maastokohteet-ukr.js',
+  './js/packs/maastokohteet.js',
   './js/packs/paivan-kuvat.js',
   './js/packs/uutislahteet.js',
   './js/packs/pollo-asetukset.js',

@@ -1,0 +1,77 @@
+{
+  "_": "Sveitsin maastokohteet. Faktat en-Wikipediasta 29.8.2026. Sisämaavaltio: ei meriä.",
+  "vuoret": [
+    {
+      "nimi": "Dufourspitze",
+      "lon": 7.8667,
+      "lat": 45.9369,
+      "m": 4634,
+      "lahdeKoordinaatti": "en-Wikipedia \"Monte Rosa\" (massiivin koordinaatti)",
+      "nappi": "Sveitsin korkein huippu",
+      "kysymykset": [
+        "Kuka Guillaume-Henri Dufour oli?",
+        "Kuinka monta neljäntuhannen metrin huippua Monte Rosassa on?"
+      ],
+      "korostukset": ["Monte Rosa|Monte Rosa"],
+      "teksti": "Dufourspitze on 4 634 metriä korkea ja Alppien sekä Länsi-Euroopan toiseksi korkein vuori heti Mont Blancin jälkeen. Se on Monte Rosa -massiivin korkein huippu Pennialpeilla ja kokonaan Sveitsin puolella, ja se on nimetty maanmittari Guillaume-Henri Dufourin mukaan. Massiivissa on useita muitakin yli neljäntuhannen metrin huippuja, ja se on vedenjakaja Rhônen ja Pon vesistöjen välillä.",
+      "lahde": "en-Wikipedia \"Monte Rosa\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Matterhorn",
+      "lon": 7.6586,
+      "lat": 45.9764,
+      "m": 4478,
+      "lahdeKoordinaatti": "en-Wikipedia \"Matterhorn\"",
+      "nappi": "Maailman kuvatuin vuori",
+      "kysymykset": [
+        "Kuka nousi Matterhornille ensimmäisenä?",
+        "Miksi Matterhorn on niin tarkan pyramidin muotoinen?"
+      ],
+      "korostukset": ["Pennialpit|Pennialpeilla"],
+      "teksti": "Matterhorn seisoo Sveitsin ja Italian rajalla päävedenjakajalla, ja sen 4 478 metrin huippu on lähes symmetrinen pyramidi Pennialpeilla Monte Rosan alueella. Sitä on kutsuttu vuorten vuoreksi ja Sveitsin sekä koko Alppien tunnukseksi. Sitä on myös kuvattu maailman kauneimmaksi vuoreksi ja väitetty maailman valokuvatuimmaksi.",
+      "lahde": "en-Wikipedia \"Matterhorn\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Jungfrau",
+      "lon": 7.9626,
+      "lat": 46.5368,
+      "m": 4158,
+      "lahdeKoordinaatti": "en-Wikipedia \"Jungfrau\"",
+      "nappi": "Kolmen vuoren muurista korkein",
+      "kysymykset": [
+        "Mitkä ovat Eiger ja Mönch?",
+        "Miten Jungfraulle päästään nykyään?"
+      ],
+      "teksti": "Jungfrau kohoaa 4 158 metriin ja on yksi Bernin Alppien päähuipuista Bernin ja Valais'n kantonien välissä, puolimatkassa Interlakenista Fieschiin. Yhdessä Eigerin ja Mönchin kanssa se muodostaa valtavan vuorimuurin, joka kohoaa Bernin Oberlandin ja Sveitsin ylätasangon yllä. Muuri on Sveitsin Alppien tunnistettavimpia näkyjä.",
+      "lahde": "en-Wikipedia \"Jungfrau\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Rein",
+      "lon": 9.53,
+      "lat": 46.85,
+      "lahdeKoordinaatti": "Chur Alppien Reinin varrella; artikkelin koordinaatti 4,081 / 51,982 on suistossa Alankomaissa",
+      "nappi": "Joki, joka alkaa Sveitsistä",
+      "kysymykset": [
+        "Missä Reinin varsinainen lähde on?",
+        "Kuinka monen maan rajaa Rein muodostaa?"
+      ],
+      "teksti": "Rein on yksi Euroopan suurista joista, ja se alkaa Graubündenin kantonista Kaakkois-Sveitsin Alpeilta. Se muodostaa osan Sveitsin ja Liechtensteinin sekä Sveitsin ja Itävallan rajasta, ja Bodenjärvestä alaspäin osan Sveitsin ja Saksan rajasta. Sieltä se jatkaa Ranskan ja Saksan rajaa, kääntyy pohjoiseen Saksan halki ja laskee lopulta Alankomaissa Pohjanmereen.",
+      "lahde": "en-Wikipedia \"Rhine\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Rhône",
+      "lon": 7.36,
+      "lat": 46.23,
+      "lahdeKoordinaatti": "Sion Valais'n Rhône-laaksossa; artikkelin koordinaatti 4,846 / 43,331 on suistossa Ranskassa",
+      "nappi": "Joki, joka syntyy jäätiköllä",
+      "kysymykset": [
+        "Mikä Rhône-jäätikkö on?",
+        "Miksi Genevenjärvi on niin kirkas?"
+      ],
+      "teksti": "Rhône saa alkunsa Alpeilta Sveitsin Valais'n kantonista, virtaa Genevenjärven läpi ja jatkaa siitä Kaakkois-Ranskaan ja Välimereen. Sveitsin puolella se kulkee koko Valais'n laakson pituudelta. Arles'n kohdalla lähellä suistoa se jakautuu Suureksi ja Pieneksi Rhôneksi.",
+      "lahde": "en-Wikipedia \"Rhône\", johdanto-osa (tarkistettu 29.8.2026)."
+    }
+  ]
+}
