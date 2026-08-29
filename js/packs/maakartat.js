@@ -5457,6 +5457,87 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Oopperatalo', lat: 59.9075, lon: 10.7522, wiki: 'Oslon oopperatalo' },
     ],
   },
+  /*
+   * SEVILLA 29.8.2026. Kaupungilla oli jo kaupunkilehti, mutta
+   * kohdekartta ja säärivi puuttuivat, ja lehtivalmius jäi siksi arvoon
+   * "lähes" (js/tyohuone-tilastot.js lehtiValmius). Sevilla ja Bergen
+   * olivat Euroopan 45 kohteesta ainoat kaksi, jotka eivät olleet
+   * "valmis"; Sevilla on nyt valmis, Bergenin kartta jäi odottamaan
+   * (ks. lohkokommentti alempana).
+   *
+   * Kohteet ja koordinaatit ovat valmiista työaineistosta
+   * (docs/mantereet-tyoaineisto/faktapohja-sevilla.md, jakso 4, haettu
+   * en-Wikipedian koordinaattirajapinnasta 23.8.2026). Karttaan
+   * valittiin kuusi kohdetta kymmenestä ehdokkaasta, kuten muillakin
+   * kohdekartoilla.
+   *
+   * `wiki` on VAIN NIILLÄ, JOILLA ARTIKKELI ON OIKEASTI OLEMASSA
+   * (tarkistettu fi.wikipedian rajapinnasta 29.8.2026). Erityisesti
+   * Plaza de España EI saa wiki-kenttää: fi.wikipedian samanniminen
+   * sivu on täsmennyssivu, joka luettelee Madridin, Barcelonan ja
+   * Palman aukiot — linkki veisi lukijan väärään kaupunkiin. Samasta
+   * syystä ilman linkkiä ovat Maestranza ja Trianan silta, joista ei
+   * ole fi-artikkelia lainkaan.
+   *
+   * TRIANAN SILTA ON VEDESSÄ, JA SE ON OIKEIN.
+   * tools/tarkista-karttapisteet.mjs merkitsee sen vesipisteeksi, mutta
+   * työkalun oma sääntö sallii sen: "Sillat ja majakat saavat olla
+   * vedellä, muut eivät." Kartastossa on jo 18 muuta siltakohdetta
+   * (Kaarlensilta, Rialton silta, Tower Bridge, ...). Muut viisi
+   * Sevillan pistettä osuvat maalle.
+   */
+  sevilla: {
+    polku: 'assets/kartat/sevilla-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 37.3945, etela: 37.3745, lansi: -6.0137, ita: -5.9784,
+    },
+    esittely: 'Kartan alue on Sevillan vanhakaupunki Guadalquivirin '
+      + 'itärannalla ja joen toisella puolella Trianan kaupunginosa. '
+      + 'Kaupunki kasvoi jokisatamasta, jota hallitsivat vuorotellen '
+      + 'Rooma, maurien Al-Andalus ja Kastilian kruunu, ja Amerikan-kaupan '
+      + 'yksinoikeus teki siitä 1500-luvulla yhden Euroopan suurimmista. '
+      + 'Alueella ovat katedraali ja sen 104 metriä korkea kellotorni '
+      + 'Giralda, maurien linnoituksesta kuninkaalliseksi palatsiksi '
+      + 'laajennettu Alcázar, joenrannan vartiotorni Torre del Oro, '
+      + 'Maestranzan areena sekä kaakossa Plaza de España. Joen yli vie '
+      + 'Puente de Isabel II, joka valmistui 1852 kaupungin ensimmäisenä '
+      + 'pysyvänä siltana — sitä ennen samalla paikalla oli venesilta, '
+      + 'joka oli palvellut 1170-luvulta asti. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      { nimi: 'Katedraali ja Giralda', lat: 37.3862, lon: -5.9924, wiki: 'Sevillan katedraali' },
+      { nimi: 'Alcázar', lat: 37.385, lon: -5.9924, wiki: 'Sevillan Alcázar' },
+      { nimi: 'Torre del Oro', lat: 37.3824, lon: -5.9965, wiki: 'Torre del Oro' },
+      { nimi: 'Maestranzan areena', lat: 37.386, lon: -5.9983 },
+      { nimi: 'Trianan silta', lat: 37.3862, lon: -6.0023 },
+      { nimi: 'Plaza de España', lat: 37.3769, lon: -5.9869 },
+    ],
+  },
+  /*
+   * BERGENIN KOHDEKARTTA PUUTTUU VIELÄ, JA SE ON TIETOINEN VALINTA.
+   *
+   * Rajaus, kohteet ja esittely olivat valmiina samassa erässä kuin
+   * Sevillan, mutta itse kuvaa ei saatu piirrettyä: Overpass hylkäsi
+   * Bergenin rajauksen kolmella peräkkäisellä ajolla (yhteensä 30
+   * uusintayritystä, vuorotellen 500, 502, aikakatkaisu ja katkennut
+   * yhteys), kun Sevilla meni läpi samoilta palvelimilta samaan aikaan.
+   * Vika on siis palvelinten kuormassa, ei rajauksessa.
+   *
+   * RIVIÄ EI SAA LISÄTÄ ENNEN KUIN PNG ON OLEMASSA. lehtiValmius
+   * (js/tyohuone-tilastot.js) katsoo vain sitä, onko kaupungilla rivi
+   * tässä taulussa — ei sitä, onko kuvatiedosto paikallaan. Pelkkä rivi
+   * ilman kuvaa siis merkitsisi Bergenin lehden "valmiiksi" ja jättäisi
+   * lehteen rikkinäisen kuvapaikan. Bergen on nyt yhä "lähes", mutta
+   * säärivi sillä on (js/packs/saatiedot.js).
+   *
+   * NÄIN SEN SAA VALMIIKSI (rajaus on jo tallessa työkalussa):
+   *   NODE_USE_ENV_PROXY=1 node tools/piirra-kaupunkikartta.mjs bergen
+   * ja sen jälkeen tähän rivi, jonka työkalu itse tulostaa, sekä
+   * kohteet tiedostosta docs/mantereet-tyoaineisto/faktapohja-bergen.md
+   * (jakso 4, kohteet 1–8; Troldhaugen ja Lysøen jäävät pois, ne ovat
+   * 7,8 ja 19,5 km etelässä).
+   */
   kobenhavn: {
     polku: 'assets/kartat/kobenhavn-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',

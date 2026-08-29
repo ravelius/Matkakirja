@@ -91,7 +91,46 @@
 import { rouFokuskohteet } from './fokuskohteet-rou.js';
 
 /*
- * KIRKKOSIIRTOVISA — kevyen kulun JULISTE-tehtävä (sivu 2).
+ * ANTIPAN VISA — kevyen kulun AARTEEN AVAUS -tehtävä (sivu 2).
+ *
+ * EI UUTTA FAKTAA. Väite on sivun 2 oman noston "Museo, jossa dioraama
+ * keksittiin" tekstiä (js/packs/kulttuuri-kategoriat.js, bukarest,
+ * kategoria 'tiede'): Grigore Antipa johti Bukarestin luonnontieteellistä
+ * museota vuodesta 1892 vuoteen 1944, ja kun museo sai uuden talon, hän
+ * asetti vuonna 1907 eläimet ensimmäistä kertaa omaan maisemaansa
+ * maalatun taustan eteen. Kysymys ei toista tuota lausetta sellaisenaan.
+ *
+ * MIKSI DIORAAMA EIKÄ VLAICU: sivun oma tehtävä (kategoria 'tiede',
+ * tehtava) kysyy Aurel Vlaicun menestystä Wienin lentoviikolla 1912, ja
+ * nimetty tehtävä syrjäyttää sen sivulla (js/fokustehtavat.js
+ * piirraSivunTehtava). Jos AARTEEN AVAUS kysyisi samasta lentokoneesta,
+ * sivun toinen nosto jäisi kokonaan kysymättä. Nyt sivun molemmat nostot
+ * ovat käytössä: dioraama tässä, Vlaicu sivun omassa tehtävässä sille,
+ * joka pelaa ilman fokusmoodia.
+ *
+ * MIKSI TÄMÄ ON AARRE EIKÄ JULISTE: palkinto 'piste' tekee tehtävästä
+ * aarteen avaajan (js/fokustehtavat.js avaaAarteen). Bukarestin
+ * kulttuurivisa avaa aarteen sekin, mutta kaikilla muilla
+ * fokusvirtakaupungeilla on lisäksi tämä oma nimetty AARTEEN AVAUS —
+ * ilman sitä Bukarest oli ainoa, jolta se puuttui.
+ */
+const ANTIPA_VISA = {
+  kysymys: 'Bukarestin luonnontieteellisessä museossa keksittiin vuonna '
+    + '1907 esitystapa, jota museot ympäri maailman yhä käyttävät. Mitä '
+    + 'Grigore Antipa teki eläimilleen?',
+  vaihtoehdot: [
+    'Asetti ne omaan maisemaansa maalatun taustan eteen',
+    'Järjesti ne sukupuun mukaiseen jonoon salin läpi',
+    'Ripusti ne kattoon luonnollisiin liikeasentoihin',
+  ],
+  oikea: 0,
+  fakta: 'Ensimmäiset dioraamat esittivät Karpaatteja, Bărăganin tasankoa '
+    + 'ja Tonavan suistoa, ja pian muidenkin maiden museot pyysivät '
+    + 'Antipalta neuvoja. Hän johti museota kaikkiaan 51 vuotta.',
+};
+
+/*
+ * KIRKKOSIIRTOVISA — kevyen kulun JULISTE-tehtävä (sivu 3).
  *
  * EI UUTTA FAKTAA. Väite on lehden sivun 1 oman noston "Kirkko
  * työnnettiin pois tieltä" tekstiä (js/packs/kulttuuri-kategoriat.js,
@@ -101,23 +140,22 @@ import { rouFokuskohteet } from './fokuskohteet-rou.js';
  * kesäkuussa 1982, 245 metriä. Kysymys ei toista tuota lausetta
  * sellaisenaan.
  *
- * MIKSI SIVULLA 2 EIKÄ SILLÄ SIVULLA, JOLLA NOSTO ON: sama ratkaisu
- * kuin Ateenassa ja Sofiassa. Sivu 2 on Menovinkit, jonka sisältö on
- * koko maan yhteinen linkkilista (js/packs/maa-kategoriat.js, ROU) —
- * sillä ei ole omaa kaupunkifaktaa, josta visan voisi tehdä, ja lehden
- * jokaisella sivulla paitsi etusivulla on Raamatun mukaan oltava
+ * MIKSI SIVULLA 3 EIKÄ SILLÄ SIVULLA, JOLLA NOSTO ON: sama ratkaisu
+ * kuin Ateenassa, Prahassa ja Sofiassa. Sivu 3 on Menovinkit, jonka
+ * sisältö on koko maan yhteinen linkkilista (js/packs/maa-kategoriat.js,
+ * ROU) — sillä ei ole omaa kaupunkifaktaa, josta visan voisi tehdä, ja
+ * lehden jokaisella sivulla paitsi etusivulla on Raamatun mukaan oltava
  * kysymys.
  *
- * MIKSI VAIN YKSI NIMETTY TEHTÄVÄ (Sofiassa niitä on kaksi):
- * Bukarestin kaupunkilehti on sivun lyhyempi. Kaupungilla on vain yksi
- * kulttuurikategoria ('kaupunki', kulttuuri-kategoriat.js) siinä missä
- * Sofialla on kaksi, joten sivupino on 0 = etusivu, 1 = kaupunkisivu
- * "Bukarest", 2 = Menovinkit (js/lehti.js rakennaSivut). Sivun 1 kysymys
- * on Bukarestin kulttuurivisa (js/packs/europe-kulttuuri.js,
- * Parlamenttipalatsin maailmanennätys), jonka js/fokustehtavat.js pukee
- * AARTEEN AVAUS -laatikoksi ilman omaa riviään täällä. Aarteen avaaja on
- * siis olemassa, ja tämä rivi antaa toiselle sivulle sen oman
- * kysymyksen — kaksi kysymystä, kaksi sivua, ei yhtään tyhjää.
+ * SIVUNUMERO KORJATTU 29.8.2026. Tässä luki ennen `sivu: 2` ja
+ * perusteluna, että Bukarestilla on vain yksi kulttuurikategoria ja että
+ * sivu 2 olisi Menovinkit. Kumpikaan ei pidä paikkaansa: kaupungilla on
+ * kaksi kategoriaa ('kaupunki' ja 'tiede', kulttuuri-kategoriat.js),
+ * joten sivupino on sama kuin Prahalla ja Ateenalla — 0 = etusivu,
+ * 1 = kaupunkisivu, 2 = Tiede ja keksinnöt, 3 = Menovinkit (js/lehti.js
+ * rakennaSivut: sivu n näyttää tutkiSivut[n-1] ja Menovinkit lisätään
+ * viimeiseksi). Väärä numero vei JULISTEEN tiedesivulle, jolla oli jo
+ * oma kysymys, ja jätti Menovinkit-sivun kokonaan ilman kysymystä.
  */
 const KIRKKOSIIRTO_VISA = {
   kysymys: 'Bukarestin keskustaa purettiin 1980-luvulla. Millä keinolla '
@@ -551,27 +589,32 @@ export const FOKUSVIRTA_BUKAREST = {
   },
 
   /*
-   * NIMETTY MINITEHTÄVÄ KAUPUNKILEHDEN SIVULLE 2.
+   * NIMETYT MINITEHTÄVÄT KAUPUNKILEHDEN SIVUILLE 2 JA 3.
    *
    * SIVU ON SIVUNUMERO, EI AIHETUNNUS (sama perustelu kuin Ateenassa ja
-   * Sofiassa). Bukarestin lehden sivupino on Sofiaa lyhyempi, koska
-   * kaupungilla on vain yksi kulttuurikategoria: 0 = etusivu,
-   * 1 = kaupunkisivu "Bukarest", 2 = Menovinkit
-   * (js/packs/maa-kategoriat.js, ROU).
+   * Sofiassa). Sivupino on sama kuin Prahalla ja Ateenalla, koska
+   * kaupungilla on kaksi kulttuurikategoriaa: 0 = etusivu,
+   * 1 = kaupunkisivu "Bukarest", 2 = Tiede ja keksinnöt,
+   * 3 = Menovinkit (js/packs/maa-kategoriat.js, ROU).
    *
-   * SISÄLTÖ ON LEHDEN OMAA: JULISTE on koottu sivun 1 omasta
+   * SISÄLTÖ ON LEHDEN OMAA: AARTEEN AVAUS on koottu sivun 2 omasta
+   * dioraamanostosta (ANTIPA_VISA) ja JULISTE sivun 1 omasta
    * kirkkosiirtonostosta (KIRKKOSIIRTO_VISA) — ei yhtään uutta
    * faktaväitettä.
    *
-   * AARTEEN AVAUS EI OLE TÄSSÄ LISTASSA: sivun 1 kysymys on Bukarestin
-   * kulttuurivisa (js/packs/europe-kulttuuri.js, Parlamenttipalatsin
-   * maailmanennätys), jonka js/fokustehtavat.js pukee AARTEEN AVAUS
-   * -laatikoksi ilman omaa riviään täällä. Visa ei myöskään pohjusta
-   * laattakysymystä: se kysyy palatsin painosta, laatta kaupungin
-   * nimestä.
+   * KULTTUURIVISA AVAA AARTEEN TÄMÄN RINNALLA: Bukarestin oma visa
+   * (js/packs/europe-kulttuuri.js, Parlamenttipalatsin maailmanennätys)
+   * pukeutuu AARTEEN AVAUS -laatikoksi sivulla 1 ilman omaa riviään
+   * täällä (js/fokustehtavat.js VISA_TEHTAVA). Kaksi avaajaa ei ole
+   * ristiriita: mikä tahansa niistä riittää sytyttämään jäljen
+   * (omistajan sääntö 25.8.2026), ja näin Bukarest on samalla mallilla
+   * kuin kaikki muut fokusvirtakaupungit. Kumpikaan visa ei pohjusta
+   * laattakysymystä: ne kysyvät palatsin painosta ja dioraamasta,
+   * laatta kaupungin nimestä.
    */
   lehtitehtavat: [
-    { id: 'juliste', sivu: 2, otsake: 'JULISTE', palkinto: 'juliste', visa: KIRKKOSIIRTO_VISA },
+    { id: 'aarre', sivu: 2, otsake: 'AARTEEN AVAUS', palkinto: 'piste', visa: ANTIPA_VISA },
+    { id: 'juliste', sivu: 3, otsake: 'JULISTE', palkinto: 'juliste', visa: KIRKKOSIIRTO_VISA },
   ],
 
   /*
