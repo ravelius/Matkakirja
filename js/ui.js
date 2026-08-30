@@ -4168,21 +4168,42 @@ export class UI {
      * Yksi luku heti kirjoitusten jälkeen kelpaa kaikille: näkymä ei
      * muutu ketjun aikana, koska ketju ei liikuta karttaa.
      */
+    /*
+     * LAATTAPYRAMIDI PÄIVITTYY MYÖS LENNON AIKANA (omistajan
+     * TestFlight-kaappaus 30.8.2026: avauslento Lontoosta Ateenaan
+     * lensi TYHJÄN PERGAMENTIN yli — reittiviiva, kaksi punaista
+     * pistettä ja kaupunkien nimet, mutta ei karttaa lainkaan).
+     *
+     * JUURISYY. Tämä oli lennon ja raahauksen katveessa yhdessä
+     * rasteroinnin kanssa, ja vanhalla järjestelmällä se oli oikein:
+     * lauta oli KERRAN maalattu kuva, joka oli jo paikallaan ennen
+     * lennon alkua, joten lennon ajaksi riitti jäädyttää työ. Pyramidi
+     * ei ole maalattu kuva vaan HAKU: se lataa sen palan, joka on
+     * näkyvissä, eikä lennon aikana näy mitään mitä ei ole haettu.
+     * Kamera lensi siis alueelle, jonka laattoja ei koskaan pyydetty.
+     *
+     * Vika koski jokaista lentoa, ei vain avauslentoa
+     * (body.flight-active on päällä myös kaupunkien välisillä
+     * lennoilla, js/ui.js 16140).
+     *
+     * MIKSI TÄMÄ EI PALAUTA SITÄ 24 SEKUNTIA. Lennon katve on
+     * mitattu nimenomaan RASTEROINNILLE (24,4 s vs. 5,0 s, ks. alempi
+     * flight-active-ehto) — yksi ruutu vie satoja millisekunteja
+     * pääsäikeessä. Pyramidin päivitys on avaimellinen Map-vertailu,
+     * joka lisää ja poistaa muutaman <image>-solmun; alempi katve
+     * jää voimaan sellaisenaan, eikä lennon aikana rasteroida
+     * jatkossakaan.
+     *
+     * RAAHAUS JÄÄ KATVEESEEN. Kesken eleen ei ole tarpeen ladata,
+     * koska laatat esiladataan ruudullisen verran joka suuntaan
+     * (js/laattapyramidi.js) — yksi sormiliike ei ehdi paljastaa
+     * lataamatonta aluetta.
+     */
+    if (!this.kartanRaahaus) paivitaPyramidi(this);
     if (!this.kartanRaahaus && !document.body.classList.contains('flight-active')) {
       const nakyvaNyt = this.nakyvaAlue();
       this.paivitaLahivesi(nakyvaNyt);
       this.paivitaMaastonimet(nakyvaNyt);
-      /*
-       * LAATTAPYRAMIDIN NÄKYVÄT LAATAT SAMASTA KOHDASTA (pilotti lipun
-       * takana, js/laattapyramidi.js).
-       *
-       * Tämä on kartan ainoa "näkymä on asettunut" -piste — sama, josta
-       * maastonimet, atlas ja pohjacanvas päivittyvät — eikä pyramidi
-       * tarvitse muuta: se lataa sen palan, joka on näkyvissä. Kutsu
-       * palaa heti, ellei kytkin ole päällä, joten oletuspolulla tämä on
-       * yksi tyhjä funktiokutsu näkymää kohti.
-       */
-      paivitaPyramidi(this);
     }
     if (!this.taide || !this.taideRyhma) return;
     /*
