@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1368, teksti: 'Kameran maailmaksi arkki, uloszoomaus loysemmaksi' },
   { v: 1367, teksti: 'Arkin kalusteet uloimmille tasoille' },
   { v: 1366, teksti: 'Purun jaanteet: kyltti ja raja pois, merkit karttaan' },
   { v: 1365, teksti: 'Vanha lehtijarjestelma purettu, laatat ainoa kartta' },
