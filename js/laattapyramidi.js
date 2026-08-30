@@ -86,6 +86,43 @@ export function pyramidiKattaa(lauta) {
   return lauta === PYRAMIDIN_LAUTA;
 }
 
+/*
+ * ARKIN MITAT MYÖS ILMAN LUETTELOA.
+ *
+ * Kamera tarvitsee arkin heti ensimmäisessä sovituksessa (js/kartta.js
+ * boardBounds → ui.contentBox), mutta luettelo saapuu verkosta vasta
+ * piirron jälkeen. Ilman näitä lukuja ensimmäinen näkymä sovitettaisiin
+ * vanhaan lautaan ja hyppäisi luettelon saavuttua — ja offline-tilassa
+ * se jäisi vanhaan pysyvästi.
+ *
+ * LUVUT OVAT SAMAT KUIN pyramidi.json:issa (versio 2026-08-30) ja ne
+ * ovat arkin geometriaa: 12 000 yksikköä leveä miller-arkki, 84 °N…66 °S
+ * kartta-alaa ja sen ympärillä paperimarginaali kehyksineen. LUETTELO
+ * VOITTAA aina kun se on kädessä (pyramidinArkki lukee sen ensin), joten
+ * uusi ajo eri mitoilla korjaa itsensä; nämä ovat vain se, mitä kamera
+ * tietää ennen ensimmäistä vastausta.
+ */
+const ARKKI_VARALLA = Object.freeze({
+  x: 0, y: -1046.3149255312064, w: 12000, h: 7307.715927310571,
+});
+
+/**
+ * Laattapyramidin arkki laudan yksiköissä — tai null muille laudoille.
+ *
+ * TÄMÄ ON KAMERAN MAAILMA (omistajan iPad-havainto 30.8.2026:
+ * *"Toiseksi laajin kartta ei näytä koko karttaa vaan leikkaa ylhäältä
+ * ja alhaalta karttaa pois."*). Vanha `boardBounds` johti rajat
+ * kaupunkien ja koristeiden ääripisteistä, eikä se tiennyt arkista
+ * mitään: mitattu laatikko oli y 254…5345, kun arkin kartta-ala alkaa
+ * y −611:stä ja päättyy 5811:een. Grönlannin pohjoiskärki, Huippuvuoret
+ * ja JÄÄMERI-nimiö olivat laatoissa mutta kameran ulottumattomissa.
+ */
+export function pyramidinArkki(lauta) {
+  if (!pyramidiKattaa(lauta)) return null;
+  const arkki = luettelo?.arkki;
+  return (arkki?.w > 0 && arkki?.h > 0) ? arkki : ARKKI_VARALLA;
+}
+
 /* ------------------------------------------------------------ luettelo */
 
 /*
@@ -230,7 +267,17 @@ export function paivitaPyramidi(ui) {
   if (!luettelo) {
     // Ensimmäinen kutsu käynnistää haun ja palaa; piirto tulee heti kun
     // luettelo on kädessä.
-    void haeLuettelo().then((j) => { if (j && !ui.dead) paivitaPyramidi(ui); });
+    void haeLuettelo().then((j) => {
+      if (!j || ui.dead) return;
+      /*
+       * ARKKI ENSIN, LAATAT VASTA SITTEN. Kamera on siihen asti
+       * sovitettu varalukuihin (ARKKI_VARALLA); jos luettelon arkki on
+       * eri, näkymä on juuri nyt väärässä mittakaavassa eikä laattoja
+       * kannata laskea vanhalle rajaukselle.
+       */
+      ui.paivitaLaudanRajat?.();
+      paivitaPyramidi(ui);
+    });
     return;
   }
 
