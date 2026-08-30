@@ -220,8 +220,25 @@ const SAVYT = {
  * halutaan. Koneisto on poistettu; litistys jäi.
  */
 const SYVYYS = {
-  /* Osuus porrasaskeleesta, joka jää jäljelle (0 = tasainen meri). */
-  litistys: 0.20,
+  /*
+   * Osuus porrasaskeleesta, joka jää jäljelle (0 = tasainen meri).
+   *
+   * NOSTETTU 0,20 → 0,70 (omistaja 30.8.2026). Litistyksen AINOA
+   * peruste oli LEHTIEN SAUMAT: 23 lehden otoksessa oman meren
+   * keskisävy vaihteli L=199,9…211,2, ja ilman voimakasta litistystä
+   * naapurilehtien avomeri asettui eri sävyyn niin että sauma näkyi.
+   *
+   * LAATTAPYRAMIDISSA EI OLE SAUMOJA — koko maailma on yksi arkki,
+   * jonka jokainen pikseli lasketaan samasta ruudukosta samalla
+   * kaavalla. Peruste katosi, ja sen mukana syy hukata 80 %
+   * oikeasta syvyyssignaalista.
+   *
+   * Bandingin (omistajan alkuperäinen valitus) hoitaa nyt TIHEÄMPI
+   * SYVYYSRAMPPI (tools/fokuskartta/piirto.js SYVYYS), ei litistys:
+   * banding ei johtunut liiasta syvyyssignaalista vaan siitä, että
+   * rampissa oli seitsemän porrasta viidelle kilometrille.
+   */
+  litistys: 0.70,
   /*
    * GLOBAALI MEREN TAVOITESÄVY pohjakuvan sävyssä, ENNEN sävykäyrää —
    * käyrä ajetaan sen yli samalla kaavalla kuin meripikselille, jotta
@@ -566,8 +583,26 @@ const VESIVIIVAT_HARVA = {
   huojunta: 9,
 };
 
-/* VALINTA: kumpi vesiviivoitus ajetaan. */
-const VESIVIIVOITUS = VESIVIIVAT_TIHEA;
+/*
+ * VALINTA: kumpi vesiviivoitus ajetaan — vai kumpikaan.
+ *
+ * POIS PÄÄLTÄ 30.8.2026 (omistaja): *"nykyinen vesiviivoitus on
+ * geneerinen ja se saa jäädä pois kunnes se pohjautuu oikeaan
+ * dataan"*.
+ *
+ * Syy on rakenteellinen eikä säätökysymys: nämä viivat piirretään
+ * RANTAETÄISYYDESTÄ eivätkä syvyydestä. Ne näyttävät syvyyskäyriltä
+ * mutta eivät kerro syvyydestä mitään — mannerjalustan reuna,
+ * syvänmeren hauta ja keskiselänne saavat kaikki saman
+ * samankeskisen viivaston, koska ainoa muuttuja on etäisyys rantaan.
+ * Kaunis mutta valheellinen kartta on huonompi kuin karu ja tosi.
+ *
+ * Oikeat syvyyskäyrät (marching squares kiinteillä syvyyksillä
+ * ETOPO1:n batymetriasta) ovat oma eränsä. Koneisto jää tähän
+ * sellaisenaan: `VESIVIIVAT_TIHEA` ja `VESIVIIVAT_HARVA` ovat
+ * koskemattomina tallella, ja passi herää `null`-arvon vaihtamisella.
+ */
+const VESIVIIVOITUS = null;
 
 /*
  * MAANRAJAT ASTEEN TUMMEMMIKSI.

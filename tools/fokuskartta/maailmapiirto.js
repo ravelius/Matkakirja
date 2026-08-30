@@ -126,7 +126,7 @@ import {
 export function piirraMaailma(canvas, aineisto, asetukset) {
   const {
     bbox, projektio, leveys, tyyli = {}, esikatseluTausta,
-    koko = null, siirto = null,
+    koko = null, siirto = null, sisalto = null,
   } = asetukset;
 
   const px = leveys / bbox.w;
@@ -196,6 +196,15 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
   const arkkiSiirto = asetukset.arkki ? { x: GX, y: GY } : { x: 0, y: 0 };
   const kuvaX = (lon) => (lautaX(lon) - origo.x) * px;
   const kuvaY = (lat) => (lautaY(lat) - origo.y) * px;
+  /*
+   * LAUDAN KOORDINAATIT SUORAAN KUVAAN. Pysyvä sisältö (kaupungit,
+   * reitit, joet, vuoret, kohteet) on jo valmiiksi LAUDAN yksiköissä —
+   * se on esilaskettu laudan omalla kaavalla eikä sitä projisoida
+   * uudelleen. Kierto asteiden kautta olisi sekä turhaa työtä että
+   * pyöristystä, ja juuri se siirtäisi merkin pois laatasta.
+   */
+  const lautaKuvaX = (bx) => (bx - origo.x) * px;
+  const lautaKuvaY = (by) => (by - origo.y) * px;
   const lonPikselista = (x) => lautaLon(bbox.x + x / px);
   const latPikselista = (y) => lautaLat(bbox.y + y / px);
 
@@ -385,6 +394,28 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         edellinen = x;
       }
       if (suljettu) g.closePath();
+    }
+  };
+
+  /**
+   * Sama katkaisu LAUDAN koordinaateissa oleville viivoille.
+   *
+   * Erillinen funktio eikä kytkin viivaPolkuun: sauman tunnistus on
+   * molemmissa sama sääntö, mutta lähtöaineisto on eri avaruudessa, ja
+   * yksi funktio kahdella merkityksellä olisi juuri se paikka, jossa
+   * väärä avaruus menee huomaamatta läpi.
+   */
+  const lautaPolku = (g, viivat) => {
+    g.beginPath();
+    for (const viiva of viivat) {
+      let edellinen = null;
+      for (let i = 0; i < viiva.length; i++) {
+        const x = lautaKuvaX(viiva[i][0]);
+        const y = lautaKuvaY(viiva[i][1]);
+        if (edellinen === null || Math.abs(x - edellinen) > GW / 2) g.moveTo(x, y);
+        else g.lineTo(x, y);
+        edellinen = x;
+      }
     }
   };
 
@@ -609,6 +640,182 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     teksti('N', cx, cy - r * 1.45, {
       koko: (k.sade ?? 130) * 0.2, vari: 'rgba(74,52,33,0.62)', ank: 'center',
     });
+  }
+
+  /* ================================================ 8b. PYSYVÄ SISÄLTÖ
+   *
+   * Kaupungit, reitit, joet, järvet, vuoret ja kohteet POLTETAAN
+   * laattoihin (Raamattu, omistajan täsmennys 29.8.2026: *"kaikki
+   * reittipisteet ja kaupungit yms voidaan piirtaa suoraan yhteen
+   * karttaan"*). Pelille jää vain ohut pelitilakerros.
+   *
+   * === MERKINNÄT MITOITETAAN RUUTUUN, EIVÄT KARTTAAN ===============
+   *
+   * Tämä on se kohta, jossa pyramidi eroaa yhden arkin lehdestä, ja
+   * ero on helppo tehdä väärin (tehtiin ensin, mitattiin, korjattiin).
+   *
+   * Moottorin muut mitat kerrotaan S:llä, jolloin ne ovat SAMAN
+   * KOKOISIA KARTALLA joka tasolla — rannikon viiva ja paperin rae
+   * kuuluvat juuri niin. Nimiö ei kuulu. Peli valitsee tason ruudun
+   * tarkkuuden mukaan ja katsoo laattaa suunnilleen 1:1, joten
+   * `koko * S` pikseliä on `koko * S` LAITEPIKSELIÄ ruudulla: 14
+   * pikselin nimi olisi uloimmalla tasolla 1,5 px (näkymätön) ja
+   * syvimmällä 189 px (absurdi).
+   *
+   * Nimiöt, pisteet ja viivat mitoitetaan siksi LAITEPIKSELEINÄ, eli
+   * S jaetaan pois (`ruutuKoko`). Silloin ne ovat aina samankokoisia
+   * ruudulla ja kattavat sitä pienemmän maa-alan mitä lähemmäs
+   * zoomataan — täsmälleen niin kuin kartan kuuluu käyttäytyä.
+   *
+   * === YLEISTYS ====================================================
+   *
+   * Sama sisältö on joka tasolla, mutta ei samanlaisena: uloimmalla
+   * tasolla maailma on 675 pikseliä leveä, ja 261 kaupunkinimeä siinä
+   * olisi mustaa mössöä. Kynnykset ovat kuvapikseliä lautayksikköä
+   * kohti, ja ne on johdettu NIMIÖTIHEYDESTÄ: 261 kaupunkia jakautuu
+   * W pikselin levyiselle maailmalle noin W/16 pikselin välein, ja
+   * kuudenkymmenen pikselin nimi tarvitsee siitä vähintään sen verran.
+   * Tasolla z3 (5400 px) väli on 330 px, tasolla z2 (2700) 170 px ja
+   * tasolla z1 (1350) enää 84 px — siitä raja "kaikki nimet z3:sta,
+   * vain isot z2:sta".
+   */
+  if (sisalto) {
+    const pxY = px;                       // kuvapikseliä lautayksikköä kohti
+    const nakyy = (kynnys) => pxY >= kynnys;
+    /* Laitepikseli moottorin `koko`-yksiköiksi: teksti kertoo S:llä. */
+    const ruutuKoko = (laitepx) => laitepx / S;
+
+    /* --- joet: uomat ennen kaupunkeja, kuten vesi on ennen kaupunkia */
+    if (nakyy(0.11) && sisalto.joet?.length) {
+      ctx.save();
+      ctx.lineJoin = 'round';
+      ctx.lineCap = 'round';
+      ctx.strokeStyle = 'rgba(120,130,138,0.72)';
+      for (const joki of sisalto.joet) {
+        // Kaukaa vain pääjoet; lähempää kaikki.
+        if (joki.tarkeys > 1 && !nakyy(0.45)) continue;
+        ctx.lineWidth = joki.tarkeys <= 1 ? 1.4 : 1.0;
+        lautaPolku(ctx, [joki.pisteet]);
+        ctx.stroke();
+      }
+      ctx.restore();
+    }
+
+    /* --- reitit: isoisän verkosto katkoviivana ---------------------- */
+    if (nakyy(0.22) && sisalto.reitit?.length) {
+      ctx.save();
+      ctx.strokeStyle = 'rgba(120,88,54,0.42)';
+      ctx.lineWidth = 1.1;
+      ctx.setLineDash([5, 4]);
+      lautaPolku(ctx, sisalto.reitit.map((r) => [[r.ax, r.ay], [r.bx, r.by]]));
+      ctx.stroke();
+      /*
+       * Lentoreitit hennompina ja pidemmällä katkolla: aikakauden
+       * kartassa ne ovat höyrylaivalinjan tapainen merkintä eikä
+       * maantie, ja niitä on vähemmän.
+       */
+      if (sisalto.lentoreitit?.length) {
+        ctx.strokeStyle = 'rgba(120,88,54,0.26)';
+        ctx.lineWidth = 0.9;
+        ctx.setLineDash([9, 7]);
+        lautaPolku(ctx, sisalto.lentoreitit.map((r) => [[r.ax, r.ay], [r.bx, r.by]]));
+        ctx.stroke();
+      }
+      ctx.restore();
+    }
+
+    /* --- vuoret: kolmio ja nimi ------------------------------------- */
+    if (nakyy(0.22) && sisalto.vuoret?.length) {
+      ctx.save();
+      ctx.strokeStyle = 'rgba(74,52,33,0.78)';
+      ctx.lineWidth = 1.0;
+      for (const v of sisalto.vuoret) {
+        if (v.tarkeys > 1 && !nakyy(0.45)) continue;
+        const x = lautaKuvaX(v.x);
+        const y = lautaKuvaY(v.y);
+        const r = v.tarkeys <= 1 ? 5 : 4;
+        ctx.beginPath();
+        ctx.moveTo(x - r, y + r * 0.6);
+        ctx.lineTo(x, y - r * 0.8);
+        ctx.lineTo(x + r, y + r * 0.6);
+        ctx.stroke();
+        if (nakyy(0.45)) {
+          teksti(v.nimi, x, y + r * 2.4, {
+            koko: ruutuKoko(11), ank: 'center', vari: MUSTE,
+          });
+          if (v.korkeus && nakyy(0.9)) {
+            teksti(`${v.korkeus} m`, x, y + r * 2.4 + 12, {
+              koko: ruutuKoko(8.5), ank: 'center', vari: 'rgba(74,52,33,0.66)',
+            });
+          }
+        }
+      }
+      ctx.restore();
+    }
+
+    /* --- järvien nimet ---------------------------------------------- */
+    if (nakyy(0.45) && sisalto.jarvet?.length) {
+      for (const j of sisalto.jarvet) {
+        if (j.tarkeys > 1 && !nakyy(0.9)) continue;
+        teksti(j.nimi, lautaKuvaX(j.x), lautaKuvaY(j.y), {
+          koko: ruutuKoko(10), ank: 'center', tyylitys: 'italic',
+          vari: 'rgba(70,86,96,0.85)',
+        });
+      }
+    }
+
+    /* --- kohteet: pieni rengas -------------------------------------- */
+    if (nakyy(0.9) && sisalto.kohteet?.length) {
+      ctx.save();
+      ctx.strokeStyle = 'rgba(120,88,54,0.7)';
+      ctx.lineWidth = 1.0;
+      for (const k of sisalto.kohteet) {
+        ctx.beginPath();
+        ctx.arc(lautaKuvaX(k.x), lautaKuvaY(k.y), 3.2, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+      ctx.restore();
+    }
+
+    /* --- kaupungit: piste ja nimi ----------------------------------- */
+    if (nakyy(0.11) && sisalto.kaupungit?.length) {
+      ctx.save();
+      for (const c of sisalto.kaupungit) {
+        // Kaukaa vain isot (lähtökaupungit ja lentokentät).
+        if (!c.iso && !nakyy(0.22)) continue;
+        const x = lautaKuvaX(c.x);
+        const y = lautaKuvaY(c.y);
+        ctx.fillStyle = 'rgba(58,40,25,0.9)';
+        ctx.beginPath();
+        ctx.arc(x, y, c.iso ? 2.6 : 2.0, 0, Math.PI * 2);
+        ctx.fill();
+        // Rengas ison ympärille: aikakauden kartan pääkaupunkimerkintä.
+        if (c.iso) {
+          ctx.strokeStyle = 'rgba(58,40,25,0.75)';
+          ctx.lineWidth = 0.9;
+          ctx.beginPath();
+          ctx.arc(x, y, 4.6, 0, Math.PI * 2);
+          ctx.stroke();
+        }
+        // Nimet: isot z2:sta, kaikki z3:sta (ks. yleistys yllä).
+        if (c.iso ? nakyy(0.22) : nakyy(0.45)) {
+          /*
+           * NIMIÖN ANKKURI JA SIIRTYMÄ TULEVAT LAUDALTA (la/lx/ly).
+           * Ne on aseteltu käsin niin ettei nimi peitä rannikkoa eikä
+           * naapuria. Siirtymä on LAUDAN yksiköitä laudan omassa
+           * mittakaavassa; tässä se skaalataan nimiön kokoon, jottei
+           * se karkaa kauas pisteestä syvillä tasoilla.
+           */
+          const suhde = 11 / 13;   // nimiön koko / laudan oma nimiökoko
+          teksti(c.nimi, x + c.lx * suhde, y + c.ly * suhde, {
+            koko: ruutuKoko(c.iso ? 12 : 10.5),
+            ank: c.la === 'end' ? 'right' : (c.la === 'middle' ? 'center' : 'left'),
+            vari: MUSTE,
+          });
+        }
+      }
+      ctx.restore();
+    }
   }
 
   ctx.restore();                       // kartta-alan leikkuri auki

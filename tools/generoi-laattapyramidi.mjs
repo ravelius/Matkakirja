@@ -4,7 +4,7 @@
  *
  *   node tools/generoi-laattapyramidi.mjs <kohdekansio> \
  *        [--data <raaka-aineiston kansio>] [--tasot 0-7] \
- *        [--alue lon0,lat0,lon1,lat1] [--laatta 512] [--laatu 0.82] \
+ *        [--alue lon0,lat0,lon1,lat1] [--laatta 512] [--laatu 0.9] \
  *        [--lohko 4] [--kaariminuutit 3] [--muoto webp]
  *        [--harva] [--harvamittaus] [--saumatesti] [--kuiva]
  *
@@ -81,6 +81,7 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { keraaMaailma } from './fokuskartta/maailma.mjs';
+import { keraaSisalto, sisallonYhteenveto } from './fokuskartta/sisalto.mjs';
 import { laudanProjektio, SYVYYS } from './fokuskartta/piirto.js';
 
 const TAALLA = dirname(fileURLToPath(import.meta.url));
@@ -110,40 +111,57 @@ const LAUTA = {
  * ne on kirjattu tähän kokonaisina, jotta kukaan ei myöhemmin johda
  * niitä uudestaan hitusen eri tavalla:
  *
- *   ARKKI     76 °N … 76 °S, eli laudan y 0 … 6423. Symmetrinen kaista
- *             Millerin lieriössä: korkeus = 2 · |millerY(76)| · 12000/2π
- *             = 6422,99 lautayksikköä. Todennettu tässä työkalussa.
+ *   ARKKI     kartta-ala 84 °N … 66 °S (sama kuin yleislehdellä) ja sen
+ *             ylä- ja alapuolella atlaskehyksen paperimarginaali:
+ *             laudan y −1046,31 … 6261,41, korkeus 7307,72.
+ *             (Omistajan päätös 30.8.2026 illalla; kumoaa saman päivän
+ *             aiemman 76 °N … 76 °S -rajauksen, joka olisi leikannut
+ *             Grönlannin kärjen ja Huippuvuoret pois.)
  *   TIHEYS    syvimmällä tasolla 7,2 px / lautayksikkö
  *             = 240 px/aste = 4 px/kaariminuutti
  *             = 12 px yhtä kolmen kaariminuutin korkeussolua kohti.
  *   TASOT     8 kappaletta, kerroin 2: 675 → 86 400 px maailman leveys.
  *   LAATTA    512 × 512.
  *
- * HUOM — RISTIRIITA, JOKA ON KIRJATTAVA (ei ratkaistu tässä):
- * yleislehden kartta-ala on 84 °N … 66 °S, koska omistaja pyysi
- * 29.8.2026 nimenomaan lisää tilaa ylös ja alas (*"alhaalta ja
- * varsinkin ylhäältä leikkautuu liikaa karttaa pois"* — Grönlannin
- * pohjoiskärki 83,7 °N ja Huippuvuoret 80,8 °N). Lukittu 76 °N leikkaa
- * ne jälleen pois. Ero on 13,8 % arkin korkeudesta; ks.
- * docs/moduulit/laattapyramidi.md, avoimet päätökset.
+ * ORIGO EI SIIRRY, VAIKKA ARKKI KASVOI. Projektion vakiot ovat
+ * koskemattomat, joten y = 0 on yhä 76. leveyspiiri ja jokainen
+ * laudalle esilaskettu piste — kaupungit, reittipisteet, kohteet,
+ * eläintäyt — on entisellä paikallaan. Vain KUVAN laatikko alkaa
+ * laudan yläpuolelta, eli sen y on negatiivinen. Mekaanista muunnosta
+ * ei siis tarvita mihinkään (js/fokusmitat.js, packien
+ * laudat.maailmankartta), ja se on todennettu savukkeella: merkin ja
+ * maaston suhde ei liiku pikseliäkään.
  */
-const ARKIN_LEVEYSPIIRIT = { pohjoinen: 76, etela: -76 };
+const ARKIN_LEVEYSPIIRIT = { pohjoinen: 84, etela: -66 };
 /** Syvimmän tason tiheys, px / lautayksikkö. */
 const TIHEYS = 7.2;
 /** Tasojen määrä (kerroin 2). Syvin taso on TASOJA − 1. */
 const TASOJA = 8;
 
 /*
- * ATLASKEHYSTÄ EI POLTETA LAATTOIHIN TÄSSÄ ERÄSSÄ.
+ * ATLASKEHYS (Raamattu "LAATTAPYRAMIDI JA KARTAN PATINA", omistajan
+ * päätös 30.8.2026 illalla): kaukaisimmalla zoomtasolla kartta makaa
+ * paperilla — kermanvalkoinen marginaali, ohut kaksoisviivakehys
+ * kulmakorein, kartussi, painajanrivi, kompassiruusu ja mittajana.
  *
- * Lukittu arkki on tasan kartta-ala, joten kehyksen kermaiselle
- * paperimarginaalille ei ole arkilla tilaa — marginaali kasvattaisi
- * arkin korkeutta 13,8 % ja rikkoisi lukitut laattaluvut. Raamattu
- * vaatii atlaskehyksen uloimmalle tasolle, joten sille on löydettävä
- * paikka: joko korkeampi arkki tai pelin puolella piirretty ohut
- * kehyskerros (se on staattinen ja pieni). Kirjattu päätöskysymykseksi.
+ * KEHYS ON ARKILLA JOKA TASOLLA, EI VAIN ULOIMMALLA. Mitat skaalautuvat
+ * moottorin S:llä, joten kehys on KAIKILLA tasoilla saman kokoinen
+ * kartalla — vain terävämpi syvemmällä. Jos marginaali olisi vain
+ * uloimmalla tasolla, arkin korkeus vaihtelisi tasoittain eikä
+ * laattaruudukko olisi enää pyramidi.
+ *
+ * Marginaali on 232 ja 240 kuvapikseliä 6400 pikselin viitearkilla eli
+ * 435 ja 450 lautayksikköä. Vain ylhäällä ja alhaalla: kiertävällä
+ * laudalla ei ole sivureunaa.
  */
-const KEHYS = null;
+const KEHYS = {
+  yla: 232,
+  ala: 240,
+  otsikko: 'MATKAKIRJA',
+  alaotsikko: 'Unohdettu aarre',
+  painaja: 'Painettu Matkakirjan kustantamossa MDCCCLXXIII',
+  oikeudet: '© Matkakirja',
+};
 const KOMPASSI = { lon: -132, lat: -38, sade: 132 };
 const MERET = [
   { nimi: 'TYYNIMERI', lon: -142, lat: 4, koko: 26 },
@@ -174,14 +192,14 @@ const lippu = (nimi) => argv.includes(`--${nimi}`);
 if (!kohdekansio || kohdekansio.startsWith('--')) {
   console.error('Käyttö: node tools/generoi-laattapyramidi.mjs <kohdekansio> '
     + '[--data <kansio>] [--tasot 0-4] [--alue lon0,lat0,lon1,lat1] '
-    + '[--laatta 512] [--laatu 0.82] [--muoto webp] [--kuiva]');
+    + '[--laatta 512] [--laatu 0.9] [--muoto webp] [--kuiva]');
   process.exit(1);
 }
 
 const dataKansio = resolve(valitsin('data',
   process.env.FOKUSKARTTA_DATA ?? join(tmpdir(), 'matkakirja-fokuskartta')));
 const MUOTO = valitsin('muoto', 'webp');
-const LAATU = Number(valitsin('laatu', 0.82));
+const LAATU = Number(valitsin('laatu', 0.9));
 const LAATTA = Number(valitsin('laatta', 512));
 /*
  * LOHKO: montako laattaa kerrallaan piirretään YHTENÄ kuvana, joka
@@ -270,14 +288,25 @@ const kaava = laudanProjektio(projektio);
  * pyöristys 6423:een siirtäisi alareunaa 0,07 yksikköä ja tekisi
  * luvuista hitusen eri kuin päätöksessä.
  */
-const arkinBbox = {
+const laudanBbox = {
   x: 0,
   y: kaava.lautaY(ARKIN_LEVEYSPIIRIT.pohjoinen),
   w: pack.map.width,
   h: kaava.lautaY(ARKIN_LEVEYSPIIRIT.etela) - kaava.lautaY(ARKIN_LEVEYSPIIRIT.pohjoinen),
 };
-/* Kameran ikkuna on sama laatikko: marginaalia ei ole. */
-const laudanBbox = { ...arkinBbox };
+/*
+ * KAKSI LAATIKKOA. `laudanBbox` on KARTTA-ALA, johon kamera ajaa;
+ * `arkinBbox` on koko painettu arkki, eli kartta-ala ja sen ylä- ja
+ * alapuolella kehyksen paperimarginaali. Laatat pilkotaan ARKISTA,
+ * jotta marginaali on osa samaa ruudukkoa.
+ */
+const YKSIKKOA_PER_PIKSELI = laudanBbox.w / 6400;
+const arkinBbox = {
+  x: 0,
+  y: laudanBbox.y - KEHYS.yla * YKSIKKOA_PER_PIKSELI,
+  w: laudanBbox.w,
+  h: laudanBbox.h + (KEHYS.yla + KEHYS.ala) * YKSIKKOA_PER_PIKSELI,
+};
 
 /* Aineiston laatikko: koko lauta, kuten yleislehdellä. */
 const snap = (v, alas) => (alas ? Math.floor(v / RUUTU) : Math.ceil(v / RUUTU)) * RUUTU;
@@ -401,6 +430,16 @@ console.log(`  korkeusruudukko ${aineisto.korkeus.w} x ${aineisto.korkeus.h} (${
   + `· rannikko ${aineisto.rannikot.length} viivaa · järvet ${aineisto.jarvet.length}`);
 const aineistoSek = (Date.now() - aineistoAlkoi) / 1000;
 console.log(`  aineisto koossa ${aineistoSek.toFixed(1)} s`);
+
+/*
+ * PYSYVÄ SISÄLTÖ: kaupungit, reitit, joet, järvet, vuoret ja kohteet
+ * poltetaan laattoihin (ks. tools/fokuskartta/sisalto.mjs).
+ * `--ilman-sisaltoa` jättää ne pois — vertailukuvia varten.
+ */
+const sisalto = lippu('ilman-sisaltoa')
+  ? null
+  : await keraaSisalto(pack, join(JUURI, 'js', 'packs'));
+if (sisalto) console.log(`  sisältö         ${sisallonYhteenveto(sisalto)}`);
 
 /* ------------------------------------------------------ harva pyramidi */
 
@@ -663,6 +702,11 @@ writeFileSync(join(tyokansio, 'aineisto.json'), JSON.stringify({
   rannikot: aineisto.rannikot,
   jarvet: aineisto.jarvet,
 }));
+/*
+ * Sisältö omana tiedostonaan: se on satoja kilotavuja (jokien
+ * polyviivat), eikä sitä kannata ahtaa aineisto.jsonin sekaan.
+ */
+writeFileSync(join(tyokansio, 'sisalto.json'), JSON.stringify(sisalto ?? null));
 
 /*
  * AINEISTO PURETAAN KERRAN, EI KERRAN LAATTAA KOHTI.
@@ -677,6 +721,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
 <script type="module">
   import { piirraMaailma } from './maailmapiirto.js';
   const aineisto = await (await fetch('./aineisto.json')).json();
+  const sisalto = await (await fetch('./sisalto.json')).json();
   aineisto.korkeus.grid = new Int16Array(await (await fetch('./korkeus.bin')).arrayBuffer());
   aineisto.meri = aineisto.meri
     ? new Uint8Array(await (await fetch('./meri.bin')).arrayBuffer()) : null;
@@ -695,7 +740,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
    * enkooderille eri kokoisena — sauman todiste on pikseleissä.
    */
   window.__sauma = (perus, laatta, ruudukko) => {
-    piirraMaailma(kangas, aineisto, perus);
+    piirraMaailma(kangas, aineisto, { ...perus, sisalto });
     const iso = kangas.getContext('2d').getImageData(0, 0, kangas.width, kangas.height);
     let pahin = 0;
     let eroja = 0;
@@ -708,6 +753,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
       for (let rx = 0; rx < ruudukko; rx += 1) {
         piirraMaailma(kangas, aineisto, {
           ...perus,
+          sisalto,
           bbox: {
             x: perus.bbox.x + (rx * laatta * perus.bbox.w) / perus.leveys,
             y: perus.bbox.y + (ry * laatta * perus.bbox.w) / perus.leveys,
@@ -742,7 +788,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
     };
   };
   window.__lohko = (asetukset, laatta, tyyppi, laatu) => {
-    piirraMaailma(kangas, aineisto, asetukset);
+    piirraMaailma(kangas, aineisto, { ...asetukset, sisalto });
     const ulos = [];
     for (let ry = 0; ry * laatta < kangas.height; ry += 1) {
       for (let rx = 0; rx * laatta < kangas.width; rx += 1) {
@@ -778,6 +824,7 @@ const palvelin = createServer((req, res) => {
     '/maailmapiirto.js': join(TAALLA, 'fokuskartta', 'maailmapiirto.js'),
     '/piirto.js': join(TAALLA, 'fokuskartta', 'piirto.js'),
     '/aineisto.json': join(tyokansio, 'aineisto.json'),
+    '/sisalto.json': join(tyokansio, 'sisalto.json'),
     '/korkeus.bin': join(tyokansio, 'korkeus.bin'),
     '/meri.bin': join(tyokansio, 'meri.bin'),
   };

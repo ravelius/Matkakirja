@@ -4,8 +4,10 @@
 LUOVUTAAN" (omistaja 30.8.2026), "LAATTAPYRAMIDI JA KARTAN PATINA"
 (29.8.2026) ja "BITTIKARTTA VAIHEET 2-3, MITATUT RAJAT". Tämä
 dokumentti kertoo vain MITEN — ristiriidassa Raamattu voittaa.
-Työkalu: tools/generoi-laattapyramidi.mjs · moottori:
-tools/fokuskartta/maailmapiirto.js · peli: js/laattapyramidi.js.)*
+Työkalu: tools/generoi-laattapyramidi.mjs · sisältö:
+tools/fokuskartta/sisalto.mjs · moottori:
+tools/fokuskartta/maailmapiirto.js · peli: js/laattapyramidi.js ·
+savuke: tools/savukkeet/savuke-laattapyramidi.mjs.)*
 
 Omistajan sanatarkka vaatimus: *"koko maailma on kokoajan yksi iso
 bittikartta josta vain ladataan kulloinkin tarvittava palanen,
@@ -13,330 +15,300 @@ riippumatta siita onko maailma paalla vai ei? Maailma nappi pitaisi
 vain ja ainoastaan rajoittaa miten pitkalle pelaaja voi panoroida
 kartalla."*
 
-**Kaikki tämän dokumentin luvut on MITATTU 30.8.2026** tässä kontissa
-(Chromium /opt/pw-browsers/chromium, yksi säie), ellei niitä ole
-erikseen merkitty arvioksi. Mittausajot on lueteltu luvussa 8.
+**Kaikki luvut on MITATTU 30.8.2026** tässä kontissa (Chromium
+/opt/pw-browsers/chromium, yksi säie), ellei niitä ole merkitty
+arvioksi. Mittausajot luvussa 10.
 
 ---
 
 ## 1. Lukitut mitat
 
-Nämä ovat **omistajan päätös 30.8.2026**, eivät tämän työn
-johtopäätös. Työkalu kantaa ne vakioina, ja tämä ajo todensi ne
-laskennallisesti.
+Omistajan päätökset, eivät tämän työn johtopäätöksiä. Työkalu kantaa
+ne vakioina ja tämä ajo todensi ne laskennallisesti.
 
 | Asia | Arvo | Todennus |
 | --- | --- | --- |
-| Projektio | Millerin lieriö, leveys 12000 = 360°, lon0 −175, pohjoinen 76 | muuttumaton |
-| Arkki | 76 °N … 76 °S = laudan y 0 … 6422,99 | 2 · \|millerY(76)\| · 12000/2π = 6422,99 ✓ |
+| Projektio | Miller, leveys 12000 = 360°, lon0 −175, pohjoinen 76 | muuttumaton |
+| Kartta-ala | **84 °N … 66 °S** (sama kuin yleislehdellä) | y −611,31 … 5811,41 ✓ |
+| Arkki laattoineen | kartta-ala + atlaskehyksen marginaali | y **−1046,31**, korkeus **7307,72** ✓ |
 | Tiheys syvimmällä | 7,2 px / lautayksikkö | = 240 px/aste = 4 px/kaariminuutti ✓ |
-| Syvin taso | 86 400 × 46 246 px | 12000 · 7,2 = 86 400; 6422,99 · 7,2 = 46 246 ✓ |
+| Syvin taso | 86 400 × 52 616 px | 12000·7,2 ja 7307,72·7,2 ✓ |
 | Tasoja | 8, kerroin 2 (675 → 86 400 px) | ✓ |
 | Laatta | 512 × 512 | ✓ |
-| Laattoja syvimmällä | 169 × 91 = 15 379 | ✓ |
-| Laattoja yhteensä | 20 634 | ✓ (omistajan arvio ~20 500) |
-| Korkeusdata | 3 kaariminuuttia kaikilla tasoilla | = 0,05°, ruudukon oma tarkkuus ✓ |
+| Laattoja syvimmällä | 169 × 103 = 17 407 | ✓ |
+| Laattoja yhteensä | **23 340** | ✓ |
+| Korkeusdata | 3 kaariminuuttia kaikilla tasoilla | = 0,05° ✓ |
+| webp-laatu | 0,9 | ✓ |
 
-Korkeusdatan perustelu on kirjattu: ETOPO1:n natiivi 1′ on tässä
-mittakaavassa pelkkää kohinaa varjostuksessa (varjo lasketaan
-naapuriruutujen EROSTA), ja keskiarvoistava harvennus on
-alipäästösuodatin — pehmeämpi pinta, ei köyhempi. Syvimmällä tasolla
-yksi korkeussolu on 12 × 12 kuvapikseliä. Tarkempi ajo on myöhemmin
-pelkkä `--kaariminuutit`-arvon muutos **samalle laattaruudukolle**.
+Korkeusdatan perustelu: ETOPO1:n natiivi 1′ on tässä mittakaavassa
+kohinaa varjostuksessa (varjo lasketaan naapuriruutujen EROSTA), ja
+keskiarvoistava harvennus on alipäästösuodatin — pehmeämpi pinta, ei
+köyhempi. Syvimmällä tasolla yksi korkeussolu on 12 × 12 kuvapikseliä.
+Tarkempi ajo on myöhemmin pelkkä `--kaariminuutit`-arvon muutos samalle
+laattaruudukolle.
 
-**Kameran zoomiportaikko pysyy erillään.** Se on 1,5 × 6 porrasta
-(js/kartta.js `zoomiTasot`; maailmanlaudalla portaita on käytännössä
-14, näkyvä leveys 12 000 → 88 yksikköä). Laattatasoja ei sovitella
-siihen: asiakas valitsee **lähimmän** laattatason logaritmisesti,
-jolloin skaalaus on korkeintaan √2 ≈ 1,41× kumpaankin suuntaan.
+### Origo EI siirtynyt, vaikka arkki kasvoi
+
+Tämä oli suurin yksittäinen riski arkin vaihdossa, ja se osoittautui
+olemattomaksi. Projektion vakiot ovat koskemattomat, joten:
+
+- **y = 0 on yhä 76. leveyspiiri.** Todennettu: `lautaLat(0)` = 76,0000.
+- **Jokainen esilaskettu piste on entisellä paikallaan.** Todennettu:
+  Ateena laudan y-arvolla 1882 on 37,9699 °N, kuten ennenkin.
+- Vain KUVAN laatikko alkaa laudan yläpuolelta, eli sen y on
+  negatiivinen (−1046,31) — täsmälleen kuten yleislehdellä jo oli.
+
+**Mekaanista muunnosta ei siis tarvittu mihinkään**: js/fokusmitat.js,
+packien `laudat.maailmankartta` x/y ja kaikki merkkien koordinaatit
+ovat koskemattomia. Merkin ja maaston suhde on todennettu savukkeella
+(P5a: vierekkäisten laattojen väliin ei jää rakoa; sisältö piirretään
+samasta laudan koordinaatista kuin maasto).
 
 ## 2. Tasotaulu ja mitatut koot
 
 | z | leveys × korkeus px | px/yks | sar × riv | laattoja | Mpx | tavua/px | koko taso |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 0 | 675 × 361 | 0,056 | 2 × 1 | 2 | 0,2 | **0,126** | 0,03 Mt |
-| 1 | 1 350 × 723 | 0,113 | 3 × 2 | 6 | 1,0 | **0,111** | 0,11 Mt |
-| 2 | 2 700 × 1 445 | 0,225 | 6 × 3 | 18 | 3,9 | **0,088** | 0,34 Mt |
-| 3 | 5 400 × 2 890 | 0,450 | 11 × 6 | 66 | 15,6 | **0,067** | 1,04 Mt |
-| 4 | 10 800 × 5 781 | 0,900 | 22 × 12 | 264 | 62,4 | **0,052** | 3,24 Mt |
-| 5 | 21 600 × 11 561 | 1,800 | 43 × 23 | 989 | 249,7 | **0,036** | 9,10 Mt |
-| 6 | 43 200 × 23 123 | 3,600 | 85 × 46 | 3 910 | 998,9 | 0,027 … 0,044 | 27 … 44 Mt |
-| 7 | 86 400 × 46 246 | 7,200 | 169 × 91 | 15 379 | 3 995,7 | 0,020 … 0,027 | 81 … 108 Mt |
-| | | | | **20 634** | **5 327** | | **122 … 166 Mt** |
+| 0 | 675 × 411 | 0,056 | 2 × 1 | 2 | 0,3 | **0,203** | 0,06 Mt |
+| 1 | 1 350 × 822 | 0,113 | 3 × 2 | 6 | 1,1 | **0,203** | 0,22 Mt |
+| 2 | 2 700 × 1 644 | 0,225 | 6 × 4 | 24 | 4,4 | **0,180** | 0,80 Mt |
+| 3 | 5 400 × 3 288 | 0,450 | 11 × 7 | 77 | 17,8 | **0,138** | 2,45 Mt |
+| 4 | 10 800 × 6 577 | 0,900 | 22 × 13 | 286 | 71,0 | **0,095** | 6,76 Mt |
+| 5 | 21 600 × 13 154 | 1,800 | 43 × 26 | 1 118 | 284,1 | **0,061** | 17,21 Mt |
+| 6 | 43 200 × 26 308 | 3,600 | 85 × 52 | 4 420 | 1 136,5 | 0,042 … 0,076 | 48 … 86 Mt |
+| 7 | 86 400 × 52 616 | 7,200 | 169 × 103 | 17 407 | 4 546,0 | 0,029 … 0,044 | 132 … 200 Mt |
+| | | | | **23 340** | **6 061** | | **207 … 314 Mt** |
 
-**Lihavoidut tavua/px-luvut on mitattu koko maailmasta.** z6 ja z7 on
-mitattu Kreikan ja lähinaapureiden alueelta (0,044 ja 0,027) — se on
-maapainotteinen alue eli **yläraja**; alempi luku on mitatun sarjan
-oma trendi (suhde 0,75 tasoa kohti), joka on realistisempi koko
-maailmalle, jossa kaksi kolmasosaa on merta.
+**Lihavoidut tavua/px-luvut on mitattu koko maailmasta** (z0–z5, 1 513
+laattaa, 27,50 Mt). z6 ja z7 on mitattu Kreikan alueelta (0,076 ja
+0,044) — maapainotteinen eli **yläraja**; alempi luku on mitatun
+sarjan oma trendi (suhde 0,69 tasoa kohti), joka on koko maailmalle
+realistisempi, koska kaksi kolmasosaa on merta.
 
-**Tavua pikseliä kohti laskee tason mukana, ja se on rakenteellista.**
-Syvemmällä tasolla sama kuvapikselimäärä kattaa pienemmän maa-alan,
-joten sisältö on loivempaa ja webp pakkaa sen paremmin. Ainoa mikä ei
-harvene on paperin rae; se on pakkauskustannuksen pohja.
+Tavua/px laskee tason mukana rakenteellisesti: syvemmällä sama
+kuvapikselimäärä kattaa pienemmän maa-alan, joten sisältö on loivempaa.
+Ainoa mikä ei harvene on paperin rae.
 
-### Tärkein tulos: pyramidi on paljon pienempi kuin arvioitiin
-
-**122–166 Mt, ei 690 Mt.** Ero omistajan arvioon on nelin-viisinkertainen,
-ja se on mitattu eikä arvattu: koko maailma tasoilta z0–z5 (1 345
-laattaa) on **13,86 Mt**, ja syvät tasot skaalautuvat siitä mitatulla
-pakkaussuhteella. R2:n ilmaisraja on 10 Gt, joten pyramidi mahtuu
-sinne moneen kertaan — myös useana versiona rinnakkain.
+**Koko: 207–314 Mt.** Aiempi arvio 690 Mt oli neli-viisinkertainen
+ylitys; nyt luku on suurempi kuin edellisessä mittauksessa (122–166 Mt)
+kolmesta tunnetusta syystä: webp-laatu 0,82 → 0,9, arkin korkeus +14 %
+(atlaskehys) ja pysyvä sisältö laattoihin. R2:n ilmaisraja on 10 Gt.
 
 ## 3. Generointinopeus ja täysajon kesto
 
 | tapa | Mpx/s | laattaa/s |
 | --- | --- | --- |
 | laatta kerrallaan (`--lohko 1`) | 0,44 | 1,74 |
-| **lohko 4 × 4 (`--lohko 4`, oletus)** | **1,31** | **5,28** |
-| yksi iso arkki (vertailu) | 1,39 | — |
+| **lohko 4 × 4 (oletus)** | **1,17** | **4,67** |
 
-Lohkopiirto on **3,0 kertaa nopeampi** kuin laatta kerrallaan ja yltää
-94 %:iin yhden ison arkin nopeudesta. Ero ei ole pikselityössä vaan
-kiinteässä kustannuksessa: jokainen erillinen laatta varaa canvasin,
-ajaa kaksi koko kuvan `getImageData`/`putImageData`-kierrosta (rae ja
-reunahäivytys) ja pakkaa oman base64-siirtonsa. Lohko jakaa sen
-kuudellatoista.
+Lohkopiirto on ~3× nopeampi: kiinteä kustannus (canvas, kaksi koko
+kuvan `getImageData`-kierrosta, base64-siirto) jakautuu kuudellatoista.
 
-**Koko maailman täysajo: 5 327 Mpx / 1,31 Mpx/s = 1,13 tuntia yhdellä
-säikeellä.** Neljällä agentilla 17 min, kahdeksalla 8,5 min.
+**Koko maailman täysajo: 6 061 Mpx / 1,17 Mpx/s = 1,44 h yhdellä
+säikeellä.** Viidellä agentilla noin 17 min.
 
-Aineiston keruu on **1,6 s** välimuistista ja noin **50 s** kylmänä
-(ETOPO-maailmanruudukon haku ERDDAPista 45 s, Natural Earth 15 Mt).
-Se on kertakustannus ajoa kohti, ei laattaa kohti.
+Aineiston keruu on 1,6 s välimuistista ja ~50 s kylmänä. Pysyvän
+sisällön keruu on alle sekunnin.
 
-## 4. Harva pyramidi — mitattu, ja suositus on olla tekemättä sitä
+## 4. Pysyvä sisältö laatoissa
 
-Omistajan oletus oli, että umpimeren laattojen karsinta puolittaa
-pyramidin (20 500 → ~10 000 laattaa). **Mitattuna se ei tee sitä**, ja
-tavuissa se tekee vielä vähemmän.
+Raamattu (omistajan täsmennys 29.8.2026): *"kaikki reittipisteet ja
+kaupungit yms voidaan piirtaa suoraan yhteen karttaan, eika tarvita
+muita kikkoja kuin rajoitettu liikkuvuus"*. Sisältö poltetaan siis
+laattoihin **ennen täysajoa**, jottei pyramidia ajeta kahdesti.
 
-Karsinta on turvallinen vain, jos laatan tilalle maalattu **tasainen
-sävy** on silmälle sama asia. Ehtoja on siksi neljä: ei maata eikä
-järveä, ei asteverkon viivaa, ei valtameren nimeä eikä kompassia, ja
-syvyyden tuottama värivaihtelu enintään `--harva-raja` kanavaa.
+Mitattu kooste (tools/fokuskartta/sisalto.mjs):
 
-Karsinta laattamäärästä, koko maailma:
-
-| `--harva-raja` | z6 | z7 |
+| laji | määrä | lähde |
 | --- | --- | --- |
-| 2 (varovainen) | 3,4 % | 10,4 % |
-| 4 | 10,3 % | 22,0 % |
-| 8 | 19,7 % | 33,1 % |
-| 16 (sävy heittää jo 6 %) | 27,2 % | 39,8 % |
+| kaupungit | 261 | maailmankartta.js `cities` |
+| reitit | 408 | `edges` |
+| lentoreitit | 71 | `airRoutes` |
+| joet (polyviivat) | 123 | maailmankartta-nimet.js |
+| järvet | 38 | samasta |
+| vuoret | 52 | samasta |
+| kohteet | 197 | fokuskohteet-*.js (22 maata) |
 
-Mikä estää karsinnan z7:llä (raja 8): maata 4 559, asteverkko 3 243,
-syvyysvaihtelu 1 559, järvi 779, nimi 87, kompassi 64.
+Kaikki koordinaatit ovat **laudan yksiköitä**, eikä mitään projisoida
+uudelleen — juuri siksi merkit osuvat laattoihin pikselilleen.
 
-**Tavusäästö on noin puolet laattasäästöstä.** Mitattu z5:ltä oikeista
-tiedostokoista: 6,2 % laatoista = **3,4 % tavuista** (raja 8), ja
-2,4 % laatoista = 1,3 % tavuista (raja 4). Syy on ilmeinen jälkikäteen:
-karsittavat laatat ovat juuri ne, jotka pakkautuvat parhaiten.
+### Merkinnät mitoitetaan RUUTUUN, eivät karttaan
 
-Siis z7:llä raja 8 säästäisi noin 17 % tavuista eli **~18 Mt** — ja
-koko pyramidi on 122–166 Mt.
+Tämä on kohta, jossa pyramidi eroaa yhden arkin lehdestä, ja se tehtiin
+ensin väärin, mitattiin ja korjattiin.
 
-**Suositus: harvaa pyramidia ei kannata ottaa käyttöön.** Kolme syytä:
+Moottorin muut mitat kerrotaan `S`:llä, jolloin ne ovat saman kokoisia
+KARTALLA joka tasolla — rannikon viiva ja paperin rae kuuluvat juuri
+niin. **Nimiö ei kuulu.** Peli valitsee tason ruudun tarkkuuden mukaan
+ja katsoo laattaa noin 1:1, joten `koko · S` pikseliä on `koko · S`
+LAITEPIKSELIÄ ruudulla: 14 pikselin nimi olisi uloimmalla tasolla
+1,5 px (näkymätön) ja syvimmällä **189 px** (absurdi). Ensimmäinen
+toteutus teki juuri sen.
 
-1. Säästö on ~12 % kokonaisuudesta, ja kokonaisuus mahtuu R2:een
-   moninkertaisesti.
-2. **Karsitulta laatalta katoaa paperin rae.** Syvimmällä tasolla
-   rakeen mittakaava on S = 13,5, eli rakeen solu on parikymmentä
-   pikseliä — tasainen laatta rakeisten naapureiden vieressä EROTTUU.
-   Peli ei voi syntetisoida rakeen tilalle mitään, koska
-   suodattimet on kartan kerroksilla kielletty (iOS-sääntö,
-   tests/rules.test.mjs).
-3. Se tuo pysyvän monimutkaisuuden (laatasto-bittikartta, merisävy,
-   neljä karsintaehtoa) asiaan, joka ei ole ongelma.
+Nimiöt, pisteet ja viivat mitoitetaan siksi laitepikseleinä (`S`
+jaetaan pois), jolloin ne ovat aina samankokoisia ruudulla ja kattavat
+sitä pienemmän maa-alan mitä lähemmäs zoomataan — kuten kartan kuuluu
+käyttäytyä.
 
-Koneisto on silti **rakennettu ja mitattavissa** (`--harva`,
-`--harvamittaus`), jotta päätös voidaan tehdä luvuilla eikä
-mielipiteellä, ja jotta se on olemassa jos tarkkuutta joskus
-nostetaan. Oletuksena se on pois päältä.
+### Yleistys
 
-**Jos karsinta halutaan silti**, halvin lisäsäästö on antaa pelin
-piirtää asteverkko itse: se on 21 % z7:n laatoista, ja verkko on
-20 asteen välein vedettyjä suoria — pelille triviaali.
+Kynnykset ovat px/lautayksikkö ja johdettu **nimiötiheydestä**: 261
+kaupunkia jakautuu W pikselin maailmalle noin W/16 pikselin välein, ja
+60 pikselin nimi tarvitsee vähintään sen verran. z3 (5400 px) antaa
+330 px, z2 (2700) 170 px ja z1 (1350) enää 84 px.
 
-## 5. Säilytys, välimuisti ja nimeäminen
-
-```
-julisteet/pyramidi/<versio>/z<taso>/<sarake>/<rivi>.webp
-```
-
-- **Ämpäri (R2)**, `julisteet/`-juuren alla, koska
-  `vie-julisteet.yml` vie ämpäriin vain sen kansion (mitattu
-  24.8.2026: juuritason `fokus/` antoi 404).
-- **Versio on POLUSSA, ei kyselyparametrissa.** Ero nykyisiin lehtiin
-  (`?v=6`, js/media.js `FOKUS_VUOSIKERTA`) on tarkoituksellinen:
-  parametrin nosto pakottaa lataamaan *kaikki* lehdet uudestaan,
-  versiopolku vain ne laatat, joita oikeasti katsotaan. Uusi ajo saa
-  uuden versio-osan, yksikään vanha osoite ei muutu, ja laatat
-  kelpaavat siksi ikuiseen välimuistiin
-  (`Cache-Control: public, max-age=31536000, immutable`).
-- **Sekoittunut erä on rakenteellisesti mahdoton**: selain ei voi saada
-  puolta karttaa vanhasta ajosta ja puolta uudesta.
-- **Palvelutyöntekijä ei esilataa laattoja.** Ne kulkevat tavallista
-  ämpärikoria pitkin (sw.js), kuten lehdetkin.
-- **Luettelo `pyramidi.json`** kertoo arkin paikan laudalla,
-  laattakoon ja tasojen mitat; peli ei arvaa niistä mitään. Luettelo
-  **täydentyy** erä kerrallaan eikä korvaudu, jotta parven osa-ajot
-  eivät pyyhi toistensa tasoja. Mukana on tasokohtainen **laatasto**
-  (bittikartta siitä, mitkä laatat ovat olemassa) — ilman sitä harva
-  pyramidi tuottaisi tuhansia 404-pyyntöjä.
-
-### Kierto ei ole laattakoon monikerta — ja se on ansa
-
-Tason leveys on 675 · 2^z pikseliä, eikä **yksikään** niistä ole
-jaollinen 512:lla. Viimeinen sarake on siis vajaa. Kierto EI siksi ole
-"sarake modulo sarakkeiden määrä" tasavälisellä ruudukolla: se veisi
-laatan 128 pikseliä väärään kohtaan päivämääränrajan takana. Kierros on
-`taso.leveys` PIKSELIÄ, ja laatan paikka lasketaan kierroksittain —
-sarake *c* kierroksella *k* on pikselissä *k · leveys + c · laatta*
-(js/laattapyramidi.js).
-
-## 6. Mitä pilotista mitataan
-
-| Mitta | Mistä | Tila |
+| laji | kynnys px/yks | huom |
 | --- | --- | --- |
-| Levytila per taso, tavua/px | työkalun MITAT-tuloste | **mitattu**, luku 2 |
-| Generointiaika, Mpx/s | työkalun piirtoaika-rivi | **mitattu**, luku 3 |
-| Harvan säästö | `--harvamittaus` (laatat + tavut) | **mitattu**, luku 4 |
-| Sauman jatkuvuus | `--saumatesti`, raakojen pikselien vertailu | **mitattu**, luku 7 |
-| Laattojen määrä näkymässä | `__pyramidinMittarit().nakymassa` | **mitattu**, alla |
-| Latausaika per laatta | `__pyramidinMittarit().keskiMs / hitainMs` | **mitattu**, alla |
-| Muistinkäyttö | `__pyramidinMittarit().muistiMt` | **mitattu**, alla |
-| Kehysaika panoroinnissa | savukkeen rAF-mittaus | **mitattu**, alla (emulaattori) |
+| pääjoet | 0,11 | kaikki joet 0,45 |
+| kaupunkipisteet | 0,11 | vain isot; kaikki 0,22 |
+| reitit, lentoreitit | 0,22 | |
+| vuorisymbolit | 0,22 | pienemmät 0,45 |
+| isojen kaupunkien nimet | 0,22 | kaikki nimet 0,45 |
+| vuorten ja järvien nimet | 0,45 | korkeusluku 0,9 |
+| kohteet | 0,9 | |
 
-Peliin on rakennettu kahva `window.__pyramidinMittarit()`, ja
-savuke `tools/savukkeet/savuke-laattapyramidi.mjs` ajaa pelin
-pilottilaatoilla ja lukee sen. Ajo 30.8.2026, iPhone-profiili
-390 × 844, `deviceScaleFactor` 3 (= 1170 × 2532 laitepikseliä),
-kolme zoomiporrasta sisään Ateenaan:
+## 5. Atlaskehys
 
-```
-taso näkymässä           z7 (syvin)
-laattoja näkymässä       25
-purettu muisti           26,2 Mt   (25 × 512² × 4 tavua)
-laattoja ladattu         167 · epäonnistui 0
-latausaika               keski 787 ms · hitain 1916 ms
-päivityksiä              23 · viimeisin päivitys 0,1 ms
-kehysaika panoroinnissa  p50 16,7 ms · p95 37,9 ms (139 kehystä)
-```
+Toteutettu Raamatun kuvauksen mukaan uloimman tason näkymään:
+kermanvalkoinen paperimarginaali (232 ja 240 px 6400 px:n viitearkilla
+= 435 ja 450 lautayksikköä), ohut kaksoisviivakehys kulmakorein,
+kartussi "MATKAKIRJA — Unohdettu aarre" kaiverrustyylillä,
+painajanrivi "Painettu Matkakirjan kustantamossa MDCCCLXXIII" +
+huomaamaton © Matkakirja, kompassiruusu eteläiselle Tyynellemerelle ja
+mittakaavajana.
 
-Luvuista kolme kannattaa lukea tarkkaan:
+**Kehys on arkilla joka tasolla, ei vain uloimmalla.** Mitat
+skaalautuvat `S`:llä, joten kehys on kaikilla tasoilla saman kokoinen
+kartalla — vain terävämpi syvemmällä. Jos marginaali olisi vain
+uloimmalla tasolla, arkin korkeus vaihtelisi tasoittain eikä
+laattaruudukko olisi enää pyramidi.
 
-- **25 laattaa ja 26 Mt** puhelimen ruudulla syvimmällä tasolla. Se on
-  samaa suuruusluokkaa kuin yksi nykyinen yleislehti puhelimessa
-  pienennettynä (18 Mt) — mutta nyt kartalla ei ole sen lisäksi neljää
-  tai viittä maalehteä. **Muisti siis laskee, ei nouse.**
-- **Näkyvän palan päivitys maksaa 0,1 ms.** Se on se työ, jonka
-  panorointi teettää pääsäikeessä: laattojen valinta ja DOM-vertailu.
-  Vanha lehtijärjestelmä mittasi samassa kohdassa 140–677 ms
-  (js/fokuskartta.js, "KAKSI POHJANVAIHTOA YHDESSÄ KEHYKSESSÄ").
-- **Kehysaika p50 16,7 ms** eli täydet 60 kehystä sekunnissa
-  panoroinnissa. **TÄMÄ ON EMULAATTORILUKU.** Raamattu ("BITTIKARTTA
-  VAIHEET 2-3, MITATUT RAJAT") vaatii, että kehysaika mitataan
-  OIKEALLA iOS-LAITTEELLA, koska emulaattorin perustaso oli
-  harhaanjohtava. Luku on suuntaa antava, ei päätöksen peruste.
+**JÄÄMERI-nimiö (80,5 °N) mahtuu nyt mukaan**, koska kartta-ala yltää
+84 °N:ään.
 
-`epäonnistui 0` on oma tuloksensa: laatasto-bittikartta toimii, eikä
-peli pyydä yhtäkään puuttuvaa laattaa.
+## 6. Meri
 
-Latausaika (787 ms keskimäärin) on mitattu paikallisesta
-tiedostoreitityksestä eikä kerro verkosta mitään; se on mukana vain
-osoittamassa, että mittari toimii.
+### Vesiviivoitus pois
 
-## 7. Sauman todistus
+`tools/patina.mjs` `VESIVIIVOITUS = null`. Syy on rakenteellinen eikä
+säätökysymys: viivat piirretään **rantaetäisyydestä eivätkä
+syvyydestä**. Ne näyttävät syvyyskäyriltä mutta eivät kerro syvyydestä
+mitään — mannerjalustan reuna, syvänmeren hauta ja keskiselänne saavat
+kaikki saman samankeskisen viivaston. Koneisto (`VESIVIIVAT_TIHEA`,
+`VESIVIIVAT_HARVA`) jää koskemattomana tallelle.
 
-Laattapyramidin pahin mahdollinen vika on sauma: jos paperin rae,
-kuitujuovat tai mittakaava laskettaisiin laatan omasta nurkasta, joka
-laatta saisi saman rakeen ja ruudukko näkyisi ruudukkona. Moottori
-lukee ne siksi ARKIN koordinaateista (`koko` ja `siirto`,
-tools/fokuskartta/maailmapiirto.js).
+### Litistys 0,20 → 0,70
 
-`--saumatesti` piirtää saman alueen kerran yhtenä 1024 × 1024 kuvana ja
-kerran neljänä 512 × 512 laattana ja vertaa **raakoja pikseleitä**
-(tiedostovertailu ei kelpaa: webp-enkooderi saa kuvan eri kokoisena
-eikä tuota tavulleen samaa tulosta samoistakaan pikseleistä).
+Litistyksen ainoa peruste oli **lehtien saumat**: 23 lehden otoksessa
+oman meren keskisävy vaihteli L=199,9…211,2, ja ilman voimakasta
+litistystä naapurilehtien avomeri asettui eri sävyyn. **Pyramidissa ei
+ole saumoja**, joten peruste katosi ja sen mukana syy hukata 80 %
+syvyyssignaalista.
 
-| ikkuna | pahin kanavaero | eroavia kanavia |
-| --- | --- | --- |
-| pelkkää pikselisilmukkaa (paperi, meri, rae, hypsometria) | **0** | 0 / 4 194 304 |
-| vektoreita (rannikko, järvet, asteverkko) | 21…32 | 0,04…0,10 % |
+### Syvyysramppi silotettiin — ja ensimmäinen yritys mitattiin vääräksi
 
-**Tulos on täsmälleen se, mitä pitikin.** Ero on **nolla** kaikkialla,
-missä kuva on pikselisilmukan tulosta — eli kohinan, mittakaavan ja
-kehyksen laskenta on **todistetusti jatkuvaa laattojen yli**. Ero on
-nollasta poikkeava vain siellä, missä ikkunassa on vektoreita, ja se
-on hiusviivan reunapehmennyksen alle 1/8 pikselin heitto.
+Banding **on taite, ei portaiden vähyys**. Mitattuna vanhasta rampista
+syvän meren (alle −200 m) pahin gradientin taite oli **6,9 sävyä /
+1000 m**, koska väliä −120…−5000 m kannatteli neljä lineaarista jaksoa.
 
-Syy on selainmoottorin viivanpiirrossa eikä kartan kaavoissa. Se
-todennettiin: vektorien kuvakoordinaatit siirrettiin laskettavaksi
-ARKIN origosta laatan bboxin sijaan (`arkki`-asetus + kokonaisluku
-`ctx.translate`), mikä poisti pyöristyksen kaavoista — ero pieneni
-vain 8 % eikä kadonnut, mikä sulkee kaavat pois. Muutos pidettiin,
-koska se on käsitteellisesti oikein: vektorit elävät arkin
-koordinaatistossa.
+Ensimmäinen korjaus — kymmenen käsin asetettua välipistettä — mitattiin
+ja **hylättiin: se pahensi taitteen 12,3:een**, koska jokainen
+silmämääräinen piste tuo oman taitteensa. Tilalle tuli monotoninen
+kuutiollinen interpolointi (Fritsch–Carlson) alkuperäisten seitsemän
+ankkurin läpi, näytteistettynä 25 metrin välein (201 pistettä).
 
-Käytännössä: vierekkäiset laatat ovat joko samasta lohkosta (täysin
-jatkuvia) tai kahdesta lohkosta, jolloin niiden yhteisellä reunalla
-kulkeva rannikkoviiva voi olla enintään 32/255 eri sävyinen yhden
-pikselin matkalla. Silmälle näkymätön, eikä muodosta ruudukkoa, koska
-paperi ja rae — se mitä katse lukee pintana — ovat bitilleen jatkuvia.
+| | portaita | kokonaiskontrasti | pahin taite (alle −200 m) |
+| --- | --- | --- | --- |
+| vanha | 7 | 42,0 sävyä | 6,94 sävyä / 1000 m |
+| käsin tihennetty (hylätty) | 17 | 42,0 sävyä | 12,31 |
+| **monotoninen kuutio** | 201 | **42,0 sävyä** | **1,84** |
 
-**Moottorin laattatuki on lisäksi todistettu oletuspolulla
-no-opiksi:** `tools/tee-yleislehti.mjs --leveys 1600` tuottaa ennen ja
-jälkeen `maailmapiirto.js`-muutoksen saman tiedoston (md5
-`d5820ebf8548ebbe75e4f8242617e467`). Se on koko muutoksen turvaverkko:
-yleislehti ja maalehdet ajavat samaa moottoria, eikä laattatuki saanut
-muuttaa niistä yhtäkään pikseliä.
+Lisäksi todennettu: ramppi on monotoninen (0 nousevaa askelta 0…−5000
+m) ja kulkee ankkurien kautta 0,55 sävyn tarkkuudella.
 
-Todiste koskee **vain laattatukea**. Korkeusasteikon laajennus (luku 8)
-on erikseen tehty ja tarkoituksellinen muutos, ja se muuttaa yli
-2900 metrin maastoa — sen jälkeen sama ajo antaa md5:n
-`7c3fb3d790a0165e1454ddc3444ddcdb`.
+### Mitä tämä EI vielä tee — kerrottava havainto
 
-## 8. Korkeusasteikko yltää nyt huipulle
+**Pyramidin generointiputki ei aja patinapassia lainkaan.**
+`tools/patina.mjs` on erillinen jälkikäsittely, jonka
+`.github/workflows/patinoi-fokus.yml` ajaa valmiille lehdille. Siksi:
+
+- syvyysrampin silotus **vaikuttaa pyramidiin heti** (se on
+  piirtomoottorissa),
+- vesiviivoituksen sammutus ja litistyksen nosto **eivät vaikuta
+  pyramidiin lainkaan** — ne muuttavat vain vanhaa lehtiputkea.
+
+Raamattu vaatii patinan poltettavaksi laattoihin. Patinapassin
+liittäminen pyramidiin on siis oma tehtävänsä, eikä sitä tehty tässä
+erässä (kulukuuri). Mitattu sivuvaikutus: pyramidin meren sävyn
+vaihteluväli (p05…p95) on nyt 11 sävyä R-kanavalla; se on hillitty
+mutta ei tyhjä.
+
+Varsinaiset syvyyskäyrät (marching squares kiinteillä syvyyksillä) ovat
+myöhempi oma eränsä, eikä niitä tehty.
+
+## 7. Harva pyramidi — mitattu, päätetty POIS
+
+Karsinta laattamäärästä (`--harva-raja 8`, koko maailma, uusi arkki):
+
+| taso | laattoja pois |
+| --- | --- |
+| z5 | 7,1 % |
+| z6 | 21,5 % |
+| z7 | **37,0 %** |
+
+**Mutta tavusäästö on selvästi pienempi.** Mitattu z5:n oikeista
+tiedostokoista: 7,1 % laatoista = **4,7 % tavuista**, koska karsittavat
+laatat ovat juuri ne, jotka pakkautuvat parhaiten. z7:llä 37 %
+laatoista tarkoittaa siis noin 20 % tavuista eli ~29 Mt — kun koko
+pyramidi on 207–314 Mt.
+
+Päätös (omistaja/koordinaattori 30.8.2026): **ei oteta käyttöön.**
+Perustelut: säästö ~10 % kokonaisuudesta, karsitulta laatalta katoaa
+paperin rae (syvimmällä tasolla rakeen solu on parikymmentä pikseliä,
+ja tasainen laatta erottuisi rakeisten naapureiden vierestä), eikä peli
+voi syntetisoida rakeen tilalle mitään (suodattimet kielletty kartan
+kerroksilla, tests/rules.test.mjs). Koneisto jää paikalleen oletuksena
+pois (`--harva`, `--harvamittaus`).
+
+## 8. Korkeusasteikko yltää huipulle
 
 Asteikko päättyi 2900 metriin ja `lerpVari` clamppaa ylimpään
-portaaseen — **kaikki Tiibetistä Andeille oli täsmälleen samaa
-sävyä**. Maailmanlaajuisessa kartassa se on iso menetys.
-
-Lisätyt portaat (tools/fokuskartta/piirto.js `ASTEIKKO`):
-
-```
-{ m: 4200, v: [128,  76,  58] },
-{ m: 5500, v: [112,  72,  62] },
-{ m: 7000, v: [140, 122, 116] },
-{ m: 8850, v: [214, 208, 200] },
-```
+portaaseen — kaikki Tiibetistä Andeille oli samaa sävyä. Lisätyt
+portaat: 4200 / 5500 / 7000 / 8850 m, ylin pää ikuisen lumen harmaa ja
+valkoinen.
 
 **Portaat 2900 ja alle eivät muutu**, joten alle 2900 metrin maasto
-piirtyy pikselilleen kuten ennen. Ylin pää on ikuinen lumi aikakauden
-konvention mukaan.
+piirtyy pikselilleen kuten ennen. **Tämä ei silti tarkoita, että vanhat
+lehdet olisivat ennallaan**: jokainen lehti, jossa on yli 2900 metrin
+maastoa (Alpit, Himalaja, Andit, Kaukasus), piirtyy eri näköisenä — se
+on muutoksen tarkoitus. Todennettu md5:llä
+(`d5820eb…` → `7c3fb3d…`). **Jos `patinoi-fokus.yml` ajetaan uudestaan,
+js/media.js `FOKUS_VUOSIKERTA` on nostettava.**
 
-**Tämä EI tarkoita, että vanhat lehdet olisivat ennallaan.** Jokainen
-lehti, jossa on yli 2900 metrin maastoa — Alpit, Himalaja, Andit,
-Kaukasus — piirtyy tästä eteenpäin eri näköisenä, ja se on muutoksen
-tarkoitus. Todennettu: `tee-yleislehti --leveys 1600` antaa nyt md5:n
-`7c3fb3d790a0165e1454ddc3444ddcdb`, kun se ennen asteikkomuutosta
-antoi `d5820ebf8548ebbe75e4f8242617e467`.
+## 9. Sauma
 
-**Seuraus, joka on muistettava:** ämpärissä olevat lehdet eivät muutu
-itsestään, mutta jos ne ajetaan uudestaan
-(`.github/workflows/patinoi-fokus.yml`), on js/media.js
-`FOKUS_VUOSIKERTA` nostettava — muuten selaimiin jää vanha
-vuorikuvitus välimuistiin. Jos vanha lehtijärjestelmä puretaan
-pyramidin valmistuttua, asia raukeaa itsestään.
+`--saumatesti` piirtää saman alueen kerran isona kuvana ja kerran
+laattoina ja vertaa raakoja pikseleitä (tiedostovertailu ei kelpaa:
+webp-enkooderi ei tuota tavulleen samaa tulosta eri kokoiselle
+kuvalle).
 
-Todennettu kuvaparilla (z5, Tiibetin ylänkö): ennen tasainen ruskea
-läiskä, jälkeen ylänkö erottuu ja Himalajan rintama piirtyy. z7:llä
-Everestin ympäristössä korkeimmat huiput saavat harmaan ja lumen
-vaalean. Kuvat ovat kontin scratchpadissa (`himalaja-ennen/`,
-`himalaja-jalkeen/`, `everest/`).
+- **Ero on tasan 0** kaikkialla, missä kuva on pikselisilmukan tulosta
+  (paperi, rae, meri, hypsometria, varjostus). Kohinan, mittakaavan ja
+  kehyksen laskenta on **todistetusti jatkuvaa laattojen yli**.
+- Ero on 0,04–0,10 % kanavista siellä, missä on **vektoreita**,
+  enimmillään 32/255 hiusviivan reunapehmennyksessä. Syy on selaimen
+  viivanpiirrossa: vektorikoordinaatit siirrettiin laskettavaksi arkin
+  origosta (kokonaisluku-`translate`), ja ero pieneni vain 8 % — mikä
+  sulkee kartan kaavat pois.
 
-## 9. Pilotti — mitä ajettiin
+Lisäksi **kalusteet jatkuvat laatan yli**: kartussin teksti katkeaa
+"MATKA" ja jatkuu "AKIRJA" naapurilaatassa.
+
+**Moottorin laattatuki on todistettu oletuspolulla no-opiksi**
+(md5 `d5820ebf8548ebbe75e4f8242617e467` ennen ja jälkeen). Todiste
+koskee vain laattatukea; korkeusasteikko ja syvyysramppi ovat erillisiä
+tarkoituksellisia muutoksia.
+
+## 10. Pilotti ja pelin mittaukset
 
 ```
 node tools/generoi-laattapyramidi.mjs <kohde> --data <ne-kansio> --tasot 0-5
@@ -344,113 +316,82 @@ node tools/generoi-laattapyramidi.mjs <kohde> --data <ne-kansio> \
      --tasot 6-7 --alue 17,33,30,43
 ```
 
-- **z0–z5 koko maailmasta**: 1 345 laattaa, 13,86 Mt, 332,9 Mpx,
-  254,5 s. Pelin kaukonäkymä toimii kaikkialla heti.
-- **z6–z7 Kreikasta ja lähinaapureista** (lon 17…30, lat 33…43):
-  72 laattaa, 0,58 Mt, 44,6 s. Syvä zoomi siellä, missä patinan
-  tyyliparametrit on ajettu.
-- Pilotti levyllä yhteensä **18 Mt / 1 412 laattaa**, kontin
-  scratchpadissa (`scratchpad/pilotti/`). **Laatat eivät ole
-  repossa** — samoin kuin lehdet eivät ole.
+- **z0–z5 koko maailmasta**: 1 513 laattaa, 27,50 Mt, 378,7 Mpx, 324 s.
+- **z6–z7 Kreikasta ja lähinaapureista**: 60 laattaa, 0,79 Mt, 37 s.
+- Levyllä yhteensä **31 Mt / 1 573 laattaa**, kontin scratchpadissa
+  (`scratchpad/pilotti2/`). **Laatat eivät ole repossa.**
 
-**Alueajossa lohko hukkaa työtä reunoilla**: Kreikan ajossa 65 % (4 × 4
-lohkosta tarvittiin vain osa). Koko maailman ajossa hukka on 0,0 %.
-Parven osa-alueet kannattaa siksi rajata **lohkorajoille**.
+**Alueajossa lohko hukkaa työtä reunoilla** (Kreikan ajossa 62 %; koko
+maailman ajossa 0 %). Parven osa-alueet on rajattava lohkorajoille.
 
-Pelissä pilotti on **kehityslipun takana**: `?pyramidi=1` (muistetaan
-laitteelle, sama kaava kuin karttamittarilla). **Lippu pois =
-oletuspolku täsmälleen ennallaan**: js/laattapyramidi.js palaa heti
-eikä hae verkosta mitään, kerros jää tyhjäksi, eikä yksikään lehti
-muutu. Lippu päällä sammuttaa maalehdet ja yleislehden **kolmesta**
-paikasta ja piirtää tilalle laatat:
+Selaimessa (savuke, iPhone-profiili 390 × 844 dpr 3, kolme
+zoomiporrasta Ateenaan, syvin taso z7):
+
+```
+laattoja näkymässä       25
+purettu muisti           26,2 Mt
+epäonnistuneita hakuja   0
+näkyvän palan päivitys   0 ms (alle mittaustarkkuuden)
+kehysaika panoroinnissa  p50 16,7 ms · p95 30,3 ms
+```
+
+**Muisti laskee, ei nouse:** 26 Mt on samaa luokkaa kuin yksi nykyinen
+yleislehti puhelimessa (18 Mt), mutta nyt kartalla ei ole sen lisäksi
+neljää maalehteä. Päivityksen kustannus vertautuu vanhan järjestelmän
+140–677 ms:iin samassa kohdassa.
+
+**Kehysaika on EMULAATTORILUKU.** Raamattu vaatii mittauksen oikealla
+iOS-laitteella.
+
+Pilotti on **kehityslipun takana**: `?pyramidi=1`. **Lippu pois =
+oletuspolku ennallaan.** Lippu päällä sammuttaa lehdet kolmesta
+portista:
 
 | portti | mitä se sammuttaa |
 | --- | --- |
-| `atlasPaalla` | atlasryhmä, naapurilehdet, kaukozoomin yleislehti |
-| `nykyinenMaa` | nykyisen maan oma lehti |
+| `atlasPaalla` | atlasryhmä, naapurilehdet, yleislehti |
+| `nykyinenMaa` | nykyisen maan lehti |
 | `esilammitaFokuspohja` | saapumisen esilataus |
 
-Kolmas löytyi vasta savukkeesta: esilämmitys on kartan ainoa lehtihaku,
-joka ei kulje kahden ensimmäisen portin läpi, ja ilman sitä ehtoa lippu
-päällä haettiin yhä megatavun webp, jota mikään ei piirrä. Savukkeen
-väite P2b vartioi tätä.
+Kolmas löytyi vasta savukkeesta; sitä vartioi väite P2b.
 
-## 10. Siirtymä vaiheittain
+## 11. Siirtymä
 
-**Vaihe 1 — pilotti (tämä erä).** Työkalu, moottorin laattatuki, pelin
-lataaja lipun takana, mittaukset. Vanhaa lehtijärjestelmää EI kosketa.
+**Vaihe 1 — pilotti (tämä erä).** Työkalu, moottorin laattatuki, pysyvä
+sisältö, atlaskehys, pelin lataaja lipun takana, mittaukset.
 
-**Vaihe 2 — täysgenerointi agenttiparvella.** Laatat ovat toisistaan
-riippumattomia ja luettelo täydentyy erä kerrallaan, joten työ
-jakautuu luonnostaan. z7 on 75 % kaikesta työstä.
+**Vaihe 2 — täysgenerointi parvella.** z7 on 75 % työstä.
 
-| agentti | erä | Mpx | aika @1,31 Mpx/s |
+| agentti | erä | Mpx | aika @1,17 Mpx/s |
 | --- | --- | --- | --- |
-| 1 | z0–z6 kokonaan | 1 331 | 17 min |
-| 2–5 | z7 neljänä pituuskaistana (43 saraketta / agentti) | 999 kukin | 13 min kukin |
+| 1 | z0–z6 kokonaan | 1 515 | 22 min |
+| 2–5 | z7 neljänä pituuskaistana (43 saraketta / agentti) | 1 137 kukin | 16 min kukin |
 
-**Kokonaisaika noin 20 minuuttia viidellä agentilla**; yksi agentti
-tekisi saman 1,13 tunnissa. Kaistajako pituusasteina on turvallisin:
-laatta ei koskaan riipu naapurilaatasta, koska kaikki lasketaan arkin
-koordinaateista. Rajat lohkorajoille (sarake jaollinen neljällä).
+Kokonaisaika **noin 25 minuuttia viidellä agentilla**. Kaistarajat
+lohkorajoille (sarake jaollinen neljällä). Laatta ei koskaan riipu
+naapurilaatasta, koska kaikki lasketaan arkin koordinaateista.
 
-Parvi on pieni juuri siksi, että työ osoittautui neljä kertaa
-kevyemmäksi kuin arvioitiin — kymmenen agenttia olisi tässä
-kokoluokassa pelkkää käynnistyskustannusta.
+**Vaihe 3 — vanhan lehtijärjestelmän purku omana eränään.** Purettavat:
+js/fokuskartta.js (maalehdet, atlas, yleislehti, lehtivalinta,
+esilämmitys, muistipienennys), reunahäivytys (moottorin osio 11),
+`bbox`/`rajaus`-kaksoislaatikko, **v1346:n jättilaislehtiväistö**,
+per-lehti-resoluutioerot (RUS), js/packs/fokus-grc.js -taulut,
+js/media.js `FOKUS_ALIPOLKU`/`FOKUS_VUOSIKERTA`/`fokuskarttaUrl`,
+tools/tee-fokuskartta.mjs, tools/tee-yleislehti.mjs,
+tools/fokuskartta/maat.mjs, patinoi-fokus.yml, savukkeet
+`savuke-fokuskartta`, `savuke-atlas-purku`, `savuke-lehtimuisti`,
+`savuke-fokusvirta`, ja ämpäristä `julisteet/fokus/`.
 
-**Vaihe 3 — vanhan lehtijärjestelmän purku, omana eränään.** Mikään ei
-saa jäädä kummittelemaan:
+**Maailma-nappi vaiheen 3 jälkeen** ei vaihda karttaa vaan vain
+löysentää panorointirajoja.
 
-- `js/fokuskartta.js` (3 700 riviä) — maalehdet, atlasryhmä,
-  yleislehti, lehtivalinta ja -budjetti, esilämmitys, muistipienennys.
-- **Reunahäivytys** — moottorin osio 11. Pyramidissa ei ole reunaa,
-  johon sulattaa.
-- **Saumat ja vuoto** — `bbox` vs. `rajaus` -kaksoislaatikko koko
-  putkessa (tools/tee-fokuskartta.mjs, js/packs/fokus-grc.js).
-- **v1346:n jättilaislehtiväistö** — Raamattu sanoo suoraan, että
-  pyramidi kumoaa sen.
-- **Per-lehti-resoluutioerot** (RUS-ongelma) poistuvat
-  rakenteellisesti.
-- `js/packs/fokus-grc.js` `FOKUS_POHJAT`, `YLEISLEHTI`,
-  `FOKUS_LAUTAPROJEKTIOT`, `FOKUS_LISANIMET`.
-- `js/media.js` `FOKUS_ALIPOLKU`, `FOKUS_VUOSIKERTA`, `fokuskarttaUrl`.
-- `tools/tee-fokuskartta.mjs`, `tools/tee-yleislehti.mjs`,
-  `tools/fokuskartta/maat.mjs`, `.github/workflows/patinoi-fokus.yml`.
-- Savukkeet `savuke-fokuskartta.mjs`, `savuke-atlas-purku.mjs`,
-  `savuke-lehtimuisti.mjs`, `savuke-fokusvirta.mjs` — nämä testaavat
-  purettavaa mekaniikkaa ja korvataan pyramidin omalla savukkeella.
-- Ämpäristä `julisteet/fokus/` kokonaan.
+## 12. Avoimet
 
-**Purun ehto:** pyramidi kattaa kaikki käytöt — myös katselutilan
-(`?lauta=`), kehittäjän maailmanäkymän ja turvatilan.
-
-**Maailma-nappi vaiheen 3 jälkeen** ei vaihda karttaa vaan **vain
-löysentää panorointirajoja** (Raamattu). Maatilassa panorointi
-rajataan maan ympärille; kartta on molemmissa sama laatasto.
-
-## 11. Avoimet päätökset
-
-1. **Arkin leveyspiirit: 76 °N vai 84 °N?** Lukittu arkki on
-   76 °N … 76 °S. Yleislehden kartta-ala on 84 °N … 66 °S, koska
-   omistaja pyysi 29.8.2026 nimenomaan lisää tilaa (*"alhaalta ja
-   varsinkin ylhäältä leikkautuu liikaa karttaa pois"*): Grönlannin
-   pohjoiskärki on 83,7 °N ja Huippuvuoret 80,8 °N, ja **lukittu
-   76 °N leikkaa ne jälleen pois**. Laajennus 84 °N … 66 °S maksaa
-   +13,8 % arkin korkeutta eli noin +2 100 laattaa ja +17 Mt. Tämä on
-   halpa korjaus, jos se on toivottu.
-2. **Atlaskehykselle ei ole tässä arkissa tilaa.** Kartussi,
-   mittajana, painajanrivi ja kermainen paperimarginaali vaativat
-   marginaalin kartta-alan ulkopuolelle; lukittu arkki on tasan
-   kartta-ala. Raamattu vaatii kehyksen uloimmalle tasolle. Kaksi
-   vaihtoehtoa: korkeampi arkki (kohta 1 hoitaisi tämänkin) tai pelin
-   piirtämä ohut kehyskerros (staattinen ja pieni). **Pilotissa kehys
-   on pois päältä**, jotta lukitut laattaluvut pitävät.
-3. **Harva pyramidi: suositus on jättää tekemättä** (luku 4).
-4. **Kaupungit, reittipisteet ja kohteet laattoihin.** Raamattu
-   vaatii, että kaikki pysyvä poltetaan laattoihin koko maailmasta.
-   Tässä erässä laatoissa on topografia, meri, rannikko, järvet,
-   asteverkko ja valtamerten nimet. Nimien ja kaupunkien siirto tähän
-   moottoriin kannattaa tehdä **ennen** täysgenerointia — muuten
-   pyramidi ajetaan kahdesti.
-5. **webp-laatu 0,82.** Pilotti ajettiin sillä; yleislehti käyttää
-   0,9. Ero on noin 30 % tavuja. Omistajan silmä ratkaisee laitteella.
+1. **Patinapassi ei ole vielä osa pyramidia** (luku 6). Raamattu
+   vaatii patinan laattoihin; se on oma tehtävänsä.
+2. **Syvyyskäyrät oikeasta datasta** — päätetty myöhemmäksi eräksi.
+3. **Kaupunkinimien törmäykset.** Nimet ladotaan laudan omilla
+   la/lx/ly-siirtymillä eikä törmäyksenvälttelyä ole; tiheimmillä
+   alueilla (Keski-Eurooppa z3) nimet voivat mennä päällekkäin.
+   Ei korjattu tässä erässä — vaatii ladonta-algoritmin ja on oma
+   työnsä.
