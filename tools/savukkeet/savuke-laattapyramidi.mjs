@@ -195,7 +195,17 @@ vaadi('P4b lähikuvassakaan ei tule 404:iä', m2.epaonnistui === 0, `404 ${m2.ep
  */
 const raot = await sivu.evaluate(() => {
   const ui = window.matkakirja.ui;
+  /*
+   * VAIN TARKAN TASON LAATAT. Kerroksessa on myös karkea pohja (kaksi
+   * tasoa alempaa, js/laattapyramidi.js sääntö 2b), ja sen laatat
+   * osuvat joka neljännellä rivillä täsmälleen samalle y-arvolle kuin
+   * tarkan tason laatat. Tasot sekaisin mitattuna "vierekkäisten väli"
+   * olisi karkean laatan ja seuraavan tarkan laatan väli — kolme
+   * tarkkaa laattaa, jotka ovat kyllä olemassa, mutta eri kerroksessa.
+   */
+  const z = String(globalThis.__pyramidinMittarit().taso);
   const laatat = [...ui.pyramidiKerros.querySelectorAll('image.pyramidi-laatta')]
+    .filter((k) => k.dataset.taso === z)
     .map((k) => ({
       x: parseFloat(k.getAttribute('x')),
       y: parseFloat(k.getAttribute('y')),
@@ -234,6 +244,67 @@ vaadi('P5a vierekkäisten laattojen väliin ei jää rakoa',
  * Poltettu nimi oli tässä profiilissa (dpr 3) noin 3,5 CSS-pikseliä;
  * ladotun on oltava 10 ... 13 riippumatta pikselitiheydestä.
  */
+/* ============ P7: ESILATAUS JA KARKEA POHJA =========================
+ *
+ * Omistajan iPad-havainto 30.8.2026: panoroinnin jälkeen ruudun
+ * yläosassa näkyi TYHJÄ KARTTAPOHJA, ja *"miksi zoomatessa uusi kartta
+ * latautuu hitaasti?"*. Molemmat korjattiin samalla kahtiajaolla:
+ * NOUDETAAN laajalti (verkko ja välimuisti ovat halpoja), KIINNITETÄÄN
+ * kapeasti (purettu bittikartta on kallis), ja kaiken alla on karkea
+ * pohja, joka ei koskaan tyhjene.
+ *
+ * Nämä väitteet vartioivat sitä, ettei kumpikaan puoli katoa
+ * myöhemmässä siivouksessa — ja P7c nimenomaan sitä, ettei ruudulla ole
+ * missään vaiheessa TYHJÄÄ, mikä on koko korjauksen tarkoitus.
+ */
+console.log('\n--- P7 esilataus ja karkea pohja ---');
+
+/** Kuinka suuri osa karttaruudusta on LADATTUJEN laattojen peitossa. */
+const peitto = () => sivu.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  const r = ui.mapPane.getBoundingClientRect();
+  const laatikot = [...ui.pyramidiKerros.querySelectorAll('image.pyramidi-laatta')]
+    .filter((k) => k.dataset.ladattu === '1')
+    .map((k) => k.getBoundingClientRect());
+  const N = 24;
+  let osuu = 0;
+  for (let i = 0; i < N; i += 1) {
+    for (let j = 0; j < N; j += 1) {
+      const x = r.left + ((i + 0.5) / N) * r.width;
+      const y = r.top + ((j + 0.5) / N) * r.height;
+      if (laatikot.some((b) => x >= b.left && x <= b.right && y >= b.top && y <= b.bottom)) osuu += 1;
+    }
+  }
+  return osuu / (N * N);
+});
+
+const m7 = await mittarit(sivu);
+vaadi('P7a karkea pohjataso on kartan alla',
+  m7.karkeita > 0, `karkeita ${m7.karkeita}`);
+vaadi('P7b esilataus noutaa laattoja näkymän ulkopuolelta',
+  m7.esiladattu + m7.esijonossa > 0,
+  `esiladattu ${m7.esiladattu}, jonossa ${m7.esijonossa}`);
+vaadi('P7c kiinnitettyjä on enemmän kuin ruudulla mutta muisti pysyy maltillisena',
+  m7.nakymassa > m7.ruudulla && m7.muistiMt < 60,
+  `kiinnitetty ${m7.nakymassa}, ruudulla ${m7.ruudulla}, muisti ${m7.muistiMt} Mt`);
+
+/*
+ * P7d: ZOOMATESSA EI TYHJÄÄ. Sääntö 2 (vanha taso jää alle) ja sääntö
+ * 2b (karkea pohja) tarkoittavat yhdessä, ettei ruudulle voi jäädä
+ * paljasta pergamenttia hetkeksikään. Mitataan heti zoomiportaan
+ * jälkeen, kun uuden tason laatat ovat vielä matkalla.
+ */
+await sivu.evaluate(() => { window.matkakirja.ui.kartta.zoomaaPainikkeella(-1); });
+let pieninPeitto = 1;
+for (let i = 0; i < 12; i += 1) {
+  pieninPeitto = Math.min(pieninPeitto, await peitto());
+  await sivu.waitForTimeout(40);
+}
+vaadi('P7d zoomatessa kartta ei näytä tyhjää missään vaiheessa',
+  pieninPeitto > 0.98, `pienin peitto ${(pieninPeitto * 100).toFixed(1)} %`);
+await sivu.evaluate(() => { window.matkakirja.ui.kartta.zoomaaPainikkeella(1); });
+await sivu.waitForTimeout(1500);
+
 console.log('\n--- P6 paikannimet ---');
 const nimitila = () => sivu.evaluate(() => {
   const ui = window.matkakirja.ui;
@@ -332,8 +403,13 @@ const m3 = await mittarit(sivu);
 
 console.log('\nMITAT (emulaattori, iPhone-profiili 390x844 dpr 3)');
 console.log(`  taso näkymässä      z${m3.taso}`);
-console.log(`  laattoja näkymässä  ${m3.nakymassa}`);
-console.log(`  purettu muisti      ${m3.muistiMt} Mt (laatat × 512² × 4 tavua)`);
+console.log(`  laattoja kiinnitetty ${m3.nakymassa} (karkeaa pohjaa ${m3.karkeita})`);
+console.log(`  niistä ruudulla     ${m3.ruudulla}`);
+// Ruudun ulkopuolista laattaa selain ei pura ennen kuin se maalataan,
+// joten arvio lasketaan ruudulla olevista; vanha kaava on yläraja.
+console.log(`  purettu muisti      ${m3.muistiMt} Mt (ruudulla olevat × 512² × 4 tavua`
+  + ` · yläraja kaikille kiinnitetyille ${m3.muistiKattoMt} Mt)`);
+console.log(`  esiladattu          ${m3.esiladattu} laattaa · jonossa ${m3.esijonossa}`);
 console.log(`  laattoja ladattu    ${m3.ladattu} · epäonnistui ${m3.epaonnistui}`);
 console.log(`  latausaika          keski ${m3.keskiMs} ms · hitain ${m3.hitainMs} ms`);
 console.log(`  päivityksiä         ${m3.paivityksia} · viimeisin ${m3.viimeisinPaivitysMs} ms`);

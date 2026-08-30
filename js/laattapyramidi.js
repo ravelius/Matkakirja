@@ -30,18 +30,35 @@
  * KARTTAKUOREN SISÄLLÄ"). Ruutuavaruudessa elävä canvas mitattiin
  * kahdeksan kertaa hitaammaksi, eikä sitä siis tehdä.
  *
- * === KOLME SÄÄNTÖÄ =================================================
+ * === NELJÄ SÄÄNTÖÄ =================================================
  *
- * 1. VAIN NÄKYVÄT LAATAT, JA PUSKURI YMPÄRILLE. Näkyvän alueen
- *    ympärille ladataan yhden laatan reunus, jotta yksi sormiliike ei
- *    ehdi paljastaa tyhjää. Sama peruste kuin laudan oman bittikartan
- *    täydennyksellä (js/ui.js taydennaTaide).
+ * 1. NOUTO ON LAAJA, KIINNITYS KAPEA. Näkyvän alueen ympäriltä
+ *    NOUDETAAN ruudun verran joka suuntaan (omistajan iPad-havainto
+ *    30.8.2026: *"Kartta pitää esiladata ennen siirtoa kuten se
+ *    vanhempi kartta... lataa pelaajan näkymän ympäriltä ruudun verran
+ *    joka suuntaan valmiiksi niin panorointi ei voi näyttää tyhjää
+ *    karttapohjaa."*), mutta DOMiin KIINNITETÄÄN vain kapea reunus.
+ *    Ks. seuraava osio: nämä kaksi ovat eri hintaisia.
  *
  * 2. VANHA TASO EI KATOA ENNEN KUIN UUSI ON PAIKALLAAN. Zoomatessa
- *    taso vaihtuu, ja jos edellisen tason laatat poistettaisiin heti,
- *    ruudulla välähtäisi tyhjä pergamentti sen sekunnin, jonka uudet
- *    laatat latautuvat. Vanha taso jää siksi alle kunnes uuden tason
- *    näkyvät laatat ovat kaikki latautuneet.
+ *    taso vaihtuu, ja jos edellisen tason laatat poistetaan heti,
+ *    ruudulla on tyhjää sen ajan, jonka uudet laatat latautuvat.
+ *    Sääntö oli kirjoitettu tähän jo pilotissa, mutta KOODI EI
+ *    NOUDATTANUT SITÄ: poisto ajettiin samassa synkronisessa
+ *    päivityksessä, siis ennen kuin yksikään uusi laatta oli perillä.
+ *    Juuri se oli omistajan havainto 30.8.2026 (*"Miksi zoomatessa
+ *    uusi kartta latautuu hitaasti?"*). Nyt vanha taso jää uusien alle
+ *    ja poistuu vasta kun uuden tason NÄKYVÄT laatat ovat load-
+ *    tapahtuneet — tai kun kahden sekunnin katto täyttyy, ettei yksi
+ *    saapumaton laatta jätä kahta tasoa päällekkäin (paivitaKerros).
+ *
+ * 2b. KARKEA POHJA ON AINA ALLA. Näkyvän alueen laatat pidetään myös
+ *    KAKSI TASOA karkeampina omassa alakerroksessaan. Sama ala on
+ *    silloin 1/16 laattoja, eli kuorma on olematon — ja ruudulla se
+ *    tarkoittaa, ettei tyhjää karttapohjaa voi näkyä missään
+ *    tilanteessa: pahimmillaan kartta on hetken sumea ja terävöityy.
+ *    Näin tekee jokainen karttakirjasto, ja se on halvempi kuin mikä
+ *    tahansa reunuksen kasvatus.
  *
  * 3. LAUTA KIERTÄÄ, EIKÄ KIERROS OLE LAATTAKOON MONIKERTA.
  *    Tason leveys on 675 · 2^z pikseliä (86 400 syvimmällä), eikä
@@ -55,8 +72,111 @@
 import { el } from './mapart.js';
 import { pyramidiUrl } from './media.js';
 
-/** Laattoja näkyvän alueen ympärille joka suuntaan. */
-const PUSKURI = 1;
+/*
+ * === NOUTAMINEN JA KIINNITTÄMINEN OVAT ERI ASIOITA =================
+ *
+ * Omistaja katsoi iPadilla panoroinnin jälkeistä hetkeä ja näki ruudun
+ * yläosassa TYHJÄN KARTTAPOHJAN. Syy oli tässä tiedostossa: reunus oli
+ * YKSI LAATTA (`PUSKURI = 1`), eli noin 120 CSS-pikseliä — murto-osa
+ * siitä, minkä yksi sormenveto ehtii paljastaa. Pyyntö oli "ruudun
+ * verran joka suuntaan", ja se on kirjaimellisesti 3 × 3 ruudullista
+ * eli YHDEKSÄNKERTAINEN laattamäärä.
+ *
+ * Naiivisti tehtynä se kaataisi puhelimen, mutta vain toinen puoli
+ * työstä on kallis — ja mitattuna (30.8.2026, Chromium, iPhone-profiili
+ * 390 × 844 dpr 3, z7, renderöijäprosessin RSS):
+ *
+ *   NOUTO   verkko + selaimen HTTP-välimuisti. Laatta on 15-40 kt
+ *           (mitattu ämpäristä), ja jos kuvaa ei kiinnitetä puuhun,
+ *           siitä ei jää purettua bittikarttaa. 250 laattaa ≈ 6 Mt
+ *           siirtoa. HALPA.
+ *   KIINNITYS  DOM + purettu bittikartta. Ruudulla NÄKYVÄ laatta
+ *           maksaa 512² × 4 = 1 Mt purettuna. Ruudun ulkopuolelle
+ *           jäävää laattaa selain ei pura ennen kuin se maalataan:
+ *           54 → 238 kiinnitettyä laattaa nosti renderöijän RSS:ää
+ *           vain ~80 Mt (ei 190 Mt), eli ruudun ulkopuolinen laatta
+ *           maksaa satoja kilotavuja, ei megatavua. KOHTALAINEN.
+ *
+ * Siksi: NOUDA LAAJASTI, KIINNITÄ KAPEASTI. Noudettu laatta on jo
+ * välimuistissa, kun se kiinnitetään — mitattuna hitaalla 3G:llä
+ * panoroinnin jälkeinen tyhjä hetki lyheni sekunneista alle sadasosaan
+ * siitä (luvut docs/moduulit/laattapyramidi.md luku 6h).
+ *
+ * REUNUKSET MITATAAN RUUDULLISINA, EI LAATTOINA. Laatan koko ruudulla
+ * riippuu tason ja mittakaavan suhteesta (0,71...1,41 ×), ja ruutu on
+ * pystysuunnassa yli kaksi kertaa leveyttään — yksi laatta reunuksena
+ * on eri asia ylhäällä ja sivulla. Ruudullinen on sama mitta kuin se,
+ * jonka sormi liikuttaa.
+ */
+
+/**
+ * Kiinnitys: näkyvän alueen ympärille tämän verran RUUTUJA joka
+ * suuntaan. Puoli ruutua kattaa mitatusti tavallisen sormenvedon
+ * (390 × 844 -profiilissa 195 px sivulle, 422 px ylös ja alas).
+ */
+const KIINNITYS_RUUTUJA = 0.5;
+
+/**
+ * Kiinnityksen LISÄREUNUS panoroinnin suuntaan (perusreunuksen päälle).
+ *
+ * Karttapalvelut painottavat esilatausta liikkeen suuntaan, ja tässä se
+ * on halpa: reunus kasvaa vain YHDELLE sivulle. Omistaja pyysi "joka
+ * suuntaan", joten tämä ei korvaa perusreunusta vaan LISÄÄ siihen —
+ * liikkeen suunnassa katetaan kokonainen ruudullinen.
+ */
+const SUUNTALISA_RUUTUJA = 0.5;
+
+/**
+ * Nouto: ruutuja joka suuntaan. Tämä on omistajan pyytämä "ruudun
+ * verran joka suuntaan" — vain verkkoa ja välimuistia, ei DOMia.
+ */
+const NOUTO_RUUTUJA = 1;
+
+/** Enintään näin monta laattaa jonossa noutoa odottamassa. */
+const NOUTO_KATTO = 400;
+
+/** Rinnakkaisia esilatauksia. Näkyvät laatat saavat kaistan ensin. */
+const NOUTO_RINNAKKAIN = 4;
+
+/**
+ * Esilataus alkaa vasta tämän kuluttua näkymän asettumisesta.
+ *
+ * Näkyvät laatat ovat samassa jonossa saman palvelimen kanssa, ja
+ * hitaalla yhteydellä esilataus veisi niiltä kaistaa juuri silloin kun
+ * pelaaja katsoo tyhjää kohtaa. Viive on myös eleiden suodatin:
+ * peräkkäisistä pikkuvedoista ei synny kolmea päällekkäistä jonoa.
+ */
+const NOUTO_VIIVE_MS = 300;
+
+/**
+ * Karkean pohjakerroksen etäisyys tarkasta tasosta (zoomtasoina).
+ *
+ * Kaksi tasoa on 1/16 laattoja samalle alalle — käytännössä ilmainen —
+ * ja silti tunnistettava kartta eikä sumeaa puuroa. Yksi taso olisi
+ * neljä kertaa kalliimpi ilman näkyvää hyötyä (se kuitenkin korvautuu
+ * heti), kolme jo niin karkea, ettei se kestä ruudulla odotusaikaa.
+ */
+const KARKEA_ETAISYYS = 2;
+
+/**
+ * Karkean pohjan reunus RUUTUINA. Tämä on se, mikä kattaa LIU'UN:
+ * vauhdikas pyyhkäisy jatkuu sormen noston jälkeen inertialla, eikä
+ * yhtään laattaa kiinnitetä ennen kuin liuku pysähtyy (js/kartta.js,
+ * omistajan linjaus *"lataus siis aina vain juuri kun sormi irtoaa"*).
+ * Kaksi ruutua joka suuntaan on 25 ruudullista alaa, mutta karkealla
+ * tasolla vain noin 1,5-kertainen laattamäärä ruudun omaan nähden.
+ */
+const KARKEA_RUUTUJA = 2;
+
+/**
+ * Kuinka kauan edellinen zoomtaso saa jäädä uuden alle.
+ *
+ * Sääntö 2 poistaa vanhan tason vasta kun uusi on ruudulla, mutta
+ * yksikin saapumaton laatta (404, katkennut yhteys) jättäisi vanhan
+ * roikkumaan ikuisesti — kaksi tasoa päällekkäin maksaa muistia. Kaksi
+ * sekuntia on selvästi yli mitatun latausajan hitaalla 3G:llä.
+ */
+const VANHAN_TASON_KATTO_MS = 2000;
 
 /**
  * Minkä laudan pyramidi kattaa.
@@ -159,6 +279,14 @@ export function pyramidinArkki(lauta) {
  * aloittaa hakua alusta.
  */
 let luettelo = null;
+
+/*
+ * Edellinen näkymä: siitä luetaan panoroinnin suunta (ks.
+ * paivitaPyramidi). Moduulitasolla samasta syystä kuin luettelo —
+ * tämä on kartan tila, ei pelin.
+ */
+let edellinenKeskus = null;
+let edellinenTaso = null;
 let luetteloHaku = null;
 
 async function haeLuettelo() {
@@ -222,9 +350,17 @@ function valitseTaso(tasot, tarve) {
  */
 const mittarit = {
   taso: null,
+  // Kiinnitettyjä laattoja (DOM) ja niistä ruudulla NÄKYVIÄ. Ero on
+  // koko esilatauksen idea, joten se on myös mittarissa näkyvissä.
   nakymassa: 0,
+  ruudulla: 0,
+  karkeita: 0,
   ladattu: 0,
   epaonnistui: 0,
+  esiladattu: 0,
+  esijonossa: 0,
+  esikaynnissa: 0,
+  esiEpaonnistui: 0,
   tavuja: 0,
   hitainMs: 0,
   yhteensaMs: 0,
@@ -233,15 +369,26 @@ const mittarit = {
 };
 
 export function pyramidinMittarit() {
+  const laatta = luettelo?.laatta ?? 0;
   return {
     ...mittarit,
     keskiMs: mittarit.ladattu ? Math.round(mittarit.yhteensaMs / mittarit.ladattu) : 0,
-    // Purettu bittikartta on 4 tavua pikseliä kohti riippumatta siitä,
-    // kuinka hyvin webp pakkasi sen — tämä on se luku, joka puhelimen
-    // muistista oikeasti kuluu.
-    muistiMt: luettelo
-      ? Math.round((mittarit.nakymassa * luettelo.laatta ** 2 * 4) / 1e6 * 10) / 10
-      : 0,
+    /*
+     * MUISTIARVIO KAHTENA LUKUNA, KOSKA NE OVAT ERI SUURUUSLUOKKAA.
+     *
+     * Purettu bittikartta on 4 tavua pikseliä kohti — mutta vain silloin
+     * kun selain oikeasti PURKAA kuvan, ja se tapahtuu vasta maalatessa.
+     * Ruudun ulkopuolelle kiinnitetty laatta jää pakattuna (mitattu
+     * 30.8.2026: 54 → 238 kiinnitettyä laattaa nosti renderöijän RSS:ää
+     * ~80 Mt eli ~0,4 Mt/laatta, ei 1 Mt/laatta).
+     *
+     *   muistiMt      ruudulla näkyvät laatat purettuna — se, mitä
+     *                 puhelimen muistista oikeasti menee koko ajan.
+     *   muistiKattoMt sama kaava kaikille kiinnitetyille — vanha luku,
+     *                 joka on nyt YLÄRAJA eikä arvio.
+     */
+    muistiMt: Math.round((mittarit.ruudulla * laatta ** 2 * 4) / 1e6 * 10) / 10,
+    muistiKattoMt: Math.round((mittarit.nakymassa * laatta ** 2 * 4) / 1e6 * 10) / 10,
   };
 }
 
@@ -279,6 +426,451 @@ function laattaOlemassa(taso, sarake, rivi) {
   const i = rivi * taso.sarakkeita + sarake;
   const t = taso.__bitit[i >> 3];
   return t === undefined ? false : ((t >> (i & 7)) & 1) === 1;
+}
+
+/** Laatan osoite ämpärissä. Sama merkkijono sekä kuvalle että noudolle. */
+function laattaUrl(taso, sarake, rivi) {
+  return pyramidiUrl(`${luettelo.versio}/z${taso.z}/${sarake}/${rivi}`
+    + `.${luettelo.muoto ?? 'webp'}`);
+}
+
+/**
+ * Käy läpi laatat, jotka osuvat annettuun laudan suorakaiteeseen.
+ *
+ * KIERTO ON TÄSSÄ YHDESSÄ PAIKASSA (ks. sääntö 3). Sekä kiinnitys että
+ * esilataus lukevat laattaruudukkoa samalla kaavalla — kaksi kopiota
+ * ehtisi eriytyä juuri päivämääränrajan takana, jossa virhe on
+ * vaikeimmin huomattava.
+ *
+ * @param {object} alue laudan yksiköissä: { x, y, w, h }
+ * @param {(kierros:number, sarake:number, rivi:number, alkuPx:number)=>void} kasittele
+ */
+function jokaLaatta(taso, laatta, arkki, alue, kasittele) {
+  const px0 = (alue.x - arkki.x) * taso.pikseliaPerYksikko;
+  const px1 = (alue.x + alue.w - arkki.x) * taso.pikseliaPerYksikko;
+  const yksikkoaPerLaatta = laatta / taso.pikseliaPerYksikko;
+  const k0 = Math.floor(px0 / taso.leveys);
+  const k1 = Math.floor(px1 / taso.leveys);
+  const r0 = Math.max(0, Math.floor((alue.y - arkki.y) / yksikkoaPerLaatta));
+  const r1 = Math.min(taso.riveja - 1,
+    Math.floor((alue.y + alue.h - arkki.y) / yksikkoaPerLaatta));
+  for (let kierros = k0; kierros <= k1; kierros += 1) {
+    const alku = kierros * taso.leveys;
+    const s0 = Math.max(0, Math.floor((px0 - alku) / laatta));
+    const s1 = Math.min(taso.sarakkeita - 1, Math.floor((px1 - alku) / laatta));
+    for (let rivi = r0; rivi <= r1; rivi += 1) {
+      for (let sarake = s0; sarake <= s1; sarake += 1) {
+        if (!laattaOlemassa(taso, sarake, rivi)) continue;
+        kasittele(kierros, sarake, rivi, alku);
+      }
+    }
+  }
+}
+
+/**
+ * Näkyvä alue laajennettuna ruudullisina joka suuntaan.
+ *
+ * Lisät ovat sivukohtaisia, jotta panoroinnin suuntaan voi antaa
+ * enemmän kuin taaksepäin (SUUNTALISA_RUUTUJA).
+ */
+function laajenna(nakyva, ruutuja, lisa = null) {
+  const vas = (ruutuja + (lisa?.vasen ?? 0)) * nakyva.w;
+  const oik = (ruutuja + (lisa?.oikea ?? 0)) * nakyva.w;
+  const yla = (ruutuja + (lisa?.yla ?? 0)) * nakyva.h;
+  const ala = (ruutuja + (lisa?.ala ?? 0)) * nakyva.h;
+  return {
+    x: nakyva.x - vas,
+    y: nakyva.y - yla,
+    w: nakyva.w + vas + oik,
+    h: nakyva.h + yla + ala,
+  };
+}
+
+/* ------------------------------------------------------------ esilataus */
+
+/*
+ * ESILATAUS: NOUTO ILMAN KIINNITYSTÄ.
+ *
+ * Laatta haetaan tavallisella kuvapyynnöllä (`new Image()`), täsmälleen
+ * samalla osoitteella ja samalla pyyntötavalla kuin SVG:n <image> sen
+ * hakisi — silloin ne osuvat samaan välimuistiriviin. Kuvaa EI panna
+ * puuhun eikä siihen jätetä viittausta: kun lataus on ohi, olio jää
+ * roskiksi ja jäljelle jää se, mitä haluttiin, eli PAKATTU vastaus
+ * selaimen HTTP-välimuistissa (laatoilla on ämpärissä `immutable`,
+ * 1 vuosi — ks. docs/moduulit/laattapyramidi.md "Osoitteet ja
+ * välimuisti").
+ *
+ * PALVELUTYÖNTEKIJÄ EI OLE TIELLÄ: sw.js päästää `julisteet/`-polun
+ * ämpäriin sellaisenaan (vain `kuvat/`, `liput/`, `audio/` ja `aanet/`
+ * ovat sen omassa korissa), joten esilataus menee suoraan selaimen
+ * välimuistiin.
+ */
+
+/** Kertaalleen pyydetyt laatat: `z:sarake:rivi` (kierros ei kuulu urliin). */
+const noudetut = new Set();
+/** Odottavat noudot tärkeysjärjestyksessä. */
+let noutojono = [];
+let noutoKaynnissa = 0;
+let noutoAjastin = 0;
+
+/** Yksi nouto. Viittaus kuvaan katoaa heti, kun lataus on ohi. */
+function noudaYksi(url, k) {
+  /*
+   * MERKINTÄ TEHDÄÄN VASTA TÄSSÄ, EI JONOON PANTAESSA. Jono
+   * rakennetaan joka näkymästä uudelleen, ja jos jonottaminen
+   * merkitsisi laatan noudetuksi, pudonnutta jonoa ei haettaisi
+   * koskaan — kartalle jäisi pysyviä kylmiä kohtia.
+   */
+  noudetut.add(k);
+  noutoKaynnissa += 1;
+  let kuva = new Image();
+  const valmis = (onnistui) => {
+    if (onnistui) mittarit.esiladattu += 1; else mittarit.esiEpaonnistui += 1;
+    // Viittaus pois: purettu kuva ei saa jäädä muistiin roikkumaan.
+    kuva = null;
+    noutoKaynnissa -= 1;
+    pumppaaNoutoa();
+  };
+  kuva.decoding = 'async';
+  // Vihje selaimelle: näkyvät laatat menevät jonossa ohi.
+  kuva.fetchPriority = 'low';
+  kuva.addEventListener('load', () => valmis(true), { once: true });
+  kuva.addEventListener('error', () => valmis(false), { once: true });
+  kuva.src = url;
+}
+
+function pumppaaNoutoa() {
+  while (noutoKaynnissa < NOUTO_RINNAKKAIN && noutojono.length) {
+    const seuraava = noutojono.shift();
+    if (noudetut.has(seuraava.k)) continue;
+    noudaYksi(seuraava.url, seuraava.k);
+  }
+  mittarit.esijonossa = noutojono.length;
+  mittarit.esikaynnissa = noutoKaynnissa;
+}
+
+/**
+ * Panee näkymän ympäristön noutojonoon.
+ *
+ * JONO RAKENNETAAN JOKA PÄIVITYKSESSÄ UUDESTAAN. Vanha jono kuvaa
+ * paikkaa, josta pelaaja on jo lähtenyt; jos se saisi jäädä, hitaalla
+ * yhteydellä noudettaisiin edellistä näkymää samalla kun nykyinen
+ * odottaa. Kesken olevia noutoja ei katkaista — niitä on enintään
+ * NOUTO_RINNAKKAIN, ja katkaisu heittäisi pois jo saapuneet tavut.
+ *
+ * JÄRJESTYS: lähin ensin, ja panoroinnin suunta painaa vaakaa. Sama
+ * ruudullinen noudetaan joka tapauksessa, mutta hitaalla yhteydellä
+ * järjestys ratkaisee, mikä ehtii perille ennen seuraavaa vetoa.
+ */
+function jonotaEsilataus(taso, laatta, arkki, nakyva, suunta) {
+  const alue = laajenna(nakyva, NOUTO_RUUTUJA);
+  const kx = nakyva.x + nakyva.w / 2;
+  const ky = nakyva.y + nakyva.h / 2;
+  const jono = [];
+  /*
+   * SAMA TIEDOSTO VAIN KERRAN JONOSSA. Kun näkymä on laudan sauman
+   * päällä, sama laatta osuu alueeseen KAHDELLA kierroksella (sääntö
+   * 3) — eri paikka ruudulla, sama osoite.
+   */
+  const nahty = new Set();
+  jokaLaatta(taso, laatta, arkki, alue, (kierros, sarake, rivi, alkuPx) => {
+    const k = `${taso.z}:${sarake}:${rivi}`;
+    if (noudetut.has(k) || nahty.has(k)) return;
+    nahty.add(k);
+    const x = arkki.x + (alkuPx + (sarake + 0.5) * laatta) / taso.pikseliaPerYksikko;
+    const y = arkki.y + (rivi + 0.5) * laatta / taso.pikseliaPerYksikko;
+    // Etäisyys ruudullisina, jotta pysty ja vaaka ovat vertailukelpoisia.
+    const dx = (x - kx) / nakyva.w;
+    const dy = (y - ky) / nakyva.h;
+    // Suuntapainotus: liikkeen suunnassa oleva laatta on "lähempänä".
+    const paino = suunta ? Math.max(0, dx * suunta.x + dy * suunta.y) : 0;
+    jono.push({ url: laattaUrl(taso, sarake, rivi), etaisyys: Math.hypot(dx, dy) - paino, k });
+  });
+  jono.sort((a, b) => a.etaisyys - b.etaisyys);
+  noutojono = jono.slice(0, NOUTO_KATTO);
+  mittarit.esijonossa = noutojono.length;
+  /*
+   * Muistilista ei saa kasvaa rajatta: koko maailma z7:llä on 17 407
+   * laattaa, ja pitkä istunto voi käydä niistä läpi ison osan.
+   * Nollaus maksaa enintään sen, että osa noudetaan toistamiseen —
+   * ja se on selaimen välimuistista ilmainen.
+   */
+  if (noudetut.size > 20000) noudetut.clear();
+  /*
+   * VIIVE ON OSA SUUNNITELMAA (NOUTO_VIIVE_MS): näkyvät laatat ovat
+   * juuri lähteneet hakuun samasta jonosta, eikä esilataus saa mennä
+   * niiden edelle hitaalla yhteydellä.
+   */
+  clearTimeout(noutoAjastin);
+  noutoAjastin = setTimeout(pumppaaNoutoa, NOUTO_VIIVE_MS);
+}
+
+/**
+ * Panee VIEREISTEN ZOOMTASOJEN laatat jonon perälle.
+ *
+ * Omistajan TestFlight-havainto 30.8.2026: *"Miksi zoomatessa uusi
+ * kartta latautuu hitaasti?"* Syy on rakenteellinen: kameran
+ * zoomiporras on 1,5 ja tasojen suhde 2, joten käytännössä joka toinen
+ * porras vaihtaa tason kokonaan TIEDOSTOIHIN, JOITA EI OLE KOSKAAN
+ * HAETTU. Panoroinnin esilataus ei auta siihen lainkaan — se lämmittää
+ * saman tason naapureita.
+ *
+ * ALUE ON SE, MIKÄ ZOOMIN JÄLKEEN NÄKYY, ei nykyinen näkymä toisella
+ * tarkkuudella. Porras on 1,5×, joten sisäänpäin näkyvä ala kutistuu
+ * ja ulospäin kasvaa samassa suhteessa — molemmissa päissä laattoja on
+ * suunnilleen saman verran kuin nyt (~25), eli kaksi tasoa on noin
+ * megatavu. Ilman tätä rajausta z+1 olisi nelinkertainen määrä.
+ */
+function jonotaTasovaihto(tasot, taso, laatta, arkki, nakyva) {
+  const kx = nakyva.x + nakyva.w / 2;
+  const ky = nakyva.y + nakyva.h / 2;
+  const jono = [];
+  for (const naapuri of tasot) {
+    if (naapuri.z !== taso.z + 1 && naapuri.z !== taso.z - 1) continue;
+    // Zoomiporras 1,5: sisään mentäessä ala kutistuu, ulos kasvaa.
+    const kerroin = naapuri.z > taso.z ? 1 / 1.5 : 1.5;
+    const alue = {
+      x: kx - (nakyva.w * kerroin) / 2,
+      y: ky - (nakyva.h * kerroin) / 2,
+      w: nakyva.w * kerroin,
+      h: nakyva.h * kerroin,
+    };
+    const nahty = new Set();
+    jokaLaatta(naapuri, laatta, arkki, alue, (kierros, sarake, rivi) => {
+      const k = `${naapuri.z}:${sarake}:${rivi}`;
+      if (noudetut.has(k) || nahty.has(k)) return;
+      nahty.add(k);
+      jono.push({ url: laattaUrl(naapuri, sarake, rivi), k });
+    });
+  }
+  /*
+   * PERÄLLE, EI SEKAAN. Nykyisen tason ympäristö on se, jonka pelaaja
+   * näkee seuraavaksi todennäköisimmin (sormi liikkuu useammin kuin
+   * nipistää), ja hitaalla yhteydellä jonon järjestys on koko
+   * priorisointi.
+   */
+  noutojono = noutojono.concat(jono).slice(0, NOUTO_KATTO);
+  mittarit.esijonossa = noutojono.length;
+}
+
+/* ------------------------------------------------------------ kerrokset */
+
+/**
+ * Kaksi kerrosta: KARKEA POHJA alle ja tarkka taso päälle.
+ *
+ * Karkea pohja on se, mikä estää tyhjän karttapohjan kaikissa niissä
+ * tapauksissa, joita reunus ei kata: nopea pyyhkäisy, zoomin vaihto,
+ * hidas verkko. Sama ala on karkealta tasolta 1/16 laattoja
+ * (KARKEA_ETAISYYS = 2 tasoa), joten se on käytännössä ilmainen — ja
+ * juuri näin jokainen karttakirjasto tekee: alla on aina jotain, ja se
+ * terävöityy kun tarkka taso saapuu.
+ */
+function varmistaKerrokset(ui) {
+  if (ui.pyramidiPohjaKerros?.parentNode === ui.pyramidiKerros
+    && ui.pyramidiTarkkaKerros?.parentNode === ui.pyramidiKerros) return;
+  ui.pyramidiPohjaKerros = el('g', { class: 'pyramidi-pohjataso' }, ui.pyramidiKerros);
+  ui.pyramidiTarkkaKerros = el('g', { class: 'pyramidi-tarkkataso' }, ui.pyramidiKerros);
+}
+
+/**
+ * Poistaa laatan JA KATKAISEE SEN KESKEN OLEVAN HAUN.
+ *
+ * === TÄMÄ ON SE, MIKSI ZOOMAUS TUNTUI HITAALTA =====================
+ *
+ * Mitattu 30.8.2026 (Chromium, 1,5 Mbit/s, 200 ms viive): puusta
+ * irrotettu <image> EI lopeta lataamista. Kolmen zoomiportaan sarjassa
+ * peli oli ehtinyt pyytää yli 700 laattaa, ja niistä satoja oli
+ * ohitettujen tasojen laattoja, jotka valuivat verkosta sisään vielä
+ * kymmeniä sekunteja sen jälkeen kun ne oli poistettu — sen tason
+ * EDELLÄ, jota pelaaja oikeasti katsoi. Ruudulla se näkyy täsmälleen
+ * niin kuin omistaja sen kuvasi: *"uusi kartta latautuu hitaasti"*.
+ *
+ * Osoitteen poisto katkaisee haun. Elementti merkitään perutuksi, ettei
+ * katkaisun synnyttämä error-tapahtuma kirjaudu epäonnistumiseksi eikä
+ * sotke odotuslaskuria.
+ */
+function peruLaatta(kuva) {
+  if (!kuva.dataset.ladattu) {
+    kuva.dataset.peruttu = '1';
+    kuva.removeAttribute('href');
+  }
+  kuva.remove();
+}
+
+/** Yhden kerroksen tila: mikä taso siinä on ja mitkä laatat. */
+const tyhjaTila = (kerros) => ({
+  kerros, z: null, laatat: new Map(), vanhat: null, ajastin: 0,
+});
+
+/**
+ * Ovatko kerroksen RUUDULLA olevat laatat kaikki perillä?
+ *
+ * Laskurin sijasta kysely: laskuri menisi solmuun aina kun laatta
+ * peruuntuu tai taso vaihtuu kesken latauksen, ja väärä laskuri
+ * jättäisi vanhan tason roikkumaan tai poistaisi sen liian aikaisin.
+ * Laattoja on satakunta, joten läpikäynti on olematon työ.
+ */
+function kaikkiRuudullaLadattu(tila) {
+  for (const kuva of tila.laatat.values()) {
+    if (kuva.dataset.odottaa === '1' && kuva.dataset.ladattu !== '1') return false;
+  }
+  return true;
+}
+
+/** Edellinen taso pois — kaikki kerralla, koska se on yksi kuva. */
+function poistaVanhaTaso(tila) {
+  clearTimeout(tila.ajastin);
+  tila.ajastin = 0;
+  if (!tila.vanhat) return;
+  for (const kuva of tila.vanhat.values()) peruLaatta(kuva);
+  tila.vanhat = null;
+}
+
+/**
+ * Päivittää yhden kerroksen laatat annetulle tasolle ja alueelle.
+ *
+ * SÄÄNTÖ 2 ON TÄSSÄ. Kun taso vaihtuu, edellisen tason laatat jäävät
+ * puuhun UUSIEN ALLE, ja ne poistetaan vasta kun uuden tason näkyvät
+ * laatat ovat oikeasti latautuneet (tai kun VANHAN_TASON_KATTO_MS
+ * täyttyy, ettei yksi saapumaton laatta jätä vanhaa roikkumaan
+ * ikuisesti). Ennen tätä korjausta koodi poisti vanhan SAMASSA
+ * synkronisessa päivityksessä, eli ennen kuin yksikään uusi laatta oli
+ * perillä — ja juuri se näytti omistajalle "hitaalta latautumiselta"
+ * zoomatessa.
+ *
+ * SAMAN TASON sisällä poisto on entisellään: näkymästä pudonnut laatta
+ * lähtee heti, koska muuten muisti kasvaisi rajatta.
+ */
+function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
+  if (tila.z !== taso.z) {
+    // Vain YKSI vanha taso kerrallaan: sitä edellinen on jo tarpeeton.
+    poistaVanhaTaso(tila);
+    /*
+     * VANHASTA TASOSTA JÄÄ ALLE VAIN SE, MIKÄ ON JO RUUDULLA.
+     * Latautumaton laatta ei näytä mitään, mutta sen haku vie kaistaa
+     * uuden tason laatoilta juuri silloin kun niitä odotetaan — ja
+     * juuri se teki zoomauksesta hitaan (ks. peruLaatta).
+     */
+    for (const [k, kuva] of tila.laatat) {
+      if (kuva.dataset.ladattu) continue;
+      peruLaatta(kuva);
+      tila.laatat.delete(k);
+    }
+    tila.vanhat = tila.laatat.size ? tila.laatat : null;
+    tila.laatat = new Map();
+    tila.z = taso.z;
+    if (tila.vanhat) {
+      tila.ajastin = setTimeout(() => poistaVanhaTaso(tila), VANHAN_TASON_KATTO_MS);
+    }
+  }
+  const yksikkoaPerLaatta = laatta / taso.pikseliaPerYksikko;
+  const vanhatSamalta = tila.laatat;
+  const uudet = new Map();
+  let ruudulla = 0;
+  const kasittele = (kierros, sarake, rivi, alku) => {
+    const k = avain(taso.z, kierros, sarake, rivi);
+    if (uudet.has(k)) return;
+    const lx = arkki.x + (alku + sarake * laatta) / taso.pikseliaPerYksikko;
+    const ly = arkki.y + rivi * yksikkoaPerLaatta;
+    const nakyy = lx < nakyva.x + nakyva.w && lx + yksikkoaPerLaatta > nakyva.x
+      && ly < nakyva.y + nakyva.h && ly + yksikkoaPerLaatta > nakyva.y;
+    if (nakyy) ruudulla += 1;
+    // Kiinnitetty laatta on jo haussa: esilataus ei pyydä sitä uudestaan.
+    noudetut.add(`${taso.z}:${sarake}:${rivi}`);
+
+    const oli = vanhatSamalta.get(k);
+    if (oli) {
+      // Reunukselta ruudulle siirtynyt laatta on nyt odottaja.
+      if (nakyy && oli.dataset.ladattu !== '1') oli.dataset.odottaa = '1';
+      uudet.set(k, oli);
+      vanhatSamalta.delete(k);
+      return;
+    }
+
+    /*
+     * VIIMEISEN RIVIN JA SARAKKEEN LAATTA ON VAJAA. Tason leveys ei
+     * ole laattakoon monikerta, ja venytetty vajaa laatta osuisi
+     * väärään kohtaan lautaa — leveys ja korkeus lasketaan siis
+     * laatan omista pikseleistä.
+     */
+    const pw = Math.min(laatta, taso.leveys - sarake * laatta);
+    const ph = Math.min(laatta, taso.korkeus - rivi * laatta);
+    const kuva = el('image', {
+      x: lx,
+      y: ly,
+      width: pw / taso.pikseliaPerYksikko,
+      height: ph / taso.pikseliaPerYksikko,
+      href: laattaUrl(taso, sarake, rivi),
+      preserveAspectRatio: 'none',
+      class: 'pyramidi-laatta',
+      'data-taso': String(taso.z),
+      /*
+       * VIHJEET SELAIMELLE. `decoding=async` pitää purun pois
+       * pääsäikeeltä, `fetchpriority=high` nostaa kiinnitetyn laatan
+       * esilatausten ohi. Kumpaakaan ei ole määritelty SVG:n
+       * <image>-elementille kaikissa selaimissa, joten ne ovat
+       * vihjeitä eivätkä lupauksia — väärin ymmärrettynä attribuutti
+       * jää huomiotta eikä riko mitään.
+       */
+      decoding: 'async',
+      fetchpriority: nakyy ? kiire : 'low',
+    }, tila.kerros);
+    // Ruudulla oleva laatta on se, jota vanha taso alla odottaa.
+    if (nakyy) kuva.dataset.odottaa = '1';
+    const t0 = performance.now();
+    const valmis = (onnistui) => {
+      // Peruttu haku ei ole epäonnistuminen eikä odottaja (ks. peruLaatta).
+      if (kuva.dataset.peruttu === '1') return;
+      if (onnistui) {
+        const kesto = performance.now() - t0;
+        mittarit.ladattu += 1;
+        mittarit.yhteensaMs += kesto;
+        mittarit.hitainMs = Math.max(mittarit.hitainMs, Math.round(kesto));
+        /*
+         * LADATTU-MERKINTÄ ON MITTAUSVÄLINE. Kiinnitetty laatta on
+         * ruudulla tyhjä siihen asti kun kuva on perillä, ja juuri
+         * sitä aikaa omistaja katsoi ("tyhjä karttapohja"). Ilman
+         * tätä merkkiä sitä ei voi mitata pelin ulkopuolelta:
+         * SVG:n <image> ei kanna `complete`-lippua kuten <img>.
+         */
+        kuva.dataset.ladattu = '1';
+      } else {
+        mittarit.epaonnistui += 1;
+        // Saapumaton laatta ei saa jäädä odottajaksi ikuisesti.
+        delete kuva.dataset.odottaa;
+      }
+      if (!nakyy || !tila.vanhat) return;
+      // Uusi taso on ruudulla kokonaan: vanha saa mennä (sääntö 2).
+      if (kaikkiRuudullaLadattu(tila)) poistaVanhaTaso(tila);
+    };
+    kuva.addEventListener('load', () => valmis(true), { once: true });
+    kuva.addEventListener('error', () => valmis(false), { once: true });
+    uudet.set(k, kuva);
+  };
+  /*
+   * RUUTU ENSIN, REUNUS VASTA SITTEN — KAKSI KIERROSTA SAMALLA
+   * KÄSITTELIJÄLLÄ.
+   *
+   * Yhdellä kierroksella laatat syntyisivät riveittäin koko
+   * reunusalueen yli, jolloin ruudun yläpuolinen puskuri lähtisi hakuun
+   * ENNEN sitä, mitä pelaaja katsoo. Hitaalla yhteydellä se on suoraan
+   * odotusaikaa ruudulla: mitattuna 1,5 Mbit/s:llä koko kiinnitysala on
+   * kolme megatavua, josta ruudun osuus on vajaa kolmannes.
+   *
+   * `fetchpriority` on sama asia vihjeenä, mutta järjestys on se, joka
+   * pätee joka selaimessa.
+   */
+  jokaLaatta(taso, laatta, arkki, nakyva, kasittele);
+  jokaLaatta(taso, laatta, arkki, alue, kasittele);
+  // Näkymästä pudonneet saman tason laatat pois — ja niiden haut poikki.
+  for (const kuva of vanhatSamalta.values()) peruLaatta(kuva);
+  tila.laatat = uudet;
+  /*
+   * Jos ruudulla ei ole yhtään keskeneräistä (kaikki tulivat
+   * välimuistista), vanhan tason odotus on turha jo tässä.
+   */
+  if (tila.vanhat && kaikkiRuudullaLadattu(tila)) poistaVanhaTaso(tila);
+  return ruudulla;
 }
 
 /**
@@ -325,18 +917,44 @@ export function paivitaPyramidi(ui) {
   const yksikkoaPerLaatta = laatta / taso.pikseliaPerYksikko;
 
   /*
-   * NÄKYVÄ ALUE ARKIN PIKSELEINÄ, ja siitä kierrokset. Kierros on
-   * `taso.leveys` pikseliä (ei sarakkeita × laatta, ks. sääntö 3).
+   * PANOROINNIN SUUNTA LUETAAN NÄKYMÄN KESKIPISTEEN SIIRTYMÄSTÄ.
+   *
+   * Tämä funktio ajetaan kerran jokaisesta asettuneesta näkymästä (ele
+   * päättyy, ks. js/kartta.js "lataus siis aina vain juuri kun sormi
+   * irtoaa"), joten kahden peräkkäisen keskipisteen erotus ON viimeisin
+   * sormenveto. Suuntaa ei siis tarvitse kysyä eleeltä eikä
+   * js/ui.js:ään tarvitse koskea.
+   *
+   * Yksikkönä ruudullinen, jotta pysty ja vaaka ovat vertailukelpoisia.
+   * Alle kymmenesosan siirtymä ei ole suunta vaan napautuksen väre.
    */
-  const nakyvaPx0 = (nakyva.x - arkki.x) * taso.pikseliaPerYksikko;
-  const nakyvaPx1 = (nakyva.x + nakyva.w - arkki.x) * taso.pikseliaPerYksikko;
-  const k0 = Math.floor(nakyvaPx0 / taso.leveys);
-  const k1 = Math.floor(nakyvaPx1 / taso.leveys);
-  const r0 = Math.max(0, Math.floor((nakyva.y - arkki.y) / yksikkoaPerLaatta) - PUSKURI);
-  const r1 = Math.min(taso.riveja - 1,
-    Math.floor((nakyva.y + nakyva.h - arkki.y) / yksikkoaPerLaatta) + PUSKURI);
+  const keskus = { x: nakyva.x + nakyva.w / 2, y: nakyva.y + nakyva.h / 2 };
+  let suunta = null;
+  if (edellinenKeskus && edellinenTaso === taso.z) {
+    const dx = (keskus.x - edellinenKeskus.x) / nakyva.w;
+    const dy = (keskus.y - edellinenKeskus.y) / nakyva.h;
+    const pit = Math.hypot(dx, dy);
+    if (pit > 0.1) suunta = { x: dx / pit, y: dy / pit };
+  }
+  edellinenKeskus = keskus;
+  edellinenTaso = taso.z;
+
+  /*
+   * KIINNITYSALUE: näkyvä + puoli ruutua joka suuntaan, ja liikkeen
+   * suuntaan puoli lisää. Reunus on se, mikä ELEEN AIKANA estää tyhjän:
+   * uusia laattoja ei kiinnitetä kesken sormenvedon (omistajan linjaus),
+   * joten ruudulle ehtii vain se, mikä oli puussa jo ennen elettä.
+   */
+  const lisa = suunta ? {
+    vasen: Math.max(0, -suunta.x) * SUUNTALISA_RUUTUJA,
+    oikea: Math.max(0, suunta.x) * SUUNTALISA_RUUTUJA,
+    yla: Math.max(0, -suunta.y) * SUUNTALISA_RUUTUJA,
+    ala: Math.max(0, suunta.y) * SUUNTALISA_RUUTUJA,
+  } : null;
+  const kiinnitys = laajenna(nakyva, KIINNITYS_RUUTUJA, lisa);
 
   const kerros = ui.pyramidiKerros;
+  varmistaKerrokset(ui);
   /*
    * MERIPOHJA KAIKEN ALLE (harva pyramidi).
    *
@@ -358,76 +976,84 @@ export function paivitaPyramidi(ui) {
     }, kerros);
     kerros.prepend(ui.pyramidiPohja);
   }
-  const vanhat = ui.pyramidiLaatat ?? new Map();
-  const uudet = new Map();
-
-  for (let kierros = k0; kierros <= k1; kierros += 1) {
-    // Tämän kierroksen sarakeväli: mikä osa kierroksesta on näkyvissä.
-    const alku = kierros * taso.leveys;
-    const s0 = Math.max(0, Math.floor((nakyvaPx0 - alku) / laatta) - PUSKURI);
-    const s1 = Math.min(taso.sarakkeita - 1,
-      Math.floor((nakyvaPx1 - alku) / laatta) + PUSKURI);
-    for (let rivi = r0; rivi <= r1; rivi += 1) {
-      for (let sarake = s0; sarake <= s1; sarake += 1) {
-        if (!laattaOlemassa(taso, sarake, rivi)) continue;
-        const k = avain(taso.z, kierros, sarake, rivi);
-        const oli = vanhat.get(k);
-        if (oli) { uudet.set(k, oli); vanhat.delete(k); continue; }
-
-        /*
-         * VIIMEISEN RIVIN JA SARAKKEEN LAATTA ON VAJAA. Tason leveys ei
-         * ole laattakoon monikerta, ja venytetty vajaa laatta osuisi
-         * väärään kohtaan lautaa — leveys ja korkeus lasketaan siis
-         * laatan omista pikseleistä.
-         */
-        const pw = Math.min(laatta, taso.leveys - sarake * laatta);
-        const ph = Math.min(laatta, taso.korkeus - rivi * laatta);
-        const kuva = el('image', {
-          x: arkki.x + (alku + sarake * laatta) / taso.pikseliaPerYksikko,
-          y: arkki.y + rivi * yksikkoaPerLaatta,
-          width: pw / taso.pikseliaPerYksikko,
-          height: ph / taso.pikseliaPerYksikko,
-          href: pyramidiUrl(`${luettelo.versio}/z${taso.z}/${sarake}/${rivi}`
-            + `.${luettelo.muoto ?? 'webp'}`),
-          preserveAspectRatio: 'none',
-          class: 'pyramidi-laatta',
-          'data-taso': String(taso.z),
-        }, kerros);
-        const t0 = performance.now();
-        kuva.addEventListener('load', () => {
-          const kesto = performance.now() - t0;
-          mittarit.ladattu += 1;
-          mittarit.yhteensaMs += kesto;
-          mittarit.hitainMs = Math.max(mittarit.hitainMs, Math.round(kesto));
-        }, { once: true });
-        kuva.addEventListener('error', () => { mittarit.epaonnistui += 1; }, { once: true });
-        uudet.set(k, kuva);
-      }
-    }
-  }
 
   /*
-   * VANHAT POIS VASTA LOPUKSI. Kaikki, mikä ei ole uudessa joukossa, on
-   * joko toisen tason laatta tai näkymän ulkopuolelle jäänyt — ja
-   * molemmat saavat mennä, koska uuden tason laatat on jo LISÄTTY
-   * puuhun ja selain piirtää välimuistista tulevat samassa kehyksessä.
-   * Eri tason laatta jää siis näkyviin vain sen ajan, minkä uusi
-   * odottaa verkkoa, koska vanha on puussa ENNEN uutta.
+   * KARKEA POHJA ENSIN, TARKKA TASO PÄÄLLE.
+   *
+   * Pohja on kaksi tasoa karkeampi ja kattaa saman alan kuin
+   * NOUDETTAVA ympäristö (ruudun verran joka suuntaan) — silti vain
+   * noin 1/16 laattoja, koska yksi laatta kattaa neljä kertaa
+   * leveämmän alan. Ruudulle se tarkoittaa, että panoroinnissa ja
+   * zoomissa alla on AINA kartta: sumea, mutta ei tyhjä pergamentti.
    */
-  for (const kuva of vanhat.values()) kuva.remove();
-  ui.pyramidiLaatat = uudet;
+  ui.pyramidiKarkea ??= tyhjaTila(ui.pyramidiPohjaKerros);
+  ui.pyramidiTarkka ??= tyhjaTila(ui.pyramidiTarkkaKerros);
+  ui.pyramidiKarkea.kerros = ui.pyramidiPohjaKerros;
+  ui.pyramidiTarkka.kerros = ui.pyramidiTarkkaKerros;
+
+  const karkea = tasot.find((t) => t.z === Math.max(0, taso.z - KARKEA_ETAISYYS));
+  let karkeitaRuudulla = 0;
+  if (karkea && karkea.z !== taso.z) {
+    karkeitaRuudulla = paivitaKerros(ui.pyramidiKarkea, karkea, laatta, arkki,
+      laajenna(nakyva, KARKEA_RUUTUJA), nakyva, 'high');
+  } else if (ui.pyramidiKarkea.laatat.size) {
+    /*
+     * Uloimmilla tasoilla karkeampaa ei ole, eikä samaa tasoa piirretä
+     * kahdesti: pohjakerros tyhjenee vasta tässä, kun tarkka taso on jo
+     * puussa sen päällä.
+     */
+    poistaVanhaTaso(ui.pyramidiKarkea);
+    for (const kuva of ui.pyramidiKarkea.laatat.values()) kuva.remove();
+    ui.pyramidiKarkea.laatat = new Map();
+    ui.pyramidiKarkea.z = null;
+  }
+
+  const ruudulla = paivitaKerros(ui.pyramidiTarkka, taso, laatta, arkki,
+    kiinnitys, nakyva, 'high');
+  ui.pyramidiLaatat = ui.pyramidiTarkka.laatat;
 
   mittarit.taso = taso.z;
-  mittarit.nakymassa = uudet.size;
+  mittarit.nakymassa = ui.pyramidiTarkka.laatat.size;
+  mittarit.karkeita = ui.pyramidiKarkea.laatat.size;
+  // Ruudulla olevat laatat MOLEMMISTA kerroksista: ne selain purkaa.
+  mittarit.ruudulla = ruudulla + karkeitaRuudulla;
   mittarit.paivityksia += 1;
   mittarit.viimeisinPaivitysMs = Math.round((performance.now() - alkoi) * 100) / 100;
+
+  /*
+   * ESILATAUS VIIMEISENÄ. Kiinnitetyt laatat ovat jo lähteneet hakuun,
+   * ja jono rakennetaan niiden ympärille — jokainen kiinnitetty laatta
+   * on juuri merkitty noudetuksi, joten sama tiedosto ei mene kahdesti.
+   * Viereiset zoomtasot tulevat jonon perälle.
+   */
+  jonotaEsilataus(taso, laatta, arkki, nakyva, suunta);
+  jonotaTasovaihto(tasot, taso, laatta, arkki, nakyva);
 }
 
 /** Tyhjentää laatat (laudan vaihto, pelin loppu). */
 export function nollaaPyramidi(ui) {
+  /*
+   * ODOTTAVA ESILATAUS PERUUNTUU AINA — myös silloin, kun kerrosta ei
+   * ole. Jono kuvaa näkymää, jota ei enää ole, ja se veisi kaistaa
+   * uuden laudan omilta laatoilta.
+   */
+  clearTimeout(noutoAjastin);
+  noutojono = [];
+  mittarit.esijonossa = 0;
+  edellinenKeskus = null;
+  edellinenTaso = null;
   if (!ui?.pyramidiKerros) return;
+  clearTimeout(ui.pyramidiTarkka?.ajastin);
+  clearTimeout(ui.pyramidiKarkea?.ajastin);
   while (ui.pyramidiKerros.firstChild) ui.pyramidiKerros.firstChild.remove();
+  // Kerrokset ja niiden tilat rakennetaan seuraavassa päivityksessä.
+  ui.pyramidiPohjaKerros = null;
+  ui.pyramidiTarkkaKerros = null;
+  ui.pyramidiTarkka = null;
+  ui.pyramidiKarkea = null;
   ui.pyramidiLaatat = new Map();
   ui.pyramidiPohja = null;
   mittarit.nakymassa = 0;
+  mittarit.ruudulla = 0;
+  mittarit.karkeita = 0;
 }
