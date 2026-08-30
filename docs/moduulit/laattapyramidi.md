@@ -664,6 +664,48 @@ tasolla (z3, jossa kaikki nimet syttyvät) putoaa 19, ja tila riittää
 kaikille z6:sta alkaen. Todennettu myös silmällä Keski-Euroopan ja
 Benelux–Ruhrin alueelta.
 
+### 6c.1 Sama nimi vain kerran (kaksoisnimet)
+
+Ensimmäisessä koeajossa z3-laatalla Saharassa **Ahaggar oli kartalla
+kahdesti**: kerran vuorisymbolin ja kerran kaupunkipisteen kanssa. Syy
+on lähteissä — laudan paikat (`maailmankartta.js`) ja maastonimet
+(`maailmankartta-nimet.js`) ovat eri tiedostoja, eikä kumpikaan tiedä
+toisesta. Osa laudan paikoista on oikeasti vuoristoja tai järviä.
+
+Sääntö on **yleinen, ei nimilista**: pari on sama normalisoitu nimi
+lähekkäin. Mittaus osoitti nimilistan olevan väärä tapa — pareja on
+**kuusi, ei kolme**, koska myös järvet kaksintuvat:
+
+| pari | laji | etäisyys (lautayksikköä) |
+| --- | --- | --- |
+| Titicaca | järvi | 3,8 |
+| Appalakit | vuori | 20,3 |
+| Tšad-järvi | järvi | 30,3 |
+| Tanganjika | järvi | 54,4 |
+| Ahaggar | vuori | 95,6 |
+| Alpit | vuori | 114,7 |
+
+Normalisointi ansaitsee paikkansa: lauta sanoo *Tšad-järvi*, nimilista
+*Tšadjärvi*. Etäisyysraja **400** on vakuutus eikä viritysruuvi — kaikki
+rajat välillä 115…6000 antavat täsmälleen saman kuuden joukon.
+
+**Molemmat merkit jäävät, vain nimiö yhdistetään.** Kaupunkipiste on se,
+johon pelaaja matkustaa; vuorisymboli kertoo mistä on kyse.
+
+**Päätös on tasokohtainen, ja se perustuu mittaukseen.** Vuorennimen
+kynnys on sama 0,45 kuin kaupungin nimen, mutta järven nimi syttyy
+vasta 0,9:llä kun tärkeys > 1. Jos kaupungin nimiö vaiennettaisiin
+suoralta kädeltä, Titicaca, Tanganjika ja Tšad-järvi jäisivät välillä
+0,45…0,9 pisteeksi **ilman nimeä** kokonaisen tason ajan. Siksi
+kaupungin nimiö väistää vasta silloin, kun maastonimi oikeasti piirtyy
+tällä tasolla.
+
+Kaksoisnimi **ei ole päällekkäisyys** — Ahaggar oli kahdesti satojen
+pikselien päässä itsestään, eikä leikkaustesti nähnyt siinä vikaa.
+Sillä on siksi oma tarkistuksensa, ja ajo kaatuu jos kaksoisnimi pääsee
+läpi. Tarkistus todennettiin pariutus pois kytkettynä: se löysi ja
+kaatoi ajon (`ahaggar x2`).
+
 ## 12. Avoimet
 
 1. **Patinan kohdistusheitto ja leviäminen syvillä tasoilla** (luku 6b)
