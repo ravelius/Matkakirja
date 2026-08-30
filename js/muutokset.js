@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1364, teksti: 'Pyramidin painojalki paperivakioksi' },
   { v: 1363, teksti: 'Laattapyramidi kayttoon koko maailmassa' },
   { v: 1362, teksti: 'Sama nimi vain kerran kartalle' },
   { v: 1361, teksti: 'Korkeusaineisto repoon, pyramidiajo irti NOAAsta' },
