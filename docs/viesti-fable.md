@@ -308,3 +308,143 @@ punainen myös mainissa (todensin ajamalla savukkeen molemmilla).
   laatoista, laattojen alla ei ole mitään, ei yhtään
   `julisteet/fokus/`-pyyntöä.
 - **silmillä katselutila** `?lauta=africa`: oma kartta ennallaan.
+
+---
+
+# Viesti Fablelle — merten nimet, kompassi ja atlaskehyksen tekstit (haara claude/merten-nimet)
+
+*(Opus, 30.8.2026. Eri haara kuin yllä oleva lehtipurku. Versiota EI
+nostettu, PR:ää EI tehty. Koskin vain
+`tools/fokuskartta/maailmapiirto.js`,
+`tools/generoi-laattapyramidi.mjs` ja
+`docs/moduulit/laattapyramidi.md` — js/-puoleen en koskenut.)*
+
+Toteutettu on kuvattu kokonaan dokumentissa
+`docs/moduulit/laattapyramidi.md` luku 6e. Tässä ovat vain ne kohdat,
+jotka **eivät ole minun päätettäviäni**.
+
+## PÄÄTÖSKYSYMYS A — kaksi mittakaavajanaa, joista poltettu voi olla
+## 41 % pielessä
+
+Mitattu 30.8.2026. Arkille poltettu mittakaavajana on **tarkka vain
+tason omassa mittakaavassa**. Asiakas valitsee lähimmän laattatason
+logaritmisesti ja skaalaa kuvaa sen jälkeen
+(`js/laattapyramidi.js valitseTaso`); mitattuna kerroin vaihtelee
+välillä **0,708 … 1,413**. Poltettu jana on kiinni kuvassa, joten se
+venyy samalla kertoimella mutta lukema pysyy:
+
+> "5000 km" on ruudulla oikeasti **3 538 … 7 066 km**.
+
+Tämä on **täsmälleen se vika**, jonka takia `js/fokusmitat.js` on
+olemassa. Sen oma johdanto, omistajan tilaus 25.8.2026:
+
+> *"Mittajana valehteli heti kun pelaaja zoomasi. Kuvaan poltettu jana
+> on kiinni KUVASSA, joten se venyi zoomin mukana ja väitti yhä samaa
+> 200 kilometriä. Mittakaava on kuitenkin ruudun ominaisuus, ei
+> kuvan."*
+
+Peli piirtää siis jo oman, ruutuun ankkuroidun janansa
+(`laskeMittajana` / `paivitaFokusmitat`, kutsu js/ui.js:stä), joka
+laskee pituutensa näkymästä ja valitsee lukunsa sarjasta 1–2–2,5–5.
+
+**En poistanut poltettua janaa**, koska Raamattu listaa
+mittakaavajanan atlaskehyksen osaksi (29.8.2026) — se on omistajan
+lista, ei minun. Kynnys (z0–z2) pitää sen niillä tasoilla, joilla
+arkkia katsotaan kokonaisena.
+
+**Kysymys omistajalle:** näkyykö pelissä molemmat janat yhtä aikaa?
+Jos näkyy, kaksi janaa samasta pelistä antaa eri luvun, ja poltettu on
+se joka poistuu — silloin kartussi ja painajanrivi jäävät arkin
+kuvitukseksi ja mittaaminen jää sille janalle, joka osaa mitata. En
+päässyt tarkistamaan sitä avaamatta js/ui.js:ää, joka on toisen
+agentin työn alla.
+
+## PÄÄTÖSKYSYMYS B — kehysviivojen paksuus on samaa vikaluokkaa
+
+Kaksoisviivakehys piirretään `paksuus * S`, eli se on kartan
+mittakaavassa. Mitattuna se tarkoittaa:
+
+| taso | ohut reunaviiva (1,4) | vahva kehysviiva (3,0) |
+| --- | --- | --- |
+| z0 | 0,15 px (näkymätön) | 0,32 px (näkymätön) |
+| z2 | 0,59 px | 1,27 px |
+| z7 | 18,9 px | **40,5 px** |
+
+Vertailukohta: rannikon kynä on paperivakiona 1,1 px joka tasolla
+(luku 6d). Katsottuna z7:n alamarginaali on 40 pikselin ruskea palkki
+meren ja paperin välissä.
+
+Luvun 6d oma sääntö sanoo, että **painojälki** (viivanleveydet) on
+paperivakio ja vain **arkin geometria** (marginaalin korkeus) on
+S:ssä. Kehysviivan PAIKKA on geometriaa, mutta sen LEVEYS on
+painotyötä — eli se kuuluisi P:hen, ei S:ään.
+
+**En muuttanut sitä**, koska se ei ole tekstiä (sain rajaukseksi
+kehyksen tekstit) ja koska se muuttaa ilmeen myös uloimmassa päässä:
+z0:lla viiva menisi 0,3 pikselistä 3 pikseliin, eli kartan reuna
+ilmestyisi näkyviin siellä missä sitä nyt ei käytännössä ole. Se on
+sama korjaus kuin rannikolle tehtiin luvussa 6d, ja sama perustelu
+pätee — mutta se on yhden rivin muutos, jonka lopputulos kannattaa
+katsoa erikseen.
+
+## MIKSI EN TEHNYT NIMIÖIDEN CSS-PIKSELIMITOITUSTA
+
+Omistajan päätös oli *"sama näkyvä koko kaikilla laitteilla"*, ja
+perustelu on oikea paperivertaus. **Sitä ei kuitenkaan voi toteuttaa
+laattoja generoimalla**, ja tämä on rakenteellinen este eikä
+työmäärä — siksi pysähdyin, kuten pyysit.
+
+Laatta on sama tiedosto kaikille laitteille, eikä se tiedä katsojan
+pikselitiheyttä. Asiakas valitsee tason luvusta `skaala · dpr`
+(js/laattapyramidi.js), jolloin yhden kuvapikselin koko ruudulla on
+
+    1 kuvapikseli = skaala / tason tiheys ≈ 1 / dpr CSS-pikseliä
+
+Poltettu nimiö, jonka koko on `k` kuvapikseliä, on siis ruudulla
+`k / dpr` CSS-pikseliä. Jotta se olisi sama kaikilla laitteilla, `k`:n
+pitäisi kasvaa dpr:n mukana — mutta tasoindeksi ei erota dpr:ää
+zoomista: **sama taso valitaan sekä "dpr 3 ja kaukana" että "dpr 1 ja
+kolme kertaa lähempänä"**. Yksi luku laatassa ei voi palvella kahta
+riippumatonta muuttujaa.
+
+Konkreettisesti: iPad dpr 2 maailmanäkymässä ja työpöytä dpr 1 samassa
+CSS-zoomissa päätyvät ERI tasoille (z2 ja z1). Jos nimiö olisi z2:lla
+kaksi kertaa isompi kuin z1:llä — mikä tekisi iPadista oikean — niin
+sama sääntö tekisi työpöydällä zoomatessa nimestä kaksinkertaisen joka
+zoomiportaassa. Se on täsmälleen se vika, jonka juuri korjasimme
+merten nimistä (z7:llä nimi oli 9 laattaa leveä).
+
+Kaksi todellista tapaa, ja **molemmat ovat js/-puolella eli minun
+rajaukseni ulkopuolella**:
+
+1. **Asiakas valitsee tason pelkästä `skaala`sta ilman dpr:ää**
+   (js/laattapyramidi.js `valitseTaso`). Silloin nimiöt ovat samat
+   CSS-pikseleinä kaikilla laitteilla ja kaikilla zoomeilla — juuri
+   mitä omistaja pyysi. Hinta on, että tiheillä näytöillä kartta
+   venytetään (dpr 2 → 2×, dpr 3 → 3×), eli **maasto on pehmeämpi**.
+   Nimiöt kasvavat, mutta eivät terävöidy. Tämä on suoraan ristiriidassa
+   omistajalle esitetyn perustelun kanssa (*"tarkempi paino tarkoittaa
+   enemmän pisteitä samaan kokoon"*): laattapyramidissa ne pisteet
+   menevät maastoon, eivät nimeen.
+2. **Nimiöt pois laatoista ja peli piirtää ne ruutuavaruudessa**
+   (Raamatun "ohut pelitilakerros"). Silloin ne ovat oikean kokoisia
+   joka laitteella JA teräviä, ja yleistys on pelin päätettävissä
+   ajossa. Tämä on iso arkkitehtuurimuutos, ja se poistaisi juuri sen
+   syyn, jonka takia sisältö poltettiin laattoihin (omistaja 29.8.:
+   *"kaikki reittipisteet ja kaupungit yms voidaan piirtaa suoraan
+   yhteen karttaan"*).
+
+Molemmat ovat omistajan päätöksiä, eivät minun. **En myöskään
+säätänyt yleistyskynnyksiä**, koska niiden säätäminen on mielekästä
+vasta kun tiedetään kumpi tie valitaan: vaihtoehdossa 1 nimet kasvavat
+2–3-kertaisiksi ja kynnyksiä on kiristettävä, vaihtoehdossa 2 kynnykset
+siirtyvät kokonaan pelin puolelle.
+
+Sama koskee muita poltettuja mittoja, jotka omistaja pyysi
+tarkistamaan (kaupunkipisteen säde 2,0–2,6 px, ison kaupungin rengas
+4,6 px, vuorisymboli 4–5 px, kohderengas 3,2 px, reittien viivat
+0,9–1,4 px): ne ovat samassa laitepikseliavaruudessa kuin nimiöt ja
+kärsivät täsmälleen samasta asiasta. Ne kuuluvat samaan korjaukseen ja
+samaan päätökseen — en erottele niitä, koska ne pitää muuttaa yhtenä
+joukkona tai ei lainkaan, muuten piste ja sen nimi eivät ole enää
+samassa suhteessa.

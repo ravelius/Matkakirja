@@ -544,6 +544,96 @@ ja z7 pahin 0**, z3–z5 muutama hajapikseli vektorien
 reunapehmennyksessä (pahin 34) — sama lähtötilanne kuin ennen
 muutosta, mitattuna erikseen samalla kokeella `origin/main`-versiolla.
 
+## 6f. Atlaskehyksen tekstit: sama vika, sama ratkaisu
+
+*(Sama vikaluokka kuin luvussa 6e, havaittu sen yhteydessä. Toteutus:
+maailmapiirto.js osio 9. Mitattu 30.8.2026.)*
+
+Kartussi, mittakaavajana ja painajanrivi olivat **kaikki kerrottu
+S:llä**, eikä kukaan ollut päättänyt niin — se on jäänne siitä, että
+S tarkoitti kerran vain tarkkuutta. Mitattuna z7:llä:
+
+| kaluste | z0 | z2 | z7 |
+| --- | --- | --- | --- |
+| MATKAKIRJA, kirjainkorkeus | 3,3 px | 13,1 px | **419 px** |
+| MATKAKIRJA, koko sana | 41 px | 164 px | **5 256 px eli 10,3 laattaa** |
+| painajanrivi | 53 px | 213 px | **6 805 px eli 13,3 laattaa** |
+| mittakaavajana | 84 px | 337 px | **10 780 px eli 21,1 laattaa** |
+
+### Kaksi eri asiaa samassa marginaalissa
+
+**Paperi ja kaksoisviiva ovat joka tasolla.** Marginaalin korkeus on
+arkin geometriaa (luku 5) eikä sitä saa muuttaa, ja kaksoisviiva on
+kartan reuna, jonka kuuluu näkyä myös silloin kun pelaaja panoroi
+laidalle syvässä zoomissa.
+
+**Kartussi, jana ja painajanrivi seuraavat luvun 6e kynnystä.**
+Peruste on Raamatun oma sanamuoto atlaskehyksestä: *"kaukaisimmalla
+zoomtasolla kartta makaa paperilla … Poltetaan uloimman tason
+laattoihin"*. Ne kertovat mikä ARKKI tämä on, ja arkkia katsotaan
+kokonaisena vain uloimmilla tasoilla — syvällä pelaaja katsoo seutua,
+ei lehteä.
+
+### Koot ja rivivälit mitoitettiin uudestaan
+
+Kun kalusteet piirretään vain z0–z2:lle, ne on mitoitettava sen
+mukaan. Vanhoilla koolla ne olivat siellä missä niitä oikeasti
+katsotaan liian pieniä: z2:lla painajanrivin kirjainkorkeus oli 5,9 px
+ja **mittakaavajanan lukema 4,2 px** — mittavälineen lukema, jota ei
+voi lukea.
+
+Kerroin on yksi luku kaikille (`TEKSTIKERROIN = 1,8`), jotta
+kartussin ladonta ja alamarginaalin rivijako säilyvät. Ylärajan
+kertoo tiukin kaluste: kartussin laatikko (980 × 150 · S) ja
+alamarginaalin nelirivinen pino.
+
+**Riviväliä oli pakko kasvattaa samalla, ja se löytyi katsomalla:**
+ensimmäisellä yrityksellä vain kirjasin kasvoi, jolloin janan lukemat
+ja painajanrivi melkein koskettivat toisiaan samalla kun marginaalin
+alapuolisko oli tyhjä. Rivivälit lasketaan nyt samasta kertoimesta, ja
+pino päättyy noin 176 · S:ään, kun marginaalia on 240 · S.
+
+| kaluste | kirjainkorkeus z1 | z2 | ennen z2 |
+| --- | --- | --- | --- |
+| MATKAKIRJA | 11,7 px | 23,5 px | 13,1 px |
+| Unohdettu aarre | 6,5 px | 13,0 px | 7,2 px |
+| janan lukema | 3,8 px | 7,6 px | 4,2 px |
+| painajanrivi | 5,3 px | 10,6 px | 5,9 px |
+
+Katsottu: z2:n ja z1:n ylämarginaali (kartussi luettava, laatikko ei
+ahtaudu), z2:n alamarginaali (jana, lukemat, painajanrivi ja ©-rivi
+omilla riveillään), z3:n ylämarginaali (pelkkä kerma ja kaksoisviiva,
+kuten leikatun atlaslehden reuna) ja z7:n alamarginaali (meri,
+kaksoisviiva, kerma — ei jättiläiskirjaimia).
+
+### Mittajanasta: se on tarkka vain tason omassa mittakaavassa
+
+Janan PITUUS on oikein — `kmPerPikseli` lasketaan päiväntasaajan
+kierroksesta ja tason omasta tiheydestä, ja 5 000 km on tasan 5 000 km
+sen tason kuvapikseleissä. **Ruudulla se ei silti pidä paikkaansa**,
+koska asiakas valitsee lähimmän tason ja skaalaa kuvaa: mitattuna
+kerroin on 0,708 … 1,413, joten "5000 km" on ruudulla oikeasti
+3 538 … 7 066 km eli enimmillään **41 % pielessä**.
+
+Tämä on täsmälleen se vika, jonka takia `js/fokusmitat.js` on
+olemassa (omistaja 25.8.2026: *"Mittajana valehteli heti kun pelaaja
+zoomasi… Mittakaava on kuitenkin ruudun ominaisuus, ei kuvan"*), ja
+peli piirtää jo oman ruutuun ankkuroidun janansa. Poltettu jana jää
+tähän, koska Raamattu listaa sen atlaskehyksen osaksi, ja kynnys
+pitää sen niillä tasoilla joilla arkkia katsotaan kokonaisena —
+mutta **kahden janan ristiriita on kirjattu Fablelle**
+(docs/viesti-fable.md, päätöskysymys A).
+
+### Avoimeksi jäi: kehysviivojen paksuus
+
+Kaksoisviiva piirretään yhä `paksuus * S`, eli z0:lla 0,15 ja 0,32 px
+(näkymätön) ja z7:llä 18,9 ja **40,5 px** (leveä ruskea palkki), kun
+rannikon kynä on paperivakiona 1,1 px joka tasolla. Viivan PAIKKA on
+arkin geometriaa mutta sen LEVEYS on painotyötä, eli luvun 6d säännön
+mukaan se kuuluisi P:hen. Ei korjattu tässä erässä: se ei ole tekstiä,
+ja se muuttaa ilmeen myös uloimmassa päässä. Kirjattu Fablelle
+(päätöskysymys B).
+
 ## 7. Harva pyramidi — mitattu, päätetty POIS
 
 Karsinta laattamäärästä (`--harva-raja 8`, koko maailma, uusi arkki):
@@ -896,10 +986,23 @@ kaatoi ajon (`ahaggar x2`).
 
 1. ~~Patinan kohdistusheitto ja leviäminen syvillä tasoilla~~ —
    **ratkaistu**, ja koko vikaluokka sen mukana (luku 6d).
-1b. ~~Kalusteet syvillä tasoilla~~ — **ratkaistu** (luku 6e,
+1b. ~~Kalusteet syvillä tasoilla~~ — **ratkaistu** (luvut 6e ja 6f,
    omistajan päätös 30.8.2026 "vain uloimmille tasoille"): valtamerten
-   nimet ja kompassiruusu piirretään vain tasoille z0–z2 ja ne on
-   mitoitettu uudestaan niiden mukaan.
+   nimet, kompassiruusu, kartussi, mittakaavajana ja painajanrivi
+   piirretään vain tasoille z0–z2 ja ne on mitoitettu uudestaan
+   niiden mukaan.
+1c. **Kehysviivojen paksuus** (luku 6f, viimeinen alaluku): kaksoisviiva
+   on yhä `paksuus * S`, eli z0:lla näkymätön ja z7:llä 40 pikselin
+   palkki. Sama vikaluokka, yhden rivin muutos, mutta muuttaa ilmeen
+   myös uloimmassa päässä — kirjattu Fablelle.
+1d. **Poltettu mittajana vs. pelin oma jana** (luku 6f): poltettu on
+   ruudulla enimmillään 41 % pielessä, ja `js/fokusmitat.js` piirtää
+   jo oikean. Päätöskysymys omistajalle.
+1e. **Nimiöt laitepikseleinä vs. CSS-pikseleinä**: omistajan päätös
+   30.8.2026 oli "sama näkyvä koko kaikilla laitteilla", mutta sitä ei
+   voi toteuttaa laattoja generoimalla — laatta ei tiedä katsojan
+   pikselitiheyttä, ja tasoindeksi ei erota dpr:ää zoomista. Kaksi
+   todellista tietä ovat molemmat js/-puolella; kirjattu Fablelle.
 2. **Syvyyskäyrät oikeasta datasta** — päätetty myöhemmäksi eräksi.
 3. **Vinjetointi pelitilakerroksessa.** Se ei tule laattoihin
    (luku 6b), ja Raamattu listaa sen pelin ohueen pelitilakerrokseen.
