@@ -1,0 +1,51 @@
+{
+  "_": "Mosambikin maastokohteet. Faktat en-Wikipediasta 30.8.2026. Monte Binga ja Sambesi ovat fi-Wikipedian asuja.",
+  "vuoret": [
+    {
+      "nimi": "Monte Binga",
+      "lon": 33.0619,
+      "lat": -19.7767,
+      "m": 2440,
+      "lahdeKoordinaatti": "en-Wikipedia \"Monte Binga\"",
+      "nappi": "Kahden maan rajahuippu",
+      "kysymykset": [
+        "Minkä toisen maan huippulistalla Binga on?",
+        "Mikä on rajat ylittävä luonnonpuisto?"
+      ],
+      "korostukset": ["Chimanimani|Chimanimanin"],
+      "teksti": "Monte Binga on Mosambikin korkein vuori: 2 440 metriä. Sama huippu on Zimbabwen toiseksi korkein, sillä vuori seisoo suoraan maiden rajalla Chimanimanin vuoristossa. Se kuuluu Chimanimanin rajat ylittävään luonnonpuistoon, jota kaksi maata hoitaa yhdessä.",
+      "lahde": "en-Wikipedia \"Monte Binga\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Intian valtameri",
+      "lon": 35.6,
+      "lat": -20.2,
+      "lahdeKoordinaatti": "ulappa Beiran edustalla; en-Wikipedia \"Indian Ocean\" antaa keskipisteeksi 80 / -20",
+      "nappi": "Nuorin ja lämpimin valtameri",
+      "kysymykset": [
+        "Miksi Intian valtameri on valtameristä nuorin?",
+        "Mikä oli Tethysmeri?"
+      ],
+      "teksti": "Intian valtameri on maailman kolmanneksi suurin valtameri, ja Mosambikin koko pitkä rannikko on sen rantaa. Se on valtameristä geologisesti nuorin — syntynyt vasta muinaisen Tethysmeren hajottua — ja samalla lämpimin, mikä tekee siitä maapallon ilmastolle erityisen tärkeän. Keskisyvyyttä valtamerellä on 3 741 metriä.",
+      "lahde": "en-Wikipedia \"Indian Ocean\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Sambesi",
+      "lon": 33.6,
+      "lat": -16.15,
+      "lahdeKoordinaatti": "alajuoksu Teten seudulla Mosambikissa; en-Wikipedia \"Zambezi\" antaa suistolle 36,47 / -18,57",
+      "nappi": "Afrikan suuri itäjoki",
+      "kysymykset": [
+        "Missä Victorian putoukset ovat?",
+        "Mitä Cahora Bassan pato tuottaa?"
+      ],
+      "korostukset": ["Victorian putoukset|Victorian putoukset"],
+      "teksti": "Sambesi on Afrikan neljänneksi pisin joki, pisin itään virtaavista ja suurin Intian valtamereen laskevista. Se alkaa Sambiasta, kiertää 2 574 kilometrin matkan kuuden maan kautta ja ylittää lopulta koko Mosambikin ennen kuin laskee mereen. Joen kuuluisin kohta on Victorian putoukset Sambian ja Zimbabwen rajalla, ja Mosambikin puolella sen vettä patoaa Cahora Bassa, joka tuottaa sähköä sekä Mosambikille että Etelä-Afrikalle.",
+      "lahde": "en-Wikipedia \"Zambezi\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

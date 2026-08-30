@@ -1,0 +1,48 @@
+{
+  "_": "Zimbabwen maastokohteet. Faktat en-Wikipediasta 30.8.2026. Sisämaavaltion vedet ovat kaksi suurta rajajokea; Sambesin merkki on Victorian putousten kohdalla, joka on joen kuuluisin paikka ja Zimbabwen rajalla. Maalla on jo fokuskohde (Suuri Zimbabwe), jota ei toisteta täällä.",
+  "vuoret": [
+    {
+      "nimi": "Mount Nyangani",
+      "lon": 32.8417,
+      "lat": -18.3,
+      "m": 2592,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Nyangani\"",
+      "nappi": "Zimbabwen korkein vuori",
+      "kysymykset": [
+        "Millainen on Nyanganin lakitasanko?",
+        "Miksi itärinteet ovat metsäisemmät kuin läntiset?"
+      ],
+      "teksti": "Mount Nyangani on Zimbabwen korkein vuori: 2 592 metriä Nyangan kansallispuistossa maan itäosassa. Varsinainen huippu on vain nelisenkymmentä metriä ympäristöään korkeampi kalliopaljastuma laajan, kumpuilevan ylätasangon laella. Kosteammilla itärinteillä kasvaa ikivihreää metsää, lännempänä avautuu heinämaata.",
+      "lahde": "en-Wikipedia \"Mount Nyangani\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Sambesi",
+      "lon": 25.8567,
+      "lat": -17.9244,
+      "lahdeKoordinaatti": "Victorian putoukset Zimbabwen ja Sambian rajalla (en-Wikipedia \"Victoria Falls\"); joen artikkelin koordinaatti 36,470 / -18,571 on suistossa Mosambikissa",
+      "nappi": "Joki joka syöksyy Victorian putouksiin",
+      "kysymykset": [
+        "Kuinka leveät Victorian putoukset ovat?",
+        "Mitä tarkoittaa Mosi-oa-Tunya?"
+      ],
+      "korostukset": ["Victorian putoukset|Victorian putouksiin"],
+      "teksti": "Sambesi on Afrikan neljänneksi pisin joki ja suurin Intian valtamereen laskevista: 2 574 kilometriä Sambiasta Mosambikin rannikolle. Zimbabwen ja Sambian rajalla se syöksyy Victorian putouksiin, yhteen maailman suurimmista vesiputouksista, jonka leveys on 1 708 metriä. Putousten paikallinen lozinkielinen nimi Mosi-oa-Tunya tarkoittaa jylisevää savua.",
+      "lahde": "en-Wikipedia \"Zambezi\" ja \"Victoria Falls\", johdanto-osat (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Limpopo",
+      "lon": 30.0,
+      "lat": -22.21,
+      "lahdeKoordinaatti": "Beitbridgen tienoo Etelä-Afrikan vastaisella rajalla; artikkelin koordinaatti 33,511 / -25,206 on suulla Mosambikissa",
+      "nappi": "Rajajoki Intian valtamereen",
+      "kysymykset": [
+        "Kuka eurooppalainen näki joen ensimmäisenä?",
+        "Kuinka pitkän matkan Limpopo on rajajokena?"
+      ],
+      "teksti": "Limpopo saa alkunsa Etelä-Afrikasta ja virtaa noin 1 750 kilometriä suuressa kaaressa Mosambikin läpi Intian valtamereen; noin 640 kilometrin matkalla se erottaa Etelä-Afrikan Botswanasta ja Zimbabwesta. Se on Sambesin jälkeen toiseksi suurin Intian valtamereen laskeva Afrikan joki. Ensimmäinen joen nähnyt eurooppalainen oli Vasco da Gama, joka ankkuroi sen suulle vuonna 1498.",
+      "lahde": "en-Wikipedia \"Limpopo River\", johdanto ja osa Course (tarkistettu 30.8.2026)."
+    }
+  ]
+}

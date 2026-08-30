@@ -1,0 +1,52 @@
+{
+  "_": "Jordanian maastokohteet. Faktat en-Wikipediasta 30.8.2026. Kuollutmeri on annettu Jordanialle (rantavaltioista pelin oma maa).",
+  "vuoret": [
+    {
+      "nimi": "Jabal Umm ad Dami",
+      "lon": 35.4292,
+      "lat": 29.3083,
+      "m": 1854,
+      "lahdeKoordinaatti": "en-Wikipedia \"Jabal Umm ad Dami\"",
+      "nappi": "Jordanian korkein, Wadi Rumin perukoilla",
+      "kysymykset": [
+        "Mikä Wadi Rum on?",
+        "Miten korkeus varmistettiin?"
+      ],
+      "korostukset": ["Wadi Rum|Wadi Rumin"],
+      "teksti": "Jabal Umm ad Dami on Jordanian korkein vuori: 1 854 metriä Wadi Rumin autiomaassa maan eteläkärjessä, aivan Saudi-Arabian rajan tuntumassa. Pitkään maan korkeimpana pidettiin muita Wadi Rumin huippuja, kunnes satelliittimittaukset vahvistivat tämän syrjäisen huipun lukeman. Kirkkaalla säällä laelta näkee Punaisellemerelle asti.",
+      "lahde": "en-Wikipedia \"Jabal Umm ad Dami\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Kuollutmeri",
+      "lon": 35.5,
+      "lat": 31.5,
+      "lahdeKoordinaatti": "järven keskiallas; artikkelilla ei ole koordinaattia",
+      "nappi": "Maapallon matalin ranta",
+      "kysymykset": [
+        "Miksi vedessä ei voi upota?",
+        "Mistä nimi Kuollutmeri tulee?"
+      ],
+      "korostukset": ["Jordanin hautavajoama|Jordanin hautavajoamassa"],
+      "teksti": "Kuollutmeri on suolajärvi Jordanin hautavajoamassa Jordanian ja sen länsinaapureiden välissä, ja sen ranta on maapallon matalin kuiva kohta: pinta on vajonnut jo lähes 440 metriä merenpinnan alapuolelle. Vesi on noin kymmenen kertaa valtamerta suolaisempaa ja niin tiheää, että uimari kelluu siinä kuin korkki. Suola tekee elämän lähes mahdottomaksi — siitä järven nimi.",
+      "lahde": "en-Wikipedia \"Dead Sea\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Jordan",
+      "lon": 35.55,
+      "lat": 32.2,
+      "lahdeKoordinaatti": "Jordanin laakso Galileanjärven eteläpuolella; artikkelin koordinaatti 35,62 / 33,19 on latvoilla lehden ikkunan ulkopuolella",
+      "nappi": "Joki, jolta maa sai nimensä",
+      "kysymykset": [
+        "Minkä järvien läpi ja mihin joki virtaa?",
+        "Miksi joki on pyhä kolmelle uskonnolle?"
+      ],
+      "korostukset": ["Kuollutmeri|Kuolleeseenmereen"],
+      "teksti": "Jordan on 251 kilometrin mittainen joki, joka virtaa pohjoisesta etelään Galileanjärven läpi ja laskee Kuolleeseenmereen — valtamereen sen vedet eivät koskaan pääse. Sekä Jordanian valtio että Länsiranta ovat saaneet nimensä tästä joesta. Juutalaisuudelle, kristinuskolle ja islamille se on pyhä virta: Raamatun mukaan israelilaiset ylittivät sen luvattuun maahan ja Johannes Kastaja kastoi siinä Jeesuksen.",
+      "lahde": "en-Wikipedia \"Jordan River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

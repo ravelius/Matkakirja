@@ -1,0 +1,52 @@
+{
+  "_": "Etelä-Korean maastokohteet (pelin Korea-koodi on KOR, asia-countries.js: 'Etelä-Korea'; PRK on oma lehtensä). Faktat en-Wikipediasta 30.8.2026. Japaninmeri on annettu JPN:lle, joten Korean meri on Keltainenmeri.",
+  "vuoret": [
+    {
+      "nimi": "Hallasan",
+      "lon": 126.5292,
+      "lat": 33.3617,
+      "m": 1947,
+      "lahdeKoordinaatti": "en-Wikipedia \"Hallasan\" — Jejun saarella lehden ikkunan etelälaidalla",
+      "nappi": "Tulivuori, joka on kokonainen saari",
+      "kysymykset": [
+        "Miten kilpitulivuori eroaa kartiosta?",
+        "Mitkä ovat Korean kolme päävuorta?"
+      ],
+      "korostukset": ["Jeju|Jejun"],
+      "teksti": "Hallasan on kilpitulivuori, joka muodostaa suurimman osan Jejun saaresta Korean niemimaan eteläpuolella — ja sen laki, 1 947 metriä, on koko Etelä-Korean korkein kohta. Maan korkein vuori ei siis ole mantereella vaan saarella, joka on itsessään tulivuoren rakentama. Korealaiset lukevat sen maan kolmen päävuoren joukkoon Jirisanin ja Seoraksanin rinnalle, ja koko vuori ympäristöineen on kansallispuistoa.",
+      "lahde": "en-Wikipedia \"Hallasan\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Keltainenmeri",
+      "lon": 125.0,
+      "lat": 36.0,
+      "lahdeKoordinaatti": "ulappa niemimaan länsirannikon edustalla; artikkelin oma keskipiste 123 / 38 jää lehden ikkunan länsipuolelle",
+      "nappi": "Matala meri Kiinan ja Korean välissä",
+      "kysymykset": [
+        "Mistä meri on saanut värinsä ja nimensä?",
+        "Mitä nimi on koreaksi?"
+      ],
+      "korostukset": ["Hwanghae|Hwanghae"],
+      "teksti": "Keltainenmeri on läntisen Tyynenmeren reunameri Manner-Kiinan ja Korean niemimaan välissä, pohjimmiltaan Itä-Kiinan meren matala luoteisosa. Korealaiset kutsuvat sitä nimellä Hwanghae, joka tarkoittaa täsmälleen samaa — keltaista merta. Väri ei ole tarua: Kiinan suuret joet kuljettavat mereen niin paljon hienoa maa-ainesta, että vesi todella sävyttyy.",
+      "lahde": "en-Wikipedia \"Yellow Sea\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Nakdong",
+      "lon": 128.9225,
+      "lat": 35.0517,
+      "lahdeKoordinaatti": "en-Wikipedia \"Nakdong River\" — joen suu Busanin kohdalla",
+      "nappi": "Etelä-Korean pisin joki",
+      "kysymykset": [
+        "Minkä muinaisen liiton rajana joki toimi?",
+        "Mitkä suurkaupungit ovat joen varrella?"
+      ],
+      "korostukset": ["Gaya|Gayan"],
+      "teksti": "Nakdong eli Nakdonggang on Etelä-Korean pisin joki. Se virtaa etelään maan itäosan halki Daegun suurkaupungin ohi ja laskee mereen satamakaupunki Busanin kohdalla. Nimensä joki on saanut historiasta: kolmen kuningaskunnan aikana se oli Gayan liittokunnan itäraja.",
+      "lahde": "en-Wikipedia \"Nakdong River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}
