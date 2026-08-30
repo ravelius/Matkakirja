@@ -1,0 +1,51 @@
+{
+  "_": "Kongon demokraattisen tasavallan maastokohteet. Faktat en-Wikipediasta 30.8.2026. Mount Stanleylle ei ole vakiintunutta suomennosta (fi-Wikipediassa ei artikkelia), joten nimenä on kansainvälinen asu ja kongolainen nimi Ngaliema mainitaan tekstissä.",
+  "vuoret": [
+    {
+      "nimi": "Mount Stanley",
+      "lon": 29.8717,
+      "lat": 0.3858,
+      "m": 5109,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Stanley\"",
+      "nappi": "Jäätiköitä päiväntasaajalla",
+      "kysymykset": [
+        "Miksi päiväntasaajan vuorella on jäätiköitä?",
+        "Kuka oli Henry Morton Stanley?"
+      ],
+      "korostukset": ["Rwenzori|Rwenzori-vuoristossa"],
+      "teksti": "Mount Stanley eli Ngaliema kohoaa 5 109 metriin Rwenzori-vuoristossa ja on sekä Kongon demokraattisen tasavallan että Ugandan korkein vuori — koko Afrikassa vain kolme huippua on korkeampia. Vuori on niin korkea, että sen laella on jäätiköitä, vaikka päiväntasaaja kulkee aivan vierestä. Nimensä se sai siirtomaa-ajan tutkimusmatkailijalta Henry Morton Stanleylta, ja se kuuluu Unescon maailmanperintökohteeseen Rwenzorin kansallispuistoon.",
+      "lahde": "en-Wikipedia \"Mount Stanley\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Tanganjikajärvi",
+      "lon": 29.5,
+      "lat": -6.1,
+      "lahdeKoordinaatti": "en-Wikipedia \"Lake Tanganyika\" (29,5 / -6,1); järven länsiranta on Kongon puolella",
+      "nappi": "Maailman pisin makeanveden järvi",
+      "kysymykset": [
+        "Mikä järvi on Tanganjikaakin syvempi?",
+        "Miten järven vesi päätyy Atlanttiin?"
+      ],
+      "korostukset": ["Baikal|Baikalin"],
+      "teksti": "Tanganjika on maailman pisin makeanveden järvi, ja sekä tilavuudessa että syvyydessä sen edelle kiilaa vain Siperian Baikal. Järvi jakautuu neljän maan kesken, joista suurimmat osuudet ovat Tansanialla ja Kongon demokraattisella tasavallalla. Sen vedet laskevat Lukuga-jokea pitkin Kongoon ja virtaavat lopulta Atlanttiin asti.",
+      "lahde": "en-Wikipedia \"Lake Tanganyika\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Kongo",
+      "lon": 18.3,
+      "lat": 0.0,
+      "lahdeKoordinaatti": "keskijuoksu Mbandakan kohdalla; en-Wikipedia \"Congo River\" antaa suulle 12,45 / -6,08",
+      "nappi": "Maailman syvin joki",
+      "kysymykset": [
+        "Kuinka syvä joki voi olla?",
+        "Miksi Kongo ylittää päiväntasaajan kahdesti?"
+      ],
+      "teksti": "Kongo on Afrikan toiseksi pisin joki heti Niilin jälkeen ja virtaamaltaan maailman kolmanneksi suurin. Se on myös maailman syvin mitattu joki: syvimmillään vettä on noin 220 metriä. Kongo on ainoa suuri joki, joka ylittää päiväntasaajan kahdesti, ja sen valuma-alue kattaa noin 13 prosenttia koko Afrikan pinta-alasta.",
+      "lahde": "en-Wikipedia \"Congo River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

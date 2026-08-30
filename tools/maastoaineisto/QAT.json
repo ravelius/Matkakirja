@@ -1,0 +1,32 @@
+{
+  "_": "Qatarin maastokohteet. Faktat en-Wikipediasta 30.8.2026. Qatar on matala aavikkoniemimaa ilman vuoria ja jokia, joten molemmat kohteet ovat merta: niemimaata joka puolelta ympäröivä Persianlahti ja kuuluisa \"sisämeri\" Khawr al-Udayd.",
+  "meret": [
+    {
+      "nimi": "Persianlahti",
+      "lon": 51.75,
+      "lat": 25.6,
+      "lahdeKoordinaatti": "ulappa Dohan koillispuolella; artikkelin oma keskipiste on 52 / 26",
+      "nappi": "Meri joka ympäröi maan",
+      "kysymykset": [
+        "Miten helmiä kalastettiin ennen öljyä?",
+        "Missä Hormuzinsalmi on?"
+      ],
+      "korostukset": ["helmisimpukoita|helmisimpukoistaan"],
+      "teksti": "Persianlahti on Länsi-Aasian sisämeri Arabian niemimaan ja Iranin välissä, ja Qatarin niemimaa työntyy siihen joka puolelta veden ympäröimänä. Lahti on Intian valtameren ja Arabianmeren jatke, joka yhtyy Omaninlahteen Hormuzinsalmen kautta. Se on tunnettu kalavesistään, riutoistaan ja runsaista helmisimpukoistaan — helmenpyynnin merestä ennen öljyä.",
+      "lahde": "en-Wikipedia \"Persian Gulf\", johdanto-osa (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Khawr al-Udayd",
+      "lon": 51.296,
+      "lat": 24.63,
+      "lahdeKoordinaatti": "en-Wikipedia \"Khor Al Adaid\"",
+      "nappi": "Aavikon sisämeri",
+      "kysymykset": [
+        "Miten meri pääsee keskelle hiekkadyynejä?",
+        "Mikä on luonnonsuojelualue?"
+      ],
+      "teksti": "Khawr al-Udayd on Persianlahden poukama Qatarin kaakkoiskulmassa Saudi-Arabian rajalla, noin 78 kilometriä Dohasta etelään. Englanniksi sitä kutsutaan sisämereksi (Inland Sea), sillä vesi työntyy siinä syvälle aavikon sisään. Alue rauhoitettiin luonnonsuojelualueeksi 2007, ja Qatar on esittänyt sitä Unescon maailmanperintöluetteloon.",
+      "lahde": "en-Wikipedia \"Khor Al Adaid\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

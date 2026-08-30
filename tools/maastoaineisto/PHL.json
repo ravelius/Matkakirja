@@ -1,0 +1,67 @@
+{
+  "_": "Filippiinien maastokohteet. Faktat en-Wikipediasta 30.8.2026. Mayonin korkeuslukema on artikkelin tietolaatikosta (Wikidata P2044: 2 462 m). Filippiinienmeren merkki on ulapalla Samarin itäpuolella, jotta se pysyy lehden ikkunassa — artikkelin oma keskipiste 130 / 20 jää rajauksen ulkopuolelle.",
+  "vuoret": [
+    {
+      "nimi": "Mount Apo",
+      "id": "apo",
+      "lon": 125.2708,
+      "lat": 6.9875,
+      "m": 2954,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Apo\"",
+      "nappi": "Filippiinien korkein",
+      "kysymykset": [
+        "Mikä on solfataarinen tulivuori?",
+        "Näkyykö huippu Davaon kaupunkiin?"
+      ],
+      "korostukset": ["Mindanao|Mindanaon"],
+      "teksti": "Mount Apo on Filippiinien korkein vuori, 2 954 metriä merenpinnasta. Se on suuri, uinuva kerrostulivuori Mindanaon saarella, ja sen rikkihöyryt purkautuvat yhä maan raoista. Huippu näkyy 45 kilometrin päähän Davaon kaupunkiin, ja vuori on luonnonpuiston sydän.",
+      "lahde": "en-Wikipedia \"Mount Apo\", johdanto-osa (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Mayon",
+      "lon": 123.685,
+      "lat": 13.2567,
+      "m": 2462,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mayon\"",
+      "nappi": "Täydellinen kartio",
+      "kysymykset": [
+        "Miksi tulivuoresta kasvaa täydellinen kartio?",
+        "Miten aktiivista tulivuorta vahditaan?"
+      ],
+      "korostukset": ["kartio|kartionsa"],
+      "teksti": "Mayon on aktiivinen kerrostulivuori Albayn maakunnassa Luzonin saaren kaakkoiskärjessä, ja se on kuuluisa lähes täydellisen symmetrisestä kartiostaan. Se on Filippiinien aktiivisin tulivuori, jota tarkkaillaan jatkuvasti parinkymmenen kilometrin päästä. Vuori ympäristöineen julistettiin maan ensimmäiseksi kansallispuistoksi jo 1938, ja filippiiniläisessä mytologiassa se on pyhä.",
+      "lahde": "en-Wikipedia \"Mayon\", johdanto-osa ja tietolaatikko (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Filippiinienmeri",
+      "lon": 126.6,
+      "lat": 13.5,
+      "lahdeKoordinaatti": "ulappa Samarin itäpuolella; artikkelin oma keskipiste 130 / 20 jää lehden ikkunan ulkopuolelle",
+      "nappi": "Maailman suurin meri",
+      "kysymykset": [
+        "Mikä on maailman suurin meri?",
+        "Mikä on Tyynenmeren tulirengas?"
+      ],
+      "teksti": "Filippiinienmeri on Tyynenmeren reunameri saariston itäpuolella — ja pinta-alaltaan noin viiden miljoonan neliökilometrin laajuisena maailman suurin meri. Sen pohjana on kokonainen oma mannerlaatta, Filippiinienmeren laatta. Meren rajat piirtävät saariketjut: lännessä Taiwan ja Filippiinit, pohjoisessa Japani, idässä Mariaanit.",
+      "lahde": "en-Wikipedia \"Philippine Sea\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Cagayan",
+      "lon": 121.6167,
+      "lat": 18.3667,
+      "lahdeKoordinaatti": "en-Wikipedia \"Cagayan River\" (koordinaatti on joen suulla)",
+      "nappi": "Luzonin suuri virta",
+      "kysymykset": [
+        "Miksi jokilaakso on saaren vilja-aitta?",
+        "Kumpi ratkaisee joen suuruuden: pituus vai virtaama?"
+      ],
+      "korostukset": ["Luzon|Luzonin"],
+      "teksti": "Cagayan eli Río Grande de Cagayán on Filippiinien pisin ja vesimäärältään suurin joki: 505 kilometriä pitkä, ja sen valuma-alue kattaa lähes 28 000 neliökilometriä. Se virtaa pohjoista kohti Luzonin saaren koillisosan halki Cagayanin laaksossa, viiden maakunnan läpi.",
+      "lahde": "en-Wikipedia \"Cagayan River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

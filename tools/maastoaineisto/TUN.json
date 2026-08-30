@@ -1,0 +1,49 @@
+{
+  "_": "Tunisian maastokohteet. Faktat en-Wikipediasta 30.8.2026. Maalla on jo fokuskohde (Karthagon sotasatama), jota ei toisteta täällä; vuorennimi on fi-Wikipedian asussa Jabal ash Shanabi.",
+  "vuoret": [
+    {
+      "nimi": "Jabal ash Shanabi",
+      "lon": 8.6831,
+      "lat": 35.2067,
+      "m": 1544,
+      "lahdeKoordinaatti": "en-Wikipedia \"Jebel ech Chambi\"",
+      "nappi": "Tunisian korkein huippu",
+      "kysymykset": [
+        "Mikä kaupunki lepää vuoren juurella?",
+        "Mitä vuoren laella kasvaa?"
+      ],
+      "teksti": "Jabal ash Shanabi, ranskalaisittain Jebel ech Chambi, on Tunisian korkein vuori: 1 544 metriä. Se kohoaa Kasserinen kaupungin ylle maan länsiosassa, ja sen mäntymetsän peittämä laki kuuluu Chambin kansallispuistoon.",
+      "lahde": "en-Wikipedia \"Jebel ech Chambi\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Välimeri",
+      "lon": 11.6,
+      "lat": 37.3,
+      "lahdeKoordinaatti": "ulappa Kap Bonin niemen koillispuolella; artikkelin oma keskipiste on 18 / 35",
+      "nappi": "Meri jota maa ympäröi",
+      "kysymykset": [
+        "Miksi Välimerta ympäröi maa lähes joka suunnalta?",
+        "Mitä reittiä Välimereltä pääsee valtamerelle?"
+      ],
+      "teksti": "Välimeri on Euroopan, Aasian ja Afrikan välinen meri, jota maa ympäröi lähes kokonaan; Atlanttiin se yhtyy lännessä Gibraltarinsalmen kautta. Tunisian rannikko on meren etelälaidalla, ja Medjerda tuo maan jokivedet siihen Tunisinlahdessa.",
+      "lahde": "en-Wikipedia \"Mediterranean Sea\" ja \"Medjerda River\", johdanto-osat (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Medjerda",
+      "lon": 9.4,
+      "lat": 36.6,
+      "lahdeKoordinaatti": "joen keskijuoksu Testourin tienoilla; artikkelin koordinaatti 10,213 / 37,112 on suulla Tunisinlahdessa",
+      "nappi": "Tunisian pisin joki",
+      "kysymykset": [
+        "Millä nimellä joki tunnettiin antiikissa?",
+        "Mistä joki saa alkunsa?"
+      ],
+      "teksti": "Medjerda on Tunisian pisin joki: 450 kilometriä Koillis-Algerian vuorilta Tunisian halki Tunisinlahteen. Antiikin aikana se tunnettiin nimellä Bagradas.",
+      "lahde": "en-Wikipedia \"Medjerda River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

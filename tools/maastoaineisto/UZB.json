@@ -1,0 +1,52 @@
+{
+  "_": "Uzbekistanin maastokohteet. Faktat en-Wikipediasta 30.8.2026. Araljärvi on suomeksi järvi mutta otsakkeeksi 'Meri' olisi silti väärin ja 'Vuori' vielä väärempi: tyyppi vaihdetaan pakissa käsin arvoon 'muu' + symboli 'luonto' Vanjärven mallin mukaan (js/packs/fokuskohteet-tur.js).",
+  "vuoret": [
+    {
+      "nimi": "Khazret Sultan",
+      "lon": 68.1722,
+      "lat": 38.9483,
+      "m": 4643,
+      "lahdeKoordinaatti": "en-Wikipedia \"Khazret Sultan\"",
+      "nappi": "Uzbekistanin katto",
+      "kysymykset": [
+        "Miksi vuoren nimi vaihdettiin?",
+        "Mikä Gissarin vuoristo on?"
+      ],
+      "korostukset": ["Gissarin vuoristo|Gissarin vuoristossa"],
+      "teksti": "Khazret Sultan on Uzbekistanin korkein kohta, 4 643 metriä, Gissarin vuoristossa Tadžikistanin vastaisella rajalla. Neuvostoaikana sillä oli aivan toisenlainen nimi: kommunistisen puolueen 22. puoluekokouksen huippu. Vuoren rinteiltä löydettiin 1800-luvulla tieteelle uusia perhoslajeja.",
+      "lahde": "en-Wikipedia \"Khazret Sultan\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Araljärvi",
+      "lon": 58.5,
+      "lat": 44.3,
+      "lahdeKoordinaatti": "eteläisen Araljärven läntinen allas Karakalpakstanin puolella; artikkelin oma keskipiste 60 / 45 on suurelta osin kuivunutta pohjaa",
+      "nappi": "Järvi joka katosi",
+      "kysymykset": [
+        "Minne kokonainen järvi voi kadota?",
+        "Mitä järven paljastuneelta pohjalta löytyy?"
+      ],
+      "korostukset": ["Karakalpakstan|Karakalpakstanin"],
+      "teksti": "Araljärvi oli vielä 1960-luvulla maailman kolmanneksi suurin järvi, 68 000 neliökilometrin suolajärvi Kazakstanin ja Uzbekistanin välissä. Kun neuvostoliittolaiset kasteluhankkeet käänsivät sitä ruokkivat joet pelloille, järvi alkoi kuivua: vuoteen 2007 mennessä jäljellä oli kymmenesosa, neljäksi erilliseksi altaaksi hajonneena. Nimi tarkoittaa saarten merta — saaria järvessä oli yli tuhat.",
+      "lahde": "en-Wikipedia \"Aral Sea\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Amudarja",
+      "lon": 60.63,
+      "lat": 41.55,
+      "lahdeKoordinaatti": "joen laakso Urgenchin kohdalla Khorezmin keitaalla; artikkelin koordinaatti 59,68 / 44,11 on kuivuneella suulla",
+      "nappi": "Antiikin Oxus",
+      "kysymykset": [
+        "Miksi joki ei enää pääse perille asti?",
+        "Minkä rajan Oxus muinoin merkitsi?"
+      ],
+      "korostukset": ["Oxus|Oxuksena"],
+      "teksti": "Amudarja syntyy Pamirin vuoristossa Vakhshin ja Panjin yhtyessä ja virtaa luoteeseen kohti Araljärven eteläisiä jäänteitä — mutta perille se ei enää yllä, vaan sen suu on kuivuneella järvenpohjalla. Antiikin maailma tunsi joen Oxuksena, ja sitä pidettiin suur-Iranin ja Turanin rajana. Vettä se kuljettaa keskimäärin noin 70 kuutiokilometriä vuodessa.",
+      "lahde": "en-Wikipedia \"Amu Darya\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

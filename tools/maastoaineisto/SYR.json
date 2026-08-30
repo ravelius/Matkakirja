@@ -1,0 +1,52 @@
+{
+  "_": "Syyrian maastokohteet. Faktat en-Wikipediasta 30.8.2026. Maalla on jo fokuskohteet-syr.js (Belin temppeli) — maastoa siinä ei ole, joten päällekkäisyyksiä ei synny. Eufratin merkki on Raqqan ja Dayr az Zawrin välissä, jottei se osu lehteen poltetun Dayr az Zawrin nimen päälle.",
+  "vuoret": [
+    {
+      "nimi": "Hermonvuori",
+      "lon": 35.8575,
+      "lat": 33.4161,
+      "m": 2814,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Hermon\"",
+      "nappi": "Syyrian lumihuippu",
+      "kysymykset": [
+        "Voiko Lähi-idässä hiihtää?",
+        "Miksi vuoren laella on YK:n vartioasema?"
+      ],
+      "korostukset": ["Anti-Libanon|Anti-Libanonin"],
+      "teksti": "Hermonvuori on Anti-Libanonin vuoriston eteläinen pääte, ja sen 2 814-metrinen laki Syyrian ja Libanonin rajalla on Syyrian korkein kohta. Huipulla, YK:n valvomalla puskurivyöhykkeellä, on maailman korkein pysyvästi miehitetty YK-asema, lempinimeltään Hermon-hotelli. Etelärinteillä Golanin puolella toimii hiihtokeskus — lunta siis riittää keskellä Lähi-itää.",
+      "lahde": "en-Wikipedia \"Mount Hermon\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Välimeri",
+      "lon": 35.35,
+      "lat": 35.3,
+      "lahdeKoordinaatti": "ulappa Latakian edustalla; artikkelin oma keskipiste on 18 / 35",
+      "nappi": "Meri kolmen maanosan välissä",
+      "kysymykset": [
+        "Kuinka kapea Gibraltarinsalmi todella on?",
+        "Miksi Syyrian rannikkoa kutsutaan Levantiksi?"
+      ],
+      "korostukset": ["Levantti|Levantin"],
+      "teksti": "Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Syyrian rannikko on sen itäisintä reunaa, jota kutsutaan Levantiksi. Lännessä meri yhtyy Atlanttiin Gibraltarinsalmen kautta ja kaakossa Suezin kanava vie Punaisellemerelle.",
+      "lahde": "en-Wikipedia \"Mediterranean Sea\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Eufrat",
+      "lon": 39.55,
+      "lat": 35.65,
+      "lahdeKoordinaatti": "joen laakso Raqqan ja Dayr az Zawrin välissä; artikkelin koordinaatti 47,442 / 31,005 on Shatt al-Arabissa Irakissa",
+      "nappi": "Mesopotamian synnyttäjä",
+      "kysymykset": [
+        "Mikä Mesopotamia oli?",
+        "Missä Eufrat ja Tigris yhtyvät?"
+      ],
+      "korostukset": ["Mesopotamia|Mesopotamian"],
+      "teksti": "Eufrat on Länsi-Aasian pisin joki ja yhdessä Tigriksen kanssa toinen Mesopotamian kahdesta määrittävästä virrasta. Se saa alkunsa Turkista, virtaa koko Syyrian halki kaakkoon ja jatkaa Irakiin, missä se yhtyy Tigrikseen Shatt al-Arabiksi ja laskee Persianlahteen. Kuivassa maassa joen laakso on vihreä nauha, jonka varrella Syyrian viljelykset ja kaupungit ovat aina olleet.",
+      "lahde": "en-Wikipedia \"Euphrates\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

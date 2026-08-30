@@ -1,0 +1,36 @@
+{
+  "_": "Kyproksen maastokohteet. Faktat en-Wikipediasta 30.8.2026. Välimerta EI oteta tähän: se on jo ESP:n ja TUR:n listoilla, ja saaren oma tarina kerrotaan vuoren ja saaren pisimmän joen kautta.",
+  "vuoret": [
+    {
+      "nimi": "Ólympos",
+      "lon": 32.8633,
+      "lat": 34.9364,
+      "m": 1952,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Olympus (Cyprus)\"",
+      "nappi": "Kyproksen katto, toiselta nimeltään Luminen",
+      "kysymykset": [
+        "Miksi vuoren toinen nimi on Chionistra?",
+        "Mikä Troodosin vuoristo on?"
+      ],
+      "korostukset": ["Troodos|Troodosin"],
+      "teksti": "Ólympos on Kyproksen korkein kohta, 1 952 metriä, Troodosin vuoriston keskellä. Kreikkalainen kansannimi Chionistra tarkoittaa lumista — ja nimi pitää paikkansa, sillä Välimeren saareksi huippu saa talvisin kunnon lumipeitteen. Vuori on syntynyt merenpohjan syvyyksistä: sen kivi on Troodosin ofioliitin serpentiiniytynyttä vaippakiveä, jota tutkitaan ympäri maailmaa.",
+      "lahde": "en-Wikipedia \"Mount Olympus (Cyprus)\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Pediaíos",
+      "lon": 33.9167,
+      "lat": 35.1667,
+      "lahdeKoordinaatti": "en-Wikipedia \"Pedieos\" — joen alajuoksu Mesaorian tasangolla",
+      "nappi": "Saaren pisin joki, pääkaupungin halki",
+      "kysymykset": [
+        "Minkä kaupungin läpi joki virtaa?",
+        "Missä muinainen Salamis sijaitsi?"
+      ],
+      "korostukset": ["Nikosia|Nikosian"],
+      "teksti": "Pediaíos on Kyproksen pisin joki, 98 kilometriä. Se saa alkunsa Troodosin vuoriston Machairasin metsästä, virtaa koilliseen Mesaorian tasangon poikki ja kulkee pääkaupunki Nikosian läpi — kaupungissa sen rantoja pitkin pääsee kävelemään lähes kahdenkymmenen kilometrin matkan. Mereen joki laskee Famagustanlahdella, muinaisen Salamiin kaupungin raunioiden vieressä.",
+      "lahde": "en-Wikipedia \"Pedieos\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

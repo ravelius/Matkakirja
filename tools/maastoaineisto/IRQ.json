@@ -1,0 +1,50 @@
+{
+  "_": "Irakin maastokohteet. Faktat en-Wikipediasta 30.8.2026. Eufratin tarina on jo TUR:n listalla (Fırat), joten Irakin joet ovat Tigris ja Shatt al-Arab.",
+  "vuoret": [
+    {
+      "nimi": "Cheekha Dar",
+      "lon": 44.9186,
+      "lat": 36.7767,
+      "m": 3611,
+      "lahdeKoordinaatti": "en-Wikipedia \"Cheekha Dar\"",
+      "nappi": "Musta teltta, Irakin katto",
+      "kysymykset": [
+        "Miksi korkeudesta ei olla varmoja?",
+        "Missä Irakin vuoristot ovat?"
+      ],
+      "korostukset": ["Kurdistan|Kurdistanin"],
+      "teksti": "Cheekha Dar, kurdiksi \"musta teltta\", on nykytiedon mukaan Irakin korkein vuori: noin 3 611 metriä Kurdistanin alueella maan pohjoisosassa, aivan Iranin rajalla. Kahden jokilaakson maana tunnettu Irak nousee siis koilliskulmastaan oikeaksi vuoristoksi — ja huipun tarkasta korkeudesta kiistellään yhä, sillä lukema on peräisin mittausten eikä virallisen kartoituksen varasta.",
+      "lahde": "en-Wikipedia \"Cheekha Dar\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Tigris",
+      "lon": 44.36,
+      "lat": 33.31,
+      "lahdeKoordinaatti": "Bagdadin kohdalla; artikkelin koordinaatti 47,44 / 31,01 on yhtymäkohdassa al-Qurnahissa",
+      "nappi": "Mesopotamian itäisempi joki",
+      "kysymykset": [
+        "Mitä Mesopotamia tarkoittaa?",
+        "Mitkä suurkaupungit nousivat Tigriin varrelle?"
+      ],
+      "korostukset": ["Mesopotamia|Mesopotamian", "Assyria|Assyrian"],
+      "teksti": "Tigris on Mesopotamian eli \"jokien välisen maan\" kahdesta joesta itäisempi — läntinen on Eufrat. Se virtaa Armenian ylängöltä etelään aavikoiden halki ja yhtyy lopulta Eufratiin ennen Persianlahtea. Sen rannoilla ovat Mosul, Tikrit, Samarra ja Bagdad, ja muinaisuudessa sen vesi elätti Assyrian suurvallan.",
+      "lahde": "en-Wikipedia \"Tigris\", johdanto-osa (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Shatt al-Arab",
+      "lon": 47.78,
+      "lat": 30.5,
+      "lahdeKoordinaatti": "Basran kohdalla; artikkelin koordinaatti 48,15 / 30,41 on joen suulla",
+      "nappi": "Kahden virran yhteinen loppu",
+      "kysymykset": [
+        "Missä Eufrat ja Tigris yhtyvät?",
+        "Miksi jokea pitää ruopata jatkuvasti?"
+      ],
+      "korostukset": ["Basra|Basran"],
+      "teksti": "Shatt al-Arab, \"arabien joki\", syntyy kun Eufrat ja Tigris yhtyvät al-Qurnahin kaupungin kohdalla Etelä-Irakissa. Yhteistä virtaa riittää enää noin 200 kilometriä Basran ohi Persianlahteen, ja alajuoksullaan joki on Irakin ja Iranin rajana. Iranin puolelta siihen laskeva Karun tuo mukanaan niin paljon lietettä, että väylä pysyy laivakuntoisena vain jatkuvalla ruoppauksella.",
+      "lahde": "en-Wikipedia \"Shatt al-Arab\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

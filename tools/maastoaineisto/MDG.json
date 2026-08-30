@@ -1,0 +1,50 @@
+{
+  "_": "Madagaskarin maastokohteet. Faktat en-Wikipediasta 30.8.2026. Mangokylle ei ole vakiintunutta suomennosta (fi-Wikipediassa ei artikkelia); Maromokotro ja Mosambikin kanaali ovat fi-Wikipedian asuja.",
+  "vuoret": [
+    {
+      "nimi": "Maromokotro",
+      "lon": 48.9658,
+      "lat": -14.0233,
+      "m": 2876,
+      "lahdeKoordinaatti": "en-Wikipedia \"Maromokotro\"",
+      "nappi": "Saaren korkein huippu",
+      "kysymykset": [
+        "Miksi huipulle on yli kahden päivän matka?",
+        "Mikä on Tsaratananan massiivi?"
+      ],
+      "korostukset": ["Tsaratanana|Tsaratananan"],
+      "teksti": "Maromokotro on Madagaskarin korkein huippu: 2 876 metriä. Tuliperäinen vuori kohoaa Tsaratananan massiivissa saaren pohjoisosassa, luonnonsuojelualueella. Se on niin syrjässä, että lähimmistäkin kaupungeista, Bealananasta ja Ambanjasta, matka vuorelle kestää yhä yli kaksi päivää.",
+      "lahde": "en-Wikipedia \"Maromokotro\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Mosambikin kanaali",
+      "lon": 43.5,
+      "lat": -18.0,
+      "lahdeKoordinaatti": "ulappa Madagaskarin länsirannikon edustalla; en-Wikipedia \"Mozambique Channel\" antaa keskipisteeksi 41 / -18",
+      "nappi": "Salmi, joka erottaa saaren Afrikasta",
+      "kysymykset": [
+        "Kuinka kapea kanaali on kapeimmillaan?",
+        "Minne Mosambikvirta kuljettaa lämmintä vettä?"
+      ],
+      "teksti": "Mosambikin kanaali on Intian valtameren haara, joka erottaa Madagaskarin Afrikan mantereesta. Salmi on noin 1 700 kilometriä pitkä ja kapeimmillaankin 419 kilometriä leveä, ja syvimmillään vettä on lähes 3 300 metriä. Sen läpi virtaa etelään lämmin Mosambikvirta, joka ruokkii eteläisen Afrikan rannikkoa kiertävää Agulhasvirtaa.",
+      "lahde": "en-Wikipedia \"Mozambique Channel\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Mangoky",
+      "lon": 44.5,
+      "lat": -21.7,
+      "lahdeKoordinaatti": "keskijuoksu ylänköjen ja rannikon välissä; en-Wikipedia \"Mangoky River\" antaa suistolle 43,53 / -21,32",
+      "nappi": "Hiekkasärkkien joki",
+      "kysymykset": [
+        "Miksi joessa on niin paljon hiekkasärkkiä?",
+        "Mitä kaskeaminen tekee joelle?"
+      ],
+      "teksti": "Mangoky on 564 kilometrin pituinen joki, joka syntyy Mananantananan ja Matsiatran yhtyessä ja virtaa Madagaskarin keskiylängöiltä länteen Mosambikin kanaaliin. Saaren metsiä on hakattu ja kaskettu rajusti viime vuosikymmeninä, ja eroosion irrottama maa näkyy joessa: uomaa täplittävät lukemattomat hiekkasärkät, ja suiston pohjoisosaa reunustavat mangrovemetsät.",
+      "lahde": "en-Wikipedia \"Mangoky River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}
