@@ -41,6 +41,7 @@
  */
 import { spawnSync } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, writeFileSync, statSync } from 'node:fs';
+import { gunzipSync } from 'node:zlib';
 import { tmpdir } from 'node:os';
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -64,6 +65,69 @@ if (AJETAAN_SUORAAN && !process.env.NODE_USE_ENV_PROXY
     env: { ...process.env, NODE_USE_ENV_PROXY: '1', NODE_NO_WARNINGS: '1' },
   });
   process.exit(ajo.status ?? 1);
+}
+
+/*
+ * === REPOSSA OLEVA AINEISTO ON ENSISIJAINEN LÄHDE ===================
+ *
+ * Omistajan päätös 30.8.2026: YKSIKÄÄN AJO EI SAA RIIPPUA NOAA:N
+ * TAVOITETTAVUUDESTA. Laattapyramidin ensimmäinen CI-koeajo kaatui
+ * juuri siihen — ERDDAP ei vastannut ajokoneelta lainkaan ("fetch
+ * failed", ei HTTP-statusta), vaikka kontista sama osoite vastaa
+ * sekunnissa.
+ *
+ * Harvennettu ruudukko on siksi repossa (ks. tools/tee-korkeusaineisto.mjs
+ * ja tools/korkeusaineisto/LUEMINUT.md). Verkkoon mennään enää siinä
+ * tapauksessa, että aineistoa ei ole — eli kun joku haluaa
+ * NIMENOMAAN tarkemman ruudun kuin repoon on talletettu.
+ *
+ * TÄTÄ EI HARVENNETA TOISEEN KERTAAN. Tiedostossa on jo valmis
+ * keskiarvoistettu ruudukko; lukija vain purkaa sen. Kaksi kertaa
+ * keskiarvoistettu maasto olisi liian sileä, ja se olisi hiljainen
+ * laatuvirhe jota kukaan ei huomaisi katsomalla.
+ */
+export const AINEISTON_POLKU = 'tools/korkeusaineisto/etopo-3kaariminuuttia.bin.gz';
+/** Repossa olevan aineiston tunnus (erotukseksi välimuistin MKR1:stä). */
+export const TUNNUS3 = 'MKR3';
+const AINEISTON_OTSIKKO = 4 + 4 + 4 + 8 + 4;
+
+/**
+ * Lukee repon aineiston, jos se on olemassa ja vastaa pyydettyä ruutua.
+ * Palauttaa Int16Array-ruudukon tai null.
+ */
+function lueRepostaAineisto(ruutu, hiljaa) {
+  const polku = new URL(`../${AINEISTON_POLKU}`, import.meta.url);
+  if (!existsSync(polku)) return null;
+  let runko;
+  try {
+    runko = gunzipSync(readFileSync(polku));
+  } catch {
+    return null;
+  }
+  if (runko.length < AINEISTON_OTSIKKO) return null;
+  if (runko.toString('latin1', 0, 4) !== TUNNUS3) return null;
+  const leveys = runko.readUInt32LE(4);
+  const korkeus = runko.readUInt32LE(8);
+  const oma = runko.readDoubleLE(12);
+  if (oma !== ruutu) return null;
+  const n = leveys * korkeus;
+  if (runko.length !== AINEISTON_OTSIKKO + n * 2) return null;
+  /*
+   * Erotuskoodauksen purku: rivin yli kulkeva summa. Kopio eikä näkymä,
+   * koska readFileSync ei takaa kahdella jaollista alkukohtaa.
+   */
+  const z = new Int16Array(n);
+  let luettu = AINEISTON_OTSIKKO;
+  for (let y = 0; y < korkeus; y += 1) {
+    let edellinen = 0;
+    for (let x = 0; x < leveys; x += 1) {
+      edellinen += runko.readInt16LE(luettu);
+      luettu += 2;
+      z[y * leveys + x] = edellinen;
+    }
+  }
+  if (!hiljaa) process.stderr.write(`ruudukko reposta: ${AINEISTON_POLKU}\n`);
+  return { z, leveys, korkeus };
 }
 
 const VALIMUISTI = process.env.KORKEUSRUUDUKKO_VALIMUISTI
@@ -266,8 +330,14 @@ function kirjoitaVarasto(polku, z, ruutu, leveys, korkeus) {
  * Koko maailman korkeudet yhtenä ruudukkona.
  *
  * Palauttaa `{ z, leveys, korkeus, ruutu, lahteet }`, jossa z on
- * Float32Array pituudeltaan leveys*korkeus ja rivi y alkaa kohdasta
+ * TypedArray pituudeltaan leveys*korkeus ja rivi y alkaa kohdasta
  * y*leveys. Metrejä merenpinnasta; meri on negatiivinen.
+ *
+ * TYYPPI VAIHTELEE LÄHTEEN MUKAAN eikä sillä ole väliä: repon
+ * aineistosta se on Int16Array (metrin tarkkuus, puolet muistista) ja
+ * verkosta kootusta välimuistista Float32Array. Kumpaakin luetaan
+ * pelkkinä numeroina, ja ainoa kuluttaja (tools/fokuskartta/maailma.mjs)
+ * pyöristää arvot joka tapauksessa Int16:een.
  *
  * SUUNNAT: y kasvaa POHJOISEEN (y = 0 on lat -90) ja x kasvaa ITÄÄN
  * (x = 0 on lon -180). Tämä on ruudukon tärkein sopimus — varjostus
@@ -286,6 +356,17 @@ export async function haeKorkeusruudukko(asetukset = {}) {
   const korkeus = Math.round(180 / ruutu) + 1; // -90 .. +90
   const hiljaa = asetukset.hiljaa ?? false;
   const kerro = (t) => { if (!hiljaa) process.stderr.write(t); };
+
+  /*
+   * REPON AINEISTO ENSIN. Se on sama ruudukko, joka ennen koottiin
+   * verkosta — ei harvennettu uudelleen vaan luettu sellaisenaan.
+   */
+  const reposta = lueRepostaAineisto(ruutu, hiljaa);
+  if (reposta && reposta.leveys === leveys && reposta.korkeus === korkeus) {
+    return {
+      z: reposta.z, leveys, korkeus, ruutu, lahteet: LAHTEET,
+    };
+  }
 
   mkdirSync(VALIMUISTI, { recursive: true });
   const varasto = join(VALIMUISTI, `ruudukko-${ruutu}-${askel}.bin`);

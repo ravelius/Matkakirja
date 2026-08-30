@@ -1,134 +1,114 @@
-# Viesti Fablelle — laattapyramidi, erä 4 (30.8.2026)
+# Viesti Fablelle — noutovian korjaus (30.8.2026)
 
 Haara `claude/pyramidi-pilotti`. Ei versionostoa, ei PR:ää.
 **Portit: 1048 pass / 0 fail, savuke-laattapyramidi 13/13.**
 
-En käynnistänyt yhtään agenttia täysajoa varten, joten mitään ei ollut
-pysäytettävänä. Työnkulku on valmis. **Yksi asia estää koeajon, ja
-tarvitsen siihen sinulta päätöksen.**
+Lopetin NOAA:n tavoitettavuuden selvittelyn heti — poistin jo
+kirjoittamani luotainaskeleet työnkulusta, koska niitä ei enää tarvita.
 
 ---
 
-## ESTE: työnkulkua ei voi ajaa haaralta
+## Pakattu koko: 28,9 Mt (raja 40 Mt ei ylity)
 
-`workflow_dispatch` toimii vain, jos työnkulkutiedosto on
-**oletushaarassa**. Kokeilin ja todensin, en oleta:
+Mittasin ennen kuin committasin, kuten pyysit:
 
-- dispatch haaralle `claude/pyramidi-pilotti` → **404 Not Found**
-- repon 27 työnkulun listaus → jokaisen `html_url` osoittaa
-  `blob/main/...`, eikä `generoi-pyramidi.yml` ole listalla lainkaan.
-  Se ei siis ole lupaongelma vaan rekisteröinti: GitHub ei tunne
-  työnkulkua ennen kuin se on mainissa.
-
-Käskit: ei PR:ää, ei versionostoa — enkä siksi vienyt tiedostoa
-mainiin. **Koeajo vaatii, että `generoi-pyramidi.yml` on mainissa.**
-Vaihtoehdot:
-
-1. **Sinä mergeät työnkulkutiedoston mainiin** (se on yksi uusi
-   tiedosto, ei koske peliin eikä muuta oletuspolkua), minkä jälkeen
-   voin ajaa koeajon ja todentaa laatat ämpärissä.
-2. Merge koko haara normaalilla julkaisukaavallasi, ja koeajo sen
-   jälkeen.
-3. Ajat koeajon itse napista, ja minä todennan tuloksen.
-
-Suosittelen vaihtoehtoa 1: työnkulku on ainoa osa, joka on pakko olla
-mainissa, ja se on inertti kunnes joku painaa nappia.
-
-## R2-vienti: mitä se vaatii (kysymyksesi 4)
-
-| asia | tila |
+| muoto | koko |
 | --- | --- |
-| Tunnukset kontissa | **ei ole** — vahvistettu, siksi kontti ei kelpaa |
-| Secretit | `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET`, `R2_ACCOUNT_ID` — käytin täsmälleen näitä, en kirjoittanut tunnuksia mihinkään enkä lokita niitä |
-| Malli | `patinoi-fokus.yml` (generointi + sync samassa jobissa) ja `vie-fokus.yml` — rakenne niistä, ei keksitty |
-| Julkinen osoite | `https://pub-…r2.dev/julisteet/pyramidi/<versio>/z7/92/41.webp` — sama reitti kuin lehdillä, eli **suoraan selaimen haettavissa** |
-| Viennin kesto | sync tapahtuu shardin omassa jobissa generoinnin perässä; suurin shardi ~250 Mt |
+| Float32 raakana (välimuistin muoto) | 103,7 Mt |
+| Int16 raakana | 51,9 Mt |
+| Int16 + gzip −9 | **39,9 Mt** |
+| Int16 + rivierotus + gzip −9 | **28,9 Mt** ← tämä |
 
-## Työnkulku — `.github/workflows/generoi-pyramidi.yml`
+Pelkkä gzip olisi jäänyt 39,9 megatavuun eli **kämmenen leveyden
+päähän rajastasi**, joten lisäsin yhden askeleen: rivikohtaisen
+erotuskoodauksen. Naapurisolut ovat lähes samat, joten erotus on pieni
+luku ja pakkautuu paremmin; purku on rivin yli kulkeva summa, kuusi
+riviä koodia. **Häviöttömyys todennettu koko aineistolla: 25 930 801
+solua, 0 eroa.**
 
-`workflow_dispatch`, syötteinä versio, shardivalinta
-(`kaikki` / `vain-z0-z6` / `koeajo-z0-z3`), laatu, patinataso ja
-`vie`-kytkin (pois = pelkkä harjoitus ilman ämpäriä).
+Mittasin myös brotlin (26,4 Mt), mutta jätin sen: 2,5 Mt ei ole toisen
+pakkausmuodon arvoinen.
 
-**Matriisi korvaa parven kokonaan.** Laattamäärät tarkistettu ajamalla
-jokainen kaista `--kuiva`-tilassa:
+## Int16 ei menetä mitään — ja se on todennettu
 
-| shardi | erä | laattoja |
-| --- | --- | --- |
-| z0-z6 | tasot 0–6 | 5 933 |
-| z7a | sarakkeet 0–43 | 4 532 |
-| z7b | sarakkeet 44–87 | 4 532 |
-| z7c | sarakkeet 88–131 | 4 532 |
-| z7d | sarakkeet 132–168 | 3 811 |
-| | **yhteensä** | **23 340** ✓ |
+Tämä oli ainoa kohta, jossa epäilin laatuvirhettä, joten en luottanut
+päättelyyn. `tools/fokuskartta/maailma.mjs` pyöristää arvot **Int16:een
+joka tapauksessa** rakentaessaan arkin ruudukkoa, eli Float32:n
+desimaalit katosivat jo ennen piirtoa.
 
-**Kaistarajat lohkorajoille** — lisäsin generaattoriin `--sarakkeet`,
-koska asteilla rajaaminen katkaisee lohkon keskeltä: mitattuna 62 %
-hukkaa alueajossa, 0 % sarakeajossa.
+Ajoin 60 laattaa uudelleen repon aineistosta ja vertasin pikselitasolla
+edelliseen ajoon (sama lukittu resepti, ainoa muuttuja aineiston
+muoto):
 
-**Jokainen shardi synkkaa itse**, jottei 1,3 Gt kulje jobien välillä.
-**Luettelo on oma jobinsa**, koska `pyramidi.json` kuvaa koko pyramidin
-eikä yksikään shardi tunne muiden tasoja — jos shardit kirjoittaisivat
-sen, viimeisenä valmistuva jättäisi ämpäriin luettelon joka tuntee vain
-omat tasonsa. Se syntyy pelkästä geometriasta (`--vain-luettelo`).
+```
+täysin identtisiä laattoja: 60 / 60
+pahin kanavaero:            0
+eroavia kanavia:            0 / 62 914 560
+```
 
-Samasta syystä laatasto-bittikartta kirjoitetaan vain harvassa
-pyramidissa: matriisiajossa shardi näkee levyllä vain omat laattansa ja
-kertoisi, ettei muita ole. Nyt kenttä on `null` = kaikki olemassa.
+**Sama vertailu todistaa myös, ettei kaksinkertaista harvennusta
+tapahdu.** Jos lukija harventaisi valmiiksi harvennetun ruudukon
+uudestaan, maasto olisi sileämpi eivätkä laatat olisi identtisiä. Ne
+ovat. Lukija purkaa tiedoston sellaisenaan eikä koske arvoihin.
 
-**Aikakatto:** suurin shardi ~1 240 Mpx eli mitatulla 0,44 Mpx/s
-nopeudella **~47 min**; `timeout-minutes: 330` antaa seitsenkertaisen
-varan ja jää 6 h katon alle. Levy: suurin tuotos ~250 Mt; työnkulku
-tulostaa `df -h` ennen ja jälkeen, joten ensimmäinen ajo vahvistaa sen
-mitattuna.
+Tarkistin myös nimeämäsi `tools/fokuskartta/etopo.mjs`: se on
+**maalehtien** CSV-kaistareitti eikä ole missään tekemisissä
+maailmanruudukon kanssa — pyramidi kulkee `hae-korkeusruudukko.mjs`:n
+kautta. Ei siis kaksinkertaista harvennusta sielläkään.
 
-## Patinaresepti lukittu (kohtasi 1)
+## Mitä tein
 
-Kohdistusheitto ja musteen leviäminen ovat nyt **paperivakioita**.
-Kirjasin perustelusi koodiin sanatarkasti sen viereen, jotta se ei valu
-takaisin: ne ovat paperin ja painokoneen ominaisuuksia, eivät maaston,
-eivätkä skaalaudu kartan mukana sen paremmin kuin paperin rae tai
-nimiön kirjasinkoko.
-
-**Lehtiputki on koskematon, ja se on todennettu eikä oletettu:**
-`patinoi-fokus.yml` ei anna `--leveys`-valitsinta, joten lehdet
-patinoituvat omalla 6400 pikselin leveydellään, jolloin `s` = 1 ja
-`x * s === x` tarkalleen. Muutos on niille aritmeettinen no-op.
-
-Todennettu z7:llä: sateenkaari poissa, rantaviiva terävänä, saumakokeet
-ennallaan (**lohkoraja pahin 0 tasoilla z0–z2 ja z6–z7**). Koko ja
-nopeus eivät muuttuneet mitattavasti (z7 0,211 → 0,209 tavua/px,
-0,42 → 0,43 Mpx/s), eli korjaus maksoi vain sen mitä se korjasi.
-
-Poistin samalla mittakaavavaroituksen, jonka lisäsin edellisessä
-erässä — se varoitti tilanteesta, jota ei enää ole.
-
-## Arvio täydestä ajosta
-
-| | arvio |
+| tiedosto | mitä |
 | --- | --- |
-| Laattoja | 23 340 |
-| Koko | 1,16–1,30 Gt |
-| Työ | 6 061 Mpx + 9 % reunusta |
-| **Kesto (5 shardia rinnakkain)** | **~50 min**, hitain shardi ~47 min |
-| Yhdellä säikeellä vertailuksi | 4,2 h |
+| `tools/korkeusaineisto/etopo-3kaariminuuttia.bin.gz` | 28,9 Mt, 7201 × 3601 solua |
+| `tools/korkeusaineisto/LUEMINUT.md` | lähde, lisenssi, johtamiskomennot, muoto, ruudukon suunnat |
+| `tools/tee-korkeusaineisto.mjs` | uudelleenajettava muunnin välimuistista |
+| `tools/hae-korkeusruudukko.mjs` | lukee repon aineiston ensin; verkkoon vain jos ruutukoko ei täsmää |
+| `.github/workflows/generoi-pyramidi.yml` | NOAA-nouto pois, `NODE_USE_ENV_PROXY` pois |
 
-Nopeus 0,44 Mpx/s on mitattu tässä kontissa. GitHubin ajokoneen
-yksisäikeinen nopeus voi olla eri; siksi katto on 330 min eikä 60.
+Käytin scratchpadin valmista aineistoa enkä noutanut mitään uudestaan.
+
+**Todennettu paikallisesti ilman verkkoa:** tyhjä välimuisti,
+proxy-muuttujat poistettu → ajo lukee `ruudukko reposta:
+tools/korkeusaineisto/…` ja tuottaa 60 laattaa läpi.
+
+## Työnkulku nyt
+
+`aineisto`-jobi tarkistaa repon aineiston ja noutaa **vain Natural
+Earthin** — kerran, ei kerran shardia kohti. Korkeusaineisto tulee
+jokaiseen jobiin checkoutin mukana ilman yhtäkään verkkopyyntöä.
+Työnkulussa on enää **yksi verkkoviittaus** (Natural Earth
+GitHubista), ja se toimi jo koeajossa.
+
+Rakenteellinen syy, jonka mainitsit: viisi shardia olisi noutanut kukin
+104 Mt samasta lähteestä yhtä aikaa. Sitä ongelmaa ei enää ole
+olemassa — aineisto ei kulje verkon yli kertaakaan.
+
+Shardijako, laattamäärät (23 340) ja muu rakenne ennallaan.
+
+## Repon kasvu
+
+28,9 Mt. Repossa on jo 320 Mt aineistoa (`assets/kartat` yksin 202 Mt),
+joten tämä on sen mittakaavassa pieni. Tiedosto on muuttumaton
+lähtöaineisto: se generoidaan uudestaan vain jos ruudun kokoa
+muutetaan, eikä se siis kasvata historiaa uudestaan.
 
 ## Mitä EI tehty
 
 - Täysgenerointia ei ajettu.
-- Koeajoa ei ajettu (yllä oleva este).
 - Mitään ei viety ämpäriin.
 - Versiota ei nostettu, PR:ää ei tehty.
+- NOAA:n tavoitettavuutta ei selvitetty enempää.
 
-## Avoimet
+## Seuraava askel
 
-1. **Työnkulun saaminen mainiin** — yllä. Ainoa este.
-2. **Vinjetointi pelitilakerroksessa.** Ei tule laattoihin (Raamattu
-   listaa sen pelitilakerrokseen). En tarkistanut onko se siellä jo.
-3. **Syvyyskäyrät oikeasta datasta** — päätit myöhemmäksi eräksi.
+Mergeä ja aja koeajo (`tasot=koeajo-z0-z3`). Jos se menee läpi, sama
+työnkulku ajaa täyden pyramidin valinnalla `kaikki`.
+
+Yksi asia kannattaa tietää etukäteen: **`vie=true` kirjoittaa laatat
+ämpäriin** polkuun `julisteet/pyramidi/<versio>/…`. Koeajossa se on
+noin 5 Mt (z0–z3) eikä koske olemassa olevaan sisältöön, koska polku on
+uusi. `vie=false` ajaa saman ilman ämpäriä.
 
 ## Sivussa nähtyä (en korjannut)
 
