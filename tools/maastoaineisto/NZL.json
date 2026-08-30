@@ -1,0 +1,57 @@
+{
+  "_": "Uuden-Seelannin maastokohteet. Faktat en-Wikipediasta 30.8.2026; suomalaiset nimiasut fi-Wikipediasta (Eteläiset Alpit, Tasmaninmeri). Eteläisten Alppien merkki on vuoriston pohjoispuoliskossa eikä artikkelin keskipisteessä 170,5 / −43,5, joka osuisi lähes Aorakin merkin päälle. Tasmaninmeren merkki on ulapalla Eteläsaaren luoteispuolella — artikkelin oma keskipiste 160 / −40 jää lehden ikkunan länsipuolelle.",
+  "vuoret": [
+    {
+      "nimi": "Aoraki / Mount Cook",
+      "lon": 170.1419,
+      "lat": -43.595,
+      "m": 3724,
+      "lahdeKoordinaatti": "en-Wikipedia \"Aoraki / Mount Cook\" (43°35′42″S 170°08′31″E)",
+      "nappi": "Pilvien lävistäjä",
+      "kysymykset": [
+        "Miksi vuori madaltui neljäkymmentä metriä?",
+        "Millaista on nousta Uuden-Seelannin korkeimmalle huipulle?"
+      ],
+      "korostukset": [
+        "maorin kieli|maorin kielellä"
+      ],
+      "teksti": "Aoraki / Mount Cook on Uuden-Seelannin korkein vuori, 3 724 metriä. Se kohoaa Eteläisillä Alpeilla Eteläsaaren keskiosassa ja on topografiselta eristyneisyydeltään maailman kymmenes. Vuonna 1991 laelta romahti kymmenen metriä kalliota ja jäätä, ja paljastuneen jäähatun kuluminen vei kahdessa vuosikymmenessä vielä kolmekymmentä metriä lisää: vanha lukema 3 764 metriä on nyt 3 724. Maorin kielellä Aoraki tarkoittaa pilvien lävistäjää. Englanninkielinen nimi annettiin 1851 James Cookin muistoksi, vaikka Cook ei koskaan nähnyt vuorta; kaksoisnimi vahvistettiin sopimuksella 1998.",
+      "lahde": "en-Wikipedia \"Aoraki / Mount Cook\", johdanto-osa (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Eteläiset Alpit",
+      "lon": 171.5,
+      "lat": -42.95,
+      "lahdeKoordinaatti": "merkki vuoriston pohjoispuoliskossa; en-Wikipedia \"Southern Alps\" antaa keskipisteeksi 170,5 / −43,5, joka osuisi Aorakin merkin päälle",
+      "nappi": "Viidensadan kilometrin selkäranka",
+      "kysymykset": [
+        "Mikä on Alpine Fault?",
+        "Miksi vuoriston länsipuolella sataa niin paljon?"
+      ],
+      "korostukset": [
+        "jäätikkö|jäätikköä"
+      ],
+      "teksti": "Eteläiset Alpit on noin 500 kilometriä pitkä vuorijono, joka kulkee Eteläsaaren halki koillisesta lounaaseen. Korkein huippu on Aoraki / Mount Cook, ja kolmen kilometrin korkeuden ylittää vielä seitsemäntoista muuta huippua. Vuoristo on syntynyt Tyynenmeren ja Indoaustralialaisen laatan törmäyksessä Alpine Fault -siirroksen varrella, ja kohoaminen on ollut nopeinta viimeisten viiden miljoonan vuoden aikana. Päävedenjakajan tuntumassa sataa jopa 15 000 millimetriä vuodessa, kolmekymmentä kilometriä idempänä vain tuhat. Vuoristossa on yli 3 000 jäätikköä; pisin niistä, Tasman, on 23,5 kilometriä.",
+      "lahde": "en-Wikipedia \"Southern Alps\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Tasmaninmeri",
+      "lon": 168.5,
+      "lat": -40.8,
+      "lahdeKoordinaatti": "ulappa Eteläsaaren luoteispuolella; en-Wikipedia \"Tasman Sea\" antaa keskipisteeksi 160 / −40, joka jää lehden ikkunan ulkopuolelle",
+      "nappi": "Kaksituhatta kilometriä Australiaan",
+      "kysymykset": [
+        "Kuka oli Abel Tasman?",
+        "Miksi merta kutsutaan leikillään Ojaksi?"
+      ],
+      "korostukset": [
+        "lennätin|lennätinkaapeli"
+      ],
+      "teksti": "Tasmaninmeri erottaa Uuden-Seelannin Australiasta. Leveyttä on noin 2 000 kilometriä, pituutta pohjoisesta etelään noin 2 800 ja pinta-alaa 2,3 miljoonaa neliökilometriä; syvimmillään meri on 5 943 metriä. Nimi tulee hollantilaiselta Abel Janszoon Tasmanilta, joka ylitti sen ensimmäisenä tunnettuna eurooppalaisena vuonna 1642, ja James Cook purjehti samoilla vesillä 1770-luvulla. Maoriksi meri on Te Moana-a-Rehua. Ensimmäinen lennätinkaapeli maiden välille laskettiin 1876 ja ensimmäinen lento onnistui 1928.",
+      "lahde": "en-Wikipedia \"Tasman Sea\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": []
+}

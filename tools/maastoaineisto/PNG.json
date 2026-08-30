@@ -1,0 +1,52 @@
+{
+  "_": "Papua-Uuden-Guinean maastokohteet. Faktat en-Wikipediasta 30.8.2026; suomalainen nimiasu Bismarckinmeri fi-Wikipediasta, ja joki on fi-Wikipediassa Sepik (pelissä kartalle luettavampi Sepikjoki). Sepikin merkki on joen suulla ja Bismarckinmeren merkki ulapalla saaren pohjoispuolella, koska merellä ei ole artikkelissa keskipistettä.",
+  "vuoret": [
+    {
+      "nimi": "Mount Wilhelm",
+      "lon": 145.0333,
+      "lat": -5.8,
+      "m": 4509,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Wilhelm\"",
+      "nappi": "Oseanian korkein kohta",
+      "kysymykset": [
+        "Miksi päiväntasaajan lähellä voi sataa lunta?",
+        "Miksi huiput nimettiin saksalaisten mukaan?"
+      ],
+      "korostukset": ["Bismarckin vuoristo|Bismarckin vuoristossa"],
+      "teksti": "Mount Wilhelm on Papua-Uuden-Guinean korkein vuori, 4 509 metriä. Se kohoaa Bismarckin vuoristossa kolmen maakunnan — Chimbun, Jiwakan ja Madangin — kohtauspisteessä. Saksalainen kirjeenvaihtaja Hugo Zöller nimesi vuoriston huiput vuonna 1888 Otto von Bismarckin ja tämän lasten mukaan; kuman kielellä huippu on Enduwa Kombuglu eli Kombugl’o Dimbin. Päiväntasaajan läheisyydestä huolimatta laella on nähty lunta. Ensimmäisen kirjatun nousun teki Leigh Vial elokuussa 1938, ja nousuun kuluu reitistä riippuen yhdeksästä kahteenkymmeneenneljään tuntia. Poliittisin rajoin laskettuna vuori on Oseanian korkein kohta.",
+      "lahde": "en-Wikipedia \"Mount Wilhelm\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Bismarckinmeri",
+      "lon": 148,
+      "lat": -4.2,
+      "lahdeKoordinaatti": "ulappa Uuden-Guinean pohjoispuolella; artikkelissa ei ole meren keskipistettä",
+      "nappi": "Tuliperäinen reunameri",
+      "kysymykset": [
+        "Miksi meren alla järisee niin usein?",
+        "Mikä on Bismarckin saaristo?"
+      ],
+      "korostukset": ["laatta|laattaa"],
+      "teksti": "Bismarckinmeri on Tyynenmeren reunameri Uuden-Guinean koillispuolella. Sitä rajaa Bismarckin saaristo: pohjoisessa Admiraliteettisaaret, idässä ja etelässä Uusi-Britannia ja Uusi-Irlanti. Pinta-alaa on 250 400 neliökilometriä, ja Vitiazinsalmi yhdistää meren etelässä Salomoninmereen. Pohjan alla liikkuu kaksi omaa laattaa, eteläinen ja pohjoinen Bismarckin laatta, ja ne selittävät Melanesian tulivuorikaaren ja meren alla jyskyttävät maanjäristykset. Maaliskuussa 1943 näillä vesillä käytiin Bismarckinmeren taistelu, joka päättyi japanilaisten raskaaseen tappioon.",
+      "lahde": "en-Wikipedia \"Bismarck Sea\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Sepikjoki",
+      "lon": 144.5417,
+      "lat": -3.8417,
+      "lahdeKoordinaatti": "joen suu Bismarckinmerellä; en-Wikipedia \"Sepik River\" tietolaatikko (3°50′30″S 144°32′30″E)",
+      "nappi": "Suuri joki ilman suistoa",
+      "kysymykset": [
+        "Mikä on juoluajärvi?",
+        "Millaista taidetta Sepikin varrella tehdään?"
+      ],
+      "korostukset": ["tulvatasanko|tulvatasankoa"],
+      "teksti": "Sepikjoki on Uuden-Guinean suurimpia jokia: 1 126 kilometriä pitkä, ja sen valuma-alue kattaa 80 321 neliökilometriä. Erikoisuus on suisto, jota ei ole — joki laskee suoraan mereen noin sadan kilometrin päässä Wewakista itään. Mutkitteleva uoma on kaivertanut jopa 70 kilometriä leveää tulvatasankoa, jossa on laajoja soita ja noin 1 500 juoluajärveä. Kokonaisuus on ehkä koko Aasian ja Tyynenmeren alueen laajin saastumaton makean veden kosteikko. Sepikin kylät tunnetaan puuveistoksistaan, savikeramiikastaan ja ontoista puunrungoista veistetyistä garamut-rummuista.",
+      "lahde": "en-Wikipedia \"Sepik River\", johdanto-osa ja tietolaatikko (tarkistettu 30.8.2026)."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "_": "Vanuatun maastokohteet. Faktat en-Wikipediasta 30.8.2026; Tyynimeri on fi-Wikipedian nimiasu. Tyynenmeren merkki on avomerellä Vanuatun itäpuolella — valtameren oma keskipiste on toisella puolella maapalloa, ja maan vesikohteen on osuttava lehden rajaukseen.",
+  "vuoret": [
+    {
+      "nimi": "Mount Tabwemasana",
+      "lon": 166.755,
+      "lat": -15.3625,
+      "m": 1879,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Tabwemasana\" (15°21′45″S 166°45′18″E)",
+      "nappi": "Vanuatun korkein huippu",
+      "kysymykset": [
+        "Mitä vuoren suhteellinen korkeus tarkoittaa?",
+        "Miksi huipulla käy niin harva ihminen?"
+      ],
+      "korostukset": ["Espiritu Santo|Espiritu Santon"],
+      "teksti": "Mount Tabwemasana on Vanuatun korkein vuori, 1 879 metriä, ja se kohoaa Espiritu Santon saarella. Koska vuori nousee suoraan merestä, sen suhteellinen korkeus on yhtä suuri kuin korkeus merenpinnasta: se on niin sanottu ultraprominentti huippu ja yksi Tyynenmeren korkeimmista. Laella käy tavallisesti alle kuusi ihmistä vuodessa. Perille pääsee veneellä Kerepuan kylään, sieltä jokea ylös ja lopuksi jyrkkiä rinteitä opastettuna. Vuorella kasvaa puulaji, jota ei tavata missään muualla maailmassa, ja tarina kertoo kahdesta huipusta, jotka syleilevät toisiaan öisin.",
+      "lahde": "en-Wikipedia \"Mount Tabwemasana\", johdanto-osa (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Yasur",
+      "lon": 169.4483,
+      "lat": -19.5283,
+      "m": 361,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Yasur\" (19°31′42″S 169°26′54″E)",
+      "nappi": "Vuosisatoja purkautunut tulivuori",
+      "kysymykset": [
+        "Mikä on strombolinen purkaus?",
+        "Miksi Yasuria voi yleensä lähestyä turvallisesti?"
+      ],
+      "korostukset": ["kerrostulivuori|kerrostulivuori"],
+      "teksti": "Yasur on 361 metriä korkea kerrostulivuori Tannan saarella. Se on purkautunut lähes yhtäjaksoisesti useiden satojen vuosien ajan, useita kertoja tunnissa, ja purkaukset ovat tyypiltään strombolisia tai vulkaanisia. Laella on lähes ympyränmuotoinen, 400 metriä leveä kraatteri kasvittomalla tuhkakartiolla. Vuorta voi yleensä lähestyä turvallisesti, ja siitä on tullut maan tunnetuin nähtävyys. James Cookin retkikunta löysi saaren 1774 ilmeisesti juuri tulivuoren hehkun houkuttelemana. John Frum -liikkeelle Yasur on pyhä: sen uskotaan olevan Frumin asuinsija.",
+      "lahde": "en-Wikipedia \"Mount Yasur\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Tyynimeri",
+      "lon": 170.3,
+      "lat": -18.6,
+      "lahdeKoordinaatti": "avomeri Vanuatun itäpuolella; valtamerellä ei ole lehden ikkunaan osuvaa keskipistettä",
+      "nappi": "Maailman suurin valtameri",
+      "kysymykset": [
+        "Mikä on Tyynenmeren tulirengas?",
+        "Kuinka syvälle Mariaanien hauta ulottuu?"
+      ],
+      "korostukset": ["tulirengas|tulirengas"],
+      "teksti": "Vanuatun saaret ovat pisara Tyynessämeressä, maailman suurimmassa valtameressä. Pinta-alaa on 165 250 000 neliökilometriä eli noin 46 prosenttia maapallon vesipinnasta ja 32 prosenttia koko maapallon pinnasta — enemmän kuin kaikella maalla yhteensä. Keskisyvyys on 4 280 metriä, ja syvin kohta, Mariaanien haudan Challenger-syvänne, ulottuu 10 911 metriin. Nimen antoi Ferdinand Magellan vuonna 1520: Mar Pacífico, rauhallinen meri, koska hän kohtasi purjehdukselle suotuisat tuulet. Merellä on yli 25 000 saarta, ja sen reunoja kiertää tulirengas.",
+      "lahde": "en-Wikipedia \"Pacific Ocean\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": []
+}

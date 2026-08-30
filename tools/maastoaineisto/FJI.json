@@ -1,0 +1,37 @@
+{
+  "_": "Fidžin maastokohteet. Faktat en-Wikipediasta 30.8.2026. Tomanivi on myös fi-Wikipedian nimi; Koromerelle ei ole fi-Wikipedian artikkelia, joten suomalainen asu on johdettu englannin nimestä Koro Sea. Fidži on päivämäärärajan päällä: Koromeren merkki on artikkelin keskipisteen (180 / −18) sijaan hieman lännempänä, jottei se jää lehden rajauksen itälaidan taakse.",
+  "vuoret": [
+    {
+      "nimi": "Tomanivi",
+      "lon": 178.0167,
+      "lat": -17.6331,
+      "m": 1324,
+      "lahdeKoordinaatti": "en-Wikipedia \"Tomanivi\" (17°37′59″S 178°01′00″E)",
+      "nappi": "Fidžin korkein huippu",
+      "kysymykset": [
+        "Miksi sammunut tulivuori on saarelle tärkeä vesivarasto?",
+        "Mikä on kotoperäinen lintulaji?"
+      ],
+      "korostukset": ["Viti Levu|Viti Levun"],
+      "teksti": "Tomanivi on Fidžin korkein vuori, 1 324 metriä, ja se kohoaa pääsaaren Viti Levun keskiylängöllä. Kyseessä on sammunut tulivuori, jonka kivi on noin 150 miljoonaa vuotta vanhaa; ennen huippu tunnettiin nimellä Mount Victoria. Saaren suuret joet Rewa, Navua, Sigatoka ja Ba saavat kaikki alkunsa näiltä keskisiltä vuorilta. Rinteiden vuorisademetsä on 17 500 hehtaarin laajuinen tärkeä lintualue, jossa elää äärimmäisen uhanalainen punakurkkuluri sekä muita vain Fidžillä tavattavia lintuja. Huipulle vie polku Navain kylästä.",
+      "lahde": "en-Wikipedia \"Tomanivi\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Koromeri",
+      "lon": 179.5,
+      "lat": -18,
+      "lahdeKoordinaatti": "meren keskiosa Koron saaren eteläpuolella; en-Wikipedia \"Koro Sea\" antaa keskipisteeksi 180 / −18",
+      "nappi": "Meri saariston keskellä",
+      "kysymykset": [
+        "Miksi koralliriutat tekevät purjehduksesta vaikeaa?",
+        "Miten päivämääräraja mutkittelee Fidžin kohdalla?"
+      ],
+      "korostukset": ["koralliriutta|koralliriuttaa"],
+      "teksti": "Koromeri on Fidžin saarten keskelle jäävä meri lounaisella Tyynellämerellä, noin 2 100 kilometriä Aucklandista pohjoiseen. Sitä ympäröivät saariston yli kolmesataa saarta: Viti Levu, pohjoisessa Vanua Levu ja Taveuni, lännessä Kadavu ja idässä Lau-saaret. Pinta-alaa on noin 58 000 neliökilometriä ja syvyyttä enimmillään 2 930 metriä. Saarten välissä on noin 411 neliökilometriä koralliriuttaa, kareja ja hiekkasärkkiä, joten laivat pääsevät läpi vain muutamasta kapeasta salmesta. Nimi tulee tuliperäisestä Koron saaresta meren luoteisosassa.",
+      "lahde": "en-Wikipedia \"Koro Sea\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": []
+}

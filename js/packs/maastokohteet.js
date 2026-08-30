@@ -37,6 +37,7 @@
 import { MAASTOKOHTEET_AFG } from './maastokohteet-afg.js';
 import { MAASTOKOHTEET_AGO } from './maastokohteet-ago.js';
 import { MAASTOKOHTEET_ARE } from './maastokohteet-are.js';
+import { MAASTOKOHTEET_AUS } from './maastokohteet-aus.js';
 import { MAASTOKOHTEET_AUT } from './maastokohteet-aut.js';
 import { MAASTOKOHTEET_BIH } from './maastokohteet-bih.js';
 import { MAASTOKOHTEET_CHE } from './maastokohteet-che.js';
@@ -52,6 +53,7 @@ import { MAASTOKOHTEET_ESP } from './maastokohteet-esp.js';
 import { MAASTOKOHTEET_EST } from './maastokohteet-est.js';
 import { MAASTOKOHTEET_ETH } from './maastokohteet-eth.js';
 import { MAASTOKOHTEET_FIN } from './maastokohteet-fin.js';
+import { MAASTOKOHTEET_FJI } from './maastokohteet-fji.js';
 import { MAASTOKOHTEET_FRA } from './maastokohteet-fra.js';
 import { MAASTOKOHTEET_GBR } from './maastokohteet-gbr.js';
 import { MAASTOKOHTEET_GHA } from './maastokohteet-gha.js';
@@ -79,9 +81,11 @@ import { MAASTOKOHTEET_NAM } from './maastokohteet-nam.js';
 import { MAASTOKOHTEET_NGA } from './maastokohteet-nga.js';
 import { MAASTOKOHTEET_NLD } from './maastokohteet-nld.js';
 import { MAASTOKOHTEET_NOR } from './maastokohteet-nor.js';
+import { MAASTOKOHTEET_NZL } from './maastokohteet-nzl.js';
 import { MAASTOKOHTEET_OMN } from './maastokohteet-omn.js';
 import { MAASTOKOHTEET_PAK } from './maastokohteet-pak.js';
 import { MAASTOKOHTEET_PHL } from './maastokohteet-phl.js';
+import { MAASTOKOHTEET_PNG } from './maastokohteet-png.js';
 import { MAASTOKOHTEET_POL } from './maastokohteet-pol.js';
 import { MAASTOKOHTEET_PRT } from './maastokohteet-prt.js';
 import { MAASTOKOHTEET_QAT } from './maastokohteet-qat.js';
@@ -91,6 +95,7 @@ import { MAASTOKOHTEET_SAU } from './maastokohteet-sau.js';
 import { MAASTOKOHTEET_SDN } from './maastokohteet-sdn.js';
 import { MAASTOKOHTEET_SDS } from './maastokohteet-sds.js';
 import { MAASTOKOHTEET_SEN } from './maastokohteet-sen.js';
+import { MAASTOKOHTEET_SLB } from './maastokohteet-slb.js';
 import { MAASTOKOHTEET_SLE } from './maastokohteet-sle.js';
 import { MAASTOKOHTEET_SOM } from './maastokohteet-som.js';
 import { MAASTOKOHTEET_SWE } from './maastokohteet-swe.js';
@@ -103,15 +108,17 @@ import { MAASTOKOHTEET_TZA } from './maastokohteet-tza.js';
 import { MAASTOKOHTEET_UGA } from './maastokohteet-uga.js';
 import { MAASTOKOHTEET_UKR } from './maastokohteet-ukr.js';
 import { MAASTOKOHTEET_UZB } from './maastokohteet-uzb.js';
+import { MAASTOKOHTEET_VUT } from './maastokohteet-vut.js';
 import { MAASTOKOHTEET_YEM } from './maastokohteet-yem.js';
 import { MAASTOKOHTEET_ZAF } from './maastokohteet-zaf.js';
 import { MAASTOKOHTEET_ZWE } from './maastokohteet-zwe.js';
 
-/** Maan ISO-tunnus → maan maastokohteet. 72 maata. */
+/** Maan ISO-tunnus → maan maastokohteet. 78 maata. */
 export const MAASTOKOHTEET = {
   AFG: MAASTOKOHTEET_AFG,
   AGO: MAASTOKOHTEET_AGO,
   ARE: MAASTOKOHTEET_ARE,
+  AUS: MAASTOKOHTEET_AUS,
   AUT: MAASTOKOHTEET_AUT,
   BIH: MAASTOKOHTEET_BIH,
   CHE: MAASTOKOHTEET_CHE,
@@ -127,6 +134,7 @@ export const MAASTOKOHTEET = {
   EST: MAASTOKOHTEET_EST,
   ETH: MAASTOKOHTEET_ETH,
   FIN: MAASTOKOHTEET_FIN,
+  FJI: MAASTOKOHTEET_FJI,
   FRA: MAASTOKOHTEET_FRA,
   GBR: MAASTOKOHTEET_GBR,
   GHA: MAASTOKOHTEET_GHA,
@@ -154,9 +162,11 @@ export const MAASTOKOHTEET = {
   NGA: MAASTOKOHTEET_NGA,
   NLD: MAASTOKOHTEET_NLD,
   NOR: MAASTOKOHTEET_NOR,
+  NZL: MAASTOKOHTEET_NZL,
   OMN: MAASTOKOHTEET_OMN,
   PAK: MAASTOKOHTEET_PAK,
   PHL: MAASTOKOHTEET_PHL,
+  PNG: MAASTOKOHTEET_PNG,
   POL: MAASTOKOHTEET_POL,
   PRT: MAASTOKOHTEET_PRT,
   QAT: MAASTOKOHTEET_QAT,
@@ -166,6 +176,7 @@ export const MAASTOKOHTEET = {
   SDN: MAASTOKOHTEET_SDN,
   SDS: MAASTOKOHTEET_SDS,
   SEN: MAASTOKOHTEET_SEN,
+  SLB: MAASTOKOHTEET_SLB,
   SLE: MAASTOKOHTEET_SLE,
   SOM: MAASTOKOHTEET_SOM,
   SWE: MAASTOKOHTEET_SWE,
@@ -178,6 +189,7 @@ export const MAASTOKOHTEET = {
   UGA: MAASTOKOHTEET_UGA,
   UKR: MAASTOKOHTEET_UKR,
   UZB: MAASTOKOHTEET_UZB,
+  VUT: MAASTOKOHTEET_VUT,
   YEM: MAASTOKOHTEET_YEM,
   ZAF: MAASTOKOHTEET_ZAF,
   ZWE: MAASTOKOHTEET_ZWE,

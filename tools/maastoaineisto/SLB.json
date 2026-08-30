@@ -1,0 +1,37 @@
+{
+  "_": "Salomonsaarten maastokohteet. Faktat en-Wikipediasta 30.8.2026. Ironbottom Sound on erisnimi eikä sitä ole suomennettu (fi-Wikipediassa ei artikkelia); merkki on salmen länsiosassa, jottei se osu Popomanaseun merkin päälle. Salomoninmeren oma keskipiste jää lehden rajauksen länsipuolelle, joten maan vesikohde on tämä salmi.",
+  "vuoret": [
+    {
+      "nimi": "Mount Popomanaseu",
+      "lon": 160.0619,
+      "lat": -9.7036,
+      "m": 2335,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Popomanaseu\" (9°42′13″S 160°03′43″E)",
+      "nappi": "Salomonsaarten korkein",
+      "kysymykset": [
+        "Mikä on kotoperäinen laji?",
+        "Millaista on nousta sademetsän läpi huipulle?"
+      ],
+      "korostukset": ["Guadalcanal|Guadalcanalin"],
+      "teksti": "Mount Popomanaseu on Salomonsaarten korkein kohta, 2 335 metriä. Se kohoaa Guadalcanalin saaren keskellä, naapurihuippu Mount Makarakomburusta itään. Vuori on tuliperäinen, ja sen laella on satulamainen tasanne, joka erottuu selvästi Honiaran lentokentän suunnalta katsottuna. Uutta-Guineaa ja sen lähisaaria lukuun ottamatta se on koko saaristoisen eteläisen Tyynenmeren korkein huippu. Rinteiden sademetsä on tärkeä elinympäristö monille kotoperäisille ja hyvin suppealla alueella eläville lajeille, ja saaren asukkaille vuori on kulttuurisesti merkittävä paikka.",
+      "lahde": "en-Wikipedia \"Mount Popomanaseu\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Ironbottom Sound",
+      "lon": 159.88,
+      "lat": -9.22,
+      "lahdeKoordinaatti": "salmen länsiosa Savon saaren eteläpuolella; en-Wikipedia \"Ironbottom Sound\" antaa keskipisteeksi 160 / −9,25",
+      "nappi": "Salmi, jonka pohja on rautaa",
+      "kysymykset": [
+        "Miksi salmi sai sodassa uuden nimen?",
+        "Mitä sotahauta tarkoittaa?"
+      ],
+      "korostukset": ["sotahauta|sotahauta"],
+      "teksti": "Ironbottom Sound on merenselkä Guadalcanalin, Savon ja Nggelasaarten välissä. Ennen toista maailmansotaa se tunnettiin nimellä Savo Sound. Liittoutuneiden merimiehet antoivat sille uuden nimen, joka tarkoittaa rautapohjaista salmea, koska Guadalcanalin meritaisteluissa vuosina 1942–1943 sen pohjaan vajosi yli viisikymmentä alusta ja suuri joukko lentokoneita — sekä japanilaisia että liittoutuneiden. Nykyään salmi on suosittu sukelluskohde ja samalla sotahauta: joka vuosi taistelun vuosipäivänä yhdysvaltalainen alus ajaa vesille ja laskee seppeleen kaatuneiden muistoksi.",
+      "lahde": "en-Wikipedia \"Ironbottom Sound\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": []
+}
