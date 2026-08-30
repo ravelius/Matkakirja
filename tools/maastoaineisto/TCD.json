@@ -1,0 +1,51 @@
+{
+  "_": "Tšadin maastokohteet. Faktat en-Wikipediasta 30.8.2026. Sisämaavaltion 'meri' on Tšadjärvi, joka on antanut koko maalle nimensä ja jonka tyyppi on pelin symbolitaksonomiassa meri (luonto-symboli; erillistä järvityyppiä ei ole).",
+  "vuoret": [
+    {
+      "nimi": "Emi Koussi",
+      "lon": 18.5464,
+      "lat": 19.7925,
+      "m": 3447,
+      "lahdeKoordinaatti": "en-Wikipedia \"Emi Koussi\"",
+      "nappi": "Saharan korkein huippu",
+      "kysymykset": [
+        "Kuinka suuri Emi Koussin kaldera on?",
+        "Mikä on Era Kohor?"
+      ],
+      "korostukset": ["Tibesti|Tibestin"],
+      "teksti": "Emi Koussi on Tibestin vuoriston kaakkoispäässä kohoava kilpitulivuori ja koko Saharan korkein huippu: 3 447 metriä, kolme kilometriä ympäröiviä hiekkakivitasankoja ylempänä. Sen lakea reunustaa kaksi sisäkkäistä kalderaa, joista ulompi on noin viidentoista kilometrin levyinen; kaakkoisosassa on lisäksi 350 metriä syvä Era Kohorin kaldera.",
+      "lahde": "en-Wikipedia \"Emi Koussi\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Tšadjärvi",
+      "lon": 14.533,
+      "lat": 13.099,
+      "lahdeKoordinaatti": "en-Wikipedia \"Lake Chad\"",
+      "nappi": "Järvi neljän maan rajalla",
+      "kysymykset": [
+        "Miksi järven koko vaihtelee niin rajusti?",
+        "Mistä järvi saa vetensä?"
+      ],
+      "korostukset": ["Chari|Charista"],
+      "teksti": "Tšadjärvi on laskujoeton makeavesijärvi neljän maan — Tšadin, Nigerian, Nigerin ja Kamerunin — rajojen solmukohdassa, ja sen valuma-alue on yli miljoona neliökilometriä. Vetensä järvi saa pääosin Charista, ja sen pinta ja pinta-ala vaihtelevat rajusti vuodenaikojen mukaan. Järvi on yksi Afrikan tärkeimmistä makean veden kala-alueista.",
+      "lahde": "en-Wikipedia \"Lake Chad\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Chari",
+      "lon": 15.05,
+      "lat": 12.11,
+      "lahdeKoordinaatti": "N'Djamena joen alajuoksulla; artikkelin koordinaatti 14,565 / 12,909 on suulla Tšadjärvellä",
+      "nappi": "Tšadjärven elinehto",
+      "kysymykset": [
+        "Kuinka pitkä Chari on?",
+        "Miksi järvi kuihtuisi ilman tätä jokea?"
+      ],
+      "teksti": "Chari on noin 1 400 kilometriä pitkä Keski-Afrikan joki ja Tšadjärven tärkein vedentuoja: järven vesi tulee pääosin siitä ja sen monista sivujoista. Merkki on pääkaupungin N'Djamenan kohdalla, jonka ohi joki virtaa viimeisellä taipaleellaan kohti järveä.",
+      "lahde": "en-Wikipedia \"Chari River\" ja \"Lake Chad\", johdanto-osat (tarkistettu 30.8.2026)."
+    }
+  ]
+}

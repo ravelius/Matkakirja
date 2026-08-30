@@ -1,0 +1,47 @@
+{
+  "_": "Senegalin maastokohteet. Faktat en-Wikipediasta 30.8.2026. Maan korkein kohta on nimeltä ja korkeudelta vaatimaton Baunezin harjanne (648 m, en-Wikipedia \"Geography of Senegal\"), joten listalla ei ole vuorta — valtameri ja kaksi suurta jokea ovat maaston tärkeimmät.",
+  "meret": [
+    {
+      "nimi": "Atlantti",
+      "lon": -17.9,
+      "lat": 14.5,
+      "lahdeKoordinaatti": "ulappa Dakarin ja Cap-Vertin niemen edustalla; valtameriartikkelin oma keskipiste on -25 / 0",
+      "nappi": "Manner-Afrikan läntisin ranta",
+      "kysymykset": [
+        "Mikä on Afrikan mantereen läntisin kohta?",
+        "Miksi Cap-Vert ja Kap Verde eivät ole sama paikka?"
+      ],
+      "korostukset": ["Cap-Vert|Cap-Vertin"],
+      "teksti": "Atlantti on maailman toiseksi suurin valtameri, ja Senegalin rannikolla se kohtaa koko Afro-Euraasian mantereen läntisimmän kohdan: Cap-Vertin niemen, jolla Dakar sijaitsee. Portugalilaiset löytöretkeilijät nimesivät niemen vihreäksi — 570 kilometriä lännempänä sijaitseva Kap Verden saarivaltio on saanut nimensä juuri tästä niemestä.",
+      "lahde": "en-Wikipedia \"Atlantic Ocean\" ja \"Cap-Vert\", johdanto-osat (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Senegaljoki",
+      "lon": -16.5289,
+      "lat": 15.7881,
+      "lahdeKoordinaatti": "en-Wikipedia \"Senegal River\" — koordinaatti on suistossa Saint-Louisin kohdalla",
+      "nappi": "Rajajoki Saharan reunalla",
+      "kysymykset": [
+        "Miksi joki jakautuu kahdeksi rinnakkaiseksi haaraksi?",
+        "Mitä serer-kielen nimi Seen o Gal tarkoittaa?"
+      ],
+      "teksti": "Senegaljoki virtaa 1 086 kilometriä Länsi-Afrikan halki, ja suuri osa siitä muodostaa Senegalin ja Mauritanian välisen rajan. Kaédin alapuolella joki jakautuu kahdeksi: Doué-haara kulkee pääuoman rinnalla parisataa kilometriä ennen kuin uomat yhtyvät uudelleen. Merkki on suistossa Saint-Louisin kohdalla, jossa joki laskee Atlanttiin.",
+      "lahde": "en-Wikipedia \"Senegal River\", johdanto-osa (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Gambiajoki",
+      "lon": -12.85,
+      "lat": 13.0,
+      "lahdeKoordinaatti": "joen yläjuoksu Kaakkois-Senegalissa; artikkelin koordinaatti -16,567 / 13,467 on suulla Banjulissa",
+      "nappi": "Joki jonka ympärille piirtyi valtio",
+      "kysymykset": [
+        "Missä Gambiajoki saa alkunsa?",
+        "Miksi Gambian valtio on joen muotoinen?"
+      ],
+      "teksti": "Gambiajoki virtaa 1 120 kilometriä Guinean Fouta Djallonin ylängöltä Senegalin kautta Atlanttiin, johon se laskee Banjulin kohdalla. Sen alajuoksun molemmat rannat kuuluvat Gambialle, Manner-Afrikan pienimmälle valtiolle, joka on käytännössä joen levyinen. Merkki on Senegalin kaakkoisosassa, jossa joki virtaa maan halki kohti merta.",
+      "lahde": "en-Wikipedia \"Gambia River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}
