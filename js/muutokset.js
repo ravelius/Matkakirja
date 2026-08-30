@@ -13,6 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1359, teksti: 'Livian lisays ilman otsikkoa, 52 mietintarepliikkia' },
+  { v: 1358, teksti: 'Aikasarjaihmeet raamattuun, tilannetaulu ajan tasalle' },
   { v: 1357, teksti: 'Pollomerkit merkkilinjaan ja selite pelitilaan' },
   { v: 1356, teksti: 'Visavastausten paikat sekoitettu' },
   { v: 1355, teksti: 'Nostokuvat pois karttakerroksesta' },

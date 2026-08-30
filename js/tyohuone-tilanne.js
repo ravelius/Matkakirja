@@ -10,37 +10,43 @@
  */
 
 export const TILANNE = {
-  paivitetty: '20.8.2026 — v937–v947, Aasia käynnissä',
-  tavoite: 'Lähi-itä valmis: 8 uutta lehteä (Medina, Mekka, Ruba '
-    + 'al-Khali, Jerusalem, Siinai, Kappadokia, Persepolis + '
-    + 'täydennykset), 5 uutta kohdekarttaa, 16 lehteen avauskuvat ja '
-    + 'matkaopas. Tuoreusnäkymät Tilannelehteen ja Tilastoihin. '
-    + 'Uudet linjaukset Raamatussa: tuhoutuneen kaupungin nykykuvat, '
-    + 'matkaopas on nykytietoa, Pöllön vaikeat nykyaiheet. '
-    + 'AASIA TYÖN ALLA: Venäjän 8 kaupungin täydennykset ja uudet '
-    + 'lehdet kolmiportaisella putkella (faktapohja → riippumaton '
-    + 'tarkistus → kirjoitus).',
+  paivitetty: '30.8.2026 — v1350–v1357, laattapyramidi käynnistyy',
+  tavoite: 'Maailmankartta on ainoa pelilauta (v1351): erillislauta '
+    + 'purettu ja vanhat tallennukset migroitu. Eurooppa valmis 39 '
+    + 'fokuskaupungilla; Skandaalit-kategoria sai sisällön (v1352, 83 '
+    + 'skandaalia / 29 maata) ja maastokohteet laajenivat Afrikkaan ja '
+    + 'Aasiaan (v1353, 145 kohdetta / 48 maata). Merkkilinja yhtenäistyi: '
+    + 'nostokuvat pois karttakerroksesta (v1355), pöllömerkit '
+    + 'kohdemerkin mittaan ja selitevalikko vasta pelitilaan (v1357). '
+    + 'SEURAAVA PÄÄLINJAUS: koko maailma on YKSI esirenderöity '
+    + 'laattapyramidi — maakohtaiset lehdet poistuvat pelaajan '
+    + 'näkymästä ja Maailma-nappi vain löysentää panorointirajoja. '
+    + 'Pilotti ja mittaukset ensin, sitten täysgenerointi parvella, '
+    + 'lopuksi vanhan lehtijärjestelmän purku omana eränään.',
   rivit: [
     {
       tekija: 'Fable',
       rooli: 'päätoimittaja',
       tila: 'tyossa',
-      tehtava: 'Aasian lehtiurakan orkestrointi agenttiparvella: '
-        + 'portit, pistokokeet, julkaisut. Nykytietokorjaus (Mosul, '
-        + 'Halab, Damaskos, Sana, Aden) tulossa v948:aan.',
-      seuraavaksi: 'Venäjä-erät V1–V3 sisään; Peking, Delhi ja '
-        + 'Bangkok; loput 25 Aasian lehteä faktapohja kerrallaan.',
+      tehtava: 'Laattapyramidin käynnistys: mittaussuunnitelma ja '
+        + 'pilotti lipun takana, merkkikerroksen rasterointi eleen '
+        + 'ajaksi (kumoaa väliaikaisen "merkit piiloon eleen ajaksi"). '
+        + 'Julkaisujen portit ja versiotörmäysten purku.',
+      seuraavaksi: 'Pilotin mittausten jälkeen täysgenerointi '
+        + 'agenttiparvella; sitten lehtijärjestelmän purku '
+        + '(reunahäivytys, saumat, lehtivalinta, v1346:n väistö). '
+        + 'Aasian täydennysaalto maastokohteisiin.',
     },
   ],
   odottaaPaatosta: [
-    'Mac-Safari-äänikorjauksen testi Macilla (v741)',
-    'Pöllö-työtila Anthropic-konsoliin (kulujen rajaus)',
-    'Kazakstanin ja Syyrian lippusivut (erikseen)',
-    'Ankara/Nikosia/Izmir: vanhat sivut 3 noston mittaisia '
-      + '(uusi malli 4) — täydennyserä jos omistaja haluaa',
+    'Kasvokuvaerä Driveen (nuoremmat kasvot) → kohtaamiskortit',
+    'fin-pieni-kuva uusiksi (prompti annettu)',
+    'Bergenin kohdekartta (Overpass)',
+    'Sora-videotestit',
+    'Aikasarjaihmeiden promptinippujen tilaus (kaupunkinäkymä eri '
+      + 'vuosisatoina + Runway-video)',
   ],
 };
-
 /**
  * Testattavaa juuri nyt. ÄÄRIMMÄISEN MINIMALISTINEN (omistajan
  * linjaus 15.8.2026: "tavuviiva ja muutama sana per kohta
@@ -48,6 +54,12 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1357: POLLOMERKIT MERKKILINJAAN - elaintakyjen pollot ovat nyt kohdemerkin kokoisia viivamerkkeja nimioineen, ne eivat nay lennon aikana, ja selitevalikon nappi ilmestyy vasta ensimmaisesta kaupungista. Katso Kreikan kilpikonnat ja lue palkkiorivi.',
+  'v1356: Visavastausten paikat sekoitettu (291 siirtoa) - oikea vastaus ei ole enaa aina samassa kohdassa.',
+  'v1355: Nostokuvat pois karttakerroksesta - polaroidit eivat enaa vuoda kartalle.',
+  'v1353: Vuoret ja meret 48 uuteen maahan (145 maastokohdetta, Afrikka + Aasia).',
+  'v1352: SKANDAALIT-kategoria sai sisallon - 83 skandaalia 29 maassa, huuto-symboli kartalla.',
+  'v1351: MAAILMANKARTTA ON AINOA PELILAUTA - erillislauta purettu. RATKAISEVA: avaa vanha tallennus ja tarkista ettei eteneminen nollaannu.',
   'v1325: SAHKETEHTAVAN VAIHE 2 - vapaa tekstikentta lomakkeen rinnalla (Sofia + Tukholma). Kokeile "vasa 1961" (ilmainen paikallinen tunnistus) ja sitten omin sanoin kiertaen. VAATII "Pollon julkaisu" -ajon, tai vastaus ohjaa lomakkeeseen.',
   'v1324: BITTIKARTTA VAIHE 1 - pohjacanvas: WebKitin pahin kehys 1780->885 ms, purku 1105->73 ms. RATKAISEVA LAITETESTI: edestakainen liike irrottamatta (kaannostokkays) + yleistuntuma.',
   'v1323: KORTIT PAALLA - koko annostelukulku pelattavissa: taky + visa (+50 puntaa) -> oppitunti -> kohtaaminen/sahke. Kay Sofia tai Madrid lapi.',
