@@ -1,0 +1,50 @@
+{
+  "_": "Ugandan maastokohteet. Faktat en-Wikipediasta 30.8.2026. Victorianjärvi kulkee pelin symbolitaksonomiassa merenä (luonto-symboli; erillistä järvityyppiä ei ole); nimiasu on fi-Wikipedian Victorianjärvi.",
+  "vuoret": [
+    {
+      "nimi": "Mount Stanley",
+      "lon": 29.8717,
+      "lat": 0.3858,
+      "m": 5109,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Stanley\"",
+      "nappi": "Afrikan neljänneksi korkein",
+      "kysymykset": [
+        "Miksi lähes päiväntasaajalla on jäätiköitä?",
+        "Kenen mukaan vuori on nimetty?"
+      ],
+      "korostukset": ["Ruwenzori|Ruwenzori-vuoristossa"],
+      "teksti": "Mount Stanley eli Ngaliema kohoaa Ruwenzori-vuoristossa 5 109 metriin: se on sekä Ugandan että Kongon demokraattisen tasavallan korkein vuori ja koko Afrikan neljänneksi korkein. Sen huiput ovat niin korkealla, että ne kannattelevat jäätiköitä käytännössä päiväntasaajalla. Vuori kuuluu Ruwenzorin kansallispuistoon, joka on Unescon maailmanperintökohde.",
+      "lahde": "en-Wikipedia \"Mount Stanley\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Victorianjärvi",
+      "lon": 32.7,
+      "lat": -0.3,
+      "lahdeKoordinaatti": "järven Ugandan-puoleinen selkä Entebben eteläpuolella; artikkelin keskipiste 33 / -1 on Tansanian vesillä",
+      "nappi": "Afrikan suurin järvi",
+      "kysymykset": [
+        "Kuinka syvä jättiläisjärvi oikeastaan on?",
+        "Minkä joen latvavesi järvi on?"
+      ],
+      "teksti": "Victorianjärvi on Afrikan suurin järvi ja maailman suurin trooppinen järvi: lähes 60 000 neliökilometriä, pinta-alaltaan makeista vesistä toinen vain Pohjois-Amerikan Yläjärvelle. Jättiläinen on kuitenkin matala — keskisyvyys on vain noin 40 metriä, sillä järvi täyttää loivan painanteen ylängöllä. Sen vesistä alkaa Valkoinen Niili.",
+      "lahde": "en-Wikipedia \"Lake Victoria\" ja \"White Nile\", johdanto-osat (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Niili",
+      "lon": 33.2,
+      "lat": 0.43,
+      "lahdeKoordinaatti": "Jinja, jossa joki purkautuu Victorianjärvestä; Niili-artikkelin koordinaatti 31,14 / 30,17 on Egyptissä",
+      "nappi": "Maailman pisimmän joen alku",
+      "kysymykset": [
+        "Missä Niilin matka alkaa?",
+        "Mitä järviä joki läpäisee matkallaan?"
+      ],
+      "teksti": "Ugandassa alkaa maailman pisimmän joen matka: Valkoinen Niili purkautuu Victorianjärvestä ja kulkee Kyogajärven kautta Albertjärvelle — näitä osuuksia kutsutaan Victorian Niiliksi ja Albertin Niiliksi. Koko Niilillä on mittaa 7 088 kilometriä ennen kuin sen vedet ovat perillä Välimeressä.",
+      "lahde": "en-Wikipedia \"White Nile\" ja \"Nile\", johdanto-osat (tarkistettu 30.8.2026)."
+    }
+  ]
+}
