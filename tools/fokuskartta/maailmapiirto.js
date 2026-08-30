@@ -31,6 +31,8 @@
  *          muutama valtameren nimi kursiivilla — ja ATLASKEHYS
  *          (paperimarginaali, kaksoisviivakehys, kartussi,
  *          kompassiruusu, mittakaavajana, painajanrivi).
+ *          Valtamerten nimet ja kompassiruusu ovat kartan alalla, ja
+ *          ne piirretään vain uloimmille tasoille — ks. osio 7.
  *
  *   EI OLE maakorostusta, rajaviivoja, naapurien sumennusta eikä
  *          yhtäkään kaupunkia. Kaupunkien nimet ovat pelin omia
@@ -194,6 +196,12 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    *               laattaruudukon), kalusteiden koko (kartussi,
    *               kompassi, merten nimet) — ne on ladottu arkin
    *               mittoihin ja niiden paikka on arkilla, ei ruudulla.
+   *
+   * MERTEN NIMET JA KOMPASSI OVAT S:SSÄ MUTTA EIVÄT JOKA TASOLLA.
+   * Ne kuuluvat merelle, jonka ne nimeävät, joten niiden on kasvettava
+   * kartan mukana — mutta juuri siksi ne on myös jätettävä pois heti,
+   * kun meri ei enää mahdu näkymään. Se on yleistyskysymys eikä
+   * mittakaavakysymys, ja se ratkaistaan kynnyksellä osiossa 7.
    */
   const P = paperiS ?? S;
 
@@ -570,7 +578,52 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     ctx.restore();
   }
 
-  /* ================================================== 7. MERTEN NIMET */
+  /* ================================================== 7. MERTEN NIMET
+   *
+   * === VAIN ULOIMMILLE TASOILLE (omistajan päätös 30.8.2026) ========
+   *
+   * Omistajan sanoin: *valtamerten nimet ja kompassiruusu piirretään
+   * vain kun koko meri on näkyvissä; lähemmäs zoomatessa ne katoavat.*
+   * Perustelu on painetun atlaksen oma tapa — **valtameri nimetään
+   * kerran maailmankartalla, ei jokaisella lehdellä**, ja kompassiruusu
+   * kuuluu arkin kalusteisiin eikä maastoon.
+   *
+   * Nämä kaksi ovat ARKIN KALUSTEITA eli kartan mittakaavassa (`S`,
+   * ks. PAPERIN MITTAKAAVA ylempänä), ja se on oikein: nimi kuuluu
+   * merelle, jonka se nimeää, ja kasvaa sen mukana. Ilman kynnystä se
+   * on kuitenkin väärin MOLEMMISSA päissä, ja kumpikin pää on mitattu:
+   * syvimmällä tasolla (z7, S = 13,5) ATLANTIN VALTAMERI oli 4 725
+   * pikseliä eli 9,2 laattaa leveä ja laatta jäi kokonaan kirjainten
+   * sisään, kun taas uloimmalla (z0, S = 0,105) kirjaimen korkeus oli
+   * 1,8 pikseliä. Kynnys hoitaa syvän pään, ja mitoitus
+   * (tyylitiedoston `koko`) uloimman.
+   *
+   * KYNNYS ON MITATTU, EI VALITTU TUNNELMALLA. Kriteeri on omistajan
+   * "koko meri on näkyvissä", ja se on mitattu merimaskista: kunkin
+   * nimiön kohdalta käveltiin itään ja länteen rantaan asti, jolloin
+   * meren oma leveys laitepikseleinä on tasoittain
+   *
+   *      meri            z1     z2     z3
+   *      Tyynimeri      619   1238   2476
+   *      Jäämeri        626   1251   2502
+   *      Intian valt.   306    611   1222
+   *      Atlantti       310    619   1239
+   *
+   * Peli katsoo valittua tasoa noin 1:1 laitepikseleinä
+   * (js/laattapyramidi.js valitseTaso), joten näkymän leveys on
+   * puhelimella 1170 ja työpöydällä 1440-3024 laitepikseliä. Tasolla
+   * z2 jokainen nimetty meri mahtuu näkymään; z3:lla Tyynimeri ja
+   * Jäämeri ovat jo kaksi ruudullista. Raja kulkee siis z2:n ja z3:n
+   * välissä, ja se kirjataan tähän samassa yksikössä kuin muutkin
+   * yleistyskynnykset (kuvapikseliä lautayksikköä kohti): z2 on 0,225
+   * ja z3 on 0,45.
+   *
+   * (Eteläinen jäämeri on kehämeri eikä mahdu näkymään millään
+   * tasolla; se seuraa muita, koska sen nimi kulkee kartan alalaidassa
+   * vyönä eikä rajatun altaan sisällä.)
+   */
+  const KALUSTEIDEN_YLARAJA = 0.3;
+  const merinimetNakyvat = px <= KALUSTEIDEN_YLARAJA;
 
   /** Yksi tekstirivi harvennettuna; sama kaava kuin maalehdellä. */
   const teksti = (s, x, y, {
@@ -595,14 +648,16 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
   /*
    * Valtamerten nimet ovat karttatypografiaa eivätkä paikkatietoa: ne
    * on aseteltu silmällä sinne, missä ulappaa riittää (tyylitiedosto
-   * tools/tee-yleislehti.mjs MERET). Ei haloa — nimi jää paperiin kuten
-   * maalehdillä.
+   * tools/generoi-laattapyramidi.mjs MERET). Ei haloa — nimi jää
+   * paperiin kuten maalehdillä.
    */
-  for (const m of tyyli.meret ?? []) {
-    teksti(m.nimi, kuvaX(m.lon), kuvaY(m.lat), {
-      koko: m.koko ?? 20, tyylitys: 'italic', vari: 'rgba(112,99,76,0.62)',
-      ank: 'center', vali: (m.koko ?? 20) * 0.34, kulma: m.kulma ?? 0,
-    });
+  if (merinimetNakyvat) {
+    for (const m of tyyli.meret ?? []) {
+      teksti(m.nimi, kuvaX(m.lon), kuvaY(m.lat), {
+        koko: m.koko ?? 20, tyylitys: 'italic', vari: 'rgba(112,99,76,0.62)',
+        ank: 'center', vali: (m.koko ?? 20) * 0.34, kulma: m.kulma ?? 0,
+      });
+    }
   }
 
   /* ================================================== 8. KOMPASSIRUUSU
@@ -613,11 +668,16 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * eteläinen Tyynimeri — laudan suurin yhtenäinen tyhjä vesi, jolla ei
    * ole yhtään kaupunkia, laattaa eikä valtameren nimeä.
    *
+   * RUUSU PIIRRETÄÄN SAMALLA KYNNYKSELLÄ KUIN MERTEN NIMET (osio 7):
+   * se on arkin kaluste eikä maastoa, ja z7:llä se oli mitattuna
+   * 4 419 pikseliä eli 8,6 laattaa leveä — yksi laatta jäi kokonaan
+   * ruusun navan sisään (katsottu).
+   *
    * KAIVERRUSTYYLI syntyy kahdesta puoliskosta: jokainen sakara on
    * jaettu keskiviivastaan valoon ja varjoon, kuten teräskaiverruksessa,
    * jossa kolmiulotteisuus tehdään sävyllä eikä varjostuksella.
    */
-  if (tyyli.kompassi) {
+  if (tyyli.kompassi && merinimetNakyvat) {
     const k = tyyli.kompassi;
     const r = (k.sade ?? 130) * S;
     const cx = kuvaX(k.lon);

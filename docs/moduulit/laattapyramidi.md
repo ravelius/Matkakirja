@@ -194,6 +194,10 @@ painajanrivi "Painettu Matkakirjan kustantamossa MDCCCLXXIII" +
 huomaamaton © Matkakirja, kompassiruusu eteläiselle Tyynellemerelle ja
 mittakaavajana.
 
+Kompassiruusu ja valtamerten nimet ovat kartan alalla eivätkä
+marginaalissa, ja ne piirretään vain uloimmille tasoille (luku 6e);
+muut kalusteet ovat arkilla joka tasolla.
+
 **Kehys on arkilla joka tasolla, ei vain uloimmalla.** Mitat
 skaalautuvat `S`:llä, joten kehys on kaikilla tasoilla saman kokoinen
 kartalla — vain terävämpi syvemmällä. Jos marginaali olisi vain
@@ -369,7 +373,7 @@ Kaikki, mikä oli kerrottu `S`:llä, kasvoi siis tasoittain ruudulla.
 | **PAPERI (P)**, patina | rosoisuus, paperin syy/rae/klimppi/warp, rantaviivan suojavyö (`rantaVali`), taitteet, vesiviivoitus (pois päältä), kohdistus + leviäminen (jo 30.8.) | sama peruste |
 | **KARTTA (S)** | rannikon MUOTO, hypsometria, rinnevarjostus, ikääntymisen laikku | maastoa ja maailmaa; tarkentuu tasoittain kuten pitääkin |
 | **ARKIN GEOMETRIA (S)** | kehyksen marginaali `kehys.yla/ala` | määrää laattaruudukon — lukittu mitta, ei saa muuttua |
-| **ARKIN KALUSTEET (S)** | kaksoisviivakehys, kartussi, mittajana, painajanrivi, kompassiruusu, valtamerten nimet | ladottu arkin mittoihin; **kaksi viimeistä ovat avoin asia, ks. alla** |
+| **ARKIN KALUSTEET (S)** | kaksoisviivakehys, kartussi, mittajana, painajanrivi, kompassiruusu, valtamerten nimet | ladottu arkin mittoihin; **kaksi viimeistä myös piirretään vain uloimmille tasoille, ks. luku 6e** |
 
 ### Mitattu: rannikon musteen leveys laatassa
 
@@ -432,27 +436,113 @@ juuri paksuista viivoista.
 Molemmat ovat tavulleen samat: yhden arkin lehdellä `paperiS` puuttuu,
 jolloin `P = S` ja `sp = s`.
 
-### AVOIN: kalusteet syvillä tasoilla
+## 6e. Merten nimet ja kompassi: vain uloimmille tasoille
 
-Valtamerten nimet ja kompassiruusu ovat yhä arkin mittakaavassa, ja
-**syvillä tasoilla se näkyy**. Mitattu ja katsottu z7:llä:
+*(Omistajan päätös 30.8.2026, kysymyskortti: **"Vain uloimmille
+tasoille."** Perustelu sanatarkasti: valtamerten nimet ja kompassiruusu
+piirretään vain kun koko meri on näkyvissä, ja lähemmäs zoomatessa ne
+katoavat — se on painetun atlaksen oma tapa, sillä valtameri nimetään
+kerran maailmankartalla eikä jokaisella lehdellä, ja kompassiruusu
+kuuluu arkin kalusteisiin eikä maastoon. Toteutus:
+maailmapiirto.js osiot 7–8, koot generoi-laattapyramidi.mjs MERET ja
+KOMPASSI. Kaikki alla oleva on mitattu 30.8.2026 tässä kontissa.)*
 
-| kaluste | viitearvo (6400 px) | z7 |
-| --- | --- | --- |
-| TYYNIMERI, kirjaimen korkeus | 26 px | **351 px** |
-| sama nimi kokonaisuudessaan | ~250 px | **~3 350 px eli 6,5 laattaa** |
-| kompassiruusun ulkokehä | 322 px | **4 350 px eli 8,5 laattaa** |
+Tämä oli luvun 6d ainoa avoimeksi jäänyt kohta, ja se **ei ollut
+pelkkä kynnys**: sama kaluste oli väärin molemmissa päissä.
 
-Laatta `z7/14/57` (Tyynimeri) on kokonaan kahden kirjaimen sisällä.
+Vanhoilla koolla mitattuna (kirjainkorkeus = versaalin todellinen
+korkeus selaimen `measureText`istä, ei kirjasinkoko):
 
-**Tätä ei korjattu tässä erässä, koska se ei ole mittakaavakysymys vaan
-YLEISTYSKYSYMYS.** Paperivakioksi muuttaminen rikkoisi toisen pään:
-z0:lla maailma on 675 px leveä, ja 20 laitepikselin merennimi
-harvennuksineen olisi 190 px eli lähes kolmannes maailman leveydestä.
-Oikea ratkaisu on sama kynnyskoneisto kuin sisällöllä (luku 4):
-kalusteet piirretään vain tasoille, joilla arkki on lähellä
-viiteleveyttä (esim. z0–z4), ja jätetään pois syvemmiltä. **Millä
-tasolla raja menee, on tyylipäätös** — kirjattu Fablelle.
+| kaluste | z0 (uloin) | z2 | z7 (syvin) |
+| --- | --- | --- | --- |
+| TYYNIMERI, kirjaimen korkeus | 1,8 px | 7,2 px | **229 px** |
+| ATLANTIN VALTAMERI, koko nimi | 37 px | 148 px | **4 725 px eli 9,2 laattaa** |
+| kompassiruusun ulkokehä | 35 px | 138 px | **4 419 px eli 8,6 laattaa** |
+
+Syvimmällä laatta Tyynenmeren nimen kohdalla oli kokonaan kirjainten
+sisällä ja kompassin kohdalla kokonaan ruusun navan sisällä (molemmat
+katsottu). Uloimmalla nimi oli parin pikselin sumua.
+
+### Kynnys on mitattu, ei valittu tunnelmalla
+
+Kriteeri on omistajan **"koko meri on näkyvissä"**, ja se mitattiin
+merimaskista: kunkin nimiön kohdalta käveltiin itään ja länteen
+rantaan asti (alle 2 asteen saaret siedettiin). Meren oma leveys
+laitepikseleinä:
+
+| meri | z1 | z2 | z3 |
+| --- | --- | --- | --- |
+| Tyynimeri | 619 | 1 238 | 2 476 |
+| Jäämeri | 626 | 1 251 | 2 502 |
+| Intian valtameri | 306 | 611 | 1 222 |
+| Atlantti | 310 | 619 | 1 239 |
+| Eteläinen Atlantti | 252 | 504 | 1 008 |
+
+Peli katsoo valittua tasoa noin 1:1 **laitepikseleinä**
+(js/laattapyramidi.js `valitseTaso` saa `skaala · dpr`), joten näkymä
+on puhelimella 1 170 ja työpöydällä 1 440–3 024 laitepikseliä leveä.
+Tasolla z2 jokainen nimetty meri mahtuu näkymään kaikilla näillä
+laitteilla; z3:lla Tyynimeri ja Jäämeri ovat jo kaksi ruudullista.
+**Raja kulkee siis z2:n ja z3:n välissä**, ja se on koodissa samassa
+yksikössä kuin muutkin yleistyskynnykset (kuvapikseliä lautayksikköä
+kohti): `KALUSTEIDEN_YLARAJA = 0,3`, kun z2 on 0,225 ja z3 on 0,45.
+
+Sama luku on generoi-laattapyramidi.mjs:ssä umpimeren karsintaa varten
+(`umpimeriSavy` ehto 4 koskee vain kalustetasoja) — kaksi kopiota, ja
+ne on pidettävä samana.
+
+### Koot mitoitettiin uudestaan sen mukaan, missä ne piirretään
+
+Nimet ja ruusu **pysyvät kartan mittakaavassa (`S`)**: nimi kuuluu
+merelle, jonka se nimeää, ja kasvaa sen mukana, jolloin sen osuus
+merestä on joka tasolla sama eikä tason vaihtuminen näy nykäyksenä.
+Laitepikselimitoitus olisi rikkonut uloimman pään pahemmin kuin korjannut
+(z0:lla nimi ylittäisi koko altaan). Koska syvät tasot jäävät nyt pois,
+uloin pää saatiin korjattua suurentamalla — ja suurennoksen ylärajan
+kertoo avovesi nimen ympärillä:
+
+| nimi | puolikas leveys | lähin ranta | täyttöaste |
+| --- | --- | --- | --- |
+| ATLANTIN VALTAMERI | 9,85° | 23,5° (Länsi-Afrikka) | **42 %** |
+| ETELÄINEN ATLANTTI | 8,39° | 32,1° | 26 % |
+| INTIAN VALTAMERI | 8,57° | 36,1° | 24 % |
+| JÄÄMERI | 3,43° | 12,8° | 27 % |
+| TYYNIMERI | 5,69° | 60,3° | 9 % |
+
+Tiukin on Atlantti. 80 %:n täyttöaste antaa kertoimeksi **1,9**, ja se
+on todennettu myös silmällä: 1,9:llä nimen ja Afrikan rannikon väliin
+jää selvä rako, 2,2:lla viimeinen I osuu rannikkoon. Kaikki koot on
+siksi kerrottu 1,9:llä, jolloin typografinen hierarkia säilyy
+(Tyynimeri suurin).
+
+**Kompassilla on oma mittansa**: lähin maa ruusun keskipisteestä on
+14,1° (Pitcairnin saaret) ja nykyinen ulkokehä 9,2°. Kerroin **1,5**
+vie kehän 13,8°:een eli juuri avoveden sisään; 1,9 veisi sen
+17,5°:een, jolloin kehä kulkisi saarten yli.
+
+### Lopputulos tasoittain
+
+| taso | maailma px | TYYNIMERI, kirjain | ATLANTIN VALTAMERI, koko nimi | kompassin halkaisija | piirretään |
+| --- | --- | --- | --- | --- | --- |
+| z0 | 675 | 3,4 px | 71 px | 52 px | kyllä |
+| z1 | 1 350 | 6,8 px | 141 px | 104 px | kyllä |
+| z2 | 2 700 | **13,5 px** | **282 px** | **207 px** | kyllä |
+| z3 | 5 400 | (27,0) | (564) | (414) | **ei** |
+| z4–z7 | 10 800–86 400 | (54–432) | (1 128–9 026) | (829–6 629) | **ei** |
+
+Katsottu: z2 on nyt luettava maailmankartta, jossa jokainen meri on
+nimetty ja ruusu on kunnon kaluste; z1 on luettava (ennen paria pikseliä
+sumua); z0 on peukalonkynnen kokoinen eikä siinä ole luettavaa mitään —
+sen kartografia on muutenkin 2 pikselin rannikkoa (luku 6d) eikä peli
+valitse sitä (maailmanäkymä osuu z1:een tai z2:een, ks. yllä).
+Syvimmältä tasolta molemmat laatat ovat nyt tyhjää ulappaa paperin
+rakeineen.
+
+Lohkorajakoe kaikilla kahdeksalla tasolla, sama otos kuin luvussa 6d
+(ilman patinaa, koska muutos koskee vain vektorikerrosta): **z0–z2, z6
+ja z7 pahin 0**, z3–z5 muutama hajapikseli vektorien
+reunapehmennyksessä (pahin 34) — sama lähtötilanne kuin ennen
+muutosta, mitattuna erikseen samalla kokeella `origin/main`-versiolla.
 
 ## 7. Harva pyramidi — mitattu, päätetty POIS
 
@@ -806,11 +896,10 @@ kaatoi ajon (`ahaggar x2`).
 
 1. ~~Patinan kohdistusheitto ja leviäminen syvillä tasoilla~~ —
    **ratkaistu**, ja koko vikaluokka sen mukana (luku 6d).
-1b. **Kalusteet syvillä tasoilla** (luku 6d, viimeinen alaluku):
-   valtamerten nimet ja kompassiruusu ovat z7:llä laatan kokoisia.
-   Ratkaisu on tasokynnys eikä mittakaava, ja kynnys on tyylipäätös.
-   Tämä on ainoa tiedossa oleva kartografinen vika, joka kannattaa
-   ratkaista ennen seuraavaa täysajoa.
+1b. ~~Kalusteet syvillä tasoilla~~ — **ratkaistu** (luku 6e,
+   omistajan päätös 30.8.2026 "vain uloimmille tasoille"): valtamerten
+   nimet ja kompassiruusu piirretään vain tasoille z0–z2 ja ne on
+   mitoitettu uudestaan niiden mukaan.
 2. **Syvyyskäyrät oikeasta datasta** — päätetty myöhemmäksi eräksi.
 3. **Vinjetointi pelitilakerroksessa.** Se ei tule laattoihin
    (luku 6b), ja Raamattu listaa sen pelin ohueen pelitilakerrokseen.
