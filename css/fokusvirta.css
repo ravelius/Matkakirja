@@ -555,8 +555,8 @@
    tulla pöllöstä"*. Kupla on SAMAA PERHETTÄ kuin pöllön oma vihjekupla
    (css/styles.css .pollo-vihje): sama pergamentti, sama musteväri, sama
    kärki napin suuntaan. Erot ovat kaksi — kupla on leveämpi, koska
-   siinä on painikkeita, ja sen korkeus on rajattu, koska valintavaihe
-   voi tarjota neljä riviä.
+   siinä on painikkeita, ja sen korkeus on rajattu, jottei pitkä teksti
+   kasva pöllönapin yli.
 
    PAIKANNUS TULEE JS:STÄ. `left`, `bottom`, `max-height` ja kärjen
    kohta (--kupla-karki) lasketaan pöllönapin todellisesta paikasta
@@ -651,18 +651,6 @@
   color: #16130f;
 }
 
-/*
- * KOHDENOSTON PAINIKE (js/fokusvirta.js piirraValinta) erottuu täyistä
- * hillityllä nuolella: valinta vie katseen pois kaupungista, ja se saa
- * näkyä listassa ennen kuin pelaaja painaa. Ei omaa väriä eikä
- * kehystä — kupla on yhtä pergamenttia, ja kolmas laatikkotyyppi
- * samassa listassa olisi meteliä.
- */
-.fokusvirta-napit button.fokusvirta-kohdenappi::before {
-  content: '↗ ';
-  opacity: 0.6;
-}
-
 /* ===================================================================
    KUVAVINJETIT KARTALLA (js/fokusvirta.js paivitaFokuskuvat)
    -------------------------------------------------------------------
@@ -705,30 +693,6 @@
 }
 
 .fokuskuva-pinni:focus-visible { outline: none; }
-
-/*
- * KOHDENOSTON VINJETTI KASVAA PAIKALLEEN (omistajan tilaus 24.8.2026:
- * *"kartalle ilmestyy vinjettikuva kohteen omaan sijaintiin"* … *"pelkkä
- * kupla + kartalle kasvava kuva"*).
- *
- * Kasvu lähtee pinnin omasta alareunasta eli siitä kohdasta, jossa nuora
- * koskettaa karttaa — kuin kuva nousisi paikan päältä. `fill-box` on
- * pakollinen: SVG:n oletusarvoinen `view-box` laskisi origon koko kartan
- * nurkasta, jolloin vinjetti lentäisi ruudun poikki. Animaatio koskee
- * vain `transform`- ja `opacity`-ominaisuuksia, eikä siinä ole
- * suodattimia (ks. sääntö yllä).
- */
-@keyframes fokuskuva-kasvaa {
-  from { transform: scale(0.12); opacity: 0; }
-  60% { opacity: 1; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-.fokuskuva-kasvaa {
-  transform-box: fill-box;
-  transform-origin: 50% 100%;
-  animation: fokuskuva-kasvaa 480ms cubic-bezier(0.22, 0.9, 0.24, 1);
-}
 
 /* ===================================================================
    KUVAN SUURENNOS KARTAN PÄÄLLE (js/fokusvirta.js avaaSuurennos)
@@ -900,8 +864,7 @@ body.fokuszoom-paalla .fokusvirta-kortti {
 @media (prefers-reduced-motion: reduce) {
   .fokuszoom,
   .fokuszoom-teksti { transition: none; }
-  .fokuszoom-vaihtuu,
-  .fokuskuva-kasvaa { animation: none; }
+  .fokuszoom-vaihtuu { animation: none; }
 }
 
 /* ================= KEVYT KULKU -KOKEILU (24.8.2026, ilta) ==========

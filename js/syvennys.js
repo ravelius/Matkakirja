@@ -8,10 +8,11 @@
  * temppeli, Agora, Korintin kanava), joten jokainen täky saa oman
  * merkin kaupungin ympärille omalla symbolillaan."*
  *
- * Tarinat kirjoitettiin fokusvirran valintavaiheeseen (js/fokusvirta.js
- * `takyt`), mutta valinta on pois käytöstä (FOKUSVIRTA_VALINTA =
- * false) eikä niihin ollut mitään reittiä. Tämä moduuli antaa reitin
- * YHTENÄISEN KOHDEMALLIN mukaisesti (Raamattu 29.8.2026): tarina on
+ * Tarinat kirjoitettiin alun perin fokusvirran valintavaiheeseen
+ * (paketit js/packs/fokusvirta-*.js, kenttä `takyt`), mutta
+ * valintakupla vaiheineen on sittemmin purettu fokusvirrasta kokonaan
+ * — tämä moduuli on tarinoiden AINOA reitti. Reitti noudattaa
+ * YHTENÄISTÄ KOHDEMALLIA (Raamattu 29.8.2026): tarina on
  * kartan tavallinen kohdemerkki, joka piirtyy kohteiden omaan
  * kerrokseen (js/fokuskohteet.js, rekisteröinti kytkeSyvennys) ja
  * löytyy selitevalikon aihevaloilla aihesymbolinsa kautta — ei uutta
@@ -204,11 +205,11 @@ export function avaaSyvennys(ui, cityId, taky, tiedot) {
 }
 
 /**
- * MINIVISA JA PALKKIO — sama kirjanpito ja SAMA AVAIN kuin fokusvirran
- * omalla visalla (js/fokusvirta.js piirraMinivisa): `fokus:<täky>` ei
- * voi maksaa kahdesti, tultiinpa korttiin kartalta tai virrasta.
- * Juliste myönnetään ensimmäisestä oikeasta vastauksesta samoin kuin
- * virrassa (game.myonnaJuliste).
+ * MINIVISA JA PALKKIO — sama kirjanpito ja SAMA AVAIN (`fokus:<täky>`)
+ * kuin fokusvirran puretulla valintakuplavisalla, joten vanhassa
+ * tallennuksessa jo maksettu visa ei voi maksaa toista kertaa.
+ * Juliste myönnetään ensimmäisestä oikeasta vastauksesta
+ * (game.myonnaJuliste), kuten lehden minitehtävässäkin.
  */
 function piirraSyvennysVisa(ui, sisalto, cityId, taky) {
   const visa = taky.visa;

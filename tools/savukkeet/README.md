@@ -37,7 +37,7 @@ kirjoita `import ... from '../../node_modules/...'`.
 | savuke-paivityspopup | Versionumeron päivitysnappi |
 | savuke-kehittajalehti | Kehittäjän liitteet: Raamattu, Tilannelehti ja Tilastot-lehden vetolaatikkotaulu |
 | savuke-lippuikkuna | Lippuikkunan pikselit (ison lipun terävyys, tarkennettu vaakuna kortin sisällä) |
-| savuke-fokusvirta | Fokusmoodin annosteluvirta Ateenassa: lehtilukko, kortti kartan päällä, vaiheet 1–6, minivisan palkkio, portti (≥1 täky) ja luovutus laattamekaniikalle. **Valintavaihe on väliaikaisesti pois** (29.8.2026, js/fokusvirta.js `FOKUSVIRTA_VALINTA = false`): savuke lukee lipun ja ajaa sen mukaan joko valinta-, täky- ja kohdenosto-osiot tai niiden tilalla väitteen "kuplan Jatka vie suoraan oppituntiin". Lipun kääntö takaisin herättää vanhat osiot sellaisinaan |
+| savuke-fokusvirta | Fokusmoodin annosteluvirta Ateenassa: lehtilukko, kortti kartan päällä, vaiheet matkakirja → kupla → oppitunti → kohtaaminen ja luovutus laattamekaniikalle. Valintakupla vaiheineen on PURETTU (Raamattu, SYVENNYSTARINAT KARTALLE): savuke vaatii, että kuplan Jatka vie suoraan oppituntiin eikä Pulu kysy täkyjä. Syvennystarinoiden merkkireitin kattaa savuke-selitevalikko |
 | savuke-dist | Yhden tiedoston versio käynnistyy (aja build ensin) |
 | savuke-aanet-tausta | Taustalle mennyt peli on täysin hiljaa: ankkuri, tehostekonteksti, lukijaäänen piiri ja omistajattomat soittimet vaikenevat, paluussa silmukat ja radio jatkavat mutta kesken jäänyt luenta ei — ja syntetisaattori perutaan, ei tauoteta |
 | savuke-mediakanava | Pelin äänet mediakanavassa (hiljainen ankkuri + audioSession, sanelun tauko) ja pelin oma mykistys myös striimatulla lukijaäänellä |

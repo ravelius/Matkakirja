@@ -303,10 +303,9 @@ for (const kaupunki of KAUPUNGIT) {
 
   if (KORTIT) {
     /*
-     * KORTTIANNOSTELU: virta ajetaan portille asti tilan kautta ja
+     * KORTTIANNOSTELU: virta ajetaan oppituntiin asti tilan kautta ja
      * oppitunnin jatkonappi painetaan. Tila kirjoitetaan suoraan, koska
-     * savukkeen mittauskohde on aarrevaihe eikä täkyjen läpikäynti —
-     * yksi tehty täky riittää avaamaan portin (fokusvirtaPorttiAuki).
+     * savukkeen mittauskohde on aarrevaihe eikä alkupään läpiklikkaus.
      *
      * Nappi on kortin VIIMEINEN: oppituntikortilla se on ainoa, ja
      * kortin muut linkit ovat sen edellä. Sen tekstin on luvattava
@@ -318,10 +317,7 @@ for (const kaupunki of KAUPUNGIT) {
       const { ui, game } = window.matkakirja;
       const fv = await import('/js/fokusvirta.js');
       const city = game.cityOf();
-      const data = fv.fokusvirtaSisalto(ui, city);
-      fv.asetaFokusvirtaTila(game, city, {
-        vaihe: 'oppitunti', taky: null, tehdyt: [data.takyt[0].id], kohde: null, kohteet: [],
-      });
+      fv.asetaFokusvirtaTila(game, city, { vaihe: 'oppitunti' });
       fv.avaaFokusvirta(ui, city);
       await new Promise((r) => setTimeout(r, 500));
       const napit = [...document.querySelectorAll('.fokusvirta-kortti .fokusvirta-napit button')];
@@ -331,7 +327,7 @@ for (const kaupunki of KAUPUNGIT) {
       await new Promise((r) => setTimeout(r, 700));
       return {
         teksti,
-        vaihe: fv.fokusvirtaTila(game, city, data).vaihe,
+        vaihe: fv.fokusvirtaTila(game, city).vaihe,
         pisteita: document.querySelectorAll('.fokuspiste').length,
       };
     });

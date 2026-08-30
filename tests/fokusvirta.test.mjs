@@ -2,13 +2,14 @@
  * FOKUSMOODIN ANNOSTELUVIRTA (js/fokusvirta.js).
  *
  * Vahdittavat asiat ovat Raamatun osiosta "Fokusmoodi":
- *   1. ANNOSTELU — kuusi vaihetta kuljetaan sovitussa järjestyksessä,
- *      eikä yksikään väliin jäävä nappi oikaise seuraavaan.
- *   2. ETENEMINEN — vähintään YKSI täky ennen aarrekysymystä. Portti
- *      on tämän paketin ainoa sääntö, jonka rikkoutuminen ei näkyisi
- *      ruudulla mitenkään: pelaaja vain pääsisi aarteelle liian
- *      aikaisin, eikä sitä huomaisi kukaan.
- *   3. Tallennus ja palautus — virta EI saa alkaa alusta joka kerta kun
+ *   1. ANNOSTELU — vaiheet kuljetaan sovitussa järjestyksessä
+ *      (matkakirja → pollo → oppitunti → kohtaaminen → valmis), eikä
+ *      yksikään väliin jäävä nappi oikaise seuraavaan. Valintakupla
+ *      vaiheineen ('valinta', 'taky', 'kohde') on PURETTU (Raamattu,
+ *      SYVENNYSTARINAT KARTALLE): syvennystarinat avautuvat kartan
+ *      merkeistä (js/syvennys.js), eikä purettuun vaiheeseen jäänyt
+ *      vanha tallennus saa avata kuplaa, jota ei enää ole.
+ *   2. Tallennus ja palautus — virta EI saa alkaa alusta joka kerta kun
  *      kortti avataan; tila kulkee pelitallenteessa (game.js
  *      toJSON/fromJSON) kuten julisteet ja minitehtävät.
  *
@@ -22,9 +23,8 @@ import assert from 'node:assert/strict';
 import { existsSync } from 'node:fs';
 
 import {
-  FOKUSVIRRAN_VAIHEET, FOKUSVIRTA_VALINTA, asetaFokusvirtaTila, fokusvirtaAlkutila,
-  fokusvirtaJaljella, fokusvirtaKohteetJaljella, fokusvirtaMatkakirja,
-  fokusvirtaNahdytKohteet, fokusvirtaPorttiAuki, fokusvirtaSiirto, fokusvirtaSiivoa,
+  FOKUSVIRRAN_VAIHEET, asetaFokusvirtaTila, fokusvirtaAlkutila,
+  fokusvirtaMatkakirja, fokusvirtaSiirto, fokusvirtaSiivoa,
   fokusvirtaTila, normalisoiSahketeksti, sahkePalkkio, sisaltohakemisto,
   tulkitseVapaaSahke,
 } from '../js/fokusvirta.js';
@@ -62,224 +62,74 @@ const ATEENA = fokusvirtaKaupungille('ateena');
  */
 const VIRRATON = packById('europe').cities.find((city) => !FOKUSVIRRAT[city.id])?.id;
 
-/** Lyhyt koesisältö: kaksi täkyä riittää portin ja paluun testaamiseen. */
-const KOE = {
-  matkakirja: { teksti: 'a' },
-  pollo: { teksti: 'b' },
-  valinta: { kysymys: 'c', vaadittuja: 1 },
-  takyt: [
-    { id: 'yksi', nappi: 'Yksi', teksti: 'x', visa: { kysymys: 'k', vaihtoehdot: ['a', 'b'], oikea: 0 } },
-    { id: 'kaksi', nappi: 'Kaksi', teksti: 'y', visa: { kysymys: 'k', vaihtoehdot: ['a', 'b'], oikea: 1 } },
-  ],
-  kohteet: [
-    { id: 'kanava', nimi: 'Kanava', nappi: 'Kanava', teksti: 'z', laudat: { europe: { x: 1, y: 2 } } },
-  ],
-  oppitunti: { teksti: 'd' },
-  kohtaaminen: { hahmo: 'Nikos', nappi: 'Tapaa Nikos', teksti: 'e' },
-};
-
-/*
- * VALINTA-ASKEL POIS KÄYTÖSTÄ (VÄLIAIKAINEN, 29.8.2026).
- *
- * Omistajan tilaus ja Raamatun 28.8. linjaus (SAAPUMISKULUN KOLME
- * TASMENNYSTA, kohta 3) kytkivät valintakuplan pois lipulla
- * FOKUSVIRTA_VALINTA. Valintaa, täkyjä ja kohdenostoja koskevat
- * väitteet EIVÄT ole kuolleita: ne odottavat lipun takana samalla
- * tavalla kuin koodikin, ja lipun kääntö takaisin `true`ksi herättää
- * ne sellaisinaan. Lipun ollessa pois ajetaan tilalle oma
- * väitejoukkonsa (ks. "1b. valinta pois käytöstä").
- */
-const VALINTA_POIS = FOKUSVIRTA_VALINTA
-  ? false
-  : 'valintakupla väliaikaisesti pois (FOKUSVIRTA_VALINTA = false)';
-const VALINTA_PAALLA = FOKUSVIRTA_VALINTA
-  ? 'valintakupla käytössä (FOKUSVIRTA_VALINTA = true)'
-  : false;
-
 /* ---------- 1. vaihejärjestys ---------- */
 
-test('virta kulkee kuusi vaihetta sovitussa järjestyksessä', { skip: VALINTA_POIS }, () => {
+test('virta kulkee vaiheet sovitussa järjestyksessä', () => {
   let tila = fokusvirtaAlkutila();
   assert.equal(tila.vaihe, 'matkakirja');
 
-  tila = fokusvirtaSiirto(tila, 'jatka', KOE);
+  tila = fokusvirtaSiirto(tila, 'jatka');
   assert.equal(tila.vaihe, 'pollo');
 
-  tila = fokusvirtaSiirto(tila, 'jatka', KOE);
-  assert.equal(tila.vaihe, 'valinta');
-
-  tila = fokusvirtaSiirto(tila, { tyyppi: 'taky', id: 'yksi' }, KOE);
-  assert.equal(tila.vaihe, 'taky');
-  assert.equal(tila.taky, 'yksi');
-
-  // Minivisan vastaus merkitsee täyn tehdyksi mutta EI siirrä vaihetta:
-  // faktarivi jää luettavaksi, ja pelaaja palaa napista.
-  tila = fokusvirtaSiirto(tila, 'visa', KOE);
-  assert.equal(tila.vaihe, 'taky');
-  assert.deepEqual(tila.tehdyt, ['yksi']);
-
-  tila = fokusvirtaSiirto(tila, 'jatka', KOE);
-  assert.equal(tila.vaihe, 'valinta');
-  assert.equal(tila.taky, null);
-
-  tila = fokusvirtaSiirto(tila, 'aarteelle', KOE);
+  // Livian kuplasta jatketaan suoraan oppituntiin: valintakupla on
+  // purettu, eikä Pulu kysy mitään.
+  tila = fokusvirtaSiirto(tila, 'jatka');
   assert.equal(tila.vaihe, 'oppitunti');
 
-  tila = fokusvirtaSiirto(tila, 'jatka', KOE);
+  tila = fokusvirtaSiirto(tila, 'jatka');
   assert.equal(tila.vaihe, 'kohtaaminen');
 
-  tila = fokusvirtaSiirto(tila, 'kysymys', KOE);
+  tila = fokusvirtaSiirto(tila, 'kysymys');
   assert.equal(tila.vaihe, 'valmis');
   assert.ok(FOKUSVIRRAN_VAIHEET.includes(tila.vaihe));
 });
 
 test('tuntematon teko ei siirrä vaihetta eikä muokkaa annettua tilaa', () => {
   const tila = fokusvirtaAlkutila();
-  const kopio = { ...tila, tehdyt: [...tila.tehdyt] };
-  const jalkeen = fokusvirtaSiirto(tila, 'aarteelle', KOE);
+  const kopio = { ...tila };
+  const jalkeen = fokusvirtaSiirto(tila, 'aarteelle');
   assert.equal(jalkeen.vaihe, 'matkakirja');
   assert.deepEqual(tila, kopio, 'siirto ei saa muokata annettua oliota');
 });
 
-/* ---------- 1b. valinta pois käytöstä (väliaikainen 29.8.2026) ------ */
-
-test('lippu pois: Livian kuplasta jatketaan suoraan oppituntiin',
-  { skip: VALINTA_PAALLA }, () => {
-    let tila = fokusvirtaAlkutila();
-    tila = fokusvirtaSiirto(tila, 'jatka', KOE);
-    assert.equal(tila.vaihe, 'pollo');
-    tila = fokusvirtaSiirto(tila, 'jatka', KOE);
-    assert.equal(tila.vaihe, 'oppitunti', 'valintavaihe ohitetaan kokonaan');
-    // Loppupää on entisellään: oppitunti → kohtaaminen → laattakysymys.
-    tila = fokusvirtaSiirto(tila, 'jatka', KOE);
-    assert.equal(tila.vaihe, 'kohtaaminen');
-    tila = fokusvirtaSiirto(tila, 'kysymys', KOE);
-    assert.equal(tila.vaihe, 'valmis');
-  });
-
-test('lippu pois: aarreportti on auki ilman yhtäkään täkyä',
-  { skip: VALINTA_PAALLA }, () => {
-    const tyhja = { vaihe: 'oppitunti', taky: null, tehdyt: [], kohde: null, kohteet: [] };
-    assert.equal(fokusvirtaPorttiAuki(tyhja, KOE), true);
-    // Myös silloin kun sisältö vaatisi kahta täkyä: portti ei saa jäädä
-    // kiinni, koska täkyihin ei ole reittiä.
-    const tiukka = { ...KOE, valinta: { ...KOE.valinta, vaadittuja: 2 } };
-    assert.equal(fokusvirtaPorttiAuki(tyhja, tiukka), true);
-  });
-
-test('lippu pois: kesken valintaa tallentunut kaupunki ei avaa kuplaa',
-  { skip: VALINTA_PAALLA }, () => {
-    for (const vaihe of ['valinta', 'taky', 'kohde']) {
-      const siivottu = fokusvirtaSiivoa(
-        { vaihe, taky: 'yksi', tehdyt: ['yksi'], kohde: 'kanava', kohteet: ['kanava'] }, KOE,
-      );
-      assert.equal(siivottu.vaihe, 'oppitunti', `${vaihe} luetaan oppitunniksi`);
-      assert.equal(siivottu.taky, null);
-      assert.equal(siivottu.kohde, null);
-      // Tehdyt täyt ja nähdyt kohteet jäävät talteen: lipun kääntö
-      // takaisin ei saa nollata pelaajan etenemistä.
-      assert.deepEqual(siivottu.tehdyt, ['yksi']);
-      assert.deepEqual(siivottu.kohteet, ['kanava']);
-    }
-  });
-
-test('jo tehtyä täkyä ei tarjota eikä voi avata uudelleen',
-  { skip: VALINTA_POIS }, () => {
-  let tila = { vaihe: 'valinta', taky: null, tehdyt: ['yksi'] };
-  assert.deepEqual(fokusvirtaJaljella(tila, KOE).map((t) => t.id), ['kaksi']);
-  tila = fokusvirtaSiirto(tila, { tyyppi: 'taky', id: 'yksi' }, KOE);
-  assert.equal(tila.vaihe, 'valinta', 'tehty täky ei avaudu toista kertaa');
-  tila = fokusvirtaSiirto(tila, { tyyppi: 'taky', id: 'ei-ole' }, KOE);
-  assert.equal(tila.vaihe, 'valinta', 'tuntematon täkytunnus ei avaa mitään');
+test('kohtaamisesta ei etene Jatkalla — vain laattakysymys päättää', () => {
+  const tila = fokusvirtaSiirto({ vaihe: 'kohtaaminen' }, 'jatka');
+  assert.equal(tila.vaihe, 'kohtaaminen');
 });
 
-/* ---------- 2. portti: vähintään yksi täky ---------- */
+/* ---------- 2. siivous ---------- */
 
-test('aarteelle ei pääse ennen kuin yksi täky on tehty',
-  { skip: VALINTA_POIS }, () => {
-  const alku = { vaihe: 'valinta', taky: null, tehdyt: [] };
-  assert.equal(fokusvirtaPorttiAuki(alku, KOE), false);
-  assert.equal(fokusvirtaSiirto(alku, 'aarteelle', KOE).vaihe, 'valinta');
-
-  const yksi = { vaihe: 'valinta', taky: null, tehdyt: ['yksi'] };
-  assert.equal(fokusvirtaPorttiAuki(yksi, KOE), true);
-  assert.equal(fokusvirtaSiirto(yksi, 'aarteelle', KOE).vaihe, 'oppitunti');
+/*
+ * PURETUT VALINTAVAIHEET (Raamattu, SYVENNYSTARINAT KARTALLE:
+ * *"Valintakupla ja sen tilakoneen valintavaiheet saa purkaa kun
+ * merkkireitti on tuotannossa"* — purettu merkkireitin v1348–v1349
+ * jälkeen). Ennen purkua tallentunut peli voi olla jäänyt vaiheeseen
+ * 'valinta', 'taky' tai 'kohde'; se ei saa avata kuplaa, jota ei enää
+ * ole, EIKÄ pudota takaisin matkakirjaan — pelaaja oli jo merkinnän
+ * ohi. Tämä oli aiemmin myös se polku, jota pitkin valintakupla pääsi
+ * testiharnessissa näkyviin, vaikka sen ei pitänyt olla pelaajan
+ * saavutettavissa (omistaja vahvisti: ei haluta peliin).
+ */
+test('purettuun valintavaiheeseen jäänyt tallennus luetaan oppitunniksi', () => {
+  for (const vaihe of ['valinta', 'taky', 'kohde']) {
+    const siivottu = fokusvirtaSiivoa(
+      { vaihe, taky: 'yksi', tehdyt: ['yksi'], kohde: 'kanava', kohteet: ['kanava'] },
+    );
+    assert.deepEqual(siivottu, { vaihe: 'oppitunti' }, `${vaihe} luetaan oppitunniksi`);
+  }
 });
-
-test('portin korkeus luetaan sisällöstä, ei koodista',
-  { skip: VALINTA_POIS }, () => {
-  const tiukka = { ...KOE, valinta: { ...KOE.valinta, vaadittuja: 2 } };
-  const yksi = { vaihe: 'valinta', taky: null, tehdyt: ['yksi'] };
-  assert.equal(fokusvirtaPorttiAuki(yksi, tiukka), false);
-  const kaksi = { vaihe: 'valinta', taky: null, tehdyt: ['yksi', 'kaksi'] };
-  assert.equal(fokusvirtaPorttiAuki(kaksi, tiukka), true);
-});
-
-test('vapaaehtoiset täyt ovat yhä valittavissa portin auettua',
-  { skip: VALINTA_POIS }, () => {
-  const tila = { vaihe: 'valinta', taky: null, tehdyt: ['yksi'] };
-  const jalkeen = fokusvirtaSiirto(tila, { tyyppi: 'taky', id: 'kaksi' }, KOE);
-  assert.equal(jalkeen.vaihe, 'taky');
-  assert.equal(jalkeen.taky, 'kaksi');
-});
-
-/* ---------- 2b. kohdenosto ---------- */
-
-test('kohdenosto on valinnan sivupolku, ei uusi vaihe jonoon',
-  { skip: VALINTA_POIS }, () => {
-  let tila = { vaihe: 'valinta', taky: null, tehdyt: [], kohde: null, kohteet: [] };
-  tila = fokusvirtaSiirto(tila, { tyyppi: 'kohde', id: 'kanava' }, KOE);
-  assert.equal(tila.vaihe, 'kohde');
-  assert.equal(tila.kohde, 'kanava');
-  assert.deepEqual(tila.kohteet, ['kanava'], 'kohde merkitään nähdyksi heti avattaessa');
-
-  tila = fokusvirtaSiirto(tila, 'jatka', KOE);
-  assert.equal(tila.vaihe, 'valinta', 'kohteesta palataan valintaan');
-  assert.equal(tila.kohde, null);
-  assert.deepEqual(tila.kohteet, ['kanava'], 'vinjetti jää kartalle paluun jälkeenkin');
-  assert.deepEqual(fokusvirtaKohteetJaljella(tila, KOE), [], 'nähtyä ei tarjota uudelleen');
-  assert.deepEqual(fokusvirtaNahdytKohteet(tila, KOE).map((k) => k.id), ['kanava']);
-});
-
-test('kohdenosto EI avaa aarreporttia — portin mitta on täky',
-  { skip: VALINTA_POIS }, () => {
-  const tila = fokusvirtaSiirto(
-    { vaihe: 'valinta', taky: null, tehdyt: [], kohde: null, kohteet: [] },
-    { tyyppi: 'kohde', id: 'kanava' }, KOE,
-  );
-  const palattu = fokusvirtaSiirto(tila, 'jatka', KOE);
-  assert.equal(fokusvirtaPorttiAuki(palattu, KOE), false);
-  assert.equal(fokusvirtaSiirto(palattu, 'aarteelle', KOE).vaihe, 'valinta');
-});
-
-test('tuntematonta kohdetta ei voi avata', { skip: VALINTA_POIS }, () => {
-  const tila = { vaihe: 'valinta', taky: null, tehdyt: [], kohde: null, kohteet: [] };
-  assert.equal(fokusvirtaSiirto(tila, { tyyppi: 'kohde', id: 'ei-ole' }, KOE).vaihe, 'valinta');
-});
-
-/* ---------- 3. siivous ---------- */
 
 test('kelvoton tallennettu tila siivotaan turvalliseksi', () => {
-  assert.deepEqual(fokusvirtaSiivoa(null, KOE), fokusvirtaAlkutila());
+  assert.deepEqual(fokusvirtaSiivoa(null), fokusvirtaAlkutila());
   assert.deepEqual(
-    fokusvirtaSiivoa({ vaihe: 'olematon', taky: 'poistettu', tehdyt: ['yksi', 'poistettu'] }, KOE),
-    { vaihe: 'matkakirja', taky: null, tehdyt: ['yksi'], kohde: null, kohteet: [] },
+    fokusvirtaSiivoa({ vaihe: 'olematon', taky: 'poistettu', tehdyt: ['yksi'] }),
+    { vaihe: 'matkakirja' },
   );
-  /*
-   * Avoin täky, jonka sisältö on poistettu: palataan valintaan eikä
-   * jäädä vaiheeseen, jolle ei ole mitään piirrettävää. Valinnan
-   * ollessa väliaikaisesti pois (FOKUSVIRTA_VALINTA) paluuvaihe on
-   * oppitunti — kupla, johon palattaisiin, ei ole käytössä.
-   */
-  const paluu = FOKUSVIRTA_VALINTA ? 'valinta' : 'oppitunti';
+  // Vanhan tallennuksen ylimääräiset kentät putoavat pois myös
+  // elävästä vaiheesta: visojen kirjanpito on minitehtävissä (game.js).
   assert.deepEqual(
-    fokusvirtaSiivoa({ vaihe: 'taky', taky: 'poistettu', tehdyt: [] }, KOE),
-    { vaihe: paluu, taky: null, tehdyt: [], kohde: null, kohteet: [] },
-  );
-  // Sama sääntö kohdenostolle: poistettu kohde ei jätä virtaa roikkumaan.
-  assert.deepEqual(
-    fokusvirtaSiivoa({ vaihe: 'kohde', kohde: 'poistettu', kohteet: ['poistettu'] }, KOE),
-    { vaihe: paluu, taky: null, tehdyt: [], kohde: null, kohteet: [] },
+    fokusvirtaSiivoa({ vaihe: 'oppitunti', taky: null, tehdyt: ['nike'], kohteet: [] }),
+    { vaihe: 'oppitunti' },
   );
 });
 
@@ -300,26 +150,17 @@ function ateenaPeli() {
 test('virran tila kulkee pelitallenteen mukana', () => {
   const game = ateenaPeli();
   const city = game.board.cityById.get('ateena');
-  assert.deepEqual(fokusvirtaTila(game, city, ATEENA), fokusvirtaAlkutila(),
+  assert.deepEqual(fokusvirtaTila(game, city), fokusvirtaAlkutila(),
     'tuntematon kaupunki alkaa alusta');
 
-  /*
-   * VAIHE ON TÄSSÄ LIPUSTA RIIPPUMATON. Testin kohde on tallennuksen
-   * kestävyys, ei valintakupla: 'valinta' luettaisiin oppitunniksi
-   * silloin kun FOKUSVIRTA_VALINTA on pois, ja vertailu mittaisi
-   * lippua eikä tallennusta.
-   */
-  const kesken = {
-    vaihe: 'oppitunti', taky: null, tehdyt: ['diogenes'], kohde: null, kohteet: ['korintin-kanava'],
-  };
+  const kesken = { vaihe: 'oppitunti' };
   asetaFokusvirtaTila(game, city, kesken);
   assert.deepEqual(game.fokusvirrat['europe:ateena'], kesken);
 
   const palautettu = Game.fromJSON(JSON.parse(JSON.stringify(game.toJSON())));
   const city2 = palautettu.board.cityById.get('ateena');
-  assert.deepEqual(fokusvirtaTila(palautettu, city2, ATEENA), kesken,
+  assert.deepEqual(fokusvirtaTila(palautettu, city2), kesken,
     'virta ei saa alkaa alusta tallennuksen jälkeen');
-  assert.equal(fokusvirtaPorttiAuki(fokusvirtaTila(palautettu, city2, ATEENA), ATEENA), true);
 });
 
 test('vanha tallennus ilman fokusvirtakenttää kelpaa yhä', () => {
@@ -330,7 +171,7 @@ test('vanha tallennus ilman fokusvirtakenttää kelpaa yhä', () => {
   assert.ok(palautettu, 'vanha tallennus ei saa hylätä itseään');
   assert.deepEqual(palautettu.fokusvirrat, {});
   assert.deepEqual(
-    fokusvirtaTila(palautettu, palautettu.board.cityById.get('ateena'), ATEENA),
+    fokusvirtaTila(palautettu, palautettu.board.cityById.get('ateena')),
     fokusvirtaAlkutila(),
   );
 });
@@ -338,7 +179,7 @@ test('vanha tallennus ilman fokusvirtakenttää kelpaa yhä', () => {
 test('sama kaupunki eri laudalla on eri matka', () => {
   const game = ateenaPeli();
   const city = game.board.cityById.get('ateena');
-  asetaFokusvirtaTila(game, city, { vaihe: 'oppitunti', taky: null, tehdyt: ['nike'] });
+  asetaFokusvirtaTila(game, city, { vaihe: 'oppitunti' });
   assert.deepEqual(Object.keys(game.fokusvirrat), ['europe:ateena'],
     'avaimessa on oltava laudan tunnus');
 });
@@ -356,7 +197,8 @@ test('Ateenan fokusvirta on rakenteeltaan ehjä', () => {
   }
   assert.ok(ATEENA.kohtaaminen.nappi.includes('Nikos'), 'kohtaamisnappi nimeää henkilön');
 
-  // Raamattu: 2–3 valintapainiketta.
+  // Täkyjä eli syvennystarinoita on 2–3 (ne avautuvat nykyään kartan
+  // merkeistä, js/syvennys.js — sisältö on yhä tässä paketissa).
   assert.ok(ATEENA.takyt.length >= 2 && ATEENA.takyt.length <= 3);
   const tunnukset = ATEENA.takyt.map((t) => t.id);
   assert.equal(new Set(tunnukset).size, tunnukset.length, 'täkytunnusten on oltava uniikkeja');

@@ -7,13 +7,15 @@
  * Tekstit on siirretty sellaisinaan; mitään faktaa ei ole lisätty
  * eikä muotoiltu uusiksi. Rakenteen lukee js/fokusvirta.js.
  *
- * KUUSI VAIHETTA (Raamatun osio "Fokusmoodi", ANNOSTELU):
- *   1 matkakirja — muutama lause isoisän äänellä + VANHA kuva
- *   2 pöllö      — nykypäivän huomio + UUSI kuva (herokuva)
- *   3 valinta    — 2–3 täkypainiketta
- *   4 täky       — syvennys + kuva + MINIVISA (palkkio: raha, juliste)
- *   5 oppitunti  — nosto, joka pohjustaa varsinaista kysymystä
- *   6 kohtaaminen— paikallinen esittelee itsensä ja kysyy (laatta)
+ * SISÄLTÖ KIRJOITETTIIN ALUN PERIN KUUSIVAIHEISEEN VIRTAAN (Raamatun
+ * osio "Fokusmoodi", ANNOSTELU). Virrasta on sittemmin purettu
+ * valintavaiheet (Raamattu, SYVENNYSTARINAT KARTALLE), joten kentät
+ * jakautuvat nyt kahdelle reitille:
+ *   matkakirja, pollo, oppitunti, kohtaaminen — fokusvirran vaiheet
+ *     (js/fokusvirta.js: matkakirja → kupla → oppitunti → kohtaaminen)
+ *   takyt — syvennystarinat kuvineen ja MINIVISOINEEN (palkkio: raha,
+ *     juliste), jotka avautuvat kartan merkeistä (js/syvennys.js +
+ *     js/packs/syvennyspaikat.js)
  *
  * KUVAT. Jokainen Commons-tiedosto on tarkistettu rajapinnasta
  * 24.8.2026 (lisenssi, tekijä, kuvaus, koko) — nimiä ei ole arvattu.
@@ -29,8 +31,10 @@
  *
  * KOHDENOSTOT (omistajan tilaus 24.8.2026) eivät ole täkyjä eivätkä asu
  * tässä tiedostossa: ne ovat koko maan yhteisiä ja tulevat listasta
- * js/packs/fokuskohteet-grc.js. Täällä on vain poiminta tunnuksilla,
- * jotta seuraavan kohteen tarjoaminen Ateenassa on yhden sanan lisäys.
+ * js/packs/fokuskohteet-grc.js. Täällä on vain poiminta tunnuksilla.
+ * Valintakuplan purun jälkeen poiminnan ainoa lukija on maan
+ * sisältöhakemisto (js/fokusvirta.js sisaltohakemisto) — itse kohteet
+ * aukeavat kartan omista kohdemerkeistä (js/fokuskohteet.js).
  */
 import { fokuskohteet } from './fokuskohteet-grc.js';
 

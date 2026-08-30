@@ -77,7 +77,7 @@
  * toistu siinä sellaisenaan (docs/moduulit/tarinakaari.md, luku 6).
  * OIKEAN VAIHTOEHDON PAIKKA VAIHTELEE (sama tilaus kuin Marseillessa):
  * täkyjen oikeat ovat indekseissä 1, 0 ja 1, lehtitehtävien 0 ja 0.
- * Moottori ei sekoita vaihtoehtoja (js/fokusvirta.js piirraTaky lukee
+ * Moottori ei sekoita vaihtoehtoja (js/syvennys.js piirraSyvennysVisa lukee
  * `oikea`-indeksin sellaisenaan), joten paikka on datan asia. Lisäksi
  * oikea EI ole pisin vaihtoehto yhdessäkään tämän tiedoston visassa —
  * se on tarinakaaren mittausvaatimus, ja se on tarkistettu käsin
