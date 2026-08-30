@@ -533,6 +533,9 @@ const MODULES = [
   // Fokusmoodin maakohtainen topografiapohja ennen ui:ta (ui tuo sen;
   // se itse tuo mapartin, median ja lisänimet, jotka ovat yllä).
   'js/packs/fokus-grc.js',
+  // Laattapyramidin lataaja ennen fokuskarttaa (fokuskartta tuo sen
+  // lipun takana). Tuo vain mapartin ja median, jotka ovat yllä.
+  'js/laattapyramidi.js',
   'js/fokuskartta.js',
   // Merkkien yhteinen kasauspassi ennen kerroksia, jotka tuovat sen
   // (fokuskohteet ja fokusnosto-symbolit). Ei tuo itse mitään.
