@@ -484,11 +484,24 @@ vaadi('ensitarkistuksen jälkeen tarkkuussuhde on 1,00',
 await asetaFokusmoodi(true);
 
 /*
- * 8) MAAN ÄÄRIVIIVA piirtyy uuteen maahan saavuttaessa (omistajan
- * tilaus 13.8.2026) — mutta EI samaan maahan palatessa, eikä animaatio
- * saa pakottaa kartan uudelleenrasterointia. Jälkimmäinen on tämän
- * savukkeen ydinasia: kartan päällä pyörivä animaatio on juuri se
- * tilanne, jossa tökkiminen ennen näkyi.
+ * 8) MAAN ÄÄRIVIIVAA EI ENÄÄ PIIRRETÄ — JA SE ON VARTIOITAVA ASIA.
+ *
+ * Täällä oli kymmenen väitettä maan punaisen ääriviivan
+ * piirtoanimaatiosta (omistajan tilaus 13.8.2026): piirtyminen päästä
+ * päähän, paisuminen matkalla, pehmeä asettuminen, ja ennen kaikkea
+ * se ettei animaatio pakota kartan uudelleenrasterointia.
+ *
+ * Viiva on poistettu 30.8.2026. Omistajan pelitestipalaute v1095:stä
+ * (*"punainen maan ääriviiva on epätarkka → OTETAAN POIS"*) oli
+ * toteutettu CSS-piilotuksena `body.fokuspohja`-luokan takana, ja kun
+ * luokan asettaja katosi lehtipurussa (v1365), viiva palasi ruudulle.
+ * Nyt sitä ei enää piirretä (js/ui.js drawCountryBorders): laudan
+ * karkeasta 50m-rannikosta piirretty viiva osui eri kohtaan kuin
+ * laattaan poltettu tarkka rantaviiva.
+ *
+ * VARTIO KÄÄNTYI YMPÄRI. Yksi väite riittää, ja se on juuri se, joka
+ * olisi napannut tämän jäänteen: maan korostuskerroksessa on sävytys
+ * mutta EI ääriviivaa, ei uuteen maahan saavuttaessa eikä muulloin.
  */
 const maat = await sivu.evaluate(() => {
   const { game } = window.matkakirja;
@@ -503,155 +516,24 @@ const maat = await sivu.evaluate(() => {
 vaadi('laudalta löytyy toisen maan kaupunki vertailua varten',
   Boolean(maat.toisessa), JSON.stringify(maat));
 
-const piirto = await sivu.evaluate(async (kohde) => {
+const korostus = await sivu.evaluate(async (kohde) => {
   const { game, ui } = window.matkakirja;
   game.actionKehittajaSiirto(kohde);
   ui.render();
-  await new Promise((r) => setTimeout(r, 250));
+  await new Promise((r) => setTimeout(r, 600));
   const kerros = document.querySelector('.country-borders');
-  const polut = [...kerros.querySelectorAll('.country-korostus')];
   return {
-    piirtyy: kerros.classList.contains('maa-piirtyy'),
-    polkuja: polut.length,
-    // Jokaisella polulla on OMA pituutensa viiva-aukkokuviona: saaristo
-    // piirtyy rinnakkain eikä jonossa.
-    omatPituudet: polut.every((p) => parseFloat(p.style.strokeDasharray) > 0),
-    animaatioita: polut.reduce((n, p) => n + (p.getAnimations?.().length ?? 0), 0),
+    savytyksia: kerros.querySelectorAll('.country-tint').length,
+    aariviivoja: kerros.querySelectorAll('.country-korostus').length,
+    piirtoluokkia: kerros.classList.contains('maa-piirtyy')
+      || kerros.classList.contains('maa-asettuu'),
   };
 }, maat.toisessa);
-vaadi('uuteen maahan saavuttaessa ääriviiva alkaa piirtyä',
-  piirto.piirtyy === true && piirto.animaatioita > 0, JSON.stringify(piirto));
-vaadi('jokainen rengas on oma polkunsa omalla pituudellaan',
-  piirto.polkuja > 0 && piirto.omatPituudet === true, JSON.stringify(piirto));
-
-/*
- * Viiva paisuu piirron AIKANA (omistajan tarkennus 13.8.2026 ilta):
- * puolivälissä leveyden pitää olla piirron lähtöarvon (3.5) yläpuolella
- * mutta alle piirron loppuleveyden (5.4) — tasainen kasvu, ei
- * kertahyppy.
- */
-const kesken = await sivu.evaluate(async () => {
-  await new Promise((r) => setTimeout(r, 700));
-  const polku = document.querySelector('.country-borders .country-korostus');
-  return { leveys: parseFloat(getComputedStyle(polku).strokeWidth) };
-});
-vaadi('viiva paisuu jo piirtyessään',
-  kesken.leveys > 3.7 && kesken.leveys < 5.5, JSON.stringify(kesken));
-
-/*
- * VÄLÄYSTÄ EI ENÄÄ OLE (omistaja 13.8.2026 ilta: "otetaan rajan
- * väläytys pois mutta raja voisi jäädä lähes yhtä voimakkaana näkyviin
- * kuin se on piirron lopussa"): piirron perään tulee vain lyhyt pehmeä
- * asettuminen (.maa-asettuu), jonka aikana viiva EI saa ylittää
- * piirron loppuleveyttä, ja lepoon jää vahva viiva (5 / 0.72).
- */
-const asettuminen = await sivu.evaluate(async () => {
-  const kerros = document.querySelector('.country-borders');
-  // Piirto kestää kaksi sekuntia; asettuminen odotetaan sen perään.
-  let nahty = false;
-  let leveys = 0;
-  for (let i = 0; i < 40 && !nahty; i++) {
-    if (kerros.classList.contains('maa-asettuu')) {
-      nahty = true;
-      leveys = parseFloat(getComputedStyle(kerros.querySelector('.country-korostus')).strokeWidth);
-    }
-    // eslint-disable-next-line no-await-in-loop
-    await new Promise((r) => setTimeout(r, 50));
-  }
-  // Asettuminen kestää 750 ms (AARIVIIVAN_ASETTUMIS_MS) — loppuarvot
-  // luetaan vasta sen mentyä kokonaan ohi.
-  await new Promise((r) => setTimeout(r, 1100));
-  const polku = kerros.querySelector('.country-korostus');
-  return {
-    nahty,
-    leveysAsettuessa: leveys,
-    ohi: !kerros.classList.contains('maa-asettuu'),
-    // Viiva-aukkokuvio siivotaan lopuksi: viiva jää yhtenäiseksi.
-    dashLopussa: polku?.style.strokeDasharray ?? '',
-    leveysLopussa: parseFloat(getComputedStyle(polku).strokeWidth),
-  };
-});
-vaadi('piirron valmistuttua viiva asettuu pehmeästi',
-  asettuminen.nahty === true, JSON.stringify(asettuminen));
-vaadi('asettuminen ei väläytä: leveys ei ylitä piirron loppua',
-  asettuminen.leveysAsettuessa > 0 && asettuminen.leveysAsettuessa <= 5.5,
-  JSON.stringify(asettuminen));
-vaadi('lepoon jää lähes piirron loppuvoima',
-  asettuminen.ohi === true && Math.abs(asettuminen.leveysLopussa - 5) < 0.2
-  && asettuminen.dashLopussa === '', JSON.stringify(asettuminen));
-
-const samaMaa = await sivu.evaluate(async () => {
-  const { game, ui } = window.matkakirja;
-  const map = game.pack.map;
-  const nyt = game.cityOf();
-  const oma = map.cityCountry?.[nyt.id];
-  // Naapurikaupunki SAMASTA maasta — tai sama kaupunki, jos toista ei ole.
-  const kohde = game.board.cities.find((c) => c.id !== nyt.id
-    && map.cityCountry?.[c.id] === oma)?.id ?? nyt.id;
-  // countryKey nollataan, jotta kerros oikeasti piirretään uudelleen —
-  // juuri se on se tilanne, jossa animaatio EI saa käynnistyä. Sama
-  // tilanne syntyy pelin latauksessa ja laudan uudelleenpiirrossa.
-  ui.countryKey = null;
-  if (kohde !== nyt.id) game.actionKehittajaSiirto(kohde);
-  ui.render();
-  await new Promise((r) => setTimeout(r, 250));
-  const kerros = document.querySelector('.country-borders');
-  return {
-    maa: oma,
-    kohde,
-    piirtyy: kerros.classList.contains('maa-piirtyy'),
-    dash: kerros.querySelector('.country-korostus')?.style.strokeDasharray ?? '',
-  };
-});
-vaadi('samaan maahan palatessa ääriviivaa ei piirretä uudelleen',
-  samaMaa.piirtyy === false && samaMaa.dash === '', JSON.stringify(samaMaa));
-
-/*
- * Rasterointi mitataan ERIKSEEN eristetyllä animaatiolla: pelkkä
- * maanvaihto liikuttaa myös karttaa (uusi kaupunki keskelle), ja sen
- * ruudut sekoittuisivat mittaukseen. Tässä pelaaja pysyy paikallaan ja
- * vain ääriviiva piirretään uudestaan — jos kartta silti rasteroituu,
- * syy on animaatiossa.
- */
-await sivu.waitForTimeout(1500);
-// Puskurirengas tyhjäksi ennen vertailua: rengas piirtää ruutuja
-// joutohetkinä, ja sen sattumanvarainen jakautuminen kahden
-// mittausikkunan välille näkyisi erona, joka ei kerro animaatiosta
-// mitään (mitattu välkkyväksi: väliin 2 leporuutua ja 3
-// animaatioruutua samasta jonosta).
-for (let i = 0; i < 60; i++) {
-  const kesken = await sivu.evaluate(() => Boolean(window.matkakirja.ui.taideRengas)
-    || window.matkakirja.ui.taidePiirtyy === true);
-  if (!kesken) break;
-  // eslint-disable-next-line no-await-in-loop
-  await sivu.waitForTimeout(250);
-}
-// Vertailuluku: yhtä pitkä lepojakso ilman animaatiota. Kartta täydentää
-// ruutujaan joutohetkinä muutenkin, joten pelkkä ruutujen määrä ei
-// kertoisi mitään ilman tätä.
-await nollaa();
-await sivu.waitForTimeout(1500);
-const lepo = await mittarit();
-await nollaa();
-const eristetty = await sivu.evaluate(async () => {
-  const ui = window.matkakirja.ui;
-  ui.countryKey = null;
-  ui.viimeMaa = 'savuke:XXX'; // eri maa kuin nykyinen → animaatio käynnistyy
-  ui.render();
-  await new Promise((r) => setTimeout(r, 250));
-  return {
-    piirtyy: document.querySelector('.country-borders').classList.contains('maa-piirtyy'),
-  };
-});
-await sivu.waitForTimeout(1500);
-const animaationAikana = await mittarit();
-vaadi('eristetty ääriviiva-animaatio käynnistyy', eristetty.piirtyy === true,
-  JSON.stringify(eristetty));
-vaadi('ääriviiva-animaatio ei pakota uudelleenrasterointia',
-  animaationAikana.pakotus === 0, JSON.stringify(animaationAikana));
-vaadi('ääriviiva-animaatio ei lisää rasterointia levon yli',
-  animaationAikana.aloitukset <= lepo.aloitukset,
-  `animaatio ${animaationAikana.aloitukset}, lepo ${lepo.aloitukset}`);
+vaadi('uuteen maahan saavuttaessa maa saa sävytyksen',
+  korostus.savytyksia > 0, JSON.stringify(korostus));
+vaadi('punaista ääriviivaa ei piirretä eikä animoida',
+  korostus.aariviivoja === 0 && korostus.piirtoluokkia === false,
+  JSON.stringify(korostus));
 
 // Ääriviivaosio ohi: lauta takaisin näkyviin lopun ruutumittauksia
 // varten (ks. asetaFokusmoodi).

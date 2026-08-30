@@ -352,14 +352,32 @@ const kiertavat = Object.values(kartalla).filter((t) => t.solmuja > t.kappaleita
 vaadi('kiertävän laudan kaksoiskappaleet eivät tuplaa lukua',
   kiertavat.length > 0, JSON.stringify(kartalla));
 
-/* --- 3: maalehti tuo maan omat kohteet, ja luvut kasvavat --- */
+/* --- 3: luku seuraa MAATA, ei kameraa --- */
+
+/*
+ * MIKÄ TÄSSÄ MUUTTUI 30.8.2026. Vartio mittasi ennen, että maan omat
+ * kohteet ILMESTYVÄT kartalle vasta kun kamera ajaa maalehdelle: merkit
+ * odottivat lehden KUVAN latautumista (js/fokuskartta.js), ja
+ * yleiskuvassa kartalla oli vain maiden eläintäyt.
+ *
+ * Pyramidissa lehteä ei ole. Maan ikkuna luetaan suoraan taulusta heti
+ * kun maa tiedetään (js/ui.js paivitaMaanIkkuna), joten maan kohteet
+ * ovat kartalla myös ennen kamera-ajoa — ja Raamattu sanoo luvusta
+ * juuri näin: *"montako sen aiheen kohdetta nykyisen näkymän MAASSA
+ * on"*, ei "kameran alla".
+ *
+ * Vartio mittaa siis nyt kaksi asiaa: aihejoukko ei KUTISTU kamera-
+ * ajossa, ja maan omat kohteet ovat kartalla jo ennen sitä.
+ */
+vaadi('maan omat kohteet ovat kartalla jo ennen kamera-ajoa',
+  Object.keys(kartalla).length > 1, JSON.stringify(Object.keys(kartalla)));
 
 await ajaLehdelle();
 const lehdella = await valot();
 const lehdenValikko = await valikko();
 console.log(`      lehden merkit: ${JSON.stringify(lehdella)}`);
-vaadi('maalehdellä kartalla on useamman aiheen merkkejä kuin yleiskuvassa',
-  Object.keys(lehdella).length > Object.keys(kartalla).length,
+vaadi('kamera-ajo ei kadota yhtäkään aihetta kartalta',
+  Object.keys(lehdella).length >= Object.keys(kartalla).length,
   `${Object.keys(kartalla).length} -> ${Object.keys(lehdella).length}`);
 const lehdenLuvut = Object.fromEntries(lehdenValikko.rivit.map((r) => [r.aihe, r.luku]));
 const lehdenVaarat = Object.entries(lehdella)

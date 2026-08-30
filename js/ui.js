@@ -9627,10 +9627,11 @@ export class UI {
    *      puhelimella
    *   2. kartan piirron raskain puhdas laskenta (mapart.esilammitaTaide:
    *      rannikkoruudukko ja meripisteet)
-   *   3. kohdemaan fokuspohja verkosta ja purettuna
-   *      (fokuskartta.esilammitaFokuspohja) — megatavujen webp, joka
-   *      muuten purettaisiin vasta laskeutumisen jälkeen
-   *   4. äänipuolen herätys, jotta napautuksen naksahdus soi heti
+   *   3. äänipuolen herätys, jotta napautuksen naksahdus soi heti
+   *
+   * Kohdemaan fokuspohjan esilataus (fokuskartta.esilammitaFokuspohja)
+   * poistui lehtijärjestelmän mukana v1365:ssä: kartta on laattoja,
+   * jotka ladataan näkymän mukana.
    *
    * RNG-JÄRJESTYS SÄILYY. Avauslennon repliikki nostetaan tässä ja
    * pannaan talteen (esilammitys.line), ja doPickStart käyttää sen

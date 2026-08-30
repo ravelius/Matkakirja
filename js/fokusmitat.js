@@ -41,12 +41,14 @@
  * Suodattimia ei käytetä (tests/rules.test.mjs iOS-sääntö), eikä näissä
  * ole niille tarvetta.
  *
- * === MAAKYLTTI VÄISTYY ===
+ * === KARTUUTSI KORVASI MAAKYLTIN ===
  *
- * Kartuutsi korvaa oikean yläkulman maapillerin fokusnäkymässä
- * (omistaja 25.8.2026). Piilotus on CSS:ssä `body.fokuspohja
- * .maa-pilleri`, eli täsmälleen silloin kun kartuutsi on näkyvissä —
- * fokusmoodin ulkopuolella vanha kyltti jää ennalleen.
+ * Kartuutsi korvaa oikean yläkulman maapillerin (omistaja 25.8.2026;
+ * Raamattu: *"oikean yläkulman maakyltti poistetaan"*). Kyltti oli
+ * ensin piilotettu CSS:llä `body.fokuspohja`-luokan takana, ja kun
+ * luokan asettaja katosi lehtipurussa (v1365), se palasi ruudulle.
+ * Nyt kylttiä ei enää luoda pelinäkymässä lainkaan (js/ui.js
+ * drawCountryBorders); se elää vain maaselaimessa.
  */
 import { asetaKuva } from './media.js';
 import { lippuUrl, lippuVara } from './packs/africa-valokuvat.js';
@@ -1928,7 +1930,7 @@ function paivitaTaulunPohja(ui) {
 /**
  * Tahdistaa mitat nykyiseen näkymään.
  *
- * Kutsutaan kolmesta paikasta (js/ui.js): kun fokuspohja ilmestyy tai
+ * Kutsutaan kolmesta paikasta (js/ui.js): kun maan ikkuna ilmestyy tai
  * katoaa (paivitaFokusPohja), kun fokuskerros päivittyy
  * (paivitaFokusKerros) ja kun NÄKYMÄ ON ASETTUNUT (paivitaMaastonimet
  * — sama kohta kuin maastonimillä ja fokusnimillä). Viimeinen on se,
@@ -1941,7 +1943,8 @@ function ajaFokusmitat(ui) {
   if (!ui.mapPane) return;
   const pohja = ui.fokusPohjaBbox ?? null;
   const iso = pohja ? ui.fokuskarttaAvain : null;
-  // Näkyvissä vain kun fokuspohja on laudalla ja maa on tiedossa.
+  // Näkyvissä vain kun maan ikkuna on tiedossa (js/ui.js
+  // paivitaMaanIkkuna lukee sen FOKUS_POHJAT-taulusta).
   const nakyy = Boolean(pohja && iso && FOKUS_POHJAT[iso]);
   const sailio = ui.fokusmitatSailio?.isConnected ? ui.fokusmitatSailio : rakenna(ui);
   if (!nakyy) {
