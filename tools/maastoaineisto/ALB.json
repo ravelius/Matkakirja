@@ -1,0 +1,50 @@
+{
+  "_": "Albanian maastokohteet. Faktat en-Wikipediasta 30.8.2026. Nimien suomalainen asu fi-Wikipedian mukaan: Adrianmeri, Skadarjärvi. Korab on vuorijonon nimi, korkein huippu Maja e Korabit.",
+  "vuoret": [
+    {
+      "nimi": "Korab",
+      "lon": 20.5467,
+      "lat": 41.7903,
+      "m": 2764,
+      "lahdeKoordinaatti": "en-Wikipedia \"Korab\"",
+      "nappi": "Kahden maan yhteinen katto",
+      "kysymykset": [
+        "Miksi vuori on makedoniaksi suuri vene?",
+        "Mitä huipun suhteellinen korkeus kertoo?"
+      ],
+      "korostukset": ["Musta Drin|Mustan Drinin"],
+      "teksti": "Korab on vuorijono Itä-Albanian ja läntisen Pohjois-Makedonian rajalla, ja sen korkein huippu Maja e Korabit kohoaa 2 764 metriin. Se on molempien maiden korkein kohta. Suhteelliselta korkeudeltaan — 2 169 metriä — Korab on Euroopan kahdeksastoista huippu. Jono kulkee neljänkymmenen kilometrin matkan pohjoisesta etelään Mustan Drinin ja sen sivujoen Radikan laaksojen välissä, lähellä Albanian, Pohjois-Makedonian ja Kosovon rajapistettä. Vuoret ovat sedimenttikiveä: liusketta, hiekkakiveä, dolomiittia ja kalkkikiveä. Suuri osa jonosta kuuluu luonnonpuistoihin, ja nimi tarkoittaa makedoniaksi suurta venettä.",
+      "lahde": "en-Wikipedia \"Korab\", johdanto-osa ja Geography-osio (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Adrianmeri",
+      "lon": 19.05,
+      "lat": 41.3,
+      "lahdeKoordinaatti": "ulappa Durrësin edustalla; en-Wikipedia \"Adriatic Sea\" antaa keskipisteeksi 15 / 43",
+      "nappi": "Välimeren pohjoisin haara",
+      "kysymykset": [
+        "Miksi Adrianmeri on Välimerta vähäsuolaisempi?",
+        "Mikä Otranton salmi on?"
+      ],
+      "teksti": "Adrianmeri on Välimeren pohjoisin haara, ja se erottaa Apenniinien niemimaan Balkanilta. Rantavaltioita on kuusi: Albania, Bosnia ja Hertsegovina, Kroatia, Italia, Montenegro ja Slovenia. Meressä on yli 1 300 saarta, lähes kaikki itärannikolla, ja syvin kohta eteläisessä altaassa yltää 1 233 metriin. Adrianmeri on Välimerta vähäsuolaisempi, sillä siihen laskee kolmannes koko Välimeren makeasta vedestä. Pintavesi lämpenee kesällä kolmeenkymmeneen asteeseen ja viilenee talvella kahteentoista. Lajeja tunnetaan yli 7 000, ja monet niistä ovat kotoperäisiä ja uhanalaisia.",
+      "lahde": "en-Wikipedia \"Adriatic Sea\", johdanto-osa (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Skadarjärvi",
+      "lon": 19.3167,
+      "lat": 42.1667,
+      "lahdeKoordinaatti": "en-Wikipedia \"Lake Skadar\"",
+      "nappi": "Etelä-Euroopan suurin järvi",
+      "kysymykset": [
+        "Miksi järven pinta-ala vaihtelee vuodenajoittain?",
+        "Mikä karstijärvi on?"
+      ],
+      "korostukset": ["Ramsar-kosteikko"],
+      "teksti": "Skadarjärvi on Etelä-Euroopan ja koko Balkanin suurin järvi. Se makaa Albanian ja Montenegron rajalla, ja sen pinta-ala vaihtelee vuodenajan mukaan 370 ja 530 neliökilometrin välillä; noin 65 prosenttia kuuluu Montenegrolle ja 35 prosenttia Albanialle. Karstijärvi on saanut nimensä kaakkoisrannan albanialaisesta Shkodërin kaupungista. Vettä tuo ennen muuta Morača-joki, ja 41 kilometrin mittainen Buna vie sen Adrianmerelle. Pohjasta pulppuaa lisäksi karstilähteitä. Montenegron puoli on kansallispuistoa, Albanian puoli luonnonsuojelualue ja Ramsar-kosteikko.",
+      "lahde": "en-Wikipedia \"Lake Skadar\", johdanto-osa ja Geography-osio (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": []
+}

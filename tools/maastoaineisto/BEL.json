@@ -1,0 +1,66 @@
+{
+  "_": "Belgian maastokohteet. Faktat en-Wikipediasta 30.8.2026. Nimien suomalainen asu fi-Wikipedian mukaan: Pohjanmeri, Ardennit, Maas. Belgian korkein kohta on ylängön laki eikä huippu, joten se on tyypiltään vuori mutta kuvaukseltaan ylänkö.",
+  "vuoret": [
+    {
+      "nimi": "Signal de Botrange",
+      "lon": 6.0928,
+      "lat": 50.5017,
+      "m": 694,
+      "lahdeKoordinaatti": "en-Wikipedia \"Signal de Botrange\"",
+      "nappi": "Belgian korkein kohta",
+      "kysymykset": [
+        "Miksi Botrangella sataa niin paljon?",
+        "Mitä Hautes Fagnes eli Korkeat suot ovat?"
+      ],
+      "korostukset": ["Hautes Fagnes|Hautes Fagnesin"],
+      "teksti": "Signal de Botrange on Vallonian ja koko Belgian korkein kohta, 694 metriä. Se ei ole huippu vaan laakean ylängön laki Hautes Fagnesin eli Korkeiden soiden keskellä; laen yli kulkee maantie ja vieressä on kahvila. Sama piste on myös Ardennien ja Benelux-maiden mannerosan korkein kohta. Sää on Belgian ankarin: sadetta tulee vuodessa keskimäärin 1 450 millimetriä, kun Brysselin Ucclessa kertyy 800, pakkaspäiviä on yli 130 ja lunta sataa yli 35 päivänä. Laella on kuusimetrinen näkötorni.",
+      "lahde": "en-Wikipedia \"Signal de Botrange\", johdanto-osa ja Climate-osio (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Ardennit",
+      "lon": 5.6667,
+      "lat": 50.25,
+      "lahdeKoordinaatti": "en-Wikipedia \"Ardennes\"",
+      "nappi": "Metsäinen ylänkö Belgian selkärankana",
+      "kysymykset": [
+        "Miksi Ardennit ovat olleet niin usein sotanäyttämö?",
+        "Mitä hiilenpoltto merkitsi Vallonialle?"
+      ],
+      "korostukset": ["Eifel|Eifelin"],
+      "teksti": "Ardennit on laajojen metsien, karun maaston ja loivien harjanteiden alue, joka levittäytyy Belgiasta ja Luxemburgista Saksaan ja Ranskaan. Geologisesti se on Eifelin läntinen jatke, ja molemmat kohosivat devonikaudella noin 385 miljoonaa vuotta sitten. Suurin osa Ardenneista on Etelä-Belgian Valloniassa, jonka pinta-alasta ne kattavat yli puolet; itäosa muodostaa Luxemburgin pohjoisen kolmanneksen, jota kutsutaan nimellä Éislek. Ardennien puut ja joet antoivat hiilen ja voiman, joilla Valloniasta tuli 1700- ja 1800-luvulla maailman toinen suuri teollisuusalue.",
+      "lahde": "en-Wikipedia \"Ardennes\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Pohjanmeri",
+      "lon": 2.85,
+      "lat": 51.35,
+      "lahdeKoordinaatti": "ulappa Oostenden edustalla; en-Wikipedia \"North Sea\" antaa keskipisteeksi 3 / 56",
+      "nappi": "Belgian ainoa meri",
+      "kysymykset": [
+        "Miksi Pohjanmeri oli molemmissa maailmansodissa niin tärkeä?",
+        "Mikä mannerjalusta on?"
+      ],
+      "korostukset": ["mannerjalusta|mannerjalustalla"],
+      "teksti": "Pohjanmeri jää Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan väliin. Se lepää Euroopan mannerjalustalla ja yhtyy Atlanttiin etelässä Englannin kanaalin ja pohjoisessa Norjanmeren kautta. Pituutta on yli 970 ja leveyttä 580 kilometriä, pinta-alaa 570 000 neliökilometriä. Meri on Pohjois-Euroopan tärkeimpiä laivaväyliä ja kalavesiä sekä energian lähde — tuulta ja aaltoja. Etelärannikko, Belgian osuus mukaan lukien, on hiekkarantaa, jokisuita ja laajoja liejulettoja. Tiheä asutus ja teollisuus rasittavat meren ekosysteemejä.",
+      "lahde": "en-Wikipedia \"North Sea\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Maas",
+      "lon": 4.87,
+      "lat": 50.46,
+      "lahdeKoordinaatti": "uoma Namurin kohdalla Valloniassa; en-Wikipedia \"Meuse\" ei anna artikkelikoordinaattia",
+      "nappi": "Vallonian teollisuuden joki",
+      "kysymykset": [
+        "Miksi Maasin varsi teollistui ensimmäisenä mantereella?",
+        "Mikä Rein–Maas–Schelde-suisto on?"
+      ],
+      "korostukset": ["sillon industriel"],
+      "teksti": "Maas eli Meuse on 925 kilometriä pitkä joki, joka saa alkunsa Ranskasta ja virtaa Belgian ja Alankomaiden halki Pohjanmereen Rein–Maas–Schelde-suiston kautta. Vuodesta 1301 ylä-Maas merkitsi suunnilleen Pyhän saksalais-roomalaisen keisarikunnan läntistä rajaa Ranskan kuningaskuntaa vastaan, ja raja pysyi jokseenkin paikallaan aina 1550-luvulle asti. Vallonian puoleinen alajuoksu, osa niin sanottua sillon industriel -vyöhykettä, oli Manner-Euroopan ensimmäinen täysin teollistunut alue. Joki kulkee Belgiassa muun muassa Liègen kautta.",
+      "lahde": "en-Wikipedia \"Meuse\", johdanto-osa ja History-osio (tarkistettu 30.8.2026)."
+    }
+  ]
+}
