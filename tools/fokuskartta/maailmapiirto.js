@@ -276,19 +276,211 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
   };
 
   /*
-   * MAA VAI MERI — sama sääntö kuin maalehdillä: ETOPO alle nollan JA
-   * piste Natural Earthin meren alalla. Merenpinnan alapuolinen KUIVA
-   * maa (Kaspian alanko, Kuollutmeri, Qattara) jää siis maaksi, ja
-   * Kaspianmeri on vettä vaikka se on järvi. Ks. aineisto.mjs.
+   * ================== MAA VAI MERI: VEKTORI ON AUKTORITEETTI =========
+   *
+   * Omistajan havainto 30.8.2026 iPadilta: *"Ääriviiva ja korkeus
+   * väritys eivät täsmää."* Ja niin ne eivät voineetkaan täsmätä:
+   * rantaviiva piirrettiin Natural Earthin 10m-vektoreista, mutta
+   * maa/meri-jako luettiin korkeusruudukosta (3 kaariminuuttia = 5,5 km
+   * solussa) ja sen merimaskista. Kaksi lähdettä, kaksi tarkkuutta.
+   *
+   * MITATTU ENNEN KORJAUSTA (näiden laattojen kuvapikseleissä, sama
+   * ruudukko ja sama maski kuin tuotannossa):
+   *
+   *   alue            z5        z6        z7        vuoto enimmillään
+   *   Egeanmeri       1 px      2,5 px    5,5 px    21 px
+   *   Länsi-Afrikka   4 px      3,5 px    13 px     11 px
+   *   Norja          20 px     40 px     40 px      48 px
+   *   Chile          22 px     32 px     40 px      23 px
+   *
+   * Kilometreinä ero pysyy samana (2-40 km eli murto-osasta muutamaan
+   * ruudukkosoluun), joten PIKSELEINÄ SE KAKSINKERTAISTUU JOKA
+   * TASOLLA. Egeanmeren otoksessa 9 saarta 29:stä jäi kokonaan ilman
+   * maaväriä: pelkkä ääriviiva meren päällä.
+   *
+   * KORJAUS on kartografinen eikä tekninen: **vektori kertoo MISSÄ maa
+   * on, korkeusruudukko vain KUINKA KORKEALLA se on.** Maa ja meri
+   * erotetaan siis samasta renkaasta, josta rantaviiva piirretään
+   * (maailma.mjs `meriRenkaat`), ja silloin niillä ei ole mitään
+   * mahdollisuutta olla eri mieltä.
+   *
+   * REUNATAPAUKSET RATKEAVAT ITSESTÄÄN, koska värit on jo kummassakin
+   * päässä leikattu:
+   *   - Rannikon matala meri, jossa ruudukko sanoo maata (+m): meri
+   *     saa `lerpSyvyys`in matalimman sävyn (m >= 0 -> SYVYYS[0]).
+   *   - Vuono tai salmi, jonka ruudukko ei näe: sama matalin merisävy.
+   *   - Saari, jonka ruudukko luulee mereksi (-m): maa saa
+   *     `Math.max(0, m + ...)` eli hypsometrian alimman sävyn.
+   * Kumpikaan ei tarvinnut uutta erikoissääntöä; nyt ne vain osuvat
+   * oikeaan kohtaan.
+   *
+   * KUIVA MAA MERENPINNAN ALLA säilyy maana ilman erillistä ehtoa:
+   * Kuollutmeri, Kaspian alanko ja Qattara eivät ole meren
+   * monikulmiossa. Kaspianmeri taas ON siinä (kuten maalehdilläkin),
+   * joten se on vettä vaikka on järvi.
+   *
+   * VANHA RUUDUKKOSÄÄNTÖ JÄÄ VARALLE. Jos aineistossa ei ole renkaita
+   * (vanha kutsuja, joka kokoaa aineistonsa itse), moottori toimii
+   * kuten ennen. Renkaat tulevat `keraaMaailma`sta.
    */
   const MERI = aineisto.meri ?? null;
-  const merenAlalla = (lon, lat) => {
+  const ruudukonMerenAlalla = (lon, lat) => {
     if (!MERI) return true;
     const x = Math.round((lon - K.lon0) / DLON);
     const y = Math.round((K.lat1 - lat) / DLAT);
     if (x < 0 || y < 0 || x > K.w - 1 || y > K.h - 1) return true;
     const i = y * K.w + x;
     return ((MERI[i >> 3] >> (i & 7)) & 1) === 1;
+  };
+
+  /*
+   * MEREN RENKAAT JUOVAPYYHKÄISYNÄ TÄMÄN KUVAN OMILLE RIVEILLE.
+   *
+   * Miller-projektiossa kuvarivi on tasan yksi leveyspiiri ja sarake
+   * tasan yksi pituuspiiri, joten kuvan pikseliruudukko ON lon/lat-
+   * ruudukko — epätasavälinen pystysuunnassa, mutta rivi kerrallaan
+   * tarkka. Siksi maski voidaan laskea suoraan kuvan tarkkuudella
+   * ilman välirasteria: rivi tietää monikulmion leikkauskohdat, ja
+   * pikseli katsoo oman pituusasteensa parillisuuden.
+   *
+   * Reunat kootaan KERRAN (muistiin `aineisto`-olioon), koska sama
+   * olio piirtää tuhannet laatat; per lohko rakennetaan vain se osa
+   * indeksistä, joka osuu tämän kuvan leveysasteisiin.
+   *
+   * Parillisuus lasketaan säteellä pituusasteelta −180: meren
+   * monikulmio on leikattu ±180:een, joten sen länsipuolella ei ole
+   * mitään, ja sädettä leikkaavien reunojen pariton määrä tarkoittaa
+   * merta. Sama sääntö kuin aineisto.mjs:n `meriMaski`ssa.
+   */
+  const RENKAAT = aineisto.meriRenkaat ?? null;
+  const NORMLON = (lon) => ((((lon + 180) % 360) + 360) % 360) - 180;
+  let meriIndeksi = null;
+  if (RENKAAT) {
+    if (!aineisto.__meriReunat) {
+      let n = 0;
+      for (const r of RENKAAT) n += r.length;
+      const xa = new Float64Array(n); const ya = new Float64Array(n);
+      const xb = new Float64Array(n); const yb = new Float64Array(n);
+      let k = 0;
+      for (const r of RENKAAT) {
+        for (let i = 0, j = r.length - 1; i < r.length; j = i++) {
+          // Vaakasuora reuna ei voi leikata leveyspiiriä.
+          if (r[j][1] === r[i][1]) continue;
+          xa[k] = r[j][0]; ya[k] = r[j][1];
+          xb[k] = r[i][0]; yb[k] = r[i][1];
+          k += 1;
+        }
+      }
+      // Leveysastekorit (1°): rivi ei katso koko maailman reunoja.
+      const korit = new Map();
+      for (let i = 0; i < k; i += 1) {
+        const a = Math.floor(Math.min(ya[i], yb[i]));
+        const b = Math.floor(Math.max(ya[i], yb[i]));
+        for (let c = a; c <= b; c += 1) {
+          let l = korit.get(c);
+          if (!l) { l = []; korit.set(c, l); }
+          l.push(i);
+        }
+      }
+      /*
+       * `nahty` estää saman reunan poimimisen kahdesti. Se ei ole
+       * hienosäätöä vaan välttämätöntä: pitkä reuna (±180 asteen
+       * kehysjana kulkee navalta navalle) kuuluu kymmeniin koreihin, ja
+       * kaksi kappaletta samasta leikkauksesta kääntäisi
+       * parillisuussäännön nurin — kokonaisia rivejä merta maaksi.
+       */
+      aineisto.__meriReunat = {
+        xa, ya, xb, yb, n: k, korit, nahty: new Int32Array(k), sukupolvi: 0,
+      };
+    }
+    meriIndeksi = aineisto.__meriReunat;
+  }
+
+  /**
+   * Kuvan jokaisen rivin leikkauskohdat (pituusasteina, nousevassa
+   * järjestyksessä). Lasketaan kerran koko kuvalle, koska pikselisilmukka
+   * käy rivit läpi järjestyksessä ja sama rivi tarvitaan 512-2112 kertaa.
+   */
+  const rivienLeikkaukset = () => {
+    if (!meriIndeksi) return null;
+    const rivit = new Array(H).fill(null);
+    const y0 = kehys ? Math.max(0, yYla - GY) : 0;
+    const y1 = kehys ? Math.min(H, yAla - GY) : H;
+    if (y1 <= y0) return rivit;
+    const latYla = latPikselista(y0 + 0.5);
+    const latAla = latPikselista(y1 - 0.5);
+    const ehdokkaat = [];
+    const { xa, ya, xb, yb, korit, nahty } = meriIndeksi;
+    meriIndeksi.sukupolvi += 1;
+    const sp = meriIndeksi.sukupolvi;
+    for (let c = Math.floor(latAla) - 1; c <= Math.floor(latYla) + 1; c += 1) {
+      const l = korit.get(c);
+      if (!l) continue;
+      for (const i of l) {
+        if (nahty[i] === sp) continue;
+        nahty[i] = sp;
+        const ylin = Math.max(ya[i], yb[i]);
+        const alin = Math.min(ya[i], yb[i]);
+        if (ylin < latAla || alin > latYla) continue;
+        ehdokkaat.push(i);
+      }
+    }
+    if (!ehdokkaat.length) return rivit;
+    // Reuna herää sillä rivillä, jolla se alkaa; kuolee kun ohitetaan.
+    const rivinLat = (y) => latPikselista(y + 0.5);
+    const herat = new Map();
+    const kuolee = new Int32Array(ehdokkaat.length);
+    const reuna = new Int32Array(ehdokkaat.length);
+    let m2 = 0;
+    for (const i of ehdokkaat) {
+      const ylin = Math.max(ya[i], yb[i]);
+      const alin = Math.min(ya[i], yb[i]);
+      // Rivit ovat pohjoisesta etelään, joten ylin lat on pienin y.
+      let r0 = y0; let r1 = y1 - 1;
+      // Binäärihaku: ensimmäinen rivi, jonka lat < ylin.
+      let lo = y0; let hi = y1;
+      while (lo < hi) { const mid = (lo + hi) >> 1; if (rivinLat(mid) < ylin) hi = mid; else lo = mid + 1; }
+      r0 = lo;
+      lo = y0; hi = y1;
+      while (lo < hi) { const mid = (lo + hi) >> 1; if (rivinLat(mid) <= alin) hi = mid; else lo = mid + 1; }
+      r1 = lo - 1;
+      if (r1 < r0) continue;
+      reuna[m2] = i; kuolee[m2] = r1;
+      let l = herat.get(r0);
+      if (!l) { l = []; herat.set(r0, l); }
+      l.push(m2);
+      m2 += 1;
+    }
+    let aktiiviset = [];
+    for (let y = y0; y < y1; y += 1) {
+      const uudet = herat.get(y);
+      if (uudet) aktiiviset = aktiiviset.concat(uudet);
+      if (!aktiiviset.length) { rivit[y] = new Float64Array(0); continue; }
+      const lat = rivinLat(y);
+      const leik = [];
+      let elossa = 0;
+      for (let t = 0; t < aktiiviset.length; t += 1) {
+        const e = aktiiviset[t];
+        if (kuolee[e] < y) continue;
+        aktiiviset[elossa++] = e;
+        const i = reuna[e];
+        if ((ya[i] > lat) === (yb[i] > lat)) continue;
+        leik.push(xa[i] + ((lat - ya[i]) / (yb[i] - ya[i])) * (xb[i] - xa[i]));
+      }
+      aktiiviset.length = elossa;
+      leik.sort((a, b) => a - b);
+      rivit[y] = Float64Array.from(leik);
+    }
+    return rivit;
+  };
+  const MERIRIVIT = rivienLeikkaukset();
+
+  /** Onko piste meren monikulmion sisällä? Rivi on jo laskettu. */
+  const merenAlallaRivilla = (leik, lon) => {
+    const n = NORMLON(lon);
+    let lo = 0; let hi = leik.length;
+    while (lo < hi) { const mid = (lo + hi) >> 1; if (leik[mid] < n) lo = mid + 1; else hi = mid; }
+    return (lo & 1) === 1;
   };
 
   /*
@@ -356,6 +548,8 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
       const gy = y + GY;
       const marginaalissa = gy < yYla || gy >= yAla;
       const lat = marginaalissa ? 0 : latPikselista(y + 0.5);
+      // Tämän leveyspiirin leikkaukset meren monikulmion kanssa.
+      const leik = marginaalissa || !MERIRIVIT ? null : MERIRIVIT[y];
       /*
        * PAPERIN LEIKATTU REUNA. Muutaman pikselin tummennus uloimmalla
        * laidalla erottaa arkin siitä pergamentista, jonka päällä se
@@ -386,7 +580,9 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
 
         const lon = lonPikselista(x + 0.5);
         let m = korkeus(lon, lat);
-        const vesi = Number.isFinite(m) ? (m < 0 && merenAlalla(lon, lat)) : true;
+        const vesi = leik
+          ? merenAlallaRivilla(leik, lon)
+          : (Number.isFinite(m) ? (m < 0 && ruudukonMerenAlalla(lon, lat)) : true);
         if (vesi) {
           // --- meri: syvyysvyöhykkeet, raja aaltoilee kohinasta ---
           if (!Number.isFinite(m)) m = -900;

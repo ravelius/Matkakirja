@@ -123,7 +123,24 @@ const kehyspiste = ([lon, lat]) => Math.abs(lon) >= 179.99
   || lat >= 89.99 || lat <= -89.99;
 
 /**
- * Rantaviiva polyviivoina meren alan reunasta.
+ * Meren monikulmion renkaat harvennettuina — YKSI AUKTORITEETTI SIITÄ,
+ * MISSÄ MAA ON.
+ *
+ * === MIKSI RENKAAT JA VIIVAT TULEVAT SAMASTA JOUKOSTA ===============
+ *
+ * Omistajan havainto 30.8.2026 iPadilta: *"Ääriviiva ja korkeus
+ * väritys eivät täsmää."* Syy oli kahdessa lähteessä: rantaviiva
+ * piirrettiin näistä vektoreista, mutta maa ja meri erotettiin
+ * korkeusruudukosta (3 kaariminuuttia = 5,5 km) ja sen merimaskista.
+ * Kaksi eri tarkkuutta ei voi olla samaa mieltä, ja syvässä zoomissa
+ * ero on kymmeniä pikseleitä (mitattu: z7 Norjassa yli 40 px).
+ *
+ * Korjaus on kartografinen eikä tekninen: **vektori kertoo MISSÄ maa
+ * on, korkeusruudukko vain KUINKA KORKEALLA se on.** Siksi renkaat
+ * palautetaan sellaisenaan piirtomoottorille (maailmapiirto.js
+ * `merenAlalla`), ja rantaviivan polyviivat JOHDETAAN näistä samoista
+ * harvennetuista renkaista. Kun viivan ja täytön kärkipisteet ovat
+ * kirjaimellisesti sama lista, ne eivät voi ajautua erilleen.
  *
  * `harvennus` on pienin sallittu askel asteina: peräkkäiset pisteet,
  * jotka ovat sitä lähempänä toisiaan, jäävät pois. Yleislehdellä yksi
@@ -132,34 +149,30 @@ const kehyspiste = ([lon, lat]) => Math.abs(lon) >= 179.99
  * koko ero sen välillä, että selaimelle siirretään kymmenen vai sata
  * megatavua.
  *
- * Ulkopuolinen ei tarvitse tietää, mikä rengas on mikin: paluu on
- * pelkkä lista viivoja, ja piirtomoottori katkaisee ne vielä kerran
- * päivämääränrajalla (maailmapiirto.js).
+ * Rengas palautetaan SULKEMATTA: viimeisen ja ensimmäisen pisteen
+ * välinen jakso on aina olemassa, ja sekä täyttö että viiva lisäävät
+ * sen itse. Näin harvennus ei voi jättää rengasta auki.
  */
-export function rannikot(kansio, { laatikko, harvennus = 0.006 }) {
+export function meriRenkaat(kansio, { harvennus = 0.006 } = {}) {
   const ulos = [];
   const lisaaRengas = (rengas) => {
-    let nykyinen = null;
+    const harva = [];
     let edellinen = null;
-    const paata = () => {
-      if (nykyinen && nykyinen.length > 1) ulos.push(nykyinen);
-      nykyinen = null;
-      edellinen = null;
-    };
-    for (const piste of rengas) {
-      const [lon, lat] = piste;
-      // Kehyksen osuudet katkaisevat viivan; rannikko jatkuu niiden
-      // toisella puolella omana pätkänään.
-      if (kehyspiste(piste)) { paata(); continue; }
-      if (lat < laatikko.lat0 - 1 || lat > laatikko.lat1 + 1) { paata(); continue; }
+    for (const [lon, lat] of rengas) {
       if (edellinen
         && Math.abs(lon - edellinen[0]) < harvennus
         && Math.abs(lat - edellinen[1]) < harvennus) continue;
-      if (!nykyinen) nykyinen = [];
-      nykyinen.push([pyorista(lon), pyorista(lat)]);
+      harva.push([pyorista(lon), pyorista(lat)]);
       edellinen = [lon, lat];
     }
-    paata();
+    // Lähdeaineiston viimeinen piste on sama kuin ensimmäinen; jos se
+    // selvisi harvennuksesta, se on tässä turha kaksoiskappale.
+    if (harva.length > 1) {
+      const a = harva[0];
+      const b = harva[harva.length - 1];
+      if (a[0] === b[0] && a[1] === b[1]) harva.pop();
+    }
+    if (harva.length > 2) ulos.push(harva);
   };
   const lisaa = (geom) => {
     if (geom.type === 'Polygon') for (const r of geom.coordinates) lisaaRengas(r);
@@ -169,6 +182,41 @@ export function rannikot(kansio, { laatikko, harvennus = 0.006 }) {
   };
   for (const f of lue(kansio, 'ne_10m_ocean.geojson').features) lisaa(f.geometry);
   return ulos;
+}
+
+/**
+ * Rantaviiva polyviivoina meren alan renkaista.
+ *
+ * Ulkopuolinen ei tarvitse tietää, mikä rengas on mikin: paluu on
+ * pelkkä lista viivoja, ja piirtomoottori katkaisee ne vielä kerran
+ * päivämääränrajalla (maailmapiirto.js).
+ */
+export function rannikotRenkaista(renkaat, { laatikko }) {
+  const ulos = [];
+  for (const rengas of renkaat) {
+    let nykyinen = null;
+    const paata = () => {
+      if (nykyinen && nykyinen.length > 1) ulos.push(nykyinen);
+      nykyinen = null;
+    };
+    // Rengas on suljettu: viimeisestä pisteestä palataan ensimmäiseen.
+    for (let i = 0; i <= rengas.length; i += 1) {
+      const piste = rengas[i % rengas.length];
+      // Kehyksen osuudet katkaisevat viivan; rannikko jatkuu niiden
+      // toisella puolella omana pätkänään.
+      if (kehyspiste(piste)) { paata(); continue; }
+      if (piste[1] < laatikko.lat0 - 1 || piste[1] > laatikko.lat1 + 1) { paata(); continue; }
+      if (!nykyinen) nykyinen = [];
+      nykyinen.push(piste);
+    }
+    paata();
+  }
+  return ulos;
+}
+
+/** Rantaviiva suoraan kansiosta (vanha kutsutapa). */
+export function rannikot(kansio, { laatikko, harvennus = 0.006 }) {
+  return rannikotRenkaista(meriRenkaat(kansio, { harvennus }), { laatikko });
 }
 
 /**
@@ -219,10 +267,14 @@ export function jarvet(kansio, { vahinKoko = 0.4, harvennus = 0.006 } = {}) {
 /**
  * Kokoaa yleislehden aineiston.
  *
- * Palauttaa `{ korkeus, meri, rannikot, jarvet }`, jossa `korkeus.grid`
- * on Int16Array ja `meri` Uint8Array-bittimaski samassa ruudukossa.
- * Kumpikin siirretään selaimeen binäärinä (tee-yleislehti.mjs), joten
- * ne EIVÄT ole base64:nä kuten maalehdillä.
+ * Palauttaa `{ korkeus, meri, meriRenkaat, rannikot, jarvet }`, jossa
+ * `korkeus.grid` on Int16Array ja `meri` Uint8Array-bittimaski samassa
+ * ruudukossa. Kumpikin siirretään selaimeen binäärinä
+ * (tee-yleislehti.mjs), joten ne EIVÄT ole base64:nä kuten maalehdillä.
+ *
+ * `meriRenkaat` ja `rannikot` ovat SAMA harvennettu kärkipistejoukko
+ * kahdessa muodossa: renkaat kertovat piirtomoottorille missä maa on,
+ * viivat piirretään. Ks. meriRenkaat().
  */
 export async function keraaMaailma({ kansio, laatikko, ruutu = 0.05 }) {
   const korkeus = await korkeusruudukko({ laatikko, ruutu });
@@ -231,12 +283,18 @@ export async function keraaMaailma({ kansio, laatikko, ruutu = 0.05 }) {
    * kuvapikseli ovat samaa kokoluokkaa (0,05° vs. 0,056°), joten
    * maalehtien kahden ruudun dilaatio työntäisi merta turhan pitkälle
    * kuivan painanteen puolelle.
+   *
+   * MASKI JÄÄ, VAIKKA PIIRTO EI ENÄÄ KÄYTÄ SITÄ maan ja meren
+   * erottamiseen: sitä lukee yhä laattapyramidin umpimerikarsinta
+   * (--harva) ja maalehtien moottori (piirto.js).
    */
   const meri = meriMaski(kansio, korkeus, { laajennus: 1 });
+  const renkaat = meriRenkaat(kansio);
   return {
     korkeus,
     meri,
-    rannikot: rannikot(kansio, { laatikko }),
+    meriRenkaat: renkaat,
+    rannikot: rannikotRenkaista(renkaat, { laatikko }),
     jarvet: jarvet(kansio),
   };
 }
