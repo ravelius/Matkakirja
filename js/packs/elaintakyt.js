@@ -257,6 +257,15 @@ export const ELAINTAKYT = {
   },
   GRC: {
     elain: 'kilpikonnanpoikaset',
+    /*
+     * Karttanimi (js/elaintaky.js elaintakyNimio): "kilpikonnanpoikaset"
+     * on 19 merkkiä eikä mahdu nimiöön (js/fokusnosto-symbolit.js
+     * NOSTOSYM_NIMIO_MERKKEJA = 18), ja atlaslyhennys jättäisi kartalle
+     * "Kilpikonnanpoikas." — sama sopimus kuin kohteiden
+     * `nimio`-kentällä (js/fokuskohteet.js kohteenKarttanimi). Nimi on
+     * tekstin oma: poikaset ovat merikilpikonnan poikasia.
+     */
+    nimio: 'merikilpikonna',
     otsikko: 'Yön juoksijat',
     teksti: 'Zakynthosin hiekkarannoilla kuoriutuu loppukesän öinä merikilpikonnan poikasia. Ne kaivautuvat esiin pimeällä ja juoksevat kohti merta veden välkettä seuraten — siksi rantojen valot sammutetaan pesimäkaudella. Vain harva sadasta selviää aikuiseksi, ja selviytyjät palaavat munimaan samalle rannalle.',
     kuva: 'assets/elaimet/elain-grc.jpg',

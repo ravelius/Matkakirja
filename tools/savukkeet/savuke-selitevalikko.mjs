@@ -156,6 +156,53 @@ async function avaaSivu(sivu) {
   return sivu;
 }
 
+/* --- 0: nappi ei näy ennen ensimmäistä kaupunkia --- */
+
+/*
+ * Omistajan testikierros 30.8.2026 (iPad): selitenappi näkyi jo
+ * aloitusruuduilla ja avauslennon aikana. Nappi kuuluu pelitilaan
+ * (js/karttaselite.js paivita), joten lähtöpisteen valinnassa —
+ * pelitallenne, jonka pelaajalla ei ole vielä lähtökaupunkia — kotelon
+ * on oltava piilossa. Avauslentoa savuke ei voi odottaa; sen kattaa
+ * sama JS-ehto (aloituslentoKesken) ja CSS-vyö (body.kartalento).
+ */
+const alkuPeli = new Game({
+  players: [{ name: 'Fogg', color: '#c9a227' }],
+  pack: packById('maailmankartta'),
+  seed: 11,
+});
+const alkuCtx = await selain.newContext({
+  viewport: { width: 1100, height: 900 },
+  reducedMotion: 'reduce',
+});
+await alkuCtx.addInitScript((data) => {
+  try {
+    localStorage.setItem('matkakirja-save-v1', data);
+    localStorage.removeItem('matkakirja-fokusmoodi');
+  } catch { /* yksityinen tila — savuke kaatuu myöhemmin selvemmin */ }
+}, JSON.stringify(alkuPeli.toJSON()));
+const alkuSivu = await alkuCtx.newPage();
+await alkuSivu.route(/r2\.dev|wikimedia\.org/, (route) => route.fulfill({
+  status: 200, contentType: 'image/png', body: PIKSELI,
+}));
+await alkuSivu.route('**samireivinen.workers.dev/**', (route) => route.abort());
+await alkuSivu.goto(osoite, { waitUntil: 'domcontentloaded', timeout: 60000 });
+await alkuSivu.waitForFunction(() => window.matkakirja?.ui?.svg, null, { timeout: 60000 });
+await alkuSivu.waitForTimeout(1500);
+const alkuTila = await alkuSivu.evaluate(() => {
+  const kotelo = document.querySelector('.karttaselite');
+  return {
+    phase: window.matkakirja.ui.game.phase,
+    olemassa: Boolean(kotelo),
+    piilossa: Boolean(kotelo)
+      && (kotelo.hidden || getComputedStyle(kotelo).display === 'none'),
+  };
+});
+vaadi('selitenappi on piilossa ennen ensimmäistä kaupunkia (pickstart)',
+  alkuTila.phase === 'pickstart' && alkuTila.olemassa && alkuTila.piilossa,
+  JSON.stringify(alkuTila));
+await alkuCtx.close();
+
 const sivu = await avaaSivu(await ctx.newPage());
 
 /**

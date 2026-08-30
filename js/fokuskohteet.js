@@ -304,9 +304,9 @@ const KOHDE_PISTE_R = 1.15;
 
 /*
  * Aihevalon koko tämän merkin mittakaavassa (js/karttavalot.js).
- * Kohdemerkin näkyvä ala on korostuskehän luokkaa (r = 6), kun
- * eläintäyn kaiverrus on täydet 10,4 — 0,6 asettaa valon täpläksi
- * merkin alle molemmissa.
+ * Kohdemerkin näkyvä ala on korostuskehän luokkaa (r = 6), ja 0,6
+ * asettaa valon täpläksi merkin alle. Eläintäky käyttää samaa
+ * kerrointa samasta syystä (js/elaintaky.js ELAINTAKY_VALO_KOKO).
  */
 const KOHDE_VALO_KOKO = 0.6;
 

@@ -121,10 +121,22 @@ const merkit = (sivu) => sivu.evaluate(() => {
   const rivit = [...(kerros?.querySelectorAll('.elaintaky-merkki') ?? [])].map((g) => {
     const osuma = g.querySelector('.elaintaky-osuma');
     const r = osuma?.getBoundingClientRect();
+    /*
+     * MERKKILINJA (v1353): merkki on kohdemallin viivamerkki nimiöineen
+     * (js/fokusnosto-symbolit.js piirraNostosymKartalle) — rasteri
+     * kantaa kategorian ja nimiön datamääreissään, ja symboliryhmän
+     * ruutumitta kertoo, ettei kartalla ole enää isoa glyyfiä.
+     */
+    const rasteri = g.querySelector('.elaintaky-symboli image.nostosym-rasteri');
+    const symboliRect = g.querySelector('.elaintaky-symboli')?.getBoundingClientRect();
     return {
       nimi: g.getAttribute('aria-label') ?? '',
       lunastettu: g.classList.contains('lunastettu'),
       symboleita: g.querySelectorAll('.elaintaky-symboli image, .elaintaky-symboli path').length,
+      viivamerkki: rasteri
+        ? { symboli: rasteri.dataset.symboli, nimio: rasteri.dataset.nimio }
+        : null,
+      symbolinKorkeus: symboliRect?.height ?? 0,
       lapimitta: r?.width ?? 0,
       keski: r && r.width > 0 ? { x: r.left + r.width / 2, y: r.top + r.height / 2 } : null,
       ruudulla: Boolean(r && r.width > 0 && r.left > 40 && r.top > 40
@@ -144,6 +156,7 @@ const kortti = (sivu) => sivu.evaluate(() => {
     teksti: [...k.querySelectorAll('.fokusnosto-teksti p')]
       .map((p) => (p.textContent ?? '').trim()).join(' '),
     kuva: k.querySelector('.elaintaky-kuva img')?.getAttribute('src') ?? '',
+    lahde: k.querySelector('.fokusnosto-kuvalahde')?.textContent ?? '',
     kuvaLatautui: Boolean(k.querySelector('.elaintaky-kuva img')?.naturalWidth),
     kuvaPiilossa: Boolean(k.querySelector('.elaintaky-kuva')?.hidden),
     palkkio: k.querySelector('.elaintaky-palkkio')?.textContent ?? '',
@@ -182,6 +195,19 @@ vaadi('myös vanhan laudan ulkopuoliset täyt piirtyvät',
 vaadi('jokaisella merkillä on kaiverrettu eläinsymboli',
   kartalla.rivit.every((m) => m.symboleita > 0),
   JSON.stringify(kartalla.rivit.filter((m) => !m.symboleita).map((m) => m.nimi)));
+// MERKKILINJA (v1353, omistaja 30.8.2026: pöllöt olivat "aivan liian
+// isoja"): merkki on kohdemallin viivamerkki nimiöineen, sama kirjasto
+// ja mittakaava kuin muilla kohdemerkeillä (js/fokuskohteet.js).
+vaadi('merkki on kohdemallin viivamerkki ja kantaa eläimen nimiön',
+  kartalla.rivit.every((m) => m.viivamerkki?.symboli === 'elain'
+    && (m.viivamerkki?.nimio ?? '').length > 0),
+  JSON.stringify(kartalla.rivit.filter((m) => m.viivamerkki?.symboli !== 'elain'
+    || !m.viivamerkki?.nimio).map((m) => m.nimi).slice(0, 5)));
+vaadi('merkki on kohdemerkin mittaluokkaa eikä iso glyyfi',
+  kartalla.rivit.every((m) => m.symbolinKorkeus > 0
+    && m.symbolinKorkeus < m.lapimitta * 0.35),
+  JSON.stringify(kartalla.rivit.slice(0, 5)
+    .map((m) => `${Math.round(m.symbolinKorkeus)}/${Math.round(m.lapimitta)}`)));
 vaadi('jokaisella merkillä on maan ja eläimen nimilappu',
   kartalla.rivit.every((m) => /.+: .+/.test(m.nimi)),
   JSON.stringify(kartalla.rivit.slice(0, 3).map((m) => m.nimi)));
@@ -212,6 +238,11 @@ vaadi('kortissa on repon oma eläinkuva ja se latautui',
   /^assets\/elaimet\/elain-[a-z]{3}\.jpg$/.test(avattu?.kuva ?? '')
   && avattu?.kuvaLatautui && !avattu?.kuvaPiilossa,
   `${avattu?.kuva} latautui=${avattu?.kuvaLatautui}`);
+// LÄHDERIVI (v1353, omistaja 30.8.2026: "Kilpikonnilta puuttuu
+// lähde"): eläinkuvat ovat pelin omia generoituja kuvia, ja rivi
+// kertoo sen samalla sanamuodolla kuin muutkin pelin omat kuvat.
+vaadi('kortin kuvalla on näkyvä lähderivi',
+  (avattu?.lahde ?? '').length > 5, avattu?.lahde);
 
 await eu.screenshot({ path: join(KAAPPAUKSET, 'elaintaky-kortti.png') });
 
@@ -224,6 +255,11 @@ vaadi(`ensimmäinen avaus maksaa ${ELAINTAKY_PALKKIO} puntaa`,
 vaadi('kortti kertoo löytöpalkkion',
   (avattu?.palkkio ?? '').includes(String(ELAINTAKY_PALKKIO)) && !avattu?.vanha,
   avattu?.palkkio);
+// Rivi sanoo rahan TULLEEN, ei lupaa etsittävää (omistaja 30.8.2026:
+// "löytöpalkkio on epäselvä, että pitääkö vielä etsiä vai tuliko
+// palkkio jo") — ja raha on tullut, vartio yllä mittasi kukkaron.
+vaadi('palkkiorivi kertoo rahan jo tulleen kukkaroon',
+  (avattu?.palkkio ?? '').includes('lisätty kukkaroon'), avattu?.palkkio);
 
 await eu.evaluate(() => document.querySelector('.fokusnosto-kortti-sulje')?.click());
 await eu.waitForTimeout(600);
