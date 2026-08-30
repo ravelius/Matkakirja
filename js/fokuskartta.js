@@ -1402,11 +1402,128 @@ const ATLAS_UUSIA_RUUTUJA = 5;
  *      tämä sääntö koskee vain atlaksen naapurivalintaa).
  */
 const ATLAS_TARKKUUSSUHDE = 3;
+
+/**
+ * Onko lehti niin leveä, että se on käytännössä yhtä sumea kuin pohja?
+ *
+ * Sama mitta kaikkialla: kaikki lehdet renderöidään 6400 pikselin
+ * leveyteen, joten tarkkuus on kääntäen verrannollinen lehden
+ * leveyteen lautayksikköinä. Viisi lehteä 134:stä ylittää rajan (RUS,
+ * CAN, GRL, CHL, CHN).
+ */
+function karkeaLehti(bbox) {
+  const pohjanLeveys = YLEISLEHTI?.bbox?.w ?? 0;
+  return pohjanLeveys > 0 && bbox?.w > 0
+    && bbox.w * ATLAS_TARKKUUSSUHDE > pohjanLeveys;
+}
+
 function liianKarkea(ui, bbox, iso) {
   if (!ui.yleislehtiPohja) return false;
   if (iso === ui.fokuskarttaAvain) return false;
-  const pohjanLeveys = YLEISLEHTI?.bbox?.w ?? 0;
-  return pohjanLeveys > 0 && bbox.w * ATLAS_TARKKUUSSUHDE > pohjanLeveys;
+  return karkeaLehti(bbox);
+}
+
+/*
+ * ============ ...JA SAMA JÄTTILÄINEN OMANA LEHTENÄ (30.8.2026) ======
+ *
+ * Yllä oleva sääntö karsi jättiläislehden ATLAKSESTA, mutta jätti
+ * poikkeuksen 2: nykyisen maan oma lehti ei karsiudu koskaan. Poikkeus
+ * on oikea — Venäjässä seisova pelaaja katsoo Venäjän lehteä — mutta
+ * se palautti saman vian toista tietä, ja omistaja näki sen
+ * kaappauksissa 29.–30.8.2026 (*"tiheä jokiverkko valkoisella, näyttää
+ * keskeneräiseltä piirustukselta"*, *"iso sumea rasterilaikku"*).
+ *
+ * MITATTU 30.8.2026 (Chromium 1280 x 800, oikeat ämpärin lehdet,
+ * pelaaja Moskovassa, EI kehittäjätilaa): atlaksessa oli NOLLA lehteä.
+ * Syy on ahne valinta: se merkitsee ensin oman lehden peittämät ruudut
+ * (peita), ja Venäjän lehti peittää 7504 lautayksikön levyisenä ruudun
+ * joka ainoan ruudukkoruudun. Yksikään naapuri ei sen jälkeen tuo
+ * "uusia ruutuja", joten Ukrainan (6,0 kuvapikseliä yksikköä kohti),
+ * Valko-Venäjän (10,1), Suomen (4,1) ja Kazakstanin (2,7) lehdet
+ * jäivät hakematta — ja ruudulla oli Venäjän lehden 0,85. Sama koskee
+ * Kanadaa, Kiinaa, Chileä ja Grönlantia: maailmanlaudan 261
+ * kaupungista 35 on näissä viidessä maassa.
+ *
+ * KAKSI SÄÄNTÖÄ, YKSI KORJAUS — täsmälleen kuten pohjan kanssa:
+ *
+ *   1. KARKEA OMA LEHTI EI VARAA PEITTOA (atlasValinta). Se on yhä
+ *      kartalla ja vie yhä oman osuutensa muistikatosta, mutta ei enää
+ *      estä tarkkojen naapurien valintaa.
+ *   2. KARKEA OMA LEHTI EI OLE ATLAKSEN PÄÄLLÄ (jarjestaLehtikerrokset).
+ *      Tavallisesti oma lehti on päällimmäisenä, jottei kohdemaa jää
+ *      naapurin haalean vuodon alle. Jättiläisellä vaihtokauppa kääntyy
+ *      päinvastoin: naapurin terävä vuoto on parempi kuin oman lehden
+ *      sumu, ja jättiläiset ovat muutenkin jatkuvaa pintaa
+ *      (tools/fokuskartta/maat.mjs `jatkuva`) — niissä ei ole
+ *      maakorostusta eikä kartussia, jonka alle jäisi mitään.
+ *
+ * === EHTO ON MITTAKAAVA EIKÄ PELKKÄ LEHTI (mitattu 30.8.2026) =======
+ *
+ * Ensimmäinen versio väisti aina, ja se oli mittauksessa väärin:
+ * uloszoomatussa Moskova-näkymässä (0,58 kuvapikseliä lautayksikköä
+ * kohti) Venäjän lehti on 0,85 eli YHÄ TARKEMPI kuin ruutu, ja se
+ * piirsi siellä maaston, Volgan mutkat ja omat kaupunkinimensä
+ * (Nizhny Novgorod, Samara, Volgograd). Naapureiden alle jäädessään
+ * se menetti ne kaikki, ja Kazakstanin lehden reuna tuli näkyviin
+ * suorana kaistana. Jättiläinen on huono vain silloin kun sitä
+ * SUURENNETAAN yli oman tarkkuutensa — samassa Moskova-näkymässä
+ * lähempää (2,10) se on venytetty 2,5-kertaiseksi, ja juuri siitä
+ * syntyy se paksu sumea jokikiemura.
+ *
+ * Sääntö on siis kaksiosainen ja koskee vain näitä viittä maata:
+ * lehti väistää, kun se on karkea JA näkymä suurentaa sitä.
+ *
+ * OIKEA KORJAUS ON YHÄ USEAMPI LEHTI PER MAA (ks. FOKUS_POHJAT
+ * "VENÄJÄ EI OLE MUKANA"): 173 astetta leveää maata ei saa luettavaksi
+ * yhdellä 6400 pikselin kuvalla millään. Tämä erä ei tee sitä työtä
+ * vaan poistaa sen vahingon, jonka jättiläinen tekee naapureilleen.
+ */
+
+/** Lehtien renderöintileveys pikseleinä (tools/fokuskartta/maat.mjs). */
+const LEHDEN_LEVEYS_PX = 6400;
+
+/**
+ * Suurentaako näkymä lehteä yli sen oman tarkkuuden?
+ *
+ * `skaala` on kuvapikseliä lautayksikköä kohti (ui.nakyvaAlue), ja
+ * lehden oma tarkkuus on 6400 / bboxin leveys samoissa yksiköissä.
+ */
+function lehtiSuurentuu(bbox, skaala) {
+  if (!(bbox?.w > 0) || !(skaala > 0)) return false;
+  return skaala > LEHDEN_LEVEYS_PX / bbox.w;
+}
+
+/**
+ * Väistääkö nykyisen maan oma lehti atlaksen tieltä juuri nyt?
+ *
+ * Luetaan atlaspäivityksessä kerran ja muistetaan ui-oliossa, koska
+ * sekä valinta että kerrosjärjestys tarvitsevat saman vastauksen —
+ * kaksi eri laskentaa ehtisivät eriytyä kesken eleen.
+ */
+function paivitaOmanLehdenVaisto(ui, skaala) {
+  const bbox = pohjanTiedot(ui?.fokuskarttaAvain)?.bbox;
+  ui.omaLehtiVaistaa = Boolean(bbox)
+    && karkeaLehti(bbox) && lehtiSuurentuu(bbox, skaala);
+  return ui.omaLehtiVaistaa;
+}
+
+/**
+ * Lehtikerrosten järjestys: kumpi on päällä, oma lehti vai atlas?
+ *
+ * Kutsutaan jokaisen atlaspäivityksen yhteydessä, koska maa vaihtuu
+ * matkan mukana eikä kumpaakaan ryhmää luoda uudelleen.
+ */
+function jarjestaLehtikerrokset(ui) {
+  const kerros = ui?.fokuskarttaKerros;
+  const atlas = kerros?.querySelector('.fokus-atlas');
+  const lehti = kerros?.querySelector('.fokus-lehti');
+  if (!kerros || !atlas || !lehti) return;
+  // compareDocumentPosition: 4 = FOLLOWING eli jälkimmäinen on myöhemmin
+  // dokumentissa ja siis piirtyy päälle.
+  const lehtiPaalla = Boolean(atlas.compareDocumentPosition(lehti) & 4);
+  const atlasPaalle = Boolean(ui.omaLehtiVaistaa);
+  if (atlasPaalle && lehtiPaalla) kerros.insertBefore(atlas, lehti.nextSibling);
+  else if (!atlasPaalle && !lehtiPaalla) kerros.insertBefore(atlas, lehti);
 }
 
 /** Kahden laatikon leikkauksen pinta-ala (0 jos eivät leikkaa). */
@@ -1578,6 +1695,7 @@ function atlasRyhma(ui) {
       ?? kerros.querySelector('.fokus-yleislehti');
     kerros.insertBefore(g, alla ? alla.nextSibling : kerros.firstChild);
   }
+  jarjestaLehtikerrokset(ui);
   return g;
 }
 
@@ -1788,6 +1906,7 @@ function lehtiRyhma(ui) {
   if (!kerros) return null;
   let g = kerros.querySelector('.fokus-lehti');
   if (!g) g = el('g', { class: 'fokus-lehti', 'pointer-events': 'none' }, kerros);
+  jarjestaLehtikerrokset(ui);
   return g;
 }
 
@@ -1919,7 +2038,13 @@ function atlasValinta(ui, nakyva, lauta, nykyinen, ehdokkaat) {
   let mp = ui.atlasPohjaMp ?? 0;
   const oma = ehdokkaat.find((e) => e.iso === nykyinen);
   if (oma) {
-    peita(ruudut, oma.bbox, nakyva, true);
+    /*
+     * KARKEA OMA LEHTI EI VARAA PEITTOA (ks. "SAMA JÄTTILÄINEN OMANA
+     * LEHTENÄ"): Venäjän lehti peittää ruudun joka ruudun, eikä
+     * yksikään tarkka naapuri toisi enää "uusia ruutuja". Muistista se
+     * vie osuutensa kuten ennenkin — se on kartalla joka tapauksessa.
+     */
+    if (!ui.omaLehtiVaistaa) peita(ruudut, oma.bbox, nakyva, true);
     mp += lehdenMp(oma.iso, lauta);
   }
   for (const e of ehdokkaat) {
@@ -2941,12 +3066,27 @@ export function paivitaFokusAtlas(ui, tiedettyNakyva = null) {
   else if (!ui.yleislehtiPalautus) poistaYleislehti(ui);
   const nykyinen = ui.fokuskarttaAvain !== 'pois' ? ui.fokuskarttaAvain : null;
   ui.atlasOmaMp = nykyinen ? lehdenMp(nykyinen, lauta) : 0;
+  /*
+   * Väisto luetaan kerran ja kerrokset järjestetään joka päivityksellä:
+   * sekä maa että mittakaava muuttuvat matkan ja zoomin mukana, eikä
+   * kumpaakaan ryhmää luoda silloin uudelleen.
+   */
+  paivitaOmanLehdenVaisto(ui, nakyva.skaala);
+  jarjestaLehtikerrokset(ui);
   // Karkea tunniste: kymmenesosa näkymän mitasta riittää tarkkuudeksi.
   const avain = [
     lauta, nykyinen ?? '-',
     Math.round(nakyva.x / (nakyva.w / 10)),
     Math.round(nakyva.y / (nakyva.h / 10)),
     Math.round(Math.log2(nakyva.w) * 4),
+    /*
+     * VÄISTO KUULUU TUNNISTEESEEN. Zoomi on tunnisteessa neljäsosan
+     * log2-askelen tarkkuudella (noin 19 % leveydestä), ja väiston
+     * kynnys voi ylittyä saman askelen sisällä — silloin kerrosjärjestys
+     * vaihtuisi heti mutta VALINTA vasta seuraavalla askelella, eli
+     * atlas jäisi hetkeksi tyhjäksi väistävän lehden alle.
+     */
+    ui.omaLehtiVaistaa ? 'v' : '-',
   ].join(':');
   if (ui.atlasAvain === avain) return;
 
@@ -3523,6 +3663,9 @@ export function nollaaFokuskartta(ui) {
   ui.atlasHaut?.clear();
   ui.atlasAvain = null;
   ui.atlasOmaMp = 0;
+  // Väisto koskee mennyttä maata ja mennyttä mittakaavaa (ks. "SAMA
+  // JÄTTILÄINEN OMANA LEHTENÄ"): uusi kerros syntyy oletusjärjestyksessä.
+  ui.omaLehtiVaistaa = false;
   // Yleislehden ryhmä katosi kerroksen mukana; tila on nollattava
   // erikseen tai uusi lauta luulisi lehden olevan yhä kartalla.
   ui.yleislehtiPaalla = false;

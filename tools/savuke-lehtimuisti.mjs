@@ -165,7 +165,7 @@ async function ajo({ nimi, kuori = false, varareitti = false }) {
     });
   }
   const sivu = await ctx.newPage();
-  await sivu.route((url) => /julisteet\/fokus\/.*\.webp$/.test(url.href), (route) => {
+  await sivu.route((url) => /julisteet\/fokus\/.*\.webp(\?|$)/.test(url.href), (route) => {
     // Varareittiajossa CORS-nouto katkaistaan (fetch), mutta kuvan oma
     // lataus menee läpi — täsmälleen se tilanne, jossa ämpärin sääntö
     // ei osu pyyntöön ja pienennys putoaa varareitille.
@@ -179,7 +179,7 @@ async function ajo({ nimi, kuori = false, varareitti = false }) {
   });
   await sivu.route(
     (url) => !/127\.0\.0\.1|localhost/.test(url.href)
-      && !/julisteet\/fokus\/.*\.webp$/.test(url.href),
+      && !/julisteet\/fokus\/.*\.webp(\?|$)/.test(url.href),
     (route) => route.abort(),
   );
   const virheet = [];
