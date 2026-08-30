@@ -108,10 +108,11 @@ import {
  *    nollasta, KAIKKI laatat saisivat saman rakeen — ruudukko näkyisi
  *    ruudukkona. Kohina luetaan siksi arkin pikselistä (x + siirto.x).
  *
- * 2. MITTAKAAVA S. Viivanleveydet, kirjasinkoot ja rakeen tiheys on
- *    säädetty 6400 pikselin arkille. Laatan oma leveys (512) antaisi
- *    S = 0,08 eli näkymättömät rannikot; S tulee siksi ARKIN
- *    leveydestä, joka on pyramiditasolla koko maailman leveys.
+ * 2. MITTAKAAVA S. Kalusteiden koko ja kehyksen marginaali on säädetty
+ *    6400 pikselin arkille. Laatan oma leveys (512) antaisi S = 0,08
+ *    eli kehyksen paikan pieleen; S tulee siksi ARKIN leveydestä, joka
+ *    on pyramiditasolla koko maailman leveys. Painojälki (viivat, rae,
+ *    kirjasin) EI tule S:stä vaan P:stä — ks. PAPERIN MITTAKAAVA.
  *
  * 3. KEHYS JA KALUSTEET. Marginaali, kartussi, mittajana ja
  *    painajanrivi ovat arkin reunassa ja keskellä. Ne piirretään arkin
@@ -127,6 +128,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
   const {
     bbox, projektio, leveys, tyyli = {}, esikatseluTausta,
     koko = null, siirto = null, sisalto = null, ladonta = null,
+    paperiS = null,
   } = asetukset;
 
   const px = leveys / bbox.w;
@@ -157,6 +159,43 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * isompaa tekstiä, aivan kuten maalehdillä.
    */
   const S = GW / 6400;
+
+  /*
+   * === P = PAPERIN MITTAKAAVA, S = KARTAN MITTAKAAVA =================
+   *
+   * Raamattu, "PAPERIVAKIOT JA KARTTAVAKIOT" (omistaja 30.8.2026):
+   * *paperin ja painokoneen ominaisuudet ovat PAPERIN mittakaavassa eli
+   * vakioita ulostulopikseleinä; maaston ominaisuudet ovat KARTAN
+   * mittakaavassa.* Painettu viiva on paperilla tietyn levyinen
+   * riippumatta siitä, mitä mittakaavaa lehti esittää — rantaviivan
+   * MUOTO on maastoa, sen LEVEYS on painotekniikkaa.
+   *
+   * YHDEN ARKIN LEHDELLÄ NÄMÄ OVAT SAMA LUKU, ja siksi ero ei
+   * aikaisemmin näkynyt: `--leveys 12800` on sama lehti kahdesti
+   * tarkempana, ja katsoja näkee sen kutistettuna ruudulle, joten
+   * viivankin on kaksinkertaistuttava. Oletus on siksi `P = S` eikä
+   * mikään kutsuja muutu.
+   *
+   * LAATTAPYRAMIDISSA NE EROAVAT. Siellä taso ei ole sama lehti
+   * tarkempana vaan sama arkki ISOMPANA, ja peli katsoo valittua tasoa
+   * noin 1:1 — jolloin `mitta · S` ulostulopikseliä on `mitta · S`
+   * LAITEPIKSELIÄ ruudulla. Mitattuna (30.8.2026) rannikon kynä oli
+   * z3:lla 1 px, z6:lla 11 px ja z7:llä 19-23 px: sama vikaluokka kuin
+   * nimiöissä (`ruutuKoko`) ja patinan kohdistusheitossa. Pyramidi
+   * antaa siksi `paperiS: 1`, jolloin jokainen painojälki on joka
+   * tasolla saman levyinen ja vain maasto tarkentuu.
+   *
+   * MIKÄ ON KUMPAAKIN — sääntö, ei lista:
+   *   P (paperi)  viivanleveydet, kirjasinkoko laitepikseleinä,
+   *               paperin rae ja kuitu, akvarellin pigmentti ja
+   *               laikku, hypsometrian ja meren kohinan kudos,
+   *               leikatun reunan tummennus ja häivytys.
+   *   S (kartta)  arkin geometria (kehyksen marginaali, joka määrää
+   *               laattaruudukon), kalusteiden koko (kartussi,
+   *               kompassi, merten nimet) — ne on ladottu arkin
+   *               mittoihin ja niiden paikka on arkilla, ei ruudulla.
+   */
+  const P = paperiS ?? S;
 
   /*
    * ATLASKEHYKSEN MARGINAALIT KUVAPIKSELEINÄ.
@@ -314,15 +353,15 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
        * laudalla lepää — ilman sitä kerma vain loppuu kesken.
        */
       const reuna = kehys
-        ? Math.min(1, Math.min(gy + 0.5, GH - 0.5 - gy) / (11 * S))
+        ? Math.min(1, Math.min(gy + 0.5, GH - 0.5 - gy) / (11 * P))
         : 1;
       for (let x = 0; x < W; x++) {
         const i = (y * W + x) * 4;
         const gx = x + GX;
         // --- paperi: kuitujuovat, rae ja laikut ---
-        const kuitu = fbm(KOHINA, gx / (52 * S), gy / (7 * S), 3) - 0.5;
-        const rae = KOHINA2(gx / (1.7 * S), gy / (1.7 * S)) - 0.5;
-        const laikka = fbm(KOHINA2, gx / (260 * S), gy / (260 * S), 3) - 0.5;
+        const kuitu = fbm(KOHINA, gx / (52 * P), gy / (7 * P), 3) - 0.5;
+        const rae = KOHINA2(gx / (1.7 * P), gy / (1.7 * P)) - 0.5;
+        const laikka = fbm(KOHINA2, gx / (260 * P), gy / (260 * P), 3) - 0.5;
         const v = kuitu * 9 + rae * 11 + laikka * 16;
         if (marginaalissa) {
           const s = (1 - reuna) * 15;
@@ -342,7 +381,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         if (vesi) {
           // --- meri: syvyysvyöhykkeet, raja aaltoilee kohinasta ---
           if (!Number.isFinite(m)) m = -900;
-          const n = fbm(KOHINA, gx / (30 * S), gy / (30 * S), 4) - 0.5;
+          const n = fbm(KOHINA, gx / (30 * P), gy / (30 * P), 4) - 0.5;
           const s = lerpSyvyys(m + n * Math.min(150, Math.max(12, -m * 1.25)));
           const a = 0.5;
           r = r * (1 - a) + s[0] * a;
@@ -351,12 +390,12 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         } else {
           // --- maasto: hypsometria, varjostus, akvarellin rae ---
           if (!Number.isFinite(m)) m = 60;
-          const n1 = fbm(KOHINA, gx / (26 * S), gy / (26 * S), 4) - 0.5;
-          const n2 = fbm(KOHINA2, gx / (7 * S), gy / (7 * S), 3) - 0.5;
+          const n1 = fbm(KOHINA, gx / (26 * P), gy / (26 * P), 4) - 0.5;
+          const n2 = fbm(KOHINA2, gx / (7 * P), gy / (7 * P), 3) - 0.5;
           const c = lerpVari(ASTEIKKO, Math.max(0, m + n1 * 190 + n2 * 60));
           const varjo = (0.5 - varjostus(lon, lat)) * 0.46;
-          const pigmentti = (KOHINA2(gx / (2.1 * S), gy / (2.1 * S)) - 0.5) * 13;
-          const lai = (fbm(KOHINA, gx / (95 * S), gy / (95 * S), 3) - 0.5) * 12;
+          const pigmentti = (KOHINA2(gx / (2.1 * P), gy / (2.1 * P)) - 0.5) * 13;
+          const lai = (fbm(KOHINA, gx / (95 * P), gy / (95 * P), 3) - 0.5) * 12;
           const t = (k) => k * (1 - varjo) + pigmentti + lai + (varjo > 0 ? 0 : varjo * 30);
           r = t(c[0]);
           g = t(c[1] * (1 - varjo * 0.12));
@@ -456,16 +495,23 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * monikulmiolla; yleislehdellä leikkuria ei ole eikä tarvita —
    * vetoja on 3 ja 1,1 pikseliä, joten maan puolelle jäävä puolikas on
    * pikselin murto-osa eikä erotu rannikon omasta pigmentistä.
+   *
+   * LEVEYS ON PAPERIVAKIO (P), MUOTO ON MAASTOA. Kartalla kaksi vetoa
+   * kattaa sitä pienemmän maa-alan mitä lähemmäs zoomataan, ja juuri
+   * niin painetun viivan kuuluu käyttäytyä: kaivertajan kynä ei
+   * lihonut siitä, että lehti esitti pienempää aluetta. Kertoimella S
+   * tämä oli laattapyramidin syvimmällä tasolla mitattuna 19-23
+   * pikselin vyö (z6 11 px, z3 1 px) — ks. P:n määrittely ylempänä.
    */
   ctx.save();
   ctx.lineJoin = 'round';
   ctx.lineCap = 'round';
   ctx.strokeStyle = 'rgba(74,52,33,0.18)';
-  ctx.lineWidth = 3 * S;
+  ctx.lineWidth = 3 * P;
   viivaPolku(ctx, aineisto.rannikot);
   ctx.stroke();
   ctx.strokeStyle = 'rgba(58,40,25,0.85)';
-  ctx.lineWidth = 1.1 * S;
+  ctx.lineWidth = 1.1 * P;
   viivaPolku(ctx, aineisto.rannikot);
   ctx.stroke();
   ctx.restore();
@@ -483,7 +529,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     viivaPolku(ctx, j.renkaat, true);
     ctx.fill('evenodd');
     ctx.strokeStyle = 'rgba(118,107,80,0.75)';
-    ctx.lineWidth = 0.9 * S;
+    ctx.lineWidth = 0.9 * P;
     ctx.stroke();
   }
   ctx.restore();
@@ -501,7 +547,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
   if (tyyli.asteverkko !== false) {
     const vali = tyyli.asteverkkoVali ?? 20;
     ctx.save();
-    ctx.lineWidth = 0.7 * S;
+    ctx.lineWidth = 0.7 * P;
     ctx.strokeStyle = 'rgba(96,74,46,0.22)';
     ctx.beginPath();
     for (let lon = -180; lon <= 180; lon += vali) {
@@ -654,9 +700,10 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * Tämä on se kohta, jossa pyramidi eroaa yhden arkin lehdestä, ja
    * ero on helppo tehdä väärin (tehtiin ensin, mitattiin, korjattiin).
    *
-   * Moottorin muut mitat kerrotaan S:llä, jolloin ne ovat SAMAN
-   * KOKOISIA KARTALLA joka tasolla — rannikon viiva ja paperin rae
-   * kuuluvat juuri niin. Nimiö ei kuulu. Peli valitsee tason ruudun
+   * Moottorin kalusteet kerrotaan S:llä, jolloin ne ovat SAMAN
+   * KOKOISIA KARTALLA joka tasolla — kehys ja kartussi kuuluvat juuri
+   * niin. Nimiö ei kuulu, eikä rannikon viiva tai paperin rae kuulu
+   * (ne ovat paperivakioita, P). Peli valitsee tason ruudun
    * tarkkuuden mukaan ja katsoo laattaa suunnilleen 1:1, joten
    * `koko * S` pikseliä on `koko * S` LAITEPIKSELIÄ ruudulla: 14
    * pikselin nimi olisi uloimmalla tasolla 1,5 px (näkymätön) ja
@@ -1047,8 +1094,8 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         const i = (y * W + x) * 4;
         const gx = x + GX;
         const gy = y + GY;
-        const rae = (KOHINA2(gx / (1.35 * S) + 40, gy / (1.35 * S) + 40) - 0.5) * 8;
-        const kuitu = (fbm(KOHINA, gx / (30 * S) + 11, gy / (4 * S) + 11, 2) - 0.5) * 5;
+        const rae = (KOHINA2(gx / (1.35 * P) + 40, gy / (1.35 * P) + 40) - 0.5) * 8;
+        const kuitu = (fbm(KOHINA, gx / (30 * P) + 11, gy / (4 * P) + 11, 2) - 0.5) * 5;
         d[i] = Math.max(0, Math.min(255, d[i] + rae + kuitu));
         d[i + 1] = Math.max(0, Math.min(255, d[i + 1] + rae + kuitu));
         d[i + 2] = Math.max(0, Math.min(255, d[i + 2] + (rae + kuitu) * 0.9));
@@ -1075,7 +1122,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    */
   {
     const hy = kehys
-      ? Math.max(1, Math.round(2.5 * S))
+      ? Math.max(1, Math.round(2.5 * P))
       : Math.max(1, Math.round(GH * 0.004));
     const img = ctx.getImageData(0, 0, W, H);
     const d = img.data;

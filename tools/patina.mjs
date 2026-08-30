@@ -804,7 +804,7 @@ export const VERTAILUPALA = {
  */
 export async function patinoiSelaimessa({
   b64, tyyppi, resepti, leveys, muoto, laatu, tausta, maailma,
-  koko = null, pikselit = null, palauta = 'b64',
+  koko = null, pikselit = null, palauta = 'b64', paperiS = null,
 }) {
   /* --------------------------------------------------------- apurit */
   const mulberry32 = (a) => function satunnainen() {
@@ -894,6 +894,31 @@ export async function patinoiSelaimessa({
    * mittakaavan, ja lohkojen raja näkyisi kuviona.
    */
   const s = (koko?.w ?? L) / 6400;
+
+  /*
+   * === sp = PAPERIN MITTAKAAVA, s = ARKIN MITTAKAAVA =================
+   *
+   * Raamattu, "PAPERIVAKIOT JA KARTTAVAKIOT" (omistaja 30.8.2026):
+   * paperin ja painokoneen ominaisuudet ovat vakioita
+   * ULOSTULOPIKSELEINÄ, maaston ominaisuudet kartan mittakaavassa.
+   * Tässä tiedostossa MELKEIN KAIKKI on ensimmäistä lajia — rae, syy,
+   * klimppi, viivan mikrorosoisuus, rantaviivan suojavyö, taitteet.
+   * Ne on säädetty 6400 pikselin lehdelle, jota katsotaan noin 1:1.
+   *
+   * KOHDISTUS ja LEVIAMINEN irrotettiin `s`:stä jo 30.8. (ks. niiden
+   * omat kommentit); tämä vie saman päätöksen loppuun muille passeille
+   * sen sijaan, että jokainen irrotettaisiin erikseen.
+   *
+   * OLETUS `sp = s` PITÄÄ LEHTIPUTKEN ENNALLAAN. Yhden arkin lehdellä
+   * `koko` puuttuu ja s = L/6400, eli tarkkuuden nosto suurentaa
+   * kaiken yhtä lailla — juuri niin kuin pitääkin, koska katsoja näkee
+   * lehden kutistettuna ruudulle. Laattapyramidi antaa `paperiS: 1`.
+   *
+   * MITÄ EI OLE PAPERIA: ikääntymisen laikku on MAAILMAN ominaisuus
+   * (`maailmaX/maailmaY`) — sama maailmankohta saa saman laikun joka
+   * lehdellä ja joka tasolla, ja siksi se jää `s`:n varaan.
+   */
+  const sp = paperiS ?? s;
 
   const lum = (r, gg, b) => 0.299 * r + 0.587 * gg + 0.114 * b;
 
@@ -1177,7 +1202,7 @@ export async function patinoiSelaimessa({
   let tiheys2 = null;
   if (resepti.vesiviivoitus && etaisyys2) {
     const TIHEYS_SADE = 70;
-    const R = Math.max(1, Math.round(TIHEYS_SADE * s / J2));
+    const R = Math.max(1, Math.round(TIHEYS_SADE * sp / J2));
     const maa = new Float32Array(L2 * K2);
     /* Maa = ei merta. Etäisyys 0 tarkoittaa maata (tai kuvan ulkopuolta). */
     for (let j = 0; j < maa.length; j++) maa[j] = etaisyys2[j] === 0 ? 1 : 0;
@@ -1408,7 +1433,7 @@ export async function patinoiSelaimessa({
         const rantaEt = hae2(etaisyys2, x, y);
         syvW = pehmene(sy.kromaVali[1], sy.kromaVali[0], kroma0)
           * pehmene(sy.lumVali[0], sy.lumVali[1], Lp)
-          * pehmene(sy.rantaVali[0] * s, sy.rantaVali[1] * s, rantaEt);
+          * pehmene(sy.rantaVali[0] * sp, sy.rantaVali[1] * sp, rantaEt);
         if (syvW > 0.004 && sy.litistys < 1) {
           const w = (1 - sy.litistys) * syvW;
           r += (meriRef[0] - r) * w;
@@ -1496,15 +1521,15 @@ export async function patinoiSelaimessa({
            * viivat huojuvat rikkomatta samankeskisyyttään: viereiset
            * pikselit saavat lähes saman siirtymän, eivätkä viivat siksi
            * mene ristiin vaikka siirtymä on viivaväliä suurempi. */
-          const hx = (x + faasiX) / (vv.huojuntaSkaala * s);
-          const hy = (y + faasiY) / (vv.huojuntaSkaala * s);
+          const hx = (x + faasiX) / (vv.huojuntaSkaala * sp);
+          const hy = (y + faasiY) / (vv.huojuntaSkaala * sp);
           const wx = (fbm(kohinaVesiviiva, hx, hy, vv.huojuntaOktaavit) - 0.5)
-            * vv.huojunta * s;
+            * vv.huojunta * sp;
           const wy = (fbm(kohinaVesiviiva, hx + 137.3, hy + 71.9, vv.huojuntaOktaavit) - 0.5)
-            * vv.huojunta * s;
+            * vv.huojunta * sp;
           const et = hae2(etaisyys2, x + wx, y + wy);
-          const e = et - vv.aloitus * s;
-          const v0 = vv.vali * s; const kasvu = vv.kasvu * s;
+          const e = et - vv.aloitus * sp;
+          const v0 = vv.vali * sp; const kasvu = vv.kasvu * sp;
           const juuri = (v0 - kasvu / 2) ** 2 + 2 * kasvu * e;
           if (e > -v0 && juuri > 0 && et < 1e7) {
             /* nro = viivanumero murtolukuna; kokonaisluku osuu viivalle */
@@ -1516,7 +1541,7 @@ export async function patinoiSelaimessa({
                * viivan PAKSUUS pysyy samana, vain tiheys harvenee. */
               const vali = v0 + k * kasvu;
               const poikkeama = Math.abs(nro - k) * vali;
-              const viiva = pehmene(vv.paksuus * s, vv.paksuus * s * 0.3, poikkeama);
+              const viiva = pehmene(vv.paksuus * sp, vv.paksuus * sp * 0.3, poikkeama);
               if (viiva > 0.01) {
                 /* Uloin viiva häipyy: vyö loppuu avomerelle. Vyön pituus
                  * suhteutetaan lähimaan kokoon (ks. tiheyskenttä), jotta
@@ -1538,8 +1563,8 @@ export async function patinoiSelaimessa({
                 const haip = Math.max(0, 1 - k / maara) ** vv.haipyma;
                 /* Voiman vaihtelu pitkin viivaa: muste ei kanna tasaisesti. */
                 const roso = Math.max(0, 1 + vv.roso * 2
-                  * (kohinaVesiviiva((x + faasiX) / (vv.rosoSkaala * s) + 900.5,
-                    (y + faasiY) / (vv.rosoSkaala * s) + 401.5) - 0.5));
+                  * (kohinaVesiviiva((x + faasiX) / (vv.rosoSkaala * sp) + 900.5,
+                    (y + faasiY) / (vv.rosoSkaala * sp) + 401.5) - 0.5));
                 kerroin -= vv.voima * viiva * haip * roso * meriW;
               }
             }
@@ -1560,7 +1585,7 @@ export async function patinoiSelaimessa({
         const w = pehmene(158, 70, Lp);
         const reunapaino = 4 * w * (1 - w); /* huippu viivan reunalla */
         if (reunapaino > 0.02) {
-          const n = kohinaRoso((x + faasiX) / (s * 1.6), (y + faasiY) / (s * 1.6)) - 0.5;
+          const n = kohinaRoso((x + faasiX) / (sp * 1.6), (y + faasiY) / (sp * 1.6)) - 0.5;
           kerroin += ro.voima * reunapaino * n * 0.6;
         }
       }
@@ -1569,23 +1594,23 @@ export async function patinoiSelaimessa({
       if (pa) {
         /* Domain warp: sama siirtymä molemmille kuitusuunnille, jotta
          * syy aaltoilee yhtenä paperina eikä kahtena kerroksena. */
-        /* Paperin kohinat lehden omassa mittakaavassa, mutta laudalta
+        /* Paperin kohinat PAPERIN mittakaavassa (`sp`), mutta laudalta
          * saadulla faasilla (ks. maailmankoordinaatit): syy on joka
-         * lehdellä samankokoista, mutta kuvio ei toistu lehdestä
-         * toiseen. */
+         * lehdellä ja joka pyramiditasolla samankokoista, mutta kuvio
+         * ei toistu lehdestä tai laatasta toiseen. */
         const px = x + faasiX; const py = y + faasiY;
-        const wp = (kohinaWarp(px / (pa.warpSkaala * s), py / (pa.warpSkaala * s)) - 0.5)
+        const wp = (kohinaWarp(px / (pa.warpSkaala * sp), py / (pa.warpSkaala * sp)) - 0.5)
           * pa.warpVoima;
         let kuitu = 0; let pk = 0;
         for (const [sx, sy, w, fx, fy] of pa.kuituKerrokset) {
-          kuitu += w * (kohinaKuitu(fx + px / (sx * s) + wp * 0.35,
-            fy + py / (sy * s) + wp) - 0.5);
+          kuitu += w * (kohinaKuitu(fx + px / (sx * sp) + wp * 0.35,
+            fy + py / (sy * sp) + wp) - 0.5);
           pk += w;
         }
         let risti = 0; let pr = 0;
         for (const [sx, sy, w, fx, fy] of pa.kuituRistiKerrokset) {
-          risti += w * (kohinaRisti(fx + px / (sx * s) + wp,
-            fy + py / (sy * s) + wp * 0.35) - 0.5);
+          risti += w * (kohinaRisti(fx + px / (sx * sp) + wp,
+            fy + py / (sy * sp) + wp * 0.35) - 0.5);
           pr += w;
         }
         /*
@@ -1603,8 +1628,8 @@ export async function patinoiSelaimessa({
          * riippumaton.
          */
         const raeN = rae(Math.round(x + faasiX), Math.round(y + faasiY), 1337) - 0.5;
-        const karkea = kohinaRae(px / (pa.raeKarkeaSkaala * s),
-          py / (pa.raeKarkeaSkaala * s)) - 0.5;
+        const karkea = kohinaRae(px / (pa.raeKarkeaSkaala * sp),
+          py / (pa.raeKarkeaSkaala * sp)) - 0.5;
         /*
          * KUITUKIMPUT. Kuitu on rakenteeltaan pitkä ja matala (34 x 2,3),
          * joten ilman katkoja se piirtää laakealle merelle yhtenäisiä
@@ -1616,8 +1641,8 @@ export async function patinoiSelaimessa({
          * 1, joten se ei muuta paperin keskisävyä.
          */
         const kl = pa.klimppi
-          ? Math.max(0, 1 + pa.klimppi * 2 * (kohinaKlimppi(px / (pa.klimppiSkaala * s),
-            py / (pa.klimppiSkaala * s)) - 0.5))
+          ? Math.max(0, 1 + pa.klimppi * 2 * (kohinaKlimppi(px / (pa.klimppiSkaala * sp),
+            py / (pa.klimppiSkaala * sp)) - 0.5))
           : 1;
         kerroin += ((kuitu / pk) * pa.kuitu + (risti / pr) * pa.kuituRisti) * kl
           + raeN * pa.rae + karkea * pa.raeKarkea;
@@ -1640,17 +1665,17 @@ export async function patinoiSelaimessa({
       /* --- 9. taitejäljet --- */
       if (ta) {
         let taite = 0;
-        const heilu = (kohinaTaite((x + faasiX) / (40 * s), (y + faasiY) / (40 * s)) - 0.5)
-          * ta.huojunta * s;
+        const heilu = (kohinaTaite((x + faasiX) / (40 * sp), (y + faasiY) / (40 * sp)) - 0.5)
+          * ta.huojunta * sp;
         for (const p of ta.pysty) {
           const et = Math.abs(x - p * L + heilu);
-          taite += Math.exp(-((et / (ta.ydin * s)) ** 2))
-            - ta.hehkuOsuus * Math.exp(-((et / (ta.hehku * s)) ** 2));
+          taite += Math.exp(-((et / (ta.ydin * sp)) ** 2))
+            - ta.hehkuOsuus * Math.exp(-((et / (ta.hehku * sp)) ** 2));
         }
         for (const p of ta.vaaka) {
           const et = Math.abs(y - p * K + heilu);
-          taite += Math.exp(-((et / (ta.ydin * s)) ** 2))
-            - ta.hehkuOsuus * Math.exp(-((et / (ta.hehku * s)) ** 2));
+          taite += Math.exp(-((et / (ta.ydin * sp)) ** 2))
+            - ta.hehkuOsuus * Math.exp(-((et / (ta.hehku * sp)) ** 2));
         }
         kerroin -= ta.voima * taite;
       }

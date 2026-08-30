@@ -275,14 +275,13 @@ if (PATINA_TASO !== 'ei' && !PATINA) {
   process.exit(1);
 }
 /**
- * Reunuksen leveys pikseleinä TÄLLE tasolle.
+ * Reunuksen leveys pikseleinä.
  *
- * KIINTEÄ LUKU EI KELPAA, koska patinan operaattorit skaalautuvat
- * `s`:llä (= tason leveys / 6400) aivan kuten moottorin muutkin mitat.
- * Syvimmällä tasolla s on 13,5, jolloin rantavyö on 7 · 13,5 = 95
- * pikseliä ja kohdistusheitto 35 — kuudenkymmenen pikselin reunus
- * jäisi niiden alle ja lohkon raja näkyisi juuri siellä, missä sen ei
- * pitäisi näkyä.
+ * KIINTEÄ LUKU KELPAA VASTA NYT. Ennen paperivakiokorjausta patinan
+ * operaattorit skaalautuivat `s`:llä (= tason leveys / 6400), jolloin
+ * syvimmällä tasolla rantavyö oli 7 · 13,5 = 95 pikseliä ja reunuksen
+ * oli pakko kasvaa tason mukana. Nyt jokainen paikallinen operaattori
+ * on paperivakio, joten sama luku riittää joka tasolle.
  *
  * 9 on suurin viitesäde reseptissä (SYVYYS.rantaVali yläraja 7,
  * KOHDISTUS 2,6, LEVIAMINEN 2) pyöristettynä ylöspäin; +16 kattaa
@@ -298,11 +297,21 @@ if (PATINA_TASO !== 'ei' && !PATINA) {
  * arkin pikselistä joka on jaollinen kahdeksalla — ja pienennetyt
  * ruudukot osuvat kaikilla lohkoilla samaan kohtaan.
  */
-function reunusTasolle(mitat) {
+function reunusTasolle() {
   const annettu = valitsin('reunus', null);
   if (annettu !== null) return Number(annettu);
-  const s = mitat.leveys / 6400;
-  return 8 * Math.ceil((9 * s + 16) / 8);
+  /*
+   * MITTAKAAVA ON PAPERIN, EI TASON (30.8.2026, paperivakiokorjaus).
+   *
+   * Kun jokainen paikallinen operaattori on paperivakio (`paperiS`),
+   * niiden ulottuma on sama joka tasolla eikä reunuksen tarvitse enää
+   * kasvaa tason mukana. Aiemmin z7 sai 144 pikselin reunuksen, jolloin
+   * 4 x 4 laatan lohko piirrettiin 2336 x 2336 pikselinä 2048:n sijaan
+   * eli 30 % ylimääräistä työtä; nyt reunus on 32 ja ylimääräinen työ
+   * 6 %. Tason `mitat` jää parametriksi, koska reunus on tason
+   * ominaisuus siinä missä laattaruudukkokin.
+   */
+  return 8 * Math.ceil((9 * PAPERI_S + 16) / 8);
 }
 const HARVA = lippu('harva');
 const HARVA_ALIN_TASO = Number(valitsin('harva-alin', 4));
@@ -497,31 +506,24 @@ console.log(`Laattapyramidi — lauta ${LAUTA.id}, laatta ${LAATTA} px, ${MUOTO}
 console.log(`  arkki laudalla  x ${arkinBbox.x} y ${arkinBbox.y.toFixed(1)} `
   + `w ${arkinBbox.w} h ${arkinBbox.h.toFixed(1)}`);
 /*
- * VAROITUS SYVIEN TASOJEN KOHDISTUSHEITOSTA.
+ * PAINOJÄLKI ON PAPERIVAKIO JOKA TASOLLA.
  *
- * Patinan kohdistusheitto ja musteen leviäminen skaalautuvat `s`:llä
- * eli ovat SAMAN KOKOISIA KARTALLA joka tasolla. Uloimmilla tasoilla se
- * on oikein ja hienovarainen; syvimmällä tasolla s on 13,5, jolloin
- * 2,6 pikselin heitto on 35 pikseliä ja 2 pikselin leviäminen 27 —
- * väriripsauksesta tulee sateenkaari ja hiusviivasta usva. Mitattu ja
- * nähty 30.8.2026 (Peloponnesos, z7).
+ * Raamattu, "PAPERIVAKIOT JA KARTTAVAKIOT": paperin ja painokoneen
+ * ominaisuudet ovat vakioita ulostulopikseleinä, maaston ominaisuudet
+ * kartan mittakaavassa. Pyramidissa nämä eroavat, koska taso ei ole
+ * sama arkki tarkempana vaan sama arkki isompana ja peli katsoo sitä
+ * noin 1:1 — siksi sekä moottori että patina saavat tästä `paperiS: 1`
+ * ja kaikki painojälki (viivanleveydet, rae, syy, kohdistus,
+ * leviäminen, rantaviivan suojavyö) on joka tasolla samanlevyistä.
+ * Kartan mittakaavaan jäävät arkin geometria ja kalusteet.
  *
- * Tämä ei ole korjattu tässä erässä, koska resepti on omistajan
- * päätös. Varoitus on tässä siksi, ettei parvi aja koko maailmaa
- * huomaamatta. Ehdotettu korjaus on raportissa.
+ * ILMAN TÄTÄ (mitattu 30.8.2026, Ateenan seutu): rannikon kynä oli
+ * z3:lla 1 px, z6:lla 11 px ja z7:llä 19-23 px, ja syvin taso oli
+ * tummanruskeaa vyötä eikä karttaa.
  */
-if (PATINA?.kohdistus) {
-  for (const m of tasot) {
-    const sm = m.leveys / 6400;
-    const heitto = Math.max(Math.abs(PATINA.kohdistus.dx), Math.abs(PATINA.kohdistus.dy)) * sm;
-    if (heitto > 6) {
-      console.log(`  VAROITUS z${m.z}: patinan kohdistusheitto on `
-        + `${heitto.toFixed(0)} px (viitearvo 2,6 px 6400 px:n arkilla). `
-        + 'Väriripsaus näkyy laattamittakaavassa sateenkaarena — '
-        + 'ks. docs/moduulit/laattapyramidi.md, patinan mittakaava.');
-    }
-  }
-}
+const PAPERI_S = 1;
+console.log(`  painojälki      paperivakioina (paperiS ${PAPERI_S}); `
+  + 'maasto ja kalusteet kartan mittakaavassa');
 
 for (const m of tasot) {
   const kaikki = m.sarakkeita * m.riveja;
@@ -902,6 +904,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
       siirto: { x: siirto.x - R, y: siirto.y - R },
       arkki: saumaArkki,
       sisalto,
+      paperiS: saumaPaperiS,
     });
     const kctx = kangas.getContext('2d', { willReadFrequently: true });
     if (patina && window.__patina) {
@@ -911,6 +914,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
         tausta: patina.tausta,
         maailma: kbbox,
         koko,
+        paperiS: saumaPaperiS,
         palauta: 'pikselit',
       });
       kctx.putImageData(tulos.pikselit, 0, 0);
@@ -921,6 +925,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
   let patinaProjektio = null;
   let saumaTyyli = null;
   let saumaArkki = null;
+  let saumaPaperiS = null;
 
   /*
    * SAUMATESTI: sama alue kerran isona kuvana ja kerran laattoina.
@@ -935,6 +940,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
     patinaProjektio = perus.projektio;
     saumaTyyli = perus.tyyli;
     saumaArkki = perus.arkki;
+    saumaPaperiS = perus.paperiS ?? null;
     const iso = await piirraPala(
       perus.bbox, perus.siirto, ruudukko * laatta, ruudukko * laatta, perus.koko, patina,
     );
@@ -1318,6 +1324,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
         siirto: { x: perus.siirto.x + siirtoPx - R, y: perus.siirto.y - R },
         arkki: perus.arkki,
         sisalto,
+        paperiS: perus.paperiS ?? null,
       });
       const kctx = kangas.getContext('2d', { willReadFrequently: true });
       if (patina && window.__patina) {
@@ -1327,6 +1334,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
           tausta: patina.tausta,
           maailma: bbox,
           koko: perus.koko,
+          paperiS: perus.paperiS ?? null,
           palauta: 'pikselit',
         });
         kctx.putImageData(t.pikselit, 0, 0);
@@ -1383,6 +1391,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
         tausta: patina.tausta,
         maailma: patina.maailma,
         koko: patina.koko,
+        paperiS: patina.paperiS ?? null,
         palauta: 'pikselit',
       });
       kctx.putImageData(tulos.pikselit, 0, 0);
@@ -1510,9 +1519,10 @@ if (lippu('saumatesti')) {
       koko: { w: mitat.leveys, h: mitat.korkeus },
       siirto: { x: 8 * LAATTA, y: 2 * LAATTA },
       arkki: { x: arkinBbox.x, y: arkinBbox.y },
+      paperiS: PAPERI_S,
     };
     const patinaParam = PATINA ? {
-      resepti: PATINA, tausta: TAUSTA, reunus: reunusTasolle(mitat),
+      resepti: PATINA, tausta: TAUSTA, reunus: reunusTasolle(), paperiS: PAPERI_S,
     } : null;
     const tulos = await sivu.evaluate(
       ([p, l, r, pat]) => window.__sauma(p, l, r, pat),
@@ -1608,7 +1618,7 @@ for (const { mitat, bx, by } of lohkot.values()) {
    * sisältä — patinan paikalliset operaattorit näkevät siis oikeat
    * naapurit myös laatan reunalla (ks. REUNUS).
    */
-  const R = PATINA ? reunusTasolle(mitat) : 0;
+  const R = PATINA ? reunusTasolle() : 0;
   const kx0 = s0 * LAATTA - R;
   const ky0 = r0 * LAATTA - R;
   const kw = pw + 2 * R;
@@ -1632,6 +1642,8 @@ for (const { mitat, bx, by } of lohkot.values()) {
     // laatan bboxista, jotta lohkosta leikattu laatta on tavulleen sama
     // kuin erikseen piirretty (maailmapiirto.js kuvaX).
     arkki: { x: arkinBbox.x, y: arkinBbox.y },
+    // Painojälki paperivakioina (ks. PAINOJÄLKI ON PAPERIVAKIO).
+    paperiS: PAPERI_S,
   };
   /*
    * Patinan `maailma` on kankaan bbox LAUDAN koordinaateissa: siitä
@@ -1646,6 +1658,7 @@ for (const { mitat, bx, by } of lohkot.values()) {
     maailma: kbbox,
     koko: { w: mitat.leveys, h: mitat.korkeus },
     reunus: R,
+    paperiS: PAPERI_S,
   } : null;
   const palat = await sivu.evaluate(
     ([a, laatta, t, l, pat, z]) => window.__lohko(a, laatta, t, l, pat, z),

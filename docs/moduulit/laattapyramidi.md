@@ -152,9 +152,11 @@ uudelleen — juuri siksi merkit osuvat laattoihin pikselilleen.
 Tämä on kohta, jossa pyramidi eroaa yhden arkin lehdestä, ja se tehtiin
 ensin väärin, mitattiin ja korjattiin.
 
-Moottorin muut mitat kerrotaan `S`:llä, jolloin ne ovat saman kokoisia
-KARTALLA joka tasolla — rannikon viiva ja paperin rae kuuluvat juuri
-niin. **Nimiö ei kuulu.** Peli valitsee tason ruudun tarkkuuden mukaan
+Moottorin kalusteet kerrotaan `S`:llä, jolloin ne ovat saman kokoisia
+KARTALLA joka tasolla — kehys ja kartussi kuuluvat juuri niin.
+**Nimiö ei kuulu**, eikä rannikon viiva tai paperin rae kuulu: ne
+osoittautuivat samaksi viaksi ja korjattiin luvussa 6d (tämä luku
+väitti 30.8. aamulla toisin). Peli valitsee tason ruudun tarkkuuden mukaan
 ja katsoo laattaa noin 1:1, joten `koko · S` pikseliä on `koko · S`
 LAITEPIKSELIÄ ruudulla: 14 pikselin nimi olisi uloimmalla tasolla
 1,5 px (näkymätön) ja syvimmällä **189 px** (absurdi). Ensimmäinen
@@ -300,10 +302,12 @@ kohdistusheitto ja leviäminen, jotka Raamatun tyyliohje nimeää.
 
 Lohko piirretään **reunuksen verran isompana** ja laatat leikataan sen
 sisältä, jolloin paikalliset operaattorit näkevät oikeat naapurit myös
-laatan reunalla. Reunus johdetaan tason mittakaavasta
-(`8 · ceil((9s + 16) / 8)`): kiinteä 64 px olisi jäänyt syvimmällä
-tasolla rantavyön (7 · 13,5 = 95 px) alle. Kahdeksan monikerta pitää
-patinan pienennetyt kentät (J4, J8) samassa kohdassa joka lohkolla.
+laatan reunalla. Reunus on **32 px joka tasolla** (`8 · ceil((9 · 1 +
+16) / 8)`) sen jälkeen, kun jokainen paikallinen operaattori on
+paperivakio (luku 6d). Sitä ennen se johdettiin tason mittakaavasta ja
+oli z7:llä 144 px, koska rantavyö oli 7 · 13,5 = 95 px. Kahdeksan
+monikerta pitää patinan pienennetyt kentät (J4, J8) samassa kohdassa
+joka lohkolla.
 
 **Mittaus paljasti vian, jota ei olisi huomannut katsomalla:** patinan
 pikselikohtainen rae ja dither luettiin *lehden omasta* pikselistä.
@@ -333,30 +337,122 @@ Patina hidastaa generoinnin **1,17 → 0,44 Mpx/s** (2,7-kertainen) ja
 kasvattaa tavut noin 2,6-kertaisiksi (patinan kohina pakkautuu
 huonosti). Molemmat päivitetyt luvut ovat luvussa 2 ja 3.
 
-### KERROTTAVA: patinan mittakaava syvillä tasoilla
+### Patinan mittakaava syvillä tasoilla — ratkaistu luvussa 6d
 
-Kohdistusheitto ja leviäminen skaalautuvat `s`:llä eli ovat saman
-kokoisia KARTALLA joka tasolla. Uloimmilla tasoilla se on oikein;
-syvimmällä `s` on 13,5, jolloin:
+Kohdistusheitto ja leviäminen skaalautuivat `s`:llä eli olivat saman
+kokoisia KARTALLA joka tasolla: 2,6 px → 18 px (z6) → **35 px** (z7),
+ja leviäminen 2 px → 14 → **27**. Nähtynä (Peloponnesos, z7,
+VERTAILUPALA) `taysi` maalasi koko mantereen sateenkaaren värisiksi
+läiskiksi. Ne irrotettiin `s`:stä 30.8., ja **muut passit seurasivat
+30.8. iltapäivällä** — koko luokitus on nyt luvussa 6d.
 
-| | viitearvo (6400 px arkki) | z6 | z7 |
+## 6d. Paperivakiot ja karttavakiot — mitattu ja korjattu
+
+*(Raamattu, "PAPERIVAKIOT JA KARTTAVAKIOT". Mitattu 30.8.2026 tässä
+kontissa; laatat verrattu tuotannon ämpäriin ja lähtötila todettu
+tavulleen samaksi ennen mittausta.)*
+
+Kohdistusheitto ja leviäminen olivat vain kaksi tapausta laajemmasta
+vikaluokasta. Sama virhe oli **koko piirtoketjussa**: yleislehden
+moottorissa `S = arkin leveys / 6400` on yhden arkin lehdellä pelkkä
+TARKKUUSKERROIN (sama kartta tarkempana, katsotaan kutistettuna) mutta
+pyramidissa MITTAKAAVAKERROIN (sama arkki isompana, katsotaan 1:1).
+Kaikki, mikä oli kerrottu `S`:llä, kasvoi siis tasoittain ruudulla.
+
+**Korjaus:** moottori ja patina saavat valinnaisen `paperiS`-asetuksen
+(`P` moottorissa, `sp` patinassa), joka on **oletuksena sama kuin `S`**
+— vanhat lehtityökalut eivät muutu. Pyramidi antaa `paperiS: 1`.
+
+| luokka | mitä | mistä |
+| --- | --- | --- |
+| **PAPERI (P)** | rannikon kaksi vetoa, järven viiva, asteverkon viiva, paperin kuitu/rae/laikku, akvarellin pigmentti, hypsometrian ja meren kohinan kudos, leikatun reunan tummennus ja häivytys | painojälki: kaivertajan kynä ja paperin kuitu eivät tiedä mitä mittakaavaa lehti esittää |
+| **PAPERI (P)**, patina | rosoisuus, paperin syy/rae/klimppi/warp, rantaviivan suojavyö (`rantaVali`), taitteet, vesiviivoitus (pois päältä), kohdistus + leviäminen (jo 30.8.) | sama peruste |
+| **KARTTA (S)** | rannikon MUOTO, hypsometria, rinnevarjostus, ikääntymisen laikku | maastoa ja maailmaa; tarkentuu tasoittain kuten pitääkin |
+| **ARKIN GEOMETRIA (S)** | kehyksen marginaali `kehys.yla/ala` | määrää laattaruudukon — lukittu mitta, ei saa muuttua |
+| **ARKIN KALUSTEET (S)** | kaksoisviivakehys, kartussi, mittajana, painajanrivi, kompassiruusu, valtamerten nimet | ladottu arkin mittoihin; **kaksi viimeistä ovat avoin asia, ks. alla** |
+
+### Mitattu: rannikon musteen leveys laatassa
+
+Mediaani yhtenäisen mustejakson pituudesta (L < 120) laatan riveiltä ja
+sarakkeilta, Ateenan seutu ja Länsi-Afrikka:
+
+| taso | S | ennen | jälkeen |
 | --- | --- | --- | --- |
-| kohdistusheitto | 2,6 px | 18 px | **35 px** |
-| musteen leviäminen | 2 px | 14 px | **27 px** |
+| z0 (koko maailma 675 px) | 0,105 | 1 px, rannikko käytännössä näkymätön | 2 px, rannikko ja asteverkko näkyvät |
+| z3 (5 400 px) | 0,84 | 1 px | 1 px |
+| z6 (43 200 px) | 6,75 | **11 px** | 1 px |
+| z7 (86 400 px) | 13,5 | **19–23 px** | 1 px |
 
-Nähtynä (Peloponnesos, z7, VERTAILUPALA): `taysi` maalaa koko
-mantereen **sateenkaaren värisiksi läiskiksi** ja hukuttaa
-rantaviivan usvaan. Se ei ole hienovarainen väriripsaus vaan
-painovirhe. Työkalu varoittaa tästä ajossa.
+Silmällä: z7 oli tummanruskeaa vyötä, jossa saaret olivat läiskiä ja
+maasto litteä vaalea pesu; nyt z7 on sama kartografia kuin z6, vain
+lähempää. **Uloin taso parani samalla korjauksella toiseen suuntaan:**
+z0:lla viiva oli 0,12 px eli näkymätön, ja mantereet sulivat mereen.
 
-**Ehdotus (ei toteutettu — resepti on omistajan päätös):** kohdistus ja
-leviäminen ovat PAINOJÄLJEN ominaisuuksia, eivät kartan, joten ne
-kuuluvat paperin pikseleihin samalla perusteella kuin nimiöt (luku 4).
-Käytännössä `* s` pois kolmesta kohdistusrivistä ja leviämisen säteestä
-(tools/patina.mjs). **6400 pikselin lehdille se ei muuta mitään**,
-koska niillä `s` = 1. Kokeiltu ja kuvattu: jälki on `keskitason`
-kaltainen mutta täyden reseptin rosoisuudella — juuri se, mitä
-tyyliohje pyytää sanalla "varovasti".
+### Hinta ja hyöty
+
+| | ennen | jälkeen |
+| --- | --- | --- |
+| tavua/px z6 (Ateenan otos) | 0,222 | 0,247 |
+| tavua/px z7 (Ateenan otos) | 0,217 | 0,248 |
+| koko pyramidi (skaalattu tasotaulusta) | 1,16…1,30 Gt | **noin 1,32…1,48 Gt** |
+| reunushukka z7:llä (lohko 4 × 4) | 30 % (reunus 144 px) | **6 % (reunus 32 px)** |
+
+Tavut kasvavat, koska paperin rae on nyt joka tasolla yhtä hienoa eikä
+harvene tason mukana — rae on korkeataajuista kohinaa, jota
+kuvanpakkaus ei voi pakata. Vastaavasti reunuksen kutistuminen vähentää
+piirtotyötä syvimmillä tasoilla noin viidenneksen. R2:n ilmaisraja on
+10 Gt, joten 1,5 Gt mahtuu yhä.
+
+### Sauma todennettu uudestaan
+
+`--saumatesti` kaikilla kahdeksalla tasolla korjatulla koodilla ja
+32 pikselin reunuksella:
+
+| taso | lohkoraja (tuotannon koe) | ankara saumatesti |
+| --- | --- | --- |
+| z0–z2 | 0 | 0 |
+| z3 | 6 | 6 (**ennen 97**) |
+| z4 | 3 | 2 |
+| z5 | 22 | 22 (ennen 20) |
+| z6–z7 | **0** | **0** |
+
+Erot ovat hajallaan vektorien reunapehmennyksessä eivätkä kasaudu
+laattarajalle (z5: 49 eroavaa kanavaa 6 224:stä on rajalla), ja
+työkalun oma saumavaroitus ei lauennut. Ankara koe **parani z3:lla
+97:stä 6:een**, koska erikokoisten kankaiden rasterointiero syntyi
+juuri paksuista viivoista.
+
+### Vanhat lehdet: no-op, todennettu
+
+| todiste | md5 ennen | md5 jälkeen |
+| --- | --- | --- |
+| `tee-yleislehti --leveys 1600` | `2179b10e…` | `2179b10e…` |
+| `patina.mjs --taso taysi` samalle kuvalle | `93468202…` | `93468202…` |
+
+Molemmat ovat tavulleen samat: yhden arkin lehdellä `paperiS` puuttuu,
+jolloin `P = S` ja `sp = s`.
+
+### AVOIN: kalusteet syvillä tasoilla
+
+Valtamerten nimet ja kompassiruusu ovat yhä arkin mittakaavassa, ja
+**syvillä tasoilla se näkyy**. Mitattu ja katsottu z7:llä:
+
+| kaluste | viitearvo (6400 px) | z7 |
+| --- | --- | --- |
+| TYYNIMERI, kirjaimen korkeus | 26 px | **351 px** |
+| sama nimi kokonaisuudessaan | ~250 px | **~3 350 px eli 6,5 laattaa** |
+| kompassiruusun ulkokehä | 322 px | **4 350 px eli 8,5 laattaa** |
+
+Laatta `z7/14/57` (Tyynimeri) on kokonaan kahden kirjaimen sisällä.
+
+**Tätä ei korjattu tässä erässä, koska se ei ole mittakaavakysymys vaan
+YLEISTYSKYSYMYS.** Paperivakioksi muuttaminen rikkoisi toisen pään:
+z0:lla maailma on 675 px leveä, ja 20 laitepikselin merennimi
+harvennuksineen olisi 190 px eli lähes kolmannes maailman leveydestä.
+Oikea ratkaisu on sama kynnyskoneisto kuin sisällöllä (luku 4):
+kalusteet piirretään vain tasoille, joilla arkki on lähellä
+viiteleveyttä (esim. z0–z4), ja jätetään pois syvemmiltä. **Millä
+tasolla raja menee, on tyylipäätös** — kirjattu Fablelle.
 
 ## 7. Harva pyramidi — mitattu, päätetty POIS
 
@@ -708,9 +804,13 @@ kaatoi ajon (`ahaggar x2`).
 
 ## 12. Avoimet
 
-1. **Patinan kohdistusheitto ja leviäminen syvillä tasoilla** (luku 6b)
-   — ehdotus tehty, päätös omistajalla. Tämä on ainoa asia, joka
-   kannattaa ratkaista ennen täysajoa.
+1. ~~Patinan kohdistusheitto ja leviäminen syvillä tasoilla~~ —
+   **ratkaistu**, ja koko vikaluokka sen mukana (luku 6d).
+1b. **Kalusteet syvillä tasoilla** (luku 6d, viimeinen alaluku):
+   valtamerten nimet ja kompassiruusu ovat z7:llä laatan kokoisia.
+   Ratkaisu on tasokynnys eikä mittakaava, ja kynnys on tyylipäätös.
+   Tämä on ainoa tiedossa oleva kartografinen vika, joka kannattaa
+   ratkaista ennen seuraavaa täysajoa.
 2. **Syvyyskäyrät oikeasta datasta** — päätetty myöhemmäksi eräksi.
 3. **Vinjetointi pelitilakerroksessa.** Se ei tule laattoihin
    (luku 6b), ja Raamattu listaa sen pelin ohueen pelitilakerrokseen.

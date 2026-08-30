@@ -1,146 +1,77 @@
-# Viesti Fablelle — kaksoisnimien korjaus (30.8.2026)
+# Viesti Fablelle — pyramidin paperivakiot (haara claude/pyramidi-paperivakiot)
 
-Haara `claude/pyramidi-pilotti`, rebasoitu tuoreesta `origin/main`
-(v1361). Ei versionostoa, ei PR:ää.
-**Portit: 1048 pass / 0 fail.**
+*(Opus, 30.8.2026. Haara tuoreesta origin/mainista v1363. Versiota EI
+nostettu, PR:ää EI tehty, generointityönkulkua EI ajettu — omistaja
+julkaisee ja ajaa. Muutos on TOOLS-puolella; js/-puoleen ei koskettu,
+koska toinen agentti purkaa siellä vanhaa lehtijärjestelmää.)*
 
-Haara oli jäljessä ja sisälsi squashatut committit uudelleen. Nollasin
-sen `origin/mainiin` — tarkistin ensin, että ero oli pelkkä
-versionosto (`js/main.js`, `js/muutokset.js`, `sw.js`), eli mitään
-työtä ei kadonnut. Nyt haarassa on tasan yksi uusi commit.
+## Lyhyesti
 
----
+Rantaviivavika oli oikea, mutta se oli vain yksi tapaus laajemmasta
+vikaluokasta: **koko piirtoketju kertoi painojäljen kartan
+mittakaavalla.** Moottorin `S` on yhden arkin lehdellä pelkkä
+tarkkuuskerroin mutta pyramidissa mittakaavakerroin, ja kaikki `S`:llä
+kerrottu kasvoi siksi tasoittain ruudulla. Mitattuna rannikon kynä oli
+z3:lla 1 px, z6:lla 11 px ja z7:llä 19–23 px; nyt se on 1 px joka
+tasolla.
 
-## Pareja ei ole kolme vaan KUUSI
+Sama korjaus paransi myös **uloimman tason**, josta ei ollut puhetta:
+z0:lla viiva oli 0,12 px eli näkymätön ja mantereet sulivat mereen.
 
-Tämä on raportin tärkein kohta. Ohjeessa luki "tasan kolme tuplaa:
-Alpit, Ahaggar, Appalakit". Kun tein säännöstä yleisen ja mittasin,
-pareja löytyikin kuusi: laskenta oli tehty vain **vuoria** (52) vasten,
-mutta myös **järvet** (38) kaksintuvat.
+Vanhat lehdet ovat **tavulleen ennallaan** (kaksi md5-todistetta).
 
-| pari | laji | etäisyys (lautayksikköä) |
-| --- | --- | --- |
-| Titicaca | järvi | 3,8 |
-| Appalakit | vuori | 20,3 |
-| Tšad-järvi | järvi | 30,3 |
-| Tanganjika | järvi | 54,4 |
-| Ahaggar | vuori | 95,6 |
-| Alpit | vuori | 114,7 |
+Yksi hälytys oli väärä: **nimet eivät katoa z7:llä.** Ateena on
+nimetty naapurilaatassa `z7/93/41`; laatassa `92/41` ei ole nimiä
+kummallakaan tasolla. Ladonta antaa 345 nimiötä ja 0 pudotusta sekä
+z6:lla että z7:llä.
 
-Kolmen nimen kovakoodaus olisi korjannut puolet viasta ja jättänyt
-kolme järveä kartalle kahdesti. Yleinen sääntö löysi ne itse — juuri
-siksi ohjeesi olla kovakoodaamatta oli oikea.
+## Päätöskortti omistajalle (en toteuttanut)
 
-Yksi yksityiskohta, joka olisi kaatanut naiivin toteutuksen: lauta
-sanoo **Tšad-järvi**, nimilista **Tšadjärvi**. Tarkka
-merkkijonovertailu ei olisi nähnyt niitä samaksi nimeksi. Vertailu
-tehdään normalisoituna (ilman tarkkeita, välimerkkejä ja
-kirjainkokoa).
+**Kalusteet syvillä tasoilla.** Valtamerten nimet ja kompassiruusu
+ovat yhä arkin mittakaavassa. Katsoin z7-laatan `14/57` (Tyynimeri):
+se on kokonaan kahden kirjaimen sisällä. Mitat: kirjaimen korkeus
+26 px → 351 px, koko nimi ~3 350 px eli 6,5 laattaa, kompassin
+ulkokehä 322 px → 4 350 px eli 8,5 laattaa.
 
-## Etäisyysraja on vakuutus, ei viritysruuvi
+En korjannut, koska **tämä ei ole mittakaavakysymys vaan
+yleistyskysymys.** Paperivakioksi muuttaminen rikkoisi toisen pään:
+z0:lla maailma on 675 px leveä ja 20 laitepikselin merennimi olisi
+harvennuksineen 190 px eli lähes kolmannes maailman leveydestä. Oikea
+ratkaisu on sama kynnyskoneisto kuin sisällöllä: kalusteet vain
+tasoille, joilla arkki on lähellä viiteleveyttä (esim. z0–z4).
+**Millä tasolla raja menee, on tyylipäätös.** Se on ainoa tiedossa
+oleva kartografinen vika, joka kannattaa ratkaista ennen seuraavaa
+täysajoa — samalla ajolla, ei erikseen.
 
-Raja on 400 lautayksikköä. Mittasin herkkyyden sen sijaan että olisin
-valinnut luvun tunnelmalla:
+Kehyksen marginaali ja sen kalusteet (kaksoisviiva, kartussi,
+mittajana, painajanrivi) jäävät joka tapauksessa arkin mittakaavaan:
+marginaali määrää laattaruudukon, ja sen sisällä olevan kalusteen on
+oltava marginaalin kokoinen.
 
-| raja | pareja |
-| --- | --- |
-| 50 | 3 (liian tiukka) |
-| 100 | 5 (liian tiukka) |
-| 115 … 6000 | **6** |
+## Kerrottavat sivuvaikutukset
 
-Kaikki rajat välillä 115…6000 antavat saman tuloksen, joten luku ei
-säädä mitään nykyisellä aineistolla — se estää vain sen, että joku
-myöhemmin lisää samannimisen paikan toiselle mantereelle ja menettää
-nimiönsä. 400 on yli kolminkertainen pelivara kauimmaiseen aitoon
-pariin (Alpit 114,7).
+1. **Tavut kasvavat noin 14 %.** Mitattu Ateenan otoksesta: z6
+   0,222 → 0,247 tavua/px, z7 0,217 → 0,248. Koko pyramidi
+   1,16…1,30 Gt → **noin 1,32…1,48 Gt**. Syy on rakenteellinen:
+   paperin rae on nyt joka tasolla yhtä hienoa eikä harvene tason
+   mukana, ja rae on juuri sitä korkeataajuista kohinaa, jota
+   kuvanpakkaus ei voi pakata. R2:n ilmaisraja 10 Gt ei ole uhattuna.
+2. **Piirtotyö vähenee syvimmillä tasoilla.** Kun jokainen
+   paikallinen operaattori on paperivakio, lohkon reunuksen ei enää
+   tarvitse kasvaa tason mukana: 144 px → 32 px, eli 4 × 4 laatan
+   lohkon ylimääräinen työ 30 % → 6 %.
+3. **Jokainen laatta muuttuu**, myös z0–z5. Pyramidi on ajettava
+   kokonaan uudelleen uudella versionumerolla — osittainen ajo
+   jättäisi ämpäriin kaksi eri kartografiaa.
+4. Työkalun vanhentunut VAROITUS-tuloste kohdistusheitosta poistettiin
+   (kohdistus irrotettiin `s`:stä jo aiemmin, joten varoitus valehteli
+   jokaisessa ajossa).
 
-## Kumpi nimiö jää — noudatin näkemystäsi, mutta mittaus tarkensi sitä
+## Havainto js/-puolelta (en koskenut)
 
-Näkemyksesi oli oikea: vuoriston kohdalla oikea esitys on vuorisymboli
-ja sen nimi, ja laudan MERKIN on jäätävä. Molemmat merkit jäävät, vain
-nimiö yhdistetään.
-
-**Mutta suora vaiennus olisi tehnyt uuden vian.** Maastonimillä on eri
-yleistyskynnys kuin kaupunginnimillä. Vuorennimi syttyy samalla
-kynnyksellä (0,45) kuin kaupungin nimi — siellä vaiennus on ilmaista.
-Järven nimi syttyy vasta 0,9:llä kun tärkeys > 1, ja kaupungin nimi jo
-0,45:llä. Jos kaupungin nimiö vaiennettaisiin suoralta kädeltä,
-**Titicaca, Tanganjika ja Tšad-järvi jäisivät välillä 0,45…0,9
-pisteeksi ilman nimeä — kokonaisen tason ajan.**
-
-Siksi sääntö on tasokohtainen: kaupungin nimiö väistää vasta silloin,
-kun maastonimi oikeasti piirtyy tällä tasolla. Sitä ennen kaupungin
-nimiö nimeää kohteen itse. Tämän näkee liitteenä olevalta
-Sahara-laatalta: Ahaggar on vuorisymbolin nimi, ja Tšad-järvi on
-samalla laatalla kaupunkinimiönä, koska järvennimi ei vielä syty z3:lla.
-
-Parillinen nimiö ladotaan **kaupungin tärkeydellä** mutta maastonimen
-ulkoasulla ja paikalla — muuten se putoaisi tilanpuutteeseen, koska
-maastonimet ladotaan vasta kaupunkien jälkeen.
-
-Ladonta ajetaan kerran tasoa kohti koko arkille, joten päätös on sama
-joka lohkossa eikä lohkorajalle synny kaksoisnimeä.
-
-## Todennus
-
-Ajoin z0–z3 (109 laattaa) korjatulla koodilla:
-
-```
-ladonta z0  0 nimiötä,  0 pudotettu, päällekkäisyyksiä 0, kaksoisnimiä 0
-ladonta z1  0 nimiötä,  0 pudotettu, päällekkäisyyksiä 0, kaksoisnimiä 0
-ladonta z2  62 nimiötä, 0 pudotettu, päällekkäisyyksiä 0, kaksoisnimiä 0
-ladonta z3  295 nimiötä, 18 pudotettu, päällekkäisyyksiä 0, kaksoisnimiä 0
-```
-
-Silmällä pyytämäsi laatat:
-
-- **z3 sarake 5 rivi 3** (Sahara): Ahaggar tasan kerran, vuorisymbolin
-  nimenä; kaupunkipiste tallella symbolin alapuolella.
-- **z3 sarake 5 rivi 2** (Alpit): Alpit tasan kerran, vuorisymbolin
-  nimenä Alppien harjalla.
-- **z3 sarake 2 rivi 2** (Appalakit): Appalakit tasan kerran,
-  vuorisymbolin nimenä; kaupunkipiste tallella.
-
-## Uusi tarkistus, ja todiste ettei se ole tyhjä
-
-Kaksoisnimi **ei ole päällekkäisyys**. Ahaggar oli kartalla kahdesti
-satojen pikselien päässä itsestään, eikä olemassa oleva riippumaton
-leikkaustesti nähnyt siinä mitään vikaa — se etsi päällekkäisiä
-laatikoita, eikä niitä ollut. Se on oma virheluokkansa ja sai oman
-tarkistuksensa: ajo kaatuu, jos sama (normalisoitu) nimi esiintyy
-tasolla kahdesti.
-
-Tarkistus, joka ei koskaan laukea, ei todista mitään, joten todensin
-sen: kytkin parituksen pois ja ajoin uudelleen. Ajo kaatui odotetusti.
-
-```
-ladonta z3  297 nimiötä, 19 pudotettu, päällekkäisyyksiä 0, kaksoisnimiä 2
-Error: Ladonta jätti 2 kaksoisnimeä tasolle z3 (esim. ahaggar x2)
-       — sama nimi saa esiintyä kartalla vain kerran.
-```
-
-Tarkistin myös, että sivulle upotettu säännöllinen lauseke on oikea
-selaimessa asti. `\p{L}` olisi template-literaalissa muuttunut
-hiljaisesti muotoon `p{L}`; poimin valmiin sivukoodin ja koestin
-funktion — `Tšad-järvi` ja `Tšadjärvi` normalisoituvat samaksi, `Wien`
-ja `Bonn` eivät.
-
-## Sivuhavainto (en korjannut, kulukuuri)
-
-Sama kaksoisnimi on todennäköisesti myös pelin omassa laudan piirrossa:
-`js/mapart.js` kokoaa maastonimet samasta nimilistasta, kaupunkien
-nimet tulevat laudalta, eikä niitä verrata toisiinsa siellä
-sen enempää kuin täällä. Sen törmäyksenvälttely katsoo vain
-päällekkäisiä laatikoita, joten etäällä toisistaan oleva kaksoisnimi
-menisi läpi samalla tavalla. En todentanut tätä ajamalla peliä enkä
-koskenut siihen.
-
-## Muutetut tiedostot
-
-- `tools/fokuskartta/sisalto.mjs` — pariutus (`parita`,
-  `normalisoiNimi`, `PARIN_ETAISYYS`)
-- `tools/generoi-laattapyramidi.mjs` — tasokohtainen päätös
-  ladonnassa, maastonimen ohitus parillisille, kaksoisnimitarkistus
-- `docs/moduulit/laattapyramidi.md` — luku 6c.1
-
-Ei versionostoa, ei PR:ää, ei täysajoa, ei vientiä ämpäriin.
+`js/laattapyramidi.js` lukee version luettelosta `pyramidi.json`, joten
+uusi ajo uudella versiolla ei vaadi js-muutosta. Sen sijaan
+`js/media.js FOKUS_VUOSIKERTA` on nostettava, jos `patinoi-fokus.yml`
+ajetaan uudelleen — patina.mjs muuttui, vaikka sen ULOSTULO vanhalla
+polulla on todennetusti sama; nosto on tarpeen vasta jos joku muu
+muuttaa reseptiä.
