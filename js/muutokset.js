@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1372, teksti: 'Selitenappi neliöksi ja kiinni yläkulmaan' },
   { v: 1371, teksti: 'Kaupunkien laatat 30 % pienemmiksi' },
   { v: 1370, teksti: 'Meren syvyysporrastus kaksinkertaistettu' },
   { v: 1369, teksti: 'Nimet laatoista peliin, mittajana ja kehysviivat' },

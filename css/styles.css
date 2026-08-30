@@ -21649,24 +21649,30 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
 /* ---------------------------------------------------------------- valikko */
 
 /*
- * KOTELO OIKEAAN YLÄKULMAAN, MAAKYLTIN ALLE. Kyltti (.maa-pilleri) on
- * kartan oikean yläkulman vanha asukas (top 0.4rem, korkeus 1.2rem),
- * ja se katoaa vain fokusnäkymässä. Nappi ei saa hypätä paikasta
- * toiseen näkymän mukana, joten se asuu aina kyltin alapuolella —
- * 2rem jättää kyltin alareunan ja napin väliin 0,4rem raon.
+ * KOTELO KIINNI OIKEAAN YLÄKULMAAN (omistajan pelitesti 30.8.2026:
+ * *"Selite ikoni pitää olla neliön mallinen ja kiinnitetty yläkulmaan
+ * (nyt liikaa irti ylhäältä)"*).
+ *
+ * MIKSI SE ROIKKUI IRRALLAAN. Nappi väisti maakylttiä (.maa-pilleri,
+ * top 0.4rem, korkeus 1.2rem), joka asui kartan oikeassa yläkulmassa
+ * — 2rem jätti kyltin alle 0,4rem raon. Kylttiä ei enää LUODA
+ * pelinäkymässä (js/ui.js paivitaMaaPilleri, 30.8.2026: maan nimen
+ * kertoo kartuutsi vasemmassa alanurkassa), joten nappi väisti tyhjää
+ * ja jäi kellumaan keskelle kartan ylälaitaa. Nyt sama 0,4rem
+ * molemmilta reunoilta, eli nappi istuu nurkassa symmetrisesti.
  */
 .karttaselite {
   position: absolute;
-  top: 2rem;
+  top: 0.4rem;
   right: 0.4rem;
   z-index: 6;
 }
 
 /*
- * NAPPI ON KARTAN NAPPIEN PERHETTÄ: sama pyöreä pergamenttilaatta ja
- * sama sormimitta kuin maalehtinapilla (.maalehti-nappi) — pehmuste
- * nollassa ja keskitys gridillä, koska 20 px:n kuvake ei mahdu
- * 40 px:n ympyrän pehmustettuun sisältöalueeseen.
+ * NAPPI ON KARTAN NAPPIEN PERHETTÄ: sama pergamenttilaatta ja sama
+ * sormimitta kuin muilla ikoninapeilla — pehmuste nollassa ja keskitys
+ * gridillä, koska 20 px:n kuvake ei mahdu 40 px:n napin pehmustettuun
+ * sisältöalueeseen.
  */
 .karttaselite-nappi {
   display: grid;
@@ -21677,7 +21683,13 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   padding: 0;
   place-items: center;
   border: 1px solid var(--line);
-  border-radius: 50%;
+  /*
+   * NELIÖ EIKÄ YMPYRÄ (omistaja 30.8.2026). var(--radius) on 12px eli
+   * sama pyöristys kuin pelin muilla ikoninapeilla, jolloin selite on
+   * samaa perhettä ratas- ja valikkonapin kanssa eikä yksinäinen
+   * pyörylä kartan päällä.
+   */
+  border-radius: var(--radius);
   background: rgba(239, 220, 180, 0.9);
   color: var(--map-ink);
   cursor: pointer;
