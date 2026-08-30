@@ -930,7 +930,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     { lat: 0, nimi: 'Päiväntasaaja', vahva: true, faasi: 0.5 },
     { lat: EKLIPTIIKKA, nimi: 'Kravun kääntöpiiri', faasi: 0.26 },
     { lat: -EKLIPTIIKKA, nimi: 'Kauriin kääntöpiiri', faasi: 0.74 },
-    { lat: 90 - EKLIPTIIKKA, nimi: 'Pohjoinen napapiiri', faasi: 0.13 },
+    { lat: 90 - EKLIPTIIKKA, nimi: 'Pohjoinen napapiiri', faasi: 0.17 },
   ];
   /*
    * NOLLAMERIDIAANI, EI "GREENWICHIN MERIDIAANI". Kaksi syytä, ja
