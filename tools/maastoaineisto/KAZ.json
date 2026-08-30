@@ -1,0 +1,52 @@
+{
+  "_": "Kazakstanin maastokohteet. Faktat en-Wikipediasta 30.8.2026. Kaspianmeri on annettu IRN:lle, joten Kazakstanin 'meri' on Araljärvi — jonka koko tarina on juuri se, ettei merta enää ole.",
+  "vuoret": [
+    {
+      "nimi": "Khan Tengri",
+      "lon": 80.175,
+      "lat": 42.2108,
+      "m": 6995,
+      "lahdeKoordinaatti": "en-Wikipedia \"Khan Tengri\"",
+      "nappi": "Taivaiden valtias kolmen maan rajalla",
+      "kysymykset": [
+        "Miksi huipun korkeus riippuu jäästä?",
+        "Mikä Tian Shan on?"
+      ],
+      "korostukset": ["Tian Shan|Tian Shanin"],
+      "teksti": "Khan Tengri, \"taivaiden valtias\", kohoaa Tian Shanin vuoristossa täsmälleen Kazakstanin, Kirgisian ja Kiinan rajojen yhtymäkohdassa, ja se on Kazakstanin korkein kohta. Kalliohuippu on 6 995 metrissä, mutta laen jääkupu nostaa vuoren 7 010 metriin — siksi vuorikiipeilijät laskevat sen seitsemäntuhantisten joukkoon. Koko Tian Shanissa sen ylittää vain Jengish Chokusu.",
+      "lahde": "en-Wikipedia \"Khan Tengri\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Araljärvi",
+      "lon": 60.0,
+      "lat": 45.0,
+      "lahdeKoordinaatti": "en-Wikipedia \"Aral Sea\" — entisen järven keskipiste",
+      "nappi": "Meri, joka katosi ihmisen käsissä",
+      "kysymykset": [
+        "Minne Araljärven vesi meni?",
+        "Mitä 'saarten meri' tarkoittaa?"
+      ],
+      "korostukset": ["Aralkum|Aralkumin"],
+      "teksti": "Araljärvi oli vielä 1900-luvun puolivälissä maailman kolmanneksi suurin järvi, 68 000 neliökilometriä suolaista vettä Kazakstanin ja Uzbekistanin välissä — nimi tarkoittaa saarten merta, sillä saaria oli yli tuhat. Kun Neuvostoliitto käänsi sitä ruokkivat joet puuvillapelloille 1960-luvulta alkaen, järvi alkoi kutistua, ja vuoteen 2007 mennessä jäljellä oli kymmenesosa. Entinen pohja on nykyään aavikkoa, ja vain pohjoinen allas Kazakstanin puolella on saatu osin elvytettyä.",
+      "lahde": "en-Wikipedia \"Aral Sea\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Irtyš",
+      "lon": 80.25,
+      "lat": 50.42,
+      "lahdeKoordinaatti": "Semein kohdalla Itä-Kazakstanissa; artikkelin koordinaatti 68,83 / 61,08 on alajuoksulla Venäjällä",
+      "nappi": "Maailman pisin sivujoki",
+      "kysymykset": [
+        "Miksi Irtyš on 'vain' sivujoki?",
+        "Minkä kolmen maan läpi joki virtaa?"
+      ],
+      "korostukset": ["Ob|Obiin"],
+      "teksti": "Irtyš alkaa Mongolian Altailta Kiinan puolelta, virtaa Kazakstanin itäosan halki ja jatkaa Venäjälle, missä se laskee Obiin. Se on maailman pisin sivujoki — pidempi kuin pääjokensa siihen asti, missä ne kohtaavat. Yhdessä Ob ja Irtyš muodostavat jokijärjestelmän, joka kokoaa vedet suurimmasta osasta Länsi-Siperiaa ja Altain vuoristoa.",
+      "lahde": "en-Wikipedia \"Irtysh\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

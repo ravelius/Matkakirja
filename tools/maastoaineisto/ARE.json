@@ -1,0 +1,36 @@
+{
+  "_": "Arabiemiraattien maastokohteet. Faktat en-Wikipediasta 30.8.2026. Maan tunnusmaasto on Rub al-Khalin hiekka-aavikko, mutta aavikolle ei ole kohdetyyppiä (KOHDE_TYYPIT: vuori, meri, saari, joki) — siksi listalla ovat vuori ja meri.",
+  "vuoret": [
+    {
+      "nimi": "Jebel Jais",
+      "lon": 56.1842,
+      "lat": 25.9531,
+      "m": 1892,
+      "lahdeKoordinaatti": "en-Wikipedia \"Jebel Jais\"",
+      "nappi": "Korkein kohta — mutta ei huippu",
+      "kysymykset": [
+        "Miksi maan korkein kohta ei ole huippu?",
+        "Mikä Hajarin vuoristo on?"
+      ],
+      "korostukset": ["Hajar|Hajarin"],
+      "teksti": "Jebel Jais on Hajarin vuoriston vuori Ras al-Khaimahin emiraatin ja Omanin rajalla. Sen varsinainen huippu, 1 934 metriä, on Omanin puolella — Arabiemiraattien korkein kohta on saman vuoren rinteellä 1 892 metrissä, kohouma jolla on vain kymmenisen metriä omaa korkeutta. Korkein kokonaan maan puolella oleva huippu on viereinen Jabal ar Rahrah, 1 691 metriä.",
+      "lahde": "en-Wikipedia \"Jebel Jais\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Persianlahti",
+      "lon": 53.0,
+      "lat": 25.3,
+      "lahdeKoordinaatti": "ulappa Abu Dhabin edustalla; artikkelin oma keskipiste 52 / 26 on lähellä",
+      "nappi": "Matala meri helmien ja öljyn päällä",
+      "kysymykset": [
+        "Mikä Hormuzinsalmi on?",
+        "Miksi lahden rannoilla sukellettiin helmiä?"
+      ],
+      "korostukset": ["Hormuzinsalmi|Hormuzinsalmen"],
+      "teksti": "Persianlahti on Arabian niemimaan ja Iranin välinen sisämeri, Arabianmeren ja Intian valtameren jatke. Avomerelle siitä pääsee vain idästä, kapean Hormuzinsalmen kautta Omaninlahteen, ja luoteisrannan muodostaa Shatt al-Arabin suisto. Lähes koko Arabiemiraattien rannikko ja kaikki sen suuret kaupungit ovat tämän lahden rannalla.",
+      "lahde": "en-Wikipedia \"Persian Gulf\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}
