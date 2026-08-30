@@ -63,12 +63,11 @@
  *      karttapinnan alalaidassa eikä yllä ylävasempaan
  *      matkakirjakorttiin asti (css: max-height).
  *
- * KUVAT OVAT KARTALLA (omistajan tarkennus 24.8.2026). Fokusvirran
- * kuvat piirtyvät pieninä kehystettyinä vinjetteinä Ateenan kohdalle
- * kartalle, laatan yläpuolelle, ja napautus avaa ne pelin omaan
- * katselimeen. Kortissa kuvasta on vain pieni viite. Ks. KUVAT KARTALLA
- * alempana — siellä myös perustelu kiinteälle ruutukoolle ja
- * suodattimettomuudelle.
+ * KUVAT OVAT KORTEISSA, EIVÄT KARTALLA (omistajan bugiraportti
+ * 30.8.2026; kumoaa 24.8.2026 tarkennuksen "kuvat kartalle").
+ * Karttavinjettien viuhka purettiin — kartan merkki on symboli +
+ * nimiö, ja sisältökuvat elävät korteissa ja lehdissä. Ks. KUVAT
+ * KARTALLA — PURETTU alempana.
  *
  * MITÄ TÄMÄ MODUULI EI TEE. Se ei kosketa laattamekaniikkaa: vaiheen 6
  * nappi kutsuu tismalleen samaa game.actionQuizia kuin saapumiskortin
@@ -145,7 +144,8 @@ export const TAKY_PALKKIO = 50;
  *     Tutki-napista, ei laatan napautuksesta;
  *   - LEHTILUKKO on auki: openArrival avaa kaupunkilehden suoraan myös
  *     fokusmoodissa (fokusvirtaOhittaaLehden palauttaa aina false);
- *   - kartan kuvavinjetit jäävät piirtämättä (ks. alla).
+ *   - kartan kuvavinjetit jäivät piirtämättä (viuhka on sittemmin
+ *     purettu kokonaan, ks. KUVAT KARTALLA — PURETTU).
  *
  * MIKÄ SÄILYY: isoisän merkintä ylävasemmassa matkakirjakortissa
  * (fokusvirtaMatkakirja + Sophian kuva) on kirjaa eikä korttiannostelua
@@ -814,10 +814,6 @@ function siirry(ui, city, data, teko) {
   asetaFokusvirtaTila(ui.game, city, tila);
   ui.onChange?.(ui.game);
   piirraKortti(ui, city, data, tila);
-  // Kartan vinjetit seuraavat vaihetta: uusi vaihe voi tuoda uuden
-  // kuvan kaupungin ylle, eikä sitä tarvitse odottaa seuraavaan
-  // piirtoon.
-  paivitaFokuskuvat(ui);
   return tila;
 }
 
@@ -1157,7 +1153,7 @@ function piirraJalkikuva(ui, kohde, kuva) {
  * ── MITEN LIIKE PIIRRETÄÄN: FLIP, EI KEHYS KERRALLAAN ──────────────
  *
  * Kuva ladotaan HETI lopulliseen kokoonsa, ja sen päälle asetetaan
- * muunnos, joka kutistaa sen takaisin vinjetin ruutupaikkaan; seuraavana
+ * muunnos, joka kutistaa sen takaisin ankkurinsa ruutupaikkaan; seuraavana
  * kehyksenä muunnos poistetaan siirtymän kanssa. Sama oppi kuin kartan
  * kamera-ajossa (js/kartta.js ajaKamera): asettelu tehdään kerran ja
  * liike jätetään kompositorille, jolloin animaatio ei kilpaile kartan
@@ -1224,7 +1220,8 @@ export function suljeSuurennos(ui) {
 }
 
 /**
- * Kuva suureksi kartan päälle, vinjetin paikalta kasvattaen.
+ * Kuva suureksi kartan päälle, ankkurinsa paikalta kasvattaen (kortin
+ * kuvaviite antaa ankkurikseen oman nappinsa).
  *
  * @param {object} ui
  * @param {Array} lista selattavat kuvat (yksi tai koko viuhka)
@@ -1262,7 +1259,7 @@ function avaaSuurennos(ui, lista, alku, ankkuri) {
     img.alt = kuva.selite ?? '';
     asetaKuva(img, kuvanOsoite(kuva, 320), kuvanVara(kuva, 320), null);
     /*
-     * PIKKUKUVA ENSIN, ISO PERÄSSÄ. Vinjetin pikkukuva on jo selaimen
+     * PIKKUKUVA ENSIN, ISO PERÄSSÄ. Kortin pikkukuva on jo selaimen
      * välimuistissa, joten se on ruudulla samassa kehyksessä — ja mikä
      * tärkeämpää, sillä on oikeat mittasuhteet heti, jolloin kasvun
      * lähtö- ja maalilaatikko voidaan mitata odottamatta verkkoa.
@@ -1327,7 +1324,7 @@ function avaaSuurennos(ui, lista, alku, ankkuri) {
    * postikortin paperikehyksen ja kuvatekstipalkin, pelkän kuvan
    * kutistaminen olisi näyttänyt siltä, että valmis kortti on jo
    * ruudulla ja kuva vasta hakee paikkaansa sen sisällä. Nyt koko
-   * kortti kasvaa vinjetin paikalta — yksi liike, yksi kappale.
+   * kortti kasvaa ankkurin paikalta — yksi liike, yksi kappale.
    */
   const ankkuriMuunnos = () => {
     const alkuun = ankkuri?.(i)?.getBoundingClientRect?.();
@@ -1533,8 +1530,10 @@ function nappi(teksti, luokka, toiminto, este = null) {
 /* ---------- vaihe 2 ---------- */
 function piirraPollo(ui, city, data, kohde) {
   otsikko(kohde, PULU_YLARIVI, null);
-  // Herokuva on kartalla Ateenan yllä (paivitaFokuskuvat), ei kuplassa:
-  // puhekuplaan kuuluu puhe, ja kuva kuuluu sinne mistä puhutaan.
+  // Kuplassa ei ole kuvaa: puhekuplaan kuuluu puhe. Herokuva on
+  // kaupunkilehden herokuva (`pollo.kuva` osoittaa pakettien säännön
+  // mukaan lehden kuvaan) — kartalle sitä ei enää piirretä (ks. KUVAT
+  // KARTALLA — PURETTU).
   /*
    * ISOISÄN MAADOITUS ENSIN (Fablen kaanon, omistajan hyväksyntä
    * 27.8.2026, TUURAAJA-KEHYS).
@@ -2749,261 +2748,45 @@ function aarremerkintaLuettu(ui, city) {
   return true;
 }
 
-/* ==================== KUVAT KARTALLA ==================== */
+/* ==================== KUVAT KARTALLA — PURETTU ==================== */
 
 /*
- * FOKUSVIRRAN KUVAT PIIRTYVÄT KARTALLE (omistajan tarkennus 24.8.2026:
- * *"fokusvirran KUVAT PIIRTYVÄT PIENENÄ SUORAAN KARTALLE kohteen päälle
- * … ja pelaaja KLIKKAA ne auki isoksi"*).
+ * FOKUSVIRRAN KUVAVINJETIT KARTALLA PURETTIIN (omistajan bugiraportti
+ * 30.8.2026, kuvakaappaus Sofian maalehdestä: kaksi valokuvapinniä
+ * leijui kartalla Sofian luoteispuolella — kuvien ei kuulu näkyä
+ * kartalla, sisältökuvat kuuluvat vain kortteihin).
  *
- * Vinjetti on pieni valokuvapinni: pergamenttikehys, kuva sen sisällä ja
- * hento nuora kaupungin pisteeseen. Kuvat kertyvät virran edetessä —
- * herokuva, jokainen avattu täky, oppitunnin kuva — ja asettuvat
- * viuhkaksi laatan YLÄPUOLELLE, jottei laatta jää niiden alle. Napautus
- * avaa saman katselimen kuin kortin kuvaviite, ja katselimessa voi
- * selata koko viuhkan läpi.
+ * MITÄ TÄSSÄ OLI: 24.8.2026 linjauksen ("KUVAT KARTALLE") pinniviuhka —
+ * pöllön herokuva ja oppitunnin kuva piirtyivät pieninä polaroideina
+ * kaupungin ylle (paivitaFokuskuvat/piirraPinni), nuorat kaupungin
+ * pisteeseen, kiinteä ruutukoko, oma SVG-kerros. Kevyen kulun kokeilun
+ * ajan FOKUSVIRTA_KORTIT piti viuhkan tyhjänä, ja kun kortit
+ * käännettiin takaisin päälle 29.8.2026, viuhka heräsi huomaamatta
+ * henkiin — mutta kartan merkkikieli oli sillä välin muuttunut sen
+ * alta: yhtenäinen kohdemalli ja KARTTAMERKIT MINIMALISTISIKSI
+ * (Raamattu) sanovat, että kartan merkki on symboli + nimiö, ja
+ * sisältökuvat elävät korteissa.
  *
- * ── KIINTEÄ RUUTUKOKO, EI LAUDAN YKSIKÖITÄ ─────────────────────────
+ * MITÄÄN SISÄLTÖÄ EI KADONNUT: oppitunnin kuva on oppituntikortin
+ * pääkuva (piirraKuva) ja pöllön herokuva on pakettien oman säännön
+ * mukaan kaupunkilehden herokuva (`pollo.kuva` osoittaa lehden
+ * herokuvaan) — molemmat ovat siis yhä pelaajan nähtävissä siellä,
+ * minne ne kuuluvat. Kuvien SUURENNOS (avaaSuurennos) jäi: sitä
+ * käyttävät korttien kuvaviitteet.
  *
- * Omistaja pyysi päättämään ja perustelemaan. Valinta on KIINTEÄ
- * RUUTUKOKO: ryhmä käännetään kaupungin kohdalle ja skaalataan
- * käänteisellä zoomikertoimella (1 / nakyvaAlue().skaala), jolloin
- * pinni on aina saman kokoinen pikseleissä.
- *
- * MIKSI. Fokusmoodin zoomiväli on valtava: yleiskuvassa koko Eurooppa
- * mahtuu ruudulle, fokusajon jälkeen ruudulla on yksi maa. Laudan
- * yksiköissä mitoitettu vinjetti olisi yleiskuvassa muutaman pikselin
- * täplä — ei luettava eikä osuttava — ja fokusnäkymässä puoli ruutua.
- * Kiinteä ruutukoko pitää sen aina luettavana ja aina sormenkokoisena
- * (58 × 52 px eli yli 44 pikselin kosketusvähimmäisen). Sama sääntö on
- * jo pelissä: fokuskartan lisänimet syttyvät sen mukaan, kuinka isona
- * KIRJAIN piirtyy RUUDULLE, ei laudan zoomitason mukaan
- * (js/fokuskartta.js FOKUS_NIMI_LUETTAVA_PX).
- *
- * ── EI SUODATTIMIA ─────────────────────────────────────────────────
- *
- * Sama iOS-sääntö kuin muillakin kartan kerroksilla (js/fokuskartta.js
- * sääntö 3, tests/rules.test.mjs): suodatettu kerros palaa taustalta
- * tyhjänä. Kehys on <rect>, kuva on <image>, varjo on toinen <rect>.
- * Ei filter-määrettä, ei feDropShadow'ta, ei mitään suodatinta.
- *
- * ── OMA KERROS SVG:N JUURESSA ──────────────────────────────────────
- *
- * Kerros on this.svg:n suora lapsi eikä juuriryhmän sisällä — sama
- * ratkaisu ja sama syy kuin maastonimillä (js/ui.js maastonimiKerros):
- * kiertävän kartan <use>-kopio monistaisi vinjetit, ja sama valokuva
- * roikkuisi kahdessa paikassa. Kerros on viimeisenä eli kaupunkien ja
- * laattojen päällä, koska pinni on napautettava.
- *
- * ── YKSI ANKKURIRYHMÄ PISTETTÄ KOHTI ───────────────────────────────
- *
- * Kerroksen sisällä on `.fokuskuva-ryhma` ankkuria kohti, ja
- * käänteinen zoomiskaalaus annetaan ryhmälle — niin siirto asuu laudan
- * koordinaateissa ja mitat ruudun pikseleissä. Rakenne on peruja
- * kohdenostojen ajalta, jolloin ankkureita oli useita (kohteen oma
- * sijainti kaupungin viuhkan lisäksi); kohdenostovinjetit purettiin
- * valintakuplan mukana (ks. moduulin alku), mutta ryhmä on yhä oikea
- * paikka muunnokselle.
+ * Kasauspassin katkoviivat kaupungista siirrettyihin kohdemerkkeihin
+ * (js/fokusniput.js, sääntö 6) ovat ERI ASIA ja jäävät: ne ovat
+ * omistajan 27.8.2026 tilaama johtoviiva, eivät tämän viuhkan osa.
  */
-
-/** Vinjetin mitat ruudun pikseleinä (ks. perustelu yllä). */
-const PINNI_LEVEYS = 58;
-const PINNI_KORKEUS = 44;
-const PINNI_REUNA = 3;
-/** Polaroidin leveämpi alareuna: kuva ei istu kehyksen pohjalla. */
-const PINNI_JALKA = 7;
-/** Kuinka korkealle kaupungin pisteestä pinnin alareuna nousee. */
-const PINNI_YLOS = 42;
-/** Viuhkan askel ja kallistus; pinnit menevät hieman limittäin. */
-const PINNI_ASKEL = 30;
-const PINNI_KULMA = 7;
 
 /**
- * Mitkä virran kuvat kuuluvat juuri nyt kartalle?
+ * Laudan vaihto tai uusi peli: auki jäänyt kuvasuurennos pois.
  *
- * Kertymä seuraa virtaa: pöllön herokuva ilmestyy kun pöllö on saanut
- * vuoron, oppitunnin kuva sen perään. Matkakirjan vanha valokuva EI
- * ole listalla — se asuu ylävasemmassa matkakirjakortissa, kuten
- * omistaja linjasi. (Täkyjen ja kohdenostojen vinjetit kertyivät tähän
- * viuhkaan valintakuplan aikaan; ne purettiin kuplan mukana, ja
- * syvennystarinoiden kuvat ovat nyt niiden omilla korteilla.)
+ * Nimi on peruja vinjettiajalta (yllä), mutta tehtävä on yhä oikea:
+ * tämä on fokusvirran kuvien siivouskohta, jota js/ui.js kutsuu
+ * laudan rakentuessa — uuden laudan päälle jäänyt suurennos olisi
+ * kuva kartasta, jota ei enää ole.
  */
-export function fokusvirtaKuvatKartalle(ui, city) {
-  // Kevyt kulku: viuhkaa ei kerry, koska sen ruokkivia vaiheita ei ole
-  // (ks. lipun perustelu tiedoston alussa).
-  if (!FOKUSVIRTA_KORTIT) return [];
-  const data = fokusvirtaSisalto(ui, city);
-  if (!data || !fokusvirtaLukitseeLehden(ui, city)) return [];
-  const tila = fokusvirtaTila(ui.game, city);
-  if (tila.vaihe === 'matkakirja') return [];
-  const kuvat = [];
-  if (data.pollo?.kuva) kuvat.push(data.pollo.kuva);
-  const oppitunnilla = ['oppitunti', 'kohtaaminen', 'valmis'].includes(tila.vaihe);
-  if (oppitunnilla && data.oppitunti?.kuva) kuvat.push(data.oppitunti.kuva);
-  return kuvat;
-}
-
-/** Kuvakerros SVG:n juureen kerran; palauttaa null ilman karttaa. */
-function varmistaKuvakerros(ui) {
-  if (!ui.svg) return null;
-  if (!ui.fokuskuvatKerros?.isConnected || ui.fokuskuvatKerros.ownerSVGElement !== ui.svg) {
-    ui.fokuskuvatKerros = el('g', { class: 'fokuskuvat' }, ui.svg);
-    ui.fokuskuvatAvain = null;
-  }
-  // Kerros on napautettava, joten sen on pysyttävä päällimmäisenä myös
-  // silloin kun jokin muu kerros on lisätty sen jälkeen.
-  if (ui.fokuskuvatKerros.nextSibling) ui.svg.appendChild(ui.fokuskuvatKerros);
-  return ui.fokuskuvatKerros;
-}
-
-/**
- * Yksi ankkuriryhmä kerrokseen: laudan piste, jonka ylle vinjetit
- * roikkuvat. Muunnos annetaan vasta skaalausvaiheessa.
- */
-function ryhmaAnkkuriin(ui, kerros, x, y) {
-  const g = el('g', { class: 'fokuskuva-ryhma' }, kerros);
-  ui.fokuskuvatRyhmat.push({ g, x, y });
-  return g;
-}
-
-/**
- * Yksi vinjetti viuhkaan.
- *
- * `indeksi` on paikka SUURENNOKSEN selauslistassa (kaikki kartalla
- * olevat kuvat järjestyksessä), ja sama luku on pinnin paikka
- * ui.fokuskuvatPinnit-taulukossa. Niin suurennos löytää sekä sen
- * kuvan, jota selataan, että ruutupaikan, johon se kutistuu.
- */
-function piirraPinni(ui, kerros, kuva, kaikki, indeksi, siirto, kulma) {
-  const g = el('g', {
-    class: 'fokuskuva-pinni',
-    transform: `translate(${siirto} ${-PINNI_YLOS}) rotate(${kulma})`,
-  }, kerros);
-  ui.fokuskuvatPinnit[indeksi] = g;
-  const kehysLeveys = PINNI_LEVEYS + PINNI_REUNA * 2;
-  const kehysKorkeus = PINNI_KORKEUS + PINNI_REUNA + PINNI_JALKA;
-  // Varjo on oma suorakulmionsa eikä suodatin (ks. EI SUODATTIMIA).
-  el('rect', {
-    class: 'fokuskuva-varjo',
-    x: -PINNI_LEVEYS / 2 - PINNI_REUNA + 1.5,
-    y: -kehysKorkeus + 1.5,
-    width: kehysLeveys,
-    height: kehysKorkeus,
-    rx: 2,
-  }, g);
-  el('rect', {
-    class: 'fokuskuva-kehys',
-    x: -PINNI_LEVEYS / 2 - PINNI_REUNA,
-    y: -kehysKorkeus,
-    width: kehysLeveys,
-    height: kehysKorkeus,
-    rx: 2,
-  }, g);
-  const img = el('image', {
-    class: 'fokuskuva-kuva',
-    x: -PINNI_LEVEYS / 2,
-    y: -PINNI_KORKEUS - PINNI_JALKA,
-    width: PINNI_LEVEYS,
-    height: PINNI_KORKEUS,
-    // "slice" rajaa kuvan kehyksen sisään ilman erillistä leikkuria.
-    preserveAspectRatio: 'xMidYMid slice',
-    href: kuvanOsoite(kuva, 320),
-  }, g);
-  img.setAttribute('aria-hidden', 'true');
-  /*
-   * Rikkinäinen kuva ei saa jättää tyhjää kehystä roikkumaan kartalle:
-   * yksi yritys varaosoitteeseen (sama porras kuin kortin viitteellä)
-   * ja sen jälkeen koko pinni pois.
-   */
-  let yritetty = false;
-  img.addEventListener('error', () => {
-    const vara = kuvanVara(kuva, 320);
-    if (!yritetty && vara) {
-      yritetty = true;
-      img.setAttribute('href', vara);
-      return;
-    }
-    g.remove();
-  });
-  const nimi = kuva.selite ? `Katso kuva: ${kuva.selite.slice(0, 60)}` : 'Katso kuva';
-  g.setAttribute('role', 'button');
-  g.setAttribute('tabindex', '0');
-  g.setAttribute('aria-label', nimi);
-  const avaa = (tapahtuma) => {
-    tapahtuma.stopPropagation();
-    tapahtuma.preventDefault();
-    sfx.play('paper');
-    avaaSuurennos(ui, kaikki, indeksi, (n) => ui.fokuskuvatPinnit?.[n] ?? null);
-  };
-  g.addEventListener('click', avaa);
-  g.addEventListener('keydown', (tapahtuma) => {
-    if (tapahtuma.key === 'Enter' || tapahtuma.key === ' ') avaa(tapahtuma);
-  });
-  return g;
-}
-
-/**
- * Vinjetit kartalle ja niiden koko zoomin mukaan.
- *
- * KUTSUTAAN SAMASTA KOHDASTA KUIN FOKUSKARTAN LISÄNIMET (js/ui.js
- * paivitaMaastonimet), eli aina kun näkymä on asettunut — ja lisäksi
- * jokaisesta virran siirrosta, jottei uusi kuva odota seuraavaa
- * kartan liikettä.
- *
- * TYÖ TEHDÄÄN VAIN KUN SISÄLTÖ MUUTTUI. Zoomi muuttaa vain ryhmän
- * muunnosta, ei yhtäkään solmua: kuvia ei ladata uudelleen
- * panoroidessa.
- */
-export function paivitaFokuskuvat(ui) {
-  if (typeof document === 'undefined') return;
-  const kerros = varmistaKuvakerros(ui);
-  if (!kerros) return;
-  const city = ui.game?.cityOf?.();
-  const kuvat = city ? fokusvirtaKuvatKartalle(ui, city) : [];
-  const tunniste = (k) => k.tiedosto ?? k.ampari ?? k.osoite;
-  const avain = kuvat.length
-    ? `${ui.game.pack.id}:${city.id}:${kuvat.map(tunniste).join('|')}`
-    : 'tyhja';
-  if (ui.fokuskuvatAvain !== avain) {
-    ui.fokuskuvatAvain = avain;
-    kerros.textContent = '';
-    ui.fokuskuvatPinnit = [];
-    ui.fokuskuvatRyhmat = [];
-    if (kuvat.length && Number.isFinite(city.x) && Number.isFinite(city.y)) {
-      const ryhma = ryhmaAnkkuriin(ui, kerros, city.x, city.y);
-      const keski = (kuvat.length - 1) / 2;
-      kuvat.forEach((kuva, i) => {
-        const siirto = Math.round((i - keski) * PINNI_ASKEL);
-        const kulma = ((i - keski) * PINNI_KULMA).toFixed(1);
-        // Nuora kaupungin pisteestä pinnin alareunaan: pelaaja näkee
-        // mihin kuva kuuluu, vaikka viuhka levittäytyy sivuun.
-        el('line', {
-          class: 'fokuskuva-nuora', x1: 0, y1: 0, x2: siirto, y2: -PINNI_YLOS,
-        }, ryhma);
-        piirraPinni(ui, ryhma, kuva, kuvat, i, siirto, kulma);
-      });
-    }
-  }
-  /*
-   * Ankkuri laudan koordinaateissa, pinnit ruudun pikseleinä: jokainen
-   * ryhmä käännetään oman pisteensä päälle ja skaalataan zoomin
-   * käänteisluvulla. Ilman näkyvää aluetta (kartta ei ole vielä
-   * mitattavissa) muunnokset jätetään entiselleen — väärä mittakaava
-   * olisi pahempi kuin yhden kehyksen viive.
-   */
-  const skaala = ui.nakyvaAlue?.()?.skaala;
-  if (!skaala || !Number.isFinite(skaala) || skaala <= 0) return;
-  const zoom = (1 / skaala).toFixed(4);
-  for (const ryhma of ui.fokuskuvatRyhmat ?? []) {
-    ryhma.g.setAttribute('transform', `translate(${ryhma.x} ${ryhma.y}) scale(${zoom})`);
-  }
-}
-
-/** Laudan vaihto tai uusi peli: vinjetit pois ja muisti nollille. */
 export function nollaaFokuskuvat(ui) {
-  ui.fokuskuvatAvain = null;
-  ui.fokuskuvatPinnit = [];
-  ui.fokuskuvatRyhmat = [];
   suljeSuurennos(ui);
-  if (ui.fokuskuvatKerros?.isConnected) ui.fokuskuvatKerros.textContent = '';
 }

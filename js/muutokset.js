@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1353, teksti: 'Nostokuvat pois karttakerroksesta' },
   { v: 1352, teksti: 'Skandaalit-kategoria saa sisallon' },
   { v: 1351, teksti: 'Maailmankartta ainoaksi pelilaudaksi' },
   { v: 1350, teksti: 'Fokusvirran valintavaiheet purettu' },
