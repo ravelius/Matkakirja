@@ -689,6 +689,17 @@ export const FOKUSVIRTA_ISTANBUL = {
   takynostot: [
     {
       id: 'schliemann',
+      /*
+       * JUTUN KOHDE ON KARTAN OMA TROIJA (js/packs/fokuskohteet-tur.js
+       * `troija` — sama kumpu, sama kaivaus). Yhtenäisen kohdemallin
+       * sääntö (Raamattu 29.8.2026): nosto jolla on kohde EI luo omaa
+       * merkkiä — tarina aukeaa Troijan tietoruudun Livian leikekirja
+       * -napista (js/fokuskohteet.js piirraKohteenNosto). Ilman tätä
+       * kenttää nosto piirtyisi paikattomana Istanbulin laatan viereen,
+       * vaikka juttu tapahtui 260 km:n päässä (agenttikartoituksen
+       * havainto 30.8.2026).
+       */
+      kohde: 'troija',
       // Kartan nimiö täkypisteen kylkeen (päätoimittaja 28.8.2026).
       nimio: 'Troijan tuhoaja',
       otsikko: 'Troijan löytäjä tuhosi Troijan',

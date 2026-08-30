@@ -1,6 +1,12 @@
 /*
- * TÄKYNOSTO (js/fokusnosto.js): kartan tuikkiva keltainen piste
- * (js/fokusnosto-symbolit.js), sen varapolkuliuska ja lunastuskortti.
+ * KOHDEMALLIN KORTIT: täkynoston lunastuskortti (js/fokusnosto.js),
+ * eläintäyn merkki ja kortti (js/elaintaky.js) sekä syvennystarinan
+ * kortti (js/syvennys.js).
+ *
+ * TUIKKIVA PISTE JA VARAPOLKULIUSKA PURETTIIN (YHTENÄINEN KOHDEMALLI,
+ * Raamattu 29.8.2026): täkynostot ovat kartan tavallisia kohdemerkkejä
+ * kohteiden kerroksessa (css/fokuskohteet.css), joten osiot 1 ja 3
+ * poistuivat tästä tiedostosta koodinsa mukana.
  *
  * OMA TIEDOSTO, EI styles.css: css/styles.css on toisen työvaiheen
  * hallussa, eikä yhteen tiedostoon kirjoita kaksi tekijää yhtä aikaa.
@@ -14,323 +20,17 @@
  * transform + opacity, taustan tummennus on tavallinen läpinäkyvä väri
  * eikä backdrop-filter, ja varjot ovat box-shadow'ta.
  *
- * BODYSSA, MUTTA ANKKUROITUNA. Liuska ja lunastuskortti asuvat
- * document.bodyssa, joten karttapaneelin eleet eivät näe niitä lainkaan
- * (ks. js/fokusnosto.js "MIKSI document.body"). Piste sen sijaan on
- * kartan omassa SVG-kerroksessa, koska se elää laudan koordinaateissa.
+ * BODYSSA, MUTTA ANKKUROITUNA. Kortit asuvat document.bodyssa, joten
+ * karttapaneelin eleet eivät näe niitä lainkaan (ks. js/fokusnosto.js
+ * "MIKSI document.body" -perustelu ennen v1348:aa).
  *
- * OSA 2 OLI PUHEKUPLA ja se poistettiin 27.8.2026 illalla omistajan
- * tilauksesta (*"muuta täkynostot pelkäksi tuikkivaksi keltaiseksi
- * pisteeksi"*). Numerointi on jätetty ennalleen, jotta vanhat viittaukset
- * osiin 3 ja 4 pitävät paikkansa.
- *
- * TIEDOSTON OSAT
- *   1. LIUSKA — vanha alalaidan esitystapa, varapolku ilman paikkaa
- *   3. TUIKKIVA PISTE — kartan SVG-kerros (js/fokusnosto-symbolit.js)
+ * TIEDOSTON OSAT (numerointi on historiallinen; osat 1–3 poistuivat
+ * puhekuplan ja tuikkivan pisteen mukana)
  *   4. LUNASTUSKORTTI
+ *   5. ISOISÄN KARTTALIITE
+ *   6. ELÄINTÄKY
+ *   7. SYVENNYSTARINA
  */
-
-/* ===========================================================================
-   1. LIUSKA — klikkiotsikko + miniatyyri (VARAPOLKU)
-   ---------------------------------------------------------------------------
-   Käytössä vain kun nostolla ei ole `paikka`-kenttää tälle laudalle:
-   ankkuriton kupla olisi pahempi kuin ankkuroimaton liuska.
-
-   Paikka: kartan alalaidan keskellä, alanappirivin YLÄPUOLELLA. Vasen
-   alanurkka on maan kartuutsilla ja oikea mittajanalla (css/styles.css
-   .fokusmitat), ja kelluva pöllö on oikeassa reunassa noin 5 rem
-   korkeudella — leveysrajoitus pitää liuskan irti niistä kaikista myös
-   puhelimessa.
-   =========================================================================== */
-
-.fokusnosto {
-  position: fixed;
-  left: 50%;
-  bottom: 6.6rem;
-  z-index: 40;
-  display: flex;
-  align-items: stretch;
-  gap: 0;
-  width: max-content;
-  max-width: min(34rem, calc(100vw - 7.5rem));
-  border-radius: 0.6rem;
-  border: 1px solid rgba(122, 85, 20, 0.34);
-  background: #f5f0e2;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.32);
-  color: #211d18;
-  /* Pergamentin oma pinta; kartan vaalea hehkuvarjo ei periydy tänne. */
-  text-shadow: none;
-  font-family: var(--font-luku);
-  /*
-   * NOUSU. Lähtötila on tässä ja maalitila .fokusnosto-nousee-luokassa,
-   * jotta liike alkaa vasta kun JS on liittänyt luokan (yksi pakotettu
-   * tyylinlaskenta välissä) — animaatiolla tehtynä se alkaisi uudestaan
-   * joka kerta kun elementtiä koskee.
-   */
-  opacity: 0;
-  transform: translate(-50%, 14px);
-  transition: opacity 260ms ease-out, transform 260ms cubic-bezier(0.22, 0.9, 0.24, 1);
-}
-
-.fokusnosto.fokusnosto-nousee {
-  opacity: 1;
-  transform: translate(-50%, 0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fokusnosto { transition: none; }
-}
-
-/* Kartan lennon ja kamera-ajon ajaksi pois, kuten muutkin kartan
-   kelluvat merkinnät (css/styles.css .fokusmitat). */
-body.flight-active .fokusnosto,
-body.kartalento .fokusnosto { opacity: 0; pointer-events: none; }
-
-/*
- * KLIKKIOTSIKKO. Koko liuska on painike: otsikko vasemmalla,
- * miniatyyri sen PERÄSSÄ (omistajan tilaus). Kosketusala on rivin
- * korkuinen eli reilusti yli 44 px.
- */
-.fokusnosto-nappi {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  min-height: 48px;
-  flex: 1 1 auto;
-  min-width: 0;
-  margin: 0;
-  padding: 0.35rem 0.3rem 0.35rem 0.7rem;
-  border: 0;
-  border-radius: 0.6rem 0 0 0.6rem;
-  background: transparent;
-  box-shadow: none;
-  color: inherit;
-  text-align: left;
-  cursor: pointer;
-}
-
-.fokusnosto-nappi:hover,
-.fokusnosto-nappi:focus-visible { background: rgba(122, 85, 20, 0.09); }
-
-/*
- * Otsikko on KLIKKIOTSIKKOTASOINEN lause, ei artikkelin nimi: se saa
- * olla pitkä ja se taittuu enintään kolmelle riville. Kirjasin on
- * lehden oma otsikkokirjasin, jotta liuska luetaan lehtijutuksi eikä
- * pelin ohjeeksi.
- */
-.fokusnosto-otsikko {
-  flex: 1 1 auto;
-  min-width: 0;
-  font-family: var(--font-luku);
-  font-size: 0.94rem;
-  /* Ei lihavointia (omistaja 25.8.2026) — klikkiotsikko kantaa itsensä. */
-  font-weight: 400;
-  line-height: 1.28;
-  /* Kolme riviä riittää pisimmällekin otsikolle; ylipitkä katkeaa
-     siististi sen sijaan että venyttäisi liuskan kartan poikki. */
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  overflow: hidden;
-}
-
-/* Miniatyyri otsikon perässä: pieni painettu kuva, ei ikoni.
-   Ilman kehysviivaa (omistaja 25.8.2026: "kehykset kuvasta" pois). */
-.fokusnosto-mini {
-  flex: 0 0 auto;
-  width: 46px;
-  height: 46px;
-  border-radius: 4px;
-  border: 0;
-  object-fit: cover;
-  background: rgba(122, 85, 20, 0.12);
-}
-
-/* Rasti työntää noston syrjään lukematta — oma kapea sarakkeensa. */
-.fokusnosto-sulje {
-  flex: 0 0 auto;
-  min-width: 34px;
-  min-height: 48px;
-  margin: 0;
-  padding: 0 0.4rem;
-  border: 0;
-  border-left: 1px solid rgba(122, 85, 20, 0.22);
-  border-radius: 0 0.6rem 0.6rem 0;
-  background: transparent;
-  box-shadow: none;
-  color: rgba(33, 29, 24, 0.6);
-  font-size: 0.95rem;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.fokusnosto-sulje:hover,
-.fokusnosto-sulje:focus-visible {
-  background: rgba(122, 85, 20, 0.12);
-  color: #16130f;
-}
-
-/* ===========================================================================
-   3. TÄYN TUIKKIVA PISTE — kartan oma SVG-kerros
-      (js/fokusnosto-symbolit.js)
-   ---------------------------------------------------------------------------
-   Omistajan tilaus 27.8.2026 ilta: *"muuta täkynostot pelkäksi
-   tuikkivaksi keltaiseksi pisteeksi yksi kerrallaan"*. Kerroksessa oli
-   ennen täyn oma symboli (huutomerkki, pöllönpoikanen, …) ja sen päällä
-   puhekupla; nyt siinä on yksi pieni keltainen piste, joka tuikkii.
-
-   MERKKI ON VIHREÄN KOHTAAMISPISTEEN SISARUS (css/fokusvirta.css
-   .fokuspiste-*): sama kolmen ympyrän rakenne, sama tuike ja sama
-   osuma-alue — eri väri ja eri lupaus. Vihreä on TEKEMISTÄ (tapaa
-   henkilö), keltainen on KATSOMISTA (lue juttu). Tyylit ovat omina
-   sääntöinään eivätkä yhteisenä luokkana, koska kerrokset ovat eri
-   moduulien ja eri tyylitiedostojen omaisuutta — kumpikaan ei saa
-   rikkoutua siitä, että toista viritetään.
-
-   VÄRI ON KARTAN OKRA EIKÄ NEONKELTAINEN: 1873-atlaksen pergamentilla
-   kirkas keltainen luettaisiin virheeksi tulostuksessa. Sävy on sama
-   lämmin okra kuin täkykuplan taustassa oli (#f6ebc8 → tummempi
-   musteversio), jotta piste erottuu paperista mutta kuuluu siihen.
-
-   EI SUODATTIMIA (tests/rules.test.mjs): hehku on kolme ympyrää, ja
-   animaatiossa liikkuvat vain `opacity` ja `transform`.
-   =========================================================================== */
-
-.fokusnosto-symbolit {
-  /* Kerros ei ota napautuksia vastaan; osuma-alue ottaa (ks. alla). */
-  pointer-events: none;
-}
-
-/*
- * NÄKYMÄTÖN OSUMA-ALUE, VÄHINTÄÄN 44 px. Merkki itse on pieni, koska
- * kartta on lehteä eikä pelilautaa; sormi ei kuitenkaan osu kolmen
- * pikselin ympyrään. Ryhmä skaalataan ruudun pikseleihin
- * (js/fokusnosto-symbolit.js), joten r = 22 on 44 px läpimitta lehden
- * perustasolla.
- *
- * PISTE ON PAINIKE (27.8.2026 ilta): ankkuri oli ennen mykkä, koska
- * kupla otti napautuksen sen päältä. Kuplaa ei ole, joten napautuspinta
- * on pisteen omalla vastuulla.
- */
-.fokusnosto-ankkuri { pointer-events: none; }
-
-.nostosym-tuike-osuma {
-  fill: none;
-  /* `fill: none` ei ota napautuksia ilman tätä. */
-  pointer-events: all;
-  cursor: pointer;
-}
-
-/*
- * TÄKYPISTEEN NIMIÖ (omistajan lisätilaus 28.8.2026 ilta: *"täkypisteessä
- * saisi olla myös teksti näkyvissä"*). Ladonta on kartan omaa
- * (.nostosym-nimio, css/styles.css); tässä on vain se, mikä koskee
- * täkyä: nimiö on mykkää mustetta pisteen kyljessä, eikä se saa
- * kasvattaa painikkeen osuma-aluetta. Ahtaassa ryppäässä nimiö väistyy
- * kokonaan (js/fokusnosto-symbolit.js nostosymTakynimiot) — piste
- * näkyy aina, nimiö ei.
- */
-.nostosym-takynimio { pointer-events: none; }
-.nostosym-nimio-piilossa { display: none; }
-
-/*
- * PISTE ON AINA SAMANNÄKÖINEN — TUIKE ON ERI ASIA (omistajan linjaus
- * 28.8.2026 ilta: *"Täkyt voisi olla aina näkyvissä. Niihin vain
- * kiinnitetään huomio aarteen löytymisen jälkeen."*).
- *
- * Kartalla on nyt kaikkien maan katsomattomien täkyjen pisteet, ja
- * niistä korkeintaan yksi tuikkii. Väri, koko ja osuma-alue ovat siksi
- * pisteen perustyylissä, ja ANIMAATIO YKSIN on kytketty luokkaan
- * `.nostosym-tuike-paalla`, jonka js/fokusnosto-symbolit.js siirtää
- * pisteeltä toiselle. Hiljainen piste näyttää täsmälleen samalta kuin
- * tuikkiva pysähtyneenä — sama asu kuin liikeherkkyystilassa alempana.
- */
-.nostosym-tuike-hehku {
-  fill: #d9a520;
-  opacity: 0.32;
-}
-
-.nostosym-tuike-paalla .nostosym-tuike-hehku {
-  animation: nostosym-tuike 1500ms ease-in-out infinite;
-}
-
-.nostosym-tuike-keha {
-  fill: #e0b02e;
-  opacity: 0.72;
-}
-
-.nostosym-tuike-ydin {
-  fill: #fdf3cf;
-  stroke: #8a5f12;
-  stroke-width: 0.55;
-}
-
-.nostosym-tuike-paalla .nostosym-tuike-ydin {
-  animation: nostosym-kimallus 1500ms ease-in-out infinite;
-}
-
-/*
- * LUETTU PISTE ON VAIMEA (omistajan löydös 28.8.2026 ilta: luettu täky
- * pysyy kartalla, jotta kortin saa auki uudelleen). Sama muste ja sama
- * muoto — vain hiljaisempi: piste on kartalla muistona eikä
- * houkutuksena, eikä se saa kilpailla katsomattomien kanssa. Tuiketta
- * sillä ei ole koskaan (js/fokusnosto-symbolit.js nostosymTuike), ja
- * kartalla se seisoo ankkurisymbolinsa VIERESSÄ, jottei se vie sen
- * napautusta (sama tiedosto, osio PISTE AINA SYMBOLIN PÄÄLLE).
- */
-.nostosym-luettu .nostosym-tuike-hehku { opacity: 0.12; }
-.nostosym-luettu .nostosym-tuike-keha { opacity: 0.34; }
-.nostosym-luettu .nostosym-tuike-ydin { opacity: 0.62; }
-.nostosym-luettu .nostosym-nimio { opacity: 0.62; }
-
-.nostosym-tuike:hover .nostosym-tuike-keha,
-.nostosym-tuike:focus-visible .nostosym-tuike-keha { opacity: 0.9; }
-
-/* Selaimen oma tarkennuslaatikko pois, oma merkki tilalle — sama
-   havainto ja sama ratkaisu kuin kohtaamispisteellä. */
-.nostosym-tuike:focus { outline: none; }
-.nostosym-tuike:focus-visible .nostosym-tuike-hehku { opacity: 0.5; }
-
-/*
- * TUIKE, EI HIDAS SYKE: nopea kirkastuminen, terävä pudotus ja pieni
- * jälkivälke — tähtimäinen eikä hengitysmäinen. Sama rytmi kuin
- * vihreällä pisteellä, jotta kartan kaksi tuiketta lukevat samaksi
- * kieleksi.
- */
-@keyframes nostosym-tuike {
-  0%, 100% { opacity: 0.16; transform: scale(0.8); }
-  18% { opacity: 0.7; transform: scale(1.4); }
-  34% { opacity: 0.2; transform: scale(0.95); }
-  52% { opacity: 0.48; transform: scale(1.2); }
-  74% { opacity: 0.18; transform: scale(0.85); }
-}
-
-/* Ydin välkkyy hehkun kanssa samaan tahtiin: kimallus, ei sammuminen. */
-@keyframes nostosym-kimallus {
-  0%, 100% { opacity: 0.62; }
-  18% { opacity: 1; }
-  34% { opacity: 0.7; }
-  52% { opacity: 0.95; }
-  74% { opacity: 0.62; }
-}
-
-/* LIIKEHERKKYYS: tuike on huomiokeino, ei tieto. Piste pysyy
-   paikallaan ja näkyvänä myös silloin kun liikettä on pyydetty
-   vähemmän. */
-@media (prefers-reduced-motion: reduce) {
-  .nostosym-tuike-paalla .nostosym-tuike-hehku { animation: none; opacity: 0.35; }
-  .nostosym-tuike-paalla .nostosym-tuike-ydin { animation: none; opacity: 1; }
-}
-
-/* Raahauksen ajaksi tuike vaikenee — sama mitattu syy kuin vihreällä
-   pisteellä (css/fokusvirta.css): SVG-lapsen transform-animaatio likaa
-   koko laudan asettelun joka kehyksellä. PAUSSI EIKÄ POISTO: `animation:
-   none` mitätöisi asettelun eleen alussa ja lopussa. */
-body.kartta-raahaus .nostosym-tuike-paalla .nostosym-tuike-hehku,
-body.kartta-raahaus .nostosym-tuike-paalla .nostosym-tuike-ydin {
-  animation-play-state: paused;
-}
 
 /* ===========================================================================
    4. LUNASTUSKORTTI
@@ -417,12 +117,27 @@ body.kartta-raahaus .nostosym-tuike-paalla .nostosym-tuike-ydin {
 }
 
 .fokusnosto-ylarivi {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
   margin: 0 2.2rem 0.1rem 0;
   color: #7a5514;
   font-family: var(--font-type);
   font-size: 0.72rem;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+}
+
+/*
+ * YLÄRIVIN AIHESYMBOLI (YHTENÄINEN KOHDEMALLI, Raamattu 29.8.2026):
+ * sama kirjaston merkki ja käytännössä sama mitta kuin kartan
+ * kohdekortin ylärivillä (css/fokuskohteet.css
+ * .fokuskohde-ylarivi-symboli) — neljä korttiperhettä, yksi rivi.
+ */
+.nostosym-ylarivi-symboli {
+  flex: 0 0 auto;
+  width: 1.5em;
+  height: 1.5em;
 }
 
 .fokusnosto-kortti-otsikko {
@@ -758,7 +473,8 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
 
 /*
  * NÄKYMÄTÖN OSUMA-ALUE, VÄHINTÄÄN 44 px — sama sormisääntö ja sama
- * kaava kuin täkypisteellä (.nostosym-tuike-osuma yllä).
+ * kaava kuin kartan kohdemerkeillä (css/fokuskohteet.css
+ * .fokuskohde-osuma).
  */
 .elaintaky-osuma {
   fill: none;
@@ -844,3 +560,60 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
 /* Jo löydetty eläin: sama rivi vaimeampana — kortti kertoo, ettei
    punnat tule kahdesti. */
 .elaintaky-palkkio-vanha { color: rgba(33, 29, 24, 0.58); }
+
+/* ===========================================================================
+   7. SYVENNYSTARINA — fokusvirran täkytarina kartalta (js/syvennys.js)
+   ---------------------------------------------------------------------------
+   Syvennystarina lainaa lunastuskortin sisuksen (.fokusnosto-ylarivi,
+   -kortti-otsikko, -kuva, -teksti) ja fokusvirran minivisan
+   (.fokusvirta-visa, css/fokusvirta.css) sellaisinaan; vain KUORI on
+   omalla luokallaan, koska jokainen korttiperhe siivoaa omat
+   kerroksensa valitsimella (sama syy kuin eläintäyllä yllä). Kuoren
+   säännöt ovat samat kuin osioissa 4 ja 6 — kolme luokkaa, yksi ilme.
+   =========================================================================== */
+
+.syvennys-kerros {
+  position: fixed;
+  inset: 0;
+  z-index: 46;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(18, 12, 4, 0);
+  transition: background 220ms ease-out;
+}
+
+.syvennys-auki { background: rgba(18, 12, 4, 0.3); }
+
+.syvennys-kortti {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(34rem, 100%);
+  max-height: min(80vh, 44rem);
+  padding: 0.7rem 0.8rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid rgba(122, 85, 20, 0.32);
+  background: #f5f0e2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34);
+  color: #211d18;
+  text-shadow: none;
+  font-family: var(--font-luku);
+  /* Kartta ottaa eleet itselleen (.map-pane touch-action: none); kortin
+     sisällä pystyvieritys on saatava takaisin. */
+  touch-action: pan-y;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 220ms ease-out, transform 220ms cubic-bezier(0.22, 0.9, 0.24, 1);
+}
+
+.syvennys-auki .syvennys-kortti {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .syvennys-kerros,
+  .syvennys-kortti { transition: none; }
+}

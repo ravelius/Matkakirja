@@ -854,9 +854,6 @@ export function fokusvirtaSaapuminen(ui) {
   // renderin kytkentäkohta kuitenkin kelpaa aarteen löytymisen
   // huomaamiseen — se on kevyen kulun oma hetki.
   aarreLoytyi(ui);
-  // Sama kytkentäkohta palvelee täkynostoa: se seuraa samaa hetkeä
-  // (aarre löytyi) ja tarvitsee saman piirtotahdin (ks. asetaNostopinta).
-  nostoPinta?.(ui);
   if (!FOKUSVIRTA_KORTIT) return;
   const city = ui?.game?.cityOf?.();
   if (!city || !fokusvirtaLukitseeLehden(ui, city)) return;
@@ -903,7 +900,6 @@ function lataaTyyli() {
  * jottei suljettu kupla jää mittaamaan itseään jokaisesta kierrosta.
  */
 export function suljeFokusvirta(ui) {
-  const oli = Boolean(ui.fokusvirtaKortti);
   ui.fokusvirtaKortti?.remove();
   ui.fokusvirtaKortti = null;
   if (ui.fokusvirtaAsemointi) {
@@ -912,19 +908,12 @@ export function suljeFokusvirta(ui) {
     ui.fokusvirtaAsemointi = null;
   }
   /*
-   * TÄKYNOSTO ODOTTAA KUPLAN JÄLKEEN (ks. js/fokusnosto.js
-   * nostoRuutuVapaa). Kupla ja nosto nousevat samaan alalaitaan, joten
-   * nosto väistää kuplan — ja juuri tämä kutsu tekee järjestyksestä
-   * välittömän: pelaajan napautus sulkee kuplan, ja otsikko nousee
-   * heti sen tilalle sen sijaan että odottaisi seuraavaa piirtoa.
+   * Täkynoston alalaidan liuska väisti ennen kuplaa tässä kohdassa
+   * (nostoPinta). Yhtenäinen kohdemalli (Raamattu 29.8.2026) purki
+   * liuskan ja piirtopinnan: nostot ovat kartan kohdemerkkejä
+   * (js/fokusnosto.js nostoLisakohteet) eivätkä kilpaile kuplan
+   * kanssa alalaidasta.
    */
-  /*
-   * KUTSU ON VIIVÄSTETTY YHDELLÄ TIKILLÄ. Kuplan vaihtuessa toiseksi
-   * tämä sulku tapahtuu ENNEN uuden kuplan luontia (naytaPolloKupla),
-   * joten heti ajettu tarkistus näkisi ruudun vapaana ja nostaisi
-   * otsikon juuri sen kuplan alle, joka on tulossa.
-   */
-  if (oli) setTimeout(() => nostoPinta?.(ui), 0);
 }
 
 /**
@@ -2080,8 +2069,7 @@ export function sahkePalkkio(ohi, pohja = SAHKE_PALKKIO) {
  * Miksi takaisinkutsu eikä import: kohdetaulu (KOHDE_MAAT) asuu
  * js/fokuskohteet.js:ssä, joka on niputusjärjestyksessä VASTA tämän
  * moduulin jälkeen (tools/build-standalone.mjs MODULES). Sama ratkaisu
- * ja sama syy kuin täkynoston piirtopinnalla (asetaNostopinta) ja
- * lehtitehtävien kuittauksella (asetaTehtavakuittaus).
+ * ja sama syy kuin lehtitehtävien kuittauksella (asetaTehtavakuittaus).
  */
 let kohdehakemisto = null;
 
@@ -2744,15 +2732,6 @@ function naytaPolloKupla(ui, teksti, { ruksi: ruksillinen = false } = {}) {
   ui.fokusvirtaAsemointi = asemoi;
   globalThis.addEventListener?.('resize', asemoi);
   globalThis.addEventListener?.('orientationchange', asemoi);
-  /*
-   * TÄKYNOSTO VÄISTYY KUPLAN TIELTÄ. Nosto nousee samaan alalaitaan
-   * (js/fokusnosto.js), ja se voi olla ruudulla jo ennen kuplaa —
-   * aarteen löytyessä molemmat heräävät samasta hetkestä, mutta
-   * kirjoituskone pidättelee kuplaa merkinnän ajan. Kupla on tärkeämpi:
-   * se on vastaus pelaajan omaan tekoon. Nosto palaa, kun kupla suljetaan
-   * (suljeFokusvirta).
-   */
-  nostoPinta?.(ui);
   return true;
 }
 
@@ -2813,29 +2792,12 @@ export function fokusvirtaKuittaus(ui, teksti) {
  */
 asetaTehtavakuittaus(fokusvirtaKuittaus);
 
-/* ---------- täkynoston piirtopinta ---------- */
-
-/**
- * TÄKYNOSTON PIIRTOPINTA — js/fokusnosto.js asettaa tämän.
- *
- * Miksi takaisinkutsu eikä import: täkynosto avaa kartan kohteiden
- * tietoruudun (js/fokuskohteet.js), joka on niputusjärjestyksessä VASTA
- * tämän moduulin jälkeen (tools/build-standalone.mjs MODULES). Suora
- * tuonti tästä sinne kääntäisi järjestyksen väärin päin; sama ratkaisu
- * ja sama syy kuin lehtitehtävien kuittauksella (asetaTehtavakuittaus
- * yllä), vain vastakkaiseen suuntaan.
- *
- * MIKSI TÄMÄ KYTKENTÄKOHTA. Täkynosto nousee kartalta silloin kun maan
- * aarre on löytynyt (Raamattu, KEVYT KULKU -KOKEILU), eli tismalleen
- * samasta hetkestä kuin pöllön aarrekuittaus — ja se on tässä
- * tiedostossa (aarreLoytyi). Yksi renderin kytkentäkohta riittää siis
- * molemmille, eikä js/ui.js:ään tarvita uutta riviä.
+/*
+ * Täkynoston piirtopinta (asetaNostopinta) asui tässä 29.8.2026 asti.
+ * Yhtenäinen kohdemalli (Raamattu) purki sen: nostot piirtyvät kartan
+ * kohdekerrokseen (js/fokuskohteet.js, lähteenä js/fokusnosto.js
+ * nostoLisakohteet) eivätkä tarvitse fokusvirran piirtotahtia.
  */
-let nostoPinta = null;
-
-export function asetaNostopinta(fn) {
-  nostoPinta = typeof fn === 'function' ? fn : null;
-}
 
 /* ---------- pöllön kuittaus aarteen löydyttyä ---------- */
 

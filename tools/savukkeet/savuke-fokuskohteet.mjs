@@ -796,7 +796,9 @@ const viivat = await sivu.evaluate(() => {
   });
   return {
     rivit,
-    nipussa: [...(ui.fokuskohdeRyhmat ?? []), ...(ui.nostosymRyhmat ?? [])]
+    // Kohdemallin jälkeen kasauspassin ainoa lähde on kohdekerros —
+    // myös nostot ja syvennystarinat ovat sen rivejä (v1348).
+    nipussa: (ui.fokuskohdeRyhmat ?? [])
       .filter((r) => r.nippu && r.g?.parentNode
         && !r.g.parentNode.classList.contains('fokuskohteet-piilossa')).length,
     // Kerros ennen laattoja samassa vanhemmassa = piirtyy niiden alle.
@@ -1354,95 +1356,108 @@ vaadi('kortin tekstille jää varaa leveämmälle kirjasimelle',
   sovitus?.tayttoaste <= 0.85, `täyttöaste ${sovitus?.tayttoaste}`);
 vaadi('kortin nauha ei nappaa napautuksia', ihme?.osoitin === 'none', ihme?.osoitin);
 
-/* --- 10b: luettu täkypiste elää kohdemerkin VIERESSÄ --- */
-
-/*
- * Omistajan löydös 28.8.2026 ilta: katsottu täky katosi kartalta eikä
- * rikastettua korttia päässyt enää avaamaan. Piste jää nyt kartalle, ja
- * koska se on painike, se ei saa jäädä ankkurisymbolinsa päälle
- * viemään sen napautusta pysyvästi (js/fokusnosto-symbolit.js).
+/* --- 10c: YHTENÄINEN KOHDEMALLI — nostot ja syvennystarinat merkkeinä ---
  *
- * Kolme mittausta samasta asiasta: piste on kartalla, se on merkin
- * VIERESSÄ eivätkä sormialueet limity, ja kortti aukeaa siitä
- * uudelleen. Ankkurikohteen oma napautus on jo mitattu ylempänä (koe 3
- * ja 5 avaavat Olympoksen ja Delfoin merkkinsä ruutupaikasta, ja juuri
- * ne kaksi ovat luettujen täkyjen ankkureita).
+ * Raamattu 29.8.2026: täkynostot ja syvennystarinat ovat kartan
+ * TAVALLISIA KOHDEMERKKEJÄ kohteiden kerroksessa (tuikkiva piste ja
+ * nostopooli purettiin), ja nosto jolla on `kohde`-kenttä EI luo omaa
+ * merkkiä vaan aukeaa kohteen tietoruudun Livian leikekirja -napista.
+ *
+ * Kreikassa mitataan kaikki kolme puolta:
+ *   a) sofia-korut (nosto ilman kohdetta) ja Ateenan kolme
+ *      syvennystarinaa ovat kohdekerroksen merkkejä aihevaloineen;
+ *   b) kastrin-kyla, olympoksen-huippu ja antikythera-kone (nostot
+ *      joilla on kohde) EIVÄT piirrä omaa merkkiä, ja Delfoin
+ *      tietoruudussa on Livian leikekirja -nappi, josta noston
+ *      lunastuskortti aukeaa;
+ *   c) nosto- ja syvennysmerkin napautus avaa oman korttinsa.
  */
 await sivu.keyboard.press('Escape');
 await sivu.waitForTimeout(300);
 
-const takypisteet = await sivu.evaluate(() => {
-  const ui = window.matkakirja.ui;
-  const keskipiste = (el) => {
-    const r = el?.getBoundingClientRect?.();
-    return r && r.width > 0 ? { x: r.left + r.width / 2, y: r.top + r.height / 2 } : null;
+const kohdemalli = await sivu.evaluate(() => {
+  const merkki = (id) => document.querySelector(`.fokuskohde[data-kohde="${id}"]`);
+  const valo = (id) => merkki(id)?.querySelector('.karttavalo')?.getAttribute('data-aihe') ?? null;
+  return {
+    nosto: Boolean(merkki('nosto-sofia-korut')),
+    nostoValo: valo('nosto-sofia-korut'),
+    syvennykset: ['nike', 'diogenes', 'schliemann']
+      .filter((id) => merkki(`syvennys-ateena-${id}`)).length,
+    syvennysValo: valo('syvennys-ateena-nike'),
+    // Nosto jolla on kohde ei luo omaa merkkiä (Raamatun sääntö).
+    kiinnitetyt: ['nosto-kastrin-kyla', 'nosto-olympoksen-huippu',
+      'nosto-antikythera-kone'].filter((id) => merkki(id)).length,
   };
-  const ruudulla = (p) => p && p.x > 0 && p.y > 0
-    && p.x < window.innerWidth && p.y < window.innerHeight;
-  const pisteet = (ui.nostosymRyhmat ?? []).map((r) => ({
-    id: r.id,
-    kohde: r.kohde,
-    luettu: !!r.luettu,
-    vaimea: !!r.g.querySelector('.nostosym-luettu'),
-    nimio: r.g.querySelector('.nostosym-takynimio text')?.textContent ?? '',
-    nimioNakyy: Boolean(r.nimio?.nakyy),
-    keski: keskipiste(r.g.querySelector('.nostosym-tuike-osuma')),
-    sade: (r.g.querySelector('.nostosym-tuike-osuma')?.getBoundingClientRect().width ?? 0) / 2,
-    tuikkii: Boolean(r.g.querySelector('.nostosym-tuike-paalla')),
-  }));
-  // Ankkurimerkin ruutupaikka samasta kiertokohdasta kuin piste.
-  for (const p of pisteet) {
-    if (!p.kohde || !p.keski) continue;
-    let lahin = null;
-    for (const g of document.querySelectorAll(`.fokuskohde[data-kohde="${p.kohde}"]`)) {
-      const k = keskipiste(g.querySelector('.fokuskohde-osuma'));
-      if (!k) continue;
-      const e = Math.hypot(k.x - p.keski.x, k.y - p.keski.y);
-      if (!lahin || e < lahin.etaisyys) lahin = { etaisyys: e, ...k };
-    }
-    p.ankkuri = lahin;
-  }
-  return { pisteet, ruudulla: pisteet.filter((p) => ruudulla(p.keski)) };
 });
+vaadi('nosto ilman kohdetta on kartalla kohdemerkkinä aihevaloineen',
+  kohdemalli.nosto && kohdemalli.nostoValo === 'skandaalit',
+  JSON.stringify(kohdemalli));
+vaadi('Ateenan kolme syvennystarinaa ovat kartalla aihevaloineen',
+  kohdemalli.syvennykset === 3 && kohdemalli.syvennysValo === 'historia',
+  JSON.stringify(kohdemalli));
+vaadi('nosto jolla on kohde ei luo omaa merkkiä',
+  kohdemalli.kiinnitetyt === 0, `${kohdemalli.kiinnitetyt} tuplamerkkiä`);
 
-vaadi('luetut täkypisteet ovat kartalla',
-  takypisteet.pisteet.length >= 3 && takypisteet.pisteet.every((p) => p.luettu),
-  `${takypisteet.pisteet.length} pistettä: ${JSON.stringify(takypisteet.pisteet.map((p) => p.id))}`);
-vaadi('luettu piste on vaimea eikä tuiki',
-  takypisteet.pisteet.every((p) => p.vaimea && !p.tuikkii),
-  JSON.stringify(takypisteet.pisteet.map((p) => ({ v: p.vaimea, t: p.tuikkii }))));
-
-const ankkuroidut = takypisteet.pisteet.filter((p) => p.ankkuri);
-vaadi('luettu piste astui ankkurisymbolinsa viereen, ei sen päälle',
-  ankkuroidut.length >= 2 && ankkuroidut.every((p) => p.ankkuri.etaisyys >= p.sade),
-  JSON.stringify(ankkuroidut.map((p) => ({
-    id: p.id, etaisyys: Math.round(p.ankkuri.etaisyys), sade: Math.round(p.sade),
-  }))));
-
-/*
- * Nimiö on kartalla pisteen kyljessä (omistajan lisätilaus 28.8.2026
- * ilta). Väistö saa vaientaa yksittäisen nimiön ahtaassa ryppäässä,
- * joten vaatimus on: jokaisella on nimiö ladottuna, ja ainakin yksi
- * niistä on näkyvissä.
- */
-vaadi('täkypisteillä on kartan nimiö',
-  takypisteet.pisteet.every((p) => p.nimio.length > 0)
-  && takypisteet.pisteet.some((p) => p.nimioNakyy),
-  JSON.stringify(takypisteet.pisteet.map((p) => `${p.nimio}${p.nimioNakyy ? '' : ' (piilossa)'}`)));
-
-const luettuRuudulla = takypisteet.ruudulla[0] ?? null;
-if (luettuRuudulla) {
-  await sivu.mouse.click(Math.round(luettuRuudulla.keski.x), Math.round(luettuRuudulla.keski.y));
-  await sivu.waitForTimeout(600);
-}
-const kortti = await sivu.evaluate(
-  () => document.querySelector('.fokusnosto-kortti-otsikko')?.textContent ?? null,
-);
-vaadi('luetun täkypisteen napautus avaa kortin uudelleen',
-  Boolean(luettuRuudulla) && typeof kortti === 'string' && kortti.length > 0,
-  `piste ${luettuRuudulla?.id ?? 'ei ruudulla'}, kortti ${JSON.stringify(kortti)}`);
+/* Noston merkki avaa lunastuskortin, jossa on kohdemallin ylärivi. */
+await napauta('nosto-sofia-korut');
+const nostokortti = await sivu.evaluate(() => ({
+  otsikko: document.querySelector('.fokusnosto-kortti-otsikko')?.textContent ?? null,
+  ylariviSymboli: Boolean(document.querySelector(
+    '.fokusnosto-ylarivi .nostosym-ylarivi-symboli',
+  )),
+  ylarivi: document.querySelector('.fokusnosto-ylarivi')?.textContent ?? '',
+}));
+vaadi('nostomerkin napautus avaa lunastuskortin',
+  typeof nostokortti.otsikko === 'string' && nostokortti.otsikko.length > 0,
+  JSON.stringify(nostokortti.otsikko));
+vaadi('lunastuskortin ylärivi on aihesymboli ja luokka',
+  nostokortti.ylariviSymboli && nostokortti.ylarivi.includes('Skandaalit'),
+  JSON.stringify(nostokortti));
 await sivu.evaluate(() => document.querySelector('.fokusnosto-kortti-sulje')?.click());
 await sivu.waitForTimeout(400);
+
+/* Syvennysmerkki avaa tarinakortin, jossa on minivisa. */
+await napauta('syvennys-ateena-nike');
+const syvennyskortti = await sivu.evaluate(() => ({
+  otsikko: document.querySelector('.syvennys-kortti .fokusnosto-kortti-otsikko')
+    ?.textContent ?? null,
+  visa: Boolean(document.querySelector('.syvennys-kortti .fokusvirta-visa-kysymys')),
+  ylariviSymboli: Boolean(document.querySelector(
+    '.syvennys-kortti .nostosym-ylarivi-symboli',
+  )),
+}));
+vaadi('syvennysmerkin napautus avaa tarinakortin minivisoineen',
+  syvennyskortti.otsikko === 'Athena Niken pyhäkkö' && syvennyskortti.visa
+  && syvennyskortti.ylariviSymboli,
+  JSON.stringify(syvennyskortti));
+await sivu.keyboard.press('Escape');
+await sivu.waitForTimeout(400);
+
+/* Kohteeseen kiinnitetty nosto aukeaa kohteen tietoruudusta. */
+await napauta('delfoi');
+const leikekirja = await sivu.evaluate(() => {
+  const nappi = document.querySelector('.fokuskohde-popup .fokuskohde-leikekirja');
+  return {
+    nappi: Boolean(nappi),
+    otsake: nappi?.querySelector('.fokuskohde-leikekirja-otsake')?.textContent ?? '',
+    otsikko: nappi?.querySelector('.fokuskohde-leikekirja-otsikko')?.textContent ?? '',
+  };
+});
+vaadi('Delfoin tietoruudussa on Livian leikekirja -nappi klikkiotsikolla',
+  leikekirja.nappi && leikekirja.otsake === 'Livian leikekirja'
+  && leikekirja.otsikko.length > 0,
+  JSON.stringify(leikekirja));
+await sivu.evaluate(() => document.querySelector('.fokuskohde-leikekirja')?.click());
+await sivu.waitForTimeout(500);
+const leikekortti = await sivu.evaluate(
+  () => document.querySelector('.fokusnosto-kortti-otsikko')?.textContent ?? null,
+);
+vaadi('leikekirjanappi avaa noston lunastuskortin',
+  typeof leikekortti === 'string' && leikekortti.includes('oraakkelin'),
+  JSON.stringify(leikekortti));
+await sivu.evaluate(() => document.querySelector('.fokusnosto-kortti-sulje')?.click());
+await sivu.waitForTimeout(400);
+
 
 /* --- 11: ilman lehteä ei merkkejä --- */
 

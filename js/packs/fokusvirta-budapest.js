@@ -615,6 +615,15 @@ export const FOKUSVIRTA_BUDAPEST = {
        * kokonaan uusiksi.
        */
       id: 'szegedin-tulva',
+      /*
+       * JUTUN KOHDE ON KARTAN OMA SZEGED (js/packs/fokuskohteet-hun.js
+       * `szeged` — tulva vei juuri sen kaupungin, ja noston paikka on
+       * bitilleen sama piste). Yhtenäisen kohdemallin sääntö (Raamattu
+       * 29.8.2026): nosto jolla on kohde EI luo omaa merkkiä —
+       * tuplamerkin sijaan tarina aukeaa Szegedin tietoruudun Livian
+       * leikekirja -napista (js/fokuskohteet.js piirraKohteenNosto).
+       */
+      kohde: 'szeged',
       nimio: 'Szegedin tulva',
       otsikko: 'Joki vei kaupungin yhdessä yössä — ja Eurooppa rakensi '
         + 'sen takaisin katu kerrallaan',
