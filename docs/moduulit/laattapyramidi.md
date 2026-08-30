@@ -1158,6 +1158,137 @@ rasteroituvat eri kokoisilla kankailla hitusen eri tavoin), pahin ero
 on 10 kanavaa 255:stä eli 4 %, eikä työkalun oma saumavaroitus
 lauennut. z5 parani 22:sta 5:een.
 
+## 6m. Esilataus ja karkea pohja — panorointi ja zoom (30.8.2026)
+
+Kaksi omistajan iPad-havaintoa samasta juuresta:
+
+> *"Kartta pitää esiladata ennen siirtoa kuten se vanhempi kartta.
+> Kuvassa hetki juuri panoroinnin jälkeen ennen kuin kartta ehtii
+> latautua. Eli lataa pelaajan näkymän ympäriltä ruudun verran joka
+> suuntaan valmiiksi niin panorointi ei voi näyttää tyhjää
+> karttapohjaa."*
+
+> *"Miksi zoomatessa uusi kartta latautuu hitaasti?"*
+
+Toteutus on kokonaan `js/laattapyramidi.js`:ssä; savuke
+`savuke-laattapyramidi.mjs` vartioi sitä väitteillä P7a–P7d.
+
+### Miksi "ruudun verran joka suuntaan" ei ole yhdeksänkertainen muisti
+
+Ruudullinen joka suuntaan on 3 × 3 ruudullista eli yhdeksänkertainen
+ala. Pilotin mittarilla (laatat × 512² × 4 tavua) se olisi ollut
+26 Mt → 236 Mt, mikä kaataisi puhelimen. **Kaava on kuitenkin väärä
+ruudun ulkopuolisille laatoille**, ja se mitattiin:
+
+| kiinnitettyjä laattoja | renderöijäprosessin RSS |
+| --- | --- |
+| 54 (vanha reunus, 1 laatta) | 1 021 Mt (kaksi ajoa: 1 025 · 1 017) |
+| 238 (reunus 5 laattaa) | 1 102 Mt (kaksi ajoa: 1 045 · 1 159) |
+
+184 lisälaattaa maksoi noin **80 Mt eli ~0,4 Mt/laatta**, ei 1 Mt.
+Selain purkaa kuvan vasta kun se maalataan, joten ruudun ulkopuolelle
+kiinnitetty laatta maksaa lähinnä pakatun tavumääränsä. Ero on koko
+ratkaisun perusta:
+
+- **NOUTO** (verkko + selaimen HTTP-välimuisti) on halpa: laatta on
+  mitattuna 15–40 kt ämpärissä, ja laatoilla on `immutable`-otsake
+  vuodeksi. → noudetaan **ruudun verran joka suuntaan**.
+- **KIINNITYS** (DOM + purettu bittikartta) on kallis vain ruudulla.
+  → kiinnitetään **puoli ruutua** joka suuntaan, ja panoroinnin
+  suuntaan puoli lisää.
+
+Reunukset mitataan RUUDULLISINA eikä laattoina: laatan koko ruudulla
+riippuu tason ja mittakaavan suhteesta (0,71…1,41 ×), ja ruutu on
+pystysuunnassa yli kaksi kertaa leveyttään.
+
+### Karkea pohja on se, mikä lopulta poistaa tyhjän
+
+Näkyvän alueen laatat pidetään myös **kaksi tasoa karkeampina** omassa
+alakerroksessaan, kahden ruudullisen laajuudelta. Sama ala on karkealta
+tasolta noin 1/16 laattoja, joten kuorma on olematon (mitattuna 12–45
+laattaa), ja ruudulla se tarkoittaa, ettei paljasta pergamenttia voi
+näkyä missään tilanteessa — pahimmillaan kartta on hetken sumea.
+
+Tämä ratkaisee erikseen sen tapauksen, jota reunus ei voi kattaa:
+**liuku**. Vauhdikas pyyhkäisy jatkuu sormen noston jälkeen
+inertialla, eikä yhtään laattaa kiinnitetä ennen kuin liuku pysähtyy
+(js/kartta.js, omistajan linjaus *"lataus siis aina vain juuri kun
+sormi irtoaa"*).
+
+### Zoomin hitaudella oli kaksi syytä, ja kumpikaan ei ollut tavut
+
+1. **Sääntö 2 ei ollut voimassa.** Tiedoston alku lupasi "vanha taso
+   jää alle kunnes uuden tason näkyvät laatat ovat latautuneet", mutta
+   koodi poisti vanhan samassa synkronisessa päivityksessä — siis ennen
+   kuin yksikään uusi laatta oli perillä. Ruudulle jäi tyhjä koko
+   latauksen ajaksi. Nyt vanha taso jää alle ja poistuu vasta kun uuden
+   tason näkyvät laatat ovat load-tapahtuneet tai kun 2 s täyttyy.
+2. **Irrotettu `<image>` ei lopeta lataamista.** Mitattu: kolmen
+   zoomiportaan sarjan jälkeen peli oli pyytänyt yli 700 laattaa, ja
+   ohitettujen tasojen laatat valuivat verkosta sisään vielä kymmeniä
+   sekunteja *sen tason edellä*, jota pelaaja katsoi. Poistettavan
+   laatan osoite nollataan nyt (`peruLaatta`), mikä katkaisee haun.
+
+Lisäksi viereiset zoomtasot (z ± 1) noudetaan joutoaikana samalla
+periaatteella kuin panoroinnin ympäristö: **alue on se, mikä zoomin
+jälkeen näkyy** (porras 1,5 ×), joten kumpikin taso on noin 25 laattaa
+eikä nelinkertainen määrä.
+
+### Mitattu ennen ja jälkeen
+
+Chromium /opt/pw-browsers/chromium, iPhone-profiili 390 × 844 dpr 3,
+Ateena z7, laatat paikallisesta peilistä oikeilla
+välimuistiotsakkeilla, **verkko kuristettu 1,5 Mbit/s + 200 ms**
+(CDP `Network.emulateNetworkConditions`). "Peitto" = kuinka suuri osa
+karttaruudusta on LADATTUJEN laattojen alla (40 × 40 pisteen otanta;
+peli merkitsee ladatun laatan `data-ladattu`-määreellä).
+
+| mitta | ennen (v1369) | jälkeen |
+| --- | --- | --- |
+| peitto näkymän asetuttua | 17,5 % | **100 %** |
+| panorointi alas, pienin peitto | 100 % | **100 %** |
+| panorointi itään, pienin peitto | **0 %** | **100 %** |
+| panorointi ylös, pienin peitto | **0 %** | **100 %** |
+| aika täyteen peittoon panoroinnin jälkeen | > 1 800 ms (ei saavutettu) | **3–4 ms** |
+| zoom ulos z7→z6, pienin peitto | **0 %** | **100 %** |
+| zoom sisään z6→z7, terävä kartta | 246 ms | **68 ms** |
+| zoom ulos z6→z5, terävä kartta | > 6 000 ms | **69 ms** |
+| kiinnitettyjä laattoja | 54 | 98 (joista karkeaa pohjaa 45) |
+| niistä ruudulla | — | 34 |
+| purettu muisti (ruudulla olevat) | 56,6 Mt* | **35,7 Mt** |
+| sama kaava kaikille kiinnitetyille | 56,6 Mt | 102,8 Mt (yläraja, ei arvio) |
+
+*Vanha luku laski kaikki kiinnitetyt purettuina; mittaus yllä osoittaa
+sen ylärajaksi.
+
+Nopealla yhteydellä sama sarja: esilataus nouti 308–373 laattaa,
+siirtoa yhteensä 19,8 Mt (ennen 6,0 Mt) — kolminkertainen siirto on
+esilatauksen hinta, ja se on omistajan pyytämä ruudullinen joka
+suuntaan. R2:n ulosliikenne on maksutonta, ja laatat ovat
+`immutable`-välimuistissa, joten sama laatta noudetaan kerran.
+
+**Silmillä todennettu** (kuvakaappaus kesken pyyhkäisyn, iPhone- ja
+iPad-profiili, kuristettu verkko): ennen korjausta ruudun yläkolmannes
+oli paljasta pergamenttia, jälkeen kartta on täysi. Myös kolme peräkkäistä
+rajua koko ruudun mittaista pyyhkäisyä liukuineen pitää peiton 100 %:ssa.
+
+### Vakiot ja niiden perusteet
+
+| vakio | arvo | miksi |
+| --- | --- | --- |
+| `KIINNITYS_RUUTUJA` | 0,5 | kattaa tavallisen sormenvedon; muisti kasvaa vain ruudulla näkyvästä |
+| `SUUNTALISA_RUUTUJA` | 0,5 | reunus kasvaa vain liikkeen suuntaan (halpa) — LISÄÄ perusreunukseen, ei korvaa sitä |
+| `NOUTO_RUUTUJA` | 1 | omistajan pyyntö: ruudun verran joka suuntaan |
+| `KARKEA_ETAISYYS` | 2 tasoa | 1/16 laattoja, silti tunnistettava kartta |
+| `KARKEA_RUUTUJA` | 2 | kattaa liu'un, jota kiinnitys ei voi kattaa |
+| `NOUTO_RINNAKKAIN` | 4 | esilataus ei saa täyttää yhteyttä |
+| `NOUTO_VIIVE_MS` | 300 | näkyvät laatat ensin; suodattaa myös pikkuvedot |
+| `VANHAN_TASON_KATTO_MS` | 2000 | yksi saapumaton laatta ei saa jättää kahta tasoa päällekkäin |
+
+Näkyvät laatat luodaan aina ENNEN reunuksen laattoja (kaksi kierrosta
+samalla käsittelijällä), koska pyyntöjärjestys pätee joka selaimessa —
+`fetchpriority` on sama asia pelkkänä vihjeenä.
+
 ## 7. Harva pyramidi — mitattu, päätetty POIS
 
 Karsinta laattamäärästä (`--harva-raja 8`, koko maailma, uusi arkki):
@@ -1238,7 +1369,10 @@ node tools/generoi-laattapyramidi.mjs <kohde> --data <ne-kansio> \
 maailman ajossa 0 %). Parven osa-alueet on rajattava lohkorajoille.
 
 Selaimessa (savuke, iPhone-profiili 390 × 844 dpr 3, kolme
-zoomiporrasta Ateenaan, syvin taso z7):
+zoomiporrasta Ateenaan, syvin taso z7). **Nämä ovat pilotin luvut
+30.8.2026 aamulla; esilataus ja karkea pohja muuttivat ne — voimassa
+olevat luvut ovat luvussa 6h**, samoin se, miksi "purettu muisti"
+laskettiin tässä liian suureksi:
 
 ```
 laattoja näkymässä       25

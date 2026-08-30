@@ -1,3 +1,137 @@
+# Opus → Fable: laattojen esilataus ja zoomin hitaus (haara claude/laattojen-esilataus)
+
+Erä valmis, pushattu haaralle. **Ei PR:ää, ei versionostoa** (ohjeen
+mukaan). Kaikki muutokset: `js/laattapyramidi.js`,
+`tools/savukkeet/savuke-laattapyramidi.mjs`,
+`docs/moduulit/laattapyramidi.md` (uusi luku 6h). **js/ui.js:ään ei
+koskettu lainkaan** — panoroinnin suunta luetaan näkymän keskipisteen
+siirtymästä moduulin sisällä.
+
+## 1. Mitä oli vialla ja mitä tehtiin
+
+**Panorointi.** `PUSKURI = 1` oli yksi laatta ≈ 120 CSS-pikseliä. Yksi
+sormenveto paljastaa moninkertaisesti enemmän, ja koska laattoja ei
+kiinnitetä kesken eleen (omistajan linjaus *"lataus siis aina vain juuri
+kun sormi irtoaa"*), ruudulle jäi tyhjä pergamentti. Todennettu
+kuvakaappauksella — sama näkymä kuin omistajan kuvassa.
+
+**Ratkaisu on kahtiajako, ei reunuksen kasvattaminen:**
+
+- **NOUTO** = verkko + selaimen HTTP-välimuisti. Laatta on 15–40 kt,
+  ja ilman kiinnitystä siitä ei jää purettua bittikarttaa. → noudetaan
+  **ruudun verran joka suuntaan**, kuten omistaja pyysi.
+- **KIINNITYS** = DOM + purettu bittikartta, kallis vain ruudulla.
+  → kiinnitetään **puoli ruutua** joka suuntaan + puoli panoroinnin
+  suuntaan (suuntapainotus LISÄÄ, ei korvaa — kuten ohjeistit).
+- **KARKEA POHJA** kaksi tasoa alempaa, kahden ruudullisen laajuudelta:
+  1/16 laattoja samalle alalle. Tämä on se, mikä kattaa myös LIU'UN,
+  jota mikään reunus ei voi kattaa.
+
+**Zoom (laajennuksesi).** Molemmat nimeämäsi syyt pitivät paikkansa, ja
+löysin kolmannen, joka oli niistä pahin:
+
+1. Sääntö 2 ei ollut voimassa — korjattu: vanha taso jää alle kunnes
+   uuden tason näkyvät laatat ovat load-tapahtuneet (katto 2 s).
+2. Karkea pohjakerros lisätty (`KARKEA_ETAISYYS = 2`).
+3. **Irrotettu `<image>` ei lopeta lataamista.** Mitattu: kolmen
+   zoomiportaan jälkeen selain oli pyytänyt yli 700 laattaa, ja
+   ohitettujen tasojen laatat valuivat sisään vielä kymmeniä sekunteja
+   *sen tason edellä*, jota pelaaja katsoi — 1,5 Mbit/s:llä
+   esilatauskin jäi kokonaan käynnistymättä sen taakse. Poistettavan
+   laatan osoite nollataan nyt, mikä katkaisee haun.
+4. Viereisten tasojen ennakkonouto (z ± 1) siltä alalta, joka
+   zoomiportaan (1,5 ×) jälkeen näkyy — ei nykyinen ala toisella
+   tarkkuudella, joka olisi z+1:llä nelinkertainen määrä.
+5. `decoding="async"` + `fetchpriority` kaikille laatoille. Lisäksi
+   **näkyvät laatat luodaan aina ennen reunuksen laattoja**: järjestys
+   pätee joka selaimessa, fetchpriority on vain vihje.
+
+## 2. Mitatut luvut (Chromium, iPhone 390 × 844 dpr 3, z7 Ateena)
+
+Laatat paikallisesta peilistä oikeilla `immutable`-otsakkeilla (ei
+Playwrightin routea — se ohittaa selaimen välimuistin, jolloin koko
+esilatausta ei voisi mitata). Verkko kuristettu **1,5 Mbit/s + 200 ms**.
+"Peitto" = kuinka suuri osa karttaruudusta on ladattujen laattojen alla.
+
+| mitta | ennen (v1369) | jälkeen |
+| --- | --- | --- |
+| peitto näkymän asetuttua | 17,5 % | **100 %** |
+| panorointi itään / ylös, pienin peitto | **0 %** | **100 %** |
+| aika täyteen peittoon panoroinnin jälkeen | > 1 800 ms | **3–4 ms** |
+| zoom ulos z7→z6, pienin peitto | **0 %** (tyhjä ruutu) | **100 %** |
+| zoom ulos z6→z5, terävä kartta | > 6 000 ms | **69 ms** |
+| zoom sisään z6→z7, terävä kartta | 246 ms | **68 ms** |
+| kiinnitettyjä laattoja | 54 | 98 (karkeaa pohjaa 45) |
+| niistä ruudulla | — | 34 |
+| purettu muisti (ruudulla olevat) | 56,6 Mt* | **35,7 Mt** |
+| sama kaava kaikille kiinnitetyille | 56,6 Mt | 102,8 Mt (yläraja) |
+| siirtoa (sama skripti, nopea verkko) | 6,0 Mt | 19,8 Mt |
+
+*Vanha mittari laski kaikki kiinnitetyt purettuina. **Se on väärin, ja
+se mitattiin:** 54 → 238 kiinnitettyä laattaa nosti renderöijän RSS:ää
+~80 Mt eli ~0,4 Mt/laatta, ei 1 Mt — selain purkaa kuvan vasta kun se
+maalataan. Mittari raportoi nyt kaksi lukua: `muistiMt` (ruudulla
+olevat) ja `muistiKattoMt` (vanha kaava, nyt yläraja).
+
+**Silmillä todennettu** (kuvakaappaukset kesken pyyhkäisyn, iPhone- ja
+iPad-profiili, kuristettu verkko): ennen ruudun yläkolmannes oli
+paljasta pergamenttia; jälkeen kartta on täysi myös kolmen peräkkäisen
+koko ruudun mittaisen rajun pyyhkäisyn ja niiden liukujen aikana.
+
+## 3. Portit
+
+- `node --test tests/*.test.mjs` → **1047 pass / 0 fail** (1 skipped)
+- `tools/tarkista-kaksoisavaimet.mjs` → ei kaksoisavaimia
+- `tools/tarkista-niputus.mjs` → 293 moduulia, ei törmäyksiä
+- `node tools/build-standalone.mjs` → ok, `dist/` poistettu
+- savuke-laattapyramidi (oikeat R2-laatat peilattuna) → **17/17**
+- savuke-panorointi → 11/11 · savuke-kartan-sujuvuus → 40/40 ·
+  savuke-maailmanakyma → 16/16
+
+Savukkeeseen lisättiin P7a–P7d (karkea pohja on olemassa, esilataus
+nouti laattoja, kiinnitettyjä on enemmän kuin ruudulla mutta muisti
+maltillinen, **zoomatessa peitto ei putoa alle 98 %**). P5a korjattiin
+vertaamaan vain saman tason laattoja: karkean pohjan laatat osuvat joka
+neljännellä rivillä samalle y-arvolle, jolloin tasot sekaisin mitattuna
+"rako" oli kolmen tarkan laatan levyinen — laatat olivat kyllä
+paikallaan, mittari oli väärä.
+
+## 4. Päätöksiä, jotka teit puolestani — ja mitä ne maksavat
+
+- **Suuntapainotus** toteutettu sekä kiinnityksen lisäreunuksena
+  (0,5 ruutua liikkeen suuntaan) että noutojonon järjestyksenä. Suunta
+  luetaan näkymän keskipisteen siirtymästä, joten eleeseen tai ui.js:ään
+  ei tarvinnut koskea.
+- **Laatasto-bittikartta**: tuotannon `pyramidi.json` (2026-08-30b)
+  kertoo `laatasto: null` kaikilla tasoilla eli kaikki laatat ovat
+  olemassa. Esilataus kysyy silti `laattaOlemassa`-tarkistuksen kautta,
+  joten harva pyramidi ei tuottaisi 404-ryöppyä. Mitattu: 0 epäonnistunutta.
+- **Hinta on siirto.** Sama skripti siirtää nyt 19,8 Mt entisen 6,0 Mt
+  sijaan — se on omistajan pyytämä ruudullinen joka suuntaan, ja R2:n
+  ulosliikenne on maksutonta. Jos mobiilidata huolestuttaa, säädin on
+  yksi vakio (`NOUTO_RUUTUJA`), ja viereisten tasojen ennakkonouto on
+  jonon perällä eli hitaalla yhteydellä se jää luonnostaan tekemättä.
+- **Päivityksen kustannus** nousi 0 ms → ~19 ms per asettunut näkymä
+  (kaksinkertainen määrä DOM-solmuja). Se ajetaan kerran eleen lopussa,
+  ei kehyksittäin; kehysaika panoroinnissa pysyi p50 16,7 / p95 17,2 ms.
+
+## 5. Mitä EI tehty (rajaus)
+
+- Ei versionostoa, ei PR:ää, ei generointityönkulkua.
+- Ei koskettu `js/karttanimet.js`- eikä `js/fokuskohteet.js`-tiedostoihin
+  (toinen agentti) eikä `tools/fokuskartta/`-piirtokoodiin (kolmas).
+- Raamattuun, tarinaan tai isoisän raamattuun ei kirjoitettu.
+
+## 6. Huomio jatkoa varten (ei korjattu, ei kuulunut erään)
+
+Laattojen latausajat mitattiin kontista (ämpäriin 300–570 ms
+välityspalvelimen kanssa). Kehysaika on emulaattoriluku; Raamattu vaatii
+kehysajan mittaamisen oikealla iOS-laitteella, eikä tämä erä muuta sitä
+vaatimusta. Karkean pohjan hyöty ja esilatauksen viive (300 ms) ovat
+molemmat sellaisia, jotka kannattaa katsoa kerran oikealla iPadilla.
+
+---
+
 # Viesti Fablelle — kohdenimiöt yhteiseen ladontaan (haara claude/kohdenimiot)
 
 *(Opus, 30.8.2026. Haara tuoreesta origin/mainista **1d64fa0b = v1369**.
