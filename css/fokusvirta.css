@@ -651,48 +651,10 @@
   color: #16130f;
 }
 
-/* ===================================================================
-   KUVAVINJETIT KARTALLA (js/fokusvirta.js paivitaFokuskuvat)
-   -------------------------------------------------------------------
-   Omistajan tarkennus 24.8.2026: fokusvirran kuvat piirtyvät pieninä
-   suoraan kartalle kohteen päälle ja aukeavat napautuksesta isoiksi.
-
-   EI SUODATTIMIA (iOS-sääntö, sama kuin fokuskartalla): varjo on oma
-   suorakulmionsa, ei feDropShadow. Kaikki mitat tulevat JS:stä
-   pikseleinä — kerros skaalataan zoomin käänteisluvulla, joten vinjetti
-   on aina saman kokoinen ruudulla.
-   =================================================================== */
-
-.fokuskuvat { pointer-events: none; }
-
-.fokuskuva-pinni {
-  pointer-events: auto;
-  cursor: pointer;
-}
-
-.fokuskuva-varjo { fill: rgba(0, 0, 0, 0.35); }
-
-.fokuskuva-kehys {
-  fill: #f3ecd9;
-  stroke: rgba(60, 44, 26, 0.55);
-  stroke-width: 1;
-}
-
-.fokuskuva-nuora {
-  stroke: rgba(60, 44, 26, 0.5);
-  stroke-width: 1;
-  stroke-dasharray: 3 3;
-  fill: none;
-}
-
-.fokuskuva-pinni:hover .fokuskuva-kehys,
-.fokuskuva-pinni:focus-visible .fokuskuva-kehys {
-  fill: #fffdf5;
-  stroke: var(--accent, #d9a13b);
-  stroke-width: 1.6;
-}
-
-.fokuskuva-pinni:focus-visible { outline: none; }
+/* KUVAVINJETIT KARTALLA on purettu (omistajan bugiraportti 30.8.2026:
+   sisältökuvat kuuluvat kortteihin, eivät kartalle) — .fokuskuva-*
+   -tyylit poistuivat piirtokoodin mukana, ks. js/fokusvirta.js
+   KUVAT KARTALLA — PURETTU. */
 
 /* ===================================================================
    KUVAN SUURENNOS KARTAN PÄÄLLE (js/fokusvirta.js avaaSuurennos)
