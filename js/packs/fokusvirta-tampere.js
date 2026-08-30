@@ -136,12 +136,11 @@
  *
  * ── ÄÄNITE ─────────────────────────────────────────────────────────
  *
- * Luentaa EI ole vielä generoitu, ja `matkakirja.aanite` on tilauksen
- * mukaan jätetty POIS kokonaan (toisin kuin Sevillassa ja Roomassa).
- * Kenttä lisätään vasta kun luenta on ajettu — siihen asti kortti ei
- * lupaa ääntä, jota ei ole. Teksti ja luenta ovat sanasta sanaan samat,
- * joten luennan voi ajaa suoraan (generoi-luennat-tyonkulku) ilman että
- * tekstiin kosketaan.
+ * Luenta on generoitu 30.8.2026 (tools/generoi-luennat.mjs, lähteenä
+ * tämän lohkon oma `matkakirja.luenta`) ja `matkakirja.aanite`
+ * osoittaa siihen: assets/audio/puhe-fokus-matkakirja-tampere.mp3.
+ * Teksti ja luenta ovat sanasta sanaan samat, joten tekstin muutos
+ * vaatii uuden generoinnin.
  */
 
 /*
@@ -238,6 +237,7 @@ export const FOKUSVIRTA_TAMPERE = {
       + 'enemmän naisia kuin miehiä, ja lauantaina koko kaupunki kävelee '
       + 'koskenrantaa pitkin parhaissaan. [softly] Vesi tekee täällä '
       + 'työn, jonka muualla tekee hiili — [whispers] ja vesi ei lopu.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-tampere.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

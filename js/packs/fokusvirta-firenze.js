@@ -110,11 +110,11 @@
  *
  * ── ÄÄNITE ─────────────────────────────────────────────────────────
  *
- * Luentaa EI ole vielä generoitu, joten `matkakirja.aanite` PUUTTUU
- * (aallon 4B linjaus; Tukholman malli). Teksti ja luenta ovat sanasta
- * sanaan samat, joten luennan voi ajaa suoraan
- * (.github/workflows/generoi-luennat.yml) ilman että tekstiin
- * kosketaan, ja kytkentärivi kirjoitetaan vasta silloin.
+ * Luenta on generoitu 30.8.2026 (tools/generoi-luennat.mjs, lähteenä
+ * tämän lohkon oma `matkakirja.luenta`) ja `matkakirja.aanite`
+ * osoittaa siihen: assets/audio/puhe-fokus-matkakirja-firenze.mp3.
+ * Teksti ja luenta ovat sanasta sanaan samat, joten tekstin muutos
+ * vaatii uuden generoinnin.
  */
 
 /*
@@ -203,6 +203,7 @@ export const FOKUSVIRTA_FIRENZE = {
       + 'sateilta suojaan; toivon että se ehtii nähdä vielä yhden '
       + 'kesän. [whispers] Joki on ruskea ja kärsimätön; sanotaan '
       + 'että se on ennenkin noussut kaduille ja nousee vielä.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-firenze.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

@@ -136,11 +136,11 @@
  *
  * ── ÄÄNITE ─────────────────────────────────────────────────────────
  *
- * Luentaa EI ole vielä generoitu, joten `matkakirja.aanite` puuttuu
- * kokonaan (sama ratkaisu kuin Tukholmassa; aallon 4B rajaus). Teksti
- * ja luenta ovat sanasta sanaan samat, joten luennan voi ajaa milloin
- * tahansa työnkululla .github/workflows/generoi-luennat.yml, ja
- * äänitekenttä lisätään silloin yhdellä rivillä.
+ * Luenta on generoitu 30.8.2026 (tools/generoi-luennat.mjs, lähteenä
+ * tämän lohkon oma `matkakirja.luenta`) ja `matkakirja.aanite`
+ * osoittaa siihen: assets/audio/puhe-fokus-matkakirja-barcelona.mp3.
+ * Teksti ja luenta ovat sanasta sanaan samat, joten tekstin muutos
+ * vaatii uuden generoinnin.
  */
 
 /*
@@ -215,6 +215,7 @@ export const FOKUSVIRTA_BARCELONA = {
       + '— toista minulle, toista toisilleen. [softly] Espanja on '
       + 'tasavalta tänä keväänä, mutta täällä sanotaan: [whispers] '
       + 'Katalonia tekee työt.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-barcelona.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden avauskuva) ----- */
