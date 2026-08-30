@@ -154,6 +154,12 @@ const TASOJA = 8;
  * Marginaali on 232 ja 240 kuvapikseliä 6400 pikselin viitearkilla eli
  * 435 ja 450 lautayksikköä. Vain ylhäällä ja alhaalla: kiertävällä
  * laudalla ei ole sivureunaa.
+ *
+ * KEHYS EI OLE SAMA ASIA KUIN KARTAN SISÄLLÄ OLEVAT KALUSTEET.
+ * Marginaali, kaksoisviiva, kartussi, mittajana ja painajanrivi elävät
+ * arkin reunassa ja ovat joka tasolla. Valtamerten nimet ja
+ * kompassiruusu ovat kartan ALALLA, ja ne piirretään vain uloimmille
+ * tasoille (omistaja 30.8.2026) — ks. MERET ja KOMPASSI alempana.
  */
 const KEHYS = {
   yla: 232,
@@ -163,16 +169,49 @@ const KEHYS = {
   painaja: 'Painettu Matkakirjan kustantamossa MDCCCLXXIII',
   oikeudet: '© Matkakirja',
 };
-const KOMPASSI = { lon: -132, lat: -38, sade: 132 };
+/*
+ * VALTAMERTEN NIMET JA KOMPASSIRUUSU — KOOT MITATTU UUDESTAAN
+ * 30.8.2026 (omistajan päätös samana päivänä: *"vain uloimmille
+ * tasoille"*).
+ *
+ * Nämä kaksi ovat arkin kalusteita eli KARTAN mittakaavassa (moottorin
+ * `S`), ja moottori piirtää ne vain tasoille, joilla koko meri mahtuu
+ * näkymään — kynnys ja sen mittaus ovat maailmapiirto.js:n osiossa 7.
+ * Kun syvät tasot jäävät pois, koot on mitoitettava sen mukaan, missä
+ * ne oikeasti piirretään: alla olevat luvut ovat MITATTUJA eivätkä
+ * arvattuja.
+ *
+ * NIMET: entiset koot olivat uloimmilla tasoilla näkymättömiä
+ * (kirjaimen korkeus z0:lla 1,8 px, z1:llä 3,6 px). Suurin mahdollinen
+ * suurennos tulee siitä, kuinka paljon avovettä nimen ympärillä on:
+ * tiukin on ATLANTIN VALTAMERI, jonka puolikas leveys (9,85°) täyttää
+ * 42 % lähimmästä rannasta (23,5° itään, Länsi-Afrikka). 80 %:n
+ * täyttöaste antaa kertoimeksi 1,9 — ja se on todennettu myös silmällä:
+ * 1,9:llä nimen ja Afrikan väliin jää selvä rako, 2,2:lla viimeinen I
+ * osuu rannikkoon. Kaikki koot on siksi kerrottu 1,9:llä, jolloin
+ * typografinen hierarkia (Tyynimeri suurin) säilyy sellaisenaan.
+ *
+ * KOMPASSI: sama koe omalla mitallaan. Lähin maa ruusun keskipisteestä
+ * on 14,1° (Pitcairnin saariryhmä), ja nykyinen ulkokehä on 9,2°.
+ * Kerroin 1,5 vie kehän 13,8°:een eli juuri avoveden sisään; 1,9 veisi
+ * sen 17,5°:een, jolloin kehä kulkisi saarten yli. Ruusun halkaisija
+ * on tällöin 207 px tasolla z2 ja 104 px tasolla z1.
+ */
+const KOMPASSI = { lon: -132, lat: -38, sade: 198 };
 const MERET = [
-  { nimi: 'TYYNIMERI', lon: -142, lat: 4, koko: 26 },
-  { nimi: 'TYYNIMERI', lon: 163, lat: 18, koko: 26 },
-  { nimi: 'ATLANTIN VALTAMERI', lon: -38, lat: 26, koko: 22 },
-  { nimi: 'ETELÄINEN ATLANTTI', lon: -18, lat: -30, koko: 19 },
-  { nimi: 'INTIAN VALTAMERI', lon: 78, lat: -28, koko: 22 },
-  { nimi: 'JÄÄMERI', lon: 110, lat: 80.5, koko: 20 },
-  { nimi: 'ETELÄINEN JÄÄMERI', lon: 60, lat: -61.5, koko: 18 },
+  { nimi: 'TYYNIMERI', lon: -142, lat: 4, koko: 49 },
+  { nimi: 'TYYNIMERI', lon: 163, lat: 18, koko: 49 },
+  { nimi: 'ATLANTIN VALTAMERI', lon: -38, lat: 26, koko: 42 },
+  { nimi: 'ETELÄINEN ATLANTTI', lon: -18, lat: -30, koko: 36 },
+  { nimi: 'INTIAN VALTAMERI', lon: 78, lat: -28, koko: 42 },
+  { nimi: 'JÄÄMERI', lon: 110, lat: 80.5, koko: 38 },
+  { nimi: 'ETELÄINEN JÄÄMERI', lon: 60, lat: -61.5, koko: 34 },
 ];
+/*
+ * Kynnys on moottorin oma (maailmapiirto.js KALUSTEIDEN_YLARAJA); tämä
+ * on sen kopio umpimeren karsintaa varten, ja ne on pidettävä samana.
+ */
+const KALUSTEIDEN_YLARAJA = 0.3;
 
 /*
  * TASON 0 LEVEYS johdetaan syvimmästä: 86 400 / 2^7 = 675 px.
@@ -693,19 +732,27 @@ function umpimeriSavy(mitat, sarake, rivi, syyt = null) {
    * leveydelle), joten yksi viitepikseli on 12000/6400 = 1,875
    * lautayksikköä ja aste on 33,33 yksikköä. Väljä arvaus olisi tässä
    * kallis: se hylkäisi tuhansia laattoja, joissa ei ole mitään.
+   *
+   * EHTO KOSKEE VAIN NIITÄ TASOJA, JOILLA KALUSTEET PIIRRETÄÄN
+   * (omistaja 30.8.2026, ks. MERET yllä). Syvemmillä tasoilla arkilla
+   * ei ole merennimeä eikä ruusua, joten niiden varaama ala olisi
+   * varaus tyhjästä — ja juuri syvät tasot ovat ne, joilla karsittavia
+   * laattoja on tuhansia.
    */
   const YKS_PER_VIITE = LAUTA.projektio.leveys / 6400;
   const ASTE = LAUTA.projektio.leveys / 360;
-  for (const m of MERET) {
-    // Harvennettu versaaliteksti: leveys noin 0,72 · koko merkkiä kohti.
-    const puoliLev = (m.nimi.length * m.koko * 0.72 * YKS_PER_VIITE) / 2 / ASTE;
-    const puoliKork = (m.koko * 1.4 * YKS_PER_VIITE) / ASTE;
-    if (m.lon > lonL - puoliLev && m.lon < lonO + puoliLev
-      && m.lat > latE - puoliKork && m.lat < latP + puoliKork) return ei('nimi');
+  if (mitat.px <= KALUSTEIDEN_YLARAJA) {
+    for (const m of MERET) {
+      // Harvennettu versaaliteksti: leveys noin 0,72 · koko merkkiä kohti.
+      const puoliLev = (m.nimi.length * m.koko * 0.72 * YKS_PER_VIITE) / 2 / ASTE;
+      const puoliKork = (m.koko * 1.4 * YKS_PER_VIITE) / ASTE;
+      if (m.lon > lonL - puoliLev && m.lon < lonO + puoliLev
+        && m.lat > latE - puoliKork && m.lat < latP + puoliKork) return ei('nimi');
+    }
+    const kompassiAst = (KOMPASSI.sade * 1.15 * YKS_PER_VIITE) / ASTE;
+    if (KOMPASSI.lon > lonL - kompassiAst && KOMPASSI.lon < lonO + kompassiAst
+      && KOMPASSI.lat > latE - kompassiAst && KOMPASSI.lat < latP + kompassiAst) return ei('kompassi');
   }
-  const kompassiAst = (KOMPASSI.sade * 1.15 * YKS_PER_VIITE) / ASTE;
-  if (KOMPASSI.lon > lonL - kompassiAst && KOMPASSI.lon < lonO + kompassiAst
-    && KOMPASSI.lat > latE - kompassiAst && KOMPASSI.lat < latP + kompassiAst) return ei('kompassi');
 
   // 1b. järvet
   for (const j of JARVIEN_LAATIKOT) {
