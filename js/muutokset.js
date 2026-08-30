@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1370, teksti: 'Meren syvyysporrastus kaksinkertaistettu' },
   { v: 1369, teksti: 'Nimet laatoista peliin, mittajana ja kehysviivat' },
   { v: 1368, teksti: 'Kameran maailmaksi arkki, uloszoomaus loysemmaksi' },
   { v: 1367, teksti: 'Arkin kalusteet uloimmille tasoille' },

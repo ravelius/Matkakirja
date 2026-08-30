@@ -354,7 +354,20 @@ function reunusTasolle() {
 }
 const HARVA = lippu('harva');
 const HARVA_ALIN_TASO = Number(valitsin('harva-alin', 4));
-const HARVA_RAJA = Number(valitsin('harva-raja', 2));
+/*
+ * KARSINTARAJA SEURAA SYVYYSRAMPIN KONTRASTIA.
+ *
+ * Raja on kanavaeroina ilmaistu "tämä laatta on niin tasainen ettei
+ * sitä kannata piirtää". Kun syvyysramppia jyrkennettiin 30.8.2026
+ * kertoimella 2,10 (tools/fokuskartta/piirto.js SYVYYS_ANKKURIT,
+ * omistajan valinta *"vahvempi sävyporrastus"*), sama FYYSINEN
+ * tasaisuus alkoi tuottaa 2,10× enemmän kanavaeroa — vanhalla rajalla
+ * 2 lähes jokainen ulappalaatta olisi ylittänyt sen, karsinta olisi
+ * lakannut ja syvimmän tason ajo moninkertaistunut. Raja on siis 4
+ * (tarkka vastine olisi 4,2; pyöristys alaspäin karsii hitusen
+ * varovaisemmin eli piirtää hitusen enemmän).
+ */
+const HARVA_RAJA = Number(valitsin('harva-raja', 4));
 
 /** "0-4" tai "3" -> [0,1,2,3,4] / [3]. */
 function lueTasot(teksti) {

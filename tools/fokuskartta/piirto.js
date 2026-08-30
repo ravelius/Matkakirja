@@ -189,18 +189,57 @@ export const ASTEIKKO = [
  * ovat myöhempi oma eränsä, eikä niitä tehdä tässä.
  */
 /*
- * ANKKURIT: alkuperäisen seitsemän portaan asteikko sellaisenaan. Nämä
- * ovat hiottuja lukuja (ks. yllä matalan meren perustelu), eikä niitä
- * muuteta — ramppi KULKEE näiden kautta.
+ * === KONTRASTI KAKSINKERTAISTETTIIN (omistaja 30.8.2026) ============
+ *
+ * Omistajan kysymys TestFlightistä oli *"Miksi meressä ei näy
+ * syvyysmerkkejä?"*, ja mitattu vastaus oli, ettei niitä näy koska
+ * niitä EI OLE — koko asteikko 0…−5000 m kulki 42 sävyä, kun paperin
+ * ja musteen väli on noin 250. Valtameren koko syvyys mahtui siis
+ * kuudesosaan käytettävissä olevasta kontrastista, ja kirkkaalla
+ * ruudulla se katosi kokonaan.
+ *
+ * Vaihtoehdoista (syvyyskäyrät, luotausluvut, vahvempi porrastus)
+ * omistaja valitsi PORRASTUKSEN: ei yhtään uutta viivaa eikä tavua,
+ * vain se signaali näkyviin, joka aineistossa jo on.
+ *
+ * MIKSI BANDING EI PALAA. Porrastuksen kasvattaminen on juuri se
+ * liike, jonka 29.8.2026 valitus *"syvyysvyöhykerenkaat näyttävät
+ * bandingilta"* kielsi — mutta se valitus koski VANHAA neljän
+ * lineaarisen jakson ramppia, jonka pahin gradientin taite oli 6,9
+ * sävyä tuhatta metriä kohti. Monotoninen kuutio (ks. alla) painoi
+ * taitteen 1,7:ään, ja siinä on se pelivara, jolla kontrastin voi nyt
+ * ottaa takaisin: MITATTUNA kontrasti 42 → 88 sävyä (2,10×) ja pahin
+ * taite 1,7 → 3,4 sävyä / 1000 m. Uusi ramppi on siis yhä alle
+ * puolet siitä taitteesta, joka bandingin aiheutti, mutta yli kaksi
+ * kertaa niin luettava. Ankkurit ovat monotonisia kaikilla kolmella
+ * kanavalla, joten vaaleaa rengasta rannan ulkopuolelle ei synny.
+ *
+ * MATALAN MEREN PORRAS PIDETTIIN LOIVANA. 0…−30 m on yhä pienin
+ * askel (14 sävyä), koska se osuu rantaviivaan: jyrkkä porras siinä
+ * piirtäisi jokaisen rannikon ympärille tumman kaulan.
+ *
+ * SÄVY PYSYY LÄMPIMÄNÄ. Syvinkin meri on 134,132,124 eikä neutraali
+ * harmaa — meri on tässä kartassa viileää paperia, ei sinistä (ks.
+ * osion alku), eikä se muutu tästä.
+ *
+ * KARSINTARAJA SEURAA MUKANA. tools/generoi-laattapyramidi.mjs
+ * HARVA_RAJA on kanavaeroina ilmaistu "tämä laatta on niin tasainen
+ * ettei sitä kannata piirtää" — ja kun ramppi jyrkkenee 2,10×, sama
+ * FYYSINEN tasaisuus tuottaa 2,10× enemmän kanavaeroa. Raja nostettiin
+ * siksi 2:sta 4:ään samassa erässä. Ilman sitä umpimeren karsinta
+ * lakkaisi lähes kokonaan ja syvimmän tason ajo moninkertaistuisi.
+ *
+ * ANKKURIT: seitsemän porrasta kuten ennen, samoissa syvyyksissä.
+ * Ramppi KULKEE näiden kautta.
  */
 const SYVYYS_ANKKURIT = [
   { m: 0, v: [222, 215, 190] },
-  { m: -30, v: [206, 201, 183] },
-  { m: -120, v: [199, 195, 180] },
-  { m: -600, v: [193, 190, 177] },
-  { m: -1500, v: [188, 185, 173] },
-  { m: -3000, v: [184, 181, 170] },
-  { m: -5000, v: [180, 178, 168] },
+  { m: -30, v: [208, 203, 185] },
+  { m: -120, v: [197, 193, 179] },
+  { m: -600, v: [182, 179, 168] },
+  { m: -1500, v: [167, 165, 155] },
+  { m: -3000, v: [150, 148, 139] },
+  { m: -5000, v: [134, 132, 124] },
 ];
 
 /**
