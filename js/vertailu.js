@@ -148,19 +148,27 @@ export function tahdistaMaatiedot(ui, halutaan) {
     ui.maatiedotKerros?.remove();
     ui.maatiedotKerros = null;
     ui.maatiedotValittu = null;
-    // Selailu on voinut viedä pillerin toiseen maahan — takaisin
-    // pelaajan omaan, kun tila suljetaan.
+    // Maakyltti on maaselaimen oma kaluste: tilan sulkeutuessa se
+    // katoaa kartalta kokonaan.
     palautaPilleriPelaajalle(ui);
   }
   ui.drawTargets();
 }
 
-/** Pilleri takaisin pelaajan nykyiseen maahan (maaselaimen jäljiltä). */
+/**
+ * Maakyltti pois kartalta (maaselaimen sulkeutuessa).
+ *
+ * Kyltti näytti ennen pelaajan oman maan aina, mutta Raamattu
+ * lakkautti sen pelinäkymästä (*"oikean yläkulman maakyltti
+ * poistetaan"*, ks. js/ui.js paivitaMaaPilleri): maan nimen kertoo
+ * kartuutsi vasemmassa alanurkassa. Kyltti on siis olemassa vain niin
+ * kauan kuin maatiedot-tila on auki.
+ *
+ * Nimi on entinen, koska kutsupaikka on sama: tämä on se kohta, jossa
+ * selailun jäljet siivotaan.
+ */
 export function palautaPilleriPelaajalle(ui) {
-  const map = ui.game.pack.map;
-  const city = ui.game.cityOf?.();
-  const iso = city ? map.cityCountry?.[city.id] : null;
-  ui.paivitaMaaPilleri(iso ? map.countryShapes?.[iso] : null, iso ?? null);
+  ui.paivitaMaaPilleri(null, null);
 }
 
 /** Maiden muodot napautettavina; valitulle nimi ja "i". */
