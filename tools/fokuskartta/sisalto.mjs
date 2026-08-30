@@ -59,6 +59,26 @@ export async function keraaSisalto(pack, packkikansio) {
    * naapurikaupunkia, ja juuri siksi ne luetaan sellaisenaan eikä
    * keksitä uutta asettelua: laudan oma ladonta on hiottua työtä.
    */
+  /*
+   * TÄRKEYS RATKAISEE TÖRMÄYKSEN.
+   *
+   * Nimiöitä ei mahdu tiheimpään kohtaan kaikkia, ja silloin on
+   * päätettävä kumpi jää. Päätös ei saa olla mielivaltainen eikä
+   * aakkosjärjestys: PELIN KANNALTA MERKITYKSELLINEN KAUPUNKI VOITTAA
+   * KORISTEELLISEN. Lähtökaupunki on pelin aloituspiste, lentokenttä
+   * on solmu johon pelaaja voi lentää, ja reittisolmun aste kertoo
+   * kuinka moni matka kulkee sen kautta. Koristeellinen kaupunki on
+   * se, jolla ei ole näistä mitään.
+   */
+  const aste = new Map();
+  for (const e of pack.edges ?? []) {
+    aste.set(e.a, (aste.get(e.a) ?? 0) + 1);
+    aste.set(e.b, (aste.get(e.b) ?? 0) + 1);
+  }
+  for (const e of pack.airRoutes ?? []) {
+    aste.set(e.a, (aste.get(e.a) ?? 0) + 1);
+    aste.set(e.b, (aste.get(e.b) ?? 0) + 1);
+  }
   const kaupungit = (pack.cities ?? []).map((c) => ({
     id: c.id,
     nimi: c.name,
@@ -69,6 +89,8 @@ export async function keraaSisalto(pack, packkikansio) {
     ly: c.ly ?? 0,
     // Lähtökaupungit ja lentokentät ovat kartalla isompia pisteitä.
     iso: Boolean(c.start || c.airport),
+    tarkeys: (c.start ? 8 : 0) + (c.airport ? 4 : 0)
+      + Math.min(3, aste.get(c.id) ?? 0),
   }));
   const paikka = new Map(kaupungit.map((c) => [c.id, c]));
 

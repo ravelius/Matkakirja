@@ -120,6 +120,7 @@
  */
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { basename, extname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 /* ============================================================ RESEPTIT */
 
@@ -775,8 +776,9 @@ export const VERTAILUPALA = {
  * viitata mihinkään moduulin ulkopuoliseen — kaikki apurit ovat
  * sisällä ja kaikki parametrit tulevat argumenttina.
  */
-async function patinoiSelaimessa({
+export async function patinoiSelaimessa({
   b64, tyyppi, resepti, leveys, muoto, laatu, tausta, maailma,
+  koko = null, pikselit = null, palauta = 'b64',
 }) {
   /* --------------------------------------------------------- apurit */
   const mulberry32 = (a) => function satunnainen() {
@@ -824,20 +826,48 @@ async function patinoiSelaimessa({
   };
 
   /* ------------------------------------------------------ kuvan avaus */
-  const kuva = new Image();
-  kuva.src = `data:image/${tyyppi};base64,${b64}`;
-  await kuva.decode();
-  const L = leveys || kuva.width;
-  const K = Math.round(kuva.height * (L / kuva.width));
+  /*
+   * KAKSI SISÄÄNTULOA. Lehtityökalu antaa kuvan base64:nä; pyramidi
+   * antaa valmiin ImageDatan (`pikselit`), koska se ajaa tämän passin
+   * SAMASSA SIVUSSA heti piirron perään eikä kuvaa kannata kiertää
+   * PNG:n kautta lohkoa kohti — se olisi tuhansia turhia purkuja.
+   */
   const kanvaasi = document.createElement('canvas');
+  let L; let K;
+  if (pikselit) {
+    L = pikselit.width;
+    K = pikselit.height;
+  } else {
+    const mitta = new Image();
+    mitta.src = `data:image/${tyyppi};base64,${b64}`;
+    await mitta.decode();
+    L = leveys || mitta.width;
+    K = Math.round(mitta.height * (L / mitta.width));
+  }
   kanvaasi.width = L; kanvaasi.height = K;
   const g = kanvaasi.getContext('2d', { willReadFrequently: true });
   g.imageSmoothingQuality = 'high';
-  g.drawImage(kuva, 0, 0, L, K);
-  const kuvadata = g.getImageData(0, 0, L, K);
+  if (!pikselit) {
+    const kuva = new Image();
+    kuva.src = `data:image/${tyyppi};base64,${b64}`;
+    await kuva.decode();
+    g.drawImage(kuva, 0, 0, L, K);
+  }
+  const kuvadata = pikselit
+    ? new ImageData(new Uint8ClampedArray(pikselit.data), L, K)
+    : g.getImageData(0, 0, L, K);
   const d = kuvadata.data;
-  /* Kaikki mitat on säädetty 6400 pikselin lehdelle. */
-  const s = L / 6400;
+  /*
+   * KAIKKI MITAT ON SÄÄDETTY 6400 PIKSELIN LEHDELLE.
+   *
+   * `koko` on koko ARKIN mitat silloin kun tämä kuva on vain pala
+   * siitä (laattapyramidin lohko). Ilman sitä arkki on tämä kuva, eli
+   * lehtityökalun entinen käytös sanasta sanaan. Ero on sama kuin
+   * piirtomoottorin S:llä: 2048 pikselin lohkosta laskettu s antaisi
+   * paperin syylle ja rakeelle kolmenkymmenen kerran liian hienon
+   * mittakaavan, ja lohkojen raja näkyisi kuviona.
+   */
+  const s = (koko?.w ?? L) / 6400;
 
   const lum = (r, gg, b) => 0.299 * r + 0.587 * gg + 0.114 * b;
 
@@ -1528,10 +1558,21 @@ async function patinoiSelaimessa({
             fy + py / (sy * s) + wp * 0.35) - 0.5);
           pr += w;
         }
-        /* Pikselikohtainen rae ja alempana dither ovat valkoista
-         * kohinaa ilman rakennetta: niissä ei ole faasia, jonka voisi
-         * katkaista lehden rajalla, joten ne pysyvät pikselissä. */
-        const raeN = rae(x, y, 1337) - 0.5;
+        /*
+         * Pikselikohtainen rae ja alempana dither ovat valkoista
+         * kohinaa ilman rakennetta. LEHDELLE ne saivat jäädä lehden
+         * omaan pikseliin: naapurilehti on eri paperi.
+         *
+         * LAATTAPYRAMIDISSA SE EI PÄDE. Laatat ovat saman arkin paloja,
+         * ja lehden omaan pikseliin sidottu kohina antaisi JOKAISELLE
+         * laatalle täsmälleen saman kohinakentän — rakenteeton kohina
+         * muuttuu rakenteeksi, kun se toistuu 512 pikselin ruudukossa.
+         * Mitattuna se oli suurin yksittäinen ero laattojen ja yhden
+         * ison kuvan välillä (52 % kanavista). Avain on siksi ARKIN
+         * pikseli, joka on jokaisessa kohdassa eri ja lohkojaosta
+         * riippumaton.
+         */
+        const raeN = rae(Math.round(x + faasiX), Math.round(y + faasiY), 1337) - 0.5;
         const karkea = kohinaRae(px / (pa.raeKarkeaSkaala * s),
           py / (pa.raeKarkeaSkaala * s)) - 0.5;
         /*
@@ -1614,7 +1655,9 @@ async function patinoiSelaimessa({
        * Sama dither kaikille kanaville, jottei syntyisi väriräiskettä;
        * kvantisointivirheen irrottamiseen se riittää.
        */
-      const dth = rae(x, y, 0x5eed1) + rae(x, y, 0x5eed2) - 1;
+      const gx = Math.round(x + faasiX);
+      const gy = Math.round(y + faasiY);
+      const dth = rae(gx, gy, 0x5eed1) + rae(gx, gy, 0x5eed2) - 1;
       r += dth; gg += dth; b += dth;
       d[i] = r < 0 ? 0 : (r > 255 ? 255 : r);
       d[i + 1] = gg < 0 ? 0 : (gg > 255 ? 255 : gg);
@@ -1622,6 +1665,14 @@ async function patinoiSelaimessa({
     }
   }
   g.putImageData(kuvadata, 0, 0);
+  /*
+   * PALUU KAHTA LAJIA. Lehtityökalu haluaa pakatun kuvan; pyramidi
+   * haluaa pikselit, koska se leikkaa lohkosta laatat ja pakkaa vasta
+   * ne — lohkon pakkaaminen välissä olisi työtä, joka heitetään pois.
+   */
+  if (palauta === 'pikselit') {
+    return { pikselit: kuvadata, leveys: L, korkeus: K };
+  }
   const mime = muoto === 'jpeg' ? 'image/jpeg' : (muoto === 'webp' ? 'image/webp' : 'image/png');
   return { b64: kanvaasi.toDataURL(mime, laatu).split(',')[1], leveys: L, korkeus: K };
 }
@@ -1663,7 +1714,29 @@ async function vertailuSelaimessa({ kuvat, pala, laatu }) {
   return c.toDataURL('image/jpeg', laatu).split(',')[1];
 }
 
+/*
+ * JPEG ei kanna läpinäkyvyyttä: lehden häivytetty vuotoreuna ladotaan
+ * paperin väriin, ei mustaan (kuten canvas tekisi). Viety ulos, koska
+ * laattapyramidi ajaa saman passin (ks. AJETAAN_SUORAAN alla).
+ */
+export const TAUSTA = [232, 220, 188];
+
 /* ================================================================ ajo */
+
+/*
+ * TÄMÄ TIEDOSTO ON SEKÄ TYÖKALU ETTÄ MODUULI.
+ *
+ * Laattapyramidi ajaa saman patinapassin osana laattojen generointia
+ * (tools/generoi-laattapyramidi.mjs), eikä resepti saa olla kahdessa
+ * paikassa — tiedoston oma sääntö on, että "reseptiolio on yhdessä
+ * paikassa eikä hajallaan koodissa". Siksi RESEPTIT, TAUSTA ja
+ * `patinoiSelaimessa` viedään ulos, ja komentorivityökalu ajetaan
+ * vain kun tämä tiedosto on suorituksen lähtökohta.
+ */
+const AJETAAN_SUORAAN = Boolean(process.argv[1])
+  && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+
+if (AJETAAN_SUORAAN) {
 
 const argv = process.argv.slice(2);
 const valitsin = (nimi, oletus) => {
@@ -1701,9 +1774,6 @@ const pala = (() => {
   const [x, y, w, h] = p.split(',').map(Number);
   return { ...VERTAILUPALA, x, y, w, h };
 })();
-/* JPEG ei kanna läpinäkyvyyttä: lehden häivytetty vuotoreuna
- * ladotaan paperin väriin, ei mustaan (kuten canvas tekisi). */
-const TAUSTA = [232, 220, 188];
 
 /*
  * LEHDEN PAIKKA LAUDALLA — KOHINOIDEN FAASI.
@@ -1793,3 +1863,5 @@ if (lippu('vertailu')) {
 }
 
 await selain.close();
+
+} /* AJETAAN_SUORAAN */

@@ -126,7 +126,7 @@ import {
 export function piirraMaailma(canvas, aineisto, asetukset) {
   const {
     bbox, projektio, leveys, tyyli = {}, esikatseluTausta,
-    koko = null, siirto = null, sisalto = null,
+    koko = null, siirto = null, sisalto = null, ladonta = null,
   } = asetukset;
 
   const px = leveys / bbox.w;
@@ -739,27 +739,41 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         ctx.lineTo(x, y - r * 0.8);
         ctx.lineTo(x + r, y + r * 0.6);
         ctx.stroke();
-        if (nakyy(0.45)) {
-          teksti(v.nimi, x, y + r * 2.4, {
-            koko: ruutuKoko(11), ank: 'center', vari: MUSTE,
+        // Nimi tulee ladonnasta (ks. LADONTA alempana), ei tästä.
+        if (v.korkeus && nakyy(0.9) && !ladonta) {
+          teksti(`${v.korkeus} m`, x, y + r * 2.4 + 12, {
+            koko: ruutuKoko(8.5), ank: 'center', vari: 'rgba(74,52,33,0.66)',
           });
-          if (v.korkeus && nakyy(0.9)) {
-            teksti(`${v.korkeus} m`, x, y + r * 2.4 + 12, {
-              koko: ruutuKoko(8.5), ank: 'center', vari: 'rgba(74,52,33,0.66)',
-            });
-          }
         }
       }
       ctx.restore();
     }
 
-    /* --- järvien nimet ---------------------------------------------- */
-    if (nakyy(0.45) && sisalto.jarvet?.length) {
-      for (const j of sisalto.jarvet) {
-        if (j.tarkeys > 1 && !nakyy(0.9)) continue;
-        teksti(j.nimi, lautaKuvaX(j.x), lautaKuvaY(j.y), {
-          koko: ruutuKoko(10), ank: 'center', tyylitys: 'italic',
-          vari: 'rgba(70,86,96,0.85)',
+    /* Järvien ja vuorten nimet tulevat ladonnasta (ks. alempana). */
+
+    /* ================================================== LADONTA
+     *
+     * NIMIÖT TULEVAT VALMIIKSI LADOTTUINA, eivät tästä silmukasta.
+     *
+     * Törmäyksenvälttely on GLOBAALI päätös: se että yksi nimi jää
+     * pois, riippuu siitä mitkä muut on jo asetettu. Jos jokainen
+     * lohko päättäisi sen itse, kaksi vierekkäistä lohkoa päätyisi
+     * samasta kaupungista eri tulokseen ja lohkorajalle jäisi joko
+     * kaksoisnimi tai katoava nimi. Ladonta ajetaan siksi kerran koko
+     * arkille (tools/generoi-laattapyramidi.mjs `__ladonta`) ja tänne
+     * tulee valmis lista ARKIN pikseleissä — samassa avaruudessa, jossa
+     * tämä lohko jo piirtää (ks. arkin koordinaatisto).
+     *
+     * Ilman ladontaa piirretään kuten ennen, jotta yhden lehden
+     * koeajo ei vaadi ladontaa.
+     */
+    if (ladonta?.length) {
+      for (const n of ladonta) {
+        teksti(n.teksti, n.x, n.y, {
+          koko: ruutuKoko(n.koko),
+          ank: n.ank === 'end' ? 'right' : (n.ank === 'middle' ? 'center' : 'left'),
+          tyylitys: n.laji === 'jarvi' ? 'italic' : '',
+          vari: n.laji === 'jarvi' ? 'rgba(70,86,96,0.85)' : MUSTE,
         });
       }
     }
@@ -797,22 +811,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
           ctx.arc(x, y, 4.6, 0, Math.PI * 2);
           ctx.stroke();
         }
-        // Nimet: isot z2:sta, kaikki z3:sta (ks. yleistys yllä).
-        if (c.iso ? nakyy(0.22) : nakyy(0.45)) {
-          /*
-           * NIMIÖN ANKKURI JA SIIRTYMÄ TULEVAT LAUDALTA (la/lx/ly).
-           * Ne on aseteltu käsin niin ettei nimi peitä rannikkoa eikä
-           * naapuria. Siirtymä on LAUDAN yksiköitä laudan omassa
-           * mittakaavassa; tässä se skaalataan nimiön kokoon, jottei
-           * se karkaa kauas pisteestä syvillä tasoilla.
-           */
-          const suhde = 11 / 13;   // nimiön koko / laudan oma nimiökoko
-          teksti(c.nimi, x + c.lx * suhde, y + c.ly * suhde, {
-            koko: ruutuKoko(c.iso ? 12 : 10.5),
-            ank: c.la === 'end' ? 'right' : (c.la === 'middle' ? 'center' : 'left'),
-            vari: MUSTE,
-          });
-        }
+        // Nimi tulee ladonnasta (ks. LADONTA alempana), ei tästä.
       }
       ctx.restore();
     }

@@ -82,6 +82,7 @@ import { fileURLToPath } from 'node:url';
 
 import { keraaMaailma } from './fokuskartta/maailma.mjs';
 import { keraaSisalto, sisallonYhteenveto } from './fokuskartta/sisalto.mjs';
+import { RESEPTIT, TAUSTA, patinoiSelaimessa } from './patina.mjs';
 import { laudanProjektio, SYVYYS } from './fokuskartta/piirto.js';
 
 const TAALLA = dirname(fileURLToPath(import.meta.url));
@@ -244,6 +245,57 @@ const KUIVA = lippu('kuiva');
  * jos sen syvyysvaihtelu mahtuu HARVA_RAJA-kanavaeroon, jolloin
  * tasainen sävy on silmälle sama asia.
  */
+/*
+ * PATINA POLTETAAN LAATTOIHIN (Raamattu: *"patina poltetaan
+ * laattoihin"*). Passi on sama tools/patina.mjs, jota lehtiputki
+ * ajaa — ei kopiota, vaan sama resepti samasta tiedostosta.
+ *
+ * REUNUS ON SE, MIKÄ TEKEE SIITÄ JATKUVAN. Patinan paikalliset
+ * operaattorit (rantaetäisyys meren litistykseen, akvarellin
+ * reunakertymä, musteen leviäminen, kohdistusheitto, pienennetyt
+ * kentät) lukevat naapuripikseleitä. Lohkon reunalla naapureita ei
+ * olisi, ja jokainen lohko saisi oman reunavirheensä — ruudukko
+ * näkyisi. Siksi lohko piirretään REUNUKSEN verran isompana, patina
+ * ajetaan koko alalle ja laatat leikataan vasta reunuksen sisältä.
+ * 64 pikseliä on moninkertaisesti suurin operaattorin ulottuvuus
+ * (rantavyö 7 px, leviäminen 3 px, kahdeksasosakenttä 8 px).
+ */
+const PATINA_TASO = valitsin('patina', 'taysi');
+const PATINA = PATINA_TASO === 'ei' ? null : RESEPTIT[PATINA_TASO];
+if (PATINA_TASO !== 'ei' && !PATINA) {
+  console.error(`Tuntematon patinataso: ${PATINA_TASO}`);
+  process.exit(1);
+}
+/**
+ * Reunuksen leveys pikseleinä TÄLLE tasolle.
+ *
+ * KIINTEÄ LUKU EI KELPAA, koska patinan operaattorit skaalautuvat
+ * `s`:llä (= tason leveys / 6400) aivan kuten moottorin muutkin mitat.
+ * Syvimmällä tasolla s on 13,5, jolloin rantavyö on 7 · 13,5 = 95
+ * pikseliä ja kohdistusheitto 35 — kuudenkymmenen pikselin reunus
+ * jäisi niiden alle ja lohkon raja näkyisi juuri siellä, missä sen ei
+ * pitäisi näkyä.
+ *
+ * 9 on suurin viitesäde reseptissä (SYVYYS.rantaVali yläraja 7,
+ * KOHDISTUS 2,6, LEVIAMINEN 2) pyöristettynä ylöspäin; +16 kattaa
+ * pienennettyjen kenttien (J4, J8) reunavaikutuksen.
+ *
+ * REUNUS PYÖRISTETÄÄN KAHDEKSAN MONIKERRAKSI, ja se on korjaus eikä
+ * siisteyttä. Patina laskee meren ja reunakertymän PIENENNETYISTÄ
+ * KENTISTÄ (neljäsosa ja kahdeksasosa), joiden ruudukko alkaa kankaan
+ * nurkasta. Jos kankaan nurkka on eri kohdassa arkkia modulo 8, saman
+ * maailmankohdan pikselit putoavat eri ämpäreihin, keskiarvot eroavat
+ * ja reunakertymä piirtyy hitusen eri kohtaan. Laattakoko 512 on
+ * jaollinen kahdeksalla, joten kun reunuskin on, jokainen kangas alkaa
+ * arkin pikselistä joka on jaollinen kahdeksalla — ja pienennetyt
+ * ruudukot osuvat kaikilla lohkoilla samaan kohtaan.
+ */
+function reunusTasolle(mitat) {
+  const annettu = valitsin('reunus', null);
+  if (annettu !== null) return Number(annettu);
+  const s = mitat.leveys / 6400;
+  return 8 * Math.ceil((9 * s + 16) / 8);
+}
 const HARVA = lippu('harva');
 const HARVA_ALIN_TASO = Number(valitsin('harva-alin', 4));
 const HARVA_RAJA = Number(valitsin('harva-raja', 2));
@@ -739,9 +791,62 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
    * webp-pakkaus ei ole tavulleen toistettava, kun kuva tulee
    * enkooderille eri kokoisena — sauman todiste on pikseleissä.
    */
-  window.__sauma = (perus, laatta, ruudukko) => {
-    piirraMaailma(kangas, aineisto, { ...perus, sisalto });
-    const iso = kangas.getContext('2d').getImageData(0, 0, kangas.width, kangas.height);
+  /*
+   * Yksi ala piirrettynä annetulla kankaan koolla, patina ajettuna ja
+   * reunus leikattuna pois — TÄSMÄLLEEN sama polku kuin tuotannossa.
+   */
+  const piirraPala = async (bbox, siirto, leveys, korkeusPx, koko, patina) => {
+    const R = patina ? patina.reunus : 0;
+    const px = leveys / bbox.w;
+    const kbbox = {
+      x: bbox.x - R / px, y: bbox.y - R / px,
+      w: bbox.w + (2 * R) / px, h: bbox.h + (2 * R) / px,
+    };
+    piirraMaailma(kangas, aineisto, {
+      bbox: kbbox,
+      projektio: patinaProjektio,
+      leveys: leveys + 2 * R,
+      tyyli: saumaTyyli,
+      koko,
+      siirto: { x: siirto.x - R, y: siirto.y - R },
+      arkki: saumaArkki,
+      sisalto,
+    });
+    const kctx = kangas.getContext('2d', { willReadFrequently: true });
+    if (patina && window.__patina) {
+      const tulos = await window.__patina({
+        pikselit: kctx.getImageData(0, 0, kangas.width, kangas.height),
+        resepti: patina.resepti,
+        tausta: patina.tausta,
+        maailma: kbbox,
+        koko,
+        palauta: 'pikselit',
+      });
+      kctx.putImageData(tulos.pikselit, 0, 0);
+    }
+    return kctx.getImageData(R, R, leveys, korkeusPx);
+  };
+
+  let patinaProjektio = null;
+  let saumaTyyli = null;
+  let saumaArkki = null;
+
+  /*
+   * SAUMATESTI: sama alue kerran isona kuvana ja kerran laattoina.
+   * Vertailu tehdään RAAKOIHIN PIKSELEIHIN eikä tiedostoihin, koska
+   * webp-pakkaus ei ole tavulleen toistettava, kun kuva tulee
+   * enkooderille eri kokoisena — sauman todiste on pikseleissä.
+   *
+   * PATINA ON MUKANA, kun se on päällä: juuri sen paikalliset
+   * operaattorit ovat se osa, joka voisi katketa laatan reunalla.
+   */
+  window.__sauma = async (perus, laatta, ruudukko, patina) => {
+    patinaProjektio = perus.projektio;
+    saumaTyyli = perus.tyyli;
+    saumaArkki = perus.arkki;
+    const iso = await piirraPala(
+      perus.bbox, perus.siirto, ruudukko * laatta, ruudukko * laatta, perus.koko, patina,
+    );
     let pahin = 0;
     let eroja = 0;
     // Reunalla = enintään 2 pikselin päässä sisäisestä laattarajasta.
@@ -749,21 +854,19 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
     // vektorien reunoilla on hajallaan pitkin kuvaa.
     let reunalla = 0;
     let pahinReunalla = 0;
+    const yksikkoaPerPx = perus.bbox.w / (ruudukko * laatta);
     for (let ry = 0; ry < ruudukko; ry += 1) {
       for (let rx = 0; rx < ruudukko; rx += 1) {
-        piirraMaailma(kangas, aineisto, {
-          ...perus,
-          sisalto,
-          bbox: {
-            x: perus.bbox.x + (rx * laatta * perus.bbox.w) / perus.leveys,
-            y: perus.bbox.y + (ry * laatta * perus.bbox.w) / perus.leveys,
-            w: (laatta * perus.bbox.w) / perus.leveys,
-            h: (laatta * perus.bbox.w) / perus.leveys,
+        const pala2 = await piirraPala(
+          {
+            x: perus.bbox.x + rx * laatta * yksikkoaPerPx,
+            y: perus.bbox.y + ry * laatta * yksikkoaPerPx,
+            w: laatta * yksikkoaPerPx,
+            h: laatta * yksikkoaPerPx,
           },
-          leveys: laatta,
-          siirto: { x: perus.siirto.x + rx * laatta, y: perus.siirto.y + ry * laatta },
-        });
-        const pala = kangas.getContext('2d').getImageData(0, 0, laatta, laatta);
+          { x: perus.siirto.x + rx * laatta, y: perus.siirto.y + ry * laatta },
+          laatta, laatta, perus.koko, patina,
+        );
         for (let y = 0; y < laatta; y += 1) {
           for (let x = 0; x < laatta; x += 1) {
             const a = ((ry * laatta + y) * iso.width + rx * laatta + x) * 4;
@@ -773,11 +876,11 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
             const rajalla = (isox > 1 && Math.abs(isox - laatta) <= 2)
               || (isoy > 1 && Math.abs(isoy - laatta) <= 2);
             for (let k = 0; k < 4; k += 1) {
-              const d = Math.abs(iso.data[a + k] - pala.data[b + k]);
-              if (!d) continue;
+              const d2 = Math.abs(iso.data[a + k] - pala2.data[b + k]);
+              if (!d2) continue;
               eroja += 1;
-              pahin = Math.max(pahin, d);
-              if (rajalla) { reunalla += 1; pahinReunalla = Math.max(pahinReunalla, d); }
+              pahin = Math.max(pahin, d2);
+              if (rajalla) { reunalla += 1; pahinReunalla = Math.max(pahinReunalla, d2); }
             }
           }
         }
@@ -787,17 +890,315 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
       pahin, eroja, reunalla, pahinReunalla, pikseleita: iso.width * iso.height,
     };
   };
-  window.__lohko = (asetukset, laatta, tyyppi, laatu) => {
-    piirraMaailma(kangas, aineisto, { ...asetukset, sisalto });
+  /*
+   * NIMIÖIDEN LADONTA — KERRAN TASOA KOHTI, EI KERRAN LOHKOA KOHTI.
+   *
+   * Tämä on ainoa kohta koko putkessa, jossa piirto EI voi olla
+   * paikallinen. Törmäyksenvälttely on globaali päätös: se että Utrecht
+   * jää pois, riippuu siitä että Amsterdam ja Rotterdam ovat jo
+   * paikoillaan. Jos ladonta tehtäisiin lohkoittain, kaksi vierekkäistä
+   * lohkoa päätyisi eri lopputulokseen samasta kaupungista ja
+   * lohkorajalle syntyisi joko kaksoisnimi tai katoava nimi.
+   *
+   * Siksi ladonta ajetaan KERRAN TASOA KOHTI koko arkille arkin
+   * pikseleissä, ja lohkot vain piirtävät valmiin listan. Silloin
+   * tulos ei riipu lohkojaosta lainkaan.
+   *
+   * MITTAUS TEHDÄÄN SAMALLA MOOTTORILLA, joka piirtää: kirjaimen leveys
+   * luetaan ctx.measureTextilla samalla fontilla ja samalla
+   * harvennuksella kuin piirto käyttää. Arvattu leveys johtaisi joko
+   * turhiin pudotuksiin tai päällekkäisyyksiin.
+   */
+  const mittari = document.createElement("canvas").getContext("2d");
+
+  /** Harvennetun tekstin leveys — sama kaava kuin moottorin teksti(). */
+  const tekstinLeveys = (teksti, koko, fontti, tyylitys, vali) => {
+    mittari.font = (tyylitys + " " + koko + "px " + fontti).trim();
+    const merkit = [...teksti];
+    let lev = 0;
+    for (const m of merkit) lev += mittari.measureText(m).width;
+    return lev + vali * Math.max(0, merkit.length - 1);
+  };
+
+  window.__ladonnat = {};
+  window.__ladonta = (taso, kynnykset) => {
+    const px = taso.px;
+    const arkkiX = taso.arkkiX;
+    const arkkiY = taso.arkkiY;
+    const kuvaX = (bx) => (bx - arkkiX) * px;
+    const kuvaY = (by) => (by - arkkiY) * px;
+    const nakyy = (k) => px >= k;
+
+    /* Varatut suorakaiteet; yksinkertainen ruudukkohaku riittää, kun
+     * nimiä on satoja eikä satojatuhansia. */
+    const varatut = [];
+    const RUUTU = 256;
+    const hila = new Map();
+    const avaimet = (r) => {
+      const ulos = [];
+      for (let gy = Math.floor(r.y0 / RUUTU); gy <= Math.floor(r.y1 / RUUTU); gy += 1) {
+        for (let gx = Math.floor(r.x0 / RUUTU); gx <= Math.floor(r.x1 / RUUTU); gx += 1) {
+          ulos.push(gx + ":" + gy);
+        }
+      }
+      return ulos;
+    };
+    const vapaa = (r) => {
+      for (const a of avaimet(r)) {
+        const lista = hila.get(a);
+        if (!lista) continue;
+        for (const o of lista) {
+          if (r.x0 < o.x1 && r.x1 > o.x0 && r.y0 < o.y1 && r.y1 > o.y0) return false;
+        }
+      }
+      return true;
+    };
+    const varaa = (r) => {
+      varatut.push(r);
+      for (const a of avaimet(r)) {
+        if (!hila.has(a)) hila.set(a, []);
+        hila.get(a).push(r);
+      }
+    };
+
+    const tulos = [];
+    /* Pisteet varataan ENSIN: nimi ei saa peittää toisen kaupungin
+     * merkkiä, vaikka nimi itse mahtuisi. */
+    const pisteet = [];
+    for (const c of sisalto.kaupungit ?? []) {
+      if (!c.iso && !nakyy(kynnykset.kaupunkiPiste)) continue;
+      const x = kuvaX(c.x);
+      const y = kuvaY(c.y);
+      const r = c.iso ? 5.2 : 2.6;
+      pisteet.push({ c, x, y });
+      varaa({ x0: x - r, y0: y - r, x1: x + r, y1: y + r });
+    }
+
+    /* Tärkein ensin; tasapelissä nimi, jotta ajo on toistettava. */
+    const jono = pisteet.slice().sort((a, b) => (b.c.tarkeys - a.c.tarkeys)
+      || (a.c.nimi < b.c.nimi ? -1 : 1));
+
+    let laadittu = 0;
+    let pudotettu = 0;
+    for (const { c, x, y } of jono) {
+      const saaNimen = c.iso ? nakyy(kynnykset.isoNimi) : nakyy(kynnykset.nimi);
+      if (!saaNimen) continue;
+      const koko = c.iso ? 12 : 10.5;
+      const lev = tekstinLeveys(c.nimi, koko, '"Liberation Serif", serif', "", 0);
+      const kork = koko * 1.15;
+      /*
+       * EHDOKKAAT: laudan oma asettelu ensin. Se on käsin hiottua työtä
+       * (nimi ei peitä rannikkoa eikä naapuria), joten sitä
+       * KUNNIOITETAAN aina kun se ei törmää. Vasta törmätessä
+       * kokeillaan neljää tavanomaista karttapaikkaa.
+       */
+      const d = c.iso ? 7 : 5;
+      const oma = { dx: c.lx * (11 / 13), dy: c.ly * (11 / 13), ank: c.la };
+      const ehdokkaat = [oma,
+        { dx: d, dy: kork * 0.35, ank: "start" },
+        { dx: -d, dy: kork * 0.35, ank: "end" },
+        { dx: 0, dy: -kork * 0.75, ank: "middle" },
+        { dx: 0, dy: kork * 1.35, ank: "middle" }];
+      let asetettu = null;
+      for (const e of ehdokkaat) {
+        const kx = x + e.dx;
+        const ky = y + e.dy;
+        const x0 = e.ank === "end" ? kx - lev : (e.ank === "middle" ? kx - lev / 2 : kx);
+        const r = {
+          x0: x0 - 1, y0: ky - kork * 0.62, x1: x0 + lev + 1, y1: ky + kork * 0.42,
+        };
+        if (vapaa(r)) { varaa(r); asetettu = { kx, ky, ank: e.ank }; break; }
+      }
+      if (!asetettu) { pudotettu += 1; continue; }
+      laadittu += 1;
+      tulos.push({
+        laji: "kaupunki",
+        teksti: c.nimi,
+        x: asetettu.kx,
+        y: asetettu.ky,
+        ank: asetettu.ank,
+        koko,
+      });
+    }
+
+    /* Vuorten ja järvien nimet samaan törmäysjoukkoon, matalammalla
+     * tärkeydellä: kaupunki on pelin kohde, maastonimi on kuvitusta. */
+    const maasto = [];
+    for (const v of sisalto.vuoret ?? []) {
+      if (!nakyy(kynnykset.vuoriNimi)) break;
+      if (v.tarkeys > 1 && !nakyy(kynnykset.vuoriNimi)) continue;
+      maasto.push({ nimi: v.nimi, x: v.x, y: v.y, koko: 11, laji: "vuori", tarkeys: v.tarkeys });
+    }
+    for (const j of sisalto.jarvet ?? []) {
+      if (!nakyy(kynnykset.jarviNimi)) break;
+      if (j.tarkeys > 1 && !nakyy(kynnykset.jarviNimi2)) continue;
+      maasto.push({ nimi: j.nimi, x: j.x, y: j.y, koko: 10, laji: "jarvi", tarkeys: j.tarkeys });
+    }
+    maasto.sort((a, b) => (a.tarkeys - b.tarkeys) || (a.nimi < b.nimi ? -1 : 1));
+    for (const m of maasto) {
+      const x = kuvaX(m.x);
+      const y = kuvaY(m.y) + (m.laji === "vuori" ? 11 : 0);
+      const tyylitys = m.laji === "jarvi" ? "italic" : "";
+      const lev = tekstinLeveys(m.nimi, m.koko, '"Liberation Serif", serif', tyylitys, 0);
+      const kork = m.koko * 1.15;
+      const r = {
+        x0: x - lev / 2 - 1, y0: y - kork * 0.62, x1: x + lev / 2 + 1, y1: y + kork * 0.42,
+      };
+      if (!vapaa(r)) { pudotettu += 1; continue; }
+      varaa(r);
+      laadittu += 1;
+      tulos.push({ laji: m.laji, teksti: m.nimi, x, y, ank: "middle", koko: m.koko });
+    }
+    window.__ladonnat[taso.z] = tulos;
+    /*
+     * RIIPPUMATON TARKISTUS. Algoritmi lupaa, ettei päällekkäisyyksiä
+     * jää, mutta lupaus ei ole todiste: tässä käydään kaikki asetetut
+     * nimiöt pareittain läpi ja lasketaan todelliset leikkaukset.
+     * Satoja nimiöitä on kymmeniä tuhansia pareja — halpaa varmuutta.
+     */
+    const laatikot = tulos.map((n) => {
+      const tyylitys = n.laji === "jarvi" ? "italic" : "";
+      const lev = tekstinLeveys(n.teksti, n.koko, '"Liberation Serif", serif', tyylitys, 0);
+      const kork = n.koko * 1.15;
+      const x0 = n.ank === "end" ? n.x - lev : (n.ank === "middle" ? n.x - lev / 2 : n.x);
+      return {
+        teksti: n.teksti, x0, y0: n.y - kork * 0.62, x1: x0 + lev, y1: n.y + kork * 0.42,
+      };
+    });
+    let paallekkain = 0;
+    let esimerkki = null;
+    for (let i = 0; i < laatikot.length; i += 1) {
+      for (let j = i + 1; j < laatikot.length; j += 1) {
+        const a = laatikot[i];
+        const b = laatikot[j];
+        if (a.x0 < b.x1 && a.x1 > b.x0 && a.y0 < b.y1 && a.y1 > b.y0) {
+          paallekkain += 1;
+          if (!esimerkki) esimerkki = a.teksti + " / " + b.teksti;
+        }
+      }
+    }
+    return {
+      laadittu, pudotettu, nimioita: tulos.length, paallekkain, esimerkki,
+    };
+  };
+
+  /*
+   * LOHKORAJAN TODISTUS — tuotannon oma tilanne.
+   *
+   * __sauma vertaa 1024 pikselin kangasta 512 pikselin kankaisiin.
+   * Se on ANKARAMPI koe kuin tuotanto: selaimen viivan- ja
+   * kirjasinrasterointi riippuu hitusen kankaan koosta, joten erikokoiset
+   * kankaat eroavat vaikka syöte olisi sama. Tuotannossa kaikki lohkot
+   * ovat SAMAN KOKOISIA ja niiden nurkat eroavat vain kokonaisella
+   * pikselimäärällä — ja kokonaispikselin siirto on rasteroinnille
+   * täsmällinen operaatio.
+   *
+   * Tämä koe tekee juuri sen: piirtää kaksi VIERELLISTÄ samankokoista
+   * lohkoa ja vertaa sitä aluetta, jonka molemmat kattavat (A:n oikea
+   * reunus vs. B:n vasen laita). Jos ne ovat samat, laattojen väliin ei
+   * voi jäädä saumaa, koska kumpikin laatta on leikattu tuosta alueesta.
+   */
+  window.__lohkoraja = async (perus, laatta, patina) => {
+    const R = patina ? patina.reunus : 0;
+    const W = 2 * laatta;
+    const px = W / perus.bbox.w;
+    const piirra = async (siirtoPx) => {
+      const bbox = {
+        x: perus.bbox.x + (siirtoPx - R) / px,
+        y: perus.bbox.y - R / px,
+        w: (W + 2 * R) / px,
+        h: (W + 2 * R) / px,
+      };
+      piirraMaailma(kangas, aineisto, {
+        bbox,
+        projektio: perus.projektio,
+        leveys: W + 2 * R,
+        tyyli: perus.tyyli,
+        koko: perus.koko,
+        siirto: { x: perus.siirto.x + siirtoPx - R, y: perus.siirto.y - R },
+        arkki: perus.arkki,
+        sisalto,
+      });
+      const kctx = kangas.getContext('2d', { willReadFrequently: true });
+      if (patina && window.__patina) {
+        const t = await window.__patina({
+          pikselit: kctx.getImageData(0, 0, kangas.width, kangas.height),
+          resepti: patina.resepti,
+          tausta: patina.tausta,
+          maailma: bbox,
+          koko: perus.koko,
+          palauta: 'pikselit',
+        });
+        kctx.putImageData(t.pikselit, 0, 0);
+      }
+      return kctx.getImageData(R, R, W, W);
+    };
+    const a = await piirra(0);
+    const b = await piirra(W);
+    /*
+     * A:n viimeinen laattasarake ja B:n ensimmäinen ovat ERI laattoja,
+     * mutta niiden RAJA on sama arkin pikseliviiva. Verrataan A:n
+     * oikeaa reunaa (viimeiset 8 saraketta) siihen, mitä B kertoo
+     * samasta arkin kohdasta — B:n vasen reunus on juuri se alue.
+     * Reunus ei ole B:n ImageDatassa, joten verrataan sen sijaan A:n
+     * oikean laidan ja B:n vasemman laidan RAJAPIKSELEITÄ: jos rasterointi
+     * on sama, A:n sarake W-1 ja B:n sarake 0 ovat vierekkäisiä
+     * naapureita, ja niiden ero kertoo saumasta.
+     *
+     * Suora todiste: piirretään B uudestaan siirrettynä yhden laatan
+     * verran vasemmalle, jolloin A:n oikea puolisko ja B:n vasen
+     * puolisko kattavat TÄSMÄLLEEN saman arkin alan.
+     */
+    const c = await piirra(laatta);
+    let pahin = 0;
+    let eroja = 0;
+    for (let y = 0; y < W; y += 1) {
+      for (let x = 0; x < laatta; x += 1) {
+        const ia = (y * W + laatta + x) * 4;   // A:n oikea puolisko
+        const ic = (y * W + x) * 4;            // C:n vasen puolisko
+        for (let k = 0; k < 4; k += 1) {
+          const d2 = Math.abs(a.data[ia + k] - c.data[ic + k]);
+          if (d2) { eroja += 1; pahin = Math.max(pahin, d2); }
+        }
+      }
+    }
+    return { pahin, eroja, pikseleita: laatta * W };
+  };
+
+  window.__lohko = async (asetukset, laatta, tyyppi, laatu, patina, ladontaAvain) => {
+    piirraMaailma(kangas, aineisto, {
+      ...asetukset, sisalto, ladonta: window.__ladonnat?.[ladontaAvain] ?? null,
+    });
+    /*
+     * PATINA KOKO LOHKOLLE, REUNUS MUKAAN LUKIEN. Vasta sen jälkeen
+     * leikataan laatat reunuksen sisältä, jolloin jokainen paikallinen
+     * operaattori on nähnyt oikeat naapurit myös laatan reunalla.
+     */
+    if (patina && window.__patina) {
+      const kctx = kangas.getContext('2d', { willReadFrequently: true });
+      const sisaan = kctx.getImageData(0, 0, kangas.width, kangas.height);
+      const tulos = await window.__patina({
+        pikselit: sisaan,
+        resepti: patina.resepti,
+        tausta: patina.tausta,
+        maailma: patina.maailma,
+        koko: patina.koko,
+        palauta: 'pikselit',
+      });
+      kctx.putImageData(tulos.pikselit, 0, 0);
+    }
+    const reunus = patina ? patina.reunus : 0;
     const ulos = [];
-    for (let ry = 0; ry * laatta < kangas.height; ry += 1) {
-      for (let rx = 0; rx * laatta < kangas.width; rx += 1) {
-        const w = Math.min(laatta, kangas.width - rx * laatta);
-        const h = Math.min(laatta, kangas.height - ry * laatta);
+    const sisaLeveys = kangas.width - 2 * reunus;
+    const sisaKorkeus = kangas.height - 2 * reunus;
+    for (let ry = 0; ry * laatta < sisaKorkeus; ry += 1) {
+      for (let rx = 0; rx * laatta < sisaLeveys; rx += 1) {
+        const w = Math.min(laatta, sisaLeveys - rx * laatta);
+        const h = Math.min(laatta, sisaKorkeus - ry * laatta);
         pala.width = w;
         pala.height = h;
         pctx.clearRect(0, 0, w, h);
-        pctx.drawImage(kangas, rx * laatta, ry * laatta, w, h, 0, 0, w, h);
+        pctx.drawImage(kangas, reunus + rx * laatta, reunus + ry * laatta, w, h, 0, 0, w, h);
         ulos.push({ rx, ry, data: pala.toDataURL(tyyppi, laatu) });
       }
     }
@@ -853,9 +1254,30 @@ sivu.on('pageerror', (e) => virheet.push(String(e)));
 sivu.on('console', (m) => { if (m.type() === 'error') virheet.push(m.text()); });
 const sivuAlkoi = Date.now();
 await sivu.goto(osoite, { waitUntil: 'load' });
-await sivu.waitForSelector('body[data-valmis="1"]', { timeout: 900000 })
+/*
+ * Lyhyt aikakatkaisu on TARKOITUS. Sivun skripti lataa aineiston
+ * parissa sekunnissa; jos se ei ole valmis kahdessa minuutissa, se ei
+ * ole hidas vaan rikki, ja silloin `virheet` kertoo miksi. Yhdeksän
+ * sadan sekunnin katkaisu piilotti kerran template-literalin
+ * lainausmerkkivirheen neljäksitoista minuutiksi.
+ */
+await sivu.waitForSelector('body[data-valmis="1"]', { timeout: 120000 })
   .catch(() => { throw new Error(`Aineisto ei latautunut: ${virheet.join(' | ') || 'aikakatkaisu'}`); });
-console.log(`  sivu pystyssä   ${((Date.now() - sivuAlkoi) / 1000).toFixed(1)} s`);
+/*
+ * Patinapassi sivulle. `patinoiSelaimessa` on tarkoituksella
+ * itsenäinen funktio, joka ei viittaa moduulin ulkopuolelle — sama
+ * ominaisuus, jonka turvin lehtityökalu antaa sen page.evaluatelle.
+ * Tässä se viedään kerran, ja lohkot kutsuvat sitä sivun sisällä
+ * ilman sarjallistusta.
+ */
+if (PATINA) {
+  await sivu.evaluate((lahde) => {
+    // eslint-disable-next-line no-eval
+    window.__patina = (0, eval)(`(${lahde})`);
+  }, patinoiSelaimessa.toString());
+}
+console.log(`  sivu pystyssä   ${((Date.now() - sivuAlkoi) / 1000).toFixed(1)} s`
+  + (PATINA ? ` · patina ${PATINA_TASO}` : ' · ei patinaa'));
 
 /* ------------------------------------------------------------ piirto */
 
@@ -889,9 +1311,12 @@ if (lippu('saumatesti')) {
       siirto: { x: 8 * LAATTA, y: 2 * LAATTA },
       arkki: { x: arkinBbox.x, y: arkinBbox.y },
     };
+    const patinaParam = PATINA ? {
+      resepti: PATINA, tausta: TAUSTA, reunus: reunusTasolle(mitat),
+    } : null;
     const tulos = await sivu.evaluate(
-      ([p, l, r]) => window.__sauma(p, l, r),
-      [perus, LAATTA, ruudukko],
+      ([p, l, r, pat]) => window.__sauma(p, l, r, pat),
+      [perus, LAATTA, ruudukko, patinaParam],
     );
     const osuus = (100 * tulos.eroja) / (tulos.pikseleita * 4);
     console.log(`  sauma z${mitat.z}  pahin kanavaero ${tulos.pahin}, `
@@ -905,6 +1330,16 @@ if (lippu('saumatesti')) {
      * kuvakoordinaatti lasketaan laatan bboxista, ja vähennyslasku
      * tehdään eri suuruusluokassa kuin isossa kuvassa.
      */
+    /*
+     * TUOTANNON OMA KOE: kaksi samankokoista vierekkäistä lohkoa.
+     * Tämä on se luku, joka kertoo näkyykö sauma pelissä.
+     */
+    const raja = await sivu.evaluate(
+      ([p2, l, pat]) => window.__lohkoraja(p2, l, pat),
+      [perus, LAATTA, patinaParam],
+    );
+    console.log(`             lohkoraja: pahin ${raja.pahin}, eroavia `
+      + `${raja.eroja} / ${raja.pikseleita * 4}`);
     if (tulos.eroja && tulos.reunalla > tulos.eroja * 0.5) {
       console.log('    VAROITUS: erot kasautuvat laattarajalle — se on OIKEA SAUMA. '
         + 'Tarkista, lukeeko jokin kaava laatan omaa nurkkaa arkin sijasta '
@@ -918,6 +1353,34 @@ if (lippu('saumatesti')) {
 }
 
 mkdirSync(kohdekansio, { recursive: true });
+
+/*
+ * NIMIÖIDEN LADONTA KERRAN TASOA KOHTI (ks. __ladonta sivulla).
+ * Tulos jää sivulle, ja lohkot viittaavat siihen tason numerolla.
+ */
+const KYNNYKSET = {
+  kaupunkiPiste: 0.22, isoNimi: 0.22, nimi: 0.45,
+  vuoriNimi: 0.45, jarviNimi: 0.45, jarviNimi2: 0.9,
+};
+if (sisalto) {
+  for (const mitat of tasot) {
+    const tulos = await sivu.evaluate(
+      ([t, k]) => window.__ladonta(t, k),
+      [{
+        z: mitat.z, px: mitat.px, leveys: mitat.leveys, korkeus: mitat.korkeus,
+        arkkiX: arkinBbox.x, arkkiY: arkinBbox.y,
+      }, KYNNYKSET],
+    );
+    console.log(`  ladonta z${mitat.z}      ${tulos.laadittu} nimiötä, `
+      + `${tulos.pudotettu} pudotettu tilanpuutteeseen, `
+      + `päällekkäisyyksiä ${tulos.paallekkain}`
+      + (tulos.esimerkki ? ` (esim. ${tulos.esimerkki})` : ''));
+    if (tulos.paallekkain) {
+      throw new Error(`Ladonta jätti ${tulos.paallekkain} päällekkäisyyttä `
+        + `tasolle z${mitat.z} — törmäyksenvälttely ei toimi.`);
+    }
+  }
+}
 
 const tilasto = new Map();
 let tavuja = 0;
@@ -933,31 +1396,57 @@ for (const { mitat, bx, by } of lohkot.values()) {
   const riveja = Math.min(LOHKO, mitat.riveja - r0);
   const pw = Math.min(sarakkeita * LAATTA, mitat.leveys - s0 * LAATTA);
   const ph = Math.min(riveja * LAATTA, mitat.korkeus - r0 * LAATTA);
+  /*
+   * REUNUS ON MUKANA PIIRROSSA MUTTA EI TULOKSESSA. Kangas on
+   * reunuksen verran isompi joka suuntaan, ja laatat leikataan sen
+   * sisältä — patinan paikalliset operaattorit näkevät siis oikeat
+   * naapurit myös laatan reunalla (ks. REUNUS).
+   */
+  const R = PATINA ? reunusTasolle(mitat) : 0;
+  const kx0 = s0 * LAATTA - R;
+  const ky0 = r0 * LAATTA - R;
+  const kw = pw + 2 * R;
+  const kh = ph + 2 * R;
+  const kbbox = {
+    x: arkinBbox.x + kx0 / mitat.px,
+    y: arkinBbox.y + ky0 / mitat.px,
+    w: kw / mitat.px,
+    h: kh / mitat.px,
+  };
   const asetukset = {
-    bbox: {
-      x: arkinBbox.x + (s0 * LAATTA) / mitat.px,
-      y: arkinBbox.y + (r0 * LAATTA) / mitat.px,
-      w: pw / mitat.px,
-      h: ph / mitat.px,
-    },
+    bbox: kbbox,
     projektio,
-    leveys: pw,
+    leveys: kw,
     tyyli: TYYLI,
     // Arkin koko ja tämän lohkon nurkka: kohina, mittakaava ja kehys
     // lasketaan arkin koordinaateissa (ks. maailmapiirto.js).
     koko: { w: mitat.leveys, h: mitat.korkeus },
-    siirto: { x: s0 * LAATTA, y: r0 * LAATTA },
+    siirto: { x: kx0, y: ky0 },
     // Arkin origo laudan koordinaateissa: vektorit lasketaan siitä eikä
     // laatan bboxista, jotta lohkosta leikattu laatta on tavulleen sama
     // kuin erikseen piirretty (maailmapiirto.js kuvaX).
     arkki: { x: arkinBbox.x, y: arkinBbox.y },
   };
+  /*
+   * Patinan `maailma` on kankaan bbox LAUDAN koordinaateissa: siitä
+   * passi johtaa kohinoiden faasin ja ikääntymislaikun mittakaavan
+   * (tools/patina.mjs maailmankoordinaatit). Koska se on laudalta eikä
+   * kankaan kulmasta, sama maailmankohta saa saman kuvion lohkosta
+   * riippumatta — juuri se tekee patinasta jatkuvan.
+   */
+  const patinaParam = PATINA ? {
+    resepti: PATINA,
+    tausta: TAUSTA,
+    maailma: kbbox,
+    koko: { w: mitat.leveys, h: mitat.korkeus },
+    reunus: R,
+  } : null;
   const palat = await sivu.evaluate(
-    ([a, laatta, t, l]) => window.__lohko(a, laatta, t, l),
-    [asetukset, LAATTA, `image/${MUOTO}`, LAATU],
+    ([a, laatta, t, l, pat, z]) => window.__lohko(a, laatta, t, l, pat, z),
+    [asetukset, LAATTA, `image/${MUOTO}`, LAATU, patinaParam, mitat.z],
   );
   if (virheet.length) throw new Error(`Piirto virheili: ${virheet.join(' | ')}`);
-  piirrettyaPx += pw * ph;
+  piirrettyaPx += kw * kh;
 
   for (const pala of palat) {
     const sarake = s0 + pala.rx;
