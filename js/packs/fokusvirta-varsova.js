@@ -116,12 +116,11 @@
  *
  * ── ÄÄNITE ─────────────────────────────────────────────────────────
  *
- * Luentaa EI ole vielä generoitu, joten `matkakirja.aanite` puuttuu —
- * sama kaava kuin aalloissa 3 ja 4B. Kenttä on moottorissa
- * valinnainen (js/ui.js), ja teksti ja luenta ovat sanasta sanaan
- * samat, joten luennan voi ajaa suoraan (generoi-luennat-työnkulku)
- * ilman että tekstiin kosketaan. Valmis äänite menisi polkuun
- * assets/audio/puhe-fokus-matkakirja-varsova.mp3.
+ * Luenta on generoitu 30.8.2026 (tools/generoi-luennat.mjs, lähteenä
+ * tämän lohkon oma `matkakirja.luenta`) ja `matkakirja.aanite`
+ * osoittaa siihen: assets/audio/puhe-fokus-matkakirja-varsova.mp3.
+ * Teksti ja luenta ovat sanasta sanaan samat, joten tekstin muutos
+ * vaatii uuden generoinnin.
  */
 
 /*
@@ -216,6 +215,7 @@ export const FOKUSVIRTA_VARSOVA = {
       + 'ohi. [whispers] Kuulin pianistista, joka kuoli nuorena kaukana '
       + 'täältä ja jonka sydämen sisar toi kotiin salaa — tämä kaupunki '
       + 'säilyttää rakkaimpansa sinne, minne keisari ei näe.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-varsova.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
