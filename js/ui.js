@@ -2080,6 +2080,13 @@ export class UI {
       if (quiz?.photoFile) {
         this.openLightbox(null, 'Matkavalokuvaajan vedos',
           valokuvaUrl(quiz.photoFile, 1600));
+      } else if (quiz?.flagFile) {
+        // Lippukysymyksen lippu suurena samasta napautuksesta
+        // (omistajan raportti 30.8.2026: kaikki popupien kuvat
+        // aukeavat koko näytölle). Suurennos ei paljasta vastausta —
+        // lippu on itse kysymys.
+        this.openLightbox(null, 'Tullimiehen näyttämä lippu',
+          lippuUrl(quiz.flagFile, 1600));
       }
     });
     this.quizBadge = document.getElementById('quiz-badge');
@@ -2329,6 +2336,13 @@ export class UI {
     // Kohtaamisen tervehdys kysymyksen yllä (js/packs/kohtaamiset.js).
     this.quizKohtaaminen = document.getElementById('quiz-kohtaaminen');
     this.quizKohtaaminenKuva = document.getElementById('quiz-kohtaaminen-kuva');
+    // Kohtaamisen muotokuva aukeaa koko näytölle kuten muutkin
+    // popupien kuvat (omistajan raportti 30.8.2026). Kuvalla ei ole
+    // muuta napautusroolia, joten suurennos ei riko mitään.
+    this.quizKohtaaminenKuva?.addEventListener('click', () => {
+      const src = this.quizKohtaaminenKuva.getAttribute('src');
+      if (src) this.openLightbox(null, this.quizKohtaaminenKuva.alt || 'Kohtaaminen', src);
+    });
     this.quizIsoisa = document.getElementById('quiz-isoisa');
     this.quizIsoisaTeksti = document.getElementById('quiz-isoisa-teksti');
     // Tervehdys luetaan kerran per kaupunki ja istunto — toistuvassa
@@ -13594,7 +13608,18 @@ export class UI {
    */
   async openLightbox(title, alt = '', aloitusSrc = null, lista = null) {
     if (!title && !aloitusSrc) return;
-    const parent = [this.wikiDialog, this.arrivalDialog].find((d) => d.open) ?? document.body;
+    /*
+     * MYÖS TIETOVISAN MODAALI KELPAA ISÄNNÄKSI (korjaus 30.8.2026,
+     * omistajan raportti "kaikkia popup kuvia ei saa klikattua koko
+     * näytölle"). Suurennos on liitettävä siihen dialogiin, joka on
+     * selaimen top layerissa päällimmäisenä — bodyyn liitetty kerros
+     * jää modaalin TAAKSE näkymättömiin (sama sääntö kuin
+     * suurennosIsanta-postikorteilla). Valokuvakysymyksen suurennos
+     * avautui juuri näin tyhjän päälle: quizDialog puuttui listalta.
+     * Visa on listan kärjessä, koska se avataan aina muiden päälle.
+     */
+    const parent = [this.quizDialog, this.wikiDialog, this.arrivalDialog]
+      .find((d) => d?.open) ?? document.body;
     const overlay = html('div', 'lightbox');
     const img = html('img', 'lightbox-img');
     img.alt = alt;

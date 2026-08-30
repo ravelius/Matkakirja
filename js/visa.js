@@ -357,6 +357,12 @@ export function renderQuiz(ui) {
           katko.src = 'assets/kohtaamiset/kohtaaminen-katko.jpg';
           katko.alt = 'Kätkö';
           katko.onerror = () => katko.remove();
+          // Kätkökuva aukeaa koko näytölle kuten muutkin popupien
+          // kuvat (omistajan raportti 30.8.2026); tuloskortilla
+          // napautuksella ei ole muuta roolia.
+          katko.addEventListener('click', () => {
+            ui.openLightbox(null, 'Kätkö', katko.getAttribute('src'));
+          });
           body.appendChild(katko);
           // KERTOJA EI ENÄÄ LUE AARRETEKSTIÄ (omistajan tilaus
           // 18.8.2026: kertojan ääni pois aarteen tapaamisista) —
