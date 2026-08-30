@@ -15,7 +15,6 @@ import { kirjoituksenKesto } from '../js/ui.js';
 import { maahanMuoto, paikassaMuoto } from '../js/ui-apurit.js';
 
 const UI = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
-const FOKUSKARTTA = readFileSync(new URL('../js/fokuskartta.js', import.meta.url), 'utf8');
 const POLLO = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
 const CSS = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
 
@@ -186,14 +185,13 @@ test('välikortti kertoo kaupungin ja päivälaskurin', () => {
   assert.match(teksti, /PÄIVÄ \$\{paiva\}\/\$\{RECORD_DAYS\}/, 'päivälaskurin muoto muuttui');
 });
 
-test('kartta ilmestyy saapumisessa ilman kamera-ajoa', () => {
-  // Ajo alkaisi näkymästä, jota kukaan ei nähnyt (arkki peittää sen).
-  assert.match(FOKUSKARTTA, /ui\.saapumisAsettuu \? \{ kesto: 0 \} : \{\}/,
-    'saapumisen kamera-ajoa ei enää ohiteta kestolla 0');
-  assert.match(UI, /this\.saapumisAsettuu = true;[\s\S]{0,200}this\.render\(\);/,
-    'lippua ei nosteta ennen saapumisen renderiä');
-  assert.match(UI, /this\.saapumisAsettuu = false;/, 'lippu jää pystyyn renderin jälkeen');
-});
+/*
+ * SAAPUMISEN KAMERA-AJO POISTUI LEHTIPURUSSA (30.8.2026). Ajo asui
+ * js/fokuskartta.js:ssä ja vei näkymän maalehden ikkunaan; nyt kartta on
+ * yksi laattapyramidi eikä maakohtaisia ikkunoita ole. Saapumisessa
+ * kartta on siinä rajauksessa, johon lento sen jätti, eikä erillistä
+ * "asettuu eikä aja" -lippua enää ole vartioitavana.
+ */
 
 test('pöllön kaksi kuplaa: kaanonin sanamuoto ja pari allekkain', () => {
   assert.match(UI, /const SAAPUMISEN_KUPLA_TOINEN = 'Klikkaa kaupungin kultaista merkkiä kartalla\.';/,
