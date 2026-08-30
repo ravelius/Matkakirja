@@ -1,116 +1,146 @@
-# Viesti Fablelle — noutovian korjaus (30.8.2026)
+# Viesti Fablelle — kaksoisnimien korjaus (30.8.2026)
 
-Haara `claude/pyramidi-pilotti`. Ei versionostoa, ei PR:ää.
-**Portit: 1048 pass / 0 fail, savuke-laattapyramidi 13/13.**
+Haara `claude/pyramidi-pilotti`, rebasoitu tuoreesta `origin/main`
+(v1361). Ei versionostoa, ei PR:ää.
+**Portit: 1048 pass / 0 fail.**
 
-Lopetin NOAA:n tavoitettavuuden selvittelyn heti — poistin jo
-kirjoittamani luotainaskeleet työnkulusta, koska niitä ei enää tarvita.
+Haara oli jäljessä ja sisälsi squashatut committit uudelleen. Nollasin
+sen `origin/mainiin` — tarkistin ensin, että ero oli pelkkä
+versionosto (`js/main.js`, `js/muutokset.js`, `sw.js`), eli mitään
+työtä ei kadonnut. Nyt haarassa on tasan yksi uusi commit.
 
 ---
 
-## Pakattu koko: 28,9 Mt (raja 40 Mt ei ylity)
+## Pareja ei ole kolme vaan KUUSI
 
-Mittasin ennen kuin committasin, kuten pyysit:
+Tämä on raportin tärkein kohta. Ohjeessa luki "tasan kolme tuplaa:
+Alpit, Ahaggar, Appalakit". Kun tein säännöstä yleisen ja mittasin,
+pareja löytyikin kuusi: laskenta oli tehty vain **vuoria** (52) vasten,
+mutta myös **järvet** (38) kaksintuvat.
 
-| muoto | koko |
+| pari | laji | etäisyys (lautayksikköä) |
+| --- | --- | --- |
+| Titicaca | järvi | 3,8 |
+| Appalakit | vuori | 20,3 |
+| Tšad-järvi | järvi | 30,3 |
+| Tanganjika | järvi | 54,4 |
+| Ahaggar | vuori | 95,6 |
+| Alpit | vuori | 114,7 |
+
+Kolmen nimen kovakoodaus olisi korjannut puolet viasta ja jättänyt
+kolme järveä kartalle kahdesti. Yleinen sääntö löysi ne itse — juuri
+siksi ohjeesi olla kovakoodaamatta oli oikea.
+
+Yksi yksityiskohta, joka olisi kaatanut naiivin toteutuksen: lauta
+sanoo **Tšad-järvi**, nimilista **Tšadjärvi**. Tarkka
+merkkijonovertailu ei olisi nähnyt niitä samaksi nimeksi. Vertailu
+tehdään normalisoituna (ilman tarkkeita, välimerkkejä ja
+kirjainkokoa).
+
+## Etäisyysraja on vakuutus, ei viritysruuvi
+
+Raja on 400 lautayksikköä. Mittasin herkkyyden sen sijaan että olisin
+valinnut luvun tunnelmalla:
+
+| raja | pareja |
 | --- | --- |
-| Float32 raakana (välimuistin muoto) | 103,7 Mt |
-| Int16 raakana | 51,9 Mt |
-| Int16 + gzip −9 | **39,9 Mt** |
-| Int16 + rivierotus + gzip −9 | **28,9 Mt** ← tämä |
+| 50 | 3 (liian tiukka) |
+| 100 | 5 (liian tiukka) |
+| 115 … 6000 | **6** |
 
-Pelkkä gzip olisi jäänyt 39,9 megatavuun eli **kämmenen leveyden
-päähän rajastasi**, joten lisäsin yhden askeleen: rivikohtaisen
-erotuskoodauksen. Naapurisolut ovat lähes samat, joten erotus on pieni
-luku ja pakkautuu paremmin; purku on rivin yli kulkeva summa, kuusi
-riviä koodia. **Häviöttömyys todennettu koko aineistolla: 25 930 801
-solua, 0 eroa.**
+Kaikki rajat välillä 115…6000 antavat saman tuloksen, joten luku ei
+säädä mitään nykyisellä aineistolla — se estää vain sen, että joku
+myöhemmin lisää samannimisen paikan toiselle mantereelle ja menettää
+nimiönsä. 400 on yli kolminkertainen pelivara kauimmaiseen aitoon
+pariin (Alpit 114,7).
 
-Mittasin myös brotlin (26,4 Mt), mutta jätin sen: 2,5 Mt ei ole toisen
-pakkausmuodon arvoinen.
+## Kumpi nimiö jää — noudatin näkemystäsi, mutta mittaus tarkensi sitä
 
-## Int16 ei menetä mitään — ja se on todennettu
+Näkemyksesi oli oikea: vuoriston kohdalla oikea esitys on vuorisymboli
+ja sen nimi, ja laudan MERKIN on jäätävä. Molemmat merkit jäävät, vain
+nimiö yhdistetään.
 
-Tämä oli ainoa kohta, jossa epäilin laatuvirhettä, joten en luottanut
-päättelyyn. `tools/fokuskartta/maailma.mjs` pyöristää arvot **Int16:een
-joka tapauksessa** rakentaessaan arkin ruudukkoa, eli Float32:n
-desimaalit katosivat jo ennen piirtoa.
+**Mutta suora vaiennus olisi tehnyt uuden vian.** Maastonimillä on eri
+yleistyskynnys kuin kaupunginnimillä. Vuorennimi syttyy samalla
+kynnyksellä (0,45) kuin kaupungin nimi — siellä vaiennus on ilmaista.
+Järven nimi syttyy vasta 0,9:llä kun tärkeys > 1, ja kaupungin nimi jo
+0,45:llä. Jos kaupungin nimiö vaiennettaisiin suoralta kädeltä,
+**Titicaca, Tanganjika ja Tšad-järvi jäisivät välillä 0,45…0,9
+pisteeksi ilman nimeä — kokonaisen tason ajan.**
 
-Ajoin 60 laattaa uudelleen repon aineistosta ja vertasin pikselitasolla
-edelliseen ajoon (sama lukittu resepti, ainoa muuttuja aineiston
-muoto):
+Siksi sääntö on tasokohtainen: kaupungin nimiö väistää vasta silloin,
+kun maastonimi oikeasti piirtyy tällä tasolla. Sitä ennen kaupungin
+nimiö nimeää kohteen itse. Tämän näkee liitteenä olevalta
+Sahara-laatalta: Ahaggar on vuorisymbolin nimi, ja Tšad-järvi on
+samalla laatalla kaupunkinimiönä, koska järvennimi ei vielä syty z3:lla.
+
+Parillinen nimiö ladotaan **kaupungin tärkeydellä** mutta maastonimen
+ulkoasulla ja paikalla — muuten se putoaisi tilanpuutteeseen, koska
+maastonimet ladotaan vasta kaupunkien jälkeen.
+
+Ladonta ajetaan kerran tasoa kohti koko arkille, joten päätös on sama
+joka lohkossa eikä lohkorajalle synny kaksoisnimeä.
+
+## Todennus
+
+Ajoin z0–z3 (109 laattaa) korjatulla koodilla:
 
 ```
-täysin identtisiä laattoja: 60 / 60
-pahin kanavaero:            0
-eroavia kanavia:            0 / 62 914 560
+ladonta z0  0 nimiötä,  0 pudotettu, päällekkäisyyksiä 0, kaksoisnimiä 0
+ladonta z1  0 nimiötä,  0 pudotettu, päällekkäisyyksiä 0, kaksoisnimiä 0
+ladonta z2  62 nimiötä, 0 pudotettu, päällekkäisyyksiä 0, kaksoisnimiä 0
+ladonta z3  295 nimiötä, 18 pudotettu, päällekkäisyyksiä 0, kaksoisnimiä 0
 ```
 
-**Sama vertailu todistaa myös, ettei kaksinkertaista harvennusta
-tapahdu.** Jos lukija harventaisi valmiiksi harvennetun ruudukon
-uudestaan, maasto olisi sileämpi eivätkä laatat olisi identtisiä. Ne
-ovat. Lukija purkaa tiedoston sellaisenaan eikä koske arvoihin.
+Silmällä pyytämäsi laatat:
 
-Tarkistin myös nimeämäsi `tools/fokuskartta/etopo.mjs`: se on
-**maalehtien** CSV-kaistareitti eikä ole missään tekemisissä
-maailmanruudukon kanssa — pyramidi kulkee `hae-korkeusruudukko.mjs`:n
-kautta. Ei siis kaksinkertaista harvennusta sielläkään.
+- **z3 sarake 5 rivi 3** (Sahara): Ahaggar tasan kerran, vuorisymbolin
+  nimenä; kaupunkipiste tallella symbolin alapuolella.
+- **z3 sarake 5 rivi 2** (Alpit): Alpit tasan kerran, vuorisymbolin
+  nimenä Alppien harjalla.
+- **z3 sarake 2 rivi 2** (Appalakit): Appalakit tasan kerran,
+  vuorisymbolin nimenä; kaupunkipiste tallella.
 
-## Mitä tein
+## Uusi tarkistus, ja todiste ettei se ole tyhjä
 
-| tiedosto | mitä |
-| --- | --- |
-| `tools/korkeusaineisto/etopo-3kaariminuuttia.bin.gz` | 28,9 Mt, 7201 × 3601 solua |
-| `tools/korkeusaineisto/LUEMINUT.md` | lähde, lisenssi, johtamiskomennot, muoto, ruudukon suunnat |
-| `tools/tee-korkeusaineisto.mjs` | uudelleenajettava muunnin välimuistista |
-| `tools/hae-korkeusruudukko.mjs` | lukee repon aineiston ensin; verkkoon vain jos ruutukoko ei täsmää |
-| `.github/workflows/generoi-pyramidi.yml` | NOAA-nouto pois, `NODE_USE_ENV_PROXY` pois |
+Kaksoisnimi **ei ole päällekkäisyys**. Ahaggar oli kartalla kahdesti
+satojen pikselien päässä itsestään, eikä olemassa oleva riippumaton
+leikkaustesti nähnyt siinä mitään vikaa — se etsi päällekkäisiä
+laatikoita, eikä niitä ollut. Se on oma virheluokkansa ja sai oman
+tarkistuksensa: ajo kaatuu, jos sama (normalisoitu) nimi esiintyy
+tasolla kahdesti.
 
-Käytin scratchpadin valmista aineistoa enkä noutanut mitään uudestaan.
+Tarkistus, joka ei koskaan laukea, ei todista mitään, joten todensin
+sen: kytkin parituksen pois ja ajoin uudelleen. Ajo kaatui odotetusti.
 
-**Todennettu paikallisesti ilman verkkoa:** tyhjä välimuisti,
-proxy-muuttujat poistettu → ajo lukee `ruudukko reposta:
-tools/korkeusaineisto/…` ja tuottaa 60 laattaa läpi.
+```
+ladonta z3  297 nimiötä, 19 pudotettu, päällekkäisyyksiä 0, kaksoisnimiä 2
+Error: Ladonta jätti 2 kaksoisnimeä tasolle z3 (esim. ahaggar x2)
+       — sama nimi saa esiintyä kartalla vain kerran.
+```
 
-## Työnkulku nyt
+Tarkistin myös, että sivulle upotettu säännöllinen lauseke on oikea
+selaimessa asti. `\p{L}` olisi template-literaalissa muuttunut
+hiljaisesti muotoon `p{L}`; poimin valmiin sivukoodin ja koestin
+funktion — `Tšad-järvi` ja `Tšadjärvi` normalisoituvat samaksi, `Wien`
+ja `Bonn` eivät.
 
-`aineisto`-jobi tarkistaa repon aineiston ja noutaa **vain Natural
-Earthin** — kerran, ei kerran shardia kohti. Korkeusaineisto tulee
-jokaiseen jobiin checkoutin mukana ilman yhtäkään verkkopyyntöä.
-Työnkulussa on enää **yksi verkkoviittaus** (Natural Earth
-GitHubista), ja se toimi jo koeajossa.
+## Sivuhavainto (en korjannut, kulukuuri)
 
-Rakenteellinen syy, jonka mainitsit: viisi shardia olisi noutanut kukin
-104 Mt samasta lähteestä yhtä aikaa. Sitä ongelmaa ei enää ole
-olemassa — aineisto ei kulje verkon yli kertaakaan.
+Sama kaksoisnimi on todennäköisesti myös pelin omassa laudan piirrossa:
+`js/mapart.js` kokoaa maastonimet samasta nimilistasta, kaupunkien
+nimet tulevat laudalta, eikä niitä verrata toisiinsa siellä
+sen enempää kuin täällä. Sen törmäyksenvälttely katsoo vain
+päällekkäisiä laatikoita, joten etäällä toisistaan oleva kaksoisnimi
+menisi läpi samalla tavalla. En todentanut tätä ajamalla peliä enkä
+koskenut siihen.
 
-Shardijako, laattamäärät (23 340) ja muu rakenne ennallaan.
+## Muutetut tiedostot
 
-## Repon kasvu
+- `tools/fokuskartta/sisalto.mjs` — pariutus (`parita`,
+  `normalisoiNimi`, `PARIN_ETAISYYS`)
+- `tools/generoi-laattapyramidi.mjs` — tasokohtainen päätös
+  ladonnassa, maastonimen ohitus parillisille, kaksoisnimitarkistus
+- `docs/moduulit/laattapyramidi.md` — luku 6c.1
 
-28,9 Mt. Repossa on jo 320 Mt aineistoa (`assets/kartat` yksin 202 Mt),
-joten tämä on sen mittakaavassa pieni. Tiedosto on muuttumaton
-lähtöaineisto: se generoidaan uudestaan vain jos ruudun kokoa
-muutetaan, eikä se siis kasvata historiaa uudestaan.
-
-## Mitä EI tehty
-
-- Täysgenerointia ei ajettu.
-- Mitään ei viety ämpäriin.
-- Versiota ei nostettu, PR:ää ei tehty.
-- NOAA:n tavoitettavuutta ei selvitetty enempää.
-
-## Seuraava askel
-
-Mergeä ja aja koeajo (`tasot=koeajo-z0-z3`). Jos se menee läpi, sama
-työnkulku ajaa täyden pyramidin valinnalla `kaikki`.
-
-Yksi asia kannattaa tietää etukäteen: **`vie=true` kirjoittaa laatat
-ämpäriin** polkuun `julisteet/pyramidi/<versio>/…`. Koeajossa se on
-noin 5 Mt (z0–z3) eikä koske olemassa olevaan sisältöön, koska polku on
-uusi. `vie=false` ajaa saman ilman ämpäriä.
-
-## Sivussa nähtyä (en korjannut)
-
-- `savuke-karttazoom.mjs` on `tools/`-juuressa, ei `tools/savukkeet/`.
-- `tools/hero-tyolista-*.mjs` — 25 kertaluontoista ajotiedostoa juuressa.
+Ei versionostoa, ei PR:ää, ei täysajoa, ei vientiä ämpäriin.
