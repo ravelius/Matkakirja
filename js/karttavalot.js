@@ -152,9 +152,10 @@ const KARTTAVALO_KEHAT = [
  *   eikä solmuja — avain on se, mikä erottaa kaksoiskappaleen omasta
  *   kohteestaan.
  * @param {number} koko     kerroin isäntämerkin mittakaavaan. Kirjaston
- *   symboli on kohdemerkillä kutistettu (KOHDE_SYMBOLI_SKAALA), joten
- *   valonkin on kutistuttava sen mukana — muuten sama täplä olisi
- *   eläintäyn alla sopiva ja kohdemerkin alla lautanen.
+ *   symboli on kohdemerkillä ja eläintäyllä kutistettu (js/fokuskohteet.js
+ *   KOHDE_SYMBOLI_SKAALA, js/elaintaky.js ELAINTAKY_SYMBOLI_SKAALA),
+ *   joten valonkin on kutistuttava sen mukana — muuten täplä olisi
+ *   merkin alla lautanen.
  */
 export function piirraKarttavalo(g, symboli, avain, koko = 1) {
   const aihe = nostosymPaakategoria(symboli);

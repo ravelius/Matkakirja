@@ -25,9 +25,14 @@
  *
  * ── MERKKI ON KARTAN OMAA KIELTÄ ───────────────────────────────────
  *
- * Merkki ei ole uusi symboli vaan symbolikirjaston `elain`-kategoria
- * (js/fokusnosto-symbolit.js piirraNostosymboli) — sama kaiverrettu
- * eläinmerkki, jolla kartan eläinkohteet on merkitty v1126:sta asti.
+ * Merkki ei ole uusi symboli vaan symbolikirjaston `elain`-kategorian
+ * VIIVAMERKKI NIMIÖINEEN (js/fokusnosto-symbolit.js
+ * piirraNostosymKartalle) — täsmälleen sama merkki ja sama mittakaava
+ * kuin kartan muilla kohdemerkeillä (js/fokuskohteet.js). Omistajan
+ * testikierros 30.8.2026 (iPad): *"Pöllöt aivan liian isoja … se ei
+ * noudata uutta yksinkertaista merkkilinjaa"* — iso kaiverrettu
+ * pöllöglyyfi (piirraNostosymboli) jäi kortin ylärivin tunnukseksi,
+ * jonne se kuuluu, ja kartalla on pieni viivapöllö ja eläimen nimi.
  * Kortti taas käyttää täkynoston lunastuskortin luokkia
  * (css/fokusnosto.css .fokusnosto-*), koska se on täsmälleen sama
  * kortti: ylärivi, otsikko, kuva, teksti. Uutta UI-kieltä ei keksitä.
@@ -76,7 +81,7 @@
 import { html, jaaKappaleiksi, nielaiseSulkevaNapautus, TOAST_MS } from './ui-apurit.js';
 import { el, maare } from './mapart.js';
 import { avaaKohdeSuurennos, suljeKohdeSuurennos } from './fokuskohteet.js';
-import { nostosymKortinYlarivi, piirraNostosymboli } from './fokusnosto-symbolit.js';
+import { nostosymKortinYlarivi, piirraNostosymKartalle } from './fokusnosto-symbolit.js';
 import { piirraKarttavalo } from './karttavalot.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { ELAINTAKYT } from './packs/elaintakyt.js';
@@ -94,6 +99,28 @@ export const ELAINTAKY_PALKKIO = 20;
 
 /** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta, sormen mitta). */
 const ELAINTAKY_OSUMA_R = 22;
+
+/*
+ * MERKKI ON KOHDEMERKIN KOKOINEN (omistaja 30.8.2026: *"Pöllöt aivan
+ * liian isoja … ei noudata uutta yksinkertaista merkkilinjaa"*).
+ *
+ * Sama kutistus kuin kartan kohdemerkeillä (js/fokuskohteet.js
+ * KOHDE_SYMBOLI_SKAALA = 11 / 21): kirjaston viivamerkki on
+ * NOSTOSYM_MINI_R:n levyinen, ja tämä kerroin vie sen poltetun
+ * vuorikolmion mittaan (~7 px lehden perustasolla). Molemmat kerrokset
+ * skaalataan samalla fokusMerkkiSkaalaKartalle-vakiolla, joten sama
+ * kerroin tarkoittaa täsmälleen samaa ruutumittaa — eläintäky ei ole
+ * kartalla isompi eikä pienempi kuin muut kohdemerkit.
+ */
+const ELAINTAKY_SYMBOLI_SKAALA = 11 / 21;
+
+/*
+ * Aihevalon koko merkin mittakaavassa (js/karttavalot.js): sama 0,6
+ * kuin kohdemerkeillä (js/fokuskohteet.js KOHDE_VALO_KOKO) ja samasta
+ * syystä — kirjaston symboli on kutistettu, joten valon on
+ * kutistuttava sen mukana tai täplästä tulisi lautanen.
+ */
+const ELAINTAKY_VALO_KOKO = 0.6;
 
 /*
  * Kuinka kapea näkymän on oltava, ennen kuin merkit ilmestyvät —
@@ -209,7 +236,18 @@ function elaintakyVarmistaKerros(ui) {
   return ui.elaintakyKerros;
 }
 
-/** Yksi merkki: näkymätön osuma-alue ja kaiverrettu eläinsymboli. */
+/**
+ * Merkin nimiö: eläimen nimi kartan nimiötypografialla, isolla
+ * alkukirjaimella kuten muutkin kartan nimet. `nimio`-kenttä on
+ * datan oma karttanimi silloin, kun eläimen nimi ei mahdu nimiöön
+ * (sama sopimus kuin kohteilla, js/fokuskohteet.js kohteenKarttanimi).
+ */
+function elaintakyNimio(taky) {
+  const nimi = taky.nimio ?? taky.elain ?? '';
+  return `${nimi.charAt(0).toUpperCase()}${nimi.slice(1)}`;
+}
+
+/** Yksi merkki: näkymätön osuma-alue, viivamerkki ja nimiö. */
 function elaintakyPiirraMerkki(ui, ryhma, tieto) {
   const g = el('g', { class: 'elaintaky-merkki' }, ryhma);
   g.setAttribute('role', 'button');
@@ -226,10 +264,21 @@ function elaintakyPiirraMerkki(ui, ryhma, tieto) {
    * piirretään kahteen kiertokohtaan, ja selitevalikon laskuri laskee
    * kappaleet eikä solmuja (karttavalotLaskurit).
    */
-  piirraKarttavalo(g, 'elain', tieto.iso);
+  piirraKarttavalo(g, 'elain', tieto.iso, ELAINTAKY_VALO_KOKO);
   el('circle', { class: 'elaintaky-osuma', r: ELAINTAKY_OSUMA_R }, g);
-  const symboli = el('g', { class: 'elaintaky-symboli' }, g);
-  piirraNostosymboli(symboli, 'elain');
+  /*
+   * PIENI VIIVAMERKKI JA NIMIÖ, kuten kaikilla kohdemerkeillä
+   * (js/fokuskohteet.js piirraKohdemerkki): alaryhmä kutistaa kirjaston
+   * merkin kohdemerkin mittaan, ja piirraNostosymKartalle tuo merkin ja
+   * nimiön yhtenä rasterina (varapolkuna elävä SVG). Symboliluokkien
+   * tyylit (nostosym-*) ovat css/styles.css:ssä, joka on aina ladattu.
+   */
+  const symboli = el('g', {
+    class: 'elaintaky-symboli',
+    transform: `scale(${ELAINTAKY_SYMBOLI_SKAALA.toFixed(4)})`,
+  }, g);
+  const glyyfi = el('g', { class: 'elaintaky-glyyfi' }, symboli);
+  piirraNostosymKartalle(glyyfi, 'elain', elaintakyNimio(tieto.taky), 'elain');
   const avaa = (tapahtuma) => {
     tapahtuma.stopPropagation();
     tapahtuma.preventDefault();
@@ -482,6 +531,19 @@ function elaintakyPiirraKuva(ui, kohde, taky, maa) {
   kehys.appendChild(nappi);
   const teksti = html('figcaption', 'fokusnosto-kuvateksti');
   teksti.appendChild(html('span', 'fokusnosto-kuvaselite', selite));
+  /*
+   * LÄHDERIVI KUTEN MUISSA KORTEISSA (omistajan testikierros 30.8.2026:
+   * *"Kilpikonnilta puuttuu lähde"*; media-sääntö vaatii lähteen
+   * näkyviin). Eläinkuvat ovat pelin omia generoituja kuvia eivätkä
+   * Commons-valokuvia (js/packs/elaintakyt.js, osio "TEKSTIT OVAT
+   * KAANONIA"), joten rivi kertoo TOTUUDEN eikä keksittyä kuvaajaa —
+   * sama sanamuoto kuin muilla pelin omilla kuvilla
+   * (js/packs/fokusvirta-*.js `lahde: 'Matkakirjan havainnekuva'`).
+   * Jos jokin täky saa joskus Commons-kuvan, sen oma `lahde`-kenttä
+   * voittaa vakiorivin.
+   */
+  teksti.appendChild(html('span', 'fokusnosto-kuvalahde',
+    taky.lahde ?? 'Matkakirjan havainnekuva'));
   kehys.appendChild(teksti);
   kohde.appendChild(kehys);
 }
@@ -502,7 +564,14 @@ function elaintakyLunasta(ui, iso) {
     rivi.textContent = 'Tämä eläin on jo löydetty.';
     return rivi;
   }
-  rivi.textContent = `Löytöpalkkio +${vastaus.palkkio} puntaa.`;
+  /*
+   * PALKKIO ON JO MAKSETTU TÄSSÄ KOHTAA (actionElaintaky kasvatti
+   * kukkaroa juuri yllä), ja rivin on sanottava se (omistajan
+   * testikierros 30.8.2026: *"löytöpalkkio on epäselvä, että pitääkö
+   * vielä etsiä vai tuliko palkkio jo"*). "Lisätty kukkaroon" on
+   * mennyt aikamuoto samasta syystä kuin leimassa: raha tuli juuri.
+   */
+  rivi.textContent = `Löytöpalkkio +${vastaus.palkkio} puntaa lisätty kukkaroon.`;
   const leima = ui.buildToast?.({
     kind: 'stamp',
     icon: 'kukkaro',

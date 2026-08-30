@@ -11427,6 +11427,15 @@ export class UI {
      */
     this.paivitaFokusKerros();
     this.renderTurnPill();
+    /*
+     * Selitevalikon näkyvyys elää samaa vaihetta kuin pilleri
+     * (js/karttaselite.js paivita: piilossa lähtövalinnassa ja
+     * avauslennolla, näkyviin ensimmäisestä kaupungista). Kutsu on
+     * tässä, jotta nappi ilmestyy täsmälleen saapumisen piirrossa —
+     * merkkiketjun oma kutsu (paivitaMaastonimet) ohitetaan lennon
+     * aikana eikä siis osu juuri siihen hetkeen.
+     */
+    paivitaKarttaselite(this);
     // Ennen nappien latomista: syke luetaan napin luonnissa.
     this.paivitaTutkiSyke();
     /*

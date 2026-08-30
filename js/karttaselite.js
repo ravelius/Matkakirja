@@ -191,6 +191,25 @@ export function kaynnistaKarttaselite(ui) {
 
   /** Rivien tila ja luvut ajan tasalle — vain kun valikko on auki. */
   function paivita() {
+    /*
+     * NAPPI VASTA PELITILASSA (omistajan testikierros 30.8.2026:
+     * *"Karttaselite näkyviin vasta Ateenasta alkaen, ei
+     * aloitusruuduilla"*). Sama ehto kuin yläpalkin pillerillä
+     * (js/ui.js renderTurnPill): lähtöpisteen valinnassa ja
+     * avauslennolla kartta ei ole pelattavassa tilassa, eikä selite
+     * saa luvata valikkoa, jonka merkit eivät ole vielä kartalla.
+     * Kartalento-luokka on mukana varalta: avauslennon aikana
+     * paivita voi osua kehykseen, jossa lippu on jo ehditty laskea
+     * (css/styles.css piilottaa saman lennon joka kehyksessä).
+     */
+    const piilossa = ui?.game?.phase === 'pickstart'
+      || Boolean(ui?.aloituslentoKesken)
+      || Boolean(document.body?.classList?.contains('kartalento'));
+    kotelo.hidden = piilossa;
+    if (piilossa) {
+      sulje();
+      return;
+    }
     for (const [aihe, solmu] of rivit) {
       solmu.setAttribute('aria-pressed', String(karttavaloPaalla(aihe)));
     }

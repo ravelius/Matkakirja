@@ -10331,10 +10331,30 @@ body.kartalento .fokuskuvat {
  *
  * Häivytys eikä display, samasta syystä kuin yllä: ne palaavat pehmeästi
  * kun lippu poistuu.
+ *
+ *   .elaintakyt       maiden eläintäkymerkit (js/elaintaky.js) — omistajan
+ *                     testikierros 30.8.2026 (iPad): merkit *"näkyvät
+ *                     lennon aikana"* ympäri Eurooppaa, vaikka lennon
+ *                     kartalla ei kuulu olla sisältömerkkejä. Kerroksen
+ *                     oma astepiilotus (ELAINTAKY_NAKYY_ASTETTA) ei osu
+ *                     tähän: lento zoomaa juuri sen rajan alle.
  */
 body.kartalento .fokuspisteet,
+body.kartalento .elaintakyt,
 body.kartalento .country-tint,
 body.kartalento .country-korostus {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/*
+ * Selitevalikko on pelitilan työkalu, ei lentokohtauksen (omistaja
+ * 30.8.2026: nappi näkyi avauslennon oikeassa yläkulmassa). JS piilottaa
+ * kotelon myös aloitusruuduissa (js/karttaselite.js paivita, ehto
+ * pickstart/aloituslento); tämä sääntö varmistaa saman lennon jokaisessa
+ * kehyksessä riippumatta siitä, ehtiikö piirtoketju ajaa paivitan.
+ */
+body.kartalento .karttaselite {
   opacity: 0;
   pointer-events: none;
 }
