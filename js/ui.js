@@ -6716,6 +6716,11 @@ export class UI {
    * SÄÄNTÖ ON LUOKKA, EI SUODATIN (sama iOS-sääntö kuin kartan
    * muillakin kerroksilla, tests/rules.test.mjs), ja luokka menee
    * KERROKSEEN eikä lappuihin: yksi määrekirjoitus 261:n sijaan.
+   *
+   * PYRAMIDILAUDALLA TÄLLÄ EI OLE TÖITÄ (30.8.2026): siellä ei ole
+   * yhtään elävää nimilappua, koska kaikki paikannimet ovat laatoissa
+   * (drawBoard). Sääntö jää katselutilan manterelaudoille, joilla
+   * .city-label ladotaan yhä.
    */
   paivitaKaupunkinimienNakyvyys(tiedettyNakyva = null) {
     const cities = this.svg?.querySelector('.cities');
@@ -8144,17 +8149,19 @@ export class UI {
     /*
      * MITKÄ KAUPUNGIT OVAT JUURI NYT VALITTAVIA KOHTEITA?
      *
-     * Fokuslehden päällä kaupunkien pisteet ovat piilossa (v1097,
-     * *"Ota pallot pois"*), mutta matkustusvalinnan ajaksi valittavien
-     * kohteiden pisteet on tuotava takaisin — muuten pelaaja valitsisi
-     * paljaalta paperilta. Lista kerätään tässä, koska kohteiden
-     * säännöt (kehittäjätila, lähtöpiste, lennot, nopanheitto) asuvat
-     * tässä metodissa eikä niitä saa kirjoittaa toiseen paikkaan
-     * uudelleen.
+     * VALITTAVIEN KAUPUNKIEN JOUKKO. Lista kerätään tässä, koska
+     * kohteiden säännöt (kehittäjätila, lähtöpiste, lennot,
+     * nopanheitto) asuvat tässä metodissa eikä niitä saa kirjoittaa
+     * toiseen paikkaan uudelleen.
+     *
+     * Joukkoa luki ennen pelimerkkien piilotus (paivitaFokusPallot),
+     * joka toi valittavien kaupunkien pisteet takaisin lehden päälle
+     * valinnan ajaksi. Piilotus poistui 30.8.2026 — merkit ovat
+     * kartalla aina — mutta joukko on yhä totta kartan tilasta ja
+     * pysyy ui:ssa kutsujien saatavilla.
      *
      * KEHITTÄJÄTILAN NÄKYMÄTTÖMÄT HYPPYALUEET EIVÄT OLE KOHTEITA: ne
-     * ovat oikotie, ei valinta, eikä niiden takia saa syttyä yhtään
-     * pistettä lehden päälle.
+     * ovat oikotie, ei valinta.
      */
     const kohdeKaupungit = new Set();
     this.fokusKohdeKaupungit = kohdeKaupungit;
