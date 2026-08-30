@@ -121,8 +121,10 @@ async function haeLuettelo() {
     luetteloHaku = fetch(pyramidiUrl('pyramidi.json'))
       .then((v) => (v.ok ? v.json() : null))
       .then((j) => {
-        // Kelpaa vain, jos siinä on se, mitä piirto lukee.
-        if (!j?.arkki?.w || !j?.laatta || !Array.isArray(j.tasot) || !j.tasot.length) return null;
+        // Kelpaa vain, jos siinä on se, mitä piirto lukee — versio
+        // mukaan lukien, koska laatan osoite rakennetaan siitä.
+        if (!j?.arkki?.w || !j?.laatta || !j?.versio
+          || !Array.isArray(j.tasot) || !j.tasot.length) return null;
         luettelo = j;
         return j;
       })
@@ -318,7 +320,8 @@ export function paivitaPyramidi(ui) {
           y: arkki.y + rivi * yksikkoaPerLaatta,
           width: pw / taso.pikseliaPerYksikko,
           height: ph / taso.pikseliaPerYksikko,
-          href: pyramidiUrl(`z${taso.z}/${sarake}/${rivi}.${luettelo.muoto ?? 'webp'}`),
+          href: pyramidiUrl(`${luettelo.versio}/z${taso.z}/${sarake}/${rivi}`
+            + `.${luettelo.muoto ?? 'webp'}`),
           preserveAspectRatio: 'none',
           class: 'pyramidi-laatta',
           'data-taso': String(taso.z),

@@ -115,7 +115,16 @@ async function avaaPeli({ lippu }) {
     const url = new URL(route.request().url());
     const osa = url.pathname.split('/julisteet/pyramidi/')[1];
     pyynnot.push(osa);
-    const tiedosto = join(LAATAT, osa);
+    /*
+     * Laatan osoitteessa on VERSIO polun osana
+     * (julisteet/pyramidi/<versio>/z7/...), mutta pilottikansiossa
+     * laatat ovat suoraan z-kansioissa. Kokeillaan siis molempia:
+     * ensin sellaisenaan, sitten versio-osa kuorittuna.
+     */
+    let tiedosto = join(LAATAT, osa);
+    if (!existsSync(tiedosto) && osa.includes('/')) {
+      tiedosto = join(LAATAT, osa.slice(osa.indexOf('/') + 1));
+    }
     if (!existsSync(tiedosto)) { route.fulfill({ status: 404, body: 'ei' }); return; }
     route.fulfill({
       status: 200,

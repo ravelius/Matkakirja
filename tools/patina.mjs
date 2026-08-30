@@ -649,9 +649,35 @@ const ROSOISUUS = { voima: 0.5, skaala: 420 };
  * paikalleen; siirtymä näkyy vain värialueiden rajoilla ohuena
  * väriripsauksena, kuten oikeassa vedoksessa.
  */
+/*
+ * SIIRTO ON PAPERIN JA PAINOKONEEN OMINAISUUS, EI MAASTON.
+ *
+ * Lukittu 30.8.2026: dx/dy ovat KUVAPIKSELEITÄ sellaisenaan eikä niitä
+ * kerrota mittakaavalla `s`. Painolaatan kohdistusheitto on
+ * painokoneen ominaisuus samalla tavalla kuin paperin rae on paperin
+ * ja kirjasinkoko ladonnan — mikään niistä ei skaalaudu sen mukaan,
+ * kuinka suurta aluetta arkki esittää.
+ *
+ * MIKSI TÄMÄ ON KIRJATTU NÄIN PAINOKKAASTI. Kertoimella `s` sama
+ * 2,6 pikselin heitto oli laattapyramidin syvimmällä tasolla 35
+ * pikseliä, ja mitattuna (Peloponnesos, z7, 30.8.2026) se maalasi koko
+ * mantereen sateenkaaren värisiksi läiskiksi ja hukutti rantaviivan
+ * usvaan. Se ei ollut hienovarainen väriripsaus vaan painovirhe.
+ * Kertoimen palauttaminen tuo sen takaisin.
+ *
+ * 6400 PIKSELIN LEHDILLE TÄMÄ EI MUUTA MITÄÄN, koska niillä `s` = 1.
+ * Vanha lehtiputki on siis koskematon.
+ */
 const KOHDISTUS = { dx: 2.6, dy: -1.8, voima: 0.85 };
 
-/* Musteen kevyt leviäminen: hiuksenhieno kehä kirjaimen ympärille. */
+/*
+ * Musteen kevyt leviäminen: hiuksenhieno kehä kirjaimen ympärille.
+ *
+ * SÄDE ON PAPERIVAKIO (lukittu 30.8.2026, sama perustelu kuin
+ * KOHDISTUS): muste leviää paperin kuidussa, eikä kuitu tiedä mitä
+ * mittakaavaa kartta esittää. Kertoimella `s` tämä oli syvimmällä
+ * tasolla 27 pikselin sumennus — hiuksenhienon kehän sijaan usva.
+ */
 const LEVIAMINEN = { sade: 2, voima: 0.3 };
 
 /*
@@ -1259,7 +1285,11 @@ export async function patinoiSelaimessa({
   /* ------------------------------------------------------- mustekentät */
   let musteSumea = null;
   if (resepti.leviaminen) {
-    const sade = Math.max(1, Math.round(resepti.leviaminen.sade * s));
+    /*
+     * SÄDE ON PAPERIVAKIO, EI KARTTAVAKIO (omistajan lukitus
+     * 30.8.2026). Ks. LEVIAMINEN-vakion perustelu.
+     */
+    const sade = Math.max(1, Math.round(resepti.leviaminen.sade));
     const m = new Uint8Array(L * K);
     for (let p = 0; p < L * K; p++) {
       const i = p * 4;
@@ -1412,9 +1442,9 @@ export async function patinoiSelaimessa({
       /* --- 2. painolaattojen kohdistusheitto (vain matala väritieto) --- */
       if (ko) {
         const oR = hae4(r4, x, y); const oG = hae4(g4, x, y); const oB = hae4(b4, x, y);
-        const sR = hae4(r4, x + ko.dx * s, y + ko.dy * s);
-        const sG = hae4(g4, x + ko.dx * s, y + ko.dy * s);
-        const sB = hae4(b4, x + ko.dx * s, y + ko.dy * s);
+        const sR = hae4(r4, x + ko.dx, y + ko.dy);
+        const sG = hae4(g4, x + ko.dx, y + ko.dy);
+        const sB = hae4(b4, x + ko.dx, y + ko.dy);
         const oL = lum(oR, oG, oB); const sL = lum(sR, sG, sB);
         r += ((sR - sL) - (oR - oL)) * ko.voima;
         gg += ((sG - sL) - (oG - oL)) * ko.voima;

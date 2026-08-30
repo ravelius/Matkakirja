@@ -238,6 +238,14 @@ const KAARIMINUUTIT = Number(valitsin('kaariminuutit', 3));
 const RUUTU = Number(valitsin('ruutu', KAARIMINUUTIT / 60));
 const KUIVA = lippu('kuiva');
 /*
+ * VERSIO on laattojen polun osa ämpärissä
+ * (julisteet/pyramidi/<versio>/z…). Luettelo asuu versioimattomassa
+ * osoitteessa ja kertoo version, joten laatat saavat ikuisen
+ * välimuistin eikä sisältöpäivitys voi jättää selaimeen puolikasta
+ * karttaa kahdesta ajosta.
+ */
+const VERSIO = valitsin('versio', new Date().toISOString().slice(0, 10));
+/*
  * HARVA PYRAMIDI (omistaja 30.8.2026): syvimmillä tasoilla umpimeren
  * laattoja ei generoida lainkaan, ja peli maalaa niiden tilalle
  * merisävyn. Laatta jätetään pois vain, jos SEN KOKO ALALLA ei ole
@@ -309,6 +317,27 @@ function lueTasot(teksti) {
   return ulos;
 }
 const TASOT = lueTasot(valitsin('tasot', `0-${TASOJA - 1}`));
+
+/*
+ * SARAKEKAISTA (--sarakkeet a-b) on parven/matriisin jakotapa.
+ *
+ * Miksi sarakkeina eikä asteina: `--alue` rajaa asteilla, ja silloin
+ * kaistan reuna osuu keskelle lohkoa. Lohko piirretään silti
+ * kokonaan, joten reunalla tehdään työtä jota ei kirjoiteta levylle —
+ * mitattuna Kreikan alueajossa 62 % hukkaa. Sarakeväli osuu
+ * lohkorajalle, ja hukka on nolla.
+ *
+ * Väli on SULKEUTUVA molemmista päistä ja tulkitaan SYVIMMÄN tason
+ * sarakkeina; matalammilla tasoilla se skaalataan, jotta sama kaista
+ * kattaa saman maantieteellisen siivun joka tasolla.
+ */
+const sarakeTeksti = valitsin('sarakkeet', null);
+const SARAKKEET = sarakeTeksti
+  ? (() => {
+    const [a, b] = String(sarakeTeksti).split('-').map(Number);
+    return { alku: Math.min(a, b), loppu: Math.max(a, b) };
+  })()
+  : null;
 
 /** "lon0,lat0,lon1,lat1" -> rajaus asteina, tai null = koko maailma. */
 const alueTeksti = valitsin('alue', null);
@@ -443,6 +472,16 @@ for (const mitat of tasot) {
   for (let rivi = 0; rivi < mitat.riveja; rivi += 1) {
     for (let sarake = 0; sarake < mitat.sarakkeita; sarake += 1) {
       if (!alueella(mitat, sarake, rivi)) continue;
+      if (SARAKKEET) {
+        /*
+         * Kaista on annettu syvimmän tason sarakkeina; tällä tasolla
+         * sama siivu on kerrointa 2^(syvin - z) kapeampi.
+         */
+        const jako = 2 ** ((TASOJA - 1) - mitat.z);
+        const alku = Math.floor(SARAKKEET.alku / jako);
+        const loppu = Math.floor(SARAKKEET.loppu / jako);
+        if (sarake < alku || sarake > loppu) continue;
+      }
       tarvitaan.add(`${mitat.z}:${sarake}:${rivi}`);
       tyot.push({ mitat, sarake, rivi });
       const bx = Math.floor(sarake / LOHKO);
@@ -495,8 +534,34 @@ console.log(`  laattoja ajossa ${tyot.length} (${lohkot.size} lohkoa à ${LOHKO}
 if (ALUE) {
   console.log(`  alue            lon ${ALUE.lon0}..${ALUE.lon1} lat ${ALUE.lat0}..${ALUE.lat1}`);
 }
+/*
+ * Umpimeren tasainen sävy; asetetaan vasta karsinnassa, mutta
+ * esitellään tässä, koska luettelo voidaan kirjoittaa ilman ajoa
+ * (--vain-luettelo).
+ */
+let meriSavy = null;
+
 if (KUIVA) {
   console.log('\n--kuiva: vain luettelo, ei piirtoa.');
+  process.exit(0);
+}
+
+/*
+ * VAIN LUETTELO (--vain-luettelo): kirjoittaa pyramidi.jsonin ilman
+ * aineistoa, selainta ja piirtoa.
+ *
+ * Tätä tarvitsee matriisiajo. Luettelo kuvaa KOKO pyramidin, eikä
+ * yksikään shardi tunne muiden tasoja — jos shardit kirjoittaisivat
+ * sen, viimeisenä valmistuva jättäisi ämpäriin luettelon, joka tuntee
+ * vain omat tasonsa. Luettelo on pyramidin MUOTO eikä ajon tulos,
+ * joten se syntyy pelkästä geometriasta.
+ */
+if (lippu('vain-luettelo')) {
+  mkdirSync(kohdekansio, { recursive: true });
+  const polku = join(kohdekansio, 'pyramidi.json');
+  writeFileSync(polku, `${JSON.stringify(teeLuettelo(), null, 2)}\n`);
+  console.log(`\n--vain-luettelo: ${polku} (${statSync(polku).size} tavua), `
+    + `tasot ${tasot.map((m) => `z${m.z}`).join(' ')}, versio ${VERSIO}`);
   process.exit(0);
 }
 
@@ -674,7 +739,6 @@ function umpimeriSavy(mitat, sarake, rivi, syyt = null) {
  * on mitattu luku eikä arvio.
  */
 const karsittu = new Map();
-let meriSavy = null;
 
 /*
  * HARVAN SÄÄSTÖN MITTAUS ILMAN PIIRTOA (--harvamittaus).
@@ -1541,8 +1605,9 @@ function laatastoBase64(mitat) {
  * mittoja eikä arkin paikkaa laudalla — se lukee ne tästä, aivan kuten
  * maalehti luki paikkansa omasta JSONistaan.
  */
-const luettelo = {
-  versio: new Date().toISOString().slice(0, 10),
+function teeLuettelo() {
+  return {
+  versio: VERSIO,
   lauta: LAUTA.id,
   projektio,
   laatta: LAATTA,
@@ -1575,7 +1640,15 @@ const luettelo = {
      * Koko on pieni: syvin taso 169 x 91 = 15 379 bittiä eli 1,9 kt
      * base64:nä.
      */
-    laatasto: laatastoBase64(m),
+    /*
+     * LAATASTO VAIN HARVASSA PYRAMIDISSA. Kun jokainen laatta on
+     * olemassa, bittikartta olisi pelkkiä ykkösiä — turhaa tavua, ja
+     * matriisiajossa suorastaan vaarallista: jokainen shardi näkee
+     * levyllä vain omat laattansa ja kirjoittaisi luetteloon, että
+     * muita ei ole. Peli tulkitsee puuttuvan laataston "kaikki
+     * olemassa" (js/laattapyramidi.js laattaOlemassa).
+     */
+    laatasto: HARVA ? laatastoBase64(m) : null,
   })),
   alue: ALUE,
   lahteet: [
@@ -1583,6 +1656,10 @@ const luettelo = {
     'ETOPO1 Global Relief (NOAA, Amante & Eakins 2009) — public domain',
   ],
 };
+}
+
+const luettelo = teeLuettelo();
+
 const luetteloPolku = join(kohdekansio, 'pyramidi.json');
 /*
  * LUETTELO TÄYDENTYY, EI KORVAUDU. Pyramidi ajetaan erissä — uloimmat

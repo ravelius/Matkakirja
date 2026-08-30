@@ -1,0 +1,226 @@
+# Generoi laattapyramidi ja vie se R2-ämpäriin.
+#
+# Raamattu ("LAATTAPYRAMIDI JA KARTAN PATINA"): *"Sisältöpäivitys =
+# pyramidin uudelleenajo napista."* Tämä työnkulku ON se nappi.
+#
+# Malli: patinoi-fokus.yml (generointi ja `aws s3 sync` samassa
+# jobissa) ja vie-fokus.yml (pelkkä synkka). Rakenne on niistä, ei
+# keksitty uudestaan.
+#
+# === MIKSI MATRIISI EIKÄ YKSI JOBI ==================================
+#
+# Mitattuna (30.8.2026, docs/moduulit/laattapyramidi.md): koko pyramidi
+# on 23 340 laattaa ja 6 061 Mpx, ja yhdellä säikeellä se on tunteja.
+# Työ jakautuu luonnostaan, koska laatta ei koskaan riipu
+# naapurilaatasta — kaikki lasketaan arkin koordinaateista.
+#
+# Jako on syvimmän tason PITUUSKAISTOJA, ja kaistarajat ovat
+# LOHKORAJOILLA (sarake jaollinen neljällä). Se ei ole siisteyttä:
+# aluerajaus asteilla katkaisee lohkon keskeltä, jolloin lohko
+# piirretään kokonaan mutta puolet heitetään pois — mitattuna 62 %
+# hukkaa. Sarakerajaus lohkorajalle antaa nollan.
+#
+#   z0-z6 kokonaan          5 933 laattaa
+#   z7 sarakkeet   0-43     4 532
+#   z7 sarakkeet  44-87     4 532
+#   z7 sarakkeet  88-131    4 532
+#   z7 sarakkeet 132-168    3 811
+#                          ------
+#                          23 340   (täsmää tasojen summaan)
+#
+# === MIKSI JOKAINEN SHARDI SYNKKAA ITSE =============================
+#
+# Koko pyramidi on yli gigatavun. Jos shardit antaisivat tuotoksensa
+# artefaktina seuraavalle jobille, se gigatavu kulkisi verkon yli
+# kahdesti ja täyttäisi levyn. Jokainen shardi vie siis OMAN osansa
+# samassa jobissa, ja levyltä ei koskaan vaadita kuin yhden shardin
+# osuus (suurin noin 250 Mt).
+#
+# === LUETTELO ON OMA JOBINSA =======================================
+#
+# `pyramidi.json` kuvaa KOKO pyramidin, eikä yksikään shardi tunne
+# muiden tasoja. Jos shardit kirjoittaisivat sen, viimeisenä valmistuva
+# jättäisi ämpäriin luettelon, joka tuntee vain omat tasonsa. Luettelo
+# tehdään siksi erikseen `--kuiva`-ajolla (pelkkä geometria, ei
+# piirtoa) ja viedään vasta kun jokainen shardi on valmis.
+#
+# Laatat menevät VERSIOITUUN polkuun ja luettelo versioimattomaan:
+#   julisteet/pyramidi/<versio>/z<taso>/<sarake>/<rivi>.webp
+#   julisteet/pyramidi/pyramidi.json
+# Näin laatat saavat ikuisen välimuistin eikä sisältöpäivitys voi
+# jättää selaimeen puolikasta karttaa kahdesta eri ajosta.
+name: Generoi laattapyramidi
+
+on:
+  workflow_dispatch:
+    inputs:
+      versio:
+        description: 'Laattojen versio ämpärin polussa (esim. 2026-08-30)'
+        type: string
+        required: true
+      tasot:
+        description: 'Mitkä shardit ajetaan'
+        type: choice
+        options:
+          - kaikki
+          - vain-z0-z6
+          - koeajo-z0-z3
+        default: koeajo-z0-z3
+      laatu:
+        description: 'webp-laatu'
+        type: string
+        default: '0.9'
+      patina:
+        description: 'Patinataso (taysi = lukittu resepti)'
+        type: choice
+        options: [taysi, keskitaso, hillitty, ei]
+        default: taysi
+      vie:
+        description: 'Vie ämpäriin (pois = pelkkä harjoitus)'
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  # ------------------------------------------------------------ laatat
+  laatat:
+    runs-on: ubuntu-latest
+    # Mitattu 0,44 Mpx/s tässä kontissa; suurin shardi on noin 1 240 Mpx
+    # reunuksineen eli ~47 min. Ajurin ja hitaamman ajokoneen varalle
+    # nelinkertainen vara, mutta alle GitHubin kuuden tunnin katon.
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      matrix:
+        shardi: ${{ fromJSON(inputs.tasot == 'kaikki'
+          && '[{"nimi":"z0-z6","tasot":"0-6","sarakkeet":""},{"nimi":"z7a","tasot":"7","sarakkeet":"0-43"},{"nimi":"z7b","tasot":"7","sarakkeet":"44-87"},{"nimi":"z7c","tasot":"7","sarakkeet":"88-131"},{"nimi":"z7d","tasot":"7","sarakkeet":"132-168"}]'
+          || (inputs.tasot == 'vain-z0-z6'
+          && '[{"nimi":"z0-z6","tasot":"0-6","sarakkeet":""}]'
+          || '[{"nimi":"koeajo","tasot":"0-3","sarakkeet":""}]')) }}
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Playwright repon omasta package.jsonista; Chromium on
+      # piirtomoottorin ja patinapassin kuvankäsittelykanvaasi.
+      - name: Asenna riippuvuudet ja Chromium
+        run: |
+          set -euo pipefail
+          npm install --no-fund --no-audit
+          npx playwright install --with-deps chromium
+          echo "PW_CHROMIUM=$(find ~/.cache/ms-playwright -name chrome -path '*chrome-linux*' -type f | head -1)" >> "$GITHUB_ENV"
+
+      # Natural Earth (meri ja järvet) ja ETOPO-korkeusruudukko.
+      # Kumpikaan ei ole repossa: ne ovat julkista aineistoa ja
+      # kymmeniä megatavuja (CLAUDE.md: media ämpäriin eikä repoon).
+      - name: Hae raaka-aineisto
+        run: |
+          set -euo pipefail
+          mkdir -p ne-data
+          for f in ne_10m_ocean ne_10m_lakes; do
+            curl -sSL --retry 3 -o "ne-data/$f.geojson" \
+              "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/$f.geojson"
+          done
+          ls -la ne-data
+          # Korkeusruudukko ERDDAPista; noin 45 s ja 104 Mt välimuistiin.
+          NODE_USE_ENV_PROXY=1 node tools/hae-korkeusruudukko.mjs
+
+      - name: Generoi laatat (${{ matrix.shardi.nimi }})
+        env:
+          TASOT: ${{ matrix.shardi.tasot }}
+          SARAKKEET: ${{ matrix.shardi.sarakkeet }}
+          LAATU: ${{ inputs.laatu }}
+          PATINA: ${{ inputs.patina }}
+          VERSIO: ${{ inputs.versio }}
+        run: |
+          set -euo pipefail
+          df -h / | tail -1
+          LISA=""
+          if [ -n "${SARAKKEET}" ]; then LISA="--sarakkeet ${SARAKKEET}"; fi
+          NODE_USE_ENV_PROXY=1 node tools/generoi-laattapyramidi.mjs ulos \
+            --data ne-data --tasot "$TASOT" $LISA \
+            --laatu "$LAATU" --patina "$PATINA" --versio "$VERSIO"
+          echo "--- tuotos ---"
+          find ulos -name '*.webp' | wc -l
+          du -sh ulos
+          df -h / | tail -1
+
+      # Laatat ovat muuttumattomia: versio on polussa, joten sama
+      # osoite ei koskaan saa uutta sisältöä.
+      - name: Vie laatat ämpäriin
+        if: ${{ inputs.vie }}
+        env:
+          VERSIO: ${{ inputs.versio }}
+        run: |
+          set -euo pipefail
+          n=0
+          for taso in ulos/z*; do
+            [ -d "$taso" ] || continue
+            z=$(basename "$taso")
+            aws s3 sync "$taso" \
+              "s3://${{ secrets.R2_BUCKET }}/julisteet/pyramidi/$VERSIO/$z" \
+              --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+              --exclude '*' --include '*.webp' \
+              --content-type image/webp \
+              --cache-control 'public, max-age=31536000, immutable' \
+              --no-progress
+            n=$((n + 1))
+          done
+          echo "Viety $n tasoa shardista ${{ matrix.shardi.nimi }}."
+
+  # ---------------------------------------------------------- luettelo
+  luettelo:
+    needs: laatat
+    if: ${{ inputs.vie }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-fund --no-audit
+
+      # `--kuiva` on pelkkää geometriaa: ei selainta, ei aineistoa, ei
+      # piirtoa. Luettelo kuvaa KAIKKI tasot riippumatta siitä, mitkä
+      # shardit ajettiin — se on pyramidin muoto, ei ajon tulos.
+      - name: Kokoa luettelo
+        env:
+          VERSIO: ${{ inputs.versio }}
+          LAATU: ${{ inputs.laatu }}
+          TASOT: ${{ inputs.tasot == 'koeajo-z0-z3' && '0-3' || '0-7' }}
+        run: |
+          set -euo pipefail
+          node tools/generoi-laattapyramidi.mjs luettelo-ulos \
+            --tasot "$TASOT" --versio "$VERSIO" --laatu "$LAATU" --vain-luettelo
+          cat luettelo-ulos/pyramidi.json | head -30
+
+      # Luettelo EI ole muuttumaton: se osoittaa uusimpaan versioon, ja
+      # sen on vaihduttava kun uusi erä ajetaan. Lyhyt välimuisti.
+      - name: Vie luettelo ämpäriin
+        run: |
+          set -euo pipefail
+          aws s3 cp luettelo-ulos/pyramidi.json \
+            "s3://${{ secrets.R2_BUCKET }}/julisteet/pyramidi/pyramidi.json" \
+            --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+            --content-type application/json \
+            --cache-control 'public, max-age=300' \
+            --no-progress
+          echo "Luettelo viety: versio ${{ inputs.versio }}."
