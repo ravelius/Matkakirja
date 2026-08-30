@@ -1,0 +1,52 @@
+{
+  "_": "Pakistanin maastokohteet. Faktat en-Wikipediasta 30.8.2026. K2 on maan tunnusvuori ja maailman toiseksi korkein; Indus on koko maan elämänlanka ja Arabianmeri sen päätepiste.",
+  "vuoret": [
+    {
+      "nimi": "K2",
+      "lon": 76.5133,
+      "lat": 35.8825,
+      "m": 8611,
+      "lahdeKoordinaatti": "en-Wikipedia \"K2\"",
+      "nappi": "Julma vuori",
+      "kysymykset": [
+        "Miksi K2:lla ei ole oikeaa nimeä?",
+        "Miksi K2 on vaarallisempi kuin Everest?"
+      ],
+      "korostukset": ["Karakorum|Karakorumin"],
+      "teksti": "K2 on 8 611-metrisenä maailman toiseksi korkein vuori — vain Everest on korkeampi. Se sijaitsee Karakorumin vuoristossa Pakistanin ja Kiinan hallitsemien alueiden rajalla. Vuorikiipeilijät kutsuvat sitä Julmaksi vuoreksi: ennen vuotta 2021 arviolta yksi kiipeilijä kuoli jokaista neljää huipulle päässyttä kohti, ja vaikka Everestin huippu on ylempänä, K2 on nousuna vaikeampi ja vaarallisempi.",
+      "lahde": "en-Wikipedia \"K2\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Arabianmeri",
+      "lon": 66.0,
+      "lat": 23.8,
+      "lahdeKoordinaatti": "ulappa Karachin edustalla; artikkelin oma keskipiste on 65 / 14",
+      "nappi": "Valtameren porttikäytävä",
+      "kysymykset": [
+        "Kuinka syvä Arabianmeri on?",
+        "Minne Arabianmereltä pääsee purjehtimaan?"
+      ],
+      "korostukset": ["Bab-el-Mandeb|Bab-el-Mandebin"],
+      "teksti": "Arabianmeri on Intian valtameren pohjoisosa Arabian niemimaan, Pakistanin ja Intian välissä: pinta-alaa 3 862 000 neliökilometriä ja syvyyttä enimmillään 5 395 metriä. Lännessä Adeninlahti johtaa siltä Bab-el-Mandebin salmen kautta Punaisellemerelle ja luoteessa Omaninlahti Persianlahdelle. Sen salmet ovat yhdistäneet idän ja lännen valtakuntia jo antiikin ajoista.",
+      "lahde": "en-Wikipedia \"Arabian Sea\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Indus",
+      "lon": 68.85,
+      "lat": 27.7,
+      "lahdeKoordinaatti": "Sukkurin kohta joen keskijuoksulla; artikkelin koordinaatti 67,435 / 23,995 on suistossa Karachin luona",
+      "nappi": "Pakistanin elämänlanka",
+      "kysymykset": [
+        "Missä Indus saa alkunsa?",
+        "Miksi kokonainen sivilisaatio syntyi juuri tämän joen varteen?"
+      ],
+      "korostukset": ["Himalaja|Himalajan"],
+      "teksti": "Indus on 3 180 kilometriä pitkä ylirajainen virta, joka alkaa Tiibetistä nimellä Sengge Zangbo, kiertää Himalajan Nanga Parbatin massiivin ja kääntyy sitten etelään halki koko Pakistanin. Se laskee Arabianmereen satamakaupunki Karachin lähellä. Tasangolla siihen yhtyy Panjnad, johon Punjabin viisi jokea — Chenab, Jhelum, Ravi, Beas ja Sutlej — ovat jo yhtyneet.",
+      "lahde": "en-Wikipedia \"Indus River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

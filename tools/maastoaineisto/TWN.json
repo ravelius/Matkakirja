@@ -1,0 +1,35 @@
+{
+  "_": "Taiwanin maastokohteet. Faktat en-Wikipediasta 30.8.2026. Saari on kapea, joten kaksi kohdetta riittää: korkein huippu ja salmi, joka erottaa saaren mantereesta.",
+  "vuoret": [
+    {
+      "nimi": "Yu Shan",
+      "lon": 120.9572,
+      "lat": 23.47,
+      "m": 3952,
+      "lahdeKoordinaatti": "en-Wikipedia \"Yushan (mountain)\"",
+      "nappi": "Merestä noussut huippu",
+      "kysymykset": [
+        "Miten meren pohja päätyy vuoren huipuksi?",
+        "Miksi vuorella on ollut monta nimeä?"
+      ],
+      "korostukset": ["Jadevuori|Jadevuoren"],
+      "teksti": "Yu Shan, Jadevuori, on Taiwanin korkein vuori: 3 952 metriä, mikä tekee Taiwanista maailman neljänneksi korkeimman saaren. Seutu oli aikoinaan merta — huippu on noussut nykyiseen korkeuteensa, kun Euraasian laatta työntyy Filippiinienmeren laatan yli. Japanin vallan aikana vuori tunnettiin nimellä Niitaka ja sitä ennen Morrisonina; nykyään sitä suojelee Yushanin kansallispuisto.",
+      "lahde": "en-Wikipedia \"Yushan (mountain)\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Taiwaninsalmi",
+      "lon": 119.9283,
+      "lat": 24.8111,
+      "lahdeKoordinaatti": "en-Wikipedia \"Taiwan Strait\"",
+      "nappi": "Salmi kahden rannan välissä",
+      "kysymykset": [
+        "Kuinka leveä salmi on kapeimmillaan?",
+        "Mitkä meret salmi yhdistää?"
+      ],
+      "teksti": "Taiwaninsalmi erottaa Taiwanin saaren Aasian mantereesta. Salmi on noin 180 kilometriä leveä, kapeimmillaan 126 kilometriä, ja se yhdistää Etelä-Kiinan meren etelässä Itä-Kiinan mereen pohjoisessa. Toiselta rannalta ei siis näe toista, mutta laivalle matka on lyhyt.",
+      "lahde": "en-Wikipedia \"Taiwan Strait\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

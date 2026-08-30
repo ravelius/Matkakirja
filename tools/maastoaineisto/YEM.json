@@ -1,0 +1,51 @@
+{
+  "_": "Jemenin maastokohteet. Faktat en-Wikipediasta 30.8.2026. Jabal an-Nabi Shu'aybin korkeuslukema on artikkelin tietolaatikosta (Wikidata P2044: 3 666 m); johdanto sanoo, että vuori on koko Arabian niemimaan korkein. Sokotra on saari-tyypin kohde — sama tyyppi on kohdemallissa tuettu (js/fokuskohteet.js KOHDE_TYYPIT).",
+  "vuoret": [
+    {
+      "nimi": "Jabal an-Nabi Shu'ayb",
+      "lon": 43.9758,
+      "lat": 15.2792,
+      "m": 3666,
+      "lahdeKoordinaatti": "en-Wikipedia \"Jabal An-Nabi Shu'ayb\"",
+      "nappi": "Koko Arabian korkein",
+      "kysymykset": [
+        "Miksi Arabian korkein vuori on Jemenissä?",
+        "Kuka oli profeetta Shuayb?"
+      ],
+      "korostukset": ["Sarawat|Sarawatin"],
+      "teksti": "Jabal an-Nabi Shu'ayb, profeetta Shuaybin vuori, kohoaa 3 666 metriin Sanaan lähistöllä. Se ei ole vain Jemenin vaan koko Arabian niemimaan korkein vuori: aavikkoniemimaan katto on sen lounaiskulmassa, Sarawatin vuoristossa. Vuori tunnetaan myös nimellä Jabal Hadur.",
+      "lahde": "en-Wikipedia \"Jabal An-Nabi Shu'ayb\", johdanto-osa ja tietolaatikko (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Adeninlahti",
+      "lon": 45.6,
+      "lat": 12.55,
+      "lahdeKoordinaatti": "ulappa Adenin edustalla; artikkelin oma keskipiste 48 / 12 on lahden keskellä etelämpänä",
+      "nappi": "Lahti joka levenee yhä",
+      "kysymykset": [
+        "Miksi lahti levenee joka vuosi?",
+        "Mikä Bab-el-Mandeb on?"
+      ],
+      "korostukset": ["Bab-el-Mandeb|Bab-el-Mandebin"],
+      "teksti": "Adeninlahti on syvä lahti Jemenin ja Afrikan sarven välissä. Luoteessa se yhtyy Punaiseenmereen Bab-el-Mandebin salmen kautta ja idässä Arabianmereen. Lahden keskellä kulkee Adeninharjanne, jonka liikunta leventää lahtea noin 15 millimetriä vuodessa — meri siis kasvaa hitaasti. Antiikin kreikkalaisille lahti oli osa Erythrainmerta, tärkeimpiä tunnettuja vesiä.",
+      "lahde": "en-Wikipedia \"Gulf of Aden\", johdanto-osa (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Sokotra",
+      "id": "sokotra",
+      "lon": 53.92,
+      "lat": 12.51,
+      "lahdeKoordinaatti": "en-Wikipedia \"Socotra\"",
+      "nappi": "Saari kahden maailman välissä",
+      "kysymykset": [
+        "Voiko saari kuulua eri maanosaan kuin valtionsa?",
+        "Mitä soqotri-kieli on?"
+      ],
+      "korostukset": ["soqotri|soqotria"],
+      "teksti": "Sokotra on Jemenin saari Intian valtameressä, 380 kilometriä Arabian niemimaalta etelään mutta vain 232 kilometriä Afrikan sarvesta itään. Hallinnollisesti se on Jemeniä, mutta geologisesti Afrikkaa: saari on Somalian mannerlaatasta irronnut sirpale. Se on saariryhmänsä kuudesta saaresta ylivoimaisesti suurin, ja sen asukkaat puhuvat arabian ohella omaa soqotria.",
+      "lahde": "en-Wikipedia \"Socotra\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

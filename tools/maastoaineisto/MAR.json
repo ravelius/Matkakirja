@@ -1,0 +1,51 @@
+{
+  "_": "Marokon maastokohteet. Faktat en-Wikipediasta 30.8.2026. Toubkalille ei ole vakiintunutta suomennosta (fi-Wikipediassa ei artikkelia); joen asu fi-Wikipedian mukaan Drâa.",
+  "vuoret": [
+    {
+      "nimi": "Toubkal",
+      "lon": -7.9151,
+      "lat": 31.0596,
+      "m": 4167,
+      "lahdeKoordinaatti": "en-Wikipedia \"Toubkal\"",
+      "nappi": "Pohjois-Afrikan korkein",
+      "kysymykset": [
+        "Mikä on ultrahuippu?",
+        "Näkyykö Toubkal Marrakechiin asti?"
+      ],
+      "korostukset": ["Atlasvuoret|Atlasvuorten"],
+      "teksti": "Toubkal eli Jbel Toubkal on 4 167 metrillään Marokon, Atlasvuorten, Pohjois-Afrikan ja koko arabimaailman korkein huippu. Se kohoaa Toubkalin kansallispuistossa 63 kilometriä Marrakechista etelään ja näkyy kaupunkiin asti. Toubkal on niin sanottu ultrahuippu: yli 2 000 kilometrin säteellä ei ole yhtään sitä korkeampaa vuorta.",
+      "lahde": "en-Wikipedia \"Toubkal\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Atlantti",
+      "lon": -8.5,
+      "lat": 33.2,
+      "lahdeKoordinaatti": "ulappa Casablancan edustalla; en-Wikipedia \"Atlantic Ocean\" antaa koko valtameren keskipisteeksi -25 / 0",
+      "nappi": "Löytöretkien valtameri",
+      "kysymykset": [
+        "Ketkä ylittivät Atlantin ensimmäisinä?",
+        "Miksi vuotta 1492 pidetään käännekohtana?"
+      ],
+      "teksti": "Atlantti on maailman toiseksi suurin valtameri, ja Marokon länsirannikko avautuu suoraan sen ulapalle. Ensimmäisinä valtameren tiedetään ylittäneen viikinkien, mutta seurauksiltaan suurin oli Kristoffer Kolumbuksen retki vuonna 1492: se avasi eurooppalaisten löytöretkien ja siirtomaavalloitusten aikakauden. Löytöretkien aikaan Atlantin ajateltiin erottavan Amerikan 'uuden maailman' vanhasta.",
+      "lahde": "en-Wikipedia \"Atlantic Ocean\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Drâa",
+      "lon": -5.8,
+      "lat": 30.3,
+      "lahdeKoordinaatti": "keskijuoksu Zagoran seudulla; en-Wikipedia \"Draa River\" antaa koordinaatiksi alajuoksun -11,12 / 28,68",
+      "nappi": "Joki, joka katoaa hiekkaan",
+      "kysymykset": [
+        "Miksi joen loppuosa on enimmäkseen kuiva?",
+        "Mitä Fezouatan kivettymät ovat?"
+      ],
+      "korostukset": ["Korkea Atlas|Korkealta Atlakselta"],
+      "teksti": "Drâa on Marokon pisin joki: 1 100 kilometriä. Se syntyy Dadèsin ja Iminin jokien yhtyessä, virtaa Korkealta Atlakselta ensin kaakkoon ja kääntyy sitten länteen kohti Atlanttia — mutta Tagouniten jälkeinen osuus on suurimman osan vuotta kuivillaan. Joen laaksosta on löydetty Fezouatan kivettymät, poikkeuksellisen hyvin säilynyt ikkuna ordovikikauden alun muinaiseen meriluontoon.",
+      "lahde": "en-Wikipedia \"Draa River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

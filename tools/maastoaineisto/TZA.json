@@ -1,0 +1,47 @@
+{
+  "_": "Tansanian maastokohteet. Faktat en-Wikipediasta 30.8.2026. Tanganjikajärvi kulkee pelin symbolitaksonomiassa merenä (luonto-symboli; erillistä järvityyppiä ei ole).",
+  "vuoret": [
+    {
+      "nimi": "Kilimandžaro",
+      "lon": 37.3533,
+      "lat": -3.0758,
+      "m": 5895,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Kilimanjaro\"",
+      "nappi": "Afrikan korkein vuori",
+      "kysymykset": [
+        "Mitä Kilimandžaron nimi tarkoittaa?",
+        "Kuka eurooppalainen kertoi vuoresta ensimmäisenä?"
+      ],
+      "teksti": "Kilimandžaro on uinuva tulivuori ja Afrikan korkein vuori: 5 895 metriä merenpinnasta ja lähes viisi kilometriä ympäröivältä ylängöltä, mikä tekee siitä maailman korkeimman vapaasti seisovan vuoren. Nimen alkuperää ei tunneta — se voi tarkoittaa suuruuden vuorta tai vuorta, jolle ei voi kiivetä. Saksalainen lähetyssaarnaaja Johannes Rebmann kertoi vuoresta eurooppalaisille ensimmäisenä vuonna 1848.",
+      "lahde": "en-Wikipedia \"Mount Kilimanjaro\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Intian valtameri",
+      "lon": 40.3,
+      "lat": -6.9,
+      "lahdeKoordinaatti": "ulappa Sansibarin ja Dar es Salaamin edustalla; artikkelin oma keskipiste on 80 / -20",
+      "nappi": "Valtameristä nuorin",
+      "kysymykset": [
+        "Miksi Intian valtameri on valtameristä nuorin?",
+        "Kuinka syvä valtameri on keskimäärin?"
+      ],
+      "teksti": "Intian valtameri on maailman kolmanneksi suurin valtameri, jota rajaavat pohjoisessa Aasia, lännessä Afrikka ja idässä Australia. Geologisesti se on valtameristä nuorin: se syntyi muinaisen Tethysmeren pirstoutuessa vasta noin 20 miljoonaa vuotta sitten, ja siksi sen mannerjalustat ovat kapeita. Keskisyvyyttä valtamerellä on 3 741 metriä.",
+      "lahde": "en-Wikipedia \"Indian Ocean\", johdanto-osa (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Tanganjikajärvi",
+      "lon": 29.5,
+      "lat": -6.1,
+      "lahdeKoordinaatti": "en-Wikipedia \"Lake Tanganyika\"",
+      "nappi": "Maailman pisin makeanveden järvi",
+      "kysymykset": [
+        "Mikä järvi on Tanganjikaakin syvempi?",
+        "Mitä reittiä järven vedet päätyvät Atlanttiin?"
+      ],
+      "teksti": "Tanganjikajärvi on maailman pisin makeanveden järvi sekä tilavuudeltaan ja syvyydeltään toinen — molemmissa edellä on vain Siperian Baikal. Järvi jakautuu neljän maan kesken, ja Tansanialle siitä kuuluu suurin osuus, lähes puolet. Vedet laskevat Lukugajokea pitkin Kongon vesistöön ja päätyvät lopulta Atlanttiin.",
+      "lahde": "en-Wikipedia \"Lake Tanganyika\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

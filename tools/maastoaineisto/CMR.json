@@ -1,0 +1,50 @@
+{
+  "_": "Kamerunin maastokohteet. Faktat en-Wikipediasta 30.8.2026. Kamerunvuoren korkeudeksi ilmoitetaan usein 4 095 m, mutta artikkelin tietolaatikko antaa 4 040 m ja huomauttaa, ettei suurempi lukema sovi SRTM-korkeusaineistoon — tekstissä käytetään tietolaatikon lukemaa.",
+  "vuoret": [
+    {
+      "nimi": "Kamerunvuori",
+      "lon": 9.1725,
+      "lat": 4.2167,
+      "m": 4040,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Cameroon\"",
+      "nappi": "Aktiivinen tulivuori meren äärellä",
+      "kysymykset": [
+        "Milloin Kamerunvuori purkautui viimeksi?",
+        "Mitä paikallinen nimi Mongo ma Ndemi tarkoittaa?"
+      ],
+      "korostukset": ["Guineanlahti|Guineanlahden"],
+      "teksti": "Kamerunvuori on aktiivinen kerrostulivuori Lounais-Kamerunissa, Buean kaupungin vieressä lähellä Guineanlahden rantaa. Sen korkeudeksi annetaan 4 040 metriä, joskin lähteet kiistelevät lukemasta. Paikallisilta kieliltä vuori tunnetaan nimillä Fako ja Mongo ma Ndemi, ja se on maailman huippujen joukossa sijalla 22, kun ne pannaan järjestykseen sen mukaan, kuinka kaukana lähin korkeampi maasto on.",
+      "lahde": "en-Wikipedia \"Mount Cameroon\", johdanto-osa ja tietolaatikko (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Guineanlahti",
+      "lon": 8.7,
+      "lat": 3.0,
+      "lahdeKoordinaatti": "ulappa Kamerunin rannikon edustalla; en-Wikipedia \"Gulf of Guinea\" antaa keskipisteeksi 0 / 0",
+      "nappi": "Tropiikin suuri lahti",
+      "kysymykset": [
+        "Missä Bonnynlahti ja Beninlahti ovat?",
+        "Mistä Guineanlahden öljy pumpataan?"
+      ],
+      "teksti": "Guineanlahti on trooppisen Atlantin koillisin osa: se ulottuu Gabonin Cape Lopezista pohjoiseen ja länteen aina Liberian Cape Palmasiin asti. Lahteen laskee monta suurta jokea, muun muassa Niger ja Volta, ja sen rannikkoon kuuluvat Beninlahti sekä Kamerunin edustalla aukeava Bonnynlahti.",
+      "lahde": "en-Wikipedia \"Gulf of Guinea\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Sanaga",
+      "lon": 11.0,
+      "lat": 4.2,
+      "lahdeKoordinaatti": "keskijuoksu Edéan yläpuolella; en-Wikipedia \"Sanaga River\" antaa suulle 9,65 / 3,56",
+      "nappi": "Kamerunin suurin joki",
+      "kysymykset": [
+        "Missä Djérem ja Lom yhtyvät Sanagaksi?",
+        "Miksi joki on Kamerunin sähköntuotannolle tärkeä?"
+      ],
+      "teksti": "Sanaga on Kamerunin suurin joki, ja se virtaa maan itä-, keski- ja rannikko-osien halki. Sanagaksi jokea kutsutaan Djéremin ja Lomin yhtymäkohdasta alkaen, mistä matkaa merelle kertyy noin 603 kilometriä — ja kun pisin latvahaara Djérem lasketaan mukaan, koko jokijärjestelmän pituudeksi tulee lähes 1 070 kilometriä.",
+      "lahde": "en-Wikipedia \"Sanaga River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

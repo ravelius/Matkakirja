@@ -1,0 +1,50 @@
+{
+  "_": "Namibian maastokohteet. Faktat en-Wikipediasta 30.8.2026.",
+  "vuoret": [
+    {
+      "nimi": "Brandberg",
+      "lon": 14.5487,
+      "lat": -21.1258,
+      "m": 2573,
+      "lahdeKoordinaatti": "en-Wikipedia \"Brandberg Mountain\"",
+      "nappi": "Namibian korkein vuori",
+      "kysymykset": [
+        "Mistä Brandberg sai palavan nimensä?",
+        "Miten 2 573 metrin Königstein-huipulle noustaan?"
+      ],
+      "korostukset": ["Königstein|Königsteinin"],
+      "teksti": "Brandberg on Namibian korkein vuori: sen laella Namibin aavikon luoteisosassa kohoaa Königstein, 2 573 metriä merenpinnasta. Noin 650 neliökilometrin massiivi nousee suoraan tasaisilta soratasangoilta, joten se näkyy kirkkaalla säällä valtavan kauas, ja sen ydinalue julistettiin kansallismuistomerkiksi jo vuonna 1951. Nimi on afrikaansia, hollantia ja saksaa ja tarkoittaa palavaa vuorta.",
+      "lahde": "en-Wikipedia \"Brandberg Mountain\", johdanto ja osat Location ja Origin of name (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Atlantti",
+      "lon": 13.4,
+      "lat": -23.0,
+      "lahdeKoordinaatti": "ulappa Walvis Bayn edustalla; artikkelin oma keskipiste on -25 / 0",
+      "nappi": "Valtameri aavikon reunalla",
+      "kysymykset": [
+        "Kuinka suuren osan maapallosta Atlantti peittää?",
+        "Miksi Namibian rannikolla aavikko ulottuu mereen asti?"
+      ],
+      "teksti": "Atlantti on maailman toiseksi suurin valtameri: noin 85 miljoonaa neliökilometriä eli noin 17 prosenttia koko maapallon pinnasta. Namibian koko länsiraja on tämän valtameren rantaa, ja Namibin aavikko ulottuu paikoin suoraan rantaviivaan saakka. Löytöretkien aikakaudella Atlantti tunnettiin merenä, joka erotti vanhan ja uuden maailman toisistaan.",
+      "lahde": "en-Wikipedia \"Atlantic Ocean\", johdanto-osa; aavikon ja rannikon suhde artikkelista \"Brandberg Mountain\" (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Oranjejoki",
+      "lon": 16.4522,
+      "lat": -28.6328,
+      "lahdeKoordinaatti": "en-Wikipedia \"Orange River\" — koordinaatti on joen suulla Oranjemundin kohdalla",
+      "nappi": "Eteläisen Afrikan suuri rajajoki",
+      "kysymykset": [
+        "Missä vuoristossa Oranje saa alkunsa?",
+        "Miksi joki on kahden valtion välinen raja?"
+      ],
+      "teksti": "Oranjejoki on Etelä-Afrikan pisin joki: 2 432 kilometriä Lesothon Drakensbergin vuorilta länteen Atlanttiin. Sen alajuoksu muodostaa Namibian ja Etelä-Afrikan välisen rajan, ja merkki onkin joen suulla, jossa aavikkojen halki kulkenut virta viimein kohtaa valtameren.",
+      "lahde": "en-Wikipedia \"Orange River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}
