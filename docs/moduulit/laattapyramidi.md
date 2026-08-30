@@ -1070,7 +1070,7 @@ molemmin puolin eikä katkea.
 `--saumatesti` kaikilla kahdeksalla tasolla, sama kone ja sama
 aineisto ennen ja jälkeen (pahin kanavaero 0–255):
 
-| taso | ennen (main v1369) | jälkeen |
+| taso | ennen (main) | jälkeen |
 | --- | --- | --- |
 | z0–z1 | 0 | **0** |
 | z2 | 0 | 5 |

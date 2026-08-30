@@ -1,6 +1,9 @@
 # Viesti Fablelle — laattojen viivatyö (haara claude/rantaviivan-kohdistus)
 
-*(Opus, 30.8.2026. Haara tuoreesta origin/mainista **1d64fa0b = v1369**.
+*(Opus, 30.8.2026. Haara alun perin **1d64fa0b = v1369**, rebasettu
+main-kärkeen **535311f3 = v1372** (v1370 syvyysramppi, v1371 kaupunkien
+laatat, v1372 selitenappi) — rebase meni puhtaasti, ja portit ajettiin
+uudestaan sen jälkeen.
 Versiota EI nostettu, PR:ää EI tehty, pyramidin generointityönkulkua EI
 ajettu — sinä julkaiset ja pyydät omistajalta luvan ajoon. dist/ ei ole
 mukana. js/-puoleen ei koskettu lainkaan.*
@@ -340,7 +343,7 @@ pyydetty, mutta se oli murtoviivoihin siirtymisen välitön edellytys.
 `--saumatesti` kaikilla kahdeksalla tasolla, sama kone ja sama
 aineisto ennen ja jälkeen. Luku on pahin kanavaero (0–255).
 
-| taso | ennen (main v1369) | jälkeen |
+| taso | ennen (main) | jälkeen |
 | --- | --- | --- |
 | z0–z1 | 0 | **0** |
 | z2 | 0 | 5 |
