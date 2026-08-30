@@ -195,6 +195,8 @@ const tila = () => sivu.evaluate(() => {
     // Yleiskuvan nimiportti (js/ui.js paivitaKaupunkinimienNakyvyys).
     nimetPiilossa: Boolean(ui.svg.querySelector('.cities.kaupunkinimet-piilossa')),
     nimiaNakyvissa: nakyvia('.cities .city-label'),
+    // Laudan maastonimet (Alpit, Karpaatit…): pyramidilaudalla nolla.
+    maastonimia: ui.svg.querySelectorAll('.maastonimi').length,
     nakyvanLeveys: Math.round(ui.nakyvaAlue?.()?.w ?? 0),
   };
 });
@@ -202,8 +204,15 @@ const tila = () => sivu.evaluate(() => {
 const alku = await tila();
 vaadi('0a kehittäjän maailmanäkymä on päällä Kreikassa',
   alku.maailmanakyma && alku.fokusmoodi && alku.pohja, JSON.stringify(alku));
+/*
+ * Raja laski 400:sta 250:een 30.8.2026: kerroksesta poistuivat elävät
+ * nimilaput (261 kpl), koska kaikkien kaupunkien nimet on poltettu
+ * laattoihin (js/ui.js drawBoard). Jäljelle jäivät kaupunkien MERKIT —
+ * laatta, porttikehä ja lentokoneen kuvake — ja juuri ne tämä väite
+ * mittaa: maailmanäkymässä koko laudan kaupungit ovat kartalla.
+ */
 vaadi('0b koko laudan kaupunkikerros on kartalla',
-  alku.citiesSolmut > 400, `citiesSolmut ${alku.citiesSolmut}`);
+  alku.citiesSolmut > 250, `citiesSolmut ${alku.citiesSolmut}`);
 
 /* ------------------------------------------------ mittarit päälle */
 
@@ -419,21 +428,26 @@ vaadi('9 kaupunkipallot ovat nykyisen laatan mittaluokassa',
   `oma ${pallot.oma} px, suurin ${pallot.suurin} px`);
 
 /*
- * Väite 10: YLEISKUVASSA EI KAUPUNKIEN NIMIÄ (omistajan tilaus
- * 29.8.2026: *"älä näytä kaupunkien nimiä tällä zoom tasolla"*).
+ * Väite 10: PAIKANNIMET OVAT LAATOISSA, EIVÄT ELÄVÄSSÄ KERROKSESSA
+ * (omistajan kaappaus Sofiasta 30.8.2026: sama nimi kartalla kahdesti).
  *
- * Kaksi mittausta samasta kartasta: lähikuva (nimet näkyvissä) ja
- * koko maailma kerralla (nimet piilossa). Raja on näkymän leveys
- * pituusasteina (js/ui.js KAUPUNKINIMET_NAKYY_ASTETTA), joten väite
- * mittaa molemmat puolet — pelkkä piilotus läpäisisi testin myös
- * silloin, jos nimet katoaisivat kokonaan.
+ * Väite mittasi ennen elävien nimilappujen zoomporttia (*"älä näytä
+ * kaupunkien nimiä tällä zoom tasolla"*). Porttia ei enää tarvita
+ * pyramidilaudalla: elävä kerros ei ladota yhtään paikannimeä, koska
+ * kaikkien 261 kaupungin nimet on poltettu laattoihin omalla
+ * typografiallaan ja omalla törmäyksenvältelyllään
+ * (js/ui.js drawBoard, docs/moduulit/laattapyramidi.md luku 6c).
+ *
+ * TÄMÄ ON PYSYVÄ VARTIO KAKSOISNIMIÄ VASTAAN: se kaatuu, jos elävä
+ * nimilappu palaa kartalle. Mittaus tehdään MOLEMMILLA zoomtasoilla,
+ * jottei läpäisy johdu siitä että lappu sattuisi olemaan ruudun
+ * ulkopuolella.
  */
 const lahikuva = await tila();
 console.log(`      mitattu: lähikuva ${lahikuva.nakyvanLeveys} yks,`
-  + ` nimiä ${lahikuva.nimiaNakyvissa}, portti ${lahikuva.nimetPiilossa}`);
-vaadi('10a lähikuvassa kaupunkien nimet ovat kartalla',
-  !lahikuva.nimetPiilossa && lahikuva.nimiaNakyvissa > 0,
-  `portti ${lahikuva.nimetPiilossa}, nimiä ${lahikuva.nimiaNakyvissa}`);
+  + ` nimiä ${lahikuva.nimiaNakyvissa}`);
+vaadi('10a lähikuvassa ei ole elävää kaupunginnimeä (nimet ovat laatoissa)',
+  lahikuva.nimiaNakyvissa === 0, `nimiä ${lahikuva.nimiaNakyvissa}`);
 
 // Koko lauta ruudulle: napsautetaan uloimpaan zoomtasoon asti.
 await sivu.evaluate(() => {
@@ -443,17 +457,13 @@ await sivu.evaluate(() => {
 await sivu.waitForTimeout(3000);
 const yleiskuva = await tila();
 console.log(`      mitattu: yleiskuva ${yleiskuva.nakyvanLeveys} yks,`
-  + ` nimiä ${yleiskuva.nimiaNakyvissa}, portti ${yleiskuva.nimetPiilossa}`);
-/*
- * Lähtökaupunkien nimet (.start-label) jäävät tarkoituksella, joten
- * väite ei vaadi nollaa vaan romahdusta: yleiskuvassa nimiä on
- * murto-osa lähikuvan määrästä.
- */
-vaadi('10b yleiskuvassa kaupunkien nimet ovat poissa',
-  yleiskuva.nimetPiilossa
-    && yleiskuva.nimiaNakyvissa < lahikuva.nimiaNakyvissa,
-  `portti ${yleiskuva.nimetPiilossa}, nimiä ${yleiskuva.nimiaNakyvissa}`
-  + ` (lähikuvassa ${lahikuva.nimiaNakyvissa})`);
+  + ` nimiä ${yleiskuva.nimiaNakyvissa},`
+  + ` maastonimiä ${yleiskuva.maastonimia ?? '-'}`);
+vaadi('10b yleiskuvassakaan ei ole elävää kaupunginnimeä',
+  yleiskuva.nimiaNakyvissa === 0, `nimiä ${yleiskuva.nimiaNakyvissa}`);
+vaadi('10c laudan maastonimet ovat laatoissa eivätkä elävässä kerroksessa',
+  (yleiskuva.maastonimia ?? 0) === 0 && (lahikuva.maastonimia ?? 0) === 0,
+  `lähikuva ${lahikuva.maastonimia}, yleiskuva ${yleiskuva.maastonimia}`);
 
 await selain.close();
 palvelin.close();

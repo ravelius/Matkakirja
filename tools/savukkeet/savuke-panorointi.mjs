@@ -371,12 +371,19 @@ vaadi('4 syke herää eleen jälkeen',
 const turhat = jalkeen.turhat ?? { kohde: -1, piiri: -1 };
 console.log(`      mitattu: turhia määrekirjoituksia kohde ${turhat.kohde}`
   + ` (${jalkeen.kohteita} ryhmää), piiri ${turhat.piiri} (${jalkeen.piireja} piiriä)`);
-vaadi('6a kohdemerkkejä ja piirejä on kartalla',
-  jalkeen.kohteita > 0 && jalkeen.piireja > 0,
-  `kohteita ${jalkeen.kohteita}, piirejä ${jalkeen.piireja}`);
+/*
+ * NIMETYT ERIKOISPIIRIT (.fokus-piiri: päiväntasaaja, kääntöpiirit,
+ * napapiiri, Greenwich) POISTUIVAT ATLASKERROKSEN MUKANA v1363:ssa ja
+ * koodi purettiin v1365:ssä. Laatoissa on 20 asteen asteverkko, joten
+ * väite mittaa enää kohdemerkit — ne palasivat kartalle 30.8.2026,
+ * kun maan ikkuna alettiin syöttää suoraan taulusta
+ * (js/ui.js paivitaMaanIkkuna).
+ */
+vaadi('6a kohdemerkkejä on kartalla',
+  jalkeen.kohteita > 0, `kohteita ${jalkeen.kohteita}`);
 vaadi('6b samanarvoisia määreitä ei kirjoiteta uudestaan',
-  turhat.kohde >= 0 && turhat.kohde <= 8 && turhat.piiri <= 8,
-  `kohde ${turhat.kohde}, piiri ${turhat.piiri} (raja 8)`);
+  turhat.kohde >= 0 && turhat.kohde <= 8,
+  `kohde ${turhat.kohde} (raja 8)`);
 
 await selain.close();
 palvelin.close();

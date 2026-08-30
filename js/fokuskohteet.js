@@ -100,6 +100,9 @@ import {
 // asetaKohdehakemisto-kutsu KOHDE_MAAT-taulun alla).
 import { asetaKohdehakemisto } from './fokusvirta.js';
 import { FOKUS_LISANIMET } from './packs/fokus-grc.js';
+// Laattoihin poltetut maastonimet (vuoret, järvet, joet): sama nimi
+// vain kerran kartalle, ks. maastonimiLahella.
+import { MAAILMANKARTAN_NIMET } from './packs/maailmankartta-nimet.js';
 import { piirraKarttavalo } from './karttavalot.js';
 import { asetaKuva } from './media.js';
 import { html, jaaKappaleiksi, nielaiseSulkevaNapautus, polloNimilappu } from './ui-apurit.js';
@@ -605,7 +608,78 @@ function nimiJoKartalla(ui, kohde) {
     || (ui?.game?.pack?.cities ?? []).some(lahella);
 }
 
+/* ====== SAMA NIMI VAIN KERRAN KARTALLE — MYÖS MAASTONIMET ==========
+ *
+ * Omistajan kaappaus Sofiasta 30.8.2026: laatassa luki *Balkanvuoret*
+ * ja sen päällä tämän kerroksen kohdemerkki *Balkanvuoret* — sama nimi
+ * kahdesti, eri kirjasimella.
+ *
+ * JUURISYY on sama kuin laatoilla itsellään: kohdeaineisto
+ * (js/packs/fokuskohteet-*.js) ja maastonimet
+ * (js/packs/maailmankartta-nimet.js) ovat eri lähteitä, eikä kumpikaan
+ * tiedä toisesta. Osa kohteista ON vuori tai järvi, jolla on jo nimi
+ * laatassa — laattoihin poltetaan samat 52 vuorta ja 38 järveä samasta
+ * tiedostosta (tools/fokuskartta/sisalto.mjs).
+ *
+ * SÄÄNTÖ ON SAMA KUIN LAATOILLA (sisalto.mjs `parita`,
+ * docs/moduulit/laattapyramidi.md luku 6c.1): pari on SAMA
+ * NORMALISOITU NIMI LÄHEKKÄIN. Normalisointi tarvitaan, koska
+ * kirjoitusasut eroavat listojen välillä; etäisyysraja tarvitaan,
+ * koska eri maanosassa oleva samanniminen paikka on eri kohde.
+ * Vakiot ovat samat luvut samasta mittauksesta.
+ *
+ * MERKKI JÄÄ, VAIN NIMIÖ VÄISTYY. Kolmio kertoo mistä on kyse ja on yhä
+ * napautettava (kortti, aihevalo); nimen sanoo laatta.
+ */
+
+/** Nimen vertailumuoto: ilman tarkkeita, välimerkkejä ja kirjainkokoa. */
+const normalisoiNimi = (s) => String(s ?? '')
+  .normalize('NFD')
+  .replace(/\p{Diacritic}/gu, '')
+  .toLowerCase()
+  .replace(/[^\p{L}\p{N}]+/gu, '');
+
+/** Sama nimi tätä lähempänä = sama kohde (sisalto.mjs PARIN_ETAISYYS). */
+const KOHDE_MAASTOPARIN_ETAISYYS = 400;
+
+/** Lauta kiertyy: 12000 yksikköä on koko maapallon ympärys. */
+const LAUDAN_YMPARYS = 12000;
+
+/**
+ * Onko samanniminen maastonimi poltettu laattaan tähän kohtaan?
+ *
+ * Joen ankkuri on uoman kiinteä keskikohta — sama piste, jonka
+ * laattojen ladonta ja entinen elävä kerros (js/mapart.js
+ * drawMaastonimet) valitsivat.
+ */
+function maastonimiLahella(ui, kohde, paikka) {
+  if (ui?.game?.pack?.id !== 'maailmankartta') return false;
+  const nimi = normalisoiNimi(kohde?.nimi);
+  if (!nimi) return false;
+  const osuu = (x, y) => {
+    let dx = Math.abs(x - paikka.x);
+    if (dx > LAUDAN_YMPARYS / 2) dx = LAUDAN_YMPARYS - dx;
+    return Math.hypot(dx, y - paikka.y) <= KOHDE_MAASTOPARIN_ETAISYYS;
+  };
+  for (const laji of ['vuoret', 'jarvet']) {
+    for (const m of MAAILMANKARTAN_NIMET[laji] ?? []) {
+      if (normalisoiNimi(m.nimi) === nimi && osuu(m.x, m.y)) return true;
+    }
+  }
+  for (const joki of MAAILMANKARTAN_NIMET.joet ?? []) {
+    if (normalisoiNimi(joki.nimi) !== nimi) continue;
+    const pisteet = joki.pisteet ?? [];
+    if (pisteet.length < 2) continue;
+    const keski = pisteet[Math.floor(pisteet.length / 2)];
+    if (osuu(keski[0], keski[1])) return true;
+  }
+  return false;
+}
+
 function kohteenNimio(ui, kohde) {
+  const paikka = kohde?.laudat?.[ui?.game?.pack?.id];
+  if (Number.isFinite(paikka?.x) && Number.isFinite(paikka?.y)
+    && maastonimiLahella(ui, kohde, paikka)) return false;
   if (kohde?.tyyppi !== 'kaupunki') return true;
   return !nimiJoKartalla(ui, kohde);
 }

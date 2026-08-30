@@ -34,7 +34,9 @@
  *      pelinappulan fokuslehden päältä, ja tinaherran myötä (#100)
  *      sääntö kääntyi itseään vastaan: *"nappula EI näy
  *      Kreikan fokuslaudalla"*. Nappula ei saa enää kantaa
- *      .fokus-lehden-alla-luokkaa, ja kaupungin nimilapun on säilyttävä.
+ *      .fokus-lehden-alla-luokkaa. Luokkaa ei enää kirjoiteta
+ *      kenellekään (30.8.2026), joten vartio on nyt varmistus siitä
+ *      ettei piilotus palaa; kaupungin nimi tulee laatasta.
  *   8. NOPPA EI PYÖRÄHDÄ ITSESTÄÄN. *"kun aarteen on avannut, peli menee
  *      SUORAAN nopanheittoon"* — esivalittu matkustustapa saa jäädä,
  *      mutta heitto on aina pelaajan napin takana.
@@ -379,12 +381,12 @@ const nappula = await sivu.evaluate(async () => {
   ui.drawPawns();
   await new Promise((r) => setTimeout(r, 400));
   /*
-   * Ämpärin lehtikuvaa ei kontissa ole, mutta piilotussääntö nojaa
-   * pelkkään BBOXIIN (paivitaFokusPallot `pohja`): asetetaan se käsin,
-   * jolloin Ateena on "lehden päällä" täsmälleen kuten pelissä.
+   * PIILOTUSSÄÄNTÖÄ EI ENÄÄ OLE (30.8.2026): `.fokus-lehden-alla` oli
+   * lehtijärjestelmän sääntö, ja pyramidissa "lehti" on koko maailma.
+   * Vartio jää silti voimaan käänteisenä — se kaatuu, jos piilotus
+   * palaa nappulaan. Maan ikkuna ajetaan normaalisti (paivitaMaanIkkuna
+   * renderissä), joten käsin asetettavaa bboxia ei tarvita.
    */
-  const c = g.cityOf();
-  ui.fokusPohjaBbox = { x: c.x - 400, y: c.y - 400, w: 800, h: 800 };
   ui.paivitaFokusPallot();
   await new Promise((r) => setTimeout(r, 200));
   const oma = ui.pawnLayer?.querySelector('.pawn');
@@ -397,12 +399,14 @@ const nappula = await sivu.evaluate(async () => {
     peitto: oma ? +getComputedStyle(oma).opacity : null,
     onKuva: Boolean(kuva),
     kuvanKorkeus: laatikko ? +laatikko.height.toFixed(1) : 0,
-    nimilappu: Boolean([...document.querySelectorAll('.city-label')]
-      .find((n) => n.dataset.kaupunki === 'ateena'
-        && !n.classList.contains('fokus-lehden-alla'))),
+    /*
+     * Kaupungin nimi tulee LAATASTA eikä elävästä kerroksesta
+     * (30.8.2026): elävää .city-labelia ei ladota pyramidilaudalla
+     * lainkaan, koska nimi on poltettu laattaan. Vartioitava asia on
+     * siis päinvastainen kuin ennen: elävää lappua EI saa olla.
+     */
+    elavaNimilappu: document.querySelectorAll('.cities .city-label').length,
   };
-  ui.fokusPohjaBbox = null;
-  ui.paivitaFokusPallot();
   return tulos;
 });
 vaadi('7a nappula ei piiloudu lehden alle', nappula.piilossa === false,
@@ -418,7 +422,8 @@ vaadi('7b nappula on näkyvissä ja mitallinen',
   && nappula.naky === 'visible' && nappula.peitto === 1
   && nappula.kuvanKorkeus > 4,
   JSON.stringify(nappula));
-vaadi('7c kaupungin nimilappu on yhä luettavissa', nappula.nimilappu === true);
+vaadi('7c kaupungin nimi tulee laatasta eikä elävästä nimilapusta',
+  nappula.elavaNimilappu === 0, `eläviä nimilappuja ${nappula.elavaNimilappu}`);
 
 /* --- 8. noppa ei pyörähdä itsestään -------------------------------- */
 const heitto = await sivu.evaluate(async () => {
