@@ -112,7 +112,8 @@ export function pyramidiKattaa(lauta) {
  */
 export function laatoissaOnNimet() {
   return luettelo?.nimiot !== false;
-=======
+}
+
 /*
  * ARKIN MITAT MYÖS ILMAN LUETTELOA.
  *
@@ -296,27 +297,23 @@ export function paivitaPyramidi(ui) {
      * Ensimmäinen kutsu käynnistää haun ja palaa; piirto tulee heti kun
      * luettelo on kädessä.
      *
-     * MERKKIKETJU AJETAAN SAMALLA. Luettelo kertoo, ovatko paikannimet
+     * ARKKI ENSIN, LAATAT VASTA SITTEN. Kamera on siihen asti sovitettu
+     * varalukuihin (ARKKI_VARALLA); jos luettelon arkki on eri, näkymä
+     * on juuri nyt väärässä mittakaavassa eikä laattoja kannata laskea
+     * vanhalle rajaukselle.
+     *
+     * MERKKIKETJU VIIMEISENÄ. Luettelo kertoo, ovatko paikannimet
      * laatoissa vai pelin ladottavina (laatoissaOnNimet), ja ennen sen
      * saapumista nimikerros on vaiennut varmuuden vuoksi. Ilman tätä
-     * kutsua nimet ilmestyisivät vasta seuraavasta pelaajan eleestä.
+     * kutsua nimet ilmestyisivät vasta seuraavasta pelaajan eleestä —
+     * ja se ajetaan rajojen jälkeen, jotta ladonta näkee oikean
+     * mittakaavan.
      */
     void haeLuettelo().then((j) => {
       if (!j || ui.dead) return;
-      paivitaPyramidi(ui);
-      ui.paivitaMaastonimet?.();
-    // Ensimmäinen kutsu käynnistää haun ja palaa; piirto tulee heti kun
-    // luettelo on kädessä.
-    void haeLuettelo().then((j) => {
-      if (!j || ui.dead) return;
-      /*
-       * ARKKI ENSIN, LAATAT VASTA SITTEN. Kamera on siihen asti
-       * sovitettu varalukuihin (ARKKI_VARALLA); jos luettelon arkki on
-       * eri, näkymä on juuri nyt väärässä mittakaavassa eikä laattoja
-       * kannata laskea vanhalle rajaukselle.
-       */
       ui.paivitaLaudanRajat?.();
       paivitaPyramidi(ui);
+      ui.paivitaMaastonimet?.();
     });
     return;
   }
