@@ -4549,10 +4549,6 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
 .maastonimi-harson-alla .maastonimi-teksti { fill: rgba(70, 51, 31, 0.2); }
 .maastonimi-harson-alla .maastonimi-i { display: none; }
 
-/* Fokuspohjan lehden alueella laudan omia maastonimiä ei ole lainkaan:
-   lehdessä on omat nimensä, ja päällekkäin ne olisivat kaksi karttaa
-   yhtä aikaa (js/ui.js himmennaMaastonimet). */
-.maastonimi-kuvan-alla { display: none; }
 
 
 /*
@@ -4706,33 +4702,15 @@ body.radio-tila .actions {
 }
 
 /*
- * FOKUSPOHJAN PÄÄLLÄ MAATA EI KOROSTETA (omistajan pelitestipalaute
- * v1095:stä: *"punainen maan ääriviiva on epätarkka → OTETAAN POIS
- * fokusnäkymässä"*).
- *
- * Korostuskerros (countryLayer) luodaan fokuskarttakerroksen JÄLKEEN eli
- * se on kuvan päällä: punainen rengas piirtyisi keskelle valmista
- * atlaksen lehteä, ja laudan karkeasta 50m-rannikosta piirretty viiva
- * osuu eri kohtaan kuin lehden tarkka 10m-rantaviiva. Kerrosta ei
- * tyhjennetä vaan piilotetaan, jotta korostus palaa itsestään heti kun
- * lehti häviää (js/ui.js paivitaFokusPohja).
+ * PUNAINEN ÄÄRIVIIVA (.country-korostus) POISTETTIIN 30.8.2026.
+ * Omistajan pelitestipalaute v1095: *"punainen maan ääriviiva on
+ * epätarkka → OTETAAN POIS"*. Viiva piirrettiin laudan karkeasta
+ * 50m-rannikosta, kun laattaan poltettu ranta on tarkkaa 10m-
+ * aineistoa — viiva osui eri kohtaan kuin ranta, jonka se muka rajaa.
+ * Piilotus oli ennen body.fokuspohjassa, ja kun luokan asettaja katosi
+ * lehtipurussa, viiva palasi ruudulle. Nyt sitä ei enää piirretä
+ * (js/ui.js drawCountryBorders). Sävytys (.country-tint) jäi.
  */
-body.fokuspohja .country-tint,
-body.fokuspohja .country-korostus { display: none; }
-
-
-.country-korostus {
-  fill: none;
-  /* Lepotila on LÄHES piirron loppuvoima (omistaja 13.8.2026 ilta:
-     "otetaan rajan väläytys pois mutta raja voisi jäädä lähes yhtä
-     voimakkaana näkyviin kuin se on piirron lopussa") — piirto päättyy
-     arvoihin 5.4 / 0.8, ja lepo on hivenen sen alla. Sama arvopari
-     myös asettumisanimaation 100 %:ssa. */
-  stroke: rgba(160, 58, 42, 0.72);
-  stroke-width: 5;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-}
 
 /* ===========================================================================
    FOKUSMOODI KARTALLA (omistajan linjaus 24.8.2026, js/ui.js
@@ -4820,25 +4798,18 @@ body.fokuspohja .country-korostus { display: none; }
    ------------------------------------------------------------------------- */
 
 /* ---------------------------------------------------------------------------
-   PALLOT POIS LEHDEN PÄÄLTÄ (omistajan pelitestipalaute v1097, iPad:
-   *"Ota pallot pois"* — js/ui.js paivitaFokusPallot)
+   PELIMERKKIEN PIILOTUS (.fokus-lehden-alla) POISTETTIIN 30.8.2026
    ---------------------------------------------------------------------------
-   Fokuslehti on kokonainen 1873-atlaksen sivu, ja sen päällä laudan
-   pyöreät pelimerkit — kaupungin laatta, käännetty aarrekiekko,
-   pelinappula ja kohderengas — näyttävät toisesta pelistä lainatuilta.
-   Ne piilotetaan lehden alueelta ja palaavat vain tarpeeseen:
-   matkustusvalinnan kohteet valinnan ajaksi ja nykyisen kaupungin
-   laatta aarrevaiheessa.
+   Sääntö piilotti laudan pyöreät pelimerkit — kaupungin laatan,
+   käännetyn aarrekiekon, pelinappulan ja kohderenkaan — fokuslehden
+   alueelta (omistajan pelitestipalaute v1097: *"Ota pallot pois"*).
+   Perustelu oli lehti: OPAAKKI atlaksen sivu yhden maan päällä, jonka
+   päällä laudan grafiikka näytti toisesta pelistä lainatulta.
 
-   KAUPUNKIEN NIMET EIVÄT SAA TÄTÄ LUOKKAA (js/ui.js): ATEENA ja Kreeta
-   ovat lehden tekstiä, eivät pelimerkkejä.
-
-   `display: none` eikä opacity, samasta syystä kuin .fokus-piilossa:
-   piilossa oleva laatta ei saa maksaa piirtoa panoroinnissa. Kehittäjän
-   napautusalue (.target-hit) EI ole tämän säännön piirissä, joten
-   dev-siirto toimii piilotetullakin laatalla.
+   Pyramidissa "lehti" on koko maailma, joten sama sääntö piilottaisi
+   pelimerkit kaikkialta. Luokkaa ei enää kirjoiteta kenellekään
+   (js/ui.js paivitaFokusPallot).
    ------------------------------------------------------------------------- */
-.fokus-lehden-alla { display: none; }
 
 
 
@@ -4959,74 +4930,19 @@ body.fokuspohja .country-korostus { display: none; }
 
 
 /* ---------------------------------------------------------------------------
-   PELILAATTOJEN KAUPUNKINIMET FOKUSNÄKYMÄSSÄ — PALJON PIENEMMÄLLÄ
+   KAUPUNKIEN NIMET OVAT LAATOISSA (30.8.2026)
    ---------------------------------------------------------------------------
-   Omistajan pelitestitilaus 26.8.2026: *"Ateena ja Kreeta paljon
-   pienemmällä"* — ja tarkennus iPad-kuvakaappauksen jälkeen: *"nykyisen
-   sijainnin ja lehden kaupunkinimet PALJON pienemmällä"*.
+   Täällä oli kaksi sääntöä, jotka kutistivat elävän .city-labelin
+   fokusnäkymässä. Pyramidilaudalla elävää nimilappua ei enää ladota
+   lainkaan: kaikkien 261 kaupungin nimet on poltettu laattoihin omalla
+   typografiallaan ja omalla törmäyksenvältelyllään (js/ui.js
+   drawBoard, docs/moduulit/laattapyramidi.md luku 6c). Katselutilan
+   manterelaudoilla .city-label on ennallaan laudan omassa koossaan.
 
-   MIKSI. Fokusnäkymässä kartta on zoomattu yhden maan ikkunaan, ja
-   laudan oma 18 yksikön nimikoko piirtyy silloin ruudulle 25 pikselin
-   otsikoksi. Se on yleiskuvan mitta väärässä paikassa: lehden päällä
-   kaupungin nimi on kartan tekstiä muun tekstin joukossa, ei otsikko.
-   Uusi koko on noin 42 % entisestä (7,5 / 18 ja 8,5 / 21).
-
-   HALO KUTISTUU MUKANA. .city-labelin pergamenttireunus on 4 px, mikä
-   on 18 pikselin kirjaimelle ohut kehys mutta 7,5 pikselin kirjaimelle
-   pehmuste, joka täyttäisi kirjainten sisukset. 1,6 px on sama suhde.
-
-   RAJAUS. Sääntö on body.fokuspohjassa eli täsmälleen siinä tilassa,
-   jossa maan lehti on ruudulla (js/ui.js paivitaFokusPohja) — laudan
-   yleiskuvassa nimet ovat entisen kokoisia.
-
-   VALINTATILAN KOHDENIMET OVAT ISOMPIA (.target-nimi, js/ui.js
-   drawTargets): valittava kohde saa erottua siitä, mikä on jo paikallaan.
+   VALINTATILAN KOHDENIMET (.target-nimi, js/ui.js drawTargets) jäävät:
+   ne ovat pelitilaa — mihin juuri nyt voi matkustaa — eivät paikannimiä.
    --------------------------------------------------------------------------- */
 
-body.fokuspohja .cities .city-label {
-  font-size: 7.5px;
-  letter-spacing: 0.02em;
-  stroke-width: 1.6px;
-}
-
-body.fokuspohja .cities .city-label.start-label {
-  font-size: 8.5px;
-  letter-spacing: 0.06em;
-}
-
-/*
- * UUTEEN MAAHAN SAAVUTAAN NÄYTTÄVÄSTI: ääriviiva piirtyy parissa
- * sekunnissa ja paisuu piirtyessään täyteen voimaansa (js/ui.js
- * animoiMaanAariviiva: polun pituus viiva-aukkokuvioksi, dashoffset
- * nollaan ja rinnalla paisuminen 5.4:ään / 0.8:aan).
- *
- * VÄLÄYS POISTUI (omistaja 13.8.2026 ilta: "otetaan rajan väläytys
- * pois mutta raja voisi jäädä lähes yhtä voimakkaana näkyviin kuin se
- * on piirron lopussa"). Kokeiltiin huippuja 70→100 ja 70→80 — kumpikin
- * pois. Piirron perään jää vain lyhyt PEHMEÄ ASETTUMINEN piirron
- * loppuarvoista lepoon, joka on hivenen niiden alla: silmä ei näe
- * hyppyä eikä väläystä, ja raja jää vahvana näkyviin.
- *
- * Ei transitionia vaan keyframes: siirtymä vaatisi kaksi peräkkäistä
- * tyylinvaihtoa, eikä sitä voi tehdä pakottamatta asettelun lukua
- * kesken animaation. 0 % on täsmälleen piirron loppuarvot, ettei
- * vaiheiden saumaa näy.
- */
-@keyframes maa-aariviivan-asettuminen {
-  0% { stroke: rgba(182, 61, 42, 0.8); stroke-width: 5.4; }
-  100% { stroke: rgba(160, 58, 42, 0.72); stroke-width: 5; }
-}
-
-/* Kesto seuraa js/ui.js AARIVIIVAN_ASETTUMIS_MS:ää. */
-.country-borders.maa-asettuu .country-korostus {
-  animation: maa-aariviivan-asettuminen 730ms ease-out;
-}
-
-/* Liikeherkkyys: viiva on heti valmis lepoarvoissaan (js/ui.js ohittaa
-   koko animaation, tämä on varmistus tyylin puolella). */
-@media (prefers-reduced-motion: reduce) {
-  .country-borders.maa-asettuu .country-korostus { animation: none; }
-}
 
 /*
  * Maan nimi + lippu kiinteänä kylttinä kartan kehyksellä (Fable
@@ -9979,12 +9895,9 @@ body.kartalento .fokuskuvat {
  *                     — omistaja näki sen vilkkuvan kohdemaan päällä
  *                     kesken lennon, koska peli oli jo siirtänyt
  *                     matkaajan perille.
- *   .country-tint     nykyisen maan sävytys ja punamullan värinen
- *   .country-korostus ääriviiva. Ne piiloutuivat ennen sen sivuvaikutuksena,
- *                     että lehti oli kartalla (body.fokuspohja); nyt lehteä
- *                     ei lennon aikana ole, ja ilman tätä kohdemaa
- *                     rajautuisi punaisella kesken lennon. Lentonäkymän
- *                     ainoa punainen on reittiviiva.
+ *   .country-tint     nykyisen maan sävytys. Peli on siirtänyt matkaajan
+ *                     perille jo lennon alussa, joten sävytys paljastaisi
+ *                     määränpään ennen kuin kone on siellä.
  *
  * Häivytys eikä display, samasta syystä kuin yllä: ne palaavat pehmeästi
  * kun lippu poistuu.
@@ -9998,8 +9911,7 @@ body.kartalento .fokuskuvat {
  */
 body.kartalento .fokuspisteet,
 body.kartalento .elaintakyt,
-body.kartalento .country-tint,
-body.kartalento .country-korostus {
+body.kartalento .country-tint {
   opacity: 0;
   pointer-events: none;
 }
@@ -10014,15 +9926,6 @@ body.kartalento .country-korostus {
 body.kartalento .karttaselite {
   opacity: 0;
   pointer-events: none;
-}
-
-/* Maakyltti kertoo, missä maassa MATKAAJA on — ja peli on siirtänyt hänet
-   perille jo lennon alussa. Kyltti paljastaisi siis määränpään ennen kuin
-   kone on siellä. Se palaa itsestään, kun lippu poistuu. */
-body.kartalento .maa-pilleri {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
 }
 
 .pawns,
@@ -20763,15 +20666,6 @@ body.fokuspohja .toimintorivi-liuku {
     bottom: calc(0.9rem + 3.4rem + env(safe-area-inset-bottom, 0px));
   }
 }
-
-/*
- * MAAKYLTTI VÄISTYY FOKUSNÄKYMÄSSÄ (omistaja 25.8.2026): kartuutsi
- * korvaa oikean yläkulman maapillerin. Sääntö on sidottu
- * body.fokuspohja-luokkaan eli täsmälleen siihen tilaan, jossa
- * kartuutsi on näkyvissä (js/ui.js paivitaFokusPohja) — fokusmoodin
- * ulkopuolella vanha kyltti jää ennalleen.
- */
-body.fokuspohja .maa-pilleri { display: none; }
 
 /* ===========================================================================
    MAATAULU — kartuutsin päältä nouseva maan perustietotaulu

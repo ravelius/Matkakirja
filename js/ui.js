@@ -269,13 +269,22 @@ import {
  */
 import { paivitaFokuspiste, nollaaFokuspiste } from './fokuspiste.js';
 /*
- * Laattapyramidin näkyvät laatat (js/laattapyramidi.js). PILOTTI LIPUN
- * TAKANA: ilman `?pyramidi=1` jokainen kutsu palaa heti, eikä moduuli
- * hae verkosta mitään eikä lisää DOMiin yhtäkään elementtiä.
+ * Laattapyramidi (js/laattapyramidi.js) on pelilaudan AINOA karttapohja
+ * (Raamattu, "YKSI MAAILMANBITTIKARTTA"). `pyramidiKattaa` kertoo,
+ * onko lauta se, jonka arkki pyramidissa on — sillä laudalla kaikki
+ * pysyvä (maasto, nimet, kohteet, reitit) on poltettu laattoihin.
  */
 import {
   paivitaPyramidi, nollaaPyramidi, pyramidiKattaa, pyramidinMittarit,
 } from './laattapyramidi.js';
+/*
+ * MAAN IKKUNA laudan koordinaateissa (js/packs/fokus-grc.js
+ * FOKUS_POHJAT). Taulu syntyi maalehtien rajauksista, mutta lehdet ovat
+ * poissa: pyramidissa jäljelle jäi se, mitä taulu oikeasti kuvaa —
+ * MISSÄ MAA ON LAUDALLA. Sitä lukevat panorointirajat, kartuutsi ja
+ * merkkien mittakaava (ks. paivitaMaanIkkuna).
+ */
+import { FOKUS_POHJAT } from './packs/fokus-grc.js';
 import { paivitaElaintakyt, nollaaElaintakyt } from './elaintaky.js';
 // Karttaselitevalikko ja sen aihevalot (js/karttaselite.js,
 // js/karttavalot.js): nappi kartan oikeaan yläkulmaan, valot merkkien alle.
@@ -819,16 +828,6 @@ const VALINTAVIHJEEN_TEKSTI = 'Napauta korostettua kohdetta kartalla, niin matka
  */
 const TIETAJAKUPLA_MS = 4200;
 /*
- * Maan ääriviivan piirtoanimaatio (animoiMaanAariviiva). Piirto on
- * omistajan toivomat "parisen sekuntia". Väläys poistui kokonaan
- * (omistaja 13.8.2026 ilta: "otetaan rajan väläytys pois mutta raja
- * voisi jäädä lähes yhtä voimakkaana näkyviin kuin se on piirron
- * lopussa") — piirron perään jää vain lyhyt pehmeä asettuminen
- * lepoarvoihin, sama kesto myös CSS:ssä (maa-aariviivan-asettuminen).
- */
-const AARIVIIVAN_PIIRTO_MS = 2000;
-const AARIVIIVAN_ASETTUMIS_MS = 750;
-/*
  * Fokusmoodin sumuverhon reunan pehmennys laudan yksikköinä
  * (js/ui.js paivitaFokusSumu). Maailmankartta on 12000 yksikköä leveä ja
  * yksi maa kymmeniä satoja, joten 26 on rajan yli levittyvä haalistuma —
@@ -1126,51 +1125,12 @@ const FOKUS_LAATTA_OSUMA_LAUDALLA = 34;
  * lähdössä. Nimi ladotaan siksi merkin viereen kohdekerrokseen, jolloin
  * se on olemassa riippumatta siitä, mitä laudan omalle nimelle tapahtuu.
  *
- * NIMI ON ISOMPI KUIN LEHDEN OMAT KAUPUNKINIMET (css .city-label
- * fokusnäkymässä ~7,5 laudan yksikköä eli noin 10 px ruudulla): valinta
- * saa erottua siitä, mikä on jo paikallaan. 13 px on maltillinen ero,
- * ei otsikko.
+ * NIMI ON ISOMPI KUIN LAATTAAN POLTETTU KAUPUNGINNIMI: valinta saa
+ * erottua siitä, mikä on jo painettu karttaan. 13 px on maltillinen
+ * ero, ei otsikko.
  */
 const FOKUS_KOHDE_PX = 18;
 const FOKUS_KOHDE_NIMI_PX = 13;
-/*
- * PAIKALLAAN OLEVAN KAUPUNGIN NIMI on selvästi pienempi kuin valittavan
- * kohteen (Raamattu, KAMERA PELIN KÄSISSÄ: *"valittavien nimet hieman
- * isommalla, nykyisen sijainnin nimet paljon pienemmällä"*). Mitta on
- * ruudulla eikä laudalla, kuten kaikilla fokusnäkymän merkeillä
- * (paivitaFokusNimilaput).
- */
-const FOKUS_NIMI_PX = 9;
-/*
- * NYKYISEN KAUPUNGIN NIMI NAPPULAN ALLE.
- *
- * TÄSSÄ OLI 24 LAUDAN YKSIKKÖÄ (omistajan pelitestipalaute v1119:
- * *"ATEENAN NIMIKYLTTI on LIIAN ALHAALLA — kaukana kaupungin
- * kultaisesta merkistä"*).
- *
- * Luku oli oikein silloin kun se kirjoitettiin: pelinappula oli laudan
- * yksiköissä (kehä 17 yksikköä), joten sen alle oli pakko ladota laudan
- * mitalla. Sen jälkeen nappula sai ruutumitan muiden merkkien tapaan
- * (paivitaFokusMerkkiMitat, FOKUS_NAPPULA_PX), eikä laudan yksiköitä
- * enää tarvita — mutta luku jäi. Fokuszoomissa 24 yksikköä on noin 70
- * ruutupikseliä, ja juuri niin kaukana nimi oli laatastaan (mitattu
- * 68 px).
- *
- * Nyt mitta on RUUDUN pikseleitä kuten kaikki muukin fokusnäkymässä:
- * nappulan puolikas, rako ja kirjaimen korkeus.
- */
-const FOKUS_NIMI_NAPPULAN_ALLE_PX = 28 / 2 + 4 + 9;
-/*
- * NIMEN PIENIN SALLITTU KOKO RUUDULLA (omistajan pelitestipalaute
- * v1119: *"kyltistä PUUTTUU PALOJA — teksti piirtyy rikkinäisenä"*).
- *
- * Nimikoko on ruutumitta LEHDEN PERUSTASOLLA ja kutistuu siitä kartan
- * mukana, joten hieman uloszoomattuna Ateenan nimi piirtyi seitsemän
- * pikselin korkuisena (mitattu). Sen kokoinen teksti ei enää ole pieni
- * vaan rikki: kirjaimet katoavat pikselirasteriin ja pergamenttihalo
- * täyttää sen mitä jää. Tämä on lattia, jonka alle koko ei mene.
- */
-const FOKUS_NIMI_VAHIN_PX = 11;
 /*
  * KUINKA LEVEÄ NÄKYMÄ SAA OLLA, JOTTA KAUPUNKIEN NIMET NÄKYVÄT
  * (pituusasteina, ks. paivitaKaupunkinimienNakyvyys).
@@ -3507,8 +3467,6 @@ export class UI {
     clearTimeout(this.lehtitila.lehtiMittaJalkiajastin);
     // Pöllön vihjekupla ei saa ilmestyä kuolleen pelin ajastimesta.
     this.peruValintavihje();
-    // Sama koskee ääriviivan asettumisen loppuajastinta.
-    clearTimeout(this.aariviivaAjastin);
     /*
      * Maapilleri pois DOM:ista (omistajan kaappaus 13.8.2026: "Jordania
      * jäi maalehtipainikkeen taakse"). Pilleri on mapPanen suora lapsi
@@ -4174,8 +4132,8 @@ export class UI {
      * KIRJOITTANUT viewBoxin, SVG:n inline-mitat ja siirtokuoren
      * muunnoksen — eli mitätöinyt nakyvaAlueen välimuistiavaimen. Sen
      * jälkeen ketjun jokainen alifunktio (paivitaMaastonimet,
-     * paivitaFokusAtlas, paivitaFokuskohteet, paivitaFokusNimilaput,
-     * maastonimien ladonta) luki näkymän omin päin, ja koska ne
+     * paivitaFokusAtlas, paivitaFokuskohteet, nimilaput)
+     * luki näkymän omin päin, ja koska ne
      * KIRJOITTAVAT DOMiin lukujen välissä, jokainen luku pakotti tuoreen
      * asettelun: mitattuna 1409 v8-näytettä nakyvaAlue-ketjussa ja
      * 507 ms itsekulua yhdessä ajossa.
@@ -4773,32 +4731,34 @@ export class UI {
     this.paivitaFokusMerkkiMitat();
     // …sekä valittavien kohteiden merkkejä ja niiden nimiä.
     this.paivitaFokusKohdeMitat();
-    // Ja kaupunkien omia nimilappuja: ne ladotaan fokusnäkymässä laatan
-    // alle ruudulla vakiokokoisina (paivitaFokusNimilaput).
-    this.paivitaFokusNimilaput(nakyvaNyt);
     if (!this.maastonimiKerros) return;
     if (!this.maastonimet) return;
     /*
-     * FOKUSLEHDEN PÄÄLLÄ LADONTAA EI LADOTA LAINKAAN.
+     * MAASTONIMIÄ EI LADOTA LAINKAAN LAATTOJEN PÄÄLLE.
      *
-     * himmennaMaastonimet piilottaa JOKAISEN laudan maastonimen niin
-     * kauan kuin lehti on kartalla (`maastonimi-kuvan-alla`,
-     * css/styles.css `display: none`) — lehdessä on omat nimensä omalla
-     * kirjasimellaan, eivätkä laudan nimet saa kellua niiden päällä.
-     * Ladonta ajettiin silti jokaisessa zoomiportaassa, ja koko tulos
-     * meni suoraan piiloon.
+     * Sama sääntö ja sama juurisyy kuin kaupunkien nimilapuilla (ks.
+     * drawBoard): laattoihin on poltettu vuorten, järvien ja merten
+     * nimet omalla kirjasimellaan, ja tämä kerros latoi ne uudelleen
+     * päälle. Omistajan kaappaus Sofiasta 30.8.2026: iso kursiivi
+     * "Balkanvuoret" laatassa ja pieni "Balkanvuoret" sen päällä.
      *
-     * KERROS TYHJENNETÄÄN KERRAN. Piilotetut solmut eivät maalaudu,
-     * mutta ne ovat yhä osa sitä SVG:tä, jonka selain pilkkoo
-     * maalipaloihin jokaisella kartan muunnoksella (layerize). Tyhjennys
-     * tapahtuu vain kun kerroksessa on jotain, joten tämä haara on
-     * toisesta kutsusta alkaen pelkkä paluu.
+     * KERROS TYHJENNETÄÄN KERRAN. Ladotut solmut ovat osa sitä SVG:tä,
+     * jonka selain pilkkoo maalipaloihin jokaisella kartan
+     * muunnoksella (layerize), joten ne maksavat vaikka olisivat
+     * piilossa. Tyhjennys tapahtuu vain kun kerroksessa on jotain,
+     * joten tämä haara on toisesta kutsusta alkaen pelkkä paluu.
      *
-     * PALUU LEHDESTÄ RAKENTAA NIMET UUSIKSI: tunniste nollataan, joten
-     * seuraava kutsu ilman pohjaa ei osu välimuistiin vaan latoo.
-     * Varapolku (lehdetön kartta) kulkee tästä ohi koskemattomana.
+     * MENETETTY ELE: maastonimen i-ikoni avasi Wikipedia-ikkunan
+     * (avaaMaastonimi). Laattaan poltettuun nimeen ei voi tarttua, ja
+     * asia on kirjattu Fablelle (docs/viesti-fable.md) — luonteva
+     * jatko on nostaa maastokohteet js/fokuskohteet.js:n
+     * merkkikerrokseen, jossa on jo symboli, napautusala ja
+     * poltettujen nimien väistö.
+     *
+     * KATSELUTILAN MANTERELAUDAT latovat nimensä entiseen tapaan: ne
+     * eivät ole pyramidissa eikä niissä ole poltettuja nimiä.
      */
-    if (this.fokusPohjaBbox) {
+    if (pyramidiKattaa(this.game.pack.id)) {
       if (this.maastonimiKerros.firstChild) this.maastonimiKerros.textContent = '';
       this.maastonimiTunniste = null;
       return;
@@ -4860,22 +4820,11 @@ export class UI {
     const maat = this.fokusSumuPaalla() ? this.fokusMaat() : null;
     const muodot = this.game.pack.map?.countryShapes;
     /*
-     * FOKUSPOHJAN ALUEELLA NIMIÄ EI OLE LAINKAAN (omistaja 24.8.2026:
-     * *"vieraiden alueiden maastonimet (Balkanvuoret ym.) ja muut laudan
-     * tekstit pois fokuspohjan alueelta"*). Lehdessä on omat nimensä
-     * omalla kirjasimellaan, ja laudan maastonimet jäisivät sen päälle
-     * kellumaan toisella tyylillä — kaksi karttaa päällekkäin. Piilotus
-     * on eri asia kuin harson alle himmentäminen, joten sillä on oma
-     * luokkansa.
-     *
-     * KUVAN AIKANA EI LAINKAAN (laajennettu v1101). Ennen piilotus
-     * rajautui kuvan suorakaiteeseen, ja sen ulkopuolelle jäi laudan
-     * omia maastonimiä (Karpaatit, Dinaariset Alpit) kellumaan verhon
-     * päälle — juuri sitä vanhaa lautaa, jota fokusnäkymässä ei saa
-     * näkyä. Kuvassa on omat nimensä omalla kirjasimellaan.
+     * PYRAMIDILAUDALLA TÄNNE EI PÄÄDYTÄ: kerros on siellä tyhjä, koska
+     * nimet ovat laatoissa (paivitaMaastonimet). Jäljelle jäi harso,
+     * joka on katselutilan manterelautojen asia — ja se on
+     * lakkautettu erikseen (fokusSumuPaalla).
      */
-    const pohja = this.fokusPohjaBbox ?? null;
-    for (const n of nimet) n.classList.toggle('maastonimi-kuvan-alla', Boolean(pohja));
     if (!maat || !muodot) {
       for (const n of nimet) n.classList.remove('maastonimi-harson-alla');
       return;
@@ -5964,6 +5913,39 @@ export class UI {
           ...tunnus, ...fokus,
         }, cities).textContent = '✈';
       }
+      /*
+       * PAIKANNIMI KUULUU LAATTAAN, EI ELÄVÄÄN KERROKSEEN
+       * (omistajan kaappaus Sofiasta 30.8.2026: sama nimi kartalla
+       * kahdesti — iso "Sofia" kermanvalkoisella reunuksella tästä
+       * kerroksesta ja pieni painettu "Sofia" laatassa sen vieressä).
+       *
+       * JUURISYY. Kun pysyvä sisältö siirrettiin laattoihin (v1360),
+       * laattoihin poltettiin kaikkien 261 kaupungin nimet omalla
+       * typografiallaan ja omalla törmäyksenvälttelyllään
+       * (docs/moduulit/laattapyramidi.md luku 6c). Tämä kerros jäi
+       * latomaan samat nimet uudelleen, eikä kumpikaan tiennyt
+       * toisesta.
+       *
+       * SÄÄNTÖ ON YLEINEN EIKÄ NIMILISTA: laudalla, jonka arkki on
+       * pyramidissa, KAIKKI paikannimet ovat laatoissa — siis yhtään
+       * ei ladota tässä. Sama periaate kuin laattojen omassa
+       * kaksoisnimikorjauksessa (luku 6c.1): sama nimi vain kerran.
+       *
+       * KUMPI JÄÄ, JA MIKSI POLTETTU. Poltettu nimi on kartografiaa:
+       * oikea kirjasin, oikea mittakaava, törmäyksenvälttely tehty
+       * kerran koko arkille, eikä se maksa kehysaikaa. Elävä nimi on
+       * pelin tilaa, eikä paikannimi ole pelin tilaa — se on sama
+       * eilen ja huomenna. Pelitilan nimet piirretään yhä: valittavan
+       * matkakohteen nimi (.target-nimi, drawTargets) ja kartan
+       * klikattavien kohteiden nimiöt (js/fokuskohteet.js), joilla on
+       * oma poltettujen nimien väistönsä.
+       *
+       * KATSELUTILAN MANTERELAUDAT (?lauta=africa) EIVÄT OLE
+       * PYRAMIDISSA: ne piirtävät oman karttansa eikä niissä ole
+       * poltettuja nimiä, joten nimilaput ladotaan niille entiseen
+       * tapaan.
+       */
+      if (laatatPohjana) continue;
       const anchor = c.la ?? 'middle';
       const dx = c.lx ?? 0;
       const dy = c.ly ?? -(c.start ? 28 : 19);
@@ -6045,11 +6027,39 @@ export class UI {
 
   /**
    * Korostaa maan, jossa pelaaja on: alue sävytetään aavistuksen
-   * tummemmaksi ja rajattu punamullanvärisellä ääriviivalla — samalla
-   * värillä, jolla 1800-luvun atlakset piirsivät valtionrajat. Maan
-   * nimi näkyy kartan kehyksen pillerissä (paivitaMaaPilleri), ei
-   * kartalla. Reitillä (kaupunkien välissä) edellinen korostus jää
-   * näkyviin, kunnes seuraava kaupunki vaihtaa maata — kartta ei vilku.
+   * tummemmaksi (.country-tint). Reitillä (kaupunkien välissä)
+   * edellinen korostus jää näkyviin, kunnes seuraava kaupunki vaihtaa
+   * maata — kartta ei vilku.
+   *
+   * === PUNAINEN ÄÄRIVIIVA JA MAAKYLTTI OVAT POISSA (30.8.2026) ===
+   *
+   * Kerros piirsi ennen myös punamullanvärisen ääriviivan
+   * (.country-korostus, oma piirtoanimaationsa) ja päivitti kartan
+   * oikean yläkulman maakyltin (paivitaMaaPilleri). Molemmat oli
+   * piilotettu fokusnäkymässä `body.fokuspohja`-luokalla, ja kun
+   * luokan asettaja katosi lehtipurussa (v1365), molemmat palasivat
+   * ruudulle. Omistaja näki ne laitteella heti.
+   *
+   * KUMPIKAAN EI PALAA PIILOTUKSENA VAAN KOODI ON POIS:
+   *
+   *   ÄÄRIVIIVA. Omistajan pelitestipalaute v1095: *"punainen maan
+   *   ääriviiva on epätarkka → OTETAAN POIS"*. Syy on rakenteellinen
+   *   eikä tyylillinen: viiva piirretään laudan karkeasta 50m-
+   *   rannikosta, kun taas laattaan poltettu rantaviiva on tarkkaa
+   *   10m-aineistoa — viiva osuu eri kohtaan kuin ranta, jonka se
+   *   muka rajaa. Pyramidissa laatta on aina alla, joten ero näkyy
+   *   aina.
+   *
+   *   MAAKYLTTI. Raamattu (omistaja 24.8.2026): *"oikean yläkulman
+   *   maakyltti poistetaan"* — kartuutsi vasemmassa alanurkassa
+   *   (js/fokusmitat.js) kertoo maan nimen. Kyltin piirtokoodi jää
+   *   yhtä käyttöä varten: MAASELAIN (js/vertailu.js maatiedot-tila),
+   *   jossa omistaja on erikseen tilannut sen näyttämään selatun maan
+   *   (14.8.2026). Pelinäkymässä sitä ei enää luoda lainkaan.
+   *
+   * SÄVYTYS JÄÄ. Se on pehmeä pintasävy ilman viivaa, joten
+   * rannikon tarkkuusero ei näy siinä — ja se on kartan ainoa merkki
+   * siitä, minkä maan rajojen sisällä matkaaja on.
    */
   drawCountryBorders() {
     if (!this.countryLayer) return;
@@ -6059,41 +6069,14 @@ export class UI {
     if (!iso) return;
     const key = `${this.game.pack.id}:${iso}`;
     if (this.countryKey === key) return;
-    /*
-     * Onko tämä UUSI maa vai sama maa uudestaan piirrettynä?
-     *
-     * countryKey nollautuu aina kun lauta rakennetaan uusiksi
-     * (drawBoard), joten se ei kelpaa animaation ehdoksi: pelin lataus
-     * ja kartan uudelleenrakennus näyttäisivät sen valossa
-     * maanvaihdolta. viimeMaa muistaa maan laudan piirtojen yli ja on
-     * tyhjä vain istunnon ensimmäisellä kerralla — silloin ääriviiva on
-     * heti valmis eikä piirry.
-     */
-    const uusiMaa = Boolean(this.viimeMaa) && this.viimeMaa !== key;
-    this.viimeMaa = key;
     this.countryKey = key;
     this.countryLayer.textContent = '';
-    this.countryLayer.classList.remove('maa-piirtyy', 'maa-asettuu');
     this.countryNameLayer.textContent = '';
     const maa = map.countryShapes?.[iso];
-    this.paivitaMaaPilleri(maa, iso);
     if (!maa) return;
     const renkaat = maa.renkaat
       .map((r) => `M${r.map(([x, y]) => `${x},${y}`).join(' L')}Z`);
     el('path', { d: renkaat.join(' '), class: 'country-tint' }, this.countryLayer);
-    /*
-     * Ääriviiva countryLayeriin, jolloin maa-rajaus-clip katkaisee sen
-     * tyyliteltyyn rantaan — merelle ei valu mitään.
-     *
-     * Jokainen rengas on OMA polkunsa (ennen kaikki olivat yhdessä
-     * d-määreessä). Saaristomaassa se on animaation ehto: yhtenä
-     * polkuna viivan viiva-aukkokuvio jatkuisi renkaasta toiseen ja
-     * saaret piirtyisivät jonossa, omina polkuinaan ne piirtyvät
-     * rinnakkain kukin oman pituutensa mukaan.
-     */
-    const polut = renkaat.map((d) => el('path', { d, class: 'country-korostus' },
-      this.countryLayer));
-    if (uusiMaa) this.animoiMaanAariviiva(polut, key);
   }
 
   /**
@@ -6367,6 +6350,13 @@ export class UI {
    */
   paivitaFokusKerros() {
     if (!this.svg) return;
+    /*
+     * MAAN IKKUNA ENSIN. Se on kaiken muun ehto: panorointirajat,
+     * kartuutsi, klikattavat kohteet ja merkkien mittakaava lukevat
+     * sen. Kutsu on halpa — paivitaFokusPohja palaa heti, jos maa ei
+     * vaihtunut.
+     */
+    this.paivitaMaanIkkuna();
     this.paivitaAloituskaupungit();
     // Matkareitit atlaksen päälle liikkumisen ajaksi (v1119, kohta 16).
     this.paivitaMatkareitit();
@@ -6797,179 +6787,62 @@ export class UI {
   }
 
   /**
-   * PALLOT POIS LEHDEN PÄÄLTÄ.
+   * PELIMERKIT PYSYVÄT KARTALLA — MITTAKAAVA ON SE, MIKÄ TÄSSÄ
+   * RATKAISTAAN.
    *
-   * Omistajan pelitestipalaute v1097 (iPad, fokusnäkymä): *"Ota pallot
-   * pois"* — laudan pyöreät pelimerkit (Ateenan laatta ja pelaajan
-   * nappula päällekkäin, Kreetan valkoinen rengas) rikkovat 1873-
-   * atlaksen lehden tunnelman. Lehti on kokonainen kartta, ja sen
-   * päällä pelilaudan grafiikka näyttää vieraalta.
+   * === MIKÄ SÄÄNTÖ TÄSTÄ POISTUI (30.8.2026) ===
    *
-   * KOLME SÄÄNTÖÄ:
+   * Metodi piilotti ennen laudan pelimerkit (laatat, käännetyt
+   * aarrekiekot, nappula, kohderenkaat) `fokusPohjaBbox`in alueelta.
+   * Perustelu oli omistajan pelitestipalaute v1097 (*"Ota pallot
+   * pois"*), ja se piti paikkansa niin kauan kuin maalehti oli OPAAKKI
+   * KUVA yhden maan päällä: laudan pyöreä pelimerkki kellui valmiin
+   * atlaksen lehden päällä vieraana grafiikkana.
    *
-   *   1. OLETUS ON PIILOSSA. Lehden alueella laattojen, nappuloiden ja
-   *      kohderenkaiden osat saavat luokan .fokus-lehden-alla.
-   *      KAUPUNKIEN NIMET JÄÄVÄT (ATEENA, Kreeta) — ne kuuluvat
-   *      lehteen, samoin kuin lehden omat painetut nimet.
+   * Pyramidissa perustelua ei ole. "Lehti" on koko maailma (Raamattu,
+   * "YKSI MAAILMANBITTIKARTTA"), joten sama sääntö piilottaisi
+   * pelimerkit KAIKKIALTA — nappulan, kaupunkien laatat ja
+   * kohderenkaat mukaan lukien. Merkit eivät myöskään ole enää laudan
+   * grafiikkaa valmiin kartan päällä vaan pelitilan ohut päällyskerros,
+   * joka on ainoa asia jonka peli kartalle piirtää: kaikki pysyvä on
+   * poltettu laattoihin.
    *
-   *   2. MATKUSTUSVALINTA TUO KOHTEET TAKAISIN. Kun Liiku-nappi tai
-   *      nopanheitto avaa valinnan, kohderenkaat ja valittavien
-   *      kaupunkien pisteet syttyvät valinnan ajaksi
-   *      (fokusMatkavalintaAuki + drawTargetsin kokoama joukko).
+   * `.fokus-lehden-alla` ei siis enää kirjoiteta kenellekään.
    *
-   *   3. NYKYISEN KAUPUNGIN LAATTA JÄÄ AINA (omistajan pelitesti
-   *      24.8.2026, v1099:n jälkeen). v1098 piilotti senkin, ja lehdeltä
-   *      katosi ainoa merkki siitä, missä matkaaja seisoo. Laatta on
-   *      siis lehden päällä koko ajan — mutta PIENENÄ ja ruudulla lähes
-   *      vakiokokoisena (paivitaFokusLaatta). Aarrevaiheen huomioele
-   *      (fokusvirtaLaattaNakyy → .fokus-laatta-esiin) säilyy
-   *      ennallaan: se on yhä se hetki, jolloin pöllö osoittaa laattaa,
-   *      ja samalla hetkellä myös pelinappula palaa lehden päälle.
+   * === MITÄ TÄNNE JÄI ===
    *
-   * KEHITTÄJÄTILAN NAPAUTUS EI SAA LAKATA TOIMIMASTA. Piilotus koskee
-   * vain näkyviä koristeita (.target-ring, .target-halo, kohdemerkki);
-   * näkymätön osuma-alue (.target-hit) ja sen ryhmä jäävät koskematta,
-   * joten doKehittajaSiirto toimii piilossa olevalla laatalla.
+   *   1. PÖLLÖN HUOMIOELE. Aarrevaiheessa nykyisen kaupungin laatta saa
+   *      `.fokus-laatta-esiin` — se on se hetki, jolloin pöllö osoittaa
+   *      laattaa. Toggle, jotta ele nähdään kerran eikä joka piirrossa.
+   *   2. MERKKIEN MITAT. Laatta, nappula, aarremerkki ja kohdemerkit
+   *      mitoitetaan maan ikkunan mukaan (fokusMerkkiSkaala): ne elävät
+   *      kartan mittakaavassa, koska kartta on painettu paperille ja
+   *      sen päällä oleva kuuluu samaan mittakaavaan.
    *
-   * PIILOTUS ON LUOKKA, EI SUODATIN. Sama iOS-sääntö kuin muillakin
-   * kartan kerroksilla (tests/rules.test.mjs).
+   * Kutsutaan joka piirrossa (paivitaFokusKerros) ja maan vaihtuessa
+   * (paivitaFokusPohja).
    */
   paivitaFokusPallot() {
     if (!this.svg) return;
+    const nykyinen = this.game.cityOf?.();
     /*
-     * KEHITTÄJÄN MAAILMANÄKYMÄ PITÄÄ MERKIT KARTALLA (omistajan tilaus
-     * 27.8.2026): *"KOHDEKAUPUNGIT näkyviin, jotta omistaja voi siirtyä
-     * eri maiden välillä"*. Koko tämä metodi kysyy piilotuksensa
-     * lehdeltä (`pohja`), joten yksi rivi riittää: ilman lehteä mikään
-     * ei ole "lehden alla" ja laatat, nimet, kiekot, nappula ja
-     * kohderenkaat jäävät näkyviin sellaisinaan. Kaupunkien laatat ovat
-     * juuri se, mitä omistaja napauttaa (doKehittajaSiirto).
-     */
-    const pohja = this.maailmanakyma() ? null : (this.fokusPohjaBbox ?? null);
-    const nykyinen = pohja ? this.game.cityOf?.() : null;
-    const valinta = pohja ? this.fokusMatkavalintaAuki() : false;
-    const kohteet = valinta ? (this.fokusKohdeKaupungit ?? new Set()) : null;
-    /*
-     * Aarrevaihe (tai käännetty laatta): pöllön huomioele ja pelinappula.
-     * EI ENÄÄ laatan näkyvyys — laatta jää lehden päälle aina (sääntö 3
-     * yllä), ja tämä kertoo vain, onko se juuri nyt se hetki, jolloin
-     * laattaa osoitetaan ja nappula palaa kartalle.
+     * Aarrevaihe (tai käännetty laatta): pöllön huomioele. EI laatan
+     * näkyvyys — laatta on kartalla aina.
      */
     const omaNakyy = Boolean(nykyinen) && fokusvirtaLaattaNakyy(this, nykyinen);
-    /*
-     * KOKO LAUTA, EI VAIN KUVAN ALA (omistajan pelitesti v1101:
-     * *"isot valinta-/kaupunkipallot Ankara/Izmir/Kreeta/Ateena"*).
-     *
-     * Piilotus rajautui ennen kuvan suorakaiteeseen, koska kuva oli
-     * "lehti" laudan päällä. Fokusnäkymä on nyt jatkuva pinta, jonka
-     * ulkopuoli on verhon alla (paivitaFokusSumu) — ja verhon päällä
-     * kelluva pelimerkki on juuri se vanha lauta, jota omistaja ei halua
-     * nähdä. Kuvan olemassaolo ratkaisee, sijainti ei.
-     */
-    const laudanMerkki = (x, y) => Boolean(pohja)
-      && Number.isFinite(x) && Number.isFinite(y);
-    /*
-     * Valittavilla kohteilla on fokusnäkymässä OMA merkkinsä (pieni
-     * piste + nimi, fokusKohdeMerkki), joten laudan iso laatta ei palaa
-     * enää niiden alle. Ilman omia merkkejä (lähtöpisteen valinta)
-     * vanha sääntö jää voimaan — muuten valittavaa ei näkyisi.
-     */
-    const omatMerkit = this.fokusKohdeMerkit();
-    /** Saako tämän kaupungin piste näkyä kuvan päällä? */
-    const kaupunkiNakyy = (id) => id === nykyinen?.id
-      || (!omatMerkit && Boolean(kohteet?.has(id)));
-
-    /*
-     * KOKO KAUPUNKIKERROS LÄPI, EI VAIN [data-kaupunki]. Maatunniste jää
-     * pois kaupungeilta, joita laudan kaupunki–maa-taulusta ei löydy
-     * (maailmankartalla Jerusalem), ja juuri ne jäivät fokusnäkymässä
-     * ainoina laudan palloina kartalle — kerros piilottaa ne muutenkin
-     * vain käymättömistä maista (.fokus-piilossa). Tunniste on tässä
-     * enää kaupungin NIMILAPPU, ei pääsylippu.
-     */
     for (const osa of this.svg.querySelectorAll('.cities > *')) {
-      /*
-       * NIMI JÄÄ KUVAN PÄÄLLE mutta ei sen ulkopuolelle: kuvan alueella
-       * nimi on kartan omaa tekstiä, verhon päällä se olisi laudan
-       * merkintä toisella kirjasimella tyhjän paperin päällä.
-       */
-      const nimi = osa.classList.contains('city-label');
-      const x = Number(osa.getAttribute('cx') ?? osa.getAttribute('x'));
-      const y = Number(osa.getAttribute('cy') ?? osa.getAttribute('y'));
-      const kuvanPaalla = this.fokusPohjanAlla(x, y);
-      const piiloon = laudanMerkki(x, y) && !kaupunkiNakyy(osa.dataset.kaupunki)
-        && (!nimi || !kuvanPaalla);
-      osa.classList.toggle('fokus-lehden-alla', piiloon);
-      /*
-       * PÖLLÖ OSOITTAA LAATTAA: kun laatta ilmestyy aarrevaiheessa, se
-       * saa kevyen huomioeleen. Luokka asetetaan togglella, joten se ei
-       * käynnisty uudelleen joka piirrossa — ele nähdään kerran.
-       */
-      if (osa.classList.contains('city') || osa.classList.contains('city-start')) {
-        osa.classList.toggle('fokus-laatta-esiin',
-          !piiloon && omaNakyy && osa.dataset.kaupunki === nykyinen?.id && kuvanPaalla);
-      }
+      if (!osa.classList.contains('city') && !osa.classList.contains('city-start')) continue;
+      osa.classList.toggle('fokus-laatta-esiin',
+        omaNakyy && osa.dataset.kaupunki === nykyinen?.id);
     }
 
-    for (const kiekko of this.tokenLayer?.querySelectorAll('.token-found') ?? []) {
-      const piiloon = laudanMerkki(Number(kiekko.dataset.x), Number(kiekko.dataset.y))
-        && kiekko.dataset.kaupunki !== nykyinen?.id;
-      kiekko.classList.toggle('fokus-lehden-alla', piiloon);
-    }
-
-    /*
-     * NAPPULA JÄÄ AINA LEHDEN PÄÄLLE (omistajan pelitesti 27.8.2026,
-     * iPad-kaappaus Ateenasta: *"tinaherra-nappula EI näy Kreikan
-     * fokuslaudalla — pelaajan sijainnissa näkyy vain vanha
-     * kullanvärinen rengasmerkki"*).
-     *
-     * Piilotus oli v1097:n "Ota pallot pois" -säännön viimeinen jäänne
-     * nappulassa: silloin nappula OLI pallo — valkoinen kehä, värillinen
-     * täplä ja kiilto — ja kahtena renkaana kaupungin laatan päällä se
-     * rikkoi lehden. Nappula sai näkyä vain aarrehetkellä (omaNakyy) tai
-     * matkustusvalinnan ajan (valinta), ja muun ajan lehdellä oli
-     * pelaajan paikkana pelkkä laatta. Juuri sen laatan omistaja näki.
-     *
-     * v1189 vaihtoi pallon TINAHERRAKSI (#100), ja sen myötä peruste
-     * kaatui: hahmo ei ole laudan grafiikkaa vaan pelinappula, ja
-     * pelinappula kuuluu kartalle. Sama linjaus kuin nykyisen kaupungin
-     * laatalla (sääntö 3 yllä): se jää lehden päälle aina, pienenä ja
-     * ruudulla lähes vakiokokoisena (paivitaFokusMerkkiMitat).
-     *
-     * Luokka kirjoitetaan yhä — nyt aina pois päältä — koska sama
-     * elementti voi kantaa sen edelliseltä piirrolta.
-     */
-    for (const nappula of this.pawnLayer?.querySelectorAll('.pawn') ?? []) {
-      nappula.classList.remove('fokus-lehden-alla');
-    }
-
-    for (const kohde of this.targetLayer?.querySelectorAll('.target') ?? []) {
-      const osuma = kohde.querySelector('.target-hit');
-      const piiloon = !valinta
-        && laudanMerkki(Number(osuma?.getAttribute('cx')),
-          Number(osuma?.getAttribute('cy')));
-      // Vain koristeet piiloon — osuma-alue jää aktiiviseksi.
-      // Fokusnäkymän piste ja nimi kuuluvat samaan joukkoon: ne ovat
-      // kohteen merkki, eivät napautusalue (fokusKohdeMerkki).
-      for (const koriste of kohde.querySelectorAll(
-        '.target-ring, .target-halo, .lento-kohde-merkki, .target-piste, .target-nimi',
-      )) {
-        koriste.classList.toggle('fokus-lehden-alla', piiloon);
-      }
-    }
-
-    // Näkyvyys on nyt ratkaistu; jäljellä on nykyisen laatan KOKO ja sen
-    // napautusalue (oma metodinsa, koska sitä kutsutaan myös zoomista).
+    // Nykyisen laatan KOKO ja sen napautusalue (oma metodinsa, koska
+    // sitä kutsutaan myös zoomista).
     this.paivitaFokusLaatta();
-    // Sama koskee pelinappulaa ja käännetyn laatan aarremerkkiä: ne ovat
-    // laudan yksiköissä ja kasvaisivat fokuszoomissa ruutua peittäviksi
-    // (omistajan pelitesti 26.8.2026).
+    // Sama koskee pelinappulaa ja käännetyn laatan aarremerkkiä.
     this.paivitaFokusMerkkiMitat();
-    // Samoin valittavien kohteiden merkit: pieni piste ja nimi, molemmat
-    // mitattuina ruudulta eikä laudalta (omistaja 26.8.2026).
+    // Samoin valittavien kohteiden merkit: pieni piste ja nimi.
     this.paivitaFokusKohdeMitat();
-    // Ja kaupunkien nimilaput laatan alle (paivitaFokusNimilaput).
-    this.paivitaFokusNimilaput();
   }
 
   /* --- MERKIT KARTAN MITTAKAAVAAN (omistajan linjaus 26.8.2026) ------ */
@@ -7031,7 +6904,8 @@ export class UI {
    *
    *   getBoundingClientRect  2 751 ms omaa aikaa, josta
    *     1 447 ms  nipistyksen vastaskaalaajasta (fokuskohteet.js)
-   *     1 055 ms  nimilappujen silmukasta (paivitaFokusNimilaput)
+   *     1 055 ms  nimilappujen silmukasta (sittemmin poistettu:
+   *               paikannimet ovat laatoissa)
    *
    * Syy ei ole yksittäisen mittauksen hinta vaan ASETTELUN
    * PIISKAAMINEN: jokainen kutsuja KIRJOITTAA merkkiensä muunnokset
@@ -7549,11 +7423,9 @@ export class UI {
    * jotta laudan oma kokohierarkia säilyy: lähtökaupungin laatta on
    * yhä isompi kuin tavallisen, kuten laudallakin.
    *
-   * NIMILAPUT OVAT JO OIKEIN eivätkä kuulu tänne: ne mitoitetaan
-   * ruutumittaan omassa silmukassaan (paivitaFokusNimilaput), ja juuri
-   * siksi omistajan kaappauksessa nimet olivat oikean kokoisia ja
-   * pallot eivät. Sama koskee eläintäkyjä (js/elaintaky.js) ja
-   * kohdemerkkejä.
+   * NIMILAPPUJA EI OLE: paikannimet ovat laatoissa (ks. drawBoard).
+   * Eläintäyt (js/elaintaky.js) ja kohdemerkit mitoitetaan omissa
+   * silmukoissaan.
    *
    * TUNNISTE OHITTAA TOISTON. Kerroin on vakio niin kauan kuin lehti ja
    * ruutukoko pysyvät, joten 600 osan silmukka ajetaan vain kun se
@@ -7743,9 +7615,9 @@ export class UI {
    *
    *   780  setAttribute  text.city-label  [x] [y] [text-anchor]  SAMA ARVO
    *
-   * Kaikki 780 tulivat YHTENÄ RYÖPPYNÄ eleen päättyessä
-   * (kartta.js `paata` → taydennaTaide → paivitaMaastonimet →
-   * paivitaFokusNimilaput): panorointi ei muuta yhdenkään nimilapun
+   * Kaikki 780 tulivat YHTENÄ RYÖPPYNÄ eleen päättyessä (kartta.js
+   * `paata` → taydennaTaide → paivitaMaastonimet → nimilappujen
+   * silmukka, sittemmin poistettu): panorointi ei muuta yhdenkään
    * paikkaa laudalla eikä yhdenkään kirjasinkokoa, joten silmukka
    * kirjoitti 260 lapulle kolme määrettä samoilla arvoilla kuin ennenkin
    * — ja mitätöi 260 SVG-tekstin asettelun juuri sillä hetkellä, kun
@@ -7762,155 +7634,6 @@ export class UI {
     const teksti = String(arvo);
     if (osa.getAttribute(nimi) === teksti) return;
     osa.setAttribute(nimi, teksti);
-  }
-
-  /**
-   * Kaupunkien nimilaput fokusnäkymässä: laatan alle keskitettynä ja
-   * ruudulla vakiokokoisina.
-   *
-   * === MIKÄ OLI VIALLA ===
-   *
-   * Laudan nimilappu ladotaan pakettidatan ohjeilla: ankkuri `la` ja
-   * siirtymä `lx`/`ly` (js/packs/*). Maailmankartalla Ateena on
-   * `{ x: 6624.7, y: 1882, la: 'end', lx: -17, ly: -16 }`, eli teksti
-   * PÄÄTTYY 17 yksikköä laatan vasemmalle puolelle ja jatkuu siitä
-   * länteen. Yleiskuvassa se on hyvä latomistapa — nimi väistää
-   * naapurikaupunkeja — mutta fokuszoomissa ISO teksti työntyy noin 36
-   * lautayksikköä (~95 km) laatasta länteen, keskelle Korintinlahtea.
-   * Omistaja luki nimen paikan laatan paikaksi, ja siksi oikeassa
-   * kohdassa oleva vihreä kohtaamispiste näytti karanneen itään.
-   *
-   * === MITÄ TEHDÄÄN ===
-   *
-   * Fokusnäkymässä pakettidatan la/lx/ly OHITETAAN: nimi keskitetään
-   * laatan alle vakiosiirtymällä, joka mitataan RUUDULLA eikä laudalla
-   * (sama sääntö kuin laatalla ja kohdemerkeillä). Samalla nimi on
-   * pieni: Raamatun linjaus *"valittavien nimet hieman isommalla,
-   * nykyisen sijainnin nimet paljon pienemmällä"* — kohteen nimi on
-   * 13 px (FOKUS_KOHDE_NIMI_PX), paikallaan oleva nimi 9.
-   *
-   * ALKUPERÄINEN LATOMINEN TALLETETAAN, jotta paluu yleiskuvaan on
-   * tarkka eikä arvattu — sama tapa kuin laatan heilunnalla
-   * (asetaLaatanKoko).
-   *
-   * KOKO ON INLINE-TYYLISSÄ eikä määreessä: fokusnäkymän nimikoko on
-   * CSS-sääntö (body.fokuspohja .cities .city-label), ja tyylitiedosto
-   * voittaisi määreen. Palautus poistaa tyylin, jolloin sääntö palaa
-   * voimaan sellaisenaan.
-   */
-  paivitaFokusNimilaput(tiedettyNakyva = null) {
-    if (!this.svg) return;
-    const laput = this.svg.querySelectorAll('.cities .city-label');
-    if (!laput.length) return;
-    const paalla = Boolean(this.fokusmoodi && !this.katselu && this.fokusPohjaBbox);
-    /*
-     * KERROIN LASKETAAN KERRAN, EI JOKAISELLE LAPULLE (mitattu
-     * 25.8.2026, ilta: 1 055 ms pakotettua asettelua tästä silmukasta
-     * yhdellä mittausajolla). Arvo ei riipu lapusta mitenkään, mutta
-     * silmukka kirjoittaa jokaisen lapun x:n ja y:n kutsujen väliin —
-     * ja juuri kirjoituksen ja lukemisen vuorottelu pakottaa selaimen
-     * laskemaan asettelun uudelleen lappu lapulta. Ks. fokusMerkkiSkaala.
-     *
-     * Nolla tarkoittaa "ei mittaa": entinen latominen on silloin
-     * parempi kuin väärä (sama sääntö kuin ennenkin).
-     */
-    const kerroin = paalla ? this.fokusMerkkiSkaala() : 0;
-    if (paalla && !(kerroin > 0)) return;
-    // Näkymän oma mittakaava (px laudan yksikköä kohti) nimikoon
-    // ruutulattiaa varten; luetaan kerran kuten kerroinkin.
-    const skaala = paalla
-      ? ((tiedettyNakyva ?? this.nakyvaAlue())?.skaala ?? 0) : 0;
-    const oma = paalla ? this.game.cityOf?.() : null;
-    /*
-     * NÄKYMÄRAJATTUA LAPPUA EI LADOTA (paivitaMaailmanRajaus). Se on
-     * display: none eikä maalaudu, joten sen määreiden kirjoittaminen
-     * olisi pelkkä asettelun mitätöinti — ja juuri niitä tässä
-     * silmukassa laskettiin, 261 lappua kerrallaan. Rajaus ajetaan
-     * ENNEN tätä (paivitaMaastonimet), joten näkyviin palaava lappu saa
-     * mittansa samalla asettumisella. Restaurointihaara (paalla ===
-     * false) käy jokaisen lapun läpi, myös rajatut: fokusnäkymästä
-     * poistuttaessa alkuperäinen ladonta on palautettava kaikille.
-     */
-    const rajatut = paalla ? this.maailmanRajatut : null;
-    /*
-     * YLEISKUVASSA PIILOTETTUA NIMEÄ EI LADOTA — sama peruste kuin
-     * näkymärajatulla lapulla rivi ylempänä: se on `display: none`
-     * (css .cities.kaupunkinimet-piilossa) eikä maalaudu, joten sen
-     * määreiden kirjoittaminen olisi pelkkä asettelun mitätöinti.
-     * Lähtökaupungit jäävät näkyviin ja siis myös ladottaviksi.
-     * Näkyvyys päivitetään ENNEN tätä (paivitaMaastonimet), joten
-     * lähikuvaan palaava nimi saa mittansa samalla asettumisella.
-     */
-    const yleiskuva = paalla
-      && Boolean(this.svg.querySelector('.cities.kaupunkinimet-piilossa'));
-    for (const lappu of laput) {
-      if (rajatut?.has(lappu)) continue;
-      if (yleiskuva && !lappu.classList.contains('start-label')) continue;
-      if (!paalla) {
-        if (lappu.dataset.nimiPerus === undefined) continue;
-        const perus = JSON.parse(lappu.dataset.nimiPerus);
-        lappu.setAttribute('x', perus.x);
-        lappu.setAttribute('y', perus.y);
-        lappu.setAttribute('text-anchor', perus.ank);
-        if (perus.muunnos) lappu.setAttribute('transform', perus.muunnos);
-        else lappu.removeAttribute('transform');
-        lappu.style.removeProperty('font-size');
-        lappu.style.removeProperty('stroke-width');
-        delete lappu.dataset.nimiPerus;
-        continue;
-      }
-      const x = Number(lappu.dataset.kx);
-      const y = Number(lappu.dataset.ky);
-      // Ilman laatan keskipistettä ei ole mihin keskittää (lauta ilman
-      // kaupunki–maa-taulua): nimi jää pakettidatan paikalle.
-      if (!Number.isFinite(x) || !Number.isFinite(y)) continue;
-      if (lappu.dataset.nimiPerus === undefined) {
-        lappu.dataset.nimiPerus = JSON.stringify({
-          x: lappu.getAttribute('x'),
-          y: lappu.getAttribute('y'),
-          ank: lappu.getAttribute('text-anchor') ?? 'middle',
-          muunnos: lappu.getAttribute('transform') ?? '',
-        });
-      }
-      UI.maare(lappu, 'x', x.toFixed(2));
-      /*
-       * Laatan puolikas + rako + kirjaimen korkeus, kaikki ruudun
-       * pikseleinä ja vasta lopuksi laudan yksiköiksi. Nykyisen
-       * kaupungin kohdalla mitta on VÄHINTÄÄN nappulan kehä
-       * (FOKUS_NIMI_NAPPULAN_ALLE) — muuten nimi jäisi lähikuvassa
-       * nappulan alle.
-       */
-      // Kartan mittakaava, ei ruudun (omistaja 25.8.2026: "nimilaput
-      // samalla lailla") — kerroin on vakio kuten merkeillä, joten nimi
-      // kasvaa ja kutistuu laatan mukana. Laskettu kerran silmukan yllä.
-      /*
-       * KOKO ENSIN, ETÄISYYS SEN MUKAAN. Nimikoko on ruutumitta lehden
-       * perustasolla, mutta sillä on LATTIA ruudulla
-       * (FOKUS_NIMI_VAHIN_PX): uloszoomattuna kirjaimet menivät
-       * seitsemään pikseliin ja piirtyivät rikkinäisinä. Lattia
-       * lasketaan näkymän omasta mittakaavasta, joten se on ruudun
-       * pikseleitä juuri nyt eikä perustasolla.
-       */
-      const nimiYksikot = Math.max(
-        FOKUS_NIMI_PX * kerroin,
-        skaala > 0 ? FOKUS_NIMI_VAHIN_PX / skaala : 0,
-      );
-      const ruudulta = (FOKUS_LAATTA_PX / 2 + 4) * kerroin + nimiYksikot;
-      const etaisyys = lappu.dataset.kaupunki === oma?.id
-        ? Math.max(FOKUS_NIMI_NAPPULAN_ALLE_PX * kerroin, ruudulta)
-        : ruudulta;
-      UI.maare(lappu, 'y', (y + etaisyys).toFixed(2));
-      UI.maare(lappu, 'text-anchor', 'middle');
-      // Heilunta pois: se kiertää tekstiä vanhan ankkurin ympäri.
-      lappu.removeAttribute('transform');
-      lappu.style.fontSize = `${nimiYksikot.toFixed(2)}px`;
-      /*
-       * PERGAMENTTIHALO SAMASSA SUHTEESSA. CSS antaa sille kiinteän
-       * 1,6 laudan yksikköä, mikä on pienellä kirjaimella paksumpi
-       * kuin kirjain itse — juuri se täytti kirjainten sisukset.
-       */
-      lappu.style.strokeWidth = `${(nimiYksikot * 0.22).toFixed(2)}px`;
-    }
   }
 
   /** Fokusnäkymä loppui: laatta omaan kokoonsa ja napautusalue pois. */
@@ -7931,44 +7654,105 @@ export class UI {
   }
 
   /**
-   * Fokuspohja tuli tai lähti: mitä kartalla on tehtävä sen takia.
+   * MISSÄ MAA ON LAUDALLA — syötetään suoraan taulusta, ei kuvasta.
    *
-   * Kutsuu js/fokuskartta.js aina kun lehti piirretään tai kerros
-   * tyhjennetään; `bbox` on lehden paikka laudan koordinaateissa tai
-   * null.
+   * === MIKÄ OLI RIKKI (v1363–v1365) ===
    *
-   * === MIKSI TÄMÄ ON OLEMASSA (omistajan pelitesti v1095) ===
+   * `fokusPohjaBbox` asetettiin ennen VAIN silloin, kun maalehden kuva
+   * oli latautunut (js/fokuskartta.js). Kun pyramidi tuli ainoaksi
+   * karttapohjaksi, kuvaa ei enää haeta — ja arvo jäi `null`iksi.
+   * Mukana pimeni neljä ominaisuutta, jotka eivät liity kuvaan
+   * mitenkään vaan pelkkään tietoon siitä, missä maa on:
    *
-   * Lehti on OPAAKKI ja kokonainen atlaksen sivu. Kaikki, mitä laudalla
-   * on sen alueella, joko katoaa kuvan alle tai jää päälle riitelemään
-   * sen kanssa — ja omistajan lista oli yksiselitteinen: punainen maan
-   * ääriviiva pois, reittien pisteet ja katkoviivat pois, vieraiden
-   * alueiden maastonimet pois. Kolme eri kerrosta, kolme eri keinoa:
+   *   1. PANOROINTIRAJAT maan ympärille (js/kartta.js fokusRajaukset).
+   *      Raamattu vaatii: *"maatila rajaa panoroinnin maan ympärille"*.
+   *   2. KARTUUTSI, MITTAJANA JA MAATAULU (js/fokusmitat.js).
+   *   3. KARTAN KLIKATTAVAT KOHTEET, kohtaamispiste, eläintäyt ja
+   *      selitevalikon kappalemäärät (js/fokuskohteet.js).
+   *   4. MERKKIEN MITTAKAAVA. Ilman maan ikkunaa fokusMerkkiSkaala
+   *      putoaa varapolulle `1 / skaala`, jolloin kaupunkipiste,
+   *      nappula, kohdemerkit ja eläintäyt ovat RUUTUAVARUUDESSA eli
+   *      vakiokokoisia zoomista riippumatta. Omistaja 30.8.2026:
+   *      *"pisteet suurentuvat ja pienentyvät zoomatessa samoin kuin
+   *      kartta"* — kartta on painettu paperille, ja sen päällä oleva
+   *      kuuluu samaan mittakaavaan.
    *
-   *   1. MAAN KOROSTUS (.country-tint, .country-korostus) on kuvan
-   *      PÄÄLLÄ (countryLayer luodaan fokuskarttaKerroksen jälkeen), ja
-   *      punainen rengas piirtyisi keskelle lehteä. Piilotus luokalla
-   *      body.fokuspohja — kerrosta ei tyhjennetä, koska maa on yhä
-   *      korostettu ja rengas palaa heti kun lehti häviää.
+   * === LÄHDE ON TAULU, EI LATAUS ===
    *
-   *   2. SUMUVERHO on myös kuvan päällä ja sävyttäisi lehden kaikkialta
-   *      paitsi Kreikan kohdalta — lehti näyttäisi kahdella eri
-   *      paperilla painetulta. Verhoon leikataan reikä lehden kohdalle
-   *      (paivitaFokusSumu).
+   * `FOKUS_POHJAT` (js/packs/fokus-grc.js) syntyi maalehtien
+   * rajauksista, mutta luvut eivät kuvaa lehteä vaan MAAN PAIKKAA
+   * LAUDALLA — ja se tieto on yhtä tosi ilman lehteä. Taulu luetaan
+   * siis suoraan: ei kuvaa, ei verkkoa, ei odotusta.
    *
-   *   3. MAASTONIMET ovat SVG:tä koko kartan päällä (maastonimiKerros
-   *      on svg:n suora lapsi), joten ne jäisivät lehden päälle
-   *      kellumaan. Lehden alueelle osuvat piilotetaan
-   *      (himmennaMaastonimet).
+   * `bbox` on maan laatikko ja `rajaus` sen ikkuna (laatikon sisällä
+   * oleva tiukempi rajaus, johon kamera ajetaan). Ennen ero oli lehden
+   * vuotoreuna; nyt se on pelkkä väljyysvara panoroinnille.
    *
-   *   4. PELIMERKIT (laatat, käännetyt aarrekiekot, pelinappula,
-   *      kohderenkaat) asuvat omissa kerroksissaan kuvan päällä.
-   *      Omistajan pelitestipalaute v1097: *"Ota pallot pois"* — ne
-   *      piilotetaan lehden alueelta ja tuodaan takaisin vain kun
-   *      peli niitä oikeasti tarvitsee (paivitaFokusPallot).
+   * === TAULUSSA ON VAIN EUROOPPA (39 maata) ===
    *
-   * Reitit hoituvat ilman koodia: ne ovat laudan bittikartassa ja
-   * jäävät opaakin kuvan alle itsestään.
+   * Muissa maanosissa maan ikkunaa ei ole, ja silloin kaikki neljä
+   * yllä olevaa jäävät pois täsmälleen kuten v1362:ssa. Se ei ole tämän
+   * korjauksen rajaus vaan taulun kattavuus, ja se on kirjattu Fablelle
+   * päätettäväksi (docs/viesti-fable.md).
+   */
+  paivitaMaanIkkuna() {
+    const pohja = this.maanIkkuna();
+    this.fokuskarttaAvain = pohja?.iso ?? null;
+    this.paivitaFokusPohja(pohja?.bbox ?? null, pohja?.rajaus ?? null);
+  }
+
+  /**
+   * Nykyisen maan ikkuna taulusta, tai null jos sitä ei ole.
+   *
+   * Maa luetaan laudan omasta kaupunki–maa-taulusta — sama päättely
+   * kuin ääriviivalla (drawCountryBorders) ja klikattavilla kohteilla
+   * (js/fokuskohteet.js nykyinenIso).
+   *
+   * KAKSI TILAA EIVÄT OLE PELITILOJA:
+   *
+   *   LÄHTÖKAUPUNGIN VALINTA. Matkaaja ei ole vielä missään maassa, ja
+   *   valittavat kaupungit ovat eri puolilla maailmaa — ikkuna
+   *   rajaisi panoroinnin Iso-Britanniaan ja veisi puolet valinnoista
+   *   ulottumattomiin. Sama raja kuin kohdemerkeillä
+   *   (fokusKohdeMerkit) ja selitevalikolla (js/karttaselite.js).
+   *
+   *   ALOITUSLENTO. Peli on siirtänyt matkaajan perille jo lennon
+   *   alussa, joten kohdemaan kartuutsi paljastaisi määränpään ennen
+   *   kuin kone on siellä — sama syy, jolla lennon ajaksi häivytetään
+   *   maan sävytys ja kohdemerkit (css body.kartalento).
+   */
+  maanIkkuna() {
+    if (!this.fokusmoodi || this.katselu) return null;
+    if (this.game.phase === 'pickstart' || this.aloituslentoKesken) return null;
+    const map = this.game.pack.map;
+    const city = this.game.cityOf?.();
+    const iso = city ? map?.cityCountry?.[city.id] : null;
+    if (!iso) return null;
+    const pohja = FOKUS_POHJAT[iso];
+    // Rajaukset ovat LAUTAKOHTAISIA: toisen laudan luvut osuisivat
+    // aivan väärään kohtaan.
+    if (!pohja || pohja.lauta !== this.game.pack.id) return null;
+    return { iso, bbox: pohja.bbox, rajaus: pohja.rajaus };
+  }
+
+  /**
+   * Maan ikkuna vaihtui: mitä kartalla on tehtävä sen takia.
+   *
+   * Kutsutaan vain paivitaMaanIkkunasta. Yhtäläisyystesti pitää huolen
+   * siitä, että jono ajetaan vasta kun maa oikeasti vaihtuu — sama
+   * ikkuna samassa maassa palaa tästä heti.
+   *
+   * KERROSJONO on entinen, mutta kaksi sen jäsentä on lakkautettu:
+   *
+   *   SUMUVERHO. Raamattu 29.8.2026: *"Sumennuksesta luovutaan
+   *   kokonaan — fokus on liikerajaus."* paivitaFokusSumu lukee ehdon
+   *   (fokusSumuPaalla) ja palaa tyhjentäneenä.
+   *
+   *   PELIMERKKIEN PIILOTUS. Sääntö *"Ota pallot pois"* (v1097) oli
+   *   peräisin siitä, että maalehti oli OPAAKKI KUVA yhden maan päällä
+   *   ja laudan pallot kelluivat sen päällä vieraina. Pyramidissa
+   *   "lehti" on koko maailma, joten sama sääntö piilottaisi pelimerkit
+   *   kaikkialta — ks. paivitaFokusPallot.
    */
   paivitaFokusPohja(bbox, rajaus = null) {
     const ennen = this.fokusPohjaBbox ?? null;
@@ -7979,43 +7763,37 @@ export class UI {
     if (sama) return;
     this.fokusPohjaBbox = uusi;
     /*
-     * IKKUNA ERIKSEEN KUVASTA (v1101). Kuvassa on ikkunan ympärillä
-     * vuotoa, joka sulattaa sauman lautaan; kamera ja uloszoomauksen
-     * raja mitataan IKKUNASTA (js/kartta.js fokusRajaukset), verho
-     * häivytetään sen ja kuvan reunan välissä (paivitaFokusSumu).
+     * IKKUNA ERIKSEEN LAATIKOSTA. Kamera ja uloszoomauksen raja
+     * mitataan IKKUNASTA (js/kartta.js fokusRajaukset), panorointi
+     * päästää sen ympärillä laatikon reunaan asti.
      */
     this.fokusPohjaRajaus = uusi
       ? ((rajaus?.w > 0 && rajaus?.h > 0) ? rajaus : uusi)
       : null;
     document.body.classList.toggle('fokuspohja', Boolean(uusi));
-    // Verho on rakennettava uusiksi: reikä tuli tai lähti.
+    // Verho on lakkautettu; kutsu jää yhdeksi vaimennetuksi metodiksi
+    // (fokusSumuPaalla), joka tyhjentää kerroksen ja palaa.
     this.fokusAvain = null;
     this.paivitaFokusSumu(this.fokusMaat());
     this.himmennaMaastonimet();
-    // Neljäs kerros: pelimerkit (ks. doc yllä ja paivitaFokusPallot).
-    // Kutsu on tässä, koska pohja saapuu verkosta vasta piirron jälkeen.
+    // Merkkien mittakaava on maan ikkunan varassa: laatta, nappula,
+    // kohdemerkit ja nimilaput on mitoitettava uudelleen.
     this.paivitaFokusPallot();
-    // Viides kerros: lehden klikattavat karttakohteet (js/fokuskohteet.js).
+    // Kartan klikattavat karttakohteet (js/fokuskohteet.js).
     paivitaFokuskohteet(this);
-    // Kuudes kerros: kevyen kulun vihreä kohtaamispiste (js/fokuspiste.js).
+    // Kevyen kulun vihreä kohtaamispiste (js/fokuspiste.js).
     paivitaFokuspiste(this);
     // Sama kerrosjono jatkuu maiden eläintäyillä (js/elaintaky.js).
     paivitaElaintakyt(this);
     // Maan vaihduttua selitevalikon kappalemäärät ovat vanhat: uudet
     // luvut luetaan juuri piirretyistä kerroksista (js/karttaselite.js).
     paivitaKarttaselite(this);
-    /*
-     * Viides kerros: ruutuun ankkuroidut mitat (mittajana ja
-     * kartuutsi). Kutsu on tässä samasta syystä kuin pallojen: pohja
-     * saapuu verkosta vasta piirron jälkeen, eikä paivitaFokusKerros
-     * enää aja itseään uudelleen sen takia.
-     */
+    // Ruutuun ankkuroidut mitat: mittajana, kartuutsi ja maataulu.
     paivitaFokusmitat(this);
     /*
-     * Seitsemäs: KAMERA. Kuvan ikkuna on uloszoomauksen pohja
-     * (js/kartta.js fokusRajaukset), ja kuva saapuu verkosta vasta
-     * piirron jälkeen — jos näkymä on sitä laajempi, kamera ajetaan
-     * ikkunaan heti eikä jäädä rikkomaan omaa sääntöä.
+     * KAMERA VIIMEISENÄ. Maan ikkuna on uloszoomauksen pohja
+     * (js/kartta.js fokusRajaukset): jos näkymä on sitä laajempi,
+     * kamera ajetaan ikkunaan heti eikä jäädä rikkomaan omaa sääntöä.
      */
     this.kartta?.tarkistaFokusZoom?.();
   }
@@ -8232,102 +8010,30 @@ export class UI {
     this.paivitaFokusKerros();
   }
 
-  /**
-   * UUTEEN MAAHAN SAAVUTAAN NÄYTTÄVÄSTI (omistajan tilaus 13.8.2026;
-   * väläys poistui saman päivän iltana: "otetaan rajan väläytys pois
-   * mutta raja voisi jäädä lähes yhtä voimakkaana näkyviin kuin se on
-   * piirron lopussa").
-   *
-   * Kaksi vaihetta:
-   *   1. viiva piirtyy päästä päähän (stroke-dasharray = polun pituus,
-   *      dashoffset pituudesta nollaan) noin kahdessa sekunnissa ja
-   *      paisuu samalla täyteen voimaansa (5.4 / 0.8)
-   *   2. valmistuessa lyhyt pehmeä asettuminen lepoarvoihin, jotka
-   *      ovat hivenen piirron loppua alempana (5 / 0.72) — ei väläystä
-   *
-   * Vaihe 2 on yksi CSS-animaatio (.maa-asettuu), vaihe 1
-   * Web Animations API — kummassakaan ei ole kehyskohtaista silmukkaa,
-   * eikä kumpikaan koske näkymään (fitViewBox), joten kartan
-   * bittikarttaa ei rasteroida uudelleen animaation takia.
-   *
-   * Liikeherkkyys ja katselutila (?lauta=) saavat viivan valmiina.
-   */
-  animoiMaanAariviiva(polut, avain) {
-    if (this.reducedMotion || this.katselu) return;
-    if (!polut.length || typeof polut[0].animate !== 'function') return;
-    const kerros = this.countryLayer;
-    kerros.classList.add('maa-piirtyy');
-
-    const liikkeet = [];
-    for (const polku of polut) {
-      // Polun oma mitta: jokainen rengas piirtyy alusta loppuun samassa
-      // ajassa, joten pieni saari ei jää pitkän rannikon jalkoihin.
-      const pituus = polku.getTotalLength?.() ?? 0;
-      if (!pituus) continue;
-      polku.style.strokeDasharray = `${pituus}`;
-      polku.style.strokeDashoffset = `${pituus}`;
-      liikkeet.push(polku.animate(
-        [{ strokeDashoffset: `${pituus}` }, { strokeDashoffset: '0' }],
-        { duration: AARIVIIVAN_PIIRTO_MS, easing: 'ease-in-out', fill: 'forwards' },
-      ));
-      /*
-       * Viiva paisuu ja voimistuu TASAISESTI jo piirtyessään täyteen
-       * voimaansa (omistajan tarkennus 13.8.2026 ilta: "tasaisesti
-       * levittää ja voimistaa viivaa jo matkalla") — asettuminen
-       * jatkaa tästä lepoon (css: maa-aariviivan-asettuminen alkaa
-       * täsmälleen näistä arvoista, ettei sauma näy).
-       */
-      liikkeet.push(polku.animate(
-        [
-          { strokeWidth: '3.5', stroke: 'rgba(150, 60, 45, 0.62)' },
-          { strokeWidth: '5.4', stroke: 'rgba(182, 61, 42, 0.8)' },
-        ],
-        { duration: AARIVIIVAN_PIIRTO_MS, easing: 'linear', fill: 'forwards' },
-      ));
-    }
-    if (!liikkeet.length) {
-      kerros.classList.remove('maa-piirtyy');
-      return;
-    }
-
-    let jaljella = liikkeet.length;
-    const valmis = () => {
-      jaljella -= 1;
-      if (jaljella > 0) return;
-      // Maa on voinut vaihtua kesken piirron: silloin nämä polut ovat jo
-      // poissa eikä asettuminen kuulu uudelle maalle.
-      if (this.dead || this.countryKey !== avain || !kerros.isConnected) return;
-      /*
-       * Viiva-aukkokuvio pois ENNEN animaatioiden perumista: fill:
-       * 'forwards' pitää dashoffsetia nollassa, ja ilman dasharrayta
-       * offsetilla ei ole enää merkitystä. Näin viiva ei välähdä
-       * katkonaisena yhtenä kehyksenä.
-       */
-      for (const polku of polut) {
-        polku.style.strokeDasharray = '';
-        polku.style.strokeDashoffset = '';
-      }
-      for (const liike of liikkeet) liike.cancel();
-      kerros.classList.remove('maa-piirtyy');
-      kerros.classList.add('maa-asettuu');
-      clearTimeout(this.aariviivaAjastin);
-      this.aariviivaAjastin = setTimeout(() => {
-        kerros.classList.remove('maa-asettuu');
-      }, AARIVIIVAN_ASETTUMIS_MS);
-    };
-    for (const liike of liikkeet) liike.addEventListener('finish', valmis, { once: true });
-  }
 
   /**
-   * Maan nimi + lippu + ⓘ kiinteänä pillerinä kartan KEHYKSELLÄ, ei
-   * kartalla (Fable maxin speksi 10.8.2026; omistajan tarkennus
-   * samana iltana: pilleri asuu AINA oikeassa reunassa ja on aina
-   * näkyvillä — nykyisen maan lehti aukeaa siitä ilman varusteita.
-   * Vain maavertailu ja minkä tahansa maan selailu (kirjanappi +
-   * maatiedot-tila) ovat löydettäviä varusteita). HTML-nappi ei
-   * skaalaudu zoomissa, ei liiku panoroinnissa eikä voi peittää
-   * kaupunkia tai nappulaa. maa = null piilottaa pillerin (lauta
-   * ilman muotoja, pelin alku).
+   * Maan nimi + lippu kiinteänä pillerinä kartan KEHYKSELLÄ — VAIN
+   * MAASELAIMESSA (js/vertailu.js maatiedot-tila).
+   *
+   * === PELINÄKYMÄSTÄ TÄMÄ ON POISSA (30.8.2026) ===
+   *
+   * Kyltti oli pelinäkymän oikeassa yläkulmassa 10.8.2026 alkaen, ja
+   * Raamattu lakkautti sen 24.8.2026 (*"oikean yläkulman maakyltti
+   * poistetaan"*): maan nimen kertoo kartuutsi vasemmassa
+   * alanurkassa. Lakkautus oli toteutettu CSS-piilotuksena
+   * (`body.fokuspohja .maa-pilleri`), ja kun luokan asettaja katosi
+   * lehtipurussa (v1365), kyltti palasi ruudulle. Nyt sitä ei enää
+   * LUODA pelinäkymässä — drawCountryBorders ei kutsu tätä.
+   *
+   * KÄYTTÖ, JOKA JÄI: maaselain. Omistaja 14.8.2026: *"oikealla saisi
+   * näkyä sama maakyltti kuin normaalitilassa"* — kartalta valitun
+   * maan nimi ja lippu näkyvät kyltissä, ja kyltin napautus avaa maan
+   * lehden. Tilan sulkeutuessa kyltti katoaa
+   * (js/vertailu.js palautaPilleriPelaajalle).
+   *
+   * HTML-nappi eikä SVG:tä: ei skaalaudu zoomissa, ei liiku
+   * panoroinnissa eikä voi peittää kaupunkia tai nappulaa. maa = null
+   * piilottaa pillerin.
    */
   paivitaMaaPilleri(maa, iso) {
     let nappi = this.maaPilleri;
