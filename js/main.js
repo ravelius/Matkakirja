@@ -44,10 +44,12 @@ import { kytkeFokusnosto } from './fokusnosto.js';
 import { kytkeSyvennys } from './syvennys.js';
 import { kytkeSkandaalit } from './skandaalit.js';
 /*
- * Laattapyramidin kytkin kehittajavalikkoon. Lipun voi antaa myos
- * osoiterivilla (?pyramidi=1), mutta iOS-kuoressa osoiteriviae EI OLE:
- * kuori lataa pelin kiinteasta osoitteesta (ios/.../Config.plist), joten
- * valikko on siella ainoa tapa kytkea pilotti paalle.
+ * Laattapyramidin kytkin kehittajavalikkoon. Pyramidi on OLETUKSENA
+ * PAALLA (omistaja 30.8.2026); kytkin on siis vertailua varten, ei
+ * kayttoonottoa. Lipun voi antaa myos osoiterivilla (?pyramidi=0),
+ * mutta iOS-kuoressa osoiteriviae EI OLE: kuori lataa pelin kiinteasta
+ * osoitteesta (ios/.../Config.plist), joten valikko on siella ainoa
+ * tapa vaihtaa vanhaan lehtikarttaan.
  */
 import { pyramidiPaalla, asetaPyramidi } from './laattapyramidi.js';
 
@@ -1333,10 +1335,11 @@ function paivitaKehittajaValikko() {
   merkitseKytkin(pyramidiNappi, pyramidi);
   if (pyramidiNappi) {
     pyramidiNappi.title = pyramidi
-      ? 'Laattapyramidi on PÄÄLLÄ: karttapohja tulee yhtenä maailmanlaajuisena '
-        + 'laattapyramidina eikä maakohtaisina lehtinä (sama kuin ?pyramidi=1)'
-      : 'Laattapyramidi on pois: kartta on maakohtaisina lehtinä — kytke päälle '
-        + 'kokeillaksesi pilottia (sama kuin ?pyramidi=1)';
+      ? 'Laattapyramidi on PÄÄLLÄ (oletus): karttapohja on yksi '
+        + 'maailmanlaajuinen laattapyramidi — kytke pois vertaillaksesi '
+        + 'vanhoihin maalehtiin (sama kuin ?pyramidi=0)'
+      : 'Laattapyramidi on POIS: kartta on vanhoina maakohtaisina lehtinä '
+        + '— kytke päälle palataksesi oletukseen (sama kuin ?pyramidi=1)';
   }
   if (polloGenerointiNappi) {
     polloGenerointiNappi.title = 'Generoi pöllön kysymysehdotukset heti tälle näkymälle '

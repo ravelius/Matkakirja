@@ -65,41 +65,53 @@ const LIPPU_AVAIN = 'matkakirja-pyramidi';
 const PUSKURI = 1;
 
 /**
- * Onko pyramidi päällä tällä laitteella?
+ * Onko pyramidi päällä tällä laitteella? OLETUS ON PÄÄLLÄ.
  *
- * Osoiterivin parametri voittaa muistetun arvon JA kirjoittaa sen, niin
- * kytkin jää voimaan seuraavaankin lataukseen. Yksityisessä selauksessa
- * kirjoitus voi heittää; silloin kytkin on voimassa vain tämän
- * latauksen ajan, mikä on täsmälleen oikea käytös.
+ * Omistajan päätös 30.8.2026: *"Ei tarvitse minkään kytkimen taakse
+ * laittaa. Kytke se suoraan peliin."* Pyramidi ei ole enää pilotti vaan
+ * pelin karttapohja, ja Raamattu on sanonut saman jo linjauksessa
+ * "YKSI MAAILMANBITTIKARTTA - MAALEHDISTÄ LUOVUTAAN".
+ *
+ * KYTKIN JÄÄ, MUTTA TOISIN PÄIN: `?pyramidi=0` ja kehittäjävalikko
+ * kytkevät sen POIS, jolloin vanhat maalehdet palaavat. Sitä tarvitaan
+ * vertailuun niin kauan kuin lehtijärjestelmä on olemassa; kun se
+ * puretaan, koko kytkin poistuu.
+ *
+ * MUISTETTU ARVO ON '0' TAI '1', ja tyhjä tarkoittaa oletusta eli
+ * päällä. Aiempi toteutus muisti vain päälläolon ja poisti avaimen kun
+ * kytkin oli pois — nyt poissaolo on tallennettava arvo, koska muuten
+ * seuraava lataus palauttaisi oletuksen ja kytkin unohtuisi.
+ *
+ * Osoiterivin parametri voittaa muistetun arvon JA kirjoittaa sen.
+ * Yksityisessä selauksessa kirjoitus voi heittää; silloin valinta on
+ * voimassa vain tämän latauksen ajan, mikä on täsmälleen oikea käytös.
  */
 export function pyramidiPaalla() {
   let parametri = null;
   try {
     parametri = new URLSearchParams(location.search).get('pyramidi');
   } catch {
-    return false; // ei ikkunaa (testiajo Nodessa)
+    return true; // ei ikkunaa (testiajo Nodessa): oletus
   }
   if (parametri === '1' || parametri === '0') {
     try {
-      if (parametri === '1') localStorage.setItem(LIPPU_AVAIN, '1');
-      else localStorage.removeItem(LIPPU_AVAIN);
+      localStorage.setItem(LIPPU_AVAIN, parametri);
     } catch {
-      /* yksityinen selaus: kytkin jää vain tälle istunnolle */
+      /* yksityinen selaus: valinta jää vain tälle istunnolle */
     }
     return parametri === '1';
   }
   try {
-    return localStorage.getItem(LIPPU_AVAIN) === '1';
+    return localStorage.getItem(LIPPU_AVAIN) !== '0';
   } catch {
-    return false;
+    return true;
   }
 }
 
 /** Kytkin päälle tai pois LAITTEELLE (kehittäjän valikko). */
 export function asetaPyramidi(paalla) {
   try {
-    if (paalla) localStorage.setItem(LIPPU_AVAIN, '1');
-    else localStorage.removeItem(LIPPU_AVAIN);
+    localStorage.setItem(LIPPU_AVAIN, paalla ? '1' : '0');
   } catch {
     /* yksityinen selaus */
   }
