@@ -16,13 +16,11 @@
  *
  * ── SIJAINTI ON ASTEINA, EI LAUDAN YKSIKKÖINÄ ──────────────────────
  *
- * Sama eläin näkyy kahdella laudalla: pelin maailmankartalla ja
- * katselutilan Euroopan laudalla (?lauta=europe). Laudoilla on eri
- * projektio ja eri koordinaatisto, joten paikka annetaan asteina ja
- * käännetään laudan omalla kaavalla (js/fokusmitat.js
- * projisoiLaudalle). Piste, joka jää laudan ulkopuolelle — Vanjärvi on
- * Euroopan laudan itäreunan takana — jää yksinkertaisesti piirtämättä
- * sillä laudalla.
+ * Paikka annetaan asteina ja käännetään laudan omalla kaavalla
+ * (js/fokusmitat.js projisoiLaudalle). Asteet valittiin aikanaan siksi,
+ * että sama eläin näkyi myös Euroopan erillislaudalla eri projektiossa;
+ * lauta poistui (Raamattu 30.8.2026), mutta asteet ovat yhä oikea
+ * muoto — ne ovat paikan totuus, laudan yksiköt vain sen projektio.
  *
  * PAIKKA ON MAAN SISÄLLÄ JA IRTI KAUPUNGEISTA. Jokainen piste on
  * tarkistettu koneellisesti (tests/elaintakyt.test.mjs): se osuu maalle

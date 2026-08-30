@@ -1852,9 +1852,10 @@ export function piirraKaupunkinapit(ryhma, kaupungit = [], { kiertoKohdat = null
  * alku.
  *
  * `laudat` — radio tarvitsee kaupunki→maa-kytkennän (map.cityCountry).
- * Se on kolmella laudalla: maailmankartta, europe ja africa. Muilla
- * laudoilla jokainen kaupunki olisi sammunut nappi, mikä on huonompi
- * kuin linssin puuttuminen kokonaan.
+ * Se on maailmankartalla ja Afrikan katselulaudalla; Euroopan
+ * erillislauta poistui (Raamattu 30.8.2026). Muilla laudoilla jokainen
+ * kaupunki olisi sammunut nappi, mikä on huonompi kuin linssin
+ * puuttuminen kokonaan.
  */
 export const LINSSI = {
   tunnus: 'radio',
@@ -1870,7 +1871,7 @@ export const LINSSI = {
     + '<path d="M5.8 12.6h5.4M5.8 16.4h5.4"/>',
   valokuva: false,
 
-  laudat: ['maailmankartta', 'europe', 'africa'],
+  laudat: ['maailmankartta', 'africa'],
 
   lahde: {
     aineisto: 'Radio Browser: yhteisön ylläpitämä hakemisto suorista radiolähetyksistä',

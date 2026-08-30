@@ -18,7 +18,6 @@ import { existsSync } from 'node:fs';
 
 import { ELAINTAKYT, ELAINTAKY_MAAT } from '../js/packs/elaintakyt.js';
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
-import { EUROPE } from '../js/packs/europe.js';
 import { isOnLand } from '../js/mapart.js';
 import { projisoiLaudalle } from '../js/fokusmitat.js';
 
@@ -76,15 +75,15 @@ test('jokaisella eläintäyllä on kaanoniteksti, kuva ja paikka', () => {
   }
 });
 
-test('molemmat laudat tuntevat jokaisen eläintäyn maan', () => {
+test('maailmankartta tuntee jokaisen eläintäyn maan', () => {
   // Merkin nimilappu ja kortin kuvateksti lukevat maan nimen laudan
   // countryShapes-taulusta (js/elaintaky.js elaintakyMaanNimi). Ilman
   // riviä siellä kartalle ilmestyisi merkki maahan, jota lauta ei
-  // muuten tunne.
+  // muuten tunne. (Euroopan erillislauta poistui — Raamattu 30.8.2026 —
+  // joten maailmankartta on ainoa lauta, jolla merkit piirtyvät.)
   for (const iso of ELAINTAKY_MAAT) {
     assert.ok(MAAILMANKARTTA.map.countryShapes[iso],
       `${iso}: maailmankartta ei tunne maata`);
-    assert.ok(EUROPE.map.countryShapes[iso], `${iso}: Euroopan lauta ei tunne maata`);
   }
 });
 
@@ -127,22 +126,3 @@ test('eläintäky ei istu kaupunkimerkin päällä eikä toisen täyn päällä'
   }
 });
 
-test('Euroopan laudalle jäävät täyt osuvat laudalle kokonaan', () => {
-  /*
-   * Katselutilan Euroopan lauta on 1000 x 1000 yksikköä eli lon
-   * −11…41 — Vanjärvi jää sen itäpuolelle, ja Islannin oikea paikka
-   * länsipuolelle. Ulkopuolelle jäävä piste on kelvollinen vastaus
-   * (js/elaintaky.js jättää merkin piirtämättä), mutta REUNALLE ei saa
-   * jäädä yhtään: puoliksi laudan ulkopuolella oleva merkki olisi vika.
-   */
-  const { width, height } = EUROPE.map;
-  for (const iso of ELAINTAKY_MAAT) {
-    const { lon, lat } = ELAINTAKYT[iso];
-    const piste = projisoiLaudalle('europe', lon, lat);
-    assert.ok(piste, `${iso}: Euroopan laudan projektio puuttuu`);
-    const ulkona = piste.x < 0 || piste.y < 0 || piste.x > width || piste.y > height;
-    if (ulkona) continue;
-    assert.ok(piste.x > 30 && piste.x < width - 30 && piste.y > 30 && piste.y < height - 30,
-      `${iso}: merkki jää Euroopan laudan reunalle (${piste.x.toFixed(0)}, ${piste.y.toFixed(0)})`);
-  }
-});

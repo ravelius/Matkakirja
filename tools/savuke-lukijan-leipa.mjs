@@ -50,6 +50,12 @@ const selain = await chromium.launch({
 const ctx = await selain.newContext({
   viewport: { width: 1280, height: 900 }, serviceWorkers: 'block',
 });
+// Fokusmoodi pois: savuke vartioi klassisen lehden ja kartan lukijaa.
+// Maailmankartalla (ainoa lauta, Raamattu 30.8.2026) fokusmoodi on
+// muuten oletuksena päällä, ja lehti aukeaisi fokusnäkymän kautta.
+await ctx.addInitScript(() => {
+  try { localStorage.setItem('matkakirja-fokusmoodi', '0'); } catch { /* yksityinen tila */ }
+});
 const sivu = await ctx.newPage();
 
 /** Hiljainen WAV: lukijaäänen pala ilman verkkoa ja ilman kuluja. */
@@ -88,7 +94,7 @@ await sivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), async (route
 const virheet = [];
 sivu.on('pageerror', (e) => virheet.push(String(e)));
 
-await sivu.goto('http://127.0.0.1:8744/index.html?lauta=europe', { waitUntil: 'load' });
+await sivu.goto('http://127.0.0.1:8744/index.html?lauta=maailmankartta', { waitUntil: 'load' });
 await sivu.waitForTimeout(2000);
 await sivu.evaluate(() => {
   const n = [...document.querySelectorAll('button')]
@@ -101,6 +107,13 @@ await sivu.waitForTimeout(2500);
 await sivu.evaluate(async () => {
   const g = window.matkakirja?.game;
   if (g?.phase === 'pickstart') g.actionPickStart('firenze', null);
+  /*
+   * Firenzen fokusvirta merkitään valmiiksi: maailmankartalla (ainoa
+   * lauta, Raamattu 30.8.2026) saapuminen avaisi muuten Livian kuplan,
+   * joka lukitsee lehden ja peittää kartan kaiuttimen — tämä savuke
+   * vartioi lukijaa, ei virtaa (sillä on oma savukkeensa).
+   */
+  (g.fokusvirrat ??= {})['maailmankartta:firenze'] = { vaihe: 'valmis' };
   window.matkakirja?.ui?.render?.();
   await new Promise((r) => setTimeout(r, 800));
 });

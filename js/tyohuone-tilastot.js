@@ -46,6 +46,9 @@
  */
 
 import { PACKS } from './pack.js';
+// Euroopan erillislauta poistui rekisteristä (Raamattu 30.8.2026),
+// mutta sisältötilastot lasketaan yhä lähdepakasta — tuonti suoraan.
+import { EUROPE } from './packs/europe.js';
 import { html, kehittajaTilaPaalla } from './ui-apurit.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
 import { POLLO_KEHITTAJAKOODI_AVAIN } from './pollo.js';
@@ -446,7 +449,7 @@ export function laskeTilastot() {
   const muodot = maailma?.map?.countryShapes ?? {};
   const mantereet = [];
   for (const [id, nimi] of MANTEREET) {
-    const p = PACKS.find((x) => x.id === id);
+    const p = id === 'europe' ? EUROPE : PACKS.find((x) => x.id === id);
     if (!p) continue;
     const maittain = new Map();
     for (const c of p.cities) {
