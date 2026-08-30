@@ -1,0 +1,52 @@
+{
+  "_": "Iranin maastokohteet. Faktat en-Wikipediasta 30.8.2026. Persianlahti on annettu ARE:lle, joten Iranin meri on Kaspianmeri.",
+  "vuoret": [
+    {
+      "nimi": "Damavand",
+      "lon": 52.109,
+      "lat": 35.951,
+      "m": 5610,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Damavand\"",
+      "nappi": "Aasian korkein tulivuori",
+      "kysymykset": [
+        "Miksi Damavand on persialaisten tarujen vuori?",
+        "Voiko uinuva tulivuori herätä?"
+      ],
+      "korostukset": ["Alborz|Alborzin"],
+      "teksti": "Damavand on uinuva kerrostulivuori Alborzin vuoristossa, vain 66 kilometriä Teheranista koilliseen ja lähellä Kaspianmeren etelärantaa. Sen 5 610 metriä tekevät siitä Iranin ja koko Länsi-Aasian korkeimman huipun — ja samalla Aasian korkeimman tulivuoren. Persialaisessa mytologiassa vuorella on aivan oma sijansa: taruissa sen uumeniin on kahlittu hirviöitä maailmanloppua odottamaan.",
+      "lahde": "en-Wikipedia \"Mount Damavand\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Kaspianmeri",
+      "lon": 51.5,
+      "lat": 37.6,
+      "lahdeKoordinaatti": "ulappa Iranin pohjoisrannikon edustalla; artikkelin oma keskipiste 50,5 / 42 on keskiallasta pohjoisempana",
+      "nappi": "Maailman suurin järvi — vai meri?",
+      "kysymykset": [
+        "Onko Kaspianmeri järvi vai meri?",
+        "Keitä olivat kaspit?"
+      ],
+      "korostukset": ["kaspit|kaspien"],
+      "teksti": "Kaspianmeri on maailman suurin sisävesi: pinta-alaa 371 000 neliökilometriä eli suunnilleen Japanin verran. Nimestään huolimatta se on umpinainen allas, josta ei ole yhteyttä valtameriin, ja siksi sitä kutsutaan myös maailman suurimmaksi järveksi — vaikka vesi on suolaista, noin kolmanneksen valtameren suolaisuudesta. Rantavaltioita on viisi, ja nimi tulee muinaiselta iranilaiskansalta, kaspeilta.",
+      "lahde": "en-Wikipedia \"Caspian Sea\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Karun",
+      "lon": 48.67,
+      "lat": 31.33,
+      "lahdeKoordinaatti": "Ahvazin kohdalla; artikkelin koordinaatti 48,17 / 30,43 on joen suulla Shatt al-Arabissa",
+      "nappi": "Iranin ainoa laivakelpoinen joki",
+      "kysymykset": [
+        "Miksi vain yhtä Iranin jokea voi purjehtia?",
+        "Minne Karunin vesi lopulta päätyy?"
+      ],
+      "korostukset": ["Zagros|Zagrosin"],
+      "teksti": "Karun on Iranin vesirikkain joki ja maan ainoa, jota laivat voivat kulkea. Se saa alkunsa Zagrosin vuoriston Zard Kuhilta ja virtaa 950 kilometriä Khuzestanin maakunnan pääkaupungin Ahvazin kautta, kunnes laskee Shatt al-Arabiin ja sitä pitkin Persianlahteen. Antiikin kreikkalaiset tunsivat sen nimellä Eulaios.",
+      "lahde": "en-Wikipedia \"Karun\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

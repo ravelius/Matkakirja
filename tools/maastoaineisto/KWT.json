@@ -1,0 +1,49 @@
+{
+  "_": "Kuwaitin maastokohteet. Faktat en-Wikipediasta 30.8.2026. Kuwait on lähes tasainen aavikkomaa, joten vuorten sijaan listalla on maan tunnetuin kohouma Mutlan harjanne — artikkeli itse kertoo, ettei se silti ole maan korkein piste.",
+  "vuoret": [
+    {
+      "nimi": "Mutlan harjanne",
+      "id": "mutla",
+      "lon": 47.6333,
+      "lat": 29.3833,
+      "m": 142,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mutla Ridge\"",
+      "nappi": "Aavikkomaan ainoa mäki",
+      "kysymykset": [
+        "Voiko maan korkein kohta olla nimetön?",
+        "Miksi tasaisessa maassa pienikin harjanne on tärkeä?"
+      ],
+      "teksti": "Mutlan harjanne on Kuwaitin näkyvin kohouma: 142 metriä merenpinnasta Jahran alueella, muuten lähes tasaisen aavikkomaan luoteiskulmassa. Maan korkein piste se ei silti ole — se on nimetön kohta kaukana lännessä, joka ei erotu ympäristöstään lainkaan. Kuwaitissa korkein paikka ja korkein maisema ovat siis eri asioita.",
+      "lahde": "en-Wikipedia \"Mutla Ridge\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Persianlahti",
+      "lon": 48.8,
+      "lat": 29.2,
+      "lahdeKoordinaatti": "ulappa Kuwaitin kaakkoisrannikon edustalla; artikkelin oma keskipiste on 52 / 26",
+      "nappi": "Helmien ja öljyn lahti",
+      "kysymykset": [
+        "Miten helmiä kalastettiin ennen öljyä?",
+        "Missä Hormuzinsalmi on?"
+      ],
+      "korostukset": ["helmisimpukoita|helmisimpukoistaan"],
+      "teksti": "Persianlahti on Länsi-Aasian sisämeri Arabian niemimaan ja Iranin välissä, Intian valtameren ja Arabianmeren jatke. Itäpäässä se yhtyy Omaninlahteen Hormuzinsalmen kautta. Lahti on tunnettu kalavesistään, riutoistaan ja runsaista helmisimpukoistaan, joskin teollistuminen ja öljyvuodot ovat vahingoittaneet sen luontoa.",
+      "lahde": "en-Wikipedia \"Persian Gulf\", johdanto-osa (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Kuwaitinlahti",
+      "lon": 47.9333,
+      "lat": 29.4333,
+      "lahdeKoordinaatti": "en-Wikipedia \"Kuwait Bay\"",
+      "nappi": "Lahti pääkaupungin sylissä",
+      "kysymykset": [
+        "Miksi satamakaupunki syntyy juuri lahden suulle?",
+        "Mistä Kuwait sai nimensä?"
+      ],
+      "teksti": "Kuwaitinlahti eli Jōn al Kuwayt on Persianlahden perukka — koko meren sisin sopukka. Kuwaitin pääkaupunki on kasvanut juuri sen kärkeen, joten suojaisa lahti on käytännössä maan koko historian näyttämö: sen rannalta kaupunki katsoo merelle.",
+      "lahde": "en-Wikipedia \"Kuwait Bay\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

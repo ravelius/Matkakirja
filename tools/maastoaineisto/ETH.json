@@ -1,0 +1,50 @@
+{
+  "_": "Etiopian maastokohteet. Faktat en-Wikipediasta 30.8.2026. Etiopia on sisämaavaltio, joten meren paikalla on maan suurin järvi Tanajärvi. Nimet fi-Wikipedian mukaan: Ras Dejen, Tanajärvi, Sininen-Niili.",
+  "vuoret": [
+    {
+      "nimi": "Ras Dejen",
+      "lon": 38.3708,
+      "lat": 13.2358,
+      "m": 4550,
+      "lahdeKoordinaatti": "en-Wikipedia \"Ras Dashen\"",
+      "nappi": "Etiopian katto",
+      "kysymykset": [
+        "Mitä nimi Ras Dejen tarkoittaa?",
+        "Millaisia eläimiä Simien-vuorilla elää?"
+      ],
+      "korostukset": ["Simien-vuoret|Simien-vuorten"],
+      "teksti": "Ras Dejen, englanniksi usein Ras Dashen, on Etiopian korkein vuori: 4 550 metriä. Se kohoaa Simien-vuorten kansallispuistossa Amharan alueella maan pohjoisosassa. Etiopian karttalaitoksen käyttämä nimi viittaa perimätiedon mukaan päällikköön eli rasiin, joka taistelee keisarin edellä.",
+      "lahde": "en-Wikipedia \"Ras Dashen\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Tanajärvi",
+      "lon": 37.25,
+      "lat": 12.0,
+      "lahdeKoordinaatti": "en-Wikipedia \"Lake Tana\" (37,25 / 12)",
+      "nappi": "Sinisen-Niilin lähde",
+      "kysymykset": [
+        "Miksi näin suuri järvi on vain 15 metriä syvä?",
+        "Mitä Tis Abbain putouksilla tapahtuu?"
+      ],
+      "teksti": "Tanajärvi on Etiopian suurin järvi ja Sinisen-Niilin lähde. Se lepää 1 788 metrin korkeudessa Etiopian ylängöllä: pituutta on noin 84 ja leveyttä 66 kilometriä, mutta syvyyttä enimmilläänkin vain 15 metriä, ja pinta-ala vaihtelee sateiden mukaan 3 000 ja 3 500 neliökilometrin välillä. Järven laskukohdasta vesi syöksyy Sinisen-Niilin putouksille, joita paikalliset kutsuvat nimellä Tis Abbai.",
+      "lahde": "en-Wikipedia \"Lake Tana\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Sininen-Niili",
+      "lon": 36.5,
+      "lat": 10.5,
+      "lahdeKoordinaatti": "joen kanjoni Etiopian ylängöllä Tanajärven lounaispuolella; en-Wikipedia \"Blue Nile\" antaa koordinaatiksi Tanajärven 37,25 / 12",
+      "nappi": "Joki, joka tuo Niilin veden",
+      "kysymykset": [
+        "Kumpi on tärkeämpi, Valkoinen vai Sininen Niili?",
+        "Missä kaupungissa Niilin haarat yhtyvät?"
+      ],
+      "teksti": "Sininen-Niili saa alkunsa Tanajärvestä ja virtaa noin 1 450 kilometriä Etiopian ja Sudanin halki, kunnes yhtyy Valkoiseen Niiliin. Valkoinen haara on pidempi, mutta vesi tulee täältä: sadekaudella Sininen-Niili tuo noin 85,6 prosenttia koko Niilin vedestä.",
+      "lahde": "en-Wikipedia \"Blue Nile\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "_": "Omanin maastokohteet. Faktat en-Wikipediasta 30.8.2026. Jabal Shamsin korkeuslukema on artikkelin tietolaatikosta (Wikidata P2044: 3 018 m); johdanto sanoo vain, että vuori on maan korkein.",
+  "vuoret": [
+    {
+      "nimi": "Jabal Shams",
+      "lon": 57.2639,
+      "lat": 23.2369,
+      "m": 3018,
+      "lahdeKoordinaatti": "en-Wikipedia \"Jebel Shams\"",
+      "nappi": "Arabian suuri kanjoni",
+      "kysymykset": [
+        "Miksi vuoren nimi on Auringon vuori?",
+        "Miten kanjoni syntyy aavikkomaahan?"
+      ],
+      "korostukset": ["Al Nakhur|Al Nakhurin"],
+      "teksti": "Jabal Shams, \"Auringon vuori\", on Omanin korkein vuori ja osa Hajarin vuoristoa. Nimen kerrotaan tulevan siitä, että auringonnousu osuu Omanissa ensimmäisenä juuri sen huipulle. Vuoren kyljessä aukeaa Al Nakhurin kanjoni, jota kutsutaan Arabian Grand Canyoniksi, ja kesälläkin huipulla on vain parikymmentä astetta lämmintä.",
+      "lahde": "en-Wikipedia \"Jebel Shams\", johdanto-osa ja tietolaatikko (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Omaninlahti",
+      "lon": 58.9,
+      "lat": 24.2,
+      "lahdeKoordinaatti": "ulappa Muscatin koillispuolella; artikkelin oma keskipiste on 58 / 25",
+      "nappi": "Portti Persianlahdelle",
+      "kysymykset": [
+        "Missä Hormuzinsalmi on?",
+        "Miksi tämä vesireitti on maailmankaupalle tärkeä?"
+      ],
+      "korostukset": ["Hormuzinsalmi|Hormuzinsalmeen"],
+      "teksti": "Omaninlahti on Intian valtameren lahti, joka yhdistää Arabianmeren Hormuzinsalmeen — ja salmi edelleen Persianlahteen. Sen pohjoisrannalla ovat Iran ja Pakistan, etelässä Oman ja lännessä Arabiemiirikunnat. Jokainen Persianlahdelle purjehtiva laiva kulkee tämän lahden kautta.",
+      "lahde": "en-Wikipedia \"Gulf of Oman\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

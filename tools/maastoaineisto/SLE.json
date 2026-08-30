@@ -1,0 +1,49 @@
+{
+  "_": "Sierra Leonen maastokohteet. Faktat en-Wikipediasta 30.8.2026.",
+  "vuoret": [
+    {
+      "nimi": "Bintumani",
+      "lon": -11.1167,
+      "lat": 9.225,
+      "m": 1945,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Bintumani\"",
+      "nappi": "Loma-vuorten korkein",
+      "kysymykset": [
+        "Mitä eläimiä Bintumanin sademetsissä elää?",
+        "Kummalla nimellä vuori tunnetaan, Bintumani vai Loma Mansa?"
+      ],
+      "teksti": "Bintumani, toiselta nimeltään Loma Mansa, on Sierra Leonen ja koko Loma-vuoriston korkein huippu: 1 945 metriä. Sen alarinteitä peittävät sademetsät, joissa elää muun muassa kääpiövirtahepoja, kääpiökrokotiileja, kalastajapöllöjä ja lukuisia kädellisiä.",
+      "lahde": "en-Wikipedia \"Mount Bintumani\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Atlantti",
+      "lon": -13.7,
+      "lat": 8.1,
+      "lahdeKoordinaatti": "ulappa Freetownin edustalla; artikkelin oma keskipiste on -25 / 0",
+      "nappi": "Länsi-Afrikan portti maailmalle",
+      "kysymykset": [
+        "Ketkä ylittivät Atlantin ensimmäisinä?",
+        "Miksi vuotta 1492 pidetään käännekohtana?"
+      ],
+      "teksti": "Atlantti on maailman toiseksi suurin valtameri, joka erottaa Amerikan mantereet Afrikasta ja Euraasiasta. Ensimmäisinä sen tiedetään ylittäneen norjalaisten viikinkien, mutta vasta Kolumbuksen retki vuonna 1492 avasi valtameren ylittävän liikenteen ja löytöretkien aikakauden. Sierra Leonen koko rannikko avautuu tälle valtamerelle.",
+      "lahde": "en-Wikipedia \"Atlantic Ocean\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Rokel",
+      "lon": -12.8,
+      "lat": 8.55,
+      "lahdeKoordinaatti": "en-Wikipedia \"Rokel River\" — koordinaatti on joen keskijuoksulla",
+      "nappi": "Sierra Leonen suurin joki",
+      "kysymykset": [
+        "Miksi Rokelin suisto on suojeltu?",
+        "Mitkä vuoret jakavat joen valuma-alueen?"
+      ],
+      "teksti": "Rokel, toiselta nimeltään Seli, on Sierra Leonen suurin joki, jonka valuma-alue on yli 10 000 neliökilometriä. Sen laaja suisto, lähes 3 000 neliökilometriä, nimettiin kansainvälisesti tärkeäksi Ramsar-kosteikoksi vuonna 1999. Valuma-aluetta jakavat Gbengben ja Kabalan kukkulat sekä Sula-vuoret.",
+      "lahde": "en-Wikipedia \"Rokel River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "_": "Afganistanin maastokohteet. Faktat en-Wikipediasta 30.8.2026. Merta maalla ei ole, joten vuoren rinnalla on kaksi jokea: rajajoki Amudarja ja maan oma pisin Helmand.",
+  "vuoret": [
+    {
+      "nimi": "Noshaq",
+      "lon": 71.8283,
+      "lat": 36.4317,
+      "m": 7492,
+      "lahdeKoordinaatti": "en-Wikipedia \"Noshaq\"",
+      "nappi": "Maailman läntisin 7 000 metrin huippu",
+      "kysymykset": [
+        "Mikä Hindukuš on?",
+        "Miksi Wakhanin käytävä on niin kapea?"
+      ],
+      "korostukset": ["Hindukuš|Hindukušin"],
+      "teksti": "Noshaq on Afganistanin korkein vuori: 7 492 metriä Hindukušin vuoristossa Pakistanin rajalla, maan koillisessa Wakhanin käytävässä. Koko Hindukušissa sen edelle kohoaa vain Tirich Mir. Samalla se on maailman läntisin seitsemän kilometrin korkeuteen yltävä huippu — siitä länteen yhtä korkeaa ei ole missään.",
+      "lahde": "en-Wikipedia \"Noshaq\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Amudarja",
+      "lon": 67.0,
+      "lat": 37.3,
+      "lahdeKoordinaatti": "joen Afganistanin-rajan osuus Termezin luona; artikkelin koordinaatti 59,68 / 44,11 on kuivuneessa suistossa Uzbekistanissa",
+      "nappi": "Antiikin Oxus, Iranin ja Turanin raja",
+      "kysymykset": [
+        "Miksi Amudarja ei enää yllä Araljärveen?",
+        "Mikä oli Turan?"
+      ],
+      "korostukset": ["Oxus|Oxus"],
+      "teksti": "Amudarja, antiikin aikana Oxus, on Keski-Aasian suuria jokia: se syntyy Pamirin vuoristossa Vahšin ja Pandžin yhtyessä ja muodostaa yläjuoksullaan Afganistanin pohjoisrajan. Vanhassa historiassa sitä pidettiin Iranin ja Turanin eli paimentolaisten arojen rajana. Nykyään joki ei enää yllä Araljärveen asti, vaan sen suu on entisen järven kuivuneella pohjalla.",
+      "lahde": "en-Wikipedia \"Amu Darya\", johdanto-osa (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Helmand",
+      "lon": 64.36,
+      "lat": 31.59,
+      "lahdeKoordinaatti": "keskijuoksu Lashkar Gahin kohdalla; artikkelilla ei ole jokea kuvaavaa keskipistettä",
+      "nappi": "Joki, joka ei laske mereen",
+      "kysymykset": [
+        "Minne joki päätyy, jos ei mereen?",
+        "Mikä Sistanin allas on?"
+      ],
+      "korostukset": ["Hamunjärvi|Hamunjärveen"],
+      "teksti": "Helmand on Afganistanin pisin joki. Se saa alkunsa Hindukušin Sanglakhin vuorilta Kabulin länsipuolelta ja virtaa maan kuivan lounaisosan halki. Mereen se ei laske koskaan: joki päättyy Hamunjärveen Iranin rajalle, sillä koko Sistanin allas on umpinainen — vesi poistuu sieltä vain haihtumalla.",
+      "lahde": "en-Wikipedia \"Helmand River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

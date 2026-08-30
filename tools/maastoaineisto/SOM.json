@@ -1,0 +1,63 @@
+{
+  "_": "Somalian maastokohteet. Faktat en-Wikipediasta 30.8.2026. Neljä kohdetta, koska maalla on kaksi aivan erilaista merenrantaa: Adeninlahti pohjoisessa ja avoin Intian valtameri idässä.",
+  "vuoret": [
+    {
+      "nimi": "Shimbiris",
+      "lon": 47.2461,
+      "lat": 10.7347,
+      "m": 2460,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Shimbiris\"",
+      "nappi": "Somalian korkein huippu",
+      "kysymykset": [
+        "Mikä on Cal Madowin vuoristo?",
+        "Miksi huipun tarkka korkeus on epävarma?"
+      ],
+      "korostukset": ["Cal Madow|Cal Madowin"],
+      "teksti": "Shimbiris on Somalian korkein huippu: noin 2 460 metriä Ogon vuorilla, jotka kuuluvat Cal Madowin vuoristojärjestelmään Sanaagin alueella. Vuori kohoaa näkyvästi Adeninlahtea reunustavien jyrkänteiden yllä. Tutkamittaukset viittaavat siihen, että usein mainittu vanhempi lukema 2 416 metriä on hieman liian pieni.",
+      "lahde": "en-Wikipedia \"Mount Shimbiris\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Adeninlahti",
+      "lon": 47.6,
+      "lat": 11.6,
+      "lahdeKoordinaatti": "ulappa Somalian pohjoisrannikon edustalla; artikkelin oma keskipiste on 48 / 12",
+      "nappi": "Portti Punaisellemerelle",
+      "kysymykset": [
+        "Miksi Adeninlahti levenee vuosi vuodelta?",
+        "Mikä oli antiikin Erythrean meri?"
+      ],
+      "teksti": "Adeninlahti on Intian valtameren syvä lahti Jemenin ja Somalian rannikoiden välissä, ja luoteessa se yhtyy Punaiseenmereen Bab el Mandebin salmen kautta. Lahden keskellä kulkee Adenin selänne, jonka tuliperäinen liike leventää lahtea noin puolitoista senttimetriä vuodessa. Antiikin kreikkalaiset pitivät lahtea yhtenä Erythrean meren tärkeimmistä osista.",
+      "lahde": "en-Wikipedia \"Gulf of Aden\", johdanto-osa (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Intian valtameri",
+      "lon": 46.5,
+      "lat": 1.2,
+      "lahdeKoordinaatti": "ulappa Mogadishun kaakkoispuolella; artikkelin oma keskipiste on 80 / -20",
+      "nappi": "Maailman kolmanneksi suurin valtameri",
+      "kysymykset": [
+        "Kuinka suuren osan maapallon vesistä valtameri kattaa?",
+        "Mitkä reunameret siihen kuuluvat?"
+      ],
+      "teksti": "Intian valtameri kattaa yli 70 miljoonaa neliökilometriä eli noin viidenneksen maapallon vesipinnasta, ja sitä rajaavat pohjoisessa Aasia, lännessä Afrikka ja idässä Australia. Siihen kuuluu suuria reunameriä kuten Arabianmeri ja Bengalinlahti. Somalian koko itäranta avautuu tälle valtamerelle.",
+      "lahde": "en-Wikipedia \"Indian Ocean\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Jubba",
+      "lon": 42.6307,
+      "lat": -0.2495,
+      "lahdeKoordinaatti": "en-Wikipedia \"Jubba River\" — koordinaatti on suulla Goobweynin kohdalla",
+      "nappi": "Joki jolta Jubaland sai nimensä",
+      "kysymykset": [
+        "Mitkä kaksi jokea yhtyvät Jubbaksi?",
+        "Miksi osavaltio on nimetty joen mukaan?"
+      ],
+      "teksti": "Jubba syntyy Etiopian rajalla, jossa Dawa ja Ganale Dorya yhtyvät, ja virtaa suoraan etelään Somalian halki mereen Goobweynin kohdalla. Sen valuma-alue on noin 749 000 neliökilometriä, ja Jubalandin osavaltio — entinen Trans-Juba — on saanut nimensä joelta.",
+      "lahde": "en-Wikipedia \"Jubba River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

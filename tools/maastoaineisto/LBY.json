@@ -1,0 +1,49 @@
+{
+  "_": "Libyan maastokohteet. Faktat en-Wikipediasta 30.8.2026. Libyassa ei ole pysyviä jokia, joten joen paikalla on toinen meri: Iso-Syrtti (fi-Wikipedian nimi; en \"Gulf of Sidra\").",
+  "vuoret": [
+    {
+      "nimi": "Bikku Bitti",
+      "lon": 19.2067,
+      "lat": 22.0036,
+      "m": 2267,
+      "lahdeKoordinaatti": "en-Wikipedia \"Bikku Bitti\"",
+      "nappi": "Huippu, jolle noustiin vasta 2005",
+      "kysymykset": [
+        "Miksi ensimmäinen huiputus onnistui vasta 2005?",
+        "Missä Tibestin vuoristo on?"
+      ],
+      "korostukset": ["Tibesti|Tibestin"],
+      "teksti": "Bikku Bitti eli Bette on Libyan korkein vuori: noin 2 267 metriä. Se sijaitsee Tibestin vuoriston Dohonen haarakkeessa syvällä eteläisessä autiomaassa, lähellä Tšadin rajaa. Vuori on niin syrjäinen, että ensimmäinen tunnettu nousu huipulle tehtiin vasta joulukuussa 2005, kun brittiläinen Ginge Fullen onnistui kahden epäonnistuneen yrityksen jälkeen.",
+      "lahde": "en-Wikipedia \"Bikku Bitti\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Välimeri",
+      "lon": 13.5,
+      "lat": 33.3,
+      "lahdeKoordinaatti": "ulappa Tripolin edustalla; en-Wikipedia \"Mediterranean Sea\" antaa keskipisteeksi 18 / 35",
+      "nappi": "Antiikin valtatie",
+      "kysymykset": [
+        "Miksi Välimerta sanotaan lännen sivilisaation kehdoksi?",
+        "Montako reunamerta Välimereen kuuluu?"
+      ],
+      "teksti": "Välimeri on Euroopan, Aasian ja Afrikan välissä lepäävä meri, jonka rantaa koko Libyan pitkä rannikko on. Meri on lähes kokonaan maan ympäröimä ja peittää noin 2,5 miljoonaa neliökilometriä. Antiikissa se oli kauppiaiden, matkalaisten ja siirtolaisten valtatie, jonka ääreltä nousivat Egyptin, Kreikan ja hedelmällisen puolikuun varhaiset korkeakulttuurit — siksi sitä on kutsuttu lännen sivilisaation hautomoksi.",
+      "lahde": "en-Wikipedia \"Mediterranean Sea\", johdanto-osa (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Iso-Syrtti",
+      "lon": 18.0,
+      "lat": 31.5,
+      "lahdeKoordinaatti": "en-Wikipedia \"Gulf of Sidra\" (18 / 31,5)",
+      "nappi": "Antiikin Syrtis Major",
+      "kysymykset": [
+        "Missä Pieni-Syrtti sijaitsee?",
+        "Mistä lahden nykyiset nimet tulevat?"
+      ],
+      "teksti": "Iso-Syrtti on Välimeren suuri lahti Libyan pohjoisrannikolla. Antiikin aikaan se tunnettiin nimellä Syrtis Major erotuksena Tunisian rannikon Pienestä-Syrtistä eli Syrtis Minorista. Nykyiset nimet Gulf of Sidra ja Gulf of Sirte tulevat Sidran öljysatamasta ja Sirten kaupungista.",
+      "lahde": "en-Wikipedia \"Gulf of Sidra\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": []
+}

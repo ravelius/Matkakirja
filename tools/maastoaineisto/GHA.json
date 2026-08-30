@@ -1,0 +1,50 @@
+{
+  "_": "Ghanan maastokohteet. Faktat en-Wikipediasta 30.8.2026. Vuoreksi on valittu Afadja, Ghanan tunnetuin vuori: artikkeli kertoo, että huippu ilmoitetaan usein 885-metriseksi mutta on todellisuudessa 587 m, ja että maan korkein huippu on viereinen Leklata — Leklatalla ei ole omaa artikkelia, joten kohteeksi sopii vain Afadja. Korkeuskentässä on artikkelin tietolaatikon 885 m, ja tarina kerrotaan tekstissä.",
+  "vuoret": [
+    {
+      "nimi": "Afadja",
+      "lon": 0.6033,
+      "lat": 7.0269,
+      "m": 885,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Afadja\"",
+      "nappi": "Vuori, jota maine kasvattaa",
+      "kysymykset": [
+        "Kuinka korkea Afadja oikeasti on?",
+        "Mikä on Ghanan korkein huippu?"
+      ],
+      "korostukset": ["Togo|Togon"],
+      "teksti": "Afadja, ewen kielellä Afadjato, on Ghanan kuuluisimpia vuoria. Se kohoaa Voltan alueella Togon rajan tuntumassa, noin 178 kilometrin päässä sekä Accrasta että Lomésta. Huipun korkeudeksi ilmoitetaan usein 885 metriä, mutta todellisuudessa se yltää vain 587 metriin — ja Ghanan korkein huippu on sitä paitsi viereinen Leklata muutaman kilometrin päässä idässä.",
+      "lahde": "en-Wikipedia \"Mount Afadja\", johdanto-osa ja tietolaatikko (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Guineanlahti",
+      "lon": -0.5,
+      "lat": 5.2,
+      "lahdeKoordinaatti": "ulappa Accran edustalla; en-Wikipedia \"Gulf of Guinea\" antaa keskipisteeksi 0 / 0",
+      "nappi": "Lahti, jossa nolla kohtaa nollan",
+      "kysymykset": [
+        "Mikä ihmeen Null Island?",
+        "Mitkä suuret joet laskevat Guineanlahteen?"
+      ],
+      "korostukset": ["päiväntasaaja|päiväntasaaja"],
+      "teksti": "Guineanlahti on trooppisen Atlantin koillisin osa, ja Ghanan koko rannikko on sen rantaa. Lahdella sijaitsee maapallon koordinaattien nollapiste: kohta, jossa päiväntasaaja ja Greenwichin nollameridiaani leikkaavat, on saanut kartantekijöiltä leikillisen nimen Null Island. Lahteen laskevat monet suuret joet, muun muassa Niger ja Ghanan oma Volta.",
+      "lahde": "en-Wikipedia \"Gulf of Guinea\", johdanto-osa (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Voltajärvi",
+      "lon": 0.0,
+      "lat": 6.5,
+      "lahdeKoordinaatti": "en-Wikipedia \"Lake Volta\" (0 / 6,5)",
+      "nappi": "Maailman suurin tekojärvi",
+      "kysymykset": [
+        "Mikä pato synnytti Voltajärven?",
+        "Mistä Ghanan sähkö tulee?"
+      ],
+      "teksti": "Voltajärvi on pinta-alaltaan maailman suurin tekojärvi: 8 502 neliökilometriä, kokonaan Ghanan sisällä. Se patoutui Akosombon padon taakse, joka tuottaa huomattavan osan Ghanan sähköstä, ja ulottuu etelän Akosombosta maan pohjoisosaan Tamalen lounaispuolelle asti.",
+      "lahde": "en-Wikipedia \"Lake Volta\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": []
+}
