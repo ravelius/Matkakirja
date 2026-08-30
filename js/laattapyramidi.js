@@ -11,23 +11,20 @@
  * Laatat tekee tools/generoi-laattapyramidi.mjs ja ne asuvat ämpärissä
  * polussa `pyramidi/z<taso>/<sarake>/<rivi>.webp`. Luettelo
  * (`pyramidi.json`) kertoo arkin paikan laudalla, laattakoon ja tasojen
- * mitat — peli ei arvaa niistä mitään, aivan kuten maalehtikään ei
- * arvannut omaa paikkaansa.
+ * mitat — peli ei arvaa niistä mitään.
  *
- * === TÄMÄ ON PILOTTI LIPUN TAKANA ==================================
+ * === TÄMÄ ON PELIN AINOA KARTTAPOHJA ===============================
  *
- * Kytkin on `?pyramidi=1` (tai kehittäjän hammasratasvalikko, sama
- * kaava kuin karttamittarilla: js/karttamittari.js). LIPPU POIS =
- * OLETUSPOLKU ENNALLAAN: tämä moduuli ei tee mitään, ei hae mitään
- * eikä lisää DOMiin yhtäkään elementtiä. Vanhaa lehtijärjestelmää ei
- * ole tässä erässä purettu — se puretaan omana eränään vasta kun
- * pyramidi kattaa kaikki käytöt.
+ * Omistajan päätös 30.8.2026, sanatarkka: *"Ei kun poista kaikki muut
+ * vaihtoehdot käytöstä ja kytke peliin vain tämä uusi kartta, ei mitään
+ * muuta."* ja *"Joo, ei pidetä mitään varajärjestelmiä yllä."*
+ * Kytkintä (`?pyramidi`), kehittäjävalikon riviä ja vanhaa
+ * maakohtaista fokuslehtijärjestelmää EI OLE — ne purettiin
+ * kokonaisuudessaan, eikä pyramidille ole varajärjestelmää.
  *
  * === MIKSI SVG-KUVIA EIKÄ CANVASTA =================================
  *
- * Laatat menevät samaan kerrokseen ja samalla tavalla kuin maalehdet
- * (js/fokuskartta.js piirraPikkulehti): `<image>` laudan
- * koordinaateissa. Silloin kartan oma siirtokuori liikuttaa niitä
+ * Laatat ovat `<image>`-elementteinä laudan koordinaateissa. Silloin kartan oma siirtokuori liikuttaa niitä
  * kompositorilla eikä yksikään kehys maalaa niitä uudelleen — juuri se,
  * mitä Raamatun "BITTIKARTTA VAIHEET 2-3" vaatii ("kartan kooste elää
  * KARTTAKUOREN SISÄLLÄ"). Ruutuavaruudessa elävä canvas mitattiin
@@ -58,63 +55,35 @@
 import { el } from './mapart.js';
 import { pyramidiUrl } from './media.js';
 
-/** Kytkimen muistipaikka laitteella (sama kaava kuin karttamittarilla). */
-const LIPPU_AVAIN = 'matkakirja-pyramidi';
-
 /** Laattoja näkyvän alueen ympärille joka suuntaan. */
 const PUSKURI = 1;
 
 /**
- * Onko pyramidi päällä tällä laitteella? OLETUS ON PÄÄLLÄ.
+ * Minkä laudan pyramidi kattaa.
  *
- * Omistajan päätös 30.8.2026: *"Ei tarvitse minkään kytkimen taakse
- * laittaa. Kytke se suoraan peliin."* Pyramidi ei ole enää pilotti vaan
- * pelin karttapohja, ja Raamattu on sanonut saman jo linjauksessa
- * "YKSI MAAILMANBITTIKARTTA - MAALEHDISTÄ LUOVUTAAN".
+ * ARKKI ON MAAILMANKARTAN ARKKI (docs/moduulit/laattapyramidi.md luku 1:
+ * 84 °N…66 °S, leveys 12000 lautayksikköä), ja laatan paikka lasketaan
+ * suoraan siitä. Katselutilan maanosalaudoilla (?lauta=africa) sama
+ * laskenta osoittaisi laatat aivan väärään kohtaan, joten pyramidi ei
+ * kuulu niille — ne piirtävät oman karttansa kuten ennenkin.
  *
- * KYTKIN JÄÄ, MUTTA TOISIN PÄIN: `?pyramidi=0` ja kehittäjävalikko
- * kytkevät sen POIS, jolloin vanhat maalehdet palaavat. Sitä tarvitaan
- * vertailuun niin kauan kuin lehtijärjestelmä on olemassa; kun se
- * puretaan, koko kytkin poistuu.
- *
- * MUISTETTU ARVO ON '0' TAI '1', ja tyhjä tarkoittaa oletusta eli
- * päällä. Aiempi toteutus muisti vain päälläolon ja poisti avaimen kun
- * kytkin oli pois — nyt poissaolo on tallennettava arvo, koska muuten
- * seuraava lataus palauttaisi oletuksen ja kytkin unohtuisi.
- *
- * Osoiterivin parametri voittaa muistetun arvon JA kirjoittaa sen.
- * Yksityisessä selauksessa kirjoitus voi heittää; silloin valinta on
- * voimassa vain tämän latauksen ajan, mikä on täsmälleen oikea käytös.
+ * Tämä EI ole kytkin eikä varajärjestelmä: se on arkin identiteetti.
+ * Pelilaudalla kartta on aina ja vain pyramidi.
  */
-export function pyramidiPaalla() {
-  let parametri = null;
-  try {
-    parametri = new URLSearchParams(location.search).get('pyramidi');
-  } catch {
-    return true; // ei ikkunaa (testiajo Nodessa): oletus
-  }
-  if (parametri === '1' || parametri === '0') {
-    try {
-      localStorage.setItem(LIPPU_AVAIN, parametri);
-    } catch {
-      /* yksityinen selaus: valinta jää vain tälle istunnolle */
-    }
-    return parametri === '1';
-  }
-  try {
-    return localStorage.getItem(LIPPU_AVAIN) !== '0';
-  } catch {
-    return true;
-  }
-}
+const PYRAMIDIN_LAUTA = 'maailmankartta';
 
-/** Kytkin päälle tai pois LAITTEELLE (kehittäjän valikko). */
-export function asetaPyramidi(paalla) {
-  try {
-    localStorage.setItem(LIPPU_AVAIN, paalla ? '1' : '0');
-  } catch {
-    /* yksityinen selaus */
-  }
+/**
+ * Kattaako laattapyramidi tämän laudan?
+ *
+ * Kutsutaan laudan pystytyksestä (js/ui.js drawBoard): kun pyramidi
+ * kattaa laudan, laudan omaa pohjamaalausta — pergamenttia, mantereita,
+ * maastoa — EI piirretä lainkaan. Laatat ovat pohjakerros, ja vanha
+ * piirros jäisi niiden alle näkymättömiin: latauksen alussa se ehti
+ * välähtää ruudulla (omistajan TestFlight-havainto 30.8.2026: *"Peli
+ * piirtää alle ensin sen vanhan kartan ja sitten päälle sen uuden."*).
+ */
+export function pyramidiKattaa(lauta) {
+  return lauta === PYRAMIDIN_LAUTA;
 }
 
 /* ------------------------------------------------------------ luettelo */
@@ -249,16 +218,18 @@ function laattaOlemassa(taso, sarake, rivi) {
 
 /**
  * Päivittää näkyvät laatat. Turvallinen kutsua joka näkymän
- * asettumisesta: lippu pois → palaa heti, eikä mitään ole muuttunut.
+ * asettumisesta: ilman näkyvää aluetta tai kerrosta palaa heti.
  */
 export function paivitaPyramidi(ui) {
-  if (!pyramidiPaalla()) return;
   if (ui?.dead || !ui?.pyramidiKerros) return;
+  // Katselutilan maanosalaudat piirtävät oman karttansa (ks.
+  // pyramidiKattaa): niille laatat osuisivat väärään kohtaan.
+  if (!pyramidiKattaa(ui.game?.pack?.id)) return;
   const nakyva = ui.nakyvaAlue?.();
   if (!nakyva?.w) return;
   if (!luettelo) {
     // Ensimmäinen kutsu käynnistää haun ja palaa; piirto tulee heti kun
-    // luettelo on kädessä (sama malli kuin maalehden puuttuvalla kuvalla).
+    // luettelo on kädessä.
     void haeLuettelo().then((j) => { if (j && !ui.dead) paivitaPyramidi(ui); });
     return;
   }

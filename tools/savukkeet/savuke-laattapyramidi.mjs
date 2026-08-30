@@ -1,5 +1,5 @@
 /*
- * Savuke: LAATTAPYRAMIDI (js/laattapyramidi.js, pilotti lipun takana).
+ * Savuke: LAATTAPYRAMIDI (js/laattapyramidi.js) — pelin ainoa karttapohja.
  *
  *   node tools/savukkeet/savuke-laattapyramidi.mjs [--laatat <kansio>]
  *
@@ -9,12 +9,9 @@
  *
  * === MITÄ TÄMÄ VARTIOI ==============================================
  *
- *   P1  LIPPU POIS = OLETUSPOLKU ENNALLAAN. Ilman ?pyramidi=1 kerros
- *       on tyhjä, verkosta ei haeta laattaa eikä luetteloa, ja
- *       maalehdet toimivat kuten ennen. Tämä on koko pilotin ehto, ja
- *       siksi se on ensimmäinen väite.
- *   P2  Lippu päällä: laatat ilmestyvät kerrokseen ja maalehdet
- *       katoavat (ei lehtivalintaa, ei saumoja).
+ *   P2  Laatat ilmestyvät kerrokseen eikä yhtäkään maalehteä haeta
+ *       (ei lehtivalintaa, ei saumoja) — vartio siitä, ettei purettu
+ *       lehtijärjestelmä palaa.
  *   P3  Vain näkyvä pala ladataan — laattojen määrä on kymmeniä, ei
  *       tuhansia, ja se pysyy samassa suuruusluokassa zoomatessa.
  *   P4  Puuttuvaa laattaa EI pyydetä: luettelon laatasto-bittikartta
@@ -86,7 +83,7 @@ const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromiu
  * Laattapyyntöjä EI päästetä verkkoon: ne palvellaan pilottikansiosta,
  * ja puuttuva laatta saa 404:n — juuri se, mitä P4 mittaa.
  */
-async function avaaPeli({ lippu }) {
+async function avaaPeli() {
   const ctx = await selain.newContext({
     viewport: { width: 390, height: 844 },
     hasTouch: true,
@@ -132,7 +129,7 @@ async function avaaPeli({ lippu }) {
       body: readFileSync(tiedosto),
     });
   });
-  await sivu.goto(osoite + (lippu ? '?pyramidi=1' : '?pyramidi=0'), { waitUntil: 'load' });
+  await sivu.goto(osoite, { waitUntil: 'load' });
   await sivu.waitForTimeout(2500);
   await sivu.evaluate(() => {
     [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
@@ -151,32 +148,18 @@ const laattojaKerroksessa = (sivu) => sivu.evaluate(
 );
 const mittarit = (sivu) => sivu.evaluate(() => globalThis.__pyramidinMittarit?.() ?? null);
 
-/* ============ P1: lippu pois — oletuspolku ennallaan ================ */
+/* ============ P2-P5 =================================================
+ *
+ * KYTKINTÄ EI ENÄÄ OLE (lehtipurku 30.8.2026). Entinen P1 mittasi
+ * "lippu pois = vanha lehtijärjestelmä ennallaan"; sitä ei voi enää
+ * mitata eikä pidäkään, koska omistaja poisti koko vaihtoehdon:
+ * *"Ei kun poista kaikki muut vaihtoehdot käytöstä ja kytke peliin vain
+ * tämä uusi kartta, ei mitään muuta."* Lehtipyyntöjen puuttuminen
+ * (P2b) on nyt pysyvä vartio: se kaatuu, jos lehtijärjestelmä palaa.
+ */
 
-console.log('--- P1: lippu pois ---');
-{
-  const { sivu, ctx, pyynnot, lehtipyynnot } = await avaaPeli({ lippu: false });
-  const laattoja = await laattojaKerroksessa(sivu);
-  const m = await mittarit(sivu);
-  vaadi('P1a kerros on olemassa mutta tyhjä', laattoja === 0, `laattoja ${laattoja}`);
-  vaadi('P1b yhtään pyramidipyyntöä ei tehdä', pyynnot.length === 0,
-    `pyyntöjä ${pyynnot.length}: ${pyynnot.slice(0, 3).join(', ')}`);
-  /*
-   * Vanha lehtijärjestelmä on yhä käytössä: sitä ei voi todeta
-   * piirretyistä kuvista, koska testi katkaisee verkon, mutta PYYNNÖT
-   * se tekee — ja juuri niiden olemassaolo on todiste siitä, ettei
-   * lippu poistanut mitään.
-   */
-  vaadi('P1c vanha lehtijärjestelmä on yhä käytössä', lehtipyynnot.length > 0,
-    `lehtipyyntöjä ${lehtipyynnot.length}`);
-  vaadi('P1d mittarikahva on olemassa ja nollilla', m && m.nakymassa === 0, JSON.stringify(m));
-  await ctx.close();
-}
-
-/* ============ P2-P5: lippu päällä =================================== */
-
-console.log('\n--- P2-P5: lippu päällä ---');
-const { sivu, ctx, pyynnot, lehtipyynnot } = await avaaPeli({ lippu: true });
+console.log('--- P2-P5 ---');
+const { sivu, ctx, pyynnot, lehtipyynnot } = await avaaPeli();
 
 const laattoja = await laattojaKerroksessa(sivu);
 vaadi('P2a laattoja on kerroksessa', laattoja > 0, `laattoja ${laattoja}`);

@@ -959,69 +959,6 @@ export const FOKUS_POHJAT = {
   },
 };
 
-/*
- * ============ KAUKOZOOMIN YLEISLEHTI (omistaja 26.8.2026) ============
- *
- * *"Uloszoomattu maailmankartta näyttää tilkkutäkiltä."* Syy on
- * rakenteellinen: jokainen maalehti korostaa omaa maataan ja piirtää
- * naapurit haaleina, joten vierekkäiset lehdet esittävät saman
- * rajaseudun kahdella eri voimalla. Lähikuvassa juuri sitä
- * fokusmoodilta halutaan; kaukaa katsottuna se on tilkkutäkki — ja
- * lehtiä on ruudulla samalla neljä tai viisi, mikä on kaukozoomissa
- * pelkkää muistikuormaa ilman yhtään luettavaa yksityiskohtaa.
- *
- * YLEISLEHTI on yksi kuva koko laudalta ILMAN maakorostuksia: sama
- * paperi, sama hypsometria, sama meren syvyysporrastus kuin
- * maalehdillä, mutta kaikki maat samalla voimalla eikä yhtään
- * kartuutsia tai kaupunkinimeä (tools/tee-yleislehti.mjs). Peli
- * näyttää sen kaukozoomissa ja purkaa maalehdet siksi aikaa pois
- * (js/fokuskartta.js "KAUKOZOOMIN YLEISLEHTI").
- *
- * LEHTI ON LAUTAA KORKEAMPI — KAHDESTA SYYSTÄ.
- *
- * 1. KARTTA-ALA (omistaja 29.8.2026 ilta: *"alhaalta ja varsinkin
- *    ylhäältä leikkautuu liikaa karttaa pois"*). Lauta on 5399
- *    yksikköä korkea, mikä vastaa leveyspiirejä 76 °N…58 °S — juuri
- *    Grönlannin ja Huippuvuorten yli. Lehti piirretään siksi laudan
- *    ULKOPUOLELLE asti, leveyspiireille 84 °N…66 °S: y = −611 … 5811.
- *
- *    PROJEKTIO EI MUUTU. Millerin lieriön vakiot (LEVEYS 12000, LON0
- *    −175, POHJOINEN 76) ovat koskemattomat, joten y = 0 on yhä 76.
- *    leveyspiiri ja jokainen laudalle esilaskettu piste — kaupungit,
- *    fokuskohteet, eläintäyt, kohtaamiset — on entisellä paikallaan
- *    yksikön tarkkuudella. Vain kuvan laatikko kasvoi; Miller jatkuu
- *    nollan yläpuolelle itsestään.
- *
- * 2. ATLASKEHYS (omistajan tilaus 29.8.2026: *"ei näy sitä kartan
- *    reunapaperia ja lisämerkintöjä?"*). Kartta-alan ylä- ja
- *    alapuolelle on poltettu painetun atlaslehden PAPERIMARGINAALI
- *    kaksoisviivakehyksineen, kartusseineen, mittakaavajanoineen ja
- *    painajanriveineen: 435 yksikköä ylhäällä ja 450 alhaalla. Lehti on
- *    kiertävällä laudalla tasan laudan levyinen — sivureunaa ei ole
- *    missään zoomissa — joten marginaalia on vain ylhäällä ja alhaalla.
- *
- * KUMPI NÄKYY MISSÄKIN. Uloimmalla zoomilla näkymän leveys on laudan
- * leveys (js/kartta.js rajaaSkaala), joten näkyvä KORKEUS on ruudun
- * kuvasuhteen asia: 16:9-työpöydällä 6150 yksikköä, tabletilla (1180 x
- * 820) 7466. Kartta-ala (6422) täyttää siis leveän ruudun reunasta
- * reunaan — juuri se, mitä omistaja pyysi — ja arkin marginaali tulee
- * näkyviin korkeammalla ruudulla ja panoroitaessa.
- *
- * Luvut ovat suoraan työkalun kirjoittamasta MAAILMA.json-tiedostosta
- * (tools/tee-yleislehti.mjs; tasauksen ankkurit alle 1,7 lautayksikköä).
- *
- * TÄMÄ EI OLE FOKUS_POHJAT-TAULUSSA. Se ei ole minkään maan lehti:
- * atlaksen valinta, sumuverho ja kameran ajot lukevat FOKUS_POHJAT-
- * taulua maakohtaisesti, ja koko laudan kokoinen "maa" sotkisi ne
- * kaikki (valinta ottaisi sen aina, verho tekisi reiän koko maailmaan).
- */
-export const YLEISLEHTI = {
-  lauta: 'maailmankartta',
-  bbox: { x: 0, y: -1046, w: 12000, h: 7307 },
-  // Kameran ikkuna on kartta-ala (84 °N…66 °S) — marginaaliin ei ajeta.
-  rajaus: { x: 0, y: -611, w: 12000, h: 6422 },
-  tiedosto: 'MAAILMA.webp',
-};
 
 /*
  * LAUTOJEN PROJEKTIOT — vain mittajanaa varten (js/fokusmitat.js).
@@ -1195,16 +1132,6 @@ export const FOKUS_MAANIMET = {
   // uk: "Україна" (en-Wikipedia, Ukraine, native_name).
   UKR: { paikallinen: 'Україна · Ukraїna' },
 };
-
-/*
- * Piirtääkö peli lisänimet SVG:nä kuvan päälle?
- *
- * EI PIIRRÄ. Nimet ovat nyt kuvassa (ks. tiedoston alku), ja SVG-nimet
- * olisivat niiden päällä tuplana. Lippu on olemassa, jotta paluu on
- * yhden rivin mittainen, jos kuvaan poltetut nimet eivät kestä
- * lähizoomia.
- */
-export const FOKUS_SVG_NIMET = false;
 
 export const FOKUS_LISANIMET = {
   GRC: {

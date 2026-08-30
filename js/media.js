@@ -149,74 +149,16 @@ export function julisteUrl(tiedosto) {
 }
 
 /*
- * FOKUSKARTAT (24.8.2026): maakohtaiset esirenderöidyt topografiapohjat
- * (tools/tee-fokuskartta.mjs). Sama sääntö kuin julisteilla — kaikki
- * ämpäriin eikä repoon — ja samasta syystä: yksi kuva on kolmisen
- * megatavua, eikä pelin asennuspaketti saa kasvaa maa maalta.
- *
- * Pari tiedostoa maata kohti: GRC.png on kuva ja GRC.json sen paikka
- * laudan koordinaateissa. Puuttuva tiedosto tarkoittaa yksinkertaisesti
- * sitä, ettei maalle ole vielä tehty pohjaa, ja peli piirtää kartan
- * silloin kuten ennenkin (js/fokuskartta.js).
- */
-/*
- * HUOM: polku on julisteet/-kansion ALLA, koska vie-julisteet.yml vie
- * ämpäriin vain sen kansion — juuritason fokus/ ei koskaan synny
- * (mitattu 24.8.2026: juuri antoi 404, julisteet/fokus 200, ja
- * Kreikan pohja jäi siksi näkymättä).
- */
-const FOKUS_ALIPOLKU = 'julisteet/fokus/';
-
-/*
- * LEHTIEN VUOSIKERTA — sama tuoreusongelma kuin uusituilla äänillä.
- *
- * Lehti korvataan ämpärissä SAMALLA NIMELLÄ (GRC.webp), koska nimi on
- * maan tunnus eikä sitä voi vaihtaa kuvan mukana. Ämpäri, r2.dev-reuna
- * ja selaimen HTTP-välimuisti pitävät kuvaa osoitteen perusteella
- * viikkoja, joten pelaajalle jäisi vanha lehti pitkäksi aikaa siitä
- * huolimatta, että ämpärissä on uusi.
- *
- * Numero nostetaan AINA, kun lehdet ajetaan uusiksi ämpäriin
- * (.github/workflows/patinoi-fokus.yml). Se koskee kaikkia lehtiä
- * kerralla — lehdet ajetaan aina koko sarjana, joten maakohtaista
- * taulukkoa (vrt. UUSITUT_AANET) ei tarvita.
- *
- * 2 = patina keskitaso koko maailman lehdille (29.8.2026).
- * 3 = Euroopan 39 lehteä uusittu ilman naapurisumennusta (29.8.2026).
- *     Vain Euroopan lehtien SISÄLTÖ muuttui, mutta numero on yhteinen
- *     koko sarjalle: maakohtainen taulukko olisi uusi kirjanpito, jota
- *     joutuisi ylläpitämään jokaisen erän jälkeen, ja muiden maiden
- *     lehdet latautuvat uudelleen kerran — kymmeniä megatavuja
- *     kertaluontoista liikennettä, ei sen enempää.
- * 5 = Kaukozoomin yleislehteen poltettu ATLASKEHYS (29.8.2026):
- *     MAAILMA.webp on nyt 6400 x 3351 eikä 6400 x 2879, ja sen bbox
- *     alkaa laudan yläpuolelta. Vanha välimuistikopio piirtyisi
- *     venytettynä uuteen laatikkoon, joten numero on pakko nostaa.
- * 6 = Yleislehden kartta-ala 84 °N…66 °S (29.8.2026, omistaja: *"alhaalta
- *     ja varsinkin ylhäältä leikkautuu liikaa karttaa pois"*).
- *     MAAILMA.webp on 6400 x 3897 ja sen bbox alkaa 1046 yksikköä laudan
- *     yläpuolelta — sama pakko kuin kohdassa 5.
- */
-const FOKUS_VUOSIKERTA = 6;
-
-/** Fokuskartan osoite ämpärissä (esim. 'GRC.webp' tai 'GRC.json'). */
-export function fokuskarttaUrl(tiedosto) {
-  return `${PEILI_JUURI}${FOKUS_ALIPOLKU}${tiedosto}?v=${FOKUS_VUOSIKERTA}`;
-}
-
-/*
  * LAATTAPYRAMIDI (30.8.2026): maailmanlaajuinen esirenderöity kartta
  * laattoina (tools/generoi-laattapyramidi.mjs, js/laattapyramidi.js).
- * Sama ämpäri ja sama `julisteet/`-juuri kuin fokuskartoilla, samasta
+ * Sama ämpäri ja sama `julisteet/`-juuri kuin julisteilla, samasta
  * syystä: vie-julisteet.yml vie ämpäriin vain sen kansion.
  *
  * VUOSIKERTAA EI OLE, KOSKA VERSIO ON POLUSSA. Laatta on
  * `pyramidi/<versio>/z3/12/7.webp`, ja uusi ajo saa uuden versio-osan —
  * yksikään vanha osoite ei muutu, joten laatat kelpaavat ikuiseen
  * välimuistiin eikä sisältöpäivitys voi jättää selaimeen puolikasta
- * karttaa kahdesta eri ajosta. Sama syy kuin lehtien
- * FOKUS_VUOSIKERTA-numerolla, mutta ilman sen haittaa: numeron nosto
- * pakottaa lataamaan KAIKKI lehdet uudestaan, versiopolku vain ne
+ * karttaa kahdesta eri ajosta. Versiopolku pakottaa lataamaan vain ne
  * laatat, joita oikeasti katsotaan.
  */
 const PYRAMIDI_ALIPOLKU = 'julisteet/pyramidi/';
