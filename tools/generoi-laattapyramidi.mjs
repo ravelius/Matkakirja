@@ -1053,6 +1053,37 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
     };
 
     const tulos = [];
+
+    /*
+     * KAKSOISNIMET — SAMA NIMI PIIRRETÄÄN VAIN KERRAN.
+     *
+     * Osa laudan paikoista on oikeasti vuoristoja tai järviä, jolloin
+     * sama nimi tuli kartalle kahdesti: kerran kaupunkipisteen ja
+     * kerran maastomerkin kanssa. Parit on tunnistettu sisalto.mjs:ssä
+     * yleisellä säännöllä (sama nimi, lähekkäin) — täällä päätetään
+     * vain KUMPI nimiö jää.
+     *
+     * VUORISTON KOHDALLA OIKEA ESITYS ON VUORISYMBOLI JA SEN NIMI, ei
+     * kaupunkipiste ja sen nimi: Alpit ei ole kaupunki. Molemmat MERKIT
+     * jäävät — kaupunkipiste on se, johon pelaaja matkustaa — mutta
+     * nimiö tulee maastonimestä.
+     *
+     * PÄÄTÖS ON TASOKOHTAINEN, JA SE ON MITATTU. Maastonimillä on eri
+     * yleistyskynnys kuin kaupunginnimillä: vuorennimi ilmestyy samalla
+     * kynnyksellä (0,45) kuin kaupungin nimi, mutta järven nimi vasta
+     * 0,9:llä kun tärkeys > 1. Jos kaupungin nimiö vaiennettaisiin
+     * suoralta kädeltä, Titicaca, Tanganjika ja Tšad-järvi jäisivät
+     * välillä 0,45…0,9 pisteeksi ILMAN NIMEÄ — kokonaisen tason ajan.
+     * Siksi kaupungin nimiö väistää vasta silloin, kun maastonimi
+     * oikeasti piirtyy tällä tasolla; sitä ennen se nimeää kohteen itse.
+     *
+     * Ladonta ajetaan kerran tasoa kohti koko arkille, joten päätös on
+     * sama joka lohkossa eikä lohkorajalle synny kaksoisnimeä.
+     */
+    const maastonKynnys = (pari) => (pari.laji === "vuori"
+      ? kynnykset.vuoriNimi
+      : (pari.tarkeys > 1 ? kynnykset.jarviNimi2 : kynnykset.jarviNimi));
+
     /* Pisteet varataan ENSIN: nimi ei saa peittää toisen kaupungin
      * merkkiä, vaikka nimi itse mahtuisi. */
     const pisteet = [];
@@ -1073,7 +1104,45 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
     let pudotettu = 0;
     for (const { c, x, y } of jono) {
       const saaNimen = c.iso ? nakyy(kynnykset.isoNimi) : nakyy(kynnykset.nimi);
-      if (!saaNimen) continue;
+      /*
+       * Parillinen kohde ladotaan kaupungin TÄRKEYDELLÄ mutta
+       * maastonimen ULKOASULLA ja PAIKALLA. Tärkeys tulee kaupungilta,
+       * jottei nimi putoa tilanpuutteeseen sen takia, että maastonimet
+       * ladotaan vasta kaupunkien jälkeen.
+       */
+      const pari = c.maastopari;
+      const pariNakyy = Boolean(pari) && nakyy(maastonKynnys(pari));
+      if (!saaNimen && !pariNakyy) continue;
+      if (pariNakyy) {
+        const mkoko = pari.laji === "vuori" ? 11 : 10;
+        const mtyyli = pari.laji === "jarvi" ? "italic" : "";
+        const mx = kuvaX(pari.x);
+        const my = kuvaY(pari.y) + (pari.laji === "vuori" ? 11 : 0);
+        const mlev = tekstinLeveys(pari.nimi, mkoko, '"Liberation Serif", serif', mtyyli, 0);
+        const mkork = mkoko * 1.15;
+        const mr = {
+          x0: mx - mlev / 2 - 1,
+          y0: my - mkork * 0.62,
+          x1: mx + mlev / 2 + 1,
+          y1: my + mkork * 0.42,
+        };
+        if (vapaa(mr)) {
+          varaa(mr);
+          laadittu += 1;
+          tulos.push({
+            laji: pari.laji, teksti: pari.nimi, x: mx, y: my, ank: "middle", koko: mkoko,
+          });
+          continue;
+        }
+        /*
+         * Maastonimen paikka oli varattu. Nimi ei silti saa kadota:
+         * kaupungin oma ladonta yrittää seuraavaksi, jolloin kohde saa
+         * nimen edes kaupunkinimiönä. Kaksoisnimeä ei synny, koska
+         * maastonimi on merkitty parilliseksi eikä sitä ladota
+         * uudestaan maastokierroksella.
+         */
+        if (!saaNimen) { pudotettu += 1; continue; }
+      }
       const koko = c.iso ? 12 : 10.5;
       const lev = tekstinLeveys(c.nimi, koko, '"Liberation Serif", serif', "", 0);
       const kork = koko * 1.15;
@@ -1118,11 +1187,14 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
     for (const v of sisalto.vuoret ?? []) {
       if (!nakyy(kynnykset.vuoriNimi)) break;
       if (v.tarkeys > 1 && !nakyy(kynnykset.vuoriNimi)) continue;
+      // Parillinen nimi on jo ladottu kaupunkikierroksella (ks. yllä).
+      if (v.parillinen) continue;
       maasto.push({ nimi: v.nimi, x: v.x, y: v.y, koko: 11, laji: "vuori", tarkeys: v.tarkeys });
     }
     for (const j of sisalto.jarvet ?? []) {
       if (!nakyy(kynnykset.jarviNimi)) break;
       if (j.tarkeys > 1 && !nakyy(kynnykset.jarviNimi2)) continue;
+      if (j.parillinen) continue;
       maasto.push({ nimi: j.nimi, x: j.x, y: j.y, koko: 10, laji: "jarvi", tarkeys: j.tarkeys });
     }
     maasto.sort((a, b) => (a.tarkeys - b.tarkeys) || (a.nimi < b.nimi ? -1 : 1));
@@ -1168,8 +1240,45 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
         }
       }
     }
+    /*
+     * TOINEN RIIPPUMATON TARKISTUS: SAMA NIMI VAIN KERRAN.
+     *
+     * Kaksoisnimi ei ole päällekkäisyys — Ahaggar oli kartalla kahdesti
+     * satojen pikselien päässä itsestään, eikä yllä oleva leikkaustesti
+     * nähnyt siinä mitään vikaa. Se on oma virheluokkansa ja tarvitsee
+     * oman tarkistuksensa.
+     */
+    /*
+     * VERTAILU NORMALISOIDULLA NIMELLÄ, ei merkkijonon tasa-arvolla.
+     * Lauta sanoo "Tšad-järvi" ja nimilista "Tšadjärvi": tarkka
+     * vertailu pitäisi niitä eri niminä ja päästäisi juuri sen
+     * kaksoisnimen läpi, jota tässä etsitään. Sama normalisointi kuin
+     * parituksessa (tools/fokuskartta/sisalto.mjs).
+     */
+    const vertailumuoto = (t) => String(t).normalize("NFD")
+      .replace(/\\p{Diacritic}/gu, "")
+      .toLowerCase()
+      .replace(/[^\\p{L}\\p{N}]+/gu, "");
+    const kertoja = new Map();
+    for (const n of tulos) {
+      const k = vertailumuoto(n.teksti);
+      kertoja.set(k, (kertoja.get(k) ?? 0) + 1);
+    }
+    let kaksoisnimia = 0;
+    let kaksoisesimerkki = null;
+    for (const [t, m] of kertoja) {
+      if (m < 2) continue;
+      kaksoisnimia += m - 1;
+      if (!kaksoisesimerkki) kaksoisesimerkki = t + " x" + m;
+    }
     return {
-      laadittu, pudotettu, nimioita: tulos.length, paallekkain, esimerkki,
+      laadittu,
+      pudotettu,
+      nimioita: tulos.length,
+      paallekkain,
+      esimerkki,
+      kaksoisnimia,
+      kaksoisesimerkki,
     };
   };
 
@@ -1465,10 +1574,16 @@ if (sisalto) {
     console.log(`  ladonta z${mitat.z}      ${tulos.laadittu} nimiötä, `
       + `${tulos.pudotettu} pudotettu tilanpuutteeseen, `
       + `päällekkäisyyksiä ${tulos.paallekkain}`
-      + (tulos.esimerkki ? ` (esim. ${tulos.esimerkki})` : ''));
+      + (tulos.esimerkki ? ` (esim. ${tulos.esimerkki})` : '')
+      + `, kaksoisnimiä ${tulos.kaksoisnimia}`);
     if (tulos.paallekkain) {
       throw new Error(`Ladonta jätti ${tulos.paallekkain} päällekkäisyyttä `
         + `tasolle z${mitat.z} — törmäyksenvälttely ei toimi.`);
+    }
+    if (tulos.kaksoisnimia) {
+      throw new Error(`Ladonta jätti ${tulos.kaksoisnimia} kaksoisnimeä `
+        + `tasolle z${mitat.z} (esim. ${tulos.kaksoisesimerkki}) — `
+        + 'sama nimi saa esiintyä kartalla vain kerran.');
     }
   }
 }
