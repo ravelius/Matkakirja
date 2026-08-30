@@ -521,19 +521,25 @@ const korostus = await sivu.evaluate(async (kohde) => {
   game.actionKehittajaSiirto(kohde);
   ui.render();
   await new Promise((r) => setTimeout(r, 600));
-  const kerros = document.querySelector('.country-borders');
+  /*
+   * MAAN KOROSTUSTA EI ENÄÄ OLE (omistaja 30.8.2026: *"Valittu maa
+   * maalautuu nyt ohuen harmaalla värillä. Poista väritys."*). Väite
+   * kääntyi siis päinvastaiseksi: ennen tässä vaadittiin sävytystä,
+   * nyt vaaditaan ettei sitä eikä sen kerrosta ole olemassa
+   * lainkaan — poisto on koodissa, ei CSS-piilotuksessa.
+   */
   return {
-    savytyksia: kerros.querySelectorAll('.country-tint').length,
-    aariviivoja: kerros.querySelectorAll('.country-korostus').length,
-    piirtoluokkia: kerros.classList.contains('maa-piirtyy')
-      || kerros.classList.contains('maa-asettuu'),
+    kerroksia: document.querySelectorAll('.country-borders').length,
+    rajauksia: document.querySelectorAll('#maa-rajaus').length,
+    savytyksia: document.querySelectorAll('.country-tint').length,
+    aariviivoja: document.querySelectorAll('.country-korostus').length,
   };
 }, maat.toisessa);
-vaadi('uuteen maahan saavuttaessa maa saa sävytyksen',
-  korostus.savytyksia > 0, JSON.stringify(korostus));
-vaadi('punaista ääriviivaa ei piirretä eikä animoida',
-  korostus.aariviivoja === 0 && korostus.piirtoluokkia === false,
+vaadi('maan sävytystä ei piirretä eikä sen kerrosta luoda',
+  korostus.savytyksia === 0 && korostus.kerroksia === 0 && korostus.rajauksia === 0,
   JSON.stringify(korostus));
+vaadi('punaista ääriviivaa ei piirretä',
+  korostus.aariviivoja === 0, JSON.stringify(korostus));
 
 // Ääriviivaosio ohi: lauta takaisin näkyviin lopun ruutumittauksia
 // varten (ks. asetaFokusmoodi).

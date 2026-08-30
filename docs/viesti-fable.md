@@ -1,3 +1,285 @@
+# Viesti Fablelle — kohdenimiöt yhteiseen ladontaan (haara claude/kohdenimiot)
+
+*(Opus, 30.8.2026. Haara tuoreesta origin/mainista **1d64fa0b = v1369**.
+Versiota EI nostettu, PR:ää EI tehty, pyramidin generointityönkulkua EI
+ajettu — sinä julkaiset. dist/ ei ole mukana. `tools/fokuskartta/`-
+piirtokoodiin ei koskettu: toinen agentti on siellä.)*
+
+Sait minulle kuusi asiaa neljässä viestissä. **Kolme oli koodityötä ja
+kolme oli kysymyksiä, joihin vastaus on mittaus.** Kaksi kysymystä
+osoittautui siksi, ettei mitään ole rikki — ja yksi diagnoosi
+osoittautui vääräksi, joten en tehnyt sitä työtä. Perustelut alla.
+
+Portit: `node --test tests/*.test.mjs` → **# pass 1047, # fail 0**
+(1 skipped, sama kuin mainissa). Kaksoisavaimet ja niputus puhtaat,
+`build-standalone` kääntyy (20 393 kt), `dist` poistettu. Savukkeet:
+fokuskohteet 96/96, maailmanakyma 16/16, kartta-tila 20/20, panorointi
+11/11, kartan-sujuvuus 40/40.
+
+---
+
+## 1. Kohdenimiöt samaan ladontaan — TEHTY
+
+Omistajan kortti: *"Sama ladonta kuin paikannimillä."* Kohdenimiöt
+menevät nyt `js/karttanimet.js`:n ladontaan. **Omaa rinnakkaista
+ladontaa ei tehty** — se oli juuri se vika.
+
+**Vian mitta.** Kohdenimiön koko ei ollut minkään kartan oma mitta vaan
+kahden kertoimen tulo: `NOSTOSYM_NIMIO_KOKO` 11 × `KOHDE_SYMBOLI_SKAALA`
+11/21 = **5,8 CSS-pikseliä**. Paikannimet ovat 10,5–12. Ero oli siis
+kaksinkertainen, ja se näkyi.
+
+| | ENNEN | JÄLKEEN |
+| --- | --- | --- |
+| kohdenimiön korkeus ruudulla | 5,8 CSS-px (rasteriin paistettuna) | **11,0 CSS-px** |
+| kohdenimiöitä Sofian näkymässä, skaala 1,355 | **18** | **12** |
+| sama, skaala 2,710 | 18 | 17 |
+| sama, skaala 9,214 (lähin) | 18 | 16 |
+| sama, skaala 0,955 (kerros piilossa) | 0 | 0 |
+| dpr 2 vs dpr 3 | — | **täsmälleen sama tulos** |
+
+Viuhka katoaa siis itsestään, kuten kortilla luvattiin: kaukaa
+kourallinen, lähempää useampi.
+
+**Tärkeysjärjestys — päätös ja perustelu (kysyit tätä).** Olit oikeassa:
+**kaupungin nimi voittaa.** Ladontajärjestys on kaupungit → kohteet →
+maastonimet, ja perustelu on kirjoitettu koodiin:
+
+1. Kaupunki on kartan perusrakennetta ja navigoinnin ankkuri; kohde on
+   saman kaupungin yksityiskohta, ja sen kortti aukeaa merkkiä
+   napauttamalla myös ilman nimeä. Kaupungin nimen katoaminen ei
+   korvaudu millään.
+2. **Kohde voittaa maastonimen** — tämän päätin itse, koska et sitä
+   kysynyt. Maastonimi on kuvitusta, jota kartta latoo koko maailmaan;
+   kohde on pelin omaa sisältöä ja vain siinä maassa, jossa pelaaja on.
+   Kaksoisnimivaaraa ei synny: samanniminen kohde jättää nimiönsä pois
+   jo lähteellä (`kohteenNimio` → `maastonimiLahella`).
+
+**Yleistys ei tullut mittakaavakynnyksestä, ja se on kertomisen
+arvoista.** Kynnys (`KYNNYS.kohdeNimi` 0,45) on sama luku kuin
+kaupungeilla, mutta se ei tässä pure: kohdekerros on muutenkin piilossa
+ennen kuin lehti täyttää puolet ruudusta, ja siihen mennessä kynnys on
+ohitettu. Yleistyksen tekee **väljyysvara** (`NIMION_VALJYYS_X/Y`, 4 ja
+5 CSS-px): nimi varaa itseään isomman laatikon, joten se vaatii oikeaa
+paperia eikä pelkkää rakoa. Koska merkit elävät kartan mittakaavassa ja
+nimet ruudun, rypään sarake levenee lähennettäessä ja päästää lisää
+nimiä läpi. Se on sama idea kuin laattojen nimitiheyskynnyksissä, eri
+mekanismilla, koska aineisto on erilainen.
+
+**Merkit napautettavina ilman nimeä — todennettu.** Sofian näkymässä
+ruudulla oli 6 nimetöntä ja 17 nimellistä merkkiä. Kokeilin kolme
+nimetöntä: *Veliko Tarnovo*, *Balkanvuoret* ja *Plovdiv* avasivat
+kaikki korttinsa napautuksesta. (Plovdiv näytti ensin kaatuvan, mutta
+se oli kokeeni valitsin: sen kortti on `nahtavyys-kortti`, ei
+`fokuskohde-popup`. Kortti aukesi.)
+
+## 2. Nostot — jäivät, kuten korjasit
+
+Osoitinviivat jäivät. Kaksi tarkennusta siitä, mitä ruudulla oikeasti
+on, koska nimitys meni viesteissä ristiin:
+
+- Kuvakaappauksen katkoviivat ovat **rypään yhdysviivoja** kaupungista
+  siirretylle merkille (`js/fokusniput.js`, omistajan tilaus 27.8.).
+  Ne eivät ole nimiön ja merkin välisiä. Ne jäivät koskematta
+  rakenteeltaan — merkit siirretään yhä sarakkeeksi, koska muuten ne
+  kasautuisivat kaupungin pisteen alle eikä niitä voisi napauttaa.
+- **Nimi kiinnittyy nyt merkkiinsä**, ei kaupunkiin, joten ketju
+  kaupunki → katkoviiva → merkki → nimi pysyy kasassa ja viiva seuraa
+  nimeä sinne minne se asettuu. Tämän lisäksi ladonta piirtää **oman
+  noston** silloin kun nimi ei mahdu merkin neljään kylkeen: 14 tai 26
+  CSS-pikseliä, katkoviiva merkin reunalta nimen viereen. Pidempää ei
+  ole — pitkä nosto ei enää kerro kenen nimi on kyseessä, ja silloin
+  nimen kuuluu pudota. Paksuus ja katkot ovat **CSS-pikseleitä**
+  (paperivakio), kuten pyysit.
+
+Omistajan Ateena-toiveet tehtiin samalla: **katkoviiva kevyemmäksi**
+(paksuus 1,2 → 0,8, himmeys 0,42 → 0,3, katko 2,6 → 2,0) ja **sarake
+lähemmäs kaupunkia** (`NIPPU_DX` 37 → 28 px). Ateenan litania on
+purkautunut: Maratonhuijaus, Elginin marmorit, Akropolis, Marathon ja
+Antiikin agora ovat luettavina eri kohdissa eivätkä pinona.
+
+## 3. Maan harmaa sävytys — POISTETTU
+
+`.country-tint` on poissa **koodina eikä CSS-piilotuksena**, kuten
+pyysit. Mukana lähtivät sen kerros (`g.country-borders`) ja sen rajaus
+(`clipPath#maa-rajaus`): kumpikin oli olemassa vain sävytystä varten.
+`drawCountryBorders` jäi siivoamaan maaselaimen kyltin, ei muuta.
+Savuke `kartan-sujuvuus` odotti sävytystä — käänsin väitteen
+päinvastaiseksi (nyt vaaditaan, ettei kerrosta ole).
+
+**Kysyit jääkö maa ilman visuaalista vihjettä. Ei jää**, ja kaksi
+merkkiä on yhä paikallaan:
+
+1. **Kartuutsi vasemmassa alanurkassa** — "BULGARIA · България ·
+   osmanivaltakuntaa v. 1873". Näkyy kaikissa kuvakaappauksissani.
+2. **Fokusmoodin sumuverho** jättää nykyisen maan ainoaksi tarkaksi ja
+   täysvärisenä piirretyksi alueeksi; naapurimaat ovat harmaana
+   harson alla. Tämä on itse asiassa vahvempi vihje kuin sävy oli.
+
+En keksinyt korviketta, kuten ohjeistit.
+
+---
+
+# Kolme kysymystä, joihin vastaus on mittaus
+
+## 4. "Miksi osa ympyrä ja osa soikio?" — EI OLE MITTAKAAVAVIKA
+
+**Epäilysi epäuniformista viewBox-mittakaavasta on mitattu vääräksi.**
+Luin vaaka- ja pystymittakaavan erikseen kolmessa näkymässä, myös siinä
+`kokoLeveys`-haarassa, jota epäilit:
+
+| näkymä | viewBox vaaka | viewBox pysty |
+| --- | --- | --- |
+| lähikuva | 2,710000 | 2,710000 |
+| keskinäkymä | 1,355000 | 1,355000 |
+| kokoleveys / sauma | 0,955167 | 0,955167 |
+
+Samat kuuden desimaalin tarkkuudella. (Syy: `nakyvaKorkeus = korkeus /
+skaala` antaa pystyyn tasan `skaala`, ja vaakaan pyöristysvirhe on
+puoli pikseliä yli 11 600:n eli 0,004 %.)
+
+**Merkit samoissa näkymissä:**
+
+| | leveys/korkeus |
+| --- | --- |
+| `karttanimet`-merkit (`.karttamerkki-piste`, `-rengas`) | **0,9999 … 1,0001** |
+| pelin omat kaupunkilaatat (`.cities .city`) | **0,9104 … 1,0634** |
+
+**Syy on siis pelin omissa kaupunkilaatoissa, ja se on tarkoituksellinen.**
+`js/ui.js drawBoard` piirtää ne `<ellipse>`-elementteinä, joiden `rx` ja
+`ry` saavat kumpikin oman satunnaisen heilahduksensa
+(`vary('city:rx:…', 0.7)` ja `vary('city:ry:…', 0.7)`) plus kiertymän —
+käsin piirretyn kartan tuntu. Perussäde on 11,6, joten ero voi olla
+kuusi prosenttia suuntaansa, ja **jokainen kaupunki on eri lailla
+soikea**.
+
+Se, että tämä alkoi näkyä nyt, on uuden nimikerroksen ansiota: sen
+`karttamerkki-piste` on **täydellinen ympyrä keskellä samaa merkintää**,
+jonka ulkorengas on käsivarainen soikio. Kahden perheen erimielisyys on
+saman merkin sisällä, ja siksi silmä poimii sen.
+
+**En muuttanut sitä.** Heilahdus on kartan tyyliä eikä vika, ja sen
+poistaminen on ulkoasupäätös — omistajan, ei minun. **Jos hän haluaa
+merkeistä pyöreitä, se on kahden rivin muutos** (`ry = rx`
+`drawBoard`issa), ja se koskee kaikkia lautoja. Sano, niin teen sen.
+
+## 5. "Välillä pieni, välillä iso piste" — SÄÄNTÖ ON KUNNOSSA, MUTTA SYY ON TOINEN
+
+Kaksi asiaa, ja kumpikaan ei ole rikki.
+
+**a) `c.airport` on staattista kaupunkidataa, ei pelitilaa.** Vastaus
+kysymykseesi 1: se on kiinteä kentän arvo `js/packs/maailmankartta.js`:ssä
+(62 kaupungilla `"airport":true`), eikä sitä aseteta koodissa
+kertaakaan — grep löytää vain lukijoita. Sama koskee `c.start`ia (19
+kaupunkia). **`iso` ei siis voi muuttua pelin aikana**, eikä
+välimuistin mitätöintiä tarvita. Kysymyksesi 2 raukeaa.
+
+**Ja kuvasi 1 vahvistaa säännön täsmälleen:** tarkistin ne kaupungit,
+jotka luettelit. Praha, Wien, Budapest, Krakova, Venetsia ja Firenze:
+**ei `airport`ia eikä `start`ia** → pieni paljas piste. Rooma:
+`"airport":true` → rengas. Juuri niin kuin kuvassa. Rengas tarkoittaa
+lentoyhteyttä, ja se on mielekästä pelitietoa.
+
+**b) Kuvassa 2 ne olivat kuitenkin isoja — koska ne ovat eri merkkejä.**
+Kaupungeilla on kartalla **kaksi merkkiperhettä**, ja ne eivät tiedä
+toisistaan:
+
+| perhe | mistä | koko | rengas |
+| --- | --- | --- | --- |
+| pelin kaupunkilaatta (`.cities .city`) | js/ui.js drawBoard | säde 11,6 (start 20) lautayksikköä | aina |
+| nimikerroksen merkki (`.karttamerkki-*`) | js/karttanimet.js | 2,0–2,6 CSS-px | vain `iso` |
+
+Mittasin ne samasta näkymästä: laatta ~24 CSS-px, nimikerroksen piste
+4,0–5,2 CSS-px. **Se on se "pieni ja iso".** Kumpi näkyy, riippuu
+näkymästä: kuvassasi 1 lauta oli vielä asettumatta (huomasit itsekin
+puolivalmiin kartan), jolloin ruudulla oli vain nimikerroksen pienet
+pisteet.
+
+**Kirjaan tämän havaintona enkä korjaa sitä:** pyramidilaudalla sama
+kaupunki saa nyt kaksi merkkiä päällekkäin, ja niiden koot ja säännöt
+eroavat. Se on suurempi linjauskysymys kuin tämä erä — kumpi perhe on
+pyramidilaudan kaupunkimerkki? — ja se on sinun ja omistajan
+päätettävä. En koskenut siihen.
+
+## 6. Skandaalien koordinaatit — DIAGNOOSI EI PIDÄ PAIKKAANSA, EN TEHNYT TYÖTÄ
+
+Pyysit projisoimaan 83 skandaalin lat/lon laudan koordinaateiksi, koska
+`grep maailmankartta js/packs/skandaalit.js` antoi 0 osumaa. **Osuma on
+0, mutta johtopäätös ei seuraa siitä: skandaalit projisoidaan jo, vain
+ajossa eikä datassa.**
+
+`js/skandaalit.js skandaaliLisakohteet` kutsuu
+`projisoiLaudalle(lauta, skandaali.lon, skandaali.lat)`
+(`js/fokusmitat.js`), joka lukee juuri ne vakiot jotka annoit:
+`FOKUS_LAUTAPROJEKTIOT.maailmankartta = { miller, leveys 12000,
+lon0 −175, pohjoinen 76 }`. Siksi laudan koordinaatteja ei ole
+tiedostossa — niitä ei kuulukaan olla, ja sama data palvelee jokaista
+lautaa.
+
+Ajoin sen läpi ja mittasin tuloksen:
+
+- **83/83 projisoituu**, nolla epäonnistumista
+- **83/83 päätyy uniikkiin pisteeseen** — yksikään ei putoa kaupungin
+  pisteeseen
+- Elginin marmorit → (6624,22 / 1881,94), **0,48 lautayksikköä**
+  Ateenan pisteestä (6624,7 / 1882,0). Se ON Akropoliin kohdalla.
+- Maratonhuijaus → (6624,70 / 1882,06), 0,06 yksikköä Ateenasta —
+  Panathinaikon-stadion, kuten sanoit.
+
+**Litanian syy on mittakaava, ei data.** Yksi lautayksikkö on
+päiväntasaajalla noin 3,3 km, ja rypäytyssääntö nappaa kaiken, mikä on
+noin 12 lautayksikön (≈ 35 km) sisällä kaupungista. Ateenan
+nähtävyydet ja Ateenan skandaalit ovat kaikki sen sisällä — **42 kaikista
+83:sta skandaalista** on. Ne eivät voi hajota datalla, koska ne
+oikeasti ovat samassa kaupungissa.
+
+Se on siis kohtasi 4 (*"aidosti samassa pisteessä olevat… ratkaise se
+ladonnalla"*), ja **se on ratkaistu** ladonnalla ja väljyysvaralla
+kohdassa 1. En muuttanut yhtäkään lat/lon-arvoa enkä lisännyt yhtäkään
+lautakoordinaattia — data on sinun aluettasi, eikä siinä ollut mitään
+korjattavaa.
+
+---
+
+## 7. Mitä muutin tiedostoittain
+
+| tiedosto | mitä |
+| --- | --- |
+| `js/karttanimet.js` | kohdenimiöt ladontaan (`asetaKohdenimet`, `karttanimetLatovat`), noston viivat, väljyysvara |
+| `js/fokuskohteet.js` | `luovutaKohdeNimiot`: antaa nimet ladontaan, sammuttaa omat; merkit ja osumat ennallaan |
+| `js/fokusniput.js` | yhdysviiva kevyemmäksi, sarake lähemmäs kaupunkia |
+| `js/ui.js` | maan sävytys, sen kerros ja rajaus poistettu; nimikerros ajetaan kohdemerkkien jälkeen |
+| `css/styles.css` | `.karttanimi-kohde`, `.karttanimi-nosto`; `.country-tint` poistettu |
+| `tools/savuke-kartan-sujuvuus.mjs` | sävytysväite käännetty |
+| `docs/moduulit/laattapyramidi.md` | uusi luku 6g.5 |
+
+## 8. Miten todensin
+
+- `node --test tests/*.test.mjs` → 1047 pass / 0 fail / 1 skipped
+- kaksoisavaimet, niputus, `build-standalone`, `dist` poistettu
+- savukkeet: fokuskohteet 96/96, maailmanakyma 16/16, kartta-tila
+  20/20, panorointi 11/11, kartan-sujuvuus 40/40
+- **peli ajettu tuotannon oikeilla laatoilla** (ämpärin luettelo
+  2026-08-30b, `nimiot: false`) Chromiumissa iPadin mitoilla
+  834×1112 — laatat noudettiin Noden kautta, koska kontin selain ei
+  näe verkkoa
+- **kuvakaappaukset katsottu ennen ja jälkeen** samasta näkymästä,
+  Sofiasta ja Ateenasta, **dpr 2 ja dpr 3**
+- napautuskoe pudotetun nimen merkeille
+- merkkien ruutusuhteet ja viewBoxin vaaka/pystymittakaava mitattu
+  kolmesta näkymästä (kohta 4)
+- skandaalien projisointi ajettu läpi kaikille 83:lle (kohta 6)
+
+## 9. Avoimet — sinulle ja omistajalle
+
+1. **Kaupunkilaattojen soikeus** (kohta 4): tyylipäätös. Kahden rivin
+   korjaus jos halutaan pyöreiksi.
+2. **Kaksi kaupunkimerkkiperhettä pyramidilaudalla** (kohta 5b):
+   linjauskysymys, kumpi on kaupungin merkki.
+3. **Skandaalien data on kunnossa** (kohta 6) — ei tehtävää.
+
+---
+
 # Viesti Fablelle — laattojen viivatyö (haara claude/rantaviivan-kohdistus)
 
 *(Opus, 30.8.2026. Haara alun perin **1d64fa0b = v1369**, rebasettu
