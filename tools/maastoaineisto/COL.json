@@ -1,0 +1,49 @@
+{
+  "_": "Kolumbian maastokohteet. Faktat en-Wikipediasta 30.8.2026. Nimien suomalainen asu fi-Wikipediasta: joen fi-artikkeli on Magdalena, meren asu Karibianmeri; Pico Cristóbal Colón sellaisenaan.",
+  "vuoret": [
+    {
+      "nimi": "Pico Cristóbal Colón",
+      "lon": -73.6867,
+      "lat": 10.8383,
+      "m": 5775,
+      "lahdeKoordinaatti": "en-Wikipedia \"Pico Cristóbal Colón\" (-73,687 / 10,838)",
+      "nappi": "Lumihuippu meren rannalla",
+      "kysymykset": [
+        "Miksi Kolumbian korkeimmasta huipusta ei olla varmoja?",
+        "Miten lumi pysyy vuorella näin lähellä päiväntasaajaa?"
+      ],
+      "teksti": "Pico Cristóbal Colón on mahdollisesti Kolumbian korkein vuori, ilmoitettu korkeus 5 775 metriä. Rinnalla on lähes yhtä korkea Pico Simón Bolívar, eikä kummankaan paremmuudesta olla varmoja — toinen niistä on maailman viidenneksi topografisesti hallitsevin huippu. Lähin korkeampi vuori, Cayambe, on 1 288 kilometrin päässä. Molemmat kuuluvat Sierra Nevada de Santa Martan vuoristoon, joka nousee erillään Andeista aivan Karibianmeren rannalta. Huipuilla on pysyvä lumipeite. Tämä on Etelä-Amerikan korkein kohta Andien ulkopuolella.",
+      "lahde": "en-Wikipedia \"Pico Cristóbal Colón\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Karibianmeri",
+      "lon": -75.5,
+      "lat": 11.8,
+      "lahdeKoordinaatti": "ulappa Kolumbian pohjoisrannikon edustalla Cartagenan ja Santa Martan kohdalla; en-Wikipedia \"Caribbean Sea\" antaa keskipisteeksi -75 / 15",
+      "nappi": "Antillien rajaama meri",
+      "kysymykset": [
+        "Mikä on Caymanin hauta?",
+        "Miksi Karibianmeren rannoilla on niin monta lahtea?"
+      ],
+      "teksti": "Karibianmeri on Pohjois-Atlantin sivumeri läntisen pallonpuoliskon tropiikissa. Sitä rajaavat pohjoisessa Suuret Antillit Kuubasta Puerto Ricoon, idässä Pienet Antillit, etelässä Venezuelan ja Kolumbian rannikko ja lännessä Väli-Amerikka. Pinta-alaa on noin 2 754 000 neliökilometriä, mikä tekee siitä maailman suurimpia meriä. Syvin kohta on Caymanin hauta Caymansaarten ja Jamaikan välissä, 7 686 metriä pinnan alla. Meressä on maailman toiseksi suurin valliriutta, tuhat kilometriä pitkä Keski-Amerikan riutta.",
+      "lahde": "en-Wikipedia \"Caribbean Sea\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Magdalena",
+      "lon": -74.6,
+      "lat": 8.5,
+      "lahdeKoordinaatti": "joen alajuoksu Magdalenan laaksossa; en-Wikipedia \"Magdalena River\" antaa koordinaatiksi suun Barranquillan kohdalla (-74,85 / 11,117)",
+      "nappi": "Kolumbian valtasuoni",
+      "kysymykset": [
+        "Miksi joen suulla on vaikea purjehtia?",
+        "Miten yksi joki voi elättää kaksi kolmasosaa maasta?"
+      ],
+      "teksti": "Magdalena on Kolumbian päävirta. Se kulkee pohjoiseen noin 1 528 kilometriä maan länsipuoliskon halki omassa laaksossaan ja laskee lopulta Karibianmereen. Alajuoksu on suurelta osin purjehduskelpoinen aina Hondaan asti, jossa kosket alkavat, vaikka suistossa liikkuvat hiekkasärkät haittaavat kulkua. Joen valuma-alue on 273 000 neliökilometriä eli 24 prosenttia koko maan pinta-alasta, ja sillä alueella asuu 66 prosenttia kolumbialaisista. Nimi tulee Raamatun Maria Magdalenasta.",
+      "lahde": "en-Wikipedia \"Magdalena River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

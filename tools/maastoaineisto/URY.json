@@ -1,0 +1,36 @@
+{
+  "_": "Uruguayn maastokohteet. Faktat en-Wikipediasta 30.8.2026. Nimien suomalainen asu fi-Wikipediasta: Río de la Plata sellaisenaan (suom. Hopeajoki), Cerro Catedral espanjankielisenä erisnimenä. Estuaari on tarkoituksella myös Argentiinan pakissa — se on maiden yhteinen raja — mutta piste, nappi, kysymykset ja teksti ovat eri: Argentiinassa katsotaan estuaarin mittoja, täällä sen rantoja.",
+  "vuoret": [
+    {
+      "nimi": "Cerro Catedral",
+      "lon": -54.6744,
+      "lat": -34.3822,
+      "m": 514,
+      "lahdeKoordinaatti": "en-Wikipedia \"Cerro Catedral (Uruguay)\" (-54,674 / -34,382)",
+      "nappi": "Uruguayn korkein kohta",
+      "kysymykset": [
+        "Voiko 514 metriä olla koko maan korkein kohta?",
+        "Mistä kukkula sai tuomiokirkon nimen?"
+      ],
+      "teksti": "Cerro Catedral eli Tuomiokirkkokukkula on Uruguayn korkein kohta, 513,66 metriä. Se sijaitsee Maldonadon departementin pohjoisosassa Aiguán kunnassa, Sierra Carapén kukkulajonossa, joka puolestaan kuuluu laajempaan Cuchilla Grandeen. Toinen nimi kukkulalle on Cerro Cordillera. Nimi tulee huipun kallioiden omalaatuisista muodoista, joita tavataan yleisesti maan eteläosassa. Uruguay on niin loivapiirteistä ruohotasankoa, ettei koko maassa ole yhtään varsinaista vuorta — puolen kilometrin kukkula riittää kruunuksi.",
+      "lahde": "en-Wikipedia \"Cerro Catedral (Uruguay)\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Río de la Plata",
+      "lon": -56.2,
+      "lat": -34.95,
+      "lahdeKoordinaatti": "estuaarin Uruguayn-puoleinen selkä Montevideon edustalla; en-Wikipedia \"Río de la Plata\" antaa keskipisteeksi -55,78 / -35,67",
+      "nappi": "Montevideon edustan hopeavesi",
+      "kysymykset": [
+        "Mikä on estuaari?",
+        "Mitä yhteistä on Montevideolla ja Buenos Airesilla?"
+      ],
+      "korostukset": ["estuaari|estuaari"],
+      "teksti": "Río de la Plata on estuaari, joka syntyy Uruguayjoen ja Paranájoen yhtyessä ja laskee Atlantin valtamereen. Se muodostaa osan Uruguayn ja Argentiinan rajasta, ja sen pohjoisrannalla on Uruguayn pääkaupunki Montevideo. Nimeä käytetään myös estuaarin väestä: molemmilla rannoilla puhutaan rioplatensen espanjaa ja sieltä on lähtöisin tangon kulttuuri. Rannat ovat sekä Uruguayn että Argentiinan tiheimmin asuttua seutua. Nimi tarkoittaa hopeajokea, ja suomeksi estuaarista käytetäänkin joskus asua Hopeajoki.",
+      "lahde": "en-Wikipedia \"Río de la Plata\", johdanto-osa (tarkistettu 30.8.2026); suomenkielinen asu Hopeajoki fi-Wikipedia \"Río de la Plata\"."
+    }
+  ],
+  "joet": []
+}

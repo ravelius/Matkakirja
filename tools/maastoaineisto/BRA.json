@@ -1,0 +1,50 @@
+{
+  "_": "Brasilian maastokohteet. Faktat en-Wikipediasta 30.8.2026. Nimien suomalainen asu fi-Wikipediasta: Pico da Neblina sellaisenaan, joen fi-artikkeli on Amazon.",
+  "vuoret": [
+    {
+      "nimi": "Pico da Neblina",
+      "lon": -66.0067,
+      "lat": 0.8047,
+      "m": 2995,
+      "lahdeKoordinaatti": "en-Wikipedia \"Pico da Neblina\" (-66,007 / 0,805)",
+      "nappi": "Brasilian korkein huippu",
+      "kysymykset": [
+        "Miksi Brasilian korkein huippu on niin matala?",
+        "Mitä yanomamit tarkoittavat nimellä Yaripo?"
+      ],
+      "korostukset": ["yanomamit|yanomamit"],
+      "teksti": "Pico da Neblina eli Sumuhuippu on Brasilian korkein vuori, 2 995 metriä. Se kohoaa maan luoteiskulmassa Amazonasin osavaltiossa Guayanan ylängön eteläreunalla, ja huippu on vain 687 metrin päässä Venezuelan rajasta. Se on koko Guayanan kilven korkein kohta ja Etelä-Amerikan korkein piste Andien itäpuolella. Yanomamit kutsuvat vuorta nimellä Yaripo, tuulten vuori, ja pitävät sitä pyhänä. Sadetta ja sumua riittää: ylärinteillä elää sammakoita, joiden lähimmät sukulaiset erkanivat niistä yli 45 miljoonaa vuotta sitten.",
+      "lahde": "en-Wikipedia \"Pico da Neblina\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Atlantin valtameri",
+      "lon": -38.0,
+      "lat": -13.0,
+      "lahdeKoordinaatti": "ulappa Brasilian itärannikon edustalla Salvadorin kohdalla; en-Wikipedia \"Atlantic Ocean\" antaa keskipisteeksi -25 / 0",
+      "nappi": "Meri, joka erotti kaksi maailmaa",
+      "kysymykset": [
+        "Miksi Atlantin muoto muistuttaa S-kirjainta?",
+        "Kuka ylitti Atlantin ennen Kolumbusta?"
+      ],
+      "teksti": "Atlantin valtameri on maailman valtameristä toiseksi suurin: noin 85 133 000 neliökilometriä eli 17 prosenttia maapallon pinnasta. Sen allas on pitkänomainen ja S-kirjaimen muotoinen ja kulkee Euroopan ja Afrikan sekä Amerikkojen välissä. Löytöretkien aikaan meri tunnettiin juuri siitä, että se erotti uuden maailman vanhasta. Ensimmäisinä tunnettuina ylittäjinä pidetään viikinkejä, mutta Kristoffer Kolumbuksen matka 1492 oli seurauksiltaan mullistavin. Eteläinen Atlantti pysyy lämpimänä ympäri vuoden, koska sen rantavaltiot ovat tropiikissa.",
+      "lahde": "en-Wikipedia \"Atlantic Ocean\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Amazon",
+      "lon": -60.0,
+      "lat": -3.1,
+      "lahdeKoordinaatti": "Vesien kohtaaminen Manausin kohdalla, jossa Rio Negro yhtyy Solimõesiin; en-Wikipedia \"Amazon River\" antaa koordinaatiksi latvat Perussa (-71,694 / -15,518)",
+      "nappi": "Maailman vuolain joki",
+      "kysymykset": [
+        "Miksi Amazonin pituudesta kiistellään?",
+        "Mikä on Vesien kohtaaminen?"
+      ],
+      "teksti": "Amazon on virtaamaltaan maailman suurin joki: se purkaa keskimäärin 215 000–230 000 kuutiometriä sekunnissa eli enemmän kuin seitsemän seuraavaksi suurinta jokea yhteensä. Se vie viidenneksen kaikesta jokivedestä, joka maailman merille päätyy, ja sen 7 miljoonan neliökilometrin valuma-alue on maailman laajin. Pituudesta kiistellään Niilin kanssa; tunnustettu mitta on 6 400 kilometriä. Manausin kohdalla Rio Negron musta vesi kohtaa Solimõesin savisen virran, eivätkä ne sekoitu heti — sitä sanotaan Vesien kohtaamiseksi.",
+      "lahde": "en-Wikipedia \"Amazon River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

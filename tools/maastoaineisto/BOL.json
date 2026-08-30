@@ -1,0 +1,50 @@
+{
+  "_": "Bolivian maastokohteet. Faktat en-Wikipediasta 30.8.2026. Nimien suomalainen asu fi-Wikipediasta: Salar de Uyuni sellaisenaan, järven fi-artikkeli on Titicaca ja suomalaisessa tekstissä vakiintunut asu Titicacajärvi (vrt. Victorianjärvi).",
+  "vuoret": [
+    {
+      "nimi": "Nevado Sajama",
+      "lon": -68.8831,
+      "lat": -18.1081,
+      "m": 6542,
+      "lahdeKoordinaatti": "en-Wikipedia \"Nevado Sajama\", tietolaatikko (18°06′29″S 68°52′59″W)",
+      "nappi": "Bolivian korkein huippu",
+      "kysymykset": [
+        "Miten puu kasvaa viiden kilometrin korkeudessa?",
+        "Miksi tulivuoren sammumisajasta ei olla varmoja?"
+      ],
+      "teksti": "Nevado Sajama on sammunut tulivuori ja Bolivian korkein huippu, 6 542 metriä. Se kohoaa Oruron departementissa Sajaman kansallispuistossa, ja rakenteeltaan se on kerrostulivuori useiden laavakupolien päällä. Milloin se viimeksi purkautui, ei ole selvillä: arvio osuu jonnekin pleistoseeni- tai holoseenikauteen. Huippua peittää jäähattu. Rinteillä kasvaa Polylepis tarapacana -puita vielä 5 000 metrin korkeudessa, mikä tekee niistä maailman korkeimmalla kasvavia metsiä. Aymaran kielellä vuori on Chak Xaña.",
+      "lahde": "en-Wikipedia \"Nevado Sajama\", johdanto-osa ja tietolaatikko (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Titicacajärvi",
+      "lon": -68.95,
+      "lat": -16.1,
+      "lahdeKoordinaatti": "järven Bolivian-puoleinen osa; en-Wikipedia \"Lake Titicaca\" antaa keskipisteeksi -69,325 / -15,825",
+      "nappi": "Maailman korkein purjehduskelpoinen järvi",
+      "kysymykset": [
+        "Miten laiva on saatu neljän kilometrin korkeuteen?",
+        "Miksi järven vesi on hieman suolaista?"
+      ],
+      "korostukset": ["Andit|Andien"],
+      "teksti": "Titicacajärvi makaa Andien ylängöllä Bolivian ja Perun rajalla 3 812 metrin korkeudessa, ja sitä sanotaan usein maailman korkeimmaksi purjehduskelpoiseksi järveksi. Se on Etelä-Amerikan suurin järvi sekä pinta-alaltaan että vesimäärältään: 8 372 neliökilometriä, 896 kuutiokilometriä vettä ja syvimmillään 281 metriä. Maailman järvistä se on kahdeksastoista. Järveä sanotaan makeanvesijärveksi, vaikka vesi on lievästi murtovettä. Siihen laskee 27 jokea, mutta pois vettä vie vain haihtuminen ja yksi ainoa laskujoki, Desaguadero.",
+      "lahde": "en-Wikipedia \"Lake Titicaca\", johdanto-osa ja tietolaatikko (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Salar de Uyuni",
+      "lon": -67.4891,
+      "lat": -20.1338,
+      "lahdeKoordinaatti": "en-Wikipedia \"Salar de Uyuni\" (-67,489 / -20,134)",
+      "nappi": "Maailman suurin suolatasanko",
+      "kysymykset": [
+        "Miksi satelliitit tähtäävät suolatasankoon?",
+        "Mihin litiumia tarvitaan?"
+      ],
+      "teksti": "Salar de Uyuni on maailman suurin suolatasanko, noin 10 582 neliökilometriä, ja se levittäytyy Bolivian altiplanolle 3 656 metrin korkeuteen. Sen paikalla oli myöhäisellä pleistoseenikaudella seitsemän järven sarja; kun ne kuivuivat, pohjalle jäi kahdeksan metriä paksu suolakuori. Tasanko on poikkeuksellisen tasainen: korkeusero koko alueella on alle metrin, ja siksi sitä käytetään satelliittien korkeusmittarien kalibrointiin. Suolan alla on litiumpitoista suolaliuosta. Sateen jälkeen ohut vesikerros muuttaa tasangon 129 kilometriä leveäksi peiliksi.",
+      "lahde": "en-Wikipedia \"Salar de Uyuni\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

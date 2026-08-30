@@ -1,0 +1,49 @@
+{
+  "_": "Paraguayn maastokohteet. Faktat en-Wikipediasta 30.8.2026. Nimien suomalainen asu fi-Wikipediasta: Paraguayjoki ja Gran Chaco. Korkeimman kohdan en-artikkeli on Cerro Tres Kandú; nimi Cerro Perõ on saman kukkulan toinen asu, mutta kohteen nimeksi on otettu lähteen oma otsikko.",
+  "vuoret": [
+    {
+      "nimi": "Cerro Tres Kandú",
+      "lon": -56.16,
+      "lat": -25.9017,
+      "m": 842,
+      "lahdeKoordinaatti": "en-Wikipedia \"Cerro Tres Kandú\" (-56,16 / -25,902)",
+      "nappi": "Paraguayn korkein kohta",
+      "kysymykset": [
+        "Miksi maan korkein kohta jää alle kilometrin?",
+        "Miksi armeija vei mastonsa juuri tälle kukkulalle?"
+      ],
+      "korostukset": ["guarani|guaranin"],
+      "teksti": "Cerro Tres Kandú on Paraguayn korkein kohta, 842 metriä. Se kohoaa Guairán departementissa General Eugenio Garayn kunnassa Ybytyruzú-nimisessä kukkulajonossa. Nimi on guaranin kieltä. Koko maa on niin tasaista, että tämä vaatimaton kukkula riittää huipuksi — vertailun vuoksi naapurin Aconcagua on yli kahdeksankertainen. Kukkula oli pitkään tärkeä Paraguayn asevoimille, sillä sen laelle sopi radiolinkkien toistin, ja myös maan sähköyhtiö ANDE piti siellä omaansa. Nykyään laitteet ovat hylättyjä.",
+      "lahde": "en-Wikipedia \"Cerro Tres Kandú\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [],
+  "joet": [
+    {
+      "nimi": "Paraguayjoki",
+      "lon": -57.63,
+      "lat": -25.28,
+      "lahdeKoordinaatti": "joen uoma Asunciónin kohdalla; en-Wikipedian artikkelilla \"Paraguay River\" ei ole pistekoordinaattia",
+      "nappi": "Sisämaavaltion tie merelle",
+      "kysymykset": [
+        "Miten sisämaavaltio pääsee jokea pitkin merelle?",
+        "Montako valtakunnanrajaa yksi joki voi muodostaa?"
+      ],
+      "teksti": "Paraguayjoki on Etelä-Amerikan keskiosan suuria virtoja. Se kulkee Brasilian ja Paraguayn halki ja muodostaa osan Paraguayn ja Argentiinan, Brasilian ja Bolivian sekä Brasilian ja Paraguayn välisistä rajoista. Matkaa latvoilta Brasilian Mato Grossosta Paranájokeen, johon se yhtyy Corrientesin ja Resistencian pohjoispuolella, on noin 2 621 kilometriä. Merelle Paraguaylla ei ole omaa rantaa, joten juuri tämä joki on maan väylä maailmalle: se laskee Paranájokeen, ja Paraná jatkaa Río de la Platan estuaariin.",
+      "lahde": "en-Wikipedia \"Paraguay River\", johdanto-osa; jatko estuaariin en-Wikipedia \"Río de la Plata\", johdanto-osa (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Gran Chaco",
+      "lon": -59.5,
+      "lat": -22.3,
+      "lahdeKoordinaatti": "Paraguayn puoleinen Chaco; en-Wikipedia \"Gran Chaco\" antaa keskipisteeksi -61,47 / -19,16",
+      "nappi": "Mantereen toiseksi laajin metsäalue",
+      "kysymykset": [
+        "Miksi Chacoa sanotaan puoliaavikoksi, vaikka siellä on metsää?",
+        "Mitä Chacon metsille tapahtuu nyt?"
+      ],
+      "teksti": "Gran Chaco on laaja puolikuiva alanko Etelä-Amerikan keskiosassa. Se leviää yli miljoonan neliökilometrin alalle Bolivian itäosaan, Paraguayn länsipuoliskoon, Pohjois-Argentiinaan ja osaan Brasiliaa, ja kuuluu Río de la Platan valuma-alueeseen. Maisemassa vuorottelevat trooppiset ja subtrooppiset kuivat lehtimetsät, piikkipensaikot, savannit, kosteikot ja palmulehdot; se on mantereen toiseksi laajin metsäalue. Lajeja on paljon: yli 3 400 kasvia, noin 500 lintua ja 150 nisäkästä, muun muassa jaguaari, jättivyötiäinen, pekarit ja harjasusi.",
+      "lahde": "en-Wikipedia \"Gran Chaco\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

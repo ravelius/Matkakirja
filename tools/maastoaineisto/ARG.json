@@ -1,0 +1,51 @@
+{
+  "_": "Argentiinan maastokohteet. Faktat en-Wikipediasta 30.8.2026. Nimien suomalainen asu fi-Wikipediasta: Aconcagua, Río de la Plata, Iguassun putoukset. Huom: fi-Wikipedia antaa Aconcagualle 6 961 m, en-Wikipedian tietolaatikko mitatun 6 967 m — teksti seuraa en-Wikipediaa kuten erän sääntö vaatii.",
+  "vuoret": [
+    {
+      "nimi": "Aconcagua",
+      "lon": -70.0117,
+      "lat": -32.6531,
+      "m": 6967,
+      "lahdeKoordinaatti": "en-Wikipedia \"Aconcagua\", tietolaatikko (32°39′11″S 70°00′42″W)",
+      "nappi": "Amerikkojen korkein huippu",
+      "kysymykset": [
+        "Miksi Aconcagualle ei tarvita köysiä?",
+        "Minne vuoren tulivuoritoiminta katosi?"
+      ],
+      "korostukset": ["Andit|Andien"],
+      "teksti": "Aconcagua kohoaa Andien pääketjussa Mendozan maakunnassa, noin viidentoista kilometrin päässä Chilen rajasta. Huippu on 6 967 metrissä: se on Amerikkojen korkein vuori ja korkein koko Aasian ulkopuolella, ja se kuuluu seitsemään huippuun eli maanosien korkeimpiin. Vuori syntyi, kun Nazcan laatta työntyi Etelä-Amerikan laatan alle; ennen mioseenikauden mullistuksia se oli toimiva kerrostulivuori. Pohjoisen normaalireittiä pidetään maailman korkeimpana nousuna, joka ei vaadi köysiä. Huipulla ilmanpaine on silti vain noin 40 prosenttia merenpinnan arvosta, ja vain kolmasosa yrittäjistä pääsee perille.",
+      "lahde": "en-Wikipedia \"Aconcagua\", johdanto-osa ja tietolaatikko (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Río de la Plata",
+      "lon": -57.2,
+      "lat": -35.0,
+      "lahdeKoordinaatti": "estuaarin Argentiinan-puoleinen selkä Buenos Airesin edustalla; en-Wikipedia \"Río de la Plata\" antaa keskipisteeksi -55,78 / -35,67",
+      "nappi": "Maailman levein joki",
+      "kysymykset": [
+        "Onko Río de la Plata joki vai merenlahti?",
+        "Miksi hopeajoen rannoilla asuu niin paljon väkeä?"
+      ],
+      "teksti": "Río de la Plata syntyy siellä, missä Uruguayjoki ja Paranájoki yhtyvät Punta Gordan kohdalla, ja laskee Atlantin valtamereen suppilomaisena aukkona Etelä-Amerikan kaakkoisrannikolla. Maantieteilijät kiistelevät yhä, onko se joki, estuaari, lahti vai reunameri. Jokena pidettynä se on maailman levein: pituutta on vain noin 290 kilometriä, mutta leveys kasvaa parista kilometristä 220 kilometriin suulla. Estuaari muodostaa osan Argentiinan ja Uruguayn rajasta, ja sen rannat ovat molempien maiden tiheimmin asuttua seutua. Vettä ylittää vuosittain 2,5 miljoonaa matkustajaa.",
+      "lahde": "en-Wikipedia \"Río de la Plata\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Iguassun putoukset",
+      "lon": -54.4447,
+      "lat": -25.6867,
+      "lahdeKoordinaatti": "en-Wikipedia \"Iguazu Falls\" (25°41′12″S 54°26′41″W)",
+      "nappi": "Maailman suurin putousjärjestelmä",
+      "kysymykset": [
+        "Kumman maan puolella putouksista on enemmän?",
+        "Mitä guaranin sana ûasú tarkoittaa?"
+      ],
+      "korostukset": ["guarani|guaranin"],
+      "teksti": "Iguassun putoukset ovat Iguaçujoen putouksia Argentiinan Misionesin maakunnan ja Brasilian Paranán osavaltion rajalla, ja yhdessä ne muodostavat maailman suurimman putousjärjestelmän. Putoukset jakavat joen ylä- ja alajuoksuun. Iguaçujoki saa alkunsa aivan Curitiban kaupungin sydämestä ja virtaa suurimman osan matkastaan Brasiliassa, mutta itse putouksista suurin osa on Argentiinan puolella. Nimi tulee guaranin sanoista y eli vesi ja ûasú eli iso. Ensimmäinen putoukset muistiin kirjannut eurooppalainen oli espanjalainen valloittaja Álvar Núñez Cabeza de Vaca vuonna 1541.",
+      "lahde": "en-Wikipedia \"Iguazu Falls\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "_": "Perun maastokohteet. Faktat en-Wikipediasta 30.8.2026. Nimien suomalainen asu fi-Wikipediasta: Huascarán sellaisenaan; Marañónille ei ole fi-artikkelia, ja nimi on espanjankielinen erisnimi. Titicacajärvi jätettiin pois tarkoituksella: se on annettu Bolivialle, jottei sama kohde toistuisi kahdessa maassa.",
+  "vuoret": [
+    {
+      "nimi": "Huascarán",
+      "lon": -77.6042,
+      "lat": -9.1217,
+      "m": 6768,
+      "lahdeKoordinaatti": "en-Wikipedia \"Huascarán\" (-77,604 / -9,122)",
+      "nappi": "Tropiikin korkein kohta",
+      "kysymykset": [
+        "Miten vuori voi olla lumihuippu tropiikissa?",
+        "Mikä on Cordillera Blanca?"
+      ],
+      "korostukset": ["tropiikki|tropiikin"],
+      "teksti": "Huascarán kohoaa Ancashin departementissa läntisten Andien Cordillera Blancassa. Sen eteläinen huippu Huascarán Sur yltää 6 768 metriin, ja se on Perun korkein kohta, pohjoisten Andien eli Titicacajärveä pohjoisempien vuorten korkein huippu ja koko maapallon tropiikin korkein piste. Etelä-Amerikan vuorista korkeampia ovat vain Aconcagua, Ojos del Salado ja Monte Pissis. Topografiselta eristyneisyydeltään Huascarán on maailman 25:s. Vuoren nimi on ketšuaksi Waskaran ja paikallisesti myös Mataraju.",
+      "lahde": "en-Wikipedia \"Huascarán\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [],
+  "joet": [
+    {
+      "nimi": "Marañón",
+      "lon": -77.2977,
+      "lat": -7.9674,
+      "lahdeKoordinaatti": "en-Wikipedia \"Marañón River\" (-77,298 / -7,967)",
+      "nappi": "Amazonin päälatvahaara",
+      "kysymykset": [
+        "Missä Amazon oikeastaan alkaa?",
+        "Mitä tarkoittaa, että joella on omat oikeudet?"
+      ],
+      "teksti": "Marañón on Amazonin päälatvahaara. Se saa alkunsa noin 160 kilometriä Limasta koilliseen, virtaa luoteeseen 3 650 metrin korkuisten ylätasankojen poikki ja kaivautuu syvään Andien laaksoon vuoriston itäjuurella. Noin viiden asteen ja 36 minuutin eteläisellä leveyspiirillä se kääntyy jyrkästi koilliseen, leikkaa vuoriston läpi ja purkautuu Pongo de Mansericheltä Amazonin alangolle. Nykyisin Marañónin katsotaan päättyvän Ucayalin liittymään, mistä eteenpäin joki on Amazon. Vuonna 2024 perulainen tuomioistuin päätti, että joella itsellään on perusoikeuksia.",
+      "lahde": "en-Wikipedia \"Marañón River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

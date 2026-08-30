@@ -1,0 +1,50 @@
+{
+  "_": "Venezuelan maastokohteet. Faktat en-Wikipediasta 30.8.2026. Nimien suomalainen asu fi-Wikipediasta: Angelinputous yhdyssanana, Orinoco sellaisenaan; Pico Bolívarille ei ole fi-artikkelia, ja nimi on espanjankielinen erisnimi.",
+  "vuoret": [
+    {
+      "nimi": "Pico Bolívar",
+      "lon": -71.0458,
+      "lat": 8.5417,
+      "m": 4978,
+      "lahdeKoordinaatti": "en-Wikipedia \"Pico Bolívar\" (-71,046 / 8,542)",
+      "nappi": "Venezuelan korkein huippu",
+      "kysymykset": [
+        "Miksi köysirata ei vie huipulle asti?",
+        "Kuka oli Simón Bolívar?"
+      ],
+      "teksti": "Pico Bolívar on Venezuelan korkein vuori, 4 978 metriä, ja se kohoaa Méridan osavaltiossa. Huipulle pääsee vain kävellen: Méridan köysirata, joka valmistuessaan oli maailman korkein ja pisin, päättyy Pico Espejolle, ja siitä eteenpäin on kiivettävä. Huippu on nimetty Venezuelan itsenäisyyssankarin Simón Bolívarin mukaan. Vuorta kutsuttiin aiemmin nimellä La Columna, ja sen vieressä kohoavat El León 4 743 metriin ja El Toro 4 695 metriin. Uuden nimen ehdotti Tulio Febres Cordero vuonna 1925, ja se vahvistettiin virallisesti 30. joulukuuta 1934.",
+      "lahde": "en-Wikipedia \"Pico Bolívar\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [],
+  "joet": [
+    {
+      "nimi": "Angelinputous",
+      "lon": -62.5356,
+      "lat": 5.9675,
+      "lahdeKoordinaatti": "en-Wikipedia \"Angel Falls\" (-62,536 / 5,968)",
+      "nappi": "Maailman korkein vesiputous",
+      "kysymykset": [
+        "Mikä on tepui?",
+        "Miksi putouksen korkeudesta ollaan epävarmoja?"
+      ],
+      "korostukset": ["tepui|tepui"],
+      "teksti": "Angelinputous on maailman korkein katkeamaton vesiputous: kokonaiskorkeus 979 metriä ja yhtenäinen vapaa pudotus 807 metriä. Vesi syöksyy Auyán-tepui -vuoren reunan yli Canaiman kansallispuistossa Gran Sabanan alueella. Tepui on hiekkakivinen pöytävuori, ja Auyán-tepui tarkoittaa pemónin kielellä jumalten taloa; sen lakiylängön pinta-ala on 667 neliökilometriä. Putouksen vesi virtaa Körepajokea myöten lopulta Orinocoon. Korkeus on mitattu kaukaa, ja siksi on yhä epäselvää, onko maailman korkein putous tämä vai Etelä-Afrikan Tugela.",
+      "lahde": "en-Wikipedia \"Angel Falls\" ja \"Auyán-tepui\", johdanto-osat (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Orinoco",
+      "lon": -63.5,
+      "lat": 8.15,
+      "lahdeKoordinaatti": "joen uoma Ciudad Bolívarin kohdalla; en-Wikipedia \"Orinoco\" antaa koordinaatiksi suiston (-62,25 / 8,617)",
+      "nappi": "Venezuelan valtavirta",
+      "kysymykset": [
+        "Miten yksi joki riittää maan liikenneväyläksi?",
+        "Miksi Orinocon virtaama on niin suuri?"
+      ],
+      "korostukset": ["llanos|Llanosin"],
+      "teksti": "Orinoco on Etelä-Amerikan pisimpiä jokia, 2 140 kilometriä. Sen valuma-alue on noin miljoona neliökilometriä, josta 65 prosenttia on Venezuelan ja 35 prosenttia Kolumbian puolella. Virtaamaltaan se on maailman kolmanneksi suurin joki, suistossa 39 000 kuutiometriä sekunnissa; syy on runsas sade, keskimäärin 2 300 millimetriä vuodessa koko valuma-alueella. Joki sivuhaaroineen on Itä- ja Sisä-Venezuelan sekä Kolumbian Llanosin tasangon tärkein liikenneväylä. Suurin sivujoki on Guaviare.",
+      "lahde": "en-Wikipedia \"Orinoco\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}
