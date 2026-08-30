@@ -54,11 +54,12 @@
  *   1. MATKAKIRJAAN EI TULE KUVAA. `matkakirja.kuva` on jätetty pois
  *      kokonaan: kuvat kuuluvat kaupunkilehteen (js/ui.js
  *      naytaFactValokuva saa nullin).
- *   2. ÄÄNITEKENTTÄÄ EI KIRJOITETA. Kuten Marseillessa, `matkakirja.
- *      aanite` jätetään pois (aallon 4C rajaus): kenttä on kytkentä
- *      generointiajoon, eikä sitä ole tälle erälle sovittu. Luenta on
- *      silti kirjoitettu valmiiksi, joten generointi voidaan ajaa
- *      koskematta tekstiin.
+ *   2. ÄÄNITE ON KYTKETTY. Luenta on generoitu 30.8.2026
+ *      (tools/generoi-luennat.mjs, lähteenä `matkakirja.luenta`) ja
+ *      `matkakirja.aanite` osoittaa siihen:
+ *      assets/audio/puhe-fokus-matkakirja-odessa.mp3. Teksti ja luenta
+ *      ovat sanasta sanaan samat, joten tekstin muutos vaatii uuden
+ *      generoinnin.
  *   3. VALINTA-ASKELTA EI OLE. `valinta`-kenttää ei kirjoiteta;
  *      moottori lukee kentän varovasti (`data.valinta?.…`).
  *   4. KOHTAAMISKORTTI RAKENNETAAN ILMAN KUVAA. Kohtaamisessa on siis
@@ -234,6 +235,7 @@ export const FOKUSVIRTA_ODESSA = {
       + 'näe alas satamaan — vain meren. [softly] Oopperatalo paloi '
       + 'talvella, ja siitä puhutaan kuin kuolleesta sukulaisesta: joka '
       + 'päivä, ja aina hyvää.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-odessa.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

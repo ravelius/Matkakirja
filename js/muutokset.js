@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1345, teksti: 'Aallon 4C matkakirjaluennat kuuluviin' },
   { v: 1344, teksti: 'Popup-kuvat aukeavat koko naytolle' },
   { v: 1343, teksti: 'Aalto 4C: Eurooppa valmis - 39 fokuskaupunkia' },
   { v: 1342, teksti: 'Maailmalehti ulottuu Gronlantiin ja etelakarkiin' },

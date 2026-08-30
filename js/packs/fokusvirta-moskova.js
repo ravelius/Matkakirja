@@ -50,10 +50,12 @@
  *
  *   1. MATKAKIRJAAN EI TULE KUVAA. `matkakirja.kuva` on jätetty pois
  *      kokonaan: kuvat kuuluvat kaupunkilehteen.
- *   2. ÄÄNITETTÄ EI OLE VIELÄ. `matkakirja.aanite` puuttuu, koska tämän
- *      aallon luentoja ei ole generoitu. `luenta` on kirjoitettu valmiiksi
- *      samoin sanoin, joten generointi on myöhemmin yksi ajo eikä uusi
- *      kirjoitustyö.
+ *   2. ÄÄNITE ON KYTKETTY. Luenta on generoitu 30.8.2026
+ *      (tools/generoi-luennat.mjs, lähteenä `matkakirja.luenta`) ja
+ *      `matkakirja.aanite` osoittaa siihen:
+ *      assets/audio/puhe-fokus-matkakirja-moskova.mp3. Teksti ja luenta
+ *      ovat sanasta sanaan samat, joten tekstin muutos vaatii uuden
+ *      generoinnin.
  *   3. PÖLLÖN KUVA ON KAUPUNKILEHDEN HEROKUVA. `pollo.kuva` osoittaa
  *      KULTTUURI_KATEGORIAT-karusellin omaan generoituun heroon
  *      (moskova/avauskuvat), ei uuteen Commons-kuvaan.
@@ -206,9 +208,6 @@ export const FOKUSVIRTA_MOSKOVA = {
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
-     *
-     * ÄÄNITETTÄ EI OLE VIELÄ: `aanite`-kenttää ei kirjoiteta ennen kuin
-     * luenta on generoitu (ks. omistajan linjaus 2 tiedoston alussa).
      */
     luenta: '[curious] Kaupunki on rakennettu renkaiksi kuin puun '
       + 'vuosilustot, ja sen sydämessä linnoituksen muurit sulkevat '
@@ -218,6 +217,7 @@ export const FOKUSVIRTA_MOSKOVA = {
       + 'neljä tuntia ja jossa teetä juotiin samovaarista kuin vettä '
       + 'lähteestä. [whispers] Täällä sanotaan: Pietari on Venäjän pää, '
       + 'mutta Moskova on sen sydän.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-moskova.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
