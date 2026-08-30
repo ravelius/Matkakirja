@@ -165,7 +165,7 @@ const KOKO = {
  * Sama suuruusluokka kuin kaupungin nimiön siirtymä pisteestä (5–7):
  * nimi on kiinni merkissään mutta ei sen päällä.
  */
-const KOHDE_RAKO = 3;
+const NIMION_RAKO = 3;
 
 /**
  * KOHDENIMIÖIDEN VÄLJYYSVARA CSS-PIKSELEINÄ — TÄMÄ ON YLEISTYSKYNNYS,
@@ -187,8 +187,8 @@ const KOHDE_RAKO = 3;
  * useampi — sama porrastus kuin paikannimillä, eri mekanismilla,
  * koska aineisto on erilainen.
  */
-const KOHDE_VALJYYS_X = 4;
-const KOHDE_VALJYYS_Y = 5;
+const NIMION_VALJYYS_X = 4;
+const NIMION_VALJYYS_Y = 5;
 
 /**
  * NOSTON PITUUDET CSS-PIKSELEINÄ (omistajan pelitesti 30.8.2026,
@@ -661,7 +661,7 @@ function lado(data, px) {
       const y = k.y * px;
       const lev = tekstinLeveys(k.teksti, KOKO.kohde, '');
       const kork = KOKO.kohde * 1.15;
-      const vieri = merkkiR + KOHDE_RAKO;
+      const vieri = merkkiR + NIMION_RAKO;
       /*
        * EHDOKKAAT KAHDESSA LUOKASSA: ensin neljä merkin omaa kylkeä
        * (nimi kiinni merkissä, ei viivaa — viiva olisi silloin pelkkä
@@ -698,12 +698,12 @@ function lado(data, px) {
         const ky = y + e.dy;
         const x0 = e.ank === 'end' ? kx - lev : (e.ank === 'middle' ? kx - lev / 2 : kx);
         /* Väljyysvara on mukana sekä testissä että varauksessa: nimi
-         * vaatii tilaa ympärilleen eikä vain itselleen (ks. KOHDE_VALJYYS). */
+         * vaatii tilaa ympärilleen eikä vain itselleen (ks. NIMION_VALJYYS). */
         const r = {
-          x0: x0 - KOHDE_VALJYYS_X,
-          y0: ky - kork * 0.62 - KOHDE_VALJYYS_Y,
-          x1: x0 + lev + KOHDE_VALJYYS_X,
-          y1: ky + kork * 0.42 + KOHDE_VALJYYS_Y,
+          x0: x0 - NIMION_VALJYYS_X,
+          y0: ky - kork * 0.62 - NIMION_VALJYYS_Y,
+          x1: x0 + lev + NIMION_VALJYYS_X,
+          y1: ky + kork * 0.42 + NIMION_VALJYYS_Y,
         };
         if (vapaa(r)) { varaa(r); asetettuK = { kx, ky, ank: e.ank, nosto: e.nosto }; break; }
       }

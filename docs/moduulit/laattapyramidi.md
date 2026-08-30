@@ -847,6 +847,78 @@ ladottu laatikko ruudulla **14,0 CSS-pikseliä kaikilla kolmella**,
 ladottujen nimien määrä sama (29) ja paikat samat. Ennen sama nimi oli
 10,7 ja 5,3 CSS-pikseliä (dpr 1 / dpr 3).
 
+### 6g.5 Kohdenimiöt samaan ladontaan (omistajan päätös 30.8.2026)
+
+Kysymyskortti, kuvakaappaus Sofiasta: **"Sama ladonta kuin
+paikannimillä."** Kohdenimiöt (`js/fokuskohteet.js`) menevät samaan
+ruutuavaruuden ladontaan kuin kaupunkien nimet — sama koko, sama
+törmäyksenvältely, samat tiheyskynnykset. **Merkit jäävät
+napautettaviksi myös ilman nimeä.**
+
+**Vika.** Kun paikannimet siirtyivät laatoista peliin (6g.3), ne saivat
+ruutuun mitoitetun koon. Kohdenimiöt jäivät omaan mittaansa, joka ei
+ollut kartan mitta lainkaan vaan kahden kertoimen tulo:
+`NOSTOSYM_NIMIO_KOKO` 11 × `KOHDE_SYMBOLI_SKAALA` 11/21 = **5,8
+CSS-pikseliä** lehden perustasolla. Sofiassa se tarkoitti
+toistakymmentä lukukelvotonta nimiötä kaupungin kyljessä, eikä yksikään
+pudonnut: väistö tunsi vain kaksi paikkaa eikä yhtään mittakaavakynnystä.
+
+**Miksi ei omaa ladontaa, vaikka sellainen jo oli.** Juuri se oli vika.
+Kaksi rinnakkaista ladontaa ei voi ratkaista törmäystä keskenään, koska
+kumpikaan ei tiedä toisesta — sama juurisyy kuin kaksoisnimillä (6c.1).
+Kohdekerros ILMOITTAUTUU nyt ladontaan (`karttanimet.js
+asetaKohdenimet`) ja antaa nimensä merkkien LOPULLISISSA
+piirtopaikoissa; riippuvuus osoittaa yhteen suuntaan eikä kehää synny.
+Tämä on myös järjestysvaatimus: `paivitaFokuskohteet` ajetaan
+`paivitaKarttanimet`in EDELLÄ (js/ui.js paivitaMaastonimet).
+
+**Tärkeysjärjestys, ja sen perustelu.** Kaupungit ladotaan ensin,
+kohteet niiden jälkeen, maastonimet viimeisenä.
+
+1. *Kaupungin nimi voittaa kohteen nimen.* Kaupunki on kartan
+   perusrakennetta ja pelaajan navigoinnin ankkuri. Kohde on saman
+   kaupungin yksityiskohta, ja sen kortti aukeaa merkkiä napauttamalla
+   myös ilman nimeä — kaupungin nimen katoaminen ei korvaudu millään.
+2. *Kohteen nimi voittaa maastonimen.* Maastonimi on kuvitusta, jota
+   kartta latoo koko maailmaan; kohde on pelin omaa sisältöä ja vain
+   siinä maassa, jossa pelaaja nyt on.
+
+**Yleistys tulee väljyysvarasta, ei mittakaavakynnyksestä.** Kohteet
+ovat kaikki yhden kaupungin ympärillä, ja merkkirypäs
+(`js/fokusniput.js`) järjestää ne sarakkeeksi eli tekee niille tilaa.
+Pelkkä törmäystesti hyväksyisi ne kaikki joka mittakaavassa. Varaus
+tehdään siksi nimeä isompana (`NIMION_VALJYYS_X/Y`, 4 ja 5 CSS-px):
+sarake levenee lähennettäessä ja päästää lisää nimiä läpi.
+
+**Nosto.** Kun nimi ei mahdu merkin neljään kylkeen, se nostetaan
+lähituntumaan (`NOSTON_PITUUDET` 14 ja 26 CSS-px) ja sidotaan merkkiin
+katkoviivalla, jonka paksuus ja katkot ovat CSS-pikseleitä
+(paperivakio) eivätkä kartan mittakaavaa. Pidempää nostoa ei ole: se ei
+enää kertoisi kenen nimi on kyseessä, ja silloin nimen kuuluu pudota.
+
+**Mitattu** (iPad-mitat 834×1112, tuotannon laatat 2026-08-30b,
+pelaaja Sofiassa):
+
+| skaala (CSS-px/yks) | kohdenimiöitä ruudulla ENNEN | JÄLKEEN |
+| --- | --- | --- |
+| 0,955 (kerros piilossa) | 0 | 0 |
+| 1,355 | 18 | **12** |
+| 2,710 | 18 | **17** |
+| 4,743 | 18 | 17 |
+| 9,214 | 18 | 16 |
+
+Nimiön korkeus ruudulla **5,8 → 11 CSS-pikseliä**, ja **dpr 2 ja dpr 3
+antavat täsmälleen saman tuloksen** (17 nimiötä, samat paikat) — se on
+koko korjauksen ydin, sama kuin 6g.3:ssa.
+
+**Merkit todennettu napautettaviksi** ilman nimeä: samassa näkymässä
+ruudulla oli 6 nimetöntä ja 17 nimellistä merkkiä, ja jokainen kokeiltu
+nimetön merkki avasi korttinsa.
+
+**Samalla kertaa** (omistajan pelitesti Ateenasta): rypään
+yhdysviiva kevennettiin (paksuus 1,2 → 0,8, himmeys 0,42 → 0,3, katko
+2,6 → 2,0) ja sarake tuotiin lähemmäs kaupunkia (`NIPPU_DX` 37 → 28).
+
 ## 6h. Rantaviiva ja maaväri samasta vektorista
 
 *(Omistajan havainto iPadilta 30.8.2026: "Ääriviiva ja korkeus väritys
