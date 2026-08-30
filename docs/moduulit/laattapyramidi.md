@@ -285,11 +285,17 @@ kulkeva rannikkoviiva voi olla enintään 32/255 eri sävyinen yhden
 pikselin matkalla. Silmälle näkymätön, eikä muodosta ruudukkoa, koska
 paperi ja rae — se mitä katse lukee pintana — ovat bitilleen jatkuvia.
 
-**Moottorin muutos on lisäksi todistettu oletuspolulla no-opiksi:**
-`tools/tee-yleislehti.mjs --leveys 1600` tuottaa ennen ja jälkeen
-muutoksen saman tiedoston (md5 `d5820ebf8548ebbe75e4f8242617e467`).
-Se on koko muutoksen turvaverkko: yleislehti ja maalehdet ajavat samaa
-moottoria, eikä pyramidi saanut muuttaa niistä yhtäkään pikseliä.
+**Moottorin laattatuki on lisäksi todistettu oletuspolulla
+no-opiksi:** `tools/tee-yleislehti.mjs --leveys 1600` tuottaa ennen ja
+jälkeen `maailmapiirto.js`-muutoksen saman tiedoston (md5
+`d5820ebf8548ebbe75e4f8242617e467`). Se on koko muutoksen turvaverkko:
+yleislehti ja maalehdet ajavat samaa moottoria, eikä laattatuki saanut
+muuttaa niistä yhtäkään pikseliä.
+
+Todiste koskee **vain laattatukea**. Korkeusasteikon laajennus (luku 8)
+on erikseen tehty ja tarkoituksellinen muutos, ja se muuttaa yli
+2900 metrin maastoa — sen jälkeen sama ajo antaa md5:n
+`7c3fb3d790a0165e1454ddc3444ddcdb`.
 
 ## 8. Korkeusasteikko yltää nyt huipulle
 
@@ -306,9 +312,23 @@ Lisätyt portaat (tools/fokuskartta/piirto.js `ASTEIKKO`):
 { m: 8850, v: [214, 208, 200] },
 ```
 
-**Portaat 2900 ja alle eivät muutu**, joten nykyiset maalehdet ja
-yleislehti renderöityvät pikselintarkasti samoin — uudet portaat ovat
-puhdas lisäys. Ylin pää on ikuinen lumi aikakauden konvention mukaan.
+**Portaat 2900 ja alle eivät muutu**, joten alle 2900 metrin maasto
+piirtyy pikselilleen kuten ennen. Ylin pää on ikuinen lumi aikakauden
+konvention mukaan.
+
+**Tämä EI tarkoita, että vanhat lehdet olisivat ennallaan.** Jokainen
+lehti, jossa on yli 2900 metrin maastoa — Alpit, Himalaja, Andit,
+Kaukasus — piirtyy tästä eteenpäin eri näköisenä, ja se on muutoksen
+tarkoitus. Todennettu: `tee-yleislehti --leveys 1600` antaa nyt md5:n
+`7c3fb3d790a0165e1454ddc3444ddcdb`, kun se ennen asteikkomuutosta
+antoi `d5820ebf8548ebbe75e4f8242617e467`.
+
+**Seuraus, joka on muistettava:** ämpärissä olevat lehdet eivät muutu
+itsestään, mutta jos ne ajetaan uudestaan
+(`.github/workflows/patinoi-fokus.yml`), on js/media.js
+`FOKUS_VUOSIKERTA` nostettava — muuten selaimiin jää vanha
+vuorikuvitus välimuistiin. Jos vanha lehtijärjestelmä puretaan
+pyramidin valmistuttua, asia raukeaa itsestään.
 
 Todennettu kuvaparilla (z5, Tiibetin ylänkö): ennen tasainen ruskea
 läiskä, jälkeen ylänkö erottuu ja Himalajan rintama piirtyy. z7:llä

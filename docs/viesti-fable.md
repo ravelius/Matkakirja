@@ -109,8 +109,18 @@ z7:n laatoista, ja verkko on 20 asteen välein vedettyjä suoria.
 ## 5. Korkeusasteikko: tehty, ja se näkyy
 
 Lisätty 4200 / 5500 / 7000 / 8850 m (annetuilla väreillä). Portaat
-2900 ja alle **eivät muuttuneet**, joten nykyiset lehdet renderöityvät
-pikselintarkasti samoin.
+2900 ja alle **eivät muuttuneet**, joten alle 2900 metrin maasto
+piirtyy pikselilleen kuten ennen.
+
+**Yksi seuraus on kirjattava, koska se on helppo tulkita väärin:**
+tämä ei tarkoita, että vanhat lehdet olisivat ennallaan. Jokainen
+lehti, jossa on yli 2900 metrin maastoa (Alpit, Himalaja, Andit,
+Kaukasus), piirtyy tästä eteenpäin eri näköisenä — se on muutoksen
+tarkoitus. Todennettu md5:llä. Ämpärin lehdet eivät muutu itsestään,
+mutta **jos `patinoi-fokus.yml` ajetaan uudestaan, js/media.js
+`FOKUS_VUOSIKERTA` on nostettava**, tai selaimiin jää vanha
+vuorikuvitus. Jos lehtijärjestelmä puretaan pyramidin valmistuttua,
+asia raukeaa itsestään.
 
 Kuvapari on ajettu: Tiibetin ylänkö oli ennen yhtä tasaista ruskeaa
 läiskää, nyt ylänkö erottuu ja Himalajan rintama piirtyy; z7:llä

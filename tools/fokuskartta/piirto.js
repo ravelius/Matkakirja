@@ -105,10 +105,17 @@
  * laattapyramidissa se on iso menetys: juuri vuoristot ovat se, mitä
  * kartalta katsotaan, ja ne olivat yhtä ruskeaa läiskää.
  *
- * PORTAAT 2900 JA ALLE EIVÄT MUUTU. Se on ehto eikä sattuma: nykyiset
- * maalehdet ja yleislehti renderöityvät näillä luvuilla pikselintarkasti
- * samoin, koska yksikään niiden pikseli ei ole yli 2900 metrissä ilman
- * että se jo nyt clampataan. Uudet portaat ovat siis puhdas lisäys.
+ * PORTAAT 2900 JA ALLE EIVÄT MUUTU, ja se on ehto eikä sattuma: alle
+ * 2900 metrin maasto renderöityy näillä luvuilla pikselilleen samoin
+ * kuin ennen. Uudet portaat ovat puhdas lisäys asteikon YLÄPÄÄHÄN.
+ *
+ * SE EI SILTI TARKOITA, ETTÄ VANHAT LEHDET OLISIVAT ENNALLAAN.
+ * Jokainen lehti, jossa on yli 2900 metrin maastoa — Alpit, Himalaja,
+ * Andit, Kaukasus — piirtyy tästä eteenpäin ERI NÄKÖISENÄ, ja juuri
+ * se on muutoksen tarkoitus. Ämpärissä olevat lehdet EIVÄT muutu
+ * itsestään; jos ne ajetaan uudestaan (.github/workflows/
+ * patinoi-fokus.yml), on js/media.js FOKUS_VUOSIKERTA nostettava, tai
+ * selaimiin jää vanha vuorikuvitus välimuistiin.
  *
  * Ylin pää on IKUINEN LUMI aikakauden kartografian konvention mukaan:
  * ruskea kylmenee harmaaseen ja vaalenee lopulta lumen valkoiseksi.
