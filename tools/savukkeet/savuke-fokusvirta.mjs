@@ -11,8 +11,11 @@
  * "KOLME PINTAA, EI YHTÄ"):
  *   1. ylävasen matkakirjakortti (.fact-card) — isoisän merkintä
  *   2. pöllön puhekupla (.fokusvirta-kupla) — pöllön huomio
- *   3. annostelukortti (.fokusvirta-kortti) — oppitunti ja kohtaaminen
- * ja niiden lisäksi kartan kuvavinjetit (.fokuskuva-pinni).
+ *   3. annostelukortti (.fokusvirta-kortti) — oppitunti ja kohtaaminen.
+ * Kartan kuvavinjetit (.fokuskuva-pinni) OLIVAT neljäs pinta; viuhka
+ * purettiin 30.8.2026 (omistajan bugiraportti: sisältökuvat kuuluvat
+ * kortteihin, eivät kartalle) ja savuke vartioi nyt, ettei yhtäkään
+ * pinniä ilmesty.
  *
  * Vartiot:
  *   1. LEHTILUKKO — Tutki-nappi ei avaa saapumiskorttia niin kauan kuin
@@ -35,10 +38,10 @@
  *      modaaliksi.
  *   6. Leipäteksti on lukukirjasimella, ei kirjoituskoneella
  *      (omistajan palaute: *"fontti saisi olla luettavampi"*).
- *   7. Kartan kuvavinjetit ilmestyvät Ateenan ylle, kertyvät virran
- *      mukana ja pysyvät samankokoisina zoomista riippumatta.
+ *   7. Kartalle EI ilmesty kuvavinjettejä missään virran vaiheessa
+ *      eikä zoomin asettuessa (viuhka purettu 30.8.2026).
  *   8. KUVAN SUURENNOS (omistajan tilaus 24.8.2026): napautus KASVATTAA
- *      kuvan vinjetin paikalta suureksi kartan päälle — ei koko ruudun
+ *      kuvan kortin kuvaviitteestä suureksi kartan päälle — ei koko ruudun
  *      katselinta, ei täyttä pimennystä, kartta näkyy yhä taustalla.
  *      Pelitestin jälkeen kolme lisävaatimusta: kuva täyttää ruudun
  *      selvästi, selite ja lähde ovat PAPERIKEHYKSEN sisällä kuvan
@@ -420,7 +423,7 @@ vaadi('kupla pysyy ruudun sisällä',
 vaadi('kuplan kärki osoittaa pöllönappiin',
   Boolean(karki) && Math.abs((karki.vasen + parseFloat(karki.arvo)) - pollonappi.keski) <= 3,
   JSON.stringify({ karki, nappi: pollonappi }));
-vaadi('kuplassa ei ole isoa kuvaa — herokuva on kartalla',
+vaadi('kuplassa ei ole isoa kuvaa — herokuva on kaupunkilehdessä',
   tila?.kuvia === 0, JSON.stringify(tila?.kuvia));
 vaadi('leipäteksti on lukukirjasimella eikä kirjoituskoneella',
   /Iowan|Charter|Palatino|Georgia|Times|serif/i.test(tila?.leipafontti ?? '')
@@ -429,11 +432,17 @@ vaadi('leipäteksti on lukukirjasimella eikä kirjoituskoneella',
 vaadi('matkakirjakortti pysyy ylävasemmalla kuplan aikana',
   (await matkakirja())?.nurkka === 'tl');
 
-/* --- 4: kartan kuvavinjetit --- */
+/* --- 4: kartalla EI ole kuvavinjettejä ---
+ *
+ * Viuhka on purettu (omistajan bugiraportti 30.8.2026, Sofian
+ * kuvakaappaus: polaroidit leijuivat kartalla — sisältökuvat kuuluvat
+ * kortteihin, ks. js/fokusvirta.js KUVAT KARTALLA — PURETTU). Vartio
+ * kääntyi ympäri: yhtään .fokuskuva-pinniä ei saa ilmestyä missään
+ * virran vaiheessa.
+ */
 let kuvat = await vinjetit();
-vaadi('herokuva ilmestyy vinjettinä kartalle',
-  kuvat.maara === 1 && kuvat.kerroksenMuunnos.includes('scale'), JSON.stringify(kuvat));
-vaadi('vinjetissä ei ole suodattimia (iOS-sääntö)', kuvat.suodattimia === 0);
+vaadi('kartalle ei ilmesty kuvavinjettejä pöllön vaiheessa',
+  kuvat.maara === 0, JSON.stringify(kuvat));
 
 /* --- 5: Livian kuplan "Jatka" vie suoraan oppituntiin --- */
 await paina('Jatka');
@@ -449,8 +458,8 @@ vaadi('kuplan Jatka vie suoraan oppituntiin',
 vaadi('Pulu ei kysy täkyjä eikä kohdenostoja',
   Boolean(tila) && !tila.napit.some((n) => /Filosofi|Kanava, jota ei vielä ollut/.test(n.teksti)),
   JSON.stringify(tila?.napit));
-vaadi('oppitunnin kuva liittyi kartan viuhkaan',
-  (await vinjetit()).maara === 2, JSON.stringify(await vinjetit()));
+vaadi('oppitunnin kuva ei mene kartalle (viuhka on purettu)',
+  (await vinjetit()).maara === 0, JSON.stringify(await vinjetit()));
 /*
  * Kortin ulkoasuvartiot (omistajan pelitestipalaute 24.8.2026: *"Liian
  * raskaan oloinen visuaalisesti. Kuva saisi tässä näkyä heti isolla."*)
@@ -479,49 +488,54 @@ vaadi('kortti ei ole koko ruudun modaali: kartta näkyy sen yli',
   Boolean(kirja) && tila?.laatikko.ylin > tila.ikkuna.h * 0.1,
   JSON.stringify({ kortti: tila?.laatikko, ikkuna: tila?.ikkuna }));
 
-/* --- 7: vinjetti pysyy samankokoisena zoomatessa --- */
-// Vertailukoko otetaan VASTA TÄSSÄ: viuhkassa on nyt kaksi kallistettua
-// pinniä, ja kallistus kasvattaa ympäröivää laatikkoa. Sama viuhka
-// molemmilla puolilla, tai mitattaisiin kallistusta eikä zoomia.
-const kokoEnnenZoomia = (await vinjetit()).koot[0];
+/* --- 7: kartta pysyy kuvattomana myös zoomatessa --- */
+// Entinen vartio mittasi vinjetin kiinteää ruutukokoa; viuhkan purun
+// jälkeen zoomin asettuminen (sama piirtokohta, ui.paivitaMaastonimet)
+// ei saa herättää yhtäkään pinniä henkiin.
 const skaalaEnnen = await sivu.evaluate(() => window.matkakirja.ui.nakyvaAlue().skaala);
 await sivu.evaluate(() => {
   const ui = window.matkakirja.ui;
   ui.kartta.zoomaaPainikkeella(1);
 });
-// Zoomiliuku on animaatio; vinjettien mittakaava lasketaan vasta kun
-// näkymä on asettunut (ui.paivitaMaastonimet), joten odotetaan loppuun.
+// Zoomiliuku on animaatio; merkkikerrokset lasketaan vasta kun näkymä
+// on asettunut, joten odotetaan loppuun.
 await sivu.waitForTimeout(3000);
 const skaalaNyt = await sivu.evaluate(() => window.matkakirja.ui.nakyvaAlue().skaala);
 kuvat = await vinjetit();
 vaadi('zoomi todella muuttui', Math.abs(skaalaNyt - skaalaEnnen) > 0.01,
   JSON.stringify({ ennen: skaalaEnnen, nyt: skaalaNyt }));
-vaadi('vinjetti on kiinteän kokoinen ruudulla zoomista riippumatta',
-  kuvat.koot.length > 0 && kokoEnnenZoomia
-  && Math.abs(kuvat.koot[0].w - kokoEnnenZoomia.w) <= 2,
-  JSON.stringify({ ennen: kokoEnnenZoomia, nyt: kuvat.koot[0] }));
+vaadi('kartalle ei ilmesty kuvia zoomin asettuessa',
+  kuvat.maara === 0 && kuvat.koot.length === 0, JSON.stringify(kuvat));
 
-/* --- 8: vinjetin napautus KASVATTAA kuvan kartan päälle --- */
-const vinjetinKoko = (await vinjetit()).koot[0];
-await sivu.evaluate(() => document.querySelector('.fokuskuva-pinni')?.dispatchEvent(
-  new MouseEvent('click', { bubbles: true }),
-));
+/* --- 8: kortin kuvaviitteen napautus KASVATTAA kuvan kartan päälle ---
+ *
+ * Suurennos avattiin ennen kartan vinjetistä; viuhkan purun jälkeen
+ * sama suurennos elää korttien kuvaviitteissä (js/fokusvirta.js
+ * piirraKuva → avaaSuurennos). Ruudulla on oppituntikortti, jonka
+ * pääkuva on koko kortin levyinen nappi.
+ */
+const viitteenKoko = await sivu.evaluate(() => {
+  const r = document.querySelector('.fokusvirta-kortti .fokusvirta-kuva')
+    ?.getBoundingClientRect();
+  return r ? { w: Math.round(r.width), h: Math.round(r.height) } : null;
+});
+await sivu.evaluate(() => document.querySelector('.fokusvirta-kortti .fokusvirta-kuva')
+  ?.dispatchEvent(new MouseEvent('click', { bubbles: true })));
 await sivu.waitForTimeout(700);
 let zoom = await suurennos();
-vaadi('vinjetin napautus avaa oman suurennoksen, ei lehtien katselinta',
+vaadi('kuvaviitteen napautus avaa oman suurennoksen, ei lehtien katselinta',
   Boolean(zoom) && zoom.lehtikatselin === false, JSON.stringify(zoom));
 /*
  * KUVA ISOMMAKSI (omistajan pelitestipalaute 24.8.2026, iPad: *"KUVA
- * ISOMMAKSI … kasvata niin että kuva täyttää ruudun selvästi"*). Entinen
- * mitta oli ~0,82 ruudun pienemmästä sivusta; nyt vaaditaan vähintään
- * 0,82 mutta kartta jää yhä joka reunalta näkyviin (kehys ei täytä
- * ruutua kokonaan).
+ * ISOMMAKSI … kasvata niin että kuva täyttää ruudun selvästi"*):
+ * vähintään 0,82 ruudun pienemmästä sivusta, mutta kartta jää yhä
+ * joka reunalta näkyviin (kehys ei täytä ruutua kokonaan).
  */
-vaadi('kuva kasvoi vinjetistä suureksi ja täyttää ruudun selvästi',
-  Boolean(zoom?.kuva) && zoom.kuva.w > vinjetinKoko.w * 3
+vaadi('kuva kasvoi suureksi ja täyttää ruudun selvästi',
+  Boolean(zoom?.kuva) && Boolean(viitteenKoko)
   && zoom.kuva.w >= Math.min(zoom.ikkuna.w, zoom.ikkuna.h) * 0.82
   && zoom.kuva.w <= Math.min(zoom.ikkuna.w, zoom.ikkuna.h),
-  JSON.stringify({ vinjetti: vinjetinKoko, suuri: zoom?.kuva, ikkuna: zoom?.ikkuna }));
+  JSON.stringify({ viite: viitteenKoko, suuri: zoom?.kuva, ikkuna: zoom?.ikkuna }));
 vaadi('kartta näkyy yhä taustalla: kevyt himmennys, ei sumennusta',
   zoom?.kartta === true && zoom.taustanAlfa <= 0.6 && !/blur/.test(zoom.sumennus),
   JSON.stringify({ alfa: zoom?.taustanAlfa, sumennus: zoom?.sumennus }));
@@ -553,8 +567,10 @@ vaadi('kuvatekstipalkki on kuvan levyinen',
   JSON.stringify({ palkki: zoom?.tekstinLeveys, kuva: zoom?.kuva?.w }));
 vaadi('pöllön kupla ja kortti häviävät suurennoksen ajaksi',
   zoom?.kuplaNakyy === false, JSON.stringify(zoom?.kuplaNakyy));
-vaadi('viuhkaa voi selata suurennoksessa', zoom?.laskuri.includes('/'),
-  JSON.stringify(zoom?.laskuri));
+// Kortin kuvaviite avaa yhden kuvan listan: laskuria ei näytetä
+// (avaaSuurennos piirtää laskurin vain monikuvaiselle listalle).
+vaadi('yhden kuvan suurennoksessa ei ole selauslaskuria',
+  zoom?.laskuri === '', JSON.stringify(zoom?.laskuri));
 
 // Napautus mihin tahansa — myös kuvaan — kutistaa takaisin vinjettiin.
 await sivu.evaluate(() => document.querySelector('.fokuszoom-kuva')?.dispatchEvent(
@@ -615,10 +631,10 @@ tila = await kortti();
 vaadi('oppituntikortti pohjustaa laattakysymystä',
   tila?.vaihe === 'oppitunti' && tila.kupla === false && tila.teksti.includes('demokratia'),
   JSON.stringify(tila?.vaihe));
-// Viuhkassa on herokuva ja oppitunnin kuva — täkyjen ja kohdenostojen
-// vinjetit purettiin valintakuplan mukana.
-vaadi('oppitunnin kuva liittyi kartan viuhkaan',
-  (await vinjetit()).maara === 2, JSON.stringify(await vinjetit()));
+// Viuhka on purettu kokonaan (30.8.2026): kartalla ei ole kuvia
+// tässäkään vaiheessa.
+vaadi('kartalla ei ole kuvavinjettejä oppitunnilla',
+  (await vinjetit()).maara === 0, JSON.stringify(await vinjetit()));
 
 await paina('Nikos');
 tila = await kortti();

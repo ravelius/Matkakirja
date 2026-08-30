@@ -16,12 +16,12 @@
  * kohti on pieni musteympyrä ja sen alla NÄKYMÄTÖN ≥44 px osuma-alue.
  * Merkki on se klikkauskohde, ja se istuu kuvan oman nimen viereen.
  *
- * === MIKSI OMA KERROS EIKÄ FOKUSVIRRAN VINJETTIKERROS ===
+ * === OMA KERROS ===
  *
- * Vinjetit (js/fokusvirta.js paivitaFokuskuvat) ovat virran
- * matkamuistoja: ne kertyvät sitä mukaa kun pöllö puhuu. Nämä merkit
- * ovat kartan omaisuutta ja näkyvät heti kun lehti on auki, riippumatta
- * siitä missä vaiheessa virta on. Kaksi eri elinkaarta, kaksi kerrosta.
+ * Nämä merkit ovat kartan omaisuutta ja näkyvät heti kun lehti on
+ * auki, riippumatta siitä missä vaiheessa virta on. (Fokusvirralla oli
+ * ennen oma vinjettikerros virran matkamuistokuville; se purettiin —
+ * ks. js/fokusvirta.js KUVAT KARTALLA — PURETTU.)
  *
  * === KOLME SÄÄNTÖÄ, JOTKA ON PERITTY MUILTA KARTAN KERROKSILTA ===
  *

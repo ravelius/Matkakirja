@@ -154,7 +154,7 @@ import {
   fokusvirtaOhittaaLehden, fokusvirtaSaapuminen, fokusvirtaLukitseeLehden,
   fokusvirtaMatkakirja, fokusvirtaMerkintaLuettu, fokusvirtaLaattaNakyy,
   fokusvirtaKohtaaminenPisteessa, fokusvirtaLehtivinkki, fokusvirtaSisalto,
-  fokusvirtaSaapumiskupla, paivitaFokuskuvat, nollaaFokuskuvat,
+  fokusvirtaSaapumiskupla, nollaaFokuskuvat,
 } from './fokusvirta.js';
 
 const wikiGalleryCache = new Map();
@@ -4869,13 +4869,12 @@ export class UI {
      * (taydennaTaide: "kesken eleen ei ladata").
      */
     paivitaFokusAtlas(this, nakyvaNyt);
-    /*
-     * Fokusvirran kuvavinjetit ovat kiinteän KOKOISIA RUUDULLA, joten
-     * niiden mittakaava on laskettava uudelleen aina kun zoomi muuttuu
-     * — samasta syystä ja samasta kohdasta kuin lisänimien näkyvyys.
-     */
-    paivitaFokuskuvat(this);
-    // Kartan kohdemerkit ovat samoin kiinteän kokoisia ruudulla.
+    // Kartan kohdemerkit ovat kiinteän kokoisia ruudulla, joten niiden
+    // mittakaava on laskettava uudelleen aina kun zoomi muuttuu —
+    // samasta syystä ja samasta kohdasta kuin lisänimien näkyvyys.
+    // (Fokusvirran kuvavinjetit piirtyivät ennen tästä samasta
+    // kohdasta; viuhka on purettu, ks. js/fokusvirta.js KUVAT
+    // KARTALLA — PURETTU.)
     paivitaFokuskohteet(this, nakyvaNyt);
     // Sama koskee kevyen kulun vihreää kohtaamispistettä.
     paivitaFokuspiste(this);
@@ -5814,10 +5813,10 @@ export class UI {
      * tarvita mihinkään.
      */
     this.maastonimiKerros = el('g', { class: 'maastonimet' }, this.svg);
-    // Fokusvirran kuvavinjetit: oma kerros, sama juuriryhmän ulkopuolinen
-    // paikka ja sama syy kuin maastonimillä (kopio monistaisi ne).
-    // Kerroksen rakentaa js/fokusvirta.js paivitaFokuskuvat.
-    this.fokuskuvatKerros = null;
+    // Fokusvirran kuvasuurennos kiinni laudan vaihtuessa: auki jäänyt
+    // suurennos olisi kuva kartasta, jota ei enää ole. (Vinjettien oma
+    // karttakerros on purettu, ks. js/fokusvirta.js KUVAT KARTALLA —
+    // PURETTU.)
     nollaaFokuskuvat(this);
     nollaaFokuskohteet(this);
     nollaaFokuspiste(this);
