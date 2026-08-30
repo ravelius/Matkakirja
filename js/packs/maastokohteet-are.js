@@ -27,9 +27,38 @@
  * mahdollista olemassa olevaa fokuskohteet-pakkia EI ole tarvinnut
  * koskea eikä yhtään sen kohdetta ole toistettu täällä.
  *
- * Arabiemiraattien maastokohteet. Faktat en-Wikipediasta 30.8.2026. Maan tunnusmaasto on Rub al-Khalin hiekka-aavikko, mutta aavikolle ei ole kohdetyyppiä (KOHDE_TYYPIT: vuori, meri, saari, joki) — siksi listalla ovat vuori ja meri.
+ * Arabiemiraattien maastokohteet. Faktat en-Wikipediasta 30.8.2026. Maan tunnusmaasto on Rub al-Khalin hiekka-aavikko, ja se on mukana aavikkona: tyyppi 'muu' + symboli 'luonto' Vanjärven mallin mukaan (js/packs/fokuskohteet-tur.js), kuten SAU:n Rub al-Khalissa ja MNG:n Gobissa. Merkki on Liwan keitaan dyyneillä Abu Dhabin emiraatissa — aavikon ARE-osuudessa, ei SAU:n merkin päällä.
  */
 export const MAASTOKOHTEET_ARE = [
+  {
+    id: 'rubalkhali',
+    nimi: 'Rub al-Khali',
+    // Aavikko ei ole vuori eikä meri: tyyppi 'muu' + symboli 'luonto'
+    // Vanjärven mallin mukaan (js/packs/fokuskohteet-tur.js) — kortin
+    // ylärivi näyttää silloin luokan Luonto eikä väärää otsaketta.
+    symboli: 'luonto',
+    tyyppi: 'muu',
+    kysymykset: [
+      'Keitä Liwan keitailla asui ennen öljyä?',
+      'Kuinka korkeaksi dyyni voi kasvaa?',
+    ],
+    korostukset: ['Liwa|Liwan'],
+    nappi: 'Tyhjän neljänneksen reuna',
+    // 53.78 E / 23 N — Liwan keitaan dyynit; en-Wikipedia "Liwa Oasis" keskipiste 23°08′N 53°46′E, merkki keitaan kaaren eteläpuolen hiekalla
+    laudat: {
+      maailmankartta: { x: 7626, y: 2431.3 },
+      // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
+      // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
+    },
+    teksti: 'Rub al-Khali, Tyhjä neljännes, on noin 650 000 neliökilometrin hiekka-aavikko '
+      + 'Saudi-Arabian, Omanin, Arabiemiraattien ja Jemenin alueella, ja sen dyynit kasvavat '
+      + 'jopa 250-metrisiksi. Arabiemiraattien osuus on Abu Dhabin emiraatin etelää, jossa '
+      + 'hiekan pohjoisreunaa seuraa Liwan keitaiden satakilometrinen kaari — Abu Dhabin ja '
+      + 'Dubain hallitsijasukujen synnyinseutu, jonka Bani Yas -heimo eli taatelitarhoista ja '
+      + 'kausittaisesta helmenpyynnistä. Liwan laidalla kohoaa noin 300-metrinen Moreebin '
+      + 'dyyni.',
+    lahde: 'en-Wikipedia "Rub\' al Khali" ja "Liwa Oasis", johdanto-osat (tarkistettu 30.8.2026).',
+  },
   {
     id: 'jebeljais',
     nimi: 'Jebel Jais',
