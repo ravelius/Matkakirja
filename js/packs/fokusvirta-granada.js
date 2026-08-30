@@ -151,11 +151,11 @@
  *
  * ── ÄÄNITE ─────────────────────────────────────────────────────────
  *
- * Luentaa EI ole vielä generoitu, joten `matkakirja.aanite` PUUTTUU
- * (sama linjaus kuin aalloissa 4A:n Tukholmalla ja koko aallolla 4B).
- * Teksti ja luenta ovat sanasta sanaan samat, joten luennan voi ajaa
- * suoraan (.github/workflows/generoi-luennat.yml) ilman että tekstiin
- * kosketaan, ja kytkentärivi kirjoitetaan vasta silloin.
+ * Luenta on generoitu 30.8.2026 (tools/generoi-luennat.mjs, lähteenä
+ * tämän lohkon oma `matkakirja.luenta`) ja `matkakirja.aanite`
+ * osoittaa siihen: assets/audio/puhe-fokus-matkakirja-granada.mp3.
+ * Teksti ja luenta ovat sanasta sanaan samat, joten tekstin muutos
+ * vaatii uuden generoinnin.
  */
 
 /*
@@ -237,6 +237,7 @@ export const FOKUSVIRTA_GRANADA = {
       + 'lunta vaikka laaksossa kypsyvät appelsiinit. [whispers] Illalla '
       + 'kukkulan luolissa laulettiin ja tanssittiin tavalla, joka ei '
       + 'pyydä yleisöä — se vain sietää sitä.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-granada.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

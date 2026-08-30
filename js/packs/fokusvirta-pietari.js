@@ -101,14 +101,13 @@
  *      sisältörikkautta. Venäjällä ei ole ollut yhtään täkynostoa, ja
  *      tämä paketti perustaa poolin — KOLME nostoa (ks. TÄKYNOSTOPOOLI).
  *
- * ── ÄÄNITETTÄ EI OLE ───────────────────────────────────────────────
+ * ── ÄÄNITE ─────────────────────────────────────────────────────────
  *
- * Luentaa ei ole vielä generoitu, joten `matkakirja.aanite` PUUTTUU
- * tarkoituksella (sama ratkaisu kuin Vilnassa ja Tampereella): js/ui.js
- * näyttää kaiuttimen vasta kun kenttä on olemassa, joten poissaolo on
- * hiljaisuus eikä rikkinäinen nappi. `matkakirja.luenta` on kirjoitettu
- * valmiiksi generointierää varten — se on sama teksti tunnetagein,
- * sanaakaan muuttamatta.
+ * Luenta on generoitu 30.8.2026 (tools/generoi-luennat.mjs, lähteenä
+ * tämän lohkon oma `matkakirja.luenta`) ja `matkakirja.aanite`
+ * osoittaa siihen: assets/audio/puhe-fokus-matkakirja-pietari.mp3.
+ * Teksti ja luenta ovat sanasta sanaan samat, joten tekstin muutos
+ * vaatii uuden generoinnin.
  *
  * ── MINIVISAN SÄÄNTÖ ───────────────────────────────────────────────
  *
@@ -206,8 +205,7 @@ export const FOKUSVIRTA_PIETARI = {
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
-     * loppu eri sävyssä. Äänitettä ei ole vielä generoitu, joten
-     * `aanite`-kenttää ei ole (ks. tiedoston alku).
+     * loppu eri sävyssä.
      */
     luenta: '[curious] Keisari rakennutti kaupunkinsa suolle ja käski '
       + 'sen olla suora, ja suo totteli — kadut ovat leveitä kuin joet ja '
@@ -217,6 +215,7 @@ export const FOKUSVIRTA_PIETARI = {
       + 'kolme tuntia enkä nähnyt puoliakaan. [whispers] Sillat avataan '
       + 'öisin laivoille; myöhästyjä saa odottaa aamuun, ja moni odottaa '
       + 'mielellään.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-pietari.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
