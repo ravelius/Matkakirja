@@ -4716,7 +4716,7 @@ body.radio-tila .actions {
 .radio-sulje:active { transform: translateY(1px); }
 
 .coast { fill: none; stroke: var(--map-ink); stroke-width: 3.2; stroke-linejoin: round; }
-.coast-soft { fill: none; stroke: var(--map-ink); stroke-width: 1.2; opacity: 0.45; }
+.coast-soft { fill: none; stroke: var(--map-ink); stroke-width: 0.85; opacity: 0.45; }
 /* Maiden rajat: hyvin hento katkoviiva vanhan kartan tapaan. */
 .border {
   fill: none;
@@ -6179,8 +6179,8 @@ body.flight-active .fact-card {
 
 .graticule-line.strong { stroke-width: 1.4; opacity: 0.45; }
 
-.city { fill: #f3e5c4; stroke: #6b5230; stroke-width: 2.4; }
-.city-start { fill: #eec66b; stroke: #6d4d12; stroke-width: 3.4; }
+.city { fill: #f3e5c4; stroke: #6b5230; stroke-width: 1.7; }
+.city-start { fill: #eec66b; stroke: #6d4d12; stroke-width: 2.4; }
 
 /* ------------------------------------------------------------------
  * KEHITTÄJÄKARTAN VÄRILAATTAKOODIT ON POISTETTU (omistajan tilaus
@@ -6252,13 +6252,13 @@ body.flight-active .fact-card {
  */
 .airport.nappulan-alla,
 .fokuslaatta-syke.nappulan-alla { display: none; }
-.airport { font-size: 14px; fill: #8d3a2c; }
+.airport { font-size: 10px; fill: #8d3a2c; }
 
 /* Porttikaupunki: katkoviivakehä kertoo, että täältä lähtee lento toiselle laudalle. */
 .city-gate {
   fill: none;
   stroke: #8d3a2c;
-  stroke-width: 1.6;
+  stroke-width: 1.1;
   stroke-dasharray: 7 6;
   stroke-linecap: round;
   opacity: 0.4;
