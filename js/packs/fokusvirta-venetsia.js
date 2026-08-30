@@ -46,12 +46,12 @@
  *   1. MATKAKIRJAAN EI TULE KUVAA. `matkakirja.kuva` on jätetty pois
  *      kokonaan: kuvat kuuluvat kaupunkilehteen. Kortti piirtyy ilman
  *      kuvaa (js/ui.js naytaFactValokuva saa nullin).
- *   2. ÄÄNITEKENTTÄÄ EI KIRJOITETA. Toisin kuin Roomassa, Madridissa ja
- *      Sevillassa, `matkakirja.aanite` jätetään tästä paketista pois
- *      (aallon 4B tilaus): luenta on tekstinä valmiina, ja äänitiedoston
- *      polku kirjoitetaan vasta kun generointiajo on tehty. Kytkentä on
- *      silloin yhden rivin lisäys; ennen sitä kortti ei lupaa kaiutinta,
- *      jonka takana ei ole mitään.
+ *   2. ÄÄNITE ON KYTKETTY. Luenta on generoitu 30.8.2026
+ *      (tools/generoi-luennat.mjs, lähteenä `matkakirja.luenta`) ja
+ *      `matkakirja.aanite` osoittaa siihen:
+ *      assets/audio/puhe-fokus-matkakirja-venetsia.mp3. Teksti ja
+ *      luenta ovat sanasta sanaan samat, joten tekstin muutos vaatii
+ *      uuden generoinnin.
  *   3. VALINTA-ASKELTA EI OLE. `valinta`-kenttää ei kirjoiteta; moottori
  *      lukee kentän varovasti (`data.valinta?.…`), joten portin mitta on
  *      oletus (yksi täky) ja kuplan otsikko moottorin oma.
@@ -196,7 +196,7 @@ export const FOKUSVIRTA_VENETSIA = {
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Kolme tagia, alku ja
-     * loppu eri sävyssä. Äänitekenttää ei ole (ks. linjaus 2 yllä).
+     * loppu eri sävyssä.
      */
     luenta: '[curious] Kaupunki, jossa kadut ovat vettä ja portaat '
       + 'päättyvät mereen. Gondolieeri lauloi minulle hinnan päälle, ja '
@@ -206,6 +206,7 @@ export const FOKUSVIRTA_VENETSIA = {
       + 'kaupunkia on tuotu jostain muualta, ja sanotaan se ylpeänä. '
       + '[warmly] Iltapäivällä vesi nousi torille ja kauppiaat nostivat '
       + 'tavaransa penkeille kiroamatta: näin täällä on aina ollut.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-venetsia.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1347, teksti: 'Aallon 4B matkakirjaluennat kuuluviin' },
   { v: 1346, teksti: 'Jattilaislehti vaistaa suurennettuna: tarkat naapurit itaan' },
   { v: 1345, teksti: 'Aallon 4C matkakirjaluennat kuuluviin' },
   { v: 1344, teksti: 'Popup-kuvat aukeavat koko naytolle' },

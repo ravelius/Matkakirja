@@ -71,11 +71,11 @@
  *
  * ── ÄÄNITE ─────────────────────────────────────────────────────────
  *
- * Aallon 3 ja 4A kaava: luenta on kirjoitettu valmiiksi, mutta sitä EI
- * ole vielä generoitu, joten `matkakirja.aanite` puuttuu. Teksti ja
- * luenta ovat sanasta sanaan samat, joten luennan voi ajaa suoraan
- * ilman että tekstiin kosketaan. Kun äänite on generoitu, riville tulee
- * `aanite: 'assets/audio/puhe-fokus-matkakirja-oslo.mp3'`.
+ * Luenta on generoitu 30.8.2026 (tools/generoi-luennat.mjs, lähteenä
+ * tämän lohkon oma `matkakirja.luenta`) ja `matkakirja.aanite`
+ * osoittaa siihen: assets/audio/puhe-fokus-matkakirja-oslo.mp3.
+ * Teksti ja luenta ovat sanasta sanaan samat, joten tekstin muutos
+ * vaatii uuden generoinnin.
  *
  * ── KUVIEN TARKISTUS ───────────────────────────────────────────────
  *
@@ -183,6 +183,7 @@ export const FOKUSVIRTA_OSLO = {
       + 'Illalla söin lohta ja kuuntelin ylioppilaita, jotka väittelivät '
       + 'siitä, kenen Norja oikeastaan on. [softly] Ruotsin kuninkaan, '
       + 'sanoi laki. Ei kauan, sanoivat he.',
+    aanite: 'assets/audio/puhe-fokus-matkakirja-oslo.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden avauskuva) ----- */
