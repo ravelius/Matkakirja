@@ -847,6 +847,245 @@ ladottu laatikko ruudulla **14,0 CSS-pikseliä kaikilla kolmella**,
 ladottujen nimien määrä sama (29) ja paikat samat. Ennen sama nimi oli
 10,7 ja 5,3 CSS-pikseliä (dpr 1 / dpr 3).
 
+## 6h. Rantaviiva ja maaväri samasta vektorista
+
+*(Omistajan havainto iPadilta 30.8.2026: "Ääriviiva ja korkeus väritys
+eivät täsmää." Mitattu ja korjattu samana päivänä. Koodi:
+tools/fokuskartta/maailma.mjs `meriRenkaat` ja maailmapiirto.js
+"VEKTORI ON AUKTORITEETTI".)*
+
+Vika oli rakenteellinen: **rantaviiva piirrettiin Natural Earthin
+10m-vektoreista, mutta maa/meri-jako luettiin korkeusruudukosta**
+(3 kaariminuuttia = 5,5 km solussa) ja sen merimaskista. Kaksi
+lähdettä, kaksi tarkkuutta, eivätkä ne voineet olla samaa mieltä.
+
+### Mitattu ennen korjausta
+
+Kummankin lähteen maa/meri-vastaus laskettiin TÄSMÄLLEEN samoille
+kuvapikseleille kuin moottori ne laskee, ja verrattiin. "Siirtymä" on
+kuvarivillä mitattu etäisyys vektorin rantaviivan ja moottorin
+värinvaihdoksen välillä; "vuoto" on erimielisen pikselin etäisyys
+rantaviivaan.
+
+| alue | z5 | z6 | z7 | vuoto enimmillään | eri-% (z7) |
+| --- | --- | --- | --- | --- | --- |
+| Egeanmeri | 1,0 px | 2,5 px | **5,5 px** | 21 px | 3,8 % |
+| Länsi-Afrikka (sileä rannikko) | 4,0 px | 3,5 px | **13,0 px** | 11 px | 1,4 % |
+| Norja (vuonot) | 20 px | 40 px | **yli 40 px** | 48 px | 10,5 % |
+| Chile (saaristo) | 22 px | 32 px | **yli 40 px** | 23 px | 12,3 % |
+
+Kilometreinä ero pysyy suunnilleen samana (2–40 km eli murto-osasta
+muutamaan ruudukkosoluun), joten **pikseleinä se kaksinkertaistuu joka
+tasolla** — juuri siksi omistaja näki sen vasta lähikuvassa.
+Egeanmeren otoksessa **9 saarta 29:stä jäi kokonaan ilman maaväriä**:
+pelkkä ääriviiva meren päällä.
+
+### Korjaus
+
+Vektori kertoo MISSÄ maa on, korkeusruudukko vain KUINKA KORKEALLA se
+on. Meren monikulmion renkaat kulkevat nyt moottorille asti, ja maa ja
+meri erotetaan juovapyyhkäisyllä samoista kärkipisteistä, joista
+rantaviiva piirretään: `rannikot` JOHDETAAN samasta harvennetusta
+rengasjoukosta, joten viiva ja täyttö eivät voi ajautua erilleen.
+
+Miller-projektiossa kuvarivi on tasan yksi leveyspiiri ja sarake tasan
+yksi pituuspiiri, joten maski voidaan laskea suoraan kuvan
+tarkkuudella ilman välirasteria.
+
+**Reunatapaukset ratkesivat ilman uusia sääntöjä**, koska värit oli jo
+kummassakin päässä leikattu:
+
+| tapaus | mitä tapahtuu |
+| --- | --- |
+| matala rannikkomeri, jonka ruudukko luulee maaksi (+m) | `lerpSyvyys(m >= 0)` → matalin merisävy |
+| vuono tai salmi, jota ruudukko ei näe | sama matalin merisävy |
+| saari, jonka ruudukko luulee mereksi (−m) | `Math.max(0, m + …)` → hypsometrian alin sävy |
+| kuiva maa merenpinnan alla (Kuollutmeri, Kaspian alanko, Qattara) | ei meren monikulmiossa → maata, kuten ennenkin |
+| Kaspianmeri | ON meren monikulmiossa → vettä, kuten ennenkin |
+| järvet ja sisävedet | olivat jo kunnossa: `ne_10m_lakes` piirretään ja täytetään samoista renkaista |
+
+**Merimaski ja korkeusruudukko jäävät** — niitä lukee yhä umpimeren
+karsinta (`--harva`) ja maalehtien moottori (piirto.js).
+
+### Hinta — mitattu, ei arvattu
+
+| mitta | ennen | jälkeen |
+| --- | --- | --- |
+| piirtoaika z6 (Eurooppa, 4x4-lohko) | 10,1 s | 10,3 s (**+2 %**) |
+| piirtoaika z7 (Egeanmeri, 4x4-lohko) | 9,7 s | 10,0 s (**+3 %**) |
+| tavua/px z6 (webp q0,9) | 0,265 | 0,266 |
+
+Monikulmioleikkaus ei siis moninkertaista piirtoa: juovapyyhkäisy
+tehdään kerran koko kankaalle, ja reunat indeksoidaan asteen koreihin
+kerran koko ajolle.
+
+## 6i. Joet pehmeinä käyrinä
+
+*(Omistaja 30.8.2026: "Joet eivät mutkittele pehmeästi vaan
+kantikkaasti." Koodi: maailmapiirto.js `lautaKaari`.)*
+
+Mitattu jokiaineistosta (123 uomaa, 4 330 pistettä, 4 207 jaksoa):
+
+| taso | jakso mediaani | p90 | pisin |
+| --- | --- | --- | --- |
+| z3 | 6,0 px | 13,3 px | 55 px |
+| z5 | 23,9 px | 53,4 px | 219 px |
+| z6 | 47,9 px | 106,8 px | 438 px |
+| z7 | **95,8 px** | 213,5 px | 875 px |
+
+Taitteen mediaanikulma on **49 astetta**. Sadan pikselin välein
+puolisuora kulma ei ole kaivertajan kynää.
+
+Uomat piirretään nyt **sentripetaalisella Catmull-Romilla
+(alpha = 0,5)** kuutiollisiksi Béziereiksi muunnettuna. Käyrä kulkee
+jokaisen pisteen KAUTTA, joten uoma ei siirry; alpha 0,5 on
+todistetusti silmukaton ja kärjetön, mikä on tässä välttämätöntä,
+koska pisin jakso on yli 200-kertainen lyhimpään.
+
+**Jatkuvuus laattarajan yli**: silotus nojaa koko uomaan, ei lohkoon
+osuvaan pätkään. `sisalto.joet` on maailmanlaajuinen lista, jota
+mikään ei rajaa ennen piirtoa, ja kärjet muunnetaan ARKIN pikseleiksi,
+jotka ovat samat joka lohkossa. Ainoa katkos on laudan sauma, joka on
+arkin ominaisuus eikä lohkon.
+
+**Rantaviivaa ja järviä EI silotettu, ja se on mitattu päätös:**
+harvennettu rantaviiva on z7:llä mediaanina 3,55 px jaksoa kohti
+(järvet 3,38) eli 27 kertaa tiheämpi kuin joet — kanttia ei ole. Sitä
+paitsi rantaviiva on nyt myös maan ja meren raja (luku 6h), joten
+viivan silottaminen täyttöä silottamatta palauttaisi juuri sen eron,
+joka korjattiin. Reitit ovat kahden kaupungin janoja.
+
+## 6j. Erikoispiirit ja nollameridiaani, nimettyinä
+
+*(Omistaja 30.8.2026: "Poista pituus ja leveyspiiri viivat. Jätä vain
+0 ja päiväntasaaja sekä kääntöpiirit ja napapiiri ja nimeä ne." ja
+"Etelän napapiiriä ei tarvita.")*
+
+Tasavälinen 20 asteen asteverkko on poistettu. Jäljelle jää viisi
+viivaa, jotka eivät ole ruudukkoa vaan maantiedettä: nollameridiaani,
+päiväntasaaja, Kravun ja Kauriin kääntöpiirit (±23,4365 astetta) ja
+pohjoinen napapiiri (66,5635 °N).
+
+**Eteläinen napapiiri ei mahdu arkkiin.** Tarkistettu arkin omista
+mitoista (`pyramidi.json` `rajaus`: y −611,31, h 6422,72 eli
+84 °N…66 °S): 66,56 °S on reunan ulkopuolella. Omistaja vahvisti
+ettei sitä tarvita, eikä arkkia kasvateta sen takia.
+
+### Nimet ovat paperivakioita — ja siksi kynnystä ei tarvita
+
+Merten nimillä kynnys (z0–z2) on välttämätön, koska ne skaalautuvat
+kartan mukana ja z7:llä ATLANTIN VALTAMERI olisi 4 725 px leveä
+(luku 6e). Nämä nimet ovat eri lajia: **ne nimeävät VIIVAN, ja
+viivalla ei ole leveyttä, jonka mukaan nimi kasvaisi.** Nimi on siis
+pelkkää painojälkeä ja mitoitetaan `P`:llä — 13 px joka tasolla.
+Silloin se ei voi kasvaa jättiläiseksi eikä kutistua näkymättömiin, ja
+koska nämä viivat kulkevat ruudun poikki joka tasolla, nimi on
+mielekäs joka tasolla.
+
+Kynnyksen työn tekee **toistoväli**: nimi toistetaan noin 2 400
+laitepikselin välein, jolloin näkymässä (puhelin 1 170 px, työpöytä
+1 440–3 024 px) on korkeintaan yksi kappale kutakin nimeä. Määrä
+lasketaan ARKIN mitoista, joten se on sama joka lohkossa:
+
+| taso | z0–z2 | z3 | z4 | z5 | z6 | z7 |
+| --- | --- | --- | --- | --- | --- | --- |
+| nimiä viivaa kohti | 1 | 2 | 5 | 9 | 18 | 36 |
+
+Jokaisella viivalla on oma faasi toistovälin sisällä (0,17 / 0,26 /
+0,5 / 0,74), koska samalla faasilla kaikki neljä nimeä asettuisivat
+samaan pystysarakkeeseen. Nollameridiaanin päälle osuva kappale
+siirretään sivuun oman leveytensä verran — ei jätetä pois, koska
+uloimmilla tasoilla kappaleita on vain yksi.
+
+**Nimi on "Nollameridiaani" eikä "Greenwichin meridiaani"**, ja se on
+mitta: nimi kulkee pystyviivan vartta, jolloin sen pituus on
+korkeutta. 22 merkkiä olisi paperivakiona noin 150 px pystyyn ja
+leikkaisi kääntöpiirien nimet; 15 merkkiä ei leikkaa.
+
+## 6k. Reittien nopanheittoaskelmat
+
+*(Omistaja 30.8.2026: "Kaupunkien välissä pitäisi näkyä nopanheitto
+askelmat, ei katkoviiva. Lentoreitin punaisella katkoviivalla ja
+laivareitit sinisellä niin että noppa askelmat näkyy." Koodi:
+tools/fokuskartta/sisalto.mjs ja maailmapiirto.js osio 8b.)*
+
+Reitti ei ole enää jana vaan pelilaudan rata. **Askelmien paikat
+lasketaan pelin omilla funktioilla**, ei omalla jaolla: `js/rules.js`
+`edgePolyline` rakentaa murtoviivan (merireitin `via`-välipisteet,
+maareitin pienen determinististä hajautusta käyttävän mutkan) ja
+`pointAlong(poly, idx/steps)` antaa askelman paikan kaarenpituuden
+mukaan tasavälein. Jos työkalu jakaisi janan omalla kaavallaan,
+laattaan poltettu ruutu ja nappulan pysähdyspaikka eroaisivat — se
+olisi pelivirhe eikä ulkoasuvirhe.
+
+| | määrä |
+| --- | --- |
+| reittejä | 408 (297 maa + 111 meri) |
+| lentoreittejä | 71 |
+| askelmia yhteensä (`steps`) | 1 526 |
+| **piirrettyjä askelmamerkkejä** | **1 118** (steps − 1 reunaa kohti) |
+
+**Merireitti erotetaan pakan omalla kentällä `type === 'sea'`**, joka
+on jo olemassa (sama kenttä, jota tools/korjaa-merireitit.mjs
+käyttää). Omaa sääntöä ei keksitty.
+
+**Lentoreiteillä ei ole askelmia, eikä se ole työkalun puute:**
+`airRoutes`-riveillä on vain `a` ja `b`, ja pelissä lentäminen siirtää
+nappulan suoraan perille (js/game.js `actionMannerLento`:
+`p.pos = { type: 'city', … }`). Lennolla ei ole ruutuja.
+
+Tästä syntyy sääntö: **muste kertoo kulkutavan, helmet kertovat
+askelmat, ja katkoviiva on varattu sille reitille, jolla ei ole
+askelmia.**
+
+| reitti | muste | viiva | helmet |
+| --- | --- | --- | --- |
+| maa | seepia `rgba(120,88,54,…)` | yhtenäinen | kyllä |
+| meri | preussinsininen `rgba(32,60,98,…)` | yhtenäinen | kyllä |
+| lento | poltettu sinooperi `rgba(150,54,40,…)` | katkoviiva | ei |
+
+Värit ovat aikakauden musteita eivätkä näyttövärejä: preussinsininen
+(1706) on kaivertajan vakiosininen ja sinooperi sen punainen,
+kumpikin murrettuna niin ettei paperin illuusio rikkoudu.
+
+**Kynnys on reittien oma (`px >= 0,22`), ja se riittää mitattuna:**
+askelvälit ovat z2:lla (se taso, jolla reitit ilmestyvät) p10 11,4 px
+ja mediaani 17,9 px, joten 2,4 pikselin helmet erottuvat toisistaan
+heti ensimmäisellä tasolla, jolla reitti ylipäätään piirretään.
+
+| taso | askelväli p10 | mediaani | p90 |
+| --- | --- | --- | --- |
+| z2 | 11,4 px | 17,9 px | 35,1 px |
+| z4 | 45,4 px | 71,4 px | 140,2 px |
+| z6 | 181,6 px | 285,7 px | 560,9 px |
+
+**Sauman yli kulkevat reitit korjaantuivat samalla.** Reitin
+murtoviiva on avattu sauman yli (`avaaSauma`), joten sen x voi olla
+laudan ulkopuolella; reitti piirretään kolmena kappaleena (−laudan
+leveys, 0, +laudan leveys), jolloin Tokio–San Francisco näkyy sauman
+molemmin puolin eikä katkea.
+
+## 6l. Sauma näiden neljän muutoksen jälkeen
+
+`--saumatesti` kaikilla kahdeksalla tasolla, sama kone ja sama
+aineisto ennen ja jälkeen (pahin kanavaero 0–255):
+
+| taso | ennen (main) | jälkeen |
+| --- | --- | --- |
+| z0–z1 | 0 | **0** |
+| z2 | 0 | 5 |
+| z3 | 6 | 6 |
+| z4 | 2 | 10 |
+| z5 | 22 | **5** |
+| z6–z7 | **0** | **0** |
+
+Syvimmät tasot — ne, joita pelaaja katsoo 1:1 ja joilla sauma näkyisi
+— ovat yhä tavulleen samat. Väliltä löytyvät erot ovat hajallaan
+vektorien reunapehmennyksessä (uudet käyrät, helmet ja nimet
+rasteroituvat eri kokoisilla kankailla hitusen eri tavoin), pahin ero
+on 10 kanavaa 255:stä eli 4 %, eikä työkalun oma saumavaroitus
+lauennut. z5 parani 22:sta 5:een.
+
 ## 7. Harva pyramidi — mitattu, päätetty POIS
 
 Karsinta laattamäärästä (`--harva-raja 8`, koko maailma, uusi arkki):

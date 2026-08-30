@@ -1,325 +1,387 @@
-# Viesti Fablelle — nimet laatoista peliin (haara claude/nimet-peliin)
+# Viesti Fablelle — laattojen viivatyö (haara claude/rantaviivan-kohdistus)
 
-*(Opus, 30.8.2026. Haara tuoreesta origin/mainista **222502ed = v1367**.
+*(Opus, 30.8.2026. Haara alun perin **1d64fa0b = v1369**, rebasettu
+main-kärkeen **535311f3 = v1372** (v1370 syvyysramppi, v1371 kaupunkien
+laatat, v1372 selitenappi) — rebase meni puhtaasti, ja portit ajettiin
+uudestaan sen jälkeen.
 Versiota EI nostettu, PR:ää EI tehty, pyramidin generointityönkulkua EI
-ajettu — sinä julkaiset. dist/ ei ole mukana. js/kartta.js:n kamera- ja
-panorointikoodiin ei koskettu: toinen agentti on siellä.*
+ajettu — sinä julkaiset ja pyydät omistajalta luvan ajoon. dist/ ei ole
+mukana. js/-puoleen ei koskettu lainkaan.*
 
-*Edellinen raportti (lehtipurku + merten nimet) on gitissä commitissa
-222502ed; tämä tiedosto on kirjoitettu sen päälle, koska sen
-päätöskysymykset A, B ja "MIKSI EN TEHNYT NIMIÖIDEN CSS-PIKSELI-
-MITOITUSTA" ovat kaikki tässä erässä ratkaistu.)*
+*Edellinen raportti (nimet laatoista peliin) on gitissä commitissa
+1d64fa0b.)*
 
 ---
 
-## LUE TÄMÄ ENSIN — JULKAISU VAATII KAKSI ASKELTA OIKEASSA JÄRJESTYKSESSÄ
+## LYHYESTI
 
-Nimet ovat nyt kahdessa maailmassa: vanhoissa laatoissa ne ovat
-poltettuina, uusissa niitä ei ole. **Kumpikaan ei saa puhua yhtä aikaa
-eikä kumpikaan vaieta yhtä aikaa.** v1366 korjasi kaksoisnimen
-vaientamalla elävän kerroksen; tässä suunta kääntyy.
+Neljä omistajan havaintoa, kaikki laattoihin poltettavaa viivatyötä,
+kaikki samassa erässä koska kaikki vaativat saman pyramidin ajon.
 
-Ratkaisin sen niin, ettei julkaisujärjestyksellä ole väliä ja ettei
-mikään välitila riko peliä: **päätöksen tekee LUETTELO, ei
-versionumero.** `pyramidi.json` kantaa uuden kentän `nimiot: false`, ja
-`js/laattapyramidi.js laatoissaOnNimet()` lukee sen.
-
-| luettelo ämpärissä | mitä pelaaja näkee |
-| --- | --- |
-| **nykyinen** (kenttää ei ole) | nimet laatoista, kuten nyt — peli vaikenee |
-| **uusi** (`nimiot: false`) | nimet pelistä, oikean kokoisina — laatta vaikenee |
-
-Eli: **tämän voi julkaista koodina heti**, ja mikään ei muutu ennen
-kuin pyramidi on ajettu uudestaan ja uusi luettelo on ämpärissä.
-Nimet vaihtavat kerrosta samalla hetkellä kun uusi luettelo saapuu, ei
-hetkeäkään ennen. Jos pyramidia ei koskaan ajeta, peli jää nykytilaan
-eikä mitään ole rikki.
-
-**Pyramidin uusiajo on siis se, mikä tämän erän oikeasti julkaisee.**
-Se on sinun ja omistajan päätös; minä en ajanut sitä.
-
----
-
-## Lyhyesti
-
-Kolme omistajan päätöstä kysymyskortilta, kaikki tehty.
-
-1. **Poltettu mittajana pois laatoista.** Se oli atlaskehyksen ainoa
-   kaluste, joka väitti jotain mitattavaa, eikä se voinut pitää
-   väitettään (enimmillään 41 % pielessä). Pelin oma ruutuun ankkuroitu
-   jana jää ainoaksi. Kartussi ja painajanrivi jäävät.
-2. **Kehysviivat paperivakioksi.** Ennen z0:lla 0,15 px (näkymätön) ja
-   z7:llä 40,5 px; nyt sama kynä joka tasolla. Uloimmalla tasolla
-   kehys tuli näkyviin — se oli tarkoitus, ja se on todennettu
-   silmillä.
-3. **Nimiöt ja niiden merkit pois laatoista, peli latoo ne
-   ruutuavaruudessa** (uusi `js/karttanimet.js`). Nimi on nyt sama
-   koko dpr 1:llä, 2:lla ja 3:lla (mitattu laatikko 14,0 CSS-px
-   kaikilla) — ennen sama nimi oli 10,7 ja 5,3 CSS-pikseliä.
-
-Portit: `node --test tests/*.test.mjs` → **# pass 1047, # fail 0**
-(1 skipped). Kaksoisavaimet ja niputus puhtaat, `build-standalone`
-kääntyy (20 363 kt), `dist` poistettu.
-
-Dokumentaatio: `docs/moduulit/laattapyramidi.md` **luku 6g** (uusi) —
-kaikki kolme päätöstä, perustelut ja mitatut luvut. Luvut 4 ja 6c
-saivat viittauksen siihen, ja luvun 12 avoimet kohdat 1c, 1d ja 1e on
-merkitty ratkaistuiksi.
-
----
-
-## 1. Mitä laatoista poistuu ja mitä jää
-
-**Poistuu:** kaupunkien, vuorten ja järvien nimiöt; kaupunkipiste
-(2,0 / 2,6 px), sen rengas (4,6 px), vuorisymboli (4–5 px) ja
-kohderengas (3,2 px).
-
-**Jää:** maasto, meri, rannat, joet, järvet, asteverkko, atlaskehys,
-kartussi, painajanrivi, kompassiruusu, merten nimet — **ja reitit**
-(408 + 71 lentoreittiä sekä 123 joen uomat).
-
-### Miksi merkit lähtevät nimien mukana (kysyit perustelua)
-
-Sääntö, jonka annoit, ratkaisee kaikki kolme: *piste ja sen nimi on
-pidettävä samassa suhteessa.*
-
-- **Kaupunkipiste ja sen rengas** ovat nimen ANKKURI, eivät koriste:
-  ladonta varaa pisteen ennen nimiä, jottei nimi peitä toisen kaupungin
-  merkkiä. Jos piste jäisi laattaan ja nimi lähtisi peliin, varaus ei
-  enää vastaisi sitä, mitä ruudulla on — ja piste olisi dpr 3:lla
-  0,7 px eli tahra nimensä vieressä.
-- **Vuorisymboli** on saman nimiön merkki: nimi kirjoitetaan 11 pikseliä
-  sen alle. Sama kappale.
-- **Kohderengas lähtee ILMAN korvaajaa**, ja tämä on ainoa kohta, jossa
-  jotain oikeasti katoaa. Perustelu: kohteilla on jo elävä, ruutuun
-  mitoitettu merkki nimineen ja napautusaloineen (`js/fokuskohteet.js`)
-  siinä maassa, jossa pelaaja on — poltettu rengas oli sen alla toinen,
-  pienempi merkki samasta asiasta. Muualla siitä jäi **nimetön ympyrä,
-  joka on dpr 3:lla yhden CSS-pikselin kokoinen**. Kaikkien 197 kohteen
-  tuominen elävään kerrokseen vaatisi kaikkien 22 maapaketin lataamisen
-  heti alussa (ne ladataan nyt maa kerrallaan), enkä pitänyt sitä
-  hintansa arvoisena yhdestä pikselistä. **Jos omistaja haluaa
-  maailmanlaajuisen kohdemerkin takaisin, se on oma pieni eränsä** —
-  sano, niin teen sen.
-
-### Miksi reitit ja joet JÄÄVÄT
-
-Ne ovat viivatyötä samassa paperivakioluokassa kuin rannikko (luku 6d),
-niissä ei ole tekstiä eikä siis luettavuusvaatimusta, ja 602 polyviivaa
-elävässä kerroksessa palauttaisi juuri sen kuorman, jonka purkaminen
-teki panoroinnista sujuvan v1365:ssä. Ne eivät myöskään ole minkään
-nimen ankkureita.
-
----
-
-## 2. Ladonta on SIIRRETTY, ei keksitty uudestaan
-
-`js/karttanimet.js` on suora käännös generaattorin `__ladonta`-
-funktiosta. Mukana tulivat kaikki säännöt, jotka teit laatoille:
-
-- laudan oma asettelu (`la/lx/ly`) ensin — se on käsin hiottua työtä —
-  ja vasta törmätessä neljä tavanomaista karttapaikkaa, viimeisenä
-  pudotus (yleistystä, ei virhe)
-- tärkeysjärjestys lähtökaupunki (+8) → lentokenttä (+4) →
-  reittisolmun aste (+0…3)
-- kaupunkien PISTEET varataan ennen nimiä
-- kaksoisnimi vain kerran, tasokohtaisella päätöksellä (Alpit, Ahaggar,
-  Appalakit, Titicaca, Tanganjika, Tšad-järvi)
-- yleistyskynnykset nimitiheydestä
-- leveys mitataan `measureText`illä samalla kirjasimella jolla piirretään
-
-**Kolme asiaa muuttui, ja jokainen on korjaus:**
-
-1. **Kynnysten yksikkö on CSS-pikseli**, ei laitepikseli. Kynnykset
-   johdettiin nimitiheydestä (*"60 pikselin nimi tarvitsee vähintään
-   W/16 pikselin välin"*), ja sekä nimen leveys että lukukelpoinen väli
-   ovat ruudun ominaisuuksia. Työpöydän käytös säilyy sellaisenaan;
-   tiheä näyttö saa saman sen sijaan että nimet syttyisivät kolme
-   kertaa liian aikaisin ja kolmasosan kokoisina.
-2. **Kirjasin on pelin oma kartta-antiikva** (`.city-label`in perhe)
-   eikä kontin Liberation Serif — se on lähempänä aikakauden atlasta ja
-   se on laitteella oikeasti olemassa. Mittari ja piirto käyttävät
-   samaa merkkijonoa, joten törmäystesti pysyy totena.
-3. **Ladonta ajetaan kerran ZOOMIA kohti**, ei kerran tasoa kohti.
-   Tulos on laudan yksiköissä, joten panorointi ei laske mitään
-   uudelleen — eikä nimi voi hypätä paikasta toiseen kartan liikkuessa.
-   Tulos muistetaan mittakaavan mukaan (zoomiportaita on kuusi).
-
-**Yksi mitattu ero laattoihin:** vuorisymbolia ei varata. Laatoillakaan
-sitä ei varattu; kun kokeilin varata, jokainen vuoren nimi törmäsi
-omaan symboliinsa (296 nimiötä, 49 pudotettua). Ilman varausta tulos on
-sama **345** kuin laatoilla.
-
----
-
-## 3. MITATUT LUVUT
-
-### Nimen koko ruudulla — tämä on koko korjauksen ydin
-
-Sama näkymä (390×844, skaala 0,7993), sama laattakansio, eri
-pikselitiheys. Luku on lähtökaupungin nimen kirjainkoko CSS-pikseleinä
-(ladonnan `koko` on 12; poltetun sai laskettua siitä, minkä tason
-asiakas valitsi):
-
-| | valittu taso | ENNEN (poltettu) | JÄLKEEN (ladottu) |
-| --- | --- | --- | --- |
-| dpr 1 | z4 (0,9 px/yks) | **10,7 CSS-px** | **12,0 CSS-px** |
-| dpr 2 | z5 (1,8 px/yks) | 5,3 CSS-px | **12,0 CSS-px** |
-| dpr 3 | z5 (1,8 px/yks) | **5,3 CSS-px** | **12,0 CSS-px** |
-
-Ladotun nimen ladottu laatikko mitattiin ruudulta
-(`getBoundingClientRect`): **14,0 CSS-px kaikilla kolmella**, ja
-ladottujen nimien määrä (29) sekä paikat olivat täsmälleen samat.
-
-Yleisesti poltettu nimi on `koko · skaala / taso.px`, ja koska taso on
-√2:n päässä luvusta `skaala · dpr`, 12 pikselin nimi on dpr 3:lla
-2,8…5,7 CSS-pikseliä ja dpr 1:llä 8,5…17,0. Sama nimi, sama zoomi, eri
-laite — juuri se, minkä omistaja näki.
-
-### Nimimäärä per zoomtaso
-
-| skaala (CSS-px/yks) | ladottu koko laudalle | pudotettu | ruudulla 390×844 |
-| --- | --- | --- | --- |
-| 0,799 | 307 | 6 | 29 |
-| 1,198 | 342 | 3 | 12 |
-| 1,797 | 345 | 0 | 5 |
-| 2,696 | 345 | 0 | 3 |
-| 4,044 ja yli | 345 | 0 | 1 |
-
-Vertailu laattoihin (koko arkki): z2 62, z3 297 (19 pudotettu), z4 344
-(7), z5 350 (1), z6–z7 351 (0). Sama suuruusluokka; ero tulee
-yksikönvaihdosta.
-
-### Kehysaika panoroinnissa — muutoksen todellinen hinta
-
-Mitattu Chromiumissa 390×844 dpr 3, samat laatat, sama ele:
-
-| | ENNEN | JÄLKEEN |
+| # | havainto | tila |
 | --- | --- | --- |
-| kehysaika panoroinnissa p50 | 16,7 ms | **16,7 ms** |
-| kehysaika panoroinnissa p95 | 17,3 ms | **17,2 ms** |
-| panoroinnin longtaskit | 0 ms | **0 ms** |
-| `paivitaMaastonimet` asettumisessa, mediaani | 0,8–1,1 ms | **1,6–1,8 ms** |
-| sama, pahin | 1,5–2,0 ms | 2,2–3,4 ms |
-| kylmä ladonta uudelle mittakaavalle | — | 2,0–2,4 ms (pahin 3,5–7,3) |
-| SVG-solmuja uloimmassa näkymässä | 2026 | 2091 (+65) |
+| 1 | *"Ääriviiva ja korkeus väritys eivät täsmää."* | korjattu, syy mitattu ja todennettu |
+| 2 | *"Joet eivät mutkittele pehmeästi vaan kantikkaasti."* | korjattu |
+| 3 | *"Poista pituus ja leveyspiiri viivat. Jätä vain 0 ja päiväntasaaja sekä kääntöpiirit ja napapiiri ja nimeä ne."* | tehty |
+| 4 | *"Kaupunkien välissä pitäisi näkyä nopanheitto askelmat…"* | tehty, **yksi datakysymys sinulle** (kohta 4) |
 
-**Panorointi ei maksa mitään**, ja se on rakenteellista eikä onnea:
-ladonta on funktio pelkästä mittakaavasta, joten panorointi ei laske
-sitä uudelleen, ja kerrokseen syntyy vain näkyvät nimet (29, ei 345).
-Vanha elävä nimikerros piti 261 lappua puussa aina — juuri siksi se
-poistettiin v1366:ssa. Hinta on **alle millisekunti asettumista kohti**
-ja kertaluonteinen 2–7 ms uudelle zoomportaalle.
+Portit: `node --test tests/*.test.mjs` **1047 pass / 0 fail** (sama kuin
+main), `tarkista-kaksoisavaimet` ei kaksoisavaimia,
+`tarkista-niputus` kunnossa, `build-standalone` ajettu ja `dist/`
+poistettu.
 
-Nämä ovat emulaattorilukuja. Raamattu vaatii kehysajan mittaamisen
-oikealla iOS-laitteella; p95 17 ms on 60 kehystä sekunnissa, ja ennen
-ja jälkeen ovat mittaustarkkuuden sisällä samat.
-
-### Laattojen koko
-
-Pilotti z0–z4, 395 laattaa, sama kone ja sama aineisto ennen ja jälkeen:
-
-| taso | ennen | jälkeen |
-| --- | --- | --- |
-| z0 | 0,09 Mt | 0,09 Mt |
-| z1 | 0,34 Mt | 0,33 Mt |
-| z2 | 1,24 Mt | 1,23 Mt |
-| z3 | 4,62 Mt | 4,58 Mt |
-| z4 | 17,54 Mt | 17,48 Mt |
-| **yhteensä** | **23,83 Mt** | **23,71 Mt** |
-
-**Säästö on vain 0,5 %**, ja se kannattaa kertoa omistajalle
-sellaisenaan: nimien poisto EI pienennä pyramidia. Syy on luvussa 6d jo
-mitattu — valtaosa tavuista on paperin raetta, korkeataajuista kohinaa,
-jota kuvanpakkaus ei voi pakata. Nimet ovat sen rinnalla ohutta
-mustetta. Koko pyramidissa (1,32…1,48 Gt) tämä on noin 7 Mt.
-Generointiaika ei muuttunut mitattavasti (251,5 s → 257,9 s, sama
-kone kuormitettuna).
-
----
-
-## 4. Mitä muutin tiedostoittain
+Muutetut tiedostot — **kaikki tools/-puolella**:
 
 | tiedosto | mitä |
 | --- | --- |
-| `js/karttanimet.js` | **uusi.** Ladonta ruutuavaruudessa, aineisto, kaksoisnimien paritus, välimuisti, piirto |
-| `js/laattapyramidi.js` | `laatoissaOnNimet()`; luettelon saapuminen ajaa myös merkkiketjun |
-| `js/ui.js` | nimikerros `drawBoard`iin, kutsu `paivitaMaastonimet`iin, mittakahva `__karttanimienMitat()` |
-| `js/fokuskohteet.js` | kaksoisnimisäännön kolme vakiota tuodaan nyt `karttanimet.js`:stä eikä kopioida |
-| `js/mapart.js` | `saumasiirto` viety (sama sauma, yksi toteutus) |
-| `css/styles.css` | `.karttanimet` / `.karttanimi` / `.karttamerkki` |
-| `sw.js`, `tools/build-standalone.mjs` | uusi moduuli listoille |
-| `tools/fokuskartta/maailmapiirto.js` | mittajana pois, kehysviivat P:hen, nimiöt ja merkit pois |
-| `tools/fokuskartta/sisalto.mjs` | kerää enää reitit ja joet |
-| `tools/generoi-laattapyramidi.mjs` | `__ladonta` pois, luetteloon `nimiot: false` |
-| `tools/savukkeet/savuke-laattapyramidi.mjs` | uusi P6-ryhmä |
-| `tools/savukkeet/savuke-maailmanakyma.mjs` | 10a–10c ajan tasalle, uusi 10d |
-| `docs/moduulit/laattapyramidi.md` | uusi luku 6g, luvut 4/6c/12 päivitetty |
+| `tools/fokuskartta/maailma.mjs` | `meriRenkaat` (uusi), `rannikot` johdetaan siitä |
+| `tools/fokuskartta/maailmapiirto.js` | maa/meri vektorista, jokien käyrä, erikoispiirit, reittien askelmat |
+| `tools/fokuskartta/sisalto.mjs` | reitit ratana askelmineen, meri/maa erotettu |
+| `tools/generoi-laattapyramidi.mjs` | renkaat aineisto.jsoniin |
+| `docs/moduulit/laattapyramidi.md` | luvut 6h–6l (mittaukset) |
 
-## 5. Savukkeiden tila
+**Moottori ei ole enää jaettu.** Tarkistin sen ennen kuin muutin mitään:
+`tools/tee-yleislehti.mjs` ei ole enää olemassa, ja
+`grep "fokuskartta/maailma"` löytää tasan yhden kutsujan —
+`tools/generoi-laattapyramidi.mjs`. Näiden kahden tiedoston ainoa
+käyttö on siis pyramidi, eikä md5-vertailua vanhaan lehteen ole mihin
+tehdä. Maalehtien moottori (`piirto.js`) ja `aineisto.mjs` ovat
+koskemattomat, ja niiden lukema merimaski jää paikalleen.
 
-| savuke | tulos |
+---
+
+## 1. Ääriviiva ja maaväri — hypoteesisi piti paikkansa, ja tässä ovat luvut
+
+Syy oli tasan se, minkä arvelit: **rantaviiva vektoreista, maa/meri-jako
+rasterista.** Mutta en luottanut siihen vaan mittasin, ja mittaus
+muuttaa yhden asian arviossasi: ero ei ole tasaisesti "5 km", vaan se
+riippuu rannikon rikkonaisuudesta enemmän kuin ruudun koosta.
+
+Mittatapa: kummankin lähteen maa/meri-vastaus laskettiin TÄSMÄLLEEN
+samoille kuvapikseleille kuin moottori ne laskee (sama projektio, sama
+bilineaarinen korkeus, sama maski), ja verrattiin.
+
+- **siirtymä** = kuvarivillä mitattu etäisyys vektorin rantaviivan ja
+  moottorin värinvaihdoksen välillä (mediaani; 40 px on mittarin katto)
+- **vuoto** = erimielisen pikselin etäisyys rantaviivaan
+
+| alue | z5 | z6 | z7 | vuoto enimmillään | eri-% (z7) |
+| --- | --- | --- | --- | --- | --- |
+| Egeanmeri (omistajan kuvakaappaus) | 1,0 px | 2,5 px | **5,5 px** | 21 px | 3,8 % |
+| Länsi-Afrikka (sileä rannikko) | 4,0 px | 3,5 px | **13,0 px** | 11 px | 1,4 % |
+| Norja (vuonot) | 20 px | 40 px | **yli 40 px** | 48 px | 10,5 % |
+| Chile (saaristo) | 22 px | 32 px | **yli 40 px** | 23 px | 12,3 % |
+
+Kaksi asiaa, jotka kannattaa lukea tästä:
+
+1. **Kilometreinä ero pysyy samana, joten pikseleinä se
+   kaksinkertaistuu joka tasolla.** Siksi omistaja näki sen vasta
+   lähikuvassa — z3:lla se on nolla.
+2. **Egeanmeren otoksessa 9 saarta 29:stä jäi kokonaan ilman
+   maaväriä** — pelkkä ääriviiva meren päällä. Se on se, minkä silmä
+   poimii ensin, eikä se näy siirtymäluvussa lainkaan.
+
+Sileä rannikko (Länsi-Afrikka) on z7:llä 13 px pielessä, mutta siellä
+se näkyy vain vyönä; rikkonaisella rannikolla ruudukko ei näe vuonoja
+lainkaan ja koko maa/meri-kuvio on väärä.
+
+### Korjaus
+
+Tein täsmälleen sen, minkä ehdotit, ja vein sen yhden askelen
+pidemmälle: **`rannikot` JOHDETAAN nyt samasta harvennetusta
+rengasjoukosta, josta täyttö lasketaan.** Ei siis kahta rinnakkaista
+polkua samasta lähteestä vaan yksi lista kärkipisteitä kahdessa
+muodossa. Viiva ja täyttö eivät voi ajautua erilleen edes
+periaatteessa.
+
+Maski lasketaan juovapyyhkäisynä suoraan kuvan tarkkuudella (Millerissä
+kuvarivi on tasan yksi leveyspiiri), joten välirasteria ei ole.
+
+**Reunatapauksesi ratkesivat ilman uusia sääntöjä**, koska värit oli jo
+kummassakin päässä leikattu — tämä oli minulle yllätys ja tarkistin sen
+koodista:
+
+| kysymyksesi | vastaus |
 | --- | --- |
-| laattapyramidi (uudet laatat) | 10/13 |
-| laattapyramidi (vanhat laatat) | 8/11 |
-| maailmanakyma | **16/16** (main 15/15; uusi väite 10d) |
-| panorointi | 11/11 |
-| kartta-tila | 20/20 |
-| kartan-sujuvuus | 40/40 |
-| fokuskohteet | 96/96 |
-| jalkamatka | 22/22 |
+| matala meri rannan lähellä, kun ruudukko sanoo maata | `lerpSyvyys(m >= 0)` palauttaa matalimman merisävyn — juuri oikein |
+| solu puoliksi maata, lähin ruudukkopiste merellä | `Math.max(0, m + kohina)` → hypsometrian alin sävy, eli rannikkoalanko |
+| järvet ja sisävedet | olivat **jo** kunnossa: `ne_10m_lakes` piirretään ja täytetään samoista renkaista, joten ne leikkaavat maavärin pois nyt kuten ennenkin |
+| Kaspianmeri / Kuollutmeri / Qattara | säilyivät ennallaan, koska ne ratkeavat siitä onko piste meren monikulmiossa |
 
-Laattapyramidin kolme kaatunutta väitettä (P3b, P4a, P4b) **eivät ole
-regressio**: ne kaatuvat täsmälleen samalla tavalla vanhoilla
-laatoilla, koska pilottikansiossani on z5 vain Balkanin alueelta.
-Puuttuvat z5-laatat antavat 404:iä ja pitävät tason samana. Tuotannon
-täysajossa nämä eivät kaadu. Kaikki uudet nimiväitteet (P6a–P6d)
-menivät läpi molempiin suuntiin: nimettömien laattojen päällä peli
-latoo, vanhojen päällä ei.
+### Suorituskyky — mitattu, koska pyysit
 
----
+| mitta | ennen | jälkeen |
+| --- | --- | --- |
+| piirtoaika z6 (Eurooppa, 4x4-lohko) | 10,1 s | 10,3 s (**+2 %**) |
+| piirtoaika z7 (Egeanmeri, 4x4-lohko) | 9,7 s | 10,0 s (**+3 %**) |
+| tavua/px z6 (webp q0,9) | 0,265 | 0,266 (+0,4 %) |
 
-## 6. HAVAINTOJA — en korjannut, kirjaan sinulle
+**Monikulmioleikkaus ei moninkertaista piirtoa.** Juovapyyhkäisy tehdään
+kerran koko kankaalle ja reunat indeksoidaan kerran koko ajolle, joten
+lisätyö on 2–3 % eikä se kasva tasojen mukana. Ämpärin koko ei liiku.
 
-1. **Kohdenimiöt (`js/fokuskohteet.js`) ovat nyt selvästi pienempiä
-   kuin paikannimet.** Kuvakaappauksessa "Ólympos" ja "Évros" ovat
-   silminnähden pienempiä kuin "Balkanvuoret" samassa näkymässä. Ne
-   ovat elävä kerros, joten korjaus on sama kuin tässä erässä: mitoita
-   ne CSS-pikseleihin. Oma pieni eränsä.
-2. **Kompassiruusun viivat ovat yhä `paksuus * S`** (0,75/0,8/1,5 * S).
-   Ruusu piirretään vain tasoille z0–z2, joten sen kehäviivat ovat
-   0,08…0,63 px eli käytännössä näkymättömiä juuri siellä missä ruusua
-   katsotaan. Sama vikaluokka kuin kehysviivoilla, neljä riviä. Rajasin
-   sen pois, koska sait rajaukseksi "kehysviivat".
-3. **Jokien nimet ovat kadonneet vesistölinssistä pyramidilaudalla.**
-   Tämä ei ole tämän erän aiheuttama: v1366 vaiensi `.maastonimi`-
-   kerroksen kokonaan, ja jokien nimet asuivat siellä. Laatoissa niitä
-   ei koskaan ollut, eikä uusi nimikerros lado niitä (laatoillakaan ei
-   ladottu). Korjaus olisi pieni ja turvallinen: päästä vanha kerros
-   latomaan pyramidilaudalla VAIN joet, kun linssi on päällä —
-   kaksoisnimeä ei voi syntyä, koska kumpikaan muu kerros ei kirjoita
-   joen nimeä. Odotan sanaasi.
-4. **Uloszoomaus loppuu skaalaan 0,7993 myös maailmanäkymässä**
-   mitatessani. En koskenut siihen (toinen agentti on kamerassa), mutta
-   se tarkoittaa, että uloimmat laattatasot z0–z2 eivät käytännössä
-   koskaan tule näkyviin pelissä — ja juuri niille arkin kalusteet
-   (kartussi, painajanrivi, kompassi, merten nimet, nyt myös näkyvä
-   kehys) on rajattu. Kun uloszoomaus löysenee, kalusteet tulevat
-   esiin; kannattaa katsoa ne silloin silmällä kerran.
-5. **Pyramidi on ajettava uudestaan**, jotta tämä erä näkyy pelaajalle
-   (ks. LUE TÄMÄ ENSIN). En ajanut työnkulkua.
+### Todennettu silmillä
+
+Ajoin samat alueet ennen ja jälkeen ja katsoin kuvat:
+
+- **Norja z7** — tämä on selvin. Ennen: maaväri on karkea porrastus,
+  joka on täysin irti ääriviivoista — harmaita meriläikkiä keskellä
+  saaria, maaväriä vuonojen päällä. Jälkeen: jokainen vuono on vettä
+  ja jokainen saari maata, ääriviivaan asti.
+- **Chile z7** — ennen vuonot olivat lähes kokonaan maanvärisiä (ruudukko
+  ei näe niitä), jälkeen jokainen haara on merta ääriviivaan asti.
+- **Egeanmeri z7** — ennen useissa pikkusaarissa oli pelkkä ääriviiva
+  ilman maaväriä; jälkeen kaikki ovat täynnä.
+- **Peloponnesos z5** — ennallaan silmälle, kuten mittaus lupasi
+  (siirtymä 1 px).
 
 ---
 
-## 7. Miten todensin
+## 2. Joet kantikkaita — mitattu ensin, sitten silotettu
 
-- `node --test tests/*.test.mjs` → 1047 pass / 0 fail / 1 skipped
-- `tarkista-kaksoisavaimet` ja `tarkista-niputus` puhtaat,
-  `build-standalone` kääntyy, `dist` poistettu
-- **kaksi pilottipyramidia** samoista lähteistä, toinen mainin koodilla
-  ja toinen tämän haaran koodilla (z0–z4 koko maailma + z5 Balkanilta),
-  ja peli ajettu molempia vasten
-- **silmillä Chromiumissa** dpr 1, 2 ja 3: nimen korkeus mitattu
-  `getBoundingClientRect`illä, kuvakaappaukset katsottu
-- **silmillä laattakuvista**: z0 ennen/jälkeen (kehys ja mittajana),
-  z3 ennen/jälkeen (nimet ja merkit poissa, joet ja reitit tallella)
+Ongelma on todellinen ja iso. Mitattuna (123 uomaa, 4 330 pistettä):
+
+| taso | jakso mediaani | p90 | pisin |
+| --- | --- | --- | --- |
+| z3 | 6,0 px | 13,3 px | 55 px |
+| z5 | 23,9 px | 53,4 px | 219 px |
+| z6 | 47,9 px | 106,8 px | 438 px |
+| z7 | **95,8 px** | 213,5 px | 875 px |
+
+Taitteen mediaanikulma on **49 astetta**. Sadan pikselin välein
+puolisuora kulma.
+
+Käytin **sentripetaalista Catmull-Romia (alpha = 0,5)** kuten pyysit,
+muunnettuna suoraan kuutiollisiksi Béziereiksi. Perustelu pitää
+paikkansa juuri tässä aineistossa: pisin jakso on yli 200-kertainen
+lyhimpään, eli pisteet ovat äärimmäisen epätasavälein, ja yhtenäinen
+parametrisointi tekisi silmukoita.
+
+**Jatkuvuus laattarajan yli**: silotus nojaa koko uomaan.
+`sisalto.joet` on maailmanlaajuinen lista, jota mikään ei rajaa ennen
+piirtoa, ja kärjet muunnetaan ARKIN pikseleiksi, jotka ovat samat joka
+lohkossa — canvasin leikkuri hoitaa rajauksen vasta rasteroinnissa.
+Lohkorajatesti alla (kohta 5): z6–z7 pahin 0.
+
+**Rantaviiva ja järvet EIVÄT tarvitse tätä, ja se on mitattu:**
+harvennettu rantaviiva on z7:llä mediaanina **3,55 px** jaksoa kohti
+(järvet 3,38) eli 27 kertaa tiheämpi kuin joet. Ja tärkeämpi syy:
+rantaviiva on nyt myös maan ja meren raja (kohta 1), joten viivan
+silottaminen täyttöä silottamatta palauttaisi juuri sen eron, jonka
+äsken korjasin. Reitit ovat kahden kaupungin janoja.
+
+**Silmillä**: Jenisein terävä mutka z6:lla. Ennen: suora kulma ja
+V-kärki. Jälkeen: pehmeä meandri, joka kulkee samojen pisteiden kautta,
+ei silmukoita eikä yliampumista edes 149 asteen taitteessa.
+
+**Hinta**: sisältyy yllä mitattuun 2–3 %:iin; joet ovat 4 207 jaksoa,
+ja `bezierCurveTo` maksaa saman kuin `lineTo`.
+
+---
+
+## 3. Asteverkko pois, viisi piiriä nimineen
+
+Tehty. Tasavälinen 20 asteen verkko on poistettu; jäljellä
+nollameridiaani, päiväntasaaja, Kravun ja Kauriin kääntöpiirit
+(±23,4365) ja pohjoinen napapiiri (66,5635 °N).
+
+**Eteläinen napapiiri**: tarkistin arkin omista mitoista kuten pyysit
+(`pyramidi.json` `rajaus`: y −611,31, h 6422,72 → 84 °N…66 °S). 66,56 °S
+on reunan ulkopuolella. Ei piirretä, ei nimiötä, ei mainintaa avoimissa.
+
+### Kynnys: en tarvinnut sitä, ja perustelu on rakenteellinen
+
+Merten nimet ovat kartan mittakaavassa (`S`), koska nimi kuuluu
+altaalle jonka se nimeää — siksi niillä ON pakko olla kynnys.
+
+**Nämä nimet nimeävät VIIVAN, ja viivalla ei ole leveyttä, jonka mukaan
+nimi kasvaisi.** Siksi ne ovat paperivakioita (`P`): 13 px joka
+tasolla. Silloin ne eivät voi olla jättiläisiä syvässä zoomissa eivätkä
+näkymättömiä uloimmalla — eli kynnyksen molemmat perusteet katoavat.
+Ja koska nämä viivat kulkevat ruudun poikki joka tasolla, nimi on
+mielekäs joka tasolla, aivan kuten arvelit.
+
+Kynnyksen työn tekee **toistoväli**: nimi toistetaan noin 2 400
+laitepikselin välein, jolloin näkymässä (puhelin 1 170, työpöytä
+1 440–3 024) on korkeintaan yksi kappale kutakin nimeä. Määrä lasketaan
+arkin mitoista, joten se on sama joka lohkossa:
+
+| taso | z0–z2 | z3 | z4 | z5 | z6 | z7 |
+| --- | --- | --- | --- | --- | --- | --- |
+| nimiä viivaa kohti | 1 | 2 | 5 | 9 | 18 | 36 |
+
+Jokaisella viivalla on oma faasi (0,17 / 0,26 / 0,5 / 0,74), koska
+samalla faasilla kaikki neljä nimeä kasautuivat samaan
+pystysarakkeeseen — näin kävi ensimmäisessä ajossa ja se näytti
+tekstipalstalta. Nollameridiaanin päälle osuva kappale siirretään
+sivuun oman leveytensä verran (z7:llä toistoväli osuu tasan asteelle 0).
+
+### Nollameridiaanin nimi: "Nollameridiaani"
+
+Perustelu on mitta eikä maku: nimi kulkee pystyviivan vartta, jolloin
+sen pituus on korkeutta. "Greenwichin meridiaani" on 22 merkkiä eli
+paperivakiona noin 150 px pystyyn, ja se leikkaisi kääntöpiirien
+nimet. "Nollameridiaani" on 15 merkkiä, yksi sana, ja se on suomalaisen
+kartaston oma termi juuri tälle viivalle.
+
+### Todennettu silmillä
+
+- **z0 (koko maailma)**: kaikki neljä viivaa ja viisi nimeä näkyvät ja
+  ovat luettavia; asteverkkoa ei ole. Nimet hajautuvat eri kohtiin
+  (napapiiri Kanadan yllä, Kravun kääntöpiiri Meksikon yllä,
+  päiväntasaaja Afrikan yllä, Kauriin kääntöpiiri Intian valtameren
+  yllä).
+- **Päiväntasaaja z6 lähikuvassa**: kursiivi harvennettu nimi istuu
+  viivan yläpuolella, sama kirjainkoko kuin z0:lla.
+- **Kolme z6-laattaa vierekkäin päiväntasaajalla**: viiva jatkuu
+  saumattomasti laatasta toiseen eikä nimi toistu — se on 2 400
+  pikselin välein eli noin joka viidennessä laatassa.
+
+### Havainto sinulle (en koskenut, koska se on js/-puolella)
+
+`js/fokusmitat.js` piirtää ruudun laitoihin asteviivaimet ("22 °L",
+"46 °P"). Ne osoittivat aiemmin kartan yli kulkeviin verkkoviivoihin;
+nyt niitä ei ole. Viivaimet ovat yhä oikeita lukemia eivätkä valehtele,
+mutta niiltä katosi visuaalinen vastine kartalla. **En koskenut niihin**
+(toinen agentti on js/-puolella). Jos ne alkavat näyttää irrallisilta,
+se on oma pieni erä.
+
+---
+
+## 4. Reittien askelmat — tehty, ja yksi asia jonka sinun pitää päättää
+
+### Mitä selvitin (en olettanut)
+
+| kysymyksesi | mitä data sanoo |
+| --- | --- |
+| miten merireitti erotetaan? | **`edges`-riveillä ON `type`-kenttä**: 111 riviä 408:sta on `type: 'sea'`. Sama kenttä, jota `tools/korjaa-merireitit.mjs` käyttää. Ei tarvinnut keksiä sääntöä. |
+| miten askelmat jaetaan janalle? | **Vakiintunut tapa löytyi:** `js/rules.js` `edgePolyline` + `pointAlong(poly, idx/steps)`, tasavälein kaarenpituuden mukaan. Käytän niitä suoraan importtaamalla — en kirjoittanut omaa jakoa. |
+| montako askelmaa kartalla on? | `steps` yhteensä **1 526**, piirrettyjä merkkejä **1 118** (steps − 1 reunaa kohti; idx 0 ja steps ovat kaupungit). |
+
+Askelmien paikat tulevat siis pelin omista funktioista. Se on tässä
+tärkeämpää kuin näyttää: jos työkalu jakaisi janan omalla kaavallaan,
+laattaan poltettu ruutu ja nappulan pysähdyspaikka eroaisivat, ja se
+olisi pelivirhe eikä ulkoasuvirhe.
+
+### PÄÄTÖSKYSYMYS: lentoreiteillä ei ole askelmia
+
+Tulkintasi oli *"askelmien on näyttävä kaikilla kolmella"*. **Se ei ole
+mahdollista nykyisellä datalla eikä nykyisillä säännöillä**, ja kerron
+sen sinulle enkä arvaa:
+
+- `airRoutes`-riveillä on **vain `a` ja `b`** — ei `steps`-kenttää.
+- Pelissä lentäminen **siirtää nappulan suoraan perille**:
+  `js/game.js` `actionMannerLento` asettaa
+  `p.pos = { type: 'city', city: cityId }`. Lennolla ei kuluteta
+  nopanheittoa eikä pysähdytä matkan varrelle.
+
+Lennolla ei siis ole ruutuja, joita piirtää. Piirsin lentoreitit
+omistajan pyytämällä punaisella katkoviivalla ilman helmiä.
+**Jos lentoon halutaan askelmat, se on pelimekaniikan muutos
+(`steps` lentoreiteille ja lento matkana eikä hyppynä) — se on sinun ja
+omistajan päätös, ei minun.**
+
+Tästä syntyi sääntö, joka on mielestäni oikea ja jonka kerron
+ääneen jotta voit kumota sen: **muste kertoo kulkutavan, helmet
+kertovat askelmat, ja katkoviiva on varattu sille reitille, jolla ei
+ole askelmia.**
+
+| reitti | muste | viiva | helmet |
+| --- | --- | --- | --- |
+| maa (297) | seepia | yhtenäinen | kyllä |
+| meri (111) | preussinsininen | yhtenäinen | kyllä |
+| lento (71) | poltettu sinooperi | katkoviiva | ei |
+
+### Värit
+
+Preussinsininen (1706) on kaivertajan vakiosininen ja poltettu
+sinooperi sen punainen. Käytin `rgba(32,60,98,0.56)` ja
+`rgba(150,54,40,0.50)` — murrettuina niin, että ne erottuvat mutta
+lukeutuvat musteeksi paperilla eivätkä näytön väriksi. Katsoin
+lähikuvat: sininen luetaan siniseksi ja punainen punaiseksi, mutta
+kumpikaan ei hyppää seepian päältä.
+
+Askelmahelmi on paperivakio: 2,4 px säde, paperinvaalea täyttö ja
+ohut musteinen kehä, eli asemamerkki radalla.
+
+### Kynnys — mitattu, ei valittu
+
+Reitit ilmestyvät jo nyt kynnyksellä `px >= 0,22` (z2). Askelvälit
+ovat siellä p10 **11,4 px** ja mediaani **17,9 px**, joten 2,4 pikselin
+helmet erottuvat toisistaan heti ensimmäisellä tasolla, jolla reitti
+ylipäätään piirretään. **Omaa syvempää kynnystä ei tarvita.**
+
+| taso | askelväli p10 | mediaani | p90 |
+| --- | --- | --- | --- |
+| z2 | 11,4 px | 17,9 px | 35,1 px |
+| z4 | 45,4 px | 71,4 px | 140,2 px |
+| z6 | 181,6 px | 285,7 px | 560,9 px |
+
+### Yksi asia korjaantui matkan varrella
+
+Reitin murtoviiva on avattu sauman yli (`avaaSauma`), joten sen x voi
+olla laudan ulkopuolella. Vanha koodi piirsi reitit kahden pisteen
+janoina ja katkaisi ne saumalla; uusi piirtää jokaisen reitin kolmena
+kappaleena (−laudan leveys, 0, +laudan leveys), jolloin **Tokio–San
+Francisco näkyy sauman molemmin puolin eikä katkea.** Tämä ei ollut
+pyydetty, mutta se oli murtoviivoihin siirtymisen välitön edellytys.
+
+### Todennettu silmillä
+
+- **Kanaali z4**: samassa näkymässä maareittejä helmineen (Lontoo–
+  Pariisi–Amsterdam), merireittejä sinisenä helmineen (Lontoo–Dublin,
+  Lontoo–Rotterdam) ja lentoreitti punaisena katkoviivana. Kaikki
+  kolme erottuvat toisistaan yhdellä silmäyksellä.
+- **Lähikuva 4x**: yksittäinen helmi erottuu selvästi renkaana viivan
+  päällä.
+- **z6 kaukaa**: reitti on yhä luettava viivana ja helmet erottuvat.
+
+---
+
+## 5. Sauma ja jatkuvuus — todiste
+
+`--saumatesti` kaikilla kahdeksalla tasolla, sama kone ja sama
+aineisto ennen ja jälkeen. Luku on pahin kanavaero (0–255).
+
+| taso | ennen (main) | jälkeen |
+| --- | --- | --- |
+| z0–z1 | 0 | **0** |
+| z2 | 0 | 5 |
+| z3 | 6 | 6 |
+| z4 | 2 | 10 |
+| z5 | 22 | **5** |
+| z6–z7 | **0** | **0** |
+
+**Syvimmät tasot ovat yhä tavulleen samat** — juuri ne, joita pelaaja
+katsoo 1:1 ja joilla sauma näkyisi. Väliltä löytyvät erot ovat
+hajallaan vektorien reunapehmennyksessä (uudet käyrät, helmet ja nimet
+rasteroituvat eri kokoisilla kankailla hitusen eri tavoin), pahin ero
+on 10 kanavaa 255:stä eli 4 % eli silmälle näkymätön, eikä työkalun oma
+saumavaroitus lauennut. z5 parani 22:sta 5:een.
+
+Kerron suoraan, koska pyysit: **tämä ei ole no-op muille käytöille —
+mutta muita käyttöjä ei ole.** `tools/tee-yleislehti.mjs` on poistettu,
+ja `maailma.mjs` + `maailmapiirto.js` ovat pyramidin yksinomaisia.
+Maalehtien moottori `piirto.js` ja `aineisto.mjs` ovat koskemattomat.
+
+---
+
+## Mitä EN tehnyt
+
+- **En noussut versiota, en tehnyt PR:ää, en ajanut työnkulkua.**
+- En koskenut js/-puoleen (toinen agentti on siellä).
+- En koskenut Raamattuun, tarina.md:hen tai isoisan-raamattu.md:hen.
+  Luvut 6h–6l ovat `docs/moduulit/laattapyramidi.md`:ssä eli MITEN-
+  dokumentissa. **Raamattuun tarvitaan sinulta kolme linjausta:**
+  vektori maan ja meren auktoriteettina, asteverkon korvaaminen viidellä
+  nimetyllä piirillä, ja reittien askelmat + niiden värisääntö.
+- En muuttanut umpimerikarsintaa (`--harva`) käyttämään vektoria. Se on
+  oletuksena pois päältä, mutta **jos se joskus kytketään päälle, sen
+  maa/meri-testi on eri mieltä kuin piirto** — kirjaan sen tähän
+  havaintona, en korjannut ohimennen.
+
+## Ajo
+
+Kaikki neljä muutosta näkyvät vasta uudessa pyramidiajossa. Ne kuuluvat
+samaan ajoon, ja versio pitää nostaa polussa (`2026-08-30c` tai
+myöhempi), koska laattojen osoitteet ovat ikuisessa välimuistissa.

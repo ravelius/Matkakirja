@@ -48,7 +48,7 @@
  *
  * @param {object} pack js/packs/maailmankartta.js:n MAAILMANKARTTA
  */
-export async function keraaSisalto(pack, packkikansio) {
+export async function keraaSisalto(pack, packkikansio, juuri = `${packkikansio}/../..`) {
   const nimet = await import(`${packkikansio}/maailmankartta-nimet.js`)
     .then((m) => m.MAAILMANKARTAN_NIMET)
     .catch(() => ({ joet: [] }));
@@ -56,22 +56,56 @@ export async function keraaSisalto(pack, packkikansio) {
   /* --------------------------------------------------------- reitit */
 
   /*
-   * REITTI ON JANA KAHDEN KAUPUNGIN VÄLILLÄ, ei sen kummempaa: laudan
-   * oma piirto vetää ne suorina. Päivämääränrajan yli menevä jana
-   * katkaistaan vasta piirrossa (viivaPolku), joten tänne se tulee
-   * sellaisenaan.
+   * === REITTI EI OLE JANA VAAN PELILAUDAN RATA (omistaja 30.8.2026) ==
    *
-   * Kaupungit luetaan vain janojen päiksi. Kaupunkien PISTEET ja NIMET
-   * eivät ole enää laatoissa (ks. tiedoston johdanto), joten niitä ei
-   * viedä eteenpäin.
+   * Sanatarkasti: *"Kaupunkien välissä pitäisi näkyä nopanheitto
+   * askelmat, ei katkoviiva. Lentoreitin punaisella katkoviivalla ja
+   * laivareitit sinisellä niin että noppa askelmat näkyy."*
+   *
+   * Askelmat ovat pelilaudan ruutuja, ja ne ovat PYSYVIÄ: lauta ei
+   * muutu pelin aikana, joten ne kuuluvat laattoihin eivätkä pelin
+   * elävään kerrokseen.
+   *
+   * PAIKAT LASKETAAN PELIN OMILLA FUNKTIOILLA, EI OMALLA JAOLLA.
+   * `js/rules.js` on ainoa paikka, joka tietää mihin nappula tosiasiassa
+   * pysähtyy: `edgePolyline` rakentaa reitin murtoviivan (merireitin
+   * `via`-välipisteet, maareitin pienen käsin piirretyn mutkan
+   * determinististä hajautusta myöten) ja `pointAlong(poly, idx/steps)`
+   * antaa askelman idx paikan KAARENPITUUDEN mukaan tasavälein.
+   * Jos tämä työkalu jakaisi janan omalla kaavallaan, laattaan poltettu
+   * ruutu ja nappulan pysähdyspaikka eroaisivat — ja se olisi
+   * pelivirhe eikä ulkoasuvirhe.
+   *
+   * Väliaskelmia on `steps - 1` kappaletta reunaa kohti: idx 0 ja idx
+   * steps ovat kaupungit itse (ks. rules.js `stepsFrom`).
+   *
+   * MERIREITTI EROTETAAN PAKAN OMALLA KENTÄLLÄ `type === 'sea'`, joka
+   * on jo olemassa (111 reittiä 408:sta; tools/korjaa-merireitit.mjs
+   * käyttää samaa kenttää). Omaa sääntöä ei keksitty.
+   *
+   * LENTOREITEILLÄ EI OLE ASKELMIA, eikä se ole tämän työkalun
+   * puute: `airRoutes`-riveillä on vain `a` ja `b`, ja pelissä
+   * lentäminen siirtää nappulan suoraan perille
+   * (js/game.js `actionMannerLento`: `p.pos = { type: 'city', ... }`).
+   * Lennolla ei siis ole ruutuja, joita piirtää.
    */
+  const { buildBoard, pointAlong } = await import(`${juuri}/js/rules.js`);
+  const lauta = buildBoard(pack.cities ?? [], pack.edges ?? [], pack.map ?? null);
+  const reitit = lauta.edges.map((e) => {
+    const askelmat = [];
+    for (let i = 1; i < e.steps; i += 1) {
+      const p2 = pointAlong(e.poly, i / e.steps);
+      askelmat.push([p2.x, p2.y]);
+    }
+    return { laji: e.type === 'sea' ? 'meri' : 'maa', poly: e.poly, askelmat };
+  });
+
   const paikka = new Map((pack.cities ?? []).map((c) => [c.id, c]));
   const jana = (e) => {
     const a = paikka.get(e.a);
     const b = paikka.get(e.b);
     return a && b ? { ax: a.x, ay: a.y, bx: b.x, by: b.y } : null;
   };
-  const reitit = (pack.edges ?? []).map(jana).filter(Boolean);
   const lentoreitit = (pack.airRoutes ?? []).map(jana).filter(Boolean);
 
   /* ----------------------------------------------------------- joet */
@@ -90,6 +124,8 @@ export async function keraaSisalto(pack, packkikansio) {
 
 /** Lyhyt yhteenveto lokiin. */
 export function sisallonYhteenveto(s) {
-  return `reitit ${s.reitit.length}(+${s.lentoreitit.length} lento) · `
-    + `joet ${s.joet.length}`;
+  const meri = s.reitit.filter((r) => r.laji === 'meri').length;
+  const askelmat = s.reitit.reduce((a, r) => a + r.askelmat.length, 0);
+  return `reitit ${s.reitit.length} (${meri} meri, +${s.lentoreitit.length} lento) · `
+    + `askelmia ${askelmat} · joet ${s.joet.length}`;
 }

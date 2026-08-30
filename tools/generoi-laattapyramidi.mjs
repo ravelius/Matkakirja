@@ -905,6 +905,13 @@ writeFileSync(join(tyokansio, 'aineisto.json'), JSON.stringify({
   korkeus: korkeudenMitat,
   meri: Boolean(aineisto.meri),
   rannikot: aineisto.rannikot,
+  /*
+   * MEREN RENKAAT: sama harvennettu kärkipistejoukko kuin `rannikot`,
+   * mutta suljettuina renkaina. Moottori erottaa niistä maan ja meren
+   * (maailmapiirto.js "VEKTORI ON AUKTORITEETTI"), jolloin maaväri ei
+   * voi olla rantaviivan kanssa eri mieltä.
+   */
+  meriRenkaat: aineisto.meriRenkaat,
   jarvet: aineisto.jarvet,
 }));
 /*
