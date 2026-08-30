@@ -18,6 +18,7 @@ const SHELL = [
   './js/karttamittari.js',
   './js/fokusmitat.js',
   './js/laattapyramidi.js',
+  './js/karttanimet.js',
   './js/packs/fokus-grc.js',
   './js/sisaltotaulut.js',
   './js/ui-apurit.js',

@@ -4082,7 +4082,9 @@ body.linssi-valokuva .grain { display: none; }
  * (paint-order: stroke), ja pelkkä täytön haalistus jättäisi viivan
  * kellumaan ilman tekstiä.
  */
-body.linssi-vesistot .cities .city-label { opacity: 0.34; }
+body.linssi-vesistot .cities .city-label,
+body.linssi-vesistot .karttanimi-kaupunki,
+body.linssi-vesistot .karttamerkki { opacity: 0.34; }
 body.linssi-vesistot .cities .city,
 body.linssi-vesistot .cities .city-start,
 body.linssi-vesistot .cities .city-gate,
@@ -4497,6 +4499,38 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
  * Kerros ei ota napautuksia vastaan — muuten nimi söisi kartan oman
  * napautuszoomauksen. Poikkeus on i-ikoni, joka palauttaa ne itselleen.
  */
+/* ---------------------------------------------------------------------------
+   PYRAMIDILAUDAN PAIKANNIMET — RUUTUAVARUUDESSA (omistaja 30.8.2026)
+   ---------------------------------------------------------------------------
+   Kaupunkien, vuorten ja järvien nimiöt ja merkit poistuivat laatoista,
+   koska poltettu nimi on laitepikseleissä ja siksi iPadilla kolmasosan
+   kokoinen (js/karttanimet.js). Ladonta on siirretty peliin
+   sellaisenaan; nämä säännöt vain antavat sille laattojen ulkoasun.
+
+   KOKO EI OLE TÄÄLLÄ. font-size tulee elementiltä laudan yksiköissä
+   (koko / skaala), jotta nimi on aina se sama määrä CSS-pikseleitä.
+   Tyylitiedostoon kirjattu koko jäätyisi yhteen mittakaavaan.
+
+   HARVENNUSTA EI OLE, JA SE ON MITTA EIKÄ MAKU: ladonta mittaa nimen
+   leveyden measureTextillä ilman harvennusta, joten harvennettu piirto
+   olisi leveämpi kuin varattu tila ja nimet menisivät päällekkäin.
+   --------------------------------------------------------------------------- */
+.karttanimet { pointer-events: none; }
+.karttanimi {
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  letter-spacing: normal;
+  text-rendering: optimizeLegibility;
+  fill: #4a3421;
+  stroke: none;
+  dominant-baseline: middle;
+}
+/* Järvi kursiivilla ja veden musteella, kuten laatoissakin. */
+.karttanimi-jarvi { font-style: italic; fill: rgba(70, 86, 96, 0.85); }
+.karttamerkki { pointer-events: none; }
+.karttamerkki-piste { fill: rgba(58, 40, 25, 0.9); stroke: none; }
+.karttamerkki-rengas { fill: none; stroke: rgba(58, 40, 25, 0.75); }
+.karttamerkki-vuori { fill: none; stroke: rgba(74, 52, 33, 0.78); }
+
 .maastonimi { pointer-events: none; }
 .maastonimi-teksti {
   font-family: var(--font-kauno);

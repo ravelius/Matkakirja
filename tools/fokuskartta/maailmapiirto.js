@@ -30,7 +30,8 @@
  *          varjostuksineen, rannikko, isot järvet, harva asteverkko,
  *          muutama valtameren nimi kursiivilla — ja ATLASKEHYS
  *          (paperimarginaali, kaksoisviivakehys, kartussi,
- *          kompassiruusu, mittakaavajana, painajanrivi).
+ *          kompassiruusu, painajanrivi). Mittakaavajanaa EI: se on
+ *          ruudun ominaisuus eikä kuvan (js/fokusmitat.js).
  *          Valtamerten nimet ja kompassiruusu ovat kartan alalla, ja
  *          ne piirretään vain uloimmille tasoille — ks. osio 7.
  *
@@ -57,7 +58,7 @@
  * Siksi kehys on se, mikä kiertävälle lehdelle kuuluukin: ylä- ja
  * alamarginaali kaksoisviivoin, kartussi ylämarginaalissa (aikakauden
  * atlaslehdissä otsikko ladottiin juuri reunaviivan yläpuolelle),
- * mittakaavajana ja painajanrivi alamarginaalissa sekä kompassiruusu
+ * painajanrivi alamarginaalissa sekä kompassiruusu
  * kartan omalle tyhjälle merialueelle eteläiselle Tyynellemerelle.
  * Kulmakoristeet ovat kartussin kulmissa — kehyksellä itsellään ei
  * kiertävällä laudalla ole kulmia.
@@ -116,8 +117,8 @@ import {
  *    on pyramiditasolla koko maailman leveys. Painojälki (viivat, rae,
  *    kirjasin) EI tule S:stä vaan P:stä — ks. PAPERIN MITTAKAAVA.
  *
- * 3. KEHYS JA KALUSTEET. Marginaali, kartussi, mittajana ja
- *    painajanrivi ovat arkin reunassa ja keskellä. Ne piirretään arkin
+ * 3. KEHYS JA KALUSTEET. Marginaali, kartussi ja painajanrivi ovat
+ *    arkin reunassa ja keskellä. Ne piirretään arkin
  *    koordinaateissa ja siirretään laatan omaan nurkkaan; laatta, jonka
  *    ulkopuolelle ne jäävät, saa ne canvasin leikkaamana eli ei
  *    lainkaan.
@@ -129,7 +130,7 @@ import {
 export function piirraMaailma(canvas, aineisto, asetukset) {
   const {
     bbox, projektio, leveys, tyyli = {}, esikatseluTausta,
-    koko = null, siirto = null, sisalto = null, ladonta = null,
+    koko = null, siirto = null, sisalto = null,
     paperiS = null,
   } = asetukset;
 
@@ -748,49 +749,42 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     });
   }
 
-  /* ================================================ 8b. PYSYVÄ SISÄLTÖ
+  /* =========================================== 8b. PYSYVÄT VIIVAT
    *
-   * Kaupungit, reitit, joet, järvet, vuoret ja kohteet POLTETAAN
-   * laattoihin (Raamattu, omistajan täsmennys 29.8.2026: *"kaikki
-   * reittipisteet ja kaupungit yms voidaan piirtaa suoraan yhteen
-   * karttaan"*). Pelille jää vain ohut pelitilakerros.
+   * Joet ja isoisän reittiverkosto poltetaan laattoihin (Raamattu,
+   * omistajan täsmennys 29.8.2026: *"kaikki reittipisteet ja kaupungit
+   * yms voidaan piirtaa suoraan yhteen karttaan"*).
    *
-   * === MERKINNÄT MITOITETAAN RUUTUUN, EIVÄT KARTTAAN ===============
+   * NIMET JA NIIDEN MERKIT EIVÄT ENÄÄ OLE TÄÄLLÄ (omistajan päätös
+   * 30.8.2026): perustelu on alempana omassa lohkossaan. Tähän jää se,
+   * mikä on viivatyötä ja mitä ei lueta — 123 uomaa ja 479 reittijanaa,
+   * jotka elävässä kerroksessa maksaisivat kehysaikaa joka eleessä.
+   *
+   * === MITAT OVAT RUUDUN MITTOJA, EIVÄT KARTAN ======================
    *
    * Tämä on se kohta, jossa pyramidi eroaa yhden arkin lehdestä, ja
    * ero on helppo tehdä väärin (tehtiin ensin, mitattiin, korjattiin).
    *
    * Moottorin kalusteet kerrotaan S:llä, jolloin ne ovat SAMAN
    * KOKOISIA KARTALLA joka tasolla — kehys ja kartussi kuuluvat juuri
-   * niin. Nimiö ei kuulu, eikä rannikon viiva tai paperin rae kuulu
-   * (ne ovat paperivakioita, P). Peli valitsee tason ruudun
+   * niin. Viivanleveys ei kuulu, eikä rannikon viiva tai paperin rae
+   * kuulu (ne ovat paperivakioita, P): peli valitsee tason ruudun
    * tarkkuuden mukaan ja katsoo laattaa suunnilleen 1:1, joten
-   * `koko * S` pikseliä on `koko * S` LAITEPIKSELIÄ ruudulla: 14
-   * pikselin nimi olisi uloimmalla tasolla 1,5 px (näkymätön) ja
-   * syvimmällä 189 px (absurdi).
-   *
-   * Nimiöt, pisteet ja viivat mitoitetaan siksi LAITEPIKSELEINÄ, eli
-   * S jaetaan pois (`ruutuKoko`). Silloin ne ovat aina samankokoisia
-   * ruudulla ja kattavat sitä pienemmän maa-alan mitä lähemmäs
-   * zoomataan — täsmälleen niin kuin kartan kuuluu käyttäytyä.
+   * `koko * S` pikseliä olisi `koko * S` LAITEPIKSELIÄ ruudulla.
    *
    * === YLEISTYS ====================================================
    *
    * Sama sisältö on joka tasolla, mutta ei samanlaisena: uloimmalla
-   * tasolla maailma on 675 pikseliä leveä, ja 261 kaupunkinimeä siinä
-   * olisi mustaa mössöä. Kynnykset ovat kuvapikseliä lautayksikköä
-   * kohti, ja ne on johdettu NIMIÖTIHEYDESTÄ: 261 kaupunkia jakautuu
+   * tasolla maailma on 675 pikseliä leveä, ja jokainen uoma siinä
+   * olisi harmaata mössöä. Kynnykset ovat kuvapikseliä lautayksikköä
+   * kohti, ja ne on johdettu samasta nimiötiheydestä kuin nimien omat
+   * kynnykset (nyt js/karttanimet.js KYNNYS): 261 kaupunkia jakautuu
    * W pikselin levyiselle maailmalle noin W/16 pikselin välein, ja
    * kuudenkymmenen pikselin nimi tarvitsee siitä vähintään sen verran.
-   * Tasolla z3 (5400 px) väli on 330 px, tasolla z2 (2700) 170 px ja
-   * tasolla z1 (1350) enää 84 px — siitä raja "kaikki nimet z3:sta,
-   * vain isot z2:sta".
    */
   if (sisalto) {
-    const pxY = px;                       // kuvapikseliä lautayksikköä kohti
-    const nakyy = (kynnys) => pxY >= kynnys;
-    /* Laitepikseli moottorin `koko`-yksiköiksi: teksti kertoo S:llä. */
-    const ruutuKoko = (laitepx) => laitepx / S;
+    // Yleistys: kuvapikseliä lautayksikköä kohti (ks. YLEISTYS yllä).
+    const nakyy = (kynnys) => px >= kynnys;
 
     /* --- joet: uomat ennen kaupunkeja, kuten vesi on ennen kaupunkia */
     if (nakyy(0.11) && sisalto.joet?.length) {
@@ -831,97 +825,46 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
       ctx.restore();
     }
 
-    /* --- vuoret: kolmio ja nimi ------------------------------------- */
-    if (nakyy(0.22) && sisalto.vuoret?.length) {
-      ctx.save();
-      ctx.strokeStyle = 'rgba(74,52,33,0.78)';
-      ctx.lineWidth = 1.0;
-      for (const v of sisalto.vuoret) {
-        if (v.tarkeys > 1 && !nakyy(0.45)) continue;
-        const x = lautaKuvaX(v.x);
-        const y = lautaKuvaY(v.y);
-        const r = v.tarkeys <= 1 ? 5 : 4;
-        ctx.beginPath();
-        ctx.moveTo(x - r, y + r * 0.6);
-        ctx.lineTo(x, y - r * 0.8);
-        ctx.lineTo(x + r, y + r * 0.6);
-        ctx.stroke();
-        // Nimi tulee ladonnasta (ks. LADONTA alempana), ei tästä.
-        if (v.korkeus && nakyy(0.9) && !ladonta) {
-          teksti(`${v.korkeus} m`, x, y + r * 2.4 + 12, {
-            koko: ruutuKoko(8.5), ank: 'center', vari: 'rgba(74,52,33,0.66)',
-          });
-        }
-      }
-      ctx.restore();
-    }
-
-    /* Järvien ja vuorten nimet tulevat ladonnasta (ks. alempana). */
-
-    /* ================================================== LADONTA
+    /* ============================ NIMET JA MERKIT EIVÄT OLE LAATOISSA
      *
-     * NIMIÖT TULEVAT VALMIIKSI LADOTTUINA, eivät tästä silmukasta.
+     * OMISTAJAN PÄÄTÖS 30.8.2026 (kysymyskortti): kaupunkien, vuorten
+     * ja järvien NIMIÖT sekä niiden MERKIT poistuvat laatoista, ja peli
+     * latoo ne ruutuavaruudessa (js/karttanimet.js). Tämä kumoaa nimien
+     * osalta linjauksen *"kaikki pysyvä poltetaan laattoihin"*.
      *
-     * Törmäyksenvälttely on GLOBAALI päätös: se että yksi nimi jää
-     * pois, riippuu siitä mitkä muut on jo asetettu. Jos jokainen
-     * lohko päättäisi sen itse, kaksi vierekkäistä lohkoa päätyisi
-     * samasta kaupungista eri tulokseen ja lohkorajalle jäisi joko
-     * kaksoisnimi tai katoava nimi. Ladonta ajetaan siksi kerran koko
-     * arkille (tools/generoi-laattapyramidi.mjs `__ladonta`) ja tänne
-     * tulee valmis lista ARKIN pikseleissä — samassa avaruudessa, jossa
-     * tämä lohko jo piirtää (ks. arkin koordinaatisto).
+     * SYY ON RAKENTEELLINEN EIKÄ SÄÄTÖKYSYMYS. Laatta on sama tiedosto
+     * kaikille laitteille eikä se tiedä katsojan pikselitiheyttä.
+     * Asiakas valitsee tason luvusta `skaala * dpr`, joten poltettu
+     * 10,5 pikselin nimi on työpöydällä 10,5 CSS-pikseliä ja iPadilla
+     * 3,5 — kolmasosan kokoinen. Sitä ei voi mitoittaa laatassa pois,
+     * koska tasoindeksi ei erota pikselitiheyttä zoomista: sama taso
+     * valitaan sekä "dpr 3 ja kaukana" ETTÄ "dpr 1 ja kolme kertaa
+     * lähempänä". Yksi luku laatassa ei voi palvella kahta
+     * riippumatonta muuttujaa.
      *
-     * Ilman ladontaa piirretään kuten ennen, jotta yhden lehden
-     * koeajo ei vaadi ladontaa.
+     * MYÖS MERKIT LÄHTEVÄT, JA SE ON SAMA PÄÄTÖS. Kaupunkipiste (2,0 /
+     * 2,6 px), sen rengas (4,6 px) ja vuorisymboli (4–5 px) kärsivät
+     * täsmälleen samasta viasta, ja ne ovat NIMEN ANKKUREITA: ladonta
+     * varaa pisteen ennen nimeä, jottei nimi peitä toisen kaupungin
+     * merkkiä. Jos piste jäisi laattaan ja nimi lähtisi peliin, ne
+     * eivät olisi enää samassa suhteessa eikä varaus vastaisi sitä,
+     * mitä ruudulla oikeasti on.
+     *
+     * KOHDERENGAS (3,2 px) LÄHTEE ILMAN KORVAAJAA. Kohteilla on jo
+     * elävä, ruutuun mitoitettu merkki nimineen ja napautusaloineen
+     * (js/fokuskohteet.js) siinä maassa, jossa pelaaja on — poltettu
+     * rengas oli sen alla toinen, pienempi merkki samasta asiasta.
+     * Muualla siitä jäi nimetön ympyrä, joka on tiheällä näytöllä
+     * yhden CSS-pikselin kokoinen.
+     *
+     * VUORTEN KORKEUSLUKEMA (`4810 m`) EI KATOA TÄSSÄ: se piirtyi vain
+     * ilman ladontaa eli ei koskaan pyramidissa.
+     *
+     * LAATTOIHIN JÄÄVÄT joet ja reitit yllä. Ne ovat viivatyötä samassa
+     * paperivakioluokassa kuin rannikko (luku 6d), niissä ei ole
+     * tekstiä, eikä 602:ta polyviivaa kannata palauttaa siihen elävään
+     * kerrokseen, jonka purkaminen teki panoroinnista sujuvan (v1365).
      */
-    if (ladonta?.length) {
-      for (const n of ladonta) {
-        teksti(n.teksti, n.x, n.y, {
-          koko: ruutuKoko(n.koko),
-          ank: n.ank === 'end' ? 'right' : (n.ank === 'middle' ? 'center' : 'left'),
-          tyylitys: n.laji === 'jarvi' ? 'italic' : '',
-          vari: n.laji === 'jarvi' ? 'rgba(70,86,96,0.85)' : MUSTE,
-        });
-      }
-    }
-
-    /* --- kohteet: pieni rengas -------------------------------------- */
-    if (nakyy(0.9) && sisalto.kohteet?.length) {
-      ctx.save();
-      ctx.strokeStyle = 'rgba(120,88,54,0.7)';
-      ctx.lineWidth = 1.0;
-      for (const k of sisalto.kohteet) {
-        ctx.beginPath();
-        ctx.arc(lautaKuvaX(k.x), lautaKuvaY(k.y), 3.2, 0, Math.PI * 2);
-        ctx.stroke();
-      }
-      ctx.restore();
-    }
-
-    /* --- kaupungit: piste ja nimi ----------------------------------- */
-    if (nakyy(0.11) && sisalto.kaupungit?.length) {
-      ctx.save();
-      for (const c of sisalto.kaupungit) {
-        // Kaukaa vain isot (lähtökaupungit ja lentokentät).
-        if (!c.iso && !nakyy(0.22)) continue;
-        const x = lautaKuvaX(c.x);
-        const y = lautaKuvaY(c.y);
-        ctx.fillStyle = 'rgba(58,40,25,0.9)';
-        ctx.beginPath();
-        ctx.arc(x, y, c.iso ? 2.6 : 2.0, 0, Math.PI * 2);
-        ctx.fill();
-        // Rengas ison ympärille: aikakauden kartan pääkaupunkimerkintä.
-        if (c.iso) {
-          ctx.strokeStyle = 'rgba(58,40,25,0.75)';
-          ctx.lineWidth = 0.9;
-          ctx.beginPath();
-          ctx.arc(x, y, 4.6, 0, Math.PI * 2);
-          ctx.stroke();
-        }
-        // Nimi tulee ladonnasta (ks. LADONTA alempana), ei tästä.
-      }
-      ctx.restore();
-    }
   }
 
   ctx.restore();                       // kartta-alan leikkuri auki
@@ -929,7 +872,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
   /* ================================================== 9. ATLASKEHYS
    *
    * Kaikki painetun lehden kalusteet marginaaleissa: kaksoisviivakehys,
-   * kartussi, mittakaavajana ja painajanrivi. Piirretään VASTA
+   * kartussi ja painajanrivi. Piirretään VASTA
    * leikkurin purun jälkeen, koska ne kuuluvat kartan ulkopuolelle — ja
    * ENNEN paperin rakeen viimeistä kierrosta (osio 10), jotta rae sitoo
    * kehyksen musteen samaan paperiin kuin rantaviivan.
@@ -941,7 +884,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * (luku 5) — ja kaksoisviiva on kartan reuna, joka kuuluu näkyä myös
    * silloin kun pelaaja panoroi laidalle syvässä zoomissa.
    *
-   * KARTUSSI, MITTAJANA JA PAINAJANRIVI ovat ARKIN KALUSTEITA, ja ne
+   * KARTUSSI JA PAINAJANRIVI ovat ARKIN KALUSTEITA, ja ne
    * seuraavat merten nimien ja kompassin kynnystä (osio 7). Peruste on
    * Raamatun oma sanamuoto atlaskehyksestä: *"kaukaisimmalla
    * zoomtasolla kartta makaa paperilla ... Poltetaan uloimman tason
@@ -952,11 +895,11 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * Ilman kynnystä ne ovat mitattuna (30.8.2026) z7:llä:
    *   MATKAKIRJA          5 256 px eli 10,3 laattaa, kirjain 419 px
    *   painajanrivi        6 805 px eli 13,3 laattaa
-   *   mittakaavajana     10 780 px eli 21,1 laattaa, lukemat 2 156 px välein
    * Kukaan ei ole päättänyt niin — se on jäänne siitä, että S tarkoitti
    * kerran vain tarkkuutta (ks. PAPERIN MITTAKAAVA).
    *
-   * MITTAJANASTA ON LISÄKSI OMA HAVAINTONSA, ks. sen oma kohta alla.
+   * MITTAJANA ON POISTETTU KOKONAAN (omistajan päätös 30.8.2026);
+   * perustelu on siinä kohdassa, jossa se oli — ks. alempana.
    */
   if (kehys) {
     /*
@@ -993,7 +936,9 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     const vaaka = (gy, paksuus, vari = MUSTE_KEHYS) => {
       ctx.save();
       ctx.strokeStyle = vari;
-      ctx.lineWidth = paksuus * S;
+      // Viivan LEVEYS on painojälkeä (P), sen PAIKKA arkin geometriaa
+      // (S). Ks. KEHYSVIIVAT OVAT PAINOJÄLKEÄ alempana.
+      ctx.lineWidth = paksuus * P;
       ctx.beginPath();
       ctx.moveTo(0, gy);
       ctx.lineTo(GW, gy);
@@ -1006,11 +951,43 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
      * paksumpi kehysviiva. Järjestys on aikakauden painotyön oma —
      * hiusviiva rajaa kuvan, vahva viiva rajaa lehden.
      */
+    /*
+     * === KEHYSVIIVAT OVAT PAINOJÄLKEÄ (korjattu 30.8.2026) ==========
+     *
+     * Viivat piirrettiin `paksuus * S`, eli ne olivat KARTAN
+     * mittakaavassa. Mitattuna se tarkoitti:
+     *
+     *   taso   ohut reunaviiva (1,4)   vahva kehysviiva (3,0)
+     *   z0     0,15 px (näkymätön)     0,32 px (näkymätön)
+     *   z2     0,59 px                 1,27 px
+     *   z7     18,9 px                 40,5 px
+     *
+     * Vertailukohta on rannikon kynä, joka on luvun 6d korjauksen
+     * jälkeen paperivakiona 1,1 px joka tasolla. z7:llä kehys oli 40
+     * pikselin ruskea palkki meren ja paperin välissä; z0:lla, siis
+     * juuri siellä missä arkkia katsotaan kokonaisena, kehystä ei
+     * ollut lainkaan.
+     *
+     * Luvun 6d oma sääntö ratkaisee: PAINOJÄLKI (viivanleveydet) on
+     * paperivakio, ARKIN GEOMETRIA (marginaalin korkeus, viivan
+     * paikka) on S:ssä. Kehysviivan PAIKKA on geometriaa, sen LEVEYS
+     * on painotyötä — kaivertajan kynä ei tiedä mitä mittakaavaa lehti
+     * esittää. Sama korjaus kuin rannikolle luvussa 6d.
+     *
+     * KAKSOISVIIVAN VÄLI TARVITSEE PAPERIVAKIOISEN POHJAN. Väli on
+     * arkin geometriaa (14 * S), mutta uloimmilla tasoilla se on
+     * 1,5 ... 2,9 px eli KAPEAMPI KUIN VIIVAT ITSE: hiusviiva ja
+     * vahva viiva sulaisivat yhdeksi 3,6 pikselin palkiksi, eikä
+     * kaksoisviivaa olisi. Väli saa siksi paperivakioisen alarajan,
+     * joka on juuri se väli jonka kaivertaja jättäisi. Syvemmillä
+     * tasoilla geometria on jo suurempi ja voittaa itsestään.
+     */
     const RAKO = 14 * S;
+    const RAKO_VIIVA = Math.max(RAKO, 6 * P);
     vaaka(yYla - 0.7 * S, 1.4);
-    vaaka(yYla - RAKO, 3.0);
+    vaaka(yYla - RAKO_VIIVA, 3.0);
     vaaka(yAla + 0.7 * S, 1.4);
-    vaaka(yAla + RAKO, 3.0);
+    vaaka(yAla + RAKO_VIIVA, 3.0);
 
     /*
      * TÄSTÄ ETEENPÄIN VAIN ULOIMMILLA TASOILLA (ks. osion johdanto).
@@ -1068,7 +1045,8 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
       ctx.fillRect(kx - kLev / 2, kYla, kLev, kKork);
       const kehysSuora = (sisennys, paksuus) => {
         ctx.strokeStyle = paksuus > 1.6 ? MUSTE_KEHYS : MUSTE_HENTO;
-        ctx.lineWidth = paksuus * S;
+        // Sama sääntö kuin lehden kehysviivalla: leveys on painojälkeä.
+        ctx.lineWidth = paksuus * P;
         ctx.strokeRect(kx - kLev / 2 + sisennys, kYla + sisennys,
           kLev - sisennys * 2, kKork - sisennys * 2);
       };
@@ -1082,7 +1060,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
        */
       const KULMA = 26 * S;
       ctx.strokeStyle = MUSTE_HENTO;
-      ctx.lineWidth = 1.1 * S;
+      ctx.lineWidth = 1.1 * P;
       for (const sx of [-1, 1]) {
         for (const sy of [-1, 1]) {
           const nx = kx + sx * (kLev / 2);
@@ -1115,7 +1093,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         const jl = kLev * 0.24;
         ctx.save();
         ctx.strokeStyle = MUSTE_HENTO;
-        ctx.lineWidth = 0.9 * S;
+        ctx.lineWidth = 0.9 * P;
         ctx.beginPath();
         ctx.moveTo(kx - jl, jy); ctx.lineTo(kx - 9 * S, jy);
         ctx.moveTo(kx + 9 * S, jy); ctx.lineTo(kx + jl, jy);
@@ -1135,80 +1113,33 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         ank: 'center', vali: tkoko(25) * 0.2,
       });
 
-      /* ------------------------------------------------- mittakaavajana */
-
-      /*
-       * JANA ON MITTA EIKÄ KORISTE. Millerin lieriössä mittakaava on tosi
-       * päiväntasaajalla, joten jana lasketaan siitä: laudan leveys on
-       * täysi kierros eli 40 075 km, ja kuvapikselin pituus saadaan
-       * suoraan kuvan ja laudan suhteesta.
+      /* --------------------------------- MITTAJANAA EI ARKILLE ENÄÄ
        *
-       * === MITÄ TÄMÄ JANA EI VOI TEHDÄ — MITATTU 30.8.2026 ===========
+       * POLTETTU MITTAKAAVAJANA POISTETTU (omistajan päätös 30.8.2026,
+       * kysymyskortti). Se oli koko atlaskehyksen ainoa kaluste, joka
+       * VÄITTI JOTAIN MITATTAVAA — ja se oli ainoa, joka ei voinut
+       * pitää väitettään.
        *
-       * Jana on TARKKA VAIN TASON OMASSA MITTAKAAVASSA. Asiakas
-       * valitsee lähimmän laattatason logaritmisesti ja skaalaa kuvaa
-       * sen jälkeen (js/laattapyramidi.js valitseTaso), ja mitattuna
-       * kerroin vaihtelee välillä 0,708 ... 1,413. Poltettu jana on
-       * kiinni KUVASSA, joten se venyy samalla kertoimella mutta
-       * lukema pysyy: "5000 km" on ruudulla oikeasti 3 538 ... 7 066
-       * km eli enimmillään 41 % pielessä.
+       * MITATTU 30.8.2026. Asiakas valitsee lähimmän laattatason
+       * logaritmisesti ja skaalaa kuvaa sen jälkeen
+       * (js/laattapyramidi.js valitseTaso); kerroin vaihtelee välillä
+       * 0,708 ... 1,413. Poltettu jana on kiinni KUVASSA, joten se
+       * venyy samalla kertoimella mutta lukema pysyy paikallaan:
+       * "5000 km" on ruudulla oikeasti 3 538 ... 7 066 km eli
+       * enimmillään 41 % pielessä.
        *
-       * TÄMÄ ON TÄSMÄLLEEN SE VIKA, jonka takia js/fokusmitat.js on
-       * olemassa (omistajan tilaus 25.8.2026): *"Mittajana valehteli
-       * heti kun pelaaja zoomasi. Kuvaan poltettu jana on kiinni
-       * KUVASSA... Mittakaava on kuitenkin ruudun ominaisuus, ei
-       * kuvan."* Peli piirtää siis jo oman, ruutuun ankkuroidun
-       * janansa, joka laskee pituutensa näkymästä ja valitsee lukunsa
-       * sarjasta 1-2-2,5-5.
+       * MITTAKAAVA ON RUUDUN OMINAISUUS EIKÄ KUVAN, ja juuri siksi
+       * pelissä on oma janansa (js/fokusmitat.js laskeMittajana,
+       * omistajan tilaus 25.8.2026: *"Mittajana valehteli heti kun
+       * pelaaja zoomasi"*). Se laskee pituutensa näkymästä ja valitsee
+       * lukunsa sarjasta 1-2-2,5-5, joten se on oikeassa rakenteeltaan
+       * eikä vain sattumalta. Kaksi janaa samasta pelistä antaisi eri
+       * luvun, ja se joka poistuu on se, joka ei osaa mitata.
        *
-       * Tämä jana jää tähän, koska Raamattu listaa mittakaavajanan
-       * atlaskehyksen osaksi (29.8.2026) — se on arkin kuvitusta, ei
-       * pelin mittaväline. Kynnys pitää sen niillä tasoilla, joilla
-       * arkkia katsotaan kokonaisena, jolloin virhe on pienimmillään
-       * merkityksetön ja jana lukee kuten painetussa atlaksessa.
-       * KAHDEN JANAN RISTIRIITA on silti kirjattu Fablelle
-       * (docs/viesti-fable.md): jos peli näyttää molemmat yhtä aikaa,
-       * poltettu on se, joka poistuu.
+       * KARTUSSI JA PAINAJANRIVI JÄÄVÄT. Ne eivät väitä mitään
+       * mitattavaa vaan kertovat mikä ARKKI tämä on — sama peruste
+       * kuin kompassiruusulla ja merten nimillä.
        */
-      const kmPerPikseli = 40075.017 / (projektio.leveys * px);
-      const askelKm = 1000;
-      const askelPx = askelKm / kmPerPikseli;
-      const askelia = 5;
-      const janaLev = askelPx * askelia;
-      const jx = GW / 2 - janaLev / 2;
-      const jy = yAla + RAKO + 50 * S;
-      const jKork = 15 * S;
-      /*
-       * RIVIVÄLIT SEURAAVAT KIRJASINKOKOA. Alamarginaalissa on neljä
-       * riviä samassa pinossa (otsikko, jana, lukemat, painajanrivi),
-       * ja jos vain kirjasin kasvaa, pino ahtautuu. Katsottu: 1,8:lla
-       * vanhoilla riviväleillä lukemat ja painajanrivi melkein
-       * koskettivat toisiaan, kun marginaalin alapuolisko oli tyhjä.
-       * Välit lasketaan siksi samasta kertoimesta; pino päättyy noin
-       * 176 · S:ään, kun marginaalia on 240 · S.
-       */
-      teksti('MITTAKAAVA PÄIVÄNTASAAJALLA', GW / 2, jy - tkoko(13) * S, {
-        koko: tkoko(16), vari: 'rgba(74,52,33,0.66)', ank: 'center', vali: tkoko(16) * 0.3,
-      });
-      ctx.save();
-      ctx.lineWidth = 1.1 * S;
-      ctx.strokeStyle = MUSTE_KEHYS;
-      for (let i = 0; i < askelia; i++) {
-        // Vaalea ruutu samaa norsunluuta kuin marginaali — sama syy kuin
-        // kartussin laikussa: valkoinen ruutu vesiviivoittuisi patinassa.
-        ctx.fillStyle = i % 2 === 0 ? 'rgba(74,52,33,0.82)' : 'rgba(250,242,203,0.92)';
-        ctx.fillRect(jx + i * askelPx, jy, askelPx, jKork);
-        ctx.strokeRect(jx + i * askelPx, jy, askelPx, jKork);
-      }
-      ctx.restore();
-      for (let i = 0; i <= askelia; i++) {
-        teksti(String(i * askelKm), jx + i * askelPx, jy + jKork + tkoko(17) * S, {
-          koko: tkoko(15), vari: 'rgba(74,52,33,0.7)', ank: 'center',
-        });
-      }
-      teksti('kilometriä', jx + janaLev + tkoko(14) * S, jy + jKork / 2, {
-        koko: tkoko(16), tyylitys: 'italic', vari: 'rgba(74,52,33,0.7)',
-      });
 
       /* -------------------------------------------------- painajanrivi */
 

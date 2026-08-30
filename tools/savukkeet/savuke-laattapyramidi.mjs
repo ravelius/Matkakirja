@@ -218,6 +218,75 @@ const raot = await sivu.evaluate(() => {
 vaadi('P5a vierekkäisten laattojen väliin ei jää rakoa',
   raot.pahin < 0.01, `pahin rako ${raot.pahin} lautayksikköä`);
 
+/* ============ P6: PAIKANNIMI KARTALLA TÄSMÄLLEEN KERRAN =============
+ *
+ * Omistajan päätös 30.8.2026: nimiöt poistuvat laatoista ja peli latoo
+ * ne ruutuavaruudessa (js/karttanimet.js), koska poltettu nimi on
+ * laitepikseleissä ja siksi tiheällä näytöllä kolmasosan kokoinen.
+ *
+ * VAARA ON KUMPIKIN SUUNTA. v1366 korjasi kaksoisnimen vaientamalla
+ * elävän kerroksen; jos nyt vaikenevat molemmat, kartalta katoavat
+ * kaikki nimet. Päätöksen tekee LUETTELO (`nimiot`), koska laatat ja
+ * koodi julkaistaan eri aikaan — ja juuri sitä nämä väitteet mittaavat
+ * molemmilla luetteloilla, samasta pelistä ja samasta zoomista.
+ *
+ * P6c mittaa myös nimen KOON RUUDULLA: se on koko korjauksen ydin.
+ * Poltettu nimi oli tässä profiilissa (dpr 3) noin 3,5 CSS-pikseliä;
+ * ladotun on oltava 10 ... 13 riippumatta pikselitiheydestä.
+ */
+console.log('\n--- P6 paikannimet ---');
+const nimitila = () => sivu.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  const kerros = ui.karttanimiKerros;
+  const laput = kerros ? [...kerros.querySelectorAll('text.karttanimi')] : [];
+  const korkeus = laput.length
+    ? Math.round(laput[0].getBoundingClientRect().height / window.devicePixelRatio * 10) / 10
+    : 0;
+  const cssKorkeus = laput.length
+    ? Math.round(laput[0].getBoundingClientRect().height * 10) / 10
+    : 0;
+  return {
+    nimia: laput.length,
+    merkkeja: kerros ? kerros.querySelectorAll('.karttamerkki').length : 0,
+    // Vanhat kerrokset eivät saa palata: niissä nimi on laudan
+    // yksiköissä ja kasvaa zoomin mukana.
+    cityLabel: ui.svg.querySelectorAll('text.city-label').length,
+    maastonimi: ui.svg.querySelectorAll('.maastonimi').length,
+    // getBoundingClientRect on CSS-pikseleitä; se on juuri se mitta,
+    // jonka pitää olla sama joka laitteella.
+    cssKorkeus,
+    korkeus,
+    tuplia: (() => {
+      const nahty = new Map();
+      for (const l of laput) nahty.set(l.textContent, (nahty.get(l.textContent) ?? 0) + 1);
+      return [...nahty.values()].filter((n) => n > 1).length;
+    })(),
+  };
+});
+const nimet = await nimitila();
+const luetteloNimiot = await sivu.evaluate(async () => {
+  const v = await fetch('/julisteet/pyramidi/pyramidi.json').then((r) => r.json()).catch(() => null);
+  return v?.nimiot;
+});
+console.log(`      mitattu: luettelon nimiot=${luetteloNimiot}, `
+  + `ladottuja nimiä ${nimet.nimia}, merkkejä ${nimet.merkkeja}, `
+  + `nimen korkeus ${nimet.cssKorkeus} CSS-px`);
+if (luetteloNimiot === false) {
+  vaadi('P6a nimettömien laattojen päälle peli latoo nimet',
+    nimet.nimia > 0, `ladottuja ${nimet.nimia}`);
+  vaadi('P6b sama nimi vain kerran kerroksessa',
+    nimet.tuplia === 0, `tuplia ${nimet.tuplia}`);
+  vaadi('P6c nimi on CSS-pikseleissä eikä laitepikseleissä',
+    nimet.cssKorkeus >= 9 && nimet.cssKorkeus <= 20,
+    `korkeus ${nimet.cssKorkeus} CSS-px`);
+} else {
+  vaadi('P6a vanhojen laattojen päällä peli ei lado yhtään nimeä',
+    nimet.nimia === 0, `ladottuja ${nimet.nimia}`);
+}
+vaadi('P6d laudan vanhat nimikerrokset pysyvät tyhjinä',
+  nimet.cityLabel === 0 && nimet.maastonimi === 0,
+  `city-label ${nimet.cityLabel}, maastonimi ${nimet.maastonimi}`);
+
 /* ============ MITAT ================================================= */
 
 /*

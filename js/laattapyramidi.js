@@ -86,6 +86,35 @@ export function pyramidiKattaa(lauta) {
   return lauta === PYRAMIDIN_LAUTA;
 }
 
+/**
+ * Ovatko paikannimet POLTETTUINA näissä laatoissa?
+ *
+ * === MIKSI TÄMÄ ON LUETTELOSSA EIKÄ KOODISSA =======================
+ *
+ * Omistajan päätös 30.8.2026: kaupunkien, vuorten ja järvien nimiöt
+ * poistuvat laatoista, ja peli latoo ne ruutuavaruudessa
+ * (js/karttanimet.js). Nimen pitää näkyä TÄSMÄLLEEN KERRAN: v1366:ssa
+ * sama nimi oli kartalla kahdesti (poltettu + elävä), ja se korjattiin
+ * vaientamalla elävä kerros. Nyt suunta kääntyy — mutta laatat
+ * vaihtuvat vasta kun pyramidi ajetaan uudestaan, ja se tapahtuu tästä
+ * koodista riippumatta eri aikaan.
+ *
+ * Jos kytkin olisi koodissa, julkaisun ja pyramidiajon väliin jäisi
+ * ikkuna, jossa nimet olisivat joko kahdesti tai eivät kertaakaan.
+ * Luettelo tulee laattojen mukana samasta ajosta, joten se ei voi olla
+ * eri mieltä kuin laatat: `nimiot: false` = uudet laatat, joissa
+ * nimiöitä ei ole, ja peli saa puhua.
+ *
+ * OLETUS ON VANHA MAAILMA. Kenttää ei ole vanhassa luettelossa, eikä
+ * sitä ole ennen kuin luettelo on ladattu — molemmissa tapauksissa
+ * vastaus on "laatoissa on nimet", jolloin peli vaikenee. Väärin päin
+ * oletettuna kartalta katoaisivat kaikki nimet siihen asti kun
+ * luettelo saapuu.
+ */
+export function laatoissaOnNimet() {
+  return luettelo?.nimiot !== false;
+}
+
 /* ------------------------------------------------------------ luettelo */
 
 /*
@@ -228,9 +257,20 @@ export function paivitaPyramidi(ui) {
   const nakyva = ui.nakyvaAlue?.();
   if (!nakyva?.w) return;
   if (!luettelo) {
-    // Ensimmäinen kutsu käynnistää haun ja palaa; piirto tulee heti kun
-    // luettelo on kädessä.
-    void haeLuettelo().then((j) => { if (j && !ui.dead) paivitaPyramidi(ui); });
+    /*
+     * Ensimmäinen kutsu käynnistää haun ja palaa; piirto tulee heti kun
+     * luettelo on kädessä.
+     *
+     * MERKKIKETJU AJETAAN SAMALLA. Luettelo kertoo, ovatko paikannimet
+     * laatoissa vai pelin ladottavina (laatoissaOnNimet), ja ennen sen
+     * saapumista nimikerros on vaiennut varmuuden vuoksi. Ilman tätä
+     * kutsua nimet ilmestyisivät vasta seuraavasta pelaajan eleestä.
+     */
+    void haeLuettelo().then((j) => {
+      if (!j || ui.dead) return;
+      paivitaPyramidi(ui);
+      ui.paivitaMaastonimet?.();
+    });
     return;
   }
 
