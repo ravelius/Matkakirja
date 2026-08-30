@@ -1,0 +1,37 @@
+{
+  "_": "Saint Helenan maastokohteet. Faktat en-Wikipediasta 30.8.2026. Saari on hyvin pieni, joten sen fokuslehden rajaus on vain noin 45 × 45 laudan yksikköä; molemmat kohteet on siksi tarkistettu erikseen mahtumaan ikkunaan, ja Atlantin merkki on viety saaren lounaispuolen ulapalle, jotta se ei osu Diana's Peakin merkin päälle.",
+  "vuoret": [
+    {
+      "nimi": "Diana's Peak",
+      "lon": -5.6914,
+      "lat": -15.9597,
+      "m": 818,
+      "lahdeKoordinaatti": "en-Wikipedia \"Diana's Peak\", infolaatikko 15°57′35″S 5°41′29″W",
+      "nappi": "Saint Helenan korkein kohta",
+      "kysymykset": [
+        "Miksi kaukaisilla saarilla on niin paljon kotoperäisiä lajeja?",
+        "Mistä muusta Saint Helena tunnetaan?"
+      ],
+      "korostukset": ["kotoperäinen|kotoperäisiä"],
+      "teksti": "Diana's Peak on Saint Helenan korkein kohta, 818 metriä. Vulkaanista alkuperää oleva huippu sijaitsee kolmen piirikunnan — Sandy Bayn, Levelwoodin ja Longwoodin — rajalla, ja sen naapureina kohoavat Mount Actaeon 814 metriin ja Cuckold's Point 815 metriin. Vuori lähiympäristöineen julistettiin maaliskuussa 1996 saaren ensimmäiseksi kansallispuistoksi; pinta-alaa on 81 hehtaaria. Puistossa kasvaa saarelle kotoperäisiä uhanalaisia lajeja, muun muassa puusaniaisia, kaalipuita ja whitewood-puuta. Kahden matalamman huipun laella kasvaa suuria norfolkinmäntyjä, ja pohjoisrinteellä on kotoperäisten lajien taimitarha.",
+      "lahde": "en-Wikipedia \"Diana's Peak\", johdanto-osa ja osio National park (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Atlantti",
+      "lon": -6.05,
+      "lat": -16.05,
+      "lahdeKoordinaatti": "ulappa saaren lounaispuolella, lehden rajauksen sisällä mutta erillään huipun merkistä; en-Wikipedia \"Atlantic Ocean\" antaa keskipisteeksi -30 / 0",
+      "nappi": "Eteläisen Atlantin ulappa",
+      "kysymykset": [
+        "Miten keskelle valtamerta voi syntyä vuorijono?",
+        "Miksi Saint Helena oli purjelaivoille niin tärkeä?"
+      ],
+      "korostukset": ["Keski-Atlantin selänne|Keski-Atlantin selänne"],
+      "teksti": "Atlantti on maailman valtameristä toiseksi suurin: pinta-alaa noin 85 133 000 neliökilometriä, keskisyvyyttä 3 646 metriä ja syvimmillään Puerto Ricon haudassa 8 376 metriä. Saint Helena on eteläisellä Atlantilla yksinäinen kalliosaari keskellä ulappaa, kaukana kaikista mantereista. Meren pohjaa halkoo Keski-Atlantin selänne, vedenalainen vuorijono, joka kohoaa kahdesta kolmeen kilometriä ympäröivästä merenpohjasta ja ulottuu pohjoisnavan tuntumasta eteläiselle Bouvet'nsaarelle asti. Selänne jakaa koko valtameren altaan kahtia.",
+      "lahde": "en-Wikipedia \"Atlantic Ocean\", johdanto-osa ja osio Bathymetry (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": []
+}

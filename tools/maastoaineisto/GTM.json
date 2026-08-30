@@ -1,0 +1,37 @@
+{
+  "_": "Guatemalan maastokohteet. Faktat en-Wikipediasta 30.8.2026; Atitlánjärvi on fi-Wikipedian artikkelinimi, Tajumulco säilyy espanjankielisenä.",
+  "vuoret": [
+    {
+      "nimi": "Tajumulco",
+      "lon": -91.9033,
+      "lat": 15.0436,
+      "m": 4203,
+      "lahdeKoordinaatti": "en-Wikipedia \"Volcán Tajumulco\", infolaatikko 15°02′37″N 91°54′12″W",
+      "nappi": "Keski-Amerikan korkein huippu",
+      "kysymykset": [
+        "Miksi vanhoja tulivuorenpurkauksia on vaikea todentaa jälkikäteen?",
+        "Millaista ylängöllä on neljän kilometrin korkeudessa?"
+      ],
+      "korostukset": ["kerrostulivuori|Kerrostulivuori"],
+      "teksti": "Tajumulco on Keski-Amerikan korkein vuori, 4 203 metriä. Kerrostulivuori kohoaa Guatemalan läntisessä San Marcosin departementissa lähellä Meksikon rajaa, eikä yksikään toinen huippu koko Keski-Amerikassa yllä yhtä korkealle. Purkauksista kerrotaan 1700-luvun ja 1800-luvun alun lähteissä, mutta niitä pidetään epätodennäköisinä: varmaa purkausajankohtaa ei tunneta. Pohjois-Amerikan huipuista Tajumulco on suhteelliselta korkeudeltaan viidenneksi merkittävin, eristyneisyydeltään viidestoista ja korkeudeltaan kuudeskymmenesyhdeksäs — maanosan korkeimmat vuoret ovat kaukana pohjoisessa.",
+      "lahde": "en-Wikipedia \"Volcán Tajumulco\", johdanto-osa ja infolaatikko (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Atitlánjärvi",
+      "lon": -91.2,
+      "lat": 14.7,
+      "lahdeKoordinaatti": "en-Wikipedia \"Lake Atitlán\", infolaatikko 14°42′N 91°12′W",
+      "nappi": "Keski-Amerikan syvin järvi",
+      "kysymykset": [
+        "Mikä on kaldera?",
+        "Mitä supertulivuoren purkaus tekee koko maapallon ilmastolle?"
+      ],
+      "korostukset": ["kaldera|kaldera"],
+      "teksti": "Atitlánjärvi on Keski-Amerikan syvin järvi: syvyyttä 340 metriä, pinta-alaa 130 neliökilometriä ja korkeutta merenpinnasta 1 562 metriä. Allas on kaldera, joka syntyi noin 79 500 vuotta sitten Los Chocoyosin supertulivuorenpurkauksessa. Järven eteläreunaa hallitsee kolme tulivuorta: Atitlán, San Pedro ja Tolimán. Kirjailija Aldous Huxley vertasi järveä Italian Comojärveen ja päätti, että Atitlán on Como, jota on koristeltu vielä muutamalla valtavalla tulivuorella.",
+      "lahde": "en-Wikipedia \"Lake Atitlán\", johdanto-osa ja infolaatikko (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": []
+}

@@ -1,0 +1,37 @@
+{
+  "_": "Nicaraguan maastokohteet. Faktat en-Wikipediasta 30.8.2026; Nicaraguajärvi on fi-Wikipedian artikkelinimi, Momotombo säilyy espanjankielisenä.",
+  "vuoret": [
+    {
+      "nimi": "Momotombo",
+      "lon": -86.54,
+      "lat": 12.4219,
+      "m": 1297,
+      "lahdeKoordinaatti": "en-Wikipedia \"Momotombo\", infolaatikko 12°25′19″N 86°32′24″W",
+      "nappi": "Nicaraguan tunnusmaisema",
+      "kysymykset": [
+        "Mitä geoterminen voimala oikeastaan tekee?",
+        "Miksi kaupunki rakennettiin uudelleen tulivuoren lähelle?"
+      ],
+      "korostukset": ["geoterminen|geoterminen"],
+      "teksti": "Momotombo on kerrostulivuori Managuajärven rannalla lähellä Leónin kaupunkia, 1 297 metriä korkea. Sen poikkeuksellisen säännöllinen kartio on Nicaraguan tunnetuin maisema-aihe, ja runoilija Rubén Darío omisti sille runon. Vuoden 1610 purkaus pakotti Leónin asukkaat siirtämään kaupunkinsa noin 48 kilometriä länteen; vanhan kaupungin rauniot ovat yhä nähtävissä León Viejossa. Vuosisatojen hiljaiselon jälkeen tulivuori heräsi uudelleen 30. marraskuuta 2015 ja 28. helmikuuta 2016. Etelärinteellä on laaja geoterminen kenttä ja voimalaitos, ja järvessä kohoaa nuorempi kartio Momotombito.",
+      "lahde": "en-Wikipedia \"Momotombo\", johdanto-osa ja osiot Eruptions ja Geothermal (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Nicaraguajärvi",
+      "lon": -85.35,
+      "lat": 11.6167,
+      "lahdeKoordinaatti": "en-Wikipedia \"Lake Nicaragua\", infolaatikko 11°37′N 85°21′W",
+      "nappi": "Keski-Amerikan suurin järvi",
+      "kysymykset": [
+        "Miten hai voi elää makeassa vedessä?",
+        "Miksi Nicaraguaan suunniteltiin omaa kanavaa?"
+      ],
+      "korostukset": ["häränhai|häränhaita"],
+      "teksti": "Nicaraguajärvi on Keski-Amerikan suurin makean veden järvi: pinta-alaa 8 264 neliökilometriä, mikä riittää maailman järvien joukossa yhdeksänneksitoista sijaksi. Vesi on matalaa, syvimmilläänkin vain 26 metriä, ja järven pinta on 32,7 metriä merenpinnan yläpuolella. Järvessä elää sahakaloja, tarponeja ja häränhaita, jotka nousevat San Juan -jokea pitkin Karibianmereltä — matka voi taittua viikossa. Sama joki teki Granadasta aikanaan Atlantin sataman, vaikka kaupunki on maantieteellisesti lähempänä Tyyntämerta. Järven keskellä on tulivuorisaari Ometepe, jonka huipuilta näkee Tyynellemerelle.",
+      "lahde": "en-Wikipedia \"Lake Nicaragua\", johdanto-osa ja infolaatikko (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": []
+}

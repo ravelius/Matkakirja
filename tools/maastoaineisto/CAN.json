@@ -1,0 +1,49 @@
+{
+  "_": "Kanadan maastokohteet. Maa on KURATOIDULLA reitillä: lehden kolme merennimeä (JÄÄMERI, HUDSONINLAHTI, ATLANTTI) ovat tools/fokuskartta/maat.mjs FOKUSMAAT.CAN meret-taulussa, ja lon/lat on otettu SIITÄ taulusta, jotta merkki istuu poltetun nimen päälle täsmälleen kuten Kreikassa. Taulussa EI ole vuoret-riviä, joten lehdellä ei ole yhtään hachure-kolmiota eikä maalle ole poimittu vuorikohdetta — uusia pisteitä taulun ulkopuolelta ei keksitty. Faktat en-Wikipediasta 30.8.2026.",
+  "vuoret": [],
+  "meret": [
+    {
+      "nimi": "Jäämeri",
+      "lon": -105,
+      "lat": 82,
+      "lahdeKoordinaatti": "lehden oma merennimen paikka, maat.mjs FOKUSMAAT.CAN.meret",
+      "nappi": "Valtameristä pienin ja matalin",
+      "kysymykset": [
+        "Miksi Luoteisväylää etsittiin niin sitkeästi?",
+        "Miten merijään sulaminen muuttaa Kanadan pohjoista?"
+      ],
+      "korostukset": ["Luoteisväylä|Luoteisväylä", "merijää|Merijään"],
+      "teksti": "Jäämeri on maailman viidestä valtamerestä pienin ja matalin: pinta-alaa on noin 14 060 000 neliökilometriä ja keskisyvyyttä 1 038 metriä. Syvin kohta, Framinsalmen Molloyn hauta, painuu noin 5 550 metriin. Suolapitoisuus on valtamerten alhaisin, koska haihtuminen on vähäistä ja joet tuovat runsaasti makeaa vettä. Merijään ala vaihtelee vuodenaikojen mukaan noin seitsemän miljoonaa neliökilometriä: laajimmillaan jää on huhtikuussa ja pienimmillään syyskuussa. Kanadan pohjoisen saariston läpi kulkee Luoteisväylä, ja meren toisella laidalla Siperian rannikkoa myötäilee Koillisväylä.",
+      "lahde": "en-Wikipedia \"Arctic Ocean\", johdanto-osa ja osio Sea ice (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Hudsoninlahti",
+      "lon": -87.3,
+      "lat": 60.3,
+      "lahdeKoordinaatti": "lehden oma merennimen paikka, maat.mjs FOKUSMAAT.CAN.meret",
+      "nappi": "Sisämeri, joka jäätyy joka talvi",
+      "kysymykset": [
+        "Miksi maankuori kohoaa yhä jääkauden jälkeen?",
+        "Mitä Hudson's Bay Company oikeastaan teki?"
+      ],
+      "korostukset": ["turkiskauppa|turkiskauppaan", "mannerjäätikkö|mannerjäätikkö"],
+      "teksti": "Hudsoninlahti on Jäämeren reunameri ja Kanadan oma sisämeri: pinta-alaa noin 1 230 000 neliökilometriä, keskisyvyyttä vain noin 100 metriä ja syvimmilläänkin 270 metriä. Lahti on jäässä joulukuun puolivälistä kesäkuun puoliväliin. Henry Hudson purjehti sinne laivallaan Discovery elokuussa 1610, ja vuonna 1670 Englannin kruunu myönsi Hudson's Bay Companylle oikeuden turkiskauppaan koko lahden valuma-alueella. Alueella mitataan poikkeuksellisen heikko painovoima: neljännes tai jopa lähes puolet siitä selittyy sillä, että maankuori kohoaa yhä, kun mannerjäätikkö suli sen päältä.",
+      "lahde": "en-Wikipedia \"Hudson Bay\", johdanto-osa sekä osiot History ja Geology (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Atlantti",
+      "lon": -50,
+      "lat": 45,
+      "lahdeKoordinaatti": "lehden oma merennimen paikka, maat.mjs FOKUSMAAT.CAN.meret",
+      "nappi": "Meri, jonka yli väki tuli",
+      "kysymykset": [
+        "Mistä Golfvirta saa alkunsa?",
+        "Kuinka kauan jäävuori kestää Atlantilla?"
+      ],
+      "korostukset": ["Golfvirta|Golfvirta", "jäävuori|jäävuoria"],
+      "teksti": "Atlantti on valtameristä toiseksi suurin: pinta-alaa noin 85 133 000 neliökilometriä eli noin 17 prosenttia maapallon pinnasta, ja keskisyvyyttä 3 646 metriä. Kanadan itärannikko avautuu sen luoteiskulmaan, ja Newfoundlandin edustalle ajautuu joka vuosi Grönlannin jäätiköistä ja Baffininlahdesta irronneita jäävuoria. Golfvirta lähtee koilliseen Pohjois-Amerikan rannikolta Hatterasniemen kohdalta ja kuljettaa lämmintä vettä Pohjois-Atlantille; ilman sitä Pohjois-Atlantin ja Euroopan lämpötilat romahtaisivat.",
+      "lahde": "en-Wikipedia \"Atlantic Ocean\", johdanto-osa ja osio Circulation, sekä \"Baffin Bay\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": []
+}

@@ -1,0 +1,51 @@
+{
+  "_": "Meksikon maastokohteet. Faktat en-Wikipediasta 30.8.2026; nimiasut Pico de Orizaba, Meksikonlahti ja Karibianmeri ovat fi-Wikipedian artikkelinimiä. Maalla on ennestään js/packs/fokuskohteet-mex.js, jossa on yksi kohde (Templo Mayor) — sitä ei ole koskettu eikä toistettu.",
+  "vuoret": [
+    {
+      "nimi": "Pico de Orizaba",
+      "lon": -97.2683,
+      "lat": 19.03,
+      "m": 5636,
+      "lahdeKoordinaatti": "en-Wikipedia \"Pico de Orizaba\", infolaatikko 19°01′48″N 97°16′06″W",
+      "nappi": "Tähtivuori, Meksikon korkein",
+      "kysymykset": [
+        "Miksi trooppisella vuorella on jäätiköitä?",
+        "Milloin Orizaba voi purkautua seuraavan kerran?"
+      ],
+      "korostukset": ["nahuatl|Nahuatliksi", "kerrostulivuori|Kerrostulivuori"],
+      "teksti": "Pico de Orizaba on Meksikon korkein vuori ja koko Pohjois-Amerikan korkein tulivuori, 5 636 metriä. Nahuatliksi se on Citlaltépetl, tähtivuori: citlalin tarkoittaa tähteä ja tepetl vuorta. Kerrostulivuori kohoaa Veracruzin ja Pueblan rajalla, ja sen suhteellinen korkeus 4 922 metriä on maailman seitsemänneksi suurin — tulivuorista vain Kilimanjaro erottuu ympäristöstään jyrkemmin. Huipulla on yhdeksän jäätikköä, joista Gran Glaciar Norte on Meksikon suurin. Viimeisin purkaus oli vuonna 1846; vuori on uinuva mutta yhä aktiivinen.",
+      "lahde": "en-Wikipedia \"Pico de Orizaba\", johdanto-osa ja infolaatikko (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Meksikonlahti",
+      "lon": -93.5,
+      "lat": 24.5,
+      "lahdeKoordinaatti": "ulappa Veracruzin ja Tamaulipasin edustalla; en-Wikipedia \"Gulf of Mexico\" antaa altaan keskipisteeksi -90 / 25",
+      "nappi": "Lahti, josta Golfvirta lähtee",
+      "kysymykset": [
+        "Miksi Golfvirta saa alkunsa juuri täältä?",
+        "Miksi hurrikaanit voimistuvat Meksikonlahdella?"
+      ],
+      "korostukset": ["Golfvirta|Golfvirta"],
+      "teksti": "Meksikonlahti on noin 1 550 000 neliökilometrin merialue, jota reunustavat Meksiko, Yhdysvallat ja Kuuba. Syvin kohta on Sigsbeen syvänne, 3 750–4 384 metriä. Allas syntyi noin 300 miljoonaa vuotta sitten laattojen liikkeen tuloksena. Vesi virtaa lahteen Karibianmereltä Yucatáninsalmen kautta Yucatánin virtana ja poistuu Floridansalmesta Floridan virtana, josta tulee Golfvirta. Meksikonlahti on siis se allas, jossa Atlantin tärkein lämmin merivirta ottaa vauhtinsa.",
+      "lahde": "en-Wikipedia \"Gulf of Mexico\", johdanto-osa ja osiot Geology ja Water circulation (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Karibianmeri",
+      "lon": -86.75,
+      "lat": 20.4,
+      "lahdeKoordinaatti": "ulappa Yucatánin niemimaan itärannikolla Cozumelin tienoilla; en-Wikipedia \"Caribbean Sea\" antaa meren keskipisteeksi -75 / 15",
+      "nappi": "Yucatánin edustan riuttameri",
+      "kysymykset": [
+        "Miten valliriutta oikeastaan syntyy?",
+        "Miksi Karibianmeri on niin lämmin?"
+      ],
+      "korostukset": ["valliriutta|valliriutta"],
+      "teksti": "Karibianmeri levittäytyy Yucatánin niemimaan itäpuolelta Etelä-Amerikan rannikolle: pinta-alaa noin 2 754 000 neliökilometriä. Pohjoisessa sitä rajaavat Suuret Antillit Kuubasta Puerto Ricoon, idässä Pienet Antillit Neitsytsaarilta Trinidadiin. Syvin kohta on Caymanin hauta, 7 686 metriä merenpinnan alapuolella. Yucatánin itärannikkoa myötäilee Mesoamerikan riutta, joka jatkuu tuhat kilometriä Meksikon, Belizen, Guatemalan ja Hondurasin edustalla ja on maailman toiseksi pisin valliriutta.",
+      "lahde": "en-Wikipedia \"Caribbean Sea\", johdanto-osa ja osio Extent (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": []
+}

@@ -1,0 +1,37 @@
+{
+  "_": "Kuuban maastokohteet. Faktat en-Wikipediasta 30.8.2026; Karibianmeri on fi-Wikipedian artikkelinimi, Pico Turquino säilyy espanjankielisenä kuten muutkin vuorennimet.",
+  "vuoret": [
+    {
+      "nimi": "Pico Turquino",
+      "lon": -76.83583,
+      "lat": 19.98944,
+      "m": 1974,
+      "lahdeKoordinaatti": "en-Wikipedia \"Pico Turquino\", infolaatikko 19°59′22″N 76°50′09″W",
+      "nappi": "Kuuban korkein huippu",
+      "kysymykset": [
+        "Kuka oli José Martí?",
+        "Millainen metsä Sierra Maestran rinteillä kasvaa?"
+      ],
+      "korostukset": ["José Martí|José Martín", "Sierra Maestra|Sierra Maestran"],
+      "teksti": "Pico Turquino on Kuuban korkein kohta, 1 974 metriä. Se kohoaa Sierra Maestran vuoristossa saaren kaakkoisosassa Santiago de Cuban maakunnassa, ja huippu kuuluu Turquinon kansallispuistoon, jonka pinta-ala on 229 neliökilometriä. Laella on Jilma Maderan veistämä José Martín rintakuva, joka nostettiin sinne vuonna 1953 itsenäisyystaistelijan syntymän satavuotisjuhlaksi. Vuori on ollut myös poliittinen symboli: Fidel Castron joukot nousivat huipulle vuonna 1957, ja Che Guevaran mukaan paikalla oli liikkeelle lähes mystinen merkitys juuri siksi, että se oli maan korkein kohta.",
+      "lahde": "en-Wikipedia \"Pico Turquino\", johdanto-osa ja infolaatikko (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Karibianmeri",
+      "lon": -79.2,
+      "lat": 20.5,
+      "lahdeKoordinaatti": "ulappa Kuuban etelärannikolla Batabanónlahden edustalla; en-Wikipedia \"Caribbean Sea\" antaa meren keskipisteeksi -75 / 15",
+      "nappi": "Antillien meri",
+      "kysymykset": [
+        "Mitkä saaret kuuluvat Suuriin Antilleihin?",
+        "Miksi Karibialla riehuu niin paljon hurrikaaneja?"
+      ],
+      "korostukset": ["Suuret Antillit|Suurten Antillien"],
+      "teksti": "Karibianmeri levittäytyy Kuuban etelä- ja itäpuolelle: pinta-alaa on noin 2 754 000 neliökilometriä. Kuuba on Suurten Antillien läntisin ja suurin saari, ja Kuubasta Puerto Ricoon ulottuva saariketju muodostaa koko meren pohjoisrajan. Kansainvälisen merikartoitusjärjestön mukaan raja kulkee Kuuban ja Haitin välisen Windwardin salmen kautta. Idässä Pienet Antillit erottavat meren Atlantista, etelässä rajana on Etelä-Amerikan rannikko Venezuelasta Kolumbiaan. Syvin kohta on Caymanin hauta, 7 686 metriä merenpinnan alapuolella.",
+      "lahde": "en-Wikipedia \"Caribbean Sea\", johdanto-osa ja osio Extent (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": []
+}

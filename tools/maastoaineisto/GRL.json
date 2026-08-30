@@ -1,0 +1,52 @@
+{
+  "_": "Grönlannin maastokohteet. Faktat en-Wikipediasta 30.8.2026; jäätikön nimiasu Grönlannin mannerjäätikkö on fi-Wikipedian artikkelinimi. Mannerjäätikkö on aineistossa vuoret-listalla vain siksi, että työkalu poimisi sen mukaan; valmiissa pakissa sen tyyppi on 'muu' ja symboli 'luonto' Rub al-Khalin mallin mukaan, koska jäätikkö ei ole vuori eikä vesistö. Kiintiön vesistön täyttää Baffininlahti.",
+  "vuoret": [
+    {
+      "nimi": "Gunnbjørn Fjeld",
+      "lon": -29.8985,
+      "lat": 68.9195,
+      "m": 3694,
+      "lahdeKoordinaatti": "en-Wikipedia \"Gunnbjørn Fjeld\", infolaatikko 68°55′10″N 29°53′55″W",
+      "nappi": "Napapiirin pohjoispuolen korkein huippu",
+      "kysymykset": [
+        "Mikä on nunatak?",
+        "Miksi vuorelle noustiin ensimmäisen kerran vasta 1935?"
+      ],
+      "korostukset": ["nunatak|nunatak"],
+      "teksti": "Gunnbjørn Fjeld on Grönlannin korkein vuori, 3 694 metriä, ja samalla koko napapiirin pohjoispuolen korkein huippu. Se on nunatak eli mannerjäätikön läpi työntyvä kalliohuippu, ja se kuuluu Watkinsin vuoristoon saaren itärannikolla. Vuori on myös Pohjois-Amerikan korkein kohta varsinaisen mantereen ulkopuolella. Huipulle noustiin ensimmäisen kerran 16. elokuuta 1935, kun Augustine Courtauld, Jack Longland, Ebbe Munck ja Lawrence Wager pääsivät perille. Eristyneisyydeltään vuori on maailman yhdeksäs: lähin sitä korkeampi maasto on yli 500 kilometrin päässä Islannissa.",
+      "lahde": "en-Wikipedia \"Gunnbjørn Fjeld\", johdanto-osa ja infolaatikko (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Grönlannin mannerjäätikkö",
+      "lon": -42,
+      "lat": 72,
+      "lahdeKoordinaatti": "jäätikön keskiosa, lähellä sen paksuinta kohtaa; en-Wikipedia \"Greenland ice sheet\" antaa keskipisteeksi -42 / 72",
+      "nappi": "Maailman toiseksi suurin jäämassa",
+      "kysymykset": [
+        "Kuinka vanhaa Grönlannin jää on syvimmillään?",
+        "Mitä merenpinnan nousu tarkoittaisi rannikoille?"
+      ],
+      "korostukset": ["Antarktis|Antarktiksen"],
+      "teksti": "Grönlannin mannerjäätikkö peittää noin 80 prosenttia saaren pinnasta: 1 710 000 neliökilometriä jäätä, keskimäärin 1 673 metriä paksuna ja paksuimmillaan 3 488 metriä. Se on Antarktiksen jäätikön jälkeen maailman toiseksi suurin jäämassa, mutta pinta-alaltaan vain noin kahdestoistaosa siitä. Jos jää sulaisi kokonaan, merenpinta nousisi noin 7,4 metriä. Jäätikkö menettää massaa nopeammin kuin kertaakaan ainakaan 12 000 vuoteen: keskimäärin 266 miljardia tonnia vuodessa vuodesta 2002 alkaen.",
+      "lahde": "en-Wikipedia \"Greenland ice sheet\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Baffininlahti",
+      "lon": -68,
+      "lat": 73.5,
+      "lahdeKoordinaatti": "lahden keskiosa Grönlannin ja Baffininsaaren välissä; en-Wikipedia \"Baffin Bay\" antaa keskipisteeksi -68 / 73",
+      "nappi": "Jäävuorten synnyinlahti",
+      "kysymykset": [
+        "Kuinka kauas etelään Grönlannin jäävuoret ajautuvat?",
+        "Mitä William Baffin oikeastaan etsi vuonna 1616?"
+      ],
+      "korostukset": ["jäävuori|jäävuoria"],
+      "teksti": "Baffininlahti erottaa Grönlannin lännestä Kanadan Baffininsaaresta. Pinta-alaa on 689 000 neliökilometriä ja syvimmillään vettä 2 136 metriä. Talvella noin 80 prosenttia lahdesta on kiintojään ja ajojään peitossa. Grönlannin jäätiköistä irtoaa lahteen runsaasti jäävuoria, jotka ajautuvat jäiden mukana Atlantille Newfoundlandin tienoille. Etelässä Davisinsalmi yhdistää lahden Labradorinmereen ja Atlanttiin, pohjoisessa kapea Naresinsalmi Jäämereen. William Baffin kartoitti alueen vuonna 1616 ja nimesi sen salmet retkikuntansa jäsenten mukaan.",
+      "lahde": "en-Wikipedia \"Baffin Bay\", johdanto-osa ja osio History (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [],
+  "muut": []
+}
