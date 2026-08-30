@@ -53,6 +53,7 @@ import { FOKUS_POHJAT } from '../../js/packs/fokus-grc.js';
 import { FOKUSVIRRAT } from '../../js/packs/fokusvirrat.js';
 import { MAASTOKOHTEET } from '../../js/packs/maastokohteet.js';
 import { SYVENNYSPAIKAT } from '../../js/packs/syvennyspaikat.js';
+import { SKANDAALIT } from '../../js/packs/skandaalit.js';
 
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
 const paketti = await import('playwright')
@@ -332,8 +333,10 @@ let m = await merkit();
  * (FOKUSKOHTEET + MAASTOKOHTEET, js/fokuskohteet.js KOHDE_MAAT)
  * lisäksi rekisteröidyt lisälähteet (rekisteroiLisakohteet) —
  * kohteettomat täkynostot (js/fokusnosto.js nostoLisakohteet,
- * id-etuliite `nosto-`) ja syvennystarinat (js/syvennys.js
- * syvennysLisakohteet, `syvennys-<kaupunki>-<täky>`). Eläintäyt EIVÄT
+ * id-etuliite `nosto-`), syvennystarinat (js/syvennys.js
+ * syvennysLisakohteet, `syvennys-<kaupunki>-<täky>`) ja maan
+ * skandaalit (js/skandaalit.js skandaaliLisakohteet,
+ * `skandaali-<id>`). Eläintäyt EIVÄT
  * kuulu tähän: ne piirtyvät omaan kerrokseensa (js/elaintaky.js,
  * `.elaintaky-merkki`). Pelkkä FOKUSKOHTEET_GRC.length olisi siksi
  * ikuisesti punainen, vaikka peli toimii oikein — väite jakaa merkit
@@ -359,10 +362,14 @@ const syvennysOdotus = new Set(Object.keys(SYVENNYSPAIKAT)
   .flatMap((cityId) => (FOKUSVIRRAT[cityId]?.takyt ?? [])
     .filter((taky) => SYVENNYSPAIKAT[cityId][taky.id])
     .map((taky) => `syvennys-${cityId}-${taky.id}`)));
+const skandaaliOdotus = new Set((SKANDAALIT.GRC ?? [])
+  .map((skandaali) => `skandaali-${skandaali.id}`));
 const perusSaadut = m.tunnukset
-  .filter((t) => !t.startsWith('nosto-') && !t.startsWith('syvennys-'));
+  .filter((t) => !t.startsWith('nosto-') && !t.startsWith('syvennys-')
+    && !t.startsWith('skandaali-'));
 const nostoSaadut = m.tunnukset.filter((t) => t.startsWith('nosto-'));
 const syvennysSaadut = m.tunnukset.filter((t) => t.startsWith('syvennys-'));
+const skandaaliSaadut = m.tunnukset.filter((t) => t.startsWith('skandaali-'));
 vaadi('jokainen maan kohde sai merkin',
   perusSaadut.length === perusOdotus.size
   && perusSaadut.every((t) => perusOdotus.has(t)),
@@ -373,11 +380,18 @@ vaadi('syvennysmerkit ovat täsmälleen maan paikkataulun täyt',
   syvennysSaadut.length === syvennysOdotus.size
   && syvennysSaadut.every((t) => syvennysOdotus.has(t)),
   `saatu ${syvennysSaadut.join(',')} vs odotus ${[...syvennysOdotus].join(',')}`);
-vaadi('kokonaismäärä täsmää rekisteröityihin lähteisiin (kohteet+nostot+syvennykset)',
+vaadi('skandaalimerkit ovat täsmälleen maan skandaalitaulun rivit',
+  skandaaliSaadut.length === skandaaliOdotus.size
+  && skandaaliSaadut.every((t) => skandaaliOdotus.has(t)),
+  `saatu ${skandaaliSaadut.join(',')} vs odotus ${[...skandaaliOdotus].join(',')}`);
+vaadi('kokonaismäärä täsmää rekisteröityihin lähteisiin '
+  + '(kohteet+nostot+syvennykset+skandaalit)',
   nostoSaadut.length > 0
-  && m.tunnukset.length === perusOdotus.size + nostoSaadut.length + syvennysOdotus.size,
+  && m.tunnukset.length === perusOdotus.size + nostoSaadut.length + syvennysOdotus.size
+    + skandaaliOdotus.size,
   `${m.tunnukset.length} merkkiä; nostoja ${nostoSaadut.length}, `
-  + `syvennyksiä ${syvennysSaadut.length}: ${m.tunnukset.join(',')}`);
+  + `syvennyksiä ${syvennysSaadut.length}, skandaaleja ${skandaaliSaadut.length}: `
+  + `${m.tunnukset.join(',')}`);
 vaadi('kiertävällä laudalla merkit ovat molemmissa kohdissa',
   m.maara === m.tunnukset.length * 2, `${m.maara} merkkiä`);
 vaadi('kerros on juuriryhmän ulkopuolella (<use>-kopio ei syö napautusta)',
@@ -1482,6 +1496,39 @@ vaadi('syvennysmerkin napautus avaa tarinakortin minivisoineen',
   syvennyskortti.otsikko === 'Athena Niken pyhäkkö' && syvennyskortti.visa
   && syvennyskortti.ylariviSymboli,
   JSON.stringify(syvennyskortti));
+await sivu.keyboard.press('Escape');
+await sivu.waitForTimeout(400);
+
+/*
+ * Skandaalimerkki (js/skandaalit.js) on kolmas lisälähde: valo kuuluu
+ * Skandaalit-aiheeseen, ja napautus avaa skandaalikortin, jossa on
+ * kohdemallin ylärivi ja minivisa. Koekappale on Simonides — Symin
+ * saari on kaukana Ateenan ryppäästä, joten kasauspassi ei sotke
+ * mittausta.
+ */
+const skandaaliValo = await sivu.evaluate(() => document
+  .querySelector('.fokuskohde[data-kohde="skandaali-simonides-kasikirjoitusvaarentaja"]')
+  ?.querySelector('.karttavalo')?.getAttribute('data-aihe') ?? null);
+vaadi('skandaalimerkin valo kuuluu Skandaalit-aiheeseen',
+  skandaaliValo === 'skandaalit', JSON.stringify(skandaaliValo));
+await napauta('skandaali-simonides-kasikirjoitusvaarentaja');
+const skandaalikortti = await sivu.evaluate(() => ({
+  otsikko: document.querySelector('.skandaali-kortti .fokusnosto-kortti-otsikko')
+    ?.textContent ?? null,
+  meta: document.querySelector('.skandaali-kortti .fokusnosto-lahde')?.textContent ?? '',
+  visa: Boolean(document.querySelector('.skandaali-kortti .fokusvirta-visa-kysymys')),
+  ylarivi: document.querySelector('.skandaali-kortti .fokusnosto-ylarivi')
+    ?.textContent ?? '',
+  ylariviSymboli: Boolean(document.querySelector(
+    '.skandaali-kortti .nostosym-ylarivi-symboli',
+  )),
+}));
+vaadi('skandaalimerkin napautus avaa skandaalikortin minivisoineen',
+  skandaalikortti.otsikko === 'Simonides, käsikirjoitusten mestariväärentäjä'
+  && skandaalikortti.visa && skandaalikortti.ylariviSymboli
+  && skandaalikortti.ylarivi.includes('Skandaalit')
+  && skandaalikortti.meta.includes('Symin saari'),
+  JSON.stringify(skandaalikortti));
 await sivu.keyboard.press('Escape');
 await sivu.waitForTimeout(400);
 

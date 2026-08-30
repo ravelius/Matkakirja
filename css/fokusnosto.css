@@ -562,17 +562,20 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
 .elaintaky-palkkio-vanha { color: rgba(33, 29, 24, 0.58); }
 
 /* ===========================================================================
-   7. SYVENNYSTARINA — fokusvirran täkytarina kartalta (js/syvennys.js)
+   7. SYVENNYSTARINA JA SKANDAALI — kartan tarinakortit (js/syvennys.js,
+      js/skandaalit.js)
    ---------------------------------------------------------------------------
-   Syvennystarina lainaa lunastuskortin sisuksen (.fokusnosto-ylarivi,
-   -kortti-otsikko, -kuva, -teksti) ja fokusvirran minivisan
-   (.fokusvirta-visa, css/fokusvirta.css) sellaisinaan; vain KUORI on
-   omalla luokallaan, koska jokainen korttiperhe siivoaa omat
-   kerroksensa valitsimella (sama syy kuin eläintäyllä yllä). Kuoren
-   säännöt ovat samat kuin osioissa 4 ja 6 — kolme luokkaa, yksi ilme.
+   Syvennystarina ja skandaali lainaavat lunastuskortin sisuksen
+   (.fokusnosto-ylarivi, -kortti-otsikko, -kuva, -teksti) ja
+   fokusvirran minivisan (.fokusvirta-visa, css/fokusvirta.css)
+   sellaisinaan; vain KUORI on omalla luokallaan, koska jokainen
+   korttiperhe siivoaa omat kerroksensa valitsimella (sama syy kuin
+   eläintäyllä yllä). Kuoren säännöt ovat samat kuin osioissa 4 ja 6 —
+   neljä luokkaa, yksi ilme.
    =========================================================================== */
 
-.syvennys-kerros {
+.syvennys-kerros,
+.skandaali-kerros {
   position: fixed;
   inset: 0;
   z-index: 46;
@@ -584,9 +587,11 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
   transition: background 220ms ease-out;
 }
 
-.syvennys-auki { background: rgba(18, 12, 4, 0.3); }
+.syvennys-auki,
+.skandaali-auki { background: rgba(18, 12, 4, 0.3); }
 
-.syvennys-kortti {
+.syvennys-kortti,
+.skandaali-kortti {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -608,12 +613,15 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
   transition: opacity 220ms ease-out, transform 220ms cubic-bezier(0.22, 0.9, 0.24, 1);
 }
 
-.syvennys-auki .syvennys-kortti {
+.syvennys-auki .syvennys-kortti,
+.skandaali-auki .skandaali-kortti {
   opacity: 1;
   transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .syvennys-kerros,
-  .syvennys-kortti { transition: none; }
+  .syvennys-kortti,
+  .skandaali-kerros,
+  .skandaali-kortti { transition: none; }
 }
