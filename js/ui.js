@@ -906,7 +906,15 @@ const FOKUS_KUVAN_REUNA = [0.16, 0.28, 0.42, 0.62, 1];
  * piirretty nappula on 7,8 lautayksikköä leveä (NAPPULAN_POLKU) —
  * joten sen reuna kiertää hahmon kuten ennenkin.
  */
-const FOKUS_LAATTA_PX = 15;
+/*
+ * 15 -> 10,5 (omistaja 30.8.2026, kysymyskortti: *"Kaiken tyyppiset
+ * kaupunkien laatat saisi olla pienempiä"*, laajuudeksi valittu myös
+ * nykyisen kaupungin laatta). Sama kerroin 0,70 kuin kartan
+ * kaupunkiellipseillä (drawCities), jotta korostuslaatta pysyy
+ * suhteessa niihin — se on nyt neljäs kutistus samaan suuntaan
+ * (23 -> 19 -> 15 -> 10,5).
+ */
+const FOKUS_LAATTA_PX = 10.5;
 /*
  * LEHDEN OMA PROTOTYYPPILEVEYS PIKSELEINÄ (tools/fokuskartta/piirto.js
  * `S`): lehden kaikki ladonta — kirjainkoot, viivanleveydet,
@@ -941,14 +949,14 @@ const FOKUS_LAATTA_OSUMA_PX = 48;
 /*
  * SYKKIVÄN KEHÄN LEPOSÄDE RUUDUN PIKSELEINÄ (omistajan pelitestitilaus
  * 25.8.2026: *"Ateenan laatta sykkii kevyesti houkutellen
- * klikkaamaan"*). Laatan säde on FOKUS_LAATTA_PX / 2 = 11,5, joten 15
- * jättää kehän laatan ulkopuolelle mutta sen mittasuhteisiin — kehä
- * kutistui laatan mukana (17 → 15 → 12, ks. FOKUS_LAATTA_PX); CSS
+ * klikkaamaan"*). Kehä on aina 0,8 x FOKUS_LAATTA_PX, jolloin se jää
+ * laatan ulkopuolelle mutta sen mittasuhteisiin — kehä kutistuu
+ * laatan mukana (17 → 15 → 12 → 8,4, ks. FOKUS_LAATTA_PX); CSS
  * kasvattaa sitä sykkeen huipussa muutaman pikselin
  * (css .fokuslaatta-syke). Kehä on olemassa vain silloin, kun laatan
  * napautus oikeasti tekee jotain (fokusLaattaTutkii).
  */
-const FOKUS_LAATTA_SYKE_PX = 12;
+const FOKUS_LAATTA_SYKE_PX = 8.4;
 /*
  * AARREMERKIN SÄDE LAUDAN YKSIKÖINÄ oli täällä 26.8.2026 lähtien. Kartan
  * aarremerkki poistui 28.8.2026 illalla (drawTokens: laatta vain vaihtaa
@@ -1088,10 +1096,19 @@ const NAPPULA_TYYLI = 'puinen';
  * VIELÄ 22 % PIENEMPI (omistajan pelitesti 28.8.2026, iPhone: *"Myös
  * Ateenan laatta ja pelinappula voi olla vielä pienempi."*). Siluetti
  * on nyt 7,8 x 14,1 yksikköä, eli koko polku on kerrottu 0,78:lla —
- * mittasuhteet säilyvät täsmälleen, ja kaupungin laattaa (23,2)
- * jää hahmon molemmin puolin entistä enemmän näkyviin. Fokusnäkymässä
- * laatta on 15 px eli sekin kutistui (FOKUS_LAATTA_PX), joten hahmon
- * ja laatan suhde pysyi.
+ * mittasuhteet säilyvät täsmälleen, ja kaupungin laattaa jää hahmon
+ * molemmin puolin entistä enemmän näkyviin. Fokusnäkymässä laatta
+ * kutistui samassa suhteessa (FOKUS_LAATTA_PX), joten hahmon ja
+ * laatan suhde pysyi.
+ *
+ * NAPPULA EI KUTISTUNUT 30.8.2026 (omistaja rajasi kutistuksen
+ * kaupunkien laattoihin ja nykyisen kaupungin laattaan). Kun laatta
+ * kapeni 23,2 -> 16,2, siluetti peittää siitä 48 % entisen 34 %:n
+ * sijaan — laatan reunaa jää yhä noin neljä yksikköä molemmin puolin,
+ * eli hahmo ei peitä laattaa niin kuin 28.8. valituksessa ("sen alta
+ * saisi näkyä kaupungin laatta (nyt ei näy ollenkaan)"). Jos suhde
+ * alkaa silti näyttää ahtaalta, seuraava askel on kertoa
+ * NAPPULAN_POLKU ja NAPPULAN_KORKEUS samalla 0,70:llä.
  */
 const NAPPULAN_POLKU = 'M 3.9 0'
   + ' C 3.9 -1.33 2.77 -1.48 2.5 -2.42'
@@ -5914,9 +5931,22 @@ export class UI {
      */
     for (const c of board.cities) {
       const wobble = `rotate(${vary(`city:rot:${c.id}`, 12).toFixed(1)} ${c.x} ${c.y})`;
-      const base = (c.start ? 20 : 11.6) * nodeScale;
-      const rx = base + vary(`city:rx:${c.id}`, 0.7);
-      const ry = base + vary(`city:ry:${c.id}`, 0.7);
+      /*
+       * KAUPUNKIEN LAATAT 30 % PIENEMMIKSI (omistaja 30.8.2026,
+       * kysymyskortti: *"Kaiken tyyppiset kaupunkien laatat saisi olla
+       * pienempiä."*). Tavallinen 11,6 -> 8,1 (leveys 23,2 -> 16,2),
+       * lähtökaupunki 20 -> 14.
+       *
+       * KAIKKI SUHTEET SÄILYVÄT. Kerroin 0,70 viedään jokaiseen
+       * mittaan, joka on sidottu laattaan: vaihtelu, porttikehän
+       * lisäsäde, lentokentän merkin siirtymä ja viivanleveydet
+       * (css .city, .city-start, .city-gate, .coast-soft, .airport).
+       * Jos viivat jäisivät ennalleen, laatta kutistuisi mutta sen
+       * reunus ei — merkki muuttuisi tummaksi napiksi eikä laataksi.
+       */
+      const base = (c.start ? 14 : 8.1) * nodeScale;
+      const rx = base + vary(`city:rx:${c.id}`, 0.5);
+      const ry = base + vary(`city:ry:${c.id}`, 0.5);
       const fokus = fokusMaare(c);
       /*
        * LAATAN OMA TUNNUS AINA MUKANA, myös laudan ulkopuolisille
@@ -5943,7 +5973,7 @@ export class UI {
           rx,
           ry,
           transform: wobble,
-          'stroke-width': (2.2 + hash01(`city:sw:${c.id}`) * 0.7).toFixed(2),
+          'stroke-width': (1.55 + hash01(`city:sw:${c.id}`) * 0.5).toFixed(2),
           class: 'city',
           ...tunnus, ...fokus,
         }, cities);
@@ -5951,12 +5981,12 @@ export class UI {
       // Porttikaupungista lähtee pitkä lento toiselle laudalle: kaksoiskehä
       // erottaa sen tavallisesta lentokentästä jo kartalta katsottaessa.
       if (this.game.isGateway(c)) {
-        const gr = base + 9;
+        const gr = base + 6.3;
         el('ellipse', {
           cx: c.x,
           cy: c.y,
-          rx: gr + vary(`gate:rx:${c.id}`, 1.1),
-          ry: gr + vary(`gate:ry:${c.id}`, 1.1),
+          rx: gr + vary(`gate:rx:${c.id}`, 0.8),
+          ry: gr + vary(`gate:ry:${c.id}`, 0.8),
           transform: wobble,
           class: 'city-gate',
           ...tunnus, ...fokus,
@@ -5965,7 +5995,7 @@ export class UI {
       if (c.airport) {
         el('text', {
           x: c.x,
-          y: c.y + 5,
+          y: c.y + 3.5,
           class: 'airport',
           'text-anchor': 'middle',
           ...tunnus, ...fokus,
@@ -7465,7 +7495,7 @@ export class UI {
    * Fokusnäkymässä kaupunkien laatat ovat piilossa lehden alla
    * (paivitaFokusPallot, .fokus-lehden-alla) ja näkyvissä on vain
    * nykyisen kaupungin laatta — se, ja vain se, kutistetaan ruudulla
-   * vakiokokoiseksi (paivitaFokusLaatta, FOKUS_LAATTA_PX = 15 px).
+   * vakiokokoiseksi (paivitaFokusLaatta, FOKUS_LAATTA_PX).
    *
    * KEHITTÄJÄN MAAILMANÄKYMÄ PITÄÄ KAIKKI LAATAT NÄKYVISSÄ (omistajan
    * tilaus 27.8.2026: kohdekaupungit näkyviin, jotta maasta toiseen
