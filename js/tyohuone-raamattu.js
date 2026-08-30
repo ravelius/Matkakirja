@@ -2374,6 +2374,9 @@ export const RAAMATTU = {
           + '· docs/mantereen-resepti.md · '
           + 'docs/kuvakasikirjoitukset.md — sisältöreseptit ja '
           + 'työlistat.',
+        'docs/siirto-2026-08-30.md — session siirtodokumentti: kesken '
+          + 'olevat erät, auki olevat PR:t ja jono (Fable 30.8.2026; '
+          + 'arkistoidaan kun listat on ajettu loppuun).',
         'docs/moduulit/lukijoilta.md — lukijoiden ehdotukset: worker, '
           + 'lomake, Lukijoilta-lehti ja kuratointi.',
         'docs/moduulit/viitekuvat.md — viitekuvallinen herogenerointi: '
