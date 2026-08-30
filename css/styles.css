@@ -1243,22 +1243,66 @@ body.kartta-raahaus .target-ring,
 body.kartta-raahaus .target-halo,
 body.kartta-raahaus .fokuslaatta-syke { animation-play-state: paused; }
 
-/* MERKKIKERROKSET POIS MAALIKIERROKSESTA ELEEN AJAKSI (js/kartta.js
-   piilotaMerkit — koko perustelu ja mittausluvut siellä).
+/* MERKKIKERROKSET VAIHTUVAT RASTERIIN ELEEN AJAKSI (js/kartta.js
+   piilotaMerkit ja js/karttamerkit.js — koko perustelu ja mittausluvut
+   siellä).
 
    Kartan CSS-muunnos pakottaa selaimen pilkkomaan koko SVG:n uudestaan
    maalipaloihin joka kehyksellä, ja kymmenet pienet merkkiryhmät ovat
    siinä kalleimmat. `display: none` on ainoa keino, joka oikeasti
    poistaa ne kierroksesta: läpinäkyväkin kerros pilkotaan ja maalataan.
 
+   MUTTA TYHJÄÄ EI JÄÄ. Luokka syttyy vain silloin, kun valmis
+   merkkirasteri on ottanut paikan svg:n päältä (.karttamerkit alla) —
+   omistajan linjaus 29.8.2026: mikään ei saa kadota näkyvistä siirron
+   aikana. Ilman rasteria kerrokset jäävät eläviksi.
+
    Luokka on rungossa vain sen ajan, kun ele on aidosti käynnissä, ja
    merkkien paikat ovat muunnosmääreissä eivätkä asettelussa — piilo ei
-   siirrä mitään, ja jokainen merkki palaa pikselilleen entiselleen. */
+   siirrä mitään, ja jokainen merkki palaa pikselilleen entiselleen.
+
+   TÄMÄ LISTA JA js/karttamerkit.js MERKKIRASTERI_VALITSIN OVAT SAMA
+   JOUKKO: kerros, joka piilotetaan tässä, on paistettava siellä —
+   muuten juuri se katoaisi eleen ajaksi. */
 body.kartta-merkit-piilossa .fokuskohteet,
 body.kartta-merkit-piilossa .fokuspisteet,
 body.kartta-merkit-piilossa .fokusnosto-symbolit,
 body.kartta-merkit-piilossa .elaintakyt,
 body.kartta-merkit-piilossa .nippuviivat { display: none; }
+
+/* ---------------------------------------------------------------------------
+   MERKKIKERROKSEN RASTERI (js/karttamerkit.js).
+
+   CANVAS ON KUORESSA SVG:N PÄÄLLÄ. Pohjacanvas on kuoren ensimmäinen
+   lapsi ja `z-index: -1`, koska se on lavan varjo; merkkirasteri on
+   lavan päällyste ja tulee viimeiseksi. Kuoren oma translate3d
+   (js/kartta.js asetaPan, paivitaNipistys) siirtää pohjan, svg:n ja
+   rasterin YHTENÄ — se on kompositorin siirto eikä maalausta, joten
+   kahden kerroksen liikuttaminen maksaa saman kuin yhden.
+
+   TASO 2: svg:n yläpuolelle mutta nopan alle (.die-layer, z-index: 3).
+   `isolation: isolate` pitää molemmat canvakset kuoren OMASSA pinossa;
+   sääntö on sama kuin pohjacanvaksella ja voimassa aina kun jompikumpi
+   on käytössä.
+
+   `display: none` eikä opacity, samasta syystä kuin muillakin kartan
+   kerroksilla: piilossa oleva kuva ei saa jäädä selaimen purettavaksi.
+   Se ei tyhjennä canvaksen puskuria, joten paistettu rasteri odottaa
+   valmiina seuraavaa elettä.
+   --------------------------------------------------------------------------- */
+.karttamerkit {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  pointer-events: none;
+  transform-origin: 0 0;
+}
+
+body.karttamerkit-rasteri .karttamerkit { display: block; }
+
+body.karttamerkit-rasteri .kartta-kuori { isolation: isolate; }
 
 /* NÄKYMÄN ULKOPUOLISET MERKIT POIS (js/ui.js paivitaMaailmanRajaus —
    koko perustelu ja mittausluvut siellä).

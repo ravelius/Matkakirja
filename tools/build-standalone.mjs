@@ -530,6 +530,9 @@ const MODULES = [
   // Lavan pohjakerrosten kooste ennen ui:ta (ui tuo sen). Ei tuo itse
   // mitään: geometria luetaan svg:stä ja lehdet DOMista.
   'js/karttapohja.js',
+  // Merkkikerroksen rasteri ennen ui:ta (ui tuo sen). Tuo mapartin
+  // (tyylitSisaan) ja karttapohjan mitoitustaulut, jotka ovat yllä.
+  'js/karttamerkit.js',
   // Fokusmoodin maakohtainen topografiapohja ennen ui:ta (ui tuo sen;
   // se itse tuo mapartin, median ja lisänimet, jotka ovat yllä).
   'js/packs/fokus-grc.js',

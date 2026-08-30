@@ -1577,6 +1577,13 @@ export class Kartta {
      * tyylikirjoitusta eikä lue asettelua.
      */
     this.ui.karttapohja?.paikoita();
+    /*
+     * MERKKIRASTERI SAMAAN LAVAAN (js/karttamerkit.js). Nipistys
+     * päättyy portaikon tasoon ennen kuin merkit palaavat, eli sovitus
+     * voi vaihtaa lavan juuri silloin kun rasteri on ruudulla. Sama
+     * venytys kuin pohjalla pitää merkit oikeassa kohdassa sen hetken.
+     */
+    this.ui.karttamerkit?.paikoita();
     this.placeFactCard(paneW, paneH);
     this.ankkuroiNoppa();
   }
@@ -2794,7 +2801,7 @@ export class Kartta {
     let liikkui = false;
 
     /*
-     * --- MERKKIKERROKSET PIILOON ELEEN AJAKSI ------------------------
+     * --- MERKKIKERROS VAIHTUU RASTERIIN ELEEN AJAKSI -----------------
      *
      * v1277 vei nipistyksen SKRIPTIajan alas 58 %, ja jäljelle jäi se,
      * mitä profiili kutsuu layerize-kustannukseksi: kartan CSS-muunnos
@@ -2806,6 +2813,17 @@ export class Kartta {
      * piilotus `display: none`-tyylillä eleen ajaksi pudottaa paintin
      * noin 22-kertaisesti.
      *
+     * v1280 TEKI TÄSTÄ PELKÄN PIILOTUKSEN — JA SE KUMOTTIIN. Merkit
+     * katosivat ruudulta koko eleen ajaksi, ja omistaja pyysi
+     * 29.8.2026 illalla päinvastaista: *"Kaikki kohteet saisi siirtyä
+     * kartalla yhtäaikaa niin että mitään ei katoaisi näkyvistä siirron
+     * aikana."* Merkkikerros paistetaan siksi bittikartaksi, jota
+     * pidetään lämpimänä (js/karttamerkit.js), ja eleen alkaessa elävä
+     * svg VAIHDETAAN siihen. Rasteri asuu samassa karttakuoressa kuin
+     * pohjacanvas ja svg, joten kuoren oma translate3d siirtää pohjan
+     * ja merkit yhtenä — mikään ei katoa, eikä layerize-kustannusta
+     * tule, koska kompositorin siirto ei maalaa mitään.
+     *
      * DISPLAY, EI OPACITY tai visibility. Vain `display: none` ottaa
      * solmut pois maalikierroksesta kokonaan; läpinäkyväkin kerros
      * pilkotaan ja maalataan. Sama keino on jo käytössä samoilla
@@ -2815,10 +2833,11 @@ export class Kartta {
      * asettelussa — piilotus ei siirrä mitään, ja esiin tullessaan
      * jokainen on pikselilleen siinä missä oli.
      *
-     * ENNAKKOTAPAUS on asteikkojen entinen käytös (js/fokusmitat.js):
-     * mitta, joka ei voi olla oikeassa liikkeen aikana, väistyy eleen
-     * ajaksi ja palaa pienen levon jälkeen. Merkeillä syy on toinen —
-     * ne OVAT oikeassa, mutta maksavat liikaa — mutta oppi sama.
+     * PIILOTUS ON RASTERIN EHDOLLA. Jos rasteria ei ole (ensimmäinen
+     * ele, kesken paisto, lava liikkunut niin kauas ettei rasteri enää
+     * peitä ruutua), svg JÄÄ paikalleen: ele on silloin hitaampi mutta
+     * merkit ovat näkyvissä. Tyhjä kartta ei ole enää sallittu
+     * lopputulos kummassakaan päässä.
      *
      * KAKSI KYNNYSTÄ, ETTEI RÄPSY. Napautus ja mikroliike eivät saa
      * vilauttaa merkkejä pois:
@@ -2848,14 +2867,32 @@ export class Kartta {
     const MERKKIEN_PALUU_MS = 320;
     /** Nipistyksen mittakaava saa heilahtaa tämän verran ilman piiloa. */
     const MERKKIPIILON_KYNNYS = 0.03;
+    /*
+     * PALUU ON YKSI SYNKRONINEN LOHKO. Rasteri pois ja svg takaisin
+     * samassa tehtävässä: selain näkee vasta lopputilan, joten ruudulla
+     * ei ole yhtään kehystä ilman merkkejä eikä yhtään kehystä, jossa
+     * ne olisivat kahdesti.
+     */
     const paljastaMerkit = () => {
       this.ui.merkkiPaluuAjastin = 0;
       this.ui.merkitPiilossa = false;
       document.body.classList.remove('kartta-merkit-piilossa');
+      this.ui.karttamerkit?.piilotaRasteri();
+      // Lava on eleen aikana voinut vaihtua (nipistys napsahti tasoon):
+      // seuraava rasteri paistetaan uuteen lavaan, kun ruutu on rauhassa.
+      this.ui.karttamerkit?.paivita('ele ohi');
     };
-    /** Ele on aidosti käynnissä: merkkikerrokset pois maalikierroksesta. */
+    /**
+     * Ele on aidosti käynnissä: valmis rasteri ruudulle ja elävät
+     * merkkikerrokset pois maalikierroksesta.
+     *
+     * Vaihto tehdään VAIN jos rasteri oikeasti otti paikkansa. Ilman
+     * sitä piilotus jätetään tekemättä — merkitön kartta on pahempi
+     * vika kuin hidas ele (omistajan linjaus 29.8.2026).
+     */
     const piilotaMerkit = () => {
       if (this.ui.merkitPiilossa || this.ui.fokuskohdeAuki) return;
+      if (!this.ui.karttamerkit?.naytaRasteri()) return;
       clearTimeout(this.ui.merkkiPaluuAjastin);
       this.ui.merkkiPaluuAjastin = 0;
       this.ui.merkitPiilossa = true;

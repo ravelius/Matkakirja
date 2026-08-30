@@ -71,6 +71,8 @@ import { taitaOpas } from './opas.js';
 import { kaynnistaKarttamittari, mittariPaalla } from './karttamittari.js';
 // Lavan pohjakerrosten kooste yhdeksi bittikartaksi (js/karttapohja.js).
 import { Karttapohja } from './karttapohja.js';
+// Merkkikerroksen rasteri eleen ajaksi (js/karttamerkit.js).
+import { Karttamerkit } from './karttamerkit.js';
 // Lautojen yhdistetyt sisältötaulut, luentajoukot ja kuratoidut
 // galleriat (siirretty tästä tiedostosta 17.8.2026, remontin M1).
 import {
@@ -2627,6 +2629,13 @@ export class UI {
      * koosteessa, ja kooste ajetaan vain pelilaudan fokusnäkymässä.
      */
     this.karttapohja = new Karttapohja(this);
+    /*
+     * MERKKIKERROKSEN RASTERI (js/karttamerkit.js). Sama elinkaari kuin
+     * pohjacanvaksella: olio syntyy tässä, canvas vasta ensimmäisessä
+     * paistossa. Omistajan linjaus 29.8.2026 — merkit eivät saa kadota
+     * eleen ajaksi, vaan ne vaihdetaan valmiiseen bittikarttaan.
+     */
+    this.karttamerkit = new Karttamerkit(this);
     this.kartta.asennaPanorointi();
     this.kartta.fitViewBox();
     this.observer = new ResizeObserver(() => this.kartta.fitViewBox());
@@ -3436,6 +3445,9 @@ export class UI {
     // Pohjacanvas on jaetussa DOM:issa (karttakuori): kuollut instanssi
     // ei saa jättää sitä uuden pelin lavan alle (js/karttapohja.js).
     this.karttapohja?.pura();
+    // Sama koskee merkkirasteria (js/karttamerkit.js): sen canvas asuu
+    // samassa kuoressa ja sen runkoluokka piilottaisi uuden pelin merkit.
+    this.karttamerkit?.pura();
     // Ehdotuskuplan ajastin voi olla kymmenen minuutin päässä: uusi
     // peli ei saa periä vanhan instanssin kuplaa.
     clearTimeout(this.ehdotusKuplaAjastin);
@@ -3511,6 +3523,7 @@ export class UI {
     this.merkkiPaluuAjastin = 0;
     this.merkitPiilossa = false;
     document.body.classList.remove('kartta-merkit-piilossa');
+    this.karttamerkit?.piilotaRasteri();
     // Lehden avauksen mittavarmistuksen jälkitarkistukset samoin.
     clearTimeout(this.lehtitila.lehtiMittaAjastin);
     clearTimeout(this.lehtitila.lehtiMittaJalkiajastin);
@@ -4082,6 +4095,9 @@ export class UI {
         document.body.classList.remove('kartta-merkit-piilossa');
         this.merkitPiilossa = false;
       }
+      // Rasteri pois myös silloin, kun ele ei päässyt omaan loppuunsa:
+      // jumiin jäänyt bittikartta jäisi kartan päälle liikkumattomana.
+      this.karttamerkit?.piilotaRasteri();
     }
     return Boolean(this.osoitinKartalla || this.kartanRaahaus);
   }
@@ -4291,6 +4307,14 @@ export class UI {
        * ensimmäisestä eleestä. Moduuli päättää itse, onko koostettavaa.
        */
       this.karttapohja?.paivita('taide');
+      /*
+       * MERKKIRASTERI SAMASTA KOHDASTA (js/karttamerkit.js). Se on
+       * eleen ajan käytettävä bittikartta merkkikerroksista, ja se
+       * pidetään lämpimänä täsmälleen niinä hetkinä, joina näkymä on
+       * asettunut — paisto lukee lasketut tyylit ja sarjallistaa satoja
+       * solmuja, eikä sitä työtä saa tehdä sormen alla.
+       */
+      this.karttamerkit?.paivita('taide');
     }
     if (!this.taide || !this.taideRyhma) return;
     /*
@@ -5503,6 +5527,8 @@ export class UI {
      * tapaan (js/karttapohja.js).
      */
     this.karttapohja?.pura();
+    // Merkkirasteri on edellisen laudan merkkejä; uusi lauta paistaa omansa.
+    this.karttamerkit?.pura();
     this.svg.textContent = '';
 
     const maarittelyt = drawDefs(this.svg);
