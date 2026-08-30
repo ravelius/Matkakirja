@@ -583,9 +583,10 @@ export const FOKUSVIRTA_DUBROVNIK = {
    * siirrettiin pois — yhden äänestyksen verran. Nosto EI kerro
    * aarteesta mitään.
    *
-   * PISTE OSUU PULAN FOKUSKOHTEEN PÄÄLLE, ja se on tietoista: sama
-   * kohde, kaksi eri sisältöä (js/packs/fokuskohteet-hrv.js,
-   * pulan-areena). Koordinaatit on otettu sieltä bitilleen samoina.
+   * NOSTO ON KIINNITETTY PULAN FOKUSKOHTEESEEN (`kohde`-kenttä alla):
+   * sama kohde, kaksi eri sisältöä (js/packs/fokuskohteet-hrv.js,
+   * pulan-areena). Koordinaatit on otettu sieltä bitilleen samoina —
+   * ne jäävät dataan siltä varalta, että kiinnitys joskus puretaan.
    */
   takynostot: [
     {
@@ -609,6 +610,15 @@ export const FOKUSVIRTA_DUBROVNIK = {
        *     tallella kaikki sivutornit.
        */
       id: 'pulan-areena',
+      /*
+       * JUTUN KOHDE ON KARTAN OMA PULAN AREENA (js/packs/
+       * fokuskohteet-hrv.js `pulan-areena` — sama rakennus, sama
+       * paikka). Yhtenäisen kohdemallin sääntö (Raamattu 29.8.2026):
+       * nosto jolla on kohde EI luo omaa merkkiä — tuplamerkin sijaan
+       * tarina aukeaa areenan tietoruudun Livian leikekirja -napista
+       * (js/fokuskohteet.js piirraKohteenNosto).
+       */
+      kohde: 'pulan-areena',
       nimio: 'Pulan areena',
       otsikko: 'Venetsia äänesti amfiteatterin purkamisesta ja '
         + 'siirtämisestä kivi kerrallaan — ja hävisi äänestyksen',

@@ -76,7 +76,7 @@
 import { html, jaaKappaleiksi, nielaiseSulkevaNapautus, TOAST_MS } from './ui-apurit.js';
 import { el, maare } from './mapart.js';
 import { avaaKohdeSuurennos, suljeKohdeSuurennos } from './fokuskohteet.js';
-import { piirraNostosymboli } from './fokusnosto-symbolit.js';
+import { nostosymKortinYlarivi, piirraNostosymboli } from './fokusnosto-symbolit.js';
 import { piirraKarttavalo } from './karttavalot.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { ELAINTAKYT } from './packs/elaintakyt.js';
@@ -385,9 +385,10 @@ export function avaaElaintaky(ui, iso) {
   kortti.appendChild(sulje);
 
   const sisalto = html('div', 'fokusnosto-sisalto');
-  // Ylärivi kertoo kuka eläintä tarjoaa: sama Livia, jonka leikekirjasta
-  // täkynostot tulevat (js/fokusnosto.js) — eri kirja, sama pöllö.
-  sisalto.appendChild(html('p', 'fokusnosto-ylarivi', 'Livian eläinkirja'));
+  // Ylärivi on kohdemallin yhteinen: aihesymboli ja luokan nimi —
+  // sama rivi kuin kartan kohdekortissa, nostoilla ja
+  // syvennystarinoilla (YHTENÄINEN KOHDEMALLI, Raamattu 29.8.2026).
+  sisalto.appendChild(nostosymKortinYlarivi('elain', 'fokusnosto-ylarivi'));
   sisalto.appendChild(html('h3', 'fokusnosto-kortti-otsikko', taky.otsikko));
   elaintakyPiirraKuva(ui, sisalto, taky, elaintakyMaanNimi(ui, iso));
   const teksti = html('div', 'fokusnosto-teksti');

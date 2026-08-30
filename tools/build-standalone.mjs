@@ -532,6 +532,14 @@ const MODULES = [
    */
   'js/fokusmitat.js',
   /*
+   * Syvennystarinat kartalle (yhtenäinen kohdemalli): data ensin,
+   * kerroskytkentä perässä. js/syvennys.js tuo fokusvirran,
+   * kohdekerroksen, symbolikirjaston, täkynoston kuvapiirtäjän ja
+   * projektion (fokusmitat) — kaikki ovat jo yllä.
+   */
+  'js/packs/syvennyspaikat.js',
+  'js/syvennys.js',
+  /*
    * Eläintäyt ennen ui:ta (ui tuo niiden päivitys- ja nollauskutsun).
    * Data ensin, kerros perässä. Kerros lukee laudan projektion
    * fokusmitat.js:stä — juuri siksi se on listalla vasta tässä — ja

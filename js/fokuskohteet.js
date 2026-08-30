@@ -275,8 +275,7 @@ for (const [iso, kohteet] of Object.entries(MAASTOKOHTEET)) {
  * KYTKENTÄ ON TAKAISINKUTSU EIKÄ IMPORT, koska js/fokusvirta.js on
  * niputusjärjestyksessä ENNEN tätä tiedostoa (tools/build-standalone.mjs
  * MODULES): suora tuonti sieltä tänne kääntäisi järjestyksen väärin
- * päin. Sama ratkaisu ja sama syy kuin täkynoston piirtopinnalla
- * (asetaNostopinta) ja lehtitehtävien kuittauksella
+ * päin. Sama ratkaisu ja sama syy kuin lehtitehtävien kuittauksella
  * (asetaTehtavakuittaus), vain vastakkaiseen suuntaan.
  */
 asetaKohdehakemisto((iso) => KOHDE_MAAT[iso] ?? []);
@@ -442,11 +441,22 @@ function nykyinenIso(ui) {
 function nykyisenMaanKohteet(ui) {
   if (!ui?.fokusPohjaBbox) return [];
   const iso = nykyinenIso(ui);
-  const lista = iso ? KOHDE_MAAT[iso] : null;
-  if (!lista) return [];
+  const lista = (iso && KOHDE_MAAT[iso]) || [];
   const lauta = ui.game?.pack?.id;
-  return lista
-    .map((kohde) => ({ kohde, paikka: kohde.laudat?.[lauta] }))
+  const kohteet = lista.map((kohde) => ({ kohde, paikka: kohde.laudat?.[lauta] }));
+  /*
+   * YHTENÄINEN KOHDEMALLI (Raamattu 29.8.2026): täkynostot ja
+   * syvennystarinat ovat karttapisteitä samassa kerroksessa kuin
+   * maan kohteet — sama merkki, sama nimiöväistö, sama kasauspassi ja
+   * sama aihevalo, vain avautuva kortti on omansa (kohteen `avaa`).
+   * Lähteet ilmoittautuvat rekisteröintinä (rekisteroiLisakohteet),
+   * koska js/fokusnosto.js ja js/syvennys.js ovat niputusjärjestyksessä
+   * tämän moduulin JÄLKEEN eikä tuonti heihin päin ole mahdollinen.
+   */
+  for (const hae of KOHDE_LISALAHTEET) {
+    for (const rivi of hae(ui) ?? []) kohteet.push(rivi);
+  }
+  return kohteet
     .filter(({ paikka }) => Number.isFinite(paikka?.x) && Number.isFinite(paikka?.y))
     /*
      * Vain lehden alueella olevat. Lehti on maan ikkuna, ja sen
@@ -454,6 +464,21 @@ function nykyisenMaanKohteet(ui) {
      * pelaajalle se näyttäisi merkiltä ilman karttaa.
      */
     .filter(({ paikka }) => ui.fokusPohjanAlla?.(paikka.x, paikka.y));
+}
+
+/*
+ * LISÄKOHTEIDEN LÄHTEET. Kukin lähde on funktio (ui) → [{ kohde,
+ * paikka }], jossa `kohde` on kohdemallin tietue (id, nimi, symboli,
+ * tyyppi, `avaa`) ja `paikka` laudan koordinaatit. Rekisteröinti
+ * tapahtuu käynnistyksessä (js/main.js → kytkeFokusnosto,
+ * kytkeSyvennys), joten taulu on valmis ennen ensimmäistä piirtoa.
+ */
+const KOHDE_LISALAHTEET = [];
+
+export function rekisteroiLisakohteet(hae) {
+  if (typeof hae === 'function' && !KOHDE_LISALAHTEET.includes(hae)) {
+    KOHDE_LISALAHTEET.push(hae);
+  }
 }
 
 /* ==================== MERKIT KARTALLE ==================== */
@@ -2931,6 +2956,45 @@ function raahausTaiSulku(ui, popup, alku) {
  * kohteet — kaupunki ja muu ilman symboli-kenttää — pitävät entisen
  * tyyppinimiön, koska niillä ei ole luokkaa kerrottavana.
  */
+/*
+ * ============ NOSTO JOLLA ON KOHDE EI LUO OMAA MERKKIÄ ==============
+ *
+ * YHTENÄINEN KOHDEMALLI (Raamattu 29.8.2026): täkynosto, joka nimeää
+ * kartan kohteen (`kohde`-kenttä — Kastrin kylä → Delfoi, Antikythera-
+ * kone → Antikythera), EI saa omaa merkkiä: kaksi merkkiä samassa
+ * pisteessä oli juuri se tuplamerkki, jonka takia luettu piste ennen
+ * "astui sivuun". Noston tarina ei silti katoa — se aukeaa kohteen
+ * OMASTA tietoruudusta Livian leikekirjan nappina (piirraKohteenNosto).
+ *
+ * Haku on rekisteröity takaisinkutsu (js/fokusnosto.js kytkeFokusnosto):
+ * nostopoolit asuvat niputusjärjestyksessä tämän moduulin jäljessä,
+ * joten suora tuonti kääntäisi järjestyksen väärin päin — sama syy
+ * kuin lisäkohteiden rekisterillä (rekisteroiLisakohteet).
+ */
+let kohdeNostoHaku = null;
+
+export function asetaKohdeNostot(hae) {
+  kohdeNostoHaku = typeof hae === 'function' ? hae : null;
+}
+
+/** Kohteeseen kiinnitetty täkynosto tietoruudun napiksi, jos sellainen on. */
+function piirraKohteenNosto(ui, sisalto, kohde) {
+  const nosto = kohdeNostoHaku?.(ui, kohde.id);
+  if (!nosto?.otsikko || typeof nosto.avaa !== 'function') return;
+  const nappi = html('button', 'fokuskohde-leikekirja');
+  nappi.type = 'button';
+  nappi.appendChild(html('span', 'fokuskohde-leikekirja-otsake', 'Livian leikekirja'));
+  // Klikkiotsikko on napin sisältö — se on koukku, jonka lupaus
+  // lunastetaan noston omassa kortissa (js/fokusnosto.js).
+  nappi.appendChild(html('span', 'fokuskohde-leikekirja-otsikko', nosto.otsikko));
+  nappi.addEventListener('click', (tapahtuma) => {
+    tapahtuma.stopPropagation();
+    suljeFokuskohde(ui);
+    nosto.avaa(ui);
+  });
+  sisalto.appendChild(nappi);
+}
+
 function piirraKohdeYlarivi(kohde) {
   const rivi = html('p', 'fokuskohde-ylarivi');
   const symboli = kohteenSymboli(kohde);
@@ -2955,6 +3019,16 @@ function piirraKohdeYlarivi(kohde) {
 
 export function avaaFokuskohde(ui, kohde) {
   if (typeof document === 'undefined' || !kohde) return null;
+  /*
+   * LISÄKOHDE AVAA OMAN KORTTINSA (YHTENÄINEN KOHDEMALLI): täkynoston
+   * ja syvennystarinan merkki on kartalla tavallinen kohdemerkki, mutta
+   * napautus avaa niiden oman kortin — lunastuksen tai tarinan visoineen
+   * — eikä kohteiden tietoruutua. Avaaja hoitaa äänensä itse.
+   */
+  if (typeof kohde.avaa === 'function') {
+    kohde.avaa(ui);
+    return null;
+  }
   /*
    * ÄÄNI ENSIMMÄISENÄ RIVINÄ (omistajan pelitestipalaute v1119, kohta
    * 17: *"soitto lähtee pointerup/click-käsittelijässä heti, ennen
@@ -3012,6 +3086,7 @@ export function avaaFokuskohde(ui, kohde) {
   piirraKohdeTeksti(ui, sisalto, kohde);
   piirraKohdeKysymykset(ui, sisalto, kohde);
   piirraKierrosnappi(ui, sisalto, kohde);
+  piirraKohteenNosto(ui, sisalto, kohde);
   if (kohde.lahde) sisalto.appendChild(html('p', 'fokuskohde-lahde', kohde.lahde));
   /*
    * REAKTIOT LÄHDERIVIN PERÄÄN (js/reaktiot.js): peukku ja

@@ -34,14 +34,17 @@ import {
 } from './natiivi.js';
 import { readStamps, writeStamps, STAMP_KEY } from './passport.js';
 /*
- * Täkynosto (js/fokusnosto.js): aarteen löydyttyä kartalta nouseva
- * klikkiotsikko. Kytkentä on tässä eikä js/ui.js:ssä, koska nosto elää
- * fokusvirran renderikutsun tahdissa (js/fokusvirta.js asetaNostopinta)
- * — käynnistys tarvitsee vain tämän yhden kutsun.
+ * Yhtenäisen kohdemallin lisäkohteet (Raamattu 29.8.2026): täkynostot
+ * (js/fokusnosto.js) ja syvennystarinat (js/syvennys.js) rekisteröityvät
+ * kartan kohdekerroksen lähteiksi (js/fokuskohteet.js
+ * rekisteroiLisakohteet). Kytkentä on tässä eikä js/ui.js:ssä —
+ * käynnistys tarvitsee vain nämä kaksi kutsua.
  */
 import { kytkeFokusnosto } from './fokusnosto.js';
+import { kytkeSyvennys } from './syvennys.js';
 
 kytkeFokusnosto();
+kytkeSyvennys();
 
 const PLAYER_COLOR = '#d94f3d';
 /*
@@ -102,7 +105,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1347';
+const APP_VERSION = '2026-08-09.1348';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

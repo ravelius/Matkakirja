@@ -230,12 +230,10 @@ import { el, maare } from './mapart.js';
 /*
  * MITAT RUUDUN PIKSELEINÄ LEHDEN PERUSTASOLLA (ks. sääntö 3).
  *
- * NIPPU_KOHDE_R ja NIPPU_TAKY_R ovat kerrosten aluslaattojen säteet
- * (js/fokuskohteet.js KOHDE_HALO_R, js/fokusnosto-symbolit.js laatan r)
- * — törmäysraja lasketaan näistä perustason säteistä.
+ * NIPPU_KOHDE_R on kohdemerkin aluslaatan säde (js/fokuskohteet.js
+ * KOHDE_HALO_R) — törmäysraja lasketaan tästä perustason säteestä.
  */
 const NIPPU_KOHDE_R = 5.6;
-const NIPPU_TAKY_R = 10.4;
 
 /*
  * KAUPUNGIN KAKSI NÄKYVÄÄ SÄDETTÄ, ruudun pikseleinä perustasolla.
@@ -380,19 +378,16 @@ const NIPPU_VIIVA_MIN = 5;
  * Kerrosten ankkuriryhmätietueet yhtenä jonona.
  *
  * Tietueet ovat kerrosten omia ({ g, x, y, ... }); tämä passi lisää
- * niihin vain `nippu`-kentän. Aktiivisen täyn ankkuri (pieni piste,
- * jonka päälle tekstikupla asettuu) EI niputu: kupla osoittaa siihen
- * kohtaan karttaa, jota juttu koskee, eikä ankkuri ota napautuksia
- * vastaan (css pointer-events) — se ei siis ole kaupungin tiellä.
+ * niihin vain `nippu`-kentän. Lähteitä on YHTENÄISEN KOHDEMALLIN
+ * (Raamattu 29.8.2026) jälkeen yksi: kohdemerkkien kerros, jossa myös
+ * täkynostot ja syvennystarinat nykyään asuvat (js/fokuskohteet.js
+ * nykyisenMaanKohteet lisäkohteineen). Erillinen täkypistekerros
+ * (ui.nostosymRyhmat) purettiin sen mukana.
  */
 function nippuMerkit(ui) {
   const merkit = [];
   for (const ryhma of ui.fokuskohdeRyhmat ?? []) {
     merkit.push({ ryhma, sade: NIPPU_KOHDE_R });
-  }
-  for (const ryhma of ui.nostosymRyhmat ?? []) {
-    if (ryhma.g?.firstElementChild?.classList?.contains('fokusnosto-ankkuri')) continue;
-    merkit.push({ ryhma, sade: NIPPU_TAKY_R });
   }
   return merkit;
 }
@@ -612,7 +607,7 @@ function nippuRiviVali(jono, s, ikkuna) {
 /**
  * KASAUSPASSI — kutsutaan kerrosten asemoinnista ennen muunnoksia.
  *
- * @param {object} ui  Pelin UI-olio (fokuskohdeRyhmat, nostosymRyhmat,
+ * @param {object} ui  Pelin UI-olio (fokuskohdeRyhmat,
  *   fokuspisteRyhmat, game, kiertoKohdat, fokusmoodi, katselu).
  * @param {number} s   Merkkien vakioskaala (js/ui.js fokusMerkkiSkaala)
  *   — sama arvo, jolla kutsuja on juuri kirjoittamassa muunnoksiaan.

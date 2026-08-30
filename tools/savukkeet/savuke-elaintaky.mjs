@@ -196,8 +196,10 @@ vaadi('merkin napautus avaa eläinkortin',
   Boolean(avattu?.otsikko?.length), JSON.stringify(avattu));
 vaadi('kortissa on kaanonteksti eikä pelkkä otsikko',
   (avattu?.teksti?.length ?? 0) > 150, `${avattu?.teksti?.length ?? 0} merkkiä`);
-vaadi('kortin ylärivi kertoo lähteen (Livian eläinkirja)',
-  avattu?.ylarivi === 'Livian eläinkirja', avattu?.ylarivi);
+// Kohdemallin yhteinen ylärivi (v1348): aihesymboli ja luokan nimi —
+// sama rivi kuin kartan kohdekortissa ja täkynostolla.
+vaadi('kortin ylärivi on kohdemallin yhteinen (Eläimet)',
+  avattu?.ylarivi === 'Eläimet', avattu?.ylarivi);
 vaadi('kortissa on repon oma eläinkuva ja se latautui',
   /^assets\/elaimet\/elain-[a-z]{3}\.jpg$/.test(avattu?.kuva ?? '')
   && avattu?.kuvaLatautui && !avattu?.kuvaPiilossa,
