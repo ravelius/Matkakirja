@@ -1,0 +1,50 @@
+{
+  "_": "Liberian maastokohteet. Faktat en-Wikipediasta 30.8.2026. Mount Wuteven korkeutta ei kerrota artikkelin johdannossa; tietolaatikko antaa 1 447 m (lähteenä CIA World Factbook), ja sitä käytetään.",
+  "vuoret": [
+    {
+      "nimi": "Mount Wuteve",
+      "lon": -9.925,
+      "lat": 8.1458,
+      "m": 1447,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Wuteve\"",
+      "nappi": "Liberian korkein kohta",
+      "kysymykset": [
+        "Millä toisella nimellä vuori tunnetaan?",
+        "Mikä on Guinean ylänkö?"
+      ],
+      "korostukset": ["Guinean ylänkö|Guinean ylänköä"],
+      "teksti": "Mount Wuteve, joka tunnetaan myös nimellä Mount Wologizi, on Liberian korkein kohta: tietolaatikon mukaan 1 447 metriä. Vuori kuuluu Guinean ylänköön, samaan Länsi-Afrikan selkärankaan, jolta myös alueen suuret joet saavat alkunsa.",
+      "lahde": "en-Wikipedia \"Mount Wuteve\", johdanto-osa ja tietolaatikko (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Atlantti",
+      "lon": -11.2,
+      "lat": 5.9,
+      "lahdeKoordinaatti": "ulappa Monrovian edustalla; en-Wikipedia \"Atlantic Ocean\" antaa koko valtameren keskipisteeksi -25 / 0",
+      "nappi": "Valtameri, joka yhdisti ja erotti",
+      "kysymykset": [
+        "Mikä oli kolumbiaaninen vaihto?",
+        "Miksi Atlantin ylitys muutti maailman?"
+      ],
+      "teksti": "Atlantti on maailman toiseksi suurin valtameri, ja Liberian koko rannikko avautuu sen trooppiselle ulapalle. Valtameri on muovannut ihmiskunnan historiaa rajummin kuin mikään muu meri: 1500-luvulta 1800-luvulle se oli sekä Atlantin orjakaupan että niin sanotun kolumbiaanisen vaihdon näyttämö, jossa ihmiset, kasvit, eläimet ja taudit siirtyivät mantereelta toiselle.",
+      "lahde": "en-Wikipedia \"Atlantic Ocean\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Cavalla",
+      "lon": -7.9,
+      "lat": 4.9,
+      "lahdeKoordinaatti": "alajuoksu Liberian ja Norsunluurannikon rajalla; en-Wikipedia \"Cavalla River\" antaa suulle -7,53 / 4,37",
+      "nappi": "Joki, joka nimettiin kalasta",
+      "kysymykset": [
+        "Mikä kala antoi joelle nimen?",
+        "Minkä kahden maan rajaa joki piirtää?"
+      ],
+      "teksti": "Cavalla on Liberian pisin joki: 515 kilometriä. Se saa alkunsa Guineasta Nimba-vuoren pohjoispuolelta, muodostaa kaksi kolmasosaa Liberian ja Norsunluurannikon välisestä rajasta ja laskee Guineanlahteen. Nimensä joki sai suullaan parveilevasta cavalla-makrillista.",
+      "lahde": "en-Wikipedia \"Cavalla River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}
