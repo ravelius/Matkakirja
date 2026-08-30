@@ -419,11 +419,11 @@ export const FOKUSVIRTA_SOFIA = {
         kysymys: 'Mitä osmanien oikeus ei saanut Levskiltä irti, vaikka '
           + 'tuomio oli jo selvä?',
         vaihtoehdot: [
-          'Yhdenkään toverin nimeä',
           'Salaisen kassan piilopaikkaa',
+          'Yhdenkään toverin nimeä',
           'Kirjeenvaihtoa Venäjän kanssa',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Levskin rakentama komiteaverkosto jäi siksi pystyyn. '
           + 'Hänen hautansa sijaintia ei tunneta tänäkään päivänä.',
       },
@@ -461,11 +461,11 @@ export const FOKUSVIRTA_SOFIA = {
         kysymys: 'Mikä toi Serdican amfiteatterin takaisin päivänvaloon '
           + 'vuonna 2004?',
         vaihtoehdot: [
-          'Hotellin perustustyöt',
-          'Keskustan maanjäristys',
           'Perlovska-joen tulva',
+          'Keskustan maanjäristys',
+          'Hotellin perustustyöt',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Löytöä ei peitetty: kuudesosa areenasta liitettiin '
           + 'hotellin pohjakerrokseen, ja se on päivisin vapaasti '
           + 'katsottavissa.',
@@ -509,11 +509,11 @@ export const FOKUSVIRTA_SOFIA = {
         kysymys: 'Kuka seisoi Nezavisimost-aukion jalustalla ennen kuin '
           + 'Sofia nousi siihen?',
         vaihtoehdot: [
-          'Lenin',
           'Vapauttajatsaari Aleksanteri II',
+          'Lenin',
           'Vasil Levski',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Sofia-patsas pystytettiin vuoden 2000 lopulla. Sen '
           + 'kruunussa istuu pöllö viisauden merkkinä — ja kaupungin nimi '
           + 'tarkoittaa kreikaksi juuri viisautta.',
@@ -554,11 +554,11 @@ export const FOKUSVIRTA_SOFIA = {
         kysymys: 'Mikä eläin muodosti yksinään koko Sofian eläintarhan '
           + 'sen ensimmäisenä vuonna?',
         vaihtoehdot: [
-          'Bulgariasta pyydystetty korppikotka',
-          'Tsaarin lahjoittama norsu',
           'Kaksi Balkanvuorilta tuotua karhua',
+          'Tsaarin lahjoittama norsu',
+          'Bulgariasta pyydystetty korppikotka',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Eläintarha perustettiin kuninkaallisella asetuksella 1. '
           + 'toukokuuta 1888. Nykyiselle paikalleen se muutti vasta, kun '
           + 'karhupari ei enää mahtunut palatsin puistoon.',

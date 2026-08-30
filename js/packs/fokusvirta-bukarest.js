@@ -337,11 +337,11 @@ export const FOKUSVIRTA_BUKAREST = {
         kysymys: 'Ketkä auttoivat Colțean tornin rakennustöissä 1700-luvun '
           + 'alussa?',
         vaihtoehdot: [
-          'Poltavasta paenneet Kaarle XII:n sotilaat',
           'Venetsialaiset kivenveistäjät',
+          'Poltavasta paenneet Kaarle XII:n sotilaat',
           'Ruhtinaan omat linnoitusinsinöörit',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Torni oli arviolta 54 metriä korkea ja Bukarestin korkein '
           + 'rakennus yli vuosisadan ajan. Kun se purettiin 1888, sen '
           + '1 700 kilon kello vietiin Sinaian luostariin.',
@@ -386,11 +386,11 @@ export const FOKUSVIRTA_BUKAREST = {
         kysymys: 'Mikä avasi Szathmarille pääsyn kummankin sotivan '
           + 'osapuolen leireihin?',
         vaihtoehdot: [
-          'Hänen studionsa asiakkaina oli upseereita molemmilta puolilta',
-          'Hän matkusti hovin virallisena lähettinä',
           'Hän oli ostanut kuvausluvan kummaltakin komentajalta',
+          'Hän matkusti hovin virallisena lähettinä',
+          'Hänen studionsa asiakkaina oli upseereita molemmilta puolilta',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Märkälevyjen kehittämistä varten hän oli rakentanut vaunuun '
           + 'pimiön. Kuningatar Victoria palkitsi hänen kuvansa '
           + 'kultamitalilla Osbornessa heinäkuussa 1855.',
@@ -443,11 +443,11 @@ export const FOKUSVIRTA_BUKAREST = {
       visa: {
         kysymys: 'Mikä yhdistää Libearty-sanktuaarin yli sataa karhua?',
         vaihtoehdot: [
-          'Jokainen on pelastettu vankeudesta tai kelvottomista oloista',
-          'Jokainen on syntynyt sanktuaarissa',
           'Jokainen on siirretty sinne kaupunkien laidoilta',
+          'Jokainen on syntynyt sanktuaarissa',
+          'Jokainen on pelastettu vankeudesta tai kelvottomista oloista',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Sanktuaari on 69 hehtaarin metsäalue Zărneștin laidalla, ja '
           + 'se on Euroopan suurin ruskeakarhusanktuaari. Alueelle pääsee '
           + 'vain opastetulle kierrokselle tiistaista sunnuntaihin.',

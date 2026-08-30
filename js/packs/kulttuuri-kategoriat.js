@@ -39229,12 +39229,12 @@ export const KULTTUURI_KATEGORIAT = {
         kysymys: 'Mistä Thian Hock Keng -temppelin kivet, puutavara '
           + 'ja kattotiilet tulivat Singaporeen?',
         vaihtoehdot: [
-          'Kiinasta laivojen painolastina',
           'Jaavan tulivuorten rinteiltä',
+          'Kiinasta laivojen painolastina',
           'Intian Koromandelin rannikolta',
           'Malakan kaupungin raunioista',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Rakennusaineet ja Mazu-patsas tuotiin Kiinasta, ja osa '
           + 'pylväskivistä, puutavarasta ja tiilistä oli laivojen '
           + 'painolastia.',
@@ -39758,12 +39758,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Millä nimellä kreikkalaiset tunsivat Samarkandin?',
         vaihtoehdot: [
-          'Marakanda',
-          'Baktra',
           'Sogdiana',
+          'Baktra',
+          'Marakanda',
           'Zeravšan',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Aleksanteri Suuri valtasi kaupungin 329 eaa., ja '
           + 'kreikkalaisissa lähteissä sen nimi on Marakanda.',
       },
@@ -41297,12 +41297,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Kuka hallitsija antoi kaupungille nimen Hà Nội vuonna 1831?',
         vaihtoehdot: [
-          'Minh Mạng',
+          'Gia Long',
           'Lý Thái Tổ',
           'Lê Lợi',
-          'Gia Long',
+          'Minh Mạng',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Nguyễn-suvun Minh Mạng antoi kaupungille nimen Hà Nội '
           + 'hallintouudistuksessaan 1831. Lý Thái Tổ oli nimennyt sen '
           + 'Thăng Longiksi 1010 ja Lê Lợi Đông Kinhiksi 1428.',
@@ -42350,12 +42350,12 @@ export const KULTTUURI_KATEGORIAT = {
         kysymys: 'Minkä juhlan aikana gorkhalaisjoukot marssivat '
           + 'Kathmanduun vuonna 1768?',
         vaihtoehdot: [
-          'Indra Jatran',
+          'Tihar-valojuhlan',
           'Holi-värijuhlan',
           'Dashainin',
-          'Tihar-valojuhlan',
+          'Indra Jatran',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Kaupunki juhli Indra Jatraa 25. syyskuuta 1768, kun '
           + 'Prithvi Narayan Shah asettui valtaistuimelle palatsin '
           + 'pihalle.',
@@ -44628,12 +44628,12 @@ export const KULTTUURI_KATEGORIAT = {
         kysymys: 'Mistä Mandalayn palatsin rakennukset koottiin '
           + 'vuonna 1857?',
         vaihtoehdot: [
-          'Amarapuran puretusta palatsista',
+          'Kiinasta tuoduista hirsistä',
           'Baganin raunioista',
           'Yangonista laivatusta tiikistä',
-          'Kiinasta tuoduista hirsistä',
+          'Amarapuran puretusta palatsista',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Vanha palatsi purettiin kesäkuussa 1857 ja '
           + 'kuljetettiin norsuilla yksitoista kilometriä pohjoiseen '
           + 'uudelle paikalleen.',
@@ -49860,12 +49860,12 @@ export const KULTTUURI_KATEGORIAT = {
         kysymys: 'Millä nimellä Rigveda ja Avesta tuntevat Kabul-joen '
           + 'ja sen varren asutuksen?',
         vaihtoehdot: [
-          'Kubha',
           'Kophes',
+          'Kubha',
           'Kabura',
           'Gaofu',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Kubha on nimistä vanhin. Kreikkalaiset kirjoittivat '
           + 'Kophen tai Kophes, Ptolemaios muodon Kabura ja '
           + 'kiinalainen munkki Xuanzang 600-luvulla Gaofu.',
@@ -50369,12 +50369,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Minkä maan kauppiaat rakensivat São Tomén sataman 1522?',
         vaihtoehdot: [
-          'Portugalin',
-          'Hollannin',
           'Englannin',
+          'Hollannin',
+          'Portugalin',
           'Ranskan',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Portugalilaiset saapuivat rannikolle 1522, hollantilaiset '
           + 'perustivat kauppapaikkansa Pulicatiin 1612 ja englantilaiset '
           + 'saivat oman kaistaleensa vasta 1639.',
@@ -50895,12 +50895,12 @@ export const KULTTUURI_KATEGORIAT = {
           + 'vuokrasi Bombayn saaret Itä-Intian kauppakomppanialle '
           + 'vuonna 1668?',
         vaihtoehdot: [
-          'Kymmenellä punnalla',
+          'Kymmenellätuhannella punnalla',
           'Sadalla punnalla',
           'Tuhannella punnalla',
-          'Kymmenellätuhannella punnalla',
+          'Kymmenellä punnalla',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Kuninkaallinen valtakirja 27. maaliskuuta 1668 antoi '
           + 'saaret komppanialle kymmenen punnan vuosivuokraa vastaan, ja '
           + 'väkiluku kuusinkertaistui neljässätoista vuodessa.',
@@ -51437,12 +51437,12 @@ export const KULTTUURI_KATEGORIAT = {
         kysymys: 'Kuinka moni portugalilainen selvisi hengissä, kun '
           + 'hollantilaisten piiritys päättyi Colombossa 1656?',
         vaihtoehdot: [
-          '93',
+          'Ei yksikään',
           '930',
           '9 300',
-          'Ei yksikään',
+          '93',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Eloonjääneille annettiin turvallinen poistumislupa, ja '
           + 'linnoitus siirtyi Hollannin Itä-Intian kauppakomppanialle, '
           + 'joka hallitsi sitä vuoteen 1796.',
@@ -52017,12 +52017,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Millä nimellä Karachin paikalla ollut kylä tunnettiin ennen brittejä?',
         vaihtoehdot: [
-          'Kolachi',
           'Keamari',
+          'Kolachi',
           'Mithadar',
           'Manora',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Kolachi-jo-Goth perustettiin 1729 vanhemman Dibro-nimisen '
           + 'kalastajakylän paikalle, ja nimi kirjattiin ensimmäisen kerran '
           + 'hollantilaiseen asiakirjaan 1742 muodossa Karachee.',
@@ -53671,12 +53671,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Minä vuonna Auckland Museum perustettiin?',
         vaihtoehdot: [
-          '1852',
+          '1929',
           '1840',
           '1876',
-          '1929',
+          '1852',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Yleisö päästettiin museoon ensimmäisen kerran sunnuntaina 24. '
           + 'lokakuuta 1852, ja ensimmäisen vuoden aikana kävijöitä oli 708.',
       },
@@ -54267,12 +54267,12 @@ export const KULTTUURI_KATEGORIAT = {
         kysymys: 'Millä oopperalla ensimmäinen Teatro Colón avattiin '
           + 'vuonna 1857?',
         vaihtoehdot: [
-          'Verdin La traviatalla',
-          'Mozartin Taikahuilulla',
           'Puccinin Toscalla',
+          'Mozartin Taikahuilulla',
+          'Verdin La traviatalla',
           'Wagnerin Lohengrinilla',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Talo avattiin 27. huhtikuuta 1857 Verdin La traviatalla — '
           + 'vain neljä vuotta oopperan italialaisen kantaesityksen '
           + 'jälkeen.',
@@ -54903,12 +54903,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä vuoden 1871 vapaan kohdun laki teki?',
         vaihtoehdot: [
-          'Julisti orjuutettujen naisten uudet lapset vapaiksi',
+          'Vapautti kaikki yli 60-vuotiaat',
           'Lakkautti orjuuden kokonaan',
           'Kielsi orjien tuonnin Atlantin yli',
-          'Vapautti kaikki yli 60-vuotiaat',
+          'Julisti orjuutettujen naisten uudet lapset vapaiksi',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Laki koski vain sen jälkeen syntyneitä lapsia, ja hekin '
           + 'olivat velvollisia palvelemaan äitinsä omistajaa 21 ikävuoteen '
           + 'asti. Yli miljoona ihmistä pysyi orjuutettuna, ja orjuus '
@@ -55530,12 +55530,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mihin lahteen ensimmäinen laivasto saapui ennen kuin siirtokunta perustettiin Sydney Coveen?',
         vaihtoehdot: [
-          'Botany Bay',
+          'Camp Cove',
           'Farm Cove',
           'Manly Cove',
-          'Camp Cove',
+          'Botany Bay',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Arthur Phillip totesi Botany Bayn sopimattomaksi, souti '
           + 'pohjoiseen tutkimaan Cookin kartalle merkitsemää Port '
           + 'Jacksonia ja perusti siirtokunnan Sydney Coveen '
@@ -56153,12 +56153,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mikä osa parlamenttikorttelia säilyi vuoden 1907 tulipalossa?',
         vaihtoehdot: [
-          'kirjasto',
           'istuntosali',
+          'kirjasto',
           'kellotorni',
           'pääportaikko',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Kirjaston pelasti rautainen palo-ovi. Vuonna 1899 valmistunut '
           + 'kirjastorakennus on yhä koko parlamenttikompleksin vanhin osa.',
       },
@@ -56248,12 +56248,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Kuinka monta saarta Wellingtonin satamassa on?',
         vaihtoehdot: [
-          'kolme',
-          'yksi',
           'viisi',
+          'yksi',
+          'kolme',
           'kymmenen',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Saaret ovat Matiu/Somes, Mākaro/Ward ja Mokopuna. Niistä vain '
           + 'Matiu/Somes on tarpeeksi suuri asuttavaksi, ja se on nykyään '
           + 'luonnonsuojelusaari.',
@@ -56784,12 +56784,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Millä nimellä Alcázarin arabiankieliset kirjoitukset kutsuvat kuningas Pedro I:tä?',
         vaihtoehdot: [
-          'Sultan Don Bidru',
+          'Malik Don Pedro',
           'Emir Don Pedro',
           'Kalifi Don Petrus',
-          'Malik Don Pedro',
+          'Sultan Don Bidru',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Palatsin pohjakerros on Pedro I:n 1360-luvun rakennustyötä, '
           + 'ja sen arabiankieliset kirjoitukset puhuvat kristitystä '
           + 'kuninkaasta sulttaanina — samaan aikaan julkisivun '
@@ -56888,12 +56888,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä Sevillan kaupunginosaa pidetään flamencon syntypaikkana?',
         vaihtoehdot: [
-          'Triana',
+          'Los Remedios',
           'Macarena',
           'Santa Cruz',
-          'Los Remedios',
+          'Triana',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Kaupunginosa on joen länsipuolella, ja siellä asui '
           + 'perinteisesti merimiehiä, keramiikantekijöitä ja '
           + 'härkätaistelijoita; flamencotaiteilijoita on Sevillassa '
@@ -57393,12 +57393,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mikä on jäänyt kiinni Bergenin tuomiokirkon ulkoseinään?',
         vaihtoehdot: [
-          'tykinkuula',
           'laivan ankkuri',
+          'tykinkuula',
           'kirkonkello',
           'aurinkokello',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Kuula on peräisin vuoden 1665 Vågenin taistelusta, '
           + 'jossa englantilainen ja hollantilainen laivasto ottivat '
           + 'yhteen Bergenin satamassa.',
@@ -57498,12 +57498,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Kuka suostutteli Edvard Griegin vanhemmat lähettämään poikansa Leipzigin konservatorioon?',
         vaihtoehdot: [
-          'Ole Bull',
+          'Edmund Neupert',
           'Henrik Ibsen',
           'Nina Hagerup',
-          'Edmund Neupert',
+          'Ole Bull',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Bull oli Griegin perheen ystävä ja tunnisti '
           + 'viisitoistavuotiaan lahjakkuuden kesällä 1858; Leipzigin '
           + 'pianolinjaa johti tuolloin Ignaz Moscheles.',
@@ -58002,12 +58002,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Minä vuonna Montreal sai kaupungin oikeudet?',
         vaihtoehdot: [
-          '1832',
-          '1642',
           '1760',
+          '1642',
+          '1832',
           '1873',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Kaupunkioikeudet tulivat 1832, seitsemän vuotta '
           + 'Lachine-kanavan avaamisen jälkeen; vuoteen 1860 mennessä '
           + 'Montreal oli Brittiläisen Pohjois-Amerikan suurin kaupunki.',
@@ -58656,12 +58656,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mikä osa Melbournen parlamenttitalon suunnitelmasta jäi lopulta rakentamatta?',
         vaihtoehdot: [
-          'kupoli',
+          'istuntosalit',
           'pylväikkö',
           'pääportaat',
-          'istuntosalit',
+          'kupoli',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Peter Kerrin vuoden 1877 suunnitelma korvasi tornin '
           + 'kupolilla, mutta 1890-luvun lama pysäytti työt eikä kupolia '
           + 'ole rakennettu koskaan.',
@@ -58755,12 +58755,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Missä Melbournen taidekokoelma oli esillä ennen oman gallerian valmistumista?',
         vaihtoehdot: [
-          'yleisen kirjaston eteläsiivessä',
+          'kasvitieteellisen puutarhan kasvihuoneessa',
           'parlamenttitalon salissa',
           'rahastotalon kellariholvissa',
-          'kasvitieteellisen puutarhan kasvihuoneessa',
+          'yleisen kirjaston eteläsiivessä',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Veistosjäljennökset avattiin nähtäville toukokuussa 1861 '
           + 'kirjaston eteläsiiven alakerrassa, ja maalaukset saivat oman '
           + 'salinsa samassa talossa joulukuussa 1864.',
@@ -58852,12 +58852,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Kuinka moneen vuodenaikaan vuosi jakautuu woiwurrungin kielessä?',
         vaihtoehdot: [
-          'seitsemään',
           'neljään',
+          'seitsemään',
           'kahteen',
           'kahteentoista',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Vuodenajat seuraavat sitä, mitä luonnossa tapahtuu: '
           + 'maaliskuu on ankeriaan aika ja marraskuu heinien kukinnan.',
       },
@@ -59369,12 +59369,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Millä nimellä Vancouverin paikalla ollut kylä tunnettiin ennen kaupungin perustamista?',
         vaihtoehdot: [
-          'Granville',
+          'Moodyville',
           'New Westminster',
           'Port Moody',
-          'Moodyville',
+          'Granville',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Siirtomaahallinto mittasi 1870 sahakylän ympärille '
           + 'kaupunkitontit ja nimesi paikan Granvilleksi silloisen '
           + 'siirtomaaministerin, lordi Granvillen, mukaan.',
@@ -59474,12 +59474,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä Musqueam-kansan oma nimi xʷməθkʷəy̓əm tarkoittaa?',
         vaihtoehdot: [
-          'paikkaa, jossa kasvaa məθkʷəy̓-kasvi',
-          'suuren joen suuta',
           'kahden lahden välissä olevaa niemeä',
+          'suuren joen suuta',
+          'paikkaa, jossa kasvaa məθkʷəy̓-kasvi',
           'vuorten varjoon jäävää rantaa',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Musqueam on englannistus hən̓q̓əmin̓əm̓-kielen sanasta '
           + 'xʷməθkʷəy̓əm. Squamishin kielessä taas sahan paikkaa '
           + 'kutsuttiin nimellä K\'emk\'emeláy̓ eli paikaksi, jossa kasvaa '
@@ -60014,12 +60014,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mihin tehtävään Wickham Terracen vanha tuulimylly valjastettiin vuodesta 1855?',
         vaihtoehdot: [
-          'laivaliikenteen signaaliasemaksi',
+          'kirkon kellotapuliksi',
           'kaupungin vesitorniksi',
           'siirtokunnan vankilaksi',
-          'kirkon kellotapuliksi',
+          'laivaliikenteen signaaliasemaksi',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Mylly lakkasi jauhamasta viljaa 1845. Kymmenen vuotta '
           + 'myöhemmin torniin rakennettiin semaforiasema, joka välitti '
           + 'sähkelankaa pitkin tiedot joensuulle saapuvista laivoista.',
@@ -60114,12 +60114,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Millä nimellä turrbalit kutsuvat Brisbanen halki virtaavaa jokea?',
         vaihtoehdot: [
-          'Maiwar',
           'Barrambin',
+          'Maiwar',
           'Magandjin',
           'Kurilpa',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Maiwar oli vuosituhansien ajan alueen kulttuurisen, '
           + 'taloudellisen ja seremoniallisen elämän keskus, ja nimi on '
           + 'nykyään myös yhden Brisbanen vaalipiirin nimi.',
@@ -60214,12 +60214,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Minkä kaupungin sillasta Story Bridgen suunnittelu otti mallia?',
         vaihtoehdot: [
-          'Montrealin',
+          'Edinburghin',
           'New Yorkin',
           'Lissabonin',
-          'Edinburghin',
+          'Montrealin',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Esikuva oli vuonna 1930 valmistunut Jacques Cartier -silta. '
           + 'Story Bridgen suunnitteli John Bradfield, sama insinööri, joka '
           + 'vastasi Sydneyn satamansillasta.',
@@ -60751,12 +60751,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Millä lempinimellä vuoden 1893 maailmannäyttelyn rakennusryhmää kutsuttiin?',
         vaihtoehdot: [
-          'Valkoinen kaupunki',
-          'Kultainen kortteli',
           'Marmorinen mailinpätkä',
+          'Kultainen kortteli',
+          'Valkoinen kaupunki',
           'Hopeinen ranta',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Nimi tuli näyttelyn uusklassisesta arkkitehtuurista, joka '
           + 'valaistiin hehkulampuilla. Alue kattoi lähes 700 eekkeriä '
           + 'nykyisessä Jackson Parkissa.',
@@ -60849,12 +60849,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitkä kolme kansaa muodostavat Kolmen tulen neuvoston?',
         vaihtoehdot: [
-          'Odawa, Ojibwe ja Potawatomi',
+          'Ojibwe, Cree ja Meskwaki',
           'Miami, Sauk ja Meskwaki',
           'Potawatomi, Miami ja Sauk',
-          'Ojibwe, Cree ja Meskwaki',
+          'Odawa, Ojibwe ja Potawatomi',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Nämä kolme kansaa allekirjoittivat yhdessä Chicagon '
           + 'sopimukset 1821 ja 1833. Miami, Sauk ja Meskwaki olivat '
           + 'asuneet seudulla ennen Potawatomia.',
@@ -61328,12 +61328,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Minä vuonna viimeinen vankilaiva Hougoumont saapui Länsi-Australiaan?',
         vaihtoehdot: [
-          '1868',
+          '1876',
           '1850',
           '1872',
-          '1876',
+          '1868',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Kuljetukset päättyivät siihen, mutta järjestelmä ei: vuoden '
           + '1868 lopussa siirtokunnassa oli yhä 3 158 tuomiotaan '
           + 'suorittavaa vankia.',
@@ -61426,12 +61426,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Kuinka moneen vuodenaikaan whadjukit jakavat vuoden?',
         vaihtoehdot: [
-          'kuuteen',
           'neljään',
+          'kuuteen',
           'kahteen',
           'kymmeneen',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Vuodenaikojen rajat eivät ole kalenteripäiviä vaan merkkejä '
           + 'luonnossa: kambarangin alkamisen kertoo kukinta ja bunurun '
           + 'tulon joulupuun kukat.',
@@ -61521,12 +61521,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä whadjukien suullinen perinne kertoo Rottnestin saaresta?',
         vaihtoehdot: [
-          'Se oli ennen kiinni mantereessa',
+          'Se oli aina asumaton',
           'Se syntyi tulivuoren purkauksesta',
           'Sinne purjehdittiin kauppaa käymään',
-          'Se oli aina asumaton',
+          'Se oli ennen kiinni mantereessa',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Meri nousi ja katkaisi yhteyden noin 12 000–8 000 vuotta '
           + 'sitten, ja kertomus siitä on kulkenut suullisena perinteenä '
           + 'siitä asti.',
@@ -62696,12 +62696,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Millä nimellä Toronto tunnettiin ennen vuotta 1834?',
         vaihtoehdot: [
-          'York',
-          'Newark',
           'Fort Rouillé',
+          'Newark',
+          'York',
           'Teiaiagon',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Kuvernööri Simcoe perusti Yorkin kylän 1793, ja se otti '
           + 'nimekseen Toronto vasta kaupungiksi tullessaan 6. maaliskuuta '
           + '1834.',
@@ -62803,12 +62803,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Minkä joen mukaan Mississaugas of the Credit -kansa on nimetty?',
         vaihtoehdot: [
-          'Credit-joen',
+          'Rouge-joen',
           'Humber-joen',
           'Don-joen',
-          'Rouge-joen',
+          'Credit-joen',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Ojibwenkielinen nimi Mazina\'iga-ziibing Misi-zaagiwininiwag '
           + 'tarkoittaa mississauga-kansaa Credit-joen luona.',
       },
@@ -63398,12 +63398,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mistä kiinalais-perulaisten chifa-ravintoloiden nimi tulee?',
         vaihtoehdot: [
-          'kantonin sanoista, jotka tarkoittavat riisin syömistä',
           'ensimmäisen ravintoloitsijan sukunimestä',
+          'kantonin sanoista, jotka tarkoittavat riisin syömistä',
           'espanjan sanasta, joka tarkoittaa paistamista',
           'sen korttelin nimestä, jossa ravintolat sijaitsivat',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Kantonin hek3 faan6 tarkoittaa riisin syömistä eli aterioimista. '
           + 'Sopimuskautensa päättäneet työläiset perustivat näitä ravintoloita '
           + 'ympäri maata, ja chifa on nykyään oma perulainen keittiönsä.',
@@ -63899,12 +63899,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Kuinka kauan La Compañían kirkon rakentaminen kesti?',
         vaihtoehdot: [
-          '160 vuotta',
+          '260 vuotta',
           '16 vuotta',
           '60 vuotta',
-          '260 vuotta',
+          '160 vuotta',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Työ alkoi 1605, ja julkisivu valmistui vasta 1765. Sen '
           + 'veistivät alkuperäiskansojen kivenveistäjät koristeelliseen '
           + 'espanjalaisbarokkiin.',
@@ -63990,12 +63990,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Minne Ranskan tiedeakatemia lähetti toisen astemittausretkikunnan Quiton alueen lisäksi?',
         vaihtoehdot: [
-          'Lapin Tornionlaaksoon',
-          'Islantiin',
           'Grönlantiin',
+          'Islantiin',
+          'Lapin Tornionlaaksoon',
           'Siperiaan',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Kaksi retkikuntaa lähti samaan tehtävään: toinen mittasi '
           + 'meridiaanin astetta päiväntasaajalla, toinen kaukana pohjoisessa '
           + 'Tornionlaaksossa. Vasta vertailu ratkaisi kiistan maapallon '
@@ -64484,12 +64484,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mikä tuhosi alkuperäisen pueblon ja siirsi kaupungin nykyisen plazan paikalle?',
         vaihtoehdot: [
-          'Vuoden 1815 tulva',
+          'Pitkä kuivuus 1830-luvulla',
           'Vuoden 1857 maanjäristys',
           'Vuoden 1871 tulipalo',
-          'Pitkä kuivuus 1830-luvulla',
+          'Vuoden 1815 tulva',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Joen läheisyys kostautui: tulva pyyhkäisi 1815 pueblon '
           + 'mennessään, ja yhteisö rakensi uudelleen kauemmas vedestä. '
           + 'Kolme vuotta myöhemmin valmistui Ávila-adobe, joka on yhä '
@@ -64576,12 +64576,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä tongvien kylän nimi Yaanga tarkoittaa?',
         vaihtoehdot: [
-          'Paikkaa, jossa kasvaa myrkkytammea',
+          'Vuorten porttia',
           'Kahden joen välistä niittyä',
           'Suolan ottopaikkaa',
-          'Vuorten porttia',
+          'Paikkaa, jossa kasvaa myrkkytammea',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Iyáangẚ eli Yaanga oli kylä, jonka viereen pueblo rakennettiin '
           + '1781. Nimi on toisinaan käännetty myös savulaaksoksi.',
       },
@@ -65072,12 +65072,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Kuka johti Montevideota puolustanutta italialaista legioonaa piirityksen aikana?',
         vaihtoehdot: [
-          'Giuseppe Garibaldi',
           'Manuel Oribe',
+          'Giuseppe Garibaldi',
           'Juan Manuel de Rosas',
           'Bruno Mauricio de Zabala',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Kaupungin puolustus lepäsi ulkomaisten pakolaisten varassa: '
           + 'italialaista legioonaa johti Garibaldi, ja rinnalla toimivat '
           + 'ranskalainen ja baskilaisten legioona.',
@@ -65166,12 +65166,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitkä kolme rumpua muodostavat candomben cuerdan?',
         vaihtoehdot: [
-          'chico, repique ja piano',
+          'piano, tambora ja pandeiro',
           'chico, bombo ja timbal',
           'repique, conga ja bongo',
-          'piano, tambora ja pandeiro',
+          'chico, repique ja piano',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Chico on pienin ja pitää nopeaa perusrytmiä, repique '
           + 'koristelee sitä improvisoiden, ja piano on suurin ja hoitaa '
           + 'basson osan.',
@@ -65721,12 +65721,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Minkä alueen Espanja luovutti briteille saadakseen Havannan takaisin 1763?',
         vaihtoehdot: [
-          'Floridan',
-          'Jamaikan',
           'Louisianan',
+          'Jamaikan',
+          'Floridan',
           'Puerto Ricon',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Pariisin rauha 1763 päätti seitsenvuotisen sodan. Espanja '
           + 'sai Havannan takaisin alle vuoden miehityksen jälkeen ja antoi '
           + 'vastineeksi Floridan.',
@@ -65816,12 +65816,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä satamansuun poikki vedettiin 1630 kahden vartiolinnan välille?',
         vaihtoehdot: [
-          'raskas kupariketju',
+          'köysilossi',
           'kivinen aallonmurtaja',
           'puinen ponttonisilta',
-          'köysilossi',
+          'raskas kupariketju',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Linnat ovat niin lähellä toisiaan, että niiden väliin '
           + 'saatiin viritettyä este. Vuoden 1762 piirityksen aikana ketju '
           + 'korvattiin useaan suuntaan haarautuvalla, raskaiden puupalkkien '
@@ -66306,12 +66306,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Kuka teetti Paseo de la Reforman ja nimesi sen puolisonsa mukaan?',
         vaihtoehdot: [
-          'keisari Maximilian I',
           'presidentti Benito Juárez',
+          'keisari Maximilian I',
           'varakuningas Bernardo de Gálvez',
           'presidentti Porfirio Díaz',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Bulevardin ensimmäinen nimi oli Paseo de la Emperatriz eli '
           + 'keisarinnan kuja. Tasavallan palattua se nimettiin ensin '
           + 'kenraali Santos Degolladon mukaan ja 1872 uudistusliikkeen '
@@ -66408,12 +66408,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä Chapultepec tarkoittaa nahuatliksi?',
         vaihtoehdot: [
-          'heinäsirkkakukkulaa',
+          'suolaista järveä',
           'kaksoisvuorta',
           'kotkan pesää',
-          'suolaista järveä',
+          'heinäsirkkakukkulaa',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Sama kieli näkyy kymmenissä paikannimissä: Xochimilco on '
           + 'kukkapelto ja Mēxihco tarkoitti alun perin mexica-kansan '
           + 'asuttamaa järviseutua.',
@@ -66910,12 +66910,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Kenen hallinto määräsi Ranskan Korttelin palomääräykset, jotka kielsivät puujulkisivut?',
         vaihtoehdot: [
-          'Espanjan',
+          'Yhdysvaltain',
           'Ranskan',
           'Britannian',
-          'Yhdysvaltain',
+          'Espanjan',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Kaupunki kuului Espanjalle, kun toinen suurpalo tuhosi sen '
           + '1794. Uudet määräykset kielsivät puujulkisivut, ja siksi '
           + 'Vieux Carrén vanhat talot ovat tiiltä ja stukkia.',
@@ -67011,12 +67011,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Kuinka kauan Black Masking Indianin puvun suunnittelu ja ompelu tavallisesti kestää?',
         vaihtoehdot: [
-          'kuudesta yhdeksään kuukautta',
-          'kuudesta yhdeksään päivää',
           'kaksi viikkoa',
+          'kuudesta yhdeksään päivää',
+          'kuudesta yhdeksään kuukautta',
           'kuusi vuotta',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Puku ommellaan käsin ja aloitetaan alusta joka vuosi. '
           + 'Materiaalit maksavat tuhansia dollareita, ja valmis asu voi '
           + 'painaa yli neljäkymmentä kiloa.',
@@ -67559,12 +67559,12 @@ export const KULTTUURI_KATEGORIAT = {
         kysymys: 'Mikä laitos toimi Kansallismuseon nykyisessä '
           + 'rakennuksessa ennen museota?',
         vaihtoehdot: [
-          'Vankila',
+          'Sotilassairaala',
           'Rautatieasema',
           'Sokeritehdas',
-          'Sotilassairaala',
+          'Vankila',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Panóptico valmistui 1872 ja oli Kolumbian suurin ja '
           + 'tärkein vankila vuoteen 1946 asti. Museoksi rakennus '
           + 'avattiin vasta 1948, vaikka itse kokoelma oli perustettu jo '
@@ -67666,12 +67666,12 @@ export const KULTTUURI_KATEGORIAT = {
         kysymys: 'Mistä Kultamuseon kuuluisa kultainen lautta löydettiin '
           + 'vuonna 1969?',
         vaihtoehdot: [
-          'Luolasta Pascan kunnasta',
           'Guatavita-järven pohjasta',
+          'Luolasta Pascan kunnasta',
           'Zipaquirán suolakaivoksesta',
           'Bogotá-joen uomasta',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Talonpoika Cruz María Dimaté löysi lautan luolasta Pascan '
           + 'kunnassa. Vanhempi, vuonna 1856 löydetty lautta tuli Siechan '
           + 'lammikosta ja tuhoutui tulipalossa Bremenin satamassa.',
@@ -68248,12 +68248,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Kuinka monta lammasta laidunsi Adelaide Ovalin nurmea avajaisia edeltävänä päivänä?',
         vaihtoehdot: [
-          '2 000',
+          '12 000',
           '200',
           '500',
-          '12 000',
+          '2 000',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Lampaat olivat halvin ruohonleikkuri, joka siirtokunnasta '
           + 'löytyi: kenttä oli kylvetty koiruoholle vasta edellisenä '
           + 'kesänä.',
@@ -68346,12 +68346,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Kuinka moni oli paikalla, kun Torrens Lake avattiin yleisölle heinäkuussa 1881?',
         vaihtoehdot: [
-          'noin 40 000',
-          'noin 400',
           'noin 4 000',
+          'noin 400',
+          'noin 40 000',
           'noin 400 000',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Se oli lähes koko Adelaide: kaupungissa asui tuolloin vain '
           + 'vähän enemmän ihmisiä kuin altaan avajaisiin tuli katsojia.',
       },
@@ -68442,12 +68442,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi Barossan laakson nimi kirjoitetaan Barossa eikä Barrosa?',
         vaihtoehdot: [
-          'nimi kirjattiin rekisteriin virheellisesti',
+          'nimi tulee kahdesta eri kylästä',
           'se on nimen saksankielinen muoto',
           'laaksossa on kaksi jokea',
-          'nimi tulee kahdesta eri kylästä',
+          'nimi kirjattiin rekisteriin virheellisesti',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Eversti Light oli itse taistellut Barrosan taistelussa '
           + 'Espanjassa 1811, joten hän tuskin kirjoitti nimeä väärin — virhe '
           + 'syntyi vasta rekisteriin kirjattaessa.',
@@ -68973,12 +68973,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Minä vuonna Port Arthurin laitos suljettiin?',
         vaihtoehdot: [
-          '1877',
           '1830',
+          '1877',
           '1853',
           '1901',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Isoisä kävi Hobartissa 1873, joten laitos oli hänen '
           + 'matkansa aikaan yhä toiminnassa — mutta vain neljä vuotta '
           + 'lisää.',
@@ -69073,12 +69073,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mikä eläin elää villinä Hobart Rivuletissa keskellä kaupunkia?',
         vaihtoehdot: [
-          'vesinokkaeläin',
+          'merileijona',
           'saukko',
           'majava',
-          'merileijona',
+          'vesinokkaeläin',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Saastuminen rajoittaa kannan puron yläjuoksulle, ja '
           + 'paikallinen vapaaehtoisryhmä on seurannut ja puolustanut sitä '
           + 'vuosia.',
@@ -69170,12 +69170,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Kuinka monesta pienestä maalauksesta Sidney Nolanin Käärme koostuu?',
         vaihtoehdot: [
-          '1 620',
+          '62',
           '162',
           '16 200',
-          '62',
+          '1 620',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Teosta ei ollut esitetty julkisesti Australiassa ennen kuin '
           + 'museo avattiin sitä varten rakennetussa salissa.',
       },
@@ -69700,12 +69700,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Minä vuonna Darwinin Chinatown syntyi?',
         vaihtoehdot: [
-          '1874',
-          '1869',
           '1888',
+          '1869',
+          '1874',
           '1911',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Perustajina oli 186 kiinalaista työläistä, jotka saapuivat '
           + 'laivalla Singaporesta.',
       },
@@ -69798,12 +69798,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Kuinka monta muuta kuin merikäärmelajia Darwinin seudulla elää?',
         vaihtoehdot: [
-          '34',
+          '58',
           '12',
           '23',
-          '58',
+          '34',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Myrkyllisten lajien osuus on Darwinissa pienempi kuin '
           + 'useimmissa muissa kaupungeissa, koska pythonit ja tarhakäärmeet '
           + 'ovat enemmistönä.',
@@ -69891,12 +69891,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mikä osa vanhaa Christ Church -kirkkoa jäi pystyyn hirmumyrsky Tracyn jäljiltä?',
         vaihtoehdot: [
-          'kuisti',
           'kellotorni',
+          'kuisti',
           'kuoriosa',
           'sakaristo',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Uusi katedraali vihittiin 13. maaliskuuta 1977 Canterburyn '
           + 'arkkipiispan läsnä ollessa.',
       },
@@ -70429,12 +70429,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Minä vuonna HMS Basilisk komennettiin Australian asemalle John Moresbyn johtoon?',
         vaihtoehdot: [
-          '1871',
+          '1882',
           '1848',
           '1873',
-          '1882',
+          '1871',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Laiva ehti siis kartoittaa rannikkoa kaksi vuotta ennen kuin '
           + 'se purjehti siihen lahteen, joka sai Moresbyn nimen.',
       },
@@ -70538,12 +70538,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Minä vuodenaikana lagatoit lähtivät hiri-purjehdukselle länteen?',
         vaihtoehdot: [
-          'syyskuun lopulla tai lokakuun alussa',
+          'aina kun sattui sopimaan',
           'tammikuussa',
           'juhannuksen aikaan',
-          'aina kun sattui sopimaan',
+          'syyskuun lopulla tai lokakuun alussa',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Lähtö ajoitettiin tuulen mukaan: kaakkoispasaati laurabada '
           + 'kantoi alukset länteen, ja kotiin päästiin vasta kun luoteesta '
           + 'puhaltava lahara alkoi.',
@@ -70634,12 +70634,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Kuinka monta esinettä Australian kansallisgalleria palautti museolle vuonna 2020?',
         vaihtoehdot: [
-          '225',
-          '17',
           '50 000',
+          '17',
+          '225',
           'ei yhtään',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Ensimmäiset seitsemäntoista olivat palanneet jo museon '
           + 'avajaisissa 1977, ja palautukset jatkuvat sovittuna ohjelmana.',
       },
@@ -71159,12 +71159,12 @@ export const KULTTUURI_KATEGORIAT = {
         kysymys: 'Kuinka monta kaasulyhtyä kaupungin kaduille asennettiin '
           + '1850-luvulla?',
         vaihtoehdot: [
-          '700',
           '70',
+          '700',
           '7 000',
           '17',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Katulyhdyt tulivat 1856, neljä vuotta juoksevan veden ja '
           + 'lennättimen jälkeen. Kaupunki kokeili tällaisia uutuuksia '
           + 'ennen muuta Chileä.',
@@ -71258,12 +71258,12 @@ export const KULTTUURI_KATEGORIAT = {
         kysymys: 'Minä vuonna El Mercurio de Valparaíso ilmestyi '
           + 'ensimmäisen kerran?',
         vaihtoehdot: [
-          '1827',
+          '1906',
           '1727',
           '1898',
-          '1906',
+          '1827',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Lehti perustettiin yhdeksän vuotta Chilen itsenäistymisen '
           + 'jälkeen, ja se ilmestyy yhä. Sen kilpailijat maailmalla ovat '
           + 'kaikki nuorempia.',
@@ -71860,12 +71860,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Kuinka kauan katedraalin rakennustyö seisoi rahapulan takia ennen kuin Benjamin Mountfort otti sen johtoonsa?',
         vaihtoehdot: [
-          'Kahdeksan vuotta',
+          'Neljäkymmentä vuotta',
           'Kaksi vuotta',
           'Kaksikymmentä vuotta',
-          'Neljäkymmentä vuotta',
+          'Kahdeksan vuotta',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Anthony Trollope näki aukion vuonna 1872 ja kutsui tyhjiä '
           + 'perustuksia valtavaksi epäonnistumisen muistomerkiksi.',
       },
@@ -71954,12 +71954,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä kāi tahun nimi Ōtākaro tarkoittaa?',
         vaihtoehdot: [
-          'Leikkipaikkaa',
-          'Suurta jokea',
           'Valkoista kiveä',
+          'Suurta jokea',
+          'Leikkipaikkaa',
           'Ankeriaiden vettä',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Varhaiset eurooppalaislähteet antavat joelle myös toisen '
           + 'māorinkielisen nimen, Putare Kamutu.',
       },
@@ -72429,12 +72429,12 @@ export const KULTTUURI_KATEGORIAT = {
         kysymys: 'Mistä maasta Manausin tullitalon esivalmistetut '
           + 'tiilielementit tuotiin?',
         vaihtoehdot: [
-          'Englannista',
+          'Ranskasta',
           'Portugalista',
           'Italiasta',
-          'Ranskasta',
+          'Englannista',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Tiilet tulivat laivalla Englannista, ja niillä jäljiteltiin '
           + '1900-luvun alun Lontoon rakennuksia. Urakoitsija oli '
           + 'englantilainen Manaos Harbour Limited.',
@@ -72532,12 +72532,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä yhteiskieltä baré-yhteisöt puhuvat nykyään?',
         vaihtoehdot: [
-          'nheengatua',
           'guaramia',
+          'nheengatua',
           'ketšuaa',
           'aimaraa',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Karmeliittalähetys levitti nheengatua siirtomaa-aikana koko '
           + 'Rio Negron varrelle. Alkuperäistä baré-kieltä osasi vuonna '
           + '2012 enää kaksi ihmistä.',
@@ -73158,12 +73158,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Minkä rakennuksen paikalle Panteón Nacional pystytettiin?',
         vaihtoehdot: [
-          'Luhistuneen kirkon',
+          'Puretun teatterin',
           'Entisen luostarin',
           'Vanhan tullihuoneen',
-          'Puretun teatterin',
+          'Luhistuneen kirkon',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Santísima Trinidad -kirkko oli vuodelta 1744, ja sen '
           + 'raunioiden paikalle perustettiin 1874 kansallissankarien '
           + 'hautaholvi. Luostarin paikalle nousi sen sijaan Capitolio.',
@@ -73259,12 +73259,12 @@ export const KULTTUURI_KATEGORIAT = {
         kysymys: 'Mitä pöytävuoren nimi Auyán-tepui tarkoittaa pemonien '
           + 'kielellä?',
         vaihtoehdot: [
-          'Jumalten taloa',
+          'Kadonnutta polkua',
           'Sateen äitiä',
           'Mustaa jokea',
-          'Kadonnutta polkua',
+          'Jumalten taloa',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Pöytävuoria kutsutaan Guayanan ylängöllä tepuiksi, ja niiden '
           + 'nimet ovat pemon-kieltä. Auyán-tepui on niistä laajimpia.',
       },
@@ -73356,12 +73356,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Kuka perusti El Sisteman vuonna 1975?',
         vaihtoehdot: [
-          'José Antonio Abreu',
-          'Gustavo Dudamel',
           'Teresa Carreño',
+          'Gustavo Dudamel',
+          'José Antonio Abreu',
           'Carlos Raúl Villanueva',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Dudamel on ohjelmasta noussut kapellimestari, Carreño '
           + '1800-luvun pianisti ja Villanueva arkkitehti – kaikki kolme '
           + 'liittyvät kaupungin musiikkielämään, mutta perustaja oli '
@@ -73947,12 +73947,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Kuinka suuren korkeuseron Elevador Lacerda kulkee?',
         vaihtoehdot: [
-          '72 metriä',
           '22 metriä',
+          '72 metriä',
           '128 metriä',
           '7 metriä',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Hissi nousee Alakaupungin Cayrún aukiolta Yläkaupungin Tomé '
           + 'de Sousan aukiolle. Ilman sitä sama matka on jyrkkää '
           + 'rinnekatua.',
@@ -74047,12 +74047,12 @@ export const KULTTUURI_KATEGORIAT = {
         kysymys: 'Kuinka pitkän matkan baianojen kulkue kävelee Bonfimin '
           + 'kukkulalle?',
         vaihtoehdot: [
-          'kahdeksan kilometriä',
+          'kahdeksankymmentä kilometriä',
           'kahdeksansataa metriä',
           'kaksikymmentäviisi kilometriä',
-          'kahdeksankymmentä kilometriä',
+          'kahdeksan kilometriä',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Kulkue lähtee Conceiçãon basilikalta Alakaupungista ja '
           + 'päättyy Bonfimin kirkon portaille. Kaikki kulkevat valkoisissa '
           + 'vaatteissa.',
@@ -74141,12 +74141,12 @@ export const KULTTUURI_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä sana acarajé alun perin tarkoittaa joruban kielellä?',
         vaihtoehdot: [
-          '"tule syömään akaraa"',
+          '"valkoinen puku"',
           '"pyhä öljy"',
           '"papujen juhla"',
-          '"valkoinen puku"',
+          '"tule syömään akaraa"',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Sanonta oli myyntihuuto, jolla kadulla työskentelevät naiset '
           + 'kutsuivat ohikulkijoita. Ruoan oma nimi on joruban kielessä '
           + 'àkàrà.',

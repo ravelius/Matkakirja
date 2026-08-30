@@ -83,11 +83,11 @@ const NYHAVN_VISA = {
 const SMORREBROD_VISA = {
   kysymys: 'Missä järjestyksessä smørrebrød syödään, jos tapaa noudatetaan?',
   vaihtoehdot: [
-    'Ensin kala, sitten liha, viimeisenä juusto',
     'Ensin juusto, sitten liha, viimeisenä kala',
+    'Ensin kala, sitten liha, viimeisenä juusto',
     'Järjestyksellä ei ole väliä, kunhan käyttää haarukkaa',
   ],
-  oikea: 0,
+  oikea: 1,
   fakta: 'Smørrebrød on avoin voileipä tummalla ruisleivällä, ja se syödään '
     + 'veitsellä ja haarukalla. Vanhoissa lounasravintoloissa listalla voi '
     + 'olla yli kaksikymmentä eri leipää, ja jokaisella on oma nimensä ja '
@@ -241,11 +241,11 @@ export const FOKUSVIRTA_KOBENHAVN = {
         kysymys: 'Millä perusteella Tivolin perustaja sai kuninkaalta luvan '
           + 'huvipuistolle?',
         vaihtoehdot: [
-          'Huvitteleva kansa ei ajattele politiikkaa',
-          'Puisto maksaisi linnoituksen korjaukset',
           'Kuningas halusi paikan, jossa laulaa kuorossa',
+          'Puisto maksaisi linnoituksen korjaukset',
+          'Huvitteleva kansa ei ajattele politiikkaa',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Lupa annettiin viideksi vuodeksi kerrallaan, ja puisto '
           + 'rakennettiin kaupungin vallien ulkopuolelle. Puiston järvi on '
           + 'vanhan vallihaudan jäänne.',
@@ -316,11 +316,11 @@ export const FOKUSVIRTA_KOBENHAVN = {
         kysymys: 'Miksi Jellingin isoa riimukiveä sanotaan Tanskan '
           + 'syntytodistukseksi?',
         vaihtoehdot: [
-          'Siinä lukee maan nimi ensimmäisen kerran maan omalla kielellä',
           'Se on maan vanhin kirjoitettu laki',
+          'Siinä lukee maan nimi ensimmäisen kerran maan omalla kielellä',
           'Siihen on hakattu maan ensimmäinen kartta',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Kivet otettiin Unescon maailmanperintöluetteloon vuonna '
           + '1994, ja ne seisovat nykyään lasikoteloissa. Langaton '
           + 'Bluetooth-yhteys on nimetty kiven pystyttäneen kuninkaan '
@@ -381,11 +381,11 @@ export const FOKUSVIRTA_KOBENHAVN = {
       visa: {
         kysymys: 'Mikä palikan sisällä pitää osat kiinni toisissaan?',
         vaihtoehdot: [
-          'Putket, jotka puristavat nystyjä juuri sopivalla voimalla',
-          'Ohut liimakerros nystyjen päällä',
           'Pienet magneetit palikan kulmissa',
+          'Ohut liimakerros nystyjen päällä',
+          'Putket, jotka puristavat nystyjä juuri sopivalla voimalla',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Mitat ovat pysyneet samoina vuoden 1958 patentista asti, '
           + 'joten silloin tehty palikka sopii tänään ostettuun. Kuudesta '
           + 'samanlaisesta kahdeksan nystyn palikasta saa yli 900 miljoonaa '

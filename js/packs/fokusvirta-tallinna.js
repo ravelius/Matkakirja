@@ -227,11 +227,11 @@ export const FOKUSVIRTA_TALLINNA = {
       visa: {
         kysymys: 'Miksi paahdettu kamajauho oli hyvä eväs merimatkalle?',
         vaihtoehdot: [
-          'Se säilyi kuukausia pilaantumatta eikä vaatinut tulta',
           'Se ei painanut mitään kastuneenakaan',
+          'Se säilyi kuukausia pilaantumatta eikä vaatinut tulta',
           'Se pysyi kylmänä kuumassakin ruumassa',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Jauho vatkataan piimään ja päälle pannaan marjoja, joten '
           + 'aamiainen on valmis minuutissa. Nykyään kamasta vatkataan myös '
           + 'jälkiruokavaahtoa.',
@@ -292,11 +292,11 @@ export const FOKUSVIRTA_TALLINNA = {
         kysymys: 'Missä vaaleissa Viro oli maailman ensimmäinen maa, jossa '
           + 'sai äänestää internetissä?',
         vaihtoehdot: [
-          'Vuoden 2005 vaaleissa',
-          'Vuoden 1991 vaaleissa',
           'Vuoden 2014 vaaleissa',
+          'Vuoden 1991 vaaleissa',
+          'Vuoden 2005 vaaleissa',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Vuoden 2023 parlamenttivaaleissa yli puolet äänistä '
           + 'annettiin verkossa. Sirullinen henkilökortti on pakollinen '
           + 'jokaiselle virolaiselle 15 ikävuodesta alkaen.',
@@ -353,11 +353,11 @@ export const FOKUSVIRTA_TALLINNA = {
         kysymys: 'Mihin suuntaan Lyhyen jalan porttitornin ampuma-aukot '
           + 'osoittavat?',
         vaihtoehdot: [
-          'Ylös Toompealle, siis omaan kaupunkiin',
           'Merelle, satamaan päin',
+          'Ylös Toompealle, siis omaan kaupunkiin',
           'Alas kauppiaiden torille',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Yläkaupunki Toompea ja alakaupunki yhdistettiin vasta '
           + 'vuonna 1878. Kahden eripituisen kadun takia Tallinnaa '
           + 'sanotaan leikillään ontuvaksi kaupungiksi.',

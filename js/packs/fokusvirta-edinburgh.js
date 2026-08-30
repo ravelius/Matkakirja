@@ -138,11 +138,11 @@ const LINNANKAIVO_VISA = {
   kysymys: 'Edinburghin linnan kallioon hakattiin 34 metriä syvä kaivo. '
     + 'Mikä siinä oli vika?',
   vaihtoehdot: [
-    'Se ehtyi juuri piiritysten aikana',
     'Sen vesi maistui suolaiselta merituulen takia',
+    'Se ehtyi juuri piiritysten aikana',
     'Se jäätyi talvisin pohjaa myöten umpeen',
   ],
-  oikea: 0,
+  oikea: 1,
   fakta: 'Kallio on tulivuoren kurkku, joka jähmettyi noin 350 miljoonaa '
     + 'vuotta sitten poikkeuksellisen kovaksi. Jäätikkö ei pystynyt '
     + 'sille vaan kaivoi maan sen ympäriltä ja jätti taakseen pitkän '
@@ -327,11 +327,11 @@ export const FOKUSVIRTA_EDINBURGH = {
         kysymys: 'Bobbyn pronssipatsas seisoo graniittipylväällä George IV '
           + 'Bridgen päässä. Mitä varten pylväs alun perin pystytettiin?',
         vaihtoehdot: [
-          'Juomakaivoksi',
-          'Kaasulyhdyn jalustaksi',
           'Kirkkomaan porttipylvääksi',
+          'Kaasulyhdyn jalustaksi',
+          'Juomakaivoksi',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Lady Burdett-Coutts tilasi muistomerkin jo ennen koiran '
           + 'kuolemaa, ja William Brodie veisti pronssin elävästä '
           + 'mallista. Maan tasalla on kahdeksankulmainen juottokaukalo, ja '
@@ -429,11 +429,11 @@ export const FOKUSVIRTA_EDINBURGH = {
       visa: {
         kysymys: 'Mistä pikkuarkuissa maanneet nuket oli tehty?',
         vaihtoehdot: [
-          'Leikkisotilaista',
-          'Pähkinänkuorista ja kankaasta',
           'Vahasta, joka oli sittemmin sulanut yhteen',
+          'Pähkinänkuorista ja kankaasta',
+          'Leikkisotilaista',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Arkut ajoitettiin 1830-luvulle nukkien vaatteiden '
           + 'ompelulangasta. Kahdeksan seitsemästätoista arkusta on '
           + 'jäljellä, eikä yksikään tarjottu selitys ole toistaiseksi '

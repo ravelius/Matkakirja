@@ -306,11 +306,11 @@ export const FOKUSVIRTA_BERGEN = {
         kysymys: 'Miksi sauvakirkon puu on kestänyt lähes kahdeksansataa '
           + 'vuotta?',
         vaihtoehdot: [
-          'Tolpat ja seinälaudat eivät kosketa maata',
           'Kirkko puretaan ja kootaan uudelleen sadan vuoden välein',
+          'Tolpat ja seinälaudat eivät kosketa maata',
           'Puu keitettiin ennen pystytystä suolavedessä',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Vanhimmissa puukirkoissa tolpat upotettiin maahan ja ne '
           + 'lahosivat. Ratkaisu löytyi kahdessa vaiheessa: ensin tolpat '
           + 'nostettiin kivien päälle, sitten koko kirkko kivijalan päälle '
@@ -384,11 +384,11 @@ export const FOKUSVIRTA_BERGEN = {
       visa: {
         kysymys: 'Minkä eläinten lähisukulainen myskihärkä on?',
         vaihtoehdot: [
-          'Lampaiden ja vuohien',
-          'Nautojen ja biisonien',
           'Hirvien ja poroja lähellä olevien peurojen',
+          'Nautojen ja biisonien',
+          'Lampaiden ja vuohien',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Suvun latinankielinen nimi Ovibos tarkoittaa lammas-härkää. '
           + 'Nykyinen norjalaiskanta polveutuu vuoden 1947 kuljetuksesta '
           + 'Grönlannista, ja osa laumasta on kävellyt sittemmin Ruotsin '
@@ -470,11 +470,11 @@ export const FOKUSVIRTA_BERGEN = {
       visa: {
         kysymys: 'Miten Geirangervuonon rinnetiloille päästiin ennen?',
         vaihtoehdot: [
-          'Veneellä ja köysitikkaita pitkin',
-          'Talvella jäätä myöten',
           'Vuonon yli vedettyä vaijeria pitkin korissa',
+          'Talvella jäätä myöten',
+          'Veneellä ja köysitikkaita pitkin',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Tilat ovat nykyään tyhjillään, ja tunnetuimmat niistä ovat '
           + 'Skageflå, Knivsflå ja Blomberg. Vuono otettiin '
           + 'maailmanperintöluetteloon 2005 yhdessä Nærøyvuonon kanssa.',

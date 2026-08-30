@@ -903,8 +903,8 @@ export const AFRICA_KULTTUURI = {
     ],
     kysymys: {
       q: 'Kuinka kauan Kanon indigokuopat ovat olleet käytössä?',
-      options: ['1400-luvulta asti', 'Sata vuotta', 'Kaksikymmentä vuotta', 'Vuodesta 1960'],
-      correct: 0,
+      options: ['Sata vuotta', '1400-luvulta asti', 'Kaksikymmentä vuotta', 'Vuodesta 1960'],
+      correct: 1,
       fact: 'Kofar Matan kuopat ovat värjänneet kankaita yhtäjaksoisesti '
         + 'yli viisisataa vuotta — samojen sukujen voimin.',
     },
@@ -945,8 +945,8 @@ export const AFRICA_KULTTUURI = {
     ],
     kysymys: {
       q: 'Mistä buduma-kalastajien veneet on tehty?',
-      options: ['Papyruskaislasta', 'Teräksestä', 'Bambusta', 'Norsunluusta'],
-      correct: 0,
+      options: ['Bambusta', 'Teräksestä', 'Papyruskaislasta', 'Norsunluusta'],
+      correct: 2,
       fact: 'Papyruksesta sidottu vene on kevyt ja uppoamaton — malli on '
         + 'pysynyt samana tuhansia vuosia.',
     },
@@ -988,8 +988,8 @@ export const AFRICA_KULTTUURI = {
     ],
     kysymys: {
       q: 'Kuka vei Kamerunin makossa-rytmin maailmalle?',
-      options: ['Manu Dibango', 'Louis Armstrong', 'Fela Kuti', 'Miriam Makeba'],
-      correct: 0,
+      options: ['Miriam Makeba', 'Louis Armstrong', 'Fela Kuti', 'Manu Dibango'],
+      correct: 3,
       fact: 'Saksofonisti Manu Dibangon "Soul Makossa" (1972) teki '
         + 'makossasta maailmankuulun.',
     },
@@ -1030,8 +1030,8 @@ export const AFRICA_KULTTUURI = {
     ],
     kysymys: {
       q: 'Mitkä kaksi tunnettua tanssia polveutuvat Angolan sembasta?',
-      options: ['Kizomba ja samba', 'Valssi ja polkka', 'Tango ja flamenco', 'Disko ja tekno'],
-      correct: 0,
+      options: ['Tango ja flamenco', 'Valssi ja polkka', 'Kizomba ja samba', 'Disko ja tekno'],
+      correct: 2,
       fact: 'Semba kulki orjalaivojen mukana Brasiliaan sambaksi, ja '
         + 'kotimaassa siitä kasvoi kizomba.',
     },
@@ -1070,8 +1070,8 @@ export const AFRICA_KULTTUURI = {
     ],
     kysymys: {
       q: 'Mistä welwitschia-kasvi saa vetensä Namibin aavikolla?',
-      options: ['Meren sumusta', 'Sateista', 'Pohjavedestä', 'Kastelusta'],
-      correct: 0,
+      options: ['Kastelusta', 'Sateista', 'Pohjavedestä', 'Meren sumusta'],
+      correct: 3,
       fact: 'Kylmä Benguelan merivirta työntää sumun aavikolle, ja '
         + 'welwitschia juo sen lehdillään — yli tuhat vuotta.',
     },
@@ -1110,8 +1110,8 @@ export const AFRICA_KULTTUURI = {
     ],
     kysymys: {
       q: 'Kuka on Jonathan, St. Helenan kuuluisin asukas?',
-      options: ['Maailman vanhin kilpikonna', 'Majakanvartija', 'Napoleonin kokki', 'Laivan papukaija'],
-      correct: 0,
+      options: ['Majakanvartija', 'Maailman vanhin kilpikonna', 'Napoleonin kokki', 'Laivan papukaija'],
+      correct: 1,
       fact: 'Jättiläiskilpikonna Jonathan kuoriutui arviolta 1832 ja on '
         + 'vanhin tunnettu elävä maaeläin.',
     },
@@ -1151,8 +1151,8 @@ export const AFRICA_KULTTUURI = {
     ],
     kysymys: {
       q: 'Mitä putousten paikallinen nimi Mosi-oa-Tunya tarkoittaa?',
-      options: ['Jylisevää savua', 'Suurta vettä', 'Sateenkaarta', 'Krokotiilien kotia'],
-      correct: 0,
+      options: ['Sateenkaarta', 'Suurta vettä', 'Jylisevää savua', 'Krokotiilien kotia'],
+      correct: 2,
       fact: 'Vesisumu nousee kuin savupatsas ja jylinä kuuluu kauas — '
         + 'siitä nimi jylisevä savu.',
     },
@@ -1192,8 +1192,8 @@ export const AFRICA_KULTTUURI = {
     ],
     kysymys: {
       q: 'Miten Kimberleyn Big Hole kaivettiin?',
-      options: ['Käsin lapioin ja hakuin', 'Dynamiitilla', 'Kaivinkonein', 'Vesisuihkuin'],
-      correct: 0,
+      options: ['Vesisuihkuin', 'Dynamiitilla', 'Kaivinkonein', 'Käsin lapioin ja hakuin'],
+      correct: 3,
       fact: 'Kymmenettuhannet kaivajat upottivat kuopan käsivoimin — se '
         + 'on suurin käsin kaivettu kuoppa maailmassa.',
     },
@@ -1233,8 +1233,8 @@ export const AFRICA_KULTTUURI = {
     ],
     kysymys: {
       q: 'Mistä marrabenta-musiikki sai nimensä?',
-      options: ['Katkeavista kitarankielistä', 'Meren aalloista', 'Rummun äänestä', 'Tanssin askelista'],
-      correct: 0,
+      options: ['Meren aalloista', 'Katkeavista kitarankielistä', 'Rummun äänestä', 'Tanssin askelista'],
+      correct: 1,
       fact: 'Rebentar tarkoittaa repeämistä — kitaroita soitettiin niin '
         + 'rajusti, että kielet katkesivat.',
     },
@@ -1275,12 +1275,12 @@ export const AFRICA_KULTTUURI = {
     kysymys: {
       q: 'Miksi baobabia sanotaan väärinpäin istutetuksi puuksi?',
       options: [
-        'Latva näyttää juurilta taivasta vasten',
-        'Se kasvaa alaspäin',
         'Juuret ovat maan päällä',
+        'Se kasvaa alaspäin',
+        'Latva näyttää juurilta taivasta vasten',
         'Se kukkii talvella',
       ],
-      correct: 0,
+      correct: 2,
       fact: 'Tarun mukaan jumalat istuttivat baobabin väärinpäin — '
         + 'lehdetön latva harottaa kuin juuristo taivasta kohti.',
     },
@@ -1322,12 +1322,12 @@ export const AFRICA_KULTTUURI = {
     kysymys: {
       q: 'Miksi Kilimandžaroa sanotaan maailman korkeimmaksi yksinäiseksi vuoreksi?',
       options: [
-        'Se ei kuulu mihinkään vuoristoon',
+        'Se siirtyy paikaltaan',
         'Sinne ei pääse kukaan',
         'Se on aina pilvessä',
-        'Se siirtyy paikaltaan',
+        'Se ei kuulu mihinkään vuoristoon',
       ],
-      correct: 0,
+      correct: 3,
       fact: 'Kilimandžaro nousee savannilta yksin lähes kuuteen '
         + 'kilometriin — ympärillä ei ole muita vuoria.',
     },
@@ -1367,8 +1367,8 @@ export const AFRICA_KULTTUURI = {
     ],
     kysymys: {
       q: 'Mitä Bugandan kuninkaalliset rummut merkitsivät?',
-      options: ['Valtaa ja viestejä', 'Sadetta', 'Kalansaalista', 'Satoa'],
-      correct: 0,
+      options: ['Sadetta', 'Valtaa ja viestejä', 'Kalansaalista', 'Satoa'],
+      correct: 1,
       fact: 'Rummut olivat vallan pyhin merkki, ja niiden rytmit '
         + 'kuljettivat viestejä kylästä kylään.',
     },
@@ -1408,12 +1408,12 @@ export const AFRICA_KULTTUURI = {
     kysymys: {
       q: 'Miten Liemba-laiva päätyi Tanganjikajärvelle?',
       options: [
-        'Se koottiin järvellä osista',
-        'Se purjehti jokea pitkin',
         'Se rakennettiin rannalla puusta',
+        'Se purjehti jokea pitkin',
+        'Se koottiin järvellä osista',
         'Se nostettiin merestä',
       ],
-      correct: 0,
+      correct: 2,
       fact: 'Laiva rakennettiin Saksassa 1913, purettiin osiin ja '
         + 'koottiin järven rannalla uudelleen.',
     },
@@ -1453,8 +1453,8 @@ export const AFRICA_KULTTUURI = {
     ],
     kysymys: {
       q: 'Mikä on dinka-kansalle tärkeintä?',
-      options: ['Karja', 'Kulta', 'Kalastus', 'Kauppa'],
-      correct: 0,
+      options: ['Kauppa', 'Kulta', 'Kalastus', 'Karja'],
+      correct: 3,
       fact: 'Karja on dinkojen varallisuus ja runous: jokainen eläin '
         + 'tunnetaan nimeltä, ja niistä sepitetään lauluja.',
     },
@@ -1494,8 +1494,8 @@ export const AFRICA_KULTTUURI = {
     ],
     kysymys: {
       q: 'Mitä nimi Darfur tarkoittaa?',
-      options: ['Furien kotia', 'Kuumaa tuulta', 'Kultaista hiekkaa', 'Suurta jokea'],
-      correct: 0,
+      options: ['Kuumaa tuulta', 'Furien kotia', 'Kultaista hiekkaa', 'Suurta jokea'],
+      correct: 1,
       fact: 'Dar on koti ja fur on alueen kansa — Darfur on furien '
         + 'koti, vanhan sulttaanikunnan maa.',
     },
@@ -1535,8 +1535,8 @@ export const AFRICA_KULTTUURI = {
     ],
     kysymys: {
       q: 'Mistä Suakinin talot rakennettiin?',
-      options: ['Korallikivestä', 'Marmorista', 'Tiilestä', 'Puusta'],
-      correct: 0,
+      options: ['Tiilestä', 'Marmorista', 'Korallikivestä', 'Puusta'],
+      correct: 2,
       fact: 'Korallia sahattiin merestä lohkareina — huokoinen kivi '
         + 'viilensi talot, mutta suli hoitamattomana sateisiin.',
     },
@@ -1577,8 +1577,8 @@ export const AFRICA_KULTTUURI = {
     ],
     kysymys: {
       q: 'Mitä arvokasta Somalian rannikolta on viety neljä tuhatta vuotta?',
-      options: ['Suitsuketta', 'Timantteja', 'Silkkiä', 'Teetä'],
-      correct: 0,
+      options: ['Teetä', 'Timantteja', 'Silkkiä', 'Suitsuketta'],
+      correct: 3,
       fact: 'Suitsukepuun pihka oli faaraoiden temppelien tuoksu — ja '
         + 'sitä kerätään samoilta rinteiltä yhä.',
     },
@@ -1619,12 +1619,12 @@ export const AFRICA_KULTTUURI = {
     kysymys: {
       q: 'Mikä tekee Nairobista ainutlaatuisen pääkaupungin?',
       options: [
-        'Kansallispuisto kaupungin rajalla',
         'Maailman korkein torni',
+        'Kansallispuisto kaupungin rajalla',
         'Kaupungin halki virtaava suurjoki',
         'Maanalainen vanhakaupunki',
       ],
-      correct: 0,
+      correct: 1,
       fact: 'Nairobin kansallispuiston leijonat ja kirahvit elävät '
         + 'muutaman kilometrin päässä keskustan torneista.',
     },

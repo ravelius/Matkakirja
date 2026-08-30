@@ -378,11 +378,11 @@ export const FOKUSVIRTA_ISTANBUL = {
         kysymys: 'Mitä pylvään kierteistä paljastui, kun jalusta '
           + 'kaivettiin esiin?',
         vaihtoehdot: [
-          'Kolmenkymmenenyhden kaupungin nimet',
           'Konstantinuksen oma nimikirjoitus',
+          'Kolmenkymmenenyhden kaupungin nimet',
           'Apollonin ennustus persialaissodasta',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Pylväs oli alun perin Plataian voiton muisto Delfoissa '
           + 'vuodelta 478 eaa. Kaiverretut kaupungit ovat ne, jotka '
           + 'lähtivät sotaan.',
@@ -431,11 +431,11 @@ export const FOKUSVIRTA_ISTANBUL = {
         kysymys: 'Mikä Camondon teko sai osan rabbeista kääntymään häntä '
           + 'vastaan?',
         vaihtoehdot: [
-          'Koulu, jonka hän perusti köyhimpään kaupunginosaan',
-          'Rahalaina ottomaanihallitukselle',
           'Muutto Pariisiin vanhoilla päivillään',
+          'Rahalaina ottomaanihallitukselle',
+          'Koulu, jonka hän perusti köyhimpään kaupunginosaan',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Koulu perustettiin 1858 ja toimi kolmekymmentäkaksi '
           + 'vuotta. Camondo kuoli 30. maaliskuuta 1873 ja haudattiin '
           + 'Istanbuliin 14. huhtikuuta samana keväänä.',
@@ -488,11 +488,11 @@ export const FOKUSVIRTA_ISTANBUL = {
         kysymys: 'Miksi kissoista tuli ottomaaniajan Istanbulissa '
           + 'välttämättömiä?',
         vaihtoehdot: [
-          'Kaupungin talot olivat lähes kaikki puuta',
           'Sulttaani määräsi jokaiseen taloon kissan',
+          'Kaupungin talot olivat lähes kaikki puuta',
           'Ne vartioivat basaarin kauppatavaraa öisin',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Puutalot antoivat suojan hiirille ja rotille. Kissojen '
           + 'ruokkimisesta tuli lopulta oma ammattinsa, mancacı, ja '
           + 'nykyään maassa on kategorinen kielto ottaa katukissoja '

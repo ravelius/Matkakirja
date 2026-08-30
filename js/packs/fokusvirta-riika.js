@@ -121,11 +121,11 @@ const SKLANDRAUSIS_VISA = {
     + 'täytteenä on perunaa ja porkkanaa kuminan kanssa. Mistä sen pohja '
     + 'tehdään?',
   vaihtoehdot: [
-    'Ruistaikinasta',
     'Voitaikinasta',
+    'Ruistaikinasta',
     'Perunataikinasta',
   ],
-  oikea: 0,
+  oikea: 1,
   fakta: 'Sklandrausis on kotoisin Kuurinmaalta Latvian länsiosasta, ja '
     + 'EU myönsi sille aidon perinteisen tuotteen merkin vuonna 2013.',
 };
@@ -273,11 +273,11 @@ export const FOKUSVIRTA_RIIKA = {
         kysymys: 'Miksi balsamia myydään läpinäkymättömässä '
           + 'keramiikkapullossa?',
         vaihtoehdot: [
-          'Se suojaa juomaa valolta ja lämmöltä',
-          'Se on apteekin alkuperäinen pakkaus 1700-luvulta',
           'Savi antaa juomaan osan sen mausta',
+          'Se on apteekin alkuperäinen pakkaus 1700-luvulta',
+          'Se suojaa juomaa valolta ja lämmöltä',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Pullo on paljon reseptiä nuorempi: sen suunnitteli vasta '
           + 'vuonna 1969 Latvijas Keramikan ja Riian teknillisen '
           + 'korkeakoulun yhteinen ryhmä. Reseptissä on 24 ainesosaa, '
@@ -359,11 +359,11 @@ export const FOKUSVIRTA_RIIKA = {
         kysymys: 'Kuka järjesti ensimmäiset latvialaiset laulujuhlat '
           + 'Riiassa vuonna 1873?',
         vaihtoehdot: [
-          'Riian latvialainen seura',
           'Kaupungin saksankielinen raati',
+          'Riian latvialainen seura',
           'Keisarikunnan koulutoimi',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Laulajia oli 1003 ja orkesterisoittajia 30, ja yleisöä '
           + 'arviolta kaksikymmentätuhatta. Juhlat on sen jälkeen pidetty '
           + 'viiden vuoden välein.',
@@ -433,11 +433,11 @@ export const FOKUSVIRTA_RIIKA = {
         kysymys: 'Kuinka suuri osa Riian keskustan rakennuksista on '
           + 'jugendtyylisiä?',
         vaihtoehdot: [
-          'Noin kolmasosa',
-          'Noin joka kymmenes',
           'Lähes kaikki',
+          'Noin joka kymmenes',
+          'Noin kolmasosa',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Mihail Eisenstein oli ammatiltaan tieosaston insinööri ja '
           + 'suunnitteli sivutyönään parikymmentä taloa, tunnetuimmat '
           + 'vuosina 1901–1906. Hänen poikansa Sergei tuli kuuluisaksi '

@@ -397,11 +397,11 @@ export const FOKUSVIRTA_PIETARI = {
         kysymys: 'Viisikymmentä keisarillista pääsiäismunaa valmistui, '
           + 'ja osa niistä on hävinnyt jäljettömiin. Kuinka moni?',
         vaihtoehdot: [
-          'Kuusi',
           'Yksi ainoa, ja sekin löytyi jo',
+          'Kuusi',
           'Yli puolet koko sarjasta',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Kaikki kadonneet kuuluivat leskikeisarinna Maria '
           + 'Fjodorovnalle, ja kolmesta niistä on säilynyt valokuva. '
           + 'Vuoden 1887 muna löytyi 2012 ja tunnistettiin 2014.',
@@ -506,11 +506,11 @@ export const FOKUSVIRTA_PIETARI = {
         kysymys: 'Millä keinolla tuhatviisisataa tonnia painava lohkare '
           + 'saatiin liikkumaan merenrantaan asti?',
         vaihtoehdot: [
-          'Reki liukui pronssipallojen päällä',
-          'Sitä vieritettiin puurullien päällä väkipyörien avulla',
           'Sitä vetivät sadat hevoset jäätynyttä jokea pitkin',
+          'Sitä vieritettiin puurullien päällä väkipyörien avulla',
+          'Reki liukui pronssipallojen päällä',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Neljäsataa miestä liikutti kiveä yhdeksän kuukautta ilman '
           + 'eläimiä ja koneita. Rataa oli kerrallaan sata metriä, ja se '
           + 'purettiin ja ladottiin uudelleen koko matkan ajan.',
@@ -603,11 +603,11 @@ export const FOKUSVIRTA_PIETARI = {
       visa: {
         kysymys: 'Mikä Pulkovan meridiaani oli 1800-luvun Venäjällä?',
         vaihtoehdot: [
-          'Karttojen nollapiste',
-          'Rautatielinja, jota pitkin tarkka kellonaika siirrettiin',
           'Kaupungin halki vedetty pääkatu, joka osoitti etelään',
+          'Rautatielinja, jota pitkin tarkka kellonaika siirrettiin',
+          'Karttojen nollapiste',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Viiva kulkee observatorion päärakennuksen keskeltä, 30 '
           + 'astetta ja 19,6 minuuttia Greenwichistä itään. Struven '
           + 'kolmiomittausketju Hammerfestista Mustallemerelle on 2 820 '
