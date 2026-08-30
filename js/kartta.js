@@ -21,6 +21,7 @@ import {
 } from './ambience-stream.js';
 import { naytaLivianAvaus } from './livia.js';
 import { stopDiaryVoice, stopIntroVoice } from './luenta.js';
+import { pyramidinArkki } from './laattapyramidi.js';
 import { el } from './mapart.js';
 import { sfx } from './sound.js';
 import { fokusmoodiPaalla, kehittajaMaailmaPaalla, kehittajaTilaPaalla } from './ui-apurit.js';
@@ -120,6 +121,32 @@ const ZOOMI_LAHIN_KAPEA = 58;
 // Sama raja kuin saapumisportaalla (saapumisPorras): tätä kapeampi
 // karttaruutu on puhelin.
 const KAPEAN_RAJA = 700;
+
+/*
+ * ULOSZOOMAUKSEN LÖYSENNYS (omistajan päätös 30.8.2026): *"Raja pysyy,
+ * mutta uloszoomaus sallitaan esimerkiksi kolminkertaiseen maan
+ * ikkunaan. Näet maan ja sen naapurit, mutta et koko maailmaa.
+ * Säilyttää fokuksen ja poistaa klaustrofobian; kerroin on
+ * säädettävissä kun näet sen laitteella."*
+ *
+ * Maan ikkuna palasi v1366:ssa, ja sen mukana panorointirajat — mutta
+ * maassa ollessa ei enää päässyt loitontamaan maan ikkunaa laajemmalle
+ * (mitattu: kamera pyysi 900 lautayksikön näkymää Bulgariassa ja pysyi
+ * 284:ssä). Raamatun sääntö *"maatila rajaa panoroinnin maan
+ * ympärille"* pysyy voimassa: rajattu alue on maan ikkuna kerrottuna
+ * tällä luvulla, ei koko maailma.
+ *
+ * KERROIN ON SÄÄDETTÄVÄ, JA TÄMÄ ON SE YKSI PAIKKA. Omistaja arvioi
+ * lopullisen luvun laitteella (iPad ja iPhone, pystyruutu), koska
+ * "maa ja sen naapurit" on silmämääräinen mitta eikä laskettava —
+ * kolme on lähtöarvo, ei mittaustulos. Luku kerrotaan ikkunan
+ * MOLEMPIIN mittoihin keskipisteen ympäri (levitaAlue), joten se
+ * kohtelee Chilen kaltaista kapeaa maata samoin kuin Venäjää: se
+ * jakaa uloszoomauksen mittakaavarajan täsmälleen tällä luvulla
+ * riippumatta ikkunan muodosta. Yhden mitan kertominen tai kiinteä
+ * yksikkömarginaali tekisi kapeasta maasta erikoistapauksen.
+ */
+const ULOSZOOMAUS_KERROIN = 3;
 
 /*
  * Mihin saapumiszoom pysähtyy.
@@ -345,6 +372,25 @@ function yhdistaAlue(a, b) {
   };
 }
 
+/**
+ * Laatikko kerrottuna keskipisteensä ympäri (ks. ULOSZOOMAUS_KERROIN).
+ *
+ * SYMMETRINEN JA MOLEMMILLE AKSELEILLE, jotta muoto säilyy: kapea maa
+ * (Chile, Norja) saa saman suhteellisen väljyyden kuin leveä, eikä
+ * kerroin luiskahda vain toiselle akselille.
+ */
+function levitaAlue(alue, kerroin) {
+  if (!(kerroin > 1)) return alue;
+  const w = alue.w * kerroin;
+  const h = alue.h * kerroin;
+  return {
+    x: alue.x + alue.w / 2 - w / 2,
+    y: alue.y + alue.h / 2 - h / 2,
+    w,
+    h,
+  };
+}
+
 export class Kartta {
   constructor(ui) {
     this.ui = ui;
@@ -391,6 +437,28 @@ export class Kartta {
    */
   boardBounds() {
     const { board, pack } = this.ui.game;
+    /*
+     * PYRAMIDILAUDALLA MAAILMA ON ARKKI (omistajan iPad-havainto
+     * 30.8.2026: *"Toiseksi laajin kartta ei näytä koko karttaa vaan
+     * leikkaa ylhäältä ja alhaalta karttaa pois."*).
+     *
+     * Alla oleva laskenta johtaa rajat kaupungeista, reiteistä ja
+     * koristeista — siis SISÄLLÖSTÄ, joka on peräisin vanhalta
+     * laudalta. Kun kartta on laattapyramidi, se on väärä mitta:
+     * mitattu laatikko oli y 254…5345, mutta arkin kartta-ala on
+     * y −611…5811 ja koko paperi kehyksineen −1046…6261. Ero
+     * leikkasi ylhäältä 865 ja alhaalta 466 yksikköä juuri sitä
+     * aluetta, jonka takia arkkia laajennettiin (Grönlannin kärki,
+     * Huippuvuoret, JÄÄMERI-nimiö) — ja piilotti paperimarginaalin ja
+     * kehyksen, jotka uloimmille tasoille tehtiin.
+     *
+     * Arkki tulee pyramidin luettelosta (js/laattapyramidi.js
+     * pyramidinArkki), eli samasta lähteestä kuin laattojen paikat.
+     * Kopio, koska aloitusnäkymä kasvattaa laatikkoa eikä luettelon
+     * oliota saa muuttaa.
+     */
+    const arkki = pyramidinArkki(pack.id);
+    if (arkki) return this.withIntroSpace({ ...arkki });
     // Valmiiksi rajattu lauta (esim. Maailma) käyttää omaa kehystään.
     // Kopio, koska aloitusnäkymä kasvattaa laatikkoa eikä pakkaa saa muuttaa.
     if (pack.map.frame) return this.withIntroSpace({ ...pack.map.frame });
@@ -1030,14 +1098,16 @@ export class Kartta {
      * FOKUSIKKUNA ON PORTAIKON POHJA (omistajan pelitesti 24.8.2026,
      * v1101: *"fokustilassa näkyy vanha pelilauta fokuskuvan
      * ulkopuolella"*). Loitonnus pysähtyy fokusikkunaan — kauemmas ei
-     * pääse painikkeella eikä rullalla.
+     * pääse painikkeella eikä rullalla. Pohja on 30.8.2026 alkaen
+     * LÖYSENNETTY ikkuna (ULOSZOOMAUS_KERROIN): viimeinen loitonnus vie
+     * ruudulle maan ja sen naapurit.
      *
-     * VIIMEINEN ASKEL ON VAPAA KERROIN, EI PORRAS. Ikkuna osuu harvoin
+     * VIIMEINEN ASKEL ON VAPAA KERROIN, EI PORRAS. Pohja osuu harvoin
      * portaikon askelmalle, ja portaaseen pyöristäminen jätti pelaajan
      * puolitoistakertaa liian lähelle (mitattu: ikkuna 466 yksikköä,
-     * lähin porras 313). Viimeinen loitonnus vie siis täsmälleen siihen
-     * näkymään, johon saapumisajokin — mikä on samalla se, mitä pelaaja
-     * yrittää nähdä.
+     * lähin porras 313). Viimeinen loitonnus vie siis täsmälleen
+     * siihen näkymään, jonka sääntö sallii — mikä on samalla se, mitä
+     * pelaaja yrittää nähdä.
      */
     const pohjaKerroin = this.fokusZoomMinimi();
     const pohjalle = pohjaKerroin > 0 && raaka < this.fokusPorrasMinimi();
@@ -1441,8 +1511,33 @@ export class Kartta {
     // pergamentti jatkuu rajauksen yli joka suuntaan (mapart.js PAPER),
     // joten kaista näyttää kartalta eikä tyhjältä.
     const pohjoisJatko = (paneH * YLAKAISTA) / skaala;
-    const ylaReuna = box.y - pohjoisJatko;
-    const korkeusYks = box.h + pohjoisJatko + etelaJatko;
+    let ylaReuna = box.y - pohjoisJatko;
+    let korkeusYks = box.h + pohjoisJatko + etelaJatko;
+    /*
+     * LAVA EI ULOTU ARKIN ULKOPUOLELLE (sama havainto kuin
+     * boardBounds: omistaja 30.8.2026).
+     *
+     * Ylä- ja alakaista ovat vanhan laudan sääntö: ne varaavat
+     * panoroitavaa tilaa kartan ulkopuolelta, jotta reunimmaiset
+     * kaupungit saa nostettua nappirivien alta. Pyramidilaudalla
+     * SAMA TILA ON JO PAPERISSA — arkissa on kartta-alan ympärillä
+     * marginaali ja kehys — ja kaistan lisääminen sen päälle veisi
+     * panoroinnin alueelle, jossa ei ole yhtään laattaa: pelkkää
+     * tyhjää arkin ulkopuolelta.
+     *
+     * Aloitusnäkymässä kaistaa ei leikata: siellä laatikkoa on
+     * tarkoituksella jatkettu avaustekstille (withIntroSpace).
+     */
+    const arkki = this.introKaistaKaytossa()
+      ? null : pyramidinArkki(this.ui.game.pack.id);
+    if (arkki) {
+      const yla = Math.max(ylaReuna, arkki.y);
+      const ala = Math.min(ylaReuna + korkeusYks, arkki.y + arkki.h);
+      if (ala > yla) {
+        ylaReuna = yla;
+        korkeusYks = ala - yla;
+      }
+    }
     /*
      * Kiertävällä kartalla piirretään yksi ruudullinen yli laudan
      * leveyden. Se on juuri se kaistale, jonka <use>-kopio täyttää, ja
@@ -1531,7 +1626,17 @@ export class Kartta {
     this.ui.svg.style.width = `${leveys}px`;
     this.ui.svg.style.height = `${korkeus}px`;
     this.ui.svg.style.flex = '0 0 auto';
-    this.ui.svg.style.alignSelf = 'flex-start';
+    /*
+     * ARKKIA LYHYEMPI LAVA KESKELLE, EI YLÄLAITAAN.
+     *
+     * Pystyruudulla koko arkin levyinen näkymä on arkkia korkeampi —
+     * kuvasuhde ei anna muuta — ja silloin lava on paneelia matalampi.
+     * `panY` on tällöin pakotettu nollaan (asetaPan, panVaraY = 0),
+     * joten flex-start pinoaisi kartan yläreunaan ja jättäisi koko
+     * tyhjän paperin alalaitaan. Keskitys jakaa sen tasan ylös ja alas
+     * kuten ennen arkkirajausta.
+     */
+    this.ui.svg.style.alignSelf = korkeus < paneH ? 'center' : 'flex-start';
     this.ui.viewBoxSize = { vw: nakyvaYks, vh: nakyvaKorkeus };
     this.ui.zoomVasenReuna = ikkuna.x;
     this.ui.zoomYlaReuna = ikkuna.y;
@@ -2461,11 +2566,18 @@ export class Kartta {
    *
    * KOLME SÄÄNTÖÄ:
    *
-   *   1. IKKUNA ON POHJA. Loitonnus pysähtyy siihen mittakaavaan, jolla
-   *      maan fokusikkuna (FOKUS_POHJAT[iso].rajaus) juuri mahtuu
-   *      ruudulle — täsmälleen se näkymä, johon saapumisajo vie
-   *      (js/fokuskartta.js). Kauemmas ei pääse painikkeella, rullalla,
-   *      nipistyksellä eikä pelin omalla kamera-ajolla.
+   *   1. IKKUNA ON POHJA — KERTAA ULOSZOOMAUS_KERROIN (omistajan päätös
+   *      30.8.2026). Loitonnus pysähtyy siihen mittakaavaan, jolla maan
+   *      fokusikkuna (FOKUS_POHJAT[iso].rajaus) kolminkertaisena juuri
+   *      mahtuu ruudulle: maa ja sen naapurit näkyvät, koko maailma ei.
+   *      Kauemmas ei pääse painikkeella, rullalla, nipistyksellä eikä
+   *      pelin omalla kamera-ajolla. Ilman löysennystä kamera oli
+   *      lukossa maan omaan laatikkoon, ja omistaja huomasi sen heti
+   *      laitteella (docs/viesti-fable.md, päätöskysymys 1).
+   *
+   *      SAMA LÖYSENNYS KOSKEE PANOROINTIA (sääntö 2), muuten näkymä
+   *      taistelisi itsensä kanssa: pelaaja näkisi naapurit mutta ei
+   *      voisi siirtää katsettaan niihin.
    *   2. REUNAT, EI KESKIPISTE. Käsiele rajataan niin, että ruudun
    *      REUNAT pysyvät kuvan sisällä. Kun ruutu on kuvaa isompi
    *      (pystyruudulla kuvat ovat vaakasuuntaisia), akseli lukitaan
@@ -2487,10 +2599,21 @@ export class Kartta {
   /**
    * Fokusnäkymän rajaukset laudan yksiköissä tai null.
    *
-   * `ikkuna` on se, mitä kameran pitää näyttää (uloszoomauksen pohja),
-   * `kuva` se, minkä ulkopuolelle ei saa panoroida. Ne eivät ole sama
-   * laatikko: kuvassa on ikkunan ympärillä vuotoa, joka sulattaa sauman
-   * lautaan (js/fokuskartta.js).
+   * Kolme laatikkoa, kolme eri tehtävää:
+   *
+   *   `ikkuna` — MAAN OMA IKKUNA. Se, mitä kameran pitää näyttää, kun
+   *     se ylipäätään ajetaan (tarkistaFokusZoom, saapuminen). Tämä on
+   *     yhä tiukka maan ikkuna: kun näkymä on karannut sallittua
+   *     laajemmaksi, kartta palautuu MAAHAN eikä naapureineen.
+   *   `uloin` — ULOSZOOMAUKSEN POHJA eli ikkuna kerrottuna
+   *     ULOSZOOMAUS_KERROIMELLA. Tämän mittakaavaa kauemmas ei pääse
+   *     (fokusZoomMinimi).
+   *   `kuva` — PANOROINNIN RAJA. Vähintään `uloin`, jotta ruudulla
+   *     näkyvään alueeseen voi myös siirtää katseen; maan oman
+   *     laatikon (bbox) yli se ei koskaan kutistu.
+   *
+   * Matkavalinnan ollessa auki kaikkiin kolmeen liitetään kohteiden
+   * alue (sääntö 3), jottei peli rajaa itseään umpikujaan.
    */
   fokusRajaukset() {
     if (!this.ui.fokusmoodi || this.ui.katselu) return null;
@@ -2546,9 +2669,26 @@ export class Kartta {
     const muisti = this.rajausMuisti;
     if (muisti && muisti.kuva === kuva && muisti.ikkuna === ikkuna
       && muisti.kohteet === kohteet) return muisti.arvo;
+    /*
+     * LÖYSENNYS LASKETAAN TÄSSÄ, EI KULUTTAJISSA. Uloszoomauksen raja
+     * ja panoroinnin raja on johdettava SAMASTA laatikosta, muuten ne
+     * eriytyvät seuraavassa muutoksessa — ja juuri niiden eriytyminen
+     * olisi se vika, jossa pelaaja näkee naapurimaan muttei pääse
+     * katsomaan sitä.
+     *
+     * PANOROINTIALUE ON YHDISTE, EI KORVAAJA: maan oma laatikko (bbox)
+     * on ikkunaa väljempi, eikä löysennys saa kutistaa sitä millään
+     * ikkunan ja laatikon keskinäisellä asettelulla.
+     */
+    const uloin = levitaAlue(ikkuna, ULOSZOOMAUS_KERROIN);
+    const panRaja = yhdistaAlue(kuva, uloin);
     const arvo = kohteet
-      ? { ikkuna: yhdistaAlue(ikkuna, kohteet), kuva: yhdistaAlue(kuva, kohteet) }
-      : { ikkuna, kuva };
+      ? {
+        ikkuna: yhdistaAlue(ikkuna, kohteet),
+        uloin: yhdistaAlue(uloin, kohteet),
+        kuva: yhdistaAlue(panRaja, kohteet),
+      }
+      : { ikkuna, uloin, kuva: panRaja };
     this.rajausMuisti = { kuva, ikkuna, kohteet, arvo };
     return arvo;
   }
@@ -2600,10 +2740,14 @@ export class Kartta {
   /**
    * Pienin sallittu zoomikerroin fokusikkunan takia (0 = ei rajausta).
    *
-   * Sama mittakaava kuin saapumisajossa: ikkuna juuri ja juuri ruudulle
-   * (ajaKamera { bbox: ikkuna, marginaali: 0 }). Yläraja on portaikon
-   * tihein porras — rajaus ei saa koskaan viedä lähemmäs kuin mihin
-   * pelaaja pääsee omin käsin.
+   * MITTA ON `uloin` EIKÄ `ikkuna` (ULOSZOOMAUS_KERROIN): loitonnus
+   * pysähtyy siihen, missä maan ikkuna kolminkertaisena mahtuu
+   * ruudulle. Saapumisajo vie yhä maan omaan ikkunaan
+   * (tarkistaFokusZoom, ajaKamera { bbox: ikkuna, marginaali: 0 }), eli
+   * pelaaja saa loitontaa saapumisnäkymästä vielä kolme kertaa.
+   *
+   * Yläraja on portaikon tihein porras — rajaus ei saa koskaan viedä
+   * lähemmäs kuin mihin pelaaja pääsee omin käsin.
    */
   fokusZoomMinimi() {
     const rajat = this.fokusRajaukset();
@@ -2616,8 +2760,8 @@ export class Kartta {
     if (!paneW || !paneH) return 0;
     const yleis = this.yleiskuvanSkaala(paneW, paneH);
     if (!yleis) return 0;
-    const { ikkuna } = rajat;
-    const skaala = Math.min(paneW / ikkuna.w, paneH / ikkuna.h);
+    const uloin = rajat.uloin ?? rajat.ikkuna;
+    const skaala = Math.min(paneW / uloin.w, paneH / uloin.h);
     if (!(skaala > 0)) return 0;
     const tasot = this.zoomiTasot();
     return Math.min(tasot.at(-1) ?? MANNER_ZOOM, skaala / yleis);
@@ -2633,8 +2777,15 @@ export class Kartta {
   }
 
   /**
-   * Fokuskuva ilmestyi kartalle: jos näkymä on sen ikkunaa laajempi,
-   * kamera ajaa ikkunaan.
+   * Fokuskuva ilmestyi kartalle: jos näkymä on sallittua laajempi,
+   * kamera ajaa maan ikkunaan.
+   *
+   * KAKSI ERI LAATIKKOA, TARKOITUKSELLA. Ehto mitataan löysennetystä
+   * rajasta (fokusZoomMinimi, `uloin`) — kolminkertainen näkymä on
+   * pelaajan oikeus eikä sitä kiskota takaisin. Kun raja on OIKEASTI
+   * rikki, kamera ajaa maan omaan ikkunaan (`ikkuna`): silloin ollaan
+   * saapumassa tai palaamassa maailmanäkymästä, ja pelaaja haluaa
+   * nähdä maan — naapureihin hän loitontaa itse.
    *
    * Kutsutaan ui.paivitaFokusPohjasta. Kuva saapuu verkosta vasta
    * piirron jälkeen, ja siihen asti pelaaja on voinut jäädä yleiskuvaan
