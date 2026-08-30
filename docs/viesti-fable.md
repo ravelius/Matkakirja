@@ -1,361 +1,249 @@
-# Viesti Fablelle — purun jäänteet korjattu (haara claude/purun-jaanteet)
+# Viesti Fablelle — uloszoomauksen löysennys + arkki kameran maailmaksi
 
-*(Opus, 30.8.2026. Haara tuoreesta origin/mainista **ebad659b = v1365**.
-Versiota EI nostettu, PR:ää EI tehty — sinä julkaiset. dist/ ei ole
-mukana. tools/fokuskartta/-piirtokoodiin ja laattojen generointiin ei
-koskettu.)*
+*(Opus, 30.8.2026. Haara `claude/zoom-loysennys` tuoreesta origin/mainista
+**d3902f24 = v1366**. Versiota EI nostettu, PR:ää EI tehty — sinä
+julkaiset. dist/ ei ole mukana, laattojen generointiin ei koskettu.)*
 
 ## Lyhyesti
 
-Kaikki viisi omistajan havaintoa korjattu ja **todennettu silmillä
-Chromiumissa oikeilla R2-laatoilla** (390×844, dpr 3, iPhone-profiili) —
-ei pelkillä testeillä. Juurisyy oli se, jonka annoit: `body.fokuspohja`
--luokan asettaja katosi purussa, ja luokkaan ripustettu käyttäytyminen
-lakkasi vaikuttamasta. Kävin **jokaisen** `fokuspohja`-viittauksen
-(js/ ja css/) läpi ja ratkaisin sen erikseen; taulukko luvussa 7.
+Kaksi tehtävää, sama tiedosto ja sama aihe — molemmat määrittävät, mitä
+kamera saa näyttää, ja ne on ratkaistu yhdessä:
+
+1. **Uloszoomaus löysennetty kolminkertaiseen maan ikkunaan**
+   (omistajan päätöskortti). Löysennys koskee sekä zoomia ETTÄ
+   panorointia — ne on johdettu samasta laatikosta, jottei näkymä
+   taistele itsensä kanssa.
+2. **Kameran maailma on nyt laattapyramidin ARKKI eikä vanha lauta**
+   (omistajan iPad-havainto kartan leikkautumisesta). Mitattu: kamera
+   ylsi ennen y 254…5345, arkin kartta-ala on −611…5811 ja koko paperi
+   −1046…6261.
 
 Portit: `node --test tests/*.test.mjs` → **1047 pass / 0 fail**
 (1 skipped), kaksoisavaimet ja niputus puhtaat, `build-standalone`
-kääntyy (20 333 kt), `dist` poistettu. Karttasavukkeet luvussa 6 —
-kolme niistä on nyt vihreämpänä kuin mainissa.
-
-**Kaksi asiaa haluan sinun katsovan ennen julkaisua** (luku 8):
-panorointirajojen paluu lukitsee kameran maahan, ja maastonimien
-Wikipedia-nappi katosi kaksoisnimikorjauksen mukana.
+kääntyy (20 343 kt), `dist` poistettu. Savukkeet: panorointi 11/11,
+kartta-tila 20/20, maailmanäkymä 15/15, jalkamatka 22/22, fokuskohteet
+96/96. Kaikki mittaukset ja kuvakaappaukset ovat Chromiumista
+(390×844 dpr 3 ja iPad 834×1112) **oikeilla R2-laatoilla**.
 
 ---
 
-## 1. Vanha maakyltti poistettu (havainto 1)
+## 1. Uloszoomauksen löysennys
 
-Kyltti (`.maa-pilleri`, "BULGARIA" + lippu) palasi oikeaan yläkulmaan,
-koska sen piilotus oli `body.fokuspohja .maa-pilleri { display: none }`.
+### Vakio, ei taikaluku
 
-**Koodi pois, ei piilotusta.** `drawCountryBorders` ei enää kutsu
-`paivitaMaaPilleri`ä, joten pelinäkymässä kylttiä ei ole DOM:ssa
-lainkaan (mitattu: `.maa-pilleri` 0 kpl). CSS-säännöt poistettu:
-`body.fokuspohja .maa-pilleri` ja `body.kartalento .maa-pilleri`.
+`js/kartta.js`:
 
-**Yksi käyttö jäi, enkä poistanut sitä: MAASELAIN.** `js/vertailu.js`
-maatiedot-tila näyttää kartalta valitun maan nimen ja lipun kyltissä, ja
-kyltin napautus avaa maan lehden. Se on **omistajan oma tilaus
-14.8.2026** (*"oikealla saisi näkyä sama maakyltti kuin
-normaalitilassa"*), eikä Raamatun 24.8. linjaus koske sitä — linjaus
-puhuu kartan oikeasta yläkulmasta fokusnäkymässä, jossa kartuutsi kertoo
-maan nimen. Kyltti syntyy siis vain maaselaimen ajaksi ja katoaa tilan
-sulkeutuessa (`palautaPilleriPelaajalle` piilottaa sen nyt sen sijaan
-että palauttaisi pelaajan maan). Savuke-maaselain 6/6, savuke-maapilleri
-3/3.
+    const ULOSZOOMAUS_KERROIN = 3;
 
-Jos haluat kyltin pois myös maaselaimesta, se on oma pieni eränsä:
-selattu maa pitäisi silloin näyttää kartuutsissa.
+Kommentti kertoo, että luku on **säädettävä** ja miksi: *"maa ja sen
+naapurit"* on silmämääräinen mitta eikä laskettava, joten kolme on
+lähtöarvo eikä mittaustulos — omistaja arvioi sen laitteella. Luku
+kerrotaan ikkunan **molempiin** mittoihin keskipisteen ympäri
+(`levitaAlue`), joten se jakaa uloszoomauksen mittakaavarajan
+täsmälleen kolmella riippumatta maan muodosta. Sen todistaa Chilen ja
+Norjan rivi taulukossa: suhde on 3,01 myös kapealla maalla.
 
-## 2. Punainen viiva-animaatio poistettu (havainto 2)
+### Zoom JA panorointi samasta laatikosta
 
-Poistettu kokonaan, ei piilotettuna:
+Kysyit tätä nimenomaan, ja vastaus on: **ne kytkeytyivät**. Sama
+`fokusRajaukset()` syöttää molemmat, joten pelkän zoomin löysääminen
+olisi tuottanut juuri sen näkymän, jossa naapurit näkyvät muttei niihin
+pääse. `fokusRajaukset()` palauttaa nyt kolme laatikkoa yhden sijaan:
 
-- `js/ui.js`: `.country-korostus`-polkujen piirto, `animoiMaanAariviiva`
-  (~110 riviä), vakiot `AARIVIIVAN_PIIRTO_MS` ja
-  `AARIVIIVAN_ASETTUMIS_MS`, `aariviivaAjastin`, `viimeMaa`
-- `css/styles.css`: `.country-korostus`, `@keyframes
-  maa-aariviivan-asettuminen`, `.country-borders.maa-asettuu …` ja sen
-  liikeherkkyysvariantti, `body.fokuspohja`-piilotus,
-  `body.kartalento .country-korostus`
-
-**Perustelu on kirjattu koodiin rakenteellisena eikä makuasiana:** viiva
-piirretään laudan karkeasta 50m-rannikosta, kun laattaan poltettu ranta
-on tarkkaa 10m-aineistoa. Viiva osui eri kohtaan kuin ranta, jonka se
-muka rajaa — ja pyramidissa laatta on aina alla, joten ero näkyy aina.
-
-### `.country-tint` JÄI — ja tässä syy
-
-Sävytys (`rgba(90,70,40,0.13)`, ei viivaa) on samasta kerroksesta,
-mutta jätin sen. Kolme syytä:
-
-1. **Omistaja moitti viivaa, ei sävytystä.** Sanatarkasti *"maan
-   ympärille piirtyy vanha punainen viiva-animaatio"*.
-2. **Tarkkuusero ei näy siinä.** Sävytyksellä ei ole reunaviivaa, joten
-   50m/10m-ero on pehmeä sävyraja eikä väärässä paikassa oleva viiva.
-   Katsoin Kreikan saariston lähikuvasta: rannikolle ei jää haloa.
-3. **Se on kartan ainoa merkki siitä, minkä maan rajojen sisällä
-   matkaaja on** — nyt kun maakyltti on poissa. Kartuutsi kertoo maan
-   nimen, mutta ei sitä missä maa on.
-
-Jos haluat sävytyksenkin pois, se on yksi rivi
-(`drawCountryBorders`in `el('path', …, 'country-tint')`) — sano vain.
-
-## 3. Kaupunkien pisteet lukittu karttaan (havainto 3)
-
-Tämä ja havainto 4 osoittautuivat **samaksi vialaksi**. Merkkien
-mittakaava lasketaan `fokusMerkkiSkaala`ssa maan ikkunasta; ilman
-ikkunaa se putoaa varapolulle `1 / skaala`, joka on nimenomaan
-ruutuavaruus. Kun ikkuna palasi (luku 4), merkit palasivat kartan
-mittakaavaan ilman muuta koodia.
-
-**Mitattu Ateenassa, sama ajo, kaksi zoomtasoa** (390×844, oikeat
-laatat):
-
-| mitta | maan ikkuna (z5) | lähikuva (z7) | suhde |
-| --- | --- | --- | --- |
-| näkymän mittakaava | 0,7993 | 2,4933 | **×3,119** |
-| Ateenan kaupunkipiste | 7,72 px | 24,08 px | **×3,119** |
-| kohdemerkki kartalla | 51,53 px | 160,51 px | **×3,115** |
-
-Ennen korjausta sama mittaus Sofiassa antoi eläintäylle ja
-kohdemerkeille **61–65 px riippumatta zoomista** (skaala 0,42 → 3,74).
-
-**Mitä päätin kunkin elävän merkin kohdalla:**
-
-| merkki | ennen | nyt | miksi |
-| --- | --- | --- | --- |
-| kaupunkipiste (muut kaupungit) | laudan yksiköitä | ennallaan | oli jo kartan mitassa |
-| nykyisen kaupungin laatta | ruutuvakio | **kartan mitta** | `paivitaFokusLaatta` sai ikkunan |
-| kaupunkien nimilaput | ruutuvakio | **poistettu** | nimi on laatassa, ks. luku 5 |
-| pelinappula | ruutuvakio | **kartan mitta** | ×3,119 mitattu |
-| kohdemerkit (valittavat) | ruutuvakio | **kartan mitta** | `paivitaFokusKohdeMitat` |
-| kartan kohteet + eläintäyt | ruutuvakio | **kartan mitta** | ×3,115 mitattu |
-| kohtaamispiste | ruutuvakio | **kartan mitta** | sama kerroin |
-| kartuutsi, mittajana, maataulu, viivaimet | ruutuun ankkuroitu HTML | **ennallaan ruudussa** | ne ovat kartan KEHYS eivät kartan päällä olevaa; kuuluvat pysyä nurkassa |
-
-Viimeinen rivi on tietoinen poikkeus: kartuutsi ei ole kartalla vaan
-kartan kehyksellä, ja jos se skaalautuisi, se karkaisi ruudulta.
-
-## 4. Panorointirajat ja kartuutsi takaisin (havainto 4)
-
-Toteutin edellisen agentin ehdotuksen: **`ui.fokusPohjaBbox` /
-`-Rajaus` syötetään suoraan `FOKUS_POHJAT`-taulusta** — ei kuvaa, ei
-latausta, ei odotusta. Uusi metodi `paivitaMaanIkkuna()` ajetaan joka
-piirrossa (`paivitaFokusKerros`); `paivitaFokusPohja` palaa heti, jos
-maa ei vaihtunut. Samalla asetetaan `ui.fokuskarttaAvain` (ISO), jota
-`js/fokusmitat.js` vaatii — se oli jäänyt asettamatta, joten pelkkä
-bbox ei olisi riittänyt kartuutsille.
-
-Kuluttajat yksitellen, ohjeesi mukaan:
-
-| kuluttaja | päätös | todennus |
+| kenttä | mitä | kuka lukee |
 | --- | --- | --- |
-| panorointirajat maan ympärille (js/kartta.js `fokusRajaukset`) | **PÄÄLLE** | `{ikkuna:{x:6399,y:1726,w:468,h:292}, kuva:{…w:608,h:380}}` Kreikassa |
-| kartuutsi + mittajana + maataulu (js/fokusmitat.js) | **PÄÄLLE** | kartuutsi vasen 19 px, ylä 774/844 → **vasen alareuna** ✓; maataulu vasen 19, ylä 590, korkeus 179 → nousee kartuutsin takaa ✓ |
-| kartan klikattavat kohteet, kohtaamispiste, eläintäyt, selitevalikon laskurit (js/fokuskohteet.js:442) | **PÄÄLLE** | 50 kohdetta Bulgariassa, 84 Kreikassa; napautus avaa kortin (todennettu: *Maratonin salamatkustaja 1896* minivisoineen) |
-| `paivitaFokusPallot`in pelimerkkien piilotus | **POIS** | `.fokus-lehden-alla` ei kirjoiteta kenellekään; CSS-sääntö poistettu |
-| sumuverho | **POIS** | oli jo lakkautettu (`fokusSumuPaalla()` palauttaa false); en herättänyt sitä |
+| `ikkuna` | maan oma ikkuna, ennallaan | `tarkistaFokusZoom` → `ajaKamera` (saapuminen) |
+| `uloin` | **uusi**: ikkuna × 3 keskipisteensä ympäri | `fokusZoomMinimi` → koko zoomportaikon pohja |
+| `kuva` | panoroinnin raja, **yhdiste** maan laatikosta ja `uloin`ista | `rajaaFokusPan` (käsiele) ja `sovitaMannerZoom` (pelin oma näkymä) |
 
-**Kaksi tilaa, joissa ikkunaa EI anneta** (lisäsin nämä, koska ne
-osoittautuivat tarpeellisiksi):
+Kolme muutettua kohtaa `js/kartta.js`:ssä:
 
-- **Lähtökaupungin valinta.** Matkaaja ei ole missään maassa, ja
-  ikkuna olisi rajannut panoroinnin Iso-Britanniaan — puolet
-  valittavista kaupungeista olisi jäänyt ulottumattomiin. Sama raja kuin
-  kohdemerkeillä (`fokusKohdeMerkit`) ja selitevalikolla.
-- **Aloituslento.** Peli siirtää matkaajan perille jo lennon alussa,
-  joten kohdemaan kartuutsi paljastaisi määränpään ennen kuin kone on
-  siellä — sama syy, jolla lennon ajaksi häivytetään maan sävytys.
+1. `fokusRajaukset()` — laskee `uloin`in ja levittää `kuva`n vähintään
+   sen kokoiseksi. Yhdiste eikä korvaus: maan oma laatikko (bbox) on
+   ikkunaa väljempi, eikä löysennys saa kutistaa sitä.
+   Matkavalinnan kohdealue liitetään kaikkiin kolmeen kuten ennenkin.
+2. `fokusZoomMinimi()` — mitta on `uloin` eikä `ikkuna`.
+3. `zoomaaPainikkeella` ja `tarkistaFokusZoom` — kommentit vastaamaan
+   sitä, että pohja on löysennetty ikkuna, mutta kamera-ajon MAALI on
+   yhä maan oma ikkuna. Näin äärilaaja näkymä (uudelleenlataus,
+   maailmanäkymästä paluu) palautuu maahan, ja pelaaja loitontaa
+   naapureihin itse.
 
-**Taulussa on vain Eurooppa (39 maata).** Muissa maanosissa maan ikkunaa
-ei ole, ja kaikki neljä yllä olevaa jäävät pois täsmälleen kuten
-v1362:ssa. Se ei ole tämän korjauksen rajaus vaan taulun kattavuus.
-Harkitsin ikkunan johtamista `map.countryShapes`in laatikosta (kattaisi
-koko maailman), mutta **hylkäsin sen**: merkkien peruskoko on
-`min(ruutu/ikkuna)`, joten Venäjän kokoinen ikkuna paisuttaisi merkit
-lähikuvassa ruudun kokoisiksi. Se vaatisi oman mitoitussääntönsä eikä
-kuulu tähän erään.
+`ui.fokusPohjaRajaus`iin EI koskettu: merkkien mittakaava
+(`fokusMerkkiSkaala`) lukee sen, ja löysennys siellä olisi kutistanut
+kaupunkipisteet ja kohdemerkit kolmasosaan. Löysennys asuu siis
+kartassa, ei ui:ssa — se on kirjattu kommenttiin molempiin päihin.
 
-## 5. Kaksoisnimet: paikannimi kuuluu laattaan (lisätehtäväsi)
+### Mitattu, ei päätelty (390×844, dpr 3, oikeat laatat)
 
-Omistajan Sofia-kaappaus oli oikeassa, ja vika oli laajempi kuin
-kaupunginnimet — sama toistui maastonimillä ja kohdemerkeillä.
-Ratkaisin sen **yhtenä yleisenä sääntönä kolmessa kerroksessa**, en
-nimilistalla.
+"Ennen" on mitattu samalla koneistolla kertoimella 1 = mainin
+käyttäytyminen; se toistaa edellisen agentin luvun (Bulgaria 284 → minä
+mittasin 285).
 
-**Sääntö:** laudalla, jonka arkki on pyramidissa (`pyramidiKattaa`),
-elävä kerros ei latoa yhtään paikannimeä. Kaikki pysyvät nimet on
-poltettu laattoihin omalla typografiallaan ja omalla
-törmäyksenvältelyllään (luku 6c).
+| maa | maan ikkuna | uloin (3×) | ääriuloszoom ENNEN | ääriuloszoom NYT | suhde ikkunaan |
+| --- | --- | --- | --- | --- | --- |
+| Bulgaria (iso) | 284×169 | 851×507 | 285×590 | **855×1768** | 3,01× |
+| Venäjä (jättimäinen) | 5772×2273 | 17317×6818 | 5795×11787 | **11640×24146** | 2,02× * |
+| Kypros (pieni) | 101×66 | 303×199 | 101×210 | **304×629** | 3,01× |
+| Chile (kapea) | 1142×2076 | 3425×6227 | 1147×2372 | **3441×7117** | 3,01× |
+| Norja (kapea) | 1198×973 | 3595×2920 | 1204×2490 | **3612×7307** | 3,01× |
+| Kreikka | 468×292 | 1404×877 | 470×972 | **1410×2916** | 3,01× |
 
-| kerros | ennen | nyt |
-| --- | --- | --- |
-| `.cities .city-label` (261 kaupunkia) | ladottiin joka laudalle | **ei ladota** pyramidilaudalla (drawBoard) |
-| `.maastonimi` (vuoret, järvet, joet) | ladottiin ja piilotettiin | **ei ladota** pyramidilaudalla (paivitaMaastonimet) |
-| kohteen nimiö (js/fokuskohteet.js) | väisti vain poltettua KAUPUNGINnimeä | **väistää myös samannimistä poltettua MAASTONIMEÄ** |
+*) Venäjällä kolminkertainen ikkuna (17 317) on **laudan leveyttä
+suurempi**, joten raja ei enää ole maan ikkuna vaan lauta itse: siellä
+uloszoomaus vie koko maailmaan. Se ei ole kertoimen sijoitusvirhe vaan
+seuraus siitä, että Venäjän ikkuna on jo lähes puoli maailmaa.
 
-**Kumpi jää ja miksi — perusteltu koodiin.** Poltettu nimi on
-kartografiaa: oikea kirjasin, oikea mittakaava, törmäyksenvältely tehty
-kerran koko arkille, eikä se maksa kehysaikaa. Elävä nimi on pelin
-tilaa, eikä paikannimi ole pelin tilaa — se on sama eilen ja huomenna.
-Näkemyksesi oli siis oikea, ja se on nyt koodin perustelu.
+**Edellisen agentin koe toistettuna:** kamera pyydettiin 900
+lautayksikön näkymään Bulgariassa. Ennen se pysyi 285:ssä, nyt se
+päätyy **854,9**:ään.
 
-**Kolmas kerros on sinun havaintosi vuorista.** `Balkanvuoret` oli
-kartalla kahdesti: kerran laatassa ja kerran kohdemerkin nimiönä.
-Toteutin sen samalla säännöllä kuin laatat itse
-(`tools/fokuskartta/sisalto.mjs` `parita`, luku 6c.1): **sama
-normalisoitu nimi lähempänä kuin 400 lautayksikköä = sama kohde**.
-Samat vakiot samasta mittauksesta, ja normalisointi on identtinen
-(NFD, tarkkeet ja välimerkit pois). **Merkki jää, vain nimiö väistyy** —
-kolmio kertoo mistä on kyse ja on yhä napautettava. Todennettu
-silmillä: `Balkanvuoret`-nimiö katosi kohdemerkiltä, kolmio jäi, ja
-laatan oma nimi näkyy.
+**Panorointi todennettu oikealla raahauksella** (hiiriele kartalla, ei
+laskennalla): Bulgariassa yksi porras sisäänpäin näkymä 470 yksikköä,
+panoroitava alue 851 → veto siirsi näkymää **191,4 lautayksikköä**
+(x 6447,1 → 6638,5) ja toi Turkin ja Syyrian ruudulle. Norjassa sama
+veto siirsi **612,3** yksikköä. Ääriasennossa akseli on lukossa, koska
+silloin koko sallittu alue on jo ruudulla — se on sääntö eikä vika.
 
-**Mikään pelimekaniikka ei riipu elävästä kaupunginnimestä.** Kävin
-läpi: valittavan matkakohteen nimi on `.target-nimi` (drawTargets,
-kohdekerros, JÄÄ), kohteiden nimiöt ovat js/fokuskohteet.js (JÄÄVÄT),
-maaselaimen nimi on kyltissä, ja lähtökaupungin valinta lukee nimet
-laatoista — todensin sen silmillä (kuva
-`todistus/`-sarjan ulkopuolella, luku 9): maailmakuvassa lukevat
-Lontoo, Berliini, Moskova, Madrid, Rooma, Istanbul, Ateena, Kairo,
-Dakar, Lagos, Nairobi, Rio de Janeiro… ja lähtökaupungeilla on omat
-kultarenkaansa.
+### Ei riko lähtövalintaa, aloituslentoa eikä matkavalintaa
 
-**Yksi asia menetettiin, ja se on päätöskysymys 2 luvussa 8:**
-maastonimen i-ikoni avasi Wikipedia-ikkunan.
-
-**HUOM (kirjaan sen vaikka et pyytänyt korjaamaan):** poltetut nimet ja
-rantaviivat ovat omistajan laitteella jättimäisiä, koska laatat on ajettu
-ennen v1364:ää. Tämä erä **kasvattaa** sen näkyvyyttä: nyt ne ovat kartan
-ainoat nimet. Suositukseni on siis ajaa pyramidi uudelleen ennen tämän
-julkaisua tai heti sen perään.
-
-## 6. Savukkeet
-
-Ajoin kaikki karttasavukkeet oikeilla tai pilottilaatoilla.
-
-| savuke | ennen (main) | nyt | muutos |
-| --- | --- | --- | --- |
-| savuke-maailmanakyma | 10/14 | **15/15** | 10a/10b mittasivat elävien nimien zoomporttia → nyt vartioivat että elävää nimeä EI ole; uusi 10c maastonimille; 0b:n raja 400→250 |
-| savuke-kartan-sujuvuus | 47/49 | **40/40** | kymmenen ääriviiva-animaation väitettä tilalle yksi käänteinen vartio: sävytys on, punaista viivaa ei |
-| savuke-panorointi | 10/11 | **11/11** | 6a vaati `.fokus-piiri`ä, joka poistui v1363/v1365:ssä |
-| savuke-selitevalikko | 30/31 | **32/32** | vartio 3 mittasi *"luku kasvaa kamera-ajossa"*; nyt luku seuraa MAATA, ks. alla |
-| savuke-jalkamatka | 21/22 | **22/22** | 7c vaati elävää nimilappua; nyt vaatii ettei sitä ole |
-| savuke-laattapyramidi | 9/9 | **9/9** | ennallaan (z7, 18 laattaa, 0 epäonnistunutta, p95 17,5 ms) |
-| savuke-kartta-tila | 20/20 | **20/20** | ennallaan |
-| savuke-fokuskohteet | — | **96/96** | ennallaan |
-| savuke-maastokohteet | — | **8/8** | ennallaan |
-| savuke-elaintaky | — | **23/23** | ennallaan |
-| savuke-takyportti | — | **22/22** | ennallaan |
-| savuke-maapilleri | — | **3/3** | ennallaan |
-| savuke-maaselain | — | **6/6** | ennallaan |
-| savuke-mannerlento | — | **11/11** | ennallaan |
-| savuke-karttazoom | 30 ok / 5 EI | **sama 5 EI** | main-peräinen, koskee Matkasanomien kaupunkikarttaa |
-
-**Miksi savuke-selitevalikon vartio 3 muuttui.** Se mittasi, että maan
-omat kohteet ILMESTYVÄT kartalle vasta kun kamera ajaa maalehdelle —
-mutta se odotus oli lehden KUVAN latautumista. Pyramidissa maan ikkuna
-tiedetään heti, joten kohteet ovat kartalla ennen kamera-ajoa. Raamattu
-sanoo luvusta juuri näin: *"montako sen aiheen kohdetta nykyisen näkymän
-MAASSA on"*. Vartio mittaa nyt sen: kohteet ovat kartalla ennen ajoa
-eikä ajo kadota yhtäkään aihetta.
-
-## 7. Jokainen `fokuspohja`-viittaus, ratkaisu erikseen
-
-| paikka | ratkaisu |
-| --- | --- |
-| js/ui.js `paivitaFokusPohja` (luokan asetus) | **jää** — luokka on nyt aina voimassa Euroopassa, ja neljä CSS-sääntöä nojaa siihen oikein |
-| css `body.fokuspohja[data-mode] .turn-card` + `.toimintorivi*` (4 sääntöä) | **jäävät** — ne ratkaisevat mitä kartuutsin ja mittajanan naapuruus vaatii, eli ovat oikein sidottuja juuri siihen tilaan jossa kartuutsi on ruudulla |
-| css `body.fokuspohja .maa-pilleri` | **poistettu** — kylttiä ei enää luoda |
-| css `body.fokuspohja .country-tint/-korostus` | **poistettu** — korostusta ei enää piirretä, sävytys saa näkyä |
-| css `body.fokuspohja .cities .city-label` (2 sääntöä) | **poistettu** — elävää nimilappua ei ole |
-| js/ui.js `paivitaFokusNimilaput` (~150 riviä) | **poistettu** kuolleena, samoin vakiot `FOKUS_NIMI_PX`, `FOKUS_NIMI_VAHIN_PX`, `FOKUS_NIMI_NAPPULAN_ALLE_PX` |
-| js/ui.js `himmennaMaastonimet` `maastonimi-kuvan-alla` | **poistettu** — kerros on pyramidilaudalla tyhjä |
-| css `.maastonimi-kuvan-alla`, `.fokus-lehden-alla` | **poistettu** — kumpaakaan luokkaa ei kirjoiteta |
-| js/fokusmitat.js kommentti maakyltin väistöstä | **päivitetty** |
-| js/ui.js kommentti esilatauksesta (`fokuskartta.esilammitaFokuspohja`) | **päivitetty** — moduulia ei ole |
-| js/packs/fokus-grc.js, tests/fokuspohjat.test.mjs | **koskematta** — data ja sen testi |
-
-## 8. PÄÄTÖSKYSYMYKSET
-
-### 1. Panorointirajat lukitsevat kameran maahan — onko se ok?
-
-Rajat toimivat nyt kuten Raamattu vaatii (*"maatila rajaa panoroinnin
-maan ympärille"*), ja **se on mitattavissa**: pyysin kameraa 900
-lautayksikön ikkunaan Bulgariassa ja se pysyi 284 yksikön maan
-ikkunassa.
-
-Seuraus, jonka haluan sinun näkevän: **pelaaja ei enää voi loitontaa
-maailmakuvaan ollessaan maassa.** Ainoa löysennys on
-`panorointiVapaa`, joka vaatii kehittäjätilan + maailmanapin. Matkavalinta
-laajentaa rajat kohteisiin (`matkakohteidenAlue`), joten umpikujaa ei
-synny — mutta *"haluan katsoa missä päin maailmaa olen"* ei onnistu.
-
-Omistaja on pelannut v1363–v1365 ilman rajoja, joten tämä tuntuu
-laitteella **uudelta rajoitukselta** vaikka se on paluu speksiin.
-Vaihtoehdot: (a) jätetään kuten Raamattu sanoo, (b) uloszoomauksen raja
-löysennetään esim. kolminkertaiseen maan ikkunaan, (c) maailmanapista
-tehdään pelaajan nappi. En tehnyt mitään näistä omin päin.
-
-### 2. Maastonimen Wikipedia-nappi katosi
-
-`.maastonimi`-ryhmässä oli i-ikoni, joka avasi Wikipedia-ikkunan
-(`avaaMaastonimi`). Kun elävä kerros vaikeni, ele katosi: laattaan
-poltettuun nimeen ei voi tarttua. Alppeja, Karpaatteja, Apenniineja ja
-123 jokea ei siis enää voi napauttaa.
-
-Luonteva jatko on nostaa maastokohteet `js/fokuskohteet.js`:n
-merkkikerrokseen, jossa on jo symboli, napautusala, aihevalo ja
-poltettujen nimien väistö — silloin kolmio on napautettava eikä nimeä
-tarvitse piirtää kahdesti. Se on oma eränsä ja vaatii aineiston
-(`MAAILMANKARTAN_NIMET` → kohdemuoto), joten en tehnyt sitä tässä.
-
-### 3. Nimetyt erikoispiirit (edellisen agentin kysymys 2)
-
-Päiväntasaaja, kääntöpiirit, napapiiri ja Greenwich ovat yhä poissa
-(`.fokus-piiri`). Jouduin poistamaan niitä vartioineen väitteen
-savuke-panoroinnista. Kysymys on yhä auki: pelitilakerroksena vai
-laattoihin poltettuna?
-
-### 4. Saapumisen kamera-ajo maan ikkunaan (edellisen agentin kysymys 3)
-
-**En palauttanut sitä.** Maan ikkuna on nyt olemassa, joten ajo olisi
-teknisesti helppo — mutta se on ominaisuuden palautus eikä jäänteen
-korjaus, eikä se ollut listallasi. Kamera osuu maan ikkunaan nyt
-epäsuorasti: uloszoomauksen raja ON maan ikkuna, joten saapumisen
-jälkeen kartta ei voi jäädä maata laajempaan näkymään.
+- **Lähtökaupungin valinta** ja **aloituslento**: portit ovat
+  `ui.maanIkkuna()`:ssa ja `fokusRajaukset()`:ssä, enkä koskenut
+  kumpaankaan. Löysennys lasketaan vasta sen jälkeen kun ikkuna on
+  ylipäätään olemassa, joten porteissa ei ole mitään löysennettävää.
+  Ajoin koko alkukulun läpi selaimessa (portti → *Valitse
+  aloituskaupunki* → kaupungin napautus → lento → perillä): valinta
+  tapahtuu aloituskartalla, jolla pyramidia ei ole, ja peli päätyy
+  `action`-vaiheeseen maailmanlaudalle.
+- **Matkavalinta**: `matkakohteidenAlue` liitetään nyt myös `uloin`iin,
+  eli jos kohde on löysennettyä aluetta kauempana, uloszoomaus yltää
+  sinne asti. Ennen se liitettiin `ikkuna`an, joka oli sama asia.
 
 ---
 
-## 9. Miten todensin — silmillä, ei vain testeillä
+## 2. Arkki on kameran maailma (lisätehtäväsi)
 
-Ajoin pelin Chromiumissa (`/opt/pw-browsers/chromium`, 390×844, dpr 3)
-**oikeilla tuotannon laatoilla**: laatat haettiin R2:sta Noden fetchillä
-(proxy) ja tarjoiltiin selaimelle levyvälimuistista, joten kuva on sama
-kuin omistajan laitteella. Peli istutettiin pelitallenteella suoraan
-Ateenaan ja Sofiaan (sama tapa kuin savukkeissa).
+### Todennettu: syy oli se, jonka annoit
 
-**Ennen–jälkeen samassa tilanteessa (Sofia, maan ikkuna):**
+Mittasin `ui.contentBox`in selaimesta: **y 254 … 5345,2**
+(korkeus 5091,2). Pyramidin luettelo sanoo arkiksi y −1046,3 … 6261,4 ja
+kartta-alaksi −611,3 … 5811,4. Diagnoosisi pitää.
 
-| havainto | ennen | jälkeen |
+Kaksi tarkennusta mittauksista:
+
+1. **Ylhäältä leikkasi.** Lähikuvassa (skaala 0,53) pohjoisin
+   saavutettava kohta oli **y −124,4**; kartta-ala alkaa −611,3:sta.
+   Huippuvuoret jäivät puoliksi ruudun yläpuolelle.
+2. **Alhaalta leikkasi, mutta tyhjää EI ollut.** Vanha laatikko päättyi
+   y 5345:een eli **arkin sisään**, ei 6423:een. Kartta-alan eteläisin
+   466 yksikköä oli siis saavuttamattomissa, mutta laatatonta aluetta ei
+   päässyt katsomaan. Sen sijaan **lava** (panoroitava ala) ulottui
+   uloimmalla portaalla y −2389…8396 eli 1342 yksikköä arkin yläpuolelle
+   ja 2135 alapuolelle — juuri sitä tyhjää, jonka kohta 3 mainitsi.
+
+### Mitä muutin
+
+| paikka | muutos | miksi |
 | --- | --- | --- |
-| maakyltti oikeassa yläkulmassa | "BULGARIA" + lippu | 0 kpl DOM:ssa |
-| punainen viiva maan ympärillä | 1 polku, näkyvä | 0 polkua |
-| eläviä kaupunginnimiä | 19 näkyvissä (Sofia, Bukarest, Ateena…) | 0 |
-| eläviä maastonimiä | 2 (Karpaatit, Apenniinit) — kumpikin laatassa myös | 0 |
-| kartuutsi | 0×0 px (piilossa) | vasen 19 px, ylä 774 px |
-| kartan kohteet | 0 | 50 |
-| panorointirajat | null | ikkuna 284×169, kuva 369×231 |
+| `js/laattapyramidi.js` | uusi `pyramidinArkki(lauta)` + `ARKKI_VARALLA` | arkki samasta lähteestä kuin laattojen paikat; muille laudoille null |
+| `js/laattapyramidi.js` `paivitaPyramidi` | luettelon saavuttua `ui.paivitaLaudanRajat?.()` ennen laattojen laskentaa | jos ämpärin arkki eroaa varaluvuista, kamera korjataan ennen piirtoa |
+| `js/kartta.js` `boardBounds()` | pyramidilaudalla palauttaa arkin; muut laudat ennallaan | kaupungeista johdettu laatikko on vanhan laudan mitta |
+| `js/kartta.js` `sovitaMannerZoom` | lava leikataan arkkiin (ei aloitusnäkymässä) | ylä-/alakaista veisi panoroinnin alueelle, jossa ei ole laattoja |
+| `js/kartta.js` `sovitaMannerZoom` | arkkia lyhyempi lava keskitetään (`alignSelf`) | `panY` on silloin pakotettu nollaan, ja kartta olisi jäänyt ruudun ylälaitaan koko tyhjä paperi alla |
+| `js/ui.js` | uusi `paivitaLaudanRajat()` | laskee rajat uudelleen ja sovittaa näkymän VAIN jos laatikko muuttui |
+| `tools/build-standalone.mjs` | `js/laattapyramidi.js` siirretty ennen `js/kartta.js`:ää | kartta tuo siitä arkin; niputustarkistus vaati järjestyksen |
 
-**Kuvakaappaukset** (`/tmp/claude-0/.../scratchpad/opus-jaanteet/`):
+Katselutilan maanosalaudat (`?lauta=africa`) käyttävät yhä vanhaa
+`boardBounds`ia: `pyramidinArkki` palauttaa niille nullin täsmälleen
+samalla `pyramidiKattaa`-ehdolla, jolla laatatkin rajataan.
 
-- `ennen-sofia/a-maa.png` — omistajan havainnot toistettuina: BULGARIA-kyltti, punainen viiva, tuplat *Karpaatit*
-- `todistus/a-maan-ikkuna.png` — (a) ei kylttiä, (b) ei viivaa, (d) kartuutsi vasemmassa alareunassa
-- `todistus/b-lahikuva.png` — (c) sama näkymä lähempää: pisteet ja merkit kasvaneet kartan mukana ×3,12
-- `todistus/c-maataulu.png` — maataulu auki vasemmasta alareunasta (VÄKILUKU, PINTA-ALA, DEMOKRATIA, KESKITULO, KIELET)
-- `tarkistus/kohde-kortti.png` — (e) kohde napautettavissa: *Maratonin salamatkustaja 1896* minivisoineen
-- `kulku/p1-pickstart.png` — lähtökaupungin valinta: laattojen nimet luettavina, ei kartuutsia, ei kylttiä
-- `jalkeen2/c-zoom-B.png` — *Balkanvuoret* enää kerran (kolmio jäi, nimiö väistyi)
-- `katselu/africa.png` — katselutilan manterelauta ennallaan nimineen
+**Varaluvuista** (`ARKKI_VARALLA`) haluan sinun tietävän: ne ovat sama
+geometria kuin `pyramidi.json`issa, koska kamera tarvitsee arkin jo
+ensimmäisessä sovituksessa mutta luettelo saapuu verkosta vasta piirron
+jälkeen. Luettelo voittaa aina kun se on kädessä, eli uusi ajo eri
+mitoilla korjaa itsensä — mutta jos arkin mitat joskus muuttuvat,
+`ARKKI_VARALLA` on se yksi paikka, joka kannattaa päivittää samalla.
 
-**Katselutila todennettu erikseen:** `?lauta=africa` piirtää oman
-karttansa, 41 kaupunginnimeä, 0 laattaa, ei kylttiä eikä ääriviivaa.
-`?lauta=maailmankartta` katselussa: 6 laattaa, 0 elävää nimeä.
+### Mitattu (iPad 834×1112, oikeat laatat)
+
+| mitta | ennen | nyt |
+| --- | --- | --- |
+| `contentBox` | y 254 … 5345,2 | **y −1046,3 … 6261,4** (arkki) |
+| lava uloimmalla portaalla | y −2388,9, korkeus 10 784,7 | **y −1046,3, korkeus 7311,2** (= arkki) |
+| näkyvä alue uloimmalla portaalla | 10 186 yksikköä (arkin yli molemmista päistä) | **7309 yksikköä = koko arkki** |
+| pohjoisin saavutettava lähikuvassa | y −124,4 | **y −1046,3** |
+
+### Silmillä
+
+`.../scratchpad/zoom/kuvat/`:
+
+- `maailma-ennen-toiseksi.png` → `maailma-keski-toiseksi.png` — uloin
+  näkymä ennen ja jälkeen: arkki mahtuu kokonaan ruudulle
+  paperimarginaaleineen, MATKAKIRJA-kehyskilpi ylhäällä ja
+  mittakaava + painajan rivi alhaalla. Tyhjä paperi jakautuu tasan ylös
+  ja alas (ennen kartta oli kiinni ylälaidassa).
+- `pohjoinen-ennen.png` → `pohjoinen-jalkeen.png` — Tromssasta
+  pohjoiseen ääriasentoon: ennen Huippuvuoret leikkautuivat ruudun
+  yläreunaan, nyt saaristo on kokonaan näkyvissä, ruudukko 88 °P asti,
+  kartta-alan reuna 84 °N ja sen yllä paperimarginaali kehyksineen.
+- `sofia-2-aariuloszoom.png` — löysennetty uloszoomaus Bulgariassa
+  (kohta 1): Bulgaria keskellä, ylhäällä Suomenlahti, alhaalla Punainen
+  meri, sivuilla Italia ja Kaukasus. **36 maata** ruudulla.
 
 ---
 
-## 10. Palautuspiste
+## 3. PÄÄTÖSKYSYMYKSET JA HAVAINNOT
 
-Palautuspiste on **ebad659b** (main ennen tämän haaran ensimmäistä
+### 1. Onko kerroin 3 pystyruudulla liikaa?
+
+Kerroin rajaa LEVEYDEN kolminkertaiseksi; korkeus seuraa ruudun
+muodosta. Puhelimen pystyruudulla (390×844) näkymä on siksi noin kaksi
+kertaa niin korkea kuin leveä: Bulgariassa ääriuloszoom näyttää
+Suomenlahdelta Egyptiin. Se on "maa ja naapurit" leveyssuunnassa, mutta
+pystysuunnassa selvästi enemmän. **Kerroin 2 antaisi 570 yksikön
+levyisen näkymän** (Balkan + Kreikka + Turkin länsiosa). Yksi luku,
+yksi rivi — sano jos vaihdan.
+
+### 2. Venäjällä löysennys osuu laudan reunaan
+
+Kolminkertainen ikkuna on Venäjällä laudan leveyttä suurempi, joten
+uloszoomaus vie koko maailmankuvaan (11 640 yksikköä). Sama koskee
+tulevaisuudessa Kanadaa ja Yhdysvaltoja. Jos se on väärin, raja pitäisi
+sitoa laudan leveyden osuuteen eikä pelkkään maan ikkunaan — mutta se on
+oma sääntönsä enkä keksinyt sitä omin päin.
+
+### 3. Leveä ikkuna (Mac) saa nyt eri yleiskuvan
+
+Arkki on korkeampi kuin vanha laatikko (7308 vs. 5091), joten korkeus
+alkaa rajoittaa yleiskuvaa jo kuvasuhteesta 1,64:1 alkaen (ennen
+2,36:1). Leveässä työpöytäikkunassa yleiskuva näyttää siis koko arkin ja
+kartta on pienempi kuin ennen — juuri se, mitä lisätehtävä pyysi — mutta
+samalla `fitViewBox`in korttikaista (`kaista`, varattu alareunan
+korteille leveällä ikkunalla) jää pois, koska sen ehto on sama
+kuvasuhdevertailu. iPadilla ja puhelimella ei muutu mikään: siellä
+leveys rajoittaa kuten ennenkin. En muuttanut kaistan sääntöä.
+
+### 4. Edellisen raportin avoimet kysymykset ovat yhä auki
+
+Maastonimen Wikipedia-nappi (2), nimetyt erikoispiirit (3) ja
+saapumisen kamera-ajo (4) ovat ennallaan — ne eivät kuuluneet tähän
+erään. Huomaa kuitenkin, että kysymys 4:n perustelu heikkeni: kamera ei
+enää osu maan ikkunaan epäsuorasti, koska uloszoomauksen raja on nyt
+kolminkertainen ikkuna. Saapuminen jää siihen mittakaavaan, johon peli
+sen jättää, ja pelaaja voi jäädä kolminkertaiseen näkymään.
+
+---
+
+## 4. Palautuspiste
+
+Palautuspiste on **d3902f24** (main ennen tämän haaran ensimmäistä
 committia). Yksittäinen tiedosto palautetaan näin:
 
-    git checkout ebad659b -- js/ui.js
+    git checkout d3902f24 -- js/kartta.js
 
-Committeja on kolme, ja ne ovat aihepiireittäin erillisiä: (1) itse
-korjaus js/- ja css/-puolella, (2) savukkeiden vartiot uuteen sääntöön,
-(3) viimeistelyt ja tämä raportti. Mitään ei ole poistettu levyltä —
-`FOKUS_POHJAT`, `FOKUS_LISANIMET`, `tools/patina.mjs` ja R2:n vanhat
-lehdet ovat koskemattomia.
+Muutetut tiedostot: `js/kartta.js`, `js/laattapyramidi.js`, `js/ui.js`,
+`tools/build-standalone.mjs`. Molemmat tehtävät ovat samassa
+koodicommitissa, koska ne muuttavat samoja `js/kartta.js`:n funktioita
+(`boardBounds`, `sovitaMannerZoom`, `fokusRajaukset`) ja koska ne
+vastaavat samaan kysymykseen — mitä kamera saa näyttää. Raportti on oma
+committinsa.
