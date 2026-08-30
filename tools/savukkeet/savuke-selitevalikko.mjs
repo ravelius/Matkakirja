@@ -320,6 +320,14 @@ const lehdenVaarat = Object.entries(lehdella)
 vaadi('luvut päivittyvät maalehdelle ajettaessa ilman valikon sulkemista',
   lehdenVaarat.length === 0,
   JSON.stringify(lehdenVaarat.map(([a, t]) => `${a}: rivi ${lehdenLuvut[a]} vs kartta ${t.kappaleita}`)));
+/*
+ * SKANDAALIT-RIVI EI OLE ENÄÄ VIIVA (skandaalierä 30.8.2026): maan
+ * skandaalimerkit (js/skandaalit.js, js/packs/skandaalit.js) antavat
+ * riville kappalemäärän maalehdellä — Kreikassa kolme skandaalia ja
+ * kohteeton täkynosto samalla huuto-symbolilla.
+ */
+vaadi('Skandaalit-rivillä on kappalemäärä maalehdellä',
+  Number(lehdenLuvut.skandaalit) > 0, `skandaalit=${lehdenLuvut.skandaalit}`);
 
 await sivu.screenshot({ path: join(KAAPPAUKSET, 'selitevalikko-auki.png') });
 

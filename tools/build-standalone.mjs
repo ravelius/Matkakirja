@@ -540,6 +540,14 @@ const MODULES = [
   'js/packs/syvennyspaikat.js',
   'js/syvennys.js',
   /*
+   * Skandaalit kartalle (yhtenäinen kohdemalli, sisar syvennyksille):
+   * data ensin, kerroskytkentä perässä. js/skandaalit.js tuo
+   * fokusvirran (TAKY_PALKKIO), kohdekerroksen, symbolikirjaston ja
+   * projektion (fokusmitat) — kaikki ovat jo yllä.
+   */
+  'js/packs/skandaalit.js',
+  'js/skandaalit.js',
+  /*
    * Eläintäyt ennen ui:ta (ui tuo niiden päivitys- ja nollauskutsun).
    * Data ensin, kerros perässä. Kerros lukee laudan projektion
    * fokusmitat.js:stä — juuri siksi se on listalla vasta tässä — ja
