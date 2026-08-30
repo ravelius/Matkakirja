@@ -281,7 +281,17 @@ poistolista, ja toinen agentti on tiedostoissa juuri nyt:
 | savuke-maailmanakyma | 10/14 (main) | **13/14** — kolme suorituskykykaatumista korjaantui |
 | savuke-kartta-tila | — | **20/20** |
 | savuke-karttazoom | 30 ok / 5 EI | **sama 5 EI** — main-peräinen, koskee Matkasanomien kaupunkikarttaa eikä fokuslehteä |
+| savuke-kartan-sujuvuus | 47/49 (main) | **48/48** — poistin kaksi väitettä, jotka mittasivat purettua koneistoa (ks. alla) |
 | savuke-fokuskartta, savuke-atlas, savuke-atlas-purku, savuke-bittikartta, savuke-lehtimuisti | punaisia | **poistettu** — testasivat poistettua järjestelmää |
+
+`savuke-kartan-sujuvuus`: väite *"atlasnäkymä on päällä ja vanha lauta
+piilossa"* oli punainen jo mainissa (todensin ajamalla mainilla) —
+piilotusluokkaa ei enää ole, koska piilotettavaakaan ei ole. Toinen
+väite vaati, että pelilauta tuottaa rasteroituja ruutuja; nyt se ei
+tuota yhtään, koska laatat ovat pohja. Jätin väitteen siitä osasta,
+joka mittaa oikeaa vikaa (SVG:tä ei jäsennetä uudelleen).
+**Jatkotyö:** tämän savukkeen ruutumittarit kannattaisi osoittaa
+katselutilan maanosalautaan, jossa ruutukoneisto yhä elää.
 
 Jäljelle jäävä yksi punainen (savuke-maailmanäkymä 0a) vaatii
 `fokusPohjaBbox`in — se on päätöskysymys 1, ja se on identtisesti

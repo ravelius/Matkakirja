@@ -802,8 +802,16 @@ for (let i = 0; i < 240; i++) {
 }
 const sarjaJalkeen = await mittarit();
 const sarjanRuudut = await sivu.evaluate(() => window.matkakirja.ui.taideRuudut.size);
+/*
+ * RUUTUEHTO POISTUI PELILAUDALTA (lehtipurku 30.8.2026). Pelilauta ei
+ * enää rasteroi omaa karttaansa lainkaan: laattapyramidi ON pohjakerros
+ * (js/ui.js laatatPohjana), joten `taideRuudut` on siellä aina tyhjä.
+ * Väite on siis nyt pelkkä "SVG:tä ei jäsennetä uudelleen" — se on se
+ * osa, joka mittasi oikeaa vikaa. Ruutukoneisto elää yhä katselutilan
+ * maanosalaudoilla, ja sen mittaus kuuluisi ajaa sellaisella laudalla.
+ */
 vaadi('ruudun piirto ei jäsennä SVG:tä (leikkaus jäsennetystä lähteestä)',
-  sarjanRuudut > 0 && sarjaJalkeen.aloitukset === 0,
+  sarjaJalkeen.aloitukset === 0,
   `ruutuja ${sarjanRuudut}, svg-blobeja ${sarjaJalkeen.aloitukset}`);
 
 /*
@@ -1203,8 +1211,13 @@ const atlasPaalla = await sivu.evaluate(() => ({
   ruutuja: window.matkakirja.ui.taideRuudut?.size ?? 0,
   pohja: Boolean(window.matkakirja.ui.taidePohja),
 }));
-vaadi('atlasnäkymä on päällä ja vanha lauta piilossa',
-  atlasPaalla.luokka === true, JSON.stringify(atlasPaalla));
+/*
+ * PIILOTUSLUOKKAA EI ENÄÄ OLE (lehtipurku 30.8.2026). `fokus-atlas-nakyma`
+ * piilotti vanhan laudan atlaksen alta; nyt lautaa ei piirretä
+ * pelilaudalle ollenkaan, joten piilotettavaakaan ei ole. Väite oli
+ * punainen jo mainissa v1363:sta lähtien (todennettu ajamalla).
+ * Voimassa oleva vaatimus on seuraava: fokusnäkymässä ei rasteroida.
+ */
 await nollaa();
 await panoroi(220, 20);
 await sivu.waitForTimeout(1200);
