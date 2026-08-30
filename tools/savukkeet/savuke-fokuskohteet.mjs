@@ -50,6 +50,9 @@ import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { FOKUSKOHTEET_GRC } from '../../js/packs/fokuskohteet-grc.js';
 import { FOKUS_POHJAT } from '../../js/packs/fokus-grc.js';
+import { FOKUSVIRRAT } from '../../js/packs/fokusvirrat.js';
+import { MAASTOKOHTEET } from '../../js/packs/maastokohteet.js';
+import { SYVENNYSPAIKAT } from '../../js/packs/syvennyspaikat.js';
 
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
 const paketti = await import('playwright')
@@ -323,9 +326,58 @@ const lehtiNakyy = await sivu.evaluate(() => Boolean(window.matkakirja.ui.fokusP
 vaadi('Kreikan fokuslehti on kartalla', lehtiNakyy === true, 'lehteä ei piirretty');
 
 let m = await merkit();
+/*
+ * ODOTUS LASKETAAN KAIKISTA REKISTERÖIDYISTÄ LÄHTEISTÄ (v1348,
+ * yhtenäinen kohdemalli): kohdekerrokseen piirtyvät maan kohteiden
+ * (FOKUSKOHTEET + MAASTOKOHTEET, js/fokuskohteet.js KOHDE_MAAT)
+ * lisäksi rekisteröidyt lisälähteet (rekisteroiLisakohteet) —
+ * kohteettomat täkynostot (js/fokusnosto.js nostoLisakohteet,
+ * id-etuliite `nosto-`) ja syvennystarinat (js/syvennys.js
+ * syvennysLisakohteet, `syvennys-<kaupunki>-<täky>`). Eläintäyt EIVÄT
+ * kuulu tähän: ne piirtyvät omaan kerrokseensa (js/elaintaky.js,
+ * `.elaintaky-merkki`). Pelkkä FOKUSKOHTEET_GRC.length olisi siksi
+ * ikuisesti punainen, vaikka peli toimii oikein — väite jakaa merkit
+ * lähteittäin, jotta jokainen suunta pysyy informatiivisena:
+ *   1. jokainen maan kohde sai merkin, eikä kartalla ole yhtään
+ *      perusmerkkiä, jota data ei tunne;
+ *   2. syvennysmerkit ovat täsmälleen maan fokuskaupunkien täyt,
+ *      joilla on paikkarivi (js/packs/syvennyspaikat.js);
+ *   3. nostomerkkejä on (Kreikan poolissa on kohteeton nosto:
+ *      sofia-korut) ja kokonaismäärä on tasan näiden lähteiden
+ *      summa — uusi selittämätön lähde kaataa väitteen.
+ * Nostopooli (js/fokusnosto.js NOSTO_MAAT) ei ole exportattu, joten
+ * nostojen odotus on vähintään-ehto eikä täsmälista; noston merkin
+ * säännöt vartioidaan erikseen (osio "nostot ja syvennykset kartalla").
+ */
+const perusOdotus = new Set(
+  [...FOKUSKOHTEET_GRC, ...(MAASTOKOHTEET.GRC ?? [])]
+    .filter((k) => k.laudat?.maailmankartta)
+    .map((k) => k.id),
+);
+const syvennysOdotus = new Set(Object.keys(SYVENNYSPAIKAT)
+  .filter((cityId) => peli.pack.map.cityCountry?.[cityId] === 'GRC')
+  .flatMap((cityId) => (FOKUSVIRRAT[cityId]?.takyt ?? [])
+    .filter((taky) => SYVENNYSPAIKAT[cityId][taky.id])
+    .map((taky) => `syvennys-${cityId}-${taky.id}`)));
+const perusSaadut = m.tunnukset
+  .filter((t) => !t.startsWith('nosto-') && !t.startsWith('syvennys-'));
+const nostoSaadut = m.tunnukset.filter((t) => t.startsWith('nosto-'));
+const syvennysSaadut = m.tunnukset.filter((t) => t.startsWith('syvennys-'));
 vaadi('jokainen maan kohde sai merkin',
-  m.tunnukset.length === FOKUSKOHTEET_GRC.length,
-  `${m.tunnukset.length}/${FOKUSKOHTEET_GRC.length}: ${m.tunnukset.join(',')}`);
+  perusSaadut.length === perusOdotus.size
+  && perusSaadut.every((t) => perusOdotus.has(t)),
+  `${perusSaadut.length}/${perusOdotus.size} — puuttuu: `
+  + `${[...perusOdotus].filter((t) => !perusSaadut.includes(t)).join(',') || '-'}`
+  + `; tuntemattomat: ${perusSaadut.filter((t) => !perusOdotus.has(t)).join(',') || '-'}`);
+vaadi('syvennysmerkit ovat täsmälleen maan paikkataulun täyt',
+  syvennysSaadut.length === syvennysOdotus.size
+  && syvennysSaadut.every((t) => syvennysOdotus.has(t)),
+  `saatu ${syvennysSaadut.join(',')} vs odotus ${[...syvennysOdotus].join(',')}`);
+vaadi('kokonaismäärä täsmää rekisteröityihin lähteisiin (kohteet+nostot+syvennykset)',
+  nostoSaadut.length > 0
+  && m.tunnukset.length === perusOdotus.size + nostoSaadut.length + syvennysOdotus.size,
+  `${m.tunnukset.length} merkkiä; nostoja ${nostoSaadut.length}, `
+  + `syvennyksiä ${syvennysSaadut.length}: ${m.tunnukset.join(',')}`);
 vaadi('kiertävällä laudalla merkit ovat molemmissa kohdissa',
   m.maara === m.tunnukset.length * 2, `${m.maara} merkkiä`);
 vaadi('kerros on juuriryhmän ulkopuolella (<use>-kopio ei syö napautusta)',
