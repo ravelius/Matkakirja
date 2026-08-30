@@ -240,11 +240,11 @@ export const FOKUSVIRTA_HELSINKI = {
         kysymys: 'Milloin suomalainen saunomiskulttuuri lisättiin Unescon '
           + 'aineettoman kulttuuriperinnön luetteloon?',
         vaihtoehdot: [
-          'Vuonna 2020',
           'Vuonna 1928',
+          'Vuonna 2020',
           'Vuonna 1991',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Saunoja on noin kolme miljoonaa ja asukkaita 5,6 miljoonaa. '
           + 'Avannossa vesi on nollan ja neljän asteen välillä, ja uinti '
           + 'kestää harvoin minuuttia kauempaa.',
@@ -301,11 +301,11 @@ export const FOKUSVIRTA_HELSINKI = {
       visa: {
         kysymys: 'Montako kieltä on nykyisessä konserttikanteleessa?',
         vaihtoehdot: [
-          '39',
-          '5',
           '88',
+          '5',
+          '39',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Vanhimmissa kanteleissa oli viisi kieltä ja ne veistettiin '
           + 'yhdestä puukappaleesta. Konserttikanteleessa on lisäksi '
           + 'vipuja, joilla sävelkorkeutta muutetaan kesken soiton.',
@@ -367,11 +367,11 @@ export const FOKUSVIRTA_HELSINKI = {
         kysymys: 'Miksi Finlandiaa soitettiin ensimmäisinä vuosinaan '
           + 'vaihtuvilla nimillä?',
         vaihtoehdot: [
-          'Teos oli kiihottava, ja nimen vaihtaminen kiersi kiellot',
-          'Säveltäjä ei osannut päättää nimeä',
           'Jokainen orkesteri sai keksiä teokselle oman nimensä',
+          'Säveltäjä ei osannut päättää nimeä',
+          'Teos oli kiihottava, ja nimen vaihtaminen kiersi kiellot',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Teos syntyi marraskuussa 1899 sanomalehtien juhlaan '
           + 'vastalauseeksi sortotoimille, ja sen alkuperäinen nimi oli '
           + 'Suomi herää. Nimen Finlandia se sai vasta vuonna 1900.',

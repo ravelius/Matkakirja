@@ -148,11 +148,11 @@ const APPELSIINI_VISA = {
   kysymys: 'Sevillan katupuiden appelsiinit kerätään kerran vuodessa ja '
     + 'laivataan pois. Mihin ne menevät?',
   vaihtoehdot: [
-    'Britanniaan marmeladiksi',
     'Ranskaan, jossa niistä tislataan hajuvettä',
+    'Britanniaan marmeladiksi',
     'Italiaan, jossa niistä keitetään likööriä',
   ],
-  oikea: 0,
+  oikea: 1,
   fakta: 'Katkerassa appelsiinissa on enemmän pektiiniä kuin makeassa, '
     + 'joten hillo hyytyy paremmin. Varhaisin tunnettu resepti '
     + '"marmelet of oranges" on vuodelta 1677 — ja saman hedelmän kuorta '
@@ -327,11 +327,11 @@ export const FOKUSVIRTA_SEVILLA = {
         kysymys: 'Mitä Victorian miehistö huomasi Kap Verdellä, kun se '
           + 'nousi maihin ostamaan ruokaa?',
         vaihtoehdot: [
-          'Kalenteri oli päivän jäljessä',
-          'Laivan nimi oli poistettu Sevillan satamarekisteristä',
           'Espanjassa oli sillä välin vaihtunut kuningas',
+          'Laivan nimi oli poistettu Sevillan satamarekisteristä',
+          'Kalenteri oli päivän jäljessä',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Länteen kiertänyt matka kadottaa yhden päivän, ja juuri '
           + 'tämä havainto johti aikanaan päivämäärärajan '
           + 'sopimiseen. Lähtijöitä oli noin 270, palaajia kahdeksantoista.',
@@ -407,11 +407,11 @@ export const FOKUSVIRTA_SEVILLA = {
         kysymys: 'Mikä oli Lacus Ligustinus, jonka roomalaiset tunsivat '
           + 'Guadalquivirin suulla?',
         vaihtoehdot: [
-          'Merenlahti, joka on sittemmin täyttynyt',
           'Sevillan muurien sisään rakennettu vesiallas',
+          'Merenlahti, joka on sittemmin täyttynyt',
           'Roomalaisten kaivama kanava kohti Cádizia',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Doñanan liikkuvat dyynit hautaavat rannan mäntymetsää '
           + 'alleen, ja alueella on kirjattu 38 nisäkäslajia. '
           + 'Kansallispuisto perustettiin 1969.',
@@ -491,11 +491,11 @@ export const FOKUSVIRTA_SEVILLA = {
         kysymys: 'Millaiseksi tapahtumaksi Sevillan huhtikuun juhla '
           + 'alun perin perustettiin?',
         vaihtoehdot: [
-          'Karjamessuiksi',
-          'Kuningattaren vierailun kunniajuhlaksi',
           'Sadonkorjuun päätöstä juhlivaksi kulkueeksi',
+          'Kuningattaren vierailun kunniajuhlaksi',
+          'Karjamessuiksi',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Ehdotuksen tekivät baski José María Ybarra ja katalaani '
           + 'Narciso Bonaplata vuonna 1846. Ensimmäiset messut pidettiin '
           + '18. huhtikuuta 1847, ja vuotta myöhemmin pystytettiin kolme '

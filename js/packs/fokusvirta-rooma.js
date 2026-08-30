@@ -327,11 +327,11 @@ export const FOKUSVIRTA_ROOMA = {
           + 'arvoiset kunnianosoitukset. Miksi hän ei ottanut sitä '
           + 'vastaan?',
         vaihtoehdot: [
-          'Saman lain olisi voinut kumota se valta, joka sen antoi',
           'Laki olisi vienyt häneltä Pietarinkirkon',
+          'Saman lain olisi voinut kumota se valta, joka sen antoi',
           'Laki olisi kieltänyt häntä lähettämästä lähettiläitä',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Yksikään paavi ei poistunut Vatikaanista ennen vuotta '
           + '1929. Siihen mennessä muurin sisällä oli oltu '
           + 'viisikymmentäyhdeksän vuotta.',
@@ -378,11 +378,11 @@ export const FOKUSVIRTA_ROOMA = {
         kysymys: 'Miten kissasuojan hoito siirtyi 1950-luvulta lähtien '
           + 'ihmiseltä toiselle?',
         vaihtoehdot: [
-          'Avain kulki näyttelijältä toiselle',
-          'Kaupunki nimitti hoitajan joka vuosi',
           'Tehtävä kuului aina raunioiden vartijalle',
+          'Kaupunki nimitti hoitajan joka vuosi',
+          'Avain kulki näyttelijältä toiselle',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Suoja toimii temppeli D:n kohdalla ja on vuodesta 1993 '
           + 'ollut virallinen, tappamaton suoja. Kissojen määrästä '
           + 'lähteet ovat eri mieltä, joten lukua ei kannata uskoa '
@@ -432,11 +432,11 @@ export const FOKUSVIRTA_ROOMA = {
         kysymys: 'Portin, jonka keskellä avaimenreikä on, suunnitteli '
           + 'mies, joka tunnetaan paremmin kuparipiirroksistaan. Kuka?',
         vaihtoehdot: [
-          'Giovanni Battista Piranesi',
-          'Gian Lorenzo Bernini',
           'Francesco Borromini',
+          'Gian Lorenzo Bernini',
+          'Giovanni Battista Piranesi',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Piranesin toteutuneita rakennussuunnitelmia on hyvin '
           + 'vähän, ja tämä on yksi niistä. Reiän takana oleva puutarha '
           + 'on ollut eksterritoriaalinen vuodesta 1869.',

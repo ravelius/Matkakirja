@@ -177,11 +177,11 @@ const NAYTTELY_VISA = {
     + 'päähän pystytetty Kolumbuksen pylväs rakennettiin samaa '
     + 'tilaisuutta varten. Mitä?',
   vaihtoehdot: [
-    'Maailmannäyttelyä',
     'Kuningashuoneen vierailua',
+    'Maailmannäyttelyä',
     'Kaupunginmuurien purkamisen muistojuhlaa',
   ],
-  oikea: 0,
+  oikea: 1,
   fakta: 'Barcelonan maailmannäyttely avattiin 8. huhtikuuta 1888 '
     + 'Ciutadellan puistossa, ja sitä varten nousivat sekä Arc de Triomf '
     + 'että Kolumbuksen pylväs. Sama vuosi on kaupungin julisteessa.',
@@ -589,12 +589,12 @@ export const FOKUSVIRTA_BARCELONA = {
         kysymys: 'Kuka lopulta ratkaisi, kumman kaavan mukaan Barcelona '
           + 'rakennettaisiin?',
         vaihtoehdot: [
-          'Madridin keskushallinto',
-          'Kaupungin oma kilpailulautakunta',
           'Maanomistajat, jotka omistivat kentän muurien takana',
+          'Kaupungin oma kilpailulautakunta',
+          'Madridin keskushallinto',
         ],
         /* Oikea on ensimmäinen JA lyhyin — pisin vaihtoehto on väärä. */
-        oikea: 0,
+        oikea: 2,
         fakta: 'Kaupungin kilpailun voitti yksimielisesti Antoni Rovira '
           + 'i Trias 10. lokakuuta 1859, mutta hallitus oli hyväksynyt '
           + 'Cerdàn kaavan jo kesäkuussa, ja ministeriö määräsi sen '

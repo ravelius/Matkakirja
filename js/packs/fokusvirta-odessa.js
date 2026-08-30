@@ -590,11 +590,11 @@ export const FOKUSVIRTA_ODESSA = {
         kysymys: 'Isoisäsi kirjoitti elokuussa 1873, että oopperatalo "paloi '
           + 'talvella". Milloin palo oli?',
         vaihtoehdot: [
-          'Tammikuun toisen päivän yönä',
-          'Edellisenä jouluna, joulukuussa 1872',
           'Helmikuun lopulla, laskiaisviikolla',
+          'Edellisenä jouluna, joulukuussa 1872',
+          'Tammikuun toisen päivän yönä',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Vuoden 1810 teatterin viimeinen muutostyö valmistui 31. '
           + 'joulukuuta 1872, ja kaksi päivää myöhemmin talo paloi tyhjäksi '
           + 'kelloa valaisseen kaasuliekin takia. Kaupunki oli neljätoista '

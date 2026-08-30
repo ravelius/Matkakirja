@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1356, teksti: 'Visavastausten paikat sekoitettu' },
   { v: 1355, teksti: 'Nostokuvat pois karttakerroksesta' },
   { v: 1354, teksti: 'Siirtodokumentti ja pyramidilinjaus' },
   { v: 1353, teksti: 'Vuoret ja meret 48 uuteen maahan' },

@@ -271,11 +271,11 @@ export const FOKUSVIRTA_PRAHA = {
         kysymys: 'Mistä aineesta Tycho Brahen nenäproteesi lopulta '
           + 'osoittautui tehdyksi?',
         vaihtoehdot: [
-          'Messingistä',
           'Hopeasta ja kullasta',
+          'Messingistä',
           'Vahasta',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Aikalaiset uskoivat proteesin olevan hopeaa ja kultaa. '
           + 'Vuonna 2010 avatusta haudasta otettu näyte kertoi toista '
           + 'kaksi vuotta myöhemmin.',
@@ -357,11 +357,11 @@ export const FOKUSVIRTA_PRAHA = {
         kysymys: 'Mitä Klementinumissa on tehty katkeamatta vuodesta '
           + '1775?',
         vaihtoehdot: [
-          'Mitattu ja kirjattu sää',
-          'Painettu kaupungin sanomalehteä',
           'Soitettu keskipäivän kellot',
+          'Painettu kaupungin sanomalehteä',
+          'Mitattu ja kirjattu sää',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Sarja on Böömin vanhin. Sama talo sai 1781 '
           + 'kansalliskirjaston ja on ottanut vastaan vapaakappaleet '
           + 'vuodesta 1782.',
@@ -440,11 +440,11 @@ export const FOKUSVIRTA_PRAHA = {
         kysymys: 'Kuinka monta Przewalskin hevosta maailman '
           + 'eläintarhoissa oli enää 1950-luvun lopulla?',
         vaihtoehdot: [
-          'Kaksitoista',
           'Noin kaksisataa',
+          'Kaksitoista',
           'Noin kaksituhatta',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Prahan eläintarhalle uskottiin 1959 lajin '
           + 'kansainvälisen kantakirjan pito. Luonnosta laji hävisi '
           + 'kokonaan, ja viimeinen villi havainto oli yksinäinen ori '

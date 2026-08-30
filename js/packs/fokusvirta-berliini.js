@@ -245,11 +245,11 @@ export const FOKUSVIRTA_BERLIINI = {
         kysymys: 'Mistä Voitonpylvään lempinimi Kulta-Liisa on '
           + 'peräisin?',
         vaihtoehdot: [
-          'Vuonna 1866 ilmestyneen romaanin sankarittaresta',
           'Patsaan mallina olleesta näyttelijättärestä',
+          'Vuonna 1866 ilmestyneen romaanin sankarittaresta',
           'Pylvään rakennuttaneesta kauppahuoneesta',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Pylväs suunniteltiin muistoksi yhdestä voitosta, mutta '
           + 'ennen vihkiäisiä niitä oli tullut kolme. Kullattu '
           + 'Victoria lisättiin harjalle vasta silloin.',
@@ -299,11 +299,11 @@ export const FOKUSVIRTA_BERLIINI = {
         kysymys: 'Mihin kolmeen Saksan ulkopuoliseen kaupunkiin '
           + 'Berliinin viemärien suunnittelija kutsuttiin?',
         vaihtoehdot: [
-          'Moskovaan, Tokioon ja Kairoon',
-          'Lontooseen, Pariisiin ja Wieniin',
           'New Yorkiin, Chicagoon ja Bostoniin',
+          'Lontooseen, Pariisiin ja Wieniin',
+          'Moskovaan, Tokioon ja Kairoon',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Pääputkien rakentaminen alkoi 1873 ja viimeinen '
           + 'valmistui 1893. Työn mahdollistivat suunnittelijan oma '
           + 'veli, kaupungin ylipormestari, ja lääkäri Rudolf Virchow.',
@@ -360,11 +360,11 @@ export const FOKUSVIRTA_BERLIINI = {
         kysymys: 'Mitä tutkijoiden pääsääntöisen käsityksen mukaan '
           + 'kaupungin nimi tarkoittaa?',
         vaihtoehdot: [
-          'Suota',
           'Karhunpentua',
+          'Suota',
           'Kahlaamoa',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Karhu on siis puhuva vaakuna: kuva, joka selittää '
           + 'nimen väärin mutta ymmärrettävästi. Sinetissä se on ollut '
           + 'vuodesta 1280.',

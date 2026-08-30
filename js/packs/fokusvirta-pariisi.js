@@ -70,11 +70,11 @@ const GUIMARD_VISA = {
   kysymys: 'Pariisin metron valurautaiset sisäänkäynnit suunnitteli '
     + 'Hector Guimard. Miten hän sai työn?',
   vaihtoehdot: [
-    'Hän ei ollut edes osallistunut arkkitehtikilpailuun',
     'Hän voitti arkkitehtikilpailun ylivoimaisesti',
+    'Hän ei ollut edes osallistunut arkkitehtikilpailuun',
     'Hän oli kaupungin oma arkkitehti',
   ],
-  oikea: 0,
+  oikea: 1,
   fakta: 'Kilpailun 21 ehdotuksesta yksikään ei kelvannut. Guimard '
     + 'piirsi vakio-osia, jotka sopivat yhteen kuin rakennussarja: '
     + 'sisäänkäyntejä tehtiin 167, ja jäljellä olevat 86 rauhoitettiin '
@@ -228,11 +228,11 @@ export const FOKUSVIRTA_PARIISI = {
         kysymys: 'Mihin poltetun palatsin kivet päätyivät purkamisen '
           + 'jälkeen?',
         vaihtoehdot: [
-          'Matkamuistoiksi ja Korsikalle rakennettuun palatsiin',
-          'Uuden oopperatalon perustuksiin',
           'Seinen rantamuureihin',
+          'Uuden oopperatalon perustuksiin',
+          'Matkamuistoiksi ja Korsikalle rakennettuun palatsiin',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Rauniot seisoivat paikallaan yksitoista vuotta, ja '
           + 'kunnostaminen olisi ollut mahdollista: seinät olivat ehjät. '
           + 'Purkupäätös tehtiin vasta 1882.',
@@ -284,11 +284,11 @@ export const FOKUSVIRTA_PARIISI = {
         kysymys: 'Miten kokonaisten sanomalehtien verran viestejä '
           + 'saatiin yhden kyyhkyn kannettavaksi?',
         vaihtoehdot: [
-          'Ne kuvattiin mikrofilmille',
           'Ne kirjoitettiin silkkipaperille lyijykynällä',
+          'Ne kuvattiin mikrofilmille',
           'Ne lyhennettiin salakielisiksi numeroiksi',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Perillä filmi heijastettiin taikalyhdyllä seinälle ja '
           + 'viestit kirjoitettiin puhtaaksi. Saksalaiset yrittivät '
           + 'pysäyttää kyyhkyt koulutetuilla haukoilla.',
@@ -338,11 +338,11 @@ export const FOKUSVIRTA_PARIISI = {
       visa: {
         kysymys: 'Mistä impressionistit saivat nimensä?',
         vaihtoehdot: [
-          'Kriitikon pilkkaavasta otsikosta',
-          'Yhdistyksensä virallisesta nimestä',
           'Nadarin ateljeen kyltistä',
+          'Yhdistyksensä virallisesta nimestä',
+          'Kriitikon pilkkaavasta otsikosta',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Yhdistyksen oikea nimi oli pitkä ja virallinen. '
           + 'Ensimmäiseen näyttelyyn huhtikuussa 1874 osallistui '
           + 'kolmekymmentä taiteilijaa, ja jokainen heistä oli luvannut '

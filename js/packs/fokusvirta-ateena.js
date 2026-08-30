@@ -255,11 +255,11 @@ export const FOKUSVIRTA_ATEENA = {
         kysymys: 'Mitä Diogenes kantoi mukanaan kierrellessään torilla '
           + 'kirkkaassa päivänvalossa?',
         vaihtoehdot: [
-          'Palavaa lyhtyä',
           'Filosofian kirjaa',
+          'Palavaa lyhtyä',
           'Puista paimensauvaa',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Diogenes väitti etsivänsä lyhdyllään "rehellistä ihmistä" '
           + '— vihjaten, ettei sellaista löytynyt edes kirkkaassa '
           + 'päivänvalossa.',
@@ -296,11 +296,11 @@ export const FOKUSVIRTA_ATEENA = {
         kysymys: 'Missä rakennuksessa Ateenassa Schliemannin oma '
           + 'kaivaustyö on yhä nähtävissä kuvattuna seinäkoristeissa?',
         vaihtoehdot: [
-          'Hänen entisessä kotipalatsissaan, nykyisessä numismaattisessa museossa',
-          'Ateenan yliopiston pääjuhlasalissa',
           'Kansalliskirjaston lukusalissa',
+          'Ateenan yliopiston pääjuhlasalissa',
+          'Hänen entisessä kotipalatsissaan, nykyisessä numismaattisessa museossa',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Iliou Melathron toimii nykyään numismaattisena museona, '
           + 'ja sen friisissä Schliemann on kuvattuna itse kaivamassa.',
       },

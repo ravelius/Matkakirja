@@ -306,11 +306,11 @@ export const FOKUSVIRTA_LISSABON = {
         kysymys: 'Miksi kuninkaan kirjasto ei koskaan palannut '
           + 'Lissaboniin?',
         vaihtoehdot: [
-          'Portugali myi sen Brasilialle vuoden 1825 sopimuksessa',
           'Laiva, jolla se olisi palannut, upposi matkalla kotiin',
+          'Portugali myi sen Brasilialle vuoden 1825 sopimuksessa',
           'Britannian laivasto takavarikoi sen Rion satamassa',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Kokoelmasta tuli Brasilian omaisuutta vuoden 1825 '
           + 'sopimuksen lisäsopimuksella. Kuninkaalliselle perheelle '
           + 'maksettiin Brasiliaan jääneestä omaisuudesta kaksi miljoonaa '
@@ -390,11 +390,11 @@ export const FOKUSVIRTA_LISSABON = {
       visa: {
         kysymys: 'Mitä Rossion aukion kiveykseen ladottiin vuonna 1848?',
         vaihtoehdot: [
-          'Aaltokuvio',
-          'Kaupungin vaakuna',
           'Kartta Portugalin merireiteistä',
+          'Kaupungin vaakuna',
+          'Aaltokuvio',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Kuvion latoi insinööri Eusebio Pinheiro Furtado, joka oli '
           + 'harjoitellut lajia São Jorgen linnan pihoilla 1840-luvulla. '
           + 'Sama aalto ladottiin myöhemmin myös Rio de Janeirossa — '
@@ -485,11 +485,11 @@ export const FOKUSVIRTA_LISSABON = {
         kysymys: 'Mitä Maria Severan tarinasta tehtiin 85 vuotta hänen '
           + 'kuolemansa jälkeen?',
         vaihtoehdot: [
-          'Portugalin ensimmäinen äänielokuva',
-          'Ooppera, joka esitettiin kuninkaalle',
           'Balettiteos kaupunginteatteriin',
+          'Ooppera, joka esitettiin kuninkaalle',
+          'Portugalin ensimmäinen äänielokuva',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Elokuvan A Severa ohjasi Leitão de Barros vuonna 1931. '
           + 'Sitä ennen tarinasta oli tehty romaani ja siitä näytelmä, '
           + 'joka nousi lavalle vuonna 1901. Fado itse otettiin Unescon '
