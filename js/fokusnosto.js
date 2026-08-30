@@ -1278,13 +1278,13 @@ function avaaNostonKortti(ui, nosto) {
   // PÖLLÖN KARAKTÄÄRI).
   sisalto.appendChild(html('p', 'fokusnosto-ylarivi', 'Livian leikekirja'));
   sisalto.appendChild(html('h3', 'fokusnosto-kortti-otsikko', nosto.otsikko));
-  if (nosto.kuva) piirraNostonKuva(sisalto, nosto.kuva);
+  if (nosto.kuva) piirraNostonKuva(ui, sisalto, nosto.kuva);
   const teksti = html('div', 'fokusnosto-teksti');
   for (const kappale of jaaKappaleiksi(nosto.teksti)) {
     teksti.appendChild(html('p', '', kappale));
   }
   sisalto.appendChild(teksti);
-  if (nosto.valokuva) piirraNostonValokuva(sisalto, nosto.valokuva);
+  if (nosto.valokuva) piirraNostonValokuva(ui, sisalto, nosto.valokuva);
   if (nosto.lahde) sisalto.appendChild(html('p', 'fokusnosto-lahde', nosto.lahde));
   // Karttaliite tulee jutun JÄLKEEN, myös lähderivin jälkeen: se ei ole
   // jutun kuvitusta vaan erillinen arkki jutun välissä (ks.
@@ -1424,16 +1424,34 @@ function asetaNostonKuva(img, kuva, leveys, onVirhe) {
     valokuvaVara(kuva.tiedosto, leveys), onVirhe);
 }
 
-/** Kortin kuva selitteineen ja lähteineen (CC BY vaatii tekijän). */
-function piirraNostonKuva(kohde, kuva, luokka = 'fokusnosto-kuva', leveys = NOSTO_KUVA_PX) {
+/**
+ * Kortin kuva selitteineen ja lähteineen (CC BY vaatii tekijän).
+ *
+ * NAPAUTUS SUURENTAA (omistajan raportti 30.8.2026: *"kaikkia popup
+ * kuvia ei saa klikattua koko näytölle, korjaa"*). Sama suurennos kuin
+ * karttaliitteellä (js/fokuskohteet.js avaaKohdeSuurennos) ja sama
+ * ui-avain `fokusnostoZoom`: kortin Esc-väistö (avaaNostonKortti) ja
+ * sulkusiivous (suljeNostonKortti) kattavat sen valmiiksi, eikä
+ * uutta elinkaarta synny.
+ */
+function piirraNostonKuva(ui, kohde, kuva, luokka = 'fokusnosto-kuva', leveys = NOSTO_KUVA_PX) {
   const kehys = html('figure', luokka);
+  const nappi = html('button', 'fokusnosto-kuvanappi');
+  nappi.type = 'button';
+  nappi.title = 'Katso kuva suurempana';
+  nappi.setAttribute('aria-label', `${kuva.selite ?? 'Kuva'} — avaa suurena`);
   const img = document.createElement('img');
   img.alt = kuva.selite ?? '';
   img.decoding = 'async';
   img.draggable = false;
   const piilota = () => { kehys.hidden = true; };
   asetaNostonKuva(img, kuva, leveys, piilota);
-  kehys.appendChild(img);
+  nappi.appendChild(img);
+  nappi.addEventListener('click', (tapahtuma) => {
+    tapahtuma.stopPropagation();
+    avaaKohdeSuurennos(ui, kuva, () => nappi, 'fokusnostoZoom');
+  });
+  kehys.appendChild(nappi);
   const teksti = html('figcaption', 'fokusnosto-kuvateksti');
   teksti.append(
     html('span', 'fokusnosto-kuvaselite', kuva.selite ?? ''),
@@ -1453,8 +1471,8 @@ function piirraNostonKuva(kohde, kuva, luokka = 'fokusnosto-kuva', leveys = NOST
  * kuvateksti kuin pääkuvalla, joten CC-attribuutio kulkee mukana
  * sellaisenaan — lisenssiehto ei jousta koon mukaan.
  */
-function piirraNostonValokuva(kohde, kuva) {
-  piirraNostonKuva(kohde, kuva, 'fokusnosto-kuva fokusnosto-valokuva', NOSTO_MINI_PX * 3);
+function piirraNostonValokuva(ui, kohde, kuva) {
+  piirraNostonKuva(ui, kohde, kuva, 'fokusnosto-kuva fokusnosto-valokuva', NOSTO_MINI_PX * 3);
 }
 
 /**

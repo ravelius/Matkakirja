@@ -75,6 +75,7 @@
  */
 import { html, jaaKappaleiksi, nielaiseSulkevaNapautus, TOAST_MS } from './ui-apurit.js';
 import { el, maare } from './mapart.js';
+import { avaaKohdeSuurennos, suljeKohdeSuurennos } from './fokuskohteet.js';
 import { piirraNostosymboli } from './fokusnosto-symbolit.js';
 import { piirraKarttavalo } from './karttavalot.js';
 import { projisoiLaudalle } from './fokusmitat.js';
@@ -388,7 +389,7 @@ export function avaaElaintaky(ui, iso) {
   // täkynostot tulevat (js/fokusnosto.js) — eri kirja, sama pöllö.
   sisalto.appendChild(html('p', 'fokusnosto-ylarivi', 'Livian eläinkirja'));
   sisalto.appendChild(html('h3', 'fokusnosto-kortti-otsikko', taky.otsikko));
-  elaintakyPiirraKuva(sisalto, taky, elaintakyMaanNimi(ui, iso));
+  elaintakyPiirraKuva(ui, sisalto, taky, elaintakyMaanNimi(ui, iso));
   const teksti = html('div', 'fokusnosto-teksti');
   for (const kappale of jaaKappaleiksi(taky.teksti)) {
     teksti.appendChild(html('p', '', kappale));
@@ -420,6 +421,13 @@ export function avaaElaintaky(ui, iso) {
   });
   const nappain = (tapahtuma) => {
     if (tapahtuma.key !== 'Escape') return;
+    /*
+     * KUVAN SUURENNOS SULKEUTUU ENSIN. Kortin kuuntelija on
+     * rekisteröity ennen suurennoksen omaa (js/fokuskohteet.js
+     * avaaKohdeSuurennos) ja ehtisi siis ensin — sama väistösääntö
+     * kuin täkynoston kortilla (js/fokusnosto.js).
+     */
+    if (ui?.elaintakyZoom) return;
     tapahtuma.stopPropagation();
     suljeElaintaky(ui);
   };
@@ -442,17 +450,35 @@ export function avaaElaintaky(ui, iso) {
  * Rikkinäinen tai lataamaton kuva piilottaa kehyksensä — teksti kantaa
  * kortin yksinkin, kuten täkynostolla.
  */
-function elaintakyPiirraKuva(kohde, taky, maa) {
+function elaintakyPiirraKuva(ui, kohde, taky, maa) {
   const kehys = html('figure', 'fokusnosto-kuva elaintaky-kuva');
+  const nappi = html('button', 'fokusnosto-kuvanappi');
+  nappi.type = 'button';
+  nappi.title = 'Katso kuva suurempana';
   const img = document.createElement('img');
   const selite = `${taky.elain.charAt(0).toUpperCase()}${taky.elain.slice(1)}, ${maa}`;
+  nappi.setAttribute('aria-label', `${selite} — avaa suurena`);
   img.alt = selite;
   img.decoding = 'async';
   img.loading = 'lazy';
   img.draggable = false;
   img.addEventListener('error', () => { kehys.hidden = true; }, { once: true });
   img.src = taky.kuva;
-  kehys.appendChild(img);
+  nappi.appendChild(img);
+  /*
+   * NAPAUTUS SUURENTAA (omistajan raportti 30.8.2026: kaikki popupien
+   * kuvat aukeavat koko näytölle). Sama suurennos kuin kartan
+   * kohteilla ja täkynostolla (js/fokuskohteet.js avaaKohdeSuurennos);
+   * repon oma kuva kulkee `osoite`-kenttänä, jolla ei ole thumb-
+   * putkea. Oma ui-avain, koska kortin elinkaari ei ole tietoruudun
+   * (ks. avaaKohdeSuurennos, kohta ELINKAARI) — suljeElaintaky sulkee
+   * suurennoksen kortin mukana.
+   */
+  nappi.addEventListener('click', (tapahtuma) => {
+    tapahtuma.stopPropagation();
+    avaaKohdeSuurennos(ui, { osoite: taky.kuva, selite }, () => nappi, 'elaintakyZoom');
+  });
+  kehys.appendChild(nappi);
   const teksti = html('figcaption', 'fokusnosto-kuvateksti');
   teksti.appendChild(html('span', 'fokusnosto-kuvaselite', selite));
   kehys.appendChild(teksti);
@@ -497,6 +523,10 @@ export function suljeElaintaky(ui) {
   const auki = ui?.elaintakyKortti;
   if (ui) ui.elaintakyKortti = null;
   auki?.purku?.();
+  // Kuvan suurennos on kortin oma jatke: ilman tätä se jäisi
+  // kellumaan kartan päälle, kun kortti sen alta katoaa (sama
+  // siivous kuin täkynostolla, js/fokusnosto.js suljeNostonKortti).
+  suljeKohdeSuurennos(ui, 'elaintakyZoom');
   // Sama siivous kuin täkynostolla (suljeNostonKortti): orpo kerros
   // jäisi muuten nappaamaan napautuksia koko kartan päältä.
   if (typeof document === 'undefined') return;

@@ -451,6 +451,40 @@ body.kartta-raahaus .nostosym-tuike-paalla .nostosym-tuike-ydin {
   background: rgba(122, 85, 20, 0.1);
 }
 
+/*
+ * Kortin kuva on nappi, joka avaa suurennoksen (30.8.2026: kaikki
+ * popupien kuvat aukeavat koko näytölle). Sama riisuttu nappi kuin
+ * karttaliitteellä (.fokusnosto-liitenappi): kuva näyttää kuvalta,
+ * ei painikkeelta. Samaa nappia käyttää myös eläintäyn kortti
+ * (js/elaintaky.js).
+ */
+.fokusnosto-kuvanappi {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  cursor: zoom-in;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button.fokusnosto-kuvanappi:hover:not(:disabled),
+button.fokusnosto-kuvanappi:focus-visible { background: transparent; }
+
+.fokusnosto-kuvanappi:hover img,
+.fokusnosto-kuvanappi:focus-visible img {
+  border-color: rgba(122, 85, 20, 0.62);
+}
+
+.fokusnosto-kuvanappi:focus { outline: none; }
+
+.fokusnosto-kuvanappi:focus-visible {
+  outline: 2px solid #9c6b17;
+  outline-offset: 2px;
+}
+
 .fokusnosto-kuvateksti {
   margin: 0.3rem 0 0;
   font-size: 0.8rem;

@@ -12805,6 +12805,8 @@ button.lukija-nappi.lukee,
   mix-blend-mode: multiply;
   -webkit-mask-image: radial-gradient(ellipse at center, #000 55%, transparent 98%);
   mask-image: radial-gradient(ellipse at center, #000 55%, transparent 98%);
+  /* Napautus avaa muotokuvan koko näytölle (30.8.2026). */
+  cursor: zoom-in;
 }
 
 .quiz-kohtaaminen-kuva[hidden] { display: none; }
@@ -12819,6 +12821,8 @@ button.lukija-nappi.lukee,
   mix-blend-mode: multiply;
   -webkit-mask-image: radial-gradient(ellipse at center, #000 55%, transparent 98%);
   mask-image: radial-gradient(ellipse at center, #000 55%, transparent 98%);
+  /* Napautus avaa kätkökuvan koko näytölle (30.8.2026). */
+  cursor: zoom-in;
 }
 
 .quiz-result .kohtaaminen-repliikki {
