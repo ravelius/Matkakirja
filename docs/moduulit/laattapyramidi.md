@@ -132,6 +132,12 @@ kaupungit yms voidaan piirtaa suoraan yhteen karttaan, eika tarvita
 muita kikkoja kuin rajoitettu liikkuvuus"*. Sisältö poltetaan siis
 laattoihin **ennen täysajoa**, jottei pyramidia ajeta kahdesti.
 
+> **Tämä luku kuvaa tilanteen ennen 30.8.2026 iltaa.** Omistajan päätös
+> samana päivänä siirsi NIMIÖT ja niiden MERKIT laatoista peliin —
+> laattoihin jäävät joet ja reitit. Ks. **luku 6g**, joka on tältä osin
+> tätä lukua uudempi ja voittaa sen; alla olevat kynnykset ja määrät
+> pätevät yhä, mutta niiden koti on nyt `js/karttanimet.js`.
+
 Mitattu kooste (tools/fokuskartta/sisalto.mjs):
 
 | laji | määrä | lähde |
@@ -634,6 +640,213 @@ mukaan se kuuluisi P:hen. Ei korjattu tässä erässä: se ei ole tekstiä,
 ja se muuttaa ilmeen myös uloimmassa päässä. Kirjattu Fablelle
 (päätöskysymys B).
 
+## 6g. Nimet pois laatoista, peli latoo ne (omistajan päätös 30.8.2026)
+
+Kysymyskortilla kolme päätöstä. Ne käsitellään tässä yhdessä, koska ne
+ovat sama vikaluokka: **laattaan poltettu asia ei voi tietää, millä
+ruudulla sitä katsotaan.**
+
+### 6g.1 Poltettu mittajana pois
+
+Arkille poltettu mittakaavajana oli koko atlaskehyksen ainoa kaluste,
+joka väitti jotain **mitattavaa** — ja ainoa, joka ei voinut pitää
+väitettään. Asiakas valitsee lähimmän laattatason logaritmisesti ja
+skaalaa kuvaa sen jälkeen kertoimella **0,708 … 1,413**
+(`js/laattapyramidi.js valitseTaso`). Poltettu jana venyy mukana mutta
+lukema pysyy: *"5000 km"* on ruudulla oikeasti 3 538 … 7 066 km, eli
+enimmillään **41 % pielessä**.
+
+Jana on poistettu. Pelin oma, ruutuun ankkuroitu jana
+(`js/fokusmitat.js laskeMittajana`) jää ainoaksi; se on oikeassa
+rakenteeltaan, koska mittakaava on ruudun ominaisuus eikä kuvan.
+Kartussi ja painajanrivi jäävät laattoihin — ne eivät väitä mitään
+mitattavaa vaan kertovat mikä arkki tämä on.
+
+### 6g.2 Kehysviivat paperivakioksi
+
+Kaksoisviivakehys piirrettiin `paksuus * S`, eli kartan mittakaavassa:
+
+| taso | ohut reunaviiva (1,4) | vahva kehysviiva (3,0) |
+| --- | --- | --- |
+| z0 | 0,15 px (näkymätön) | 0,32 px (näkymätön) |
+| z2 | 0,59 px | 1,27 px |
+| z7 | 18,9 px | **40,5 px** |
+
+Luvun 6d sääntö ratkaisee: **painojälki on paperivakio, arkin geometria
+on S:ssä.** Viivan PAIKKA on geometriaa, sen LEVEYS on painotyötä.
+Leveydet ovat nyt `paksuus * P` — myös kartussin kehykset,
+kulmakoristeet ja jakoviiva, samasta syystä.
+
+**Kaksoisviivan väli sai paperivakioisen alarajan** (`6 * P`).
+Ilman sitä uloimmilla tasoilla väli (`14 * S` = 1,5…2,9 px) olisi ollut
+kapeampi kuin viivat itse, ja hiusviiva ja vahva viiva olisivat
+sulaneet yhdeksi noin 3,6 pikselin palkiksi — kaksoisviivaa ei olisi
+ollut. Syvemmillä tasoilla geometria on jo suurempi ja voittaa itse.
+
+Todennettu silmällä z0:n laatasta: ennen kehystä ei käytännössä
+näkynyt, nyt arkin ylä- ja alareunassa on kaiverretun atlaksen
+kaksoisviiva. Se on tarkoitus — juuri uloimmalla tasolla arkkia
+katsotaan kokonaisena.
+
+### 6g.3 Nimiöt ja merkit pois laatoista
+
+**Tämä kumoaa nimien osalta linjauksen "kaikki pysyvä poltetaan
+laattoihin".** Syy on rakenteellinen eikä työmäärä.
+
+Laatta on sama tiedosto kaikille laitteille eikä tiedä katsojan
+pikselitiheyttä. Asiakas valitsee tason luvusta `skaala · dpr`, joten
+yksi kuvapikseli on ruudulla noin `1 / dpr` CSS-pikseliä ja poltettu
+`k` pikselin nimi on `k / dpr` CSS-pikseliä. Tasoindeksi ei erota
+dpr:ää zoomista — **sama taso valitaan sekä "dpr 3 ja kaukana" että
+"dpr 1 ja kolme kertaa lähempänä"** — joten yksi luku laatassa ei voi
+palvella kahta riippumatonta muuttujaa.
+
+Mitattu pelistä (390×844, sama näkymä, skaala 0,7993):
+
+| | valittu taso | poltetun nimen koko ruudulla |
+| --- | --- | --- |
+| dpr 1 | z4 (0,9 px/yks) | 10,7 CSS-px |
+| dpr 3 | z5 (1,8 px/yks) | **5,3 CSS-px** |
+
+(Lähtökaupungin nimi, ladonnan `koko` 12.) Yleisesti
+`koko · skaala / taso.px`, ja koska `taso.px` on √2:n päässä
+`skaala · dpr`:stä, 12 pikselin nimi on dpr 3:lla 2,8…5,7 CSS-pikseliä
+ja dpr 1:llä 8,5…17,0.
+
+**Mitä laatoista poistuu:** kaupunkien, vuorten ja järvien nimiöt sekä
+kaupunkipiste (2,0 / 2,6 px), sen rengas (4,6 px), vuorisymboli
+(4–5 px) ja kohderengas (3,2 px).
+
+**Mitä jää:** maasto, meri, rannat, joet, järvet, asteverkko,
+atlaskehys, kartussi, painajanrivi, kompassiruusu ja merten nimet.
+Myös **reitit ja jokien uomat jäävät**: ne ovat viivatyötä samassa
+paperivakioluokassa kuin rannikko, niissä ei ole tekstiä, eikä 602:ta
+polyviivaa kannata palauttaa siihen elävään kerrokseen, jonka
+purkaminen teki panoroinnista sujuvan (v1365).
+
+#### Miksi merkit lähtevät nimien mukana
+
+Kolme merkkiä, kolme perustetta samasta säännöstä *"piste ja sen nimi
+pysyvät samassa suhteessa"*:
+
+- **Kaupunkipiste ja sen rengas** ovat nimen ANKKURI. Ladonta varaa
+  pisteen ennen nimiä, jottei nimi peitä toisen kaupungin merkkiä; jos
+  piste jäisi laattaan ja nimi lähtisi peliin, varaus ei enää vastaisi
+  sitä, mitä ruudulla on.
+- **Vuorisymboli** on saman nimiön merkki: sen nimi kirjoitetaan 11
+  pikseliä sen alle.
+- **Kohderengas lähtee ILMAN korvaajaa.** Kohteilla on jo elävä,
+  ruutuun mitoitettu merkki nimineen ja napautusaloineen
+  (`js/fokuskohteet.js`) siinä maassa, jossa pelaaja on — poltettu
+  rengas oli sen alla toinen, pienempi merkki samasta asiasta. Muualla
+  siitä jäi nimetön ympyrä, joka on dpr 3:lla yhden CSS-pikselin
+  kokoinen. Kaikkien 197 kohteen tuominen elävään kerrokseen vaatisi
+  kaikkien 22 maapaketin lataamisen heti alussa; ne ladataan nyt maa
+  kerrallaan.
+
+#### Ladonta siirrettiin, ei keksitty uudestaan
+
+`js/karttanimet.js` on suora käännös generaattorin `__ladonta`-
+funktiosta (luku 6c): laudan oma asettelu ensin, sitten neljä
+tavanomaista karttapaikkaa, viimeisenä pudotus; tärkeysjärjestys
+lähtökaupunki (+8) → lentokenttä (+4) → reittisolmun aste (+0…3);
+pisteet varataan ennen nimiä; kaksoisnimen tasokohtainen päätös;
+kynnykset nimitiheydestä; leveys mitataan `measureText`illä samalla
+kirjasimella jolla piirretään.
+
+**Kolme asiaa muuttui, ja jokainen on korjaus:**
+
+1. **Kynnysten yksikkö on CSS-pikseli**, ei kuvapikseli. Kynnykset
+   johdettiin nimitiheydestä, ja sekä nimen leveys että lukukelpoinen
+   väli ovat ruudun ominaisuuksia. Työpöydän käytös säilyy, tiheä
+   näyttö saa saman.
+2. **Kirjasin on pelin oma kartta-antiikva** (`.city-label`in perhe)
+   eikä kontin Liberation Serif. Mittaus ja piirto käyttävät samaa
+   merkkijonoa, joten törmäystesti pysyy totena.
+3. **Ladonta ajetaan kerran ZOOMIA kohti, ei kerran tasoa kohti.**
+   Tulos on laudan yksiköissä, joten panorointi ei laske mitään
+   uudelleen eikä nimi voi hypätä kartan liikkuessa. Tulos muistetaan
+   mittakaavan mukaan.
+
+Vuorisymbolia EI varata (laatoilla ei varattu myöskään). Mitattu:
+varauksella jokainen vuoren nimi törmäisi omaan symboliinsa — 296
+nimiötä ja 49 pudotettua; ilman varausta sama **345** kuin laatoilla.
+
+#### Kaksoisnimivaara ja se, miten se on hoidettu
+
+v1366 korjasi kaksoisnimen vaientamalla elävän kerroksen. Nyt suunta
+kääntyy, ja **laatat vaihtuvat eri aikaan kuin koodi**. Siksi päätöksen
+tekee LUETTELO eikä versionumero: `pyramidi.json` kantaa kentän
+`nimiot: false`, ja `js/laattapyramidi.js laatoissaOnNimet()` lukee sen.
+
+- vanha luettelo (kenttää ei ole) tai luettelo ei vielä ladattu
+  → laatoissa on nimet → **peli vaikenee** (nykytila, ei muutu)
+- `nimiot: false` → **peli latoo**
+
+Kumpikaan ei siis voi puhua yhtä aikaa eikä kumpikaan vaieta yhtä
+aikaa. Laudan VANHAT nimikerrokset (`.city-label`, `.maastonimi`)
+pysyvät hiljaa pyramidilaudalla kuten v1366:sta asti: niissä nimi on
+laudan yksiköissä ja kasvaa zoomin mukana.
+
+Savukevartiot: `savuke-laattapyramidi` P6 (nimettömien laattojen päällä
+peli latoo, sama nimi vain kerran, nimen korkeus CSS-pikseleinä) ja
+`savuke-maailmanakyma` 10a–10d (ilman luetteloa kaikki kerrokset
+vaikenevat).
+
+### 6g.4 Mitattu hinta
+
+**Laattojen koko** (pilotti z0–z4, 395 laattaa, sama kone ja sama
+aineisto ennen ja jälkeen):
+
+| taso | ennen | jälkeen |
+| --- | --- | --- |
+| z0 | 0,09 Mt | 0,09 Mt |
+| z1 | 0,34 Mt | 0,33 Mt |
+| z2 | 1,24 Mt | 1,23 Mt |
+| z3 | 4,62 Mt | 4,58 Mt |
+| z4 | 17,54 Mt | 17,48 Mt |
+| **yhteensä** | **23,83 Mt** | **23,71 Mt (−0,5 %)** |
+
+Säästö on pieni, ja se on odotettu: luku 6d mittasi jo, että tavuista
+valtaosa on paperin raetta — korkeataajuista kohinaa, jota
+kuvanpakkaus ei voi pakata. Nimet ovat sen rinnalla ohutta mustetta.
+Koko pyramidissa (1,32…1,48 Gt) tämä on noin 7 Mt.
+
+**Nimien määrä** (ladonta koko laudalle; ruudulla 390×844):
+
+| skaala (CSS-px/yks) | ladottu | pudotettu | ruudulla |
+| --- | --- | --- | --- |
+| 0,799 | 307 | 6 | 29 |
+| 1,198 | 342 | 3 | 12 |
+| 1,797 | 345 | 0 | 5 |
+| 2,696 | 345 | 0 | 3 |
+| 4,044 ja yli | 345 | 0 | 1 |
+
+Vertailu laattoihin: z2 62, z3 297 (19 pudotettu), z4 344 (7), z5 350
+(1), z6–z7 351 (0). Samat luvut samassa suuruusluokassa — ero tulee
+siitä, että kynnykset ovat nyt CSS-pikseleissä.
+
+**Kehysaika.** Mitattu Chromiumissa (390×844, dpr 3, kolme
+edestakaista pyyhkäisyä):
+
+| | ennen | jälkeen |
+| --- | --- | --- |
+| panoroinnin longtaskit | 0 ms | **0 ms** |
+| `paivitaMaastonimet` asettumisessa, mediaani | 0,8–1,1 ms | **1,6–1,8 ms** |
+| sama, pahin | 1,5–2,0 ms | 2,2–3,4 ms |
+| kylmä ladonta uudelle mittakaavalle | — | 2,0–2,4 ms (pahin 3,5–7,3) |
+| SVG-solmuja uloimmassa näkymässä | 2026 | 2091 (+65) |
+
+Hinta on siis **alle millisekunti asettumista kohti** ja kertaluonteinen
+2–7 ms uudelle zoomportaalle. Panorointi ei maksa mitään, koska ladonta
+ei riipu panoroinnista ja solmuja on kymmeniä eikä satoja — vanha elävä
+kerros piti 261 nimilappua puussa aina.
+
+**Silmillä dpr 1, 2 ja 3** (sama näkymä, sama laattakansio): nimiön
+ladottu laatikko ruudulla **14,0 CSS-pikseliä kaikilla kolmella**,
+ladottujen nimien määrä sama (29) ja paikat samat. Ennen sama nimi oli
+10,7 ja 5,3 CSS-pikseliä (dpr 1 / dpr 3).
+
 ## 7. Harva pyramidi — mitattu, päätetty POIS
 
 Karsinta laattamäärästä (`--harva-raja 8`, koko maailma, uusi arkki):
@@ -898,6 +1111,12 @@ löysentää panorointirajoja.
 
 ## 6c. Nimiöiden ladonta ja törmäyksenvälttely
 
+> **Ladonta on siirretty peliin 30.8.2026** (omistajan päätös, luku 6g):
+> koodi asuu nyt `js/karttanimet.js`:ssä ja ajetaan kerran ZOOMIA kohti
+> ruutuavaruudessa. Kaikki tämän luvun säännöt, kynnykset ja mitatut
+> luvut pätevät sellaisenaan — vain yksikkö vaihtui kuvapikselistä
+> CSS-pikseliin ja ajopaikka generaattorista peliin.
+
 **Ladonta ajetaan KERRAN TASOA KOHTI koko arkille, ei lohkoittain.**
 Se on ainoa kohta putkessa, jossa piirto ei voi olla paikallinen:
 törmäyksenvälttely on globaali päätös — se että yksi nimi jää pois,
@@ -991,18 +1210,18 @@ kaatoi ajon (`ahaggar x2`).
    nimet, kompassiruusu, kartussi, mittakaavajana ja painajanrivi
    piirretään vain tasoille z0–z2 ja ne on mitoitettu uudestaan
    niiden mukaan.
-1c. **Kehysviivojen paksuus** (luku 6f, viimeinen alaluku): kaksoisviiva
-   on yhä `paksuus * S`, eli z0:lla näkymätön ja z7:llä 40 pikselin
-   palkki. Sama vikaluokka, yhden rivin muutos, mutta muuttaa ilmeen
-   myös uloimmassa päässä — kirjattu Fablelle.
-1d. **Poltettu mittajana vs. pelin oma jana** (luku 6f): poltettu on
-   ruudulla enimmillään 41 % pielessä, ja `js/fokusmitat.js` piirtää
-   jo oikean. Päätöskysymys omistajalle.
-1e. **Nimiöt laitepikseleinä vs. CSS-pikseleinä**: omistajan päätös
-   30.8.2026 oli "sama näkyvä koko kaikilla laitteilla", mutta sitä ei
-   voi toteuttaa laattoja generoimalla — laatta ei tiedä katsojan
-   pikselitiheyttä, ja tasoindeksi ei erota dpr:ää zoomista. Kaksi
-   todellista tietä ovat molemmat js/-puolella; kirjattu Fablelle.
+1c. ~~Kehysviivojen paksuus~~ — **ratkaistu** (luku 6g): viivanleveys on
+   nyt paperivakio kuten rannikon kynä, ja kaksoisviivan väli sai
+   paperivakioisen alarajan, jottei viivapari sula yhdeksi uloimmilla
+   tasoilla.
+1d. ~~Poltettu mittajana vs. pelin oma jana~~ — **ratkaistu** (luku 6g,
+   omistajan päätös 30.8.2026): poltettu jana on poistettu laatoista.
+   Mittakaava on ruudun ominaisuus, ja pelin oma jana
+   (`js/fokusmitat.js`) on ainoa joka osaa mitata.
+1e. ~~Nimiöt laitepikseleinä vs. CSS-pikseleinä~~ — **ratkaistu**
+   (luku 6g, omistajan päätös 30.8.2026): nimiöt ja niiden merkit
+   poistuvat laatoista, ja peli latoo ne ruutuavaruudessa
+   (`js/karttanimet.js`).
 2. **Syvyyskäyrät oikeasta datasta** — päätetty myöhemmäksi eräksi.
 3. **Vinjetointi pelitilakerroksessa.** Se ei tule laattoihin
    (luku 6b), ja Raamattu listaa sen pelin ohueen pelitilakerrokseen.

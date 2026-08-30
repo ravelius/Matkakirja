@@ -278,6 +278,16 @@ import {
   paivitaPyramidi, nollaaPyramidi, pyramidiKattaa, pyramidinMittarit,
 } from './laattapyramidi.js';
 /*
+ * PAIKANNIMET LADOTAAN RUUTUAVARUUDESSA (omistajan päätös 30.8.2026).
+ * Laatoista poistuivat kaupunkien, vuorten ja järvien nimiöt sekä
+ * niiden merkit; ne ovat nyt tässä kerroksessa oikean kokoisina joka
+ * laitteella. Ks. js/karttanimet.js — myös se, miksi kerros osaa olla
+ * hiljaa vanhojen laattojen päällä.
+ */
+import {
+  karttanimienMitat, paivitaKarttanimet, unohdaKarttanimet,
+} from './karttanimet.js';
+/*
  * MAAN IKKUNA laudan koordinaateissa (js/packs/fokus-grc.js
  * FOKUS_POHJAT). Taulu syntyi maalehtien rajauksista, mutta lehdet ovat
  * poissa: pyramidissa jäljelle jäi se, mitä taulu oikeasti kuvaa —
@@ -4697,6 +4707,14 @@ export class UI {
     this.paivitaMaailmanRajaus(nakyvaNyt);
     // Kaupunkien nimet pois yleiskuvasta (ks. paivitaKaupunkinimienNakyvyys).
     this.paivitaKaupunkinimienNakyvyys(nakyvaNyt);
+    /*
+     * PYRAMIDILAUDAN PAIKANNIMET (js/karttanimet.js). Ladonta on
+     * funktio pelkästä mittakaavasta ja muistetaan sen mukaan, joten
+     * panorointi ei laske sitä uudelleen — tässä valitaan vain se
+     * kourallinen nimiä, joka on ruudulla. Samasta kohdasta ja samasta
+     * syystä kuin muutkin ruutuun mitoitetut merkkikerrokset alempana.
+     */
+    paivitaKarttanimet(this, nakyvaNyt);
     // Kartan kohdemerkit ovat kiinteän kokoisia ruudulla, joten niiden
     // mittakaava on laskettava uudelleen aina kun zoomi muuttuu —
     // samasta syystä ja samasta kohdasta kuin lisänimien näkyvyys.
@@ -5531,6 +5549,16 @@ export class UI {
      */
     globalThis.__pyramidinMittarit = pyramidinMittarit;
     /*
+     * Sama kahva paikannimien ladonnalle: montako nimiötä ja merkkiä
+     * annettu mittakaava tuottaa ja montako putosi tilanpuutteeseen.
+     * Ilman tätä nimien määrää voisi mitata vain silmällä, ja juuri se
+     * luku ratkaisee onko yleistys kohdallaan (savukkeet ja mittaukset,
+     * ks. js/karttanimet.js).
+     */
+    globalThis.__karttanimienMitat = (px) => karttanimienMitat(
+      this, px ?? this.nakyvaAlue?.()?.skaala ?? 1,
+    );
+    /*
      * Ruutuun ankkuroidut mitat nollille laudan mukana: kartuutsin
      * teksti ja mittajanan pituus riippuvat laudasta, ja vanhat
      * elementit jäisivät muuten .map-paneen roikkumaan uuden laudan
@@ -5680,6 +5708,16 @@ export class UI {
      * tarvita mihinkään.
      */
     this.maastonimiKerros = el('g', { class: 'maastonimet' }, this.svg);
+    /*
+     * PAIKANNIMIKERROS samaan paikkaan ja samasta syystä kuin
+     * maastonimet: `this.svg`:n suora lapsi, jotta kiertävä lauta ei
+     * kirjoita samaa nimeä kahdesti (sauman hoitaa js/karttanimet.js
+     * saumasiirto). Kerros on tyhjä kaikilla muilla laudoilla kuin
+     * pyramidilaudalla eikä maksa niillä mitään.
+     */
+    this.karttanimiKerros = el('g', { class: 'karttanimet' }, this.svg);
+    this.karttanimiAvain = null;
+    unohdaKarttanimet();
     // Fokusvirran kuvasuurennos kiinni laudan vaihtuessa: auki jäänyt
     // suurennos olisi kuva kartasta, jota ei enää ole. (Vinjettien oma
     // karttakerros on purettu, ks. js/fokusvirta.js KUVAT KARTALLA —

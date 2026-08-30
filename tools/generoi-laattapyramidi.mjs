@@ -1035,305 +1035,26 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
     };
   };
   /*
-   * NIMIÖIDEN LADONTA — KERRAN TASOA KOHTI, EI KERRAN LOHKOA KOHTI.
+   * NIMIÖIDEN LADONTA ON SIIRRETTY PELIIN (omistajan päätös 30.8.2026).
    *
-   * Tämä on ainoa kohta koko putkessa, jossa piirto EI voi olla
-   * paikallinen. Törmäyksenvälttely on globaali päätös: se että Utrecht
-   * jää pois, riippuu siitä että Amsterdam ja Rotterdam ovat jo
-   * paikoillaan. Jos ladonta tehtäisiin lohkoittain, kaksi vierekkäistä
-   * lohkoa päätyisi eri lopputulokseen samasta kaupungista ja
-   * lohkorajalle syntyisi joko kaksoisnimi tai katoava nimi.
+   * Täällä oli ladonta, joka ajettiin kerran tasoa kohti koko arkille
+   * ja poltettiin laattoihin: 345 nimiötä, 0 päällekkäisyyttä,
+   * tärkeysjärjestys lähtökaupunki > lentokenttä > reittisolmun aste.
+   * Se logiikka ei kadonnut — se on nyt js/karttanimet.js:ssä samoine
+   * sääntöineen, mittauksineen ja kynnyksineen.
    *
-   * Siksi ladonta ajetaan KERRAN TASOA KOHTI koko arkille arkin
-   * pikseleissä, ja lohkot vain piirtävät valmiin listan. Silloin
-   * tulos ei riipu lohkojaosta lainkaan.
+   * SYY MUUTTOON: laatta ei tiedä katsojan pikselitiheyttä, ja asiakas
+   * valitsee tason luvusta skaala x dpr. Poltettu nimi oli siksi
+   * iPadilla kolmasosan kokoinen työpöytään verrattuna, eikä sitä voi
+   * korjata generaattorissa (perustelu kokonaisuudessaan
+   * tools/fokuskartta/maailmapiirto.js, osio 8b).
    *
-   * MITTAUS TEHDÄÄN SAMALLA MOOTTORILLA, joka piirtää: kirjaimen leveys
-   * luetaan ctx.measureTextilla samalla fontilla ja samalla
-   * harvennuksella kuin piirto käyttää. Arvattu leveys johtaisi joko
-   * turhiin pudotuksiin tai päällekkäisyyksiin.
+   * PYRAMIDI KERTOO ITSE, KUMMASSA MAAILMASSA SE ON: luettelon kenttä
+   * "nimiot: false" sanoo pelille, että näissä laatoissa ei ole nimiä
+   * ja peli saa latoa ne. Vanha luettelo ilman kenttää tarkoittaa
+   * vanhoja laattoja, joissa nimet ovat — silloin peli vaikenee, eikä
+   * nimi voi olla kartalla kahdesti eikä nollaa kertaa.
    */
-  const mittari = document.createElement("canvas").getContext("2d");
-
-  /** Harvennetun tekstin leveys — sama kaava kuin moottorin teksti(). */
-  const tekstinLeveys = (teksti, koko, fontti, tyylitys, vali) => {
-    mittari.font = (tyylitys + " " + koko + "px " + fontti).trim();
-    const merkit = [...teksti];
-    let lev = 0;
-    for (const m of merkit) lev += mittari.measureText(m).width;
-    return lev + vali * Math.max(0, merkit.length - 1);
-  };
-
-  window.__ladonnat = {};
-  window.__ladonta = (taso, kynnykset) => {
-    const px = taso.px;
-    const arkkiX = taso.arkkiX;
-    const arkkiY = taso.arkkiY;
-    const kuvaX = (bx) => (bx - arkkiX) * px;
-    const kuvaY = (by) => (by - arkkiY) * px;
-    const nakyy = (k) => px >= k;
-
-    /* Varatut suorakaiteet; yksinkertainen ruudukkohaku riittää, kun
-     * nimiä on satoja eikä satojatuhansia. */
-    const varatut = [];
-    const RUUTU = 256;
-    const hila = new Map();
-    const avaimet = (r) => {
-      const ulos = [];
-      for (let gy = Math.floor(r.y0 / RUUTU); gy <= Math.floor(r.y1 / RUUTU); gy += 1) {
-        for (let gx = Math.floor(r.x0 / RUUTU); gx <= Math.floor(r.x1 / RUUTU); gx += 1) {
-          ulos.push(gx + ":" + gy);
-        }
-      }
-      return ulos;
-    };
-    const vapaa = (r) => {
-      for (const a of avaimet(r)) {
-        const lista = hila.get(a);
-        if (!lista) continue;
-        for (const o of lista) {
-          if (r.x0 < o.x1 && r.x1 > o.x0 && r.y0 < o.y1 && r.y1 > o.y0) return false;
-        }
-      }
-      return true;
-    };
-    const varaa = (r) => {
-      varatut.push(r);
-      for (const a of avaimet(r)) {
-        if (!hila.has(a)) hila.set(a, []);
-        hila.get(a).push(r);
-      }
-    };
-
-    const tulos = [];
-
-    /*
-     * KAKSOISNIMET — SAMA NIMI PIIRRETÄÄN VAIN KERRAN.
-     *
-     * Osa laudan paikoista on oikeasti vuoristoja tai järviä, jolloin
-     * sama nimi tuli kartalle kahdesti: kerran kaupunkipisteen ja
-     * kerran maastomerkin kanssa. Parit on tunnistettu sisalto.mjs:ssä
-     * yleisellä säännöllä (sama nimi, lähekkäin) — täällä päätetään
-     * vain KUMPI nimiö jää.
-     *
-     * VUORISTON KOHDALLA OIKEA ESITYS ON VUORISYMBOLI JA SEN NIMI, ei
-     * kaupunkipiste ja sen nimi: Alpit ei ole kaupunki. Molemmat MERKIT
-     * jäävät — kaupunkipiste on se, johon pelaaja matkustaa — mutta
-     * nimiö tulee maastonimestä.
-     *
-     * PÄÄTÖS ON TASOKOHTAINEN, JA SE ON MITATTU. Maastonimillä on eri
-     * yleistyskynnys kuin kaupunginnimillä: vuorennimi ilmestyy samalla
-     * kynnyksellä (0,45) kuin kaupungin nimi, mutta järven nimi vasta
-     * 0,9:llä kun tärkeys > 1. Jos kaupungin nimiö vaiennettaisiin
-     * suoralta kädeltä, Titicaca, Tanganjika ja Tšad-järvi jäisivät
-     * välillä 0,45…0,9 pisteeksi ILMAN NIMEÄ — kokonaisen tason ajan.
-     * Siksi kaupungin nimiö väistää vasta silloin, kun maastonimi
-     * oikeasti piirtyy tällä tasolla; sitä ennen se nimeää kohteen itse.
-     *
-     * Ladonta ajetaan kerran tasoa kohti koko arkille, joten päätös on
-     * sama joka lohkossa eikä lohkorajalle synny kaksoisnimeä.
-     */
-    const maastonKynnys = (pari) => (pari.laji === "vuori"
-      ? kynnykset.vuoriNimi
-      : (pari.tarkeys > 1 ? kynnykset.jarviNimi2 : kynnykset.jarviNimi));
-
-    /* Pisteet varataan ENSIN: nimi ei saa peittää toisen kaupungin
-     * merkkiä, vaikka nimi itse mahtuisi. */
-    const pisteet = [];
-    for (const c of sisalto.kaupungit ?? []) {
-      if (!c.iso && !nakyy(kynnykset.kaupunkiPiste)) continue;
-      const x = kuvaX(c.x);
-      const y = kuvaY(c.y);
-      const r = c.iso ? 5.2 : 2.6;
-      pisteet.push({ c, x, y });
-      varaa({ x0: x - r, y0: y - r, x1: x + r, y1: y + r });
-    }
-
-    /* Tärkein ensin; tasapelissä nimi, jotta ajo on toistettava. */
-    const jono = pisteet.slice().sort((a, b) => (b.c.tarkeys - a.c.tarkeys)
-      || (a.c.nimi < b.c.nimi ? -1 : 1));
-
-    let laadittu = 0;
-    let pudotettu = 0;
-    for (const { c, x, y } of jono) {
-      const saaNimen = c.iso ? nakyy(kynnykset.isoNimi) : nakyy(kynnykset.nimi);
-      /*
-       * Parillinen kohde ladotaan kaupungin TÄRKEYDELLÄ mutta
-       * maastonimen ULKOASULLA ja PAIKALLA. Tärkeys tulee kaupungilta,
-       * jottei nimi putoa tilanpuutteeseen sen takia, että maastonimet
-       * ladotaan vasta kaupunkien jälkeen.
-       */
-      const pari = c.maastopari;
-      const pariNakyy = Boolean(pari) && nakyy(maastonKynnys(pari));
-      if (!saaNimen && !pariNakyy) continue;
-      if (pariNakyy) {
-        const mkoko = pari.laji === "vuori" ? 11 : 10;
-        const mtyyli = pari.laji === "jarvi" ? "italic" : "";
-        const mx = kuvaX(pari.x);
-        const my = kuvaY(pari.y) + (pari.laji === "vuori" ? 11 : 0);
-        const mlev = tekstinLeveys(pari.nimi, mkoko, '"Liberation Serif", serif', mtyyli, 0);
-        const mkork = mkoko * 1.15;
-        const mr = {
-          x0: mx - mlev / 2 - 1,
-          y0: my - mkork * 0.62,
-          x1: mx + mlev / 2 + 1,
-          y1: my + mkork * 0.42,
-        };
-        if (vapaa(mr)) {
-          varaa(mr);
-          laadittu += 1;
-          tulos.push({
-            laji: pari.laji, teksti: pari.nimi, x: mx, y: my, ank: "middle", koko: mkoko,
-          });
-          continue;
-        }
-        /*
-         * Maastonimen paikka oli varattu. Nimi ei silti saa kadota:
-         * kaupungin oma ladonta yrittää seuraavaksi, jolloin kohde saa
-         * nimen edes kaupunkinimiönä. Kaksoisnimeä ei synny, koska
-         * maastonimi on merkitty parilliseksi eikä sitä ladota
-         * uudestaan maastokierroksella.
-         */
-        if (!saaNimen) { pudotettu += 1; continue; }
-      }
-      const koko = c.iso ? 12 : 10.5;
-      const lev = tekstinLeveys(c.nimi, koko, '"Liberation Serif", serif', "", 0);
-      const kork = koko * 1.15;
-      /*
-       * EHDOKKAAT: laudan oma asettelu ensin. Se on käsin hiottua työtä
-       * (nimi ei peitä rannikkoa eikä naapuria), joten sitä
-       * KUNNIOITETAAN aina kun se ei törmää. Vasta törmätessä
-       * kokeillaan neljää tavanomaista karttapaikkaa.
-       */
-      const d = c.iso ? 7 : 5;
-      const oma = { dx: c.lx * (11 / 13), dy: c.ly * (11 / 13), ank: c.la };
-      const ehdokkaat = [oma,
-        { dx: d, dy: kork * 0.35, ank: "start" },
-        { dx: -d, dy: kork * 0.35, ank: "end" },
-        { dx: 0, dy: -kork * 0.75, ank: "middle" },
-        { dx: 0, dy: kork * 1.35, ank: "middle" }];
-      let asetettu = null;
-      for (const e of ehdokkaat) {
-        const kx = x + e.dx;
-        const ky = y + e.dy;
-        const x0 = e.ank === "end" ? kx - lev : (e.ank === "middle" ? kx - lev / 2 : kx);
-        const r = {
-          x0: x0 - 1, y0: ky - kork * 0.62, x1: x0 + lev + 1, y1: ky + kork * 0.42,
-        };
-        if (vapaa(r)) { varaa(r); asetettu = { kx, ky, ank: e.ank }; break; }
-      }
-      if (!asetettu) { pudotettu += 1; continue; }
-      laadittu += 1;
-      tulos.push({
-        laji: "kaupunki",
-        teksti: c.nimi,
-        x: asetettu.kx,
-        y: asetettu.ky,
-        ank: asetettu.ank,
-        koko,
-      });
-    }
-
-    /* Vuorten ja järvien nimet samaan törmäysjoukkoon, matalammalla
-     * tärkeydellä: kaupunki on pelin kohde, maastonimi on kuvitusta. */
-    const maasto = [];
-    for (const v of sisalto.vuoret ?? []) {
-      if (!nakyy(kynnykset.vuoriNimi)) break;
-      if (v.tarkeys > 1 && !nakyy(kynnykset.vuoriNimi)) continue;
-      // Parillinen nimi on jo ladottu kaupunkikierroksella (ks. yllä).
-      if (v.parillinen) continue;
-      maasto.push({ nimi: v.nimi, x: v.x, y: v.y, koko: 11, laji: "vuori", tarkeys: v.tarkeys });
-    }
-    for (const j of sisalto.jarvet ?? []) {
-      if (!nakyy(kynnykset.jarviNimi)) break;
-      if (j.tarkeys > 1 && !nakyy(kynnykset.jarviNimi2)) continue;
-      if (j.parillinen) continue;
-      maasto.push({ nimi: j.nimi, x: j.x, y: j.y, koko: 10, laji: "jarvi", tarkeys: j.tarkeys });
-    }
-    maasto.sort((a, b) => (a.tarkeys - b.tarkeys) || (a.nimi < b.nimi ? -1 : 1));
-    for (const m of maasto) {
-      const x = kuvaX(m.x);
-      const y = kuvaY(m.y) + (m.laji === "vuori" ? 11 : 0);
-      const tyylitys = m.laji === "jarvi" ? "italic" : "";
-      const lev = tekstinLeveys(m.nimi, m.koko, '"Liberation Serif", serif', tyylitys, 0);
-      const kork = m.koko * 1.15;
-      const r = {
-        x0: x - lev / 2 - 1, y0: y - kork * 0.62, x1: x + lev / 2 + 1, y1: y + kork * 0.42,
-      };
-      if (!vapaa(r)) { pudotettu += 1; continue; }
-      varaa(r);
-      laadittu += 1;
-      tulos.push({ laji: m.laji, teksti: m.nimi, x, y, ank: "middle", koko: m.koko });
-    }
-    window.__ladonnat[taso.z] = tulos;
-    /*
-     * RIIPPUMATON TARKISTUS. Algoritmi lupaa, ettei päällekkäisyyksiä
-     * jää, mutta lupaus ei ole todiste: tässä käydään kaikki asetetut
-     * nimiöt pareittain läpi ja lasketaan todelliset leikkaukset.
-     * Satoja nimiöitä on kymmeniä tuhansia pareja — halpaa varmuutta.
-     */
-    const laatikot = tulos.map((n) => {
-      const tyylitys = n.laji === "jarvi" ? "italic" : "";
-      const lev = tekstinLeveys(n.teksti, n.koko, '"Liberation Serif", serif', tyylitys, 0);
-      const kork = n.koko * 1.15;
-      const x0 = n.ank === "end" ? n.x - lev : (n.ank === "middle" ? n.x - lev / 2 : n.x);
-      return {
-        teksti: n.teksti, x0, y0: n.y - kork * 0.62, x1: x0 + lev, y1: n.y + kork * 0.42,
-      };
-    });
-    let paallekkain = 0;
-    let esimerkki = null;
-    for (let i = 0; i < laatikot.length; i += 1) {
-      for (let j = i + 1; j < laatikot.length; j += 1) {
-        const a = laatikot[i];
-        const b = laatikot[j];
-        if (a.x0 < b.x1 && a.x1 > b.x0 && a.y0 < b.y1 && a.y1 > b.y0) {
-          paallekkain += 1;
-          if (!esimerkki) esimerkki = a.teksti + " / " + b.teksti;
-        }
-      }
-    }
-    /*
-     * TOINEN RIIPPUMATON TARKISTUS: SAMA NIMI VAIN KERRAN.
-     *
-     * Kaksoisnimi ei ole päällekkäisyys — Ahaggar oli kartalla kahdesti
-     * satojen pikselien päässä itsestään, eikä yllä oleva leikkaustesti
-     * nähnyt siinä mitään vikaa. Se on oma virheluokkansa ja tarvitsee
-     * oman tarkistuksensa.
-     */
-    /*
-     * VERTAILU NORMALISOIDULLA NIMELLÄ, ei merkkijonon tasa-arvolla.
-     * Lauta sanoo "Tšad-järvi" ja nimilista "Tšadjärvi": tarkka
-     * vertailu pitäisi niitä eri niminä ja päästäisi juuri sen
-     * kaksoisnimen läpi, jota tässä etsitään. Sama normalisointi kuin
-     * parituksessa (tools/fokuskartta/sisalto.mjs).
-     */
-    const vertailumuoto = (t) => String(t).normalize("NFD")
-      .replace(/\\p{Diacritic}/gu, "")
-      .toLowerCase()
-      .replace(/[^\\p{L}\\p{N}]+/gu, "");
-    const kertoja = new Map();
-    for (const n of tulos) {
-      const k = vertailumuoto(n.teksti);
-      kertoja.set(k, (kertoja.get(k) ?? 0) + 1);
-    }
-    let kaksoisnimia = 0;
-    let kaksoisesimerkki = null;
-    for (const [t, m] of kertoja) {
-      if (m < 2) continue;
-      kaksoisnimia += m - 1;
-      if (!kaksoisesimerkki) kaksoisesimerkki = t + " x" + m;
-    }
-    return {
-      laadittu,
-      pudotettu,
-      nimioita: tulos.length,
-      paallekkain,
-      esimerkki,
-      kaksoisnimia,
-      kaksoisesimerkki,
-    };
-  };
 
   /*
    * LOHKORAJAN TODISTUS — tuotannon oma tilanne.
@@ -1420,10 +1141,8 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
     return { pahin, eroja, pikseleita: laatta * W };
   };
 
-  window.__lohko = async (asetukset, laatta, tyyppi, laatu, patina, ladontaAvain) => {
-    piirraMaailma(kangas, aineisto, {
-      ...asetukset, sisalto, ladonta: window.__ladonnat?.[ladontaAvain] ?? null,
-    });
+  window.__lohko = async (asetukset, laatta, tyyppi, laatu, patina) => {
+    piirraMaailma(kangas, aineisto, { ...asetukset, sisalto });
     /*
      * PATINA KOKO LOHKOLLE, REUNUS MUKAAN LUKIEN. Vasta sen jälkeen
      * leikataan laatat reunuksen sisältä, jolloin jokainen paikallinen
@@ -1612,38 +1331,10 @@ if (lippu('saumatesti')) {
 mkdirSync(kohdekansio, { recursive: true });
 
 /*
- * NIMIÖIDEN LADONTA KERRAN TASOA KOHTI (ks. __ladonta sivulla).
- * Tulos jää sivulle, ja lohkot viittaavat siihen tason numerolla.
+ * NIMIÖT EIVÄT OLE LAATOISSA (omistajan päätös 30.8.2026).
+ * Ladonta ajetaan pelissä ruutuavaruudessa (js/karttanimet.js); ks.
+ * perustelu selaimen puolen kommentista ja luettelon kentästä `nimiot`.
  */
-const KYNNYKSET = {
-  kaupunkiPiste: 0.22, isoNimi: 0.22, nimi: 0.45,
-  vuoriNimi: 0.45, jarviNimi: 0.45, jarviNimi2: 0.9,
-};
-if (sisalto) {
-  for (const mitat of tasot) {
-    const tulos = await sivu.evaluate(
-      ([t, k]) => window.__ladonta(t, k),
-      [{
-        z: mitat.z, px: mitat.px, leveys: mitat.leveys, korkeus: mitat.korkeus,
-        arkkiX: arkinBbox.x, arkkiY: arkinBbox.y,
-      }, KYNNYKSET],
-    );
-    console.log(`  ladonta z${mitat.z}      ${tulos.laadittu} nimiötä, `
-      + `${tulos.pudotettu} pudotettu tilanpuutteeseen, `
-      + `päällekkäisyyksiä ${tulos.paallekkain}`
-      + (tulos.esimerkki ? ` (esim. ${tulos.esimerkki})` : '')
-      + `, kaksoisnimiä ${tulos.kaksoisnimia}`);
-    if (tulos.paallekkain) {
-      throw new Error(`Ladonta jätti ${tulos.paallekkain} päällekkäisyyttä `
-        + `tasolle z${mitat.z} — törmäyksenvälttely ei toimi.`);
-    }
-    if (tulos.kaksoisnimia) {
-      throw new Error(`Ladonta jätti ${tulos.kaksoisnimia} kaksoisnimeä `
-        + `tasolle z${mitat.z} (esim. ${tulos.kaksoisesimerkki}) — `
-        + 'sama nimi saa esiintyä kartalla vain kerran.');
-    }
-  }
-}
 
 const tilasto = new Map();
 let tavuja = 0;
@@ -1708,8 +1399,8 @@ for (const { mitat, bx, by } of lohkot.values()) {
     paperiS: PAPERI_S,
   } : null;
   const palat = await sivu.evaluate(
-    ([a, laatta, t, l, pat, z]) => window.__lohko(a, laatta, t, l, pat, z),
-    [asetukset, LAATTA, `image/${MUOTO}`, LAATU, patinaParam, mitat.z],
+    ([a, laatta, t, l, pat]) => window.__lohko(a, laatta, t, l, pat),
+    [asetukset, LAATTA, `image/${MUOTO}`, LAATU, patinaParam],
   );
   if (virheet.length) throw new Error(`Piirto virheili: ${virheet.join(' | ')}`);
   piirrettyaPx += kw * kh;
@@ -1794,6 +1485,17 @@ function teeLuettelo() {
   // Kameran ikkuna on kartta-ala eli tasan lauta — marginaaliin ei ajeta.
   rajaus: laudanBbox,
   kehys: KEHYS,
+  /*
+   * NIMIÖT EIVÄT OLE NÄISSÄ LAATOISSA (omistajan päätös 30.8.2026).
+   *
+   * Peli lukee tämän ja päättää siitä, latooko se paikannimet itse
+   * (js/karttanimet.js) vai onko ne poltettu laattoihin. Kenttä on
+   * luettelossa eikä koodissa, koska laatat ja koodi julkaistaan eri
+   * aikaan: nimen pitää näkyä täsmälleen kerran kummassakin välissä.
+   * Vanhassa luettelossa kenttää ei ole, ja peli tulkitsee sen
+   * "laatoissa on nimet" — silloin se vaikenee, kuten v1366:sta asti.
+   */
+  nimiot: false,
   /*
    * MERISÄVY: se yksi väri, jolla peli maalaa karsittujen umpimeren
    * laattojen paikan (ks. umpimeriSavy). Null, jos mitään ei karsittu.

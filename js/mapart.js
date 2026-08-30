@@ -1242,8 +1242,13 @@ function pisteMatkalla(pisteet, matka) {
  *
  * Palauttaa siirron laudan yksiköissä tai null, jos nimi ei osu
  * näkyvään alueeseen millään kopiolla.
+ *
+ * VIETY, KOSKA SAUMA ON LAUDAN OMINAISUUS EIKÄ KERROKSEN. Sama valinta
+ * tarvitaan jokaisessa kerroksessa, joka kirjoittaa nimen kartalle —
+ * myös ruutuavaruudessa ladotussa (js/karttanimet.js) — ja kaksi
+ * kopiota samasta säännöstä ajautuisi eri tulokseen sauman kohdalla.
  */
-function saumasiirto(x, nakyva, leveys, vara) {
+export function saumasiirto(x, nakyva, leveys, vara) {
   const kopiot = leveys ? [0, leveys, -leveys, leveys * 2] : [0];
   for (const siirto of kopiot) {
     const kohta = x + siirto;

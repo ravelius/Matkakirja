@@ -1,249 +1,325 @@
-# Viesti Fablelle — uloszoomauksen löysennys + arkki kameran maailmaksi
+# Viesti Fablelle — nimet laatoista peliin (haara claude/nimet-peliin)
 
-*(Opus, 30.8.2026. Haara `claude/zoom-loysennys` tuoreesta origin/mainista
-**d3902f24 = v1366**. Versiota EI nostettu, PR:ää EI tehty — sinä
-julkaiset. dist/ ei ole mukana, laattojen generointiin ei koskettu.)*
+*(Opus, 30.8.2026. Haara tuoreesta origin/mainista **222502ed = v1367**.
+Versiota EI nostettu, PR:ää EI tehty, pyramidin generointityönkulkua EI
+ajettu — sinä julkaiset. dist/ ei ole mukana. js/kartta.js:n kamera- ja
+panorointikoodiin ei koskettu: toinen agentti on siellä.*
+
+*Edellinen raportti (lehtipurku + merten nimet) on gitissä commitissa
+222502ed; tämä tiedosto on kirjoitettu sen päälle, koska sen
+päätöskysymykset A, B ja "MIKSI EN TEHNYT NIMIÖIDEN CSS-PIKSELI-
+MITOITUSTA" ovat kaikki tässä erässä ratkaistu.)*
+
+---
+
+## LUE TÄMÄ ENSIN — JULKAISU VAATII KAKSI ASKELTA OIKEASSA JÄRJESTYKSESSÄ
+
+Nimet ovat nyt kahdessa maailmassa: vanhoissa laatoissa ne ovat
+poltettuina, uusissa niitä ei ole. **Kumpikaan ei saa puhua yhtä aikaa
+eikä kumpikaan vaieta yhtä aikaa.** v1366 korjasi kaksoisnimen
+vaientamalla elävän kerroksen; tässä suunta kääntyy.
+
+Ratkaisin sen niin, ettei julkaisujärjestyksellä ole väliä ja ettei
+mikään välitila riko peliä: **päätöksen tekee LUETTELO, ei
+versionumero.** `pyramidi.json` kantaa uuden kentän `nimiot: false`, ja
+`js/laattapyramidi.js laatoissaOnNimet()` lukee sen.
+
+| luettelo ämpärissä | mitä pelaaja näkee |
+| --- | --- |
+| **nykyinen** (kenttää ei ole) | nimet laatoista, kuten nyt — peli vaikenee |
+| **uusi** (`nimiot: false`) | nimet pelistä, oikean kokoisina — laatta vaikenee |
+
+Eli: **tämän voi julkaista koodina heti**, ja mikään ei muutu ennen
+kuin pyramidi on ajettu uudestaan ja uusi luettelo on ämpärissä.
+Nimet vaihtavat kerrosta samalla hetkellä kun uusi luettelo saapuu, ei
+hetkeäkään ennen. Jos pyramidia ei koskaan ajeta, peli jää nykytilaan
+eikä mitään ole rikki.
+
+**Pyramidin uusiajo on siis se, mikä tämän erän oikeasti julkaisee.**
+Se on sinun ja omistajan päätös; minä en ajanut sitä.
+
+---
 
 ## Lyhyesti
 
-Kaksi tehtävää, sama tiedosto ja sama aihe — molemmat määrittävät, mitä
-kamera saa näyttää, ja ne on ratkaistu yhdessä:
+Kolme omistajan päätöstä kysymyskortilta, kaikki tehty.
 
-1. **Uloszoomaus löysennetty kolminkertaiseen maan ikkunaan**
-   (omistajan päätöskortti). Löysennys koskee sekä zoomia ETTÄ
-   panorointia — ne on johdettu samasta laatikosta, jottei näkymä
-   taistele itsensä kanssa.
-2. **Kameran maailma on nyt laattapyramidin ARKKI eikä vanha lauta**
-   (omistajan iPad-havainto kartan leikkautumisesta). Mitattu: kamera
-   ylsi ennen y 254…5345, arkin kartta-ala on −611…5811 ja koko paperi
-   −1046…6261.
+1. **Poltettu mittajana pois laatoista.** Se oli atlaskehyksen ainoa
+   kaluste, joka väitti jotain mitattavaa, eikä se voinut pitää
+   väitettään (enimmillään 41 % pielessä). Pelin oma ruutuun ankkuroitu
+   jana jää ainoaksi. Kartussi ja painajanrivi jäävät.
+2. **Kehysviivat paperivakioksi.** Ennen z0:lla 0,15 px (näkymätön) ja
+   z7:llä 40,5 px; nyt sama kynä joka tasolla. Uloimmalla tasolla
+   kehys tuli näkyviin — se oli tarkoitus, ja se on todennettu
+   silmillä.
+3. **Nimiöt ja niiden merkit pois laatoista, peli latoo ne
+   ruutuavaruudessa** (uusi `js/karttanimet.js`). Nimi on nyt sama
+   koko dpr 1:llä, 2:lla ja 3:lla (mitattu laatikko 14,0 CSS-px
+   kaikilla) — ennen sama nimi oli 10,7 ja 5,3 CSS-pikseliä.
 
-Portit: `node --test tests/*.test.mjs` → **1047 pass / 0 fail**
-(1 skipped), kaksoisavaimet ja niputus puhtaat, `build-standalone`
-kääntyy (20 343 kt), `dist` poistettu. Savukkeet: panorointi 11/11,
-kartta-tila 20/20, maailmanäkymä 15/15, jalkamatka 22/22, fokuskohteet
-96/96. Kaikki mittaukset ja kuvakaappaukset ovat Chromiumista
-(390×844 dpr 3 ja iPad 834×1112) **oikeilla R2-laatoilla**.
+Portit: `node --test tests/*.test.mjs` → **# pass 1047, # fail 0**
+(1 skipped). Kaksoisavaimet ja niputus puhtaat, `build-standalone`
+kääntyy (20 363 kt), `dist` poistettu.
+
+Dokumentaatio: `docs/moduulit/laattapyramidi.md` **luku 6g** (uusi) —
+kaikki kolme päätöstä, perustelut ja mitatut luvut. Luvut 4 ja 6c
+saivat viittauksen siihen, ja luvun 12 avoimet kohdat 1c, 1d ja 1e on
+merkitty ratkaistuiksi.
 
 ---
 
-## 1. Uloszoomauksen löysennys
+## 1. Mitä laatoista poistuu ja mitä jää
 
-### Vakio, ei taikaluku
+**Poistuu:** kaupunkien, vuorten ja järvien nimiöt; kaupunkipiste
+(2,0 / 2,6 px), sen rengas (4,6 px), vuorisymboli (4–5 px) ja
+kohderengas (3,2 px).
 
-`js/kartta.js`:
+**Jää:** maasto, meri, rannat, joet, järvet, asteverkko, atlaskehys,
+kartussi, painajanrivi, kompassiruusu, merten nimet — **ja reitit**
+(408 + 71 lentoreittiä sekä 123 joen uomat).
 
-    const ULOSZOOMAUS_KERROIN = 3;
+### Miksi merkit lähtevät nimien mukana (kysyit perustelua)
 
-Kommentti kertoo, että luku on **säädettävä** ja miksi: *"maa ja sen
-naapurit"* on silmämääräinen mitta eikä laskettava, joten kolme on
-lähtöarvo eikä mittaustulos — omistaja arvioi sen laitteella. Luku
-kerrotaan ikkunan **molempiin** mittoihin keskipisteen ympäri
-(`levitaAlue`), joten se jakaa uloszoomauksen mittakaavarajan
-täsmälleen kolmella riippumatta maan muodosta. Sen todistaa Chilen ja
-Norjan rivi taulukossa: suhde on 3,01 myös kapealla maalla.
+Sääntö, jonka annoit, ratkaisee kaikki kolme: *piste ja sen nimi on
+pidettävä samassa suhteessa.*
 
-### Zoom JA panorointi samasta laatikosta
+- **Kaupunkipiste ja sen rengas** ovat nimen ANKKURI, eivät koriste:
+  ladonta varaa pisteen ennen nimiä, jottei nimi peitä toisen kaupungin
+  merkkiä. Jos piste jäisi laattaan ja nimi lähtisi peliin, varaus ei
+  enää vastaisi sitä, mitä ruudulla on — ja piste olisi dpr 3:lla
+  0,7 px eli tahra nimensä vieressä.
+- **Vuorisymboli** on saman nimiön merkki: nimi kirjoitetaan 11 pikseliä
+  sen alle. Sama kappale.
+- **Kohderengas lähtee ILMAN korvaajaa**, ja tämä on ainoa kohta, jossa
+  jotain oikeasti katoaa. Perustelu: kohteilla on jo elävä, ruutuun
+  mitoitettu merkki nimineen ja napautusaloineen (`js/fokuskohteet.js`)
+  siinä maassa, jossa pelaaja on — poltettu rengas oli sen alla toinen,
+  pienempi merkki samasta asiasta. Muualla siitä jäi **nimetön ympyrä,
+  joka on dpr 3:lla yhden CSS-pikselin kokoinen**. Kaikkien 197 kohteen
+  tuominen elävään kerrokseen vaatisi kaikkien 22 maapaketin lataamisen
+  heti alussa (ne ladataan nyt maa kerrallaan), enkä pitänyt sitä
+  hintansa arvoisena yhdestä pikselistä. **Jos omistaja haluaa
+  maailmanlaajuisen kohdemerkin takaisin, se on oma pieni eränsä** —
+  sano, niin teen sen.
 
-Kysyit tätä nimenomaan, ja vastaus on: **ne kytkeytyivät**. Sama
-`fokusRajaukset()` syöttää molemmat, joten pelkän zoomin löysääminen
-olisi tuottanut juuri sen näkymän, jossa naapurit näkyvät muttei niihin
-pääse. `fokusRajaukset()` palauttaa nyt kolme laatikkoa yhden sijaan:
+### Miksi reitit ja joet JÄÄVÄT
 
-| kenttä | mitä | kuka lukee |
+Ne ovat viivatyötä samassa paperivakioluokassa kuin rannikko (luku 6d),
+niissä ei ole tekstiä eikä siis luettavuusvaatimusta, ja 602 polyviivaa
+elävässä kerroksessa palauttaisi juuri sen kuorman, jonka purkaminen
+teki panoroinnista sujuvan v1365:ssä. Ne eivät myöskään ole minkään
+nimen ankkureita.
+
+---
+
+## 2. Ladonta on SIIRRETTY, ei keksitty uudestaan
+
+`js/karttanimet.js` on suora käännös generaattorin `__ladonta`-
+funktiosta. Mukana tulivat kaikki säännöt, jotka teit laatoille:
+
+- laudan oma asettelu (`la/lx/ly`) ensin — se on käsin hiottua työtä —
+  ja vasta törmätessä neljä tavanomaista karttapaikkaa, viimeisenä
+  pudotus (yleistystä, ei virhe)
+- tärkeysjärjestys lähtökaupunki (+8) → lentokenttä (+4) →
+  reittisolmun aste (+0…3)
+- kaupunkien PISTEET varataan ennen nimiä
+- kaksoisnimi vain kerran, tasokohtaisella päätöksellä (Alpit, Ahaggar,
+  Appalakit, Titicaca, Tanganjika, Tšad-järvi)
+- yleistyskynnykset nimitiheydestä
+- leveys mitataan `measureText`illä samalla kirjasimella jolla piirretään
+
+**Kolme asiaa muuttui, ja jokainen on korjaus:**
+
+1. **Kynnysten yksikkö on CSS-pikseli**, ei laitepikseli. Kynnykset
+   johdettiin nimitiheydestä (*"60 pikselin nimi tarvitsee vähintään
+   W/16 pikselin välin"*), ja sekä nimen leveys että lukukelpoinen väli
+   ovat ruudun ominaisuuksia. Työpöydän käytös säilyy sellaisenaan;
+   tiheä näyttö saa saman sen sijaan että nimet syttyisivät kolme
+   kertaa liian aikaisin ja kolmasosan kokoisina.
+2. **Kirjasin on pelin oma kartta-antiikva** (`.city-label`in perhe)
+   eikä kontin Liberation Serif — se on lähempänä aikakauden atlasta ja
+   se on laitteella oikeasti olemassa. Mittari ja piirto käyttävät
+   samaa merkkijonoa, joten törmäystesti pysyy totena.
+3. **Ladonta ajetaan kerran ZOOMIA kohti**, ei kerran tasoa kohti.
+   Tulos on laudan yksiköissä, joten panorointi ei laske mitään
+   uudelleen — eikä nimi voi hypätä paikasta toiseen kartan liikkuessa.
+   Tulos muistetaan mittakaavan mukaan (zoomiportaita on kuusi).
+
+**Yksi mitattu ero laattoihin:** vuorisymbolia ei varata. Laatoillakaan
+sitä ei varattu; kun kokeilin varata, jokainen vuoren nimi törmäsi
+omaan symboliinsa (296 nimiötä, 49 pudotettua). Ilman varausta tulos on
+sama **345** kuin laatoilla.
+
+---
+
+## 3. MITATUT LUVUT
+
+### Nimen koko ruudulla — tämä on koko korjauksen ydin
+
+Sama näkymä (390×844, skaala 0,7993), sama laattakansio, eri
+pikselitiheys. Luku on lähtökaupungin nimen kirjainkoko CSS-pikseleinä
+(ladonnan `koko` on 12; poltetun sai laskettua siitä, minkä tason
+asiakas valitsi):
+
+| | valittu taso | ENNEN (poltettu) | JÄLKEEN (ladottu) |
+| --- | --- | --- | --- |
+| dpr 1 | z4 (0,9 px/yks) | **10,7 CSS-px** | **12,0 CSS-px** |
+| dpr 2 | z5 (1,8 px/yks) | 5,3 CSS-px | **12,0 CSS-px** |
+| dpr 3 | z5 (1,8 px/yks) | **5,3 CSS-px** | **12,0 CSS-px** |
+
+Ladotun nimen ladottu laatikko mitattiin ruudulta
+(`getBoundingClientRect`): **14,0 CSS-px kaikilla kolmella**, ja
+ladottujen nimien määrä (29) sekä paikat olivat täsmälleen samat.
+
+Yleisesti poltettu nimi on `koko · skaala / taso.px`, ja koska taso on
+√2:n päässä luvusta `skaala · dpr`, 12 pikselin nimi on dpr 3:lla
+2,8…5,7 CSS-pikseliä ja dpr 1:llä 8,5…17,0. Sama nimi, sama zoomi, eri
+laite — juuri se, minkä omistaja näki.
+
+### Nimimäärä per zoomtaso
+
+| skaala (CSS-px/yks) | ladottu koko laudalle | pudotettu | ruudulla 390×844 |
+| --- | --- | --- | --- |
+| 0,799 | 307 | 6 | 29 |
+| 1,198 | 342 | 3 | 12 |
+| 1,797 | 345 | 0 | 5 |
+| 2,696 | 345 | 0 | 3 |
+| 4,044 ja yli | 345 | 0 | 1 |
+
+Vertailu laattoihin (koko arkki): z2 62, z3 297 (19 pudotettu), z4 344
+(7), z5 350 (1), z6–z7 351 (0). Sama suuruusluokka; ero tulee
+yksikönvaihdosta.
+
+### Kehysaika panoroinnissa — muutoksen todellinen hinta
+
+Mitattu Chromiumissa 390×844 dpr 3, samat laatat, sama ele:
+
+| | ENNEN | JÄLKEEN |
 | --- | --- | --- |
-| `ikkuna` | maan oma ikkuna, ennallaan | `tarkistaFokusZoom` → `ajaKamera` (saapuminen) |
-| `uloin` | **uusi**: ikkuna × 3 keskipisteensä ympäri | `fokusZoomMinimi` → koko zoomportaikon pohja |
-| `kuva` | panoroinnin raja, **yhdiste** maan laatikosta ja `uloin`ista | `rajaaFokusPan` (käsiele) ja `sovitaMannerZoom` (pelin oma näkymä) |
+| kehysaika panoroinnissa p50 | 16,7 ms | **16,7 ms** |
+| kehysaika panoroinnissa p95 | 17,3 ms | **17,2 ms** |
+| panoroinnin longtaskit | 0 ms | **0 ms** |
+| `paivitaMaastonimet` asettumisessa, mediaani | 0,8–1,1 ms | **1,6–1,8 ms** |
+| sama, pahin | 1,5–2,0 ms | 2,2–3,4 ms |
+| kylmä ladonta uudelle mittakaavalle | — | 2,0–2,4 ms (pahin 3,5–7,3) |
+| SVG-solmuja uloimmassa näkymässä | 2026 | 2091 (+65) |
 
-Kolme muutettua kohtaa `js/kartta.js`:ssä:
+**Panorointi ei maksa mitään**, ja se on rakenteellista eikä onnea:
+ladonta on funktio pelkästä mittakaavasta, joten panorointi ei laske
+sitä uudelleen, ja kerrokseen syntyy vain näkyvät nimet (29, ei 345).
+Vanha elävä nimikerros piti 261 lappua puussa aina — juuri siksi se
+poistettiin v1366:ssa. Hinta on **alle millisekunti asettumista kohti**
+ja kertaluonteinen 2–7 ms uudelle zoomportaalle.
 
-1. `fokusRajaukset()` — laskee `uloin`in ja levittää `kuva`n vähintään
-   sen kokoiseksi. Yhdiste eikä korvaus: maan oma laatikko (bbox) on
-   ikkunaa väljempi, eikä löysennys saa kutistaa sitä.
-   Matkavalinnan kohdealue liitetään kaikkiin kolmeen kuten ennenkin.
-2. `fokusZoomMinimi()` — mitta on `uloin` eikä `ikkuna`.
-3. `zoomaaPainikkeella` ja `tarkistaFokusZoom` — kommentit vastaamaan
-   sitä, että pohja on löysennetty ikkuna, mutta kamera-ajon MAALI on
-   yhä maan oma ikkuna. Näin äärilaaja näkymä (uudelleenlataus,
-   maailmanäkymästä paluu) palautuu maahan, ja pelaaja loitontaa
-   naapureihin itse.
+Nämä ovat emulaattorilukuja. Raamattu vaatii kehysajan mittaamisen
+oikealla iOS-laitteella; p95 17 ms on 60 kehystä sekunnissa, ja ennen
+ja jälkeen ovat mittaustarkkuuden sisällä samat.
 
-`ui.fokusPohjaRajaus`iin EI koskettu: merkkien mittakaava
-(`fokusMerkkiSkaala`) lukee sen, ja löysennys siellä olisi kutistanut
-kaupunkipisteet ja kohdemerkit kolmasosaan. Löysennys asuu siis
-kartassa, ei ui:ssa — se on kirjattu kommenttiin molempiin päihin.
+### Laattojen koko
 
-### Mitattu, ei päätelty (390×844, dpr 3, oikeat laatat)
+Pilotti z0–z4, 395 laattaa, sama kone ja sama aineisto ennen ja jälkeen:
 
-"Ennen" on mitattu samalla koneistolla kertoimella 1 = mainin
-käyttäytyminen; se toistaa edellisen agentin luvun (Bulgaria 284 → minä
-mittasin 285).
-
-| maa | maan ikkuna | uloin (3×) | ääriuloszoom ENNEN | ääriuloszoom NYT | suhde ikkunaan |
-| --- | --- | --- | --- | --- | --- |
-| Bulgaria (iso) | 284×169 | 851×507 | 285×590 | **855×1768** | 3,01× |
-| Venäjä (jättimäinen) | 5772×2273 | 17317×6818 | 5795×11787 | **11640×24146** | 2,02× * |
-| Kypros (pieni) | 101×66 | 303×199 | 101×210 | **304×629** | 3,01× |
-| Chile (kapea) | 1142×2076 | 3425×6227 | 1147×2372 | **3441×7117** | 3,01× |
-| Norja (kapea) | 1198×973 | 3595×2920 | 1204×2490 | **3612×7307** | 3,01× |
-| Kreikka | 468×292 | 1404×877 | 470×972 | **1410×2916** | 3,01× |
-
-*) Venäjällä kolminkertainen ikkuna (17 317) on **laudan leveyttä
-suurempi**, joten raja ei enää ole maan ikkuna vaan lauta itse: siellä
-uloszoomaus vie koko maailmaan. Se ei ole kertoimen sijoitusvirhe vaan
-seuraus siitä, että Venäjän ikkuna on jo lähes puoli maailmaa.
-
-**Edellisen agentin koe toistettuna:** kamera pyydettiin 900
-lautayksikön näkymään Bulgariassa. Ennen se pysyi 285:ssä, nyt se
-päätyy **854,9**:ään.
-
-**Panorointi todennettu oikealla raahauksella** (hiiriele kartalla, ei
-laskennalla): Bulgariassa yksi porras sisäänpäin näkymä 470 yksikköä,
-panoroitava alue 851 → veto siirsi näkymää **191,4 lautayksikköä**
-(x 6447,1 → 6638,5) ja toi Turkin ja Syyrian ruudulle. Norjassa sama
-veto siirsi **612,3** yksikköä. Ääriasennossa akseli on lukossa, koska
-silloin koko sallittu alue on jo ruudulla — se on sääntö eikä vika.
-
-### Ei riko lähtövalintaa, aloituslentoa eikä matkavalintaa
-
-- **Lähtökaupungin valinta** ja **aloituslento**: portit ovat
-  `ui.maanIkkuna()`:ssa ja `fokusRajaukset()`:ssä, enkä koskenut
-  kumpaankaan. Löysennys lasketaan vasta sen jälkeen kun ikkuna on
-  ylipäätään olemassa, joten porteissa ei ole mitään löysennettävää.
-  Ajoin koko alkukulun läpi selaimessa (portti → *Valitse
-  aloituskaupunki* → kaupungin napautus → lento → perillä): valinta
-  tapahtuu aloituskartalla, jolla pyramidia ei ole, ja peli päätyy
-  `action`-vaiheeseen maailmanlaudalle.
-- **Matkavalinta**: `matkakohteidenAlue` liitetään nyt myös `uloin`iin,
-  eli jos kohde on löysennettyä aluetta kauempana, uloszoomaus yltää
-  sinne asti. Ennen se liitettiin `ikkuna`an, joka oli sama asia.
-
----
-
-## 2. Arkki on kameran maailma (lisätehtäväsi)
-
-### Todennettu: syy oli se, jonka annoit
-
-Mittasin `ui.contentBox`in selaimesta: **y 254 … 5345,2**
-(korkeus 5091,2). Pyramidin luettelo sanoo arkiksi y −1046,3 … 6261,4 ja
-kartta-alaksi −611,3 … 5811,4. Diagnoosisi pitää.
-
-Kaksi tarkennusta mittauksista:
-
-1. **Ylhäältä leikkasi.** Lähikuvassa (skaala 0,53) pohjoisin
-   saavutettava kohta oli **y −124,4**; kartta-ala alkaa −611,3:sta.
-   Huippuvuoret jäivät puoliksi ruudun yläpuolelle.
-2. **Alhaalta leikkasi, mutta tyhjää EI ollut.** Vanha laatikko päättyi
-   y 5345:een eli **arkin sisään**, ei 6423:een. Kartta-alan eteläisin
-   466 yksikköä oli siis saavuttamattomissa, mutta laatatonta aluetta ei
-   päässyt katsomaan. Sen sijaan **lava** (panoroitava ala) ulottui
-   uloimmalla portaalla y −2389…8396 eli 1342 yksikköä arkin yläpuolelle
-   ja 2135 alapuolelle — juuri sitä tyhjää, jonka kohta 3 mainitsi.
-
-### Mitä muutin
-
-| paikka | muutos | miksi |
+| taso | ennen | jälkeen |
 | --- | --- | --- |
-| `js/laattapyramidi.js` | uusi `pyramidinArkki(lauta)` + `ARKKI_VARALLA` | arkki samasta lähteestä kuin laattojen paikat; muille laudoille null |
-| `js/laattapyramidi.js` `paivitaPyramidi` | luettelon saavuttua `ui.paivitaLaudanRajat?.()` ennen laattojen laskentaa | jos ämpärin arkki eroaa varaluvuista, kamera korjataan ennen piirtoa |
-| `js/kartta.js` `boardBounds()` | pyramidilaudalla palauttaa arkin; muut laudat ennallaan | kaupungeista johdettu laatikko on vanhan laudan mitta |
-| `js/kartta.js` `sovitaMannerZoom` | lava leikataan arkkiin (ei aloitusnäkymässä) | ylä-/alakaista veisi panoroinnin alueelle, jossa ei ole laattoja |
-| `js/kartta.js` `sovitaMannerZoom` | arkkia lyhyempi lava keskitetään (`alignSelf`) | `panY` on silloin pakotettu nollaan, ja kartta olisi jäänyt ruudun ylälaitaan koko tyhjä paperi alla |
-| `js/ui.js` | uusi `paivitaLaudanRajat()` | laskee rajat uudelleen ja sovittaa näkymän VAIN jos laatikko muuttui |
-| `tools/build-standalone.mjs` | `js/laattapyramidi.js` siirretty ennen `js/kartta.js`:ää | kartta tuo siitä arkin; niputustarkistus vaati järjestyksen |
+| z0 | 0,09 Mt | 0,09 Mt |
+| z1 | 0,34 Mt | 0,33 Mt |
+| z2 | 1,24 Mt | 1,23 Mt |
+| z3 | 4,62 Mt | 4,58 Mt |
+| z4 | 17,54 Mt | 17,48 Mt |
+| **yhteensä** | **23,83 Mt** | **23,71 Mt** |
 
-Katselutilan maanosalaudat (`?lauta=africa`) käyttävät yhä vanhaa
-`boardBounds`ia: `pyramidinArkki` palauttaa niille nullin täsmälleen
-samalla `pyramidiKattaa`-ehdolla, jolla laatatkin rajataan.
-
-**Varaluvuista** (`ARKKI_VARALLA`) haluan sinun tietävän: ne ovat sama
-geometria kuin `pyramidi.json`issa, koska kamera tarvitsee arkin jo
-ensimmäisessä sovituksessa mutta luettelo saapuu verkosta vasta piirron
-jälkeen. Luettelo voittaa aina kun se on kädessä, eli uusi ajo eri
-mitoilla korjaa itsensä — mutta jos arkin mitat joskus muuttuvat,
-`ARKKI_VARALLA` on se yksi paikka, joka kannattaa päivittää samalla.
-
-### Mitattu (iPad 834×1112, oikeat laatat)
-
-| mitta | ennen | nyt |
-| --- | --- | --- |
-| `contentBox` | y 254 … 5345,2 | **y −1046,3 … 6261,4** (arkki) |
-| lava uloimmalla portaalla | y −2388,9, korkeus 10 784,7 | **y −1046,3, korkeus 7311,2** (= arkki) |
-| näkyvä alue uloimmalla portaalla | 10 186 yksikköä (arkin yli molemmista päistä) | **7309 yksikköä = koko arkki** |
-| pohjoisin saavutettava lähikuvassa | y −124,4 | **y −1046,3** |
-
-### Silmillä
-
-`.../scratchpad/zoom/kuvat/`:
-
-- `maailma-ennen-toiseksi.png` → `maailma-keski-toiseksi.png` — uloin
-  näkymä ennen ja jälkeen: arkki mahtuu kokonaan ruudulle
-  paperimarginaaleineen, MATKAKIRJA-kehyskilpi ylhäällä ja
-  mittakaava + painajan rivi alhaalla. Tyhjä paperi jakautuu tasan ylös
-  ja alas (ennen kartta oli kiinni ylälaidassa).
-- `pohjoinen-ennen.png` → `pohjoinen-jalkeen.png` — Tromssasta
-  pohjoiseen ääriasentoon: ennen Huippuvuoret leikkautuivat ruudun
-  yläreunaan, nyt saaristo on kokonaan näkyvissä, ruudukko 88 °P asti,
-  kartta-alan reuna 84 °N ja sen yllä paperimarginaali kehyksineen.
-- `sofia-2-aariuloszoom.png` — löysennetty uloszoomaus Bulgariassa
-  (kohta 1): Bulgaria keskellä, ylhäällä Suomenlahti, alhaalla Punainen
-  meri, sivuilla Italia ja Kaukasus. **36 maata** ruudulla.
+**Säästö on vain 0,5 %**, ja se kannattaa kertoa omistajalle
+sellaisenaan: nimien poisto EI pienennä pyramidia. Syy on luvussa 6d jo
+mitattu — valtaosa tavuista on paperin raetta, korkeataajuista kohinaa,
+jota kuvanpakkaus ei voi pakata. Nimet ovat sen rinnalla ohutta
+mustetta. Koko pyramidissa (1,32…1,48 Gt) tämä on noin 7 Mt.
+Generointiaika ei muuttunut mitattavasti (251,5 s → 257,9 s, sama
+kone kuormitettuna).
 
 ---
 
-## 3. PÄÄTÖSKYSYMYKSET JA HAVAINNOT
+## 4. Mitä muutin tiedostoittain
 
-### 1. Onko kerroin 3 pystyruudulla liikaa?
+| tiedosto | mitä |
+| --- | --- |
+| `js/karttanimet.js` | **uusi.** Ladonta ruutuavaruudessa, aineisto, kaksoisnimien paritus, välimuisti, piirto |
+| `js/laattapyramidi.js` | `laatoissaOnNimet()`; luettelon saapuminen ajaa myös merkkiketjun |
+| `js/ui.js` | nimikerros `drawBoard`iin, kutsu `paivitaMaastonimet`iin, mittakahva `__karttanimienMitat()` |
+| `js/fokuskohteet.js` | kaksoisnimisäännön kolme vakiota tuodaan nyt `karttanimet.js`:stä eikä kopioida |
+| `js/mapart.js` | `saumasiirto` viety (sama sauma, yksi toteutus) |
+| `css/styles.css` | `.karttanimet` / `.karttanimi` / `.karttamerkki` |
+| `sw.js`, `tools/build-standalone.mjs` | uusi moduuli listoille |
+| `tools/fokuskartta/maailmapiirto.js` | mittajana pois, kehysviivat P:hen, nimiöt ja merkit pois |
+| `tools/fokuskartta/sisalto.mjs` | kerää enää reitit ja joet |
+| `tools/generoi-laattapyramidi.mjs` | `__ladonta` pois, luetteloon `nimiot: false` |
+| `tools/savukkeet/savuke-laattapyramidi.mjs` | uusi P6-ryhmä |
+| `tools/savukkeet/savuke-maailmanakyma.mjs` | 10a–10c ajan tasalle, uusi 10d |
+| `docs/moduulit/laattapyramidi.md` | uusi luku 6g, luvut 4/6c/12 päivitetty |
 
-Kerroin rajaa LEVEYDEN kolminkertaiseksi; korkeus seuraa ruudun
-muodosta. Puhelimen pystyruudulla (390×844) näkymä on siksi noin kaksi
-kertaa niin korkea kuin leveä: Bulgariassa ääriuloszoom näyttää
-Suomenlahdelta Egyptiin. Se on "maa ja naapurit" leveyssuunnassa, mutta
-pystysuunnassa selvästi enemmän. **Kerroin 2 antaisi 570 yksikön
-levyisen näkymän** (Balkan + Kreikka + Turkin länsiosa). Yksi luku,
-yksi rivi — sano jos vaihdan.
+## 5. Savukkeiden tila
 
-### 2. Venäjällä löysennys osuu laudan reunaan
+| savuke | tulos |
+| --- | --- |
+| laattapyramidi (uudet laatat) | 10/13 |
+| laattapyramidi (vanhat laatat) | 8/11 |
+| maailmanakyma | **16/16** (main 15/15; uusi väite 10d) |
+| panorointi | 11/11 |
+| kartta-tila | 20/20 |
+| kartan-sujuvuus | 40/40 |
+| fokuskohteet | 96/96 |
+| jalkamatka | 22/22 |
 
-Kolminkertainen ikkuna on Venäjällä laudan leveyttä suurempi, joten
-uloszoomaus vie koko maailmankuvaan (11 640 yksikköä). Sama koskee
-tulevaisuudessa Kanadaa ja Yhdysvaltoja. Jos se on väärin, raja pitäisi
-sitoa laudan leveyden osuuteen eikä pelkkään maan ikkunaan — mutta se on
-oma sääntönsä enkä keksinyt sitä omin päin.
-
-### 3. Leveä ikkuna (Mac) saa nyt eri yleiskuvan
-
-Arkki on korkeampi kuin vanha laatikko (7308 vs. 5091), joten korkeus
-alkaa rajoittaa yleiskuvaa jo kuvasuhteesta 1,64:1 alkaen (ennen
-2,36:1). Leveässä työpöytäikkunassa yleiskuva näyttää siis koko arkin ja
-kartta on pienempi kuin ennen — juuri se, mitä lisätehtävä pyysi — mutta
-samalla `fitViewBox`in korttikaista (`kaista`, varattu alareunan
-korteille leveällä ikkunalla) jää pois, koska sen ehto on sama
-kuvasuhdevertailu. iPadilla ja puhelimella ei muutu mikään: siellä
-leveys rajoittaa kuten ennenkin. En muuttanut kaistan sääntöä.
-
-### 4. Edellisen raportin avoimet kysymykset ovat yhä auki
-
-Maastonimen Wikipedia-nappi (2), nimetyt erikoispiirit (3) ja
-saapumisen kamera-ajo (4) ovat ennallaan — ne eivät kuuluneet tähän
-erään. Huomaa kuitenkin, että kysymys 4:n perustelu heikkeni: kamera ei
-enää osu maan ikkunaan epäsuorasti, koska uloszoomauksen raja on nyt
-kolminkertainen ikkuna. Saapuminen jää siihen mittakaavaan, johon peli
-sen jättää, ja pelaaja voi jäädä kolminkertaiseen näkymään.
+Laattapyramidin kolme kaatunutta väitettä (P3b, P4a, P4b) **eivät ole
+regressio**: ne kaatuvat täsmälleen samalla tavalla vanhoilla
+laatoilla, koska pilottikansiossani on z5 vain Balkanin alueelta.
+Puuttuvat z5-laatat antavat 404:iä ja pitävät tason samana. Tuotannon
+täysajossa nämä eivät kaadu. Kaikki uudet nimiväitteet (P6a–P6d)
+menivät läpi molempiin suuntiin: nimettömien laattojen päällä peli
+latoo, vanhojen päällä ei.
 
 ---
 
-## 4. Palautuspiste
+## 6. HAVAINTOJA — en korjannut, kirjaan sinulle
 
-Palautuspiste on **d3902f24** (main ennen tämän haaran ensimmäistä
-committia). Yksittäinen tiedosto palautetaan näin:
+1. **Kohdenimiöt (`js/fokuskohteet.js`) ovat nyt selvästi pienempiä
+   kuin paikannimet.** Kuvakaappauksessa "Ólympos" ja "Évros" ovat
+   silminnähden pienempiä kuin "Balkanvuoret" samassa näkymässä. Ne
+   ovat elävä kerros, joten korjaus on sama kuin tässä erässä: mitoita
+   ne CSS-pikseleihin. Oma pieni eränsä.
+2. **Kompassiruusun viivat ovat yhä `paksuus * S`** (0,75/0,8/1,5 * S).
+   Ruusu piirretään vain tasoille z0–z2, joten sen kehäviivat ovat
+   0,08…0,63 px eli käytännössä näkymättömiä juuri siellä missä ruusua
+   katsotaan. Sama vikaluokka kuin kehysviivoilla, neljä riviä. Rajasin
+   sen pois, koska sait rajaukseksi "kehysviivat".
+3. **Jokien nimet ovat kadonneet vesistölinssistä pyramidilaudalla.**
+   Tämä ei ole tämän erän aiheuttama: v1366 vaiensi `.maastonimi`-
+   kerroksen kokonaan, ja jokien nimet asuivat siellä. Laatoissa niitä
+   ei koskaan ollut, eikä uusi nimikerros lado niitä (laatoillakaan ei
+   ladottu). Korjaus olisi pieni ja turvallinen: päästä vanha kerros
+   latomaan pyramidilaudalla VAIN joet, kun linssi on päällä —
+   kaksoisnimeä ei voi syntyä, koska kumpikaan muu kerros ei kirjoita
+   joen nimeä. Odotan sanaasi.
+4. **Uloszoomaus loppuu skaalaan 0,7993 myös maailmanäkymässä**
+   mitatessani. En koskenut siihen (toinen agentti on kamerassa), mutta
+   se tarkoittaa, että uloimmat laattatasot z0–z2 eivät käytännössä
+   koskaan tule näkyviin pelissä — ja juuri niille arkin kalusteet
+   (kartussi, painajanrivi, kompassi, merten nimet, nyt myös näkyvä
+   kehys) on rajattu. Kun uloszoomaus löysenee, kalusteet tulevat
+   esiin; kannattaa katsoa ne silloin silmällä kerran.
+5. **Pyramidi on ajettava uudestaan**, jotta tämä erä näkyy pelaajalle
+   (ks. LUE TÄMÄ ENSIN). En ajanut työnkulkua.
 
-    git checkout d3902f24 -- js/kartta.js
+---
 
-Muutetut tiedostot: `js/kartta.js`, `js/laattapyramidi.js`, `js/ui.js`,
-`tools/build-standalone.mjs`. Molemmat tehtävät ovat samassa
-koodicommitissa, koska ne muuttavat samoja `js/kartta.js`:n funktioita
-(`boardBounds`, `sovitaMannerZoom`, `fokusRajaukset`) ja koska ne
-vastaavat samaan kysymykseen — mitä kamera saa näyttää. Raportti on oma
-committinsa.
+## 7. Miten todensin
+
+- `node --test tests/*.test.mjs` → 1047 pass / 0 fail / 1 skipped
+- `tarkista-kaksoisavaimet` ja `tarkista-niputus` puhtaat,
+  `build-standalone` kääntyy, `dist` poistettu
+- **kaksi pilottipyramidia** samoista lähteistä, toinen mainin koodilla
+  ja toinen tämän haaran koodilla (z0–z4 koko maailma + z5 Balkanilta),
+  ja peli ajettu molempia vasten
+- **silmillä Chromiumissa** dpr 1, 2 ja 3: nimen korkeus mitattu
+  `getBoundingClientRect`illä, kuvakaappaukset katsottu
+- **silmillä laattakuvista**: z0 ennen/jälkeen (kehys ja mittajana),
+  z3 ennen/jälkeen (nimet ja merkit poissa, joet ja reitit tallella)

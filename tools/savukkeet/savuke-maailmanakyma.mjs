@@ -197,6 +197,9 @@ const tila = () => sivu.evaluate(() => {
     nimiaNakyvissa: nakyvia('.cities .city-label'),
     // Laudan maastonimet (Alpit, Karpaatit…): pyramidilaudalla nolla.
     maastonimia: ui.svg.querySelectorAll('.maastonimi').length,
+    // Ruutuavaruudessa ladottu nimikerros (js/karttanimet.js): ilman
+    // luetteloa nolla, ks. väite 10d.
+    karttanimia: ui.svg.querySelectorAll('.karttanimet .karttanimi').length,
     nakyvanLeveys: Math.round(ui.nakyvaAlue?.()?.w ?? 0),
   };
 });
@@ -428,20 +431,27 @@ vaadi('9 kaupunkipallot ovat nykyisen laatan mittaluokassa',
   `oma ${pallot.oma} px, suurin ${pallot.suurin} px`);
 
 /*
- * Väite 10: PAIKANNIMET OVAT LAATOISSA, EIVÄT ELÄVÄSSÄ KERROKSESSA
+ * Väite 10: PAIKANNIMI ON KARTALLA TÄSMÄLLEEN KERRAN
  * (omistajan kaappaus Sofiasta 30.8.2026: sama nimi kartalla kahdesti).
  *
- * Väite mittasi ennen elävien nimilappujen zoomporttia (*"älä näytä
- * kaupunkien nimiä tällä zoom tasolla"*). Porttia ei enää tarvita
- * pyramidilaudalla: elävä kerros ei ladota yhtään paikannimeä, koska
- * kaikkien 261 kaupungin nimet on poltettu laattoihin omalla
- * typografiallaan ja omalla törmäyksenvältelyllään
- * (js/ui.js drawBoard, docs/moduulit/laattapyramidi.md luku 6c).
+ * KAKSI PERÄKKÄISTÄ PÄÄTÖSTÄ, JA TÄMÄ VARTIOI MOLEMPIA. v1366:ssa
+ * laudan vanhat nimikerrokset (.city-label, .maastonimi) pantiin
+ * vaikenemaan, koska nimet oli poltettu laattoihin. 30.8.2026 illalla
+ * omistaja käänsi nimien suunnan: nimiöt poistuvat laatoista ja peli
+ * latoo ne ruutuavaruudessa (js/karttanimet.js) — mutta VANHAT
+ * kerrokset eivät palaa, koska niissä nimi on laudan yksiköissä ja
+ * kasvaa zoomin mukana. Väitteet 10a-10c vartioivat siis yhä, että
+ * vanhat kerrokset pysyvät hiljaa.
  *
- * TÄMÄ ON PYSYVÄ VARTIO KAKSOISNIMIÄ VASTAAN: se kaatuu, jos elävä
- * nimilappu palaa kartalle. Mittaus tehdään MOLEMMILLA zoomtasoilla,
- * jottei läpäisy johdu siitä että lappu sattuisi olemaan ruudun
- * ulkopuolella.
+ * VÄITE 10d VARTIOI UUTTA KERROSTA TURVALLISESTA PÄÄSTÄ. Tämä savuke
+ * ei palvele yhtään laattaa eikä siis luetteloa, ja ilman luetteloa
+ * peli ei tiedä ovatko nimet laatoissa — silloin sen on vaiettava
+ * (js/laattapyramidi.js laatoissaOnNimet). Nimikerroksen positiivinen
+ * puoli (nimettömät laatat -> peli latoo) mitataan siellä, missä
+ * laattoja on: tools/savukkeet/savuke-laattapyramidi.mjs P6.
+ *
+ * Mittaus tehdään MOLEMMILLA zoomtasoilla, jottei läpäisy johdu siitä
+ * että lappu sattuisi olemaan ruudun ulkopuolella.
  */
 const lahikuva = await tila();
 console.log(`      mitattu: lähikuva ${lahikuva.nakyvanLeveys} yks,`
@@ -461,9 +471,12 @@ console.log(`      mitattu: yleiskuva ${yleiskuva.nakyvanLeveys} yks,`
   + ` maastonimiä ${yleiskuva.maastonimia ?? '-'}`);
 vaadi('10b yleiskuvassakaan ei ole elävää kaupunginnimeä',
   yleiskuva.nimiaNakyvissa === 0, `nimiä ${yleiskuva.nimiaNakyvissa}`);
-vaadi('10c laudan maastonimet ovat laatoissa eivätkä elävässä kerroksessa',
+vaadi('10c laudan vanha maastonimikerros pysyy tyhjänä',
   (yleiskuva.maastonimia ?? 0) === 0 && (lahikuva.maastonimia ?? 0) === 0,
   `lähikuva ${lahikuva.maastonimia}, yleiskuva ${yleiskuva.maastonimia}`);
+vaadi('10d ilman luetteloa myös uusi nimikerros vaikenee (ei kaksoisnimiä)',
+  (yleiskuva.karttanimia ?? 0) === 0 && (lahikuva.karttanimia ?? 0) === 0,
+  `lähikuva ${lahikuva.karttanimia}, yleiskuva ${yleiskuva.karttanimia}`);
 
 await selain.close();
 palvelin.close();

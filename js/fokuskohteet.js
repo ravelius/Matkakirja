@@ -103,6 +103,7 @@ import { FOKUS_LISANIMET } from './packs/fokus-grc.js';
 // Laattoihin poltetut maastonimet (vuoret, järvet, joet): sama nimi
 // vain kerran kartalle, ks. maastonimiLahella.
 import { MAAILMANKARTAN_NIMET } from './packs/maailmankartta-nimet.js';
+import { LAUDAN_YMPARYS, PARIN_ETAISYYS, normalisoiNimi } from './karttanimet.js';
 import { piirraKarttavalo } from './karttavalot.js';
 import { asetaKuva } from './media.js';
 import { html, jaaKappaleiksi, nielaiseSulkevaNapautus, polloNimilappu } from './ui-apurit.js';
@@ -632,18 +633,15 @@ function nimiJoKartalla(ui, kohde) {
  * napautettava (kortti, aihevalo); nimen sanoo laatta.
  */
 
-/** Nimen vertailumuoto: ilman tarkkeita, välimerkkejä ja kirjainkokoa. */
-const normalisoiNimi = (s) => String(s ?? '')
-  .normalize('NFD')
-  .replace(/\p{Diacritic}/gu, '')
-  .toLowerCase()
-  .replace(/[^\p{L}\p{N}]+/gu, '');
-
-/** Sama nimi tätä lähempänä = sama kohde (sisalto.mjs PARIN_ETAISYYS). */
-const KOHDE_MAASTOPARIN_ETAISYYS = 400;
-
-/** Lauta kiertyy: 12000 yksikköä on koko maapallon ympärys. */
-const LAUDAN_YMPARYS = 12000;
+/*
+ * NORMALISOINTI JA ETÄISYYSRAJA TULEVAT NIMIKERROKSELTA, EI KOPIOINA.
+ *
+ * Sääntö on sama kuin siellä (js/karttanimet.js): sama normalisoitu
+ * nimi lähekkäin on sama kohde. Kaksi kopiota samasta luvusta ajautuu
+ * ennen pitkää eri arvoihin, ja silloin kohdenimiö väistäisi eri
+ * joukkoa kuin nimikerros latoo — juuri se kaksoisnimi, jota tämä
+ * lohko estää.
+ */
 
 /**
  * Onko samanniminen maastonimi poltettu laattaan tähän kohtaan?
@@ -659,7 +657,7 @@ function maastonimiLahella(ui, kohde, paikka) {
   const osuu = (x, y) => {
     let dx = Math.abs(x - paikka.x);
     if (dx > LAUDAN_YMPARYS / 2) dx = LAUDAN_YMPARYS - dx;
-    return Math.hypot(dx, y - paikka.y) <= KOHDE_MAASTOPARIN_ETAISYYS;
+    return Math.hypot(dx, y - paikka.y) <= PARIN_ETAISYYS;
   };
   for (const laji of ['vuoret', 'jarvet']) {
     for (const m of MAAILMANKARTAN_NIMET[laji] ?? []) {
