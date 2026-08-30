@@ -43,6 +43,13 @@ import { readStamps, writeStamps, STAMP_KEY } from './passport.js';
 import { kytkeFokusnosto } from './fokusnosto.js';
 import { kytkeSyvennys } from './syvennys.js';
 import { kytkeSkandaalit } from './skandaalit.js';
+/*
+ * Laattapyramidin kytkin kehittajavalikkoon. Lipun voi antaa myos
+ * osoiterivilla (?pyramidi=1), mutta iOS-kuoressa osoiteriviae EI OLE:
+ * kuori lataa pelin kiinteasta osoitteesta (ios/.../Config.plist), joten
+ * valikko on siella ainoa tapa kytkea pilotti paalle.
+ */
+import { pyramidiPaalla, asetaPyramidi } from './laattapyramidi.js';
 
 kytkeFokusnosto();
 kytkeSyvennys();
@@ -107,7 +114,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1362';
+const APP_VERSION = '2026-08-09.1363';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1280,6 +1287,7 @@ const kehittajaValikko = document.getElementById('kehittaja-valikko');
 const kehittajaVihje = document.getElementById('kehittaja-valikko-vihje');
 const maailmaNappi = document.getElementById('kehittaja-maailma-btn');
 const mittariNappi = document.getElementById('kehittaja-mittari-btn');
+const pyramidiNappi = document.getElementById('kehittaja-pyramidi-btn');
 const polloGenerointiNappi = document.getElementById('kehittaja-pollo-btn');
 
 /** Yhden rivin vihje valikon alalaitaan; katoaa itsestään. */
@@ -1320,6 +1328,15 @@ function paivitaKehittajaValikko() {
         + 'lavan mitat ja solmumäärät — sama kuin ?mittari=1'
       : 'Laitemittari on pois — kytke päälle mitataksesi kartan sujuvuutta '
         + 'tällä laitteella (sama kuin ?mittari=1)';
+  }
+  const pyramidi = pyramidiPaalla();
+  merkitseKytkin(pyramidiNappi, pyramidi);
+  if (pyramidiNappi) {
+    pyramidiNappi.title = pyramidi
+      ? 'Laattapyramidi on PÄÄLLÄ: karttapohja tulee yhtenä maailmanlaajuisena '
+        + 'laattapyramidina eikä maakohtaisina lehtinä (sama kuin ?pyramidi=1)'
+      : 'Laattapyramidi on pois: kartta on maakohtaisina lehtinä — kytke päälle '
+        + 'kokeillaksesi pilottia (sama kuin ?pyramidi=1)';
   }
   if (polloGenerointiNappi) {
     polloGenerointiNappi.title = 'Generoi pöllön kysymysehdotukset heti tälle näkymälle '
@@ -1362,6 +1379,26 @@ maailmaNappi?.addEventListener('click', () => {
   asetaKehittajaMaailma(!kehittajaMaailmaPaalla());
   paivitaKehittajaValikko();
   ui?.paivitaKehittajaMaailma();
+});
+
+/*
+ * PYRAMIDI VAATII SIVUN UUDELLEENLATAUKSEN, ja kytkin tekee sen itse.
+ *
+ * Karttapohjan valinta tehdään kerran kartan pystytyksessä, joten lippu
+ * ei voi vaihtua lennossa. Muut kytkimet neuvovat lataamaan sivun
+ * uudelleen, mutta tämä ei voi: iOS-kuoressa ei ole osoiteriviä eikä
+ * latausnappia (ios/Matkakirja/Resurssit/Config.plist lataa pelin
+ * kiinteästä osoitteesta), joten neuvo olisi siellä mahdoton noudattaa.
+ * Peli tallentaa etenemisen, joten lataus ei menetä mitään.
+ */
+pyramidiNappi?.addEventListener('click', () => {
+  const halutaan = !pyramidiPaalla();
+  asetaPyramidi(halutaan);
+  paivitaKehittajaValikko();
+  naytaKehittajaVihje(halutaan
+    ? 'Laattapyramidi päälle — ladataan uudelleen.'
+    : 'Laattapyramidi pois — ladataan uudelleen.');
+  setTimeout(() => { location.reload(); }, 600);
 });
 
 mittariNappi?.addEventListener('click', () => {
