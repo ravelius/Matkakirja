@@ -522,6 +522,13 @@ const MODULES = [
    * ovat kaikki jo yllä.
    */
   'js/fokusvirta.js',
+  /*
+   * Laattapyramidin lataaja ennen kameraa: kamera lukee siitä arkin
+   * (kartta.js boardBounds → pyramidinArkki), koska pyramidilaudalla
+   * arkki on kameran maailma. Tuo vain mapartin ja median, jotka ovat
+   * yllä.
+   */
+  'js/laattapyramidi.js',
   // M7a: laudan kamera ennen ui:ta (ui tuo Kartan; kartta tuo äänet ja
   // luennan, jotka ovat yllä).
   'js/kartta.js',
@@ -532,9 +539,6 @@ const MODULES = [
   // Fokusmoodin maakohtainen topografiapohja ennen ui:ta (ui tuo sen;
   // se itse tuo mapartin, median ja lisänimet, jotka ovat yllä).
   'js/packs/fokus-grc.js',
-  // Laattapyramidin lataaja ennen fokuskarttaa (fokuskartta tuo sen
-  // lipun takana). Tuo vain mapartin ja median, jotka ovat yllä.
-  'js/laattapyramidi.js',
   // Ruutuavaruudessa ladotut paikannimet ennen ui:ta (ui tuo sen). Tuo
   // mapartin, laattapyramidin ja nimipaketin, jotka ovat yllä.
   'js/karttanimet.js',

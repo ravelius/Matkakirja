@@ -5329,6 +5329,26 @@ export class UI {
     kerros.remove();
   }
 
+  /**
+   * Laudan rajauslaatikko uudelleen — ja näkymä sen mukana, jos se
+   * oikeasti muuttui.
+   *
+   * Kutsutaan js/laattapyramidi.js:stä, kun pyramidin luettelo saapuu
+   * verkosta: kamera on siihen asti sovitettu arkin varalukuihin, ja
+   * jos ämpärissä on eri mitoilla ajettu arkki, tämä on se kohta jossa
+   * ero korjataan. Vertailu on tässä eikä kutsujassa, jotta tavallinen
+   * tapaus — luettelo vastaa varalukuja — ei piirrä mitään uudelleen.
+   */
+  paivitaLaudanRajat() {
+    if (this.dead || !this.svg) return;
+    const ennen = this.contentBox;
+    const uusi = this.kartta.boardBounds();
+    if (ennen && uusi && ennen.x === uusi.x && ennen.y === uusi.y
+      && ennen.w === uusi.w && ennen.h === uusi.h) return;
+    this.contentBox = uusi;
+    this.kartta.fitViewBox();
+  }
+
   drawBoard() {
     const { board, pack } = this.game;
     const { decor } = pack;
@@ -7806,9 +7826,13 @@ export class UI {
     if (sama) return;
     this.fokusPohjaBbox = uusi;
     /*
-     * IKKUNA ERIKSEEN LAATIKOSTA. Kamera ja uloszoomauksen raja
-     * mitataan IKKUNASTA (js/kartta.js fokusRajaukset), panorointi
-     * päästää sen ympärillä laatikon reunaan asti.
+     * IKKUNA ERIKSEEN LAATIKOSTA. Kamera ja merkkien mittakaava
+     * mitataan IKKUNASTA (fokusMerkkiSkaala, js/kartta.js
+     * fokusRajaukset), panorointi päästää sen ympärillä laatikon
+     * reunaan asti. Uloszoomauksen raja on ikkuna kerrottuna
+     * ULOSZOOMAUS_KERROIMELLA (js/kartta.js) — se löysennys asuu
+     * kartassa eikä täällä, jottei merkkien mittakaava muutu sen
+     * mukana.
      */
     this.fokusPohjaRajaus = uusi
       ? ((rajaus?.w > 0 && rajaus?.h > 0) ? rajaus : uusi)
@@ -7834,9 +7858,10 @@ export class UI {
     // Ruutuun ankkuroidut mitat: mittajana, kartuutsi ja maataulu.
     paivitaFokusmitat(this);
     /*
-     * KAMERA VIIMEISENÄ. Maan ikkuna on uloszoomauksen pohja
-     * (js/kartta.js fokusRajaukset): jos näkymä on sitä laajempi,
-     * kamera ajetaan ikkunaan heti eikä jäädä rikkomaan omaa sääntöä.
+     * KAMERA VIIMEISENÄ. Maan ikkuna kerrottuna
+     * ULOSZOOMAUS_KERROIMELLA on uloszoomauksen pohja (js/kartta.js
+     * fokusRajaukset): jos näkymä on sitäkin laajempi, kamera ajetaan
+     * maan ikkunaan heti eikä jäädä rikkomaan omaa sääntöä.
      */
     this.kartta?.tarkistaFokusZoom?.();
   }
