@@ -532,6 +532,54 @@ Julkinen isäntä on `https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/`
 (js/media.js `R2_JUURI`), joten viedyt laatat ovat suoraan selaimen
 haettavissa — sama reitti kuin lehdillä ja julisteilla.
 
+### Korkeusaineisto tulee reposta, ei NOAA:lta
+
+Ensimmäinen CI-koeajo (33311158965, 30.8.2026) kaatui siihen, ettei
+NOAA:n ERDDAP vastannut ajokoneelta lainkaan — `fetch failed` jo
+ensimmäisellä kaistalla, kolme uusintaa, **ei HTTP-statusta** eli
+yhteystason virhe. Kehityskontista sama osoite vastaa alle sekunnissa,
+joten vika on ajokoneen ja NOAA:n välissä eikä korjattavissa koodista.
+
+Omistajan päätös: **yksikään ajo ei saa riippua NOAA:n
+tavoitettavuudesta.** Harvennettu ruudukko noudettiin kerran ja se elää
+repossa: `tools/korkeusaineisto/etopo-3kaariminuuttia.bin.gz`
+(**28,9 Mt**). Se tulee jokaiseen jobiin checkoutin mukana ilman
+yhtäkään verkkopyyntöä.
+
+Kovempi uudelleenyritys ei olisi ollut korjaus muutenkaan: viisi
+shardia olisi noutanut kukin 104 Mt samasta lähteestä yhtä aikaa.
+
+| muoto | koko | huom |
+| --- | --- | --- |
+| Float32 raakana | 103,7 Mt | välimuistin entinen muoto |
+| Int16 raakana | 51,9 Mt | |
+| Int16 + gzip −9 | 39,9 Mt | |
+| **Int16 + rivierotus + gzip −9** | **28,9 Mt** | repoon |
+
+Molemmat askeleet ovat häviöttömiä ja mitattuja; häviöttömyys
+todennettiin koko aineistolla (25 930 801 solua, 0 eroa).
+
+**Int16 ei menetä mitään**, ja se on todennettu eikä pääteltiin:
+`tools/fokuskartta/maailma.mjs` pyöristää arvot Int16:een joka
+tapauksessa rakentaessaan arkin ruudukkoa, joten Float32:n desimaalit
+katosivat jo ennen piirtoa. Kuusikymmentä laattaa ajettiin uudelleen
+repon aineistosta ja verrattiin pikselitasolla vanhaan ajoon:
+**60/60 täysin identtisiä, pahin kanavaero 0.**
+
+**Aineistoa ei harvenneta toiseen kertaan.** Tiedostossa on valmis
+keskiarvoistettu ruudukko ja `hae-korkeusruudukko.mjs` purkaa sen
+sellaisenaan; kaksi kertaa keskiarvoistettu maasto olisi liian sileä ja
+hiljainen laatuvirhe. Sama pikselivertailu todistaa senkin: jos
+harvennus tapahtuisi kahdesti, laatat eivät olisi identtisiä.
+
+Natural Earth saa jäädä verkkonoutoon, koska se tulee GitHubista, joka
+on todistetusti ajokoneelta tavoitettavissa — ja se noudetaan kerran
+valmistelujobissa eikä kerran shardia kohti.
+
+Jos joskus halutaan tarkempi ajo, `hae-korkeusruudukko.mjs` osaa yhä
+noutaa alkuperäisen yhden kaariminuutin aineiston NOAA:lta; repon
+tiedosto ohitetaan automaattisesti, kun pyydetty ruutukoko ei täsmää.
+
 ### Aikakatto ja levy
 
 Suurin shardi on noin 1 240 Mpx reunuksineen eli mitatulla 0,44 Mpx/s

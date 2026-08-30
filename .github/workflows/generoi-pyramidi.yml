@@ -84,8 +84,54 @@ permissions:
   contents: read
 
 jobs:
+  # --------------------------------------------------------- aineisto
+  #
+  # KORKEUSAINEISTO TULEE REPOSTA, EI VERKOSTA.
+  #
+  # Ensimmainen koeajo (33311158965, 30.8.2026) kaatui siihen, ettei
+  # NOAA:n ERDDAP vastannut ajokoneelta lainkaan ("fetch failed", ei
+  # HTTP-statusta), vaikka kehityskontista sama osoite vastaa alle
+  # sekunnissa. Omistajan paatos: yksikaan ajo ei saa riippua NOAA:n
+  # tavoitettavuudesta.
+  #
+  # Harvennettu 3 kaariminuutin ruudukko on siksi repossa
+  # (tools/korkeusaineisto/, 28,9 Mt), ja se tulee jokaiseen jobiin
+  # checkoutin mukana ilman yhtaan verkkopyyntoa. Tama jobi noutaa enaa
+  # Natural Earthin — kerran, ei kerran shardia kohti — koska se tulee
+  # GitHubista, joka on todistetusti tavoitettavissa.
+  aineisto:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Tarkista repon korkeusaineisto
+        run: |
+          set -euo pipefail
+          A=tools/korkeusaineisto/etopo-3kaariminuuttia.bin.gz
+          [ -f "$A" ] || { echo "::error::Korkeusaineisto puuttuu reposta"; exit 1; }
+          echo "korkeusaineisto $(du -h "$A" | cut -f1)"
+
+      - name: Hae Natural Earth
+        run: |
+          set -euo pipefail
+          mkdir -p ne-data
+          for f in ne_10m_ocean ne_10m_lakes; do
+            curl -sSL --retry 3 --max-time 300 -o "ne-data/$f.geojson" \
+              "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/$f.geojson"
+          done
+          ls -la ne-data
+
+      - name: Vie Natural Earth shardeille
+        uses: actions/upload-artifact@v4
+        with:
+          name: pyramidin-aineisto
+          path: ne-data
+          retention-days: 1
+
   # ------------------------------------------------------------ laatat
   laatat:
+    needs: aineisto
     runs-on: ubuntu-latest
     # Mitattu 0,44 Mpx/s tässä kontissa; suurin shardi on noin 1 240 Mpx
     # reunuksineen eli ~47 min. Ajurin ja hitaamman ajokoneen varalle
@@ -121,20 +167,22 @@ jobs:
           npx playwright install --with-deps chromium
           echo "PW_CHROMIUM=$(find ~/.cache/ms-playwright -name chrome -path '*chrome-linux*' -type f | head -1)" >> "$GITHUB_ENV"
 
-      # Natural Earth (meri ja järvet) ja ETOPO-korkeusruudukko.
-      # Kumpikaan ei ole repossa: ne ovat julkista aineistoa ja
-      # kymmeniä megatavuja (CLAUDE.md: media ämpäriin eikä repoon).
-      - name: Hae raaka-aineisto
+      # Aineisto tulee valmistelujobista, EI verkosta. Shardi ei nouda
+      # mitaan: jos aineisto puuttuu, ajo kaatuu tahan aanekkaasti eika
+      # palaa hiljaa verkkoon.
+      # Natural Earth valmistelujobista; korkeusaineisto tuli
+      # checkoutin mukana reposta. Shardi ei nouda verkosta mitaan.
+      - uses: actions/download-artifact@v4
+        with:
+          name: pyramidin-aineisto
+          path: ne-data
+      - name: Tarkista aineisto
         run: |
           set -euo pipefail
-          mkdir -p ne-data
-          for f in ne_10m_ocean ne_10m_lakes; do
-            curl -sSL --retry 3 -o "ne-data/$f.geojson" \
-              "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/$f.geojson"
-          done
-          ls -la ne-data
-          # Korkeusruudukko ERDDAPista; noin 45 s ja 104 Mt välimuistiin.
-          NODE_USE_ENV_PROXY=1 node tools/hae-korkeusruudukko.mjs
+          A=tools/korkeusaineisto/etopo-3kaariminuuttia.bin.gz
+          [ -f "$A" ] || { echo "::error::Korkeusaineisto puuttuu reposta"; exit 1; }
+          [ -f ne-data/ne_10m_ocean.geojson ] || { echo "::error::Natural Earth puuttuu"; exit 1; }
+          echo "korkeusaineisto $(du -h "$A" | cut -f1) · ne-data $(du -sh ne-data | cut -f1)"
 
       - name: Generoi laatat (${{ matrix.shardi.nimi }})
         env:
@@ -148,7 +196,7 @@ jobs:
           df -h / | tail -1
           LISA=""
           if [ -n "${SARAKKEET}" ]; then LISA="--sarakkeet ${SARAKKEET}"; fi
-          NODE_USE_ENV_PROXY=1 node tools/generoi-laattapyramidi.mjs ulos \
+          node tools/generoi-laattapyramidi.mjs ulos \
             --data ne-data --tasot "$TASOT" $LISA \
             --laatu "$LAATU" --patina "$PATINA" --versio "$VERSIO"
           echo "--- tuotos ---"
