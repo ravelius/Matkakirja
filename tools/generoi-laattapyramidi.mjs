@@ -457,6 +457,33 @@ const alkoi = Date.now();
 console.log(`Laattapyramidi — lauta ${LAUTA.id}, laatta ${LAATTA} px, ${MUOTO} q${LAATU}`);
 console.log(`  arkki laudalla  x ${arkinBbox.x} y ${arkinBbox.y.toFixed(1)} `
   + `w ${arkinBbox.w} h ${arkinBbox.h.toFixed(1)}`);
+/*
+ * VAROITUS SYVIEN TASOJEN KOHDISTUSHEITOSTA.
+ *
+ * Patinan kohdistusheitto ja musteen leviäminen skaalautuvat `s`:llä
+ * eli ovat SAMAN KOKOISIA KARTALLA joka tasolla. Uloimmilla tasoilla se
+ * on oikein ja hienovarainen; syvimmällä tasolla s on 13,5, jolloin
+ * 2,6 pikselin heitto on 35 pikseliä ja 2 pikselin leviäminen 27 —
+ * väriripsauksesta tulee sateenkaari ja hiusviivasta usva. Mitattu ja
+ * nähty 30.8.2026 (Peloponnesos, z7).
+ *
+ * Tämä ei ole korjattu tässä erässä, koska resepti on omistajan
+ * päätös. Varoitus on tässä siksi, ettei parvi aja koko maailmaa
+ * huomaamatta. Ehdotettu korjaus on raportissa.
+ */
+if (PATINA?.kohdistus) {
+  for (const m of tasot) {
+    const sm = m.leveys / 6400;
+    const heitto = Math.max(Math.abs(PATINA.kohdistus.dx), Math.abs(PATINA.kohdistus.dy)) * sm;
+    if (heitto > 6) {
+      console.log(`  VAROITUS z${m.z}: patinan kohdistusheitto on `
+        + `${heitto.toFixed(0)} px (viitearvo 2,6 px 6400 px:n arkilla). `
+        + 'Väriripsaus näkyy laattamittakaavassa sateenkaarena — '
+        + 'ks. docs/moduulit/laattapyramidi.md, patinan mittakaava.');
+    }
+  }
+}
+
 for (const m of tasot) {
   const kaikki = m.sarakkeita * m.riveja;
   const tassa = tyot.filter((t) => t.mitat.z === m.z).length;

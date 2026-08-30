@@ -1,166 +1,197 @@
-# Viesti Fablelle — laattapyramidi, erä 2 (30.8.2026)
+# Viesti Fablelle — laattapyramidi, erä 3 (30.8.2026)
 
 Haara `claude/pyramidi-pilotti`. Ei versionostoa, ei PR:ää.
-Oletuspolku ei muutu. **Portit: 1048 pass / 0 fail.**
+Oletuspolku ei muutu. **Portit: 1048 pass / 0 fail,
+savuke-laattapyramidi 13/13.**
 
-Kohdat 1–6 tehty ja mitattu. **Pysähdyn tähän, kuten pyysit** —
-täysgenerointia ei ole ajettu.
+Kohdat 1 (patinapassi) ja 2 (nimiöiden törmäyksenvälttely) tehty ja
+mitattu. **Pysähdyn tähän** — täysgenerointia ei ole ajettu.
 
 Täysi suunnitelma ja kaikki luvut: **docs/moduulit/laattapyramidi.md**.
 
 ---
 
-## Portit
+## YKSI ASIA VAATII PÄÄTÖSTÄ ENNEN TÄYSAJOA
 
-| portti | tulos |
+**Täysi resepti on laattamittakaavassa rikki, ja se on nähtävä.**
+
+Ajoin pyytämäsi VERTAILUPALAN (Peloponnesos) syvimmällä tasolla
+molemmilla resepteillä. Tulos:
+
+| resepti | jälki z7:llä |
 | --- | --- |
-| `node --test tests/*.test.mjs` | **1048 / 0** (karttarivisi vihersi sen) |
-| `tarkista-kaksoisavaimet` · `tarkista-niputus` | puhtaat |
-| `savuke-laattapyramidi` | **13/13** |
-| `savuke-fokuskartta` | 66/80 (main-peräinen 65/80) |
-| `savuke-bittikartta` · `savuke-karttazoom` | main-peräisellä tasolla |
+| `keskitaso` | siisti, mutta ilman tyyliohjeen kolmea passia |
+| **`taysi`** | **koko mantere sateenkaaren värisinä läiskinä, rantaviiva usvassa** |
 
-## 1. Arkki 84 °N…66 °S — ja origo EI siirtynyt
+Syy on mittakaava, ei arvo. Kohdistusheitto ja leviäminen skaalautuvat
+`s`:llä eli ovat saman kokoisia KARTALLA joka tasolla:
 
-Tämä oli erän suurin riski, ja se osoittautui olemattomaksi.
-Projektion vakiot ovat koskemattomat, joten **y = 0 on yhä 76.
-leveyspiiri** (todennettu: `lautaLat(0)` = 76,0000) ja **jokainen
-esilaskettu piste on entisellä paikallaan** (Ateena y=1882 →
-37,9699 °N, kuten ennen). Vain kuvan laatikko alkaa laudan yläpuolelta,
-y = −1046,31 — täsmälleen kuten yleislehdellä jo oli.
-
-**Mekaanista muunnosta ei siis tarvittu mihinkään.** js/fokusmitat.js
-ja packien `laudat.maailmankartta` ovat koskemattomia. Merkin ja
-maaston suhde ei liikkunut, koska molemmat luetaan samasta laudan
-koordinaatista.
-
-Uudet mitat: arkki 12000 × **7307,72**, syvin taso 86 400 × **52 616**,
-169 × 103 = **17 407** laattaa, yhteensä **23 340** laattaa.
-
-## 2. Atlaskehys — tehty
-
-Kermanvalkoinen marginaali, kaksoisviivakehys kulmakorein, kartussi
-"MATKAKIRJA — Unohdettu aarre", painajanrivi, kompassiruusu,
-mittakaavajana. **JÄÄMERI mahtuu nyt mukaan.**
-
-Kehys on arkilla **joka tasolla**, ei vain uloimmalla: mitat
-skaalautuvat, joten se on kaikilla tasoilla saman kokoinen kartalla.
-Jos marginaali olisi vain uloimmalla, arkin korkeus vaihtelisi
-tasoittain eikä ruudukko olisi pyramidi.
-
-## 3. Sisältö laattoihin — tehty ennen täysajoa
-
-261 kaupunkia · 408 reittiä (+71 lentoreittiä) · 123 jokea polyviivoina
-· 38 järveä · 52 vuorta · 197 kohdetta. Kaikki laudan yksiköissä, ei
-uudelleenprojisointia — siksi merkit osuvat laattoihin pikselilleen.
-
-**Yksi asia tehtiin ensin väärin, mitattiin ja korjattiin.** Nimiöt
-mitoitettiin aluksi kuten moottorin muut mitat, eli saman kokoisiksi
-KARTALLA joka tasolla. Se on oikein rannikon viivalle ja rakeelle,
-mutta väärin nimiölle: koska peli katsoo valittua tasoa noin 1:1, 14
-pikselin nimi olisi uloimmalla tasolla 1,5 px ja syvimmällä **189 px**.
-Nimiöt, pisteet ja viivat mitoitetaan nyt laitepikseleinä.
-
-Yleistys kynnyksin, jotka on johdettu nimiötiheydestä eikä mausta:
-kaikki kaupunkinimet z3:sta, vain isot z2:sta, kohteet z5:stä.
-
-## 4. webp 0,9 — tehty
-
-## 5. Harva pyramidi pois — tehty (koneisto jää, oletuksena pois)
-
-Tuore mittaus uudella arkilla vahvisti päätöksen: z7:llä 37,0 %
-laatoista, mutta tavuissa vain noin viidennes — mitattu z5:ltä
-oikeista tiedostokoista, 7,1 % laatoista = **4,7 % tavuista**.
-
-## 6. Meri — tehty, mutta yksi asia on kerrottava
-
-Vesiviivoitus pois (`VESIVIIVOITUS = null`), litistys 0,20 → 0,70.
-
-**Syvyysrampin ensimmäinen korjaus mitattiin vääräksi ja hylättiin.**
-Tihensin ensin rampin käsin 7 → 17 portaaseen. Mittasin: se **pahensi**
-syvän meren pahimman gradientin taitteen 6,9:stä 12,3 sävyyn tuhatta
-metriä kohti, koska jokainen silmämääräinen välipiste tuo oman
-taitteensa. Banding on taite, ei portaiden vähyys.
-
-Tilalle tuli monotoninen kuutiollinen interpolointi (Fritsch–Carlson)
-alkuperäisten seitsemän ankkurin läpi, 25 m välein:
-
-| | portaita | kontrasti | pahin taite (alle −200 m) |
+| | 6400 px arkki | z6 | z7 |
 | --- | --- | --- | --- |
-| vanha | 7 | 42,0 | 6,94 |
-| käsin tihennetty (hylätty) | 17 | 42,0 | 12,31 |
-| **monotoninen kuutio** | 201 | **42,0** | **1,84** |
+| kohdistusheitto | 2,6 px | 18 px | **35 px** |
+| musteen leviäminen | 2 px | 14 px | **27 px** |
 
-Kokonaiskontrasti ennallaan, jokainen ankkuri paikallaan (0,55 sävyn
-tarkkuudella), ramppi monotoninen (0 nousevaa askelta).
+35 pikselin väriseparaatio ei ole "hienoinen kohdistusheitto" vaan
+painovirhe. Tyyliohjeen sana *"varovasti"* osuu tähän täsmälleen.
 
-### KERROTTAVA: pyramidi ei aja patinapassia lainkaan
+**Ehdotukseni:** kohdistus ja leviäminen ovat PAINOJÄLJEN
+ominaisuuksia, eivät kartan — samalla perusteella kuin nimiöt, jotka jo
+mitoitetaan laitepikseleinä. Käytännössä `* s` pois kolmesta
+kohdistusrivistä ja leviämisen säteestä (tools/patina.mjs).
+**6400 pikselin lehdille se ei muuta mitään**, koska niillä `s` = 1 —
+eli vanha lehtiputki on koskematon.
 
-`tools/patina.mjs` on erillinen jälkikäsittely, jonka
-`patinoi-fokus.yml` ajaa valmiille **lehdille**. Pyramidin
-generointiputki ei kutsu sitä. Siksi:
+Kokeilin sen ja kuvasin: jälki on `keskitason` kaltainen mutta täyden
+reseptin rosoisuudella, eli juuri se mitä tyyliohje pyytää. **En
+muuttanut sitä** — resepti on omistajan päätös, ja käskit kertoa enkä
+säätää. Työkalu varoittaa nyt ajossa, ettei parvi aja tätä
+huomaamatta.
 
-- syvyysrampin silotus **vaikuttaa pyramidiin heti** (se on
-  piirtomoottorissa),
-- **vesiviivoituksen sammutus ja litistyksen nosto eivät vaikuta
-  pyramidiin lainkaan** — ne muuttavat vain vanhaa lehtiputkea.
+Kuvat kontin scratchpadissa: `vertailu-keskitaso/`, `vertailu-taysi/`,
+`vertailu-ehdotus/` (kaikki z7/92/41.webp).
 
-Raamattu vaatii patinan poltettavaksi laattoihin. Patinapassin
-liittäminen pyramidiin on siis oma tehtävänsä; en tehnyt sitä
-kulukuurin takia. Sanoit "kerro se" jos meri jää tyhjäksi — pyramidin
-meren sävyn vaihteluväli on nyt 11 sävyä R-kanavalla: hillitty, ei
-tyhjä. En palauttanut litistystä omin päin.
+**Tämä kannattaa ratkaista ennen täysajoa**, koska syvät tasot ovat
+94 % sekä työstä että tavuista.
 
-## Mitatut luvut uudelle arkille
+## 1. Patinapassi pyramidiin — tehty
+
+`tools/patina.mjs` on nyt **sekä työkalu että moduuli**
+(`AJETAAN_SUORAAN`-vartio). Pyramidi ajaa SAMAN reseptin samasta
+tiedostosta — ei kopiota, joten tiedoston oma sääntö "resepti on
+yhdessä paikassa" pysyy voimassa. Lisätty kolme valinnaista
+parametria (`koko`, `pikselit`, `palauta`), joita ilman passi
+käyttäytyy sanasta sanaan kuten ennen. Lehtityökalu todennettu
+toimivaksi muutosten jälkeen.
+
+### Mikä meni laattoihin ja mikä ei
+
+Laattoihin: sävyt ja sävykäyrä, paperin syy/rae/klimppi (faasi
+arkista), ikääntymislaikku (mittakaava laudalta), meren litistys,
+reunakertymä, rosoisuus, kohdistus, leviäminen.
+
+**Ei laattoihin:**
+
+- **vinjetointi** — säteittäinen termi on kehys, ja vieretysten
+  ladottuna kehyksistä tulee ruudukko meren päälle. Kuuluu pelin
+  pelitilakerrokseen ruutuavaruudessa, kuten kirjoitit. Oli jo
+  `null` kaikilla tasoilla; en koskenut.
+- **taitejäljet** — `taitteet: false`, kuten ohjeistit.
+- **vesiviivoitus** — omistajan päätös, pysyy poissa.
+- `IKAANTYMINEN.reunapaino` pysyy nollassa; en palauttanut sitä
+  täyden reseptin mukana.
+
+### Jatkuvuus — ja vika, jonka vain mittaus löysi
+
+Lohko piirretään **reunuksen verran isompana** ja laatat leikataan sen
+sisältä. Reunus johdetaan tason mittakaavasta (`8·ceil((9s+16)/8)`):
+kiinteä 64 px olisi jäänyt syvimmällä tasolla rantavyön (95 px) alle,
+eli olisin tehnyt juuri sen virheen jota reunus estää.
+
+**Patinan pikselikohtainen rae ja dither luettiin lehden omasta
+pikselistä.** Lehdelle se oli oikein — naapurilehti on eri paperi —
+mutta laatoissa se antoi JOKAISELLE laatalle täsmälleen saman
+kohinakentän: rakenteeton kohina muuttuu rakenteeksi, kun se toistuu
+512 pikselin ruudukossa. Mitattuna **52 % kanavista erosi**. Nyt avain
+on arkin pikseli.
+
+### Saumatodistus — kaksi koetta, joista vain toinen kertoo tuotannosta
+
+| koe | tulos |
+| --- | --- |
+| `--saumatesti` (1024 px kangas vs. neljä 512 px kangasta) | z3 pahin 97, muut ≤ 19 |
+| **lohkoraja (kaksi vierellistä samankokoista lohkoa)** | **z0–z2 ja z6–z7 pahin 0 · z3–z4 pahin 3 · z5 pahin 18** |
+
+Ensimmäinen on ankarampi kuin tuotanto: selaimen rasterointi riippuu
+hitusen kankaan KOOSTA. Tuotannossa lohkot ovat samankokoisia ja
+eroavat vain kokonaisella pikselimäärällä, mikä on rasteroinnille
+täsmällinen siirto. Rakensin siksi toisen kokeen, joka mittaa juuri
+tuotannon tilanteen — ja sen mukaan laattojen väliin ei jää saumaa.
+
+## 2. Nimiöiden törmäyksenvälttely — tehty
+
+**Ladonta ajetaan kerran tasoa kohti koko arkille, ei lohkoittain.**
+Se on ainoa kohta putkessa jossa piirto ei voi olla paikallinen:
+lohkokohtaisena kaksi vierekkäistä lohkoa päätyisi samasta kaupungista
+eri tulokseen ja rajalle jäisi kaksoisnimi tai katoava nimi.
+
+Laudan `la/lx/ly` on lähtökohta ja sitä kunnioitetaan aina kun se ei
+törmää; muuten neljä vaihtoehtoista paikkaa, ja viimeisenä nimi
+pudotetaan. Tärkeysjärjestys: lähtökaupunki > lentokenttä >
+reittisolmun aste > koriste. Kaupunkien pisteet varataan ennen nimiä.
+Vuoret ja järvet ovat samassa törmäysjoukossa matalammalla
+tärkeydellä.
+
+Tarkistus on **riippumaton**: kaikki asetetut nimiöt käydään pareittain
+läpi ja lasketaan todelliset leikkaukset; ajo kaatuu jos niitä on.
+
+| taso | nimiötä | pudotettu | päällekkäisyyksiä |
+| --- | --- | --- | --- |
+| z2 | 62 | 0 | **0** |
+| z3 | 297 | 19 | **0** |
+| z4 | 344 | 7 | **0** |
+| z5 | 350 | 1 | **0** |
+| z6–z7 | 351 | 0 | **0** |
+
+Todennettu myös silmällä Keski-Euroopasta ja Benelux–Ruhrista: Berliini,
+Praha, Wien, Krakova, Budapest, Venetsia, Sarajevo, Sofia, Bukarest,
+Rooma, Firenze, Marseille, Barcelona, Pariisi, Amsterdam — kaikki
+luettavina, ei yhtään päällekkäisyyttä.
+
+## Mitatut luvut — ja koko kasvoi merkittävästi
 
 | | mitattu |
 | --- | --- |
-| z0–z5 koko maailma | **1 513 laattaa, 27,50 Mt, 324 s** |
-| z6–z7 Kreikka | 60 laattaa, 0,79 Mt, 37 s |
-| Nopeus (lohko 4×4) | **1,17 Mpx/s** |
-| Koko pyramidi | 23 340 laattaa, 6 061 Mpx, **207–314 Mt** |
-| **Täysajo yhdellä säikeellä** | **1,44 h** |
-| Viidellä agentilla | **~25 min** |
+| z0–z5 koko maailma | **1 513 laattaa, 85,75 Mt, 933 s** |
+| z6–z7 Kreikka | 60 laattaa, 3,37 Mt, 124 s |
+| Nopeus (lohko 4×4 + patina) | **0,44 Mpx/s** (ilman patinaa 1,17) |
+| Koko pyramidi | 23 340 laattaa, **1,16–1,30 Gt** |
+| **Täysajo yhdellä säikeellä** | **4,2 h** |
+| Viidellä agentilla | **~1 h** |
 
-Koko kasvoi edellisestä mittauksesta (122–166 Mt) kolmesta tunnetusta
-syystä: laatu 0,82 → 0,9, arkki +14 % (kehys) ja sisältö laattoihin.
-Yhä kaukana 690 Mt:n arviosta.
+**Patina on kolme neljäsosaa pyramidin koosta.** Syy on
+rakenteellinen: patinan rae ja rosoisuus ovat korkeataajuista kohinaa,
+ja kohina on juuri se mitä pakkaus ei voi pakata. Se myös poistaa
+aiemman ilmaisen edun — ennen patinaa tavua/px puolittui joka tasolla
+(0,307 → 0,061), patinan kanssa se laskee enää 0,92-kertaisesti
+(0,307 → 0,220).
 
-Selaimessa (iPhone-profiili, syvin taso z7): **25 laattaa näkymässä,
-26,2 Mt purettuna, 0 epäonnistunutta hakua, päivitys alle
-mittaustarkkuuden, kehysaika p50 16,7 ms** (emulaattoriluku — oikea
-iOS-laite on yhä omistajan tehtävä).
+Koon kehitys on läpinäkyvä: ~690 Mt (arvio) → 122–166 Mt (mittaus 1)
+→ 207–314 Mt (+laatu 0,9, +kehys, +sisältö) → **1,16–1,30 Gt**
+(+patina). R2:n 10 Gt riittää, mutta luku ei ole enää merkityksetön.
 
-## Parven työnjako (vaihe 2, kun annat luvan)
+Selaimessa (syvin taso z7): 25 laattaa näkymässä, 26,2 Mt purettuna,
+0 epäonnistunutta hakua, päivitys alle mittaustarkkuuden, kehysaika
+p50 16,6 ms (emulaattoriluku).
+
+## Parven työnjako (kun annat luvan)
 
 | agentti | erä | aika |
 | --- | --- | --- |
-| 1 | z0–z6 kokonaan | 22 min |
-| 2–5 | z7 neljänä pituuskaistana (43 saraketta) | 16 min kukin |
+| 1 | z0–z6 kokonaan | 63 min |
+| 2–5 | z7 neljänä pituuskaistana (43 saraketta) | 47 min kukin |
 
-**Kaistarajat lohkorajoille** (sarake jaollinen neljällä): alueajossa
-4×4-lohko hukkaa reunoilla työtä (Kreikan ajossa 62 %, koko maailman
-ajossa 0 %).
+Kaistarajat lohkorajoille (sarake jaollinen neljällä).
 
 ## Avoimet
 
-1. **Patinapassi ei ole osa pyramidia** (yllä). Tämä kannattaa
-   ratkaista ennen täysajoa, tai pyramidi ajetaan kahdesti — sama
-   perustelu jolla sisältö tuotiin nyt.
-2. **Kaupunkinimien törmäykset.** Nimet ladotaan laudan omilla
-   la/lx/ly-siirtymillä eikä törmäyksenvälttelyä ole; Keski-Euroopassa
-   z3:lla nimiä menee päällekkäin. Vaatii ladonta-algoritmin, oma
-   työnsä. En korjannut.
+1. **Patinan kohdistusheitto ja leviäminen syvillä tasoilla** — yllä.
+   Ainoa asia, joka kannattaa ratkaista ennen täysajoa.
+2. **Vinjetointi pelitilakerroksessa.** Se ei tule laattoihin, ja
+   Raamattu listaa sen pelitilakerrokseen. En tarkistanut onko se
+   siellä jo — kirjaan havainnon kuten pyysit, ei tämän erän työ.
 3. **Syvyyskäyrät oikeasta datasta** — päätit myöhemmäksi eräksi.
-4. Muistutus: jos `patinoi-fokus.yml` ajetaan uudestaan,
-   `FOKUS_VUOSIKERTA` on nostettava (korkeusasteikko muuttaa yli
-   2900 m maastoa).
+
+## Virhe, jonka tein ja korjasin
+
+Ajoin `git checkout tools/patina.mjs` palauttaakseni kokeilun ja
+pyyhin samalla tunnin verran committaamatonta työtä samasta
+tiedostosta. Tein sen uudelleen ja committasin heti. Kirjaan sen tähän,
+koska se olisi voinut mennä huomaamatta ohi.
 
 ## Laatat
 
-Kontin scratchpadissa `scratchpad/pilotti2/` — **31 Mt / 1 573
-laattaa**, ei repossa. Aineisto (`korkeus/`, `nedata/`) samassa
-paikassa; uudelleenhaku ~50 s jos kontti kiertää.
+`scratchpad/pilotti3/` — **89 Mt / 1 573 laattaa**, ei repossa.
+Vertailukuvat `vertailu-{keskitaso,taysi,ehdotus}/z7/92/41.webp`.
 
 ## Sivussa nähtyä (en korjannut)
 

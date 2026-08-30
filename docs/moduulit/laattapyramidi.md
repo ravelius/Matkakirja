@@ -68,43 +68,59 @@ samasta laudan koordinaatista kuin maasto).
 
 | z | leveys × korkeus px | px/yks | sar × riv | laattoja | Mpx | tavua/px | koko taso |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 0 | 675 × 411 | 0,056 | 2 × 1 | 2 | 0,3 | **0,203** | 0,06 Mt |
-| 1 | 1 350 × 822 | 0,113 | 3 × 2 | 6 | 1,1 | **0,203** | 0,22 Mt |
-| 2 | 2 700 × 1 644 | 0,225 | 6 × 4 | 24 | 4,4 | **0,180** | 0,80 Mt |
-| 3 | 5 400 × 3 288 | 0,450 | 11 × 7 | 77 | 17,8 | **0,138** | 2,45 Mt |
-| 4 | 10 800 × 6 577 | 0,900 | 22 × 13 | 286 | 71,0 | **0,095** | 6,76 Mt |
-| 5 | 21 600 × 13 154 | 1,800 | 43 × 26 | 1 118 | 284,1 | **0,061** | 17,21 Mt |
-| 6 | 43 200 × 26 308 | 3,600 | 85 × 52 | 4 420 | 1 136,5 | 0,042 … 0,076 | 48 … 86 Mt |
-| 7 | 86 400 × 52 616 | 7,200 | 169 × 103 | 17 407 | 4 546,0 | 0,029 … 0,044 | 132 … 200 Mt |
-| | | | | **23 340** | **6 061** | | **207 … 314 Mt** |
+| 0 | 675 × 411 | 0,056 | 2 × 1 | 2 | 0,3 | **0,307** | 0,09 Mt |
+| 1 | 1 350 × 822 | 0,113 | 3 × 2 | 6 | 1,1 | **0,300** | 0,33 Mt |
+| 2 | 2 700 × 1 644 | 0,225 | 6 × 4 | 24 | 4,4 | **0,288** | 1,28 Mt |
+| 3 | 5 400 × 3 288 | 0,450 | 11 × 7 | 77 | 17,8 | **0,265** | 4,71 Mt |
+| 4 | 10 800 × 6 577 | 0,900 | 22 × 13 | 286 | 71,0 | **0,238** | 16,90 Mt |
+| 5 | 21 600 × 13 154 | 1,800 | 43 × 26 | 1 118 | 284,1 | **0,220** | 62,44 Mt |
+| 6 | 43 200 × 26 308 | 3,600 | 85 × 52 | 4 420 | 1 136,5 | 0,202 … 0,226 | 230 … 257 Mt |
+| 7 | 86 400 × 52 616 | 7,200 | 169 × 103 | 17 407 | 4 546,0 | 0,186 … 0,211 | 847 … 959 Mt |
+| | | | | **23 340** | **6 061** | | **1,16 … 1,30 Gt** |
 
 **Lihavoidut tavua/px-luvut on mitattu koko maailmasta** (z0–z5, 1 513
-laattaa, 27,50 Mt). z6 ja z7 on mitattu Kreikan alueelta (0,076 ja
-0,044) — maapainotteinen eli **yläraja**; alempi luku on mitatun
-sarjan oma trendi (suhde 0,69 tasoa kohti), joka on koko maailmalle
-realistisempi, koska kaksi kolmasosaa on merta.
+laattaa, **85,75 Mt**, patina `taysi` + sisältö + ladonta, q0,9). z6 ja
+z7 on mitattu Kreikan alueelta — maapainotteinen eli **yläraja**;
+alempi luku on mitatun sarjan oma trendi (suhde 0,92 tasoa kohti).
 
-Tavua/px laskee tason mukana rakenteellisesti: syvemmällä sama
-kuvapikselimäärä kattaa pienemmän maa-alan, joten sisältö on loivempaa.
-Ainoa mikä ei harvene on paperin rae.
+**Koko: 1,16–1,30 Gt**, ja luku on kasvanut mittaus mittaukselta
+tunnetuista syistä:
 
-**Koko: 207–314 Mt.** Aiempi arvio 690 Mt oli neli-viisinkertainen
-ylitys; nyt luku on suurempi kuin edellisessä mittauksessa (122–166 Mt)
-kolmesta tunnetusta syystä: webp-laatu 0,82 → 0,9, arkin korkeus +14 %
-(atlaskehys) ja pysyvä sisältö laattoihin. R2:n ilmaisraja on 10 Gt.
+| vaihe | koko | mikä muuttui |
+| --- | --- | --- |
+| lukittu arvio | ~690 Mt | — |
+| mittaus 1 (ei patinaa, q0,82, 76 °N arkki) | 122–166 Mt | mitattu |
+| mittaus 2 (q0,9, 84 °N arkki + kehys, sisältö) | 207–314 Mt | +laatu, +14 % korkeutta, +sisältö |
+| **mittaus 3 (patina `taysi`)** | **1,16–1,30 Gt** | **+patina** |
+
+**Patina on kolme neljäsosaa koko pyramidin koosta.** Syy on
+rakenteellinen: patinan rae, kuitu ja rosoisuus ovat korkeataajuista
+kohinaa, ja kohina on juuri se mitä kuvanpakkaus ei voi pakata. Se myös
+poistaa aiemman ilmaisen edun — ennen patinaa tavua/px puolittui joka
+tasolla (0,307 → 0,061), patinan kanssa se laskee enää 0,92-kertaisesti
+(0,307 → 0,220), koska rae ei harvene tason mukana.
+
+R2:n ilmaisraja on 10 Gt, joten 1,3 Gt mahtuu — mutta se ei ole enää
+merkityksetön luku, ja se on hyvä syy tehdä patinan mittakaavapäätös
+(luku 6b) ennen täysajoa: syvät tasot ovat 94 % tavuista.
 
 ## 3. Generointinopeus ja täysajon kesto
 
 | tapa | Mpx/s | laattaa/s |
 | --- | --- | --- |
-| laatta kerrallaan (`--lohko 1`) | 0,44 | 1,74 |
-| **lohko 4 × 4 (oletus)** | **1,17** | **4,67** |
+| laatta kerrallaan, ei patinaa | 0,44 | 1,74 |
+| lohko 4 × 4, ei patinaa | 1,17 | 4,67 |
+| **lohko 4 × 4 + patina `taysi`** | **0,44** | **1,62** |
 
-Lohkopiirto on ~3× nopeampi: kiinteä kustannus (canvas, kaksi koko
-kuvan `getImageData`-kierrosta, base64-siirto) jakautuu kuudellatoista.
+Lohkopiirto on ~3× nopeampi kuin laatta kerrallaan. Patina syö sen
+edun kokonaan takaisin: se on oma täysi pikselikierroksensa (itse
+asiassa useita) koko lohkon yli.
 
-**Koko maailman täysajo: 6 061 Mpx / 1,17 Mpx/s = 1,44 h yhdellä
-säikeellä.** Viidellä agentilla noin 17 min.
+Reunus lisää työtä 9 % (mitattu: 414,7 Mpx piirrettyä 380,6 Mpx:n
+tuloksesta).
+
+**Koko maailman täysajo: 6 061 Mpx + 9 % reunusta / 0,44 Mpx/s =
+4,2 h yhdellä säikeellä.** Viidellä agentilla noin 50 min.
 
 Aineiston keruu on 1,6 s välimuistista ja ~50 s kylmänä. Pysyvän
 sisällön keruu on alle sekunnin.
@@ -245,6 +261,103 @@ mutta ei tyhjä.
 Varsinaiset syvyyskäyrät (marching squares kiinteillä syvyyksillä) ovat
 myöhempi oma eränsä, eikä niitä tehty.
 
+## 6b. Patina laattoihin
+
+Raamattu vaatii patinan poltettavaksi laattoihin. `tools/patina.mjs` on
+nyt **sekä työkalu että moduuli** (`AJETAAN_SUORAAN`-vartio): pyramidi
+ajaa SAMAN reseptin samasta tiedostosta, ei kopiota. Tiedoston oma
+sääntö — *"reseptiolio on yhdessä paikassa eikä hajallaan koodissa"* —
+pysyy siis voimassa.
+
+Passille lisättiin kolme valinnaista parametria, joita ilman se
+käyttäytyy sanasta sanaan kuten ennen:
+
+| parametri | merkitys |
+| --- | --- |
+| `koko` | arkin mitat, kun kuva on vain pala siitä — `s` lasketaan siitä |
+| `pikselit` | valmis ImageData sisään (ei PNG-kiertoa lohkoa kohti) |
+| `palauta: 'pikselit'` | pikselit ulos; laatat pakataan vasta lohkon leikkauksen jälkeen |
+
+**Resepti: `taysi`** (omistajan päätös 30.8.2026) — mukana rosoisuus,
+kohdistusheitto ja leviäminen, jotka Raamatun tyyliohje nimeää.
+`taitteet: false` ja `vinjetti: null` kaikilla tasoilla.
+
+### Mikä meni laattoihin ja mikä ei
+
+| osa | laattoihin? | miksi |
+| --- | --- | --- |
+| sävyt, sävykäyrä, muste, kerma | **kyllä** | pikselikohtaisia |
+| paperin syy, rae, klimppi | **kyllä** | faasi arkista (`faasiX/Y`) |
+| ikääntymisen laikku | **kyllä** | mittakaava ja faasi laudalta (`maailmaX/Y`) |
+| meren litistys | **kyllä** | tavoite on kiinteä globaali sävy |
+| reunakertymä, rosoisuus, kohdistus, leviäminen | **kyllä** | paikallisia; reunus kattaa naapuruston |
+| **vinjetointi** | **EI** | säteittäinen termi on KEHYS: jokainen laatta on laudan pala, ja vieretysten ladottuna kehyksistä tulisi ruudukko meren päälle. Kuuluu pelin ohueen pelitilakerrokseen ruutuavaruudessa (Raamattu). `vinjetti: null` kaikilla tasoilla jo ennestään. |
+| **taitejäljet** | **EI** | toteutus hylättiin 29.8. (*"näyttävät feikiltä"*); koodi jää lipun taakse |
+| **vesiviivoitus** | **EI** | omistajan päätös 30.8.: ei pohjaudu oikeaan dataan (luku 6) |
+| `IKAANTYMINEN.reunapaino` | **0** | sama säteittäinen ongelma kuin vinjetillä; ei palautettu |
+
+### Jatkuvuus: reunus, ja yksi mittaamalla löytynyt vika
+
+Lohko piirretään **reunuksen verran isompana** ja laatat leikataan sen
+sisältä, jolloin paikalliset operaattorit näkevät oikeat naapurit myös
+laatan reunalla. Reunus johdetaan tason mittakaavasta
+(`8 · ceil((9s + 16) / 8)`): kiinteä 64 px olisi jäänyt syvimmällä
+tasolla rantavyön (7 · 13,5 = 95 px) alle. Kahdeksan monikerta pitää
+patinan pienennetyt kentät (J4, J8) samassa kohdassa joka lohkolla.
+
+**Mittaus paljasti vian, jota ei olisi huomannut katsomalla:** patinan
+pikselikohtainen rae ja dither luettiin *lehden omasta* pikselistä.
+Lehdelle se oli oikein (naapurilehti on eri paperi), mutta laatoissa se
+antoi JOKAISELLE laatalle täsmälleen saman kohinakentän — rakenteeton
+kohina muuttuu rakenteeksi, kun se toistuu 512 pikselin ruudukossa.
+Mitattuna **52 % kanavista erosi**. Nyt avain on arkin pikseli.
+
+### Kaksi eri saumakoetta — ja vain toinen kertoo tuotannosta
+
+| koe | mitä vertaa | tulos |
+| --- | --- | --- |
+| `--saumatesti` | 1024 px:n kangas vs. neljä 512 px:n kangasta | z3 pahin 97, muut ≤ 19 |
+| **lohkoraja** | kaksi VIERELLISTÄ samankokoista lohkoa | **z0–z2 ja z6–z7 pahin 0; z3–z4 pahin 3; z5 pahin 18** |
+
+Ensimmäinen on ankarampi kuin tuotanto: selaimen viivan- ja
+kirjasinrasterointi riippuu hitusen kankaan KOOSTA, joten erikokoiset
+kankaat eroavat vaikka syöte olisi sama. Tuotannossa kaikki lohkot ovat
+saman kokoisia ja niiden nurkat eroavat vain kokonaisella
+pikselimäärällä — ja kokonaispikselin siirto on rasteroinnille
+täsmällinen. **Lohkoraja-koe mittaa juuri sen tilanteen**, ja sen
+mukaan laattojen väliin ei jää saumaa.
+
+### Hinta
+
+Patina hidastaa generoinnin **1,17 → 0,44 Mpx/s** (2,7-kertainen) ja
+kasvattaa tavut noin 2,6-kertaisiksi (patinan kohina pakkautuu
+huonosti). Molemmat päivitetyt luvut ovat luvussa 2 ja 3.
+
+### KERROTTAVA: patinan mittakaava syvillä tasoilla
+
+Kohdistusheitto ja leviäminen skaalautuvat `s`:llä eli ovat saman
+kokoisia KARTALLA joka tasolla. Uloimmilla tasoilla se on oikein;
+syvimmällä `s` on 13,5, jolloin:
+
+| | viitearvo (6400 px arkki) | z6 | z7 |
+| --- | --- | --- | --- |
+| kohdistusheitto | 2,6 px | 18 px | **35 px** |
+| musteen leviäminen | 2 px | 14 px | **27 px** |
+
+Nähtynä (Peloponnesos, z7, VERTAILUPALA): `taysi` maalaa koko
+mantereen **sateenkaaren värisiksi läiskiksi** ja hukuttaa
+rantaviivan usvaan. Se ei ole hienovarainen väriripsaus vaan
+painovirhe. Työkalu varoittaa tästä ajossa.
+
+**Ehdotus (ei toteutettu — resepti on omistajan päätös):** kohdistus ja
+leviäminen ovat PAINOJÄLJEN ominaisuuksia, eivät kartan, joten ne
+kuuluvat paperin pikseleihin samalla perusteella kuin nimiöt (luku 4).
+Käytännössä `* s` pois kolmesta kohdistusrivistä ja leviämisen säteestä
+(tools/patina.mjs). **6400 pikselin lehdille se ei muuta mitään**,
+koska niillä `s` = 1. Kokeiltu ja kuvattu: jälki on `keskitason`
+kaltainen mutta täyden reseptin rosoisuudella — juuri se, mitä
+tyyliohje pyytää sanalla "varovasti".
+
 ## 7. Harva pyramidi — mitattu, päätetty POIS
 
 Karsinta laattamäärästä (`--harva-raja 8`, koko maailma, uusi arkki):
@@ -316,10 +429,10 @@ node tools/generoi-laattapyramidi.mjs <kohde> --data <ne-kansio> \
      --tasot 6-7 --alue 17,33,30,43
 ```
 
-- **z0–z5 koko maailmasta**: 1 513 laattaa, 27,50 Mt, 378,7 Mpx, 324 s.
-- **z6–z7 Kreikasta ja lähinaapureista**: 60 laattaa, 0,79 Mt, 37 s.
-- Levyllä yhteensä **31 Mt / 1 573 laattaa**, kontin scratchpadissa
-  (`scratchpad/pilotti2/`). **Laatat eivät ole repossa.**
+- **z0–z5 koko maailmasta**: 1 513 laattaa, 85,75 Mt, 933 s.
+- **z6–z7 Kreikasta ja lähinaapureista**: 60 laattaa, 3,37 Mt, 124 s.
+- Levyllä yhteensä **89 Mt / 1 573 laattaa**, kontin scratchpadissa
+  (`scratchpad/pilotti3/`). **Laatat eivät ole repossa.**
 
 **Alueajossa lohko hukkaa työtä reunoilla** (Kreikan ajossa 62 %; koko
 maailman ajossa 0 %). Parven osa-alueet on rajattava lohkorajoille.
@@ -332,7 +445,7 @@ laattoja näkymässä       25
 purettu muisti           26,2 Mt
 epäonnistuneita hakuja   0
 näkyvän palan päivitys   0 ms (alle mittaustarkkuuden)
-kehysaika panoroinnissa  p50 16,7 ms · p95 30,3 ms
+kehysaika panoroinnissa  p50 16,6 ms · p95 25,1 ms
 ```
 
 **Muisti laskee, ei nouse:** 26 Mt on samaa luokkaa kuin yksi nykyinen
@@ -362,12 +475,14 @@ sisältö, atlaskehys, pelin lataaja lipun takana, mittaukset.
 
 **Vaihe 2 — täysgenerointi parvella.** z7 on 75 % työstä.
 
-| agentti | erä | Mpx | aika @1,17 Mpx/s |
+| agentti | erä | Mpx | aika @0,44 Mpx/s |
 | --- | --- | --- | --- |
-| 1 | z0–z6 kokonaan | 1 515 | 22 min |
-| 2–5 | z7 neljänä pituuskaistana (43 saraketta / agentti) | 1 137 kukin | 16 min kukin |
+| 1 | z0–z6 kokonaan | 1 515 | 63 min |
+| 2–5 | z7 neljänä pituuskaistana (43 saraketta / agentti) | 1 137 kukin | 47 min kukin |
 
-Kokonaisaika **noin 25 minuuttia viidellä agentilla**. Kaistarajat
+Kokonaisaika **noin tunti viidellä agentilla** (reunushukka mukana).
+Jos patinan mittakaavapäätös (luku 6b) muuttaa reseptiä, ajo on
+tehtävä sen JÄLKEEN — syvät tasot ovat 94 % työstä ja tavuista. Kaistarajat
 lohkorajoille (sarake jaollinen neljällä). Laatta ei koskaan riipu
 naapurilaatasta, koska kaikki lasketaan arkin koordinaateista.
 
@@ -385,13 +500,56 @@ tools/fokuskartta/maat.mjs, patinoi-fokus.yml, savukkeet
 **Maailma-nappi vaiheen 3 jälkeen** ei vaihda karttaa vaan vain
 löysentää panorointirajoja.
 
+## 6c. Nimiöiden ladonta ja törmäyksenvälttely
+
+**Ladonta ajetaan KERRAN TASOA KOHTI koko arkille, ei lohkoittain.**
+Se on ainoa kohta putkessa, jossa piirto ei voi olla paikallinen:
+törmäyksenvälttely on globaali päätös — se että yksi nimi jää pois,
+riippuu siitä mitkä muut on jo asetettu. Lohkokohtaisena kaksi
+vierekkäistä lohkoa päätyisi samasta kaupungista eri tulokseen, ja
+lohkorajalle jäisi joko kaksoisnimi tai katoava nimi.
+
+Mittaus tehdään samalla moottorilla joka piirtää: kirjaimen leveys
+luetaan `measureText`illa samalla fontilla ja harvennuksella. Arvattu
+leveys johtaisi joko turhiin pudotuksiin tai päällekkäisyyksiin.
+
+**Laudan oma asettelu on lähtökohta, ei lopputulos.** `la/lx/ly` on
+käsin hiottua työtä (nimi ei peitä rannikkoa eikä naapuria), joten sitä
+kunnioitetaan aina kun se ei törmää. Vasta törmätessä kokeillaan neljää
+tavanomaista karttapaikkaa (oikea, vasen, ylä, ala), ja viimeisenä nimi
+**pudotetaan** — se on yleistystä, ei virhe.
+
+**Tärkeysjärjestys** (pelin merkitys voittaa koristeen):
+lähtökaupunki (+8) → lentokenttä (+4) → reittisolmun aste (+0…3).
+Kaupunkien PISTEET varataan ennen nimiä, jottei nimi peitä toisen
+kaupungin merkkiä. Vuorten ja järvien nimet ovat samassa
+törmäysjoukossa matalammalla tärkeydellä: kaupunki on pelin kohde,
+maastonimi on kuvitusta.
+
+Mitattu, ja tarkistus on riippumaton (kaikki asetetut nimiöt käydään
+pareittain läpi ja lasketaan todelliset leikkaukset; ajo kaatuu jos
+niitä on):
+
+| taso | nimiötä | pudotettu | **päällekkäisyyksiä** |
+| --- | --- | --- | --- |
+| z0–z1 | 0 | 0 | **0** |
+| z2 | 62 | 0 | **0** |
+| z3 | 297 | 19 | **0** |
+| z4 | 344 | 7 | **0** |
+| z5 | 350 | 1 | **0** |
+| z6–z7 | 351 | 0 | **0** |
+
+Pudotusten määrä käyttäytyy kuten yleistyksen kuuluu: tiheimmällä
+tasolla (z3, jossa kaikki nimet syttyvät) putoaa 19, ja tila riittää
+kaikille z6:sta alkaen. Todennettu myös silmällä Keski-Euroopan ja
+Benelux–Ruhrin alueelta.
+
 ## 12. Avoimet
 
-1. **Patinapassi ei ole vielä osa pyramidia** (luku 6). Raamattu
-   vaatii patinan laattoihin; se on oma tehtävänsä.
+1. **Patinan kohdistusheitto ja leviäminen syvillä tasoilla** (luku 6b)
+   — ehdotus tehty, päätös omistajalla. Tämä on ainoa asia, joka
+   kannattaa ratkaista ennen täysajoa.
 2. **Syvyyskäyrät oikeasta datasta** — päätetty myöhemmäksi eräksi.
-3. **Kaupunkinimien törmäykset.** Nimet ladotaan laudan omilla
-   la/lx/ly-siirtymillä eikä törmäyksenvälttelyä ole; tiheimmillä
-   alueilla (Keski-Eurooppa z3) nimet voivat mennä päällekkäin.
-   Ei korjattu tässä erässä — vaatii ladonta-algoritmin ja on oma
-   työnsä.
+3. **Vinjetointi pelitilakerroksessa.** Se ei tule laattoihin
+   (luku 6b), ja Raamattu listaa sen pelin ohueen pelitilakerrokseen.
+   Jos sitä ei siellä vielä ole, se on oma tehtävänsä — ei tämän erän.
