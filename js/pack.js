@@ -5,7 +5,6 @@
 import { MAAILMA } from './packs/maailma.js';
 import { AFRICA } from './packs/africa.js';
 import { MIDDLE_EAST } from './packs/middleeast.js';
-import { EUROPE } from './packs/europe.js';
 import { SOUTHAMERICA } from './packs/southamerica.js';
 import { NORTHAMERICA } from './packs/northamerica.js';
 import { ASIA } from './packs/asia.js';
@@ -23,9 +22,16 @@ import { MAAILMANKARTTA } from './packs/maailmankartta.js';
  * Maanosapakat ovat listassa enää kahdesta syystä: ne ovat
  * maailmankartan DATAN lähde (kaupungit, kysymykset, aarteet
  * kootaan niistä), ja työhuoneen/työkalujen katselutila
- * (?lauta=europe) piirtää niiden kartat. Peli ei voi päätyä niille.
+ * (?lauta=africa) piirtää niiden kartat. Peli ei voi päätyä niille.
  * Suomen ja Istanbulin koelaudat poistettiin rekisteristä kokonaan;
  * tiedostot jäävät repoon mahdollista myöhempää käyttöä varten.
+ *
+ * EUROOPAN ERILLISLAUTA POISTETTIIN KOKONAAN (Raamattu 30.8.2026,
+ * "erillislaudasta luovutaan"): js/packs/europe.js on enää
+ * maailmankartan sisällön lähde (kaupungit, kysymykset, aarteet,
+ * lentoreitit, tekstit) eikä siinä ole enää laudan piirtodataa.
+ * Vanha tallennus Euroopan laudalta siirtyy maailmankartalle
+ * latauksessa (js/game.js, siirraErillislaudat).
  *
  * js/packs/vanhamaailma.js jää repoon: se on yhä tools/-työkalujen
  * lähde maatunnuksille, mutta peli ei enää lataa sitä.
@@ -34,7 +40,7 @@ export const PACKS = [
   MAAILMA,
   MAAILMANKARTTA,
   // Vain katselutilaan ja työkaluille — ei pelattavissa:
-  AFRICA, EUROPE, ASIA, OCEANIA, NORTHAMERICA, SOUTHAMERICA, MIDDLE_EAST,
+  AFRICA, ASIA, OCEANIA, NORTHAMERICA, SOUTHAMERICA, MIDDLE_EAST,
 ];
 
 export function packById(id) {

@@ -50,6 +50,10 @@ import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { FOKUSKOHTEET_GRC } from '../../js/packs/fokuskohteet-grc.js';
 import { FOKUS_POHJAT } from '../../js/packs/fokus-grc.js';
+import { FOKUSVIRRAT } from '../../js/packs/fokusvirrat.js';
+import { MAASTOKOHTEET } from '../../js/packs/maastokohteet.js';
+import { SYVENNYSPAIKAT } from '../../js/packs/syvennyspaikat.js';
+import { SKANDAALIT } from '../../js/packs/skandaalit.js';
 
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
 const paketti = await import('playwright')
@@ -323,9 +327,71 @@ const lehtiNakyy = await sivu.evaluate(() => Boolean(window.matkakirja.ui.fokusP
 vaadi('Kreikan fokuslehti on kartalla', lehtiNakyy === true, 'lehteä ei piirretty');
 
 let m = await merkit();
+/*
+ * ODOTUS LASKETAAN KAIKISTA REKISTERÖIDYISTÄ LÄHTEISTÄ (v1348,
+ * yhtenäinen kohdemalli): kohdekerrokseen piirtyvät maan kohteiden
+ * (FOKUSKOHTEET + MAASTOKOHTEET, js/fokuskohteet.js KOHDE_MAAT)
+ * lisäksi rekisteröidyt lisälähteet (rekisteroiLisakohteet) —
+ * kohteettomat täkynostot (js/fokusnosto.js nostoLisakohteet,
+ * id-etuliite `nosto-`), syvennystarinat (js/syvennys.js
+ * syvennysLisakohteet, `syvennys-<kaupunki>-<täky>`) ja maan
+ * skandaalit (js/skandaalit.js skandaaliLisakohteet,
+ * `skandaali-<id>`). Eläintäyt EIVÄT
+ * kuulu tähän: ne piirtyvät omaan kerrokseensa (js/elaintaky.js,
+ * `.elaintaky-merkki`). Pelkkä FOKUSKOHTEET_GRC.length olisi siksi
+ * ikuisesti punainen, vaikka peli toimii oikein — väite jakaa merkit
+ * lähteittäin, jotta jokainen suunta pysyy informatiivisena:
+ *   1. jokainen maan kohde sai merkin, eikä kartalla ole yhtään
+ *      perusmerkkiä, jota data ei tunne;
+ *   2. syvennysmerkit ovat täsmälleen maan fokuskaupunkien täyt,
+ *      joilla on paikkarivi (js/packs/syvennyspaikat.js);
+ *   3. nostomerkkejä on (Kreikan poolissa on kohteeton nosto:
+ *      sofia-korut) ja kokonaismäärä on tasan näiden lähteiden
+ *      summa — uusi selittämätön lähde kaataa väitteen.
+ * Nostopooli (js/fokusnosto.js NOSTO_MAAT) ei ole exportattu, joten
+ * nostojen odotus on vähintään-ehto eikä täsmälista; noston merkin
+ * säännöt vartioidaan erikseen (osio "nostot ja syvennykset kartalla").
+ */
+const perusOdotus = new Set(
+  [...FOKUSKOHTEET_GRC, ...(MAASTOKOHTEET.GRC ?? [])]
+    .filter((k) => k.laudat?.maailmankartta)
+    .map((k) => k.id),
+);
+const syvennysOdotus = new Set(Object.keys(SYVENNYSPAIKAT)
+  .filter((cityId) => peli.pack.map.cityCountry?.[cityId] === 'GRC')
+  .flatMap((cityId) => (FOKUSVIRRAT[cityId]?.takyt ?? [])
+    .filter((taky) => SYVENNYSPAIKAT[cityId][taky.id])
+    .map((taky) => `syvennys-${cityId}-${taky.id}`)));
+const skandaaliOdotus = new Set((SKANDAALIT.GRC ?? [])
+  .map((skandaali) => `skandaali-${skandaali.id}`));
+const perusSaadut = m.tunnukset
+  .filter((t) => !t.startsWith('nosto-') && !t.startsWith('syvennys-')
+    && !t.startsWith('skandaali-'));
+const nostoSaadut = m.tunnukset.filter((t) => t.startsWith('nosto-'));
+const syvennysSaadut = m.tunnukset.filter((t) => t.startsWith('syvennys-'));
+const skandaaliSaadut = m.tunnukset.filter((t) => t.startsWith('skandaali-'));
 vaadi('jokainen maan kohde sai merkin',
-  m.tunnukset.length === FOKUSKOHTEET_GRC.length,
-  `${m.tunnukset.length}/${FOKUSKOHTEET_GRC.length}: ${m.tunnukset.join(',')}`);
+  perusSaadut.length === perusOdotus.size
+  && perusSaadut.every((t) => perusOdotus.has(t)),
+  `${perusSaadut.length}/${perusOdotus.size} — puuttuu: `
+  + `${[...perusOdotus].filter((t) => !perusSaadut.includes(t)).join(',') || '-'}`
+  + `; tuntemattomat: ${perusSaadut.filter((t) => !perusOdotus.has(t)).join(',') || '-'}`);
+vaadi('syvennysmerkit ovat täsmälleen maan paikkataulun täyt',
+  syvennysSaadut.length === syvennysOdotus.size
+  && syvennysSaadut.every((t) => syvennysOdotus.has(t)),
+  `saatu ${syvennysSaadut.join(',')} vs odotus ${[...syvennysOdotus].join(',')}`);
+vaadi('skandaalimerkit ovat täsmälleen maan skandaalitaulun rivit',
+  skandaaliSaadut.length === skandaaliOdotus.size
+  && skandaaliSaadut.every((t) => skandaaliOdotus.has(t)),
+  `saatu ${skandaaliSaadut.join(',')} vs odotus ${[...skandaaliOdotus].join(',')}`);
+vaadi('kokonaismäärä täsmää rekisteröityihin lähteisiin '
+  + '(kohteet+nostot+syvennykset+skandaalit)',
+  nostoSaadut.length > 0
+  && m.tunnukset.length === perusOdotus.size + nostoSaadut.length + syvennysOdotus.size
+    + skandaaliOdotus.size,
+  `${m.tunnukset.length} merkkiä; nostoja ${nostoSaadut.length}, `
+  + `syvennyksiä ${syvennysSaadut.length}, skandaaleja ${skandaaliSaadut.length}: `
+  + `${m.tunnukset.join(',')}`);
 vaadi('kiertävällä laudalla merkit ovat molemmissa kohdissa',
   m.maara === m.tunnukset.length * 2, `${m.maara} merkkiä`);
 vaadi('kerros on juuriryhmän ulkopuolella (<use>-kopio ei syö napautusta)',
@@ -1430,6 +1496,39 @@ vaadi('syvennysmerkin napautus avaa tarinakortin minivisoineen',
   syvennyskortti.otsikko === 'Athena Niken pyhäkkö' && syvennyskortti.visa
   && syvennyskortti.ylariviSymboli,
   JSON.stringify(syvennyskortti));
+await sivu.keyboard.press('Escape');
+await sivu.waitForTimeout(400);
+
+/*
+ * Skandaalimerkki (js/skandaalit.js) on kolmas lisälähde: valo kuuluu
+ * Skandaalit-aiheeseen, ja napautus avaa skandaalikortin, jossa on
+ * kohdemallin ylärivi ja minivisa. Koekappale on Simonides — Symin
+ * saari on kaukana Ateenan ryppäästä, joten kasauspassi ei sotke
+ * mittausta.
+ */
+const skandaaliValo = await sivu.evaluate(() => document
+  .querySelector('.fokuskohde[data-kohde="skandaali-simonides-kasikirjoitusvaarentaja"]')
+  ?.querySelector('.karttavalo')?.getAttribute('data-aihe') ?? null);
+vaadi('skandaalimerkin valo kuuluu Skandaalit-aiheeseen',
+  skandaaliValo === 'skandaalit', JSON.stringify(skandaaliValo));
+await napauta('skandaali-simonides-kasikirjoitusvaarentaja');
+const skandaalikortti = await sivu.evaluate(() => ({
+  otsikko: document.querySelector('.skandaali-kortti .fokusnosto-kortti-otsikko')
+    ?.textContent ?? null,
+  meta: document.querySelector('.skandaali-kortti .fokusnosto-lahde')?.textContent ?? '',
+  visa: Boolean(document.querySelector('.skandaali-kortti .fokusvirta-visa-kysymys')),
+  ylarivi: document.querySelector('.skandaali-kortti .fokusnosto-ylarivi')
+    ?.textContent ?? '',
+  ylariviSymboli: Boolean(document.querySelector(
+    '.skandaali-kortti .nostosym-ylarivi-symboli',
+  )),
+}));
+vaadi('skandaalimerkin napautus avaa skandaalikortin minivisoineen',
+  skandaalikortti.otsikko === 'Simonides, käsikirjoitusten mestariväärentäjä'
+  && skandaalikortti.visa && skandaalikortti.ylariviSymboli
+  && skandaalikortti.ylarivi.includes('Skandaalit')
+  && skandaalikortti.meta.includes('Symin saari'),
+  JSON.stringify(skandaalikortti));
 await sivu.keyboard.press('Escape');
 await sivu.waitForTimeout(400);
 

@@ -35,16 +35,18 @@ import {
 import { readStamps, writeStamps, STAMP_KEY } from './passport.js';
 /*
  * Yhtenäisen kohdemallin lisäkohteet (Raamattu 29.8.2026): täkynostot
- * (js/fokusnosto.js) ja syvennystarinat (js/syvennys.js) rekisteröityvät
- * kartan kohdekerroksen lähteiksi (js/fokuskohteet.js
- * rekisteroiLisakohteet). Kytkentä on tässä eikä js/ui.js:ssä —
- * käynnistys tarvitsee vain nämä kaksi kutsua.
+ * (js/fokusnosto.js), syvennystarinat (js/syvennys.js) ja skandaalit
+ * (js/skandaalit.js) rekisteröityvät kartan kohdekerroksen lähteiksi
+ * (js/fokuskohteet.js rekisteroiLisakohteet). Kytkentä on tässä eikä
+ * js/ui.js:ssä — käynnistys tarvitsee vain nämä kolme kutsua.
  */
 import { kytkeFokusnosto } from './fokusnosto.js';
 import { kytkeSyvennys } from './syvennys.js';
+import { kytkeSkandaalit } from './skandaalit.js';
 
 kytkeFokusnosto();
 kytkeSyvennys();
+kytkeSkandaalit();
 
 const PLAYER_COLOR = '#d94f3d';
 /*
@@ -105,7 +107,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1350';
+const APP_VERSION = '2026-08-09.1352';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

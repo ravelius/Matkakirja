@@ -208,6 +208,140 @@ function mannerkohtaisetTahdet(pack, w) {
 }
 
 /*
+ * ERILLISLAUTOJEN SIIRTO (Raamattu 30.8.2026, "erillislaudasta
+ * luovutaan"): maailmankartta on ainoa pelilauta, ja maailma on
+ * aloitusnäytön lauta. Vanha tallennus voi silti olla toiselta laudalta
+ * — Euroopan erillislaudalta, yhden laudan Afrikka-pelistä tai
+ * koelaudalta — ja se siirretään maailmankartalle MENETTÄMÄTTÄ
+ * ETENEMISTÄ: käännetyt laatat, löydetyt aarteet, käydyt kaupungit ja
+ * pelaajan sijainti siirtyvät sellaisinaan (kaupunkitunnukset ovat
+ * maailmankartalla samat), raha ja matkalaukku kulkevat pelaajassa.
+ */
+const PELILAUDAT = new Set(['maailma', 'maailmankartta']);
+// Laattatyypit, joita on yksi per manner: siirrossa maailmankartan oma,
+// vielä piilossa oleva kappale nostetaan pois pelistä, jottei sama
+// aarre olisi löydettävissä toista kertaa.
+const AINUTKERTAISET = new Set(['star', 'mannerAarre']);
+
+function siirraErillislaudat(game, orvot) {
+  const vanhat = new Set([
+    ...orvot.keys(),
+    ...game.players.map((p) => p.packId),
+    game.rootPackId,
+  ]);
+  for (const id of PELILAUDAT) vanhat.delete(id);
+  if (!vanhat.size) return;
+
+  const pack = packById('maailmankartta');
+  const world = game.worlds.get('maailmankartta') ?? game.enterWorld(pack);
+  const onKaupunki = (city) => world.board.cityById.has(city);
+  const mannerOf = (city) => pack.map?.cityManner?.[city] ?? pack.id;
+
+  for (const [id, w] of orvot) {
+    const revealed = (w.revealed ?? [])
+      .map(([city, type]) => [city, paivitaLaattatyyppi(type)]);
+    // Ainutkertaiset aarteet ensin: maailmankartan vastaava piilotettu
+    // laatta siirretään löytöpaikkaan, jolloin alempi käännettyjen
+    // siirto poistaa sen laudalta.
+    for (const [city, type] of revealed) {
+      if (!AINUTKERTAISET.has(type) || !onKaupunki(city)) continue;
+      if (world.revealed.has(city)) continue;
+      const manner = mannerOf(city);
+      const piilossa = [...world.tokens]
+        .find(([cid, t]) => t === type && mannerOf(cid) === manner);
+      if (!piilossa || piilossa[0] === city) continue;
+      const vaihtoon = world.tokens.get(city);
+      if (vaihtoon !== undefined) world.tokens.set(piilossa[0], vaihtoon);
+      else world.tokens.delete(piilossa[0]);
+      world.tokens.set(city, type);
+    }
+    // Käännetyt laatat: löytö säilyy, laatta poistuu laudalta. Jo
+    // maailmankartalle kirjattu löytö voittaa (esim. saumakaupungit).
+    for (const [city, type] of revealed) {
+      if (!onKaupunki(city) || world.revealed.has(city)) continue;
+      world.revealed.set(city, type);
+      world.tokens.delete(city);
+    }
+    for (const city of (w.visited ?? revealed.map(([c]) => c))) {
+      if (onKaupunki(city)) world.visited.add(city);
+    }
+    for (const [manner, city] of (w.starsFound ?? mannerkohtaisetTahdet({ id }, w))) {
+      if (manner && !world.starsFound.has(manner)) world.starsFound.set(manner, city);
+    }
+  }
+
+  // Pelaajat maailmankartalle: sama kaupunki, sama raha, sama laukku.
+  let siirretty = false;
+  for (const p of game.players) {
+    if (PELILAUDAT.has(p.packId)) continue;
+    siirretty = true;
+    p.packId = 'maailmankartta';
+    const kaupunki = (p.pos?.type === 'city' && onKaupunki(p.pos.city))
+      ? p.pos.city
+      : (p.start && onKaupunki(p.start) ? p.start : 'lontoo');
+    p.pos = { type: 'city', city: kaupunki };
+    if (!p.start || !onKaupunki(p.start)) p.start = kaupunki;
+    world.visited.add(kaupunki);
+  }
+  if (!PELILAUDAT.has(game.rootPackId)) game.rootPackId = 'maailmankartta';
+
+  /*
+   * Laudalle sidotut avaimet ('europe:ateena' ja vastaavat) siirtyvät
+   * maailmankartan avaimiksi, jotta fokusvirtojen, tutkittujen
+   * paikkojen, kohtaamisten, lukkojen, pulmien, kulttuurivisojen,
+   * pullavinkkien ja aikataulurivien eteneminen ei nollaudu. Jo
+   * olemassa oleva maailmankartan avain voittaa.
+   */
+  const siirraAvain = (avain) => {
+    const osat = String(avain).split(':');
+    return vanhat.has(osat[0])
+      ? ['maailmankartta', ...osat.slice(1)].join(':')
+      : avain;
+  };
+  const siirraJoukko = (joukko) => {
+    for (const avain of [...joukko]) {
+      const uusi = siirraAvain(avain);
+      if (uusi === avain) continue;
+      joukko.delete(avain);
+      joukko.add(uusi);
+    }
+  };
+  for (const joukko of [
+    game.explored, game.kulttuuriVastatut, game.minitehtavatVastatut,
+    game.minitehtavatOikein, game.pullaVinkit, game.puzzlesSeen,
+    game.scheduleShown, game.aarreLukot,
+  ]) siirraJoukko(joukko);
+  for (const [avain, arvo] of [...game.kaariYritykset]) {
+    const uusi = siirraAvain(avain);
+    if (uusi === avain) continue;
+    game.kaariYritykset.delete(avain);
+    if (!game.kaariYritykset.has(uusi)) game.kaariYritykset.set(uusi, arvo);
+  }
+  for (const [avain, arvo] of Object.entries(game.fokusvirrat ?? {})) {
+    const uusi = siirraAvain(avain);
+    if (uusi === avain) continue;
+    delete game.fokusvirrat[avain];
+    game.fokusvirrat[uusi] ??= arvo;
+  }
+
+  /*
+   * Kesken jäänyt välitila (auki ollut visa, noppa, siirtovalinta)
+   * kuului vanhalle laudalle, eikä sitä voi jatkaa uudella. Vuoro
+   * alkaa siirron jälkeen puhtaalta pöydältä — eteneminen ei siitä
+   * kärsi, vain hetken valinta tehdään uudelleen.
+   */
+  if (siirretty && game.phase !== 'over') {
+    game.phase = 'action';
+    game.quiz = null;
+    game.duel = null;
+    game.duelArmed = false;
+    game.travelMode = null;
+    game.pendingFare = 0;
+    game.die = null;
+  }
+}
+
+/*
  * ONKO PÖLLÖ AARRE? — EI TOISTAISEKSI (omistaja 24.8.2026).
  *
  * Raamatun osio "Viisas Pöllö": *"kehitysvaiheessa pöllö on pelissä
@@ -830,75 +964,16 @@ export class Game {
       roll: this.phase === 'roll',
       quiz: this.phase === 'offer',
       fly: this.phase === 'action' ? this.airportDestinations() : [],
-      gateways: this.gatewayOptions(),
-      countryGates: this.countryGateOptions(),
       mannerFlights: this.mannerLennot(),
     };
   }
 
   /**
-   * Porttikaupungit: muutamasta kaupungista lähtee pitkä lento toiselle
-   * laudalle (esim. Kairo on sekä Afrikan että Lähi-idän laudalla). Lento
-   * maksaa saman kuin muutkin lennot ja vie koko vuoron, ja karttanäkymä
-   * vaihtuu perille saavuttaessa.
+   * Onko kaupungista portti toiselle laudalle? Kartta merkitsee ne.
+   * Portteja on enää aloitusnäytöllä (maailma -> maailmankartta):
+   * erillislaudoista luovuttiin (Raamattu 30.8.2026), joten pelin
+   * aikana laudanvaihtoa ei ole.
    */
-  gatewayOptions() {
-    if (this.phase !== 'action') return [];
-    const city = this.cityOf();
-    if (!city || !city.links) return [];
-    if (this.player.money < FLIGHT_PRICE) return [];
-    // Maakohtaisille laudoille ei lennetä rahalla, vaan portti avataan
-    // tiedolla pääkaupungissa (countryGateOptions).
-    return city.links
-      .map((link, index) => ({ ...link, index }))
-      .filter((link) => packById(link.pack).scope !== 'country');
-  }
-
-  /**
-   * Tietoportit: mantereen pääkaupungista pääsee maan omalle laudalle
-   * vastaamalla vaikeaan kysymykseen oikein. Portti on ilmainen — se
-   * avataan tiedolla, ei rahalla. Väärästä vastauksesta vuoro päättyy.
-   */
-  countryGateOptions() {
-    if (this.phase !== 'action') return [];
-    const city = this.cityOf();
-    if (!city || !city.links) return [];
-    return city.links
-      .map((link, index) => ({ ...link, index }))
-      .filter((link) => packById(link.pack).scope === 'country');
-  }
-
-  /** Avaa tietoportin kysymyksen. Kysymys on aina vaikea (taso 3). */
-  actionGateQuiz(index) {
-    if (this.phase !== 'action') return { ok: false, error: 'Väärä vaihe' };
-    const gate = this.countryGateOptions()[index];
-    if (!gate) return { ok: false, error: 'Täällä ei ole tietoporttia' };
-    const city = this.cityOf();
-
-    const question = this.pickQuestion(city.id, 'hard');
-    const order = this.shuffledOrder(question.options.length);
-    this.quiz = {
-      cityId: city.id,
-      hard: false,
-      gate: { pack: gate.pack, city: gate.city, label: gate.label },
-      question: question.q,
-      fact: question.fact,
-      source: sourceList(question.source),
-      options: order.map((i) => question.options[i]),
-      correct: order.indexOf(question.correct),
-      hint: question.hint ?? null,
-      hintShown: false,
-      hidden: [],
-      chosen: null,
-      right: null,
-      timedOut: false,
-      seconds: QUIZ_SECONDS,
-    };
-    this.phase = 'quiz';
-    return { ok: true, quiz: this.quiz };
-  }
-
-  /** Onko kaupungista lentoja toiselle laudalle? Kartta merkitsee ne. */
   isGateway(city) {
     return !!(city && city.links && city.links.length);
   }
@@ -1192,25 +1267,6 @@ export class Game {
     if (!cityId || this.julisteet.has(cityId)) return { ok: true, uusi: false };
     this.julisteet.add(cityId);
     return { ok: true, uusi: true };
-  }
-
-  /** Lentää porttikaupungista toiselle laudalle. Vie koko vuoron. */
-  actionGateway(index) {
-    const link = this.gatewayOptions()[index];
-    if (!link) return { ok: false, error: 'Täältä ei ole lentoa toiselle laudalle' };
-    const p = this.player;
-    const pack = packById(link.pack);
-    p.money -= FLIGHT_PRICE;
-    this.enterWorld(pack);
-    p.packId = pack.id;
-    p.pos = { type: 'city', city: link.city };
-    this.visitCity(p);
-    this.lastPath = null;
-    this.say(p.id, `${p.name} lensi ${FLIGHT_PRICE} punnalla: ${link.label}.`);
-    this.emit('flight', link.label, { icon: 'kompassi', sub: `−${FLIGHT_PRICE} puntaa` });
-    if (this.offerQuiz()) return { ok: true, offer: true };
-    this.endTurn();
-    return { ok: true };
   }
 
   /**
@@ -2277,20 +2333,6 @@ export class Game {
       return { ok: true, right: this.quiz.right };
     }
 
-    // Tietoportti: oikea vastaus avaa portin, laattoja ei käännetä.
-    if (this.quiz.gate) {
-      if (this.quiz.right) {
-        // Tietoportin kysymys on aina vaikea, joten siitä saa samat
-        // tietäjäpisteet kuin muustakin oikein vastatusta vaikeasta.
-        this.awardXp(p, XP_HARD_ANSWER);
-        this.say(p.id, `◈ ${p.name} vastasi oikein — portti aukeaa: ${this.quiz.gate.label}! (+${XP_HARD_ANSWER} tp)`);
-      } else {
-        const oikea = this.quiz.options[this.quiz.correct];
-        this.say(p.id, `${p.name} vastasi väärin — portti ei auennut. Oikea vastaus oli "${oikea}".`);
-      }
-      return { ok: true, right: this.quiz.right };
-    }
-
     if (this.quiz.right) {
       this.say(p.id, `${p.name} vastasi oikein kaupungissa ${city.name} ja saa kääntää laatan.`);
       // Vaikean kysymyksen palkkio maksetaan ennen laatan kääntöä,
@@ -2418,25 +2460,8 @@ export class Game {
     if (this.quiz.chosen === null) {
       this.say(this.player.id, `${this.player.name} jätti kysymyksen väliin.`);
     }
-    const gate = this.quiz.right ? this.quiz.gate : null;
     this.quiz = null;
     if (this.phase === 'over') return { ok: true };
-    // Voitettu tietoportti: siirtyminen maan laudalle on ilmainen.
-    if (gate) {
-      const p = this.player;
-      const pack = packById(gate.pack);
-      this.enterWorld(pack);
-      p.packId = pack.id;
-      p.pos = { type: 'city', city: gate.city };
-      this.visitCity(p);
-      this.lastPath = null;
-      this.say(p.id, `${p.name} astui portista: ${gate.label}.`);
-      this.emit('flight', gate.label, { icon: 'tahti', sub: 'Tieto avasi portin' });
-      this.phase = 'action';
-      if (this.offerQuiz()) return { ok: true, gated: true, offer: true };
-      this.endTurn();
-      return { ok: true, gated: true };
-    }
     if (this.duelArmed) {
       this.duelArmed = false;
       this.beginDuel();
@@ -2924,13 +2949,15 @@ export class Game {
     };
 
     // Vanhoissa tallennuksissa ei ole packId:tä eikä maailmoja — ne ovat
-    // yhden laudan Afrikka-pelejä.
-    const rootPack = packById(data.packId ?? 'africa');
-    game.rootPackId = rootPack.id;
+    // yhden laudan Afrikka-pelejä. Tunnus luetaan raakana eikä
+    // packById:llä, jotta poistuneen laudan tunnus (esim. 'europe')
+    // näkyy siirrolle sellaisenaan eikä katoa rekisterin varamuotoon.
+    const rootId = data.packId ?? 'africa';
+    game.rootPackId = rootId;
     game.roaming = !!data.roaming;
     game.worlds = new Map();
     const worldsData = data.worlds ?? {
-      [rootPack.id]: {
+      [rootId]: {
         tokens: data.tokens,
         revealed: data.revealed,
         visited: data.visited,
@@ -2938,7 +2965,20 @@ export class Game {
         starCity: data.starCity ?? null,
       },
     };
+    /*
+     * ERILLISLAUDOISTA LUOVUTTIIN (Raamattu 30.8.2026): maailmankartta
+     * on ainoa pelilauta ja maailma aloitusnäytön lauta. Muiden lautojen
+     * maailmat (vanha Eurooppa-, Afrikka- tai koelautapeli) eivät enää
+     * rakennu — niiden eteneminen siirretään maailmankartalle lopussa
+     * (siirraErillislaudat), jotta kesken jäänyt matka jatkuu
+     * laattoineen, aarteineen, rahoineen ja kaupunkeineen.
+     */
+    const orvot = new Map();
     for (const [id, w] of Object.entries(worldsData)) {
+      if (!PELILAUDAT.has(id)) {
+        orvot.set(id, w);
+        continue;
+      }
       const pack = packById(id);
       game.worlds.set(pack.id, {
         pack,
@@ -2963,7 +3003,7 @@ export class Game {
     // vanha laskuri saa jäädä roikkumaan olioon — sama kuvio kuin
     // hasStar-lipulla versiossa 1 -> 2.
     game.players = data.players.map(({ hasStar, horseshoes, ...p }) => ({
-      packId: rootPack.id,
+      packId: rootId,
       xp: 0,
       quizAsked: 0,
       quizCorrect: 0,
@@ -3085,6 +3125,10 @@ export class Game {
     // hetkelle, jona taso nousi, eikä sitä esitetä uudestaan latauksessa.
     game.tietajaNousut = [];
     game.moves = null;
+
+    // Erillislaudalle jäänyt peli siirretään maailmankartalle vasta nyt,
+    // kun kaikki kokoelmat on luettu — siirto korjaa myös lauta-avaimet.
+    siirraErillislaudat(game, orvot);
 
     // Kesken jäänyt siirtovalinta lasketaan uudelleen nopan silmäluvusta.
     if (game.phase === 'move' && game.die) {

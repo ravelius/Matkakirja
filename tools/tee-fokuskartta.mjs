@@ -101,12 +101,11 @@ const TAALLA = dirname(fileURLToPath(import.meta.url));
 const JUURI = join(TAALLA, '..');
 
 /*
- * LAUDAT JA NIIDEN PROJEKTIOT — PELILAUTA ENSIN.
+ * LAUDAT JA NIIDEN PROJEKTIOT.
  *
- * Peliä pelataan yhdellä laudalla (js/pack.js: maailmankartta);
- * maanosalaudat ovat enää datan lähde ja katselutila (?lauta=europe).
- * Siksi kuva tehdään maailmankartalle, ja Eurooppa on listassa vain
- * katselutilaa varten — ensimmäinen lauta, jolta maa löytyy, voittaa.
+ * Peliä pelataan yhdellä laudalla (js/pack.js: maailmankartta), ja
+ * Euroopan erillislauta poistui kokonaan (Raamattu 30.8.2026,
+ * "erillislaudasta luovutaan") — listassa on siksi enää maailmankartta.
  *
  * Maailmankartan luvut ovat tools/tee-maailmankartta.mjs:n vakioita
  * (LEVEYS 12000, LON0 -175, POHJOINEN 76) ja kaava sen käyttämä Millerin
@@ -121,15 +120,6 @@ const LAUDAT = [
     vienti: 'MAAILMANKARTTA',
     projektio: {
       tyyppi: 'miller', leveys: 12000, lon0: -175, pohjoinen: 76,
-    },
-  },
-  {
-    id: 'europe',
-    moduuli: './js/packs/europe.js',
-    vienti: 'EUROPE',
-    // x = (lon + 11) * 19.2, y = (72 - lat) * 26.3
-    projektio: {
-      tyyppi: 'tasavali', lonA: 19.2, lonB: 11 * 19.2, latA: -26.3, latB: 72 * 26.3,
     },
   },
 ];

@@ -64,8 +64,8 @@ export function renderQuiz(ui) {
   const city = game.board.cityById.get(quiz.cityId);
   const hardTag = quiz.hard ? ` · vaikea kysymys +${HARD_BONUS} p` : '';
   // Kohtaaminen koskee tavallista visaa: muut muodot (pulma, väittämä,
-  // valokuva, lippu, portti) pitävät omat kehyshahmonsa.
-  const kohtaaminen = (!quiz.kind && !quiz.gate) ? (KOHTAAMISET[quiz.cityId] ?? null) : null;
+  // valokuva, lippu) pitävät omat kehyshahmonsa.
+  const kohtaaminen = !quiz.kind ? (KOHTAAMISET[quiz.cityId] ?? null) : null;
   const tervehdysAvain = `${game.pack.id}:${quiz.cityId}`;
   /*
    * Tarinakaaren kohtaaminen syrjäyttää tavallisen tervehdyksen:
@@ -134,8 +134,6 @@ export function renderQuiz(ui) {
     // jota merkintä koskee — se on usein muu kuin pelaajan sijainti.
     const aihe = quiz.place ? ` · ${quiz.place}` : '';
     otsikko = `Isoisän päiväkirjasta, 1873${aihe} — pitääkö tämä yhä paikkansa?`;
-  } else if (quiz.gate) {
-    otsikko = `${city.name} — portti: ${quiz.gate.label}`;
   } else if (kaariTarina) {
     /*
      * Tarinakaaren kohtaaminen: kehyksenä kaupunki ja kohtaaminen —
@@ -316,10 +314,7 @@ export function renderQuiz(ui) {
     } else {
       const found = quiz.found ? game.aarreTyyppi(quiz.found, quiz.cityId) : null;
       const body = html('div');
-      if (quiz.gate && quiz.right) {
-        body.appendChild(html('strong', '', `◈ Portti aukeaa — ${quiz.gate.label}!`));
-        body.appendChild(html('span', 'muted', 'Tieto avasi tien: matka jatkuu ilmaiseksi.'));
-      } else if (quiz.right && quiz.found === 'pollo') {
+      if (quiz.right && quiz.found === 'pollo') {
         /*
          * PÖLLÖ KORVASI ENSIMMÄISEN LAATAN AARTEEN (omistaja
          * 18.8.2026): revealToken palautti pöllön eikä laattatyyppiä,

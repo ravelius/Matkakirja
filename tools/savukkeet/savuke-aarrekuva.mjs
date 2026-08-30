@@ -69,7 +69,7 @@ const paljasta = (kaupunki, tyyppi) => sivu.evaluate(async ([city, type]) => {
   const { arvoAarteenArvo } = await import('./js/tokens.js');
   const peli = new Game({
     players: [{ name: 'Savuke', color: '#f00', start: null }],
-    pack: packById('europe'),
+    pack: packById('maailmankartta'),
     seed: 12,
   });
   const token = peli.aarreTyyppi(type, city);

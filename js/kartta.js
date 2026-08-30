@@ -51,11 +51,12 @@ export const INTRO_SPACE = 1.2;
 // Kuinka paljon lautaa lasketaan yläreunasta aloitusnäkymässä.
 const INTRO_TOP = 0.05;
 /*
- * Mantereiden lähikuva puhelimella. Ilme hiotaan ensin Euroopalla
- * (omistajan päätös); muut laudat lisätään tähän settiin sitä mukaa kuin
- * ne on käyty läpi.
+ * Lähikuvan laudat. Ilme hiottiin aikanaan Euroopan erillislaudalla;
+ * lauta poistui (Raamattu 30.8.2026, "erillislaudasta luovutaan") ja
+ * pelilaudoista zoomattava on enää maailmankartta. Katselulauta
+ * lisätään tähän settiin, jos sille joskus halutaan lähikuva.
  */
-const ZOOMATTAVAT = new Set(['europe', 'maailmankartta']);
+const ZOOMATTAVAT = new Set(['maailmankartta']);
 const MANNER_ZOOM = 2.3;        // vanha kiinteä kerroin; nykyään portaat lasketaan
 
 /*

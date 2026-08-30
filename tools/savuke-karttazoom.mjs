@@ -62,6 +62,12 @@ const ctx = await selain.newContext({
   serviceWorkers: 'block',
   hasTouch: true,
 });
+// Fokusmoodi pois: savuke vartioi lehden klassista kaupunkikarttaa.
+// Maailmankartalla (ainoa lauta, Raamattu 30.8.2026) fokusmoodi on
+// muuten oletuksena päällä eikä lehden karttakehystä syntyisi.
+await ctx.addInitScript(() => {
+  try { localStorage.setItem('matkakirja-fokusmoodi', '0'); } catch { /* yksityinen tila */ }
+});
 const sivu = await ctx.newPage();
 const virheet = [];
 sivu.on('pageerror', (e) => virheet.push(String(e)));
@@ -72,7 +78,7 @@ const vaadi = (ehto, teksti) => {
   console.log(`${ehto ? '  ok  ' : '  EI  '} ${teksti}`);
 };
 
-await sivu.goto('http://127.0.0.1:8734/index.html?lauta=europe', { waitUntil: 'load' });
+await sivu.goto('http://127.0.0.1:8734/index.html?lauta=maailmankartta', { waitUntil: 'load' });
 await sivu.waitForTimeout(2500);
 await sivu.evaluate(() => {
   const n = [...document.querySelectorAll('button')]
@@ -510,6 +516,10 @@ const puhelin = await selain.newContext({
   hasTouch: true,
   serviceWorkers: 'block',
 });
+// Sama fokusmoodin sammutus kuin työpöytäkontekstissa (ks. yllä).
+await puhelin.addInitScript(() => {
+  try { localStorage.setItem('matkakirja-fokusmoodi', '0'); } catch { /* yksityinen tila */ }
+});
 const psivu = await puhelin.newPage();
 psivu.on('pageerror', (e) => virheet.push(`puhelin: ${e}`));
 const cdp = await puhelin.newCDPSession(psivu);
@@ -520,7 +530,7 @@ const kosketa = async (tyyppi, pisteet) => {
   });
 };
 
-await psivu.goto('http://127.0.0.1:8734/index.html?lauta=europe', { waitUntil: 'load' });
+await psivu.goto('http://127.0.0.1:8734/index.html?lauta=maailmankartta', { waitUntil: 'load' });
 await psivu.waitForTimeout(2500);
 await psivu.evaluate(() => [...document.querySelectorAll('button')]
   .find((b) => /aloita seikkailu/i.test(b.textContent))?.click());
