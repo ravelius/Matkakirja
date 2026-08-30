@@ -218,11 +218,11 @@ export const FOKUSVIRTA_WIEN = {
         kysymys: 'Mitä Gramme-koneelle tapahtui, kun siihen johdettiin '
           + 'sähköä sen sijaan että sillä olisi tuotettu sitä?',
         vaihtoehdot: [
-          'Se alkoi pyöriä',
           'Se sammui',
+          'Se alkoi pyöriä',
           'Se alkoi kuumeta ja savuta',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Löytö oli vahinko, mutta se muutti tehtaat: ennen sitä '
           + 'sähkömoottori oli lelu. Näyttelyssä osoitettiin myös, että '
           + 'sähkö kulkee kuparijohtoa kahden kilometrin päähän.',
@@ -274,11 +274,11 @@ export const FOKUSVIRTA_WIEN = {
         kysymys: 'Miksi Wienissä ei saanut 1800-luvulla rakentaa noin '
           + 'kahtakymmentäviittä metriä korkeampia taloja?',
         vaihtoehdot: [
-          'Vuoristovesi ei olisi noussut ylemmäs ilman pumppuja',
-          'Palokunnan tikkaat eivät yltäneet ylemmäs',
           'Keisari halusi nähdä Stephansdomin joka kadulta',
+          'Palokunnan tikkaat eivät yltäneet ylemmäs',
+          'Vuoristovesi ei olisi noussut ylemmäs ilman pumppuja',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Sama vesijohto tuo yhä yli puolet Wienin juomavedestä. '
           + 'Sen 30 akveduktia ovat nykyään suojeltuja rakennuksia.',
       },
@@ -326,11 +326,11 @@ export const FOKUSVIRTA_WIEN = {
         kysymys: 'Miksi kauriit pysyttelevät mieluiten hautausmaan '
           + 'vanhimmalla osalla?',
         vaihtoehdot: [
-          'Siellä kasvaa ikivihreitä kasveja hautakivien ympärillä',
-          'Siellä on hiljaisinta',
           'Siellä niitä ruokitaan',
+          'Siellä on hiljaisinta',
+          'Siellä kasvaa ikivihreitä kasveja hautakivien ympärillä',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Hautausmaa oli virallinen metsästysalue 1980-luvun '
           + 'puoliväliin asti. Nykyään osa alueesta jätetään '
           + 'tarkoituksella villiintymään.',

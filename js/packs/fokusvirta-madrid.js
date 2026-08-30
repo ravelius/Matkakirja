@@ -94,11 +94,11 @@ const CHOTIS_VISA = {
   kysymys: 'Madridilaisessa chotis-tanssissa miehen liikkumavara on '
     + 'tarkkaan rajattu. Kuinka suuri se on?',
   vaihtoehdot: [
-    'Yksi katukiveyksen laatta',
     'Yksi askel joka suuntaan',
+    'Yksi katukiveyksen laatta',
     'Puolet tanssilattiasta',
   ],
-  oikea: 0,
+  oikea: 1,
   fakta: 'Tanssi tuli Madridiin 1850 Keski-Euroopasta ja muuttui '
     + 'perillä omanlaisekseen: mies pyörii paikallaan laatallaan ja '
     + 'nainen kiertää hänen ympärillään. Säestää organillo, kadulla '
@@ -259,11 +259,11 @@ export const FOKUSVIRTA_MADRID = {
       visa: {
         kysymys: 'Mikä toimii nykyään Retiron vanhoissa eläinsuojissa?',
         vaihtoehdot: [
-          'Kaupunginkirjasto',
-          'Kasvihuone',
           'Ravintola',
+          'Kasvihuone',
+          'Kaupunginkirjasto',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Eläimet muuttivat Casa de Campoon vuonna 1972. '
           + 'Kirjaston sisällä on säilytetty alkuperäisiä rakenteita, '
           + 'muun muassa ruokintakalterit.',
@@ -317,11 +317,11 @@ export const FOKUSVIRTA_MADRID = {
         kysymys: 'Kenen maalaamien luonnosten mukaan patsas tehtiin '
           + 'Firenzessä?',
         vaihtoehdot: [
-          'Velázquezin',
           'Goyan',
+          'Velázquezin',
           'Murillon',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Ratkaisusta tuli veistostaiteen uusi malli 1600- ja '
           + '1700-luvuiksi: sitä ennen hevosen koko painoa ei ollut '
           + 'laskettu kahden jalan varaan.',
@@ -376,11 +376,11 @@ export const FOKUSVIRTA_MADRID = {
         kysymys: 'Miksi Nicolás Salmerón jätti tehtävänsä syyskuussa '
           + '1873?',
         vaihtoehdot: [
-          'Hän ei suostunut vahvistamaan kuolemantuomioita',
-          'Hän hävisi äänestyksen Cortesissa',
           'Hän sairastui kesken toimikauden',
+          'Hän hävisi äänestyksen Cortesissa',
+          'Hän ei suostunut vahvistamaan kuolemantuomioita',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Seuraaja Emilio Castelar vahvisti samat tuomiot. '
           + 'Salmerón oli tasavallan neljästä johtajasta se, joka eli '
           + 'pisimpään — hän kuoli vuonna 1908.',

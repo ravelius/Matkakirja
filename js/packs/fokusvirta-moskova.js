@@ -377,11 +377,11 @@ export const FOKUSVIRTA_MOSKOVA = {
       visa: {
         kysymys: 'Mistä karavaaniteen savuinen maku oli peräisin?',
         vaihtoehdot: [
-          'Yöpymisistä nuotioiden vieressä',
           'Kiinalaiset kuivasivat lehdet savustamossa ennen lähtöä',
+          'Yöpymisistä nuotioiden vieressä',
           'Tiiliksi puristettu tee paahdettiin matkan alussa',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Matka Kiinasta kesti kuudestatoista kahdeksaantoista '
           + 'kuukauteen. Siperian radan ensimmäinen osuus valmistui 1880 '
           + 'ja lyhensi sen kuudestatoista kuukaudesta seitsemään '
@@ -472,11 +472,11 @@ export const FOKUSVIRTA_MOSKOVA = {
       visa: {
         kysymys: 'Kuka pani Moskovan eläintarhan pystyyn vuonna 1864?',
         vaihtoehdot: [
-          'Yliopiston professorien seura',
-          'Keisari lahjaksi kaupungille',
           'Sirkusperhe, joka lopetti kiertämisen',
+          'Keisari lahjaksi kaupungille',
+          'Yliopiston professorien seura',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Rahat kerättiin viiden ruplan jäsenmaksuilla, ja jäseniä '
           + 'oli 1862 yli seitsemänsataa. Pääsy maksoi juhlapäivinä '
           + 'kymmenen kopeekkaa mutta torstaisin viisikymmentä.',
@@ -568,11 +568,11 @@ export const FOKUSVIRTA_MOSKOVA = {
         kysymys: 'Minkä vuosipäivän kunniaksi Moskovan suuri teknillinen '
           + 'näyttely järjestettiin vuonna 1872?',
         vaihtoehdot: [
-          'Pietari Suuren syntymän 200-vuotispäivän',
-          'Moskovan yliopiston perustamisen satavuotispäivän',
           'Kremlin muurien nelisataavuotispäivän',
+          'Moskovan yliopiston perustamisen satavuotispäivän',
+          'Pietari Suuren syntymän 200-vuotispäivän',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Näyttelyn kokoelmista koottiin museo, joka avattiin 12. '
           + 'joulukuuta 1872 vuokratiloissa ja sai oman talonsa vasta '
           + '1877. Samana vuonna 1872 kaupungissa aloitti myös hevosten '

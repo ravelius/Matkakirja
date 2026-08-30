@@ -17973,12 +17973,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mistä Farasanin saarten kivi on syntynyt?',
         vaihtoehdot: [
-          'Vanhasta korallista',
           'Tuulen tuomasta hiekasta',
+          'Vanhasta korallista',
           'Tulivuoren laavasta',
           'Joen kuljettamasta savesta',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Sama kivi kelpasi rakennusaineeksi: saarten vanhoja taloja on '
           + 'muurattu riutan palasista.',
       },
@@ -18064,12 +18064,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi arabiangasellin turkki on hyvin vaalea?',
         vaihtoehdot: [
-          'Se heijastaa auringonvaloa',
-          'Se suojaa hyönteisten puremilta',
           'Se vaihtuu tummaksi talveksi',
+          'Se suojaa hyönteisten puremilta',
+          'Se heijastaa auringonvaloa',
           'Se on merkki nuoresta iästä',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Gaselleja on palautettu Kuningas Salmanin suojelualueelle, joka '
           + 'on pinta-alaltaan yksi maailman laajimmista.',
       },
@@ -18160,12 +18160,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi sukeltajan jalkaan sidottiin kivi?',
         vaihtoehdot: [
-          'Jotta hän vajoaisi nopeasti',
+          'Jotta hän ei ajautuisi virrassa',
           'Jotta hän pysyisi pohjassa',
           'Jotta vetäjä löytäisi hänet',
-          'Jotta hän ei ajautuisi virrassa',
+          'Jotta hän vajoaisi nopeasti',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Kivi vedettiin heti takaisin veneeseen omalla köydellään '
           + 'seuraavaa sukellusta varten.',
       },
@@ -18261,12 +18261,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: "Miksi kumpu Qal'at al-Bahrainin alla on korkea?",
         vaihtoehdot: [
-          'Talot rakennettiin päällekkäin',
+          'Se on suuri hautakumpu',
           'Tuuli kasasi hiekkaa aavikolta',
           'Meri kasasi hiekkaa rantaan',
-          'Se on suuri hautakumpu',
+          'Talot rakennettiin päällekkäin',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Kerrokset ovat arkeologille kalenteri: mitä syvemmällä esine on, '
           + 'sitä vanhempi se on.',
       },
@@ -18349,12 +18349,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi Aradin linnakkeen kunnostuksessa ei käytetty sementtiä?',
         vaihtoehdot: [
-          'Sementti olisi sulkenut kosteuden sisään',
-          'Sementtiä ei saanut maahan tuoduksi',
           'Sementti olisi ollut liian kallista',
+          'Sementtiä ei saanut maahan tuoduksi',
+          'Sementti olisi sulkenut kosteuden sisään',
           'Sementti ei tartu korallikiveen lainkaan',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Vanhat rakennusaineet analysoitiin ensin, ja kunnostuksessa '
           + 'käytettiin samoja: korallikiveä, kalkkia ja palmunrunkoja.',
       },
@@ -18435,12 +18435,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mikä on loomi lahden keittiössä?',
         vaihtoehdot: [
-          'Kuivattu limetti',
+          'Sahramilla värjätty riisi',
           'Paksu jogurttikastike',
           'Uunissa paistettu litteä leipä',
-          'Sahramilla värjätty riisi',
+          'Kuivattu limetti',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Limetti keitetään ensin suolavedessä ja kuivataan sitten '
           + 'auringossa kovaksi.',
       },
@@ -18541,12 +18541,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä Bar\'anin temppelistä löytyi vasta vuoden 1988 kaivauksissa?',
         vaihtoehdot: [
-          'Kuudennen pylvään jäännökset',
+          'Almaqah-jumalan patsas',
           'Sabalaisen kuninkaan hautakammio',
           'Kadonneen kastelukanavan suuaukko',
-          'Almaqah-jumalan patsas',
+          'Kuudennen pylvään jäännökset',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Pystyssä olevia pylväitä on viisi, ja niin monta niitä oli luultu '
             + 'olleenkin. Kuudes oli sortunut ja jäänyt maan alle.',
       },
@@ -18640,12 +18640,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi Shibamin taloja on rapattava savella yhä uudelleen?',
         vaihtoehdot: [
-          'Kuivattu savitiili ei kestä sadetta',
-          'Rappaus tekee seinistä sileät',
           'Se on maailmanperintökohteen ehto',
+          'Rappaus tekee seinistä sileät',
+          'Kuivattu savitiili ei kestä sadetta',
           'Tiili haalistuu auringossa vaaleaksi',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Tiiltä ei ole poltettu vaan kuivattu auringossa, joten vesi '
             + 'liuottaa sitä. Uusi savikerros on talon ainoa suoja sadetta '
             + 'vastaan.',
@@ -18723,12 +18723,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Missä on Arabian niemimaan korkein kohta?',
         vaihtoehdot: [
-          'Jemenin ylängöllä',
+          'Rub al-Khalin keskellä',
           'Omanin Hajar-vuorilla',
           'Saudi-Arabian lounaisvuorilla',
-          'Rub al-Khalin keskellä',
+          'Jemenin ylängöllä',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Jabal an-Nabi Shuayb kohoaa 3 666 metriin. Omanin korkein huippu '
             + 'Jebel Shams jää noin 3 000 metriin eli yli 600 metriä '
             + 'matalammaksi.',
@@ -18796,12 +18796,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mistä jemeniläisen padan päällä oleva vaalea vaahto vatkataan?',
         vaihtoehdot: [
-          'Sarviapilansiemenistä',
+          'Kikherneiden liotusvedestä',
           'Kananmunan valkuaisesta',
           'Kermasta ja sitruunasta',
-          'Kikherneiden liotusvedestä',
+          'Sarviapilansiemenistä',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Siemeniä liotetaan ensin vedessä, ja vatkattaessa niistä irtoava '
             + 'aine kuohuu paksuksi vaahdoksi. Se on saltahin tunnusmerkki.',
       },
@@ -18905,12 +18905,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mihin Khirokitian asukkaat hautasivat vainajansa?',
         vaihtoehdot: [
-          'Talon lattian alle',
-          'Kylän suojamuurin ulkopuolelle',
           'Joen törmään kaivettuihin kammioihin',
+          'Kylän suojamuurin ulkopuolelle',
+          'Talon lattian alle',
           'Kukkulan laella olevaan hautakumpuun',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Kuopat kaivettiin poljetun savilattian alle, ja taloa käytettiin '
             + 'sen jälkeen edelleen. Kaivauksista on löytynyt myös kivestä '
             + 'veistettyjä ihmishahmoja.',
@@ -19017,12 +19017,12 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Mitä Agiasmatin kirkon lahjoittajat ojentavat maalauksessa '
             + 'Kristukselle?',
         vaihtoehdot: [
-          'Pienoismallia kirkosta',
+          'Avainta kirkon ovesta',
           'Kynttilää ja tuoretta leipää',
           'Ristiä hopeasta',
-          'Avainta kirkon ovesta',
+          'Pienoismallia kirkosta',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Lahjoittajakuva oli tapa merkitä seinään, kuka työn maksoi. '
             + 'Agiasmatissa lahjoittajia olivat pappi Petros Peratis ja hänen '
             + 'vaimonsa Pepani.',
@@ -19123,12 +19123,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä Troodoksen vuoristo on alkuperältään?',
         vaihtoehdot: [
-          'Vanhaa valtameren pohjaa',
+          'Muinaisen hiekkameren kerrostuma',
           'Sammunut tulivuori',
           'Kahden mannerlaatan poimu',
-          'Muinaisen hiekkameren kerrostuma',
+          'Vanhaa valtameren pohjaa',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Ofioliitti on pala merenpohjan kuorta, joka on työntynyt maan '
             + 'päälle. Troodoksen sarja on niin täydellinen, että sitä käytetään '
             + 'vertailukohtana muualla maailmassa.',
@@ -19225,12 +19225,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miten Foinin suuret pitharia-ruukut muotoiltiin?',
         vaihtoehdot: [
-          'Savirenkaita ladottiin päällekkäin',
-          'Ne dreijattiin yhdellä kertaa',
           'Savi valettiin kipsimuottiin',
+          'Ne dreijattiin yhdellä kertaa',
+          'Savirenkaita ladottiin päällekkäin',
           'Levyt taivutettiin muotin ympäri',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Renkaittain kohottaminen kesti neljästä kuuteen viikkoa, koska '
             + 'märkä savi ei kanna omaa painoaan. Sama tekniikka on käytössä '
             + 'Kornoksessa.',
@@ -19329,12 +19329,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi Commandaria-viinin rypäleet kuivataan auringossa?',
         vaihtoehdot: [
-          'Mehun sokeripitoisuus nousee',
+          'Siemenet irtoavat helpommin puristuksessa',
           'Kuoresta irtoaa enemmän väriä',
           'Marjat kestävät kuljetuksen paremmin',
-          'Siemenet irtoavat helpommin puristuksessa',
+          'Mehun sokeripitoisuus nousee',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Kuivunut marja sisältää vähemmän vettä, joten mehu on väkevää. '
             + 'Sokeripitoisuus vastaa 15–17 tilavuusprosentin alkoholimäärää.',
       },
@@ -19432,12 +19432,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miten Dejiman saari tehtiin?',
         vaihtoehdot: [
-          'Kaivamalla kanava niemen poikki',
-          'Kasaamalla kiviä merenpohjalle',
           'Patoamalla joensuu umpeen',
+          'Kasaamalla kiviä merenpohjalle',
+          'Kaivamalla kanava niemen poikki',
           'Upottamalla vanhoja laivoja riviin',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Saari jäi irralleen rannasta, ja ainoa yhteys mantereelle oli '
             + 'pieni vartioitu silta.',
       },
@@ -19521,12 +19521,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä katsuobushille tehdään savustusten jälkeen?',
         vaihtoehdot: [
-          'Sen annetaan homehtua',
+          'Se paahdetaan uunissa',
           'Se marinoidaan soijassa',
           'Se pakastetaan kuukaudeksi',
-          'Se paahdetaan uunissa',
+          'Sen annetaan homehtua',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Home ei ole vahinko vaan työvaihe: se kuivattaa kappaleen '
             + 'sisältä ja tekee mausta pyöreämmän.',
       },
@@ -19610,12 +19610,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mikä uusi väri kannattelee Hokusain aaltokuvaa?',
         vaihtoehdot: [
-          'Berliininsininen',
+          'Kobolttivihreä',
           'Indigo',
           'Ultramariini',
-          'Kobolttivihreä',
+          'Berliininsininen',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Kasvivärit haalistuivat valossa, mutta tuotu synteettinen '
             + 'sininen pysyi kirkkaana vuosikymmeniä.',
       },
@@ -19705,12 +19705,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi Jigokudanin makakit siirtyivät laaksoon?',
         vaihtoehdot: [
-          'Vuorten metsiä hakattiin',
-          'Laaksoon istutettiin hedelmäpuita',
           'Vuorilta loppui vesi',
+          'Laaksoon istutettiin hedelmäpuita',
+          'Vuorten metsiä hakattiin',
           'Ne pakenivat karhuja',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Rinteille rakennettiin samaan aikaan hiihtokeskuksia, joten '
             + 'vanhaa elinaluetta jäi jäljelle yhä vähemmän.',
       },
@@ -19799,12 +19799,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Minne Edon ajan laskutaulut vietiin näytille?',
         vaihtoehdot: [
-          'Temppelin seinälle',
+          'Kauppiaan kirjanpitoon',
           'Sanomalehteen',
           'Yliopiston kirjastoon',
-          'Kauppiaan kirjanpitoon',
+          'Temppelin seinälle',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Taulu oli yhtä aikaa lahja pyhäkölle ja avoin haaste: kuka '
             + 'tahansa kävijä sai yrittää ratkaista tehtävän.',
       },
@@ -19900,12 +19900,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä Dunhuangin umpeen muuratusta luolasta löytyi 1900?',
         vaihtoehdot: [
-          'Kirjakääröjä',
+          'Suolan varasto',
           'Kultaharkkoja',
           'Keisarin hautakammio',
-          'Suolan varasto',
+          'Kirjakääröjä',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Löytö hajautui pian eri maiden kokoelmiin, ja tutkijat kokoavat '
             + 'sitä yhä yhteen digitaalisena.',
       },
@@ -19990,12 +19990,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miten lamian-nuudelit syntyvät?',
         vaihtoehdot: [
-          'Taikinaa venytetään käsin',
-          'Taikina leikataan veitsellä',
           'Taikina puristetaan muotista',
+          'Taikina leikataan veitsellä',
+          'Taikinaa venytetään käsin',
           'Taikina raastetaan höylällä',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Joka taitto kaksinkertaistaa säikeiden määrän, joten muutama '
             + 'toisto riittää satoihin lankoihin.',
       },
@@ -20082,12 +20082,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä Qingming-kääryn sillan kohdalla on tapahtumassa?',
         vaihtoehdot: [
-          'Vene on törmäämässä siltaan',
+          'Sillalla on syttynyt tulipalo',
           'Silta on romahtamassa jokeen',
           'Keisari saapuu kulkueessa',
-          'Sillalla on syttynyt tulipalo',
+          'Vene on törmäämässä siltaan',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Kohta on kääryn keskus: koko väkijoukko on kääntynyt katsomaan '
             + 'samaan suuntaan, ja joku laskee köyttä alas.',
       },
@@ -20174,12 +20174,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mikä on kultanenäapinan pääasiallinen ravinto?',
         vaihtoehdot: [
-          'Jäkälää',
+          'Linnunmunia',
           'Bambua',
           'Kalaa',
-          'Linnunmunia',
+          'Jäkälää',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Jäkälää on tarjolla myös talvella, mikä auttaa lajia '
             + 'selviämään lumisilla vuorilla.',
       },
@@ -20269,12 +20269,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miten Dujiangyan suojaa tasankoa tulvilta?',
         vaihtoehdot: [
-          'Jakamalla joen kahtia',
-          'Patoamalla joen kokonaan',
           'Johtamalla veden maan alle',
+          'Patoamalla joen kokonaan',
+          'Jakamalla joen kahtia',
           'Kaivamalla tasangolle järven',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Ratkaisu oli aikanaan poikkeuksellinen: muualla vesi pyrittiin '
             + 'pysäyttämään, täällä se ohjattiin kulkemaan kahta reittiä.',
       },
@@ -20370,12 +20370,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mikä pitää Delhin rautapylvään ruostumattomana?',
         vaihtoehdot: [
-          'Raudan korkea fosforipitoisuus',
+          'Pylvääseen tehty kultaus',
           'Vuosittainen voitelu öljyllä',
           'Delhin kuiva ilmasto',
-          'Pylvääseen tehty kultaus',
+          'Raudan korkea fosforipitoisuus',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Suojaava kerros syntyi itsestään vuosisatojen kuluessa, eikä '
             + 'sitä osattu tavoitella tarkoituksella.',
       },
@@ -20468,12 +20468,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä varten Jaipurin jättikojeet rakennettiin?',
         vaihtoehdot: [
-          'Ajan mittaamiseen auringosta',
-          'Veden keräämiseen sateesta',
           'Tähtien laskemiseen yöllä',
+          'Veden keräämiseen sateesta',
+          'Ajan mittaamiseen auringosta',
           'Tuulen suunnan seurantaan',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Suuri koko ei ole koristetta: mitä pidempi asteikko, sitä '
             + 'tarkemmin varjon reunan voi lukea paljain silmin.',
       },
@@ -20557,12 +20557,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mistä dosan taikina saa happaman makunsa?',
         vaihtoehdot: [
-          'Käymisestä',
+          'Jogurtista',
           'Sitruunasta',
           'Etikasta',
-          'Jogurtista',
+          'Käymisestä',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Taikina seisoo yön yli, ja samalla se nousee — hapatus tekee '
             + 'siitä myös helpommin sulavan.',
       },
@@ -20648,12 +20648,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miten Ravi Varman kuvat päätyivät tavallisiin koteihin?',
         vaihtoehdot: [
-          'Painamalla litografioita',
+          'Kiertämällä kylissä näyttelyn kanssa',
           'Maalaamalla temppelien seiniä',
           'Myymällä alkuperäisteoksia',
-          'Kiertämällä kylissä näyttelyn kanssa',
+          'Painamalla litografioita',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Vedokset olivat halpoja, joten sama kuva levisi ympäri maata '
             + 'ja vakiinnutti monen jumalhahmon ulkonäön.',
       },
@@ -20738,12 +20738,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mistä Meghalayan elävät sillat kasvatetaan?',
         vaihtoehdot: [
-          'Kumiviikunan ilmajuurista',
-          'Bambun varsista punottuna',
           'Palmun lehtiruodoista',
+          'Bambun varsista punottuna',
+          'Kumiviikunan ilmajuurista',
           'Mangroven oksista',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Elävä silta vahvistuu vuosi vuodelta, kun taas puinen silta '
             + 'alkaa heti lahota kosteassa ilmastossa.',
       },
@@ -20833,12 +20833,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miten buddhanpää päätyi Ayutthayassa puun juuriin?',
         vaihtoehdot: [
-          'Puu kasvoi kiven ympärille',
+          'Juuret kannattelevat temppelin kattoa',
           'Se veistettiin suoraan puuhun',
           'Se nostettiin sinne juhlaa varten',
-          'Juuret kannattelevat temppelin kattoa',
+          'Puu kasvoi kiven ympärille',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Pää putosi maahan raunioiden joukkoon, ja bodhipuu kasvoi '
             + 'hitaasti sen ympäri vuosikymmenten kuluessa.',
       },
@@ -20921,12 +20921,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi hallitus kannusti syömään nuudeleita 1940-luvulla?',
         vaihtoehdot: [
-          'Riisistä oli pulaa',
+          'Kalastus oli keskeytyksissä',
           'Nuudelit olivat halvempia tuoda',
           'Vehnää saatiin liikaa',
-          'Kalastus oli keskeytyksissä',
+          'Riisistä oli pulaa',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Samalla annoksesta tehtiin tietoisesti kansallisruoka, ja '
             + 'nimeen liitettiin sana thai.',
       },
@@ -21014,12 +21014,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Minkä uuden buddhankuvan Sukhothain veistäjät kehittivät?',
         vaihtoehdot: [
-          'Kävelevä buddhahahmo',
-          'Istuva buddhahahmo',
           'Makaava buddhahahmo',
+          'Istuva buddhahahmo',
+          'Kävelevä buddhahahmo',
           'Kaksipäinen buddhahahmo',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Muoto ei jäljittele ihmisvartaloa vaan vanhoja runokuvia: '
             + 'hartiat kuin leijonalla, käsivarret kuin norsun kärsä.',
       },
@@ -21102,12 +21102,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miten sarvinokkanaaras suojaa pesäänsä?',
         vaihtoehdot: [
-          'Muuraa pesäkolon lähes umpeen',
+          'Vartioi pesää läheiseltä oksalta',
           'Rakentaa pesän kalliolle',
           'Peittää munat lehdillä',
-          'Vartioi pesää läheiseltä oksalta',
+          'Muuraa pesäkolon lähes umpeen',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Rako jätetään niin pieneksi, että vain ruoka mahtuu läpi — '
             + 'koiras syöttää naarasta koko haudonnan ajan.',
       },
@@ -21191,12 +21191,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä sana krathong tarkoittaa?',
         vaihtoehdot: [
-          'Kelluvaa koria',
+          'Täysikuuta',
           'Vesikannua',
           'Kynttiläjalkaa',
-          'Täysikuuta',
+          'Kelluvaa koria',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Alus taitellaan banaaninlehdistä ja koristellaan kukilla '
             + 'ennen kuin siihen asetetaan kynttilä.',
       },
@@ -21291,12 +21291,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Millä Jikji painettiin vuonna 1377?',
         vaihtoehdot: [
-          'Metallikirjakkeilla',
-          'Puisilla laatoilla',
           'Kivipainokoneella',
+          'Puisilla laatoilla',
+          'Metallikirjakkeilla',
           'Käsin kirjoittaen',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Vain teoksen jälkimmäinen osa on säilynyt, ja se on nykyään '
             + 'Pariisissa.',
       },
@@ -21385,12 +21385,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mikä lämmittää perinteisen korealaistalon lattian?',
         vaihtoehdot: [
-          'Tulisijan savu',
+          'Lattian alla poltettu öljy',
           'Kuuma vesi putkissa',
           'Auringon valo ikkunoista',
-          'Lattian alla poltettu öljy',
+          'Tulisijan savu',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Lattia lämpiää hitaasti mutta pysyy lämpimänä pitkään sen '
             + 'jälkeen kun tuli on jo sammunut.',
       },
@@ -21475,12 +21475,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Milloin chili tuli mukaan kimchiin?',
         vaihtoehdot: [
-          '1600-luvulla',
-          '1200-luvulla',
           '1900-luvulla',
+          '1200-luvulla',
+          '1600-luvulla',
           'Jo ennen ajanlaskua',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Sitä ennen kimchi oli vaaleaa: kasvikset säilöttiin suolaan '
             + 'ilman punaista mausteseosta.',
       },
@@ -21566,12 +21566,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miten kuupurkki muotoillaan?',
         vaihtoehdot: [
-          'Kahdesta puolikkaasta',
+          'Levyistä kokoamalla',
           'Yhdestä savipaakusta',
           'Muotista valamalla',
-          'Levyistä kokoamalla',
+          'Kahdesta puolikkaasta',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Liitossauma jättää muodon hieman epäsymmetriseksi, eikä sitä '
             + 'pidetty virheenä vaan osana esineen viehätystä.',
       },
@@ -21657,12 +21657,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miten Manjanggulin luolakäytävä syntyi?',
         vaihtoehdot: [
-          'Laavavirta kaivoi sen',
+          'Ihmiset louhivat sen',
           'Meri huuhtoi kallion ontoksi',
           'Maanjäristys halkaisi kallion',
-          'Ihmiset louhivat sen',
+          'Laavavirta kaivoi sen',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Virran pinta jähmettyi katoksi, ja purkauksen loputtua '
             + 'sisälle jäi tyhjä putki.',
       },
@@ -21767,12 +21767,12 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Mikä oli ensimmäinen YouTube-video, joka ylitti miljardin '
             + 'katselukerran rajan?',
         vaihtoehdot: [
-          'Gangnam Style',
-          'Talvisonaatti',
           'Dynamite',
+          'Talvisonaatti',
+          'Gangnam Style',
           'Heungbuga',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Video pysyi palvelun katsotuimpana vuoteen 2017 asti.',
       },
     },
@@ -21869,12 +21869,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Minkä eläinten patsaat vartioivat Hoi Anin sillan päitä?',
         vaihtoehdot: [
-          'Koiran ja apinan',
+          'Lohikäärmeen ja kurjen',
           'Leijonan ja kotkan',
           'Norsun ja tiikerin',
-          'Lohikäärmeen ja kurjen',
+          'Koiran ja apinan',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Kumpikin patsaspari on omassa päässään siltaa, joten kulkija '
             + 'ohittaa aina toisen niistä.',
       },
@@ -21964,12 +21964,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi hanoilaiseen kahviin alettiin vatkata keltuaista?',
         vaihtoehdot: [
-          'Maitoa oli vaikea saada',
+          'Keltuainen säilöi juoman',
           'Kahvi oli loppumassa',
           'Sokeri oli kielletty',
-          'Keltuainen säilöi juoman',
+          'Maitoa oli vaikea saada',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Vaahto on yhä sama: keltuaista, sokeria ja kondensoitua '
             + 'maitoa vatkattuna kuumana.',
       },
@@ -22062,12 +22062,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mistä puusta vesinuket veistetään?',
         vaihtoehdot: [
-          'Viikunapuusta',
-          'Tiikkipuusta',
           'Bambupuusta',
+          'Tiikkipuusta',
+          'Viikunapuusta',
           'Mäntypuusta',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Puun keveys ratkaisee: nukke jää itsestään pinnalle, ja '
             + 'jalusta veden alla kätkee koneiston.',
       },
@@ -22154,12 +22154,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miten dan baun soittaja muuttaa sävelkorkeutta?',
         vaihtoehdot: [
-          'Taivuttamalla joustavaa vartta',
+          'Siirtämällä tallaa eteenpäin',
           'Painamalla nauhoja otelaudalla',
           'Kiristämällä toista kieltä',
-          'Siirtämällä tallaa eteenpäin',
+          'Taivuttamalla joustavaa vartta',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Varsi liikkuu vasemman käden sormilla soiton aikana, joten '
             + 'sama huiluääni voi nousta tai laskea kesken sävelen.',
       },
@@ -22246,12 +22246,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Millä vesi johdetaan Mu Cang Chain pengerpelloille?',
         vaihtoehdot: [
-          'Halkaistuja bambuja pitkin',
+          'Kaivetuissa maatunneleissa',
           'Savisilla vesijohdoilla',
           'Puisilla vesipyörillä',
-          'Kaivetuissa maatunneleissa',
+          'Halkaistuja bambuja pitkin',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Painovoima riittää: vesi lasketaan ylimmältä pengermältä '
             + 'portti kerrallaan alaspäin.',
       },
@@ -22348,12 +22348,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Millä ehdolla Prambananin kaatunut temppeli pystytetään uudelleen?',
         vaihtoehdot: [
-          'Kun 75 prosenttia sen kivistä on yhä tallella',
-          'Kun se näkyy jossakin 1900-luvun valokuvassa',
           'Kun sen nimi löytyy kivipiirtokirjoituksesta',
+          'Kun se näkyy jossakin 1900-luvun valokuvassa',
+          'Kun 75 prosenttia sen kivistä on yhä tallella',
           'Kun se on ollut alle kymmenen metriä korkea',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Siksi 224 pienestä sivutemppelistä on koottu vasta kuusi ja '
             + 'loput makaavat yhä kivikasoina nurmella.',
       },
@@ -22442,12 +22442,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mistä tietää, että muskottipähkinä on kuivunut valmiiksi?',
         vaihtoehdot: [
-          'Se rapisee, kun sitä ravistaa',
+          'Se halkeaa itsestään kahtia',
           'Se kelluu vesiastiassa',
           'Sen kuori muuttuu punaiseksi',
-          'Se halkeaa itsestään kahtia',
+          'Se rapisee, kun sitä ravistaa',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Kuivuminen auringossa kestää 15–30 viikkoa, ja vasta sen '
             + 'jälkeen kova kuori rikotaan puunuijalla.',
       },
@@ -22537,12 +22537,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miten komodonvaraani löytää raadon kilometrien päästä?',
         vaihtoehdot: [
-          'Haarukkakielellään',
+          'Seuraamalla lintuja',
           'Tarkalla kuulollaan',
           'Maan tärinästä',
-          'Seuraamalla lintuja',
+          'Haarukkakielellään',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Kieli vie ilman hiukkaset suulaen Jacobsonin elimeen, ja '
             + 'kävellessään varaani heiluttaa päätään puolelta toiselle.',
       },
@@ -22632,12 +22632,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mistä keris-terän vaaleat juovat syntyvät?',
         vaihtoehdot: [
-          'Nikkelipitoisen raudan kerroksista',
-          'Terään upotetusta hopealangasta',
           'Kuumasta vahasta',
+          'Terään upotetusta hopealangasta',
+          'Nikkelipitoisen raudan kerroksista',
           'Terän pintaan maalatusta lakasta',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Parhaat nikkelipalat olivat peräisin rautameteoriitista, joka '
             + 'putosi Prambananin lähelle 1700-luvun lopulla.',
       },
@@ -22728,12 +22728,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi angklungia soitetaan ryhmässä?',
         vaihtoehdot: [
-          'Yksi soitin antaa vain yhden sävelen',
+          'Soittajat ravistavat samaa soitinta vuorotellen',
           'Soitin on liian raskas yhdelle',
           'Bambu vaimenee, jos soittajia on vähän',
-          'Soittajat ravistavat samaa soitinta vuorotellen',
+          'Yksi soitin antaa vain yhden sävelen',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Daeng Soetigna teki angklungista 1938 diatonisen, ja soitin '
             + 'pääsi mukaan orkesteriin.',
       },
@@ -22828,12 +22828,12 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Millä Melakan palatsin osat liitettiin toisiinsa, kun se '
             + 'pystytettiin uudelleen?',
         vaihtoehdot: [
-          'Puutapeilla',
-          'Rautanauloilla',
           'Messinkiruuveilla',
+          'Rautanauloilla',
+          'Puutapeilla',
           'Rottinkiköysillä',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Alkuperäisestä palatsista ei ollut piirustuksia, joten '
             + 'rakentajat seurasivat Malaijien aikakirjan kuvausta.',
       },
@@ -22919,12 +22919,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mistä Musang King -durian sai nimensä?',
         vaihtoehdot: [
-          'Löytöpaikastaan Gua Musangista',
+          'Kelantanin sulttaanista',
           'Löytäjänsä sukunimestä',
           'Hedelmän keltaisesta väristä',
-          'Kelantanin sulttaanista',
+          'Löytöpaikastaan Gua Musangista',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Tan Lai Fook vei löytämästään puusta oksan Raubiin ja vartti '
             + 'siitä uuden puun.',
       },
@@ -23014,12 +23014,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Missä rafflesia kasvaa, kun sillä ei ole juuria?',
         vaihtoehdot: [
-          'Tetrastigma-köynnöksen sisällä',
+          'Vapaana kostealla maan pinnalla',
           'Kalliopinnan rahkasammaleessa',
           'Kaatuneen puun lahossa kannossa',
-          'Vapaana kostealla maan pinnalla',
+          'Tetrastigma-köynnöksen sisällä',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Kasvista näkyy köynnöksen ulkopuolelle vain kukka; kaikki muu '
             + 'on isäntäkasvin kudoksen sisässä.',
       },
@@ -23106,12 +23106,12 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Mikä eläinaihe on malesialaisessa batiikissa tavallisin '
             + 'poikkeus?',
         vaihtoehdot: [
-          'Perhonen',
-          'Tiikeri',
           'Sarvinokka',
+          'Tiikeri',
+          'Perhonen',
           'Merikilpikonna',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Muuten aiheet ovat lehtiä, kukkia ja kierteitä — ihmis- ja '
             + 'eläinkuvia vältetään.',
       },
@@ -23201,12 +23201,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi perinteinen malaijitalo rakennettiin ilman nauloja?',
         vaihtoehdot: [
-          'Jotta sen voisi purkaa ja pystyttää uudelleen',
+          'Jotta talo kelluisi tulvaveden noustessa',
           'Koska rauta ruostui kosteudessa liian nopeasti',
           'Koska rautanaulat olivat aivan liian kalliita',
-          'Jotta talo kelluisi tulvaveden noustessa',
+          'Jotta sen voisi purkaa ja pystyttää uudelleen',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Osiin sahattiin valmiiksi reiät ja urat, joten talo oli '
             + 'käytännössä elementtirakennus.',
       },
@@ -23299,12 +23299,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miten balangayn lankut liitettiin toisiinsa?',
         vaihtoehdot: [
-          'Puutapein ja kuituköysin',
+          'Puuruuvein',
           'Rautanauloin',
           'Nahkasuikalein ja piellä',
-          'Puuruuvein',
+          'Puutapein ja kuituköysin',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Sama sidontatapa elää yhä: Sama-Bajau-veneenveistäjät osaavat '
             + 'sen Tawi-Tawin saarilla.',
       },
@@ -23391,12 +23391,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä magtataho kantaa pienemmässä sangossaan?',
         vaihtoehdot: [
-          'Sagohelmiä ja siirappia',
-          'Hienoksi murskattua jäätä',
           'Makeutettua kookosmaitoa',
+          'Hienoksi murskattua jäätä',
+          'Sagohelmiä ja siirappia',
           'Paahdettua riisijauhoa',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Isompi sanko on täynnä lämmintä tofua, ja annos kootaan vasta '
             + 'asiakkaan edessä.',
       },
@@ -23481,12 +23481,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi filippiinientarsier kääntää päätään niin paljon?',
         vaihtoehdot: [
-          'Sen silmät eivät liiku kuopissaan',
+          'Se pelottelee saalistajia',
           'Sen korvat osoittavat taaksepäin',
           'Se etsii lämpimintä kohtaa',
-          'Se pelottelee saalistajia',
+          'Sen silmät eivät liiku kuopissaan',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Silmät ovat ruumiin painoon suhteutettuna nisäkkäiden '
             + 'suurimmat, joten kuoppiin ei jää tilaa liikkeelle.',
       },
@@ -23574,12 +23574,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mistä t\'nalak-kankaan kuvio saadaan?',
         vaihtoehdot: [
-          'Kutoja näkee sen unessa',
+          'Merilevän muodoista',
           'Vanhoista mallikirjoista',
           'Kirkon ikkunoista',
-          'Merilevän muodoista',
+          'Kutoja näkee sen unessa',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Siksi kuviota ei voi tilata tehtaalta: jokainen kangas '
             + 'palautuu yhden kutojan näkyyn.',
       },
@@ -23663,12 +23663,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi Diego Cera hautasi bambut rantahiekkaan?',
         vaihtoehdot: [
-          'Jotta hyönteiset eivät söisi niitä',
-          'Jotta ne taipuisivat kaareviksi',
           'Värin tummentamiseksi',
+          'Jotta ne taipuisivat kaareviksi',
+          'Jotta hyönteiset eivät söisi niitä',
           'Jotta meriveden suola kovettaisi ne',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Bambut kaivettiin esiin vasta seuraavana vuonna, ja urku '
             + 'valmistui lopulta 1824.',
       },
@@ -23768,12 +23768,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Millä Mohenjo-daron suuri allas tiivistettiin?',
         vaihtoehdot: [
-          'Maapiellä eli bitumilla',
+          'Lasitetuilla laatoilla',
           'Lyijylevyillä',
           'Vahalla ja pellavalla',
-          'Lasitetuilla laatoilla',
+          'Maapiellä eli bitumilla',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Allas oli 12 metriä pitkä ja 2,4 metriä syvä, ja siihen '
             + 'laskeuduttiin tiiliportaita pitkin.',
       },
@@ -23860,12 +23860,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä niharin nimi tarkoittaa arabiaksi?',
         vaihtoehdot: [
-          'Aamu',
-          'Pataa',
           'Pippuria',
+          'Pataa',
+          'Aamu',
           'Juhlaa',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Mughalihovissa nihari kuului aamiaiseen, ja sitä maustetaan '
             + 'pitkäpippurilla, mustan pippurin sukulaisella.',
       },
@@ -23961,12 +23961,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi Khewran kaivoksesta louhitaan vain puolet suolasta?',
         vaihtoehdot: [
-          'Loput kannattelevat kattoa',
+          'Laki kieltää loput',
           'Loput ovat liian suolaisia',
           'Vesi peittää alemmat kerrokset',
-          'Laki kieltää loput',
+          'Loput kannattelevat kattoa',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Kaivoksessa on yhdeksäntoista kerrosta, joista yksitoista on '
             + 'maan alla, ja käytävää yhteensä noin 40 kilometriä.',
       },
@@ -24052,12 +24052,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mistä puusta rababin runko kaiverretaan?',
         vaihtoehdot: [
-          'Mulperipuusta',
+          'Bambusta',
           'Setristä',
           'Oliivipuusta',
-          'Bambusta',
+          'Mulperipuusta',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Kaikukoppa peitetään eläimen nahalla, ja talla pysyy '
             + 'paikoillaan pelkän kielten kireyden varassa.',
       },
@@ -24148,12 +24148,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mistä sanasta ajrakin nimen arvellaan tulevan?',
         vaihtoehdot: [
-          'Persian sanasta ajar',
-          'Arabian meren nimestä',
           'Sindhin kaupungin nimestä',
+          'Arabian meren nimestä',
+          'Persian sanasta ajar',
           'Indigokasvin nimestä',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Ajar tarkoittaa tiiltä, ja nimeen liitetään lisäksi '
             + 'pienennyspääte.',
       },
@@ -24404,12 +24404,12 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Mihin arkiseen työhön Old Faithful -geysiriä käytettiin '
             + 'puiston alkuvuosina?',
         vaihtoehdot: [
-          'Pyykin pesuun',
+          'Juomaveden lämmittämiseen',
           'Ruoan kypsentämiseen',
           'Höyrysahan käyttövoimaksi',
-          'Juomaveden lämmittämiseen',
+          'Pyykin pesuun',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Vuoden 1883 matkaoppaan mukaan pellava ja puuvilla '
             + 'kestivät, mutta villavaatteet eivät.',
       },
@@ -24973,12 +24973,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä sotakanoottiin ei saanut viedä, koska se oli tapu?',
         vaihtoehdot: [
-          'Keitettyä ruokaa',
+          'Melaa',
           'Juomavettä',
           'Kalaverkkoja',
-          'Melaa',
+          'Keitettyä ruokaa',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Kanoottiin astuttiin samasta syystä laidan yli eikä keulasta '
             + 'tai perästä.',
       },
@@ -25071,12 +25071,12 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Mitkä olivat Uuden-Seelannin ainoat alkuperäiset maalla '
             + 'elävät nisäkkäät?',
         vaihtoehdot: [
-          'Kolme lepakkolajia',
-          'Kaksi rottalajia',
           'Villikissat',
+          'Kaksi rottalajia',
+          'Kolme lepakkolajia',
           'Ei yhtään lajia',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Linnut olivat ottaneet ne paikat, jotka muualla kuuluvat '
             + 'nisäkkäille.',
       },
@@ -25171,12 +25171,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä laiva Dunedin vei Lontooseen helmikuussa 1882?',
         vaihtoehdot: [
-          'Jäähdytettyä lihaa',
+          'Kauriipuuta',
           'Kultaharkkoja',
           'Villapaaleja',
-          'Kauriipuuta',
+          'Jäähdytettyä lihaa',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Matka kesti 98 vuorokautta, ja perillä vain yksi ruho '
             + 'jouduttiin hylkäämään.',
       },
@@ -25271,12 +25271,12 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Kuka eurooppalainen näki Uuden-Seelannin ensimmäisenä '
             + 'vuonna 1642?',
         vaihtoehdot: [
-          'Abel Tasman',
+          'Ferdinand Magalhães',
           'James Cook',
           'Francis Drake',
-          'Ferdinand Magalhães',
+          'Abel Tasman',
         ],
-        oikea: 0,
+        oikea: 3,
         fakta: 'Hän ei astunut maihin lainkaan, vaan purjehti pois '
             + 'nimettyään paikan Murhaajien lahdeksi.',
       },
@@ -26090,12 +26090,12 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mistä aboriginaalinen Emu taivaalla -kuvio muodostuu?',
         vaihtoehdot: [
-          'Linnunradan tummista pilvistä',
-          'Etelän Ristin tähdistä',
           'Kahdesta kirkkaasta planeetasta',
+          'Etelän Ristin tähdistä',
+          'Linnunradan tummista pilvistä',
           'Magellanin pilvistä',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Emun pää on Hiilisäkki-sumu Etelän Ristin vieressä ja '
             + 'ruumis Linnunradan tumma halkeama.',
       },
@@ -26973,8 +26973,8 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mikä ranskalainen rypälelajike tuotiin vuonna 1853 '
             + 'Mendozaan ja siitä tuli Argentiinan tunnusmerkki?',
-        vaihtoehdot: ['Malbec', 'Merlot', 'Pinot noir', 'Riesling'],
-        oikea: 0,
+        vaihtoehdot: ['Riesling', 'Merlot', 'Pinot noir', 'Malbec'],
+        oikea: 3,
         fakta: 'Sarmiento antoi tehtävän ranskalaiselle agronomille '
             + 'Michel Pouget\'lle.',
       },

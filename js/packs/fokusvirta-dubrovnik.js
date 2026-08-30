@@ -79,11 +79,11 @@ const APTEEKKI_VISA = {
   kysymys: 'Dubrovnikin fransiskaaniluostarin apteekki avattiin vuonna '
     + '1317. Mikä siinä on erityistä?',
   vaihtoehdot: [
-    'Se on Euroopan vanhin yhtäjaksoisesti toiminut apteekki',
     'Se on rakennettu kokonaan lasista',
+    'Se on Euroopan vanhin yhtäjaksoisesti toiminut apteekki',
     'Se sai myydä lääkkeitä vain merimiehille',
   ],
-  oikea: 0,
+  oikea: 1,
   fakta: 'Munkit valmistivat voiteita yrteistä, ja osa resepteistä on '
     + 'yhä käytössä. Apteekki palvelee asiakkaita edelleen.',
 };
@@ -235,11 +235,11 @@ export const FOKUSVIRTA_DUBROVNIK = {
         kysymys: 'Kuinka monta PYÖREÄÄ tornia Dubrovnikin '
           + 'kaupunginmuurilla on?',
         vaihtoehdot: [
-          'Kolme',
-          'Neljätoista',
           'Kaksikymmentäviisi',
+          'Neljätoista',
+          'Kolme',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Nelikulmaisia torneja on neljätoista, bastioneja viisi ja '
           + 'kulmalinnoituksia kaksi — siksi kaksi laskijaa päätyy '
           + 'harvoin samaan lukuun.',
@@ -321,11 +321,11 @@ export const FOKUSVIRTA_DUBROVNIK = {
       visa: {
         kysymys: 'Kuka toi riikinkukot Lokrumin saarelle?',
         vaihtoehdot: [
-          'Arkkiherttua Maksimilian, joka osti saaren 1859',
           'Benediktiiniläismunkit 1000-luvulla',
+          'Arkkiherttua Maksimilian, joka osti saaren 1859',
           'Ragusan tasavallan viimeinen rehtori',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Maksimilian muutti luostarin kesähuvilaksi ja tuotti '
           + 'puutarhaansa mullan ja taimet Kärntenistä asti. Linnut '
           + 'jäivät, vaikka omistajat vaihtuivat.',

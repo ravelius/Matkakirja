@@ -335,11 +335,11 @@ export const FOKUSVIRTA_SARAJEVO = {
         kysymys: 'Mitä keisarikunnan virkamiehet aikoivat rakentaa sille '
           + 'tontille, jolla uhmakas talo seisoi?',
         vaihtoehdot: [
-          'Kaupungintalon ja kirjaston',
           'Rautatieaseman',
+          'Kaupungintalon ja kirjaston',
           'Sotilassairaalan',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Talo purettiin, siirrettiin ja koottiin uudelleen joen '
           + 'toiselle puolelle. Vijećnica, kaupungintalo ja '
           + 'kansalliskirjasto, nousi lopulta tyhjentyneelle tontille.',
@@ -397,11 +397,11 @@ export const FOKUSVIRTA_SARAJEVO = {
         kysymys: 'Mikä haggadan sivuilla paljastaa, että kirja on ollut '
           + 'oikeassa käytössä?',
         vaihtoehdot: [
-          'Viinitahrat',
-          'Kuluneet kannen saranat',
           'Reunoihin kirjoitetut muistiinpanot',
+          'Kuluneet kannen saranat',
+          'Viinitahrat',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Tahrat kertovat, että kirjaa on käytetty pääsiäisaterioilla. '
           + 'Museon kokoelmiin se tuli vasta vuonna 1894.',
       },
@@ -445,11 +445,11 @@ export const FOKUSVIRTA_SARAJEVO = {
       visa: {
         kysymys: 'Mistä Livnon ylängön lauma sai alkunsa?',
         vaihtoehdot: [
-          'Työhevosista, joita ei enää tarvittu',
           'Ottomaaniarmeijan karanneista ratsuista',
+          'Työhevosista, joita ei enää tarvittu',
           'Muinaisesta villihevoskannasta',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Hevosia on nyt yli seitsemänsataa noin 145 neliökilometrin '
           + 'alueella, ja ne ovat olleet suojeltuja vuodesta 2010.',
       },

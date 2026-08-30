@@ -91,11 +91,11 @@ const ANONYMUS_VISA = {
   kysymys: 'Budapestin Anonymus-patsaan kasvot jäivät tahallaan hupun '
     + 'varjoon. Miksi?',
   vaihtoehdot: [
-    'Kukaan ei tiedä, kuka kronikan kirjoitti',
     'Kuvanveistäjä kuoli kesken työn',
+    'Kukaan ei tiedä, kuka kronikan kirjoitti',
     'Patsas oli tarkoitettu peitettäväksi talveksi',
   ],
-  oikea: 0,
+  oikea: 1,
   fakta: 'Unkarin vanhimman kronikan kirjoittaja kutsui itseään vain '
     + 'kirjaimella P. ja kuninkaan notaariksi. Miklós Ligeti veisti '
     + 'patsaan 1903, ja sen kynä on kulunut kiiltäväksi, koska sitä '
@@ -256,11 +256,11 @@ export const FOKUSVIRTA_BUDAPEST = {
         kysymys: 'Kenen talon kellarista Aquincumin urkujen osat '
           + 'löytyivät vuonna 1931?',
         vaihtoehdot: [
-          'Palokunnan',
-          'Maaherran',
           'Amfiteatterin vahtimestarin',
+          'Maaherran',
+          'Palokunnan',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Pronssilaatta kertoo lahjoittajan nimen ja vuoden 228: '
           + 'palokunnan päällikkö Gaius Iulius Viatorinus maksoi urut '
           + 'omasta pussistaan.',
@@ -326,11 +326,11 @@ export const FOKUSVIRTA_BUDAPEST = {
       visa: {
         kysymys: 'Mikä tekee Budan kukkuloiden luolista harvinaisia?',
         vaihtoehdot: [
-          'Ne ovat syntyneet alhaalta nousevasta lämpimästä vedestä',
           'Ne on kaivettu käsin keskiajalla',
+          'Ne ovat syntyneet alhaalta nousevasta lämpimästä vedestä',
           'Ne ovat kokonaan jään sisällä',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Szemlőhegyin luolan ilma on niin puhdasta, että sen '
           + 'alinta tasoa käytetään hengityssairaiden hoitopaikkana. '
           + 'Gellértinvuoresta löytyi 2007 kristallien peittämä luola.',
@@ -404,11 +404,11 @@ export const FOKUSVIRTA_BUDAPEST = {
         kysymys: 'Miksi Budapestin ensimmäinen metro kaivettiin aivan '
           + 'kadun pinnan alle?',
         vaihtoehdot: [
-          'Andrássy-kadun ulkonäköä ei haluttu pilata raiteilla',
-          'Syvemmällä oli pohjavettä',
           'Vaunut eivät olisi mahtuneet syvempään tunneliin',
+          'Syvemmällä oli pohjavettä',
+          'Andrássy-kadun ulkonäköä ei haluttu pilata raiteilla',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Rata rakennettiin 1894–1896 ja se oli Manner-Euroopan '
           + 'ensimmäinen sähköistetty maanalainen. Vanhempi oli vain '
           + 'Lontoon metro.',

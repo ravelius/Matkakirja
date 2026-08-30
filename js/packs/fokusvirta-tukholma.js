@@ -253,11 +253,11 @@ const MARTIN_VISA = {
     + 'kotiin taidon, jolla kuparilevystä saa vesivärimäisen sävyn. Mikä '
     + 'tekniikka se oli?',
   vaihtoehdot: [
-    'Akvatinta',
     'Litografia',
+    'Akvatinta',
     'Puupiirros',
   ],
-  oikea: 0,
+  oikea: 1,
   fakta: 'Kotiin palattuaan 1780 Martin kääntyi kaupunkiin, jota kukaan ei '
     + 'ollut piirtänyt sellaisenaan: satamaan, toreille ja työn ääreen. '
     + 'Veli Johan Fredrik kaiversi kuvat levyiksi, ja niitä myytiin '
@@ -408,11 +408,11 @@ export const FOKUSVIRTA_TUKHOLMA = {
         kysymys: 'Miten maailman suurin viikinkihopea lopulta löytyi '
           + 'gotlantilaisen pellon alta?',
         vaihtoehdot: [
-          'Metallinilmaisimella',
-          'Auran terä nosti sen esiin kesken kynnön',
           'Sukeltaja löysi sen rannan edustalta',
+          'Auran terä nosti sen esiin kesken kynnön',
+          'Metallinilmaisimella',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Nuorin kolikko on lyöty vuonna 871, joten hopea pantiin '
           + 'maahan joskus sen jälkeen. Kätköjä oli kaksi, kolmen metrin '
           + 'päässä toisistaan, viikinkiaikaisen talon lattialankkujen alla.',
@@ -465,11 +465,11 @@ export const FOKUSVIRTA_TUKHOLMA = {
         kysymys: 'Mitä Tukholman keskustan vanhalle vuoden 1850 sululle '
           + 'tehtiin vuonna 2024?',
         vaihtoehdot: [
-          'Se muutettiin kalatieksi',
           'Se purettiin ja korvattiin sillalla',
+          'Se muutettiin kalatieksi',
           'Se suljettiin kokonaan',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Norrströmistä nostetaan vuosittain satoja lohia ja '
           + 'meritaimenia, ja vedessä elää noin kolmekymmentä kalalajia. '
           + 'Kalat palasivat 1970-luvulla aloitettujen istutusten myötä.',
@@ -539,11 +539,11 @@ export const FOKUSVIRTA_TUKHOLMA = {
         kysymys: 'Mitä vuoden 1999 tutkimus paljasti Storkyrkanissa '
           + 'riippuvasta Vädersolstavlanista?',
         vaihtoehdot: [
-          'Se on 1600-luvulla tehty kopio kadonneesta alkuperäisestä',
-          'Se on maalattu vasta 1800-luvulla matkamuistoksi',
           'Se on alkuperäinen, eikä siihen ole koskaan koskettu',
+          'Se on maalattu vasta 1800-luvulla matkamuistoksi',
+          'Se on 1600-luvulla tehty kopio kadonneesta alkuperäisestä',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Kopion teki Jacob Heinrich Elbfas vuonna 1636 tai vähän '
           + 'sitä ennen. Taivaan ilmiö oli halo: ilmassa leijuvat '
           + 'jääkiteet taittavat auringonvaloa kuin lasiprismat.',

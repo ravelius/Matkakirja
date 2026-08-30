@@ -245,11 +245,11 @@ export const FOKUSVIRTA_LONTOO = {
         kysymys: 'Kuinka paljon veden pinta vaihtelee Thamesissa Lontoon '
           + 'keskustan kohdalla?',
         vaihtoehdot: [
-          'Parhaimmillaan noin seitsemän metriä',
           'Noin puoli metriä',
+          'Parhaimmillaan noin seitsemän metriä',
           'Vesi ei vaihtele lainkaan kaupungin kohdalla',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Vuorovesi ulottuu Teddingtonin sulkuun asti. Rannalla '
           + 'saa etsiä vain satamaviranomaisen luvalla, ja yli '
           + 'kolmesataa vuotta vanhat löydöt on ilmoitettava Lontoon '
@@ -305,11 +305,11 @@ export const FOKUSVIRTA_LONTOO = {
         kysymys: 'Miksi kuningas Kaarle I aitasi Richmond Parkin vuonna '
           + '1637?',
         vaihtoehdot: [
-          'Hirvenmetsästystä varten',
-          'Suojatakseen kaupunkia kulkutaudeilta',
           'Kasvattaakseen siellä kuninkaan lampaita',
+          'Suojatakseen kaupunkia kulkutaudeilta',
+          'Hirvenmetsästystä varten',
         ],
-        oikea: 0,
+        oikea: 2,
         fakta: 'Puistosta lähetettiin kuusipeuroja laivalla '
           + 'Uuteen-Seelantiin vuosina 1867 ja 1876. Ne olivat maan '
           + 'ensimmäiset kuusipeurat.',
@@ -381,11 +381,11 @@ export const FOKUSVIRTA_LONTOO = {
       visa: {
         kysymys: 'Mikä oli Cheapsiden kätkön omituisin esine?',
         vaihtoehdot: [
-          'Onttoon smaragdiin sovitettu kellokoneisto',
           'Kivestä veistetty pienoislaiva',
+          'Onttoon smaragdiin sovitettu kellokoneisto',
           'Kultainen kruunu ilman kiviä',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Sinettikivessä oleva vaakuna ajoittaa kätkennän '
           + 'marraskuun 1640 ja syyskuun 1666 välille. Pääosa löydöstä '
           + 'on nykyään Lontoon museossa.',
