@@ -663,6 +663,90 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     }
   };
 
+  /**
+   * Sama, mutta PEHMEÄNÄ KÄYRÄNÄ pisteiden läpi.
+   *
+   * === MIKSI ========================================================
+   *
+   * Omistajan havainto 30.8.2026 iPadilta: *"Joet eivät mutkittele
+   * pehmeästi vaan kantikkaasti."* Ja niin ne eivät mutkitelleetkaan:
+   * jokien polyviivoissa on 4 330 pistettä 123 uomaan, ja mitattuna
+   * yksi jakso on syvimmällä tasolla mediaanina 96 pikseliä (p90 214,
+   * pisin 875) — taitteen mediaanikulma on 49°. Sadan pikselin välein
+   * puolisuora kulma on kaivertajan kynässä mahdottomuus.
+   *
+   * RANTAVIIVA JA JÄRVET EIVÄT TARVITSE TÄTÄ, ja se on mitattu eikä
+   * arvattu: Natural Earthin harvennettu rantaviiva on samalla tasolla
+   * mediaanina 3,55 pikseliä jaksoa kohti (järvet 3,38), eli 27 kertaa
+   * tiheämpi kuin joet. Sitä paitsi rantaviiva on nyt myös maan ja
+   * meren RAJA (ks. "VEKTORI ON AUKTORITEETTI"), ja jos viiva
+   * silotettaisiin mutta täyttö ei, syntyisi täsmälleen se ero, joka
+   * juuri korjattiin. Reitit taas ovat kahden kaupungin välisiä janoja
+   * — niissä ei ole mitä silottaa.
+   *
+   * === SENTRIPETAALINEN CATMULL-ROM (alpha = 0,5) ====================
+   *
+   * Käyrä kulkee JOKAISEN pisteen kautta (interpoloi, ei approksimoi),
+   * joten uoma ei siirry paikaltaan. Alpha 0,5 on se valinta, joka
+   * estää molemmat spline-vaarat: yhtenäinen Catmull-Rom (alpha = 0)
+   * yliampuu terävissä mutkissa ja tekee silmukoita, kun pisteet ovat
+   * epätasavälein — ja juuri sitä nämä uomat ovat, sillä pisin jakso on
+   * yli 200-kertainen lyhimpään nähden. Sentripetaalinen
+   * parametrisointi on todistetusti silmukaton ja kärjetön (Yuksel et
+   * al. 2011). Muunnos kuutiolliseksi Bézieriksi tehdään suoraan, joten
+   * canvas rasteroi käyrän itse eikä sitä pilkota janoiksi.
+   *
+   * === JATKUVUUS LAATTARAJAN YLI ====================================
+   *
+   * Silotus nojaa KOKO uomaan eikä siihen osaan, joka sattuu osumaan
+   * lohkoon: `sisalto.joet` on maailmanlaajuinen lista, jota mikään ei
+   * rajaa ennen piirtoa, ja kärkipisteet muunnetaan ARKIN pikseleiksi
+   * (`lautaKuvaX`), jotka ovat samat joka lohkossa. Canvasin leikkuri
+   * hoitaa rajauksen vasta rasteroinnissa. Ainoa kohta, jossa käyrä
+   * katkeaa, on laudan sauma — ja se on arkin ominaisuus, ei lohkon.
+   */
+  const lautaKaari = (g, viivat) => {
+    g.beginPath();
+    const jakso = (p) => {
+      if (p.length < 2) return;
+      g.moveTo(p[0][0], p[0][1]);
+      if (p.length === 2) { g.lineTo(p[1][0], p[1][1]); return; }
+      for (let i = 0; i < p.length - 1; i += 1) {
+        const p0 = p[i === 0 ? 0 : i - 1];
+        const p1 = p[i];
+        const p2 = p[i + 1];
+        const p3 = p[i + 2 < p.length ? i + 2 : p.length - 1];
+        const d1 = Math.sqrt(Math.hypot(p1[0] - p0[0], p1[1] - p0[1]));
+        const d2 = Math.sqrt(Math.hypot(p2[0] - p1[0], p2[1] - p1[1]));
+        const d3 = Math.sqrt(Math.hypot(p3[0] - p2[0], p3[1] - p2[1]));
+        if (d2 === 0) { g.lineTo(p2[0], p2[1]); continue; }
+        // Epätasavälisen Catmull-Romin ohjauspisteet (alpha = 0,5).
+        const a = d1 > 0
+          ? [0, 1].map((k) => (d1 * d1 * p2[k] - d2 * d2 * p0[k]
+              + (2 * d1 * d1 + 3 * d1 * d2 + d2 * d2) * p1[k]) / (3 * d1 * (d1 + d2)))
+          : [p1[0], p1[1]];
+        const b = d3 > 0
+          ? [0, 1].map((k) => (d3 * d3 * p1[k] - d2 * d2 * p3[k]
+              + (2 * d3 * d3 + 3 * d3 * d2 + d2 * d2) * p2[k]) / (3 * d3 * (d3 + d2)))
+          : [p2[0], p2[1]];
+        g.bezierCurveTo(a[0], a[1], b[0], b[1], p2[0], p2[1]);
+      }
+    };
+    for (const viiva of viivat) {
+      let osa = [];
+      let edellinen = null;
+      for (let i = 0; i < viiva.length; i += 1) {
+        const x = lautaKuvaX(viiva[i][0]);
+        const y = lautaKuvaY(viiva[i][1]);
+        // Sauma katkaisee käyrän kuten murtoviivankin (ks. viivaPolku).
+        if (edellinen !== null && Math.abs(x - edellinen) > GW / 2) { jakso(osa); osa = []; }
+        osa.push([x, y]);
+        edellinen = x;
+      }
+      jakso(osa);
+    }
+  };
+
   /*
    * KARTTA-ALAN LEIKKURI (osiot 4–7).
    *
@@ -739,39 +823,195 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
   }
   ctx.restore();
 
-  /* ================================================== 6. ASTEVERKKO
+  /**
+   * Yksi tekstirivi harvennettuna; sama kaava kuin maalehdellä.
    *
-   * HARVA JA HAALEA. Kaukozoomissa kartta on pelaajan yleiskuva, ja
-   * asteverkko on siinä mittapuu eikä koriste: 20 asteen väli antaa
-   * yhdeksäntoista meridiaania ja seitsemän leveyspiiriä koko laudalle.
-   * Päiväntasaaja on hitusen tummempi, kuten aikakauden kartoissa.
+   * `mitta` on se kerroin, jolla kirjasinkoko ja harvennus kerrotaan.
+   * Oletus on `S` eli KARTAN mittakaava — niin merten nimet ja arkin
+   * kalusteet on aina ladottu, ja ne kasvavat tason mukana. `mitta: P`
+   * tekee tekstistä PAPERIVAKION, joka on joka tasolla saman kokoinen
+   * laitepikseleinä (Raamattu, "PAPERIVAKIOT JA KARTTAVAKIOT").
+   */
+  const TEKSTIN_OLETUS = {
+    koko: 13, fontti: '"Liberation Serif", serif', tyylitys: '', vari: MUSTE,
+    ank: 'left', vali: 0, kulma: 0, mitta: null,
+  };
+  const tekstinLadonta = (o) => {
+    const a = { ...TEKSTIN_OLETUS, ...o };
+    return { ...a, mitta: a.mitta ?? S };
+  };
+  /** Rivin leveys pikseleinä ilman piirtoa (törmäysten välttelyyn). */
+  const tekstinLeveys = (s, asetukset = {}) => {
+    const a = tekstinLadonta(asetukset);
+    ctx.save();
+    ctx.font = `${a.tyylitys} ${a.koko * a.mitta}px ${a.fontti}`.trim();
+    const merkit = [...s];
+    const lev = merkit.reduce((sum, m) => sum + ctx.measureText(m).width, 0)
+      + a.vali * a.mitta * (merkit.length - 1);
+    ctx.restore();
+    return lev;
+  };
+  const teksti = (s, x, y, asetukset = {}) => {
+    const a = tekstinLadonta(asetukset);
+    ctx.save();
+    ctx.translate(x, y);
+    if (a.kulma) ctx.rotate(a.kulma * Math.PI / 180);
+    ctx.font = `${a.tyylitys} ${a.koko * a.mitta}px ${a.fontti}`.trim();
+    ctx.textBaseline = 'middle';
+    ctx.textAlign = 'left';
+    const merkit = [...s];
+    const lev = merkit.reduce((sum, m) => sum + ctx.measureText(m).width, 0)
+      + a.vali * a.mitta * (merkit.length - 1);
+    let t = a.ank === 'center' ? -lev / 2 : a.ank === 'right' ? -lev : 0;
+    ctx.fillStyle = a.vari;
+    for (const m of merkit) {
+      ctx.fillText(m, t, 0);
+      t += ctx.measureText(m).width + a.vali * a.mitta;
+    }
+    ctx.restore();
+  };
+
+  /* =========================== 6. ERIKOISPIIRIT JA NOLLAMERIDIAANI
+   *
+   * === TASAVÄLINEN ASTEVERKKO ON POISTETTU (omistaja 30.8.2026) ======
+   *
+   * Sanatarkasti: *"Poista pituus ja leveyspiiri viivat. Jätä vain 0 ja
+   * päiväntasaaja sekä kääntöpiirit ja napapiiri ja nimeä ne."*
+   * Tilalle jää viisi viivaa, jotka EIVÄT ole ruudukkoa vaan
+   * maantiedettä: ne merkitsevät auringon ääriasemat ja pituusasteiden
+   * lähtökohdan. Siksi ne myös NIMETÄÄN, kuten aikakauden atlaksessa —
+   * numeroitu ruudukko ei tarvitse nimeä, mutta kääntöpiiri tarvitsee.
+   *
+   * ETELÄINEN NAPAPIIRI JÄTETÄÄN POIS. Se ei ole valinta vaan mitta:
+   * arkin kartta-ala on 84 °N … 66 °S (pyramidi.json `rajaus`: y
+   * −611,31, h 6422,72), ja eteläinen napapiiri on 66,56 °S eli reunan
+   * ulkopuolella. Omistajan vahvistus 30.8.2026: *"Etelän napapiiriä ei
+   * tarvita."* Arkin mitat ovat lukitut, joten arkkia ei kasvateta sen
+   * takia.
+   *
+   * === NIMET OVAT PAPERIVAKIOITA, EIVÄT KALUSTEITA ==================
+   *
+   * Merten nimet skaalautuvat kartan mukana (`S`), koska nimi kuuluu
+   * sille altaalle jonka se nimeää, ja siksi ne myös katoavat
+   * kynnyksellä. NÄMÄ NIMET OVAT ERI LAJIA. Ne nimeävät VIIVAN, ja
+   * viivalla ei ole leveyttä, jonka mukaan nimi kasvaisi — nimi on
+   * pelkkää painojälkeä. Siksi ne mitoitetaan `P`:llä (Raamattu,
+   * "PAPERIVAKIOT JA KARTTAVAKIOT": *nimiöt ja viivat mitoitetaan
+   * laitepikseleinä, koska asiakas katsoo valittua tasoa noin 1:1*).
+   *
+   * JA JUURI SIKSI KYNNYSTÄ EI TARVITA. Merten nimillä kynnys on
+   * välttämätön, koska ilman sitä ATLANTIN VALTAMERI olisi z7:llä
+   * 4 725 pikseliä leveä. Paperivakiona nimi on joka tasolla sama 13
+   * pikseliä, eli se ei voi kasvaa jättiläiseksi eikä kutistua
+   * näkymättömiin. Omistajan huomio pitää paikkansa: nämä viivat
+   * kulkevat ruudun poikki JOKA tasolla, joten nimi on mielekäs joka
+   * tasolla — toisin kuin merennimi, jonka meri ei enää mahdu ruutuun.
+   *
+   * TOISTOVÄLI hoitaa sen, mitä kynnys hoitaa merennimille: nimi
+   * toistetaan viivan varrella noin 2 400 laitepikselin välein, joten
+   * näkymässä (puhelin 1 170 px, työpöytä 1 440-3 024 px) on
+   * korkeintaan yksi kappale kutakin nimeä. Kappalemäärä lasketaan
+   * ARKIN mitoista eikä laatan, joten se on sama joka lohkossa:
+   * z0-z2 yksi, z3 kaksi, z4 viisi, z5 yhdeksän, z6 18, z7 36.
    *
    * Reunalukemia EI piirretä — ne olisivat kuvaan poltettua sivua, ja
    * peli piirtää omat mittansa ruutuun ankkuroituina (js/fokusmitat.js).
    */
+  const EKLIPTIIKKA = 23.4365;          // maapallon akselikallistuma
+  /*
+   * `faasi` on nimen paikka toistovälin sisällä. Se on eri jokaisella
+   * viivalla tarkoituksella: samalla faasilla kaikki neljä nimeä
+   * asettuisivat samaan pystysarakkeeseen (uloimmalla tasolla, jossa
+   * kappaleita on yksi, ne kasautuisivat kaikki arkin keskelle), ja
+   * kartta näyttäisi tekstipalstalta. Painetussa atlaksessa jokainen
+   * piiri nimetään omassa kohdassaan.
+   */
+  const PIIRIT = [
+    { lat: 0, nimi: 'Päiväntasaaja', vahva: true, faasi: 0.5 },
+    { lat: EKLIPTIIKKA, nimi: 'Kravun kääntöpiiri', faasi: 0.26 },
+    { lat: -EKLIPTIIKKA, nimi: 'Kauriin kääntöpiiri', faasi: 0.74 },
+    { lat: 90 - EKLIPTIIKKA, nimi: 'Pohjoinen napapiiri', faasi: 0.13 },
+  ];
+  /*
+   * NOLLAMERIDIAANI, EI "GREENWICHIN MERIDIAANI". Kaksi syytä, ja
+   * molemmat ovat mittoja: nimi kulkee PYSTYVIIVAN vartta, jolloin sen
+   * pituus on korkeutta — "Greenwichin meridiaani" on 22 merkkiä eli
+   * paperivakiona noin 150 pikseliä pystyyn, ja se leikkaisi
+   * kääntöpiirien nimet. "Nollameridiaani" on 15 merkkiä ja yksi sana,
+   * ja se on suomalaisen kartaston oma termi juuri tälle viivalle.
+   */
+  const NOLLAMERIDIAANI = 'Nollameridiaani';
+  const PIIRIVIIVA = 'rgba(96,74,46,0.30)';
+  const PIIRIVIIVA_VAHVA = 'rgba(96,74,46,0.44)';
+  const PIIRINIMI = 'rgba(112,99,76,0.62)';
+  const NIMEN_KOKO = 13;
+  const NIMEN_VALI = 0.3;
+  // Toistoväli laitepikseleinä; ks. TOISTOVÄLI yllä.
+  const TOISTOVALI = 2400;
+
   if (tyyli.asteverkko !== false) {
-    const vali = tyyli.asteverkkoVali ?? 20;
     ctx.save();
-    ctx.lineWidth = 0.7 * P;
-    ctx.strokeStyle = 'rgba(96,74,46,0.22)';
-    ctx.beginPath();
-    for (let lon = -180; lon <= 180; lon += vali) {
-      const x = kuvaX(lon);
-      ctx.moveTo(x, yYla); ctx.lineTo(x, yAla);
-    }
-    const latYla = Math.floor(lautaLat(bbox.y) / vali) * vali;
-    const latAla = Math.ceil(lautaLat(bbox.y + bbox.h) / vali) * vali;
-    for (let lat = latAla; lat <= latYla; lat += vali) {
-      if (lat === 0) continue;
-      const y = kuvaY(lat);
+    ctx.lineJoin = 'round';
+
+    /* --- viivat ---------------------------------------------------- */
+    const latYla = lautaLat(bbox.y);
+    const latAla = lautaLat(bbox.y + bbox.h);
+    for (const p of PIIRIT) {
+      if (p.lat < latAla - 1 || p.lat > latYla + 1) continue;
+      ctx.strokeStyle = p.vahva ? PIIRIVIIVA_VAHVA : PIIRIVIIVA;
+      ctx.lineWidth = (p.vahva ? 0.9 : 0.8) * P;
+      ctx.beginPath();
+      const y = kuvaY(p.lat);
       ctx.moveTo(0, y); ctx.lineTo(GW, y);
+      ctx.stroke();
     }
-    ctx.stroke();
-    ctx.strokeStyle = 'rgba(96,74,46,0.36)';
+    ctx.strokeStyle = PIIRIVIIVA_VAHVA;
+    ctx.lineWidth = 0.9 * P;
     ctx.beginPath();
-    const y0 = kuvaY(0);
-    ctx.moveTo(0, y0); ctx.lineTo(GW, y0);
+    const xNolla = kuvaX(0);
+    ctx.moveTo(xNolla, yYla); ctx.lineTo(xNolla, yAla);
     ctx.stroke();
+
+    /* --- nimet ------------------------------------------------------ */
+    const nimenAsetukset = {
+      koko: NIMEN_KOKO, mitta: P, tyylitys: 'italic', vari: PIIRINIMI,
+      ank: 'center', vali: NIMEN_KOKO * NIMEN_VALI,
+    };
+    // Nimien paikat lasketaan ARKIN mitoista: sama tulos joka lohkossa.
+    const vaakaMaara = Math.max(1, Math.round(GW / TOISTOVALI));
+    const pystyMaara = Math.max(1, Math.round((yAla - yYla) / TOISTOVALI));
+    for (const p of PIIRIT) {
+      if (p.lat < latAla - 1 || p.lat > latYla + 1) continue;
+      const y = kuvaY(p.lat) - NIMEN_KOKO * 0.72 * P;
+      const lev = tekstinLeveys(p.nimi, nimenAsetukset);
+      for (let k = 0; k < vaakaMaara; k += 1) {
+        let x = ((k + p.faasi) * GW) / vaakaMaara;
+        /*
+         * NIMI SIIRRETÄÄN POIS NOLLAMERIDIAANIN ALTA, EI JÄTETÄ POIS.
+         * Kaksi tasoa osuu kohdalleen: z0-z2:lla nimiä on yksi ja se
+         * osuu arkin keskelle, joka on melkein tasan pituusaste 0
+         * (lauta alkaa asteelta −175), ja z7:llä toistoväli on tasan
+         * 10 astetta, jolloin joka neljäskymmenes kappale osuu
+         * meridiaanille. Poisjättö veisi uloimmilta tasoilta nimen
+         * kokonaan, joten kappale siirretään sivuun oman leveytensä
+         * verran — se on yhä samalla viivalla ja samalla tasolla.
+         */
+        const vali2 = lev / 2 + NIMEN_KOKO * 0.8 * P;
+        const ero = ((x - xNolla + GW * 1.5) % GW) - GW / 2;
+        if (Math.abs(ero) < vali2) x += (ero >= 0 ? 1 : -1) * (vali2 - Math.abs(ero));
+        teksti(p.nimi, x, y, nimenAsetukset);
+      }
+    }
+    /*
+     * Nollameridiaanin nimi kulkee viivan vartta ylöspäin (kierto −90°)
+     * ja istuu viivan oikealla puolella, kuten kaiverretussa atlaksessa.
+     */
+    for (let k = 0; k < pystyMaara; k += 1) {
+      const y = yYla + ((k + 0.5) * (yAla - yYla)) / pystyMaara;
+      teksti(NOLLAMERIDIAANI, xNolla + NIMEN_KOKO * 0.72 * P, y, {
+        ...nimenAsetukset, kulma: -90,
+      });
+    }
     ctx.restore();
   }
 
@@ -821,26 +1061,6 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    */
   const KALUSTEIDEN_YLARAJA = 0.3;
   const merinimetNakyvat = px <= KALUSTEIDEN_YLARAJA;
-
-  /** Yksi tekstirivi harvennettuna; sama kaava kuin maalehdellä. */
-  const teksti = (s, x, y, {
-    koko = 13, fontti = '"Liberation Serif", serif', tyylitys = '', vari = MUSTE,
-    ank = 'left', vali = 0, kulma = 0,
-  } = {}) => {
-    ctx.save();
-    ctx.translate(x, y);
-    if (kulma) ctx.rotate(kulma * Math.PI / 180);
-    ctx.font = `${tyylitys} ${koko * S}px ${fontti}`.trim();
-    ctx.textBaseline = 'middle';
-    ctx.textAlign = 'left';
-    const merkit = [...s];
-    const lev = merkit.reduce((sum, m) => sum + ctx.measureText(m).width, 0)
-      + vali * S * (merkit.length - 1);
-    let t = ank === 'center' ? -lev / 2 : ank === 'right' ? -lev : 0;
-    ctx.fillStyle = vari;
-    for (const m of merkit) { ctx.fillText(m, t, 0); t += ctx.measureText(m).width + vali * S; }
-    ctx.restore();
-  };
 
   /*
    * Valtamerten nimet ovat karttatypografiaa eivätkä paikkatietoa: ne
@@ -992,31 +1212,105 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         // Kaukaa vain pääjoet; lähempää kaikki.
         if (joki.tarkeys > 1 && !nakyy(0.45)) continue;
         ctx.lineWidth = joki.tarkeys <= 1 ? 1.4 : 1.0;
-        lautaPolku(ctx, [joki.pisteet]);
+        // Pehmeä käyrä pisteiden läpi, ei murtoviiva — ks. lautaKaari.
+        lautaKaari(ctx, [joki.pisteet]);
         ctx.stroke();
       }
       ctx.restore();
     }
 
-    /* --- reitit: isoisän verkosto katkoviivana ---------------------- */
+    /* --- reitit: pelilaudan rata askelmineen ------------------------
+     *
+     * Omistaja 30.8.2026: *"Kaupunkien välissä pitäisi näkyä
+     * nopanheitto askelmat, ei katkoviiva. Lentoreitin punaisella
+     * katkoviivalla ja laivareitit sinisellä niin että noppa askelmat
+     * näkyy."*
+     *
+     * SÄÄNTÖ, JOKA SYNTYY TÄSTÄ: **muste kertoo kulkutavan, helmet
+     * kertovat askelmat, ja katkoviiva on varattu sille reitille,
+     * jolla ei ole askelmia.** Maa- ja merireitti ovat siksi
+     * yhtenäisiä viivoja helmineen ja eroavat vain musteeltaan;
+     * lentoreitti on katkoviiva ilman helmiä, koska lento siirtää
+     * nappulan suoraan perille (ks. sisalto.mjs).
+     *
+     * VÄRIT OVAT AIKAKAUDEN MUSTEITA, EIVÄT NÄYTTÖVÄREJÄ. Merireitti
+     * on preussinsinistä (1706, kaivertajan vakiosininen) ja lento
+     * poltettua sinooperia — kumpikin murrettuna niin, ettei paperin
+     * illuusio rikkoudu. Kirkas RGB-sininen tekisi kartasta
+     * tietokonegrafiikkaa yhdellä viivalla.
+     *
+     * ASKELMAN KOKO ON PAPERIVAKIO (`P`) kuten muukin painojälki.
+     * Kynnys on reittien oma: askelvälit ovat mitattuna z2:lla
+     * (px 0,225, jolla reitit ilmestyvät) p10 11,4 px ja mediaani
+     * 17,9 px, eli 2,4 pikselin helmet erottuvat toisistaan heti
+     * ensimmäisellä tasolla, jolla reitti ylipäätään piirretään.
+     * Omaa syvempää kynnystä ei siis tarvita.
+     */
     if (nakyy(0.22) && sisalto.reitit?.length) {
       ctx.save();
-      ctx.strokeStyle = 'rgba(120,88,54,0.42)';
-      ctx.lineWidth = 1.1;
-      ctx.setLineDash([5, 4]);
-      lautaPolku(ctx, sisalto.reitit.map((r) => [[r.ax, r.ay], [r.bx, r.by]]));
-      ctx.stroke();
+      ctx.lineJoin = 'round';
+      ctx.lineCap = 'round';
       /*
-       * Lentoreitit hennompina ja pidemmällä katkolla: aikakauden
+       * LAUDAN KIERTO: reitin murtoviiva on avattu sauman yli
+       * (js/rules.js `avaaSauma`), joten sen x voi olla laudan
+       * ulkopuolella. Piirretään kolmena kappaleena — laudan verran
+       * vasemmalle, paikalleen ja oikealle — jolloin Tokio-San
+       * Francisco näkyy sauman molemmin puolin eikä katkea.
+       */
+      const KIERROS = projektio.leveys ?? 0;
+      const siirrot = KIERROS ? [-KIERROS, 0, KIERROS] : [0];
+      const MUSTEET = {
+        maa: { viiva: 'rgba(120,88,54,0.52)', kehä: 'rgba(120,88,54,0.78)' },
+        meri: { viiva: 'rgba(32,60,98,0.56)', kehä: 'rgba(32,60,98,0.80)' },
+      };
+      const helmiTaytto = 'rgba(246,239,220,0.88)';
+      const sade = 2.4 * P;
+      for (const laji of ['meri', 'maa']) {
+        const osa = sisalto.reitit.filter((r) => r.laji === laji);
+        if (!osa.length) continue;
+        const muste = MUSTEET[laji];
+        ctx.strokeStyle = muste.viiva;
+        ctx.lineWidth = 1.1 * P;
+        for (const d of siirrot) {
+          lautaPolku(ctx, osa.map((r) => r.poly.map(([x, y]) => [x + d, y])));
+          ctx.stroke();
+        }
+        /*
+         * Helmet yhtenä polkuna: 1 118 erillistä fill+stroke-paria
+         * lohkoa kohti olisi turhaa työtä, kun sama polku kelpaa
+         * kaikille. Ruudun ulkopuoliset karsitaan ennen polkua.
+         */
+        ctx.beginPath();
+        for (const r of osa) {
+          for (const [bx, by] of r.askelmat) {
+            for (const d of siirrot) {
+              const x = lautaKuvaX(bx + d);
+              if (x < GX - sade * 2 || x > GX + W + sade * 2) continue;
+              const y = lautaKuvaY(by);
+              if (y < GY - sade * 2 || y > GY + H + sade * 2) continue;
+              ctx.moveTo(x + sade, y);
+              ctx.arc(x, y, sade, 0, Math.PI * 2);
+            }
+          }
+        }
+        ctx.fillStyle = helmiTaytto;
+        ctx.fill();
+        ctx.strokeStyle = muste.kehä;
+        ctx.lineWidth = 0.9 * P;
+        ctx.stroke();
+      }
+      /*
+       * Lentoreitit poltettuna sinooperina ja katkoviivana: aikakauden
        * kartassa ne ovat höyrylaivalinjan tapainen merkintä eikä
        * maantie, ja niitä on vähemmän.
        */
       if (sisalto.lentoreitit?.length) {
-        ctx.strokeStyle = 'rgba(120,88,54,0.26)';
-        ctx.lineWidth = 0.9;
-        ctx.setLineDash([9, 7]);
+        ctx.strokeStyle = 'rgba(150,54,40,0.50)';
+        ctx.lineWidth = 0.9 * P;
+        ctx.setLineDash([9 * P, 7 * P]);
         lautaPolku(ctx, sisalto.lentoreitit.map((r) => [[r.ax, r.ay], [r.bx, r.by]]));
         ctx.stroke();
+        ctx.setLineDash([]);
       }
       ctx.restore();
     }
