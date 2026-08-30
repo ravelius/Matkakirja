@@ -468,6 +468,78 @@ portista:
 
 Kolmas löytyi vasta savukkeesta; sitä vartioi väite P2b.
 
+## 10b. Tuotanto: työnkulku, ei konttiparvi
+
+Raamattu: *"Sisältöpäivitys = pyramidin uudelleenajo napista."*
+**Työnkulku on se nappi** — `.github/workflows/generoi-pyramidi.yml`.
+Kontissa ajaminen olisi umpikuja: R2-tunnukset ovat GitHubin
+secreteissä, eivät kontissa, joten siellä generoitu 1,3 Gt ei pääsisi
+mihinkään.
+
+Malli on olemassa oleva `patinoi-fokus.yml` (generointi ja
+`aws s3 sync` samassa jobissa) ja `vie-fokus.yml`. Secretit ovat samat:
+`R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET`,
+`R2_ACCOUNT_ID`.
+
+### Matriisi korvaa parven
+
+| shardi | erä | laattoja |
+| --- | --- | --- |
+| z0-z6 | tasot 0–6 kokonaan | 5 933 |
+| z7a | z7 sarakkeet 0–43 | 4 532 |
+| z7b | z7 sarakkeet 44–87 | 4 532 |
+| z7c | z7 sarakkeet 88–131 | 4 532 |
+| z7d | z7 sarakkeet 132–168 | 3 811 |
+| | **yhteensä** | **23 340** ✓ |
+
+Summa täsmää tasotaulun laattamäärään, ja se on tarkistettu ajamalla
+jokainen kaista `--kuiva`-tilassa.
+
+**Kaistarajat ovat lohkorajoilla** (sarake jaollinen neljällä), ja se
+on mittaustulos eikä siisteyttä: asteilla rajattu alue katkaisee lohkon
+keskeltä, jolloin lohko piirretään kokonaan mutta osa heitetään pois —
+mitattuna **62 % hukkaa** Kreikan alueajossa, **0 %** koko maailman
+ajossa. Sarakerajaus (`--sarakkeet a-b`) osuu lohkorajalle.
+
+**Jokainen shardi synkkaa oman tuotoksensa samassa jobissa.** Jos
+tuotos kulkisi artefaktina, yli gigatavu kulkisi verkon yli kahdesti ja
+täyttäisi levyn; nyt levyltä vaaditaan enintään yhden shardin osuus
+(suurin noin 250 Mt).
+
+**Luettelo on oma jobinsa.** `pyramidi.json` kuvaa KOKO pyramidin, eikä
+yksikään shardi tunne muiden tasoja — jos shardit kirjoittaisivat sen,
+viimeisenä valmistuva jättäisi ämpäriin luettelon, joka tuntee vain
+omat tasonsa. Luettelo syntyy pelkästä geometriasta
+(`--vain-luettelo`) ja viedään vasta kun kaikki shardit ovat valmiit.
+
+Samasta syystä **laatasto-bittikartta kirjoitetaan vain harvassa
+pyramidissa**: matriisiajossa shardi näkee levyllä vain omat laattansa
+ja kertoisi luettelossa, ettei muita ole. Kun karsintaa ei ole,
+kenttä on `null` ja peli tulkitsee sen "kaikki olemassa".
+
+### Osoitteet ja välimuisti
+
+```
+julisteet/pyramidi/<versio>/z<taso>/<sarake>/<rivi>.webp   immutable, 1 v
+julisteet/pyramidi/pyramidi.json                           max-age 300
+```
+
+Laatat ovat muuttumattomia, koska versio on polussa; luettelo ei ole,
+koska se osoittaa uusimpaan versioon. Peli lukee version luettelosta
+ja rakentaa laatan osoitteen siitä (js/laattapyramidi.js).
+
+Julkinen isäntä on `https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/`
+(js/media.js `R2_JUURI`), joten viedyt laatat ovat suoraan selaimen
+haettavissa — sama reitti kuin lehdillä ja julisteilla.
+
+### Aikakatto ja levy
+
+Suurin shardi on noin 1 240 Mpx reunuksineen eli mitatulla 0,44 Mpx/s
+nopeudella **noin 47 min**. `timeout-minutes: 330` antaa
+seitsenkertaisen varan ja jää GitHubin kuuden tunnin katon alle.
+Työnkulku tulostaa `df -h` ennen ja jälkeen, joten ensimmäinen ajo
+vahvistaa levytilan mitattuna.
+
 ## 11. Siirtymä
 
 **Vaihe 1 — pilotti (tämä erä).** Työkalu, moottorin laattatuki, pysyvä

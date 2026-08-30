@@ -1,197 +1,134 @@
-# Viesti Fablelle — laattapyramidi, erä 3 (30.8.2026)
+# Viesti Fablelle — laattapyramidi, erä 4 (30.8.2026)
 
 Haara `claude/pyramidi-pilotti`. Ei versionostoa, ei PR:ää.
-Oletuspolku ei muutu. **Portit: 1048 pass / 0 fail,
-savuke-laattapyramidi 13/13.**
+**Portit: 1048 pass / 0 fail, savuke-laattapyramidi 13/13.**
 
-Kohdat 1 (patinapassi) ja 2 (nimiöiden törmäyksenvälttely) tehty ja
-mitattu. **Pysähdyn tähän** — täysgenerointia ei ole ajettu.
-
-Täysi suunnitelma ja kaikki luvut: **docs/moduulit/laattapyramidi.md**.
+En käynnistänyt yhtään agenttia täysajoa varten, joten mitään ei ollut
+pysäytettävänä. Työnkulku on valmis. **Yksi asia estää koeajon, ja
+tarvitsen siihen sinulta päätöksen.**
 
 ---
 
-## YKSI ASIA VAATII PÄÄTÖSTÄ ENNEN TÄYSAJOA
+## ESTE: työnkulkua ei voi ajaa haaralta
 
-**Täysi resepti on laattamittakaavassa rikki, ja se on nähtävä.**
+`workflow_dispatch` toimii vain, jos työnkulkutiedosto on
+**oletushaarassa**. Kokeilin ja todensin, en oleta:
 
-Ajoin pyytämäsi VERTAILUPALAN (Peloponnesos) syvimmällä tasolla
-molemmilla resepteillä. Tulos:
+- dispatch haaralle `claude/pyramidi-pilotti` → **404 Not Found**
+- repon 27 työnkulun listaus → jokaisen `html_url` osoittaa
+  `blob/main/...`, eikä `generoi-pyramidi.yml` ole listalla lainkaan.
+  Se ei siis ole lupaongelma vaan rekisteröinti: GitHub ei tunne
+  työnkulkua ennen kuin se on mainissa.
 
-| resepti | jälki z7:llä |
+Käskit: ei PR:ää, ei versionostoa — enkä siksi vienyt tiedostoa
+mainiin. **Koeajo vaatii, että `generoi-pyramidi.yml` on mainissa.**
+Vaihtoehdot:
+
+1. **Sinä mergeät työnkulkutiedoston mainiin** (se on yksi uusi
+   tiedosto, ei koske peliin eikä muuta oletuspolkua), minkä jälkeen
+   voin ajaa koeajon ja todentaa laatat ämpärissä.
+2. Merge koko haara normaalilla julkaisukaavallasi, ja koeajo sen
+   jälkeen.
+3. Ajat koeajon itse napista, ja minä todennan tuloksen.
+
+Suosittelen vaihtoehtoa 1: työnkulku on ainoa osa, joka on pakko olla
+mainissa, ja se on inertti kunnes joku painaa nappia.
+
+## R2-vienti: mitä se vaatii (kysymyksesi 4)
+
+| asia | tila |
 | --- | --- |
-| `keskitaso` | siisti, mutta ilman tyyliohjeen kolmea passia |
-| **`taysi`** | **koko mantere sateenkaaren värisinä läiskinä, rantaviiva usvassa** |
+| Tunnukset kontissa | **ei ole** — vahvistettu, siksi kontti ei kelpaa |
+| Secretit | `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET`, `R2_ACCOUNT_ID` — käytin täsmälleen näitä, en kirjoittanut tunnuksia mihinkään enkä lokita niitä |
+| Malli | `patinoi-fokus.yml` (generointi + sync samassa jobissa) ja `vie-fokus.yml` — rakenne niistä, ei keksitty |
+| Julkinen osoite | `https://pub-…r2.dev/julisteet/pyramidi/<versio>/z7/92/41.webp` — sama reitti kuin lehdillä, eli **suoraan selaimen haettavissa** |
+| Viennin kesto | sync tapahtuu shardin omassa jobissa generoinnin perässä; suurin shardi ~250 Mt |
 
-Syy on mittakaava, ei arvo. Kohdistusheitto ja leviäminen skaalautuvat
-`s`:llä eli ovat saman kokoisia KARTALLA joka tasolla:
+## Työnkulku — `.github/workflows/generoi-pyramidi.yml`
 
-| | 6400 px arkki | z6 | z7 |
-| --- | --- | --- | --- |
-| kohdistusheitto | 2,6 px | 18 px | **35 px** |
-| musteen leviäminen | 2 px | 14 px | **27 px** |
+`workflow_dispatch`, syötteinä versio, shardivalinta
+(`kaikki` / `vain-z0-z6` / `koeajo-z0-z3`), laatu, patinataso ja
+`vie`-kytkin (pois = pelkkä harjoitus ilman ämpäriä).
 
-35 pikselin väriseparaatio ei ole "hienoinen kohdistusheitto" vaan
-painovirhe. Tyyliohjeen sana *"varovasti"* osuu tähän täsmälleen.
+**Matriisi korvaa parven kokonaan.** Laattamäärät tarkistettu ajamalla
+jokainen kaista `--kuiva`-tilassa:
 
-**Ehdotukseni:** kohdistus ja leviäminen ovat PAINOJÄLJEN
-ominaisuuksia, eivät kartan — samalla perusteella kuin nimiöt, jotka jo
-mitoitetaan laitepikseleinä. Käytännössä `* s` pois kolmesta
-kohdistusrivistä ja leviämisen säteestä (tools/patina.mjs).
-**6400 pikselin lehdille se ei muuta mitään**, koska niillä `s` = 1 —
-eli vanha lehtiputki on koskematon.
-
-Kokeilin sen ja kuvasin: jälki on `keskitason` kaltainen mutta täyden
-reseptin rosoisuudella, eli juuri se mitä tyyliohje pyytää. **En
-muuttanut sitä** — resepti on omistajan päätös, ja käskit kertoa enkä
-säätää. Työkalu varoittaa nyt ajossa, ettei parvi aja tätä
-huomaamatta.
-
-Kuvat kontin scratchpadissa: `vertailu-keskitaso/`, `vertailu-taysi/`,
-`vertailu-ehdotus/` (kaikki z7/92/41.webp).
-
-**Tämä kannattaa ratkaista ennen täysajoa**, koska syvät tasot ovat
-94 % sekä työstä että tavuista.
-
-## 1. Patinapassi pyramidiin — tehty
-
-`tools/patina.mjs` on nyt **sekä työkalu että moduuli**
-(`AJETAAN_SUORAAN`-vartio). Pyramidi ajaa SAMAN reseptin samasta
-tiedostosta — ei kopiota, joten tiedoston oma sääntö "resepti on
-yhdessä paikassa" pysyy voimassa. Lisätty kolme valinnaista
-parametria (`koko`, `pikselit`, `palauta`), joita ilman passi
-käyttäytyy sanasta sanaan kuten ennen. Lehtityökalu todennettu
-toimivaksi muutosten jälkeen.
-
-### Mikä meni laattoihin ja mikä ei
-
-Laattoihin: sävyt ja sävykäyrä, paperin syy/rae/klimppi (faasi
-arkista), ikääntymislaikku (mittakaava laudalta), meren litistys,
-reunakertymä, rosoisuus, kohdistus, leviäminen.
-
-**Ei laattoihin:**
-
-- **vinjetointi** — säteittäinen termi on kehys, ja vieretysten
-  ladottuna kehyksistä tulee ruudukko meren päälle. Kuuluu pelin
-  pelitilakerrokseen ruutuavaruudessa, kuten kirjoitit. Oli jo
-  `null` kaikilla tasoilla; en koskenut.
-- **taitejäljet** — `taitteet: false`, kuten ohjeistit.
-- **vesiviivoitus** — omistajan päätös, pysyy poissa.
-- `IKAANTYMINEN.reunapaino` pysyy nollassa; en palauttanut sitä
-  täyden reseptin mukana.
-
-### Jatkuvuus — ja vika, jonka vain mittaus löysi
-
-Lohko piirretään **reunuksen verran isompana** ja laatat leikataan sen
-sisältä. Reunus johdetaan tason mittakaavasta (`8·ceil((9s+16)/8)`):
-kiinteä 64 px olisi jäänyt syvimmällä tasolla rantavyön (95 px) alle,
-eli olisin tehnyt juuri sen virheen jota reunus estää.
-
-**Patinan pikselikohtainen rae ja dither luettiin lehden omasta
-pikselistä.** Lehdelle se oli oikein — naapurilehti on eri paperi —
-mutta laatoissa se antoi JOKAISELLE laatalle täsmälleen saman
-kohinakentän: rakenteeton kohina muuttuu rakenteeksi, kun se toistuu
-512 pikselin ruudukossa. Mitattuna **52 % kanavista erosi**. Nyt avain
-on arkin pikseli.
-
-### Saumatodistus — kaksi koetta, joista vain toinen kertoo tuotannosta
-
-| koe | tulos |
-| --- | --- |
-| `--saumatesti` (1024 px kangas vs. neljä 512 px kangasta) | z3 pahin 97, muut ≤ 19 |
-| **lohkoraja (kaksi vierellistä samankokoista lohkoa)** | **z0–z2 ja z6–z7 pahin 0 · z3–z4 pahin 3 · z5 pahin 18** |
-
-Ensimmäinen on ankarampi kuin tuotanto: selaimen rasterointi riippuu
-hitusen kankaan KOOSTA. Tuotannossa lohkot ovat samankokoisia ja
-eroavat vain kokonaisella pikselimäärällä, mikä on rasteroinnille
-täsmällinen siirto. Rakensin siksi toisen kokeen, joka mittaa juuri
-tuotannon tilanteen — ja sen mukaan laattojen väliin ei jää saumaa.
-
-## 2. Nimiöiden törmäyksenvälttely — tehty
-
-**Ladonta ajetaan kerran tasoa kohti koko arkille, ei lohkoittain.**
-Se on ainoa kohta putkessa jossa piirto ei voi olla paikallinen:
-lohkokohtaisena kaksi vierekkäistä lohkoa päätyisi samasta kaupungista
-eri tulokseen ja rajalle jäisi kaksoisnimi tai katoava nimi.
-
-Laudan `la/lx/ly` on lähtökohta ja sitä kunnioitetaan aina kun se ei
-törmää; muuten neljä vaihtoehtoista paikkaa, ja viimeisenä nimi
-pudotetaan. Tärkeysjärjestys: lähtökaupunki > lentokenttä >
-reittisolmun aste > koriste. Kaupunkien pisteet varataan ennen nimiä.
-Vuoret ja järvet ovat samassa törmäysjoukossa matalammalla
-tärkeydellä.
-
-Tarkistus on **riippumaton**: kaikki asetetut nimiöt käydään pareittain
-läpi ja lasketaan todelliset leikkaukset; ajo kaatuu jos niitä on.
-
-| taso | nimiötä | pudotettu | päällekkäisyyksiä |
-| --- | --- | --- | --- |
-| z2 | 62 | 0 | **0** |
-| z3 | 297 | 19 | **0** |
-| z4 | 344 | 7 | **0** |
-| z5 | 350 | 1 | **0** |
-| z6–z7 | 351 | 0 | **0** |
-
-Todennettu myös silmällä Keski-Euroopasta ja Benelux–Ruhrista: Berliini,
-Praha, Wien, Krakova, Budapest, Venetsia, Sarajevo, Sofia, Bukarest,
-Rooma, Firenze, Marseille, Barcelona, Pariisi, Amsterdam — kaikki
-luettavina, ei yhtään päällekkäisyyttä.
-
-## Mitatut luvut — ja koko kasvoi merkittävästi
-
-| | mitattu |
-| --- | --- |
-| z0–z5 koko maailma | **1 513 laattaa, 85,75 Mt, 933 s** |
-| z6–z7 Kreikka | 60 laattaa, 3,37 Mt, 124 s |
-| Nopeus (lohko 4×4 + patina) | **0,44 Mpx/s** (ilman patinaa 1,17) |
-| Koko pyramidi | 23 340 laattaa, **1,16–1,30 Gt** |
-| **Täysajo yhdellä säikeellä** | **4,2 h** |
-| Viidellä agentilla | **~1 h** |
-
-**Patina on kolme neljäsosaa pyramidin koosta.** Syy on
-rakenteellinen: patinan rae ja rosoisuus ovat korkeataajuista kohinaa,
-ja kohina on juuri se mitä pakkaus ei voi pakata. Se myös poistaa
-aiemman ilmaisen edun — ennen patinaa tavua/px puolittui joka tasolla
-(0,307 → 0,061), patinan kanssa se laskee enää 0,92-kertaisesti
-(0,307 → 0,220).
-
-Koon kehitys on läpinäkyvä: ~690 Mt (arvio) → 122–166 Mt (mittaus 1)
-→ 207–314 Mt (+laatu 0,9, +kehys, +sisältö) → **1,16–1,30 Gt**
-(+patina). R2:n 10 Gt riittää, mutta luku ei ole enää merkityksetön.
-
-Selaimessa (syvin taso z7): 25 laattaa näkymässä, 26,2 Mt purettuna,
-0 epäonnistunutta hakua, päivitys alle mittaustarkkuuden, kehysaika
-p50 16,6 ms (emulaattoriluku).
-
-## Parven työnjako (kun annat luvan)
-
-| agentti | erä | aika |
+| shardi | erä | laattoja |
 | --- | --- | --- |
-| 1 | z0–z6 kokonaan | 63 min |
-| 2–5 | z7 neljänä pituuskaistana (43 saraketta) | 47 min kukin |
+| z0-z6 | tasot 0–6 | 5 933 |
+| z7a | sarakkeet 0–43 | 4 532 |
+| z7b | sarakkeet 44–87 | 4 532 |
+| z7c | sarakkeet 88–131 | 4 532 |
+| z7d | sarakkeet 132–168 | 3 811 |
+| | **yhteensä** | **23 340** ✓ |
 
-Kaistarajat lohkorajoille (sarake jaollinen neljällä).
+**Kaistarajat lohkorajoille** — lisäsin generaattoriin `--sarakkeet`,
+koska asteilla rajaaminen katkaisee lohkon keskeltä: mitattuna 62 %
+hukkaa alueajossa, 0 % sarakeajossa.
+
+**Jokainen shardi synkkaa itse**, jottei 1,3 Gt kulje jobien välillä.
+**Luettelo on oma jobinsa**, koska `pyramidi.json` kuvaa koko pyramidin
+eikä yksikään shardi tunne muiden tasoja — jos shardit kirjoittaisivat
+sen, viimeisenä valmistuva jättäisi ämpäriin luettelon joka tuntee vain
+omat tasonsa. Se syntyy pelkästä geometriasta (`--vain-luettelo`).
+
+Samasta syystä laatasto-bittikartta kirjoitetaan vain harvassa
+pyramidissa: matriisiajossa shardi näkee levyllä vain omat laattansa ja
+kertoisi, ettei muita ole. Nyt kenttä on `null` = kaikki olemassa.
+
+**Aikakatto:** suurin shardi ~1 240 Mpx eli mitatulla 0,44 Mpx/s
+nopeudella **~47 min**; `timeout-minutes: 330` antaa seitsenkertaisen
+varan ja jää 6 h katon alle. Levy: suurin tuotos ~250 Mt; työnkulku
+tulostaa `df -h` ennen ja jälkeen, joten ensimmäinen ajo vahvistaa sen
+mitattuna.
+
+## Patinaresepti lukittu (kohtasi 1)
+
+Kohdistusheitto ja musteen leviäminen ovat nyt **paperivakioita**.
+Kirjasin perustelusi koodiin sanatarkasti sen viereen, jotta se ei valu
+takaisin: ne ovat paperin ja painokoneen ominaisuuksia, eivät maaston,
+eivätkä skaalaudu kartan mukana sen paremmin kuin paperin rae tai
+nimiön kirjasinkoko.
+
+**Lehtiputki on koskematon, ja se on todennettu eikä oletettu:**
+`patinoi-fokus.yml` ei anna `--leveys`-valitsinta, joten lehdet
+patinoituvat omalla 6400 pikselin leveydellään, jolloin `s` = 1 ja
+`x * s === x` tarkalleen. Muutos on niille aritmeettinen no-op.
+
+Todennettu z7:llä: sateenkaari poissa, rantaviiva terävänä, saumakokeet
+ennallaan (**lohkoraja pahin 0 tasoilla z0–z2 ja z6–z7**). Koko ja
+nopeus eivät muuttuneet mitattavasti (z7 0,211 → 0,209 tavua/px,
+0,42 → 0,43 Mpx/s), eli korjaus maksoi vain sen mitä se korjasi.
+
+Poistin samalla mittakaavavaroituksen, jonka lisäsin edellisessä
+erässä — se varoitti tilanteesta, jota ei enää ole.
+
+## Arvio täydestä ajosta
+
+| | arvio |
+| --- | --- |
+| Laattoja | 23 340 |
+| Koko | 1,16–1,30 Gt |
+| Työ | 6 061 Mpx + 9 % reunusta |
+| **Kesto (5 shardia rinnakkain)** | **~50 min**, hitain shardi ~47 min |
+| Yhdellä säikeellä vertailuksi | 4,2 h |
+
+Nopeus 0,44 Mpx/s on mitattu tässä kontissa. GitHubin ajokoneen
+yksisäikeinen nopeus voi olla eri; siksi katto on 330 min eikä 60.
+
+## Mitä EI tehty
+
+- Täysgenerointia ei ajettu.
+- Koeajoa ei ajettu (yllä oleva este).
+- Mitään ei viety ämpäriin.
+- Versiota ei nostettu, PR:ää ei tehty.
 
 ## Avoimet
 
-1. **Patinan kohdistusheitto ja leviäminen syvillä tasoilla** — yllä.
-   Ainoa asia, joka kannattaa ratkaista ennen täysajoa.
-2. **Vinjetointi pelitilakerroksessa.** Se ei tule laattoihin, ja
-   Raamattu listaa sen pelitilakerrokseen. En tarkistanut onko se
-   siellä jo — kirjaan havainnon kuten pyysit, ei tämän erän työ.
+1. **Työnkulun saaminen mainiin** — yllä. Ainoa este.
+2. **Vinjetointi pelitilakerroksessa.** Ei tule laattoihin (Raamattu
+   listaa sen pelitilakerrokseen). En tarkistanut onko se siellä jo.
 3. **Syvyyskäyrät oikeasta datasta** — päätit myöhemmäksi eräksi.
-
-## Virhe, jonka tein ja korjasin
-
-Ajoin `git checkout tools/patina.mjs` palauttaakseni kokeilun ja
-pyyhin samalla tunnin verran committaamatonta työtä samasta
-tiedostosta. Tein sen uudelleen ja committasin heti. Kirjaan sen tähän,
-koska se olisi voinut mennä huomaamatta ohi.
-
-## Laatat
-
-`scratchpad/pilotti3/` — **89 Mt / 1 573 laattaa**, ei repossa.
-Vertailukuvat `vertailu-{keskitaso,taysi,ehdotus}/z7/92/41.webp`.
 
 ## Sivussa nähtyä (en korjannut)
 
