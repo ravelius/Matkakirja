@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1349, teksti: 'Tarinamerkit kaikkiin 39 kaupunkiin' },
   { v: 1348, teksti: 'Yhtenainen kohdemalli kartalle' },
   { v: 1347, teksti: 'Aallon 4B matkakirjaluennat kuuluviin' },
   { v: 1346, teksti: 'Jattilaislehti vaistaa suurennettuna: tarkat naapurit itaan' },
