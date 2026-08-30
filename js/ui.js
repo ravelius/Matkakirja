@@ -276,6 +276,12 @@ import {
  * laudan vaihdossa.
  */
 import { paivitaFokuspiste, nollaaFokuspiste } from './fokuspiste.js';
+/*
+ * Laattapyramidin näkyvät laatat (js/laattapyramidi.js). PILOTTI LIPUN
+ * TAKANA: ilman `?pyramidi=1` jokainen kutsu palaa heti, eikä moduuli
+ * hae verkosta mitään eikä lisää DOMiin yhtäkään elementtiä.
+ */
+import { paivitaPyramidi, nollaaPyramidi, pyramidinMittarit } from './laattapyramidi.js';
 import { paivitaElaintakyt, nollaaElaintakyt } from './elaintaky.js';
 // Karttaselitevalikko ja sen aihevalot (js/karttaselite.js,
 // js/karttavalot.js): nappi kartan oikeaan yläkulmaan, valot merkkien alle.
@@ -4291,6 +4297,17 @@ export class UI {
        * ensimmäisestä eleestä. Moduuli päättää itse, onko koostettavaa.
        */
       this.karttapohja?.paivita('taide');
+      /*
+       * LAATTAPYRAMIDIN NÄKYVÄT LAATAT SAMASTA KOHDASTA (pilotti lipun
+       * takana, js/laattapyramidi.js).
+       *
+       * Tämä on kartan ainoa "näkymä on asettunut" -piste — sama, josta
+       * maastonimet, atlas ja pohjacanvas päivittyvät — eikä pyramidi
+       * tarvitse muuta: se lataa sen palan, joka on näkyvissä. Kutsu
+       * palaa heti, ellei kytkin ole päällä, joten oletuspolulla tämä on
+       * yksi tyhjä funktiokutsu näkymää kohti.
+       */
+      paivitaPyramidi(this);
     }
     if (!this.taide || !this.taideRyhma) return;
     /*
@@ -5663,6 +5680,29 @@ export class UI {
       class: 'fokuskartta', 'pointer-events': 'none',
     }, root);
     nollaaFokuskartta(this);
+
+    /*
+     * LAATTAPYRAMIDIN KERROS (pilotti lipun takana, js/laattapyramidi.js).
+     *
+     * Sama paikka puussa kuin fokuskartalla ja samasta syystä: laatat
+     * ovat maastoa eivätkä pelitilaa, joten ne kuuluvat linssin päälle
+     * mutta korostusten, nimien ja kaupunkien alle. Ryhmä on TYHJÄ eikä
+     * maksa mitään, ellei kytkin ole päällä (?pyramidi=1) — täsmälleen
+     * kuten linssi ja sumuverho ovat tyhjiä kunnes niitä tarvitaan.
+     */
+    this.pyramidiKerros = el('g', {
+      class: 'laattapyramidi', 'pointer-events': 'none',
+    }, root);
+    nollaaPyramidi(this);
+    /*
+     * PILOTIN MITTARIT KONSOLIIN. Suunnitelma
+     * (docs/moduulit/laattapyramidi.md) vaatii pilotilta oikeat luvut
+     * eikä arvioita: latausaika, laattojen määrä näkymässä ja purettu
+     * muisti luetaan laitteelta komennolla `__pyramidinMittarit()`.
+     * Kahva on olemassa aina — se on kolme sanaa eikä maksa mitään — ja
+     * palauttaa nollat, kun kytkin on pois.
+     */
+    globalThis.__pyramidinMittarit = pyramidinMittarit;
     /*
      * Ruutuun ankkuroidut mitat nollille laudan mukana: kartuutsin
      * teksti ja mittajanan pituus riippuvat laudasta, ja vanhat

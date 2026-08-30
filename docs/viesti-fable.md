@@ -1,116 +1,136 @@
-# Opus → Fable: aalto 4B integroitu (PR #1778, v1339)
+# Viesti Fablelle — laattapyramidi, erä 4 (30.8.2026)
 
-Seitsemän packia yhtenä julkaisuna, haara `claude/aalto4b-integrointi`.
-**EI MERGEÄ** ennen katselmointiasi. Koko raportti on PR:n rungossa; tässä
-vain se, mikä vaatii sinun päätöksesi.
+Haara `claude/pyramidi-pilotti`. Ei versionostoa, ei PR:ää.
+**Portit: 1048 pass / 0 fail, savuke-laattapyramidi 13/13.**
 
-## 1. Kaanonkorjaukset menivät läpi sanatarkasti
+En käynnistänyt yhtään agenttia täysajoa varten, joten mitään ei ollut
+pysäytettävänä. Työnkulku on valmis. **Yksi asia estää koeajon, ja
+tarvitsen siihen sinulta päätöksen.**
 
-Neljä korjattua kaupunkia (Firenze, Marseille, Tampere, Barcelona) on
-vaihdettu kaanonpaperisi muotoon, Firenze ja Tampere myös
-`matkakirja.luenta`-kenttään. Kaikkien seitsemän kaupungin 28
-kaanonkenttää verrattiin koneellisesti paperiisi: **täsmäävät kaikki**.
+---
 
-Barcelonan korjaus sovitettiin sen omaan `maadoitus` + `teksti`
--jakoon sanoja muualta muuttamatta — peräkkäin luettuna kupla on yhä
-sanasta sanaan kaanontekstisi.
+## ESTE: työnkulkua ei voi ajaa haaralta
 
-**Yksi muotokysymys sinulle:** Firenzen uusien virkkeiden jälkeen
-paperissa on rivinvaihto ennen *"Joki on ruskea ja kärsimätön…"*. Se on
-paperin ainoa kappaleen keskellä oleva lyhyt rivi, eikä yksikään pakki
-käytä `\n`:ää merkintäteksteissä, joten tulkitsin sen rivitysjäljeksi ja
-latoin merkinnän yhdeksi kappaleeksi. Jos kappalejako oli tarkoitettu,
-se on yhden merkin korjaus.
+`workflow_dispatch` toimii vain, jos työnkulkutiedosto on
+**oletushaarassa**. Kokeilin ja todensin, en oleta:
 
-## 2. Spoileritarkistus: viisi löydöstä, joita EN korjannut
+- dispatch haaralle `claude/pyramidi-pilotti` → **404 Not Found**
+- repon 27 työnkulun listaus → jokaisen `html_url` osoittaa
+  `blob/main/...`, eikä `generoi-pyramidi.yml` ole listalla lainkaan.
+  Se ei siis ole lupaongelma vaan rekisteröinti: GitHub ei tunne
+  työnkulkua ennen kuin se on mainissa.
 
-Kaanoniin ei kosketa ilman sinua. Korjauksesi poistivat Barcelonan
-viisteen, Marseillen kirjan ja Tampereen lisänimen. Jäljelle jäi:
+Käskit: ei PR:ää, ei versionostoa — enkä siksi vienyt tiedostoa
+mainiin. **Koeajo vaatii, että `generoi-pyramidi.yml` on mainissa.**
+Vaihtoehdot:
 
-| Kaupunki | Laattakysymys | Vastaus paljastuu |
-|---|---|---|
-| Marseille | *keitto* → bouillabaisse | kaanon: *"Se kalakeitto on bouillabaisse"* |
-| Marseille | *millä saarella Monte-Criston kreivi istui* → Ifin saarella | kaanon: *"se linnoitussaari on If"* — korjaus poisti kirjan nimen, mutta kysymys kysyy saarta kirjan avulla |
-| Venetsia | *miksi Venetsia vajoaa* → laguunin pehmeä pohja | **Livian maadoitus** (pakin omaa tekstiä, ei kaanonia) |
-| Venetsia | *Venetsian sydän* → Pyhän Markuksen tori | kaanon: *"Vesi nousee Markuksen torille … Mennään torille"* |
-| Firenze | *Ponte Vecchion kaupat 1593* → kultasepäntöitä | kaanon: *"Sillalla kultasepät takovat"* |
+1. **Sinä mergeät työnkulkutiedoston mainiin** (se on yksi uusi
+   tiedosto, ei koske peliin eikä muuta oletuspolkua), minkä jälkeen
+   voin ajaa koeajon ja todentaa laatat ämpärissä.
+2. Merge koko haara normaalilla julkaisukaavallasi, ja koeajo sen
+   jälkeen.
+3. Ajat koeajon itse napista, ja minä todennan tuloksen.
 
-Näistä **vain Venetsian maadoitus ei ole kaanonia** — sen voi muuttaa
-ilman kaanonpäätöstä, jos haluat. Kulttuurivisojen vastauksista yksikään
-ei paljastu missään kaupungissa.
+Suosittelen vaihtoehtoa 1: työnkulku on ainoa osa, joka on pakko olla
+mainissa, ja se on inertti kunnes joku painaa nappia.
 
-## 3. NOSTO_MAAT täydennetty 19 rivillä
+## R2-vienti: mitä se vaatii (kysymyksesi 4)
 
-Taulussa oli viisi maata, vaikka `takynostot`-kenttä oli kertynyt 25
-pakettiin: nostot näkyivät vain maan aarrekaupungissa. Nyt taulussa on 24
-maata. Kaksi ratkaisua, jotka kannattaa tietää:
+| asia | tila |
+| --- | --- |
+| Tunnukset kontissa | **ei ole** — vahvistettu, siksi kontti ei kelpaa |
+| Secretit | `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET`, `R2_ACCOUNT_ID` — käytin täsmälleen näitä, en kirjoittanut tunnuksia mihinkään enkä lokita niitä |
+| Malli | `patinoi-fokus.yml` (generointi + sync samassa jobissa) ja `vie-fokus.yml` — rakenne niistä, ei keksitty |
+| Julkinen osoite | `https://pub-…r2.dev/julisteet/pyramidi/<versio>/z7/92/41.webp` — sama reitti kuin lehdillä, eli **suoraan selaimen haettavissa** |
+| Viennin kesto | sync tapahtuu shardin omassa jobissa generoinnin perässä; suurin shardi ~250 Mt |
 
-- Kun maalla on kaksi omaa poolia, rivi osoittaa **aarrekaupunkiin**:
-  `GBR`→Lontoo (ei Edinburgh), `ESP`→Madrid (ei Sevilla). Edinburghin
-  pakki pyysi kommentissaan juuri tätä ratkaisua.
-- `BIH` (Sarajevo) ei ollut tehtävälistalla, mutta sen pakissa on
-  `takynostot`, joten se täytti ehdon ja lisättiin.
+## Työnkulku — `.github/workflows/generoi-pyramidi.yml`
 
-Kaupungin oma kenttä voittaa poolin edelleen — tarkistettu Euroopan
-kaikilla 45 kaupungilla ja kahdella savukkeella.
+`workflow_dispatch`, syötteinä versio, shardivalinta
+(`kaikki` / `vain-z0-z6` / `koeajo-z0-z3`), laatu, patinataso ja
+`vie`-kytkin (pois = pelkkä harjoitus ilman ämpäriä).
 
-## 4. Löytyi kaatava niputusvirhe
+**Matriisi korvaa parven kokonaan.** Laattamäärät tarkistettu ajamalla
+jokainen kaista `--kuiva`-tilassa:
 
-Tampereen ja Prahan pakeissa oli molemmissa `SILTA_VISA`, ja yhden
-tiedoston niputus kaatui siihen kokonaan (`{"peli":false}`). Tampereen
-vakio nimettiin `HAMEENSILTA_VISA`:ksi; visan sisältö ei muutu. Koko
-niputuslista (234 moduulia) on nyt tarkistettu tuplanimien varalta.
+| shardi | erä | laattoja |
+| --- | --- | --- |
+| z0-z6 | tasot 0–6 | 5 933 |
+| z7a | sarakkeet 0–43 | 4 532 |
+| z7b | sarakkeet 44–87 | 4 532 |
+| z7c | sarakkeet 88–131 | 4 532 |
+| z7d | sarakkeet 132–168 | 3 811 |
+| | **yhteensä** | **23 340** ✓ |
 
-## 5. Kohtaamisluonnokset odottavat sinua
+**Kaistarajat lohkorajoille** — lisäsin generaattoriin `--sarakkeet`,
+koska asteilla rajaaminen katkaisee lohkon keskeltä: mitattuna 62 %
+hukkaa alueajossa, 0 % sarakeajossa.
 
-Seitsemän luonnosta, rivinumerot PR:n viimeisessä taulukossa:
-Roser (Barcelona), Ginevra (Firenze), Lucia (Venetsia), Baptiste
-(Marseille), Sigrid (Oslo), Vieno (Tampere), Rasa (Vilna).
+**Jokainen shardi synkkaa itse**, jottei 1,3 Gt kulje jobien välillä.
+**Luettelo on oma jobinsa**, koska `pyramidi.json` kuvaa koko pyramidin
+eikä yksikään shardi tunne muiden tasoja — jos shardit kirjoittaisivat
+sen, viimeisenä valmistuva jättäisi ämpäriin luettelon joka tuntee vain
+omat tasonsa. Se syntyy pelkästä geometriasta (`--vain-luettelo`).
 
-## 6. Katselmointipäätöksesi on sovellettu (kierros 2)
+Samasta syystä laatasto-bittikartta kirjoitetaan vain harvassa
+pyramidissa: matriisiajossa shardi näkee levyllä vain omat laattansa ja
+kertoisi, ettei muita ole. Nyt kenttä on `null` = kaikki olemassa.
 
-- **Kaanonpaperin uusin versio** ajettu packeihin: Marseillen kaksi
-  virkettä, Venetsian "sille kuuluisalle torille", Firenzen kaksi
-  kohtaa (merkintä + luenta + pollo). Kaikki 28 kaanonkenttää
-  tarkistettu koneellisesti uutta paperia vasten — **täsmäävät**.
-- **Venetsian maadoitus korjattu luvallasi.** Uusi virke:
-  *"Tämän kaupungin talot seisovat puupaalujen päällä: paaluja lyötiin
-  tiheinä riveinä alas, ja niiden päälle ladottiin ensin
-  kalkkikivilaatat ja vasta sitten tiilet."* Lisäksi kolmas virke alkaa
-  nyt *"Ilman happea"* (ennen *"Hapettomassa mudassa"*), jottei maaperä
-  esiinny missään muodossa. Paalut, laatat, tiilet ja Saluten yli
-  miljoona paalua ovat tallella. Merkitty kommentilla
-  `/* FABLE HYVAKSYI: maadoituskorjaus */`.
-- **Firenzen rivinvaihto** jätetty ennalleen yhtenä kappaleena.
-- **Rivitys**: en kopioinut paperin rivinvaihtoja, vaan latoin tekstit
-  packien normaalilla rivityksellä. Sanat ratkaisivat.
+**Aikakatto:** suurin shardi ~1 240 Mpx eli mitatulla 0,44 Mpx/s
+nopeudella **~47 min**; `timeout-minutes: 330` antaa seitsenkertaisen
+varan ja jää 6 h katon alle. Levy: suurin tuotos ~250 Mt; työnkulku
+tulostaa `df -h` ennen ja jälkeen, joten ensimmäinen ajo vahvistaa sen
+mitattuna.
 
-Koneellinen jälkitarkistus: kaikki viisi raportoimaani suoraa
-vastauspaljastusta ovat nyt **poissa**.
+## Patinaresepti lukittu (kohtasi 1)
 
-Yksi tietoinen jäännös: Firenzen kohtaamiskortti nimeää ammatin
-(*Kultaseppä Ginevra*). Se on laattakysymyksen TAKANA, eli pelaaja on jo
-vastannut siihen, ja Livian uusi vihje *"kohta näet keiden käsissä"*
-osoittaa juuri siihen korttiin. Perustelu on kirjattu pakin kommenttiin.
-Jos haluat ammatinkin pois, se on hahmon nimen ja napin vaihto.
+Kohdistusheitto ja musteen leviäminen ovat nyt **paperivakioita**.
+Kirjasin perustelusi koodiin sanatarkasti sen viereen, jotta se ei valu
+takaisin: ne ovat paperin ja painokoneen ominaisuuksia, eivät maaston,
+eivätkä skaalaudu kartan mukana sen paremmin kuin paperin rae tai
+nimiön kirjasinkoko.
 
-## 7. Versio v1341, ei v1339
+**Lehtiputki on koskematon, ja se on todennettu eikä oletettu:**
+`patinoi-fokus.yml` ei anna `--leveys`-valitsinta, joten lehdet
+patinoituvat omalla 6400 pikselin leveydellään, jolloin `s` = 1 ja
+`x * s === x` tarkalleen. Muutos on niille aritmeettinen no-op.
 
-Main julkaisi v1340:n (luennat) kesken katselmointikorjausten, joten
-v1339 olisi vienyt sovellusversion taaksepäin. Haara on rebasoitu
-mainiin (`eff8989d`) ja numero nostettu työkalulla uudelleen: **v1341**.
-Versiotiedostojen konfliktit ratkaistiin julkaisusäännön 5 mukaan ja
-rekisteröinnit tarkistettiin rebasen jälkeen erikseen.
+Todennettu z7:llä: sateenkaari poissa, rantaviiva terävänä, saumakokeet
+ennallaan (**lohkoraja pahin 0 tasoilla z0–z2 ja z6–z7**). Koko ja
+nopeus eivät muuttuneet mitattavasti (z7 0,211 → 0,209 tavua/px,
+0,42 → 0,43 Mpx/s), eli korjaus maksoi vain sen mitä se korjasi.
 
-## 8. Portit ja peilaus valmiit
+Poistin samalla mittakaavavaroituksen, jonka lisäsin edellisessä
+erässä — se varoitti tilanteesta, jota ei enää ole.
 
-Portit ajettu uudelleen korjausten jälkeen: testit 1054/0, savukkeet
-fokusvirta 50/50, fokuskohteet 88/88, nappula 24/24, kartta-tila 20/20,
-dist `{"peli":true}` VIRHEET `[]`. **PR:n Testit-tarkistus on vihreä**
-(ajo 33278505029, commit `3bba99c9`).
+## Arvio täydestä ajosta
 
-**Kuvapeilaus valmis: Commons 33/33 ja ämpärikuvat 5/5 palauttavat 200
-— puuttuu 0.** Kuvakaappaukset otettu uudelleen korjausten jälkeen:
-`/tmp/matkakirja-kaappaukset/aalto4b/`.
+| | arvio |
+| --- | --- |
+| Laattoja | 23 340 |
+| Koko | 1,16–1,30 Gt |
+| Työ | 6 061 Mpx + 9 % reunusta |
+| **Kesto (5 shardia rinnakkain)** | **~50 min**, hitain shardi ~47 min |
+| Yhdellä säikeellä vertailuksi | 4,2 h |
 
-Valmis mergeen sinun puolestasi.
+Nopeus 0,44 Mpx/s on mitattu tässä kontissa. GitHubin ajokoneen
+yksisäikeinen nopeus voi olla eri; siksi katto on 330 min eikä 60.
+
+## Mitä EI tehty
+
+- Täysgenerointia ei ajettu.
+- Koeajoa ei ajettu (yllä oleva este).
+- Mitään ei viety ämpäriin.
+- Versiota ei nostettu, PR:ää ei tehty.
+
+## Avoimet
+
+1. **Työnkulun saaminen mainiin** — yllä. Ainoa este.
+2. **Vinjetointi pelitilakerroksessa.** Ei tule laattoihin (Raamattu
+   listaa sen pelitilakerrokseen). En tarkistanut onko se siellä jo.
+3. **Syvyyskäyrät oikeasta datasta** — päätit myöhemmäksi eräksi.
+
+## Sivussa nähtyä (en korjannut)
+
+- `savuke-karttazoom.mjs` on `tools/`-juuressa, ei `tools/savukkeet/`.
+- `tools/hero-tyolista-*.mjs` — 25 kertaluontoista ajotiedostoa juuressa.

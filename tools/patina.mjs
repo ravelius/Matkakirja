@@ -120,6 +120,7 @@
  */
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { basename, extname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 /* ============================================================ RESEPTIT */
 
@@ -220,8 +221,25 @@ const SAVYT = {
  * halutaan. Koneisto on poistettu; litistys jäi.
  */
 const SYVYYS = {
-  /* Osuus porrasaskeleesta, joka jää jäljelle (0 = tasainen meri). */
-  litistys: 0.20,
+  /*
+   * Osuus porrasaskeleesta, joka jää jäljelle (0 = tasainen meri).
+   *
+   * NOSTETTU 0,20 → 0,70 (omistaja 30.8.2026). Litistyksen AINOA
+   * peruste oli LEHTIEN SAUMAT: 23 lehden otoksessa oman meren
+   * keskisävy vaihteli L=199,9…211,2, ja ilman voimakasta litistystä
+   * naapurilehtien avomeri asettui eri sävyyn niin että sauma näkyi.
+   *
+   * LAATTAPYRAMIDISSA EI OLE SAUMOJA — koko maailma on yksi arkki,
+   * jonka jokainen pikseli lasketaan samasta ruudukosta samalla
+   * kaavalla. Peruste katosi, ja sen mukana syy hukata 80 %
+   * oikeasta syvyyssignaalista.
+   *
+   * Bandingin (omistajan alkuperäinen valitus) hoitaa nyt TIHEÄMPI
+   * SYVYYSRAMPPI (tools/fokuskartta/piirto.js SYVYYS), ei litistys:
+   * banding ei johtunut liiasta syvyyssignaalista vaan siitä, että
+   * rampissa oli seitsemän porrasta viidelle kilometrille.
+   */
+  litistys: 0.70,
   /*
    * GLOBAALI MEREN TAVOITESÄVY pohjakuvan sävyssä, ENNEN sävykäyrää —
    * käyrä ajetaan sen yli samalla kaavalla kuin meripikselille, jotta
@@ -566,8 +584,26 @@ const VESIVIIVAT_HARVA = {
   huojunta: 9,
 };
 
-/* VALINTA: kumpi vesiviivoitus ajetaan. */
-const VESIVIIVOITUS = VESIVIIVAT_TIHEA;
+/*
+ * VALINTA: kumpi vesiviivoitus ajetaan — vai kumpikaan.
+ *
+ * POIS PÄÄLTÄ 30.8.2026 (omistaja): *"nykyinen vesiviivoitus on
+ * geneerinen ja se saa jäädä pois kunnes se pohjautuu oikeaan
+ * dataan"*.
+ *
+ * Syy on rakenteellinen eikä säätökysymys: nämä viivat piirretään
+ * RANTAETÄISYYDESTÄ eivätkä syvyydestä. Ne näyttävät syvyyskäyriltä
+ * mutta eivät kerro syvyydestä mitään — mannerjalustan reuna,
+ * syvänmeren hauta ja keskiselänne saavat kaikki saman
+ * samankeskisen viivaston, koska ainoa muuttuja on etäisyys rantaan.
+ * Kaunis mutta valheellinen kartta on huonompi kuin karu ja tosi.
+ *
+ * Oikeat syvyyskäyrät (marching squares kiinteillä syvyyksillä
+ * ETOPO1:n batymetriasta) ovat oma eränsä. Koneisto jää tähän
+ * sellaisenaan: `VESIVIIVAT_TIHEA` ja `VESIVIIVAT_HARVA` ovat
+ * koskemattomina tallella, ja passi herää `null`-arvon vaihtamisella.
+ */
+const VESIVIIVOITUS = null;
 
 /*
  * MAANRAJAT ASTEEN TUMMEMMIKSI.
@@ -613,9 +649,35 @@ const ROSOISUUS = { voima: 0.5, skaala: 420 };
  * paikalleen; siirtymä näkyy vain värialueiden rajoilla ohuena
  * väriripsauksena, kuten oikeassa vedoksessa.
  */
+/*
+ * SIIRTO ON PAPERIN JA PAINOKONEEN OMINAISUUS, EI MAASTON.
+ *
+ * Lukittu 30.8.2026: dx/dy ovat KUVAPIKSELEITÄ sellaisenaan eikä niitä
+ * kerrota mittakaavalla `s`. Painolaatan kohdistusheitto on
+ * painokoneen ominaisuus samalla tavalla kuin paperin rae on paperin
+ * ja kirjasinkoko ladonnan — mikään niistä ei skaalaudu sen mukaan,
+ * kuinka suurta aluetta arkki esittää.
+ *
+ * MIKSI TÄMÄ ON KIRJATTU NÄIN PAINOKKAASTI. Kertoimella `s` sama
+ * 2,6 pikselin heitto oli laattapyramidin syvimmällä tasolla 35
+ * pikseliä, ja mitattuna (Peloponnesos, z7, 30.8.2026) se maalasi koko
+ * mantereen sateenkaaren värisiksi läiskiksi ja hukutti rantaviivan
+ * usvaan. Se ei ollut hienovarainen väriripsaus vaan painovirhe.
+ * Kertoimen palauttaminen tuo sen takaisin.
+ *
+ * 6400 PIKSELIN LEHDILLE TÄMÄ EI MUUTA MITÄÄN, koska niillä `s` = 1.
+ * Vanha lehtiputki on siis koskematon.
+ */
 const KOHDISTUS = { dx: 2.6, dy: -1.8, voima: 0.85 };
 
-/* Musteen kevyt leviäminen: hiuksenhieno kehä kirjaimen ympärille. */
+/*
+ * Musteen kevyt leviäminen: hiuksenhieno kehä kirjaimen ympärille.
+ *
+ * SÄDE ON PAPERIVAKIO (lukittu 30.8.2026, sama perustelu kuin
+ * KOHDISTUS): muste leviää paperin kuidussa, eikä kuitu tiedä mitä
+ * mittakaavaa kartta esittää. Kertoimella `s` tämä oli syvimmällä
+ * tasolla 27 pikselin sumennus — hiuksenhienon kehän sijaan usva.
+ */
 const LEVIAMINEN = { sade: 2, voima: 0.3 };
 
 /*
@@ -740,8 +802,9 @@ export const VERTAILUPALA = {
  * viitata mihinkään moduulin ulkopuoliseen — kaikki apurit ovat
  * sisällä ja kaikki parametrit tulevat argumenttina.
  */
-async function patinoiSelaimessa({
+export async function patinoiSelaimessa({
   b64, tyyppi, resepti, leveys, muoto, laatu, tausta, maailma,
+  koko = null, pikselit = null, palauta = 'b64',
 }) {
   /* --------------------------------------------------------- apurit */
   const mulberry32 = (a) => function satunnainen() {
@@ -789,20 +852,48 @@ async function patinoiSelaimessa({
   };
 
   /* ------------------------------------------------------ kuvan avaus */
-  const kuva = new Image();
-  kuva.src = `data:image/${tyyppi};base64,${b64}`;
-  await kuva.decode();
-  const L = leveys || kuva.width;
-  const K = Math.round(kuva.height * (L / kuva.width));
+  /*
+   * KAKSI SISÄÄNTULOA. Lehtityökalu antaa kuvan base64:nä; pyramidi
+   * antaa valmiin ImageDatan (`pikselit`), koska se ajaa tämän passin
+   * SAMASSA SIVUSSA heti piirron perään eikä kuvaa kannata kiertää
+   * PNG:n kautta lohkoa kohti — se olisi tuhansia turhia purkuja.
+   */
   const kanvaasi = document.createElement('canvas');
+  let L; let K;
+  if (pikselit) {
+    L = pikselit.width;
+    K = pikselit.height;
+  } else {
+    const mitta = new Image();
+    mitta.src = `data:image/${tyyppi};base64,${b64}`;
+    await mitta.decode();
+    L = leveys || mitta.width;
+    K = Math.round(mitta.height * (L / mitta.width));
+  }
   kanvaasi.width = L; kanvaasi.height = K;
   const g = kanvaasi.getContext('2d', { willReadFrequently: true });
   g.imageSmoothingQuality = 'high';
-  g.drawImage(kuva, 0, 0, L, K);
-  const kuvadata = g.getImageData(0, 0, L, K);
+  if (!pikselit) {
+    const kuva = new Image();
+    kuva.src = `data:image/${tyyppi};base64,${b64}`;
+    await kuva.decode();
+    g.drawImage(kuva, 0, 0, L, K);
+  }
+  const kuvadata = pikselit
+    ? new ImageData(new Uint8ClampedArray(pikselit.data), L, K)
+    : g.getImageData(0, 0, L, K);
   const d = kuvadata.data;
-  /* Kaikki mitat on säädetty 6400 pikselin lehdelle. */
-  const s = L / 6400;
+  /*
+   * KAIKKI MITAT ON SÄÄDETTY 6400 PIKSELIN LEHDELLE.
+   *
+   * `koko` on koko ARKIN mitat silloin kun tämä kuva on vain pala
+   * siitä (laattapyramidin lohko). Ilman sitä arkki on tämä kuva, eli
+   * lehtityökalun entinen käytös sanasta sanaan. Ero on sama kuin
+   * piirtomoottorin S:llä: 2048 pikselin lohkosta laskettu s antaisi
+   * paperin syylle ja rakeelle kolmenkymmenen kerran liian hienon
+   * mittakaavan, ja lohkojen raja näkyisi kuviona.
+   */
+  const s = (koko?.w ?? L) / 6400;
 
   const lum = (r, gg, b) => 0.299 * r + 0.587 * gg + 0.114 * b;
 
@@ -1194,7 +1285,11 @@ async function patinoiSelaimessa({
   /* ------------------------------------------------------- mustekentät */
   let musteSumea = null;
   if (resepti.leviaminen) {
-    const sade = Math.max(1, Math.round(resepti.leviaminen.sade * s));
+    /*
+     * SÄDE ON PAPERIVAKIO, EI KARTTAVAKIO (omistajan lukitus
+     * 30.8.2026). Ks. LEVIAMINEN-vakion perustelu.
+     */
+    const sade = Math.max(1, Math.round(resepti.leviaminen.sade));
     const m = new Uint8Array(L * K);
     for (let p = 0; p < L * K; p++) {
       const i = p * 4;
@@ -1347,9 +1442,9 @@ async function patinoiSelaimessa({
       /* --- 2. painolaattojen kohdistusheitto (vain matala väritieto) --- */
       if (ko) {
         const oR = hae4(r4, x, y); const oG = hae4(g4, x, y); const oB = hae4(b4, x, y);
-        const sR = hae4(r4, x + ko.dx * s, y + ko.dy * s);
-        const sG = hae4(g4, x + ko.dx * s, y + ko.dy * s);
-        const sB = hae4(b4, x + ko.dx * s, y + ko.dy * s);
+        const sR = hae4(r4, x + ko.dx, y + ko.dy);
+        const sG = hae4(g4, x + ko.dx, y + ko.dy);
+        const sB = hae4(b4, x + ko.dx, y + ko.dy);
         const oL = lum(oR, oG, oB); const sL = lum(sR, sG, sB);
         r += ((sR - sL) - (oR - oL)) * ko.voima;
         gg += ((sG - sL) - (oG - oL)) * ko.voima;
@@ -1493,10 +1588,21 @@ async function patinoiSelaimessa({
             fy + py / (sy * s) + wp * 0.35) - 0.5);
           pr += w;
         }
-        /* Pikselikohtainen rae ja alempana dither ovat valkoista
-         * kohinaa ilman rakennetta: niissä ei ole faasia, jonka voisi
-         * katkaista lehden rajalla, joten ne pysyvät pikselissä. */
-        const raeN = rae(x, y, 1337) - 0.5;
+        /*
+         * Pikselikohtainen rae ja alempana dither ovat valkoista
+         * kohinaa ilman rakennetta. LEHDELLE ne saivat jäädä lehden
+         * omaan pikseliin: naapurilehti on eri paperi.
+         *
+         * LAATTAPYRAMIDISSA SE EI PÄDE. Laatat ovat saman arkin paloja,
+         * ja lehden omaan pikseliin sidottu kohina antaisi JOKAISELLE
+         * laatalle täsmälleen saman kohinakentän — rakenteeton kohina
+         * muuttuu rakenteeksi, kun se toistuu 512 pikselin ruudukossa.
+         * Mitattuna se oli suurin yksittäinen ero laattojen ja yhden
+         * ison kuvan välillä (52 % kanavista). Avain on siksi ARKIN
+         * pikseli, joka on jokaisessa kohdassa eri ja lohkojaosta
+         * riippumaton.
+         */
+        const raeN = rae(Math.round(x + faasiX), Math.round(y + faasiY), 1337) - 0.5;
         const karkea = kohinaRae(px / (pa.raeKarkeaSkaala * s),
           py / (pa.raeKarkeaSkaala * s)) - 0.5;
         /*
@@ -1579,7 +1685,9 @@ async function patinoiSelaimessa({
        * Sama dither kaikille kanaville, jottei syntyisi väriräiskettä;
        * kvantisointivirheen irrottamiseen se riittää.
        */
-      const dth = rae(x, y, 0x5eed1) + rae(x, y, 0x5eed2) - 1;
+      const gx = Math.round(x + faasiX);
+      const gy = Math.round(y + faasiY);
+      const dth = rae(gx, gy, 0x5eed1) + rae(gx, gy, 0x5eed2) - 1;
       r += dth; gg += dth; b += dth;
       d[i] = r < 0 ? 0 : (r > 255 ? 255 : r);
       d[i + 1] = gg < 0 ? 0 : (gg > 255 ? 255 : gg);
@@ -1587,6 +1695,14 @@ async function patinoiSelaimessa({
     }
   }
   g.putImageData(kuvadata, 0, 0);
+  /*
+   * PALUU KAHTA LAJIA. Lehtityökalu haluaa pakatun kuvan; pyramidi
+   * haluaa pikselit, koska se leikkaa lohkosta laatat ja pakkaa vasta
+   * ne — lohkon pakkaaminen välissä olisi työtä, joka heitetään pois.
+   */
+  if (palauta === 'pikselit') {
+    return { pikselit: kuvadata, leveys: L, korkeus: K };
+  }
   const mime = muoto === 'jpeg' ? 'image/jpeg' : (muoto === 'webp' ? 'image/webp' : 'image/png');
   return { b64: kanvaasi.toDataURL(mime, laatu).split(',')[1], leveys: L, korkeus: K };
 }
@@ -1628,7 +1744,29 @@ async function vertailuSelaimessa({ kuvat, pala, laatu }) {
   return c.toDataURL('image/jpeg', laatu).split(',')[1];
 }
 
+/*
+ * JPEG ei kanna läpinäkyvyyttä: lehden häivytetty vuotoreuna ladotaan
+ * paperin väriin, ei mustaan (kuten canvas tekisi). Viety ulos, koska
+ * laattapyramidi ajaa saman passin (ks. AJETAAN_SUORAAN alla).
+ */
+export const TAUSTA = [232, 220, 188];
+
 /* ================================================================ ajo */
+
+/*
+ * TÄMÄ TIEDOSTO ON SEKÄ TYÖKALU ETTÄ MODUULI.
+ *
+ * Laattapyramidi ajaa saman patinapassin osana laattojen generointia
+ * (tools/generoi-laattapyramidi.mjs), eikä resepti saa olla kahdessa
+ * paikassa — tiedoston oma sääntö on, että "reseptiolio on yhdessä
+ * paikassa eikä hajallaan koodissa". Siksi RESEPTIT, TAUSTA ja
+ * `patinoiSelaimessa` viedään ulos, ja komentorivityökalu ajetaan
+ * vain kun tämä tiedosto on suorituksen lähtökohta.
+ */
+const AJETAAN_SUORAAN = Boolean(process.argv[1])
+  && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+
+if (AJETAAN_SUORAAN) {
 
 const argv = process.argv.slice(2);
 const valitsin = (nimi, oletus) => {
@@ -1666,9 +1804,6 @@ const pala = (() => {
   const [x, y, w, h] = p.split(',').map(Number);
   return { ...VERTAILUPALA, x, y, w, h };
 })();
-/* JPEG ei kanna läpinäkyvyyttä: lehden häivytetty vuotoreuna
- * ladotaan paperin väriin, ei mustaan (kuten canvas tekisi). */
-const TAUSTA = [232, 220, 188];
 
 /*
  * LEHDEN PAIKKA LAUDALLA — KOHINOIDEN FAASI.
@@ -1758,3 +1893,5 @@ if (lippu('vertailu')) {
 }
 
 await selain.close();
+
+} /* AJETAAN_SUORAAN */

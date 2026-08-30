@@ -96,6 +96,29 @@
  * Hypsometrinen asteikko. Alanko on haalean khakinvihreä (1873-atlaksen
  * tapa), ylöspäin lämpimän ruskean puolelle — sama väriperhe kuin pelin
  * seepiakartassa (#e7d2a4 -> #c69257 -> #a2603a).
+ *
+ * === ASTEIKKO YLTÄÄ NYT HUIPULLE ASTI (omistaja 30.8.2026) ==========
+ *
+ * Asteikko päättyi 2900 metriin, ja `lerpVari` clamppaa ylimpään
+ * portaaseen — siis KAIKKI Tiibetistä Andeille ja Himalajan huipuille
+ * oli täsmälleen samaa sävyä (150,90,62). Maailmanlaajuisessa
+ * laattapyramidissa se on iso menetys: juuri vuoristot ovat se, mitä
+ * kartalta katsotaan, ja ne olivat yhtä ruskeaa läiskää.
+ *
+ * PORTAAT 2900 JA ALLE EIVÄT MUUTU, ja se on ehto eikä sattuma: alle
+ * 2900 metrin maasto renderöityy näillä luvuilla pikselilleen samoin
+ * kuin ennen. Uudet portaat ovat puhdas lisäys asteikon YLÄPÄÄHÄN.
+ *
+ * SE EI SILTI TARKOITA, ETTÄ VANHAT LEHDET OLISIVAT ENNALLAAN.
+ * Jokainen lehti, jossa on yli 2900 metrin maastoa — Alpit, Himalaja,
+ * Andit, Kaukasus — piirtyy tästä eteenpäin ERI NÄKÖISENÄ, ja juuri
+ * se on muutoksen tarkoitus. Ämpärissä olevat lehdet EIVÄT muutu
+ * itsestään; jos ne ajetaan uudestaan (.github/workflows/
+ * patinoi-fokus.yml), on js/media.js FOKUS_VUOSIKERTA nostettava, tai
+ * selaimiin jää vanha vuorikuvitus välimuistiin.
+ *
+ * Ylin pää on IKUINEN LUMI aikakauden kartografian konvention mukaan:
+ * ruskea kylmenee harmaaseen ja vaalenee lopulta lumen valkoiseksi.
  */
 export const ASTEIKKO = [
   { m: -60, v: [214, 202, 168] },
@@ -106,6 +129,10 @@ export const ASTEIKKO = [
   { m: 1400, v: [190, 141, 92] },
   { m: 2000, v: [169, 110, 72] },
   { m: 2900, v: [150, 90, 62] },
+  { m: 4200, v: [128, 76, 58] },
+  { m: 5500, v: [112, 72, 62] },
+  { m: 7000, v: [140, 122, 116] },
+  { m: 8850, v: [214, 208, 200] },
 ];
 
 /*
@@ -128,7 +155,45 @@ export const ASTEIKKO = [
  * kuvassa, joten valtamerilehtien ilme ei muutu — muuttuu se, että
  * mannerjalusta erottuu vihdoin ulapasta ja paperista.
  */
-export const SYVYYS = [
+/*
+ * === RAMPPI SILOTETTIIN (omistaja 30.8.2026) ========================
+ *
+ * Omistajan valitus 29.8.2026 oli *"syvyysvyöhykerenkaat näyttävät
+ * bandingilta"*, ja siihen vastattiin litistämällä koko syvyyssignaali
+ * 80-prosenttisesti kohti kiinteää merensävyä (tools/patina.mjs
+ * SYVYYS.litistys 0,20). Se hoiti oireen mutta tappoi potilaan: meri
+ * menetti samalla sen tiedon, joka siinä oikeasti oli.
+ *
+ * BANDING ON TAITE, EI PORTAIDEN VÄHYYS. Mitattuna vanhasta rampista:
+ * syvän meren (alle −200 m) pahin GRADIENTIN TAITE oli 6,9 sävyä
+ * tuhatta metriä kohti, koska väliä −120…−5000 m kannatteli neljä
+ * lineaarista jaksoa, joiden liitoskohdissa kulmakerroin hyppää.
+ * Juuri sellainen taite näkyy laakealla merellä renkaana.
+ *
+ * Ensimmäinen korjausyritys — kymmenen käsin asetettua välipistettä —
+ * MITATTIIN JA HYLÄTTIIN: se pahensi taitteen 12,3:een, koska jokainen
+ * silmämääräinen piste tuo oman pienen taitteensa. Tilalle tuli
+ * monotoninen kuutiollinen interpolointi alkuperäisten ankkurien läpi
+ * (ks. monotoninenRamppi), näytteistettynä 25 metrin välein.
+ *
+ * MITATTU LOPPUTULOS: pahin taite 6,9 → 1,8 sävyä / 1000 m
+ * (3,8-kertainen parannus), kokonaiskontrasti 42,0 sävyä ENNALLAAN ja
+ * jokainen alkuperäinen ankkuri paikallaan. Banding vähenee siis
+ * ilman että syvyyssignaalista hukataan yhtään mitään — päinvastoin
+ * kuin litistyksessä.
+ *
+ * ETOPO1 on topo-batymetrinen, joten syvyysdata on jo haussa mukana
+ * (tools/hae-korkeusruudukko.mjs); tämä ei vaadi uutta aineistoa.
+ *
+ * Varsinaiset SYVYYSKÄYRÄT (marching squares kiinteillä syvyyksillä)
+ * ovat myöhempi oma eränsä, eikä niitä tehdä tässä.
+ */
+/*
+ * ANKKURIT: alkuperäisen seitsemän portaan asteikko sellaisenaan. Nämä
+ * ovat hiottuja lukuja (ks. yllä matalan meren perustelu), eikä niitä
+ * muuteta — ramppi KULKEE näiden kautta.
+ */
+const SYVYYS_ANKKURIT = [
   { m: 0, v: [222, 215, 190] },
   { m: -30, v: [206, 201, 183] },
   { m: -120, v: [199, 195, 180] },
@@ -137,6 +202,77 @@ export const SYVYYS = [
   { m: -3000, v: [184, 181, 170] },
   { m: -5000, v: [180, 178, 168] },
 ];
+
+/**
+ * Monotoninen kuutiollinen interpolointi (Fritsch–Carlson) ankkurien
+ * läpi, näytteistettynä tiheäksi rampiksi.
+ *
+ * MIKSI EI KÄSIN LISÄTTYJÄ VÄLIPISTEITÄ. Ensimmäinen yritys 30.8.2026
+ * oli juuri se: kymmenen välipistettä silmämääräisesti vanhan käyrän
+ * päälle. Mitattuna se PAHENSI asiaa — syvän meren pahin taite kasvoi
+ * 6,9:stä 12,3 sävyyn tuhatta metriä kohti, koska jokainen käsin
+ * asetettu piste tuo oman pienen taitteensa. Banding on nimenomaan
+ * taite, ei portaiden vähyys.
+ *
+ * Monotoninen kuutio kulkee ankkurien kautta ja on jatkuva
+ * derivaataltaan, joten tiheästi näytteistettynä peräkkäisten
+ * jaksojen kulmakertoimet eroavat vain vähän: taite katoaa ilman että
+ * yksikään ankkuri liikkuu ja ilman että kokonaiskontrasti muuttuu.
+ * Fritsch–Carlson valittiin, koska se ei YLITÄ ankkureita — tavallinen
+ * spline heilahtaisi matalan meren jyrkän portaan jälkeen vaaleampaan
+ * kuin lähtöpiste, ja meressä näkyisi vaalea rengas rannan ulkopuolella.
+ */
+function monotoninenRamppi(ankkurit, askel) {
+  // Syvyys kasvaa alaspäin; käännetään nousevaksi x:ksi laskentaa varten.
+  const x = ankkurit.map((a) => -a.m);
+  const n = x.length;
+  const kanavat = [0, 1, 2].map((k) => {
+    const y = ankkurit.map((a) => a.v[k]);
+    const h = []; const delta = [];
+    for (let i = 0; i < n - 1; i += 1) {
+      h.push(x[i + 1] - x[i]);
+      delta.push((y[i + 1] - y[i]) / h[i]);
+    }
+    const d = new Array(n);
+    d[0] = delta[0];
+    d[n - 1] = delta[n - 2];
+    for (let i = 1; i < n - 1; i += 1) {
+      if (delta[i - 1] * delta[i] <= 0) { d[i] = 0; continue; }
+      // Painotettu harmoninen keskiarvo pitää käyrän monotonisena.
+      const w1 = 2 * h[i] + h[i - 1];
+      const w2 = h[i] + 2 * h[i - 1];
+      d[i] = (w1 + w2) / (w1 / delta[i - 1] + w2 / delta[i]);
+    }
+    return { y, d, h, delta };
+  });
+  const arvo = (k, i, t) => {
+    const { y, d, h } = kanavat[k];
+    const t2 = t * t; const t3 = t2 * t;
+    return (2 * t3 - 3 * t2 + 1) * y[i]
+      + (t3 - 2 * t2 + t) * h[i] * d[i]
+      + (-2 * t3 + 3 * t2) * y[i + 1]
+      + (t3 - t2) * h[i] * d[i + 1];
+  };
+  const ulos = [];
+  const syvin = x[n - 1];
+  for (let s = 0; s <= syvin; s += askel) {
+    let i = 0;
+    while (i < n - 2 && x[i + 1] < s) i += 1;
+    const t = (s - x[i]) / (x[i + 1] - x[i]);
+    ulos.push({ m: -s, v: [0, 1, 2].map((k) => arvo(k, i, t)) });
+  }
+  // Viimeinen ankkuri tarkalleen, jotta clamppaus osuu oikeaan sävyyn.
+  const viimeinen = ankkurit[n - 1];
+  if (ulos[ulos.length - 1].m !== viimeinen.m) ulos.push({ ...viimeinen });
+  return ulos;
+}
+
+/*
+ * Näyteväli 25 m: 0…−5000 m antaa 201 pistettä. Taulukko on dataa eikä
+ * silmukkaa — se lasketaan kerran moduulin latautuessa, ja `lerpSyvyys`
+ * lukee sitä täsmälleen kuten ennenkin.
+ */
+export const SYVYYS = monotoninenRamppi(SYVYYS_ANKKURIT, 25);
 
 export const PAPERI = '#e8dcbc';
 export const MUSTE = '#4a3421';
