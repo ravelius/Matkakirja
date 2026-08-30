@@ -1,0 +1,51 @@
+{
+  "_": "Angolan maastokohteet. Faktat en-Wikipediasta 30.8.2026.",
+  "vuoret": [
+    {
+      "nimi": "Morro de Moco",
+      "lon": 15.1667,
+      "lat": -12.4667,
+      "m": 2620,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Moco\"",
+      "nappi": "Angolan korkein vuori",
+      "kysymykset": [
+        "Mitkä ovat Angolan seitsemän ihmettä?",
+        "Miksi lintuharrastajat matkustavat juuri Mocolle?"
+      ],
+      "korostukset": ["Huambo|Huambon"],
+      "teksti": "Morro de Moco kohoaa 2 620 metriin ja on Angolan korkein vuori. Se sijaitsee Huambon maakunnassa maan länsiosassa, seitsemänkymmentä kilometriä Huambon kaupungista länteen. Vuonna 2014 vuori nimettiin yhdeksi Angolan seitsemästä ihmeestä, ja sinne matkustetaan vaeltamaan, laskeutumaan köysillä ja katselemaan lintuja.",
+      "lahde": "en-Wikipedia \"Mount Moco\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Atlantti",
+      "lon": 12.0,
+      "lat": -10.5,
+      "lahdeKoordinaatti": "ulappa Angolan rannikon edustalla Luandan eteläpuolella; en-Wikipedia \"Atlantic Ocean\" antaa koko valtameren keskipisteeksi -25 / 0",
+      "nappi": "Maailman toiseksi suurin valtameri",
+      "kysymykset": [
+        "Miksi Etelä-Atlantti on lämmin ympäri vuoden?",
+        "Mitä 'vanha' ja 'uusi maailma' tarkoittavat?"
+      ],
+      "teksti": "Atlantti on maailman toiseksi suurin valtameri: se peittää noin 17 prosenttia maapallon pinnasta. Löytöretkien aikana sen ajateltiin erottavan Amerikan 'uuden maailman' Afrikan, Aasian ja Euroopan 'vanhasta maailmasta'. Angolan kohdalla levittäytyvä Etelä-Atlantti pysyy lämpimänä ympäri vuoden, sillä sitä reunustavat maat ovat tropiikissa.",
+      "lahde": "en-Wikipedia \"Atlantic Ocean\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Cuanza",
+      "lon": 14.4,
+      "lat": -9.7,
+      "lahdeKoordinaatti": "keskijuoksu Dondon seudulla; en-Wikipedia \"Cuanza River\" antaa suistolle 13,15 / -9,35",
+      "nappi": "Angolan pisin joki",
+      "kysymykset": [
+        "Miksi joen nimi kirjoitetaan monella tavalla?",
+        "Mikä kaupunki on aivan joen suun pohjoispuolella?"
+      ],
+      "korostukset": ["Luanda|Luandan"],
+      "teksti": "Cuanza, joka tunnetaan myös nimillä Kwanza, Quanza ja Coanza, on Angolan pisin joki. Se laskee Atlanttiin aivan maan pääkaupungin Luandan eteläpuolella.",
+      "lahde": "en-Wikipedia \"Cuanza River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "_": "Algerian maastokohteet. Faktat en-Wikipediasta 30.8.2026. Tahatille ja Chelifille ei ole vakiintuneita suomennoksia (fi-Wikipediassa ei artikkeleita), joten nimet ovat kansainvälisessä asussa.",
+  "vuoret": [
+    {
+      "nimi": "Tahat",
+      "lon": 5.5336,
+      "lat": 23.2889,
+      "m": 2908,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Tahat\"",
+      "nappi": "Saharan tuliperäinen huippu",
+      "kysymykset": [
+        "Keitä tuaregit ovat?",
+        "Mitä Tassili n'Ajjerin kalliomaalaukset esittävät?"
+      ],
+      "korostukset": ["Sahara|Saharan"],
+      "teksti": "Tahat on Algerian ja koko Hoggarin vuoriston korkein huippu: 2 908 metriä, joskin osa lähteistä antaa jopa 3 003 metriä. Tuliperäinen vuori nousee karulta ylätasangolta keskeltä Saharaa, tuaregien asuttamalta seudulta, ja lähin kaupunki Tamanrasset on 56 kilometrin päässä. Pohjoisempana Tassili n'Ajjerin vuorilla on kalliomaalauksia, joissa paimennetaan karjaa ja metsästetään eläimiä, joita nykyään tapaa vasta paljon etelämpää — maalaukset on ajoitettu vuosien 8000 ja 2000 eaa. välille.",
+      "lahde": "en-Wikipedia \"Mount Tahat\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Välimeri",
+      "lon": 3.0,
+      "lat": 37.3,
+      "lahdeKoordinaatti": "ulappa Algerin edustalla; en-Wikipedia \"Mediterranean Sea\" antaa keskipisteeksi 18 / 35",
+      "nappi": "Meri, joka kuivui kerran lähes kokonaan",
+      "kysymykset": [
+        "Mikä oli Messinan suolakriisi?",
+        "Miten kuivunut meri täyttyi uudelleen?"
+      ],
+      "teksti": "Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja Algeria on osa sen eteläistä, pohjoisafrikkalaista rantaa. Meri on lähes kokonaan maan ympäröimä: Atlanttiin se yhtyy vain Gibraltarinsalmen kautta. Noin 5,9 miljoonaa vuotta sitten yhteys valtamereen katkesi ja Välimeri kuivui osin tai kokonaan satojentuhansien vuosien ajaksi, kunnes niin sanottu Zanclean tulva täytti altaan uudelleen.",
+      "lahde": "en-Wikipedia \"Mediterranean Sea\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Chelif",
+      "lon": 1.3,
+      "lat": 36.1,
+      "lahdeKoordinaatti": "keskijuoksu Tell-Atlaksessa; en-Wikipedia \"Chelif River\" antaa suulle 0,13 / 36,04",
+      "nappi": "Algerian pisin joki",
+      "kysymykset": [
+        "Miksi joen vedenpinta vaihtelee rajusti?",
+        "Mihin Chelifin vettä käytetään?"
+      ],
+      "teksti": "Chelif on Algerian pisin joki: se virtaa 700 kilometriä Saharan Atlakselta Tell-Atlaksen halki ja laskee Välimereen Mostaganemin kaupungin pohjoispuolella. Joen vedenpinta vaihtelee usein voimakkaasti, ja sen alajuoksun vettä käytetään ennen kaikkea keinokasteluun.",
+      "lahde": "en-Wikipedia \"Chelif River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}
