@@ -60,7 +60,7 @@ const ATEENA = fokusvirtaKaupungille('ateena');
  * Lontoon, Budapestin, Dubrovnikin ja Prahan. Kaupunki poimitaan
  * siksi laudalta ajon aikana: ensimmäinen, jolla virtaa ei ole.
  */
-const VIRRATON = packById('europe').cities.find((city) => !FOKUSVIRRAT[city.id])?.id;
+const VIRRATON = packById('maailmankartta').cities.find((city) => !FOKUSVIRRAT[city.id])?.id;
 
 /* ---------- 1. vaihejärjestys ---------- */
 
@@ -135,10 +135,10 @@ test('kelvoton tallennettu tila siivotaan turvalliseksi', () => {
 
 /* ---------- 4. tallennus ja palautus ---------- */
 
-/** Kahden pelaajan Eurooppa-peli, jossa toinen aloittaa Ateenasta. */
+/** Kahden pelaajan peli maailmankartalla, toinen aloittaa Ateenasta. */
 function ateenaPeli() {
   return new Game({
-    pack: packById('europe'),
+    pack: packById('maailmankartta'),
     players: [
       { name: 'A', color: '#f00', start: 'ateena' },
       { name: 'B', color: '#00f', start: 'lontoo' },
@@ -155,7 +155,7 @@ test('virran tila kulkee pelitallenteen mukana', () => {
 
   const kesken = { vaihe: 'oppitunti' };
   asetaFokusvirtaTila(game, city, kesken);
-  assert.deepEqual(game.fokusvirrat['europe:ateena'], kesken);
+  assert.deepEqual(game.fokusvirrat['maailmankartta:ateena'], kesken);
 
   const palautettu = Game.fromJSON(JSON.parse(JSON.stringify(game.toJSON())));
   const city2 = palautettu.board.cityById.get('ateena');
@@ -176,11 +176,13 @@ test('vanha tallennus ilman fokusvirtakenttää kelpaa yhä', () => {
   );
 });
 
-test('sama kaupunki eri laudalla on eri matka', () => {
+test('virran avaimessa on laudan tunnus', () => {
+  // Lautaliite jäi avaimeen erillislautojen ajalta; vanhojen
+  // tallennusten siirto (js/game.js siirraErillislaudat) nojaa siihen.
   const game = ateenaPeli();
   const city = game.board.cityById.get('ateena');
   asetaFokusvirtaTila(game, city, { vaihe: 'oppitunti' });
-  assert.deepEqual(Object.keys(game.fokusvirrat), ['europe:ateena'],
+  assert.deepEqual(Object.keys(game.fokusvirrat), ['maailmankartta:ateena'],
     'avaimessa on oltava laudan tunnus');
 });
 
@@ -226,12 +228,12 @@ test('Kreikan fokuskohteet ovat rakenteeltaan ehjiä', () => {
     assert.ok(kohde.teksti?.length > 120, `${kohde.id}: pop-up-teksti puuttuu`);
     // Kohdenostossa EI ole visaa: se on tarjouksen ydin (ks. tilaus).
     assert.equal(kohde.visa, undefined, `${kohde.id}: kohdenostoon ei kuulu minivisaa`);
-    // Koordinaatit molemmille laudoille, joilla Ateena on pelattavissa.
-    for (const lauta of ['maailmankartta', 'europe']) {
-      const paikka = kohde.laudat?.[lauta];
-      assert.ok(Number.isFinite(paikka?.x) && Number.isFinite(paikka?.y),
-        `${kohde.id}: ${lauta}-koordinaatit puuttuvat`);
-    }
+    // Koordinaatit maailmankartalle — ainoalle pelilaudalle (Raamattu
+    // 30.8.2026). Vanhat europe-rivit saavat jäädä, mutta niitä ei
+    // vaadita eikä uusiin pakkoihin kirjoiteta.
+    const paikka = kohde.laudat?.maailmankartta;
+    assert.ok(Number.isFinite(paikka?.x) && Number.isFinite(paikka?.y),
+      `${kohde.id}: maailmankartta-koordinaatit puuttuvat`);
     /*
      * KADONNEELLA KOHTEELLA `kuva` PUUTTUU, ja se on oikein: kohteesta
      * ei ole valokuvaa, koska kohdetta ei ole, ja kortin ensimmäinen
@@ -638,11 +640,9 @@ test('sähkepalkkio pienenee ohilyönneistä ja pysähtyy nollaan', () => {
 
 test('sähkekaupungin vihreä piste on olemassa ja sen teko on sähke', () => {
   const tukholma = fokusvirtaKaupungille('tukholma');
-  for (const lauta of ['maailmankartta', 'europe']) {
-    const paikka = tukholma.kohtaamispiste?.laudat?.[lauta];
-    assert.ok(Number.isFinite(paikka?.x) && Number.isFinite(paikka?.y),
-      `tukholma: ${lauta}-koordinaatit puuttuvat`);
-  }
+  const paikka = tukholma.kohtaamispiste?.laudat?.maailmankartta;
+  assert.ok(Number.isFinite(paikka?.x) && Number.isFinite(paikka?.y),
+    'tukholma: maailmankartta-koordinaatit puuttuvat');
 });
 
 /** Kaupunki "löydettyyn" tilaan — täsmälleen kuten revealToken jättää sen. */
@@ -655,7 +655,7 @@ test('fokusvirtakaupungin matkakirjateksti ei vaihdu laatan ratkettua', () => {
   for (const [cityId, virta] of Object.entries(FOKUSVIRRAT)) {
     const game = ateenaPeli();
     const city = game.board.cityById.get(cityId);
-    assert.ok(city, `${cityId}: kaupunkia ei ole Euroopan laudalla`);
+    assert.ok(city, `${cityId}: kaupunkia ei ole maailmankartalla`);
     const ui = uiTynka(game);
 
     // Laatta paikallaan: merkintä on virran oma.
@@ -687,7 +687,7 @@ test('aarremerkintä voittaa saapumismerkinnän myös laatan ratkettua', () => {
   laattaRatkaistu(game, 'ateena');
   const ui = uiTynka(game);
   // Lipun nostaa js/fokusvirta.js avaaAarremerkinta aarteen löytyessä.
-  ui.fokusaarreMerkinta = { avain: 'europe:ateena', kuitattu: false };
+  ui.fokusaarreMerkinta = { avain: 'maailmankartta:ateena', kuitattu: false };
   const merkinta = fokusvirtaMatkakirja(ui, city);
   // Aarremerkintä on olio (`{ teksti }`) jokaisessa kaupungissa v1301:stä
   // lähtien; moottori kelpuuttaa yhä myös vanhan merkkijonomuodon.

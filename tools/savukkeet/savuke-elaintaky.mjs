@@ -153,24 +153,32 @@ const kortti = (sivu) => sivu.evaluate(() => {
 
 const rahat = (sivu) => sivu.evaluate(() => window.matkakirja.ui.game.player.money);
 
-/* --- 1: merkit kartalla (Euroopan lauta, koko lauta näkyvissä) --- */
-
-const eu = await avaaSivu('europe', 'helsinki');
-const kartalla = await merkit(eu);
+/* --- 1: merkit kartalla (maailmankartta, saapumisen lähikuva) --- */
 /*
- * 27 EIKÄ 29, JA SE ON OIKEIN. Euroopan lauta on lon −11…41, joten
- * Vanjärven kissa (lon 43) jää sen itäpuolelle ja Islannin lunni
- * (lon −19,4) länsipuolelle. Kumpikin jätetään piirtämättä tällä
- * laudalla (js/elaintaky.js elaintakyLaudalla) — luku on tässä
- * tarkka, jotta hiljainen katoaminen ei mene läpi kumpaankaan
- * suuntaan.
+ * Erän v1348 asti tämä osa ajettiin Euroopan erillislaudalla, jossa
+ * koko lauta oli kerralla näkyvissä. Lauta poistui (Raamattu 30.8.2026,
+ * "erillislaudasta luovutaan"), joten sama koe tehdään pelin oikealla
+ * laudalla: maailmankartta on kiertävä, joten jokainen merkki piirtyy
+ * kahteen kiertokohtaan — 29 maata, 58 solmua. Kaikki 29 mahtuvat
+ * laudalle, myös Vanjärvi (lon 43) ja Islanti (lon −19,4), jotka
+ * vanhalta laudalta jäivät pois.
  */
+const eu = await avaaSivu('maailmankartta', 'helsinki');
+// Yleiskuvassa merkit ovat piilossa (osio 4 vartioi juuri sitä), joten
+// lähennetään ensin: sama porrastus kuin osiossa 4.
+for (let i = 0; i < 4; i += 1) {
+  await eu.evaluate(() => window.matkakirja.ui.kartta.zoomaaPainikkeella(1));
+  await eu.waitForTimeout(400);
+}
+await eu.waitForTimeout(900);
+const kartalla = await merkit(eu);
 vaadi('eläinmerkit ovat kartan omassa kerroksessa',
-  kartalla.rivit.length === 27 && !kartalla.piilossa,
+  kartalla.rivit.length === 58 && !kartalla.piilossa,
   `${kartalla.rivit.length} merkkiä, piilossa=${kartalla.piilossa}`);
-vaadi('laudan ulkopuolelle jäävät täyt eivät piirry',
-  !kartalla.rivit.some((m) => /Turkki|Islanti/.test(m.nimi)),
-  JSON.stringify(kartalla.rivit.map((m) => m.nimi)));
+vaadi('myös vanhan laudan ulkopuoliset täyt piirtyvät',
+  kartalla.rivit.some((m) => /Turkki/.test(m.nimi))
+  && kartalla.rivit.some((m) => /Islanti/.test(m.nimi)),
+  JSON.stringify([...new Set(kartalla.rivit.map((m) => m.nimi))].slice(0, 6)));
 vaadi('jokaisella merkillä on kaiverrettu eläinsymboli',
   kartalla.rivit.every((m) => m.symboleita > 0),
   JSON.stringify(kartalla.rivit.filter((m) => !m.symboleita).map((m) => m.nimi)));

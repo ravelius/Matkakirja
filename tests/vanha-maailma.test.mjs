@@ -11,6 +11,14 @@ import assert from 'node:assert/strict';
 
 import { miller, KAANTEISET, sovita, rannikot } from '../tools/vanha-maailma.mjs';
 import { PACKS } from '../js/pack.js';
+// Erillislauta poistui rekisteristä (Raamattu 30.8.2026) — Euroopan
+// lähdepakka tuodaan suoraan, koska se on yhä generaattorien lähde.
+import { EUROPE } from '../js/packs/europe.js';
+
+/** Lähdepakka tunnuksella: rekisteristä, Eurooppa suoraan tuonnista. */
+function lahdepakka(id) {
+  return id === 'europe' ? EUROPE : PACKS.find((p) => p.id === id);
+}
 
 /** Karkea etäisyys kilometreinä. */
 function km(lon1, lat1, lon2, lat2) {
@@ -64,7 +72,7 @@ test('käänteiskaavat vievät kaupungit oikeille paikoilleen', () => {
     },
   };
   for (const [lauta, { raja, ...kaupungit }] of Object.entries(oikea)) {
-    const pack = PACKS.find((p) => p.id === lauta);
+    const pack = lahdepakka(lauta);
     for (const [id, [olon, olat]] of Object.entries(kaupungit)) {
       const c = pack.cities.find((x) => x.id === id);
       assert.ok(c, `${lauta}: kaupunkia ${id} ei löydy`);
@@ -236,11 +244,10 @@ const KAARETTOMAT = new Set([
 ]);
 
 async function vanhanMaailmanKaupungit() {
-  const { PACKS } = await import('../js/pack.js');
   const lahteet = ['europe', 'africa', 'middleeast', 'asia'];
   const omat = new Set();
   for (const id of lahteet) {
-    for (const c of PACKS.find((p) => p.id === id).cities) omat.add(c.id);
+    for (const c of lahdepakka(id).cities) omat.add(c.id);
   }
   const pack = PACKS.find((p) => p.id === 'maailmankartta');
   return { pack, kaupungit: pack.cities.filter((c) => omat.has(c.id)) };

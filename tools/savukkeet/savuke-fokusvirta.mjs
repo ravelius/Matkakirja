@@ -135,7 +135,7 @@ const vaalea = (vari) => {
 /* Valmis peli: Fogg seisoo Ateenassa, laatta kääntämättä. */
 const peli = new Game({
   players: [{ name: 'Fogg', color: '#c9a227', start: 'ateena' }],
-  pack: packById('europe'),
+  pack: packById('maailmankartta'),
   seed: 11,
 });
 peli.tokens.set('ateena', 'topaz');
@@ -231,7 +231,7 @@ const kortti = () => sivu.evaluate(() => {
       oikea: Math.round(laatikko.right),
     },
     ikkuna: { w: window.innerWidth, h: window.innerHeight },
-    vaihe: window.matkakirja.game.fokusvirrat['europe:ateena']?.vaihe ?? null,
+    vaihe: window.matkakirja.game.fokusvirrat['maailmankartta:ateena']?.vaihe ?? null,
     rahat: window.matkakirja.game.player.money,
   };
 });
@@ -337,7 +337,7 @@ vaadi('lehtilukko: saapumiskortti pysyy kiinni', !lehtiAuki);
 // Tutki kuittasi merkinnän jo luetuksi, joten tila palautetaan alkuun.
 await sivu.evaluate(() => {
   const ui = window.matkakirja.ui;
-  delete ui.game.fokusvirrat['europe:ateena'];
+  delete ui.game.fokusvirrat['maailmankartta:ateena'];
   ui.fokusvirtaKortti?.remove();
   ui.fokusvirtaKortti = null;
   ui.factKey = null;
@@ -602,7 +602,7 @@ await sivu.evaluate(() => {
   // Saapumisen merkki on sama kuin Tutki-napin sykkeellä; istunnon
   // avausmuisti nollataan, jotta laukaisin saa toimia uudestaan.
   ui.fokusvirtaAvattu = new Set();
-  ui.lehtitila.tutkiSyke = 'europe:ateena';
+  ui.lehtitila.tutkiSyke = 'maailmankartta:ateena';
   ui.render();
 });
 await sivu.waitForTimeout(600);
@@ -637,7 +637,7 @@ const luovutus = await sivu.evaluate(() => ({
   kortti: Boolean(document.querySelector('.fokusvirta-kortti, .fokusvirta-kupla')),
   vaihe: window.matkakirja.game.phase,
   visa: Boolean(window.matkakirja.game.quiz),
-  virranVaihe: window.matkakirja.game.fokusvirrat['europe:ateena']?.vaihe ?? null,
+  virranVaihe: window.matkakirja.game.fokusvirrat['maailmankartta:ateena']?.vaihe ?? null,
 }));
 vaadi('virta luovuttaa nykyiselle laattamekaniikalle',
   luovutus.vaihe === 'quiz' && luovutus.visa && !luovutus.kortti
@@ -704,7 +704,7 @@ await puhelin.evaluate(() => {
 await puhelin.waitForTimeout(500);
 await puhelin.evaluate(() => {
   const ui = window.matkakirja.ui;
-  delete ui.game.fokusvirrat['europe:ateena'];
+  delete ui.game.fokusvirrat['maailmankartta:ateena'];
   ui.fokusvirtaKortti?.remove();
   ui.fokusvirtaKortti = null;
   ui.factKey = null;
@@ -714,9 +714,19 @@ await puhelin.waitForTimeout(MERKINNAN_TAUKO_MS + 1400);
 
 // Lähikuva päälle, jotta kartalla on oikeasti panorointivaraa: ilman
 // varaa mikä tahansa veto jättäisi kartan paikalleen ja vartio olisi
-// tyhjä.
-await puhelin.evaluate(() => window.matkakirja.ui.kartta.zoomaaPainikkeella(1));
-await puhelin.waitForTimeout(2500);
+// tyhjä. Maailmankartalla (erillislauta poistui, Raamattu 30.8.2026)
+// yksi porras ei vielä anna pystyvaraa, joten porrastetaan kunnes
+// varaa on molempiin suuntiin.
+for (let porras = 0; porras < 5; porras += 1) {
+  await puhelin.evaluate(() => window.matkakirja.ui.kartta.zoomaaPainikkeella(1));
+  await puhelin.waitForTimeout(1200);
+  const vara = await puhelin.evaluate(() => ({
+    x: window.matkakirja.ui.panVara ?? 0,
+    y: window.matkakirja.ui.panVaraY ?? 0,
+  }));
+  if (vara.x > 120 && vara.y > 120) break;
+}
+await puhelin.waitForTimeout(1300);
 /*
  * KARTTA KESKELLE VARAANSA ENNEN JOKAISTA VETOA. Lähikuva asettuu
  * tyypillisesti laitaan, ja laidassa asetaPan rajaa siirron pois —

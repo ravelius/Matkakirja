@@ -9357,8 +9357,8 @@ export class UI {
     }
 
     // Vaihe 'action': matkustustavan valinta. Näytöllä pidetään kerrallaan
-    // vain kourallinen nappeja — laivat, lennot ja portit odottavat
-    // toisen vaiheen takana.
+    // vain kourallinen nappeja — laivat ja lennot odottavat toisen
+    // vaiheen takana.
     this.renderTravelChoice(modes);
   }
 
@@ -9370,7 +9370,7 @@ export class UI {
    * "Laiva & lento" -napin takana, ja pelaaja joutui etsimään lentonsa
    * laivalistan seasta. Nyt nappi valitsee jo listan: LAIVA avaa vaiheen
    * B pelkillä laivavaihtoehdoilla, LENTO pelkillä lentävillä
-   * vaihtoehdoilla (lennot, mannerlennot ja portit). Se mitä listassa
+   * vaihtoehdoilla (lennot ja mannerlennot). Se mitä listassa
    * NÄYTETÄÄN suodattuu — säännöt, hinnat ja toiminnot ovat ennallaan.
    *
    * VAIHE B (`travelExpanded`) on entinen valikko. `travelSuodatin`
@@ -9379,20 +9379,11 @@ export class UI {
   renderTravelChoice(modes) {
     const { game } = this;
     const flights = game.airportDestinations();
-    const gateways = game.gatewayOptions();
-    const countryGates = game.countryGateOptions();
     // Mannerlento aukeaa, kun tämän mantereen unohdettu aarre on
     // löytynyt — se ei vaadi lentokenttää, joten se on oma listansa.
     const mannerLennot = game.mannerLennot();
-    /*
-     * Portit (vaellus ja tietoportti) kuuluvat LENNON puolelle: molemmat
-     * ovat pitkiä lentoja toiselle laudalle (game.gatewayOptions), eikä
-     * kumpikaan ole laivamatka. Näin mikään vaihtoehto ei jää kahden
-     * napin väliin saavuttamattomiin.
-     */
     const laivaa = modes.includes('sea');
-    const lentoa = flights.length > 0 || mannerLennot.length > 0
-      || gateways.length > 0 || countryGates.length > 0;
+    const lentoa = flights.length > 0 || mannerLennot.length > 0;
     const hasSlow = laivaa || lentoa;
 
     // Jos välivaiheeseen ei jää yhtään valintaa (esim. rahat eivät riitä
@@ -9479,39 +9470,6 @@ export class UI {
       this.actionsEl.appendChild(btn);
     }
 
-    // Vaelluksessa porttikaupungeista jatketaan toisille laudoille.
-    for (const link of ilma ? gateways : []) {
-      const gwBtn = this.ikoniTekstiNappi('kompassi', link.label, 'wide');
-      gwBtn.addEventListener('click', async () => {
-        this.suljeMatkavalikko();
-        sfx.play('flight');
-        // Lentokalvo kuuluu vain maailmankartalle — mantereella lento
-        // tapahtuu suoraan karttanäkymässä. Siirto tehdään ennen kalvoa,
-        // jotta perillä odottava päiväkirjamerkintä alkaa puheineen jo
-        // lennon aikana.
-        const lahto = game.cityOf()?.name ?? '';
-        const kalvo = game.pack.id === 'maailma';
-        const line = kalvo ? game.flightLine(link.city, packById(link.pack)) : null;
-        // Lippu ennen siirtoa: kohteen äänimaisema ja päiväkirja odottavat
-        // kalvon alla, kunnes pelaaja astuu ulos.
-        if (kalvo && !this.reducedMotion) document.body.classList.add('flight-active');
-        this.doAction(() => game.actionGateway(link.index));
-        if (kalvo) await this.animateFlight(lahto, link.label, line);
-      });
-      this.actionsEl.appendChild(gwBtn);
-    }
-
-    // Tietoportti: maan lauta aukeaa pääkaupungista vaikealla kysymyksellä.
-    for (const gate of ilma ? countryGates : []) {
-      const gateBtn = this.ikoniTekstiNappi('tahti', `${gate.label} — vaikea kysymys`, 'wide');
-      gateBtn.addEventListener('click', () => {
-        this.suljeMatkavalikko();
-        sfx.play('paper');
-        this.doAction(() => game.actionGateQuiz(gate.index));
-      });
-      this.actionsEl.appendChild(gateBtn);
-    }
-
     const backBtn = this.iconButton('nuoli', 'Takaisin');
     backBtn.addEventListener('click', () => {
       this.suljeMatkavalikko();
@@ -9520,7 +9478,7 @@ export class UI {
     this.actionsEl.appendChild(backBtn);
   }
 
-  /** Avaa vaiheen B yhdellä listalla: 'sea' laivat, 'air' lennot ja portit. */
+  /** Avaa vaiheen B yhdellä listalla: 'sea' laivat, 'air' lennot. */
   avaaMatkavalikko(suodatin = null) {
     this.travelExpanded = true;
     this.travelSuodatin = suodatin;
@@ -9584,8 +9542,9 @@ export class UI {
     if (this.keskenReittia()) return 'matka jatkuu samaa reittiä';
     const city = game.cityOf();
     if (!city) return 'lento lähtee vain kaupungista';
-    const kentta = Boolean(city.airport) || Boolean(city.links?.length);
-    if (!kentta) return 'täällä ei ole lentokenttää';
+    // Portit poistuivat erillislautojen mukana: lentokenttä on ainoa
+    // lennon lähtöpaikka (mannerlento hoituu omassa listassaan).
+    if (!city.airport) return 'täällä ei ole lentokenttää';
     if (game.player.money < FLIGHT_PRICE) return `lentolippu maksaa ${FLIGHT_PRICE} puntaa`;
     return 'täältä ei lähde lentoja';
   }

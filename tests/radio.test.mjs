@@ -21,7 +21,7 @@ import { mulberry32 } from '../js/game.js';
 import { PACKS } from '../js/pack.js';
 
 /** Laudat, joilla radiolinssi on käytössä (radio.js LINSSI.laudat). */
-const RADIOLAUDAT = ['maailmankartta', 'europe', 'africa'];
+const RADIOLAUDAT = ['maailmankartta', 'africa'];
 
 function lauta(tunnus) {
   const pakkaus = PACKS.find((p) => p.id === tunnus);

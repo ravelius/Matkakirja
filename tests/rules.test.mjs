@@ -9,6 +9,9 @@ import {
 import { arvoksi, onAfrikanPulma } from '../js/packs/africa-puzzles.js';
 import { TARINAKAARI } from '../js/packs/tarinakaari.js';
 import { onEuroopanPulma as europeHasSketch } from '../js/packs/europe-puzzles.js';
+// Erillislauta poistui rekisteristä (Raamattu 30.8.2026) — Euroopan
+// SISÄLTÖ (pulmat, aarretyypit) luetaan lähdepakasta suoraan.
+import { EUROPE } from '../js/packs/europe.js';
 
 /** Lähde on merkkijono tai lista merkkijonoja; verkko-osoite vain http(s). */
 function checkSources(source, where) {
@@ -798,12 +801,16 @@ test('vanha tallennus poistuneilla laattatyypeillä latautuu paikallisaarteina',
    * tyyppi luetaan pieneksi paikallisaarteeksi sekä kääntämättömistä
    * laatoista että jo käännetyistä kirjauksista.
    */
+  // Maailmankartalla, koska erillislaudan tallennus siirtyisi
+  // latauksessa maailmankartalle (Raamattu 30.8.2026) eikä laudan omia
+  // kääntämättömiä laattoja jäisi tutkittavaksi.
   const game = new Game({
     players: [{ name: 'A', color: '#f00', start: 'tanger' }],
+    pack: packById('maailmankartta'),
     seed: 55,
   });
   const data = JSON.parse(JSON.stringify(game.toJSON()));
-  const maailma = data.worlds.africa;
+  const maailma = data.worlds.maailmankartta;
   maailma.tokens = [['timbuktu', 'ruby'], ['gao', 'horseshoe'], ['kano', 'linssi'],
     ['tripoli', 'star'], ['kairo', 'robber']];
   maailma.revealed = [['dakar', 'topaz']];
@@ -846,7 +853,7 @@ test('paikallisaarteen nimi tulee maasta ja putoaa laudan omaan nimeen', async (
     pack: packById('maailmankartta'),
     seed: 12,
   });
-  const eurooppa = packById('europe').tokens.types;
+  const eurooppa = EUROPE.tokens.types;
   const afrikka = packById('africa').tokens.types;
   // Kirjoittamaton maa: laudan oma nimi JA kuva samasta rivistä.
   assert.equal(game.aarreTyyppi('pieniAarre', 'tanger').name, afrikka.pieniAarre.name);
@@ -1237,23 +1244,21 @@ test('vaellus: yksin pelattaessa peli ei pääty ja tähti on arvokas löytö', 
 });
 
 test('laudanvaihtoportteja ei ole pelin sisällä', () => {
-  // Peli on yksi lauta (omistajan päätös 10.8.2026): entiset
-  // porttikaupungit (Tanger, Kairo, Istanbul, Helsinki) eivät tarjoa
-  // maksullista porttia eivätkä tietoporttia millekään toiselle laudalle.
+  // Peli on yksi lauta (omistajan päätökset 10.8. ja 30.8.2026,
+  // "erillislaudasta luovutaan"): laudanvaihdon koodi on purettu
+  // kokonaan — pelissä ei ole maksullista porttia eikä tietoporttia,
+  // ja ainoa portti on aloitusnäytön astuminen maailmankartalle.
   const game = new Game({
     players: [{ name: 'Yksin', color: '#f00', start: null }],
     pack: packById('maailma'),
     rng: mulberry32(43),
   });
   game.actionPickStart('kairo', porttiIndeksi(game, 'kairo', 'maailmankartta'));
-  const p = game.player;
-  p.money = 1000;
-  for (const city of ['kairo', 'tanger', 'istanbul', 'helsinki', 'lontoo']) {
-    game.phase = 'action';
-    p.pos = { type: 'city', city };
-    assert.deepEqual(game.gatewayOptions(), [], `${city}: maksullinen portti aukesi`);
-    assert.deepEqual(game.countryGateOptions(), [], `${city}: tietoportti aukesi`);
-  }
+  assert.equal(typeof game.gatewayOptions, 'undefined');
+  assert.equal(typeof game.countryGateOptions, 'undefined');
+  assert.equal(typeof game.actionGateway, 'undefined');
+  assert.equal(typeof game.actionGateQuiz, 'undefined');
+  assert.equal(game.pack.id, 'maailmankartta');
 });
 
 /**
@@ -1830,11 +1835,14 @@ test('sama kysymys ei toistu ennen kuin pakka on käyty läpi', () => {
 });
 
 test('peli tallentuu ja palautuu samaan tilanteeseen', () => {
+  // Maailmankartalla: vain pelilaudan tallennus palautuu sellaisenaan,
+  // erillislaudat siirtyisivät latauksessa (Raamattu 30.8.2026).
   const game = new Game({
     players: [
       { name: 'A', color: '#f00', start: 'tanger' },
       { name: 'B', color: '#00f', start: 'kairo', isBot: true },
     ],
+    pack: packById('maailmankartta'),
     seed: 1234,
   });
   game.polloLoydetty = true; // laattatesti — pöllö on jo löytynyt
@@ -1883,13 +1891,9 @@ test('aarretta ei voi ostaa rahalla', () => {
   const actions = game.availableActions();
   assert.deepEqual(
     Object.keys(actions).sort(),
-    ['countryGates', 'fly', 'gateways', 'mannerFlights', 'quiz', 'roll', 'travel'],
+    ['fly', 'mannerFlights', 'quiz', 'roll', 'travel'],
   );
   assert.ok(actions.travel.includes('land'));
-  // Laudanvaihtoportteja ei pelissä ole (yksi lauta, omistajan päätös
-  // 10.8.2026) — porttilistat ovat tyhjät myös kilpapelissä.
-  assert.deepEqual(actions.gateways, []);
-  assert.deepEqual(actions.countryGates, []);
   // Mannerlento on vaellustilan mekaniikka: kilpapelissä sitä ei ole.
   assert.deepEqual(actions.mannerFlights, []);
 });
@@ -2440,6 +2444,9 @@ test('ennätyksen ylitys ei päätä peliä eikä vie mitään', () => {
 });
 
 test('aika ja aikataulu säilyvät tallennuksessa', () => {
+  // Aikataulurivejä on vain Afrikan pakassa, joten mekaniikka ajetaan
+  // Afrikka-pelillä; latauksessa peli siirtyy maailmankartalle
+  // (Raamattu 30.8.2026) ja nähdyt rivit siirtyvät lauta-avaimineen.
   const game = newGame(106);
   game.turnCount = 40;
   game.updateSchedule();
@@ -2450,13 +2457,15 @@ test('aika ja aikataulu säilyvät tallennuksessa', () => {
   const restored = Game.fromJSON(JSON.parse(JSON.stringify(game.toJSON())));
   assert.equal(restored.turnCount, 40);
   assert.equal(restored.dayCount(), game.dayCount());
-  assert.deepEqual([...restored.scheduleShown], nahdyt);
+  assert.deepEqual([...restored.scheduleShown],
+    nahdyt.map((avain) => avain.replace(/^africa:/, 'maailmankartta:')));
   assert.equal(restored.recordNoted, true);
   assert.deepEqual(restored.recordMark, game.recordMark);
 
-  // Jo nähty rivi ei nouse uudelleen tallennuksesta jatkettaessa.
+  // Rivi ei nouse uudelleen tallennuksesta jatkettaessa — eikä
+  // maailmankartalla ole omia aikataulurivejä nousemassa.
   restored.updateSchedule();
-  assert.ok(!nahdyt.includes(`${restored.pack.id}:${restored.scheduleNote?.day}`));
+  assert.equal(restored.scheduleNote, null);
 });
 
 test('vanha tallennus ilman aikaa jatkuu päivästä 1', () => {
@@ -2944,9 +2953,9 @@ test('Afrikan pulmadata on ehjä', () => {
 });
 
 test('Euroopan pulmadata on ehjä', () => {
-  const puzzles = packById('europe').puzzles ?? [];
+  const puzzles = EUROPE.puzzles ?? [];
   assert.ok(puzzles.length >= 6, 'Euroopalla pitää olla vähintään kuusi pulmaa');
-  const cityIds = new Set(packById('europe').cities.map((c) => c.id));
+  const cityIds = new Set(EUROPE.cities.map((c) => c.id));
   const nahdyt = new Set();
   const kaupungit = [];
   for (const p of puzzles) {
@@ -3168,7 +3177,7 @@ test('laatattomassa kaupungissa pulma ei käännä laattaa eikä päätä vuoroa
 });
 
 test('tarinakaari ei pakota muotoa: lippukysymys ohittaa kaaren, visa käyttää sen', () => {
-  const pack = packById('europe');
+  const pack = packById('maailmankartta');
   const kaupunki = pack.cities.find((c) => TARINAKAARI[c.id]?.kysymys)?.id;
   assert.ok(kaupunki, 'Euroopassa on kaarikaupunki');
   const game = new Game({
@@ -3203,7 +3212,7 @@ test('tarinakaari ei pakota muotoa: lippukysymys ohittaa kaaren, visa käyttää
  * usein mykäksi. Vaihtelu jatkuu kohtaamisen jälkeen.
  */
 test('pulmattoman kaarikaupungin ensimmäinen tehtävä on luettu kohtaaminen', () => {
-  const pack = packById('europe');
+  const pack = packById('maailmankartta');
   const kaupunki = pack.cities.find(
     (c) => TARINAKAARI[c.id]?.kysymys && !(pack.puzzles ?? []).some((p) => p.city === c.id),
   )?.id;
@@ -3230,7 +3239,7 @@ test('pulmattoman kaarikaupungin ensimmäinen tehtävä on luettu kohtaaminen', 
  * kertatutkiminen tulevat vasta kohtaamisen jälkeen.
  */
 test('kohtaaminen on ensimmäinen tehtävä myös pulmakaupungissa; pulma vasta toisella pysähdyksellä', () => {
-  const pack = packById('europe');
+  const pack = packById('maailmankartta');
   const pulmakaupunki = (pack.puzzles ?? []).find((p) => TARINAKAARI[p.city]?.kysymys)?.city;
   assert.ok(pulmakaupunki, 'Euroopassa on pulmallinen kaarikaupunki');
   const game = new Game({
@@ -3258,7 +3267,7 @@ test('kohtaaminen on ensimmäinen tehtävä myös pulmakaupungissa; pulma vasta 
 });
 
 test('laatattomassa kaarikaupungissa kohtaaminen tulee silti ja palkitsee kuten tutkiminen', () => {
-  const pack = packById('europe');
+  const pack = packById('maailmankartta');
   const kaupunki = pack.cities.find(
     (c) => TARINAKAARI[c.id]?.kysymys && !(pack.puzzles ?? []).some((p) => p.city === c.id),
   )?.id;
@@ -3289,7 +3298,7 @@ test('laatattomassa kaarikaupungissa kohtaaminen tulee silti ja palkitsee kuten 
 });
 
 test('botti ei kuluta yhteistä kohtaamista', () => {
-  const pack = packById('europe');
+  const pack = packById('maailmankartta');
   const kaupunki = pack.cities.find((c) => TARINAKAARI[c.id]?.kysymys)?.id;
   const game = new Game({
     players: [{ name: 'Kone', color: '#0f0', isBot: true, start: pack.cities[0].id }],
@@ -3316,7 +3325,7 @@ test('jokaisella kaaren kohteella on kutsumanimi Tapaa-nappia varten', () => {
 });
 
 test('tehtävät loppuvat aikanaan: tehtavaTarjolla sammuu kun kaikki on tehty', () => {
-  const pack = packById('europe');
+  const pack = packById('maailmankartta');
   const kaupunki = pack.cities.find(
     (c) => TARINAKAARI[c.id]?.kysymys && !(pack.puzzles ?? []).some((p) => p.city === c.id),
   )?.id;
@@ -3368,7 +3377,7 @@ test('tehtävät loppuvat aikanaan: tehtavaTarjolla sammuu kun kaikki on tehty',
  * kenttää — jokainen kaaripolun kutsu kaatui TypeErroriin.
  */
 test('palautettu tallennus toimii kaarikaupungissa: Tutki ja kohtaaminen eivät kaadu', () => {
-  const pack = packById('europe');
+  const pack = packById('maailmankartta');
   const kaupunki = pack.cities.find((c) => TARINAKAARI[c.id]?.kysymys)?.id;
   const game = new Game({
     players: [{ name: 'Yksin', color: '#f00', start: pack.cities[0].id }],
@@ -3387,7 +3396,7 @@ test('palautettu tallennus toimii kaarikaupungissa: Tutki ja kohtaaminen eivät 
 });
 
 test('onnistunut kohtaaminen sulkee kohtaamisen: nappi harmaantuu eikä uusintaa tule', () => {
-  const pack = packById('europe');
+  const pack = packById('maailmankartta');
   const kaupunki = pack.cities.find(
     (c) => TARINAKAARI[c.id]?.kysymys && !(pack.puzzles ?? []).some((p) => p.city === c.id),
   )?.id;

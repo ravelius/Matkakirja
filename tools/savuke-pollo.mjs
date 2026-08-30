@@ -898,8 +898,6 @@ const esto = await sivu.evaluate(async () => {
   const alkuperainen = g.travelModes.bind(g);
   g.travelModes = () => [];
   g.airportDestinations = () => [];
-  g.gatewayOptions = () => [];
-  g.countryGateOptions = () => [];
   g.mannerLennot = () => [];
   ui.render();
   await new Promise((r) => setTimeout(r, 250));
@@ -920,8 +918,6 @@ await sivu.evaluate(async () => {
   g.phase = 'action';
   delete g.travelModes;
   delete g.airportDestinations;
-  delete g.gatewayOptions;
-  delete g.countryGateOptions;
   delete g.mannerLennot;
   window.matkakirja.ui.render();
   await new Promise((r) => setTimeout(r, 250));
@@ -1610,14 +1606,15 @@ for (const [nimi, runko] of [['ehdotusten', ehdotusRunko], ['kysymyksen', kysymy
 /*
  * OSA 2: SOFIA JA BULGARIA pelin OMALLA aineistolla. Magellanin
  * kompassi -laudalla ei ole kaupunki→maa-kytkentää, joten koe tehdään
- * Euroopan laudan oikealla datalla ja pelin omalla moduulilla — samalla
- * koodilla, jota pöllö ajaa. Vanhentunut kenttä osoittaa Kreikkaan
- * täsmälleen kuten omistajan pelisessiossa.
+ * maailmankartan oikealla datalla ja pelin omalla moduulilla — samalla
+ * koodilla, jota pöllö ajaa. (Aiemmin koe käytti Euroopan erillislautaa;
+ * lauta poistui — Raamattu 30.8.2026.) Vanhentunut kenttä osoittaa
+ * Kreikkaan täsmälleen kuten omistajan pelisessiossa.
  */
 const sofia = await sivu.evaluate(async () => {
   const { lueNakyma } = await import('/js/pollo.js');
-  const { EUROPE } = await import('/js/packs/europe.js');
-  const teeGame = (cityId, pack = EUROPE) => ({
+  const { MAAILMANKARTTA } = await import('/js/packs/maailmankartta.js');
+  const teeGame = (cityId, pack = MAAILMANKARTTA) => ({
     pack,
     player: { pos: { city: cityId } },
     board: { cityById: new Map(pack.cities.map((c) => [c.id, c])) },
@@ -1625,11 +1622,11 @@ const sofia = await sivu.evaluate(async () => {
   });
   const vanhaUi = { lehtitila: { arrivalMaaTiedot: { nimi: 'Kreikka' }, tutkiMaaLehti: 'GRC' } };
   // Sama lähde kuin kartan maakyltillä (ui.js drawCountryBorders).
-  const kyltinMaa = EUROPE.map.countryShapes[EUROPE.map.cityCountry.sofia]?.nimi ?? '';
+  const kyltinMaa = MAAILMANKARTTA.map.countryShapes[MAAILMANKARTTA.map.cityCountry.sofia]?.nimi ?? '';
   // Lauta, jolla kaupungin maalle ei ole muotoa: maan pitää jäädä pois.
   const nimeton = {
-    ...EUROPE,
-    map: { ...EUROPE.map, cityCountry: { ...EUROPE.map.cityCountry, sofia: 'ZZZ' } },
+    ...MAAILMANKARTTA,
+    map: { ...MAAILMANKARTTA.map, cityCountry: { ...MAAILMANKARTTA.map.cityCountry, sofia: 'ZZZ' } },
   };
   return {
     kyltinMaa,

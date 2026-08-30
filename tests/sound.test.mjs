@@ -376,9 +376,13 @@ test('treasureSound osaa kaikki laattatyypit', async () => {
 test('kaupunkien omat äänitykset ovat muodoltaan kelvollisia', async () => {
   const { KAUPUNKI_EHDOKKAAT } = await import('../js/aani-ehdokkaat.js');
   const { PACKS } = await import('../js/pack.js');
+  // Äänitykset on avainnettu lähdepakan tunnuksella. Euroopan
+  // erillislauta poistui rekisteristä (Raamattu 30.8.2026), mutta
+  // 'europe' on yhä kelvollinen sisältöavain — pakka tuodaan suoraan.
+  const { EUROPE } = await import('../js/packs/europe.js');
   let maara = 0;
   for (const [lauta, kaupungit] of Object.entries(KAUPUNKI_EHDOKKAAT)) {
-    const pack = PACKS.find((p) => p.id === lauta);
+    const pack = lauta === 'europe' ? EUROPE : PACKS.find((p) => p.id === lauta);
     assert.ok(pack, `tuntematon lauta ${lauta}`);
     for (const [cityId, lista] of Object.entries(kaupungit)) {
       assert.ok(pack.cities.some((c) => c.id === cityId),
@@ -734,9 +738,8 @@ test('paneelin ollessa auki alkava ambienssi alkaa hiljennettynä', async () => 
 
 test('kielinäytteet ovat oikeista kaupungeista ja muodoltaan kelvollisia', async () => {
   const { EUROPE_KIELET } = await import('../js/packs/europe-kielet.js');
-  const { PACKS } = await import('../js/pack.js');
   const { peiliAaniPolku } = await import('../js/media.js');
-  const europe = PACKS.find((p) => p.id === 'europe');
+  const { EUROPE: europe } = await import('../js/packs/europe.js');
   const polut = new Set();
   for (const [cityId, n] of Object.entries(EUROPE_KIELET)) {
     assert.ok(europe.cities.some((c) => c.id === cityId),
