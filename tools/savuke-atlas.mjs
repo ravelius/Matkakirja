@@ -206,8 +206,17 @@ const ctx = await selain.newContext({ viewport: { width: 430, height: 930 }, ser
 const sivu = await ctx.newPage();
 
 const pyynnot = [];
-await sivu.route((url) => /julisteet\/fokus\/.*\.webp$/.test(url.href), (route) => {
-  const nimi = route.request().url().split('/').pop().replace('.webp', '');
+await sivu.route((url) => /julisteet\/fokus\/.*\.webp(\?|$)/.test(url.href), (route) => {
+  /*
+   * OSOITTEESSA ON VUOSIKERTA (js/media.js fokuskarttaUrl `?v=`), joten
+   * kysely on katkaistava ennen nimeä — muuten pyyntölistaan kertyisi
+   * "MAAILMA?v=6" eikä yksikään nimivertailu osuisi. Samasta syystä
+   * yllä olevan reitin kuvio ei voi päättyä `.webp$`:ään: juuri se
+   * jätti kaikki lehtipyynnöt ulkomaailman katkaisulle, ja savuke
+   * kaatui heti ensimmäiseen väitteeseen (mitattu 30.8.2026).
+   */
+  const nimi = route.request().url().split('/').pop().split('?')[0]
+    .replace('.webp', '');
   pyynnot.push(nimi);
   if (nimi === 'MAAILMA' && yleislehtiPois) { route.abort(); return; }
   route.fulfill({
@@ -225,7 +234,7 @@ await sivu.route((url) => /julisteet\/fokus\/.*\.webp$/.test(url.href), (route) 
 // voittaa, joten poikkeus on kirjoitettava tähän ehtoon.
 await sivu.route(
   (url) => !/127\.0\.0\.1|localhost/.test(url.href)
-    && !/julisteet\/fokus\/.*\.webp$/.test(url.href),
+    && !/julisteet\/fokus\/.*\.webp(\?|$)/.test(url.href),
   (route) => route.abort(),
 );
 
@@ -1169,6 +1178,72 @@ const varareitti = await lehtitila();
 vaadi('puuttuva yleislehti palauttaa maalehtien atlaksen',
   varareitti.leveys > 2860 && varareitti.yleis === 0 && varareitti.atlas > 0,
   JSON.stringify(varareitti));
+
+/*
+ * === 23.–25. JÄTTILÄISLEHTI VÄISTÄÄ — MUTTA VAIN SUURENNETTUNA ======
+ *
+ * js/fokuskartta.js "SAMA JÄTTILÄINEN OMANA LEHTENÄ". Mitattu
+ * 30.8.2026 oikeilla ämpärin lehdillä: Moskovassa seisovan pelaajan
+ * atlaksessa oli NOLLA lehteä, koska Venäjän 7504 yksikön levyinen
+ * oma lehti varasi ahneelta valinnalta jokaisen peittoruudun — ja
+ * ruudulla oli sen 0,85 kuvapikseliä yksikköä kohti, kun Ukrainan
+ * lehti antaa 6,0 ja Valko-Venäjän 10,1.
+ *
+ * Väisto on kaksiehtoinen, ja juuri se on tässä mitattava: karkea
+ * lehti EI väistä silloin, kun näkymä on sitä kauempana — silloin se
+ * on ruutua tarkempi ja piirtää oman maastonsa ja omat nimensä.
+ *
+ * Ruutu on 430 px leveä, joten Venäjän lehden oma tarkkuus vastaa noin
+ * 504 lautayksikön näkymää: 400 suurentaa, 2000 ei.
+ */
+yleislehtiPois = false;
+await sivu.evaluate(async () => {
+  const { game, ui } = window.matkakirja;
+  game.player.pos = { type: 'city', city: 'moskova' };
+  game.world.visited.add('moskova');
+  game.phase = 'action';
+  ui.render();
+  await new Promise((r) => setTimeout(r, 1500));
+});
+await sivu.waitForTimeout(1500);
+
+const kerrostila = () => sivu.evaluate(() => {
+  const kerros = window.matkakirja.ui.fokuskarttaKerros;
+  const luokat = [...(kerros?.children ?? [])].map((e) => e.getAttribute('class') ?? '');
+  return {
+    oma: window.matkakirja.ui.fokuskarttaAvain,
+    vaisto: Boolean(window.matkakirja.ui.omaLehtiVaistaa),
+    skaala: Number((window.matkakirja.ui.nakyvaAlue()?.skaala ?? 0).toFixed(3)),
+    atlasIndeksi: luokat.indexOf('fokus-atlas'),
+    lehtiIndeksi: luokat.indexOf('fokus-lehti'),
+    atlas: [...(window.matkakirja.ui.atlasLehdet?.keys() ?? [])],
+  };
+});
+
+await nakymaan({
+  x: 6900, y: 1050, w: 400, h: 860,
+});
+const lahella = await kerrostila();
+vaadi('Venäjän lehti väistää suurennettuna ja päästää naapurit atlakseen',
+  lahella.oma === 'RUS' && lahella.vaisto && lahella.atlas.length > 0
+  && lahella.atlasIndeksi > lahella.lehtiIndeksi, JSON.stringify(lahella));
+
+await nakymaan({
+  x: 6100, y: 700, w: 2000, h: 1240,
+});
+const kaukana = await kerrostila();
+vaadi('...mutta ei väistä silloin kun se on ruutua tarkempi',
+  kaukana.oma === 'RUS' && !kaukana.vaisto
+  && kaukana.lehtiIndeksi > kaukana.atlasIndeksi, JSON.stringify(kaukana));
+
+await ateenaan();
+await nakymaan({
+  x: 6500, y: 1780, w: 400, h: 860,
+});
+const kreikka = await kerrostila();
+vaadi('tavallinen lehti on yhä atlaksen päällä myös lähikuvassa',
+  kreikka.oma === 'GRC' && !kreikka.vaisto
+  && kreikka.lehtiIndeksi > kreikka.atlasIndeksi, JSON.stringify(kreikka));
 
 /*
  * 16. TURVATILASSA EI HAETA YLEISLEHTEÄKÄÄN.
