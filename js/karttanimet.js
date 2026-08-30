@@ -110,6 +110,20 @@ const KYNNYS = {
   vuoriNimi: 0.45,
   jarviNimi: 0.45,
   jarviNimi2: 0.9,
+  /*
+   * KOHDENIMIÖ SYTTYY SAMALLA KYNNYKSELLÄ KUIN TAVALLISEN KAUPUNGIN
+   * NIMI (omistajan päätös 30.8.2026, kysymyskortti: *"Sama ladonta
+   * kuin paikannimillä"* — sama koko, sama törmäyksenvältely, samat
+   * tiheyskynnykset).
+   *
+   * Sama luku kuin `nimi` on tässä TARKOITUS eikä sattuma, ja siksi se
+   * on oma rivinsä: kohteen nimi on kartalla samaa lajia kuin
+   * kaupungin nimi — luettava paikannimi — eikä sen kynnystä saa
+   * siirtää vahingossa kaupunkien mukana. Jos kohteita joskus halutaan
+   * harvemmaksi tai tiheämmäksi kuin kaupunkeja, muutos tehdään tähän
+   * lukuun eikä `nimi`-riviin.
+   */
+  kohdeNimi: 0.45,
 };
 
 /*
@@ -128,10 +142,58 @@ const KYNNYS = {
  */
 const FONTTI = '"Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif';
 
-/** Nimiöiden koot CSS-pikseleinä — samat luvut kuin laatoilla. */
+/**
+ * Nimiöiden koot CSS-pikseleinä — samat luvut kuin laatoilla.
+ *
+ * `kohde` on tavallisen kaupungin nimen kokoinen. Se on omistajan
+ * päätös 30.8.2026 sanatarkasti (*"sama koko"*), ja se on myös ainoa
+ * koko, joka kestää perustelun: kohde on kartalla paikka siinä missä
+ * kaupunkikin, ja aiempi 5,8 CSS-pikselin nimiö oli lukukelvoton juuri
+ * siksi, ettei se ollut minkään kartan oma mitta vaan merkin oman
+ * kutistuksen sivutuote (js/fokuskohteet.js KOHDE_SYMBOLI_SKAALA ×
+ * js/fokusnosto-symbolit.js NOSTOSYM_NIMIO_KOKO).
+ */
 const KOKO = {
-  isoKaupunki: 12, kaupunki: 10.5, vuori: 11, jarvi: 10,
+  isoKaupunki: 12, kaupunki: 10.5, vuori: 11, jarvi: 10, kohde: 10.5,
 };
+
+/* ------------------------------------------------- kohdenimiön nosto */
+
+/**
+ * Rako merkin reunan ja nimiön välissä, CSS-pikseleinä.
+ *
+ * Sama suuruusluokka kuin kaupungin nimiön siirtymä pisteestä (5–7):
+ * nimi on kiinni merkissään mutta ei sen päällä.
+ */
+const KOHDE_RAKO = 3;
+
+/**
+ * NOSTON PITUUDET CSS-PIKSELEINÄ (omistajan pelitesti 30.8.2026,
+ * Ateena: *"nostot voisi tuoda lähemmäksi Ateenaa"*).
+ *
+ * Nosto on kartografinen keino eikä ahtauden oire: kun nimi ei mahdu
+ * merkkinsä kylkeen, se nostetaan lähituntumaan ja sidotaan merkkiin
+ * ohuella katkoviivalla. Pituudet ovat siksi LYHYITÄ ja niitä on vain
+ * kaksi — pitkä nosto ei enää kerro kenen nimi on kyseessä, ja
+ * silloin nimen kuuluu ennemmin pudota kokonaan (yleistystä, ei
+ * virhe).
+ *
+ * Yksikkö on CSS-pikseli samasta syystä kuin nimen koko: nosto on
+ * nimen jatke ja sen on oltava sama matka joka laitteella ja joka
+ * zoomilla.
+ */
+const NOSTON_PITUUDET = [14, 26];
+
+/**
+ * Noston viivan paksuus ja katkon mitta CSS-pikseleinä (omistajan
+ * pelitesti 30.8.2026: *"tuo katkoviiva saisi olla kevyempi"*).
+ *
+ * Hiuksenohut kynä ja tiheä katko: nosto johdattaa silmän eikä kilpaile
+ * kartan omien viivojen kanssa. Väri ja peittävyys ovat CSS:ssä
+ * (.karttanimi-nosto) — tässä on vain se, mikä on mitta.
+ */
+const NOSTON_VIIVA = 0.5;
+const NOSTON_KATKO = 1.6;
 
 /** Merkkien mitat CSS-pikseleinä — samat luvut kuin laatoilla. */
 const MERKKI = {
@@ -262,6 +324,73 @@ function aineistoLaudalle(pack) {
     aineistoLauta = pack?.id;
   }
   return aineisto;
+}
+
+/* ------------------------------------------------- kohteet ladontaan */
+
+/*
+ * KOHDENIMIÖT TULEVAT TÄNNE, EIVÄTKÄ LADO ITSE (omistajan päätös
+ * 30.8.2026, kysymyskortti: *"Sama ladonta kuin paikannimillä"*).
+ *
+ * ── MIKSI YKSI LADONTA EIKÄ KAKSI ─────────────────────────────────
+ *
+ * Kohdenimiöt latoivat tähän asti itse (js/fokuskohteet.js
+ * paivitaKohdeNimiot) omalla mitallaan ja omalla väistöllään. Kaksi
+ * rinnakkaista ladontaa ei voi ratkaista törmäystä, koska kumpikaan ei
+ * tiedä toisesta: kaupungin nimi ja kohteen nimi saattoivat päätyä
+ * samaan kohtaan, ja kumpikin piti sitä vapaana. Sama juurisyy kuin
+ * kaksoisnimillä (ks. tiedoston johdanto) — kaksi lähdettä, ei yhtään
+ * yhteistä päätöstä.
+ *
+ * Nyt ladontoja on yksi ja se tuntee kaikki nimet. Kohdekerros
+ * ILMOITTAUTUU tänne (asetaKohdenimet) samalla tavalla kuin
+ * lisäkohteet ilmoittautuvat kohdekerrokselle
+ * (js/fokuskohteet.js rekisteroiLisakohteet): riippuvuus osoittaa
+ * yhteen suuntaan, eikä tähän moduuliin tule kehäviittausta.
+ *
+ * ── MITÄ KOHDEKERROS ANTAA ────────────────────────────────────────
+ *
+ * PIIRTOPAIKAN, EI DATAPISTEEN. Merkki on voitu siirtää esityksessä
+ * (erottelu ja nippu, js/fokusniput.js), ja nimen on oltava sen
+ * merkin vieressä, joka ruudulla on — ei sen pisteen, joka datassa on.
+ *
+ * MERKIN SÄTEEN LAUDAN YKSIKÖINÄ. Kohdemerkit elävät KARTAN
+ * mittakaavassa (omistajan linjaus 26.8.2026), nimet CSS-pikseleissä;
+ * nimiön rako merkin reunaan on siis laskettava merkin omasta koosta
+ * eikä vakiona. Säde on vakio laudan yksiköissä, joten se on
+ * ladonnalle sama funktio mittakaavasta kuin kaikki muukin.
+ */
+let kohdenimet = [];
+let kohdenimienAvain = '';
+let kohteenSade = 0;
+
+/**
+ * Ilmoittaa kohdenimiöt ladontaan.
+ *
+ * @param {Array} lista [{ id, teksti, x, y }] laudan koordinaateissa,
+ *   merkin PIIRTOPAIKASSA; järjestys on tärkeysjärjestys (ensimmäisenä
+ *   listattu voittaa törmäyksen), sama sääntö kuin kohdekerroksen
+ *   omassa väistössä oli.
+ * @param {number} sade merkin säde laudan yksiköinä.
+ * @returns {boolean} muuttuiko joukko (kutsuja voi ohittaa turhan työn)
+ */
+export function asetaKohdenimet(lista, sade = 0) {
+  const rivit = Array.isArray(lista) ? lista : [];
+  const avain = `${sade.toFixed(3)}|${rivit
+    .map((k) => `${k.teksti}@${k.x.toFixed(1)},${k.y.toFixed(1)}`).join(';')}`;
+  if (avain === kohdenimienAvain) return false;
+  kohdenimienAvain = avain;
+  kohdenimet = rivit;
+  kohteenSade = sade;
+  /*
+   * LADONTA ON FUNKTIO MITTAKAAVASTA JA AINEISTOSTA. Kun aineisto
+   * vaihtuu — maanvaihto, uusi merkkijoukko, nipun uusi asettelu —
+   * jokainen muistettu mittakaava on vanhentunut, eikä yhtäkään saa
+   * jäädä jäljelle: muuten vanha zoomiporras palauttaisi edellisen
+   * maan nimet.
+   */
+  LADONNAT.clear();
+  return true;
 }
 
 /* ---------------------------------------------------------- mittari */
@@ -469,6 +598,126 @@ function lado(data, px) {
   }
 
   /*
+   * ====== KOHDENIMIÖT — KAUPUNKIEN JÄLKEEN, MAASTON EDELLE =========
+   *
+   * TÄRKEYSJÄRJESTYS ON PÄÄTÖS, JA TÄSSÄ ON SEN PERUSTELU.
+   *
+   * 1. KAUPUNGIN NIMI VOITTAA KOHTEEN NIMEN. Kaupunki on kartan
+   *    perusrakennetta ja pelaajan navigoinnin ankkuri: se on paikka,
+   *    johon matkustetaan, ja sen nimi on se, jolla pelaaja etsii
+   *    itsensä kartalta. Kohde on saman kaupungin yksityiskohta, ja
+   *    sen kortti aukeaa merkkiä napauttamalla myös ilman nimeä —
+   *    kaupungin nimen katoaminen ei korvaudu millään.
+   *
+   * 2. KOHTEEN NIMI VOITTAA MAASTONIMEN. Maastonimi on kuvitusta,
+   *    jota kartta latoo joka tapauksessa koko maailmaan; kohde on
+   *    pelin omaa sisältöä ja vain siinä maassa, jossa pelaaja nyt on.
+   *    Kun molemmat eivät mahdu, se harvinaisempi ja avattava jää.
+   *    Kaksoisnimivaaraa tästä ei synny: samanniminen kohde jättää
+   *    nimiönsä pois jo lähteellä (js/fokuskohteet.js kohteenNimio →
+   *    maastonimiLahella), joten sama nimi ei voi kilpailla itsensä
+   *    kanssa.
+   *
+   * MERKIT EIVÄT OSALLISTU EIVÄTKÄ KATOA. Ladonta päättää vain
+   * NIMISTÄ. Kohdemerkki piirretään omassa kerroksessaan
+   * (js/fokuskohteet.js) osuma-alueineen niin kuin ennenkin, ja
+   * pudotetun nimen merkki avaa korttinsa täsmälleen kuten se, jonka
+   * nimi jäi — omistajan nimenomainen ehto 30.8.2026.
+   */
+  const nostot = [];
+  if (nakyy(KYNNYS.kohdeNimi)) {
+    /*
+     * MERKIN SÄDE RUUTUPIKSELEINÄ. Kohdemerkki elää kartan
+     * mittakaavassa, joten sen näkyvä koko riippuu zoomista — nimen
+     * rako merkin reunaan on laskettava siitä eikä vakiosta, tai
+     * lähikuvassa nimi asettuisi merkin päälle.
+     */
+    const merkkiR = kohteenSade * px;
+    for (const k of kohdenimet) {
+      const x = k.x * px;
+      const y = k.y * px;
+      const lev = tekstinLeveys(k.teksti, KOKO.kohde, '');
+      const kork = KOKO.kohde * 1.15;
+      const vieri = merkkiR + KOHDE_RAKO;
+      /*
+       * EHDOKKAAT KAHDESSA LUOKASSA: ensin neljä merkin omaa kylkeä
+       * (nimi kiinni merkissä, ei viivaa — viiva olisi silloin pelkkä
+       * koriste), ja vasta jos yksikään ei mahdu, NOSTO: nimi
+       * lähituntumaan ja katkoviiva merkkiin.
+       *
+       * Kyljet ovat samassa järjestyksessä kuin kohdekerroksen omassa
+       * väistössä oli (oikea ennen vasenta, js/fokuskohteet.js
+       * KOHDE_NIMIO_PUOLET): järjestys on kiinteä, joten sama näkymä
+       * antaa aina saman kartan eikä nimi voi vaihtaa puolta
+       * panoroinnissa.
+       */
+      const ehdokkaat = [
+        { dx: vieri, dy: kork * 0.35, ank: 'start', nosto: false },
+        { dx: -vieri, dy: kork * 0.35, ank: 'end', nosto: false },
+        { dx: 0, dy: -(merkkiR + kork * 0.55), ank: 'middle', nosto: false },
+        { dx: 0, dy: merkkiR + kork * 0.95, ank: 'middle', nosto: false },
+      ];
+      for (const pituus of NOSTON_PITUUDET) {
+        for (const sx of [1, -1]) {
+          for (const sy of [-1, 1]) {
+            ehdokkaat.push({
+              dx: sx * (vieri + pituus * 0.7),
+              dy: sy * pituus * 0.7 + kork * 0.35,
+              ank: sx > 0 ? 'start' : 'end',
+              nosto: true,
+            });
+          }
+        }
+      }
+      let asetettuK = null;
+      for (const e of ehdokkaat) {
+        const kx = x + e.dx;
+        const ky = y + e.dy;
+        const x0 = e.ank === 'end' ? kx - lev : (e.ank === 'middle' ? kx - lev / 2 : kx);
+        const r = {
+          x0: x0 - 1, y0: ky - kork * 0.62, x1: x0 + lev + 1, y1: ky + kork * 0.42,
+        };
+        if (vapaa(r)) { varaa(r); asetettuK = { kx, ky, ank: e.ank, nosto: e.nosto }; break; }
+      }
+      /*
+       * PUDOTUS ON YLEISTYSTÄ, EI VIRHE. Juuri tämä haara purkaa
+       * omistajan näkemän viuhkan: kun kaksitoista nimeä kilpailee
+       * yhdestä kaupungin kyljestä, muutama luettava jää ja loput
+       * väistyvät — ja merkit jäävät kaikki paikoilleen.
+       */
+      if (!asetettuK) { pudotettu += 1; continue; }
+      nimiot.push({
+        laji: 'kohde',
+        teksti: k.teksti,
+        x: laudalle(asetettuK.kx),
+        y: laudalle(asetettuK.ky),
+        ank: asetettuK.ank,
+        koko: KOKO.kohde,
+      });
+      if (!asetettuK.nosto) continue;
+      /*
+       * NOSTON VIIVA SEURAA NIMEÄ SEN VALITTUUN PAIKKAAN. Se lähtee
+       * merkin REUNALTA (ei keskeltä, jottei jää merkin alle) ja
+       * päättyy juuri ennen nimen perusviivaa.
+       */
+      const vx = asetettuK.kx - x;
+      const vy = asetettuK.ky - kork * 0.35 - y;
+      const pit = Math.hypot(vx, vy);
+      if (!(pit > merkkiR + 2)) continue;
+      const ux = vx / pit;
+      const uy = vy / pit;
+      nostot.push({
+        x1: laudalle(x + ux * merkkiR),
+        y1: laudalle(y + uy * merkkiR),
+        x2: laudalle(x + ux * (pit - 2)),
+        y2: laudalle(y + uy * (pit - 2)),
+        /* Ankkurin x laudalla: saumasiirto lasketaan tästä. */
+        ax: k.x,
+      });
+    }
+  }
+
+  /*
    * Vuorten ja järvien nimet samaan törmäysjoukkoon, matalammalla
    * tärkeydellä: kaupunki on pelin kohde, maastonimi on kuvitusta.
    */
@@ -512,7 +761,9 @@ function lado(data, px) {
     });
   }
 
-  return { nimiot, merkit, pudotettu };
+  return {
+    nimiot, merkit, nostot, pudotettu,
+  };
 }
 
 /* -------------------------------------------------------- välimuisti */
@@ -549,6 +800,23 @@ export function unohdaKarttanimet() {
 /* ----------------------------------------------------------- piirto */
 
 /**
+ * LATOOKO TÄMÄ KERROS NIMET JUURI NYT?
+ *
+ * Kaksi ehtoa, ja kumpikin on jo olemassa muualla tässä tiedostossa —
+ * tämä vain antaa saman vastauksen kohdekerrokselle, jottei sääntöä
+ * kirjoiteta toista kertaa. Kohdekerros tarvitsee sen päättääkseen,
+ * latooko se nimensä itse (vanha tie) vai antaako ne tänne (uusi).
+ *
+ * EHTO ON SAMA KUIN OMALLA PIIRROLLA, JA SE ON TÄRKEÄÄ: jos nämä
+ * eriytyisivät, kohteet jäisivät välitilassa joko kokonaan nimettömiksi
+ * tai saisivat nimensä kahdesti. Sama syy kuin kaksoisnimivaarassa
+ * (ks. tiedoston johdanto).
+ */
+export function karttanimetLatovat(ui) {
+  return Boolean(pyramidiKattaa(ui?.game?.pack?.id)) && !laatoissaOnNimet();
+}
+
+/**
  * Piirtää näkyvät paikannimet ja niiden merkit.
  *
  * Kutsutaan näkymän ASETTUMISESTA (js/ui.js paivitaMaastonimet), ei
@@ -582,7 +850,7 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
   const nakyva = tiedettyNakyva ?? ui.nakyvaAlue?.();
   if (!(nakyva?.w > 0) || !(nakyva.skaala > 0)) return tyhjenna();
 
-  const { nimiot, merkit } = ladoVarastosta(ui.game.pack, nakyva.skaala);
+  const { nimiot, merkit, nostot } = ladoVarastosta(ui.game.pack, nakyva.skaala);
   const leveys = ui.game.pack.map?.kiertava ? (ui.game.pack.map.width ?? 0) : 0;
   const laudalle = (cssPx) => cssPx / nakyva.skaala;
 
@@ -614,12 +882,56 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
    * täydentyy vain kun uusi nimi tulee reunan yli, eikä sama ladonta
    * maalaa itseään uudestaan joka asettumisella.
    */
+  /*
+   * NOSTON VIIVAT SAMAAN RAJAUKSEEN kuin nimet. Viiva on nimen jatke,
+   * joten se seuraa nimeään sauman yli samalla siirrolla — siirto
+   * lasketaan merkin ankkurista, jotta viivan molemmat päät kulkevat
+   * yhdessä eikä viiva veny sauman poikki.
+   */
+  const nakyvatNostot = [];
+  for (const n of nostot ?? []) {
+    if (n.y1 < nakyva.y - yVara || n.y1 > nakyva.y + nakyva.h + yVara) continue;
+    const siirto = saumasiirto(n.ax, nakyva, leveys, vara);
+    if (siirto === null) continue;
+    nakyvatNostot.push({ n, siirto });
+  }
+
+  /*
+   * KERROS RAKENNETAAN UUDESTAAN VAIN KUN SEN SISÄLTÖ MUUTTUU. Avain on
+   * mittakaava ja näkyvien nimien joukko: panoroinnin aikana kerros
+   * täydentyy vain kun uusi nimi tulee reunan yli, eikä sama ladonta
+   * maalaa itseään uudestaan joka asettumisella.
+   */
   const avain = `${ladonnanAvain(nakyva.skaala)}|`
     + `${nakyvat.map((k) => `${k.n.teksti}@${k.x.toFixed(0)}`).join(',')}|`
-    + `${nakyvatMerkit.length}:${nakyvatMerkit[0]?.x.toFixed(0) ?? ''}`;
+    + `${nakyvatMerkit.length}:${nakyvatMerkit[0]?.x.toFixed(0) ?? ''}`
+    + `|${nakyvatNostot.length}`;
   if (ui.karttanimiAvain === avain) return nakyvat.length;
   ui.karttanimiAvain = avain;
   kerros.textContent = '';
+
+  /*
+   * NOSTON VIIVAT KAIKKEIN ALIMMAISIKSI: ne ovat apuviivastoa, joka
+   * johdattaa silmän merkiltä nimelle, eivätkä ne saa kulkea
+   * kummankaan päällä.
+   *
+   * PAKSUUS JA KATKOT OVAT CSS-PIKSELEITÄ (paperivakio, Raamatun osio
+   * PAPERIVAKIOT JA KARTTAVAKIOT). Nosto on nimen jatke, ja nimi on
+   * ruudun mitta: jos viiva skaalautuisi kartan mukana, se olisi
+   * lähikuvassa köysi ja yleiskuvassa näkymätön — juuri se vika, joka
+   * kehysviivoista korjattiin v1369:ssä.
+   */
+  for (const { n, siirto } of nakyvatNostot) {
+    el('line', {
+      class: 'karttanimi-nosto',
+      x1: (n.x1 + siirto).toFixed(2),
+      y1: n.y1.toFixed(2),
+      x2: (n.x2 + siirto).toFixed(2),
+      y2: n.y2.toFixed(2),
+      'stroke-width': laudalle(NOSTON_VIIVA),
+      'stroke-dasharray': `${laudalle(NOSTON_KATKO)} ${laudalle(NOSTON_KATKO)}`,
+    }, kerros);
+  }
 
   /* Merkit ensin, nimet päälle: nimi on merkin selitys eikä toisin päin. */
   for (const { m, x } of nakyvatMerkit) {

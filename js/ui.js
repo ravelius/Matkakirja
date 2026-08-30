@@ -4745,14 +4745,6 @@ export class UI {
     this.paivitaMaailmanRajaus(nakyvaNyt);
     // Kaupunkien nimet pois yleiskuvasta (ks. paivitaKaupunkinimienNakyvyys).
     this.paivitaKaupunkinimienNakyvyys(nakyvaNyt);
-    /*
-     * PYRAMIDILAUDAN PAIKANNIMET (js/karttanimet.js). Ladonta on
-     * funktio pelkästä mittakaavasta ja muistetaan sen mukaan, joten
-     * panorointi ei laske sitä uudelleen — tässä valitaan vain se
-     * kourallinen nimiä, joka on ruudulla. Samasta kohdasta ja samasta
-     * syystä kuin muutkin ruutuun mitoitetut merkkikerrokset alempana.
-     */
-    paivitaKarttanimet(this, nakyvaNyt);
     // Kartan kohdemerkit ovat kiinteän kokoisia ruudulla, joten niiden
     // mittakaava on laskettava uudelleen aina kun zoomi muuttuu —
     // samasta syystä ja samasta kohdasta kuin lisänimien näkyvyys.
@@ -4760,6 +4752,23 @@ export class UI {
     // kohdasta; viuhka on purettu, ks. js/fokusvirta.js KUVAT
     // KARTALLA — PURETTU.)
     paivitaFokuskohteet(this, nakyvaNyt);
+    /*
+     * PYRAMIDILAUDAN PAIKANNIMET (js/karttanimet.js). Ladonta on
+     * funktio pelkästä mittakaavasta ja muistetaan sen mukaan, joten
+     * panorointi ei laske sitä uudelleen — tässä valitaan vain se
+     * kourallinen nimiä, joka on ruudulla. Samasta kohdasta ja samasta
+     * syystä kuin muutkin ruutuun mitoitetut merkkikerrokset alempana.
+     *
+     * KOHDEMERKKIEN JÄLKEEN, JA SE ON JÄRJESTYSVAATIMUS (30.8.2026).
+     * Ladonta latoo nyt myös kohdenimiöt (omistajan päätös: sama
+     * ladonta kuin paikannimillä), ja se saa ne kohdekerrokselta
+     * merkkien LOPULLISISSA piirtopaikoissa — nippu ja erottelu ovat
+     * silloin ratkenneet (js/fokuskohteet.js luovutaKohdeNimiot →
+     * js/karttanimet.js asetaKohdenimet). Toisin päin ladonta latoisi
+     * aina edellisen kehyksen kohdejoukon, ja maanvaihdon jälkeen
+     * kartalla olisi hetken edellisen maan nimet.
+     */
+    paivitaKarttanimet(this, nakyvaNyt);
     // Sama koskee kevyen kulun vihreää kohtaamispistettä.
     paivitaFokuspiste(this);
     // Ja maiden eläintäkyjä (js/elaintaky.js): merkit elävät kartan
@@ -5466,7 +5475,7 @@ export class UI {
      * saapuivat verkosta, ja sen rasterointi maksoi joka eleessä.
      *
      * Sitä ei siis piirretä lainkaan. Rakenne jää koskematta: maiden
-     * muodot (countryLayer), osuma-alueet, kaupungit, laatat, nappula ja
+     * muodot, osuma-alueet, kaupungit, laatat, nappula ja
      * merkkikerrokset ovat omissa ryhmissään laattojen PÄÄLLÄ.
      *
      * KATSELUTILAN MAANOSALAUDAT PIIRTÄVÄT OMAN KARTTANSA. Pyramidin
@@ -5511,8 +5520,7 @@ export class UI {
      * näkyisi sauman toisella puolella lainkaan.
      *
      * TÄHÄN KOHTAAN, koska lapsijärjestys on g.staattinen →
-     * clipPath#maa-rajaus → g.country-borders → g.country-names →
-     * g.cities → rect.grain → nappulat. Linssi on siis koko
+     * g.country-names → g.cities → rect.grain → nappulat. Linssi on siis koko
      * bittikarttakartan päällä mutta kaupunkien, nimien, laattojen,
      * kohderenkaiden ja nappuloiden alla: linssi selittää maailmaa, se
      * ei peitä pelitilaa.
@@ -5618,18 +5626,21 @@ export class UI {
     this.alkuReittiPaikka = null;
     this.alkuReittiKerros = pack.id === 'maailma' ? this.piirraAlkuReitit(root) : null;
 
-    // Nykyisen maan korostus (hento sävy + nimi kaunolla) piirretään tähän
-    // kerrokseen pelin edetessä (drawCountryBorders). Sävy rajataan
-    // tyylitellyn rantaviivan sisään, ettei se valu mereen — maiden
-    // todelliset rannikot poikkeavat piirretystä.
-    if (pack.map.countryShapes) {
-      const clip = el('clipPath', { id: 'maa-rajaus' }, root);
-      for (const outline of pack.map.outlines) {
-        const d = `M${outline.map(([x, y]) => `${x},${y}`).join(' L')}Z`;
-        el('path', { d }, clip);
-      }
-    }
-    this.countryLayer = el('g', { class: 'country-borders', 'clip-path': 'url(#maa-rajaus)' }, root);
+    /*
+     * NYKYISEN MAAN SÄVYTYS ON POISTETTU (omistaja 30.8.2026, iPad:
+     * *"Valittu maa maalautuu nyt ohuen harmaalla värillä. Poista
+     * väritys."*).
+     *
+     * Tässä oli maan korostuskerros (`.country-borders`) ja sen
+     * rajaus (`clipPath#maa-rajaus`), joka piti sävyn tyylitellyn
+     * rantaviivan sisällä. Kumpikin oli olemassa VAIN sävytystä
+     * varten, joten kumpikin lähtee sen mukana — ei piilotusta
+     * CSS:llä, vaan kerrosta ei enää synny (ks. drawCountryBorders).
+     *
+     * MAA TUNNISTUU YHÄ: kartuutsi vasemmassa alanurkassa
+     * (js/fokusmitat.js) kertoo maan nimen, ja fokusmoodin sumuverho
+     * jättää nykyisen maan ainoaksi tarkaksi alueeksi.
+     */
     /*
      * FOKUSMOODIN SUMUVERHO (omistaja 24.8.2026, Raamatun osio
      * "Fokusmoodi": *"nykyinen maa tarkkana topografioineen; käymättömät
@@ -5661,9 +5672,9 @@ export class UI {
      * kun vyöhykkeitä ei piirretä (ks. this.merisyvyys), sillä ei ole
      * mitään rajattavaa.
      *
-     * `maa-rajaus` yllä jää: se on eri raja eri tarkoitukseen (maan
-     * korostussävy pysyy rannan sisällä) ja se koskee vain yhtä maata
-     * kerrallaan.
+     * Laudan kokoisia rajauksia ei siis ole enää yhtään: maan
+     * korostussävyn `maa-rajaus` lähti 30.8.2026 sävyn mukana
+     * (ks. drawCountryBorders).
      */
     this.meriRajaus = null;
     /*
@@ -6135,10 +6146,27 @@ export class UI {
   }
 
   /**
-   * Korostaa maan, jossa pelaaja on: alue sävytetään aavistuksen
-   * tummemmaksi (.country-tint). Reitillä (kaupunkien välissä)
-   * edellinen korostus jää näkyviin, kunnes seuraava kaupunki vaihtaa
-   * maata — kartta ei vilku.
+   * Siivoaa maakerrokset, kun maa vaihtuu.
+   *
+   * === MAAN KOROSTUS ON KOKONAAN PURETTU (30.8.2026) ===
+   *
+   * Metodi piirsi ennen kolme asiaa. Kaikki kolme ovat nyt poissa, ja
+   * jäljellä on vain siivous: maaselaimen (js/vertailu.js) jättämä
+   * nimikerros tyhjennetään, kun peli palaa kartalle.
+   *
+   * === SÄVYTYS (.country-tint) ===
+   *
+   * Omistajan päätös 30.8.2026 laitteelta: *"Valittu maa maalautuu nyt
+   * ohuen harmaalla värillä. Poista väritys."*
+   *
+   * Sävy jäi 30.8. aamulla tarkoituksella, kun punainen ääriviiva
+   * purettiin: perusteluna oli, että omistaja moitti nimenomaan
+   * VIIVAA, ja että kyltin lähdettyä sävy oli kartan ainoa maamerkki.
+   * Perustelu oli järkevä mutta väärä — omistaja on nyt nähnyt sävyn
+   * laitteella ja päättänyt toisin. Poistettu koodina eikä piilotettu
+   * CSS:llä: sävyn kerros ja sen rajaus (clipPath#maa-rajaus) olivat
+   * olemassa vain tätä varten, joten ne lähtivät samalla (ks.
+   * drawBoard).
    *
    * === PUNAINEN ÄÄRIVIIVA JA MAAKYLTTI OVAT POISSA (30.8.2026) ===
    *
@@ -6166,12 +6194,9 @@ export class UI {
    *   jossa omistaja on erikseen tilannut sen näyttämään selatun maan
    *   (14.8.2026). Pelinäkymässä sitä ei enää luoda lainkaan.
    *
-   * SÄVYTYS JÄÄ. Se on pehmeä pintasävy ilman viivaa, joten
-   * rannikon tarkkuusero ei näy siinä — ja se on kartan ainoa merkki
-   * siitä, minkä maan rajojen sisällä matkaaja on.
    */
   drawCountryBorders() {
-    if (!this.countryLayer) return;
+    if (!this.countryNameLayer) return;
     const map = this.game.pack.map;
     const city = this.game.cityOf();
     const iso = city ? map.cityCountry?.[city.id] : null;
@@ -6179,13 +6204,8 @@ export class UI {
     const key = `${this.game.pack.id}:${iso}`;
     if (this.countryKey === key) return;
     this.countryKey = key;
-    this.countryLayer.textContent = '';
+    // Maaselaimen jättämä kyltti pois, kun peli palaa kartalle.
     this.countryNameLayer.textContent = '';
-    const maa = map.countryShapes?.[iso];
-    if (!maa) return;
-    const renkaat = maa.renkaat
-      .map((r) => `M${r.map(([x, y]) => `${x},${y}`).join(' L')}Z`);
-    el('path', { d: renkaat.join(' '), class: 'country-tint' }, this.countryLayer);
   }
 
   /**

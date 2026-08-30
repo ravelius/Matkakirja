@@ -4526,6 +4526,29 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
 }
 /* Järvi kursiivilla ja veden musteella, kuten laatoissakin. */
 .karttanimi-jarvi { font-style: italic; fill: rgba(70, 86, 96, 0.85); }
+/*
+   KOHTEEN NIMI ON KAUPUNGIN NIMEN SUKUA, EI OMA KIELENSÄ (omistajan
+   päätös 30.8.2026: "sama ladonta kuin paikannimillä"). Sama kirjasin
+   ja sama koko tulevat jo .karttanimestä ja elementiltä; tässä on vain
+   hitusen kevyempi muste, jotta pelin oma sisältö erottuu kartan
+   perusrakenteesta ilman että se huutaa.
+
+   HALO ON POIS TARKOITUKSELLA. Entinen kohdenimiö vedosti nimensä
+   taakse pergamenttia, koska se ladottiin merkin kylkeen ottamatta
+   naapureista selvää. Ladonta hoitaa nyt saman asian oikein päin:
+   nimi asetetaan sinne missä on tilaa, eikä sen tarvitse raivata
+   tilaa alleen. */
+.karttanimi-kohde { fill: rgba(74, 52, 33, 0.92); }
+/*
+   NOSTON VIIVA — merkiltä nimelle. Kartan kevyttä apuviivastoa: ohut,
+   haalistunut muste, lyhyet katkot, ei nuolenpäitä. Paksuus ja katkot
+   tulevat elementiltä CSS-pikseleinä (js/karttanimet.js NOSTON_VIIVA,
+   NOSTON_KATKO), koska ne ovat ruudun mittaa eivätkä kartan. */
+.karttanimi-nosto {
+  fill: none;
+  stroke: rgba(96, 74, 48, 0.42);
+  stroke-linecap: round;
+}
 .karttamerkki { pointer-events: none; }
 .karttamerkki-piste { fill: rgba(58, 40, 25, 0.9); stroke: none; }
 .karttamerkki-rengas { fill: none; stroke: rgba(58, 40, 25, 0.75); }
@@ -4726,16 +4749,17 @@ body.radio-tila .actions {
   stroke-linejoin: round;
   opacity: 0.22;
 }
-/* Maa, jossa pelaaja on: alue aavistuksen tummempana ja rajattuna
- * punamullanvärisellä ääriviivalla — väri, jolla 1800-luvun atlakset
- * piirsivät valtionrajat. Maan nimi ei ole kartalla vaan kehyksen
- * pillerissä (.maa-pilleri). */
-.country-tint {
-  fill: rgba(90, 70, 40, 0.13);
-  stroke: none;
-}
-
 /*
+ * MAAN KOROSTUS ON KOKONAAN PURETTU — EI SÄÄNTÖÄ, KOSKA EI KERROSTA.
+ *
+ * SÄVYTYS (.country-tint) POISTETTIIN 30.8.2026 ILLALLA. Omistajan
+ * havainto iPadilta: *"Valittu maa maalautuu nyt ohuen harmaalla
+ * värillä. Poista väritys."* Sävy oli jätetty samana päivänä
+ * ääriviivaa purettaessa sillä perusteella, että moite koski viivaa —
+ * omistaja näki sävyn laitteella ja päätti toisin. Poistettu koodina
+ * (js/ui.js drawCountryBorders ja drawBoard) eikä piilotettu täältä,
+ * joten luokkaa ei enää ole olemassa.
+ *
  * PUNAINEN ÄÄRIVIIVA (.country-korostus) POISTETTIIN 30.8.2026.
  * Omistajan pelitestipalaute v1095: *"punainen maan ääriviiva on
  * epätarkka → OTETAAN POIS"*. Viiva piirrettiin laudan karkeasta
@@ -4743,7 +4767,7 @@ body.radio-tila .actions {
  * aineistoa — viiva osui eri kohtaan kuin ranta, jonka se muka rajaa.
  * Piilotus oli ennen body.fokuspohjassa, ja kun luokan asettaja katosi
  * lehtipurussa, viiva palasi ruudulle. Nyt sitä ei enää piirretä
- * (js/ui.js drawCountryBorders). Sävytys (.country-tint) jäi.
+ * (js/ui.js drawCountryBorders).
  */
 
 /* ===========================================================================
@@ -9929,10 +9953,7 @@ body.kartalento .fokuskuvat {
  *                     — omistaja näki sen vilkkuvan kohdemaan päällä
  *                     kesken lennon, koska peli oli jo siirtänyt
  *                     matkaajan perille.
- *   .country-tint     nykyisen maan sävytys. Peli on siirtänyt matkaajan
- *                     perille jo lennon alussa, joten sävytys paljastaisi
- *                     määränpään ennen kuin kone on siellä.
- *
+
  * Häivytys eikä display, samasta syystä kuin yllä: ne palaavat pehmeästi
  * kun lippu poistuu.
  *
@@ -9944,8 +9965,7 @@ body.kartalento .fokuskuvat {
  *                     tähän: lento zoomaa juuri sen rajan alle.
  */
 body.kartalento .fokuspisteet,
-body.kartalento .elaintakyt,
-body.kartalento .country-tint {
+body.kartalento .elaintakyt {
   opacity: 0;
   pointer-events: none;
 }

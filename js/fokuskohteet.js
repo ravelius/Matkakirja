@@ -103,7 +103,9 @@ import { FOKUS_LISANIMET } from './packs/fokus-grc.js';
 // Laattoihin poltetut maastonimet (vuoret, järvet, joet): sama nimi
 // vain kerran kartalle, ks. maastonimiLahella.
 import { MAAILMANKARTAN_NIMET } from './packs/maailmankartta-nimet.js';
-import { LAUDAN_YMPARYS, PARIN_ETAISYYS, normalisoiNimi } from './karttanimet.js';
+import {
+  LAUDAN_YMPARYS, PARIN_ETAISYYS, asetaKohdenimet, karttanimetLatovat, normalisoiNimi,
+} from './karttanimet.js';
 import { piirraKarttavalo } from './karttavalot.js';
 import { asetaKuva } from './media.js';
 import { html, jaaKappaleiksi, nielaiseSulkevaNapautus, polloNimilappu } from './ui-apurit.js';
@@ -1340,6 +1342,92 @@ function kohdeLimittyy(a, b) {
   return a.x1 < b.x2 && b.x1 < a.x2 && a.y1 < b.y2 && b.y1 < a.y2;
 }
 
+/* ============ NIMIÖT LUOVUTETAAN YHTEISEEN LADONTAAN ==============
+ *
+ * Omistajan päätös 30.8.2026 kysymyskortilla, kuvakaappaus Sofiasta:
+ * *"Sama ladonta kuin paikannimillä."* Kohdenimiöt menevät samaan
+ * ruutuavaruuden ladontaan kuin kaupunkien nimet — sama koko, sama
+ * törmäyksenvältely, samat tiheyskynnykset.
+ *
+ * ── MIKÄ OLI VIKA ─────────────────────────────────────────────────
+ *
+ * Kun paikannimet siirtyivät laatoista peliin (v1369), ne saivat
+ * ruutuun mitoitetun koon (10,5–12 CSS-px). Kohdenimiöt jäivät omaan
+ * mittaansa, joka ei ollut kartan mitta lainkaan vaan kahden kertoimen
+ * tulo: NOSTOSYM_NIMIO_KOKO 11 × KOHDE_SYMBOLI_SKAALA 11/21 = 5,8
+ * CSS-pikseliä lehden perustasolla. Sofiassa se tarkoitti toistakymmentä
+ * lukukelvotonta nimiötä kaupungin kyljessä — eikä yksikään niistä
+ * pudonnut, koska väistö tunsi vain kaksi paikkaa eikä yhtään kynnystä.
+ *
+ * ── MIKSI EI OMAA LADONTAA, VAIKKA SELLAINEN JO OLI ───────────────
+ *
+ * Juuri se oli vika. Kaksi rinnakkaista ladontaa ei voi ratkaista
+ * törmäystä keskenään: kaupungin nimi ja kohteen nimi saattoivat
+ * päätyä samaan kohtaan, koska kumpikaan ei tiennyt toisesta. Yksi
+ * ladonta, joka tuntee kaikki nimet, ratkaisee ne kerralla.
+ *
+ * ── MERKKI EI OLE OSA TÄTÄ PÄÄTÖSTÄ ───────────────────────────────
+ *
+ * Ladonta päättää vain NIMISTÄ. Merkki, sen symboli, sen aihevalo ja
+ * sen osuma-alue (KOHDE_OSUMA_R, sormen mitta) jäävät tähän kerrokseen
+ * koskemattomina, ja pudotetun nimen merkki avaa korttinsa täsmälleen
+ * kuten ennenkin. Se on omistajan nimenomainen ehto samalla kortilla:
+ * *"Merkit jäävät napautettaviksi myös ilman nimeä."*
+ */
+function luovutaKohdeNimiot(ui, s, piilossa) {
+  const ryhmat = ui.fokuskohdeRyhmat ?? [];
+  /*
+   * KERROS PIILOSSA = EI NIMIÄ. Nimi seuraa merkkiään: kun merkit
+   * sammuvat yleiskuvassa tai saapumisportin takana (paivitaNakyvyys),
+   * nimien on sammuttava samalla hetkellä — muuten kartalla olisi
+   * nimiä ilman merkkejä.
+   */
+  const rivit = [];
+  if (!piilossa) {
+    /*
+     * YKSI RIVI KOHDETTA KOHTI, EI KOPIOTA KOHTI. Kiertävällä laudalla
+     * merkki piirretään molempiin kohtiin, mutta ladonta on laudan
+     * asia ja hoitaa sauman itse (js/karttanimet.js saumasiirto) —
+     * täsmälleen kuten kaupunkien nimillä. Kahdesta rivistä syntyisi
+     * kaksi kilpailijaa samasta nimestä.
+     */
+    const nahty = new Set();
+    for (const r of ryhmat) {
+      if (!r.nimi || nahty.has(r.id)) continue;
+      nahty.add(r.id);
+      rivit.push({
+        id: r.id,
+        teksti: r.nimi,
+        // PIIRTOPAIKKA, EI DATAPISTE: merkki on voitu siirtää nipussa
+        // tai erottelussa, ja nimi kuuluu sen viereen missä merkki on.
+        x: r.nippu?.x ?? r.x + (r.sx ?? 0),
+        y: r.nippu?.y ?? r.y + (r.sy ?? 0),
+      });
+    }
+  }
+  // Merkin säde laudan yksiköinä: sama ketju kuin piirrossa (merkin
+  // oma kutistus × merkkien vakioskaala). Ladonta tarvitsee sen
+  // nimiön raon laskemiseen.
+  asetaKohdenimet(rivit, KOHDE_SYMBOLI_R * s);
+  /*
+   * OMAT NIMIÖT POIS RASTERISTA. Nimi on nyt nimikerroksen asia, ja
+   * merkin oma nimiö olisi sama nimi kahdesti — sama kaksoisnimivaara,
+   * jonka v1366 ja v1369 jo kertaalleen ratkoivat, vain eri kerrosten
+   * välillä. Rasteri on symbolikohtainen ja siksi yhteinen kaikille
+   * saman lajin merkeille, joten tämä myös keventää: nimiöttömiä
+   * rastereita on lajien verran eikä kohteiden.
+   */
+  ui.fokuskohdePiiloNimiot = new Set(ryhmat.map((r) => r.id));
+  ui.fokuskohdeNimioPuolet = new Map();
+  for (const r of ryhmat) {
+    if (!r.glyyfi || !r.nimi || r.nimioNakyy === false) continue;
+    r.nimioNakyy = false;
+    r.nimioVasemmalle = false;
+    r.glyyfi.replaceChildren();
+    piirraNostosymKartalle(r.glyyfi, r.symboli, '', r.laji, false);
+  }
+}
+
 function paivitaKohdeNimiot(ui, s) {
   const ryhmat = ui.fokuskohdeRyhmat ?? [];
   if (!ryhmat.length) return;
@@ -1574,7 +1662,7 @@ export function paivitaFokuskohteet(ui, tiedettyNakyva = null) {
    * (paivitaNakyvyys lukee vain lehden osuuden näkyvästä alueesta),
    * joten järjestyksen kääntäminen on turvallinen.
    */
-  paivitaNakyvyys(ui, kerros, nakyva);
+  const piilossa = paivitaNakyvyys(ui, kerros, nakyva);
   asetaKohdeMittakaava(ui, 1);
   /*
    * NIMIÖIDEN VÄISTÖ VASTA TÄSSÄ eli asemoinnin jälkeen ja vain
@@ -1585,7 +1673,18 @@ export function paivitaFokuskohteet(ui, tiedettyNakyva = null) {
   // Väistö mittaa NÄKYVÄÄ merkkiä ja nimiötä, joten mitta on katettu
   // skaala — sama, jolla merkit juuri asemoitiin.
   const merkkiSkaala = ui.fokusMerkkiSkaalaKartalle?.() ?? ui.fokusMerkkiSkaala?.();
-  if (merkkiSkaala > 0) paivitaKohdeNimiot(ui, merkkiSkaala);
+  /*
+   * KAKSI TIETÄ, JA LUETTELO VALITSEE (ks. luovutaKohdeNimiot).
+   * Pyramidilaudalla, jonka laatoissa EI ole nimiä, nimet latoo
+   * nimikerros — silloin tämä kerros luovuttaa nimensä sinne. Muualla
+   * (katselutilan manterelaudat, vanhat laatat, joissa nimet ovat
+   * poltettuina) nimikerros on hiljaa, ja tämän kerroksen oma väistö
+   * on yhä ainoa ladonta, joka kohteille on.
+   */
+  if (merkkiSkaala > 0) {
+    if (karttanimetLatovat(ui)) luovutaKohdeNimiot(ui, merkkiSkaala, piilossa);
+    else paivitaKohdeNimiot(ui, merkkiSkaala);
+  }
   // Rekisteröinti nipistykseen jää (js/kartta.js vastaskaalaaMerkit),
   // vaikka vakioskaala ei enää tarvitse vastaskaalaa: varapolku
   // (lehdetön näkymä) on yhä ruutumitassa ja tarvitsee sen.
@@ -1701,6 +1800,11 @@ function sytytaKohteet(ui, kerros) {
   }, KOHTEIDEN_SYTTYMINEN_MS);
 }
 
+/**
+ * @returns {boolean} onko kerros piilossa — nimikerros tarvitsee
+ *   tiedon, jotta nimet sammuvat samalla hetkellä kuin merkit
+ *   (ks. luovutaKohdeNimiot).
+ */
 function paivitaNakyvyys(ui, kerros, nakyva) {
   const pohja = ui.fokusPohjaBbox;
   const osuus = pohja && nakyva?.w > 0 ? pohja.w / nakyva.w : 0;
@@ -1710,12 +1814,13 @@ function paivitaNakyvyys(ui, kerros, nakyva) {
   kerros.classList.toggle('fokuskohteet-piilossa', piiloon);
   if (piiloon) {
     suljeFokuskohde(ui);
-    return;
+    return true;
   }
   if (ui.fokuskohteetSyttyvat) {
     ui.fokuskohteetSyttyvat = false;
     sytytaKohteet(ui, kerros);
   }
+  return false;
 }
 
 /** Laudan vaihto tai uusi peli: merkit pois ja muisti nollille. */
