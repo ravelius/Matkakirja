@@ -878,7 +878,11 @@ export const RAAMATTU = {
           + 'kuplia ei viela ole (Sofia, Sarajevo, Bukarest, Istanbul, '
           + 'Rooma) - Ateenassa EI heti pelin alussa. Kerran per '
           + 'saapuminen, matkakirjaluennan jalkeen.',
-        'TAKYNOSTO ON TUIKKIVA PISTE (omistaja 27.8.2026 ilta): '
+        'TAKYNOSTO ON TUIKKIVA PISTE - KUMOTTU (Fable 30.8.2026: '
+          + 'omistajan linjaus YHTENAINEN KOHDEMALLI 29.8.2026 kumoaa '
+          + 'taman; tuikkiva piste ja yksi kerrallaan -pooli '
+          + 'purettiin v1348:ssa, loytaminen tapahtuu selitevalikon '
+          + 'aihevaloilla. Jaa historiaksi.) (omistaja 27.8.2026 ilta): '
           + 'takynostot ovat pelkka pieni tuikkiva keltainen piste '
           + 'kartalla, YKSI KERRALLAAN - seuraava syttyy vasta kun '
           + 'edellinen on katsottu. Ei tekstikuplaa eika symbolia. '
@@ -1183,7 +1187,11 @@ export const RAAMATTU = {
           + 'sisallosta (ei mekaniikkaa, vain repliikki). Toteutus: '
           + 'syvennystarinaera laajenee yhtenaistamiseraksi '
           + '(nostopoolin purku + korttien visuaalinen yhtenaistys '
-          + 'samassa).',
+          + 'samassa). ENSISIJAISUUS (Fable 30.8.2026): tama kirjaus '
+          + 'kumoaa KAIKKI aiemmat takykupla-, takyannostelu- ja '
+          + 'tuikintamekaniikan kirjaukset (mm. TAKYKUPLA, '
+          + 'TAKYANNOSTELU, TAKYNOSTO ON TUIKKIVA PISTE) - ne jaavat '
+          + 'Raamattuun historiaksi. Toteutettu v1348.',
         'SYVENNYSTARINAT KARTALLE (omistaja 29.8.2026 ilta, "Sopii"): '
           + 'v1326:ssa reitittomiksi jaaneet fokusvirtatakyt - '
           + 'syvennystarinat kuvineen ja 50 punnan minivisoineen 12 '
