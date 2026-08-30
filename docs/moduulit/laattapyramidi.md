@@ -705,12 +705,13 @@ Mitattu pelistä (390×844, sama näkymä, skaala 0,7993):
 
 | | valittu taso | poltetun nimen koko ruudulla |
 | --- | --- | --- |
-| dpr 1 | z4 (0,9 px/yks) | 9,3 CSS-px |
-| dpr 3 | z5 (1,8 px/yks) | **4,7 CSS-px** |
+| dpr 1 | z4 (0,9 px/yks) | 10,7 CSS-px |
+| dpr 3 | z5 (1,8 px/yks) | **5,3 CSS-px** |
 
-Yleisesti `10,5 · skaala / taso.px`, ja koska `taso.px` on √2:n päässä
-`skaala · dpr`:stä, poltettu nimi on dpr 3:lla 2,5…5,0 CSS-pikseliä ja
-dpr 1:llä 7,4…14,8.
+(Lähtökaupungin nimi, ladonnan `koko` 12.) Yleisesti
+`koko · skaala / taso.px`, ja koska `taso.px` on √2:n päässä
+`skaala · dpr`:stä, 12 pikselin nimi on dpr 3:lla 2,8…5,7 CSS-pikseliä
+ja dpr 1:llä 8,5…17,0.
 
 **Mitä laatoista poistuu:** kaupunkien, vuorten ja järvien nimiöt sekä
 kaupunkipiste (2,0 / 2,6 px), sen rengas (4,6 px), vuorisymboli
@@ -842,9 +843,9 @@ ei riipu panoroinnista ja solmuja on kymmeniä eikä satoja — vanha elävä
 kerros piti 261 nimilappua puussa aina.
 
 **Silmillä dpr 1, 2 ja 3** (sama näkymä, sama laattakansio): nimiön
-korkeus ruudulla **14,0 CSS-pikseliä kaikilla kolmella**, ladottujen
-nimien määrä sama (29) ja paikat samat. Ennen sama nimi oli 9,3 ja
-4,7 CSS-pikseliä (dpr 1 / dpr 3).
+ladottu laatikko ruudulla **14,0 CSS-pikseliä kaikilla kolmella**,
+ladottujen nimien määrä sama (29) ja paikat samat. Ennen sama nimi oli
+10,7 ja 5,3 CSS-pikseliä (dpr 1 / dpr 3).
 
 ## 7. Harva pyramidi — mitattu, päätetty POIS
 
