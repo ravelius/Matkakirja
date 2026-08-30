@@ -168,6 +168,29 @@ const KOKO = {
 const KOHDE_RAKO = 3;
 
 /**
+ * KOHDENIMIÖIDEN VÄLJYYSVARA CSS-PIKSELEINÄ — TÄMÄ ON YLEISTYSKYNNYS,
+ * EI KOSMETIIKKAA.
+ *
+ * Kaupunkien ja maastonimien yleistys tulee mittakaavakynnyksistä
+ * (KYNNYS): ne ovat hajallaan kartalla, ja kun mittakaava pienenee,
+ * nimiä on yksinkertaisesti liikaa maailman leveydelle. Kohteet ovat
+ * toisin: ne ovat kaikki YHDEN kaupungin ympärillä, ja kaupungin
+ * merkkirypäs (js/fokusniput.js) järjestää ne siistiksi sarakkeeksi —
+ * eli tekee niille tilaa juuri sen verran, että 12 pikselin rivit
+ * mahtuvat vierekkäin koskettamatta. Pelkkä törmäystesti hyväksyisi
+ * ne siis kaikki joka mittakaavassa, ja litania jäisi.
+ *
+ * Varaus tehdään siksi nimeä ISOMPANA. Silloin nimi vaatii ympärilleen
+ * oikeaa paperia eikä pelkkää rakoa, ja koska merkit elävät kartan
+ * mittakaavassa mutta nimet ruudun, sarake levenee lähennettäessä ja
+ * päästää lisää nimiä läpi. Kaukaa näkyy tärkein kourallinen, lähempää
+ * useampi — sama porrastus kuin paikannimillä, eri mekanismilla,
+ * koska aineisto on erilainen.
+ */
+const KOHDE_VALJYYS_X = 4;
+const KOHDE_VALJYYS_Y = 5;
+
+/**
  * NOSTON PITUUDET CSS-PIKSELEINÄ (omistajan pelitesti 30.8.2026,
  * Ateena: *"nostot voisi tuoda lähemmäksi Ateenaa"*).
  *
@@ -674,8 +697,13 @@ function lado(data, px) {
         const kx = x + e.dx;
         const ky = y + e.dy;
         const x0 = e.ank === 'end' ? kx - lev : (e.ank === 'middle' ? kx - lev / 2 : kx);
+        /* Väljyysvara on mukana sekä testissä että varauksessa: nimi
+         * vaatii tilaa ympärilleen eikä vain itselleen (ks. KOHDE_VALJYYS). */
         const r = {
-          x0: x0 - 1, y0: ky - kork * 0.62, x1: x0 + lev + 1, y1: ky + kork * 0.42,
+          x0: x0 - KOHDE_VALJYYS_X,
+          y0: ky - kork * 0.62 - KOHDE_VALJYYS_Y,
+          x1: x0 + lev + KOHDE_VALJYYS_X,
+          y1: ky + kork * 0.42 + KOHDE_VALJYYS_Y,
         };
         if (vapaa(r)) { varaa(r); asetettuK = { kx, ky, ank: e.ank, nosto: e.nosto }; break; }
       }

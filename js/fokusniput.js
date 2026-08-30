@@ -282,7 +282,18 @@ const NIPPU_SYKE_R = 12;
  * kaupungin, merkin keskustaa lähempi merkin, ja raja kulkee tasan
  * puolivälissä (18,5 px), selvästi sykekehän ulkopuolella.
  */
-const NIPPU_DX = 37;
+/*
+ * LYHENNETTY 30.8.2026 (omistajan pelitesti, Ateena: *"nostot voisi
+ * tuoda lähemmäksi Ateenaa"*): 37 -> 28.
+ *
+ * Alaraja on yhä NÄKYVÄ merkintä eikä sormialue, kuten yllä: kaupungin
+ * sykekehä (12) + merkin oman aluslaatan säde (KOHDE_SYMBOLI_R × 2 ≈
+ * 6,8) + rako. 28 pitää sarakkeen selvästi kehän ulkopuolella mutta
+ * tuo sen kaupungin kylkeen. Napautusten limittäisyyden hoitaa yhä
+ * sääntö 9 (lähin keskipiste), joten sormialueet saavat mennä
+ * päällekkäin.
+ */
+const NIPPU_DX = 28;
 
 /*
  * Rivien pystyväli. Täkysymbolin laatta on 20,8 px — 30 px:n välillä
@@ -363,10 +374,22 @@ const NIPPU_VALI_RAKO = 3;
  * eikä saa olla riippuvainen siitä, kumpi merkkikerros sattui lataamaan
  * oman tyylinsä.
  */
-const NIPPU_VIIVA_LEVEYS = 1.2;
-const NIPPU_VIIVA_KATKO = 2.6;
+/*
+ * KEVENNETTY 30.8.2026 (omistajan pelitesti, Ateena: *"Myös tuo
+ * katkoviiva saisi olla kevyempi."*).
+ *
+ * Paksuus 1,2 -> 0,8 ja himmeys 0,42 -> 0,3; katko 2,6 -> 2,0, jotta
+ * ohuempi kynä ei muutu pisteriviksi. Viiva on nosto — se johdattaa
+ * silmän kaupungista sen omiin merkkeihin — eikä se saa kilpailla
+ * kartan omien viivojen kanssa. Samalla kertaa nimiöt siirtyivät
+ * yhteiseen ladontaan (js/karttanimet.js), joten viivan rinnalla ei
+ * ole enää pikkuriikkistä kursiivia: viiva saa olla hiljaisempi,
+ * koska sen ei tarvitse enää kannatella nimeä.
+ */
+const NIPPU_VIIVA_LEVEYS = 0.8;
+const NIPPU_VIIVA_KATKO = 2;
 const NIPPU_VIIVA_VARI = '#8a6a2c';
-const NIPPU_VIIVA_HIMMEYS = 0.42;
+const NIPPU_VIIVA_HIMMEYS = 0.3;
 // Pieni rako merkin aluslaatan reunaan, jottei viiva näytä kasvavan
 // merkistä kiinni.
 const NIPPU_VIIVA_RAKO = 2.5;
