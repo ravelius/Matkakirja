@@ -320,7 +320,7 @@ async function haeLuettelo() {
  * turhasta latauksesta.
  *
  * LÄHIN MITATAAN LOGARITMISESTI, samasta syystä kuin kameran
- * portaikossa (js/kartta.js napsautaTasoon): tasot ovat kertoimia, ja
+ * portaikossa (js/kartta.js zoomiTasot): tasot ovat kertoimia, ja
  * aritmeettinen "lähin" vetäisi aina isompaan päin.
  *
  * KAMERAN ZOOMIPORTAIKKO PYSYY TÄSTÄ ERILLÄÄN. Se on 1,5 × 6 porrasta

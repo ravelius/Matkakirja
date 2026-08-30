@@ -985,53 +985,6 @@ export class Kartta {
     };
   }
 
-  /**
-   * KIINTEÄT ZOOMTASOT: lähin porras vapaalle kertoimelle
-   * (bittikarttakartta vaihe 3).
-   *
-   * Nipistys tuotti ennen minkä tahansa kertoimen portaiden välistä
-   * (`zoomiVapaa`), ja jokainen niistä oli oma mittakaavansa: oma
-   * kooste, oma lehtitarkkuus, oma ruutujen sarja. Kiinteillä tasoilla
-   * niitä on laudan koosta riippuen kymmenkunta, ja sama taso palaa
-   * uudestaan — ele päättyy siis näkymään, jolle on jo kertaalleen
-   * tehty työ. Juuri sitä vaiheen 3 pyramidi tarvitsee.
-   *
-   * PORTAIKKO ON SAMA KUIN PAINIKKEILLA. Pelissä oli tähän asti kaksi
-   * eri tapaa zoomata samaan lukuun, eikä niiden tarvinnut olla samaa
-   * mieltä (ks. zoomiKerroin). Nyt ne ovat, ja se on koko idea: mihin
-   * tahansa pelaaja nipistääkin, hän päätyy portaaseen, jonka
-   * loitonnusnappi vie takaisin.
-   *
-   * FOKUSIKKUNA ON YKSI EHDOKAS MUIDEN JOUKOSSA. Se on portaikon pohja
-   * fokusnäkymässä (zoomiRajat) eikä yleensä osu portaalle, joten se on
-   * tässä oma tasonsa — sama poikkeus, joka loitonnusnapin viimeisellä
-   * askeleella on jo (zoomaaPainikkeella).
-   *
-   * LÄHIN MITATAAN LOGARITMISESTI. Zoomiportaat ovat kertoimia, ja
-   * 1,5:n askeleessa aritmeettinen "lähin" vetäisi aina alaspäin:
-   * portaiden 4 ja 6 puoliväli on 5, mutta suhteessa se on 4,9.
-   */
-  napsautaTasoon(kerroin) {
-    const tasot = this.zoomiTasot();
-    const { pienin, suurin } = this.zoomiRajat();
-    const pohja = this.fokusZoomMinimi();
-    const ehdokkaat = [];
-    for (let i = 0; i < tasot.length; i += 1) {
-      if (tasot[i] >= pienin * 0.999 && tasot[i] <= suurin * 1.001) {
-        ehdokkaat.push({ kerroin: tasot[i], porras: i });
-      }
-    }
-    if (pohja > 0 && pohja <= suurin * 1.001) ehdokkaat.push({ kerroin: pohja, porras: -1 });
-    const k = Math.min(suurin, Math.max(pienin, kerroin));
-    if (!ehdokkaat.length) return { kerroin: k, porras: -1 };
-    let paras = ehdokkaat[0];
-    let ero = Infinity;
-    for (const e of ehdokkaat) {
-      const d = Math.abs(Math.log(e.kerroin / k));
-      if (d < ero) { ero = d; paras = e; }
-    }
-    return paras;
-  }
 
   /** Onko yleiskuva (porras 0) juuri nyt sallittu määränpää? */
   yleiskuvaSallittu() {
@@ -3366,14 +3319,36 @@ export class Kartta {
 
     const paataNipistys = () => {
       if (!nipistys) return;
-      const { pienin } = this.zoomiRajat();
+      const { pienin, suurin } = this.zoomiRajat();
       /*
-       * ELE PÄÄTTYY KIINTEÄÄN TASOON (vaihe 3). Vapaa kerroin oli se,
-       * mikä teki jokaisesta nipistyksestä oman mittakaavansa; nyt ele
-       * napsahtaa lähimpään portaaseen (napsautaTasoon).
+       * ELE PÄÄTTYY SIIHEN, MIHIN SORMET JÄIVÄT (omistajan päätös
+       * 30.8.2026, kysymyskortti: *"Zoomatessa kartta hypähtää hieman
+       * eri syvyydelle kun sormet irroittaa ja uusi karttataso
+       * piirtyy."*).
+       *
+       * KUMOAA aiemman linjauksen "NIPISTYS PÄÄTTYY AINA PORTAIKON
+       * TASOON (napsautaTasoon)". Se ei ollut eleen ehto vaan
+       * RASTEROINNIN ehto, ja sanatarkka perustelu oli *"mittakaavoja
+       * on kourallinen ja sama taso palaa uudestaan, jolloin
+       * välimuistit osuvat"*: jokainen vapaa kerroin tarkoitti silloin
+       * oman kokonaisen laudan rasterointia uudella tarkkuudella.
+       *
+       * PYRAMIDISSA EI OLE MITÄÄN RASTEROITAVAA. js/laattapyramidi.js
+       * valitseTaso poimii lähimmän kahdeksasta laattatasosta MILLE
+       * TAHANSA vapaalle kertoimelle, ja selain skaalaa laattaa
+       * korkeintaan √2. Välimuisti osuu tasoon eikä kameran
+       * kertoimeen, joten vapaa zoomi ei maksa enää mitään — mutta
+       * napsautus maksoi: portaikon askel on 1,5, joten pahimmillaan
+       * ele siirsi näkymää vielä 22 % sen jälkeen kun sormet olivat jo
+       * irronneet. Juuri se on omistajan näkemä hypähdys.
+       *
+       * PAINIKKEET PITÄVÄT PORTAIKKONSA, eikä se vaadi uutta koodia:
+       * zoomaaPainikkeella osaa jo jatkaa portaiden VÄLISTÄ lähimpään
+       * portaaseen menosuunnassa (ks. sen `vapaa`-haara). Napsautus
+       * teki siitä haarasta kuolleen; nyt se herää takaisin.
        */
-      const napsu = this.napsautaTasoon(nipistys.kerroin * nipistys.suhde);
-      const kerroin = napsu.kerroin;
+      const kerroin = Math.min(suurin, Math.max(pienin,
+        nipistys.kerroin * nipistys.suhde));
       const kohde = nipistys.kohde;
       const keski = nipistys.keski;
       nipistys = null;
@@ -3424,17 +3399,11 @@ export class Kartta {
        * ei koskaan laudan origoon (Grönlanti-hyppy, ks. laudalle).
        */
       /*
-       * PORRAS TAI POHJA. Portaalle napsahtanut ele kirjataan
-       * portaikkoon (zoomiVapaa nollaan), jolloin loitonnusnappi jatkaa
-       * siitä, mihin sormet jäivät. Fokusikkunan pohja ei ole porras, ja
-       * se jää vapaaksi kertoimeksi kuten ennenkin.
+       * ELEEN OMA KERROIN JÄÄ VOIMAAN. Se on portaiden välissä, ja
+       * juuri siitä loitonnus- ja lähennysnappi jatkavat lähimpään
+       * portaaseen menosuunnassa (zoomaaPainikkeella).
        */
-      if (napsu.porras >= 0) {
-        this.ui.zoomiVapaa = 0;
-        this.ui.zoomiPorras = napsu.porras;
-      } else {
-        this.ui.zoomiVapaa = kerroin;
-      }
+      this.ui.zoomiVapaa = kerroin;
       this.ui.zoomKohde = kelpaa(kohde) ? kohde : null;
       this.ui.panX = null;
       this.ui.panY = null;

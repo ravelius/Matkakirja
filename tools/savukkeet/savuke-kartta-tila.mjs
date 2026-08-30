@@ -444,30 +444,29 @@ const kosketusSuhde = jalkeenKosketus / ennenKosketus;
 console.log(`      mitattu: kosketusnipistys ${kosketusSuhde.toFixed(3)}x`
   + ` (${kosketusKirjoituksia} muunnoskirjoitusta / ${ASKELIA} tapahtumaa)`);
 /*
- * ELE PÄÄTTYY KIINTEÄÄN TASOON (bittikarttakartta vaihe 3,
- * js/kartta.js napsautaTasoon).
+ * ELE PÄÄTTYY SIIHEN, MIHIN SORMET JÄIVÄT (omistajan päätös
+ * 30.8.2026: *"kartta hypähtää hieman eri syvyydelle kun sormet
+ * irroittaa"*).
  *
- * Väite oli aiemmin "2x kaksinkertaistaa mittakaavan täsmälleen".
- * Nipistys ei enää tuota mitä tahansa kerrointa portaiden välistä:
- * ele napsahtaa lähimpään portaaseen, ja 1,5:n askeleessa kahden
- * lähin porras on 2,25. Väite mittaa nyt sen, mikä on olennaista —
- * että ELE VIE OIKEAAN SUUNTAAN JA OIKEAAN SUURUUSLUOKKAAN ja että
- * lopputulos on portaikon taso eikä satunnainen luku.
+ * Väite kulki tässä välillä muodossa "vie lähimpään portaaseen
+ * kahden ympäriltä", koska nipistys napsahti portaikkoon
+ * (js/kartta.js napsautaTasoon). Napsautus on poistettu — se oli
+ * rasteroinnin ehto eikä eleen ehto — ja väite palaa alkuperäiseen,
+ * tiukempaan muotoonsa: 2x KAKSINKERTAISTAA MITTAKAAVAN.
+ *
+ * Toleranssi on 5 %, ei nolla: kosketustapahtumien sormivälit
+ * pyöristyvät kokonaisiksi pikseleiksi, eikä ele siksi osu tasan
+ * kahteen.
  */
-const askelKatto = 1.5;
-vaadi('6a kosketusnipistys 2x vie lähimpään portaaseen kahden ympäriltä',
-  kosketusSuhde > 1.05 && kosketusSuhde <= 2 * askelKatto * 1.01
-  && kosketusSuhde >= 2 / askelKatto * 0.99,
-  `${kosketusSuhde.toFixed(3)}x (odotettu 1,33…3,0, rajat ${JSON.stringify(rajatKartalla)})`);
-vaadi('6a2 ele päätyy portaikon tasoon eikä vapaaseen kertoimeen',
+vaadi('6a kosketusnipistys 2x kaksinkertaistaa mittakaavan',
+  kosketusSuhde > 1.9 && kosketusSuhde < 2.1,
+  `${kosketusSuhde.toFixed(3)}x (odotettu 2,0 ± 5 %, rajat ${JSON.stringify(rajatKartalla)})`);
+vaadi('6a2 ele EI napsahda portaikon tasoon vaan jää sormien kertoimeen',
   await sivu.evaluate(() => {
     const ui = window.matkakirja.ui;
-    const tasot = ui.kartta.zoomiTasot();
-    const k = ui.kartta.zoomiKerroin;
-    const pohja = ui.kartta.fokusZoomMinimi();
-    return tasot.some((t) => Math.abs(t / k - 1) < 0.01)
-      || (pohja > 0 && Math.abs(pohja / k - 1) < 0.01);
-  }), 'kerroin ei osu portaaseen');
+    // Vapaa kerroin on eleen oma; nolla tarkoittaisi portaaseen kirjattua.
+    return ui.zoomiVapaa > 0;
+  }), 'ele kirjautui portaaksi (zoomiVapaa = 0)');
 vaadi('6b jokainen touchmove näkyy esikatselussa (ei harvennusta)',
   kosketusKirjoituksia >= ASKELIA,
   `${kosketusKirjoituksia} kirjoitusta / ${ASKELIA} tapahtumaa`);
