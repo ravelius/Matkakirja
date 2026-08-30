@@ -204,6 +204,31 @@ export function fokuskarttaUrl(tiedosto) {
   return `${PEILI_JUURI}${FOKUS_ALIPOLKU}${tiedosto}?v=${FOKUS_VUOSIKERTA}`;
 }
 
+/*
+ * LAATTAPYRAMIDI (30.8.2026): maailmanlaajuinen esirenderöity kartta
+ * laattoina (tools/generoi-laattapyramidi.mjs, js/laattapyramidi.js).
+ * Sama ämpäri ja sama `julisteet/`-juuri kuin fokuskartoilla, samasta
+ * syystä: vie-julisteet.yml vie ämpäriin vain sen kansion.
+ *
+ * VUOSIKERTAA EI OLE, KOSKA VERSIO ON POLUSSA. Laatta on
+ * `pyramidi/<versio>/z3/12/7.webp`, ja uusi ajo saa uuden versio-osan —
+ * yksikään vanha osoite ei muutu, joten laatat kelpaavat ikuiseen
+ * välimuistiin eikä sisältöpäivitys voi jättää selaimeen puolikasta
+ * karttaa kahdesta eri ajosta. Sama syy kuin lehtien
+ * FOKUS_VUOSIKERTA-numerolla, mutta ilman sen haittaa: numeron nosto
+ * pakottaa lataamaan KAIKKI lehdet uudestaan, versiopolku vain ne
+ * laatat, joita oikeasti katsotaan.
+ */
+const PYRAMIDI_ALIPOLKU = 'julisteet/pyramidi/';
+
+/**
+ * Laattapyramidin osoite ämpärissä.
+ * @param {string} polku esim. 'pyramidi.json' tai 'z3/12/7.webp'
+ */
+export function pyramidiUrl(polku) {
+  return `${PEILI_JUURI}${PYRAMIDI_ALIPOLKU}${polku}`;
+}
+
 /**
  * Turvallinen tiedostonimi mistä tahansa merkkijonosta.
  *

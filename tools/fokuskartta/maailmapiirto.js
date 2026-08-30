@@ -86,9 +86,47 @@ import {
 
 /* =========================================================== moottori */
 
+/*
+ * === YKSI ARKKI VAI YKSI LAATTA (laattapyramidi, 30.8.2026) =========
+ *
+ * Sama moottori piirtää sekä koko arkin (tools/tee-yleislehti.mjs) että
+ * YHDEN LAATAN maailmanlaajuisesta laattapyramidista
+ * (tools/generoi-laattapyramidi.mjs). Ero on kahdessa valinnaisessa
+ * asetuksessa, ja NIIDEN PUUTTUESSA JOKAINEN KAAVA PALAUTUU SANASTA
+ * SANAAN ENTISEEN — juuri siksi ne ovat oletuksia eivätkä haaroja:
+ *
+ *   koko    { w, h }  koko arkin mitat kuvapikseleinä. Oletus on tämän
+ *                     canvasin oma koko, jolloin arkki on laatta.
+ *   siirto  { x, y }  tämän laatan vasen ylänurkka ARKIN pikseleissä.
+ *                     Oletus 0,0.
+ *
+ * KOLME ASIAA, JOTKA ON PAKKO LASKEA ARKIN KOORDINAATEISSA, tai
+ * laattojen väliin jää sauma:
+ *
+ * 1. KOHINA. Paperin rae, kuitujuovat, laikut ja akvarellin pigmentti
+ *    näytteistetään kuvapikselistä. Jos jokainen laatta aloittaisi
+ *    nollasta, KAIKKI laatat saisivat saman rakeen — ruudukko näkyisi
+ *    ruudukkona. Kohina luetaan siksi arkin pikselistä (x + siirto.x).
+ *
+ * 2. MITTAKAAVA S. Viivanleveydet, kirjasinkoot ja rakeen tiheys on
+ *    säädetty 6400 pikselin arkille. Laatan oma leveys (512) antaisi
+ *    S = 0,08 eli näkymättömät rannikot; S tulee siksi ARKIN
+ *    leveydestä, joka on pyramiditasolla koko maailman leveys.
+ *
+ * 3. KEHYS JA KALUSTEET. Marginaali, kartussi, mittajana ja
+ *    painajanrivi ovat arkin reunassa ja keskellä. Ne piirretään arkin
+ *    koordinaateissa ja siirretään laatan omaan nurkkaan; laatta, jonka
+ *    ulkopuolelle ne jäävät, saa ne canvasin leikkaamana eli ei
+ *    lainkaan.
+ *
+ * Vektorit (rannikko, järvet, asteverkko) EIVÄT tarvitse siirtoa: ne
+ * tulevat kuvaX/kuvaY:n kautta laatan omasta bboxista ja osuvat siis
+ * jo valmiiksi oikeaan kohtaan.
+ */
 export function piirraMaailma(canvas, aineisto, asetukset) {
   const {
     bbox, projektio, leveys, tyyli = {}, esikatseluTausta,
+    koko = null, siirto = null,
   } = asetukset;
 
   const px = leveys / bbox.w;
@@ -97,6 +135,16 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
   canvas.width = W;
   canvas.height = H;
   const ctx = canvas.getContext('2d');
+
+  /*
+   * ARKIN KOORDINAATISTO. GX/GY on tämän laatan nurkka arkilla ja GW/GH
+   * arkin koko; ilman `koko`- ja `siirto`-asetuksia arkki on tämä
+   * canvas, jolloin GX = GY = 0, GW = W ja GH = H.
+   */
+  const GX = siirto?.x ?? 0;
+  const GY = siirto?.y ?? 0;
+  const GW = koko?.w ?? W;
+  const GH = koko?.h ?? H;
 
   /*
    * S = MITTAKAAVA SUHTEESSA VIITETARKKUUTEEN (6400 px).
@@ -108,7 +156,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * jolla lehti tehdään. Näin `--leveys 9600` tuo lisää pikseleitä eikä
    * isompaa tekstiä, aivan kuten maalehdillä.
    */
-  const S = leveys / 6400;
+  const S = GW / 6400;
 
   /*
    * ATLASKEHYKSEN MARGINAALIT KUVAPIKSELEINÄ.
@@ -121,12 +169,33 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    */
   const kehys = tyyli.kehys ?? null;
   const yYla = kehys ? Math.round(kehys.yla * S) : 0;
-  const yAla = kehys ? H - Math.round(kehys.ala * S) : H;
+  const yAla = kehys ? GH - Math.round(kehys.ala * S) : GH;
 
   // --- projektio: asteet -> lauta -> kuvapikselit ja takaisin --------
   const { lautaX, lautaY, lautaLon, lautaLat } = laudanProjektio(projektio);
-  const kuvaX = (lon) => (lautaX(lon) - bbox.x) * px;
-  const kuvaY = (lat) => (lautaY(lat) - bbox.y) * px;
+  /*
+   * VEKTORIT PIIRRETÄÄN ARKIN KOORDINAATEISSA, EI LAATAN.
+   *
+   * Laatan oma nurkka kelpaisi sijainniltaan, mutta EI TAVULLEEN: jos
+   * kuvakoordinaatti lasketaan laatan bboxista, vähennyslasku tehdään
+   * eri suuruusluokassa kuin isossa kuvassa ja rannikon viiva osuu
+   * pyöristyksen verran eri kohtaan pikseliä. Mitattuna (30.8.2026,
+   * `--saumatesti`) se näkyi 0,04–0,11 %:ssa kanavista siellä missä
+   * vektoreita on. Ero on silmälle näkymätön, mutta se estää sen
+   * ainoan todisteen, joka tästä arkkitehtuurista kannattaa vaatia:
+   * että lohkosta leikattu laatta on TÄSMÄLLEEN sama kuin erikseen
+   * piirretty.
+   *
+   * Siksi arkin origo tulee asetuksena (`arkki`, laudan koordinaatit)
+   * ja koko vektoripiirto elää arkin pikseleissä; canvas siirretään
+   * laatan nurkkaan kokonaisluvulla `ctx.translate(-GX, -GY)`, joka on
+   * tarkka operaatio. Ilman `arkki`-asetusta origo on laatan oma bbox
+   * ja siirto nolla — eli entinen käytös sanasta sanaan.
+   */
+  const origo = asetukset.arkki ?? { x: bbox.x, y: bbox.y };
+  const arkkiSiirto = asetukset.arkki ? { x: GX, y: GY } : { x: 0, y: 0 };
+  const kuvaX = (lon) => (lautaX(lon) - origo.x) * px;
+  const kuvaY = (lat) => (lautaY(lat) - origo.y) * px;
   const lonPikselista = (x) => lautaLon(bbox.x + x / px);
   const latPikselista = (y) => lautaLat(bbox.y + y / px);
 
@@ -225,7 +294,10 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
      */
     const kerma = [246, 237, 198];
     for (let y = 0; y < H; y++) {
-      const marginaalissa = y < yYla || y >= yAla;
+      // Arkin rivi: marginaali, reunatummennus ja kohina ovat arkin
+      // mittoja, mutta lat tulee laatan omasta bboxista (latPikselista).
+      const gy = y + GY;
+      const marginaalissa = gy < yYla || gy >= yAla;
       const lat = marginaalissa ? 0 : latPikselista(y + 0.5);
       /*
        * PAPERIN LEIKATTU REUNA. Muutaman pikselin tummennus uloimmalla
@@ -233,14 +305,15 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
        * laudalla lepää — ilman sitä kerma vain loppuu kesken.
        */
       const reuna = kehys
-        ? Math.min(1, Math.min(y + 0.5, H - 0.5 - y) / (11 * S))
+        ? Math.min(1, Math.min(gy + 0.5, GH - 0.5 - gy) / (11 * S))
         : 1;
       for (let x = 0; x < W; x++) {
         const i = (y * W + x) * 4;
+        const gx = x + GX;
         // --- paperi: kuitujuovat, rae ja laikut ---
-        const kuitu = fbm(KOHINA, x / (52 * S), y / (7 * S), 3) - 0.5;
-        const rae = KOHINA2(x / (1.7 * S), y / (1.7 * S)) - 0.5;
-        const laikka = fbm(KOHINA2, x / (260 * S), y / (260 * S), 3) - 0.5;
+        const kuitu = fbm(KOHINA, gx / (52 * S), gy / (7 * S), 3) - 0.5;
+        const rae = KOHINA2(gx / (1.7 * S), gy / (1.7 * S)) - 0.5;
+        const laikka = fbm(KOHINA2, gx / (260 * S), gy / (260 * S), 3) - 0.5;
         const v = kuitu * 9 + rae * 11 + laikka * 16;
         if (marginaalissa) {
           const s = (1 - reuna) * 15;
@@ -260,7 +333,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         if (vesi) {
           // --- meri: syvyysvyöhykkeet, raja aaltoilee kohinasta ---
           if (!Number.isFinite(m)) m = -900;
-          const n = fbm(KOHINA, x / (30 * S), y / (30 * S), 4) - 0.5;
+          const n = fbm(KOHINA, gx / (30 * S), gy / (30 * S), 4) - 0.5;
           const s = lerpSyvyys(m + n * Math.min(150, Math.max(12, -m * 1.25)));
           const a = 0.5;
           r = r * (1 - a) + s[0] * a;
@@ -269,12 +342,12 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         } else {
           // --- maasto: hypsometria, varjostus, akvarellin rae ---
           if (!Number.isFinite(m)) m = 60;
-          const n1 = fbm(KOHINA, x / (26 * S), y / (26 * S), 4) - 0.5;
-          const n2 = fbm(KOHINA2, x / (7 * S), y / (7 * S), 3) - 0.5;
+          const n1 = fbm(KOHINA, gx / (26 * S), gy / (26 * S), 4) - 0.5;
+          const n2 = fbm(KOHINA2, gx / (7 * S), gy / (7 * S), 3) - 0.5;
           const c = lerpVari(ASTEIKKO, Math.max(0, m + n1 * 190 + n2 * 60));
           const varjo = (0.5 - varjostus(lon, lat)) * 0.46;
-          const pigmentti = (KOHINA2(x / (2.1 * S), y / (2.1 * S)) - 0.5) * 13;
-          const lai = (fbm(KOHINA, x / (95 * S), y / (95 * S), 3) - 0.5) * 12;
+          const pigmentti = (KOHINA2(gx / (2.1 * S), gy / (2.1 * S)) - 0.5) * 13;
+          const lai = (fbm(KOHINA, gx / (95 * S), gy / (95 * S), 3) - 0.5) * 12;
           const t = (k) => k * (1 - varjo) + pigmentti + lai + (varjo > 0 ? 0 : varjo * 30);
           r = t(c[0]);
           g = t(c[1] * (1 - varjo * 0.12));
@@ -305,7 +378,9 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
       for (let i = 0; i < viiva.length; i++) {
         const x = kuvaX(viiva[i][0]);
         const y = kuvaY(viiva[i][1]);
-        if (edellinen === null || Math.abs(x - edellinen) > W / 2) g.moveTo(x, y);
+        // Sauman tunnistus on ARKIN mitta: laatta on kapea, ja laudan
+        // kierrosta vastaava hyppy on aina puoli arkkia eikä puoli laattaa.
+        if (edellinen === null || Math.abs(x - edellinen) > GW / 2) g.moveTo(x, y);
         else g.lineTo(x, y);
         edellinen = x;
       }
@@ -323,9 +398,24 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * kerroksessa: kartta-ala on yksi laatikko, ja kaikki kartan sisältö
    * kuuluu sen sisään.
    */
+  /*
+   * ARKIN KOORDINAATISTO PÄÄLLE (osiot 4–9).
+   *
+   * Tästä eteenpäin kaikki — rannikko, järvet, asteverkko, merten
+   * nimet, kompassi ja atlaskehys kalusteineen — piirretään ARKIN
+   * pikseleissä, ja canvas on siirretty tämän laatan nurkkaan. Siirto
+   * on kokonaisluku eli tarkka, joten lohkosta leikattu laatta on
+   * täsmälleen sama kuin erikseen piirretty (ks. kuvaX yllä).
+   *
+   * Ilman `arkki`-asetusta siirto on nolla ja arkki on tämä canvas —
+   * jokainen alla oleva kaava on silloin sanasta sanaan entisensä.
+   */
+  ctx.save();
+  ctx.translate(-arkkiSiirto.x, -arkkiSiirto.y);
+
   ctx.save();
   ctx.beginPath();
-  ctx.rect(0, yYla, W, yAla - yYla);
+  ctx.rect(arkkiSiirto.x, yYla, W, yAla - yYla);
   ctx.clip();
 
   /* ================================================== 4. RANNIKKO
@@ -385,20 +475,20 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     ctx.beginPath();
     for (let lon = -180; lon <= 180; lon += vali) {
       const x = kuvaX(lon);
-      ctx.moveTo(x, 0); ctx.lineTo(x, H);
+      ctx.moveTo(x, yYla); ctx.lineTo(x, yAla);
     }
     const latYla = Math.floor(lautaLat(bbox.y) / vali) * vali;
     const latAla = Math.ceil(lautaLat(bbox.y + bbox.h) / vali) * vali;
     for (let lat = latAla; lat <= latYla; lat += vali) {
       if (lat === 0) continue;
       const y = kuvaY(lat);
-      ctx.moveTo(0, y); ctx.lineTo(W, y);
+      ctx.moveTo(0, y); ctx.lineTo(GW, y);
     }
     ctx.stroke();
     ctx.strokeStyle = 'rgba(96,74,46,0.36)';
     ctx.beginPath();
     const y0 = kuvaY(0);
-    ctx.moveTo(0, y0); ctx.lineTo(W, y0);
+    ctx.moveTo(0, y0); ctx.lineTo(GW, y0);
     ctx.stroke();
     ctx.restore();
   }
@@ -559,14 +649,17 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     const MUSTE_KEHYS = 'rgba(74,52,33,0.86)';
     const MUSTE_HENTO = 'rgba(74,52,33,0.62)';
 
-    /** Vaakaviiva koko lehden yli. */
-    const vaaka = (y, paksuus, vari = MUSTE_KEHYS) => {
+    /**
+     * Vaakaviiva koko lehden yli. `gy` on ARKIN rivi; laatalle se
+     * siirretään canvasin omaan nurkkaan (ks. koko/siirto).
+     */
+    const vaaka = (gy, paksuus, vari = MUSTE_KEHYS) => {
       ctx.save();
       ctx.strokeStyle = vari;
       ctx.lineWidth = paksuus * S;
       ctx.beginPath();
-      ctx.moveTo(0, y);
-      ctx.lineTo(W, y);
+      ctx.moveTo(0, gy);
+      ctx.lineTo(GW, gy);
       ctx.stroke();
       ctx.restore();
     };
@@ -590,7 +683,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
      * pelin uloin näkymä keskittyy (js/kartta.js fitViewBox) — otsake
      * on siis ruudun keskellä silloin kun se ylipäätään näkyy.
      */
-    const kx = W / 2;
+    const kx = GW / 2;
     const kLev = 980 * S;
     const kYla = 44 * S;
     const kAla = yYla - RAKO - 24 * S;
@@ -688,10 +781,10 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     const askelPx = askelKm / kmPerPikseli;
     const askelia = 5;
     const janaLev = askelPx * askelia;
-    const jx = W / 2 - janaLev / 2;
+    const jx = GW / 2 - janaLev / 2;
     const jy = yAla + RAKO + 50 * S;
     const jKork = 15 * S;
-    teksti('MITTAKAAVA PÄIVÄNTASAAJALLA', W / 2, jy - 18 * S, {
+    teksti('MITTAKAAVA PÄIVÄNTASAAJALLA', GW / 2, jy - 18 * S, {
       koko: 16, vari: 'rgba(74,52,33,0.66)', ank: 'center', vali: 16 * 0.3,
     });
     ctx.save();
@@ -721,14 +814,19 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
      * Tekijänoikeusmerkintä on tarkoituksella HUOMAAMATON — se on
      * nykyajan välttämättömyys vanhan lehden reunassa, ei osa lehteä.
      */
-    teksti(kehys.painaja ?? '', W / 2, yAla + RAKO + 118 * S, {
+    teksti(kehys.painaja ?? '', GW / 2, yAla + RAKO + 118 * S, {
       koko: 21, tyylitys: 'italic', vari: 'rgba(74,52,33,0.66)',
       ank: 'center', vali: 21 * 0.06,
     });
-    teksti(kehys.oikeudet ?? '', W / 2, yAla + RAKO + 150 * S, {
+    teksti(kehys.oikeudet ?? '', GW / 2, yAla + RAKO + 150 * S, {
       koko: 13, vari: 'rgba(74,52,33,0.34)', ank: 'center', vali: 13 * 0.16,
     });
   }
+
+  // Arkin koordinaatisto pois: osiot 10–11 ovat pikselisilmukoita, ja
+  // ne elävät tämän canvasin omissa riveissä (kohina lukee arkin
+  // paikan itse, ks. GX/GY).
+  ctx.restore();
 
   /* ================================================== 10. PAPERIN RAE
    *
@@ -741,8 +839,10 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     for (let y = 0; y < H; y++) {
       for (let x = 0; x < W; x++) {
         const i = (y * W + x) * 4;
-        const rae = (KOHINA2(x / (1.35 * S) + 40, y / (1.35 * S) + 40) - 0.5) * 8;
-        const kuitu = (fbm(KOHINA, x / (30 * S) + 11, y / (4 * S) + 11, 2) - 0.5) * 5;
+        const gx = x + GX;
+        const gy = y + GY;
+        const rae = (KOHINA2(gx / (1.35 * S) + 40, gy / (1.35 * S) + 40) - 0.5) * 8;
+        const kuitu = (fbm(KOHINA, gx / (30 * S) + 11, gy / (4 * S) + 11, 2) - 0.5) * 5;
         d[i] = Math.max(0, Math.min(255, d[i] + rae + kuitu));
         d[i + 1] = Math.max(0, Math.min(255, d[i + 1] + rae + kuitu));
         d[i + 2] = Math.max(0, Math.min(255, d[i + 2] + (rae + kuitu) * 0.9));
@@ -770,11 +870,12 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
   {
     const hy = kehys
       ? Math.max(1, Math.round(2.5 * S))
-      : Math.max(1, Math.round(H * 0.004));
+      : Math.max(1, Math.round(GH * 0.004));
     const img = ctx.getImageData(0, 0, W, H);
     const d = img.data;
     for (let y = 0; y < H; y++) {
-      const a = Math.min(1, Math.min(y + 0.5, H - 0.5 - y) / hy);
+      const gy = y + GY;
+      const a = Math.min(1, Math.min(gy + 0.5, GH - 0.5 - gy) / hy);
       if (a >= 1) continue;
       for (let x = 0; x < W; x++) d[(y * W + x) * 4 + 3] = Math.round(255 * a);
     }

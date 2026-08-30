@@ -47,6 +47,9 @@
  */
 import { el, maare, paperinSavy } from './mapart.js';
 import { fokuskarttaUrl, peiliKaytossa } from './media.js';
+// Laattapyramidin kytkin (pilotti). Pois päältä = tämä tiedosto
+// käyttäytyy täsmälleen kuten ennen.
+import { pyramidiPaalla } from './laattapyramidi.js';
 import { natiiviKuori } from './natiivi.js';
 import {
   FOKUS_LAUTAPROJEKTIOT, FOKUS_LISANIMET, FOKUS_POHJAT, FOKUS_SVG_NIMET, YLEISLEHTI,
@@ -92,6 +95,9 @@ function pohjanTiedot(iso) {
  */
 function nykyinenMaa(ui) {
   if (!ui.fokusmoodi || ui.katselu) return null;
+  // Pyramidin pilotissa ei ole "nykyisen maan lehteä" lainkaan — kartta
+  // on yksi maailmanlaajuinen laatasto (ks. atlasPaalla).
+  if (pyramidiPaalla()) return null;
   /*
    * TURVATILASSA EI YHTÄÄN LEHTEÄ (25.8.2026, toinen kierros: pelkkä
    * atlaksen sammutus ei riittänyt — omistajan iPhone kuoli jo
@@ -1065,6 +1071,14 @@ async function haePohja(iso, lauta, map = null) {
  */
 export function esilammitaFokuspohja(iso, lauta, map = null) {
   if (!iso || !lauta) return;
+  /*
+   * PYRAMIDIN PILOTISSA EI ESILÄMMITETÄ LEHTIÄ. Esilämmitys on kartan
+   * ainoa lehtihaku, joka EI kulje atlaksen tai nykyisen maan portin
+   * läpi (atlasPaalla, nykyinenMaa) — se lähtee liikkeelle jo
+   * saapumista valmisteltaessa. Ilman tätä ehtoa lippu päällä haettiin
+   * yhä megatavun webp, jota mikään ei koskaan piirrä.
+   */
+  if (pyramidiPaalla()) return;
   void haePohja(iso, lauta, map).catch(() => {});
 }
 
@@ -1587,6 +1601,19 @@ function laudallaLehtia(lauta) {
 function atlasPaalla(ui) {
   if (!ui.fokusmoodi || ui.katselu) return false;
   if (atlasTurvatila()) return false;
+  /*
+   * LAATTAPYRAMIDIN PILOTTI SAMMUTTAA LEHDET (lippu ?pyramidi=1,
+   * js/laattapyramidi.js). Kytkin on pois oletuksena, joten tämä on
+   * oletuspolulla yksi false-vertailu eikä muuta mitään.
+   *
+   * SAMMUTUS ON TÄSSÄ EIKÄ VARHAISENA PALUUNA. Atlaksen oma "pois"
+   * -haara osaa jo purkaa lehdet, palauttaa vanhan laudan näkyviin ja
+   * nollata kirjanpidon; toinen tie samaan tilaan olisi toinen tie,
+   * joka voi ajautua eri mieltä. Raamattu vaatii, että maakohtaiset
+   * lehdet poistuvat pelaajan näkymästä kokonaan — ei lehtivalintaa,
+   * ei saumoja, ei reunahäivytystä — ja juuri sen tämä tekee.
+   */
+  if (pyramidiPaalla()) return false;
   /*
    * ALOITUSRUUDULLA EI ATLASTA. Sama ehto kuin nykyisellä maalla
    * (nykyinenMaa) ja verholla (ui.fokusSumuPaalla): pickstart-vaiheessa

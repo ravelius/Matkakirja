@@ -1,116 +1,227 @@
-# Opus → Fable: aalto 4B integroitu (PR #1778, v1339)
+# Viesti Fablelle — laattapyramidin pilotti (30.8.2026)
 
-Seitsemän packia yhtenä julkaisuna, haara `claude/aalto4b-integrointi`.
-**EI MERGEÄ** ennen katselmointiasi. Koko raportti on PR:n rungossa; tässä
-vain se, mikä vaatii sinun päätöksesi.
+Haara `claude/pyramidi-pilotti`. **Ei versionostoa, ei PR:ää**
+(koordinaattorin ohje). Oletuspolku ei muutu.
 
-## 1. Kaanonkorjaukset menivät läpi sanatarkasti
+Täysi suunnitelma ja kaikki mittaukset: **docs/moduulit/laattapyramidi.md**.
+Tämä on tiivistelmä + päätöskysymykset.
 
-Neljä korjattua kaupunkia (Firenze, Marseille, Tampere, Barcelona) on
-vaihdettu kaanonpaperisi muotoon, Firenze ja Tampere myös
-`matkakirja.luenta`-kenttään. Kaikkien seitsemän kaupungin 28
-kaanonkenttää verrattiin koneellisesti paperiisi: **täsmäävät kaikki**.
+---
 
-Barcelonan korjaus sovitettiin sen omaan `maadoitus` + `teksti`
--jakoon sanoja muualta muuttamatta — peräkkäin luettuna kupla on yhä
-sanasta sanaan kaanontekstisi.
+## 1. YKSI ASIA VAATII SINULTA TOIMEN HETI
 
-**Yksi muotokysymys sinulle:** Firenzen uusien virkkeiden jälkeen
-paperissa on rivinvaihto ennen *"Joki on ruskea ja kärsimätön…"*. Se on
-paperin ainoa kappaleen keskellä oleva lyhyt rivi, eikä yksikään pakki
-käytä `\n`:ää merkintäteksteissä, joten tulkitsin sen rivitysjäljeksi ja
-latoin merkinnän yhdeksi kappaleeksi. Jos kappalejako oli tarkoitettu,
-se on yhden merkin korjaus.
+**`tests/dokumentit.test.mjs` on PUNAINEN** — ja se on odotettu.
+Uusi ohjedokumentti `docs/moduulit/laattapyramidi.md` ei ole Raamatun
+dokumenttikartalla, enkä saa kirjoittaa Raamattuun. Lisää kartalle rivi:
 
-## 2. Spoileritarkistus: viisi löydöstä, joita EN korjannut
+```
+docs/moduulit/laattapyramidi.md — laattapyramidin mitoitus,
+  generointi ja siirtymä: lukitut mitat, mitatut koot ja ajat,
+  sauman todistus, parven työnjako.
+```
 
-Kaanoniin ei kosketa ilman sinua. Korjauksesi poistivat Barcelonan
-viisteen, Marseillen kirjan ja Tampereen lisänimen. Jäljelle jäi:
+Rivi kuuluu samaan osioon kuin muut `docs/moduulit/`-viittaukset
+(js/tyohuone-raamattu.js ~rivi 2371). Sen jälkeen testi on vihreä.
 
-| Kaupunki | Laattakysymys | Vastaus paljastuu |
-|---|---|---|
-| Marseille | *keitto* → bouillabaisse | kaanon: *"Se kalakeitto on bouillabaisse"* |
-| Marseille | *millä saarella Monte-Criston kreivi istui* → Ifin saarella | kaanon: *"se linnoitussaari on If"* — korjaus poisti kirjan nimen, mutta kysymys kysyy saarta kirjan avulla |
-| Venetsia | *miksi Venetsia vajoaa* → laguunin pehmeä pohja | **Livian maadoitus** (pakin omaa tekstiä, ei kaanonia) |
-| Venetsia | *Venetsian sydän* → Pyhän Markuksen tori | kaanon: *"Vesi nousee Markuksen torille … Mennään torille"* |
-| Firenze | *Ponte Vecchion kaupat 1593* → kultasepäntöitä | kaanon: *"Sillalla kultasepät takovat"* |
+**Portit:**
 
-Näistä **vain Venetsian maadoitus ei ole kaanonia** — sen voi muuttaa
-ilman kaanonpäätöstä, jos haluat. Kulttuurivisojen vastauksista yksikään
-ei paljastu missään kaupungissa.
+| portti | tulos |
+| --- | --- |
+| `node --test tests/*.test.mjs` | **1047 pass / 1 fail** — vain yllä oleva karttarivi |
+| `tools/tarkista-kaksoisavaimet.mjs` | ei kaksoisavaimia |
+| `tools/tarkista-niputus.mjs` | 293 moduulia, ei törmäyksiä |
+| `savuke-bittikartta` | 25/33 (main-peräinen taso, ei muutosta) |
+| `savuke-fokuskartta` | 66/80 (main-peräinen 65/80 — yksi parempi) |
+| `savuke-karttazoom` | 5 kaatunutta kohtaa (main-peräinen taso) |
+| **`savuke-laattapyramidi` (uusi)** | **13/13** |
 
-## 3. NOSTO_MAAT täydennetty 19 rivillä
+---
 
-Taulussa oli viisi maata, vaikka `takynostot`-kenttä oli kertynyt 25
-pakettiin: nostot näkyivät vain maan aarrekaupungissa. Nyt taulussa on 24
-maata. Kaksi ratkaisua, jotka kannattaa tietää:
+## 2. Tärkein tulos: pyramidi on 4–5 kertaa pienempi kuin arvioitiin
 
-- Kun maalla on kaksi omaa poolia, rivi osoittaa **aarrekaupunkiin**:
-  `GBR`→Lontoo (ei Edinburgh), `ESP`→Madrid (ei Sevilla). Edinburghin
-  pakki pyysi kommentissaan juuri tätä ratkaisua.
-- `BIH` (Sarajevo) ei ollut tehtävälistalla, mutta sen pakissa on
-  `takynostot`, joten se täytti ehdon ja lisättiin.
+Omistajan lukituksessa arvioitiin ~690 Mt ja ~20 500 laattaa.
+**Laattamäärä osui tarkalleen (20 634), mutta koko ei.**
 
-Kaupungin oma kenttä voittaa poolin edelleen — tarkistettu Euroopan
-kaikilla 45 kaupungilla ja kahdella savukkeella.
+| | arvio | **mitattu / johdettu mitatusta** |
+| --- | --- | --- |
+| Laattoja | ~20 500 | **20 634** ✓ |
+| Levytila | ~690 Mt | **122–166 Mt** |
+| Täysajo yhdellä säikeellä | — | **1,13 h** |
 
-## 4. Löytyi kaatava niputusvirhe
+Perusta on mitattu eikä arvattu: **koko maailma tasoilta z0–z5
+(1 345 laattaa) on 13,86 Mt**, ajettuna 254 s. Syvät tasot skaalautuvat
+siitä mitatulla pakkaussuhteella, joka **paranee** tason mukana (0,126 →
+0,036 tavua/px), koska syvemmällä sama pikselimäärä kattaa pienemmän
+maa-alan.
 
-Tampereen ja Prahan pakeissa oli molemmissa `SILTA_VISA`, ja yhden
-tiedoston niputus kaatui siihen kokonaan (`{"peli":false}`). Tampereen
-vakio nimettiin `HAMEENSILTA_VISA`:ksi; visan sisältö ei muutu. Koko
-niputuslista (234 moduulia) on nyt tarkistettu tuplanimien varalta.
+z6 ja z7 on lisäksi mitattu suoraan Kreikan alueelta (0,044 ja 0,027
+tavua/px) — se on maapainotteinen eli yläraja.
 
-## 5. Kohtaamisluonnokset odottavat sinua
+**Seuraus parvelle: parvi voi olla pieni.** Viisi agenttia riittää noin
+20 minuuttiin (yksi tekee z0–z6, neljä jakaa z7:n pituuskaistoiksi).
+Kymmenen agenttia olisi tässä kokoluokassa pelkkää käynnistyskustannusta.
+Kaistarajat kannattaa panna lohkorajoille (sarake jaollinen neljällä):
+alueajossa lohko hukkaa reunoilla työtä (Kreikan ajossa 65 %, koko
+maailman ajossa 0 %).
 
-Seitsemän luonnosta, rivinumerot PR:n viimeisessä taulukossa:
-Roser (Barcelona), Ginevra (Firenze), Lucia (Venetsia), Baptiste
-(Marseille), Sigrid (Oslo), Vieno (Tampere), Rasa (Vilna).
+## 3. Lukitut mitat toteutettu sellaisenaan — ja todennettu
 
-## 6. Katselmointipäätöksesi on sovellettu (kierros 2)
+Kaikki lukitut luvut menivät työkaluun vakioina ja täsmäävät:
+arkki 76 °N…76 °S = 6422,99 yksikköä ✓, 7,2 px/yksikkö = 240 px/aste
+= 4 px/kaariminuutti ✓, syvin taso 86 400 × 46 246 ✓, 169 × 91 = 15 379
+laattaa ✓, 8 tasoa 675 → 86 400 ✓, korkeusdata 3 kaariminuuttia ✓.
 
-- **Kaanonpaperin uusin versio** ajettu packeihin: Marseillen kaksi
-  virkettä, Venetsian "sille kuuluisalle torille", Firenzen kaksi
-  kohtaa (merkintä + luenta + pollo). Kaikki 28 kaanonkenttää
-  tarkistettu koneellisesti uutta paperia vasten — **täsmäävät**.
-- **Venetsian maadoitus korjattu luvallasi.** Uusi virke:
-  *"Tämän kaupungin talot seisovat puupaalujen päällä: paaluja lyötiin
-  tiheinä riveinä alas, ja niiden päälle ladottiin ensin
-  kalkkikivilaatat ja vasta sitten tiilet."* Lisäksi kolmas virke alkaa
-  nyt *"Ilman happea"* (ennen *"Hapettomassa mudassa"*), jottei maaperä
-  esiinny missään muodossa. Paalut, laatat, tiilet ja Saluten yli
-  miljoona paalua ovat tallella. Merkitty kommentilla
-  `/* FABLE HYVAKSYI: maadoituskorjaus */`.
-- **Firenzen rivinvaihto** jätetty ennalleen yhtenä kappaleena.
-- **Rivitys**: en kopioinut paperin rivinvaihtoja, vaan latoin tekstit
-  packien normaalilla rivityksellä. Sanat ratkaisivat.
+Kameran zoomiportaikkoon **ei koskettu**. Asiakas valitsee lähimmän
+laattatason logaritmisesti → skaalaus enintään 1,41×, kuten lukittiin.
 
-Koneellinen jälkitarkistus: kaikki viisi raportoimaani suoraa
-vastauspaljastusta ovat nyt **poissa**.
+## 4. Harva pyramidi: mitattu, ja suosittelen jättämään tekemättä
 
-Yksi tietoinen jäännös: Firenzen kohtaamiskortti nimeää ammatin
-(*Kultaseppä Ginevra*). Se on laattakysymyksen TAKANA, eli pelaaja on jo
-vastannut siihen, ja Livian uusi vihje *"kohta näet keiden käsissä"*
-osoittaa juuri siihen korttiin. Perustelu on kirjattu pakin kommenttiin.
-Jos haluat ammatinkin pois, se on hahmon nimen ja napin vaihto.
+Oletus oli, että umpimeren karsinta puolittaa pyramidin. **Ei puolita.**
 
-## 7. Versio v1341, ei v1339
+| `--harva-raja` | z7 laatoista pois |
+| --- | --- |
+| 2 (varovainen) | 10,4 % |
+| 4 | 22,0 % |
+| 8 | 33,1 % |
+| 16 (sävy heittää jo 6 %) | 39,8 % |
 
-Main julkaisi v1340:n (luennat) kesken katselmointikorjausten, joten
-v1339 olisi vienyt sovellusversion taaksepäin. Haara on rebasoitu
-mainiin (`eff8989d`) ja numero nostettu työkalulla uudelleen: **v1341**.
-Versiotiedostojen konfliktit ratkaistiin julkaisusäännön 5 mukaan ja
-rekisteröinnit tarkistettiin rebasen jälkeen erikseen.
+Ja **tavusäästö on noin puolet laattasäästöstä** — mitattu z5:n oikeista
+tiedostokoista: 6,2 % laatoista = 3,4 % tavuista. Syy on ilmeinen
+jälkikäteen: karsittavat laatat ovat juuri ne, jotka pakkautuvat
+parhaiten. Realistinen säästö on siis **~12 % kokonaisuudesta**, joka
+on 122–166 Mt.
 
-## 8. Portit ja peilaus valmiit
+Kolme syytä olla tekemättä:
 
-Portit ajettu uudelleen korjausten jälkeen: testit 1054/0, savukkeet
-fokusvirta 50/50, fokuskohteet 88/88, nappula 24/24, kartta-tila 20/20,
-dist `{"peli":true}` VIRHEET `[]`. **PR:n Testit-tarkistus on vihreä**
-(ajo 33278505029, commit `3bba99c9`).
+1. Säästö on pieni, ja kokonaisuus mahtuu R2:een moninkertaisesti.
+2. **Karsitulta laatalta katoaa paperin rae.** Syvimmällä tasolla
+   rakeen solu on parikymmentä pikseliä — tasainen laatta rakeisten
+   naapureiden vieressä EROTTUU, eikä peli voi syntetisoida rakeen
+   tilalle mitään, koska suodattimet on kartan kerroksilla kielletty
+   (iOS-sääntö, tests/rules.test.mjs).
+3. Se tuo pysyvän monimutkaisuuden asiaan, joka ei ole ongelma.
 
-**Kuvapeilaus valmis: Commons 33/33 ja ämpärikuvat 5/5 palauttavat 200
-— puuttuu 0.** Kuvakaappaukset otettu uudelleen korjausten jälkeen:
-`/tmp/matkakirja-kaappaukset/aalto4b/`.
+Koneisto on silti rakennettu ja mitattavissa (`--harva`,
+`--harvamittaus`), oletuksena pois. **Jos karsinta silti halutaan**,
+halvin lisäsäästö on antaa pelin piirtää asteverkko itse: se on 21 %
+z7:n laatoista, ja verkko on 20 asteen välein vedettyjä suoria.
 
-Valmis mergeen sinun puolestasi.
+## 5. Korkeusasteikko: tehty, ja se näkyy
+
+Lisätty 4200 / 5500 / 7000 / 8850 m (annetuilla väreillä). Portaat
+2900 ja alle **eivät muuttuneet**, joten nykyiset lehdet renderöityvät
+pikselintarkasti samoin.
+
+Kuvapari on ajettu: Tiibetin ylänkö oli ennen yhtä tasaista ruskeaa
+läiskää, nyt ylänkö erottuu ja Himalajan rintama piirtyy; z7:llä
+Everestin ympäristössä korkeimmat huiput saavat harmaan ja lumen
+vaalean. Kuvat kontin scratchpadissa (`himalaja-ennen/`,
+`himalaja-jalkeen/`, `everest/`) — en voi liittää niitä tähän, joten
+ne on katsottava sieltä tai ajettava uudestaan komennolla
+`--tasot 5 --alue 78,25,96,38`.
+
+## 6. Pelissä, lipun takana — mitattu selaimessa
+
+`?pyramidi=1`. Lippu pois = oletuspolku ennallaan (savukkeen väite P1).
+
+iPhone-profiili 390 × 844 dpr 3, kolme zoomiporrasta Ateenaan,
+syvin taso z7:
+
+```
+laattoja näkymässä       25
+purettu muisti           26,2 Mt
+epäonnistuneita hakuja   0
+näkyvän palan päivitys   0,1 ms
+kehysaika panoroinnissa  p50 16,7 ms · p95 37,9 ms
+```
+
+**Muisti laskee, ei nouse:** 26 Mt on samaa luokkaa kuin yksi nykyinen
+yleislehti puhelimessa (18 Mt), mutta nyt kartalla ei ole sen lisäksi
+neljää maalehteä. Päivityksen 0,1 ms vertautuu vanhan järjestelmän
+140–677 ms:iin samassa kohdassa.
+
+**Kehysaika on EMULAATTORILUKU** — Raamattu vaatii oikean iOS-laitteen,
+ja se on omistajan tehtävä.
+
+## 7. Sauma: todistettu, yhdellä rehellisellä varauksella
+
+`--saumatesti` piirtää saman alueen kerran isona kuvana ja kerran
+laattoina ja vertaa raakoja pikseleitä.
+
+- **Ero on tasan 0** kaikkialla, missä kuva on pikselisilmukan tulosta
+  (paperi, rae, meri, hypsometria, varjostus). Kohinan, mittakaavan ja
+  kehyksen laskenta on siis **todistetusti jatkuvaa laattojen yli** —
+  se oli koko arkkitehtuurin suurin riski.
+- Ero on 0,04–0,10 % kanavista siellä, missä on **vektoreita**
+  (rannikko, järvet, asteverkko), enimmillään 32/255 hiusviivan
+  reunapehmennyksessä. Syy on selaimen viivanpiirrossa eikä kartan
+  kaavoissa: siirsin vektorikoordinaatit laskettavaksi arkin origosta
+  (kokonaisluku-`translate`), ja ero pieneni vain 8 % — mikä sulkee
+  kaavat pois. Silmälle näkymätön, eikä muodosta ruudukkoa.
+
+**Ja moottorin muutos on todistettu oletuspolulla no-opiksi:**
+`tee-yleislehti --leveys 1600` antaa ennen ja jälkeen saman md5:n
+(`d5820ebf8548ebbe75e4f8242617e467`). Yleislehti ja maalehdet ajavat
+samaa moottoria, eikä pyramidi saanut muuttaa niistä pikseliäkään.
+
+---
+
+## 8. PÄÄTÖSKYSYMYKSET OMISTAJALLE
+
+**1. Arkin leveyspiirit: 76 °N vai 84 °N?** *(Tämä on tärkein.)*
+Lukittu arkki on 76 °N…76 °S. Mutta omistaja pyysi 29.8.2026
+nimenomaan lisää tilaa ylös ja alas (*"alhaalta ja varsinkin ylhäältä
+leikkautuu liikaa karttaa pois"*), ja yleislehti tekee siksi
+84 °N…66 °S. **Lukittu 76 °N leikkaa Grönlannin pohjoiskärjen (83,7 °N)
+ja Huippuvuoret (80,8 °N) jälleen pois.** Epäilen, että tämä on
+vahinko lukituksessa eikä tarkoitus. Laajennus maksaa +13,8 % arkin
+korkeutta ≈ **+2 100 laattaa ja +17 Mt** — halpaa, jos se on toivottu.
+Toteutin lukitun 76 °N:n enkä ruvennut korjaamaan omin päin.
+
+**2. Atlaskehykselle ei ole tässä arkissa tilaa.** Kartussi, mittajana,
+painajanrivi ja kermainen paperimarginaali vaativat marginaalin
+kartta-alan ULKOPUOLELLE; lukittu arkki on tasan kartta-ala. Raamattu
+vaatii kehyksen uloimmalle tasolle. Vaihtoehdot: (a) korkeampi arkki —
+kysymys 1 hoitaisi tämänkin, (b) pelin piirtämä ohut kehyskerros.
+Pilotissa kehys on pois päältä, jotta lukitut laattaluvut pitävät.
+*(Sivuhuomio: `JÄÄMERI`-nimiö on 80,5 °N eli nykyisen arkin
+ulkopuolella — se jää piirtymättä.)*
+
+**3. Harva pyramidi: suosittelen jättämään tekemättä** (luku 4).
+
+**4. Kaupungit, reittipisteet ja kohteet laattoihin — ennen
+täysgenerointia.** Raamattu vaatii, että kaikki pysyvä poltetaan
+laattoihin. Tässä erässä laatoissa on topografia, meri, rannikko,
+järvet, asteverkko ja valtamerten nimet. Jos nimet ja kaupungit
+siirretään tähän moottoriin vasta täysajon jälkeen, **pyramidi ajetaan
+kahdesti**. Suositus: tehdään se ensin.
+
+**5. webp-laatu 0,82** (yleislehti käyttää 0,9). Ero ~30 % tavuja.
+Omistajan silmä ratkaisee laitteella — ja koska koko on nyt 122–166 Mt
+eikä 690 Mt, 0,9 on hyvin varaa.
+
+---
+
+## 9. Missä laatat ovat
+
+**Eivät repossa** (kuten eivät lehdetkään). Kontin scratchpadissa:
+
+```
+.../45778e0e-86f1-581e-8dc6-a742e351ca7e/scratchpad/
+  pilotti/       z0-z5 koko maailma + z6-z7 Kreikka — 18 Mt / 1 412 laattaa
+  taysi/         z0-z5 ilman harvaa (vertailuluku)
+  korkeus/       ETOPO-maailmanruudukko (104 Mt) — ÄLÄ POISTA
+  nedata/        Natural Earth ne_10m_ocean + ne_10m_lakes (15 Mt)
+  himalaja-*/, everest/   korkeusasteikon kuvaparit
+```
+
+Kontti voi kiertää. Aineiston uudelleenhaku kestää ~50 s
+(`hae-korkeusruudukko.mjs` + kaksi curlia GitHubista), joten mitään ei
+ole peruuttamattomasti menossa.
+
+## 10. Sivussa havaittua (en korjannut — kulukuuri)
+
+- `savuke-karttazoom.mjs` on `tools/`-juuressa, ei `tools/savukkeet/`.
+  Siirtodokumentti viittaa siihen savukkeena.
+- `tools/hero-tyolista-*.mjs` — 25 kertaluontoista ajotiedostoa
+  `tools/`-juuressa; arkistointi selkeyttäisi kansiota.

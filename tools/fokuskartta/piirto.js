@@ -96,6 +96,22 @@
  * Hypsometrinen asteikko. Alanko on haalean khakinvihreä (1873-atlaksen
  * tapa), ylöspäin lämpimän ruskean puolelle — sama väriperhe kuin pelin
  * seepiakartassa (#e7d2a4 -> #c69257 -> #a2603a).
+ *
+ * === ASTEIKKO YLTÄÄ NYT HUIPULLE ASTI (omistaja 30.8.2026) ==========
+ *
+ * Asteikko päättyi 2900 metriin, ja `lerpVari` clamppaa ylimpään
+ * portaaseen — siis KAIKKI Tiibetistä Andeille ja Himalajan huipuille
+ * oli täsmälleen samaa sävyä (150,90,62). Maailmanlaajuisessa
+ * laattapyramidissa se on iso menetys: juuri vuoristot ovat se, mitä
+ * kartalta katsotaan, ja ne olivat yhtä ruskeaa läiskää.
+ *
+ * PORTAAT 2900 JA ALLE EIVÄT MUUTU. Se on ehto eikä sattuma: nykyiset
+ * maalehdet ja yleislehti renderöityvät näillä luvuilla pikselintarkasti
+ * samoin, koska yksikään niiden pikseli ei ole yli 2900 metrissä ilman
+ * että se jo nyt clampataan. Uudet portaat ovat siis puhdas lisäys.
+ *
+ * Ylin pää on IKUINEN LUMI aikakauden kartografian konvention mukaan:
+ * ruskea kylmenee harmaaseen ja vaalenee lopulta lumen valkoiseksi.
  */
 export const ASTEIKKO = [
   { m: -60, v: [214, 202, 168] },
@@ -106,6 +122,10 @@ export const ASTEIKKO = [
   { m: 1400, v: [190, 141, 92] },
   { m: 2000, v: [169, 110, 72] },
   { m: 2900, v: [150, 90, 62] },
+  { m: 4200, v: [128, 76, 58] },
+  { m: 5500, v: [112, 72, 62] },
+  { m: 7000, v: [140, 122, 116] },
+  { m: 8850, v: [214, 208, 200] },
 ];
 
 /*
