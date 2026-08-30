@@ -1,0 +1,50 @@
+{
+  "_": "Mongolian maastokohteet. Faktat en-Wikipediasta 30.8.2026. Gobi on maan tunnusmaasto, joten se on mukana aavikkona: tyyppi vaihdetaan pakissa käsin arvoon 'muu' + symboli 'luonto' Vanjärven mallin mukaan (js/packs/fokuskohteet-tur.js) — vuori- tai meriotsake olisi väärin.",
+  "vuoret": [
+    {
+      "nimi": "Hüiten orgil",
+      "lon": 87.8189,
+      "lat": 49.1458,
+      "m": 4356,
+      "lahdeKoordinaatti": "en-Wikipedia \"Khüiten Peak\"",
+      "nappi": "Mongolian kylmä katto",
+      "kysymykset": [
+        "Voiko valtioiden raja kulkea vuoren huipun yli?",
+        "Missä kolmen valtakunnan kolmiopiste on?"
+      ],
+      "korostukset": ["Altai|Altain", "Tavan Bogd|Tavan Bogdin"],
+      "teksti": "Hüiten orgil, \"Kylmä huippu\", kohoaa 4 356 metriin ja on sekä Mongolian että koko Altain vuoriston korkein kohta. Mongolian ja Kiinan raja kulkee suoraan sen huipun yli, ja lumi ei sula siltä koskaan. Huippu on yksi Tavan Bogdin viidestä huipusta; parin kilometrin päässä toinen niistä merkitsee Venäjän, Mongolian ja Kiinan kolmiopistettä.",
+      "lahde": "en-Wikipedia \"Khüiten Peak\", johdanto-osa (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Gobi",
+      "lon": 103.43,
+      "lat": 42.59,
+      "lahdeKoordinaatti": "en-Wikipedia \"Gobi Desert\"",
+      "nappi": "Kylmä aavikko",
+      "kysymykset": [
+        "Voiko aavikolla olla pakkasta?",
+        "Mitä mongolin sana gov' tarkoittaa?"
+      ],
+      "korostukset": ["gov'"],
+      "teksti": "Gobi on laaja kylmä aavikko- ja aroalue Etelä-Mongoliassa ja Pohjois-Kiinassa — maailman kuudenneksi suurin aavikko. Nimi tulee mongolin sanasta gov', kuiva maa, jolla on kutsuttu kaikkia Mongolian ylängön vedettömiä seutuja. Gobi ei ole hiekkameri vaan enimmäkseen kivistä puoliaavikkoa, ja talvella siellä paukkuvat pakkaset.",
+      "lahde": "en-Wikipedia \"Gobi Desert\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Orhon",
+      "lon": 102.75,
+      "lat": 47.35,
+      "lahdeKoordinaatti": "joen yläjuoksun laakso Harhorinin luona; artikkelin koordinaatti 106,14 / 50,25 on joen suulla Selengan yhtymäkohdassa",
+      "nappi": "Mongolian pisin joki",
+      "kysymykset": [
+        "Minne Mongolian joet laskevat?",
+        "Mikä kaupunki Orhonin laaksossa sijaitsi?"
+      ],
+      "korostukset": ["Selenga|Selengaan", "Baikaljärvi|Baikaljärveen"],
+      "teksti": "Orhon on Mongolian pisin joki. Se saa alkunsa Hangain vuoristosta, virtaa Harhorinin ohi ja kääntyy pohjoiseen, kunnes yhtyy Selengaan lähellä Venäjän rajaa. Selenga jatkaa siitä Venäjälle ja laskee Baikaljärveen — Mongolian sydänmaiden vesi päätyy siis Siperiaan asti. Yläjuoksulla joen tuntumassa on kymmenen metriä leveä ja kaksikymmentä metriä korkea Ulaan Tsutgalanin vesiputous.",
+      "lahde": "en-Wikipedia \"Orkhon River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

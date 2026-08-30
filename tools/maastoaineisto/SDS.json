@@ -1,0 +1,36 @@
+{
+  "_": "Etelä-Sudanin maastokohteet. Pelin maakoodi on SDS (Natural Earthin ADM0_A3, ks. tools/fokuskartta/aineisto.mjs NE_PAIKKATUNNUS) — ISO-koodi SSD esiintyy vain aineistokäännöksissä. Faktat en-Wikipediasta 30.8.2026.",
+  "vuoret": [
+    {
+      "nimi": "Kinyeti",
+      "lon": 32.9089,
+      "lat": 3.9475,
+      "m": 3187,
+      "lahdeKoordinaatti": "en-Wikipedia \"Kinyeti\"",
+      "nappi": "Etelä-Sudanin korkein huippu",
+      "kysymykset": [
+        "Missä Imatong-vuoret sijaitsevat?",
+        "Miksi vuoren metsät ovat lajissaan pohjoisimmat?"
+      ],
+      "korostukset": ["Imatong-vuoristo|Imatong-vuoristossa"],
+      "teksti": "Kinyeti on Etelä-Sudanin korkein huippu, 3 187 metriä, Imatong-vuoristossa lähellä Ugandan rajaa. Sen alarinteitä ovat peittäneet rehevät metsät, jotka ovat Itä-Afrikan vuoristometsävyöhykkeen pohjoisimmat.",
+      "lahde": "en-Wikipedia \"Kinyeti\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Valkoinen Niili",
+      "lon": 31.65,
+      "lat": 9.53,
+      "lahdeKoordinaatti": "Malakal joen varrella; artikkelilla ei ole koordinaattia",
+      "nappi": "Niilin pitempi haara",
+      "kysymykset": [
+        "Mikä on Sudd?",
+        "Mistä joen vaalea väri tulee?"
+      ],
+      "korostukset": ["Sudd|Suddiin"],
+      "teksti": "Valkoinen Niili on Niilin kahdesta päähaarasta pitempi, ja nimensä se on saanut vedessä kulkevasta vaaleasta savesta. Etelä-Sudanissa joki leviää Suddiin, yhteen maailman suurimmista kosteikoista — kelluvien kasvilauttojen sokkeloon, jonka läpäisemisessä jo muinaiset egyptiläiset epäonnistuivat.",
+      "lahde": "en-Wikipedia \"White Nile\" ja \"Sudd\", johdanto-osat (tarkistettu 30.8.2026)."
+    }
+  ]
+}

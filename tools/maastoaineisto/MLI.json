@@ -1,0 +1,50 @@
+{
+  "_": "Malin maastokohteet. Faktat en-Wikipediasta 30.8.2026. Mali on sisämaavaltio ilman suurta pysyvää järveä, joten meret-lista on tyhjä ja jokia on kaksi. Vuoren nimi on paikallinen Hombori Tondo (en \"Mount Hombori\"); fi-Wikipedia tuntee vuorijonon nimellä Homborivuoret.",
+  "vuoret": [
+    {
+      "nimi": "Hombori Tondo",
+      "lon": -1.6689,
+      "lat": 15.2572,
+      "m": 1155,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Hombori\"",
+      "nappi": "Malin korkein kohta",
+      "kysymykset": [
+        "Millainen kaupunki Hombori on?",
+        "Miten Homborivuoret nousevat Sahelin tasangolta?"
+      ],
+      "korostukset": ["Homborivuoret|Homborivuorten"],
+      "teksti": "Hombori Tondo on Malin korkein kohta: 1 155 metriä. Se kohoaa Homborivuorten jonossa Moptin alueella, Homborin kaupungin naapurina, maan itäosassa.",
+      "lahde": "en-Wikipedia \"Mount Hombori\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [],
+  "joet": [
+    {
+      "nimi": "Niger",
+      "lon": -4.2,
+      "lat": 14.5,
+      "lahdeKoordinaatti": "Moptin kohta joen sisämaasuistossa; en-Wikipedia \"Niger River\" antaa koordinaatiksi Nigerian suiston 6,47 / 5,32",
+      "nappi": "Länsi-Afrikan valtasuoni",
+      "kysymykset": [
+        "Miksi joki virtaa puolikuun muotoisen kaaren?",
+        "Mikä on Nigerin sisämaasuisto?"
+      ],
+      "korostukset": ["Guinean ylänkö|Guinean ylängöltä"],
+      "teksti": "Niger on Länsi-Afrikan pääjoki ja Afrikan kolmanneksi pisin — vain Niili ja Kongo ovat pidempiä. Se alkaa Guinean ylängöltä läheltä Sierra Leonen rajaa ja piirtää noin 4 180 kilometrin mittaisen puolikuun: ensin koilliseen kohti Saharaa Malin halki, sitten kaakkoon Nigerin ja Nigerian läpi, kunnes se laskee Guineanlahteen valtavan suistonsa kautta.",
+      "lahde": "en-Wikipedia \"Niger River\", johdanto-osa (tarkistettu 30.8.2026)."
+    },
+    {
+      "nimi": "Senegal",
+      "lon": -10.83,
+      "lat": 13.8,
+      "lahdeKoordinaatti": "yläjuoksu Bafoulabén seudulla Malissa; en-Wikipedia \"Senegal River\" antaa koordinaatiksi suun -16,53 / 15,79",
+      "nappi": "Malin tie merelle?",
+      "kysymykset": [
+        "Miksi jokea ei juuri käytetä kuljetuksiin?",
+        "Mikä on OMVS?"
+      ],
+      "teksti": "Senegal on 1 086 kilometrin pituinen Länsi-Afrikan joki, jonka pitkä keskijuoksu piirtää Senegalin ja Mauritanian rajan. Sen yläjuoksu patoineen on Malissa, ja neljä valtiota hoitaa jokea yhdessä OMVS-järjestön kautta. Järjestö on tutkinut laivakelpoisen kanavan rakentamista Malin Ambidédistä merelle asti — se antaisi sisämaavaltio Malille suoran reitin Atlantille.",
+      "lahde": "en-Wikipedia \"Senegal River\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

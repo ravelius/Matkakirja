@@ -1,0 +1,51 @@
+{
+  "_": "Egyptin maastokohteet. Faktat en-Wikipediasta 30.8.2026. Vuoreksi on valittu Siinainvuori (vakiintunut suomennos, ikonisin), ja Egyptin korkein huippu Mount Catherine (2 629 m) mainitaan sen tekstissä — Catherinelle ei ole vakiintunutta suomennosta.",
+  "vuoret": [
+    {
+      "nimi": "Siinainvuori",
+      "lon": 33.9754,
+      "lat": 28.5394,
+      "m": 2285,
+      "lahdeKoordinaatti": "en-Wikipedia \"Mount Sinai\"",
+      "nappi": "Kymmenen käskyn vuori",
+      "kysymykset": [
+        "Miksi kolme uskontoa pitää tätä vuorta pyhänä?",
+        "Mikä on Egyptin korkein huippu?"
+      ],
+      "korostukset": ["Mooses|Mooses"],
+      "teksti": "Siinainvuori eli arabiaksi Jabal Musa, 'Mooseksen vuori', kohoaa 2 285 metriin Siinain niemimaalla. Se on tunnetuin niistä paikoista, joita on esitetty Raamatun Siinainvuoreksi — vuoreksi, jolla Mooses sai Jumalalta kymmenen käskyä juutalaisuuden, kristinuskon ja islamin pyhien kirjoitusten mukaan. Vuorta ympäröivät joka puolelta korkeammat huiput: aivan vieressä kohoaa Mount Catherine, joka on 2 629 metrillään koko Egyptin korkein.",
+      "lahde": "en-Wikipedia \"Mount Sinai\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Punainenmeri",
+      "lon": 34.5,
+      "lat": 26.5,
+      "lahdeKoordinaatti": "ulappa Hurghadan edustalla; en-Wikipedia \"Red Sea\" antaa keskipisteeksi 38 / 22",
+      "nappi": "Maailman pohjoisin trooppinen meri",
+      "kysymykset": [
+        "Miksi Punaisenmeren korallit voivat niin hyvin?",
+        "Mikä on Suuri hautavajoama?"
+      ],
+      "korostukset": ["Suezin kanava|Suezin kanavalle"],
+      "teksti": "Punainenmeri on Afrikan ja Arabian niemimaan välinen Intian valtameren sisämeri ja maailman pohjoisin trooppinen meri. Sen pohjoispäässä Siinain niemimaan molemmin puolin aukeavat Akabanlahti ja Suezinlahti, joka johtaa Suezin kanavalle. Meri on laajalti matala, ja sen matalikoilla elää yli tuhat selkärangatonta ja parisataa korallilajia; pohjassa kulkee Punaisenmeren hautavajoama, osa Suurta hautavajoamaa.",
+      "lahde": "en-Wikipedia \"Red Sea\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Niili",
+      "lon": 32.65,
+      "lat": 25.7,
+      "lahdeKoordinaatti": "Luxorin kohta joen keskijuoksulla Egyptissä; en-Wikipedia \"Nile\" antaa koordinaatiksi Kairon 31,14 / 30,17",
+      "nappi": "Maailman pisin joki",
+      "kysymykset": [
+        "Mistä Niilin vesi oikeastaan tulee?",
+        "Miksi joen tulva oli muinaiselle Egyptille siunaus?"
+      ],
+      "teksti": "Niili on 7 088 kilometrillään maailman pisin joki, vaikka se kuljettaa paljon vähemmän vettä kuin Amazon tai Kongo. Sen kaksi päähaaraa, Valkoinen ja Sininen Niili, yhtyvät Sudanin Khartumissa, mistä joki jatkaa Nubian aavikon ja Egyptin halki ja laskee Välimereen leveänä suistona Aleksandrian luona. Muinainen Egypti rakentui kokonaan tämän joen varaan: vuotuinen tulva levitti pelloille ravinteikasta lietettä.",
+      "lahde": "en-Wikipedia \"Nile\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}

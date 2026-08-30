@@ -1,0 +1,50 @@
+{
+  "_": "Sudanin maastokohteet. Faktat en-Wikipediasta 30.8.2026. Niilin merkki on Khartumin kohdalla, jossa Valkoinen ja Sininen Niili yhtyvät — koko joen kuuluisin kohtauspaikka on Sudanissa.",
+  "vuoret": [
+    {
+      "nimi": "Jebel Marra",
+      "lon": 24.27,
+      "lat": 12.95,
+      "m": 3042,
+      "lahdeKoordinaatti": "en-Wikipedia \"Marrah Mountains\" ja \"Deriba (caldera)\"",
+      "nappi": "Tulivuori Darfurin sydämessä",
+      "kysymykset": [
+        "Mitä Deriban kalderan pohjalla on?",
+        "Onko tulivuori sammunut?"
+      ],
+      "korostukset": ["Deriba|Deriban"],
+      "teksti": "Jebel Marra on tulivuorten muodostama vuoristo Darfurissa, ja sen laella Deriban kalderan reunalla on Sudanin korkein kohta, 3 042 metriä. Kaldera syntyi suuressa purkauksessa noin 3 500 vuotta sitten, ja sen sisällä on kaksi järveä. Kuumat lähteet ja huurut kertovat, ettei tulivuori ole vieläkään täysin sammunut.",
+      "lahde": "en-Wikipedia \"Marrah Mountains\" ja \"Deriba (caldera)\", johdanto-osat (tarkistettu 30.8.2026)."
+    }
+  ],
+  "meret": [
+    {
+      "nimi": "Punainenmeri",
+      "lon": 37.9,
+      "lat": 19.8,
+      "lahdeKoordinaatti": "ulappa Port Sudanin edustalla; artikkelin oma keskipiste on 38 / 22",
+      "nappi": "Repeämä kahden mantereen välissä",
+      "kysymykset": [
+        "Miksi Punaisenmeren pohjalla kulkee repeämä?",
+        "Mitä reittiä merestä pääsee valtamerelle?"
+      ],
+      "teksti": "Punainenmeri on Afrikan ja Arabian niemimaan välinen meri, Intian valtameren lahti, joka on noin 2 250 kilometriä pitkä mutta leveimmilläänkin vain 355 kilometriä. Valtamereen se yhtyy etelässä Bab el Mandebin salmen kautta, pohjoisessa odottavat Suezinlahti ja kanava. Meren pohjalla kulkee Punaisenmeren repeämä, osa Suurta hautavajoamaa.",
+      "lahde": "en-Wikipedia \"Red Sea\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ],
+  "joet": [
+    {
+      "nimi": "Niili",
+      "lon": 32.55,
+      "lat": 15.62,
+      "lahdeKoordinaatti": "Khartum, jossa Valkoinen ja Sininen Niili yhtyvät; artikkelin koordinaatti 31,14 / 30,17 on Egyptissä",
+      "nappi": "Maailman pisin joki",
+      "kysymykset": [
+        "Kumpi tuo enemmän vettä, Valkoinen vai Sininen Niili?",
+        "Kuinka pitkä Niili oikein on?"
+      ],
+      "teksti": "Niili on maailman pisin joki: 7 088 kilometriä kohti pohjoista ja Välimerta. Merkki on Khartumin kohdalla, jossa sen kaksi päähaaraa yhtyvät: pitempi Valkoinen Niili tulee Victorianjärven suunnalta ja Sininen Niili Etiopian Tanajärveltä. Sininen Niili tuo vedestä yli kaksi kolmasosaa, vaikka Valkoista Niiliä pidetään joen latvavetenä.",
+      "lahde": "en-Wikipedia \"Nile\", johdanto-osa (tarkistettu 30.8.2026)."
+    }
+  ]
+}
