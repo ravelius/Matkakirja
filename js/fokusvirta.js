@@ -2,32 +2,31 @@
  * FOKUSMOODIN ANNOSTELUVIRTA — kaupungin esittely kortteina kartan päällä.
  *
  * Raamatun osio "Fokusmoodi", kohta ANNOSTELU (omistaja 24.8.2026):
- * uuteen kaupunkiin saavuttaessa esittely alkaa AUTOMAATTISESTI, ja
- * kulku on kuusivaiheinen:
+ * uuteen kaupunkiin saavuttaessa esittely alkaa AUTOMAATTISESTI. Kulku
+ * on nykyään nelivaiheinen:
  *
  *   1 matkakirja   muutama lause isoisän äänellä + VANHA kuva
- *   2 pöllö        nykypäivän huomio + UUSI kuva (herokuva)
- *   3 valinta      pöllö kysyy 2–3 painikkeella, mikä kiinnostaa
- *   4 täky         syvennys + kuva → MINIVISA → palkkio → takaisin 3:een
- *   5 oppitunti    nosto, joka pohjustaa varsinaista kysymystä
- *   6 kohtaaminen  paikallinen esittäytyy → nykyinen laattakysymys
+ *   2 pöllö        Livian kupla: maadoitus + nykypäivän huomio
+ *   3 oppitunti    nosto, joka pohjustaa varsinaista kysymystä
+ *   4 kohtaaminen  paikallinen esittäytyy (tai pöllön sähke) →
+ *                  nykyinen laattakysymys
  *
- * VAIHEET 3 JA 4 OVAT 29.8.2026 ALKAEN VÄLIAIKAISESTI POIS (omistajan
- * tilaus + Raamatun 28.8. linjaus): ks. lippu FOKUSVIRTA_VALINTA
- * alempana. Kulku on sen ollessa `false` matkakirja → Livian kupla →
- * oppitunti → kohtaaminen (tai sähketehtävä) → laattakysymys.
+ * ALKUPERÄISET VÄLIVAIHEET 'valinta', 'taky' ja 'kohde' — Pulun
+ * valintakupla, jonka painikkeista avattiin syvennystarinat
+ * minivisoineen ja kohdenostot — kytkettiin pois 29.8.2026 (Raamattu,
+ * SAAPUMISKULUN KOLME TASMENNYSTA, kohta 3) ja PURETTIIN sen jälkeen
+ * kokonaan Raamatun kirjauksen SYVENNYSTARINAT KARTALLE nojalla:
+ * *"Valintakupla ja sen tilakoneen valintavaiheet saa purkaa kun
+ * merkkireitti on tuotannossa"*. Merkkireitti on tuotannossa
+ * v1348–v1349:stä alkaen: syvennystarinat ovat kartan kohdemerkkejä
+ * (js/syvennys.js) ja kohdenostojen sisältö kuuluu maan
+ * karttakohteisiin (js/fokuskohteet.js) — sama sisältö, uusi reitti.
+ * Vanhat tallennukset, joissa vaihe jäi valinnan väliin, luetaan
+ * oppitunniksi (fokusvirtaSiivoa).
  *
- * KOHDENOSTO (omistajan tilaus 24.8.2026) on valinnan sivupolku, ei
- * seitsemäs vaihe: pöllö kertoo kuplasta MUUSTA paikasta kuin
- * pelikaupungista, kartalle kasvaa vinjetti kohteen omaan sijaintiin,
- * eikä visaa tai palkkiota ole. Sisältö on koko maan yhteinen
- * (js/packs/fokuskohteet-grc.js), ja kaupunki poimii siitä tunnuksilla.
- *
- * ETENEMINEN (sama osio): vähintään YKSI täky on tehtävä ennen pääsyä
- * aarrekysymyksen luo; loput ovat vapaaehtoisia ja tuovat lisää rahaa.
- * Aarteen jälkeen alkaa vapaa tutkinta, ja vasta silloin kaupungin lehti
- * aukeaa — sitä ennen lehtinapit ohjaavat takaisin virtaan (LEHTILUKKO
- * alla).
+ * ETENEMINEN: aarteen jälkeen alkaa vapaa tutkinta, ja vasta silloin
+ * kaupungin lehti aukeaa — sitä ennen lehtinapit ohjaavat takaisin
+ * virtaan (LEHTILUKKO alla).
  *
  * EI KOKO RUUDUN MODAALIA. Kortti kelluu karttapinnan alareunassa ja
  * kartta näkyy sen takaa — juuri se on fokusmoodin idea: kartta on
@@ -52,16 +51,16 @@
  *      (fokusvirtaMerkintaLuettu). Saapumisluentaa EI käynnistetä —
  *      näille teksteille ei ole äänitteitä, ja luennat tehdään erikseen.
  *
- *   2. PÖLLÖN PUHEKUPLA OIKEALLA ALHAALLA (.fokusvirta-kupla). Vaiheet,
- *      joissa PÖLLÖ puhuu — huomio ja valintakysymys painikkeineen —
+ *   2. PÖLLÖN PUHEKUPLA OIKEALLA ALHAALLA (.fokusvirta-kupla). Vaihe,
+ *      jossa PÖLLÖ puhuu — Livian huomio Jatka-painikkeineen —
  *      esitetään kuplana, jonka kärki osoittaa kelluvaan pöllönappiin.
  *      Sama kuplaperhe kuin pöllön omalla vihjeellä (css/styles.css
  *      .pollo-vihje): sama pergamentti, sama kärki, sama ele
  *      napautuksella pois. Vain painikkeet ovat uutta.
  *
- *   3. SYVENNYS- JA OPPITUNTIKORTIT (.fokusvirta-kortti). Pidempi
- *      teksti ja minivisa tarvitsevat kortin, ja ne pysyvät korttina.
- *      Kortti on karttapinnan alalaidassa eikä yllä ylävasempaan
+ *   3. OPPITUNTI- JA KOHTAAMISKORTIT (.fokusvirta-kortti). Pidempi
+ *      teksti tarvitsee kortin, ja se pysyy korttina. Kortti on
+ *      karttapinnan alalaidassa eikä yllä ylävasempaan
  *      matkakirjakorttiin asti (css: max-height).
  *
  * KUVAT OVAT KARTALLA (omistajan tarkennus 24.8.2026). Fokusvirran
@@ -86,13 +85,12 @@
 
 import {
   fokusmoodiPaalla, html, jaaKappaleiksi, lehtivinkkiPiilotettu, nielaiseSulkevaNapautus,
-  piilotaLehtivinkki, polloNimilappu, TOAST_MS,
+  piilotaLehtivinkki, polloNimilappu,
 } from './ui-apurit.js';
 import { asetaTehtavakuittaus, fokusAarreAvattu, fokusAarreVastattu } from './fokustehtavat.js';
 import { asetaKuva, julisteUrl } from './media.js';
 import { el } from './mapart.js';
 import { valokuvaUrl, valokuvaVara, valokuvaSuurennos } from './packs/africa-valokuvat.js';
-import { kaupunginJuliste } from './packs/julisteet.js';
 // Vihjelinkin osiotunniste ja sen näyttönimi (ks. piirraVihjelinkki).
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 // Sähketehtävän sisältöhakemisto lukee maan lehden otsikot (ks.
@@ -122,6 +120,11 @@ import { sfx } from './sound.js';
  * lämmittely, ja lähin olemassa oleva vertailukohta on tutkimisvastauksen
  * löytöpalkkio (js/game.js EXPLORE_REWARD = 50). Luku on tässä yhtenä
  * vakiona, jotta annostelun tasoa voi säätää yhdestä paikasta.
+ *
+ * VISA ITSE EI ENÄÄ ASU TÄSSÄ MODUULISSA: syvennystarinan kortti
+ * (js/syvennys.js) piirtää sen kartan kohdemerkin takana ja tuo vakion
+ * sieltä — valintakupla, joka visat aikanaan tarjosi, on purettu (ks.
+ * moduulin alku).
  */
 export const TAKY_PALKKIO = 50;
 
@@ -137,10 +140,9 @@ export const TAKY_PALKKIO = 50;
  *
  * TÄMÄ LIPPU KYTKEE KORTTIANNOSTELUN. Kun se on `false`:
  *
- *   - pöllön kupla- ja korttivaiheet (huomio, täkyvalinta, syvennykset
- *     minivisoineen, kohdenostot, oppitunti ja Tapaa-portti) EIVÄT
- *     käynnisty missään: ei saapumisesta, ei Tutki-napista, ei laatan
- *     napautuksesta;
+ *   - pöllön kupla- ja korttivaiheet (huomio, oppitunti ja
+ *     Tapaa-portti) EIVÄT käynnisty missään: ei saapumisesta, ei
+ *     Tutki-napista, ei laatan napautuksesta;
  *   - LEHTILUKKO on auki: openArrival avaa kaupunkilehden suoraan myös
  *     fokusmoodissa (fokusvirtaOhittaaLehden palauttaa aina false);
  *   - kartan kuvavinjetit jäävät piirtämättä (ks. alla).
@@ -171,11 +173,11 @@ export const TAKY_PALKKIO = 50;
  * Syvennyskortit, minivisat ja oppitunnit rakennettiin kahdessatoista
  * fokuskaupungissa (Ateena, Sofia, Istanbul, Rooma, Bukarest, Sarajevo
  * + aallot 1–3), mutta lipun ollessa pois kukaan ei nähnyt niistä
- * yhtäkään riviä. Lippu on nyt `true`, ja kulku on jälleen Raamatun
- * ANNOSTELU-osion kuusivaiheinen:
+ * yhtäkään riviä. Lippu on nyt `true`, ja kulku on (valintavaiheiden
+ * purun jälkeen, ks. moduulin alku):
  *
- *   matkakirja → Livian kupla → valinta → täky + minivisa → oppitunti
- *   → kohtaaminen (tai sähketehtävä) → laattakysymys
+ *   matkakirja → Livian kupla → oppitunti → kohtaaminen (tai
+ *   sähketehtävä) → laattakysymys
  *
  * KEVYEN KULUN LIPPU JÄÄ PÄÄLLE. FOKUS_LEHTITEHTAVAT ei kääntynyt
  * `false`ksi, vaikka lippujen kommentit lupasivat liput toistensa
@@ -188,138 +190,41 @@ export const TAKY_PALKKIO = 50;
 export const FOKUSVIRTA_KORTIT = true;
 
 /**
- * ===== VALINTA-ASKEL POIS KÄYTÖSTÄ (VÄLIAIKAINEN, 29.8.2026) =========
- *
- * VÄLIAIKAINEN POISKYTKENTÄ 29.8.2026 — omistajan tilaus + Raamatun
- * 28.8.2026 linjaus (osio SAAPUMISKULUN KOLME TASMENNYSTA, kohta 3:
- * *"VALINTA-ASKEL POIS — Livia ei kysy 2-3 painikkeella mikä kiinnostaa
- * (ei kysy Ateenassakaan); täkypisteet kartalla hoitavat houkuttelun."*).
- * PALAUTUS ON TÄMÄN LIPUN KÄÄNTÖ takaisin `true`ksi — koodia ei ole
- * poistettu riviäkään.
- *
- * v1323 toi korttiannostelun pelaajan polkuun (FOKUSVIRTA_KORTIT), ja
- * sen mukana ruudulle ilmestyi valintakupla: Pulu kysyy saapumisen
- * jälkeen, mikä kartalla kiinnostaisi, tarjoaa 3–4 täkyä sekä
- * kohdenoston, ja "Jatka aarteelle" on lukossa kunnes yksi täky on
- * tehty. Juuri se on Raamatun linjauksen vastainen.
- *
- * MITÄ LIPPU TEKEE, KUN SE ON `false`:
- *
- *   1. VALINTAVAIHE OHITETAAN KOKONAAN. Livian kuplan "Jatka" vie
- *      suoraan oppituntiin (fokusvirtaSiirto, vaihe 'pollo'), eikä
- *      Pulu kysy mitään. Matkakirjamerkintä ylävasemmassa kortissa ja
- *      Livian maadoituskupla säilyvät sellaisinaan.
- *   2. AARREPORTTI ON AUKI ILMAN TÄKYVAATIMUSTA
- *      (fokusvirtaPorttiAuki). Ilman tätä eteneminen jumittuisi:
- *      portin mitta on tehtyjen täkyjen määrä, ja täkyihin pääsi vain
- *      valintakuplasta.
- *   3. VANHA TALLENNUS EI JÄÄ KUPLAAN. Valinnan vaiheet ('valinta',
- *      'taky', 'kohde') siivotaan luettaessa oppitunniksi
- *      (fokusvirtaSiivoa) — muuten kesken jäänyt kaupunki avaisi yhä
- *      sen kuplan, jota omistaja ei halua nähdä.
- *
- * MIKÄ JÄÄ LIPUN TAAKSE ODOTTAMAAN: syvennyskortit minivisoineen
- * (`takyt`) ja niiden 50 punnan palkkiot. Muuta luontevaa reittiä
- * niihin EI ole — kartan tuikkivat täkypisteet ovat oma aineistonsa
- * (js/fokusnosto.js `takynostot` / NOSTO_MAAT), eivät nämä kortit — ja
- * uutta reittiä ei tässä erässä rakenneta (omistajan rajaus).
- *
- * MIKÄ SÄILYY ENNALLAAN: kohdenostot (`kohteet`) ovat maan yhteisiä
- * karttakohteita (js/packs/fokuskohteet-grc.js), ja ne aukeavat yhä
- * kartan omista kohdemerkeistä; oppitunti, kohtaaminen, sähketehtävä
- * ja laattakysymys kulkevat kuten ennenkin.
- */
-export const FOKUSVIRTA_VALINTA = false;
-
-/**
- * Valinnan omat vaiheet — se, mitä lippu FOKUSVIRTA_VALINTA kytkee.
- * Kolme yhdessä, koska täky ja kohdenosto ovat valinnan sivupolkuja:
- * niihin mennään valinnasta ja niistä palataan valintaan.
- */
-const VALINNAN_VAIHEET = new Set(['valinta', 'taky', 'kohde']);
-
-/**
  * Virran vaiheet. Viimeinen on "virta pelattu läpi".
- *
- * KOHDE on kuudennen vaiheen sivupolku eikä seitsemäs vaihe: siihen
- * mennään valinnasta ja siitä palataan valintaan (ks. KOHDENOSTO
- * alempana). Se on listalla vain siksi, että tallennuksesta luettu
- * vaihe tunnistetaan kelvolliseksi.
  */
 export const FOKUSVIRRAN_VAIHEET = Object.freeze([
-  'matkakirja', 'pollo', 'valinta', 'taky', 'kohde', 'oppitunti', 'kohtaaminen', 'valmis',
+  'matkakirja', 'pollo', 'oppitunti', 'kohtaaminen', 'valmis',
 ]);
+
+/**
+ * Puretut valintavaiheet (ks. moduulin alku). Nimet tunnistetaan yhä,
+ * mutta vain tallennuksen siivousta varten: ennen purkua tallentunut
+ * peli voi olla jäänyt niihin, eikä se saa avata kuplaa, jota ei enää
+ * ole — eikä myöskään pudota takaisin matkakirjaan, koska pelaaja on
+ * jo ohittanut sen.
+ */
+const PURETUT_VALINNAN_VAIHEET = new Set(['valinta', 'taky', 'kohde']);
 
 /* ==================== TILAKONE (puhdas, DOM:iton) ==================== */
 
-/** Uuden kaupungin lähtötila: ensimmäinen kortti, ei yhtään täkyä. */
+/** Uuden kaupungin lähtötila: isoisän merkintä. */
 export function fokusvirtaAlkutila() {
-  return { vaihe: 'matkakirja', taky: null, tehdyt: [], kohde: null, kohteet: [] };
+  return { vaihe: 'matkakirja' };
 }
 
 /**
- * Siivoaa tallennuksesta luetun tilan sisältöä vasten.
+ * Siivoaa tallennuksesta luetun tilan.
  *
- * Tallennus voi olla vanhempi kuin sisältö: täky on voitu nimetä
- * uudelleen tai poistaa, ja silloin virta jäisi roikkumaan vaiheeseen,
- * jonka sisältöä ei ole. Tuntematon vaihe ja tuntemattomat täky- ja
- * kohdetunnukset pudotetaan, ja avoin täky tai kohde ilman sisältöä
- * palauttaa valintaan.
+ * Tallennus voi olla vanhempi kuin koodi: purettuun valintavaiheeseen
+ * jäänyt kaupunki luetaan oppitunniksi (ks. PURETUT_VALINNAN_VAIHEET),
+ * ja tuntematon vaihe pudotetaan alkuun. Vanhojen tallennusten
+ * ylimääräiset kentät (taky, tehdyt, kohde, kohteet) putoavat samalla
+ * pois — visojen kirjanpito on minitehtävissä (game.js), ei täällä.
  */
-export function fokusvirtaSiivoa(tila, data) {
-  const tunnukset = new Set((data?.takyt ?? []).map((t) => t.id));
-  const kohdeTunnukset = new Set((data?.kohteet ?? []).map((k) => k.id));
+export function fokusvirtaSiivoa(tila) {
+  if (PURETUT_VALINNAN_VAIHEET.has(tila?.vaihe)) return { vaihe: 'oppitunti' };
   const vaihe = FOKUSVIRRAN_VAIHEET.includes(tila?.vaihe) ? tila.vaihe : 'matkakirja';
-  const tehdyt = (Array.isArray(tila?.tehdyt) ? tila.tehdyt : []).filter((id) => tunnukset.has(id));
-  const kohteet = (Array.isArray(tila?.kohteet) ? tila.kohteet : [])
-    .filter((id) => kohdeTunnukset.has(id));
-  const taky = tunnukset.has(tila?.taky) ? tila.taky : null;
-  const kohde = kohdeTunnukset.has(tila?.kohde) ? tila.kohde : null;
-  const pohja = { vaihe, taky, tehdyt, kohde, kohteet };
-  /*
-   * VALINTA POIS KÄYTÖSTÄ (väliaikainen 29.8.2026, ks. lippu
-   * FOKUSVIRTA_VALINTA): kesken valintaa tallentunut kaupunki ei saa
-   * avata kuplaa uudelleen, joten valinnan vaiheet luetaan
-   * oppitunniksi. Tehdyt täyt jäävät talteen, jotta lipun kääntö
-   * takaisin ei nollaa pelaajan etenemistä.
-   */
-  if (!FOKUSVIRTA_VALINTA && VALINNAN_VAIHEET.has(vaihe)) {
-    return { ...pohja, vaihe: 'oppitunti', taky: null, kohde: null };
-  }
-  if (vaihe === 'taky' && !taky) return { ...pohja, vaihe: 'valinta' };
-  if (vaihe === 'kohde' && !kohde) return { ...pohja, vaihe: 'valinta' };
-  return pohja;
-}
-
-/** Onko portti aarrekysymykselle auki (ETENEMINEN: vähintään yksi täky)? */
-export function fokusvirtaPorttiAuki(tila, data) {
-  /*
-   * VALINTA POIS KÄYTÖSTÄ (väliaikainen 29.8.2026): ilman
-   * valintakuplaa täkyihin ei ole reittiä, joten täkyvaatimus jättäisi
-   * portin ikuisesti kiinni eikä pelaaja pääsisi aarteelle lainkaan.
-   * Portti on siksi auki; lipun kääntö palauttaa mitan sellaisenaan.
-   */
-  if (!FOKUSVIRTA_VALINTA) return true;
-  const vaadittuja = data?.valinta?.vaadittuja ?? 1;
-  return (tila?.tehdyt?.length ?? 0) >= vaadittuja;
-}
-
-/** Vielä valittavissa olevat täyt (tehtyjä ei tarjota uudelleen). */
-export function fokusvirtaJaljella(tila, data) {
-  const tehdyt = new Set(tila?.tehdyt ?? []);
-  return (data?.takyt ?? []).filter((t) => !tehdyt.has(t.id));
-}
-
-/** Vielä tarjottavat kohdenostot. Sama sääntö kuin täyillä. */
-export function fokusvirtaKohteetJaljella(tila, data) {
-  const nahdyt = new Set(tila?.kohteet ?? []);
-  return (data?.kohteet ?? []).filter((k) => !nahdyt.has(k.id));
-}
-
-/** Kaikki kohteet, joiden vinjetti kuuluu jo kartalle. */
-export function fokusvirtaNahdytKohteet(tila, data) {
-  const nahdyt = new Set([...(tila?.kohteet ?? []), tila?.kohde].filter(Boolean));
-  return (data?.kohteet ?? []).filter((k) => nahdyt.has(k.id));
+  return { vaihe };
 }
 
 /**
@@ -327,62 +232,18 @@ export function fokusvirtaNahdytKohteet(tila, data) {
  * palauttaa tilan muuttumattomana, eikä mikään siirtymä muokkaa
  * annettua oliota.
  *
- * Teot: 'jatka' | { tyyppi: 'taky', id } | { tyyppi: 'kohde', id } |
- *       'visa' | 'aarteelle' | 'kysymys'
- *
- * KOHDENOSTO EI AVAA AARREPORTTIA (omistajan tilaus 24.8.2026:
- * kohdenosto on *"VAPAAEHTOINEN lisätäky"*, josta *"EI minivisaa"*).
- * Portti mittaa sitä, onko pelaaja kuunnellut yhden tarinan KAUPUNGISTA
- * — ja kohdenosto kertoo tarkoituksella jostakin muusta paikasta.
- * Siksi nähdyt kohteet kulkevat omassa listassaan eivätkä `tehdyissä`.
- *
- * MIKSI 'visa' MERKITSEE TÄYN TEHDYKSI RIIPPUMATTA VASTAUKSESTA:
- * portti mittaa sitä, onko pelaaja kuunnellut yhden tarinan, ei sitä
- * osasiko hän. Väärä vastaus jättäisi muuten pelaajan lukkoon
- * kaupunkiin, jonka kaikki täyt on jo käytetty (minitehtävään vastataan
- * vain kerran, js/game.js actionMinitehtava).
+ * Teot: 'jatka' | 'kysymys'
  */
-export function fokusvirtaSiirto(tila, teko, data) {
-  const nyt = fokusvirtaSiivoa(tila, data);
+export function fokusvirtaSiirto(tila, teko) {
+  const nyt = fokusvirtaSiivoa(tila);
   const t = typeof teko === 'string' ? { tyyppi: teko } : (teko ?? {});
   switch (nyt.vaihe) {
     case 'matkakirja':
       return t.tyyppi === 'jatka' ? { ...nyt, vaihe: 'pollo' } : nyt;
     case 'pollo':
-      /*
-       * VALINTA POIS KÄYTÖSTÄ (väliaikainen 29.8.2026, lippu
-       * FOKUSVIRTA_VALINTA): Livian kuplasta jatketaan suoraan
-       * oppituntiin — Pulu ei kysy painikkeilla, mikä kiinnostaa.
-       */
-      if (t.tyyppi !== 'jatka') return nyt;
-      return { ...nyt, vaihe: FOKUSVIRTA_VALINTA ? 'valinta' : 'oppitunti' };
-    case 'valinta':
-      if (t.tyyppi === 'taky') {
-        const kelpaa = fokusvirtaJaljella(nyt, data).some((x) => x.id === t.id);
-        return kelpaa ? { ...nyt, vaihe: 'taky', taky: t.id } : nyt;
-      }
-      if (t.tyyppi === 'kohde') {
-        const kelpaa = fokusvirtaKohteetJaljella(nyt, data).some((x) => x.id === t.id);
-        // Kohde merkitään nähdyksi heti avattaessa: kuplaan ei tule
-        // visaa, joten muuta kuittausta ei ole — ja vinjetin pitää
-        // jäädä kartalle vaikka pelaaja sulkisi kuplan lukematta.
-        return kelpaa
-          ? { ...nyt, vaihe: 'kohde', kohde: t.id, kohteet: [...nyt.kohteet, t.id] }
-          : nyt;
-      }
-      if (t.tyyppi === 'aarteelle' && fokusvirtaPorttiAuki(nyt, data)) {
-        return { ...nyt, vaihe: 'oppitunti', taky: null };
-      }
-      return nyt;
-    case 'kohde':
-      return t.tyyppi === 'jatka' ? { ...nyt, vaihe: 'valinta', kohde: null } : nyt;
-    case 'taky':
-      if (t.tyyppi === 'visa') {
-        return nyt.tehdyt.includes(nyt.taky)
-          ? nyt : { ...nyt, tehdyt: [...nyt.tehdyt, nyt.taky] };
-      }
-      if (t.tyyppi === 'jatka') return { ...nyt, vaihe: 'valinta', taky: null };
-      return nyt;
+      // Livian kuplasta jatketaan suoraan oppituntiin: valintakupla on
+      // purettu (ks. moduulin alku), eikä Pulu kysy mitään.
+      return t.tyyppi === 'jatka' ? { ...nyt, vaihe: 'oppitunti' } : nyt;
     case 'oppitunti':
       return t.tyyppi === 'jatka' ? { ...nyt, vaihe: 'kohtaaminen' } : nyt;
     case 'kohtaaminen':
@@ -400,9 +261,9 @@ function tilaAvain(game, city) {
 }
 
 /** Kaupungin virran tila pelitallenteesta (aina siivottuna). */
-export function fokusvirtaTila(game, city, data) {
+export function fokusvirtaTila(game, city) {
   const tallessa = game?.fokusvirrat?.[tilaAvain(game, city)];
-  return fokusvirtaSiivoa(tallessa ?? fokusvirtaAlkutila(), data);
+  return fokusvirtaSiivoa(tallessa ?? fokusvirtaAlkutila());
 }
 
 /** Kirjaa tilan pelitallenteeseen. Tallennuksen laukaisee kutsuja. */
@@ -480,7 +341,7 @@ export function fokusvirtaLaattaNakyy(ui, city) {
    * jo kartalla.
    */
   if (!FOKUSVIRTA_KORTIT) return fokusAarreAvattu(ui, city);
-  const vaihe = fokusvirtaTila(ui.game, city, data).vaihe;
+  const vaihe = fokusvirtaTila(ui.game, city).vaihe;
   return vaihe === 'kohtaaminen' || vaihe === 'valmis';
 }
 
@@ -509,7 +370,7 @@ export function fokusvirtaOhittaaLehden(ui, city) {
   if (!FOKUSVIRTA_KORTIT) return false;
   if (!fokusvirtaLukitseeLehden(ui, city)) return false;
   const data = fokusvirtaSisalto(ui, city);
-  const tila = fokusvirtaTila(ui.game, city, data);
+  const tila = fokusvirtaTila(ui.game, city);
   if (tila.vaihe === 'matkakirja') siirry(ui, city, data, 'jatka');
   else avaaFokusvirta(ui, city);
   return true;
@@ -609,13 +470,13 @@ export function fokusvirtaMerkintaLuettu(ui, city) {
   }
   const data = fokusvirtaSisalto(ui, city);
   if (!data) return;
-  if (fokusvirtaTila(ui.game, city, data).vaihe !== 'matkakirja') return;
+  if (fokusvirtaTila(ui.game, city).vaihe !== 'matkakirja') return;
   clearTimeout(ui.fokusvirtaMerkintaAjastin);
   ui.fokusvirtaMerkintaAjastin = setTimeout(() => {
     if (ui.dead) return;
     if (ui.game?.cityOf?.()?.id !== city.id) return;
     if (!fokusvirtaLukitseeLehden(ui, city)) return;
-    if (fokusvirtaTila(ui.game, city, data).vaihe !== 'matkakirja') return;
+    if (fokusvirtaTila(ui.game, city).vaihe !== 'matkakirja') return;
     siirry(ui, city, data, 'jatka');
   }, MERKINNAN_TAUKO_MS);
 }
@@ -942,19 +803,20 @@ export function avaaFokusvirta(ui, city) {
   const data = fokusvirtaSisalto(ui, city);
   if (!data) return false;
   lataaTyyli();
-  const tila = fokusvirtaTila(ui.game, city, data);
+  const tila = fokusvirtaTila(ui.game, city);
   piirraKortti(ui, city, data, tila);
   return true;
 }
 
 /** Kirjaa uuden tilan, tallentaa pelin ja piirtää vaiheen uudelleen. */
 function siirry(ui, city, data, teko) {
-  const tila = fokusvirtaSiirto(fokusvirtaTila(ui.game, city, data), teko, data);
+  const tila = fokusvirtaSiirto(fokusvirtaTila(ui.game, city), teko);
   asetaFokusvirtaTila(ui.game, city, tila);
   ui.onChange?.(ui.game);
   piirraKortti(ui, city, data, tila);
-  // Kartan vinjetit seuraavat vaihetta: uusi täky tuo uuden kuvan
-  // Ateenan ylle, eikä sitä tarvitse odottaa seuraavaan piirtoon.
+  // Kartan vinjetit seuraavat vaihetta: uusi vaihe voi tuoda uuden
+  // kuvan kaupungin ylle, eikä sitä tarvitse odottaa seuraavaan
+  // piirtoon.
   paivitaFokuskuvat(ui);
   return tila;
 }
@@ -963,14 +825,12 @@ function siirry(ui, city, data, teko) {
  * Vaiheet, joissa PÖLLÖ PUHUU — nämä esitetään kuplana, ei korttina.
  *
  * Rajanveto on omistajan: *"Matkakirjakortti (isoisän merkintä + vanha
- * kuva) PYSYY korttina — se on kirja, ei pöllön puhetta"*, ja
- * syvennykset minivisoineen ovat kortteja jo pituutensa vuoksi.
- * Jäljelle jäävät juuri ne vaiheet, joissa pöllö sanoo lyhyesti jotain
- * ja odottaa vastausta — kohdenosto mukaan lukien, sillä omistajan
- * tilaus 24.8.2026 sanoo siitä suoraan: *"PÖLLÖN PUHEKUPLAAN tulee
- * teksti aiheesta"*.
+ * kuva) PYSYY korttina — se on kirja, ei pöllön puhetta"*, ja pidemmät
+ * tekstit (oppitunti, kohtaaminen) ovat kortteja jo pituutensa vuoksi.
+ * Jäljelle jää vaihe, jossa pöllö sanoo lyhyesti jotain ja odottaa
+ * vastausta.
  */
-const KUPLAVAIHEET = new Set(['pollo', 'valinta', 'kohde']);
+const KUPLAVAIHEET = new Set(['pollo']);
 
 /** Kelluva pöllönappi, jos se on juuri nyt ruudulla. */
 function polloNappi() {
@@ -1129,8 +989,6 @@ function asetaKuplanPaikka(kupla, nappi) {
 function piirraSisalto(ui, city, data, tila, sisalto) {
   switch (tila.vaihe) {
     case 'pollo': piirraPollo(ui, city, data, sisalto); break;
-    case 'taky': piirraTaky(ui, city, data, tila, sisalto); break;
-    case 'kohde': piirraKohde(ui, city, data, tila, sisalto); break;
     case 'oppitunti': piirraOppitunti(ui, city, data, sisalto); break;
     /*
      * SÄHKETEHTÄVÄ ON KOHTAAMISEN SIJAINEN (Raamattu, PÖLLÖN
@@ -1150,7 +1008,9 @@ function piirraSisalto(ui, city, data, tila, sisalto) {
       if (data.sahketehtava) piirraSahketehtava(ui, city, data, sisalto);
       else piirraKohtaaminen(ui, city, data, sisalto);
       break;
-    default: piirraValinta(ui, city, data, tila, sisalto); break;
+    // 'matkakirja' ei piirrä mitään (piirraKortti palaa ennen tätä),
+    // ja siivottu tila ei tunne muita vaiheita.
+    default: break;
   }
 }
 
@@ -1158,7 +1018,7 @@ function piirraSisalto(ui, city, data, tila, sisalto) {
  * PUHUJAN NIMILAPPU (omistajan tilaus 27.8.2026). Kuplan ylärivi on
  * nimilappu, ei puhetta, joten siinä lukee yliviivausvitsi: pöllö-sana
  * vedettynä yli punaisella ja perässä "Pulu". Vakio on tässä, jotta
- * kaikki kuusi kutsupaikkaa saavat saman lapun samalla sanalla.
+ * kaikki kutsupaikat saavat saman lapun samalla sanalla.
  */
 const PULU_YLARIVI = Symbol('pulu-ylarivi');
 
@@ -1699,159 +1559,16 @@ function piirraPollo(ui, city, data, kohde) {
   })]);
 }
 
-/* ---------- vaihe 3 ---------- */
-function piirraValinta(ui, city, data, tila, kohde) {
-  otsikko(kohde, PULU_YLARIVI, data.valinta?.kysymys ?? 'Mistä haluaisit kuulla?');
-  const jaljella = fokusvirtaJaljella(tila, data);
-  const napit = jaljella.map((taky) => nappi(taky.nappi, '', () => {
-    sfx.play('paper');
-    siirry(ui, city, data, { tyyppi: 'taky', id: taky.id });
-  }));
-  /*
-   * KOHDENOSTOT täkyjen jälkeen, aarrenapin edelle. Ne ovat kaupungin
-   * omien tarinoiden jatkoa mutta eivät niiden veroisia: ei visaa, ei
-   * palkkiota, ei porttia — siksi ne eivät myöskään aloita listaa.
-   */
-  for (const kohde of fokusvirtaKohteetJaljella(tila, data)) {
-    napit.push(nappi(kohde.nappi ?? kohde.nimi, 'fokusvirta-kohdenappi', () => {
-      sfx.play('paper');
-      siirry(ui, city, data, { tyyppi: 'kohde', id: kohde.id });
-    }));
-  }
-  const auki = fokusvirtaPorttiAuki(tila, data);
-  napit.push(nappi(
-    data.valinta?.aarreNappi ?? 'Jatka aarteelle',
-    auki ? 'primary' : '',
-    () => {
-      sfx.play('paper');
-      siirry(ui, city, data, 'aarteelle');
-    },
-    auki ? null : (data.valinta?.aarreEste ?? 'Kuuntele ensin yksi tarina'),
-  ));
-  piirraNapit(kohde, napit);
-}
-
-/* ---------- vaihe 4 ---------- */
-function piirraTaky(ui, city, data, tila, kohde) {
-  const taky = data.takyt.find((t) => t.id === tila.taky);
-  if (!taky) { piirraValinta(ui, city, data, tila, kohde); return; }
-  otsikko(kohde, PULU_YLARIVI, taky.otsikko ?? taky.nappi);
-  piirraKuva(ui, kohde, taky.kuva);
-  piirraTeksti(kohde, taky.teksti);
-  piirraJalkikuva(ui, kohde, taky.valokuva);
-  piirraMinivisa(ui, city, data, taky, kohde);
-}
-
-/* ---------- vaihe 3b: kohdenosto ---------- */
-
-/**
- * KOHDENOSTO — pöllö puhuu paikasta, joka EI ole pelikaupunki.
- *
- * Omistajan tilaus 24.8.2026: *"uusi nostotyyppi, jossa huomio
- * kohdistuu MUUHUN paikkaan kuin pelikaupunkiin: kartalle ilmestyy
- * vinjettikuva kohteen omaan sijaintiin ja PÖLLÖN PUHEKUPLAAN tulee
- * teksti aiheesta"*.
- *
- * Kuplassa on siis pelkkä puhe ja paluunappi. Kuvaviitettä EI ole:
- * kuva on kartalla kohteen päällä, ja juuri sinne pelaajan katse
- * halutaan viedä — viite kuplassa kilpailisi sen kanssa. Kartan
- * puolen hoitaa paivitaFokuskuvat, jonka siirry() kutsuu heti.
+/*
+ * Vanhat vaiheet 3–4 (valinta, täky minivisoineen) ja valinnan
+ * sivupolku 3b (kohdenosto) piirtyivät tässä 30.8.2026 asti.
+ * Valintakupla purettiin (ks. moduulin alku): syvennystarinat
+ * minivisoineen piirtää nykyään js/syvennys.js kartan kohdemerkin
+ * takana, ja kohdenostojen sisältö on maan karttakohteissa
+ * (js/fokuskohteet.js).
  */
-function piirraKohde(ui, city, data, tila, kohde) {
-  const nosto = (data.kohteet ?? []).find((k) => k.id === tila.kohde);
-  if (!nosto) { piirraValinta(ui, city, data, tila, kohde); return; }
-  otsikko(kohde, PULU_YLARIVI, nosto.nimi ?? null);
-  piirraTeksti(kohde, nosto.teksti ?? '');
-  piirraNapit(kohde, [nappi(nosto.paluu ?? 'Takaisin', 'primary', () => {
-    sfx.play('paper');
-    siirry(ui, city, data, 'jatka');
-  })]);
-  ajaKohteeseen(ui, city, nosto);
-}
 
-/**
- * MINIVISA JA PALKKIO.
- *
- * Kirjanpito on lehden minitehtävän oma (js/game.js actionMinitehtava):
- * sama avain vastataan kerran, raha maksetaan vain oikeasta, ja kaikki
- * kulkee pelitallenteessa ilman uutta mekaniikkaa. Avaimeen tulee etuliite
- * `fokus:`, jottei se voi osua lehden aihesivun avaimeen.
- *
- * JULISTE (Raamattu: *"palkkio: rahaa + generoitu juliste"*) myönnetään
- * ensimmäisestä oikeasta vastauksesta, jos kaupungilla on juliste
- * (js/packs/julisteet.js). Myöntö on game.myonnaJuliste — sama kutsu kuin
- * lehden minitehtävässä — ja katselun avaa erillinen nappi, jottei
- * suurennos peitä faktariviä kesken lukemisen (omistajan tilaus
- * 22.8.2026, js/ui.js piirraMinitehtava).
- */
-function piirraMinivisa(ui, city, data, taky, kohde) {
-  const visa = taky.visa;
-  const laatikko = html('div', 'fokusvirta-visa');
-  const jatka = () => nappi('Takaisin', 'primary', () => {
-    sfx.play('paper');
-    siirry(ui, city, data, 'jatka');
-  });
-  if (!visa) {
-    kohde.appendChild(laatikko);
-    piirraNapit(kohde, [jatka()]);
-    return;
-  }
-  const avain = `${ui.game.pack.id}:${city.id}:fokus:${taky.id}`;
-  laatikko.appendChild(html('p', 'fokusvirta-visa-kysymys', visa.kysymys));
-  const tulos = html('p', 'fokusvirta-visa-tulos');
-  // Jo vastattu (palattu korttiin tallennuksesta): näytetään vain fakta.
-  if (ui.game.minitehtavatVastatut?.has(avain)) {
-    tulos.textContent = visa.fakta ?? 'Tähän on jo vastattu.';
-    laatikko.appendChild(tulos);
-    kohde.appendChild(laatikko);
-    piirraNapit(kohde, [jatka()]);
-    return;
-  }
-  const vaihtoehdot = html('div', 'fokusvirta-vaihtoehdot');
-  visa.vaihtoehdot.forEach((teksti, i) => {
-    const nap = html('button', '', teksti);
-    nap.type = 'button';
-    nap.addEventListener('click', () => {
-      const oikein = i === visa.oikea;
-      const vastaus = ui.game.actionMinitehtava(city.id, `fokus:${taky.id}`, oikein, TAKY_PALKKIO);
-      if (!vastaus.ok) return;
-      vaihtoehdot.replaceChildren();
-      tulos.className = `fokusvirta-visa-tulos ${oikein ? 'oikein-tulos' : 'vaarin-tulos'}`;
-      tulos.textContent = (oikein
-        ? `Oikein! +${TAKY_PALKKIO} puntaa. `
-        : `Oikea vastaus: ${visa.vaihtoehdot[visa.oikea]}. `) + (visa.fakta ?? '');
-      sfx.play(oikein ? 'correct' : 'wrong');
-      natiiviVastaus(oikein);
-      if (oikein) {
-        const laatikkoToast = ui.buildToast?.({
-          kind: 'stamp', icon: 'kukkaro',
-          text: `+${TAKY_PALKKIO} puntaa`, sub: 'Livian täky ratkesi',
-        });
-        if (laatikkoToast) {
-          setTimeout(() => ui.removeToast(laatikkoToast), TOAST_MS.default);
-        }
-        const juliste = kaupunginJuliste(city.id);
-        if (juliste && !ui.game.julisteet?.has(city.id)) {
-          ui.game.myonnaJuliste(city.id);
-          ui.elavoitaLaukku?.();
-          const lunasta = nappi('Lunasta juliste', '', () => ui.naytaJuliste(city.id));
-          laatikko.appendChild(lunasta);
-        }
-      }
-      // Täky on tehty vastauksesta riippumatta (ks. fokusvirtaSiirto).
-      const uusi = fokusvirtaSiirto(fokusvirtaTila(ui.game, city, data), 'visa', data);
-      asetaFokusvirtaTila(ui.game, city, uusi);
-      ui.onChange?.(ui.game);
-      ui.renderTurnPill?.();
-    });
-    vaihtoehdot.appendChild(nap);
-  });
-  laatikko.append(vaihtoehdot, tulos);
-  kohde.appendChild(laatikko);
-  piirraNapit(kohde, [jatka()]);
-}
-
-/* ---------- vaihe 5 ---------- */
+/* ---------- vaihe 3: oppitunti ---------- */
 
 /**
  * OPPITUNNIN JATKONAPPI LUPAA SEN, MIKÄ SEURAAVAKSI TULEE.
@@ -1885,7 +1602,7 @@ function piirraOppitunti(ui, city, data, kohde) {
   })]);
 }
 
-/* ---------- vaihe 6 ---------- */
+/* ---------- vaihe 4: kohtaaminen ---------- */
 
 /*
  * KOHTAAMISEN VARMISTUS (omistajan pelitestipalaute v1119: *"nykyisen
@@ -2408,7 +2125,7 @@ function piirraSahketehtava(ui, city, data, kohde) {
     natiiviVastaus(false);
     ui.sahkeOhi.set(avain, ohi + 1);
     ui.sahkeViimeSahke = { avain, teksti: ohilyonninSahke(tehtava, vaarat) };
-    piirraKortti(ui, city, data, { vaihe: 'kohtaaminen', taky: null, tehdyt: [] });
+    piirraKortti(ui, city, data, { vaihe: 'kohtaaminen' });
   };
 
   /**
@@ -2491,7 +2208,7 @@ function sahkeOsui(ui, city, data) {
   natiiviVastaus(true);
   suljeFokusvirta(ui);
   lataaTyyli();
-  piirraKehys(ui, city, data, { vaihe: 'kohtaaminen', taky: null, tehdyt: [] });
+  piirraKehys(ui, city, data, { vaihe: 'kohtaaminen' });
   const sisalto = ui.fokusvirtaKortti?.querySelector('.fokusvirta-sisalto');
   if (sisalto) {
     sisalto.replaceChildren();
@@ -2610,9 +2327,9 @@ export function fokusvirtaKohtaamispiste(ui, city) {
  * KAIKKI kaupungin aarteen avaavat kysymykset on käytetty eikä yksikään
  * osunut (js/fokustehtavat.js fokusAarreVastattu), lehden alanappi
  * palaa — jottei yksi väärä vastaus jättäisi aarretta ikuisesti
- * tavoittamattomiin. Sama oppi kuin raskaan virran täkyportilla (ks.
- * fokusvirtaSiirto, "MIKSI 'visa' MERKITSEE TÄYN TEHDYKSI RIIPPUMATTA
- * VASTAUKSESTA").
+ * tavoittamattomiin. Mitta on "kuunneltu", ei "osattu" — sama oppi
+ * kuin minitehtävillä (js/game.js actionMinitehtava: vastataan kerran,
+ * raha vain oikeasta).
  */
 export function fokusvirtaKohtaaminenPisteessa(ui, city) {
   if (FOKUSVIRTA_KORTIT) return false;
@@ -2640,7 +2357,7 @@ export function avaaFokusKohtaaminen(ui, city) {
   // Sähketehtävä kelpaa kohtaamisen sijaan (ks. PÖLLÖN SÄHKETEHTÄVÄ).
   if (!data?.kohtaaminen && !data?.sahketehtava) return false;
   lataaTyyli();
-  piirraKortti(ui, city, data, { vaihe: 'kohtaaminen', taky: null, tehdyt: [] });
+  piirraKortti(ui, city, data, { vaihe: 'kohtaaminen' });
   return true;
 }
 
@@ -3078,16 +2795,15 @@ function aarremerkintaLuettu(ui, city) {
  * roikkuisi kahdessa paikassa. Kerros on viimeisenä eli kaupunkien ja
  * laattojen päällä, koska pinni on napautettava.
  *
- * ── KAKSI ANKKURIA, EI YHTÄ (kohdenostot 24.8.2026) ────────────────
+ * ── YKSI ANKKURIRYHMÄ PISTETTÄ KOHTI ───────────────────────────────
  *
- * Kaupungin viuhka roikkuu laatan yllä, mutta KOHDENOSTON vinjetti
- * kuuluu kohteen omaan paikkaan — Korintin kanava on Korintin
- * kannaksella eikä Ateenassa. Kerroksen sisällä on siksi yksi
- * `.fokuskuva-ryhma` ankkuria kohti, ja käänteinen zoomiskaalaus
- * annetaan jokaiselle erikseen. Ilman tätä koko kerros olisi yhden
- * `translate`-muunnoksen varassa, ja toinen ankkuri vaatisi joko toisen
- * kerroksen tai käsin laskettua siirtoa laudan yksiköissä ryhmän
- * sisällä — kumpikin hajottaisi kiinteän ruutukoon.
+ * Kerroksen sisällä on `.fokuskuva-ryhma` ankkuria kohti, ja
+ * käänteinen zoomiskaalaus annetaan ryhmälle — niin siirto asuu laudan
+ * koordinaateissa ja mitat ruudun pikseleissä. Rakenne on peruja
+ * kohdenostojen ajalta, jolloin ankkureita oli useita (kohteen oma
+ * sijainti kaupungin viuhkan lisäksi); kohdenostovinjetit purettiin
+ * valintakuplan mukana (ks. moduulin alku), mutta ryhmä on yhä oikea
+ * paikka muunnokselle.
  */
 
 /** Vinjetin mitat ruudun pikseleinä (ks. perustelu yllä). */
@@ -3101,16 +2817,16 @@ const PINNI_YLOS = 42;
 /** Viuhkan askel ja kallistus; pinnit menevät hieman limittäin. */
 const PINNI_ASKEL = 30;
 const PINNI_KULMA = 7;
-/** Kuinka monta vinjettiä kartalla korkeintaan on yhtä aikaa. */
-const PINNI_ENINTAAN = 5;
 
 /**
  * Mitkä virran kuvat kuuluvat juuri nyt kartalle?
  *
  * Kertymä seuraa virtaa: pöllön herokuva ilmestyy kun pöllö on saanut
- * vuoron, täyn kuva kun se on avattu (ja jää sen jälkeen), oppitunnin
- * kuva viimeisenä. Matkakirjan vanha valokuva EI ole listalla — se
- * asuu ylävasemmassa matkakirjakortissa, kuten omistaja linjasi.
+ * vuoron, oppitunnin kuva sen perään. Matkakirjan vanha valokuva EI
+ * ole listalla — se asuu ylävasemmassa matkakirjakortissa, kuten
+ * omistaja linjasi. (Täkyjen ja kohdenostojen vinjetit kertyivät tähän
+ * viuhkaan valintakuplan aikaan; ne purettiin kuplan mukana, ja
+ * syvennystarinoiden kuvat ovat nyt niiden omilla korteilla.)
  */
 export function fokusvirtaKuvatKartalle(ui, city) {
   // Kevyt kulku: viuhkaa ei kerry, koska sen ruokkivia vaiheita ei ole
@@ -3118,80 +2834,13 @@ export function fokusvirtaKuvatKartalle(ui, city) {
   if (!FOKUSVIRTA_KORTIT) return [];
   const data = fokusvirtaSisalto(ui, city);
   if (!data || !fokusvirtaLukitseeLehden(ui, city)) return [];
-  const tila = fokusvirtaTila(ui.game, city, data);
+  const tila = fokusvirtaTila(ui.game, city);
   if (tila.vaihe === 'matkakirja') return [];
   const kuvat = [];
   if (data.pollo?.kuva) kuvat.push(data.pollo.kuva);
-  const avatut = new Set([...(tila.tehdyt ?? []), tila.taky].filter(Boolean));
-  for (const taky of data.takyt ?? []) {
-    if (avatut.has(taky.id) && taky.kuva) kuvat.push(taky.kuva);
-  }
   const oppitunnilla = ['oppitunti', 'kohtaaminen', 'valmis'].includes(tila.vaihe);
   if (oppitunnilla && data.oppitunti?.kuva) kuvat.push(data.oppitunti.kuva);
-  // Uusin jää aina näkyviin: viuhkasta putoaa vanhin, ei tuorein.
-  return kuvat.slice(-PINNI_ENINTAAN);
-}
-
-/**
- * Mitkä kohdenostot ovat juuri nyt kartalla — ja missä?
- *
- * Vinjetti jää paikalleen sen jälkeen kun pöllö on kertonut kohteesta:
- * se on matkamuisto, ei kortin koriste. Paikka luetaan kohteen
- * lautakohtaisesta taulusta (js/packs/fokuskohteet-grc.js); jos tälle
- * laudalle ei ole koordinaatteja, kohde jää pois kartalta mutta kupla
- * toimii yhä.
- */
-export function fokusvirtaKohteetKartalle(ui, city) {
-  // Sama kuin kuvaviuhkalla: kohdenosto avataan valintakuplasta, jota
-  // kevyessä kulussa ei ole.
-  if (!FOKUSVIRTA_KORTIT) return [];
-  const data = fokusvirtaSisalto(ui, city);
-  if (!data || !fokusvirtaLukitseeLehden(ui, city)) return [];
-  const lauta = ui.game?.pack?.id;
-  const tila = fokusvirtaTila(ui.game, city, data);
-  return fokusvirtaNahdytKohteet(tila, data)
-    .map((kohde) => ({ kohde, paikka: kohde.laudat?.[lauta] }))
-    .filter(({ kohde, paikka }) => kohde.kuva
-      && Number.isFinite(paikka?.x) && Number.isFinite(paikka?.y));
-}
-
-/**
- * KAMERA KOHTEESEEN, JOS SE ON RAJAUKSEN ULKOPUOLELLA.
- *
- * Omistajan tilaus 24.8.2026: *"kamera saa siirtyä näyttämään kohteen
- * jos se on rajauksen ulkopuolella"*. Ehto on tärkeä: Korintin kanava
- * on Ateenan naapurissa ja mahtuu Kreikan fokusnäkymään ilman
- * liikettäkään, eikä kamera saa nykäistä turhaan. Ajo tehdään kartan
- * omalla julkisella kutsulla (js/kartta.js ajaKamera), joten tämä ei
- * kosketa kartan sisuksia.
- *
- * Vähimmäisala pitää huolen siitä, ettei kahden lähekkäisen pisteen
- * laatikko zoomaa portaikon perimmäiseen päähän: kohde ja kaupunki
- * halutaan näkyviin YHDESSÄ, ei kumpikaan yksin suurennettuna.
- */
-const KOHTEEN_VAHIN_ALA = { w: 160, h: 120 };
-
-function ajaKohteeseen(ui, city, kohde) {
-  const paikka = kohde?.laudat?.[ui.game?.pack?.id];
-  if (!Number.isFinite(paikka?.x) || !Number.isFinite(paikka?.y)) return;
-  if (!ui.kartta?.ajaKamera) return;
-  const alue = ui.nakyvaAlue?.();
-  if (!alue?.skaala || !(alue.w > 0) || !(alue.h > 0)) return;
-  // Reunavyöhyke luetaan "ulkopuolelle": ruudun laidassa oleva vinjetti
-  // on yhtä huono kuin näkymän takana oleva.
-  const vara = 0.1;
-  const sisalla = paikka.x > alue.x + alue.w * vara
-    && paikka.x < alue.x + alue.w * (1 - vara)
-    && paikka.y > alue.y + alue.h * vara
-    && paikka.y < alue.y + alue.h * (1 - vara);
-  if (sisalla) return;
-  const x0 = Math.min(paikka.x, city.x); const x1 = Math.max(paikka.x, city.x);
-  const y0 = Math.min(paikka.y, city.y); const y1 = Math.max(paikka.y, city.y);
-  const w = Math.max(x1 - x0, KOHTEEN_VAHIN_ALA.w);
-  const h = Math.max(y1 - y0, KOHTEEN_VAHIN_ALA.h);
-  ui.kartta.ajaKamera({
-    bbox: { x: (x0 + x1) / 2 - w / 2, y: (y0 + y1) / 2 - h / 2, w, h },
-  });
+  return kuvat;
 }
 
 /** Kuvakerros SVG:n juureen kerran; palauttaa null ilman karttaa. */
@@ -3225,19 +2874,11 @@ function ryhmaAnkkuriin(ui, kerros, x, y) {
  * ui.fokuskuvatPinnit-taulukossa. Niin suurennos löytää sekä sen
  * kuvan, jota selataan, että ruutupaikan, johon se kutistuu.
  */
-function piirraPinni(ui, kerros, kuva, kaikki, indeksi, siirto, kulma, uusi = false) {
-  /*
-   * KASVUANIMAATIO OMAAN KÄÄREESEEN. CSS:n `transform` syrjäyttää
-   * SVG:n `transform`-määreen kokonaan, joten samaan solmuun ei voi
-   * laittaa sekä viuhkan siirtoa että animaatiota — pinni hyppäisi
-   * animaation ajaksi ankkuripisteeseen. Kääre kantaa animaation, pinni
-   * oman paikkansa.
-   */
-  const koti = uusi ? el('g', { class: 'fokuskuva-kasvaa' }, kerros) : kerros;
+function piirraPinni(ui, kerros, kuva, kaikki, indeksi, siirto, kulma) {
   const g = el('g', {
     class: 'fokuskuva-pinni',
     transform: `translate(${siirto} ${-PINNI_YLOS}) rotate(${kulma})`,
-  }, koti);
+  }, kerros);
   ui.fokuskuvatPinnit[indeksi] = g;
   const kehysLeveys = PINNI_LEVEYS + PINNI_REUNA * 2;
   const kehysKorkeus = PINNI_KORKEUS + PINNI_REUNA + PINNI_JALKA;
@@ -3271,8 +2912,8 @@ function piirraPinni(ui, kerros, kuva, kaikki, indeksi, siirto, kulma, uusi = fa
   img.setAttribute('aria-hidden', 'true');
   /*
    * Rikkinäinen kuva ei saa jättää tyhjää kehystä roikkumaan kartalle:
-   * yksi yritys varaosoitteeseen (sama porras kuin kortin viitteellä) ja
-   * sen jälkeen koko pinni pois — kasvukääreineen, jos sellainen on.
+   * yksi yritys varaosoitteeseen (sama porras kuin kortin viitteellä)
+   * ja sen jälkeen koko pinni pois.
    */
   let yritetty = false;
   img.addEventListener('error', () => {
@@ -3282,7 +2923,7 @@ function piirraPinni(ui, kerros, kuva, kaikki, indeksi, siirto, kulma, uusi = fa
       img.setAttribute('href', vara);
       return;
     }
-    (koti === kerros ? g : koti).remove();
+    g.remove();
   });
   const nimi = kuva.selite ? `Katso kuva: ${kuva.selite.slice(0, 60)}` : 'Katso kuva';
   g.setAttribute('role', 'button');
@@ -3319,28 +2960,15 @@ export function paivitaFokuskuvat(ui) {
   if (!kerros) return;
   const city = ui.game?.cityOf?.();
   const kuvat = city ? fokusvirtaKuvatKartalle(ui, city) : [];
-  const kohteet = city ? fokusvirtaKohteetKartalle(ui, city) : [];
-  const tunniste = (k) => k.tiedosto ?? k.ampari;
-  const avain = (kuvat.length || kohteet.length)
+  const tunniste = (k) => k.tiedosto ?? k.ampari ?? k.osoite;
+  const avain = kuvat.length
     ? `${ui.game.pack.id}:${city.id}:${kuvat.map(tunniste).join('|')}`
-      + `:${kohteet.map(({ kohde }) => kohde.id).join('|')}`
     : 'tyhja';
   if (ui.fokuskuvatAvain !== avain) {
-    /*
-     * UUSI KOHDEVINJETTI TUNNISTETAAN EDELLISESTÄ AVAIMESTA. Kasvava
-     * kuva on tervetulotoivotus, ei pysyvä tila: se saa animoitua kerran
-     * ilmestyessään, muttei uudelleen joka kerta kun kerros rakennetaan
-     * (esimerkiksi täyn kuvan liittyessä viuhkaan).
-     */
-    const ennen = new Set(ui.fokuskuvatKohteet ?? []);
-    ui.fokuskuvatKohteet = kohteet.map(({ kohde }) => kohde.id);
     ui.fokuskuvatAvain = avain;
     kerros.textContent = '';
     ui.fokuskuvatPinnit = [];
     ui.fokuskuvatRyhmat = [];
-    // Selauslista on kaikki kartalla oleva: kaupungin viuhka ensin,
-    // kohdenostot perässä samassa järjestyksessä kuin ne piirretään.
-    const kaikki = [...kuvat, ...kohteet.map(({ kohde }) => kohde.kuva)];
     if (kuvat.length && Number.isFinite(city.x) && Number.isFinite(city.y)) {
       const ryhma = ryhmaAnkkuriin(ui, kerros, city.x, city.y);
       const keski = (kuvat.length - 1) / 2;
@@ -3352,17 +2980,9 @@ export function paivitaFokuskuvat(ui) {
         el('line', {
           class: 'fokuskuva-nuora', x1: 0, y1: 0, x2: siirto, y2: -PINNI_YLOS,
         }, ryhma);
-        piirraPinni(ui, ryhma, kuva, kaikki, i, siirto, kulma);
+        piirraPinni(ui, ryhma, kuva, kuvat, i, siirto, kulma);
       });
     }
-    kohteet.forEach(({ kohde, paikka }, j) => {
-      const ryhma = ryhmaAnkkuriin(ui, kerros, paikka.x, paikka.y);
-      el('line', {
-        class: 'fokuskuva-nuora', x1: 0, y1: 0, x2: 0, y2: -PINNI_YLOS,
-      }, ryhma);
-      piirraPinni(ui, ryhma, kohde.kuva, kaikki, kuvat.length + j, 0, 0,
-        !ennen.has(kohde.id));
-    });
   }
   /*
    * Ankkuri laudan koordinaateissa, pinnit ruudun pikseleinä: jokainen
@@ -3384,7 +3004,6 @@ export function nollaaFokuskuvat(ui) {
   ui.fokuskuvatAvain = null;
   ui.fokuskuvatPinnit = [];
   ui.fokuskuvatRyhmat = [];
-  ui.fokuskuvatKohteet = [];
   suljeSuurennos(ui);
   if (ui.fokuskuvatKerros?.isConnected) ui.fokuskuvatKerros.textContent = '';
 }
