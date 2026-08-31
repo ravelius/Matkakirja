@@ -66,6 +66,37 @@ name: Generoi laattapyramidi
 #
 # Nostotason shardi ei tarvitse aineistoa (ei ETOPOa, ei Natural
 # Earthiä): se piirtää vain nostojen musteen läpinäkyville laatoille.
+#
+# === VIIVATASO (omistaja 31.8.2026 ilta) ============================
+#
+# Reittiverkko, erikoispiirit ja MAIDEN RAJAT ovat samoin omassa
+# läpinäkyvässä pyramidissaan (tasot z0-z7), polussa
+# julisteet/pyramidi/<viivaversio>/viivat/z…
+#
+#   vain-viivataso   pelkkä viivataso: `versio` on OLEMASSA OLEVAN
+#                    pohjan versio ja `viivaversio` uusi
+#
+# Viivatason shardi ei tarvitse aineistoa sen enempää kuin nostotason:
+# reitit tulevat laudalta ja rajat repon omasta rajasetistä
+# (tools/fokuskartta/rajat-nykyiset.json.gz).
+#
+# === JULKAISUJÄRJESTYS — TÄSSÄ KARTTA VOI RIKKOUTUA =================
+#
+# Pohja ajetaan tästä erästä alkaen ILMAN reittejä ja erikoispiirejä;
+# ne ovat viivatasolla. Vanha peli ei tunne viivatasoa, joten se
+# näyttäisi reitittömän pohjan sellaisenaan — eikä varapolkua ole.
+# Järjestys on siksi kolme askelta, ja ne on tehtävä tässä
+# järjestyksessä:
+#
+#   1. SELAIN mainiin ja julkaisuun. Vanhan luettelon kanssa se toimii
+#      ennallaan (viivataso-kenttää ei ole -> kerros jää tyhjäksi eikä
+#      yhtään laattaa pyydetä), joten tämä on turvallinen yksinään.
+#   2. VIIVATASO ämpäriin: `vain-viivataso` uudella viivaversiolla.
+#      Pohja on yhä vanha eli reitit ovat siinä — kartalla on hetken
+#      molemmat, ja se on hyväksytty välitila.
+#   3. REITITÖN POHJA + luettelo. Vasta tämän jälkeen pohjassa ei ole
+#      reittejä, ja siihen mennessä viivataso on jo ämpärissä ja peli
+#      osaa lukea sen.
 on:
   workflow_dispatch:
     inputs:
@@ -78,6 +109,11 @@ on:
         type: string
         required: false
         default: ''
+      viivaversio:
+        description: 'Viivatason (reitit, piirit, rajat) versio polussa (tyhjä = sama kuin versio)'
+        type: string
+        required: false
+        default: ''
       tasot:
         description: 'Mitkä shardit ajetaan'
         type: choice
@@ -85,6 +121,7 @@ on:
           - kaikki
           - vain-z0-z6
           - vain-nostotaso
+          - vain-viivataso
           - koeajo-z0-z3
         default: koeajo-z0-z3
       laatu:
@@ -161,16 +198,18 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # Nostotaso on YKSI shardi: nostollisia laattoja on z5-z7:llä
-        # vain murto-osa laattapaikoista, ja piirto ilman aineistoa on
-        # minuuttiluokkaa.
+        # Nostotaso ja viivataso ovat KUMPIKIN YKSI SHARDI: laattoja on
+        # murto-osa laattapaikoista ja piirto ilman aineistoa on
+        # minuuttiluokkaa (viivataso 5 830 laattaa).
         shardi: ${{ fromJSON(inputs.tasot == 'kaikki'
-          && '[{"nimi":"z0-z6","tasot":"0-6","sarakkeet":""},{"nimi":"z7a","tasot":"7","sarakkeet":"0-43"},{"nimi":"z7b","tasot":"7","sarakkeet":"44-87"},{"nimi":"z7c","tasot":"7","sarakkeet":"88-131"},{"nimi":"z7d","tasot":"7","sarakkeet":"132-168"},{"nimi":"nostotaso","tasot":"5-7","sarakkeet":"","nostotaso":true}]'
+          && '[{"nimi":"z0-z6","tasot":"0-6","sarakkeet":""},{"nimi":"z7a","tasot":"7","sarakkeet":"0-43"},{"nimi":"z7b","tasot":"7","sarakkeet":"44-87"},{"nimi":"z7c","tasot":"7","sarakkeet":"88-131"},{"nimi":"z7d","tasot":"7","sarakkeet":"132-168"},{"nimi":"nostotaso","tasot":"5-7","sarakkeet":"","nostotaso":true},{"nimi":"viivataso","tasot":"0-7","sarakkeet":"","viivataso":true}]'
           || (inputs.tasot == 'vain-z0-z6'
           && '[{"nimi":"z0-z6","tasot":"0-6","sarakkeet":""}]'
           || (inputs.tasot == 'vain-nostotaso'
           && '[{"nimi":"nostotaso","tasot":"5-7","sarakkeet":"","nostotaso":true}]'
-          || '[{"nimi":"koeajo","tasot":"0-3","sarakkeet":""}]'))) }}
+          || (inputs.tasot == 'vain-viivataso'
+          && '[{"nimi":"viivataso","tasot":"0-7","sarakkeet":"","viivataso":true}]'
+          || '[{"nimi":"koeajo","tasot":"0-3","sarakkeet":""}]')))) }}
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
@@ -215,10 +254,12 @@ jobs:
           TASOT: ${{ matrix.shardi.tasot }}
           SARAKKEET: ${{ matrix.shardi.sarakkeet }}
           NOSTOTASO: ${{ matrix.shardi.nostotaso && 'true' || '' }}
+          VIIVATASO: ${{ matrix.shardi.viivataso && 'true' || '' }}
           LAATU: ${{ inputs.laatu }}
           PATINA: ${{ inputs.patina }}
           VERSIO: ${{ inputs.versio }}
           NOSTOVERSIO: ${{ inputs.nostoversio || inputs.versio }}
+          VIIVAVERSIO: ${{ inputs.viivaversio || inputs.versio }}
         run: |
           set -euo pipefail
           df -h / | tail -1
@@ -227,6 +268,9 @@ jobs:
           # Nostotason shardi piirtää vain nostojen musteen: ei
           # aineistoa, oma läpinäkyvä resepti (RESEPTIT.nosto).
           if [ -n "${NOSTOTASO}" ]; then LISA="$LISA --nostotaso --nostoversio ${NOSTOVERSIO}"; fi
+          # Viivatason shardi samoin: reitit, erikoispiirit ja maiden
+          # rajat läpinäkyville laatoille, sama resepti.
+          if [ -n "${VIIVATASO}" ]; then LISA="$LISA --viivataso --viivaversio ${VIIVAVERSIO}"; fi
           node tools/generoi-laattapyramidi.mjs ulos \
             --data ne-data --tasot "$TASOT" $LISA \
             --laatu "$LAATU" --patina "$PATINA" --versio "$VERSIO"
@@ -244,6 +288,7 @@ jobs:
         env:
           VERSIO: ${{ inputs.versio }}
           NOSTOVERSIO: ${{ inputs.nostoversio || inputs.versio }}
+          VIIVAVERSIO: ${{ inputs.viivaversio || inputs.versio }}
         run: |
           set -euo pipefail
           n=0
@@ -262,6 +307,19 @@ jobs:
           if [ -d ulos/nostot ]; then
             aws s3 sync ulos/nostot \
               "s3://${{ secrets.R2_BUCKET }}/julisteet/pyramidi/$NOSTOVERSIO/nostot" \
+              --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+              --exclude '*' --include '*.webp' \
+              --content-type image/webp \
+              --cache-control 'public, max-age=31536000, immutable' \
+              --no-progress
+            n=$((n + 1))
+          fi
+          # Viivatason laatat OMAN versionsa alle (viivat/-alipolku),
+          # samasta syystä kuin nostotason: uusintapoltto ei saa koskea
+          # pohjan ikuisiin osoitteisiin. Sama immutable-välimuisti.
+          if [ -d ulos/viivat ]; then
+            aws s3 sync ulos/viivat \
+              "s3://${{ secrets.R2_BUCKET }}/julisteet/pyramidi/$VIIVAVERSIO/viivat" \
               --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
               --exclude '*' --include '*.webp' \
               --content-type image/webp \
@@ -293,20 +351,24 @@ jobs:
       # `--kuiva` on pelkkää geometriaa: ei selainta, ei aineistoa, ei
       # piirtoa. Luettelo kuvaa KAIKKI tasot riippumatta siitä, mitkä
       # shardit ajettiin — se on pyramidin muoto, ei ajon tulos.
-      # Luettelo kertoo myös nostotason: version, tasot ja
-      # bittikartat siitä, mitkä nostolaatat ovat olemassa — kaikki
-      # pelkästä geometriasta (nostotasonPeite), joten sama komento
-      # kattaa myös vain-nostotaso-ajon.
+      # Luettelo kertoo myös nosto- ja viivatason: version, tasot ja
+      # bittikartat siitä, mitkä läpinäkyvät laatat ovat olemassa —
+      # kaikki pelkästä geometriasta (nostotasonPeite, viivatasonPeite),
+      # joten sama komento kattaa myös vain-nostotaso- ja
+      # vain-viivataso-ajon. Rajat tulevat repon omasta rajasetistä,
+      # joten tämä jobi ei tarvitse aineistoa eikä verkkoa.
       - name: Kokoa luettelo
         env:
           VERSIO: ${{ inputs.versio }}
           NOSTOVERSIO: ${{ inputs.nostoversio || inputs.versio }}
+          VIIVAVERSIO: ${{ inputs.viivaversio || inputs.versio }}
           LAATU: ${{ inputs.laatu }}
           TASOT: ${{ inputs.tasot == 'koeajo-z0-z3' && '0-3' || '0-7' }}
         run: |
           set -euo pipefail
           node tools/generoi-laattapyramidi.mjs luettelo-ulos \
             --tasot "$TASOT" --versio "$VERSIO" --nostoversio "$NOSTOVERSIO" \
+            --viivaversio "$VIIVAVERSIO" \
             --laatu "$LAATU" --vain-luettelo
           cat luettelo-ulos/pyramidi.json | head -30
 
