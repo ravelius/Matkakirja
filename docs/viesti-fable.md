@@ -1,3 +1,152 @@
+# Opus → Fable: karttasymbolit käsin piirretyiksi (haara claude/symbolit-kasin)
+
+Erä valmis, pushattu haaralle. **Ei versionostoa, ei PR:ää, ei
+laattapolttoa** (ohjeen mukaan). Yksi tiedosto muuttui:
+`js/fokusnosto-symbolit.js`. Kaikki portit vihreitä.
+
+## 1. Katselaarkki — TÄMÄ ON PÄÄTUOTOS
+
+Omistaja pyysi näkemään symbolit ennen polttoa. Arkki on
+worktreen juuressa (**ei committoitu**, kuten pyydettiin):
+
+```
+/home/user/Matkakirja/.claude/worktrees/symbolit-kasin/symbolit-vertailu.png
+```
+
+2360 × 6408 px. Sisältää jokaisesta viidestätoista merkistä:
+
+- **ennen ja jälkeen vierekkäin**, nimettynä;
+- **suurennos** (104 px) ja **käyttökoko**: sama merkki puhelimen
+  tarkkuudella (dpr 3, 23 laitepikseliä) 8× suurennettuna sekä 1:1
+  kolmena rinnakkain — käyttökoko on omistajan tärkein sarake;
+- **kartan oma pergamentti ja seepiamuste** (`#e6dabd`, muste
+  `rgba(58,40,25,.82)` / `.45`, viivanleveydet 1,15 ja 0,75) — sama
+  tyyli kuin `.nostosym-mini` CSS:ssä, ei valkoista taustaa;
+- **vetojen ja polkukomentojen määrä ennen → jälkeen** joka rivillä;
+- **punainen laatikko** niissä neljässä, joissa vetojen luku EI
+  laskenut, ja kussakin syy heti rivillä;
+- **oranssi palkki** neljässä tietoisessa kompromississa (pudotettu
+  yksityiskohta ja miksi).
+
+## 2. Luvut
+
+**Koko perhe: vedot 81 → 54 (−33 %), polkukomennot 196 → 118 (−40 %).**
+
+| merkki | vedot | komennot | huomio |
+| --- | --- | --- | --- |
+| vuori | 9 → 4 | 19 → 9 | kahdeksan hachurea → kolme |
+| meri | 2 → 2 | 10 → 8 | jo minimissä; harjoja 4 → 3 |
+| huuto | 2 → 2 | 3 → 3 | viiva + piste on vähin mahdollinen |
+| elain | 6 → 5 | 11 → 11 | nokka pois; kehä maksaa komentoja |
+| silma | 3 → 3 | 6 → 5 | mustuaisen kehä → pelkkä piste |
+| historia | 5 → 4 | 12 → 8 | sahalaita → yksi vino katkaisu |
+| ruoka | 5 → 4 | 13 → 8 | höyryjuovat pois |
+| kulttuuri | 7 → 5 | 14 → 10 | kolme kieltä → yksi |
+| tekniikka | 4 → 4 | 12 → 6 | runko yhtenä murtoviivana, pyörät pisteitä |
+| kauppa | 9 → 5 | 18 → 10 | neljä ripustinta pois |
+| sana | 5 → 3 | 11 → 6 | kolme väkää → yksi |
+| merenkulku | 6 → 3 | 12 → 6 | rengas ja kynsien kärjet pois |
+| urheilu | 10 → 4 | 20 → 8 | kahdeksan lehteä → kaksi |
+| kaupunki | 3 → 2 | 18 → 10 | kolme sakaraa → yksi lovi, holvi pois |
+| ihme | 5 → 4 | 17 → 8 | 8-sakarainen ääriviiva → neljä sädettä |
+
+Veto = kynän nosto: jokainen viiva, kaari ja mustepiste yksi. Komennot
+= SVG-polkukomennot (M/L/Q/C/…); ympyräelementti laskettiin yhdeksi.
+Siksi `elain` ei laske komentoja: käsin piirretty kehä on polku (5
+komentoa) siinä missä täydellinen `<circle>` oli yksi — ja juuri se
+täydellinen ympyrä oli perheen selvin tietokoneen jälki.
+
+## 3. Miten "käsin piirretty" on toteutettu
+
+Merkit eivät ole enää käsin kirjoitettuja `d`-merkkijonoja. Ne ovat
+VETOJA (`NOSTOSYM_MINI_LUONNOS`), ja polut syntyy **kaivertajan kynä**
+(`nostosymKyna`), jolla on viisi vedonpiirtäjää: `viiva`, `kaari`,
+`murto`, `aalto`, `keha`. Kynä
+
+- horjuttaa jokaista kärkeä (`NOSTOSYM_HORJU` 0,34 yksikköä, katto
+  7,5 % vedon pituudesta — muuten 3,8 yksikön savupiippu kallistuisi
+  kymmenen astetta ja jälki olisi huolimatonta eikä käsialaa);
+- kaartaa jokaisen vedon (`NOSTOSYM_KAARI` 2,8 % pituudesta) — suora
+  viiva on `M`+`Q`, ei `M`+`L`, joten kaarevuus EI maksa komentoja;
+- korvaa täydelliset ympyrät horjuvilla kehillä (neljä neliöllistä
+  neljännestä, ohjauspiste 1,293 × säde).
+
+**Determinismi.** Siemen on symbolin nimi (FNV-1a → mulberry32), ei
+`Math.random`. Taulu lasketaan kerran moduulin latautuessa. Todennettu:
+kolme peräkkäistä Node-ajoa antoivat saman SHA-256:n kaikkien
+viidentoista merkin poluista. Sama merkki piirtyy siis samanlaisena joka
+kehyksessä, joka ajossa ja myös laattapoltossa.
+
+## 4. Poltto: kirjasto on nyt selaimeton
+
+Uusi vienti:
+
+```js
+export function nostosymMiniMerkki(symboli, laji)
+// → { vahva, ohut, pisteet, vedot }
+```
+
+Pelkkiä `d`-merkkijonoja ja pisteiden koordinaatteja: **ei DOMia, ei
+ruudun kokoa, ei laitteen pikselitiheyttä**. Todennettu ajamalla
+`node --input-type=module` -importti ilman selainta — moduuli latautuu
+ja antaa merkit. `NOSTOSYM_MINI` on nyt tavallinen taulu, jonka rinnalla
+on `vedot`-luku, joten laattageneraattori voi lukea merkkinsä täältä
+eikä piirtäjiltä (`piirraNostosymMini` / `piirraNostosymMiniCanvas`
+jäivät selainkohtaisiksi, kuten ennenkin).
+
+Mikään nykyinen minimerkki ei rikkonut tätä ehtoa jo ennestään —
+data oli DOM-vapaata, mutta se ei ollut *ulos vietyä*, joten Node-puoli
+olisi joutunut importoimaan piirtäjän. Nyt ei joudu.
+
+## 5. Kompromissit (näkyvät myös arkissa)
+
+1. **historia** — murtunut pylväs ei lue pylvääksi kartan koossa
+   millään vetojen määrällä: 3,1 yksikön varsiväli on 1,6 CSS-pikseliä
+   ja sulaa yhdeksi paksuksi viivaksi. Merkki on nyt korkea, vinosti
+   katkaistu muoto jalustalla. Luettavuus sama kuin ennen, vedot 5 → 4.
+   Tämä on perheen heikoin merkki; jos omistaja haluaa historialle
+   toisen muodon, se on oma päätöksensä (merkitys ei muutu).
+2. **merenkulku** — ankkurin rengas pois; poikkipuu nostettiin lähemmäs
+   varren päätä, jotta merkki lukee ankkuriksi ilman rengasta.
+3. **elain** — pöllön nokka pois (1,9 yksikön kolmio oli kartalla yhden
+   pikselin täplä). Tupsut ja silmät kantavat pöllön.
+4. **ihme** — kahdeksansakarainen ääriviiva → neljä sädettä.
+
+## 6. Mihin EI koskettu
+
+- Merkitykset ja kategoria→symboli-kartta ennallaan
+  (`nostosymMiniTunnus`, `NOSTOSYM_MINI_LAJIT` muuttumattomat).
+- **Kokoa ei kasvatettu**: `NOSTOSYM_MINI_R` on yhä 6,5 eli poltetun
+  vuorikolmion mitta, `NOSTOSYM_MINI_RUUTU` 7,4.
+- Viivanleveyksiin (`css/styles.css`, `.nostosym-mini*`) ei koskettu.
+- `js/tyohuone-raamattu.js`, tarinakaanon, `tools/fokuskartta/`,
+  `js/fokusniput.js`: ei koskettu.
+
+## 7. Havainto Fablelle (ei korjattu — eri erä)
+
+Samassa tiedostossa asuu **toinen merkkiperhe**: `NOSTOSYM_KUVAT` /
+`piirraNostosymboli`, kohdekortin ylärivin 1,5 em luokkatunnus
+(esim. `piirraNostosymSeppele`, jossa on 20 lehteä). Se on
+tarkoituksellisesti kuvituksellinen ja jäi 27.8.2026 kortille, kun
+kartta sai viivamerkit. Omistajan lause *"Pitää tosiaan olla käsin
+piirretyn näköisiä kaikki"* voi tarkoittaa myös sitä perhettä.
+En koskenut siihen: se ei ole karttanosto eikä ollut kaappauksissa,
+ja tehtävänanto rajasi työn kartan merkkeihin. Jos omistaja haluaa
+kortinkin tunnukset samaan käsialaan, se on oma eränsä — sama kynä
+(`nostosymKyna`) kelpaa sinne sellaisenaan.
+
+## 8. Portit
+
+- `node --test tests/*.test.mjs` → **# pass 1047, # fail 0**
+  (1 skipped, kuten mainissa).
+- `node tools/tarkista-kaksoisavaimet.mjs` → ei kaksoisavaimia.
+- `node tools/build-standalone.mjs` → ok; **dist/ poistettu ennen
+  committia**, node_modules ei mene mukaan (.gitignore).
+- `savuke-fokuskohteet.mjs` → 96/96 läpi.
+- `savuke-selitevalikko.mjs` → 32/32 läpi.
+- `savuke-maastokohteet.mjs` → 8/8 läpi.
+- Determinismi: 3 × Node-ajo, sama SHA-256.
+
 # Opus → Fable: laattojen esilataus ja zoomin hitaus (haara claude/laattojen-esilataus)
 
 Erä valmis, pushattu haaralle. **Ei PR:ää, ei versionostoa** (ohjeen
