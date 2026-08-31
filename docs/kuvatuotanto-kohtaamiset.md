@@ -29,12 +29,17 @@ Raamattua tai muuta kaanonia. Kuvatiedostoja ei lisätä repoon.
   vaihtoehtoja, eivät kaikissa kuvissa toistuva kaava.
 - Asento saa olla kekseliäs, kun toiminta tekee siitä uskottavan ja turvallisen.
   Valon sekä painovoiman pitää lukea luonnollisesti.
+- Suora seisoma- tai istumamuotokuva jää helposti liian pysähtyneeksi. Kohtaus
+  tarvitsee vinolinjan, kurottumisen, kierron, painonsiirron tai kesken jääneen
+  aidon työliikkeen.
 - Kuvassa voi olla yksi henkilö tai esimerkiksi äiti ja tytär, isä ja tytär,
   sisarukset, ystävät tai mestari ja oppija. Vain yksi on varsinainen kysyjä.
 - Ilmeet vaihtelevat: yllättynyt sivukatsahdus, epäluulo, tietävä virne,
   pidätelty kikatus tai hillitön nauru.
 - Vuorokaudenaika ja sää vaihtelevat. Silmät ja kasvojen keskiosa ovat tarkimmat;
-  tausta on pehmeä mutta kaupunki vielä tunnistettavissa.
+  tausta on pehmeä mutta ympäristö vielä luettavissa.
+- Kaupungin ei tarvitse näkyä, jos paikallinen kauppa, työtila, kulkuneuvo,
+  urheilupaikka, ruoka tai käsityö tekee kohtauksesta karaktäärisen.
 - Rajaus on enintään puolivartalo. Kysymys näkyy esineenä, toimintana tai
   miljöövihjeenä, mutta oikeaa vastausta ei paljasteta.
 - Varsinainen kysyjä katsoo aina suoraan kameran linssiin eli pelaajaan.
@@ -46,6 +51,17 @@ Raamattua tai muuta kaanonia. Kuvatiedostoja ei lisätä repoon.
   peräkkäisissä kuvissa.
 - Ei kuvansisäistä tekstiä, valetunnuksia, logoa tai vesileimaa.
 - Jokaiselle kuvalle kirjoitetaan kuvan ulkopuolinen pieni tilanteen kuvateksti.
+- Uusista kohtauksista kirjoitetaan ensin tarkka kuvaprompti omistajan
+  kommentoitavaksi. Generointi alkaa vasta hyväksynnän jälkeen, ja jokainen
+  korjausversio syntyy kokonaan uutena.
+
+## Kohtaamiskuvagalleria
+
+Erillinen [`kohtaamiskuvat.html`](../kohtaamiskuvat.html) kokoaa kaupunkien
+kuvat, kuvatekstit, tilanteet ja tuotantotilat yhteen näkymään. Sivun koodi ja
+tekstit ovat repossa, mutta kaikki kuvat ladataan R2:n `kohtaamiset/`-polusta.
+Automaattinen vientityönkulku noutaa katalogissa nimetyt JPEGit suoraan
+välivarastosta R2:een; kuvat eivät käy repossa.
 
 ## Pulu eli Columba Livia
 
@@ -73,3 +89,7 @@ Livia nokkii taustalla murua ja huomaa kameran vasta kesken nokkaisun.
 | Tukholma | Astrid kohtaa pelaajan maailmanpyörän huipulla kuparinpunaiset hiukset tuulessa | Gamla Stan ja kapea varjo rakennusten välissä; mittaa ei näytetä | Tyylikoe valmis |
 | Marseille | Baptiste keskeyttää verkonvedon kahluuhousuissa vyötäröä myöten vedessä | Château d’If bokehissa; romaanin nimeä ei näytetä | Tyylikoe valmis |
 | Ateena | Nikos herätetään päiväunilta puistonpenkillä | Akropolis taustalla; Athenen lahjaa ei näytetä | Tyylikoe valmis |
+| Dublin | Molly kurottaa nauraen kassahihnalla vierivän omenan perään | Runsas kauppaympäristö; lauttasoutajia ei näytetä | Täysikokotarkistettu; hyväksyntä avoin |
+| Praha | Tomáš pujottautuu suuren kehyksen alta museon huoltokäytävässä | Vanha kehys ja linnan seinät; vuotta 1648 ei näytetä | Täysikokotarkistettu; hyväksyntä avoin |
+| Berliini | Lotte on puoliksi autossa sateessa ja vetää salkkua jalkatilasta | Teleskooppikotelo ja observatorion kupu; planeetan nimeä ei näytetä | Täysikokotarkistettu; hyväksyntä avoin |
+| Rooma | Enzo horjahtaa suihkulähteen huoltotyössä kolikkohaavi kädessään | Märkä haavi ja kolikot; oikeaa uskomusta ei paljasteta | Täysikokotarkistettu; hyväksyntä avoin |
