@@ -729,6 +729,28 @@ export const FOKUSVIRTA_SARAJEVO = {
           + 'luonnonmuodostuma.',
         lahde: 'Mhare, Wikimedia Commons (CC BY-SA 4.0)',
       },
+      /*
+       * OMAT KOORDINAATIT, JOTTA MERKIN VOI POLTTAA LAATTAAN.
+       *
+       * Ilman `paikka`-kenttää täky asettuu siihen kaupunkiin, jossa
+       * pelaaja sillä hetkellä on (js/fokusnosto.js nostonPaikka), ja
+       * sellaista merkkiä ei voi polttaa: koko maa jää eläväksi
+       * (tools/fokuskartta/nostot.mjs, TÄKYN EHTO). Kenttä ei muuta
+       * sisältöä — se naulaa merkin siihen kukkulaan, josta nosto
+       * kertoo.
+       *
+       * 43,97833333 N / 18,17777778 E — en-Wikipedia "Visočica (hill)",
+       * prop=coordinates (haettu 31.8.2026). Sama kaava ja samat vakiot
+       * kuin muillakin nostoilla (js/fokusnosto.js, PAIKKA LAUDALLA):
+       * maailmankartta Millerin lieriönä, europe tasavälinä.
+       */
+      paikka: {
+        nimi: 'Visočican kukkula',
+        laudat: {
+          maailmankartta: { x: 6439.3, y: 1643.7 },
+          europe: { x: 560.2, y: 737.0 },
+        },
+      },
     },
   ],
 
