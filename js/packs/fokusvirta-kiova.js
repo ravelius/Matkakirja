@@ -1138,14 +1138,30 @@ export const FOKUSVIRTA_KIOVA = {
         'Miksi nykytutkijat eivät osaa toistaa vanhoja lasivärejä?',
       ],
       /*
-       * PAIKKAA EI OLE, JA SE ON TIETOINEN VALINTA: katedraali on
-       * Kiovassa eli kaupungissa, jossa pelaaja jo seisoo (50,4528 N /
-       * 30,5144 E antaisi käytännössä laatan oman paikan). Ilman
-       * `paikka`-kenttää piste ottaa paikakseen kaupungin ja hakeutuu
-       * lähimmän kohdesymbolin päälle (nostonPaikka, js/fokusnosto-
-       * symbolit.js) — juuri se varapolku, jota varten kenttä on
-       * valinnainen.
+       * OMAT KOORDINAATIT, JOTTA MERKIN VOI POLTTAA LAATTAAN.
+       *
+       * Kenttä puuttui aiemmin tarkoituksella: katedraali on Kiovassa
+       * eli kaupungissa, jossa pelaaja jo seisoo, joten varapolku
+       * (nostonPaikka ottaa paikakseen kaupungin) antoi käytännössä
+       * saman pisteen. UKRAINASSA ON KUITENKIN KAKSI FOKUSKAUPUNKIA:
+       * Odessassa sama varapolku siirsi Pyhän Sofian Mustanmeren
+       * rannalle, ja pelin aikana vaihtuvaa merkkiä ei voi polttaa —
+       * koko maa jäi eläväksi (tools/fokuskartta/nostot.mjs, TÄKYN
+       * EHTO). Kenttä ei muuta sisältöä; se naulaa merkin siihen
+       * kirkkoon, josta nosto kertoo.
+       *
+       * 50,4528 N / 30,5144 E — en-Wikipedia "Saint Sophia Cathedral,
+       * Kyiv", prop=coordinates (sama luku kuin edellä; tarkistettu
+       * 31.8.2026). Sama kaava ja samat vakiot kuin poolin kahdella
+       * muulla nostolla.
        */
+      paikka: {
+        nimi: 'Pyhä Sofia',
+        laudat: {
+          maailmankartta: { x: 6850.5, y: 1370.4 },
+          europe: { x: 797.1, y: 566.7 },
+        },
+      },
     },
   ],
 

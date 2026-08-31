@@ -867,6 +867,28 @@ export const FOKUSVIRTA_SOFIA = {
         'Mitä Serdican amfiteatterille tapahtui antiikin jälkeen?',
         'Taistelivatko areenoilla oikeasti krokotiilit?',
       ],
+      /*
+       * OMAT KOORDINAATIT, JOTTA MERKIN VOI POLTTAA LAATTAAN.
+       *
+       * Ilman `paikka`-kenttää täky asettuu siihen kaupunkiin, jossa
+       * pelaaja sillä hetkellä on (js/fokusnosto.js nostonPaikka), ja
+       * sellaista merkkiä ei voi polttaa: koko maa jää eläväksi
+       * (tools/fokuskartta/nostot.mjs, TÄKYN EHTO). Kenttä ei muuta
+       * sisältöä — se naulaa merkin siihen kohtaan, josta nosto
+       * kertoo.
+       *
+       * 42,69722222 N / 23,32833333 E — en-Wikipedia "Amphitheatre of
+       * Serdica", prop=coordinates (haettu 31.8.2026). Sama kaava ja
+       * samat vakiot kuin muillakin nostoilla (js/fokusnosto.js, PAIKKA
+       * LAUDALLA): maailmankartta Millerin lieriönä, europe tasavälinä.
+       */
+      paikka: {
+        nimi: 'Serdican amfiteatteri',
+        laudat: {
+          maailmankartta: { x: 6610.9, y: 1695.6 },
+          europe: { x: 659.1, y: 770.7 },
+        },
+      },
     },
   ],
 
