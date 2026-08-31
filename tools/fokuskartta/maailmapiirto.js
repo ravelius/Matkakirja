@@ -1315,8 +1315,20 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
      * säilyi: joki katoaa ennen reittiä, mikä on kartografisesti
      * oikein — rata on tärkeämpi kuin maasto.
      */
-    const JOKI_PAA = 2.2;
-    const JOKI_SIVU = 1.6;
+    /*
+     * 2,2 / 1,6 -> 2,6 / 1,9 (omistajan valinta 31.8.2026 arkilta:
+     * *"Minusta se leveämpi joki oli paras. Käytä sitä."*).
+     *
+     * Agentti oli hylännyt 2,6:n sillä perusteella, että sivujoki
+     * alkaa lukea maantienä — ja sivujokia on 115 kaikkiaan 123:sta.
+     * Omistaja katsoi saman arkin ja oli eri mieltä, ja hänen
+     * silmänsä ratkaisee tyylikysymyksen. Perustelu jätetään tähän
+     * näkyviin, koska se on se hinta joka tästä maksetaan: jos joet
+     * joskus alkavat sekoittua maareitteihin, syy on tässä luvussa
+     * eikä reittien musteessa.
+     */
+    const JOKI_PAA = 2.6;
+    const JOKI_SIVU = 1.9;
     if (sisalto.joet?.length) {
       ctx.save();
       ctx.lineJoin = 'round';
