@@ -68,8 +68,7 @@
  *    aikana — ja koska täky menee samaan sarakkeeseen kuin muut merkit
  *    (js/fokusniput.js), se siirtäisi KOKO sarakkeen rivit — ja
  *    naapureitaan vielä erottelusiirrolla (js/fokuskohteet.js
- *    eritteleKohdeRyhmat) sekä liittyisi ryhmiin jäseneksi
- *    (js/fokusryhmat.js). Lisäksi täky ilman omia koordinaatteja
+ *    eritteleKohdeRyhmat). Lisäksi täky ilman omia koordinaatteja
  *    asettuu siihen kaupunkiin, jossa pelaaja sillä hetkellä on
  *    (js/fokusnosto.js nostonPaikka).
  *

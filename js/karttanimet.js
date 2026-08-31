@@ -610,12 +610,12 @@ export function asetaKohdenimet(lista, sade = 0) {
  * jostain kohtaa ja lisätään loppuun kolme pistettä."*
  *
  * SÄÄNTÖ ON YKSI JA SE ASUU TÄÄLLÄ. Se kirjoitettiin ensin
- * js/fokusryhmat.js:ään pilkkulistan omaksi mitaksi, mutta katkaisu on
- * LADONNAN keino eikä sisällön: sama sääntö tarvitaan nyt myös silloin,
- * kun valmis nimiö ei mahdu paperille (ks. ladonnan kohdenimiöt). Kaksi
- * kopiota samasta säännöstä ajautuu ennen pitkää eri asuun — sama
- * perustelu kuin kaksoisnimisäännöllä (PARIN_ETAISYYS yllä), joten
- * ryhmien nimiö kutsuu tätä eikä toista sitä.
+ * yhdistetyn merkin pilkkulistan omaksi mitaksi (ent. js/fokusryhmat.js,
+ * purettu saman päivän illalla), mutta katkaisu on LADONNAN keino eikä
+ * sisällön: sama sääntö tarvitaan silloin, kun valmis nimiö ei mahdu
+ * paperille (ks. ladonnan kohdenimiöt). Kaksi kopiota samasta säännöstä
+ * ajautuu ennen pitkää eri asuun — sama perustelu kuin
+ * kaksoisnimisäännöllä (PARIN_ETAISYYS yllä).
  *
  * MITTA ANNETAAN KUTSUJALTA, EI OLETETA. Pilkkulista mitataan
  * taulukolla kirjaston yksiköissä (js/fokusnosto-symbolit.js

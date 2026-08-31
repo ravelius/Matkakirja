@@ -1592,8 +1592,8 @@ const NOSTOSYM_NIMIO_MERKKEJA = 18;
  * POLTON EHTO (Raamattu 31.8.2026, KARTTANOSTOT POLTETAAN LAATTOIHIN):
  * *"Poltetun ladonnan ja selaimen osumamuotojen on tultava SAMASTA
  * lähteestä, ettei kahta ladontaa pääse eriytymään."* Nimiön leveys on
- * osa ladontaa heti kun teksti voi KATKETA leveyteen (js/fokusryhmat.js
- * ryhmaNimio), ja silloin `measureText` ei kelpaa mitaksi: se antaa eri
+ * osa ladontaa heti kun teksti voi KATKETA leveyteen (js/karttanimet.js
+ * katkaiseNimio), ja silloin `measureText` ei kelpaa mitaksi: se antaa eri
  * vastauksen laattageneraattorin Chromiumissa, pelaajan Safarissa ja
  * työpöydän Firefoxissa, koska kirjasin on jokaisella eri —
  * `--font-atlas` on *"Liberation Serif", "Times New Roman", Times,
@@ -2307,10 +2307,11 @@ export function piirraNostosymKartalle(g, symboli, nimio, laji, vasemmalle = fal
   // avain on se, mikä kuvaan oikeasti piirtyy.
   //
   // `enintaan` on kutsujan oma mitta samalle säännölle (ks.
-  // nostosymLyhennaNimio). Yhdistetty merkki antaa sen Äärettömänä,
-  // koska sen nimiö on JO ladottu valmiiksi mittaansa pilkkulistaksi
-  // (js/fokusryhmat.js ryhmaNimio) — 18 merkin sääntö katkaisisi sen
-  // ensimmäisen nimen kohdalta ja söisi koko listan.
+  // nostosymLyhennaNimio). Parametri jäi 31.8.2026 ilman käyttäjää:
+  // sen antoi yhdistetty merkki, jonka pilkkulistanimiö oli jo ladottu
+  // valmiiksi mittaansa (Äärettömänä, ettei 18 merkin sääntö katkaisisi
+  // sitä ensimmäisen nimen kohdalta). Yhdistely purettiin, joten jokainen
+  // nimiö kulkee nyt kartan oman mitan läpi.
   const teksti = nostosymNimioTeksti(
     nimio, NOSTOSYM_NIMIO_ASUT[nimionLaji], enintaan ?? NOSTOSYM_NIMIO_MERKKEJA,
   );

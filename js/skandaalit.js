@@ -125,9 +125,6 @@ function skandaaliLisakohteet(ui) {
       kohde: {
         ...kohde,
         avaa: (kaytto) => avaaSkandaali(kaytto ?? ui, iso, skandaali),
-        // Osio yhdistetylle lehdelle — sama sopimus ja sama perustelu
-        // kuin syvennystarinalla (js/syvennys.js, js/fokusryhmat.js).
-        osio: (kaytto, sailio) => piirraSkandaalinSisus(kaytto ?? ui, sailio, iso, skandaali),
       },
       paikka,
     }));
