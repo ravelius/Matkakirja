@@ -1,3 +1,142 @@
+# Opus → Fable: eläinsymbolin YHDEKSÄN vaihtoehtoa (haara claude/symbolit-kasin)
+
+Neljäs kierros valmis, pushattu samalle haaralle. **Ei versionostoa, ei PR:ää,
+ei laattapolttoa. NYKYINEN ELÄINMERKKI ON YHÄ VOIMASSA** — tämä erä tuotti
+vaihtoehtoja, ei valintaa. Yksi tiedosto muuttui: `js/fokusnosto-symbolit.js`
+(uusi luonnostaulu + yksi uusi export; mitään olemassa olevaa merkkiä ei
+muutettu). Vedon toteutus — leveä terä, kiinteä −40° kulma, kynän nosto — on
+**koskematon**, ja kaikki yhdeksän luonnosta piirretään sillä.
+
+## 1. Katseluarkki — PÄÄTUOTOS
+
+```
+/home/user/Matkakirja/.claude/worktrees/symbolit-kasin/elain-vaihtoehdot.png
+```
+
+3540 × 9774 px, **ei committoitu**. Jokaisesta luonnoksesta: numero ja nimi,
+suurennos, **pikselinäkymä käyttökoossa** (dpr 3 = 23 × 23 laitepikseliä, 5×
+nearest-neighbour), kolme kappaletta **1:1** (6,8 CSS-px, niin kuin ne ovat
+kartalla), vetojen määrä, pienin ero perheeseen ja lyhyt kuvaus siitä mitä
+luonnos yrittää. Ylimpänä **nykyinen hylätty merkki vertailukohtana**.
+Alimpana **koko perhe 1:1 kymmenenä nauhana** — kukin ehdotus vuorollaan
+neljäntenä merkkinä muiden neljäntoista seassa, ensin tarkalleen 1:1 ja sen
+alla sama nauha 4× pikseleinä. Kartan pergamentti `#e8dcbc`, muste
+`rgba(58,40,25,0.86 / 0.52)`.
+
+## 2. Mitä omistaja tilasi ja miten se toteutui
+
+| tilaus | miten |
+| --- | --- |
+| *"pää pitäisi olla alhaalla"* | Luonnoksissa 1 KERÄ, 2 NYYTTI ja 3 MAKAAVA on sekä vartalo että pää, ja pää on **alhaalla** kaikissa kolmessa (hylätyssä se oli ylävasemmalla). |
+| *"muutamia eri vaihtoehtoja"* | **Yhdeksän**, ja kahdeksan niistä on eri rakenne — ei saman muodon säätöjä. Ainoa varsinainen variantti on 2 NYYTTI (1:n symmetrinen versio isommalla päällä), ja se on mukana juuri siksi, että pään koon vaikutus näkyy vierekkäin. |
+| *"tee myös joku ihan toinen"* | **9 TASSU** ei ole kissa lainkaan, ks. kohta 4. |
+| *"pelkkä pää … korvat kolmion muotoisiksi"* | **Neljä** luonnosta on pelkkä pää (4, 5, 6, 7), ja kaikissa korvat ovat **kolmioita**. Aamun kielto (*"Otetaan ne korvat pois"*) on siis purettu vain kolmioina, ei muina muotoina. |
+| *"tärkeintä, että se näyttää söpöltä"* | Söpöys haettiin **mittasuhteista, ei viivoista**: silmät ovat kaikissa keskilinjan ALAPUOLELLA (0,25–1,15 yksikköä) ja säteeltään 0,72–1,30 (perheen muut täplät 0,58), kuono on lyhyt tai puuttuu, ääriviivat ovat kaaria. Vetoja ei lisätty söpöyden vuoksi: **kuuden vedon katto pitää jokaisessa**, ja kolmessa luonnoksessa vetoja on kaksi tai kolme. |
+
+## 3. Yhdeksän luonnosta, luvut mitattuina
+
+Pienin ero = musteen keskimääräinen itseisarvoero lähimpään muuhun perheen
+merkkiin **käyttökoon rasterissa** (23 × 23, sama mittatapa kuin edellisissä
+erissä). **Perheen mediaani 20,1 %**, pienin pari (kauppa ↔ merenkulku) 9,3 %,
+nykyinen eläin 20,0 %.
+
+| # | luonnos | vedot | pienin ero | lähin merkki | mitä yrittää |
+| --- | --- | --- | --- | --- | --- |
+| — | *nykyinen (hylätty)* | 4 | 20,0 % | kaupunki | vertailukohta |
+| 1 | **Kerä** | 4 | **20,5 %** | vesi | hylätyn peilikuva: pää ylhäältä alavasemmalle |
+| 2 | **Nyytti** | 4 | **22,7 %** | kaupunki | sama symmetrisenä, pää isompi (r 3,05) |
+| 3 | **Makaava** | 5 | **19,5 %** | ruoka | kissanleipä: pää selän vieressä maan tasalla |
+| 4 | **Kolmiokorvapää** | 5 | **20,6 %** | kaupunki | pelkkä pää: kehä + kaksi kolmiokorvaa |
+| 5 | **Yhden vedon pää** | **3** | 17,9 % | merenkulku | pää ja korvat samana suljettuna ääriviivana |
+| 6 | **Kurkistaja** | 6 | 18,3 % | tekniikka | pää kurkistaa vaakaviivan yli, avoin kaari |
+| 7 | **Kasvot** | 5 | **16,0 %** | vesi | ei ääriviivaa: korvat, silmät, kuono |
+| 8 | **Selkäkissa** | **2** | 17,8 % | ruoka | istuva kissa takaa, siluetti + häntä |
+| 9 | **Tassu** *(ihan toinen)* | 5 | **16,6 %** | kauppa | tassunjälki: antura + neljä varvasta |
+
+**Kolme luonnosta on alle 17 %:n**, ja ne on merkitty arkkiin punaisella
+lipukkeella: 7 KASVOT (16,0 %, sekoittuu VETEEN — molemmat ovat irrallisia
+musteläikkiä ilman ääriviivaa) ja 9 TASSU (16,6 %, sekoittuu KAUPPAAN — viisi
+täplää vs. vaa'an orsi ja kupit). Kumpikaan ei ole lähelläkään perheen
+pahinta paria (9,3 %), ja pikselinäkymässä ero on luokkaero — mutta luku on
+tässä, koska se pyydettiin. **Muut seitsemän ovat 17,8 … 22,7 %**, eli
+mediaanin tienoilla tai yli; 2 NYYTTI (22,7 %) on **koko perheen erottuvin
+eläinehdotus**, hylättyä nykyistä myöten.
+
+## 4. Miksi "ihan toinen" on TASSU eikä joku laji
+
+Kategoria luettiin läpi ennen valintaa. **23 kohdetta** (6 fokuskohdetta +
+17 syvennyspaikkaa), nimiöt: Srebarna · Hutovo Blato · Pikkupöllö ·
+Reunuskilpikonna · Vanin kissa · Eskikaraağaç · Harmaahaikarat · Dovrefjell ·
+Berliinin karhu · Karhusanktuaari · Dublinin leijona · Greyfriars Bobby ·
+Istanbulin kissat · Richmond Park · Casa de Fieras · Eläintarha 1864 ·
+Prahan hevoset · Torre Argentina · Livnon lauma · Sofian eläintarha ·
+Norrström · Jaktorów · Keskushautausmaa.
+
+Jakauma: **lintuja 5** (suurin yksittäinen ryhmä), **kissoja 3**, karhuja 2,
+hevosia 2, eläintarhoja 2, sekä peura, myskihärkä, kilpikonna, koira, leijona
+ja alkuhärkä. **Yksikään laji ei kata kategoriaa** — kissa kattaa siitä 13 %.
+Lintu olisi ollut toiseksi lähin, mutta perheessä on jo sulkakynä (*sana*), ja
+kaksi höyhenmerkkiä samassa perheessä olisi ollut virhe. **Tassunjälki on ainoa
+ääriviiva, joka on rehellinen myös Srebarnan pelikaaneille**: se merkitsee
+"täällä on eläin" sitomatta merkkiä lajiin, ja se on kartografian omaa kieltä.
+(Kartan eläintäyt ovat lisäksi 29 maan eläimiä — norppa, hirvenvasa,
+myskihärkä, murmeli … — eli sama huomio pätee vielä laajemmin.)
+
+## 5. Kolme havaintoa, jotka kannattaa tietää ennen valintaa
+
+1. **8 SELKÄKISSA on perheen kevein oikea kuvio kahdella vedolla** ja lukee
+   käyttökoossa selvästi kissana (korvat, kapea kaula, häntä). Sen ainoa
+   pulma on, ettei siinä ole silmiä lainkaan — söpöys on pelkkää ääriviivaa.
+   Jos omistaja lukee söpöyden silmistä, valinta on 4 tai 6; jos siluetista,
+   valinta on 8.
+2. **7 KASVOT on riskiehdotus.** Ilman ääriviivaa merkki on neljä täplää, ja
+   pikselinäkymä on siinä ainoa rehellinen tuomari — arkilla se on juuri sitä
+   varten. Se on silti mukana, koska se on kevein tapa piirtää kasvot ja
+   kaikki muste on siellä missä katse on.
+3. **Häntä mahtui vihdoin.** Edellinen kierros raportoi, ettei häntää saa
+   mahtumaan kerälle (vartalon reuna x = 5,1, ruutu 7,4). Se pitää yhä
+   paikkansa KERÄLLE, mutta 8 SELKÄKISSAssa häntä mahtuu, koska siluetti on
+   kapea ja pystysuora — vartalo vie x = ±3,1 ja hännälle jää loput.
+
+## 6. Mitat ja portit
+
+- **Kokoa ei kasvatettu.** Uloin muste on **6,87 yksikössä** (1 KERÄ, sama luku
+  kuin nykyisellä eläimellä) ja ruutu on 7,4; perheen ennätys on ihmeen 7,04.
+  Jokaisen luonnoksen ääriarvot mitattiin poluista: x 4,76 … 6,71, y 3,87 … 6,87.
+- **Vetoja 2 … 6.** Kuuden vedon katto pitää; 8 SELKÄKISSA on 2 ja
+  5 YHDEN VEDON PÄÄ on 3.
+- **Determinismi:** ei siementä, ei arpaa (`grep Math.random|NOSTOSYM_HORJU`
+  → 0 osumaa). Kolme peräkkäistä Node-ajoa, sama SHA-256 `174f9c14…`
+  (perhe + luonnokset). Polttoehto säilyy.
+- `node --test tests/*.test.mjs` → **# pass 1047, # fail 0** (1 skipped).
+- `node tools/tarkista-kaksoisavaimet.mjs` → ei kaksoisavaimia.
+- `node tools/build-standalone.mjs` → ok (20 452 kt); **dist/ ja node_modules
+  poistettu ennen committia**.
+- `tools/savukkeet/savuke-fokuskohteet.mjs` → **96/96 läpi**.
+
+## 7. Miten koodi on jätetty
+
+- `NOSTOSYM_ELAIN_LUONNOS` + `nostosymElainLuonnokset()` ovat uusia
+  `js/fokusnosto-symbolit.js`:ssä. Taulu **ei ole kytkettynä mihinkään**:
+  kartan eläinmerkki tulee yhä `NOSTOSYM_MINI_LUONNOS.elain`-kohdasta, eikä
+  peli piirrä luonnoksia missään. Ne ovat koodissa vain siksi, että ne
+  piirtyvät samalla kynällä kuin perhe — työkalun puolelle kopioitu kynä
+  olisi eriytynyt heti.
+- Kun omistaja valitsee yhden, työ on **yksi kopiointi**: valitun luonnoksen
+  vedot `NOSTOSYM_MINI_LUONNOS.elain`-kohtaan, luonnostaulu ja export pois,
+  ja siinä on koko muutos. Kategoria→symboli-karttaan, kortin
+  merkkiperheeseen (`NOSTOSYM_KUVAT`), `css/styles.css`:ään tai muihin
+  merkkeihin ei kosketa silloinkaan.
+- Katseluarkin rakentanut skripti oli tilapäinen eikä ole haarassa; arkki
+  syntyy uudelleen luonnostaulusta, jos sitä tarvitaan.
+
+**Ennestään rikki, EI tästä muutoksesta:** `savuke-elaintaky.mjs` kaatuu yhä
+samoihin kolmeen vartioon (todettu kahdella edellisellä kierroksella myös
+mainin työkopiossa, jossa symbolit ovat ennallaan). Vika on eläintäkyjen
+puolella; jätin sen koskematta kustannuskurin kohdan 1 mukaan.
+
+---
+
 # Opus → Fable: kissa, poikkipuu ja holvikaari (haara claude/symbolit-kasin)
 
 Kolmas kierros valmis, pushattu samalle haaralle. **Ei versionostoa, ei PR:ää,
