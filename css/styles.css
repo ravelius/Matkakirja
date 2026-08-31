@@ -4589,14 +4589,23 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
    (koko / skaala), jotta nimi on aina se sama määrä CSS-pikseleitä.
    Tyylitiedostoon kirjattu koko jäätyisi yhteen mittakaavaan.
 
-   HARVENNUSTA EI OLE, JA SE ON MITTA EIKÄ MAKU: ladonta mittaa nimen
-   leveyden measureTextillä ilman harvennusta, joten harvennettu piirto
-   olisi leveämpi kuin varattu tila ja nimet menisivät päällekkäin.
+   HARVENNUS EI OLE TÄÄLLÄ, JA SE ON MITTA EIKÄ MAKU. Pääkaupungin nimi
+   ladotaan harvennetuin kapiteelein (aikakauden atlaskonventio,
+   js/karttanimet.js PAAKAUPUNGIN_ASU), ja sekä `font-variant` että
+   `letter-spacing` tulevat elementiltä — samasta luvusta, jolla ladonta
+   mittasi nimen laatikon. Tyylitiedostoon kirjattu harvennus ei voisi
+   olla mitasta tietoinen, ja nimet menisivät päällekkäin.
+
+   TÄSSÄ LOHKOSSA OLI `letter-spacing: normal`, JA SE OLI ANSA. Mikä
+   tahansa CSS-sääntö voittaa SVG:n esitysmääreen, joten se sammutti
+   ladonnan oman harvennuksen kokonaan (mitattu Chromiumilla: kapiteeli
+   *"Lontoo"* pysyi 35,19 pikselissä, vaikka määre pyysi 45,3).
+   Harvennusta ei siis saa asettaa täällä kummallakaan arvolla — ei
+   edes oletuksena.
    --------------------------------------------------------------------------- */
 .karttanimet { pointer-events: none; }
 .karttanimi {
   font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  letter-spacing: normal;
   text-rendering: optimizeLegibility;
   fill: #4a3421;
   stroke: none;
