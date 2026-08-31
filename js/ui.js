@@ -263,6 +263,15 @@ import {
   piirraIhmenauha,
 } from './fokuskohteet.js';
 /*
+ * MERKKIEN LADONNAN MITTAKAAVA TULEE LADONTAMODUULISTA, EI TÄSTÄ
+ * TIEDOSTOSTA (Raamattu 31.8.2026, KARTTANOSTOT POLTETAAN LAATTOIHIN):
+ * laattageneraattori laskee saman luvun Nodessa, ja kahdesta kaavasta
+ * seuraisi ennen pitkää kaksi eri karttaa.
+ */
+import {
+  NOSTOLADONTA_KATTO, NOSTOLADONTA_PROTO, nostoladontaSkaala,
+} from './nostoladonta.js';
+/*
  * Kevyen kulun vihreä kohtaamispiste (js/fokuspiste.js). Sama kytkentä
  * kuin kohdemerkeillä: päivitys aina kun näkymä on asettunut, nollaus
  * laudan vaihdossa.
@@ -923,7 +932,7 @@ const FOKUS_LAATTA_PX = 10.5;
  * Sama luku on js/fokuskohteet.js KOHDE_POLTETTU_PROTO, joka mittaa
  * kuvaan poltettuja kaupunginnimiä.
  */
-const FOKUS_LEHTI_PROTO = 1600;
+const FOKUS_LEHTI_PROTO = NOSTOLADONTA_PROTO;
 /*
  * MERKIN KATTO LEHDEN OMINA PIKSELEINÄ (ks. fokusMerkkiSkaalaKartalle).
  *
@@ -939,7 +948,7 @@ const FOKUS_LEHTI_PROTO = 1600;
  * kun skaala on työpöydällä (1440 x 900) 0,356 ja iPadilla
  * (834 x 1112) 0,572 — kummankaan näkymä ei siis muutu lainkaan.
  */
-const FOKUS_MERKKI_KATTO = 2.0;
+const FOKUS_MERKKI_KATTO = NOSTOLADONTA_KATTO;
 /*
  * Napautusalue on suurempi kuin piirretty laatta: laatta on
  * fokusnäkymässä Tutki-napin paikka (alarivillä on vain Liiku), ja
@@ -7190,9 +7199,13 @@ export class UI {
    * ole mitään poltettavaakaan.
    */
   fokusMerkkiSkaalaPohja() {
-    const rajaus = this.fokusPohjaRajaus;
-    if (!(rajaus?.w > 0)) return 0;
-    return FOKUS_MERKKI_KATTO * rajaus.w / FOKUS_LEHTI_PROTO;
+    /*
+     * KAAVA ASUU js/nostoladonta.js:SSÄ, koska laattageneraattori
+     * tarvitsee sen eikä voi tuoda tätä tiedostoa (se vetäisi mukanaan
+     * koko käyttöliittymän). Arvo on täsmälleen entinen; vain paikka
+     * vaihtui, jotta poltettu ja elävä ladonta lukevat saman luvun.
+     */
+    return nostoladontaSkaala(this.fokusPohjaRajaus);
   }
 
   /**

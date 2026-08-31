@@ -130,7 +130,7 @@ import {
 export function piirraMaailma(canvas, aineisto, asetukset) {
   const {
     bbox, projektio, leveys, tyyli = {}, esikatseluTausta,
-    koko = null, siirto = null, sisalto = null,
+    koko = null, siirto = null, sisalto = null, nostot = null, piirraNosto = null,
     paperiS = null,
   } = asetukset;
 
@@ -1850,6 +1850,81 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
      * tekstiä, eikä 602:ta polyviivaa kannata palauttaa siihen elävään
      * kerrokseen, jonka purkaminen teki panoroinnista sujuvan (v1365).
      */
+  }
+
+  /* ============================== 8c. POLTETUT KARTTANOSTOT
+   *
+   * OMISTAJAN PÄÄTÖS 31.8.2026 (Raamattu, KARTTANOSTOT POLTETAAN
+   * LAATTOIHIN), sanatarkasti: *"mikään karttanostoista ei kuulu kadota
+   * laudalta missään vaiheessa peliä, joten ne voidaan aivan hyvin
+   * polttaa suoraan karttaan"* ja *"myös nostojen tekstit on hyvä
+   * polttaa suoraan kartalle"*.
+   *
+   * === MIKSI NÄMÄ SAA POLTTAA, VAIKKA PAIKANNIMIÄ EI (luku 8b) =====
+   *
+   * Kysymys ei ole tekstistä vaan MITTAKAAVASTA. Paikannimi on RUUDUN
+   * mitassa — 10,5 CSS-pikseliä joka laitteella — eikä laatta tiedä
+   * katsojan pikselitiheyttä, joten poltettu nimi on iPadilla
+   * kolmasosan kokoinen. Karttanosto on KARTAN mitassa (omistajan
+   * linjaus 26.8.2026: *"merkit elävät kartan mittakaavassa"*): sen
+   * koko on lehden rajauksesta laskettu vakio lautayksiköitä
+   * (js/nostoladonta.js nostoladontaSkaala), ja se kutistuu kartan
+   * mukana kuten vuorikolmio ja rantaviiva. Tiheä näyttö valitsee
+   * syvemmän tason ja saa saman merkin tarkempana — ei pienempänä.
+   *
+   * Sivutuote, joka ratkaisee vanhan valituksen: uloimmilla tasoilla
+   * merkit häipyvät itsestään (z0:lla Ateenan symbolin säde on 0,1
+   * kuvapikseliä), joten yleiskuvan merkkikasaa ei enää ole.
+   *
+   * === LADONTA ON JO TEHTY, TÄSSÄ VAIN PIIRRETÄÄN =================
+   *
+   * `nostot` on pelin oman ladonnan tulos laudan yksiköissä
+   * (tools/fokuskartta/nostot.mjs, joka ajaa js/fokuskohteet.js:n ja
+   * js/fokusniput.js:n passit sellaisinaan). Ladonta on ajettu KERRAN
+   * KOKO ARKILLE, ei lohkoittain — sama sääntö ja sama syy kuin
+   * paikannimillä: törmäyksenvältely on globaali päätös, ja
+   * lohkoittain ladottuna nosto katkeaisi laattarajalle.
+   *
+   * MERKKI PIIRRETÄÄN PELIN OMALLA KOODILLA (js/fokusnosto-symbolit.js
+   * piirraNostosymPolttoon), ei generaattorin kopiolla. Se on Raamatun
+   * ehto: poltetun ja elävän on tultava samasta lähteestä.
+   *
+   * === NOSTO ON KARTTAVAKIO, KUTEN REITIT JA JOET =================
+   *
+   * Merkin oma mitta (`m.porras`) on lautayksikköä kirjaston yksikköä
+   * kohti, ja kertomalla se `px`:llä saadaan kuvapikseliä kirjaston
+   * yksikköä kohti. Mitään paperivakiota ei ole: merkki on kartan
+   * merkintä eikä painokoneen ominaisuus.
+   */
+  if (nostot?.length && piirraNosto) {
+    for (const m of nostot) {
+      const mx = lautaKuvaX(m.x);
+      const my = lautaKuvaY(m.y);
+      /*
+       * NOSTOVIIVA ENSIN, merkin alle — sama järjestys kuin pelissä,
+       * jossa viivakerros menee laattakerroksen eteen (js/fokusniput.js
+       * nippuViivakerros). Päät on laskettu valmiiksi pelin omalla
+       * funktiolla (nippuViivanJana).
+       */
+      const v = m.viiva;
+      if (v) {
+        ctx.save();
+        ctx.strokeStyle = v.vari;
+        ctx.globalAlpha = v.himmeys;
+        ctx.lineCap = 'round';
+        ctx.lineWidth = Math.max(0.2, v.leveys * px);
+        ctx.setLineDash([v.katko * px, v.katko * px]);
+        ctx.beginPath();
+        ctx.moveTo(lautaKuvaX(v.x1), lautaKuvaY(v.y1));
+        ctx.lineTo(lautaKuvaX(v.x2), lautaKuvaY(v.y2));
+        ctx.stroke();
+        ctx.restore();
+      }
+      ctx.save();
+      ctx.translate(mx, my);
+      piirraNosto(ctx, m, m.porras * px);
+      ctx.restore();
+    }
   }
 
   ctx.restore();                       // kartta-alan leikkuri auki

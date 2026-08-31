@@ -135,10 +135,11 @@
  *
  *      sRuutu  KATTAMATON skaala eli sormen mitta lehden perustasolla.
  *              Sillä lasketaan kaikki, mikä koskee NAPAUTUSTA:
- *              sarakkeen etäisyys (NIPPU_DX), yhdysviivan alkupää ja
- *              vihreän pisteen väistövara (NIPPU_VAPAA). Nämä EIVÄT saa
- *              kutistua merkin mukana, koska laatta itse ja vihreä piste
- *              piirretään samassa kattamattomassa mitassa.
+ *              sarakkeen etäisyys (NIPPU_DX) ja yhdysviivan alkupää.
+ *              Nämä EIVÄT saa kutistua merkin mukana, koska laatta itse
+ *              piirretään samassa kattamattomassa mitassa. (Vihreän
+ *              pisteen väistövara oli tässä 31.8.2026 asti; se poistui
+ *              polton myötä — ks. SARAKE ON LAUDAN ASIA, EI VUORON.)
  *
  *    NIPUTUSRAJA VAIHTOI PUOLTA 28.8.2026 (sääntö 10): se laskettiin
  *    ennen kattamattomasta sormialueesta, ja juuri siksi kapea ruutu
@@ -349,17 +350,6 @@ const NIPPU_DX = 26;
 const NIPPU_VALI = 30;
 
 /*
- * Vihreän kohtaamispisteen väistövara: pisteen osuma-alue (22) +
- * merkin osuma-alue (22) keskipisteestä keskipisteeseen. Piste pitää
- * kerroksensa päällimmäisenä (js/fokuspiste.js varmistaPistekerros),
- * joten tätä lähempänä oleva rivi menettäisi napautuksensa pisteelle.
- */
-const NIPPU_VAPAA = 44;
-
-/** Varmistin: montako riviä väistö saa enintään hypätä. */
-const NIPPU_VAISTOJA = 8;
-
-/*
  * SARAKE EI SAA OLLA LEHTEÄ PIDEMPI (ks. sääntö 7).
  *
  * Osuus lehden IKKUNAN (ui.fokusPohjaRajaus) korkeudesta, jonka sarake
@@ -449,6 +439,34 @@ function nippuMerkit(ui) {
     merkit.push({ ryhma, sade: NIPPU_KOHDE_R });
   }
   return merkit;
+}
+
+/**
+ * SARAKKEIDEN ANKKURIT: maan kaupungit ja niiden kiertokopiot.
+ *
+ * Lista tulee kohdekerrokselta (`ui.fokuskohdeKaupungit`,
+ * js/fokuskohteet.js maanKaupungit) eikä `cityOf`:sta — ks. SARAKE ON
+ * LAUDAN ASIA, EI VUORON. Vanha yhden kaupungin polku jää varalle
+ * niille näkymille, joissa kohdekerros ei ole vielä kirjoittanut
+ * listaa; ilman sitäkin passi vain jättää niput tekemättä.
+ *
+ * Kiertokohdat lasketaan tässä KERRAN kaupunkia kohti, koska niitä
+ * kysytään jokaista merkkiä kohti.
+ */
+function nippuKaupungit(ui) {
+  if (!ui?.fokusmoodi || ui.katselu) return [];
+  const lista = ui.fokuskohdeKaupungit?.length
+    ? ui.fokuskohdeKaupungit
+    : [ui.game?.cityOf?.()].filter(Boolean);
+  const ulos = [];
+  for (const kaupunki of lista) {
+    if (!Number.isFinite(kaupunki?.x) || !Number.isFinite(kaupunki?.y)) continue;
+    ulos.push({
+      y: kaupunki.y,
+      kohdat: ui.kiertoKohdat?.(kaupunki.x) ?? [kaupunki.x],
+    });
+  }
+  return ulos;
 }
 
 /*
@@ -586,47 +604,71 @@ function nippuViivakerros(ui) {
  * määreetkin kirjoitetaan vain muutoksessa (js/mapart.js maare) — sama
  * sääntö ja sama syy kuin kohdemerkkien muunnoksilla.
  */
+/**
+ * YHDEN YHDYSVIIVAN JANA LAUDAN KOORDINAATEISSA — tai null, jos viivaa
+ * ei piirretä lainkaan.
+ *
+ * VIETY ULOS 31.8.2026 (Raamattu, KARTTANOSTOT POLTETAAN LAATTOIHIN):
+ * *"koko nosto eli symboli, teksti ja nostoviiva menee laattoihin"*.
+ * Laattageneraattori piirtää saman viivan canvasille, ja jos päiden
+ * laskenta olisi siellä omanaan, poltettu viiva alkaisi eri kohdasta
+ * kuin pelin piirtämä.
+ *
+ * Alkupää kaupungin NÄKYVÄN merkinnän reunalta (sykekehä,
+ * NIPPU_SYKE_R; `sRuutu`, koska laatta ja kehä skaalataan
+ * kattamattomalla mitalla — ks. sääntö 8), loppupää merkin oman
+ * aluslaatan reunaan (`s`) — kumpikin pää siis omassa mitassaan,
+ * jottei viiva jää minkään alle.
+ *
+ * ALKU OLI ENNEN NÄKYMÄTÖN SORMIALUE (24). Se kelpasi niin kauan kuin
+ * sarake oli 48 pikselin päässä, mutta 37 pikselin etäisyydellä
+ * (sääntö 2) viiva alkaisi vasta merkin alta ja katoaisi kokonaan
+ * samalla korkeudella olevalta riviltä (NIPPU_VIIVA_MIN). Sormialue on
+ * näkymätön eikä siksi ollut koskaan se reuna, jolta viivan kuuluu
+ * lähteä — sääntö 6 sanoo "kaupungin laatan reunalta", ja se reuna on
+ * sykekehä.
+ */
+export function nippuViivanJana(v, s, sRuutu = s) {
+  const dx = v.x - v.cx;
+  const dy = v.y - v.cy;
+  const pituus = Math.hypot(dx, dy);
+  if (!(pituus > 0)) return null;
+  const alku = NIPPU_SYKE_R * sRuutu;
+  const loppu = pituus - (v.sade + NIPPU_VIIVA_RAKO) * s;
+  if (loppu - alku < NIPPU_VIIVA_MIN * s) return null;
+  const yx = dx / pituus;
+  const yy = dy / pituus;
+  return {
+    x1: v.cx + yx * alku,
+    y1: v.cy + yy * alku,
+    x2: v.cx + yx * loppu,
+    y2: v.cy + yy * loppu,
+    leveys: NIPPU_VIIVA_LEVEYS * s,
+    katko: NIPPU_VIIVA_KATKO * s,
+    vari: NIPPU_VIIVA_VARI,
+    himmeys: NIPPU_VIIVA_HIMMEYS,
+  };
+}
+
 function nippuPiirraViivat(ui, viivat, s, sRuutu = s) {
   const kerros = nippuViivakerros(ui);
   if (!kerros) return;
   let i = 0;
   for (const v of viivat) {
-    const dx = v.x - v.cx;
-    const dy = v.y - v.cy;
-    const pituus = Math.hypot(dx, dy);
-    if (!(pituus > 0)) continue;
-    /*
-     * Alkupää kaupungin NÄKYVÄN merkinnän reunalta (sykekehä,
-     * NIPPU_SYKE_R; sRuutu, koska laatta ja kehä skaalataan
-     * kattamattomalla mitalla — ks. sääntö 8), loppupää merkin oman
-     * aluslaatan reunaan (s) — kumpikin pää siis omassa mitassaan,
-     * jottei viiva jää minkään alle.
-     *
-     * ALKU OLI ENNEN NÄKYMÄTÖN SORMIALUE (24). Se kelpasi niin
-     * kauan kuin sarake oli 48 pikselin päässä, mutta 37 pikselin
-     * etäisyydellä (sääntö 2) viiva alkaisi vasta merkin alta ja
-     * katoaisi kokonaan samalla korkeudella olevalta riviltä
-     * (NIPPU_VIIVA_MIN). Sormialue on näkymätön eikä siksi ollut
-     * koskaan se reuna, jolta viivan kuuluu lähteä — sääntö 6 sanoo
-     * "kaupungin laatan reunalta", ja se reuna on sykekehä.
-     */
-    const alku = NIPPU_SYKE_R * sRuutu;
-    const loppu = pituus - (v.sade + NIPPU_VIIVA_RAKO) * s;
-    if (loppu - alku < NIPPU_VIIVA_MIN * s) continue;
-    const yx = dx / pituus;
-    const yy = dy / pituus;
+    const jana = nippuViivanJana(v, s, sRuutu);
+    if (!jana) continue;
     const solmu = kerros.childNodes[i] ?? el('line', {
       class: 'nippuviiva',
-      stroke: NIPPU_VIIVA_VARI,
-      opacity: NIPPU_VIIVA_HIMMEYS,
+      stroke: jana.vari,
+      opacity: jana.himmeys,
       'stroke-linecap': 'round',
     }, kerros);
-    maare(solmu, 'x1', (v.cx + yx * alku).toFixed(2));
-    maare(solmu, 'y1', (v.cy + yy * alku).toFixed(2));
-    maare(solmu, 'x2', (v.cx + yx * loppu).toFixed(2));
-    maare(solmu, 'y2', (v.cy + yy * loppu).toFixed(2));
-    maare(solmu, 'stroke-width', (NIPPU_VIIVA_LEVEYS * s).toFixed(3));
-    const katko = (NIPPU_VIIVA_KATKO * s).toFixed(3);
+    maare(solmu, 'x1', jana.x1.toFixed(2));
+    maare(solmu, 'y1', jana.y1.toFixed(2));
+    maare(solmu, 'x2', jana.x2.toFixed(2));
+    maare(solmu, 'y2', jana.y2.toFixed(2));
+    maare(solmu, 'stroke-width', jana.leveys.toFixed(3));
+    const katko = jana.katko.toFixed(3);
     maare(solmu, 'stroke-dasharray', `${katko} ${katko}`);
     i += 1;
   }
@@ -663,22 +705,67 @@ function nippuRiviVali(jono, s, ikkuna) {
   return Math.max((2 * suurin + NIPPU_VALI_RAKO) * s, mahtuu);
 }
 
+/* ============ SARAKE ON LAUDAN ASIA, EI VUORON (31.8.2026) =========
+ *
+ * POLTON EHTO (Raamattu, KARTTANOSTOT POLTETAAN LAATTOIHIN; omistajan
+ * sanatarkka ehto: *"karttamerkit pysyvät aina samoina ja paikallaan ja
+ * näkyvissä"*). Laattaan poltettu merkki on siinä kohdassa arkkia,
+ * johon se poltettiin — pelin loppuun asti. Jos sarake latoutuisi vain
+ * sen kaupungin ympärille, jossa pelaaja SEURAAVAKSI seisoo, sama
+ * merkki olisi kartalla kahdessa eri paikassa eri vuoroilla, ja
+ * poltetun merkin alle jäävä näkymätön osumamuoto olisi milloin
+ * missäkin.
+ *
+ * KAKSI PELITILARIIPPUVUUTTA POISTUI SIKSI TÄSTÄ PASSISTA:
+ *
+ *   1. NIPPU LATOUTUU MAAN JOKAISEN KAUPUNGIN YMPÄRILLE, ei vain
+ *      nykyisen (`ui.fokuskohdeKaupungit`, js/fokuskohteet.js
+ *      maanKaupungit). Sama lista ja sama sääntö kuin ryhmittelyllä,
+ *      joka on tehnyt näin alusta asti: *"Nykyinen kaupunki ei ole
+ *      erikoisasemassa — maan jokainen kaupunki kerää omat kohteensa"*
+ *      (js/fokusryhmat.js). Merkki liittyy LÄHIMPÄÄN kaupunkiin, jonka
+ *      päälle se osuu; tasapelin ratkaisee kaupunkilistan järjestys.
+ *
+ *   2. VIHREÄN KOHTAAMISPISTEEN VÄISTÖ (entinen NIPPU_VAPAA, sääntö 4)
+ *      on poistettu. Piste on pelitilaa — se ilmestyy ja katoaa kesken
+ *      pelin — eikä poltettu sarake voi väistää jotain, mitä laatassa
+ *      ei ole. Piste piirtyy omassa kerroksessaan merkkien PÄÄLLE
+ *      (js/fokuspiste.js varmistaPistekerros), joten se saa peittää
+ *      merkin hetkeksi; napautuksen voittaa yhä lähin osumamuodon
+ *      keskipiste (sääntö 9), ei piirtojärjestys.
+ *
+ * HINTA ON KIRJATTAVA: kun pelaaja on Ateenassa, Thessalonikin merkit
+ * ovat nyt myös nipussa oman kaupunkinsa kyljessä eivätkä omissa
+ * koordinaateissaan. Se on juuri se, mitä poltto tarkoittaa — kartta ei
+ * enää muutu sen mukaan, missä pelaaja seisoo.
+ */
+
 /**
  * KASAUSPASSI — kutsutaan kerrosten asemoinnista ennen muunnoksia.
  *
  * @param {object} ui  Pelin UI-olio (fokuskohdeRyhmat,
- *   fokuspisteRyhmat, game, kiertoKohdat, fokusmoodi, katselu).
- * @param {number} s   Merkkien vakioskaala (js/ui.js fokusMerkkiSkaala)
- *   — sama arvo, jolla kutsuja on juuri kirjoittamassa muunnoksiaan.
+ *   fokuskohdeKaupungit, fokusPohjaRajaus, kiertoKohdat, fokusmoodi,
+ *   katselu) — tai laattageneraattorin sama tynkä ilman DOMia
+ *   (js/nostoladonta.js).
+ * @param {number} s   Merkkien vakioskaala (js/ui.js
+ *   fokusMerkkiSkaalaPohja) — sama arvo, jolla kutsuja on juuri
+ *   kirjoittamassa muunnoksiaan.
+ * @param {number} sRuutu  Kattamaton mitta (sääntö 8); lehden omassa
+ *   näkymässä sama luku kuin `s`.
  *
  * DETERMINISTINEN: jono järjestetään merkkien omista koordinaateista
  * (y, sitten x, sitten jonon vakaa järjestys), joten sama lauta antaa
  * aina saman sarakkeen — eikä rivi vaihdu sen mukaan, kumpi kerros
  * sattui asemoitumaan ensin. Työ on muutaman merkin lajittelu ilman
  * yhtäkään mittausta, joten passin voi ajaa huoletta joka kutsulla.
+ *
+ * @returns {Array} yhdysviivat laudan koordinaateissa ({ cx, cy, x, y,
+ *   sade, id }) — sama lista, joka juuri piirrettiin. Laattageneraattori
+ *   lukee sen (js/nostoladonta.js): poltettu nostoviiva ei saa tulla
+ *   toisesta laskennasta kuin selaimen oma.
  */
 export function niputaFokusmerkit(ui, s, sRuutu = s) {
-  if (!ui || !(s > 0)) return;
+  if (!ui || !(s > 0)) return [];
   /*
    * SARAKE ON LEHDEN MITASSA (omistaja 31.8.2026, Raamattu
    * KARTTANOSTOT POLTETAAN LAATTOIHIN). Kutsuja antaa nykyään VAIN
@@ -693,28 +780,23 @@ export function niputaFokusmerkit(ui, s, sRuutu = s) {
   // jäädä kartalle merkkien lähdettyä (ks. sääntö 6).
   if (!merkit.length) {
     nippuPiirraViivat(ui, [], s, ruutu);
-    return;
+    return [];
   }
-  const city = ui.fokusmoodi && !ui.katselu ? ui.game?.cityOf?.() : null;
-  if (!city || !Number.isFinite(city.x) || !Number.isFinite(city.y)) {
+  const kaupungit = nippuKaupungit(ui);
+  if (!kaupungit.length) {
     for (const { ryhma } of merkit) nippuAseta(ryhma, null, s);
     nippuPiirraViivat(ui, [], s, ruutu);
-    return;
+    return [];
   }
   /*
    * Kiertävällä laudalla kaupunki on kartalla kahdesti; jokainen
    * merkkikopio niputetaan LÄHIMMÄN kaupunkikopion viereen, jolloin
    * saman merkin kopiot saavat saman rivin omissa sarakkeissaan.
    */
-  const kohdat = ui.kiertoKohdat?.(city.x) ?? [city.x];
+  // Sarakkeen avain on kaupungin kopion x JA kaupungin y: kahdella
+  // saman maan kaupungilla voi olla sama x mutta ei koskaan sama piste.
   const niput = new Map();
   merkit.forEach((merkki, jono) => {
-    let cx = kohdat[0];
-    let etaisyys = Infinity;
-    for (const kohta of kohdat) {
-      const e = Math.hypot(merkki.ryhma.x - kohta, merkki.ryhma.y - city.y);
-      if (e < etaisyys) { etaisyys = e; cx = kohta; }
-    }
     /*
      * NIPPUUN PÄÄSEE VAIN SE, MIKÄ PEITTÄÄ KAUPUNGIN (säännöt 1 ja 10).
      *
@@ -724,24 +806,28 @@ export function niputaFokusmerkit(ui, s, sRuutu = s) {
      * iPhonella se oli 33 lautayksikköä, työpöydällä 10. Kun mitta on
      * sama kuin merkin piirtomitta, raja kertoo sen mitä pitääkin —
      * peittääkö merkki laatan — ja kumpikin ruutu niputtaa samat merkit.
+     *
+     * LÄHIN KAUPUNKI VOITTAA, kun useampi kelpaisi: sama sääntö ja sama
+     * tasapelin ratkaisu (listan järjestys) kuin ryhmittelyllä.
      */
-    if (etaisyys < (NIPPU_KIEKKO_R + merkki.sade) * s) {
-      const jold = niput.get(cx) ?? [];
-      jold.push({ merkki, jono });
-      niput.set(cx, jold);
-    } else {
-      nippuAseta(merkki.ryhma, null, s);
+    const raja = (NIPPU_KIEKKO_R + merkki.sade) * s;
+    let paras = null;
+    let etaisyys = raja;
+    for (const kaupunki of kaupungit) {
+      for (const cx of kaupunki.kohdat) {
+        const e = Math.hypot(merkki.ryhma.x - cx, merkki.ryhma.y - kaupunki.y);
+        if (e < etaisyys) { etaisyys = e; paras = { cx, cy: kaupunki.y }; }
+      }
     }
+    if (!paras) { nippuAseta(merkki.ryhma, null, s); return; }
+    const avain = `${paras.cx}|${paras.cy}`;
+    const jold = niput.get(avain) ?? { cx: paras.cx, cy: paras.cy, jono: [] };
+    jold.jono.push({ merkki, jono });
+    niput.set(avain, jold);
   });
-  // Vihreän pisteen piirtopaikat (sivusiirtoineen) väistöä varten.
-  const pisteet = (ui.fokuspisteRyhmat ?? [])
-    .map(({ x, y }) => ({ x, y }))
-    .filter((p) => Number.isFinite(p.x) && Number.isFinite(p.y));
-  // Väistövara on kahden sormialueen summa — kattamaton mitta (sääntö 8).
-  const vapaa = NIPPU_VAPAA * ruutu;
   // Yhdysviivat kerätään samassa silmukassa ja piirretään kerralla.
   const viivat = [];
-  for (const [cx, jono] of niput) {
+  for (const { cx, cy, jono } of niput.values()) {
     jono.sort((a, b) => (a.merkki.ryhma.y - b.merkki.ryhma.y)
       || (a.merkki.ryhma.x - b.merkki.ryhma.x)
       || (a.jono - b.jono));
@@ -757,25 +843,16 @@ export function niputaFokusmerkit(ui, s, sRuutu = s) {
     /*
      * SARAKE KESKITETÄÄN KAUPUNGIN KORKEUDELLE (rivit 0, +1, −1, +2, …
      * — omistaja 26.8.2026, Akropolis: "piste on liian kaukana
-     * ateenasta"). Ennen rivit laskivat vain alaspäin, ja kun vihreä
-     * piste vielä työnsi ensimmäisen merkin riville 1, kaupungin
+     * ateenasta"). Ennen rivit laskivat vain alaspäin, ja kaupungin
      * keskellä oleva kohde valui diagonaalisesti kauas laatasta.
      * Yksittäinen merkki — tavallisin tapaus — istuu nyt suoraan
      * laatan viereen samalle korkeudelle.
      */
-    const riviY = (i) => city.y
+    const riviY = (i) => cy
       + (i === 0 ? 0 : (i % 2 ? (i + 1) / 2 : -(i / 2))) * vali;
     let indeksi = 0;
     for (const { merkki } of jono) {
-      let y = riviY(indeksi);
-      // Vihreä piste ei väisty — sarake väistää sitä (ks. sääntö 4).
-      let vaistoja = 0;
-      while (vaistoja < NIPPU_VAISTOJA
-        && pisteet.some((p) => Math.hypot(x - p.x, y - p.y) < vapaa)) {
-        indeksi += 1;
-        vaistoja += 1;
-        y = riviY(indeksi);
-      }
+      const y = riviY(indeksi);
       nippuAseta(merkki.ryhma, { x, y }, s);
       indeksi += 1;
       /*
@@ -789,11 +866,32 @@ export function niputaFokusmerkit(ui, s, sRuutu = s) {
        * siksi ENNEN asemointia, ei sen jälkeen. Jäljessä oleva luokka
        * näkyi savukkeessa suoraan: yleiskuvasta lähennettäessä viivoja
        * ei piirretty lainkaan ennen seuraavaa kartan liikahdusta.
+       *
+       * ILMAN DOMIA (laattageneraattori) EHTO ON TOSI, koska silloin ei
+       * ole kerrosta joka voisi olla piilossa — poltettava viiva on aina
+       * mukana.
        */
       if (!merkki.ryhma.g?.parentNode?.classList?.contains('fokuskohteet-piilossa')) {
-        viivat.push({ cx, cy: city.y, x, y, sade: merkki.sade });
+        viivat.push({
+          cx, cy, x, y, sade: merkki.sade, id: merkki.ryhma.id, ryhma: merkki.ryhma,
+        });
       }
     }
   }
-  nippuPiirraViivat(ui, viivat, s, ruutu);
+  /*
+   * POLTETUN MERKIN VIIVA ON JO LAATASSA (Raamattu 31.8.2026,
+   * KARTTANOSTOT POLTETAAN LAATTOIHIN): *"koko nosto eli symboli,
+   * teksti ja nostoviiva menee laattoihin."* Se suodatetaan siis pois
+   * PIIRROSTA mutta ei paluuarvosta — laattageneraattori tarvitsee
+   * juuri sen viivan, jota peli ei piirrä, ja kysymyksen esittää
+   * kohdekerros (js/fokuskohteet.js), joka tuntee luettelon.
+   *
+   * SUODATUS ON VASTA TÄSSÄ, koska tiiviste tuntee merkin lopullisen
+   * paikan: silmukka yllä on juuri asettanut sen jokaiselle riville.
+   */
+  const piirrettavat = ui.nostoPoltettu
+    ? viivat.filter((v) => !ui.nostoPoltettu(v.ryhma))
+    : viivat;
+  nippuPiirraViivat(ui, piirrettavat, s, ruutu);
+  return viivat;
 }
