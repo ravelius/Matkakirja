@@ -72,10 +72,16 @@
  *    nimilappua koko laudalle ja maksoi siitä joka eleessä (v1366:n
  *    mittaus).
  *
- * 3. KAIKKI KOOT OVAT CSS-PIKSELEITÄ, SVG:N YKSIKÖIKSI JAETTUNA.
+ * 3. NIMIEN KOOT OVAT CSS-PIKSELEITÄ, SVG:N YKSIKÖIKSI JAETTUNA.
  *    Kerros elää kartan omassa koordinaatistossa, joten `koko / skaala`
  *    on täsmälleen `koko` pikseliä ruudulla — ja teksti rasteroidaan
  *    laitteen omalla tarkkuudella, ei laatan.
+ *
+ *    MERKIT EIVÄT (31.8.2026). Piste, rengas ja vuorikolmio ovat
+ *    laudan yksiköitä eli karttavakio: ne on mitoitettu niin kuin ne
+ *    olisi POLTETTU karttaan, ja siksi ne suurenevat lähennettäessä ja
+ *    kutistuvat loitonnettaessa. Perustelu ja mittaukset ovat
+ *    MERKKI-taulun kohdalla; älä palauta merkkejä `laudalle`-jakoon.
  *
  * === KAKSOISNIMIVAARA — LUE TÄMÄ ENNEN KUIN MUUTAT MITÄÄN ==========
  *
@@ -91,7 +97,18 @@
  */
 import { el, saumasiirto } from './mapart.js';
 import { laatoissaOnNimet, pyramidiKattaa } from './laattapyramidi.js';
+import { NOSTOLADONTA_S } from './nostoladonta.js';
 import { MAAILMANKARTAN_NIMET } from './packs/maailmankartta-nimet.js';
+
+/**
+ * Lautayksikköä yhtä kartan piirtopikseliä kohti maan lehtinäkymässä —
+ * eli se mitta, jolla merkki olisi POLTETTU karttaan.
+ *
+ * Sama luku kuin karttanostoilla (js/nostoladonta.js NOSTOLADONTA_S,
+ * omistajan "0,60 — Kreikan mitta"), tuotuna eikä kopioituna. Koko
+ * perustelu on MERKKI-taulun kohdalla alempana.
+ */
+const MERKIN_KARTTAVAKIO = NOSTOLADONTA_S;
 
 /* ------------------------------------------------------------ vakiot */
 
@@ -241,9 +258,91 @@ const NOSTON_LIUKU = Math.max(...NOSTON_PITUUDET);
 const NOSTON_VIIVA = 0.5;
 const NOSTON_KATKO = 1.6;
 
-/** Merkkien mitat CSS-pikseleinä — samat luvut kuin laatoilla. */
+/*
+ * ====== MERKIT OVAT KARTTAVAKIO, NIMET PAPERIVAKIO =================
+ *
+ * OMISTAJAN LINJAUS 31.8.2026 sanatarkasti: *"Kaupungin pisteet eivät
+ * saa muuttaa kokoa suhteessa karttaan. Niiden koko pitää olla sama
+ * kuin ne olisivat poltettu karttaan."* Kysymyskortilla samana päivänä
+ * tarkennettuna: peruskoko viritetään MAAN LEHTINÄKYMÄN zoomiin, ja
+ * siitä merkki suurenee lähennettäessä ja pienenee loitonnettaessa —
+ * sama sääntö kuin Raamatun 25.8. pallurapäätöksessä.
+ *
+ * MIKÄ VIKA OLI, MITATTUNA (900 x 1200, dpr 1, Kreikka; 1000 ja 2000
+ * km vaativat kehittäjän maailmanapin, muuten zoomi ei päästä niin
+ * kauas). Merkit ladottiin RUUTUpikseleissä (`laudalle(koko)` eli
+ * koko/skaala), joten ne pysyivät ruudulla samankokoisina — ja juuri
+ * siksi KASVOIVAT kartan suhteen ulos zoomatessa:
+ *
+ *   jana      skaala   ruudulla        LAUDAN YKSIKÖISSÄ
+ *                      piste  rengas   piste       rengas
+ *   250 km    1,879    4,0     9,2      2,1 / 2,8    4,9
+ *   500 km    0,626    4,0     9,2      6,4 / 8,3   14,7
+ *   1000 km   0,371    5,2     9,2     14,0         24,8
+ *   2000 km   0,247    5,2     9,2     21,0         37,2
+ *
+ * Vertailuluku on kaupunkilaatta (js/ui.js drawCities): se on jo
+ * karttavakio, 16,2 lautayksikköä leveä joka mittakaavassa. Renkaan
+ * kasvu ohitti sen 1000 km:n kohdalla ja oli 2000 km:ssä sen päällä
+ * yli kaksinkertaisena — kermanvalkoinen laatta jäi umpimustan nastan
+ * alle. Se on omistajan "musta pippuri".
+ *
+ * === PERUSKOKO ON KREIKAN MITTA, JA SE ON JO OLEMASSA ==============
+ *
+ * Mittakerroin ei ole uusi luku vaan js/nostoladonta.js:n
+ * NOSTOLADONTA_S — *"0,60, Kreikan mitta koko maailmalle"*, omistajan
+ * oma valinta kysymyskortilla 31.8.2026. Se on täsmälleen tämän
+ * tehtävän mitta, koska se on täsmälleen tämä sama kysymys kahdesti
+ * kysyttynä: montako lautayksikköä on yksi kartan piirtopikseli
+ * silloin, kun Kreikan lehti on ruudulla omassa näkymässään?
+ * Nostoladonnan oma johto oli KATTO * rajaus.w / PROTO = 0,585
+ * Kreikalle; tässä kontissa mitattu maanäkymän skaala 1,879 antaa
+ * 1/1,879 = 0,532. Ne ovat sama suure kahdella mittatikulla, ja
+ * omistaja pyöristi sen 0,60:aan.
+ *
+ * LUKU TUODAAN EIKÄ KOPIOIDA. Kaksi kopiota samasta luvusta ajautuu
+ * ennen pitkää eri arvoihin (sama perustelu kuin PARIN_ETAISYYS:llä ja
+ * katkaisusäännöllä alempana), ja jos maailman merkkimitta joskus
+ * viritetään uudestaan, kaupungin pisteen ja poltetun karttanoston on
+ * liikuttava yhdessä — muuten kartalla on kaksi eri kokojärjestelmää.
+ *
+ * MITÄ MITTA ANTAA. Merkki on nyt sama joka mittakaavassa: piste 2,4
+ * ja rengas 5,5 lautayksikköä eli reilusti laatan 16,2:n sisällä,
+ * eikä se voi enää ohittaa sitä millään zoomilla. Ruudulla (sama
+ * mittaus, sama ruutu) maanäkymässä piste 4,5 px ja rengas 10,4 px eli
+ * entisen näköinen, 500 km:n janalla 1,5 / 3,5 px ja 2000 km:ssä
+ * 0,8 / 1,4 px. Kapealla ruudulla (puhelin) lehti on ruudulla pienempi
+ * ja merkkikin siis pienempi, leveällä isompi; juuri se on "poltettu
+ * karttaan" eikä vika.
+ *
+ * NIMET EIVÄT SEURAA (KOKO, KYNNYS). Ne jäävät CSS-pikseleihin
+ * tietoisesti: nimi on paperivakio (ks. tiedoston johdanto), koska
+ * lukukelpoisuus on ruudun ominaisuus eikä kartan. Kartalla on siis
+ * kaksi mittajärjestelmää, ja se on päätös eikä epäjohdonmukaisuus —
+ * sama jako kuin nostoviivalla (NOSTON_VIIVA, paperivakio) ja
+ * kohdemerkillä (karttavakio).
+ */
+/** Merkkien mitat LAUDAN yksiköinä (karttavakio) — ks. yllä. */
 const MERKKI = {
-  pisteIso: 2.6, piste: 2.0, rengasIso: 4.6, vuoriIso: 5, vuori: 4,
+  pisteIso: 2.6 * MERKIN_KARTTAVAKIO,
+  piste: 2.0 * MERKIN_KARTTAVAKIO,
+  rengasIso: 4.6 * MERKIN_KARTTAVAKIO,
+  vuoriIso: 5 * MERKIN_KARTTAVAKIO,
+  vuori: 4 * MERKIN_KARTTAVAKIO,
+};
+
+/*
+ * VIIVANLEVEYDET KULKEVAT MUKANA, TAI KORJAUS JÄÄ PUOLITIEHEN.
+ *
+ * Renkaan säde on nyt karttavakio, mutta jos sen kynä jäisi ruudun
+ * mittaan, kaukana rengas olisi 1,4 px leveä muste 1,4 px:n säteellä —
+ * eli täytetty musta nappi, sama pippuri toisessa asussa. Merkki on
+ * yksi piirros, ja sen kaikki mitat kuuluvat samaan järjestelmään.
+ * (Nostoviiva on eri asia: se on NIMEN jatke, ja nimi on paperivakio.)
+ */
+const MERKIN_VIIVA = {
+  rengas: 0.9 * MERKIN_KARTTAVAKIO,
+  vuori: 1 * MERKIN_KARTTAVAKIO,
 };
 
 /**
@@ -652,6 +751,15 @@ function lado(data, px) {
    * ole edes suppeneva — uusi nimi toisi uuden pisteen, jota ei ollut
    * varattu. Näin ladonta pysyy täsmälleen entisenä eikä yksikään
    * nimi katoa tämän erän takia; muuttuu vain se, mitä piirretään.
+   *
+   * VARAUKSEN SÄTEET (5,2 / 2,6) JÄÄVÄT RUUTUPIKSELEIKSI, vaikka
+   * merkki itse on nyt karttavakio (ks. MERKKI). Se on tietoinen
+   * rajaus eikä unohdus: varaus on LADONNAN syöte, ja jos se
+   * muuttuisi mittakaavan mukana, jokainen zoomiporras pudottaisi eri
+   * nimet kuin ennen — sitä ei ole tilattu tässä erässä. Käytännössä
+   * varaus on nyt lähikuvassa merkkiä pienempi ja kaukana isompi;
+   * kumpikin virhe on alle pisteen levyinen eikä siirrä nimiä, koska
+   * nimen oma laatikko on kertaluokkaa isompi.
    */
   const pisteet = [];
   for (const c of data.kaupungit) {
@@ -1256,13 +1364,20 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
     }, kerros);
   }
 
-  /* Merkit ensin, nimet päälle: nimi on merkin selitys eikä toisin päin. */
+  /*
+   * Merkit ensin, nimet päälle: nimi on merkin selitys eikä toisin päin.
+   *
+   * MITAT MENEVÄT SELLAISENAAN, ILMAN `laudalle`-jakolaskua: MERKKI ja
+   * MERKIN_VIIVA ovat jo laudan yksiköitä (karttavakio, ks. MERKKI).
+   * Nimet alempana käyttävät `laudalle`a yhä, koska ne ovat ruudun
+   * mitta — juuri tämä ero on koko muutos.
+   */
   for (const { m, x } of nakyvatMerkit) {
     if (m.laji === 'vuori') {
-      const r = laudalle(m.iso ? MERKKI.vuoriIso : MERKKI.vuori);
+      const r = m.iso ? MERKKI.vuoriIso : MERKKI.vuori;
       el('path', {
         class: 'karttamerkki karttamerkki-vuori',
-        'stroke-width': laudalle(1),
+        'stroke-width': MERKIN_VIIVA.vuori,
         d: `M${(x - r).toFixed(2)} ${(m.y + r * 0.6).toFixed(2)}`
           + `L${x.toFixed(2)} ${(m.y - r * 0.8).toFixed(2)}`
           + `L${(x + r).toFixed(2)} ${(m.y + r * 0.6).toFixed(2)}`,
@@ -1271,7 +1386,7 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
     }
     el('circle', {
       class: 'karttamerkki karttamerkki-piste',
-      cx: x, cy: m.y, r: laudalle(m.iso ? MERKKI.pisteIso : MERKKI.piste),
+      cx: x, cy: m.y, r: m.iso ? MERKKI.pisteIso : MERKKI.piste,
     }, kerros);
     // Rengas ison ympärille: aikakauden kartan pääkaupunkimerkintä.
     if (m.iso) {
@@ -1279,8 +1394,8 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
         class: 'karttamerkki karttamerkki-rengas',
         cx: x,
         cy: m.y,
-        r: laudalle(MERKKI.rengasIso),
-        'stroke-width': laudalle(0.9),
+        r: MERKKI.rengasIso,
+        'stroke-width': MERKIN_VIIVA.rengas,
       }, kerros);
     }
   }
