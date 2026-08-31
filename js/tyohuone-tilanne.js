@@ -10,32 +10,32 @@
  */
 
 export const TILANNE = {
-  paivitetty: '30.8.2026 — v1350–v1357, laattapyramidi käynnistyy',
-  tavoite: 'Maailmankartta on ainoa pelilauta (v1351): erillislauta '
-    + 'purettu ja vanhat tallennukset migroitu. Eurooppa valmis 39 '
-    + 'fokuskaupungilla; Skandaalit-kategoria sai sisällön (v1352, 83 '
-    + 'skandaalia / 29 maata) ja maastokohteet laajenivat Afrikkaan ja '
-    + 'Aasiaan (v1353, 145 kohdetta / 48 maata). Merkkilinja yhtenäistyi: '
-    + 'nostokuvat pois karttakerroksesta (v1355), pöllömerkit '
-    + 'kohdemerkin mittaan ja selitevalikko vasta pelitilaan (v1357). '
-    + 'SEURAAVA PÄÄLINJAUS: koko maailma on YKSI esirenderöity '
-    + 'laattapyramidi — maakohtaiset lehdet poistuvat pelaajan '
-    + 'näkymästä ja Maailma-nappi vain löysentää panorointirajoja. '
-    + 'Pilotti ja mittaukset ensin, sitten täysgenerointi parvella, '
-    + 'lopuksi vanhan lehtijärjestelmän purku omana eränään.',
+  paivitetty: '31.8.2026 — v1380–v1386, laattapyramidi ainoana karttana',
+  tavoite: 'Laattapyramidi on pelin ainoa maailmankartta: kahdeksan '
+    + 'tasoa, 23 340 laattaa, ajo 2026-08-31b ampparissa. Karttanostot '
+    + 'POLTETTIIN laattoihin (413 merkkia 624:sta) omistajan '
+    + 'linjauksella "karttamerkit pysyvat aina samoina ja paikallaan" '
+    + '— elavaksi jaa vain pelitila ja napautusalueet. Reitit, joet ja '
+    + 'symbolit ovat karttavakioita ja katkoviivaisia; symbolit '
+    + 'piirretaan leveateraisella kynalla. SEURAAVAKSI: kolme avointa '
+    + 'karttatyota — polttamaton kerros piiloon eleen ajaksi (hyppays '
+    + 'pois), kaupungin piste karttavakioksi ruutuvakion tilalle, ja '
+    + 'nostojen ladontakerroin maakohtaisesta yhdeksi globaaliksi '
+    + '(hajonta nyt 129-kertainen). Kaksi viimeista vaativat uuden '
+    + 'pyramidiajon eli omistajan luvan.',
   rivit: [
     {
       tekija: 'Fable',
-      rooli: 'päätoimittaja',
+      rooli: 'paatoimittaja',
       tila: 'tyossa',
-      tehtava: 'Laattapyramidin käynnistys: mittaussuunnitelma ja '
-        + 'pilotti lipun takana, merkkikerroksen rasterointi eleen '
-        + 'ajaksi (kumoaa väliaikaisen "merkit piiloon eleen ajaksi"). '
-        + 'Julkaisujen portit ja versiotörmäysten purku.',
-      seuraavaksi: 'Pilotin mittausten jälkeen täysgenerointi '
-        + 'agenttiparvella; sitten lehtijärjestelmän purku '
-        + '(reunahäivytys, saumat, lehtivalinta, v1346:n väistö). '
-        + 'Aasian täydennysaalto maastokohteisiin.',
+      tehtava: 'Kartan viimeistely omistajan pelitestien mukaan: '
+        + 'polttamaton kerros piiloon eleen ajaksi, kaupungin piste '
+        + 'karttavakioksi, ja kartan puolikkaan pystysauma '
+        + 'kiertavan laudan saumassa.',
+      seuraavaksi: 'Nostojen globaali ladontakerroin omistajan '
+        + 'valinnan mukaan (0,60 / 0,48 / 0,25 mitattuina) ja sen '
+        + 'jalkeen uusi pyramidiajo luvalla. Siirtoviesti ja mitatut '
+        + 'luvut: docs/viesti-fable.md.',
     },
   ],
   odottaaPaatosta: [
@@ -54,6 +54,11 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1386: PISTE VAIN NIMEN KANSSA - kaupungin musta piste piirtyy vain jos sen nimikin nakyy. Zoomaa ulos: nimettomia pisteita ei pitaisi olla yhtaan.',
+  'v1384: KARTTANOSTOT POLTETTU LAATTOIHIN - merkit, symbolit ja nimiot ovat nyt kuvassa eivatka katoa eleen aikana. Katso Ateena ja Pietari.',
+  'v1383: Lahennys rullalla toimii taas (rikki v1366:sta asti).',
+  'v1381: Reitit ja joet katkoviivalla ja kartan mittakaavassa - pisteet kutistuvat kartan mukana.',
+  'v1380: Karttasymbolit leveateraisella kynalla - tassu, kolmio, juokseva ihminen.',
   'v1357: POLLOMERKIT MERKKILINJAAN - elaintakyjen pollot ovat nyt kohdemerkin kokoisia viivamerkkeja nimioineen, ne eivat nay lennon aikana, ja selitevalikon nappi ilmestyy vasta ensimmaisesta kaupungista. Katso Kreikan kilpikonnat ja lue palkkiorivi.',
   'v1356: Visavastausten paikat sekoitettu (291 siirtoa) - oikea vastaus ei ole enaa aina samassa kohdassa.',
   'v1355: Nostokuvat pois karttakerroksesta - polaroidit eivat enaa vuoda kartalle.',
