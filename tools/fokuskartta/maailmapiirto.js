@@ -84,7 +84,7 @@
 
 import {
   ASTEIKKO, KOHINA, KOHINA2, MUSTE, PAPERI,
-  fbm, laudanProjektio, lerpSyvyys, lerpVari,
+  fbm, laudanProjektio, lerpSyvyys, lerpVari, mulberry32,
 } from './piirto.js';
 
 /* =========================================================== moottori */
@@ -1176,42 +1176,167 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * mikä on viivatyötä ja mitä ei lueta — 123 uomaa ja 479 reittijanaa,
    * jotka elävässä kerroksessa maksaisivat kehysaikaa joka eleessä.
    *
-   * === MITAT OVAT RUUDUN MITTOJA, EIVÄT KARTAN ======================
+   * === MITAT OVAT KARTAN MITTOJA, EIVÄT RUUDUN =====================
    *
    * Tämä on se kohta, jossa pyramidi eroaa yhden arkin lehdestä, ja
-   * ero on helppo tehdä väärin (tehtiin ensin, mitattiin, korjattiin).
+   * ero on tehty väärin kahdesti: ensin skaalaamalla kaikki kartan
+   * mukana (mitattiin, korjattiin luvussa 6d), sitten pitämällä
+   * KAIKKI painojälki paperivakiona (mitattiin, korjattiin tässä).
    *
    * Moottorin kalusteet kerrotaan S:llä, jolloin ne ovat SAMAN
    * KOKOISIA KARTALLA joka tasolla — kehys ja kartussi kuuluvat juuri
-   * niin. Viivanleveys ei kuulu, eikä rannikon viiva tai paperin rae
-   * kuulu (ne ovat paperivakioita, P): peli valitsee tason ruudun
-   * tarkkuuden mukaan ja katsoo laattaa suunnilleen 1:1, joten
-   * `koko * S` pikseliä olisi `koko * S` LAITEPIKSELIÄ ruudulla.
+   * niin. Paperin rae, rannikon viiva ja nimiöt eivät kuulu (ne ovat
+   * paperivakioita, P): peli valitsee tason ruudun tarkkuuden mukaan
+   * ja katsoo laattaa suunnilleen 1:1, joten `koko * S` pikseliä
+   * olisi `koko * S` LAITEPIKSELIÄ ruudulla.
    *
-   * === YLEISTYS ====================================================
+   * PYSYVÄT VIIVAT — JOET JA REITIT — OVAT KOLMAS LAJI, ja se on
+   * omistajan päätös 31.8.2026: ne ovat kartan MERKINTÖJÄ, joten ne
+   * kutistuvat kartan mukana (`R`, alla). Rantaviiva ei ole merkintä
+   * vaan maaston raja, eikä se siksi kutistu.
    *
-   * Sama sisältö on joka tasolla, mutta ei samanlaisena: uloimmalla
-   * tasolla maailma on 675 pikseliä leveä, ja jokainen uoma siinä
-   * olisi harmaata mössöä. Kynnykset ovat kuvapikseliä lautayksikköä
-   * kohti, ja ne on johdettu samasta nimiötiheydestä kuin nimien omat
-   * kynnykset (nyt js/karttanimet.js KYNNYS): 261 kaupunkia jakautuu
-   * W pikselin levyiselle maailmalle noin W/16 pikselin välein, ja
-   * kuudenkymmenen pikselin nimi tarvitsee siitä vähintään sen verran.
+   * === YLEISTYS TEHDÄÄN KOOLLA, EI KYNNYKSILLÄ =====================
+   *
+   * Ennen tässä oli kolme kynnystä: reitit sisään kun px ≥ 0,22, joet
+   * kun px ≥ 0,11 ja sivujoet kun px ≥ 0,45. Ne olivat oikea ratkaisu
+   * niin kauan kuin muste oli paperivakio: uloimmalla tasolla maailma
+   * on 675 pikseliä leveä, ja 123 uomaa täyden levyisenä olisi ollut
+   * harmaata mössöä.
+   *
+   * KAIKKI KOLME ON POISTETTU, koska `R` hoitaa saman asian paremmin
+   * ja koska kynnys rikkoi pyramidin oman perussäännön: *"jokainen
+   * taso piirtää TÄSMÄLLEEN saman arkin"*
+   * (tools/generoi-laattapyramidi.mjs). Kynnys teki uloimmista
+   * tasoista eri SISÄLLÖN, ei vain pienemmän — ja juuri sitä pyramidi
+   * ei saa tehdä. Nyt sisältö on sama joka tasolla ja vain koko
+   * muuttuu.
+   *
+   * MITATTU, ETTEI POISTO TUO MITÄÄN NÄKYVIIN (luvut
+   * docs/moduulit/laattapyramidi.md 6i ja 6k): kynnyksettä piirretyn
+   * laatan keskisävy tummenee jokien takia z0:lla 0,003, z1:llä 0,014
+   * ja z2:lla 0,032 luminanssiyksikköä, kun paperin oma rae on
+   * 6…14 yksikköä — eli 0,02…0,5 % rakeesta. Kynnykset eivät siis
+   * rajanneet pois mitään näkyvää, vaan pelkkää työtä — ja työtäkin
+   * vain 32 laatalla 23 340:stä.
    */
   if (sisalto) {
-    // Yleistys: kuvapikseliä lautayksikköä kohti (ks. YLEISTYS yllä).
-    const nakyy = (kynnys) => px >= kynnys;
 
-    /* --- joet: uomat ennen kaupunkeja, kuten vesi on ennen kaupunkia */
-    if (nakyy(0.11) && sisalto.joet?.length) {
+    /*
+     * === R = PYSYVIEN VIIVOJEN MUSTE ON KARTTAVAKIO ==================
+     *
+     * OMISTAJAN PÄÄTÖS 31.8.2026, ensin reiteistä sanatarkasti: *"kun
+     * kartta on zoomattu tarpeeksi ulospäin, niin pisteistä tulee
+     * aivan liian häiritseviä. Pisteiden koko pitäisi siis pysyä koko
+     * ajan samana, elikkä kun kartta zoomautuu ulospäin, niin pisteet
+     * ja viivat alkavat pienentyä kartan mukana. Eli mietitään
+     * pisteiden koko niin, että se näyttää lähimmässä zoomauksessa
+     * hyvälle ja sitten ne häipyvät näkyvistä pienentyessään aina kun
+     * zoomataan ulospäin, mikä on luonnollista."* — ja saman tien
+     * perään JOISTA: sama sääntö, koska joki on kartan merkintä eikä
+     * painokoneen ominaisuus, ja yksi sääntö on parempi kuin kaksi
+     * eri sääntöä samassa piirrossa.
+     *
+     * TÄMÄ KUMOAA NÄIDEN KAHDEN OSALTA luvun 6d säännön *"painojälki
+     * on vakio ulostulopikseleinä"*. Paperivakio pitää merkin saman
+     * kokoisena ruudulla joka tasolla — juuri siitä syntyi valitettu
+     * vika: uloimmalla tasolla, jossa yksi askelmahelmi kattaa satoja
+     * kilometrejä, sama 6,4 pikselin helmi peitti mantereen.
+     *
+     * MITÄ TÄMÄ EI KOSKE, JA SE ON SANOTTAVA ÄÄNEEN:
+     *
+     *   RANTAVIIVA EI MUUTU. Se ei ole merkintä vaan MAASTON RAJA, ja
+     *   samalla maavärin täytön reuna: jos ranta ohenisi ulommilla
+     *   tasoilla, maa ja meri erkanisivat toisistaan ja rannikolle
+     *   jäisi rako (luku 6h — ne piirretään tarkoituksella samasta
+     *   vektorista).
+     *   KEHYS, KARTUSSI, NIMIÖT JA PATINA EIVÄT MUUTU. Ne ovat arkin
+     *   geometriaa ja painojälkeä; niiden skaalaaminen rikkoisi
+     *   laattaruudukon (luku 6d).
+     *
+     * MITOITETTU SYVIMMÄN TASON MUKAAN. `SYVIN_TIHEYS` on pyramidin
+     * syvimmän tason tiheys (tools/generoi-laattapyramidi.mjs
+     * `TIHEYS`), ja se on tässä pelkkä KALIBROINTIPISTE: se kertoo,
+     * millä tasolla ilmeen on määrä olla se hyväksytty. `px` on tämän
+     * tason kuvapikseliä lautayksikköä kohti, joten `px /
+     * SYVIN_TIHEYS` on 1 syvimmällä tasolla ja puolittuu joka
+     * askelmalla ulospäin. Jos pyramidin tiheys joskus muuttuu,
+     * muuttuu kalibrointipiste eikä periaate.
+     *
+     * YHDEN ARKIN LEHDELLÄ EI MUUTU MITÄÄN. Siellä `paperiS` on null,
+     * jolloin `R = P = S` eli kartan mittakaava — yhden arkin lehdellä
+     * paperi ja kartta ovat sama mittakaava, ja siksi vika ei näkynyt
+     * ennen pyramidia.
+     */
+    const SYVIN_TIHEYS = 7.2;
+    const R = paperiS != null ? (px / SYVIN_TIHEYS) * paperiS : P;
+
+    /* --- joet: uomat ennen kaupunkeja, kuten vesi on ennen kaupunkia
+     *
+     * LEVEYS ON NYT KARTTAVAKIO (ks. R yllä) JA SAMALLA NOUSI.
+     * Omistaja 31.8.2026: *"Joki saisi olla leveämpi kuin nyt jotta
+     * näkyy paremmin"* — jokien mitoitus ei siis ollut pelkkä
+     * yksikönvaihto niin kuin reiteillä, joilla z7 ei saanut liikkua.
+     * Vanhat 1,4 / 1,0 nostettiin 2,2 R / 1,6 R (kerroin 1,57), eli
+     * z7:llä 2,20 ja 1,60 pikseliä ja puolet siitä joka taso ulospäin.
+     *
+     * LEVEYS VALITTIIN KATSOMALLA, EI ARVAAMALLA: neljä leveyttä
+     * (1,4/1,0 · 1,8/1,3 · 2,2/1,6 · 2,6/1,9) renderöitiin samasta
+     * z7-ruudusta ja katsottiin 1:1 sekä kolminkertaisena
+     * suurennoksena. 1,8 jäi yhä ohueksi; 2,6 alkoi näyttää maantieltä
+     * eikä uomalta, ja sivujokia on 115 eli valtaosa uomista.
+     *
+     * JOKI EI SAA KILPAILLA RANTAVIIVAN KANSSA, koska silmä lukee
+     * molemmat veden rajaksi. Rantaviivan kynä on 1,1 P eli
+     * PAPERIvakio, joki 2,2 R eli KARTTAvakio — ne ovat yhtä leveät
+     * vasta z6:lla, ja joki on kynää leveämpi VAIN z7:llä, jossa
+     * katsoja on lähimpänä ja ero on helpoin nähdä. Ennen muutosta
+     * joki oli kynää leveämpi JOKA TASOLLA (1,4 : 1,1), joten
+     * sekaantumisriski itse asiassa pieneni kaikkialla paitsi
+     * syvimmällä tasolla. Mitattuna samasta laatasta samalla
+     * estimaattorilla: rantaviivan Weberin kontrasti on 0,47…0,53 ja
+     * joen 0,011…0,221, eli ranta on syvimmälläkin tasolla yli
+     * kaksinkertainen. Sen etu ei ole leveydessä vaan siinä, että
+     * sillä on oma 3 P:n usva ja maavärin täyttöraja, ja että sen
+     * muste (58,40,25 alfalla 0,85) on paljon tummempaa kuin joen
+     * siniharmaa (120,130,138 alfalla 0,72).
+     *
+     * `tarkeys` ei enää valitse KETKÄ piirretään vaan pelkän
+     * leveyden. Kaikki 123 uomaa ovat joka tasolla, ja pääjoen (8 kpl)
+     * ja sivujoen (115 kpl) ero on 2,2 : 1,6.
+     *
+     * JOET HÄIPYVÄT YHÄ AIEMMIN KUIN REITIT, ja se on mitattu eikä
+     * arvattu: jokimuste on vaaleaa siniharmaata (120,130,138) alfalla
+     * 0,72, kun reitin seepia ja preussinsininen ovat paljon tummempia.
+     * Jokien oma lisäys paperin tummuuteen
+     * (docs/moduulit/laattapyramidi.md 6i) on z5:llä 0,071 / 0,047,
+     * z4:llä 0,025 / 0,013 ja z3:sta ulospäin alle 0,005 — reitit
+     * erottuvat vielä z3:lla. Leveyden nosto osti täsmälleen yhden
+     * tason lisää (1,4:llä joki hävisi jo z4:ään), mutta järjestys
+     * säilyi: joki katoaa ennen reittiä, mikä on kartografisesti
+     * oikein — rata on tärkeämpi kuin maasto.
+     */
+    /*
+     * 2,2 / 1,6 -> 2,6 / 1,9 (omistajan valinta 31.8.2026 arkilta:
+     * *"Minusta se leveämpi joki oli paras. Käytä sitä."*).
+     *
+     * Agentti oli hylännyt 2,6:n sillä perusteella, että sivujoki
+     * alkaa lukea maantienä — ja sivujokia on 115 kaikkiaan 123:sta.
+     * Omistaja katsoi saman arkin ja oli eri mieltä, ja hänen
+     * silmänsä ratkaisee tyylikysymyksen. Perustelu jätetään tähän
+     * näkyviin, koska se on se hinta joka tästä maksetaan: jos joet
+     * joskus alkavat sekoittua maareitteihin, syy on tässä luvussa
+     * eikä reittien musteessa.
+     */
+    const JOKI_PAA = 2.6;
+    const JOKI_SIVU = 1.9;
+    if (sisalto.joet?.length) {
       ctx.save();
       ctx.lineJoin = 'round';
       ctx.lineCap = 'round';
       ctx.strokeStyle = 'rgba(120,130,138,0.72)';
       for (const joki of sisalto.joet) {
-        // Kaukaa vain pääjoet; lähempää kaikki.
-        if (joki.tarkeys > 1 && !nakyy(0.45)) continue;
-        ctx.lineWidth = joki.tarkeys <= 1 ? 1.4 : 1.0;
+        // Pääjoki on leveämpi; kaikki uomat piirretään joka tasolla.
+        ctx.lineWidth = (joki.tarkeys <= 1 ? JOKI_PAA : JOKI_SIVU) * R;
         // Pehmeä käyrä pisteiden läpi, ei murtoviiva — ks. lautaKaari.
         lautaKaari(ctx, [joki.pisteet]);
         ctx.stroke();
@@ -1226,12 +1351,27 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
      * katkoviivalla ja laivareitit sinisellä niin että noppa askelmat
      * näkyy."*
      *
-     * SÄÄNTÖ, JOKA SYNTYY TÄSTÄ: **muste kertoo kulkutavan, helmet
-     * kertovat askelmat, ja katkoviiva on varattu sille reitille,
-     * jolla ei ole askelmia.** Maa- ja merireitti ovat siksi
-     * yhtenäisiä viivoja helmineen ja eroavat vain musteeltaan;
-     * lentoreitti on katkoviiva ilman helmiä, koska lento siirtää
-     * nappulan suoraan perille (ks. sisalto.mjs).
+     * Omistaja 31.8.2026 (tämä erä, sanatarkasti): *"Kaikki reitit
+     * saavat olla piirretty katkoviivalla. Ja ne voisivat olla
+     * himmeämmällä. Ja katkoviivoihin voisi tehdä pientä käsin
+     * piirretyn tunnelmaa niin, että ne hieman heittelevät ja
+     * kaartelevat."*
+     *
+     * SÄÄNTÖ, JOKA SYNTYY TÄSTÄ — ja se KUMOAA edellisen erän säännön
+     * "katkoviiva on varattu sille reitille, jolla ei ole askelmia":
+     * **muste kertoo kulkutavan, HELMET kertovat askelmat, ja
+     * katkoviiva on kartan yleinen reittimerkintä.** Kaikki kolme
+     * lajia ovat katkoviivaa ja eroavat toisistaan musteeltaan; maa-
+     * ja merireitillä on lisäksi helmet, lennolla ei, koska lento
+     * siirtää nappulan suoraan perille eikä sillä ole askelmia
+     * (js/game.js `actionMannerLento`, ks. sisalto.mjs).
+     *
+     * HELMI ON SILLOIN AINOA ASIA, JOKA EROTTAA LAJIT MUUTEN KUIN
+     * VÄRILLÄ. Siksi katkon mitta on valittu niin, ettei helmi voi
+     * mennä katkosta: helmen halkaisija on 6,4 paperipikseliä ja
+     * lyhinkin katko 8,8 — katko on aina pitkänomainen ja helmi aina
+     * pyöreä, ja helmi maalataan viivan PÄÄLLE paperinvärisenä, joten
+     * se puhkaisee katkon eikä sekoitu siihen.
      *
      * VÄRIT OVAT AIKAKAUDEN MUSTEITA, EIVÄT NÄYTTÖVÄREJÄ. Merireitti
      * on preussinsinistä (1706, kaivertajan vakiosininen) ja lento
@@ -1239,14 +1379,41 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
      * illuusio rikkoudu. Kirkas RGB-sininen tekisi kartasta
      * tietokonegrafiikkaa yhdellä viivalla.
      *
-     * ASKELMAN KOKO ON PAPERIVAKIO (`P`) kuten muukin painojälki.
-     * Kynnys on reittien oma: askelvälit ovat mitattuna z2:lla
-     * (px 0,225, jolla reitit ilmestyvät) p10 11,4 px ja mediaani
-     * 17,9 px, eli 2,4 pikselin helmet erottuvat toisistaan heti
-     * ensimmäisellä tasolla, jolla reitti ylipäätään piirretään.
-     * Omaa syvempää kynnystä ei siis tarvita.
+     * === REITTIEN MUSTE ON KARTTAVAKIO, EI PAPERIVAKIO ==============
+     *
+     * Sääntö ja omistajan sanamuoto ovat yllä jokien edessä (`R`).
+     * Reittien osalta se kumoaa säännön *"askelman ja katkon koko on
+     * paperivakio (P) kuten muukin painojälki"*: `R` korvaa `P`:n
+     * viivanleveydessä, helmen säteessä ja kehässä, katkon jaksossa,
+     * sivuheitossa ja kaarevuudessa sekä käsin piirretyssä heitossa.
+     *
+     * Syvimmällä tasolla `R = P`, joten z7:n hyväksytty ilme ei muutu
+     * pikseliäkään, ja jokainen taso siitä ulospäin saa puolet
+     * edellisestä. Ulommilla tasoilla reitit siis häipyvät itsestään
+     * — se on päätöksen tarkoitus, ja mitattuna
+     * (docs/moduulit/laattapyramidi.md 6k) reitin oma lisäys paperin
+     * tummuuteen on z4:llä vielä 0,04 Weberiä, z3:lla 0,014 eli
+     * havaitsemiskynnyksen tuntumassa ja z2:sta ulospäin 0,005…0,000
+     * eli paperin oman rakeen alla.
+     *
+     * KYNNYS POISTUI. Omistaja 31.8.2026: *"eikös reitit pidä olla
+     * päällä kaikilla zoomitasoilla? ne vain jäävät niin pieniksi että
+     * eivät siksi juuri näy"*. Vanha `nakyy(0.22)` päästi reitit
+     * sisään z2:lla ja piti ne poissa z0:lta ja z1:ltä; kun muste
+     * häipyy itsestään, kynnys ei suojaa miltään vaan tekee
+     * ilmestymisestä hyppäyksen siellä, missä pitäisi olla häivytys.
+     *
+     * ALIPIKSELIN VIIVA EI JÄTÄ USVAA — TÄMÄ ON MITATTU, koska se oli
+     * poiston oikea riski: canvas ei piirrä puolikasta pikseliä
+     * tyhjäksi vaan sekoittaa sen taustaan. Sama laatta reitteineen ja
+     * ilman: koko laatan keskisävy tummenee tiheimmälläkin laatalla
+     * z1:llä 0,13 ja z2:lla 0,20 luminanssiyksikköä, kun paperin oma
+     * rae on 6…11 yksikköä — eli usva on 1…3 % rakeesta. z0:lla
+     * Chromium ei piirrä reiteistä yhtään mitään: laatta on TAVULLEEN
+     * sama kuin ilman reittejä, koska Skia lakkaa piirtämästä, kun
+     * veto on alle noin 0,01 pikseliä leveä ja katko sitä lyhyempi.
      */
-    if (nakyy(0.22) && sisalto.reitit?.length) {
+    if (sisalto.reitit?.length) {
       ctx.save();
       ctx.lineJoin = 'round';
       ctx.lineCap = 'round';
@@ -1259,26 +1426,344 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
        */
       const KIERROS = projektio.leveys ?? 0;
       const siirrot = KIERROS ? [-KIERROS, 0, KIERROS] : [0];
+      /*
+       * === MUSTEEN PEITTÄVYYS ON MITTA, EI MAKUASIA =================
+       *
+       * Kaksi omistajan päätöstä peräkkäin, ja ne vetävät eri suuntiin:
+       *
+       *   31.8. aamu  *"Viivat ovat liian ohuita ja pisteet liian
+       *               pieniä."*  → peittävyys 0,52/0,56/0,50 nostettiin
+       *               0,80/0,84/0,76:een.
+       *   31.8. ilta  *"Ne voisivat olla himmeämmällä."*  → tämä erä
+       *               laskee ne 0,64/0,68/0,60:een.
+       *
+       * TAKAISIN LÄHTÖTILAAN EI PALATA, ja se on mitattu eikä arvattu.
+       * Weberin kontrasti (paperi − tummin pikseli) / paperi, Rec. 709
+       * -luminanssista, poikkileikkauksena reittijanan yli
+       * renderöidyistä laatoista, oli lähtötilassa merireitillä z7:llä
+       * **0,064** eli kuusi prosenttia paperin kirkkaudesta — juuri se
+       * näkymättömyys, josta valitettiin. Tämän erän jälkeen sama luku
+       * on **0,30** (nostetun erän 0,44:stä), eli yhä nelinkertainen
+       * lähtötilaan nähden. Kaikki luvut ovat raportissa
+       * docs/viesti-fable.md.
+       *
+       * KATKOVIIVA HIMMENTÄÄ JO ITSESSÄÄN: viivaa on enää noin 56 %
+       * matkasta, joten silmän kokema keskimääräinen tummuus laskee
+       * vaikkei muste muuttuisi. Siksi alfaa ei tarvinnut laskea
+       * lähellekään lähtötilaa saadakseen omistajan pyytämän
+       * himmennyksen.
+       *
+       * SÄVY EI MUUTU, VAIN PEITTÄVYYS. Merireitti pysyy
+       * preussinsinisenä (32, 60, 98) ja lento poltettuna sinooperina
+       * (150, 54, 40); muuttunut on ALFA, eli kynä painaa keveämmin
+       * samalla musteella. Kirkas RGB-sininen tekisi kartasta
+       * tietokonegrafiikkaa yhdellä viivalla — se raja ei liiku.
+       */
       const MUSTEET = {
-        maa: { viiva: 'rgba(120,88,54,0.52)', kehä: 'rgba(120,88,54,0.78)' },
-        meri: { viiva: 'rgba(32,60,98,0.56)', kehä: 'rgba(32,60,98,0.80)' },
+        maa: { viiva: 'rgba(120,88,54,0.64)', kehä: 'rgba(120,88,54,0.80)' },
+        meri: { viiva: 'rgba(32,60,98,0.68)', kehä: 'rgba(32,60,98,0.84)' },
       };
-      const helmiTaytto = 'rgba(246,239,220,0.88)';
-      const sade = 2.4 * P;
+      const helmiTaytto = 'rgba(246,239,220,0.92)';
+      /*
+       * HELMEN SÄDE 3,2 YKSIKKÖÄ. Yläraja tuli aikanaan tiheimmästä
+       * askelvälistä, ja se sääntö kulkee nyt mukana mittakaavassa:
+       * kun helmi kutistuu kartan mukana, askelvälin ja helmen suhde
+       * on JOKA TASOLLA sama kuin z7:llä. Mitattuna lyhin askelväli on
+       * 232 R ja helmen ulkohalkaisija kehineen 7,7 R, joten helmien
+       * väliin jää joka tasolla vähintään 224 R — helminauhaa ei voi
+       * syntyä (se oli edellisen erän tunnettu rajatapaus z2:lla, ja
+       * tämä päätös poistaa sen rakenteellisesti).
+       */
+      const sade = 3.2 * R;
+      const VIIVA = 1.9 * R;
+
+      /*
+       * === KÄSIN PIIRRETTY JÄLKI — JA MIKSI SE EI TEE SAUMAA =========
+       *
+       * Omistaja 31.8.2026: *"Reitit saisi olla käsin piirretyn
+       * näköisiä."* ja *"katkoviivoihin voisi tehdä pientä käsin
+       * piirretyn tunnelmaa niin, että ne hieman heittelevät ja
+       * kaartelevat."* Muoto tulee reitin omasta käyrästä — samasta,
+       * jota peli kävelee (js/rules.js `densify`, sentripetaalinen
+       * Catmull-Rom) — ja käsin piirretty vaikutelma tehdään KAHDESSA
+       * MITTAKAAVASSA:
+       *
+       *   SOLMUN MITASSA  kynänpaine vaihtelee reitistä toiseen ja
+       *                   solmu heittää pikselin murto-osan pois
+       *                   paikaltaan (`HEITTO`, alla).
+       *   KATKON MITASSA  jokainen katko on eri pituinen, istuu eri
+       *                   kohdassa jaksoaan, on hitusen sivussa
+       *                   viivalta ja KAARTAA (`KATKO`, alla).
+       *
+       * HEITTO ARVOTAAN SOLMUILLE, EI PEHMENNYSPISTEILLE. Käyrällä on
+       * neljätoista pistettä jokaista väliä kohti; jos jokainen saisi
+       * oman heittonsa, jäljestä tulisi rosoista kohinaa eikä kynän
+       * vapinaa. Solmujen välillä heitto liukuu pehmeästi
+       * (smoothstep), joten viiva heiluu solmun mitassa niin kuin käsi
+       * heiluu — ja käyrän oma muoto säilyy.
+       *
+       * HEITTO EI SAA TULLA PIKSELISTÄ. Sama virhe tehtiin kerran
+       * patinan rakeessa: kun kohina luettiin laatan omasta nurkasta,
+       * JOKA laatta sai saman kentän ja ruudukko näkyi ruudukkona
+       * (generoi-laattapyramidi.mjs, "KOHINA"). Siksi heittoa ei arvota
+       * pikselistä eikä laatan nurkasta vaan REITIN TUNNUKSESTA
+       * (`r.siemen`, sisalto.mjs) ja solmun järjestysluvusta. Ne ovat
+       * samat luvut joka lohkossa, joka laatalla ja joka ajolla, joten
+       * viiva jatkuu laattarajan yli pikselilleen samana — eikä
+       * `--saumatesti` voi nähdä tästä mitään.
+       *
+       * PÄÄTESOLMUT EIVÄT HEITÄ: reitin pää on kaupunki, ja kolme
+       * reittiä samasta kaupungista kuuluu lähteä samasta pisteestä.
+       *
+       * Heitto lasketaan kerran reittiä kohti ja jää muistiin
+       * `sisalto`-olioon — sama olio piirtää tuhannet laatat.
+       */
+      const HEITTO = 0.35;   // reittiyksikköä (R), molempiin suuntiin
+      const KYNIA = 5;       // kynänpaineen portaat
+      const heitot = (r) => {
+        if (!r.__heitto) {
+          const rnd = mulberry32(r.siemen ?? 1);
+          const solmut = r.solmut?.length >= 2 ? r.solmut : [0, r.poly.length - 1];
+          const s = solmut.map(() => [0, 0]);
+          for (let i = 1; i < s.length - 1; i += 1) {
+            s[i] = [(rnd() - 0.5) * 2 * HEITTO, (rnd() - 0.5) * 2 * HEITTO];
+          }
+          // Kynänpaineen porras samasta virrasta, jotta se on yhtä pysyvä.
+          r.__kyna = Math.min(KYNIA - 1, Math.floor(rnd() * KYNIA));
+          const h = r.poly.map(() => [0, 0]);
+          for (let k = 0; k < solmut.length - 1; k += 1) {
+            const a = solmut[k];
+            const b = solmut[k + 1];
+            for (let i = a; i <= b && i < h.length; i += 1) {
+              const t = b > a ? (i - a) / (b - a) : 0;
+              const u = t * t * (3 - 2 * t);          // smoothstep
+              h[i] = [
+                s[k][0] + (s[k + 1][0] - s[k][0]) * u,
+                s[k][1] + (s[k + 1][1] - s[k][1]) * u,
+              ];
+            }
+          }
+          r.__heitto = h;
+        }
+        return r.__heitto;
+      };
+
+      /*
+       * === KATKON MITAT (reittiyksikköä R) ==========================
+       *
+       * `jakso` on yhden katkon ja sitä seuraavan välin yhteismitta.
+       * 16 yksikköä on valittu kahdesta rajasta, ja kumpikin on nyt
+       * MITTAKAAVASTA RIIPPUMATON, koska helmi ja katko kutistuvat
+       * samaa tahtia:
+       *
+       *   ALARAJA  helmi on halkaisijaltaan 6,4 R. Jos katko olisi
+       *            samaa kokoluokkaa, katko ja helmi näyttäisivät
+       *            käyttökoossa samalta merkiltä. Lyhinkin katko
+       *            (0,55 · 16 = 8,8 R) on selvästi pidempi kuin
+       *            helmi on leveä.
+       *   YLÄRAJA  lyhimmälle askelvälille on mahduttava katkoja.
+       *            Väli ja jakso mitataan nyt samassa mittakaavassa,
+       *            joten suhde pätee joka tasolla: mitattuna lyhin
+       *            askelväli on 232 R ja mediaani 595 R, eli
+       *            lyhimmällekin välille mahtuu neljätoista jaksoa.
+       *
+       * SEURAUS, JOKA KANNATTAA TIETÄÄ: kun jakso skaalautuu kartan
+       * mukana, KATKOJEN LUKUMÄÄRÄ reittiä kohti on sama joka
+       * tasolla. Kuvio ei siis harvene eikä tihene zoomatessa, se vain
+       * pienenee — juuri niin kuin painettu kartta pienenee.
+       *
+       * Katkon pituus vaihtelee 55…78 % jaksosta ja sen paikka jakson
+       * sisällä arvotaan lopusta — siksi VÄLIKIN vaihtelee, eivätkä
+       * katkot asetu koneelliseen tahtiin. Molemmat luvut tulevat
+       * reitin tunnuksesta ja KATKON JÄRJESTYSLUVUSTA.
+       */
+      const KATKO = {
+        jakso: 16,     // paperipikseliä: katko + väli
+        lyhin: 0.55,   // katkon osuus jaksosta, alaraja
+        pisin: 0.78,   // katkon osuus jaksosta, yläraja
+        sivu: 0.40,    // paperipikseliä: koko katko sivussa viivalta
+        kaari: 0.55,   // paperipikseliä: katkon kaarevuus keskellä
+        paloja: 5,     // janaa per katko (kaaren tarkkuus)
+      };
+      /**
+       * Deterministinen 0…1 reitin siemenestä ja katkon numerosta.
+       *
+       * EI PIKSELISTÄ EIKÄ LAATASTA. Katkon numero on jakson
+       * järjestysluku reitin OMALTA KAARENPITUUDELTA arkin
+       * koordinaateissa, eli sama luku joka laatalla — ks. `arkilla`.
+       */
+      const arpa = (siemen, n, k) => {
+        let h = (siemen ^ Math.imul(n + 1, 2246822519) ^ Math.imul(k + 1, 668265263)) >>> 0;
+        h = Math.imul(h ^ (h >>> 15), 2246822519) >>> 0;
+        h = Math.imul(h ^ (h >>> 13), 3266489917) >>> 0;
+        return ((h ^ (h >>> 16)) >>> 0) / 4294967296;
+      };
+
+      /*
+       * === REITTI ARKIN PIKSELEINÄ JA SEN KAARENPITUUS ==============
+       *
+       * TÄMÄ ON SE KOHTA, JOSSA SAUMA SYNTYISI, JOS SEN TEKISI VÄÄRIN.
+       * Jos katkokuvion vaihe laskettaisiin laatan omasta origosta,
+       * jokainen laattaraja katkaisisi kuvion ja sauma näkyisi rivinä
+       * — sama ansa kuin patinan rakeessa. Vaihe lasketaan siksi
+       * REITIN KAARENPITUUDESTA ARKIN KOORDINAATEISSA: `lautaKuvaX`
+       * lukee arkin origon, joten pisteet ja niiden väliset etäisyydet
+       * ovat samat luvut joka laatalla, ja katkon numero `n` on
+       * reitin ominaisuus eikä laatan.
+       *
+       * Arvot muistiin `sisalto`-olioon TASOKOHTAISESTI (`__avain`):
+       * sama olio piirtää tuhannet laatat, mutta tason vaihtuessa
+       * `px` muuttuu ja pituudet on laskettava uudestaan.
+       *
+       * Laudan kierto (`siirrot`) ei kelpaa avaimeksi: siirto on x:ään
+       * lisätty VAKIO, joka ei muuta etäisyyksiä eikä sauman
+       * tunnistusta, joten sama taulukko kelpaa kaikille kolmelle
+       * kappaleelle ja siirto lisätään vasta piirrettäessä.
+       */
+      const AVAIN = `${px}|${P}|${R}`;
+      const arkilla = (r) => {
+        if (r.__avain !== AVAIN) {
+          const h = heitot(r);
+          const n = r.poly.length;
+          const xs = new Float64Array(n);
+          const ys = new Float64Array(n);
+          const s = new Float64Array(n);
+          const uusi = new Uint8Array(n);      // 1 = tästä alkaa uusi jakso
+          let x0 = Infinity; let x1 = -Infinity;
+          let y0 = Infinity; let y1 = -Infinity;
+          for (let i = 0; i < n; i += 1) {
+            xs[i] = lautaKuvaX(r.poly[i][0]) + h[i][0] * R;
+            ys[i] = lautaKuvaY(r.poly[i][1]) + h[i][1] * R;
+            if (xs[i] < x0) x0 = xs[i];
+            if (xs[i] > x1) x1 = xs[i];
+            if (ys[i] < y0) y0 = ys[i];
+            if (ys[i] > y1) y1 = ys[i];
+            if (i === 0) { uusi[i] = 1; continue; }
+            // Sauma katkaisee viivan, eikä hyppy kartu kaarenpituuteen.
+            if (Math.abs(xs[i] - xs[i - 1]) > GW / 2) { s[i] = s[i - 1]; uusi[i] = 1; } else {
+              s[i] = s[i - 1] + Math.hypot(xs[i] - xs[i - 1], ys[i] - ys[i - 1]);
+            }
+          }
+          r.__arkilla = {
+            xs, ys, s, uusi, x0, x1, y0, y1,
+          };
+          r.__avain = AVAIN;
+        }
+        return r.__arkilla;
+      };
+
+      /*
+       * Näkyvä ala arkin koordinaateissa. Katkoja ei lasketa polkuun
+       * sen ulkopuolelta: canvas leikkaisi ne kuitenkin, mutta
+       * karsinta säästää valtaosan työstä joka laatalla.
+       */
+      const MARGINAALI = 8 * P + VIIVA;
+      const NX0 = GX - MARGINAALI;
+      const NX1 = GX + W + MARGINAALI;
+      const NY0 = GY - MARGINAALI;
+      const NY1 = GY + H + MARGINAALI;
+
+      /**
+       * Yksi katkoviiva polkuun: reitti `r` siirrettynä `dx` pikseliä.
+       *
+       * Katkot ovat JAKSOITTAIN: jakso `n` on kaarenpituuden väli
+       * [n·T, (n+1)·T), ja siinä on tasan yksi katko, jonka pituus ja
+       * paikka arvotaan reitin tunnuksesta ja n:stä. Näin katkon
+       * numeron saa suoraan kaarenpituudesta (`Math.floor(s / T)`)
+       * eikä sitä tarvitse kerätä reitin alusta asti — ja juuri se
+       * tekee kuviosta laatasta riippumattoman.
+       */
+      const katkoPolku = (g, r, dx) => {
+        const a = arkilla(r);
+        if (a.x1 + dx < NX0 || a.x0 + dx > NX1 || a.y1 < NY0 || a.y0 > NY1) return;
+        const {
+          xs, ys, s, uusi,
+        } = a;
+        const n = xs.length;
+        const T = KATKO.jakso * R;
+        let i0 = 0;
+        for (let raja = 1; raja <= n; raja += 1) {
+          if (raja < n && !uusi[raja]) continue;
+          jaksonKatkot(g, xs, ys, s, i0, raja - 1, r.siemen ?? 1, dx, T);
+          i0 = raja;
+        }
+      };
+
+      /** Yhden yhtenäisen osuuden (i0…i1) katkot polkuun `g`. */
+      const M = KATKO.paloja;
+      const px0 = new Float64Array(M + 1);
+      const py0 = new Float64Array(M + 1);
+      const jaksonKatkot = (g, xs, ys, s, i0, i1, siemen, dx, T) => {
+        if (i1 <= i0) return;
+        const sA = s[i0];
+        const sB = s[i1];
+        if (sB - sA < 1) return;
+        let kohta = i0;
+        /** Piste kaarenpituudella `sPos`; osoitin kulkee vain eteenpäin. */
+        const piste = (sPos, ulos, k) => {
+          while (kohta < i1 && s[kohta + 1] < sPos) kohta += 1;
+          const b = Math.min(kohta + 1, i1);
+          const pituus = s[b] - s[kohta];
+          const t = pituus > 0 ? Math.min(1, Math.max(0, (sPos - s[kohta]) / pituus)) : 0;
+          ulos[0][k] = xs[kohta] + (xs[b] - xs[kohta]) * t;
+          ulos[1][k] = ys[kohta] + (ys[b] - ys[kohta]) * t;
+        };
+        const ulos = [px0, py0];
+        for (let k = Math.floor(sA / T); k <= Math.floor(sB / T); k += 1) {
+          const osuus = KATKO.lyhin + (KATKO.pisin - KATKO.lyhin) * arpa(siemen, k, 0);
+          const pituus = T * osuus;
+          const alku = k * T + (T - pituus) * arpa(siemen, k, 1);
+          const a = Math.max(sA, alku);
+          const b = Math.min(sB, alku + pituus);
+          if (b - a < 0.4 * R) continue;
+          for (let m = 0; m <= M; m += 1) piste(a + ((b - a) * m) / M, ulos, m);
+          // Katko sivuun ja kaarelle: normaali katkon omasta jänteestä.
+          const ux = px0[M] - px0[0];
+          const uy = py0[M] - py0[0];
+          const L = Math.hypot(ux, uy) || 1;
+          const nx = -uy / L;
+          const ny = ux / L;
+          const sivu = (arpa(siemen, k, 2) - 0.5) * 2 * KATKO.sivu * R;
+          const kaari = (arpa(siemen, k, 3) - 0.5) * 2 * KATKO.kaari * R;
+          for (let m = 0; m <= M; m += 1) {
+            const o = sivu + kaari * Math.sin((Math.PI * m) / M);
+            const x = px0[m] + nx * o + dx;
+            const y = py0[m] + ny * o;
+            if (m === 0) g.moveTo(x, y); else g.lineTo(x, y);
+          }
+        }
+      };
+
       for (const laji of ['meri', 'maa']) {
         const osa = sisalto.reitit.filter((r) => r.laji === laji);
         if (!osa.length) continue;
         const muste = MUSTEET[laji];
         ctx.strokeStyle = muste.viiva;
-        ctx.lineWidth = 1.1 * P;
-        for (const d of siirrot) {
-          lautaPolku(ctx, osa.map((r) => r.poly.map(([x, y]) => [x + d, y])));
-          ctx.stroke();
+        /*
+         * YKSI POLKU KYNÄNPAINEEN PORRASTA KOHTI. Jokainen reitti saa
+         * oman leveytensä, mutta piirtoja on viisi eikä 408: sama
+         * `lineWidth` kelpaa kaikille saman portaan reiteille.
+         */
+        for (let k = 0; k < KYNIA; k += 1) {
+          const kynalla = osa.filter((r) => { heitot(r); return r.__kyna === k; });
+          if (!kynalla.length) continue;
+          ctx.lineWidth = VIIVA * (0.88 + 0.06 * k);
+          for (const d of siirrot) {
+            ctx.beginPath();
+            for (const r of kynalla) katkoPolku(ctx, r, d * px);
+            ctx.stroke();
+          }
         }
         /*
          * Helmet yhtenä polkuna: 1 118 erillistä fill+stroke-paria
          * lohkoa kohti olisi turhaa työtä, kun sama polku kelpaa
          * kaikille. Ruudun ulkopuoliset karsitaan ennen polkua.
+         *
+         * HELMET PIIRRETÄÄN VIIVAN PÄÄLLE JA VIIMEISENÄ. Kun kaikki
+         * kolme lajia ovat katkoviivaa, helmi on ainoa asia joka
+         * erottaa maa- ja merireitin lennosta muuten kuin värillä —
+         * ja paperinvärinen täyttö puhkaisee katkon, jolloin helmi ei
+         * voi näyttää katkolta eikä katko helmeltä.
          */
         ctx.beginPath();
         for (const r of osa) {
@@ -1296,21 +1781,31 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         ctx.fillStyle = helmiTaytto;
         ctx.fill();
         ctx.strokeStyle = muste.kehä;
-        ctx.lineWidth = 0.9 * P;
+        ctx.lineWidth = 1.3 * R;
         ctx.stroke();
       }
       /*
-       * Lentoreitit poltettuna sinooperina ja katkoviivana: aikakauden
-       * kartassa ne ovat höyrylaivalinjan tapainen merkintä eikä
-       * maantie, ja niitä on vähemmän.
+       * Lentoreitit poltettuna sinooperina: aikakauden kartassa ne ovat
+       * höyrylaivalinjan tapainen merkintä eikä maantie, ja niitä on
+       * vähemmän. Ne ovat SAMAA katkoviivaa kuin muutkin (omistaja
+       * 31.8.2026) ja kulkevat saman `katkoPolku`n läpi — lento on
+       * kahden solmun ilmaviiva, joten solmuheittoa ei ole mihin
+       * panna, mutta katkon oma heitto ja kaari ovat sillä samat kuin
+       * muilla. Helmiä ei ole, koska askelmia ei ole.
        */
       if (sisalto.lentoreitit?.length) {
-        ctx.strokeStyle = 'rgba(150,54,40,0.50)';
-        ctx.lineWidth = 0.9 * P;
-        ctx.setLineDash([9 * P, 7 * P]);
-        lautaPolku(ctx, sisalto.lentoreitit.map((r) => [[r.ax, r.ay], [r.bx, r.by]]));
-        ctx.stroke();
-        ctx.setLineDash([]);
+        ctx.strokeStyle = 'rgba(150,54,40,0.60)';
+        for (let k = 0; k < KYNIA; k += 1) {
+          const kynalla = sisalto.lentoreitit
+            .filter((r) => Math.floor(mulberry32(r.siemen ?? 1)() * KYNIA) === k);
+          if (!kynalla.length) continue;
+          ctx.lineWidth = 1.7 * R * (0.9 + 0.05 * k);
+          for (const d of siirrot) {
+            ctx.beginPath();
+            for (const r of kynalla) katkoPolku(ctx, r, d * px);
+            ctx.stroke();
+          }
+        }
       }
       ctx.restore();
     }

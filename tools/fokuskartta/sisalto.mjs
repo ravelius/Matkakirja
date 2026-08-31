@@ -91,14 +91,97 @@ export async function keraaSisalto(pack, packkikansio, juuri = `${packkikansio}/
    */
   const { buildBoard, pointAlong } = await import(`${juuri}/js/rules.js`);
   const lauta = buildBoard(pack.cities ?? [], pack.edges ?? [], pack.map ?? null);
-  const reitit = lauta.edges.map((e) => {
-    const askelmat = [];
-    for (let i = 1; i < e.steps; i += 1) {
-      const p2 = pointAlong(e.poly, i / e.steps);
-      askelmat.push([p2.x, p2.y]);
+
+  /*
+   * === LAATTA PIIRTÄÄ SEN KÄYRÄN, JOTA PELI KÄVELEE (omistaja 31.8.2026)
+   *
+   * Edellinen erä poimi tästä SOLMUPOLUN — kaupungit ja `via`-pisteet —
+   * ja piirsi niiden väliin suorat janat, koska omistaja sanoi reittien
+   * saavan olla *"luotisuoria viivoja"*. Se poisti silmukat, mutta se
+   * poisti OIREEN: silmukat syntyivät `js/rules.js densify`stä, joka oli
+   * yhtenäinen Catmull-Rom (alpha = 0), ja se yliampuu terävissä
+   * mutkissa kun pisteet ovat epätasavälein — sama spline-vaara, joka on
+   * kirjattu jokien kohdalle (maailmapiirto.js `lautaKaari`).
+   *
+   * Omistajan päätös 31.8.2026: korjataan SYY. `densify` on nyt
+   * sentripetaalinen (alpha = 0,5), joka on todistetusti vapaa
+   * silmukoista, ja laatta piirtää saman murtoviivan, jota peli kävelee.
+   * *"Omistajan lupa luotisuoriin viivoihin oli lupa eikä vaatimus."*
+   *
+   * MIKSI TÄMÄ ON TÄRKEÄÄ: solmupolkua piirrettäessä laatta ja peli
+   * olivat eri mieltä reitin muodosta — mitattuna mediaani 0,26 mutta
+   * pahimmillaan 38,35 lautayksikköä. Nappula kulki laattaan poltetun
+   * viivan vierestä. Nyt ero on nolla, koska kumpikin lukee saman
+   * `edge.poly`n.
+   *
+   * === SOLMUT LUETAAN SILTI — MUTTA VAIN HEITON ANKKUREIKSI =========
+   *
+   * Käsin piirretty jälki tehdään sillä, että SOLMU heittää pikselin
+   * murto-osan pois paikaltaan (maailmapiirto.js "KÄSIN PIIRRETTY
+   * JÄLKI"). Jos heitto arvottaisiin jokaiselle pehmennyspisteelle
+   * erikseen, viivasta tulisi rosoinen kohina eikä kynän vapinaa —
+   * pisteitä on neljätoista jokaista väliä kohti. Siksi heitto
+   * arvotaan solmuille ja pehmennetään niiden välillä, ja tänne
+   * riittää solmujen INDEKSILISTA.
+   *
+   * Indeksit tiedetään pakasta riippumatta (`via`-pisteet + kaksi
+   * päätä, tai maareitin neljä), ja jos murtoviivan pituus ei täsmää
+   * odotukseen, palautetaan pelkät päät ja lasketaan `poikkeamat`.
+   * Näin `perSpan`in muutos rules.js:ssä ei voi hiljaa vääristää
+   * laattoja — se näkyy lokissa.
+   */
+  const PER_SPAN = 14;
+  let poikkeamat = 0;
+  const solmuIndeksit = (e) => {
+    if (e.poly.length <= 2) return [0, e.poly.length - 1];
+    const odotettu = e.via ? e.via.length + 2 : (e.type === 'sea' ? 2 : 4);
+    const valeja = (e.poly.length - 1) / PER_SPAN;
+    if (!Number.isInteger(valeja) || valeja + 1 !== odotettu) {
+      poikkeamat += 1;
+      return [0, e.poly.length - 1];
     }
-    return { laji: e.type === 'sea' ? 'meri' : 'maa', poly: e.poly, askelmat };
-  });
+    const out = [];
+    for (let i = 0; i < e.poly.length; i += PER_SPAN) out.push(i);
+    return out;
+  };
+
+  /*
+   * KÄSIN PIIRRETYN SIEMEN. Piirto tarvitsee reittikohtaisen luvun
+   * kynänpaineen ja solmujen pikselin murto-osan heiton arpomiseen.
+   * Se johdetaan REITIN TUNNUKSESTA eikä pikselistä — sama reitti saa
+   * saman heiton joka laatalla ja joka ajolla, eikä laattojen väliin
+   * voi syntyä saumaa (maailmapiirto.js "KÄSIN PIIRRETTY JÄLKI").
+   */
+  const siemenesta = (avain) => {
+    let h = 2166136261;
+    for (let i = 0; i < avain.length; i += 1) {
+      h ^= avain.charCodeAt(i);
+      h = Math.imul(h, 16777619);
+    }
+    return h >>> 0;
+  };
+
+  const reitit = lauta.edges.map((e) => ({
+    laji: e.type === 'sea' ? 'meri' : 'maa',
+    poly: e.poly,
+    /*
+     * ASKELMAT PELIN OMALLA KAAVALLA JA PELIN OMASTA POLUSTA. Sama
+     * `pointAlong(poly, idx/steps)`, sama `poly` — laattaan poltettu
+     * ruutu ja nappulan pysähdyspaikka ovat siis sama piste, eivät
+     * likimain sama.
+     */
+    askelmat: Array.from({ length: Math.max(0, e.steps - 1) }, (_, i) => {
+      const p2 = pointAlong(e.poly, (i + 1) / e.steps);
+      return [p2.x, p2.y];
+    }),
+    solmut: solmuIndeksit(e),
+    siemen: siemenesta(e.id),
+  }));
+  if (poikkeamat) {
+    console.log(`  VAROITUS: ${poikkeamat} reitin solmuja ei tunnistettu — `
+      + 'niiden viiva piirtyy ilman käsin piirretyn heittoa '
+      + '(tarkista rules.js densify perSpan).');
+  }
 
   const paikka = new Map((pack.cities ?? []).map((c) => [c.id, c]));
   const jana = (e) => {
@@ -106,7 +189,31 @@ export async function keraaSisalto(pack, packkikansio, juuri = `${packkikansio}/
     const b = paikka.get(e.b);
     return a && b ? { ax: a.x, ay: a.y, bx: b.x, by: b.y } : null;
   };
-  const lentoreitit = (pack.airRoutes ?? []).map(jana).filter(Boolean);
+  /*
+   * === LENTOREITTI ON SAMAA MUOTOA KUIN MUUTKIN (omistaja 31.8.2026)
+   *
+   * *"Kaikki reitit saavat olla piirretty katkoviivalla."* Kun kaikki
+   * kolme lajia kulkevat saman katkoviivakoneiston läpi
+   * (maailmapiirto.js `katkoPolku`), lentoreitin on oltava sille
+   * samaa muotoa kuin maa- ja merireitin: `poly` on murtoviiva ja
+   * `solmut` sen ankkurit. Lento on kahden kaupungin ilmaviiva, joten
+   * murtoviivassa on tasan kaksi pistettä eikä välisolmuja ole —
+   * solmuheittoa ei siis ole mihin panna, mutta katkon oma heitto ja
+   * kaari tulevat siitä samasta siemenestä kuin muillakin.
+   *
+   * `ax…by` jäävät paikalleen: ne ovat sama tieto lyhyemmässä
+   * muodossa, ja sisältötiedosto luetaan myös vanhemmilla ajoilla.
+   */
+  const lentoreitit = (pack.airRoutes ?? []).map((e) => {
+    const j = jana(e);
+    if (!j) return null;
+    return {
+      ...j,
+      poly: [[j.ax, j.ay], [j.bx, j.by]],
+      solmut: [0, 1],
+      siemen: siemenesta(`lento:${e.a}|${e.b}`),
+    };
+  }).filter(Boolean);
 
   /* ----------------------------------------------------------- joet */
 

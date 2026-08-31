@@ -146,7 +146,11 @@ const ME_EDGES = [
   { a: 'siinai', b: 'mekka', steps: 4, type: 'sea', via: [[270, 500], [308, 540], [350, 610]] },
   { a: 'mekka', b: 'aden', steps: 4, type: 'sea', via: [[395, 690], [420, 750], [445, 810], [470, 895]] },
   { a: 'aden', b: 'salalah', steps: 3, type: 'sea', via: [[600, 905], [690, 860]] },
-  { a: 'masqat', b: 'dubai', steps: 2, type: 'sea', via: [[850, 544], [818, 503], [797, 516]] },
+  // Välipiste 818 -> 814 (31.8.2026): sentripetaalinen Catmull-Rom
+  // (js/rules.js densify) kaartaa täällä eri tavalla kuin yhtenäinen, ja
+  // vanha piste vei viivan Musandamin niemen yli. Neljä yksikköä länteen
+  // riitti; tarkistettu tests/rules.test.mjs:n omalla mitalla.
+  { a: 'masqat', b: 'dubai', steps: 2, type: 'sea', via: [[850, 544], [814, 503], [797, 516]] },
   { a: 'doha', b: 'kuwait', steps: 3, type: 'sea', via: [[670, 490], [630, 455]] },
 ];
 
