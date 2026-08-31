@@ -12,12 +12,14 @@
  *   maan renkaat on LEIKATTU AUKI samassa polussa `fill-rule: evenodd`
  *   -säännöllä. Yksi polku, yksi maalattava muoto — ei maskia, ei
  *   suodinta, ei toista kerrosta. Muste on kartan oma (rgba(58,40,25))
- *   ja peittävyys 0,10: naapuri tummuu sen verran että silmä erottaa
- *   rajan, mutta laatan topografia näkyy läpi.
+ *   ja peittävyys `TUMMENNUS_VOIMA`: naapuri tummuu sen verran että
+ *   silmä erottaa rajan, mutta laatan topografia näkyy läpi. TÄSSÄ
+ *   EFEKTIN KOKO PAINO ON — säädin on yksi vakio, ja sitä säädetään
+ *   kuvavedoksista.
  *
- *   ÄÄRIVIIVA on samat renkaat viivana kartan musteella, leveydeltään
- *   noin puolitoista kertaa rantaviiva (css .coast, 3,2 lautayksikköä).
- *   Se on nykyisen maan raja — ei naapureiden, ei kaikkien maiden.
+ *   ÄÄRIVIIVA on samat renkaat viivana himmeällä kartan musteella,
+ *   yhden ruutupikselin levyisenä. Se on saattaja: nykyisen maan raja
+ *   — ei naapureiden, ei kaikkien maiden.
  *
  * SUMENNUS JÄTETTIIN POIS. Omistaja epäili sitä jo tilatessaan, ja
  * laatan päälle ajettu `filter: blur()` on juuri se maalikierroksen
@@ -74,8 +76,41 @@
 
 const TUMMENNUS_NS = 'http://www.w3.org/2000/svg';
 
-/** Tummennuksen peittävyys — kartan muste, hyvin hienovarainen. */
-const TUMMENNUS_MUSTE = 'rgba(58, 40, 25, 0.10)';
+/**
+ * TUMMENNUKSEN VOIMAKKUUS — koko efektin ainoa säädin.
+ *
+ * Osuus kartan omasta musteesta naapurimaiden (ja meren) päällä.
+ * Yksi luku yhdessä paikassa juuri siksi, että sävyä säädetään
+ * kuvavedoksista eikä koodia lukemalla: vertailuvedokset 31.8.2026
+ * ajettiin tätä vakiota vaihtamalla, muuta ei tarvinnut koskea.
+ *
+ * MITATTU VAIKUTUS (Kreikka + naapurit, punaisen kanavan keskimääräinen
+ * lasku naapurimaan MAALLA verrattuna kuvaan ilman kerrosta; 3245
+ * mittapistettä lähizoomissa, jana 250 km, ja 963 pelaajan uloimmassa
+ * zoomissa, 31.8.2026):
+ *
+ *     voima   lähizoomi   uloin zoomi
+ *     0,10       16          15          ← omistaja ei huomannut lainkaan
+ *     0,18       29          27
+ *     0,25       39          36
+ *     0,32       50          47
+ *
+ * Kreikan oma pinta pysyy jokaisella tasolla paikallaan (delta 0,2 ja
+ * 2,7 yksikköä) — juuri sen evenodd-reikä takaa.
+ *
+ * VOIMAKKUUS EI MAKSA MITÄÄN. Sama savuke kolmesti kummallakin ääripäällä
+ * (tools/savukkeet/savuke-maailmanakyma.mjs, 31.8.2026):
+ *
+ *     voima 0,10   panorointi 0/0/0 ms   nipistys 529/522/449 ms
+ *     voima 0,32   panorointi 0/0/0 ms   nipistys 556/537/477 ms
+ *
+ * Ero on ajojen omaa hajontaa: kerros on eleen ajan display:none
+ * (css/styles.css), joten sen sävy ei ole eleen aikana maalikierroksessa
+ * lainkaan. Sävyn saa siis valita silmällä eikä kellolla.
+ */
+const TUMMENNUS_VOIMA = 0.10;
+/** Kartan muste tummennuksen voimakkuudella. */
+const TUMMENNUS_MUSTE = `rgba(58, 40, 25, ${TUMMENNUS_VOIMA})`;
 /**
  * Ääriviivan leveys RUUTUPIKSELEINÄ (vector-effect: non-scaling-stroke,
  * css/styles.css).
@@ -89,12 +124,16 @@ const TUMMENNUS_MUSTE = 'rgba(58, 40, 25, 0.10)';
  * kymmenkunta pikseliä paksu tolppa, joka peitti Egeanmeren pikkusaaret
  * kokonaan mustiksi läiskiksi (mitattu kuvakaappauksella 31.8.2026).
  *
- * 1,5 px on noin puolitoista kertaa poltettu rantaviiva juuri niin kuin
- * tilauksessa — *"maan ääriviivat piirtää hieman paksummalla"* — ja
- * pysyy samana kaikilla zoomitasoilla, kuten kaikki muukin ruutuun
- * mitoitettu kartan sisältö (js/karttanimet.js, js/fokusmitat.js).
+ * VIIVA ON SAATTAJA, EI ITSE EFEKTI. Ensimmäinen versio oli 1,5 px
+ * täydellä musteella, ja omistaja katsoi kuvat 31.8.2026: *"Kevyt
+ * ääriviiva mutta muut valtiot saisi tummentaa enemmän."* Ero maahan
+ * tehdään siis PINNALLA (`TUMMENNUS_VOIMA`) eikä reunuksella, ja reunus
+ * kevennetään yhteen ruutupikseliin — se on nyt hitusen ohuempi kuin
+ * poltettu rantaviiva, joten Egeanmeren pikkusaari ei lue lähizoomissa
+ * tummana renkaana eikä pieni maa kaukonäkymässä raskaana könttänä.
+ * Sävy himmennetään samassa hengessä css/styles.css:ssä.
  */
-const TUMMENNUS_VIIVA = 1.5;
+const TUMMENNUS_VIIVA = 1;
 
 let polygoniLupaus = null;
 
