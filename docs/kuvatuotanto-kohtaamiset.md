@@ -47,7 +47,8 @@ tilanteeseen luontevasti osuva kalliokyyhky, ei pöllö eikä jokaisen kuvan
 toistuva koriste. Cameon komedia syntyy ilmeestä, jossa Livia näyttää huomanneen
 liian myöhään joutuneensa kuvaan: huvittunut ja aavistuksen kauhistunut
 ”ei minun pitänyt tähän tulla”. Pulu ei tiedä aarteesta eikä anna
-juoniratkaisua.
+juoniratkaisua. Cameon luonteva syy voi olla paikallinen pulla tai muu herkku:
+Livia nokkii taustalla murua ja huomaa kameran vasta kesken nokkaisun.
 
 ## Nykyajan sarjan täysikokotarkistetut tyylikokeet
 
@@ -57,6 +58,7 @@ juoniratkaisua.
 | Amsterdam | Willem pysähtyy nykyajan kaupunkipyörällä kanaalisillalle | Vanhat kattokoukut taustassa; käyttötapaa ei näytetä | Tyylikoe valmis |
 | Venetsia | Lucia keskeyttää naamioiden lastauksen sähköiseen kuljetusveneeseen | Suljettu pitkänokkainen naamio; nokan sisältöä ei näytetä | Tyylikoe valmis |
 | Budapest | Márta ja aikuinen tytär Réka juovat smoothieita modernissa lasiatriumissa | Kolme erillistä kaupunkimerkkiä; yhdistävää vastausta ei näytetä | Tyylikoe valmis |
-
-Istanbulin Emine (köysityöskentely pää alaspäin) ja Wienin Anton (juoksija)
-ovat uusinnassa valon suunnan ja kesken liikkeen -dramaturgian vuoksi.
+| Istanbul | 52-vuotias konservointi-insinööri Emine roikkuu turvallisesti pää alaspäin vesisäiliössä | Pylväät ja vesi; Medusan asentoa ei näytetä | Tyylikoe valmis |
+| Wien | 64-vuotias Anton jatkaa juoksuaskelta ja kääntää vain päänsä pelaajaan | Vanha pörssirakennus bokehissa; päivämäärää ei näytetä | Tyylikoe valmis |
+| Pariisi | Colette avaa bouquiniste-kojua Maëlle-tyttärensä kanssa; Pulu jää vahingossa kuvaan | Vanha nimetön kirja ja vihreä koju; etymologiaa ei näytetä | Tyylikoe valmis |
+| Palermo / Sisilia | Rosalia ja Salvatore-isä keskeytetään nukketeatterin valmistelusta | Ritarinukke ilman nimiä tai tunnuksia | Tyylikoe valmis |
