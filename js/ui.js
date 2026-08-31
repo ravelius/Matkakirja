@@ -5782,7 +5782,10 @@ export class UI {
      * js/maatummennus.js monistaa niiden renkaat laudan leveyden verran
      * sivuun. Ilman rajausta monistettu pala ja <use>-kopio maalaisivat
      * saman kaistaleen kahdesti ja tummennus tuplaantuisi siinä — sama
-     * mitattu vika, jonka takia linssikerros on rajattu.
+     * mitattu vika, jonka takia linssikerros on rajattu. Rajaus on
+     * 31.8.2026 yön jälkeen KOKO AJAN käytössä eikä vain sauman maissa:
+     * varjo on nyt kaikkien MUIDEN maiden polygonit, joten Venäjän ja
+     * Fidžin monistetut renkaat ovat polussa aina.
      *
      * KERROS ON TYHJÄ, kunnes maa ja mittakaava ovat kohdallaan.
      */
@@ -8292,9 +8295,9 @@ export class UI {
     paivitaFokuskohteet(this);
     // Kevyen kulun vihreä kohtaamispiste (js/fokuspiste.js).
     paivitaFokuspiste(this);
-    // Maa vaihtui: tummennuksen reikä ja ääriviiva ovat edellisen maan
-    // muotoisia, joten polku lasketaan uudelleen — kerran, tässä
-    // (js/maatummennus.js).
+    // Maa vaihtui: tummennuksesta puuttuu yhä EDELLISEN maan pala ja
+    // ääriviiva on edellisen maan muotoinen, joten polut lasketaan
+    // uudelleen — kerran, tässä (js/maatummennus.js).
     paivitaMaatummennus(this);
     // Sama kerrosjono jatkuu maiden eläintäyillä (js/elaintaky.js).
     paivitaElaintakyt(this);

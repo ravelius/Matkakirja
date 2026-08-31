@@ -55,6 +55,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1407: MERI EI ENAA TUMMENE - maatummennus maalaa varjon vain naapurimaihin; Egeanmeri jaa kirkkaaksi. Zoomaa Kreikkaan ja katso meri seka maaraja.',
   'v1406: MAATUMMENNUS - lahizoomilla naapurimaat tummenevat 25 % ja nykyisen maan aariviiva paksunee; ele piilottaa valittomasti, paluu feidaa. Zoomaa maahan ja panoroi.',
   'v1405: NOSTOT ILMAN SIIRTOVIIVOJA - nostomerkit asettuvat kaupungin molemmin puolin omina merkkeinaan; katkoviivat poistuivat. Avaa Kreikka tai Bulgaria ja katso kaupungin ymparys.',
   'v1395: POLTTAMATON PIILOON ELEESSA - zoomaa: nimet haipyvat pehmeasti ja palaavat levossa ilman hyppaysta.',

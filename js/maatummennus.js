@@ -8,18 +8,48 @@
  *
  * Kaksi asiaa, yksi kerros:
  *
- *   TUMMENNUS on koko arkin kokoinen tumma suorakaide, johon nykyisen
- *   maan renkaat on LEIKATTU AUKI samassa polussa `fill-rule: evenodd`
- *   -säännöllä. Yksi polku, yksi maalattava muoto — ei maskia, ei
- *   suodinta, ei toista kerrosta. Muste on kartan oma (rgba(58,40,25))
- *   ja peittävyys `TUMMENNUS_VOIMA`: naapuri tummuu sen verran että
- *   silmä erottaa rajan, mutta laatan topografia näkyy läpi. TÄSSÄ
- *   EFEKTIN KOKO PAINO ON — säädin on yksi vakio, ja sitä säädetään
- *   kuvavedoksista.
+ *   TUMMENNUS on MUIDEN MAIDEN polygonit yhtenä täytettynä polkuna.
+ *   Muste on kartan oma (rgba(58,40,25)) ja peittävyys
+ *   `TUMMENNUS_VOIMA`: naapuri tummuu sen verran että silmä erottaa
+ *   rajan, mutta laatan topografia näkyy läpi. TÄSSÄ EFEKTIN KOKO PAINO
+ *   ON — säädin on yksi vakio, ja sitä säädetään kuvavedoksista.
  *
- *   ÄÄRIVIIVA on samat renkaat viivana himmeällä kartan musteella,
- *   yhden ruutupikselin levyisenä. Se on saattaja: nykyisen maan raja
- *   — ei naapureiden, ei kaikkien maiden.
+ *   ÄÄRIVIIVA on nykyisen maan renkaat viivana himmeällä kartan
+ *   musteella, yhden ruutupikselin levyisenä. Se on saattaja: nykyisen
+ *   maan raja — ei naapureiden, ei kaikkien maiden.
+ *
+ * === MERI EI OLE NAAPURI (omistajan kaappaus 31.8.2026 yöllä, v1406)
+ *
+ * Ensimmäinen toteutus maalasi tummennuksen KOKO ARKIN kokoisena
+ * suorakaiteena, johon nykyisen maan renkaat leikattiin auki
+ * `fill-rule: evenodd` -säännöllä. Se oli yksi maalattava muoto ja
+ * halpa, mutta se tummensi kaiken muun paitsi oman maan — myös veden.
+ * Omistaja katsoi Kreikan fokusnäkymän iPhonesta: koko Egeanmeri oli
+ * harmaa ja vain oma maa paperinvärinen. Palaute sanatarkasti: *"Merta
+ * ei tarvitse tummentaa."*
+ *
+ * Varjo rakennetaan siis MAISTA eikä arkista: aineiston jokaisen muun
+ * maan renkaat samaan polkuun, nykyinen maa pois joukosta. Meri, järvet
+ * ja aineiston ulkopuolinen maa jäävät koskematta. Suorakaidetta ja
+ * evenodd-reikää ei ole enää olemassa — nykyistä maata ei tarvitse
+ * leikata auki, koska sitä ei koskaan maalata.
+ *
+ * TÄYTTÖSÄÄNTÖ ON `nonzero` JA SE ON EHTO, EI MAKUASIA. Naapurien
+ * renkaat on yksinkertaistettu kukin erikseen
+ * (tools/generoi-maapolygonit.mjs Douglas–Peucker), joten rajaviivalla
+ * ne menevät hitusen päällekkäin. `nonzero` maalaa päällekkäisen
+ * kaistaleen kerran, kun renkaat kiertävät samaan suuntaan; `evenodd`
+ * tekisi siitä vaalean raon jokaiselle maarajalle. Kiertosuunnan
+ * yhtenäisyys on aineiston takuu (generaattori normalisoi sen, ja
+ * tests/maapolygonit.test.mjs vartioi) — ilman sitä `nonzero`
+ * puhkaisisi samat raot.
+ *
+ * AINEISTO KATTAA PELIN MAAT, EI MAAILMAN VALTIOITA. maapolygonit.json
+ * tehdään pelin oman maalistan (`countryShapes`, 134 maata) mukaan,
+ * joten roolittomat naapurit — Benin, Burkina Faso, Malta, Andorra ja
+ * muut pelin ulkopuoliset — jäävät tummentamatta ja lukevat merenä.
+ * Se on tietoinen raja: aineisto seuraa pelin maalistaa, ja jos joskus
+ * halutaan koko maailma, kasvatetaan LÄHDETTÄ eikä piirtäjää.
  *
  * SUMENNUS JÄTETTIIN POIS. Omistaja epäili sitä jo tilatessaan, ja
  * laatan päälle ajettu `filter: blur()` on juuri se maalikierroksen
@@ -58,9 +88,12 @@
  * EIKÄ RYHMÄN `opacity`, ja animaatio on PORTAIKKO. Kumpikin on
  * mittaustulos: ryhmän peittävyys teki kerroksesta oman
  * läpinäkyvyystasonsa (savuke-maailmanakyma nipistyksessä 382 →
- * 933–1202 ms), ja portaaton feidaus maalasi arkinlevyisen varjon
- * parikymmentä kertaa (435–786 ms). Nykyisillä valinnoilla luvut ovat
- * lähtötasolla (388–475 ms). Taulukko: css/styles.css samassa lohkossa.
+ * 933–1202 ms), ja portaaton feidaus maalasi varjon parikymmentä kertaa
+ * (435–786 ms). Nykyisillä valinnoilla luvut ovat lähtötasolla
+ * (388–475 ms). Taulukko: css/styles.css samassa lohkossa. Luvut on
+ * mitattu arkinlevyisellä suorakaiteella; maapolku on niitä RASKAAMPI
+ * muoto mutta pienempi pinta, ja mitattu ero on ajojen hajonnan
+ * kokoinen (ks. `muidenPolku`).
  *
  * ELEIDEN VÄLISSÄ KERROS ON STAATTINEN. Polut lasketaan vain kun maa
  * vaihtuu tai näkyvyys kytkeytyy — ei kehystä kohti, ei näkymää kohti.
@@ -79,8 +112,9 @@ const TUMMENNUS_NS = 'http://www.w3.org/2000/svg';
 /**
  * TUMMENNUKSEN VOIMAKKUUS — koko efektin ainoa säädin.
  *
- * Osuus kartan omasta musteesta naapurimaiden (ja meren) päällä.
- * Yksi luku yhdessä paikassa juuri siksi, että sävyä säädetään
+ * Osuus kartan omasta musteesta naapurimaiden päällä — ja vain maalla,
+ * sillä meri jää maalaamatta (ks. tiedoston alku). Yksi luku yhdessä
+ * paikassa juuri siksi, että sävyä säädetään
  * kuvavedoksista eikä koodia lukemalla: vertailuvedokset 31.8.2026
  * ajettiin tätä vakiota vaihtamalla, muuta ei tarvinnut koskea.
  *
@@ -96,7 +130,11 @@ const TUMMENNUS_NS = 'http://www.w3.org/2000/svg';
  *     0,32       50          47
  *
  * Kreikan oma pinta pysyy jokaisella tasolla paikallaan (delta 0,2 ja
- * 2,7 yksikköä) — juuri sen evenodd-reikä takaa.
+ * 2,7 yksikköä) — mittaus tehtiin evenodd-reiällä, ja nykyinen malli
+ * jättää oman maan maalaamatta jo siksi, ettei sen polygonia ole
+ * varjopolussa lainkaan. NAAPURILUVUT PÄTEVÄT SELLAISENAAN: naapurin
+ * maalla maalataan yhä sama muste samalla peittävyydellä. Meren luvut
+ * ovat nyt nollia — sitä ei enää maalata.
  *
  * VOIMAKKUUS EI MAKSA MITÄÄN. Sama savuke kolmesti kummallakin ääripäällä
  * (tools/savukkeet/savuke-maailmanakyma.mjs, 31.8.2026):
@@ -198,6 +236,79 @@ function siirra(d, dx) {
   return d.replace(/([ML])(-?[\d.]+)/g, (_, kirjain, luku) => `${kirjain}${(Number(luku) + dx).toFixed(1)}`);
 }
 
+/*
+ * Maakohtaiset polkumerkkijonot kerran istuntoa kohti.
+ *
+ * Varjo on JOKAINEN MUU MAA, joten maanvaihto latoisi ilman muistia 133
+ * maan renkaat uudestaan — samat luvut, sama tulos. Muisti on
+ * moduulitasolla eikä ui-oliossa, koska sen syöte (aineisto + laudan
+ * leveys) on sama kaikille laudoille, jotka samaa aineistoa käyttävät;
+ * laudan vaihtuessa syöte vaihtuu ja muisti rakennetaan uudelleen.
+ */
+let polkuMuisti = null;
+
+/** Yhden maan polku muistista tai laskettuna. */
+function maanPolkuMuistista(data, iso, tarkkuus, leveys) {
+  if (polkuMuisti?.data !== data || polkuMuisti.tarkkuus !== tarkkuus
+    || polkuMuisti.leveys !== leveys) {
+    polkuMuisti = { data, tarkkuus, leveys, polut: new Map() };
+  }
+  let d = polkuMuisti.polut.get(iso);
+  if (d === undefined) {
+    d = maanPolku(data.maat[iso], tarkkuus, leveys);
+    polkuMuisti.polut.set(iso, d);
+  }
+  return d;
+}
+
+/**
+ * KAIKKIEN MUIDEN MAIDEN renkaat yhtenä polkuna — tummennuksen muoto.
+ *
+ * KOKO MAAILMA EIKÄ NÄKYMÄN YMPÄRISTÖ, ja se on mittaustulos. Polku on
+ * iso — Kreikassa 133 maata, 1193 rengasta, 38 517 pistettä ja 536 662
+ * merkkiä `d`-määreessä, kun vanha suorakaide oli 6 856 — mutta se
+ * ladotaan VAIN maan vaihtuessa ja on eleiden välissä staattinen, ja
+ * eleen ajan koko kerros on display:none. Mitattu Kreikan lähikuvassa
+ * (Chromium 390x844 dpr3, scratch-mitta 31.8.2026; ladonta = avain
+ * nollille ja uusi piirto, feidaus = kerros piiloon ja takaisin,
+ * kolmesti):
+ *
+ *     malli                    ladonta   pahin kehys   kehyksiä >32 ms
+ *     arkin suorakaide (vanha)  0,7–4,1 ms   16,8 ms          0
+ *     muiden maiden polku       3–11 ms      16,8 ms          0
+ *
+ * Ensimmäinen ladonta (kaikki 134 maata puretaan) oli 10,1 ms.
+ * Feidauksen maalikustannus ei muuttunut mitattavasti: varjon PINTA-ALA
+ * pieneni (meri jää maalaamatta), vaikka reunojen määrä kasvoi. Sama
+ * savuke, jolla feidauksen valinnat aikanaan mitattiin
+ * (tools/savukkeet/savuke-maailmanakyma.mjs; taulukko css/styles.css),
+ * antoi kolmella ajolla kumpaakin mallia nipistyksen longtaskeiksi
+ *
+ *     arkin suorakaide (vanha)   583 / 508 / 502 ms
+ *     muiden maiden polku        455 / 475 / 546 ms
+ *
+ * eli saman hajonnan. Panoroinnissa kumpikin on 0 ms (vanhalla mallilla
+ * yhdessä ajossa 55 ms — sekin ajon omaa kohinaa).
+ *
+ * NÄKYMÄN YMPÄRISTÖÖN RAJAAMINEN OLISI OLLUT HUONO KAUPPA. Se toisi
+ * takaisin juuri sen, mistä arkinlaajuisella suorakaiteella päästiin:
+ * polku olisi ladottava uudelleen aina kun näkymä siirtyy rajauksen
+ * laidalle (mitattu 31.8.2026: näkymän kokoinen laatikko nosti
+ * panoroinnin longtaskit 0 ms:stä 327–352 ms:iin). Maan omaan
+ * ympäristöön rajaaminen taas ei ole tiivis: kehittäjän maailmanäkymässä
+ * kamera saa liikkua vapaasti (js/kartta.js fokusRajaukset palauttaa
+ * silloin nullin), ja juuri siinä tilassa omistaja pelitestaa —
+ * tummentamaton naapurimanner olisi näkynyt hänelle ensimmäisenä.
+ */
+function muidenPolku(data, iso, tarkkuus, leveys) {
+  const osat = [];
+  for (const koodi of Object.keys(data.maat)) {
+    if (koodi === iso) continue;
+    osat.push(maanPolkuMuistista(data, koodi, tarkkuus, leveys));
+  }
+  return osat.join('');
+}
+
 /**
  * Kerros paikalleen tai pois — kutsutaan näkymän ASETUTTUA
  * (js/ui.js paivitaMaastonimet) ja maan vaihtuessa
@@ -233,15 +344,16 @@ export function paivitaMaatummennus(ui) {
 /**
  * Mitä kerroksessa pitäisi nyt olla — tai null, jos ei mitään.
  *
- * Avain on maa JA arkki. Maa on ilmeinen; arkki on siksi, että se voi
- * vaihtua kerran laudan elinaikana: kamera on pystytyshetkellä
- * sovitettu arkin varalukuihin, ja pyramidin luettelo saapuu verkosta
- * vasta piirron jälkeen (js/ui.js paivitaLaudanRajat). Ilman arkkia
- * avaimessa varjo jäisi silloin vanhan, pienemmän laatikon kokoiseksi.
+ * AVAIN ON PELKKÄ MAA. Varjo on maiden muotoinen eikä laatikko, joten
+ * se ei riipu arkista, näkymästä eikä mittakaavasta: panorointi ja
+ * zoomaus eivät tee työtä, ja vain maanvaihto tai näkyvyysrajan ylitys
+ * latoo polun uudelleen.
  *
- * Panorointi ja zoomaus EIVÄT muuta avainta, koska varjo on arkin
- * kokoinen (ks. `arkinAla`) — vain maanvaihto, näkyvyysrajan ylitys ja
- * tuo kertaluontoinen arkin tarkentuminen tekevät työtä.
+ * Arkki oli mukana avaimessa niin kauan kuin varjo oli arkin kokoinen
+ * suorakaide (arkki tarkentuu kerran laudan elinaikana, kun pyramidin
+ * luettelo saapuu verkosta — js/ui.js paivitaLaudanRajat). Maapolku ei
+ * tunne arkkia lainkaan, joten se tarkennus ei enää koske tätä
+ * kerrosta.
  */
 function tunniste(ui) {
   const iso = ui.fokuskarttaAvain;
@@ -252,71 +364,48 @@ function tunniste(ui) {
   if (!(skaala > 0)) return null;
   // Pieni sietovara: pelaajan uloin taso itse kuuluu mukaan.
   if (!(skaala >= raja * 0.999)) return null;
-  const ala = arkinAla(ui);
-  if (!ala) return null;
-  return { iso, ala, avain: `${iso}:${ala.x}:${ala.y}:${ala.w}:${ala.h}` };
+  return { iso, avain: iso };
 }
 
-/**
- * Varjon suorakaide: KOKO ARKKI.
- *
- * Näkymä muuttuu joka eleessä, arkki ei muutu koskaan — ja juuri siksi
- * kerros voi olla eleiden välissä staattinen. Näkymän kokoista
- * laatikkoa kokeiltiin (31.8.2026), ja se oli huonompi: se on
- * piirrettävä uudelleen joka asettumisessa, ja savukkeessa panoroinnin
- * longtaskit nousivat 0 ms:stä 327–352 ms:iin, kun taas paluufeidauksen
- * hinta ei juuri muuttunut. Feidauksen hinta hoidetaan portaikolla
- * (css/styles.css), ei laatikon koolla.
- *
- * Arkki luetaan `ui.contentBox`ista eikä laudan mitoista, koska
- * pyramidilaudalla ne EIVÄT ole sama asia: laatta-arkki ulottuu laudan
- * ylä- ja alapuolelle (js/kartta.js boardBounds, arkki y −1046…6261,
- * kun lauta on 0…5399). Laudan mitoilla piirretty suorakaide jättäisi
- * Grönlannin kärjen ja Jäämeren tummentamatta — ja juuri se kaistale on
- * se, jonka takia arkkia laajennettiin.
- */
-function arkinAla(ui) {
-  const map = ui.game?.pack?.map;
-  const arkki = ui.contentBox
-    ?? { x: 0, y: 0, w: map?.width ?? 0, h: map?.height ?? 0 };
-  if (!(arkki.w > 0) || !(arkki.h > 0)) return null;
-  const p = (n) => Number(n.toFixed(1));
-  return { x: p(arkki.x), y: p(arkki.y), w: p(arkki.w), h: p(arkki.h) };
-}
-
-/** Suorakaide + renkaat evenoddina, ja renkaat vielä viivana. */
+/** Muiden maiden polku täyttönä, ja nykyisen maan renkaat viivana. */
 function piirra(ui, data, tila) {
   const kerros = ui.maatummennusKerros;
   const renkaat = data.maat[tila.iso];
   if (!renkaat?.length) {
-    // Maalle ei ole polygonia: efekti jää hiljaa pois, mutta avain
-    // merkitään, ettei jokainen asettuminen etsi sitä uudelleen.
+    /*
+     * Maalle ei ole polygonia: efekti jää hiljaa pois. Naapureita EI
+     * tummenneta tässäkään tapauksessa — ilman oman maan muotoa
+     * kerroksesta puuttuisi juuri se, mitä se korostaa. Avain merkitään,
+     * ettei jokainen asettuminen etsi polygonia uudelleen.
+     */
     ui.maatummennusAvain = tila.avain;
     if (kerros.firstChild) kerros.textContent = '';
     return;
   }
   const map = ui.game?.pack?.map;
   const leveys = map?.kiertava ? (data.lauta?.leveys ?? map.width) : 0;
-  const d = maanPolku(renkaat, data.tarkkuus || 10, leveys);
+  const tarkkuus = data.tarkkuus || 10;
+  const oma = maanPolkuMuistista(data, tila.iso, tarkkuus, leveys);
+  const muut = muidenPolku(data, tila.iso, tarkkuus, leveys);
   kerros.textContent = '';
   /*
-   * EVENODD TEKEE REIÄN: suorakaide ja maan renkaat samassa polussa,
-   * jolloin renkaiden sisäpuoli jää maalaamatta. Kokonaan laatikon
-   * ulkopuolelle jäävä rengas (kaukainen saari) ei vaikuta mihinkään,
-   * ja laatikon kokonaan sisäänsä sulkeva rengas (iso maa lähikuvassa)
-   * jättää koko laatikon maalaamatta — kumpikin oikein ilman
-   * erikoistapauksia.
+   * VARJO ON MUIDEN MAIDEN POLYGONIT — ei laatikkoa, ei reikää. Meri
+   * jää maalaamatta (omistaja 31.8.2026 yöllä: *"Merta ei tarvitse
+   * tummentaa"*), samoin nykyinen maa: sen polygoni ei ole polussa.
+   *
+   * `nonzero` (SVG:n oletus, kirjoitettu näkyviin koska se on ehto eikä
+   * makuasia): naapurirenkaat menevät rajaviivalla päällekkäin, ja vain
+   * nonzero maalaa päällekkäisen kaistaleen kerran. Ks. tiedoston alku.
    */
-  const { x, y, w, h } = tila.ala;
   const varjo = document.createElementNS(TUMMENNUS_NS, 'path');
   varjo.setAttribute('class', 'maatummennus-varjo');
-  varjo.setAttribute('fill-rule', 'evenodd');
+  varjo.setAttribute('fill-rule', 'nonzero');
   varjo.setAttribute('fill', TUMMENNUS_MUSTE);
-  varjo.setAttribute('d', `M${x} ${y}H${x + w}V${y + h}H${x}Z${d}`);
+  varjo.setAttribute('d', muut);
   kerros.appendChild(varjo);
   const viiva = document.createElementNS(TUMMENNUS_NS, 'path');
   viiva.setAttribute('class', 'maatummennus-viiva');
-  viiva.setAttribute('d', d);
+  viiva.setAttribute('d', oma);
   viiva.setAttribute('stroke-width', String(TUMMENNUS_VIIVA));
   kerros.appendChild(viiva);
   ui.maatummennusAvain = tila.avain;
