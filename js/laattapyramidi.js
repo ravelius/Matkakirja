@@ -501,6 +501,7 @@ const mittarit = {
   ruudulla: 0,
   karkeita: 0,
   nostoja: 0,
+  viivoja: 0,
   ladattu: 0,
   epaonnistui: 0,
   esiladattu: 0,
@@ -591,17 +592,23 @@ function laattaUrl(taso, sarake, rivi) {
     return pyramidiUrl(`${luettelo.nostotaso.versio}/nostot/z${taso.z}/${sarake}/${rivi}`
       + `.${luettelo.muoto ?? 'webp'}`);
   }
+  // Viivataso samoin omassa versiossaan: <viivaversio>/viivat/z…
+  if (taso.viiva) {
+    return pyramidiUrl(`${luettelo.viivataso.versio}/viivat/z${taso.z}/${sarake}/${rivi}`
+      + `.${luettelo.muoto ?? 'webp'}`);
+  }
   return pyramidiUrl(`${luettelo.versio}/z${taso.z}/${sarake}/${rivi}`
     + `.${luettelo.muoto ?? 'webp'}`);
 }
 
 /**
- * Noutokirjanpidon avain. Nostotason laatta on ERI TIEDOSTO kuin
- * saman ruudun pohjalaatta, joten sen avain saa n-etuliitteen — muuten
- * kerroksen kiinnitys merkitsisi pohjalaatan noudetuksi ja esilataus
- * ohittaisi sen.
+ * Noutokirjanpidon avain. Nosto- ja viivatason laatta on ERI TIEDOSTO
+ * kuin saman ruudun pohjalaatta, joten kumpikin saa oman
+ * etuliitteensä — muuten kerroksen kiinnitys merkitsisi pohjalaatan
+ * noudetuksi ja esilataus ohittaisi sen.
  */
-const noutoAvain = (taso, sarake, rivi) => `${taso.nosto ? 'n' : ''}${taso.z}:${sarake}:${rivi}`;
+const noutoEtuliite = (taso) => (taso.nosto ? 'n' : (taso.viiva ? 'v' : ''));
+const noutoAvain = (taso, sarake, rivi) => `${noutoEtuliite(taso)}${taso.z}:${sarake}:${rivi}`;
 
 /**
  * Käy läpi laatat, jotka osuvat annettuun laudan suorakaiteeseen.
@@ -855,6 +862,22 @@ function varmistaKerrokset(ui) {
     && ui.pyramidiTarkkaKerros?.parentNode === ui.pyramidiKerros) return;
   ui.pyramidiPohjaKerros = el('g', { class: 'pyramidi-pohjataso' }, ui.pyramidiKerros);
   ui.pyramidiTarkkaKerros = el('g', { class: 'pyramidi-tarkkataso' }, ui.pyramidiKerros);
+  /*
+   * VIIVATASO — NELJÄS KERROS, JA SEN PAIKKA ON PERUSTELTU (omistaja
+   * 31.8.2026 ilta). Järjestys pohja → tarkka → VIIVA → nosto:
+   * reitin ja rajan kuuluu olla kartan päällä, mutta noston symbolin
+   * ja nimiön kuuluu olla reitin päällä — nosto merkitsee paikan,
+   * jonne reitti vie, eikä sen saa jäädä radan alle.
+   *
+   * EI HÄIVYTYSTÄ EIKÄ HIMMENNYSTÄ, toisin kuin nostotasolla.
+   * Nostolaattoja on vain z5–z7:llä, joten kaukotasolla kerros on
+   * pakko häivyttää; viivataso on olemassa JOKA TASOLLA (z0–z7),
+   * koska reitti, piiri ja raja ovat kartan merkintöjä, jotka
+   * kutistuvat kartan mukana ja häipyvät itsestään. Opacity-haara
+   * olisi siis pelkkä sääntö, joka ei koskaan laukea — ja väärässä
+   * tilanteessa se piilottaisi puolet kartasta.
+   */
+  ui.pyramidiViivaKerros = el('g', { class: 'pyramidi-viivataso' }, ui.pyramidiKerros);
   /*
    * NOSTOTASO — kolmas kerros samaan siirtoryhmään (omistaja 31.8.2026
    * ilta): nostolaatat liikkuvat kompositorilla yhtenä pohjan kanssa,
@@ -1219,6 +1242,72 @@ function nostotasonTasot() {
  * tason nostolliset laatat, ja seuraava syvä näkymä siivoaa ne
  * paivitaKerroksen omalla kirjanpidolla.
  */
+/* ------------------------------------------------------------ viivataso */
+
+/**
+ * Viivatason tasot — pohjan tasogeometria viivatason laatastolla.
+ *
+ * Sama rakenne kuin nostotasonTasot, ja samasta syystä: laattaruudukko
+ * on TÄSMÄLLEEN pohjan ruudukko samalla z:lla, joten tasot johdetaan
+ * pohjan tasoista eikä kirjoiteta luetteloon toiseen kertaan. Vaihtuu
+ * `laatasto` (viivatason bittikartta — tyhjiä viivalaattoja EI OLE
+ * OLEMASSA) ja `viiva: true`, joka ohjaa osoitteen viivat-alipolkuun
+ * (laattaUrl) ja noutokirjanpidon omalle avaimelleen (noutoAvain).
+ * `__bitit: undefined` on pakollinen: levityskopio toisi pohjan tason
+ * valmiiksi puretun bittikartan mukanaan.
+ */
+function viivatasonTasot() {
+  const vt = luettelo?.viivataso;
+  if (!vt?.tasot?.length || !vt.laatastot) return null;
+  if (!luettelo.__viivaTasot) {
+    luettelo.__viivaTasot = luettelo.tasot
+      .filter((t) => vt.tasot.includes(t.z) && vt.laatastot[t.z])
+      .map((t) => ({
+        ...t, laatasto: vt.laatastot[t.z], __bitit: undefined, viiva: true,
+      }));
+  }
+  return luettelo.__viivaTasot.length ? luettelo.__viivaTasot : null;
+}
+
+/**
+ * Päivittää viivatason kerroksen.
+ *
+ * === TYHJÄ KERROS ON KOKO YHTEENSOPIVUUS ===========================
+ *
+ * Vanha luettelo (ennen viivatasoa) ei tunne `viivataso`-kenttää.
+ * Silloin `viivatasonTasot` palauttaa nullin, kerros jää tyhjäksi
+ * eikä yhtäkään laattaa pyydetä — peli on täsmälleen se, mikä se oli
+ * ennen tätä erää, ja reitit tulevat pohjalaatoista kuten ennenkin.
+ * SIKSI TÄMÄ SELAINMUUTOS ON JULKAISUKELPOINEN YKSIN, ja siksi
+ * julkaisujärjestys on selain ensin (ks. workflow).
+ *
+ * ILMAN HÄIVYTYSTÄ: viivataso kattaa kaikki tasot, joten kerrosta ei
+ * koskaan piiloteta (ks. varmistaKerrokset). Jos luettelossa on vain
+ * osa tasoista — koeajo — kerros tyhjennetään niiltä tasoilta, joilla
+ * laattoja ei ole: puuhun jäänyt väärän tason viivakerros osuisi
+ * väärään kohtaan kartalla.
+ */
+function paivitaViivataso(ui, taso, laatta, arkki, alue, nakyva) {
+  const kerros = ui.pyramidiViivaKerros;
+  if (!kerros) return;
+  const tasot = viivatasonTasot();
+  const oma = tasot?.find((t) => t.z === taso.z) ?? null;
+  if (!oma) {
+    if (ui.pyramidiViiva?.laatat.size) {
+      poistaVanhaTaso(ui.pyramidiViiva);
+      for (const kuva of ui.pyramidiViiva.laatat.values()) peruLaatta(kuva);
+      ui.pyramidiViiva.laatat = new Map();
+      ui.pyramidiViiva.z = null;
+    }
+    mittarit.viivoja = 0;
+    return;
+  }
+  ui.pyramidiViiva ??= tyhjaTila(kerros);
+  ui.pyramidiViiva.kerros = kerros;
+  paivitaKerros(ui.pyramidiViiva, oma, laatta, arkki, alue, nakyva, 'low');
+  mittarit.viivoja = ui.pyramidiViiva.laatat.size;
+}
+
 function paivitaNostotaso(ui, taso, laatta, arkki, alue, nakyva) {
   const kerros = ui.pyramidiNostoKerros;
   if (!kerros) return;
@@ -1378,7 +1467,14 @@ export function paivitaPyramidi(ui) {
   ui.pyramidiLaatat = ui.pyramidiTarkka.laatat;
 
   /*
-   * NOSTOTASO TARKAN PÄÄLLE. Kiinnitysalue on sama kuin tarkalla
+   * VIIVATASO TARKAN PÄÄLLE JA NOSTOJEN ALLE. Kiinnitysalue on sama
+   * kuin tarkalla tasolla, ja prioriteetti matala samasta syystä kuin
+   * nostoilla: pohjakartta menee aina merkintöjen edelle.
+   */
+  paivitaViivataso(ui, taso, laatta, arkki, kiinnitys, nakyva);
+
+  /*
+   * NOSTOTASO PÄÄLLIMMÄISENÄ. Kiinnitysalue on sama kuin tarkalla
    * tasolla, ja prioriteetti matala: pohjakartta menee aina nostojen
    * edelle — nosto ilman karttaa alla olisi mustetta tyhjällä
    * pergamentilla.
@@ -1418,19 +1514,23 @@ export function nollaaPyramidi(ui) {
   if (!ui?.pyramidiKerros) return;
   clearTimeout(ui.pyramidiTarkka?.ajastin);
   clearTimeout(ui.pyramidiKarkea?.ajastin);
+  clearTimeout(ui.pyramidiViiva?.ajastin);
   clearTimeout(ui.pyramidiNosto?.ajastin);
   while (ui.pyramidiKerros.firstChild) ui.pyramidiKerros.firstChild.remove();
   // Kerrokset ja niiden tilat rakennetaan seuraavassa päivityksessä.
   ui.pyramidiPohjaKerros = null;
   ui.pyramidiTarkkaKerros = null;
+  ui.pyramidiViivaKerros = null;
   ui.pyramidiNostoKerros = null;
   ui.pyramidiTarkka = null;
   ui.pyramidiKarkea = null;
+  ui.pyramidiViiva = null;
   ui.pyramidiNosto = null;
   ui.pyramidiLaatat = new Map();
   ui.pyramidiPohja = null;
   mittarit.nakymassa = 0;
   mittarit.ruudulla = 0;
   mittarit.karkeita = 0;
+  mittarit.viivoja = 0;
   mittarit.nostoja = 0;
 }
