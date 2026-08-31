@@ -713,6 +713,14 @@ function nostoLisakohteet(ui) {
         tyyppi: 'nosto',
         symboli: NOSTOSYM_TYYPIT.has(nosto.symboli) ? nosto.symboli : 'huuto',
         avaa: (kaytto) => avaaNosto(kaytto ?? ui, nosto),
+        // Osio yhdistetylle lehdelle — sama sopimus ja sama perustelu
+        // kuin syvennystarinalla (js/syvennys.js, js/fokusryhmat.js).
+        // Luetuksi merkintä tehdään myös osiona, koska tarina on siinä
+        // luettavissa aivan kuten omassa kortissaan.
+        osio: (kaytto, sailio) => {
+          nostoMerkitseLuetuksi(nosto.id);
+          piirraNostonSisus(kaytto ?? ui, sailio, nosto);
+        },
       },
       paikka: { x: paikka.x, y: paikka.y },
     });
@@ -752,29 +760,22 @@ function avaaNosto(ui, nosto) {
  * sen päällä. Napautus kortin ulkopuolelle tai Esc sulkee, ja
  * sulkemisen jälkeen poolin seuraava nosto saa nousta.
  */
-function avaaNostonKortti(ui, nosto) {
+/**
+ * NOSTON SISUS — otsikko, kuvat, teksti, lähde, karttaliite,
+ * kohdenappi ja pöllökysymykset.
+ *
+ * Erotettu omaksi funktiokseen 31.8.2026 (kategoria per kaupunki):
+ * sama sisus latoutuu joko lunastuskortin ylärivin alle tai osiona
+ * yhdistetyllä lehdellä (js/fokuskohteet.js piirraRyhmanOsiot). Rivit
+ * ja niiden järjestys ovat entiset.
+ *
+ * KOHDENAPPI SULKEE OMAN KORTTINSA VAIN JOS SELLAINEN ON AUKI:
+ * suljeNostonKortti on turvallinen myös silloin kun nosto latoutui
+ * osiona, koska se palaa tyhjentäneenä eikä ui.fokusnostoKortti ole
+ * silloin asetettu.
+ */
+function piirraNostonSisus(ui, sisalto, nosto) {
   nostoLataaTyyli();
-  suljeNostonKortti(ui);
-
-  const kerros = html('div', 'fokusnosto-kerros');
-  const kortti = html('div', 'fokusnosto-kortti');
-  kortti.setAttribute('role', 'dialog');
-  kortti.setAttribute('aria-modal', 'false');
-  kortti.setAttribute('aria-label', nosto.otsikko);
-
-  const sulje = html('button', 'fokusnosto-kortti-sulje', '✕');
-  sulje.type = 'button';
-  sulje.title = 'Sulje';
-  sulje.setAttribute('aria-label', 'Sulje');
-  kortti.appendChild(sulje);
-
-  const sisalto = html('div', 'fokusnosto-sisalto');
-  // Ylärivi on kohdemallin yhteinen: aihesymboli ja luokan nimi —
-  // sama rivi kuin kartan kohdekortissa ja eläintäyllä (YHTENÄINEN
-  // KOHDEMALLI: erot ovat sisällön laajuus ja aihesymboli).
-  sisalto.appendChild(nostosymKortinYlarivi(
-    NOSTOSYM_TYYPIT.has(nosto.symboli) ? nosto.symboli : 'huuto', 'fokusnosto-ylarivi',
-  ));
   sisalto.appendChild(html('h3', 'fokusnosto-kortti-otsikko', nosto.otsikko));
   if (nosto.kuva) piirraNostonKuva(ui, sisalto, nosto.kuva);
   const teksti = html('div', 'fokusnosto-teksti');
@@ -808,6 +809,32 @@ function avaaNostonKortti(ui, nosto) {
   }
 
   piirraNostonKysymykset(ui, sisalto, nosto);
+}
+
+function avaaNostonKortti(ui, nosto) {
+  nostoLataaTyyli();
+  suljeNostonKortti(ui);
+
+  const kerros = html('div', 'fokusnosto-kerros');
+  const kortti = html('div', 'fokusnosto-kortti');
+  kortti.setAttribute('role', 'dialog');
+  kortti.setAttribute('aria-modal', 'false');
+  kortti.setAttribute('aria-label', nosto.otsikko);
+
+  const sulje = html('button', 'fokusnosto-kortti-sulje', '✕');
+  sulje.type = 'button';
+  sulje.title = 'Sulje';
+  sulje.setAttribute('aria-label', 'Sulje');
+  kortti.appendChild(sulje);
+
+  const sisalto = html('div', 'fokusnosto-sisalto');
+  // Ylärivi on kohdemallin yhteinen: aihesymboli ja luokan nimi —
+  // sama rivi kuin kartan kohdekortissa ja eläintäyllä (YHTENÄINEN
+  // KOHDEMALLI: erot ovat sisällön laajuus ja aihesymboli).
+  sisalto.appendChild(nostosymKortinYlarivi(
+    NOSTOSYM_TYYPIT.has(nosto.symboli) ? nosto.symboli : 'huuto', 'fokusnosto-ylarivi',
+  ));
+  piirraNostonSisus(ui, sisalto, nosto);
 
   kortti.appendChild(sisalto);
   kerros.appendChild(kortti);
