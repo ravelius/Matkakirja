@@ -3,8 +3,10 @@ const CACHE = 'matkakirja-2026-08-09.1379';
 const SHELL = [
   './',
   './index.html',
+  './kohtaamiskuvat.html',
   './manifest.webmanifest',
   './css/styles.css',
+  './css/kohtaamiskuvat.css',
   // Fokusmoodin annostelukortti lataa oman tyylinsä itse (js/fokusvirta.js).
   './css/fokusvirta.css',
   './css/fokuskohteet.css',
@@ -27,6 +29,8 @@ const SHELL = [
   './js/vertailu.js',
   './js/nahtavyydet.js',
   './js/kuvagalleria.js',
+  './js/kohtaamiskuvat-data.js',
+  './js/kohtaamiskuvat.js',
   './js/opas.js',
   './js/lehti.js',
   './js/ehdotukset.js',
