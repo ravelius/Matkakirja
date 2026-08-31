@@ -82,6 +82,7 @@ import { fileURLToPath } from 'node:url';
 
 import { keraaMaailma } from './fokuskartta/maailma.mjs';
 import { keraaSisalto, sisallonYhteenveto } from './fokuskartta/sisalto.mjs';
+import { keraaNostot, nostojenYhteenveto } from './fokuskartta/nostot.mjs';
 import { RESEPTIT, TAUSTA, patinoiSelaimessa } from './patina.mjs';
 import { laudanProjektio, SYVYYS } from './fokuskartta/piirto.js';
 
@@ -232,7 +233,8 @@ const lippu = (nimi) => argv.includes(`--${nimi}`);
 if (!kohdekansio || kohdekansio.startsWith('--')) {
   console.error('Käyttö: node tools/generoi-laattapyramidi.mjs <kohdekansio> '
     + '[--data <kansio>] [--tasot 0-4] [--alue lon0,lat0,lon1,lat1] '
-    + '[--laatta 512] [--laatu 0.9] [--muoto webp] [--kuiva]');
+    + '[--laatta 512] [--laatu 0.9] [--muoto webp] [--kuiva] '
+    + '[--saumatesti [--saumakohta sarake,rivi]]');
   process.exit(1);
 }
 
@@ -416,6 +418,22 @@ const ALUE = alueTeksti
 const moduuli = await import(LAUTA.moduuli.replace('./', `${JUURI}/`));
 const pack = moduuli[LAUTA.vienti];
 if (!pack?.map?.width) throw new Error('Laudan mittoja ei löytynyt.');
+
+/*
+ * POLTETTAVAT KARTTANOSTOT (Raamattu 31.8.2026, KARTTANOSTOT POLTETAAN
+ * LAATTOIHIN). Ladonta ajetaan KERRAN koko arkille — ei lohkoittain —
+ * täsmälleen samasta syystä kuin paikannimillä aikanaan: nimiöiden
+ * väistö ja merkkien erottelu ovat GLOBAALEJA päätöksiä, ja
+ * lohkoittain ladottuna naapurit päätyisivät eri tulokseen. Silloin
+ * nosto katkeaisi laattarajalle.
+ *
+ * Tulos on pelkkää dataa laudan yksiköissä, ja piirtäjä (maailmapiirto)
+ * skaalaa sen laatan tarkkuuteen. Sama joukko piirtyy jokaiseen
+ * lohkoon, joka sen alueen kattaa.
+ */
+const nostot = keraaNostot(pack);
+console.log(nostojenYhteenveto(nostot.tilasto));
+for (const rivi of nostot.tilasto.estot) console.log(`    esto ${rivi}`);
 
 const { projektio } = LAUTA;
 const kaava = laudanProjektio(projektio);
@@ -919,6 +937,14 @@ writeFileSync(join(tyokansio, 'aineisto.json'), JSON.stringify({
  * polyviivat), eikä sitä kannata ahtaa aineisto.jsonin sekaan.
  */
 writeFileSync(join(tyokansio, 'sisalto.json'), JSON.stringify(sisalto ?? null));
+/*
+ * POLTETTAVAT KARTTANOSTOT omana tiedostonaan samasta syystä kuin
+ * sisältö. Piirtoon menee VAIN `poltettava`-merkit: estetyn maan
+ * merkit lasketaan mukaan tilastoon, mutta niitä ei polteta eikä
+ * kirjata luetteloon, jolloin peli piirtää ne elävinä.
+ */
+writeFileSync(join(tyokansio, 'nostot.json'),
+  JSON.stringify(nostot.merkit.filter((m) => m.poltettava)));
 
 /*
  * AINEISTO PURETAAN KERRAN, EI KERRAN LAATTAA KOHTI.
@@ -932,8 +958,16 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
 <body style="margin:0;background:#333"><canvas id="k"></canvas>
 <script type="module">
   import { piirraMaailma } from './maailmapiirto.js';
+  /*
+   * PELIN OMA SYMBOLIKIRJASTO. Poltettu merkki piirretään täsmälleen
+   * samalla funktiolla kuin elävä (Raamattu 31.8.2026: poltetun ja
+   * selaimen on tultava samasta lähteestä) — generaattorissa ei ole
+   * yhtään merkin muotoa.
+   */
+  import { piirraNostosymPolttoon } from './fokusnosto-symbolit.js';
   const aineisto = await (await fetch('./aineisto.json')).json();
   const sisalto = await (await fetch('./sisalto.json')).json();
+  const nostot = await (await fetch('./nostot.json')).json().catch(() => null);
   aineisto.korkeus.grid = new Int16Array(await (await fetch('./korkeus.bin')).arrayBuffer());
   aineisto.meri = aineisto.meri
     ? new Uint8Array(await (await fetch('./meri.bin')).arrayBuffer()) : null;
@@ -971,6 +1005,8 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
       siirto: { x: siirto.x - R, y: siirto.y - R },
       arkki: saumaArkki,
       sisalto,
+      nostot,
+      piirraNosto: piirraNostosymPolttoon,
       paperiS: saumaPaperiS,
     });
     const kctx = kangas.getContext('2d', { willReadFrequently: true });
@@ -1112,6 +1148,8 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
         siirto: { x: perus.siirto.x + siirtoPx - R, y: perus.siirto.y - R },
         arkki: perus.arkki,
         sisalto,
+        nostot,
+        piirraNosto: piirraNostosymPolttoon,
         paperiS: perus.paperiS ?? null,
       });
       const kctx = kangas.getContext('2d', { willReadFrequently: true });
@@ -1162,7 +1200,9 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
   };
 
   window.__lohko = async (asetukset, laatta, tyyppi, laatu, patina) => {
-    piirraMaailma(kangas, aineisto, { ...asetukset, sisalto });
+    piirraMaailma(kangas, aineisto, {
+      ...asetukset, sisalto, nostot, piirraNosto: piirraNostosymPolttoon,
+    });
     /*
      * PATINA KOKO LOHKOLLE, REUNUS MUKAAN LUKIEN. Vasta sen jälkeen
      * leikataan laatat reunuksen sisältä, jolloin jokainen paikallinen
@@ -1221,6 +1261,16 @@ const palvelin = createServer((req, res) => {
     '/piirto.js': join(TAALLA, 'fokuskartta', 'piirto.js'),
     '/aineisto.json': join(tyokansio, 'aineisto.json'),
     '/sisalto.json': join(tyokansio, 'sisalto.json'),
+    '/nostot.json': join(tyokansio, 'nostot.json'),
+    /*
+     * PELIN OMA SYMBOLIKIRJASTO SIVULLE. Poltettu merkki piirretään
+     * TÄSMÄLLEEN samalla koodilla kuin elävä (piirraNostosymPolttoon),
+     * eikä muotoja kirjoiteta generaattoriin toiseen kertaan.
+     * `mapart.js` tulee mukana, koska kirjasto tuo siitä `el`/`maare`
+     * elävää varapolkuaan varten.
+     */
+    '/fokusnosto-symbolit.js': join(JUURI, 'js', 'fokusnosto-symbolit.js'),
+    '/mapart.js': join(JUURI, 'js', 'mapart.js'),
     '/korkeus.bin': join(tyokansio, 'korkeus.bin'),
     '/meri.bin': join(tyokansio, 'meri.bin'),
   };
@@ -1290,12 +1340,24 @@ const TYYLI = { meret: MERET, kehys: KEHYS, kompassi: KOMPASSI };
  * olisivat samat.
  */
 if (lippu('saumatesti')) {
+  /*
+   * KOEALA ON VALITTAVISSA (--saumakohta sarake,rivi; oletus 8,2).
+   *
+   * Oletusala on avomerta, ja se on tarkoitus: siellä testataan
+   * paperin rae ja kohdistusheitto ilman vektoreiden hälyä. Mutta
+   * SISÄLTÖ on se, mikä oikeasti voi katketa laattarajalle — poltettu
+   * karttanosto, jonka nimiö on kymmeniä pikseleitä pitkä — ja siksi
+   * koe on voitava ajaa myös sen päälle. Ateenan rypäs on z7:llä
+   * sarakkeella 93, rivillä 41.
+   */
+  const [saumaSarake, saumaRivi] = String(valitsin('saumakohta', '8,2'))
+    .split(',').map(Number);
   for (const mitat of tasot) {
     const ruudukko = 2;
     const perus = {
       bbox: {
-        x: arkinBbox.x + (8 * LAATTA) / mitat.px,
-        y: arkinBbox.y + (2 * LAATTA) / mitat.px,
+        x: arkinBbox.x + (saumaSarake * LAATTA) / mitat.px,
+        y: arkinBbox.y + (saumaRivi * LAATTA) / mitat.px,
         w: (ruudukko * LAATTA) / mitat.px,
         h: (ruudukko * LAATTA) / mitat.px,
       },
@@ -1303,7 +1365,7 @@ if (lippu('saumatesti')) {
       leveys: ruudukko * LAATTA,
       tyyli: TYYLI,
       koko: { w: mitat.leveys, h: mitat.korkeus },
-      siirto: { x: 8 * LAATTA, y: 2 * LAATTA },
+      siirto: { x: saumaSarake * LAATTA, y: saumaRivi * LAATTA },
       arkki: { x: arkinBbox.x, y: arkinBbox.y },
       paperiS: PAPERI_S,
     };
@@ -1516,6 +1578,24 @@ function teeLuettelo() {
    * "laatoissa on nimet" — silloin se vaikenee, kuten v1366:sta asti.
    */
   nimiot: false,
+  /*
+   * MITKÄ KARTTANOSTOT TÄSSÄ AJOSSA POLTETTIIN: tunnus → sisällön
+   * tiiviste (js/nostoladonta.js nostoladontaTiiviste).
+   *
+   * PELKKÄ TOTUUSARVO EI RIITÄ kuten nimiöillä, koska kerrokset ovat
+   * RINNAKKAISET eivätkä toisensa poissulkevat (Raamattu 31.8.2026):
+   * maailma kasvaa nopeammin kuin pyramidia ajetaan, joten kartalla on
+   * aina viimeisimmässä ajossa poltettuja JA sen jälkeen lisättyjä
+   * eläviä nostoja. Peli piirtää elävänä jokaisen merkin, jonka
+   * tunnusta luettelo ei tunne TAI jonka tiiviste eroaa
+   * (js/laattapyramidi.js nostoOnPoltettu).
+   *
+   * TIIVISTE EIKÄ PELKKÄ TUNNUSLISTA: tunnus kertoo, oliko merkki
+   * polttohetkellä olemassa; tiiviste kertoo, onko se yhä sama merkki.
+   * Nimen, symbolin, ryhmän jäsenten tai paikan muutos näkyy siinä
+   * heti, eikä laatan vanhentunut kuva jää kartalle yksin.
+   */
+  nostot: nostot.luettelo,
   /*
    * MERISÄVY: se yksi väri, jolla peli maalaa karsittujen umpimeren
    * laattojen paikan (ks. umpimeriSavy). Null, jos mitään ei karsittu.

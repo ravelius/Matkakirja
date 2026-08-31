@@ -1,3 +1,331 @@
+# Opus → Fable: karttanostot poltetaan laattoihin (31.8.2026)
+
+Haara `claude/nostot-laattoihin`. **PR #1824 ei ollut mainissa**, joten
+pohjaksi otettiin sen haara `claude/matkakirja-paatoimittaja-8glw2i`
+(bc77d9d2, v1382) — kuten ohjeistit. Ei versionostoa, ei PR:ää.
+**Pyramidin generointiajoa EI ajettu** (ks. luku 6: konttiympäristö
+esti sen, ja se oli oikein).
+
+Muutetut tiedostot: `js/nostoladonta.js` (uusi),
+`js/fokusnosto-symbolit.js`, `js/fokusniput.js`, `js/fokuskohteet.js`,
+`js/fokusnosto.js`, `js/syvennys.js`, `js/skandaalit.js`,
+`js/laattapyramidi.js`, `js/ui.js`, `css/fokuskohteet.css`, `sw.js`,
+`tools/fokuskartta/nostot.mjs` (uusi),
+`tools/fokuskartta/maailmapiirto.js`, `tools/generoi-laattapyramidi.mjs`,
+`tools/build-standalone.mjs`, `tools/savukkeet/savuke-nostopoltto.mjs`
+(uusi savuke), `tools/savukkeet/mittaa-nostopoltto.mjs` (uusi
+mittanauha).
+
+Koordinaatteihin, korttiteksteihin, visoihin, kuviin, ryhmittelyyn,
+pilkkulistaan, symbolien muotoihin ja reittien/jokien piirtoon EI
+koskettu. `js/tyohuone-raamattu.js` ja tarinakaanon koskemattomia.
+
+---
+
+## 1. Ehto 1: YKSI LADONTA — tehty, ja mitattu
+
+Laattageneraattori ei laske ladontaa. Se **ajaa pelin omat passit**
+kokoamalla niille tyngän `ui`-oliosta laudan datasta
+(`tools/fokuskartta/nostot.mjs`):
+
+| passi | mistä tulee |
+| --- | --- |
+| ryhmittely | `js/fokuskohteet.js kohdeKarttarivit` → `js/fokusryhmat.js` |
+| erottelusiirto | `js/fokuskohteet.js eritteleKohdeRyhmat` |
+| kasaus ja nostoviivat | `js/fokusniput.js niputaFokusmerkit` |
+| nimiöiden väistö | `js/fokuskohteet.js paivitaKohdeNimiot` |
+| mittakaava ja tiiviste | `js/nostoladonta.js` |
+| merkin ja nimiön piirto | `js/fokusnosto-symbolit.js piirraNostosymPolttoon` |
+
+Generaattorissa ei ole yhtään merkin muotoa, yhtään mittaa eikä yhtään
+väistösääntöä. Jokainen luku, jonka se piirtää, on tullut sieltä, mistä
+peli sen lukee. `js/nostoladonta.js` on **lehtimoduuli, joka ei tuo
+mitään** — sinne siirtyi js/ui.js:n `FOKUS_LEHTI_PROTO` ja
+`FOKUS_MERKKI_KATTO`, ja `ui.fokusMerkkiSkaalaPohja()` on nyt yhden
+rivin kutsu sinne. Kaava on siis yhdessä paikassa eikä kahdessa.
+
+### Kaksi mittausta, jotka todistavat sen
+
+**(a) Sama paikka Nodessa ja selaimessa** (`savuke-nostopoltto`, uusi).
+Sama maa ladotaan kahdesti — Nodessa ilman DOMia ja oikeassa pelissä
+oikeassa selaimessa — ja merkkien laudan koordinaatit luetaan pelin
+DOMista (ankkuriryhmän `transform`):
+
+| kaupunki | ruutu | merkkejä | s | pahin paikkaero |
+| --- | --- | --- | --- | --- |
+| Ateena | iPad 834×1112 | 35 | 0,584862 | **0,0059 lautayksikköä** |
+| Ateena | iPhone 390×844 | 35 | 0,584862 | **0,0059** |
+| Dubrovnik | iPad | 25 | 0,393512 | **0,0055** |
+| Dubrovnik | iPhone | 25 | 0,393512 | **0,0055** |
+
+0,0059 EI ole ladonnan ero vaan **kirjoitustarkkuus**: peli kirjoittaa
+muunnoksen `toFixed(2)`:lla, joten sadasosa on se, mitä DOMista voi
+enintään lukea. iPad ja iPhone antavat saman luvun numeroa myöten.
+
+**(b) Poltettu merkki ja elävä osumamuoto samassa pisteessä**
+(`mittaa-nostopoltto`, uusi). Poltettu kerros piirretään samalla
+funktiolla ja samasta datasta kuin laatassa, kartan omalla
+muunnoksella, ja sitä verrataan siihen näkymättömään ympyrään, jota
+sormi napauttaa:
+
+| kaupunki | verrattuja | mediaaniero | pahin ero |
+| --- | --- | --- | --- |
+| Ateena | 34 | **0,0003 px** | **0,0102 px** |
+| Dubrovnik | 23 | **0,0005 px** | **0,0141 px** |
+
+**Sadasosapikseli.** Se on kelluvan pisteen pyöristys `getScreenCTM`in
+ja SVG-muunnoksen välillä, ei ladonnan ero. Pyydetty luku on siis nolla
+niin tarkasti kuin sen voi mitata.
+
+### Mikä muuttui, jotta tämä oli mahdollista
+
+1. **Nimiön törmäyslaatikko ei enää tule `measureText`istä**
+   (`js/fokusnosto-symbolit.js nostosymNimioMitta`). Se on nyt sama
+   merkkileveystaulukko, jolla pilkkulista jo katkaistaan. Syy on
+   kaksitahoinen: `measureText` antaa eri vastauksen Chromiumissa ja
+   Safarissa (`--font-atlas` osuu iOS:llä Timesiin), eikä sitä ole
+   Nodessa lainkaan. Nimiön asut saivat samalla halon leveyden
+   koodiin — luvut ovat sanatarkasti css/styles.css:n omat (3,1 ja 0).
+2. **Kasauspassi ei enää riipu vuorosta** (ks. luku 4).
+
+## 2. Ehto 2: KAKSOISPIIRRON ESTO LUETTELOSSA — tehty
+
+`pyramidi.json` sai kentän `nostot`: **tunnus → sisällön tiiviste**.
+Peli lukee sen `js/laattapyramidi.js nostoOnPoltettu`illa, ja
+`js/fokuskohteet.js merkitsePoltetutNostot` vaientaa poltetun merkin.
+
+**Oletus on: mitään ei ole poltettu.** Kirjasin perustelun koodiin
+`laatoissaOnNimet`in rinnalle ja nimenomaan sen kanssa vastakkain:
+nimiöillä väärä oletus "laatoissa on nimet" vaientaa pelin, ja jos
+laatoissa EI ole nimiä, kartalta katoavat kaikki nimet — siksi siellä
+oletetaan vanha maailma. Tässä sisällön kadottaisi juuri "on
+poltettu": peli vaikenisi merkistä, jota laatassa ei ole. Väärä oletus
+maksaa siis enintään kaksoispiirron **samaan pisteeseen** — ja koska
+ladonta on sama molemmilla puolilla, se on kaksinkertainen muste eikä
+kahta merkkiä eri kohdissa. Korjaantuu itsestään luettelon saapuessa.
+
+**Mitä jää eläväksi poltetusta merkistä:** näkymätön osumamuoto
+(`.fokuskohde-osuma` — juuri se on syy, miksi kerros on yhä olemassa),
+aihevalo (vilkkuu, siis pelitilaa) ja korostusrengas (syttyy vain auki
+olevalle kortille). Merkki on yhä napautettava ja avaa korttinsa
+täsmälleen kuten ennen — savuke-fokuskohteet 102/102 ei liikahtanut.
+
+Kentän koko: **11 828 tavua**, koko `pyramidi.json` 16 571 tavua.
+
+## 3. Ehto 3: TIIVISTE HUOMAA MUUTOKSEN — tehty
+
+Tiivisteessä on tunnus, symboli, merkin laji, **nimiö sellaisena kuin
+se piirtyy** (lyhennettynä ja katkaistuna), merkin lopullinen paikka ja
+**ryhmän jäsenet järjestyksessä**. FNV-1a 32 bittiä, kahdeksan
+heksamerkkiä; kryptografista tiivistettä ei tarvita eikä sitä saisi
+tuoda riippuvuutena kahteen ajoympäristöön. Savuke vartioi jokaisen
+neljän muutoksen erikseen.
+
+**Väistön päätös (näkyykö nimiö, kummalla puolella) EI ole
+tiivisteessä**, ja se on tarkoitus — kirjattu koodiin. Päätös on
+funktio merkkijoukosta, paikoista ja nimiöteksteistä, jotka kaikki
+ovat tiivisteessä; ainoa tapa muuttaa se tiivisteen huomaamatta on
+muuttaa väistön ALGORITMIA, ja se on koodimuutos, joka vaatii uuden
+polton siinä missä symbolin muodon muutoskin. Rakenteellinen syy:
+peli päättää merkin poltetuksi ENNEN väistöpassia, joten päätös ei voi
+olla tiivisteen syötettä ilman kehää.
+
+**Kiertävä lauta hoidettu:** merkin kopio laudan leveyden päässä
+vähentää kiertonsa pois tiivisteestä (`tietue.kierto`). Ilman sitä
+kopio jäisi tunnistamatta ja piirtyisi elävänä poltetun päälle —
+mitattuna 34 poltettua 70 kopiosta ennen korjausta, 68 sen jälkeen.
+
+## 4. Kaksi pelitilariippuvuutta piti poistaa ladonnasta
+
+Nämä eivät olleet valinta vaan polton ehto. Molemmat on kirjattu
+`js/fokusniput.js`:ään otsikolla *"SARAKE ON LAUDAN ASIA, EI VUORON"*.
+
+1. **Nippu latoutuu nyt maan JOKAISEN kaupungin ympärille**, ei vain
+   sen, jossa pelaaja seisoo (`ui.fokuskohdeKaupungit`). Sama lista ja
+   sama sääntö kuin ryhmittelyllä, joka on tehnyt näin alusta asti.
+   **Hinta on kirjattava:** kun pelaaja on Ateenassa, Thessalonikin
+   merkit ovat nyt myös nipussa oman kaupunkinsa kyljessä eivätkä
+   omissa koordinaateissaan. Se on juuri se, mitä poltto tarkoittaa —
+   kartta ei enää muutu sen mukaan, missä pelaaja seisoo. **Tämä on
+   näkyvä muutos ja kaipaa omistajan silmää.**
+2. **Vihreän kohtaamispisteen väistö poistui** (entinen `NIPPU_VAPAA`,
+   sääntö 4). Piste ilmestyy ja katoaa kesken pelin, eikä poltettu
+   sarake voi väistää jotain, mitä laatassa ei ole. Piste piirtyy omassa
+   kerroksessaan merkkien päälle ja saa peittää merkin hetkeksi;
+   napautuksen voittaa yhä lähin osumamuodon keskipiste. Edellinen erä
+   ehdotti tätä samaa (havainto 5).
+
+## 5. Mitä EI poltettu, ja miksi — 624 merkistä 413
+
+```
+  nostot   624 merkkiä 78 maasta, poltetaan 413
+           · 7 maata estetty (täky) · 78 monen maan merkkiä eläväksi
+```
+
+**a) TÄKYNOSTOT eivät ole poltettavia siellä, missä joukko vaihtuu.**
+Täkypooli luetaan ensin KAUPUNGIN omasta paketista
+(`fokusvirtaSisalto → takynostot`) ja vasta sen puuttuessa
+maapoolista. Jos saman maan kaksi kaupunkia antavat eri joukon, kartan
+täkyjoukko vaihtuu pelin aikana — ja koska täky menee samaan
+sarakkeeseen kuin muut merkit, liittyy ryhmiin jäseneksi ja työntää
+naapureitaan erottelusiirrolla, se siirtäisi paljon enemmän kuin oman
+merkkinsä. **Siksi tällainen maa jää kokonaan polttamatta.**
+Sarakekohtainen esto ei riittäisi.
+
+Estot ovat **korjattavissa datassa, eivät koodissa** — tässä ne kaikki:
+
+| maa | syy | korjaus |
+| --- | --- | --- |
+| BGR | täky `areena` ilman koordinaatteja | `paikka`-kenttä |
+| BIH | täky `pyramidi` | `paikka`-kenttä |
+| ITA | täky `kissat` | `paikka`-kenttä |
+| ROU | täky `dracula` | `paikka`-kenttä |
+| UKR | täky `sofian-mosaiikit` | `paikka`-kenttä |
+| ESP | Sevillalla oma täkylista, Madridilla oma | yhtenäinen pooli |
+| GBR | Edinburghilla oma, Lontoolla oma | yhtenäinen pooli |
+
+Viisi `paikka`-kenttää ja kaksi poolipäätöstä nostaisivat polton
+413:sta noin 500:aan. **Rooma on yksi näistä** — siksi Rooman
+kaappauksessa ei ole yhtään poltettua merkkiä.
+
+**b) MONEN MAAN MERKIT (78 kpl) jäävät eläviksi.** Maastokohteet ovat
+usean maan yhteisiä: Tonava on Saksan, Itävallan ja Unkarin listalla,
+Välimeri kuuden maan. Merkki latoutuu silloin kuudesti, joka kerta sen
+maan lehden mittatikulla ja sen maan kaupunkien ympärille — Välimeren
+merkkiskaala on Ranskassa 0,833 ja Tunisiassa 0,249, ja paikkakin on
+eri. Pelissä se on oikein (kartalla on aina vain sen maan merkit,
+jossa pelaaja on); laatassa se olisi kuusi merkkiä eri paikoissa.
+Tunnistus on tunnuksen moninkertaisuus, jolloin sama sääntö kattaa myös
+sen, että Kreikan ja Kyproksen `olympos` ovat eri vuoret samalla
+tunnuksella. **Tämä on aito rakennekysymys, ei tämän erän vika** — se
+ratkeaa vasta, jos maastokohteille annetaan yksi kotimaa tai oma
+mittatikku.
+
+**c) Ei mitään, mikä muuttuu pelin aikana:** vilkkuvat valot, nappula,
+vuororengas, korostuslaatta, vihreä kohtaamispiste, napautusalueet.
+
+## 6. Pyramidiajoa EI ajettu — ja tässä on syy
+
+Yritin renderöidä pienen alueen laattoja katsottavaksi, kuten pyysit.
+**Konttiympäristön lupajärjestelmä esti ajon** ("Blocked by
+classifier") — sekä `--tasot 7 --alue`-ajon että pelkän z0:n. Se on
+linjassa tehtävänannon oman ehdon kanssa (*"ÄLÄ AJA pyramidin
+generointityönkulkua — omistaja antaa luvan ajoon erikseen"*), enkä
+kiertänyt sitä. **Luvitettavaa ajoa ei siis ole tehty, eikä yhtään
+laattaa ole renderöity.**
+
+Mitä sen sijaan ajoin, koska se meni läpi ja on nimenomaan tarkistus:
+
+- `--kuiva` ja `--vain-luettelo` (pelkkä geometria ja luettelo, ei
+  piirtoa) — `nostot`-kenttä syntyy oikein.
+- **`--saumatesti`, ja siihen tuli parannus.** Kokeen ala oli kiinteä
+  (sarake 8, rivi 2) ja se on avomerta — siellä ei ole yhtään
+  vektoria, ja mitattuna tulos on 0/4 194 304 eli täydellinen mutta
+  tyhjä. Lisäsin `--saumakohta sarake,rivi`, jolla kokeen voi ajaa
+  sisällön päälle. **Ateenan ryppään päällä z7:llä (sarake 93, rivi
+  41):**
+
+  | ajo | eroavia kanavia | osuus | laattarajalla | pahin |
+  | --- | --- | --- | --- | --- |
+  | poltetut nostot mukana | 9 862 / 4 194 304 | 0,235 % | 67 | 3 |
+  | ilman nostoja (verrokki) | 10 138 / 4 194 304 | 0,242 % | 72 | 3 |
+  | z5 (sarake 23, rivi 10) | 1 286 / 4 194 304 | 0,031 % | 24 | 1 |
+
+  **Nostot eivät lisää saumaan mitään** — luku on verrokkia hiukan
+  PIENEMPI, koska poltettu muste peittää alleen niitä vektorien reunoja,
+  joilla pyöristysero muutenkin syntyy. Laattarajalle kasautuu 67
+  kanavaa 9 862:sta eli 0,7 %; työkalun oma saumavaroitus laukeaa
+  vasta 50 %:sta. Ladonta ajetaan kerran TASOA kohti koko arkille, ei
+  lohkoittain — kuten paikannimillä, ja samasta syystä.
+
+## 7. Kaappaukset (haaran juuressa, ei committoituna, 532 kt)
+
+| tiedosto | mitä |
+| --- | --- |
+| `nostopoltto-ateena-poltettu-lahi.png` | Ateenan rypäs POLTETTUNA |
+| `nostopoltto-ateena-elava-lahi.png` | sama näkymä elävänä (nykytila) |
+| `nostopoltto-ateena-poltettu.png` | koko lehti poltettuna |
+| `nostopoltto-dubrovnik-poltettu-lahi.png` / `-elava-lahi.png` | vertailukohta |
+| `nostopoltto-rooma-poltettu-lahi.png` | estetty maa: kaikki elävää |
+| `nostopoltto-mitat.json` | luvut koneellisesti |
+
+**Ateenan poltettu kuva on se, jota kannattaa katsoa.** Siinä on
+kolmen merkin sarake nostoviivoineen, pilkkulistat *"Olympieion, Iliou
+Melathron…"* ja *"Maratonhuijaus, Helenan korut…"* — ja **Turkin
+merkit (Izmir, Efesos, Pergamonin alttari, Mausoleum) näkyvät, vaikka
+pelaaja on Kreikassa.** Se on omistajan *"karttamerkit pysyvät aina
+samoina ja paikallaan ja näkyvissä"* toteutuneena.
+
+**Rinnakkain poltettu ja elävä:** samassa kuvassa **Ólympos on elävä**
+(monen maan merkki, luku 5b) ja kaikki muu poltettua. Ne ovat samaa
+kokoa ja samaa mustetta, koska piirto on sama funktio — eron näkee vain
+siitä, että elävä katoaa siirron aikana. Dubrovnikissa eläviä ovat
+`adrianmeri` ja `drava`.
+
+**Taustalla ei ole laattaa** (laattapyyntöihin vastataan 404), koska
+laattoja ei saanut generoida. Kartan pohjana on pelin oma pergamentti.
+
+## 8. Sivulöytö, joka kannattaa tietää
+
+**Yleiskuvan merkkikasa ratkeaa polton myötä itsestään.** Omistaja
+valitti 28.8.: *"symbolit, nimiöt ja nippujen katkoviivat näkyvät
+Sofiassa jo siirtymän aikana kaukaa"*, ja siitä syntyi
+`LEHDEN_VAHIN_OSUUS`-piilotus. Poltettu merkki on KARTAN mitassa, joten
+se kutistuu kartan mukana kuten vuorikolmio: z0:lla Ateenan symbolin
+säde on **0,1 kuvapikseliä** eli näkymätön. Merkit häipyvät siis
+itsestään loitonnettaessa — sama sääntö kuin reiteillä ja joilla
+(v1381), eikä kynnystä tarvita.
+
+Sama seikka on myös vastaus siihen, miksi nämä SAA polttaa vaikka
+paikannimiä ei: paikannimi on RUUDUN mitassa (10,5 CSS-px joka
+laitteella) eikä laatta tiedä pikselitiheyttä, joten poltettu nimi on
+iPadilla kolmasosan kokoinen. Karttanosto on KARTAN mitassa, ja tiheä
+näyttö valitsee syvemmän tason ja saa saman merkin **tarkempana, ei
+pienempänä**. Kirjasin perustelun `maailmapiirto.js`in lukuun 8c.
+
+## 9. Havaintoja, joita EN korjannut — päätöstä varten
+
+1. **Poltettu nimiö ja elävä paikannimi eivät tunne toisiaan.**
+   Nimikerros (`js/karttanimet.js`) latoo kaupunkien nimet
+   ruutuavaruudessa eikä tiedä laattaan poltetuista nostojen nimiöistä;
+   poltettu nimiö taas ei tiedä nimikerroksesta. **Näkyy
+   kaappauksessa:** Dubrovnikin poltetussa kuvassa kaupungin nimi
+   *Dubrovnik* koskettaa nimiötä *Sponzan palatsi*. Vaihtoehdot ovat
+   (a) varata poltetut nimiölaatikot nimikerrokselle etukäteen
+   (luettelossa on jo paikat, joten se on toteutettavissa), tai (b)
+   hyväksyä se, koska tilanne poistuu, kun kaikki on poltettu. En
+   valinnut kumpaakaan, koska se koskee hyväksyttyä nimiladontaa.
+2. **Muiden maiden poltetut merkit näkyvät mutta eivät ota napautusta.**
+   Osumamuodot syntyvät yhä vain sen maan merkeille, jossa pelaaja on
+   (`nykyisenMaanKohteet`). Poltettu Efesos näkyy Kreikassa mutta ei
+   avaa mitään. Omistaja pyysi näkyvyyttä, ei napautettavuutta — mutta
+   tämä on pelisuunnittelukysymys, ei koodikysymys.
+3. **`savuke-laattapyramidi` ei ajettavissa** ilman generoituja
+   laattoja ("Pilottilaattoja ei löydy"). Se on kunnossa mainissakin;
+   ajo vaatii luvitetun pyramidiajon.
+4. **`NIPPU_KOHDE_R = 5,6` on yhä vanhentunut** (kommentti sanoo sen
+   olevan `KOHDE_HALO_R`, joka on 4,9). Edellinen erä kirjasi saman;
+   en muuttanut, koska se siirtäisi jokaisen sarakkeen ja vaatisi uuden
+   polton.
+5. **`savuke-elaintaky` ja `savuke-nahtavyysihme` ovat punaisia myös
+   mainissa** — ei tämän erän aiheuttama (edellinen erä kirjasi saman).
+
+## 10. Portit
+
+- `node --test tests/*.test.mjs` → **1065 pass / 0 fail** (1 skipped)
+- `node tools/tarkista-kaksoisavaimet.mjs` → ei kaksoisavaimia
+- `node tools/tarkista-niputus.mjs` → 295 moduulia, ei törmäyksiä
+- `node tools/build-standalone.mjs` → ok (20 528 kt), `dist/` poistettu
+- `savuke-fokuskohteet` → **102/102**
+- `savuke-nostopoltto` (uusi) → **25/25**
+- `savuke-kartta-tila` → **20/20**
+- `savuke-takyportti` → **22/22**
+- `--saumatesti` z7 ja z5 → ks. luku 6
+
+Työ tehtiin omassa worktreessa (`.claude/worktrees/nostot-laattoihin`),
+koska repon juuressa toinen sessio vaihtoi haaraa kesken erän ja vei
+työpuun alta kahdesti.
+
 # Opus → Fable: "välillä kartta ei piirry ollenkaan" — korjattu (31.8.2026)
 
 Haara `claude/laattojen-esilataus` otettu **puhtaana tuoreesta

@@ -88,6 +88,43 @@ function syvennysLataaTyyli() {
 /* ==================== MERKIT KOHDEKERROKSEEN ==================== */
 
 /**
+ * MAAN SYVENNYSTARINAT KARTTARIVEIKSI — LAUDAN DATASTA, ILMAN PELIÄ.
+ *
+ * Viety ulos 31.8.2026 (Raamattu, KARTTANOSTOT POLTETAAN LAATTOIHIN).
+ * Laattageneraattori kutsuu tätä (js/nostoladonta.js kautta), jotta
+ * poltettavan merkin TUNNUS, NIMI, SYMBOLI ja PAIKKA tulevat samasta
+ * koodista kuin pelin oma merkki. Kortin avaajat eivät kuulu tänne:
+ * ne ovat pelitilaa eikä laatassa ole mitään avattavaa.
+ */
+export function syvennysKarttarivit(iso, lauta, cityCountry) {
+  const rivit = [];
+  if (!iso || !cityCountry) return rivit;
+  for (const [cityId, paikat] of Object.entries(SYVENNYSPAIKAT)) {
+    if (cityCountry[cityId] !== iso) continue;
+    for (const taky of FOKUSVIRRAT[cityId]?.takyt ?? []) {
+      const tiedot = paikat[taky.id];
+      if (!tiedot) continue;
+      const paikka = projisoiLaudalle(lauta, tiedot.lon, tiedot.lat);
+      if (!paikka) continue;
+      rivit.push({
+        cityId,
+        taky,
+        tiedot,
+        kohde: {
+          id: `syvennys-${cityId}-${taky.id}`,
+          nimi: tiedot.nimio ?? taky.otsikko,
+          nimio: tiedot.nimio ?? null,
+          tyyppi: 'syvennys',
+          symboli: tiedot.symboli,
+        },
+        paikka: { x: paikka.x, y: paikka.y },
+      });
+    }
+  }
+  return rivit;
+}
+
+/**
  * NYKYISEN MAAN SYVENNYSTARINAT LISÄKOHTEIKSI.
  *
  * Sama näkyvyysehto kuin täkynostoilla (js/fokusnosto.js nostoPooli):
@@ -105,40 +142,25 @@ function syvennysLisakohteet(ui) {
   const taulu = ui.game.pack?.map?.cityCountry;
   const iso = (taulu && taulu[city.id]) || null;
   if (!iso) return [];
-  const lauta = ui.game.pack?.id;
-  const rivit = [];
-  for (const [cityId, paikat] of Object.entries(SYVENNYSPAIKAT)) {
-    if (taulu[cityId] !== iso) continue;
-    for (const taky of FOKUSVIRRAT[cityId]?.takyt ?? []) {
-      const tiedot = paikat[taky.id];
-      if (!tiedot) continue;
-      const paikka = projisoiLaudalle(lauta, tiedot.lon, tiedot.lat);
-      if (!paikka) continue;
-      rivit.push({
-        kohde: {
-          id: `syvennys-${cityId}-${taky.id}`,
-          nimi: tiedot.nimio ?? taky.otsikko,
-          nimio: tiedot.nimio ?? null,
-          tyyppi: 'syvennys',
-          symboli: tiedot.symboli,
-          avaa: (kaytto) => avaaSyvennys(kaytto ?? ui, cityId, taky, tiedot),
-          /*
-           * OSIO YHDISTETYLLE LEHDELLE (js/fokusryhmat.js): kun saman
-           * kaupungin samanlajiset kohteet ovat yhden merkin alla,
-           * tarina latoutuu osiona kohdekortin sisään eikä omaksi
-           * kortikseen. Sisältö on TÄSMÄLLEEN SAMA kuin omassa
-           * kortissa — sama funktio latoo molemmat. Takaisinkutsu on
-           * tässä samasta syystä kuin `avaa`: ladonta asuu tässä
-           * moduulissa, joka on niputusjärjestyksessä kohteiden
-           * jäljessä.
-           */
-          osio: (kaytto, sailio) => piirraSyvennysSisus(kaytto ?? ui, sailio, cityId, taky),
-        },
-        paikka: { x: paikka.x, y: paikka.y },
-      });
-    }
-  }
-  return rivit;
+  return syvennysKarttarivit(iso, ui.game.pack?.id, taulu)
+    .map(({ cityId, taky, tiedot, kohde, paikka }) => ({
+      kohde: {
+        ...kohde,
+        avaa: (kaytto) => avaaSyvennys(kaytto ?? ui, cityId, taky, tiedot),
+        /*
+         * OSIO YHDISTETYLLE LEHDELLE (js/fokusryhmat.js): kun saman
+         * kaupungin samanlajiset kohteet ovat yhden merkin alla,
+         * tarina latoutuu osiona kohdekortin sisään eikä omaksi
+         * kortikseen. Sisältö on TÄSMÄLLEEN SAMA kuin omassa
+         * kortissa — sama funktio latoo molemmat. Takaisinkutsu on
+         * tässä samasta syystä kuin `avaa`: ladonta asuu tässä
+         * moduulissa, joka on niputusjärjestyksessä kohteiden
+         * jäljessä.
+         */
+        osio: (kaytto, sailio) => piirraSyvennysSisus(kaytto ?? ui, sailio, cityId, taky),
+      },
+      paikka,
+    }));
 }
 
 /* ==================== KORTTI ==================== */

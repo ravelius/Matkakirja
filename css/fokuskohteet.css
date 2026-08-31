@@ -105,6 +105,26 @@
 .fokuskohde:focus-visible .fokuskohde-rengas { opacity: 1; }
 
 /*
+ * POLTETTU MERKKI EI PIIRRY TÄSSÄ KERROKSESSA (omistaja 31.8.2026,
+ * Raamattu KARTTANOSTOT POLTETAAN LAATTOIHIN): symboli, nimiö ja
+ * nostoviiva ovat laattapyramidin kuvassa, ja tämä kerros piirtäisi ne
+ * toistamiseen. Luokan asettaa js/fokuskohteet.js merkitsePoltetutNostot
+ * sen mukaan, mitä pyramidi.json kertoo — ei koodissa oleva kytkin.
+ *
+ * PISTEKOHTEEN KOLME KEHÄÄ ovat tässä, koska ne piirretään suoraan
+ * ryhmään; symbolimerkin rasteri puretaan koodissa, koska tyhjä
+ * <image> maksaisi muistia jokaisesta poltetusta merkistä.
+ *
+ * MITÄ EI PIILOTETA: `.fokuskohde-osuma` (napautusala — juuri se on
+ * syy, miksi kerros on yhä olemassa), `.fokuskohde-korostus` (syttyy
+ * vain auki olevalle kortille, siis pelitilaa) ja aihevalo, joka
+ * vilkkuu ja on siksi omistajan nimenomaan elävälle puolelle jättämä.
+ */
+.fokuskohde-poltettu .fokuskohde-halo,
+.fokuskohde-poltettu .fokuskohde-rengas,
+.fokuskohde-poltettu .fokuskohde-piste { display: none; }
+
+/*
  * SELAIMEN OMA TARKENNUSLAATIKKO POIS, OMA MERKKI TILALLE.
  *
  * Chromium piirtää napautetun <g role="button" tabindex="0"> -ryhmän
