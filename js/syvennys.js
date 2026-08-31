@@ -147,17 +147,6 @@ function syvennysLisakohteet(ui) {
       kohde: {
         ...kohde,
         avaa: (kaytto) => avaaSyvennys(kaytto ?? ui, cityId, taky, tiedot),
-        /*
-         * OSIO YHDISTETYLLE LEHDELLE (js/fokusryhmat.js): kun saman
-         * kaupungin samanlajiset kohteet ovat yhden merkin alla,
-         * tarina latoutuu osiona kohdekortin sisään eikä omaksi
-         * kortikseen. Sisältö on TÄSMÄLLEEN SAMA kuin omassa
-         * kortissa — sama funktio latoo molemmat. Takaisinkutsu on
-         * tässä samasta syystä kuin `avaa`: ladonta asuu tässä
-         * moduulissa, joka on niputusjärjestyksessä kohteiden
-         * jäljessä.
-         */
-        osio: (kaytto, sailio) => piirraSyvennysSisus(kaytto ?? ui, sailio, cityId, taky),
       },
       paikka,
     }));

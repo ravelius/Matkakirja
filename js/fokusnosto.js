@@ -771,14 +771,6 @@ function nostoLisakohteet(ui) {
         // tiivisteen syötettä, eivätkä ne saa erota kahdessa polussa.
         ...nostoMerkinKentat(nosto, paikka),
         avaa: (kaytto) => avaaNosto(kaytto ?? ui, nosto),
-        // Osio yhdistetylle lehdelle — sama sopimus ja sama perustelu
-        // kuin syvennystarinalla (js/syvennys.js, js/fokusryhmat.js).
-        // Luetuksi merkintä tehdään myös osiona, koska tarina on siinä
-        // luettavissa aivan kuten omassa kortissaan.
-        osio: (kaytto, sailio) => {
-          nostoMerkitseLuetuksi(nosto.id);
-          piirraNostonSisus(kaytto ?? ui, sailio, nosto);
-        },
       },
       paikka: { x: paikka.x, y: paikka.y },
     });

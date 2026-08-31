@@ -159,20 +159,26 @@ const RUUDUT = {
 
 /*
  * KREIKKA ON KOE, koska se on ainoa kuratoitu lehti ja sen Ateena on
- * kartan tihein rypäs (kuusi kohdetta yhden merkin alla). Kroatia on
- * vertailukohta: kolme kohdetta, jotka EIVÄT yhdisty.
+ * kartan tihein rypäs: kymmenen nostoa laatan päällä, jotka ladotaan
+ * kaupungin molemmin puolin (js/fokusniput.js). Kroatia on
+ * vertailukohta: kolme merkkiä väljässä.
  */
 const KOKEET = [
   { nimi: 'Ateena', kaupunki: 'ateena', iso: 'GRC', poltettava: true },
   { nimi: 'Dubrovnik', kaupunki: 'dubrovnik', iso: 'HRV', poltettava: true },
   /*
-   * ROOMA ON ESTETTY MAA (tools/fokuskartta/nostot.mjs: Italiassa on
-   * yksi täky ilman omia koordinaatteja, joten se asettuu siihen
-   * kaupunkiin jossa pelaaja on). Sen merkkijoukko EROAA Nodesta
-   * tarkoituksella — Node latoo ilman täkyä — ja koe vaatii vain, ettei
-   * yksikään Italian merkki ole luettelossa.
+   * MADRID ON ESTETYSSÄ MAASSA (tools/fokuskartta/nostot.mjs: Espanjan
+   * täkypooli vaihtuu kaupungeittain — Sevillalla on oma lista — joten
+   * kartalla oleva täkyjoukko riippuu siitä, missä pelaaja seisoo).
+   * Sen merkkijoukko EROAA Nodesta tarkoituksella, ja koe vaatii vain,
+   * ettei yksikään Espanjan merkki ole luettelossa.
+   *
+   * ESIMERKKIMAA VAIHTUI 31.8.2026: Italia oli tässä siihen asti, kun
+   * `kissat`-täky sai omat koordinaattinsa (v1391) ja maa vapautui
+   * poltettavaksi — väite jäi punaiseksi, koska se väitti Italian
+   * olevan yhä estetty. Kaksi maata on yhä estettynä (ESP, GBR).
    */
-  { nimi: 'Rooma', kaupunki: 'rooma', iso: 'ITA', poltettava: false },
+  { nimi: 'Madrid', kaupunki: 'madrid', iso: 'ESP', poltettava: false },
 ];
 
 const raportti = [];
@@ -258,11 +264,11 @@ vaadi('Kreikan ja Kyproksen yhteinen olympos ei ole luettelossa',
   poltto.luettelo.olympos === undefined,
   'monen maan merkki päätyi luetteloon');
 
-const ita = nodeMaittain.get('ITA') ?? new Map();
-vaadi('estetyn maan (Italia) merkit EIVÄT ole luettelossa',
-  ita.size > 0 && [...ita.values()].every((m) => !m.poltettava
+const esp = nodeMaittain.get('ESP') ?? new Map();
+vaadi('estetyn maan (Espanja) merkit EIVÄT ole luettelossa',
+  esp.size > 0 && [...esp.values()].every((m) => !m.poltettava
     && poltto.luettelo[m.tunnus] === undefined),
-  `${[...ita.values()].filter((m) => poltto.luettelo[m.tunnus]).length} merkkiä luettelossa`);
+  `${[...esp.values()].filter((m) => poltto.luettelo[m.tunnus]).length} merkkiä luettelossa`);
 
 /*
  * TIIVISTE HUOMAA MUUTOKSEN. Muutetaan yhtä kenttää kerrallaan ja
@@ -270,7 +276,13 @@ vaadi('estetyn maan (Italia) merkit EIVÄT ole luettelossa',
  * kartalle.
  */
 const { nostoladontaTiiviste } = await import('../../js/nostoladonta.js');
-const malli = [...gr.values()].find((m) => m.osat.length > 1) ?? [...gr.values()][0];
+/*
+ * Mallimerkki on ryppään ensimmäinen. Tässä haettiin 31.8.2026 asti
+ * yhdistettyä merkkiä (`osat.length > 1`), koska sellaisella oli
+ * jäsenlista; yhdistely purettiin, joten `osat` on aina tyhjä ja
+ * jäsenkoe tehdään lisäämällä siihen yksi tunnus.
+ */
+const malli = [...gr.values()][0];
 const perus = nostoladontaTiiviste(malli);
 const muunna = (muutos) => nostoladontaTiiviste({ ...malli, ...muutos });
 vaadi('tiiviste muuttuu, kun nimiö muuttuu', muunna({ nimio: `${malli.nimio}!` }) !== perus);
