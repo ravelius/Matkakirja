@@ -1839,6 +1839,104 @@ seitsenkertaisen varan ja jää GitHubin kuuden tunnin katon alle.
 Työnkulku tulostaa `df -h` ennen ja jälkeen, joten ensimmäinen ajo
 vahvistaa levytilan mitattuna.
 
+## 10c. Paikkaus — rajatun alueen korjaus minuuteissa (31.8.2026)
+
+Täysajo on tunteja, mutta virhe on melkein aina paikallinen: yhden
+järven väri, yhden vuoren nimi, yhden saaren rannikko. **Paikkausajo
+piirtää vain korjattavaan laatikkoon osuvat laatat ja kopioi loput
+lähdeversiosta uuteen versiopolkuun ämpärin sisällä.**
+
+```
+tasot = paikkaus
+  lahdeversio  2026-08-31c        (olemassa oleva, kopioidaan)
+  versio       2026-08-31c-p1     (uusi, ei saa olla ämpärissä)
+  alue         80,27,95,36        (lon0,lat0,lon1,lat1)
+```
+
+### Miksi tämä toimii — ja miksi sauma ei synny
+
+Laatta ei riipu naapuristaan: jokainen lasketaan arkin
+koordinaateista ja patina on sidottu **arkin pikseliin** (luku 4,
+REUNUS ja lohkopiirron `arkki`-asetus). Sama laatta samasta
+aineistosta on siis tavulleen sama piirrettiinpä se maailma-ajossa tai
+alueajossa.
+
+**Tämä on mitattu, ei päätelty** (kuivaharjoitus 31.8.2026):
+
+| koe | tulos |
+|---|---|
+| maailma z0–z4 (395 laattaa) ja sama alue paikkauksena, samat asetukset | alueen 6 laattaa **bitilleen samat**, ulkopuoliset 389 samat |
+| sama z7:llä (lähde 20 laattaa, paikkaus 4) — paikatut laatat olivat lähdeajossa **lohkoissa, joissa oli myös paikkaamattomia laattoja** | 4 paikattua **bitilleen samat**, 16 ulkopuolista samat |
+| keinotekoinen datamuutos alueelle (`--ilman-sisaltoa`) | alueen 6 laattaa muuttui, ulkopuoliset 389 ja 18 reunalaattaa **ennallaan** |
+| sauman mittaus rajapinnalla (paikattu \| kopioitu) | ero 6,73 kanavayksikköä/px vs. laatan sisäinen 6,49 → **suhde 1,04** |
+
+Suhde 1,0 tarkoittaa, että laattojen rajapinta on tilastollisesti
+sama asia kuin mikä tahansa pikselisarakepari laatan sisällä — sauma
+ei ole hillitty vaan sitä ei ole.
+
+### Mikä *voisi* mennä pieleen: asetukset
+
+Geometria ei petä, mutta ajon asetus pettäisi: eri `laatu`, `muoto`,
+`laattakoko` tai `patina` tekisi paikatuista laatoista silmällä
+erottuvia kopioitujen naapureidensa vierestä. Siksi **paikkaus ei ota
+asetuksiaan työnkulun syötteistä vaan lähdeversion luettelosta**
+(`tools/paikkaa-pyramidi.mjs suunnittele`). Luetteloon lisättiin tätä
+varten kenttä `patina`; muut kolme olivat siellä jo.
+
+### Nostotaso ei osallistu
+
+Nostolaatat asuvat oman versionsa polussa
+`<nostoversio>/nostot/z…`, joka on olemassa paikkauksen jälkeenkin.
+Niitä **ei kopioida eikä piirretä**, ja paikatun version luettelo
+osoittaa samaan nostoversioon kuin lähteenkin — myös silloin kun
+nostoversio sattuu olemaan sama merkkijono kuin pohjan lähdeversio.
+Mitattuna paikattu ja lähdeluettelo eroavat **tasan kahdessa
+kentässä**: `versio` ja uusi `paikkaus`-olio.
+
+### Kirjanpito luettelossa
+
+```json
+"alue": null,
+"paikkaus": { "lahde": "2026-08-31c", "alue": { "lon0": 80, … } }
+```
+
+`alue` on `null`, koska paikattu versio on **täysi** pyramidi
+(muuttumattomat laatat kopioitiin). Piirretty laatikko on
+`paikkaus`-oliossa. Näin mikään `alue`-kenttää lukeva tarkistus ei
+valehtele kummallakaan tavalla.
+
+### Turva
+
+* uusi versio ≠ lähdeversio (työkalu kieltäytyy),
+* uuden version polku ei saa olla ämpärissä (työnkulku kieltäytyy),
+* lähdeluettelon on kuvattava juuri sitä versiota, josta kopioidaan,
+* lähteen polkuun ei kirjoiteta koskaan — kopio on yksisuuntainen.
+
+### Kesto
+
+Piirto on kymmeniä laattoja: Kreikan kokoinen laatikko on **55
+laattaa** kaikilta kahdeksalta tasolta (23 340:stä), ja lohkon reunan
+hukka on alueajossa suuri (89 % mitattuna), joten piirto on
+suuruusluokaltaan **3–6 min** ajokoneella. Kopio on 23 285 objektin
+palvelinpuolen CopyObject 64 rinnakkaisella pyynnöllä eli **noin
+3–8 min**. Työnkulku tulostaa kopion keston, joten ensimmäinen ajo
+korvaa tämän arvion mitatulla luvulla.
+
+### Todennus
+
+```
+node tools/generoi-laattapyramidi.mjs <kohde> --tasot 0-7 \
+     --alue 80,27,95,36 --vain-lista            # mitkä laatat piirtyvät
+node tools/paikkaa-pyramidi.mjs vertaa --lahde <a> --paikattu <b> \
+     --lista <kohde>/laatat.json                # vain alue muuttui
+node tools/paikkaa-pyramidi.mjs sauma --paikattu <b> \
+     --lista <kohde>/laatat.json --kuva sauma.png
+```
+
+`vertaa` kaatuu, jos alueen ulkopuolinen laatta muuttui, jos kopio jäi
+kesken tai jos alueen laatta jäi piirtämättä
+(tests/paikkaus.test.mjs vartioi näitä).
+
 ## 11. Siirtymä
 
 **Vaihe 1 — pilotti (tämä erä).** Työkalu, moottorin laattatuki, pysyvä
