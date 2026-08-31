@@ -1206,7 +1206,18 @@ function umpimeriSavy(mitat, sarake, rivi, syyt = null) {
   const dLat = Math.abs(latP - latE) * 0.06 + DLAT;
   const dLon = Math.abs(lonO - lonL) * 0.06 + DLON;
 
-  // 3. asteverkko (moottorin oletusväli 20°)
+  /*
+   * 3. asteverkko (moottorin oletusväli 20°)
+   *
+   * TÄMÄ EHTO ON VIIVATASON JÄLKEEN PELKKÄÄ VAROVAISUUTTA, eikä sitä
+   * poistettu: erikoispiirit ovat nyt viivatasolla (TYYLI
+   * `asteverkko: false`), joten pohjalaatan yli ei enää kulje yhtään
+   * viivaa, jonka takia laatta pitäisi säästää. Ehto siis vain SÄÄSTÄÄ
+   * muutaman laatan, jonka voisi karsia — ei koskaan karsi laattaa,
+   * jossa on mustetta. Kun `--harva` seuraavan kerran ajetaan, tämän
+   * voi mitata ja poistaa; nyt sitä ei kosketa, koska karsinta on
+   * pohjakuvan ominaisuus eikä tämän erän asia.
+   */
   const vali = 20;
   const yliMeridiaanin = Math.floor((lonO + dLon) / vali) > Math.floor((lonL - dLon) / vali);
   const yliLeveyspiirin = Math.floor((latP + dLat) / vali) > Math.floor((latE - dLat) / vali);
