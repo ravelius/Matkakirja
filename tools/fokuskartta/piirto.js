@@ -119,6 +119,55 @@
  *
  * Ylin pää on IKUINEN LUMI aikakauden kartografian konvention mukaan:
  * ruskea kylmenee harmaaseen ja vaalenee lopulta lumen valkoiseksi.
+ *
+ * === LUMIRAJA OLI YLI AINEISTON KATON (mitattu 31.8.2026) ===========
+ *
+ * Omistaja katsoi Tiibetiä janalla 500 km: koko ylätasanko oli tasaista
+ * tummanruskeaa eikä lunta näkynyt missään. Vika EI ollut siinä, ettei
+ * lumisävyä olisi ollut — se oli siinä, että lumen porras alkoi
+ * korkeudelta, jota tässä aineistossa ei ole olemassa.
+ *
+ * MITATTU KOKO MAAILMAN 3 KAARIMINUUTIN RUUDUKOSTA (8 808 311 maasolua,
+ * tools/korkeusaineisto/etopo-3kaariminuuttia.bin.gz):
+ *
+ *   >= 4200 m    87 211 solua   0,99 %
+ *   >= 5200 m    14 074 solua   0,16 %
+ *   >= 5500 m     4 365 solua   0,050 %
+ *   >= 6000 m       335 solua   0,0038 %
+ *   >= 7000 m         4 solua   0,00005 %   <- vanha lumiportaan alku
+ *
+ * NELJÄ SOLUA KOKO MAAPALLOLLA. Ruutu on kolmen kaariminuutin KESKIARVO
+ * eli 5,5 km leveä, joten yksikään huippu ei säily pistemäisenä: koko
+ * ruudukon korkein solu on 8266 m, Alppien korkein 3630, Kalliovuorten
+ * 4005, Kaukasuksen 4637, Kilimanjaron 4878 ja Andien 6221. Porras 7000
+ * ei siis ollut vaikeasti saavutettava vaan SAAVUTTAMATON, ja koska
+ * `lerpVari` on lineaarinen, myös 5500 → 7000 -välin harmaa jäi
+ * käyttämättä. Ylätasangon oma korkeus 4600–5200 m osui väliin
+ * 4200 → 5500, jonka molemmat päät ovat tummaa ruskeaa — ja 5500 oli
+ * KOKO ASTEIKON TUMMIN sävy (luminanssi 79,8, kun 4200 on 85,8).
+ * Tiibet maalautui siis asteikon pohjalle, ei sen huipulle.
+ *
+ * KORJAUS SIIRTÄÄ LUMIRAJAN SINNE MISSÄ MAASTOA ON, EI SÄVYJÄ SINNE
+ * MISSÄ MAASTOA EI OLE. Porras 5200 saa vanhan 5500:n tumman ruskean,
+ * jolloin ylätasangon runko (Tiibetin koeruudusta 84 % on alle 5200 m)
+ * pysyy TÄSMÄLLEEN entisen näköisenä, ja 5500 on lumiraja. Se osuu
+ * mitattuun kohtaan: Tiibet–Himalaja-koeruudussa (lon 78–96, lat 26–36,
+ * 72 561 maasolua) 3,22 % on yli 5500 m ja 0,10 % yli 6000 m — eli
+ * lunta saavat pääharjanne, Karakoram ja Transhimalajan selät, ei
+ * tasanko. Portaat 7000 ja 8850 jäävät paikoilleen; ne ovat käyränpää,
+ * jonka läpi kuljetaan, eivät alue jota maalataan.
+ *
+ * MITATTU LOPPUTULOS samalla z5-koealalla, patina `taysi` päällä:
+ * kylmiä vaaleita pikseleitä 0,137 % → 1,745 % (12,7-kertainen), ja
+ * 5600 metrin harjanteella pikseli 142,111,94 (lum 117, lämmin) →
+ * 187,180,168 (lum 180, kanavaero 47 → 18). Tasangon oma sävy
+ * 141,107,89 → 138,105,89.
+ *
+ * PORTAAT 2900 JA ALLE OVAT YHÄ KOSKEMATTOMAT. Vaihtoehto, jossa vain
+ * kolmen ylimmän portaan VÄRIT vaihdettiin portaita lisäämättä,
+ * piirrettiin ja hylättiin: 4200 → 5500 -liuku nappaa koko tasangon,
+ * ja Tiibet muuttui violetinharmaaksi utuiseksi mössöksi (kylmiä
+ * pikseleitä vain 0,473 %). Vertailukuvat ovat erän raportissa.
  */
 export const ASTEIKKO = [
   { m: -60, v: [214, 202, 168] },
@@ -130,9 +179,10 @@ export const ASTEIKKO = [
   { m: 2000, v: [169, 110, 72] },
   { m: 2900, v: [150, 90, 62] },
   { m: 4200, v: [128, 76, 58] },
-  { m: 5500, v: [112, 72, 62] },
-  { m: 7000, v: [140, 122, 116] },
-  { m: 8850, v: [214, 208, 200] },
+  { m: 5200, v: [112, 72, 62] },
+  { m: 5500, v: [168, 158, 150] },
+  { m: 7000, v: [214, 211, 205] },
+  { m: 8850, v: [232, 230, 226] },
 ];
 
 /*
