@@ -78,6 +78,7 @@ const SHELL = [
   './js/media.js',
   './js/saa.js',
   './js/maakayrat.js',
+  './js/maatummennus.js',
   './js/uutiset.js',
   './js/packs/maailmankartta.js',
   './js/packs/maailmankartta-maasto.js',

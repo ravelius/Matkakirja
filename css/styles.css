@@ -1321,6 +1321,7 @@ body.kartta-merkit-haipyy .fokuskohteet,
 body.kartta-merkit-haipyy .fokuspisteet,
 body.kartta-merkit-haipyy .fokusnosto-symbolit,
 body.kartta-merkit-haipyy .elaintakyt,
+body.kartta-merkit-haipyy .maatummennus,
 body.kartta-merkit-haipyy .nippuviivat { display: none; }
 body.kartta-merkit-haipyy .karttanimet,
 body.kartta-merkit-haipyy .maastonimet { opacity: 0; }
@@ -1328,6 +1329,7 @@ body.kartta-merkit-piilossa .fokuskohteet,
 body.kartta-merkit-piilossa .fokuspisteet,
 body.kartta-merkit-piilossa .fokusnosto-symbolit,
 body.kartta-merkit-piilossa .elaintakyt,
+body.kartta-merkit-piilossa .maatummennus,
 body.kartta-merkit-piilossa .nippuviivat,
 body.kartta-merkit-piilossa .karttanimet,
 body.kartta-merkit-piilossa .maastonimet { display: none; }
@@ -1336,6 +1338,52 @@ body.kartta-merkit-piilossa .maastonimet { display: none; }
   /* Liikeherkkyys: nimikerros väistyy kerralla ilman häivytystä. */
   .karttanimet,
   .maastonimet { transition: none; }
+}
+
+/* NYKYISEN MAAN TUMMENNUS JA ÄÄRIVIIVA (js/maatummennus.js —
+   omistajan tilaus 31.8.2026: *"lähemmillä zoomtasoilla ympäröivät
+   valtiot voisi tummentaa hieman reaaliajassa ja maan ääriviivat
+   piirtää hieman paksummalla. nämä voisivat hävitä välittömästi
+   siirron alkaessa ja tulla feidaten sisään."*).
+
+   KATOAMINEN on yllä olevassa display:none-joukossa: kerros poistuu
+   maalikierroksesta eleen ENSIMMÄISESSÄ kehyksessä, kuten kaikki muukin
+   polttamaton karttasisältö.
+
+   PALUU ON ANIMAATIO EIKÄ SIIRTYMÄ, ja se on tarkoituksellinen ero
+   nimikerrokseen. Siirtymä ei laukea, kun elementti tulee esiin
+   `display: none`sta — selain ei näe lähtöarvoa piilotetusta
+   kerroksesta. CSS-animaatio sen sijaan LUODAAN UUDELLEEN ja käynnistyy
+   alusta juuri silloin kun elementti alkaa taas piirtyä, eli sillä
+   hetkellä kun js/kartta.js paljastaMerkit ottaa luokan pois. Sama
+   feidaus tulee siis ilman yhtäkään riviä ajastuskoodia.
+
+   Kerroksessa on kaksi polkua ja se on staattinen eleiden välissä,
+   joten 350 ms:n peittävyysanimaatio on eri hintaluokassa kuin
+   merkkikerrosten kymmenet ryhmät — ja se ajetaan vasta kun ele on jo
+   ohi (mittausperustelut yllä samassa lohkossa). */
+.maatummennus { animation: maatummennus-esiin 350ms ease-out; }
+@keyframes maatummennus-esiin { from { opacity: 0; } to { opacity: 1; } }
+/* Ääriviiva on kartan omaa mustetta ja noin 1,5 x rantaviiva
+   (.coast, stroke-width 3,2); leveys tulee elementiltä, jotta luku on
+   yhdessä paikassa js/maatummennus.js:ssä. */
+.maatummennus-viiva {
+  fill: none;
+  stroke: var(--map-ink);
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+/* SUMENNUSTA EI OLE TOTEUTETTU. Omistaja epäili blurin tarpeellisuutta
+   jo tilatessaan, ja laatan päälle ajettu suodin on juuri sitä
+   maalikierroksen kalleutta, jonka eleen aikainen piilotus muuten
+   poistaa. Luokka on koukku myöhempää kokeilua varten: sen saa päälle
+   yhdellä rivillä (filter: blur(...)) ilman että kerroksen rakennetta
+   tarvitsee muuttaa. */
+.maatummennus-sumea { /* varattu — ks. js/maatummennus.js */ }
+
+@media (prefers-reduced-motion: reduce) {
+  /* Liikeherkkyys: tummennus ilmestyy kerralla, ei feidaten. */
+  .maatummennus { animation: none; }
 }
 
 /* NÄKYMÄN ULKOPUOLISET MERKIT POIS (js/ui.js paivitaMaailmanRajaus —

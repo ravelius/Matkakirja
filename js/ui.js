@@ -278,6 +278,15 @@ import {
  */
 import { paivitaFokuspiste, nollaaFokuspiste } from './fokuspiste.js';
 /*
+ * Nykyisen maan erottava tummennus ja paksumpi ääriviiva
+ * (js/maatummennus.js, omistajan tilaus 31.8.2026). Sama elinkaari kuin
+ * yllä olevilla merkkikerroksilla: päivitys kun näkymä on ASETTUNUT ja
+ * kun maa vaihtuu, nollaus laudan vaihdossa. Aineisto on laiska eikä
+ * moduuli tuo mitään — kerros jää yksinkertaisesti pois, jos
+ * maapolygonit.json ei ole saatavilla (yhden tiedoston versio).
+ */
+import { paivitaMaatummennus, nollaaMaatummennus } from './maatummennus.js';
+/*
  * Laattapyramidi (js/laattapyramidi.js) on pelilaudan AINOA karttapohja
  * (Raamattu, "YKSI MAAILMANBITTIKARTTA"). `pyramidiKattaa` kertoo,
  * onko lauta se, jonka arkki pyramidissa on — sillä laudalla kaikki
@@ -4857,6 +4866,14 @@ export class UI {
     paivitaKarttanimet(this, nakyvaNyt);
     // Sama koskee kevyen kulun vihreää kohtaamispistettä.
     paivitaFokuspiste(this);
+    /*
+     * Maatummennus (js/maatummennus.js) — TÄSMÄLLEEN TÄSTÄ KOHDASTA ja
+     * samasta syystä kuin muutkin ruudun mittakaavasta riippuvat
+     * kerrokset: sen näkyvyys ratkeaa mittakaavasta (pelaajan uloin
+     * zoomi), eikä sitä lasketa eleen aikana vaan kun näkymä on
+     * ASETTUNUT. Sama maa samalla näkyvyydellä palaa heti.
+     */
+    paivitaMaatummennus(this);
     // Ja maiden eläintäkyjä (js/elaintaky.js): merkit elävät kartan
     // mittakaavassa ja katoavat yleiskuvassa, joten ne lasketaan
     // samassa kohtaa kuin muutkin merkkikerrokset.
@@ -5747,6 +5764,34 @@ export class UI {
      * vuoda reunan yli, joten kopio ja alkuperäinen eivät mene
      * päällekkäin (ks. linssikerroksen rajausperustelu yllä).
      */
+    /*
+     * MAATUMMENNUS (js/maatummennus.js, omistajan tilaus 31.8.2026).
+     *
+     * TÄHÄN KOHTAAN, koska kerros on POHJALAATTOJEN PÄÄLLÄ mutta
+     * kaikkien merkki-, nimi- ja pelitilakerrosten ALLA: se erottaa
+     * nykyisen maan naapureistaan, se ei saa himmentää yhtään
+     * pelimerkkiä eikä syödä napautuksia (siksi pointer-events: none).
+     *
+     * JUURIRYHMÄN SISÄÄN samasta syystä kuin linssi ja sumuverho:
+     * <use href="#lauta-sisalto"> on elävä viittaus, joten kiertävän
+     * laudan kopio saa tummennuksen ilmaiseksi eikä sauman toinen
+     * puoli jää kirkkaaksi.
+     *
+     * SAMA VAAKARAJAUS KUIN LINSSILLÄ. Muutama maa ylittää laudan
+     * sauman (Tšukotka, Aleutit, Fidži, Uusi-Seelanti), ja
+     * js/maatummennus.js monistaa niiden renkaat laudan leveyden verran
+     * sivuun. Ilman rajausta monistettu pala ja <use>-kopio maalaisivat
+     * saman kaistaleen kahdesti ja tummennus tuplaantuisi siinä — sama
+     * mitattu vika, jonka takia linssikerros on rajattu.
+     *
+     * KERROS ON TYHJÄ, kunnes maa ja mittakaava ovat kohdallaan.
+     */
+    this.maatummennusKerros = el('g', {
+      class: 'maatummennus',
+      'pointer-events': 'none',
+      ...(pack.map.kiertava ? { 'clip-path': 'url(#linssi-rajaus)' } : {}),
+    }, root);
+    nollaaMaatummennus(this);
     this.fokusKerros = el('g', { class: 'fokus-sumu', 'pointer-events': 'none' }, root);
     /*
      * MERENPOHJAN RAJAUS ON POISTETTU YHDESSÄ SYVYYSVYÖHYKKEIDEN KANSSA.
@@ -8051,6 +8096,10 @@ export class UI {
     paivitaFokuskohteet(this);
     // Kevyen kulun vihreä kohtaamispiste (js/fokuspiste.js).
     paivitaFokuspiste(this);
+    // Maa vaihtui: tummennuksen reikä ja ääriviiva ovat edellisen maan
+    // muotoisia, joten polku lasketaan uudelleen — kerran, tässä
+    // (js/maatummennus.js).
+    paivitaMaatummennus(this);
     // Sama kerrosjono jatkuu maiden eläintäyillä (js/elaintaky.js).
     paivitaElaintakyt(this);
     // Maan vaihduttua selitevalikon kappalemäärät ovat vanhat: uudet
