@@ -149,14 +149,61 @@ const NOUTO_RINNAKKAIN = 4;
 const NOUTO_VIIVE_MS = 300;
 
 /**
- * Karkean pohjakerroksen etäisyys tarkasta tasosta (zoomtasoina).
+ * Pohjakerroksen SYVIN taso — pohja ei seuraa terävää tasoa tämän yli.
  *
- * Kaksi tasoa on 1/16 laattoja samalle alalle — käytännössä ilmainen —
- * ja silti tunnistettava kartta eikä sumeaa puuroa. Yksi taso olisi
- * neljä kertaa kalliimpi ilman näkyvää hyötyä (se kuitenkin korvautuu
- * heti), kolme jo niin karkea, ettei se kestä ruudulla odotusaikaa.
+ * === MIKSI POHJA NAULATAAN ==========================================
+ *
+ * Omistajan iPhone-havainto 31.8.2026: *"Ja välillä kartta ei piirry
+ * ollenkaan."* — noin 1000 km mittakaavassa Amerikan yllä ruudulla oli
+ * pelkkä pergamentti ja sen päällä elävä kerros (nimet, pisteet,
+ * viivaimen asteluvut).
+ *
+ * Syy oli se, että pohja SEURASI terävää tasoa (z − 2). Kun taso
+ * vaihtuu, molemmat kerrokset menevät saman tason vaihdon läpi, ja jos
+ * kummankaan laatat eivät olleet ehtineet perille, molemmat tyhjenivät
+ * samalla hetkellä — eikä alla ollut mitään. Harva pyramidi on
+ * oletuksena pois, joten `meriSavy`-pohjaakaan ei ole.
+ *
+ * Toistettu mitattuna (Chromium, iPhone-profiili, välimuisti tyhjätty
+ * ja yhteys 400 kbit/s + 400 ms KÄYNNISTYKSEN JÄLKEEN, neljä
+ * loitonnusporrasta 150 ms välein): peitto **0 % 202 näytteessä
+ * 208:sta**, eli kartta oli poissa noin kuusi sekuntia.
+ *
+ * Naulattuna z3:een pohja EI VAIHDU tasoilla z5…z7 — siis koko siinä
+ * lähialueessa, jossa pelaaja liikkuu — joten se ladataan kerran eikä
+ * se voi tyhjentyä zoomatessa. Koko maailma on z0–z3:lla vain 109
+ * laattaa, ja näkymän ympäriltä niitä on kiinnitettynä mitattuna 3…11.
+ *
+ * Matalilla tasoilla pohja seuraa yhä (z − 2), koska z3 olisi silloin
+ * TERÄVÄMPI kuin tarkka taso: pelkkä kustannus ilman hyötyä.
  */
-const KARKEA_ETAISYYS = 2;
+const POHJA_SYVIN = 3;
+
+/**
+ * Pohjakerroksen taso: AINA sama, tai ei pohjaa lainkaan.
+ *
+ * Naulaus on ehdoton, koska "seuraa terävää tasoa mutta enintään
+ * z3:een" mitattiin riittämättömäksi: kymmenen nopean zoomiportaan
+ * sarjassa (molempiin suuntiin, välimuisti tyhjänä) pohjan taso vaihtui
+ * yhä rajalla z4 ↔ z5, ja silloin ruutu tyhjeni uudestaan — mitattuna
+ * 202 näytettä 233:sta. Kun pohja on aina z3, se ladataan istunnossa
+ * kerran eikä yksikään zoomiporras voi tyhjentää sitä.
+ *
+ * HINTA ON PIENI JA KERTALUONTOINEN. Koko maailma on z3:lla 77 laattaa
+ * (11 × 7) eli noin 2 Mt, ja laatat ovat `immutable`-välimuistissa
+ * vuoden. Peli aloittaa maailmanäkymästä, joten uloimmat tasot ovat
+ * käytännössä lämpiminä jo ennen ensimmäistä lähikuvaa. Kiinnitettynä
+ * niistä on mitattuna 6 laattaa (z7), 9 (z6), 24 (z5) ja 16…24 (z4).
+ *
+ * Tasoilla z0…z3 pohjakerrosta ei ole: tarkka taso ON silloin
+ * karkeimmillaan, eikä samaa kuvaa piirretä kahdesti. Silloin tarkasta
+ * kerroksesta tulee alin (ks. `alin`), eikä se enää heitä pois sitä,
+ * mikä on ruudulla.
+ */
+function pohjanTaso(tasot, taso) {
+  if (taso.z <= POHJA_SYVIN) return null;
+  return tasot.find((t) => t.z === POHJA_SYVIN) ?? null;
+}
 
 /**
  * Karkean pohjan reunus RUUTUINA. Tämä on se, mikä kattaa LIU'UN:
@@ -661,7 +708,7 @@ function jonotaTasovaihto(tasot, taso, laatta, arkki, nakyva) {
  * Karkea pohja on se, mikä estää tyhjän karttapohjan kaikissa niissä
  * tapauksissa, joita reunus ei kata: nopea pyyhkäisy, zoomin vaihto,
  * hidas verkko. Sama ala on karkealta tasolta 1/16 laattoja
- * (KARKEA_ETAISYYS = 2 tasoa), joten se on käytännössä ilmainen — ja
+ * (pohja on z3, tarkka taso z5…z7), joten se on käytännössä ilmainen — ja
  * juuri näin jokainen karttakirjasto tekee: alla on aina jotain, ja se
  * terävöityy kun tarkka taso saapuu.
  */
@@ -698,8 +745,8 @@ function peruLaatta(kuva) {
 }
 
 /** Yhden kerroksen tila: mikä taso siinä on ja mitkä laatat. */
-const tyhjaTila = (kerros) => ({
-  kerros, z: null, laatat: new Map(), vanhat: null, ajastin: 0,
+const tyhjaTila = (kerros, alin = false) => ({
+  kerros, alin, z: null, laatat: new Map(), vanhat: null, ajastin: 0, nakyva: null,
 });
 
 /**
@@ -717,13 +764,64 @@ function kaikkiRuudullaLadattu(tila) {
   return true;
 }
 
-/** Edellinen taso pois — kaikki kerralla, koska se on yksi kuva. */
+/**
+ * Osuuko laatta näkyvään alueeseen?
+ *
+ * Luetaan MÄÄREISTÄ eikä getBoundingClientRectilla: laatan paikka on
+ * laudan koordinaateissa, ja määreen lukeminen ei pakota asettelun
+ * laskentaa (sama sääntö kuin js/ui.js nakyvaAlue -kommentissa).
+ */
+function osuuNakymaan(kuva, nakyva) {
+  const x = parseFloat(kuva.getAttribute('x'));
+  const y = parseFloat(kuva.getAttribute('y'));
+  const w = parseFloat(kuva.getAttribute('width'));
+  const h = parseFloat(kuva.getAttribute('height'));
+  if (!Number.isFinite(x) || !Number.isFinite(y)) return false;
+  return x < nakyva.x + nakyva.w && x + w > nakyva.x
+    && y < nakyva.y + nakyva.h && y + h > nakyva.y;
+}
+
+/**
+ * Edellinen taso pois — se on korvattu, joten se saa mennä kokonaan.
+ *
+ * Tätä kutsutaan VAIN kun uuden tason näkyvät laatat ovat oikeasti
+ * ruudulla (kaikkiRuudullaLadattu) tai kun kerros tyhjennetään.
+ */
 function poistaVanhaTaso(tila) {
   clearTimeout(tila.ajastin);
   tila.ajastin = 0;
   if (!tila.vanhat) return;
   for (const kuva of tila.vanhat.values()) peruLaatta(kuva);
   tila.vanhat = null;
+}
+
+/**
+ * Karsii vanhasta tasosta sen, mitä ruudulla ei tarvita.
+ *
+ * === MIKSI AIKAKATTO EI SAA POISTAA KAIKKEA ========================
+ *
+ * Omistajan iPhone-havainto 31.8.2026 (*"välillä kartta ei piirry
+ * ollenkaan"*) toistui mitattuna myös silloin, kun pohjakerros oli
+ * naulattu: VANHAN_TASON_KATTO_MS poisti vanhan tason kahdessa
+ * sekunnissa riippumatta siitä, oliko tilalle tullut mitään. Hitaalla
+ * yhteydellä uusi taso ei ollut vielä perillä, joten ruutu tyhjeni
+ * kahden sekunnin kuluttua zoomista — mitattuna 120 näytettä 204:stä
+ * täysin tyhjänä.
+ *
+ * Katto on silti tarpeen, ettei kahta tasoa jää päällekkäin ikuisesti.
+ * Ratkaisu: katto poistaa vain sen, mikä EI OLE RUUDULLA. Ruudulla
+ * oleva vanha laatta on kirjaimellisesti ne pikselit, jotka pelaaja
+ * juuri nyt näkee; se poistuu vasta kun tilalle on tullut jotain.
+ */
+function karsiVanhat(tila) {
+  tila.ajastin = 0;
+  if (!tila.vanhat || !tila.nakyva) return;
+  for (const [k, kuva] of tila.vanhat) {
+    if (osuuNakymaan(kuva, tila.nakyva)) continue;
+    peruLaatta(kuva);
+    tila.vanhat.delete(k);
+  }
+  if (!tila.vanhat.size) tila.vanhat = null;
 }
 
 /**
@@ -746,13 +844,34 @@ function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
     // Vain YKSI vanha taso kerrallaan: sitä edellinen on jo tarpeeton.
     poistaVanhaTaso(tila);
     /*
-     * VANHASTA TASOSTA JÄÄ ALLE VAIN SE, MIKÄ ON JO RUUDULLA.
-     * Latautumaton laatta ei näytä mitään, mutta sen haku vie kaistaa
-     * uuden tason laatoilta juuri silloin kun niitä odotetaan — ja
-     * juuri se teki zoomauksesta hitaan (ks. peruLaatta).
+     * ALIN KERROS EI HEITÄ POIS SITÄ, MIKÄ ON RUUDULLA. YLEMPI SAA.
+     *
+     * Katkaisu on oikea keksintö — se teki zoomauksesta nopean, koska
+     * ohitettujen tasojen laatat eivät enää tuki yhteyttä sen tason
+     * edellä, jota pelaaja katsoo (ks. peruLaatta). Mutta laatan saa
+     * heittää pois vain, jos sen tilalla on jotain, ja se riippuu
+     * kerroksesta:
+     *
+     *   TARKKA KERROS: alla on naulattu pohja (pohjanTaso), joka ei
+     *     vaihdu tasoilla z5…z7 lainkaan. Ruutu ei siis voi jäädä
+     *     tyhjäksi, vaikka kesken oleva haku katkaistaisiin — kartta
+     *     on hetken sumea. Katkaisu kannattaa: mitattuna se pitää
+     *     puussa 47…62 kuvaa 82…114:n sijaan ja nipistyksen
+     *     longtask-summan mainin tasolla (710 ms) sen sijaan että se
+     *     nousisi 899 ms:iin.
+     *   POHJAKERROS: sen alla EI OLE MITÄÄN (harva pyramidi on pois,
+     *     joten `meriSavy`-suorakaidettakaan ei ole). Ruudulla oleva
+     *     pohjalaatta on kirjaimellisesti ne pikselit, jotka pelaaja
+     *     näkee, joten se jää — myös latautumattomana, koska sen haku
+     *     on ainoa tie takaisin karttaan.
+     *
+     * Ilman tätä eroa kumpikin kerros saattoi tyhjentyä samalla
+     * hetkellä, ja juuri se oli omistajan havainto 31.8.2026 (*"välillä
+     * kartta ei piirry ollenkaan"*): toistettuna peitto oli 0 %
+     * 202 näytteessä 208:sta.
      */
     for (const [k, kuva] of tila.laatat) {
-      if (kuva.dataset.ladattu) continue;
+      if (tila.alin ? osuuNakymaan(kuva, nakyva) : kuva.dataset.ladattu) continue;
       peruLaatta(kuva);
       tila.laatat.delete(k);
     }
@@ -760,9 +879,12 @@ function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
     tila.laatat = new Map();
     tila.z = taso.z;
     if (tila.vanhat) {
-      tila.ajastin = setTimeout(() => poistaVanhaTaso(tila), VANHAN_TASON_KATTO_MS);
+      tila.ajastin = setTimeout(() => karsiVanhat(tila), VANHAN_TASON_KATTO_MS);
     }
   }
+  // Viimeisin näkymä talteen: aikakatto tarvitsee sen tietääkseen,
+  // mikä vanhan tason laatta on ruudulla (karsiVanhat).
+  tila.nakyva = nakyva;
   const yksikkoaPerLaatta = laatta / taso.pikseliaPerYksikko;
   const vanhatSamalta = tila.laatat;
   const uudet = new Map();
@@ -980,18 +1102,24 @@ export function paivitaPyramidi(ui) {
   /*
    * KARKEA POHJA ENSIN, TARKKA TASO PÄÄLLE.
    *
-   * Pohja on kaksi tasoa karkeampi ja kattaa saman alan kuin
-   * NOUDETTAVA ympäristö (ruudun verran joka suuntaan) — silti vain
-   * noin 1/16 laattoja, koska yksi laatta kattaa neljä kertaa
-   * leveämmän alan. Ruudulle se tarkoittaa, että panoroinnissa ja
-   * zoomissa alla on AINA kartta: sumea, mutta ei tyhjä pergamentti.
+   * Pohja on NAULATTU (pohjanTaso): tasoilla z5…z7 se on aina z3, eikä
+   * se siis vaihdu eikä tyhjene kun tarkka taso vaihtuu. Se on koko
+   * pohjakerroksen tarkoitus — alla on aina jotain — ja se maksaa
+   * mitattuna 3…11 laattaa, koska yksi z3-laatta kattaa 16 kertaa
+   * leveämmän alan kuin z7-laatta.
    */
-  ui.pyramidiKarkea ??= tyhjaTila(ui.pyramidiPohjaKerros);
+  ui.pyramidiKarkea ??= tyhjaTila(ui.pyramidiPohjaKerros, true);
   ui.pyramidiTarkka ??= tyhjaTila(ui.pyramidiTarkkaKerros);
   ui.pyramidiKarkea.kerros = ui.pyramidiPohjaKerros;
   ui.pyramidiTarkka.kerros = ui.pyramidiTarkkaKerros;
 
-  const karkea = tasot.find((t) => t.z === Math.max(0, taso.z - KARKEA_ETAISYYS));
+  const karkea = pohjanTaso(tasot, taso);
+  /*
+   * KUMPI KERROS ON POHJIMMAISENA? Se, jonka alla ei ole mitään, ei saa
+   * heittää pois ruudulla olevaa laattaa (ks. paivitaKerros). Uloimmilla
+   * tasoilla pohjakerrosta ei ole, jolloin tarkka kerros on itse alin.
+   */
+  ui.pyramidiTarkka.alin = !karkea;
   let karkeitaRuudulla = 0;
   if (karkea && karkea.z !== taso.z) {
     karkeitaRuudulla = paivitaKerros(ui.pyramidiKarkea, karkea, laatta, arkki,

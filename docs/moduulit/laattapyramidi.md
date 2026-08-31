@@ -1279,15 +1279,132 @@ rajua koko ruudun mittaista pyyhkäisyä liukuineen pitää peiton 100 %:ssa.
 | `KIINNITYS_RUUTUJA` | 0,5 | kattaa tavallisen sormenvedon; muisti kasvaa vain ruudulla näkyvästä |
 | `SUUNTALISA_RUUTUJA` | 0,5 | reunus kasvaa vain liikkeen suuntaan (halpa) — LISÄÄ perusreunukseen, ei korvaa sitä |
 | `NOUTO_RUUTUJA` | 1 | omistajan pyyntö: ruudun verran joka suuntaan |
-| `KARKEA_ETAISYYS` | 2 tasoa | 1/16 laattoja, silti tunnistettava kartta |
+| `POHJA_SYVIN` | z3 | pohja naulattu: ei vaihdu zoomatessa, koko maailma 77 laattaa (luku 6i) |
 | `KARKEA_RUUTUJA` | 2 | kattaa liu'un, jota kiinnitys ei voi kattaa |
 | `NOUTO_RINNAKKAIN` | 4 | esilataus ei saa täyttää yhteyttä |
 | `NOUTO_VIIVE_MS` | 300 | näkyvät laatat ensin; suodattaa myös pikkuvedot |
-| `VANHAN_TASON_KATTO_MS` | 2000 | yksi saapumaton laatta ei saa jättää kahta tasoa päällekkäin |
+| `VANHAN_TASON_KATTO_MS` | 2000 | yksi saapumaton laatta ei saa jättää kahta tasoa päällekkäin — katto KARSII ruudun ulkopuoliset, ei tyhjennä (luku 6i) |
 
 Näkyvät laatat luodaan aina ENNEN reunuksen laattoja (kaksi kierrosta
 samalla käsittelijällä), koska pyyntöjärjestys pätee joka selaimessa —
 `fetchpriority` on sama asia pelkkänä vihjeenä.
+
+## 6i. "Välillä kartta ei piirry ollenkaan" — tason vaihdon katkaisu (31.8.2026)
+
+Omistajan iPhone-havainto v1375:n jälkeen: noin 1000 km mittakaavassa
+Amerikan yllä ruudulla ei ollut yhtäkään laattaa — pelkkä pergamentti ja
+sen päällä elävä kerros (kaupunkien nimet, pisteet, viivaimen
+asteluvut). Sanatarkasti: *"Ja välillä kartta ei piirry ollenkaan."*
+
+### Toistoresepti (mitattu, ei arvattu)
+
+Vika ei toistu lämpimällä alueella eikä nopealla yhteydellä. Kolme
+tekijää tarvitaan yhtä aikaa, ja ne löytyivät kokeilemalla:
+
+1. **kylmä välimuisti** — se maailmankolkka, johon ollaan menossa, ei ole
+   käynyt selaimessa (`Network.clearBrowserCache` käynnistyksen jälkeen),
+2. **puhelinyhteys** — 400 kbit/s, 400 ms (`emulateNetworkConditions`),
+3. **kaksi tason vaihtoa peräkkäin** ennen kuin edellisen tason laatat
+   ehtivät perille — neljä loitonnusporrasta 150 ms välein.
+
+Näin mitattuna v1375: **peitto 0 % 202 näytteessä 208:sta**, eli kartta
+oli poissa noin kuusi sekuntia. Kuvakaappaus vastaa omistajan kuvausta
+rivi riviltä. Ajuri: `scratchpad/toista.mjs` (näytteenotto selaimen
+sisällä laudan koordinaateissa, 30 ms välein, ei
+getBoundingClientRectia).
+
+### Kolme syytä, ei yhtä
+
+| # | syy | seuraus |
+| --- | --- | --- |
+| 1 | tason vaihdossa katkaistiin JOKAINEN latautumaton vanhan tason laatta | alle ei jäänyt mitään |
+| 2 | karkea pohja SEURASI terävää tasoa (z − 2), joten se kulki saman katkaisun läpi | molemmat kerrokset saattoivat tyhjentyä samalla hetkellä |
+| 3 | `VANHAN_TASON_KATTO_MS` poisti vanhan tason kahdessa sekunnissa riippumatta siitä, oliko tilalle tullut mitään | ruutu tyhjeni kahden sekunnin kuluttua zoomista |
+
+Harva pyramidi on oletuksena pois, joten luettelossa ei ole `meriSavy`-
+kenttää eikä yksiväristä `pyramidiPohja`-suorakaidettakaan luoda: alla
+ei siis ollut edes taustaväriä.
+
+### Mitattu: kumpikaan ehdotettu korjaus ei yksinään riitä
+
+Sama toistoresepti, sama kone, neljä eri koodia:
+
+| koodi | tyhjiä näytteitä | pienin peitto |
+| --- | --- | --- |
+| v1375 (vika) | **202 / 208** | 0 % |
+| vain pohjan naulaus (syy 2) | 120 / 204 | 0 % |
+| vain katkaisun kavennus (syy 1) | 151 / 211 | 0 % |
+| naulaus + katto karsii + kavennus | **0 / 237** | 100 % |
+
+Pohjan naulaus yksin ei riitä, koska aikakatto tyhjentää vanhan tason
+kahden sekunnin päästä (syy 3). Katkaisun kavennus yksin ei riitä,
+koska kylmällä välimuistilla säästetty laatta ei näytä mitään ennen kuin
+se saapuu — ja se kilpailee kaistasta uuden tason kanssa: mitattuna
+peitto palasi vasta 25,7 sekunnin kohdalla.
+
+### Ratkaisu: kolme sääntöä
+
+**1. Pohja on naulattu tasolle z3 — aina.** Ensin kokeiltiin "seuraa
+terävää tasoa mutta enintään z3:een"; se mitattiin riittämättömäksi,
+koska pohjan taso vaihtui yhä rajalla z4 ↔ z5, ja kymmenen nopean
+portaan sarjassa (molempiin suuntiin) ruutu tyhjeni uudestaan — **202
+näytettä 233:sta**. Ehdottomasti naulattuna sama sarja pysyi **100 %:ssa
+(0 / 249)**.
+
+Hinta on kertaluonteinen ja pieni: koko maailma on z3:lla 77 laattaa
+(11 × 7), noin 2 Mt, ja laatat ovat `immutable`-välimuistissa vuoden.
+Peli aloittaa maailmanäkymästä, joten uloimmat tasot ovat lämpiminä jo
+ennen ensimmäistä lähikuvaa. Kiinnitettynä pohjaa on mitattuna 6 laattaa
+(z7), 9 (z6), 24 (z5) ja 16…42 (z4) — vähemmän kuin ennen (45 laattaa
+z7:llä), koska yksi z3-laatta kattaa 16 kertaa leveämmän alan kuin z5.
+
+Tasoilla z0…z3 pohjakerrosta ei ole lainkaan: tarkka taso on silloin itse
+karkeimmillaan.
+
+**2. Alin kerros ei heitä pois sitä, mikä on ruudulla.** Katkaisu
+(luku 6h) säilyy sellaisenaan sille kerrokselle, jonka ALLA on jotain:
+tarkka kerros saa katkaista latautumattomat laattansa, koska naulattu
+pohja kantaa ruudun sillä välin. Pohjakerros — ja uloimmilla tasoilla
+tarkka kerros, joka on silloin itse alin — säilyttää ruudulla olevat
+laattansa, myös latautumattomat, koska niiden haku on ainoa tie takaisin
+karttaan.
+
+Ero mitattiin: kun katkaisun kavennus annettiin MOLEMMILLE kerroksille,
+puussa oli 82…114 kuvaa 47…62:n sijaan ja nipistyksen longtask-summa
+nousi 899 ms:iin (mainissa 710 ms). Alimman kerroksen sääntönä sama
+suoja saadaan ilman sitä kuormaa.
+
+**3. Aikakatto karsii, ei tyhjennä.** `VANHAN_TASON_KATTO_MS` poistaa nyt
+vanhasta tasosta vain sen, mikä EI ole ruudulla (`karsiVanhat`). Katto on
+yhä olemassa siksi, mitä varten se tehtiin — ettei kahta tasoa jää
+päällekkäin ikuisesti — mutta se ei voi enää viedä ruudulta niitä
+pikseleitä, joiden tilalla ei ole mitään.
+
+### Todennus
+
+- Toistoresepti: **0 tyhjää näytettä 249:stä** (10 porrasta molempiin
+  suuntiin) ja **0 / 263** rankimmassa ajossa (14 porrasta 100 ms välein,
+  200 kbit/s, 500 ms viive). Ennen: 202 / 208.
+- Luvun 6h mittaukset pitävät: panoroinnin pienin peitto 100 %, zoomin
+  terävöityminen 62…197 ms, purettu muisti **30,4 Mt** (oli 35,7 Mt —
+  naulattu pohja on kevyempi kuin seuraava).
+- Savuke: **P7e** ajaa kahdeksan zoomiporrasta 150 ms välein niin, että
+  laattavastauksia viivästetään 500 ms, ja kaatuu jos peitto putoaa
+  nollaan. Väite kaatuu v1375:llä (0 %, 42 tyhjää näytettä 194:stä) ja
+  menee läpi korjatulla (100 %). Juuri tällaisen väitteen puuttuminen
+  päästi vian läpi.
+
+### Kirjattava sivuhavainto
+
+`savuke-maailmanakyma.mjs`:n longtask-budjetit (3a raja 350 ms, 4 raja
+750 ms) kaatuvat tässä kontissa **myös mainilla** — vuorottelevassa
+A/B-ajossa main 519/365/635 ms ja korjattu 535/646/530 ms väitteessä 3a.
+Kontin kuorma on kasvanut päivän mittaan, eivätkä nämä budjetit kerro
+tällä hetkellä koodista mitään. Nipistyksen summa on korjatulla noin
+neljänneksen suurempi (913 ms vs. 718 ms), koska vanhan tason ruudulla
+olevat laatat elävät hetken uuden alla; se on suora seuraus siitä, ettei
+ruutu saa tyhjentyä. Säädin on `VANHAN_TASON_KATTO_MS` ja pohjan reunus
+`KARKEA_RUUTUJA`, jos budjetti halutaan takaisin.
 
 ## 7. Harva pyramidi — mitattu, päätetty POIS
 

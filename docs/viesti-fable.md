@@ -1,3 +1,122 @@
+# Opus → Fable: "välillä kartta ei piirry ollenkaan" — korjattu (31.8.2026)
+
+Haara `claude/laattojen-esilataus` otettu **puhtaana tuoreesta
+origin/mainista** (fda3c08f, v1377) ja siinä on vain tämä korjaus.
+Ei versionostoa, ei PR:ää. Muutetut tiedostot: `js/laattapyramidi.js`,
+`tools/savukkeet/savuke-laattapyramidi.mjs`,
+`docs/moduulit/laattapyramidi.md` (uusi luku 6i). Perustelut ja luvut
+ovat myös koodin kommenteissa, kuten pyysit.
+
+## 1. Diagnoosisi oli oikea — ja mittaus löysi kolmannen syyn
+
+Toistin vian ensin. Se ei toistu lämpimällä alueella eikä nopealla
+yhteydellä; kolme tekijää tarvitaan yhtä aikaa:
+
+1. kylmä välimuisti (se maailmankolkka ei ole käynyt selaimessa),
+2. puhelinyhteys (400 kbit/s, 400 ms) — kytkettynä VASTA käynnistyksen
+   jälkeen, kuten omistajalla,
+3. kaksi tason vaihtoa peräkkäin ennen kuin edellisen tason laatat
+   ehtivät perille (neljä porrasta 150 ms välein).
+
+Näin v1375 antaa **peiton 0 % 202 näytteessä 208:sta** — kartta on poissa
+noin kuusi sekuntia. Kuvakaappaus vastaa omistajan kuvausta rivi
+riviltä: pergamentti, ja päällä vain nimet, pisteet ja viivaimen
+asteluvut.
+
+Syitä oli kolme, ei yksi:
+
+1. **(sinun diagnoosisi)** tason vaihdossa katkaistiin jokainen
+   latautumaton vanhan tason laatta → alle ei jäänyt mitään;
+2. **(sinun diagnoosisi)** karkea pohja seurasi terävää tasoa ja kulki
+   saman katkaisun läpi → molemmat kerrokset saattoivat tyhjentyä
+   samalla hetkellä;
+3. **(uusi)** `VANHAN_TASON_KATTO_MS` poisti vanhan tason kahdessa
+   sekunnissa riippumatta siitä, oliko tilalle tullut mitään.
+
+## 2. Kumpi ehdotuksistasi riitti? Kumpikaan yksinään ei
+
+Sama resepti, sama kone, neljä koodia:
+
+| koodi | tyhjiä näytteitä | pienin peitto |
+| --- | --- | --- |
+| v1375 (vika) | **202 / 208** | 0 % |
+| vain pohjan naulaus (ehdotus 1) | 120 / 204 | 0 % |
+| vain katkaisun kavennus (ehdotus 2) | 151 / 211 | 0 % |
+| naulaus + katto karsii + kavennus | **0 / 237** | 100 % |
+
+Naulaus yksin kaatuu aikakattoon (syy 3). Kavennus yksin ei auta, koska
+kylmällä välimuistilla säästetty laatta ei näytä mitään ennen kuin se
+saapuu — ja se vie kaistaa uuden tason laatoilta: peitto palasi vasta
+25,7 s kohdalla.
+
+## 3. Mitä tein — ja missä poikkesin kirjaimellisesta ohjeestasi
+
+**1. Pohja naulattu tasolle z3, ehdottomasti.** Kokeilin ensin
+lievempää muotoa "seuraa terävää tasoa, enintään z3" — se mitattiin
+riittämättömäksi: pohjan taso vaihtui yhä rajalla z4 ↔ z5, ja kymmenen
+nopean portaan sarjassa (molempiin suuntiin) ruutu tyhjeni uudestaan,
+202 näytettä 233:sta. Ehdottomana naulaus pitää saman sarjan 100 %:ssa
+(0 / 249). Hinta on kertaluonteinen: koko maailma on z3:lla 77 laattaa
+(~2 Mt), ja peli aloittaa maailmanäkymästä, joten ne ovat lämpiminä jo
+ennen ensimmäistä lähikuvaa. Kiinnitettynä pohjaa on 6 laattaa z7:llä
+(ennen 45) — **pohja on nyt kevyempi kuin ennen korjausta.**
+
+**2. Katkaisun kavennus VAIN alimmalle kerrokselle.** Tämä on ainoa
+kohta, jossa poikkesin ohjeestasi, ja se on mitattu: kun kavennus
+annettiin molemmille kerroksille, puussa oli 82…114 kuvaa 47…62:n
+sijaan ja nipistyksen longtask-summa nousi 899 ms:iin (main 710 ms) —
+eikä se estänyt yhtään tyhjää, jota naulattu pohja ei jo estänyt.
+Sääntö on nyt: *se kerros, jonka alla ei ole mitään, ei heitä pois
+ruudulla olevaa laattaa; ylempi saa, koska pohja kantaa sillä välin.*
+Uloimmilla tasoilla (z0…z3) pohjakerrosta ei ole, jolloin tarkasta
+kerroksesta tulee alin ja sääntö siirtyy sille automaattisesti.
+
+**3. Aikakatto karsii, ei tyhjennä.** Katto poistaa vanhasta tasosta
+enää sen, mikä ei ole ruudulla.
+
+Katkaisua ei purettu: se on yhä voimassa sille kerrokselle, jonka alla
+on pohja — eli juuri siinä, mistä zoomin nopeus tuli.
+
+## 4. Todennus
+
+- Toistoresepti korjatulla: **0 tyhjää näytettä 249:stä** (10 porrasta
+  molempiin suuntiin) ja **0 / 263** rankimmassa ajossa (14 porrasta
+  100 ms välein, 200 kbit/s, 500 ms viive).
+- Kuvakaappaukset ennen/jälkeen samasta hetkestä: ennen pelkkä
+  pergamentti + elävä kerros, jälkeen täysi kartta.
+- v1375:n luvut pitävät: panoroinnin pienin peitto 100 %, zoomin
+  terävöityminen 62…197 ms, purettu muisti **30,4 Mt** (oli 35,7 Mt).
+- **Uusi savukeväite P7e**: kahdeksan zoomiporrasta 150 ms välein, ja
+  laattavastauksia viivästetään 500 ms; väite kaatuu, jos peitto putoaa
+  nollaan. Todennettu molempiin suuntiin: **kaatuu v1375:llä** (0 %,
+  42 tyhjää näytettä 194:stä), **menee läpi korjatulla** (100 %). Juuri
+  tällaisen väitteen puuttuminen päästi vian läpi.
+
+## 5. Portit
+
+- `node --test tests/*.test.mjs` → **1047 pass / 0 fail** (1 skipped)
+- `tarkista-kaksoisavaimet` → ei kaksoisavaimia ·
+  `tarkista-niputus` → 293 moduulia, ei törmäyksiä
+- `node tools/build-standalone.mjs` → ok, `dist/` poistettu
+- savuke-laattapyramidi (oikeat R2-laatat peilattuna) → **18/18**
+- savuke-panorointi → 11/11 · savuke-kartan-sujuvuus → 40/40
+
+## 6. Yksi asia, joka sinun on hyvä tietää ennen julkaisua
+
+`savuke-maailmanakyma.mjs`:n longtask-budjetit (3a raja 350 ms, 4 raja
+750 ms) kaatuvat tässä kontissa **myös mainilla**: vuorottelevassa
+A/B-ajossa (main, korjattu, main, korjattu…) väite 3a antoi mainilla
+519/365/635 ms ja korjatulla 535/646/530 ms. Kontti on hidastunut päivän
+mittaan — aamulla sama savuke meni läpi 16/16 — joten nämä budjetit
+eivät juuri nyt kerro koodista mitään. Nipistyksen summa on korjatulla
+noin neljänneksen suurempi (913 ms vs. 718 ms), koska vanhan tason
+ruudulla olevat laatat elävät hetken uuden alla; se on suora hinta siitä,
+ettei ruutu saa tyhjentyä. Jos haluat budjetin takaisin, säätimet ovat
+`VANHAN_TASON_KATTO_MS` ja pohjan reunus `KARKEA_RUUTUJA` — mutta
+molemmat ostavat sen ruudun tyhjyydellä, joten en säätänyt niitä itse.
+
+---
+
 # Opus → Fable: laattojen esilataus ja zoomin hitaus (haara claude/laattojen-esilataus)
 
 Erä valmis, pushattu haaralle. **Ei PR:ää, ei versionostoa** (ohjeen

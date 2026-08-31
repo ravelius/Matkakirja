@@ -75,6 +75,9 @@ const vaadi = (nimi, ehto, lisa = '') => {
   if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`);
 };
 
+/** Laattavastausten viive millisekunteina (P7e asettaa, muut eivät). */
+let laattaViive = 0;
+
 const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 
 /**
@@ -108,7 +111,7 @@ async function avaaPeli() {
     lehtipyynnot.push(route.request().url());
     route.abort();
   });
-  await sivu.route('**/julisteet/pyramidi/**', (route) => {
+  await sivu.route('**/julisteet/pyramidi/**', async (route) => {
     const url = new URL(route.request().url());
     const osa = url.pathname.split('/julisteet/pyramidi/')[1];
     pyynnot.push(osa);
@@ -123,6 +126,13 @@ async function avaaPeli() {
       tiedosto = join(LAATAT, osa.slice(osa.indexOf('/') + 1));
     }
     if (!existsSync(tiedosto)) { route.fulfill({ status: 404, body: 'ei' }); return; }
+    /*
+     * SÄÄDETTÄVÄ VIIVE. Vika, jota P7e vartioi, näkyy vain kun laatat
+     * eivät ehdi perille ennen seuraavaa zoomiporrasta — puhelimen
+     * yhteydellä siis aina, paikallisesta kansiosta ei koskaan. Viive
+     * on testin oma kuristin, eikä sitä tarvita muissa väitteissä.
+     */
+    if (laattaViive) await new Promise((valmis) => { setTimeout(valmis, laattaViive); });
     route.fulfill({
       status: 200,
       contentType: osa.endsWith('.json') ? 'application/json' : 'image/webp',
@@ -304,6 +314,87 @@ vaadi('P7d zoomatessa kartta ei näytä tyhjää missään vaiheessa',
   pieninPeitto > 0.98, `pienin peitto ${(pieninPeitto * 100).toFixed(1)} %`);
 await sivu.evaluate(() => { window.matkakirja.ui.kartta.zoomaaPainikkeella(1); });
 await sivu.waitForTimeout(1500);
+
+/* ============ P7e: NOPEA ZOOMISARJA HITAALLA YHTEYDELLÄ =============
+ *
+ * Omistajan iPhone-havainto 31.8.2026: *"Ja välillä kartta ei piirry
+ * ollenkaan."* Ruudulla oli pelkkä pergamentti ja sen päällä elävä
+ * kerros — nimet, pisteet ja viivaimen asteluvut ilman yhtäkään
+ * laattaa.
+ *
+ * VIKA PÄÄSI LÄPI, KOSKA TÄLLAISTA VÄITETTÄ EI OLLUT. P7d mittaa
+ * yhden zoomiportaan nopealla (paikallisella) yhteydellä, eikä se voi
+ * nähdä vikaa: se syntyy vasta kun taso vaihtuu KAHDESTI ennen kuin
+ * edellisen tason laatat ovat ehtineet perille. Siksi tässä on kaksi
+ * asiaa yhtä aikaa: viive laattavastauksissa ja porras 150 ms:n välein.
+ *
+ * Näytteenotto on SELAIMEN SISÄLLÄ laudan koordinaateissa, koska
+ * getBoundingClientRect pakottaisi asettelun kolmenkymmenen
+ * millisekunnin välein ja hidastaisi juuri sitä, mitä mitataan.
+ */
+console.log('\n--- P7e nopea zoomisarja ---');
+const epaonnistuiEnnenP7e = (await mittarit(sivu)).epaonnistui;
+laattaViive = 500;
+await sivu.evaluate(() => {
+  window.__peitot = [];
+  window.__vahti = setInterval(() => {
+    const ui = window.matkakirja.ui;
+    const n = ui.nakyvaAlue?.();
+    if (!n?.w) return;
+    const laatat = [...(ui.pyramidiKerros?.querySelectorAll('image.pyramidi-laatta') ?? [])]
+      .filter((k) => k.dataset.ladattu === '1')
+      .map((k) => ({
+        x: parseFloat(k.getAttribute('x')),
+        y: parseFloat(k.getAttribute('y')),
+        w: parseFloat(k.getAttribute('width')),
+        h: parseFloat(k.getAttribute('height')),
+      }));
+    const N = 12;
+    let osuu = 0;
+    for (let i = 0; i < N; i += 1) {
+      for (let j = 0; j < N; j += 1) {
+        const x = n.x + ((i + 0.5) / N) * n.w;
+        const y = n.y + ((j + 0.5) / N) * n.h;
+        if (laatat.some((b) => x >= b.x && x <= b.x + b.w && y >= b.y && y <= b.y + b.h)) osuu += 1;
+      }
+    }
+    window.__peitot.push(osuu / (N * N));
+  }, 30);
+});
+/*
+ * SARJA KULKEE MOLEMPIIN SUUNTIIN JA YLI POHJAKERROKSEN RAJAN.
+ * Pohja on naulattu tasolle z3 (js/laattapyramidi.js pohjanTaso), joten
+ * juuri rajan z3 ↔ z4 ylitys on se kohta, jossa pohja lakkaa olemasta
+ * ja tarkasta kerroksesta tulee alin. Pelkkä yhteen suuntaan kulkeva
+ * sarja ei kävisi sitä läpi.
+ */
+for (const suunta of [-1, -1, -1, -1, 1, -1, 1, 1]) {
+  await sivu.evaluate((s) => { window.matkakirja.ui.kartta.zoomaaPainikkeella(s); }, suunta);
+  await sivu.waitForTimeout(150);
+}
+await sivu.waitForTimeout(4000);
+const peitot = await sivu.evaluate(() => {
+  clearInterval(window.__vahti);
+  return window.__peitot;
+});
+laattaViive = 0;
+const pieninSarjassa = Math.min(...peitot);
+const tyhjia = peitot.filter((p) => p === 0).length;
+vaadi('P7e nopea zoomisarja ei jätä karttaa tyhjäksi',
+  tyhjia === 0 && pieninSarjassa > 0.5,
+  `pienin peitto ${(pieninSarjassa * 100).toFixed(1)} %, tyhjiä näytteitä `
+  + `${tyhjia}/${peitot.length}`);
+const p7eVirheet = (await mittarit(sivu)).epaonnistui - epaonnistuiEnnenP7e;
+console.log(`      mitattu: ${peitot.length} näytettä, pienin peitto `
+  + `${(pieninSarjassa * 100).toFixed(1)} %`
+  + (p7eVirheet ? ` · sarja kävi ${p7eVirheet} laatassa, joita EI OLE `
+    + 'pilottikansiossa (404 kuuluu tähän: kansio kattaa vain osan maailmasta, '
+    + 'ja MITAT-osion epäonnistumisluku on siksi tämän verran suurempi)' : ''));
+for (let i = 0; i < 4; i += 1) {
+  await sivu.evaluate(() => { window.matkakirja.ui.kartta.zoomaaPainikkeella(1); });
+  await sivu.waitForTimeout(600);
+}
+await sivu.waitForTimeout(2500);
 
 console.log('\n--- P6 paikannimet ---');
 const nimitila = () => sivu.evaluate(() => {
