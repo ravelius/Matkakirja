@@ -1536,9 +1536,24 @@ function laskePystyParit(kaavat, ruutu) {
   const askel = valitseAskel(pxLeveysasteessa);
   const reunaA = kaavat.lat(ruutu.lautaY(-LIUKUVARA));
   const reunaB = kaavat.lat(ruutu.lautaY(ruutu.korkeus + LIUKUVARA));
+  /*
+   * LEVEYSPIIRI EI VOI OLLA YLI 90 ASTETTA (omistajan iPad-kaappaus
+   * 31.8.2026: viivaimessa luki 100 °P ja 100 °E).
+   *
+   * Miller on jatkuva funktio, joka vastaa mihin tahansa y:hyn — myös
+   * arkin ulkopuolelle. Arkki kattaa 84 °N…66 °S, ja sen ylä- ja
+   * alapuolella on paperia; kun kamera loitontaa sinne (uloszoomaus on
+   * 30.8.2026 alkaen ikkuna kertaa kolme), käänteisprojektio antoi
+   * kuuliaisesti 100 astetta eikä mikään pysäyttänyt sitä.
+   *
+   * Napojen ULKOPUOLELLA EI OLE MITÄÄN NIMETTÄVÄÄ, joten merkki
+   * jätetään pois eikä sitä kiinnitetä 90:een: kiinnitetty merkki
+   * väittäisi paperin olevan napa.
+   */
   const alku = Math.ceil(Math.min(reunaA, reunaB) / askel) * askel;
   const loppu = Math.max(reunaA, reunaB);
   for (let lat = alku; lat <= loppu + 1e-9; lat += askel) {
+    if (lat < -90 || lat > 90) continue;
     parit.push([ruutu.py(kaavat.y(lat)), asteTeksti(lat, ['P', 'E'])]);
   }
   return parit;
