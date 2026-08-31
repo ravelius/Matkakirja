@@ -55,6 +55,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1405: NOSTOT ILMAN SIIRTOVIIVOJA - nostomerkit asettuvat kaupungin molemmin puolin omina merkkeinaan; katkoviivat poistuivat. Avaa Kreikka tai Bulgaria ja katso kaupungin ymparys.',
   'v1395: POLTTAMATON PIILOON ELEESSA - zoomaa: nimet haipyvat pehmeasti ja palaavat levossa ilman hyppaysta.',
   'v1394: MERKIT KARTTAVAKIOKSI - zoomaa kauas: mustat nastat kutistuvat kartan mukana, pippuri poissa.',
   'v1393: NAPPULA LAATAN SISAAN - fokusnakymassa laatta kiertaa nappulan, rengas ei enaa ylita reunoja.',
