@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1397, teksti: 'Ikilumi 5500 metriin ja järville vesisävy' },
   { v: 1396, teksti: 'Nostotaso: nostot omalle läpinäkyvälle laattatasolle' },
   { v: 1395, teksti: 'Polttamaton kerros piiloon karttaeleen ajaksi' },
   { v: 1394, teksti: 'Kaupungin merkit karttavakioksi — musta pippuri pois' },
