@@ -1027,6 +1027,141 @@ paitsi rantaviiva on nyt myös maan ja meren raja (luku 6h), joten
 viivan silottaminen täyttöä silottamatta palauttaisi juuri sen eron,
 joka korjattiin. Reitit ovat kahden kaupungin janoja.
 
+### Jokien leveys on karttavakio — ja leveämpi (omistaja 31.8.2026)
+
+Kaksi päätöstä samana päivänä, ja ne on tehty yhdessä:
+
+1. **Sama sääntö kuin reiteillä** (luku 6k): *joki on kartan merkintä
+   eikä painokoneen ominaisuus, ja yksi sääntö on parempi kuin kaksi
+   eri sääntöä samassa piirrossa.* Leveys on nyt `R`-yksikköä, missä
+   `R = (px / 7,2) · paperiS` — sama kuin reiteillä, esitelty koodissa
+   jokien EDESSÄ, koska joet piirretään ensin.
+2. **> *"Joki saisi olla leveämpi kuin nyt jotta näkyy paremmin"***
+   — eli mitoitus ei ollut pelkkä yksikönvaihto. Vanhat **1,4 / 1,0**
+   nostettiin **2,2 / 1,6** (kerroin 1,57). Reiteillä z7 ei saanut
+   liikkua, koska sen ilme oli hyväksytty; joilla ei ollut.
+
+**Mikä EI muutu, ja se on sanottava ääneen:**
+
+- **RANTAVIIVA.** Se ei ole merkintä vaan maaston raja, ja samalla
+  maavärin täytön reuna (luku 6h): jos ranta ohenisi ulommilla
+  tasoilla, maa ja meri erkanisivat ja rannikolle jäisi rako.
+- **Kehys, kartussi, nimiöt ja patina.** Ne ovat arkin geometriaa ja
+  painojälkeä; skaalaaminen rikkoisi laattaruudukon (luku 6d).
+
+| taso | R | pääjoki px | sivujoki px | rantaviivan kynä (P) | joki : kynä |
+| --- | --- | --- | --- | --- | --- |
+| **z7** | **1,000** | **2,20** | **1,60** | 1,1 | **2,00** |
+| z6 | 0,500 | 1,10 | 0,80 | 1,1 | 1,00 |
+| z5 | 0,250 | 0,55 | 0,40 | 1,1 | 0,50 |
+| z4 | 0,125 | 0,275 | 0,20 | 1,1 | 0,25 |
+| z3 | 0,0625 | 0,138 | 0,10 | 1,1 | 0,125 |
+| z2 | 0,0313 | 0,069 | 0,050 | 1,1 | 0,063 |
+| z1 | 0,0156 | 0,034 | 0,025 | 1,1 | 0,031 |
+| z0 | 0,0078 | 0,017 | 0,013 | 1,1 | 0,016 |
+
+**Ennen muutosta joki oli rantaviivan kynää leveämpi JOKA TASOLLA**
+(1,4 : 1,1 = 1,27). Nyt se on kynää leveämpi vain z7:llä, yhtä leveä
+z6:lla ja ohuempi kaikkialla muualla — sekaantumisriski siis pienenee
+kaikkialla paitsi syvimmällä tasolla, jossa katsoja on lähimpänä ja
+ero on helpoin nähdä.
+
+#### Leveys valittiin katsomalla, ei arvaamalla
+
+Neljä leveyttä (**1,4/1,0 · 1,8/1,3 · 2,2/1,6 · 2,6/1,9**) renderöitiin
+samasta z7-ruudusta (Mekong Kambodžassa) ja katsottiin sekä 1:1 että
+kolminkertaisena suurennoksena. **1,8 jäi yhä ohueksi; 2,6 alkoi
+näyttää maantieltä eikä uomalta.** 2,2/1,6 on se, jossa uoma on
+varmaotteinen kaiverrettu viiva mutta yhä selvästi rantaviivaa
+kevyempi.
+
+Mitattuna samasta laatasta, samalla estimaattorilla — **rantaviiva on
+yhä yli kaksinkertainen**:
+
+| ala | rantaviivan Weber | joki 1,4 | **joki 2,2** | suhde ennen → jälkeen |
+| --- | --- | --- | --- | --- |
+| z7 Mekong | 0,532 | 0,128 | **0,221** | 0,24 → **0,42** |
+| z6 Niilin suisto | 0,495 | 0,095 | **0,191** | 0,19 → **0,39** |
+| z5 Niili ja Siinai | 0,479 | 0,032 | **0,069** | 0,07 → **0,14** |
+| z4 Ganges | 0,471 | 0,004 | **0,011** | 0,01 → **0,02** |
+
+Rantaviivan etu ei ole leveydessä vaan siinä, että sillä on oma 3 P:n
+usva ja maavärin täyttöraja, ja että sen muste (58,40,25 alfalla 0,85)
+on paljon tummempaa kuin joen siniharmaa (120,130,138 alfalla 0,72).
+
+#### Mitattu: joki häipyy yhä ennen reittiä
+
+Sama paritettu koe kuin reiteillä: laatta piirrettiin myös ilman
+jokia, ja näyte otettiin siltä Bézier-käyrältä, jonka `lautaKaari`
+oikeasti piirtää (murtoviivalta ottaminen osuisi väärään kohtaan).
+**LISÄYS = (tummin ilman jokia − tummin jokien kanssa) / paperi**,
+mediaani:
+
+| taso | pääjoki 2,2 | sivujoki 1,6 | vertailu: leveys 1,4 / 1,0 | ennen (paperivakio 1,4) |
+| --- | --- | --- | --- | --- |
+| z7 | 0,280 | 0,243 | 0,227 / 0,161 | identtinen 1,4:n kanssa |
+| z6 | 0,190 | 0,121 | 0,101 / 0,067 | 0,227 / 0,156 |
+| z5 | 0,071 | 0,047 | 0,036 / 0,022 | 0,228 / 0,151 |
+| z4 | **0,025** | **0,013** | 0,008 / 0,004 | 0,231 / 0,152 |
+| z3 | 0,004 | 0,003 | 0,002 / 0,001 | 0,227 / 0,155 |
+| z2 | 0,001 | 0,000 | 0,000 / 0,000 | 0,230 / 0 (kynnys) |
+| z1 | 0,000 | 0,000 | 0,000 / 0,000 | 0,226 / 0 (kynnys) |
+| z0 | 0,000 | 0,000 | 0,000 / 0,000 | 0 (kynnys) |
+
+Havaitsemiskynnys on 0,01…0,02, joten **joki erottuu z4:lle asti ja on
+hävinnyt z3:een mennessä.** Leveämpi uoma osti täsmälleen yhden tason
+lisää: leveydellä 1,4 se hävisi jo z4:ään. Reitti erottuu z3:lle asti,
+joten **joki katoaa yhä ennen reittiä** — kartografisesti oikea
+järjestys, rata on tärkeämpi kuin maasto.
+
+#### Mitattu: usvaa ei synny, vaikka uoma leveni
+
+Leveämpi uoma tarkoittaa suurempaa usvariskiä, joten koe ajettiin
+uudestaan. Uomia on 123, mutta niiden yhteispituus on **67 327
+lautayksikköä**, kun reittien on **152 800** — alle puolet, vaikka joet
+näyttävät enemmältä mutkitellessaan. Koko laatan keskisävyn muutos
+tiheimmällä jokilaatalla joka tasolta, verrattuna paperin omaan
+rakeeseen (hajonta 16 × 16 ruuduissa, mediaani):
+
+| taso | usva ΔL (2,2/1,6) | paperin rae σ | usva rakeesta | (leveydellä 1,4/1,0) |
+| --- | --- | --- | --- | --- |
+| z0 | 0,003 | 13,7 | **0,02 %** | 0,000 |
+| z1 | 0,014 | 9,7 | **0,14 %** | 0,005 |
+| z2 | 0,032 | 6,5 | **0,50 %** | 0,017 |
+| z3 | 0,068 | 6,3 | 1,1 % | 0,039 |
+| z4 | 0,178 | 6,2 | 2,9 % | 0,087 |
+| z5 | 0,368 | 6,2 | 5,9 % | 0,204 |
+
+**Yksi asia muuttui ja se on kerrottava:** leveydellä 1,4 z0-laatta oli
+TAVULLEEN sama jokien kanssa ja ilman, koska uoma oli 0,011 px eli
+Skian piirtorajan alla (mittaus luvussa 6k). Leveydellä 2,2 uoma on
+z0:lla 0,017 px eli juuri rajan yläpuolella, ja laatta muuttuu: usva
+0,003 ΔL, 0,12 % pikseleistä tummenee vähintään yhden yksikön, pahin
+yksittäinen pikseli 1,9. Se on **0,02 % paperin rakeesta** eikä
+näy — mutta se ei ole enää nolla.
+
+#### Molemmat jokikynnykset poistettu
+
+`nakyy(0.11)` (kaikki joet) ja `nakyy(0.45)` (sivujoet) ovat poissa, ja
+niiden mukana koko `nakyy`-apufunktio: piirrossa ei ole enää yhtään
+tasokynnystä.
+
+Työn säästö oli mitätön — kynnykset rajasivat piirtoa **32 laatalla
+23 340:stä** (z0 2, z1 6, z2 24) — eikä poisto tuo näkyviin mitään
+(taulukot yllä: z0…z2 usva 0,02…0,5 % rakeesta).
+
+**Varsinainen peruste on pyramidin oma sääntö.**
+`tools/generoi-laattapyramidi.mjs` alkaa sanoilla *"jokainen taso
+piirtää TÄSMÄLLEEN saman arkin"*. Kynnys rikkoi sen: se teki
+uloimmista tasoista eri SISÄLLÖN eikä vain pienemmän, ja `nakyy(0.45)`
+oli koko laattapiirron ainoa kohta, jossa kartan uomasto vaihtui tason
+mukaan (z0…z2 näytti 8 uomaa, z3 ja syvemmät 123). Nyt sisältö on sama
+joka tasolla ja vain koko muuttuu.
+
+**Sauma:** lohkorajakoe ennen ja jälkeen antaa saman luvun joka
+alalla — z1 4, z3 6, z5 4, z7 3 (pahin kanavaero 0–255). Silotus ei
+riipu leveydestä, joten muutos ei voi siirtää käyrää.
+
 ## 6j. Erikoispiirit ja nollameridiaani, nimettyinä
 
 *(Omistaja 30.8.2026: "Poista pituus ja leveyspiiri viivat. Jätä vain
@@ -1290,8 +1425,10 @@ kohdassa. Häipyminen on siis aito eikä pyöristysartefakti.
 > jäävät niin pieniksi että eivät siksi juuri näy"* (omistaja 31.8.2026)
 
 `nakyy(0.22)` on poistettu reiteiltä. Reitit piirretään z0:sta
-z7:ään, ja häviäminen tapahtuu koon kautta eikä kytkimen. Joet
-pitävät omat kynnyksensä (0,11 ja 0,45) — niitä tämä päätös ei koske.
+z7:ään, ja häviäminen tapahtuu koon kautta eikä kytkimen. **Jokien
+kynnykset (0,11 ja 0,45) poistettiin samana päivänä samalla
+perusteella** — ks. luku 6i; koko `nakyy`-apufunktio on nyt poissa,
+eikä laattapiirrossa ole enää yhtään tasokynnystä.
 
 #### Sauma parani
 

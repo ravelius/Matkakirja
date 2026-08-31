@@ -1,3 +1,282 @@
+# Opus → Fable: joet karttavakioksi, leveämmiksi ja kaikki tasokynnykset pois (haara claude/reitit-kasin)
+
+Omistajan kaksi päätöstä 31.8.2026 toteutettu **saman haaran päälle**
+(`claude/reitit-kasin`, pohja f5b81fe1). **Ei PR:ää, ei versionostoa,
+ei pyramidiajoa.** Muutettu kaksi tiedostoa:
+
+| tiedosto | mitä |
+| --- | --- |
+| `tools/fokuskartta/maailmapiirto.js` | `R` nostettu jokien ja reittien yhteiseksi; jokien leveys `1,4 / 1,0` → **`2,2 R` / `1,6 R`**; `nakyy(0.11)`, `nakyy(0.45)` ja koko `nakyy`-apufunktio poistettu |
+| `docs/moduulit/laattapyramidi.md` | luku 6i: uusi alaluku "Jokien leveys on karttavakio — ja leveämpi" mittoineen; luvun 6k kynnysmaininta päivitetty |
+
+**Rantaviiva, kehys, kartussi, nimiöt ja patina koskematta** — ne
+pysyvät paperivakioina. `js/rules.js`, `js/packs/*`, `sisalto.mjs`,
+Raamattu, tarina, isoisän raamattu ja `js/laattapyramidi.js`
+koskematta. Jokien geometriaan, silotukseen (`lautaKaari`),
+`tarkeys`-luokitteluun tai musteen sävyyn ei koskettu — vain leveyteen
+ja sen skaalautumiseen.
+
+Portit: `node --test tests/*.test.mjs` → **# pass 1047, # fail 0**
+(1 skip); `tarkista-kaksoisavaimet` → ei kaksoisavaimia;
+`build-standalone` → ok. `dist/` poistettu ennen committia.
+
+**Katselukappale `joet-karttavakio.png`** haaran juuressa
+(`/home/user/Matkakirja/joet-karttavakio.png`), **committoimatta**,
+**1 435 kt** (raja 1,5 Mt), 1536 × 2746 px. Sisältö §6.
+
+---
+
+## 1. Leveys: mitattu, ei arvattu
+
+Renderöin **neljä leveyttä** (1,4/1,0 · 1,8/1,3 · 2,2/1,6 · 2,6/1,9)
+samasta z7-ruudusta (Mekong Kambodžassa) ja katsoin ne sekä 1:1 että
+kolminkertaisena suurennoksena. **Valitsin 2,2 / 1,6** (kerroin 1,57).
+
+- **1,8 / 1,3** jäi yhä ohueksi — se on parannus, mutta ei vastaa
+  pyyntöön "näkyy paremmin" kuin puolittain.
+- **2,6 / 1,9** meni yli: 1,9 pikselin sivujoki alkoi näyttää
+  maantieltä eikä uomalta, ja sivujokia on 115 eli valtaosa uomista.
+- **2,2 / 1,6** on se, jossa uoma on varmaotteinen kaiverrettu viiva
+  mutta yhä selvästi rantaviivaa kevyempi.
+
+Alin rivi katselukappaleessa on tämä koe 1:1 (1,4 · 2,2 · 2,6).
+
+### Suhde rantaviivaan — leveytenä ja kontrastina
+
+**Leveytenä.** Rantaviivan kynä on **1,1 P** eli paperivakio joka
+tasolla (sen päällä on lisäksi 3 P:n usva alfalla 0,18). Joki on nyt
+**2,2 R** eli karttavakio. Ne eivät siis ole vertailukelpoisia yhtenä
+lukuna vaan tasoittain:
+
+| taso | rantaviivan kynä | pääjoki | **joki : kynä** |
+| --- | --- | --- | --- |
+| z7 | 1,1 | 2,20 | **2,00** |
+| z6 | 1,1 | 1,10 | 1,00 |
+| z5 | 1,1 | 0,55 | 0,50 |
+| z4 | 1,1 | 0,275 | 0,25 |
+| z3 | 1,1 | 0,138 | 0,125 |
+| z2…z0 | 1,1 | 0,069…0,017 | 0,06…0,02 |
+
+**Ennen muutosta joki oli kynää leveämpi JOKA TASOLLA** (1,4 : 1,1 =
+1,27 kaikkialla). Nyt se on kynää leveämpi vain z7:llä, yhtä leveä
+z6:lla ja ohuempi kaikkialla muualla. **Sekaantumisriski siis pienenee
+kaikkialla paitsi syvimmällä tasolla** — ja siellä katsoja on
+lähimpänä, jolloin ero on helpoin nähdä.
+
+**Kontrastina** (sama estimaattori molemmille, samasta laatasta;
+rantaviiva mitattu taustalaatasta, jossa jokia ei ole):
+
+| ala | rantaviivan Weber | joki 1,4 | **joki 2,2** | suhde ennen → jälkeen |
+| --- | --- | --- | --- | --- |
+| z7 Mekong | 0,532 | 0,128 | **0,221** | 0,24 → **0,42** |
+| z6 Niilin suisto | 0,495 | 0,095 | **0,191** | 0,19 → **0,39** |
+| z5 Niili ja Siinai | 0,479 | 0,032 | **0,069** | 0,07 → **0,14** |
+| z4 Länsi-Eurooppa | 0,477 | 0,004 | **0,011** | 0,01 → **0,02** |
+
+**Rantaviiva on yhä yli kaksinkertainen syvimmälläkin tasolla.** Sen
+etu ei ole leveydessä vaan siinä, että sillä on oma usva ja maavärin
+täyttöraja, ja että sen muste (58,40,25 alfalla 0,85) on paljon
+tummempaa kuin joen siniharmaa (120,130,138 alfalla 0,72). Kartta ei
+siis muutu sekavaksi — mutta tämä on se luku, jota kannattaa katsoa,
+jos leveyttä joskus nostetaan lisää.
+
+---
+
+## 2. Muutos koodissa
+
+`R` on nyt esitelty jokien EDESSÄ (joet piirretään ensin) ja palvelee
+molempia pysyviä viivoja:
+
+```js
+const SYVIN_TIHEYS = 7.2;                                   // z7:n px/lautayksikkö
+const R = paperiS != null ? (px / SYVIN_TIHEYS) * paperiS : P;
+const JOKI_PAA = 2.2;
+const JOKI_SIVU = 1.6;
+...
+ctx.lineWidth = (joki.tarkeys <= 1 ? JOKI_PAA : JOKI_SIVU) * R;
+```
+
+| taso | R | pääjoki px | sivujoki px |
+| --- | --- | --- | --- |
+| **z7** | **1,000** | **2,20** | **1,60** |
+| z6 | 0,500 | 1,10 | 0,80 |
+| z5 | 0,250 | 0,55 | 0,40 |
+| z4 | 0,125 | 0,275 | 0,20 |
+| z3 | 0,0625 | 0,138 | 0,10 |
+| z2 | 0,0313 | 0,069 | 0,050 |
+| z1 | 0,0156 | 0,034 | 0,025 |
+| z0 | 0,0078 | 0,017 | 0,013 |
+
+`tarkeys` ei enää valitse ketkä piirretään vaan pelkän leveyden:
+kaikki 123 uomaa ovat joka tasolla, ja pääjoen (8 kpl) ja sivujoen
+(115 kpl) ero on 2,2 : 1,6.
+
+---
+
+## 3. Milloin joki lakkaa erottumasta paperista
+
+Sama paritettu koe kuin reiteillä (laatta myös ilman jokia, erotus).
+**Menetelmällinen tarkennus:** näyte otetaan siltä Bézier-käyrältä,
+jonka `lautaKaari` oikeasti piirtää — joki silotetaan
+sentripetaalisella Catmull-Romilla, joten murtoviivalta ottaminen olisi
+osunut viivan viereen. Sama kaava on toistettu mittausskriptissä rivi
+riviltä.
+
+**LISÄYS = (tummin ilman jokia − tummin jokien kanssa) / paperi**,
+mediaani; n = 188…6894 per luku:
+
+| taso | pääjoki 2,2 | sivujoki 1,6 | *(vertailu: leveys 1,4 / 1,0)* | **ennen** (paperivakio 1,4) |
+| --- | --- | --- | --- | --- |
+| z7 | 0,280 | 0,243 | *0,227 / 0,161* | identtinen 1,4:n kanssa |
+| z6 | 0,190 | 0,121 | *0,101 / 0,067* | 0,227 / 0,156 |
+| z5 | 0,071 | 0,047 | *0,036 / 0,022* | 0,228 / 0,151 |
+| z4 | **0,025** | **0,013** | *0,008 / 0,004* | 0,231 / 0,152 |
+| z3 | 0,004 | 0,003 | *0,002 / 0,001* | 0,227 / 0,155 |
+| z2 | 0,001 | 0,000 | *0,000 / 0,000* | 0,230 / 0 (kynnys) |
+| z1 | 0,000 | 0,000 | *0,000 / 0,000* | 0,226 / 0 (kynnys) |
+| z0 | 0,000 | 0,000 | *0,000 / 0,000* | 0 (kynnys) |
+
+**Vastaus:** havaitsemiskynnys on 0,01…0,02, joten **joki erottuu
+z4:lle asti ja on hävinnyt z3:een mennessä.** Leveämpi uoma osti
+täsmälleen yhden tason lisää — leveydellä 1,4 se hävisi jo z4:ään.
+
+**Reitti erottuu z3:lle asti, joten joki katoaa yhä ennen reittiä.**
+Ero kaventui kahdesta tasosta yhteen. Se on kartografisesti oikea
+järjestys — rata on tärkeämpi kuin maasto — ja nyt se on myös
+lähempänä toisiaan, mikä sopii siihen, että molemmat ovat nyt saman
+säännön alla.
+
+---
+
+## 4. Usvakoe uudella leveydellä — ja yksi luku, joka ei ole enää nolla
+
+Leveämpi uoma tarkoittaa suurempaa usvariskiä, joten koe ajettiin
+kokonaan uudestaan. Tiheimmältä jokilaatalta joka tasolta:
+
+| taso | usva ΔL (2,2/1,6) | paperin rae σ | usva rakeesta | *(leveydellä 1,4/1,0)* |
+| --- | --- | --- | --- | --- |
+| z0 | **0,003** | 13,7 | **0,02 %** | *0,000* |
+| z1 | 0,014 | 9,7 | **0,14 %** | *0,005* |
+| z2 | 0,032 | 6,5 | **0,50 %** | *0,017* |
+| z3 | 0,068 | 6,3 | 1,1 % | *0,039* |
+| z4 | 0,178 | 6,2 | 2,9 % | *0,087* |
+| z5 | 0,368 | 6,2 | 5,9 % | *0,204* |
+
+**Usvaa ei synny:** uloimmilla tasoilla tummeneminen on 0,02…0,5 %
+paperin omasta rakeesta.
+
+**Mutta yksi asia muuttui, ja se on kerrottava.** Leveydellä 1,4
+z0-laatta oli TAVULLEEN sama jokien kanssa ja ilman, koska uoma oli
+0,011 px eli Skian piirtorajan alla. Leveydellä 2,2 uoma on z0:lla
+0,017 px eli **juuri rajan yläpuolella**, ja laatta muuttuu: usva
+0,003 ΔL, 0,12 % pikseleistä tummenee vähintään yhden luminanssi-
+yksikön, pahin yksittäinen pikseli 1,9. Se on 0,02 % rakeesta eikä
+näy — mutta se ei ole enää nolla, ja jos leveyttä joskus nostetaan
+lisää, tämä on se luku joka lähtee kasvamaan ensin.
+
+---
+
+## 5. Kynnykset — molemmat poistettu, ja eri syystä kuin odotin
+
+Mittasin kynnyksettömän version erikseen (koeversio, z0…z3) ja
+palautin lopullisen koodin vasta sen jälkeen: **poisto ei tuo näkyviin
+mitään eikä tuota usvaa.**
+
+Odotin, että kynnykset kannattaa säilyttää työn säästämiseksi.
+**Se osoittautui vääräksi lasketuksi:** ne rajasivat piirtoa vain
+uloimmilla tasoilla, joilla laattoja on z0 2, z1 6 ja z2 24 — eli
+**32 laattaa 23 340:stä**, 0,14 % ajosta.
+
+**Varsinainen peruste on pyramidin oma sääntö.**
+`tools/generoi-laattapyramidi.mjs` alkaa sanoilla *"Jokainen taso
+piirtää TÄSMÄLLEEN saman arkin samalla moottorilla"*, ja perustelu on
+heti perässä: *"kun jokainen taso on sama arkki, mikään ei voi ajautua
+eri sävyihin tasojen välillä"*. **Kynnys rikkoi juuri sen:** se teki
+uloimmista tasoista eri SISÄLLÖN eikä vain pienemmän. `nakyy(0.45)`
+oli koko laattapiirron ainoa kohta, jossa kartan uomasto vaihtui tason
+mukaan — z0…z2 näytti 8 uomaa, z3 ja sitä syvemmät 123.
+
+Nyt sisältö on sama joka tasolla ja vain koko muuttuu. **Koko
+`nakyy`-apufunktio on poistettu; laattapiirrossa ei ole enää yhtään
+tasokynnystä.**
+
+**Riski, joka on syytä tietää:** yleistys tehdään nyt kokonaan koolla.
+Jos mustetta tai leveyttä joskus nostetaan lisää, häipymispiste siirtyy
+ulommas eikä mikään kytkin enää suojaa uloimpia tasoja. Silloin
+fade-piste ja usva on mitattava uudestaan — se on nyt se yksi paikka,
+jossa sääntö asuu.
+
+---
+
+## 6. Katselukappale — mitä siinä on
+
+`joet-karttavakio.png`, 1536 × 2746 px, **1 435 kt**, haaran juuressa,
+committoimatta.
+
+1. **z0…z7 kahdeksana ruutuna**, jokainen 512 × 512 laattapikseliä 1:1.
+   **Jokaisen otsikossa lukee uoman leveys ja se, erottuuko se** —
+   muuten tyhjältä näyttävää z3-ruutua luulisi rikkinäiseksi renderiksi,
+   vaikka se on mittaustulos. Alat: z0 arkin laita, z1 Eurooppa–Aasia,
+   z2 Lähi-itä ja Intia, z3 Siperia (Ob, Jenisei, Lena), **z4
+   Länsi-Eurooppa (Seine, Loire, Rein)**, **z5 Niili, Siinai ja Suez**,
+   z6 Niilin suisto, z7 Mekong Kambodžassa. z4 ja z5 ovat mukana
+   pyynnöstäsi ja ne on valittu niin, että samassa ruudussa on sekä
+   uomaa että rantaviivaa — juuri ne tasot, joilla vertailu tehdään.
+2. **z1 Eurooppa–Aasia ennen ja jälkeen vierekkäin.** Ennen: Niili,
+   Volga, Tonava ja Ob täysleveinä harmaina viivoina yli maanosan.
+   Jälkeen: puhdas.
+3. **LEVEYSKOE alimmalla rivillä 1:1** — sama z7-kohta leveyksillä
+   1,4 / **2,2** / 2,6, eli se koe, jolla leveys valittiin.
+4. **Kaksi lukupaneelia:** joen oma lisäys tasoittain (§3) ja usvakoe
+   (§4).
+5. **Selite**, jossa pääjoki 2,2, sivujoki 1,6 ja **rantaviivan kynä
+   1,1 samassa kuvassa**, sekä se raja kirjattuna, ettei rantaviiva
+   muutu.
+
+**Rehellisyysvaraus, joka lukee myös kuvassa:** tausta on kaavio eikä
+lopullinen maasto (`ne50.geojson`, PD, Natural Earth 50m; maasto
+tasainen). **Paperi, patina, kehys, projektio, arkkikoordinaatit ja
+jokien piirto ovat oikeaa moottoria.**
+
+---
+
+## 7. Sauma — ei liikahtanut
+
+Lohkorajakoe (kaksi vierekkäistä samankokoista lohkoa samalta arkin
+alalta), pahin kanavaero 0–255:
+
+| ala | ennen (f5b81fe1) | **jälkeen** |
+| --- | --- | --- |
+| z1 1,0 Eurooppa–Aasia | 4 | **4** |
+| z3 8,1 Siperia | 6 | **6** |
+| z5 13,15 Amazon | 4 | **4** |
+| z7 128,46 Yunnan | 3 | **3** |
+
+Sama luku joka alalla, eikä se yllätä: silotus ei riipu leveydestä,
+`R` on tason vakio, ja käyrä lasketaan koko uomasta arkin
+koordinaateissa.
+
+Sama varaus kuin ennen: koe ajettiin kaaviotaustalla, koska pyramidin
+raaka-aineistoa ei ole kontissa. Virallinen `--saumatesti` oikealla
+aineistolla kuuluu ajaa ennen tuotantoajoa, **`--alue`-rajauksella
+alueelle jolla on reittejä ja jokia** — työkalun vakioala on ulappaa.
+
+---
+
+## 8. Mitä jäi tekemättä
+
+- **Pyramidiajo ja versionosto** — omistaja päättää.
+- **Järvet.** Ne piirretään rantaviivan kanssa samasta vektorista
+  (luku 6h) ja ovat siksi maaston rajaa eivätkä merkintää — en
+  koskenut niihin. Mainitsen sen vain siksi, että "vesi" voisi
+  kuulostaa yhdeltä asialta: joki on merkintä, järvi on täytön reuna.
+- **z7-laatat eivät ole enää tavulleen samoja kuin ennen**, ja se on
+  tarkoitus: leveys nousi. Jos joskus halutaan varmistaa, ettei mikään
+  MUU muuttunut, sen voi tehdä ajamalla saman vertailun leveydellä
+  1,4 / 1,0 — silloin z7 on bittiin asti sama kuin f5b81fe1:ssä
+  (todennettu tässä erässä ennen leveyden nostoa).
+
+
 # Opus → Fable: reittien muste karttavakioksi ja kynnys pois (haara claude/reitit-kasin)
 
 Omistajan päätös 31.8.2026 toteutettu **saman haaran päälle**

@@ -1176,42 +1176,155 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * mikä on viivatyötä ja mitä ei lueta — 123 uomaa ja 479 reittijanaa,
    * jotka elävässä kerroksessa maksaisivat kehysaikaa joka eleessä.
    *
-   * === MITAT OVAT RUUDUN MITTOJA, EIVÄT KARTAN ======================
+   * === MITAT OVAT KARTAN MITTOJA, EIVÄT RUUDUN =====================
    *
    * Tämä on se kohta, jossa pyramidi eroaa yhden arkin lehdestä, ja
-   * ero on helppo tehdä väärin (tehtiin ensin, mitattiin, korjattiin).
+   * ero on tehty väärin kahdesti: ensin skaalaamalla kaikki kartan
+   * mukana (mitattiin, korjattiin luvussa 6d), sitten pitämällä
+   * KAIKKI painojälki paperivakiona (mitattiin, korjattiin tässä).
    *
    * Moottorin kalusteet kerrotaan S:llä, jolloin ne ovat SAMAN
    * KOKOISIA KARTALLA joka tasolla — kehys ja kartussi kuuluvat juuri
-   * niin. Viivanleveys ei kuulu, eikä rannikon viiva tai paperin rae
-   * kuulu (ne ovat paperivakioita, P): peli valitsee tason ruudun
-   * tarkkuuden mukaan ja katsoo laattaa suunnilleen 1:1, joten
-   * `koko * S` pikseliä olisi `koko * S` LAITEPIKSELIÄ ruudulla.
+   * niin. Paperin rae, rannikon viiva ja nimiöt eivät kuulu (ne ovat
+   * paperivakioita, P): peli valitsee tason ruudun tarkkuuden mukaan
+   * ja katsoo laattaa suunnilleen 1:1, joten `koko * S` pikseliä
+   * olisi `koko * S` LAITEPIKSELIÄ ruudulla.
    *
-   * === YLEISTYS ====================================================
+   * PYSYVÄT VIIVAT — JOET JA REITIT — OVAT KOLMAS LAJI, ja se on
+   * omistajan päätös 31.8.2026: ne ovat kartan MERKINTÖJÄ, joten ne
+   * kutistuvat kartan mukana (`R`, alla). Rantaviiva ei ole merkintä
+   * vaan maaston raja, eikä se siksi kutistu.
    *
-   * Sama sisältö on joka tasolla, mutta ei samanlaisena: uloimmalla
-   * tasolla maailma on 675 pikseliä leveä, ja jokainen uoma siinä
-   * olisi harmaata mössöä. Kynnykset ovat kuvapikseliä lautayksikköä
-   * kohti, ja ne on johdettu samasta nimiötiheydestä kuin nimien omat
-   * kynnykset (nyt js/karttanimet.js KYNNYS): 261 kaupunkia jakautuu
-   * W pikselin levyiselle maailmalle noin W/16 pikselin välein, ja
-   * kuudenkymmenen pikselin nimi tarvitsee siitä vähintään sen verran.
+   * === YLEISTYS TEHDÄÄN KOOLLA, EI KYNNYKSILLÄ =====================
+   *
+   * Ennen tässä oli kolme kynnystä: reitit sisään kun px ≥ 0,22, joet
+   * kun px ≥ 0,11 ja sivujoet kun px ≥ 0,45. Ne olivat oikea ratkaisu
+   * niin kauan kuin muste oli paperivakio: uloimmalla tasolla maailma
+   * on 675 pikseliä leveä, ja 123 uomaa täyden levyisenä olisi ollut
+   * harmaata mössöä.
+   *
+   * KAIKKI KOLME ON POISTETTU, koska `R` hoitaa saman asian paremmin
+   * ja koska kynnys rikkoi pyramidin oman perussäännön: *"jokainen
+   * taso piirtää TÄSMÄLLEEN saman arkin"*
+   * (tools/generoi-laattapyramidi.mjs). Kynnys teki uloimmista
+   * tasoista eri SISÄLLÖN, ei vain pienemmän — ja juuri sitä pyramidi
+   * ei saa tehdä. Nyt sisältö on sama joka tasolla ja vain koko
+   * muuttuu.
+   *
+   * MITATTU, ETTEI POISTO TUO MITÄÄN NÄKYVIIN (luvut
+   * docs/moduulit/laattapyramidi.md 6i ja 6k): kynnyksettä piirretyn
+   * laatan keskisävy tummenee jokien takia z0:lla 0,003, z1:llä 0,014
+   * ja z2:lla 0,032 luminanssiyksikköä, kun paperin oma rae on
+   * 6…14 yksikköä — eli 0,02…0,5 % rakeesta. Kynnykset eivät siis
+   * rajanneet pois mitään näkyvää, vaan pelkkää työtä — ja työtäkin
+   * vain 32 laatalla 23 340:stä.
    */
   if (sisalto) {
-    // Yleistys: kuvapikseliä lautayksikköä kohti (ks. YLEISTYS yllä).
-    const nakyy = (kynnys) => px >= kynnys;
 
-    /* --- joet: uomat ennen kaupunkeja, kuten vesi on ennen kaupunkia */
-    if (nakyy(0.11) && sisalto.joet?.length) {
+    /*
+     * === R = PYSYVIEN VIIVOJEN MUSTE ON KARTTAVAKIO ==================
+     *
+     * OMISTAJAN PÄÄTÖS 31.8.2026, ensin reiteistä sanatarkasti: *"kun
+     * kartta on zoomattu tarpeeksi ulospäin, niin pisteistä tulee
+     * aivan liian häiritseviä. Pisteiden koko pitäisi siis pysyä koko
+     * ajan samana, elikkä kun kartta zoomautuu ulospäin, niin pisteet
+     * ja viivat alkavat pienentyä kartan mukana. Eli mietitään
+     * pisteiden koko niin, että se näyttää lähimmässä zoomauksessa
+     * hyvälle ja sitten ne häipyvät näkyvistä pienentyessään aina kun
+     * zoomataan ulospäin, mikä on luonnollista."* — ja saman tien
+     * perään JOISTA: sama sääntö, koska joki on kartan merkintä eikä
+     * painokoneen ominaisuus, ja yksi sääntö on parempi kuin kaksi
+     * eri sääntöä samassa piirrossa.
+     *
+     * TÄMÄ KUMOAA NÄIDEN KAHDEN OSALTA luvun 6d säännön *"painojälki
+     * on vakio ulostulopikseleinä"*. Paperivakio pitää merkin saman
+     * kokoisena ruudulla joka tasolla — juuri siitä syntyi valitettu
+     * vika: uloimmalla tasolla, jossa yksi askelmahelmi kattaa satoja
+     * kilometrejä, sama 6,4 pikselin helmi peitti mantereen.
+     *
+     * MITÄ TÄMÄ EI KOSKE, JA SE ON SANOTTAVA ÄÄNEEN:
+     *
+     *   RANTAVIIVA EI MUUTU. Se ei ole merkintä vaan MAASTON RAJA, ja
+     *   samalla maavärin täytön reuna: jos ranta ohenisi ulommilla
+     *   tasoilla, maa ja meri erkanisivat toisistaan ja rannikolle
+     *   jäisi rako (luku 6h — ne piirretään tarkoituksella samasta
+     *   vektorista).
+     *   KEHYS, KARTUSSI, NIMIÖT JA PATINA EIVÄT MUUTU. Ne ovat arkin
+     *   geometriaa ja painojälkeä; niiden skaalaaminen rikkoisi
+     *   laattaruudukon (luku 6d).
+     *
+     * MITOITETTU SYVIMMÄN TASON MUKAAN. `SYVIN_TIHEYS` on pyramidin
+     * syvimmän tason tiheys (tools/generoi-laattapyramidi.mjs
+     * `TIHEYS`), ja se on tässä pelkkä KALIBROINTIPISTE: se kertoo,
+     * millä tasolla ilmeen on määrä olla se hyväksytty. `px` on tämän
+     * tason kuvapikseliä lautayksikköä kohti, joten `px /
+     * SYVIN_TIHEYS` on 1 syvimmällä tasolla ja puolittuu joka
+     * askelmalla ulospäin. Jos pyramidin tiheys joskus muuttuu,
+     * muuttuu kalibrointipiste eikä periaate.
+     *
+     * YHDEN ARKIN LEHDELLÄ EI MUUTU MITÄÄN. Siellä `paperiS` on null,
+     * jolloin `R = P = S` eli kartan mittakaava — yhden arkin lehdellä
+     * paperi ja kartta ovat sama mittakaava, ja siksi vika ei näkynyt
+     * ennen pyramidia.
+     */
+    const SYVIN_TIHEYS = 7.2;
+    const R = paperiS != null ? (px / SYVIN_TIHEYS) * paperiS : P;
+
+    /* --- joet: uomat ennen kaupunkeja, kuten vesi on ennen kaupunkia
+     *
+     * LEVEYS ON NYT KARTTAVAKIO (ks. R yllä) JA SAMALLA NOUSI.
+     * Omistaja 31.8.2026: *"Joki saisi olla leveämpi kuin nyt jotta
+     * näkyy paremmin"* — jokien mitoitus ei siis ollut pelkkä
+     * yksikönvaihto niin kuin reiteillä, joilla z7 ei saanut liikkua.
+     * Vanhat 1,4 / 1,0 nostettiin 2,2 R / 1,6 R (kerroin 1,57), eli
+     * z7:llä 2,20 ja 1,60 pikseliä ja puolet siitä joka taso ulospäin.
+     *
+     * LEVEYS VALITTIIN KATSOMALLA, EI ARVAAMALLA: neljä leveyttä
+     * (1,4/1,0 · 1,8/1,3 · 2,2/1,6 · 2,6/1,9) renderöitiin samasta
+     * z7-ruudusta ja katsottiin 1:1 sekä kolminkertaisena
+     * suurennoksena. 1,8 jäi yhä ohueksi; 2,6 alkoi näyttää maantieltä
+     * eikä uomalta, ja sivujokia on 115 eli valtaosa uomista.
+     *
+     * JOKI EI SAA KILPAILLA RANTAVIIVAN KANSSA, koska silmä lukee
+     * molemmat veden rajaksi. Rantaviivan kynä on 1,1 P eli
+     * PAPERIvakio, joki 2,2 R eli KARTTAvakio — ne ovat yhtä leveät
+     * vasta z6:lla, ja joki on kynää leveämpi VAIN z7:llä, jossa
+     * katsoja on lähimpänä ja ero on helpoin nähdä. Ennen muutosta
+     * joki oli kynää leveämpi JOKA TASOLLA (1,4 : 1,1), joten
+     * sekaantumisriski itse asiassa pieneni kaikkialla paitsi
+     * syvimmällä tasolla. Mitattuna samasta laatasta samalla
+     * estimaattorilla: rantaviivan Weberin kontrasti on 0,47…0,53 ja
+     * joen 0,011…0,221, eli ranta on syvimmälläkin tasolla yli
+     * kaksinkertainen. Sen etu ei ole leveydessä vaan siinä, että
+     * sillä on oma 3 P:n usva ja maavärin täyttöraja, ja että sen
+     * muste (58,40,25 alfalla 0,85) on paljon tummempaa kuin joen
+     * siniharmaa (120,130,138 alfalla 0,72).
+     *
+     * `tarkeys` ei enää valitse KETKÄ piirretään vaan pelkän
+     * leveyden. Kaikki 123 uomaa ovat joka tasolla, ja pääjoen (8 kpl)
+     * ja sivujoen (115 kpl) ero on 2,2 : 1,6.
+     *
+     * JOET HÄIPYVÄT YHÄ AIEMMIN KUIN REITIT, ja se on mitattu eikä
+     * arvattu: jokimuste on vaaleaa siniharmaata (120,130,138) alfalla
+     * 0,72, kun reitin seepia ja preussinsininen ovat paljon tummempia.
+     * Jokien oma lisäys paperin tummuuteen
+     * (docs/moduulit/laattapyramidi.md 6i) on z5:llä 0,071 / 0,047,
+     * z4:llä 0,025 / 0,013 ja z3:sta ulospäin alle 0,005 — reitit
+     * erottuvat vielä z3:lla. Leveyden nosto osti täsmälleen yhden
+     * tason lisää (1,4:llä joki hävisi jo z4:ään), mutta järjestys
+     * säilyi: joki katoaa ennen reittiä, mikä on kartografisesti
+     * oikein — rata on tärkeämpi kuin maasto.
+     */
+    const JOKI_PAA = 2.2;
+    const JOKI_SIVU = 1.6;
+    if (sisalto.joet?.length) {
       ctx.save();
       ctx.lineJoin = 'round';
       ctx.lineCap = 'round';
       ctx.strokeStyle = 'rgba(120,130,138,0.72)';
       for (const joki of sisalto.joet) {
-        // Kaukaa vain pääjoet; lähempää kaikki.
-        if (joki.tarkeys > 1 && !nakyy(0.45)) continue;
-        ctx.lineWidth = joki.tarkeys <= 1 ? 1.4 : 1.0;
+        // Pääjoki on leveämpi; kaikki uomat piirretään joka tasolla.
+        ctx.lineWidth = (joki.tarkeys <= 1 ? JOKI_PAA : JOKI_SIVU) * R;
         // Pehmeä käyrä pisteiden läpi, ei murtoviiva — ks. lautaKaari.
         lautaKaari(ctx, [joki.pisteet]);
         ctx.stroke();
@@ -1256,43 +1369,20 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
      *
      * === REITTIEN MUSTE ON KARTTAVAKIO, EI PAPERIVAKIO ==============
      *
-     * OMISTAJAN PÄÄTÖS 31.8.2026, sanatarkasti: *"kun kartta on
-     * zoomattu tarpeeksi ulospäin, niin pisteistä tulee aivan liian
-     * häiritseviä. Pisteiden koko pitäisi siis pysyä koko ajan samana,
-     * elikkä kun kartta zoomautuu ulospäin, niin pisteet ja viivat
-     * alkavat pienentyä kartan mukana. Eli mietitään pisteiden koko
-     * niin, että se näyttää lähimmässä zoomauksessa hyvälle ja sitten
-     * ne häipyvät näkyvistä pienentyessään aina kun zoomataan
-     * ulospäin, mikä on luonnollista."*
+     * Sääntö ja omistajan sanamuoto ovat yllä jokien edessä (`R`).
+     * Reittien osalta se kumoaa säännön *"askelman ja katkon koko on
+     * paperivakio (P) kuten muukin painojälki"*: `R` korvaa `P`:n
+     * viivanleveydessä, helmen säteessä ja kehässä, katkon jaksossa,
+     * sivuheitossa ja kaarevuudessa sekä käsin piirretyssä heitossa.
      *
-     * TÄMÄ KUMOAA REITTIEN OSALTA säännön *"askelman ja katkon koko on
-     * paperivakio (P) kuten muukin painojälki"*. Perustelu on
-     * omistajan: helmet ja katkoviiva ovat KARTAN MERKINTÖJÄ siinä
-     * missä rantaviivan muoto, eivät painokoneen ominaisuus, ja siksi
-     * niiden kuuluu kutistua kartan mukana. Paperivakio pitää merkin
-     * saman kokoisena ruudulla joka tasolla — juuri siitä syntyi
-     * valitettu vika: uloimmalla tasolla, jossa yksi helmi kattaa
-     * satoja kilometrejä, sama 6,4 pikselin helmi peitti mantereen.
-     *
-     * MUUTOS KOSKEE VAIN REITTEJÄ. Kehys, kartussi, nimiöt, patina,
-     * rannikon kynä ja paperin rae pysyvät paperivakioina — niiden
-     * mitat ovat arkin geometriaa ja painojälkeä, ja niiden
-     * skaalaaminen rikkoisi laattaruudukon (luku 6d).
-     *
-     * MITOITETTU SYVIMMÄN TASON MUKAAN. `R` on reittimusteen yksikkö:
-     * syvimmällä laattatasolla se on tasan `P`, joten z7:n hyväksytty
-     * ilme ei muutu pikseliäkään, ja jokainen taso siitä ulospäin saa
-     * puolet edellisestä. Ulommilla tasoilla reitit siis häipyvät
-     * itsestään — se on päätöksen tarkoitus, ja mitattuna
+     * Syvimmällä tasolla `R = P`, joten z7:n hyväksytty ilme ei muutu
+     * pikseliäkään, ja jokainen taso siitä ulospäin saa puolet
+     * edellisestä. Ulommilla tasoilla reitit siis häipyvät itsestään
+     * — se on päätöksen tarkoitus, ja mitattuna
      * (docs/moduulit/laattapyramidi.md 6k) reitin oma lisäys paperin
      * tummuuteen on z4:llä vielä 0,04 Weberiä, z3:lla 0,014 eli
      * havaitsemiskynnyksen tuntumassa ja z2:sta ulospäin 0,005…0,000
      * eli paperin oman rakeen alla.
-     *
-     * YHDEN ARKIN LEHDELLÄ EI MUUTU MITÄÄN. Siellä `P === S`, eli
-     * paperi ja kartta ovat sama mittakaava, ja reitit ovat jo nyt
-     * kartan mittakaavassa. `R` on siksi `P` aina kun `paperiS`:ää ei
-     * anneta, eikä yksikään yleislehden kutsuja muutu.
      *
      * KYNNYS POISTUI. Omistaja 31.8.2026: *"eikös reitit pidä olla
      * päällä kaikilla zoomitasoilla? ne vain jäävät niin pieniksi että
@@ -1362,24 +1452,6 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         meri: { viiva: 'rgba(32,60,98,0.68)', kehä: 'rgba(32,60,98,0.84)' },
       };
       const helmiTaytto = 'rgba(246,239,220,0.92)';
-      /*
-       * === R = REITTIMUSTEEN YKSIKKÖ (karttavakio) ==================
-       *
-       * `SYVIN_TIHEYS` on laattapyramidin syvimmän tason tiheys
-       * (tools/generoi-laattapyramidi.mjs `TIHEYS`), ja se on tässä
-       * pelkkä KALIBROINTIPISTE: se kertoo, millä tasolla reitin
-       * ilmeen on määrä olla se hyväksytty. Jos pyramidin tiheys
-       * joskus muuttuu, muuttuu kalibrointipiste eikä periaate —
-       * reitit skaalautuvat kartan mukana joka tapauksessa.
-       *
-       * `px` on tämän tason kuvapikseliä lautayksikköä kohti, joten
-       * `px / SYVIN_TIHEYS` on 1 syvimmällä tasolla ja puolittuu joka
-       * askelmalla ulospäin. Yhden arkin lehdellä `paperiS` on null
-       * eikä pyramidin tasoja ole — silloin `R = P = S` eli kartan
-       * mittakaava, ja mikään ei muutu.
-       */
-      const SYVIN_TIHEYS = 7.2;
-      const R = paperiS != null ? (px / SYVIN_TIHEYS) * paperiS : P;
       /*
        * HELMEN SÄDE 3,2 YKSIKKÖÄ. Yläraja tuli aikanaan tiheimmästä
        * askelvälistä, ja se sääntö kulkee nyt mukana mittakaavassa:
