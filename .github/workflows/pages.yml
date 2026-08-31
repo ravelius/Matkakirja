@@ -45,7 +45,7 @@ jobs:
           # Erillinen työhuonesivusto (tyohuone.html + oma manifesti)
           # poistettiin 18.8.2026: työhuone on nyt pelin sisällä
           # kehittäjävivun takana (hampurilaisvalikon TYÖHUONE-osio).
-          cp index.html manifest.webmanifest sw.js .nojekyll _site/
+          cp index.html kohtaamiskuvat.html manifest.webmanifest sw.js .nojekyll _site/
           cp -r css js assets docs _site/
           cp dist/matkakirja.html _site/dist/
 
