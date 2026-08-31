@@ -85,8 +85,15 @@ const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromiu
  *
  * Laattapyyntöjä EI päästetä verkkoon: ne palvellaan pilottikansiosta,
  * ja puuttuva laatta saa 404:n — juuri se, mitä P4 mittaa.
+ *
+ * KEHITTÄJÄN MAAILMANAPPI omana istuntonaan (`kehittaja: true`). Se
+ * vapauttaa panoroinnin fokusikkunasta (js/kartta.js fokusRajaukset),
+ * ja vain siten kamera pääsee Tyynenmeren yli — juuri siinä tilassa
+ * omistaja pelitestaa ja juuri siellä kierron vika näkyy (P5). Kytkin
+ * ei kuulu muihin väitteisiin, joten se ei ole oletus: se muuttaisi
+ * fokusmoodin ja siten koko piirron.
  */
-async function avaaPeli() {
+async function avaaPeli({ kehittaja = false } = {}) {
   const ctx = await selain.newContext({
     viewport: { width: 390, height: 844 },
     hasTouch: true,
@@ -94,6 +101,14 @@ async function avaaPeli() {
     deviceScaleFactor: 3,
     serviceWorkers: 'block',
   });
+  if (kehittaja) {
+    await ctx.addInitScript(() => {
+      try {
+        localStorage.setItem('matkakirja-kehittaja', '1');
+        localStorage.setItem('matkakirja-kehittaja-maailma', '1');
+      } catch { /* yksityinen selaus: kytkin jää pois, väite kaatuu näkyvästi */ }
+    });
+  }
   const sivu = await ctx.newPage();
   const pyynnot = [];
   const lehtipyynnot = [];
@@ -197,46 +212,106 @@ vaadi('P3c laattamäärä pysyy maltillisena myös lähikuvassa',
   m2.nakymassa > 0 && m2.nakymassa < 200, `nakymassa ${m2.nakymassa}`);
 vaadi('P4b lähikuvassakaan ei tule 404:iä', m2.epaonnistui === 0, `404 ${m2.epaonnistui} kpl`);
 
-/*
- * P5: KIERTO. Panoroidaan laudan sauman yli ja katsotaan, ettei
- * laattojen väliin jää rakoa. Rako syntyisi, jos paikka laskettaisiin
- * "sarake modulo sarakkeiden määrä" -kaavalla, koska tason leveys ei
- * ole laattakoon monikerta.
+/* ============ P5: KIERTO — NÄKYMÄ LAUDAN SAUMAN YLI =================
+ *
+ * === MIKSI TÄMÄ AJETAAN OMASSA ISTUNNOSSAAN JA OMASSA PAIKASSAAN ====
+ *
+ * Vanha P5 luki laatat siitä, mihin peli sattui olemaan (Ateena) ja
+ * mittasi vierekkäisten laattojen välin. Otsikko lupasi "panoroidaan
+ * laudan sauman yli", mutta yksikään rivi ei siirtänyt kameraa — väite
+ * ei koskaan käynyt saumalla, eikä se siksi voinut nähdä mitään.
+ *
+ * JA JUURI SAUMASTA VIKA LÖYTYI (omistajan kuvakaappaus 31.8.2026,
+ * näkymä Kamtšatkan yllä, mittakaava 1000 km): kartta piirtyi vain
+ * ruudun vasempaan puolikkaaseen ja oikealla oli tyhjää pergamenttia,
+ * rajana terävä pystysauma. Laatat OLIVAT puussa, ladattuina ja
+ * oikeilla paikoillaan — mutta arkin oikealla puolella, jonne laudan
+ * <use>-kopio maalaa oman läpinäkymättömän paperinsa (js/ui.js
+ * laudanKierto). Mitattuna 12 laattaa 30:stä oli arkin ulkopuolella.
+ *
+ * SIKSI VÄITE ON NYT PAIKASTA, EI VÄLEISTÄ. Rakoa mittaava väite oli
+ * tosi koko vian ajan; se, mikä oli epätosi, on "laatta on arkilla".
+ *
+ * Kamera viedään sauman molemmin puolin. Panorointi on fokusikkunassa
+ * kiinni, joten istunto avataan kehittäjän maailmanapin kanssa — se on
+ * myös se tila, jossa omistaja vian näki.
  */
-const raot = await sivu.evaluate(() => {
-  const ui = window.matkakirja.ui;
-  /*
-   * VAIN TARKAN TASON LAATAT. Kerroksessa on myös karkea pohja (kaksi
-   * tasoa alempaa, js/laattapyramidi.js sääntö 2b), ja sen laatat
-   * osuvat joka neljännellä rivillä täsmälleen samalle y-arvolle kuin
-   * tarkan tason laatat. Tasot sekaisin mitattuna "vierekkäisten väli"
-   * olisi karkean laatan ja seuraavan tarkan laatan väli — kolme
-   * tarkkaa laattaa, jotka ovat kyllä olemassa, mutta eri kerroksessa.
-   */
-  const z = String(globalThis.__pyramidinMittarit().taso);
-  const laatat = [...ui.pyramidiKerros.querySelectorAll('image.pyramidi-laatta')]
-    .filter((k) => k.dataset.taso === z)
-    .map((k) => ({
-      x: parseFloat(k.getAttribute('x')),
-      y: parseFloat(k.getAttribute('y')),
-      w: parseFloat(k.getAttribute('width')),
-      h: parseFloat(k.getAttribute('height')),
-    }));
-  // Etsitään samalta riviltä vierekkäiset laatat ja mitataan väli.
-  let pahin = 0;
-  for (const a of laatat) {
-    let lahin = Infinity;
-    for (const b of laatat) {
-      if (a === b || Math.abs(a.y - b.y) > 0.01) continue;
-      const vali = b.x - (a.x + a.w);
-      if (vali >= -0.01 && vali < lahin) lahin = vali;
-    }
-    if (lahin !== Infinity) pahin = Math.max(pahin, lahin);
+console.log('\n--- P5 kierto ---');
+const LUETTELO = JSON.parse(readFileSync(join(LAATAT, 'pyramidi.json'), 'utf8'));
+const ARKKI = LUETTELO.arkki;
+const kiertoPeli = await avaaPeli({ kehittaja: true });
+
+/** Laatat ja näkymä yhdestä kamerapaikasta. */
+const saumanLaatat = async (x) => {
+  await kiertoPeli.sivu.evaluate(({ kx, ky, leveys }) => {
+    window.matkakirja.ui.kartta.ajaKamera({ x: kx, y: ky, leveys },
+      { kesto: 0, pakota: true });
+  }, { kx: x, ky: ARKKI.y + ARKKI.h * 0.3, leveys: ARKKI.w / 6 });
+  await kiertoPeli.sivu.waitForTimeout(2500);
+  return kiertoPeli.sivu.evaluate(() => {
+    const ui = window.matkakirja.ui;
+    const z = String(globalThis.__pyramidinMittarit().taso);
+    return {
+      nakyva: ui.nakyvaAlue(),
+      laatat: [...ui.pyramidiKerros.querySelectorAll('image.pyramidi-laatta')]
+        .filter((k) => k.dataset.taso === z)
+        .map((k) => ({
+          x: parseFloat(k.getAttribute('x')),
+          y: parseFloat(k.getAttribute('y')),
+          w: parseFloat(k.getAttribute('width')),
+          h: parseFloat(k.getAttribute('height')),
+        })),
+    };
+  });
+};
+
+/*
+ * PEITTO MITATAAN KIERTÄEN. Laatta on arkilla kerran, ja sauman takana
+ * sen näyttää laudan kopio — sama laatta on siis ruudulla myös yhden
+ * arkinleveyden päässä omasta paikastaan.
+ */
+const saumaPeitto = ({ nakyva, laatat }) => {
+  const y = nakyva.y + nakyva.h / 2;
+  const N = 200;
+  let osuu = 0;
+  for (let i = 0; i < N; i += 1) {
+    const x = nakyva.x + ((i + 0.5) / N) * nakyva.w;
+    if (laatat.some((l) => l.y <= y && l.y + l.h >= y
+      && [-1, 0, 1].some((k) => {
+        const lx = l.x + k * ARKKI.w;
+        return lx <= x && lx + l.w >= x;
+      }))) osuu += 1;
   }
-  return { pahin, laattoja: laatat.length };
-});
-vaadi('P5a vierekkäisten laattojen väliin ei jää rakoa',
-  raot.pahin < 0.01, `pahin rako ${raot.pahin} lautayksikköä`);
+  return osuu / N;
+};
+
+for (const [nimi, x] of [['sauman vasemmalla', ARKKI.x + ARKKI.w - ARKKI.w / 24],
+  ['sauman päällä', ARKKI.x + ARKKI.w], ['sauman oikealla', ARKKI.x + ARKKI.w / 24]]) {
+  const tila = await saumanLaatat(x);
+  /*
+   * P5a ON SE VÄITE, JOKA OLISI NÄHNYT VIAN. Arkin ulkopuolelle
+   * piirretty laatta jää laudan <use>-kopion paperin alle: se on
+   * puussa, se on ladattu, eikä sitä näy.
+   */
+  const ulkona = tila.laatat.filter((l) => l.x < ARKKI.x - 0.01
+    || l.x + l.w > ARKKI.x + ARKKI.w + 0.01);
+  vaadi(`P5a laatat pysyvät arkilla (${nimi})`, ulkona.length === 0,
+    `${ulkona.length}/${tila.laatat.length} arkin ulkopuolella, `
+    + `x ${[...new Set(ulkona.map((l) => Math.round(l.x)))].join(' ')}`);
+  /*
+   * P5b: EIKÄ MITÄÄN JÄÄNYT PUUTTUMAAN. Pelkkä "arkilla" täyttyisi
+   * myös poistamalla sauman takaiset laatat kokonaan; tämä sanoo, että
+   * ruutu on yhä kokonaan katettu. Se vartioi samalla vanhaa vaaraa:
+   * tason leveys ei ole laattakoon monikerta, joten "sarake modulo
+   * sarakkeiden määrä" veisi laatan 128 pikseliä väärään kohtaan ja
+   * jättäisi raon juuri tähän.
+   */
+  const peittoSauma = saumaPeitto(tila);
+  vaadi(`P5b ruutu on kokonaan laattojen peitossa (${nimi})`, peittoSauma > 0.999,
+    `peitto ${(peittoSauma * 100).toFixed(1)} %, laattoja ${tila.laatat.length}`);
+}
+await kiertoPeli.ctx.close();
+
 
 /* ============ P6: PAIKANNIMI KARTALLA TÄSMÄLLEEN KERRAN =============
  *
