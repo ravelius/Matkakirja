@@ -3562,8 +3562,15 @@ export class UI {
      */
     clearTimeout(this.merkkiPaluuAjastin);
     this.merkkiPaluuAjastin = 0;
+    // Häivytyksen oma ajastin ja paluun kehysvaraus samasta syystä:
+    // kumpikin voisi kirjoittaa luokan takaisin kuolleen pelin päälle.
+    clearTimeout(this.merkkiHaipymaAjastin);
+    this.merkkiHaipymaAjastin = 0;
+    cancelAnimationFrame(this.merkkiPaluuKehys ?? 0);
+    this.merkkiPaluuKehys = 0;
     this.merkitPiilossa = false;
     document.body.classList.remove('kartta-merkit-piilossa');
+    document.body.classList.remove('kartta-merkit-haipyy');
     // Lehden avauksen mittavarmistuksen jälkitarkistukset samoin.
     clearTimeout(this.lehtitila.lehtiMittaAjastin);
     clearTimeout(this.lehtitila.lehtiMittaJalkiajastin);
@@ -4057,8 +4064,12 @@ export class UI {
        * napautuskohteita.
        */
       if (this.merkitPiilossa) {
-        this.kartta?.naytaMerkit?.(true);
+        // merkitEsiin siivoaa luokat, ajastimet ja kehysvarauksen
+        // kerralla; varapolku vanhalle kartalle jää naytaMerkkiin.
+        if (this.kartta?.merkitEsiin) this.kartta.merkitEsiin();
+        else this.kartta?.naytaMerkit?.(true);
         document.body.classList.remove('kartta-merkit-piilossa');
+        document.body.classList.remove('kartta-merkit-haipyy');
         this.merkitPiilossa = false;
       }
     }

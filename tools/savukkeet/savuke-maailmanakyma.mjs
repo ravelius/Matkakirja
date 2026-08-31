@@ -18,8 +18,10 @@
  * Juurisyy on solmumäärä: maailmanäkymä ohittaa käymättömien maiden
  * piilotuksen, jolloin kartalla on KOKO laudan kaupunkikerros — 602
  * näkyvää solmua. Eleenaikainen piilotus (js/kartta.js piilotaMerkit,
- * body.kartta-merkit-piilossa) kattaa vain fokuskohteet, fokuspisteet,
- * nostosymbolit ja nippuviivat, eikä siis niitä lainkaan. Kustannus on
+ * body.kartta-merkit-piilossa) kattaa polttamattomat sisältökerrokset —
+ * fokuskohteet, fokuspisteet, nostosymbolit, nippuviivat, eläintäyt ja
+ * paikannimikerroksen — mutta EI kaupunkikerrosta, joka on pelitilaa
+ * (laatat, nimilaput, porttikehät). Kustannus on
  * lineaarinen näkyvissä solmuissa (varmistettu kloonikokeella), koska
  * kartan CSS-muunnos pakottaa selaimen pilkkomaan koko SVG:n uudestaan
  * maalipaloihin joka kehyksellä.
