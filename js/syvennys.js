@@ -122,6 +122,17 @@ function syvennysLisakohteet(ui) {
           tyyppi: 'syvennys',
           symboli: tiedot.symboli,
           avaa: (kaytto) => avaaSyvennys(kaytto ?? ui, cityId, taky, tiedot),
+          /*
+           * OSIO YHDISTETYLLE LEHDELLE (js/fokusryhmat.js): kun saman
+           * kaupungin samanlajiset kohteet ovat yhden merkin alla,
+           * tarina latoutuu osiona kohdekortin sisään eikä omaksi
+           * kortikseen. Sisältö on TÄSMÄLLEEN SAMA kuin omassa
+           * kortissa — sama funktio latoo molemmat. Takaisinkutsu on
+           * tässä samasta syystä kuin `avaa`: ladonta asuu tässä
+           * moduulissa, joka on niputusjärjestyksessä kohteiden
+           * jäljessä.
+           */
+          osio: (kaytto, sailio) => piirraSyvennysSisus(kaytto ?? ui, sailio, cityId, taky),
         },
         paikka: { x: paikka.x, y: paikka.y },
       });
@@ -162,14 +173,7 @@ export function avaaSyvennys(ui, cityId, taky, tiedot) {
   const sisalto = html('div', 'fokusnosto-sisalto');
   // Kohdemallin yhteinen ylärivi: aihesymboli ja luokan nimi.
   sisalto.appendChild(nostosymKortinYlarivi(tiedot?.symboli, 'fokusnosto-ylarivi'));
-  sisalto.appendChild(html('h3', 'fokusnosto-kortti-otsikko', taky.otsikko ?? taky.nappi));
-  if (taky.kuva) piirraNostonKuva(ui, sisalto, taky.kuva, 'fokusnosto-kuva', 800, 'syvennysZoom');
-  const teksti = html('div', 'fokusnosto-teksti');
-  for (const kappale of jaaKappaleiksi(taky.teksti ?? '')) {
-    teksti.appendChild(html('p', '', kappale));
-  }
-  sisalto.appendChild(teksti);
-  piirraSyvennysVisa(ui, sisalto, cityId, taky);
+  piirraSyvennysSisus(ui, sisalto, cityId, taky);
 
   kortti.appendChild(sisalto);
   kerros.appendChild(kortti);
@@ -202,6 +206,30 @@ export function avaaSyvennys(ui, cityId, taky, tiedot) {
   };
   void kerros.offsetWidth;
   kerros.classList.add('syvennys-auki');
+}
+
+/**
+ * TARINAN SISUS — otsikko, kuva, teksti ja minivisa.
+ *
+ * Erotettu omaksi funktiokseen 31.8.2026 (kategoria per kaupunki):
+ * sama sisus latoutuu joko oman kortin ylärivin alle tai osiona
+ * yhdistetyllä lehdellä (js/fokuskohteet.js piirraRyhmanOsiot). Rivit
+ * ja niiden järjestys ovat entiset — vain säiliö voi olla eri.
+ *
+ * TYYLI LADATAAN TÄSSÄ, koska osiona kutsuttaessa korttia ei avata
+ * lainkaan eikä avaaSyvennys ehdi ladata sitä: luokat ovat samat
+ * (fokusnosto.css, fokusvirta.css), joten myös tyylin on oltava.
+ */
+function piirraSyvennysSisus(ui, sailio, cityId, taky) {
+  syvennysLataaTyyli();
+  sailio.appendChild(html('h3', 'fokusnosto-kortti-otsikko', taky.otsikko ?? taky.nappi));
+  if (taky.kuva) piirraNostonKuva(ui, sailio, taky.kuva, 'fokusnosto-kuva', 800, 'syvennysZoom');
+  const teksti = html('div', 'fokusnosto-teksti');
+  for (const kappale of jaaKappaleiksi(taky.teksti ?? '')) {
+    teksti.appendChild(html('p', '', kappale));
+  }
+  sailio.appendChild(teksti);
+  piirraSyvennysVisa(ui, sailio, cityId, taky);
 }
 
 /**

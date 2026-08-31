@@ -105,6 +105,9 @@ function skandaaliLisakohteet(ui) {
         tyyppi: 'skandaali',
         symboli: 'huuto',
         avaa: (kaytto) => avaaSkandaali(kaytto ?? ui, iso, skandaali),
+        // Osio yhdistetylle lehdelle — sama sopimus ja sama perustelu
+        // kuin syvennystarinalla (js/syvennys.js, js/fokusryhmat.js).
+        osio: (kaytto, sailio) => piirraSkandaalinSisus(kaytto ?? ui, sailio, iso, skandaali),
       },
       paikka: { x: paikka.x, y: paikka.y },
     });
@@ -147,15 +150,7 @@ export function avaaSkandaali(ui, iso, skandaali) {
   const sisalto = html('div', 'fokusnosto-sisalto');
   // Kohdemallin yhteinen ylärivi: aihesymboli ja luokan nimi.
   sisalto.appendChild(nostosymKortinYlarivi('huuto', 'fokusnosto-ylarivi'));
-  sisalto.appendChild(html('h3', 'fokusnosto-kortti-otsikko', skandaali.otsikko));
-  const meta = [skandaali.paikka, skandaali.vuosi].filter(Boolean).join(' · ');
-  if (meta) sisalto.appendChild(html('p', 'fokusnosto-lahde', meta));
-  const teksti = html('div', 'fokusnosto-teksti');
-  for (const kappale of jaaKappaleiksi(skandaali.kortti ?? '')) {
-    teksti.appendChild(html('p', '', kappale));
-  }
-  sisalto.appendChild(teksti);
-  piirraSkandaaliVisa(ui, sisalto, iso, skandaali);
+  piirraSkandaalinSisus(ui, sisalto, iso, skandaali);
 
   kortti.appendChild(sisalto);
   kerros.appendChild(kortti);
@@ -186,6 +181,28 @@ export function avaaSkandaali(ui, iso, skandaali) {
   };
   void kerros.offsetWidth;
   kerros.classList.add('skandaali-auki');
+}
+
+/**
+ * SKANDAALIN SISUS — otsikko, paikka–vuosi-rivi, tarina ja minivisa.
+ *
+ * Erotettu omaksi funktiokseen 31.8.2026 (kategoria per kaupunki):
+ * sama sisus latoutuu joko oman kortin ylärivin alle tai osiona
+ * yhdistetyllä lehdellä (js/fokuskohteet.js piirraRyhmanOsiot). Tyyli
+ * ladataan tässä samasta syystä kuin syvennystarinalla — osiona
+ * kutsuttaessa korttia ei avata lainkaan.
+ */
+function piirraSkandaalinSisus(ui, sailio, iso, skandaali) {
+  skandaaliLataaTyyli();
+  sailio.appendChild(html('h3', 'fokusnosto-kortti-otsikko', skandaali.otsikko));
+  const meta = [skandaali.paikka, skandaali.vuosi].filter(Boolean).join(' · ');
+  if (meta) sailio.appendChild(html('p', 'fokusnosto-lahde', meta));
+  const teksti = html('div', 'fokusnosto-teksti');
+  for (const kappale of jaaKappaleiksi(skandaali.kortti ?? '')) {
+    teksti.appendChild(html('p', '', kappale));
+  }
+  sailio.appendChild(teksti);
+  piirraSkandaaliVisa(ui, sailio, iso, skandaali);
 }
 
 /**

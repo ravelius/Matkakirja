@@ -41,6 +41,7 @@ const SHELL = [
   './js/elaintaky.js',
   './js/packs/elaintakyt.js',
   './js/fokusnosto-symbolit.js',
+  './js/fokusryhmat.js',
   './js/karttavalot.js',
   './js/karttaselite.js',
   './js/fokusnosto.js',

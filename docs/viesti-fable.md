@@ -1,3 +1,340 @@
+# Opus → Fable: kategoria per kaupunki (haara claude/kategoria-per-kaupunki)
+
+Erä valmis ja pushattu. **Ei versionostoa, ei PR:ää, ei pyramidiajoa.**
+Muutetut tiedostot: `js/fokusryhmat.js` (uusi), `js/fokuskohteet.js`,
+`js/fokusniput.js`, `js/fokusnosto.js`, `js/syvennys.js`,
+`js/skandaalit.js`, `css/fokuskohteet.css`, `sw.js`,
+`tools/build-standalone.mjs`, `tests/fokusryhmat.test.mjs` (uusi),
+`tools/savukkeet/savuke-fokuskohteet.mjs`,
+`tools/savukkeet/savuke-takyportti.mjs`,
+`tools/savukkeet/mittaa-niput.mjs` (uusi mittanauha).
+Koordinaatteihin, korttiteksteihin, visoihin tai kuviin ei koskettu.
+`js/tyohuone-raamattu.js`, `docs/tarina.md`, `docs/isoisan-raamattu.md`,
+`tools/fokuskartta/` ja `js/fokusnosto-symbolit.js` koskemattomia.
+
+## 1. Kategoriat tulevat datasta — en keksinyt yhtään
+
+Kategoria on **täsmälleen se, jolla merkki jo piirretään**:
+`js/fokuskohteet.js kohteenSymboli` (0. kadonnut ihme → tähti,
+1. kohteen oma `symboli`, 2. kierros → silmä, 3. tyyppijohto
+`KOHDE_TYYPPISYMBOLIT`, 4. muuten null). Ryhmittelypassi saa sen
+funktiona parametrina, joten kategoriaa ei ole kahta eikä yhdistetyn
+merkin symboli voi olla eri kuin sen jäsenten.
+
+Nimet ovat symbolikirjaston oma taulu `NOSTOSYM_LUOKAT` — sama, jota
+kohdekortin ylärivi käyttää.
+
+Koko maailman kohteet lehtien alla (677 merkkiä, 134 fokuslehteä):
+
+| kategoria (symboli) | kohteita | luokan nimi |
+| --- | --- | --- |
+| luonto | 322 | Luonto |
+| huuto | 125 | Skandaalit |
+| historia | 56 | Historia |
+| kaupunki | 38 | Kaupungit |
+| kulttuuri | 33 | Kulttuuri |
+| elain | 23 | Eläimet |
+| tekniikka | 21 | Tekniikka |
+| ihme | 18 | Kadonneet ihmeet |
+| sana | 15 | Tarinat |
+| kauppa | 10 | Kauppa |
+| ruoka | 7 | Ruoka ja juoma |
+| merenkulku | 5 | Merenkulku |
+| urheilu | 4 | Urheilu |
+
+Kategoriattomia (`null` → pelkkä piste) ei ole yhtään — jokainen
+kartan merkki kuuluu johonkin näistä kolmestatoista.
+
+**Yksi rajaus, ja se on datasta perusteltu: `kaupunki` ei yhdisty.**
+Perustelu on jo koodissa (`kohteenSymboli`, kohta 4): *"kaupunki on
+paikka eikä kategoria"*. Kahden naapurikaupungin niputtaminen
+"Kaupungit"-merkiksi veisi kartalta juuri ne nimet, jotka lehti on
+tarkoitettu näyttämään.
+
+**Karkeampi taso oli tarjolla, enkä ottanut sitä.**
+`NOSTOSYM_PAAKATEGORIAT` ryhmittää nämä 13 kahdeksaan (selitevalikon
+rivit). Mitattuna se ei juuri auta — Ateena 4 → 3, Pariisi 5 → 5,
+Istanbul 5 → 5 — mutta se maksaisi sen, että merkin symboli lakkaisi
+olemasta jäsentensä symboli (Colosseum piirtyisi lyyrana). Jos haluat
+sen silti, vaihto on yhden funktion mittainen.
+
+## 2. Yksi merkki kategoriaa ja kaupunkia kohti
+
+`js/fokusryhmat.js` on **puhdas funktio laudan koordinaateista**:
+`ryhmitaKohteet(rivit, kaupungit, luokka)`. Se ajetaan viimeisenä
+`nykyisenMaanKohteet`-passissa, siis sen jälkeen kun kaikki neljä
+lähdettä (fokuskohteet + maastokohteet, syvennyspaikat, skandaalit,
+nostot) on jo koottu — juuri niin että se näkee saman listan, joka
+kartalle olisi muuten piirtynyt.
+
+- **Kaupunki** on lähin `pack.cities`-kaupunki, jonka maa on sama
+  (`map.cityCountry`) ja joka on **5 lautayksikön** sisällä. Nykyinen
+  kaupunki ei ole erikoisasemassa: maan jokainen kaupunki kerää omat
+  kohteensa.
+- **Yksin jäävä kohde palautuu sellaisenaan** — yhdistäminen koskee
+  vain paria tai useampaa.
+- **Kuori istuu lähimmän jäsenensä paikassa**, ei keksityssä
+  keskipisteessä, ja ottaa listassa ensimmäisen jäsenensä paikan,
+  jolloin nimiöiden väistöjärjestys säilyy.
+- **Sisältö ei niputu.** Kuori kantaa jäsenensä `osat`-listassa
+  sellaisinaan, ja napautus avaa lehden, jossa jokainen on omana
+  osionaan omine teksteineen, kuvineen, visoineen ja lähderiveineen
+  (`piirraRyhmanOsiot`). Kolme korttiperhettä antaa sisuksensa
+  `osio`-takaisinkutsuna samalla kaavalla kuin `avaa`; kartan omat
+  kohteet latoo `piirraKohteenSisus`, joka on erotettu entisestä
+  `avaaFokuskohde`-rungosta rivi riviltä muuttumattomana.
+
+**Rajan mitta 5 on luettu datasta.** Koko maailman merkkien etäisyys
+lähimpään kaupunkiin kasautuu kahteen pesään: 1,5 yksikön sisällä 118
+merkkiä, 5 yksikön sisällä 154, mutta 5 → 15 yksikköön tulee enää 28
+lisää. Raja osuu pesien väliin jokaisessa mitatussa kaupungissa:
+
+| kaupunki | kauimmainen kaupunkikohde | seuraava merkki |
+| --- | --- | --- |
+| Ateena | 0,63 | 10,26 |
+| Rooma | 1,33 | 71,98 |
+| Dubrovnik | 3,97 | 16,48 |
+| Istanbul | 4,73 | 32,58 |
+| Sofia | 2,48 | 5,12 (Vitoša-vuori jää ulos, kuten kuuluukin) |
+| Pariisi | 1,43 | 7,29 (Kaulanauhajuttu jää omaksi merkikseen) |
+
+Lautayksikkö on Ateenan leveydellä ~2,6 km, joten 5 yksikköä ≈ 13 km.
+
+**Sivutuote, jonka pidän parannuksena:** nykyinen kasauspassin sääntö
+10 (mikä pääsee nippuun) mittaa ruudun mitassa ja antaa eri vastauksen
+puhelimella (7,7 yksikköä) ja työpöydällä (4,7). Ryhmittely tekee
+saman valinnan **samoin joka ruudulla**, koska se on laudan mitassa.
+
+## 3. Merkit lähemmäs — ja mitä oikeasti lyheni
+
+`NIPPU_DX` 28 → **26**, ja perustelu vaihtui. Aiempi alaraja oli
+merkkien limittymättömyys; nyt tiukempi pohja tulee yhdysviivalta
+itseltään, ja jokainen termi on tiedoston oma vakio:
+
+```
+sykekehä NIPPU_SYKE_R                 12
++ lyhin piirrettävä pätkä VIIVA_MIN    5
++ merkin aluslaatta NIPPU_KOHDE_R     5,6
++ rako aluslaattaan VIIVA_RAKO        2,5
+--------------------------------------------
+                                     25,1  → 26
+```
+
+**Mitattu:** kokeilin ensin 21:tä (pelkkä limittymättömyys). Silloin
+kaupungin korkeudella olevan rivin viiva katoaa kokonaan — savuke
+mittasi Ateenassa 8 nipun merkkiä ja vain 6 viivaa. Sarake ei siis
+voi tulla tätä lähemmäs ilman että rivi 0 menettää yhteytensä.
+
+Sivuhuomio: 28:n perusteluun oli luettu merkin aluslaatan säteeksi
+6,8, joka on tosiasiassa symbolin **läpimitta** (`KOHDE_SYMBOLI_R` =
+3,4). Luku ei tarkoittanut sitä, mitä sen kohdalla luki.
+
+**Varsinainen lyhennys tuli yhdistämisestä, ei vaakaetäisyydestä.**
+Mitat lautayksiköinä, sama näkymä ennen ja jälkeen (kamera ajettu
+lehden ikkunaan, `tools/savukkeet/mittaa-niput.mjs`):
+
+| kaupunki / ruutu | merkkejä nipussa | sarakkeen korkeus | pisin nostoviiva | viivaa yhteensä |
+| --- | --- | --- | --- | --- |
+| Ateena iPad | 10 → **4** | 87,7 → **51,8** | 39,8 → **26,1** | 382 → **104** |
+| Ateena iPhone | 10 → **4** | 87,7 → **52,6** | 40,3 → **28,1** | 493 → **151** |
+| Rooma iPad | 7 → **4** | 119,6 → **59,8** | 49,3 → **30,1** | 386 → **120** |
+| Rooma iPhone | 7 → **4** | 121,5 → **60,8** | 50,2 → **32,4** | 463 → **174** |
+| Dubrovnik iPad | 3 → 3 | 23,2 → 23,2 | 8,10 → **7,59** | 38,5 → **34,9** |
+| Dubrovnik iPhone | 3 → 3 | 23,6 → 23,6 | 13,08 → **11,57** | 72,9 → **63,5** |
+
+Dubrovnik on tässä **vertailukohta**: sen kolme kohdetta ovat kolmea
+eri kategoriaa (kauppa, historia, luonto), joten ne EIVÄT yhdisty.
+Sen rivi näyttää siis pelkän `NIPPU_DX`-muutoksen osuuden (−6 %), ja
+Ateenan ja Rooman rivit sen päälle tulevan yhdistämisen osuuden
+(pisin viiva −34 %, katkoviivaa yhteensä −70 %).
+
+Kaappaukset: `tools/savukkeet/kaappaukset/niput-ateena-ennen.png`,
+`-jalkeen.png` ja `-lehti.png` (avattu Skandaalit-lehti).
+
+## 4. Muutkin kuin Ateena — koko maailma
+
+Merkkejä lehtien alla koko maailmassa **677 → 636**; kuoria syntyy 27
+ja ne kattavat 68 kohdetta. Kaupunkeja, joilla on merkkejä 5
+lautayksikön sisällä, on 41; **yli kolme merkkiä 21 → 13**.
+
+| kaupunki | ennen | jälkeen |
+| --- | --- | --- |
+| Ateena (GRC) | 10 | **4** |
+| Pariisi (FRA) | 9 | 5 |
+| Istanbul (TUR) | 9 | 5 |
+| Wien (AUT) | 8 | **3** |
+| Sofia (BGR) | 8 | 4 |
+| Lontoo (GBR) | 6 | 5 |
+| Rooma (ITA) | 6 | 4 |
+| Praha (CZE) | 5 | 4 |
+| Berliini (DEU) | 5 | 4 |
+| Dublin (IRL) | 5 | 4 |
+
+Loput yli kolmen: Krakova 5→4, Lissabon 5→3, Tukholma 5→3, Moskova
+5→4, Kööpenhamina 4→2, Madrid 4→4, Granada 4→4, Edinburgh 4→3, Oslo
+4→3, Bukarest 4→3, Odessa 4→3.
+
+Ateena oli pahin tapaus ja se ratkesi kokonaan. Pariisi, Istanbul ja
+Lontoo jäävät viiteen, koska niiden kohteet ovat aidosti viittä eri
+lajia — siellä ei ole enää mitään yhdistettävää ilman että kategoria
+lakkaa tarkoittamasta mitään.
+
+## 5. Poltto: mikä on jo poltettavissa ja mikä ei
+
+Pyysit kertomaan selvästi, mikä ladonnasta on puhdasta laudan
+koordinaateista laskettavaa. Vastaus on kolmiosainen.
+
+**PUHDAS (poltettavissa jo nyt).** Ryhmittelypassi kokonaan:
+kaupungin valinta, kategoria, kuoren tunnus, kuoren paikka ja jäsenten
+järjestys. Ei DOMia, ei ruutua, ei dpr:ää, ei satunnaisuutta, ei
+pelitilaa. Syötteinä vain `pack.cities`, `map.cityCountry`, pakettien
+koordinaatit ja `projisoiLaudalle`. Sama lauta antaa aina saman
+tuloksen, ja se on koeteltu erikseen
+(`tests/fokusryhmat.test.mjs`, 11 väitettä; yksi niistä ajaa passin
+kahdesti ja vertaa tiivisteet).
+
+**RUUDUSTA RIIPPUVA (polttoerän ensimmäinen työ).** Kolme kohtaa,
+kaikki entisiä:
+
+1. **Erottelusiirto** (`js/fokuskohteet.js eritteleKohdeRyhmat`):
+   `KOHDE_ERO_MIN * s`, jossa `s` on ruudun merkkiskaala.
+2. **Nippuun pääsyn raja** (`js/fokusniput.js` sääntö 10):
+   `(NIPPU_KIEKKO_R + sade) * s` — iPhonella 7,7, työpöydällä 4,7
+   lautayksikköä.
+3. **Sarakkeen ladonta**: `NIPPU_DX * sRuutu`, riviväli `NIPPU_VALI *
+   s` ja sen tiivistys lehden ikkunan korkeudesta. Ikkuna itse on
+   dataa (`FOKUS_POHJAT.rajaus`), mutta `s` ja `sRuutu` eivät ole.
+
+Nämä ovat kaikki muotoa "vakio × skaala". Polton kannalta korjaus on
+mekaaninen: skaala kiinnitetään **lehden perustason** arvoon, joka on
+laskettavissa `FOKUS_POHJAT`-rajauksesta ilman selainta. En tehnyt
+sitä tässä erässä, koska se muuttaa jokaisen kaupungin sarakkeen
+kaikilla ruuduilla ja kuuluu omaan erään omine kaappauksineen.
+
+4. **Vihreä kohtaamispiste** (`NIPPU_VAPAA`-väistö) riippuu
+   pelitilasta eikä ruudusta. Se ei voi olla poltettuna, ja sen
+   väistö on syytä poistaa poltetusta ladonnasta kokonaan: piste on
+   elävä kerros ja saa peittää poltetun merkin hetkeksi.
+
+**NAPAUTUSALUE TULEE JO NYT SAMASTA LÄHTEESTÄ.** Osuma-ympyrä on
+saman ankkuriryhmän lapsi kuin symboli ja nimiö
+(`piirraKohdemerkki` → `ryhma.osuma`), ja ryhmä saa paikkansa yhdestä
+kirjoituksesta (`asetaKohdeMittakaava`). Poltetun merkin päälle jäävä
+näkymätön osuma ei siis voi eriytyä poltetusta paikasta, kunhan sama
+ladontafunktio antaa molemmat. Poltetun **nimiön** osumalaatikko
+lasketaan samasta ryhmästä (`ryhma.nimiOsuma`), joten sekin seuraa.
+
+## 6. Kaksoispiirron esto — suunnitelma, ei toteutus
+
+Tarkennuksesi mukaan kartalla on pysyvästi kaksi rinnakkaista
+kerrosta: viime ajossa poltetut nostot ja niiden jälkeen lisätyt
+elävät. Luin `js/laattapyramidi.js laatoissaOnNimet()` -perustelun ja
+tein sen mukaan. Suunnitelma on kirjattu myös `js/fokusryhmat.js`:ään
+omaksi luvukseen; tässä tiivistelmä.
+
+**Tieto luetteloon, ei koodiin.** Sama syy kuin nimiöillä: koodissa
+oleva kytkin jättäisi julkaisun ja pyramidiajon väliin ikkunan, jossa
+nostot olisivat joko kahdesti tai eivät kertaakaan. `pyramidi.json`
+tulee laattojen mukana samasta ajosta eikä voi olla eri mieltä kuin
+laatat.
+
+**Kenttä ei voi olla totuusarvo.** Nimiöillä kerrokset ovat toisensa
+poissulkevat (joko laatat latovat nimet tai peli), joten `nimiot:
+false` riittää. Nostoilla kerrokset ovat rinnakkaiset, joten
+luettelon on kannettava, MITKÄ nostot kyseisessä ajossa poltettiin.
+
+**Yksikkö on MERKKI, ei kohde** — merkki on se, mikä piirretään.
+Tunnus on tämän erän antama `ryhma-<kaupunki>-<kategoria>` tai yksin
+jääneen kohteen oma tunnus. Molemmat ovat vakaita ja tulevat samasta
+puhtaasta passista kuin poltettu merkki.
+
+**Ehdotettu muoto on tunnus → sisällön tiiviste**, esim.
+`"nostot": { "ryhma-ateena-huuto": "a91c…", "marathon": "40be…" }`.
+Yksi kenttä vastaa silloin molempiin kysymyksiin: onko merkki
+poltettu, ja onko sen sisältö muuttunut polton jälkeen (nimiö,
+symboli, jäsenlista). Peli piirtää elävänä jokaisen merkin, jonka
+tunnusta luettelo ei tunne TAI jonka tiiviste eroaa. Pelkkä
+tunnuslista toimisi myös, mutta silloin nimiön korjaus ei näkyisi
+kartalla ennen seuraavaa pyramidiajoa.
+
+**Oletus on päinvastainen kuin nimiöillä: mitään ei ole poltettu.**
+Kun kenttää ei ole (vanha ajo) tai luetteloa ei ole vielä ladattu,
+peli piirtää kaiken elävänä. Logiikka on sama — valitaan se
+väärinolo, joka ei kadota sisältöä — mutta se kääntyy toisin päin,
+koska tässä sisällön kadottaisi juuri "on poltettu": omistajan
+sanatarkka ehto on *"mikään karttanostoista ei kuulu kadota laudalta
+missään vaiheessa peliä"*. Väärä oletus maksaa enintään
+kaksoispiirron, ja se korjaantuu itsestään luettelon saapuessa.
+Napautusalueet piirretään joka tapauksessa, joten pelattavuus ei
+riipu tästä valinnasta lainkaan.
+
+**Yksi varaus, joka kannattaa tietää etukäteen:** kaksoispiirto olisi
+harmiton (poltettu ja elävä merkki päällekkäin samassa pisteessä)
+VAIN jos elävä ladonta antaa saman paikan kuin poltettu. Niin kauan
+kuin sarakkeen ladonta on ruudun mitassa (luku 5), elävä merkki
+osuisi eri kohtaan kuin poltettu. Se on toinen syy tehdä luvun 5
+skaalankiinnitys ennen ensimmäistä polttoa.
+
+## 7. Todentaminen
+
+- `node --test tests/*.test.mjs` → **1058 pass / 0 fail** (1 skipped;
+  uusia 11 kpl `tests/fokusryhmat.test.mjs`)
+- `node tools/tarkista-kaksoisavaimet.mjs` → ei kaksoisavaimia
+- `node tools/tarkista-niputus.mjs` → 294 moduulia, ei törmäyksiä
+- `node tools/build-standalone.mjs` → ok, `dist/` poistettu
+- `savuke-fokuskohteet` → **101/101** (kolme uutta vartiota
+  yhdistämiselle, neljä uutta yhdistetylle lehdelle)
+- `savuke-takyportti` → **22/22**
+- `savuke-selitevalikko` → 32/32 · `savuke-maastokohteet` → 8/8 ·
+  `savuke-panorointi` → 11/11
+
+**Napautin jokaisen yhdistetyn merkin** (savuke-fokuskohteet, vartio
+10d): Ateenan Skandaalit-lehdellä on kolme osiota, jokaisessa oma
+otsikko, oma symboli, yli 200 merkkiä omaa tekstiä ja omat minivisat —
+ja jäsenet tulevat kolmesta eri lähteestä (`js/fokusnosto.js`,
+`js/skandaalit.js` kahdesti). Vartio 1aa lukee lisäksi kuoret auki ja
+vaatii, että kaikki neljä lähdettä ovat kartalla kohde kohteelta:
+**yhtäkään kohdetta ei kadonnut.**
+
+Kolme porttia löysivät kolme oikeaa vikaa, jotka korjasin:
+
+1. `NIPPU_DX = 21` katkaisi rivin 0 yhdysviivan (ks. luku 3).
+2. Yhdistetyllä lehdellä Esc sulki koko lehden, kun jäsenen kuva oli
+   suurennettuna: `kuunteleKohdetta` väisti vain avainta
+   `fokuskohdeZoom`, mutta osiot avaavat kuvansa omilla avaimillaan.
+   Korjattu `KOHDE_SUURENNOSAVAIMET`-listalla, jonka myös
+   `suljeFokuskohde` käy läpi — muuten osion suurennos jäisi
+   orvoksi kartan päälle. Vartioitu savuke-takyportissa Wienissä.
+3. `savuke-takyportti` etsi nostoja vain `data-kohde="nosto-*"`
+   -tunnuksella; Pariisissa ja Wienissä ne ovat nyt kuoren jäseniä.
+   Apuri lukee ne kuoresta ja kertoo, kumpaa merkkiä napautetaan.
+
+## 8. Havaintoja, joita en korjannut
+
+1. **`savuke-kartta-tila` kaatuu mainissa** riville 505:
+   `ReferenceError: askelKatto is not defined` (v1376:n nipistyserä).
+   Todennettu `git show origin/main` — ei minun. Kaikki 20 vartiota
+   ennen kaatumista menevät läpi myös haarallani. Yhden rivin korjaus
+   jollekulle: vakio on nimetty toisin funktion sisällä.
+2. **`savuke-elaintaky` (kaatuu neljän FAILin jälkeen) ja
+   `savuke-nahtavyysihme` (9/19) punaisia jo mainissa**, sanasta sanaan samoilla riveillä. Molemmat
+   näyttävät kaatuvan samaan syyhyn: sivun lataus kesken pelin ei aja
+   kameraa, joten merkkikerros on `fokuskohteet-piilossa` eikä
+   mittoja ole. `savuke-fokuskohteet` ja `savuke-takyportti` ajavat
+   kameran itse (`ajaLehdelle`) — nämä kaksi eivät.
+3. **`NIPPU_KOHDE_R = 5,6` on vanhentunut**: kommentti sanoo sen
+   olevan `KOHDE_HALO_R`, joka on 4,9. Luku vaikuttaa sekä nippuun
+   pääsyn rajaan että rivivälin alarajaan, joten en muuttanut sitä
+   tässä erässä — mutta se kannattaa oikaista polttoerässä, jossa
+   samat mitat lasketaan joka tapauksessa uudelleen.
+4. **Reittien piirto ja symbolien muodot:** en tarvinnut niiltä
+   mitään. Yhdistetty merkki käyttää `piirraNostosymboli`a
+   sellaisenaan, ja sen symboli on aina jokin jo olemassa oleva
+   kategoria — uusia muotoja ei tarvita.
+5. **Kaupunkikategoria** (38 kohdetta) on ainoa, joka ei yhdisty. Jos
+   kartalla joskus on kaksi kaupunkimerkkiä päällekkäin, ratkaisu on
+   erottelusiirto eikä yhdistäminen.
+
 # Opus → Fable: laattojen esilataus ja zoomin hitaus (haara claude/laattojen-esilataus)
 
 Erä valmis, pushattu haaralle. **Ei PR:ää, ei versionostoa** (ohjeen

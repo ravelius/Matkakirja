@@ -552,6 +552,12 @@ const MODULES = [
    */
   'js/fokusnosto-symbolit.js',
   /*
+   * Kategoria per kaupunki -ryhmittely ennen kohteita (js/fokuskohteet.js
+   * tuo sen). Se tuo vain symbolikirjaston kategorianimet, jotka ovat
+   * rivin yllä.
+   */
+  'js/fokusryhmat.js',
+  /*
    * Aihevalojen koneisto ennen kaikkia merkkikerroksia: kohdemerkit,
    * ja eläintäyt piirtävät kumpikin valotäplänsä sillä
    * (js/karttavalot.js). Se tuo mapartin ja symbolikirjaston (aiheiden
