@@ -140,11 +140,27 @@ function suunnittele() {
    */
   const nostoversio = valitsin('nostoversio') || luettelo.nostotaso?.versio || '';
 
-  const patina = luettelo.patina ?? 'taysi';
+  /*
+   * PATINAA EI KOSKAAN ARVATA. Ajot 2026-08-31c ja vanhemmat lähtivät
+   * ennen kuin luettelo kantoi patina-kenttää, ja niistä ainakin
+   * 31b/31c ajettiin tasolla "hillitty" — hiljainen "taysi"-oletus
+   * olisi piirtänyt paikatun alueen eri reseptillä ja tehnyt juuri
+   * sen sauman, jota tämä työkalu on rakennettu välttämään. Vanhalle
+   * lähteelle taso annetaan kädestä (työnkulun lahdepatina-syöte /
+   * --patina), ja sen käyttö kirjataan varoituksena ajon lokiin.
+   */
+  const patinaKadesta = valitsin('patina') || '';
+  const patina = luettelo.patina ?? (patinaKadesta || null);
   const varoitukset = [];
+  if (!patina) {
+    kuole('lähdeluettelossa ei ole patina-kenttää (lähde on ajettu ennen '
+      + 'paikkaustukea) eikä tasoa annettu kädestä. Anna työnkulun '
+      + 'lahdepatina-syötteessä TÄSMÄLLEEN lähdeajon taso — '
+      + '2026-08-31b ja 2026-08-31c ajettiin tasolla "hillitty".');
+  }
   if (!luettelo.patina) {
-    varoitukset.push('lähdeluettelossa ei ole patina-kenttää (ajettu ennen paikkaustukea); '
-      + 'oletetaan "taysi" — tarkista ajon loki jos lähde on ajettu muulla tasolla');
+    varoitukset.push(`patinataso "${patina}" annettiin kädestä (lähdeluettelo ei kanna kenttää) — `
+      + 'varmista lähdeajon lokista että taso täsmää');
   }
   if (!nostoversio) {
     varoitukset.push('lähdeluettelossa ei ole nostotasoa; paikattu versio jää ilman nostokerrosta');

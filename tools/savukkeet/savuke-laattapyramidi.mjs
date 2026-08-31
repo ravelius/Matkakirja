@@ -684,6 +684,125 @@ if (LUETTELO.nostotaso) {
   await vanhaPeli.ctx.close();
 }
 
+/* ============ V: VIIVATASO ==========================================
+ *
+ * Omistajan päätös 31.8.2026 ilta: reitit, erikoispiirit ja MAIDEN
+ * RAJAT poltetaan omaan LÄPINÄKYVÄÄN laattapyramidiin (z0-z7), ei
+ * pohjaan. Väitteet ovat N-sarjan sisaria, mutta kaksi eroaa
+ * tarkoituksella:
+ *
+ *   V1  Viivakerroksessa on laattoja ja ne tulevat viivat/-alipolusta.
+ *   V2  Yhtään viivalaattaa ei pyydetä turhaan: luettelon bittikartta
+ *       kertoo mitkä ovat olemassa (tyhjiä viivalaattoja EI OLE).
+ *   V3  EI HÄIVYTYSTÄ. Tässä V eroaa N:stä: viivataso on olemassa joka
+ *       tasolla, joten kaukotasollakin kerroksessa on laattoja eikä
+ *       opacity mene nollaan. Jos joku joskus kopioi nostotason
+ *       häivytyksen tänne, puolet kartasta katoaisi kaukonäkymässä —
+ *       ja juuri se on tämän väitteen tehtävä estää.
+ *   V4  Vanha luettelo (ei viivataso-kenttää): kerros pysyy tyhjänä
+ *       eikä yhtään viivalaattaa pyydetä. TÄMÄ ON JULKAISUJÄRJESTYKSEN
+ *       TODISTE — selain voidaan julkaista yksin ennen kuin
+ *       viivatason laatat ovat ämpärissä.
+ */
+console.log('\n--- V viivataso ---');
+if (!LUETTELO.viivataso) {
+  console.log('      luettelossa ei viivatasoa — V-väitteet ohitetaan');
+} else {
+  const viiva1 = await sivu.evaluate(() => {
+    const ui = window.matkakirja.ui;
+    const kerros = ui.pyramidiViivaKerros;
+    const kuvat = kerros ? [...kerros.querySelectorAll('image')] : [];
+    return {
+      taso: globalThis.__pyramidinMittarit?.().taso,
+      laattoja: kuvat.length,
+      opacity: kerros?.style.opacity ?? '',
+      vaarassaPolussa: kuvat.filter((k) => !(k.getAttribute('href') ?? '')
+        .includes('/viivat/')).length,
+      /*
+       * KERROSJÄRJESTYS: viivataso tarkan päällä ja noston alla.
+       * Reitin kuuluu olla kartan päällä, mutta noston symbolin
+       * reitin päällä.
+       */
+      jarjestys: [...(ui.pyramidiKerros?.children ?? [])]
+        .map((k) => k.getAttribute('class')).filter(Boolean),
+    };
+  });
+  vaadi('V1 viivakerroksessa on laattoja viivat-polusta',
+    viiva1.laattoja > 0 && viiva1.vaarassaPolussa === 0,
+    `laattoja ${viiva1.laattoja}, väärässä polussa ${viiva1.vaarassaPolussa} `
+    + `(taso z${viiva1.taso})`);
+  vaadi('V1b kerrosjärjestys on pohja - tarkka - viiva - nosto',
+    viiva1.jarjestys.join(' ').includes('pyramidi-tarkkataso pyramidi-viivataso '
+      + 'pyramidi-nostotaso'),
+    viiva1.jarjestys.join(' '));
+  const viivapyynnot = pyynnot.filter((p) => p.includes('/viivat/'));
+  const viivabitit = {};
+  for (const [z, b64] of Object.entries(LUETTELO.viivataso.laatastot)) {
+    viivabitit[z] = Buffer.from(b64, 'base64');
+  }
+  const sarakkeitaV = Object.fromEntries(LUETTELO.tasot.map((t) => [t.z, t.sarakkeita]));
+  const tuntemattomatV = viivapyynnot.filter((p) => {
+    const m = /\/viivat\/z(\d+)\/(\d+)\/(\d+)\./.exec(p);
+    if (!m) return true;
+    const [, z, s, r] = m.map(Number);
+    const i = r * sarakkeitaV[z] + s;
+    const tavu = viivabitit[z]?.[i >> 3];
+    return tavu === undefined || ((tavu >> (i & 7)) & 1) !== 1;
+  });
+  vaadi('V2 viivalaattoja pyydetään vain luettelon bittikartan tuntemia',
+    viivapyynnot.length > 0 && tuntemattomatV.length === 0,
+    `pyyntöjä ${viivapyynnot.length}, bittikartan ulkopuolisia ${tuntemattomatV.length}: `
+    + `${tuntemattomatV.slice(0, 3).join(' ')}`);
+  /*
+   * V3: kauas. Nostotaso häipyy (N4a), viivataso EI — se on olemassa
+   * kaukotasollakin, ja juuri sen ero on tämän väitteen ydin.
+   */
+  for (let i = 0; i < 4; i += 1) {
+    await sivu.evaluate(() => { window.matkakirja.ui.kartta.zoomaaPainikkeella(-1); });
+    await sivu.waitForTimeout(700);
+  }
+  await sivu.waitForTimeout(1500);
+  const kaukanaV = await sivu.evaluate(() => ({
+    taso: globalThis.__pyramidinMittarit?.().taso,
+    laattoja: window.matkakirja.ui.pyramidiViivaKerros?.querySelectorAll('image').length ?? 0,
+    opacity: window.matkakirja.ui.pyramidiViivaKerros?.style.opacity ?? '',
+  }));
+  const onTasolla = (LUETTELO.viivataso.tasot ?? []).includes(kaukanaV.taso);
+  vaadi('V3 kaukotasolla viivakerros EI häivy — laattoja on ja opacity ei ole 0',
+    !onTasolla || (kaukanaV.laattoja > 0 && kaukanaV.opacity !== '0'),
+    `taso z${kaukanaV.taso}, laattoja ${kaukanaV.laattoja}, opacity "${kaukanaV.opacity}"`);
+  for (let i = 0; i < 4; i += 1) {
+    await sivu.evaluate(() => { window.matkakirja.ui.kartta.zoomaaPainikkeella(1); });
+    await sivu.waitForTimeout(700);
+  }
+  await sivu.waitForTimeout(1500);
+  await sivu.screenshot({
+    path: new URL('./kaappaukset/viivataso-athens.png', import.meta.url).pathname,
+  }).catch(() => {});
+
+  console.log('\n--- V4 vanha luettelo (ei viivatasoa) ---');
+  const vanhaV = await avaaPeli({
+    muunnaLuettelo: (j) => {
+      const vanha = { ...j };
+      delete vanha.viivataso;
+      return vanha;
+    },
+  });
+  const vanhaVTila = await vanhaV.sivu.evaluate(() => ({
+    viivalaattoja: window.matkakirja.ui.pyramidiViivaKerros
+      ?.querySelectorAll('image').length ?? 0,
+    laattoja: window.matkakirja.ui.pyramidiKerros
+      ?.querySelectorAll('image.pyramidi-laatta').length ?? 0,
+  }));
+  const vanhatViivapyynnot = vanhaV.pyynnot.filter((p) => p.includes('/viivat/'));
+  vaadi('V4 vanhalla luettelolla viivakerros pysyy tyhjänä eikä pyyntöjä lähde',
+    vanhaVTila.viivalaattoja === 0 && vanhatViivapyynnot.length === 0
+      && vanhaVTila.laattoja > 0,
+    `viivalaattoja ${vanhaVTila.viivalaattoja}, pyyntöjä ${vanhatViivapyynnot.length}, `
+    + `pohjalaattoja ${vanhaVTila.laattoja}`);
+  await vanhaV.ctx.close();
+}
+
 /* ============ MITAT ================================================= */
 
 /*
