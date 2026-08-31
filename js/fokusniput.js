@@ -293,7 +293,43 @@ const NIPPU_SYKE_R = 12;
  * sääntö 9 (lähin keskipiste), joten sormialueet saavat mennä
  * päällekkäin.
  */
-const NIPPU_DX = 28;
+/*
+ * LYHENNETTY UUDESTAAN 31.8.2026 (omistaja, kysymyskortti "kategoria
+ * per kaupunki": *"samalla voitaisiin tuoda kaikkia tällaisia merkkejä
+ * vielä lähemmäs kaupunkia, niin että katkoviivat eivät olisi niin
+ * pitkiä"*): 28 -> 26.
+ *
+ * NYT ALARAJAN MÄÄRÄÄ YHDYSVIIVA ITSE, EI ENÄÄ NÄKYVÄ MERKINTÄ. Kun
+ * sääntö 6 toi katkoviivan, sarakkeen etäisyydelle syntyi uusi ja
+ * tiukempi pohja kuin merkkien limittymättömyys: viivalle on jäätävä
+ * tilaa olla viiva. Kaikki kolme lukua ovat tämän tiedoston omia:
+ *
+ *     sykekehä NIPPU_SYKE_R                     12    viivan alkupää
+ *   + lyhin piirrettävä pätkä NIPPU_VIIVA_MIN    5    (alle jäävä on roska)
+ *   + merkin aluslaatta NIPPU_KOHDE_R           5,6   viivan loppupää
+ *   + rako aluslaattaan NIPPU_VIIVA_RAKO        2,5
+ *   ------------------------------------------------
+ *                                              25,1  → 26
+ *
+ * MITATTU: 21:llä (pelkkä merkkien limittymättömyys, entinen peruste)
+ * KAUPUNGIN KORKEUDELLA OLEVAN RIVIN VIIVA KATOAA kokonaan — savuke
+ * mittasi Ateenassa kahdeksan nipun merkkiä ja vain kuusi viivaa.
+ * Sarake ei siis voi tulla tätä lähemmäs ilman että rivi 0 menettää
+ * yhteytensä kaupunkiin.
+ *
+ * SIVUHUOMIO EDELLISEEN KERTAAN: 28:n perusteluun oli luettu merkin
+ * aluslaatan säteeksi 6,8, joka on itse asiassa symbolin LÄPIMITTA
+ * (KOHDE_SYMBOLI_R = NOSTOSYM_MINI_R × 11/21 = 3,4). Luku ei siis
+ * tarkoittanut sitä, mitä sen kohdalla luki — nyt jokainen termi on
+ * nimetty vakio.
+ *
+ * VARSINAINEN LYHENNYS TULI MUUALTA. Vaakaetäisyys on lyhin osa
+ * katkoviivaa; pitkät viivat ovat sarakkeen ylä- ja alapäähän. Ne
+ * lyhenivät kategoria per kaupunki -passilla (js/fokusryhmat.js), joka
+ * pudotti Ateenan kymmenen merkkiä neljään ja sarakkeen mitatusti
+ * puoleen.
+ */
+const NIPPU_DX = 26;
 
 /*
  * Rivien pystyväli. Täkysymbolin laatta on 20,8 px — 30 px:n välillä
@@ -643,7 +679,14 @@ function nippuRiviVali(jono, s, ikkuna) {
  */
 export function niputaFokusmerkit(ui, s, sRuutu = s) {
   if (!ui || !(s > 0)) return;
-  // Sormen mitta ei saa jäädä nollaksi, jos kutsuja ei sitä anna.
+  /*
+   * SARAKE ON LEHDEN MITASSA (omistaja 31.8.2026, Raamattu
+   * KARTTANOSTOT POLTETAAN LAATTOIHIN). Kutsuja antaa nykyään VAIN
+   * lehden perustason vakion (js/ui.js fokusMerkkiSkaalaPohja), joten
+   * `sRuutu` on sama luku: nippu latoutuu samoin puhelimella,
+   * työpöydällä ja laattageneraattorin Nodessa. Parametri jää, koska
+   * lehdetön varapolku voi yhä antaa kaksi eri mittaa.
+   */
   const ruutu = sRuutu > 0 ? sRuutu : s;
   const merkit = nippuMerkit(ui);
   // Tyhjä kerros myös silloin kun nippua ei ole: vanhat viivat eivät saa

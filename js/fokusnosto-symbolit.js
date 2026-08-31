@@ -1569,6 +1569,99 @@ const NOSTOSYM_NIMIO_Y = NOSTOSYM_NIMIO_KOKO * 0.36;
  */
 const NOSTOSYM_NIMIO_MERKKEJA = 18;
 
+/* ============ NIMIÖN LEVEYS ILMAN SELAINTA ==========================
+ *
+ * POLTON EHTO (Raamattu 31.8.2026, KARTTANOSTOT POLTETAAN LAATTOIHIN):
+ * *"Poltetun ladonnan ja selaimen osumamuotojen on tultava SAMASTA
+ * lähteestä, ettei kahta ladontaa pääse eriytymään."* Nimiön leveys on
+ * osa ladontaa heti kun teksti voi KATKETA leveyteen (js/fokusryhmat.js
+ * ryhmaNimio), ja silloin `measureText` ei kelpaa mitaksi: se antaa eri
+ * vastauksen laattageneraattorin Chromiumissa, pelaajan Safarissa ja
+ * työpöydän Firefoxissa, koska kirjasin on jokaisella eri —
+ * `--font-atlas` on *"Liberation Serif", "Times New Roman", Times,
+ * serif*, ja iOS:llä valinta osuu Timesiin.
+ *
+ * Mitta on siksi TAULUKKO. Luvut ovat Liberation Serif Italicin
+ * askelleveyksiä tuhannesosina em-neliötä (mitattu Chromiumista
+ * `measureText`illä 31.8.2026, ryhmitelty leveysluokkiin — kirjasimessa
+ * niitä on 36). Sama taulukko antaa saman vastauksen selaimessa,
+ * Nodessa ja laattageneraattorissa, ja se on nimenomaan mitta EIKÄ
+ * ennuste: jos pelaajan kirjasin on hitusen leveämpi, nimiö on hitusen
+ * leveämpi kuin budjetti — mutta se KATKEAA samasta kohdasta joka
+ * laitteella ja joka ajossa.
+ *
+ * TARKKUUS RIITTÄÄ. Merkeittäin laskettu summa ei tunne parivälistystä;
+ * mitattuna ero koko merkkijonon leveyteen oli enintään 0,7 %
+ * (esim. "Forum Romanum, Avaimenreikä" 13081 vs. 12988 tuhannesosaa).
+ *
+ * Taulukko on käänteinen — leveys → merkit — koska kirjasimen
+ * leveysluokkia on 36 ja merkkejä 329. Yleisin luokka (500) on
+ * OLETUS, ja siihen putoaa myös jokainen tuntematon merkki.
+ */
+const NOSTOSYM_LEVEYS_OLETUS = 500;
+const NOSTOSYM_LEVEYSLUOKAT = {
+  214: '\'',
+  250: ' ,. ·',
+  275: '|¦',
+  276: 'ª',
+  278: '/\\fijltìíîïĩīĭįıĵĺļłţŧſț',
+  300: '²³¹',
+  310: 'º',
+  323: 'ŀ',
+  333: '!()-:;I`¨´¸ÌÍÎÏĨĪĬĮİ’‘',
+  364: 'ľť',
+  389: '[]rsz¡ŕŗřśŝşšźżžș',
+  400: '{}°',
+  420: '"',
+  422: '^',
+  444: 'JcekvxyçèéêëýÿćĉċčēĕėęěĴķĸŷ',
+  482: 'ŋ',
+  523: '¶',
+  541: '~',
+  549: '±÷',
+  556: 'LTYZÝĹĻĽĿŁŢŤŦŶŸŹŻŽȚ“”',
+  576: 'µ',
+  577: 'ŉ',
+  608: 'ď',
+  611: 'ABEFPRVXÀÁÂÃÄÅÈÉÊËÞĀĂĄĒĔĖĘĚŔŖŘ',
+  667: 'CKNwÇÑæĆĈĊČĶŃŅŇœŵ',
+  675: '+<=>¬×',
+  696: 'Ŋ',
+  722: 'DGHOQUmÐÒÓÔÕÖØÙÚÛÜĎĐĜĞĠĢĤĦŌŎŐŨŪŬŮŰŲ',
+  750: '¼½¾Ĳ',
+  760: '©®',
+  778: '&',
+  833: '%MWŴ',
+  889: 'Æ—…',
+  920: '@',
+  944: 'Œ',
+};
+
+/** Merkki → askelleveys tuhannesosina em:iä. Rakennetaan kerran. */
+const NOSTOSYM_MERKKILEVEYS = (() => {
+  const taulu = new Map();
+  for (const [leveys, merkit] of Object.entries(NOSTOSYM_LEVEYSLUOKAT)) {
+    for (const merkki of merkit) taulu.set(merkki, Number(leveys));
+  }
+  return taulu;
+})();
+
+/**
+ * NIMIÖTEKSTIN LEVEYS KIRJASTON YKSIKKÖINÄ — deterministinen mitta,
+ * joka on sama selaimessa ja laattageneraattorissa (ks. yllä).
+ *
+ * @param {string} teksti
+ * @param {number} koko  kirjasinkoko kirjaston yksikköinä
+ * @returns {number}
+ */
+export function nostosymTekstinLeveys(teksti, koko = NOSTOSYM_NIMIO_KOKO) {
+  let summa = 0;
+  for (const merkki of String(teksti ?? '')) {
+    summa += NOSTOSYM_MERKKILEVEYS.get(merkki) ?? NOSTOSYM_LEVEYS_OLETUS;
+  }
+  return summa * koko / 1000;
+}
+
 /**
  * KARTAN LYHENNYSTAPA: nimestä jää alkuosa ja lyhennyspiste, kuten
  * 1800-luvun atlaksissa ("Halikarnassoksen." eikä "Halikarnassoks…").
@@ -2039,20 +2132,30 @@ async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji, vasemmal
  * on valmis — välimuistista osuttaessa vielä samalla mikrotehtävällä.
  * Jos rasteria ei saada, ryhmään piirretään elävä merkki ja teksti.
  */
-export function piirraNostosymKartalle(g, symboli, nimio, laji, vasemmalle = false) {
+export function piirraNostosymKartalle(g, symboli, nimio, laji, vasemmalle = false, enintaan) {
   const tunnus = nostosymMiniTunnus(symboli, laji);
   const nimionLaji = nostosymNimionLaji(laji);
   // Lyhennys ja kirjainlaji tehdään KERRAN tässä, jotta rasteri ja
   // varapolku latovat varmasti saman tekstin — ja jotta välimuistin
   // avain on se, mikä kuvaan oikeasti piirtyy.
-  const teksti = nostosymNimioTeksti(nimio, NOSTOSYM_NIMIO_ASUT[nimionLaji]);
+  //
+  // `enintaan` on kutsujan oma mitta samalle säännölle (ks.
+  // nostosymLyhennaNimio). Yhdistetty merkki antaa sen Äärettömänä,
+  // koska sen nimiö on JO ladottu valmiiksi mittaansa pilkkulistaksi
+  // (js/fokusryhmat.js ryhmaNimio) — 18 merkin sääntö katkaisisi sen
+  // ensimmäisen nimen kohdalta ja söisi koko listan.
+  const teksti = nostosymNimioTeksti(
+    nimio, NOSTOSYM_NIMIO_ASUT[nimionLaji], enintaan ?? NOSTOSYM_NIMIO_MERKKEJA,
+  );
   // Peilaus on merkityksetön ilman nimiötä: tyhjä kaista on tyhjä
   // kummallakin puolella, ja yksi rasteri riittää molemmille.
   const puoli = teksti ? vasemmalle : false;
   const elavana = () => {
     g.replaceChildren();
     piirraNostosymMini(g, symboli, laji);
-    if (teksti) piirraNostosymNimio(g, teksti, laji, puoli);
+    // Teksti on jo ladottu mittaansa yllä; toinen lyhennys katkaisisi
+    // yhdistetyn merkin pilkkulistan uudestaan (Infinity = älä koske).
+    if (teksti) piirraNostosymNimio(g, teksti, laji, puoli, Infinity);
   };
   if (typeof document === 'undefined') { elavana(); return; }
   const kuva = el('image', {

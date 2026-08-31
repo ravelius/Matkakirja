@@ -7150,9 +7150,49 @@ export class UI {
   fokusMerkkiSkaalaKartalle(suhde = 1) {
     const s = this.fokusMerkkiSkaala(suhde);
     if (!(s > 0)) return s;
+    const perus = this.fokusMerkkiSkaalaPohja();
+    return perus > 0 ? Math.min(s, perus) : s;
+  }
+
+  /**
+   * KOHDEMERKKIEN LADONNAN MITTAKAAVA — LEHDEN OMA, EI RUUDUN.
+   *
+   * === MIKSI TÄMÄ ON OMA FUNKTIONSA (omistaja 31.8.2026) ============
+   *
+   * Raamattu, KARTTANOSTOT POLTETAAN LAATTOIHIN: kohdemerkit, niiden
+   * symbolit, nimiöt ja nostoviivat poltetaan laattoihin, ja
+   * *"poltetun ladonnan ja selaimen osumamuotojen on tultava SAMASTA
+   * lähteestä, ettei kahta ladontaa pääse eriytymään."* Laattageneraattori
+   * laskee ladonnan Nodessa: ilman DOMia, ilman ruudun kokoa, ilman
+   * laitteen pikselitiheyttä.
+   *
+   * `fokusMerkkiSkaala` on ruudun mitta (`1 / min(paneW/rajaus.w,
+   * paneH/rajaus.h)`) eikä siksi kelpaa ladonnan mitaksi: sama merkki
+   * asettuisi puhelimella eri kohtaan kuin työpöydällä, ja poltettu
+   * kolmanteen. TÄMÄ arvo lasketaan pelkästä lehden rajauksesta, joka
+   * on dataa (js/packs/fokus-grc.js FOKUS_POHJAT) — sama luku joka
+   * ruudulla, joka laitteella ja Nodessa.
+   *
+   * ARVO EI OLE UUSI. Se on täsmälleen entinen KATTO
+   * (fokusMerkkiSkaalaKartalle): yksi merkin perustason pikseli on
+   * FOKUS_MERKKI_KATTO lehden omaa pikseliä, eli merkki on lehden oman
+   * typografian mittainen — vuorikolmion ja poltetun vuorennimen
+   * kokoinen. Ennen 31.8.2026 katto PURI vain kapealla ruudulla ja
+   * leveällä merkki jäi sitä pienemmäksi; nyt merkki on aina täsmälleen
+   * lehden mitassa, koska juuri se on se koko, joka laattaan poltetaan.
+   *
+   * KATTO JÄÄ SILTI KATOKSI muille kerroksille (pelinappula,
+   * aarremerkit — fokusMerkkiKerroin): ne eivät ole poltettavia, ja
+   * niille sääntö *"ei suurenneta yli oman lautakoon"* on yhä oikea.
+   *
+   * Ilman lehden ikkunaa (muu lauta, maa jolla ei ole pohjaa)
+   * palautetaan 0, ja kutsuja jää ruudun mittaan — siinä näkymässä ei
+   * ole mitään poltettavaakaan.
+   */
+  fokusMerkkiSkaalaPohja() {
     const rajaus = this.fokusPohjaRajaus;
-    if (!(rajaus?.w > 0)) return s;
-    return Math.min(s, FOKUS_MERKKI_KATTO * rajaus.w / FOKUS_LEHTI_PROTO);
+    if (!(rajaus?.w > 0)) return 0;
+    return FOKUS_MERKKI_KATTO * rajaus.w / FOKUS_LEHTI_PROTO;
   }
 
   /**
