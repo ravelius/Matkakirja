@@ -5,11 +5,20 @@
  *   node tools/generoi-maapolygonit.mjs --tarkista   (pelkkä todennus)
  *
  * Aineisto on maatummennuksen (js/maatummennus.js) ainoa syöte: kun
- * pelaaja on maansa lähikuvassa, ympäröivä maailma tummennetaan
- * hienovaraisesti ja NYKYISEN maan ääriviiva piirretään paksummalla.
- * Kumpikin tarvitsee maan todellisen muodon laudan koordinaateissa —
- * pelin oma `countryShapes` on karkea sävytysrengas eikä kelpaa
- * ääriviivaksi, ja laattoihin poltettu rannikko ei ole DOMissa.
+ * pelaaja on maansa lähikuvassa, MUUT MAAT tummennetaan hienovaraisesti
+ * ja NYKYISEN maan ääriviiva piirretään paksummalla. Kumpikin tarvitsee
+ * maan todellisen muodon laudan koordinaateissa — pelin oma
+ * `countryShapes` on karkea sävytysrengas eikä kelpaa ääriviivaksi, ja
+ * laattoihin poltettu rannikko ei ole DOMissa.
+ *
+ * AINEISTO ON KOKO TUMMENNETTAVA JOUKKO, EI VAIN OMA MAA (omistajan
+ * kaappaus 31.8.2026 yöllä: *"Merta ei tarvitse tummentaa"*). Varjo
+ * maalataan naapureiden polygoneihin eikä arkinlevyisenä suorakaiteena,
+ * joten maa, jota tässä tiedostossa ei ole, jää kartalla tummentamatta
+ * ja lukee merenä. Lista on pelin oma `countryShapes` (134 maata), eli
+ * pelin ulkopuoliset valtiot (Benin, Malta, Andorra…) ovat tietoisesti
+ * ulkona: jos joskus halutaan koko maailma, kasvatetaan tätä listaa
+ * eikä piirtäjää.
  *
  * === LÄHDE =========================================================
  *
@@ -230,6 +239,37 @@ function koko(rengas) {
 }
 
 /**
+ * Renkaan pinta-ala etumerkillä (kenkänauhakaava).
+ * Positiivinen = laudan koordinaateissa myötäpäivään.
+ */
+function pinta(rengas) {
+  let a = 0;
+  for (let i = 0; i < rengas.length; i++) {
+    const p = rengas[i];
+    const q = rengas[(i + 1) % rengas.length];
+    a += p[0] * q[1] - q[0] * p[1];
+  }
+  return a / 2;
+}
+
+/**
+ * KAIKKI RENKAAT SAMAAN KIERTOSUUNTAAN — aineiston takuu, ei kosmetiikkaa.
+ *
+ * Tummennus täyttää kaikkien MUIDEN maiden renkaat yhtenä polkuna
+ * `fill-rule: nonzero` -säännöllä (js/maatummennus.js `muidenPolku`),
+ * ja se on oikein vain jos renkaat kiertävät samaan suuntaan.
+ * Vastakkain kiertävä naapuri KUMOAISI toisen juuri siinä kaistaleessa,
+ * jossa erikseen yksinkertaistetut rajat menevät päällekkäin: jokainen
+ * maaraja saisi vaalean raon. Natural Earthin ulkokehät ovat jo
+ * yhtenäisiä (kaikki 1233 rengasta samansuuntaisia), mutta ehtoa ei
+ * jätetä lähteen varaan — se maksaa yhden silmukan ja sitä vartioi
+ * tests/maapolygonit.test.mjs.
+ */
+function suunnista(rengas) {
+  return pinta(rengas) < 0 ? rengas.slice().reverse() : rengas;
+}
+
+/**
  * Rengas talletusmuotoon: kymmenesosayksiköitä, deltakoodattuna.
  * [x0, y0, dx1, dy1, dx2, dy2, …] — purku js/maatummennus.js puraMaa.
  */
@@ -276,7 +316,7 @@ for (const iso of pelimaat) {
     const kevyt = yksinkertaista(laudalla, TOLERANSSI);
     // Kolmiota pienempi jäännös ei ole muoto vaan viiva.
     if (kevyt.length < 4) { pudonneet++; continue; }
-    renkaat.push(koodaa(kevyt));
+    renkaat.push(koodaa(suunnista(kevyt)));
     renkaita++;
     pisteita += kevyt.length;
   }

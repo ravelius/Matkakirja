@@ -1378,11 +1378,18 @@ body.kartta-merkit-piilossa .maastonimet { display: none; }
       uudelleen — mitattu, ei arvattu).
 
    2. PORTAIKKO (steps) leikkaa maalikerrat. Portaaton feidaus maalaa
-      arkinlevyisen varjon parikymmentä kertaa 350 ms:ssä; seitsemän
-      porrasta maalaa sen seitsemästi. Ero näkyy luvuissa muttei
-      ruudulla: koko efekti on muutaman prosentin mustetta
-      (js/maatummennus.js `TUMMENNUS_VOIMA`), joten yksi porras jää
-      hienovaraisemmaksi kuin kartan oma rakeisuus. */
+      varjon parikymmentä kertaa 350 ms:ssä; seitsemän porrasta maalaa
+      sen seitsemästi. Ero näkyy luvuissa muttei ruudulla: koko efekti
+      on muutaman prosentin mustetta (js/maatummennus.js
+      `TUMMENNUS_VOIMA`), joten yksi porras jää hienovaraisemmaksi kuin
+      kartan oma rakeisuus.
+
+   TAULUKKO ON MITATTU ARKINLEVYISELLÄ SUORAKAITEELLA. Varjo on
+   31.8.2026 yöstä lähtien muiden maiden polygonit (omistaja: *"Merta ei
+   tarvitse tummentaa"*) — pienempi pinta, enemmän reunoja. Mitattu
+   uudelleen samalla savukkeella ja Kreikan lähikuvan feidauksella: ero
+   on ajojen hajonnan kokoinen, joten kumpikin valinta yllä pätee
+   sellaisenaan. */
 .maatummennus { animation: maatummennus-esiin 350ms steps(7, end); }
 @keyframes maatummennus-esiin {
   from { fill-opacity: 0; stroke-opacity: 0; }
