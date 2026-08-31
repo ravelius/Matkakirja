@@ -1897,34 +1897,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * merkintä eikä painokoneen ominaisuus.
    */
   if (nostot?.length && piirraNosto) {
-    for (const m of nostot) {
-      const mx = lautaKuvaX(m.x);
-      const my = lautaKuvaY(m.y);
-      /*
-       * NOSTOVIIVA ENSIN, merkin alle — sama järjestys kuin pelissä,
-       * jossa viivakerros menee laattakerroksen eteen (js/fokusniput.js
-       * nippuViivakerros). Päät on laskettu valmiiksi pelin omalla
-       * funktiolla (nippuViivanJana).
-       */
-      const v = m.viiva;
-      if (v) {
-        ctx.save();
-        ctx.strokeStyle = v.vari;
-        ctx.globalAlpha = v.himmeys;
-        ctx.lineCap = 'round';
-        ctx.lineWidth = Math.max(0.2, v.leveys * px);
-        ctx.setLineDash([v.katko * px, v.katko * px]);
-        ctx.beginPath();
-        ctx.moveTo(lautaKuvaX(v.x1), lautaKuvaY(v.y1));
-        ctx.lineTo(lautaKuvaX(v.x2), lautaKuvaY(v.y2));
-        ctx.stroke();
-        ctx.restore();
-      }
-      ctx.save();
-      ctx.translate(mx, my);
-      piirraNosto(ctx, m, m.porras * px);
-      ctx.restore();
-    }
+    piirraNostotKankaalle(ctx, nostot, piirraNosto, { lautaKuvaX, lautaKuvaY, px });
   }
 
   ctx.restore();                       // kartta-alan leikkuri auki
@@ -2289,5 +2262,146 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     ctx.restore();
   }
 
+  return { w: W, h: H };
+}
+
+/* ================================================================
+ * NOSTOTASO — läpinäkyvä laattakerros pohjan päälle
+ * ================================================================
+ *
+ * OMISTAJAN PÄÄTÖS 31.8.2026 ilta (kysymyskortti, sanatarkka:
+ * *"Voisiko nämä nostot polttaa erilliselle läpinäkyvälle
+ * rasteritasolle? Jaksaako pyörittää? Voisi poistaa näkyvistä
+ * kauemmilla zoom tasoilla"*): karttanostot — symboli, nimiö ja
+ * nostoviiva — poltetaan OMAAN läpinäkyvään laattapyramidiin, ei
+ * pohjaan. Päähyöty on nopea uusintapoltto: kun maailmaan tulee uusia
+ * nostoja, vain nostotaso ajetaan uudestaan (minuutteja, ei tunteja),
+ * ja pohja pysyy ikuisessa välimuistissaan.
+ *
+ * === YKSI PIIRTO, KAKSI KUTSUJAA ==================================
+ *
+ * Nosto piirretään TÄSMÄLLEEN samalla koodilla kuin pohjaan
+ * poltettaessa: `piirraNostotKankaalle` on sama funktio, jota
+ * `piirraMaailma` (luku 8c) kutsuu. Tämä kuori vain pystyttää saman
+ * arkkikoordinaatiston (origo, leikkuri, kokonaislukusiirto) ILMAN
+ * aineistoa — nostotason ajo ei tarvitse korkeusruudukkoa, Natural
+ * Earthiä eikä sisältöä, ja juuri se tekee siitä nopean.
+ *
+ * === SISÄLTÖPASSIT OVAT PARAMETRI, EIVÄT RAKENNE ==================
+ *
+ * Omistaja 31.8.2026: reittiverkon voi myöhemmin polttaa samalle
+ * tasolle ("Reitit voi piirtää kolmannelle tai samaan jos sekään ei
+ * ongelma"). Reitit ovat NYT pohjalaatoissa (luku 8b), eikä niitä
+ * siirretä tässä erässä — mutta kun siirto tehdään, se on
+ * `sisaltopassit`-listaan lisättävä uusi passi eikä uusi kuori:
+ * jokainen passi saa saman ctx:n ja saman mittaolion
+ * ({ lautaKuvaX, lautaKuvaY, px }) leikkurin sisällä.
+ */
+
+/**
+ * Poltetut karttanostot kankaalle — sama piirto poltettuna pohjaan
+ * (piirraMaailma 8c) ja läpinäkyvälle nostotasolle (piirraNostotaso).
+ *
+ * @param {CanvasRenderingContext2D} ctx  arkin koordinaatistossa,
+ *   kartta-alan leikkuri päällä
+ * @param {Array} nostot  tools/fokuskartta/nostot.mjs:n merkit
+ * @param {Function} piirraNosto  js/fokusnosto-symbolit.js
+ *   piirraNostosymPolttoon — pelin oma piirto, ei kopiota
+ * @param {{lautaKuvaX:Function, lautaKuvaY:Function, px:number}} mitta
+ */
+export function piirraNostotKankaalle(ctx, nostot, piirraNosto, mitta) {
+  const { lautaKuvaX, lautaKuvaY, px } = mitta;
+  for (const m of nostot) {
+    const mx = lautaKuvaX(m.x);
+    const my = lautaKuvaY(m.y);
+    /*
+     * NOSTOVIIVA ENSIN, merkin alle — sama järjestys kuin pelissä,
+     * jossa viivakerros menee laattakerroksen eteen (js/fokusniput.js
+     * nippuViivakerros). Päät on laskettu valmiiksi pelin omalla
+     * funktiolla (nippuViivanJana).
+     */
+    const v = m.viiva;
+    if (v) {
+      ctx.save();
+      ctx.strokeStyle = v.vari;
+      ctx.globalAlpha = v.himmeys;
+      ctx.lineCap = 'round';
+      ctx.lineWidth = Math.max(0.2, v.leveys * px);
+      ctx.setLineDash([v.katko * px, v.katko * px]);
+      ctx.beginPath();
+      ctx.moveTo(lautaKuvaX(v.x1), lautaKuvaY(v.y1));
+      ctx.lineTo(lautaKuvaX(v.x2), lautaKuvaY(v.y2));
+      ctx.stroke();
+      ctx.restore();
+    }
+    ctx.save();
+    ctx.translate(mx, my);
+    piirraNosto(ctx, m, m.porras * px);
+    ctx.restore();
+  }
+}
+
+/**
+ * Läpinäkyvä nostotason lohko — sama arkkigeometria kuin
+ * piirraMaailmassa, mutta ei aineistoa, ei paperia, ei kehystä:
+ * kankaalle jää vain nostojen muste, kaikki muu on läpinäkyvää.
+ *
+ * Asetukset ovat sama osajoukko kuin piirraMaailmalla: bbox, leveys,
+ * tyyli (kehys — leikkuria varten), koko, siirto, arkki, nostot,
+ * piirraNosto. `koko`/`siirto`/`arkki` toimivat täsmälleen kuten
+ * pohjapiirrossa (ks. piirraMaailman johdanto): kaikki lasketaan
+ * arkin koordinaateissa ja canvas siirretään kokonaisluvulla, joten
+ * lohkosta leikattu laatta on tavulleen sama kuin erikseen piirretty.
+ */
+export function piirraNostotaso(canvas, asetukset) {
+  const {
+    bbox, leveys, tyyli = {}, koko = null, siirto = null,
+    nostot = null, piirraNosto = null,
+  } = asetukset;
+  const px = leveys / bbox.w;
+  const W = Math.round(leveys);
+  const H = Math.round(bbox.h * px);
+  canvas.width = W;
+  canvas.height = H;
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, W, H);
+
+  const GX = siirto?.x ?? 0;
+  const GY = siirto?.y ?? 0;
+  const GW = koko?.w ?? W;
+  const GH = koko?.h ?? H;
+  const S = GW / 6400;
+
+  /*
+   * KARTTA-ALAN LEIKKURI — sama laatikko kuin pohjapiirron osioilla
+   * 4–8: nosto ei saa vuotaa atlaskehyksen kermaiseen marginaaliin,
+   * joka on pohjalaatoissa nostotason alla.
+   */
+  const kehys = tyyli.kehys ?? null;
+  const yYla = kehys ? Math.round(kehys.yla * S) : 0;
+  const yAla = kehys ? GH - Math.round(kehys.ala * S) : GH;
+
+  const origo = asetukset.arkki ?? { x: bbox.x, y: bbox.y };
+  const arkkiSiirto = asetukset.arkki ? { x: GX, y: GY } : { x: 0, y: 0 };
+  const lautaKuvaX = (bx) => (bx - origo.x) * px;
+  const lautaKuvaY = (by) => (by - origo.y) * px;
+
+  ctx.save();
+  ctx.translate(-arkkiSiirto.x, -arkkiSiirto.y);
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(arkkiSiirto.x, yYla, W, yAla - yYla);
+  ctx.clip();
+
+  /*
+   * SISÄLTÖPASSIT. Nyt vain nostot; reittiverkon siirto tälle tasolle
+   * on myöhempi erä ja tulee tähän uutena passina (ks. johdanto).
+   */
+  if (nostot?.length && piirraNosto) {
+    piirraNostotKankaalle(ctx, nostot, piirraNosto, { lautaKuvaX, lautaKuvaY, px });
+  }
+
+  ctx.restore();
+  ctx.restore();
   return { w: W, h: H };
 }

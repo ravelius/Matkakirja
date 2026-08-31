@@ -85,6 +85,7 @@ import { keraaSisalto, sisallonYhteenveto } from './fokuskartta/sisalto.mjs';
 import { keraaNostot, nostojenYhteenveto } from './fokuskartta/nostot.mjs';
 import { RESEPTIT, TAUSTA, patinoiSelaimessa } from './patina.mjs';
 import { laudanProjektio, SYVYYS } from './fokuskartta/piirto.js';
+import { nostosymPolttoLaatikko } from '../js/fokusnosto-symbolit.js';
 
 const TAALLA = dirname(fileURLToPath(import.meta.url));
 const JUURI = join(TAALLA, '..');
@@ -287,6 +288,27 @@ const KUIVA = lippu('kuiva');
  */
 const VERSIO = valitsin('versio', new Date().toISOString().slice(0, 10));
 /*
+ * NOSTOTASO (omistaja 31.8.2026 ilta): karttanostot poltetaan omaan
+ * LÄPINÄKYVÄÄN laattapyramidiin, ei pohjaan. `--nostotaso` ajaa VAIN
+ * nostotason: ei aineistoa, ei maastoa, ei paperia — pelkkä nostojen
+ * muste alfa-webp-laatoiksi polkuun nostot/z<taso>/<sarake>/<rivi>.
+ *
+ * TASOT VAIN z5–z7 (omistajan päätös: "Voisi poistaa näkyvistä
+ * kauemmilla zoom tasoilla" — jana ≤ ~200 km). Kaukotasoilla laattoja
+ * ei ole olemassa, joten piilotus on ilmainen; selain häivyttää
+ * kerroksen pehmeästi rajalla (js/laattapyramidi.js).
+ *
+ * NOSTOVERSIO on nostotason oma versio-osa polussa. Koko mallin
+ * päähyöty on NOPEA UUSINTAPOLTTO: kun nostoja tulee lisää, ajetaan
+ * vain nostotaso uudella nostoversiolla ja pohja pysyy ikuisessa
+ * välimuistissaan — siksi tason versio on erotettava pohjan versiosta.
+ * Yhteisajossa ne ovat sama merkkijono.
+ */
+const NOSTOTASO = lippu('nostotaso');
+const NOSTOVERSIO = valitsin('nostoversio', VERSIO);
+/** Nostotason matalin taso: kaukotasoilla nostolaattoja ei ole. */
+const NOSTO_ALIN = 5;
+/*
  * HARVA PYRAMIDI (omistaja 30.8.2026): syvimmillä tasoilla umpimeren
  * laattoja ei generoida lainkaan, ja peli maalaa niiden tilalle
  * merisävyn. Laatta jätetään pois vain, jos SEN KOKO ALALLA ei ole
@@ -310,7 +332,14 @@ const VERSIO = valitsin('versio', new Date().toISOString().slice(0, 10));
  * (rantavyö 7 px, leviäminen 3 px, kahdeksasosakenttä 8 px).
  */
 const PATINA_TASO = valitsin('patina', 'taysi');
-const PATINA = PATINA_TASO === 'ei' ? null : RESEPTIT[PATINA_TASO];
+/*
+ * NOSTOTASO SAA AINA OMAN RESEPTINSÄ (RESEPTIT.nosto): läpinäkyvän
+ * mustekerroksen paperivakiopassit — sävytys, rosoisuus, leviäminen,
+ * rae — ilman pohjan maastopasseja, jotka lukisivat tyhjää kangasta.
+ * `--patina ei` kytkee patinan pois myös nostotasolta.
+ */
+const PATINA = PATINA_TASO === 'ei' ? null
+  : (lippu('nostotaso') ? RESEPTIT.nosto : RESEPTIT[PATINA_TASO]);
 if (PATINA_TASO !== 'ei' && !PATINA) {
   console.error(`Tuntematon patinataso: ${PATINA_TASO}`);
   process.exit(1);
@@ -379,7 +408,14 @@ function lueTasot(teksti) {
   for (let z = osat[0]; z <= osat[1]; z += 1) ulos.push(z);
   return ulos;
 }
-const TASOT = lueTasot(valitsin('tasot', `0-${TASOJA - 1}`));
+/*
+ * Nostotasoajossa tasot ovat oletuksena ja ENINTÄÄN z5–z7: matalampien
+ * tasojen nostolaattoja ei ole olemassa (ks. NOSTOTASO), joten pyyntö
+ * niistä olisi hiljainen virhe. Rajaus tehdään tässä eikä kiellolla,
+ * jotta `--tasot 6-7` (osittainen uusintapoltto) toimii.
+ */
+const TASOT = lueTasot(valitsin('tasot', NOSTOTASO ? `${NOSTO_ALIN}-${TASOJA - 1}` : `0-${TASOJA - 1}`))
+  .filter((z) => !NOSTOTASO || z >= NOSTO_ALIN);
 
 /*
  * SARAKEKAISTA (--sarakkeet a-b) on parven/matriisin jakotapa.
@@ -533,6 +569,90 @@ function alueella(mitat, sarake, rivi) {
   return ero(lonA, ALUE.lon0) < laatanLev || ero(ALUE.lon0, lonA) < alueenLev;
 }
 
+/* ------------------------------------------------- nostotason peite */
+
+/*
+ * MISSÄ LAATOISSA ON NOSTOJEN MUSTETTA — pelkästä geometriasta.
+ *
+ * Nostotason tyhjiä laattoja EI generoida eikä viedä: z5–z7:llä
+ * laattapaikkoja on yli 20 000, mutta nostollisia vain murto-osa.
+ * Sama funktio päättää sekä sen, MITKÄ laatat piirretään, että sen,
+ * mitkä luettelon bittikartta väittää oleviksi — yksi lähde, eikä
+ * peli voi pyytää laattaa jota ajo ei kirjoittanut.
+ *
+ * LASKENTA ON GEOMETRIAA EIKÄ PIIRTOA, koska luettelojobi
+ * (`--vain-luettelo`) ajaa ilman selainta ja koska matriisin shardit
+ * eivät näe toistensa levyä. Merkin musteen ulottuma tulee pelin
+ * omasta mitasta (js/fokusnosto-symbolit.js nostosymPolttoLaatikko —
+ * sama taulukko jolla nimiö ladotaan), nostoviiva janan päistä, ja
+ * päälle patinan paperivakiomarginaali. Laatikko on VÄLJÄ: ylimitta
+ * maksaa muutaman lähes tyhjän laatan, alimitta katkaisisi noston
+ * laattarajalle.
+ */
+/** Patinan musteen ulottuma laatan reunan yli kuvapikseleinä
+ *  (leviäminen 2 px + rosoisuus + varaa). */
+const NOSTO_MARGINAALI_PX = 12;
+
+/** Poltettavien nostojen mustelaatikot laudan yksiköissä (kerran). */
+const nostoLaatikot = nostot.merkit.filter((m) => m.poltettava).map((m) => {
+  const lk = nostosymPolttoLaatikko(m);
+  let x1 = m.x + lk.x1 * m.porras;
+  let x2 = m.x + lk.x2 * m.porras;
+  let y1 = m.y + lk.y1 * m.porras;
+  let y2 = m.y + lk.y2 * m.porras;
+  const v = m.viiva;
+  if (v) {
+    const vara = (v.leveys ?? 0) * 2;
+    x1 = Math.min(x1, Math.min(v.x1, v.x2) - vara);
+    x2 = Math.max(x2, Math.max(v.x1, v.x2) + vara);
+    y1 = Math.min(y1, Math.min(v.y1, v.y2) - vara);
+    y2 = Math.max(y2, Math.max(v.y1, v.y2) + vara);
+  }
+  return {
+    x1, x2, y1, y2,
+  };
+});
+
+/**
+ * Tason nostolliset laatat joukkona "sarake:rivi".
+ *
+ * Sauman yli ulottuva muste leikkautuu arkin reunaan täsmälleen kuten
+ * pohjaan poltettunakin (canvasin leikkuri), joten sarakkeet
+ * rajataan arkin sisään eikä kierretä.
+ */
+function nostotasonPeite(mitat) {
+  const joukko = new Set();
+  for (const lk of nostoLaatikot) {
+    const px0 = (lk.x1 - arkinBbox.x) * mitat.px - NOSTO_MARGINAALI_PX;
+    const px1 = (lk.x2 - arkinBbox.x) * mitat.px + NOSTO_MARGINAALI_PX;
+    const py0 = (lk.y1 - arkinBbox.y) * mitat.px - NOSTO_MARGINAALI_PX;
+    const py1 = (lk.y2 - arkinBbox.y) * mitat.px + NOSTO_MARGINAALI_PX;
+    const s0 = Math.max(0, Math.floor(px0 / LAATTA));
+    const s1 = Math.min(mitat.sarakkeita - 1, Math.floor(px1 / LAATTA));
+    const r0 = Math.max(0, Math.floor(py0 / LAATTA));
+    const r1 = Math.min(mitat.riveja - 1, Math.floor(py1 / LAATTA));
+    for (let rivi = r0; rivi <= r1; rivi += 1) {
+      for (let sarake = s0; sarake <= s1; sarake += 1) {
+        joukko.add(`${sarake}:${rivi}`);
+      }
+    }
+  }
+  return joukko;
+}
+
+/** Tason nostolaatasto bittikarttana base64:nä (sama muoto kuin
+ *  pohjan `laatasto`, ks. teeLuettelo — peli purkaa ne samalla
+ *  koodilla). */
+function nostotasoBase64(mitat, peite) {
+  const tavut = Buffer.alloc(Math.ceil((mitat.sarakkeita * mitat.riveja) / 8));
+  for (const avain of peite) {
+    const [sarake, rivi] = avain.split(':').map(Number);
+    const i = rivi * mitat.sarakkeita + sarake;
+    tavut[i >> 3] |= 1 << (i & 7);
+  }
+  return tavut.toString('base64');
+}
+
 /* ------------------------------------------------------------ luettelo */
 
 const tasot = TASOT.map(tasonMitat);
@@ -545,11 +665,21 @@ const tyot = [];
  * levylle, jottei alueen raja muutu sen mukaan mihin lohkoruudukko
  * sattuu osumaan.
  */
+/*
+ * NOSTOTASOAJOSSA TYÖLISTA ON PEITE: vain laatat, joissa on nostojen
+ * mustetta (nostotasonPeite). Sama peite menee luetteloon, joten
+ * työlista ja luettelo eivät voi olla eri mieltä.
+ */
+const nostoPeitteet = new Map(
+  NOSTOTASO ? tasot.map((m) => [m.z, nostotasonPeite(m)]) : [],
+);
 const tarvitaan = new Set();
 const lohkot = new Map();
 for (const mitat of tasot) {
+  const peite = nostoPeitteet.get(mitat.z);
   for (let rivi = 0; rivi < mitat.riveja; rivi += 1) {
     for (let sarake = 0; sarake < mitat.sarakkeita; sarake += 1) {
+      if (NOSTOTASO && !peite.has(`${sarake}:${rivi}`)) continue;
       if (!alueella(mitat, sarake, rivi)) continue;
       if (SARAKKEET) {
         /*
@@ -639,23 +769,38 @@ if (lippu('vain-luettelo')) {
 
 /* ------------------------------------------------------------ aineisto */
 
-console.log(`  aineisto        ${dataKansio}`);
-const aineistoAlkoi = Date.now();
-const aineisto = await keraaMaailma({ kansio: dataKansio, laatikko, ruutu: RUUTU });
-console.log(`  korkeusruudukko ${aineisto.korkeus.w} x ${aineisto.korkeus.h} (${RUUTU}°) `
-  + `· rannikko ${aineisto.rannikot.length} viivaa · järvet ${aineisto.jarvet.length}`);
-const aineistoSek = (Date.now() - aineistoAlkoi) / 1000;
-console.log(`  aineisto koossa ${aineistoSek.toFixed(1)} s`);
-
 /*
- * PYSYVÄ SISÄLTÖ: kaupungit, reitit, joet, järvet, vuoret ja kohteet
- * poltetaan laattoihin (ks. tools/fokuskartta/sisalto.mjs).
- * `--ilman-sisaltoa` jättää ne pois — vertailukuvia varten.
+ * NOSTOTASO EI TARVITSE AINEISTOA: kankaalle piirretään vain nostojen
+ * muste, eikä korkeusruudukolla, rannikoilla tai sisällöllä ole siinä
+ * mitään tehtävää. Juuri tämä tekee uusintapoltosta nopean — ja siksi
+ * myös saumatesti ja harva karsinta (pohjakuvan ominaisuuksia) eivät
+ * kuulu tähän tilaan.
  */
-const sisalto = lippu('ilman-sisaltoa')
-  ? null
-  : await keraaSisalto(pack, join(JUURI, 'js', 'packs'));
-if (sisalto) console.log(`  sisältö         ${sisallonYhteenveto(sisalto)}`);
+if (NOSTOTASO && (HARVA || lippu('harvamittaus') || lippu('saumatesti'))) {
+  console.error('--nostotaso ei tue --harva/--harvamittaus/--saumatesti-lippuja.');
+  process.exit(1);
+}
+let aineisto = null;
+let sisalto = null;
+if (!NOSTOTASO) {
+  console.log(`  aineisto        ${dataKansio}`);
+  const aineistoAlkoi = Date.now();
+  aineisto = await keraaMaailma({ kansio: dataKansio, laatikko, ruutu: RUUTU });
+  console.log(`  korkeusruudukko ${aineisto.korkeus.w} x ${aineisto.korkeus.h} (${RUUTU}°) `
+    + `· rannikko ${aineisto.rannikot.length} viivaa · järvet ${aineisto.jarvet.length}`);
+  const aineistoSek = (Date.now() - aineistoAlkoi) / 1000;
+  console.log(`  aineisto koossa ${aineistoSek.toFixed(1)} s`);
+
+  /*
+   * PYSYVÄ SISÄLTÖ: kaupungit, reitit, joet, järvet, vuoret ja kohteet
+   * poltetaan laattoihin (ks. tools/fokuskartta/sisalto.mjs).
+   * `--ilman-sisaltoa` jättää ne pois — vertailukuvia varten.
+   */
+  sisalto = lippu('ilman-sisaltoa')
+    ? null
+    : await keraaSisalto(pack, join(JUURI, 'js', 'packs'));
+  if (sisalto) console.log(`  sisältö         ${sisallonYhteenveto(sisalto)}`);
+}
 
 /* ------------------------------------------------------ harva pyramidi */
 
@@ -681,10 +826,11 @@ if (sisalto) console.log(`  sisältö         ${sisallonYhteenveto(sisalto)}`);
  * säästön hinta, ja siksi tasainen sävy sallitaan vain siellä, missä
  * sävy on muutenkin tasainen.
  */
-const K = aineisto.korkeus;
-const DLON = (K.lon1 - K.lon0) / (K.w - 1);
-const DLAT = (K.lat1 - K.lat0) / (K.h - 1);
-const MERIMASKI = aineisto.meri;
+/* Nostotasoajossa aineistoa ei ole; harva karsinta on jo estetty. */
+const K = aineisto?.korkeus ?? null;
+const DLON = K ? (K.lon1 - K.lon0) / (K.w - 1) : 1;
+const DLAT = K ? (K.lat1 - K.lat0) / (K.h - 1) : 1;
+const MERIMASKI = aineisto?.meri ?? null;
 
 /** Korkeus metreinä lähimmästä ruudusta; NaN ruudukon ulkopuolella. */
 function korkeusPisteessa(lon, lat) {
@@ -720,7 +866,7 @@ function syvyysSavy(m) {
 }
 
 /** Järvirenkaiden karkeat laatikot asteina — järvi ei ole ulappaa. */
-const JARVIEN_LAATIKOT = (aineisto.jarvet ?? []).map((j) => {
+const JARVIEN_LAATIKOT = (aineisto?.jarvet ?? []).map((j) => {
   let lo = 180;
   let hi = -180;
   let la = 90;
@@ -915,23 +1061,25 @@ if (HARVA) {
 
 const tyokansio = join(tmpdir(), `pyramidi-${process.pid}`);
 mkdirSync(tyokansio, { recursive: true });
-const { grid, ...korkeudenMitat } = aineisto.korkeus;
-writeFileSync(join(tyokansio, 'korkeus.bin'),
-  Buffer.from(grid.buffer, grid.byteOffset, grid.byteLength));
-if (aineisto.meri) writeFileSync(join(tyokansio, 'meri.bin'), Buffer.from(aineisto.meri.buffer));
-writeFileSync(join(tyokansio, 'aineisto.json'), JSON.stringify({
-  korkeus: korkeudenMitat,
-  meri: Boolean(aineisto.meri),
-  rannikot: aineisto.rannikot,
-  /*
-   * MEREN RENKAAT: sama harvennettu kärkipistejoukko kuin `rannikot`,
-   * mutta suljettuina renkaina. Moottori erottaa niistä maan ja meren
-   * (maailmapiirto.js "VEKTORI ON AUKTORITEETTI"), jolloin maaväri ei
-   * voi olla rantaviivan kanssa eri mieltä.
-   */
-  meriRenkaat: aineisto.meriRenkaat,
-  jarvet: aineisto.jarvet,
-}));
+if (!NOSTOTASO) {
+  const { grid, ...korkeudenMitat } = aineisto.korkeus;
+  writeFileSync(join(tyokansio, 'korkeus.bin'),
+    Buffer.from(grid.buffer, grid.byteOffset, grid.byteLength));
+  if (aineisto.meri) writeFileSync(join(tyokansio, 'meri.bin'), Buffer.from(aineisto.meri.buffer));
+  writeFileSync(join(tyokansio, 'aineisto.json'), JSON.stringify({
+    korkeus: korkeudenMitat,
+    meri: Boolean(aineisto.meri),
+    rannikot: aineisto.rannikot,
+    /*
+     * MEREN RENKAAT: sama harvennettu kärkipistejoukko kuin `rannikot`,
+     * mutta suljettuina renkaina. Moottori erottaa niistä maan ja meren
+     * (maailmapiirto.js "VEKTORI ON AUKTORITEETTI"), jolloin maaväri ei
+     * voi olla rantaviivan kanssa eri mieltä.
+     */
+    meriRenkaat: aineisto.meriRenkaat,
+    jarvet: aineisto.jarvet,
+  }));
+}
 /*
  * Sisältö omana tiedostonaan: se on satoja kilotavuja (jokien
  * polyviivat), eikä sitä kannata ahtaa aineisto.jsonin sekaan.
@@ -943,8 +1091,15 @@ writeFileSync(join(tyokansio, 'sisalto.json'), JSON.stringify(sisalto ?? null));
  * merkit lasketaan mukaan tilastoon, mutta niitä ei polteta eikä
  * kirjata luetteloon, jolloin peli piirtää ne elävinä.
  */
+/*
+ * NOSTOT MENEVÄT VAIN NOSTOTASOLLE (omistaja 31.8.2026 ilta): pohja
+ * ajetaan jatkossa ILMAN nostoja, ja poltettavat merkit piirretään
+ * omaan läpinäkyvään pyramidiin `--nostotaso`-ajossa. Pohja-ajon
+ * sivu saa siksi tyhjän listan — sivun koodi on sama molemmissa
+ * tiloissa, ja ero on datassa.
+ */
 writeFileSync(join(tyokansio, 'nostot.json'),
-  JSON.stringify(nostot.merkit.filter((m) => m.poltettava)));
+  JSON.stringify(NOSTOTASO ? nostot.merkit.filter((m) => m.poltettava) : []));
 
 /*
  * AINEISTO PURETAAN KERRAN, EI KERRAN LAATTAA KOHTI.
@@ -957,7 +1112,7 @@ writeFileSync(join(tyokansio, 'nostot.json'),
 const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
 <body style="margin:0;background:#333"><canvas id="k"></canvas>
 <script type="module">
-  import { piirraMaailma } from './maailmapiirto.js';
+  import { piirraMaailma, piirraNostotaso } from './maailmapiirto.js';
   /*
    * PELIN OMA SYMBOLIKIRJASTO. Poltettu merkki piirretään täsmälleen
    * samalla funktiolla kuin elävä (Raamattu 31.8.2026: poltetun ja
@@ -965,12 +1120,22 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
    * yhtään merkin muotoa.
    */
   import { piirraNostosymPolttoon } from './fokusnosto-symbolit.js';
-  const aineisto = await (await fetch('./aineisto.json')).json();
-  const sisalto = await (await fetch('./sisalto.json')).json();
+  /*
+   * NOSTOTASOAJO EI LATAA AINEISTOA: läpinäkyvälle tasolle piirretään
+   * vain nostojen muste, eikä korkeusruudukkoa tai rannikoita ole
+   * edes kirjoitettu levylle (ks. työkansio).
+   */
+  const NOSTOTASO = ${NOSTOTASO};
   const nostot = await (await fetch('./nostot.json')).json().catch(() => null);
-  aineisto.korkeus.grid = new Int16Array(await (await fetch('./korkeus.bin')).arrayBuffer());
-  aineisto.meri = aineisto.meri
-    ? new Uint8Array(await (await fetch('./meri.bin')).arrayBuffer()) : null;
+  let aineisto = null;
+  let sisalto = null;
+  if (!NOSTOTASO) {
+    aineisto = await (await fetch('./aineisto.json')).json();
+    sisalto = await (await fetch('./sisalto.json')).json();
+    aineisto.korkeus.grid = new Int16Array(await (await fetch('./korkeus.bin')).arrayBuffer());
+    aineisto.meri = aineisto.meri
+      ? new Uint8Array(await (await fetch('./meri.bin')).arrayBuffer()) : null;
+  }
   const kangas = document.getElementById('k');
   const pala = document.createElement('canvas');
   const pctx = pala.getContext('2d');
@@ -1200,9 +1365,20 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
   };
 
   window.__lohko = async (asetukset, laatta, tyyppi, laatu, patina) => {
-    piirraMaailma(kangas, aineisto, {
-      ...asetukset, sisalto, nostot, piirraNosto: piirraNostosymPolttoon,
-    });
+    /*
+     * NOSTOTASO: sama lohkokoneisto, eri piirto. piirraNostotaso jättää
+     * kaiken paitsi nostojen musteen läpinäkyväksi; patina saa
+     * lapinäkyvän mustereseptin (RESEPTIT.nosto) patina-parametrissa.
+     */
+    if (NOSTOTASO) {
+      piirraNostotaso(kangas, {
+        ...asetukset, nostot, piirraNosto: piirraNostosymPolttoon,
+      });
+    } else {
+      piirraMaailma(kangas, aineisto, {
+        ...asetukset, sisalto, nostot, piirraNosto: piirraNostosymPolttoon,
+      });
+    }
     /*
      * PATINA KOKO LOHKOLLE, REUNUS MUKAAN LUKIEN. Vasta sen jälkeen
      * leikataan laatat reunuksen sisältä, jolloin jokainen paikallinen
@@ -1493,7 +1669,11 @@ for (const { mitat, bx, by } of lohkot.values()) {
     // Lohkon reunalle jäänyt ylimääräinen laatta ei mene levylle.
     if (!tarvitaan.has(`${mitat.z}:${sarake}:${rivi}`)) continue;
     const puskuri = Buffer.from(pala.data.split(',')[1], 'base64');
-    const kansio = join(kohdekansio, `z${mitat.z}`, String(sarake));
+    // Nostotason laatat omaan alipolkuunsa pohjan rinnalle:
+    // <versio>/nostot/z<taso>/<sarake>/<rivi>.webp (ämpärissä).
+    const kansio = NOSTOTASO
+      ? join(kohdekansio, 'nostot', `z${mitat.z}`, String(sarake))
+      : join(kohdekansio, `z${mitat.z}`, String(sarake));
     mkdirSync(kansio, { recursive: true });
     writeFileSync(join(kansio, `${rivi}.${MUOTO}`), puskuri);
 
@@ -1579,8 +1759,24 @@ function teeLuettelo() {
    */
   nimiot: false,
   /*
-   * MITKÄ KARTTANOSTOT TÄSSÄ AJOSSA POLTETTIIN: tunnus → sisällön
-   * tiiviste (js/nostoladonta.js nostoladontaTiiviste).
+   * NOSTOTASO — oma läpinäkyvä laattapyramidi (omistaja 31.8.2026
+   * ilta). Pohjalaatoissa EI ole nostoja; ne ovat tason laatoissa
+   * polussa <nostotaso.versio>/nostot/z…, ja tunnus→tiiviste-luettelo
+   * (`nostotaso.nostot`, js/nostoladonta.js nostoladontaTiiviste)
+   * kertoo pelille, mitkä merkit se saa vaientaa elävästä kerroksesta.
+   *
+   * KENTTÄ ON TÄSSÄ EIKÄ VANHASSA `nostot`-AVAIMESSA, JA SE ON
+   * YHTEENSOPIVUUDEN YDIN. Vanha peli (ennen nostotasoa) lukee vain
+   * juuritason `nostot`-kenttää: jos uusi luettelo kirjoittaisi
+   * tiivisteet sinne, vanha peli vaikenisi merkeistä, joita sen
+   * tuntemissa pohjalaatoissa ei enää ole — nostot katoaisivat.
+   * Kun tiivisteet ovat vain `nostotaso`-olion sisällä, vanha peli
+   * piirtää kaiken elävänä (oikein, koska pohja on nostoton) ja uusi
+   * peli vaientaa vain sen, minkä sen oma nostokerros piirtää.
+   * Vastaavasti VANHA luettelo (nostot pohjassa, juuritason `nostot`)
+   * toimii uudessa pelissä entisellään: kerrosta ei rakenneta, ja
+   * vaientaminen nojaa juuriavaimeen. Ikkunaa, jossa nosto näkyisi
+   * kahdesti tai ei kertaakaan, ei siis ole kummassakaan suunnassa.
    *
    * PELKKÄ TOTUUSARVO EI RIITÄ kuten nimiöillä, koska kerrokset ovat
    * RINNAKKAISET eivätkä toisensa poissulkevat (Raamattu 31.8.2026):
@@ -1590,12 +1786,26 @@ function teeLuettelo() {
    * tunnusta luettelo ei tunne TAI jonka tiiviste eroaa
    * (js/laattapyramidi.js nostoOnPoltettu).
    *
-   * TIIVISTE EIKÄ PELKKÄ TUNNUSLISTA: tunnus kertoo, oliko merkki
-   * polttohetkellä olemassa; tiiviste kertoo, onko se yhä sama merkki.
-   * Nimen, symbolin, ryhmän jäsenten tai paikan muutos näkyy siinä
-   * heti, eikä laatan vanhentunut kuva jää kartalle yksin.
+   * `laatastot` on sama bittikarttamuoto kuin tasojen `laatasto`
+   * (peli purkaa molemmat samalla koodilla): bitti 1 = nostolaatta on
+   * olemassa. Se lasketaan geometriasta (nostotasonPeite), samalla
+   * funktiolla josta piirtoajon työlista tulee — luettelo ja levy
+   * eivät voi olla eri mieltä. Kun pyramidin tasoihin ei kuulu
+   * yhtään nostotason tasoa (koeajo z0–z3), kenttä jää pois ja peli
+   * piirtää kaikki nostot elävinä.
    */
-  nostot: nostot.luettelo,
+  nostotaso: (() => {
+    const omat = tasot.filter((m) => m.z >= NOSTO_ALIN);
+    if (!omat.length) return null;
+    const laatastot = {};
+    for (const m of omat) laatastot[m.z] = nostotasoBase64(m, nostotasonPeite(m));
+    return {
+      versio: NOSTOVERSIO,
+      tasot: omat.map((m) => m.z),
+      nostot: nostot.luettelo,
+      laatastot,
+    };
+  })(),
   /*
    * MERISÄVY: se yksi väri, jolla peli maalaa karsittujen umpimeren
    * laattojen paikan (ks. umpimeriSavy). Null, jos mitään ei karsittu.
@@ -1650,10 +1860,23 @@ if (existsSync(luetteloPolku)) {
   try {
     const vanha = JSON.parse(readFileSync(luetteloPolku, 'utf8'));
     if (vanha.laatta === LAATTA && vanha.muoto === MUOTO) {
-      const omat = new Set(luettelo.tasot.map((t) => t.z));
-      luettelo.tasot = [...(vanha.tasot ?? []).filter((t) => !omat.has(t.z)), ...luettelo.tasot]
-        .sort((a, b) => a.z - b.z);
-      luettelo.erat = [...(vanha.erat ?? []), { tasot: TASOT, alue: ALUE }];
+      /*
+       * NOSTOTASOAJO EI KOSKE POHJAN TASOIHIN: se ei piirtänyt yhtään
+       * pohjalaattaa, joten vanhan luettelon tasot (mahdollisine
+       * laatastoineen) jäävät sellaisinaan. Vain nostotaso-olio ja
+       * eräkirjanpito päivittyvät.
+       */
+      if (NOSTOTASO && vanha.tasot?.length) {
+        luettelo.tasot = vanha.tasot;
+      } else {
+        const omat = new Set(luettelo.tasot.map((t) => t.z));
+        luettelo.tasot = [...(vanha.tasot ?? []).filter((t) => !omat.has(t.z)), ...luettelo.tasot]
+          .sort((a, b) => a.z - b.z);
+      }
+      luettelo.erat = [...(vanha.erat ?? []), { tasot: TASOT, alue: ALUE, nostotaso: NOSTOTASO || undefined }];
+      // Osa-ajo matalilla tasoilla (koeajo z0–z3) ei saa pyyhkiä
+      // olemassa olevaa nostotasoa pois luettelosta.
+      luettelo.nostotaso = luettelo.nostotaso ?? vanha.nostotaso ?? null;
     }
   } catch {
     /* rikkinäinen vanha luettelo: kirjoitetaan tuore päälle */
@@ -1683,4 +1906,6 @@ console.log(`  piirrettyä      ${(piirrettyaPx / 1e6).toFixed(1)} Mpx `
   + `(hukkaa ${(100 * (1 - pikseleita / piirrettyaPx)).toFixed(1)} % lohkon reunoilla)`);
 console.log(`  kokonaisaika    ${((Date.now() - alkoi) / 1000).toFixed(1)} s`);
 console.log(`  luettelo        ${luetteloPolku} (${statSync(luetteloPolku).size} tavua)`);
-console.log(`\nVie ämpäriin: pyramidi/<versio>/z<taso>/<sarake>/<rivi>.${MUOTO}`);
+console.log(NOSTOTASO
+  ? `\nVie ämpäriin: pyramidi/<nostoversio>/nostot/z<taso>/<sarake>/<rivi>.${MUOTO}`
+  : `\nVie ämpäriin: pyramidi/<versio>/z<taso>/<sarake>/<rivi>.${MUOTO}`);

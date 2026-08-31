@@ -2246,6 +2246,50 @@ export function piirraNostosymPolttoon(ctx, merkki, porras, svg = null) {
 }
 
 /**
+ * POLTETUN MERKIN MUSTEEN LAATIKKO kirjaston yksiköissä, origo merkin
+ * keskipisteessä — sama muste, jonka piirraNostosymPolttoon piirtää.
+ *
+ * === MIKSI TÄMÄ ON TÄSSÄ EIKÄ GENERAATTORISSA =====================
+ *
+ * Nostotason laattaluettelo (tools/generoi-laattapyramidi.mjs
+ * `--nostotaso`) kertoo, missä laatoissa on mustetta, ja tyhjiä
+ * laattoja ei generoida eikä viedä. Luettelo on laskettava ILMAN
+ * piirtoa (workflow'n luettelojobi ajaa pelkkää geometriaa), joten
+ * musteen ulottuma on johdettava samoista luvuista, joilla muste
+ * piirretään: NOSTOSYM_MINI_RUUTU, nimiökaista ja nimiön mitta
+ * (nostosymNimioMitta — sama taulukko, jolla teksti myös ladotaan).
+ * Jos laatikko asuisi generaattorissa omana kaavanaan, se eriytyisi
+ * piirrosta ensimmäisessä hienosäädössä ja nosto katkeaisi luettelon
+ * mielestä tyhjän laatan rajalle.
+ *
+ * Laatikko on tarkoituksella VÄLJÄ mitta (ei tiukin): pystysuunnassa
+ * nimiön kirjaimet mahtuvat ±NOSTOSYM_MINI_RUUTU-kaistaan (versaalin
+ * yläreuna ~NIMIO_Y − NIMIO_KOKO ≈ −7,0; ruutu on 7,4), ja halo on jo
+ * nimiön mitassa. Ylimitta maksaa enintään muutaman lähes tyhjän
+ * laatan, alimitta katkaisisi mustetta.
+ *
+ * @param {object} merkki { nimio, nimioNakyy, nimioVasemmalle,
+ *   nimioRajaton, laji } — laattageneraattorin merkkitietue
+ * @returns {{x1:number, y1:number, x2:number, y2:number}}
+ */
+export function nostosymPolttoLaatikko(merkki) {
+  const laatikko = {
+    x1: -NOSTOSYM_MINI_RUUTU,
+    x2: NOSTOSYM_MINI_RUUTU,
+    y1: -NOSTOSYM_MINI_RUUTU,
+    y2: NOSTOSYM_MINI_RUUTU,
+  };
+  if (!merkki.nimioNakyy || !merkki.nimio) return laatikko;
+  const enintaan = merkki.nimioRajaton ? Infinity : NOSTOSYM_NIMIO_MERKKEJA;
+  const { teksti, leveys } = nostosymNimioMitta(merkki.nimio, merkki.laji, enintaan);
+  if (!teksti) return laatikko;
+  const ulko = NOSTOSYM_NIMIO_X + leveys;
+  if (merkki.nimioVasemmalle) laatikko.x1 = -ulko;
+  else laatikko.x2 = ulko;
+  return laatikko;
+}
+
+/**
  * KARTAN MERKKI: viivamerkki ja nimiö yhtenä rasteroituna kuvana.
  *
  * Kutsuja antaa tyhjän ryhmän, joka on jo SVG:ssä kiinni (tyyli ja

@@ -778,6 +778,48 @@ export const RESEPTIT = {
      * piirtää sauman. Arvoksi VINJETTI vain yksittäiselle lehdelle. */
     vinjetti: null,
   },
+  /*
+   * NOSTOTASO — LÄPINÄKYVÄN MUSTEKERROKSEN PAPERIVAKIOPASSIT.
+   *
+   * Karttanostot poltetaan omaan läpinäkyvään laattapyramidiin
+   * (omistaja 31.8.2026 ilta), ja nosto on PAINOJÄLKEÄ: se saa samat
+   * paperivakiopassit kuin pohjaan poltettuna — musteen sävytys,
+   * viivojen mikrorosoisuus, musteen leviäminen ja paperin rae.
+   *
+   * MIKÄ JÄÄ POIS, JA MIKSI:
+   *  - MAASTOPASSIT (syvyys, pastelli, maanraja, reunakertymä,
+   *    ikääntyminen): ne ovat POHJAN kuvaa, joka on tason alla jo
+   *    valmiiksi patinoituna. Kerros näkee vain oman musteensa.
+   *  - KOHDISTUSHEITTO: se on VÄRILAATAN heitto viivalaattaa vasten,
+   *    ja nosto on viivalaattaa — vertailukelpoista värilaattaa ei
+   *    läpinäkyvällä tasolla ole (neljäsosakenttä laskettaisiin
+   *    tyhjästä), ja heitto siirtäisi mustetta pois selaimen
+   *    näkymättömien osumamuotojen alta.
+   *  - VINJETTI/TAITTEET: pois kaikkialta muualtakin.
+   *
+   * `lapinakyva: true` kytkee alfatietoisen käsittelyn: musteen
+   * leviämisen kenttä painotetaan alfalla, ja leviämisen kehä
+   * piirretään läpinäkyville pikseleille mustealfana (sama tummuus,
+   * jonka kerroinvaimennus antaisi pohjaan poltettuna — musta väri
+   * alfalla w peittona vastaa kertolaskua 1−w).
+   */
+  nosto: {
+    nimi: 'nosto',
+    lapinakyva: true,
+    savyt: SAVYT,
+    syvyys: null,
+    vesiviivoitus: null,
+    maanraja: null,
+    pastelli: null,
+    paperi: PAPERI_TAYSI,
+    ikaantyminen: null,
+    reunakertyma: null,
+    rosoisuus: ROSOISUUS,
+    kohdistus: null,
+    leviaminen: LEVIAMINEN,
+    taitteet: false,
+    vinjetti: null,
+  },
 };
 
 /*
@@ -1318,7 +1360,15 @@ export async function patinoiSelaimessa({
     const m = new Uint8Array(L * K);
     for (let p = 0; p < L * K; p++) {
       const i = p * 4;
-      m[p] = Math.round(255 * pehmene(158, 70, lum(d[i], d[i + 1], d[i + 2])));
+      /*
+       * LÄPINÄKYVÄLLÄ TASOLLA MUSTE ON ALFAA. Läpinäkyvä pikseli on
+       * rgb(0,0,0) eli luminanssiltaan "täyttä mustetta", ja ilman
+       * alfapainoa koko tyhjä kangas leviäisi. Peittävällä pohjalla
+       * alfa on 255 ja kerroin tasan 1 — lehtiputki ei muutu tavulla.
+       */
+      const alfaPaino = resepti.lapinakyva ? d[i + 3] / 255 : 1;
+      m[p] = Math.round(255 * alfaPaino
+        * pehmene(158, 70, lum(d[i], d[i + 1], d[i + 2])));
     }
     /* Erotteleva laatikkosumennus kahdesti = lähes gaussinen. */
     const apu = new Uint8Array(L * K);
@@ -1386,6 +1436,22 @@ export async function patinoiSelaimessa({
       const i = (y * L + x) * 4;
       const alfa = d[i + 3];
       if (alfa === 0) {
+        /*
+         * MUSTEEN LEVIÄMISEN KEHÄ LÄPINÄKYVÄLLE TASOLLE. Pohjaan
+         * poltettuna kehä on kerroinvaimennus 1 − voima·kehä, eli
+         * pikselin väri kerrotaan; peittona sama tulos saadaan
+         * mustalla pikselillä, jonka alfa on voima·kehä (C·(1−w) ==
+         * musta w:llä C:n päällä). Näin kehä ulottuu musteen
+         * ULKOPUOLELLE myös läpinäkyvällä tasolla — juuri sinne, minne
+         * muste paperin kuidussa leviää.
+         */
+        if (resepti.lapinakyva && le && musteSumea) {
+          const keha = musteSumea[y * L + x] / 255;
+          if (keha > 0.01) {
+            d[i] = 0; d[i + 1] = 0; d[i + 2] = 0;
+            d[i + 3] = Math.round(255 * Math.min(1, le.voima * keha));
+          }
+        }
         if (muoto === 'jpeg') { d[i] = tausta[0]; d[i + 1] = tausta[1]; d[i + 2] = tausta[2]; d[i + 3] = 255; }
         continue;
       }

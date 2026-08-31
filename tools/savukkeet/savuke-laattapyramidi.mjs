@@ -93,7 +93,7 @@ const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromiu
  * ei kuulu muihin väitteisiin, joten se ei ole oletus: se muuttaisi
  * fokusmoodin ja siten koko piirron.
  */
-async function avaaPeli({ kehittaja = false } = {}) {
+async function avaaPeli({ kehittaja = false, muunnaLuettelo = null } = {}) {
   const ctx = await selain.newContext({
     viewport: { width: 390, height: 844 },
     hasTouch: true,
@@ -148,10 +148,18 @@ async function avaaPeli({ kehittaja = false } = {}) {
      * on testin oma kuristin, eikä sitä tarvita muissa väitteissä.
      */
     if (laattaViive) await new Promise((valmis) => { setTimeout(valmis, laattaViive); });
+    /*
+     * N5 syöttää pelille VANHAN MALLIN luettelon (nostot pohjassa)
+     * samasta laattakansiosta — muunnos tehdään lennossa tässä.
+     */
+    let runko = readFileSync(tiedosto);
+    if (muunnaLuettelo && osa === 'pyramidi.json') {
+      runko = Buffer.from(JSON.stringify(muunnaLuettelo(JSON.parse(String(runko)))));
+    }
     route.fulfill({
       status: 200,
       contentType: osa.endsWith('.json') ? 'application/json' : 'image/webp',
-      body: readFileSync(tiedosto),
+      body: runko,
     });
   });
   await sivu.goto(osoite, { waitUntil: 'load' });
@@ -472,6 +480,20 @@ for (let i = 0; i < 4; i += 1) {
 await sivu.waitForTimeout(2500);
 
 console.log('\n--- P6 paikannimet ---');
+/*
+ * KAMERA KAUPUNKIEN YLLE ENNEN MITTAUSTA. P7e:n sarja jättää kameran
+ * satunnaiseen kohtaan, ja nostotason myötä (31.8.2026) näkymässä voi
+ * olla PELKKIÄ kohde-nimiä — ne ovat poltettuina laatoissa eikä
+ * nimikerros lado niitä (js/fokuskohteet.js: `r.poltettu` ei mene
+ * asetaKohdenimet-riville). P6 mittaa KAUPUNKIEN JA MAASTON nimiä,
+ * joten näkymän on oltava paikassa, jossa niitä on: Ateena.
+ */
+await sivu.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  const c = ui.game.pack.cities.find((k) => k.id === 'ateena');
+  ui.kartta.ajaKamera({ x: c.x, y: c.y, leveys: 400 }, { kesto: 0, pakota: true });
+});
+await sivu.waitForTimeout(2500);
 const nimitila = () => sivu.evaluate(() => {
   const ui = window.matkakirja.ui;
   const kerros = ui.karttanimiKerros;
@@ -483,6 +505,7 @@ const nimitila = () => sivu.evaluate(() => {
     ? Math.round(laput[0].getBoundingClientRect().height * 10) / 10
     : 0;
   return {
+    nakyva: (() => { const n = ui.nakyvaAlue(); return `${Math.round(n.x)},${Math.round(n.y)} ${Math.round(n.w)}x${Math.round(n.h)} s${n.skaala.toFixed(3)}`; })(),
     nimia: laput.length,
     merkkeja: kerros ? kerros.querySelectorAll('.karttamerkki').length : 0,
     // Vanhat kerrokset eivät saa palata: niissä nimi on laudan
@@ -507,7 +530,7 @@ const luetteloNimiot = await sivu.evaluate(async () => {
 });
 console.log(`      mitattu: luettelon nimiot=${luetteloNimiot}, `
   + `ladottuja nimiä ${nimet.nimia}, merkkejä ${nimet.merkkeja}, `
-  + `nimen korkeus ${nimet.cssKorkeus} CSS-px`);
+  + `nimen korkeus ${nimet.cssKorkeus} CSS-px, näkymä ${nimet.nakyva}`);
 if (luetteloNimiot === false) {
   vaadi('P6a nimettömien laattojen päälle peli latoo nimet',
     nimet.nimia > 0, `ladottuja ${nimet.nimia}`);
@@ -523,6 +546,143 @@ if (luetteloNimiot === false) {
 vaadi('P6d laudan vanhat nimikerrokset pysyvät tyhjinä',
   nimet.cityLabel === 0 && nimet.maastonimi === 0,
   `city-label ${nimet.cityLabel}, maastonimi ${nimet.maastonimi}`);
+
+/* ============ N: NOSTOTASO ==========================================
+ *
+ * Omistajan päätös 31.8.2026 ilta: karttanostot poltetaan omaan
+ * LÄPINÄKYVÄÄN laattapyramidiin (vain z5–z7), ei pohjaan. Väitteet:
+ *
+ *   N1  Syvällä zoomilla nostokerroksessa on laattoja, ne tulevat
+ *       nostot/-alipolusta ja kerros on näkyvissä (opacity 1).
+ *   N2  Yhtään nostolaattaa ei pyydetä turhaan: luettelon bittikartta
+ *       kertoo mitkä ovat olemassa, joten nostopyyntöihin ei tule
+ *       404:ää (tyhjiä nostolaattoja EI OLE OLEMASSA).
+ *   N3  Ei tuplapiirtoa: poltetut merkit ovat elävässä kerroksessa
+ *       vaiennettuja (glyyfi tyhjä) — nosto näkyy laatasta, ei
+ *       kahdesti.
+ *   N4  Pehmeä häivytys: kun kamera nousee nostotason tasojen (z5)
+ *       yläpuolelle, kerros saa opacityn 0 (siirtymällä, ei
+ *       pompaten); takaisin syvälle tullessa 1.
+ */
+console.log('\n--- N nostotaso ---');
+if (!LUETTELO.nostotaso) {
+  console.log('      luettelossa ei nostotasoa — N-väitteet ohitetaan');
+} else {
+  const nosto1 = await sivu.evaluate(() => {
+    const ui = window.matkakirja.ui;
+    const kerros = ui.pyramidiNostoKerros;
+    const kuvat = kerros ? [...kerros.querySelectorAll('image')] : [];
+    return {
+      taso: globalThis.__pyramidinMittarit?.().taso,
+      laattoja: kuvat.length,
+      opacity: kerros?.style.opacity ?? null,
+      vaarassaPolussa: kuvat.filter((k) => !(k.getAttribute('href') ?? '')
+        .includes('/nostot/')).length,
+      poltettuja: (ui.fokuskohdeRyhmat ?? []).filter((r) => r.poltettu).length,
+      tuplia: (ui.fokuskohdeRyhmat ?? []).filter((r) => r.poltettu
+        && r.glyyfi && r.glyyfi.childElementCount > 0).length,
+    };
+  });
+  vaadi('N1 nostokerroksessa on laattoja nostot-polusta ja kerros näkyy',
+    nosto1.laattoja > 0 && nosto1.vaarassaPolussa === 0 && nosto1.opacity === '1',
+    `laattoja ${nosto1.laattoja}, väärässä polussa ${nosto1.vaarassaPolussa}, `
+    + `opacity ${nosto1.opacity} (taso z${nosto1.taso})`);
+  /*
+   * N2 MITTAA BITTIKARTTAA, EI LEVYÄ: paikallinen kansio kattaa vain
+   * koeajoalueen, mutta luettelon bittikartta on koko maailman —
+   * pyyntö alueen ulkopuolisesta NOSTOLLISESTA laatasta on oikein
+   * (tuotannossa se on ämpärissä). Väärin olisi pyyntö laatasta,
+   * jota bittikartta EI tunne: tuotannossa se olisi taattu 404.
+   */
+  const nostopyynnot = pyynnot.filter((p) => p.includes('/nostot/'));
+  const bitit = {};
+  for (const [z, b64] of Object.entries(LUETTELO.nostotaso.laatastot)) {
+    bitit[z] = Buffer.from(b64, 'base64');
+  }
+  const sarakkeita = Object.fromEntries(LUETTELO.tasot.map((t) => [t.z, t.sarakkeita]));
+  const tuntemattomat = nostopyynnot.filter((p) => {
+    const m = /\/nostot\/z(\d+)\/(\d+)\/(\d+)\./.exec(p);
+    if (!m) return true;
+    const [, z, s, r] = m.map(Number);
+    const i = r * sarakkeita[z] + s;
+    const tavu = bitit[z]?.[i >> 3];
+    return tavu === undefined || ((tavu >> (i & 7)) & 1) !== 1;
+  });
+  vaadi('N2 nostolaattoja pyydetään vain luettelon bittikartan tuntemia',
+    nostopyynnot.length > 0 && tuntemattomat.length === 0,
+    `pyyntöjä ${nostopyynnot.length}, bittikartan ulkopuolisia ${tuntemattomat.length}: `
+    + `${tuntemattomat.slice(0, 3).join(' ')}`);
+  vaadi('N3 poltettu merkki ei piirry elävänä (ei tuplapiirtoa)',
+    nosto1.poltettuja > 0 && nosto1.tuplia === 0,
+    `poltettuja ${nosto1.poltettuja}, tuplia ${nosto1.tuplia}`);
+  /*
+   * N4: kauas ja takaisin. Kolme porrasta ulos vie tason alle z5:n
+   * (portaikko 1,5 ja tasosuhde 2), ja kerroksen on häivyttävä.
+   */
+  for (let i = 0; i < 4; i += 1) {
+    await sivu.evaluate(() => { window.matkakirja.ui.kartta.zoomaaPainikkeella(-1); });
+    await sivu.waitForTimeout(700);
+  }
+  await sivu.waitForTimeout(1000);
+  const kaukana = await sivu.evaluate(() => ({
+    taso: globalThis.__pyramidinMittarit?.().taso,
+    opacity: window.matkakirja.ui.pyramidiNostoKerros?.style.opacity ?? null,
+    siirtyma: window.matkakirja.ui.pyramidiNostoKerros?.style.transition ?? '',
+  }));
+  vaadi('N4a kaukotasolla nostokerros on häivytetty (opacity 0, siirtymällä)',
+    kaukana.taso < 5 && kaukana.opacity === '0' && /opacity/.test(kaukana.siirtyma),
+    `taso z${kaukana.taso}, opacity ${kaukana.opacity}, transition "${kaukana.siirtyma}"`);
+  for (let i = 0; i < 4; i += 1) {
+    await sivu.evaluate(() => { window.matkakirja.ui.kartta.zoomaaPainikkeella(1); });
+    await sivu.waitForTimeout(700);
+  }
+  await sivu.waitForTimeout(1500);
+  const takaisin = await sivu.evaluate(() => ({
+    taso: globalThis.__pyramidinMittarit?.().taso,
+    opacity: window.matkakirja.ui.pyramidiNostoKerros?.style.opacity ?? null,
+    laattoja: window.matkakirja.ui.pyramidiNostoKerros?.querySelectorAll('image').length ?? 0,
+  }));
+  vaadi('N4b takaisin syvälle: kerros palaa näkyviin laattoineen',
+    takaisin.taso >= 5 && takaisin.opacity === '1' && takaisin.laattoja > 0,
+    `taso z${takaisin.taso}, opacity ${takaisin.opacity}, laattoja ${takaisin.laattoja}`);
+  await sivu.screenshot({
+    path: new URL('./kaappaukset/nostotaso-athens.png', import.meta.url).pathname,
+  }).catch(() => {});
+}
+
+/* ============ N5: VANHA LUETTELO (nostot pohjassa) ==================
+ *
+ * Ämpärissä on tätä kirjoitettaessa VANHAN mallin ajo (2026-08-31b:
+ * nostot pohjalaatoissa, tiivisteet luettelon juuressa). Pelin on
+ * toimittava sen kanssa entiseen tapaan: ei nostokerroksen laattoja,
+ * ei nostopyyntöjä, ja poltetut merkit vaiennettuina juuriavaimen
+ * perusteella. Koe ajetaan syöttämällä pelille vanhan muotoinen
+ * luettelo samasta laattakansiosta.
+ */
+console.log('\n--- N5 vanha luettelo ---');
+if (LUETTELO.nostotaso) {
+  const vanhaPeli = await avaaPeli({
+    muunnaLuettelo: (j) => {
+      const vanha = { ...j, nostot: j.nostotaso?.nostot ?? {} };
+      delete vanha.nostotaso;
+      return vanha;
+    },
+  });
+  const vanhaTila = await vanhaPeli.sivu.evaluate(() => {
+    const ui = window.matkakirja.ui;
+    return {
+      nostolaattoja: ui.pyramidiNostoKerros?.querySelectorAll('image').length ?? 0,
+      poltettuja: (ui.fokuskohdeRyhmat ?? []).filter((r) => r.poltettu).length,
+    };
+  });
+  const vanhatNostopyynnot = vanhaPeli.pyynnot.filter((p) => p.includes('/nostot/'));
+  vaadi('N5a vanhalla luettelolla nostokerros pysyy tyhjänä eikä nostolaattoja pyydetä',
+    vanhaTila.nostolaattoja === 0 && vanhatNostopyynnot.length === 0,
+    `laattoja ${vanhaTila.nostolaattoja}, pyyntöjä ${vanhatNostopyynnot.length}`);
+  vaadi('N5b vanhalla luettelolla poltetut vaiennetaan juuriavaimesta',
+    vanhaTila.poltettuja > 0, `poltettuja ${vanhaTila.poltettuja}`);
+  await vanhaPeli.ctx.close();
+}
 
 /* ============ MITAT ================================================= */
 
