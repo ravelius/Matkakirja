@@ -2748,11 +2748,12 @@ function piirraKohdeKysymykset(ui, sisalto, kohde) {
   if (!kysymykset.length) return;
   // Omistaja 25.8.2026: "Ennen kysymyksiä voisi olla lause: kysy
   // pöllöltä" — kertoo, mihin pisteviivanapit johtavat.
-  // Otsikkorivi on nimilappu → yliviivausvitsi (omistaja 27.8.2026):
-  // "Kysy pöllöltä pululta:", pöllöltä yli vedettynä. Ryhmän aria-label
-  // on pelkkää tekstiä eikä siinä ole yliviivausta.
+  // Otsikkorivi on nimilappu → yliviivausvitsi (omistaja 27.8.2026,
+  // muoto tarkennettu 31.8.2026): "Kysy viisaalta pöllöltä pululta:",
+  // jossa koko nimi on yhden vedon alla. Ryhmän aria-label on pelkkää
+  // tekstiä eikä siinä ole yliviivausta.
   sisalto.appendChild(polloNimilappu(html('p', 'fokuskohde-kysy-otsikko'), {
-    ennen: 'Kysy ', yli: 'pöllöltä', tilalle: 'pululta', jalkeen: ':',
+    ennen: 'Kysy ', yli: 'viisaalta pöllöltä', tilalle: 'pululta', jalkeen: ':',
   }));
   const rivi = html('div', 'fokuskohde-kysymykset');
   rivi.setAttribute('role', 'group');
@@ -3669,8 +3670,6 @@ function kuunteleKohdetta(ui, popup) {
   };
   const ulos = (tapahtuma) => {
     if (popup.contains(tapahtuma.target)) return;
-    // Toisen merkin napautus vaihtaa kohdetta; merkki hoitaa sulun itse.
-    if (tapahtuma.target?.closest?.('.fokuskohde')) return;
     /*
      * Suurennos on tämän kortin oma jatke, vaikka se asuu bodyssa
      * (js/kartta.js KELLUVA_UI: kelluvat pinnat ovat siellä samasta
@@ -3691,6 +3690,42 @@ function kuunteleKohdetta(ui, popup) {
       siirraKohdeMyohemmin(ui);
       return;
     }
+    /*
+     * SULKEVA NAPAUTUS EI AVAA MITÄÄN UUTTA (omistaja 31.8.2026:
+     * *"jos näkyvillä on jokin nosto popup ja pelaaja klikkaa popupin
+     * ulkopuolelta karttaa, niin popup pitäisi aina sulkeutua, mutta
+     * mitään uutta ei saisi koskaan aueta samalla napautus kerralla
+     * vaikka pelaaja klikkaisi kartalla jotain toista kohdetta"*).
+     *
+     * Ennen tässä oli poikkeus `.fokuskohde` — toisen merkin napautus
+     * VAIHTOI kohdetta, ja kortti vaihtui sormen alta toiseksi. Nyt
+     * napautus vain sulkee, ja seuraava napautus avaa normaalisti.
+     *
+     * NIELU ON TÄSSÄ, EI AVAAJISSA. Tämä on koko napautusketjun juuri
+     * kortin kannalta: ainoa käsittelijä, joka näkee sulkevan
+     * napautuksen ennen ketään muuta (document + kaappausvaihe).
+     * Vaihtoehto olisi ripotella "onko kortti auki" -ehto jokaiseen
+     * avaajaan erikseen — kohdemerkkiin, kaupungin laattaan,
+     * kohderenkaaseen, poltettuun kaupunginnimeen, nipun kuoreen —
+     * ja seuraava uusi avaaja unohtaisi sen taas. Yksi nielu kattaa
+     * ne kaikki, myös ne, joita tämä paketti ei saa koskea
+     * (js/laattapyramidi.js, js/karttanimet.js).
+     *
+     * VAIN KARTALTA (`#board`): omistajan sääntö koskee napautusta
+     * *kartalle*. Kartan ulkopuoliset painikkeet — zoomirivi,
+     * matkustusnapit, valikot — pitävät entisen käytöksensä, eikä
+     * kortin sulkeminen syö niiltä painallusta.
+     *
+     * VETO EI OLE NAPAUTUS EIKÄ NIELU KOSKE SIIHEN. Nielu odottaa
+     * CLICKIÄ napautuksen KOHDALTA ja vain puolen sekunnin ajan
+     * (ui-apurit nielaiseSulkevaNapautus): kynnyksen ylittänyt veto ei
+     * tuota clickiä lainkaan, ja kartan oma raahausvahti nielee senkin
+     * (js/kartta.js raahattiin). Vetoele käyttäytyy siis täsmälleen
+     * kuten ennen tätä muutosta — myös se mitattu yksityiskohta, että
+     * kortin sulkeva veto itse ei vielä panoroi (sulku tapahtuu
+     * pointerdownissa); se on vanhaa käytöstä eikä nielun seurausta.
+     */
+    if (tapahtuma.target?.closest?.('#board')) nielaiseSulkevaNapautus(tapahtuma);
     suljeFokuskohde(ui);
   };
   const asemoi = () => asetaKohteenPaikka(ui);

@@ -10,29 +10,33 @@
  */
 
 export const TILANNE = {
-  paivitetty: '31.8.2026 ilta — v1390–v1392, nostotaso tulossa, parvi ajossa',
-  tavoite: 'Laattapyramidi on pelin ainoa maailmankartta (ajo '
-    + '2026-08-31b ampparissa). Omistajan illan paatokset '
-    + 'kysymyskorteilla: nostojen ladontakerroin yhdeksi globaaliksi '
-    + 'vakioksi 0,60 (v1390), kaupungin piste karttavakioksi '
-    + 'maanakymaan viritettyna, ja NOSTOTASO - karttanostot poltetaan '
-    + 'jatkossa omalle lapinakyvalle laattatasolle z5-z7, kaukotasoilla '
-    + 'ei nostoja lainkaan. Polttokate nousi 413 -> 510 viidella '
-    + 'paikka-kentalla (v1391). Pyramidiajo 2026-08-31c odottaa '
-    + 'nostotason toteutusta (lupa annettu).',
+  paivitetty: '31.8.2026 myohaisilta — v1393–v1398, ajo 31c kaynnissa, parvi ajossa',
+  tavoite: 'Laattapyramidi on pelin ainoa maailmankartta. Mainissa: '
+    + 'nappula laatan sisaan (v1393), merkit karttavakioksi eli musta '
+    + 'pippuri pois (v1394), polttamaton kerros piiloon eleessa '
+    + '(v1395), NOSTOTASO (v1396) ja ikilumi 5500 m + jarvien '
+    + 'vesisavy (v1397, voimaan seuraavassa pohja-ajossa). '
+    + 'Pyramidiajo 2026-08-31c (pohja + 510 merkin nostotaso) '
+    + 'kaynnissa. Omistajan illan uudet paatokset kaanonissa: '
+    + 'VIIVATASO (reitit + piirit + maiden rajat omalle tasolle '
+    + 'z0-z7, aikakausirajat datanvaihtona), MAATUMMENNUS '
+    + 'lahizoomilla, paakaupungit kapiteelein, kaupunkilaatan '
+    + 'kasvukatto.',
   rivit: [
     {
       tekija: 'Fable',
       rooli: 'paatoimittaja',
       tila: 'tyossa',
-      tehtava: 'Kartan viimeistely agenttiparvella: nostotaso '
-        + '(Fablemax), polttamaton kerros piiloon eleen ajaksi, piste '
-        + 'karttavakioksi, savuke-nappula 7b/7c. Valmiina: v1390 '
-        + 'kerroin, v1391 polttokate, pro-tuottajasavuke (ei '
-        + 'pelivikaa - savuke ajoi vaaraa lomaketta, korjattu ja '
-        + 'kiristetty 19 vaitteeseen).',
-      seuraavaksi: 'Parven erien katselmointi ja merget, sitten '
-        + 'pyramidiajo 2026-08-31c (pohja ilman nostoja + nostotaso).',
+      tehtava: 'Kartan viimeistely agenttiparvella. Ajossa: '
+        + 'viivataso (toteutus), maatummennus, paakaupunkityyli, '
+        + 'kaupunkilaatan kasvukatto, pyramidin paikkausajo. '
+        + 'Valmiina illalla: 8 mergea + 2 savuketta tutkittu pohjaan '
+        + '(ei pelivikoja - molemmat savukkeiden omia vanhentuneita '
+        + 'oletuksia, korjattu ja kiristetty).',
+      seuraavaksi: 'Parven erien katselmointi ja merget; sitten '
+        + 'yhdistetty pohja-ajo 31d (reititon pohja + lumi + jarvet) '
+        + 'ja viivataso-ajo omistajan luvalla julkaisujarjestyksessa '
+        + 'selain -> viivataso -> pohja.',
     },
   ],
   odottaaPaatosta: [
@@ -51,6 +55,9 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1395: POLTTAMATON PIILOON ELEESSA - zoomaa: nimet haipyvat pehmeasti ja palaavat levossa ilman hyppaysta.',
+  'v1394: MERKIT KARTTAVAKIOKSI - zoomaa kauas: mustat nastat kutistuvat kartan mukana, pippuri poissa.',
+  'v1393: NAPPULA LAATAN SISAAN - fokusnakymassa laatta kiertaa nappulan, rengas ei enaa ylita reunoja.',
   'v1391: VIISI TAKYA SAI KOORDINAATIT - Sofian areena, Visocica, Rooman kissat, Kiovan Pyha Sofia ja Dracula ovat nyt kiinteissa paikoissa kartalla.',
   'v1390: NOSTOKERROIN 0,60 - Venajan jattinostot kutistuivat 12:nteen osaan, Kreikka ennallaan. Nostot piirtyvat elavina seuraavaan pyramidiajoon asti.',
   'v1388: SAUMAN PYSTYVIIVA - panoroi Tyynenmeren yli, kartan ei pida katketa puoleen ruutuun.',

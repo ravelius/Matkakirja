@@ -97,15 +97,45 @@ name: Generoi laattapyramidi
 #   3. REITITÖN POHJA + luettelo. Vasta tämän jälkeen pohjassa ei ole
 #      reittejä, ja siihen mennessä viivataso on jo ämpärissä ja peli
 #      osaa lukea sen.
+#
+# === PAIKKAUS (31.8.2026) ===========================================
+#
+# Täysajo on tunteja, mutta virhe on melkein aina paikallinen: yhden
+# järven väri, yhden vuoren nimi, yhden saaren rannikko. Paikkausajo
+# piirtää VAIN korjattavaan laatikkoon osuvat laatat kaikilta tasoilta
+# — Kreikan kokoinen laatikko on 55 laattaa 23 340:stä — ja kopioi
+# loput lähdeversiosta uuteen versiopolkuun ÄMPÄRIN SISÄLLÄ
+# palvelinkopiona (CopyObject). Yhtään laattaa ei ladata ajokoneelle.
+#
+#   paikkaus         `lahdeversio` on OLEMASSA OLEVA versio, josta
+#                    muuttumattomat laatat kopioidaan; `versio` on uusi
+#                    (esim. 2026-08-31c-p1); `alue` on korjattava
+#                    laatikko lon0,lat0,lon1,lat1.
+#
+# SAUMAA EI SYNNY, koska laatta ei riipu naapuristaan: patina on
+# sidottu arkin pikseliin (generoi-laattapyramidi.mjs, REUNUS), joten
+# sama laatta samasta aineistosta on tavulleen sama piirrettiinpä se
+# maailma-ajossa tai alueajossa. Ajon asetukset (laatu, muoto,
+# laattakoko, patinataso) luetaan lähdeversion luettelosta eikä
+# työnkulun syötteistä — juuri niistä sauma syntyisi.
+#
+# NOSTOTASO EI OSALLISTU: nostolaatat asuvat oman versionsa polussa
+# (<nostoversio>/nostot/z…), joka on olemassa paikkauksen jälkeenkin.
+# Niitä ei kopioida eikä piirretä; luettelo osoittaa samaan
+# nostoversioon kuin lähdekin.
+#
+# LÄHTEEN POLKUUN EI KIRJOITETA KOSKAAN (immutable-välimuisti), ja jos
+# uusi versio on jo ämpärissä, ajo kieltäytyy ennen kuin mitään on
+# tehty.
 on:
   workflow_dispatch:
     inputs:
       versio:
-        description: 'Pohjalaattojen versio ämpärin polussa (esim. 2026-08-30); vain-nostotaso-ajossa OLEMASSA OLEVAN pohjan versio'
+        description: 'Pohjalaattojen versio ämpärin polussa (esim. 2026-08-30); vain-nostotaso-ajossa OLEMASSA OLEVAN pohjan versio; paikkausajossa UUSI versio'
         type: string
         required: true
       nostoversio:
-        description: 'Nostotason versio polussa (tyhjä = sama kuin versio)'
+        description: 'Nostotason versio polussa (tyhjä = sama kuin versio; paikkausajossa tyhjä = lähdeluettelon nostoversio)'
         type: string
         required: false
         default: ''
@@ -122,8 +152,19 @@ on:
           - vain-z0-z6
           - vain-nostotaso
           - vain-viivataso
+          - paikkaus
           - koeajo-z0-z3
         default: koeajo-z0-z3
+      lahdeversio:
+        description: 'Paikkaus: OLEMASSA OLEVA versio, josta muuttumattomat laatat kopioidaan (esim. 2026-08-31c)'
+        type: string
+        required: false
+        default: ''
+      alue:
+        description: 'Paikkaus: korjattava laatikko lon0,lat0,lon1,lat1 (esim. 80,27,95,36)'
+        type: string
+        required: false
+        default: ''
       laatu:
         description: 'webp-laatu'
         type: string
@@ -133,6 +174,11 @@ on:
         type: choice
         options: [taysi, keskitaso, hillitty, ei]
         default: taysi
+      lahdepatina:
+        description: 'Vain paikkaus, vain vanha lähde: lähdeajon patinataso, jos lähdeluettelossa ei ole patina-kenttää (31b/31c = hillitty)'
+        type: string
+        required: false
+        default: ''
       vie:
         description: 'Vie ämpäriin (pois = pelkkä harjoitus)'
         type: boolean
@@ -201,6 +247,13 @@ jobs:
         # Nostotaso ja viivataso ovat KUMPIKIN YKSI SHARDI: laattoja on
         # murto-osa laattapaikoista ja piirto ilman aineistoa on
         # minuuttiluokkaa (viivataso 5 830 laattaa).
+        #
+        # PAIKKAUS ON MYÖS YKSI SHARDI, eikä sen "tasot" ole tässä:
+        # tasot (ja laatu, muoto, laattakoko, patina) luetaan
+        # lähdeversion luettelosta, jotta paikatut laatat ovat
+        # asetuksiltaan samoja kuin kopioidut naapurinsa. Jako
+        # useampaan shardiin olisi turhaa — koko alue on kymmeniä
+        # laattoja, ei tuhansia.
         shardi: ${{ fromJSON(inputs.tasot == 'kaikki'
           && '[{"nimi":"z0-z6","tasot":"0-6","sarakkeet":""},{"nimi":"z7a","tasot":"7","sarakkeet":"0-43"},{"nimi":"z7b","tasot":"7","sarakkeet":"44-87"},{"nimi":"z7c","tasot":"7","sarakkeet":"88-131"},{"nimi":"z7d","tasot":"7","sarakkeet":"132-168"},{"nimi":"nostotaso","tasot":"5-7","sarakkeet":"","nostotaso":true},{"nimi":"viivataso","tasot":"0-7","sarakkeet":"","viivataso":true}]'
           || (inputs.tasot == 'vain-z0-z6'
@@ -209,7 +262,9 @@ jobs:
           && '[{"nimi":"nostotaso","tasot":"5-7","sarakkeet":"","nostotaso":true}]'
           || (inputs.tasot == 'vain-viivataso'
           && '[{"nimi":"viivataso","tasot":"0-7","sarakkeet":"","viivataso":true}]'
-          || '[{"nimi":"koeajo","tasot":"0-3","sarakkeet":""}]')))) }}
+          || (inputs.tasot == 'paikkaus'
+          && '[{"nimi":"paikkaus","tasot":"","sarakkeet":"","paikkaus":true}]'
+          || '[{"nimi":"koeajo","tasot":"0-3","sarakkeet":""}]'))))) }}
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
@@ -249,20 +304,122 @@ jobs:
           [ -f ne-data/ne_10m_ocean.geojson ] || { echo "::error::Natural Earth puuttuu"; exit 1; }
           echo "korkeusaineisto $(du -h "$A" | cut -f1) · ne-data $(du -sh ne-data | cut -f1)"
 
+      # ------------------------------------------------------ paikkaus
+      #
+      # SUUNNITELMA JA TURVATARKISTUS ENNEN KUIN MITÄÄN TEHDÄÄN.
+      #
+      # Paikkausajon asetukset EIVÄT tule työnkulun syötteistä vaan
+      # lähdeversion luettelosta: tasot, laatu, muoto, laattakoko,
+      # patinataso ja nostoversio. Jos ne arvattaisiin uudestaan, laatat
+      # täsmäisivät geometrialtaan mutta erottuisivat silmällä
+      # kopioitujen naapureidensa vierestä — ja juuri se olisi sauma.
+      # `paikkaa-pyramidi.mjs suunnittele` lukee ne ja kirjoittaa
+      # GITHUB_ENViin.
+      #
+      # Kaksi kieltoa, joita ei ohiteta:
+      #   - uusi versio ei saa olla lähdeversio (ei ylikirjoitusta
+      #     immutable-polkuun),
+      #   - uuden version polku ei saa olla ämpärissä jo olemassa.
+      - name: Suunnittele paikkaus ja tarkista turva
+        if: ${{ matrix.shardi.paikkaus }}
+        env:
+          LAHDEVERSIO: ${{ inputs.lahdeversio }}
+          UUSI_VERSIO: ${{ inputs.versio }}
+          ALUE: ${{ inputs.alue }}
+          SYOTE_NOSTOVERSIO: ${{ inputs.nostoversio }}
+          SYOTE_LAHDEPATINA: ${{ inputs.lahdepatina }}
+          AMPARI: ${{ secrets.R2_BUCKET }}
+          PAATE: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+        run: |
+          set -euo pipefail
+          [ -n "$LAHDEVERSIO" ] || { echo "::error::paikkaus vaatii syötteen lahdeversio"; exit 1; }
+          [ -n "$ALUE" ] || { echo "::error::paikkaus vaatii syötteen alue (lon0,lat0,lon1,lat1)"; exit 1; }
+
+          # Lähdeversion on oltava ämpärissä ja uuden version on oltava
+          # tyhjä. Listaus on ETULIITETASOLLA (ei --recursive), joten
+          # rivejä on korkeintaan kahdeksan (z0…z7) — ja tyhjästä
+          # etuliitteestä `aws s3 ls` poistuu koodilla 1, mikä on tässä
+          # odotettu vastaus eikä virhe.
+          rivit () { aws s3 ls "s3://$AMPARI/julisteet/pyramidi/$1/" \
+            --endpoint-url "$PAATE" 2>/dev/null || true; }
+          LAHDE_RIVIT=$(rivit "$LAHDEVERSIO" | wc -l)
+          [ "$LAHDE_RIVIT" -gt 0 ] || { echo "::error::Lähdeversiota $LAHDEVERSIO ei ole ämpärissä"; exit 1; }
+          UUSI_RIVIT=$(rivit "$UUSI_VERSIO" | wc -l)
+          [ "$UUSI_RIVIT" -eq 0 ] || { echo "::error::Versio $UUSI_VERSIO on jo ämpärissä — paikkaus ei ylikirjoita"; exit 1; }
+
+          # Lähdeversion asetukset luettelosta.
+          aws s3 cp \
+            "s3://$AMPARI/julisteet/pyramidi/pyramidi.json" lahdeluettelo.json \
+            --endpoint-url "$PAATE" --no-progress
+          LISA=""
+          if [ -n "$SYOTE_NOSTOVERSIO" ]; then LISA="--nostoversio $SYOTE_NOSTOVERSIO"; fi
+          if [ -n "$SYOTE_LAHDEPATINA" ]; then LISA="$LISA --patina $SYOTE_LAHDEPATINA"; fi
+          node tools/paikkaa-pyramidi.mjs suunnittele \
+            --luettelo lahdeluettelo.json \
+            --lahdeversio "$LAHDEVERSIO" --versio "$UUSI_VERSIO" \
+            --alue "$ALUE" $LISA --ulos "$GITHUB_ENV"
+
+      # KOPIO TAPAHTUU ÄMPÄRIN SISÄLLÄ. `aws s3 cp --recursive`
+      # samasta ämpäristä samaan on palvelinpuolen CopyObject: yhtään
+      # tavua ei kulje ajokoneen kautta. 23 340 laattaa on siis
+      # rinnakkaisuudesta kiinni, ei kaistasta — siksi rinnakkaisuus
+      # nostetaan kymmenestä kuuteenkymmeneenneljään.
+      #
+      # `nostot/` JÄTETÄÄN POIS: nostolaatat kuuluvat oman versionsa
+      # polkuun, joka on olemassa myös paikkauksen jälkeen. Luettelo
+      # osoittaa siihen, joten kopio olisi pelkkää painolastia.
+      #
+      # Kopio ajetaan ENNEN piirtoa, jotta piirretyt laatat menevät
+      # kopion päälle eikä toisin päin. Uusi versio ei ole julkinen
+      # ennen kuin luettelojobi vaihtaa `pyramidi.json`:in siihen,
+      # joten välitila ei näy kenellekään.
+      #
+      # `--metadata-directive COPY` (oletus, kirjoitettu näkyviin):
+      # sisältötyyppi ja ikuinen välimuistiotsake peritään
+      # lähdeobjektilta. Ne ovat jo oikein — lähde vietiin samalla
+      # työnkululla — eikä kopio saa niitä hiljaa muuttaa.
+      - name: Kopioi muuttumattomat laatat lähdeversiosta
+        if: ${{ matrix.shardi.paikkaus && inputs.vie }}
+        env:
+          AMPARI: ${{ secrets.R2_BUCKET }}
+          PAATE: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+        run: |
+          set -euo pipefail
+          aws configure set default.s3.max_concurrent_requests 64
+          alkoi=$(date +%s)
+          aws s3 cp --recursive \
+            "s3://$AMPARI/julisteet/pyramidi/$LAHDEVERSIO/" \
+            "s3://$AMPARI/julisteet/pyramidi/$VERSIO/" \
+            --endpoint-url "$PAATE" \
+            --exclude 'nostot/*' \
+            --metadata-directive COPY \
+            --no-progress
+          echo "Kopio $LAHDEVERSIO -> $VERSIO valmis, $(( $(date +%s) - alkoi )) s."
+
       - name: Generoi laatat (${{ matrix.shardi.nimi }})
         env:
-          TASOT: ${{ matrix.shardi.tasot }}
+          SHARDI_TASOT: ${{ matrix.shardi.tasot }}
           SARAKKEET: ${{ matrix.shardi.sarakkeet }}
           NOSTOTASO: ${{ matrix.shardi.nostotaso && 'true' || '' }}
           VIIVATASO: ${{ matrix.shardi.viivataso && 'true' || '' }}
-          LAATU: ${{ inputs.laatu }}
-          PATINA: ${{ inputs.patina }}
-          VERSIO: ${{ inputs.versio }}
-          NOSTOVERSIO: ${{ inputs.nostoversio || inputs.versio }}
-          VIIVAVERSIO: ${{ inputs.viivaversio || inputs.versio }}
+          PAIKKAUS: ${{ matrix.shardi.paikkaus && 'true' || '' }}
+          SYOTE_LAATU: ${{ inputs.laatu }}
+          SYOTE_PATINA: ${{ inputs.patina }}
+          SYOTE_VERSIO: ${{ inputs.versio }}
+          SYOTE_NOSTOVERSIO: ${{ inputs.nostoversio || inputs.versio }}
+          SYOTE_VIIVAVERSIO: ${{ inputs.viivaversio || inputs.versio }}
         run: |
           set -euo pipefail
           df -h / | tail -1
+          # Paikkausajossa tasot ja asetukset tulevat lähdeversion
+          # luettelosta (suunnitteluaskel kirjoitti ne GITHUB_ENViin);
+          # muissa ajoissa matriisista ja työnkulun syötteistä.
+          TASOT="${SHARDI_TASOT:-${TASOT:-}}"
+          LAATU="${LAATU:-$SYOTE_LAATU}"
+          PATINA="${PATINA:-$SYOTE_PATINA}"
+          VERSIO="${VERSIO:-$SYOTE_VERSIO}"
+          NOSTOVERSIO="${NOSTOVERSIO:-$SYOTE_NOSTOVERSIO}"
+          VIIVAVERSIO="${VIIVAVERSIO:-$SYOTE_VIIVAVERSIO}"
           LISA=""
           if [ -n "${SARAKKEET}" ]; then LISA="--sarakkeet ${SARAKKEET}"; fi
           # Nostotason shardi piirtää vain nostojen musteen: ei
@@ -271,11 +428,16 @@ jobs:
           # Viivatason shardi samoin: reitit, erikoispiirit ja maiden
           # rajat läpinäkyville laatoille, sama resepti.
           if [ -n "${VIIVATASO}" ]; then LISA="$LISA --viivataso --viivaversio ${VIIVAVERSIO}"; fi
+          # Paikkaus: vain alueeseen osuvat laatat, ja luetteloon
+          # merkintä siitä, mistä versiosta loput kopioitiin.
+          if [ -n "${PAIKKAUS}" ]; then
+            LISA="$LISA --alue ${ALUE} --paikkaus ${LAHDEVERSIO} --muoto ${MUOTO} --laatta ${LAATTA}"
+          fi
           node tools/generoi-laattapyramidi.mjs ulos \
             --data ne-data --tasot "$TASOT" $LISA \
             --laatu "$LAATU" --patina "$PATINA" --versio "$VERSIO"
           echo "--- tuotos ---"
-          find ulos -name '*.webp' | wc -l
+          find ulos -name "*.${MUOTO:-webp}" | wc -l
           du -sh ulos
           df -h / | tail -1
 
@@ -292,6 +454,26 @@ jobs:
         run: |
           set -euo pipefail
           n=0
+          # PAIKKAUS KIRJOITTAA KOPION PÄÄLLE, joten `sync` ei kelpaa:
+          # se vertaa kokoa ja aikaleimaa ja voisi ohittaa juuri sen
+          # laatan, jonka takia koko ajo tehtiin. `cp --recursive`
+          # kirjoittaa aina.
+          if [ -n "${{ matrix.shardi.paikkaus && 'true' || '' }}" ]; then
+            for taso in ulos/z*; do
+              [ -d "$taso" ] || continue
+              z=$(basename "$taso")
+              aws s3 cp --recursive "$taso" \
+                "s3://${{ secrets.R2_BUCKET }}/julisteet/pyramidi/$VERSIO/$z" \
+                --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+                --content-type "image/${MUOTO:-webp}" \
+                --cache-control 'public, max-age=31536000, immutable' \
+                --no-progress
+              n=$((n + 1))
+            done
+            echo "Paikatut laatat viety $n tasolta versioon $VERSIO."
+            exit 0
+          fi
+
           for taso in ulos/z*; do
             [ -d "$taso" ] || continue
             z=$(basename "$taso")
@@ -329,6 +511,40 @@ jobs:
           fi
           echo "Viety $n erää shardista ${{ matrix.shardi.nimi }}."
 
+      # PAIKKAUS TODISTAA ITSENSÄ ENNEN KUIN LUETTELO JULKAISTAAN.
+      #
+      # Kaksi listausta (lähdeversio ja uusi versio) ja niiden ETagien
+      # vertailu: jokaisen alueen ULKOPUOLISEN laatan on oltava
+      # bitilleen lähteen laatta ja jokaisen alueen laatan on oltava
+      # olemassa. Listaus on sekunteja; laattojen lataaminen olisi
+      # gigatavu. R2 antaa yksiosaiselle objektille ETagiksi sisällön
+      # MD5:n, joten kopion ehjyys on mitattavissa lataamatta mitään.
+      #
+      # Tämä on jobin viimeinen askel, ja luettelojobi tulee vasta
+      # `needs: laatat` -riippuvuuden takaa: jos kopio jäi kesken tai
+      # piirto vuoti alueen yli, uusi versio EI koskaan päädy
+      # `pyramidi.json`:iin eikä siis kenenkään selaimeen.
+      - name: Todenna paikkaus ämpärissä
+        if: ${{ matrix.shardi.paikkaus && inputs.vie }}
+        env:
+          AMPARI: ${{ secrets.R2_BUCKET }}
+          PAATE: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+        run: |
+          set -euo pipefail
+          # Sama työlista kuin piirrossa, samasta koodista.
+          node tools/generoi-laattapyramidi.mjs paikkauslista \
+            --tasot "$TASOT" --alue "$ALUE" --versio "$VERSIO" \
+            --muoto "$MUOTO" --laatta "$LAATTA" --vain-lista
+          aws s3api list-objects-v2 --bucket "$AMPARI" \
+            --prefix "julisteet/pyramidi/$LAHDEVERSIO/" \
+            --endpoint-url "$PAATE" > lahde-listaus.json
+          aws s3api list-objects-v2 --bucket "$AMPARI" \
+            --prefix "julisteet/pyramidi/$VERSIO/" \
+            --endpoint-url "$PAATE" > paikattu-listaus.json
+          node tools/paikkaa-pyramidi.mjs vertaa \
+            --lahde lahde-listaus.json --paikattu paikattu-listaus.json \
+            --lista paikkauslista/laatat.json
+
   # ---------------------------------------------------------- luettelo
   luettelo:
     needs: laatat
@@ -357,19 +573,66 @@ jobs:
       # joten sama komento kattaa myös vain-nostotaso- ja
       # vain-viivataso-ajon. Rajat tulevat repon omasta rajasetistä,
       # joten tämä jobi ei tarvitse aineistoa eikä verkkoa.
-      - name: Kokoa luettelo
+      # PAIKKAUKSEN LUETTELO PERII LÄHTEEN ASETUKSET, EI SYÖTTEITÄ.
+      # Sama suunnitteluaskel kuin piirtojobissa: ämpärin `pyramidi.json`
+      # kuvaa yhä lähdeversiota (se vaihdetaan vasta tämän jobin
+      # lopussa), joten tasot, laatu, muoto, laattakoko, patina ja
+      # ennen kaikkea NOSTOVERSIO luetaan siitä. Nostoversio on tässä
+      # se, joka ei saa mennä väärin: nostolaatat jäivät oman versionsa
+      # polkuun, eikä paikattu versio kopioinut niitä — jos luettelo
+      # osoittaisi nostotason uuteen versioon, koko nostokerros
+      # katoaisi kartalta.
+      - name: Suunnittele paikkauksen luettelo
+        if: ${{ inputs.tasot == 'paikkaus' }}
         env:
-          VERSIO: ${{ inputs.versio }}
-          NOSTOVERSIO: ${{ inputs.nostoversio || inputs.versio }}
-          VIIVAVERSIO: ${{ inputs.viivaversio || inputs.versio }}
-          LAATU: ${{ inputs.laatu }}
-          TASOT: ${{ inputs.tasot == 'koeajo-z0-z3' && '0-3' || '0-7' }}
+          LAHDEVERSIO: ${{ inputs.lahdeversio }}
+          UUSI_VERSIO: ${{ inputs.versio }}
+          ALUE: ${{ inputs.alue }}
+          SYOTE_NOSTOVERSIO: ${{ inputs.nostoversio }}
+          SYOTE_LAHDEPATINA: ${{ inputs.lahdepatina }}
         run: |
           set -euo pipefail
+          aws s3 cp \
+            "s3://${{ secrets.R2_BUCKET }}/julisteet/pyramidi/pyramidi.json" lahdeluettelo.json \
+            --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+            --no-progress
+          LISA=""
+          if [ -n "$SYOTE_NOSTOVERSIO" ]; then LISA="--nostoversio $SYOTE_NOSTOVERSIO"; fi
+          if [ -n "$SYOTE_LAHDEPATINA" ]; then LISA="$LISA --patina $SYOTE_LAHDEPATINA"; fi
+          node tools/paikkaa-pyramidi.mjs suunnittele \
+            --luettelo lahdeluettelo.json \
+            --lahdeversio "$LAHDEVERSIO" --versio "$UUSI_VERSIO" \
+            --alue "$ALUE" $LISA --ulos "$GITHUB_ENV"
+
+      - name: Kokoa luettelo
+        env:
+          SYOTE_VERSIO: ${{ inputs.versio }}
+          SYOTE_NOSTOVERSIO: ${{ inputs.nostoversio || inputs.versio }}
+          SYOTE_VIIVAVERSIO: ${{ inputs.viivaversio || inputs.versio }}
+          SYOTE_LAATU: ${{ inputs.laatu }}
+          SYOTE_PATINA: ${{ inputs.patina }}
+          SYOTE_TASOT: ${{ inputs.tasot == 'koeajo-z0-z3' && '0-3' || '0-7' }}
+          PAIKKAUS: ${{ inputs.tasot == 'paikkaus' && 'true' || '' }}
+        run: |
+          set -euo pipefail
+          VERSIO="${VERSIO:-$SYOTE_VERSIO}"
+          NOSTOVERSIO="${NOSTOVERSIO:-$SYOTE_NOSTOVERSIO}"
+          VIIVAVERSIO="${VIIVAVERSIO:-$SYOTE_VIIVAVERSIO}"
+          LAATU="${LAATU:-$SYOTE_LAATU}"
+          PATINA="${PATINA:-$SYOTE_PATINA}"
+          TASOT="${PAIKKAUS:+${TASOT:-}}"
+          TASOT="${TASOT:-$SYOTE_TASOT}"
+          LISA=""
+          # Paikatussa luettelossa `alue` on null (pyramidi on täysi,
+          # muuttumattomat laatat kopioitiin) ja piirretty laatikko
+          # kirjataan `paikkaus`-olioon.
+          if [ -n "$PAIKKAUS" ]; then
+            LISA="--paikkaus $LAHDEVERSIO --alue $ALUE --muoto $MUOTO --laatta $LAATTA"
+          fi
           node tools/generoi-laattapyramidi.mjs luettelo-ulos \
             --tasot "$TASOT" --versio "$VERSIO" --nostoversio "$NOSTOVERSIO" \
             --viivaversio "$VIIVAVERSIO" \
-            --laatu "$LAATU" --vain-luettelo
+            --laatu "$LAATU" --patina "$PATINA" $LISA --vain-luettelo
           cat luettelo-ulos/pyramidi.json | head -30
 
       # Luettelo EI ole muuttumaton: se osoittaa uusimpaan versioon, ja

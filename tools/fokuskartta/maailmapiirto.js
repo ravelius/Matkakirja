@@ -875,18 +875,53 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
 
   /* ================================================== 5. JÄRVET
    *
-   * Vain isot (tools/fokuskartta/maailma.mjs `jarvet`). Sama sävy kuin
-   * maalehdellä, jotta Suuret järvet näyttävät samalta kaukaa ja
-   * lähempää.
+   * Vain isot (tools/fokuskartta/maailma.mjs `jarvet`).
+   *
+   * === JÄRVI ON VETTÄ, EI REIKÄ PAPERISSA (omistaja 31.8.2026) =======
+   *
+   * Omistaja katsoi Tiibetiä janalla 500 km ja kysyi *"onko tuolla
+   * järviä"* — eli Namtso, Siling ja Yamdrok eivät lukeneet vetenä.
+   *
+   * MITATTU SYY EI OLLUT SÄVY VAAN SEN KAKSI VIKAA. Vanha täyttö oli
+   * `rgba(203,200,182,0.9)` eli LÄPIKUULTAVA, ja alta paistava maasto
+   * värjäsi sen sitä enemmän mitä tummempi maasto oli:
+   *
+   *   Suuret järvet (alanko, vaalea)   rgb(204,200,181)  lum 200
+   *   Tiibet (ylänkö, tummanruskea)    rgb(191,180,161)  lum 181
+   *   rannikon matala meri (vertailu)  rgb(199,193,173)  lum 193
+   *
+   * Sama järvisävy oli siis eri väriä eri puolilla maailmaa, ja juuri
+   * Tiibetissä se ajautui kauimmas siitä merisävystä, joka opettaa
+   * lukijalle mikä on vettä. PEITTÄVÄ TÄYTTÖ korjaa sen: järvi on nyt
+   * täsmälleen sama sävy joka puolella maailmaa ja samassa perheessä
+   * kuin rannikon matala meri.
+   *
+   * TOINEN VIKA OLI RANTAVIIVA. Järven ääriviiva oli `0,9 * P` ja
+   * haalean ruskea (118,107,80 alfalla 0,75), kun rannikko saa kaksi
+   * vetoa: `3 * P` kostea reuna ja sen päällä `1,1 * P` kynä (58,40,25
+   * alfalla 0,85). Reunaton vaalea läiskä tumman ylängön keskellä
+   * lukee painovirheenä; sama kynä kuin rannalla tekee siitä rannan.
+   * Järvi saa nyt rannikon vedot pienennettyinä (2,2 ja 1,0), koska
+   * järven ranta on kartografisesti kevyempi kuin valtameren.
+   *
+   * SÄVY ON MATALAN MEREN PERHETTÄ EIKÄ UUSI VÄRI: 206,201,181 on se
+   * sävy, jonka syvyysramppi antaa rannikon tuntumassa paperin päälle
+   * maalattuna. MEREN OMAA RAMPPIA EI KOSKETA — se on lukittu
+   * monotoninen kuutiokäyrä (piirto.js SYVYYS), eikä tämä erä muuta
+   * siitä tavuakaan.
    */
   ctx.save();
   ctx.lineJoin = 'round';
+  ctx.lineCap = 'round';
   for (const j of aineisto.jarvet ?? []) {
-    ctx.fillStyle = 'rgba(203,200,182,0.9)';
     viivaPolku(ctx, j.renkaat, true);
+    ctx.fillStyle = 'rgb(206,201,181)';
     ctx.fill('evenodd');
-    ctx.strokeStyle = 'rgba(118,107,80,0.75)';
-    ctx.lineWidth = 0.9 * P;
+    ctx.strokeStyle = 'rgba(74,52,33,0.18)';
+    ctx.lineWidth = 2.2 * P;
+    ctx.stroke();
+    ctx.strokeStyle = 'rgba(58,40,25,0.8)';
+    ctx.lineWidth = 1.0 * P;
     ctx.stroke();
   }
   ctx.restore();

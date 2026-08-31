@@ -1139,10 +1139,11 @@ function piirraNostonKysymykset(ui, sisalto, nosto) {
   const kysymykset = (Array.isArray(nosto.kysymykset) ? nosto.kysymykset : [])
     .map((k) => String(k ?? '').trim()).filter(Boolean).slice(0, 3);
   if (!kysymykset.length) return;
-  // Sama nimilappuvitsi kuin kartan kohdekortissa (omistaja 27.8.2026):
-  // "Kysy pöllöltä pululta:", pöllöltä yli vedettynä.
+  // Sama nimilappuvitsi kuin kartan kohdekortissa (omistaja 27.8.2026,
+  // muoto tarkennettu 31.8.2026): "Kysy viisaalta pöllöltä pululta:",
+  // koko nimi yhden vedon alla.
   sisalto.appendChild(polloNimilappu(html('p', 'fokusnosto-kysy-otsikko'), {
-    ennen: 'Kysy ', yli: 'pöllöltä', tilalle: 'pululta', jalkeen: ':',
+    ennen: 'Kysy ', yli: 'viisaalta pöllöltä', tilalle: 'pululta', jalkeen: ':',
   }));
   const rivi = html('div', 'fokusnosto-kysymykset');
   rivi.setAttribute('role', 'group');
