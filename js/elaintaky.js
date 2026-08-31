@@ -358,9 +358,12 @@ function elaintakyPaivitaNakyvyys(ui, kerros) {
  */
 function elaintakyAsetaMittakaava(ui, suhde) {
   /*
-   * ELEEN AIKANA EI ASEMOIDA NÄKYMÄTÖNTÄ. Merkkikerrokset ovat
-   * nipistyksen ajan `display: none` (js/kartta.js piilotaMerkit,
-   * css/styles.css kartta-merkit-piilossa), ja tämä kerros on
+   * ELEEN AIKANA EI ASEMOIDA NÄKYMÄTÖNTÄ. Merkkikerrokset häivytetään
+   * eleen alussa ja ovat sen jälkeen `display: none` (js/kartta.js
+   * piilotaMerkit, css/styles.css kartta-merkit-haipyy ja
+   * kartta-merkit-piilossa) — lippu `merkitPiilossa` on ylhäällä
+   * kummankin vaiheen ajan, ja häivyvää kerrosta ei kannata asemoida
+   * sen enempää kuin näkymätöntäkään. Tämä kerros on
    * kolmesta rekisteröidystä ylivoimaisesti isoin: 29 maata
    * kertaa kaksi kiertokohtaa on 58 ryhmää, kun vihreitä pisteitä on
    * yksi. Sata turhaa määrekirjoitusta joka kehyksellä on juuri se
