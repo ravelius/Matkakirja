@@ -1413,7 +1413,14 @@ export const RAAMATTU = {
           + '(maakohtainen kaava antoi 129-kertaisen hajonnan; v1390) '
           + 'ja pyramidiajolupa annettu - ajo 2026-08-31c odottaa '
           + 'nostotason toteutusta, jotta pohja ajetaan kerralla ilman '
-          + 'nostoja.',
+          + 'nostoja. REITIT (omistaja 31.8.2026 ilta: "Reitit voi '
+          + 'piirtaa kolmannelle tai samaan jos sekaan ei ongelma"): '
+          + 'reittiverkko poltetaan samalla mallilla lapinakyvalle '
+          + 'tasolle - SAMALLE nostotasolle jos z5-z7-nakyvyys riittaa '
+          + 'sille, omalle kolmannelle tasolle laajemmalla '
+          + 'tasovalilla jos reitteja tarvitaan kauempaa; toteuttaja '
+          + 'mittaa ja paattaa. Pelitilan elava reittikerros '
+          + '(matkustuksen askellus) sailyy joka tapauksessa.',
         'KAUPUNGIN PISTE ON KARTTAVAKIO (omistaja 31.8.2026, '
           + 'sanatarkka: "Kaupungin pisteet eivat saa muuttaa kokoa '
           + 'suhteessa karttaan. Niiden koko pitaa olla sama kuin ne '
@@ -2517,6 +2524,23 @@ export const RAAMATTU = {
           + 'moninpeliviestintä · kaveriapu = retkikunnan veikkaus '
           + 'aarrekysymykseen (25 p) · turvatila = kaatumissilmukan '
           + 'itsekorjaus (lehdet pois tunniksi).',
+      ],
+    },
+    {
+      otsikko: 'Tuotantotalous (kehitystyo)',
+      tila: 'kirjattu 31.8.2026 (omistajan tilaus samana iltana)',
+      kohdat: [
+        'FABLEMAXIA SAASTELIAASTI (omistaja 31.8.2026, sanatarkka: '
+          + '"Kayta fablemaxia mahdollisimman saasteliaasti. Se '
+          + 'kuluttaa lahes 100 kertaa enemman kuin opus"): '
+          + 'Fablemax-agentti vain tehtaviin, joissa halvempi ei '
+          + 'riita - arkkitehtuurisuunnitelmat, isot refaktoroinnit, '
+          + 'sitkeat juurisyybugit. Rutiinikoodi ja sisalto AINA '
+          + 'Opus-agenteilla, lukeva tarkistustyo Sonnetilla '
+          + '(roolituksen mallisaanto 26.8.2026). Ensisijainen malli: '
+          + 'Fablemax SPEKSAA kerran ja Opus-parvi toteuttaa ja '
+          + 'iteroi - Fablemaxia ei polteta toteutuksen '
+          + 'jatkokierroksiin, kun speksi on jo olemassa.',
       ],
     },
     {
