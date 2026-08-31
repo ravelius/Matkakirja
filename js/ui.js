@@ -7241,6 +7241,76 @@ export class UI {
   }
 
   /**
+   * KAUPUNKILAATTOJEN KASVUKATTO: EI SUUREMMAKSI KUIN MAANÄKYMÄSSÄ.
+   *
+   * === MIKÄ VIKA OLI (omistajan kuvakaappaus 31.8.2026 ilta) ===
+   *
+   * Bulgaria, mittajana 200 km: *"kaupunkilaatat näkyvät jostain syystä
+   * aivan hervottoman isoina"* — Bukarestin porttirengas ja Istanbulin
+   * laatta täyttivät ruudun laidan.
+   *
+   * Laatta on KARTTAVAKIO (omistajan linjaus 26.8.2026, ks.
+   * fokusMerkkiSkaala): sen halkaisija on FOKUS_LAATTA_PX siinä
+   * näkymässä, johon saapumisajo maahan päätyy, ja siitä se kasvaa ja
+   * kutistuu kartan mukana. Loitonnettaessa se on juuri oikein — laatta
+   * on kartan merkintä ja pienenee kartan mukana — mutta LÄHENNETTÄESSÄ
+   * kasvulla ei ollut ylärajaa: kertoimet ovat vakioita lehden ja
+   * ruudun suhteesta, eikä yksikään niistä tiedä nykyisestä zoomista
+   * mitään. Mitattuna (Sofia, 1440 x 900) oma laatta kasvoi maanäkymän
+   * 10,7 pikselistä 38 pikseliin ja naapurin laatta 80:stä yli 300:aan.
+   *
+   * === KATTO ON MAANÄKYMÄ ITSE ===
+   *
+   * Sama mekanismi kuin merkkien typografiakatolla
+   * (fokusMerkkiSkaalaKartalle): yläraja lasketaan mitasta, joka on jo
+   * olemassa. Tässä se on lehden PERUSTASO eli maan ikkuna ruutuun
+   * sovitettuna (fokusMerkkiSkaala, `perus = 1 / s`) — täsmälleen se
+   * zoomi, jossa laatan koko on määritelty. Kun näkymä on sitä
+   * syvemmällä, laatta kerrotaan suhteella `perus / nykyinen`, jolloin
+   * sen RUUTUKOKO pysyy täsmälleen maanäkymän kokoisena.
+   *
+   * KAUKONÄKYMÄT EIVÄT MUUTU MILLIÄKÄÄN. Perustasolla suhde on tasan 1
+   * ja sitä loitompana yli yhden — katto on `Math.min(1, …)`, joten se
+   * ei koske mihinkään perustasolla tai sen ulkopuolella. Varapolulla
+   * (lehdetön näkymä, muu lauta) merkit ovat jo ruutumitassa eli
+   * `s = 1 / skaala`, jolloin tulo on 1 ja katto on olematon.
+   *
+   * OSUMA-ALUEET EIVÄT KUTISTU: laatan napautusympyrä lasketaan yhä
+   * KATTAMATTOMASTA skaalasta (paivitaFokusLaatta, sormen 44 px:n
+   * sääntö), aivan kuten typografiakaton kanssa.
+   */
+  fokusKasvukatto() {
+    if (!this.fokusmoodi || this.katselu) return 1;
+    const s = this.fokusMerkkiSkaala();
+    if (!(s > 0)) return 1;
+    const skaala = this.nakyvaAlue()?.skaala;
+    // Ilman mitattavaa näkymää kattoa ei ole: entinen koko on parempi
+    // kuin väärä (sama sääntö kuin kaikilla fokusnäkymän mitoilla).
+    if (!Number.isFinite(skaala) || skaala <= 0) return 1;
+    return Math.min(1, 1 / (s * skaala));
+  }
+
+  /**
+   * KAUPUNGIN LAATAN (JA SIIHEN SIDOTTUJEN OSIEN) SKAALA: MOLEMMAT KATOT.
+   *
+   * Laatta on kartan merkintä kuten muutkin, joten se saa lehden oman
+   * typografian katon (fokusMerkkiSkaalaKartalle) — ja lisäksi
+   * kasvukaton (fokusKasvukatto), koska se on ainoa merkki, jonka
+   * omistaja luki ruudulta "hervottoman isona".
+   *
+   * TÄSTÄ SAA MITTANSA MYÖS PELINAPPULA. Nappula on v1393:sta lähtien
+   * sidottu laattaan (FOKUS_NAPPULA_PX = FOKUS_LAATTA_PX * 0,7), ja
+   * sidos pysyy vain jos se lukee saman skaalan — muuten laatta
+   * kutistuisi katon alle ja hahmo jäisi sen päälle isona
+   * (fokusNappulaKerroin).
+   */
+  fokusLaattaSkaala(suhde = 1) {
+    const s = this.fokusMerkkiSkaalaKartalle(suhde);
+    if (!(s > 0)) return s;
+    return s * this.fokusKasvukatto();
+  }
+
+  /**
    * KOHDEMERKKIEN LADONNAN MITTAKAAVA — LEHDEN OMA, EI RUUDUN.
    *
    * === MIKSI TÄMÄ ON OMA FUNKTIONSA (omistaja 31.8.2026) ============
@@ -7437,8 +7507,18 @@ export class UI {
      * OSUMA-ALUE EI KUTISTU: alla oleva säde lasketaan yhä
      * KATTAMATTOMASTA arvosta (sormen 44 px:n sääntö, ks.
      * fokusMerkkiOsumaKerroin).
+     *
+     * JA TOINEN KATTO ON KASVUKATTO (omistajan kuvakaappaus 31.8.2026
+     * ilta: *"kaupunkilaatat näkyvät jostain syystä aivan hervottoman
+     * isoina"*). Typografiakatto on lehden ja ruudun suhde eikä tiedä
+     * zoomista mitään, joten laatta kasvoi lähikuvassa rajatta;
+     * fokusKasvukatto lukitsee sen ruutukoon maanäkymän kokoon. Näkymä
+     * maanäkymässä ja sitä kauempana ei muutu lainkaan.
      */
-    const sKartalle = this.fokusMerkkiSkaalaKartalle?.() ?? s;
+    const sKartalle = this.fokusLaattaSkaala?.() ?? s;
+    // Kasvukatto erikseen: sykekehä ja muut kaupungit saavat saman
+    // kertoimen omasta perusmitastaan (alempana).
+    const katto = this.fokusKasvukatto?.() ?? 1;
 
     const osat = [...this.svg.querySelectorAll('.cities [data-kaupunki]')]
       .filter((osa) => osa.dataset.kaupunki === city.id
@@ -7473,8 +7553,9 @@ export class UI {
     }
     for (const osa of osat) this.asetaLaatanKoko(osa, kerroin);
     this.fokusLaattaOsat = osat;
-    // Maailmanäkymässä sama mitta koskee KAIKKIA kaupunkeja (ks. alla).
-    this.paivitaMaailmanLaattaKoot(kerroin);
+    // Maailmanäkymässä sama mitta koskee KAIKKIA kaupunkeja, ja
+    // kasvukatto kaikissa näkymissä (ks. alla).
+    this.paivitaMaailmanLaattaKoot(kerroin, katto);
     /*
      * MERKINTÄ SIITÄ, ETTÄ NAPPULA SEISOO TÄMÄN LAATAN PÄÄLLÄ.
      *
@@ -7597,7 +7678,19 @@ export class UI {
     for (const osuma of this.fokusLaattaKerros.querySelectorAll('.fokuslaatta-osuma')) {
       osuma.setAttribute('r', r);
     }
-    const zoom = s.toFixed(4);
+    /*
+     * SYKEKEHÄ SEURAA LAATTAA MYÖS KASVUKATOSSA. Kehä on laatan
+     * houkutus eikä oma merkkinsä, joten se saa saman kertoimen kuin
+     * laatta: perusmitta on merkkien vakioskaala (s) ja katto sama
+     * suhde (fokusKasvukatto). Ilman tätä kehä kasvaisi lähikuvassa
+     * lukitun laatan ympäriltä ulos.
+     *
+     * TYPOGRAFIAKATTOA KEHÄ EI SAA — se ei ole lehteen poltettava
+     * merkintä vaan laatan oma kehys, ja sen suhde laattaan on viritetty
+     * kattamattomasta arvosta (FOKUS_LAATTA_SYKE_PX). Kasvukatto on
+     * molemmilla sama kerroin, joten suhde säilyy.
+     */
+    const zoom = (s * katto).toFixed(4);
     for (const ankkuri of this.fokusLaattaKerros.querySelectorAll('.fokuslaatta-ankkuri')) {
       ankkuri.setAttribute('transform',
         `translate(${ankkuri.dataset.kx} ${ankkuri.dataset.ky}) scale(${zoom})`);
@@ -7691,15 +7784,41 @@ export class UI {
    * Eläintäyt (js/elaintaky.js) ja kohdemerkit mitoitetaan omissa
    * silmukoissaan.
    *
-   * TUNNISTE OHITTAA TOISTON. Kerroin on vakio niin kauan kuin lehti ja
-   * ruutukoko pysyvät, joten 600 osan silmukka ajetaan vain kun se
-   * oikeasti muuttuu — sama kuri kuin näkymärajauksella
+   * === JA KASVUKATTO KOSKEE MUITAKIN KUIN MAAILMANÄKYMÄÄ (31.8.2026) ==
+   *
+   * Ehto `maailmanakyma()` oli oikea silloin kun se kirjoitettiin:
+   * pelaajan omassa näkymässä muut kaupungit olivat piilossa lehden alla
+   * (.fokus-lehden-alla), joten mitoitettavaa ei ollut. 30.8.2026 se
+   * piilotus purettiin (paivitaFokusPallot: *"`.fokus-lehden-alla` ei
+   * siis enää kirjoiteta kenellekään"*), ja naapurien laatat jäivät
+   * kartalle LAUDAN yksiköissä — juuri ne omistaja luki 31.8.2026
+   * hervottoman isoina.
+   *
+   * Tämä metodi ei ratkaise sitä eroa (naapurin laatan koko maanäkymässä
+   * on laudan oma mitta, eikä sitä muuteta ilman omistajan päätöstä),
+   * mutta KASVUKATTO koskee niitäkin: yksikään kaupungin laatta ei kasva
+   * ruudulla suuremmaksi kuin se on maan lehtinäkymässä. Kerroin on
+   * silloin pelkkä katto (`katto`, ks. fokusKasvukatto) eikä oman laatan
+   * mitta — perustasolla se on tasan 1, jolloin silmukkaa ei ajeta
+   * lainkaan ja näkymä on ennallaan.
+   *
+   * OMAN KAUPUNGIN OSAT OHITETAAN, koska niillä on jo oma kertoimensa
+   * (paivitaFokusLaatta) — maailmanäkymässä kerroin on sama molemmilla,
+   * joten siellä ohitusta ei tarvita.
+   *
+   * TUNNISTE OHITTAA TOISTON. Kerroin on vakio niin kauan kuin lehti,
+   * ruutukoko ja zoomitaso pysyvät, joten 600 osan silmukka ajetaan vain
+   * kun se oikeasti muuttuu — sama kuri kuin näkymärajauksella
    * (paivitaMaailmanRajaus sääntö 3).
    */
-  paivitaMaailmanLaattaKoot(kerroin) {
+  paivitaMaailmanLaattaKoot(kerroin, katto = 1) {
     const cities = this.svg?.querySelector('.cities');
-    const paalla = Boolean(cities) && Boolean(this.maailmanakyma?.())
-      && this.fokusmoodi && !this.katselu && kerroin > 0;
+    const fokus = Boolean(cities) && this.fokusmoodi && !this.katselu && kerroin > 0;
+    const maailma = fokus && Boolean(this.maailmanakyma?.());
+    // Muiden kaupunkien kerroin: maailmanäkymässä sama kuin omalla
+    // laatalla, muuten pelkkä kasvukatto (1 = ei mitään mitoitettavaa).
+    const muille = maailma ? kerroin : katto;
+    const paalla = fokus && muille > 0 && (maailma || muille < 1);
     if (!paalla) {
       // Näkymä sammui: kaikki paitsi nykyisen kaupungin omat osat
       // (fokusLaattaOsat, hoidettu paivitaFokusLaatassa) takaisin
@@ -7714,16 +7833,19 @@ export class UI {
       this.maailmanLaattaAvain = null;
       return;
     }
-    const avain = `${kerroin.toFixed(4)}:${cities.childElementCount}`;
+    const avain = `${muille.toFixed(4)}:${cities.childElementCount}:${maailma}`;
     if (this.maailmanLaattaAvain === avain && this.maailmanLaattaKerros === cities) return;
     this.maailmanLaattaAvain = avain;
     this.maailmanLaattaKerros = cities;
     const joukko = (this.maailmanLaattaOsat ??= new Set());
     joukko.clear();
+    const omat = maailma ? null : new Set(this.fokusLaattaOsat ?? []);
     for (const osa of cities.children) {
       // Nimet mitoitetaan muualla (ks. sääntö yllä).
       if (osa.classList.contains('city-label')) continue;
-      this.asetaLaatanKoko(osa, kerroin);
+      // Oman kaupungin osat: oma kerroin on jo kirjoitettu (ks. yllä).
+      if (omat?.has(osa)) continue;
+      this.asetaLaatanKoko(osa, muille);
       joukko.add(osa);
     }
   }
@@ -7812,12 +7934,35 @@ export class UI {
    * pointer-events: none), joten osuma-aluekompensaatiota ei tarvita;
    * laatan oma napautusalue on erillinen ja ennallaan.
    */
-  fokusMerkkiKerroin(px, omaR) {
+  /*
+   * SKAALAN SAA ANTAA ULKOA (31.8.2026). Pelinappula on sidottu laattaan
+   * (FOKUS_NAPPULA_PX = FOKUS_LAATTA_PX * 0,7, v1393), joten sen on
+   * luettava täsmälleen sama skaala kuin laatan — myös kasvukatto
+   * (fokusLaattaSkaala). Aarremerkit lukevat oletuksen eli pelkän
+   * typografiakaton kuten ennenkin: ne ovat kartan omia merkkejä eivätkä
+   * laatan osia.
+   */
+  fokusMerkkiKerroin(px, omaR, skaala = null) {
     if (!this.fokusmoodi || this.katselu) return 1;
     if (!(omaR > 0)) return 1;
-    const s = this.fokusMerkkiSkaalaKartalle();
+    const s = skaala === null ? this.fokusMerkkiSkaalaKartalle() : skaala;
     if (!(s > 0)) return 1;
     return Math.min(1, (px / 2) * s / omaR);
+  }
+
+  /**
+   * Pelinappulan kokokerroin: sama katto kuin laatalla, aina.
+   *
+   * Kaksi kutsupaikkaa (paikallaan paivitaFokusMerkkiMitat, kesken
+   * siirron animatePawnSisalla), ja niiden on pakko olla samaa mieltä —
+   * muuten hahmo vaihtaisi kokoa hypätessään. Sidos laattaan on v1393:n
+   * korjauksen ydin (FOKUS_NAPPULA_PX), ja se pysyy vain jos molemmat
+   * lukevat laatan skaalan kattoineen.
+   */
+  fokusNappulaKerroin() {
+    return this.fokusMerkkiKerroin(
+      FOKUS_NAPPULA_PX, NAPPULAN_RYHMAN_R, this.fokusLaattaSkaala(),
+    );
   }
 
   /**
@@ -7834,8 +7979,12 @@ export class UI {
    * silloin kun kartta ei ehdi piirtyä uudelleen.
    */
   paivitaFokusMerkkiMitat() {
+    // Kerroin kerran, ei nappulaa kohti: arvo ei riipu nappulasta
+    // mitenkään, ja silmukka kirjoittaa muunnoksia kutsujen väliin
+    // (sama sääntö kuin nimilapuilla, ks. paivitaFokusNimilaput).
+    const nappulanKerroin = this.fokusNappulaKerroin();
     for (const nappula of this.pawnLayer?.querySelectorAll('.pawn') ?? []) {
-      this.asetaMerkinKoko(nappula, this.fokusMerkkiKerroin(FOKUS_NAPPULA_PX, NAPPULAN_RYHMAN_R));
+      this.asetaMerkinKoko(nappula, nappulanKerroin);
     }
     for (const merkki of this.tokenLayer?.querySelectorAll('.token-found') ?? []) {
       const oma = Number(merkki.dataset.r);
@@ -7904,8 +8053,15 @@ export class UI {
   tyhjennaFokusLaatta() {
     if (this.fokusLaattaKerros?.firstChild) this.fokusLaattaKerros.textContent = '';
     this.fokusLaattaAvain = null;
-    // Maailmanäkymän yhteismitoitus puretaan samalla (kerroin 0 = pois).
-    this.paivitaMaailmanLaattaKoot(0);
+    /*
+     * Maailmanäkymän yhteismitoitus puretaan samalla (kerroin 1 =
+     * laudan oma koko) — MUTTA KASVUKATTO JÄÄ VOIMAAN. Tänne tullaan
+     * myös silloin, kun pelaaja seisoo reitin varrella eikä kaupungissa
+     * (cityOf null): ilman kattoa kaikkien kaupunkien laatat hyppäisivät
+     * lähikuvassa täyteen lautakokoonsa juuri siksi ajaksi. Fokusmoodin
+     * ulkopuolella katto on 1, jolloin tämä on entinen purku.
+     */
+    this.paivitaMaailmanLaattaKoot(1, this.fokusKasvukatto());
     if (!this.fokusLaattaOsat?.length) return;
     for (const osa of this.fokusLaattaOsat) {
       this.asetaLaatanKoko(osa, 1);
@@ -17889,7 +18045,7 @@ export class UI {
      * paivitaFokusMerkkiMitatiin. Kerroin luetaan kerran, saattoajon
      * asettamasta lopullisesta mittakaavasta (ks. yllä).
      */
-    const kerroin = this.fokusMerkkiKerroin(FOKUS_NAPPULA_PX, NAPPULAN_RYHMAN_R);
+    const kerroin = this.fokusNappulaKerroin();
     const koko = Math.abs(kerroin - 1) < 0.0005 ? '' : ` scale(${kerroin.toFixed(4)})`;
     let paikka = pixelOf(board, from);
     g.style.transform = `translate(${paikka.x}px, ${paikka.y}px)${koko}`;
