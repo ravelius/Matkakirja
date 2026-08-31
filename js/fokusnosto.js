@@ -124,6 +124,7 @@ import { FOKUSVIRTA_KIOVA } from './packs/fokusvirta-kiova.js';
 import { FOKUSVIRTA_KRAKOVA } from './packs/fokusvirta-krakova.js';
 import { FOKUSVIRTA_PIETARI } from './packs/fokusvirta-pietari.js';
 import { fokusvirtaSisalto } from './fokusvirta.js';
+import { fokusvirtaKaupungille } from './packs/fokusvirrat.js';
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
 
@@ -650,6 +651,64 @@ function nostoPooli(ui) {
   return nostoMaanPooli(ui, city) ?? [];
 }
 
+/**
+ * KAUPUNGIN TÄKYPOOLI LAUDAN DATASTA, ILMAN PELIÄ.
+ *
+ * Sama valintajärjestys kuin `nostoMaanPooli`illa — kaupungin oma
+ * `takynostot` ensin, sitten maapooli — mutta ilman `ui`:ta.
+ * Laattageneraattori (js/nostoladonta.js kautta) kysyy tällä, ONKO
+ * maan täkyjoukko sama kaupungista riippumatta: jos ei ole, maan
+ * sarakkeita ei voi polttaa, koska täky siirtäisi niiden rivejä.
+ */
+export function nostoKaupunginPooli(iso, cityId) {
+  const oma = fokusvirtaKaupungille(cityId)?.takynostot;
+  if (Array.isArray(oma) && oma.length) return nostoLevitaLunastus(oma);
+  const pooli = iso ? NOSTO_MAAT[iso] : null;
+  return (Array.isArray(pooli) && pooli.length) ? nostoLevitaLunastus(pooli) : [];
+}
+
+/**
+ * TÄKYPOOLIN MERKIT KARTTARIVEIKSI — LAUDAN DATASTA, ILMAN PELIÄ.
+ *
+ * Vain ne nostot, joilla on OMAT koordinaatit tällä laudalla: ilman
+ * niitä merkki asettuu siihen kaupunkiin, jossa pelaaja sillä hetkellä
+ * on (`nostonPaikka`), eikä sellaista voi polttaa. `kohde`-kenttäinen
+ * nosto ei luo omaa merkkiä lainkaan (Raamatun sääntö), kuten
+ * pelissäkään.
+ *
+ * @returns {{ rivit: Array, ilmanPaikkaa: number }}
+ */
+export function nostoKarttarivit(pooli, lauta) {
+  const rivit = [];
+  let ilmanPaikkaa = 0;
+  for (const nosto of pooli ?? []) {
+    if (nosto.kohde) continue;
+    const paikka = nosto.paikka;
+    const koordit = paikka ? (paikka.laudat ? paikka.laudat[lauta] : paikka) : null;
+    if (!Number.isFinite(koordit?.x) || !Number.isFinite(koordit?.y)) {
+      ilmanPaikkaa += 1;
+      continue;
+    }
+    rivit.push({
+      nosto,
+      kohde: nostoMerkinKentat(nosto, { nimi: paikka.nimi ?? null }),
+      paikka: { x: koordit.x, y: koordit.y },
+    });
+  }
+  return { rivit, ilmanPaikkaa };
+}
+
+/** Merkin kentät — yksi lähde elävälle ja poltettavalle riville. */
+function nostoMerkinKentat(nosto, paikka) {
+  return {
+    id: `nosto-${nosto.id}`,
+    nimi: nosto.nimio ?? paikka.nimi ?? nosto.otsikko,
+    nimio: nosto.nimio ?? paikka.nimi ?? null,
+    tyyppi: 'nosto',
+    symboli: NOSTOSYM_TYYPIT.has(nosto.symboli) ? nosto.symboli : 'huuto',
+  };
+}
+
 /* ==================== PAIKKA LAUDALLA ==================== */
 
 /**
@@ -707,11 +766,10 @@ function nostoLisakohteet(ui) {
     if (!paikka) continue;
     rivit.push({
       kohde: {
-        id: `nosto-${nosto.id}`,
-        nimi: nosto.nimio ?? paikka.nimi ?? nosto.otsikko,
-        nimio: nosto.nimio ?? paikka.nimi ?? null,
-        tyyppi: 'nosto',
-        symboli: NOSTOSYM_TYYPIT.has(nosto.symboli) ? nosto.symboli : 'huuto',
+        // KENTÄT SAMASTA PAIKASTA KUIN POLTETTAVASSA RIVISSÄ
+        // (nostoKarttarivit): tunnus, nimi ja symboli ovat ladonnan ja
+        // tiivisteen syötettä, eivätkä ne saa erota kahdessa polussa.
+        ...nostoMerkinKentat(nosto, paikka),
         avaa: (kaytto) => avaaNosto(kaytto ?? ui, nosto),
         // Osio yhdistetylle lehdelle — sama sopimus ja sama perustelu
         // kuin syvennystarinalla (js/syvennys.js, js/fokusryhmat.js).

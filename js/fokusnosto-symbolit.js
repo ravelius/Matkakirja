@@ -1544,9 +1544,27 @@ const NOSTOSYM_NIMIO_KOKO = 11;
  * CSS:stä (nostosymNimionAsu) — tässä on vain se, mitä CSS ei osaa
  * kertoa canvasille.
  */
+/*
+ * `haloLeveys` ON TÄSSÄ, KOSKA LADONTA EI SAA ODOTTAA CSS:ÄÄ
+ * (Raamattu 31.8.2026, KARTTANOSTOT POLTETAAN LAATTOIHIN). Nimiön
+ * törmäyslaatikko on osa ladontaa, ja laattageneraattorin on saatava
+ * siitä sama vastaus kuin selaimen — myös Nodessa, jossa ei ole
+ * `getComputedStyle`ia. Luvut ovat SANATARKASTI css/styles.css:n omat
+ * (.nostosym-nimio `stroke-width: 3.1px`; .nostosym-nimio-meri
+ * `stroke: none` eli ei haloa), eivät uusi mitoitus, ja
+ * `nostosymNimionAsu` lukee ne yhä CSS:stä silloin kun kartta on
+ * kädessä — tämä on sen sama luku ilman selainta.
+ */
 const NOSTOSYM_NIMIO_ASUT = {
-  vuori: { luokka: '', vali: 0, versaali: false },
-  meri: { luokka: 'nostosym-nimio-meri', vali: NOSTOSYM_NIMIO_KOKO * 0.28, versaali: true },
+  vuori: {
+    luokka: '', vali: 0, versaali: false, haloLeveys: 3.1,
+  },
+  meri: {
+    luokka: 'nostosym-nimio-meri',
+    vali: NOSTOSYM_NIMIO_KOKO * 0.28,
+    versaali: true,
+    haloLeveys: 0,
+  },
 };
 
 /** Kohteen tyyppi → nimiön asu. Meri saa oman, kaikki muut vuoren. */
@@ -1842,9 +1860,6 @@ const NOSTOSYM_MUSTE_VARA = {
 /** Mittanauha tekstin leveydelle; yksi konteksti koko kirjastolle. */
 let NOSTOSYM_MITTA = null;
 
-/** Mitatut nimiöleveydet (lyhennetty teksti → kirjaston yksiköitä). */
-const NOSTOSYM_LEVEYDET = new Map();
-
 /**
  * Valitsee portaan annetulle tarpeelle. Palauttaa true, jos porras
  * vaihtui — silloin kutsujan on rakennettava merkkinsä uudelleen.
@@ -1986,22 +2001,58 @@ function nostosymMittaaNimio(teksti, asu, porras = 1) {
  * ja Ioánnina saavat `ank: 'right'`) — ja kun oikea kaista on tukossa,
  * vasen on usein tyhjä. `vasemmalle` peilaa laatikon origon ympäri.
  */
-export function nostosymNimioLaatikko(nimi, svg, laji, vasemmalle = false, enintaan) {
-  if (typeof document === 'undefined') return null;
+/**
+ * NIMIÖN LEVEYS KIRJASTON YKSIKÖINÄ ILMAN SELAINTA — halo ja harvennus
+ * mukaan luettuna, tai 0 jos nimeä ei ole.
+ *
+ * === MIKSI TÄMÄ KORVASI `measureText`IN VÄISTÖSSÄ (31.8.2026) ======
+ *
+ * Nimiön laatikko on LADONTAA: se päättää, näkyykö nimi kartalla ja
+ * kummalla puolella merkkiä. Raamattu (KARTTANOSTOT POLTETAAN
+ * LAATTOIHIN) vaatii, että poltettu ladonta ja selaimen osumamuodot
+ * tulevat samasta laskennasta — ja `measureText` ei kelpaa siihen
+ * kahdesta syystä:
+ *
+ *   1. SE ON ERI KIRJASIN JOKA SELAIMESSA. `--font-atlas` on
+ *      *"Liberation Serif", "Times New Roman", Times, serif*; iOS
+ *      osuu Timesiin, kontin Chromium Liberationiin. Sama nimi saisi
+ *      eri laatikon eri laitteella, eli eri kartan.
+ *   2. SITÄ EI OLE NODESSA lainkaan, joten laattageneraattori ei voisi
+ *      laskea väistöä ennen piirtoa.
+ *
+ * Mitta on siis sama taulukko, jolla pilkkulista jo katkaistaan
+ * (`nostosymTekstinLeveys`, ks. sen perustelu) — yksi mitta, ei kahta.
+ * Halon leveys ja kirjainväli tulevat asusta, jonka luvut ovat
+ * css/styles.css:n omat (NOSTOSYM_NIMIO_ASUT).
+ *
+ * TARKKUUS: taulukko ei tunne parivälistystä, joten laatikko voi olla
+ * enintään ~0,7 % kapeampi kuin rasteriin ladottu muste (mitattu
+ * v1382). Se on väljyysvaran (KOHDE_NIMIO_VARA) sisällä, ja vaihtoehto
+ * — laatikko joka on eri levyinen joka laitteella — olisi paljon
+ * pahempi.
+ */
+export function nostosymNimioMitta(nimi, laji, enintaan) {
   const nimionLaji = nostosymNimionLaji(laji);
-  const teksti = nostosymNimioTeksti(
-    nimi, NOSTOSYM_NIMIO_ASUT[nimionLaji], enintaan ?? NOSTOSYM_NIMIO_MERKKEJA,
-  );
+  const asu = NOSTOSYM_NIMIO_ASUT[nimionLaji];
+  const teksti = nostosymNimioTeksti(nimi, asu, enintaan ?? NOSTOSYM_NIMIO_MERKKEJA);
+  if (!teksti) return { teksti: '', leveys: 0 };
+  const merkkeja = [...teksti].length;
+  return {
+    teksti,
+    leveys: nostosymTekstinLeveys(teksti)
+      + asu.vali * Math.max(0, merkkeja - 1)
+      + asu.haloLeveys,
+  };
+}
+
+export function nostosymNimioLaatikko(nimi, svg, laji, vasemmalle = false, enintaan) {
+  /*
+   * `svg` on jäänyt kutsurajapintaan, vaikka mitta ei enää lue siitä
+   * mitään: kutsujia on kaksi eikä kumpikaan tiedä, mistä mitta tulee
+   * — ja parametrin poisto olisi muutos, jota tämä erä ei tarvitse.
+   */
+  const { teksti, leveys } = nostosymNimioMitta(nimi, laji, enintaan);
   if (!teksti) return null;
-  const avain = `${nimionLaji}|${teksti}`;
-  let leveys = NOSTOSYM_LEVEYDET.get(avain);
-  if (leveys === undefined) {
-    const asu = nostosymNimionAsu(svg, nimionLaji);
-    leveys = nostosymMittaaNimio(teksti, asu ?? nostosymAsuTai(null, nimionLaji));
-    // Ilman karttaa mitta on varakirjasimen eikä kartan omaa: sitä ei
-    // talleteta, tai koko istunto jäisi väärän mitan varaan.
-    if (asu) NOSTOSYM_LEVEYDET.set(avain, leveys);
-  }
   const ulko = NOSTOSYM_NIMIO_X + leveys;
   return {
     x1: vasemmalle ? -ulko : NOSTOSYM_MINI_RUUTU,
@@ -2120,6 +2171,78 @@ async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji, vasemmal
      */
     origoX: (origoX / leveys) * (kangas.width / porras),
   };
+}
+
+/* ============ SAMA MERKKI LAATTAAN POLTETTUNA =====================
+ *
+ * OMISTAJAN PÄÄTÖS 31.8.2026 (Raamattu, KARTTANOSTOT POLTETAAN
+ * LAATTOIHIN): *"myös nostojen tekstit on hyvä polttaa suoraan
+ * kartalle"* — koko nosto eli symboli, teksti ja nostoviiva menee
+ * laattoihin.
+ *
+ * TÄMÄ ON SAMA PIIRTO KUIN RASTERISSA (`nostosymRasteroi`), vain
+ * kutsujan omalle canvasille ja kutsujan valitsemaan origoon. Kaksi
+ * piirtotapaa samasta merkistä ajautuisi eri näköisiksi ensimmäisessä
+ * hienosäädössä, joten muoto tulee samasta `NOSTOSYM_MINI`-taulusta
+ * (Path2D ottaa saman `d`-merkkijonon kuin SVG) ja nimiö samasta
+ * asusta.
+ *
+ * ILMAN CSS:ÄÄ MUSTE ON VARASÄVY. Laattageneraattorin sivulla ei ole
+ * pelin tyylitiedostoa, joten `nostosymMustelajit(null)` antaa
+ * NOSTOSYM_MUSTE_VARA -sävyt — ja ne ovat tarkoituksella SAMAT luvut
+ * kuin css/styles.css:ssä. Jos sävyt joskus eroavat, poltettu merkki
+ * on eri värinen kuin elävä, ja se näkyy heti vierekkäin.
+ *
+ * MITTA ON TAULUKOSTA, EI `measureText`ISTÄ (nostosymNimioMitta):
+ * vasemmalle ladotun nimiön aloituskohta on ladontaa, ja sen on oltava
+ * sama luku laattageneraattorissa ja pelissä. Piirretyt kirjaimet
+ * voivat siksi ylittää lasketun leveyden enintään ~0,7 % — se on
+ * kapeampi kuin nimiön oma halo.
+ */
+
+/**
+ * @param {CanvasRenderingContext2D} ctx  origo merkin keskipisteessä
+ * @param {object} merkki  { symboli, laji, nimio, nimioNakyy,
+ *   nimioVasemmalle, nimioRajaton } — laattageneraattorin merkkitietue
+ * @param {number} porras  kuvapikseliä kirjaston yksikköä kohti
+ * @param {?SVGElement} svg  kartta, josta muste luetaan; null = varasävy
+ */
+export function piirraNostosymPolttoon(ctx, merkki, porras, svg = null) {
+  const tunnus = nostosymMiniTunnus(merkki.symboli, merkki.laji);
+  piirraNostosymMiniCanvas(ctx, tunnus, nostosymMustelajit(svg), porras);
+  if (!merkki.nimioNakyy || !merkki.nimio) return;
+  const nimionLaji = nostosymNimionLaji(merkki.laji);
+  const enintaan = merkki.nimioRajaton ? Infinity : NOSTOSYM_NIMIO_MERKKEJA;
+  const { teksti, leveys } = nostosymNimioMitta(merkki.nimio, merkki.laji, enintaan);
+  if (!teksti) return;
+  const asu = nostosymAsuTai(svg, nimionLaji);
+  ctx.save();
+  ctx.font = nostosymKirjasin(asu, porras);
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'alphabetic';
+  ctx.lineJoin = 'round';
+  // Oikealle merkin reunasta, vasemmalle nimiön oma mitta taaksepäin —
+  // sama kaista kuin rasterissa ja sama kuin väistön laatikossa.
+  const x = (merkki.nimioVasemmalle ? -(NOSTOSYM_NIMIO_X + leveys) : NOSTOSYM_NIMIO_X) * porras;
+  const y = NOSTOSYM_NIMIO_Y * porras;
+  /*
+   * MERKIT YKSITELLEN, kuten lehden omassa ladonnassa: canvasin
+   * `letterSpacing` ei ole kaikissa selaimissa, ja harvennus on juuri
+   * se, mikä tekee meren nimestä meren nimen. Halo ensin ja teksti
+   * päälle — sama järjestys kuin CSS:n `paint-order: stroke`.
+   */
+  const vali = asu.vali * porras;
+  const merkit = [...teksti];
+  if (asu.halo) {
+    ctx.strokeStyle = asu.halo;
+    ctx.lineWidth = asu.haloLeveys * porras;
+    let t = x;
+    for (const m of merkit) { ctx.strokeText(m, t, y); t += ctx.measureText(m).width + vali; }
+  }
+  ctx.fillStyle = asu.muste;
+  let t = x;
+  for (const m of merkit) { ctx.fillText(m, t, y); t += ctx.measureText(m).width + vali; }
+  ctx.restore();
 }
 
 /**

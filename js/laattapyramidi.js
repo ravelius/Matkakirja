@@ -281,6 +281,72 @@ export function laatoissaOnNimet() {
   return luettelo?.nimiot !== false;
 }
 
+/**
+ * ONKO TÄMÄ KARTTANOSTO POLTETTU NÄIHIN LAATTOIHIN?
+ *
+ * === MIKSI TÄMÄ ON LUETTELOSSA EIKÄ KOODISSA ======================
+ *
+ * Sama malli ja sama syy kuin nimiöillä (`laatoissaOnNimet` yllä):
+ * laatat vaihtuvat vasta kun pyramidi ajetaan uudestaan, ja se
+ * tapahtuu tästä koodista riippumatta eri aikaan. Koodissa oleva
+ * kytkin jättäisi julkaisun ja pyramidiajon väliin ikkunan, jossa
+ * nostot olisivat joko kahdesti tai eivät kertaakaan.
+ *
+ * === MIKSI TOTUUSARVO EI RIITÄ (Raamattu 31.8.2026) ===============
+ *
+ * Nimiöillä kerrokset ovat toisensa POISSULKEVAT: joko laatat latovat
+ * nimet tai peli, joten `nimiot: false` riittää. Nostoilla kerrokset
+ * ovat RINNAKKAISET — omistaja 31.8.2026: *"uusia karttanostoja tulee
+ * vielä kun maailmaa rakennetaan, niin ne voi väliaikaisesti tehdä
+ * samalla tavalla kuin tähän asti … tehdään vain sitten uusi poltto
+ * kartalle sopivassa vaiheessa."* Maailma kasvaa nopeammin kuin
+ * pyramidia ajetaan, joten kartalla on aina viimeisimmässä ajossa
+ * poltettuja JA sen jälkeen lisättyjä eläviä nostoja. Luettelon on
+ * siksi kannettava, MITKÄ nostot poltettiin.
+ *
+ * === MIKSI TIIVISTE EIKÄ PELKKÄ TUNNUSLISTA =======================
+ *
+ * Tunnus kertoo, oliko merkki polttohetkellä olemassa; tiiviste
+ * kertoo, onko se yhä SAMA merkki. Jos noston sisältö muuttuu polton
+ * jälkeen — nimi, symboli, ryhmän jäsenet, paikka — laatassa on vanha
+ * kuva, ja pelkkään tunnukseen luottava peli vaikenisi ja jättäisi
+ * vanhentuneen näkyviin. Tiiviste lasketaan pelin puolella samasta
+ * ladonnasta (js/nostoladonta.js nostoladontaTiiviste), joten ero
+ * havaitaan heti ja merkki piirretään elävänä.
+ *
+ * === OLETUS: MITÄÄN EI OLE POLTETTU ===============================
+ *
+ * Kun kenttää ei ole (vanha ajo) tai luetteloa ei ole vielä ladattu,
+ * vastaus on EI — peli piirtää kaiken elävänä.
+ *
+ * Logiikka on sama kuin nimiöillä (valitaan se väärinolo, joka ei
+ * kadota sisältöä), mutta se KÄÄNTYY TOISIN PÄIN. Nimiöillä väärä
+ * "laatoissa on nimet" vaientaa pelin, ja jos laatoissa ei olekaan
+ * nimiä, kartalta katoavat kaikki nimet; siksi siellä oletetaan vanha
+ * maailma. Tässä sisällön kadottaisi juuri "on poltettu": peli
+ * vaikenisi merkistä, jota laatassa ei ole, ja omistajan ehto on
+ * *"mikään karttanostoista ei kuulu kadota laudalta missään vaiheessa
+ * peliä"*. Väärä oletus maksaa siis enintään kaksoispiirron samaan
+ * pisteeseen — ja koska ladonta on sama molemmilla puolilla
+ * (js/nostoladonta.js), kaksoispiirto on kaksinkertainen muste eikä
+ * kaksi merkkiä eri kohdissa. Se korjaantuu itsestään heti kun
+ * luettelo saapuu.
+ *
+ * @param {string} tunnus    merkin tunnus (ryhmän tai kohteen)
+ * @param {string} tiiviste  merkin nykyinen sisältötiiviste
+ */
+export function nostoOnPoltettu(tunnus, tiiviste) {
+  const nostot = luettelo?.nostot;
+  if (!nostot || !tunnus || !tiiviste) return false;
+  return nostot[tunnus] === tiiviste;
+}
+
+/** Onko luettelossa lainkaan poltettuja nostoja? */
+export function laatoissaOnNostoja() {
+  const nostot = luettelo?.nostot;
+  return Boolean(nostot && Object.keys(nostot).length);
+}
+
 /*
  * ARKIN MITAT MYÖS ILMAN LUETTELOA.
  *

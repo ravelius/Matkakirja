@@ -546,6 +546,13 @@ const MODULES = [
   // (fokuskohteet ja fokusnosto-symbolit). Ei tuo itse mitään.
   'js/fokusniput.js',
   /*
+   * Nostojen ladonnan mittakaava ja tiiviste. LEHTIMODUULI, joka ei tuo
+   * mitään — ja siksi se voi olla näin varhain. js/fokuskohteet.js
+   * kysyy siltä, onko merkki poltettu laattaan, ja js/ui.js merkkien
+   * mittakaavan; laattageneraattori laskee saman tiivisteen Nodessa.
+   */
+  'js/nostoladonta.js',
+  /*
    * Karttasymbolien kirjasto ennen kohteita ja täkynostoa (molemmat
    * piirtävät symbolinsa sillä — Raamattu, SYMBOLITAKSONOMIA). Kerros
    * tuo vain mapartin ja äänet, jotka ovat jo yllä.

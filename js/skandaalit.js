@@ -77,6 +77,34 @@ function skandaaliLataaTyyli() {
 /* ==================== MERKIT KOHDEKERROKSEEN ==================== */
 
 /**
+ * MAAN SKANDAALIT KARTTARIVEIKSI — LAUDAN DATASTA, ILMAN PELIÄ.
+ *
+ * Viety ulos 31.8.2026 samasta syystä kuin syvennystarinoilla
+ * (js/syvennys.js syvennysKarttarivit): laattageneraattori polttaa
+ * nämä merkit, ja niiden tunnus, nimi, symboli ja paikka on saatava
+ * samasta koodista kuin pelin oma merkki.
+ */
+export function skandaaliKarttarivit(iso, lauta) {
+  const rivit = [];
+  for (const skandaali of SKANDAALIT[iso] ?? []) {
+    const paikka = projisoiLaudalle(lauta, skandaali.lon, skandaali.lat);
+    if (!paikka) continue;
+    rivit.push({
+      skandaali,
+      kohde: {
+        id: `skandaali-${skandaali.id}`,
+        nimi: skandaali.nimio ?? skandaali.otsikko,
+        nimio: skandaali.nimio ?? null,
+        tyyppi: 'skandaali',
+        symboli: 'huuto',
+      },
+      paikka: { x: paikka.x, y: paikka.y },
+    });
+  }
+  return rivit;
+}
+
+/**
  * NYKYISEN MAAN SKANDAALIT LISÄKOHTEIKSI.
  *
  * Sama näkyvyysehto kuin syvennystarinoilla (js/syvennys.js
@@ -92,27 +120,17 @@ function skandaaliLisakohteet(ui) {
   if (!fokusmoodiPaalla()) return [];
   const iso = ui.game.pack?.map?.cityCountry?.[city.id] || null;
   if (!iso) return [];
-  const lauta = ui.game.pack?.id;
-  const rivit = [];
-  for (const skandaali of SKANDAALIT[iso] ?? []) {
-    const paikka = projisoiLaudalle(lauta, skandaali.lon, skandaali.lat);
-    if (!paikka) continue;
-    rivit.push({
+  return skandaaliKarttarivit(iso, ui.game.pack?.id)
+    .map(({ skandaali, kohde, paikka }) => ({
       kohde: {
-        id: `skandaali-${skandaali.id}`,
-        nimi: skandaali.nimio ?? skandaali.otsikko,
-        nimio: skandaali.nimio ?? null,
-        tyyppi: 'skandaali',
-        symboli: 'huuto',
+        ...kohde,
         avaa: (kaytto) => avaaSkandaali(kaytto ?? ui, iso, skandaali),
         // Osio yhdistetylle lehdelle — sama sopimus ja sama perustelu
         // kuin syvennystarinalla (js/syvennys.js, js/fokusryhmat.js).
         osio: (kaytto, sailio) => piirraSkandaalinSisus(kaytto ?? ui, sailio, iso, skandaali),
       },
-      paikka: { x: paikka.x, y: paikka.y },
-    });
-  }
-  return rivit;
+      paikka,
+    }));
 }
 
 /* ==================== KORTTI ==================== */

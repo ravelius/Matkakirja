@@ -138,6 +138,8 @@ import {
   niputaFokusmerkit, nippuAsettelunVersio, nippuAvaaKaupunki, nippuLaatanEtaisyys,
 } from './fokusniput.js';
 import { ryhmaKuori, ryhmitaKohteet } from './fokusryhmat.js';
+import { nostoOnPoltettu } from './laattapyramidi.js';
+import { nostoladontaTiiviste } from './nostoladonta.js';
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
 
@@ -445,24 +447,29 @@ function nykyinenIso(ui) {
   return (taulu && kaupunki && taulu[kaupunki.id]) || null;
 }
 
-function nykyisenMaanKohteet(ui) {
-  if (!ui?.fokusPohjaBbox) return [];
-  const iso = nykyinenIso(ui);
+/**
+ * KARTAN MERKIT LAUDAN DATASTA — SAMA PASSI PELILLE JA GENERAATTORILLE.
+ *
+ * Viety ulos 31.8.2026 (Raamattu, KARTTANOSTOT POLTETAAN LAATTOIHIN):
+ * *"Poltetun ladonnan ja selaimen osumamuotojen on tultava SAMASTA
+ * lähteestä, ettei kahta ladontaa pääse eriytymään."* Laattageneraattori
+ * kutsuu TÄTÄ funktiota (js/nostoladonta.js) eikä kirjoita omaa
+ * versiotaan — myös kärkisymbolin valinta ja karttanimen sääntö tulevat
+ * silloin samasta paikasta kuin pelissä.
+ *
+ * @param {?string} iso        maatunnus
+ * @param {?string} lauta      laudan tunnus (kohteen `laudat`-avain)
+ * @param {Array} kaupungit    maan kaupungit ryhmittelyn ankkureiksi
+ * @param {function} pohjanAlla  (x, y) => onko piste lehden ikkunassa
+ * @param {Array} lisat        lisälähteiden rivit (täky, syvennys,
+ *   skandaali) — generaattori antaa vain ne, jotka se aikoo polttaa
+ */
+export function kohdeKarttarivit({
+  iso, lauta, kaupungit, pohjanAlla, lisat = [],
+}) {
   const lista = (iso && KOHDE_MAAT[iso]) || [];
-  const lauta = ui.game?.pack?.id;
   const kohteet = lista.map((kohde) => ({ kohde, paikka: kohde.laudat?.[lauta] }));
-  /*
-   * YHTENÄINEN KOHDEMALLI (Raamattu 29.8.2026): täkynostot ja
-   * syvennystarinat ovat karttapisteitä samassa kerroksessa kuin
-   * maan kohteet — sama merkki, sama nimiöväistö, sama kasauspassi ja
-   * sama aihevalo, vain avautuva kortti on omansa (kohteen `avaa`).
-   * Lähteet ilmoittautuvat rekisteröintinä (rekisteroiLisakohteet),
-   * koska js/fokusnosto.js ja js/syvennys.js ovat niputusjärjestyksessä
-   * tämän moduulin JÄLKEEN eikä tuonti heihin päin ole mahdollinen.
-   */
-  for (const hae of KOHDE_LISALAHTEET) {
-    for (const rivi of hae(ui) ?? []) kohteet.push(rivi);
-  }
+  for (const rivi of lisat) kohteet.push(rivi);
   const nakyvat = kohteet
     .filter(({ paikka }) => Number.isFinite(paikka?.x) && Number.isFinite(paikka?.y))
     /*
@@ -470,7 +477,7 @@ function nykyisenMaanKohteet(ui) {
      * ulkopuolelle jäävä merkki osuisi laudan omaan grafiikkaan —
      * pelaajalle se näyttäisi merkiltä ilman karttaa.
      */
-    .filter(({ paikka }) => ui.fokusPohjanAlla?.(paikka.x, paikka.y));
+    .filter(({ paikka }) => pohjanAlla(paikka.x, paikka.y));
   /*
    * KATEGORIA PER KAUPUNKI (omistaja 31.8.2026, ks. js/fokusryhmat.js):
    * saman kaupungin samanlajiset kohteet menevät yhden merkin alle.
@@ -480,7 +487,32 @@ function nykyisenMaanKohteet(ui) {
    * lopulta jää. Luokittelija on sama funktio, jolla merkin symboli
    * valitaan (kohteenSymboli): kategoriaa ei siis ole kahta.
    */
-  return ryhmitaKohteet(nakyvat, maanKaupungit(ui, iso), kohteenSymboli, kohteenKarttanimi);
+  return ryhmitaKohteet(nakyvat, kaupungit, kohteenSymboli, kohteenKarttanimi);
+}
+
+function nykyisenMaanKohteet(ui) {
+  if (!ui?.fokusPohjaBbox) return [];
+  const iso = nykyinenIso(ui);
+  /*
+   * YHTENÄINEN KOHDEMALLI (Raamattu 29.8.2026): täkynostot ja
+   * syvennystarinat ovat karttapisteitä samassa kerroksessa kuin
+   * maan kohteet — sama merkki, sama nimiöväistö, sama kasauspassi ja
+   * sama aihevalo, vain avautuva kortti on omansa (kohteen `avaa`).
+   * Lähteet ilmoittautuvat rekisteröintinä (rekisteroiLisakohteet),
+   * koska js/fokusnosto.js ja js/syvennys.js ovat niputusjärjestyksessä
+   * tämän moduulin JÄLKEEN eikä tuonti heihin päin ole mahdollinen.
+   */
+  const lisat = [];
+  for (const hae of KOHDE_LISALAHTEET) {
+    for (const rivi of hae(ui) ?? []) lisat.push(rivi);
+  }
+  return kohdeKarttarivit({
+    iso,
+    lauta: ui.game?.pack?.id,
+    kaupungit: maanKaupungit(ui, iso),
+    pohjanAlla: (x, y) => Boolean(ui.fokusPohjanAlla?.(x, y)),
+    lisat,
+  });
 }
 
 /**
@@ -884,7 +916,12 @@ function kaupunginNimiLaatikko(ui, kohde) {
  * jotta lähisukuiset mitat (nimiön koko, väistön varat, nipun välit)
  * pysyvät keskenään samassa suhteessa.
  */
-const KOHDE_SYMBOLI_SKAALA = 11 / 21;
+/*
+ * VIETY ULOS 31.8.2026: laattageneraattori tarvitsee saman kertoimen
+ * (tools/fokuskartta/nostot.mjs), koska poltettu merkki on täsmälleen
+ * sen kokoinen kuin elävä.
+ */
+export const KOHDE_SYMBOLI_SKAALA = 11 / 21;
 
 /**
  * Symbolin säde kohdemerkin mitassa. Kirjaston karttamerkki on
@@ -893,6 +930,38 @@ const KOHDE_SYMBOLI_SKAALA = 11 / 21;
  * pienenivät myös erottelusiirto ja nimiön törmäysvara sen mukana.
  */
 const KOHDE_SYMBOLI_R = NOSTOSYM_MINI_R * KOHDE_SYMBOLI_SKAALA;
+
+/**
+ * MERKIN LADONTATIEDOT — se, mitä ladonta merkistä tarvitsee.
+ *
+ * Yksi lähde pelille ja laattageneraattorille (js/nostoladonta.js):
+ * symboli, kartan nimi ja nimiön katko ovat ladonnan syötettä, ja jos
+ * niistä olisi kaksi versiota, poltettu merkki ja selaimen osumamuoto
+ * eriytyisivät ensimmäisessä hienosäädössä (Raamattu, KARTTANOSTOT
+ * POLTETAAN LAATTOIHIN).
+ *
+ * `nimi` puuttuu, kun merkki ei saa nimiötä lainkaan — nimi on jo
+ * kartalla (kohteenNimio: lehden poltettu kaupunginnimi, pelin laatta
+ * tai laattaan poltettu maastonimi).
+ */
+export function kohdeMerkinLadonta(ui, kohde) {
+  const symboli = kohteenSymboli(kohde);
+  const ulos = { symboli, laji: kohde?.tyyppi };
+  if (!symboli || !kohteenNimio(ui, kohde)) return ulos;
+  // Kartan nimi, ei kortin (kohteenKarttanimi): väistöpassi mittaa
+  // samaa tekstiä, joka merkin perään ladotaan.
+  ulos.nimi = kohteenKarttanimi(kohde);
+  /*
+   * YHDISTETYN MERKIN NIMIÖ ON JO LADOTTU MITTAANSA
+   * (js/fokusryhmat.js ryhmaNimio: jäsenten nimet pilkulla,
+   * katkaistuna kolmella pisteellä). Kartan 18 merkin sääntö
+   * katkaisisi sen ensimmäisen nimen kohdalta, joten kuori sanoo
+   * kirjastolle "älä koske" — sama luku kulkee sekä piirtoon että
+   * väistön laatikkomittaan, jottei niistä tule kahta eri tekstiä.
+   */
+  ulos.nimioKatto = ryhmaKuori(kohde) ? Infinity : undefined;
+  return ulos;
+}
 
 /**
  * Yksi merkki: näkymätön osuma-alue, kategorian symboli ja sen perään
@@ -1054,6 +1123,16 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
    * sitä sama täplä olisi eläintäyn alla täplä ja tässä lautanen.
    */
   piirraKarttavalo(g, symboli, kohde.id, KOHDE_VALO_KOKO);
+  /*
+   * LADONTATIEDOT KERRAN (kohteenNimio käy maastonimet läpi, eikä sitä
+   * kannata tehdä kahdesti merkkiä kohti) JA AINA TIETUEESEEN: symboli
+   * ja laji ovat tiivisteen syötettä (merkitsePoltetutNostot), joten ne
+   * on kirjattava myös nimiöttömälle merkille. Muuten pelin laskema
+   * tiiviste eroaisi laattageneraattorin omasta, ja jokainen nimiötön
+   * merkki piirtyisi kahdesti.
+   */
+  const ladonta = kohdeMerkinLadonta(ui, kohde);
+  Object.assign(tietue, ladonta);
   if (symboli) {
     /*
      * Alaryhmä kutistaa kirjaston merkin kohdemerkin mittaan; symbolin
@@ -1072,7 +1151,7 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
       transform: `scale(${KOHDE_SYMBOLI_SKAALA.toFixed(4)})`,
     }, g);
     const glyyfi = el('g', { class: 'fokuskohde-glyyfi' }, sisus);
-    if (kohteenNimio(ui, kohde)) {
+    if (ladonta.nimi) {
       /*
        * NIMIÖN TILA ON VÄISTÖPASSIN PÄÄTÖS (paivitaKohdeNimiot), joka
        * ajetaan heti tämän rakennuksen perään. Ensipiirto käyttää
@@ -1081,20 +1160,6 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
        * eikä ahtaaseen ryppääseen synny turhaa nimiöllistä rasteria.
        */
       tietue.glyyfi = glyyfi;
-      // Kartan nimi, ei kortin (kohteenKarttanimi): väistöpassi mittaa
-      // samaa tekstiä, joka merkin perään ladotaan.
-      tietue.nimi = kohteenKarttanimi(kohde);
-      /*
-       * YHDISTETYN MERKIN NIMIÖ ON JO LADOTTU MITTAANSA
-       * (js/fokusryhmat.js ryhmaNimio: jäsenten nimet pilkulla,
-       * katkaistuna kolmella pisteellä). Kartan 18 merkin sääntö
-       * katkaisisi sen ensimmäisen nimen kohdalta, joten kuori sanoo
-       * kirjastolle "älä koske" — sama luku kulkee sekä piirtoon että
-       * väistön laatikkomittaan, jottei niistä tule kahta eri tekstiä.
-       */
-      tietue.nimioKatto = ryhmaKuori(kohde) ? Infinity : undefined;
-      tietue.symboli = symboli;
-      tietue.laji = kohde.tyyppi;
       tietue.nimioNakyy = !ui.fokuskohdePiiloNimiot?.has(kohde.id);
       // Sama arvaus koskee myös nimiön PUOLTA (v1218): ahtaassa
       // paikassa väistö on saattanut kääntää nimiön vasemmalle, ja
@@ -1205,7 +1270,7 @@ const KOHDE_ERO_KIERROKSIA = 4;
  * TYÖ TEHDÄÄN VAIN KUN MITTA MUUTTUI: vakioskaalalla vastaus on sama
  * niin kauan kuin lehti ja ruutukoko pysyvät (ui.fokuskohdeEroAvain).
  */
-function eritteleKohdeRyhmat(ui, s) {
+export function eritteleKohdeRyhmat(ui, s) {
   const ryhmat = ui.fokuskohdeRyhmat ?? [];
   if (!ryhmat.length) return;
   const avain = `${ui.fokuskohdeAvain}:${s.toFixed(4)}`;
@@ -1245,6 +1310,83 @@ function eritteleKohdeRyhmat(ui, s) {
   for (let i = 0; i < ryhmat.length; i += 1) {
     ryhmat[i].sx = paikat[i].x - ryhmat[i].x;
     ryhmat[i].sy = paikat[i].y - ryhmat[i].y;
+  }
+}
+
+/* ============ POLTETTU MERKKI EI PIIRRY UUDESTAAN =================
+ *
+ * OMISTAJAN PÄÄTÖS 31.8.2026 (Raamattu, KARTTANOSTOT POLTETAAN
+ * LAATTOIHIN): kohdemerkin symboli, nimiö ja nostoviiva ovat pysyvää
+ * sisältöä ja kuuluvat laattoihin. Kun ne ovat siellä, tämä kerros ei
+ * saa piirtää niitä toistamiseen — v1366:n kaksoisnimi oli täsmälleen
+ * sama vika toisessa kerroksessa.
+ *
+ * MITÄ JÄÄ: näkymätön osumamuoto (poltettu merkki ei ota vastaan
+ * kosketusta), aihevalo (js/karttavalot.js — se vilkkuu ja on siksi
+ * pelitilaa) ja korostusrengas, joka syttyy vain auki olevalle
+ * kortille. Merkki on siis yhä napautettava ja avaa korttinsa
+ * täsmälleen kuten ennen.
+ *
+ * PÄÄTÖS ON LUETTELON, EI KOODIN (js/laattapyramidi.js
+ * nostoOnPoltettu): laatat vaihtuvat eri aikaan kuin koodi, ja
+ * kytkin koodissa jättäisi ikkunan, jossa nostot olisivat joko
+ * kahdesti tai eivät kertaakaan. Oletus on "mitään ei ole poltettu",
+ * eli epävarmuudessa merkki piirretään.
+ *
+ * TIIVISTE LASKETAAN TÄSSÄ SAMOISTA LUVUISTA kuin generaattorissa
+ * (js/nostoladonta.js nostoladontaTiiviste): merkin lopullinen paikka,
+ * symboli, laji, nimiöteksti ja ryhmän jäsenet. Jos jokin niistä on
+ * muuttunut polton jälkeen, tiiviste eroaa luettelosta ja merkki
+ * piirretään elävänä — laatassa oleva vanhentunut kuva jää sen alle,
+ * ja seuraava poltto korjaa sen.
+ */
+
+/** Onko merkki poltettu laattaan? Yksi vastaus, kaksi kysyjää. */
+function kohdeOnPoltettu(ui, r) {
+  return nostoOnPoltettu(r.id, kohteenNostotiiviste(ui, r));
+}
+
+/** Merkin sisältötiiviste — sama laskenta kuin laattageneraattorissa. */
+function kohteenNostotiiviste(ui, r) {
+  return nostoladontaTiiviste({
+    tunnus: r.id,
+    symboli: r.symboli ?? null,
+    laji: r.laji ?? null,
+    nimio: r.nimi ?? '',
+    x: (r.nippu?.x ?? r.x + (r.sx ?? 0)) - (r.kierto ?? 0),
+    y: r.nippu?.y ?? r.y + (r.sy ?? 0),
+    osat: (ui.fokuskohdeTiedot?.get(r.id)?.osat ?? []).map((osa) => osa.id),
+  });
+}
+
+/**
+ * MERKITSEE POLTETUT JA VAIENTAA NIIDEN PIIRRON.
+ *
+ * Ajetaan asemoinnin JÄLKEEN, koska tiivisteessä on merkin lopullinen
+ * paikka: erottelusiirto ja kasauspassi ovat juuri ajaneet.
+ *
+ * Luokka tekee vaientamisen (css/fokuskohteet.css .fokuskohde-poltettu)
+ * eikä solmujen purku: merkki voi palata eläväksi kesken istunnon, jos
+ * luettelo saapuu myöhässä tai sisältö muuttuu, eikä kerrosta haluta
+ * rakentaa uudestaan sen takia.
+ */
+function merkitsePoltetutNostot(ui) {
+  for (const r of ui.fokuskohdeRyhmat ?? []) {
+    const poltettu = kohdeOnPoltettu(ui, r);
+    if (r.poltettu === poltettu) continue;
+    r.poltettu = poltettu;
+    r.g?.classList?.toggle('fokuskohde-poltettu', poltettu);
+    /*
+     * POLTETUN NIMIÖN RASTERI PURETAAN. Symboli ja nimiö ovat samassa
+     * kuvassa (piirraNostosymKartalle), joten tyhjä ryhmä on ainoa tapa
+     * saada kumpikin pois; CSS piilottaisi ne kyllä, mutta silloin
+     * selain kantaisi turhaa rasteria jokaisesta poltetusta merkistä.
+     */
+    if (poltettu) r.glyyfi?.replaceChildren();
+    else if (r.glyyfi) {
+      piirraNostosymKartalle(r.glyyfi, r.symboli,
+        r.nimioNakyy ? r.nimi : '', r.laji, r.nimioVasemmalle, r.nimioKatto);
+    }
   }
 }
 
@@ -1302,7 +1444,19 @@ function asetaKohdeMittakaava(ui, suhde) {
    * sormen kokoinen, paikka yksi ja sama.
    */
   eritteleKohdeRyhmat(ui, s);
+  /*
+   * KASAUSPASSI KYSYY TÄLTÄ KERROKSELTA, ONKO MERKKI POLTETTU: se ei
+   * saa piirtää yhdysviivaa merkille, jonka viiva on jo laatassa, eikä
+   * js/fokusniput.js tunne luetteloa. Kysymys esitetään merkin
+   * lopullisesta paikasta, jonka passi itse juuri asetti.
+   */
+  ui.nostoPoltettu = (r) => kohdeOnPoltettu(ui, r);
   niputaFokusmerkit(ui, s);
+  /*
+   * POLTETUT VAIKENEVAT VASTA TÄSSÄ: tiiviste tuntee merkin lopullisen
+   * paikan, jonka kaksi edellistä passia juuri asettivat.
+   */
+  merkitsePoltetutNostot(ui);
   const zoom = s.toFixed(4);
   for (const ryhma of ui.fokuskohdeRyhmat ?? []) {
     if (ryhma.osuma) maare(ryhma.osuma, 'r', osumaR.toFixed(2));
@@ -1473,6 +1627,13 @@ function luovutaKohdeNimiot(ui, s, piilossa) {
     const nahty = new Set();
     for (const r of ryhmat) {
       if (!r.nimi || nahty.has(r.id)) continue;
+      /*
+       * POLTETUN MERKIN NIMI ON JO LAATASSA (Raamattu 31.8.2026:
+       * *"myös nostojen tekstit on hyvä polttaa suoraan kartalle"*),
+       * eikä sitä anneta nimikerrokselle — sama nimi kahdesti eri
+       * kirjasimella olisi täsmälleen v1366:n vika.
+       */
+      if (r.poltettu) continue;
       nahty.add(r.id);
       rivit.push({
         id: r.id,
@@ -1499,7 +1660,7 @@ function luovutaKohdeNimiot(ui, s, piilossa) {
   ui.fokuskohdePiiloNimiot = new Set(ryhmat.map((r) => r.id));
   ui.fokuskohdeNimioPuolet = new Map();
   for (const r of ryhmat) {
-    if (!r.glyyfi || !r.nimi || r.nimioNakyy === false) continue;
+    if (!r.glyyfi || !r.nimi || r.nimioNakyy === false || r.poltettu) continue;
     r.nimioNakyy = false;
     r.nimioVasemmalle = false;
     r.glyyfi.replaceChildren();
@@ -1507,7 +1668,7 @@ function luovutaKohdeNimiot(ui, s, piilossa) {
   }
 }
 
-function paivitaKohdeNimiot(ui, s) {
+export function paivitaKohdeNimiot(ui, s) {
   const ryhmat = ui.fokuskohdeRyhmat ?? [];
   if (!ryhmat.length) return;
   const avain = `${ui.fokuskohdeAvain}|${s.toFixed(4)}|${nippuAsettelunVersio()}`;
@@ -1530,7 +1691,14 @@ function paivitaKohdeNimiot(ui, s) {
   // Kohteittain, ei kopioittain: kiertävän laudan kopiot samaan riviin.
   const jono = new Map();
   ryhmat.forEach((r, i) => {
-    if (!r.glyyfi || !r.nimi) return;
+    /*
+     * EI `r.glyyfi`-EHTOA (31.8.2026): väistö on LADONTAA, ja
+     * laattageneraattori ajaa sen ilman DOMia (js/nostoladonta.js).
+     * Pelissä ehto ei muutu — `nimi` ja `glyyfi` kirjoitetaan samassa
+     * haarassa (piirraKohdemerkki), joten nimellinen rivi on aina myös
+     * solmullinen. Piirto alempana tarkistaa solmun erikseen.
+     */
+    if (!r.nimi) return;
     // Sama kaista molemmilta puolilta valmiiksi: mittaus on
     // välimuistissa (NOSTOSYM_LEVEYDET), joten toinen laatikko on
     // pelkkää peilausta eikä uutta canvas-mittausta.
@@ -1578,7 +1746,9 @@ function paivitaKohdeNimiot(ui, s) {
   ui.fokuskohdePiiloNimiot = piilossa;
   ui.fokuskohdeNimioPuolet = puolet;
   for (const r of ryhmat) {
-    if (!r.glyyfi || !r.nimi) continue;
+    // Poltetun merkin rasteri on tyhjä eikä sitä herätetä henkiin:
+    // symboli ja nimiö ovat laatassa (merkitsePoltetutNostot).
+    if (!r.glyyfi || !r.nimi || r.poltettu) continue;
     const nakyy = !piilossa.has(r.id);
     const vasemmalle = puolet.get(r.id) ?? false;
     if (r.nimioNakyy === nakyy && r.nimioVasemmalle === vasemmalle) continue;
@@ -1696,6 +1866,14 @@ export function paivitaFokuskohteet(ui, tiedettyNakyva = null) {
     // Tunnus → kohde, jotta napautuksen voittaja (lahinKohde) löytää
     // kortin datan ilman että jokainen merkki kantaa omaa sulkeumaansa.
     ui.fokuskohdeTiedot = new Map(kohteet.map(({ kohde }) => [kohde.id, kohde]));
+    /*
+     * MAAN KAUPUNGIT KASAUSPASSILLE (js/fokusniput.js nippuKaupungit).
+     * Sama lista, jolla ryhmittely juuri tehtiin — sarake latoutuu maan
+     * jokaisen kaupungin ympärille eikä vain sen, jossa pelaaja seisoo,
+     * koska poltettu merkki ei voi vaihtaa paikkaa vuoron mukana
+     * (Raamattu, KARTTANOSTOT POLTETAAN LAATTOIHIN).
+     */
+    ui.fokuskohdeKaupungit = maanKaupungit(ui, nykyinenIso(ui));
     if (!kohteet.length) suljeFokuskohde(ui);
     else lataaKohdeTyyli();
     for (const { kohde, paikka } of kohteet) {
@@ -1706,7 +1884,19 @@ export function paivitaFokuskohteet(ui, tiedettyNakyva = null) {
         const ryhma = el('g', { class: 'fokuskohde-ryhma' }, kerros);
         // Tietue kantaa myös nimiöväistön tarpeet (paivitaKohdeNimiot):
         // kohteen tunnus, glyyfiryhmä ja nimiön nykyinen tila.
-        const tietue = { g: ryhma, x, y: paikka.y, id: kohde.id };
+        /*
+         * `kierto` on tämän KOPION siirtymä laudan leveyden verran
+         * (js/ui.js kiertoKohdat). Se on tiivisteessä pakko vähentää
+         * pois: laattaan poltetaan yksi merkki, ja kiertävä lauta
+         * hoitaa toisen kopion laattojen omalla kierrolla
+         * (js/laattapyramidi.js). Ilman tätä kopio saisi eri
+         * tiivisteen, jäisi poltetuksi tunnistamatta ja piirtyisi
+         * elävänä poltetun päälle — juuri se kaksoispiirto, jota
+         * luettelo estää.
+         */
+        const tietue = {
+          g: ryhma, x, y: paikka.y, id: kohde.id, kierto: x - paikka.x,
+        };
         ui.fokuskohdeRyhmat.push(tietue);
         merkit.push(piirraKohdemerkki(ui, ryhma, kohde, tietue));
       }
