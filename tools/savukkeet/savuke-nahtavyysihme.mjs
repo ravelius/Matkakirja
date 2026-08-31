@@ -61,10 +61,32 @@ await sivu.route('**samireivinen.workers.dev/**', (route) => route.abort());
 await sivu.goto(`http://localhost:${palvelin.address().port}/`, { waitUntil: 'load' });
 await sivu.waitForTimeout(1500);
 
-/** Kaupunkikartta auki: nähtävyydet ovat sen kylttejä. */
+/**
+ * Kaupunkikartta auki: nähtävyydet ovat sen kylttejä.
+ *
+ * LAATTA KÄÄNNETÄÄN ENSIN (lisätty 31.8.2026). Savuke kirjoitettiin
+ * 27.–28.8.2026, jolloin FOKUSVIRTA_KORTIT oli pois päältä ja
+ * fokuskaupungin lehti aukesi saapumisessa suoraan. Omistajan päätös
+ * 29.8.2026 (*"Päälle — koko kulku testiin"*, v1323) käänsi lipun
+ * päälle, ja sen mukana palasi LEHTILUKKO: fokuskaupungin lehti aukeaa
+ * vasta kun laatan aarre on löydetty (js/fokusvirta.js
+ * fokusvirtaLukitseeLehden → js/ui.js openArrival palaa heti).
+ * Ateena on fokuskaupunki, joten sen kaupunkikartta ei enää auennut
+ * lainkaan ja savukkeen kymmenen väitettä kaatuivat ilmoittamatta
+ * mitään ihmeestä.
+ *
+ * Lukko ei ole tämän savukkeen mitattava asia (sitä vartioi
+ * savuke-fokusvirta), ja nähtävyysjuttu on pelaajalle nähtävissä
+ * täsmälleen siinä tilassa, johon laatan kääntäminen vie: aarteen
+ * jälkeisessä vapaassa tutkinnassa. Siksi laatta poistetaan
+ * kääntämättömien joukosta ennen avausta — se on sama tila, jonka
+ * peli itse antaa oikean vastauksen jälkeen. Kaupungeissa ilman
+ * fokusvirtaa (Peking) rivi ei tee mitään.
+ */
 const avaaKaupunki = async (kaupunki) => {
   await sivu.evaluate((k) => {
     const { ui } = window.matkakirja;
+    ui.game.tokens?.delete(k);
     ui.openArrival(ui.game.board.cityById.get(k));
   }, kaupunki);
   await sivu.waitForTimeout(1200);

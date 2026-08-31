@@ -1039,7 +1039,33 @@ export class Kartta {
      * silloin lähimpään portaaseen menosuunnassa — ei indeksiin, jota
      * ei ole.
      */
-    const vapaa = this.ui.zoomiVapaa;
+    /*
+     * PORTAIKON ALLE JÄÄNYT INDEKSI ON YHTÄ LAILLA "PORTAIDEN VÄLISSÄ"
+     * (korjattu 31.8.2026). Fokusikkunan pohja (fokusZoomMinimi) NOSTAA
+     * piirretyn kertoimen portaikon yli (zoomiKerroin rajaa sen
+     * zoomiRajat-pohjaan), mutta zoomiIndeksi jää siihen portaaseen,
+     * jolla oltiin ennen pohjan ilmestymistä. Silloin `lahin + suunta`
+     * laskee yhä pohjan ALAPUOLELLE, `pohjalle` osuu päälle myös
+     * LÄHENNETTÄESSÄ, ja alempi ehto palauttaa false — painike lakkasi
+     * toimimasta kokonaan.
+     *
+     * Näin kävi maailmankartalla v1366:sta alkaen (30.8.2026,
+     * "Purun jäänteet korjattu": ui.fokusPohjaBbox palasi FOKUS_POHJAT-
+     * taulusta, jolloin pohja on olemassa heti ensimmäisen lähennyksen
+     * jälkeen): yleiskuvasta pääsi yhden portaan sisään, ja siihen
+     * kartta jäi. Vartioimaton koska savukkeet mittasivat merkkejä
+     * eivätkä portaita — savuke-elaintaky kaatui tähän kolmella
+     * väitteellä (merkkikerros jäi yleiskuvan piiloon).
+     *
+     * Pohja on kerroin portaiden VÄLISSÄ aivan kuten nipistyksen jäljiltä
+     * jäänyt zoomiVapaa, joten se käsitellään samaa reittiä: lähennys
+     * hakee ensimmäisen pohjaa suuremman portaan, loitonnus pysähtyy
+     * pohjaan (alempi ehto). Loitonnusraja ei siis löysty pykälääkään.
+     */
+    const porrasNyt = tasot[this.zoomiIndeksi] ?? 0;
+    const pohjaNyt = this.fokusZoomMinimi();
+    const vapaa = this.ui.zoomiVapaa
+      || (pohjaNyt > 0 && porrasNyt > 0 && porrasNyt < pohjaNyt * 0.999 ? pohjaNyt : 0);
     const nykyinen = vapaa
       ? tasot.findIndex((t) => (suunta > 0 ? t > vapaa * 1.02 : t >= vapaa * 0.98))
       : this.zoomiIndeksi;
@@ -1062,7 +1088,7 @@ export class Kartta {
      * siihen näkymään, jonka sääntö sallii — mikä on samalla se, mitä
      * pelaaja yrittää nähdä.
      */
-    const pohjaKerroin = this.fokusZoomMinimi();
+    const pohjaKerroin = pohjaNyt;
     const pohjalle = pohjaKerroin > 0 && raaka < this.fokusPorrasMinimi();
     const uusi = pohjalle ? this.fokusPorrasMinimi() : raaka;
     const nykyKerroin = vapaa || (tasot[this.zoomiIndeksi] ?? 0);
