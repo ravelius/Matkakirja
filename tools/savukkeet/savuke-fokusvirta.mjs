@@ -389,8 +389,8 @@ const karki = await sivu.evaluate(() => {
 });
 /*
  * YLÄRIVI ON NIMILAPPU, EI NIMI (omistajan tilaus 27.8.2026): siinä
- * lukee "Pöllö Pulu" pöllö yli vedettynä. textContent näkee molemmat
- * sanat, joten tarkistetaan korvaava sana — se on se, joka jää.
+ * lukee "Viisas Pöllö Pulu" nimi yli vedettynä. textContent näkee
+ * kaikki sanat, joten tarkistetaan korvaava sana — se on se, joka jää.
  */
 vaadi('vaihe 2 on pöllön huomio KUPLASSA, ei kortissa',
   tila?.vaihe === 'pollo' && tila.kupla === true && tila.ylarivi.includes('Pulu'),
