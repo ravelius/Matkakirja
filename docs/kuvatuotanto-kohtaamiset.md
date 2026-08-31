@@ -37,6 +37,13 @@ Raamattua tai muuta kaanonia. Kuvatiedostoja ei lisätä repoon.
   tausta on pehmeä mutta kaupunki vielä tunnistettavissa.
 - Rajaus on enintään puolivartalo. Kysymys näkyy esineenä, toimintana tai
   miljöövihjeenä, mutta oikeaa vastausta ei paljasteta.
+- Varsinainen kysyjä katsoo aina suoraan kameran linssiin eli pelaajaan.
+  Sivuhahmot saavat reagoida muualle, mutta päähenkilön pupillit eivät saa
+  osoittaa linssin ohi.
+- Sarjan hahmojen kasvoikä, kasvonmuoto, ihonsävy, sukupuoli, ruumiinrakenne,
+  hiusten pituus ja väri, kulmakarvojen väri sekä moderni tai retrohenkinen
+  vaatetus vaihtelevat suunnitelmallisesti. Sama yhdistelmä ei toistu
+  peräkkäisissä kuvissa.
 - Ei kuvansisäistä tekstiä, valetunnuksia, logoa tai vesileimaa.
 - Jokaiselle kuvalle kirjoitetaan kuvan ulkopuolinen pieni tilanteen kuvateksti.
 
@@ -62,3 +69,7 @@ Livia nokkii taustalla murua ja huomaa kameran vasta kesken nokkaisun.
 | Wien | 64-vuotias Anton jatkaa juoksuaskelta ja kääntää vain päänsä pelaajaan | Vanha pörssirakennus bokehissa; päivämäärää ei näytetä | Tyylikoe valmis |
 | Pariisi | Colette avaa bouquiniste-kojua Maëlle-tyttärensä kanssa; Pulu jää vahingossa kuvaan | Vanha nimetön kirja ja vihreä koju; etymologiaa ei näytetä | Tyylikoe valmis |
 | Palermo / Sisilia | Rosalia ja Salvatore-isä keskeytetään nukketeatterin valmistelusta | Ritarinukke ilman nimiä tai tunnuksia | Tyylikoe valmis |
+| Barcelona | Mercè varjostaa silmiään kovalta auringolta tiheässä festivaaliväkijoukossa konfettipamauksen jälkeen | Lohikäärmehahmo bokehissa; ruusua ei näytetä | Tyylikoe valmis |
+| Tukholma | Astrid kohtaa pelaajan maailmanpyörän huipulla kuparinpunaiset hiukset tuulessa | Gamla Stan ja kapea varjo rakennusten välissä; mittaa ei näytetä | Tyylikoe valmis |
+| Marseille | Baptiste keskeyttää verkonvedon kahluuhousuissa vyötäröä myöten vedessä | Château d’If bokehissa; romaanin nimeä ei näytetä | Tyylikoe valmis |
+| Ateena | Nikos herätetään päiväunilta puistonpenkillä | Akropolis taustalla; Athenen lahjaa ei näytetä | Tyylikoe valmis |
