@@ -3096,10 +3096,22 @@ export class Kartta {
       cancelAnimationFrame(this.ui.merkkiPaluuKehys ?? 0);
       // …ja vasta seuraavassa kehyksessä peittävyys ylös, jolloin
       // selain näkee arvon muuttuvan ja tekee siirtymän.
-      this.ui.merkkiPaluuKehys = requestAnimationFrame(() => {
+      const nostaPeittavyys = () => {
+        clearTimeout(this.ui.merkkiHaipymaAjastin);
+        this.ui.merkkiHaipymaAjastin = 0;
+        cancelAnimationFrame(this.ui.merkkiPaluuKehys ?? 0);
         this.ui.merkkiPaluuKehys = 0;
         document.body.classList.remove('kartta-merkit-haipyy');
-      });
+      };
+      this.ui.merkkiPaluuKehys = requestAnimationFrame(nostaPeittavyys);
+      /*
+       * VARAREITTI TAUSTALLE. Piilossa olevalla sivulla kehyspyyntö ei
+       * laukea lainkaan, ja ilman tätä nimikerros jäisi läpinäkyväksi
+       * siihen asti kun sivu palaa esiin — eikä jumivahti sitä siivoa,
+       * koska sen mielestä piilo on jo purettu. Kumpi ehtii ensin,
+       * siivoaa toisen.
+       */
+      this.ui.merkkiHaipymaAjastin = setTimeout(nostaPeittavyys, MERKKIEN_HAIPYMA_MS);
     };
     /** Ele on aidosti käynnissä: polttamaton karttasisältö väistyy. */
     const piilotaMerkit = () => {
