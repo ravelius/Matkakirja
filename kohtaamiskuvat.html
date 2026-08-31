@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#241c15">
+  <meta name="description" content="Matkakirjan paikalliskohtaamisten hyväksyntägalleria.">
+  <title>Kohtaamiskuvat — Matkakirja</title>
+  <link rel="stylesheet" href="css/kohtaamiskuvat.css">
+</head>
+<body>
+  <header class="ylapalkki">
+    <a class="takaisin" href="./" aria-label="Takaisin Matkakirjaan">← Matkakirja</a>
+    <div class="otsikkoryhma">
+      <p class="ylatunnus">Kuvatuotannon työpöytä</p>
+      <h1>Paikalliset kohtaamiset</h1>
+      <p class="johdanto">Nykyhetken ihmisiä, vanhojen merkintöjen äärellä. Kaupunki on vihje — ihminen on kohtaus.</p>
+    </div>
+    <div class="laskurit" aria-live="polite">
+      <span><strong id="kuvia-yhteensa">0</strong> kuvaa</span>
+      <span><strong id="kaupunkeja-yhteensa">0</strong> kaupunkia</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="ohjaimet" aria-label="Gallerian suodattimet">
+      <label>
+        <span>Etsi kaupungilla tai hahmolla</span>
+        <input id="haku" type="search" placeholder="Esimerkiksi Dublin tai Molly" autocomplete="off">
+      </label>
+      <label>
+        <span>Tuotantotila</span>
+        <select id="tila">
+          <option value="kaikki">Kaikki</option>
+          <option value="tarkistettu">Täysikokotarkistettu</option>
+          <option value="r2">R2:ssa</option>
+          <option value="pelissa">Pelissä</option>
+        </select>
+      </label>
+    </section>
+
+    <p id="tyhja" class="tyhja" hidden>Näillä rajauksilla ei löytynyt kuvia.</p>
+    <section id="galleria" class="galleria" aria-label="Kohtaamiskuvat"></section>
+  </main>
+
+  <template id="kuvakortti">
+    <article class="kortti">
+      <div class="kuvakehys">
+        <img class="kuva" alt="" loading="lazy" decoding="async">
+        <div class="kuva-puuttuu" hidden>
+          <span>R2-vienti odottaa</span>
+          <small>Kuva ilmestyy tähän automaattisesti viennin jälkeen.</small>
+        </div>
+        <span class="tilamerkki"></span>
+      </div>
+      <div class="korttisisalto">
+        <p class="maa"></p>
+        <h2><span class="kaupunki"></span> <span aria-hidden="true">·</span> <span class="hahmo"></span></h2>
+        <p class="kuvateksti"></p>
+        <dl>
+          <div>
+            <dt>Keskeytetty hetki</dt>
+            <dd class="hetki"></dd>
+          </div>
+          <div>
+            <dt>Kuvan vihje</dt>
+            <dd class="vihje"></dd>
+          </div>
+        </dl>
+      </div>
+    </article>
+  </template>
+
+  <script type="module" src="js/kohtaamiskuvat.js"></script>
+</body>
+</html>

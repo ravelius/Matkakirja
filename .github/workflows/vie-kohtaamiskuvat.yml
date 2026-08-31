@@ -1,0 +1,138 @@
+# Vie hyväksyntägallerian kuvat Google Drivesta suoraan R2:een.
+# Kuvat eivät käy git-repossa: runner lataa vain datatiedostossa nimetyt
+# JPEGit väliaikaiseen hakemistoon ja siirtää ne mediämpäriin.
+name: Vie kohtaamiskuvat R2:een
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'js/kohtaamiskuvat-data.js'
+      - '.github/workflows/vie-kohtaamiskuvat.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vie-kohtaamiskuvat
+  cancel-in-progress: false
+
+jobs:
+  vie:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      DRIVE_KANSIO: 1cYzynbiFKySAz6xiv_TAO_lhiDhINlHe
+      JULKINEN: https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Tarkista yhteydet
+        env:
+          DRIVE_AVAIN: ${{ secrets.SAMIREIVINEN_DRIVE_API }}
+          R2_TILI: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_AMPARI: ${{ secrets.R2_BUCKET }}
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "$DRIVE_AVAIN" ] || puuttuu="$puuttuu SAMIREIVINEN_DRIVE_API"
+          [ -n "$R2_TILI" ] || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ] || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "$R2_AMPARI" ] || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Puuttuvat repository secretit:$puuttuu"
+            exit 1
+          fi
+
+      - name: Nouda nimetyt JPEGit Drivesta
+        env:
+          DRIVE_AVAIN: ${{ secrets.SAMIREIVINEN_DRIVE_API }}
+        run: |
+          set -euo pipefail
+          mkdir -p kohtaamiset
+          node --input-type=module <<'SKRIPTI'
+          import { writeFile } from 'node:fs/promises';
+          import { kohtaamiskuvat } from './js/kohtaamiskuvat-data.js';
+
+          const avain = process.env.DRIVE_AVAIN;
+          const kansio = process.env.DRIVE_KANSIO;
+          const nimet = [...new Set(kohtaamiskuvat.map(({ tiedosto }) => tiedosto))];
+
+          function jpegMitat(data) {
+            if (data[0] !== 0xff || data[1] !== 0xd8) throw new Error('ei ole JPEG');
+            let i = 2;
+            while (i + 9 < data.length) {
+              if (data[i] !== 0xff) { i += 1; continue; }
+              const merkki = data[i + 1];
+              if (merkki === 0xd8 || merkki === 0xd9) { i += 2; continue; }
+              const pituus = data.readUInt16BE(i + 2);
+              if (pituus < 2 || i + 2 + pituus > data.length) break;
+              if ([0xc0, 0xc1, 0xc2, 0xc3, 0xc5, 0xc6, 0xc7, 0xc9, 0xca, 0xcb, 0xcd, 0xce, 0xcf].includes(merkki)) {
+                return { korkeus: data.readUInt16BE(i + 5), leveys: data.readUInt16BE(i + 7) };
+              }
+              i += 2 + pituus;
+            }
+            throw new Error('JPEG-mittoja ei löytynyt');
+          }
+
+          const q = encodeURIComponent(`'${kansio}' in parents and trashed=false`);
+          const listaUrl = `https://www.googleapis.com/drive/v3/files?q=${q}&fields=files(id,name,mimeType,size)&pageSize=1000&key=${avain}`;
+          const listaVastaus = await fetch(listaUrl);
+          if (!listaVastaus.ok) throw new Error(`Drive-listaus: HTTP ${listaVastaus.status}`);
+          const lista = (await listaVastaus.json()).files ?? [];
+
+          for (const nimi of nimet) {
+            const osumat = lista.filter((tiedosto) => tiedosto.name === nimi);
+            if (osumat.length !== 1) throw new Error(`${nimi}: Drive-osumia ${osumat.length}, odotettiin 1`);
+            const tiedosto = osumat[0];
+            if (tiedosto.mimeType !== 'image/jpeg') throw new Error(`${nimi}: MIME ${tiedosto.mimeType}`);
+
+            const vastaus = await fetch(`https://www.googleapis.com/drive/v3/files/${tiedosto.id}?alt=media&key=${avain}`);
+            if (!vastaus.ok) throw new Error(`${nimi}: lataus HTTP ${vastaus.status}`);
+            const data = Buffer.from(await vastaus.arrayBuffer());
+            const { leveys, korkeus } = jpegMitat(data);
+            if (leveys !== 1536 || korkeus !== 1536) throw new Error(`${nimi}: ${leveys}x${korkeus}, odotettiin 1536x1536`);
+            if (!data.includes(Buffer.from('ICC_PROFILE'))) throw new Error(`${nimi}: ICC-profiili puuttuu`);
+            await writeFile(`kohtaamiset/${nimi}`, data);
+            console.log(`${nimi}: image/jpeg, ${leveys}x${korkeus}, ICC, ${data.length} tavua`);
+          }
+          SKRIPTI
+
+      - name: Vie R2-mediämpäriin
+        env:
+          R2_TILI: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_AMPARI: ${{ secrets.R2_BUCKET }}
+        run: |
+          set -euo pipefail
+          aws s3 sync kohtaamiset "s3://$R2_AMPARI/kohtaamiset" \
+            --endpoint-url "https://$R2_TILI.r2.cloudflarestorage.com" \
+            --no-progress --size-only --content-type image/jpeg \
+            --cache-control "public, max-age=2592000"
+
+      - name: Varmista julkinen R2-luku
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'SKRIPTI'
+          import { kohtaamiskuvat } from './js/kohtaamiskuvat-data.js';
+          for (const { tiedosto } of kohtaamiskuvat) {
+            const vastaus = await fetch(`${process.env.JULKINEN}/kohtaamiset/${encodeURIComponent(tiedosto)}`, {
+              headers: { Range: 'bytes=0-2047', Origin: 'https://ravelius.github.io' },
+            });
+            if (![200, 206].includes(vastaus.status)) throw new Error(`${tiedosto}: R2 HTTP ${vastaus.status}`);
+            const tyyppi = vastaus.headers.get('content-type') ?? '';
+            if (!tyyppi.startsWith('image/jpeg')) throw new Error(`${tiedosto}: R2 MIME ${tyyppi}`);
+            if (!vastaus.headers.get('access-control-allow-origin')) throw new Error(`${tiedosto}: CORS-otsake puuttuu`);
+            console.log(`${tiedosto}: R2 ${vastaus.status}, ${tyyppi}, CORS kunnossa`);
+          }
+          SKRIPTI
