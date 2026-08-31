@@ -22,12 +22,13 @@
  *      eläintäyt; kun kamera ajaa maalehdelle, maan omat kohdemerkit
  *      ilmestyvät ja rivien luvut kasvavat niiden mukana. Juuri tämä on
  *      omistajan *"kappalemäärä kyseisen maan kohdalla"*.
- *   4. YKSI PALLO SYTYTTÄÄ KOKO SUKUKUNNAN. Pääkategoria on ryhmä
- *      symboleja (js/fokusnosto-symbolit.js NOSTOSYM_PAAKATEGORIAT),
- *      ja painallus sytyttää kartalta ryhmän KAIKKIEN alalajien merkit
- *      — ei vain sen, jonka kuva on rivillä — JA rivin oman pallon.
- *      Toinen painallus sammuttaa molemmat, eivätkä muut aiheet syty
- *      mukana.
+ *   4. KARTALLA ON VAIN SELITTEEN KAHDEKSAN SYMBOLIA (omistajan päätös
+ *      31.8.2026). Jokainen kartalle piirretty merkki on jonkin
+ *      seliterivin oma kärkisymboli (js/fokuskohteet.js kohteenSymboli
+ *      → js/karttavalot.js karttavaloKarkisymboli) — kartalla ei siis
+ *      ole yhtään merkkiä, jota selitteestä ei löydy. Rivin painallus
+ *      sytyttää sen aiheen merkit JA rivin oman pallon; toinen
+ *      painallus sammuttaa molemmat, eivätkä muut aiheet syty mukana.
  *   5. OFF JA ALL. Yksi painallus sytyttää tai sammuttaa kaikki.
  *   6. KARTTAKLIKKAUS PIILOTTAA VALIKON MUTTA EI VALOJA (omistaja:
  *      *"Popup LIUKUU YLÖS PIILOON kun karttaa klikataan; valot jäävät
@@ -411,22 +412,37 @@ vaadi('eläinvalot palavat kartalla',
 await sivu.screenshot({ path: join(KAAPPAUKSET, 'selitevalikko-valot-elaimet.png') });
 await klikkaa('.karttaselite-kaikki:first-of-type');
 
-/* --- 4: väripallo sytyttää koko sukukunnan ja oman pallonsa --- */
+/* --- 4: kartalla on vain kahdeksan symbolia, ja pallo sytyttää oman --- */
 
 /*
- * KOEAIHEEKSI SE, JOSSA ON ENITEN ALALAJEJA. Pääkategoria on ryhmä
- * symboleja, ja juuri ryhmittely on se, mitä tämä savuke vartioi: yhden
- * pallon on sytytettävä myös ne merkit, joiden oma symboli EI ole
- * rivillä näkyvä kärkimerkki (esim. Kulttuurin malja ja seppele).
+ * MIKÄ TÄSSÄ MUUTTUI 31.8.2026. Vartio mittasi ennen, että yksi pallo
+ * sytyttää myös ne merkit, joiden oma symboli EI ole rivillä näkyvä
+ * kärkimerkki (Kulttuurin malja ja seppele). Omistajan päätös poisti
+ * koko tilanteen: kartalla on enää KAHDEKSAN symbolia, eli täsmälleen
+ * selitteen kärkisymbolit (js/fokuskohteet.js kohteenSymboli,
+ * js/karttavalot.js karttavaloKarkisymboli). Ryhmän muut kategoriat
+ * elävät korteissa, eivät kartalla.
+ *
+ * Vartio mittaa siis nyt sen, mikä päätöksestä voi rikkoutua: että
+ * kartalle ei ilmesty yhtään merkkiä, jota selitteessä ei ole. Se on
+ * tiukempi väite kuin vanha — vanha salli lisämerkit, tämä kieltää ne.
  */
+const KARJET = Object.fromEntries(KARTTAVALO_AIHEET.map((r) => [r.aihe, r.symboli]));
+const vieraat = Object.entries(lehdella)
+  .filter(([aihe, t]) => t.alalajit.join() !== KARJET[aihe]);
+vaadi('kartan merkit ovat vain selitteen kahdeksan kärkisymbolia',
+  vieraat.length === 0,
+  JSON.stringify(vieraat.map(([a, t]) => `${a}: ${t.alalajit.join('+')} ≠ ${KARJET[a]}`)));
+vaadi('jokainen kartalla oleva alalaji kuuluu oman rivinsä pääkategoriaan',
+  Object.values(lehdella).every((t) => t.alalajit
+    .every((ala) => NOSTOSYM_PAAKATEGORIAT[ala])),
+  JSON.stringify(Object.entries(lehdella).map(([a, t]) => `${a}: ${t.alalajit.join('+')}`)));
+
+/* Koeaiheeksi se, jossa on eniten merkkejä — sytytys näkyy parhaiten. */
 const koeaihe = Object.entries(lehdella)
-  .sort((a, b) => b[1].alalajit.length - a[1].alalajit.length
-    || b[1].kappaleita - a[1].kappaleita)[0]?.[0];
+  .sort((a, b) => b[1].kappaleita - a[1].kappaleita)[0]?.[0];
 vaadi('kartalla on ainakin yksi aihe, jonka valot voi sytyttää',
   Boolean(koeaihe), JSON.stringify(Object.keys(lehdella)));
-vaadi('koeaiheessa on useampi kuin yksi symboli — ryhmittely on oikeasti mitattavissa',
-  lehdella[koeaihe].alalajit.length > 1,
-  `${koeaihe}: ${JSON.stringify(lehdella[koeaihe].alalajit)}`);
 
 await klikkaa(`.karttaselite-rivi[data-aihe="${koeaihe}"]`);
 const sytytetty = await valot();
@@ -435,7 +451,7 @@ vaadi(`väripallon painallus sytyttää aiheen (${koeaihe}) valot kartalle`,
   sytytetty[koeaihe].nakyvia === sytytetty[koeaihe].solmuja
   && sytytetty[koeaihe].nakyvia > 0,
   JSON.stringify(sytytetty[koeaihe]));
-vaadi('yksi pallo sytyttää pääkategorian KAIKKIEN alalajien merkit',
+vaadi('sytytys ei jätä yhtäkään aiheen merkkiä pimeäksi',
   sytytetty[koeaihe].nakyvatAlalajit.join() === sytytetty[koeaihe].alalajit.join(),
   `${JSON.stringify(sytytetty[koeaihe].nakyvatAlalajit)} vs `
   + `${JSON.stringify(sytytetty[koeaihe].alalajit)}`);

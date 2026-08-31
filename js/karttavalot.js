@@ -18,8 +18,13 @@
  * (js/fokusnosto-symbolit.js NOSTOSYM_LUOKAT, Raamatun
  * SYMBOLITAKSONOMIA) ja niiden värit (css/styles.css --sym-*). Valon
  * aihe on niiden PÄÄKATEGORIA — omistajan lopullinen jako 29.8.2026,
- * kahdeksan riviä neljäntoista sijaan (NOSTOSYM_PAAKATEGORIAT). Merkit
- * kartalla ja symbolit korteissa EIVÄT muutu: valikko ryhmittelee.
+ * kahdeksan riviä neljäntoista sijaan (NOSTOSYM_PAAKATEGORIAT).
+ *
+ * OMISTAJAN JATKOPÄÄTÖS 31.8.2026: myös KARTALLA on vain nuo kahdeksan
+ * kärkisymbolia (karttavaloKarkisymboli). Ryhmän muut kategoriat elävät
+ * korteissa ja täyissä, mutta kartan merkiksi ne saavat ryhmänsä
+ * kärkisymbolin — muuten pelaaja näkisi kartalla merkin, jota ei ole
+ * selitteessä.
  *
  * Seliterivin VÄRIPALLO on ryhmän kärkisymbolin oma väri — sama muste,
  * jolla merkki on kartalle piirretty — eikä uutta väriä keksitä
@@ -91,9 +96,10 @@ const KARTTAVALO_TALLE = 'matkakirja-karttavalot';
  * myös maljan ja seppeleen, yksi vaaka myös veturin ja ankkurin.
  *
  * `symboli` on ryhmän kärkisymboli symbolikirjaston tunnuksena
- * (piirraNostosymboli) — se merkki, joka rivillä näytetään. Ryhmän
- * muut symbolit näkyvät kartalla omina merkkeinään; ne kuuluvat tähän
- * riviin NOSTOSYM_PAAKATEGORIAT-taulun kautta.
+ * (piirraNostosymboli) — se merkki, joka rivillä näytetään. 31.8.2026
+ * alkaen se on myös ainoa merkki, jonka ryhmän kohteet KARTALLA saavat
+ * (karttavaloKarkisymboli); ryhmän muut kategoriat kuuluvat tähän riviin
+ * NOSTOSYM_PAAKATEGORIAT-taulun kautta ja näkyvät korteissa.
  */
 export const KARTTAVALO_AIHEET = [
   { aihe: 'kaupungit', nimi: 'Kaupungit', symboli: 'kaupunki' },
@@ -109,13 +115,56 @@ export const KARTTAVALO_AIHEET = [
 /** Tunnetut aiheet — yksi totuus myös kutsujien tarkistuksiin. */
 export const KARTTAVALO_TYYPIT = new Set(KARTTAVALO_AIHEET.map((r) => r.aihe));
 
+/** Aihe → ryhmän kärkisymboli. Peili KARTTAVALO_AIHEET-taulusta. */
+const KARTTAVALO_KARJET = Object.fromEntries(
+  KARTTAVALO_AIHEET.map((r) => [r.aihe, r.symboli]),
+);
+
+/**
+ * SYMBOLI → RYHMÄNSÄ KÄRKISYMBOLI, eli se merkki, joka kartalle
+ * oikeasti piirretään.
+ *
+ * OMISTAJAN PÄÄTÖS 31.8.2026: KARTALLA ON VAIN KAHDEKSAN SYMBOLIA —
+ * täsmälleen selitevalikon kahdeksan riviä (KARTTAVALO_AIHEET). Ennen
+ * tätä kartalla oli neljäntoista kategorian merkit, ja niistä kuusi
+ * (silmä, malja, veturi, sulkakynä, ankkuri, seppele) esiintyi ilman
+ * omaa seliteriviä: pelaaja näki kartalla ankkurin muttei löytänyt
+ * ankkuria selitteestä. Nyt jokainen kartan merkki on jonkin
+ * seliterivin oma kuva, ja kartta ja selite vastaavat toisiaan.
+ *
+ * RYHMITTELY ON YHÄ YHDESSÄ PAIKASSA. Tämä funktio ei tunne yhtään
+ * paria itse: se kysyy symbolin pääkategorian
+ * (js/fokusnosto-symbolit.js NOSTOSYM_PAAKATEGORIAT) ja poimii sen
+ * aiheen kärkisymbolin yllä olevasta omistajan taulusta. Uusi
+ * kategoria seuraa siis perässä ilman riviä täällä.
+ *
+ * TARKAT KATEGORIAT EIVÄT KATOA: ne elävät kortti- ja täkypuolella
+ * (NOSTOSYM_LUOKAT, nostosymKortinYlarivi), ja kuuden merkin piirrokset
+ * ovat yhä käytössä siellä. Kartan kohdekortin ylärivi seuraa kuitenkin
+ * merkkiä tarkoituksella (js/fokuskohteet.js piirraKohdeYlarivi): kortti
+ * ja merkki kertovat samaa (omistaja 26.8.2026).
+ *
+ * LUONNOLLA ON KARTALLA KAKSI MUOTOA: kärkisymboli `luonto` piirtyy
+ * vuorelle kolmiona ja merelle aaltona kohteen tyypin mukaan
+ * (js/fokusnosto-symbolit.js NOSTOSYM_MINI_LAJIT). Molemmat ovat
+ * Luonto-rivin omassa selitekuvassa, joten selite kattaa nekin.
+ *
+ * @param {?string} symboli symbolikategoria (NOSTOSYM_TYYPIT).
+ * @returns {?string} ryhmän kärkisymboli, tai null tuntemattomalle.
+ */
+export function karttavaloKarkisymboli(symboli) {
+  const aihe = nostosymPaakategoria(symboli);
+  return aihe ? (KARTTAVALO_KARJET[aihe] ?? null) : null;
+}
+
 /**
  * Aiheen väri CSS-lausekkeena.
  *
  * Väri luetaan ryhmän kärkisymbolin omasta muuttujasta (--sym-*), eli
- * pallo on täsmälleen se muste, jolla kärkimerkki on kartalle
- * piirretty. Ryhmän muut merkit ovat kartalla omissa väreissään —
- * pallo lupaa aiheen, ei yhtä sävyä.
+ * pallo on täsmälleen se muste, jolla rivin merkki on kartalle
+ * piirretty — ja 31.8.2026 alkaen kartalla ei ole muita saman aiheen
+ * merkkejä (karttavaloKarkisymboli), joten pallo ja kartta ovat samaa
+ * sävyä.
  */
 export function karttavaloVari(aihe) {
   const rivi = KARTTAVALO_AIHEET.find((r) => r.aihe === aihe);
@@ -163,8 +212,12 @@ export function piirraKarttavalo(g, symboli, avain, koko = 1) {
   const valo = el('g', {
     class: `karttavalo karttavalo-${aihe}`,
     'data-aihe': aihe,
-    // Alalaji jää talteen merkkiin: savuke lukee siitä, että yksi
-    // pallo sytyttää ryhmän KAIKKI symbolit eikä vain kärkimerkkiä.
+    /*
+     * Merkin oma symboli jää talteen. 31.8.2026 alkaen se on aina
+     * ryhmän kärkisymboli (js/fokuskohteet.js kohteenSymboli), ja juuri
+     * sitä savuke vartioi: kartalla ei saa olla merkkiä, jota selite ei
+     * näytä (tools/savukkeet/savuke-selitevalikko.mjs).
+     */
     'data-ala': symboli,
     'data-avain': String(avain ?? aihe),
     'pointer-events': 'none',

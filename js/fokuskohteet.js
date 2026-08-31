@@ -106,7 +106,7 @@ import { MAAILMANKARTAN_NIMET } from './packs/maailmankartta-nimet.js';
 import {
   LAUDAN_YMPARYS, PARIN_ETAISYYS, asetaKohdenimet, karttanimetLatovat, normalisoiNimi,
 } from './karttanimet.js';
-import { piirraKarttavalo } from './karttavalot.js';
+import { karttavaloKarkisymboli, piirraKarttavalo } from './karttavalot.js';
 import { asetaKuva } from './media.js';
 import { html, jaaKappaleiksi, nielaiseSulkevaNapautus, polloNimilappu } from './ui-apurit.js';
 import { piirraReaktiot } from './reaktiot.js';
@@ -524,6 +524,23 @@ function varmistaKohdekerros(ui) {
  *
  * Vihreä tuikkiva kohtaamispiste (js/fokuspiste.js) EI saa symbolia —
  * sen erilaisuus on sen merkki (Raamattu).
+ *
+ * ── KARTALLA ON VAIN KAHDEKSAN SYMBOLIA (omistaja 31.8.2026) ───────
+ *
+ * Valintajärjestys yllä antaa KOHTEEN TARKAN KATEGORIAN
+ * (kohteenKategoria), joita on neljätoista. Kartalle niistä piirretään
+ * enää RYHMÄN KÄRKISYMBOLI — täsmälleen selitevalikon kahdeksan riviä
+ * (js/karttavalot.js KARTTAVALO_AIHEET, karttavaloKarkisymboli).
+ *
+ * MIKSI: kuusi merkkiä (silmä, malja, veturi, sulkakynä, ankkuri,
+ * seppele) esiintyi kartalla ilman omaa seliteriviä — pelaaja näki
+ * ankkurin muttei löytänyt ankkuria selitteestä. Nyt ankkuri on vaaka,
+ * sulkakynä on pylväs, ja kartta ja selite vastaavat toisiaan.
+ *
+ * MUUNNOS ON TÄSSÄ EIKÄ PIIRTOKERROKSESSA, koska tämä funktio on
+ * kartan merkin ainoa lähde: sitä seuraavat myös aihevalo, selitteen
+ * kappalemäärät ja kohdekortin ylärivi, eikä suodatinta tarvitse siksi
+ * toistaa yhdessäkään kutsujassa.
  */
 const KOHDE_TYYPPISYMBOLIT = {
   // Luonto on yksi kategoria: vuoret, meret, saaret ja joet jakavat
@@ -546,11 +563,17 @@ const KOHDE_TYYPPISYMBOLIT = {
   kaupunki: 'kaupunki',
 };
 
-function kohteenSymboli(kohde) {
+/** Kohteen TARKKA kategoria (neljätoista) — ks. valintajärjestys yllä. */
+function kohteenKategoria(kohde) {
   if (kohde?.ihme?.kadonnut && kohde.ihme.osoite) return 'ihme';
   if (NOSTOSYM_TYYPIT.has(kohde?.symboli)) return kohde.symboli;
   if (kohteenKierrokset(kohde).length) return 'silma';
   return KOHDE_TYYPPISYMBOLIT[kohde?.tyyppi] ?? null;
+}
+
+/** Kartalle piirtyvä merkki: ryhmän kärkisymboli, kahdeksasta. */
+function kohteenSymboli(kohde) {
+  return karttavaloKarkisymboli(kohteenKategoria(kohde));
 }
 
 /*
@@ -3132,6 +3155,15 @@ function raahausTaiSulku(ui, popup, alku) {
  * aina samaa; vierellä on luokan nimi (NOSTOSYM_LUOKAT). Symbolittomat
  * kohteet — kaupunki ja muu ilman symboli-kenttää — pitävät entisen
  * tyyppinimiön, koska niillä ei ole luokkaa kerrottavana.
+ *
+ * SÄÄNTÖ ON YHÄ SAMA, MUTTA SEN ARVOJA ON NYT KAHDEKSAN (omistaja
+ * 31.8.2026): kun kartan merkiksi tuli ryhmän kärkisymboli, sama
+ * kärkisymboli ja sen luokkanimi näkyvät myös tässä ylärivissä —
+ * ankkurikohteen kortti sanoo *Kauppa* eikä *Merenkulku*. Se on
+ * suoraa seurausta siitä, että kortin ja merkin on kerrottava samaa;
+ * jos omistaja haluaa kortille tarkan luokan takaisin, tässä
+ * vaihdetaan kohteenSymboli → kohteenKategoria, ja kartta pysyy
+ * kahdeksassa.
  */
 /*
  * ============ NOSTO JOLLA ON KOHDE EI LUO OMAA MERKKIÄ ==============
