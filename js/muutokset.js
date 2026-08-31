@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1395, teksti: 'Polttamaton kerros piiloon karttaeleen ajaksi' },
   { v: 1394, teksti: 'Kaupungin merkit karttavakioksi — musta pippuri pois' },
   { v: 1393, teksti: 'Nappula takaisin laatan sisään fokusnäkymässä' },
   { v: 1392, teksti: 'Nostotaso ja pisteen karttavakio Raamattuun' },

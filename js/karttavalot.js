@@ -68,8 +68,9 @@
  *     ankkuriryhmässä ja skaalautuu sen mukana (js/ui.js
  *     fokusMerkkiSkaalaKartalle).
  *
- * Eleen ajaksi valot piiloutuvat muiden merkkien mukana, koska ne ovat
- * niissä samoissa kerroksissa (css/styles.css kartta-merkit-piilossa).
+ * Eleen ajaksi valot häipyvät ja piiloutuvat muiden merkkien mukana,
+ * koska ne ovat niissä samoissa kerroksissa (css/styles.css
+ * kartta-merkit-haipyy ja kartta-merkit-piilossa).
  *
  * ── NIMET ON PREFIKSOITU ───────────────────────────────────────────
  *
