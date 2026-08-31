@@ -420,6 +420,7 @@ jobs:
             echo "Paikatut laatat viety $n tasolta versioon $VERSIO."
             exit 0
           fi
+
           for taso in ulos/z*; do
             [ -d "$taso" ] || continue
             z=$(basename "$taso")
@@ -443,6 +444,40 @@ jobs:
             n=$((n + 1))
           fi
           echo "Viety $n erää shardista ${{ matrix.shardi.nimi }}."
+
+      # PAIKKAUS TODISTAA ITSENSÄ ENNEN KUIN LUETTELO JULKAISTAAN.
+      #
+      # Kaksi listausta (lähdeversio ja uusi versio) ja niiden ETagien
+      # vertailu: jokaisen alueen ULKOPUOLISEN laatan on oltava
+      # bitilleen lähteen laatta ja jokaisen alueen laatan on oltava
+      # olemassa. Listaus on sekunteja; laattojen lataaminen olisi
+      # gigatavu. R2 antaa yksiosaiselle objektille ETagiksi sisällön
+      # MD5:n, joten kopion ehjyys on mitattavissa lataamatta mitään.
+      #
+      # Tämä on jobin viimeinen askel, ja luettelojobi tulee vasta
+      # `needs: laatat` -riippuvuuden takaa: jos kopio jäi kesken tai
+      # piirto vuoti alueen yli, uusi versio EI koskaan päädy
+      # `pyramidi.json`:iin eikä siis kenenkään selaimeen.
+      - name: Todenna paikkaus ämpärissä
+        if: ${{ matrix.shardi.paikkaus && inputs.vie }}
+        env:
+          AMPARI: ${{ secrets.R2_BUCKET }}
+          PAATE: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+        run: |
+          set -euo pipefail
+          # Sama työlista kuin piirrossa, samasta koodista.
+          node tools/generoi-laattapyramidi.mjs paikkauslista \
+            --tasot "$TASOT" --alue "$ALUE" --versio "$VERSIO" \
+            --muoto "$MUOTO" --laatta "$LAATTA" --vain-lista
+          aws s3api list-objects-v2 --bucket "$AMPARI" \
+            --prefix "julisteet/pyramidi/$LAHDEVERSIO/" \
+            --endpoint-url "$PAATE" > lahde-listaus.json
+          aws s3api list-objects-v2 --bucket "$AMPARI" \
+            --prefix "julisteet/pyramidi/$VERSIO/" \
+            --endpoint-url "$PAATE" > paikattu-listaus.json
+          node tools/paikkaa-pyramidi.mjs vertaa \
+            --lahde lahde-listaus.json --paikattu paikattu-listaus.json \
+            --lista paikkauslista/laatat.json
 
   # ---------------------------------------------------------- luettelo
   luettelo:

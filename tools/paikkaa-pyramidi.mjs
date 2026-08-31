@@ -59,8 +59,10 @@ const KAYTTO = `Käyttö:
   node tools/paikkaa-pyramidi.mjs suunnittele --luettelo <polku|-> \\
        --lahdeversio <versio> --versio <uusi versio> --alue lon0,lat0,lon1,lat1 \\
        [--nostoversio <versio>] [--salli-eri-luettelo] [--ulos <tiedosto>]
-  node tools/paikkaa-pyramidi.mjs vertaa --lahde <kansio> --paikattu <kansio> \\
-       --lista <laatat.json>
+  node tools/paikkaa-pyramidi.mjs vertaa --lahde <kansio|s3-listaus.json> \\
+       --paikattu <kansio|s3-listaus.json> --lista <laatat.json>
+       (listaus = aws s3api list-objects-v2 -tuloste; vertailu tehdään
+        ETageilla eikä yhtään laattaa ladata)
   node tools/paikkaa-pyramidi.mjs sauma --paikattu <kansio> --lista <laatat.json> \\
        [--kuva <png>] [--raja 2.5]`;
 
@@ -177,8 +179,62 @@ function suunnittele() {
 
 /* ------------------------------------------------------------ vertaa */
 
-/** Kaikki laatat kansiossa: "z:sarake:rivi" -> polku. */
-function keraaLaatat(juuri) {
+/**
+ * Kaikki laatat: "z:sarake:rivi" -> tiiviste.
+ *
+ * KAKSI LÄHDETTÄ, SAMA VERTAILU. Kuivaharjoituksessa laatat ovat
+ * levyllä, ja tiiviste on tiedoston sha256. Oikeassa ajossa ne ovat
+ * ämpärissä, eikä 23 340 laattaa ladata mihinkään vertailua varten —
+ * silloin syöte on `aws s3api list-objects-v2` -tuloste ja tiiviste on
+ * objektin ETag. R2 antaa yksiosaiselle objektille ETagiksi sisällön
+ * MD5:n, joten listaus riittää todistamaan, että kopioitu laatta on
+ * bitilleen lähteen laatta. Kaksi listausta on sekunteja; latauksia
+ * olisi gigatavu.
+ */
+function keraaLaatat(polku) {
+  if (polku.endsWith('.json')) return { laji: 'etag', laatat: keraaListauksesta(polku) };
+  const laatat = new Map();
+  for (const [avain, tiedosto] of keraaKansiosta(polku)) laatat.set(avain, tiiviste(tiedosto));
+  return { laji: 'sha256', laatat };
+}
+
+/**
+ * `aws s3api list-objects-v2` -tuloste (myös useampi sivu peräkkäin
+ * samassa tiedostossa ei haittaa: luetaan `Contents` kaikista
+ * JSON-olioista). Avain poimitaan polun lopusta, joten versio-osa ja
+ * ämpärin etuliite eivät vaikuta.
+ */
+function keraaListauksesta(polku) {
+  const teksti = readFileSync(polku, 'utf8');
+  const oliot = [];
+  try {
+    oliot.push(JSON.parse(teksti));
+  } catch {
+    /* Useampi peräkkäinen JSON-olio (sivutettu listaus). */
+    for (const pala of teksti.split(/(?<=\})\s*(?=\{)/)) oliot.push(JSON.parse(pala));
+  }
+  const ulos = new Map();
+  for (const olio of oliot) {
+    for (const rivi of olio.Contents ?? []) {
+      /*
+       * NOSTOLAATAT EIVÄT OLE POHJALAATTOJA. Ne asuvat oman versionsa
+       * polun alla `nostot/z…` ja jäävät sinne — paikkaus ei kopioi
+       * niitä. Jos ne laskettaisiin mukaan, lähdeversion nostot
+       * näyttäisivät paikatusta versiosta kadonneilta ja vertailu
+       * kaatuisi asiaan, joka on tarkoituksella näin.
+       */
+      if ((rivi.Key ?? '').includes('/nostot/')) continue;
+      const m = /z(\d+)\/(\d+)\/(\d+)\.[a-z0-9]+$/.exec(rivi.Key ?? '');
+      if (!m) continue;
+      ulos.set(`${m[1]}:${m[2]}:${m[3]}`, String(rivi.ETag ?? '').replace(/"/g, ''));
+    }
+  }
+  if (!ulos.size) kuole(`listauksesta ${polku} ei löytynyt yhtään laattaa`);
+  return ulos;
+}
+
+/** Laattapuu levyllä. */
+function keraaKansiosta(juuri) {
   const ulos = new Map();
   if (!existsSync(juuri)) kuole(`kansiota ei ole: ${juuri}`);
   for (const taso of readdirSync(juuri)) {
@@ -225,8 +281,19 @@ function vertaa() {
 
   const lista = JSON.parse(readFileSync(listapolku, 'utf8'));
   const listatut = new Set(lista.laatat.map(([z, s, r]) => `${z}:${s}:${r}`));
-  const a = keraaLaatat(lahde);
-  const b = keraaLaatat(paikattu);
+  const lahteet = keraaLaatat(lahde);
+  const paikatut = keraaLaatat(paikattu);
+  /*
+   * Levyn sha256 ja ämpärin ETag eivät ole vertailukelpoisia. Sekaannus
+   * näyttäisi siltä, että JOKAINEN laatta muuttui — eli kaatuisi
+   * oikeaan suuntaan, mutta väärästä syystä ja väärällä selityksellä.
+   */
+  if (lahteet.laji !== paikatut.laji) {
+    kuole('lähde ja paikattu ovat eri lajia (kansio vs. ämpärilistaus) — '
+      + 'tiivisteet eivät ole vertailukelpoisia');
+  }
+  const a = lahteet.laatat;
+  const b = paikatut.laatat;
 
   const puuttuu = [];
   const muuttuneet = [];
@@ -237,12 +304,12 @@ function vertaa() {
   for (const avain of listatut) {
     if (!b.has(avain)) puuttuu.push(avain);
   }
-  for (const [avain, polkuB] of b) {
+  for (const [avain, tiivisteB] of b) {
     if (!a.has(avain)) {
       if (!listatut.has(avain)) ylimaaraiset.push(avain);
       continue;
     }
-    const sama = tiiviste(a.get(avain)) === tiiviste(polkuB);
+    const sama = a.get(avain) === tiivisteB;
     if (listatut.has(avain)) (sama ? samat : muuttuneet).push(avain);
     else if (!sama) vuotaneet.push(avain);
   }
@@ -257,8 +324,7 @@ function vertaa() {
       if (!listatut.has(n) && b.has(n)) reuna.add(n);
     }
   }
-  const reunaMuuttui = [...reuna].filter((k) => a.has(k)
-    && tiiviste(a.get(k)) !== tiiviste(b.get(k)));
+  const reunaMuuttui = [...reuna].filter((k) => a.has(k) && a.get(k) !== b.get(k));
 
   console.log('PAIKKAUKSEN VERTAILU');
   console.log(`  lähde           ${a.size} laattaa`);
@@ -310,7 +376,8 @@ async function sauma() {
 
   const lista = JSON.parse(readFileSync(listapolku, 'utf8'));
   const listatut = new Set(lista.laatat.map(([z, s, r]) => `${z}:${s}:${r}`));
-  const b = keraaLaatat(paikattu);
+  /* Sauma luetaan kuvina, joten tässä tarvitaan polut eikä tiivisteitä. */
+  const b = keraaKansiosta(paikattu);
 
   /*
    * Valitaan syvin taso, jolta löytyy paikattu laatta ja sen oikea

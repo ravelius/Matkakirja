@@ -1937,6 +1937,15 @@ node tools/paikkaa-pyramidi.mjs sauma --paikattu <b> \
 kesken tai jos alueen laatta jäi piirtämättä
 (tests/paikkaus.test.mjs vartioi näitä).
 
+**Oikea ajo todistaa itsensä samalla työkalulla.** Kun `--lahde` ja
+`--paikattu` ovat `aws s3api list-objects-v2` -tulosteita, vertailu
+tehdään **ETageilla** eikä yhtään laattaa ladata: R2 antaa
+yksiosaiselle objektille ETagiksi sisällön MD5:n, joten kaksi
+listausta (sekunteja) riittää todistamaan 23 285 kopion ehjyyden.
+Työnkulku ajaa tämän shardin viimeisenä askeleena, ja luettelojobi on
+`needs: laatat` -riippuvuuden takana — **epäonnistunut paikkaus ei
+koskaan päädy `pyramidi.json`:iin eikä siis kenenkään selaimeen.**
+
 ## 11. Siirtymä
 
 **Vaihe 1 — pilotti (tämä erä).** Työkalu, moottorin laattatuki, pysyvä

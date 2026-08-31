@@ -179,6 +179,53 @@ test('vertaa kaatuu, jos kopio jäi kesken', () => {
   rmSync(k, { recursive: true, force: true });
 });
 
+/*
+ * ÄMPÄRIVERTAILU. Oikean ajon jälkeen laatat ovat R2:ssa eikä 23 340
+ * laattaa ladata mihinkään todistelua varten: vertailu tehdään
+ * `aws s3api list-objects-v2` -listausten ETageilla. Nostolaatat
+ * (<versio>/nostot/z…) EIVÄT ole pohjalaattoja — paikkaus ei kopioi
+ * niitä, joten vertailun on jätettävä ne huomiotta tai se kaatuisi
+ * asiaan, joka on tarkoituksella näin.
+ */
+function listaus(polku, versio, laatat, nostot = []) {
+  const Contents = [
+    ...Object.entries(laatat).map(([avain, etag]) => {
+      const [z, s, r] = avain.split(':');
+      return { Key: `julisteet/pyramidi/${versio}/z${z}/${s}/${r}.webp`, ETag: `"${etag}"` };
+    }),
+    ...nostot.map((avain) => {
+      const [z, s, r] = avain.split(':');
+      return { Key: `julisteet/pyramidi/${versio}/nostot/z${z}/${s}/${r}.webp`, ETag: '"n"' };
+    }),
+  ];
+  writeFileSync(polku, JSON.stringify({ Contents }));
+  return polku;
+}
+
+test('vertaa lukee ämpärilistaukset ja ohittaa nostolaatat', () => {
+  const k = pesa();
+  const lista = join(k, 'laatat.json');
+  writeFileSync(lista, JSON.stringify(LISTA));
+  const a = listaus(join(k, 'a.json'), 'v', SETTI, ['6:3:3']);
+  const b = listaus(join(k, 'b.json'), 'v-p1', { ...SETTI, '5:1:0': 'B' });
+  const { koodi, tuloste } = aja('vertaa', '--lahde', a, '--paikattu', b, '--lista', lista);
+  assert.equal(koodi, 0, tuloste);
+  assert.match(tuloste, /lähde\s+6 laattaa/);
+  assert.match(tuloste, /muuttui\s+1/);
+  rmSync(k, { recursive: true, force: true });
+});
+
+test('vertaa kieltäytyy vertaamasta kansiota ja listausta keskenään', () => {
+  const {
+    k, lahde, lista,
+  } = pesat({});
+  const b = listaus(join(k, 'b.json'), 'v-p1', SETTI);
+  const { koodi, tuloste } = aja('vertaa', '--lahde', lahde, '--paikattu', b, '--lista', lista);
+  assert.equal(koodi, 1);
+  assert.match(tuloste, /eri lajia/);
+  rmSync(k, { recursive: true, force: true });
+});
+
 test('vertaa kaatuu, jos alueen laatta jäi piirtämättä', () => {
   const {
     k, lahde, paikattu, lista,
