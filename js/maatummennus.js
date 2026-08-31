@@ -49,6 +49,16 @@
  * näkyvä ei laukaise siirtymää mutta KÄYNNISTÄÄ animaation alusta.
  * Sama kaksivaiheisuus tuo kerroksen takaisin vasta levon jälkeen
  * (js/kartta.js paljastaMerkit), jolloin feidaus alkaa siitä hetkestä.
+ * Nauhoitettu 31.8.2026: kerros katosi 13 ms:ssä eleen alusta ja palasi
+ * 0 → 1 noin 320 ms:ssä levon jälkeen.
+ *
+ * FEIDATTAVA OMINAISUUS ON PERITTY `fill-opacity` / `stroke-opacity`
+ * EIKÄ RYHMÄN `opacity`, ja animaatio on PORTAIKKO. Kumpikin on
+ * mittaustulos: ryhmän peittävyys teki kerroksesta oman
+ * läpinäkyvyystasonsa (savuke-maailmanakyma nipistyksessä 382 →
+ * 933–1202 ms), ja portaaton feidaus maalasi arkinlevyisen varjon
+ * parikymmentä kertaa (435–786 ms). Nykyisillä valinnoilla luvut ovat
+ * lähtötasolla (388–475 ms). Taulukko: css/styles.css samassa lohkossa.
  *
  * ELEIDEN VÄLISSÄ KERROS ON STAATTINEN. Polut lasketaan vain kun maa
  * vaihtuu tai näkyvyys kytkeytyy — ei kehystä kohti, ei näkymää kohti.
@@ -66,8 +76,25 @@ const TUMMENNUS_NS = 'http://www.w3.org/2000/svg';
 
 /** Tummennuksen peittävyys — kartan muste, hyvin hienovarainen. */
 const TUMMENNUS_MUSTE = 'rgba(58, 40, 25, 0.10)';
-/** Ääriviivan leveys lautayksikköinä: 1,5 x css .coast (3,2). */
-const TUMMENNUS_VIIVA = 4.8;
+/**
+ * Ääriviivan leveys RUUTUPIKSELEINÄ (vector-effect: non-scaling-stroke,
+ * css/styles.css).
+ *
+ * KARTTAVAKIO EIKÄ LAUTAYKSIKKÖ, ja se on mittaustulos eikä makuasia.
+ * Pelilaudan rantaviiva ei ole DOMissa vaan POLTETTU laattoihin
+ * (tools/fokuskartta/piirto.js osio 7: `lineWidth = 1.35 * S`, eli
+ * runsas pikseli laatan omassa tarkkuudessa), joten sen paksuus on
+ * ruudun ominaisuus eikä laudan. Lautayksikköinä annettu viiva
+ * skaalautuisi zoomin mukana: sama 4,8 yksikköä oli lähikuvassa
+ * kymmenkunta pikseliä paksu tolppa, joka peitti Egeanmeren pikkusaaret
+ * kokonaan mustiksi läiskiksi (mitattu kuvakaappauksella 31.8.2026).
+ *
+ * 1,5 px on noin puolitoista kertaa poltettu rantaviiva juuri niin kuin
+ * tilauksessa — *"maan ääriviivat piirtää hieman paksummalla"* — ja
+ * pysyy samana kaikilla zoomitasoilla, kuten kaikki muukin ruutuun
+ * mitoitettu kartan sisältö (js/karttanimet.js, js/fokusmitat.js).
+ */
+const TUMMENNUS_VIIVA = 1.5;
 
 let polygoniLupaus = null;
 
@@ -143,9 +170,9 @@ function siirra(d, dx) {
 export function paivitaMaatummennus(ui) {
   const kerros = ui.maatummennusKerros;
   if (!kerros) return;
-  const iso = nakyvaMaa(ui);
-  if (ui.maatummennusAvain === iso) return;
-  if (!iso) {
+  const tila = tunniste(ui);
+  if (ui.maatummennusAvain === (tila?.avain ?? null)) return;
+  if (!tila) {
     ui.maatummennusAvain = null;
     if (kerros.firstChild) kerros.textContent = '';
     return;
@@ -158,14 +185,21 @@ export function paivitaMaatummennus(ui) {
   lataaMaapolygonit().then((data) => {
     if (ui.dead || !data) return;
     // Näkymä on voinut vaihtua haun aikana.
-    if (nakyvaMaa(ui) !== iso) return;
-    if (ui.maatummennusAvain === iso) return;
-    piirra(ui, data, iso);
+    if (tunniste(ui)?.avain !== tila.avain) return;
+    if (ui.maatummennusAvain === tila.avain) return;
+    piirra(ui, data, tila);
   });
 }
 
-/** Maa, jonka tummennus kuuluu näyttää — tai null. */
-function nakyvaMaa(ui) {
+/**
+ * Mitä kerroksessa pitäisi nyt olla — tai null, jos ei mitään.
+ *
+ * Avain on maa: sama maa samalla näkyvyydellä ei kirjoita DOMiin
+ * mitään, ja koska varjo on ARKIN kokoinen (ks. `arkinAla`), panorointi
+ * ja zoomaus eivät muuta sitä lainkaan. Vain maanvaihto ja
+ * näkyvyysrajan ylitys tekevät työtä.
+ */
+function tunniste(ui) {
   const iso = ui.fokuskarttaAvain;
   if (!iso) return null;
   const raja = ui.kartta?.pelaajanUloinSkaala?.();
@@ -173,17 +207,46 @@ function nakyvaMaa(ui) {
   const skaala = ui.nakyvaAlue?.()?.skaala;
   if (!(skaala > 0)) return null;
   // Pieni sietovara: pelaajan uloin taso itse kuuluu mukaan.
-  return skaala >= raja * 0.999 ? iso : null;
+  if (!(skaala >= raja * 0.999)) return null;
+  const ala = arkinAla(ui);
+  return ala ? { iso, ala, avain: iso } : null;
+}
+
+/**
+ * Varjon suorakaide: KOKO ARKKI.
+ *
+ * Näkymä muuttuu joka eleessä, arkki ei muutu koskaan — ja juuri siksi
+ * kerros voi olla eleiden välissä staattinen. Näkymän kokoista
+ * laatikkoa kokeiltiin (31.8.2026), ja se oli huonompi: se on
+ * piirrettävä uudelleen joka asettumisessa, ja savukkeessa panoroinnin
+ * longtaskit nousivat 0 ms:stä 327–352 ms:iin, kun taas paluufeidauksen
+ * hinta ei juuri muuttunut. Feidauksen hinta hoidetaan portaikolla
+ * (css/styles.css), ei laatikon koolla.
+ *
+ * Arkki luetaan `ui.contentBox`ista eikä laudan mitoista, koska
+ * pyramidilaudalla ne EIVÄT ole sama asia: laatta-arkki ulottuu laudan
+ * ylä- ja alapuolelle (js/kartta.js boardBounds, arkki y −1046…6261,
+ * kun lauta on 0…5399). Laudan mitoilla piirretty suorakaide jättäisi
+ * Grönlannin kärjen ja Jäämeren tummentamatta — ja juuri se kaistale on
+ * se, jonka takia arkkia laajennettiin.
+ */
+function arkinAla(ui) {
+  const map = ui.game?.pack?.map;
+  const arkki = ui.contentBox
+    ?? { x: 0, y: 0, w: map?.width ?? 0, h: map?.height ?? 0 };
+  if (!(arkki.w > 0) || !(arkki.h > 0)) return null;
+  const p = (n) => Number(n.toFixed(1));
+  return { x: p(arkki.x), y: p(arkki.y), w: p(arkki.w), h: p(arkki.h) };
 }
 
 /** Suorakaide + renkaat evenoddina, ja renkaat vielä viivana. */
-function piirra(ui, data, iso) {
+function piirra(ui, data, tila) {
   const kerros = ui.maatummennusKerros;
-  const renkaat = data.maat[iso];
+  const renkaat = data.maat[tila.iso];
   if (!renkaat?.length) {
     // Maalle ei ole polygonia: efekti jää hiljaa pois, mutta avain
     // merkitään, ettei jokainen asettuminen etsi sitä uudelleen.
-    ui.maatummennusAvain = iso;
+    ui.maatummennusAvain = tila.avain;
     if (kerros.firstChild) kerros.textContent = '';
     return;
   }
@@ -192,26 +255,26 @@ function piirra(ui, data, iso) {
   const d = maanPolku(renkaat, data.tarkkuus || 10, leveys);
   kerros.textContent = '';
   /*
-   * Suorakaide on ARKIN kokoinen eikä näkymän: näkymä muuttuu joka
-   * eleessä, arkki ei muutu koskaan. Yläreuna on nollan yläpuolella,
-   * koska Millerin lieriössä pohjoisimmat saaret (Frans Joosefin maa)
-   * ovat laudan yläreunan ulkopuolella — evenodd tarvitsee niiden
-   * reiät samasta polusta.
+   * EVENODD TEKEE REIÄN: suorakaide ja maan renkaat samassa polussa,
+   * jolloin renkaiden sisäpuoli jää maalaamatta. Kokonaan laatikon
+   * ulkopuolelle jäävä rengas (kaukainen saari) ei vaikuta mihinkään,
+   * ja laatikon kokonaan sisäänsä sulkeva rengas (iso maa lähikuvassa)
+   * jättää koko laatikon maalaamatta — kumpikin oikein ilman
+   * erikoistapauksia.
    */
-  const arkkiW = map?.width ?? 0;
-  const arkkiH = map?.height ?? 0;
+  const { x, y, w, h } = tila.ala;
   const varjo = document.createElementNS(TUMMENNUS_NS, 'path');
   varjo.setAttribute('class', 'maatummennus-varjo');
   varjo.setAttribute('fill-rule', 'evenodd');
   varjo.setAttribute('fill', TUMMENNUS_MUSTE);
-  varjo.setAttribute('d', `M0 0H${arkkiW}V${arkkiH}H0Z${d}`);
+  varjo.setAttribute('d', `M${x} ${y}H${x + w}V${y + h}H${x}Z${d}`);
   kerros.appendChild(varjo);
   const viiva = document.createElementNS(TUMMENNUS_NS, 'path');
   viiva.setAttribute('class', 'maatummennus-viiva');
   viiva.setAttribute('d', d);
   viiva.setAttribute('stroke-width', String(TUMMENNUS_VIIVA));
   kerros.appendChild(viiva);
-  ui.maatummennusAvain = iso;
+  ui.maatummennusAvain = tila.avain;
 }
 
 /** Lauta vaihtui tai peli purettiin: kerros ja avain nollille. */
