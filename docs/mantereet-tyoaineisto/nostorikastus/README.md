@@ -67,3 +67,24 @@ worker-julkaisu oli 28.8. rikki, ks. pollo-julkaisu.yml whoami-
 diagnoosi) vs hybridi. Kysy omistajalta ennen toteutusta.
 
 Toteutettu v1285
+
+## Kohtaamiskuvien linjapäätökset (omistajan kortti 31.8.2026)
+
+Omistaja näytti kuvasession työohjeen ("Matkakirja — kohtaamiskuvien
+työohje toiselle sessiolle") ja hyväksyi katselmoinnista kaksi
+päätöstä, jotka koskevat peliä koodaavaa sessiota:
+
+1. **Generoidut kohtaamiskuvat merkitään lähderivillä** havainnekuva-
+   käytännön tapaan (esim. "Matkakirjan kuvitus") — totuudellisuus-
+   pilari: fotorealistinen generoitu ihminen ei saa näyttää aidolta
+   lehtikuvalta ilman merkintää. Kuvasession ohjeeseen kuuluu myös
+   kielto tuottaa tunnistettavia oikeita henkilöitä muistuttavia
+   kasvoja.
+2. **Repossa jo oleva assets/kohtaamiset/ siirretään R2:een** ja
+   repo-kansio poistetaan — yksi medialähde; tukee historiasiivousta.
+
+Muut katselmointihuomiot (ei vielä päätöksiä): webp-pakkausvaihe
+vie-kohtaamiskuvat-työnkulkuun (esim. max 1024 px, <150 kt),
+offline-varapolku kun R2-kuva ei lataudu, Kuvaraadin yhteenvetoon
+kierrostunniste/päiväys, "vain ChatGPT ImageGen" -sääntö rajattava
+koskemaan kohtaamiskuvia, ja linjan tiivis kirjaus Raamattuun.
