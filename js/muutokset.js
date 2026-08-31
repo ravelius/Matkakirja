@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1380, teksti: 'Karttasymbolit käsin piirretyiksi, kartalle yhdeksän merkkiä' },
   { v: 1379, teksti: 'Kartta ei enää jää piirtymättä tason vaihdossa' },
   { v: 1378, teksti: 'Karttanostot poltetaan laattoihin (linjaus)' },
   { v: 1377, teksti: 'Viivaimen leveysasteet eivät ylitä 90:tä' },
