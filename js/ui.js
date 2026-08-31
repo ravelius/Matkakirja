@@ -7543,19 +7543,31 @@ export class UI {
     const kerroin = Number.isFinite(rx) && rx > 0
       ? (FOKUS_LAATTA_PX / 2) * sKartalle / rx
       : 1;
-    // Edellisen kaupungin osat takaisin omaan kokoonsa — ja näkyviin,
-    // jos nappula seisoi niiden päällä (nappulanAlla alla).
+    /*
+     * OMAN LAATAN SÄDE TALTEEN. Kerroin on KAIKKIEN kaupunkien yhteinen
+     * mitta (paivitaMaailmanLaattaKoot), ja mittatikkuna on pelaajan
+     * oman laatan säde. Kun pelaaja seisoo reitin varrella eikä
+     * kaupungissa, omaa laattaa ei ole — silloin sama mitta lasketaan
+     * viimeksi tunnetusta säteestä (fokusMuidenLaattaKerroin), jottei
+     * koko laudan laatasto hyppäisi kokoa matkan ajaksi.
+     */
+    if (Number.isFinite(rx) && rx > 0) this.fokusLaattaRx = rx;
+    /*
+     * Edellisen kaupungin osat: KOKO EI PALAA LAUDAN OMAKSI vaan jää
+     * yhteiseen mittaan (31.8.2026) — kaupunki on nyt naapuri muiden
+     * joukossa, ja kaikki laatat ovat samassa mitassa. Nappulan alla
+     * -merkintä sen sijaan puretaan (nappulanAlla alla).
+     */
     for (const vanha of this.fokusLaattaOsat ?? []) {
       if (!osat.includes(vanha)) {
-        this.asetaLaatanKoko(vanha, 1);
+        this.asetaLaatanKoko(vanha, kerroin);
         vanha.classList.remove('nappulan-alla');
       }
     }
     for (const osa of osat) this.asetaLaatanKoko(osa, kerroin);
     this.fokusLaattaOsat = osat;
-    // Maailmanäkymässä sama mitta koskee KAIKKIA kaupunkeja, ja
-    // kasvukatto kaikissa näkymissä (ks. alla).
-    this.paivitaMaailmanLaattaKoot(kerroin, katto);
+    // Sama mitta koskee KAIKKIA kaupunkeja (ks. alla).
+    this.paivitaMaailmanLaattaKoot(kerroin);
     /*
      * MERKINTÄ SIITÄ, ETTÄ NAPPULA SEISOO TÄMÄN LAATAN PÄÄLLÄ.
      *
@@ -7746,7 +7758,7 @@ export class UI {
   }
 
   /**
-   * MAAILMANÄKYMÄSSÄ KAIKKI KAUPUNKIPALLOT SAMAAN MITTAAN.
+   * KAIKKI KAUPUNKIPALLOT SAMAAN MITTAAN KUIN OMA LAATTA.
    *
    * === MIKÄ VIKA OLI (omistajan laiteraportti 29.8.2026, Mac) ===
    *
@@ -7775,52 +7787,47 @@ export class UI {
    *
    * === SÄÄNTÖ ===
    *
-   * Maailmanäkymässä JOKAINEN kaupungin osa saa saman kertoimen kuin
-   * nykyisen kaupungin laatta. Kerroin on yhteinen eikä osakohtainen,
-   * jotta laudan oma kokohierarkia säilyy: lähtökaupungin laatta on
-   * yhä isompi kuin tavallisen, kuten laudallakin.
+   * JOKAINEN kaupungin osa saa saman kertoimen kuin nykyisen kaupungin
+   * laatta. Kerroin on yhteinen eikä osakohtainen, jotta laudan oma
+   * kokohierarkia säilyy: lähtökaupungin laatta on yhä isompi kuin
+   * tavallisen, kuten laudallakin.
    *
    * NIMILAPPUJA EI OLE: paikannimet ovat laatoissa (ks. drawBoard).
    * Eläintäyt (js/elaintaky.js) ja kohdemerkit mitoitetaan omissa
    * silmukoissaan.
    *
-   * === JA KASVUKATTO KOSKEE MUITAKIN KUIN MAAILMANÄKYMÄÄ (31.8.2026) ==
+   * === EHTO `maailmanakyma()` POISTETTU (omistajan päätös 31.8.2026) ==
    *
-   * Ehto `maailmanakyma()` oli oikea silloin kun se kirjoitettiin:
-   * pelaajan omassa näkymässä muut kaupungit olivat piilossa lehden alla
-   * (.fokus-lehden-alla), joten mitoitettavaa ei ollut. 30.8.2026 se
-   * piilotus purettiin (paivitaFokusPallot: *"`.fokus-lehden-alla` ei
-   * siis enää kirjoiteta kenellekään"*), ja naapurien laatat jäivät
-   * kartalle LAUDAN yksiköissä — juuri ne omistaja luki 31.8.2026
-   * hervottoman isoina.
+   * Sääntö koski ennen vain kehittäjän maailmanäkymää, ja se oli oikein
+   * silloin kun se kirjoitettiin: pelaajan omassa näkymässä muut
+   * kaupungit olivat piilossa lehden alla (.fokus-lehden-alla), joten
+   * mitoitettavaa ei ollut. 30.8.2026 piilotus purettiin
+   * (paivitaFokusPallot: *"`.fokus-lehden-alla` ei siis enää kirjoiteta
+   * kenellekään"*) — ja ehto jäi. Naapurien laatat olivat siitä lähtien
+   * pelaajan näkymässä LAUDAN yksiköissä, eli täsmälleen se vika, jonka
+   * omistaja luki 31.8.2026: *"kaupunkilaatat näkyvät jostain syystä
+   * aivan hervottoman isoina"*.
    *
-   * Tämä metodi ei ratkaise sitä eroa (naapurin laatan koko maanäkymässä
-   * on laudan oma mitta, eikä sitä muuteta ilman omistajan päätöstä),
-   * mutta KASVUKATTO koskee niitäkin: yksikään kaupungin laatta ei kasva
-   * ruudulla suuremmaksi kuin se on maan lehtinäkymässä. Kerroin on
-   * silloin pelkkä katto (`katto`, ks. fokusKasvukatto) eikä oman laatan
-   * mitta — perustasolla se on tasan 1, jolloin silmukkaa ei ajeta
-   * lainkaan ja näkymä on ennallaan.
+   * Mitattuna Sofian maanäkymässä (mittajana 200 km) Istanbulin laatta
+   * oli puhelimella 38 px ja työpöydällä (1440 px) 139 px, kun pelaajan
+   * oma laatta oli 8,7 ja 10,7 px. Ehdon poiston jälkeen kaikki laatat
+   * ovat samassa mitassa — omistajan hyväksymä muutos MYÖS maanäkymän
+   * ulkoasuun.
    *
-   * OMAN KAUPUNGIN OSAT OHITETAAN, koska niillä on jo oma kertoimensa
-   * (paivitaFokusLaatta) — maailmanäkymässä kerroin on sama molemmilla,
-   * joten siellä ohitusta ei tarvita.
+   * KASVUKATTO TULEE TÄNNE KERTOIMEN MUKANA: `kerroin` on oman laatan
+   * kerroin, joka on jo katettu (paivitaFokusLaatta, fokusLaattaSkaala),
+   * joten sama katto koskee kaikkia laattoja ilman omaa parametriaan.
    *
    * TUNNISTE OHITTAA TOISTON. Kerroin on vakio niin kauan kuin lehti,
    * ruutukoko ja zoomitaso pysyvät, joten 600 osan silmukka ajetaan vain
    * kun se oikeasti muuttuu — sama kuri kuin näkymärajauksella
    * (paivitaMaailmanRajaus sääntö 3).
    */
-  paivitaMaailmanLaattaKoot(kerroin, katto = 1) {
+  paivitaMaailmanLaattaKoot(kerroin) {
     const cities = this.svg?.querySelector('.cities');
-    const fokus = Boolean(cities) && this.fokusmoodi && !this.katselu && kerroin > 0;
-    const maailma = fokus && Boolean(this.maailmanakyma?.());
-    // Muiden kaupunkien kerroin: maailmanäkymässä sama kuin omalla
-    // laatalla, muuten pelkkä kasvukatto (1 = ei mitään mitoitettavaa).
-    const muille = maailma ? kerroin : katto;
-    const paalla = fokus && muille > 0 && (maailma || muille < 1);
+    const paalla = Boolean(cities) && this.fokusmoodi && !this.katselu && kerroin > 0;
     if (!paalla) {
-      // Näkymä sammui: kaikki paitsi nykyisen kaupungin omat osat
+      // Fokusnäkymä sammui: kaikki paitsi nykyisen kaupungin omat osat
       // (fokusLaattaOsat, hoidettu paivitaFokusLaatassa) takaisin
       // laudan omaan kokoonsa.
       if (this.maailmanLaattaOsat?.size) {
@@ -7833,21 +7840,49 @@ export class UI {
       this.maailmanLaattaAvain = null;
       return;
     }
-    const avain = `${muille.toFixed(4)}:${cities.childElementCount}:${maailma}`;
+    const avain = `${kerroin.toFixed(4)}:${cities.childElementCount}`;
     if (this.maailmanLaattaAvain === avain && this.maailmanLaattaKerros === cities) return;
     this.maailmanLaattaAvain = avain;
     this.maailmanLaattaKerros = cities;
     const joukko = (this.maailmanLaattaOsat ??= new Set());
     joukko.clear();
-    const omat = maailma ? null : new Set(this.fokusLaattaOsat ?? []);
     for (const osa of cities.children) {
       // Nimet mitoitetaan muualla (ks. sääntö yllä).
       if (osa.classList.contains('city-label')) continue;
-      // Oman kaupungin osat: oma kerroin on jo kirjoitettu (ks. yllä).
-      if (omat?.has(osa)) continue;
-      this.asetaLaatanKoko(osa, muille);
+      this.asetaLaatanKoko(osa, kerroin);
       joukko.add(osa);
     }
+  }
+
+  /**
+   * KAUPUNKILAATTOJEN YHTEINEN KERROIN ILMAN OMAA LAATTAA.
+   *
+   * Mitoituksen mittatikku on pelaajan oman kaupungin laatan säde
+   * (paivitaFokusLaatta) — mutta pelaaja voi seistä REITIN VARRELLA,
+   * jolloin omaa laattaa ei ole (`cityOf` null) ja koko mitoitus
+   * purkautuisi: kaikkien kaupunkien laatat hyppäisivät lähikuvassa
+   * täyteen lautakokoonsa juuri siksi ajaksi, ja palaisivat kokoonsa
+   * heti kun nappula astuu kaupunkiin.
+   *
+   * Säde otetaan siksi VIIMEKSI TUNNETUSTA oman laatan säteestä
+   * (fokusLaattaRx) ja vasta sen puuttuessa laudan tavallisesta
+   * kaupungin laatasta. Kerroin lasketaan silti aina TUOREESTA
+   * skaalasta, jotta kasvukatto elää zoomin mukana matkallakin.
+   *
+   * Nolla tarkoittaa "ei mitoitusta": fokusnäkymän ulkopuolella laatat
+   * ovat laudan omassa koossaan (paivitaMaailmanLaattaKoot purkaa ne).
+   */
+  fokusMuidenLaattaKerroin() {
+    if (!this.fokusmoodi || this.katselu) return 0;
+    const s = this.fokusLaattaSkaala();
+    if (!(s > 0)) return 0;
+    let rx = this.fokusLaattaRx;
+    if (!(rx > 0)) {
+      const malli = this.svg?.querySelector('.cities > .city[rx]');
+      rx = Number(malli?.getAttribute('rx'));
+    }
+    if (!Number.isFinite(rx) || rx <= 0) return 0;
+    return (FOKUS_LAATTA_PX / 2) * s / rx;
   }
 
   /**
@@ -8049,28 +8084,33 @@ export class UI {
     osa.setAttribute(nimi, teksti);
   }
 
-  /** Fokusnäkymä loppui: laatta omaan kokoonsa ja napautusalue pois. */
+  /**
+   * Oma laatta pois: napautusalue lakkaa ja mitoitus jää yhteiseksi.
+   *
+   * KAKSI ERI TILANNETTA, YKSI POLKU. Tänne tullaan sekä fokusnäkymän
+   * loppuessa (silloin kaikki laatat palaavat laudan omaan kokoonsa)
+   * että silloin, kun pelaaja seisoo REITIN VARRELLA eikä kaupungissa.
+   * Jälkimmäisessä laatat ovat yhä kartalla ja niiden on pysyttävä
+   * samassa mitassa kuin kaupungissa seistäessä — muuten koko laudan
+   * laatasto vaihtaisi kokoa aina kun nappula pysähtyy reitille
+   * (fokusMuidenLaattaKerroin).
+   *
+   * JÄRJESTYS ON OLEELLINEN: oman kaupungin osat vapautetaan ensin
+   * `fokusLaattaOsat`-joukosta, jotta yhteismitoitus (joka jättää sen
+   * joukon rauhaan) ylettyy myös niihin.
+   */
   tyhjennaFokusLaatta() {
     if (this.fokusLaattaKerros?.firstChild) this.fokusLaattaKerros.textContent = '';
     this.fokusLaattaAvain = null;
-    /*
-     * Maailmanäkymän yhteismitoitus puretaan samalla (kerroin 1 =
-     * laudan oma koko) — MUTTA KASVUKATTO JÄÄ VOIMAAN. Tänne tullaan
-     * myös silloin, kun pelaaja seisoo reitin varrella eikä kaupungissa
-     * (cityOf null): ilman kattoa kaikkien kaupunkien laatat hyppäisivät
-     * lähikuvassa täyteen lautakokoonsa juuri siksi ajaksi. Fokusmoodin
-     * ulkopuolella katto on 1, jolloin tämä on entinen purku.
-     */
-    this.paivitaMaailmanLaattaKoot(1, this.fokusKasvukatto());
-    if (!this.fokusLaattaOsat?.length) return;
-    for (const osa of this.fokusLaattaOsat) {
-      this.asetaLaatanKoko(osa, 1);
+    for (const osa of this.fokusLaattaOsat ?? []) {
       // Merkintä pois: fokusnäkymän ulkopuolella laatan osia ei
       // piiloteta nappulan takia (ks. paivitaFokusLaatta,
       // css .nappulan-alla).
       osa.classList.remove('nappulan-alla');
     }
     this.fokusLaattaOsat = [];
+    // Kerroin 0 = fokusnäkymää ei ole, jolloin laatat palautetaan.
+    this.paivitaMaailmanLaattaKoot(this.fokusMuidenLaattaKerroin());
   }
 
   /**
