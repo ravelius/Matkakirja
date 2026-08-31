@@ -7,6 +7,7 @@
  *        [--alue lon0,lat0,lon1,lat1] [--laatta 512] [--laatu 0.9] \
  *        [--lohko 4] [--kaariminuutit 3] [--muoto webp]
  *        [--harva] [--harvamittaus] [--saumatesti] [--kuiva]
+ *        [--vain-lista] [--paikkaus <lähdeversio>]
  *
  * Omistajan päälinjaus 30.8.2026 (Raamattu, "YKSI MAAILMANBITTIKARTTA -
  * MAALEHDISTA LUOVUTAAN"): *"koko maailma on kokoajan yksi iso
@@ -83,6 +84,7 @@ import { fileURLToPath } from 'node:url';
 import { keraaMaailma } from './fokuskartta/maailma.mjs';
 import { keraaSisalto, sisallonYhteenveto } from './fokuskartta/sisalto.mjs';
 import { keraaNostot, nostojenYhteenveto } from './fokuskartta/nostot.mjs';
+import { lueRajaviivasto, rajatLaudalle, RAJASETIT } from './fokuskartta/rajat.mjs';
 import { RESEPTIT, TAUSTA, patinoiSelaimessa } from './patina.mjs';
 import { laudanProjektio, SYVYYS } from './fokuskartta/piirto.js';
 import { nostosymPolttoLaatikko } from '../js/fokusnosto-symbolit.js';
@@ -235,6 +237,7 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
   console.error('Käyttö: node tools/generoi-laattapyramidi.mjs <kohdekansio> '
     + '[--data <kansio>] [--tasot 0-4] [--alue lon0,lat0,lon1,lat1] '
     + '[--laatta 512] [--laatu 0.9] [--muoto webp] [--kuiva] '
+    + '[--vain-lista] [--paikkaus <lähdeversio>] '
     + '[--saumatesti [--saumakohta sarake,rivi]]');
   process.exit(1);
 }
@@ -306,8 +309,82 @@ const VERSIO = valitsin('versio', new Date().toISOString().slice(0, 10));
  */
 const NOSTOTASO = lippu('nostotaso');
 const NOSTOVERSIO = valitsin('nostoversio', VERSIO);
+/*
+ * PAIKKAUS (`--paikkaus <lähdeversio>`) — RAJATUN ALUEEN KORJAUS.
+ *
+ * Koko pyramidin uudelleenajo on tunteja, mutta virhe on melkein aina
+ * paikallinen: yhden järven väri, yhden vuoren nimi, yhden saaren
+ * rannikko. Paikkausajo piirtää VAIN alueeseen osuvat laatat (`--alue`)
+ * ja kopioi loput lähdeversiosta uuteen versiopolkuun ämpärin sisällä
+ * palvelinkopiona. Mitattuna Kreikan kokoinen laatikko on 55 laattaa
+ * kaikilta kahdeksalta tasolta eli minuutteja — ei tunteja.
+ *
+ * TÄMÄ TOIMII VAIN KOSKA LAATTA EI RIIPU NAAPURISTAAN. Jokainen laatta
+ * lasketaan arkin koordinaateista, ja patina on sidottu arkin pikseliin
+ * (ks. REUNUS ja `arkki`-asetus lohkopiirrossa) — sama laatta samasta
+ * aineistosta on tavulleen sama riippumatta siitä, piirrettiinkö se
+ * maailma-ajossa vai alueajossa. Paikatun ja kopioidun laatan väliin ei
+ * siis voi syntyä saumaa.
+ *
+ * TÄMÄ LIPPU EI PIIRRÄ MITÄÄN ERI TAVALLA. Se on pelkkää
+ * KIRJANPITOA luettelossa: mistä versiosta muuttumattomat laatat
+ * kopioitiin ja mikä laatikko piirrettiin uudelleen. Ilman sitä
+ * `pyramidi.json` väittäisi paikatusta versiosta joko liikaa
+ * (`alue` = koko pyramidi olisi vain tuo laatikko) tai liian vähän
+ * (ei jälkeä siitä, että versio on koottu kahdesta ajosta).
+ *
+ * Itse kopion ja turvatarkistukset tekee tools/paikkaa-pyramidi.mjs;
+ * tämä työkalu piirtää ja luetteloi, kuten aina.
+ */
+const PAIKKAUS_LAHDE = valitsin('paikkaus', null);
+if (PAIKKAUS_LAHDE && PAIKKAUS_LAHDE === VERSIO) {
+  console.error(`--paikkaus: lähdeversio ja uusi versio ovat sama (${VERSIO}). `
+    + 'Paikkaus ei saa koskaan kirjoittaa lähteen polkuun.');
+  process.exit(1);
+}
 /** Nostotason matalin taso: kaukotasoilla nostolaattoja ei ole. */
 const NOSTO_ALIN = 5;
+/*
+ * VIIVATASO (omistaja 31.8.2026 ilta): reittiverkko, erikoispiirit ja
+ * MAIDEN RAJAT poltetaan omaan LÄPINÄKYVÄÄN laattapyramidiin nostojen
+ * rinnalle. `--viivataso` ajaa VAIN sen: ei korkeusruudukkoa, ei
+ * merimaskia, ei maastoa — pelkkä viivojen muste alfa-webp-laatoiksi
+ * polkuun viivat/z<taso>/<sarake>/<rivi>.
+ *
+ * TASOT z0–z7, TOISIN KUIN NOSTOTASOLLA. Erikoispiirit ja rajat
+ * kulkevat kartan poikki joka tasolla ja ovat mielekkäitä joka
+ * tasolla; nosto on merkki yhdessä pisteessä, ja kaukaa se olisi
+ * pelkkä täplä. Reittipassi kuitenkin OHITETAAN z0:lla: siellä veto on
+ * alle 0,01 pikseliä leveä eikä Skia piirrä siitä mitään (mitattu —
+ * laatta on tavulleen sama kuin ilman reittejä), joten sen laattoja ei
+ * lasketa peitteeseen eikä kirjoiteta levylle.
+ *
+ * VIIVAVERSIO on tason oma versio-osa polussa, samasta syystä kuin
+ * nostotasolla: reittiverkon tai rajasetin muuttuessa ajetaan vain
+ * viivataso uudella versiolla ja pohja pysyy ikuisessa
+ * välimuistissaan.
+ */
+const VIIVATASO = lippu('viivataso');
+const VIIVAVERSIO = valitsin('viivaversio', VERSIO);
+/** Se taso, jolta alkaen reittipassi piirretään (ks. VIIVATASO). */
+const VIIVA_REITIT_ALIN = 1;
+/*
+ * RAJASETTI on DATAA, ei koodia (omistaja 31.8.2026 ilta: rajojen oma
+ * taso on tärkeä siksikin, että myöhemmin voidaan mallintaa
+ * *"eri valtioiden kehityksiä vuosien saatossa"*). Setin nimi menee
+ * luetteloon (`viivataso.rajat`), joten ämpäristä ja pelistä näkee,
+ * minkä aikakauden rajat kartalla ovat.
+ */
+const RAJASETTI = valitsin('rajasetti', 'nykyiset');
+if (!RAJASETIT[RAJASETTI]) {
+  console.error(`Tuntematon rajasetti: ${RAJASETTI} `
+    + `(tunnetut: ${Object.keys(RAJASETIT).join(', ')})`);
+  process.exit(1);
+}
+if (NOSTOTASO && VIIVATASO) {
+  console.error('--nostotaso ja --viivataso ovat eri ajoja; anna vain toinen.');
+  process.exit(1);
+}
 /*
  * HARVA PYRAMIDI (omistaja 30.8.2026): syvimmillä tasoilla umpimeren
  * laattoja ei generoida lainkaan, ja peli maalaa niiden tilalle
@@ -339,7 +416,7 @@ const PATINA_TASO = valitsin('patina', 'taysi');
  * `--patina ei` kytkee patinan pois myös nostotasolta.
  */
 const PATINA = PATINA_TASO === 'ei' ? null
-  : (lippu('nostotaso') ? RESEPTIT.nosto : RESEPTIT[PATINA_TASO]);
+  : ((NOSTOTASO || VIIVATASO) ? RESEPTIT.nosto : RESEPTIT[PATINA_TASO]);
 if (PATINA_TASO !== 'ei' && !PATINA) {
   console.error(`Tuntematon patinataso: ${PATINA_TASO}`);
   process.exit(1);
@@ -416,6 +493,10 @@ function lueTasot(teksti) {
  */
 const TASOT = lueTasot(valitsin('tasot', NOSTOTASO ? `${NOSTO_ALIN}-${TASOJA - 1}` : `0-${TASOJA - 1}`))
   .filter((z) => !NOSTOTASO || z >= NOSTO_ALIN);
+/*
+ * VIIVATASO KATTAA KAIKKI TASOT (z0–z7), joten oletusrajausta ei ole
+ * eikä yllä olevaa suodatinta tarvita — `--tasot` toimii sellaisenaan.
+ */
 
 /*
  * SARAKEKAISTA (--sarakkeet a-b) on parven/matriisin jakotapa.
@@ -448,6 +529,15 @@ const ALUE = alueTeksti
     };
   })()
   : null;
+
+/*
+ * Paikkaus ilman laatikkoa olisi hiljainen koko maailman uudelleenajo
+ * uuteen versioon — juuri se, mitä paikkauksella vältetään.
+ */
+if (PAIKKAUS_LAHDE && !ALUE) {
+  console.error('--paikkaus vaatii --alue lon0,lat0,lon1,lat1.');
+  process.exit(1);
+}
 
 /* ------------------------------------------------------------ arkki */
 
@@ -512,6 +602,24 @@ const laatikko = {
   lat0: snap(kaava.lautaLat(arkinBbox.y + arkinBbox.h) - 0.5, true),
   lat1: snap(kaava.lautaLat(arkinBbox.y) + 0.5, false),
 };
+
+/* --------------------------------------------- viivatason sisältö */
+
+/*
+ * VIIVATASON SISÄLTÖ KERÄTÄÄN ENNEN TYÖLISTAA, koska työlista ON
+ * peite (ks. viivatasonPeite) ja peite lasketaan tästä. Kumpikaan
+ * lähde ei ole raskas eikä kumpikaan tarvitse verkkoa: reitit tulevat
+ * laudalta (js/packs, sama `edge.poly` jota peli kävelee) ja rajat
+ * repon omasta rajasetistä. Juuri siksi myös `--vain-luettelo` osaa
+ * laskea peitteen ilman aineistoa ja ilman selainta — ja siksi
+ * luettelon bittikartta ei voi olla eri mieltä levyn kanssa.
+ */
+const lautaSisalto = await keraaSisalto(pack, join(JUURI, 'js', 'packs'));
+/*
+ * RAJAT LAUDAN YKSIKÖIHIN KERRAN. Setti on data (tools/fokuskartta/
+ * rajat.mjs); tämä ajo ei tiedä valtioista mitään, vain viivoista.
+ */
+const rajaViivat = rajatLaudalle(lueRajaviivasto(RAJASETTI), kaava, laatikko);
 
 /**
  * Yhden tason mitat. Leveys on aina 2 * edellinen, joten sarakemäärä
@@ -640,6 +748,193 @@ function nostotasonPeite(mitat) {
   return joukko;
 }
 
+/* ------------------------------------------------- viivatason peite */
+
+/*
+ * MISSÄ LAATOISSA ON VIIVOJEN MUSTETTA — pelkästä geometriasta.
+ *
+ * Sama sopimus kuin nostotasolla: TÄMÄ FUNKTIO ANTAA SEKÄ TYÖLISTAN
+ * ETTÄ LUETTELON BITTIKARTAN. Yksi lähde, eikä peli voi pyytää
+ * laattaa, jota ajo ei kirjoittanut.
+ *
+ * === MIKSI RASTEROIVA ASKELLUS EIKÄ JANAN LAATIKKO =================
+ *
+ * Nostolla muste on pisteessä, joten sen laatikko on tiukka. Reitti on
+ * MURTOVIIVA, ja jos jokaisen janan ympärille otettaisiin sen
+ * suorakulmainen laatikko, viistoon kulkeva jana veisi mukanaan koko
+ * laatikkonsa nurkat — laattoja, joiden läpi viiva ei kulje. Mitattuna
+ * (viivataso-peite, 31.8.2026) z7:n reittipeite oli laatikoilla 3 713
+ * laattaa ja rasteroivalla askelluksella noin 2 500 eli kolmanneksen
+ * vähemmän.
+ *
+ * Askellus käy janan LÄPI SARAKE KERRALLAAN: kussakin laattasarakkeessa
+ * lasketaan janan oma y-väli sen sarakkeen alalla ja levitetään se
+ * musteen ulottumalla. Tulos on janan todellinen naapurusto eikä sen
+ * laatikko.
+ */
+
+/** Laatikko ARKIN KUVAPIKSELEINÄ -> laatat joukkoon. */
+function lisaaLaatikko(joukko, mitat, px0, px1, py0, py1) {
+  const s0 = Math.max(0, Math.floor(px0 / LAATTA));
+  const s1 = Math.min(mitat.sarakkeita - 1, Math.floor(px1 / LAATTA));
+  const r0 = Math.max(0, Math.floor(py0 / LAATTA));
+  const r1 = Math.min(mitat.riveja - 1, Math.floor(py1 / LAATTA));
+  if (s1 < s0 || r1 < r0) return;
+  for (let rivi = r0; rivi <= r1; rivi += 1) {
+    for (let sarake = s0; sarake <= s1; sarake += 1) joukko.add(`${sarake}:${rivi}`);
+  }
+}
+
+/**
+ * Yksi jana arkin kuvapikseleissä, ulottuma `m` pikseliä joka suuntaan.
+ *
+ * Sarake kerrallaan: janan y-väli lasketaan sen sarakkeen x-alalla
+ * (marginaali mukaan lukien) ja levitetään ulottumalla. Kun jana ei
+ * yllä sarakkeeseen muuten kuin marginaalinsa kautta, t-parametri
+ * kiinnittyy päätepisteeseen — ja juuri se on lähin kohta.
+ */
+function lisaaJana(joukko, mitat, ax, ay, bx, by, m) {
+  const x0 = Math.min(ax, bx);
+  const x1 = Math.max(ax, bx);
+  const s0 = Math.max(0, Math.floor((x0 - m) / LAATTA));
+  const s1 = Math.min(mitat.sarakkeita - 1, Math.floor((x1 + m) / LAATTA));
+  if (s1 < s0) return;
+  const dx = bx - ax;
+  for (let sarake = s0; sarake <= s1; sarake += 1) {
+    const kx0 = Math.max(x0, sarake * LAATTA - m);
+    const kx1 = Math.min(x1, (sarake + 1) * LAATTA - 1 + m);
+    let ya;
+    let yb;
+    if (dx === 0) { ya = ay; yb = by; } else {
+      const t0 = Math.min(1, Math.max(0, (kx0 - ax) / dx));
+      const t1 = Math.min(1, Math.max(0, (kx1 - ax) / dx));
+      ya = ay + (by - ay) * t0;
+      yb = ay + (by - ay) * t1;
+    }
+    const py0 = Math.min(ya, yb) - m;
+    const py1 = Math.max(ya, yb) + m;
+    const r0 = Math.max(0, Math.floor(py0 / LAATTA));
+    const r1 = Math.min(mitat.riveja - 1, Math.floor(py1 / LAATTA));
+    for (let rivi = r0; rivi <= r1; rivi += 1) joukko.add(`${sarake}:${rivi}`);
+  }
+}
+
+/*
+ * MUSTEEN ULOTTUMA REITTIYKSIKKÖINÄ (R = px / 7,2, koska paperiS = 1).
+ * Luvut ovat maailmapiirto.js:n REITTITYYLIstä ja katkokuvion
+ * heitoista laskettuja YLÄRAJOJA — ylimitta maksaa muutaman lähes
+ * tyhjän laatan, alimitta katkaisisi viivan laattarajalle.
+ *
+ *   reitti  solmuheitto 0,35 + katkon sivu 0,40 + kaari 0,55
+ *           + puoli veton leveyttä (2,8 · 1,12 / 2 = 1,57)   = 2,87
+ *   helmi   säde 4,6 + puoli kehää (1,9 / 2)                 = 5,55
+ *   lento   sivu 0,40 + kaari 0,55 + 2,5 · 1,10 / 2          = 2,33
+ *   raja    puoli veton leveyttä (1,8 / 2)                   = 0,90
+ */
+const ULOTTUMA = {
+  reitti: 2.9, helmi: 5.6, lento: 2.4, raja: 1.0,
+};
+/** Patinan musteen ulottuma laatan reunan yli (sama kuin nostolla). */
+const VIIVA_MARGINAALI_PX = NOSTO_MARGINAALI_PX;
+
+/*
+ * ERIKOISPIIRIT: neljä VAAKAVIIVAA koko arkin leveydeltä ja
+ * nollameridiaani PYSTYVIIVANA koko kartta-alan korkeudelta, joten
+ * peite on rivi- ja sarakekaistoja.
+ *
+ * NIMET MAHTUVAT KAISTAAN, eikä niille tarvita omia sarakekaistoja:
+ * nimi keskitetään 13 · 0,72 = 9,4 pikseliä viivan yläpuolelle ja on
+ * 13 pikseliä korkea, eli se ulottuu 15,9 px viivan yläpuolelle ja
+ * 2,9 px sen alapuolelle — kaista y−16 … y+4 kattaa sekä viivan että
+ * nimen. Nollameridiaanin nimi kulkee pystyssä viivan oikealla
+ * puolella, ja sen leveys (9,4 … 22,4 px) on sarakekaistassa.
+ */
+const EKLIPTIIKKA = 23.4365;
+const PIIRIEN_LATIT = [0, EKLIPTIIKKA, -EKLIPTIIKKA, 90 - EKLIPTIIKKA];
+const PIIRI_YLOS = 16;
+const PIIRI_ALAS = 4;
+const MERIDIAANI_VASEN = 2;
+const MERIDIAANI_OIKEA = 24;
+
+/**
+ * Tason viivalliset laatat joukkona "sarake:rivi".
+ *
+ * REITTIPASSI OHITETAAN z0:LLA (ks. VIIVATASO): siellä veto on alle
+ * 0,01 pikseliä leveä eikä Skia piirrä siitä mitään, joten sen laatat
+ * olisivat täysin läpinäkyviä.
+ */
+function viivatasonPeite(mitat, osat = null) {
+  const O = osat ?? {};
+  const joukko = new Set();
+  const R = mitat.px / TIHEYS;                // reittiyksikkö kuvapikseleinä
+  const px = (bx) => (bx - arkinBbox.x) * mitat.px;
+  const py = (by) => (by - arkinBbox.y) * mitat.px;
+
+  /* --- reitit, helmet ja lennot --------------------------------- */
+  if (O.reitit !== false && mitat.z >= VIIVA_REITIT_ALIN) {
+    /*
+     * LAUDAN KIERTO: reitin murtoviiva on avattu sauman yli
+     * (js/rules.js avaaSauma), joten sen x voi olla laudan
+     * ulkopuolella ja piirto tekee siitä kolme kappaletta. Peitteen on
+     * nähtävä samat kolme; sarakkeet rajautuvat arkin sisään
+     * (lisaaJana), joten kierrosta ei tarvitse erikseen katkaista.
+     */
+    const KIERROS = projektio.leveys ?? 0;
+    const siirrot = KIERROS ? [-KIERROS, 0, KIERROS] : [0];
+    const lisaaPoly = (poly, ulottumaR) => {
+      const m = ulottumaR * R + VIIVA_MARGINAALI_PX;
+      for (const d of siirrot) {
+        for (let i = 1; i < poly.length; i += 1) {
+          const ax = poly[i - 1][0] + d;
+          const bx = poly[i][0] + d;
+          // Sauman yli avattu hyppy ei ole jana (js/rules.js avaaSauma).
+          if (KIERROS && Math.abs(bx - ax) > KIERROS / 2) continue;
+          lisaaJana(joukko, mitat, px(ax), py(poly[i - 1][1]), px(bx), py(poly[i][1]), m);
+        }
+      }
+    };
+    for (const r of lautaSisalto.reitit) lisaaPoly(r.poly, ULOTTUMA.reitti);
+    for (const r of lautaSisalto.lentoreitit) lisaaPoly(r.poly, ULOTTUMA.lento);
+    const mh = ULOTTUMA.helmi * R + VIIVA_MARGINAALI_PX;
+    for (const r of lautaSisalto.reitit) {
+      for (const [bx, by] of r.askelmat) {
+        for (const d of siirrot) {
+          lisaaLaatikko(joukko, mitat, px(bx + d) - mh, px(bx + d) + mh,
+            py(by) - mh, py(by) + mh);
+        }
+      }
+    }
+  }
+
+  /* --- maiden rajat --------------------------------------------- */
+  if (O.rajat !== false) {
+    const m = ULOTTUMA.raja * R + VIIVA_MARGINAALI_PX;
+    for (const viiva of rajaViivat) {
+      for (let i = 1; i < viiva.length; i += 1) {
+        lisaaJana(joukko, mitat, px(viiva[i - 1][0]), py(viiva[i - 1][1]),
+          px(viiva[i][0]), py(viiva[i][1]), m);
+      }
+    }
+  }
+
+  /* --- erikoispiirit ja nollameridiaani -------------------------- */
+  if (O.piirit !== false) {
+    const S = mitat.leveys / 6400;
+    const yYla = Math.round(KEHYS.yla * S);
+    const yAla = mitat.korkeus - Math.round(KEHYS.ala * S);
+    for (const lat of PIIRIEN_LATIT) {
+      const y = py(kaava.lautaY(lat));
+      if (y < yYla || y > yAla) continue;
+      lisaaLaatikko(joukko, mitat, 0, mitat.leveys - 1,
+        y - PIIRI_YLOS - VIIVA_MARGINAALI_PX, y + PIIRI_ALAS + VIIVA_MARGINAALI_PX);
+    }
+    const x = px(kaava.lautaX(0));
+    lisaaLaatikko(joukko, mitat, x - MERIDIAANI_VASEN - VIIVA_MARGINAALI_PX,
+      x + MERIDIAANI_OIKEA + VIIVA_MARGINAALI_PX, yYla, yAla);
+  }
+  return joukko;
+}
+
 /** Tason nostolaatasto bittikarttana base64:nä (sama muoto kuin
  *  pohjan `laatasto`, ks. teeLuettelo — peli purkaa ne samalla
  *  koodilla). */
@@ -670,16 +965,23 @@ const tyot = [];
  * mustetta (nostotasonPeite). Sama peite menee luetteloon, joten
  * työlista ja luettelo eivät voi olla eri mieltä.
  */
+/*
+ * VIIVATASOAJOSSA SAMA SÄÄNTÖ: työlista on viivatasonPeite, ja sama
+ * peite menee luetteloon.
+ */
 const nostoPeitteet = new Map(
   NOSTOTASO ? tasot.map((m) => [m.z, nostotasonPeite(m)]) : [],
+);
+const viivaPeitteet = new Map(
+  VIIVATASO ? tasot.map((m) => [m.z, viivatasonPeite(m)]) : [],
 );
 const tarvitaan = new Set();
 const lohkot = new Map();
 for (const mitat of tasot) {
-  const peite = nostoPeitteet.get(mitat.z);
+  const peite = NOSTOTASO ? nostoPeitteet.get(mitat.z) : viivaPeitteet.get(mitat.z);
   for (let rivi = 0; rivi < mitat.riveja; rivi += 1) {
     for (let sarake = 0; sarake < mitat.sarakkeita; sarake += 1) {
-      if (NOSTOTASO && !peite.has(`${sarake}:${rivi}`)) continue;
+      if ((NOSTOTASO || VIIVATASO) && !peite.has(`${sarake}:${rivi}`)) continue;
       if (!alueella(mitat, sarake, rivi)) continue;
       if (SARAKKEET) {
         /*
@@ -743,6 +1045,69 @@ if (ALUE) {
  */
 let meriSavy = null;
 
+/*
+ * VIIVATASON PEITEMITTAUS (--peitemittaus): montako laattaa kukin
+ * sisältölaji tuo tasolle. Rajapassi on uusi sisältö, ja sen hinta on
+ * raportoitava — se on ainoa luku, jolla tason koon kasvun voi
+ * perustella tai kiistää.
+ */
+if (VIIVATASO && lippu('peitemittaus')) {
+  console.log('\nVIIVATASON PEITE  (laattoja tasolla)');
+  console.log('   z   ruudukko      reitit   rajat  piirit   yhteensä   rajojen lisä');
+  const summat = {
+    reitit: 0, rajat: 0, piirit: 0, kaikki: 0, lisa: 0,
+  };
+  for (const m of tasot) {
+    const vainReitit = viivatasonPeite(m, { rajat: false, piirit: false });
+    const vainRajat = viivatasonPeite(m, { reitit: false, piirit: false });
+    const vainPiirit = viivatasonPeite(m, { reitit: false, rajat: false });
+    const kaikki = viivatasonPeite(m);
+    const ilmanRajoja = viivatasonPeite(m, { rajat: false });
+    const lisa = kaikki.size - ilmanRajoja.size;
+    summat.reitit += vainReitit.size;
+    summat.rajat += vainRajat.size;
+    summat.piirit += vainPiirit.size;
+    summat.kaikki += kaikki.size;
+    summat.lisa += lisa;
+    console.log(`  ${m.z}  ${String(m.sarakkeita).padStart(4)}x${String(m.riveja).padStart(3)}  `
+      + `${String(vainReitit.size).padStart(8)}${String(vainRajat.size).padStart(8)}`
+      + `${String(vainPiirit.size).padStart(8)}${String(kaikki.size).padStart(11)}`
+      + `${String(lisa).padStart(15)}`);
+  }
+  console.log(`  yht          ${String(summat.reitit).padStart(8)}`
+    + `${String(summat.rajat).padStart(8)}${String(summat.piirit).padStart(8)}`
+    + `${String(summat.kaikki).padStart(11)}${String(summat.lisa).padStart(15)}`);
+}
+
+/*
+ * VAIN LISTA (`--vain-lista`): kirjoittaa työlistan — täsmälleen ne
+ * laatat jotka TÄMÄ komento piirtäisi — tiedostoon `laatat.json` ilman
+ * aineistoa, selainta ja piirtoa.
+ *
+ * TÄMÄ ON PAIKKAUKSEN TODISTUSAINEISTO. Paikkausajon jälkeen on
+ * osoitettava, että vain alueen laatat muuttuivat ja kaikki muut ovat
+ * bitilleen lähdeversion laattoja (tools/paikkaa-pyramidi.mjs vertaa).
+ * Vertailu tarvitsee alueen laattajoukon, ja sen on oltava SAMA joukko
+ * jonka piirto käyttää — ei uudelleen johdettu geometria, joka voisi
+ * ajautua hitusen eri tulokseen ja vaientaa juuri sen laatan, joka
+ * meni pieleen. Lista tulee siksi samasta `tyot`-taulukosta.
+ */
+if (lippu('vain-lista')) {
+  mkdirSync(kohdekansio, { recursive: true });
+  const polku = join(kohdekansio, 'laatat.json');
+  writeFileSync(polku, `${JSON.stringify({
+    versio: VERSIO,
+    muoto: MUOTO,
+    laatta: LAATTA,
+    nostotaso: NOSTOTASO || undefined,
+    alue: ALUE,
+    tasot: TASOT,
+    laatat: tyot.map(({ mitat, sarake, rivi }) => [mitat.z, sarake, rivi]),
+  })}\n`);
+  console.log(`\n--vain-lista: ${polku} (${tyot.length} laattaa)`);
+  process.exit(0);
+}
+
 if (KUIVA) {
   console.log('\n--kuiva: vain luettelo, ei piirtoa.');
   process.exit(0);
@@ -780,9 +1145,21 @@ if (NOSTOTASO && (HARVA || lippu('harvamittaus') || lippu('saumatesti'))) {
   console.error('--nostotaso ei tue --harva/--harvamittaus/--saumatesti-lippuja.');
   process.exit(1);
 }
+/*
+ * VIIVATASO TUKEE SAUMATESTIÄ, koska juuri siellä sauma voisi olla:
+ * katkoviivan vaihe lasketaan reitin kaarenpituudesta ARKIN
+ * koordinaateissa ja rajojen pistekuvion vaihe murtoviivan alusta.
+ * Kumpaakaan ei saa laskea laatan omasta nurkasta, ja sauma on
+ * todennettava eikä oletettava. Harva karsinta on pohjakuvan
+ * ominaisuus eikä kuulu tänne.
+ */
+if (VIIVATASO && (HARVA || lippu('harvamittaus'))) {
+  console.error('--viivataso ei tue --harva/--harvamittaus-lippuja.');
+  process.exit(1);
+}
 let aineisto = null;
 let sisalto = null;
-if (!NOSTOTASO) {
+if (!NOSTOTASO && !VIIVATASO) {
   console.log(`  aineisto        ${dataKansio}`);
   const aineistoAlkoi = Date.now();
   aineisto = await keraaMaailma({ kansio: dataKansio, laatikko, ruutu: RUUTU });
@@ -792,14 +1169,21 @@ if (!NOSTOTASO) {
   console.log(`  aineisto koossa ${aineistoSek.toFixed(1)} s`);
 
   /*
-   * PYSYVÄ SISÄLTÖ: kaupungit, reitit, joet, järvet, vuoret ja kohteet
-   * poltetaan laattoihin (ks. tools/fokuskartta/sisalto.mjs).
-   * `--ilman-sisaltoa` jättää ne pois — vertailukuvia varten.
+   * PYSYVÄ SISÄLTÖ: joet poltetaan pohjalaattoihin (ks.
+   * tools/fokuskartta/sisalto.mjs). `--ilman-sisaltoa` jättää ne pois
+   * — vertailukuvia varten.
+   *
+   * REITIT JA LENNOT EIVÄT ENÄÄ OLE POHJASSA (viivataso 31.8.2026
+   * ilta): ne piirretään omalle läpinäkyvälle tasolleen, joten pohjan
+   * sivu saa niiden tilalle tyhjät listat. Sivun koodi on sama
+   * molemmissa tiloissa, ja ero on datassa — sama ratkaisu kuin
+   * nostoilla.
    */
   sisalto = lippu('ilman-sisaltoa')
     ? null
-    : await keraaSisalto(pack, join(JUURI, 'js', 'packs'));
-  if (sisalto) console.log(`  sisältö         ${sisallonYhteenveto(sisalto)}`);
+    : { ...lautaSisalto, reitit: [], lentoreitit: [] };
+  if (sisalto) console.log(`  sisältö         ${sisallonYhteenveto(sisalto)} `
+    + '(reitit viivatasolla, eivät pohjassa)');
 }
 
 /* ------------------------------------------------------ harva pyramidi */
@@ -895,7 +1279,18 @@ function umpimeriSavy(mitat, sarake, rivi, syyt = null) {
   const dLat = Math.abs(latP - latE) * 0.06 + DLAT;
   const dLon = Math.abs(lonO - lonL) * 0.06 + DLON;
 
-  // 3. asteverkko (moottorin oletusväli 20°)
+  /*
+   * 3. asteverkko (moottorin oletusväli 20°)
+   *
+   * TÄMÄ EHTO ON VIIVATASON JÄLKEEN PELKKÄÄ VAROVAISUUTTA, eikä sitä
+   * poistettu: erikoispiirit ovat nyt viivatasolla (TYYLI
+   * `asteverkko: false`), joten pohjalaatan yli ei enää kulje yhtään
+   * viivaa, jonka takia laatta pitäisi säästää. Ehto siis vain SÄÄSTÄÄ
+   * muutaman laatan, jonka voisi karsia — ei koskaan karsi laattaa,
+   * jossa on mustetta. Kun `--harva` seuraavan kerran ajetaan, tämän
+   * voi mitata ja poistaa; nyt sitä ei kosketa, koska karsinta on
+   * pohjakuvan ominaisuus eikä tämän erän asia.
+   */
   const vali = 20;
   const yliMeridiaanin = Math.floor((lonO + dLon) / vali) > Math.floor((lonL - dLon) / vali);
   const yliLeveyspiirin = Math.floor((latP + dLat) / vali) > Math.floor((latE - dLat) / vali);
@@ -1061,7 +1456,7 @@ if (HARVA) {
 
 const tyokansio = join(tmpdir(), `pyramidi-${process.pid}`);
 mkdirSync(tyokansio, { recursive: true });
-if (!NOSTOTASO) {
+if (!NOSTOTASO && !VIIVATASO) {
   const { grid, ...korkeudenMitat } = aineisto.korkeus;
   writeFileSync(join(tyokansio, 'korkeus.bin'),
     Buffer.from(grid.buffer, grid.byteOffset, grid.byteLength));
@@ -1084,7 +1479,19 @@ if (!NOSTOTASO) {
  * Sisältö omana tiedostonaan: se on satoja kilotavuja (jokien
  * polyviivat), eikä sitä kannata ahtaa aineisto.jsonin sekaan.
  */
-writeFileSync(join(tyokansio, 'sisalto.json'), JSON.stringify(sisalto ?? null));
+/*
+ * VIIVATASOAJO SAA OMAN SISÄLTÖNSÄ: reitit, lennot ja rajat — ei
+ * jokia, koska joet jäävät pohjaan. Tiedosto on sama nimi ja sama
+ * muoto molemmissa tiloissa, joten sivun koodi ei haaraudu.
+ */
+writeFileSync(join(tyokansio, 'sisalto.json'), JSON.stringify(VIIVATASO
+  ? {
+    reitit: lautaSisalto.reitit,
+    lentoreitit: lautaSisalto.lentoreitit,
+    joet: [],
+    rajat: rajaViivat,
+  }
+  : (sisalto ?? null)));
 /*
  * POLTETTAVAT KARTTANOSTOT omana tiedostonaan samasta syystä kuin
  * sisältö. Piirtoon menee VAIN `poltettava`-merkit: estetyn maan
@@ -1112,7 +1519,7 @@ writeFileSync(join(tyokansio, 'nostot.json'),
 const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
 <body style="margin:0;background:#333"><canvas id="k"></canvas>
 <script type="module">
-  import { piirraMaailma, piirraNostotaso } from './maailmapiirto.js';
+  import { piirraMaailma, piirraNostotaso, piirraViivataso } from './maailmapiirto.js';
   /*
    * PELIN OMA SYMBOLIKIRJASTO. Poltettu merkki piirretään täsmälleen
    * samalla funktiolla kuin elävä (Raamattu 31.8.2026: poltetun ja
@@ -1126,12 +1533,21 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
    * edes kirjoitettu levylle (ks. työkansio).
    */
   const NOSTOTASO = ${NOSTOTASO};
+  /*
+   * VIIVATASOAJO LATAA VAIN SISÄLLÖN: reitit, lennot ja rajat ovat
+   * murtoviivoja laudan yksiköissä, eikä korkeusruudukolla tai
+   * merimaskilla ole läpinäkyvällä tasolla mitään tehtävää.
+   */
+  const VIIVATASO = ${VIIVATASO};
+  const VIIVA_REITIT_ALIN = ${VIIVA_REITIT_ALIN};
   const nostot = await (await fetch('./nostot.json')).json().catch(() => null);
   let aineisto = null;
   let sisalto = null;
   if (!NOSTOTASO) {
-    aineisto = await (await fetch('./aineisto.json')).json();
     sisalto = await (await fetch('./sisalto.json')).json();
+  }
+  if (!NOSTOTASO && !VIIVATASO) {
+    aineisto = await (await fetch('./aineisto.json')).json();
     aineisto.korkeus.grid = new Int16Array(await (await fetch('./korkeus.bin')).arrayBuffer());
     aineisto.meri = aineisto.meri
       ? new Uint8Array(await (await fetch('./meri.bin')).arrayBuffer()) : null;
@@ -1161,7 +1577,13 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
       x: bbox.x - R / px, y: bbox.y - R / px,
       w: bbox.w + (2 * R) / px, h: bbox.h + (2 * R) / px,
     };
-    piirraMaailma(kangas, aineisto, {
+    /*
+     * SAUMATESTI AJAA SEN PIIRRON, JOTA TESTATAAN. Viivatasolla sauma
+     * voisi syntyä katkoviivan vaiheesta ja rajojen pistekuviosta;
+     * molemmat lasketaan arkin koordinaateista, ja tämä on se koe,
+     * joka sen todentaa.
+     */
+    const yhteiset = {
       bbox: kbbox,
       projektio: patinaProjektio,
       leveys: leveys + 2 * R,
@@ -1170,10 +1592,17 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
       siirto: { x: siirto.x - R, y: siirto.y - R },
       arkki: saumaArkki,
       sisalto,
-      nostot,
-      piirraNosto: piirraNostosymPolttoon,
       paperiS: saumaPaperiS,
-    });
+    };
+    if (VIIVATASO) {
+      piirraViivataso(kangas, {
+        ...yhteiset, passit: { reitit: saumaZ >= VIIVA_REITIT_ALIN },
+      });
+    } else {
+      piirraMaailma(kangas, aineisto, {
+        ...yhteiset, nostot, piirraNosto: piirraNostosymPolttoon,
+      });
+    }
     const kctx = kangas.getContext('2d', { willReadFrequently: true });
     if (patina && window.__patina) {
       const tulos = await window.__patina({
@@ -1194,6 +1623,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
   let saumaTyyli = null;
   let saumaArkki = null;
   let saumaPaperiS = null;
+  let saumaZ = 7;
 
   /*
    * SAUMATESTI: sama alue kerran isona kuvana ja kerran laattoina.
@@ -1209,6 +1639,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
     saumaTyyli = perus.tyyli;
     saumaArkki = perus.arkki;
     saumaPaperiS = perus.paperiS ?? null;
+    saumaZ = perus.__z ?? 7;
     const iso = await piirraPala(
       perus.bbox, perus.siirto, ruudukko * laatta, ruudukko * laatta, perus.koko, patina,
     );
@@ -1304,7 +1735,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
         w: (W + 2 * R) / px,
         h: (W + 2 * R) / px,
       };
-      piirraMaailma(kangas, aineisto, {
+      const yhteiset = {
         bbox,
         projektio: perus.projektio,
         leveys: W + 2 * R,
@@ -1313,10 +1744,17 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
         siirto: { x: perus.siirto.x + siirtoPx - R, y: perus.siirto.y - R },
         arkki: perus.arkki,
         sisalto,
-        nostot,
-        piirraNosto: piirraNostosymPolttoon,
         paperiS: perus.paperiS ?? null,
-      });
+      };
+      if (VIIVATASO) {
+        piirraViivataso(kangas, {
+          ...yhteiset, passit: { reitit: (perus.__z ?? 7) >= VIIVA_REITIT_ALIN },
+        });
+      } else {
+        piirraMaailma(kangas, aineisto, {
+          ...yhteiset, nostot, piirraNosto: piirraNostosymPolttoon,
+        });
+      }
       const kctx = kangas.getContext('2d', { willReadFrequently: true });
       if (patina && window.__patina) {
         const t = await window.__patina({
@@ -1373,6 +1811,18 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
     if (NOSTOTASO) {
       piirraNostotaso(kangas, {
         ...asetukset, nostot, piirraNosto: piirraNostosymPolttoon,
+      });
+    } else if (VIIVATASO) {
+      /*
+       * VIIVATASO: sama lohkokoneisto, eri piirto. Reittipassi
+       * ohitetaan uloimmalla tasolla, jossa se on mitattu tyhjäksi —
+       * ja juuri samaa rajaa noudattaa peite, joten työlista ja piirto
+       * ovat samaa mieltä.
+       */
+      piirraViivataso(kangas, {
+        ...asetukset,
+        sisalto,
+        passit: { reitit: asetukset.__z >= VIIVA_REITIT_ALIN },
       });
     } else {
       piirraMaailma(kangas, aineisto, {
@@ -1502,7 +1952,19 @@ console.log(`  sivu pystyssä   ${((Date.now() - sivuAlkoi) / 1000).toFixed(1)} 
 
 /* ------------------------------------------------------------ piirto */
 
-const TYYLI = { meret: MERET, kehys: KEHYS, kompassi: KOMPASSI };
+/*
+ * ERIKOISPIIRIT EIVÄT OLE POHJASSA (viivataso 31.8.2026 ilta): piirit
+ * nimineen piirretään omalle läpinäkyvälle tasolleen, ja pohja saa
+ * siksi `asteverkko: false`. Ilman tätä ne olisivat kartalla kahdesti,
+ * ja kaksinkertainen muste näkyisi juuri niillä viivoilla, jotka
+ * kulkevat ruudun poikki joka tasolla.
+ *
+ * Yhden arkin lehdelle (tools/tee-yleislehti.mjs) kytkintä ei anneta,
+ * ja piirit piirtyvät siellä kuten ennen.
+ */
+const TYYLI = {
+  meret: MERET, kehys: KEHYS, kompassi: KOMPASSI, asteverkko: false,
+};
 
 /*
  * SAUMATESTI (--saumatesti): laattapyramidin pahin mahdollinen vika on
@@ -1544,6 +2006,8 @@ if (lippu('saumatesti')) {
       siirto: { x: saumaSarake * LAATTA, y: saumaRivi * LAATTA },
       arkki: { x: arkinBbox.x, y: arkinBbox.y },
       paperiS: PAPERI_S,
+      // Viivataso ohittaa reittipassin uloimmalla tasolla (ks. VIIVATASO).
+      __z: mitat.z,
     };
     const patinaParam = PATINA ? {
       resepti: PATINA, tausta: TAUSTA, reunus: reunusTasolle(), paperiS: PAPERI_S,
@@ -1630,6 +2094,9 @@ for (const { mitat, bx, by } of lohkot.values()) {
     projektio,
     leveys: kw,
     tyyli: TYYLI,
+    // Tason numero sivulle: viivataso ohittaa reittipassin uloimmalla
+    // tasolla (ks. VIIVATASO). Piirtoon tämä ei muuten vaikuta.
+    __z: mitat.z,
     // Arkin koko ja tämän lohkon nurkka: kohina, mittakaava ja kehys
     // lasketaan arkin koordinaateissa (ks. maailmapiirto.js).
     koko: { w: mitat.leveys, h: mitat.korkeus },
@@ -1669,11 +2136,11 @@ for (const { mitat, bx, by } of lohkot.values()) {
     // Lohkon reunalle jäänyt ylimääräinen laatta ei mene levylle.
     if (!tarvitaan.has(`${mitat.z}:${sarake}:${rivi}`)) continue;
     const puskuri = Buffer.from(pala.data.split(',')[1], 'base64');
-    // Nostotason laatat omaan alipolkuunsa pohjan rinnalle:
-    // <versio>/nostot/z<taso>/<sarake>/<rivi>.webp (ämpärissä).
-    const kansio = NOSTOTASO
-      ? join(kohdekansio, 'nostot', `z${mitat.z}`, String(sarake))
-      : join(kohdekansio, `z${mitat.z}`, String(sarake));
+    // Läpinäkyvien tasojen laatat omiin alipolkuihinsa pohjan
+    // rinnalle: <versio>/nostot/z… ja <viivaversio>/viivat/z…
+    let kansio = join(kohdekansio, `z${mitat.z}`, String(sarake));
+    if (NOSTOTASO) kansio = join(kohdekansio, 'nostot', `z${mitat.z}`, String(sarake));
+    if (VIIVATASO) kansio = join(kohdekansio, 'viivat', `z${mitat.z}`, String(sarake));
     mkdirSync(kansio, { recursive: true });
     writeFileSync(join(kansio, `${rivi}.${MUOTO}`), puskuri);
 
@@ -1741,6 +2208,16 @@ function teeLuettelo() {
   laatta: LAATTA,
   muoto: MUOTO,
   laatu: LAATU,
+  /*
+   * PATINATASO ON LUETTELOSSA, JOTTA PAIKKAUS OSAA JATKAA SAMALLA
+   * RESEPTILLÄ. Peli ei lue tätä — paikkausajo lukee. Paikatut laatat
+   * asetetaan kopioitujen naapureiden viereen, ja jos ne piirrettäisiin
+   * eri patinatasolla (tai eri laadulla, muodolla tai laattakoolla),
+   * raja näkyisi kartalla vaikka geometria täsmäisi pikselilleen.
+   * Kaikki neljä ovat siksi luettelossa ja tools/paikkaa-pyramidi.mjs
+   * lukee ne lähdeversion luettelosta ajon asetuksiksi.
+   */
+  patina: PATINA_TASO,
   // Arkin paikka LAUDAN koordinaateissa: kartta-ala + atlaskehyksen
   // paperimarginaali sen ylä- ja alapuolella (y on negatiivinen).
   arkki: arkinBbox,
@@ -1807,6 +2284,46 @@ function teeLuettelo() {
     };
   })(),
   /*
+   * VIIVATASO — kolmas laattapyramidi pohjan ja nostotason rinnalle
+   * (omistaja 31.8.2026 ilta). Pohjalaatoissa EI ole reittejä eikä
+   * erikoispiirejä; ne ovat tason laatoissa polussa
+   * <viivataso.versio>/viivat/z…, ja siellä ovat myös MAIDEN RAJAT.
+   *
+   * TIIVISTELISTAA EI OLE, ja se on ero nostotasoon. Nostot ovat myös
+   * pelin ELÄVÄSSÄ kerroksessa, joten peli tarvitsee tiedon siitä,
+   * minkä merkin se saa vaientaa. Reiteillä, piireillä ja rajoilla
+   * elävää kerrosta ei ole lainkaan — ne joko ovat laatoissa tai
+   * eivät ole kartalla — joten pelille riittää se, mitkä laatat ovat
+   * olemassa.
+   *
+   * `rajat` on RAJASETIN NIMI, ei sisältöä. Omistajan peruste
+   * 31.8.2026 ilta: rajojen oma taso on tärkeä siksikin, että
+   * myöhemmin voidaan mallintaa *"eri valtioiden kehityksiä vuosien
+   * saatossa esim. maailmansotien aikaan"*. Kun settejä joskus on
+   * useampi, tämä kenttä kertoo mikä niistä kartalla on — ja setin
+   * vaihto on datanvaihto ja uusi viivatasoversio, ei koodimuutos.
+   *
+   * YHTEENSOPIVUUS ON SAMA KUIN NOSTOTASOLLA JA SE ON TÄMÄN ERÄN
+   * TÄRKEIN KOHTA. Vanha peli ei tunne `viivataso`-kenttää: se
+   * piirtää pohjan sellaisenaan, ja jos pohja on jo ajettu
+   * reitittömänä, kartalta puuttuvat reitit. Siksi JULKAISUJÄRJESTYS
+   * on selain ensin, viivatason laatat toisena ja reititön pohja
+   * vasta kolmantena (ks. .github/workflows/generoi-pyramidi.yml).
+   * Toiseen suuntaan sauma on umpinainen: uusi peli vanhan luettelon
+   * kanssa ei rakenna kerrosta eikä pyydä yhtään laattaa.
+   */
+  viivataso: (() => {
+    if (!tasot.length) return null;
+    const laatastot = {};
+    for (const m of tasot) laatastot[m.z] = nostotasoBase64(m, viivatasonPeite(m));
+    return {
+      versio: VIIVAVERSIO,
+      tasot: tasot.map((m) => m.z),
+      rajat: RAJASETTI,
+      laatastot,
+    };
+  })(),
+  /*
    * MERISÄVY: se yksi väri, jolla peli maalaa karsittujen umpimeren
    * laattojen paikan (ks. umpimeriSavy). Null, jos mitään ei karsittu.
    */
@@ -1837,7 +2354,26 @@ function teeLuettelo() {
      */
     laatasto: HARVA ? laatastoBase64(m) : null,
   })),
-  alue: ALUE,
+  /*
+   * ALUE kertoo, MIKÄ OSA PYRAMIDIA TÄSSÄ VERSIOSSA ON OLEMASSA.
+   * Paikkausajossa se on koko pyramidi: muuttumattomat laatat
+   * kopioitiin lähdeversiosta uuteen versiopolkuun, joten uusi versio
+   * on täysi. Piirretty laatikko ei siis kuulu tähän kenttään vaan
+   * `paikkaus`-olioon — muuten luettelo väittäisi, että pyramidissa on
+   * vain se laatikko, ja jokainen tarkistus joka lukee `alue`-kenttää
+   * valehtelisi.
+   */
+  alue: PAIKKAUS_LAHDE ? null : ALUE,
+  /*
+   * PAIKKAUKSEN KIRJANPITO: mistä versiosta muuttumattomat laatat
+   * kopioitiin ja mikä laatikko piirrettiin uudelleen. Kenttä on
+   * olemassa vain paikatuissa versioissa (vanhoissa luetteloissa sitä
+   * ei ole, eikä peli lue sitä), ja se on ainoa jälki siitä, että
+   * versio on koottu kahdesta ajosta. Ilman sitä myöhempi lukija ei
+   * voisi tietää, minkä ajon patina- ja aineistotila kussakin laatassa
+   * on.
+   */
+  paikkaus: PAIKKAUS_LAHDE ? { lahde: PAIKKAUS_LAHDE, alue: ALUE } : undefined,
   lahteet: [
     'Natural Earth 10m (Kelso & Patterson) — public domain',
     'ETOPO1 Global Relief (NOAA, Amante & Eakins 2009) — public domain',
@@ -1866,17 +2402,24 @@ if (existsSync(luetteloPolku)) {
        * laatastoineen) jäävät sellaisinaan. Vain nostotaso-olio ja
        * eräkirjanpito päivittyvät.
        */
-      if (NOSTOTASO && vanha.tasot?.length) {
+      if ((NOSTOTASO || VIIVATASO) && vanha.tasot?.length) {
         luettelo.tasot = vanha.tasot;
       } else {
         const omat = new Set(luettelo.tasot.map((t) => t.z));
         luettelo.tasot = [...(vanha.tasot ?? []).filter((t) => !omat.has(t.z)), ...luettelo.tasot]
           .sort((a, b) => a.z - b.z);
       }
-      luettelo.erat = [...(vanha.erat ?? []), { tasot: TASOT, alue: ALUE, nostotaso: NOSTOTASO || undefined }];
+      luettelo.erat = [...(vanha.erat ?? []), {
+        tasot: TASOT,
+        alue: ALUE,
+        nostotaso: NOSTOTASO || undefined,
+        viivataso: VIIVATASO || undefined,
+        paikkaus: PAIKKAUS_LAHDE || undefined,
+      }];
       // Osa-ajo matalilla tasoilla (koeajo z0–z3) ei saa pyyhkiä
       // olemassa olevaa nostotasoa pois luettelosta.
       luettelo.nostotaso = luettelo.nostotaso ?? vanha.nostotaso ?? null;
+      luettelo.viivataso = luettelo.viivataso ?? vanha.viivataso ?? null;
     }
   } catch {
     /* rikkinäinen vanha luettelo: kirjoitetaan tuore päälle */
@@ -1906,6 +2449,10 @@ console.log(`  piirrettyä      ${(piirrettyaPx / 1e6).toFixed(1)} Mpx `
   + `(hukkaa ${(100 * (1 - pikseleita / piirrettyaPx)).toFixed(1)} % lohkon reunoilla)`);
 console.log(`  kokonaisaika    ${((Date.now() - alkoi) / 1000).toFixed(1)} s`);
 console.log(`  luettelo        ${luetteloPolku} (${statSync(luetteloPolku).size} tavua)`);
-console.log(NOSTOTASO
-  ? `\nVie ämpäriin: pyramidi/<nostoversio>/nostot/z<taso>/<sarake>/<rivi>.${MUOTO}`
-  : `\nVie ämpäriin: pyramidi/<versio>/z<taso>/<sarake>/<rivi>.${MUOTO}`);
+if (NOSTOTASO) {
+  console.log(`\nVie ämpäriin: pyramidi/<nostoversio>/nostot/z<taso>/<sarake>/<rivi>.${MUOTO}`);
+} else if (VIIVATASO) {
+  console.log(`\nVie ämpäriin: pyramidi/<viivaversio>/viivat/z<taso>/<sarake>/<rivi>.${MUOTO}`);
+} else {
+  console.log(`\nVie ämpäriin: pyramidi/<versio>/z<taso>/<sarake>/<rivi>.${MUOTO}`);
+}

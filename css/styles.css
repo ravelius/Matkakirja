@@ -1940,8 +1940,11 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
  * PÖLLÖ YLIVIIVATTUNA, PULU PERÄÄN (omistajan tilaus 27.8.2026).
  *
  * Tietokumppanin nimilapuissa lukee vitsi, jonka hahmo tekee itsestään:
- * Livia on Viisaan Pöllön SIJAINEN, joten pöllö-sana on vedetty yli ja
- * perässä lukee "Pulu". Lappu näyttää käsin korjatulta, ei uusiksi
+ * Livia on Viisaan Pöllön SIJAINEN, joten koko nimi "Viisas Pöllö" on
+ * vedetty yli YHDELLÄ pitkällä vedolla ja perässä lukee erillinen sana
+ * "Pulu" (omistajan tarkennus 31.8.2026, muoto on aina tämä — ei pelkkä
+ * "Pöllö" eikä sanakohtaisia vetoja). Lappu näyttää käsin korjatulta,
+ * ei uusiksi
  * ladotulta — siksi viiva on OHUT ja pelin oma sinettivahan punainen
  * (sama sävy kuin ihmenauhan puna, css/fokuskohteet.css --nauha-pinta-1
  * #a1524a), ei huomioväri.
@@ -1961,10 +1964,12 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
  * (VEDON_POLUT) — täällä ovat vain väri, paikka ja se, miten veto
  * mahtuu riville.
  *
- * YKSI YHTENÄINEN VETO PER LAPPU. viewBox venytetään sanan mittaan
- * (preserveAspectRatio="none"), joten sama polku palvelee sekä sanaa
- * "Pöllö" että paria "Viisas Pöllö" yhtenä vetona; viivanleveys pysyy
- * silti vakiona (vector-effect: non-scaling-stroke).
+ * YKSI YHTENÄINEN VETO PER LAPPU. viewBox venytetään koko nimen mittaan
+ * (preserveAspectRatio="none"), joten sama polku kattaa sanaparin
+ * "Viisas Pöllö" yhtenä vetona; viivanleveys pysyy silti vakiona
+ * (vector-effect: non-scaling-stroke). Yliviivattu osa on siksi myös
+ * `white-space: nowrap`: jos sanapari katkeaisi kahdelle riville,
+ * absoluuttinen veto vetäisi vinon viivan molempien rivien yli.
  *
  * EI LEIKKAUDU EIKÄ KASVATA RIVIÄ. SVG on absoluuttinen, joten se ei
  * ole rivilaatikon mitassa mukana — rivinkorkeus ei muutu. Ylitys ylä-
@@ -1996,6 +2001,7 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   display: inline-block;
   vertical-align: baseline;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .pollo-yliviivattu-sana { opacity: 0.78; }
@@ -4665,14 +4671,23 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
    (koko / skaala), jotta nimi on aina se sama määrä CSS-pikseleitä.
    Tyylitiedostoon kirjattu koko jäätyisi yhteen mittakaavaan.
 
-   HARVENNUSTA EI OLE, JA SE ON MITTA EIKÄ MAKU: ladonta mittaa nimen
-   leveyden measureTextillä ilman harvennusta, joten harvennettu piirto
-   olisi leveämpi kuin varattu tila ja nimet menisivät päällekkäin.
+   HARVENNUS EI OLE TÄÄLLÄ, JA SE ON MITTA EIKÄ MAKU. Pääkaupungin nimi
+   ladotaan harvennetuin kapiteelein (aikakauden atlaskonventio,
+   js/karttanimet.js PAAKAUPUNGIN_ASU), ja sekä `font-variant` että
+   `letter-spacing` tulevat elementiltä — samasta luvusta, jolla ladonta
+   mittasi nimen laatikon. Tyylitiedostoon kirjattu harvennus ei voisi
+   olla mitasta tietoinen, ja nimet menisivät päällekkäin.
+
+   TÄSSÄ LOHKOSSA OLI `letter-spacing: normal`, JA SE OLI ANSA. Mikä
+   tahansa CSS-sääntö voittaa SVG:n esitysmääreen, joten se sammutti
+   ladonnan oman harvennuksen kokonaan (mitattu Chromiumilla: kapiteeli
+   *"Lontoo"* pysyi 35,19 pikselissä, vaikka määre pyysi 45,3).
+   Harvennusta ei siis saa asettaa täällä kummallakaan arvolla — ei
+   edes oletuksena.
    --------------------------------------------------------------------------- */
 .karttanimet { pointer-events: none; }
 .karttanimi {
   font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  letter-spacing: normal;
   text-rendering: optimizeLegibility;
   fill: #4a3421;
   stroke: none;

@@ -188,6 +188,68 @@ const KOKO = {
   isoKaupunki: 12, kaupunki: 10.5, vuori: 11, jarvi: 10, kohde: 10.5,
 };
 
+/*
+ * ====== PÄÄKAUPUNKI LADOTAAN HARVENNETULLA KAPITEELILLA ============
+ *
+ * OMISTAJAN KYSYMYS 31.8.2026: *"miten tuon ajan kartoissa eroteltiin
+ * pääkaupungit ja muut kaupungit? tässä voisi käyttää samaa
+ * visualisointia."*
+ *
+ * 1800-luvun atlaksessa pääkaupungilla on KAKSI merkintää eikä yhtä:
+ * kaksoisrengas merkin ympärillä JA nimi harvennetuin kapiteelein.
+ * Rengas on kartalla jo (MERKKI.rengasIso); tämä on sen typografinen
+ * puolisko. Ilman sitä pääkaupunki erottuu vain siitä, että sen
+ * ympärillä on ohut kehä — ja kaukaa katsottuna kehä on pikselin
+ * levyinen, kun taas nimi on luettavissa joka mittakaavassa.
+ *
+ * === EHTO ON SAMA KUIN RENKAALLA, EI OMA LUETTELO ==================
+ *
+ * Asu valitaan `c.iso`-lipulla eli täsmälleen samasta tiedosta kuin
+ * rengas (`merkit`-listan `iso` → MERKKI.rengasIso piirrossa). Jos
+ * typografialla olisi oma ehtonsa, kartalle syntyisi ennen pitkää
+ * kaupunkeja, joilla on rengas ilman kapiteelia tai päinvastoin — sama
+ * juurisyy kuin kaksoisnimivaarassa (ks. tiedoston johdanto): kaksi
+ * lähdettä, ei yhtään yhteistä päätöstä.
+ *
+ * === TEKNIIKKA ON MEREN NIMEN, EI UUSI =============================
+ *
+ * Harvennus tehdään kuten meren nimessä (js/fokusnosto-symbolit.js
+ * NOSTOSYM_NIMIO_ASUT.meri, *"Harvennettu kursiivikapiteeli"*): asu on
+ * TAULUKKO, jonka `vali` on kirjainväli KIRJASINKOON OSUUTENA, ja
+ * väli lasketaan sekä mittaan että piirtoon samasta luvusta. Yksikkö
+ * on osuus eikä pikseli, jotta harvennus seuraa nimen kokoa (12 px
+ * pääkaupunki, 10,5 px tavallinen) ilman toista taulukkoa.
+ *
+ * KAPITEELI ON `small-caps`, EI `toUpperCase`. Meren nimi nostetaan
+ * versaaliksi, mutta se on kartan otsikko eikä kaupunki. Tässä koko on
+ * lukittu KOKO-tauluun, ja mitattuna (Chromium, kontin serif) versaali
+ * *"LONTOO"* on 49,1 px kun kapiteeli on 35,2 ja tavallinen 34,7 — eli
+ * versaali kasvattaisi nimen mitan 42 %:lla ja tekisi siitä ruudulla
+ * selvästi isomman kuin taulu sallii. Kapiteeli kasvattaa 1,5 %:lla ja
+ * pitää x-korkeuden ennallaan; leveyden lisää tulee harvennuksesta,
+ * joka on ladonnan syöte ja saa vaikuttaa väistöön normaalisti.
+ *
+ * VÄLI EI MAKSA YHTÄÄN NIMEÄ, JA SE ON MITATTU. Ladonta ajettiin
+ * kymmenellä mittakaavalla (0,11 … 1,879) ennen ja jälkeen:
+ * nimiöitä 0 / 0 / 62 / 62 / 62 / 295 / 305 / 339 / 342 / 345 ja
+ * pudotettuja 0 / 0 / 0 / 0 / 0 / 18 / 8 / 6 / 3 / 0 — TÄSMÄLLEEN
+ * samat luvut molemmilla. Syy on ladonnan järjestyksessä:
+ * pääkaupungit ovat tärkeysjonon kärjessä (`start` +8, `airport` +4),
+ * joten ne latoutuvat tyhjälle paperille, eikä levennys ehdi viedä
+ * tilaa keneltäkään. Vasta selvästi ilmavampi väli maksaa jotain —
+ * kokeeksi ajettu 0,60 pudotti kolme nimeä portaalla 0,22 ja pysyi
+ * muualla samana.
+ *
+ * MEREN 0,28 EI SILTI KELPAA TÄHÄN. Se on kartan otsikon harvennus:
+ * *"EGEANMERI"* levittäytyy koko lahden yli, kun taas kaupungin nimi
+ * on merkkinsä vieressä oleva lippu. 0,14 erottuu yhdellä
+ * silmäyksellä ilman että nimi hajoaa merkistään irti.
+ */
+const PAAKAUPUNGIN_ASU = { tyylitys: 'small-caps', vali: 0.14 };
+
+/** Tavallinen kaupunki: ei kapiteelia eikä harvennusta. */
+const KAUPUNGIN_ASU = { tyylitys: '', vali: 0 };
+
 /* ------------------------------------------------- kohdenimiön nosto */
 
 /**
@@ -615,13 +677,27 @@ export function katkaiseNimio(teksti, leveys, mittaa) {
  */
 let mittari = null;
 
-function tekstinLeveys(teksti, koko, tyylitys) {
+/*
+ * HARVENNUS ON MUKANA MITASSA, KOSKA SE ON MUKANA PIIRROSSA.
+ *
+ * Selain lisää `letter-spacing`-välin JOKAISEN merkin perään, myös
+ * viimeisen, ja `text-anchor` laskee tasauksen siitä samasta
+ * kokonaisleveydestä. Mitattuna (Chromium, kontin serif): kapiteeli
+ * *"Lontoo"* on 35,19 px, ja välillä 1,92 px sama nimi on 46,70 px eli
+ * tasan 35,19 + 6 × 1,92. Siksi tässä kerrotaan merkkien määrällä eikä
+ * väleillä (n−1): ladonnan laatikko on silloin täsmälleen se laatikko,
+ * jonka selain nimelle varaa, eikä tasaus liu'u kapiteelin alta.
+ *
+ * @param {number} vali kirjainväli CSS-pikseleinä (0 = ei harvennusta)
+ */
+function tekstinLeveys(teksti, koko, tyylitys, vali = 0) {
+  const harvennus = vali * [...String(teksti)].length;
   if (!mittari) {
-    if (typeof document === 'undefined') return teksti.length * koko * 0.5;
+    if (typeof document === 'undefined') return teksti.length * koko * 0.5 + harvennus;
     mittari = document.createElement('canvas').getContext('2d');
   }
   mittari.font = `${tyylitys} ${koko}px ${FONTTI}`.trim();
-  return mittari.measureText(teksti).width;
+  return mittari.measureText(teksti).width + harvennus;
 }
 
 /** Kohdenimiön leveys ruutupikseleinä — ladonnan oma mittatikku. */
@@ -868,7 +944,14 @@ function lado(data, px) {
       if (!saaNimen) { pudotettu += 1; continue; }
     }
     const koko = c.iso ? KOKO.isoKaupunki : KOKO.kaupunki;
-    const lev = tekstinLeveys(c.nimi, koko, '');
+    /*
+     * Pääkaupungin asu tulee samasta lipusta kuin sen rengas
+     * (ks. PAAKAUPUNGIN_ASU). Harvennus on CSS-pikseleitä, koska nimi
+     * on paperivakio — sama jako kuin koolla.
+     */
+    const asu = c.iso ? PAAKAUPUNGIN_ASU : KAUPUNGIN_ASU;
+    const vali = asu.vali * koko;
+    const lev = tekstinLeveys(c.nimi, koko, asu.tyylitys, vali);
     const kork = koko * 1.15;
     /*
      * EHDOKKAAT: laudan oma asettelu ensin. Se on käsin hiottua työtä
@@ -907,6 +990,9 @@ function lado(data, px) {
       y: laudalle(asetettu.ky),
       ank: asetettu.ank,
       koko,
+      /* Asu kulkee ladonnasta piirtoon: sama luku mittasi laatikon. */
+      tyylitys: asu.tyylitys,
+      vali,
     });
     nimetyt.add(c);
   }
@@ -1407,6 +1493,18 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
       y: n.y,
       'font-size': laudalle(n.koko),
       'text-anchor': n.ank,
+      /*
+       * ASU TULEE LADONNASTA EIKÄ TYYLITIEDOSTOSTA (pääkaupungin
+       * harvennettu kapiteeli, ks. PAAKAUPUNGIN_ASU). Luku on sama,
+       * jolla laatikko mitattiin: jos harvennus asuisi CSS:ssä,
+       * mittari ja piirto voisivat ajautua eri arvoihin, ja silloin
+       * nimi joko peittäisi naapurinsa tai putoaisi turhaan.
+       *
+       * Väli on CSS-pikseleitä ja kerros elää laudan yksiköissä, joten
+       * se jaetaan mittakaavalla samoin kuin kirjasinkoko.
+       */
+      ...(n.tyylitys ? { 'font-variant': n.tyylitys } : null),
+      ...(n.vali ? { 'letter-spacing': laudalle(n.vali) } : null),
     }, kerros).textContent = n.teksti;
   }
   return nakyvat.length;
