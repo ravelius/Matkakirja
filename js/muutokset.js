@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1392, teksti: 'Nostotaso ja pisteen karttavakio Raamattuun' },
   { v: 1391, teksti: 'Viisi täkyä sai koordinaatit — polttokate 413 → 510' },
   { v: 1390, teksti: 'Nostojen ladonta yhteen globaaliin mittakaavaan' },
   { v: 1389, teksti: 'Siirtoviesti ja tilannetaulu ajan tasalle' },

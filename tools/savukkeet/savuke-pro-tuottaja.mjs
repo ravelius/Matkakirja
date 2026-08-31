@@ -11,8 +11,12 @@
  *      ottaa sähköpostin ja koodin, kutsuu /pro-tarkista ja vaihtaa
  *      näkymän pro-näkymäksi. Väärä pari antaa selkeän virheviestin
  *      eikä jää laitteen muistiin.
- *   2. PRO-NÄKYMÄ. Esittely ja linkit lähtevät /pro-profiili-reitille,
- *      ja vastauksen viesti näkyy pelaajalle.
+ *   2. PRO-NÄKYMÄ. Kaksi lomaketta: materiaalilohko (.pro-materiaali)
+ *      ensin, tekijäsivu (.pro-profiililohko) väkäsen takana. Materiaali
+ *      lähtee /laheta-reitille, esittely ja linkit /pro-profiili-reitille,
+ *      ja vastauksen viesti näkyy pelaajalle. Kentät haetaan AINA oikean
+ *      lohkon sisältä — näkymän ensimmäinen textarea, url-kenttä ja
+ *      lähetysnappi kuuluvat materiaalilohkolle.
  *   3. TEKIJÄKORTTI. Lähderivi, jolla on `tekijaId`, tekee nimestä
  *      painikkeen; painike avaa kortin, jossa on kuva, esittely ja
  *      ulkoiset linkit uuteen välilehteen. Verkotta kortti kertoo
@@ -128,6 +132,9 @@ async function mockWorker(sivu) {
         profiili: null,
       });
     }
+    if (polku === '/laheta') {
+      return jsonVastaus({ ok: true });
+    }
     if (polku === '/pro-profiili') {
       return jsonVastaus({
         ok: true, tila: 'odottaa', tekijaId: TEKIJA_ID,
@@ -159,11 +166,12 @@ await sivu.waitForFunction(() => window.matkakirja, null, { timeout: 30000 });
 
 /* 1–2. Kirjautuminen ja pro-näkymä palautelomakkeessa. */
 const lomake = await sivu.evaluate(async ({ posti, koodi }) => {
-  const odota = (ehto, ms = 5000) => new Promise((valmis, virhe) => {
+  // Nimi mukaan: aikakatkaisu kertoo MIKÄ väite jäi toteutumatta.
+  const odota = (nimi, ehto, ms = 5000) => new Promise((valmis, virhe) => {
     const takaraja = Date.now() + ms;
     const kierros = () => {
       if (ehto()) return valmis(true);
-      if (Date.now() > takaraja) return virhe(new Error('aikakatkaisu'));
+      if (Date.now() > takaraja) return virhe(new Error(`aikakatkaisu: ${nimi}`));
       return setTimeout(kierros, 50);
     };
     kierros();
@@ -181,7 +189,7 @@ const lomake = await sivu.evaluate(async ({ posti, koodi }) => {
   kentat()[0].value = posti;
   kentat()[1].value = 'ZZZZZZZZ';
   nappi().click();
-  await odota(() => (osio.querySelector('.pro-kirjautuminen .periaate-huomio')?.textContent ?? '')
+  await odota('kirjautumisen virheviesti', () => (osio.querySelector('.pro-kirjautuminen .periaate-huomio')?.textContent ?? '')
     .includes('täsmää'));
   const virheviesti = osio.querySelector('.pro-kirjautuminen .periaate-huomio').textContent;
   const muistissaVaaranJalkeen = localStorage.getItem('matkakirja-pro-tunnus');
@@ -189,38 +197,80 @@ const lomake = await sivu.evaluate(async ({ posti, koodi }) => {
   // Sitten oikea pari.
   kentat()[1].value = koodi.toLowerCase();
   nappi().click();
-  await odota(() => osio.querySelector('.pro-nakyma'));
+  await odota('pro-näkymä avautuu', () => osio.querySelector('.pro-nakyma'));
   const nakyma = osio.querySelector('.pro-nakyma');
   const muistissa = JSON.parse(localStorage.getItem('matkakirja-pro-tunnus') ?? 'null');
 
-  // Profiilin lähetys.
-  const esittely = nakyma.querySelector('textarea');
+  /*
+   * Näkymässä on KAKSI lomaketta: materiaalilohko ensin, tekijäsivu
+   * väkäsen takana (omistaja 25.8.2026). Kentät ja napit haetaan aina
+   * oikean lohkon SISÄLTÄ — näkymän ensimmäinen textarea, url-kenttä
+   * ja lähetysnappi kuuluvat materiaalilohkolle, eivät profiilille.
+   */
+  const materiaali = nakyma.querySelector('.pro-materiaali');
+  const profiili = nakyma.querySelector('.pro-profiililohko');
+  if (!materiaali || !profiili) return { osioLoytyi: true, lohkotLoytyi: false };
+  const tila = (lohko) => [...lohko.querySelectorAll('.periaate-huomio')].at(-1)?.textContent ?? '';
+
+  // Materiaalilomake: vajaa lähetys torjutaan tässä, ilman verkkopyyntöä.
+  materiaali.querySelector('.periaate-laheta').click();
+  await odota('materiaalin puutehuomio', () => /Valitse kuva tai anna videon osoite/.test(tila(materiaali)));
+  const materiaaliVajaa = tila(materiaali);
+
+  // Materiaalilomake: täytettynä lähtee ja kiittää.
+  materiaali.querySelector('.pro-materiaali-video').value = 'https://www.esimerkki.fi/video';
+  materiaali.querySelector('.pro-materiaali-paikka').value = 'Tampere, Näsijärvi';
+  materiaali.querySelector('.pro-materiaali-aihe').value = 'Kuikka';
+  materiaali.querySelector('.pro-materiaali-fakta').value = 'Kuikka sukeltaa syvälle.';
+  materiaali.querySelector('.pro-materiaali-oikeudet').checked = true;
+  const nimeamisrivi = materiaali.querySelector('.pro-materiaali-nimeaminen').value;
+  materiaali.querySelector('.periaate-laheta').click();
+  await odota('materiaalin kiitosviesti', () => /Kiitos/.test(tila(materiaali)));
+  const materiaaliKiitos = tila(materiaali);
+
+  // Profiilin lähetys omasta väkäsestään.
+  profiili.open = true;
+  const esittely = profiili.querySelector('textarea');
   esittely.value = 'Dokumenttivalokuvaaja Tampereelta.';
-  const linkit = [...nakyma.querySelectorAll('input[type="url"]')];
+  const linkit = [...profiili.querySelectorAll('input[type="url"]')];
   linkit[0].value = 'https://www.esimerkki.fi/galleria';
-  nakyma.querySelector('.periaate-laheta').click();
-  await odota(() => (nakyma.querySelector('.periaate-huomio:last-of-type')?.textContent ?? '')
-    .includes('odottaa julkaisua'));
+  profiili.querySelector('.periaate-laheta').click();
+  await odota('profiilin vastausviesti', () => tila(profiili).includes('odottaa julkaisua'));
 
   return {
     osioLoytyi: true,
+    lohkotLoytyi: true,
     virheviesti,
     muistissaVaaranJalkeen,
     tunnusMuistissa: muistissa?.sahkoposti === posti && muistissa?.koodi === koodi.toLowerCase(),
     kenttia: { esittely: Boolean(esittely), linkkeja: linkit.length },
-    lopputila: [...nakyma.querySelectorAll('.periaate-huomio')].map((p) => p.textContent).join(' | '),
+    materiaaliVajaa,
+    materiaaliKiitos,
+    nimeamisrivi,
+    lopputila: [...profiili.querySelectorAll('.periaate-huomio')].map((p) => p.textContent).join(' | '),
   };
 }, { posti: POSTI, koodi: KOODI });
 
 vaadi('palautelomakkeessa on pro-osio', lomake.osioLoytyi === true);
+vaadi('pro-näkymässä on sekä materiaalilohko että tekijäsivun väkänen',
+  lomake.lohkotLoytyi === true);
 vaadi('väärä pari antaa selkeän virheen eikä jää muistiin',
   /täsmää/.test(lomake.virheviesti ?? '') && lomake.muistissaVaaranJalkeen === null,
   JSON.stringify({ virhe: lomake.virheviesti, muisti: lomake.muistissaVaaranJalkeen }));
 vaadi('oikea pari avaa pro-näkymän ja jää laitteen muistiin',
   lomake.tunnusMuistissa === true);
-vaadi('pro-näkymässä on esittely ja kolme linkkikenttää',
+vaadi('tekijäsivun väkäsessä on esittely ja kolme linkkikenttää',
   lomake.kenttia?.esittely === true && lomake.kenttia?.linkkeja === 3,
   JSON.stringify(lomake.kenttia));
+vaadi('materiaalilomake torjuu vajaan lähetyksen ilman verkkopyyntöä',
+  /Valitse kuva tai anna videon osoite/.test(lomake.materiaaliVajaa ?? '')
+    && kutsutut.filter((k) => k === 'POST /laheta').length === 1,
+  JSON.stringify({ vajaa: lomake.materiaaliVajaa, lahetyksia: kutsutut.filter((k) => k === 'POST /laheta').length }));
+vaadi('täytetty materiaali lähtee /laheta-reitille ja kiittää',
+  /Kiitos/.test(lomake.materiaaliKiitos ?? '') && kutsutut.includes('POST /laheta'),
+  JSON.stringify({ kiitos: lomake.materiaaliKiitos }));
+vaadi('nimeämisrivi on valmiiksi tuottajan nimellä',
+  lomake.nimeamisrivi === 'Kuva: Aino Valokuvaaja', JSON.stringify(lomake.nimeamisrivi));
 vaadi('profiilin lähetys kertoo että se odottaa julkaisua',
   /odottaa julkaisua/.test(lomake.lopputila ?? ''), lomake.lopputila);
 vaadi('lähetys kulki /pro-tarkista- ja /pro-profiili-reittien kautta',
@@ -229,11 +279,12 @@ vaadi('lähetys kulki /pro-tarkista- ja /pro-profiili-reittien kautta',
 
 /* 3. Tekijäkortti mock-datalla. */
 const kortti = await sivu.evaluate(async (id) => {
-  const odota = (ehto, ms = 5000) => new Promise((valmis, virhe) => {
+  // Nimi mukaan: aikakatkaisu kertoo MIKÄ väite jäi toteutumatta.
+  const odota = (nimi, ehto, ms = 5000) => new Promise((valmis, virhe) => {
     const takaraja = Date.now() + ms;
     const kierros = () => {
       if (ehto()) return valmis(true);
-      if (Date.now() > takaraja) return virhe(new Error('aikakatkaisu'));
+      if (Date.now() > takaraja) return virhe(new Error(`aikakatkaisu: ${nimi}`));
       return setTimeout(kierros, 50);
     };
     kierros();
@@ -256,10 +307,10 @@ const kortti = await sivu.evaluate(async (id) => {
   const riviTeksti = rivi.textContent;
 
   nappi.click();
-  await odota(() => document.querySelector('.tekija-kortti .tekija-esittely'));
+  await odota('tekijäkortin esittely', () => document.querySelector('.tekija-kortti .tekija-esittely'));
   const ikkuna = document.querySelector('.tekija-ikkuna');
   const kuva = ikkuna.querySelector('.tekija-kuva');
-  await odota(() => !kuva || kuva.complete);
+  await odota('tekijäkortin kuva latautuu', () => !kuva || kuva.complete);
   const linkit = [...ikkuna.querySelectorAll('.tekija-linkki')];
   const tulos = {
     tavallinenNappeja,
@@ -297,11 +348,12 @@ vaadi('linkit avautuvat uuteen välilehteen ja kantavat ulkoisen merkinnän',
 /* 3b. Verkotta kortti kertoo siististi eikä jää lataamaan. */
 verkkoPoikki = true;
 const verkotta = await sivu.evaluate(async (id) => {
-  const odota = (ehto, ms = 8000) => new Promise((valmis, virhe) => {
+  // Nimi mukaan: aikakatkaisu kertoo MIKÄ väite jäi toteutumatta.
+  const odota = (nimi, ehto, ms = 8000) => new Promise((valmis, virhe) => {
     const takaraja = Date.now() + ms;
     const kierros = () => {
       if (ehto()) return valmis(true);
-      if (Date.now() > takaraja) return virhe(new Error('aikakatkaisu'));
+      if (Date.now() > takaraja) return virhe(new Error(`aikakatkaisu: ${nimi}`));
       return setTimeout(kierros, 50);
     };
     kierros();
@@ -309,7 +361,7 @@ const verkotta = await sivu.evaluate(async (id) => {
   const moduuli = await import('./js/tekijakortti.js');
   moduuli.nollaaTekijaValimuisti();
   moduuli.avaaTekijaKortti(id, 'Aino Valokuvaaja');
-  await odota(() => /saatavilla|ei löytynyt/
+  await odota('verkottoman kortin tilarivi', () => /saatavilla|ei löytynyt/
     .test(document.querySelector('.tekija-tila')?.textContent ?? ''));
   const teksti = document.querySelector('.tekija-tila').textContent;
   document.querySelector('.tekija-ikkuna')?.remove();
@@ -322,11 +374,12 @@ vaadi('verkotta kortti kertoo siististi ettei sivu ole saatavilla',
 
 /* 4. Työhuoneen Lukijoilta-lehden pro-osio. */
 const tyohuone = await sivu.evaluate(async () => {
-  const odota = (ehto, ms = 8000) => new Promise((valmis, virhe) => {
+  // Nimi mukaan: aikakatkaisu kertoo MIKÄ väite jäi toteutumatta.
+  const odota = (nimi, ehto, ms = 8000) => new Promise((valmis, virhe) => {
     const takaraja = Date.now() + ms;
     const kierros = () => {
       if (ehto()) return valmis(true);
-      if (Date.now() > takaraja) return virhe(new Error('aikakatkaisu'));
+      if (Date.now() > takaraja) return virhe(new Error(`aikakatkaisu: ${nimi}`));
       return setTimeout(kierros, 50);
     };
     kierros();
@@ -334,8 +387,15 @@ const tyohuone = await sivu.evaluate(async () => {
   localStorage.setItem('matkakirja-kehittaja', '1');
   localStorage.setItem('matkakirja-ehdotus-avain', 'savuke-avain');
   const ui = window.matkakirja.ui;
+  /*
+   * Kehittäjäkytkin on muistissa (js/ui-apurit.js, 28.8.2026): sivun
+   * sisällä tehty localStorage-kirjoitus ei laukaise storage-tapahtumaa
+   * omassa dokumentissaan, joten muisti on unohdettava erikseen. Sama
+   * kaava kuin muissa savukevartijoissa.
+   */
+  ui.paivitaKehittajaTila();
   await ui.avaaLukijoiltaLehti();
-  await odota(() => (ui.lehtitila.tutkiSivut ?? [])
+  await odota('Lukijoilta-lehden pro-sivut', () => (ui.lehtitila.tutkiSivut ?? [])
     .some((s) => String(s.id).startsWith('lukijoilta-pro')));
   const sivut = ui.lehtitila.tutkiSivut ?? [];
   const yhteenveto = sivut.find((s) => s.id === 'lukijoilta-pro');
