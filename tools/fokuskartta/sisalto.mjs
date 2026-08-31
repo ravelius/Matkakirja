@@ -189,9 +189,30 @@ export async function keraaSisalto(pack, packkikansio, juuri = `${packkikansio}/
     const b = paikka.get(e.b);
     return a && b ? { ax: a.x, ay: a.y, bx: b.x, by: b.y } : null;
   };
+  /*
+   * === LENTOREITTI ON SAMAA MUOTOA KUIN MUUTKIN (omistaja 31.8.2026)
+   *
+   * *"Kaikki reitit saavat olla piirretty katkoviivalla."* Kun kaikki
+   * kolme lajia kulkevat saman katkoviivakoneiston läpi
+   * (maailmapiirto.js `katkoPolku`), lentoreitin on oltava sille
+   * samaa muotoa kuin maa- ja merireitin: `poly` on murtoviiva ja
+   * `solmut` sen ankkurit. Lento on kahden kaupungin ilmaviiva, joten
+   * murtoviivassa on tasan kaksi pistettä eikä välisolmuja ole —
+   * solmuheittoa ei siis ole mihin panna, mutta katkon oma heitto ja
+   * kaari tulevat siitä samasta siemenestä kuin muillakin.
+   *
+   * `ax…by` jäävät paikalleen: ne ovat sama tieto lyhyemmässä
+   * muodossa, ja sisältötiedosto luetaan myös vanhemmilla ajoilla.
+   */
   const lentoreitit = (pack.airRoutes ?? []).map((e) => {
     const j = jana(e);
-    return j ? { ...j, siemen: siemenesta(`lento:${e.a}|${e.b}`) } : null;
+    if (!j) return null;
+    return {
+      ...j,
+      poly: [[j.ax, j.ay], [j.bx, j.by]],
+      solmut: [0, 1],
+      siemen: siemenesta(`lento:${e.a}|${e.b}`),
+    };
   }).filter(Boolean);
 
   /* ----------------------------------------------------------- joet */

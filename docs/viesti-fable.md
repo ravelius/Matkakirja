@@ -1,3 +1,323 @@
+# Opus → Fable: kaikki reitit katkoviivaksi, himmeämmäksi ja käsin piirretyiksi (haara claude/reitit-kasin)
+
+Omistajan tilaus 31.8.2026 illalla toteutettu **saman haaran päälle**
+(`claude/reitit-kasin`, pohja 92583b30). **Ei PR:ää, ei versionostoa,
+ei pyramidiajoa.** Muutettu kolme tiedostoa:
+
+| tiedosto | mitä |
+| --- | --- |
+| `tools/fokuskartta/maailmapiirto.js` | reittilohko: katkoviivakoneisto, himmennetyt musteet, katkon oma käsin piirretty heitto ja kaari |
+| `tools/fokuskartta/sisalto.mjs` | lentoreitille `poly` + `solmut`, jotta se kulkee saman koneiston läpi |
+| `docs/moduulit/laattapyramidi.md` | luku 6k: vanha sääntö merkitty kumotuksi + uusi alaluku mitoineen |
+
+`js/rules.js`, `js/packs/*`, Raamattu, tarina, isoisän raamattu,
+`js/fokusnosto-symbolit.js`, `js/fokusniput.js` ja `js/laattapyramidi.js`
+**koskematta**. Askelmien määrää (`steps`), reittiverkkoa,
+sentripetaalista käyrää eikä korjattuja vesireittejä ei muutettu —
+`git diff --stat` on kolme tiedostoa ja siinä kaikki.
+
+Portit: `node --test tests/*.test.mjs` → **# pass 1047, # fail 0**
+(1 skip, sama kuin mainissa); `tarkista-kaksoisavaimet` → ei
+kaksoisavaimia; `tarkista-niputus` → 293 moduulia, ei törmäyksiä;
+`tarkista-savukkeet` → kunnossa; `build-standalone` → ok. `dist/` ja
+`node_modules` poistettu ennen committia.
+
+**Katselukappale `reitit-zoomtasot.png`** haaran juuressa,
+**committoimatta**, **922 kt** (raja oli 1,5 Mt; edellinen 4,5 Mt:n
+arkki jouduttiin pienentämään). Kavensin sen 1536 pikseliin ja
+tallensin paletti-PNG:nä (256 väriä, järjestetty tärinä) — **ruudut
+ovat yhä 512 × 512 laattapikseliä 1:1 eikä yhtään pikseliä ole
+skaalattu**. Sisältö: z2…z7 kuutena ruutuna, ennen/jälkeen-pari z7
+Kreetalta, selite ja lukutaulukko.
+
+---
+
+## 1. Mitä tehtiin — kolme muutosta
+
+### 1.1 Kaikki kolme lajia katkoviivaksi
+
+Vanha sääntö *"katkoviiva on varattu sille reitille, jolla ei ole
+askelmia"* purettiin. Voimassa oleva sääntö on nyt: **muste kertoo
+kulkutavan, helmet kertovat askelmat, ja katkoviiva on kartan yleinen
+reittimerkintä.**
+
+Lentoreitti ei enää käytä `ctx.setLineDash`ia vaan kulkee saman
+koneiston läpi kuin muut. Se vaati yhden kentän `sisalto.mjs`:ään:
+lentoreitille annetaan `poly` (kaksi pistettä) ja `solmut`, jolloin se
+on piirrolle samaa muotoa kuin maa- ja merireitti. `ax…by` jäivät
+paikalleen.
+
+### 1.2 Himmeämmäksi — ja mitattuna
+
+Peittävyys laskettiin, sävyyn ei koskettu:
+
+| | eilen (kontrastinnosto) | tänään |
+| --- | --- | --- |
+| maan muste | `rgba(120,88,54,0.80)` | **0,64** |
+| maan helmen kehä | 0,92 | **0,80** |
+| meren muste | `rgba(32,60,98,0.84)` | **0,68** |
+| meren helmen kehä | 0,94 | **0,84** |
+| lennon muste | `rgba(150,54,40,0.76)` | **0,60** |
+| helmen täyttö | 0,94 | 0,92 |
+
+Viivanleveyksiin ja helmen kokoon ei koskettu (omistaja pyysi
+himmeämpää, ei ohuempaa): viiva 1,9 P, helmen säde 3,2 P, lento 1,7 P.
+
+**Katkoviiva himmentää jo itsessään:** mustetta on enää noin kaksi
+kolmasosaa matkasta, joten silmän kokema keskimääräinen tummuus laskee
+vaikkei alfa muuttuisi. Siksi alfaa ei tarvinnut laskea lähellekään
+lähtötilaa.
+
+### 1.3 Käsin piirretty tunnelma katkon mittaan
+
+Solmun mittainen heitto (0,35 P, smoothstep solmujen välillä) jäi
+sellaisenaan. Sen rinnalle tuli **katkon mittainen**:
+
+| mitta | arvo |
+| --- | --- |
+| jakso (katko + väli) | 16 P |
+| katkon pituus | 55…78 % jaksosta = **8,8…12,5 P** |
+| väli | **3,5…7,2 P** |
+| koko katko sivussa viivalta | ±0,40 P |
+| katkon kaarevuus keskellä | ±0,55 P |
+
+Katko ei siis ole tarkka jana: se piirretään viitenä janana, jotka
+istuvat reitin omalla käyrällä ja kaartavat siitä sinin muotoisesti
+sivuun. Jokainen katko on eri pituinen, istuu eri kohdassa jaksoaan
+(siksi myös **väli** vaihtelee) ja kaartaa eri suuntaan.
+
+---
+
+## 2. Kolme rajaa, jotka piti pitää — ja miten ne pidettiin
+
+### 2.1 Determinismi: heitto tulee tunnuksesta, ei pikselistä
+
+Katkon pituus, paikka, sivuheitto ja kaari arvotaan funktiolla
+`arpa(r.siemen, n, k)`, jossa `n` on **katkon järjestysluku reitin
+omalta kaarenpituudelta**. Ei pikseliä, ei laatan nurkkaa, ei
+ajokertaa. Sama reitti saa saman kuvion joka laatalla ja joka ajolla.
+
+### 2.2 Sauma: vaihe kaarenpituudesta arkin koordinaateissa
+
+Tämä oli erän ainoa aito ansa, ja se ratkaistiin rakenteellisesti.
+Katko `n` on kaarenpituusväli `[n·T, (n+1)·T)` **arkin pikseleissä**:
+`lautaKuvaX` lukee arkin origon (ei laatan bboxia), joten pisteet ja
+niiden väliset etäisyydet ovat samat luvut joka laatalla. Katkon
+numeron saa siis suoraan kaarenpituudesta (`floor(s / T)`) eikä sitä
+tarvitse kerätä laatan alusta — ja juuri se tekee kuviosta laatasta
+riippumattoman. Sauman ylittävä hyppy (`|Δx| > arkin puolikas`)
+katkaisee jakson eikä kartu kaarenpituuteen, kuten muukin piirto.
+
+**Ajoin saumakokeen** (sama logiikka kuin `--saumatesti`: sama arkin
+ala kerran 1024 px kuvana ja kerran neljänä 512 px laattana, sekä
+tuotannon oma **lohkorajakoe**) kolmelle koodille ja neljälle alalle.
+Edellisen erän ala (arkin sarake 8, rivi 2) on tyhjää ulappaa eikä
+sisällä yhtään reittiä, joten valitsin alat, joilla reittejä on:
+
+| ala | koodi | sauma: eroavia / pahin | **lohkoraja: pahin** |
+| --- | --- | --- | --- |
+| z5 Korea | alku (main) | 8 054 (0,19 %) / 13 | **9** |
+| | edellinen erä | 7 922 (0,19 %) / 13 | **9** |
+| | **tämä erä** | 11 793 (0,28 %) / 13 | **11** |
+| z5 Egeanmeri | alku | 8 812 (0,21 %) / 8 | **8** |
+| | edellinen erä | 4 860 (0,12 %) / 8 | **8** |
+| | **tämä erä** | 7 068 (0,17 %) / 10 | **8** |
+| z7 Korea | alku | 4 415 (0,11 %) / 13 | **13** |
+| | edellinen erä | 4 541 (0,11 %) / 13 | **13** |
+| | **tämä erä** | 4 520 (0,11 %) / 13 | **13** |
+| z7 Egeanmeri | alku | 2 756 (0,07 %) / 5 | **5** |
+| | edellinen erä | 2 531 (0,06 %) / 5 | **5** |
+| | **tämä erä** | 2 588 (0,06 %) / 5 | **5** |
+
+**Ratkaiseva luku on lohkoraja** — tuotannon oma tilanne, kaksi
+samankokoista vierekkäistä lohkoa, joiden nurkat eroavat kokonaisella
+pikselimäärällä. Siinä pahin kanavaero on **13, 8, 5 ja 11** eli sama
+kuin ennen muutosta yhtä lukuun ottamatta (z5 Korea 9 → 11). Erot
+eivät kasaudu laattarajalle: z5 Koreassa 110 eroa 11 793:sta eli
+**0,9 %** on rajalla, kun työkalun oma varoitusraja on 50 %.
+
+Eroavien pikselien määrän kasvu (7 922 → 11 793) on odotettu ja
+selittyy: jokaisella katkolla on kaksi pyöreää päätä, joten
+vektorireunoja on moninkertaisesti enemmän kuin yhtenäisellä viivalla,
+ja niillä kelluvan pisteen pyöristys näkyy. Uutta saumamekanismia ei
+ole.
+
+**Varaus, sama kuin edellisessä erässä:** koe ajettiin
+kaaviotaustalla, koska raaka-aineistoa ei ole kontissa. Virallinen luku
+saadaan `node tools/generoi-laattapyramidi.mjs <kansio> --data
+<aineisto> --saumatesti` oikealla aineistolla ennen tuotantoajoa — ja
+**suosittelen ajamaan sen alueella, jolla on reittejä** (`--alue`),
+koska työkalun vakioala on ulappaa eikä koettele reittejä lainkaan.
+Tämä on löytö, ei mielipide: kaikki kolme koodia antoivat vakioalalla
+tavulleen saman tuloksen.
+
+### 2.3 Helmet jäivät — ja tässä on yksi asia, joka sinun on tiedettävä
+
+Helmet ovat paikallaan, samankokoisina, ja ne maalataan viivan päälle
+viimeisenä paperinvärisellä täytöllä. Katkon mitta valittiin niin,
+ettei helmi voi mennä katkosta: helmen halkaisija on 6,4 P ja lyhinkin
+katko 8,8 P — katko on aina pitkänomainen ja helmi aina pyöreä.
+
+**Mutta z2:lla ne alkavat sotkeutua, ja se on mitattu.** Askelvälit
+lautayksiköistä laattapikseleiksi:
+
+| taso | lyhin askelväli | p10 | mediaani |
+| --- | --- | --- | --- |
+| **z2** | **7,2 px** | **12,3 px** | 18,6 px |
+| z3 | 14,5 px | 24,6 px | 37,2 px |
+| z4 | 29,0 px | 49,2 px | 74,3 px |
+
+Helmen ulkohalkaisija kehineen on 7,7 px. Kymmenesosalla z2:n
+askelväleistä helmien väliin jää siis **4,6 px tai vähemmän — vähemmän
+kuin lyhin katko (8,8 px)**. Niillä reiteillä uloin taso lukee
+helminauhana eikä katkoviivana. Se näkyy katselukappaleen
+ensimmäisessä ruudussa (z2, Australia): mantereen sisäverkko on
+helmiä, ei katkoja.
+
+**En poistanut enkä pienentänyt helmiä**, koska ne ovat omistajan oma
+tilaus. Kolme vaihtoehtoa, jos se häiritsee:
+
+1. **Helmille oma kynnys** — piirretään vasta kun askelväli on
+   vähintään ~2,5 × helmen halkaisija, käytännössä z3:sta alkaen. z2 on
+   maailmanäkymä, jossa askelmien laskeminen ei ole se, mitä pelaaja
+   tekee. Yksi ehto piirtokoodissa; suosittelen tätä.
+2. **Helmi pienemmäksi vain z2:lla** — rikkoo paperivakioperiaatteen
+   (painojälki on joka tasolla samanlevyinen), en suosittele.
+3. **Jätetään** — z2:lla verkko on joka tapauksessa tiheä, ja
+   helminauha on kartografisesti kelvollinen merkintä.
+
+---
+
+## 3. Kontrasti — luvut ennen ja jälkeen
+
+### Menetelmä (sama kaikille kolmelle koodille)
+
+Weberin kontrasti `(paperi − tummin pikseli) / paperi` Rec. 709
+-luminanssista, **renderöidyistä laatoista**: näyte reitin murtoviivalta
+2 px välein, jokaisessa näytteessä poikkileikkaus kohtisuoraan ±12 px
+(askel 0,5 px, bilineaarinen), **paperi** = mediaani etäisyyksillä
+7…12 px (paikallinen tausta, siis meri meressä ja maa maalla),
+**muste** = pienin luminanssi etäisyyksillä ≤ 3,5 px. Helmen ympäristö
+(≤ 6 px askelmasta) jätetään pois. Taulukossa on **mediaani**.
+
+**Sama ala, samat laatat, kolme koodia** — ja koodit tulevat gitistä
+(`git archive`), joten vertailu ei nojaa muistiin:
+
+- **alku** = `fda3c08f` eli main ennen eilistä erää (se näkymätön viiva,
+  josta valitettiin)
+- **edellinen erä** = `92583b30` eli eilinen kontrastinnosto
+- **tämä erä** = tämä koodi
+
+### Egeanmeri (samat ruudut kuin edellisessä erässä)
+
+| taso ja laji | alku | edellinen erä | **tämä erä** | n |
+| --- | --- | --- | --- | --- |
+| z3 maa | 0,180 | 0,326 | **0,231** | 1 900 |
+| z3 meri | 0,276 | 0,435 | **0,362** | 743 |
+| z3 lento | 0,158 | 0,302 | **0,207** | 881 |
+| z5 maa | 0,176 | 0,314 | **0,220** | 242 |
+| z5 meri | 0,264 | 0,428 | **0,356** | 552 |
+| z5 lento | 0,135 | 0,305 | **0,209** | 143 |
+| z7 meri | **0,254** | 0,423 | **0,341** | 478 |
+
+### Korea (toinen ala, varmistukseksi)
+
+| taso ja laji | alku | edellinen erä | **tämä erä** |
+| --- | --- | --- | --- |
+| z2 maa | 0,166 | 0,337 | **0,222** |
+| z2 meri | 0,257 | 0,432 | **0,339** |
+| z4 maa | 0,180 | 0,351 | **0,243** |
+| z4 meri | 0,285 | 0,427 | **0,365** |
+| z6 maa | 0,171 | 0,316 | **0,222** |
+| z6 meri | 0,260 | 0,435 | **0,357** |
+| z7 maa | 0,186 | 0,326 | **0,236** |
+| z7 meri | 0,263 | 0,440 | **0,363** |
+
+**Jokainen luku on 1,25…1,55-kertainen lähtötilaan nähden** ja
+0,69…0,86-kertainen eiliseen. Se on juuri se, mitä pyydettiin:
+himmeämpi kuin eilen, muttei paluuta siihen, mikä oli näkymätöntä.
+
+### Kaksi asiaa, joissa olen eri mieltä edellisen erän luvuista
+
+**1. Mittasin uudestaan enkä luottanut edellisen erän lukuihin, ja
+tulos on eri asteikolla.** Edellinen raportti antoi z7 merireitille
+lähtötilassa **0,064** ja `n = 7`. Minun tiheämmällä otannalla sama
+lähtötila on **0,254** ja `n = 478…509`. Ero ei ole ristiriita vaan
+otos: seitsemän näytettä osui ilmeisesti yhteen kohtaan, jossa tumma
+ulappa syö kontrastin kokonaan. **Vertailukelpoisia ovat vain saman
+menetelmän luvut**, ja siksi mittasin kaikki kolme koodia uudestaan.
+Jos haluat alkuperäisen asteikon: tämän erän jakauman alin kymmenys on
+0,05…0,08 (välit) ja lähtötilan 0,17…0,21, mutta niitä ei kannata
+verrata keskenään, koska katkoviivan alin kymmenys on määritelmän
+mukaan väliä eikä viivaa.
+
+**2. Yksikään taso ei jää alle lähtötilan.** Se oli ohjeen ehto ja se
+täyttyy joka rivillä.
+
+### Peitto (kuinka suuri osa reitistä on mustetta)
+
+Katkon pituus on keskimäärin 67 % jaksosta; pyöreät päät lisäävät noin
+pikselin kumpaankin päähän, joten mitattu peitto renderöidyistä
+laatoista on **0,77…0,93**. Vertailuksi: lähtötilassa maalla ja
+merellä 0,90…1,00 ja lennolla (joka oli jo katkoviiva) 0,56…0,73;
+edellisessä erässä maalla ja merellä 0,99…1,00 ja lennolla 0,72…0,97.
+Ero *kokonaisen* viivan ja tämän välillä on siis noin 15
+prosenttiyksikköä mustetta vähemmän — sen päälle 20 %:n alfan lasku.
+
+---
+
+## 4. Katselukappale — mitä siinä on
+
+`reitit-zoomtasot.png`, 1536 × 1872 px, **922 kt**:
+
+1. **z2…z7 kuutena ruutuna**, jokainen 512 × 512 laattapikseliä 1:1.
+   Ruutu on haettu koneellisesti: reittien näytteet lasketaan
+   laatoittain ja valitaan se laatta, jossa kaikki kolme lajia ovat
+   mahdollisimman tasaisesti edustettuina. **Kaikilla tasoilla löytyi
+   kolmen lajin ruutu**, joten punaisia puuttumismerkintöjä ei ole.
+   Alat: z2 Australia, z3 Etelä-Afrikka, z4 Tasmaninmeri, z5 Korea,
+   z6 Tyrrhenanmeri, z7 Soulin seutu.
+2. **Ennen/jälkeen z7 Kreetalta** samasta ruudusta: vasemmalla eilinen
+   yhtenäinen viiva, oikealla tämän erän katkoviiva.
+3. **Lukutaulukko** kolmannen rivin kolmannessa ruudussa (§3:n
+   Egeanmeren luvut).
+4. **Selite** kolmesta lajista.
+
+**Rehellisyysvaraus, joka lukee myös kuvassa:** tausta on kaavio eikä
+lopullinen maasto. Kontissa ei ole pyramidin raaka-aineistoa (Natural
+Earth 10m + ETOPO), joten rantaviiva on repossa valmiina olevasta
+`ne50.geojson`:sta (PD, Natural Earth 50m) ja maasto on tasainen.
+**Paperi, patina, kehys, projektio, arkkikoordinaatit ja reittien
+piirto ovat oikeaa moottoria** — arvioitava asia eli viivat on siis
+aitoa jälkeä, tausta ei ole. Uutta edelliseen arkkiin verrattuna: karsin
+taustasta maiden väliset rajat (ne50 on maapolygoneja, ja jokainen
+sisämaan raja piirtyi rantaviivana), joten kaavio ei enää sotke silmää.
+
+**Tiedostokoko:** arkki on paletti-PNG (256 väriä mediaanijaolla,
+järjestetty 4 × 4 tärinä). Totuusvärisenä sama arkki olisi 3,4 Mt,
+koska paperin rae pakkautuu huonosti. **Pikseleitä ei ole skaalattu**
+eikä ruutuja rajattu — vain väriavaruus on pakattu, eikä ero näy
+käyttökoossa (vertasin).
+
+---
+
+## 5. Mitä jäi tekemättä ja miksi
+
+- **Helmen oma kynnys z2:lla** (§2.3) — sanoin sen ja ehdotin
+  ratkaisun, en tehnyt sitä. Helmet ovat omistajan tilaus, eikä niitä
+  kosketa ilman päätöstä.
+- **Virallinen `--saumatesti` oikealla aineistolla** — raaka-aineistoa
+  ei ole kontissa. Ajoin vastaavan kokeen kaaviotaustalla kolmelle
+  koodille ja neljälle alalle (§2.2). **Huomio työkaluun:** sen vakioala
+  (sarake 8, rivi 2) on ulappaa, jolla ei ole yhtään reittiä — se ei siis
+  koettele reittipiirtoa lainkaan. Kannattaa joko siirtää vakioala tai
+  ajaa `--alue`-rajauksella.
+- **Pyramidiajo ja versionosto** — ohjeen mukaan omistaja päättää.
+- **Havainto ohimennen, en korjannut:** z2:n tiheys, josta edellinen
+  raportti huomautti, on nyt hitusen parempi (katkoviiva ja himmeämpi
+  muste), mutta helminauha (§2.3) korvasi osan siitä. Jos z2 halutaan
+  ilmavammaksi, helmikynnys ratkaisee molemmat kerralla.
+
 # Opus → Fable: sentripetaalinen käyrä ja 41 vesireittiä (haara claude/reitit-kasin)
 
 Omistajan kaksi päätöstä 31.8.2026 toteutettu. **Ei PR:ää, ei

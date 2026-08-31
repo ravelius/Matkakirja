@@ -1106,14 +1106,15 @@ käyttää). Omaa sääntöä ei keksitty.
 nappulan suoraan perille (js/game.js `actionMannerLento`:
 `p.pos = { type: 'city', … }`). Lennolla ei ole ruutuja.
 
-Tästä syntyy sääntö: **muste kertoo kulkutavan, helmet kertovat
+Tästä syntyi ensin sääntö *"muste kertoo kulkutavan, helmet kertovat
 askelmat, ja katkoviiva on varattu sille reitille, jolla ei ole
-askelmia.**
+askelmia"*. **Omistaja kumosi sen 31.8.2026** — voimassa oleva muoto
+on alempana kohdassa "Katkoviiva kaikille kolmelle lajille".
 
 | reitti | muste | viiva | helmet |
 | --- | --- | --- | --- |
-| maa | seepia `rgba(120,88,54,…)` | yhtenäinen | kyllä |
-| meri | preussinsininen `rgba(32,60,98,…)` | yhtenäinen | kyllä |
+| maa | seepia `rgba(120,88,54,…)` | katkoviiva | kyllä |
+| meri | preussinsininen `rgba(32,60,98,…)` | katkoviiva | kyllä |
 | lento | poltettu sinooperi `rgba(150,54,40,…)` | katkoviiva | ei |
 
 Värit ovat aikakauden musteita eivätkä näyttövärejä: preussinsininen
@@ -1130,6 +1131,56 @@ heti ensimmäisellä tasolla, jolla reitti ylipäätään piirretään.
 | z2 | 11,4 px | 17,9 px | 35,1 px |
 | z4 | 45,4 px | 71,4 px | 140,2 px |
 | z6 | 181,6 px | 285,7 px | 560,9 px |
+
+### Katkoviiva kaikille kolmelle lajille (omistaja 31.8.2026)
+
+> *"Kaikki reitit saavat olla piirretty katkoviivalla. Ja ne voisivat
+> olla himmeämmällä. Ja katkoviivoihin voisi tehdä pientä käsin
+> piirretyn tunnelmaa niin, että ne hieman heittelevät ja
+> kaartelevat."*
+
+Voimassa oleva sääntö: **muste kertoo kulkutavan, helmet kertovat
+askelmat, ja katkoviiva on kartan yleinen reittimerkintä.** Helmi on
+silloin ainoa asia, joka erottaa maa- ja merireitin lennosta muuten
+kuin värillä.
+
+**Katkon mitat ovat paperivakioita** (`P`), eli samat joka tasolla:
+
+| mitta | arvo | mistä |
+| --- | --- | --- |
+| jakso (katko + väli) | 16 P | ks. alaraja/yläraja alla |
+| katkon pituus | 55…78 % jaksosta = 8,8…12,5 P | arvottu |
+| väli | 3,5…7,2 P | jää jaksosta yli |
+| katko sivussa viivalta | ±0,40 P | arvottu |
+| katkon kaarevuus keskellä | ±0,55 P | arvottu |
+
+Jakson alaraja tulee helmestä: helmen halkaisija on 6,4 P, ja lyhinkin
+katko (8,8 P) on selvästi pidempi, jottei katko näytä helmeltä.
+Yläraja tulee z2:sta, jolla reittijanan mediaanipituus on 17,9 px —
+jaksoa ei saa venyttää niin, ettei lyhimmälle janalle mahtuisi katkoa.
+
+**Vaihe tulee kaarenpituudesta arkin koordinaateissa, ei laatan
+origosta.** Katko `n` on kaarenpituusväli `[n·T, (n+1)·T)`, ja sen
+pituus ja paikka arvotaan reitin tunnuksesta (`r.siemen`) ja n:stä.
+Koska `lautaKuvaX` lukee arkin origon, pisteet ja niiden etäisyydet
+ovat samat luvut joka laatalla — sama ansa kuin patinan rakeessa on
+siis rakenteellisesti poissuljettu. Todennus: lohkorajakoe (kaksi
+samankokoista vierekkäistä lohkoa, sama arkin ala) antaa pahimman
+kanavaeron 5…13, eli **täsmälleen saman kuin ennen muutosta**, eivätkä
+erot kasaudu laattarajalle (0,9 % eroista, työkalun varoitusraja 50 %).
+
+**Peittävyys laskettiin** samalla erällä: maa 0,80 → 0,64, meri
+0,84 → 0,68, lento 0,76 → 0,60. Sävy ei muuttunut. Weberin kontrasti
+(paperi − tummin pikseli) / paperi mitattuna renderöidyistä laatoista:
+merireitti z7:llä 0,254 (lähtötila) → 0,423 (kontrastinnosto) →
+**0,341** (tämä muoto), eli yhä 1,34-kertainen lähtötilaan nähden.
+
+**Tiedossa oleva rajatapaus:** z2:lla tiheimmillä maareiteillä
+askelvälin p10 on 12,3 px ja helmen ulkohalkaisija kehineen 7,7 px,
+jolloin helmien väliin jää 4,6 px — vähemmän kuin lyhin katko. Niillä
+reiteillä uloin taso lukee helminauhana eikä katkoviivana. Jos se
+halutaan pois, helmille annetaan oma kynnyksensä; se on erillinen
+päätös eikä sitä tehty tässä.
 
 **Sauman yli kulkevat reitit korjaantuivat samalla.** Reitin
 murtoviiva on avattu sauman yli (`avaaSauma`), joten sen x voi olla
