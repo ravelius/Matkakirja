@@ -2539,8 +2539,8 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
  * RAJATYYLI — rajaviivaston mitat reittiyksikköinä (R).
  *
  * Muste on kartan omaa harmaanruskeaa, ja raja on JOKA MITALLAAN
- * reittiä vaatimattomampi: ohuempi veto (1,0 R vs. 2,8 R), himmeämpi
- * alfa (0,40 vs. 0,64) ja PISTEKUVIO katkoviivan sijaan. Silmä lukee
+ * reittiä vaatimattomampi: ohuempi veto (1,8 R vs. 2,8 R), himmeämpi
+ * alfa (0,52 vs. 0,64) ja PISTEKUVIO katkoviivan sijaan. Silmä lukee
  * pisterivin hallinnolliseksi merkinnäksi ja katkoviivan reitiksi,
  * joten kaksi merkintää samalla kartalla eivät voi sekaantua
  * toisiinsa — juuri se oli reittien ja jokien kohdalla se riski, joka
@@ -2549,12 +2549,28 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
  * KARTTAVAKIO (R) KUTEN REITIT JA JOET: raja on kartan merkintä eikä
  * painokoneen ominaisuus, joten se kutistuu kartan mukana ja häipyy
  * itsestään uloimmilla tasoilla.
+ *
+ * LUVUT ON VALITTU KATSOMALLA, EI ARVAAMALLA, JA RATKAISEVA NÄKYMÄ
+ * ON z6 EIKÄ z7. Omistajan ehto on kaksiosainen: rajojen on näyttävä
+ * MAANÄKYMÄSSÄ mutta ei huudettava. Maanäkymä (mittajana 200 km,
+ * Kreikka ruudulla) on pyramidin taso z6, jossa R on puolet
+ * syvimmän tason arvosta — siellä siis mitoitus ratkeaa, ja z7 on
+ * vain tarkistus siitä, ettei raja ala kilpailla reitin kanssa.
+ *
+ * Kolme mittaa renderöitiin samasta Balkanin ruudusta z6:lla ja
+ * z7:llä ja katsottiin 1:1 sekä kolminkertaisena suurennoksena:
+ *
+ *   1,3 R / 0,48  z7:llä siisti pisterivi, z6:lla katosi maastoon
+ *                 (0,65 px veto) — maanäkymän ehto ei täyty.
+ *   1,8 R / 0,52  z6:lla luettava pisterivi, z7:llä yhä selvästi
+ *                 ohuempi ja himmeämpi kuin reitti.  VALITTU.
+ *   2,2 R / 0,56  alkoi z7:llä lähestyä reitin painoa.
  */
 export const RAJATYYLI = Object.freeze({
-  viiva: 1.0,                    // veton leveys reittiyksikköinä (R)
-  muste: 'rgba(96,74,46,0.40)',  // kartan oma harmaanruskea
-  piste: 1.1,                    // pisteen pituus R:ssä
-  vali: 2.6,                     // pisteiden väli R:ssä
+  viiva: 1.8,                    // veton leveys reittiyksikköinä (R)
+  muste: 'rgba(96,74,46,0.52)',  // kartan oma harmaanruskea
+  piste: 1.5,                    // pisteen pituus R:ssä
+  vali: 3.0,                     // pisteiden väli R:ssä
 });
 
 /**
@@ -2659,6 +2675,13 @@ export function piirraViivataso(canvas, asetukset) {
     bbox, projektio, leveys, tyyli = {}, koko = null, siirto = null,
     sisalto = null, paperiS = null,
     passit = null,
+    /*
+     * Tyylien osittainen korvaus. Oletuksena null eli REITTITYYLI ja
+     * RAJATYYLI sellaisinaan; vertailukuvat ja tyylikokeet antavat
+     * tästä vanhan tai kokeiltavan arvon, jolloin sama näkymä voidaan
+     * renderöidä kahdella ilmeellä ilman koodimuutosta.
+     */
+    reittityyli = null, rajatyyli = null,
   } = asetukset;
   const P_ = passit ?? {};
   const px = leveys / bbox.w;
@@ -2719,7 +2742,7 @@ export function piirraViivataso(canvas, asetukset) {
   if (P_.rajat !== false) {
     piirraRajatKankaalle(ctx, sisalto?.rajat, {
       lautaKuvaX, lautaKuvaY, R, GW,
-    });
+    }, rajatyyli);
   }
   if (P_.piirit !== false) {
     piirraErikoispiiritKankaalle(ctx, {
@@ -2730,7 +2753,7 @@ export function piirraViivataso(canvas, asetukset) {
     piirraReititKankaalle(ctx, sisalto, {
       lautaKuvaX, lautaKuvaY, px, P, R, GX, GY, W, H, GW,
       kierros: projektio.leveys ?? 0,
-    });
+    }, reittityyli);
   }
 
   ctx.restore();

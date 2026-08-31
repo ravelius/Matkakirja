@@ -785,10 +785,10 @@ function lisaaJana(joukko, mitat, ax, ay, bx, by, m) {
  *           + puoli veton leveyttä (2,8 · 1,12 / 2 = 1,57)   = 2,87
  *   helmi   säde 4,6 + puoli kehää (1,9 / 2)                 = 5,55
  *   lento   sivu 0,40 + kaari 0,55 + 2,5 · 1,10 / 2          = 2,33
- *   raja    puoli veton leveyttä (1,0 / 2)                   = 0,50
+ *   raja    puoli veton leveyttä (1,8 / 2)                   = 0,90
  */
 const ULOTTUMA = {
-  reitti: 2.9, helmi: 5.6, lento: 2.4, raja: 0.6,
+  reitti: 2.9, helmi: 5.6, lento: 2.4, raja: 1.0,
 };
 /** Patinan musteen ulottuma laatan reunan yli (sama kuin nostolla). */
 const VIIVA_MARGINAALI_PX = NOSTO_MARGINAALI_PX;
@@ -1372,7 +1372,7 @@ if (HARVA) {
 
 const tyokansio = join(tmpdir(), `pyramidi-${process.pid}`);
 mkdirSync(tyokansio, { recursive: true });
-if (!NOSTOTASO) {
+if (!NOSTOTASO && !VIIVATASO) {
   const { grid, ...korkeudenMitat } = aineisto.korkeus;
   writeFileSync(join(tyokansio, 'korkeus.bin'),
     Buffer.from(grid.buffer, grid.byteOffset, grid.byteLength));
