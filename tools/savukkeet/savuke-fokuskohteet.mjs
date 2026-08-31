@@ -29,7 +29,10 @@
  *      korostuu (KOHDEKOROSTUS).
  *   5. POP-UP PYSYY RUUDULLA eikä peitä vuorolaatikon nappeja — ja
  *      jää selvästi irti ylä- ja alalaidasta.
- *   6. VAIN YKSI KERRALLAAN: toisen merkin napautus vaihtaa kohdetta.
+ *   6. SULKEVA NAPAUTUS EI AVAA MITÄÄN UUTTA (omistaja 31.8.2026):
+ *      kun kortti on auki, napautus kartalle sulkee sen JA nielaistaan
+ *      kokonaan — toinenkaan merkki ei aukea samalla napautuksella.
+ *      Seuraava napautus toimii normaalisti.
  *   7. SULKU: rasti, Esc ja napautus kortin päälle.
  *   8. FOKUSVIRTA VOITTAA: kortin tai kuplan ilmestyminen sulkee
  *      tietoruudun.
@@ -1111,16 +1114,70 @@ vaadi('tietoruutu jää selvästi irti ylä- ja alalaidasta',
   paneKorkeus > 0 && ylavara >= paneKorkeus * 0.05 && alavara >= paneKorkeus * 0.05,
   `ylävara ${ylavara}, alavara ${alavara}, pane ${paneKorkeus}`);
 
-/* --- 5: vain yksi kerrallaan --- */
+/* --- 5: SULKEVA NAPAUTUS EI AVAA MITÄÄN UUTTA -----------------------
+ *
+ * Omistaja 31.8.2026: *"jos näkyvillä on jokin nosto popup ja pelaaja
+ * klikkaa popupin ulkopuolelta karttaa, niin popup pitäisi aina
+ * sulkeutua, mutta mitään uutta ei saisi koskaan aueta samalla
+ * napautus kerralla vaikka pelaaja klikkaisi kartalla jotain toista
+ * kohdetta"*.
+ *
+ * TÄMÄ KUMOAA VANHAN VÄITTEEN *"toisen merkin napautus vaihtaa
+ * kohdetta"* (aiempi sopimus: kortti vaihtui sormen alta toiseksi).
+ * Nyt ensimmäinen napautus vain sulkee — nielu syö sen kokonaan
+ * (js/fokuskohteet.js kuunteleKohdetta) — ja vasta seuraava napautus
+ * avaa Delfoin. Koe mittaa molemmat puolet, koska pelkkä sulku ilman
+ * jälkimmäistä väitettä sallisi myös rikki menneen merkin.
+ */
 
 await napauta('delfoi');
 p = await popup();
 m = await merkit();
 const montako = await sivu.evaluate(() => document.querySelectorAll('.fokuskohde-popup').length);
-vaadi('toisen merkin napautus vaihtaa kohdetta',
-  p?.otsikko === 'Delfoi' && montako === 1, `${p?.otsikko}, ${montako} korttia`);
-vaadi('edellinen korostus purkautui',
-  m.auki.every((id) => id === 'delfoi'), JSON.stringify(m.auki));
+vaadi('toisen merkin napautus sulkee kortin avaamatta uutta',
+  p === null && montako === 0, `${p?.otsikko}, ${montako} korttia`);
+vaadi('edellinen korostus purkautui', m.auki.length === 0, JSON.stringify(m.auki));
+
+await napauta('delfoi');
+p = await popup();
+vaadi('sulun jälkeen SEURAAVA napautus avaa kohteen normaalisti',
+  p?.otsikko === 'Delfoi', JSON.stringify(p?.otsikko));
+vaadi('uusi korostus on Delfoin',
+  (await merkit()).auki.every((id) => id === 'delfoi'), JSON.stringify(m.auki));
+
+/*
+ * SAMA SÄÄNTÖ TYHJÄLLE KARTALLE — omistajan sanamuoto on *"klikkaa
+ * popupin ulkopuolelta karttaa"*, eikä sulku saa jäädä kiinni siitä,
+ * osuuko napautus merkkiin vai mereen. Kohta haetaan ruudulta: se on
+ * kartan svg:n päällimmäinen piste, jonka ympärillä ei ole yhtäkään
+ * osuma-aluetta eikä korttia.
+ */
+const tyhjaKohta = await sivu.evaluate(() => {
+  const pane = document.querySelector('.map-pane').getBoundingClientRect();
+  const osumat = [...document.querySelectorAll('.fokuskohde-osuma, .fokuslaatta-osuma, .target-hit')]
+    .map((n) => n.getBoundingClientRect());
+  const kortti = document.querySelector('.fokuskohde-popup')?.getBoundingClientRect();
+  for (let y = pane.top + 60; y < pane.bottom - 60; y += 17) {
+    for (let x = pane.left + 60; x < pane.right - 60; x += 17) {
+      if (kortti && x > kortti.left - 8 && x < kortti.right + 8
+        && y > kortti.top - 8 && y < kortti.bottom + 8) continue;
+      if (osumat.some((r) => x > r.left - 6 && x < r.right + 6
+        && y > r.top - 6 && y < r.bottom + 6)) continue;
+      if (document.elementFromPoint(x, y)?.closest?.('#board')) {
+        return { x: Math.round(x), y: Math.round(y) };
+      }
+    }
+  }
+  return null;
+});
+if (!tyhjaKohta) vaadi('tyhjä kartan kohta löytyi kokeeseen', false, 'ei löytynyt');
+else {
+  await sivu.mouse.click(tyhjaKohta.x, tyhjaKohta.y);
+  await sivu.waitForTimeout(350);
+  vaadi('napautus tyhjään karttaan sulkee kortin', (await popup()) === null);
+  // Kortti takaisin auki kohtaa 6 varten.
+  await napauta('delfoi');
+}
 
 /* --- 6: sulku kolmella tavalla --- */
 

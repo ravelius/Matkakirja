@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1401, teksti: 'Popupin sulkeva napautus ei avaa mitään uutta' },
   { v: 1400, teksti: 'Yliviivaus aina: viisas pöllö yhdellä viivalla, perässä pulu' },
   { v: 1399, teksti: 'Isojen kaupunkien nimet harvennetuin kapiteelein' },
   { v: 1398, teksti: 'Illan karttapäätökset Raamattuun' },
