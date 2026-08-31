@@ -1,3 +1,149 @@
+# Opus → Fable: leveän terän veto ja kuusi uutta kuviota (haara claude/symbolit-kasin)
+
+Toinen kierros valmis, pushattu samalle haaralle. **Ei versionostoa, ei
+PR:ää, ei laattapolttoa.** Muuttuneet tiedostot: `js/fokusnosto-symbolit.js`
+ja `css/styles.css` (osio KARTTASYMBOLIT).
+
+## 1. Katselaarkki — PÄÄTUOTOS
+
+```
+/home/user/Matkakirja/.claude/worktrees/symbolit-kasin/symbolit-vertailu.png
+```
+
+2360 × 6544 px, **ei committoitu**. "Ennen" on nyt **mainissa oleva merkki**,
+kuten pyydettiin — ei hylätty horjuva versio. Jokaisesta 15 merkistä:
+ennen/jälkeen nimettynä, suurennos (104 px) ja käyttökoko (6,8 CSS-px merkki
+7,8 px ruudussa; pikselinäkymä = sama merkki dpr 3:lla, 23 laitepikseliä, 8×
+suurennettuna; lisäksi 1:1 kolmena rinnakkain), kartan pergamentti ja muste,
+vetoluvut ja merkinnät: musta lipuke = uusi kuvio, punainen laatikko = vetojen
+luku ei laskenut, oranssi palkki = kompromissi tai perustelu.
+
+## 2. Horjunta on purettu — veto on nyt leveän terän jälki
+
+Poistettu kokonaan: siemen, arpa (`nostosymSiemen`, `nostosymArpa`), kärkien
+heitto ja vetojen satunnainen kaarrutus. `grep Math.random|NOSTOSYM_HORJU` →
+0 osumaa. Omistaja oli oikeassa: se tuotti epätarkkuutta, ei elävää vetoa.
+
+**Veto ei ole enää `stroke`-viiva vaan täytetty muoto.** Tasapaksuudesta ja
+pyöreistä päätteistä ei päässyt eroon viivana, koska `stroke` on määritelmän
+mukaan vakiopaksuinen. Nyt:
+
+- Terä on **kiinteässä −40° kulmassa** (`NOSTOSYM_TERA_KULMA`, sama koko
+  perheelle) ja sillä on kaksi mittaa: leveä `a = 0,775`, kapea `b = 0,36`.
+- Vedon paksuus **seuraa kulkusuuntaa**: terää vastaan paksu, terän suuntainen
+  ohut. Alaviistoon menevät vedot ovat paksuimpia, yläviistoon ohuimpia,
+  pystyvedot niiden väliltä — 1800-luvun ladonnan oma jakauma.
+- Keskiviiva näytteistetään, siirto lasketaan **terän omassa
+  koordinaatistossa** (jossa terän ellipsi on yksikköympyrä), ja
+  takaisinmuunnos venyttää siirron ellipsiksi. Siitä syntyy suunnasta
+  riippuva paksuus.
+- **Päätteet ovat viistoja**, eivät pyöreitä — terän oma pää. Vedon loppuun
+  jää kevyt kynän nosto (terä kapenee 62 %:iin viimeisen 30 %:n matkalla).
+  Kapeneminen, ei piikki.
+- Umpinainen veto (kehä, tähden ääriviiva) on rengas: ulko- ja sisäreuna
+  vastakkaisiin kiertosuuntiin, jolloin nonzero-täyttö jättää aukon.
+
+**Determinismi ilman siementä:** samat luvut sisään, sama polku ulos. Kolme
+peräkkäistä Node-ajoa: sama SHA-256 (`a195c268…`). Polttoehto säilyy.
+
+### Mittaus käyttökoossa — pyydetty rehellinen luku
+
+Yksi kirjaston yksikkö on kartalla **0,524 CSS-pikseliä** (KOHDE_SYMBOLI_SKAALA
+11/21). Terällä a = 0,775 ja b = 0,36 vedon paksuus vaihtelee **0,73 → 1,55
+yksikköä = 0,38 → 0,81 CSS-pikseliä**.
+
+**Ero paksuimman ja ohuimman välillä on 0,43 CSS-pikseliä = 1,3 laitepikseliä
+puhelimen dpr 3:lla.** Se on niukasti yli yhden laitepikselin: ero EROTTUU
+käyttökoossa, mutta se on hienovarainen — suurennoksessa se on selvä.
+En siis väitä, että ero on iso, enkä väitä että se katoaa. Se on juuri ja
+juuri yli mittayksikön, ja pikselinäkymä arkissa näyttää sen sellaisenaan.
+
+Viisto pääte sen sijaan näkyy käyttökoossa selvästi paremmin kuin paksuusero:
+pyöreä pääte pyöristi joka vedon pään omaksi täpläkseen, viisto ei.
+
+## 3. Symbolikohtaiset muutokset (omistajan päätökset)
+
+| merkki | vedot | mitä tehtiin |
+| --- | --- | --- |
+| vuori | 9 → 1 | pelkkä kolmio, ei sisäviivoja — sama kuvio kuin lehteen poltettu |
+| **elain** | 6 → 4 | **uusi kuvio**: iso pallo + pieni pallo + silmät pienemmässä, korvat pois |
+| **urheilu** | 10 → 6 | **uusi kuvio**: juokseva ihminen |
+| **tekniikka** | 4 → 4 | **uusi kuvio**: harppi (ei enää veturi/auto) |
+| **ihme** | 5 → 1 | **alkuperäinen palautettu**, haaleat sisäsäteet poistettu |
+| kulttuuri | 7 → 4 | väliviiva pois |
+| kaupunki, merenkulku, historia, ruoka | | ennallaan, vain vedon toteutus vaihtui |
+| meri, huuto, silma, sana, kauppa | | pidetty, uusi veto viety niihinkin |
+
+**Koko perhe: vedot 81 → 48 (−41 %).**
+
+**Elain:** pallot **sivuavat** toisiaan eivätkä mene lomittain. Ensimmäisessä
+kokeilussa ison pallon yläkaari kulki pienen pallon läpi ja piirsi kasvoihin
+leuan — merkki luki parrakkaana ukkona. Sivuavina se lukee istuvana eläimenä.
+
+**Urheilu:** pää, vartalo, kaksi jalkaa (kumpikin yksi polvesta taittuva veto)
+ja kaksi kättä = 6 vetoa. Kädet taittuvat kyynärpäästä **eri kulmiin**:
+suorina ne asettuivat samalle linjalle ja näyttivät yhdeltä tangolta vartalon
+läpi. Yhdellä kädellä hahmo luki seisovana, joten kahta ei voinut karsia.
+
+**Tekniikka:** kategorian kohteet ovat insinöörityötä, eivät liikennettä —
+Hobrechtin viemäriputket, Roquefavourin akvedukti, Pulkovan observatorio,
+Duomon gnomoni, Finlaysonin konehalli, Wienin asema, Ruhrin alue (23 kohdetta).
+Niiden yhteinen esine on **harppi**. Nivelen mustepiste ja säätökaari ovat
+VAHVAA mustetta, koska ne ovat ainoa asia, joka erottaa harpin vuorikolmiosta
+käyttökoossa: ohuena kaari katosi kartalla kokonaan. Käyttökoossa vuori lukee
+"Λ" ja harppi "A" — todennettu pikselinäkymästä, ei arvattu.
+
+## 4. Havainto, jota EN korjannut omin päin
+
+**Kulttuuri (lyyra):** kun väliviiva eli viimeinen kieli otettiin pois pyynnön
+mukaan, jäljelle jäi kaksi käsivartta, poikkipuu ja kaikupohja — eli umpinainen
+**kori**. Soittimen tunnisti juuri kielistä. Toteutin pyynnön sellaisenaan ja
+merkitsin havainnon arkkiin oranssilla palkilla. Jos kori häiritsee, yksi kieli
+takaisin riittää (vedot 4 → 5). Merkitys ja paikka eivät muuttuneet.
+
+## 5. Mitä CSS:ssä muuttui
+
+`.nostosym-mini` ja `.nostosym-mini-ohut` ovat nyt **fill**, ei stroke:
+viivanleveys ja päätetyyli eivät enää koske näitä merkkejä, koska viivaa ei
+ole. `.nostosym-mini-piste` poistettiin — mustepiste on nyt terän oma viisto
+dabi samassa polussa. `nostosymMustelajit` lukee CSS:stä `fill`in, ja
+canvas-piirtäjä kutsuu `fill`iä `stroke`n sijaan. Kortin oma merkkiperhe
+(`NOSTOSYM_KUVAT`, `--sym-*`) ei muuttunut.
+
+## 6. Mitat ja poltto
+
+- **Kokoa ei kasvatettu.** `NOSTOSYM_MINI_R` on yhä 6,5. Musteen uloin piste
+  on **7,04 yksikössä** (ihme) eli mahtuu rasterin ruutuun `NOSTOSYM_MINI_RUUTU`
+  = 7,4 — mitattu kaikista poluista, ei arvattu.
+- `nostosymMiniMerkki(symboli, laji) → { vahva, ohut, vedot }` on yhä
+  selaimeton: kaksi täytettävää `d`-merkkijonoa, ei DOMia, ei ruudun kokoa,
+  ei pikselitiheyttä. Todennettu paljaassa Nodessa.
+- Generoitua polkudataa on yhteensä **14,3 kt** (ennen ~3 kt käsin kirjoitettuja
+  viivoja). Se on generoitua eikä lähdekoodia — lähde on lyhyempi kuin ennen,
+  koska merkit ovat nyt pelkkiä koordinaattilistoja. 14 kt ei näy 20 Mt:n
+  yhden tiedoston versiossa.
+- **Vetojen määrä on nyt luku datassa** (`vedot`), ei arvio kommentissa.
+  Polkukomentojen määrä ei ole enää mielekäs mittari: täytetty ääriviiva
+  syntyy näytteistämällä, joten komentoja on satoja riippumatta siitä,
+  montako vetoa merkissä on. Arkki raportoi siksi vain vedot.
+
+## 7. Portit
+
+- `node --test tests/*.test.mjs` → **# pass 1047, # fail 0** (1 skipped).
+- `node tools/tarkista-kaksoisavaimet.mjs` → ei kaksoisavaimia.
+- `node tools/build-standalone.mjs` → ok; **dist/ poistettu ennen committia**.
+- `savuke-fokuskohteet.mjs` → 96/96 · `savuke-selitevalikko.mjs` → 32/32 ·
+  `savuke-maastokohteet.mjs` → 8/8.
+- Determinismi: 3 × Node-ajo, sama SHA-256.
+
+**Ennestään rikki, EI tästä muutoksesta:** `savuke-elaintaky.mjs` kaatuu
+kolmeen vartioon ("merkki on kohdemerkin mittaluokkaa" 0/0, "osuma-alue on
+sormen mitta" 0, "ainakin yksi merkki on ruudulla napautettavissa" false).
+Ajoin saman savukkeen myös **mainin työkopiossa** (`/home/user/Matkakirja`,
+jossa symbolit ovat ennallaan) — täsmälleen sama kolmen vartion kaatuminen.
+Vika on siis eläintäkyjen puolella, ei symboleissa. Jätin sen koskematta
+kustannuskurin kohdan 1 mukaan; tässä se on Fablelle tiedoksi.
+
 # Opus → Fable: karttasymbolit käsin piirretyiksi (haara claude/symbolit-kasin)
 
 Erä valmis, pushattu haaralle. **Ei versionostoa, ei PR:ää, ei

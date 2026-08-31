@@ -21386,25 +21386,19 @@ body.maataulu-auki .toimintorivi .monitoimi-nappi {
    ylärivillä, jossa merkki on 1,5 em; kartalla kaikki on samaa
    seepiaa kuin lehden oma painojälki, ja kategorian kertoo muoto.
    --------------------------------------------------------------------------- */
+/* VETO ON TÄYTETTY MUOTO, EI VIIVA (omistaja 31.8.2026: viivat eivät
+   saa olla tasapaksuja eivätkä päättyä pyöreään). Merkki piirretään
+   leveän terän jälkenä, jonka paksuus seuraa kulkusuuntaa ja jonka
+   pääte on viisto — koko muoto lasketaan js/fokusnosto-symbolit.js:ssä
+   (osio LEVEÄTERÄINEN KYNÄ). Tänne jää siis vain MUSTE: viivanleveys
+   ja päätetyyli eivät enää koske näitä merkkejä, koska viivaa ei ole. */
 .nostosym-mini {
-  fill: none;
-  stroke: rgba(58, 40, 25, 0.82);
-  stroke-width: 1.15px;
-  stroke-linejoin: round;
-  stroke-linecap: round;
+  fill: rgba(58, 40, 25, 0.86);
+  stroke: none;
 }
 
 .nostosym-mini-ohut {
-  fill: none;
-  stroke: rgba(58, 40, 25, 0.45);
-  stroke-width: 0.75px;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-}
-
-/* Täytetty piste — sama merkintä kuin lehden omalla kaupunkipisteellä. */
-.nostosym-mini-piste {
-  fill: rgba(58, 40, 25, 0.82);
+  fill: rgba(58, 40, 25, 0.52);
   stroke: none;
 }
 
