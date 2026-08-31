@@ -1386,6 +1386,55 @@ export const RAAMATTU = {
           + '273 -> 74, ja lahikuvassa nimettomat pisteet 19 / 11 / 6 '
           + '-> 0. Yhtaan nimea ei kadonnut: ladonta on tasmalleen '
           + 'entinen, vain piirto muuttui.',
+        'NOSTOTASO - NOSTOT OMALLE LAPINAKYVALLE LAATTATASOLLE '
+          + '(omistaja 31.8.2026 ilta, sanatarkka: "Voisiko namat nostot '
+          + 'polttaa erilliselle lapinakyvalle rasteritasolle? Jaksaako '
+          + 'pyorittaa? Voisi poistaa nakyvista kauemmilla zoom '
+          + 'tasoilla" - kysymyskortin valinnat samana iltana): '
+          + 'karttanostot (symboli, nimio, nostoviiva) poltetaan OMAAN '
+          + 'LAPINAKYVAAN laattapyramidiin, ei pohjaan - sama ruudukko '
+          + 'ja projektio, selain piirtaa tason samaan siirtoryhmaan, '
+          + 'joten se liikkuu kompositorilla pohjan mukana (kaksi '
+          + 'kompositorikerrosta on mitatusti kaytannossa ilmaista, '
+          + 'v1327). NAKYVYYS: nostolaattoja generoidaan vain tasoille '
+          + 'z5-z7 (jana <= ~200 km) - kaukotasoilla nostoja ei ole '
+          + 'olemassakaan ja piilotus on ilmainen; rajalla pehmea '
+          + 'haivytys. Tyhjia laattoja ei generoida eika pyydeta: '
+          + 'luettelo kertoo mitka nostolaatat ovat olemassa '
+          + '(pohjaharvennuksen rae-este ei koske lapinakyvaa tasoa). '
+          + 'PAAHYOTY: nostomuutos vaatii enaa kevyen nostotason ajon, '
+          + 'ei koko pohjan uusintaa. TARKENTAA 31.8. aamun kirjausta '
+          + '"karttamerkit pysyvat aina samoina ja paikallaan ja '
+          + 'nakyvissa": paikka ja sisalto pysyvat, mutta nostot ovat '
+          + 'nakyvissa maalehtitarkkuudelta syvemmalle. Elava kerros ja '
+          + 'luettelotiiviste toimivat kuten ennen. Saman kortin muut '
+          + 'paatokset: ladontakerroin yhdeksi globaaliksi vakioksi '
+          + 'NOSTOLADONTA_S = 0,60 eli Kreikan mitta koko maailmalle '
+          + '(maakohtainen kaava antoi 129-kertaisen hajonnan; v1390) '
+          + 'ja pyramidiajolupa annettu - ajo 2026-08-31c odottaa '
+          + 'nostotason toteutusta, jotta pohja ajetaan kerralla ilman '
+          + 'nostoja. REITIT (omistaja 31.8.2026 ilta: "Reitit voi '
+          + 'piirtaa kolmannelle tai samaan jos sekaan ei ongelma"): '
+          + 'reittiverkko poltetaan samalla mallilla lapinakyvalle '
+          + 'tasolle - SAMALLE nostotasolle jos z5-z7-nakyvyys riittaa '
+          + 'sille, omalle kolmannelle tasolle laajemmalla '
+          + 'tasovalilla jos reitteja tarvitaan kauempaa; toteuttaja '
+          + 'mittaa ja paattaa. Pelitilan elava reittikerros '
+          + '(matkustuksen askellus) sailyy joka tapauksessa.',
+        'KAUPUNGIN PISTE ON KARTTAVAKIO (omistaja 31.8.2026, '
+          + 'sanatarkka: "Kaupungin pisteet eivat saa muuttaa kokoa '
+          + 'suhteessa karttaan. Niiden koko pitaa olla sama kuin ne '
+          + 'olisivat poltettu karttaan"; kysymyskortin tarkennus: '
+          + 'karttavakio, peruskoko viritetaan maan lehtinakyman '
+          + 'zoomiin): js/karttanimet.js:n merkit - piste, rengas, '
+          + 'vuorikolmio - mitoitetaan lautayksikoissa eika '
+          + 'ruutupikseleissa: lahikuvassa kasvavat, kaukana kutistuvat '
+          + 'kuten rantaviiva, ja 1000-2000 km:n nakymien "musta '
+          + 'pippuri" poistuu. NIMET pysyvat ruutumitassa (sama syy, '
+          + 'jolla paikannimet siirrettiin elavaan kerrokseen). '
+          + 'Mitattu tausta: ruutumittainen piste kasvoi '
+          + 'lautayksikoissa ulos zoomatessa 4,6 -> 17,3 ja rengas '
+          + '10,5 -> 39,8, ja rengas peitti maastossa jopa 115 km.',
         'NIPISTYS EI ENAA NAPSAHDA PORTAIKKOON (omistaja 30.8.2026, '
           + 'kysymyskortti, sanatarkka havainto: "Zoomatessa kartta '
           + 'hypahtaa hieman eri syvyydelle kun sormet irroittaa ja '
@@ -2475,6 +2524,23 @@ export const RAAMATTU = {
           + 'moninpeliviestintä · kaveriapu = retkikunnan veikkaus '
           + 'aarrekysymykseen (25 p) · turvatila = kaatumissilmukan '
           + 'itsekorjaus (lehdet pois tunniksi).',
+      ],
+    },
+    {
+      otsikko: 'Tuotantotalous (kehitystyo)',
+      tila: 'kirjattu 31.8.2026 (omistajan tilaus samana iltana)',
+      kohdat: [
+        'FABLEMAXIA SAASTELIAASTI (omistaja 31.8.2026, sanatarkka: '
+          + '"Kayta fablemaxia mahdollisimman saasteliaasti. Se '
+          + 'kuluttaa lahes 100 kertaa enemman kuin opus"): '
+          + 'Fablemax-agentti vain tehtaviin, joissa halvempi ei '
+          + 'riita - arkkitehtuurisuunnitelmat, isot refaktoroinnit, '
+          + 'sitkeat juurisyybugit. Rutiinikoodi ja sisalto AINA '
+          + 'Opus-agenteilla, lukeva tarkistustyo Sonnetilla '
+          + '(roolituksen mallisaanto 26.8.2026). Ensisijainen malli: '
+          + 'Fablemax SPEKSAA kerran ja Opus-parvi toteuttaa ja '
+          + 'iteroi - Fablemaxia ei polteta toteutuksen '
+          + 'jatkokierroksiin, kun speksi on jo olemassa.',
       ],
     },
     {
