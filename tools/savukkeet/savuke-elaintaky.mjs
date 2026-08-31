@@ -177,13 +177,34 @@ const rahat = (sivu) => sivu.evaluate(() => window.matkakirja.ui.game.player.mon
  * vanhalta laudalta jäivät pois.
  */
 const eu = await avaaSivu('maailmankartta', 'helsinki');
-// Yleiskuvassa merkit ovat piilossa (osio 4 vartioi juuri sitä), joten
-// lähennetään ensin: sama porrastus kuin osiossa 4.
-for (let i = 0; i < 4; i += 1) {
-  await eu.evaluate(() => window.matkakirja.ui.kartta.zoomaaPainikkeella(1));
-  await eu.waitForTimeout(400);
-}
-await eu.waitForTimeout(900);
+/*
+ * KAMERA LEHDEN PERUSTASOLLE, EI NELJÄÄ NAPINPAINALLUSTA
+ * (korjattu 31.8.2026).
+ *
+ * MIKÄ MUUTTUI: v1366 (30.8.2026, "Purun jäänteet korjattu") palautti
+ * ui.fokusPohjaBbox/-Rajauksen FOKUS_POHJAT-taulusta, ja sen mukana
+ * merkit alkoivat elää KARTAN MITTAKAAVASSA — commit mittasi sen itse:
+ * *"skaala x2,837 -> merkki x2,837"*. Sitä ennen eläinmerkki oli
+ * ruutumitassa eli yhtä iso joka zoomilla, ja mikä tahansa
+ * lähennysporras kelpasi sormenmitan mittapaikaksi.
+ *
+ * Nyt sormenmitta on luku, joka on tosi YHDESSÄ määrätyssä näkymässä:
+ * merkin peruskoko on ankkuroitu maan fokusikkunaan (js/ui.js
+ * fokusMerkkiSkaala), ja juuri siihen ikkunaan pelin oma saapumisajo
+ * päätyy. Kamera ajetaan siis samaan paikkaan ja samalla tavalla kuin
+ * savuke-fokuskohteessa (ajaLehdelle) — sitä lukua vasten 44 px on
+ * väite eikä sattuma. Neljä painallusta yleiskuvasta jäi kaksi
+ * porrasta perustasoa laajemmalle (mitattu: osuma 27,8 px), eli koe
+ * mittasi eri asiaa kuin väite lupasi.
+ *
+ * Merkkien näkyminen ja piiloutuminen zoomin mukana on osion 4 työ, ja
+ * se ajaa portaat painikkeella edelleen.
+ */
+await eu.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  ui.kartta.ajaKamera({ bbox: ui.fokusPohjaRajaus ?? ui.fokusPohjaBbox, marginaali: 0 });
+});
+await eu.waitForTimeout(4200);
 const kartalla = await merkit(eu);
 vaadi('eläinmerkit ovat kartan omassa kerroksessa',
   kartalla.rivit.length === 58 && !kartalla.piilossa,
@@ -211,7 +232,11 @@ vaadi('merkki on kohdemerkin mittaluokkaa eikä iso glyyfi',
 vaadi('jokaisella merkillä on maan ja eläimen nimilappu',
   kartalla.rivit.every((m) => /.+: .+/.test(m.nimi)),
   JSON.stringify(kartalla.rivit.slice(0, 3).map((m) => m.nimi)));
-vaadi('osuma-alue on sormen mitta (≥44 px)',
+// Sormenmitta LEHDEN PERUSTASOLLA — sama väite ja sama mittapaikka
+// kuin savuke-fokuskohteessa ("osuma-alue on lehden perustasolla
+// vähintään 44 px"): merkit ovat kartan mittakaavassa (v1366), joten
+// lähennettäessä osuma vain kasvaa tästä.
+vaadi('osuma-alue on sormen mitta (≥44 px) lehden perustasolla',
   kartalla.rivit.every((m) => m.lapimitta >= 43.5),
   JSON.stringify(kartalla.rivit.map((m) => Math.round(m.lapimitta)).slice(0, 6)));
 vaadi('yksikään merkki ei ole vielä lunastettu',
