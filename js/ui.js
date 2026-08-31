@@ -990,15 +990,55 @@ const FOKUS_LAATTA_SYKE_PX = 8.4;
  * MUILLA LAUDOILLA JA FOKUSNÄKYMÄN ULKOPUOLELLA KOOT OVAT ENNALLAAN:
  * kerroin on 1 aina kun fokusnäkymä ei ole päällä
  * (paivitaFokusMerkkiMitat).
+ *
+ * === NAPPULAN MITTA TULEE NYT LAATASTA (31.8.2026) ===
+ *
+ * SUHDE OLI IRRONNUT LAATASTA. Kiinteä 28 oli sidottu laattaan
+ * silloin, kun laatta oli 26 px; sen jälkeen laatta kutistui neljästi
+ * (26 -> 23 -> 19 -> 15 -> 10,5, ks. FOKUS_LAATTA_PX) eikä tämä luku
+ * seurannut kertaakaan mukana. 30.8.2026 kutistuksen jälkeen suhde
+ * kääntyi ympäri: nappularyhmä oli fokusnäkymässä LEVEÄMPI kuin
+ * laatta, jonka päällä se seisoo (mitattuna 12,73 vs. 12,09 laudan
+ * yksikköä), eli laatta katosi taas hahmon alle — täsmälleen se vika,
+ * jota vastaan omistajan tilaus 28.8.2026 tehtiin (*"sen alta saisi
+ * näkyä kaupungin laatta"*). Vartio on savuke-nappula 7b/7c.
+ *
+ * MIKSI KIINTEÄ LUKU EI HUOMANNUT MITÄÄN: kerroin on katettu ykköseen
+ * (fokusMerkkiKerroin), ja 28 px oli nappulan omaan lautasäteeseen
+ * nähden niin suuri, että katto puri AINA. Nappula jäi siis laudan
+ * yksiköihin samalla kun laatta kutistui ruutumittaansa — kaksi
+ * mittajärjestelmää, joista vain toinen liikkui.
+ *
+ * KORJAUS ON SIDOS, EI UUSI VAKIO. Nappularyhmä on 70 % laatan
+ * halkaisijasta, jolloin laatan reuna kiertää sen joka suunnasta ja
+ * SEURAAVA laatan kutistus vie nappulan mukanaan — juuri se puuttui,
+ * kun luku oli kiinteä.
+ *
+ * MIKSI 0,70. Ennen 30.8.2026 kutistusta ryhmä oli noin 74–80 % laatan
+ * halkaisijasta — noin, koska suhde ei ollut kiinnitetty vaan liukui
+ * lehden mittakaavan (fokusMerkkiSkaalaKartalle) mukana, ja juuri se
+ * liuku vei sen lopulta yli sadan prosentin. 0,70 on saman kokoluokan
+ * suhde kiinnitettynä: nappula pysyy entisen näköisenä, mutta laatan
+ * reunaa jää mitattavasti näkyviin (savuke-nappula 7c) kaikilla
+ * ruuduilla eikä vain leveillä.
  */
-const FOKUS_NAPPULA_PX = 28;
+const FOKUS_NAPPULA_PX = FOKUS_LAATTA_PX * 0.7;
 const FOKUS_AARRE_PX = 20;
 /*
  * Nappulan oma säde laudan yksiköinä. Luku on peräisin vanhasta
  * `pawn-ring`-kehästä (13) ja on JÄTETTY ENNALLEEN, vaikka nappula on
- * nyt tinaherra: fokusnäkymän mitoitus (fokusMerkkiKerroin,
- * FOKUS_NAPPULA_PX) ja nimikyltin etäisyys on viritetty tähän lukuun,
- * eikä hahmon vaihto saa muuttaa kokoja lehden päällä.
+ * nyt tinaherra: nimikyltin etäisyys on viritetty tähän lukuun, eikä
+ * hahmon vaihto saa muuttaa kokoja lehden päällä.
+ *
+ * TÄMÄ EI OLE ENÄÄ FOKUSNÄKYMÄN MITTATIKKU (31.8.2026). Mitoitus
+ * (fokusMerkkiKerroin) tarvitsee sen säteen, joka OIKEASTI kilpailee
+ * laatan reunan kanssa — se on nappularyhmän uloin osa eli vuororengas
+ * (NAPPULAN_RYHMAN_R), ei tämä vanhan väriläiskän 13. Ero oli koko
+ * vian mekanismi: 13 on yli kaksinkertainen todelliseen ryhmään
+ * nähden, joten kerroin laskettiin liian suureksi ja katto (min 1)
+ * puri aina. Tässä luku jää siihen, mihin se kuuluu: geometriseen
+ * kysymykseen "seisooko nappula tämän laatan päällä"
+ * (nappulaKaupungissa), jossa mittana on hahmon jalansija laudalla.
  */
 const NAPPULAN_R = 13;
 /*
@@ -1118,6 +1158,16 @@ const NAPPULA_TYYLI = 'puinen';
  * saisi näkyä kaupungin laatta (nyt ei näy ollenkaan)"). Jos suhde
  * alkaa silti näyttää ahtaalta, seuraava askel on kertoa
  * NAPPULAN_POLKU ja NAPPULAN_KORKEUS samalla 0,70:llä.
+ *
+ * AHTAAKSI SE MENIKIN — MUTTA VAIN FOKUSNÄKYMÄSSÄ (31.8.2026), eikä
+ * korjaus siksi ole tämä polku. Laudan omissa yksiköissä suhde on yhä
+ * se, mitä yllä kuvataan: siluetti 7,8 ja ryhmä 11,2 mahtuvat laatan
+ * 16,2:een. Fokusnäkymässä laatta EI ole laudan yksiköissä vaan
+ * kutistetaan ruutumittaansa (FOKUS_LAATTA_PX), ja siellä 30.8.2026
+ * kutistus vei laatan nappularyhmää kapeammaksi. Mitta korjattiin siis
+ * siellä, missä se rikkoutui: fokusnäkymän nappula on nyt 70 %
+ * laatasta (FOKUS_NAPPULA_PX). Laudan polku on tarkoituksella
+ * koskematon — omistaja rajasi 30.8. kutistuksen laattoihin.
  */
 const NAPPULAN_POLKU = 'M 3.9 0'
   + ' C 3.9 -1.33 2.77 -1.48 2.5 -2.42'
@@ -1132,6 +1182,22 @@ const NAPPULAN_POLKU = 'M 3.9 0'
   + ' C -3.9 0.62 3.9 0.62 3.9 0 Z';
 /* Siluetin laki jalustasta mitattuna (pään keskipiste 11,72 + säde 2,38). */
 const NAPPULAN_LAKI = 14.1;
+/*
+ * NAPPULARYHMÄN ULOIN SÄDE laudan yksiköinä — se mitta, joka kilpailee
+ * kaupungin laatan reunan kanssa.
+ *
+ * Ryhmässä on kolme osaa (pawnShape), ja hahmo on niistä KAPEIN: varjo
+ * on jalustan levyinen (3,9) ja vuororengas kiertää sen ulkopuolelta,
+ * joten ryhmän leveys on renkaan leveys — ei siluetin 7,8. Juuri se ero
+ * jäi 30.8.2026 kutistuksessa huomaamatta: laattaa verrattiin hahmoon,
+ * vaikka laatan alle jää koko ryhmä.
+ *
+ * YKSI LUKU KAHDESSA TEHTÄVÄSSÄ: renkaan säde pawnShapessa ja
+ * fokusnäkymän mittatikku (paivitaFokusMerkkiMitat, animatePawnSisalla).
+ * Erillisinä ne erkanisivat ensimmäisessä muutoksessa, ja mitoitus
+ * mittaisi taas jotain muuta kuin sitä, mikä laatan peittää.
+ */
+const NAPPULAN_RYHMAN_R = NAPPULA_TYYLI === 'tinaherra' ? 12 : 5.6;
 /*
  * Osuma-alueen katto LAUDAN yksiköissä. Ruutumitta muuttuu laudan
  * yksiköiksi jakamalla zoomilla, ja yleiskuvassa (pieni zoom) jakolasku
@@ -7758,7 +7824,7 @@ export class UI {
    */
   paivitaFokusMerkkiMitat() {
     for (const nappula of this.pawnLayer?.querySelectorAll('.pawn') ?? []) {
-      this.asetaMerkinKoko(nappula, this.fokusMerkkiKerroin(FOKUS_NAPPULA_PX, NAPPULAN_R));
+      this.asetaMerkinKoko(nappula, this.fokusMerkkiKerroin(FOKUS_NAPPULA_PX, NAPPULAN_RYHMAN_R));
     }
     for (const merkki of this.tokenLayer?.querySelectorAll('.token-found') ?? []) {
       const oma = Number(merkki.dataset.r);
@@ -8729,7 +8795,7 @@ export class UI {
        * yhdeksi tummaksi möhkäleeksi — sama pino, jota vastaan koko
        * tilaus tehtiin. Nyt rengas kiertää varjon ympäri renkaana.
        */
-      const renkaanR = NAPPULA_TYYLI === 'tinaherra' ? 12 : 5.6;
+      const renkaanR = NAPPULAN_RYHMAN_R;
       el('ellipse', {
         cy: NAPPULAN_JALKA_Y, rx: renkaanR, ry: renkaanR * 0.383, class: 'pawn-active-ring',
       }, g);
@@ -17812,7 +17878,7 @@ export class UI {
      * paivitaFokusMerkkiMitatiin. Kerroin luetaan kerran, saattoajon
      * asettamasta lopullisesta mittakaavasta (ks. yllä).
      */
-    const kerroin = this.fokusMerkkiKerroin(FOKUS_NAPPULA_PX, NAPPULAN_R);
+    const kerroin = this.fokusMerkkiKerroin(FOKUS_NAPPULA_PX, NAPPULAN_RYHMAN_R);
     const koko = Math.abs(kerroin - 1) < 0.0005 ? '' : ` scale(${kerroin.toFixed(4)})`;
     let paikka = pixelOf(board, from);
     g.style.transform = `translate(${paikka.x}px, ${paikka.y}px)${koko}`;
