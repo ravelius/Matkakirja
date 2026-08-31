@@ -91,14 +91,101 @@ export async function keraaSisalto(pack, packkikansio, juuri = `${packkikansio}/
    */
   const { buildBoard, pointAlong } = await import(`${juuri}/js/rules.js`);
   const lauta = buildBoard(pack.cities ?? [], pack.edges ?? [], pack.map ?? null);
+
+  /*
+   * === SOLMUPOLKU, EI PEHMENNETTY KÄYRÄ (omistaja 31.8.2026) =========
+   *
+   * Sanatarkasti: *"Reitit saisi olla käsin piirretyn näköisiä. Nyt on
+   * aivan liian tarkka ja tietokonemainen piirto. --- ne saa olla
+   * luotisuoria viivoja."*
+   *
+   * `js/rules.js edgePolyline` ajaa solmupolun lopuksi `densify`n läpi:
+   * YHTENÄINEN Catmull-Rom (alpha = 0) neljälletoista pisteelle jokaista
+   * väliä kohti. Se on sama spline-vaara, joka on kirjattu jo jokien
+   * kohdalle (maailmapiirto.js `lautaKaari`): *"yhtenäinen Catmull-Rom
+   * yliampuu terävissä mutkissa ja tekee silmukoita, kun pisteet ovat
+   * epätasavälein"* — ja juuri sitä merireitit ovat, sillä `via`-jonossa
+   * on vierekkäin 24 ja 276 lautayksikön välejä.
+   *
+   * MITATTUNA 31.8.2026 (408 reittiä): käyrä poikkeaa solmupolusta
+   * mediaanina 0,64, p90 7,8 ja enimmillään 33,5 lautayksikköä, ja
+   * KAKSI reittiä leikkaa itsensä eli tekee oikean silmukan —
+   * `sisilia|ateena` kohdassa (6614, 1954) eli tasan siinä Ateenan
+   * eteläpuolella, jonka omistaja näki, ja `anchorage|vancouver`.
+   * Solmupolussa silmukoita on nolla.
+   *
+   * TÄMÄ EI KORJAA `densify`Ä, EIKÄ SAAKAAN. Reitin murtoviiva on
+   * pelimekaniikkaa: nappula kulkee sitä pitkin. Mitattuna (31.8.2026)
+   * pelkkä `densify`n poisto myös KAATAA kaksi merireittiä maalle
+   * (`dublin|edinburgh`, `sansibar|rashafun`), koska niiden
+   * `via`-pisteet on aikanaan laskettu PEHMENNETTYÄ polkua vasten —
+   * korjaus vaatisi `tools/korjaa-merireitit.mjs`:n uuden ajon eli
+   * muutoksen reittiverkkoon. Se on Fablen ja omistajan päätös, ei
+   * tämän työkalun.
+   *
+   * === SOLMUT LUETAAN, EI ARVATA ====================================
+   *
+   * `densify` interpoloi ohjauspisteensä, joten solmut ovat tallella
+   * joka neljästoista pisteessä. Ne poimitaan sieltä — mutta EI
+   * sokkona: odotettu solmumäärä tiedetään pakasta riippumatta
+   * (`via`-pisteet + kaksi päätä, tai maareitin neljä), ja jos poiminta
+   * ei osu siihen, reitti jää entiselleen ja se lasketaan `poikkeamat`-
+   * laskuriin. Näin `perSpan`in muutos rules.js:ssä ei voi hiljaa
+   * vääristää laattoja — se näkyy lokissa.
+   */
+  const PER_SPAN = 14;
+  let poikkeamat = 0;
+  const solmupolku = (e) => {
+    if (e.poly.length <= 2) return e.poly;
+    const odotettu = e.via ? e.via.length + 2 : (e.type === 'sea' ? 2 : 4);
+    if ((e.poly.length - 1) % PER_SPAN !== 0) { poikkeamat += 1; return e.poly; }
+    const solmut = [];
+    for (let i = 0; i < e.poly.length; i += PER_SPAN) solmut.push(e.poly[i]);
+    if (solmut.length !== odotettu) { poikkeamat += 1; return e.poly; }
+    return solmut;
+  };
+
+  /*
+   * KÄSIN PIIRRETYN SIEMEN. Piirto tarvitsee reittikohtaisen luvun
+   * kynänpaineen ja solmujen pikselin murto-osan heiton arpomiseen.
+   * Se johdetaan REITIN TUNNUKSESTA eikä pikselistä — sama reitti saa
+   * saman heiton joka laatalla ja joka ajolla, eikä laattojen väliin
+   * voi syntyä saumaa (maailmapiirto.js "KÄSIN PIIRRETTY JÄLKI").
+   */
+  const siemenesta = (avain) => {
+    let h = 2166136261;
+    for (let i = 0; i < avain.length; i += 1) {
+      h ^= avain.charCodeAt(i);
+      h = Math.imul(h, 16777619);
+    }
+    return h >>> 0;
+  };
+
   const reitit = lauta.edges.map((e) => {
+    const poly = solmupolku(e);
+    /*
+     * ASKELMAT LASKETAAN SIITÄ POLUSTA, JOKA PIIRRETÄÄN. Jos helmet
+     * laskettaisiin käyrästä ja viiva vedettäisiin solmupolkua, helmi
+     * jäisi viivan viereen — mitattuna 22 % helmistä yli lautayksikön
+     * ja pahimmillaan 32,7 yksikön päähän. Kaava on sama kuin pelillä
+     * (`pointAlong`), vain polku on se, jonka katsoja näkee.
+     */
     const askelmat = [];
     for (let i = 1; i < e.steps; i += 1) {
-      const p2 = pointAlong(e.poly, i / e.steps);
+      const p2 = pointAlong(poly, i / e.steps);
       askelmat.push([p2.x, p2.y]);
     }
-    return { laji: e.type === 'sea' ? 'meri' : 'maa', poly: e.poly, askelmat };
+    return {
+      laji: e.type === 'sea' ? 'meri' : 'maa',
+      poly,
+      askelmat,
+      siemen: siemenesta(e.id),
+    };
   });
+  if (poikkeamat) {
+    console.log(`  VAROITUS: ${poikkeamat} reitin solmupolkua ei tunnistettu — `
+      + 'ne piirtyvät pehmennettyinä (tarkista rules.js densify perSpan).');
+  }
 
   const paikka = new Map((pack.cities ?? []).map((c) => [c.id, c]));
   const jana = (e) => {
@@ -106,7 +193,10 @@ export async function keraaSisalto(pack, packkikansio, juuri = `${packkikansio}/
     const b = paikka.get(e.b);
     return a && b ? { ax: a.x, ay: a.y, bx: b.x, by: b.y } : null;
   };
-  const lentoreitit = (pack.airRoutes ?? []).map(jana).filter(Boolean);
+  const lentoreitit = (pack.airRoutes ?? []).map((e) => {
+    const j = jana(e);
+    return j ? { ...j, siemen: siemenesta(`lento:${e.a}|${e.b}`) } : null;
+  }).filter(Boolean);
 
   /* ----------------------------------------------------------- joet */
 

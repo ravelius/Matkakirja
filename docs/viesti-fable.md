@@ -1,3 +1,298 @@
+# Opus → Fable: reitit käsin piirretyiksi (haara claude/reitit-kasin)
+
+Erä valmis, pushattu haaralle. **Ei PR:ää, ei versionostoa, ei
+pyramidiajoa** (ohjeen mukaan). Muutettu tasan kaksi tiedostoa:
+`tools/fokuskartta/sisalto.mjs` ja `tools/fokuskartta/maailmapiirto.js`.
+`js/rules.js`, `js/packs/maailmankartta.js`, Raamattu, tarina ja
+isoisän raamattu **koskematta**.
+
+Portit: `node --test tests/*.test.mjs` → **# pass 1047, # fail 0**
+(1 skip, sama kuin mainissa); `tarkista-kaksoisavaimet` → ei
+kaksoisavaimia; `build-standalone` → ok. dist/ ja node_modules
+poistettu ennen committia.
+
+## 0. KATSELUKAPPALEET ENSIN — nämä pitää katsoa ennen ajoa
+
+Haaran juuressa, **ei committoituna** (katselukappaleita):
+
+| Tiedosto | Sisältö |
+| --- | --- |
+| `reitit-zoomtasot.png` | **Pääkuva.** z2…z7 allekkain, ennen/jälkeen rinnakkain. Jokaiselle tasolle on haettu erikseen ruutu, jossa on **kaikki kolme reittilajia** — siksi paikka vaihtuu tasolta toiselle. |
+| `reitit-z2.png` … `reitit-z7.png` | Yksi taso per arkki, omistajan **omat kohteet**: Egeanmeri (Ateena), Adrianmeri (Dubrovnik), Pohjois-Afrikka (Tripoli) ja se piste, jossa vanha piirto teki silmukan. |
+
+Kaikki ruudut ovat **512 × 512 laattapikseliä 1:1** — täsmälleen se
+koko, jossa laatta näkyy pelaajan ruudulla, ei suurennosta. Jokaisessa
+arkissa on selite (mikä viiva on mikä) ja punainen huomautus siitä, jos
+jokin reittilaji ei osu kyseiseen ruutuun.
+
+**Kaksi rehellisyysvarausta, jotka lukevat myös kuvissa:**
+
+1. **Tausta on kaavio, ei lopullinen maasto.** Konttiin ei ole
+   ladattuna pyramidin raaka-aineistoa (Natural Earth 10m + ETOPO),
+   joten rantaviiva on repossa valmiina olevasta `ne50.geojson`:sta
+   (PD) ja maasto tasainen. **Paperi, patina, kehys, projektio,
+   arkkikoordinaatit ja reittien piirto ovat oikeaa moottoria** —
+   arvioitava asia (viivat) on siis aitoa jälkeä, tausta ei ole.
+2. **Kolme lajia samassa ruudussa ei onnistu joka paikassa.**
+   `reitit-zoomtasot.png`:ssä onnistuu joka tasolla (haettu
+   koneellisesti). Omistajan omissa kohteissa ei aina: z7:llä 512 px
+   kattaa vain 71 lautayksikköä, ja esim. Adrianmeren ruudussa on vain
+   merireitti. Se sanotaan kuvassa punaisella.
+
+## 1. Tehtävä 1 — paksummaksi ja isommat helmet (TEHTY, mitattu)
+
+| | ennen | jälkeen |
+| --- | --- | --- |
+| viiva | `1.1 * P` | `1.9 * P` |
+| helmen säde | `2.4 * P` | `3.2 * P` |
+| helmen kehä | `0.9 * P` | `1.3 * P` |
+| lentoviiva | `0.9 * P` | `1.7 * P` |
+| maan muste | `rgba(120,88,54,0.52)` | `rgba(120,88,54,0.80)` |
+| meren muste | `rgba(32,60,98,0.56)` | `rgba(32,60,98,0.84)` |
+| lennon muste | `rgba(150,54,40,0.50)` | `rgba(150,54,40,0.76)` |
+
+**Sävy ei muuttunut, vain peittävyys** — sininen on yhä preussinsininen
+(32,60,98) ja punainen poltettu sinooperi (150,54,40). Nostettu on
+alfa, eli kynä painaa kovempaa samalla musteella. `P` on yhä
+paperivakio, eli mitta pysyy ruudulla samana joka tasolla.
+
+**MITATTU LUKUNA, ei silmällä.** Weberin kontrasti (paperi − viivan
+tummin pikseli) / paperi, Rec. 709 -luminanssista, poikkileikkauksena
+jokaisen reittijanan keskikohdan yli renderöidyistä laatoista:
+
+| taso ja laji | ennen | jälkeen | n |
+| --- | --- | --- | --- |
+| z3 maa | 0,204 | **0,325** | 469 |
+| z3 meri | 0,320 | **0,457** | 215 |
+| z3 lento | 0,111 | **0,383** | 33 |
+| z5 maa | 0,198 | **0,361** | 15 |
+| z5 meri | 0,190 | **0,433** | 25 |
+| z5 lento | 0,250 | **0,452** | 3 |
+| z7 maa | 0,154 | **0,346** | 1 |
+| z7 meri | **0,064** | **0,440** | 7 |
+| z7 lento | 0,269 | **0,447** | 1 |
+
+Pahin lähtöluku oli **merireitti z7:llä: 0,064** eli kuusi prosenttia
+paperin kirkkaudesta — käytännössä näkymätön, ja juuri sitä omistaja
+katsoi puhelimella. Nyt 0,440. Heikoin laji oli **lentoreitti z3:lla
+(0,111)**; nyt 0,383.
+
+Helmen ylärajan asetti tiheimmän askelvälin mittaus: z2:lla (ensimmäinen
+taso, jolla reitit piirtyvät) lyhin väli on 5,6 px ja p10 11,4 px, joten
+6,4 pikselin helmi erottuu naapuristaan kaikkialla paitsi muutamassa
+tiheimmässä välissä. Isompi olisi tehnyt niistä yhtenäisen möykyn.
+
+## 2. Tehtävä 3 — merireittien silmukat (TEHTY, juurisyy löytyi)
+
+**Juurisyy ei ollut reitinhaku eikä solmujen järjestys.** Se on
+`js/rules.js` `edgePolyline` → `densify`: **yhtenäinen Catmull-Rom
+(alpha = 0)**, neljätoista pistettä jokaista väliä kohti. Se on täsmälleen
+se spline-vaara, joka on jo kirjattu tähän repoon jokien kohdalla
+(`maailmapiirto.js lautaKaari`): *"yhtenäinen Catmull-Rom yliampuu
+terävissä mutkissa ja tekee silmukoita, kun pisteet ovat epätasavälein"*.
+Ja epätasavälisiä ne ovat: `sisilia|ateena`-reitin `via`-jonossa on
+vierekkäin 24 ja 276 lautayksikön välejä.
+
+Mitattuna 408 reitistä:
+
+- käyrä poikkeaa solmupolusta mediaanina **0,64**, p90 **7,8**,
+  p99 **21,0** ja enimmillään **33,5** lautayksikköä;
+- **kaksi reittiä leikkaa itsensä** eli tekee oikean silmukan:
+  `sisilia|ateena` pisteessä **(6614, 1954)** — tasan se Ateenan
+  eteläpuolen S, jonka omistaja näki — ja `anchorage|vancouver`
+  pisteessä (1500, 1317);
+- solmupolussa itseleikkauksia on **0**.
+
+Ne näkyvät kuvissa: `reitit-z7.png` ja `reitit-z5.png`, rivi SILMUKKA.
+
+**Dubrovnikin "iso kaari" ei ole silmukka eikä vika.** `dubrovnik|rooma`
+kulkee `via`-pisteitään pitkin Adrianmerta etelään, Messinan salmen
+kautta ja takaisin pohjoiseen Rooman edustalle — laatikko y 1695…1954.
+Se on **maantieteellisesti oikein**: purjehdus Dubrovnikista Roomaan
+kiertää Italian saappaan. Kaari näytti oudolta, koska pehmennys pyöristi
+sen tiukat käännökset kaareviksi ja koska viiva oli niin haalea, ettei
+sen kulkua erottanut. Suorat janat ja tummempi muste tekevät reitistä
+luettavan; kaari jää, koska sen kuuluu jäädä.
+
+## 3. Tehtävä 4 — käsin piirretty, luotisuorat (TEHTY)
+
+`sisalto.mjs` **poimii solmupolun** ja piirto vetää solmusta solmuun
+suoran janan. Ei splineä, ei tihennettyä pistejoukkoa: reittien
+pistemäärä putosi **24 703 → 2 174** (−91 %).
+
+**Solmut luetaan, ei arvata.** `densify` interpoloi ohjauspisteensä,
+joten solmut ovat joka neljästoista pisteessä — mutta poiminta
+**tarkistetaan** pakasta riippumatonta odotusarvoa vastaan
+(`via`-pisteet + 2 päätä, tai maareitin 4). Jos poiminta ei osu,
+reitti jää entiselleen ja lokiin tulee varoitus. Näin `perSpan`in
+muutos rules.js:ssä ei voi hiljaa vääristää laattoja. Nyt osuma on
+408/408.
+
+**Askelmat lasketaan siitä polusta, joka piirretään.** Tämä oli pakko:
+jos helmet laskettaisiin käyrästä ja viiva vedettäisiin solmupolkua,
+**22 % helmistä jäisi yli lautayksikön** ja pahimmillaan **32,7 yksikön**
+päähän omasta viivastaan. Nyt pahin helmen etäisyys viivastaan on
+1,8·10⁻¹² lautayksikköä. Askelmien **määrä** tulee yhä `steps`-kentästä
+eikä siihen kosketa; lennolla ei ole askelmia eikä niitä keksitty.
+
+**Käsin piirretty jälki** on kaksi pikkuasiaa: kynänpaine vaihtelee
+reitistä toiseen (viisi porrasta, ±12 %) ja **välisolmu heittää
+enintään 0,35 paperipikseliä** suorasta. Päätesolmut eivät heitä —
+kolme reittiä samasta kaupungista lähtee samasta pisteestä.
+
+## 4. SAUMAT — mitattu, ei oletettu
+
+Heitto **ei tule pikselistä eikä laatan nurkasta** vaan reitin
+tunnuksesta (`r.siemen`, FNV-hash reitin id:stä) ja solmun
+järjestysluvusta. Ne ovat samat luvut joka lohkossa, joka laatalla ja
+joka ajolla — sama virhe kuin patinan rakeessa on siis rakenteellisesti
+poissuljettu, ei vain testattu.
+
+Ajoin työkalun oman saumakokeen (`--saumatesti`-logiikka: sama arkin ala
+kerran 1024 px kuvana ja kerran neljänä 512 px laattana) **sekä ennen
+että jälkeen**, jotta luvuilla on vertailukohta:
+
+| koe | ennen | jälkeen |
+| --- | --- | --- |
+| sauma z5, eroavia kanavia | 9 527 / 4 194 304 (0,227 %) | 20 500 (0,489 %) |
+| sauma z5, pahin kanavaero | 11 | 20 |
+| sauma z7, eroavia | 9 597 (0,229 %) | 37 151 (0,886 %) |
+| sauma z7, pahin | 55 | 55 |
+| **lohkoraja z5, pahin** | **11** | **11** |
+| **lohkoraja z7, pahin** | **36** | **36** |
+
+**Ratkaiseva luku on lohkoraja** — tuotannon oma tilanne, kaksi
+samankokoista vierekkäistä lohkoa kokonaisen pikselin siirrolla.
+Siinä **pahin kanavaero on täsmälleen sama ennen ja jälkeen (11 ja 36)**.
+Uutta saumamekanismia ei siis ole; eroavien pikselien määrä kasvoi vain
+siksi, että sivulla on nyt enemmän mustetta eli enemmän vektorireunoja,
+joilla vanha kelluvan pisteen pyöristys näkyy. Kummassakaan kokeessa
+erot eivät kasaudu laattarajalle (työkalun oma varoitusraja on 50 %;
+korkein osuus oli 8 %).
+
+**Varaus:** koe ajettiin kaavio­taustalla, koska raaka-aineistoa ei ole
+kontissa. Suosittelen ajamaan `node tools/generoi-laattapyramidi.mjs
+<kansio> --data <aineisto> --saumatesti` oikealla aineistolla ennen
+tuotantoajoa — se on halpa ja se on se virallinen luku.
+
+## 5. Tehtävä 2 — Kreikan maareitti veden päällä: **VIKA ON DATASSA**
+
+En siirtänyt solmuja. Ohjeen mukaan raportoin.
+
+Vika on `sofia|ateena` (maareitti, `steps` 4, **ei yhtään
+`via`-pistettä**). Suora Sofiasta (23,32 °E, 42,68 °N) Ateenaan
+(23,74 °E, 37,97 °N) kulkee pituusasteen ~23,6 tuntumassa, ja siellä on
+vettä: **Thermaikoksen lahti ja sen jälkeen koko Euboian salmi**.
+Mitattuna `ne50.geojson`:n rantaviivaa vasten (400 näytettä reitiltä):
+
+| piirtotapa | vedessä |
+| --- | --- |
+| pelkkä jana a→b | 119/401 näytettä, pisin yhtenäinen pätkä **29,4 yks** |
+| solmupolku (nyt piirretty) | 122/401, pisin **45,5 yks**, t 0,588…0,830, 23,53 °E 39,94 °N → 23,61 °E 38,79 °N |
+| vanha CR-käyrä | 125/401, pisin **45,5 yks** |
+
+**Kolme numeroa kertovat saman: pehmennys ei aiheuta tätä eikä sen
+poisto korjaa sitä.** Jo pelkkä jana on 51 yksikköä vedessä. Syy on se,
+että reitille ei ole koskaan laskettu välipistettä; oikea maatie kulkee
+lännempää Thessalonikin ja Larissan kautta. **Korjaus on yhden
+`via`-pisteen lisääminen** noin (22,6 °E, 39,8 °N) — mutta se on
+reittiverkkoa eli pelimekaniikkaa, joten jätän sen sinulle.
+
+**Tämä ei ole ainoa.** Sama mittaus koko laudalle: **37 maareittiä
+297:stä kulkee osin veden yli.** Pahimmat yhtenäiset pätkät:
+
+| reitti | vedessä | pisin pätkä |
+| --- | --- | --- |
+| `neworleans\|miami` | 62/62 (100 %) | ~248 yks (Meksikonlahti) |
+| `chennai\|kolkata` | 67/79 | ~244 yks (Bengalinlahti) |
+| `kalgoorlie\|adelaide` | 66/120 | ~244 yks |
+| `bangkok\|singapore` | 56/77 | ~224 yks |
+| `kolkata\|yangon` | 51/55 | ~204 yks |
+| `mexico\|merida` | 46/55 | ~184 yks (Campechen lahti) |
+| `tripoli\|kairo` | 43/125 | ~172 yks (Sidran lahti) |
+| `pietari\|helsinki` | 19/19 (100 %) | ~76 yks (Suomenlahti) |
+| `lagos\|kamerun` | 11/11 (100 %) | ~44 yks (Beninin lahti) |
+
+Osa on tarkoituksellisia (Lontoo–Pariisi ylittää Kanaalin), mutta
+100 %:n rivit eivät ole. **Ehdotus:** tehdään merireittien testin pari
+maareiteille — `tests/rules.test.mjs` tarkistaa jo, että merireitit
+kulkevat vedessä, mutta maareiteille ei ole mitään vastaavaa. Se on
+oma eränsä ja vaatii reittidatan muutoksia, joten en aloittanut sitä.
+
+## 6. YKSI PÄÄTÖS SINULLE ENNEN AJOA (tärkein kohta)
+
+**Laatta ja peli piirtävät nyt reitin eri muotoisena.** Laatta piirtää
+solmupolun; peli (`js/ui.js paivitaMatkareitit`, nappulan sijainti
+`pixelOf`) käyttää `rules.js`:n pehmennettyä käyrää. Ero mitattuna:
+**mediaani 0,26, p90 3,71, max 38,35 lautayksikköä.** Laatalla helmi on
+aina omalla viivallaan; ero näkyy vain siinä, että nappula ja pelin oma
+matkareittiviiva kulkevat mutkaisilla merireiteillä hieman laattaan
+poltetun viivan vierestä.
+
+**Oikea korjaus on poistaa `densify` `rules.js`:stä**, jolloin peli ja
+laatta piirtävät saman polun. **Kokeilin sen ja mittasin — se ei ole
+yhden rivin korjaus:**
+
+```
+node --test tests/rules.test.mjs   →  # pass 329, # fail 2
+   dublin|edinburgh kulkee maalla kohdassa t=0.46
+   sansibar|rashafun kulkee maalla kohdassa t=0.78
+```
+
+Syy on looginen: näiden reittien `via`-pisteet on aikanaan laskettu
+`tools/merireitit.mjs`:llä **pehmennettyä polkua vasten**, ja käyrä
+pullistuu ulos siellä missä suora jana oikaisisi niemen yli. Poisto
+vaatii siis myös `node tools/korjaa-merireitit.mjs maailmankartta`
+-ajon eli muutoksen reittiverkkoon. **Palautin `rules.js`:n
+koskemattomaksi.**
+
+Samasta syystä **piirretty solmupolku vie kolme merireittiä hieman
+maalle** (pakan omaa rantaviivaa vasten, sama mitta kuin testissä):
+
+| reitti | maalla |
+| --- | --- |
+| `dublin\|edinburgh` | ~37 yks / 523 yks reitistä |
+| `sitka\|vancouver` | ~39 yks / 596 |
+| `izmir\|nikosia` | ~1 yks / 293 |
+
+Vertailun vuoksi **vanha käyrä vei kolme reittiä maalle sekin**
+(`nikosia|kairo`, `puntaarenas|caphorn`, `suva|panama`), joten
+lopputulos ei ole huonompi — mutta se ei ole nolla, ja se korjautuisi
+samalla `korjaa-merireitit`-ajolla.
+
+**Kolme vaihtoehtoa:**
+
+1. **Aja pyramidi nyt.** Reitit näyttävät oikeilta; kolme merireittiä
+   sipaisee rantaa ja nappula kulkee mutkaisilla merireiteillä
+   keskimäärin 0,26 yks laattaviivan vierestä. Kumpikaan ei ole
+   omistajan kaappauksissa näkyvä vika.
+2. **Korjaa ensin reittiverkko** (`densify` pois + `korjaa-merireitit`
+   + `sofia|ateena`-välipiste), sitten aja. Silloin peli ja laatta ovat
+   samaa mieltä ja kaikki reitit ovat oikealla maastolla. **Suosittelen
+   tätä**, jos ajolla ei ole kiire — se on erillinen, hyvin rajattu erä.
+3. Aja nyt ja korjaa verkko seuraavaan ajoon.
+
+## 7. Mitä jäi tekemättä ja miksi
+
+- **Reittiverkon data** (`sofia|ateena`-välipiste, 37 vesireittiä,
+  `densify`-poisto + `korjaa-merireitit`): ohje kielsi solmujen
+  siirtelyn ja pelimekaniikkaan koskemisen. Raportoitu yllä numeroineen.
+- **Virallinen `--saumatesti` oikealla aineistolla:** raaka-aineistoa
+  (Natural Earth 10m, ETOPO) ei ole kontissa. Ajoin vastaavan kokeen
+  kaaviotaustalla ja vertasin ennen/jälkeen; luvut yllä.
+- **Pyramidiajo:** ohjeen mukaan omistaja päättää.
+- **Havainto ohimennen, en korjannut:** Pohjois-Afrikan ruudussa
+  maareitti ja lentoreitti kulkevat lähes päällekkäin (Tripoli–Kairo on
+  sekä maa- että lentoyhteys). Katkoviiva erottuu, mutta pari on
+  ahdas — näkyy `reitit-z5.png`:ssä ja `reitit-z7.png`:ssä. Jos se
+  häiritsee, lentoviivan voi siirtää pari pikseliä sivuun; se on oma
+  pieni päätöksensä.
+- **Toinen havainto:** z2:lla verkko on nyt selvästi tiheämmän
+  näköinen kuin ennen (`reitit-z2.png`). Se on suora seuraus siitä,
+  mitä pyydettiin, mutta se on uloin taso ja kannattaa katsoa: jos se
+  on liikaa, lentoreiteille voi antaa oman kynnyksensä (nyt kaikki
+  lajit ilmestyvät samalla kynnyksellä 0,22).
+
 # Opus → Fable: laattojen esilataus ja zoomin hitaus (haara claude/laattojen-esilataus)
 
 Erä valmis, pushattu haaralle. **Ei PR:ää, ei versionostoa** (ohjeen

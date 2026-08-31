@@ -84,7 +84,7 @@
 
 import {
   ASTEIKKO, KOHINA, KOHINA2, MUSTE, PAPERI,
-  fbm, laudanProjektio, lerpSyvyys, lerpVari,
+  fbm, laudanProjektio, lerpSyvyys, lerpVari, mulberry32,
 } from './piirto.js';
 
 /* =========================================================== moottori */
@@ -1259,21 +1259,114 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
        */
       const KIERROS = projektio.leveys ?? 0;
       const siirrot = KIERROS ? [-KIERROS, 0, KIERROS] : [0];
+      /*
+       * === MUSTEEN PEITTÄVYYS ON MITTA, EI MAKUASIA (omistaja 31.8.2026)
+       *
+       * Sanatarkasti: *"Viivat ovat liian ohuita ja pisteet liian
+       * pieniä. --- Saisi olla myös hieman paksummalla."*
+       *
+       * Vanhat arvot mitattuna laattapikseleistä (31.8.2026, z5
+       * Egeanmeri): merireitin viiva erottui paperista Weberin
+       * kontrastina 0,10 ja maareitin 0,07 — eli seitsemän prosenttia
+       * paperin kirkkaudesta. Kirkkaalla ulkoruudulla se on olematon,
+       * ja juuri siksi omistaja näki kartan tyhjänä.
+       *
+       * SÄVY EI MUUTU, VAIN PEITTÄVYYS. Merireitti pysyy
+       * preussinsinisenä (32, 60, 98) ja lento poltettuna sinooperina
+       * (150, 54, 40); nostettu on ALFA, eli kynä painaa kovempaa
+       * samalla musteella. Kirkas RGB-sininen tekisi kartasta
+       * tietokonegrafiikkaa yhdellä viivalla — se raja ei liiku.
+       */
       const MUSTEET = {
-        maa: { viiva: 'rgba(120,88,54,0.52)', kehä: 'rgba(120,88,54,0.78)' },
-        meri: { viiva: 'rgba(32,60,98,0.56)', kehä: 'rgba(32,60,98,0.80)' },
+        maa: { viiva: 'rgba(120,88,54,0.80)', kehä: 'rgba(120,88,54,0.92)' },
+        meri: { viiva: 'rgba(32,60,98,0.84)', kehä: 'rgba(32,60,98,0.94)' },
       };
-      const helmiTaytto = 'rgba(246,239,220,0.88)';
-      const sade = 2.4 * P;
+      const helmiTaytto = 'rgba(246,239,220,0.94)';
+      /*
+       * HELMEN SÄDE 2,4 → 3,2 PAPERIPIKSELIÄ. Yläraja tulee tiheimmästä
+       * askelvälistä: mitattuna z2:lla (ensimmäinen taso, jolla reitit
+       * piirtyvät) lyhin väli on 5,6 px ja p10 11,4 px, joten 6,4
+       * pikselin helmi vielä erottuu naapuristaan kaikkialla paitsi
+       * muutamassa tiheimmässä välissä.
+       */
+      const sade = 3.2 * P;
+      const VIIVA = 1.9 * P;
+
+      /*
+       * === KÄSIN PIIRRETTY JÄLKI — JA MIKSI SE EI TEE SAUMAA =========
+       *
+       * Omistaja 31.8.2026: *"Reitit saisi olla käsin piirretyn
+       * näköisiä --- ne saa olla luotisuoria viivoja."* Solmujen välit
+       * ovat siis luotisuoria janoja (sisalto.mjs poimii solmupolun),
+       * ja käsin piirretty vaikutelma tehdään kahdella pikkuasialla:
+       * KYNÄNPAINE vaihtelee reitistä toiseen, ja SOLMU heittää
+       * pikselin murto-osan pois suorasta.
+       *
+       * HEITTO EI SAA TULLA PIKSELISTÄ. Sama virhe tehtiin kerran
+       * patinan rakeessa: kun kohina luettiin laatan omasta nurkasta,
+       * JOKA laatta sai saman kentän ja ruudukko näkyi ruudukkona
+       * (generoi-laattapyramidi.mjs, "KOHINA"). Siksi heittoa ei arvota
+       * pikselistä eikä laatan nurkasta vaan REITIN TUNNUKSESTA
+       * (`r.siemen`, sisalto.mjs) ja solmun järjestysluvusta. Ne ovat
+       * samat luvut joka lohkossa, joka laatalla ja joka ajolla, joten
+       * viiva jatkuu laattarajan yli pikselilleen samana — eikä
+       * `--saumatesti` voi nähdä tästä mitään.
+       *
+       * PÄÄTESOLMUT EIVÄT HEITÄ: reitin pää on kaupunki, ja kolme
+       * reittiä samasta kaupungista kuuluu lähteä samasta pisteestä.
+       *
+       * Heitto lasketaan kerran reittiä kohti ja jää muistiin
+       * `sisalto`-olioon — sama olio piirtää tuhannet laatat.
+       */
+      const HEITTO = 0.35;   // paperipikseliä, molempiin suuntiin
+      const KYNIA = 5;       // kynänpaineen portaat
+      const heitot = (r) => {
+        if (!r.__heitto) {
+          const rnd = mulberry32(r.siemen ?? 1);
+          const h = r.poly.map(() => [0, 0]);
+          for (let i = 1; i < h.length - 1; i += 1) {
+            h[i] = [(rnd() - 0.5) * 2 * HEITTO, (rnd() - 0.5) * 2 * HEITTO];
+          }
+          // Kynänpaineen porras samasta virrasta, jotta se on yhtä pysyvä.
+          r.__kyna = Math.min(KYNIA - 1, Math.floor(rnd() * KYNIA));
+          r.__heitto = h;
+        }
+        return r.__heitto;
+      };
+      /** Reitin murtoviiva arkin pikseleiksi, heitto mukaan luettuna. */
+      const reittiPolku = (g, osa, d) => {
+        for (const r of osa) {
+          const h = heitot(r);
+          let edellinen = null;
+          for (let i = 0; i < r.poly.length; i += 1) {
+            const x = lautaKuvaX(r.poly[i][0] + d) + h[i][0] * P;
+            const y = lautaKuvaY(r.poly[i][1]) + h[i][1] * P;
+            if (edellinen === null || Math.abs(x - edellinen) > GW / 2) g.moveTo(x, y);
+            else g.lineTo(x, y);
+            edellinen = x;
+          }
+        }
+      };
+
       for (const laji of ['meri', 'maa']) {
         const osa = sisalto.reitit.filter((r) => r.laji === laji);
         if (!osa.length) continue;
         const muste = MUSTEET[laji];
         ctx.strokeStyle = muste.viiva;
-        ctx.lineWidth = 1.1 * P;
-        for (const d of siirrot) {
-          lautaPolku(ctx, osa.map((r) => r.poly.map(([x, y]) => [x + d, y])));
-          ctx.stroke();
+        /*
+         * YKSI POLKU KYNÄNPAINEEN PORRASTA KOHTI. Jokainen reitti saa
+         * oman leveytensä, mutta piirtoja on viisi eikä 408: sama
+         * `lineWidth` kelpaa kaikille saman portaan reiteille.
+         */
+        for (let k = 0; k < KYNIA; k += 1) {
+          const kynalla = osa.filter((r) => { heitot(r); return r.__kyna === k; });
+          if (!kynalla.length) continue;
+          ctx.lineWidth = VIIVA * (0.88 + 0.06 * k);
+          for (const d of siirrot) {
+            ctx.beginPath();
+            reittiPolku(ctx, kynalla, d);
+            ctx.stroke();
+          }
         }
         /*
          * Helmet yhtenä polkuna: 1 118 erillistä fill+stroke-paria
@@ -1296,20 +1389,33 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         ctx.fillStyle = helmiTaytto;
         ctx.fill();
         ctx.strokeStyle = muste.kehä;
-        ctx.lineWidth = 0.9 * P;
+        ctx.lineWidth = 1.3 * P;
         ctx.stroke();
       }
       /*
        * Lentoreitit poltettuna sinooperina ja katkoviivana: aikakauden
        * kartassa ne ovat höyrylaivalinjan tapainen merkintä eikä
-       * maantie, ja niitä on vähemmän.
+       * maantie, ja niitä on vähemmän. Katkoviiva on omistajan päätös
+       * (30.8.2026): lento siirtää nappulan suoraan perille, joten
+       * sillä ei ole askelmia eikä siis helmiä.
        */
       if (sisalto.lentoreitit?.length) {
-        ctx.strokeStyle = 'rgba(150,54,40,0.50)';
-        ctx.lineWidth = 0.9 * P;
-        ctx.setLineDash([9 * P, 7 * P]);
-        lautaPolku(ctx, sisalto.lentoreitit.map((r) => [[r.ax, r.ay], [r.bx, r.by]]));
-        ctx.stroke();
+        ctx.strokeStyle = 'rgba(150,54,40,0.76)';
+        ctx.lineWidth = 1.7 * P;
+        ctx.setLineDash([10 * P, 7 * P]);
+        /*
+         * Lento on ilmaviiva päästä päähän — kaksi solmua, ei
+         * välisolmuja, joten heittoa ei ole mihin panna. Kynänpaine
+         * vaihtelee silti reitistä toiseen samalla siemenellä.
+         */
+        for (let k = 0; k < KYNIA; k += 1) {
+          const kynalla = sisalto.lentoreitit
+            .filter((r) => Math.floor(mulberry32(r.siemen ?? 1)() * KYNIA) === k);
+          if (!kynalla.length) continue;
+          ctx.lineWidth = 1.7 * P * (0.9 + 0.05 * k);
+          lautaPolku(ctx, kynalla.map((r) => [[r.ax, r.ay], [r.bx, r.by]]));
+          ctx.stroke();
+        }
         ctx.setLineDash([]);
       }
       ctx.restore();
