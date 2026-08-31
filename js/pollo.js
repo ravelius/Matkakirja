@@ -1375,7 +1375,8 @@ class Pollo {
     nappi.type = 'button';
     /*
      * NIMILAPPU ON YLIVIIVATTU, VIHJE EI (omistajan rajaus 27.8.2026).
-     * Napin näkyvässä selitteessä lukee "Pöllö Pulu" pöllö yli vedettynä;
+     * Napin näkyvässä selitteessä lukee "Viisas Pöllö Pulu", jossa koko
+     * nimi on yhden vedon alla (muoto tarkennettu 31.8.2026);
      * title ja aria-label ovat pelkkää tekstiä, joten niissä lukee vain
      * "Pulu" — ruudunlukija ei lue yliviivattua sanaa.
      */
@@ -2087,7 +2088,8 @@ class Pollo {
    * kartalle (ks. sidoKuplanNapautus).
    *
    * Ylärivi on v1225:n yliviivattu nimilappu (ui-apurit.js
-   * polloNimilappu): pöllö-sana vedettynä yli, "Pulu" perässä.
+   * polloNimilappu): "Viisas Pöllö" vedettynä yli yhdellä vedolla,
+   * "Pulu" perässä.
    *
    * @param {string} teksti saapumispuheenvuoro; tyhjä ei tee mitään.
    * @param {object} [asetukset]

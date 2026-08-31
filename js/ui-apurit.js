@@ -462,9 +462,19 @@ export function html(tag, className, text) {
  * PÖLLÖ YLIVIIVATTUNA, PULU PERÄÄN (omistajan tilaus 27.8.2026).
  *
  * Tietokumppanin nimilapuissa lukee nyt vitsi, jonka hahmo tekee itse
- * itsestään: pöllö-sana on vedetty yli punaisella ja perässä lukee
+ * itsestään: pöllön nimi on vedetty yli punaisella ja perässä lukee
  * "Pulu". Livia on Viisaan Pöllön SIJAINEN, ja nimilappu on korjattu
  * kuin kynällä paperiin — ei uusiksi kirjoitettu.
+ *
+ * MUOTO ON AINA SAMA (omistajan tarkennus 31.8.2026): yli vedetään
+ * KOKO NIMI "Viisas Pöllö" — molemmat sanat YHDEN pitkän, yhtenäisen
+ * vedon alla — ja perään jää erillinen sana "Pulu". Pelkkä "Pöllö"
+ * yliviivattuna oli väärä muoto, ja kaksi sanakohtaista vetoa olisi
+ * kaksi korjausta yhden sijaan. Siksi `yli` on oletuksena koko nimi ja
+ * kutsupaikka poikkeaa siitä vain taivutuksen takia ("viisaalta
+ * pöllöltä pululta"). Yliviivattu osa ei katkea riville kahtia
+ * (css .pollo-yliviivattu, white-space: nowrap), koska veto piirtyy
+ * yhtenä polkuna koko laatikon yli.
  *
  * KOLME RAJAUSTA, JOTKA PITÄVÄT:
  *  1. Yliviivaus vain OTSIKOISSA JA NIMILAPUISSA. Aria-labelit,
@@ -486,7 +496,7 @@ export function html(tag, className, text) {
  */
 export function polloNimilappu(kohde, osat = {}) {
   const {
-    ennen = '', yli = 'Pöllö', tilalle = 'Pulu', jalkeen = '',
+    ennen = '', yli = 'Viisas Pöllö', tilalle = 'Pulu', jalkeen = '',
   } = osat;
   if (!kohde) return kohde;
   kohde.textContent = '';
@@ -525,10 +535,10 @@ const SVG_NS = 'http://www.w3.org/2000/svg';
  * palkki näyttäisi ladotulta, ja juuri sitä tässä vältetään.
  *
  * MIKSI preserveAspectRatio="none" JA non-scaling-stroke YHDESSÄ:
- * viewBox venytetään sanan mittaan, jotta sama polku palvelee sekä
- * sanaa "Pöllö" että paria "Viisas Pöllö" yhtenä yhtenäisenä vetona.
- * Venytys skaalaisi myös viivanleveyden (pitkä sana → paksumpi veto),
- * joten vector-effect pitää leveyden vakiona laitepikseleissä.
+ * viewBox venytetään koko nimen mittaan, jotta yksi ainoa polku kattaa
+ * sanaparin "Viisas Pöllö" yhtenä yhtenäisenä vetona — ei sanakohtaisia
+ * vetoja. Venytys skaalaisi myös viivanleveyden (pitkä nimi → paksumpi
+ * veto), joten vector-effect pitää leveyden vakiona laitepikseleissä.
  */
 const VEDON_POLUT = [
   // Runkoveto: loiva kaari, painuu keskeltä hieman alemmas.
@@ -542,7 +552,7 @@ const VEDON_POLUT = [
   { d: 'M88 6 C 72 11, 44 18, 12 26', leveys: '1', lapi: '0.45' },
 ];
 
-/** Yksi yhtenäinen kynänveto sanan (tai sanaparin) päälle. */
+/** Yksi yhtenäinen kynänveto koko sanaparin päälle. */
 function polloVeto() {
   const svg = document.createElementNS(SVG_NS, 'svg');
   svg.setAttribute('class', 'pollo-veto');

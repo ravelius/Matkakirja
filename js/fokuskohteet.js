@@ -2748,11 +2748,12 @@ function piirraKohdeKysymykset(ui, sisalto, kohde) {
   if (!kysymykset.length) return;
   // Omistaja 25.8.2026: "Ennen kysymyksiä voisi olla lause: kysy
   // pöllöltä" — kertoo, mihin pisteviivanapit johtavat.
-  // Otsikkorivi on nimilappu → yliviivausvitsi (omistaja 27.8.2026):
-  // "Kysy pöllöltä pululta:", pöllöltä yli vedettynä. Ryhmän aria-label
-  // on pelkkää tekstiä eikä siinä ole yliviivausta.
+  // Otsikkorivi on nimilappu → yliviivausvitsi (omistaja 27.8.2026,
+  // muoto tarkennettu 31.8.2026): "Kysy viisaalta pöllöltä pululta:",
+  // jossa koko nimi on yhden vedon alla. Ryhmän aria-label on pelkkää
+  // tekstiä eikä siinä ole yliviivausta.
   sisalto.appendChild(polloNimilappu(html('p', 'fokuskohde-kysy-otsikko'), {
-    ennen: 'Kysy ', yli: 'pöllöltä', tilalle: 'pululta', jalkeen: ':',
+    ennen: 'Kysy ', yli: 'viisaalta pöllöltä', tilalle: 'pululta', jalkeen: ':',
   }));
   const rivi = html('div', 'fokuskohde-kysymykset');
   rivi.setAttribute('role', 'group');
