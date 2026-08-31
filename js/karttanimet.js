@@ -72,10 +72,16 @@
  *    nimilappua koko laudalle ja maksoi siitä joka eleessä (v1366:n
  *    mittaus).
  *
- * 3. KAIKKI KOOT OVAT CSS-PIKSELEITÄ, SVG:N YKSIKÖIKSI JAETTUNA.
+ * 3. NIMIEN KOOT OVAT CSS-PIKSELEITÄ, SVG:N YKSIKÖIKSI JAETTUNA.
  *    Kerros elää kartan omassa koordinaatistossa, joten `koko / skaala`
  *    on täsmälleen `koko` pikseliä ruudulla — ja teksti rasteroidaan
  *    laitteen omalla tarkkuudella, ei laatan.
+ *
+ *    MERKIT EIVÄT (31.8.2026). Piste, rengas ja vuorikolmio ovat
+ *    laudan yksiköitä eli karttavakio: ne on mitoitettu niin kuin ne
+ *    olisi POLTETTU karttaan, ja siksi ne suurenevat lähennettäessä ja
+ *    kutistuvat loitonnettaessa. Perustelu ja mittaukset ovat
+ *    MERKKI-taulun kohdalla; älä palauta merkkejä `laudalle`-jakoon.
  *
  * === KAKSOISNIMIVAARA — LUE TÄMÄ ENNEN KUIN MUUTAT MITÄÄN ==========
  *
@@ -262,20 +268,24 @@ const NOSTON_KATKO = 1.6;
  * siitä merkki suurenee lähennettäessä ja pienenee loitonnettaessa —
  * sama sääntö kuin Raamatun 25.8. pallurapäätöksessä.
  *
- * MIKÄ VIKA OLI, MITATTUNA (900 x 1200, dpr 1, Kreikka):
+ * MIKÄ VIKA OLI, MITATTUNA (900 x 1200, dpr 1, Kreikka; 1000 ja 2000
+ * km vaativat kehittäjän maailmanapin, muuten zoomi ei päästä niin
+ * kauas). Merkit ladottiin RUUTUpikseleissä (`laudalle(koko)` eli
+ * koko/skaala), joten ne pysyivät ruudulla samankokoisina — ja juuri
+ * siksi KASVOIVAT kartan suhteen ulos zoomatessa:
  *
- *   jana        skaala   kaupunkilaatta   piste   rengas
- *   250 km      1,879    37,4 px           4,0     9,2
- *   500 km      0,626    12,5 px           4,0     9,2
- *   1000 km     0,371     7,4 px           5,2     9,2
- *   2000 km     0,247     4,9 px           5,2     9,2
+ *   jana      skaala   ruudulla        LAUDAN YKSIKÖISSÄ
+ *                      piste  rengas   piste       rengas
+ *   250 km    1,879    4,0     9,2      2,1 / 2,8    4,9
+ *   500 km    0,626    4,0     9,2      6,4 / 8,3   14,7
+ *   1000 km   0,371    5,2     9,2     14,0         24,8
+ *   2000 km   0,247    5,2     9,2     21,0         37,2
  *
- * Merkit ladottiin RUUTUpikseleissä (`laudalle(koko)` eli koko/skaala),
- * joten ne pysyivät ruudulla samankokoisina ja KASVOIVAT kartan
- * suhteen ulos zoomatessa: piste 4,6 -> 8,6 -> 17,3 lautayksikköä ja
- * rengas 10,5 -> 19,9 -> 39,8. Kun kermanvalkoinen kaupunkilaatta
- * (drawCities, karttavakio 16,2 lautayksikköä leveä) kutistui renkaan
- * alle, kartalle jäi umpimusta nasta — omistajan "musta pippuri".
+ * Vertailuluku on kaupunkilaatta (js/ui.js drawCities): se on jo
+ * karttavakio, 16,2 lautayksikköä leveä joka mittakaavassa. Renkaan
+ * kasvu ohitti sen 1000 km:n kohdalla ja oli 2000 km:ssä sen päällä
+ * yli kaksinkertaisena — kermanvalkoinen laatta jäi umpimustan nastan
+ * alle. Se on omistajan "musta pippuri".
  *
  * === PERUSKOKO ON KREIKAN MITTA, JA SE ON JO OLEMASSA ==============
  *
@@ -296,12 +306,14 @@ const NOSTON_KATKO = 1.6;
  * viritetään uudestaan, kaupungin pisteen ja poltetun karttanoston on
  * liikuttava yhdessä — muuten kartalla on kaksi eri kokojärjestelmää.
  *
- * MITÄ MITTA ANTAA (sama mittaus, sama ruutu): maanäkymässä piste 4,5
- * px ja rengas 10,4 px eli entisen näköinen, ja 2000 km:n janalla
- * piste 0,6 px ja rengas 1,4 px — laatan 4,9 px:n alla, jolloin
- * pippuri on poissa. Kapealla ruudulla (puhelin) lehti on ruudulla
- * pienempi ja merkkikin siis pienempi, leveällä isompi; juuri se on
- * "poltettu karttaan" eikä vika.
+ * MITÄ MITTA ANTAA. Merkki on nyt sama joka mittakaavassa: piste 2,4
+ * ja rengas 5,5 lautayksikköä eli reilusti laatan 16,2:n sisällä,
+ * eikä se voi enää ohittaa sitä millään zoomilla. Ruudulla (sama
+ * mittaus, sama ruutu) maanäkymässä piste 4,5 px ja rengas 10,4 px eli
+ * entisen näköinen, 500 km:n janalla 1,5 / 3,5 px ja 2000 km:ssä
+ * 0,8 / 1,4 px. Kapealla ruudulla (puhelin) lehti on ruudulla pienempi
+ * ja merkkikin siis pienempi, leveällä isompi; juuri se on "poltettu
+ * karttaan" eikä vika.
  *
  * NIMET EIVÄT SEURAA (KOKO, KYNNYS). Ne jäävät CSS-pikseleihin
  * tietoisesti: nimi on paperivakio (ks. tiedoston johdanto), koska
