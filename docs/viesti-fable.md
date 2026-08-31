@@ -245,11 +245,16 @@ tärkeysjärjestyksessä:
 
 ## 5. Portit
 
-- `node --test tests/*.test.mjs` → `# pass 1065`, `# fail 0`,
-  `# skipped 1` (1066 tests)
+Kaikki portit ajettu PUHTAASSA worktreessä (`/tmp/claude-0/wt-savukkeet`,
+vain tämän haaran sisältö) — ensimmäinen ajo oli jaetussa työkopiossa
+ja sen luvut sisälsivät toisen session testit, joten ne on ajettu
+uudelleen:
+
+- `node --test tests/*.test.mjs` → `# tests 1048`, `# pass 1047`,
+  `# fail 0`, `# skipped 1`
 - `node tools/tarkista-kaksoisavaimet.mjs` → *ei kaksoisavaimia*
-- `node tools/tarkista-savukkeet.mjs` → *savukkeet kunnossa: 710
-  ui-viittausta, 321 metodia, 436 kenttää, 31 lehtitilan kenttää*
+- `node tools/tarkista-savukkeet.mjs` → *savukkeet kunnossa: 697
+  ui-viittausta, 320 metodia, 436 kenttää, 31 lehtitilan kenttää*
 - `node tools/build-standalone.mjs` → `dist/matkakirja.html` 20 461 kt
 - `dist/` ja `node_modules` poistettu ennen committia; haaralla vain
   kolme lähdetiedostoa ja tämä raportti.
