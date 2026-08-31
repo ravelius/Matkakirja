@@ -1,3 +1,380 @@
+# Opus → Fable: kategoria per kaupunki mainin päälle, pilkkunimiö ja ladonnan skaalan kiinnitys (31.8.2026)
+
+Haara `claude/ryhmat-2`, otettu **tuoreesta origin/mainista** (17b9203c,
+v1380). Ei versionostoa, ei PR:ää, ei pyramidiajoa.
+
+Muutetut tiedostot: `js/fokusryhmat.js` (uusi), `js/fokuskohteet.js`,
+`js/fokusniput.js`, `js/fokusnosto.js`, `js/fokusnosto-symbolit.js`,
+`js/syvennys.js`, `js/skandaalit.js`, `js/ui.js`, `css/fokuskohteet.css`,
+`sw.js`, `tools/build-standalone.mjs`, `tests/fokusryhmat.test.mjs`
+(uusi, 18 väitettä), `tools/savukkeet/savuke-fokuskohteet.mjs`,
+`tools/savukkeet/savuke-takyportti.mjs`,
+`tools/savukkeet/mittaa-niput.mjs` (uusi mittanauha).
+
+Koordinaatteihin, korttiteksteihin, visoihin ja kuviin ei koskettu.
+`js/tyohuone-raamattu.js`, tarinakaanon, `tools/fokuskartta/` ja
+`js/rules.js` koskemattomia. Vanhalta haaralta (`claude/kategoria-per-kaupunki`,
+896737e7) otin VAIN sen oman työn merge-basesta lukien ja tarkistin
+jokaisen tiedoston erikseen — laattapyramidin ja symbolien vanhat
+versiot jäivät sinne.
+
+## 1. Ryhmittely mainin päälle — luvut muuttuivat, kuten arvelit
+
+v1380 pudotti kartan yhdeksään merkkiin, ja koska ryhmittelyn
+kategoria on **täsmälleen se funktio, jolla merkki piirretään**
+(`kohteenSymboli`, joka menee nyt `karttavaloKarkisymboli`-funktion
+läpi), ryhmittely karkeni samalla. Ateena ratkesi paremmin kuin
+vanhassa erässä: **10 → 3** eikä 10 → 4, koska Diogeneen astia
+(sulkakynä → Historia) päätyi nyt samaan kuoreen kuin Akropolis.
+
+**Koko maailma** (mitattu Nodessa suoraan paketeista, kaikki neljä
+lähdettä: fokuskohteet + maastokohteet, syvennystarinat, skandaalit,
+täkynostot):
+
+| | ennen | jälkeen |
+| --- | --- | --- |
+| merkkejä kartalla | **683** | **632** |
+| yhdistettyjä merkkejä | – | 33 kuorta, 84 kohdetta |
+| kaupunkeja joilla yli 3 merkkiä | 24 | **10** |
+
+**Kymmenen pahinta kaupunkia** (merkkejä 5 lautayksikön sisällä):
+
+| kaupunki | ennen | jälkeen |
+| --- | --- | --- |
+| Ateena (GRC) | 10 | **3** |
+| Istanbul (TUR) | 9 | 5 |
+| Pariisi (FRA) | 9 | 5 |
+| Sofia (BGR) | 9 | **4** |
+| Wien (AUT) | 8 | **3** |
+| Rooma (ITA) | 7 | 4 |
+| Lontoo (GBR) | 6 | 5 |
+| Sevilla (ESP) | 6 | **3** |
+| Berliini (DEU) | 5 | 4 |
+| Bukarest (ROU) | 5 | **3** |
+
+**Ryhmäkokojen jakauma koko maailmasta:** 2 jäsentä 21 ryhmässä,
+3 jäsentä 9:ssä, 4 jäsentä yhdessä (Pariisi), 5 yhdessä (Wien) ja
+**suurin 6** (Ateenan Historia). Kolmen jäsenen listat mahtuvat
+kartalle; kuuden ei mahdu millään.
+
+Kartalta mitattuna (`tools/savukkeet/mittaa-niput.mjs`, kamera ajettu
+lehden ikkunaan, mitat lautayksiköitä):
+
+| kaupunki / ruutu | merkkejä lehden alla | nipussa | sarakkeen korkeus | pisin nostoviiva | viivaa yhteensä |
+| --- | --- | --- | --- | --- | --- |
+| Ateena iPad | 42 → **35** | 10 → **3** | 87,7 → **35,1** | 39,8 → **11,5** | 382 → **53** |
+| Ateena iPhone | 42 → **35** | 10 → **3** | 87,7 → **35,1** | 40,3 → **11,5** | 493 → **53** |
+| Rooma iPad | 32 → **27** | 7 → **4** | 119,6 → **60,8** | 49,3 → **30,6** | 386 → **122** |
+| Rooma iPhone | 32 → **27** | 7 → **4** | 121,5 → **60,8** | 50,2 → **30,6** | 464 → **122** |
+| Dubrovnik iPad | 25 → 25 | 3 → 3 | 23,2 → 23,6 | 8,10 → **7,71** | 38,5 → **35,5** |
+| Dubrovnik iPhone | 25 → 25 | 3 → 3 | 23,6 → 23,6 | 13,08 → **7,71** | 72,9 → **35,5** |
+
+**Dubrovnik on vertailukohta:** sen kolme kohdetta ovat kolmea eri
+kärkisymbolia (Kauppa, Historia, Luonto), joten ne EIVÄT yhdisty. Sen
+rivi näyttää siis pelkän skaalan kiinnityksen osuuden.
+
+**Lue oikeanpuoleiset sarakkeet pareittain:** iPad ja iPhone antavat
+jälkeen-tilassa TÄSMÄLLEEN saman luvun. Ennen ne erosivat (Ateenan
+katkoviivaa 382 vs. 493, Dubrovnikin pisin viiva 8,1 vs. 13,1). Se on
+skaalan kiinnityksen todiste, ks. luku 3.
+
+## 2. Pilkkulista — omistajan katkaisusääntö toteutettuna
+
+Nimiö on nyt jäsenten nimet pilkulla eroteltuina (`js/fokusryhmat.js`
+`ryhmaNimio`), ei kategorian nimi. Kukin nimi kulkee kartan oman
+lyhennyksen läpi (`nostosymLyhennaNimio`, 18 merkkiä), joten pilkkulista
+on kartan omaa kieltä. **Kortin otsikko pysyy kategoriana** ("Historia",
+alla kaupungin nimi), koska kortissa jäsenten nimet ovat jo osioiden
+otsikkoina.
+
+Katkaisu on omistajan sääntö: *"katkaistaan vain jostain kohtaa ja
+lisätään loppuun kolme pistettä."* Ellipsi lasketaan mittaan mukaan,
+ei sen perään.
+
+### Mikä leveys, ja miksi
+
+Budjetti on **160 kirjaston yksikköä = tasan viidesosa lehden
+leveydestä**, ja se on sama luku joka lehdellä. Perustelu on
+laskutoimitus, ei maku: kun merkin mittakaava on kiinnitetty lehden
+perustasoon (luku 3), `s = 2,0 × rajaus.w / 1600`, jolloin nimiön osuus
+lehden leveydestä on `leveys × s / rajaus.w = leveys / 800` — rajaus
+supistuu pois. 160 on siis viidesosa sekä Kreikan 468 että Kroatian 315
+lautayksikön levyisellä lehdellä.
+
+Mittatikku on kartan nykyinen nimistö: **599 yksinäistä nimiötä** koko
+maailmasta, mediaani 49, 95. persentiili 81 ja **levein 107**
+kirjastoyksikköä eli 13 % lehden leveydestä. Ryhmän nimiö saa siis olla
+puolitoistakertainen kartan leveimpään yksittäiseen nimeen nähden.
+Käytännössä 160 on Kreikan lehdellä 93 lautayksikköä ja iPadilla 166
+CSS-pikseliä.
+
+### Mikä osuus katkeaa
+
+Koko maailman 33 yhdistetystä merkistä:
+
+| budjetti | osuus lehdestä | katkeaa | levein nimiö |
+| --- | --- | --- | --- |
+| 100 | 13 % | 31 / 33 (94 %) | 100 |
+| 120 | 15 % | 28 / 33 (85 %) | 119 |
+| 140 | 18 % | 19 / 33 (58 %) | 140 |
+| **160** | **20 %** | **12 / 33 (36 %)** | **159** |
+| 180 | 23 % | 10 / 33 (30 %) | 179 |
+| 200 | 25 % | 8 / 33 (24 %) | 199 |
+| 240 | 30 % | 3 / 33 (9 %) | 237 |
+| ei rajaa | 49 % | 0 / 33 | 394 |
+
+Eli **katkaisu osuu joka kolmanteen ryhmään, ei joka toiseen** —
+kaksikymmentäyksi kolmestakymmenestäkolmesta näyttää kaikki nimensä.
+Väljempi budjetti ostaisi muutaman kokonaisen listan hinnalla, joka
+näkyy joka ainoassa nimiössä: Ateenan kuuden ja Wienin viiden jäsenen
+täydet listat ovat 394 ja 374 yksikköä eli **puolet koko lehden
+leveydestä**, joten niitä ei pelasta mikään budjetti. Luku on yhdessä
+paikassa (`RYHMA_NIMIO_LEVEYS`) ja vaihdettavissa yhdellä rivillä.
+
+Esimerkkejä oikeasta datasta:
+
+- Ateena, Historia (6): `Olympieion, Iliou Melathron…`
+- Ateena, Skandaalit (3): `Maratonhuijaus, Helenan korut…`
+- Rooma, Historia (3): `Forum Romanum, Avaimenreikä…`
+- Rooma, Skandaalit (2): `Caesarin kissat, Banca Romana`
+- Kööpenhamina (3): `Alberti, Vararikko 1813, Struensee`
+- Praha (2): `Tycho Brahe, Klementinum`
+
+### Katkaisu suosii nimen rajaa
+
+Katkaisukohta etsitään merkeittäin, ja jos viimeinen nimen raja
+(`, `) on vähintään 75 % siitä, mitä mittaan mahtui, katkaisu vedetään
+sinne — *"Forum Romanum, Avaimenreikä…"* eikä *"…Avaimenreikä, Vatik…"*.
+Muuten katkaistaan mistä kohtaa sattuu, kuten omistaja sanoi.
+
+### Leveys mitataan taulukosta, ei selaimesta
+
+Tämä oli sinun nostosi ja se osoittautui pakolliseksi: `measureText`
+antaa eri vastauksen laattageneraattorin Chromiumissa, pelaajan
+Safarissa ja työpöydän Firefoxissa, koska `--font-atlas` on
+*"Liberation Serif", "Times New Roman", Times, serif* ja iOS:llä valinta
+osuu Timesiin.
+
+Ratkaisu on **merkkileveystaulukko** (`js/fokusnosto-symbolit.js`
+`NOSTOSYM_LEVEYSLUOKAT`, `nostosymTekstinLeveys`): Liberation Serif
+Italicin askelleveydet tuhannesosina em-neliötä, käänteisenä
+leveys → merkit -tauluna, koska kirjasimessa on 36 leveysluokkaa ja
+329 merkkiä. Yleisin luokka (500) on oletus myös tuntemattomalle
+merkille. Sama taulukko antaa saman vastauksen selaimessa, Nodessa ja
+generaattorissa.
+
+Mitattu tarkkuus: merkeittäin laskettu summa ei tunne parivälistystä,
+ja ero koko merkkijonon `measureText`-leveyteen oli enintään **0,7 %**
+(*"Forum Romanum, Avaimenreikä"* 13081 vs. 12988 tuhannesosaa). Tämä on
+nimenomaan MITTA eikä ennuste: jos pelaajan kirjasin on hitusen
+leveämpi, nimiö on hitusen leveämpi kuin budjetti — mutta se katkeaa
+samasta kohdasta joka laitteella ja joka ajossa. Yksikkötestit ajavat
+mitan Nodessa ilman DOMia juuri tämän todistamiseksi.
+
+### Sivulöytö: budjetti ei vaikuta siihen, montako nimiötä väistö säästää
+
+Mittasin väistön lopputuloksen kolmella budjetilla (100 / 160 / 240)
+Ateenassa, Roomassa ja Dubrovnikissa: **täsmälleen samat nimiöt jäivät
+näkyviin joka kerta.** Leveysbudjetti on siis kysymys siitä, onko nimiö
+nimiö vai nauha — ei kysymys törmäyksistä.
+
+Väistön luvut ennen/jälkeen (iPad, lehden perustaso): Ateenassa
+mainissa 37 nimiötä näkyvissä ja 1 vaiti, haaralla 28 yksinäistä + 1
+kuori näkyvissä ja 1 yksinäinen + 1 kuori vaiti. **Ateenan
+Skandaalit-kuoren nimiö jää vaiti** — se on sarakkeen alin rivi ja
+törmää naapuriinsa; merkki itse on kartalla ja napautettavissa (savuke
+1a2:n sääntö *"merkit jäävät napautettaviksi myös ilman nimeä"*).
+Roomassa suunta on parempaan: mainissa 24 näkyvissä / 4 vaiti,
+haaralla 20 näkyvissä / 3 vaiti.
+
+## 3. Ladonta on nyt toistettavissa selaimen ulkopuolella
+
+Tämä oli polton ehto 1, ja se on tehty. Uusi `js/ui.js
+fokusMerkkiSkaalaPohja()` palauttaa **pelkästä lehden rajauksesta**
+lasketun vakion:
+
+```
+s = FOKUS_MERKKI_KATTO * rajaus.w / FOKUS_LEHTI_PROTO = 2,0 * rajaus.w / 1600
+```
+
+`rajaus` on dataa (`js/packs/fokus-grc.js FOKUS_POHJAT`), joten arvo on
+laskettavissa ilman DOMia, ilman ruudun kokoa ja ilman dpr:ää.
+
+**Arvo ei ole uusi luku.** Se on täsmälleen entinen KATTO
+(`fokusMerkkiSkaalaKartalle`): yksi merkin perustason pikseli on 2,0
+lehden omaa pikseliä, eli merkki on lehden oman typografian mittainen —
+vuorikolmion ja poltetun vuorennimen kokoinen. Ennen tätä katto puri
+vain kapealla ruudulla; nyt merkki on **aina** täsmälleen siinä koossa,
+joka laattaan poltetaan.
+
+Kaikki neljä entistä ruudusta riippunutta kohtaa saavat nyt tämän arvon
+(`js/fokuskohteet.js asetaKohdeMittakaava`):
+
+1. **erottelusiirto** `KOHDE_ERO_MIN * s`
+2. **nippuun pääsyn raja** `(NIPPU_KIEKKO_R + sade) * s`
+3. **sarakkeen ladonta** `NIPPU_DX * s`, riviväli ja sen tiivistys
+4. **yhdysviivan alkupää** `NIPPU_SYKE_R * s` (oli aiemmin kattamattomassa
+   ruutumitassa; poltettu viiva ei voi alkaa elävän sykekehän reunalta)
+
+`niputaFokusmerkit` kutsutaan nyt yhdellä skaalalla, ja koko
+`js/fokusniput.js` on siten ruudusta riippumaton.
+
+### Mitä se muuttaa nykyiseen nähden — mitattuna
+
+Kertoimet Kreikan lehdellä: perustason vakio 0,585; entinen ruutumitta
+oli iPadilla 0,561, iPhonella 1,200 ja työpöydällä (1419×821) 0,356.
+
+- **iPhone tiivistyy rajusti.** Sarake oli ruudun mitassa yli
+  kaksinkertainen; Ateenassa katkoviivaa oli 493 lautayksikköä, nyt 53.
+  Dubrovnikissa (jossa ryhmittely ei tee mitään) pisin viiva 13,08 →
+  7,71, eli pelkkä kiinnitys lyhensi sitä 41 %.
+- **iPad ei juuri liiku** (0,561 → 0,585, +4 %): Dubrovnikin sarakkeen
+  korkeus 23,2 → 23,6.
+- **Työpöytä väljenee** (0,356 → 0,585, +64 %): merkki ja sen nimiö
+  ovat siellä nyt lehden omassa koossa eivätkä sitä pienempinä.
+  Työpöytä oli ainoa näkymä, jossa katto ei aiemmin purrut.
+- **Kaikki kolme päätyvät samaan ladontaan.** Se on koko pointti:
+  jokainen mitattu luku on jälkeen-tilassa sama iPadilla ja iPhonella
+  (Ateena 35,09 / 11,46 / 52,76 molemmilla).
+
+### Napautusalueet tulevat samasta laskennasta (ehto 2)
+
+Osuma-ympyrä ja nimiön osumalaatikko ovat saman ankkuriryhmän lapsia
+kuin symboli ja nimiö, ja ryhmä saa paikkansa **yhdestä kirjoituksesta**
+(`asetaKohdeMittakaava`). Nyt kun se kirjoitus on lehden mitassa,
+poltettu merkki ja näkymätön osumamuoto tulevat kirjaimellisesti samasta
+luvusta — kaksi ladontaa ei voi eriytyä.
+
+Sormen 44 px:n sääntö säilyy silti: **vain säde** elää ruudun mitassa,
+`osumaR = KOHDE_OSUMA_R * sRuutu / s`. Kerroin kumoutuu ryhmän skaalaa
+vastaan, joten napautusala on ruudulla täsmälleen entinen (savuke
+mittaa: kaikki osuma-alueet ≥ 44 px). Merkki on lehden kokoinen,
+napautusala sormen kokoinen, **paikka yksi ja sama**.
+
+## 4. Kaksoispiirron esto — suunnitelma, ei toteutus
+
+Luin `js/laattapyramidi.js laatoissaOnNimet()` -perustelun ja tein sen
+mukaan. Suunnitelma on kirjattu myös `js/fokusryhmat.js`:ään.
+
+**Tieto luetteloon, ei koodiin.** Sama syy kuin nimiöillä: koodissa
+oleva kytkin jättäisi julkaisun ja pyramidiajon väliin ikkunan, jossa
+nostot olisivat joko kahdesti tai eivät kertaakaan. `pyramidi.json`
+tulee laattojen mukana samasta ajosta eikä voi olla eri mieltä kuin
+laatat.
+
+**Kenttä ei voi olla totuusarvo.** Nimiöillä kerrokset ovat toisensa
+poissulkevat (joko laatat latovat nimet tai peli), joten `nimiot: false`
+riittää. Nostoilla kerrokset ovat RINNAKKAISET — maailma kasvaa
+nopeammin kuin pyramidia ajetaan — joten luettelon on kannettava,
+MITKÄ nostot kyseisessä ajossa poltettiin.
+
+**Yksikkö on MERKKI, ei kohde**, koska merkki on se, mikä piirretään.
+Tunnus on `ryhma-<kaupunki>-<kategoria>` tai yksin jääneen kohteen oma
+tunnus. Molemmat tulevat samasta puhtaasta passista kuin poltettu
+merkki, ja `ryhmitaKohteet` on koeteltu toistettavaksi
+(`tests/fokusryhmat.test.mjs`: sama syöte, sama tiiviste).
+
+**Ehdotettu muoto on tunnus → sisällön tiiviste:**
+
+```json
+"nostot": { "ryhma-ateena-historia": "a91c…", "marathon": "40be…" }
+```
+
+Yksi kenttä vastaa silloin molempiin kysymyksiin: onko merkki poltettu,
+ja onko sen sisältö muuttunut polton jälkeen. Tiivisteeseen kuuluu
+kaikki, mikä laattaan meni: **tunnus, symboli, nimiö (pilkkulista
+katkaisuineen), jäsenten tunnukset järjestyksessä ja merkin
+lautakoordinaatit nippupaikkoineen**. Peli piirtää elävänä jokaisen
+merkin, jonka tunnusta luettelo ei tunne TAI jonka tiiviste eroaa.
+Pelkkä tunnuslista toimisi myös, mutta silloin nimiön korjaus ei näkyisi
+kartalla ennen seuraavaa pyramidiajoa — ja nimiö on nyt sitä lajia,
+joka muuttuu aina kun kaupunkiin lisätään kohde (uusi jäsen muuttaa
+pilkkulistan).
+
+**Oletus on päinvastainen kuin nimiöillä: mitään ei ole poltettu.** Kun
+kenttää ei ole (vanha ajo) tai luetteloa ei ole vielä ladattu, peli
+piirtää kaiken elävänä. Logiikka on sama — valitaan se väärinolo, joka
+ei kadota sisältöä — mutta kääntyy toisin päin, koska tässä sisällön
+kadottaisi juuri "on poltettu": omistajan ehto on *"mikään
+karttanostoista ei kuulu kadota laudalta missään vaiheessa peliä"*.
+Väärä oletus maksaa enintään kaksoispiirron, ja se korjaantuu itsestään
+luettelon saapuessa. Napautusalueet piirretään joka tapauksessa, joten
+pelattavuus ei riipu tästä valinnasta lainkaan.
+
+**Varaus, joka luvun 3 jälkeen POISTUI:** vanha erä varoitti, että
+kaksoispiirto olisi harmiton vain jos elävä ladonta antaa saman paikan
+kuin poltettu, ja että sarakkeen ruutumitta rikkoi sen. Nyt ladonta on
+lehden mitassa, joten poltettu ja elävä merkki osuvat samaan pisteeseen
+kaikilla ruuduilla — kaksoispiirto on siis pahimmillaan kaksinkertainen
+muste, ei kahta merkkiä eri kohdissa.
+
+## 5. Todentaminen
+
+- `node --test tests/*.test.mjs` → **1065 pass / 0 fail** (1 skipped;
+  `tests/fokusryhmat.test.mjs` 18 väitettä, joista 7 uutta pilkkunimiölle
+  ja leveysmitalle)
+- `node tools/tarkista-kaksoisavaimet.mjs` → ei kaksoisavaimia
+- `node tools/tarkista-niputus.mjs` → 294 moduulia, ei törmäyksiä
+- `node tools/build-standalone.mjs` → ok, `dist/` poistettu
+- `savuke-fokuskohteet` → **102/102**
+- `savuke-takyportti` → **22/22**
+- `savuke-kartta-tila` → **20/20** (huom: tämä on mainissa vihreä nyt —
+  vanhan erän raportoima `askelKatto`-kaatuminen on korjattu)
+
+**Napautin jokaisen yhdistetyn merkin** Ateenassa, Roomassa ja
+Dubrovnikissa erillisellä ajolla, joka avaa kuoren ja vertaa lehden
+osioita kuoren jäsenlistaan:
+
+```
+ateena:    ryhma-ateena-historia (6) → 6 osiota, 6 tekstillistä
+           ryhma-ateena-huuto    (3) → 3 osiota, 3 tekstillistä
+rooma:     ryhma-rooma-historia  (3) → 3 osiota, 3 tekstillistä
+           ryhma-rooma-huuto     (2) → 2 osiota, 2 tekstillistä
+           ryhma-venetsia-historia (3) → 3 osiota, 3 tekstillistä
+dubrovnik: ei yhdistettyjä merkkejä (kolme eri kategoriaa)
+```
+
+Osioiden otsikot vastasivat jäsenlistaa kohde kohteelta ja
+järjestykseltään. **Yhtäkään kohdetta ei kadonnut.**
+
+### Kaappaukset (haaran juuressa, ei committoituna, yhteensä 1,0 Mt)
+
+| tiedosto | mitä |
+| --- | --- |
+| `ryhmat-ateena-ennen.png` / `-jalkeen.png` | Ateenan rypäs, iPad, sama näkymä |
+| `ryhmat-ateena-koko-ennen.png` / `-jalkeen.png` | sama koko ruudulta |
+| `ryhmat-rooma-ennen.png` / `-jalkeen.png` | Rooma + Venetsia |
+| `ryhmat-dubrovnik-ennen.png` / `-jalkeen.png` | vertailukohta (ei yhdistymistä) |
+| `ryhmat-ateena-lehti.png` | Historia-lehti, kuuden osion ensimmäinen |
+| `ryhmat-rooma-lehti.png` | Rooman Historia-lehti |
+
+Ateenan jälkeen-kuvassa näkyy pilkkulista `Olympieion, Iliou
+Melathron…` kolmen merkin sarakkeessa; ennen-kuvassa samassa kohdassa
+on kymmenen riviä ja niiden katkoviivaviuhka.
+
+## 6. Havaintoja, joita en korjannut
+
+1. **Ateenan Skandaalit-kuoren nimiö jää väistössä vaiti** (luku 2).
+   Kolmen merkin sarakkeessa alin rivi törmää naapuriinsa. Ei riipu
+   pilkkulistan leveydestä (mitattu), vaan sarakkeen tiiviydestä —
+   riviväli on nyt lehden mitassa ja siksi lyhyempi kuin ennen
+   iPhonella. Jos tämä halutaan pois, säätövara on `NIPPU_VALI`.
+2. **`NIPPU_KOHDE_R = 5,6` on yhä vanhentunut**: kommentti sanoo sen
+   olevan `KOHDE_HALO_R`, joka on 4,9. Vaikuttaa sekä nippuun pääsyn
+   rajaan että rivivälin alarajaan, joten en muuttanut sitä tässä
+   erässä. Polttoerässä samat mitat lasketaan joka tapauksessa uudelleen.
+3. **Kaupunkikategoria ei yhdisty** (`RYHMA_EI_YHDISTY`) — perustelu on
+   koodissa jo ennestään: *"kaupunki on paikka eikä kategoria"*.
+4. **`savuke-elaintaky` ja `savuke-nahtavyysihme` ovat punaisia myös
+   mainissa**, sanasta sanaan samoilla riveillä (sivun lataus kesken
+   pelin ei aja kameraa, joten merkkikerros on `fokuskohteet-piilossa`).
+   Ei tämän erän aiheuttama.
+5. **Vihreän kohtaamispisteen väistö** (`NIPPU_VAPAA`) riippuu
+   pelitilasta. Se ei voi olla poltettuna, ja se on syytä poistaa
+   poltetusta ladonnasta kokonaan: piste on elävä kerros ja saa peittää
+   poltetun merkin hetkeksi. Jätin sen ennalleen, koska poisto muuttaa
+   ladontaa ja kuuluu polttoerään.
+
 # Opus → Fable: "välillä kartta ei piirry ollenkaan" — korjattu (31.8.2026)
 
 Haara `claude/laattojen-esilataus` otettu **puhtaana tuoreesta

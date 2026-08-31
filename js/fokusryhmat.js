@@ -174,21 +174,32 @@ export const RYHMA_RAJA = 5;
  * viidesosa lehdestä JOKAISELLA lehdellä, olipa se Kreikan 468 tai
  * Kroatian 315 lautayksikköä leveä.
  *
- * MITTATIKKU ON KARTAN NYKYINEN NIMISTÖ (mitattu 31.8.2026, 683
- * yksinäistä nimiötä koko maailmasta): mediaani 52, 95. persentiili 81
- * ja LEVEIN 93 kirjastoyksikköä eli 11,6 % lehden leveydestä. Ryhmän
- * nimiö saa siis olla 1,7-kertainen kartan leveimpään yksittäiseen
- * nimeen nähden — enemmän, koska siinä on monta nimeä, mutta ei
- * nauhaa: 160 on Kreikan lehdellä 94 lautayksikköä ja iPadilla 167
- * CSS-pikseliä.
+ * MITTATIKKU ON KARTAN NYKYINEN NIMISTÖ (mitattu 31.8.2026 samalla
+ * taulukolla, 599 yksinäistä nimiötä koko maailmasta): mediaani 49,
+ * 95. persentiili 81 ja LEVEIN 107 kirjastoyksikköä eli 13 % lehden
+ * leveydestä. Ryhmän nimiö saa siis olla puolitoistakertainen kartan
+ * leveimpään yksittäiseen nimeen nähden — enemmän, koska siinä on
+ * monta nimeä, mutta ei nauhaa: 160 on Kreikan lehdellä 93
+ * lautayksikköä ja iPadilla 166 CSS-pikseliä.
  *
- * MITATTU KATKAISUOSUUS: koko maailman 33 yhdistetystä merkistä
- * katkeaa 12 (36 %). Väljemmilläkään budjeteilla katkaisu ei häviä —
- * 180 katkaisee 10, 200 katkaisee 8 — koska Ateenan kuuden ja Wienin
- * viiden jäsenen listat ovat 393 ja 374 yksikköä pitkiä eli puolet
- * koko lehden leveydestä. Kynnys ostaisi siis vain vähän ja maksaisi
- * paljon; kolmen jäsenen listoista (9 kpl maailmassa) enin osa mahtuu
- * kokonaan.
+ * MITATTU KATKAISUOSUUS koko maailman 33 yhdistetystä merkistä:
+ *
+ *   budjetti   osuus lehdestä   katkeaa       levein nimiö
+ *      100          13 %        31 / 33 (94 %)     100
+ *      120          15 %        28 / 33 (85 %)     119
+ *      140          18 %        19 / 33 (58 %)     140
+ *      160          20 %        12 / 33 (36 %)     159   ← valittu
+ *      180          23 %        10 / 33 (30 %)     179
+ *      200          25 %         8 / 33 (24 %)     199
+ *      240          30 %         3 / 33  (9 %)     237
+ *      ei rajaa     50 %         0 / 33  (0 %)     394
+ *
+ * 160:llä kaksikymmentäyksi ryhmää kolmestakymmenestäkolmesta näyttää
+ * KAIKKI nimensä; katkaisu osuu Ateenan kuuteen ja Wienin viiteen —
+ * niiden täydet listat ovat 394 ja 374 yksikköä eli puolet koko lehden
+ * leveydestä — sekä kymmeneen kaksi- ja kolmijäseniseen, joissa
+ * viimeinen nimi jää vajaaksi. Väljempi budjetti ostaisi muutaman
+ * kokonaisen listan hinnalla, joka näkyy joka ainoassa nimiössä.
  *
  * LEVEYS MITATAAN TAULUKOSTA EIKÄ SELAIMESTA
  * (js/fokusnosto-symbolit.js nostosymTekstinLeveys): katkaisukohta on

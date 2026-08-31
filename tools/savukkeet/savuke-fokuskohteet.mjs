@@ -54,6 +54,8 @@ import { FOKUSVIRRAT } from '../../js/packs/fokusvirrat.js';
 import { MAASTOKOHTEET } from '../../js/packs/maastokohteet.js';
 import { SYVENNYSPAIKAT } from '../../js/packs/syvennyspaikat.js';
 import { SKANDAALIT } from '../../js/packs/skandaalit.js';
+import { RYHMA_NIMIO_LEVEYS } from '../../js/fokusryhmat.js';
+import { nostosymTekstinLeveys } from '../../js/fokusnosto-symbolit.js';
 
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
 const paketti = await import('playwright')
@@ -167,9 +169,29 @@ const merkit = () => sivu.evaluate(() => {
     const r = g.querySelector('.fokuskohde-osuma').getBoundingClientRect();
     return { w: Math.round(r.width), h: Math.round(r.height) };
   });
+  /*
+   * MITÄ MERKIT KATTAVAT (kategoria per kaupunki, js/fokusryhmat.js):
+   * yhdistetty merkki kantaa jäsenensä `osat`-listassa, joten kartalla
+   * näkyviä merkkejä on vähemmän kuin kohteita. `sisaltyvat` avaa
+   * kuoret auki, jotta väite "yhtäkään kohdetta ei katoa" on
+   * mitattavissa samasta paikasta kuin ennenkin.
+   */
+  const tiedot = window.matkakirja?.ui?.fokuskohdeTiedot ?? new Map();
+  const auki = (id) => {
+    const kohde = tiedot.get(id);
+    return kohde?.osat?.length ? kohde.osat.map((o) => o.id) : [id];
+  };
   return {
     maara: kaikki.length,
     tunnukset: [...new Set(kaikki.map((g) => g.dataset.kohde))],
+    sisaltyvat: [...new Set(kaikki.flatMap((g) => auki(g.dataset.kohde)))],
+    kuoret: [...new Set(kaikki.map((g) => g.dataset.kohde))]
+      .filter((id) => (tiedot.get(id)?.osat?.length ?? 0) > 1)
+      .map((id) => ({
+        id,
+        symboli: tiedot.get(id).symboli,
+        osat: tiedot.get(id).osat.map((o) => o.id),
+      })),
     // Kerros on juuriryhmän ULKOPUOLELLA, kuten maastonimet ja vinjetit.
     juuressa: kaikki.some((g) => g.closest('.board-root')),
     suodattimia: kaikki.filter((g) => g.getAttribute('filter')
@@ -364,12 +386,21 @@ const syvennysOdotus = new Set(Object.keys(SYVENNYSPAIKAT)
     .map((taky) => `syvennys-${cityId}-${taky.id}`)));
 const skandaaliOdotus = new Set((SKANDAALIT.GRC ?? [])
   .map((skandaali) => `skandaali-${skandaali.id}`));
-const perusSaadut = m.tunnukset
+/*
+ * MITTA ON KATTAVUUS, EI MERKKIEN MÄÄRÄ (kategoria per kaupunki,
+ * omistaja 31.8.2026). Saman kaupungin samanlajiset kohteet ovat
+ * kartalla yhden merkin alla (js/fokusryhmat.js), joten `tunnukset`
+ * on lyhyempi kuin lähteiden summa — mutta `sisaltyvat` avaa kuoret ja
+ * kertoo, mitkä kohteet kartalta OIKEASTI löytyvät. Juuri se on
+ * omistajan ehto: *"yhtäkään kohdetta ei saa kadota"*. Yhdistäminen on
+ * esitystä, ja sen oma väite on erikseen alempana.
+ */
+const perusSaadut = m.sisaltyvat
   .filter((t) => !t.startsWith('nosto-') && !t.startsWith('syvennys-')
     && !t.startsWith('skandaali-'));
-const nostoSaadut = m.tunnukset.filter((t) => t.startsWith('nosto-'));
-const syvennysSaadut = m.tunnukset.filter((t) => t.startsWith('syvennys-'));
-const skandaaliSaadut = m.tunnukset.filter((t) => t.startsWith('skandaali-'));
+const nostoSaadut = m.sisaltyvat.filter((t) => t.startsWith('nosto-'));
+const syvennysSaadut = m.sisaltyvat.filter((t) => t.startsWith('syvennys-'));
+const skandaaliSaadut = m.sisaltyvat.filter((t) => t.startsWith('skandaali-'));
 vaadi('jokainen maan kohde sai merkin',
   perusSaadut.length === perusOdotus.size
   && perusSaadut.every((t) => perusOdotus.has(t)),
@@ -387,13 +418,47 @@ vaadi('skandaalimerkit ovat täsmälleen maan skandaalitaulun rivit',
 vaadi('kokonaismäärä täsmää rekisteröityihin lähteisiin '
   + '(kohteet+nostot+syvennykset+skandaalit)',
   nostoSaadut.length > 0
-  && m.tunnukset.length === perusOdotus.size + nostoSaadut.length + syvennysOdotus.size
+  && m.sisaltyvat.length === perusOdotus.size + nostoSaadut.length + syvennysOdotus.size
     + skandaaliOdotus.size,
-  `${m.tunnukset.length} merkkiä; nostoja ${nostoSaadut.length}, `
+  `${m.sisaltyvat.length} kohdetta; nostoja ${nostoSaadut.length}, `
   + `syvennyksiä ${syvennysSaadut.length}, skandaaleja ${skandaaliSaadut.length}: `
-  + `${m.tunnukset.join(',')}`);
+  + `${m.sisaltyvat.join(',')}`);
 vaadi('kiertävällä laudalla merkit ovat molemmissa kohdissa',
   m.maara === m.tunnukset.length * 2, `${m.maara} merkkiä`);
+
+/* --- 1aa: KATEGORIA PER KAUPUNKI (omistaja 31.8.2026) --------------
+ *
+ * Kymmenen merkkiä Ateenan laatan päällä oli omistajan sanoin *"niin
+ * monta karttanostoa suoraan kaupungista"*, ettei sarake mahtunut
+ * kaupungin kylkeen. Nyt saman kaupungin samanlajiset kohteet ovat
+ * yhden merkin alla (js/fokusryhmat.js).
+ *
+ * VÄITE MITTAA KOLME ASIAA, koska yhdistäminen saa vähentää MERKKEJÄ
+ * mutta ei KOHTEITA:
+ *   1. kartalla on oikeasti vähemmän merkkejä kuin kohteita;
+ *   2. jokainen kuori on yksilajinen — jäsenten symboli on kuoren oma;
+ *   3. Ateenan rypäs on kolme merkkiä eikä kymmenen, ja kaikki
+ *      kymmenen kohdetta ovat yhä kartalla (`sisaltyvat` yllä).
+ *
+ * LUKU PÄIVITTYI v1380:N JÄLKEEN (kartalle yhdeksän merkkiä,
+ * js/karttavalot.js karttavaloKarkisymboli): kun merkin symboli on
+ * ryhmän kärkisymboli, myös ryhmittely on karkeampi — Ateenan
+ * yhdeksän kohdetta menee kahteen kuoreen (historia 6, huuto 3) ja
+ * kymmenes, Ólympos, on oma merkkinsä.
+ */
+const ateenanKuoret = m.kuoret.filter((k) => k.id.startsWith('ryhma-ateena-'));
+vaadi('yhdistäminen vähentää merkkejä muttei kohteita',
+  m.tunnukset.length < m.sisaltyvat.length && m.kuoret.length > 0,
+  `${m.tunnukset.length} merkkiä, ${m.sisaltyvat.length} kohdetta, `
+  + `${m.kuoret.length} kuorta`);
+vaadi('kuoren tunnus, symboli ja jäsenet ovat samaa kategoriaa',
+  m.kuoret.every((k) => k.id === `ryhma-${k.id.split('-')[1]}-${k.symboli}`
+    && k.osat.length > 1),
+  JSON.stringify(m.kuoret));
+vaadi('Ateenan kymmenen kohdetta ovat kolmena merkkinä',
+  ateenanKuoret.length === 2
+  && ateenanKuoret.reduce((s, k) => s + k.osat.length, 0) === 9,
+  JSON.stringify(ateenanKuoret));
 vaadi('kerros on juuriryhmän ulkopuolella (<use>-kopio ei syö napautusta)',
   m.juuressa === false);
 vaadi('ei suodattimia kartan kerroksessa', m.suodattimia === 0);
@@ -512,9 +577,24 @@ vaadi('valtaosa symbolimerkeistä sai nimiön',
   nimiollisia.length > 0 && nimiollisia.length > vaienneet.length * 2,
   `${nimiollisia.length} nimiöllistä, ${vaienneet.length} vaiennutta: `
   + JSON.stringify(vaienneet.map((n) => n.id)));
-vaadi('nimiö on kartan mittaan lyhennetty (<= 18 merkkiä)',
-  nimiollisia.every((n) => n.teksti.length <= 18),
-  JSON.stringify(nimiollisia.filter((n) => n.teksti.length > 18).slice(0, 3)));
+/*
+ * KAKSI MITTAA, KOSKA NIMIÖITÄ ON KAHTA LAJIA (31.8.2026):
+ * yksinäinen merkki on kohteen oma nimi kartan 18 merkin mitassa,
+ * yhdistetty merkki jäsentensä nimet pilkulla (js/fokusryhmat.js
+ * ryhmaNimio) leveysbudjetin sisällä. Molemmat mitataan samalla
+ * taulukolla, jolla ladonta ne laski — jos budjetti ylittyisi, nimiö
+ * olisi kartalla nauha eikä nimiö.
+ */
+const yksinaiset = nimiollisia.filter((n) => !n.id.startsWith('ryhma-'));
+const kuorinimiot = nimiollisia.filter((n) => n.id.startsWith('ryhma-'));
+vaadi('yksinäisen merkin nimiö on kartan mittaan lyhennetty (<= 18 merkkiä)',
+  yksinaiset.every((n) => n.teksti.length <= 18),
+  JSON.stringify(yksinaiset.filter((n) => n.teksti.length > 18).slice(0, 3)));
+vaadi('yhdistetyn merkin nimiö on pilkkulista budjetin sisällä',
+  kuorinimiot.length > 0
+  && kuorinimiot.every((n) => nostosymTekstinLeveys(n.teksti) <= RYHMA_NIMIO_LEVEYS
+    && (n.teksti.includes(', ') || n.teksti.endsWith('\u2026'))),
+  JSON.stringify(kuorinimiot.map((n) => [n.teksti, nostosymTekstinLeveys(n.teksti)])));
 vaadi('nimiö ei ota napautuksia vastaan',
   nimiot.every((n) => n.osoitin === 'none'),
   JSON.stringify(nimiot.slice(0, 2)));
@@ -755,11 +835,28 @@ const datanPaikat = new Set(FOKUSKOHTEET_GRC
   .map((kohde) => kohde.laudat?.maailmankartta)
   .filter(Boolean)
   .map((paikka) => `${paikka.x}:${paikka.y}`));
+/*
+ * YHDISTETYN MERKIN JÄSENELLÄ EI OLE OMAA ANKKURIA (31.8.2026,
+ * kategoria per kaupunki): kuori istuu YHDEN jäsenensä paikassa, joten
+ * ryppään muiden jäsenten koordinaatit eivät esiinny ankkurilistassa.
+ * DATA ON SILTI KOSKEMATON — sitä juuri tämä väite vartioi — joten
+ * ehto on nyt: jokainen datan koordinaatti on joko ankkuri tai sen
+ * kohde on jonkin kuoren jäsen. Keksittyjä paikkoja ei saa olla
+ * kummassakaan tapauksessa (kuoren paikka on aina jäsenen oma paikka,
+ * tests/fokusryhmat.test.mjs).
+ */
+const kuorenJasenet = new Set(m.kuoret.flatMap((kuori) => kuori.osat));
+const kadonneet = FOKUSKOHTEET_GRC
+  .filter((kohde) => kohde.laudat?.maailmankartta)
+  .filter((kohde) => !erottelu.ankkurit
+    .includes(`${kohde.laudat.maailmankartta.x}:${kohde.laudat.maailmankartta.y}`)
+    && !kuorenJasenet.has(kohde.id))
+  .map((kohde) => kohde.id);
 vaadi('siirto koskee vain piirtopaikkaa: ankkurit ovat yhä datan koordinaateissa',
   erottelu.ankkurit.length > 0
   && erottelu.ankkurit.some((avain) => datanPaikat.has(avain))
-  && [...datanPaikat].every((avain) => erottelu.ankkurit.includes(avain)),
-  JSON.stringify(erottelu.ankkurit.slice(0, 4)));
+  && kadonneet.length === 0,
+  `ilman ankkuria ja ilman kuorta: ${kadonneet.join(',')}`);
 
 /* --- 1b2: LÄHIN VOITTAA LIMITTYVÄT OSUMA-ALUEET (v1218) -----------
  *
@@ -1430,13 +1527,16 @@ vaadi('kortin nauha ei nappaa napautuksia', ihme?.osoitin === 'none', ihme?.osoi
  * merkkiä vaan aukeaa kohteen tietoruudun Livian leikekirja -napista.
  *
  * Kreikassa mitataan kaikki kolme puolta:
- *   a) sofia-korut (nosto ilman kohdetta) ja Ateenan kolme
- *      syvennystarinaa ovat kohdekerroksen merkkejä aihevaloineen;
+ *   a) sofia-korut (nosto ilman kohdetta) ja Ateenan syvennystarinat
+ *      ovat kohdekerroksessa aihevaloineen — 31.8.2026 alkaen Ateenassa
+ *      YHDISTETTYJEN merkkien jäseninä (kategoria per kaupunki), koska
+ *      ne ovat kaikki saman kaupungin samaa kategoriaa;
  *   b) kastrin-kyla, olympoksen-huippu ja antikythera-kone (nostot
  *      joilla on kohde) EIVÄT piirrä omaa merkkiä, ja Delfoin
  *      tietoruudussa on Livian leikekirja -nappi, josta noston
  *      lunastuskortti aukeaa;
- *   c) nosto- ja syvennysmerkin napautus avaa oman korttinsa.
+ *   c) yhdistetyn merkin napautus avaa lehden, jossa jokainen jäsen on
+ *      omana osionaan — ja yksin jäävän merkin napautus oman korttinsa.
  */
 await sivu.keyboard.press('Escape');
 await sivu.waitForTimeout(300);
@@ -1444,58 +1544,109 @@ await sivu.waitForTimeout(300);
 const kohdemalli = await sivu.evaluate(() => {
   const merkki = (id) => document.querySelector(`.fokuskohde[data-kohde="${id}"]`);
   const valo = (id) => merkki(id)?.querySelector('.karttavalo')?.getAttribute('data-aihe') ?? null;
+  const tiedot = window.matkakirja.ui.fokuskohdeTiedot ?? new Map();
+  const osat = (id) => (tiedot.get(id)?.osat ?? []).map((o) => o.id);
   return {
-    nosto: Boolean(merkki('nosto-sofia-korut')),
-    nostoValo: valo('nosto-sofia-korut'),
-    syvennykset: ['nike', 'diogenes', 'schliemann']
-      .filter((id) => merkki(`syvennys-ateena-${id}`)).length,
-    syvennysValo: valo('syvennys-ateena-nike'),
+    // Kohteeton nosto on Ateenan skandaalikuoressa muiden huutojen kanssa.
+    nostoKuoressa: osat('ryhma-ateena-huuto').includes('nosto-sofia-korut'),
+    nostoValo: valo('ryhma-ateena-huuto'),
+    /*
+     * KAIKKI KOLME ATEENAN TARINAA OVAT SAMASSA KUORESSA (v1380:n
+     * jälkeen): kartalla on enää kahdeksan kärkisymbolia, ja sekä
+     * historia että tarina (sulkakynä) kuuluvat Historia-riviin
+     * (js/karttavalot.js karttavaloKarkisymboli). Diogeneen astia oli
+     * ennen omana merkkinään, nyt se on kuoren jäsen.
+     */
+    syvennyksetKuoressa: osat('ryhma-ateena-historia')
+      .filter((id) => id.startsWith('syvennys-ateena-')).length,
+    syvennysValo: valo('ryhma-ateena-historia'),
+    omaSyvennys: Boolean(merkki('syvennys-ateena-diogenes')),
     // Nosto jolla on kohde ei luo omaa merkkiä (Raamatun sääntö).
     kiinnitetyt: ['nosto-kastrin-kyla', 'nosto-olympoksen-huippu',
       'nosto-antikythera-kone'].filter((id) => merkki(id)).length,
   };
 });
 vaadi('nosto ilman kohdetta on kartalla kohdemerkkinä aihevaloineen',
-  kohdemalli.nosto && kohdemalli.nostoValo === 'skandaalit',
+  kohdemalli.nostoKuoressa && kohdemalli.nostoValo === 'skandaalit',
   JSON.stringify(kohdemalli));
-vaadi('Ateenan kolme syvennystarinaa ovat kartalla aihevaloineen',
-  kohdemalli.syvennykset === 3 && kohdemalli.syvennysValo === 'historia',
+vaadi('Ateenan syvennystarinat ovat kartalla kuoren jäseninä aihevaloineen',
+  kohdemalli.syvennyksetKuoressa === 3 && kohdemalli.syvennysValo === 'historia'
+  && !kohdemalli.omaSyvennys,
   JSON.stringify(kohdemalli));
 vaadi('nosto jolla on kohde ei luo omaa merkkiä',
   kohdemalli.kiinnitetyt === 0, `${kohdemalli.kiinnitetyt} tuplamerkkiä`);
 
-/* Noston merkki avaa lunastuskortin, jossa on kohdemallin ylärivi. */
-await napauta('nosto-sofia-korut');
-const nostokortti = await sivu.evaluate(() => ({
-  otsikko: document.querySelector('.fokusnosto-kortti-otsikko')?.textContent ?? null,
-  ylariviSymboli: Boolean(document.querySelector(
-    '.fokusnosto-ylarivi .nostosym-ylarivi-symboli',
-  )),
-  ylarivi: document.querySelector('.fokusnosto-ylarivi')?.textContent ?? '',
-}));
-vaadi('nostomerkin napautus avaa lunastuskortin',
-  typeof nostokortti.otsikko === 'string' && nostokortti.otsikko.length > 0,
-  JSON.stringify(nostokortti.otsikko));
-vaadi('lunastuskortin ylärivi on aihesymboli ja luokka',
-  nostokortti.ylariviSymboli && nostokortti.ylarivi.includes('Skandaalit'),
-  JSON.stringify(nostokortti));
-await sivu.evaluate(() => document.querySelector('.fokusnosto-kortti-sulje')?.click());
+/* --- 10d: YHDISTETYN MERKIN LEHTI (omistaja 31.8.2026) -------------
+ *
+ * *"Ehkä pitää vain yhdistää muutama saman kategorian kohde samalle
+ * pop-up-lehdelle."* Ehto on, ETTEI SISÄLTÖ NIPUTU: jokaisen jäsenen
+ * oma teksti, kuva ja visa säilyvät omana osionaan.
+ *
+ * Koekappale on Ateenan skandaalikuori, koska sen kolme jäsentä tulevat
+ * KOLMESTA ERI LÄHTEESTÄ (js/fokusnosto.js, js/skandaalit.js kahdesti)
+ * — juuri se on tämän erän vaikein kohta.
+ */
+await napauta('ryhma-ateena-huuto');
+const ryhmalehti = await sivu.evaluate(() => {
+  const popup = document.querySelector('.fokuskohde-popup');
+  if (!popup) return null;
+  const osiot = [...popup.querySelectorAll('.fokuskohde-osio')];
+  return {
+    ylarivi: popup.querySelector('.fokuskohde-ylarivi')?.textContent ?? '',
+    otsikko: popup.querySelector('.fokuskohde-otsikko')?.textContent ?? '',
+    paikka: popup.querySelector('.fokuskohde-ryhma-paikka')?.textContent ?? '',
+    osioita: osiot.length,
+    otsikot: osiot.map((o) => o.querySelector('.fokuskohde-osio-otsikko')?.textContent ?? ''),
+    // Jokaisessa osiossa on oltava jutun oma leipäteksti.
+    tekstilliset: osiot.filter((o) => (o.textContent ?? '').length > 200).length,
+    visoja: popup.querySelectorAll('.fokusvirta-visa-kysymys').length,
+    symboleita: osiot.filter((o) => o.querySelector('.fokuskohde-ylarivi-symboli')).length,
+  };
+});
+vaadi('yhdistetyn merkin napautus avaa kategorian lehden',
+  ryhmalehti?.otsikko === 'Skandaalit' && ryhmalehti?.paikka === 'Ateena'
+  && ryhmalehti?.ylarivi.includes('Skandaalit'),
+  JSON.stringify(ryhmalehti));
+vaadi('lehdellä on osio jokaiselle kohteelle, kukin omine teksteineen',
+  ryhmalehti?.osioita === 3 && ryhmalehti?.tekstilliset === 3
+  && ryhmalehti?.symboleita === 3,
+  JSON.stringify(ryhmalehti));
+vaadi('osioiden otsikot ovat kohteiden omat nimet',
+  ryhmalehti?.otsikot.includes('Helenan korut')
+  && ryhmalehti?.otsikot.includes('Elginin marmorit')
+  && ryhmalehti?.otsikot.includes('Maratonhuijaus'),
+  JSON.stringify(ryhmalehti?.otsikot));
+vaadi('jäsenten omat minivisat ovat lehdellä mukana',
+  ryhmalehti?.visoja >= 2, `${ryhmalehti?.visoja} visaa`);
+await sivu.keyboard.press('Escape');
 await sivu.waitForTimeout(400);
 
-/* Syvennysmerkki avaa tarinakortin, jossa on minivisa. */
-await napauta('syvennys-ateena-nike');
-const syvennyskortti = await sivu.evaluate(() => ({
-  otsikko: document.querySelector('.syvennys-kortti .fokusnosto-kortti-otsikko')
-    ?.textContent ?? null,
-  visa: Boolean(document.querySelector('.syvennys-kortti .fokusvirta-visa-kysymys')),
-  ylariviSymboli: Boolean(document.querySelector(
-    '.syvennys-kortti .nostosym-ylarivi-symboli',
-  )),
-}));
-vaadi('syvennysmerkin napautus avaa tarinakortin minivisoineen',
-  syvennyskortti.otsikko === 'Athena Niken pyhäkkö' && syvennyskortti.visa
-  && syvennyskortti.ylariviSymboli,
-  JSON.stringify(syvennyskortti));
+/*
+ * SYVENNYSTARINA KUOREN JÄSENENÄ. Ateenassa ei ole enää yhtäkään yksin
+ * jäävää tarinamerkkiä (ks. 10a), joten sama sisältö — otsikko,
+ * leipäteksti ja minivisa — todennetaan siitä kuoresta, jossa tarinat
+ * nyt ovat: kuuden jäsenen historialehdeltä. Se on samalla koe siitä,
+ * että `osio`-takaisinkutsu (js/syvennys.js) latoo täsmälleen saman
+ * sisuksen kuin oma korttinsa.
+ */
+await napauta('ryhma-ateena-historia');
+const historialehti = await sivu.evaluate(() => {
+  const popup = document.querySelector('.fokuskohde-popup');
+  if (!popup) return null;
+  const osiot = [...popup.querySelectorAll('.fokuskohde-osio')];
+  return {
+    osioita: osiot.length,
+    otsikot: osiot.map((o) => o.querySelector('.fokuskohde-osio-otsikko')?.textContent ?? ''),
+    tekstilliset: osiot.filter((o) => (o.textContent ?? '').length > 200).length,
+    visoja: popup.querySelectorAll('.fokusvirta-visa-kysymys').length,
+  };
+});
+vaadi('syvennystarinat ovat kuoren lehdellä omine osioineen ja visoineen',
+  historialehti?.osioita === 6
+  && historialehti.otsikot.includes('Diogeneen astia')
+  && historialehti.otsikot.includes('Niken temppeli')
+  && historialehti.tekstilliset >= 5 && historialehti.visoja >= 2,
+  JSON.stringify(historialehti));
 await sivu.keyboard.press('Escape');
 await sivu.waitForTimeout(400);
 

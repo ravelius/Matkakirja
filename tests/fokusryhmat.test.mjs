@@ -14,7 +14,10 @@
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { RYHMA_RAJA, ryhmaKuori, ryhmitaKohteet, ryhmaTunnus } from '../js/fokusryhmat.js';
+import {
+  RYHMA_NIMIO_LEVEYS, RYHMA_RAJA, ryhmaKuori, ryhmaNimio, ryhmitaKohteet, ryhmaTunnus,
+} from '../js/fokusryhmat.js';
+import { nostosymTekstinLeveys } from '../js/fokusnosto-symbolit.js';
 
 const ATEENA = { id: 'ateena', name: 'Ateena', x: 100, y: 100 };
 const SOFIA = { id: 'sofia', name: 'Sofia', x: 400, y: 100 };
@@ -136,4 +139,77 @@ test('sama syöte antaa aina saman tuloksen — ei ruutua, ei satunnaisuutta', (
 test('ilman kaupunkeja lista palautuu koskemattomana', () => {
   const syote = [rivi('a', 'historia', 100.1, 100), rivi('b', 'historia', 100.2, 100)];
   assert.equal(ryhmitaKohteet(syote, [], luokka), syote);
+});
+
+/* ============ NIMIÖ ON JÄSENTEN NIMET PILKULLA =====================
+ *
+ * Omistajan tilaus 31.8.2026 ja sen katkaisusääntö: *"kohteet voisi
+ * kirjoittaa mahdollisimman tiiviissä muodossa ja erotella pilkulla"*
+ * — *"Jos kaikki teksti ei mahdu, niin katkaistaan vain jostain
+ * kohtaa ja lisätään loppuun kolme pistettä."*
+ *
+ * SAMA POLTON EHTO kuin ryhmittelyllä: katkaisukohta on osa ladontaa,
+ * joten se lasketaan merkkileveystaulukosta eikä selaimen
+ * tekstinmittauksesta (js/fokusnosto-symbolit.js nostosymTekstinLeveys).
+ * Nämä väitteet ajetaan Nodessa ilman DOMia juuri siksi.
+ */
+
+test('nimiö on jäsenten nimet pilkulla, kun ne mahtuvat', () => {
+  assert.equal(ryhmaNimio(['Tuileries', 'Bastilji']), 'Tuileries, Bastilji');
+});
+
+test('liian pitkä lista katkeaa ja saa kolme pistettä', () => {
+  const nimio = ryhmaNimio([
+    'Olympieion', 'Iliou Melathron', 'Akropolis', 'Niken temppeli',
+    'Diogeneen astia', 'Antiikin agora',
+  ]);
+  assert.ok(nimio.endsWith('…'), nimio);
+  assert.ok(nimio.startsWith('Olympieion, '), nimio);
+});
+
+test('ellipsi mahtuu budjettiin — se ei tule mitatun tekstin perään', () => {
+  const nimet = ['Potjomkin-portaat', 'Odessan ooppera'];
+  const nimio = ryhmaNimio(nimet, RYHMA_NIMIO_LEVEYS);
+  assert.ok(nostosymTekstinLeveys(nimio) <= RYHMA_NIMIO_LEVEYS,
+    `${nimio} = ${nostosymTekstinLeveys(nimio)}`);
+});
+
+test('yksikään maailman ryhmänimiö ei ylitä budjettia', () => {
+  // Kolme pahinta oikeaa listaa maailmasta (Ateena, Wien, Pariisi).
+  const listat = [
+    ['Olympieion', 'Iliou Melathron', 'Akropolis', 'Niken temppeli',
+      'Diogeneen astia', 'Antiikin agora'],
+    ['Näyttely ja pörssi', 'Saliera', 'Klimtin maalaukset', 'Kirahvi ja muoti',
+      'Shakkiturkkilainen'],
+    ['Vrain-Lucas', 'Mona Lisan varkaus', 'Kirahvin kävelymatka', 'Torni romuraudaksi'],
+  ];
+  for (const nimet of listat) {
+    const nimio = ryhmaNimio(nimet);
+    assert.ok(nostosymTekstinLeveys(nimio) <= RYHMA_NIMIO_LEVEYS, nimio);
+  }
+});
+
+test('katkaisu suosii nimen rajaa, kun se ei hukkaa tilaa', () => {
+  // "Forum Romanum, Avaimenreikä, Vatikaanin palatsi" katkeaa niin,
+  // että kolmas nimi jää pois kokonaan eikä puolikkaana.
+  const nimio = ryhmaNimio(['Forum Romanum', 'Avaimenreikä', 'Vatikaanin palatsi']);
+  assert.equal(nimio, 'Forum Romanum, Avaimenreikä…');
+});
+
+test('leveys on taulukosta eikä selaimesta — sama vastaus ilman DOMia', () => {
+  assert.equal(typeof globalThis.document, 'undefined');
+  const a = nostosymTekstinLeveys('Akropolis');
+  assert.ok(a > 0 && Number.isFinite(a));
+  // Tuntematon merkki putoaa oletusleveyteen eikä NaNiin.
+  assert.ok(Number.isFinite(nostosymTekstinLeveys('中文')));
+});
+
+test('yhdistetty kuori saa nimiökseen jäsentensä nimet, kortti kategorian', () => {
+  const tulos = ryhmitaKohteet([
+    { kohde: { id: 'akropolis', nimi: 'Akropolis', symboli: 'historia' }, paikka: { x: 100.5, y: 100.5 } },
+    { kohde: { id: 'agora', nimi: 'Antiikin agora', symboli: 'historia' }, paikka: { x: 100.6, y: 100.2 } },
+  ], KAUPUNGIT, luokka);
+  assert.equal(tulos.length, 1);
+  assert.equal(tulos[0].kohde.nimio, 'Antiikin agora, Akropolis');
+  assert.equal(tulos[0].kohde.nimi, 'Historia');
 });
