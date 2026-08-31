@@ -6736,7 +6736,7 @@ export class UI {
    * näkyvää solmua siinä missä pelissä on muutama kymmenen. Eleen
    * aikainen piilotus (js/kartta.js piilotaMerkit,
    * body.kartta-merkit-piilossa) ei kata niitä lainkaan — se koskee
-   * fokuskohteita, fokuspisteitä, nostosymboleita ja nippuviivoja.
+   * fokuskohteita, fokuspisteitä ja nostosymboleita.
    *
    * Mitattuna sama Kreikan-sisäinen ele nappi pois vs. päällä:
    *
