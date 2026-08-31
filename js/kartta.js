@@ -2746,6 +2746,42 @@ export class Kartta {
     return Math.min(tasot.at(-1) ?? MANNER_ZOOM, skaala / yleis);
   }
 
+  /**
+   * Pelaajan ULOIN sallittu mittakaava laudan yksiköissä (px/yksikkö),
+   * tai 0 jos maan ikkunaa ei ole.
+   *
+   * Sama laatikko ja sama kaava kuin fokusZoomMinimillä — maan ikkuna
+   * kerrottuna ULOSZOOMAUS_KERROIMELLA — mutta vastaus on mittakaava
+   * eikä portaikon kerroin, ja KEHITTÄJÄN MAAILMANÄKYMÄ EI OHITA SITÄ.
+   * Juuri se ero on tämän olemassaolon syy: fokusRajaukset palauttaa
+   * maailmanäkymässä nullin, koska kamera saa silloin liikkua vapaasti,
+   * mutta kysymys *"missä on se raja, johon peli normaalisti päästää
+   * pelaajan loitontamaan"* on silti mielekäs — ja juuri sitä
+   * maatummennus kysyy (js/maatummennus.js, omistajan tarkennus
+   * 31.8.2026: *"kehittäjätilassa kun zoomataan enemmän ulos, niin
+   * silloin tummennuksia ei tarvita"*).
+   *
+   * Laskenta on tarkoituksella tässä eikä kysyjässä: jos löysennys tai
+   * ikkunan lähde joskus muuttuu, molemmat rajat muuttuvat yhdessä.
+   */
+  pelaajanUloinSkaala() {
+    const kuva = this.ui.fokusPohjaBbox;
+    if (!(kuva?.w > 0) || !(kuva?.h > 0)) return 0;
+    const pane = this.ui.mapPane;
+    if (!pane) return 0;
+    const { w: paneW, h: paneH } = this.paneMitat(pane);
+    if (!paneW || !paneH) return 0;
+    const yleis = this.yleiskuvanSkaala(paneW, paneH);
+    if (!yleis) return 0;
+    const uloin = levitaAlue(this.ui.fokusPohjaRajaus ?? kuva, ULOSZOOMAUS_KERROIN);
+    const skaala = Math.min(paneW / uloin.w, paneH / uloin.h);
+    if (!(skaala > 0)) return 0;
+    // Sama katto kuin fokusZoomMinimillä: raja ei saa viedä lähemmäs
+    // kuin mihin pelaaja pääsee omin käsin.
+    const tasot = this.zoomiTasot();
+    return yleis * Math.min(tasot.at(-1) ?? MANNER_ZOOM, skaala / yleis);
+  }
+
   /** Sama pohja portaikon indeksinä: loitonnus pysähtyy tähän. */
   fokusPorrasMinimi() {
     const pohja = this.fokusZoomMinimi();

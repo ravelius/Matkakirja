@@ -1319,13 +1319,15 @@ body.kartta-raahaus .fokuslaatta-syke { animation-play-state: paused; }
 body.kartta-merkit-haipyy .fokuskohteet,
 body.kartta-merkit-haipyy .fokuspisteet,
 body.kartta-merkit-haipyy .fokusnosto-symbolit,
-body.kartta-merkit-haipyy .elaintakyt { display: none; }
+body.kartta-merkit-haipyy .elaintakyt,
+body.kartta-merkit-haipyy .maatummennus { display: none; }
 body.kartta-merkit-haipyy .karttanimet,
 body.kartta-merkit-haipyy .maastonimet { opacity: 0; }
 body.kartta-merkit-piilossa .fokuskohteet,
 body.kartta-merkit-piilossa .fokuspisteet,
 body.kartta-merkit-piilossa .fokusnosto-symbolit,
 body.kartta-merkit-piilossa .elaintakyt,
+body.kartta-merkit-piilossa .maatummennus,
 body.kartta-merkit-piilossa .karttanimet,
 body.kartta-merkit-piilossa .maastonimet { display: none; }
 
@@ -1333,6 +1335,90 @@ body.kartta-merkit-piilossa .maastonimet { display: none; }
   /* Liikeherkkyys: nimikerros väistyy kerralla ilman häivytystä. */
   .karttanimet,
   .maastonimet { transition: none; }
+}
+
+/* NYKYISEN MAAN TUMMENNUS JA ÄÄRIVIIVA (js/maatummennus.js —
+   omistajan tilaus 31.8.2026: *"lähemmillä zoomtasoilla ympäröivät
+   valtiot voisi tummentaa hieman reaaliajassa ja maan ääriviivat
+   piirtää hieman paksummalla. nämä voisivat hävitä välittömästi
+   siirron alkaessa ja tulla feidaten sisään."*).
+
+   KATOAMINEN on yllä olevassa display:none-joukossa: kerros poistuu
+   maalikierroksesta eleen ENSIMMÄISESSÄ kehyksessä, kuten kaikki muukin
+   polttamaton karttasisältö.
+
+   PALUU ON ANIMAATIO EIKÄ SIIRTYMÄ, ja se on tarkoituksellinen ero
+   nimikerrokseen. Siirtymä ei laukea, kun elementti tulee esiin
+   `display: none`sta — selain ei näe lähtöarvoa piilotetusta
+   kerroksesta. CSS-animaatio sen sijaan LUODAAN UUDELLEEN ja käynnistyy
+   alusta juuri silloin kun elementti alkaa taas piirtyä, eli sillä
+   hetkellä kun js/kartta.js paljastaMerkit ottaa luokan pois. Sama
+   feidaus tulee siis ilman yhtäkään riviä ajastuskoodia.
+
+   === FEIDAUS ON PERITTY fill/stroke-opacity, EI RYHMÄN opacity —
+       JA SE ON PORTAIKKO ===========================================
+
+   Kaksi valintaa, molemmat mittaustuloksia (tools/savukkeet/
+   savuke-maailmanakyma.mjs, kehittäjän maailmanäkymä, Chromium
+   390x844 dpr3, kuusi pyyhkäisyä + neljä nipistystä, kolme ajoa):
+
+     variantti                        panoroinnin lt   nipistyksen lt
+     ei maatummennusta (lähtötaso)     0 / 0 / 287 ms  382 / 403 / 397
+     ryhmän `opacity`, portaaton      429 / 702 ms     933 / 1202 ms
+     peritty fill-opacity, portaaton    0 / 0 / 0 ms   520 / 435 / 786
+     peritty fill-opacity, steps(7)     0 / 0 / 0 ms   388 / 429 / 475
+
+   1. RYHMÄN `opacity` EI KELPAA, ja syy on tämän lohkon alussa:
+      peittävyys väliltä 0–1 pakottaa selaimen tekemään ryhmästä oman
+      läpinäkyvyystasonsa. `fill-opacity` ja `stroke-opacity` eivät tee
+      tasoa lainkaan — ja koska ne PERIYTYVÄT, animaatio voi silti olla
+      ryhmässä. Sen on oltavakin: `display` vaihtuu ryhmässä, ja
+      animaatio käynnistyy alusta vain siinä elementissä, jonka oma
+      display muuttuu (lapsipolkujen omat animaatiot eivät käynnisty
+      uudelleen — mitattu, ei arvattu).
+
+   2. PORTAIKKO (steps) leikkaa maalikerrat. Portaaton feidaus maalaa
+      arkinlevyisen varjon parikymmentä kertaa 350 ms:ssä; seitsemän
+      porrasta maalaa sen seitsemästi. Ero näkyy luvuissa muttei
+      ruudulla: koko efekti on muutaman prosentin mustetta
+      (js/maatummennus.js `TUMMENNUS_VOIMA`), joten yksi porras jää
+      hienovaraisemmaksi kuin kartan oma rakeisuus. */
+.maatummennus { animation: maatummennus-esiin 350ms steps(7, end); }
+@keyframes maatummennus-esiin {
+  from { fill-opacity: 0; stroke-opacity: 0; }
+  to { fill-opacity: 1; stroke-opacity: 1; }
+}
+/* Ääriviiva on kartan omaa mustetta ja KARTTAVAKIO: non-scaling-stroke
+   pitää sen samana ruutupikselimääränä zoomista riippumatta, kuten
+   laattoihin poltettu rantaviiva. Leveys tulee elementiltä, jotta luku
+   ja sen perustelu ovat yhdessä paikassa js/maatummennus.js:ssä.
+
+   SÄVY ON HIMMEÄ MUSTE EIKÄ TÄYSI --map-ink, ja alfa on värissä eikä
+   `stroke-opacity`-ominaisuudessa. Omistajan kuvapalaute 31.8.2026 oli,
+   että ero maahan pitää tehdä pinnalla eikä reunuksella; reunus on nyt
+   yksi ruutupikseli 60 %:n musteella, jolloin se lukee saattajana eikä
+   rajapyykkinä. Omaa `stroke-opacity`-arvoa EI saa antaa: se katkaisisi
+   perinnän ryhmästä, ja juuri perittyä stroke-opacityä yllä oleva
+   portaikkofeidaus animoi (ks. mittaustaulukko). Värin alfa kertautuu
+   feidauksen kanssa, joten viiva feidaa sisään siinä missä varjokin. */
+.maatummennus-viiva {
+  fill: none;
+  stroke: rgba(70, 51, 31, 0.6);
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+/* SUMENNUSTA EI OLE TOTEUTETTU. Omistaja epäili blurin tarpeellisuutta
+   jo tilatessaan, ja laatan päälle ajettu suodin on juuri sitä
+   maalikierroksen kalleutta, jonka eleen aikainen piilotus muuten
+   poistaa. Luokka on koukku myöhempää kokeilua varten: sen saa päälle
+   yhdellä rivillä (filter: blur(...)) ilman että kerroksen rakennetta
+   tarvitsee muuttaa. */
+.maatummennus-sumea { /* varattu — ks. js/maatummennus.js */ }
+
+@media (prefers-reduced-motion: reduce) {
+  /* Liikeherkkyys: tummennus ilmestyy kerralla, ei feidaten. */
+  .maatummennus { animation: none; }
 }
 
 /* NÄKYMÄN ULKOPUOLISET MERKIT POIS (js/ui.js paivitaMaailmanRajaus —

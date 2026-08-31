@@ -634,6 +634,17 @@ const MODULES = [
    * pysäyttää tiimalasin sen omilla funktioilla.
    */
   'js/sahke.js',
+  /*
+   * Nykyisen maan tummennus ja ääriviiva ennen ui:ta (ui tuo sen
+   * päivitys- ja nollauskutsun). Ei tuo itse mitään — DOM rakennetaan
+   * createElementNS:llä ja aineisto haetaan laiskasti — joten se voisi
+   * olla listalla missä tahansa ui.js:n yläpuolella.
+   *
+   * AINEISTOA (assets/data/maapolygonit.json) EI UPOTETA — sama sääntö
+   * kuin maan tilastokäyrillä: yhden tiedoston versiossa haku
+   * epäonnistuu ja efekti jää pois hiljaa.
+   */
+  'js/maatummennus.js',
   'js/ui.js',
 
   'js/muutokset.js',

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1406, teksti: 'Nykyisen maan tummennus ja aariviiva karttaan' },
   { v: 1405, teksti: 'Nostot omina merkkeina ilman siirtoviivoja' },
   { v: 1404, teksti: 'Kolumbuksen luut katedraalille — nostopaikat todennettu' },
   { v: 1403, teksti: 'Kaupunkilaatoille kasvukatto ja naapurit samaan mittaan' },
