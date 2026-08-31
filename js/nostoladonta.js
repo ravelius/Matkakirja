@@ -20,10 +20,9 @@
  * sellaisenaan ilman DOMia — tynkä `ui` kootaan
  * tools/fokuskartta/nostot.mjs:ssä, ja passit ovat nämä:
  *
- *   ryhmittely          js/fokuskohteet.js  kohdeKarttarivit
- *                       (ja sen kautta js/fokusryhmat.js)
+ *   merkkirivit         js/fokuskohteet.js  kohdeKarttarivit
+ *   kasaus kaupunkeihin js/fokusniput.js    niputaFokusmerkit
  *   erottelusiirto      js/fokuskohteet.js  eritteleKohdeRyhmat
- *   kasaus ja viivat    js/fokusniput.js    niputaFokusmerkit
  *   nimioiden vaisto    js/fokuskohteet.js  paivitaKohdeNimiot
  *   nimion mitta        js/fokusnosto-symbolit.js  nostosymNimioMitta
  *

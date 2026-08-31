@@ -2308,7 +2308,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
  * *"Voisiko nämä nostot polttaa erilliselle läpinäkyvälle
  * rasteritasolle? Jaksaako pyörittää? Voisi poistaa näkyvistä
  * kauemmilla zoom tasoilla"*): karttanostot — symboli, nimiö ja
- * nostoviiva — poltetaan OMAAN läpinäkyvään laattapyramidiin, ei
+ * ja nimiö — poltetaan OMAAN läpinäkyvään laattapyramidiin, ei
  * pohjaan. Päähyöty on nopea uusintapoltto: kun maailmaan tulee uusia
  * nostoja, vain nostotaso ajetaan uudestaan (minuutteja, ei tunteja),
  * ja pohja pysyy ikuisessa välimuistissaan.
@@ -2350,25 +2350,13 @@ export function piirraNostotKankaalle(ctx, nostot, piirraNosto, mitta) {
     const mx = lautaKuvaX(m.x);
     const my = lautaKuvaY(m.y);
     /*
-     * NOSTOVIIVA ENSIN, merkin alle — sama järjestys kuin pelissä,
-     * jossa viivakerros menee laattakerroksen eteen (js/fokusniput.js
-     * nippuViivakerros). Päät on laskettu valmiiksi pelin omalla
-     * funktiolla (nippuViivanJana).
+     * NOSTOVIIVAA EI PIIRRETÄ, KOSKA SITÄ EI OLE (omistaja 31.8.2026,
+     * esityssiirto). Tässä oli katkoviiva merkistä kaupunkiin, päät
+     * laskettuna pelin omalla funktiolla; nostot latoutuvat nyt
+     * kaupungin kylkeen omiksi nostoikseen ilman siirtoviivoja
+     * (js/fokusniput.js sääntö 6), eikä merkki kanna enää
+     * `viiva`-kenttää lainkaan.
      */
-    const v = m.viiva;
-    if (v) {
-      ctx.save();
-      ctx.strokeStyle = v.vari;
-      ctx.globalAlpha = v.himmeys;
-      ctx.lineCap = 'round';
-      ctx.lineWidth = Math.max(0.2, v.leveys * px);
-      ctx.setLineDash([v.katko * px, v.katko * px]);
-      ctx.beginPath();
-      ctx.moveTo(lautaKuvaX(v.x1), lautaKuvaY(v.y1));
-      ctx.lineTo(lautaKuvaX(v.x2), lautaKuvaY(v.y2));
-      ctx.stroke();
-      ctx.restore();
-    }
     ctx.save();
     ctx.translate(mx, my);
     piirraNosto(ctx, m, m.porras * px);

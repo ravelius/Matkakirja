@@ -136,8 +136,8 @@ import { FOKUSKOHTEET_GRC } from './packs/fokuskohteet-grc.js';
 import { MAASTOKOHTEET } from './packs/maastokohteet.js';
 import {
   niputaFokusmerkit, nippuAsettelunVersio, nippuAvaaKaupunki, nippuLaatanEtaisyys,
+  nippuLaattaEsteet,
 } from './fokusniput.js';
-import { ryhmaKuori, ryhmitaKohteet } from './fokusryhmat.js';
 import { nostoOnPoltettu } from './laattapyramidi.js';
 import { nostoladontaTiiviste } from './nostoladonta.js';
 import { polloKysy } from './pollo.js';
@@ -464,13 +464,30 @@ function nykyinenIso(ui) {
  * @param {Array} lisat        lisälähteiden rivit (täky, syvennys,
  *   skandaali) — generaattori antaa vain ne, jotka se aikoo polttaa
  */
+/*
+ * `kaupungit` EI OLE ENÄÄ TÄMÄN PASSIN SYÖTETTÄ (31.8.2026). Se meni
+ * kategoria per kaupunki -yhdistelylle (ent. js/fokusryhmat.js), joka
+ * purettiin: kaupunkien ympärille latominen on nyt kasauspassin työtä
+ * (js/fokusniput.js), ja se saa kaupungit `ui.fokuskohdeKaupungit`-
+ * kentästä. Parametri jää kutsurajapintaan, koska kutsujia on kaksi
+ * (peli ja laattageneraattori) eikä sen poisto kuulu tähän erään.
+ */
 export function kohdeKarttarivit({
-  iso, lauta, kaupungit, pohjanAlla, lisat = [],
+  iso, lauta, pohjanAlla, lisat = [],
 }) {
   const lista = (iso && KOHDE_MAAT[iso]) || [];
   const kohteet = lista.map((kohde) => ({ kohde, paikka: kohde.laudat?.[lauta] }));
   for (const rivi of lisat) kohteet.push(rivi);
-  const nakyvat = kohteet
+  /*
+   * JOKAINEN NOSTO ON OMA MERKKINSÄ (omistaja 31.8.2026,
+   * esityssiirto): passi palauttaa rivit sellaisinaan eikä yhdistä
+   * mitään. Yhdistely eli "kategoria per kaupunki" oli tässä
+   * saman päivän aamusta iltaan — se ratkaisi ahtauden nimiön
+   * kustannuksella, ja pilkkulista ("Olympieion, Iliou Melathron…") oli
+   * omistajan mielestä väärä hinta. Ahtaus ratkeaa nyt ladonnassa
+   * (js/fokusniput.js sääntö 2) eikä sisällössä.
+   */
+  return kohteet
     .filter(({ paikka }) => Number.isFinite(paikka?.x) && Number.isFinite(paikka?.y))
     /*
      * Vain lehden alueella olevat. Lehti on maan ikkuna, ja sen
@@ -478,16 +495,6 @@ export function kohdeKarttarivit({
      * pelaajalle se näyttäisi merkiltä ilman karttaa.
      */
     .filter(({ paikka }) => pohjanAlla(paikka.x, paikka.y));
-  /*
-   * KATEGORIA PER KAUPUNKI (omistaja 31.8.2026, ks. js/fokusryhmat.js):
-   * saman kaupungin samanlajiset kohteet menevät yhden merkin alle.
-   * Passi on VIIMEISENÄ, jotta se näkee täsmälleen sen listan, joka
-   * kartalle olisi muuten piirtynyt — lisälähteet mukaan lukien — ja
-   * ENNEN piirtoa, jotta merkkejä ei koskaan synny enempää kuin
-   * lopulta jää. Luokittelija on sama funktio, jolla merkin symboli
-   * valitaan (kohteenSymboli): kategoriaa ei siis ole kahta.
-   */
-  return ryhmitaKohteet(nakyvat, kaupungit, kohteenSymboli, kohteenKarttanimi);
 }
 
 function nykyisenMaanKohteet(ui) {
@@ -952,14 +959,15 @@ export function kohdeMerkinLadonta(ui, kohde) {
   // samaa tekstiä, joka merkin perään ladotaan.
   ulos.nimi = kohteenKarttanimi(kohde);
   /*
-   * YHDISTETYN MERKIN NIMIÖ ON JO LADOTTU MITTAANSA
-   * (js/fokusryhmat.js ryhmaNimio: jäsenten nimet pilkulla,
-   * katkaistuna kolmella pisteellä). Kartan 18 merkin sääntö
-   * katkaisisi sen ensimmäisen nimen kohdalta, joten kuori sanoo
-   * kirjastolle "älä koske" — sama luku kulkee sekä piirtoon että
-   * väistön laatikkomittaan, jottei niistä tule kahta eri tekstiä.
+   * NIMIÖN KATTO ON KARTAN OMA 18 MERKKIÄ, EIKÄ POIKKEUKSIA OLE
+   * (31.8.2026). Ainoa poikkeus oli yhdistetyn merkin pilkkulista, joka
+   * oli jo ladottu omaan mittaansa ja sanoi kirjastolle "älä koske";
+   * yhdistely purettiin, joten jokainen nimiö kulkee saman lyhennyksen
+   * läpi (js/fokusnosto-symbolit.js nostosymLyhennaNimio). Kenttä jää
+   * ladontatietueeseen, koska sekä piirto että väistön laatikkomitta
+   * lukevat sen — yksi luku kumpaankin, tai teksteistä tulisi kaksi.
    */
-  ulos.nimioKatto = ryhmaKuori(kohde) ? Infinity : undefined;
+  ulos.nimioKatto = undefined;
   return ulos;
 }
 
@@ -1267,21 +1275,50 @@ const KOHDE_ERO_KIERROKSIA = 4;
  * kiinteällä suunnalla eikä satunnaisluvulla. Sama lehti antaa siis
  * aina saman kartan.
  *
- * TYÖ TEHDÄÄN VAIN KUN MITTA MUUTTUI: vakioskaalalla vastaus on sama
- * niin kauan kuin lehti ja ruutukoko pysyvät (ui.fokuskohdeEroAvain).
+ * ── PASSI AJETAAN KASAUKSEN JÄLKEEN, EI ENNEN (31.8.2026) ─────────
+ *
+ * Järjestys oli erottelu → kasaus → väistö, ja se oli väärin heti kun
+ * rypäs alkoi latoutua kaupungin molemmin puolin (js/fokusniput.js
+ * sääntö 2). Erottelu näki merkkien DATAPAIKAT, kasaus siirsi osan
+ * niistä kaupungin kylkeen — ja siellä ne saattoivat laskeutua suoraan
+ * jonkin kasauksen ULKOPUOLELLE jääneen merkin päälle. Mitattu Ateenassa:
+ * Marathon (datassa 10 lautayksikköä kaupungista) jäi 1,7 yksikön päähän
+ * ryppääseen ladotusta Akropoliista, kun symbolien pitäisi olla 5,9
+ * yksikön päässä toisistaan; koko maailmassa liian lähelle jääneitä
+ * pareja oli 33.
+ *
+ * KIINTEÄ JA VAPAA. Passi lukee nyt merkkien LOPULLISET paikat, ja
+ * ryppääseen ladottu merkki on KIINTEÄ: se ei väisty, koska sen paikka
+ * on ladonnan päätös eikä sattuma, ja väistyminen hajottaisi juuri sen
+ * sarakkeen, joka kertoo merkin kuuluvan kaupunkiin. Vapaa merkki
+ * väistää silloin yksin koko matkan. Kahden vapaan pari erkanee kuten
+ * ennenkin puoliksi, ja kaksi kiinteää ei voi olla liian lähellä
+ * toisiaan, koska sarakkeen riviväli on mitoitettu juuri tähän
+ * (js/fokusniput.js NIPPU_VALI).
+ *
+ * TYÖ TEHDÄÄN VAIN KUN MITTA TAI ASETTELU MUUTTUI: vakioskaalalla
+ * vastaus on sama niin kauan kuin lehti ja kasausasettelu pysyvät
+ * (ui.fokuskohdeEroAvain; asettelun versio js/fokusniput.js
+ * nippuAsettelunVersio).
  */
 export function eritteleKohdeRyhmat(ui, s) {
   const ryhmat = ui.fokuskohdeRyhmat ?? [];
   if (!ryhmat.length) return;
-  const avain = `${ui.fokuskohdeAvain}:${s.toFixed(4)}`;
+  const avain = `${ui.fokuskohdeAvain}:${s.toFixed(4)}:${nippuAsettelunVersio()}`;
   if (ui.fokuskohdeEroAvain === avain) return;
   ui.fokuskohdeEroAvain = avain;
   const vahin = KOHDE_ERO_MIN * s;
-  const paikat = ryhmat.map(({ x, y }) => ({ x, y }));
+  // Lähtöpaikka on merkin LOPULLINEN paikka: kasattu nippupaikka tai
+  // datapaikka. Vanhat erottelusiirrot nollautuvat, koska ne lasketaan
+  // tässä joka kerta uudestaan samasta lähtökohdasta.
+  const kiinteat = ryhmat.map((r) => Boolean(r.nippu));
+  const paikat = ryhmat.map((r) => ({ x: r.nippu?.x ?? r.x, y: r.nippu?.y ?? r.y }));
   for (let kierros = 0; kierros < KOHDE_ERO_KIERROKSIA; kierros += 1) {
     let liikkui = false;
     for (let i = 0; i < paikat.length; i += 1) {
       for (let j = i + 1; j < paikat.length; j += 1) {
+        // Kaksi kiinteää ei väisty kumpikaan: ladonta on jo päättänyt.
+        if (kiinteat[i] && kiinteat[j]) continue;
         const a = paikat[i];
         const b = paikat[j];
         let dx = b.x - a.x;
@@ -1296,20 +1333,31 @@ export function eritteleKohdeRyhmat(ui, s) {
           dy = Math.sin(kulma);
           etaisyys = 1;
         }
-        // Molempia puoliksi: pari erkanee, eikä kumpikaan siirry yksin.
-        const puolikas = (vahin - etaisyys) / 2;
-        const sx = (dx / etaisyys) * puolikas;
-        const sy = (dy / etaisyys) * puolikas;
-        a.x -= sx; a.y -= sy;
-        b.x += sx; b.y += sy;
+        /*
+         * Vapaat puoliksi, mutta kiinteän parina vapaa siirtyy yksin
+         * koko matkan — muuten pari jäisi puoliksi limittäin.
+         */
+        const vaje = vahin - etaisyys;
+        const aOsuus = kiinteat[i] ? 0 : (kiinteat[j] ? 1 : 0.5);
+        const bOsuus = kiinteat[j] ? 0 : (kiinteat[i] ? 1 : 0.5);
+        const yx = dx / etaisyys;
+        const yy = dy / etaisyys;
+        a.x -= yx * vaje * aOsuus; a.y -= yy * vaje * aOsuus;
+        b.x += yx * vaje * bOsuus; b.y += yy * vaje * bOsuus;
         liikkui = true;
       }
     }
     if (!liikkui) break;
   }
   for (let i = 0; i < ryhmat.length; i += 1) {
-    ryhmat[i].sx = paikat[i].x - ryhmat[i].x;
-    ryhmat[i].sy = paikat[i].y - ryhmat[i].y;
+    /*
+     * KIINTEÄN SIIRTO ON NOLLA, ja se kirjoitetaan silti: nippupaikka
+     * ohittaa sen kaikkialla (`r.nippu?.x ?? r.x + r.sx`), mutta jos
+     * merkki putoaa ryppäästä seuraavalla ajolla, vanha siirto ei saa
+     * jäädä sen mukaan.
+     */
+    ryhmat[i].sx = kiinteat[i] ? 0 : paikat[i].x - ryhmat[i].x;
+    ryhmat[i].sy = kiinteat[i] ? 0 : paikat[i].y - ryhmat[i].y;
   }
 }
 
@@ -1443,15 +1491,19 @@ function asetaKohdeMittakaava(ui, suhde) {
    * ylös suhteella sRuutu/s — merkki on lehden kokoinen, napautusala
    * sormen kokoinen, paikka yksi ja sama.
    */
-  eritteleKohdeRyhmat(ui, s);
   /*
-   * KASAUSPASSI KYSYY TÄLTÄ KERROKSELTA, ONKO MERKKI POLTETTU: se ei
-   * saa piirtää yhdysviivaa merkille, jonka viiva on jo laatassa, eikä
-   * js/fokusniput.js tunne luetteloa. Kysymys esitetään merkin
-   * lopullisesta paikasta, jonka passi itse juuri asetti.
+   * KASAUS ENSIN, EROTTELU SEN JÄLKEEN (31.8.2026 — ks.
+   * eritteleKohdeRyhmat, "PASSI AJETAAN KASAUKSEN JÄLKEEN"). Erottelu
+   * väistää ryppääseen ladottuja merkkejä eikä toisin päin, joten sen
+   * on nähtävä kasauksen tulos.
+   *
+   * KASAUSPASSI EI ENÄÄ KYSY MITÄÄN TÄLTÄ KERROKSELTA. Se kysyi ennen,
+   * onko merkki poltettu, koska se ei saanut piirtää yhdysviivaa
+   * merkille, jonka viiva on jo laatassa. Viivat poistuivat
+   * (js/fokusniput.js sääntö 6), ja sen mukana `ui.nostoPoltettu`.
    */
-  ui.nostoPoltettu = (r) => kohdeOnPoltettu(ui, r);
   niputaFokusmerkit(ui, s);
+  eritteleKohdeRyhmat(ui, s);
   /*
    * POLTETUT VAIKENEVAT VASTA TÄSSÄ: tiiviste tuntee merkin lopullisen
    * paikan, jonka kaksi edellistä passia juuri asettivat.
@@ -1567,8 +1619,21 @@ const KOHDE_NIMIO_VARA = 2;
  * (piirto.js kohta 8g). Enempää vaihtoehtoja ei kokeilla: kaksi riittää
  * poistamaan kadot, ja jokainen lisäpaikka on uusi tapa yllättää
  * lukija sillä, missä nimi on.
+ *
+ * JÄRJESTYS SAA TULLA LADONNALTA (31.8.2026, esityssiirto). Kun merkki
+ * on ladottu kaupungin VASEMPAAN sarakkeeseen (js/fokusniput.js
+ * sääntö 2), sen nimiö kuuluu vasemmalle: oikea kylki on kaupungin
+ * laattaan päin, ja sinne ladottu nimi kulkisi laatan yli. Kasauspassi
+ * kirjoittaa toiveensa kenttään `nippuPuoli`, ja tämä lista käännetään
+ * sen mukaan (kohdeNimioPuolet). Toive ei ole käsky: jos toivottu kylki
+ * on tukossa, toinen kokeillaan yhä.
  */
 const KOHDE_NIMIO_PUOLET = [false, true];
+
+/** Puolten kokeilujärjestys yhdelle merkille: toivottu ensin. */
+function kohdeNimioPuolet(r) {
+  return r?.nippuPuoli ? [true, false] : KOHDE_NIMIO_PUOLET;
+}
 
 /** Laatikot laudan koordinaateissa. Kosketus ei ole vielä limitystä. */
 function kohdeLimittyy(a, b) {
@@ -1688,6 +1753,14 @@ export function paivitaKohdeNimiot(ui, s) {
     x1: x - KOHDE_SYMBOLI_R * s - vara, x2: x + KOHDE_SYMBOLI_R * s + vara,
     y1: y - KOHDE_SYMBOLI_R * s - vara, y2: y + KOHDE_SYMBOLI_R * s + vara,
   }));
+  /*
+   * KAUPUNGIN LAATTA ON ESTE (31.8.2026, esityssiirto). Rypäs latoutuu
+   * laatan molemmin puolin (js/fokusniput.js sääntö 2), joten väärälle
+   * kyljelle joutunut nimiö kulkisi suoraan kaupungin kiekon yli. Este
+   * ei ole indeksoitu merkkeihin, joten se kelpaa `esteet`-listan
+   * loppuun sellaisenaan.
+   */
+  const laatat = nippuLaattaEsteet(ui, s);
   // Kohteittain, ei kopioittain: kiertävän laudan kopiot samaan riviin.
   const jono = new Map();
   ryhmat.forEach((r, i) => {
@@ -1702,7 +1775,8 @@ export function paivitaKohdeNimiot(ui, s) {
     // Sama kaista molemmilta puolilta valmiiksi: mittaus on
     // välimuistissa (NOSTOSYM_LEVEYDET), joten toinen laatikko on
     // pelkkää peilausta eikä uutta canvas-mittausta.
-    const vaihtoehdot = KOHDE_NIMIO_PUOLET.map((vasemmalle) => {
+    const puolet = kohdeNimioPuolet(r);
+    const vaihtoehdot = puolet.map((vasemmalle) => {
       const laatikko = nostosymNimioLaatikko(
         r.nimi, r.g?.ownerSVGElement, r.laji, vasemmalle, r.nimioKatto,
       );
@@ -1715,7 +1789,7 @@ export function paivitaKohdeNimiot(ui, s) {
       };
     });
     if (vaihtoehdot.some((kehys) => !kehys)) return;
-    const rivi = jono.get(r.id) ?? { indeksit: [], kehykset: [] };
+    const rivi = jono.get(r.id) ?? { indeksit: [], kehykset: [], puolet };
     rivi.indeksit.push(i);
     rivi.kehykset.push(vaihtoehdot);
     jono.set(r.id, rivi);
@@ -1725,20 +1799,22 @@ export function paivitaKohdeNimiot(ui, s) {
   const puolet = new Map();
   for (const [id, rivi] of jono) {
     /*
-     * PUOLET JÄRJESTYKSESSÄ: oikea ensin, vasen vasta jos oikea on
-     * tukossa. Järjestys on kiinteä, joten sama lehti antaa saman
-     * kartan — eikä nimiö voi vaihtaa puolta panoroinnissa.
+     * PUOLET JÄRJESTYKSESSÄ: toivottu kylki ensin (kohdeNimioPuolet),
+     * toinen vasta jos toivottu on tukossa. Järjestys on merkin oma ja
+     * kiinteä, joten sama lehti antaa saman kartan — eikä nimiö voi
+     * vaihtaa puolta panoroinnissa.
      */
-    const valittu = KOHDE_NIMIO_PUOLET.findIndex((_, p) => rivi.kehykset
+    const valittu = rivi.puolet.findIndex((_, p) => rivi.kehykset
       .every((vaihtoehdot, n) => {
         const kehys = vaihtoehdot[p];
         return !symbolit.some((sym, j) => j !== rivi.indeksit[n]
           && kohdeLimittyy(kehys, sym))
+          && !laatat.some((laatta) => kohdeLimittyy(kehys, laatta))
           && !varatut.some((varattu) => kohdeLimittyy(kehys, varattu));
       }));
     if (valittu < 0) piilossa.add(id);
     else {
-      puolet.set(id, KOHDE_NIMIO_PUOLET[valittu]);
+      puolet.set(id, rivi.puolet[valittu]);
       varatut.push(...rivi.kehykset.map((vaihtoehdot) => vaihtoehdot[valittu]));
     }
   }
@@ -1746,14 +1822,25 @@ export function paivitaKohdeNimiot(ui, s) {
   ui.fokuskohdePiiloNimiot = piilossa;
   ui.fokuskohdeNimioPuolet = puolet;
   for (const r of ryhmat) {
-    // Poltetun merkin rasteri on tyhjä eikä sitä herätetä henkiin:
-    // symboli ja nimiö ovat laatassa (merkitsePoltetutNostot).
-    if (!r.glyyfi || !r.nimi || r.poltettu) continue;
+    if (!r.nimi) continue;
     const nakyy = !piilossa.has(r.id);
     const vasemmalle = puolet.get(r.id) ?? false;
     if (r.nimioNakyy === nakyy && r.nimioVasemmalle === vasemmalle) continue;
+    /*
+     * PÄÄTÖS KIRJOITETAAN TIETUEESEEN ENNEN SOLMUEHTOA (31.8.2026).
+     * Kentät olivat solmuehdon takana, ja koska laattageneraattori ajaa
+     * tämän passin ILMAN DOMia (tools/fokuskartta/nostot.mjs), yksikään
+     * poltettava merkki ei koskaan saanut `nimioNakyy: false` — laattaan
+     * paloi myös se 32 nimiötä, jotka väistö oli juuri päättänyt
+     * pudottaa. Sama vika kuin väistön oma `glyyfi`-ehto, joka
+     * poistettiin jonon rakennuksesta samana päivänä: väistö on
+     * LADONTAA, ja ladonnan tulos ei saa riippua siitä, onko ruutua.
+     */
     r.nimioNakyy = nakyy;
     r.nimioVasemmalle = vasemmalle;
+    // Poltetun merkin rasteri on tyhjä eikä sitä herätetä henkiin:
+    // symboli ja nimiö ovat laatassa (merkitsePoltetutNostot).
+    if (!r.glyyfi || r.poltettu) continue;
     // Nimiö on paistettu rasteriin, joten tila vaihtuu piirtämällä
     // merkki uudestaan. Nimiötön rasteri on symbolikohtainen ja siksi
     // yhteinen kaikille saman lajin vaienneille merkeille.
@@ -2123,13 +2210,12 @@ export function nollaaFokuskohteet(ui) {
 /*
  * KORTIN OMAT SUURENNOSAVAIMET.
  *
- * Tietoruudun oma kuva aukeaa avaimella `fokuskohdeZoom`. Yhdistetyllä
- * merkillä (js/fokusryhmat.js) kortti latoo lisäksi jäsentensä
- * sisukset, ja ne avaavat kuvansa OMILLA avaimillaan — täkynosto
- * `fokusnostoZoom`, syvennystarina `syvennysZoom` — koska sama koodi
- * latoo ne myös omiin kortteihinsa. Kaikki kolme ovat silloin TÄMÄN
- * kortin jatkeita: sulku vie ne mukanaan, ja Esc kuoritaan niistä
- * ensin (kuunteleKohdetta), tai Esc sulkisi koko lehden kuvan alta.
+ * Tietoruudun oma kuva aukeaa avaimella `fokuskohdeZoom`. Täkynoston ja
+ * syvennystarinan kortit latovat kuvansa OMILLA avaimillaan —
+ * `fokusnostoZoom` ja `syvennysZoom` — ja koska ne aukeavat kartan
+ * kohdemerkistä (YHTENÄINEN KOHDEMALLI), ne ovat silloin TÄMÄN kortin
+ * jatkeita: sulku vie ne mukanaan, ja Esc kuoritaan niistä ensin
+ * (kuunteleKohdetta), tai Esc sulkisi koko lehden kuvan alta.
  */
 const KOHDE_SUURENNOSAVAIMET = ['fokuskohdeZoom', 'fokusnostoZoom', 'syvennysZoom'];
 
@@ -3494,11 +3580,10 @@ function piirraKohdeYlarivi(kohde) {
 /**
  * YHDEN KOHTEEN SISUS — kaikki se, mikä otsikon alle kuuluu.
  *
- * Erotettu omaksi funktiokseen 31.8.2026, kun yhdistetty merkki tuli
- * kartalle (js/fokusryhmat.js): sama sisus latoutuu nyt joko yksin
- * kortin runkoon tai yhtenä osiona monen kohteen lehdellä. Rivit ovat
- * täsmälleen entiset ja entisessä järjestyksessä — sisältö ei muuttunut,
- * vain sen säiliö voi olla eri.
+ * Erotettu omaksi funktiokseen 31.8.2026 yhdistetyn merkin lehteä
+ * varten; yhdistely purettiin saman päivän illalla, mutta jako jäi,
+ * koska se pitää kortin rungon (avaaFokuskohde) luettavana. Rivit ovat
+ * täsmälleen entiset ja entisessä järjestyksessä.
  */
 function piirraKohteenSisus(ui, sailio, kohde) {
   // Kuvat ja niiden mukana "Koe ihme" -nappi: nappi piirtyy kortin
@@ -3518,53 +3603,19 @@ function piirraKohteenSisus(ui, sailio, kohde) {
   piirraReaktiot(sailio, kohdeReaktioTunniste(kohde), { otsikko: kohde.nimi });
 }
 
-/** Osion otsikkorivi: jäsenen oma symboli ja oma nimi. */
-function piirraOsionOtsikko(osa) {
-  const otsikko = html('h4', 'fokuskohde-osio-otsikko');
-  const symboli = kohteenSymboli(osa);
-  if (symboli) {
-    // Sama piirtokirjasto ja sama ruutu kuin kortin ylärivillä.
-    const kuva = el('svg', {
-      class: 'fokuskohde-ylarivi-symboli',
-      viewBox: '-12 -12 24 24',
-      'aria-hidden': 'true',
-    }, otsikko);
-    piirraNostosymboli(el('g', {}, kuva), symboli);
-  }
-  otsikko.appendChild(document.createTextNode(osa.nimi ?? ''));
-  return otsikko;
-}
-
-/**
- * YHDISTETYN MERKIN LEHTI — jokainen jäsen omana osionaan.
+/* ============ YHDISTETYN MERKIN LEHTI PURETTIIN (31.8.2026) =======
  *
- * Omistajan sanamuoto 31.8.2026: *"yhdistää muutama saman kategorian
- * kohde samalle pop-up-lehdelle"*. Osio on jäsenen oma otsikko ja
- * jäsenen oma sisus — teksti, kuva, visa, lähde ja reaktiot
- * sellaisinaan. YHTÄKÄÄN KOHDETTA EI KADOTA EIKÄ YHDISTETÄ TOISEEN
- * (js/fokusryhmat.js).
+ * Kortilla oli 31.8.2026 aamusta iltaan kaksi asua: yhden kohteen sisus
+ * ja yhdistetyn merkin lehti, jossa jokainen jäsen oli oma osionsa
+ * (`piirraRyhmanOsiot`, `piirraOsionOtsikko`). Kun kartan yhdistely
+ * purettiin saman päivän illalla (kohdeKarttarivit, js/fokusniput.js),
+ * yhdistettyjä merkkejä ei enää synny, eikä kuoria siis ole avattavaksi
+ * — osiolatoja jäi koodiin ilman ainoatakaan kutsujaa.
  *
- * KAKSI TIETÄ SISUKSEEN. Kartan omat kohteet (js/packs/fokuskohteet-*.js)
- * latoo tämä moduuli itse; täkynosto, syvennystarina ja skandaali
- * antavat sisuksensa `osio`-takaisinkutsuna, koska niiden ladonta asuu
- * niiden omissa moduuleissa — samasta syystä ja samalla kaavalla kuin
- * `avaa` (niputusjärjestyksessä ne ovat tämän tiedoston jäljessä).
- * Jäsen ilman `osio`-kenttää latoo siis kohdemallin oman sisuksen.
+ * `piirraKohteenSisus` JÄI, vaikka se erotettiin omaksi funktiokseen
+ * juuri osioita varten: se on nyt kortin ainoa runko, ja jako pitää
+ * `avaaFokuskohde`-funktion luettavana.
  */
-function piirraRyhmanOsiot(ui, sisalto, kohde) {
-  // Kuoren pikkurivi kertoo, MISSÄ nämä kaikki ovat — se on koko
-  // yhdistämisen peruste (omistaja: "suoraan kaupungista").
-  if (kohde.kaupunki) {
-    sisalto.appendChild(html('p', 'fokuskohde-ryhma-paikka', kohde.kaupunki));
-  }
-  for (const osa of kohde.osat) {
-    const osio = html('section', 'fokuskohde-osio');
-    osio.appendChild(piirraOsionOtsikko(osa));
-    if (typeof osa.osio === 'function') osa.osio(ui, osio);
-    else piirraKohteenSisus(ui, osio, osa);
-    sisalto.appendChild(osio);
-  }
-}
 
 export function avaaFokuskohde(ui, kohde) {
   if (typeof document === 'undefined' || !kohde) return null;
@@ -3629,8 +3680,7 @@ export function avaaFokuskohde(ui, kohde) {
   const sisalto = html('div', 'fokuskohde-sisalto');
   sisalto.appendChild(piirraKohdeYlarivi(kohde));
   sisalto.appendChild(html('h3', 'fokuskohde-otsikko', kohde.nimi));
-  if (ryhmaKuori(kohde)) piirraRyhmanOsiot(ui, sisalto, kohde);
-  else piirraKohteenSisus(ui, sisalto, kohde);
+  piirraKohteenSisus(ui, sisalto, kohde);
   popup.appendChild(sisalto);
   koti.appendChild(popup);
 

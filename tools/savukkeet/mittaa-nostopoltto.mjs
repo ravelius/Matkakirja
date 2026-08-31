@@ -223,20 +223,8 @@ async function piirraPoltettu(sivu, merkit) {
       paikat[m.tunnus] = { x: mx, y: my };
       if (mx < -200 || my < -200 || mx > window.innerWidth + 200
         || my > window.innerHeight + 200) continue;
-      const v = m.viiva;
-      if (v) {
-        ctx.save();
-        ctx.strokeStyle = v.vari;
-        ctx.globalAlpha = v.himmeys;
-        ctx.lineCap = 'round';
-        ctx.lineWidth = Math.max(0.2, v.leveys * skaala);
-        ctx.setLineDash([v.katko * skaala, v.katko * skaala]);
-        ctx.beginPath();
-        ctx.moveTo(ruutuX(v.x1, v.y1), ruutuY(v.x1, v.y1));
-        ctx.lineTo(ruutuX(v.x2, v.y2), ruutuY(v.x2, v.y2));
-        ctx.stroke();
-        ctx.restore();
-      }
+      // Nostoviivoja ei ole (js/fokusniput.js sääntö 6): merkit
+      // latoutuvat kaupungin kylkeen ilman siirtoviivoja.
       ctx.save();
       ctx.translate(mx, my);
       piirraNostosymPolttoon(ctx, m, m.porras * skaala);

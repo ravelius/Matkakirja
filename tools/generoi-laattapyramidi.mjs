@@ -628,8 +628,9 @@ function alueella(mitat, sarake, rivi) {
  * (`--vain-luettelo`) ajaa ilman selainta ja koska matriisin shardit
  * eivät näe toistensa levyä. Merkin musteen ulottuma tulee pelin
  * omasta mitasta (js/fokusnosto-symbolit.js nostosymPolttoLaatikko —
- * sama taulukko jolla nimiö ladotaan), nostoviiva janan päistä, ja
- * päälle patinan paperivakiomarginaali. Laatikko on VÄLJÄ: ylimitta
+ * sama taulukko jolla nimiö ladotaan) ja päälle patinan
+ * paperivakiomarginaali. (Nostoviivan päät olivat tässä 31.8.2026 asti;
+ * viivat poistuivat kartalta, ks. js/fokusniput.js sääntö 6.) Laatikko on VÄLJÄ: ylimitta
  * maksaa muutaman lähes tyhjän laatan, alimitta katkaisisi noston
  * laattarajalle.
  */
@@ -640,18 +641,10 @@ const NOSTO_MARGINAALI_PX = 12;
 /** Poltettavien nostojen mustelaatikot laudan yksiköissä (kerran). */
 const nostoLaatikot = nostot.merkit.filter((m) => m.poltettava).map((m) => {
   const lk = nostosymPolttoLaatikko(m);
-  let x1 = m.x + lk.x1 * m.porras;
-  let x2 = m.x + lk.x2 * m.porras;
-  let y1 = m.y + lk.y1 * m.porras;
-  let y2 = m.y + lk.y2 * m.porras;
-  const v = m.viiva;
-  if (v) {
-    const vara = (v.leveys ?? 0) * 2;
-    x1 = Math.min(x1, Math.min(v.x1, v.x2) - vara);
-    x2 = Math.max(x2, Math.max(v.x1, v.x2) + vara);
-    y1 = Math.min(y1, Math.min(v.y1, v.y2) - vara);
-    y2 = Math.max(y2, Math.max(v.y1, v.y2) + vara);
-  }
+  const x1 = m.x + lk.x1 * m.porras;
+  const x2 = m.x + lk.x2 * m.porras;
+  const y1 = m.y + lk.y1 * m.porras;
+  const y2 = m.y + lk.y2 * m.porras;
   return {
     x1, x2, y1, y2,
   };

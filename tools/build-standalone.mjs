@@ -566,7 +566,6 @@ const MODULES = [
    * tuo sen). Se tuo vain symbolikirjaston kategorianimet, jotka ovat
    * rivin yllä.
    */
-  'js/fokusryhmat.js',
   /*
    * Aihevalojen koneisto ennen kaikkia merkkikerroksia: kohdemerkit,
    * ja eläintäyt piirtävät kumpikin valotäplänsä sillä
