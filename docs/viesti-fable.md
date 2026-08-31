@@ -1,3 +1,349 @@
+# Opus → Fable: sentripetaalinen käyrä ja 41 vesireittiä (haara claude/reitit-kasin)
+
+Omistajan kaksi päätöstä 31.8.2026 toteutettu. **Ei PR:ää, ei
+versionostoa, ei pyramidiajoa.** Muutetut tiedostot:
+
+| tiedosto | mitä |
+| --- | --- |
+| `js/rules.js` | `densify` yhtenäisestä Catmull-Romista **sentripetaaliseksi** (alpha 0,5) |
+| `js/packs/maailmankartta.js` | 41 maareitille `via`-pisteet; `sitka\|vancouver` uudelleen `korjaa-merireitit.mjs`:llä |
+| `js/packs/middleeast.js` | `masqat\|dubai`-merireitin yksi välipiste 4 yksikköä länteen |
+| `tools/fokuskartta/sisalto.mjs` | laatta piirtää **saman käyrän jota peli kävelee** (solmupolku pois) |
+| `tools/fokuskartta/maailmapiirto.js` | käsin piirretty heitto ankkuroitu SOLMUIHIN, ei pehmennyspisteisiin |
+
+Raamattu, tarina, isoisän raamattu, `js/fokusnosto-symbolit.js`,
+`js/fokusniput.js` ja `js/laattapyramidi.js` **koskematta**. Askelmien
+määrää (`steps`) ei muutettu yhdelläkään reitillä, reittejä ei poistettu
+eikä kaupunkeja yhdistetty uudella tavalla — **ei yhtään `type`-muutosta**
+(perustelu §3).
+
+Portit: `node --test tests/*.test.mjs` → **# pass 1047, # fail 0**
+(1 skip, sama kuin mainissa); `node tools/tarkista-kaksoisavaimet.mjs`
+→ ei kaksoisavaimia; `node tools/build-standalone.mjs` → ok. `dist/` ja
+`node_modules` poistettu ennen committia.
+
+**Katselukappale: `reitit-zoomtasot.png`** haaran juuressa,
+committoimatta. z2…z7, jokainen ruutu 512 × 512 laattapikseliä 1:1 ja
+haettu koneellisesti niin että kaikki kolme reittilajia osuu siihen
+(punaisia puuttumismerkintöjä ei tarvittu — jokaisella tasolla löytyi
+kolmen lajin ruutu). Lisäksi kaksi ennen/jälkeen-paria: **Ateenan
+eteläpuolen S** ja **New Orleans–Miami**.
+
+---
+
+## 1. Päätös 1 — sentripetaalinen Catmull-Rom (TEHTY, mitattu)
+
+`js/rules.js densify` laskee segmentin nyt kuutiollisena
+Bézier-käyränä, jonka ohjauspisteet tulevat naapurietäisyyksien
+neliöjuurista — **rivi riviltä sama kaava kuin jokien
+`lautaKaari`ssa** (maailmapiirto.js). Pistemäärä ja `perSpan` eivät
+muuttuneet, joten mikään muu ei liikkunut.
+
+### Kaksi pyydettyä lukua
+
+| mitta | ennen | jälkeen |
+| --- | --- | --- |
+| **reittejä jotka leikkaavat itsensä** | **2** (`sisilia\|ateena` (6614, 1954), `anchorage\|vancouver` (1500, 1317)) | **0** |
+| **laatan ja pelin polun ero** | mediaani 0,26 · p90 3,71 · max **38,35** lautayksikköä | **0** |
+
+Ero on **täsmälleen nolla eikä likimain nolla**, ja syy on
+rakenteellinen eikä mittaustarkkuus: `sisalto.mjs` ei enää johda omaa
+polkuaan vaan antaa piirrolle saman `edge.poly`-taulukon, jota
+`js/ui.js` ja `pixelOf` lukevat. Mitattuna 408 reittiä, 24 409 pistettä,
+suurin poikkeama 0 — eri mittaisia polkuja 0 kappaletta.
+Askelmahelmen suurin etäisyys omasta viivastaan on **1,8·10⁻¹²**
+lautayksikköä eli kelluvan pisteen kohina.
+
+Itseleikkaus mitattiin janapareittain koko murtoviivasta (kaikki
+408 reittiä, ei otos).
+
+### Miksi tämä kumoaa aiemman tulkinnan — ja miksi jälki säilyy
+
+Edellinen erä piirsi solmupolun eli luotisuorat janat. Se poisti
+silmukat mutta **oireena**: silmukat syntyivät epätasavälisten
+`via`-jonojen ja alpha 0:n yhteispelistä, ja sentripetaalinen
+parametrointi on todistetusti vapaa silmukoista ja kärjistä. Nyt
+korjattu on syy, ja käyrä sai jäädä.
+
+**Käsin piirretty jälki ei kadonnut, mutta se piti ankkuroida
+uudelleen.** Heitto (0,35 paperipikseliä) arvottiin ennen jokaiselle
+piirtopisteelle. Käyrällä niitä on neljätoista jokaista väliä kohti,
+joten sama arvonta olisi tehnyt viivasta rosoista kohinaa eikä kynän
+vapinaa. Nyt heitto arvotaan **solmuille** ja liukuu niiden välillä
+smoothstepillä — vapina on solmun mitassa, kuten käsi vapisee.
+Päätesolmut eivät heitä (kolme reittiä samasta kaupungista lähtee
+samasta pisteestä), ja kynänpaine vaihtelee yhä reitistä toiseen.
+Solmujen indeksit tulevat `sisalto.mjs`:stä, joka tarkistaa ne pakasta
+riippumatonta odotusarvoa vasten ja varoittaa lokissa, jos `perSpan`
+joskus muuttuu. Poikkeamia nyt 0/408.
+
+### Merireitit, jotka käyrän muutos siirsi
+
+Käyrän muoto muuttui, joten `via`-pisteet jotka oli kalibroitu vanhaa
+käyrää vasten piti tarkistaa. **Kaksi reittiä siirtyi maalle ja
+molemmat on korjattu:**
+
+- `sitka|vancouver` — ajoin `node tools/korjaa-merireitit.mjs
+  maailmankartta`: 2 → 12 välipistettä. Työkalu raportoi lisäksi
+  `nikosia|kairo`: EI RATKENNUT, mutta se **ei ole uusi eikä tämän
+  erän aiheuttama** — reitti läpäisee pelin oman testin sekä ennen
+  että jälkeen; työkalun oma kelpuutus (1 yksikön askel) on testiä
+  tiukempi ja on hylännyt sen jo aiemmin. Jätin sen rauhaan, koska
+  koskeminen olisi muuttanut reittiverkkoa ilman vikaa.
+- `masqat|dubai` (**middleeast-lähdelauta**, ei maailmankartta) —
+  `tests/rules.test.mjs` kaatui kohtaan t = 0,50: uusi käyrä vei
+  viivan Musandamin niemen yli. `korjaa-merireitit.mjs` ei osaa
+  kirjoittaa tähän pakkaan (rivimuoto on eri kuin JSON-rivit), ja
+  työkalun ehdotus olisi ollut välipisteiden POISTO — mikä olisi
+  vetänyt suoran niemen yli, koska satamavyöhykkeet (55 + 55) peittävät
+  89 yksikön reitistä lähes kaiken. Etsin sen sijaan pienimmän siirron,
+  joka vie reitin veteen testin omalla mitalla: **yksi välipiste 818 →
+  814**, neljä yksikköä länteen. Muut 107 merireittiä olivat kunnossa.
+
+---
+
+## 2. Päätös 2 — vesireitit (41 korjattu, tehty)
+
+### Mitä mitattiin ja millä
+
+Edellisen erän "37 maareittiä 297:stä" on tässä erässä mitattu
+uudelleen tarkemmin. Mitta on **pisin YHTENÄINEN vesijakso
+lautayksiköinä** (1 yks ≈ 3,3 km) reitin omalta piirretyltä viivalta,
+näyte 1,5 yksikön välein, ja maa/meri luetaan **pakan omista
+ääriviivoista** (`js/mapart.js isOnLand`) — samoista, joita peli
+piirtää, testi tutkii ja `korjaa-merireitit` käyttää. Prosenttiosuus on
+koko reitin vedessä oleva osuus.
+
+Kynnykseksi otin **20 yksikköä (66 km)**: sitä lyhyemmät ovat
+rantaviivan pyöristystä eivätkä kartalla erottuva vika. Kynnyksen
+ylitti **41 maareittiä 297:stä** (edellisen erän 37 vastaa tässä
+mitassa noin 29 yksikön kynnystä — sama lista, eri raja).
+
+**Lopputulos: 41 → 1.** Ainoa yli 20 yksikön jäljelle jäävä on
+`berliini|kobenhavn` (25,5), ja se on Itämeren lautta — perustelu §3.
+
+### Miten välipisteet laskettiin
+
+En arvannut yhtään pistettä. Kirjoitin `tools/merireitit.mjs`:n
+peilikuvan (A* ruudukossa, jossa este on VESI eikä maa; sama
+portaittainen tarkennus, sama Douglas-Peucker-pelkistys ja **sama
+kelpuutus pelin omalla `edgePolyline`-viivalla**) ja ajoin sen jokaiselle
+41 reitille. Sen päälle tuli **ahne karsinta**: pisteitä poistetaan
+yksitellen niin kauan kuin viiva pysyy maalla. Ilman sitä työkalu
+jäljitti rantaviivaa 39 pisteellä; karsinnan jälkeen **38 reittiä
+41:stä pärjää yhdellä välipisteellä ja loput kolme kahdella**. Se on
+sekä käsin piirretyn näköistä että pakalle kevyttä.
+
+Työkalu on **worktreen ulkopuolella** (kertakäyttöinen analyysiskripti,
+ei repossa). Jos haluat siitä pysyvän `tools/korjaa-maareitit.mjs`:n ja
+sitä vastaavan testin — edellinen raportti ehdotti sitä §5:ssä — se on
+oma pieni eränsä, ja alla oleva taulukko on sen väliaikainen korvaaja.
+
+### Taulukko: kaikki 41 reittiä
+
+Sarakkeet: vesiosuus / pisin yhtenäinen vesijakso ENNEN → JÄLKEEN,
+välipisteiden määrä, ja mihin ne osuvat.
+
+| reitti | ennen | jälkeen | via | välipisteet ja perustelu |
+| --- | --- | --- | --- | --- |
+| `chennai\|kolkata` | 75,4 % / 281,5 | 0,3 % / 1,4 | 1 | 79,6 °E 16,0 °N, Deccanin sisämaa. Suora kulki Bengalinlahden yli; Koromandelin rannikon maatie on ollut olemassa aina. |
+| `neworleans\|miami` | 82,2 % / 268,9 | **0 %** | 2 | 89,3 °W 30,9 °N (Mississippin rannikko) ja 82,1 °W 29,3 °N (Floridan niemimaa). Ks. §3. |
+| `bangkok\|singapore` | 64,5 % / 268,3 | **0 %** | 2 | 99,8 °E 13,5 °N ja 98,9 °E 9,6 °N: Kran kannas ja Malakan niemimaa. Suora kulki Thaimaanlahden yli. |
+| `kalgoorlie\|adelaide` | 49,2 % / 240,5 | **0 %** | 1 | 138,3 °E 32,2 °S, Spencerinlahden pohjukka (Port Augusta). Suora oikaisi Ison Australianlahden yli. |
+| `kolkata\|yangon` | 64,2 % / 206,9 | 1 % / 2,8 | 1 | 91,8 °E 23,5 °N, Bengalinlahden pohjukka (Chittagong). Sieltä Arakanin rannikkoa etelään. |
+| `tripoli\|kairo` | 33,9 % / 206,4 | **0 %** | 1 | 18,5 °E 29,8 °N, Sidran lahden eteläpuoli. Karavaanitie kiersi lahden sisämaan kautta, ei rantaa pitkin. |
+| `tanger\|karthago` | 45,1 % / 203 | **0 %** | 1 | 3,9 °W 34,7 °N, Atlas-käytävä. Suora kulki Välimeren yli Algerian pohjoispuolelta. |
+| `mexico\|merida` | 60,4 % / 197,7 | **0 %** | 1 | 92,8 °W 17,8 °N, Tehuantepecin kannas. Suora ylitti Campechen lahden. |
+| `halifax\|labrador` | 51,1 % / 192,2 | 2,3 % / 5,7 | 2 | 65,9 °W 46,7 °N (New Brunswick) ja 71,2 °W 48,5 °N (Saguenay). Nova Scotia on kiinni mantereessa Chignecton kannaksella. |
+| `exmouth\|broome` | 51,4 % / 150,5 | 0,9 % / 2,8 | 1 | 121,0 °E 20,4 °S, Pilbaran sisämaa. |
+| `managua\|panama` | 55 % / 135 | **0 %** | 1 | 82,2 °W 8,8 °N, Costa Rican ja Panaman raja. Suora kulki Karibialla. |
+| `pietari\|helsinki` | 72,8 % / 130,2 | **0 %** | 1 | 29,1 °E 61,0 °N, Karjalan kannas (Viipurin seutu). Ks. §3. |
+| `peking\|soul` | 63,9 % / 128,4 | **0 %** | 2 | 121,7 °E 41,5 °N (Shanhaiguan) ja 125,7 °E 40,0 °N (Yalu). Kierto Bohain ympäri Liaodongin kautta. |
+| `nome\|anchorage` | 25,4 % / 127,4 | 0,4 % / 2,5 | 1 | 160,8 °W 65,4 °N, Sewardin niemimaan sisämaa. Suora ylitti Nortoninlahden. |
+| `doha\|dubai` | 88,1 % / 112,3 | **0 %** | 2 | 51,1 °E 23,7 °N ja 54,7 °E 23,7 °N: Qatarin niemen tyvi ja Liwan aavikko. Rannikkokaravaanitie oli olemassa; suora kulki Persianlahdella. |
+| `karthago\|tripoli` | 47,2 % / 107,3 | **0 %** | 2 | 10,3 °E 33,2 °N ja 12,5 °E 32,2 °N: Gabèsin lahden kierto Tripolitaniaan. |
+| `broome\|darwin` | 29 % / 90,3 | **0 %** | 1 | 130,0 °E 15,8 °S, Kimberleyn ja Pohjoisterritorion raja. |
+| `soul\|vladivostok` | 49 % / 80,7 | **0 %** | 1 | 127,0 °E 40,1 °N, Pohjois-Korea. Suora kulki Japaninmerellä. |
+| `lagos\|kamerun` | 50 % / 76,9 | **0 %** | 1 | 8,8 °E 5,5 °N, Cross Riverin seutu Nigerin suistosta pohjoiseen. Ks. §3. |
+| `christchurch\|dunedin` | 70,5 % / 64,7 | **0 %** | 1 | 170,1 °E 45,0 °S, Otagon sisämaa. Sama saari; suora oikaisi rannikon kuperan kohdan yli. |
+| `marseille\|barcelona` | 42,8 % / 62,6 | **0 %** | 1 | 3,1 °E 43,8 °N, Languedoc (Narbonne). Suora ylitti Lioninlahden. |
+| `oslo\|kobenhavn` | 44 % / 61,4 | 1,1 % / **2,7** | 2 | 13,1 °E 56,4 °N (Skåne) ja 12,4 °E 55,9 °N (Sjællandin pohjoiskärki). Ks. §3 — ylitys siirtyi Kattegatista Juutinraumaan. |
+| `sofia\|ateena` | 37,1 % / 61,3 | 1,3 % / 2,7 | 1 | 22,2 °E 39,7 °N, **Thessalia (Larissan seutu)** — juuri se historiallinen maatie Thessalonikin ja Larissan kautta, jonka edellinen raportti nimesi. Thermaikoksen lahti ja Euboian salmi jäävät itään. |
+| `berliini\|kobenhavn` | 40,8 % / 56,5 | 32,2 % / 25,5 | 2 | 13,2 °E 53,1 °N ja 11,9 °E 54,1 °N (Mecklenburgin rannikko). Ks. §3 — ylitys siirtyi Itämeren poikki lyhimpään lauttaväliin. |
+| `townsville\|cairns` | 38,7 % / 53,5 | **0 %** | 1 | 145,9 °E 19,3 °S, Queenslandin sisämaa. |
+| `yangon\|bangkok` | 29,8 % / 51 | **0 %** | 1 | 97,2 °E 17,9 °N, Mon ja Thaimaan raja. Suora ylitti Martabaninlahden. |
+| `panama\|bogota` | 18,9 % / 45,4 | 0,5 % / 1,3 | 1 | 77,9 °W 8,7 °N, Darién. |
+| `lontoo\|pariisi` | 31,7 % / 45,1 | 10,4 % / **16,8** | 1 | 1,8 °E 50,9 °N, Calais'n seutu. Ks. §3 — ylitys siirtyi Doverin salmeen. |
+| `vancouver\|sanfrancisco` | 12,5 % / 43,3 | 0,6 % / 3 | 1 | 121,9 °W 49,0 °N, Kaskadien sisämaa. Suora kulki Georgian salmen ja Puget Soundin yli. |
+| `tallinna\|riika` | 26,8 % / 41,7 | **0 %** | 1 | 24,9 °E 57,1 °N, Pärnun sisämaa. Suora ylitti Riianlahden. |
+| `hanoi\|hongkong` | 19 % / 41,7 | **0 %** | 1 | 113,2 °E 23,6 °N, Guangdongin sisämaa. Suora ylitti Tonkininlahden. |
+| `auckland\|wellington` | 45,1 % / 41,2 | 1,7 % / 3 | 1 | 175,5 °E 39,3 °S, Pohjoissaaren keskiosa. |
+| `montreal\|halifax` | 13,4 % / 40,1 | 0,7 % / 2,6 | 2 | 73,2 °W 45,9 °N ja 64,5 °W 46,1 °N (Northumberlandin salmen ranta). Suora ylitti Fundynlahden. |
+| `kappalmas\|kumasi` | 23,9 % / 38,7 | **0 %** | 1 | 3,8 °W 5,7 °N, Norsunluurannikon sisämaa. |
+| `kioto\|tokio` | 18,4 % / 34,5 | **0 %** | 1 | 134,2 °E 35,0 °N, Honshun pohjoisrannikko. Suora kulki Seton sisämeren yli. |
+| `jakutsk\|magadan` | 4,5 % / 31,8 | **0 %** | 1 | 144,4 °E 61,8 °N, Kolyman ylänkö. Suora sipaisi Ohotanmerta. |
+| `istanbul\|izmir` | 24,3 % / 28,6 | 2,6 % / 3,2 | 1 | 29,8 °E 40,7 °N, Bursan seutu. Marmaranmeren kierto etelästä. |
+| `asuncion\|buenosaires` | 9,4 % / 27,7 | **0 %** | 1 | 59,1 °W 33,7 °S, Paranán länsipuoli. |
+| `yellowknife\|churchill` | 3,5 % / 25,1 | **0 %** | 1 | 94,6 °W 57,9 °N, Manitoba Churchillista etelään (Hudsoninlahti). |
+| `kuwait\|persepolis` | 12,7 % / 24,4 | **0 %** | 2 | 47,2 °E 29,1 °N ja 48,7 °E 30,9 °N: Persianlahden pohjukan kierto Basran kautta. Ainoa reitti, jolla oli jo `via` (2 → 2). |
+| `cooberpedy\|adelaide` | 10 % / 24,2 | **0 %** | 1 | 137,6 °E 31,6 °S, Spencerinlahden pohjukka. |
+
+**Yhteensä 41 reittiä, 46 uutta välipistettä.** 30 reittiä on nyt
+täysin kuivalla (0 %); yhdeksällä jää 1,3–5,7 yksikköä, mikä on pakan
+oman rantaviivan karkeutta eikä kartalla erottuvaa; kaksi (`lontoo|pariisi`
+16,8 ja `berliini|kobenhavn` 25,5) ovat aitoja lauttavälejä.
+
+---
+
+## 3. Meritse vai maitse — omistajan kolme epäilystä ja se, mitä löysin
+
+Käytin yhtä ratkaisusääntöä, ja se on mitattava eikä makuasia:
+**`type: 'sea'` vain jos maatietä EI OLE.** Syy on mekaaninen ja
+löytyi koodista: `js/rules.js stepsFrom` suodattaa `if (e.type !== mode)
+continue`, joten meriksi muuttaminen **poistaa reitin maamatkustajan
+verkosta**. Se muuttaa sitä, kuka on kenenkin naapuri MAITSE — eli
+täsmälleen sitä, minkä ohje kielsi. Siksi jokainen tapaus, jolla on
+yhtenäinen maayhteys, sai `via`-pisteen.
+
+### Omistajan kolme epäilystä: kaikki kolme ovat maareittejä
+
+**`pietari|helsinki` — MAA, ja tämä on vahvin tapaus koko listalla.**
+Riihimäki–Pietari-rata avattiin **11.9.1870**, eli Helsingistä
+Pietariin pääsi vuonna 1873 junalla Riihimäen, Lahden ja Viipurin
+kautta. Maayhteys on lisäksi katkeamaton Karjalan kannaksen yli.
+Yksi välipiste (29,1 °E 61,0 °N ≈ Viipuri) vie reitin kannakselle ja
+vesiosuus putoaa 72,8 %:sta **nollaan**. Laivayhteyskin oli olemassa,
+mutta pakan reitti on maareitti eikä sitä tarvitse muuttaa
+kertoakseen totuuden.
+
+**`neworleans|miami` — MAA.** Yhdysvaltain Meksikonlahden rannikko on
+katkeamatonta maata, ja vuonna 1873 sillä kulki rautatie: New Orleans–
+Mobile valmistui 1870, ja Floridassa oli Jacksonville–Lake City–
+Tallahassee-yhteys. (Miami itse on anakronismi — kaupunki perustettiin
+1896 — mutta se on pakan valinta eikä tämän erän asia.) Kaksi
+välipistettä vie reitin rannikkoa pitkin niemimaalle: 82,2 % → **0 %**.
+Tämä on `reitit-zoomtasot.png`:n toinen ennen/jälkeen-pari.
+
+**`lagos|kamerun` — MAA, mutta tämä on listan tulkinnanvaraisin.**
+Nigerin suisto on 1873 käytännössä kulkukelvoton, ja Lagosista
+Kameruniin matkustettiin höyrylaivalla rannikkoa pitkin. Maayhteys on
+silti katkeamaton suistosta pohjoiseen (Yorubamaa → Cross River →
+Kamerun), ja yksi välipiste (8,8 °E 5,5 °N) vie reitin sitä kautta:
+50 % → **0 %**. Reitillä on `steps: 1`, eli peli tulkitsee sen jo nyt
+yhdeksi hypyksi. **Jos haluat tästä merireitin, se on yhden kentän
+muutos** — mutta silloin Lagos ja Kamerun eivät ole enää naapureita
+maitse, ja se on sinun ja omistajan päätös eikä minun.
+
+### Kolme tapausta, joilla maatietä EI ole — ja mitä tein niille
+
+Nämä eivät olleet omistajan listalla mutta ovat sen looginen loppu:
+**Sjælland ja Britannia ovat saaria.** A* ei löytänyt niille
+maayhteyttä millään ruudun koolla aina 2 yksikköön asti.
+
+| reitti | mitä tein | ennen → jälkeen | mikä ylitys nyt on |
+| --- | --- | --- | --- |
+| `lontoo\|pariisi` | via 1,8 °E 50,9 °N | 45,1 → **16,8** | Doverin salmi, eli vuoden 1873 Dover–Calais-postilaiva |
+| `oslo\|kobenhavn` | via Skåne + Sjællandin pohjoiskärki | 61,4 → **2,7** | Juutinrauma Helsingborgin ja Helsingørin välissä (kapein kohta) |
+| `berliini\|kobenhavn` | via Brandenburg + Mecklenburgin rannikko | 56,5 → **25,5** | Mecklenburgin lahti, eli Warnemünde–Gedser-lauttaväli |
+
+**En muuttanut niiden `type`-kenttää, enkä suosittele sitä ilman
+omistajan erillistä päätöstä.** Seuraus olisi iso: Lontoo ja Edinburgh
+jäisivät maamatkustajalle saareksi, josta pääsee pois vain laivalla ja
+vain jos rahat riittävät (`SEA_FEE` 100), ja sama koskisi Kööpenhaminaa,
+joka ei ole pakan `islands`-listalla. Se on pelisuunnittelua eikä
+kartan korjaamista. Nykyisellä korjauksella **kuva kertoo totuuden
+ilman mekaniikan muutosta**: viiva ylittää veden siitä kapeimmasta
+kohdasta, josta 1873 mentiin lautalla.
+
+`berliini|kobenhavn` on ainoa, joka jää yli 20 yksikön. Kokeilin myös
+Jyllannin ja Fynin kautta kiertävää tietä (kaksi lyhyttä
+salmiylitystä): pakan omalla rantaviivalla se on **58,5 yksikköä**
+vettä eli selvästi huonompi, koska Fyn ja Sjælland eivät ole siinä
+erikseen ratkaistuja. 25,5 on paras saatavilla oleva.
+
+### Rajan alle jäävät, joita en koskenut (raportoitu, ei korjattu)
+
+Kynnyksen (20 yks) alle jää kahdeksan reittiä, joilla on 10–18
+yksikköä yhtenäistä vettä. Ne ovat kaikki oikeita, tunnistettavia
+kapeikkoja eivätkä virheitä: `jerusalem|kairo` (17,5) ja `siinai|kairo`
+(17,3) ylittävät **Suezin kannaksen ja kanavan** — kanava avattiin 1869,
+ja Qantaran lautta on ajan mukainen; `iguazu|buenosaires` (17,2) ja
+`portoalegre|buenosaires` (15,5) ylittävät **Paranán ja Uruguayn**;
+`tukholma|kobenhavn` (12,5) on **Juutinrauma**; `labrador|iqaluit`
+(12,5) on **Belle Islen salmi**. Jos haluat nekin siistiksi, sanon
+etukäteen että kolme niistä on samaa saarikysymystä kuin §3:n taulukko.
+
+---
+
+## 4. Katselukappale — mitä kuvassa on ja mitä siinä EI ole
+
+`reitit-zoomtasot.png` (haaran juuressa, committoimatta):
+
+1. **z2–z7, kuusi ruutua.** Jokainen 512 × 512 laattapikseliä 1:1,
+   ei suurennosta. Ruutu on haettu koneellisesti: reittien näytteet
+   lasketaan laatoittain ja valitaan se laatta, jossa kaikki kolme
+   lajia ovat mahdollisimman tasaisesti. Kaikilla tasoilla löytyi
+   kolmen lajin ruutu, joten punaisia puuttumismerkintöjä ei ole
+   yhtään — koodi silti tekee ne, jos jokin laji puuttuu.
+2. **Selite** kolmesta lajista: maa (ruskea, helmet), meri
+   (preussinsininen, helmet), lento (sinooperi, katkoviiva, ei helmiä).
+3. **Ateenan eteläpuoli, ennen/jälkeen**, z7 (512 px = 71
+   lautayksikköä), punainen rengas silmukan kohdassa (6614, 1954).
+   Vasemmalla vanha käyrä leikkaa itsensä, oikealla ei. **Muste ja
+   viivanleveys ovat molemmissa uudet**, jotta erona on vain geometria.
+4. **New Orleans–Miami, ennen/jälkeen**, z4 (512 px = 569 yks).
+
+**Rehellisyysvaraus, joka lukee myös kuvassa:** tausta on kaavio eikä
+lopullinen maasto. Kontissa ei ole pyramidin raaka-aineistoa (Natural
+Earth 10m + ETOPO), joten rantaviiva on repossa valmiina olevasta
+`ne50.geojson`:sta (PD, Natural Earth 50m) ja maasto on tasainen.
+**Paperi, patina, kehys, projektio, arkkikoordinaatit ja reittien
+piirto ovat oikeaa moottoria** (`tools/fokuskartta/maailmapiirto.js`,
+samat lukitut mitat kuin `generoi-laattapyramidi.mjs`:ssä) — arvioitava
+asia eli viivat on siis aitoa jälkeä, tausta ei ole. Huomaa myös, että
+ne50 on hitusen karkeampi kuin tuotannon 10m-aineisto: pikselintarkkaa
+rantaviivan sivuamista ei tästä kuvasta kannata tuomita.
+
+---
+
+## 5. Saumat — ei rikottu, ja se on rakenteellista
+
+Heitto lasketaan yhä REITIN TUNNUKSESTA (`r.siemen`, FNV-hash reitin
+id:stä) ja **solmun järjestysluvusta** — ei pikselistä eikä laatan
+nurkasta. Solmun järjestysluku on sama luku joka lohkossa, joka
+laatalla ja joka ajolla, ja välipisteiden interpolointi on
+deterministinen funktio siitä. Sauma on siis rakenteellisesti
+poissuljettu, ei vain testattu. Reittien pistemäärä palasi
+24 409:ään (edellinen erä oli pudottanut sen 2 174:ään), mikä on sama
+kuin mainissa.
+
+**En ajanut `--saumatesti`ä uudestaan**, koska sen ainoa mielekäs ajo
+on oikealla aineistolla eikä sitä ole kontissa. Edellisen erän tulos
+pätee yhä: lohkorajan pahin kanavaero oli **täsmälleen sama ennen ja
+jälkeen** (11 z5:llä, 36 z7:llä). Suosittelen yhä
+`node tools/generoi-laattapyramidi.mjs <kansio> --data <aineisto>
+--saumatesti` oikealla aineistolla ennen tuotantoajoa.
+
+---
+
+## 6. Mitä jäi tekemättä ja miksi
+
+- **Pysyvä `tools/korjaa-maareitit.mjs` + testi** maareiteille
+  (`tests/rules.test.mjs`:ssä on jo pari merireiteille). Tämän erän
+  välipisteet laskettiin sellaisella työkalulla, mutta pidin sen
+  worktreen ulkopuolella, koska ohje rajasi muutokset via-pisteisiin ja
+  `type`-kenttään. Suosittelen sitä omaksi eräkseen: se estäisi
+  vastaavan ajautumisen jatkossa koneellisesti.
+- **`nikosia|kairo`** ei ratkea `korjaa-merireitit`-työkalulla. Ei uusi
+  eikä tämän erän aiheuttama (läpäisee pelin testin), joten jätin.
+- **Kolmen saariylityksen `type`-muutos** (§3) — omistajan päätös.
+- **Pyramidiajo ja versionosto** — ohjeen mukaan omistaja päättää.
+- **Havainto ohimennen, en korjannut:** z2 on yhä tiheän näköinen
+  (näkyy katselukappaleen ensimmäisessä ruudussa). Se on suora seuraus
+  paksummasta musteesta; jos se häiritsee, lentoreiteille voi antaa
+  oman ilmestymiskynnyksensä (nyt kaikki lajit ilmestyvät samalla
+  kynnyksellä 0,22).
+
 # Opus → Fable: reitit käsin piirretyiksi (haara claude/reitit-kasin)
 
 Erä valmis, pushattu haaralle. **Ei PR:ää, ei versionostoa, ei
