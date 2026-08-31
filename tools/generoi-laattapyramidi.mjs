@@ -7,6 +7,7 @@
  *        [--alue lon0,lat0,lon1,lat1] [--laatta 512] [--laatu 0.9] \
  *        [--lohko 4] [--kaariminuutit 3] [--muoto webp]
  *        [--harva] [--harvamittaus] [--saumatesti] [--kuiva]
+ *        [--vain-lista] [--paikkaus <lähdeversio>]
  *
  * Omistajan päälinjaus 30.8.2026 (Raamattu, "YKSI MAAILMANBITTIKARTTA -
  * MAALEHDISTA LUOVUTAAN"): *"koko maailma on kokoajan yksi iso
@@ -235,6 +236,7 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
   console.error('Käyttö: node tools/generoi-laattapyramidi.mjs <kohdekansio> '
     + '[--data <kansio>] [--tasot 0-4] [--alue lon0,lat0,lon1,lat1] '
     + '[--laatta 512] [--laatu 0.9] [--muoto webp] [--kuiva] '
+    + '[--vain-lista] [--paikkaus <lähdeversio>] '
     + '[--saumatesti [--saumakohta sarake,rivi]]');
   process.exit(1);
 }
@@ -306,6 +308,39 @@ const VERSIO = valitsin('versio', new Date().toISOString().slice(0, 10));
  */
 const NOSTOTASO = lippu('nostotaso');
 const NOSTOVERSIO = valitsin('nostoversio', VERSIO);
+/*
+ * PAIKKAUS (`--paikkaus <lähdeversio>`) — RAJATUN ALUEEN KORJAUS.
+ *
+ * Koko pyramidin uudelleenajo on tunteja, mutta virhe on melkein aina
+ * paikallinen: yhden järven väri, yhden vuoren nimi, yhden saaren
+ * rannikko. Paikkausajo piirtää VAIN alueeseen osuvat laatat (`--alue`)
+ * ja kopioi loput lähdeversiosta uuteen versiopolkuun ämpärin sisällä
+ * palvelinkopiona. Mitattuna Kreikan kokoinen laatikko on 55 laattaa
+ * kaikilta kahdeksalta tasolta eli minuutteja — ei tunteja.
+ *
+ * TÄMÄ TOIMII VAIN KOSKA LAATTA EI RIIPU NAAPURISTAAN. Jokainen laatta
+ * lasketaan arkin koordinaateista, ja patina on sidottu arkin pikseliin
+ * (ks. REUNUS ja `arkki`-asetus lohkopiirrossa) — sama laatta samasta
+ * aineistosta on tavulleen sama riippumatta siitä, piirrettiinkö se
+ * maailma-ajossa vai alueajossa. Paikatun ja kopioidun laatan väliin ei
+ * siis voi syntyä saumaa.
+ *
+ * TÄMÄ LIPPU EI PIIRRÄ MITÄÄN ERI TAVALLA. Se on pelkkää
+ * KIRJANPITOA luettelossa: mistä versiosta muuttumattomat laatat
+ * kopioitiin ja mikä laatikko piirrettiin uudelleen. Ilman sitä
+ * `pyramidi.json` väittäisi paikatusta versiosta joko liikaa
+ * (`alue` = koko pyramidi olisi vain tuo laatikko) tai liian vähän
+ * (ei jälkeä siitä, että versio on koottu kahdesta ajosta).
+ *
+ * Itse kopion ja turvatarkistukset tekee tools/paikkaa-pyramidi.mjs;
+ * tämä työkalu piirtää ja luetteloi, kuten aina.
+ */
+const PAIKKAUS_LAHDE = valitsin('paikkaus', null);
+if (PAIKKAUS_LAHDE && PAIKKAUS_LAHDE === VERSIO) {
+  console.error(`--paikkaus: lähdeversio ja uusi versio ovat sama (${VERSIO}). `
+    + 'Paikkaus ei saa koskaan kirjoittaa lähteen polkuun.');
+  process.exit(1);
+}
 /** Nostotason matalin taso: kaukotasoilla nostolaattoja ei ole. */
 const NOSTO_ALIN = 5;
 /*
@@ -448,6 +483,15 @@ const ALUE = alueTeksti
     };
   })()
   : null;
+
+/*
+ * Paikkaus ilman laatikkoa olisi hiljainen koko maailman uudelleenajo
+ * uuteen versioon — juuri se, mitä paikkauksella vältetään.
+ */
+if (PAIKKAUS_LAHDE && !ALUE) {
+  console.error('--paikkaus vaatii --alue lon0,lat0,lon1,lat1.');
+  process.exit(1);
+}
 
 /* ------------------------------------------------------------ arkki */
 
@@ -742,6 +786,35 @@ if (ALUE) {
  * (--vain-luettelo).
  */
 let meriSavy = null;
+
+/*
+ * VAIN LISTA (`--vain-lista`): kirjoittaa työlistan — täsmälleen ne
+ * laatat jotka TÄMÄ komento piirtäisi — tiedostoon `laatat.json` ilman
+ * aineistoa, selainta ja piirtoa.
+ *
+ * TÄMÄ ON PAIKKAUKSEN TODISTUSAINEISTO. Paikkausajon jälkeen on
+ * osoitettava, että vain alueen laatat muuttuivat ja kaikki muut ovat
+ * bitilleen lähdeversion laattoja (tools/paikkaa-pyramidi.mjs vertaa).
+ * Vertailu tarvitsee alueen laattajoukon, ja sen on oltava SAMA joukko
+ * jonka piirto käyttää — ei uudelleen johdettu geometria, joka voisi
+ * ajautua hitusen eri tulokseen ja vaientaa juuri sen laatan, joka
+ * meni pieleen. Lista tulee siksi samasta `tyot`-taulukosta.
+ */
+if (lippu('vain-lista')) {
+  mkdirSync(kohdekansio, { recursive: true });
+  const polku = join(kohdekansio, 'laatat.json');
+  writeFileSync(polku, `${JSON.stringify({
+    versio: VERSIO,
+    muoto: MUOTO,
+    laatta: LAATTA,
+    nostotaso: NOSTOTASO || undefined,
+    alue: ALUE,
+    tasot: TASOT,
+    laatat: tyot.map(({ mitat, sarake, rivi }) => [mitat.z, sarake, rivi]),
+  })}\n`);
+  console.log(`\n--vain-lista: ${polku} (${tyot.length} laattaa)`);
+  process.exit(0);
+}
 
 if (KUIVA) {
   console.log('\n--kuiva: vain luettelo, ei piirtoa.');
@@ -1741,6 +1814,16 @@ function teeLuettelo() {
   laatta: LAATTA,
   muoto: MUOTO,
   laatu: LAATU,
+  /*
+   * PATINATASO ON LUETTELOSSA, JOTTA PAIKKAUS OSAA JATKAA SAMALLA
+   * RESEPTILLÄ. Peli ei lue tätä — paikkausajo lukee. Paikatut laatat
+   * asetetaan kopioitujen naapureiden viereen, ja jos ne piirrettäisiin
+   * eri patinatasolla (tai eri laadulla, muodolla tai laattakoolla),
+   * raja näkyisi kartalla vaikka geometria täsmäisi pikselilleen.
+   * Kaikki neljä ovat siksi luettelossa ja tools/paikkaa-pyramidi.mjs
+   * lukee ne lähdeversion luettelosta ajon asetuksiksi.
+   */
+  patina: PATINA_TASO,
   // Arkin paikka LAUDAN koordinaateissa: kartta-ala + atlaskehyksen
   // paperimarginaali sen ylä- ja alapuolella (y on negatiivinen).
   arkki: arkinBbox,
@@ -1837,7 +1920,26 @@ function teeLuettelo() {
      */
     laatasto: HARVA ? laatastoBase64(m) : null,
   })),
-  alue: ALUE,
+  /*
+   * ALUE kertoo, MIKÄ OSA PYRAMIDIA TÄSSÄ VERSIOSSA ON OLEMASSA.
+   * Paikkausajossa se on koko pyramidi: muuttumattomat laatat
+   * kopioitiin lähdeversiosta uuteen versiopolkuun, joten uusi versio
+   * on täysi. Piirretty laatikko ei siis kuulu tähän kenttään vaan
+   * `paikkaus`-olioon — muuten luettelo väittäisi, että pyramidissa on
+   * vain se laatikko, ja jokainen tarkistus joka lukee `alue`-kenttää
+   * valehtelisi.
+   */
+  alue: PAIKKAUS_LAHDE ? null : ALUE,
+  /*
+   * PAIKKAUKSEN KIRJANPITO: mistä versiosta muuttumattomat laatat
+   * kopioitiin ja mikä laatikko piirrettiin uudelleen. Kenttä on
+   * olemassa vain paikatuissa versioissa (vanhoissa luetteloissa sitä
+   * ei ole, eikä peli lue sitä), ja se on ainoa jälki siitä, että
+   * versio on koottu kahdesta ajosta. Ilman sitä myöhempi lukija ei
+   * voisi tietää, minkä ajon patina- ja aineistotila kussakin laatassa
+   * on.
+   */
+  paikkaus: PAIKKAUS_LAHDE ? { lahde: PAIKKAUS_LAHDE, alue: ALUE } : undefined,
   lahteet: [
     'Natural Earth 10m (Kelso & Patterson) — public domain',
     'ETOPO1 Global Relief (NOAA, Amante & Eakins 2009) — public domain',
@@ -1873,7 +1975,12 @@ if (existsSync(luetteloPolku)) {
         luettelo.tasot = [...(vanha.tasot ?? []).filter((t) => !omat.has(t.z)), ...luettelo.tasot]
           .sort((a, b) => a.z - b.z);
       }
-      luettelo.erat = [...(vanha.erat ?? []), { tasot: TASOT, alue: ALUE, nostotaso: NOSTOTASO || undefined }];
+      luettelo.erat = [...(vanha.erat ?? []), {
+        tasot: TASOT,
+        alue: ALUE,
+        nostotaso: NOSTOTASO || undefined,
+        paikkaus: PAIKKAUS_LAHDE || undefined,
+      }];
       // Osa-ajo matalilla tasoilla (koeajo z0–z3) ei saa pyyhkiä
       // olemassa olevaa nostotasoa pois luettelosta.
       luettelo.nostotaso = luettelo.nostotaso ?? vanha.nostotaso ?? null;
