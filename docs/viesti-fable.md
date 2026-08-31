@@ -1,3 +1,236 @@
+# Opus → Fable: vaiennut nimiö — kartalla ei ole enää yhtään nimetöntä merkkiä (31.8.2026)
+
+Haara `claude/vaiennut-nimio`. **Pohjana `claude/matkakirja-paatoimittaja-8glw2i`
+(bc77d9d2, v1382)**, koska PR #1824 ei ole vielä mainissa (mainin kärki on
+b282b220 / v1381) ja vika on juuri v1382:n työssä. Ei versionostoa, ei PR:ää,
+ei pyramidiajoa — kuten pyysit.
+
+Muutetut tiedostot: `js/karttanimet.js`, `js/fokusryhmat.js`,
+`tools/savukkeet/savuke-fokuskohteet.mjs`. **`js/fokusniput.js` on
+koskematon** — mitattu todiste kohdassa 4.
+
+## 1. Syy: mittasin sen, eikä se ole se, mitä arveltiin
+
+Edellinen erä totesi oikein, ettei vika ole pilkkulistan leveydessä. Arvaus
+"sarakkeen tiiviys" osoittautui kuitenkin vain sivujuoneksi. Instrumentoin
+ladonnan niin, että jokaisesta pudotetusta nimiöstä kirjattiin **jokaisen
+ehdokaspaikan estäjä nimeltä**. Syitä on kaksi, ja ne ovat eri vikoja.
+
+**Syy A — maailman tiheyskynnys vaiensi leveät lehdet kokonaan.**
+`js/karttanimet.js KYNNYS.kohdeNimi = 0.45` on CSS-pikseliä lautayksikköä
+kohti, ja se johdettiin MAAILMANKARTAN nimitiheydestä (*"261 kaupunkia
+jakautuu W pikselin maailmalle"*). Leveä maalehti ei yllä siihen edes koko
+ruudun kokoisena: Kiinan lehti on 2773 lautayksikköä leveä, joten iPadin 834
+pikselin ruudulla mittakaava on täytenäkin **0,30**. Mitattuna Kiinan kartalla
+oli kolme merkkiä ja **nolla nimiötä** — koko ladontalohko ohitettiin.
+
+**Syy B — ehdokaskehä oli umpinainen, eikä leveydellä ollut sen kanssa
+mitään tekemistä.** Ehdokkaita oli 12: neljä merkin kylkeä ja kahdeksan
+vinoa nostoa, kaikki ±25 CSS-pikselin sisällä. Pudotus tapahtuu rivillä
+`if (!asetettuK) { pudotettu += 1; continue; }` (`lado()`), ja sinne päädyttiin
+vasta kun **kaikki 12** olivat varattuja. Ateenan Skandaalit-kuori
+("Maratonhuijaus, Helenan korut…") törmäsi järjestyksessä: Akropolis-museo,
+Epidauros, Korintin kanava, Olympia, Ermoupoli, Kalamata, Taÿ́getos ja Ateenan
+oma kaupunkipiste. Kokeilin sen myös lyhimmällä mahdollisella asulla
+("Marato…") — **sama kaksitoista estettä**. Se selittää edellisen erän
+havainnon budjeteista 100/160/240 täsmälleen: este on naapurin nimiö, ei oma
+leveys.
+
+Sarakkeen tiiviys ei siis ollut syy. Reunuskilpikonna ei ole edes nipussa
+(22,2 lautayksikköä Ateenasta), ja Ateenan sarakkeen riviväli on 17,5
+lautayksikköä eli 30,4 ruutupikseliä, kun nimiölaatikko on 22,6 korkea —
+naapuririvit eivät ylety toisiinsa. Ainoa kohta, jossa tiiviys oikeasti
+puri, oli Berliini, ja sielläkin toisin päin kuin arveltiin: rako naapurien
+nimiöiden välissä oli 13,4 pikseliä ja nimiö vie 12,6, eli **rako riitti**,
+mutta yksikään kiinteän kehän paikoista ei osunut sen 0,8 pikselin ikkunaan.
+
+## 2. Laajuus: 17 merkkiä 256:sta, kymmenessä maassa kahdestakymmenestäkahdesta
+
+Mittasin koko maailman: jokaisen fokuskohdemaan lehti kartalle lehden
+perustasolle, merkit `ui.fokuskohdeRyhmat`istä ja nimiöt kartalta
+(`.karttanimi-kohde`). Luettelo (`pyramidi.json`) syötettiin oikeana, koska
+ilman sitä peli luulee nimiä poltetuiksi eikä latoisi mitään — juuri siksi
+tätä ei ole ennen mitattu.
+
+| ruutu | ennen | jälkeen |
+| --- | --- | --- |
+| iPad 834 × 1112 | **17 / 256** (10 maata) | **0 / 256** |
+| iPhone 390 × 844 | **71 / 256** (14 maata) | **8 / 256** |
+
+Ennen, iPadilla: BGR 1 (Sofian eläintarha), BIH 1 (Liittämiskriisi), CHN 3
+(Yuanmingyuan, Taishan, Etelä-Kiinan meri), DEU 2 (Velkojen linna, Berliinin
+karhu), GBR 1 (Poyais), GRC 2 (Reunuskilpikonna, Maratonhuijaus…), HUN 2
+(Budan luolat, Seuson hopeat), ITA 2 (Duomon gnomoni, Modiglianin päät),
+ROU 1 (Moldoveanu), TUR 2 (Marmaranmeri, Vararikko 1875…).
+
+Kapea ruutu on pahempi, koska ladonta on ruutupikseleissä: iPhonella
+Kreikan lehti on 0,83 CSS-pikseliä lautayksikköä kohti eli puolet iPadin
+1,74:stä, jolloin sama nimiö on suhteessa karttaan kaksi kertaa isompi.
+Poltossa tämä kääntyy hyväksi: laattatason mittakaava (z7 ≈ 7,2 px/yksikkö)
+on moninkertainen kumpaankin nähden, joten paperia on enemmän eikä vähemmän.
+
+## 3. Korjaus: viisi askelta, jokainen mitattu erikseen
+
+Prioriteetti oli sinun: nimi ennen tiiviyttä. Jokainen askel purki oman
+esteensä, ja luvut ovat iPadin koko maailman mittauksia.
+
+1. **Kohdenimiöllä ei ole omaa tiheyskynnystä — sen kynnys on lehti.**
+   `KYNNYS.kohdeNimi` poistettu. Perustelu on koodissa: kohteet eivät ole
+   maailmanlaajuinen nimistö vaan yhden lehden merkintöjä (1–35 kpl), ja ne
+   ovat kartalla vain kun se lehti täyttää vähintään puolet näkyvästä
+   kartasta (`js/fokuskohteet.js LEHDEN_VAHIN_OSUUS`). **Tiheysportti on siis
+   jo olemassa**, ja kerros tyhjentää nimet heti kun merkit sammuvat. Maailman
+   kynnys ei sen päällä harventanut litaniaa vaan valitsi maat, joissa nimiä
+   ei näy koskaan. → 17 ⇒ 14.
+2. **Nostolle kahdeksan suuntaa neljän sijaan.** Vinojen neljän rinnalle
+   suorat neljä (sama korkeus oikealle ja vasemmalle, sama sarake ylös ja
+   alas). **Nostojen pituudet eivät muuttuneet** (`NOSTON_PITUUDET` = 14 ja
+   26 CSS-px) — vain suuntia on enemmän. Vinot kokeillaan ensin, joten jo
+   kelvannut asettelu ei muutu. → 14 ⇒ 6.
+3. **Väljyysvara väistyy ennen vaikenemista.** `NIMION_VALJYYS` on ILMAA eikä
+   mustetta: yleistyskynnys, joka harventaa litaniaa. Kun valittavana on ilma
+   tai hiljaisuus, ilma väistyy — nimi ei silti kosketa naapuriaan, koska
+   naapurin oma varaus on voimassa. → 6 ⇒ 1.
+4. **Liuku: sama paikka juuri esteen ohi.** Jos ehdokaslaatikko törmää, sitä
+   siirretään pystysuunnassa täsmälleen sen verran, että se ohittaa esteen —
+   ei yhtään enempää, ja enintään pisimmän noston verran. Tämä purki
+   Berliinin 0,8 pikselin ikkunan. → 1 ⇒ **0**.
+5. **Nimiö lyhenee ennen kuin se vaikenee** (sinun listaamasi keino). Jos
+   mikään paikka ei kelpaa täydellä nimellä, haetaan puolituksella pisin
+   katkaistu asu, joka mahtuu; alaraja on nimen omat kuusi ensimmäistä
+   merkkiä ja katko. **Lopullisessa asussa tätä ei tarvita kertaakaan koko
+   maailmassa iPadilla** — se on turvaverkko, ei käytössä oleva keino.
+
+**Katkaisusääntöä on nyt yksi.** Se oli `js/fokusryhmat.js ryhmaNimio`n sisällä
+(pilkkulistan katkaisu + kolme pistettä). Siirsin sen `js/karttanimet.js`iin
+funktioksi `katkaiseNimio(teksti, leveys, mittaa)` ja `ryhmaNimio` kutsuu sitä.
+Mittari annetaan kutsujalta, joten yksiköt eivät sekoitu: pilkkulista mitataan
+edelleen **taulukolla kirjaston yksiköissä** (polton ehto, v1382), ladonta
+ruutupikseleissä omalla kirjasimellaan. Sääntö, katkaisumerkki ja sanarajan
+0,75-osuus ovat sanatarkasti entiset.
+
+## 4. Mitä EI muuttunut: hyväksytty sarake on bittiin asti sama
+
+`js/fokusniput.js` on koskematon, ja se näkyy mittauksessa. Kaikissa 22 maassa
+**nippuviivan pisin mitta ja sarakkeen korkeus ovat identtiset ennen ja
+jälkeen**: Ateena 11,46 / 35,09 (39,8 → 11,5 pitää siis edelleen), Rooma
+30,58 / 60,76, Berliini 46,24 / 94,25, Pariisi 61,26 / 124,88, Istanbul
+34,77 / 94,51. Kategoria per kaupunki, merkkien määrä ja niiden paikat ovat
+ennallaan; muutos koskee vain sitä, mihin NIMI ladotaan.
+
+Nimiön oma nostoviiva (`.karttanimi-nosto`, eri asia kuin nippuviiva) lyheni
+useammin kuin piteni: Istanbul 21,9 → 10,6, Kairo 17,1 → 9,7, Lontoo 17,0 →
+13,0, Pariisi 11,1 → 8,1, Berliini 8,4 → 7,9 lautayksikköä. Piteni: Ateena
+14,5 → 19,3, Rooma 16,7 → 22,1, Bukarest 13,3 → 17,0. **Katto nousi liu'un
+verran: 25,2 → 33,5 CSS-pikseliä** (Ateena; kaava `merkkiR + kork +
+NOSTON_LIUKU`). Se on 4,8 lautayksikköä Kreikan lehdellä — pieni verrattuna
+siihen 28 yksikköön, jonka omistajan hyväksymä sarakemuutos lyhensi.
+
+## 5. Toistettavuus selaimen ulkopuolella säilyy
+
+Ladonta on edelleen puhdas funktio laudan datasta ja mittakaavasta
+(`px` = CSS-pikseliä lautayksikköä kohti). **En lisännyt yhtään ruudun koosta,
+dpr:stä tai näkymästä riippuvaa lukua**; kaikki uudet mitat ovat CSS-pikseleitä
+kuten entisetkin, ja `sovita`/`kutistaen` lukevat vain `px`:ää ja tekstin
+leveyttä. v1382:n kiinnittämät neljä kohtaa (erottelusiirto, nippuun pääsy,
+sarake, yhdysviivan alkupää) ovat koskemattomia — kohdan 4 identtiset luvut
+ovat siitä myös todiste. Polton ehto siis pitää.
+
+Yksi vanha varaus kannattaa silti tietää polttoerää varten (EI uusi, EI minun
+tekemäni): `js/karttanimet.js` mittaa nimen leveyden `measureText`illä, kun
+taas ryhmänimiön katkaisu käytti jo v1382:sta lähtien taulukkoa. Jos
+generaattorin kirjasin eroaa laitteen kirjasimesta, ladonnan törmäystulos voi
+erota — sama koski kaupunkien nimiä jo ennen tätä erää. Jos haluat, tämä
+kannattaa ratkaista polttoerässä siirtämällä ladonnan mitta samaan taulukkoon;
+en tehnyt sitä, koska se on koko tiedoston laajuinen muutos eikä kuulunut
+toimeksiantoon.
+
+## 6. Savukeväite, jota ei ollut
+
+Lisäsin `tools/savukkeet/savuke-fokuskohteet.mjs`:ään kokeen **1a5**. Se oli
+koko vian syy siinä mielessä, että kaikki entiset nimiöväitteet (1a1–1a4)
+lukevat merkin RASTERIA — eli sitä nimiötä, jota pelaaja ei enää näe, koska
+laatoissa `nimiot: false`. Ruutuun ladottu kerros oli täysin vartioimatta.
+
+Koe avaa oman sivun, jolle syötetään laattaluettelo `nimiot: false` (ilman
+sitä ladonta vaikenee eikä koe mittaisi mitään), ja väittää kolme asiaa:
+
+- laattojen luettelo antaa pelin latoa nimet (kokeen ehto — ilman tätä muut
+  väitteet olisivat tyhjiä),
+- **jokainen nimellinen merkki saa nimiönsä kartalle** — ei "valtaosa" kuten
+  rasteriväitteessä 1a1: poltettuna vaiennut nimiö jää vaienneeksi seuraavaan
+  ajoon asti,
+- kartalla ei ole kohdenimiötä ilman merkkiä.
+
+Katkaistu nimiö kelpaa, mutta vain nimen omana alkuna, joten naapurin nimellä
+ei pääse läpi.
+
+**Väite todennettu molempiin suuntiin.** Vanhalla koodilla se kaatuu
+oikeasta syystä (`FAIL … 31 merkkiä, mykkiä 2: reunuskilpikonna
+(Reunuskilpikonna), ryhma-ateena-huuto (Maratonhuijaus, Helenan korut…)`,
+104/105), korjatulla se menee läpi (**105/105**).
+
+## 7. Portit
+
+- `node --test tests/*.test.mjs` → **# pass 1065, # fail 0** (1 skipped, ennallaan)
+- `node tools/tarkista-kaksoisavaimet.mjs` → ei kaksoisavaimia
+- `node tools/tarkista-niputus.mjs` → 294 moduulia, ei törmäyksiä
+- `node tools/tarkista-savukkeet.mjs` → kunnossa
+- `node tools/build-standalone.mjs` → ok (dist/ poistettu ennen committia)
+- savuke fokuskohteet → 105/105; savuke kartta-tila → 20/20
+
+## 8. Kaappaukset
+
+`tools/savukkeet/kaappaukset/nimio-{ennen,jalkeen}-{GRC,DEU,TUR}-ipad[-lahikuva].png`
+(**ei committoitu**, ja tarkoituksella kaappauskansiossa eikä repon juuressa).
+Laatat ovat korvattu pikselillä, joten pohja on punainen — nimiöt, merkit ja
+viivat ovat oikeat. Ateenan lähikuvassa "Reunuskilpikonna" ja
+"Maratonhuijaus, Helenan korut…" ilmestyvät; Berliinissä sarake lukee nyt
+kokonaan (Valekapteeni, Brandenburg Kulta-Liisa, Lehmän hinnalla, Hobrechtin
+putket, **Berliinin karhu**, Köpenickin kapteeni); Istanbulissa
+"Marmaranmeri" ja "Vararikko 1875, Kaşıkçı-timantti".
+
+## 9. Kaksi asiaa sinulle, en päättänyt niitä puolestani
+
+1. **iPhonella jää 8 mykkää merkkiä 256:sta** (Ateena 4, Istanbul 2, Rooma 1,
+   Bukarest 1) — 71:stä alas, mutta ei nolla. Syy on rakenteellinen: kapealla
+   ruudulla nimiö on suhteessa karttaan kaksinkertainen, ja Attikan solmussa
+   paperi loppuu oikeasti. Poltossa tämä ei koske laattoja lainkaan
+   (laattatason mittakaava on moninkertainen), joten **polttoa se ei estä**.
+   Vaihtoehdot elävälle kerrokselle, jos haluat nollan myös puhelimessa:
+   (a) kolmas nostopituus 40 px — mitattuna auttaa, mutta pisin nosto kasvaa
+   Roomassa 22 → 32 lautayksikköön; (b) kohdenimiön koko 10,5 → 9,5 px
+   kapealla lehdellä — rikkoo "sama koko kuin paikannimillä"; (c) hyväksytään,
+   koska merkki on yhä napautettavissa ja kortti kertoo nimen. Suosittelen
+   (c):tä toistaiseksi ja katsomista uudelleen polton jälkeen.
+2. **Poistin kohdenimiön tiheyskynnyksen**, ja se poikkeaa omistajan 30.8.
+   päätöksen KIRJAIMESTA (*"sama ladonta kuin paikannimillä … samat
+   tiheyskynnykset"*). Sama koko, sama törmäyksenvältely ja sama kirjasin
+   pätevät yhä; vain mittakaavakynnys poistui, ja perustelu on koodissa
+   auki kirjoitettuna. Ilman sitä Kiinan, Meksikon ja muiden leveiden lehtien
+   kohdenimet eivät näy koskaan. Jos omistaja haluaa kynnyksen takaisin, se on
+   yhden rivin palautus — mutta silloin CHN:n kolme merkkiä jäävät nimettömiksi
+   ja savuke 1a5 kaatuu, mikä on mielestäni oikea vastaus.
+
+## 10. Yhteensovitus polttoerän kanssa
+
+Polttoerä lukee samaa ladontaa. Törmäyspinta on tarkalleen:
+
+- `js/karttanimet.js`: `KYNNYS`-taulun `kohdeNimi` poistui; `vapaa` jakautui
+  kahtia (`este` palauttaa estäjän, `vapaa` on sen kääntöpuoli); `lado()`:n
+  kohdenimiölohko kirjoitettiin uusiksi (`tyot` → `sovita` → varaus →
+  piirto) ja sisennys muuttui yhden tason, koska lohkon `if`-kääre poistui;
+  uudet vientinimet `katkaiseNimio` ja `NIMION_KATKO`.
+- `js/fokusryhmat.js`: `ryhmaNimio` kutsuu `katkaiseNimio`ta;
+  `RYHMA_KATKO` ja `RYHMA_KATKO_RAJA` poistuivat. Uusi tuonti
+  `./karttanimet.js` — niputusjärjestys kelpaa (karttanimet on listalla ennen
+  fokusryhmatia, `tarkista-niputus` vihreä).
+- `tools/savukkeet/savuke-fokuskohteet.mjs`: `avaaSivu` sai toisen
+  parametrin (`pelinNimiot`) ja uuden luettelon reitityksen; koe 1a5 lisätty.
+
+
+---
+
 # Opus → Fable: "välillä kartta ei piirry ollenkaan" — korjattu (31.8.2026)
 
 Haara `claude/laattojen-esilataus` otettu **puhtaana tuoreesta

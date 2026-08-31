@@ -93,7 +93,39 @@ const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromiu
  * Yksi sivu valmiiksi ladattuna. `fokus` false sammuttaa fokusmoodin,
  * jolloin lehteä — eikä siis merkkejäkään — ei pitäisi olla.
  */
-async function avaaSivu(fokus = true) {
+/*
+ * LAATTALUETTELO, JOSSA NIMIÖITÄ EI OLE POLTETTU (kokeen 1a5 ehto).
+ *
+ * Peli latoo paikannimet ja kohdenimiöt itse VAIN kun luettelo sanoo
+ * `nimiot: false` (js/laattapyramidi.js laatoissaOnNimet). Kontin
+ * selain ei pääse ämpäriin, joten ilman tätä vastausta luettelo jää
+ * tyhjäksi, oletus on "vanhat laatat" ja koko ruutuavaruuden ladonta
+ * vaikenee — koe mittaisi silloin vanhaa rasterinimiötä eikä sitä,
+ * mitä pelaaja oikeasti näkee.
+ *
+ * Arkin luvut ovat samat kuin js/laattapyramidi.js ARKKI_VARALLA eli
+ * samat kuin oikeassa pyramidi.jsonissa, jottei lauta muuta mittaa.
+ * Laatat itse jäävät korvatuksi pikseliksi: nimiöt eivät ole niissä.
+ */
+const PYRAMIDILUETTELO = JSON.stringify({
+  versio: '2026-08-31',
+  lauta: 'maailmankartta',
+  laatta: 512,
+  muoto: 'webp',
+  nimiot: false,
+  arkki: { x: 0, y: -1046.3149255312064, w: 12000, h: 7307.715927310571 },
+  tasot: [{
+    z: 0,
+    leveys: 675,
+    korkeus: 411,
+    pikseliaPerYksikko: 0.05625,
+    sarakkeita: 2,
+    riveja: 1,
+    laatasto: null,
+  }],
+});
+
+async function avaaSivu(fokus = true, pelinNimiot = false) {
   const ctx = await selain.newContext({
     viewport: { width: 834, height: 1112 },
     reducedMotion: 'reduce',
@@ -143,6 +175,16 @@ async function avaaSivu(fokus = true) {
   }));
   // Luentapalvelin katkaistaan: savuke ei saa kuluttaa generointikiintiötä.
   await sivu.route('**samireivinen.workers.dev/**', (route) => route.abort());
+  /*
+   * Luettelo vastaa vasta tämän jälkeen rekisteröitynä: Playwright
+   * kokeilee reittejä käänteisessä järjestyksessä, joten tarkempi
+   * reitti on rekisteröitävä yleisen r2-korvauksen JÄLKEEN.
+   */
+  if (pelinNimiot) {
+    await sivu.route('**/julisteet/pyramidi/pyramidi.json', (route) => route.fulfill({
+      status: 200, contentType: 'application/json', body: PYRAMIDILUETTELO,
+    }));
+  }
   /*
    * `domcontentloaded` eikä `load`: maailmankartta lataa taustalla
    * kuvia ja ääniä, joista osa jää korvatun reitin varaan, eikä
@@ -1708,6 +1750,75 @@ vaadi('leikekirjanappi avaa noston lunastuskortin',
 await sivu.evaluate(() => document.querySelector('.fokusnosto-kortti-sulje')?.click());
 await sivu.waitForTimeout(400);
 
+
+/* --- 1a5: RUUTUUN LADOTTU NIMIÖ EI SAA JÄTTÄÄ MERKKIÄ MYKÄKSI -----
+ *
+ * TÄMÄ VÄITE PUUTTUI, JA JUURI SIKSI VIKA PÄÄSI LÄPI. Kohdenimiöt
+ * siirtyivät 30.8.2026 merkin omasta rasterista yhteiseen
+ * ruutuavaruuden ladontaan (js/karttanimet.js), mutta kaikki nimiö-
+ * väitteet (1a1–1a4) lukevat yhä RASTERIA — ja rasteri on tässä
+ * kokeessa se, mitä pelaaja EI näe, koska oikeissa laatoissa nimiöitä
+ * ei enää ole. Ladottu kerros oli siis kokonaan vartioimatta, ja
+ * omistaja löysi pelitestissä sen, mitä yksikään koe ei katsonut:
+ * Ateenan Skandaalit-kuoren merkki oli kartalla napautettavissa mutta
+ * nimetön (mitattuna koko maailmassa 17 merkkiä 256:sta).
+ *
+ * VÄITE ON YKSINKERTAINEN JA KOVA: jos merkillä on nimi, se nimi on
+ * kartalla. Ei "valtaosalla" kuten rasteriväitteessä 1a1 — kartalle
+ * poltettuna vaiennut nimiö jää vaienneeksi seuraavaan pyramidiajoon
+ * asti, joten tässä ei ole varaa enemmistöpäätöksiin.
+ *
+ * KATKAISTU NIMIÖ KELPAA, MUTTA VAIN NIMEN OMANA ALKUNA. Ladonta saa
+ * lyhentää nimen kolmella pisteellä, kun paperi ei muuten riitä
+ * (js/karttanimet.js katkaiseNimio) — mutta silloin jäljelle jääneen
+ * on oltava kohteen oman nimen alku, eikä esimerkiksi naapurin nimi.
+ */
+const nimisivu = await avaaSivu(true, true);
+await nimisivu.evaluate((varakohde) => {
+  const ui = window.matkakirja.ui;
+  ui.kartta.ajaKamera({
+    bbox: ui.fokusPohjaRajaus ?? ui.fokusPohjaBbox ?? varakohde, marginaali: 0,
+  });
+}, FOKUS_POHJAT.GRC.rajaus);
+await nimisivu.waitForTimeout(4200);
+await nimisivu.waitForFunction(() => Boolean(window.matkakirja.ui.fokusPohjaBbox),
+  null, { timeout: 30000 }).catch(() => {});
+const ladotut = await nimisivu.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  /*
+   * MERKIT LUETAAN KERROKSEN TIETUEISTA (yksi rivi kohdetta kohti,
+   * ei kopiota kohti) ja nimiöt KARTALTA. Näin koe mittaa juuri sen
+   * suhteen, joka pelaajalle näkyy: merkki ruudulla, nimi sen vieressä.
+   */
+  const merkit = [];
+  const nahty = new Set();
+  for (const r of ui.fokuskohdeRyhmat ?? []) {
+    if (nahty.has(r.id)) continue;
+    nahty.add(r.id);
+    if (r.nimi) merkit.push({ id: r.id, nimi: r.nimi });
+  }
+  const nimiot = [...document.querySelectorAll('.karttanimi-kohde')]
+    .map((t) => t.textContent);
+  const vastaa = (nimio, nimi) => nimio === nimi
+    || (nimio.endsWith('\u2026') && nimi.startsWith(nimio.slice(0, -1)));
+  return {
+    merkkeja: merkit.length,
+    nimioita: nimiot.length,
+    mykat: merkit.filter((m) => !nimiot.some((t) => vastaa(t, m.nimi)))
+      .map((m) => `${m.id} (${m.nimi})`),
+    orvot: nimiot.filter((t) => !merkit.some((m) => vastaa(t, m.nimi))),
+  };
+});
+vaadi('laattojen luettelo antaa pelin latoa nimet (kokeen ehto)',
+  ladotut.nimioita > 0,
+  `${ladotut.nimioita} ladottua nimiötä — luettelo ei mennyt perille?`);
+vaadi('jokainen nimellinen merkki saa nimiönsä kartalle',
+  ladotut.merkkeja > 0 && ladotut.mykat.length === 0,
+  `${ladotut.merkkeja} merkkiä, mykkiä ${ladotut.mykat.length}: `
+  + ladotut.mykat.join(', '));
+vaadi('kartalla ei ole kohdenimiötä ilman merkkiä',
+  ladotut.orvot.length === 0, JSON.stringify(ladotut.orvot.slice(0, 5)));
+await nimisivu.context().close();
 
 /* --- 11: ilman lehteä ei merkkejä --- */
 

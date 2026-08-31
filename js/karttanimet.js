@@ -110,21 +110,35 @@ const KYNNYS = {
   vuoriNimi: 0.45,
   jarviNimi: 0.45,
   jarviNimi2: 0.9,
-  /*
-   * KOHDENIMIÖ SYTTYY SAMALLA KYNNYKSELLÄ KUIN TAVALLISEN KAUPUNGIN
-   * NIMI (omistajan päätös 30.8.2026, kysymyskortti: *"Sama ladonta
-   * kuin paikannimillä"* — sama koko, sama törmäyksenvältely, samat
-   * tiheyskynnykset).
-   *
-   * Sama luku kuin `nimi` on tässä TARKOITUS eikä sattuma, ja siksi se
-   * on oma rivinsä: kohteen nimi on kartalla samaa lajia kuin
-   * kaupungin nimi — luettava paikannimi — eikä sen kynnystä saa
-   * siirtää vahingossa kaupunkien mukana. Jos kohteita joskus halutaan
-   * harvemmaksi tai tiheämmäksi kuin kaupunkeja, muutos tehdään tähän
-   * lukuun eikä `nimi`-riviin.
-   */
-  kohdeNimi: 0.45,
 };
+
+/*
+ * KOHDENIMIÖLLÄ EI OLE OMAA TIHEYSKYNNYSTÄ — SEN KYNNYS ON LEHTI.
+ *
+ * Kohdenimiö luki tässä taulussa arvolla 0,45 eli samalla kuin
+ * tavallisen kaupungin nimi (omistajan päätös 30.8.2026: *"Sama
+ * ladonta kuin paikannimillä"*). Sama koko, sama törmäyksenvältely ja
+ * sama kirjasin PÄTEVÄT YHÄ; poistuu vain mittakaavakynnys, ja siihen
+ * on mitattu syy.
+ *
+ * KYNNYS JOHDETTIIN MAAILMAN NIMITIHEYDESTÄ — *"261 kaupunkia
+ * jakautuu W pikselin maailmalle noin W/16 pikselin välein"* (ks.
+ * tiedoston johdanto). Kohteet eivät ole maailmanlaajuinen nimistö:
+ * ne ovat yhden maan lehden merkintöjä, niitä on lehteä kohti 1–35, ja
+ * ne ovat kartalla vain silloin kun se lehti on lähikuvassa
+ * (js/fokuskohteet.js LEHDEN_VAHIN_OSUUS = lehti täyttää vähintään
+ * puolet näkyvästä kartasta). Kerros antaa nimet ladontaan vasta
+ * silloin (luovutaKohdeNimiot) ja tyhjentää ne heti kun merkit
+ * sammuvat, joten TIHEYSPORTTI ON JO OLEMASSA — se on lehden oma.
+ *
+ * MITÄ MAAILMAN KYNNYS TEKI SEN PÄÄLLÄ: se vaiensi LEVEIDEN LEHTIEN
+ * kohdenimet kokonaan. Mittakaava on CSS-pikseliä lautayksikköä kohti,
+ * eikä leveä lehti yllä 0,45:een edes koko ruudun kokoisena: Kiinan
+ * lehti on 2773 lautayksikköä leveä, joten iPadin 834 pikselin
+ * ruudulla se on täytenäkin 0,30 — mitattuna kartalla oli kolme
+ * merkkiä eikä yhtään nimeä. Kynnys ei siis harventanut litaniaa vaan
+ * valitsi maat, joissa nimiä ei näy koskaan.
+ */
 
 /*
  * KIRJASIN ON PELIN OMA KARTTA-ANTIIKVA, EI LAATAN LIBERATION SERIF.
@@ -206,6 +220,15 @@ const NIMION_VALJYYS_Y = 5;
  * zoomilla.
  */
 const NOSTON_PITUUDET = [14, 26];
+
+/**
+ * Kuinka pitkälle nimiö saa LIUKUA esteen ohi (ks. sovita, LIUKU).
+ *
+ * Sama kuin pisin nosto: liuku on saman leikin osa kuin nostokin, eikä
+ * nimi saa sen kautta päätyä kauemmas merkistään kuin nosto muutenkin
+ * veisi.
+ */
+const NOSTON_LIUKU = Math.max(...NOSTON_PITUUDET);
 
 /**
  * Noston viivan paksuus ja katkon mitta CSS-pikseleinä (omistajan
@@ -416,6 +439,75 @@ export function asetaKohdenimet(lista, sade = 0) {
   return true;
 }
 
+/* --------------------------------------------------- nimiön katkaisu */
+
+/*
+ * KATKAISU: NIMIÖ LYHENEE ENNEN KUIN SE VAIKENEE.
+ *
+ * OMISTAJAN SÄÄNTÖ 31.8.2026 (kysymyskortti, yhdistetyn merkin
+ * pilkkulista): *"Jos kaikki teksti ei mahdu, niin katkaistaan vain
+ * jostain kohtaa ja lisätään loppuun kolme pistettä."*
+ *
+ * SÄÄNTÖ ON YKSI JA SE ASUU TÄÄLLÄ. Se kirjoitettiin ensin
+ * js/fokusryhmat.js:ään pilkkulistan omaksi mitaksi, mutta katkaisu on
+ * LADONNAN keino eikä sisällön: sama sääntö tarvitaan nyt myös silloin,
+ * kun valmis nimiö ei mahdu paperille (ks. ladonnan kohdenimiöt). Kaksi
+ * kopiota samasta säännöstä ajautuu ennen pitkää eri asuun — sama
+ * perustelu kuin kaksoisnimisäännöllä (PARIN_ETAISYYS yllä), joten
+ * ryhmien nimiö kutsuu tätä eikä toista sitä.
+ *
+ * MITTA ANNETAAN KUTSUJALTA, EI OLETETA. Pilkkulista mitataan
+ * taulukolla kirjaston yksiköissä (js/fokusnosto-symbolit.js
+ * nostosymTekstinLeveys), ladonta ruutupikseleissä omalla
+ * kirjasimellaan — sama sääntö, kaksi mittatikkua, eikä yksikköjä
+ * sekoiteta.
+ */
+
+/** Katkaisumerkki. Omistajan "kolme pistettä" kartan omana glyyfinä. */
+export const NIMION_KATKO = '\u2026';
+
+/*
+ * Mieluummin nimen rajalta kuin sanan keskeltä — mutta vain jos raja on
+ * riittävän lähellä katkaisukohtaa. Osuus on mitattu käytännöksi eikä
+ * periaatteeksi: omistaja sanoi *"jostain kohtaa"*, joten tässä ei
+ * hiota mitään. Alle tämän jäävä raja hukkaisi tilaa enemmän kuin
+ * siisteys on arvoinen.
+ */
+const KATKON_SANARAJA = 0.75;
+
+/**
+ * Katkaisee tekstin annettuun leveyteen ja päättää sen kolmeen
+ * pisteeseen. Mahtuva teksti palautuu sellaisenaan.
+ *
+ * @param {string} teksti
+ * @param {number} leveys  budjetti mittarin omissa yksiköissä
+ * @param {function(string):number} mittaa  tekstin leveys
+ * @returns {string}
+ */
+export function katkaiseNimio(teksti, leveys, mittaa) {
+  const koko = String(teksti ?? '');
+  if (!koko || mittaa(koko) <= leveys) return koko;
+  /*
+   * ELLIPSI MAHTUU MITTAAN eikä tule mitatun tekstin perään: kolme
+   * pistettä vie tilaa siinä missä kirjaimetkin.
+   */
+  const tila = leveys - mittaa(NIMION_KATKO);
+  let mitta = 0;
+  let i = 0;
+  for (const merkki of koko) {
+    const w = mittaa(merkki);
+    if (mitta + w > tila) break;
+    mitta += w;
+    i += merkki.length;
+  }
+  let paatos = koko.slice(0, i);
+  const raja = paatos.lastIndexOf(', ');
+  if (raja > 0 && mittaa(paatos.slice(0, raja)) >= KATKON_SANARAJA * mitta) {
+    paatos = paatos.slice(0, raja);
+  }
+  return `${paatos.replace(/[\s,]+$/, '')}${NIMION_KATKO}`;
+}
+
 /* ---------------------------------------------------------- mittari */
 
 /*
@@ -431,6 +523,58 @@ function tekstinLeveys(teksti, koko, tyylitys) {
   }
   mittari.font = `${tyylitys} ${koko}px ${FONTTI}`.trim();
   return mittari.measureText(teksti).width;
+}
+
+/** Kohdenimiön leveys ruutupikseleinä — ladonnan oma mittatikku. */
+const mittaKohde = (teksti) => tekstinLeveys(teksti, KOKO.kohde, '');
+
+/*
+ * KUINKA LYHYEKSI NIMIÖ SAA KUTISTUA.
+ *
+ * Alaraja on nimen OMA alku eikä pikselivakio: katkaistun nimiön on
+ * yhä tunnistettava kohteensa, ja "Reunus…" tekee sen kun "Re…" ei
+ * tee. Kuusi merkkiä ja katko on siksi mitta, joka skaalautuu nimen
+ * mukana — lyhyt nimi ei koskaan katkea, koska se mahtuu jo
+ * sellaisenaan alarajan alle.
+ */
+const NIMION_LYHIN_MERKKEJA = 6;
+
+/*
+ * Puolituksia alarajan ja täyden mitan välillä. Viisi kierrosta
+ * riittää: haarukka kapenee kolmaskymmeneskahdesosaan, mikä on
+ * 10,5 pikselin kirjasimella alle kirjaimen leveyden — tarkempi
+ * haku ei enää muuttaisi katkaisukohtaa.
+ */
+const NIMION_KUTISTUKSIA = 5;
+
+/**
+ * PISIN KATKAISTU ASU, JOKA MAHTUU — tai null, jos edes alaraja ei
+ * mahdu mihinkään ehdokkaaseen.
+ *
+ * Haku on puolitus, ja se on luvallinen siksi, että KAPEAMPI NIMIÖ
+ * MAHTUU AINA SINNE, MISSÄ LEVEÄMPI MAHTUI: laatikko lasketaan samasta
+ * ankkurista kaikilla kolmella tasauksella, joten kapeampi laatikko on
+ * leveämmän osajoukko. Mahtuvuus on siis monotoninen leveyden suhteen,
+ * ja puolitus löytää suurimman mahtuvan budjetin.
+ *
+ * @param {string} teksti
+ * @param {function(string):?object} sovita  koettaa ehdokkaat yhdellä tekstillä
+ */
+function kutistaen(teksti, sovita) {
+  const alaraja = mittaKohde(
+    `${[...teksti].slice(0, NIMION_LYHIN_MERKKEJA).join('')}${NIMION_KATKO}`,
+  );
+  let ala = alaraja;
+  let yla = mittaKohde(teksti);
+  if (!(yla > ala)) return null;
+  let paras = sovita(katkaiseNimio(teksti, ala, mittaKohde));
+  if (!paras) return null;
+  for (let i = 0; i < NIMION_KUTISTUKSIA; i += 1) {
+    const keski = (ala + yla) / 2;
+    const osuma = sovita(katkaiseNimio(teksti, keski, mittaKohde));
+    if (osuma) { paras = osuma; ala = keski; } else yla = keski;
+  }
+  return paras;
 }
 
 /* ---------------------------------------------------------- ladonta */
@@ -462,14 +606,16 @@ function lado(data, px) {
     }
     return ulos;
   };
-  const vapaa = (r) => {
+  /** Ensimmäinen suorakaide, joka on tämän tiellä — tai null. */
+  const este = (r) => {
     for (const a of avaimet(r)) {
       for (const o of hila.get(a) ?? []) {
-        if (r.x0 < o.x1 && r.x1 > o.x0 && r.y0 < o.y1 && r.y1 > o.y0) return false;
+        if (r.x0 < o.x1 && r.x1 > o.x0 && r.y0 < o.y1 && r.y1 > o.y0) return o;
       }
     }
-    return true;
+    return null;
   };
+  const vapaa = (r) => !este(r);
   const varaa = (r) => {
     for (const a of avaimet(r)) {
       if (!hila.has(a)) hila.set(a, []);
@@ -648,51 +794,90 @@ function lado(data, px) {
    * nimi jäi — omistajan nimenomainen ehto 30.8.2026.
    */
   const nostot = [];
-  if (nakyy(KYNNYS.kohdeNimi)) {
+  /*
+   * MERKIN SÄDE RUUTUPIKSELEINÄ. Kohdemerkki elää kartan
+   * mittakaavassa, joten sen näkyvä koko riippuu zoomista — nimen
+   * rako merkin reunaan on laskettava siitä eikä vakiosta, tai
+   * lähikuvassa nimi asettuisi merkin päälle.
+   */
+  const merkkiR = kohteenSade * px;
+  /*
+   * PAIKAT LASKETAAN ENSIN, PIIRTO VASTA SEN JÄLKEEN: ladonta varaa
+   * paperia, ja vasta valmis asettelu kirjoitetaan nimiöiksi ja
+   * nostoviivoiksi.
+   */
+  const tyot = kohdenimet.map((k) => {
+    const x = k.x * px;
+    const y = k.y * px;
+    const kork = KOKO.kohde * 1.15;
+    const vieri = merkkiR + NIMION_RAKO;
     /*
-     * MERKIN SÄDE RUUTUPIKSELEINÄ. Kohdemerkki elää kartan
-     * mittakaavassa, joten sen näkyvä koko riippuu zoomista — nimen
-     * rako merkin reunaan on laskettava siitä eikä vakiosta, tai
-     * lähikuvassa nimi asettuisi merkin päälle.
+     * EHDOKKAAT KAHDESSA LUOKASSA: ensin neljä merkin omaa kylkeä
+     * (nimi kiinni merkissä, ei viivaa — viiva olisi silloin pelkkä
+     * koriste), ja vasta jos yksikään ei mahdu, NOSTO: nimi
+     * lähituntumaan ja katkoviiva merkkiin.
+     *
+     * Kyljet ovat samassa järjestyksessä kuin kohdekerroksen omassa
+     * väistössä oli (oikea ennen vasenta, js/fokuskohteet.js
+     * KOHDE_NIMIO_PUOLET): järjestys on kiinteä, joten sama näkymä
+     * antaa aina saman kartan eikä nimi voi vaihtaa puolta
+     * panoroinnissa.
      */
-    const merkkiR = kohteenSade * px;
-    for (const k of kohdenimet) {
-      const x = k.x * px;
-      const y = k.y * px;
-      const lev = tekstinLeveys(k.teksti, KOKO.kohde, '');
-      const kork = KOKO.kohde * 1.15;
-      const vieri = merkkiR + NIMION_RAKO;
+    const ehdokkaat = [
+      { dx: vieri, dy: kork * 0.35, ank: 'start', nosto: false },
+      { dx: -vieri, dy: kork * 0.35, ank: 'end', nosto: false },
+      { dx: 0, dy: -(merkkiR + kork * 0.55), ank: 'middle', nosto: false },
+      { dx: 0, dy: merkkiR + kork * 0.95, ank: 'middle', nosto: false },
+    ];
+    /*
+     * NOSTON SUUNNAT: NELJÄ VINOA JA NELJÄ SUORAA (31.8.2026).
+     *
+     * Vinot neljä ovat alkuperäiset. Suorat neljä — sama korkeus
+     * oikealle ja vasemmalle, sama sarake ylös ja alas — lisättiin,
+     * kun mittaus osoitti mistä vaienneet nimiöt oikeasti johtuvat:
+     * Ateenassa, Istanbulissa ja Berliinissä nimi ei jäänyt pois
+     * siksi että se oli liian leveä (sama nimiö vaikeni budjeteilla
+     * 100, 160 ja 240), vaan siksi että KAIKKI kaksitoista
+     * ehdokaspaikkaa olivat varattuja — myös lyhimmällä mahdollisella
+     * asulla. Kahdeksan suunnan kehä on kartografin oma tapa etsiä
+     * nimelle paperia, ja se on halpa: umpikujaan päädytään vasta kun
+     * merkin ympäriltä ei kahdella etäisyydellä löydy yhtään aukkoa.
+     *
+     * NOSTO EI PIDENNY. Pituudet ovat samat kaksi (NOSTON_PITUUDET),
+     * joten viiva pysyy yhtä lyhyenä kuin omistajan hyväksymässä
+     * asussa — vain suuntia on enemmän.
+     *
+     * VINOT ENSIN, jotta jo hyväksytyt asettelut eivät muutu: uusi
+     * suunta valitaan vain siellä, missä vanhat eivät kelvanneet.
+     */
+    for (const pituus of NOSTON_PITUUDET) {
       /*
-       * EHDOKKAAT KAHDESSA LUOKASSA: ensin neljä merkin omaa kylkeä
-       * (nimi kiinni merkissä, ei viivaa — viiva olisi silloin pelkkä
-       * koriste), ja vasta jos yksikään ei mahdu, NOSTO: nimi
-       * lähituntumaan ja katkoviiva merkkiin.
-       *
-       * Kyljet ovat samassa järjestyksessä kuin kohdekerroksen omassa
-       * väistössä oli (oikea ennen vasenta, js/fokuskohteet.js
-       * KOHDE_NIMIO_PUOLET): järjestys on kiinteä, joten sama näkymä
-       * antaa aina saman kartan eikä nimi voi vaihtaa puolta
-       * panoroinnissa.
+       * Vinossa nosto jakautuu molempiin akseleihin (0,7 + 0,7 ≈ 1),
+       * suorassa se menee kokonaan yhteen — kummassakin tapauksessa
+       * viivan pituus on sama `pituus`.
        */
-      const ehdokkaat = [
-        { dx: vieri, dy: kork * 0.35, ank: 'start', nosto: false },
-        { dx: -vieri, dy: kork * 0.35, ank: 'end', nosto: false },
-        { dx: 0, dy: -(merkkiR + kork * 0.55), ank: 'middle', nosto: false },
-        { dx: 0, dy: merkkiR + kork * 0.95, ank: 'middle', nosto: false },
-      ];
-      for (const pituus of NOSTON_PITUUDET) {
-        for (const sx of [1, -1]) {
-          for (const sy of [-1, 1]) {
-            ehdokkaat.push({
-              dx: sx * (vieri + pituus * 0.7),
-              dy: sy * pituus * 0.7 + kork * 0.35,
-              ank: sx > 0 ? 'start' : 'end',
-              nosto: true,
-            });
-          }
-        }
-      }
-      let asetettuK = null;
+      const vino = pituus * 0.7;
+      ehdokkaat.push(
+        /* Neljä vinoa (alkuperäiset, samassa järjestyksessä). */
+        { dx: vieri + vino, dy: -vino + kork * 0.35, ank: 'start', nosto: true },
+        { dx: vieri + vino, dy: vino + kork * 0.35, ank: 'start', nosto: true },
+        { dx: -(vieri + vino), dy: -vino + kork * 0.35, ank: 'end', nosto: true },
+        { dx: -(vieri + vino), dy: vino + kork * 0.35, ank: 'end', nosto: true },
+        /* Neljä suoraa: sama korkeus kauempana, sama sarake ylempänä tai alempana. */
+        { dx: vieri + pituus, dy: kork * 0.35, ank: 'start', nosto: true },
+        { dx: -(vieri + pituus), dy: kork * 0.35, ank: 'end', nosto: true },
+        { dx: 0, dy: -(merkkiR + kork * 0.55 + pituus), ank: 'middle', nosto: true },
+        { dx: 0, dy: merkkiR + kork * 0.95 + pituus, ank: 'middle', nosto: true },
+      );
+    }
+    /*
+     * Yksi teksti ehdokkaisiin; palauttaa ensimmäisen vapaan paikan.
+     * `vara` on väljyysvaran kerroin (1 = täysi, 0 = pelkkä muste).
+     * Varausta EI tehdä tässä: kutsuja varaa vain sen paikan, jonka se
+     * pitää — muuten hylätyt kokeilut söisivät paperia.
+     */
+    const sovita = (teksti, vara) => {
+      const lev = mittaKohde(teksti);
       for (const e of ehdokkaat) {
         const kx = x + e.dx;
         const ky = y + e.dy;
@@ -700,49 +885,113 @@ function lado(data, px) {
         /* Väljyysvara on mukana sekä testissä että varauksessa: nimi
          * vaatii tilaa ympärilleen eikä vain itselleen (ks. NIMION_VALJYYS). */
         const r = {
-          x0: x0 - NIMION_VALJYYS_X,
-          y0: ky - kork * 0.62 - NIMION_VALJYYS_Y,
-          x1: x0 + lev + NIMION_VALJYYS_X,
-          y1: ky + kork * 0.42 + NIMION_VALJYYS_Y,
+          x0: x0 - NIMION_VALJYYS_X * vara,
+          y0: ky - kork * 0.62 - NIMION_VALJYYS_Y * vara,
+          x1: x0 + lev + NIMION_VALJYYS_X * vara,
+          y1: ky + kork * 0.42 + NIMION_VALJYYS_Y * vara,
         };
-        if (vapaa(r)) { varaa(r); asetettuK = { kx, ky, ank: e.ank, nosto: e.nosto }; break; }
+        const tulppa = este(r);
+        if (!tulppa) {
+          return {
+            r, kx, ky, ank: e.ank, nosto: e.nosto, teksti,
+          };
+        }
+        /*
+         * LIUKU: SAMA PAIKKA JUURI ESTEEN OHI (31.8.2026).
+         *
+         * Kiinteä ehdokaskehä osuu joskus juuri raon VIERELLE. Mitattu
+         * tapaus: Berliinin ryppään keskimmäisen merkin ylä- ja
+         * alanaapurin nimiöiden väliin jää 13,4 pikseliä ja nimiö vie
+         * 12,6 — rako riittää, mutta yksikään kehän paikoista ei osu
+         * sen 0,8 pikselin ikkunaan, ja nimi vaikeni raon vieressä.
+         *
+         * Liuku on siksi PYSTYSUUNTAINEN JA TÄSMÄLLINEN: laatikkoa
+         * siirretään juuri sen verran, että se ohittaa esteen ylhäältä
+         * tai alhaalta, eikä yhtään enempää. Se ei ole uusi paikka
+         * vaan sama paikka aukon kohdalla — kylki pysyy kylkenä ja
+         * sarake sarakkeena.
+         *
+         * MITTA EI KARKAA: siirto on enintään NOSTON_LIUKU, joka on
+         * pisin nosto. Nimi ei siis pääse kauemmas merkistään kuin
+         * nosto muutenkin veisi, ja jos siirto on riittävän pitkä,
+         * viiva piirtyy sille kuten nostolle.
+         */
+        for (const dy of [tulppa.y0 - r.y1, tulppa.y1 - r.y0]) {
+          if (!(Math.abs(dy) <= NOSTON_LIUKU)) continue;
+          /* Liuku ei saa viedä nimeä kauemmas kuin pisin nosto veisi. */
+          if (Math.hypot(kx - x, ky + dy - y) > merkkiR + kork + NOSTON_LIUKU) continue;
+          const rl = {
+            x0: r.x0, y0: r.y0 + dy, x1: r.x1, y1: r.y1 + dy,
+          };
+          if (este(rl)) continue;
+          return {
+            r: rl, kx, ky: ky + dy, ank: e.ank, nosto: true, teksti,
+          };
+        }
       }
-      /*
-       * PUDOTUS ON YLEISTYSTÄ, EI VIRHE. Juuri tämä haara purkaa
-       * omistajan näkemän viuhkan: kun kaksitoista nimeä kilpailee
-       * yhdestä kaupungin kyljestä, muutama luettava jää ja loput
-       * väistyvät — ja merkit jäävät kaikki paikoilleen.
-       */
-      if (!asetettuK) { pudotettu += 1; continue; }
-      nimiot.push({
-        laji: 'kohde',
-        teksti: k.teksti,
-        x: laudalle(asetettuK.kx),
-        y: laudalle(asetettuK.ky),
-        ank: asetettuK.ank,
-        koko: KOKO.kohde,
-      });
-      if (!asetettuK.nosto) continue;
-      /*
-       * NOSTON VIIVA SEURAA NIMEÄ SEN VALITTUUN PAIKKAAN. Se lähtee
-       * merkin REUNALTA (ei keskeltä, jottei jää merkin alle) ja
-       * päättyy juuri ennen nimen perusviivaa.
-       */
-      const vx = asetettuK.kx - x;
-      const vy = asetettuK.ky - kork * 0.35 - y;
-      const pit = Math.hypot(vx, vy);
-      if (!(pit > merkkiR + 2)) continue;
-      const ux = vx / pit;
-      const uy = vy / pit;
-      nostot.push({
-        x1: laudalle(x + ux * merkkiR),
-        y1: laudalle(y + uy * merkkiR),
-        x2: laudalle(x + ux * (pit - 2)),
-        y2: laudalle(y + uy * (pit - 2)),
-        /* Ankkurin x laudalla: saumasiirto lasketaan tästä. */
-        ax: k.x,
-      });
-    }
+      return null;
+    };
+    return {
+      k, x, y, kork, sovita, asetettu: null,
+    };
+  });
+
+  /*
+   * PAIKAN HAKU: TÄYSI NIMI ENSIN, VÄLJYYS VASTA SITTEN, LYHENNYS
+   * VIIMEISENÄ — ja hiljaisuus vasta niiden jälkeen.
+   *
+   * 1. Täysi nimi väljyysvaroineen: tavallinen tapaus, ei muuttunut.
+   * 2. Täysi nimi ILMAN väljyysvaraa. Varaus on ILMAA eikä mustetta
+   *    (ks. NIMION_VALJYYS): se on yleistyskynnys, joka harventaa
+   *    litaniaa. Kun valittavana on ilma tai vaikeneminen, ilma
+   *    väistyy — nimi ei silti kosketa naapuriaan, koska naapurin oma
+   *    varaus on yhä voimassa.
+   * 3. Lyhennetty nimi (kutistaen): omistajan katkaisusääntö.
+   */
+  for (const t of tyot) {
+    const kokeile = (teksti) => t.sovita(teksti, 1) ?? t.sovita(teksti, 0);
+    t.asetettu = kokeile(t.k.teksti) ?? kutistaen(t.k.teksti, kokeile);
+    if (t.asetettu) varaa(t.asetettu.r);
+  }
+
+  for (const {
+    k, x, y, kork, asetettu,
+  } of tyot) {
+    /*
+     * PUDOTUS ON YLEISTYSTÄ, EI VIRHE — mutta se on nyt VIIMEINEN
+     * keino eikä ensimmäinen. Tänne päätyy vain nimi, jolle ei löydy
+     * paperia edes alarajan mittaisena: silloin kartalla on merkki
+     * ilman nimeä, ja se on mittaustulos eikä hiljainen päätös.
+     */
+    if (!asetettu) { pudotettu += 1; continue; }
+    nimiot.push({
+      laji: 'kohde',
+      teksti: asetettu.teksti,
+      x: laudalle(asetettu.kx),
+      y: laudalle(asetettu.ky),
+      ank: asetettu.ank,
+      koko: KOKO.kohde,
+    });
+    if (!asetettu.nosto) continue;
+    /*
+     * NOSTON VIIVA SEURAA NIMEÄ SEN VALITTUUN PAIKKAAN. Se lähtee
+     * merkin REUNALTA (ei keskeltä, jottei jää merkin alle) ja
+     * päättyy juuri ennen nimen perusviivaa.
+     */
+    const vx = asetettu.kx - x;
+    const vy = asetettu.ky - kork * 0.35 - y;
+    const pit = Math.hypot(vx, vy);
+    if (!(pit > merkkiR + 2)) continue;
+    const ux = vx / pit;
+    const uy = vy / pit;
+    nostot.push({
+      x1: laudalle(x + ux * merkkiR),
+      y1: laudalle(y + uy * merkkiR),
+      x2: laudalle(x + ux * (pit - 2)),
+      y2: laudalle(y + uy * (pit - 2)),
+      /* Ankkurin x laudalla: saumasiirto lasketaan tästä. */
+      ax: k.x,
+    });
   }
 
   /*

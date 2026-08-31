@@ -132,6 +132,7 @@
 import {
   NOSTOSYM_LUOKAT, nostosymLyhennaNimio, nostosymTekstinLeveys,
 } from './fokusnosto-symbolit.js';
+import { katkaiseNimio } from './karttanimet.js';
 
 /** Kategoria → luokan nimi (kortin otsikko). Peili symbolikirjastosta. */
 const ryhmaLuokat = NOSTOSYM_LUOKAT;
@@ -210,18 +211,6 @@ export const RYHMA_RAJA = 5;
 /** Nimiön leveysbudjetti kirjaston yksikköinä = 1/5 lehden leveydestä. */
 export const RYHMA_NIMIO_LEVEYS = 160;
 
-/** Katkaisumerkki. Omistajan "kolme pistettä" kartan omana glyyfinä. */
-const RYHMA_KATKO = '\u2026';
-
-/*
- * Mieluummin nimen rajalta kuin sanan keskeltä — mutta vain jos raja on
- * riittävän lähellä katkaisukohtaa. Osuus on mitattu käytännöksi eikä
- * periaatteeksi: omistaja sanoi *"jostain kohtaa"*, joten tässä ei
- * hiota mitään. Alle tämän jäävä raja hukkaisi tilaa enemmän kuin
- * siisteys on arvoinen.
- */
-const RYHMA_KATKO_RAJA = 0.75;
-
 /**
  * YHDISTETYN MERKIN NIMIÖ: jäsenten nimet pilkulla eroteltuina, ja
  * katkaistuna kolmella pisteellä jos kaikki ei mahdu.
@@ -239,26 +228,14 @@ export function ryhmaNimio(nimet, leveys = RYHMA_NIMIO_LEVEYS) {
     .map((nimi) => nostosymLyhennaNimio(nimi))
     .filter(Boolean)
     .join(', ');
-  if (!koko || nostosymTekstinLeveys(koko) <= leveys) return koko;
   /*
-   * ELLIPSI MAHTUU MITTAAN eikä tule mitatun tekstin perään: kolme
-   * pistettä vie tilaa siinä missä kirjaimetkin.
+   * KATKAISU ON LADONNAN SÄÄNTÖ, JA SITÄ ON VAIN YKSI
+   * (js/karttanimet.js katkaiseNimio). Sama sääntö tarvitaan siellä,
+   * kun valmis nimiö ei mahdu paperille, ja kaksi kopiota ajautuisi
+   * ennen pitkää eri asuun. Mitta on tässä TAULUKKO kirjaston
+   * yksiköissä — polton ehto, ks. RYHMA_NIMIO_LEVEYS yllä.
    */
-  const tila = leveys - nostosymTekstinLeveys(RYHMA_KATKO);
-  let mitta = 0;
-  let i = 0;
-  for (const merkki of koko) {
-    const w = nostosymTekstinLeveys(merkki);
-    if (mitta + w > tila) break;
-    mitta += w;
-    i += merkki.length;
-  }
-  let paatos = koko.slice(0, i);
-  const raja = paatos.lastIndexOf(', ');
-  if (raja > 0 && nostosymTekstinLeveys(paatos.slice(0, raja)) >= RYHMA_KATKO_RAJA * mitta) {
-    paatos = paatos.slice(0, raja);
-  }
-  return `${paatos.replace(/[\s,]+$/, '')}${RYHMA_KATKO}`;
+  return katkaiseNimio(koko, leveys, nostosymTekstinLeveys);
 }
 
 /**
