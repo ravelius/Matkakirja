@@ -2564,6 +2564,8 @@ export const RAAMATTU = {
           + '(vain Fable kirjoittaa).',
         'docs/roolitus.md — työnjako, viestintä, julkaisusäännöt, '
           + 'pistokokeet.',
+        'docs/kuvatuotanto-kohtaamiset.md — kohtaamiskuvien julkinen '
+          + 'tuotantoloki, hyväksytty kuvalinja ja toimitustilat.',
         'docs/moduulit/linssit.md · docs/moduulit/kaupunkilehti.md · '
           + 'docs/moduulit/maalehti.md · docs/tyolista-opukselle.md · '
           + 'docs/moduulit/tarinakaari.md '
