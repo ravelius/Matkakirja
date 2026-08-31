@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1403, teksti: 'Kaupunkilaatoille kasvukatto ja naapurit samaan mittaan' },
   { v: 1402, teksti: 'Viivataso: reitit, piirit ja maiden rajat omalle tasolle' },
   { v: 1401, teksti: 'Popupin sulkeva napautus ei avaa mitään uutta' },
   { v: 1400, teksti: 'Yliviivaus aina: viisas pöllö yhdellä viivalla, perässä pulu' },
