@@ -642,6 +642,16 @@ function lado(data, px) {
   /*
    * PISTEET VARATAAN ENSIN: nimi ei saa peittää toisen kaupungin
    * merkkiä, vaikka nimi itse mahtuisi.
+   *
+   * VARAUS TEHDÄÄN YHÄ KAIKILLE, MYÖS NIMETTÖMILLE. Sen jälkeen kun
+   * nimetön piste lakkasi piirtymästä (ks. `nimetyt` alempana), sen
+   * varaus on periaatteessa turha ja voi pudottaa naapurin nimen
+   * tyhjän paikan takia. Se on silti jätetty ennalleen HARKITEN:
+   * varaus on ladonnan syöte ja nimen saanti sen tulos, joten
+   * varauksen karsiminen vaatisi kaksi kierrosta eikä toinen kierros
+   * ole edes suppeneva — uusi nimi toisi uuden pisteen, jota ei ollut
+   * varattu. Näin ladonta pysyy täsmälleen entisenä eikä yksikään
+   * nimi katoa tämän erän takia; muuttuu vain se, mitä piirretään.
    */
   const pisteet = [];
   for (const c of data.kaupungit) {
@@ -651,11 +661,36 @@ function lado(data, px) {
     const y = c.y * px;
     const r = c.iso ? 5.2 : 2.6;
     pisteet.push({ c, x, y });
-    merkit.push({
-      laji: 'kaupunki', iso: c.iso, x: c.x, y: c.y,
-    });
     varaa({ x0: x - r, y0: y - r, x1: x + r, y1: y + r });
   }
+
+  /*
+   * ====== PISTE VAIN NIMEN KANSSA (omistaja 31.8.2026) =============
+   *
+   * Sanatarkasti: *"Pelkkiä pisteitä ei saa näkyä. Pisteet voivat
+   * näkyä sitten kun kaupungin nimikin näkyy."*
+   *
+   * Kaupungin piste syttyi ennen kahdella kynnyksellä aikaisemmin kuin
+   * sen nimi (KYNNYS.isoPiste 0,11 vs. isoNimi 0,22; kaupunkiPiste
+   * 0,22 vs. nimi 0,45), ja lisäksi nimi saattoi pudota törmäykseen
+   * millä tahansa mittakaavalla. Kummassakin tapauksessa kartalle jäi
+   * musta piste, joka ei kerro mitään: pelaaja näkee merkin muttei
+   * saa tietää, minkä paikan merkki se on. Ulos zoomattuna niitä oli
+   * ruudullinen, ja juuri se oli omistajan valitus.
+   *
+   * SÄÄNTÖ ON SAMA KUIN VAIENNEELLA NIMIÖLLÄ (v1385): kartalla ei ole
+   * merkkiä ilman nimeä. Siksi tämä joukko kerätään VASTA ladonnan
+   * jälkeen — nimen saaminen on ladonnan tulos eikä sen syöte.
+   *
+   * MAASTOPARI KELPAA NIMEKSI. Jos kaupungin kohdalla piirtyy sen
+   * vuoren tai järven nimi (kaksoisnimisääntö), pisteen vieressä on
+   * nimi ja piste saa jäädä.
+   *
+   * VUORISYMBOLIT EIVÄT KUULU TÄHÄN. Kolmio on kartan oma merkintä
+   * eikä pelkkä piste, ja sen nimi ladotaan vasta maastokierroksella;
+   * omistajan sana koski pisteitä.
+   */
+  const nimetyt = new Set();
 
   /*
    * VUORISYMBOLIT PIIRRETÄÄN MUTTA EI VARATA — sama kuin laatoilla.
@@ -713,6 +748,7 @@ function lado(data, px) {
           ank: 'middle',
           koko: mkoko,
         });
+        nimetyt.add(c);
         continue;
       }
       /*
@@ -764,7 +800,17 @@ function lado(data, px) {
       ank: asetettu.ank,
       koko,
     });
+    nimetyt.add(c);
   }
+
+  /*
+   * PISTEET VASTA TÄSSÄ, ja vain nimen saaneille. Kaupunkien merkit
+   * menevät listan alkuun, jotta piirtojärjestys on entinen
+   * (kaupungit ennen vuoria).
+   */
+  merkit.unshift(...pisteet
+    .filter(({ c }) => nimetyt.has(c))
+    .map(({ c }) => ({ laji: 'kaupunki', iso: c.iso, x: c.x, y: c.y })));
 
   /*
    * ====== KOHDENIMIÖT — KAUPUNKIEN JÄLKEEN, MAASTON EDELLE =========
