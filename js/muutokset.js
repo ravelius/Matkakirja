@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1389, teksti: 'Siirtoviesti ja tilannetaulu ajan tasalle' },
   { v: 1388, teksti: 'Kartan puolikas laudan sauman kohdalla korjattu' },
   { v: 1387, teksti: 'Tilannetaulu ajan tasalle, siirto päätoimittajalle' },
   { v: 1386, teksti: 'Nimetön kaupunkipiste ei enää piirry kartalle' },

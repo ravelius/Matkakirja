@@ -10,7 +10,7 @@
  */
 
 export const TILANNE = {
-  paivitetty: '31.8.2026 — v1380–v1386, laattapyramidi ainoana karttana',
+  paivitetty: '31.8.2026 — v1380–v1388, laattapyramidi ainoana karttana',
   tavoite: 'Laattapyramidi on pelin ainoa maailmankartta: kahdeksan '
     + 'tasoa, 23 340 laattaa, ajo 2026-08-31b ampparissa. Karttanostot '
     + 'POLTETTIIN laattoihin (413 merkkia 624:sta) omistajan '
@@ -29,9 +29,8 @@ export const TILANNE = {
       rooli: 'paatoimittaja',
       tila: 'tyossa',
       tehtava: 'Kartan viimeistely omistajan pelitestien mukaan: '
-        + 'polttamaton kerros piiloon eleen ajaksi, kaupungin piste '
-        + 'karttavakioksi, ja kartan puolikkaan pystysauma '
-        + 'kiertavan laudan saumassa.',
+        + 'polttamaton kerros piiloon eleen ajaksi ja kaupungin piste '
+        + 'karttavakioksi. Sauman pystyviiva korjattu v1388:ssa.',
       seuraavaksi: 'Nostojen globaali ladontakerroin omistajan '
         + 'valinnan mukaan (0,60 / 0,48 / 0,25 mitattuina) ja sen '
         + 'jalkeen uusi pyramidiajo luvalla. Siirtoviesti ja mitatut '
@@ -54,6 +53,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1388: SAUMAN PYSTYVIIVA - panoroi Tyynenmeren yli, kartan ei pida katketa puoleen ruutuun.',
   'v1386: PISTE VAIN NIMEN KANSSA - kaupungin musta piste piirtyy vain jos sen nimikin nakyy. Zoomaa ulos: nimettomia pisteita ei pitaisi olla yhtaan.',
   'v1384: KARTTANOSTOT POLTETTU LAATTOIHIN - merkit, symbolit ja nimiot ovat nyt kuvassa eivatka katoa eleen aikana. Katso Ateena ja Pietari.',
   'v1383: Lahennys rullalla toimii taas (rikki v1366:sta asti).',

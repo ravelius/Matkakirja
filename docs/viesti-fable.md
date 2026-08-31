@@ -24,9 +24,9 @@ sen nimi (tai maastoparin nimi) oikeasti piirtyy. Mitattu: mittakaavalla
 0,11…0,15 kaupunkimerkkejä 62 → 0, 0,22…0,30 273 → 74, lähikuvassa
 nimettömät 19 / 11 / 6 → 0, eikä yksikään nimi kadonnut.
 
-**Agentti yhä ajossa:** pystysauman korjaus (ks. kohta 4), haara
-`claude/kartan-puolikas`, worktree `.../scratchpad/tyo-seuma`.
-Tarkista haara ennen kuin aloitat samaa työtä.
+Siirron kirjoittamisen jälkeen mainiin meni vielä **v1388: kartan
+puolikas laudan sauman kohdalla** (ks. kohta 4) — se on korjattu ja
+mergattu, ei enää sinun listallasi.
 
 ## 2. Omistajan uusimmat linjaukset — työn kärki
 
@@ -114,11 +114,23 @@ puolisko tyhjää pergamenttia. Näkymä Tyynenmeren / Kamtšatkan yllä,
 jana 1000 km. Tämä ei ole v1379:ssä korjattu "kartta ei piirry
 ollenkaan" -vika: raja on puhdas pystysauma eikä tasonvaihdon aukko.
 
-Epäily: laatta-ikkunan laskenta kiertävän laudan saumassa (lauta
-12000 yksikköä, `kiertava: true`, LON0 −175 eli Tyynimeri on juuri
-arkin saumassa). Katso `js/laattapyramidi.js` ikkunan laskenta ja
-sarakkeiden kierrätys sekä `kiertoKohdat`. Agentti on tätä tutkimassa
-haaralla `claude/kartan-puolikas`.
+**KORJATTU JA MERGATTU (v1388).** Juurisyy oli laudan kierto:
+kiertävällä laudalla koko sisältö on olemassa kahdesti — juuriryhmä
+kattaa välin [0, 12000) ja sen `<use>`-kopio välin [12000, 24000) —
+ja kopio on juuriryhmän PÄÄLLÄ läpinäkymättömine paperinpohjineen.
+Laattapyramidi piirsi sauman takaiset laatat kierroksittain arkin
+oikealle puolelle, oikeille paikoilleen ja ladattuina, ja kopion
+pergamentti maalasi ne piiloon. Vika oli paikassa, ei ajassa.
+
+Korjaus: laatta piirretään arkille kerran omalle paikalleen, ja kierron
+hoitaa laudan kopio; näkyvyys kysytään kiertäen (`osuuKiertaen`).
+Mitattu: arkin ulkopuolella olevia laattoja 12/30 → 0/30, vaakapeitto
+100 % molemmissa, ruudulla vasen puolikas → koko ruutu.
+
+Huomionarvoista jatkoa varten: savuke `P5` lupasi otsikossaan panoroida
+sauman yli mutta **ei siirtänyt kameraa lainkaan**, joten se ei voinut
+nähdä vikaa. Se on nyt kirjoitettu uusiksi ja kaatuu korjaamattomalla
+koodilla.
 
 ## 5. Poltettujen nostojen mittakaava on maakohtainen — ja siksi väärä
 
