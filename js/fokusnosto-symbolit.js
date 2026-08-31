@@ -413,6 +413,53 @@ function nostosymKyna(tera) {
   };
 
   /**
+   * YMPYRÄN KAAREN NÄYTTEET asteina (0° = oikealle, kasvaa
+   * MYÖTÄPÄIVÄÄN eli alaspäin, koska SVG:n y kasvaa alas).
+   *
+   * Erillinen quadratic-kaaresta (`kaari`): bezier on paraabeli, ja
+   * puoliympyrän kokoisena se kärjistyy goottilaiseksi. Holvi ja
+   * kissan kroppa tarvitsevat AIDON ympyränkaaren — muuten ne
+   * lukevat kolmiona.
+   */
+  const kaarinaytteet = (cx, cy, r, a1, a2) => {
+    const n = Math.max(4, Math.round((NOSTOSYM_NAYTE_KEHA * Math.abs(a2 - a1)) / 360));
+    const p = [];
+    for (let i = 0; i <= n; i += 1) {
+      const a = ((a1 + (a2 - a1) * (i / n)) * Math.PI) / 180;
+      p.push([cx + Math.cos(a) * r, cy + Math.sin(a) * r]);
+    }
+    return p;
+  };
+
+  /** Avoin ympyränkaari omana vetonaan. */
+  const kehakaari = (cx, cy, r, a1, a2) => jalki(kaarinaytteet(cx, cy, r, a1, a2));
+
+  /**
+   * RATA — suoria ja ympyränkaaria YHTENÄ vetona, ilman kynän nostoa
+   * osien välissä. Osa on `['jana', x1, y1, x2, y2]` tai
+   * `['kaari', cx, cy, r, a1, a2]`. Yhtymäkohdan kaksoispiste
+   * karsitaan, jotta terä ei pysähdy saumaan.
+   */
+  const rata = (...osat) => {
+    const p = [];
+    for (const [laji, ...luvut] of osat) {
+      let osa;
+      if (laji === 'jana') {
+        const [x1, y1, x2, y2] = luvut;
+        osa = [];
+        for (let i = 0; i <= NOSTOSYM_NAYTE_SUORA; i += 1) {
+          const t = i / NOSTOSYM_NAYTE_SUORA;
+          osa.push([x1 + (x2 - x1) * t, y1 + (y2 - y1) * t]);
+        }
+      } else {
+        osa = kaarinaytteet(...luvut);
+      }
+      p.push(...(p.length ? osa.slice(1) : osa));
+    }
+    return jalki(p);
+  };
+
+  /**
    * MUSTEPISTE — terän oma jälki paikallaan, ei ympyrä. Soikio on
    * terän kulmassa, ja pinta-ala vastaa säteen `r` ympyrää.
    */
@@ -432,7 +479,7 @@ function nostosymKyna(tera) {
     return p.map((s, i) => (i ? 'L' : 'M') + s).join(' ') + ' Z';
   };
 
-  return { viiva, kaari, murto, aalto, keha, piste };
+  return { viiva, kaari, murto, aalto, keha, kehakaari, rata, piste };
 }
 
 /**
@@ -478,17 +525,48 @@ const NOSTOSYM_MINI_LUONNOS = {
    * silmää, nokka) oli omistajan sanoin *"pelottavan näköinen"*:
    * tupsut lukivat sarvina ja isot silmät tuijottivat.
    *
-   * Pallot SIVUAVAT toisiaan eivätkä mene lomittain: kun ison pallon
-   * yläkaari kulki pienen pallon läpi, se piirsi kasvoihin leuan ja
-   * merkki luki parrakkaana ukkona. Sivuavina ne lukevat istuvana
-   * eläimenä — pieni pää ison kropan päällä.
+   * KOLMAS KIERROS 31.8.2026 — LUMIUKKO POIS. Pallot sivusivat
+   * toisiaan pystysuorassa, ja omistaja luki merkin oikein:
+   * *"eläin symboli näyttää nyt lumiukolta. Tarkoitus oli, että se
+   * näyttäisi kissalta, jolloin se isompi ympyrä olisi vähän niin kuin
+   * kissan vartalo ja pienempi ympyrä tulisi sen isomman ympyrän
+   * sisälle, niin että se muistuttaa päätä. Tai sehän voi olla hieman
+   * sen isomman ympyrän ulkopuolellakin."*
+   *
+   * ── MIKSI VARTALON KAARESSA ON AUKKO ──────────────────────────────
+   *
+   * Toisella kierroksella pallot yritettiin jo lomittain, ja silloin
+   * ison pallon kaari kulki kasvojen läpi ja piirsi niihin leuan:
+   * merkki luki parrakkaana ukkona. Se ratkaistaan nyt piirtämällä
+   * vartalo AVOIMENA kaarena, josta puuttuu se sektori, jonka pään
+   * kehä peittää — pää lomittuu vartaloon ilman että vartalon viiva
+   * kulkee kasvojen poikki.
+   *
+   * Aukon rajat on LASKETTU eikä arvattu: keskipisteiden väli on 4,44,
+   * joten kehät leikkaavat toisensa pään suunnasta (238,8°) ±35,6°
+   * eli välillä 203,3° … 274,4°. Siihen on lisätty 6° pelivaraa
+   * kummallekin puolelle, jottei terän leveys tunge pään viivaan —
+   * aukko on 197,3° … 280,4° ja vartalon kaari sen komplementti
+   * −79,6° … 197,3° (myötäpäivään, 0° = oikealle).
+   *
+   * Pää on ison kehän REUNAN PÄÄLLÄ (keskipisteiden väli 4,44,
+   * vartalon säde 4,40): pään kehästä noin puolet on vartalon sisällä
+   * ja puolet ulkona — omistajan salliman *"hieman ulkopuolellakin"*
+   * kohta. Täysin sisäpuolinen sijoittelu kokeiltiin ja hylättiin:
+   * silloin merkki luki ympyränä ympyrän sisällä (maalitaulu), ei
+   * käpertyneenä kissana. Vedot pysyvät neljässä.
+   *
+   * HÄNTÄÄ EI OLE. Se olisi lukenut kissan parhaiten, mutta vartalon
+   * oikea reuna on x = 5,1 ja rasterin ruutu loppuu 7,4:ään: väliin
+   * jää 2,3 yksikköä eli 1,2 CSS-pikseliä, johon ei mahdu häntää vaan
+   * pelkkä täplä vartalon kylkeen.
    */
-  elain: ({ keha, piste }) => ({
+  elain: ({ kehakaari, keha, piste }) => ({
     vahva: [
-      keha(0, 2.85, 3.25),
-      keha(0, -3.00, 2.60),
-      piste(-1.05, -3.15, 0.58),
-      piste(1.05, -3.15, 0.58),
+      kehakaari(0.70, 1.90, 4.40, -79.60, 197.30),
+      keha(-1.60, -1.90, 2.70),
+      piste(-2.60, -2.15, 0.58),
+      piste(-0.55, -2.15, 0.58),
     ],
   }),
   /*
@@ -535,39 +613,64 @@ const NOSTOSYM_MINI_LUONNOS = {
    * → ei yhtään. Käsivarret kaartuvat ULOS ja kaikupohja pysyi —
    * ilman sitä käsivarret kokoontuivat alhaalla kärkeen ja merkki
    * luki Y:n muotoisena haarukkana.
+   *
+   * KOLMAS KIERROS 31.8.2026 (omistaja: *"Ainoastaan kulttuurissa sitä
+   * yläviivaa pitää hieman laskea"*): poikkipuu −4,40 → −3,40 eli yksi
+   * yksikkö alemmas. Leveys kasvoi samalla ±4,70 → ±5,10, koska
+   * käsivarret kaartuvat ulospäin: matalammalla ne ovat x = ±4,89:ssä,
+   * eikä vanha puu olisi enää yltänyt niiden yli vaan pysähtynyt
+   * niiden sisäpuolelle.
    */
   kulttuuri: ({ viiva, kaari }) => ({
     vahva: [
       kaari(-2.30, 3.90, -4.20, -5.50, -1.70),
       kaari(2.30, 3.90, 4.20, -5.50, 1.70),
-      viiva(-4.70, -4.40, 4.70, -4.40),
+      viiva(-5.10, -3.40, 5.10, -3.40),
       viiva(-2.30, 3.90, 2.30, 3.90),
     ],
   }),
   /*
-   * HARPPI — tekniikka. UUSI KUVIO (omistaja 31.8.2026: *"tekniikka
-   * myös joku toinen. Tuolla näyttää nyt autolta."*). Vedot 4 → 3.
+   * HOLVIKAARI — tekniikka. UUSI KUVIO (omistaja 31.8.2026, kolmas
+   * kierros: *"harppi näyttää vielä liikaa A-kirjaimelta. Koita, jos
+   * saat siihen keksittyä jotain."*). Vedot 4 → 2.
    *
-   * Höyryveturi oli väärä kuvio kahdesti: se luki autona, ja kategoria
-   * ei ole liikenne. Kategorian kohteet ovat insinöörityötä —
-   * Hobrechtin viemäriputket, Roquefavourin akvedukti, Pulkovan
-   * observatorio, Duomon gnomoni, Finlaysonin konehalli, Ruhrin alue.
-   * Niiden yhteinen esine on HARPPI: piirustuslaudan mittaväline ja
-   * 1800-luvun insinöörin oma merkki.
+   * ── MIKSI HARPPI EI KELVANNUT ─────────────────────────────────────
    *
-   * Jalat ovat ERI PITUISET ja eri kulmassa (asetettu harppi), jotta
-   * merkki ei lue vuorikolmiona: kolmio on leveä ja symmetrinen,
-   * harppi kapea ja vino. Kaksi lisäeroa on pakko pitää VAHVANA
-   * musteena, koska ne ovat merkin ainoa erottaja käyttökoossa:
-   * nivelen mustepiste huipulla ja säätökaari jalkojen välissä.
-   * Ohuena kaari katosi kartalla kokonaan.
+   * Harppi on kaksi haaraa ja poikkipuu, ja se on A. Vika ei ollut
+   * hienosäädössä vaan ÄÄRIVIIVASSA: perheessä kolmio (vuori) ja
+   * pystysuora (historia, kaupunki) ovat jo varattuja, ja A on kolmio.
+   * Ainoa korjaus oli vaihtaa merkin ääriviivan LUOKKA.
+   *
+   * ── MIKSI HOLVI ──────────────────────────────────────────────────
+   *
+   * Kategorian 23 kohdetta luettiin läpi ennen valintaa (nimiöt:
+   * Roquefavour, Vuoristovesijohto, Hobrechtin putket, London Bridge,
+   * Maanalainen, Wienin asema, Konehalli, Finlayson, Pulkova, Duomon
+   * gnomoni, Näyttely 1872, Kyyhkyposti, Prokopovytš, Ukkoskivi …).
+   * Enemmistö on VETTÄ, RATAA TAI KULKUA KANTAVA RAKENNE — akvedukti,
+   * silta, tunneli, asemahalli, vesijohto. Niiden yhteinen ääriviiva
+   * on holvikaari kannen alla: 1800-luvun insinöörityön oma merkki.
+   *
+   * ── MIKSI JUURI TÄMÄ MITOITUS ────────────────────────────────────
+   *
+   * Perusmuoto on VAAKASUUNTAINEN JA PYÖREÄ, koska pysty ja kolmio
+   * ovat varattuja. Kansi on merkin levein veto (±6,30) ja ulottuu
+   * jalkojen yli, jolloin silmä lukee kannen kannatelluksi. Kaari on
+   * AITO PUOLIYMPYRÄ (`rata` + `kaari`, ei bezier): bezier-kaari
+   * kärjistyy tässä koossa goottilaiseksi, ja kärki olisi palauttanut
+   * juuri sen kolmion, josta oltiin pääsemässä eroon. Jalat ja kaari
+   * ovat YKSI veto, joten saumaan ei jää kynän nostoa.
+   *
+   * Kokeiltiin ja hylättiin: hammasratas (kahdeksan hammasta lukee
+   * käyttökoossa samana tähtenä kuin ihme), kahden holvin arkadi
+   * (kaksi kaarta ei mahdu 13 yksikön korkeuteen ilman että
+   * yläpuolisko jää tyhjäksi), kaukoputki (vino tanko = sana).
    */
-  tekniikka: ({ viiva, kaari, piste }) => ({
+  tekniikka: ({ viiva, rata }) => ({
     vahva: [
-      viiva(-0.30, -4.30, -3.60, 5.10),
-      viiva(0.30, -4.30, 4.90, 4.30),
-      piste(0, -4.85, 1.10),
-      kaari(-2.05, 0.60, 2.80, 0.60, 0.75),
+      viiva(-6.30, -3.60, 6.30, -3.60),
+      rata(['jana', -4.70, 5.20, -4.70, 1.10], ['kaari', 0, 1.10, 4.70, 180, 360],
+        ['jana', 4.70, 1.10, 4.70, 5.20]),
     ],
   }),
   /*

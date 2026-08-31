@@ -1,3 +1,168 @@
+# Opus → Fable: kissa, poikkipuu ja holvikaari (haara claude/symbolit-kasin)
+
+Kolmas kierros valmis, pushattu samalle haaralle. **Ei versionostoa, ei PR:ää,
+ei laattapolttoa.** Yksi tiedosto muuttui: `js/fokusnosto-symbolit.js`
+(+131 / −30 riviä). Vedon toteutus — leveä terä, kiinteä −40° kulma, viistot
+päätteet, kynän nosto — on **koskematon**, kuten pyydettiin.
+
+Omistajan kolme korjausta tehtiin, muihin kahteentoista merkkiin ei koskettu.
+
+## 1. Katseluarkki — PÄÄTUOTOS
+
+```
+/home/user/Matkakirja/.claude/worktrees/symbolit-kasin/symbolit-vertailu.png
+```
+
+3120 × 6970 px, **ei committoitu**. **"Ennen" on EDELLISEN KIERROKSEN merkki**
+eli se, jonka omistaja hyväksyi (*"Symbolit ovat nyt jo todella hyviä"*) — ei
+mainin merkki. Kolme muuttunutta on merkitty mustalla MUUTTUI-lipukkeella ja
+korostetulla rivipohjalla; loput kaksitoista ovat mukana vertailun vuoksi.
+Jokaisesta merkistä ennen/jälkeen: suurennos 106 px, pikselinäkymä
+(dpr 3 = 23 × 23 laitepikseliä, 4× nearest-neighbour) ja kolme 1:1 kappaletta
+todellisessa käyttökoossa. Kartan pergamentti `#e8dcbc` ja muste
+`rgba(58,40,25,0.86 / 0.52)`. Oranssi palkki = kompromissi tai perustelu.
+Alimpana koko perhe 1:1 nauhana, niin kuin ne ovat kartalla.
+
+## 2. Kulttuuri — poikkipuu alemmas (tehty, mutta lue kohta 5)
+
+Poikkipuu **−4,40 → −3,40**, eli yksi yksikkö alemmas. Leveys kasvoi samalla
+±4,70 → ±5,10: käsivarret kaartuvat ulospäin, ja uudella korkeudella ne ovat
+x = ±4,89:ssä — vanha puu olisi pysähtynyt niiden **sisäpuolelle** eikä olisi
+enää lukenut poikkipuuna. Vedot pysyvät neljässä. Ei muuta.
+
+## 3. Eläin — lumiukko pois, kissa tilalle
+
+Omistaja luki merkin oikein: kaksi pystysuunnassa sivuavaa palloa on lumiukko.
+Nyt:
+
+- **iso kehä (r 4,40, keskipiste 0,70 / 1,90) = vartalo**
+- **pieni kehä (r 2,70, keskipiste −1,60 / −1,90) = pää**, ylävasemmalla
+- silmät pienemmässä kehässä, korvat yhä poissa
+- vedot pysyvät **neljässä**
+
+**Vartalon kaaressa on aukko — juuri se, mitä tehtävänannossa arveltiin.**
+Vartalo ei ole enää umpinainen kehä vaan **avoin ympyränkaari**, josta puuttuu
+se sektori, jonka pään kehä peittää. Silloin pää lomittuu vartaloon eikä
+vartalon viiva kulje kasvojen poikki — viime kierroksen parrakas ukko ei
+palaa. Aukon rajat on **laskettu**: keskipisteiden väli 4,44, kehät leikkaavat
+toisensa pään suunnasta (238,8°) ±35,6° eli välillä 203,3° … 274,4°; siihen on
+lisätty 6° pelivaraa kummallekin puolelle, jottei terän leveys tunge pään
+viivaan. Vartalon kaari on siis **−79,6° … 197,3°**.
+
+**Kokeiltiin molemmat sijoittelut, kuten pyydettiin.** Täysin sisäpuolinen pää
+(keskipisteiden väli 3,1) hylättiin pikselinäkymän perusteella: se luki
+ympyränä ympyrän sisällä eli maalitauluna, ei kissana. Valittu sijoittelu on
+omistajan salliman *"hieman ulkopuolellakin"* kohta: pään keskipiste on
+käytännössä vartalon kehän päällä (väli 4,44 vs. säde 4,40), joten pään
+kehästä noin puolet on vartalon sisällä ja puolet ulkona. Siinä silhuetti on
+iso kerä ja sen ylänurkassa pää — käpertynyt kissa.
+
+**Mitattu vaikutus käyttökoossa:** eläimen pienin etäisyys mihinkään muuhun
+perheen merkkiin nousi **19,1 % → 20,0 %** (mittaustapa kohdassa 6).
+
+**Häntää ei ole**, vaikka se lukisi kissan parhaiten. Vartalon oikea reuna on
+x = 5,10 ja rasterin ruutu loppuu 7,40:ään: väliin jää 2,3 yksikköä eli **1,2
+CSS-pikseliä**, johon mahtuu täplä vartalon kylkeen mutta ei häntää. Kokoa ei
+kasvatettu, joten häntä jäi pois. Tämä on tiedoksi, ei korjauspyyntö.
+
+## 4. Tekniikka — harppi ulos, holvikaari tilalle
+
+**Vika ei ollut hienosäädössä vaan ääriviivassa.** Harppi on kaksi haaraa ja
+poikkipuu, ja se on A; perheessä kolmio (vuori) ja pystysuora (historia,
+kaupunki) ovat jo varattuja. Ainoa korjaus oli vaihtaa ääriviivan **luokka**,
+kuten tehtävänanto ohjasi.
+
+**Kategoria luettiin läpi ennen valintaa** (23 kohdetta, nimiöt:
+Roquefavour · Vuoristovesijohto · Hobrechtin putket · London Bridge ·
+Maanalainen · Wienin asema · Konehalli · Finlayson · Pulkova · Duomon gnomoni ·
+Näyttely 1872 · Kyyhkyposti · Prokopovytš · Ukkoskivi · Legon syntysija ·
+E-valtio · Sykkylvsfjorden). **Enemmistö on vettä, rataa tai kulkua kantava
+rakenne** — akvedukti, silta, tunneli, asemahalli, vesijohto, viemäri. Niiden
+yhteinen ääriviiva on **holvikaari kannen alla**.
+
+Kuvio on **kaksi vetoa** (4 → 2): kansi ±6,30 ja yhtenä vetona vasen jalka →
+puoliympyrä → oikea jalka. Kansi on merkin levein veto ja ulottuu jalkojen yli,
+jolloin silmä lukee sen kannatelluksi. Kaari on **aito ympyränkaari eikä
+bezier**: bezier on paraabeli ja kärjistyy tässä koossa goottilaiseksi — kärki
+olisi palauttanut juuri sen kolmion, josta oltiin pääsemässä eroon. Tätä varten
+kynään lisättiin kaksi vedonpiirtäjää (`kehakaari`, `rata`); itse terä ei
+muuttunut.
+
+**Kokeiltiin ja hylättiin:** hammasratas (kahdeksan hammasta lukee käyttökoossa
+samana tähtenä kuin *ihme*), kahden holvin arkadi (kaksi kaarta ei mahdu 13
+yksikön korkeuteen ilman että yläpuolisko jää tyhjäksi), kaukoputki (vino tanko
+= sana). Neljä mitoitusta holville renderöitiin pikselinäkymään ja valittiin
+leveä matala versio, koska korkeajalkainen luki porttitornina (kaupunki).
+
+### Käyttökoetta ei ohitettu — tässä luvut
+
+| mittaus (6,8 CSS-px, dpr 3) | harppi | holvi |
+| --- | --- | --- |
+| ero **vuoreen** | 15,9 % | **17,5 %** |
+| pienin ero mihinkään perheen merkkiin | 14,2 % (sana) | **17,0 %** (kulttuuri) |
+| sijoitus perheen 10 lähimmän parin listalla | mukana **kahdesti** | **ei kertaakaan** |
+
+Perheen 105 parin **mediaaniero on 20,1 %** ja pienin (kauppa ↔ merenkulku)
+9,3 %. Rehellinen luku: holvi on 17,5 %:n päässä vuoresta eli yhä hieman
+mediaanin alapuolella — se ei ole perheen erottuvin pari. Mutta se ei ole enää
+lähelläkään ongelmapäätä, ja pikselinäkymässä ero on luokkaero eikä asteikko:
+vuori on avoin Λ, holvi umpinainen kaari vaakapalkin alla.
+
+## 5. Havainto, jota EN korjannut omin päin
+
+**Kulttuuri (lyyra) on yhä umpinainen kori — mutta poikkipuun lasku ei tee
+siitä umpinaisempaa.** Umpinaisuus syntyi viime kierroksella siitä, että
+väliviivan poisto vei viimeisen kielen; poikkipuun siirto vain **siirtää**
+saman umpinaisen alueen alemmas, ei kasvata eikä pienennä sitä. Sivuvaikutus
+on itse asiassa pieni parannus: käsivarret jäävät nyt puun yläpuolelle
+korkeammalle ja lukevat selvemmin lyyran sarvina. Kieltä en lisännyt, koska
+sitä ei pyydetty. Jos kori häiritsee, yksi kieli takaisin riittää
+(vedot 4 → 5); merkitys ja paikka eivät muutu.
+
+## 6. Mittaustapa (sama ennen ja jälkeen)
+
+Merkki rasteroidaan **käyttökoossa**: 6,8 CSS-px, dpr 3 = 23 × 23
+laitepikseliä. Kahden merkin ero on musteen keskimääräinen itseisarvoero
+prosentteina täydestä mustesta samassa rasterissa. Ei mallia, ei silmämäärää —
+sama koodi ajettiin haaran edelliselle tilalle ja tälle. Arvio pikselinäkymästä
+tehtiin joka kierroksella (viisi renderöintikierrosta, ei suurennoksesta).
+
+## 7. Mitat ja poltto
+
+- **Kokoa ei kasvatettu.** `NOSTOSYM_MINI_R` on yhä 6,5, ja musteen uloin piste
+  on **7,04 yksikössä** (ihme, ei mikään muuttuneista) eli mahtuu rasterin
+  ruutuun `NOSTOSYM_MINI_RUUTU` = 7,4. Mitattu kaikista poluista.
+- **Vetoja koko perheessä 48 → 46.** Tekniikka 4 → 2; eläin ja kulttuuri
+  pysyvät neljässä. Kuuden vedon katto pitää.
+- **Determinismi:** ei siementä, ei arpaa
+  (`grep Math.random|NOSTOSYM_HORJU` → 0 osumaa). Kolme peräkkäistä Node-ajoa,
+  sama SHA-256 `83ffebb5…`. Polttoehto säilyy.
+- `nostosymMiniMerkki(symboli, laji) → { vahva, ohut, vedot }` on yhä
+  selaimeton: kaksi täytettävää `d`-merkkijonoa, ei DOMia. Todennettu paljaassa
+  Nodessa.
+- Kategoria→symboli-karttaa ei muutettu; `tekniikka` osoittaa yhä samaan
+  tunnukseen, vain kuvio vaihtui. Kortin oma merkkiperhe (`NOSTOSYM_KUVAT`,
+  `--sym-*`) ja CSS ovat koskemattomat — tämä kierros ei muuttanut
+  `css/styles.css`:ää lainkaan.
+
+## 8. Portit
+
+- `node --test tests/*.test.mjs` → **# pass 1047, # fail 0** (1 skipped).
+- `node tools/tarkista-kaksoisavaimet.mjs` → ei kaksoisavaimia.
+- `node tools/build-standalone.mjs` → ok (20 442 kt); **dist/ poistettu ennen
+  committia**.
+- `savuke-fokuskohteet.mjs` → **96/96** · `savuke-selitevalikko.mjs` → 32/32 ·
+  `savuke-maastokohteet.mjs` → 8/8.
+
+**Ennestään rikki, EI tästä muutoksesta:** `savuke-elaintaky.mjs` kaatuu yhä
+samoihin kolmeen vartioon ("merkki on kohdemerkin mittaluokkaa", "osuma-alue on
+sormen mitta", "ainakin yksi merkki on ruudulla napautettavissa"). Sama vika
+todettiin edellisellä kierroksella myös mainin työkopiossa, jossa symbolit ovat
+ennallaan — vika on eläintäkyjen puolella. Jätin sen koskematta
+kustannuskurin kohdan 1 mukaan.
+
+---
+
 # Opus → Fable: leveän terän veto ja kuusi uutta kuviota (haara claude/symbolit-kasin)
 
 Toinen kierros valmis, pushattu samalle haaralle. **Ei versionostoa, ei
