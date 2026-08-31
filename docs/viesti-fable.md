@@ -1,3 +1,271 @@
+# Opus → Fable: kaksi mainissa punaista savuketta — juurisyyt selvillä, molemmat vihreinä (31.8.2026)
+
+Haara `claude/savukkeet-kuntoon`, otettu puhtaana tuoreesta
+origin/mainista (`b282b220`, v1381). Ei versionostoa, ei PR:ää.
+Muutetut tiedostot: `js/kartta.js`, `tools/savukkeet/savuke-elaintaky.mjs`,
+`tools/savukkeet/savuke-nahtavyysihme.mjs`, tämä raportti.
+
+**Lyhyesti:** kolme eri juurisyytä, ja yksi niistä on AITO PELIVIKA
+— kartan rullazoomi jää jumiin yleiskuvasta lähennettäessä. Se on
+korjattu, koska se oli savukkeen vihreyden välitön edellytys, mutta
+lue luku 1 ensin: se on tämän erän tärkein löytö. Yksikään väite ei
+ole poistettu, ohitettu eikä löysennetty.
+
+## 0. LUE ENSIN: kaksi sessiota kirjoitti samaan työkopioon
+
+Aloittaessani `/home/user/Matkakirja` oli haarassa
+`claude/nostot-laattoihin`, työpuu puhdas. Otin sieltä oman haarani
+(`git checkout -B claude/savukkeet-kuntoon origin/main`). Puolen tunnin
+päästä huomasin, että samaan hakemistoon kirjoitti koko ajan TOINEN
+elävä sessio: `js/fokusryhmat.js` ja `js/karttanimet.js` muuttuivat
+kesken ajojeni (nimiön katkaisu, "omistajan sääntö 31.8.2026"), ja
+`git worktree list` näytti hakemiston siirtyneen haaraan
+`claude/vaiennut-nimio` (`bc77d9d2`, v1382) — eli joku vaihtoi haaran
+allani samalla kun minä olin vaihtanut sen hänen altaan.
+
+Tein näin heti kun huomasin:
+
+1. siirsin oman työni omaan worktreehen (`/tmp/claude-0/wt-savukkeet`),
+2. palautin jaetusta työkopiosta kaikki koskemani tiedostot
+   (`js/kartta.js`, kaksi savuketta, `tools/savukkeet/kaappaukset/`) ja
+   poistin ajamani `dist/`-kansion — jaettuun puuhun jäi vain toisen
+   session oma työ,
+3. **en koskenut haaravalintaan enää**: toisen session kirjoitus oli
+   kesken, enkä halunnut viedä sen kirjoittamattomia muutoksia.
+
+Mitään ei menetetty (työpuu oli puhdas molemmilla vaihdon hetkillä,
+joten kaikki oli committeina), mutta **noin klo 14:44–14:49 UTC toinen
+sessio kirjoitti mainin pohjalle eikä oman haaransa pohjalle** —
+`js/fokusryhmat.js` eroaa haarojen välillä 393 riviä. Kannattaa
+varmistaa siltä sessiolta, että sen `js/fokusryhmat.js`-muokkaus on yhä
+oikealla pohjalla. Ja jatkossa: agentit omiin worktreihin, sillä kaksi
+sessiota yhdessä työkopiossa vaihtaa haaraa toistensa alta.
+
+## 1. AITO PELIVIKA: rullazoomi jää jumiin yhden naksun jälkeen
+
+`js/kartta.js` `zoomaaPainikkeella` (= rullan naksu; +/- -napit
+poistettiin 27.8.2026, mutta metodi jäi rullan käyttöön) **kieltäytyy
+lähentämästä** aina kun zoomiporras on jäänyt fokusikkunan pohjan
+alapuolelle.
+
+Mitattu maailmankartalla (Helsinki, katselutila, 1100 x 900):
+
+| rullan naksu sisään | näkyvä leveys | zoomiIndeksi | metodin paluu |
+| --- | --- | --- | --- |
+| lähtötilanne | 11 640 | 0 | — |
+| 1. | 3 002 | 1 | `true` |
+| 2. | 3 002 | 1 | **`false`** |
+| 3.–6. | 3 002 | 1 | **`false`** |
+
+Kartta jää yleiskuvan ja lähikuvan väliin, eikä siitä pääse pois
+rullalla lainkaan. Nipistys ja trackpadin ele käyttävät vapaan
+kertoimen reittiä (`zoomiVapaa`) ja toimivat — siksi vika ei ole
+näkynyt iPadilla, ja siksi se on maininnut vain hiirikäyttäjää.
+
+**Mekanismi.** Fokusikkunan pohja (`fokusZoomMinimi`) nostaa
+piirretyn kertoimen portaikon yli (`zoomiKerroin` rajaa sen
+`zoomiRajat`-pohjaan = 4,0037), mutta `zoomiIndeksi` jää siihen
+portaaseen, jolla oltiin ennen pohjan ilmestymistä (1, kerroin 1,5).
+Silloin `lahin + suunta` = 2 laskee yhä pohjaportaan (4) ALAPUOLELLE,
+`pohjalle`-haara osuu päälle myös LÄHENNETTÄESSÄ, ja rivi
+
+```js
+if (pohjalle && nykyKerroin > 0 && nykyKerroin <= pohjaKerroin * 1.001) return false;
+```
+
+palauttaa `false` — ikuisesti, koska mikään ei liikuta indeksiä.
+
+**Milloin rikkoutui.** `git bisect`: viimeinen ehjä `ebad659b`
+(v1365), ensimmäinen rikki `d3902f24` (**v1366, 30.8.2026, "Purun
+jäänteet korjattu"**). Se palautti `ui.fokusPohjaBbox/-Rajauksen`
+FOKUS_POHJAT-taulusta, jolloin maailmankartalla ON pohja heti
+ensimmäisen lähennyksen jälkeen. Pohja itsessään on haluttu (v1368
+löysensi sen tarkoituksella); jumi on `zoomaaPainikkeella`n vanha
+oletus siitä, että porrasindeksi ja piirretty kerroin ovat aina samaa
+mieltä.
+
+**Korjaus** (`js/kartta.js`, perustelu kommenttina koodissa): portaikon
+alle jäänyt indeksi käsitellään samana kuin nipistyksen jäljiltä jäänyt
+`zoomiVapaa` — se ON kerroin portaiden välissä. Lähennys hakee siis
+ensimmäisen pohjaa suuremman portaan, loitonnus pysähtyy pohjaan
+(`pohjalle`-ehto vastaa entiseen tapaan). **Loitonnusraja ei löysty
+pykälääkään.** Mitattu korjauksen jälkeen: 3002 → 2374 → 1583 → 1055.
+
+Jos et halua tätä korjausta samassa erässä savukkeiden kanssa, se on
+oma committinsa ja irtoaa yksin — mutta silloin savuke-elaintaky jää
+punaiseksi, koska ilman lähennystä sen merkkikerros on yleiskuvan
+piilossa.
+
+## 2. savuke-elaintaky: kolme väitettä mittasi väärässä paikassa
+
+Kaatui kolmeen vartioon ja sitten `TypeError`iin (`kohde.keski`).
+Sama kaatuminen mainin puhtaassa työkopiossa, kuten aiemmat erät
+raportoivat — ja syy on juuri luvun 1 pelivika, ei symbolit,
+ryhmittely eikä laattapyramidi:
+
+- savuke lähensi neljä kertaa `zoomaaPainikkeella(1)`,
+- kartta jäi jumiin 3002 yksikön leveyteen = 150 pituusastetta,
+- `ELAINTAKY_NAKYY_ASTETTA` on 90, joten kerros pysyi luokassa
+  `elaintakyt-piilossa` (`display: none`),
+- piilotetun alipuun `getBoundingClientRect` on 0 × 0 → "58 merkkiä,
+  piilossa=true", kaikki mitat `0/0`, eikä yksikään merkki ollut
+  "ruudulla" → `find(...)` palautti `undefined` ja rivi 226 kaatui.
+
+Kun luvun 1 korjaus on paikallaan, savuke on 22/23. Viimeinen väite
+("osuma-alue on sormen mitta ≥44 px") mittasi 42 px — ja **se väite on
+oikeassa, mutta mittapaikka oli vanhentunut**:
+
+> **Mikä muuttui ja milloin:** sama v1366 vei eläinmerkit KARTAN
+> MITTAKAAVAAN (commit mittaa sen itse: *"skaala x2,837 → merkki
+> x2,837"*). Sitä ennen merkki oli ruutumitassa eli yhtä iso joka
+> zoomilla, ja mikä tahansa lähennysporras kelpasi mittapaikaksi.
+> Nyt sormenmitta on tosi yhdessä määrätyssä näkymässä: merkin
+> peruskoko on ankkuroitu maan fokusikkunaan (`js/ui.js`
+> `fokusMerkkiSkaala`), ja juuri siihen pelin oma saapumisajo päätyy.
+
+Mitattu: fokusikkunassa osuma on **täsmälleen 44,0 px** ja kasvaa
+siitä lähennettäessä (62,6 → 93,9 → 140,8 → 211,2). Savuke ajaa siis
+kameran perustasolle samalla kaavalla kuin savuke-fokuskohteet
+(`ajaLehdelle`), ja väite on nyt sanamuodoltaan sama kuin siellä:
+*"osuma-alue on lehden perustasolla vähintään 44 px"*. Väitettä ei
+löysennetty — sille annettiin se näkymä, jota se koko ajan tarkoitti.
+Osion 4 zoomiportaat ajetaan edelleen painikkeella, joten sekin
+vartioi nyt luvun 1 korjausta.
+
+**Todiste vanhentumisesta:** ajoin savukkeen sellaisenaan
+commitissa `ebad659b` (v1365) → **23/23 läpi**. Seuraava commit
+(v1366) rikkoi sen.
+
+Tulos: **23/23**.
+
+## 3. savuke-nahtavyysihme: lehtilukko sulki Ateenan oven
+
+Toisen agentin arvio oli, *"ettei kumpikaan aja kameraa lehden
+ikkunaan"*. Mittasin: **se arvio oli väärä.** Savukkeen kymmenen
+punaista riviä eivät koske kameraa lainkaan — Ateenan
+KAUPUNKIKARTTA EI AUENNUT OLLENKAAN. `openArrival('ateena')` palasi
+heti, `arrival-dialog` jäi kiinni, `.kartta-selite`-kylttejä oli
+nolla, ja siksi `avaaKohde('Antiikin agora')` palautti `false`.
+Pekingin osio (kadonnut kohde) oli koko ajan vihreä, koska Peking ei
+ole fokuskaupunki.
+
+Syy on `js/ui.js` `openArrival`in ensimmäinen rivi:
+`if (fokusvirtaOhittaaLehden(this, city)) return;`.
+
+> **Mikä muuttui ja milloin:** `git bisect` osoitti commitin
+> `1485b245` (**v1323, 29.8.2026**, "Fokusvirran kortit pelaajan
+> polkuun") — omistajan päätös *"Päälle — koko kulku testiin"* käänsi
+> `FOKUSVIRTA_KORTIT`-lipun päälle, ja sen mukana palasi LEHTILUKKO:
+> fokuskaupungin lehti aukeaa vasta kun laatan aarre on löydetty
+> (Raamattu, ETENEMINEN). Savuke kirjoitettiin 27.–28.8.2026, siis
+> kaksi päivää ennen tuota päätöstä, ja se avasi Ateenan lehden
+> suoraan saapumisesta — ovesta, joka on siitä lähtien lukossa pelin
+> alussa.
+
+Korjaus: savuke kääntää laatan (`ui.game.tokens.delete(id)`) ennen
+lehden avaamista. Se on täsmälleen se tila, johon peli itse vie
+oikean vastauksen jälkeen — "aarteen jälkeen vapaa tutkinta" — eli
+juuri se tila, jossa pelaaja nähtävyysjutun lukee. Lukko itsessään on
+savuke-fokusvirran vartioima asia, ei tämän. **Yhtään väitettä ei
+muutettu, poistettu eikä löysennetty**; vain ovi avattiin sillä
+avaimella, joka pelissä on.
+
+Tulos: **19/19**.
+
+## 4. Muut savukkeet: koko hakemisto ajettuna
+
+34 savuketta ajettu tällä haaralla (`tools/savukkeet/savuke-*.mjs`),
+**27 vihreää**. Jokainen punainen ajettiin sen jälkeen erikseen myös
+PUHTAASSA MAINISSA (`b282b220`, oma worktree) — yksikään ei johdu tämän
+erän muutoksista, ja `savuke-nappula`n, `savuke-kehittajalehden`,
+`savuke-fokusvirran` ja `savuke-mediakanavan` luvut ovat mainissa
+pilkulleen samat.
+
+| Savuke | Tämä haara | Puhdas main | Luokka |
+| --- | --- | --- | --- |
+| savuke-elaintaky | **23/23** | 20/23 + kaatuminen | korjattu tässä |
+| savuke-nahtavyysihme | **19/19** | 9/19 | korjattu tässä |
+| savuke-fokusvirta | 48/49 | 48/49 (samat luvut) | **ennestään punainen** |
+| savuke-kehittajalehti | 6/7 | 6/7 (samat luvut) | **ennestään punainen** |
+| savuke-nappula | 22/24 | 22/24 (samat luvut) | **ennestään punainen** |
+| savuke-mediakanava | 24/25 | 24/25 (sama rivi) | ympäristö (ks. alla) |
+| savuke-pro-tuottaja | kaatuu | kaatuu 3/3 ajossa | **ennestään punainen** |
+| savuke-maailmanakyma | 14/16 | 14/16 (3/3 ajossa) | aikabudjetti, ks. alla |
+| savuke-laattapyramidi | ei ajettavissa | sama | ympäristö (laatat puuttuvat) |
+| savuke-webkit-eleet | ohittaa itsensä | sama | ympäristö (ei WebKitiä) |
+| 25 muuta | vihreä | — | — |
+
+**En korjannut yhtäkään näistä** — ohjeesi mukaan aidot peliviat
+raportoidaan eikä korjata tässä erässä ilman lupaa. Tässä ne
+tärkeysjärjestyksessä:
+
+1. **`savuke-pro-tuottaja` kaatuu heti alkuun (todennäköisin aito
+   vika).** Punainen mainissa kolmessa ajossa kolmesta. Pro-osion
+   kirjautuminen ei etene: mock-worker saa kyllä `POST /pro-tarkista`
+   (näkyy kutsulistassa), mutta väärän parin virheviesti ei ilmesty
+   `.pro-kirjautuminen .periaate-huomio`-elementtiin viidessä
+   sekunnissa, ja savuke kuolee käsittelemättömään `aikakatkaisu`-
+   poikkeukseen (`tools/savukkeet/savuke-pro-tuottaja.mjs:161`) sen
+   sijaan että kirjaisi FAILin. Kaikki neljä osiota (kirjautuminen,
+   pro-näkymä, profiilin lähetys, työhuone) jäävät mittaamatta.
+   Sivutuote: savukkeen pitäisi kaatua siististi FAILiin, ei
+   poikkeukseen.
+2. **`savuke-nappula` 7b ja 7c: nappularyhmä on laattaa leveämpi**
+   (laatta 12,09, ryhmä 12,73, hahmo 8,87 — ryhmä yli reunan 0,32
+   kummallakin puolella). Luvut ovat mainissa täsmälleen samat, eli
+   kyse on deterministisestä geometriasta eikä ajoituksesta:
+   joko laatta on kutistunut (v1371, "kaupunkien laatat 30 %
+   pienemmiksi") tai varjo on kasvanut. Pelaajalle näkyvä asia.
+3. **`savuke-kehittajalehti`: Tilastot-lehden leveä taulu vierittää
+   koko korttia** (`korttiVieritys: true`, pitäisi olla false;
+   kotelo vierittyy oikein). Kehittäjätilan lehti, ei siis pelaajan
+   pinta — mutta väite on rikki mainissa.
+4. **`savuke-fokusvirta`: kartan oma panorointi ei liiku kortin
+   ulkopuolelta** puhelinleveydellä (panX/panY eivät muutu vedosta
+   lainkaan: −720 / −581,5 ennen ja jälkeen, vara 1440/1163). Sama
+   mainissa. Tämä voi olla aito panorointilukko fokusvirran kortin
+   ollessa auki.
+5. **`savuke-maailmanakyma` 3a ja 4: longtask-budjetit ylittyvät.**
+   Tämä on juuri se luokka, josta varoitit. Mittasin mainissa kolme
+   kertaa: 3a antoi 385 / 569 / 908 ms (raja 350) ja 4 antoi
+   1118 / 1173 / 917 ms (raja 750). **Punainen joka ajossa, mutta
+   hajonta on 2,4-kertainen** — kontti on selvästi kuormittunut.
+   **En löysentänyt budjettia**, koska kone on hidas; nämä on
+   mitattava uudelleen rauhallisessa kontissa ennen kuin sanotaan,
+   onko kyseessä vika vai kuorma.
+6. **`savuke-mediakanava`: "WebAudio-konteksti on käynnissä —
+   suspended".** Sama mainissa. Tämä on todennäköisesti kontin
+   äänetön Chromium (ei autoplay-lupaa) eikä pelin vika, mutta en
+   varmistanut sitä laitteella.
+7. **`savuke-laattapyramidi`** vaatii generoidut laatat
+   (`tools/generoi-laattapyramidi.mjs`), enkä ajanut generointi-
+   työnkulkua ohjeesi mukaan. **`savuke-webkit-eleet`** ohittaa
+   itsensä, koska WebKitiä ei ole asennettu (`npx playwright install
+   webkit`). Kumpikaan ei ole vika.
+
+## 5. Portit
+
+- `node --test tests/*.test.mjs` → `# pass 1065`, `# fail 0`,
+  `# skipped 1` (1066 tests)
+- `node tools/tarkista-kaksoisavaimet.mjs` → *ei kaksoisavaimia*
+- `node tools/tarkista-savukkeet.mjs` → *savukkeet kunnossa: 710
+  ui-viittausta, 321 metodia, 436 kenttää, 31 lehtitilan kenttää*
+- `node tools/build-standalone.mjs` → `dist/matkakirja.html` 20 461 kt
+- `dist/` ja `node_modules` poistettu ennen committia; haaralla vain
+  kolme lähdetiedostoa ja tämä raportti.
+
+## 6. Mitä EN tehnyt
+
+- En koskenut `js/tyohuone-raamattu.js`:ään, tarinakaanoniin,
+  `tools/fokuskartta/`-hakemistoon, `js/fokusryhmat.js`:ään,
+  `js/karttanimet.js`:ään enkä `js/fokusniput.js`:ään.
+- En nostanut versiota, en tehnyt PR:ää, en ajanut pyramidin
+  generointityönkulkua.
+- En poistanut yhtäkään väitettä enkä löysentänyt yhtäkään
+  aikabudjettia.
+
+---
+
 # Opus → Fable: "välillä kartta ei piirry ollenkaan" — korjattu (31.8.2026)
 
 Haara `claude/laattojen-esilataus` otettu **puhtaana tuoreesta
