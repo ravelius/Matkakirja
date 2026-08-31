@@ -676,11 +676,19 @@ const { sivu: puhelin } = await avaaSivu({
   hasTouch: true,
 });
 const cdp = await puhelin.context().newCDPSession(puhelin);
+/*
+ * SORMEN SÄDE ON OSA ELETTÄ, EI KOSMETIIKKAA: Chromium kohdistaa
+ * kosketuksen sen sisällä lähimpään napautettavaan elementtiin (ks.
+ * kartanKohta osiossa 11c). Piste ja säde kuuluvat siksi yhteen.
+ */
+const KOSKETUS_SADE = 6;
 const kosketa = (tyyppi, x, y) => cdp.send('Input.dispatchTouchEvent', {
   type: tyyppi,
   touchPoints: tyyppi === 'touchEnd'
     ? []
-    : [{ x, y, radiusX: 6, radiusY: 6, force: 1, id: 1 }],
+    : [{
+      x, y, radiusX: KOSKETUS_SADE, radiusY: KOSKETUS_SADE, force: 1, id: 1,
+    }],
 });
 /** Yhden sormen veto: aloitus, portaittainen liike, irrotus. */
 const veto = async (x, y, dx, dy, askelia = 10) => {
@@ -728,42 +736,93 @@ await puhelin.evaluate(() => {
 });
 await puhelin.waitForTimeout(MERKINNAN_TAUKO_MS + 1400);
 
-// Lähikuva päälle, jotta kartalla on oikeasti panorointivaraa: ilman
-// varaa mikä tahansa veto jättäisi kartan paikalleen ja vartio olisi
-// tyhjä. Maailmankartalla (erillislauta poistui, Raamattu 30.8.2026)
-// yksi porras ei vielä anna pystyvaraa, joten porrastetaan kunnes
-// varaa on molempiin suuntiin.
-for (let porras = 0; porras < 5; porras += 1) {
-  await puhelin.evaluate(() => window.matkakirja.ui.kartta.zoomaaPainikkeella(1));
-  await puhelin.waitForTimeout(1200);
-  const vara = await puhelin.evaluate(() => ({
-    x: window.matkakirja.ui.panVara ?? 0,
-    y: window.matkakirja.ui.panVaraY ?? 0,
-  }));
-  if (vara.x > 120 && vara.y > 120) break;
-}
-await puhelin.waitForTimeout(1300);
+/*
+ * VARA MITATAAN SIITÄ RAJAAJASTA, JONKA LÄPI SORMI KULKEE.
+ *
+ * `panVara`/`panVaraY` ovat laudan oman jaksomallin lukuja eivätkä
+ * tiedä mitään fokuskuvan rajauksesta (js/kartta.js rajaaKasinPan →
+ * rajaaFokusPan, sääntö 2: *"REUNAT, EI KESKIPISTE … akseli lukitaan
+ * kuvan keskelle"* silloin kun ruutu on kuvaa isompi). Ne siis lupaavat
+ * varaa, jota käsieleellä ei ole. Mitattuna 31.8.2026 (Chromium,
+ * 390×844, Ateena) yhden zoomiportaan jälkeen panVara oli 1440 ja
+ * panVaraY 1163, mutta rajaaKasinPan palautti joka suuntaan täsmälleen
+ * saman panin: kartta oli LUKOSSA molemmilla akseleilla, koska koko
+ * sallittu fokusalue mahtui jo ruudulle. Vanha porrastussilmukka
+ * katkesi juuri siihen ensimmäiseen portaaseen (1440 > 120 ja
+ * 1163 > 120) — ja sen jälkeen 11c kaatui, koska panoroitavaa ei ollut,
+ * eivätkä 11a/11b enää todistaneet mitään: kartta ei olisi liikkunut
+ * niissäkään millään koodilla.
+ *
+ * Vara luetaan siksi rajaajasta itsestään: paljonko panX/panY oikeasti
+ * muuttuu, kun sitä pyytää siirtymään `matka` pikseliä kuhunkin
+ * suuntaan. Koetin on tarkoituksella lyhyt — kiertävällä laudalla pitkä
+ * X-koetin kääriytyisi laudan leveyden yli eikä kertoisi paikallisesta
+ * varasta mitään.
+ */
+const kasinVara = (matka) => puhelin.evaluate((m) => {
+  const ui = window.matkakirja.ui;
+  const k = ui.kartta;
+  const px = ui.panX ?? 0;
+  const py = ui.panY ?? 0;
+  return {
+    oikea: Math.round(k.rajaaKasinPan(px + m, py).x - px),
+    vasen: Math.round(px - k.rajaaKasinPan(px - m, py).x),
+    alas: Math.round(k.rajaaKasinPan(px, py + m).y - py),
+    ylos: Math.round(py - k.rajaaKasinPan(px, py - m).y),
+  };
+}, matka);
+
+/* Pisin tässä osiossa vedettävä matka: varaa on oltava vähintään tämä. */
+const VETO_MATKA = 150;
+
 /*
  * KARTTA KESKELLE VARAANSA ENNEN JOKAISTA VETOA. Lähikuva asettuu
- * tyypillisesti laitaan, ja laidassa asetaPan rajaa siirron pois —
+ * tyypillisesti laitaan, ja laidassa rajaaKasinPan syö siirron pois —
  * väärään suuntaan vedetty ele jättäisi kartan paikalleen, ja vartio
  * läpäisisi myös rikkinäisellä koodilla (mitattu: näin kävi, kun
  * suoja poistettiin kokeeksi). Keskeltä liike näkyy joka suuntaan.
+ *
+ * Keskitys tehdään SAMAN rajaajan kautta kuin varan mittaus: laudan
+ * jaksomallin puolikas (entinen -panVara/2) ei ole fokuskuvan
+ * rajaaman näkymän keskikohta.
  */
+const KESKITYS_KOETIN = 400;
 const keskita = async () => {
-  await puhelin.evaluate(() => {
+  await puhelin.evaluate((m) => {
     const ui = window.matkakirja.ui;
-    ui.kartta.asetaPan(-(ui.panVara ?? 0) / 2, -(ui.panVaraY ?? 0) / 2);
-  });
+    const k = ui.kartta;
+    const px = ui.panX ?? 0;
+    const py = ui.panY ?? 0;
+    k.asetaPan(
+      (k.rajaaKasinPan(px - m, py).x + k.rajaaKasinPan(px + m, py).x) / 2,
+      (k.rajaaKasinPan(px, py - m).y + k.rajaaKasinPan(px, py + m).y) / 2,
+    );
+  }, KESKITYS_KOETIN);
   await puhelin.waitForTimeout(200);
 };
+
+// Lähikuva päälle, jotta kartalla on oikeasti panorointivaraa: ilman
+// varaa mikä tahansa veto jättäisi kartan paikalleen ja vartio olisi
+// tyhjä. Maailmankartalla (erillislauta poistui, Raamattu 30.8.2026)
+// yksi porras ei anna varaa kumpaankaan suuntaan, joten porrastetaan
+// kunnes vetomatka mahtuu joka suuntaan. Mitattu 31.8.2026: vaakavara
+// aukeaa portaalla 2 ja pystyvara vasta portaalla 5.
+for (let porras = 0; porras < 8; porras += 1) {
+  await puhelin.evaluate(() => window.matkakirja.ui.kartta.zoomaaPainikkeella(1));
+  await puhelin.waitForTimeout(1200);
+  await keskita();
+  const vara = await kasinVara(VETO_MATKA + 20);
+  if (vara.vasen >= VETO_MATKA && vara.oikea >= VETO_MATKA
+    && vara.ylos >= VETO_MATKA && vara.alas >= VETO_MATKA) break;
+}
+await puhelin.waitForTimeout(1300);
 await keskita();
 const alkuTila = await kartanTila();
-vaadi('kosketusvartio: kartalla on panorointivaraa joka suuntaan',
-  alkuTila.lahikuva && alkuTila.vara > 60 && alkuTila.varaY > 60
-  && alkuTila.panX < -20 && alkuTila.panX > -alkuTila.vara + 20
-  && alkuTila.panY < -20 && alkuTila.panY > -alkuTila.varaY + 20,
-  JSON.stringify(alkuTila));
+const alkuVara = await kasinVara(VETO_MATKA + 20);
+vaadi('kosketusvartio: kartalla on käsipanorointivaraa joka suuntaan',
+  alkuTila.lahikuva && alkuVara.vasen >= VETO_MATKA && alkuVara.oikea >= VETO_MATKA
+  && alkuVara.ylos >= VETO_MATKA && alkuVara.alas >= VETO_MATKA,
+  JSON.stringify({ tila: alkuTila, vara: alkuVara }));
 
 /** Pinnan (kortti tai kupla) sisuksen keskikohta ruudulla. */
 const pinnanKohta = () => puhelin.evaluate(() => {
@@ -836,40 +895,50 @@ vaadi('kortin vaakaveto EI panoroi karttaa',
  * kapean kartan kokonaan eikä vapaata kohtaa ole. */
 await puhelin.evaluate(() => window.matkakirja.ui.asetaPaivakirjanKoko(true));
 await puhelin.waitForTimeout(500);
-const kartanKohta = await puhelin.evaluate(() => {
+/*
+ * VAPAA KOHTA TARVITSEE SORMEN LEVEYDEN VERRAN TILAA.
+ *
+ * Chromium kohdistaa kosketuksen sormen SÄTEEN sisällä lähimpään
+ * napautettavaan elementtiin (touch adjustment), eikä pelkkä
+ * elementFromPoint-osuma siksi riitä. Mitattu 31.8.2026: haku palautti
+ * pisteen (207, 88), joka oli kuusi pikseliä matkakirjakortin oikeasta
+ * reunasta (kortti [14, 70]–[201, 94]) — elementFromPoint näki siinä
+ * kartan, mutta CDP:n kosketus säteellä 6 ohjautui KORTTIIN, ja kartta
+ * jäi ilman koko elettä. Kohdaksi kelpaa siksi vain piste, jonka
+ * ympäriltä sormen levyinen alue on kokonaan karttaa.
+ */
+const kartanKohta = await puhelin.evaluate((sade) => {
   const pane = document.querySelector('.map-pane')?.getBoundingClientRect();
   if (!pane) return null;
   const paalla = '.fokusvirta-kortti, .fokusvirta-kupla, .fokuszoom, .fact-card';
+  const kartalla = (x, y) => {
+    const el = document.elementFromPoint(x, y);
+    return Boolean(el?.closest('svg')) && !el.closest(paalla);
+  };
+  const reuna = sade * 2;
   for (let y = pane.top + 24; y < pane.bottom - 24; y += 8) {
     for (let x = pane.left + 40; x < pane.right - 40; x += 16) {
-      const el = document.elementFromPoint(x, y);
-      if (el?.closest('svg') && !el.closest(paalla)) {
+      if (kartalla(x, y) && kartalla(x - reuna, y) && kartalla(x + reuna, y)
+        && kartalla(x, y - reuna) && kartalla(x, y + reuna)) {
         return { x: Math.round(x), y: Math.round(y) };
       }
     }
   }
   return null;
-});
+}, KOSKETUS_SADE);
 await keskita();
 ennen = await kartanTila();
-if (kartanKohta) {
-  /*
-   * Suunta valitaan sen mukaan, kummalla puolella on vielä varaa:
-   * panX/panY ovat välillä [-vara, 0], ja tässä kohtaa lähikuva on
-   * usein jo laidassa. Väärään suuntaan vedetty ele ei liikuttaisi
-   * karttaa lainkaan — eikä vartio erottaisi sitä viasta.
-   */
-  const vaakaan = ennen.vara >= ennen.varaY;
-  const paikka = vaakaan ? ennen.panX : ennen.panY;
-  const varaa = vaakaan ? ennen.vara : ennen.varaY;
-  // Kohti nollaa, jos sinne on matkaa; muuten kohti alarajaa.
-  const matka = -paikka > varaa / 2 ? 140 : -140;
-  await veto(kartanKohta.x, kartanKohta.y,
-    vaakaan ? matka : 0, vaakaan ? 0 : matka);
-}
+/*
+ * VINOVETO TODISTAA MOLEMMAT AKSELIT KERRALLA. Suuntaa ei tarvitse
+ * enää arvailla: osion alussa on mitattu ja vaadittu, että
+ * rajaaKasinPan päästää kartan liikkumaan vähintään VETO_MATKAn verran
+ * joka suuntaan (ks. kasinVara).
+ */
+if (kartanKohta) await veto(kartanKohta.x, kartanKohta.y, -140, -140);
 jalkeen = await kartanTila();
 vaadi('kartan oma panorointi toimii yhä kortin ulkopuolelta',
-  Boolean(kartanKohta) && !samaKartta(ennen, jalkeen),
+  Boolean(kartanKohta) && !samaKartta(ennen, jalkeen)
+  && jalkeen.panX !== ennen.panX && jalkeen.panY !== ennen.panY,
   JSON.stringify({ kohta: kartanKohta, ennen, jalkeen }));
 
 await selain.close();
