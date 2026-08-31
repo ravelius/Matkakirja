@@ -60,14 +60,32 @@
  *    Näin tekee jokainen karttakirjasto, ja se on halvempi kuin mikä
  *    tahansa reunuksen kasvatus.
  *
- * 3. LAUTA KIERTÄÄ, EIKÄ KIERROS OLE LAATTAKOON MONIKERTA.
- *    Tason leveys on 675 · 2^z pikseliä (86 400 syvimmällä), eikä
- *    yksikään niistä ole jaollinen 512:lla — viimeinen sarake on siis
- *    VAJAA. Kierto ei siksi ole "sarake modulo sarakkeiden määrä"
- *    tasavälisellä ruudukolla: se veisi laatan 128 pikseliä väärään
- *    kohtaan päivämääränrajan takana. Kierros on `taso.leveys`
- *    PIKSELIÄ, ja laatan paikka lasketaan KIERROKSITTAIN:
- *    sarake c kierroksella k on pikselissä k · leveys + c · laatta.
+ * 3. LAATTA PIIRRETÄÄN ARKILLE KERRAN — KIERRON HOITAA LAUDAN KOPIO.
+ *    Kiertävällä laudalla koko sisältö on olemassa kahdesti: juuriryhmä
+ *    kattaa välin [0, leveys) ja sen <use>-kopio välin
+ *    [leveys, 2 × leveys) (js/ui.js laudanKierto, js/kartta.js
+ *    LAVAIKKUNA). Kopio on juuriryhmän PÄÄLLÄ, ja siihen kuuluu myös
+ *    paperin pohja — läpinäkymätön suorakaide.
+ *
+ *    Siksi arkin oikealle puolelle piirretty laatta EI näy: kopion
+ *    pergamentti maalaa sen yli. Juuri niin kävi (omistajan kuvakaappaus
+ *    31.8.2026, näkymä Kamtšatkan yllä, mittakaava 1000 km): kartta
+ *    piirtyi vain ruudun vasempaan puolikkaaseen ja sauman oikealla
+ *    puolella oli tyhjää pergamenttia. Laatat OLIVAT puussa oikeilla
+ *    paikoillaan (mitattu: 30 laattaa, vaakapeitto 100 %), ne olivat
+ *    ladattuja, ja kopion piilottaminen paljasti kartan kokonaisena.
+ *
+ *    Laatan paikka on siis AINA sen oma paikka arkilla: sarake c on
+ *    pikselissä c · laatta, olipa näkymä sauman kummalla puolella
+ *    tahansa. Näkyvyys sen sijaan on kysyttävä KIERTÄEN (osuuKiertaen):
+ *    ruutu voi olla kopion päällä, jolloin ruudun täyttävä laatta on
+ *    kokonaisen arkinleveyden päässä siitä.
+ *
+ *    TASON LEVEYS EI OLE LAATTAKOON MONIKERTA. Se on 675 · 2^z pikseliä
+ *    (86 400 syvimmällä), eikä yksikään niistä ole jaollinen 512:lla —
+ *    viimeinen sarake on VAJAA. Sen leveys luetaan siksi tason omista
+ *    pikseleistä eikä laattakoosta, ja arkin oikea reuna osuu tasan
+ *    kohtaan leveys, jossa kopio jatkaa.
  */
 import { el } from './mapart.js';
 import { pyramidiUrl } from './media.js';
@@ -507,8 +525,16 @@ export function pyramidinMittarit() {
 
 /* ------------------------------------------------------------ piirto */
 
-/** Laatan avain kerroksessa. Kierros mukana: sama tiedosto, eri paikka. */
-const avain = (z, kierros, sarake, rivi) => `${z}:${kierros}:${sarake}:${rivi}`;
+/**
+ * Laatan avain kerroksessa.
+ *
+ * KIERROSTA EI OLE (sääntö 3): laatta on arkilla täsmälleen yhdessä
+ * paikassa, ja sauman takaisen kopion piirtää lauta itse. Kun avain
+ * kantoi kierroksen, sauman yli panoroitaessa samasta tiedostosta
+ * syntyi toinen elementti — ja se elementti oli juuri se, jonka laudan
+ * kopio peitti.
+ */
+const avain = (z, sarake, rivi) => `${z}:${sarake}:${rivi}`;
 
 /**
  * Onko laatta olemassa levyllä?
@@ -555,8 +581,14 @@ function laattaUrl(taso, sarake, rivi) {
  * ehtisi eriytyä juuri päivämääränrajan takana, jossa virhe on
  * vaikeimmin huomattava.
  *
+ * SAMA LAATTA VOI OSUA ALUEESEEN KAHDESTI. Kun näkymä on sauman
+ * päällä, arkin molemmat laidat ovat ruudulla, ja silloin kierrokset
+ * k ja k+1 osoittavat osin samoihin sarakkeisiin. Käsittelijä saa
+ * sarakkeen sellaisenaan ja vastaa itse siitä, ettei samaa laattaa
+ * käsitellä kahdesti (kiinnityksessä `uudet`, noudossa `nahty`).
+ *
  * @param {object} alue laudan yksiköissä: { x, y, w, h }
- * @param {(kierros:number, sarake:number, rivi:number, alkuPx:number)=>void} kasittele
+ * @param {(sarake:number, rivi:number)=>void} kasittele
  */
 function jokaLaatta(taso, laatta, arkki, alue, kasittele) {
   const px0 = (alue.x - arkki.x) * taso.pikseliaPerYksikko;
@@ -574,7 +606,7 @@ function jokaLaatta(taso, laatta, arkki, alue, kasittele) {
     for (let rivi = r0; rivi <= r1; rivi += 1) {
       for (let sarake = s0; sarake <= s1; sarake += 1) {
         if (!laattaOlemassa(taso, sarake, rivi)) continue;
-        kasittele(kierros, sarake, rivi, alku);
+        kasittele(sarake, rivi);
       }
     }
   }
@@ -682,18 +714,28 @@ function jonotaEsilataus(taso, laatta, arkki, nakyva, suunta) {
   const jono = [];
   /*
    * SAMA TIEDOSTO VAIN KERRAN JONOSSA. Kun näkymä on laudan sauman
-   * päällä, sama laatta osuu alueeseen KAHDELLA kierroksella (sääntö
-   * 3) — eri paikka ruudulla, sama osoite.
+   * päällä, arkin molemmat laidat ovat ruudulla, ja sama sarake osuu
+   * alueeseen KAHDESTI (sääntö 3) — yhdestä laatasta ei silloin saa
+   * tulla kahta noutoa.
    */
   const nahty = new Set();
-  jokaLaatta(taso, laatta, arkki, alue, (kierros, sarake, rivi, alkuPx) => {
+  const jakso = arkki.w;
+  jokaLaatta(taso, laatta, arkki, alue, (sarake, rivi) => {
     const k = `${taso.z}:${sarake}:${rivi}`;
     if (noudetut.has(k) || nahty.has(k)) return;
     nahty.add(k);
-    const x = arkki.x + (alkuPx + (sarake + 0.5) * laatta) / taso.pikseliaPerYksikko;
+    const x = arkki.x + ((sarake + 0.5) * laatta) / taso.pikseliaPerYksikko;
     const y = arkki.y + (rivi + 0.5) * laatta / taso.pikseliaPerYksikko;
-    // Etäisyys ruudullisina, jotta pysty ja vaaka ovat vertailukelpoisia.
-    const dx = (x - kx) / nakyva.w;
+    /*
+     * Etäisyys ruudullisina, jotta pysty ja vaaka ovat
+     * vertailukelpoisia — ja vaaka LYHINTÄ TIETÄ ARKIN YMPÄRI. Laatan
+     * paikka on sen oma paikka arkilla (sääntö 3), joten sauman
+     * takainen naapuri on numeroina koko arkin päässä; ilman
+     * kierrätystä se putoaisi jonon hännille juuri silloin, kun se on
+     * pelaajan seuraava ruutu.
+     */
+    const ero = x - kx;
+    const dx = (ero - jakso * Math.round(ero / jakso)) / nakyva.w;
     const dy = (y - ky) / nakyva.h;
     // Suuntapainotus: liikkeen suunnassa oleva laatta on "lähempänä".
     const paino = suunta ? Math.max(0, dx * suunta.x + dy * suunta.y) : 0;
@@ -749,7 +791,7 @@ function jonotaTasovaihto(tasot, taso, laatta, arkki, nakyva) {
       h: nakyva.h * kerroin,
     };
     const nahty = new Set();
-    jokaLaatta(naapuri, laatta, arkki, alue, (kierros, sarake, rivi) => {
+    jokaLaatta(naapuri, laatta, arkki, alue, (sarake, rivi) => {
       const k = `${naapuri.z}:${sarake}:${rivi}`;
       if (noudetut.has(k) || nahty.has(k)) return;
       nahty.add(k);
@@ -812,7 +854,8 @@ function peruLaatta(kuva) {
 
 /** Yhden kerroksen tila: mikä taso siinä on ja mitkä laatat. */
 const tyhjaTila = (kerros, alin = false) => ({
-  kerros, alin, z: null, laatat: new Map(), vanhat: null, ajastin: 0, nakyva: null,
+  kerros, alin, z: null, laatat: new Map(), vanhat: null, ajastin: 0,
+  nakyva: null, jakso: 0,
 });
 
 /**
@@ -831,20 +874,44 @@ function kaikkiRuudullaLadattu(tila) {
 }
 
 /**
+ * Osuuko arkin suorakaide näkymään, kun LAUTA KIERTÄÄ?
+ *
+ * Laatta piirretään arkille vain kerran (sääntö 3), ja sauman takana
+ * sen näyttää laudan <use>-kopio. Näkymä voi siis olla kopion päällä —
+ * ruudun täyttävän laatan oma x on silloin kokonaisen arkinleveyden
+ * päässä näkymästä. Suoraviivainen leikkaustesti sanoisi sellaisesta
+ * laatasta "ei ruudulla", ja juuri sitä vastausta pitkin menevät kaikki
+ * ne säännöt, jotka suojaavat ruudulla olevaa kuvaa: mitä ei saa
+ * heittää pois (sääntö 2), mitä vanhan tason laattaa aikakatto ei
+ * karsi, ja mikä laatta noudetaan kiireellisenä.
+ *
+ * Kolme kierrosta riittää: lava on enintään laudan levyinen plus yksi
+ * ruudullinen (js/kartta.js fitViewBox), joten sama paikka ei voi olla
+ * ruudulla kahta arkinleveyttä kauempana.
+ */
+function osuuKiertaen(x, w, y, h, nakyva, jakso) {
+  if (!(y < nakyva.y + nakyva.h && y + h > nakyva.y)) return false;
+  for (let i = -1; i <= 1; i += 1) {
+    const kx = x + i * jakso;
+    if (kx < nakyva.x + nakyva.w && kx + w > nakyva.x) return true;
+  }
+  return false;
+}
+
+/**
  * Osuuko laatta näkyvään alueeseen?
  *
  * Luetaan MÄÄREISTÄ eikä getBoundingClientRectilla: laatan paikka on
  * laudan koordinaateissa, ja määreen lukeminen ei pakota asettelun
  * laskentaa (sama sääntö kuin js/ui.js nakyvaAlue -kommentissa).
  */
-function osuuNakymaan(kuva, nakyva) {
+function osuuNakymaan(kuva, nakyva, jakso) {
   const x = parseFloat(kuva.getAttribute('x'));
   const y = parseFloat(kuva.getAttribute('y'));
   const w = parseFloat(kuva.getAttribute('width'));
   const h = parseFloat(kuva.getAttribute('height'));
   if (!Number.isFinite(x) || !Number.isFinite(y)) return false;
-  return x < nakyva.x + nakyva.w && x + w > nakyva.x
-    && y < nakyva.y + nakyva.h && y + h > nakyva.y;
+  return osuuKiertaen(x, w, y, h, nakyva, jakso);
 }
 
 /**
@@ -883,7 +950,7 @@ function karsiVanhat(tila) {
   tila.ajastin = 0;
   if (!tila.vanhat || !tila.nakyva) return;
   for (const [k, kuva] of tila.vanhat) {
-    if (osuuNakymaan(kuva, tila.nakyva)) continue;
+    if (osuuNakymaan(kuva, tila.nakyva, tila.jakso)) continue;
     peruLaatta(kuva);
     tila.vanhat.delete(k);
   }
@@ -937,7 +1004,7 @@ function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
      * 202 näytteessä 208:sta.
      */
     for (const [k, kuva] of tila.laatat) {
-      if (tila.alin ? osuuNakymaan(kuva, nakyva) : kuva.dataset.ladattu) continue;
+      if (tila.alin ? osuuNakymaan(kuva, nakyva, arkki.w) : kuva.dataset.ladattu) continue;
       peruLaatta(kuva);
       tila.laatat.delete(k);
     }
@@ -949,19 +1016,23 @@ function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
     }
   }
   // Viimeisin näkymä talteen: aikakatto tarvitsee sen tietääkseen,
-  // mikä vanhan tason laatta on ruudulla (karsiVanhat).
+  // mikä vanhan tason laatta on ruudulla (karsiVanhat). Kierron jakso
+  // sen mukana — sauman päällä ruutu on laudan kopion päällä, eikä
+  // ruudulla olevan laatan tunnista ilman sitä (osuuKiertaen).
   tila.nakyva = nakyva;
+  tila.jakso = arkki.w;
   const yksikkoaPerLaatta = laatta / taso.pikseliaPerYksikko;
   const vanhatSamalta = tila.laatat;
   const uudet = new Map();
   let ruudulla = 0;
-  const kasittele = (kierros, sarake, rivi, alku) => {
-    const k = avain(taso.z, kierros, sarake, rivi);
+  const kasittele = (sarake, rivi) => {
+    const k = avain(taso.z, sarake, rivi);
     if (uudet.has(k)) return;
-    const lx = arkki.x + (alku + sarake * laatta) / taso.pikseliaPerYksikko;
+    // Paikka on laatan OMA paikka arkilla, ei näkymän kierros (sääntö 3).
+    const lx = arkki.x + (sarake * laatta) / taso.pikseliaPerYksikko;
     const ly = arkki.y + rivi * yksikkoaPerLaatta;
-    const nakyy = lx < nakyva.x + nakyva.w && lx + yksikkoaPerLaatta > nakyva.x
-      && ly < nakyva.y + nakyva.h && ly + yksikkoaPerLaatta > nakyva.y;
+    const nakyy = osuuKiertaen(lx, yksikkoaPerLaatta, ly, yksikkoaPerLaatta,
+      nakyva, arkki.w);
     if (nakyy) ruudulla += 1;
     // Kiinnitetty laatta on jo haussa: esilataus ei pyydä sitä uudestaan.
     noudetut.add(`${taso.z}:${sarake}:${rivi}`);
