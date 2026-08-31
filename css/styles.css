@@ -1861,8 +1861,11 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
  * PÖLLÖ YLIVIIVATTUNA, PULU PERÄÄN (omistajan tilaus 27.8.2026).
  *
  * Tietokumppanin nimilapuissa lukee vitsi, jonka hahmo tekee itsestään:
- * Livia on Viisaan Pöllön SIJAINEN, joten pöllö-sana on vedetty yli ja
- * perässä lukee "Pulu". Lappu näyttää käsin korjatulta, ei uusiksi
+ * Livia on Viisaan Pöllön SIJAINEN, joten koko nimi "Viisas Pöllö" on
+ * vedetty yli YHDELLÄ pitkällä vedolla ja perässä lukee erillinen sana
+ * "Pulu" (omistajan tarkennus 31.8.2026, muoto on aina tämä — ei pelkkä
+ * "Pöllö" eikä sanakohtaisia vetoja). Lappu näyttää käsin korjatulta,
+ * ei uusiksi
  * ladotulta — siksi viiva on OHUT ja pelin oma sinettivahan punainen
  * (sama sävy kuin ihmenauhan puna, css/fokuskohteet.css --nauha-pinta-1
  * #a1524a), ei huomioväri.
@@ -1882,10 +1885,12 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
  * (VEDON_POLUT) — täällä ovat vain väri, paikka ja se, miten veto
  * mahtuu riville.
  *
- * YKSI YHTENÄINEN VETO PER LAPPU. viewBox venytetään sanan mittaan
- * (preserveAspectRatio="none"), joten sama polku palvelee sekä sanaa
- * "Pöllö" että paria "Viisas Pöllö" yhtenä vetona; viivanleveys pysyy
- * silti vakiona (vector-effect: non-scaling-stroke).
+ * YKSI YHTENÄINEN VETO PER LAPPU. viewBox venytetään koko nimen mittaan
+ * (preserveAspectRatio="none"), joten sama polku kattaa sanaparin
+ * "Viisas Pöllö" yhtenä vetona; viivanleveys pysyy silti vakiona
+ * (vector-effect: non-scaling-stroke). Yliviivattu osa on siksi myös
+ * `white-space: nowrap`: jos sanapari katkeaisi kahdelle riville,
+ * absoluuttinen veto vetäisi vinon viivan molempien rivien yli.
  *
  * EI LEIKKAUDU EIKÄ KASVATA RIVIÄ. SVG on absoluuttinen, joten se ei
  * ole rivilaatikon mitassa mukana — rivinkorkeus ei muutu. Ylitys ylä-
@@ -1917,6 +1922,7 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   display: inline-block;
   vertical-align: baseline;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .pollo-yliviivattu-sana { opacity: 0.78; }

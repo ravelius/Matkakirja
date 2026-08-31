@@ -828,13 +828,31 @@ export const FOKUSVIRTA_SEVILLA = {
         'Kuka Kolumbus oikeastaan oli?',
       ],
       /*
-       * PAIKKAA EI OLE, JA SE ON TIETOINEN VALINTA: hauta on Sevillan
-       * katedraalissa eli kaupungissa, jossa pelaaja jo seisoo. Ilman
-       * `paikka`-kenttää piste ottaa paikakseen kaupungin ja hakeutuu
-       * lähimmän kohdesymbolin päälle (nostonPaikka, js/fokusnosto-
-       * symbolit.js) — juuri se varapolku, jota varten kenttä on
-       * valinnainen.
+       * OMAT KOORDINAATIT: MERKKI HAUDALLE, EI KAUPUNGIN LAATALLE.
+       *
+       * Kenttä puuttui aiemmin tarkoituksella: hauta on Sevillassa eli
+       * kaupungissa, jossa pelaaja jo seisoo, joten varapolku
+       * (nostonPaikka ottaa paikakseen kaupungin) antoi lähelle
+       * osuvan pisteen. Se piste on kuitenkin TÄSMÄLLEEN kaupungin
+       * laatan piste, jolloin merkki kasautuu laatan päälle sen
+       * sijaan että seisoisi siinä katedraalissa, josta koko nosto
+       * kertoo — "hauta on täällä, ja 1873 se ei ollut" on noston
+       * kärki, ja kärki ansaitsee oman pisteensä.
+       *
+       * 37,3854 N / −5,9927 E — en-Wikipedia "Tomb of Christopher
+       * Columbus", prop=coordinates (haettu 31.8.2026). SAMA ARTIKKELI
+       * kuin noston `lahde`-rivillä, eli piste ja faktat tulevat
+       * yhdestä lähteestä. Sama kaava ja samat vakiot kuin poolin
+       * muilla nostoilla (js/fokusnosto.js, PAIKKA LAUDALLA):
+       * maailmankartta Millerin lieriönä, europe tasavälinä.
        */
+      paikka: {
+        nimi: 'Sevillan katedraali',
+        laudat: {
+          maailmankartta: { x: 5633.6, y: 1904.5 },
+          europe: { x: 96.1, y: 910.4 },
+        },
+      },
     },
     {
       /*
