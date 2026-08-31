@@ -518,55 +518,62 @@ const NOSTOSYM_MINI_LUONNOS = {
     vahva: [viiva(0, -5.80, 0, 1.40), piste(0, 4.00, 0.95)],
   }),
   /*
-   * KISSAELÄIN — omistajan oma kuvio 31.8.2026: *"olisi isompi pallo ja
-   * pienempi pallo ja sitten silmät siinä pienemmässä, niin se
-   * näyttäisi vähän kissaeläimeltä. Otetaan ne korvat pois."*
-   * Vedot 6 → 4. Entinen pöllönpoikanen (kehä, kaksi tupsua, kaksi
-   * silmää, nokka) oli omistajan sanoin *"pelottavan näköinen"*:
-   * tupsut lukivat sarvina ja isot silmät tuijottivat.
+   * TASSUNJÄLKI — eläimet. UUSI KUVIO, omistajan valinta 31.8.2026
+   * yhdeksän luonnoksen katseluarkilta: *"tassu, mutta iso tassu saisi
+   * olla lähempänä pienempiä käpäläpisteitä"*. Vedot 4 → 5.
    *
-   * KOLMAS KIERROS 31.8.2026 — LUMIUKKO POIS. Pallot sivusivat
-   * toisiaan pystysuorassa, ja omistaja luki merkin oikein:
-   * *"eläin symboli näyttää nyt lumiukolta. Tarkoitus oli, että se
-   * näyttäisi kissalta, jolloin se isompi ympyrä olisi vähän niin kuin
-   * kissan vartalo ja pienempi ympyrä tulisi sen isomman ympyrän
-   * sisälle, niin että se muistuttaa päätä. Tai sehän voi olla hieman
-   * sen isomman ympyrän ulkopuolellakin."*
+   * ── MIKSI KISSA HYLÄTTIIN KOKONAAN ────────────────────────────────
    *
-   * ── MIKSI VARTALON KAARESSA ON AUKKO ──────────────────────────────
+   * Kissasta yritettiin neljä kierrosta ja jokainen kaatui samaan:
+   * pyöreä pää korvineen oli *"pelottavan näköinen"*, kaksi pystysuoraa
+   * palloa oli *"lumiukko"*, ja lomitettu kerä (iso kehä = vartalo,
+   * pieni kehä = pää) oli yhä *"kummallisen näköinen"*. Vika ei ollut
+   * mitoituksessa vaan siinä, että 6,8 CSS-pikselin merkkiin ei mahdu
+   * eläimen anatomiaa — vartalo, pää ja silmät ovat kolme asiaa siinä
+   * missä perheen muissa merkeissä on yksi.
    *
-   * Toisella kierroksella pallot yritettiin jo lomittain, ja silloin
-   * ison pallon kaari kulki kasvojen läpi ja piirsi niihin leuan:
-   * merkki luki parrakkaana ukkona. Se ratkaistaan nyt piirtämällä
-   * vartalo AVOIMENA kaarena, josta puuttuu se sektori, jonka pään
-   * kehä peittää — pää lomittuu vartaloon ilman että vartalon viiva
-   * kulkee kasvojen poikki.
+   * ── MIKSI JÄLKI EIKÄ LAJI ─────────────────────────────────────────
    *
-   * Aukon rajat on LASKETTU eikä arvattu: keskipisteiden väli on 4,44,
-   * joten kehät leikkaavat toisensa pään suunnasta (238,8°) ±35,6°
-   * eli välillä 203,3° … 274,4°. Siihen on lisätty 6° pelivaraa
-   * kummallekin puolelle, jottei terän leveys tunge pään viivaan —
-   * aukko on 197,3° … 280,4° ja vartalon kaari sen komplementti
-   * −79,6° … 197,3° (myötäpäivään, 0° = oikealle).
+   * Kategorian 23 kohdetta luettiin läpi ennen valintaa (nimiöt:
+   * Srebarna, Hutovo Blato, Pikkupöllö, Reunuskilpikonna, Vanin kissa,
+   * Eskikaraağaç, Harmaahaikarat, Dovrefjell, Berliinin karhu,
+   * Karhusanktuaari, Dublinin leijona, Greyfriars Bobby, Istanbulin
+   * kissat, Richmond Park, Casa de Fieras, Eläintarha 1864, Prahan
+   * hevoset, Torre Argentina, Livnon lauma, Sofian eläintarha,
+   * Norrström, Jaktorów, Keskushautausmaa). Lintuja on viisi, kissoja
+   * kolme, karhuja kaksi, hevosia kaksi, eläintarhoja kaksi, ja loput
+   * ovat peura, myskihärkä, kilpikonna, koira, leijona ja alkuhärkä —
+   * eli 29 maan eläintäyt päälle (norppa, hirvenvasa, murmeli …).
+   * YKSIKÄÄN LAJI EI KATA KATEGORIAA; kissa kattaa siitä 13 %. Lintu
+   * olisi ollut toiseksi lähin, mutta perheessä on jo sulkakynä
+   * (`sana`), eikä kahta höyhenmerkkiä oteta samaan perheeseen.
+   * Tassunjälki merkitsee *"täällä on eläin"* sitomatta merkkiä lajiin,
+   * ja se on kartografian omaa kieltä.
    *
-   * Pää on ison kehän REUNAN PÄÄLLÄ (keskipisteiden väli 4,44,
-   * vartalon säde 4,40): pään kehästä noin puolet on vartalon sisällä
-   * ja puolet ulkona — omistajan salliman *"hieman ulkopuolellakin"*
-   * kohta. Täysin sisäpuolinen sijoittelu kokeiltiin ja hylättiin:
-   * silloin merkki luki ympyränä ympyrän sisällä (maalitaulu), ei
-   * käpertyneenä kissana. Vedot pysyvät neljässä.
+   * ── MITOITUS ──────────────────────────────────────────────────────
    *
-   * HÄNTÄÄ EI OLE. Se olisi lukenut kissan parhaiten, mutta vartalon
-   * oikea reuna on x = 5,1 ja rasterin ruutu loppuu 7,4:ään: väliin
-   * jää 2,3 yksikköä eli 1,2 CSS-pikseliä, johon ei mahdu häntää vaan
-   * pelkkä täplä vartalon kylkeen.
+   * Viisi vetoa, kaikki `piste`-soikioita: EI ÄÄRIVIIVOJA LAINKAAN,
+   * joten käyttökoossa ei ole mitään mikä voisi tukkeutua. Soikiot ovat
+   * terän omaa jälkeä (kulma −40°, pinta-ala vastaa säteen r ympyrää),
+   * joten merkki kuuluu samaan käteen kuin muu perhe vaikka siinä ei
+   * ole yhtään kaarta.
+   *
+   * ANTURAN PAIKKA ON OMISTAJAN KORJAUS. Katseluarkilla antura oli
+   * y = 3,85:ssä, ja väli varvastyynyihin oli 3,20 yksikköä eli
+   * kaksi kertaa varvasvälin verran — jälki hajosi kahteen ryhmään.
+   * Nyt antura on y = 2,40:ssä, jolloin väli keskivarpaisiin on 1,65
+   * yksikköä (0,86 CSS-pikseliä) eli suunnilleen sama kuin varpaiden
+   * keskinäinen väli, ja viisi täplää lukee yhtenä jälkenä.
+   * Varvastyynyt ovat kaarella (uloimmat ylempänä sisemmät alempana),
+   * kuten kissaeläimen jäljessä.
    */
-  elain: ({ kehakaari, keha, piste }) => ({
+  elain: ({ piste }) => ({
     vahva: [
-      kehakaari(0.70, 1.90, 4.40, -79.60, 197.30),
-      keha(-1.60, -1.90, 2.70),
-      piste(-2.60, -2.15, 0.58),
-      piste(-0.55, -2.15, 0.58),
+      piste(0, 2.40, 2.55),
+      piste(-4.80, -0.60, 1.15),
+      piste(-1.70, -3.15, 1.15),
+      piste(1.70, -3.15, 1.15),
+      piste(4.80, -0.60, 1.15),
     ],
   }),
   /*
@@ -786,233 +793,6 @@ const NOSTOSYM_MINI = Object.fromEntries(
     }];
   }),
 );
-
-/* ==================== ELÄINSYMBOLIN LUONNOKSET ==================== */
-
-/*
- * YHDEKSÄN VAIHTOEHTOA ELÄINKATEGORIAN MERKIKSI (omistaja 31.8.2026:
- * *"Kissa on vielä kummallisen näköinen. Minusta se pää pitäisi olla
- * alhaalla. Voit tehdä muutamia eri vaihtoehtoja. Tee myös joku ihan
- * toinen. Tärkeintä, että se näyttää söpöltä. Voihan se olla vaikka
- * pelkkä pää, mutta tehdään korvat kolmion muotoisiksi."*).
- *
- * TÄMÄ TAULU EI OLE KÄYTÖSSÄ. Kartan eläinmerkki on yhä
- * NOSTOSYM_MINI_LUONNOS.elain; nämä ovat KATSELUARKIN luonnoksia,
- * jotta omistaja voi valita yhden ja vasta sitten se siirretään
- * käyttöön. Taulu on täällä eikä erillisessä työkalussa siksi, että
- * luonnokset piirtyvät SAMALLA KYNÄLLÄ (nostosymKyna, leveä terä
- * kiinteässä −40° kulmassa) kuin koko perhe — kopio työkalun puolella
- * eriytyisi heti.
- *
- * NELJÄ OHJETTA, JOTKA TAULU TOTEUTTAA:
- *   1. PÄÄ ALHAALLA niissä, joissa on sekä vartalo että pää
- *      (kerä, nyytti, makaava, isopää). Hylätyssä versiossa pää oli
- *      ylävasemmalla, ja se oli osa ongelmaa.
- *   2. AIDOSTI ERILAISIA, ei yhden muodon säätöjä: kerälle, pelkälle
- *      päälle, siluetille ja jäljelle on kullekin oma rakenteensa.
- *   3. YKSI IHAN TOINEN: `tassu` ei ole kissa lainkaan (ks. alempaa).
- *   4. PELKKÄ PÄÄ ON SALLITTU JA KORVAT OVAT KOLMIOITA — korvat
- *      kiellettiin 31.8. aamulla (*"Otetaan ne korvat pois"*), ja
- *      omistaja purki kiellon nimenomaan kolmioina.
- *
- * SÖPÖYS ON MITTASUHTEITA, EI YKSITYISKOHTIA. Kaikissa luonnoksissa
- * silmät ovat KESKILINJAN ALAPUOLELLA (0,25–1,05 yksikköä), koska
- * alhaalla olevat silmät lukevat vauvamaisina, ja kuono on lyhyt tai
- * puuttuu. Vetoja ei lisätty söpöyden vuoksi: perheen kuuden vedon
- * katto pitää jokaisessa.
- */
-const NOSTOSYM_ELAIN_LUONNOS = {
-  /*
-   * 1 KERÄ — hylätyn merkin PEILIKUVA: sama geometria, pää käännetty
-   * ylävasemmalta ALAVASEMMALLE. Tämä on suora vastaus omistajan
-   * yhteen lauseeseen, jotta näkyy paljonko pelkkä pään paikka
-   * muuttaa. Vartalon kaaren aukko on peilattu samalla (aukko
-   * 79,6° … 162,7°, kaari sen komplementti).
-   */
-  kera: ({ kehakaari, keha, piste }) => ({
-    vahva: [
-      kehakaari(0.70, -1.90, 4.40, 162.70, 439.60),
-      keha(-1.60, 1.90, 2.70),
-      piste(-2.60, 2.35, 0.72),
-      piste(-0.55, 2.35, 0.72),
-    ],
-  }),
-  /*
-   * 2 NYYTTI — sama ajatus symmetrisenä JA söpömmillä
-   * mittasuhteilla: pää suoraan alhaalla keskellä ja isompi kuin
-   * luonnoksessa 1 (r 3,05 vs. 2,70), vartalo pienempi (r 4,20).
-   * Pään keskipiste on vartalon kehän PÄÄLLÄ (väli 4,50, säde 4,20),
-   * joten pää lomittuu eikä jää palloksi pallon päälle. Aukko
-   * laskettu: leikkaus 90° ± 40,9°, siihen 6° pelivara.
-   */
-  nyytti: ({ kehakaari, keha, piste }) => ({
-    vahva: [
-      kehakaari(0, -1.85, 4.20, 136.90, 403.10),
-      keha(0, 2.65, 3.05),
-      piste(-1.15, 3.15, 0.75),
-      piste(1.15, 3.15, 0.75),
-    ],
-  }),
-  /*
-   * 3 MAKAAVA — kissanleipä: pohjaviiva, selkä yhtenä kaarena ja pää
-   * selän vasemmassa päässä maan tasalla. Pää ei ole vartalon ALLA
-   * vaan sen VIERESSÄ alhaalla, mikä on kissan oikea lepoasento ja
-   * antaa silmille tilaa. Selkä alkaa vasta pään takaa (x = −1,60),
-   * jottei kaari kulje kasvojen poikki — juuri se teki edellisestä
-   * kierroksesta parrakkaan ukon.
-   */
-  makaava: ({ viiva, kaari, keha, piste }) => ({
-    vahva: [
-      viiva(-5.30, 4.90, 5.60, 4.90),
-      kaari(-1.60, 4.70, 5.60, 4.70, -3.60),
-      keha(-2.90, 2.10, 2.60),
-      piste(-3.85, 2.45, 0.62),
-      piste(-1.95, 2.45, 0.62),
-    ],
-  }),
-  /*
-   * 4 KOLMIOKORVAPÄÄ — omistajan *"voihan se olla vaikka pelkkä
-   * pää"* suoraan: kehä, kaksi kolmiokorvaa ja kaksi silmää.
-   * Korvat ovat SULJETTUJA KOLMIOITA (murto, suljettu), joiden
-   * sivu on ~3,2 yksikköä: terän leveys täyttää ne käyttökoossa
-   * lähes umpeen, joten ne lukevat korvina eivätkä väkäsinä.
-   * Korvan kanta on pään kehällä (200°/253°) ja kärki sen ulkona
-   * (232°, r 6,8) — korva kasvaa päästä eikä leiju sen päällä.
-   * Silmät ovat 1,15 yksikköä keskilinjan alapuolella ja säteeltään
-   * 0,85 (perheen muut täplät 0,58): iso ja alhaalla oleva silmä on
-   * se yksittäinen tekijä, joka lukee söpönä myös käyttökoossa.
-   */
-  korvapaa: ({ keha, murto, piste }) => ({
-    vahva: [
-      keha(0, 1.30, 4.20),
-      murto([[-3.95, -0.14], [-1.23, -2.72], [-4.19, -4.06]], true),
-      murto([[3.95, -0.14], [1.23, -2.72], [4.19, -4.06]], true),
-      piste(-1.70, 2.45, 0.85),
-      piste(1.70, 2.45, 0.85),
-    ],
-  }),
-  /*
-   * 5 YHDEN VEDON PÄÄ — pää ja korvat SAMANA suljettuna ääriviivana:
-   * kynä ei nouse kertaakaan pään ja korvien välissä, joten korvat
-   * ovat osa kalloa eivätkä siihen liimattuja kolmioita. Vetoja
-   * kolme — perheen vähiten. Ääriviiva on monikulmio (murto) eikä
-   * kehä, koska kehän ja kolmion yhdistäminen yhdeksi vedoksi vaatii
-   * suoria välejä; käyttökoossa 10 kärkeä lukee pyöreänä.
-   */
-  yksiveto: ({ murto, piste }) => ({
-    vahva: [
-      murto([[3.72, -0.53], [3.96, 2.26], [2.35, 4.56], [0, 5.28],
-        [-2.35, 4.56], [-3.96, 2.26], [-3.72, -0.53], [-4.55, -3.55],
-        [0, -1.10], [4.55, -3.55]], true),
-      piste(-1.60, 2.40, 0.80),
-      piste(1.60, 2.40, 0.80),
-    ],
-  }),
-  /*
-   * 6 KURKISTAJA — pää kurkistaa vaakaviivan yli: ylin puolikas
-   * päätä, korvat sen päällä ja isot silmät heti viivan yläpuolella.
-   * Rakenne on eri kuin muissa päissä: EI umpinaista kehää vaan
-   * AVOIN KAARI, jonka päät katkaisee viiva — silmä täydentää loput
-   * pään itse, ja juuri se täydentäminen tekee merkistä eläväisen.
-   * Merkki on myös perheen ainoa LEVEÄ JA MATALA (x ±6,30, y −4,0 …
-   * 4,3), joten se erottuu jo ääriviivaltaan.
-   */
-  kurkistaja: ({ viiva, kehakaari, murto, piste }) => ({
-    vahva: [
-      viiva(-6.30, 3.30, 6.30, 3.30),
-      kehakaari(0, 1.00, 4.30, 147.70, 392.30),
-      murto([[-4.15, -0.11], [-1.82, -2.90], [-4.68, -3.22]], true),
-      murto([[4.15, -0.11], [1.82, -2.90], [4.68, -3.22]], true),
-      piste(-1.70, 2.00, 0.85),
-      piste(1.70, 2.00, 0.85),
-    ],
-  }),
-  /*
-   * 7 KASVOT — ei ääriviivaa lainkaan: kaksi kolmiokorvaa, kaksi
-   * silmää ja kuono. Pää on se tyhjä pergamentti niiden välissä.
-   * Kevein mahdollinen tapa piirtää kissa, ja käyttökoossa kaikki
-   * muste on siellä missä katse on. Riski on kirjattu raporttiin:
-   * ilman ääriviivaa merkki voi lukea neljänä täplänä.
-   */
-  kasvot: ({ murto, piste }) => ({
-    vahva: [
-      murto([[-4.15, 0.60], [-1.55, -0.45], [-3.40, -3.95]], true),
-      murto([[4.15, 0.60], [1.55, -0.45], [3.40, -3.95]], true),
-      piste(-1.95, 2.30, 1.30),
-      piste(1.95, 2.30, 1.30),
-      piste(0, 4.40, 0.55),
-    ],
-  }),
-  /*
-   * 8 SELKÄKISSA — istuva kissa TAKAAPÄIN: yksi suljettu siluetti
-   * (kroppa ja korvat samana vetona) ja häntä. Kaksi vetoa, perheen
-   * toiseksi vähiten. Silmiä ei ole, joten söpöys on pelkkää
-   * ääriviivaa: kapea kaula, leveä takamus ja kaartuva häntä.
-   * Tämä on ainoa luonnos, jossa pää ei ole erillinen muoto — siksi
-   * *"pää alhaalla"* ei koske sitä.
-   */
-  selkakissa: ({ murto, kaari }) => ({
-    vahva: [
-      murto([[-2.55, 5.30], [-2.95, 2.00], [-2.10, -1.00], [-3.10, -4.60],
-        [0, -2.10], [3.10, -4.60], [2.10, -1.00], [2.95, 2.00],
-        [2.55, 5.30]], true),
-      kaari(3.20, 5.50, 5.70, 0.90, 1.10),
-    ],
-  }),
-  /*
-   * 9 TASSU — IHAN TOINEN: ei kissa vaan JÄLKI. Perustelu on
-   * kategorian sisällössä eikä mieltymyksessä: 23 eläinkohdetta ovat
-   * (nimiöt) Srebarna · Hutovo Blato · Pikkupöllö · Reunuskilpikonna ·
-   * Vanin kissa · Eskikaraağaç · Harmaahaikarat · Dovrefjell ·
-   * Berliinin karhu · Karhusanktuaari · Dublinin leijona · Greyfriars
-   * Bobby · Istanbulin kissat · Richmond Park · Casa de Fieras ·
-   * Eläintarha 1864 · Prahan hevoset · Torre Argentina · Livnon lauma ·
-   * Sofian eläintarha · Norrström · Jaktorów · Keskushautausmaa.
-   * Vain kolme on kissoja; muut ovat lintuja (5), karhuja, hevosia,
-   * peuroja, myskihärkiä, kilpikonnia, koiria ja eläintarhoja. YKSIKÄÄN
-   * laji ei kata kategoriaa, mutta TASSUNJÄLKI kattaa: se on
-   * kartografian oma tapa merkitä *"täällä on eläin"* sitomatta
-   * merkkiä lajiin — ja se on ainoa ehdotus, joka on rehellinen myös
-   * Srebarnan pelikaaneille.
-   *
-   * Antura on terän oma soikio ja varpaat neljä pienempää: ei
-   * ääriviivoja lainkaan, joten käyttökoossa ei ole mitään mikä voisi
-   * tukkeutua.
-   */
-  tassu: ({ piste }) => ({
-    vahva: [
-      piste(0, 3.85, 2.55),
-      piste(-4.80, -0.60, 1.15),
-      piste(-1.70, -3.15, 1.15),
-      piste(1.70, -3.15, 1.15),
-      piste(4.80, -0.60, 1.15),
-    ],
-  }),
-};
-
-/**
- * ELÄINLUONNOKSET KATSELUARKKIA VARTEN: tunnus → { vahva, ohut, vedot }.
- *
- * Sama muoto kuin `nostosymMiniMerkki` palauttaa, ja piirretty samalla
- * kynällä. EI KÄYTÖSSÄ PELISSÄ — kartan eläinmerkki tulee yhä
- * NOSTOSYM_MINI:stä. Kun omistaja valitsee yhden, sen vedot siirretään
- * NOSTOSYM_MINI_LUONNOS.elain-kohtaan ja tämä taulu poistetaan.
- */
-export function nostosymElainLuonnokset() {
-  return Object.fromEntries(
-    Object.entries(NOSTOSYM_ELAIN_LUONNOS).map(([tunnus, luonnos]) => {
-      const m = luonnos(nostosymKyna(NOSTOSYM_TERA));
-      const o = luonnos(nostosymKyna(NOSTOSYM_TERA_OHUT));
-      const vahva = m.vahva ?? [];
-      const ohut = o.ohut ?? [];
-      return [tunnus, {
-        vahva: vahva.length ? vahva.join(' ') : null,
-        ohut: ohut.length ? ohut.join(' ') : null,
-        vedot: vahva.length + ohut.length,
-      }];
-    }),
-  );
-}
 
 /*
  * LUONNON KAKSI MUOTOA. Kategoria `luonto` kattaa vuoret, meret, saaret

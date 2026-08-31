@@ -1,3 +1,121 @@
+# Opus → Fable: tassu voimassa, symboliperhe valmis (haara claude/symbolit-kasin)
+
+Viides ja viimeinen kierros valmis, pushattu samalle haaralle. **Ei
+versionostoa, ei PR:ää, ei laattapolttoa.** Yksi tiedosto muuttui:
+`js/fokusnosto-symbolit.js`. Vedon toteutus — leveä terä, kiinteä −40° kulma,
+kynän nosto — on koskematon, eikä yhteenkään muuhun merkkiin koskettu.
+
+## 1. Mitä tehtiin
+
+1. **Antura siirrettiin lähemmäs varpaita.** Omistaja: *"tassu, mutta iso
+   tassu saisi olla lähempänä pienempiä käpäläpisteitä"*. Anturan keskipiste
+   **y = 3,85 → 2,40**, eli 1,55 yksikköä = 0,81 CSS-pikseliä = 2,4
+   laitepikseliä ylöspäin. Väli keskivarpaisiin oli 3,20 yksikköä (kaksi
+   kertaa varpaiden keskinäinen väli, jolloin jälki hajosi kahteen ryhmään);
+   nyt se on **1,65 yksikköä** eli suunnilleen sama kuin varpaiden keskinäinen
+   väli. Muuta ei muutettu: viisi vetoa, kaikki terän omia soikioita.
+2. **Tassu on nyt kartan eläinmerkki.** Vedot ovat
+   `NOSTOSYM_MINI_LUONNOS.elain`-kohdassa.
+3. **Luonnostaulukko on poistettu kokonaan** — `NOSTOSYM_ELAIN_LUONNOS`,
+   `nostosymElainLuonnokset` ja kaikki kahdeksan hylättyä luonnosta,
+   yhteensä 227 riviä. `grep NOSTOSYM_ELAIN_LUONNOS|nostosymElainLuonnokset`
+   → **0 osumaa**. Koodissa ei ole enää yhtään hylättyä vaihtoehtoa, jonka
+   joku voisi myöhemmin lukea voimassa olevaksi säännöksi.
+
+Elävään koodiin jäi VAIN valittu kuvio ja sen perustelu: miksi kissa
+hylättiin neljän kierroksen jälkeen ja miksi jälki eikä laji (kategorian 23
+kohteen jakauma on kirjattu kommenttiin, jotta seuraava lukija ei joudu
+laskemaan sitä uudelleen).
+
+## 2. Loppuarkki — PÄÄTUOTOS
+
+```
+/home/user/Matkakirja/.claude/worktrees/symbolit-kasin/symbolit-lopullinen.png
+```
+
+3120 × 4251 px, **0,76 Mt** (raja 1,5 Mt; edellinen 1,8 Mt arkki jäi
+lähetykseen kiinni). **Ei committoitu.** Sisältö:
+
+- **Tassu ennen ja jälkeen** siirron, kummastakin suurennos, pikselinäkymä
+  käyttökoossa (dpr 3 = 23 × 23, 5×) ja kolme kappaletta 1:1. Jälkeen-rivin
+  suurennoksessa **anturan vanha paikka näkyy vaaleana haamuna**, joten siirto
+  on luettavissa yhdestä kuvasta.
+- **Poistettu kissa** samoilla näkymillä, jotta ero näkyy.
+- **Erottuvuustaulukko** (kohta 3).
+- **Koko perhe 1:1 lopullisilla merkeillä**: nauha tarkalleen 1:1, sama nauha
+  4× pikseleinä, ja kaikki 15 merkkiä suurennettuina nimineen ja vetolukuineen.
+
+Käyttökoon näkymistä ei karsittu mitään — koko pieneni siitä, että arkki on
+kapeampi (1040 px sisältöleveys) ja että toistoa on vähemmän: yksi perhenauha
+kymmenen sijaan.
+
+## 3. Erottuvuus mitattiin uudelleen — luvut
+
+Mittatapa on sama kuin aiemmissa erissä: merkki rasteroidaan käyttökoossa
+(6,8 CSS-px, dpr 3 = 23 × 23 laitepikseliä), ja ero on musteen keskimääräinen
+itseisarvoero prosentteina samassa rasterissa.
+
+| | pienin ero perheeseen | ero kauppaan |
+| --- | --- | --- |
+| tassu ENNEN siirtoa | 16,6 % (kauppa) | 16,6 % |
+| **tassu NYT (voimassa)** | **17,4 % (skandaali)** | **17,8 %** |
+| poistettu kissa | 20,0 % (kaupunki) | — |
+
+**Siirto paransi molempia lukuja**: pienin ero 16,6 → **17,4 %** ja ero
+kauppaan 16,6 → **17,8 %**. Kauppa ei ole enää lähin merkki; lähin on nyt
+skandaali (palkki ja piste).
+
+Perheen 105 parin **mediaani on 19,2 %** kun tassu on paikallaan (kissan
+kanssa se oli 20,1 % — mediaani laski, koska tassu on tiiviimpi kuin kissa
+oli). Pienin pari on yhä kauppa ↔ merenkulku **9,3 %**, ja tassu ei esiinny
+kertaakaan kymmenen lähimmän parin listalla.
+
+### Ero kauppaan jäi alle 18 % — yksi ehdotus, en tehnyt sitä
+
+17,8 % on niukasti alle rajan, joten sääntösi mukaan tässä on **yksi pieni
+korjaus omistajan hyväksyttäväksi tai hylättäväksi.** Muotoa ei muuteta:
+
+> **Varvastyynyjen säde 1,15 → 1,40.** Yksi luku, sama viisi vetoa, sama
+> sommittelu, sama anturan paikka — varpaat vain hieman paksummat.
+
+**Mitattu vaikutus:** pienin ero 17,4 → **18,4 %** (lähin merkki vaihtuu
+skandaalista ihmeeseen) ja ero kauppaan 17,8 → **19,6 %**, eli käytännössä
+perheen mediaanin tasolle. Kokeilin myös kolme muuta ja hylkäsin ne:
+isompi antura (r 2,95) antoi 17,9 / 19,2 % mutta paksuntaa juuri sitä osaa,
+jonka omistaja äsken siirsi; leveämpi varvaskaari 17,7 / 18,2 % on liian pieni
+parannus; **kolme varvasta neljän sijaan HUONONSI luvun 15,5 %:iin** — merkki
+lähestyy silloin skandaalin palkkia ja pistettä.
+
+Ehdotus on valmiina yhtenä lukuna, jos omistaja haluaa sen; muuten perhe on
+valmis sellaisenaan.
+
+## 4. Mitat ja portit
+
+- **Kokoa ei kasvatettu.** Tassun uloin muste on **6,08 / 4,98 yksikössä**,
+  koko perheen uloin **7,04 / 6,97** (ihme, ei tassu) — ruutu on 7,4.
+  Tassu on siis perheen mitoista kaukana ylärajasta.
+- **Vetoja koko perheessä 46 → 47** (eläin 4 → 5). Kuuden vedon katto pitää;
+  perheen suurin on urheilu kuudella.
+- **Determinismi:** ei siementä, ei arpaa (`grep Math.random|NOSTOSYM_HORJU`
+  → 0 osumaa). Kolme peräkkäistä Node-ajoa, sama SHA-256 `d5798d59…`.
+  Polttoehto säilyy: `nostosymMiniMerkki` on yhä selaimeton.
+- `node --test tests/*.test.mjs` → **# pass 1047, # fail 0** (1 skipped).
+- `node tools/tarkista-kaksoisavaimet.mjs` → ei kaksoisavaimia.
+- `node tools/build-standalone.mjs` → ok (20 443 kt); **dist/ ja node_modules
+  poistettu ennen committia**.
+- `tools/savukkeet/savuke-fokuskohteet.mjs` → **96/96 läpi**.
+- Kategoria→symboli-karttaa, kortin merkkiperhettä (`NOSTOSYM_KUVAT`,
+  `--sym-*`) eikä `css/styles.css`:ää muutettu tälläkään kierroksella.
+
+**Ennestään rikki, EI tästä muutoksesta:** `savuke-elaintaky.mjs` kaatuu yhä
+samoihin kolmeen vartioon ("merkki on kohdemerkin mittaluokkaa", "osuma-alue
+on sormen mitta", "ainakin yksi merkki on ruudulla napautettavissa"). Sama
+vika on todettu kolmella kierroksella myös mainin työkopiossa, jossa symbolit
+ovat ennallaan — vika on eläintäkyjen puolella. Jätin sen koskematta
+kustannuskurin kohdan 1 mukaan; se on nyt ainoa avoin asia tässä kulmassa.
+
+---
+
 # Opus → Fable: eläinsymbolin YHDEKSÄN vaihtoehtoa (haara claude/symbolit-kasin)
 
 Neljäs kierros valmis, pushattu samalle haaralle. **Ei versionostoa, ei PR:ää,
