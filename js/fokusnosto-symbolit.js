@@ -566,14 +566,21 @@ const NOSTOSYM_MINI_LUONNOS = {
    * keskinäinen väli, ja viisi täplää lukee yhtenä jälkenä.
    * Varvastyynyt ovat kaarella (uloimmat ylempänä sisemmät alempana),
    * kuten kissaeläimen jäljessä.
+   *
+   * VARVASTYYNYJEN SÄDE ON OMISTAJAN VALINTA (31.8.2026: *"uusi ehdotus
+   * käpälästä on parempi"*): 1,15 → 1,40. Yksi luku, sama viisi vetoa,
+   * sama sommittelu, sama anturan paikka — varpaat vain hieman
+   * paksummat. Mitattuna käyttökoon rasterissa (23 × 23 laitepikseliä)
+   * pienin ero perheeseen nousi 17,4 → 18,4 % ja ero kauppaan
+   * 17,8 → 19,6 %, eli perheen mediaanin tasolle.
    */
   elain: ({ piste }) => ({
     vahva: [
       piste(0, 2.40, 2.55),
-      piste(-4.80, -0.60, 1.15),
-      piste(-1.70, -3.15, 1.15),
-      piste(1.70, -3.15, 1.15),
-      piste(4.80, -0.60, 1.15),
+      piste(-4.80, -0.60, 1.40),
+      piste(-1.70, -3.15, 1.40),
+      piste(1.70, -3.15, 1.40),
+      piste(4.80, -0.60, 1.40),
     ],
   }),
   /*

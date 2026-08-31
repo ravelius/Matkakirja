@@ -1,3 +1,236 @@
+# Opus → Fable: kartalle kahdeksan symbolia + isompi käpälä (haara claude/symbolit-kasin)
+
+Molemmat omistajan päätökset 31.8.2026 tehty ja mitattu, pushattu samalle
+haaralle. **Ei versionostoa, ei PR:ää, ei laattapolttoa.** Neljä tiedostoa
+muuttui: `js/fokusnosto-symbolit.js` (yksi luku), `js/karttavalot.js` (uusi
+funktio), `js/fokuskohteet.js` (merkin valinta) ja
+`tools/savukkeet/savuke-selitevalikko.mjs` (vartija, jonka koko premissi
+muuttui). Vedon toteutus — leveä terä, −40°, kynän nosto — on **koskematon**,
+eikä yhdenkään merkin muotoa muutettu käpälää lukuun ottamatta.
+
+**YKSI ASIA JÄI OMISTAJALLE, ja se on tehtävänannon seitsemäs merkki: VESI.**
+Ks. kohta 4 — en tehnyt sitä omin päin, koska luvut ovat isot ja aalto on
+ainoa seitsemästä, joka jo NÄKYY selitteessä.
+
+## 1. Käpälä: varvastyynyt 1,15 → 1,40 — luvut vahvistettu
+
+Yksi luku `NOSTOSYM_MINI_LUONNOS.elain`-kohdassa. Sama viisi vetoa, sama
+sommittelu, sama antura (0 / 2,40 / r 2,55). Mittaus ajettiin uudestaan samalla
+tavalla kuin edellisillä kierroksilla (rasteri käyttökoossa 6,8 CSS-px, dpr 3 =
+23 × 23 laitepikseliä; ero = musteen keskimääräinen itseisarvoero prosentteina),
+ja se toisti edellisen erän luvut merkki merkiltä — myös perheen pahimman parin
+9,3 %:n, joten mittatapa on sama eikä eri.
+
+| | pienin ero perheeseen | lähin merkki | ero kauppaan |
+| --- | --- | --- | --- |
+| ENNEN (r 1,15) | 17,4 % | huuto (skandaali) | 17,8 % |
+| **NYT (r 1,40)** | **18,4 %** | ihme (tähti) | **19,6 %** |
+
+Perheen 105 parin mediaani 19,2 % → **19,7 %**. Käpälä ei esiinny kymmenen
+lähimmän parin listalla kummassakaan tilassa. Ehdotetut luvut siis pitivät
+paikkansa tarkalleen.
+
+## 2. Kartalle vain kahdeksan symbolia — tehty LÄHTEESSÄ
+
+`js/fokuskohteet.js kohteenSymboli` jaettiin kahtia:
+
+- `kohteenKategoria(kohde)` — entinen runko sellaisenaan, kohteen TARKKA
+  kategoria (neljätoista, valintajärjestys ennallaan: ihme → oma kenttä →
+  kierros → tyyppijohto).
+- `kohteenSymboli(kohde)` = `karttavaloKarkisymboli(kohteenKategoria(kohde))` —
+  kartalle piirtyvä merkki, kahdeksasta.
+
+Uusi `karttavaloKarkisymboli` (js/karttavalot.js) ei tunne yhtään paria itse:
+se kysyy symbolin pääkategorian `NOSTOSYM_PAAKATEGORIAT`-taulusta ja poimii sen
+aiheen kärkisymbolin `KARTTAVALO_AIHEET`-taulusta. **Rinnakkaista taulua ei
+kirjoitettu, eikä kumpaakaan omistajan taulua muutettu.** Uusi kategoria
+seuraa perässä ilman riviä uudessa funktiossa.
+
+Koska muutos on lähteessä, sitä seuraa automaattisesti kaikki: karttamerkki,
+aihevalo (`data-aihe`, `data-ala`), selitteen kappalemäärät, kohdekortin ylärivi
+ja `claude/kategoria-per-kaupunki` -haaran ryhmittely, joka käyttää samaa
+funktiota avaimenaan.
+
+### Mitä poistui kartalta ja mihin se meni
+
+Kohdejoukko = koko pelin kartalle piirtyvät merkit: kohdepakit +
+maastokohteet + syvennyspaikat + skandaalit, **636 kohdetta**.
+
+| poistunut merkki | sai tilalle | seliterivi | kohteita |
+| --- | --- | --- | --- |
+| veturi (tekniikka) | vaaka | Kauppa ja tekniikka | 21 |
+| sulkakynä (sana) | **murtunut pylväs** | Historia | 15 |
+| malja (ruoka) | lyyra | Kulttuuri ja ruoka | 7 |
+| ankkuri (merenkulku) | vaaka | Kauppa ja tekniikka | 5 |
+| seppele (urheilu) | lyyra | Kulttuuri ja ruoka | 4 |
+| silmä (nähtävyydet) | murtunut pylväs | Historia | **0** |
+
+Kaksi tarkennusta tehtävänantoon:
+
+- **Sulkakynä ei muutu lyyraksi vaan pylvääksi.** `NOSTOSYM_PAAKATEGORIAT` vie
+  `sana`-kategorian HISTORIAAN (”legenda ja kirjallisuus ovat kartalla
+  mennyttä aikaa siinä missä raunio”), ei kulttuuriin. Käytin taulua, kuten
+  ohjeistit; tehtävänannon esimerkki oli lipsahdus.
+- **Silmää ei ollut kartalla ennenkään.** Se on kierroskohteiden varamerkki, ja
+  yhdelläkään kohteella ei ole `kierros`-kenttää (sama asia, jonka
+  savuke-fokuskohteet vartioi: ”silmäsymboli vain kierroskohteilla (nyt 0)”).
+  Sen poisto on siis kirjanpitoa, ei näkyvä muutos.
+
+### Merkkien määrä ennen ja jälkeen
+
+- **Koko peli: 14 eri merkkiä kartalla → 9.** Kahdeksan kärkisymbolia +
+  luonnon toinen muoto, aalto (ks. kohta 4). Taulussa on viisitoista merkkiä,
+  mutta silmää ei ole kartalla yhtään kappaletta, joten mitattu lähtöluku on 14.
+- Jakauma jälkeen (636 kohdetta): **aalto 183**, vuori 140, huuto 83,
+  historia 71, kulttuuri 44, kaupunki 38, kauppa 36, elain 23, ihme 18.
+- Maittain (kohdepakit + maastokohteet, ilman syvennyksiä ja skandaaleja):
+  **GRC 12 → 8**, TUR 10 → 8, BGR 8 → 6, DEU 8 → 6, HUN 6 → 5, ITA 5 → 5,
+  HRV 4 → 4. Muissa maissa on vain maastokohteita (2 merkkiä).
+
+### ATEENA
+
+Kysyit tätä nimeltä. Ateenassa pelaajalle näkyy **Kreikan lehti kokonaan**, eli
+35 kohdetta + Ateenan kolme syvennystarinaa + Kreikan kolme skandaalia, 41
+merkkiä. Se **tiivistyy 13 merkistä yhdeksään** (kahdeksan kärkisymbolia +
+luonnon aalto):
+
+```
+ENNEN 13: vuori 7 · meri 7 · historia 7 · kaupunki 5 · huuto 3 · tekniikka 2 ·
+          kulttuuri 2 · sana 2 · elain 2 · urheilu 1 · ruoka 1 ·
+          merenkulku 1 · ihme 1
+NYT    9: historia 9 · vuori 7 · meri 7 · kaupunki 5 · kulttuuri 4 ·
+          kauppa 3 · huuto 3 · elain 2 · ihme 1
+```
+
+Savuke mittasi saman asian oikealta laudalta: kahdeksan aihetta, ja jokaisella
+niistä on kartalla **täsmälleen yksi symboli** (kaupungit=kaupunki,
+luonto=luonto, kauppa=kauppa, historia=historia, kulttuuri=kulttuuri,
+elaimet=elain, ihmeet=ihme, skandaalit=huuto). Ennen tätä esimerkiksi
+Kauppa-rivin alla oli kolme eri merkkiä.
+
+En tunnista tehtävänannon lukuja ”10 → 4” — ne lienevät toisen haaran
+kaupunkikohtaisesta ryhmittelystä, jossa Ateenan oma kohdejoukko on eri kuin
+lehden merkkijoukko. Kerroin siksi mittatavan auki.
+
+### Latistuuko kartta? — luvut, en korjannut
+
+Kysyit tätä erikseen. **Luonto on jo nyt kartan valtakategoria: 323/636 = 51 %
+kaikista merkeistä** (vuori 140 + aalto 183), ja se oli sitä ennen tätä
+muutostakin — maastokohteet (”tee vuoret ja meret avattaviksi kaikkiin maihin”,
+29.8.) toivat 18 maalle kohteita, joilla ei ole muuta kuin luontoa. Tämä erä ei
+kasvattanut luontoa yhdelläkään kohteella. Kasvaneet ryhmät ovat historia
+56 → 71, kulttuuri 33 → 44 ja kauppa 10 → 36. Ne ovat maltillisia lukuja, eikä
+mikään niistä nielaise karttaa.
+
+## 3. Mitä poistuneilla merkeillä yhä tehdään (tarkistettu)
+
+Yhtään piirrosta ei poistettu. Kuusi merkkiä ovat yhä käytössä:
+
+1. **`NOSTOSYM_MINI`-viivamerkkeinä** kaikki kuusi ovat tallessa (kartalla niitä
+   ei enää valita).
+2. **Raskaat mustepiirrokset** (`NOSTOSYM_PIIRTAJAT`, `piirraNostosymboli`) ovat
+   käytössä `nostosymKortinYlarivi`-funktion kautta: **täkynoston lunastuskortti**
+   (js/fokusnosto.js, noston oma `symboli`), **syvennystarinan kortti**
+   (js/syvennys.js, syvennyspaikan oma `symboli`), eläintäky ja skandaalikortti.
+   Nämä lukevat datan tarkan kategorian eivätkä kulje kohteenSymbolin kautta.
+3. **`NOSTOSYM_LUOKAT`** nimeää kaikki neljätoista luokkaa entiseen tapaan.
+
+**Yksi seuraus kannattaa tietää:** koska syvennystarinan ja täkynoston kortti
+lukee oman `symboli`-kenttänsä, sen ylärivi voi nyt näyttää eri merkkiä kuin
+kartalla oleva piste. **118 syvennyspaikasta 32:lla** kortti näyttää veturia,
+sulkakynää, maljaa tai ankkuria, kun kartalla on vaaka tai pylväs. Kartan oma
+kohdekortti (`piirraKohdeYlarivi`) ei kärsi tästä, koska se käyttää samaa
+`kohteenSymboli`-sääntöä kuin merkki — mutta se tarkoittaa myös, että
+**kohdekortin ylärivi sanoo nyt *Kauppa* siellä missä ennen luki *Merenkulku***.
+Se on suoraa seurausta säännöstä ”kortti ja merkki kertovat aina samaa”
+(omistaja 26.8.), ja kirjasin kommenttiin, miten se peruttaisiin yhdellä
+sanalla (`kohteenSymboli` → `kohteenKategoria` kortin ylärivissä), jos omistaja
+haluaa kortille tarkan luokan takaisin. **Kartta pysyy kahdeksassa kummin
+päin tahansa.** En tehnyt kumpaakaan valintaa omin päin — nykytila on se, mitä
+tehtävänanto pyysi (”kaikki sitä käyttävä seuraa perässä”).
+
+## 4. VESI — tehtävänannon seitsemäs merkki, jonka jätin omistajalle
+
+Tehtävänannon lista oli seitsemän merkkiä ja niistä ensimmäinen oli *vesi*.
+Kuusi tehtiin. Aallon jätin, ja tässä on syy lukuina:
+
+1. **Aalto ei tule `kohteenSymboli`-funktiosta.** Se valitaan piirtokerroksessa
+   kohteen TYYPISTÄ (`nostosymMiniTunnus`: meri ja joki → aalto, vuori ja saari
+   → kolmio). `kohteenSymboli` palauttaa kummallekin saman `luonto`-kategorian.
+   Kun teki muutoksen lähteessä niin kuin pyysit, aalto ei siis ole mukana —
+   sen poisto olisi eri paikka ja eri sääntö.
+2. **Kokoluokka.** Aallon poisto tekisi **183 kohteesta 636:sta (29 %)**
+   vuorikolmion: Egeanmeri, Joonianmeri, Tonava, Aliákmonas … ja **57 maalla
+   78:sta koko lehdellä olisi silloin täsmälleen yksi merkki** (kolmio), koska
+   niillä on vain maastokohteita.
+3. **Aalto on jo selitteessä.** Luonto-rivin kärkisymboli
+   (`piirraNostosymLuonto`) on vuori + havu + **aalto**. Perustelusi — *”pelaaja
+   näkee kartalla ankkurin muttei löydä ankkuria selitteestä”* — ei siis päde
+   aaltoon: se on rivin omassa kuvassa. Ankkuriin, veturiin, maljaan,
+   seppeleeseen ja sulkakynään se päti, ja ne kuusi on nyt hoidettu.
+4. Kartalla on siis nyt **yhdeksän muotoa kahdeksalla seliterivillä**, ja
+   jokainen yhdeksästä löytyy selitteestä. Ateena tiivistyi 13 → 9; aallon
+   poiston jälkeen se olisi 8.
+
+Jos omistaja haluaa kartalle tasan kahdeksan muotoa, se on **yksi rivi**:
+`NOSTOSYM_MINI_LAJIT` tyhjäksi (js/fokusnosto-symbolit.js), jolloin
+`nostosymMiniTunnus('luonto', …)` palauttaa aina kolmion. Testi
+`tests/fokusvirta.test.mjs` vartioi nykyistä jakoa neljällä väitteellä, joten ne
+on samalla päivitettävä. Sano vain, niin teen sen.
+
+## 5. Savuke-selitevalikon vartija 4 käännettiin ympäri
+
+Vartija 4 vaati ENNEN, että koeaiheessa on **useampi kuin yksi** symboli
+(”ryhmittely on oikeasti mitattavissa”). Omistajan päätös poistaa juuri sen
+tilanteen, joten vartija olisi kaatunut väistämättä. Se on nyt tiukempi eikä
+löysempi:
+
+- *”kartan merkit ovat vain selitteen kahdeksan kärkisymbolia”* — jokaisen
+  aiheen `data-ala`-joukon on oltava **täsmälleen** rivin kärkisymboli. Vanha
+  vartija salli lisämerkit; tämä kieltää ne. Jos kartalle joskus ilmestyy
+  merkki, jota selitteessä ei ole, savuke kaatuu heti.
+- *”jokainen kartalla oleva alalaji kuuluu oman rivinsä pääkategoriaan”*.
+
+Muut vartijat ja niiden ajojärjestys ovat ennallaan.
+
+## 6. Portit
+
+- `node --test tests/*.test.mjs` → **# pass 1047, # fail 0** (1 skipped).
+- `node tools/tarkista-kaksoisavaimet.mjs` → ei kaksoisavaimia.
+- `node tools/build-standalone.mjs` → ok (20 447 kt).
+- `tools/savukkeet/savuke-fokuskohteet.mjs` → **96/96 läpi**.
+- `tools/savukkeet/savuke-selitevalikko.mjs` → **33/33 läpi**. Laudalta luettu
+  todiste on raportin arvokkain rivi: kahdeksan aihetta, joilla jokaisella on
+  `"alalajit": ["<kärkisymboli>"]` — yksi symboli per rivi.
+- **dist/ ja node_modules poistettu ennen committia**; katselukuvaa ei
+  committoitu.
+- Raamattuun, tarinakaanoniin, `tools/fokuskartta/`-hakemistoon,
+  `js/laattapyramidi.js`:ään, `KARTTAVALO_AIHEET`-tauluun eikä
+  `NOSTOSYM_PAAKATEGORIAT`-tauluun koskettu.
+
+**Ennestään rikki, EI tästä muutoksesta:** `savuke-elaintaky.mjs` kaatuu yhä
+samoihin kolmeen vartioon (merkin mittaluokka, osuma-alue, napautettavuus).
+Sama vika on todettu neljällä kierroksella myös mainin työkopiossa.
+
+## 7. Loppuarkki — PÄÄTUOTOS
+
+```
+/home/user/Matkakirja/.claude/worktrees/symbolit-kasin/symbolit-lopullinen.png
+```
+
+2800 × 5810 px, **0,95 Mt** (raja 1,5 Mt). **Ei committoitu.** Sisältö:
+
+1. **Käpälä ennen ja jälkeen** — suurennos, pikselinäkymä käyttökoossa
+   (dpr 3 = 23 × 23, 4×) ja kolme kappaletta 1:1, kummastakin, mitatut luvut
+   vieressä.
+2. **Kartan kahdeksan merkkiä** samoilla näkymillä, vetoluvut ja kappalemäärät.
+3. **Taulukko siitä mikä poistui ja mihin se meni**, poistunut ja korvaaja
+   vierekkäin piirrettyinä.
+4. **Koko kartan merkistö 1:1 pergamentilla**, niin kuin se on kartalla.
+5. **Vesi-kohta**: aalto ja kolmio vierekkäin käyttökoossa, päätöksen luvut.
+
+---
+
 # Opus → Fable: tassu voimassa, symboliperhe valmis (haara claude/symbolit-kasin)
 
 Viides ja viimeinen kierros valmis, pushattu samalle haaralle. **Ei
