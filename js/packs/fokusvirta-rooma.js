@@ -683,6 +683,30 @@ export const FOKUSVIRTA_ROOMA = {
         selite: 'Kissoja Largo di Torre Argentinan raunioilla.',
         lahde: 'Andy Rusch, Wikimedia Commons (CC BY 2.0)',
       },
+      /*
+       * OMAT KOORDINAATIT, JOTTA MERKIN VOI POLTTAA LAATTAAN.
+       *
+       * Tämä on maan AINOA täkynosto, ja Italiassa on neljä
+       * fokuskaupunkia (Venetsia, Firenze, Rooma, Sisilia). Ilman
+       * `paikka`-kenttää merkki seurasi pelaajaa kaupungista toiseen
+       * (js/fokusnosto.js nostonPaikka) — Caesarin kissat olisivat
+       * istuneet Venetsiassa — eikä sellaista merkkiä voi polttaa: koko
+       * maa jäi eläväksi (tools/fokuskartta/nostot.mjs, TÄKYN EHTO).
+       * Kenttä ei muuta sisältöä, vaan naulaa merkin siihen aukioon,
+       * josta nosto kertoo.
+       *
+       * 41,89527778 N / 12,47694444 E — en-Wikipedia "Largo di Torre
+       * Argentina", prop=coordinates (haettu 31.8.2026). Sama kaava ja
+       * samat vakiot kuin muillakin nostoilla (js/fokusnosto.js, PAIKKA
+       * LAUDALLA): maailmankartta Millerin lieriönä, europe tasavälinä.
+       */
+      paikka: {
+        nimi: 'Largo di Torre Argentina',
+        laudat: {
+          maailmankartta: { x: 6249.2, y: 1727.8 },
+          europe: { x: 450.8, y: 791.8 },
+        },
+      },
     },
   ],
 

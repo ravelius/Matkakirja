@@ -82,10 +82,18 @@
  *    tehdä samalla tavalla kuin tähän asti … tehdään vain sitten uusi
  *    poltto kartalle sopivassa vaiheessa."*
  *
- *    MITATTU 31.8.2026: 624 merkistä 586 on poltettavia; seitsemän
- *    maata (BGR, BIH, ESP, GBR, ITA, ROU, UKR) jää ulos. Jokainen esto
- *    on korjattavissa DATASSA eikä koodissa — viisi täkyä tarvitsee
- *    omat koordinaatit ja kaksi maata yhtenäisen täkypoolin.
+ *    MITATTU 31.8.2026: seitsemän maata (BGR, BIH, ESP, GBR, ITA, ROU,
+ *    UKR) jäi ulos, ja 624 merkistä poltettiin 413. Jokainen esto oli
+ *    korjattavissa DATASSA eikä koodissa — viisi täkyä tarvitsi omat
+ *    koordinaatit ja kaksi maata yhtenäisen täkypoolin.
+ *
+ *    NE VIISI PAIKKA-KENTTÄÄ ON NYT KIRJOITETTU (31.8.2026, sama
+ *    päivä): `areena` (BGR), `pyramidi` (BIH), `kissat` (ITA),
+ *    `dracula` (ROU) ja `sofian-mosaiikit` (UKR) saivat omat
+ *    koordinaattinsa kaupunkipaketteihinsa. Mitattu uudelleen: 628
+ *    merkistä poltetaan 510, ja ulos jää enää KAKSI maata (ESP, GBR),
+ *    joiden täkypooli vaihtuu kaupungeittain — se on täkyjoukon
+ *    sisällön kysymys eikä paikka-kentän, joten se jää päätettäväksi.
  *
  * ── NIMET ON PREFIKSOITU ──────────────────────────────────────────
  *

@@ -539,19 +539,22 @@ const MODULES = [
   // Fokusmoodin maakohtainen topografiapohja ennen ui:ta (ui tuo sen;
   // se itse tuo mapartin, median ja lisänimet, jotka ovat yllä).
   'js/packs/fokus-grc.js',
+  /*
+   * Nostojen ladonnan mittakaava ja tiiviste. LEHTIMODUULI, joka ei tuo
+   * mitään — ja siksi se voi olla näin varhain. js/fokuskohteet.js
+   * kysyy siltä, onko merkki poltettu laattaan, js/ui.js merkkien
+   * mittakaavan ja js/karttanimet.js merkin karttavakion (v1394);
+   * laattageneraattori laskee saman tiivisteen Nodessa. Ennen
+   * karttanimiä, koska karttanimet tuo tämän.
+   */
+  'js/nostoladonta.js',
   // Ruutuavaruudessa ladotut paikannimet ennen ui:ta (ui tuo sen). Tuo
-  // mapartin, laattapyramidin ja nimipaketin, jotka ovat yllä.
+  // mapartin, laattapyramidin, nimipaketin ja nostoladonnan, jotka
+  // ovat yllä.
   'js/karttanimet.js',
   // Merkkien yhteinen kasauspassi ennen kerroksia, jotka tuovat sen
   // (fokuskohteet ja fokusnosto-symbolit). Ei tuo itse mitään.
   'js/fokusniput.js',
-  /*
-   * Nostojen ladonnan mittakaava ja tiiviste. LEHTIMODUULI, joka ei tuo
-   * mitään — ja siksi se voi olla näin varhain. js/fokuskohteet.js
-   * kysyy siltä, onko merkki poltettu laattaan, ja js/ui.js merkkien
-   * mittakaavan; laattageneraattori laskee saman tiivisteen Nodessa.
-   */
-  'js/nostoladonta.js',
   /*
    * Karttasymbolien kirjasto ennen kohteita ja täkynostoa (molemmat
    * piirtävät symbolinsa sillä — Raamattu, SYMBOLITAKSONOMIA). Kerros

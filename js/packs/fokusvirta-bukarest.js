@@ -701,6 +701,33 @@ export const FOKUSVIRTA_BUKAREST = {
         selite: 'Bram Stokerin omat muistiinpanot romaaninsa henkilöistä.',
         lahde: 'Bram Stoker ennen 1897, Wikimedia Commons (public domain)',
       },
+      /*
+       * PAIKKA ON KAUPUNKI, JA SE ON KIRJATTU TÄHÄN EIKÄ JÄTETTY
+       * VARAPOLULLE.
+       *
+       * Nostolla EI ole omaa maantieteellistä kohdetta eikä sellaista
+       * keksitä: koko juttu on siitä, ettei Stoker käynyt Itä-Euroopassa
+       * — muistiinpanot syntyivät Britanniassa ja alaviite Wilkinsonin
+       * kirjassa. Kenttä on siksi täsmälleen se, minkä varapolku
+       * (js/fokusnosto.js nostonPaikka, VARAPAIKKA ON KAUPUNKI) on
+       * antanut tähänkin asti: Bukarestin laatan oma piste kummallakin
+       * laudalla (js/packs/maailmankartta.js ja js/packs/europe.js,
+       * `bukarest`). Merkki ei siis liiku pikseliäkään.
+       *
+       * MIKSI SE SILTI KIRJOITETAAN: laattapoltto ei voi tietää, mihin
+       * varapolku päätyy, koska se riippuu pelaajan sijainnista, ja
+       * yksikin sellainen täky jättää KOKO maan polttamatta
+       * (tools/fokuskartta/nostot.mjs, TÄKYN EHTO). Romaniassa on vain
+       * yksi fokuskaupunki, joten varapolun vastaus on aina tämä —
+       * kenttä vain sanoo sen ääneen.
+       */
+      paikka: {
+        nimi: 'Bukarest',
+        laudat: {
+          maailmankartta: { x: 6702.8, y: 1625.1 },
+          europe: { x: 712, y: 725 },
+        },
+      },
     },
   ],
 
