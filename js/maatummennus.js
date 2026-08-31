@@ -194,10 +194,15 @@ export function paivitaMaatummennus(ui) {
 /**
  * Mitä kerroksessa pitäisi nyt olla — tai null, jos ei mitään.
  *
- * Avain on maa: sama maa samalla näkyvyydellä ei kirjoita DOMiin
- * mitään, ja koska varjo on ARKIN kokoinen (ks. `arkinAla`), panorointi
- * ja zoomaus eivät muuta sitä lainkaan. Vain maanvaihto ja
- * näkyvyysrajan ylitys tekevät työtä.
+ * Avain on maa JA arkki. Maa on ilmeinen; arkki on siksi, että se voi
+ * vaihtua kerran laudan elinaikana: kamera on pystytyshetkellä
+ * sovitettu arkin varalukuihin, ja pyramidin luettelo saapuu verkosta
+ * vasta piirron jälkeen (js/ui.js paivitaLaudanRajat). Ilman arkkia
+ * avaimessa varjo jäisi silloin vanhan, pienemmän laatikon kokoiseksi.
+ *
+ * Panorointi ja zoomaus EIVÄT muuta avainta, koska varjo on arkin
+ * kokoinen (ks. `arkinAla`) — vain maanvaihto, näkyvyysrajan ylitys ja
+ * tuo kertaluontoinen arkin tarkentuminen tekevät työtä.
  */
 function tunniste(ui) {
   const iso = ui.fokuskarttaAvain;
@@ -209,7 +214,8 @@ function tunniste(ui) {
   // Pieni sietovara: pelaajan uloin taso itse kuuluu mukaan.
   if (!(skaala >= raja * 0.999)) return null;
   const ala = arkinAla(ui);
-  return ala ? { iso, ala, avain: iso } : null;
+  if (!ala) return null;
+  return { iso, ala, avain: `${iso}:${ala.x}:${ala.y}:${ala.w}:${ala.h}` };
 }
 
 /**
