@@ -1707,6 +1707,15 @@ function luovutaKohdeNimiot(ui, s, piilossa) {
         // tai erottelussa, ja nimi kuuluu sen viereen missä merkki on.
         x: r.nippu?.x ?? r.x + (r.sx ?? 0),
         y: r.nippu?.y ?? r.y + (r.sy ?? 0),
+        /*
+         * KYLJEN TOIVE KULKEE LADONTAAN ASTI (31.8.2026). Kaupungin
+         * ympärille ladottu rypäs on kahtena sarakkeena laatan
+         * molemmin puolin (js/fokusniput.js sääntö 2), ja vasemman
+         * sarakkeen nimi kuuluu vasemmalle — muuten se kulkisi laatan
+         * yli kohti toista saraketta. Sama toive kuin merkin oman
+         * väistön kokeilujärjestyksessä (kohdeNimioPuolet).
+         */
+        puoli: Boolean(r.nippuPuoli),
       });
     }
   }

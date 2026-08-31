@@ -584,7 +584,8 @@ let kohteenSade = 0;
 export function asetaKohdenimet(lista, sade = 0) {
   const rivit = Array.isArray(lista) ? lista : [];
   const avain = `${sade.toFixed(3)}|${rivit
-    .map((k) => `${k.teksti}@${k.x.toFixed(1)},${k.y.toFixed(1)}`).join(';')}`;
+    .map((k) => `${k.teksti}@${k.x.toFixed(1)},${k.y.toFixed(1)}${k.puoli ? 'v' : ''}`)
+    .join(';')}`;
   if (avain === kohdenimienAvain) return false;
   kohdenimienAvain = avain;
   kohdenimet = rivit;
@@ -1058,14 +1059,23 @@ function lado(data, px) {
      * lähituntumaan ja katkoviiva merkkiin.
      *
      * Kyljet ovat samassa järjestyksessä kuin kohdekerroksen omassa
-     * väistössä oli (oikea ennen vasenta, js/fokuskohteet.js
+     * väistössä (oikea ennen vasenta, js/fokuskohteet.js
      * KOHDE_NIMIO_PUOLET): järjestys on kiinteä, joten sama näkymä
      * antaa aina saman kartan eikä nimi voi vaihtaa puolta
      * panoroinnissa.
+     *
+     * LADONTA SAA TOIVOA KYLKEÄ (`puoli`, 31.8.2026). Kaupungin
+     * ympärille ladotun ryppään VASEMMAN sarakkeen merkki toivoo
+     * nimeään vasemmalle (js/fokusniput.js sääntö 2), tai nimi
+     * kulkisi kaupungin laatan yli kohti ryppään toista saraketta.
+     * Toive vaihtaa vain kahden ensimmäisen ehdokkaan järjestyksen —
+     * kaikki neljä kylkeä ovat yhä tarjolla, ja jos toivottu on
+     * varattu, seuraava kelpaa kuten ennenkin.
      */
+    const oikea = { dx: vieri, dy: kork * 0.35, ank: 'start', nosto: false };
+    const vasen = { dx: -vieri, dy: kork * 0.35, ank: 'end', nosto: false };
     const ehdokkaat = [
-      { dx: vieri, dy: kork * 0.35, ank: 'start', nosto: false },
-      { dx: -vieri, dy: kork * 0.35, ank: 'end', nosto: false },
+      ...(k.puoli ? [vasen, oikea] : [oikea, vasen]),
       { dx: 0, dy: -(merkkiR + kork * 0.55), ank: 'middle', nosto: false },
       { dx: 0, dy: merkkiR + kork * 0.95, ank: 'middle', nosto: false },
     ];
