@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1378, teksti: 'Karttanostot poltetaan laattoihin (linjaus)' },
   { v: 1377, teksti: 'Viivaimen leveysasteet eivät ylitä 90:tä' },
   { v: 1376, teksti: 'Nipistys ei enää napsahda portaikkoon' },
   { v: 1375, teksti: 'Laattojen esilataus: ei tyhjää karttapohjaa' },

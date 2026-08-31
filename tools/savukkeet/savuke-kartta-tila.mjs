@@ -500,11 +500,17 @@ const eleKirjoituksia = await kirjoituksia();
 const eleSuhde = (await zoomiKerroin()) / ennenEle;
 console.log(`      mitattu: gesture-nipistys ${eleSuhde.toFixed(3)}x`
   + ` (${eleKirjoituksia} muunnoskirjoitusta / ${ASKELIA} tapahtumaa)`);
-// Sama napsautus kuin 6a:ssa (vaihe 3): ele vie lähimpään portaaseen.
-vaadi('6c WebKitin gesture-nipistys (scale 1→2) vie lähimpään portaaseen',
-  eleSuhde > 1.05 && eleSuhde <= 2 * askelKatto * 1.01
-  && eleSuhde >= 2 / askelKatto * 0.99,
-  `${eleSuhde.toFixed(3)}x (odotettu 1,33…3,0; ennen korjausta 1,00x)`);
+/*
+ * Sama sääntö kuin 6a:ssa: napsautus portaikkoon on poistettu
+ * (js/kartta.js, omistajan päätös 30.8.2026), joten ele päättyy
+ * sormien omaan kertoimeen. Väite palautettiin 6a:n kanssa samaan
+ * tiukempaan muotoon, mutta TÄMÄ RIVI JÄI KORJAAMATTA ja viittasi
+ * poistettuun `askelKatto`-vakioon — savuke kaatui ReferenceErroriin
+ * ennen kuin ehti tänne asti. Löytyi 31.8.2026 toisen erän porteissa.
+ */
+vaadi('6c WebKitin gesture-nipistys (scale 1→2) kaksinkertaistaa mittakaavan',
+  eleSuhde > 1.9 && eleSuhde < 2.1,
+  `${eleSuhde.toFixed(3)}x (odotettu 2,0 ± 5 %; ennen korjausta 1,00x)`);
 vaadi('6d jokainen gesturechange näkyy esikatselussa',
   eleKirjoituksia >= ASKELIA,
   `${eleKirjoituksia} kirjoitusta / ${ASKELIA} tapahtumaa`);
