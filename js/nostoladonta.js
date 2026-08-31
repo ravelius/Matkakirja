@@ -113,20 +113,41 @@
 export const NOSTOLADONTA_PROTO = 1600;
 export const NOSTOLADONTA_KATTO = 2.0;
 
+/*
+ * YKSI GLOBAALI MITTAKAAVA KOKO LAUDALLE (omistajan valinta
+ * kysymyskortilla 31.8.2026: "0,60 — Kreikan mitta").
+ *
+ * Vanha kaava KATTO * rajaus.w / PROTO oli MAAKOHTAINEN: se oli oikea
+ * silloin, kun jokainen lehti katsottiin erikseen ruudulle
+ * sovitettuna, mutta yhdellä yhteisellä pyramidikartalla se antoi
+ * 134 maalle 129-kertaisen hajonnan (RUS 7,215 … SHN 0,056).
+ * Mitattuna: Venäjän nostonimiöt olivat 500 km:n janalla 24,4 px kun
+ * kartan omat paikannimet ovat 10,5 px; Kreikan 3,0 px samalla
+ * janalla.
+ *
+ * 0,60 on "Kreikan mitta koko maailmalle": omistajan jo hyväksymät
+ * maat (GRC 0,585, FIN, ITA, EGY) pysyvät käytännössä ennallaan ja
+ * vain jättiläiset kutistuvat (RUS ÷12). Keskizoomilla (z6) nimiö on
+ * kartan oman paikannimen kokoinen; syvimmällä tasolla 2,4-kertainen.
+ */
+export const NOSTOLADONTA_S = 0.6;
+
 /**
- * MERKKIEN LADONNAN MITTAKAAVA — lehden oma, ei ruudun.
+ * MERKKIEN LADONNAN MITTAKAAVA — laudan oma, ei ruudun eikä lehden.
  *
- * Lautayksikköä kirjaston yksikköä kohti, laskettuna PELKÄSTÄ lehden
- * rajauksesta, joka on dataa (js/packs/fokus-grc.js FOKUS_POHJAT).
- * Sama luku joka ruudulla, joka laitteella ja Nodessa — ja juuri se
- * koko, joka laattaan poltetaan.
+ * Lautayksikköä kirjaston yksikköä kohti. Yksi globaali vakio koko
+ * laudalle (NOSTOLADONTA_S) — sama luku joka ruudulla, joka
+ * laitteella, joka maassa ja Nodessa — ja juuri se koko, joka
+ * laattaan poltetaan.
  *
- * Ilman lehden ikkunaa 0: siinä näkymässä ei ole poltettavaakaan, ja
- * kutsuja jää entiseen ruutumittaan.
+ * Rajaus on yhä portti: ilman lehden ikkunaa 0, sillä siinä
+ * näkymässä ei ole poltettavaakaan, ja kutsuja jää entiseen
+ * ruutumittaan. Rajausta ei enää käytetä mittana — se hajotti koon
+ * maittain (ks. NOSTOLADONTA_S).
  */
 export function nostoladontaSkaala(rajaus) {
   if (!(rajaus?.w > 0)) return 0;
-  return NOSTOLADONTA_KATTO * rajaus.w / NOSTOLADONTA_PROTO;
+  return NOSTOLADONTA_S;
 }
 
 /* ============ TIIVISTE: MUUTOS ON HUOMATTAVA =======================
