@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1390, teksti: 'Nostojen ladonta yhteen globaaliin mittakaavaan' },
   { v: 1389, teksti: 'Siirtoviesti ja tilannetaulu ajan tasalle' },
   { v: 1388, teksti: 'Kartan puolikas laudan sauman kohdalla korjattu' },
   { v: 1387, teksti: 'Tilannetaulu ajan tasalle, siirto päätoimittajalle' },
