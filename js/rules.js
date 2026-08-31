@@ -18,23 +18,69 @@ export function edgeId(a, b) {
   return `${a}|${b}`;
 }
 
-/** Catmull–Rom-pehmennys avoimelle polulle: tiheä pistejono piirtoa varten. */
+/*
+ * SENTRIPETAALINEN CATMULL–ROM (alpha = 0,5) — tiheä pistejono piirtoa varten.
+ *
+ * === MIKSI ALPHA 0,5 EIKÄ 0 (omistajan päätös 31.8.2026) ==========
+ *
+ * Tämä oli aiemmin YHTENÄINEN Catmull–Rom (alpha = 0), ja se on
+ * täsmälleen se spline-vaara, joka on jo kirjattu jokien kohdalle
+ * (tools/fokuskartta/maailmapiirto.js `lautaKaari`): *"yhtenäinen
+ * Catmull–Rom yliampuu terävissä mutkissa ja tekee silmukoita, kun
+ * pisteet ovat epätasavälein"*. Reittien `via`-jonot ovat juuri
+ * epätasavälisiä: `sisilia|ateena` -reitillä on vierekkäin 24 ja 276
+ * lautayksikön välit. Mitattuna kaksi reittiä leikkasi itsensä eli
+ * teki oikean silmukan — `sisilia|ateena` kohdassa (6614, 1954), tasan
+ * se Ateenan eteläpuolen S, jonka omistaja näki, ja
+ * `anchorage|vancouver`.
+ *
+ * Sentripetaalinen parametrointi (alpha = 0,5) on todistetusti vapaa
+ * silmukoista ja kärjistä (Yuksel et al. 2011), joten korjaus poistaa
+ * SYYN eikä oiretta: käyrä pysyy pehmeänä, mutta se ei enää yliammu
+ * terävissä mutkissa.
+ *
+ * KAAVA ON SAMA KUIN JOILLA. Segmentti piirretään kuutiollisena
+ * Bézier-käyränä, jonka ohjauspisteet lasketaan naapurien etäisyyksien
+ * neliöjuurista — rivi riviltä sama kuin `lautaKaari`. Piirto ja peli
+ * käyttävät siis samaa geometriaa; laattaan poltettu viiva ja nappulan
+ * kulkema polku ovat sama käyrä.
+ */
 function densify(points, perSpan = 14) {
   if (points.length < 3) return points;
   const p = (i) => points[Math.max(0, Math.min(points.length - 1, i))];
   const out = [points[0]];
   for (let i = 0; i < points.length - 1; i++) {
-    const [x0, y0] = p(i - 1);
-    const [x1, y1] = p(i);
-    const [x2, y2] = p(i + 1);
-    const [x3, y3] = p(i + 2);
+    const p0 = p(i - 1);
+    const p1 = p(i);
+    const p2 = p(i + 1);
+    const p3 = p(i + 2);
+    const d1 = Math.sqrt(Math.hypot(p1[0] - p0[0], p1[1] - p0[1]));
+    const d2 = Math.sqrt(Math.hypot(p2[0] - p1[0], p2[1] - p1[1]));
+    const d3 = Math.sqrt(Math.hypot(p3[0] - p2[0], p3[1] - p2[1]));
+    if (d2 === 0) {
+      // Kaksoispiste: ei suuntaa, ei käyrää — sama piste perSpan kertaa.
+      for (let s = 1; s <= perSpan; s++) out.push([p2[0], p2[1]]);
+      continue;
+    }
+    // Epätasavälisen Catmull–Romin ohjauspisteet (alpha = 0,5).
+    const c1 = d1 > 0
+      ? [0, 1].map((k) => (d1 * d1 * p2[k] - d2 * d2 * p0[k]
+          + (2 * d1 * d1 + 3 * d1 * d2 + d2 * d2) * p1[k]) / (3 * d1 * (d1 + d2)))
+      : [p1[0], p1[1]];
+    const c2 = d3 > 0
+      ? [0, 1].map((k) => (d3 * d3 * p1[k] - d2 * d2 * p3[k]
+          + (2 * d3 * d3 + 3 * d3 * d2 + d2 * d2) * p2[k]) / (3 * d3 * (d3 + d2)))
+      : [p2[0], p2[1]];
     for (let s = 1; s <= perSpan; s++) {
       const t = s / perSpan;
-      const t2 = t * t;
-      const t3 = t2 * t;
+      const u = 1 - t;
+      const w0 = u * u * u;
+      const w1 = 3 * u * u * t;
+      const w2 = 3 * u * t * t;
+      const w3 = t * t * t;
       out.push([
-        0.5 * (2 * x1 + (x2 - x0) * t + (2 * x0 - 5 * x1 + 4 * x2 - x3) * t2 + (-x0 + 3 * x1 - 3 * x2 + x3) * t3),
-        0.5 * (2 * y1 + (y2 - y0) * t + (2 * y0 - 5 * y1 + 4 * y2 - y3) * t2 + (-y0 + 3 * y1 - 3 * y2 + y3) * t3),
+        w0 * p1[0] + w1 * c1[0] + w2 * c2[0] + w3 * p2[0],
+        w0 * p1[1] + w1 * c1[1] + w2 * c2[1] + w3 * p2[1],
       ]);
     }
   }

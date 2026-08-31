@@ -1296,11 +1296,18 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
        * === KÄSIN PIIRRETTY JÄLKI — JA MIKSI SE EI TEE SAUMAA =========
        *
        * Omistaja 31.8.2026: *"Reitit saisi olla käsin piirretyn
-       * näköisiä --- ne saa olla luotisuoria viivoja."* Solmujen välit
-       * ovat siis luotisuoria janoja (sisalto.mjs poimii solmupolun),
-       * ja käsin piirretty vaikutelma tehdään kahdella pikkuasialla:
-       * KYNÄNPAINE vaihtelee reitistä toiseen, ja SOLMU heittää
-       * pikselin murto-osan pois suorasta.
+       * näköisiä."* Muoto tulee reitin omasta käyrästä — samasta, jota
+       * peli kävelee (js/rules.js `densify`, sentripetaalinen
+       * Catmull-Rom) — ja käsin piirretty vaikutelma tehdään kahdella
+       * pikkuasialla: KYNÄNPAINE vaihtelee reitistä toiseen, ja SOLMU
+       * heittää pikselin murto-osan pois paikaltaan.
+       *
+       * HEITTO ARVOTAAN SOLMUILLE, EI PEHMENNYSPISTEILLE. Käyrällä on
+       * neljätoista pistettä jokaista väliä kohti; jos jokainen saisi
+       * oman heittonsa, jäljestä tulisi rosoista kohinaa eikä kynän
+       * vapinaa. Solmujen välillä heitto liukuu pehmeästi
+       * (smoothstep), joten viiva heiluu solmun mitassa niin kuin käsi
+       * heiluu — ja käyrän oma muoto säilyy.
        *
        * HEITTO EI SAA TULLA PIKSELISTÄ. Sama virhe tehtiin kerran
        * patinan rakeessa: kun kohina luettiin laatan omasta nurkasta,
@@ -1323,12 +1330,26 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
       const heitot = (r) => {
         if (!r.__heitto) {
           const rnd = mulberry32(r.siemen ?? 1);
-          const h = r.poly.map(() => [0, 0]);
-          for (let i = 1; i < h.length - 1; i += 1) {
-            h[i] = [(rnd() - 0.5) * 2 * HEITTO, (rnd() - 0.5) * 2 * HEITTO];
+          const solmut = r.solmut?.length >= 2 ? r.solmut : [0, r.poly.length - 1];
+          const s = solmut.map(() => [0, 0]);
+          for (let i = 1; i < s.length - 1; i += 1) {
+            s[i] = [(rnd() - 0.5) * 2 * HEITTO, (rnd() - 0.5) * 2 * HEITTO];
           }
           // Kynänpaineen porras samasta virrasta, jotta se on yhtä pysyvä.
           r.__kyna = Math.min(KYNIA - 1, Math.floor(rnd() * KYNIA));
+          const h = r.poly.map(() => [0, 0]);
+          for (let k = 0; k < solmut.length - 1; k += 1) {
+            const a = solmut[k];
+            const b = solmut[k + 1];
+            for (let i = a; i <= b && i < h.length; i += 1) {
+              const t = b > a ? (i - a) / (b - a) : 0;
+              const u = t * t * (3 - 2 * t);          // smoothstep
+              h[i] = [
+                s[k][0] + (s[k + 1][0] - s[k][0]) * u,
+                s[k][1] + (s[k + 1][1] - s[k][1]) * u,
+              ];
+            }
+          }
           r.__heitto = h;
         }
         return r.__heitto;
