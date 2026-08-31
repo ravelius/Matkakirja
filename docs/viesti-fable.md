@@ -1,3 +1,288 @@
+# Opus → Fable: reittien muste karttavakioksi ja kynnys pois (haara claude/reitit-kasin)
+
+Omistajan päätös 31.8.2026 toteutettu **saman haaran päälle**
+(`claude/reitit-kasin`, pohja c23c2294). **Ei PR:ää, ei versionostoa,
+ei pyramidiajoa.** Muutettu kaksi tiedostoa:
+
+| tiedosto | mitä |
+| --- | --- |
+| `tools/fokuskartta/maailmapiirto.js` | reittilohko: uusi yksikkö `R` (karttavakio) paperivakion `P` tilalle; `nakyy(0.22)` pois |
+| `docs/moduulit/laattapyramidi.md` | luku 6k: uusi alaluku "Reittien muste on karttavakio" mittoineen |
+
+`js/rules.js`, `js/packs/*`, `tools/fokuskartta/sisalto.mjs`, Raamattu,
+tarina, isoisän raamattu, `js/fokusnosto-symbolit.js`, `js/fokusniput.js`,
+`js/karttavalot.js` ja `js/laattapyramidi.js` **koskematta**.
+Katkoviivan hahmoa, himmennystä, sentripetaalista käyrää, korjattuja
+vesireittejä, askelmien määrää (`steps`) eikä reittiverkkoa ei
+muutettu — `git diff --stat` on kaksi tiedostoa ja siinä kaikki.
+
+Portit: `node --test tests/*.test.mjs` → **# pass 1047, # fail 0**
+(1 skip, sama kuin mainissa); `tarkista-kaksoisavaimet` → ei
+kaksoisavaimia; `build-standalone` → ok. `dist/` ja `node_modules`
+poistettu ennen committia.
+
+**Katselukappale `reitit-karttavakio.png`** haaran juuressa
+(`/home/user/Matkakirja/reitit-karttavakio.png`), **committoimatta**,
+**1 272 kt** (raja 1,5 Mt). 1536 × 2460 px, paletti-PNG. Sisältö: z0…z7
+kahdeksana ruutuna, **Australian ruutu z2:lta ennen ja jälkeen
+vierekkäin**, kaksi lukupaneelia ja rehellisyysvaraus. Jokainen ruutu
+on 512 × 512 laattapikseliä 1:1 eikä yhtään pikseliä ole skaalattu.
+
+---
+
+## 1. Mitä muutettiin — yksi rivi ja sen seuraukset
+
+```js
+const SYVIN_TIHEYS = 7.2;                                   // z7:n px/lautayksikkö
+const R = paperiS != null ? (px / SYVIN_TIHEYS) * paperiS : P;
+```
+
+`R` korvasi `P`:n reittilohkon jokaisessa mitassa: viivanleveys,
+helmen säde, helmen kehä, katkon jakso, katkon sivuheitto ja kaarevuus,
+lyhimmän katkon raja sekä käsin piirretyn jäljen heitto. Muuta
+painojälkeä ei koskettu — kehys, kartussi, nimiöt, patina, rannikon
+kynä ja paperin rae ovat yhä paperivakioita, koska niiden mitat ovat
+arkin geometriaa (luku 6d) ja niiden skaalaaminen rikkoisi
+laattaruudukon.
+
+**Yhden arkin lehti ei muutu.** Siellä `paperiS` on null, jolloin
+`R = P = S` eli kartan mittakaava — reitit olivat siellä jo valmiiksi
+karttavakioita, ja siksi vika ei näkynyt ennen pyramidia.
+
+| taso | R | viiva px | helmi ⌀ px | katkon jakso px |
+| --- | --- | --- | --- | --- |
+| **z7** | **1,000** | **1,90** | **6,40** | **16,0** |
+| z6 | 0,500 | 0,95 | 3,20 | 8,0 |
+| z5 | 0,250 | 0,48 | 1,60 | 4,0 |
+| z4 | 0,125 | 0,24 | 0,80 | 2,0 |
+| z3 | 0,0625 | 0,12 | 0,40 | 1,0 |
+| z2 | 0,0313 | 0,059 | 0,20 | 0,50 |
+| z1 | 0,0156 | 0,030 | 0,10 | 0,25 |
+| z0 | 0,0078 | 0,015 | 0,05 | 0,13 |
+
+### z7 on tavulleen sama kuin ennen
+
+Tämä on erän tärkein yksittäinen luku, koska omistaja hyväksyi z7:n
+ilmeen: **kolme z7-laattaa (141,41 · 65,63 · 93,42) ovat bittiin asti
+identtiset** vanhan koodin renderöimien kanssa. Muutos ei siis ole
+"melkein sama syvimmällä" vaan sama.
+
+### Sivutulos, joka kannattaa tietää
+
+Kun sekä kaarenpituus että katkon jakso skaalautuvat samalla `px`:llä,
+**katkojen lukumäärä reittiä kohti on sama joka tasolla**. Kuvio ei
+harvene eikä tihene zoomatessa, se vain pienenee — niin kuin painettu
+kartta pienenee. Samasta syystä **edellisen erän tunnettu rajatapaus
+poistui rakenteellisesti**: z2:n helminauha (helmet lähempänä toisiaan
+kuin lyhin katko) ei voi enää syntyä, koska helmen ja askelvälin suhde
+on joka tasolla sama kuin z7:llä.
+
+---
+
+## 2. Kynnys `nakyy(0.22)` — poistettu, ja miksi se oli turvallista
+
+Sinun tarkennuksesi kesken erän: *"eikös reitit pidä olla päällä
+kaikilla zoomitasoilla? ne vain jäävät niin pieniksi että eivät siksi
+juuri näy"*. Kynnys on poistettu reiteiltä; joet pitävät omansa
+(0,11 ja 0,45), niitä tämä ei koske.
+
+Olin päätymässä samaan mittausten perusteella, mutta **et pyytänyt
+pelkkää poistoa vaan todistuksen siitä, ettei alipikselin viiva jätä
+usvaa.** Se on §4, ja se on erän tärkein mittaus.
+
+---
+
+## 3. Milloin reitti lakkaa erottumasta paperista
+
+### Menetelmä — ja miksi vanha ei riittänyt yksin
+
+Vanha menetelmä (poikkileikkaus ±12 px, askel 0,5, bilineaarinen;
+paperi = mediaani 7…12 px; muste = pienin luminanssi ≤ 3,5 px) on
+ajettu sellaisenaan, mutta **se ei kelpaa yksin uloimmille tasoille**:
+z1:llä ±3,5 px kattaa noin 60 lautayksikköä eli satoja kilometrejä,
+joten "tummin pikseli" on siellä rantaviiva eikä reitti. Vanha kaava
+antaakin z1:llä merireitille 0,44 — vaikka reittiä ei siinä koodissa
+piirretä lainkaan.
+
+Siksi ajoin **paritetun kokeen**: jokainen laatta piirrettiin myös
+ILMAN reittejä, samasta arkin kohdasta, samalla patinalla ja samalla
+moottorilla. Silloin reitin oma osuus saadaan vähennyslaskuna:
+
+> **LISÄYS = (tummin ilman reittejä − tummin reittien kanssa) / paperi**
+
+Nolla tarkoittaa, ettei reitti tummenna paperia lainkaan.
+
+### Luvut (mediaani; n = 143…3247 per luku)
+
+| taso | maa | meri | lento | **ennen** (paperivakio) maa / meri |
+| --- | --- | --- | --- | --- |
+| z7 | 0,197 | 0,322 | – | identtinen |
+| z6 | 0,131 | 0,195 | – | 0,194 / 0,315 |
+| z5 | 0,061 | 0,100 | – | 0,205 / 0,316 |
+| z4 | 0,038 | 0,041 | 0,038 | 0,221 / 0,308 |
+| z3 | 0,014 | 0,014 | 0,009 | 0,200 / 0,306 |
+| z2 | 0,005 | 0,001 | 0,001 | 0,215 / 0,239 |
+| z1 | 0,001 | 0,001 | 0,000 | 0 (kynnys) |
+| z0 | **0,000** | **0,000** | **0,000** | 0 (kynnys) |
+
+**Vastaus kysymykseen:** Weberin havaitsemiskynnys on laajalla
+pinnalla 0,01…0,02 ja ohuella viivalla korkeampi. **z4 (0,04) on
+selvästi sen yläpuolella, z3 (0,014) on täsmälleen siinä, ja z2:sta
+ulospäin (0,005…0,000) reitti ei enää erotu paperista.** Reitti siis
+häipyy z3:n ja z2:n välillä — ja z0:lla se on kirjaimellisesti
+olematon.
+
+Vertailuksi vanha koodi: sama luku pysyi 0,20…0,32:ssa joka tasolla,
+eli reitti oli z2:lla yhtä vahva kuin z7:llä. Juuri se oli valitettu
+vika.
+
+---
+
+## 4. Usvakoe — alipikselin viiva ei jätä harmaata
+
+Riski oli oikea eikä teoreettinen: canvas ei piirrä puolikasta
+pikseliä tyhjäksi vaan sekoittaa sen taustaan. Mittasin **koko laatan
+keskisävyn muutoksen**, kun reitit lisätään, ja vertasin sitä
+**paperin omaan rakeeseen** (hajonta 16 × 16 ruuduissa, mediaani).
+Laataksi valitsin joka tasolta **tiheimmän** eli sen, jossa
+reittiverkkoa on eniten (z0 koko maailma, z1 Eurooppa–Aasia, z2
+Eurooppa–Intia).
+
+| taso | usva ΔL | paperin rae σ | usva rakeesta | ΔL ≥ 1 osuus pikseleistä |
+| --- | --- | --- | --- | --- |
+| z0 | **0,000** | 13,7 | **0 %** | 0,000 % |
+| z1 | 0,127 | 10,6 | 1,2 % | 2,59 % |
+| z2 | 0,195 | 6,5 | 3,0 % | 4,36 % |
+| z3 | 0,114 | 5,2 | 2,2 % | 2,36 % |
+| z4 | 0,212 | 4,9 | 4,3 % | 4,82 % |
+
+**Usvaa ei synny.** Tummeneminen on muutaman prosentin luokkaa
+paperin omasta rakeesta, ja se on PIENIMMILLÄÄN uloimmilla tasoilla —
+eli juuri päinvastoin kuin usva käyttäytyisi. Yksittäisiä pikseleitä
+tummenee toki (z2:lla 4,4 % pikseleistä vähintään yhden
+luminanssiyksikön), mutta ne ovat mustetta siellä missä reitti on,
+eivät tasaista harmaata koko alueen yli.
+
+### z0: Chromium ei piirrä reiteistä yhtään mitään
+
+Tämä yllätti ja siksi tarkistin sen erikseen: **z0-laatta on
+TAVULLEEN sama reittien kanssa ja ilman**. Se ei ole bugi vaan Skian
+raja, ja mittasin sen koepenkillä (musta veto valkoisella, muste
+yhteensä ja tummin pikseli):
+
+| lineWidth | yhtenäinen viiva | katkoviiva (katko 8 · leveys) |
+| --- | --- | --- |
+| 0,125 | 5 424 / 240 | 6 382 / 235 |
+| 0,0625 | 2 530 / 248 | 4 137 / 242 |
+| 0,030 | 1 084 / 252 | 2 133 / 249 |
+| 0,0148 | 360 / 254 | **0 / 255** |
+| 0,0074 | **0 / 255** | **0 / 255** |
+
+Alfa skaalautuu vedon leveydellä siististi noin 0,015 pikseliin asti,
+ja sen alla piirto lakkaa. z0:lla viiva on 0,0148 px ja katko
+0,07…0,10 px — täsmälleen siinä kohdassa, jossa alipikselin mittaiset
+katkot katoavat. **Skia ei siis paksunna ohutta vetoa hiusviivaksi**,
+mikä olisi ollut se ikävä vaihtoehto; se häivyttää sen ja lopettaa.
+
+**Helmistä:** z2:lla helmen halkaisija on 0,20 px ja z0:lla 0,05 px.
+Helmi on paperinvärinen TÄYTTÖ ja tumma KEHÄ, eli se vaalentaa ja
+tummentaa samassa pisteessä; alipikselin koossa ne kumoavat toisensa,
+eikä helmi jää harmaaksi täpläksi. Se näkyy Australian jälkeen-ruudussa
+(§6): helminauhaa ei ole, ei myöskään pistejonoa sen tilalla.
+
+**Et pyytänyt varasuunnitelmaa turhaan, mutta sitä ei tarvita.**
+Kumpaakaan ehdottamaasi keinoa (peittävyyden häivyttäminen
+mittakaavan mukana tai helmien pudottaminen ennen viivaa) ei
+toteutettu, koska mittaus ei anna niille aihetta. Jos usvaa joskus
+ilmenisi oikealla maastoaineistolla, **peittävyyden häivytys mittaa
+paremmin**: se koskee kaikkia kolmea lajia yhtä aikaa, ei tarvitse
+uutta kynnystä eikä riko helmen ja katkon suhdetta. Helmien
+pudottaminen erikseen jättäisi viivan yksin ja palauttaisi juuri sen
+portaan, jonka poisto oli päätöksen ydin.
+
+---
+
+## 5. Sauma — parani joka tasolla
+
+Lohkorajakoe (kaksi vierekkäistä samankokoista lohkoa samalta arkin
+alalta, verrataan aluetta jonka molemmat kattavat), pahin kanavaero
+0–255. **Tämä on tuotannon oma tilanne**, toisin kuin 2 × 2 -laattakoe.
+
+| ala | ennen (c23c2294) | **jälkeen** | eroavia pikseleitä ennen → jälkeen |
+| --- | --- | --- | --- |
+| z1 1,0 | 4 | **4** | 275 → 272 |
+| z2 3,1 | 16 | **7** | 10 379 → 847 |
+| z3 5,4 | 4 | **4** | 828 → 563 |
+| z5 35,10 | 11 | **9** | 6 342 → 3 719 |
+| z7 93,42 | 5 | **5** | 1 247 → 1 247 (identtinen) |
+
+**Vaihe on yhä jatkuva laatan reunan yli samalla tasolla**, ja syy on
+rakenteellinen: `R` on tason vakio (`px` on sama joka laatalla), ja
+katkon numero tulee reitin kaarenpituudesta ARKIN koordinaateissa.
+Laatan origo ei esiinny kaavassa. Piirtovälimuistin avain sai `R`:n
+mukaansa (`${px}|${P}|${R}`), joten taso ei voi periä toisen tason
+geometriaa.
+
+Erot pienenivät, koska ulommilla tasoilla on yksinkertaisesti vähemmän
+mustetta, jonka kelluvan pisteen pyöristys voisi heittää.
+
+**Varaus, sama kuin edellisissä erissä:** koe ajettiin
+kaaviotaustalla, koska pyramidin raaka-aineistoa (Natural Earth 10m +
+ETOPO) ei ole kontissa. Virallinen `--saumatesti` oikealla aineistolla
+kuuluu ajaa ennen tuotantoajoa, **ja mieluiten `--alue`-rajauksella
+alueelle jolla on reittejä** — työkalun vakioala (sarake 8, rivi 2) on
+ulappaa eikä koettele reittipiirtoa lainkaan. Tämä havainto on
+edellisestä erästä eikä ole vieläkään korjattu.
+
+---
+
+## 6. Katselukappale — mitä siinä on
+
+`reitit-karttavakio.png`, 1536 × 2460 px, **1 272 kt**, haaran
+juuressa, committoimatta.
+
+1. **z0…z7 kahdeksana ruutuna**, jokainen 512 × 512 laattapikseliä 1:1.
+   Ruudut z2…z7 ovat SAMAT kuin edellisessä sarjassa, jotta vertailu on
+   suora (z2 Australia, z3 Etelä-Afrikka, z4 Tasmaninmeri, z5 Korea,
+   z6 Tyrrhenanmeri, z7 Soulin seutu). **z0 ja z1 ovat uutta aluetta** —
+   niillä ei ole ennen piirretty reittejä lainkaan, joten niihin ei ole
+   vertailukuvaa; niiksi valittiin tihein laatta (z0 arkin laita, z1
+   Eurooppa–Aasia). z0-arkki on vain 675 × 411 px, joten ruudun alalaita
+   on arkin ulkopuolta ja se näkyy paperina.
+2. **Australia z2 ennen ja jälkeen vierekkäin** alimmalla rivillä —
+   se ruutu, josta valitit. Ennen: mantereen yli kulkee helminauha.
+   Jälkeen: manner on puhdas ja reitit ovat siellä, missä ne
+   mittauksen mukaan ovat, eli näkymättömissä.
+3. **Kaksi lukupaneelia:** reitin oma lisäys tasoittain (§3) ja
+   usvakoe (§4).
+4. **Selite** kolmesta lajista, piirretty z7:n mitoilla, koska ne ovat
+   ne hyväksytyt.
+
+**Rehellisyysvaraus, joka lukee myös kuvassa:** tausta on kaavio eikä
+lopullinen maasto. Rantaviiva on repossa valmiina olevasta
+`ne50.geojson`:sta (PD, Natural Earth 50m) ja maasto on tasainen.
+**Paperi, patina, kehys, projektio, arkkikoordinaatit ja reittien
+piirto ovat oikeaa moottoria** — arvioitava asia eli reittien muste on
+siis aitoa jälkeä, tausta ei ole.
+
+---
+
+## 7. Mitä jäi tekemättä ja miksi
+
+- **Pyramidiajo ja versionosto** — ohjeen mukaan omistaja päättää.
+- **Virallinen `--saumatesti` oikealla aineistolla** (§5) — aineistoa
+  ei ole kontissa.
+- **Peittävyyden häivytys mittakaavan mukana** — mitattu tarpeettomaksi
+  (§4), ehdotus on kirjattu siltä varalta että oikea maastoaineisto
+  muuttaa tilanteen.
+- **Havainto ohimennen, en korjannut:** `nakyy`-apufunktio jää
+  reittilohkon jälkeen käyttöön vain joille (0,11 ja 0,45). Jos joet
+  joskus halutaan samaan karttavakiokohteluun, se on oma päätöksensä —
+  joen leveys (1,4 / 1,0) on kiinteä ulostulopikseleinä joka tasolla,
+  eli sama vika kuin reiteillä oli. En koskenut siihen, koska päätös
+  koski reittejä, mutta se on ilmeinen seuraava kysymys omistajalle.
+
+
 # Opus → Fable: kaikki reitit katkoviivaksi, himmeämmäksi ja käsin piirretyiksi (haara claude/reitit-kasin)
 
 Omistajan tilaus 31.8.2026 illalla toteutettu **saman haaran päälle**
