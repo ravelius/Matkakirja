@@ -1012,8 +1012,8 @@ function piirraSisalto(ui, city, data, tila, sisalto) {
 
 /*
  * PUHUJAN NIMILAPPU (omistajan tilaus 27.8.2026). Kuplan ylärivi on
- * nimilappu, ei puhetta, joten siinä lukee yliviivausvitsi: pöllö-sana
- * vedettynä yli punaisella ja perässä "Pulu". Vakio on tässä, jotta
+ * nimilappu, ei puhetta, joten siinä lukee yliviivausvitsi: "Viisas
+ * Pöllö" vedettynä yli punaisella ja perässä "Pulu". Vakio on tässä, jotta
  * kaikki kutsupaikat saavat saman lapun samalla sanalla.
  */
 const PULU_YLARIVI = Symbol('pulu-ylarivi');

@@ -137,6 +137,11 @@ on:
         type: choice
         options: [taysi, keskitaso, hillitty, ei]
         default: taysi
+      lahdepatina:
+        description: 'Vain paikkaus, vain vanha lähde: lähdeajon patinataso, jos lähdeluettelossa ei ole patina-kenttää (31b/31c = hillitty)'
+        type: string
+        required: false
+        default: ''
       vie:
         description: 'Vie ämpäriin (pois = pelkkä harjoitus)'
         type: boolean
@@ -283,6 +288,7 @@ jobs:
           UUSI_VERSIO: ${{ inputs.versio }}
           ALUE: ${{ inputs.alue }}
           SYOTE_NOSTOVERSIO: ${{ inputs.nostoversio }}
+          SYOTE_LAHDEPATINA: ${{ inputs.lahdepatina }}
           AMPARI: ${{ secrets.R2_BUCKET }}
           PAATE: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
         run: |
@@ -308,6 +314,7 @@ jobs:
             --endpoint-url "$PAATE" --no-progress
           LISA=""
           if [ -n "$SYOTE_NOSTOVERSIO" ]; then LISA="--nostoversio $SYOTE_NOSTOVERSIO"; fi
+          if [ -n "$SYOTE_LAHDEPATINA" ]; then LISA="$LISA --patina $SYOTE_LAHDEPATINA"; fi
           node tools/paikkaa-pyramidi.mjs suunnittele \
             --luettelo lahdeluettelo.json \
             --lahdeversio "$LAHDEVERSIO" --versio "$UUSI_VERSIO" \
@@ -529,6 +536,7 @@ jobs:
             --no-progress
           LISA=""
           if [ -n "$SYOTE_NOSTOVERSIO" ]; then LISA="--nostoversio $SYOTE_NOSTOVERSIO"; fi
+          if [ -n "$SYOTE_LAHDEPATINA" ]; then LISA="$LISA --patina $SYOTE_LAHDEPATINA"; fi
           node tools/paikkaa-pyramidi.mjs suunnittele \
             --luettelo lahdeluettelo.json \
             --lahdeversio "$LAHDEVERSIO" --versio "$UUSI_VERSIO" \

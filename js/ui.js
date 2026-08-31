@@ -16215,12 +16215,12 @@ export class UI {
     /*
      * KORTIN NIMILAPPU ON YLIVIIVATTU (omistajan tilaus 27.8.2026):
      * "Viisas Pöllö Pulu", jossa "Viisas Pöllö" on vedetty yli
-     * punaisella. Kuvan alt-teksti (rakennaPaljastus yllä) ja rivi
+     * punaisella yhdellä vedolla. Muoto tulee apurin oletuksesta
+     * (js/ui-apurit.js polloNimilappu), jotta se on sama kaikkialla.
+     * Kuvan alt-teksti (rakennaPaljastus yllä) ja rivi
      * "Löysit: …" pysyvät pelkkänä tekstinä — ne eivät ole otsikoita.
      */
-    caption.appendChild(polloNimilappu(html('strong', ''), {
-      yli: 'Viisas Pöllö', tilalle: 'Pulu',
-    }));
+    caption.appendChild(polloNimilappu(html('strong', '')));
     caption.appendChild(html('span', '', POLLO_AARRE.selite));
     caption.appendChild(html('p', 'reveal-isoisa', POLLO_AARRE.esittely));
     this.quizDialog.appendChild(overlay);
