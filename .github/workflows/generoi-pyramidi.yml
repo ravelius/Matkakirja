@@ -51,19 +51,40 @@
 # jättää selaimeen puolikasta karttaa kahdesta eri ajosta.
 name: Generoi laattapyramidi
 
+# === NOSTOTASO (omistaja 31.8.2026 ilta) ============================
+#
+# Karttanostot poltetaan OMAAN LÄPINÄKYVÄÄN pyramidiin (vain z5-z7),
+# ei pohjaan. Koko mallin päähyöty on nopea uusintapoltto: kun
+# nostoja tulee lisää, ajetaan `vain-nostotaso` uudella nostoversiolla
+# (minuutteja, ei tunteja) ja pohja pysyy ikuisessa välimuistissaan.
+#
+#   kaikki           pohja + nostotaso (uusi täysi ajo)
+#   vain-nostotaso   pelkkä nostotaso: `versio` on OLEMASSA OLEVAN
+#                    pohjan versio (luettelo osoittaa siihen) ja
+#                    `nostoversio` on uusi — laatat menevät polkuun
+#                    julisteet/pyramidi/<nostoversio>/nostot/z…
+#
+# Nostotason shardi ei tarvitse aineistoa (ei ETOPOa, ei Natural
+# Earthiä): se piirtää vain nostojen musteen läpinäkyville laatoille.
 on:
   workflow_dispatch:
     inputs:
       versio:
-        description: 'Laattojen versio ämpärin polussa (esim. 2026-08-30)'
+        description: 'Pohjalaattojen versio ämpärin polussa (esim. 2026-08-30); vain-nostotaso-ajossa OLEMASSA OLEVAN pohjan versio'
         type: string
         required: true
+      nostoversio:
+        description: 'Nostotason versio polussa (tyhjä = sama kuin versio)'
+        type: string
+        required: false
+        default: ''
       tasot:
         description: 'Mitkä shardit ajetaan'
         type: choice
         options:
           - kaikki
           - vain-z0-z6
+          - vain-nostotaso
           - koeajo-z0-z3
         default: koeajo-z0-z3
       laatu:
@@ -140,11 +161,16 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        # Nostotaso on YKSI shardi: nostollisia laattoja on z5-z7:llä
+        # vain murto-osa laattapaikoista, ja piirto ilman aineistoa on
+        # minuuttiluokkaa.
         shardi: ${{ fromJSON(inputs.tasot == 'kaikki'
-          && '[{"nimi":"z0-z6","tasot":"0-6","sarakkeet":""},{"nimi":"z7a","tasot":"7","sarakkeet":"0-43"},{"nimi":"z7b","tasot":"7","sarakkeet":"44-87"},{"nimi":"z7c","tasot":"7","sarakkeet":"88-131"},{"nimi":"z7d","tasot":"7","sarakkeet":"132-168"}]'
+          && '[{"nimi":"z0-z6","tasot":"0-6","sarakkeet":""},{"nimi":"z7a","tasot":"7","sarakkeet":"0-43"},{"nimi":"z7b","tasot":"7","sarakkeet":"44-87"},{"nimi":"z7c","tasot":"7","sarakkeet":"88-131"},{"nimi":"z7d","tasot":"7","sarakkeet":"132-168"},{"nimi":"nostotaso","tasot":"5-7","sarakkeet":"","nostotaso":true}]'
           || (inputs.tasot == 'vain-z0-z6'
           && '[{"nimi":"z0-z6","tasot":"0-6","sarakkeet":""}]'
-          || '[{"nimi":"koeajo","tasot":"0-3","sarakkeet":""}]')) }}
+          || (inputs.tasot == 'vain-nostotaso'
+          && '[{"nimi":"nostotaso","tasot":"5-7","sarakkeet":"","nostotaso":true}]'
+          || '[{"nimi":"koeajo","tasot":"0-3","sarakkeet":""}]'))) }}
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
@@ -188,14 +214,19 @@ jobs:
         env:
           TASOT: ${{ matrix.shardi.tasot }}
           SARAKKEET: ${{ matrix.shardi.sarakkeet }}
+          NOSTOTASO: ${{ matrix.shardi.nostotaso && 'true' || '' }}
           LAATU: ${{ inputs.laatu }}
           PATINA: ${{ inputs.patina }}
           VERSIO: ${{ inputs.versio }}
+          NOSTOVERSIO: ${{ inputs.nostoversio || inputs.versio }}
         run: |
           set -euo pipefail
           df -h / | tail -1
           LISA=""
           if [ -n "${SARAKKEET}" ]; then LISA="--sarakkeet ${SARAKKEET}"; fi
+          # Nostotason shardi piirtää vain nostojen musteen: ei
+          # aineistoa, oma läpinäkyvä resepti (RESEPTIT.nosto).
+          if [ -n "${NOSTOTASO}" ]; then LISA="$LISA --nostotaso --nostoversio ${NOSTOVERSIO}"; fi
           node tools/generoi-laattapyramidi.mjs ulos \
             --data ne-data --tasot "$TASOT" $LISA \
             --laatu "$LAATU" --patina "$PATINA" --versio "$VERSIO"
@@ -205,11 +236,14 @@ jobs:
           df -h / | tail -1
 
       # Laatat ovat muuttumattomia: versio on polussa, joten sama
-      # osoite ei koskaan saa uutta sisältöä.
+      # osoite ei koskaan saa uutta sisältöä. Nostotason laatat menevät
+      # OMAN versionsa alle (nostot/-alipolku), jotta uusintapoltto ei
+      # koske pohjan osoitteisiin.
       - name: Vie laatat ämpäriin
         if: ${{ inputs.vie }}
         env:
           VERSIO: ${{ inputs.versio }}
+          NOSTOVERSIO: ${{ inputs.nostoversio || inputs.versio }}
         run: |
           set -euo pipefail
           n=0
@@ -225,7 +259,17 @@ jobs:
               --no-progress
             n=$((n + 1))
           done
-          echo "Viety $n tasoa shardista ${{ matrix.shardi.nimi }}."
+          if [ -d ulos/nostot ]; then
+            aws s3 sync ulos/nostot \
+              "s3://${{ secrets.R2_BUCKET }}/julisteet/pyramidi/$NOSTOVERSIO/nostot" \
+              --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+              --exclude '*' --include '*.webp' \
+              --content-type image/webp \
+              --cache-control 'public, max-age=31536000, immutable' \
+              --no-progress
+            n=$((n + 1))
+          fi
+          echo "Viety $n erää shardista ${{ matrix.shardi.nimi }}."
 
   # ---------------------------------------------------------- luettelo
   luettelo:
@@ -249,15 +293,21 @@ jobs:
       # `--kuiva` on pelkkää geometriaa: ei selainta, ei aineistoa, ei
       # piirtoa. Luettelo kuvaa KAIKKI tasot riippumatta siitä, mitkä
       # shardit ajettiin — se on pyramidin muoto, ei ajon tulos.
+      # Luettelo kertoo myös nostotason: version, tasot ja
+      # bittikartat siitä, mitkä nostolaatat ovat olemassa — kaikki
+      # pelkästä geometriasta (nostotasonPeite), joten sama komento
+      # kattaa myös vain-nostotaso-ajon.
       - name: Kokoa luettelo
         env:
           VERSIO: ${{ inputs.versio }}
+          NOSTOVERSIO: ${{ inputs.nostoversio || inputs.versio }}
           LAATU: ${{ inputs.laatu }}
           TASOT: ${{ inputs.tasot == 'koeajo-z0-z3' && '0-3' || '0-7' }}
         run: |
           set -euo pipefail
           node tools/generoi-laattapyramidi.mjs luettelo-ulos \
-            --tasot "$TASOT" --versio "$VERSIO" --laatu "$LAATU" --vain-luettelo
+            --tasot "$TASOT" --versio "$VERSIO" --nostoversio "$NOSTOVERSIO" \
+            --laatu "$LAATU" --vain-luettelo
           cat luettelo-ulos/pyramidi.json | head -30
 
       # Luettelo EI ole muuttumaton: se osoittaa uusimpaan versioon, ja

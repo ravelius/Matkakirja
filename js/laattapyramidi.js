@@ -350,18 +350,32 @@ export function laatoissaOnNimet() {
  * kaksi merkkiä eri kohdissa. Se korjaantuu itsestään heti kun
  * luettelo saapuu.
  *
+ * === KAKSI MALLIA, YKSI VASTAUS (nostotaso 31.8.2026 ilta) ========
+ *
+ * VANHA MALLI (ajo 2026-08-31b): nostot poltettiin POHJALAATTOIHIN ja
+ * tiivisteet ovat luettelon juuressa (`nostot`). UUSI MALLI: pohja on
+ * nostoton ja nostot ovat omassa läpinäkyvässä laattakerroksessa,
+ * jonka tiivisteet ovat `nostotaso.nostot`-kentässä. Avain on eri
+ * TARKOITUKSELLA: vanha peli ei tunne nostotasoa, ja jos uusi
+ * luettelo kirjoittaisi tiivisteet juureen, vanha peli vaikenisi
+ * merkeistä joita sen laatoissa ei ole. Nyt vanha peli näkee uudessa
+ * luettelossa tyhjän juuren ja piirtää kaiken elävänä — oikein,
+ * koska pohja on nostoton. Uusi peli lukee kummankin: se vaientaa
+ * merkin, jos JOKO pohja (vanha ajo) TAI nostokerros (uusi ajo)
+ * piirtää sen.
+ *
  * @param {string} tunnus    merkin tunnus (ryhmän tai kohteen)
  * @param {string} tiiviste  merkin nykyinen sisältötiiviste
  */
 export function nostoOnPoltettu(tunnus, tiiviste) {
-  const nostot = luettelo?.nostot;
+  const nostot = luettelo?.nostotaso?.nostot ?? luettelo?.nostot;
   if (!nostot || !tunnus || !tiiviste) return false;
   return nostot[tunnus] === tiiviste;
 }
 
 /** Onko luettelossa lainkaan poltettuja nostoja? */
 export function laatoissaOnNostoja() {
-  const nostot = luettelo?.nostot;
+  const nostot = luettelo?.nostotaso?.nostot ?? luettelo?.nostot;
   return Boolean(nostot && Object.keys(nostot).length);
 }
 
@@ -486,6 +500,7 @@ const mittarit = {
   nakymassa: 0,
   ruudulla: 0,
   karkeita: 0,
+  nostoja: 0,
   ladattu: 0,
   epaonnistui: 0,
   esiladattu: 0,
@@ -569,9 +584,24 @@ function laattaOlemassa(taso, sarake, rivi) {
 
 /** Laatan osoite ämpärissä. Sama merkkijono sekä kuvalle että noudolle. */
 function laattaUrl(taso, sarake, rivi) {
+  // Nostotason laatta asuu oman versionsa alla pohjan rinnalla:
+  // <nostoversio>/nostot/z…. Oma versio on koko mallin päähyöty —
+  // nostojen uusintapoltto ei koske pohjan ikuista välimuistia.
+  if (taso.nosto) {
+    return pyramidiUrl(`${luettelo.nostotaso.versio}/nostot/z${taso.z}/${sarake}/${rivi}`
+      + `.${luettelo.muoto ?? 'webp'}`);
+  }
   return pyramidiUrl(`${luettelo.versio}/z${taso.z}/${sarake}/${rivi}`
     + `.${luettelo.muoto ?? 'webp'}`);
 }
+
+/**
+ * Noutokirjanpidon avain. Nostotason laatta on ERI TIEDOSTO kuin
+ * saman ruudun pohjalaatta, joten sen avain saa n-etuliitteen — muuten
+ * kerroksen kiinnitys merkitsisi pohjalaatan noudetuksi ja esilataus
+ * ohittaisi sen.
+ */
+const noutoAvain = (taso, sarake, rivi) => `${taso.nosto ? 'n' : ''}${taso.z}:${sarake}:${rivi}`;
 
 /**
  * Käy läpi laatat, jotka osuvat annettuun laudan suorakaiteeseen.
@@ -721,7 +751,7 @@ function jonotaEsilataus(taso, laatta, arkki, nakyva, suunta) {
   const nahty = new Set();
   const jakso = arkki.w;
   jokaLaatta(taso, laatta, arkki, alue, (sarake, rivi) => {
-    const k = `${taso.z}:${sarake}:${rivi}`;
+    const k = noutoAvain(taso, sarake, rivi);
     if (noudetut.has(k) || nahty.has(k)) return;
     nahty.add(k);
     const x = arkki.x + ((sarake + 0.5) * laatta) / taso.pikseliaPerYksikko;
@@ -792,7 +822,7 @@ function jonotaTasovaihto(tasot, taso, laatta, arkki, nakyva) {
     };
     const nahty = new Set();
     jokaLaatta(naapuri, laatta, arkki, alue, (sarake, rivi) => {
-      const k = `${naapuri.z}:${sarake}:${rivi}`;
+      const k = noutoAvain(naapuri, sarake, rivi);
       if (noudetut.has(k) || nahty.has(k)) return;
       nahty.add(k);
       jono.push({ url: laattaUrl(naapuri, sarake, rivi), k });
@@ -825,6 +855,21 @@ function varmistaKerrokset(ui) {
     && ui.pyramidiTarkkaKerros?.parentNode === ui.pyramidiKerros) return;
   ui.pyramidiPohjaKerros = el('g', { class: 'pyramidi-pohjataso' }, ui.pyramidiKerros);
   ui.pyramidiTarkkaKerros = el('g', { class: 'pyramidi-tarkkataso' }, ui.pyramidiKerros);
+  /*
+   * NOSTOTASO — kolmas kerros samaan siirtoryhmään (omistaja 31.8.2026
+   * ilta): nostolaatat liikkuvat kompositorilla yhtenä pohjan kanssa,
+   * eikä yksikään kehys maalaa niitä uudelleen. Kerros on olemassa
+   * aina, mutta laattoja siihen tulee vain kun luettelossa on
+   * nostotaso ja kamera on sen tasoilla (z5–z7).
+   *
+   * HÄIVYTYS ON TYYLISIIRTYMÄ, EI PIIRTOA: kun kamera ylittää
+   * nostotason alarajan, kerroksen opacity liukuu 0 ↔ 1 (omistajan
+   * valinta "pehmeä häivytys, ei pomppua"). Siirtymä on elementissä
+   * eikä tyylitiedostossa, koska koko kerros on tämän moduulin oma
+   * eikä sillä ole muuta tyyliä.
+   */
+  ui.pyramidiNostoKerros = el('g', { class: 'pyramidi-nostotaso' }, ui.pyramidiKerros);
+  ui.pyramidiNostoKerros.style.transition = 'opacity 0.35s ease';
 }
 
 /**
@@ -1035,7 +1080,7 @@ function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
       nakyva, arkki.w);
     if (nakyy) ruudulla += 1;
     // Kiinnitetty laatta on jo haussa: esilataus ei pyydä sitä uudestaan.
-    noudetut.add(`${taso.z}:${sarake}:${rivi}`);
+    noudetut.add(noutoAvain(taso, sarake, rivi));
 
     const oli = vanhatSamalta.get(k);
     if (oli) {
@@ -1130,6 +1175,61 @@ function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
    */
   if (tila.vanhat && kaikkiRuudullaLadattu(tila)) poistaVanhaTaso(tila);
   return ruudulla;
+}
+
+/* ------------------------------------------------------------ nostotaso */
+
+/**
+ * Nostotason tasot — pohjan tasogeometria nostotason laatastolla.
+ *
+ * Nostolaattaruudukko on TÄSMÄLLEEN pohjan ruudukko samalla z:lla
+ * (sama leveys, sama vajaa viimeinen sarake), joten tasot johdetaan
+ * pohjan tasoista eikä kirjoiteta luetteloon toiseen kertaan. Vain
+ * kaksi asiaa vaihtuu: `laatasto` on nostotason bittikartta (tyhjiä
+ * nostolaattoja EI OLE OLEMASSA — luettelo kertoo mitkä ovat, ja
+ * peli pyytää vain niitä) ja `nosto: true` ohjaa osoitteen
+ * nostot-alipolkuun (laattaUrl) ja noutokirjanpidon omalle
+ * avaimelleen (noutoAvain). `__bitit: undefined` on pakollinen:
+ * levityskopio toisi pohjan tason valmiiksi puretun bittikartan
+ * mukanaan, ja laattaOlemassa lukisi väärää laatastoa.
+ */
+function nostotasonTasot() {
+  const nt = luettelo?.nostotaso;
+  if (!nt?.tasot?.length || !nt.laatastot) return null;
+  if (!luettelo.__nostoTasot) {
+    luettelo.__nostoTasot = luettelo.tasot
+      .filter((t) => nt.tasot.includes(t.z) && nt.laatastot[t.z])
+      .map((t) => ({
+        ...t, laatasto: nt.laatastot[t.z], __bitit: undefined, nosto: true,
+      }));
+  }
+  return luettelo.__nostoTasot.length ? luettelo.__nostoTasot : null;
+}
+
+/**
+ * Päivittää nostotason kerroksen — tai häivyttää sen, kun kamera on
+ * nostotason tasojen ulkopuolella.
+ *
+ * KAUKOTASOILLA NOSTOLAATTOJA EI OLE OLEMASSA (generointi vain
+ * z5–z7, omistajan päätös: jana ≤ ~200 km), joten piilotus on
+ * ilmainen: kerros saa opacityn 0 eikä yhtään laattaa pyydetä.
+ * Laatat JÄÄVÄT puuhun häivytyksen ajaksi — juuri ne pikselit
+ * liukuvat pois näkyvistä, ja jos pelaaja palaa heti takaisin, ne
+ * ovat valmiina. Muisti ei kasva: kerroksessa on enintään yhden
+ * tason nostolliset laatat, ja seuraava syvä näkymä siivoaa ne
+ * paivitaKerroksen omalla kirjanpidolla.
+ */
+function paivitaNostotaso(ui, taso, laatta, arkki, alue, nakyva) {
+  const kerros = ui.pyramidiNostoKerros;
+  if (!kerros) return;
+  const tasot = nostotasonTasot();
+  const oma = tasot?.find((t) => t.z === taso.z) ?? null;
+  kerros.style.opacity = oma ? '1' : '0';
+  if (!oma) return;
+  ui.pyramidiNosto ??= tyhjaTila(kerros);
+  ui.pyramidiNosto.kerros = kerros;
+  paivitaKerros(ui.pyramidiNosto, oma, laatta, arkki, alue, nakyva, 'low');
+  mittarit.nostoja = ui.pyramidiNosto.laatat.size;
 }
 
 /**
@@ -1277,6 +1377,14 @@ export function paivitaPyramidi(ui) {
     kiinnitys, nakyva, 'high');
   ui.pyramidiLaatat = ui.pyramidiTarkka.laatat;
 
+  /*
+   * NOSTOTASO TARKAN PÄÄLLE. Kiinnitysalue on sama kuin tarkalla
+   * tasolla, ja prioriteetti matala: pohjakartta menee aina nostojen
+   * edelle — nosto ilman karttaa alla olisi mustetta tyhjällä
+   * pergamentilla.
+   */
+  paivitaNostotaso(ui, taso, laatta, arkki, kiinnitys, nakyva);
+
   mittarit.taso = taso.z;
   mittarit.nakymassa = ui.pyramidiTarkka.laatat.size;
   mittarit.karkeita = ui.pyramidiKarkea.laatat.size;
@@ -1310,15 +1418,19 @@ export function nollaaPyramidi(ui) {
   if (!ui?.pyramidiKerros) return;
   clearTimeout(ui.pyramidiTarkka?.ajastin);
   clearTimeout(ui.pyramidiKarkea?.ajastin);
+  clearTimeout(ui.pyramidiNosto?.ajastin);
   while (ui.pyramidiKerros.firstChild) ui.pyramidiKerros.firstChild.remove();
   // Kerrokset ja niiden tilat rakennetaan seuraavassa päivityksessä.
   ui.pyramidiPohjaKerros = null;
   ui.pyramidiTarkkaKerros = null;
+  ui.pyramidiNostoKerros = null;
   ui.pyramidiTarkka = null;
   ui.pyramidiKarkea = null;
+  ui.pyramidiNosto = null;
   ui.pyramidiLaatat = new Map();
   ui.pyramidiPohja = null;
   mittarit.nakymassa = 0;
   mittarit.ruudulla = 0;
   mittarit.karkeita = 0;
+  mittarit.nostoja = 0;
 }
