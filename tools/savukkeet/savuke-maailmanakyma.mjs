@@ -19,7 +19,7 @@
  * piilotuksen, jolloin kartalla on KOKO laudan kaupunkikerros — 602
  * näkyvää solmua. Eleenaikainen piilotus (js/kartta.js piilotaMerkit,
  * body.kartta-merkit-piilossa) kattaa polttamattomat sisältökerrokset —
- * fokuskohteet, fokuspisteet, nostosymbolit, nippuviivat, eläintäyt ja
+ * fokuskohteet, fokuspisteet, nostosymbolit, eläintäyt ja
  * paikannimikerroksen — mutta EI kaupunkikerrosta, joka on pelitilaa
  * (laatat, nimilaput, porttikehät). Kustannus on
  * lineaarinen näkyvissä solmuissa (varmistettu kloonikokeella), koska

@@ -20,10 +20,9 @@
  * sellaisenaan ilman DOMia — tynkä `ui` kootaan
  * tools/fokuskartta/nostot.mjs:ssä, ja passit ovat nämä:
  *
- *   ryhmittely          js/fokuskohteet.js  kohdeKarttarivit
- *                       (ja sen kautta js/fokusryhmat.js)
+ *   merkkirivit         js/fokuskohteet.js  kohdeKarttarivit
+ *   kasaus kaupunkeihin js/fokusniput.js    niputaFokusmerkit
  *   erottelusiirto      js/fokuskohteet.js  eritteleKohdeRyhmat
- *   kasaus ja viivat    js/fokusniput.js    niputaFokusmerkit
  *   nimioiden vaisto    js/fokuskohteet.js  paivitaKohdeNimiot
  *   nimion mitta        js/fokusnosto-symbolit.js  nostosymNimioMitta
  *
@@ -69,8 +68,7 @@
  *    aikana — ja koska täky menee samaan sarakkeeseen kuin muut merkit
  *    (js/fokusniput.js), se siirtäisi KOKO sarakkeen rivit — ja
  *    naapureitaan vielä erottelusiirrolla (js/fokuskohteet.js
- *    eritteleKohdeRyhmat) sekä liittyisi ryhmiin jäseneksi
- *    (js/fokusryhmat.js). Lisäksi täky ilman omia koordinaatteja
+ *    eritteleKohdeRyhmat). Lisäksi täky ilman omia koordinaatteja
  *    asettuu siihen kaupunkiin, jossa pelaaja sillä hetkellä on
  *    (js/fokusnosto.js nostonPaikka).
  *

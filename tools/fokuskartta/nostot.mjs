@@ -10,8 +10,9 @@
  * Raamattu (omistaja 31.8.2026, KARTTANOSTOT POLTETAAN LAATTOIHIN):
  * *"mikään karttanostoista ei kuulu kadota laudalta missään vaiheessa
  * peliä, joten ne voidaan aivan hyvin polttaa suoraan karttaan."* —
- * kohdemerkit, niiden symbolit, nimiöt ja nostoviivat ovat pysyvää
- * sisältöä eivätkä pelitilaa.
+ * kohdemerkit, niiden symbolit ja nimiöt ovat pysyvää sisältöä eivätkä
+ * pelitilaa. (Nostoviivat kuuluivat samaan luetteloon 31.8.2026 asti;
+ * ne poistuivat kartalta kokonaan, ks. js/fokusniput.js sääntö 6.)
  *
  * === TÄMÄ EI LASKE LADONTAA ========================================
  *
@@ -19,9 +20,9 @@
  * järjestyksessä ja samoilla luvuilla kuin peli itse — kokoamalla
  * niille tyngän `ui`-oliosta laudan datasta:
  *
- *   ryhmittely          js/fokuskohteet.js  kohdeKarttarivit
+ *   merkkirivit         js/fokuskohteet.js  kohdeKarttarivit
+ *   kasaus kaupunkeihin js/fokusniput.js    niputaFokusmerkit
  *   erottelusiirto      js/fokuskohteet.js  eritteleKohdeRyhmat
- *   kasaus ja viivat    js/fokusniput.js    niputaFokusmerkit
  *   nimiöiden väistö    js/fokuskohteet.js  paivitaKohdeNimiot
  *   mittakaava ja tiiviste  js/nostoladonta.js
  *
@@ -43,7 +44,7 @@
  * kaupunkia antavat eri joukon, kartalla oleva täkyjoukko VAIHTUU
  * pelin aikana — ja koska täky menee samaan sarakkeeseen kuin muut
  * merkit (js/fokusniput.js), liittyy ryhmiin jäseneksi
- * (js/fokusryhmat.js) ja työntää naapureitaan erottelusiirrolla
+ * ja työntää naapureitaan erottelusiirrolla
  * (js/fokuskohteet.js eritteleKohdeRyhmat), se siirtäisi paljon
  * enemmän kuin oman merkkinsä. Sellaista maata ei voi polttaa
  * lainkaan: SEN JOKAINEN MERKKI jää eläväksi.
@@ -62,7 +63,7 @@ import {
   KOHDE_SYMBOLI_SKAALA, eritteleKohdeRyhmat, kohdeKarttarivit, kohdeMerkinLadonta,
   paivitaKohdeNimiot,
 } from '../../js/fokuskohteet.js';
-import { nippuViivanJana, niputaFokusmerkit } from '../../js/fokusniput.js';
+import { niputaFokusmerkit } from '../../js/fokusniput.js';
 import { nostoladontaSkaala, nostoladontaTiiviste } from '../../js/nostoladonta.js';
 import { FOKUS_POHJAT } from '../../js/packs/fokus-grc.js';
 import { nostoKarttarivit, nostoKaupunginPooli } from '../../js/fokusnosto.js';
@@ -175,16 +176,16 @@ function nostoladontaMerkit({
   /*
    * SAMA KOLMEN PASSIN KETJU JA SAMA JÄRJESTYS KUIN PELISSÄ
    * (js/fokuskohteet.js asetaKohdeMittakaava ja paivitaFokuskohteet):
-   * erottelu, kasaus, väistö. Järjestys ei ole makuasia — väistö lukee
-   * merkkien LOPULLISET paikat, joten se on viimeisenä.
+   * kasaus, erottelu, väistö. Järjestys ei ole makuasia — kumpikin
+   * jälkimmäinen lukee edellisten tuloksen: erottelu väistää
+   * ryppääseen ladottuja merkkejä (31.8.2026) ja väistö lukee
+   * merkkien LOPULLISET paikat.
    */
+  niputaFokusmerkit(ui, s);
   eritteleKohdeRyhmat(ui, s);
-  const viivat = niputaFokusmerkit(ui, s);
   paivitaKohdeNimiot(ui, s);
-  const viivaTunnuksittain = new Map(viivat.map((v) => [v.id, v]));
   const merkit = [];
   for (const r of ui.fokuskohdeRyhmat) {
-    const viiva = viivaTunnuksittain.get(r.id) ?? null;
     const merkki = {
       tunnus: r.id,
       x: r.nippu?.x ?? r.x + (r.sx ?? 0),
@@ -192,13 +193,21 @@ function nostoladontaMerkit({
       symboli: r.symboli ?? null,
       laji: r.laji ?? null,
       nimio: r.nimi ?? '',
+      /*
+       * NÄKYYKÖ NIMIÖ — VÄISTÖPASSIN PÄÄTÖS SELLAISENAAN. Kenttä oli
+       * 31.8.2026 asti aina tosi, koska väistö kirjoitti päätöksensä
+       * vain DOM-solmullisille riveille eikä generaattorilla ole DOMia;
+       * laattaan paloi siis myös ne nimiöt, jotka väistö oli pudottanut
+       * (js/fokuskohteet.js paivitaKohdeNimiot, "PÄÄTÖS KIRJOITETAAN
+       * TIETUEESEEN ENNEN SOLMUEHTOA").
+       */
       nimioNakyy: Boolean(r.nimi) && r.nimioNakyy !== false,
       nimioVasemmalle: Boolean(r.nimioVasemmalle),
       /*
-       * YHDISTETYN MERKIN NIMIÖ ON JO LADOTTU MITTAANSA (pilkkulista,
-       * js/fokusryhmat.js ryhmaNimio), eikä kartan 18 merkin sääntö saa
-       * katkaista sitä uudestaan. Totuusarvo eikä `Infinity`, koska
-       * JSON ei tunne ääretöntä.
+       * KARTAN 18 MERKIN SÄÄNTÖ KOSKEE JOKAISTA NIMIÖTÄ (31.8.2026).
+       * Poikkeus oli yhdistetyn merkin pilkkulista, joka oli jo ladottu
+       * omaan mittaansa; yhdistely purettiin, joten kenttä on aina
+       * epätosi. Se jää luetteloon, koska piirtäjä lukee sen.
        */
       nimioRajaton: r.nimioKatto === Infinity,
       osat: (r.kohde?.osat ?? []).map((osa) => osa.id),
@@ -209,17 +218,17 @@ function nostoladontaMerkit({
        */
       porras: KOHDE_SYMBOLI_SKAALA * s,
       /*
-       * NOSTOVIIVA VALMIINA JANANA — päät laskee js/fokusniput.js
-       * nippuViivanJana, sama funktio jolla peli piirtää oman viivansa.
+       * NOSTOVIIVAA EI OLE (omistaja 31.8.2026, esityssiirto): merkit
+       * latoutuvat kaupungin kylkeen omiksi nostoikseen ilman
+       * siirtoviivoja, ks. js/fokusniput.js sääntö 6. Kenttä `viiva`
+       * poistui merkeistä kokonaan.
        */
-      viiva: viiva ? nippuViivanJana(viiva, s) : null,
       /*
        * MAA PALAA KOKONAAN TAI EI LAINKAAN (ks. tiedoston alku,
        * TÄKYNOSTOT). Sarakekohtainen esto ei riitä: täky ei siirrä
        * vain oman sarakkeensa rivejä vaan myös naapureitaan
-       * erottelusiirrolla (js/fokuskohteet.js eritteleKohdeRyhmat), ja
-       * se voi liittyä ryhmään jäseneksi mistä tahansa maan
-       * kaupungista (js/fokusryhmat.js). Yksikin epävakaa täky tekee
+       * erottelusiirrolla (js/fokuskohteet.js eritteleKohdeRyhmat) ja
+       * mistä tahansa maan kaupungista. Yksikin epävakaa täky tekee
        * koko maan ladonnasta pelitilasta riippuvan.
        */
       poltettava: !estetty,
@@ -242,7 +251,7 @@ function nostoladontaMerkit({
  *
  * Merkin kentät ovat laudan yksiköitä ja valmiiksi ladottuja:
  * `x`, `y`, `symboli`, `laji`, `nimio`, `nimioNakyy`, `nimioVasemmalle`,
- * `nimioKatto`, `viiva` ja `s` (maan merkkiskaala). Piirtäjä
+ * `nimioRajaton` ja `s` (maan merkkiskaala). Piirtäjä
  * (tools/fokuskartta/maailmapiirto.js) ei laske niistä mitään
  * uudelleen — se vain skaalaa ne laatan kuvapikseleiksi.
  */

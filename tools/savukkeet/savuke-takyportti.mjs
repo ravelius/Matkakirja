@@ -28,16 +28,13 @@
  *      katoa kartalta eikä vaihda paikkaa.
  *   4. LÄHEKKÄISET MERKIT EIVÄT JÄÄ PÄÄLLEKKÄIN. Ranskan molempien
  *      nostojen oma paikka on Pariisissa runsaan lautayksikön päässä
- *      toisistaan; kohdekerroksen erottelupassi (js/fokuskohteet.js
- *      eritteleKohdeRyhmat) pitää merkit erillään — TAI kategoria per
- *      kaupunki -passi (js/fokusryhmat.js, 31.8.2026) yhdistää ne
- *      yhdeksi merkiksi, jolloin päällekkäisyyttä ei voi syntyä.
+ *      toisistaan; kaupungin päälle osuvat merkit ladotaan sen
+ *      molemmin puolin omiin riveihinsä (js/fokusniput.js) ja loput
+ *      erottaa erottelupassi (js/fokuskohteet.js eritteleKohdeRyhmat).
  *   5. BOTTI EI SAA TÄKYJÄ: fokusmoodi pois ⇒ ei yhtäkään nostomerkkiä.
  *   6. ISOISÄN KARTTALIITE Wienin maailmannäyttelytäyssä: liitearkki,
- *      lähderivi ja suurennos toimivat merkkireitin kautta — Wienissä
- *      yhdistetyn merkin lehden osiosta, mikä on samalla koe sille,
- *      että jäsenen kuvasuurennos elää lehden sisällä (Esc kuorii
- *      suurennoksen, ei koko lehteä).
+ *      lähderivi ja suurennos toimivat merkkireitin kautta noston omasta
+ *      lunastuskortista (Esc kuorii suurennoksen, ei koko korttia).
  *
  * Peli istutetaan kaupunkiin pelitallenteen kautta, kuten muissakin
  * savukkeissa: lentoa ei voi odottaa.
@@ -167,12 +164,12 @@ const nostomerkit = (sivu) => sivu.evaluate(() => {
   const ruudulla = (p) => p && p.x > 0 && p.y > 0
     && p.x < window.innerWidth && p.y < window.innerHeight;
   /*
-   * NOSTO VOI OLLA MERKKI TAI MERKIN JÄSEN (31.8.2026, kategoria per
-   * kaupunki — js/fokusryhmat.js). Saman kaupungin samanlajiset kohteet
-   * ovat yhden merkin alla, joten Pariisissa ja Wienissä nostolla EI
-   * ole enää omaa `data-kohde`-tunnusta kartalla. Lista on yhä
-   * NOSTOITTAIN — se on mitä nämä vartiot mittaavat — mutta rivi kantaa
-   * `kuori`-kentässä sen merkin tunnuksen, jota pelaaja napauttaa.
+   * JOKAINEN NOSTO ON OMA MERKKINSÄ (31.8.2026 ilta, esityssiirto).
+   * Aamun kategoria per kaupunki -passi laittoi saman kaupungin
+   * samanlajiset kohteet yhden merkin alle, jolloin Pariisin ja Wienin
+   * nostoilla ei ollut omaa `data-kohde`-tunnusta kartalla; passi
+   * purettiin, ja `kuori` on siksi aina null. Kenttä jää, koska
+   * vartiot lukevat sen.
    */
   const tiedot = ui.fokuskohdeTiedot ?? new Map();
   const merkit = new Map();
@@ -209,20 +206,16 @@ const tuikeJaanteet = (sivu) => sivu.evaluate(() => ({
 }));
 
 /**
- * Noston sisältö ruudulla — omasta lunastuskortista TAI yhdistetyn
- * merkin lehden omasta osiosta (31.8.2026, js/fokuskohteet.js
- * piirraRyhmanOsiot). Sisus on kummassakin sama ladonta ja samat
- * luokat, joten vartiot lukevat samat kentät kummasta tahansa; osion
- * valitsee jäsenen oma nimi (`otsikko`).
+ * Noston sisältö ruudulla — sen omasta lunastuskortista.
+ *
+ * Tässä luettiin 31.8.2026 aamun ajan myös yhdistetyn merkin lehden
+ * osiota (`.fokuskohde-osio`), koska kaupungin nostot olivat silloin
+ * yhden merkin alla. Yhdistely purettiin saman päivän illalla
+ * (esityssiirto, js/fokusniput.js), joten jokainen nosto avaa taas
+ * oman korttinsa ja `otsikko`-parametri on jäänyt varalle.
  */
 const kortti = (sivu, otsikko = null) => sivu.evaluate((haettu) => {
-  const oma = document.querySelector('.fokusnosto-kortti');
-  const osiot = [...document.querySelectorAll('.fokuskohde-popup .fokuskohde-osio')];
-  const osio = haettu
-    ? osiot.find((o) => (o.querySelector('.fokuskohde-osio-otsikko')?.textContent ?? '')
-      .trim() === haettu.trim())
-    : osiot[0];
-  const k = oma ?? osio ?? null;
+  const k = document.querySelector('.fokusnosto-kortti');
   if (!k) return null;
   return {
     otsikko: k.querySelector('.fokusnosto-kortti-otsikko')?.textContent ?? '',
@@ -317,14 +310,13 @@ vaadi('Ranskan molemmat nostot ovat kartalla',
 /*
  * KAKSI TAPAA OLLA ERILLÄÄN (31.8.2026). Ranskan molemmat nostot ovat
  * skandaaleja ja molemmat Pariisissa, joten kategoria per kaupunki
- * -passi (js/fokusryhmat.js) yhdistää ne YHDEKSI merkiksi — ja silloin
- * päällekkäisyyttä ei voi syntyä lainkaan, mikä on vahvempi vastaus
- * samaan ongelmaan kuin erottelusiirto. Vartio hyväksyy kummankin
- * lopputuloksen mutta ei kolmatta: kaksi merkkiä toistensa päällä.
+ * -passi latoi ne 31.8.2026 aamun ajan yhdeksi merkiksi; illalla
+ * yhdistely purettiin, ja kumpikin nosto on taas oma merkkinsä
+ * kaupungin kyljessä (js/fokusniput.js). Vartio on siis taas se, mikä
+ * sen alun perin kuului olla: kaksi merkkiä ei jää toistensa päälle.
  */
-const samaKuori = ranska.length === 2 && ranska[0].kuori
-  && ranska[0].kuori === ranska[1].kuori;
-const etaisyys = !samaKuori && ranska.length === 2 && ranska[0].keski && ranska[1].keski
+const samaKuori = false;
+const etaisyys = ranska.length === 2 && ranska[0].keski && ranska[1].keski
   ? Math.hypot(ranska[0].keski.x - ranska[1].keski.x, ranska[0].keski.y - ranska[1].keski.y)
   : 0;
 // Erottelupassin minimi on merkin oma mitta (js/fokuskohteet.js
@@ -382,12 +374,10 @@ if (nayttely?.keski) {
   await wien.waitForTimeout(900);
 }
 /*
- * WIENISSÄ NOSTO ON YHDISTETYN MERKIN JÄSEN (31.8.2026): kaupungin
- * kahdeksan kohdetta ovat kolmena kategoriamerkkinä, ja napautus avaa
- * lehden, jolla nosto on omana osionaan. Liite luetaan siksi jäsenen
- * OMASTA osiosta — sisus ja luokat ovat samat kuin lunastuskortissa.
+ * WIENISSÄ NOSTO ON OMA MERKKINSÄ kaupungin kyljessä (31.8.2026 ilta,
+ * esityssiirto), ja sen napautus avaa noston oman lunastuskortin.
  */
-const liitekortti = await kortti(wien, nayttely?.nimi ?? null);
+const liitekortti = await kortti(wien);
 vaadi('kortissa on isoisän karttaliite otsakkeineen',
   Boolean(liitekortti?.liite) && /liite/i.test(liitekortti?.liiteOtsake ?? ''),
   JSON.stringify(liitekortti));
