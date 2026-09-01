@@ -1,5 +1,25 @@
 # Kuvatoimitussessio
 
+## 2026-09-01 — Korjattu työnjako Fablelta
+
+Fable-korjaus on luettu commitista
+`47163650be1ca17e0755526b471853f2fbca0e9d`. Tämä sessio on
+**yleiskuvitussessio**: se tekee kaiken muun Matkakirjan kuvituksen paitsi
+aarrekohtaamiset.
+
+Sitovat tarkennukset:
+
+- yhdestä kuvasta tehdään vain yksi versio, ei varianttinippuja;
+- omistaja katselmoi kuvan Kuvajono-sivulla ja pyytää sieltä tarvittaessa
+  kokonaan uuden generoinnin, lisäohjeella tai ilman;
+- nostokuvien K1-erä tiedostossa
+  `docs/mantereet-tyoaineisto/nostorikastus/kuvapromptit-k1.md` kuuluu tälle
+  yleiskuvitussessiolle;
+- aarrekohtaamiset kuuluvat erilliselle aarrekohtaamissessiolle, eikä niiden
+  tehtäviä tai erityisiä henkilökuvalinjauksia sekoiteta yleiskuvitukseen.
+
+Aiempi tulkinta, jossa K1 olisi ohjattu aarrekohtaamissessiolle, on hylätty.
+
 ## 2026-09-01 07:14 UTC — Erillinen kuvajono ja R2-toimitusreitti
 
 Uusi Matkakirjan kuvatuotannon arviointijono on osoitteessa
