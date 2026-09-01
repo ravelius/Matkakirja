@@ -35,8 +35,8 @@ export const MAASTOKOHTEET_SDN = [
     nimi: 'Jebel Marra',
     tyyppi: 'vuori',
     kysymykset: [
-      'Mitä Deriban kalderan pohjalla on?',
-      'Onko tulivuori sammunut?',
+      'Miksi Jebel Marralla on lähteitä keskellä Sahelia?',
+      'Mikä on kalderaromahdus?',
     ],
     korostukset: ['Deriba|Deriban'],
     nappi: 'Tulivuori Darfurin sydämessä',
@@ -46,12 +46,17 @@ export const MAASTOKOHTEET_SDN = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Jebel Marra on tulivuorten muodostama vuoristo Darfurissa, ja sen laella Deriban '
-      + 'kalderan reunalla on Sudanin korkein kohta, 3 042 metriä. Kaldera syntyi suuressa '
-      + 'purkauksessa noin 3 500 vuotta sitten, ja sen sisällä on kaksi järveä. Kuumat lähteet '
-      + 'ja huurut kertovat, ettei tulivuori ole vieläkään täysin sammunut.',
-    lahde: 'en-Wikipedia "Marrah Mountains" ja "Deriba (caldera)", johdanto-osat (tarkistettu '
-      + '30.8.2026).',
+    teksti: 'Keskellä Sahelin kuivaa savannia on saari, jossa sataa. Jebel Marran ylimmillä '
+      + 'rinteillä vallitsee lauhkea ilmasto, runsaat sateet ja pysyviä lähteitä, vaikka '
+      + 'alapuolella leviää pensasaro. Vuoristo on tulivuorten muodostama massiivi, joka kohoaa '
+      + '3 042 metriin ja jopa 2 600 metriä ympäröivän tasangon yläpuolelle — Nigerin '
+      + 'Aïr-vuoria lukuun ottamatta ainoa suuri vuoristo koko muutoin tasaisessa Sahelissa. '
+      + 'Sudanin korkein kohta on Deriban kaldera, joka syntyi noin 1500 eaa. viimeisessä '
+      + 'purkauksessa: hohkakivi- ja pyroklastivirrat kulkivat yli kolmenkymmenen kilometrin '
+      + 'päähän, ja sitten katto romahti. Vuoret hidastivat aikanaan arabialaistumisen '
+      + 'leviämistä idästä länteen ja tarjosivat turvapaikan sulttaaneille.',
+    lahde: 'en-Wikipedia "Marrah Mountains", johdanto-osa sekä osiot "Geography" ja "History" '
+      + '(tarkistettu 1.9.2026).',
   },
   {
     id: 'punainenmeri',

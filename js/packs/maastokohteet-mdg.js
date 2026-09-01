@@ -46,20 +46,23 @@ export const MAASTOKOHTEET_MDG = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Maromokotro on Madagaskarin korkein huippu: 2 876 metriä. Tuliperäinen vuori kohoaa '
-      + 'Tsaratananan massiivissa saaren pohjoisosassa, luonnonsuojelualueella. Se on niin '
-      + 'syrjässä, että lähimmistäkin kaupungeista, Bealananasta ja Ambanjasta, matka vuorelle '
-      + 'kestää yhä yli kaksi päivää.',
-    lahde: 'en-Wikipedia "Maromokotro", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Madagaskarin korkeimmalle huipulle on lähimmästä kaupungista yli kahden päivän matka — '
+      + 'eikä se ole retkeilijän valinta vaan kartan tosiasia. Maromokotro, 2 876 metriä, '
+      + 'kohoaa saaren pohjoisosassa Tsaratananan massiivissa luonnonsuojelualueen sisällä, ja '
+      + 'sitä lähimmät isommat asutukset, Bealanana ja Ambanja, ovat kumpikin useamman '
+      + 'päivämarssin päässä. Huippu on sammunut tulivuori. Saaren korkein kohta ei siis ole '
+      + 'nähtävyys, jonka luo ajetaan, vaan paikka, jonne pitää lähteä.',
+    lahde: 'en-Wikipedia "Maromokotro" (tarkistettu 1.9.2026).',
   },
   {
     id: 'mosambikinkanaali',
     nimi: 'Mosambikin kanaali',
     tyyppi: 'meri',
     kysymykset: [
-      'Kuinka kapea kanaali on kapeimmillaan?',
       'Minne Mosambikvirta kuljettaa lämmintä vettä?',
+      'Kenelle kanaalin pikkusaaret kuuluvat?',
     ],
+    korostukset: ['Mosambikvirta|Mosambikvirta'],
     nappi: 'Salmi, joka erottaa saaren Afrikasta',
     // 43.5 E / -18 N — ulappa Madagaskarin länsirannikon edustalla; en-Wikipedia "Mozambique Channel" antaa keskipisteeksi 41 / -18
     laudat: {
@@ -67,11 +70,17 @@ export const MAASTOKOHTEET_MDG = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Mosambikin kanaali on Intian valtameren haara, joka erottaa Madagaskarin Afrikan '
-      + 'mantereesta. Salmi on noin 1 700 kilometriä pitkä ja kapeimmillaankin 419 kilometriä '
-      + 'leveä, ja syvimmillään vettä on lähes 3 300 metriä. Sen läpi virtaa etelään lämmin '
-      + 'Mosambikvirta, joka ruokkii eteläisen Afrikan rannikkoa kiertävää Agulhasvirtaa.',
-    lahde: 'en-Wikipedia "Mozambique Channel", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Mosambikin kanaalissa on neljä saarta, joiden omistajasta kiistellään yhä. Glorieuses, '
+      + 'Juan de Nova, Europa ja Bassas da India ovat Ranskan hallussa, ja Madagaskar vaatii '
+      + 'niitä kaikkia itselleen. Vesi niiden ympärillä on 1 700 kilometriä pitkä ja '
+      + 'kapeimmillaankin 419 kilometriä leveä Intian valtameren haara Madagaskarin ja '
+      + 'Mosambikin välissä; syvimmillään siinä on 3 292 metriä, noin 230 kilometriä Mosambikin '
+      + 'rannikolta. Kanaalin läpi kulkee etelään lämmin Mosambikvirta, joka jatkuu eteläisen '
+      + 'Afrikan itärannikolla Agulhasvirtana. Marraskuussa 1939 samoilla vesillä saksalainen '
+      + 'taskutaistelulaiva Admiral Graf Spee pysäytti brittitankkeri Africa Shellin ja otti '
+      + 'sen kapteenin vangiksi.',
+    lahde: 'en-Wikipedia "Mozambique Channel", johdanto-osa sekä osiot "Islands in the channel" ja '
+      + '"History" (tarkistettu 1.9.2026).',
   },
   {
     id: 'mangoky',

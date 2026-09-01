@@ -35,9 +35,10 @@ export const MAASTOKOHTEET_SLE = [
     nimi: 'Bintumani',
     tyyppi: 'vuori',
     kysymykset: [
-      'Mitä eläimiä Bintumanin sademetsissä elää?',
-      'Kummalla nimellä vuori tunnetaan, Bintumani vai Loma Mansa?',
+      'Mikä on kääpiövirtahepo?',
+      'Milloin Loma-vuorten metsästyskielto asetettiin?',
     ],
+    korostukset: ['Loma-vuoret|Loma-vuoret'],
     nappi: 'Loma-vuorten korkein',
     // -11.1167 E / 9.225 N — en-Wikipedia "Mount Bintumani"
     laudat: {
@@ -45,10 +46,16 @@ export const MAASTOKOHTEET_SLE = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Bintumani, toiselta nimeltään Loma Mansa, on Sierra Leonen ja koko Loma-vuoriston '
-      + 'korkein huippu: 1 945 metriä. Sen alarinteitä peittävät sademetsät, joissa elää muun '
-      + 'muassa kääpiövirtahepoja, kääpiökrokotiileja, kalastajapöllöjä ja lukuisia kädellisiä.',
-    lahde: 'en-Wikipedia "Mount Bintumani", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Sierra Leonen korkeimman vuoren alarinteillä elää eläin, jota harva on nähnyt '
+      + 'luonnossa: kääpiövirtahepo. Bintumanin — toiselta nimeltään Loma Mansa — sademetsissä '
+      + 'kulkevat sen lisäksi kääpiökrokotiilit, ruostekalapöllöt ja useat kädellislajit. '
+      + 'Huippu on 1 945 metriä, ja Loma-vuoret sen ympärillä ovat maan korkein vuorijono. Alue '
+      + 'julistettiin metsästyskieltoalueeksi jo 1952, ja suojelualuetta on 33 201 hehtaaria: '
+      + 'alempana kasvaa Guinean ja Kongon alankometsää, 1 680 metriin asti ainavihantaa '
+      + 'vuoristometsää ja ylätasangolla vuoristoniittyä. BirdLife International on nimennyt '
+      + 'alueen kansainvälisesti tärkeäksi lintualueeksi.',
+    lahde: 'en-Wikipedia "Mount Bintumani" ja en-Wikipedia "Loma Mountains", johdanto-osa ja osio '
+      + '"Environment" (tarkistettu 1.9.2026).',
   },
   {
     id: 'atlantti',
@@ -77,9 +84,10 @@ export const MAASTOKOHTEET_SLE = [
     nimi: 'Rokel',
     tyyppi: 'joki',
     kysymykset: [
-      'Miksi Rokelin suisto on suojeltu?',
-      'Mitkä vuoret jakavat joen valuma-alueen?',
+      'Miksi Freetownin satama on niin suuri?',
+      'Mikä on Ramsar-kosteikko?',
     ],
+    korostukset: ['Freetown|Freetownin'],
     nappi: 'Sierra Leonen suurin joki',
     // -12.8 E / 8.55 N — en-Wikipedia "Rokel River" — koordinaatti on joen keskijuoksulla
     laudat: {
@@ -87,11 +95,15 @@ export const MAASTOKOHTEET_SLE = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Rokel, toiselta nimeltään Seli, on Sierra Leonen suurin joki, jonka valuma-alue on yli '
-      + '10 000 neliökilometriä. Sen laaja suisto, lähes 3 000 neliökilometriä, nimettiin '
-      + 'kansainvälisesti tärkeäksi Ramsar-kosteikoksi vuonna 1999. Valuma-aluetta jakavat '
-      + 'Gbengben ja Kabalan kukkulat sekä Sula-vuoret.',
-    lahde: 'en-Wikipedia "Rokel River", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Rokelin suisto avautuu niin leveäksi, että sen eteläranta muodostaa luonnonsataman, '
+      + 'jota on sanottu maailman kolmanneksi suurimmaksi — ja juuri siihen on rakennettu '
+      + 'Freetownin satama. Joki alkaa Loma-vuorten yhdeksänsadan metrin ylätasangolta, virtaa '
+      + 'lounaaseen noin 390 kilometriä ja levenee suistoksi, joka on neljäkymmentä kilometriä '
+      + 'pitkä ja leveimmillään kuudentoista kilometrin levyinen. Suisto on ollut vuodesta 1999 '
+      + 'kansainvälisesti merkittävä Ramsar-kosteikko: sen mangrovesuot ja mutatasangot '
+      + 'kattavat lähes viidenneksen koko maan mangrovemetsästä. Joesta on käytetty myös nimiä '
+      + 'Seli ja aiemmin Pamoronkoh.',
+    lahde: 'en-Wikipedia "Rokel River", johdanto-osa ja osio "Geography" (tarkistettu 1.9.2026).',
   },
 ];
 

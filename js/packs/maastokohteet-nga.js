@@ -35,9 +35,10 @@ export const MAASTOKOHTEET_NGA = [
     nimi: 'Chappal Waddi',
     tyyppi: 'vuori',
     kysymykset: [
-      'Miksi vuorta kutsutaan kuoleman vuoreksi?',
-      'Mitä Mambillan ylängön taruissa vuorella ratkaistiin?',
+      'Mitä mambilla-tarut kertovat Gang-vuoresta?',
+      'Mikä on Gashaka-Gumtin kansallispuisto?',
     ],
+    korostukset: ['Mambilla|Mambillan'],
     nappi: 'Länsi-Afrikan korkein huippu',
     // 11.715 E / 7.0361 N — en-Wikipedia "Chappal Waddi"
     laudat: {
@@ -45,11 +46,14 @@ export const MAASTOKOHTEET_NGA = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Chappal Waddi kohoaa 2 419 metriin Taraban osavaltiossa Kamerunin rajan tuntumassa, ja '
-      + 'se on sekä Nigerian että koko Länsi-Afrikan korkein kohta. Vuoren alkuperäinen '
-      + 'mambilankielinen nimi on Gang, ja ylängön vanhoissa taruissa juuri tällä vuorella '
-      + 'ratkaistiin, tuliko satovuodesta hyvä vai huono. Se tunnetaan myös kuoleman vuorena.',
-    lahde: 'en-Wikipedia "Chappal Waddi", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Vuoren toinen nimi on Kuoleman vuori, mutta sen oma, alkuperäinen nimi on Gang. '
+      + 'Mambillan ylängön kansan taruissa juuri Gang-vuorella ratkaistiin, tulisiko '
+      + 'seuraavasta viljelykaudesta hyvä vai huono — vuori oli useiden vanhojen myyttisten '
+      + 'yhteisöjen päämaja. Nigerian ja koko Länsi-Afrikan korkein kohta, 2 419 metriä, on '
+      + 'Taraba Statessa lähellä Kamerunin rajaa, Gashaka Gumtin metsänsuojelualueen ja '
+      + 'kansallispuiston laidalla. Se kuuluu Bamendan, Alantikan ja Mandaran vuoriketjuun, '
+      + 'joka jatkuu Nigeriasta Kameruniin.',
+    lahde: 'en-Wikipedia "Chappal Waddi" (tarkistettu 1.9.2026).',
   },
   {
     id: 'guineanlahti',
@@ -100,9 +104,10 @@ export const MAASTOKOHTEET_NGA = [
     nimi: 'Benue',
     tyyppi: 'joki',
     kysymykset: [
-      'Mitä Benuen nimi tarkoittaa?',
-      'Miksi joki on tärkeä kuljetusreitti?',
+      'Miksi sivujoki on päähaaraa suurempi?',
+      'Mitä nimi Benue tarkoittaa?',
     ],
+    korostukset: ['Niger|Nigerin'],
     nappi: 'Virtahepojen joki',
     // 8.53 E / 7.73 N — Makurdi joen keskijuoksulla; artikkelin koordinaatti 6,757 / 7,753 on yhtymäkohdassa Lokojassa
     laudat: {
@@ -110,11 +115,15 @@ export const MAASTOKOHTEET_NGA = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Benue on Nigerjoen suurin sivujoki ja Nigerian toiseksi pisin joki. Lähes koko sen '
-      + 'noin 1 400 kilometrin pituus on kesäkuukausina purjehduskelpoista, joten se on '
-      + 'seutunsa tärkeä kuljetusväylä. Nimi tulee tiv-kielen sanasta, joka tarkoittaa '
-      + 'virtahepojen jokea.',
-    lahde: 'en-Wikipedia "Benue River", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Lokojassa kaksi jokea kohtaa, ja sivujoki tuo enemmän vettä kuin pääjoki. Benue on '
+      + 'kartalla Nigerin sivuhaara, mutta yhtymäkohdassa sen virtaama on suurempi: ennen '
+      + '1960-lukua mitattu keskivirtaama oli 3 400 kuutiometriä sekunnissa Benuella ja 3 000 '
+      + 'Nigerillä. Nimi tulee tiv-kielen sanasta bernor, virtahepojen joki. Aiemmin se '
+      + 'tunnettiin nimellä Chadda. Joki alkaa Pohjois-Kamerunin Adamawan ylängöltä ja kulkee '
+      + 'noin 1 400 kilometriä länteen; kesäkuukausina lähes koko matka on veneellä '
+      + 'kuljettavissa, mikä tekee siitä tärkeän kulkureitin. Tulvien aikaan sivujoki Mayo '
+      + 'Kébbi yhdistää sen jopa Tšad-järven vesistöön.',
+    lahde: 'en-Wikipedia "Benue River", johdanto-osa ja osio "Geography" (tarkistettu 1.9.2026).',
   },
 ];
 

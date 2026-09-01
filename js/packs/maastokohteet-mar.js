@@ -36,7 +36,7 @@ export const MAASTOKOHTEET_MAR = [
     tyyppi: 'vuori',
     kysymykset: [
       'Mikä on ultrahuippu?',
-      'Näkyykö Toubkal Marrakechiin asti?',
+      'Kuka nousi Toubkalille ensimmäisenä?',
     ],
     korostukset: ['Atlasvuoret|Atlasvuorten'],
     nappi: 'Pohjois-Afrikan korkein',
@@ -46,11 +46,17 @@ export const MAASTOKOHTEET_MAR = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Toubkal eli Jbel Toubkal on 4 167 metrillään Marokon, Atlasvuorten, Pohjois-Afrikan ja '
-      + 'koko arabimaailman korkein huippu. Se kohoaa Toubkalin kansallispuistossa 63 '
-      + 'kilometriä Marrakechista etelään ja näkyy kaupunkiin asti. Toubkal on niin sanottu '
-      + 'ultrahuippu: yli 2 000 kilometrin säteellä ei ole yhtään sitä korkeampaa vuorta.',
-    lahde: 'en-Wikipedia "Toubkal", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Pohjois-Afrikan korkein vuori kirjattiin valloitetuksi vasta 12. kesäkuuta 1923, kun '
+      + 'markiisi de Segonzac ja hänen kaksi seuralaistaan nousivat huipulle — vaikka artikkeli '
+      + 'myöntää suoraan, että joku on hyvin todennäköisesti käynyt siellä jo aiemmin. Korkeus '
+      + 'mitattiin vuotta myöhemmin: 4 165 metriä, nykytiedon mukaan 4 167. Toubkal on Marokon, '
+      + 'Atlasvuorten ja koko arabimaailman korkein huippu, ja se on niin sanottu ultrahuippu: '
+      + 'yli kahdentuhannen kilometrin säteellä ei ole yhtään korkeampaa. Kiipeäminen alkaa '
+      + 'Imlilin kylästä ja kestää kaksi päivää yöpymisineen. Huippua koristaa iso pyramidin '
+      + 'muotoinen kolmiomittausmerkki, ja Marrakechista, 63 kilometrin päästä, vuori näkyy '
+      + 'kaupungin kaduille asti.',
+    lahde: 'en-Wikipedia "Toubkal", johdanto-osa sekä osiot "Geography" ja "Access" (tarkistettu '
+      + '1.9.2026).',
   },
   {
     id: 'atlantti',

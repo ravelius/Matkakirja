@@ -82,8 +82,9 @@ export const MAASTOKOHTEET_GHA = [
     tyyppi: 'meri',
     kysymykset: [
       'Mikä pato synnytti Voltajärven?',
-      'Mistä Ghanan sähkö tulee?',
+      'Mitä järven pohjan metsälle tapahtui?',
     ],
+    korostukset: ['Akosombon pato|Akosombon padon'],
     nappi: 'Maailman suurin tekojärvi',
     // 0 E / 6.5 N — en-Wikipedia "Lake Volta" (0 / 6,5)
     laudat: {
@@ -91,11 +92,16 @@ export const MAASTOKOHTEET_GHA = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Voltajärvi on pinta-alaltaan maailman suurin tekojärvi: 8 502 neliökilometriä, '
-      + 'kokonaan Ghanan sisällä. Se patoutui Akosombon padon taakse, joka tuottaa huomattavan '
-      + 'osan Ghanan sähköstä, ja ulottuu etelän Akosombosta maan pohjoisosaan Tamalen '
-      + 'lounaispuolelle asti.',
-    lahde: 'en-Wikipedia "Lake Volta", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Voltajärven pohjassa seisoo yhä metsä. Kun Akosombon padon takainen allas täyttyi, '
+      + 'veden alle jäi trooppista kovapuuta — ja alle jäi myös yli 60 000 ihmisen koti: niin '
+      + 'monta arvioitiin jouduttavan siirtämään ennen kuin työ alkoi. Ajatus oli peräisin jo '
+      + 'vuodelta 1915, jolloin geologi Albert Ernest Kitson ehdotti joen voiman valjastamista '
+      + 'bauksiitin sulattamiseen, ja se toteutui vasta itsenäistymisen jälkeen. Nyt '
+      + 'pinta-alaltaan maailman suurin tekojärvi, 8 502 neliökilometriä, tuottaa padollaan 912 '
+      + 'megawattia sähköä myös naapurimaihin — ja hukkuneita puita nostetaan pohjasta ylös '
+      + 'sahatavaraksi, mikä samalla tekee järvestä turvallisemman kulkea.',
+    lahde: 'en-Wikipedia "Lake Volta", johdanto-osa sekä osiot "History" ja "Economy" (tarkistettu '
+      + '1.9.2026).',
   },
 ];
 

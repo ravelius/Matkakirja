@@ -46,10 +46,15 @@ export const MAASTOKOHTEET_SDS = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Kinyeti on Etelä-Sudanin korkein huippu, 3 187 metriä, Imatong-vuoristossa lähellä '
-      + 'Ugandan rajaa. Sen alarinteitä ovat peittäneet rehevät metsät, jotka ovat Itä-Afrikan '
-      + 'vuoristometsävyöhykkeen pohjoisimmat.',
-    lahde: 'en-Wikipedia "Kinyeti", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Etelä-Sudanin korkein huippu on samalla erään metsätyypin viimeinen etuvartio '
+      + 'pohjoisessa. Kinyeti kohoaa 3 187 metriin Imatong-vuoristossa lähellä Ugandan rajaa, '
+      + 'ja sen alarinteitä peitti tiheä sademetsä — Itä-Afrikan vuoristometsien pohjoisin '
+      + 'esiintymä, jonka jälkeen alkaa Sahelin kuivuus. Huippu itse on paljasta kalliota, '
+      + 'jonka koloissa kasvaa vuoristoniittyä ja matalaa kanervikkoa. Ensimmäisiä '
+      + 'eurooppalaisia kävijöitä oli kasvitieteilijä Thomas Ford Chipp, joka löysi huipun '
+      + 'läheltä tieteelle uuden kasvin, Coreopsis chippiin. Vuoren mukaan on nimetty myös '
+      + 'uhanalainen kameleontti, Trioceros kinetensis.',
+    lahde: 'en-Wikipedia "Kinyeti" (tarkistettu 1.9.2026).',
   },
   {
     id: 'valkoinenniili',
@@ -57,9 +62,9 @@ export const MAASTOKOHTEET_SDS = [
     tyyppi: 'joki',
     kysymykset: [
       'Mikä on Sudd?',
-      'Mistä joen vaalea väri tulee?',
+      'Miksi Niilin lähdettä etsittiin idästä käsin?',
     ],
-    korostukset: ['Sudd|Suddiin'],
+    korostukset: ['Sudd|Suddin'],
     nappi: 'Niilin pitempi haara',
     // 31.65 E / 9.53 N — Malakal joen varrella; artikkelilla ei ole koordinaattia
     laudat: {
@@ -67,11 +72,16 @@ export const MAASTOKOHTEET_SDS = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Valkoinen Niili on Niilin kahdesta päähaarasta pitempi, ja nimensä se on saanut '
-      + 'vedessä kulkevasta vaaleasta savesta. Etelä-Sudanissa joki leviää Suddiin, yhteen '
-      + 'maailman suurimmista kosteikoista — kelluvien kasvilauttojen sokkeloon, jonka '
-      + 'läpäisemisessä jo muinaiset egyptiläiset epäonnistuivat.',
-    lahde: 'en-Wikipedia "White Nile" ja "Sudd", johdanto-osat (tarkistettu 30.8.2026).',
+    teksti: 'Arabian kielen sana sadd tarkoittaa estettä, ja juuri siksi Niilin lähdettä ei '
+      + 'löydetty jokea pitkin. Valkoisen Niilin keskijuoksu leviää Etelä-Sudanissa Suddin '
+      + 'suoksi — yhdeksi maailman laajimmista kosteikoista, jonka kelluvat kasvilautat '
+      + 'tukkivat kulun vuosisadoiksi. Muinaiset egyptiläiset eivät päässeet sen läpi. Vuonna '
+      + '61 keisari Neron lähettämä roomalainen sotilasosasto eteni Valkoista Niiliä ylös mutta '
+      + 'pysähtyi Suddiin, ja siihen jäi Rooman tunnettu maailma päiväntasaajan suunnassa. '
+      + 'Siksi lähteen etsijät joutuivat kulkemaan maitse Itä-Afrikan rannikolta. Joen vaalea '
+      + 'väri tulee savesta, jota vesi kantaa mukanaan.',
+    lahde: 'en-Wikipedia "White Nile", johdanto-osa, ja en-Wikipedia "Sudd", johdanto-osa '
+      + '(tarkistettu 1.9.2026).',
   },
 ];
 

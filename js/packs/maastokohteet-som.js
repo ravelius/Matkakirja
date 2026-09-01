@@ -35,8 +35,8 @@ export const MAASTOKOHTEET_SOM = [
     nimi: 'Shimbiris',
     tyyppi: 'vuori',
     kysymykset: [
-      'Mikä on Cal Madowin vuoristo?',
-      'Miksi huipun tarkka korkeus on epävarma?',
+      'Miksi vuoren korkeudesta on kaksi lukua?',
+      'Millaista metsää Cal Madowilla kasvaa?',
     ],
     korostukset: ['Cal Madow|Cal Madowin'],
     nappi: 'Somalian korkein huippu',
@@ -46,11 +46,15 @@ export const MAASTOKOHTEET_SOM = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Shimbiris on Somalian korkein huippu: noin 2 460 metriä Ogon vuorilla, jotka kuuluvat '
-      + 'Cal Madowin vuoristojärjestelmään Sanaagin alueella. Vuori kohoaa näkyvästi '
-      + 'Adeninlahtea reunustavien jyrkänteiden yllä. Tutkamittaukset viittaavat siihen, että '
-      + 'usein mainittu vanhempi lukema 2 416 metriä on hieman liian pieni.',
-    lahde: 'en-Wikipedia "Mount Shimbiris", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Somalian korkein huippu on todennäköisesti korkeampi kuin kirjoissa lukee. Shimbirisin '
+      + 'usein toistettu lukema on 2 416 metriä, mutta avaruussukkulan tutkakartoitus viittaa '
+      + 'siihen, että oikea korkeus on 2 460 metriä. Vuori nousee jyrkästi Adeninlahdelle päin '
+      + 'viettävien jyrkänteiden yläpuolelle Erigavon lähistöllä, ja Cal Madowin vuoristo sen '
+      + 'ympärillä juoksee rannikon suuntaisesti terävine harjanteineen ja syvine laaksoineen. '
+      + 'Korkeus tekee ilmastostakin toisen: sadetta tulee enemmän kuin alavassa Somaliassa, ja '
+      + 'rinteillä kasvaa katajametsää sekä kotoperäisiä kasvilajeja, joita ei tavata muualta.',
+    lahde: 'en-Wikipedia "Mount Shimbiris", johdanto-osa sekä osiot "Geography", "Climate" ja '
+      + '"Flora and fauna" (tarkistettu 1.9.2026).',
   },
   {
     id: 'adeninlahti',
@@ -100,9 +104,10 @@ export const MAASTOKOHTEET_SOM = [
     nimi: 'Jubba',
     tyyppi: 'joki',
     kysymykset: [
-      'Mitkä kaksi jokea yhtyvät Jubbaksi?',
-      'Miksi osavaltio on nimetty joen mukaan?',
+      'Mikä oli Ajuranin valtakunta?',
+      'Mikä on hydraulinen imperiumi?',
     ],
+    korostukset: ['Ajuran|Ajuranin'],
     nappi: 'Joki jolta Jubaland sai nimensä',
     // 42.6307 E / -0.2495 N — en-Wikipedia "Jubba River" — koordinaatti on suulla Goobweynin kohdalla
     laudat: {
@@ -110,11 +115,16 @@ export const MAASTOKOHTEET_SOM = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Jubba syntyy Etiopian rajalla, jossa Dawa ja Ganale Dorya yhtyvät, ja virtaa suoraan '
-      + 'etelään Somalian halki mereen Goobweynin kohdalla. Sen valuma-alue on noin 749 000 '
-      + 'neliökilometriä, ja Jubalandin osavaltio — entinen Trans-Juba — on saanut nimensä '
-      + 'joelta.',
-    lahde: 'en-Wikipedia "Jubba River", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Jubban varrella nousi keskiajalla Afrikan ainoa hydraulinen imperiumi. Ajuranin '
+      + 'valtakunta otti 1200-luvulta alkaen haltuunsa sekä Jubban että Shebellen vedet, '
+      + 'kasteli niillä viljelyksensä ja rakensi kalkkikivestä kaivoja ja vesisäiliöitä, joita '
+      + 'käytetään yhä. Se kehitti myös oman maatalous- ja verotusjärjestelmänsä, joka säilyi '
+      + 'Afrikan sarvessa vuosisatoja valtakunnan jälkeenkin. Joki itse alkaa Etiopian rajalta, '
+      + 'missä Dawa ja Ganale Dorya yhtyvät, ja virtaa suoraan etelään Somalimereen Goobweynin '
+      + 'kohdalla. Sen valuma-alue on 749 000 neliökilometriä, ja koko maakunta — Jubaland, '
+      + 'entinen Trans-Juba — on nimetty joen mukaan.',
+    lahde: 'en-Wikipedia "Jubba River", johdanto-osa ja osio "Ajuran Empire" (tarkistettu '
+      + '1.9.2026).',
   },
 ];
 

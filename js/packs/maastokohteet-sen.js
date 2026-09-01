@@ -57,9 +57,10 @@ export const MAASTOKOHTEET_SEN = [
     nimi: 'Senegaljoki',
     tyyppi: 'joki',
     kysymykset: [
-      'Miksi joki jakautuu kahdeksi rinnakkaiseksi haaraksi?',
-      'Mitä serer-kielen nimi Seen o Gal tarkoittaa?',
+      'Mitä nimi Sonedech tarkoittaa?',
+      'Mikä Langue de Barbarie on?',
     ],
+    korostukset: ['Langue de Barbarie|Langue de Barbarie'],
     nappi: 'Rajajoki Saharan reunalla',
     // -16.5289 E / 15.7881 N — en-Wikipedia "Senegal River" — koordinaatti on suistossa Saint-Louisin kohdalla
     laudat: {
@@ -67,20 +68,27 @@ export const MAASTOKOHTEET_SEN = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Senegaljoki virtaa 1 086 kilometriä Länsi-Afrikan halki, ja suuri osa siitä muodostaa '
-      + 'Senegalin ja Mauritanian välisen rajan. Kaédin alapuolella joki jakautuu kahdeksi: '
-      + 'Doué-haara kulkee pääuoman rinnalla parisataa kilometriä ennen kuin uomat yhtyvät '
-      + 'uudelleen. Merkki on suistossa Saint-Louisin kohdalla, jossa joki laskee Atlanttiin.',
-    lahde: 'en-Wikipedia "Senegal River", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Yhdellä joella oli kerran kymmenen nimeä. Portugalilaiset kutsuivat sitä Zenegaksi, '
+      + 'wolofit Dengueh\'ksi, toucouleurit Mayoksi, soninket Colleksi — ja João de Barrosin '
+      + 'mukaan alkuperäinen wolofinkielinen nimi oli Ovedech, tämä joki, tai Sonedech, meidän '
+      + 'jokemme. 1400-luvun purjehtija Alvise Cadamosto uskoi vielä, että Senegal ja Egyptin '
+      + 'Niili ovat saman Eedenistä lähtevän virran haaroja. Joki on 1 086 kilometriä pitkä, ja '
+      + 'suuri osa sen juoksusta on Senegalin ja Mauritanian raja. Kaédin jälkeen se jakautuu '
+      + 'kahdeksi rinnakkaiseksi haaraksi, jotka yhtyvät vasta kahdensadan kilometrin päässä '
+      + 'Podorin alapuolella, ja laskee Atlanttiin Saint-Louis\'n saarikaupungin ohitse — '
+      + 'merestä sen erottaa ohut hiekkakieleke, Langue de Barbarie.',
+    lahde: 'en-Wikipedia "Senegal River", johdanto-osa sekä osiot "Geography", "European contact" '
+      + 'ja "Etymology" (tarkistettu 1.9.2026).',
   },
   {
     id: 'gambiajoki',
     nimi: 'Gambiajoki',
     tyyppi: 'joki',
     kysymykset: [
-      'Missä Gambiajoki saa alkunsa?',
       'Miksi Gambian valtio on joen muotoinen?',
+      'Mikä James Island on?',
     ],
+    korostukset: ['Fouta Djallon|Fouta Djallonin'],
     nappi: 'Joki jonka ympärille piirtyi valtio',
     // -12.85 E / 13 N — joen yläjuoksu Kaakkois-Senegalissa; artikkelin koordinaatti -16,567 / 13,467 on suulla Banjulissa
     laudat: {
@@ -88,11 +96,17 @@ export const MAASTOKOHTEET_SEN = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Gambiajoki virtaa 1 120 kilometriä Guinean Fouta Djallonin ylängöltä Senegalin kautta '
-      + 'Atlanttiin, johon se laskee Banjulin kohdalla. Sen alajuoksun molemmat rannat kuuluvat '
-      + 'Gambialle, Manner-Afrikan pienimmälle valtiolle, joka on käytännössä joen levyinen. '
-      + 'Merkki on Senegalin kaakkoisosassa, jossa joki virtaa maan halki kohti merta.',
-    lahde: 'en-Wikipedia "Gambia River", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Gambian valtio on joen muotoinen, ja siihen on tarkka syy. Vuoden 1889 Britannian ja '
+      + 'Ranskan sopimus veti rajan kymmenen kilometriä joen molemmin puolin niin kauas '
+      + 'sisämaahan kuin merialukset pääsivät — Yarbutendaan asti, nykyisen Koinan tienoille. '
+      + 'Britannialle jäi siis täsmälleen se osa joesta, joka kannatti laivoja. Rajaa pidettiin '
+      + 'tuolloin väliaikaisena; se ei ole muuttunut sen jälkeen. Joki alkaa Guinean Fouta '
+      + 'Djallonin ylängöltä, kulkee 1 120 kilometriä Senegalin halki ja laskee Atlanttiin '
+      + 'Banjulissa, ja purjehduskelpoista siitä on noin puolet. Suullaan se levenee yli '
+      + 'kymmenen kilometrin levyiseksi. Sen varrella olivat vanhat kauppapaikat Albreda, '
+      + 'Juffure ja James Island, joka on nykyään maailmanperintökohde.',
+    lahde: 'en-Wikipedia "Gambia River", johdanto-osa sekä osiot "Geography" ja "History" '
+      + '(tarkistettu 1.9.2026).',
   },
 ];
 
