@@ -1578,6 +1578,18 @@ export const RAAMATTU = {
           + 'EI-BUGIT KIRJATTU: kaupungin nimi tulee '
           + 'kaupunkikerroksesta ja poltetun maastonimen paalle ei '
           + 'ladota kaksoisnimea (nimiJoKartalla).',
+        'NOSTON TEKSTI ON KOKONAAN NAPAUTETTAVA (omistaja 1.9.2026 '
+          + 'ilta: "Saisiko karttanostoissa myos tekstit '
+          + 'kokonaisuudessa klikattaviksi? Nyt vain osa tekstista on '
+          + 'klikattavissa"): nimion koko ala avaa kohteen kortin '
+          + 'siina missa merkin 44 px ympyrakin. Kolme lahdetta, sama '
+          + 'lopputulos - laattaan poltettu ja rasteroitu nimio saavat '
+          + 'nakymattoman suorakaiteen vaiston valitsemaan kehykseen '
+          + '(kilpailee napautuksesta keskipisteella kuten muutkin '
+          + 'osumamuodot), nimikerroksen latoma elava nimi ottaa '
+          + 'napautuksen itse (data-kohde). Kumoaa aiemman "nimio ei '
+          + 'ota napautuksia" -linjan; napautusalueet eivat muuta '
+          + 'ladontaa eivatka polttoa.',
         'PAAKAUPUNKI AIKAKAUDEN TAPAAN (omistaja 31.8.2026 ilta: '
           + '"miten tuon ajan kartoissa eroteltiin paakaupungit ja '
           + 'muut kaupungit? tassa voisi kayttaa samaa '

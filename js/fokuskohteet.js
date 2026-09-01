@@ -1200,6 +1200,22 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
    */
   const ladonta = kohdeMerkinLadonta(ui, kohde);
   Object.assign(tietue, ladonta);
+  /*
+   * KOLMAS OSUMA-ALUE: NOSTON TEKSTI KOKONAAN (omistaja 1.9.2026 ilta:
+   * "Saisiko karttanostoissa myös tekstit kokonaisuudessa
+   * klikattaviksi? Nyt vain osa tekstistä on klikattavissa"). Sormen
+   * ympyrä kattoi nimiöstä vain alun; loppu oli kuollutta paperia.
+   * Suorakaide asettuu väistöpassin valitsemaan nimiölaatikkoon
+   * (asetaTekstiOsumat) — samaan, johon nimiö rasterissa ladotaan tai
+   * laattaan poltettiin — ja kilpailee napautuksesta keskipisteellään
+   * kuten muutkin osumamuodot (lahinKohde). Nimikerroksen latomat
+   * elävät nimet hoitaa kerros itse (js/karttanimet.js data-kohde).
+   */
+  if (ladonta.nimi) {
+    tietue.tekstiOsuma = el('rect', {
+      class: 'fokuskohde-osuma fokuskohde-tekstiosuma', width: 0, height: 0,
+    }, g);
+  }
   if (symboli) {
     /*
      * Alaryhmä kutistaa kirjaston merkin kohdemerkin mittaan; symbolin
@@ -1875,12 +1891,17 @@ function luovutaKohdeNimiot(ui, s, piilossa) {
   }
 }
 
-export function paivitaKohdeNimiot(ui, s) {
+/**
+ * VÄISTÖN PUHDAS LASKENTA (1.9.2026, nostotekstien napautusalueet):
+ * sama algoritmi kuin ennenkin, mutta päätökset palautetaan arvona eikä
+ * kirjoiteta suoraan tietueisiin. Kutsujia on kaksi: oma väistö
+ * (paivitaKohdeNimiot) ja nimikerroksen tie, joka tarvitsee poltettujen
+ * nimien kehykset napautusalueiksi muttei saa koskea rastereihin
+ * (asetaPoltetutTekstiOsumat). Algoritmi on ladontasopimusta — muutos
+ * vaatii NOSTOLADONTA_SAANTO-noston (js/nostoladonta.js).
+ */
+function laskeKohdeNimioPaatokset(ui, s) {
   const ryhmat = ui.fokuskohdeRyhmat ?? [];
-  if (!ryhmat.length) return;
-  const avain = `${ui.fokuskohdeAvain}|${s.toFixed(4)}|${nippuAsettelunVersio()}`;
-  if (ui.fokuskohdeNimioAvain === avain) return;
-  ui.fokuskohdeNimioAvain = avain;
   // Kirjaston yksikkö laudan yksiköiksi — sama ketju kuin piirrossa:
   // merkin oma kutistus ja merkkien vakioskaala.
   const k = KOHDE_SYMBOLI_SKAALA * s;
@@ -1946,6 +1967,10 @@ export function paivitaKohdeNimiot(ui, s) {
   const varatut = [];
   const piilossa = new Set();
   const puolet = new Map();
+  // Valitut nimiökehykset ryhmäindeksillä (laudan yksiköitä):
+  // nostotekstin napautusalue asettuu juuri siihen laatikkoon, johon
+  // nimiö rasterissa ladotaan tai laattaan poltettiin.
+  const kehykset = new Map();
   for (const [id, rivi] of jono) {
     /*
      * PUOLET JÄRJESTYKSESSÄ: toivottu kylki ensin (kohdeNimioPuolet),
@@ -1967,8 +1992,34 @@ export function paivitaKohdeNimiot(ui, s) {
     } else {
       puolet.set(id, rivi.puolet[valittu]);
       varatut.push(...rivi.kehykset.map((vaihtoehdot) => vaihtoehdot[valittu]));
+      rivi.indeksit.forEach((indeksi, n) => kehykset.set(indeksi, rivi.kehykset[n][valittu]));
     }
   }
+  return { piilossa, puolet, kehykset };
+}
+
+export function paivitaKohdeNimiot(ui, s) {
+  const ryhmat = ui.fokuskohdeRyhmat ?? [];
+  if (!ryhmat.length) return;
+  const avain = `${ui.fokuskohdeAvain}|${s.toFixed(4)}|${nippuAsettelunVersio()}`;
+  if (ui.fokuskohdeNimioAvain !== avain) {
+    ui.fokuskohdeNimioAvain = avain;
+    ui.fokuskohdeNimioPaatokset = laskeKohdeNimioPaatokset(ui, s);
+    kirjoitaKohdeNimioPaatokset(ui);
+  }
+  /*
+   * NAPAUTUSALUEET JOKA KUTSULLA, PÄÄTÖKSET VÄLIMUISTISTA: alueen
+   * ruutumitta riippuu piirron ruutukatosta (sPiirto), joka elää
+   * zoomiportaan mukana vaikka väistön päätökset eivät muutu. `maare`
+   * kirjoittaa vain muuttuneet arvot, joten toisto on halpa.
+   */
+  asetaTekstiOsumat(ui, s, ui.fokuskohdeNimioPaatokset, false);
+}
+
+/** Väistön päätökset tietueisiin ja rastereihin — entinen häntä. */
+function kirjoitaKohdeNimioPaatokset(ui) {
+  const ryhmat = ui.fokuskohdeRyhmat ?? [];
+  const { piilossa, puolet } = ui.fokuskohdeNimioPaatokset;
   // Päätös jää muistiin seuraavan rakennuksen arvaukseksi.
   ui.fokuskohdePiiloNimiot = piilossa;
   ui.fokuskohdeNimioPuolet = puolet;
@@ -2000,6 +2051,73 @@ export function paivitaKohdeNimiot(ui, s) {
       r.glyyfi, r.symboli, nakyy ? r.nimi : '', r.laji, kylki, r.nimioKatto,
     );
   }
+}
+
+/*
+ * NOSTON TEKSTI ON KOKONAAN NAPAUTETTAVA (omistaja 1.9.2026 ilta:
+ * "Saisiko karttanostoissa myös tekstit kokonaisuudessa klikattaviksi?
+ * Nyt vain osa tekstistä on klikattavissa"). Suorakaide asetetaan
+ * väistön valitsemaan nimiökehykseen; kehys on laudan yksiköissä
+ * merkin piirtopaikasta käsin, ja ryhmä on skaalattu piirron
+ * ruutukatolla, joten jakaja on sPiirto — sama kaava kuin poltetun
+ * kaupunginnimen laatikolla (asetaKohdeMittakaava).
+ *
+ * KUMPI NÄYTTÄÄ NIMEN, SE SAA ALUEEN: omalla väistöllä (vanhat laudat,
+ * nimet rasterissa tai laatassa) alue annetaan jokaiselle näkyvälle
+ * nimiölle; nimikerroksen tiellä vain poltetuille — elävien nimet
+ * latoo ja napauttaa nimikerros itse (js/karttanimet.js data-kohde).
+ */
+function asetaTekstiOsumat(ui, s, paatokset, vainPoltetut) {
+  if (!paatokset) return;
+  const nakyvaSkaala = ui.nakyvaAlue?.()?.skaala;
+  const sPiirto = nostoladontaKattoPorras(KOHDE_SYMBOLI_SKAALA * s, nakyvaSkaala)
+    / KOHDE_SYMBOLI_SKAALA;
+  if (!(sPiirto > 0)) return;
+  (ui.fokuskohdeRyhmat ?? []).forEach((r, i) => {
+    const alue = r.tekstiOsuma;
+    if (!alue) return;
+    const kehys = paatokset.kehykset.get(i);
+    if (!kehys || (vainPoltetut && !r.poltettu)) {
+      // Leveydetön alue ei ota napautuksia eikä osallistu kilpailuun
+      // (lahinKohde ohittaa mitattomat muodot).
+      maare(alue, 'width', '0');
+      maare(alue, 'height', '0');
+      return;
+    }
+    const px = r.nippu?.x ?? r.x + (r.sx ?? 0);
+    const py = r.nippu?.y ?? r.y + (r.sy ?? 0);
+    maare(alue, 'x', ((kehys.x1 - px) / sPiirto).toFixed(2));
+    maare(alue, 'y', ((kehys.y1 - py) / sPiirto).toFixed(2));
+    maare(alue, 'width', ((kehys.x2 - kehys.x1) / sPiirto).toFixed(2));
+    maare(alue, 'height', ((kehys.y2 - kehys.y1) / sPiirto).toFixed(2));
+  });
+}
+
+/**
+ * Poltettujen nimien napautusalueet nimikerroksen tiellä.
+ *
+ * Laatan nimiö ladottiin generaattorissa TÄLLÄ SAMALLA väistöllä
+ * (tools/fokuskartta/nostot.mjs paivitaKohdeNimiot), joten sama
+ * laskenta samalla aineistolla antaa saman kehyksen — luettelon
+ * tiiviste vartioi, että aineisto todella on sama (kohdeOnPoltettu).
+ * Jos naapurusto on muuttunut polton jälkeen, muuttuneet merkit ovat
+ * jo eläviä ja kehys voi sillä välillä elää; seuraava poltto korjaa.
+ */
+function asetaPoltetutTekstiOsumat(ui, s, piilossa) {
+  if (piilossa) {
+    for (const r of ui.fokuskohdeRyhmat ?? []) {
+      if (!r.tekstiOsuma) continue;
+      maare(r.tekstiOsuma, 'width', '0');
+      maare(r.tekstiOsuma, 'height', '0');
+    }
+    return;
+  }
+  const avain = `${ui.fokuskohdeAvain}|${s.toFixed(4)}|${nippuAsettelunVersio()}`;
+  if (ui.fokuskohdeTekstiOsumaAvain !== avain) {
+    ui.fokuskohdeTekstiOsumaAvain = avain;
+    ui.fokuskohdeTekstiOsumaPaatokset = laskeKohdeNimioPaatokset(ui, s);
+  }
+  asetaTekstiOsumat(ui, s, ui.fokuskohdeTekstiOsumaPaatokset, true);
 }
 
 /**
@@ -2203,9 +2321,26 @@ export function paivitaFokuskohteet(ui, tiedettyNakyva = null) {
    * on yhä ainoa ladonta, joka kohteille on.
    */
   if (merkkiSkaala > 0) {
-    if (karttanimetLatovat(ui)) luovutaKohdeNimiot(ui, merkkiSkaala, piilossa);
-    else paivitaKohdeNimiot(ui, merkkiSkaala);
+    if (karttanimetLatovat(ui)) {
+      luovutaKohdeNimiot(ui, merkkiSkaala, piilossa);
+      // Laattaan poltetut nimet saavat silti napautusalueensa tästä
+      // kerroksesta (ks. asetaPoltetutTekstiOsumat).
+      asetaPoltetutTekstiOsumat(ui, merkkiSkaala, piilossa);
+    } else paivitaKohdeNimiot(ui, merkkiSkaala);
   }
+  /*
+   * NIMIKERROKSEN NAPAUTUS TAKAISIN TÄNNE (omistaja 1.9.2026 ilta,
+   * tekstit kokonaan klikattaviksi): kerros (js/karttanimet.js) antaa
+   * napautetun nimen kohdetunnuksen, ja kortti avataan täsmälleen kuin
+   * merkistä. Nimi nimeää kohteensa yksiselitteisesti, joten
+   * etäisyyskilpailua (lahinKohde) ei käydä.
+   */
+  ui.kohdenimenNapautus ??= (id) => {
+    const kohde = ui.fokuskohdeTiedot?.get(id);
+    if (!kohde) return;
+    if (ui.fokuskohdeAuki?.id === kohde.id) suljeFokuskohde(ui);
+    else avaaFokuskohde(ui, kohde);
+  };
   // Rekisteröinti nipistykseen jää (js/kartta.js vastaskaalaaMerkit),
   // vaikka vakioskaala ei enää tarvitse vastaskaalaa: varapolku
   // (lehdetön näkymä) on yhä ruutumitassa ja tarvitsee sen.

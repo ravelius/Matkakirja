@@ -4722,6 +4722,18 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
    edes oletuksena.
    --------------------------------------------------------------------------- */
 .karttanimet { pointer-events: none; }
+
+/*
+ * KOHTEEN NIMI ON NAPAUTETTAVA KOKONAAN (omistaja 1.9.2026 ilta:
+ * "Saisiko karttanostoissa myös tekstit kokonaisuudessa
+ * klikattaviksi?"). Kerros pysyy muuten mykkänä; vain kohdenimet
+ * ottavat tapahtumia, ja napautus avaa kohteen kortin
+ * (js/karttanimet.js kerroksen kuuntelija -> js/fokuskohteet.js).
+ */
+.karttanimet .karttanimi-kohde[data-kohde] {
+  pointer-events: auto;
+  cursor: pointer;
+}
 .karttanimi {
   font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   text-rendering: optimizeLegibility;
@@ -21783,9 +21795,13 @@ body.maataulu-auki .toimintorivi .monitoimi-nappi {
    HALO ON STROKE JA PAINT-ORDER, EI SUODATIN (tests/rules.test.mjs):
    suodatettu kerros palaa iOS:n taustalta tyhjänä.
 
-   NIMIÖ EI OTA NAPAUTUKSIA VASTAAN. Se on merkkiä leveämpi, ja
-   napautettavana se peittäisi naapurimerkin osuma-alueen — merkin oma
-   44 px:n ympyrä (.fokuskohde-osuma) hoitaa sormen.
+   NIMIÖN RASTERI EI OTA NAPAUTUKSIA VASTAAN — mutta nimiöllä on oma
+   napautusalue (omistaja 1.9.2026 ilta: tekstit kokonaan
+   klikattaviksi). Rasteri pysyy mykkänä, koska SVG antaisi
+   napautuksen päällimmäiselle kuvalle; tekstin alueen hoitaa merkin
+   ryhmän suorakaide (.fokuskohde-tekstiosuma), joka kilpailee
+   naapureiden kanssa keskipiste-etäisyydellä (js/fokuskohteet.js
+   lahinKohde) eikä siis peitä naapurimerkin osuma-aluetta.
    --------------------------------------------------------------------------- */
 /*
  * NIMIÖ ON LEHDEN OMAA LADONTAA (27.8.2026 ilta, omistajan palaute laitteelta
