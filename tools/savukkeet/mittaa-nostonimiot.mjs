@@ -85,10 +85,12 @@ for (const [iso, pohja] of Object.entries(FOKUS_POHJAT)) {
     fokuskohdeEroAvain: null,
     fokuskohdeNimioAvain: null,
     fokuskohdeRyhmat: [],
-    // Kirjanpito päälle: pelissä tämä kenttä on tyhjä eikä väistö
-    // kirjaa mitään (js/fokuskohteet.js kirjaaNimionPudotus).
-    fokuskohdeNimioSyyt: new Map(),
   };
+  // Kirjanpito päälle: pelissä kenttä on tyhjä eikä väistö kirjaa
+  // mitään (js/fokuskohteet.js kirjaaNimionPudotus). Paikallinen
+  // kahva, koska tämä on mitan oma kirjanpito eikä UI:n kenttä.
+  const nimioSyyt = new Map();
+  ui.fokuskohdeNimioSyyt = nimioSyyt;
   ui.fokuskohdeRyhmat = rivit.map(({ kohde, paikka }) => ({
     id: kohde.id, x: paikka.x, y: paikka.y, kohde, ...kohdeMerkinLadonta(ui, kohde),
   }));
@@ -107,7 +109,7 @@ for (const [iso, pohja] of Object.entries(FOKUS_POHJAT)) {
     if (r.nimioNakyy !== false) continue;
     pudonneita += 1;
     maittain.set(iso, (maittain.get(iso) ?? 0) + 1);
-    const syyt = ui.fokuskohdeNimioSyyt.get(r.id) ?? [];
+    const syyt = nimioSyyt.get(r.id) ?? [];
     const avain = syyt.map((x) => `${x.puoli}:${x.este}`).sort().join(' + ');
     syittain.set(avain, (syittain.get(avain) ?? 0) + 1);
     if (KOHDEMAA === iso) {
