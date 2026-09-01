@@ -1,4 +1,28 @@
-export const R2_JUURI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset';
+/*
+ * Kohtaamiskuvien katalogi: galleriasivun (js/kohtaamiskuvat.js) JA
+ * pelin kohtaamiskortin (js/visa.js) yhteinen lähde.
+ *
+ * KUVA ON KYTKETTY PELIIN KAUPUNGIN KAUTTA (omistajan tilaus 1.9.2026:
+ * *"nuo aarrekuvat vaativat pelissä isomman kuva-alan … voisit
+ * suunnitella kohtaamiskortin uudelleen niin että kuva näkyy siinä
+ * isona … kuvan alle tulee myös kuvatekstiä"*). Pelin kaupunkitunnus
+ * (esim. `lissabon`) on kaupungin nimi pienellä ja ilman tarkkeita,
+ * joten `kaupunki`-kenttä riittää avaimeksi — poikkeuksen voi kirjata
+ * riville omana `kohde`-kenttänään. tests/kohtaamiskuvat.test.mjs
+ * vaatii jokaiselta riviltä osuman tarinakaaren kohteeseen JA saman
+ * hahmon nimen, joten väärä avain kaatuu portissa eikä ruudulla.
+ *
+ * VAIN TILA 'tarkistettu' PÄÄTYY PELIIN: keskeneräinen kuva näkyy
+ * galleriassa työtilana, mutta kohtaamiskortti jää ilman kuvaa
+ * (kuvaton kortti piirtyy ennallaan).
+ */
+/*
+ * NIMI ON KOHTAAMIS-ALKUINEN TARKOITUKSELLA: yhden tiedoston versio
+ * ketjuttaa moduulit samaan näkyvyysalueeseen, ja js/media.js käyttää
+ * jo nimeä R2_JUURI samasta ämpäristä (tools/tarkista-niputus.mjs
+ * kaataa törmäyksen).
+ */
+export const KOHTAAMIS_R2_JUURI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset';
 
 export const kohtaamiskuvat = [
   {
@@ -98,3 +122,36 @@ export const kohtaamiskuvat = [
     vihje: 'Veiksel ja verkkoon takertunut nimetön metallikoriste vihjaavat paikalliseen kuvastoon sanomatta vastausta ääneen.',
   },
 ];
+
+/**
+ * Kaupungin nimi pelin kaupunkitunnuksen muotoon: pienet kirjaimet,
+ * ei tarkkeita eikä välimerkkejä. Sama muunnos kummallekin puolelle,
+ * joten "Praha" ja "praha" osuvat toisiinsa ilman käsin tehtyä taulua.
+ */
+const kuvaAvain = (nimi) => String(nimi ?? '')
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .toLowerCase()
+  .replace(/[^a-z0-9]/g, '');
+
+/** Peliin kelpaavat kuvat kaupunkitunnuksen mukaan. */
+export const KOHTAAMISKUVAT_KOHTEELLE = new Map(
+  kohtaamiskuvat
+    .filter((kuva) => kuva.tila === 'tarkistettu')
+    .map((kuva) => [kuvaAvain(kuva.kohde ?? kuva.kaupunki), kuva]),
+);
+
+/** Kuvan täysi osoite R2-ämpärissä. */
+export const kohtaamiskuvaOsoite = (kuva) => `${KOHTAAMIS_R2_JUURI}/${encodeURIComponent(kuva.tiedosto)}`;
+
+/**
+ * Kaupungin kohtaamiskuva pelille, tai null jos tarkistettua kuvaa ei
+ * ole. Palautuksessa on valmis osoite, jotta kutsuja ei rakenna
+ * omaa polkuaan ämpäriin.
+ *
+ * @param {string} cityId pelin kaupunkitunnus (quiz.cityId)
+ */
+export function kohtaamiskuvaKohteelle(cityId) {
+  const kuva = KOHTAAMISKUVAT_KOHTEELLE.get(kuvaAvain(cityId));
+  return kuva ? { ...kuva, osoite: kohtaamiskuvaOsoite(kuva) } : null;
+}

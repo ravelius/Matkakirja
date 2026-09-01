@@ -1164,9 +1164,18 @@
     </div>
     <!-- Kohtaamisen avaus: hahmon tervehdys kirjoittuu ennen kysymystä
          (kaupungit, joilla on rivi js/packs/kohtaamiset.js:ssä). -->
-    <!-- Kohtaamiskuva kelluu tekstin oikealla puolella (pilotti
-         10.8.2026: Ateena ja Sofia). -->
-    <img id="quiz-kohtaaminen-kuva" class="quiz-kohtaaminen-kuva" alt="" hidden>
+    <!-- KOHTAAMISKUVA ON KORTIN YLÄOSAN ISO KUVA (omistajan tilaus
+         1.9.2026: "nuo aarrekuvat vaativat pelissä isomman kuva-alan …
+         kuvan alle tulee myös kuvatekstiä"). Ennen kuva kellui pienenä
+         tekstin oikealla puolella. Kuvateksti ja lähderivi noudattavat
+         pelin muuta kuvatekstimallia (js/ui.js kuvateksti + kuvalahde). -->
+    <figure id="quiz-kohtaaminen-kuvio" class="quiz-kohtaaminen-kuvio" hidden>
+      <img id="quiz-kohtaaminen-kuva" class="quiz-kohtaaminen-kuva" alt="">
+      <figcaption id="quiz-kohtaaminen-kuvateksti" class="kuvateksti quiz-kohtaaminen-kuvateksti" hidden>
+        <span id="quiz-kohtaaminen-selite" class="kuvateksti-selite"></span>
+        <span class="kuvalahde">Matkakirjan kuvitus</span>
+      </figcaption>
+    </figure>
     <p id="quiz-kohtaaminen" class="quiz-kohtaaminen" hidden></p>
     <!-- Peli alkaa vasta tästä: kertojan luenta saa loppua rauhassa
          eikä tiimalasi käynnisty ennen painallusta (omistajan toive

@@ -330,6 +330,14 @@ const BOT_DELAY = 650;
 const BOT_QUIZ_DELAY = 1500; // botin kysymys jää hetkeksi näkyviin luettavaksi
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
+/*
+ * Kohtaamiskuvan lähderivi. Kuvat ovat pelin omaa kuvitusta eivätkä
+ * Commonsin aineistoa, joten lähde on sama joka kuvalla — mutta se
+ * kirjoitetaan silti näkyviin samalla kuvateksti + lähde -mallilla
+ * kuin muualla pelissä (js/ui.js naytaPostikortti).
+ */
+const KOHTAAMISKUVAN_LAHDE = 'Matkakirjan kuvitus';
+
 // Animaatioiden rytmi millisekunteina.
 
 const STEP_MS = 190; // yhden hypyn lentoaika kartalla
@@ -2406,13 +2414,28 @@ export class UI {
     this.quizQuestion = document.getElementById('quiz-question');
     // Kohtaamisen tervehdys kysymyksen yllä (js/packs/kohtaamiset.js).
     this.quizKohtaaminen = document.getElementById('quiz-kohtaaminen');
+    /*
+     * KOHTAAMISKUVA ON KORTIN YLÄOSAN ISO KUVA (omistajan tilaus
+     * 1.9.2026). Kuvio pitää sisällään kuvan ja sen alle tulevan
+     * kuvatekstin lähderiveineen; kaikki kolme piilotetaan yhdessä,
+     * ettei kuvaton kohtaaminen jätä korttiin tyhjää aukkoa.
+     */
+    this.quizKohtaaminenKuvio = document.getElementById('quiz-kohtaaminen-kuvio');
     this.quizKohtaaminenKuva = document.getElementById('quiz-kohtaaminen-kuva');
+    this.quizKohtaaminenKuvateksti = document.getElementById('quiz-kohtaaminen-kuvateksti');
+    this.quizKohtaaminenSelite = document.getElementById('quiz-kohtaaminen-selite');
     // Kohtaamisen muotokuva aukeaa koko näytölle kuten muutkin
     // popupien kuvat (omistajan raportti 30.8.2026). Kuvalla ei ole
     // muuta napautusroolia, joten suurennos ei riko mitään.
+    // Suurennos saa SAMAN kuvatekstin ja lähderivin kuin kortti
+    // (1.9.2026): valmis lista ohittaa artikkeligalleriahaun, joten
+    // katselin ei lähde verkkoon eikä paljasta vastausta.
     this.quizKohtaaminenKuva?.addEventListener('click', () => {
       const src = this.quizKohtaaminenKuva.getAttribute('src');
-      if (src) this.openLightbox(null, this.quizKohtaaminenKuva.alt || 'Kohtaaminen', src);
+      if (!src) return;
+      const caption = this.quizKohtaaminenSelite?.textContent || null;
+      this.openLightbox(null, this.quizKohtaaminenKuva.alt || 'Kohtaaminen', src,
+        [{ src, caption, lahde: caption ? KOHTAAMISKUVAN_LAHDE : null }]);
     });
     this.quizIsoisa = document.getElementById('quiz-isoisa');
     this.quizIsoisaTeksti = document.getElementById('quiz-isoisa-teksti');
@@ -15668,6 +15691,54 @@ export class UI {
   }
 
   // --- tietovisa ----------------------------------------------------------
+
+  /**
+   * KOHTAAMISKORTIN ISO KUVA JA SEN KUVATEKSTI (omistajan tilaus
+   * 1.9.2026: *"nuo aarrekuvat vaativat pelissä isomman kuva-alan …
+   * voisit suunnitella kohtaamiskortin uudelleen niin että kuva näkyy
+   * siinä isona. idea oli kai että kuvan alle tulee myös
+   * kuvatekstiä"*).
+   *
+   * Kuvio piilotetaan kokonaan, kun kuvaa ei ole: kuvaton kohtaaminen
+   * (vanha paikallinen muotokuva puuttuu, kuva ei ole tarkistettu tai
+   * kyseessä on kaksintaistelu) piirtyy täsmälleen kuten ennen eikä
+   * jätä korttiin tyhjää aukkoa. Sama koskee verkkovirhettä: yhden
+   * tiedoston versiossa kuvat haetaan R2:sta, ja yhteydetön pelaaja
+   * saa saman kortin kuin kuvattomassa kaupungissa.
+   *
+   * @param {?{osoite: string, alt?: string, kuvateksti?: string,
+   *   valokuva?: boolean}} tiedot null piilottaa kuvion
+   */
+  naytaKohtaamiskuva(tiedot) {
+    const kuvio = this.quizKohtaaminenKuvio;
+    const kuva = this.quizKohtaaminenKuva;
+    if (!kuvio || !kuva) return;
+    if (!tiedot?.osoite) {
+      kuvio.hidden = true;
+      kuva.removeAttribute('src');
+      return;
+    }
+    /*
+     * Kaksi kuvamaailmaa, kaksi sulautusta. Vanhat paikalliset
+     * muotokuvat ovat pergamenttipohjaisia piirroksia, joilta multiply
+     * hävittää taustan; uudet kohtaamiskuvat ovat valokuvia, joita
+     * multiply vain likaisi — niille riittää pehmeä vinjetti, joka
+     * sulattaa reunat paperiin (css/styles.css .quiz-kohtaaminen-kuva).
+     */
+    kuva.classList.toggle('valokuva', Boolean(tiedot.valokuva));
+    kuva.classList.toggle('piirros', !tiedot.valokuva);
+    if (kuva.getAttribute('src') !== tiedot.osoite) kuva.src = tiedot.osoite;
+    kuva.alt = tiedot.alt ?? '';
+    kuva.onerror = () => {
+      kuvio.hidden = true;
+      kuva.removeAttribute('src');
+    };
+    if (this.quizKohtaaminenSelite) this.quizKohtaaminenSelite.textContent = tiedot.kuvateksti ?? '';
+    if (this.quizKohtaaminenKuvateksti) {
+      this.quizKohtaaminenKuvateksti.hidden = !tiedot.kuvateksti;
+    }
+    kuvio.hidden = false;
+  }
 
   /**
    * Vastausnapit rakennetaan vain kun kysymys vaihtuu, ja päivitetään muuten

@@ -12629,26 +12629,99 @@ button.lukija-nappi.lukee,
   transform: none;
 }
 
-/* Kohtaamiskuva kelluu tekstin oikealla puolella (pilotti 10.8.2026:
- * Ateena ja Sofia): pyöristetty muotokuva samalla pergamentilla kuin
- * kortti itse, joten reunaton kuva sulautuu paperiin. */
+/*
+ * KOHTAAMISKUVA ON KORTIN YLÄOSAN ISO KUVA (omistajan tilaus
+ * 1.9.2026: *"nuo aarrekuvat vaativat pelissä isomman kuva-alan …
+ * voisit suunnitella kohtaamiskortin uudelleen niin että kuva näkyy
+ * siinä isona. idea oli kai että kuvan alle tulee myös
+ * kuvatekstiä"*).
+ *
+ * ENNEN: pieni muotokuva kellui tekstin oikealla puolella (pilotti
+ * 10.8.2026: Ateena ja Sofia). NYT: kuvio on kortin levyinen lohko
+ * heti otsikkorivin alla, kuvateksti sen alla ja hahmon tervehdys
+ * vasta niiden jälkeen — sama järjestys kuin fokusvirran
+ * oppituntikortilla, jossa kuva on kortin ensimmäinen asia.
+ *
+ * Kuvasuhde säilyy (`height: auto`), joten kuvaa ei rajata. Korkeus
+ * on silti katossa: kapealla ruudulla kuva ei saa työntää kysymystä
+ * kortin ulkopuolelle (kohta @media alempana), ja kortti itse rullaa
+ * tarvittaessa (.dialog-card overflow-y).
+ */
+.quiz-kohtaaminen-kuvio {
+  /* figuren selaimen oletusmarginaali pois: kuva on kortin levyinen. */
+  margin: 0.1rem 0 0.7rem;
+  padding: 0;
+}
+
+.quiz-kohtaaminen-kuvio[hidden] { display: none; }
+
 .quiz-kohtaaminen-kuva {
-  float: right;
-  width: min(34%, 130px);
-  margin: 0.1rem 0 0.5rem 0.75rem;
-  /* Kuvan pergamenttipohja sulautetaan kortin paperiin (omistajan
-   * toive 10.8.2026 ilta: kuva ei saa lukea laatikkona): multiply
-   * hävittää vaalean taustan ja säteittäinen maski pehmentää reunat
-   * paperiin. Ei kehystä eikä varjoa — piirros istuu sivulla kuin
-   * painettu vinjetti. */
-  mix-blend-mode: multiply;
-  -webkit-mask-image: radial-gradient(ellipse at center, #000 55%, transparent 98%);
-  mask-image: radial-gradient(ellipse at center, #000 55%, transparent 98%);
-  /* Napautus avaa muotokuvan koko näytölle (30.8.2026). */
+  display: block;
+  width: 100%;
+  height: auto;
+  /* Katto myös leveällä ruudulla: kuva saa olla komea, muttei niin
+   * korkea että hahmon tervehdys jää kokonaan taitteen alle. */
+  max-height: 52dvh;
+  object-fit: contain;
+  margin: 0 auto;
+  /* Napautus avaa kuvan koko näytölle (30.8.2026). */
   cursor: zoom-in;
 }
 
-.quiz-kohtaaminen-kuva[hidden] { display: none; }
+/*
+ * VANHA PERGAMENTTIPIIRROS (assets/kohtaamiset/…): kuvan oma
+ * vaalea pohja sulautetaan kortin paperiin (omistajan toive
+ * 10.8.2026 ilta: kuva ei saa lukea laatikkona). Multiply hävittää
+ * taustan ja säteittäinen maski pehmentää reunat paperiin.
+ */
+.quiz-kohtaaminen-kuva.piirros {
+  mix-blend-mode: multiply;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 55%, transparent 98%);
+  mask-image: radial-gradient(ellipse at center, #000 55%, transparent 98%);
+}
+
+/*
+ * UUSI KOHTAAMISVALOKUVA (R2, js/kohtaamiskuvat-data.js): valokuvalla
+ * ei ole pergamenttipohjaa, ja multiply vain likaisi sen. Sulautus
+ * tehdään kevyellä vinjetillä — kuvan keskusta on koskematon ja vain
+ * reunat ja kulmat häipyvät paperiin, samalla kielellä kuin piirroksen
+ * maski ja kätkökuva ("Sama sulautus kuin kohtaamiskuvalla").
+ */
+.quiz-kohtaaminen-kuva.valokuva {
+  -webkit-mask-image: radial-gradient(ellipse at center,
+    #000 56%, rgba(0, 0, 0, 0.82) 78%, rgba(0, 0, 0, 0.35) 92%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center,
+    #000 56%, rgba(0, 0, 0, 0.82) 78%, rgba(0, 0, 0, 0.35) 92%, transparent 100%);
+}
+
+/*
+ * Kuvateksti kuvan alle kortin omalla kursiivilla, ja lähderivi sen
+ * jatkeeksi samalle riville pienemmällä — sama kuvateksti + kuvalähde
+ * -malli kuin postikortissa ja suurennoksessa (js/ui.js, luokat
+ * .kuvateksti / .kuvalahde).
+ */
+.quiz-kohtaaminen-kuvateksti {
+  margin: 0.35rem 0 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-style: italic;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: rgba(58, 42, 22, 0.9);
+}
+
+.quiz-kohtaaminen-kuvateksti[hidden] { display: none; }
+
+/*
+ * KAPEA RUUTU (iPhone 390 × 844): kuva saa viedä korkeintaan noin
+ * 45 % kortista, jotta tervehdys ja Aloita peli -nappi mahtuvat
+ * samaan näkymään; loput kortista rullaa tarvittaessa (.dialog-card).
+ * Kortin oma katto on 92dvh, joten 41dvh on siitä ~45 %.
+ */
+@media (max-width: 699px) {
+  .quiz-kohtaaminen-kuva { max-height: 41dvh; }
+
+  .quiz-kohtaaminen-kuvio { margin-bottom: 0.55rem; }
+}
 
 /* Kätkökuva laatattoman löydön tuloskortissa: löytö näkyy, ei vain
  * rivi tekstiä. */

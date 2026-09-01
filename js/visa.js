@@ -15,6 +15,7 @@ import {
   EXPLORE_REWARD, FIFTY_FIFTY_PRICE, HARD_BONUS,
   HINT_PRICE, QUIZ_SECONDS,
 } from './game.js';
+import { kohtaamiskuvaKohteelle } from './kohtaamiskuvat-data.js';
 import { lueKertojana, playDiaryVoice } from './luenta.js';
 import { asetaKuva } from './media.js';
 import { natiiviVastaus } from './natiivi.js';
@@ -174,18 +175,31 @@ export function renderQuiz(ui) {
     ui.quizKohtaaminen.textContent = '';
     ui.quizKohtaaminen.hidden = !tervehdys;
     /*
-     * Kohtaamiskuva tekstin oikealle puolelle, jos kohteelle on
-     * generoitu muotokuva (omistajan pilotti 10.8.2026: Ateena ja
-     * Sofia ensin). Kuva on kaaridatan kuva-kenttä; puuttuva
-     * tiedosto piilottaa kuvan äänettömästi onerror-varasolulla.
+     * KOHTAAMISKUVA ISONA KORTIN YLÄOSAAN (omistajan tilaus 1.9.2026;
+     * ennen pieni muotokuva kellui tekstin oikealla puolella, pilotti
+     * 10.8.2026: Ateena ja Sofia).
+     *
+     * Kuva haetaan kahdesta lähteestä, uusin ensin:
+     *   1. tarkistettu kohtaamiskuva R2:ssa (js/kohtaamiskuvat-data.js)
+     *      — valokuva, jolla on oma kuvateksti ja alt-teksti;
+     *   2. kaaridatan `kuva` (assets/kohtaamiset/…) — vanha
+     *      pergamenttipiirros ilman kuvatekstiä.
+     * Kummankin puuttuessa kortti piirtyy kuvattomana kuten ennen.
      */
-    const kohtaamisKuva = tervehdys ? (kaariTarina?.kuva ?? null) : null;
-    if (ui.quizKohtaaminenKuva) {
-      if (kohtaamisKuva) {
-        ui.quizKohtaaminenKuva.src = kohtaamisKuva;
-        ui.quizKohtaaminenKuva.onerror = () => { ui.quizKohtaaminenKuva.hidden = true; };
-      }
-      ui.quizKohtaaminenKuva.hidden = !kohtaamisKuva;
+    const kuvaTiedot = tervehdys && kaariTarina
+      ? kohtaamiskuvaKohteelle(quiz.cityId) : null;
+    if (kuvaTiedot) {
+      ui.naytaKohtaamiskuva({
+        osoite: kuvaTiedot.osoite,
+        alt: kuvaTiedot.alt,
+        kuvateksti: kuvaTiedot.kuvateksti,
+        valokuva: true,
+      });
+    } else {
+      const vanhaKuva = tervehdys ? (kaariTarina?.kuva ?? null) : null;
+      ui.naytaKohtaamiskuva(vanhaKuva
+        ? { osoite: vanhaKuva, alt: '', kuvateksti: '', valokuva: false }
+        : null);
     }
     /*
      * Vanha isoisän sitaattilohko poistui, kun tarinakaari korvasi
@@ -429,7 +443,7 @@ export function renderDuel(ui) {
   // Kaksintaistelussa ei ole kohtaamista — edellisen visan tervehdys
   // ja kohtaamiskuva eivät saa jäädä kortille.
   ui.quizKohtaaminen.hidden = true;
-  if (ui.quizKohtaaminenKuva) ui.quizKohtaaminenKuva.hidden = true;
+  ui.naytaKohtaamiskuva(null);
   ui.quizCity.textContent = `Rosvon kaksintaistelu — ${p.name}`;
   // Kaksintaistelu ei käytä vaiheittaista paljastusta: vaihtoehdot ovat
   // heti esillä, eikä edellisen kortin piilotus saa jäädä päälle.
