@@ -139,7 +139,7 @@ async function pelinMerkit(kaupunki, ruutu) {
         skaala: m ? Number(m[3]) : null,
         nimi: r.nimi ?? '',
         nimioNakyy: Boolean(r.nimi) && r.nimioNakyy !== false,
-        nimioVasemmalle: Boolean(r.nimioVasemmalle),
+        nimioPuoli: r.nimioPuoli ?? 'oikea',
         osat: (ui.fokuskohdeTiedot?.get(r.id)?.osat ?? []).map((o) => o.id),
         symboli: r.symboli ?? null,
         laji: r.laji ?? null,
@@ -296,7 +296,7 @@ vaadi('tiiviste muuttuu, kun merkki siirtyy', muunna({ x: malli.x + 0.01 }) !== 
  * ovat. Tämä koe pitää sen tarkoituksena eikä unohduksena.
  */
 vaadi('tiiviste EI muutu väistön päätöksestä',
-  muunna({ nimioNakyy: !malli.nimioNakyy, nimioVasemmalle: !malli.nimioVasemmalle }) === perus);
+  muunna({ nimioNakyy: !malli.nimioNakyy, nimioPuoli: 'ala' }) === perus);
 vaadi('tiiviste ei muutu ilman muutosta', muunna({}) === perus);
 
 console.log('');

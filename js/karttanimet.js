@@ -189,6 +189,16 @@ const KOKO = {
 };
 
 /*
+ * KOOT ULOS MITTAA VARTEN (1.9.2026). Karttanoston ruutukatto
+ * (js/nostoladonta.js NOSTOLADONTA_NIMIO_KATTO) on sama luku kuin
+ * `kohde` tässä taulussa — se on koko katon perustelu: poltettu nimiö
+ * ei saa olla isompi kuin sama nimi elävänä. Kaksi kopiota samasta
+ * luvusta ajautuisi eri arvoihin, ja tests/nostoladonta.test.mjs
+ * vertaa niitä koneellisesti; siksi taulu on luettavissa ulkoa.
+ */
+export const KARTTANIMI_KOOT = KOKO;
+
+/*
  * ====== PÄÄKAUPUNKI LADOTAAN HARVENNETULLA KAPITEELILLA ============
  *
  * OMISTAJAN KYSYMYS 31.8.2026: *"miten tuon ajan kartoissa eroteltiin

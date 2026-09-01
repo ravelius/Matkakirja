@@ -1319,17 +1319,39 @@ body.kartta-raahaus .fokuslaatta-syke { animation-play-state: paused; }
 body.kartta-merkit-haipyy .fokuskohteet,
 body.kartta-merkit-haipyy .fokuspisteet,
 body.kartta-merkit-haipyy .fokusnosto-symbolit,
-body.kartta-merkit-haipyy .elaintakyt,
-body.kartta-merkit-haipyy .maatummennus { display: none; }
+body.kartta-merkit-haipyy .elaintakyt { display: none; }
 body.kartta-merkit-haipyy .karttanimet,
 body.kartta-merkit-haipyy .maastonimet { opacity: 0; }
 body.kartta-merkit-piilossa .fokuskohteet,
 body.kartta-merkit-piilossa .fokuspisteet,
 body.kartta-merkit-piilossa .fokusnosto-symbolit,
 body.kartta-merkit-piilossa .elaintakyt,
-body.kartta-merkit-piilossa .maatummennus,
 body.kartta-merkit-piilossa .karttanimet,
 body.kartta-merkit-piilossa .maastonimet { display: none; }
+/* MAATUMMENNUS VÄISTYY VAIN ZOOMISSA (omistaja 1.9.2026: *"Kartan
+   tummennus voisi pysyä panoroitaessa päällä."*).
+
+   Kerros oli 31.8.2026 illasta lähtien yllä olevissa listoissa, eli
+   piilossa koko eleen ajan. Ero panoroinnin ja nipistyksen välillä on
+   maalikierroksessa eikä maussa: panoroinnissa varjo on STAATTINEN
+   polku, jonka emoryhmän siirto liikuttaa kompositorilla, kun taas
+   nipistys skaalaa sen joka kehyksellä — ja juuri nipistyksen
+   longtaskit olivat piilotuksen syy. Luokan asettaa js/kartta.js
+   piilotaMerkit(true) vain silloin kun eleen mittakaava muuttuu.
+
+   MITATTU (savuke-maailmanakyma, 390x844 dpr3, 4x kuristus; kuusi
+   ajoa ennen, viisi jälkeen, longtaskien summa per ajo):
+
+     panorointi  ennen   114 / 106 / 102 / 76 / 55 / 0 ms   (med.  89)
+                jälkeen  161 / 121 / 107 / 53 / 52 ms       (med. 107)
+     nipistys    ennen   686 / 670 / 621 / 618 / 561 / 558  (med. 620)
+                jälkeen  693 / 636 / 602 / 592 / 537        (med. 602)
+
+   Panorointi ei siis kallistu tummennuksen jäädessä näkyviin: sarjat
+   menevät päällekkäin ja mediaanien ero on 18 ms kuuden pyyhkäisyn
+   yli. Savukkeen väitteet 1b ja 1c lukevat kerroksen tilan KESKEN
+   eleen — levossa kumpikin toteutus näyttäisi samalta. */
+body.kartta-tummennus-piilossa .maatummennus { display: none; }
 
 @media (prefers-reduced-motion: reduce) {
   /* Liikeherkkyys: nimikerros väistyy kerralla ilman häivytystä. */

@@ -89,6 +89,7 @@
  */
 import { el } from './mapart.js';
 import { pyramidiUrl } from './media.js';
+import { NOSTOLADONTA_SAANTO } from './nostoladonta.js';
 
 /*
  * === NOUTAMINEN JA KIINNITTÄMINEN OVAT ERI ASIOITA =================
@@ -1219,6 +1220,24 @@ function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
 function nostotasonTasot() {
   const nt = luettelo?.nostotaso;
   if (!nt?.tasot?.length || !nt.laatastot) return null;
+  /*
+   * VANHALLA SÄÄNNÖLLÄ PIIRRETTY TASO PIILOTETAAN KOKONAAN (1.9.2026,
+   * js/nostoladonta.js NOSTOLADONTA_SAANTO).
+   *
+   * Tiiviste hoitaa yhden merkin: kun sen sisältö muuttuu, peli piirtää
+   * sen elävänä ja laatassa oleva vanha kuva jää sen alle. Se on halpa
+   * hinta yhdestä merkistä. PIIRTOSÄÄNNÖN muuttuessa se koskee jokaista
+   * merkkiä yhtä aikaa — 1.9.2026 merkin ruutukatto ja nimiöväistön
+   * neljä kylkeä — ja kartalle jäisi koko maan verran kaksoismustetta:
+   * vanha, liian iso poltettu nimiö ja sen päällä uusi elävä.
+   *
+   * Kun tunnus ei ole tämän koodin oma, nostotasoa ei siis ole
+   * olemassa: yhtään nostolaattaa ei pyydetä (kerros saa opacityn 0,
+   * paivitaNostotaso) ja jokainen merkki piirtyy elävänä — täsmälleen
+   * se tila, jossa peli oli ennen ensimmäistä nostopolttoa. Seuraava
+   * ajo kirjoittaa uuden tunnuksen ja taso palaa käyttöön.
+   */
+  if (nt.saanto !== NOSTOLADONTA_SAANTO) return null;
   if (!luettelo.__nostoTasot) {
     luettelo.__nostoTasot = luettelo.tasot
       .filter((t) => nt.tasot.includes(t.z) && nt.laatastot[t.z])

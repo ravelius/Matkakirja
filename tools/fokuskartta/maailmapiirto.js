@@ -86,6 +86,9 @@ import {
   ASTEIKKO, KOHINA, KOHINA2, MUSTE, PAPERI,
   fbm, laudanProjektio, lerpSyvyys, lerpVari, mulberry32,
 } from './piirto.js';
+import {
+  NOSTOLADONTA_POLTON_TIHEYS, nostoladontaKattoPorras,
+} from '../../js/nostoladonta.js';
 
 /* ====================================================== tekstin ladonta
  *
@@ -1815,7 +1818,17 @@ export function piirraNostotKankaalle(ctx, nostot, piirraNosto, mitta) {
      */
     ctx.save();
     ctx.translate(mx, my);
-    piirraNosto(ctx, m, m.porras * px);
+    /*
+     * RUUTUKATTO (omistaja 1.9.2026: *"Tee max sama koko kuin
+     * kohdekaupungin koko"*). Merkin oma mitta on karttavakio ja kasvaa
+     * kartan mukana; katto leikkaa sen kasvun syvillä tasoilla niin,
+     * ettei nimiö ohita kartan omaa paikannimeä. Kaava on pelin kanssa
+     * yhteinen (js/nostoladonta.js nostoladontaKattoPorras), ja tason
+     * oma tiheys on LAITEPIKSELEITÄ — muunnos CSS-pikseleihin on
+     * NOSTOLADONTA_POLTON_TIHEYS, ks. sen perustelu.
+     */
+    const porras = nostoladontaKattoPorras(m.porras, px / NOSTOLADONTA_POLTON_TIHEYS);
+    piirraNosto(ctx, m, porras * px);
     ctx.restore();
   }
 }

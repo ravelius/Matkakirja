@@ -156,6 +156,90 @@ export function nostoladontaSkaala(rajaus) {
   return NOSTOLADONTA_S;
 }
 
+/* ============ RUUTUKATTO: NOSTO EI OHITA KAUPUNKIA ================
+ *
+ * OMISTAJA 1.9.2026 aamu (kuvakaappaus Sofian fokusnäkymästä,
+ * mittajana 25 km), sanatarkasti: *"Karttanostot ovat aivan liian
+ * isolla. Tee max sama koko kuin kohdekaupungin koko."*
+ *
+ * ── MIKÄ VIKA ON ──────────────────────────────────────────────────
+ *
+ * Nosto on KARTTAVAKIO (NOSTOLADONTA_S): sen koko on lautayksiköitä,
+ * joten se kasvaa kartan mukana. Kartan oma paikannimi on
+ * PAPERIVAKIO: 10,5–12 CSS-pikseliä joka zoomilla (js/karttanimet.js
+ * KOKO). Kaksi eri mittajärjestelmää eroavat sitä enemmän mitä
+ * syvemmälle zoomataan, ja juuri sen omistaja luki ruudulta.
+ *
+ * MITATTU (Chromium 1024x768 dpr 2, Sofian fokusnäkymä, zoomiportaat
+ * pohjaan asti; nimiön ruutukoko = NOSTOLADONTA_NIMIO_KOKO x porras x
+ * mittakaava, kaupungin nimi luettu ruudulta):
+ *
+ *     mittakaava   nostonimiö   Sofian nimi   suhde
+ *      1,18 px/y      4,1 px       12,0 px     0,34
+ *      3,21           11,1         12,0        0,93
+ *      4,82           16,7         12,0        1,39
+ *      7,23           25,0         12,0        2,08   <- omistajan kuva
+ *     11,40 (pohja)   39,4         12,0        3,28
+ *
+ * ── KATTO ON KARTAN OMA NIMI ──────────────────────────────────────
+ *
+ * Yläraja on se koko, jonka SAMA nimiö saa elävänä: kohdenimi
+ * luovutetaan ruutuavaruuden ladontaan (js/fokuskohteet.js
+ * luovutaKohdeNimiot -> js/karttanimet.js KOKO.kohde), ja se on
+ * omistajan oma päätös 30.8.2026 *"sama koko"* kuin kaupungin nimellä.
+ * Katto ei siis ole uusi luku vaan sama luku toisesta kerroksesta.
+ *
+ * KATTO KOSKEE KOKO MERKKIÄ, ei pelkkää tekstiä: symboli ja nimiö ovat
+ * yhtä rasteria (js/fokusnosto-symbolit.js piirraNostosymKartalle), ja
+ * pelkän tekstin kutistaminen irrottaisi ne toisistaan.
+ *
+ * KATTO EI KOSKE LADONTAA. Merkkien PAIKAT (kasaus, erottelusiirto,
+ * nimiöväistö) lasketaan yhä kattamattomalla NOSTOLADONTA_S:llä, koska
+ * poltetun ladonnan on oltava sama joka tasolla — muuten yhdestä
+ * merkistä olisi kolme eri paikkaa kolmessa laatassa eikä luettelon
+ * yksi tiiviste voisi kuvata niitä. Katto kutistaa vain PIIRRON, joten
+ * väistö on katon purressa hieman varovainen (nimiöiden väliin jää
+ * ilmaa) — se ei voi koskaan päästää niitä päällekkäin.
+ */
+/** Nimiön kirjasinkoko kirjaston yksikköinä (js/fokusnosto-symbolit.js
+ * NOSTOSYM_NIMIO_KOKO — tuplattu tänne, koska tämä moduuli ei saa tuoda
+ * mitään; tests/nostoladonta.test.mjs vahtii että luvut ovat samat). */
+export const NOSTOLADONTA_NIMIO_KOKO = 11;
+/** Nimiön suurin ruutukoko, CSS-pikseliä (js/karttanimet.js KOKO.kohde). */
+export const NOSTOLADONTA_NIMIO_KATTO = 10.5;
+/*
+ * LAATTA EI TIEDÄ KATSOJAN PIKSELITIHEYTTÄ, JA SE ON MITATTU RAJA.
+ *
+ * Peli valitsee laattatason tarpeesta `mittakaava * dpr`
+ * (js/laattapyramidi.js valitseTaso), joten tason omat pikselit ovat
+ * LAITEPIKSELEITÄ. Ruutukatto on CSS-pikseleissä, ja muunnos niiden
+ * välillä on juuri se dpr, jota poltettaessa ei voi tietää — sama
+ * juurisyy, jonka takia paikannimiä ei polteta lainkaan
+ * (tools/fokuskartta/maailmapiirto.js luku 8b).
+ *
+ * Poltto olettaa siksi tarkkanäytön (dpr 2): se on omistajan iPadin ja
+ * työpöytänäyttöjen tiheys. dpr 1 näkee poltetun nimiön kaksinkertaisena
+ * kattoon nähden ja dpr 3 kaksi kolmasosaa siitä — ELÄVÄ kerros on
+ * tarkka joka laitteella, koska se tuntee mittakaavan.
+ */
+export const NOSTOLADONTA_POLTON_TIHEYS = 2;
+
+/**
+ * PIIRTOMITTA KATOLLA — yksi kaava pelille ja laattageneraattorille.
+ *
+ * @param {number} porras  lautayksikköä KIRJASTON yksikköä kohti
+ *   (js/fokuskohteet.js KOHDE_SYMBOLI_SKAALA * nostoladontaSkaala)
+ * @param {number} ruutuPx CSS-pikseliä lautayksikköä kohti — pelissä
+ *   `nakyvaAlue().skaala`, laattageneraattorissa tason oma tiheys
+ *   jaettuna NOSTOLADONTA_POLTON_TIHEYDELLÄ
+ * @returns {number} porras katolla leikattuna (<= porras)
+ */
+export function nostoladontaKattoPorras(porras, ruutuPx) {
+  if (!(porras > 0) || !(ruutuPx > 0)) return porras;
+  return Math.min(porras, NOSTOLADONTA_NIMIO_KATTO
+    / (NOSTOLADONTA_NIMIO_KOKO * ruutuPx));
+}
+
 /* ============ TIIVISTE: MUUTOS ON HUOMATTAVA =======================
  *
  * Raamattu 31.8.2026: luettelo kantaa tiedon siitä, MITKÄ nostot
@@ -201,8 +285,32 @@ export function nostoladontaSkaala(rajaus) {
  * törmäyksen hinta on yksi merkki, joka jää päivittymättä seuraavaan
  * polttoon asti.
  */
+/*
+ * PIIRTOSÄÄNNÖN TUNNUS ON TIIVISTEEN SYÖTETTÄ (1.9.2026).
+ *
+ * Tiivisteen johdanto sanoo sen itse: väistön päätös ei ole
+ * tiivisteessä, koska *"ainoa tapa saada päätös muuttumaan tiivisteen
+ * huomaamatta on muuttaa väistön ALGORITMIA, ja se on koodimuutos, joka
+ * vaatii uuden polton siinä missä symbolin muodon muutoskin."* Juuri
+ * niin kävi tässä erässä kahdesti — merkin ruutukatto
+ * (nostoladontaKattoPorras) ja nimiöväistön neljä kylkeä
+ * (js/fokuskohteet.js paivitaKohdeNimiot) — eikä yksikään merkin kenttä
+ * muuttunut, joten luettelo olisi väittänyt vanhoja laattoja tuoreiksi
+ * ja peli olisi vaiennut merkeistä, jotka laatassa ovat väärän
+ * kokoisina ja osa ilman nimiötä.
+ *
+ * SÄÄNNÖN TUNNUS on siksi tiivisteessä mukana: kun piirtosääntö
+ * muuttuu, tämä luku nostetaan, JOKAINEN tiiviste eroaa luettelosta ja
+ * peli piirtää merkit elävinä siihen asti kunnes uusi poltto ajetaan.
+ * Se on tiivisteen koko tarkoitus, ja hinta on yhden ajon mittainen
+ * kaksoispiirto — sama, jonka luettelon oletus "mitään ei ole poltettu"
+ * jo hyväksyy (js/laattapyramidi.js nostoOnPoltettu).
+ */
+export const NOSTOLADONTA_SAANTO = 'v2';
+
 export function nostoladontaTiiviste(merkki) {
   const osat = [
+    NOSTOLADONTA_SAANTO,
     merkki.tunnus,
     merkki.symboli ?? '',
     merkki.laji ?? '',

@@ -3108,8 +3108,10 @@ export class Kartta {
       cancelAnimationFrame(this.ui.merkkiPaluuKehys ?? 0);
       this.ui.merkkiPaluuKehys = 0;
       this.ui.merkitPiilossa = false;
+      this.ui.merkkiZoomEle = false;
       document.body.classList.remove('kartta-merkit-piilossa');
       document.body.classList.remove('kartta-merkit-haipyy');
+      document.body.classList.remove('kartta-tummennus-piilossa');
     };
     // Kentäksi asti: ui.js:n jumivahti ja destroy siivoavat luokat ja
     // ajastimet silloinkin, kun ele ei pääse omaan loppuunsa.
@@ -3129,6 +3131,14 @@ export class Kartta {
       this.ui.merkitPiilossa = false;
       // Ensin takaisin maalikierrokseen — yhä läpinäkyvänä…
       document.body.classList.remove('kartta-merkit-piilossa');
+      /*
+       * MAATUMMENNUS SAMASSA KEHYKSESSÄ (1.9.2026). Kerros on piilossa
+       * vain zoom-eleessä, ja sen paluu on ANIMAATIO joka käynnistyy
+       * siitä hetkestä kun display muuttuu — siis tästä. Panoroinnissa
+       * luokkaa ei koskaan asetettu, joten tämä on silloin tyhjä työ.
+       */
+      this.ui.merkkiZoomEle = false;
+      document.body.classList.remove('kartta-tummennus-piilossa');
       cancelAnimationFrame(this.ui.merkkiPaluuKehys ?? 0);
       // …ja vasta seuraavassa kehyksessä peittävyys ylös, jolloin
       // selain näkee arvon muuttuvan ja tekee siirtymän.
@@ -3149,9 +3159,53 @@ export class Kartta {
        */
       this.ui.merkkiHaipymaAjastin = setTimeout(nostaPeittavyys, MERKKIEN_HAIPYMA_MS);
     };
-    /** Ele on aidosti käynnissä: polttamaton karttasisältö väistyy. */
-    const piilotaMerkit = () => {
-      if (this.ui.merkitPiilossa || this.ui.fokuskohdeAuki) return;
+    /**
+     * Ele on aidosti käynnissä: polttamaton karttasisältö väistyy.
+     *
+     * === MAATUMMENNUS JÄÄ PANOROINNISSA NÄKYVIIN ====================
+     *
+     * Omistaja 1.9.2026 aamu, sanatarkasti: *"Kartan tummennus voisi
+     * pysyä panoroitaessa päällä."* Kerros oli 31.8.2026 illasta lähtien
+     * samassa display:none-joukossa kuin merkkikerrokset, eli piilossa
+     * KOKO eleen ajan.
+     *
+     * ELEEN LAJI RATKAISEE, ja vain kartta tietää sen: panorointi ei
+     * muuta mittakaavaa, joten varjo — staattinen SVG-polku emoryhmän
+     * siirtoryhmässä — liikkuu kompositorilla laatan mukana ilman
+     * yhtäkään uudelleenladontaa. Nipistyksessä se skaalautuu joka
+     * kehyksellä, ja juuri siitä piilotus alun perin tuli
+     * (js/maatummennus.js "ELEKÄYTÖS"), joten `zoomaa` asettaa oman
+     * luokkansa ja kerros katoaa kuten ennenkin.
+     *
+     * MITATTU (tools/savukkeet/savuke-maailmanakyma.mjs, Chromium
+     * 390x844 dpr3, 4x kuristus; kuusi pyyhkäisyä ja neljä nipistystä
+     * Kreikan fokusnäkymässä, tummennus kartalla — kuusi ajoa ennen,
+     * viisi jälkeen, longtaskien summa per ajo):
+     *
+     *   panorointi  ennen   114 / 106 / 102 / 76 / 55 / 0 ms  (med. 89)
+     *              jälkeen  161 / 121 / 107 / 53 / 52 ms      (med. 107)
+     *   nipistys    ennen   686 / 670 / 621 / 618 / 561 / 558 (med. 620)
+     *              jälkeen  693 / 636 / 602 / 592 / 537       (med. 602)
+     *
+     * Panorointi ei siis kallistunut ajokohinaa enempää: sarjat menevät
+     * päällekkäin ja mediaanien ero on 18 ms KUUDEN pyyhkäisyn yli eli
+     * kolme millisekuntia elettä kohti. Nipistys on ennallaan, koska
+     * siinä kerros piiloutuu kuten ennenkin.
+     *
+     * ZOOM-LUOKKA VOI TULLA KESKEN PIILON: panorointi piilottaa merkit
+     * ensin, ja jos sormia tulee toinen ja mittakaava alkaa muuttua,
+     * tämä ajetaan uudestaan lipun `merkitPiilossa` ollessa jo tosi.
+     * Zoom-haara on siksi ENNEN sitä varhaista paluuta.
+     *
+     * @param {boolean} zoomaa tosi, kun eleen mittakaava muuttuu
+     */
+    const piilotaMerkit = (zoomaa = false) => {
+      if (this.ui.fokuskohdeAuki) return;
+      if (zoomaa && !this.ui.merkkiZoomEle) {
+        this.ui.merkkiZoomEle = true;
+        document.body.classList.add('kartta-tummennus-piilossa');
+      }
+      if (this.ui.merkitPiilossa) return;
       clearTimeout(this.ui.merkkiPaluuAjastin);
       this.ui.merkkiPaluuAjastin = 0;
       // Kesken oleva paluu perutaan: kerros ei saa nousta esiin
@@ -3515,7 +3569,7 @@ export class Kartta {
         `translate3d(${tx.toFixed(1)}px, ${ty.toFixed(1)}px, 0) scale(${nipistys.suhde.toFixed(4)})`;
       // Kahden sormen kosketus ei vielä ole ele: merkit väistyvät vasta
       // kun mittakaava oikeasti muuttuu (ks. MERKKIPIILON_KYNNYS).
-      if (Math.abs(nipistys.suhde - 1) > MERKKIPIILON_KYNNYS) piilotaMerkit();
+      if (Math.abs(nipistys.suhde - 1) > MERKKIPIILON_KYNNYS) piilotaMerkit(true);
       vastaskaalaaMerkit(nipistys.suhde);
     };
 

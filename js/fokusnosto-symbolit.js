@@ -164,7 +164,7 @@ export const NOSTOSYM_MINI_R = 6.5;
  * hitunen päälle; merkin OMA mitta (välit, väistöt, erottelu) on yhä
  * NOSTOSYM_MINI_R.
  */
-const NOSTOSYM_MINI_RUUTU = 7.4;
+export const NOSTOSYM_MINI_RUUTU = 7.4;
 
 /*
  * ══ LEVEÄTERÄINEN KYNÄ — VETO ON TÄYTETTY MUOTO, EI VIIVA ═════════
@@ -1533,7 +1533,7 @@ const NOSTOSYM_KUVAT = Object.fromEntries(
  * poltetun vuorennimen koko: `koko: 11`. Aiempi 13,5 oli neljänneksen
  * isompi kuin lehden oma ladonta, ja se näkyi.
  */
-const NOSTOSYM_NIMIO_KOKO = 11;
+export const NOSTOSYM_NIMIO_KOKO = 11;
 
 /**
  * NIMIÖN ASUT — samat kaksi kuin lehteen poltetuilla nimillä.
@@ -1733,16 +1733,18 @@ function nostosymNimioTeksti(nimi, asu, enintaan = NOSTOSYM_NIMIO_MERKKEJA) {
  * varapolku tyhjentää oman ryhmänsä (piirraNostosymboli) eikä saa
  * viedä nimiötä mukanaan. Palauttaa null, jos nimeä ei ole.
  */
-export function piirraNostosymNimio(g, nimi, laji, vasemmalle = false, enintaan) {
+export function piirraNostosymNimio(g, nimi, laji, puoli = 'oikea', enintaan) {
   const asu = NOSTOSYM_NIMIO_ASUT[nostosymNimionLaji(laji)];
   const teksti = nostosymNimioTeksti(nimi, asu, enintaan ?? NOSTOSYM_NIMIO_MERKKEJA);
   if (!teksti) return null;
+  const { leveys } = nostosymNimioMitta(nimi, laji, enintaan);
+  const paikka = nostosymNimioAsemointi(nostosymNimioPuoli(puoli), leveys);
   const t = el('text', {
     class: `nostosym-nimio ${asu.luokka}`.trim(),
-    x: (vasemmalle ? -NOSTOSYM_NIMIO_X : NOSTOSYM_NIMIO_X).toFixed(2),
-    y: NOSTOSYM_NIMIO_Y.toFixed(2),
+    x: paikka.x.toFixed(2),
+    y: paikka.y.toFixed(2),
     'font-size': NOSTOSYM_NIMIO_KOKO,
-    'text-anchor': vasemmalle ? 'end' : 'start',
+    'text-anchor': paikka.ank,
     'aria-hidden': 'true',
   }, g);
   t.textContent = teksti;
@@ -2045,7 +2047,115 @@ export function nostosymNimioMitta(nimi, laji, enintaan) {
   };
 }
 
-export function nostosymNimioLaatikko(nimi, svg, laji, vasemmalle = false, enintaan) {
+/* ============ NIMIÖN NELJÄ KYLKEÄ =================================
+ *
+ * OMISTAJAN KUVAKAAPPAUS 1.9.2026 aamu (iPad, Bulgaria): osalta
+ * nostoista puuttui nimiö poltetuista laatoista, ja Koillis-Bulgarian
+ * harvassa maastossa pudotus ei näyttänyt törmäykseltä.
+ *
+ * MITATTU (tools/savukkeet/mittaa-nostonimiot.mjs, koko maailma):
+ * 605 nimellisestä nostosta 55 jäi ilman nimiötä, ja JOKAINEN pudotus
+ * johtui siitä, että sekä oikea että vasen kaista osui naapurin
+ * SYMBOLIIN — ei toiseen nimiöön eikä kaupungin laattaan. Kaistat ovat
+ * pitkiä (18 merkkiä on Sofian mitassa toistakymmentä lautayksikköä),
+ * joten vaakasuora rivi merkkejä tukkii molemmat kyljet, vaikka
+ * merkin ylä- ja alapuolella olisi tyhjää paperia.
+ *
+ * VASTAUS ON KARTAN OMA LADONTA. Paikannimet kokeilevat NELJÄÄ kylkeä
+ * (js/karttanimet.js: oikea, vasen, ylä, ala) ja vasta sitten nostoa,
+ * ja omistajan päätös 30.8.2026 oli *"sama ladonta kuin
+ * paikannimillä."* Nimiö saa siis nyt saman neljä kylkeä; nostoviivaa
+ * ei tule, koska nostoja ei kartalla enää ole (js/fokusniput.js
+ * sääntö 6).
+ *
+ * MITATTU KORJAUKSEN JÄLKEEN: pudotuksia 55 -> 31, ja jokainen jäljelle
+ * jäänyt on TODELLINEN törmäys (kaikki neljä kylkeä varattuina) — mm.
+ * Sofian syvennyssarake, jossa merkkejä on ryppäässä.
+ *
+ * PYSTYKYLJET OVAT KESKITETTYJÄ, kuten paikannimillä: teksti on merkin
+ * ylä- tai alapuolella keskellä, jolloin kaista on vain nimen levyinen
+ * eikä ulotu sivulle kuin puolet siitä.
+ */
+/** Nimiön kyljet kokeilujärjestyksessä (sama kuin js/karttanimet.js). */
+export const NOSTOSYM_NIMIO_KYLJET = ['oikea', 'vasen', 'yla', 'ala'];
+
+/** Versaalin korkeus kirjasinkoosta — pystykylkien pystymitat. */
+const NOSTOSYM_NIMIO_VERSAALI = 0.78;
+/** Perusviivan alapuolelle jäävä osa (pilkut, alapidennykset). */
+const NOSTOSYM_NIMIO_ALAOSA = 0.25;
+
+/**
+ * NIMIÖN ASEMOINTI YHDESSÄ PAIKASSA — kirjaston yksiköitä, origo
+ * merkin keskipisteessä.
+ *
+ * Kaikki neljä nimiön mittaa tulevat tästä: väistön laatikko
+ * (nostosymNimioLaatikko), poltetun musteen laatikko
+ * (nostosymPolttoLaatikko), poltto (piirraNostosymPolttoon) ja rasteri
+ * (nostosymRasteroi). Jos joku niistä laskisi paikan itse, poltettu
+ * nimiö ja sen väistölaatikko eriytyisivät ensimmäisessä
+ * hienosäädössä — Raamatun ehto on sanatarkasti päinvastainen.
+ *
+ * @param {string} puoli  'oikea' | 'vasen' | 'yla' | 'ala'
+ * @param {number} leveys nimiön mitta (nostosymNimioMitta)
+ * @returns {{alku:number, x:number, y:number, ank:string,
+ *   x1:number, x2:number, y1:number, y2:number}}
+ *   `alku` on ensimmäisen kirjaimen x canvasilla (textAlign left),
+ *   `x`/`ank` sama asia SVG:n ankkurilla, ja x1…y2 nimiön laatikko.
+ */
+export function nostosymNimioAsemointi(puoli, leveys) {
+  const ruutu = NOSTOSYM_MINI_RUUTU;
+  const koko = NOSTOSYM_NIMIO_KOKO;
+  const ulko = NOSTOSYM_NIMIO_X + leveys;
+  if (puoli === 'vasen') {
+    return {
+      alku: -ulko,
+      x: -NOSTOSYM_NIMIO_X,
+      y: NOSTOSYM_NIMIO_Y,
+      ank: 'end',
+      x1: -ulko,
+      x2: -ruutu,
+      y1: -ruutu,
+      y2: ruutu,
+    };
+  }
+  if (puoli === 'yla' || puoli === 'ala') {
+    // Perusviiva merkin ruudun ulkopuolelle: ylhäällä alapidennysten
+    // verran yläpuolelle, alhaalla versaalin korkeuden verran alle.
+    const y = puoli === 'yla'
+      ? -(ruutu + koko * NOSTOSYM_NIMIO_ALAOSA)
+      : ruutu + koko * NOSTOSYM_NIMIO_VERSAALI;
+    const puolikas = leveys / 2;
+    return {
+      alku: -puolikas,
+      x: 0,
+      y,
+      ank: 'middle',
+      x1: -puolikas,
+      x2: puolikas,
+      y1: y - koko * NOSTOSYM_NIMIO_VERSAALI,
+      y2: y + koko * NOSTOSYM_NIMIO_ALAOSA,
+    };
+  }
+  return {
+    alku: NOSTOSYM_NIMIO_X,
+    x: NOSTOSYM_NIMIO_X,
+    y: NOSTOSYM_NIMIO_Y,
+    ank: 'start',
+    x1: ruutu,
+    x2: ulko,
+    y1: -ruutu,
+    y2: ruutu,
+  };
+}
+
+/** Vanha totuusarvo kyljeksi — kutsujat, jotka eivät tunne neljää. */
+export function nostosymNimioPuoli(arvo) {
+  if (arvo === true) return 'vasen';
+  if (!arvo) return 'oikea';
+  return NOSTOSYM_NIMIO_KYLJET.includes(arvo) ? arvo : 'oikea';
+}
+
+export function nostosymNimioLaatikko(nimi, svg, laji, puoli = 'oikea', enintaan) {
   /*
    * `svg` on jäänyt kutsurajapintaan, vaikka mitta ei enää lue siitä
    * mitään: kutsujia on kaksi eikä kumpikaan tiedä, mistä mitta tulee
@@ -2053,13 +2163,8 @@ export function nostosymNimioLaatikko(nimi, svg, laji, vasemmalle = false, enint
    */
   const { teksti, leveys } = nostosymNimioMitta(nimi, laji, enintaan);
   if (!teksti) return null;
-  const ulko = NOSTOSYM_NIMIO_X + leveys;
-  return {
-    x1: vasemmalle ? -ulko : NOSTOSYM_MINI_RUUTU,
-    x2: vasemmalle ? -NOSTOSYM_MINI_RUUTU : ulko,
-    y1: -NOSTOSYM_MINI_RUUTU,
-    y2: NOSTOSYM_MINI_RUUTU,
-  };
+  const { x1, x2, y1, y2 } = nostosymNimioAsemointi(nostosymNimioPuoli(puoli), leveys);
+  return { x1, x2, y1, y2 };
 }
 
 /**
@@ -2107,15 +2212,30 @@ function kangasOsoitteeksi(kangas) {
   });
 }
 
-async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji, vasemmalle = false) {
+async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji, puoli = 'oikea') {
   const asu = nostosymAsuTai(svg, nimionLaji);
   const muste = nostosymMustelajit(svg);
   const tekstiLeveys = nimio ? nostosymMittaaNimio(nimio, asu, porras) : 0;
   const sade = NOSTOSYM_MINI_RUUTU;
-  const kaista = nimio ? NOSTOSYM_NIMIO_X - sade + tekstiLeveys : 0;
-  const leveys = sade * 2 + kaista;
-  const korkeus = sade * 2;
-  const origoX = vasemmalle ? kaista + sade : sade;
+  /*
+   * KANKAAN LAATIKKO ON MERKIN JA NIMIÖN YHTEINEN (1.9.2026, neljä
+   * kylkeä). Ennen laatikko laskettiin vaakakaistasta, joka riitti kun
+   * nimiö oli aina merkin kyljessä; pystykylki vaatii tilaa myös ylä-
+   * ja alapuolelta. Laatikko tulee nyt samasta asemoinnista kuin väistö
+   * ja poltto (nostosymNimioAsemointi), joten kaikki kolme näkevät
+   * saman musteen.
+   */
+  const kylki = nostosymNimioPuoli(puoli);
+  const nimionLaatikko = nimio
+    ? nostosymNimioAsemointi(kylki, tekstiLeveys) : null;
+  const x1 = Math.min(-sade, nimionLaatikko?.x1 ?? -sade);
+  const x2 = Math.max(sade, nimionLaatikko?.x2 ?? sade);
+  const y1 = Math.min(-sade, nimionLaatikko?.y1 ?? -sade);
+  const y2 = Math.max(sade, nimionLaatikko?.y2 ?? sade);
+  const leveys = x2 - x1;
+  const korkeus = y2 - y1;
+  const origoX = -x1;
+  const origoY = -y1;
   const kangas = document.createElement('canvas');
   kangas.width = Math.max(1, Math.round(leveys * porras));
   kangas.height = Math.max(1, Math.round(korkeus * porras));
@@ -2123,7 +2243,7 @@ async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji, vasemmal
   ctx.imageSmoothingQuality = 'high';
   // Merkin origo on neliön keskellä, kuten SVG:ssäkin.
   ctx.save();
-  ctx.translate(origoX * porras, sade * porras);
+  ctx.translate(origoX * porras, origoY * porras);
   piirraNostosymMiniCanvas(ctx, tunnus, muste, porras);
   ctx.restore();
   if (nimio) {
@@ -2131,8 +2251,8 @@ async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji, vasemmal
     ctx.textAlign = 'left';
     ctx.textBaseline = 'alphabetic';
     ctx.lineJoin = 'round';
-    const x = (vasemmalle ? 0 : NOSTOSYM_NIMIO_X + sade) * porras;
-    const y = (NOSTOSYM_NIMIO_Y + sade) * porras;
+    const x = (nimionLaatikko.alku + origoX) * porras;
+    const y = (nimionLaatikko.y + origoY) * porras;
     /*
      * MERKIT YKSITELLEN, kuten lehden omassa ladonnassa (piirto.js
      * `teksti`): canvasin `letterSpacing` ei ole kaikissa selaimissa, ja
@@ -2170,6 +2290,9 @@ async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji, vasemmal
      * verran pyöristysvirhettä sivuun.
      */
     origoX: (origoX / leveys) * (kangas.width / porras),
+    // Sama pyöristyssuhde pystysuunnassa: pystykylki tekee kankaasta
+    // korkeamman kuin merkin ruutu, eikä origo ole enää sen keskellä.
+    origoY: (origoY / korkeus) * (kangas.height / porras),
   };
 }
 
@@ -2203,7 +2326,7 @@ async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji, vasemmal
 /**
  * @param {CanvasRenderingContext2D} ctx  origo merkin keskipisteessä
  * @param {object} merkki  { symboli, laji, nimio, nimioNakyy,
- *   nimioVasemmalle, nimioRajaton } — laattageneraattorin merkkitietue
+ *   nimioPuoli, nimioRajaton } — laattageneraattorin merkkitietue
  * @param {number} porras  kuvapikseliä kirjaston yksikköä kohti
  * @param {?SVGElement} svg  kartta, josta muste luetaan; null = varasävy
  */
@@ -2221,10 +2344,11 @@ export function piirraNostosymPolttoon(ctx, merkki, porras, svg = null) {
   ctx.textAlign = 'left';
   ctx.textBaseline = 'alphabetic';
   ctx.lineJoin = 'round';
-  // Oikealle merkin reunasta, vasemmalle nimiön oma mitta taaksepäin —
-  // sama kaista kuin rasterissa ja sama kuin väistön laatikossa.
-  const x = (merkki.nimioVasemmalle ? -(NOSTOSYM_NIMIO_X + leveys) : NOSTOSYM_NIMIO_X) * porras;
-  const y = NOSTOSYM_NIMIO_Y * porras;
+  // Paikka tulee samasta asemoinnista kuin rasteri ja väistön laatikko
+  // (nostosymNimioAsemointi) — neljä kylkeä, yksi kaava.
+  const paikka = nostosymNimioAsemointi(nostosymNimioPuoli(merkki.nimioPuoli), leveys);
+  const x = paikka.alku * porras;
+  const y = paikka.y * porras;
   /*
    * MERKIT YKSITELLEN, kuten lehden omassa ladonnassa: canvasin
    * `letterSpacing` ei ole kaikissa selaimissa, ja harvennus on juuri
@@ -2268,7 +2392,7 @@ export function piirraNostosymPolttoon(ctx, merkki, porras, svg = null) {
  * nimiön mitassa. Ylimitta maksaa enintään muutaman lähes tyhjän
  * laatan, alimitta katkaisisi mustetta.
  *
- * @param {object} merkki { nimio, nimioNakyy, nimioVasemmalle,
+ * @param {object} merkki { nimio, nimioNakyy, nimioPuoli,
  *   nimioRajaton, laji } — laattageneraattorin merkkitietue
  * @returns {{x1:number, y1:number, x2:number, y2:number}}
  */
@@ -2283,9 +2407,15 @@ export function nostosymPolttoLaatikko(merkki) {
   const enintaan = merkki.nimioRajaton ? Infinity : NOSTOSYM_NIMIO_MERKKEJA;
   const { teksti, leveys } = nostosymNimioMitta(merkki.nimio, merkki.laji, enintaan);
   if (!teksti) return laatikko;
-  const ulko = NOSTOSYM_NIMIO_X + leveys;
-  if (merkki.nimioVasemmalle) laatikko.x1 = -ulko;
-  else laatikko.x2 = ulko;
+  // Neljä kylkeä samasta asemoinnista kuin piirto (1.9.2026): pystykylki
+  // vie mustetta myös merkin ylä- tai alapuolelle, ja luettelon on
+  // tiedettävä se — muuten nostolaatta jäisi generoimatta sen rivin
+  // kohdalta, jossa nimiö on.
+  const nimio = nostosymNimioAsemointi(nostosymNimioPuoli(merkki.nimioPuoli), leveys);
+  laatikko.x1 = Math.min(laatikko.x1, nimio.x1);
+  laatikko.x2 = Math.max(laatikko.x2, nimio.x2);
+  laatikko.y1 = Math.min(laatikko.y1, nimio.y1);
+  laatikko.y2 = Math.max(laatikko.y2, nimio.y2);
   return laatikko;
 }
 
@@ -2299,7 +2429,7 @@ export function nostosymPolttoLaatikko(merkki) {
  * on valmis — välimuistista osuttaessa vielä samalla mikrotehtävällä.
  * Jos rasteria ei saada, ryhmään piirretään elävä merkki ja teksti.
  */
-export function piirraNostosymKartalle(g, symboli, nimio, laji, vasemmalle = false, enintaan) {
+export function piirraNostosymKartalle(g, symboli, nimio, laji, kylki = 'oikea', enintaan) {
   const tunnus = nostosymMiniTunnus(symboli, laji);
   const nimionLaji = nostosymNimionLaji(laji);
   // Lyhennys ja kirjainlaji tehdään KERRAN tässä, jotta rasteri ja
@@ -2316,8 +2446,8 @@ export function piirraNostosymKartalle(g, symboli, nimio, laji, vasemmalle = fal
     nimio, NOSTOSYM_NIMIO_ASUT[nimionLaji], enintaan ?? NOSTOSYM_NIMIO_MERKKEJA,
   );
   // Peilaus on merkityksetön ilman nimiötä: tyhjä kaista on tyhjä
-  // kummallakin puolella, ja yksi rasteri riittää molemmille.
-  const puoli = teksti ? vasemmalle : false;
+  // joka kyljellä, ja yksi rasteri riittää kaikille.
+  const puoli = teksti ? nostosymNimioPuoli(kylki) : 'oikea';
   const elavana = () => {
     g.replaceChildren();
     piirraNostosymMini(g, symboli, laji);
@@ -2337,7 +2467,7 @@ export function piirraNostosymKartalle(g, symboli, nimio, laji, vasemmalle = fal
    */
   kuva.dataset.symboli = NOSTOSYM_PIIRTAJAT[symboli] ? symboli : 'huuto';
   kuva.dataset.nimio = teksti;
-  kuva.dataset.puoli = puoli ? 'vasen' : 'oikea';
+  kuva.dataset.puoli = puoli;
   /*
    * RESEPTI JÄÄ KUVAAN KIINNI, jotta sama merkki voidaan paistaa
    * uudelleen TARKEMMALLA PORTAALLA purkamatta kerrosta
@@ -2363,7 +2493,7 @@ function asetaRasteri(kuva, g) {
   const { tunnus, teksti, nimionLaji, puoli, elavana } = resepti;
   const porras = NOSTOSYM_PORRAS;
   kuva.__nostosymPorras = porras;
-  const avain = `${porras}|${tunnus}|${nimionLaji}|${puoli ? 'v' : 'o'}|${teksti}`;
+  const avain = `${porras}|${tunnus}|${nimionLaji}|${puoli}|${teksti}`;
   let valmis = NOSTOSYM_RASTERIT.get(avain);
   if (!valmis) {
     valmis = nostosymRasteroi(tunnus, teksti, g.ownerSVGElement, porras, nimionLaji, puoli);
@@ -2375,7 +2505,7 @@ function asetaRasteri(kuva, g) {
     // vanhempi rasteri saa enää palata kuvaan.
     if (kuva.__nostosymPorras !== porras) return;
     maare(kuva, 'x', (-r.origoX).toFixed(2));
-    maare(kuva, 'y', (-NOSTOSYM_MINI_RUUTU).toFixed(2));
+    maare(kuva, 'y', (-(r.origoY ?? NOSTOSYM_MINI_RUUTU)).toFixed(2));
     maare(kuva, 'width', r.leveys.toFixed(2));
     maare(kuva, 'height', r.korkeus.toFixed(2));
     maare(kuva, 'href', r.osoite);

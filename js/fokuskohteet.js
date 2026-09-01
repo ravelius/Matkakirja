@@ -92,7 +92,7 @@
  */
 import { el, maare } from './mapart.js';
 import {
-  NOSTOSYM_LUOKAT, NOSTOSYM_MINI_R, NOSTOSYM_TYYPIT,
+  NOSTOSYM_LUOKAT, NOSTOSYM_MINI_R, NOSTOSYM_NIMIO_KYLJET, NOSTOSYM_TYYPIT,
   nostosymAsetaPorras, nostosymNimioLaatikko, nostosymVirkistaRasterit,
   piirraNostosymKartalle, piirraNostosymboli,
 } from './fokusnosto-symbolit.js';
@@ -139,7 +139,7 @@ import {
   nippuLaattaEsteet,
 } from './fokusniput.js';
 import { nostoOnPoltettu } from './laattapyramidi.js';
-import { nostoladontaTiiviste } from './nostoladonta.js';
+import { nostoladontaKattoPorras, nostoladontaTiiviste } from './nostoladonta.js';
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
 
@@ -1170,9 +1170,9 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
       tietue.glyyfi = glyyfi;
       tietue.nimioNakyy = !ui.fokuskohdePiiloNimiot?.has(kohde.id);
       // Sama arvaus koskee myös nimiön PUOLTA (v1218): ahtaassa
-      // paikassa väistö on saattanut kääntää nimiön vasemmalle, ja
+      // paikassa väistö on saattanut siirtää nimiön toiselle kyljelle, ja
       // ilman muistia ensipiirto latoisi sen hetkeksi väärin päin.
-      tietue.nimioVasemmalle = ui.fokuskohdeNimioPuolet?.get(kohde.id) ?? false;
+      tietue.nimioPuoli = ui.fokuskohdeNimioPuolet?.get(kohde.id) ?? 'oikea';
     }
     /*
      * TYYPPI KULKEE MERKILLE MUKANA (27.8.2026 ilta). Kirjasto tarvitsee sen
@@ -1182,7 +1182,7 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
      */
     piirraNostosymKartalle(glyyfi, symboli,
       tietue.nimioNakyy ? kohteenKarttanimi(kohde) : '',
-      kohde.tyyppi, tietue.nimioVasemmalle, tietue.nimioKatto);
+      kohde.tyyppi, tietue.nimioPuoli, tietue.nimioKatto);
   } else {
     el('circle', { class: 'fokuskohde-halo', r: KOHDE_HALO_R }, g);
     el('circle', { class: 'fokuskohde-rengas', r: KOHDE_RENGAS_R }, g);
@@ -1433,7 +1433,7 @@ function merkitsePoltetutNostot(ui) {
     if (poltettu) r.glyyfi?.replaceChildren();
     else if (r.glyyfi) {
       piirraNostosymKartalle(r.glyyfi, r.symboli,
-        r.nimioNakyy ? r.nimi : '', r.laji, r.nimioVasemmalle, r.nimioKatto);
+        r.nimioNakyy ? r.nimi : '', r.laji, r.nimioPuoli, r.nimioKatto);
     }
   }
 }
@@ -1482,8 +1482,30 @@ function asetaKohdeMittakaava(ui, suhde) {
   const s = ui.fokusMerkkiSkaalaPohja?.()
     || ui.fokusMerkkiSkaalaKartalle?.(suhde) || ui.fokusMerkkiSkaala?.(suhde);
   if (!(s > 0)) return;
+  /*
+   * PIIRTOMITTA ON KATOLLA, LADONTA EI (omistaja 1.9.2026: *"Tee max
+   * sama koko kuin kohdekaupungin koko"* — js/nostoladonta.js
+   * nostoladontaKattoPorras). Katto lasketaan merkin KIRJASTON mitassa,
+   * koska nimiön kirjasinkoko on siinä yksikössä, ja jaetaan takaisin
+   * ryhmän mittaan — sama kaava kuin laattageneraattorilla, vain
+   * mittakaava on eri lähteestä (näkymän oma, ei tason).
+   *
+   * KATTAMATON `s` JÄÄ LADONNAKSI: kasaus, erottelusiirto ja
+   * nimiöväistö on laskettava samalla luvulla kuin laattaan, tai
+   * poltettu ja elävä merkki eivät olisi samassa pisteessä.
+   */
+  const nakyvaSkaala = ui.nakyvaAlue?.()?.skaala;
+  const sPiirto = nostoladontaKattoPorras(KOHDE_SYMBOLI_SKAALA * s, nakyvaSkaala)
+    / KOHDE_SYMBOLI_SKAALA;
   const sRuutu = ui.fokusMerkkiSkaala?.(suhde) ?? s;
-  const osumaR = KOHDE_OSUMA_R * (sRuutu > 0 ? sRuutu / s : 1);
+  /*
+   * OSUMASÄDE LASKETAAN PIIRTOMITASTA, EI LADONNASTA. Ympyrä on ryhmän
+   * lapsi ja skaalautuu sen mukana, joten sormen 44 px säilyy vain jos
+   * säde jaetaan sillä samalla luvulla, jolla ryhmä piirretään — katon
+   * purressa ryhmä on pienempi ja säde siis suurempi. Sama sääntö kuin
+   * typografiakatolla (js/ui.js fokusMerkkiOsumaKerroin).
+   */
+  const osumaR = KOHDE_OSUMA_R * (sRuutu > 0 && sPiirto > 0 ? sRuutu / sPiirto : 1);
   /*
    * OSUMAMUODOT TULEVAT SAMASTA LADONNASTA kuin merkki: sama passi
    * kirjoittaa ryhmän paikan, ja osuma-ympyrä on sen lapsi. Vain
@@ -1509,7 +1531,7 @@ function asetaKohdeMittakaava(ui, suhde) {
    * paikan, jonka kaksi edellistä passia juuri asettivat.
    */
   merkitsePoltetutNostot(ui);
-  const zoom = s.toFixed(4);
+  const zoom = sPiirto.toFixed(4);
   for (const ryhma of ui.fokuskohdeRyhmat ?? []) {
     if (ryhma.osuma) maare(ryhma.osuma, 'r', osumaR.toFixed(2));
     const px = ryhma.nippu?.x ?? ryhma.x + (ryhma.sx ?? 0);
@@ -1527,10 +1549,12 @@ function asetaKohdeMittakaava(ui, suhde) {
     if (!laatikko || !ryhma.nimiOsuma) continue;
     const dx = ryhma.x - px;
     const dy = ryhma.y - py;
-    maare(ryhma.nimiOsuma, 'x', ((laatikko.x1 + dx) / s).toFixed(2));
-    maare(ryhma.nimiOsuma, 'y', ((laatikko.y1 + dy) / s).toFixed(2));
-    maare(ryhma.nimiOsuma, 'width', ((laatikko.x2 - laatikko.x1) / s).toFixed(2));
-    maare(ryhma.nimiOsuma, 'height', ((laatikko.y2 - laatikko.y1) / s).toFixed(2));
+    // Laatikko on LAUDAN yksiköissä ja ryhmä piirretään sPiirrolla:
+    // jakaja on siis se, jolla ryhmä on skaalattu (ei ladonnan s).
+    maare(ryhma.nimiOsuma, 'x', ((laatikko.x1 + dx) / sPiirto).toFixed(2));
+    maare(ryhma.nimiOsuma, 'y', ((laatikko.y1 + dy) / sPiirto).toFixed(2));
+    maare(ryhma.nimiOsuma, 'width', ((laatikko.x2 - laatikko.x1) / sPiirto).toFixed(2));
+    maare(ryhma.nimiOsuma, 'height', ((laatikko.y2 - laatikko.y1) / sPiirto).toFixed(2));
   }
 }
 
@@ -1616,9 +1640,25 @@ const KOHDE_NIMIO_VARA = 2;
  * latoo Pátran ja Ioánninan nimet pisteen VASEMMALLE puolelle
  * (tools/fokuskartta/maat.mjs GRC.kaupungit, `ank: 'right'`), ja
  * yleinen reitti kääntää nimen vasemmalle kuvan oikeassa laidassa
- * (piirto.js kohta 8g). Enempää vaihtoehtoja ei kokeilla: kaksi riittää
- * poistamaan kadot, ja jokainen lisäpaikka on uusi tapa yllättää
- * lukija sillä, missä nimi on.
+ * (piirto.js kohta 8g).
+ *
+ * ── KAKSI EI RIITTÄNYT (omistaja 1.9.2026 aamu, iPad, Bulgaria) ────
+ *
+ * *"Osalta nostoista puuttuu nimiö poltetuista laatoista."* Väite
+ * "kaksi riittää poistamaan kadot" oli mitattavissa, ja mittaus kumosi
+ * sen: koko maailman 605 nimellisestä nostosta 55 jäi ilman nimiötä,
+ * ja JOKAISESSA tapauksessa molemmat kyljet osuivat naapurin
+ * SYMBOLIIN (tools/savukkeet/mittaa-nostonimiot.mjs). Vaakakaista on
+ * pitkä — 18 merkkiä on Sofian mitassa toistakymmentä lautayksikköä —
+ * joten vaakasuora merkkirivi tukkii kummankin kyljen, vaikka merkin
+ * ylä- ja alapuolella on tyhjää paperia.
+ *
+ * NELJÄ KYLKEÄ ON KARTAN OMA LADONTA (js/karttanimet.js: oikea, vasen,
+ * ylä, ala) ja omistajan oma päätös 30.8.2026 *"sama ladonta kuin
+ * paikannimillä."* Pystykyljet ovat keskitettyjä, joten ne vievät
+ * sivusuunnassa vain puolet nimen mitasta. Mitattu jälkeen: 55 -> 31
+ * pudotusta, ja jokainen jäljelle jäänyt on todellinen törmäys, jossa
+ * kaikki neljä kylkeä ovat varattuja.
  *
  * JÄRJESTYS SAA TULLA LADONNALTA (31.8.2026, esityssiirto). Kun merkki
  * on ladottu kaupungin VASEMPAAN sarakkeeseen (js/fokusniput.js
@@ -1626,18 +1666,52 @@ const KOHDE_NIMIO_VARA = 2;
  * laattaan päin, ja sinne ladottu nimi kulkisi laatan yli. Kasauspassi
  * kirjoittaa toiveensa kenttään `nippuPuoli`, ja tämä lista käännetään
  * sen mukaan (kohdeNimioPuolet). Toive ei ole käsky: jos toivottu kylki
- * on tukossa, toinen kokeillaan yhä.
+ * on tukossa, seuraavat kokeillaan yhä.
  */
-const KOHDE_NIMIO_PUOLET = [false, true];
+const KOHDE_NIMIO_PUOLET = NOSTOSYM_NIMIO_KYLJET;
 
 /** Puolten kokeilujärjestys yhdelle merkille: toivottu ensin. */
 function kohdeNimioPuolet(r) {
-  return r?.nippuPuoli ? [true, false] : KOHDE_NIMIO_PUOLET;
+  if (!r?.nippuPuoli) return KOHDE_NIMIO_PUOLET;
+  return ['vasen', ...KOHDE_NIMIO_PUOLET.filter((p) => p !== 'vasen')];
 }
 
 /** Laatikot laudan koordinaateissa. Kosketus ei ole vielä limitystä. */
 function kohdeLimittyy(a, b) {
   return a.x1 < b.x2 && b.x1 < a.x2 && a.y1 < b.y2 && b.y1 < a.y2;
+}
+
+/* ============ PUDOTUKSEN SYY KIRJATAAN, EI ARVATA =================
+ *
+ * Omistajan kuvakaappaus 1.9.2026 aamu (iPad, Bulgaria): osalta
+ * nostoista puuttui nimiö poltetuista laatoista, ja harvassa maastossa
+ * (Koillis-Bulgaria) pudotus ei näyttänyt törmäykseltä. Ilman mittaa
+ * syytä ei voi tietää: väistö vain vaikenee.
+ *
+ * MITTA ON VALINNAINEN JA PELISSÄ POIS PÄÄLTÄ. Kirjanpito syntyy vain,
+ * jos kutsuja on asettanut `ui.fokuskohdeNimioSyyt`-Mapin ennen
+ * passia — mittatyökalu (tools/savukkeet/mittaa-nostonimiot.mjs) tekee
+ * niin, peli ei. Pelissä tämä on siis yksi `instanceof`-vertailu niiden
+ * merkkien kohdalla, joiden nimiö putosi.
+ */
+function kirjaaNimionPudotus(ui, id, rivi, esteet) {
+  const kirja = ui?.fokuskohdeNimioSyyt;
+  if (!(kirja instanceof Map)) return;
+  const { symbolit, laatat, varatut } = esteet;
+  const syyt = rivi.puolet.map((puoli, p) => {
+    for (let n = 0; n < rivi.kehykset.length; n += 1) {
+      const kehys = rivi.kehykset[n][p];
+      const sym = symbolit.findIndex((este, j) => j !== rivi.indeksit[n]
+        && kohdeLimittyy(kehys, este));
+      if (sym >= 0) return { puoli, este: 'symboli', mika: sym };
+      const laatta = laatat.findIndex((este) => kohdeLimittyy(kehys, este));
+      if (laatta >= 0) return { puoli, este: 'kaupunki' };
+      const varattu = varatut.findIndex((este) => kohdeLimittyy(kehys, este));
+      if (varattu >= 0) return { puoli, este: 'nimio' };
+    }
+    return { puoli, este: 'tuntematon' };
+  });
+  kirja.set(id, syyt);
 }
 
 /* ============ NIMIÖT LUOVUTETAAN YHTEISEEN LADONTAAN ==============
@@ -1736,9 +1810,9 @@ function luovutaKohdeNimiot(ui, s, piilossa) {
   for (const r of ryhmat) {
     if (!r.glyyfi || !r.nimi || r.nimioNakyy === false || r.poltettu) continue;
     r.nimioNakyy = false;
-    r.nimioVasemmalle = false;
+    r.nimioPuoli = 'oikea';
     r.glyyfi.replaceChildren();
-    piirraNostosymKartalle(r.glyyfi, r.symboli, '', r.laji, false);
+    piirraNostosymKartalle(r.glyyfi, r.symboli, '', r.laji, 'oikea');
   }
 }
 
@@ -1781,18 +1855,25 @@ export function paivitaKohdeNimiot(ui, s) {
      * solmullinen. Piirto alempana tarkistaa solmun erikseen.
      */
     if (!r.nimi) return;
-    // Sama kaista molemmilta puolilta valmiiksi: mittaus on
-    // välimuistissa (NOSTOSYM_LEVEYDET), joten toinen laatikko on
-    // pelkkää peilausta eikä uutta canvas-mittausta.
+    // Kaikki neljä kylkeä valmiiksi: mittaus on välimuistissa
+    // (NOSTOSYM_LEVEYDET), joten laatikot ovat saman luvun
+    // uudelleenasettelua eivätkä uutta canvas-mittausta.
     const puolet = kohdeNimioPuolet(r);
-    const vaihtoehdot = puolet.map((vasemmalle) => {
+    const vaihtoehdot = puolet.map((puoli) => {
       const laatikko = nostosymNimioLaatikko(
-        r.nimi, r.g?.ownerSVGElement, r.laji, vasemmalle, r.nimioKatto,
+        r.nimi, r.g?.ownerSVGElement, r.laji, puoli, r.nimioKatto,
       );
       if (!laatikko) return null;
+      /*
+       * VÄLJYYSVARA SILLE REUNALLE, JOSTA NIMIÖ LÄHTEE MERKISTÄ POISPÄIN
+       * — vaakakyljillä ulompi pystyreuna, pystykyljillä molemmat sivut
+       * (nimiö on silloin keskitetty eikä kummallakaan sivulla ole
+       * merkkiä pitämässä väliä).
+       */
+      const pysty = puoli === 'yla' || puoli === 'ala';
       return {
-        x1: paikat[i].x + laatikko.x1 * k - (vasemmalle ? vara : 0),
-        x2: paikat[i].x + laatikko.x2 * k + (vasemmalle ? 0 : vara),
+        x1: paikat[i].x + laatikko.x1 * k - (pysty || puoli === 'vasen' ? vara : 0),
+        x2: paikat[i].x + laatikko.x2 * k + (pysty || puoli === 'oikea' ? vara : 0),
         y1: paikat[i].y + laatikko.y1 * k,
         y2: paikat[i].y + laatikko.y2 * k,
       };
@@ -1821,8 +1902,10 @@ export function paivitaKohdeNimiot(ui, s) {
           && !laatat.some((laatta) => kohdeLimittyy(kehys, laatta))
           && !varatut.some((varattu) => kohdeLimittyy(kehys, varattu));
       }));
-    if (valittu < 0) piilossa.add(id);
-    else {
+    if (valittu < 0) {
+      piilossa.add(id);
+      kirjaaNimionPudotus(ui, id, rivi, { symbolit, laatat, varatut });
+    } else {
       puolet.set(id, rivi.puolet[valittu]);
       varatut.push(...rivi.kehykset.map((vaihtoehdot) => vaihtoehdot[valittu]));
     }
@@ -1833,8 +1916,8 @@ export function paivitaKohdeNimiot(ui, s) {
   for (const r of ryhmat) {
     if (!r.nimi) continue;
     const nakyy = !piilossa.has(r.id);
-    const vasemmalle = puolet.get(r.id) ?? false;
-    if (r.nimioNakyy === nakyy && r.nimioVasemmalle === vasemmalle) continue;
+    const kylki = puolet.get(r.id) ?? 'oikea';
+    if (r.nimioNakyy === nakyy && r.nimioPuoli === kylki) continue;
     /*
      * PÄÄTÖS KIRJOITETAAN TIETUEESEEN ENNEN SOLMUEHTOA (31.8.2026).
      * Kentät olivat solmuehdon takana, ja koska laattageneraattori ajaa
@@ -1846,7 +1929,7 @@ export function paivitaKohdeNimiot(ui, s) {
      * LADONTAA, ja ladonnan tulos ei saa riippua siitä, onko ruutua.
      */
     r.nimioNakyy = nakyy;
-    r.nimioVasemmalle = vasemmalle;
+    r.nimioPuoli = kylki;
     // Poltetun merkin rasteri on tyhjä eikä sitä herätetä henkiin:
     // symboli ja nimiö ovat laatassa (merkitsePoltetutNostot).
     if (!r.glyyfi || r.poltettu) continue;
@@ -1855,7 +1938,7 @@ export function paivitaKohdeNimiot(ui, s) {
     // yhteinen kaikille saman lajin vaienneille merkeille.
     r.glyyfi.replaceChildren();
     piirraNostosymKartalle(
-      r.glyyfi, r.symboli, nakyy ? r.nimi : '', r.laji, vasemmalle, r.nimioKatto,
+      r.glyyfi, r.symboli, nakyy ? r.nimi : '', r.laji, kylki, r.nimioKatto,
     );
   }
 }
@@ -1882,7 +1965,15 @@ function paivitaRasteriporras(ui, skaala) {
     || ui.fokusMerkkiSkaalaKartalle?.() || ui.fokusMerkkiSkaala?.();
   if (!(perus > 0) || !(skaala > 0)) return false;
   const tiheys = typeof window === 'undefined' ? 1 : (window.devicePixelRatio || 1);
-  return nostosymAsetaPorras(KOHDE_SYMBOLI_SKAALA * skaala * perus * Math.min(tiheys, 3));
+  /*
+   * RUUTUKATTO KUULUU TÄHÄNKIN (1.9.2026). Rasterin tarve on merkin
+   * NÄKYVÄ koko, ja katon purressa merkki piirretään pienempänä kuin
+   * kattamaton mitta lupaisi (asetaKohdeMittakaava sPiirto) — ilman
+   * kattoa syvä zoomi tilaisi kolminkertaisen rasterin siitä musteesta,
+   * joka ruudulle päätyy.
+   */
+  const porras = nostoladontaKattoPorras(KOHDE_SYMBOLI_SKAALA * perus, skaala);
+  return nostosymAsetaPorras(porras * skaala * Math.min(tiheys, 3));
 }
 
 /**

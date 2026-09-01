@@ -3578,8 +3578,11 @@ export class UI {
     cancelAnimationFrame(this.merkkiPaluuKehys ?? 0);
     this.merkkiPaluuKehys = 0;
     this.merkitPiilossa = false;
+    this.merkkiZoomEle = false;
     document.body.classList.remove('kartta-merkit-piilossa');
     document.body.classList.remove('kartta-merkit-haipyy');
+    // Zoom-eleen oma luokka (maatummennus) samasta syystä.
+    document.body.classList.remove('kartta-tummennus-piilossa');
     // Lehden avauksen mittavarmistuksen jälkitarkistukset samoin.
     clearTimeout(this.lehtitila.lehtiMittaAjastin);
     clearTimeout(this.lehtitila.lehtiMittaJalkiajastin);
@@ -4079,7 +4082,9 @@ export class UI {
         else this.kartta?.naytaMerkit?.(true);
         document.body.classList.remove('kartta-merkit-piilossa');
         document.body.classList.remove('kartta-merkit-haipyy');
+        document.body.classList.remove('kartta-tummennus-piilossa');
         this.merkitPiilossa = false;
+        this.merkkiZoomEle = false;
       }
     }
     return Boolean(this.osoitinKartalla || this.kartanRaahaus);
