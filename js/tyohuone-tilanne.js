@@ -55,6 +55,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1412: VESISTOTARINAT + KOROSTUSVARTIJA - jaetut merikortit saivat yhteisen tarinan ja maakohtaisen hannan (Itameren laivamato ja Vasa, Perameren maankohoaminen, latimeria), Corvinin linna 182 -> 883 mrk, ja 48 rikkinaista korostusta korjattu uudella vartiotestilla. Avaa Itameri Virossa ja Ruotsissa ja vertaa hantia.',
   'v1411: MAASTOKORTIT TARINOIKSI - 60 maastonoston kortti kirjoitettu tarinaksi (mm. Aneton kirottu vuori, Kemijoen uitto, Hombori Tondon jyrkanteet) ja 13 elaintakyn faktat korjattu lahteisiin (mm. Viron kansalliselain on susi). Avaa vuori- tai jokinosto ja lue kortti.',
   'v1410: LAHDERIVI JOKAISELLE NOSTOLLE - syvennykset, skandaalit, elaintayt ja takynostot nayttavat nyt lahteensa kortin lopussa (232 uutta lahderivia, koneellisesti tarkistettu). Avaa mika tahansa syvennys- tai skandaalikortti ja katso lahde tekstin lopusta.',
   'v1409: NOSTOJEN FAKTAKORJAUKSET - Carmenin ensi-ilta on nyt Pariisissa (Salle Favart), Sofian korut Mykenessa, Madridin papukaijat ja Velazquez omilla pisteillaan, ja Sofian areenan, Rooman kissojen ja Tuileriain kaksoistekstit erotettu. Avaa Ranska ja Kreikka ja lue kortit.',
