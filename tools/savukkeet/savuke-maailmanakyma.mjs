@@ -203,6 +203,11 @@ const tila = () => sivu.evaluate(() => {
     // luetteloa nolla, ks. väite 10d.
     karttanimia: ui.svg.querySelectorAll('.karttanimet .karttanimi').length,
     nakyvanLeveys: Math.round(ui.nakyvaAlue?.()?.w ?? 0),
+    tummennusSolmut: ui.svg.querySelectorAll('.maatummennus > *').length,
+    tummennusNakyy: (() => {
+      const k = ui.svg.querySelector('.maatummennus');
+      return k ? getComputedStyle(k).display !== 'none' : false;
+    })(),
   };
 });
 
@@ -283,8 +288,78 @@ console.log(`      mitattu: panoroinnin longtaskit ${panLt.length} kpl,`
   + ` summa ${panSumma} ms, pahin ${panPahin} ms`);
 
 const panTila = await tila();
+console.log(`      mitattu: maatummennus ${panTila.tummennusSolmut} solmua,`
+  + ` näkyvissä ${panTila.tummennusNakyy}`);
 console.log(`      mitattu: näkyviä kaupunkiosia ${panTila.citiesNakyvia}`
   + ` / ${panTila.citiesSolmut} (rajattuja ${panTila.rajattuja})`);
+
+/* --- 1b: MAATUMMENNUS PYSYY PANOROINNISSA, VÄISTYY NIPISTYKSESSÄ ---
+ *
+ * Omistaja 1.9.2026 aamu: *"Kartan tummennus voisi pysyä panoroitaessa
+ * päällä."* Kerros oli siihen asti samassa display:none-joukossa kuin
+ * merkkikerrokset, eli piilossa koko eleen ajan (js/kartta.js
+ * piilotaMerkit, css/styles.css).
+ *
+ * TILA LUETAAN KESKEN ELEEN, ei sen jälkeen: eleen jälkeen kerros on
+ * takaisin näkyvissä kummallakin tavalla, joten levossa mitattu luku ei
+ * erottaisi korjausta mistään. Ele katkaistaan siksi puoliväliin ja
+ * luetaan siitä.
+ */
+const eleenAikainenTila = async (nipistys) => {
+  const cx = 195; const cy = 480;
+  if (nipistys) {
+    const piste = (v, k) => ({ x: cx + Math.cos(k) * v, y: cy + Math.sin(k) * v });
+    await cdp.send('Input.dispatchTouchEvent', {
+      type: 'touchStart',
+      touchPoints: [{ ...piste(80, 0), id: 1 }, { ...piste(80, Math.PI), id: 2 }],
+    });
+    for (let i = 1; i <= 6; i++) {
+      const v = 80 + (80 * 1.6 - 80) * (i / 6);
+      await cdp.send('Input.dispatchTouchEvent', {
+        type: 'touchMove',
+        touchPoints: [{ ...piste(v, 0), id: 1 }, { ...piste(v, Math.PI), id: 2 }],
+      });
+      await sivu.waitForTimeout(16);
+    }
+  } else {
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x: 280, y: 420, id: 1 }] });
+    for (let i = 1; i <= 6; i++) {
+      await cdp.send('Input.dispatchTouchEvent', {
+        type: 'touchMove',
+        touchPoints: [{ x: 280 - i * 20, y: 420, id: 1 }],
+      });
+      await sivu.waitForTimeout(16);
+    }
+  }
+  const tulos = await sivu.evaluate(() => {
+    const kerros = window.matkakirja.ui.svg.querySelector('.maatummennus');
+    return {
+      merkitPiilossa: document.body.classList.contains('kartta-merkit-haipyy'),
+      tummennusNakyy: kerros ? getComputedStyle(kerros).display !== 'none' : null,
+      kohteetNakyy: (() => {
+        const k = window.matkakirja.ui.svg.querySelector('.fokuskohteet');
+        return k ? getComputedStyle(k).display !== 'none' : null;
+      })(),
+    };
+  });
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+  await sivu.waitForTimeout(900);
+  return tulos;
+};
+
+const panEle = await eleenAikainenTila(false);
+console.log(`      mitattu: panoroinnin aikana merkit piilossa ${panEle.merkitPiilossa},`
+  + ` tummennus näkyvissä ${panEle.tummennusNakyy}`);
+vaadi('1b maatummennus pysyy näkyvissä panoroinnin ajan',
+  panEle.merkitPiilossa && panEle.tummennusNakyy === true && panEle.kohteetNakyy === false,
+  JSON.stringify(panEle));
+
+const zoomEle = await eleenAikainenTila(true);
+console.log(`      mitattu: nipistyksen aikana merkit piilossa ${zoomEle.merkitPiilossa},`
+  + ` tummennus näkyvissä ${zoomEle.tummennusNakyy}`);
+vaadi('1c maatummennus väistyy nipistyksen ajaksi',
+  zoomEle.merkitPiilossa && zoomEle.tummennusNakyy === false,
+  JSON.stringify(zoomEle));
 
 /*
  * Väite 1 on korjauksen ydin ja ainoa tiukka luku: ilman rajausta tässä

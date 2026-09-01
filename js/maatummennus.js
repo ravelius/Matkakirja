@@ -74,15 +74,31 @@
  *
  * === ELEKÄYTÖS (v1395:n kaksivaiheinen koneisto) ===================
  *
- * Kerros on `.kartta-merkit-haipyy`-luokan display:none-joukossa
- * (css/styles.css), joten se katoaa eleen ENSIMMÄISESSÄ kehyksessä
- * eikä ole maalikierroksessa lainkaan sormen alla. Paluu feidaa:
- * kerroksella on `animation`, ei `transition`, koska display:none →
- * näkyvä ei laukaise siirtymää mutta KÄYNNISTÄÄ animaation alusta.
- * Sama kaksivaiheisuus tuo kerroksen takaisin vasta levon jälkeen
- * (js/kartta.js paljastaMerkit), jolloin feidaus alkaa siitä hetkestä.
- * Nauhoitettu 31.8.2026: kerros katosi 13 ms:ssä eleen alusta ja palasi
- * 0 → 1 noin 320 ms:ssä levon jälkeen.
+ * KERROS VÄISTYY VAIN ZOOMISSA (omistaja 1.9.2026 aamu, sanatarkasti:
+ * *"Kartan tummennus voisi pysyä panoroitaessa päällä."*). Kerros oli
+ * 31.8.2026 illasta lähtien samassa display:none-joukossa kuin
+ * merkkikerrokset, eli piilossa KOKO eleen ajan; nyt sillä on oma
+ * luokkansa `.kartta-tummennus-piilossa`, jonka js/kartta.js
+ * piilotaMerkit asettaa vain kun eleen MITTAKAAVA muuttuu.
+ *
+ * Ero on maalikierroksessa eikä maussa. Panoroinnissa varjo on
+ * staattinen polku, jonka emoryhmän siirto liikuttaa kompositorilla —
+ * ei ladontaa, ei uudelleenmaalausta. Nipistyksessä se skaalataan joka
+ * kehyksellä, ja juuri nipistyksen longtaskit olivat koko piilotuksen
+ * syy (taulukko alempana). Mitattu 1.9.2026 samalla savukkeella (kuusi
+ * ajoa ennen, viisi jälkeen): panoroinnin longtaskit
+ * 114/106/102/76/55/0 ms -> 161/121/107/53/52 ms (mediaani 89 -> 107)
+ * ja nipistyksen 686/670/621/618/561/558 -> 693/636/602/592/537
+ * (mediaani 620 -> 602). Panorointi ei siis kallistunut ajokohinaa
+ * enempää.
+ *
+ * Zoom-eleen paluu feidaa: kerroksella on `animation`, ei `transition`,
+ * koska display:none → näkyvä ei laukaise siirtymää mutta KÄYNNISTÄÄ
+ * animaation alusta. Kaksivaiheinen koneisto tuo kerroksen takaisin
+ * vasta levon jälkeen (js/kartta.js paljastaMerkit), jolloin feidaus
+ * alkaa siitä hetkestä. Nauhoitettu 31.8.2026: kerros katosi 13 ms:ssä
+ * eleen alusta ja palasi 0 → 1 noin 320 ms:ssä levon jälkeen.
+ * Panoroinnissa feidausta ei ole, koska kerros ei koskaan katoa.
  *
  * FEIDATTAVA OMINAISUUS ON PERITTY `fill-opacity` / `stroke-opacity`
  * EIKÄ RYHMÄN `opacity`, ja animaatio on PORTAIKKO. Kumpikin on
