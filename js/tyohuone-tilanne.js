@@ -55,6 +55,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1422: KUVAPINOKAUPUNGIT EIVAT ENAA KAADA PELIA - 12 kaupungissa (mm. Dubai, Doha, Astana, Kap Horn, Norfolk) saapuminen kaatoi koko renderin, koska kaupungin kuvarivilla on vain kuvapino ilman ylatason historiakuvaa. Nyt pikkukuvaksi kelpaa pinon ensimmainen kuva ja postikorttipino alkaa suoraan naista. Matkusta Dubaihin ja avaa kuvakortti.',
   'v1421: PUDOTETUT NOSTOT KAUPUNKILEHTIIN - kaupunkikaton (v1419) kartalta pudottamat 55 nostoa ovat nyt 21 kaupungin lehdissa: mm. Pariisiin, Sofiaan, Ateenaan, Wieniin, Berliiniin, Roomaan ja Dubliniin uudet aihesivut minitehtavineen, loput kansille ja vanhoille sivuille. 12 jai siirtamatta (7 skandaalia ilman kuvaa, 3 duplikaattia, 2 sulautettu). Avaa Pariisin lehden Historia-sivu.',
   'v1420: REITTIEN KATKOTYYLI VALMIS - katkoviiva viiva 9 / jakso 190, askelhelmi katkon keskella (viiva ei koskaan osu helmeen), rinnakkaiset merireitit yhdistyvat yhdeksi uraksi liittymasilloilla (~90 % rinnakkaismusteesta pois, mm. Dakarin ja Rooman edustat). Nakyy kartalla vasta uuden viivatasopolton jalkeen. Katso Joonianmeri ja Dakar poltosta.',
   'v1419: KAUPUNKINOSTOJEN KATTO - kohdekaupungin viereen jaa enintaan 3 nostoa, ihmeet ja skandaalit ensin (Sofia 9->3, Ateena 10->3, Istanbul 9->3); muut siirtyvat kaupunkilehtiin erillisessa erassa. Nakyy kartalla vasta uuden nostopolton jalkeen (vanha taso piilossa v3-saantoon asti). Avaa Sofia ja laske merkit.',

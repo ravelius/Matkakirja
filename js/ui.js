@@ -10585,8 +10585,21 @@ export class UI {
       this.suljePostikortti();
       return;
     }
+    /*
+     * Kaupungilla ei aina ole omaa historiakuvaa: esimerkiksi Dubain
+     * rivillä on vain lisat-pino ja uusi kuva. Pikkukuvaksi kelpaa
+     * pinon ensimmäinen kuva — ilman varakuvaa valokuvaUrl(undefined)
+     * kaataisi koko renderin kaupunkiin saavuttaessa.
+     */
+    const esikuva = valokuva.tiedosto
+      ?? valokuva.lisat?.[0]?.tiedosto ?? valokuva.uusi?.tiedosto;
+    if (!esikuva) {
+      this.factValokuva.hidden = true;
+      this.suljePostikortti();
+      return;
+    }
     asetaKuva(this.factValokuvaKuva,
-      valokuvaUrl(valokuva.tiedosto, 160), valokuvaVara(valokuva.tiedosto, 160));
+      valokuvaUrl(esikuva, 160), valokuvaVara(esikuva, 160));
     this.factValokuva.hidden = false;
   }
 
@@ -10640,8 +10653,13 @@ export class UI {
      * näkymät, viimeisenä nykypäivä. Näin pino kertoo saman tarinan kuin
      * teksti ja päättyy siihen, mitä paikasta on jäljellä.
      */
+    // Ylätason historiakuva voi puuttua (rivillä vain lisat/uusi) —
+    // silloin pino alkaa suoraan päiväkirjan näkymistä.
+    const onHistoriakuva = Boolean(tiedot.tiedosto);
     const pino = [
-      { ...tiedot, alt: `Vanha valokuva: ${tiedot.paikka}` },
+      ...(onHistoriakuva
+        ? [{ ...tiedot, alt: `Vanha valokuva: ${tiedot.paikka}` }]
+        : []),
       ...(tiedot.lisat ?? []).map((k) => ({
         ...k,
         alt: `${k.selite ? k.selite.slice(0, 60) : tiedot.paikka}`,
@@ -10661,9 +10679,10 @@ export class UI {
         kuvaTiedot === pino[pino.length - 1] && tiedot.uusi ? 'uusi' : '',
         i === 0 ? '' : 'alla',
       ].filter(Boolean).join(' ');
-      // Pinon ensimmainen on kaupungin historiakuva. Jos siita puuttuu
-      // vuosi, se on silti vanha — muissa oletus on varillinen.
-      const osa = teeKortti(kuvaTiedot, luokat, kuvaTiedot.alt, i === 0);
+      // Pinon ensimmainen on kaupungin historiakuva (jos sellainen on).
+      // Jos siita puuttuu vuosi, se on silti vanha — muissa oletus on
+      // varillinen.
+      const osa = teeKortti(kuvaTiedot, luokat, kuvaTiedot.alt, i === 0 && onHistoriakuva);
       // Laskuri kertoo, että kuvia on lisää — muuten pinon alta
       // pilkottava reuna jää helposti huomaamatta.
       if (pino.length > 1) {
