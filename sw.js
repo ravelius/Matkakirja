@@ -34,6 +34,8 @@ const SHELL = [
   './js/opas.js',
   './js/lehti.js',
   './js/ehdotukset.js',
+  './js/kuvavinkki.js',
+  './js/havainnekuva.js',
   './js/reaktiot.js',
   './js/tekijakortti.js',
   './js/luenta.js',

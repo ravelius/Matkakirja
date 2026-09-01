@@ -448,6 +448,18 @@ const MODULES = [
   // tuovat sen; moduuli tuo ui-apurit ja minipopupin, jotka ovat yllä).
   'js/ehdotukset.js',
   /*
+   * KUVIEN SYÖTTÖPUTKI (1.9.2026) ennen havainnekuvaa ja ui:ta: moduuli
+   * tuo ui-apurit, minipopupin ja ehdotukset, jotka ovat yllä.
+   */
+  'js/kuvavinkki.js',
+  /*
+   * Havainnekuvan selite ennen tekijakorttia: taytaLahderivi kutsuu
+   * merkitseHavainnekuvaa, ja jokainen lähderivin piirtäjä kulkee sen
+   * kautta. Moduuli tuo kuvavinkin (yllä), ehdotukset, minipopupin ja
+   * ui-apurit.
+   */
+  'js/havainnekuva.js',
+  /*
    * Reaktiot (peukku ja virheilmoitus) ennen artikkeleiden piirtäjiä:
    * nähtävyydet, maalehti, fokuskohteet ja ui tuovat sen. Moduuli tuo
    * vain ui-apurit ja ehdotukset, jotka ovat yllä — versio luetaan

@@ -118,6 +118,8 @@ import {
   polloVihje, polloVihjePois,
 } from './pollo.js';
 import { ajastaEhdotusKupla, ehdotusOsio, proHakuRasti, proOsio } from './ehdotukset.js';
+import { kuvavinkkiOsio } from './kuvavinkki.js';
+import { merkitseHavainnekuva } from './havainnekuva.js';
 /*
  * Livian omat kuplat (js/livia.js): avausesittely aloitusvalinnassa
  * lähtee kartasta (zoomaaAloituskartta), mutta sen peruminen ja
@@ -10553,8 +10555,9 @@ export class UI {
        */
       const teksti = html('p', 'kuvateksti');
       if (kuvaTiedot.selite) teksti.appendChild(document.createTextNode(kuvaTiedot.selite));
-      teksti.appendChild(html('span', 'kuvalahde',
-        [tiedot.paikka, kuvaTiedot.vuosi, kuvaTiedot.lahde].filter(Boolean).join(' · ')));
+      teksti.appendChild(taytaLahderivi(html('span', 'kuvalahde'),
+        [tiedot.paikka, kuvaTiedot.vuosi, kuvaTiedot.lahde].filter(Boolean).join(' · '),
+        kuvaTiedot));
       osa.appendChild(teksti);
       return osa;
     };
@@ -12538,7 +12541,9 @@ export class UI {
       } else asetaKuva(kuva, valokuvaSuurennos(teos.tiedosto, 1600), valokuvaUrl(teos.tiedosto, 1600));
       kuva.alt = teos.otsikko ?? teos.selite ?? '';
       kuvaselite.textContent = teos.selite ?? '';
-      kuvalahde.textContent = [teos.otsikko, teos.lahde].filter(Boolean).join(' · ');
+      // Lähderivi kootaan joka kuvanvaihdossa uudestaan; taytaLahderivi
+      // tyhjentää elementin, joten havainnekuvaselite syntyy mukana.
+      taytaLahderivi(kuvalahde, [teos.otsikko, teos.lahde].filter(Boolean).join(' · '), teos);
       kuvateksti.hidden = !kuvaselite.textContent && !kuvalahde.textContent;
       /*
        * "MATKAKIRJAN IHME" -NAUHA MYÖS TÄHÄN KATSELIMEEN (omistaja
@@ -13727,7 +13732,10 @@ export class UI {
       // (23.8.2026): CC BY vaatii tekijän maininnan myös
       // suurennoksessa, jossa kuva on isoimmillaan.
       kuvateksti.textContent = kohde.caption ?? '';
-      if (kohde.lahde) kuvateksti.appendChild(html('span', 'lightbox-lahde', kohde.lahde));
+      if (kohde.lahde) {
+        kuvateksti.appendChild(taytaLahderivi(html('span', 'lightbox-lahde'),
+          kohde.lahde, kohde));
+      }
       kuvateksti.hidden = !kohde.caption && !kohde.lahde;
       counter.textContent = kuvat.length > 1 ? `${kohdalla + 1} / ${kuvat.length}` : '';
       prev.hidden = next.hidden = kuvat.length < 2;
@@ -14321,6 +14329,16 @@ export class UI {
     const rasti = proHakuRasti();
     const laheta = osio?.querySelector('.periaate-laheta');
     if (rasti && laheta) laheta.before(rasti);
+    /*
+     * KUVIEN SYÖTTÖPUTKI (omistajan tilaus 1.9.2026): "Vinkkaa paikasta
+     * kuvalla" ehdotusosion RINNALLE omana väkäsenään
+     * (js/kuvavinkki.js). Eri kanava eri pakollisilla kentillä —
+     * kuvavinkki vaatii oikeusvakuutuksen ja käyttöluvan, juttuidea ei
+     * vaadi kuvaa lainkaan — eikä kahta eri pakollisuutta voi ladota
+     * samaan lomakkeeseen ilman että kumpikin hämärtyy.
+     */
+    const kuvavinkki = kuvavinkkiOsio(this.ehdotusSivu(tilanne));
+    if (kuvavinkki) lohko.appendChild(kuvavinkki);
     const pro = proOsio();
     if (pro) lohko.appendChild(pro);
   }
@@ -15736,6 +15754,19 @@ export class UI {
     if (this.quizKohtaaminenSelite) this.quizKohtaaminenSelite.textContent = tiedot.kuvateksti ?? '';
     if (this.quizKohtaaminenKuvateksti) {
       this.quizKohtaaminenKuvateksti.hidden = !tiedot.kuvateksti;
+      /*
+       * HAVAINNEKUVASELITE MYÖS KOHTAAMISKORTTIIN (1.9.2026). Tämä on
+       * talon ainoa lähderivi, joka on KIINTEÄÄ HTML:ää (index.html
+       * "Matkakirjan kuvitus") eikä kulje taytaLahderivin kautta, joten
+       * se merkitään tässä samalla apurilla. Merkintä on kertaluontoinen
+       * — merkitseHavainnekuva ohittaa jo merkityn rivin — joten kutsu
+       * kestää kortin uudelleennäytöt.
+       */
+      merkitseHavainnekuva(
+        this.quizKohtaaminenKuvateksti.querySelector('.kuvalahde'),
+        KOHTAAMISKUVAN_LAHDE,
+        { osoite: tiedot.osoite },
+      );
     }
     kuvio.hidden = false;
   }

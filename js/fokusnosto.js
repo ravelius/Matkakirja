@@ -127,6 +127,7 @@ import { fokusvirtaSisalto } from './fokusvirta.js';
 import { fokusvirtaKaupungille } from './packs/fokusvirrat.js';
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
+import { taytaLahderivi } from './tekijakortti.js';
 
 /* ==================== POOLI ==================== */
 
@@ -889,7 +890,9 @@ function piirraNostonSisus(ui, sisalto, nosto) {
   }
   sisalto.appendChild(teksti);
   if (nosto.valokuva) piirraNostonValokuva(ui, sisalto, nosto.valokuva);
-  if (nosto.lahde) sisalto.appendChild(html('p', 'fokusnosto-lahde', nosto.lahde));
+  if (nosto.lahde) {
+    sisalto.appendChild(taytaLahderivi(html('p', 'fokusnosto-lahde'), nosto.lahde, nosto));
+  }
   // Karttaliite tulee jutun JÄLKEEN, myös lähderivin jälkeen: se ei ole
   // jutun kuvitusta vaan erillinen arkki jutun välissä (ks.
   // piirraNostonKarttaliite).
@@ -1086,7 +1089,7 @@ export function piirraNostonKuva(
   const teksti = html('figcaption', 'fokusnosto-kuvateksti');
   teksti.append(
     html('span', 'fokusnosto-kuvaselite', kuva.selite ?? ''),
-    html('span', 'fokusnosto-kuvalahde', kuva.lahde ?? ''),
+    taytaLahderivi(html('span', 'fokusnosto-kuvalahde'), kuva.lahde ?? '', kuva),
   );
   kehys.appendChild(teksti);
   kohde.appendChild(kehys);
@@ -1159,7 +1162,7 @@ function piirraNostonKarttaliite(ui, kohde, kartta) {
   const teksti = html('figcaption', 'fokusnosto-kuvateksti');
   teksti.append(
     html('span', 'fokusnosto-kuvaselite', kartta.selite ?? ''),
-    html('span', 'fokusnosto-kuvalahde', kartta.lahde ?? ''),
+    taytaLahderivi(html('span', 'fokusnosto-kuvalahde'), kartta.lahde ?? '', kartta),
   );
   kehys.appendChild(teksti);
   liite.appendChild(kehys);

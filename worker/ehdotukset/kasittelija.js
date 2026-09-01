@@ -44,6 +44,7 @@ import {
   haeReaktiot, kirjaaReaktio, listaaReaktiot, merkitseKorjatuksi,
   reaktioOmistajanPolku, reaktioPolku,
 } from './reaktiot.js';
+import { kuvavinkkiPolku, kuvavinkkiReitti } from './kuvavinkki.js';
 
 /** Sallitut kuvatyypit ja niiden tiedostopäätteet. */
 export const KUVA_TYYPIT = {
@@ -150,7 +151,7 @@ export function teeKansio(nyt, tunnus) {
 }
 
 /** Satunnainen tunnus (kansiossa on jo aikaleima, joten kuusi merkkiä riittää). */
-function satunnainenTunnus() {
+export function satunnainenTunnus() {
   const tavut = new Uint8Array(4);
   crypto.getRandomValues(tavut);
   return [...tavut].map((t) => t.toString(16).padStart(2, '0')).join('').slice(0, 6);
@@ -514,6 +515,40 @@ export async function kasittele(pyynto, env, apurit = {}) {
       return vastaa({ virhe: 'Origin ei ole sallittu' }, { status: 403, ...kors });
     }
     return laheta(pyynto, env, kors, apurit);
+  }
+
+  /*
+   * KUVIEN SYÖTTÖPUTKI (worker/ehdotukset/kuvavinkki.js). Sama portti
+   * kuin /laheta:lla — selaimesta tuleva kirjoitus, joten origin-
+   * tarkistus on ainoa este. Apurit annetaan kimppuna, jotta
+   * lomakkeenluku ja ämpärin kirjoitus pysyvät yhtenä toteutuksena.
+   */
+  if (kuvavinkkiPolku(url.pathname)) {
+    if (pyynto.method !== 'POST') {
+      return vastaa({ virhe: 'Vain POST' }, { status: 405, ...kors });
+    }
+    if (!sallittuOrigin(origin, sallitut)) {
+      return vastaa({ virhe: 'Origin ei ole sallittu' }, { status: 403, ...kors });
+    }
+    return kuvavinkkiReitti({
+      pyynto,
+      env,
+      kors,
+      apurit,
+      apu: {
+        vastaa,
+        kentta,
+        tekstikentta,
+        rasti,
+        teeKansio,
+        satunnainenTunnus,
+        kuvaTyypit: KUVA_TYYPIT,
+        tekstinKatto: TEKSTIN_KATTO,
+        tunnistaPro,
+        normalisoiSahkoposti,
+        vertaa: vertaaSalaisuus,
+      },
+    });
   }
 
   /*

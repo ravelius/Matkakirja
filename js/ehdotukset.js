@@ -200,11 +200,15 @@ export async function skaalaaEhdotusKuva(tiedosto, sivu = EHDOTUS_KUVAN_SIVU) {
  * käsittelevät vastauksen samalla tavalla: JSON jos on, workerin oma
  * virheteksti jos se antoi sellaisen, muuten HTTP-numero.
  *
+ * Viety ulos, jotta kuvien syöttöputki (js/kuvavinkki.js) käyttää
+ * täsmälleen samaa postitusta ja samaa virheenkäsittelyä — kaksi
+ * toteutusta erkanisi ensimmäisessä virhemuodossa.
+ *
  * @param {string} polku workerin reitti, esim. '/laheta'
  * @param {FormData} lomake lähetettävä lomake
  * @returns {Promise<object>} workerin vastaus
  */
-async function postita(polku, lomake) {
+export async function postita(polku, lomake) {
   const vastaus = await fetch(`${EHDOTUS_OSOITE}${polku}`, { method: 'POST', body: lomake });
   let data = null;
   try { data = await vastaus.json(); } catch { /* tyhjä runko */ }

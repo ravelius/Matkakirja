@@ -19712,6 +19712,101 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
 .tekija-nappi:hover,
 .tekija-nappi:focus-visible { text-decoration: underline; }
 
+/* ------------------------------------------------------------------ *
+ * HAVAINNEKUVAN SELITE (omistajan hyväksyntä 1.9.2026)
+ *
+ * Lähderivin maininta "Matkakirjan havainnekuva" on painike, joka
+ * avaa selitteen siitä, miksi peli piirtää osan kuvistaan itse
+ * (js/havainnekuva.js). Ulkoasu on TARKOITUKSELLA melkein olematon:
+ * kevyt pisteviiva himmeällä musteella, ei väriä eikä nappulan
+ * muotoa. Lähderivi on lisenssimerkintä kuvatekstin perässä pienellä
+ * — jos se alkaisi näyttää linkiltä, se veisi huomion kuvatekstiltä,
+ * jota sen on tarkoitus vain seurata.
+ *
+ * ERI VIIVA KUIN TEKIJÄNAPILLA: tekijänappi käyttää
+ * text-decorationia, joka piirtyy tekstin päälle kirjainten väliin.
+ * Tässä viiva on border-bottom, jotta se on yhtenäinen kaista sanan
+ * alla eikä katkeile pilkkujen kohdalta — omistajan sana oli
+ * "pisteviiva-alleviivaus". Molemmat voivat esiintyä samalla rivillä
+ * (pro-tuottajan havainnekuva), ja silloin ero on se, kumpi on mitä.
+ * ------------------------------------------------------------------ */
+.havainnekuva-selite {
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-bottom: 1px dotted rgba(70, 51, 31, 0.55);
+  border-radius: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.havainnekuva-selite:hover,
+.havainnekuva-selite:focus-visible {
+  border-bottom-color: rgba(70, 51, 31, 0.9);
+  border-bottom-style: solid;
+}
+
+/*
+ * Tummalla pohjalla (suurennos, katselin) lähderivi on vaalea, joten
+ * viivan on seurattava tekstiä eikä paperia.
+ */
+.lightbox-lahde .havainnekuva-selite,
+.fokuszoom-lahde .havainnekuva-selite,
+.fokuskohde-zoomlahde .havainnekuva-selite {
+  border-bottom-color: rgba(245, 240, 230, 0.55);
+}
+
+.lightbox-lahde .havainnekuva-selite:hover,
+.lightbox-lahde .havainnekuva-selite:focus-visible,
+.fokuszoom-lahde .havainnekuva-selite:hover,
+.fokuszoom-lahde .havainnekuva-selite:focus-visible,
+.fokuskohde-zoomlahde .havainnekuva-selite:hover,
+.fokuskohde-zoomlahde .havainnekuva-selite:focus-visible {
+  border-bottom-color: rgba(245, 240, 230, 0.95);
+}
+
+/* Palautenappi selitepopupin pohjalla: tavallinen primary-nappi, mutta
+   koko leveydeltä, koska se on ikkunan ainoa toiminto. */
+.havainnekuva-palautenappi {
+  display: block;
+  width: 100%;
+  margin: 0.7rem 0 0;
+}
+
+/*
+ * KUVAVINKKILOMAKE POPUPISSA (js/kuvavinkki.js avaaKuvapalaute).
+ * Lomake on sama kuin valikossa, mutta minipopupin kortti on kapeampi
+ * kuin valikon lomakepalsta — kentät venytetään kortin leveyteen,
+ * jottei select jää puoleen väliin.
+ */
+.kuvavinkki-popup .periaate-ehdotus {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.kuvavinkki-popup .periaate-kentta,
+.kuvavinkki-popup .periaate-nimio { width: 100%; }
+
+/* Oikeuslohko erottuu omaksi ryhmäkseen: kaksi pakollista valintaa,
+   jotka eivät saa hukkua vapaaehtoisten kenttien sekaan. */
+.kuvavinkki-oikeudet {
+  margin: 0.6rem 0;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid rgba(70, 51, 31, 0.22);
+  border-radius: 0.4rem;
+  background: rgba(70, 51, 31, 0.04);
+}
+
+.kuvavinkki-oikeudet > .periaate-valiotsikko { margin-top: 0; }
+
+/* Palautteen kohderivi: mistä kuvasta palaute annetaan. */
+.kuvavinkki-kohde { font-style: italic; }
+
 /* Tekijäsivu: sama kerros ja kortti kuin lippuikkunassa. */
 dialog.tekija-ikkuna {
   border: none;

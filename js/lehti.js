@@ -49,7 +49,9 @@ import {
   haeSaaTanaan, kuukausiSsa, piirraVuosiSaa, saaKuvaus, vuosiSaaSelite, SAA_IKONIT,
 } from './saa.js';
 import { ARTIKKELIT, KULTTUURIT } from './sisaltotaulut.js';
+import { kayttoluvanNimi } from './kuvavinkki.js';
 import { sfx } from './sound.js';
+import { taytaLahderivi } from './tekijakortti.js';
 import { RAAMATTU } from './tyohuone-raamattu.js';
 import { TESTATTAVAA, TILANNE, TUOREET } from './tyohuone-tilanne.js';
 import { raamatunTaulusivu, tilastoSivut } from './tyohuone-tilastot.js';
@@ -1113,9 +1115,40 @@ function lukijoiltaOhjeSivu(teksti) {
   }];
 }
 
+/**
+ * Kuvavinkin ja havainnekuvapalautteen omat rivit (1.9.2026,
+ * kuvien syöttöputki).
+ *
+ * Nämä tulevat samasta jonosta kuin tavalliset ehdotukset
+ * (worker/ehdotukset/kuvavinkki.js kirjoittaa saman etuliitteen alle),
+ * joten lista on yksi — mutta kuvavinkillä on kaksi asiaa, joita
+ * juttuideassa ei ole ja joita ilman kuvaa ei voi käyttää: PAIKKA ja
+ * OIKEUDET. Ne nostetaan tekstin kärkeen, koska juuri niiden takia
+ * kuva joko kelpaa tai ei kelpaa.
+ */
+function kuvavinkinRivit(e) {
+  const rivit = [];
+  if (e.laji === 'kuvapalaute') {
+    rivit.push('PALAUTE HAVAINNEKUVASTA');
+    if (e.kuvatunnus) rivit.push(`Kuva: ${e.kuvatunnus}`);
+    if (e.kuvalahde) rivit.push(`Lähderivi: ${e.kuvalahde}`);
+  } else if (e.laji === 'kuvavinkki') {
+    rivit.push('KUVAVINKKI PAIKASTA');
+  }
+  if (e.paikka) rivit.push(`Paikka: ${e.paikka}`);
+  if (e.kuvaoikeudet) {
+    rivit.push(`Oikeudet: ${e.kuvaoikeudet.omaKuva
+      ? 'lähettäjä vakuuttaa ottaneensa kuvan itse ja omistavansa oikeudet'
+      : 'EI VAKUUTUSTA'}`);
+    rivit.push(`Käyttölupa: ${kayttoluvanNimi(e.kuvaoikeudet.kayttolupa)}`);
+  }
+  if (e.pro) rivit.push(`PRO-LÄHDE: ${e.pro.nimi || e.pro.tekijaId}`);
+  return rivit;
+}
+
 /** Yhden ehdotuksen tiedot leipätekstiksi. */
 function lukijoiltaTiedot(e) {
-  const rivit = [];
+  const rivit = kuvavinkinRivit(e);
   if (e.teksti) rivit.push(e.teksti);
   if (e.sivu) rivit.push(`Sivuehdotus: ${e.sivu}`);
   if (e.tarkenne) rivit.push(`Tarkenne: ${e.tarkenne}`);
@@ -1920,7 +1953,9 @@ export function piirraLehtiKuvat(ui, kuvat, avauskuvat = null, ennenNyt = null) 
       teksti.appendChild(document.createTextNode(teos.selite));
       // Väli tulee CSS:n ::before-sisällöstä, ei tekstistä
       // (css/styles.css "LÄHDERIVI KUVATEKSTIN JATKEEKSI").
-      if (teos.lahde) teksti.appendChild(html('span', 'lehti-kuvalahde', teos.lahde));
+      if (teos.lahde) {
+        teksti.appendChild(taytaLahderivi(html('span', 'lehti-kuvalahde'), teos.lahde, teos));
+      }
       kotelo.appendChild(teksti);
     }
     return kotelo;

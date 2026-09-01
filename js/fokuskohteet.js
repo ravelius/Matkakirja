@@ -142,6 +142,7 @@ import { nostoOnPoltettu } from './laattapyramidi.js';
 import { nostoladontaKattoPorras, nostoladontaTiiviste } from './nostoladonta.js';
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
+import { taytaLahderivi } from './tekijakortti.js';
 
 /*
  * Maakohtaiset kohdelistat ISO-tunnuksella. Sama tunnus kuin
@@ -2581,6 +2582,19 @@ function kohteenIhmekuva(kohde) {
     selite: ihme.selite ?? '',
     lahde: ihme.lahde ?? '',
     nauha: KOHDE_IHMENAUHA,
+    /*
+     * IHMEKUVAN LIPPU (omistajan lisäys 1.9.2026). Kadonneen ihmeen
+     * rekonstruktio saa lähderivin selitepopupista oman tekstinsä
+     * ("Mihin ihmeen kuva perustuu?") tavallisen havainnekuvatekstin
+     * sijaan — js/havainnekuva.js havainnekuvaLaji.
+     *
+     * LIPPU ON TÄSSÄ eikä lähderivin sanamuodossa, koska tämä on ainoa
+     * tehdas, joka ihmekuvia tekee: lippu kulkee kaikkien renderöijien
+     * (kortti, karuselli, suurennos, nähtävyysikkuna) läpi datan
+     * mukana, eikä yksikään niistä tarvitse tietää ihmeistä mitään.
+     * Lähderivit ovat sisältöä ja ne muuttuvat; tämä kenttä ei.
+     */
+    ihmekuva: true,
     // Suurennos saa oman reaktiorivinsä (avaaKohdeSuurennos ja
     // js/ui.js naytaKulttuuriKuva lukevat tämän kentän).
     reaktio: ihmeReaktioTunniste(kohde?.nimi),
@@ -2832,7 +2846,9 @@ function piirraKohdeKuva(ui, sisalto, kuva) {
   if (kuva.selite || kuva.lahde) {
     const teksti = html('figcaption', 'fokuskohde-kuvateksti', kuva.selite ?? '');
     // CC BY vaatii tekijän maininnan: lähde on aina kuvan vieressä.
-    if (kuva.lahde) teksti.appendChild(html('span', 'fokuskohde-kuvalahde', kuva.lahde));
+    if (kuva.lahde) {
+      teksti.appendChild(taytaLahderivi(html('span', 'fokuskohde-kuvalahde'), kuva.lahde, kuva));
+    }
     kehys.appendChild(teksti);
   }
   sisalto.appendChild(kehys);
@@ -3273,7 +3289,7 @@ export function avaaKohdeSuurennos(ui, kuva, ankkuri, avain = 'fokuskohdeZoom') 
   teksti.append(
     html('span', 'fokuskohde-zoomselite', kuva.selite ?? ''),
     // CC BY vaatii tekijän maininnan myös suurennoksessa.
-    html('span', 'fokuskohde-zoomlahde', kuva.lahde ?? ''),
+    taytaLahderivi(html('span', 'fokuskohde-zoomlahde'), kuva.lahde ?? '', kuva),
   );
   kehys.append(img, teksti);
   // "Matkakirjan ihme" -nauha myös suurennokseen, samalla komponentilla
