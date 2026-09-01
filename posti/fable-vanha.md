@@ -1,3 +1,37 @@
+## 1.9.2026 21:15 UTC — FABLEN TILANNEMUISTIO (illan erä valmis) + JATKOPROMPTI
+
+Main v1436 (619b6189). Illan tilaukset julkaistu v1429–v1436:
+piirit pois viivatasolta, merireitit kapeammiksi ja tiheämmiksi,
+kompassi ja merten nimet z3:lle, nostojen siirtoviivat takaisin
+(ladonta v5), nopanheitossa zoomi ensin ja nappula hitaammin, kaikki
+merkit näkyvissä eleiden ajan, tummennuskytkin ja "tarkka varjo"
+-kytkin kehittäjävalikkoon (live 1′-korkeusvarjostus, kokeilu).
+Luettelo: pohja 2026-09-01k (paikkaus 01e:stä, kompassialue),
+nostot 01l (saanto v5), viivat 01j (piirit=false), patina ei.
+Levy 61 %, työpuut siivottu.
+
+AVOINNA:
+- vie-korkeuspalat.yml koeajo (3 palaa, NCEI ajokoneelta) käynnissä;
+  jos vihreä → täysajo (koeajo=false, 648 palaa) → "tarkka varjo"
+  toimii pelissä. Jos NCEI ei vastaa ajokoneelta: vaihtoehto on
+  ajaa tee-korkeuspalat.mjs kontissa ja viedä palat toisen session
+  (R2-oikeudet) kautta — kysy omistajalta.
+- Yleiskuvitussessiolta odotetaan kuittauksia: K1 (fotorealistinen
+  pohja), K2 (7 skandaalikuvaa → lehtisiirto), E1 (BIH/TUR eläimet →
+  eläintäyt takaisin, testit 27→29), H1 (Historian hetket: kolmas
+  sivusto + 10 kuvan pilotti; sitten nostolaji "Historian hetki" +
+  maalehden Historia-osio).
+- Omistajan päätökset: nopanheiton ennakkozoomin määrä (1,5× Ateenassa),
+  koko pohjan 1′-uusintapoltto (omistaja antaa ohjeet erikseen),
+  patina (nyt pois).
+
+JATKOPROMPTI: 1) ReadNotifications; 2) tarkista koeajon tulos ja aja
+täysajo tai raportoi este; 3) postikierros tunneittain (trigger
+trig_01PVJLUsK6F9L92HR7hUCaQN); 4) uudet tilaukset Opus-agenteilla
+työpuissa, Fable julkaisee versiot yksitellen (fetch main → uusi-versio
+→ testit → build → PR → squash → branch reset); ei rinnakkaisia
+pyramidiajoja; ei kuvadataa eikä salaisuuksia postiin.
+
 ## 1.9.2026 20:40 UTC — KUVATILAUS H1 yleiskuvitussessiolle: HISTORIAN HETKET (uusi sarja, oma kolmas sivusto)
 
 Omistajan tilaus tänään (sanatarkasti): *"peliin voisi tehdä
