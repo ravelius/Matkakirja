@@ -2131,20 +2131,34 @@ export function piirraErikoispiiritKankaalle(ctx, mitta) {
  * KAKSI VANHAA RAJAA PITÄVÄT YHÄ, ja ne on tarkistettu uusilla
  * luvuilla:
  *
- *   HELMI EI MAHDU KATKOON. Helmen halkaisija on 11,2 R ja lyhin
- *   katko 0,52 · 40 = 20,8 R — katko on yhä selvästi pitkänomainen.
+ *   HELMI EI MAHDU KATKOON. Helmen halkaisija on 30 R ja katko
+ *   0,30 · 190 = 57 R — katko on yhä selvästi pitkänomainen.
  *   HELMINAUHAA EI SYNNY. Lyhin askelväli on 232 R ja helmen
- *   ulkohalkaisija kehineen 13,6 R, joten väliin jää yli 218 R.
+ *   ulkohalkaisija kehineen 39 R, joten väliin jää yli 190 R.
  *
  * Luvut ovat R:ssä eli KARTTAVAKIOITA (ks. piirraMaailma osio 8b):
  * ne kutistuvat kartan mukana, joten muutos näkyy joka tasolla samana
  * suhteellisena nousuna eikä vain syvimmällä.
  */
+/*
+ * === VEDOSITEROINTI OMISTAJAN KANSSA (1.9.2026 iltapäivä) ===========
+ *
+ * Omistaja katsoi vedokset ennen polttoa ja tarkensi neljästi:
+ * *"vieläkin viiva pidempi kuin tyhjä väli"* -> katko-osuus alle
+ * puolen; *"saisivat mennä tasaisesti ja viivan paksuus voi olla
+ * leveämpi"* -> keskitetty katko + paksumpi tussi; *"saa olla vielä
+ * pidemmät välit ja pyöreät pisteet pitää olla isompia"* ja *"tee
+ * viivoista ja viivojen väleistä vielä pidempiä"* -> jakso 190 ja
+ * katko-osuus 0,30 (väli on yli kaksi kertaa katkon mitta); *"piste
+ * vielä isommalla"* -> helmi 12. Pituusheitto poistui kokonaan
+ * (lyhin = pisin): tasainen rytmi oli nimenomainen tilaus, ja käsin
+ * piirretty jälki tulee tussiprofiilista, sivusta ja kaaresta.
+ */
 export const REITTITYYLI = Object.freeze({
-  viiva: 4.0,    // veton leveys (kerrotaan vielä kynänpaineella)
-  jakso: 40,     // katko + väli
-  helmi: 5.6,    // askelhelmen säde
-  kehä: 2.4,     // askelhelmen kehän leveys
+  viiva: 9.0,    // veton leveys (kerrotaan vielä kynänpaineella)
+  jakso: 190,    // katko + väli
+  helmi: 15,     // askelhelmen säde (omistaja 1.9.2026: "tee ympyrästä isompi")
+  kehä: 9.0,     // askelhelmen kehä = katkon tussinpaksuus (omistaja 1.9.2026)
   lento: 2.5,    // lentoreitin veton leveys (ei enää poltossa, ks. LENNOT)
   /*
    * KATKON OMA MUOTO. Nämä olivat ennen funktion sisäisiä vakioita;
@@ -2152,8 +2166,8 @@ export const REITTITYYLI = Object.freeze({
    * näkymän kahdella ilmeellä ilman koodimuutosta (piirraViivataso
    * `reittityyli`).
    */
-  lyhin: 0.52,   // katkon osuus jaksosta, alaraja
-  pisin: 0.74,   // katkon osuus jaksosta, yläraja
+  lyhin: 0.30,   // katkon osuus jaksosta, alaraja
+  pisin: 0.30,   // katkon osuus jaksosta, yläraja (= alaraja: tasainen rytmi)
   sivu: 0.55,    // koko katko sivussa viivalta (R)
   kaari: 0.95,   // katkon kaarevuus keskellä (R)
   huojunta: 0.6, // solmun heitto (R), molempiin suuntiin
@@ -2295,8 +2309,9 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
      * tietokonegrafiikkaa yhdellä viivalla — se raja ei liiku.
      */
     const MUSTEET = {
-      maa: { viiva: 'rgba(120,88,54,0.64)', kehä: 'rgba(120,88,54,0.80)' },
-      meri: { viiva: 'rgba(32,60,98,0.68)', kehä: 'rgba(32,60,98,0.84)' },
+      // Paksumpi tussi, kevyempi muste (omistaja 1.9.2026).
+      maa: { viiva: 'rgba(120,88,54,0.24)', kehä: 'rgba(120,88,54,0.32)' },
+      meri: { viiva: 'rgba(32,60,98,0.26)', kehä: 'rgba(32,60,98,0.34)' },
     };
     const helmiTaytto = 'rgba(246,239,220,0.92)';
     /*
@@ -2306,8 +2321,8 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
      * askelvälistä, ja se sääntö kulkee mukana mittakaavassa: kun
      * helmi kutistuu kartan mukana, askelvälin ja helmen suhde on JOKA
      * TASOLLA sama kuin z7:llä. Mitattuna lyhin askelväli on 232 R ja
-     * helmen ulkohalkaisija kehineen 11,1 R, joten helmien väliin jää
-     * joka tasolla vähintään 220 R — helminauhaa ei voi syntyä (se oli
+     * helmen ulkohalkaisija kehineen 39 R, joten helmien väliin jää
+     * joka tasolla yli 190 R — helminauhaa ei voi syntyä (se oli
      * edellisen erän tunnettu rajatapaus z2:lla, ja tämä päätös
      * poistaa sen rakenteellisesti).
      */
@@ -2433,26 +2448,28 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
      * MITTAKAAVASTA RIIPPUMATON, koska helmi ja katko kutistuvat samaa
      * tahtia:
      *
-     *   ALARAJA  helmi on halkaisijaltaan 11,2 R. Jos katko olisi
+     *   ALARAJA  helmi on halkaisijaltaan 30 R. Jos katko olisi
      *            samaa kokoluokkaa, katko ja helmi näyttäisivät
-     *            käyttökoossa samalta merkiltä. Lyhinkin katko
-     *            (0,52 · 40 = 20,8 R) on selvästi pidempi kuin
+     *            käyttökoossa samalta merkiltä. Katko
+     *            (0,30 · 190 = 57 R) on selvästi pidempi kuin
      *            helmi on leveä.
-     *   YLÄRAJA  lyhimmälle askelvälille on mahduttava katkoja.
-     *            Väli ja jakso mitataan samassa mittakaavassa, joten
-     *            suhde pätee joka tasolla: mitattuna lyhin askelväli on
-     *            232 R ja mediaani 595 R, eli lyhimmällekin välille
-     *            mahtuu viisi jaksoa (ennen yhdeksän).
+     *   YLÄRAJA  askelvälille on mahduttava katkorytmiä: mitattuna
+     *            lyhin askelväli on 232 R ja mediaani 595 R, eli
+     *            jakso 190 antaa mediaanivälille kolme jaksoa.
+     *            Lyhimmällä välillä joka jaksossa on helmi ja rytmi
+     *            harvenee — omistaja 1.9.2026: *"Ei haittaa, jos
+     *            pistetiheys muuttuu suuntaan tai toiseen."*
      *
      * SEURAUS, JOKA KANNATTAA TIETÄÄ: kun jakso skaalautuu kartan
      * mukana, KATKOJEN LUKUMÄÄRÄ reittiä kohti on sama joka
      * tasolla. Kuvio ei siis harvene eikä tihene zoomatessa, se vain
      * pienenee — juuri niin kuin painettu kartta pienenee.
      *
-     * Katkon pituus vaihtelee 52…74 % jaksosta ja sen paikka jakson
-     * sisällä arvotaan lopusta — siksi VÄLIKIN vaihtelee, eivätkä
-     * katkot asetu koneelliseen tahtiin. Molemmat luvut tulevat
-     * reitin tunnuksesta ja KATKON JÄRJESTYSLUVUSTA.
+     * Katkon pituus on tasan 30 % jaksosta ja katko istuu jaksonsa
+     * keskellä (omistaja 1.9.2026: *"Saisivat mennä tasaisesti"*) —
+     * väli on siis aina yli kaksi kertaa katkon mitta. Käsin
+     * piirretty vaihtelu tulee katkon MUODOSTA (tussiprofiili,
+     * sivu, kaari), ei rytmistä.
      */
     const KATKO = {
       jakso: TYYLI.jakso,  // reittiyksikköä: katko + väli (REITTITYYLI)
@@ -2521,8 +2538,99 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
             s[i] = s[i - 1] + Math.hypot(xs[i] - xs[i - 1], ys[i] - ys[i - 1]);
           }
         }
+        /*
+         * HELMI KATKON KESKELLE — JA SE KATKO POIS (omistaja
+         * 1.9.2026: *"viiva ei saisi osua pisteen kohdalle. Pisteen
+         * voisi itse asiassa aina tähdätä jonkun viivan keskelle ja
+         * jättää vain viiva siinä piirtymättä"*). Askelma vedetään
+         * lähimmän katkojakson keskipisteeseen ja se jakso jätetään
+         * piirtämättä, jolloin pisteen molemmin puolin jää aina
+         * täysi väli. Ankkuri lasketaan samasta kaarenpituudesta
+         * kuin katkot, joten piste ja aukko ovat samaa mieltä joka
+         * laatalla. Sauman yli ei ankkuroida: jos keskipiste osuisi
+         * kauas askelmasta, helmi jää paikalleen ja katko piirtyy.
+         */
+        const helmet = [];
+        const ohita = new Set();
+        if (r.askelmat?.length) {
+          const T = KATKO.jakso * R;
+          /*
+           * === HELMEN JAKSO SEN OMASTA KAARENPITUUDESTA ===========
+           *
+           * Tarkastusparvi 1.9.2026 (Kaakkois-Aasia) mittasi, että
+           * ankkurin jaksonumero `k` luettiin LÄHIMMÄN KÄRJEN
+           * kaarenpituudesta ja että kärki löydettiin ahneella
+           * "etene, jos seuraava kärki on lähempänä" -askelluksella.
+           * Kumpikin pettää eikä `edge.poly` ole tasavälinen:
+           *
+           *   HARVA MURTOVIIVA  sumatra|yangon on KAKSI pistettä ja
+           *      770 px, joten lähin kärki on aina jompikumpi PÄÄ ja
+           *      k romahti nollaan tai viimeiseen.
+           *   MUTKA HETI ALUSSA  islanti|edinburgh, lontoo|dublin,
+           *      salvador|saoluis: jo poly[1] on helmestä kauempana
+           *      kuin poly[0], joten osoitin ei lähtenyt liikkeelle
+           *      lainkaan ja k jäi nollaan KAIKILLE helmille.
+           *
+           * Seuraus oli mitattu ja näkyvä: 170/1094 helmeä koko
+           * laudalla ankkuroitui jaksoon, joka on satojen pikselien
+           * päässä helmestä. Helmi jäi silloin omalle paikalleen,
+           * mutta se väärä jakso jätettiin silti piirtämättä — ja
+           * kuvaan jäi katko, jossa ei ole helmeä eikä viivaa.
+           * Sumatran solmun vieressä aukko oli 64 px keskellä merta
+           * (omistaja 1.9.2026: *"Osa laivareiteistä jännästi
+           * katkeaa välissä"*).
+           *
+           * Nyt helmen kaarenpituus haetaan LÄHIMMÄSTÄ KOHDASTA
+           * murtoviivalla, ei lähimmästä kärjestä: janat käydään
+           * läpi osoittimesta eteenpäin (helmet kulkevat reitin
+           * suuntaan, joten osoitin vain etenee — pisinkin reitti
+           * on muutama tuhat janaa ja helmiä kourallinen, ja tämä
+           * ajetaan kerran reittiä ja tasoa kohti). Sauman jana
+           * ohitetaan: sen yli ei kertynyt kaartakaan.
+           */
+          let jana = 1;
+          for (const [bx, by] of r.askelmat) {
+            const ax = lautaKuvaX(bx);
+            const ay = lautaKuvaY(by);
+            let sh = s[jana - 1];
+            let parasJana = jana;
+            let parasD = Infinity;
+            for (let m = jana; m < n; m += 1) {
+              if (uusi[m]) continue;
+              const vx = xs[m] - xs[m - 1];
+              const vy = ys[m] - ys[m - 1];
+              const L2 = vx * vx + vy * vy;
+              let tt = L2 ? ((ax - xs[m - 1]) * vx + (ay - ys[m - 1]) * vy) / L2 : 0;
+              tt = tt < 0 ? 0 : (tt > 1 ? 1 : tt);
+              const d = Math.hypot(ax - (xs[m - 1] + vx * tt), ay - (ys[m - 1] + vy * tt));
+              if (d < parasD) {
+                parasD = d;
+                parasJana = m;
+                sh = s[m - 1] + tt * (s[m] - s[m - 1]);
+              }
+            }
+            jana = parasJana;
+            const k = Math.max(0, Math.round(sh / T - 0.5));
+            if (ohita.has(k)) { helmet.push([ax, ay]); continue; }
+            const tavoite = Math.min((k + 0.5) * T, s[n - 1]);
+            let p = parasJana;
+            while (p > 0 && s[p] > tavoite) p -= 1;
+            while (p + 1 < n && s[p + 1] < tavoite) p += 1;
+            const b = Math.min(p + 1, n - 1);
+            const pit = s[b] - s[p];
+            const t = pit > 0 ? (tavoite - s[p]) / pit : 0;
+            const hx = xs[p] + (xs[b] - xs[p]) * t;
+            const hy = ys[p] + (ys[b] - ys[p]) * t;
+            // Sauman yli ei ankkuroida — mutta katko jää silti pois,
+            // ettei viiva voi osua helmeen (omistaja: "varmista että
+            // viiva ei osu sen kanssa samaan kohtaan").
+            ohita.add(k);
+            if (Math.hypot(hx - ax, hy - ay) > 0.75 * T) { helmet.push([ax, ay]); continue; }
+            helmet.push([hx, hy]);
+          }
+        }
         r.__arkilla = {
-          xs, ys, s, uusi, x0, x1, y0, y1,
+          xs, ys, s, uusi, x0, x1, y0, y1, helmet, ohita,
         };
         r.__avain = AVAIN;
       }
@@ -2558,7 +2666,7 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
      * SAMA lista ohjaa peitettä — työlista ja piirto ovat siis
      * samaa mieltä. Ilman kenttää piirtyy koko reitti.
      */
-    const katkoPolku = (g, r, dx) => {
+    const katkoPolku = (g, r, dx, w) => {
       const a = arkilla(r);
       if (a.x1 + dx < NX0 || a.x0 + dx > NX1 || a.y1 < NY0 || a.y0 > NY1) return;
       const {
@@ -2571,9 +2679,50 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
         let i0 = v0;
         for (let raja = v0 + 1; raja <= v1 + 1; raja += 1) {
           if (raja <= v1 && !uusi[raja]) continue;
-          jaksonKatkot(g, xs, ys, s, i0, raja - 1, r.siemen ?? 1, dx, T);
+          jaksonKatkot(g, xs, ys, s, i0, raja - 1, r.siemen ?? 1, dx, T, w, a.ohita);
           i0 = raja;
         }
+      }
+    };
+
+    /*
+     * LIITTYMÄSILLAT (omistaja 1.9.2026 ilta, sanatarkasti: *"aina
+     * kun kaksi laivareittiä kulkee lähellä toisiaan niin ne pitää
+     * yhdistää siltä osin yhdeksi reitiksi. ne voivat sitten taas
+     * erkaantua tarvittaessa myöhemmin reitillä"*). Kun
+     * rinnakkaiskarsinta jättää reitin jakson piirtämättä
+     * (osuusyhdistäminen, tools/fokuskartta/reittikarsinta.mjs), sen
+     * piirtyvä pää liitetään peittävään viivaan lyhyellä sillalla —
+     * muuten pää roikkuisi kymmenien yksiköiden päässä viivasta,
+     * josta se kuvassa "jatkuu", ja juuri roikkuvista päistä
+     * omistaja huomautti ("yhteneviä linjoja, jotka pitää yhdistää").
+     *
+     * Silta on 1–2 katkon mittainen ja kulkee SAMAN katkokoneiston
+     * (jaksonKatkot) läpi: tussiprofiili, sivuheitto ja kaari ovat
+     * reitin omat. Jakso mitoitetaan sillan omasta pituudesta
+     * (T' = L/k), jotta lyhyeenkin siltaan piirtyy aina katko —
+     * arkin kaarenpituusvaihe ei kelpaa, koska silta ei ole reitin
+     * kaarella. Determinismi: siemen tulee reitistä ja sillan
+     * järjestysluvusta, pituudet laudan geometriasta — ei laatasta,
+     * joten silta on sama joka laatalla ja joka ajolla.
+     */
+    const liittymaPolku = (g, r, dx, w) => {
+      if (!r.liittymat?.length) return;
+      const T = KATKO.jakso * R;
+      let m = 0;
+      for (const [ax, ay, bx, by] of r.liittymat) {
+        m += 1;
+        const x0 = lautaKuvaX(ax);
+        const y0 = lautaKuvaY(ay);
+        const x1 = lautaKuvaX(bx);
+        const y1 = lautaKuvaY(by);
+        const L = Math.hypot(x1 - x0, y1 - y0);
+        if (L < 1) continue;
+        if (Math.max(x0, x1) + dx < NX0 || Math.min(x0, x1) + dx > NX1
+          || Math.max(y0, y1) < NY0 || Math.min(y0, y1) > NY1) continue;
+        const k = Math.max(1, Math.round(L / T));
+        jaksonKatkot(g, [x0, x1], [y0, y1], [0, L], 0, 1,
+          ((r.siemen ?? 1) ^ Math.imul(m, 2654435761)) >>> 0, dx, L / k, w, null);
       }
     };
 
@@ -2581,7 +2730,7 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
     const M = KATKO.paloja;
     const px0 = new Float64Array(M + 1);
     const py0 = new Float64Array(M + 1);
-    const jaksonKatkot = (g, xs, ys, s, i0, i1, siemen, dx, T) => {
+    const jaksonKatkot = (g, xs, ys, s, i0, i1, siemen, dx, T, w, ohita) => {
       if (i1 <= i0) return;
       const sA = s[i0];
       const sB = s[i1];
@@ -2598,9 +2747,18 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
       };
       const ulos = [px0, py0];
       for (let k = Math.floor(sA / T); k <= Math.floor(sB / T); k += 1) {
+        // Jakso on askelhelmen paikka: viiva ei saa osua pisteeseen.
+        if (ohita && ohita.has(k)) continue;
         const osuus = KATKO.lyhin + (KATKO.pisin - KATKO.lyhin) * arpa(siemen, k, 0);
         const pituus = T * osuus;
-        const alku = k * T + (T - pituus) * arpa(siemen, k, 1);
+        /*
+         * Katko istuu jaksonsa KESKELLÄ (omistaja 1.9.2026: "Saisivat
+         * mennä tasaisesti") — arvottu kohta jaksossa antoi vierekkäin
+         * lähes kiinni olevia ja lähes puolentoista jakson välejä.
+         * Käsivaratuntu tulee sivusta, kaaresta ja vapinasta, ei
+         * rytmistä.
+         */
+        const alku = k * T + (T - pituus) / 2;
         const a = Math.max(sA, alku);
         const b = Math.min(sB, alku + pituus);
         if (b - a < 0.4 * R) continue;
@@ -2613,12 +2771,38 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
         const ny = ux / L;
         const sivu = (arpa(siemen, k, 2) - 0.5) * 2 * KATKO.sivu * R;
         const kaari = (arpa(siemen, k, 3) - 0.5) * 2 * KATKO.kaari * R;
+        /*
+         * TUSSIN JÄLKI (omistaja 1.9.2026: "jos viivat olisi piirretty
+         * leveäkärkisellä tussilla, josta alku ja loppu ovat hieman
+         * erimuotoisia"): katko on TÄYTETTY muoto, ei veto. Kolme
+         * päätyvarianttia siemenestä — tasainen, loppuun kapeneva ja
+         * alusta kapeneva — sekä aavistus leveysheittoa. Rytmi pysyy
+         * tasaisena: pituus ja paikka eivät arvo, vain muoto.
+         */
+        const variantti = Math.floor(arpa(siemen, k, 4) * 3);
+        const leveysHeitto = 0.92 + 0.16 * arpa(siemen, k, 5);
+        const puoli = (w / 2) * leveysHeitto;
+        const profiili = (t) => {
+          if (variantti === 1) return t > 0.72 ? 1 - ((t - 0.72) / 0.28) * 0.55 : 1;
+          if (variantti === 2) return t < 0.28 ? 0.45 + (t / 0.28) * 0.55 : 1;
+          return 0.9 + 0.1 * Math.sin(Math.PI * t);
+        };
         for (let m = 0; m <= M; m += 1) {
           const o = sivu + kaari * Math.sin((Math.PI * m) / M);
-          const x = px0[m] + nx * o + dx;
-          const y = py0[m] + ny * o;
+          px0[m] += nx * o + dx;
+          py0[m] += ny * o;
+        }
+        for (let m = 0; m <= M; m += 1) {
+          const h = puoli * profiili(m / M);
+          const x = px0[m] + nx * h;
+          const y = py0[m] + ny * h;
           if (m === 0) g.moveTo(x, y); else g.lineTo(x, y);
         }
+        for (let m = M; m >= 0; m -= 1) {
+          const h = puoli * profiili(m / M);
+          g.lineTo(px0[m] - nx * h, py0[m] - ny * h);
+        }
+        g.closePath();
       }
     };
 
@@ -2627,6 +2811,7 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
       if (!osa.length) continue;
       const muste = MUSTEET[laji];
       ctx.strokeStyle = muste.viiva;
+      ctx.fillStyle = muste.viiva;
       /*
        * YKSI POLKU KYNÄNPAINEEN PORRASTA KOHTI. Jokainen reitti saa
        * oman leveytensä, mutta piirtoja on viisi eikä 408: sama
@@ -2635,11 +2820,15 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
       for (let k = 0; k < KYNIA; k += 1) {
         const kynalla = osa.filter((r) => { heitot(r); return r.__kyna === k; });
         if (!kynalla.length) continue;
-        ctx.lineWidth = VIIVA * (0.88 + 0.06 * k);
+        const leveys = VIIVA * (0.88 + 0.06 * k);
         for (const d of siirrot) {
           ctx.beginPath();
-          for (const r of kynalla) katkoPolku(ctx, r, d * px);
-          ctx.stroke();
+          for (const r of kynalla) {
+            katkoPolku(ctx, r, d * px, leveys);
+            // Liittymäsillat samalla kynällä ja musteella kuin reitti.
+            liittymaPolku(ctx, r, d * px, leveys);
+          }
+          ctx.fill();
         }
       }
       /*
@@ -2655,14 +2844,14 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
        */
       ctx.beginPath();
       for (const r of osa) {
-        for (const [bx, by] of r.askelmat) {
+        // Ankkuroidut paikat: helmi istuu ohitetun katkon keskellä.
+        for (const [hx, hy] of arkilla(r).helmet) {
           for (const d of siirrot) {
-            const x = lautaKuvaX(bx + d);
+            const x = hx + d * px;
             if (x < GX - sade * 2 || x > GX + W + sade * 2) continue;
-            const y = lautaKuvaY(by);
-            if (y < GY - sade * 2 || y > GY + H + sade * 2) continue;
-            ctx.moveTo(x + sade, y);
-            ctx.arc(x, y, sade, 0, Math.PI * 2);
+            if (hy < GY - sade * 2 || hy > GY + H + sade * 2) continue;
+            ctx.moveTo(x + sade, hy);
+            ctx.arc(x, hy, sade, 0, Math.PI * 2);
           }
         }
       }
@@ -2683,15 +2872,16 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
      */
     if (sisalto.lentoreitit?.length) {
       ctx.strokeStyle = 'rgba(150,54,40,0.60)';
+      ctx.fillStyle = 'rgba(150,54,40,0.60)';
       for (let k = 0; k < KYNIA; k += 1) {
         const kynalla = sisalto.lentoreitit
           .filter((r) => Math.floor(mulberry32(r.siemen ?? 1)() * KYNIA) === k);
         if (!kynalla.length) continue;
-        ctx.lineWidth = TYYLI.lento * R * (0.9 + 0.05 * k);
+        const lentoleveys = TYYLI.lento * R * (0.9 + 0.05 * k);
         for (const d of siirrot) {
           ctx.beginPath();
-          for (const r of kynalla) katkoPolku(ctx, r, d * px);
-          ctx.stroke();
+          for (const r of kynalla) katkoPolku(ctx, r, d * px, lentoleveys);
+          ctx.fill();
         }
       }
     }

@@ -300,25 +300,46 @@ function koereitit() {
   return [pitka, rinnakkainen];
 }
 
-test('lähes rinnakkainen reitti karsiutuu, mutta sen päät jäävät', () => {
+test('rinnakkainen reitti putoaa kuvasta kokonaan, kun päät ovat verkossa', () => {
   /*
-   * OMISTAJA 1.9.2026: *"Laivareittejä näyttää menemään liikaa."*
-   * Karsinta on OSUUSKARSINTA eikä reitin poisto: sama korridori
-   * piirretään kerran, mutta kaupungista lähtee aina näkyvä viiva
-   * (KARSINTA.tyngat), tai lyhyt rinnakkainen reitti näyttäisi siltä,
-   * ettei kaupunkiin tule tietä lainkaan.
+   * OMISTAJA 1.9.2026 (iltapäivä, sanatarkasti): *"Samansuuntaisia
+   * matkoja pitäisi aina olla vain yksi."* Reitti, joka kulkee
+   * valtaosin toisen urassa (KARSINTA.uraSade/uraPeitto*), jätetään
+   * piirtämättä KOKONAAN — osuuskarsinnan jättämät päätyngät juuri
+   * näyttivät päällekkäisiltä matkoilta. Pudotus vaatii, että
+   * kummankin pään solmusta lähtee verkossa toinenkin reitti.
    */
   const [pitka, rinnakkainen] = koereitit();
-  karsiRinnakkaiset([pitka, rinnakkainen]);
+  // Päiden solmuihin toinen reitti, jotta astevartija sallii pudotuksen.
+  const haara1 = { poly: [[0, 12], [0, 300]], siemen: 3, askelmat: [] };
+  const haara2 = { poly: [[1000, 12], [1000, 300]], siemen: 4, askelmat: [] };
+  karsiRinnakkaiset([pitka, rinnakkainen, haara1, haara2]);
   assert.deepEqual(pitka.piirtoValit, [[0, 100]],
     'pisin reitti piirtyy aina kokonaisena');
-  const piirtoa = rinnakkainen.piirtoValit
-    .reduce((s, [a, b]) => s + (b - a) * 10, 0);
-  assert.ok(piirtoa > 0 && piirtoa < 500,
-    `rinnakkaisesta reitistä piirtyy ${piirtoa} / 1000 yksikköä — `
-    + 'karsinnan pitäisi viedä valtaosa mutta jättää päiden tyngät');
-  assert.equal(rinnakkainen.piirtoValit[0][0], 0, 'alkupään tynkä puuttuu');
-  assert.equal(rinnakkainen.piirtoValit.at(-1)[1], 100, 'loppupään tynkä puuttuu');
+  assert.deepEqual(rinnakkainen.piirtoValit, [],
+    'rinnakkainen reitti ei pudonnut kuvasta kokonaan');
+});
+
+test('astevartija: rinnakkainenkaan reitti ei putoa, jos pää jäisi irti', () => {
+  const [pitka, rinnakkainen] = koereitit();
+  karsiRinnakkaiset([pitka, rinnakkainen]);
+  assert.ok(rinnakkainen.piirtoValit.length > 0,
+    'reitti putosi, vaikka sen päistä ei lähde muita reittejä');
+});
+
+test('lyhyttä paikallisreittiä ei pudoteta (uraVahin)', () => {
+  /*
+   * Mitattu sudenkuoppa: helsinki|tallinna kulki kokonaan pidemmän
+   * uran alla ja putosi — mutta lyhyt hyppy pitkän reitin varjossa on
+   * oma paikallisyhteytensä, ei rinnakkainen valtamerimatka.
+   */
+  const pitka = { poly: [], siemen: 1, askelmat: [] };
+  for (let i = 0; i <= 100; i += 1) pitka.poly.push([i * 10, 0]);
+  const lyhyt = { poly: [[400, 12], [450, 12], [500, 12]], siemen: 2, askelmat: [] };
+  const haara1 = { poly: [[400, 12], [400, 300]], siemen: 3, askelmat: [] };
+  const haara2 = { poly: [[500, 12], [500, 300]], siemen: 4, askelmat: [] };
+  karsiRinnakkaiset([pitka, lyhyt, haara1, haara2]);
+  assert.ok(lyhyt.piirtoValit.length > 0, 'lyhyt paikallisreitti putosi kuvasta');
 });
 
 test('erillinen reitti ei karsiudu', () => {
@@ -340,6 +361,124 @@ test('karsinta on deterministinen eikä riipu syötteen järjestyksestä', () =>
   karsiRinnakkaiset(a);
   karsiRinnakkaiset(b);
   assert.deepEqual(a.map((r) => r.piirtoValit), b.reverse().map((r) => r.piirtoValit));
+});
+
+test('osuusyhdistäminen: pitkä rinnakkaisjakso karsitaan ja rajalle syntyy liittymäsilta', () => {
+  /*
+   * OMISTAJA 1.9.2026 ilta, sanatarkasti: *"aina kun kaksi
+   * laivareittiä kulkee lähellä toisiaan niin ne pitää yhdistää
+   * siltä osin yhdeksi reitiksi. ne voivat sitten taas erkaantua
+   * tarvittaessa myöhemmin reitillä"*. Kaksi merireittiä 20 yksikön
+   * päässä toisistaan (liian kaukana osuuskarsinnalle, liian
+   * pienellä peitolla koko reitin pudotukselle): lyhyemmän
+   * rinnakkaisjakso jää piirtämättä, ja KUMMALLEKIN leikkausrajalle
+   * syntyy liittymäsilta, joka päättyy pidemmän reitin viivalle —
+   * roikkuva pää kaukana viivasta oli juuri omistajan valitus
+   * ("yhteneviä linjoja, jotka pitää yhdistää").
+   */
+  const pitka = { poly: [], siemen: 1, askelmat: [], laji: 'meri' };
+  const toinen = { poly: [], siemen: 2, askelmat: [], laji: 'meri' };
+  for (let i = 0; i <= 100; i += 1) pitka.poly.push([i * 10, 0]);
+  // Lyhyempi kulkee rinnan 20 yksikön päässä välillä 200–800 ja sen
+  // päät loittonevat 50 yksikköön (yli LIITOSSADE 40:n) — reitti on
+  // x-väliltään 100–900, jotta se on aidosti lyhyempi kuin suora pitka.
+  for (let i = 0; i <= 80; i += 1) {
+    const x = 100 + i * 10;
+    toinen.poly.push([x, 20 + 0.3 * (Math.max(0, 200 - x) + Math.max(0, x - 800))]);
+  }
+  karsiRinnakkaiset([pitka, toinen]);
+  assert.deepEqual(pitka.piirtoValit, [[0, 100]], 'pisin reitti piirtyy aina kokonaisena');
+  assert.equal(toinen.piirtoValit.length, 2,
+    'rinnakkaisjakson on katkaistava lyhyempi kahdeksi piirtyväksi pääksi');
+  assert.equal(toinen.liittymat.length, 2,
+    'kummallekin leikkausrajalle kuuluu liittymäsilta');
+  for (const [x0, y0, x1, y1] of toinen.liittymat) {
+    assert.ok(y0 > 6, `silta alkaa piirtyvästä päästä, ei viivan vierestä (y0=${y0})`);
+    assert.ok(Math.abs(y1) < 1e-6 && x1 >= 0 && x1 <= 1000,
+      `silta päättyy peittävälle viivalle (x1=${x1}, y1=${y1})`);
+  }
+  // Silta alkaa täsmälleen piirtyvän välin rajapisteestä.
+  const [v0, v1] = toinen.piirtoValit;
+  const rajat = [toinen.poly[v0[1]], toinen.poly[v1[0]]];
+  for (const [i, [x0, y0]] of toinen.liittymat.entries()) {
+    assert.deepEqual([x0, y0], rajat[i], 'silta ei ala leikkausrajalta');
+  }
+});
+
+test('osuusyhdistäminen syö tyngän vain jo piirrettyyn solmuun asti', () => {
+  /*
+   * Omistajan jatko samassa tilauksessa: viivat saavat haarautua
+   * toisistaan ("ne voivat sitten taas erkaantua"). Reitti, joka
+   * kulkee koko matkan pidemmän kyljessä ja PÄÄTTYY SAMAAN
+   * SOLMUUN, sulautuu piirrettyyn viivaan solmua myöten — tynkää ei
+   * jätetä, koska kaupunkiin tulee viiva pidempää reittiä pitkin
+   * (mitattu pari: sahalin|tokio haarautuu tokio|sanfranciscosta).
+   * Vapaassa päässä tynkä jää, kuten osuuskarsinnassa aina.
+   */
+  const pitka = { poly: [], siemen: 1, askelmat: [], laji: 'meri' };
+  const haarova = { poly: [], siemen: 2, askelmat: [], laji: 'meri' };
+  for (let i = 0; i <= 100; i += 1) pitka.poly.push([i * 10, 0]);
+  // Jakaa pitkän solmun (1000,0); vapaa pää (100,27) loittonee viivasta.
+  // x-väli 100–1000, jotta reitti on aidosti lyhyempi kuin pitka.
+  for (let i = 0; i <= 90; i += 1) haarova.poly.push([100 + i * 10, 27 - i * 0.3]);
+  karsiRinnakkaiset([pitka, haarova]);
+  assert.equal(haarova.piirtoValit.length, 1, 'vapaan pään tynkä piirtyy');
+  assert.equal(haarova.piirtoValit[0][0], 0, 'tynkä alkaa vapaasta päästä');
+  assert.ok(haarova.piirtoValit[0][1] < 90,
+    'jaettuun solmuun asti yhtyvä pää ei saa jättää tynkää — viiva '
+    + 'kaupunkiin tulee pidempää reittiä pitkin');
+  assert.equal(haarova.liittymat.length, 1, 'tyngän rajalle kuuluu silta');
+
+  /*
+   * HAARASUU (KARSINTA.liitosVahinSolmu). Tarkastusparvi 1.9.2026
+   * mittasi Länsi-Afrikasta, että dakar|kappalmas ja dakar|
+   * joaopessoa lähtevät Dakarista yhtenä viivana ja kulkevat 106
+   * yksikköä rinnan — LIITOSVAHIN 150 ei ylittynyt, ja kuvaan jäi
+   * kaksoisviiva kaupungin kyljessä. Jaetusta, jo piirretystä
+   * solmusta alkava jakso ei ole "hetkeksi lähentyvä" pari, joten
+   * sille riittää lyhyempi mitta. Vartija on PITUUS eikä kulma:
+   * kumpikin koepari lähtee alle LIITOSKULMAN, mutta vain se, joka
+   * kulkee rinnan yli 100 yksikköä, yhdistyy.
+   */
+  const runko = { poly: [], siemen: 1, askelmat: [], laji: 'meri' };
+  for (let i = 0; i <= 100; i += 1) runko.poly.push([i * 10, 0]);
+  // Loiva haara: 40 yksikön korridorista ulos vasta 117 yksikön jälkeen.
+  const loiva = { poly: [], siemen: 2, askelmat: [], laji: 'meri' };
+  for (let i = 0; i <= 60; i += 1) loiva.poly.push([i * 10, i * 3.5]);
+  karsiRinnakkaiset([runko, loiva]);
+  assert.equal(loiva.piirtoValit.length, 1, 'haarasuu jättää yhden piirtyvän pään');
+  assert.ok(loiva.piirtoValit[0][0] > 0,
+    'samasta solmusta yhtenä viivana lähtevä haarasuu jäi yhdistämättä');
+  assert.equal(loiva.liittymat.length, 1, 'haarasuun rajalle kuuluu silta');
+
+  // Aito haara: samasta solmusta, LIITOSKULMAN sisällä, mutta erkanee
+  // heti — tämä ei saa yhdistyä (omistajan "eri suuntiin" -tapaus).
+  const jyrkka = { poly: [], siemen: 3, askelmat: [], laji: 'meri' };
+  for (let i = 0; i <= 60; i += 1) jyrkka.poly.push([i * 10, i * 10]);
+  karsiRinnakkaiset([runko, jyrkka]);
+  assert.deepEqual(jyrkka.piirtoValit, [[0, 60]],
+    'heti eri suuntaan lähtevä haara ei saa yhdistyä runkoon');
+});
+
+test('liittymäsillat ovat deterministisiä eivätkä riipu syötteen järjestyksestä', () => {
+  const teko = () => {
+    const pitka = { poly: [], siemen: 1, askelmat: [], laji: 'meri' };
+    const toinen = { poly: [], siemen: 2, askelmat: [], laji: 'meri' };
+    for (let i = 0; i <= 100; i += 1) pitka.poly.push([i * 10, 0]);
+    for (let i = 0; i <= 80; i += 1) {
+      const x = 100 + i * 10;
+      toinen.poly.push([x, 20 + 0.3 * (Math.max(0, 200 - x) + Math.max(0, x - 800))]);
+    }
+    return [pitka, toinen];
+  };
+  const a = teko();
+  const b = teko().reverse();
+  karsiRinnakkaiset(a);
+  karsiRinnakkaiset(b);
+  b.reverse();
+  assert.deepEqual(a.map((r) => r.piirtoValit), b.map((r) => r.piirtoValit));
+  assert.deepEqual(a.map((r) => r.liittymat), b.map((r) => r.liittymat),
+    'sillat eivät ole samat eri syötejärjestyksillä');
 });
 
 test('oikea lauta: karsinta osuu Joonianmeren nippuun eikä leikkaa liikaa', async () => {
@@ -365,20 +504,45 @@ test('oikea lauta: karsinta osuu Joonianmeren nippuun eikä leikkaa liikaa', asy
   let koko = 0;
   let piirto = 0;
   let katkottuja = 0;
+  let pudotettuja = 0;
   for (const r of kanssa.reitit) {
     const oma = pituus(r.poly, 0, r.poly.length - 1);
     const nakyy = r.piirtoValit.reduce((s, [i0, i1]) => s + pituus(r.poly, i0, i1), 0);
     koko += oma;
     piirto += nakyy;
+    if (!r.piirtoValit.length) { pudotettuja += 1; continue; }
     if (nakyy < oma - 1) katkottuja += 1;
-    assert.ok(nakyy > 0.1 * oma,
-      'reitti katosi lähes kokonaan — päiden tyngät eivät pidä');
+    /*
+     * Reitti saa kutistua pelkäksi tyngäksi VAIN yhdistettynä:
+     * silloin tynkä on vähintään TYNGAT-mittainen (~20 yksikköä)
+     * haara, joka jatkuu peittävää viivaa pitkin (liittymäsilta tai
+     * jaettu solmu). Ilman sitä lähes kadonnut reitti olisi
+     * karsintavirhe.
+     */
+    assert.ok(nakyy > 0.1 * oma || nakyy >= 19,
+      'reitti katosi lähes kokonaan eikä edes tynkää jäänyt — päiden '
+      + 'tyngät eivät pidä');
   }
   const karsittu = 1 - piirto / koko;
   assert.ok(karsittu > 0.01 && karsittu < 0.08,
     `karsinta vei ${(karsittu * 100).toFixed(1)} % viivasta (odotus 1–8 %)`);
-  assert.ok(katkottuja >= 20 && katkottuja <= 60,
-    `katkottuja reittejä ${katkottuja} (odotus 20–60)`);
+  /*
+   * ETSINTÄPARVI 1.9.2026 kavensi pudotuksen rajusti: viisi löydöstä
+   * (mm. dublin|edinburgh, kreeta|sisilia, miami|havanna) oli
+   * karsinnan ylilyöntejä, joissa "viiva poistui ilman että mikään
+   * korvaa sitä silmälle". Pudotus vaatii nyt lähes täyden peiton
+   * PIIRRETYSTÄ musteesta (KARSINTA.uraPeitto 0,9), joten tällä
+   * laudalla kuvasta katoaa kokonaan enää harva reitti — valtaosan
+   * työstä tekee osuusyhdistäminen (katkottuja), joka jättää tyngät
+   * ja sillat.
+   */
+  assert.ok(pudotettuja >= 0 && pudotettuja <= 20,
+    `kuvasta pudotettuja reittejä ${pudotettuja} (odotus 0–20)`);
+  assert.ok(katkottuja >= 4 && katkottuja <= 30,
+    `katkottuja reittejä ${katkottuja} (odotus 4–30)`);
+  const idJoukko = kanssa.reitit.filter((r) => !r.piirtoValit.length);
+  assert.ok(idJoukko.every((r) => r.askelmat.length === 0),
+    'pudotetulla reitillä on yhä askelhelmiä — helmi jäisi tyhjään mereen');
   assert.ok(ilman.reitit.every((r) => r.piirtoValit === undefined),
     'karsinta ajettiin, vaikka se oli kytketty pois');
   assert.equal(ilman.reitit.length, kanssa.reitit.length,
@@ -392,12 +556,20 @@ test('katkorytmi on harvempi ja veto paksumpi kuin edellisessä erässä', () =>
    * OMISTAJA 1.9.2026: *"Katkoviivat saisi olla harvempia ja vähän
    * paksumpia, niin että näyttävät enemmän käsin piirretyiltä … Maa ja
    * vesireitit saisi olla enemmän söpön lautapelin oloisia kuin
-   * teknisiä piirustuksia."* Edellinen erä oli viiva 2,8 ja jakso 24.
+   * teknisiä piirustuksia."* Vedositeroinnissa (1.9.2026 iltapäivä)
+   * omistaja vei mitat vielä pidemmälle: *"saa olla vielä pidemmät
+   * välit ja … viivan leveys vielä paksumpi"*, *"Tee viivoista ja
+   * viivojen väleistä vielä pidempiä"* — hyväksytyt mitat viiva 9,
+   * jakso 190 ja katko-osuus 0,30 (väli on yli kaksi kertaa katko).
    */
-  assert.ok(REITTITYYLI.viiva >= 2.8 * 1.3 && REITTITYYLI.viiva <= 2.8 * 1.6,
-    `veto ${REITTITYYLI.viiva} ei ole 1,3–1,6-kertainen entiseen 2,8:aan`);
-  assert.ok(REITTITYYLI.jakso >= 24 * 1.5 && REITTITYYLI.jakso <= 24 * 2,
-    `jakso ${REITTITYYLI.jakso} ei ole 1,5–2-kertainen entiseen 24:ään`);
+  assert.ok(REITTITYYLI.viiva >= 8 && REITTITYYLI.viiva <= 10,
+    `veto ${REITTITYYLI.viiva} ei ole hyväksytyssä haarukassa 8–10`);
+  assert.ok(REITTITYYLI.jakso >= 150 && REITTITYYLI.jakso <= 250,
+    `jakso ${REITTITYYLI.jakso} ei ole hyväksytyssä haarukassa 150–250`);
+  assert.equal(REITTITYYLI.lyhin, REITTITYYLI.pisin,
+    'katkon pituus arpoo — omistajan tilaus oli tasainen rytmi');
+  assert.ok(REITTITYYLI.lyhin <= 0.35,
+    `katko-osuus ${REITTITYYLI.lyhin} — välin pitää olla viivaa pidempi`);
   assert.ok(REITTITYYLI.vapina > 0 && REITTITYYLI.huojunta > 0.35,
     'käsivarahuojuntaa ei lisätty');
 });
@@ -414,7 +586,7 @@ test('helmi ei mahdu katkoon eikä helminauhaa synny', () => {
     `lyhin katko ${lyhinKatko} R ei ole selvästi pidempi kuin helmi `
     + `(${helmenHalkaisija} R) on leveä`);
   const ulkohalkaisija = helmenHalkaisija + REITTITYYLI.kehä;
-  assert.ok(232 - ulkohalkaisija > 200, 'helmet alkavat muodostaa nauhaa');
+  assert.ok(232 - ulkohalkaisija > 190, 'helmet alkavat muodostaa nauhaa');
 });
 
 test('viivan päät ovat pyöreät — piirretty viiva, ei tekninen tikku', () => {
