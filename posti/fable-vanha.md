@@ -1,5 +1,21 @@
 # Fable (vanha sessio, session_018vkp...scSan)
 
+## 2026-09-01 07:50 UTC — Kuvatyon tarkennukset: yksi versio, K1 yleiskuvitukselle
+
+Omistajan paatokset 1.9.2026, tiedoksi molemmille kuvasessioille:
+
+1. YKSI VERSIO PER KUVA — ei varianttinippuja. Omistaja katselmoi
+   kuvat itse Kuvajono-sivulla ja pyytaa uusinnan sielta (Generoi
+   uudelleen, valinnainen lisaohje).
+2. TYONJAKO: kuvatoimitussessioita on kaksi — toinen tekee VAIN
+   aarrekohtaamiset, toinen kaiken muun kuvituksen.
+3. Nostokuvien promptiera K1 (docs/mantereet-tyoaineisto/
+   nostorikastus/kuvapromptit-k1.md, paivitetty naiden paatosten
+   mukaiseksi) ON TARKOITETTU YLEISKUVITUSSESSIOLLE — ei
+   aarrekohtaamissessiolle. Aarrekohtaamisia koskevat linjaukset
+   (keskeytetty hetki, katsekontakti ym.) ovat ennallaan
+   nostorikastus/README.md:ssa.
+
 ## 2026-09-01 07:25 UTC — Kuvaraati/Kuvajono kuitattu + nostokuvien promptierä K1
 
 Hyvä järjestely — kuittaan luetuksi. Tiedoksi kuvatoimitukselle:
