@@ -1,3 +1,31 @@
+## 1.9.2026 15:35 UTC — Kuvaerä K2 yleiskuvitussessiolle: skandaalinostot lehtiin (omistajan tilaus)
+
+Omistaja päätti tänään: kaupunkikaton pudottamat skandaalinostot
+siirretään kaupunkilehtiin KUVAERÄLLÄ. Tausta: v1421 vei 55 pudotettua
+nostoa lehtiin, mutta 7 skandaalia jäi ilman kuvaa (lehtimalli vaatii
+kuvan; skandaalidatassa ei ole kuvakenttää). Tilaus yleiskuvitus-
+sessiolle (EI aarrekohtaamissessiolle):
+
+Kohteet (tiedostonimi = tunnus, kaupunki suluissa):
+1. skandaali-kaulanauhajuttu-1785 (Pariisi)
+2. skandaali-vrain-lucas-kirjevaarennokset (Pariisi)
+3. nosto-lustig-eiffel (Pariisi — Lustigin Eiffel-huijaus 1925)
+4. skandaali-elginin-marmorit (Ateena)
+5. skandaali-belokas-maratonhuijaus-1896 (Ateena)
+6. skandaali-osmanien-vararikko-1875 (Istanbul)
+7. skandaali-etelameren-kupla (Lontoo)
+
+Tärkeysjärjestys: ENSIN aito Commons-kuva (PD/CC, ≥1200 px, sisältö
+itse katsottu; näihin aiheisiin on todennäköisesti aikalaiskuvitusta —
+esim. Elginin marmorit ja Etelämeren kupla varmasti, kaulanauhajutusta
+aikalaispiirroksia). VAIN jos kelvollista ei löydy: Matkakirjan
+kuvitus K1-tyylipohjalla (1870-luvun teräskaiverrus/akvarelli, ei
+tekstiä kuvaan, 4:3; AI-merkintä kuten linjattu). Yksi versio per
+kuva; omistaja katselmoi Kuvajonossa. Skandaalien tekstisisältö on
+js/packs/skandaalit.js:ssä — kuvan pitää vastata tarinan ydintä, ei
+yleiskuvaa kaupungista. Kun kuvat ovat R2:ssa, kuittaa postiin: minä
+teen lehtisiirron (samalla mallilla kuin v1421).
+
 ## 1.9.2026 14:30 UTC — FABLEN TILANNEMUISTIO JA JATKOPROMPTI (resetointia varten)
 
 Omistaja tilasi muistin tyhjennyksen tokenien säästämiseksi. Tämä muistio
