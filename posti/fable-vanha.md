@@ -1,3 +1,77 @@
+## 1.9.2026 18:20 UTC — FABLEN TILANNEMUISTIO JA JATKOPROMPTI (reset 2, omistajan pyyntö)
+
+TILANNE: origin/main = v1426 (e3e88835). Tänään julkaistu tästä
+sessiosta v1423 (maareitit lämmin terrakotta, yhtenäinen viiva),
+v1424 (nostojen teksti KOKONAAN napautettava kaikilla kolmella
+nimiölähteellä: poltettu/oma väistö/nimikerros), v1425 (UI-erä
+#128+#131: rajat samaa reittiä, tummennus pysyy, nimikoot, halo pois,
+FOKUS_LAATTA_R 10), v1426 (eläintäky ei varasta naapurimerkin
+napautusta — "lähin keskipiste voittaa" ulottuu eläinkerrokseen) ja
+PR #1881 (Raamattu + K1-kuvapromptit fotorealistisiksi, ei versiota).
+Testit vihreät, savuke-fokuskohteet FAIL "Ateenan syvennysmerkit" on
+v1419-kaupunkikaton (säde 8, katto 3) sivuvaikutus, EI bugi.
+
+JATKOPROMPTI (tee järjestyksessä):
+
+1. AGENTTI KESKEN: Opus-agentti a6445ba10fda3c1ce (worktree
+   .claude/worktrees/agent-a6445ba10fda3c1ce, haara
+   worktree-agent-a6445ba10fda3c1ce, pohja v1426) tekee (a) kaupunki-
+   katon pudottamien SYVENNYSTEN lehtisiirron v1421-mallilla (kuten
+   täkynostot/skandaalit) ja (b) savuke-fokuskohteet.mjs:n sovituksen
+   kattoon. Resetissä agentti-ilmoitus katoaa: katso worktreen git log
+   / tulostetiedosto (/tmp/claude-0/-home-user-Matkakirja/79e5374a-*/
+   tasks/a6445ba10fda3c1ce.output) — jos työ on valmis, katselmoi ja
+   JULKAISE v142x normaalikaavalla; jos kesken tai epäselvä, käynnistä
+   uusi Opus-agentti samalla tehtävällä (ei rinnakkaista).
+
+2. POLTTOKETJU (patina=ei, KAIKKI syötteet aina): pohja 2026-09-01e
+   -ajo 33533023968 kaatui shardissa z7c R2-throttleen
+   ("ServiceUnavailable ... concurrent request rate"); rerun_failed_jobs
+   käynnistetty 18:00 UTC, in_progress. Herätys trig_01G8MJRUzsDC21B7WKqvFSPS
+   klo 18:31 UTC todentaa. Kun luettelo pyramidi.json näyttää
+   versio=2026-09-01e ja patina=ei: (a) NOSTO: generoi-pyramidi.yml
+   tasot=vain-nostotaso, versio=2026-09-01e, nostoversio=2026-09-01f,
+   viivaversio=2026-09-01e, patina=ei, vie=kyllä (NOSTOLADONTA_SAANTO v4
+   vaatii uuden noston); (b) sen jälkeen VIIVA: tasot=vain-viivataso,
+   versio=2026-09-01e, nostoversio=2026-09-01f, viivaversio=2026-09-01g,
+   patina=ei. Tarkista Sofia z7 (col 92, row 32) ja raportoi omistajalle.
+   Jos throttle toistuu, rerun_failed_jobs uudelleen (ei uutta ajoa
+   rinnakkain). Workflow-id 345878424; actions_run_trigger tarvitsee
+   workflow_id-parametrin.
+
+3. POSTIKIERROS jatkuu tunneittain trig_01PVJLUsK6F9L92HR7hUCaQN (:19).
+   Odotettavat kuittaukset: yleiskuvitussessio (K1 fotorealistinen pohja
+   käytössä, 3 Wien-kuvaa uusiksi; K2-skandaalikuvat 7 kpl R2:ssa). Kun
+   K2-kuvat vahvistettu R2:ssa -> Fable tekee LEHTISIIRRON 7 skandaalille
+   (kaulanauhajuttu-1785, vrain-lucas, lustig-eiffel, elginin-marmorit,
+   belokas-maratonhuijaus-1896, osmanien-vararikko-1875,
+   etelameren-kupla) v1421-mallilla + julkaisu.
+
+4. OMISTAJAN PÄÄTÖS AUKI (kysymyskortti sopivassa välissä, ei kiire):
+   sisältöduplikaatit Vanin kissa (kohde + eläintäky) ja Livnon
+   villihevoset (syvennys + eläintäky) — yhdistetäänkö vai pidetäänkö.
+
+5. js/tyohuone-tilanne.js tilannetaulu ei ole päivittynyt tänään —
+   niputa seuraavaan julkaisuun (v1423–v1426 + polttoketju + kuvalinjaus).
+
+6. SIIVOUS kun ehtii: väliaikaiset haarat claude/reitit-lammin,
+   tyo/ui-era-128-131, tyo/katkorytmi (kaikki julkaistu mainiin) ja
+   worktreet scratchpad/julkaisu-reitit2, tyo-ui, tyo-katko (vanhat
+   sessiot 685a42b6 / 79e5374a). Levy oli ~92 % — poista ennen isoja
+   ajoja. Vedostyökalu: 79e5374a-*/scratchpad/tyo/vedos.mjs
+   (`node tyo/vedos.mjs <juuri> <out.png> <z> <lon> <lat> <w> <h> '{}'
+   --eiLentoja` — liput vasta tyyliJSON-paikkamerkin jälkeen).
+
+MUISTETTAVAT LINJAUKSET TÄLTÄ PÄIVÄLTÄ (jo Raamatussa): reitit
+lautapelityyliin (maantie yhtenäinen, meri katko 0.30, helmi 10, kehä 6,
+maa rgba(152,92,44)); noston teksti kokonaan napautettava; nostokuvat
+FOTOREALISTISINA (ei kaiverros); kaupunkikatto säde 8 / katto 3.
+Käytännöt: agentit enintään Opus (Sonnet rutiiniin), Fable-agentti vain
+omistajan pyynnöstä; `git fetch origin main` ennen versionumeroa;
+uusi-versio-rivi ≤60 merkkiä; dist/ ei committoida; ei salaisuuksia
+eikä kuvadataa postiin; NODE_USE_ENV_PROXY=1; Chromium
+/opt/pw-browsers/chromium.
+
 ## 1.9.2026 18:05 UTC — YLEISKUVITUSSESSIOLLE: K1-tyylipohja vaihtui FOTOREALISTISEKSI
 
 Omistajan päätös tänään illalla (Kuvajonon Wien-erän katselmoinnista):
