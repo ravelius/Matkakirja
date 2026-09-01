@@ -10,36 +10,33 @@
  */
 
 export const TILANNE = {
-  paivitetty: '31.8.2026 myohaisilta — v1393–v1398, ajo 31c kaynnissa, parvi ajossa',
-  tavoite: 'Laattapyramidi on pelin ainoa maailmankartta. Mainissa: '
-    + 'nappula laatan sisaan (v1393), merkit karttavakioksi eli musta '
-    + 'pippuri pois (v1394), polttamaton kerros piiloon eleessa '
-    + '(v1395), NOSTOTASO (v1396) ja ikilumi 5500 m + jarvien '
-    + 'vesisavy (v1397, voimaan seuraavassa pohja-ajossa). '
-    + 'Pyramidiajo 2026-08-31c (pohja + 510 merkin nostotaso) '
-    + 'kaynnissa. Omistajan illan uudet paatokset kaanonissa: '
-    + 'VIIVATASO (reitit + piirit + maiden rajat omalle tasolle '
-    + 'z0-z7, aikakausirajat datanvaihtona), MAATUMMENNUS '
-    + 'lahizoomilla, paakaupungit kapiteelein, kaupunkilaatan '
-    + 'kasvukatto.',
+  paivitetty: '1.9.2026 ilta — v1423–v1427, polttoketju 01e/01f/01g kaynnissa',
+  tavoite: 'Kartta yhtenaiseksi ja teravyys arvioitavaksi. Mainissa: '
+    + 'maareitit yhtenaisena lamminna viivana ja meri katkoina (v1423), '
+    + 'noston teksti kokonaan napautettava (v1424), rajat samaa reittia '
+    + 'kuin poltettu raja, tummennus pysyy zoomatessa, uudet nimikoot ja '
+    + 'halo pois (v1425), elaintaky ei varasta naapurimerkin napautusta '
+    + '(v1426), kaupunkikaton pudottamat syvennystarinat lehdissa ja '
+    + 'savuke katon mukainen (v1427). Nostokuvat FOTOREALISTISINA '
+    + '(Raamattu 1.9.). Polttoketju PATINATTA: pohja 2026-09-01e -> '
+    + 'nosto 01f -> viiva 01g; omistaja katsoo patinattoman version.',
   rivit: [
     {
       tekija: 'Fable',
       rooli: 'paatoimittaja',
       tila: 'tyossa',
-      tehtava: 'Kartan viimeistely agenttiparvella. Ajossa: '
-        + 'viivataso (toteutus), maatummennus, paakaupunkityyli, '
-        + 'kaupunkilaatan kasvukatto, pyramidin paikkausajo. '
-        + 'Valmiina illalla: 8 mergea + 2 savuketta tutkittu pohjaan '
-        + '(ei pelivikoja - molemmat savukkeiden omia vanhentuneita '
-        + 'oletuksia, korjattu ja kiristetty).',
-      seuraavaksi: 'Parven erien katselmointi ja merget; sitten '
-        + 'yhdistetty pohja-ajo 31d (reititon pohja + lumi + jarvet) '
-        + 'ja viivataso-ajo omistajan luvalla julkaisujarjestyksessa '
-        + 'selain -> viivataso -> pohja.',
+      tehtava: 'Polttoketjun ajo ja todennus (01e pohja R2-throttlen '
+        + 'jalkeen uusintana, sitten nosto 01f ja viiva 01g patina=ei). '
+        + 'Postikierros tunneittain: yleiskuvitussession K1-kuittaus ja '
+        + 'K2-skandaalikuvat (7 kpl) R2:een.',
+      seuraavaksi: 'Kun K2-kuvat ovat R2:ssa: 7 skandaalin lehtisiirto '
+        + 'v1421-mallilla + julkaisu. Sofia z7 -tarkistus poltosta ja '
+        + 'raportti omistajalle. Vanhojen haarojen ja worktreiden siivous.',
     },
   ],
   odottaaPaatosta: [
+    'Sisaltoduplikaatit: Vanin kissa (kohde + elaintaky) ja Livnon '
+      + 'villihevoset (syvennys + elaintaky) — yhdistetaanko vai pidetaanko',
     'Kasvokuvaerä Driveen (nuoremmat kasvot) → kohtaamiskortit',
     'fin-pieni-kuva uusiksi (prompti annettu)',
     'Bergenin kohdekartta (Overpass)',
@@ -55,6 +52,11 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1427: PUDOTETUT SYVENNYSTARINAT LEHDISSA - kaupunkikatto pudottaa kartalta 40 syvennystarinaa 22 kaupungissa; 38 oli jo lehdissa v1421:n myota, nyt myos Koopenhaminan Tivoli (uusi juttu Tivoli-sivulle, Detroit Publishingin portti-fotokromi) ja Istanbulin kissat (sisalto oli jo lehdessa, osoite merkitty). Savuke-fokuskohteet mittaa nyt katon JALKEISTA tilaa pelin omalla karsintapassilla (110/110, ennen 89 + 6 FAIL + kaatuminen). Avaa Koopenhaminan lehden Tivoli-sivu.',
+  'v1426: ELAINTAKY EI VARASTA NAPAUTUSTA - elainmerkki, kohdemerkki ja kaupungin laatta kilpailevat samassa lahin keskipiste voittaa -ratkaisussa (QA loysi 3 vaarin auennutta korttia 168:sta). Napauta kohdemerkkia elainmerkin vierella.',
+  'v1425: RAJAT JA NIMIKOOT - maatummennus ja rajanvahvistus kulkevat samaa reittia kuin poltettu raja, raja paksumpi, tummennus pysyy zoomatessa (pois vain rajanylityksessa); kaupunkinimet nostonimia isommat, nostoteksteista valkoinen halo pois, pelaajan kaupunki askelhelmen kokoinen ympyra + harvennetut kapiteelit. Zoomaa rajalle ja katso tummennus.',
+  'v1424: NOSTON TEKSTI KOKONAAN NAPAUTETTAVA - nostonimen jokainen kirjain avaa kortin kaikilla kolmella nimiolahteella (poltettu, oma vaisto, nimikerros). Napauta nostonimen loppupaata.',
+  'v1423: MAAREITIT YHTENAISEKSI - maantie on taas yhtenainen ohuempi lammin terrakottaviiva (rgba 152,92,44), meri sailyy katkoina (0.30), askelhelmi 10 / keha 6. Nakyy kartalla vasta viivatason 01g-polton jalkeen. Katso Pariisi-Wien-maareitti.',
   'v1422: KUVAPINOKAUPUNGIT EIVAT ENAA KAADA PELIA - 12 kaupungissa (mm. Dubai, Doha, Astana, Kap Horn, Norfolk) saapuminen kaatoi koko renderin, koska kaupungin kuvarivilla on vain kuvapino ilman ylatason historiakuvaa. Nyt pikkukuvaksi kelpaa pinon ensimmainen kuva ja postikorttipino alkaa suoraan naista. Matkusta Dubaihin ja avaa kuvakortti.',
   'v1421: PUDOTETUT NOSTOT KAUPUNKILEHTIIN - kaupunkikaton (v1419) kartalta pudottamat 55 nostoa ovat nyt 21 kaupungin lehdissa: mm. Pariisiin, Sofiaan, Ateenaan, Wieniin, Berliiniin, Roomaan ja Dubliniin uudet aihesivut minitehtavineen, loput kansille ja vanhoille sivuille. 12 jai siirtamatta (7 skandaalia ilman kuvaa, 3 duplikaattia, 2 sulautettu). Avaa Pariisin lehden Historia-sivu.',
   'v1420: REITTIEN KATKOTYYLI VALMIS - katkoviiva viiva 9 / jakso 190, askelhelmi katkon keskella (viiva ei koskaan osu helmeen), rinnakkaiset merireitit yhdistyvat yhdeksi uraksi liittymasilloilla (~90 % rinnakkaismusteesta pois, mm. Dakarin ja Rooman edustat). Nakyy kartalla vasta uuden viivatasopolton jalkeen. Katso Joonianmeri ja Dakar poltosta.',

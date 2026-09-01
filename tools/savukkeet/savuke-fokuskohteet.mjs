@@ -51,6 +51,10 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { kohdeKarttarivit } from '../../js/fokuskohteet.js';
+import { nostoKaupunginPooli } from '../../js/fokusnosto.js';
+import { skandaaliKarttarivit } from '../../js/skandaalit.js';
+import { syvennysKarttarivit } from '../../js/syvennys.js';
 import { FOKUSKOHTEET_GRC } from '../../js/packs/fokuskohteet-grc.js';
 import { FOKUS_POHJAT } from '../../js/packs/fokus-grc.js';
 import { FOKUSVIRRAT } from '../../js/packs/fokusvirrat.js';
@@ -436,19 +440,104 @@ let m = await merkit();
  * Nostopooli (js/fokusnosto.js NOSTO_MAAT) ei ole exportattu, joten
  * nostojen odotus on vähintään-ehto eikä täsmälista; noston merkin
  * säännöt vartioidaan erikseen (osio "nostot ja syvennykset kartalla").
+ *
+ * KAUPUNKINOSTOJEN KATTO ON OSA ODOTUSTA (v1419, omistaja 1.9.2026):
+ * kohdekaupungin 8 yksikön säteeltä kartalle jää enintään kolme
+ * merkkiä prioriteetilla ihme > skandaali > syvennys > täkynosto >
+ * muu, ja loput siirtyvät kaupunkilehteen. Väitteet kirjoitettiin
+ * ennen kattoa, ja Ateenassa katto pudottaa kuusi merkkiä — myös
+ * kaikki kolme syvennystarinaa. ODOTUSTA EI SIKSI PEHMENNETTY vaan
+ * SE LASKETAAN SAMALLA SÄÄNNÖLLÄ KUIN PELI LASKEE: alla kutsutaan
+ * pelin OMAA passia (js/fokuskohteet.js kohdeKarttarivit), jonka
+ * sisällä karsiKaupunkiruuhka ajaa. Kaksi ajoa, sama syöte:
+ *   - ilman kaupunkeja  → karsinta ohittuu (karsiKaupunkiruuhkan oma
+ *     ehto `if (!kaupungit?.length) return rivit`), eli DATAN koko
+ *     joukko;
+ *   - maan kaupungeilla → se, mikä kartalle oikeasti jää.
+ * Erotus on katon pudottama joukko, ja se vartioidaan omalla
+ * väitteellään molempiin suuntiin.
  */
-const perusOdotus = new Set(
+const dataPerus = new Set(
   [...FOKUSKOHTEET_GRC, ...(MAASTOKOHTEET.GRC ?? [])]
     .filter((k) => k.laudat?.maailmankartta)
     .map((k) => k.id),
 );
-const syvennysOdotus = new Set(Object.keys(SYVENNYSPAIKAT)
+const dataSyvennys = new Set(Object.keys(SYVENNYSPAIKAT)
   .filter((cityId) => peli.pack.map.cityCountry?.[cityId] === 'GRC')
   .flatMap((cityId) => (FOKUSVIRRAT[cityId]?.takyt ?? [])
     .filter((taky) => SYVENNYSPAIKAT[cityId][taky.id])
     .map((taky) => `syvennys-${cityId}-${taky.id}`)));
-const skandaaliOdotus = new Set((SKANDAALIT.GRC ?? [])
+const dataSkandaali = new Set((SKANDAALIT.GRC ?? [])
   .map((skandaali) => `skandaali-${skandaali.id}`));
+
+const grcBbox = FOKUS_POHJAT.GRC.bbox;
+const grcPohjanAlla = (x, y) => x >= grcBbox.x && x <= grcBbox.x + grcBbox.w
+  && y >= grcBbox.y && y <= grcBbox.y + grcBbox.h;
+const grcKaupungit = (peli.pack.cities ?? [])
+  .filter((k) => peli.pack.map.cityCountry?.[k.id] === 'GRC');
+const ateena = grcKaupungit.find((k) => k.id === 'ateena') ?? grcKaupungit[0];
+/*
+ * LISÄLÄHTEIDEN RIVIT SAMALLA SÄÄNNÖLLÄ KUIN PELISSÄ. Syvennykset ja
+ * skandaalit tulevat moduulien omista passeista; täkynostoille ei ole
+ * omaa passia elävälle kerrokselle (nostoLisakohteet lukee `ui`:ta),
+ * joten sen kolme sääntöä toistetaan tässä: kohteellinen nosto ei luo
+ * merkkiä, oman koordinaatin nosto menee sinne, ja koordinaatiton
+ * asettuu siihen kaupunkiin, jossa pelaaja seisoo (Ateena).
+ * Karsinta lukee rivistä vain `kohde.id`, `kohde.ihme`, `kohde.tyyppi`
+ * ja paikan, joten tunnus riittää.
+ */
+const grcLisat = [
+  ...syvennysKarttarivit('GRC', peli.pack.id, peli.pack.map.cityCountry),
+  ...skandaaliKarttarivit('GRC', peli.pack.id),
+];
+for (const nosto of nostoKaupunginPooli('GRC', ateena.id)) {
+  if (nosto.kohde) continue;
+  const oma = nosto.paikka?.laudat ? nosto.paikka.laudat[peli.pack.id] : nosto.paikka;
+  grcLisat.push({
+    kohde: { id: `nosto-${nosto.id}`, tyyppi: 'nosto' },
+    paikka: (Number.isFinite(oma?.x) && Number.isFinite(oma?.y))
+      ? { x: oma.x, y: oma.y } : { x: ateena.x, y: ateena.y },
+  });
+}
+const grcRivit = (kaupungit) => kohdeKarttarivit({
+  iso: 'GRC',
+  lauta: peli.pack.id,
+  kaupungit,
+  pohjanAlla: grcPohjanAlla,
+  lisat: grcLisat,
+}).map((r) => r.kohde.id);
+const ennenKattoa = grcRivit([]);
+const katonJalkeen = grcRivit(grcKaupungit);
+const kattoPudotti = ennenKattoa.filter((id) => !katonJalkeen.includes(id));
+const jaljella = (etuliite) => katonJalkeen.filter((id) => id.startsWith(etuliite));
+const perusOdotus = new Set(katonJalkeen
+  .filter((id) => !id.startsWith('nosto-') && !id.startsWith('syvennys-')
+    && !id.startsWith('skandaali-')));
+const syvennysOdotus = new Set(jaljella('syvennys-'));
+const skandaaliOdotus = new Set(jaljella('skandaali-'));
+/*
+ * DATAN JOUKKO ON YHÄ LADONNAN LÄHTÖJOUKKO. Ilman tätä väitettä katto
+ * peittäisi kadonneen kohteen: jos rivi katoaisi jo datasta tai
+ * lehden ikkunasta, sekä odotus että tulos kutistuisivat yhtä matkaa
+ * eikä mikään huutaisi.
+ */
+vaadi('ladonnan lähtöjoukko on koko datan joukko (ennen kaupunkikattoa)',
+  [...dataPerus, ...dataSyvennys, ...dataSkandaali]
+    .every((id) => ennenKattoa.includes(id)),
+  `puuttuu: ${[...dataPerus, ...dataSyvennys, ...dataSkandaali]
+    .filter((id) => !ennenKattoa.includes(id)).join(',') || '-'}`);
+/*
+ * KATTO PUDOTTAA ATEENASSA KUUSI MERKKIÄ: kolme ihmettä täyttää katon,
+ * joten akropolis-museo, kolme syvennystarinaa ja kaksi skandaalia
+ * jäävät kartalta pois. Väite ei lukitse lukua vaan sen, että katto
+ * ON voimassa (pudotettuja on) ja että pudotetut EIVÄT ole kartalla.
+ */
+vaadi('kaupunkinostojen katto on voimassa Ateenan ruuhkassa',
+  kattoPudotti.length > 0, `ei pudotettuja: ${ennenKattoa.length} merkkiä`);
+vaadi('katon pudottamaa merkkiä ei ole kartalla',
+  kattoPudotti.every((id) => !m.sisaltyvat.includes(id)),
+  `kartalla vaikka pudotettu: ${kattoPudotti
+    .filter((id) => m.sisaltyvat.includes(id)).join(',')}`);
 /*
  * MITTA ON KATTAVUUS, JA SE ON TAAS SUORA (31.8.2026 ilta). Kategoria
  * per kaupunki -yhdistely eli saman kaupungin samanlajisten kohteiden
@@ -462,28 +551,33 @@ const perusSaadut = m.sisaltyvat
 const nostoSaadut = m.sisaltyvat.filter((t) => t.startsWith('nosto-'));
 const syvennysSaadut = m.sisaltyvat.filter((t) => t.startsWith('syvennys-'));
 const skandaaliSaadut = m.sisaltyvat.filter((t) => t.startsWith('skandaali-'));
-vaadi('jokainen maan kohde sai merkin',
+vaadi('jokainen katon jälkeen jäävä maan kohde sai merkin',
   perusSaadut.length === perusOdotus.size
   && perusSaadut.every((t) => perusOdotus.has(t)),
   `${perusSaadut.length}/${perusOdotus.size} — puuttuu: `
   + `${[...perusOdotus].filter((t) => !perusSaadut.includes(t)).join(',') || '-'}`
   + `; tuntemattomat: ${perusSaadut.filter((t) => !perusOdotus.has(t)).join(',') || '-'}`);
-vaadi('syvennysmerkit ovat täsmälleen maan paikkataulun täyt',
+vaadi('syvennysmerkit ovat täsmälleen katon jälkeen jäävät täyt',
   syvennysSaadut.length === syvennysOdotus.size
   && syvennysSaadut.every((t) => syvennysOdotus.has(t)),
-  `saatu ${syvennysSaadut.join(',')} vs odotus ${[...syvennysOdotus].join(',')}`);
-vaadi('skandaalimerkit ovat täsmälleen maan skandaalitaulun rivit',
+  `saatu ${syvennysSaadut.join(',')} vs odotus ${[...syvennysOdotus].join(',') || '(ei yhtään)'}`);
+vaadi('skandaalimerkit ovat täsmälleen katon jälkeen jäävät rivit',
   skandaaliSaadut.length === skandaaliOdotus.size
   && skandaaliSaadut.every((t) => skandaaliOdotus.has(t)),
   `saatu ${skandaaliSaadut.join(',')} vs odotus ${[...skandaaliOdotus].join(',')}`);
-vaadi('kokonaismäärä täsmää rekisteröityihin lähteisiin '
-  + '(kohteet+nostot+syvennykset+skandaalit)',
+/*
+ * KOKONAISMÄÄRÄ MITATAAN PELIN OMAA PASSIA VASTEN, EI SUMMANA. Passi
+ * (kohdeKarttarivit + karsiKaupunkiruuhka) on sama koodi, joka latoo
+ * kartan, joten lista kelpaa täsmälistaksi myös täkynostoille — ja
+ * uusi selittämätön lähde tai kadonnut merkki kaataa väitteen yhä.
+ */
+vaadi('kartan merkit ovat täsmälleen pelin oman ladontapassin tulos',
   nostoSaadut.length > 0
-  && m.sisaltyvat.length === perusOdotus.size + nostoSaadut.length + syvennysOdotus.size
-    + skandaaliOdotus.size,
-  `${m.sisaltyvat.length} kohdetta; nostoja ${nostoSaadut.length}, `
-  + `syvennyksiä ${syvennysSaadut.length}, skandaaleja ${skandaaliSaadut.length}: `
-  + `${m.sisaltyvat.join(',')}`);
+  && m.sisaltyvat.length === katonJalkeen.length
+  && m.sisaltyvat.every((t) => katonJalkeen.includes(t)),
+  `${m.sisaltyvat.length} kohdetta vs passin ${katonJalkeen.length}; `
+  + `liikaa: ${m.sisaltyvat.filter((t) => !katonJalkeen.includes(t)).join(',') || '-'}; `
+  + `puuttuu: ${katonJalkeen.filter((t) => !m.sisaltyvat.includes(t)).join(',') || '-'}`);
 vaadi('kiertävällä laudalla merkit ovat molemmissa kohdissa',
   m.maara === m.tunnukset.length * 2, `${m.maara} merkkiä`);
 
@@ -944,9 +1038,15 @@ const datanPaikat = new Set(FOKUSKOHTEET_GRC
  * on löydyttävä ankkurilistasta sellaisenaan. Kaikki siirto —
  * erottelu ja kaupungin ympärille ladonta — on esitystä eikä kosketa
  * näitä lukuja.
+ *
+ * KATON PUDOTTAMALLA EI OLE ANKKURIA (v1419): se ei ole kartalla
+ * lainkaan, joten se rajataan pois ennen vertailua — Ateenassa
+ * `akropolis-museo`. Rajaus tulee samasta passista kuin odotukset
+ * yllä, ei käsin kirjoitetusta poikkeuslistasta.
  */
 const kadonneet = FOKUSKOHTEET_GRC
   .filter((kohde) => kohde.laudat?.maailmankartta)
+  .filter((kohde) => !kattoPudotti.includes(kohde.id))
   .filter((kohde) => !erottelu.ankkurit
     .includes(`${kohde.laudat.maailmankartta.x}:${kohde.laudat.maailmankartta.y}`))
   .map((kohde) => kohde.id);
@@ -1645,16 +1745,20 @@ vaadi('kortin nauha ei nappaa napautuksia', ihme?.osoitin === 'none', ihme?.osoi
  * merkkiä vaan aukeaa kohteen tietoruudun Livian leikekirja -napista.
  *
  * Kreikassa mitataan kaikki kolme puolta:
- *   a) sofia-korut (nosto ilman kohdetta) ja Ateenan syvennystarinat
- *      ovat kohdekerroksessa OMINA merkkeinään aihevaloineen —
- *      31.8.2026 illan esityssiirron jälkeen ne ovat kaupungin
- *      molemmin puolin ladottuja itsenäisiä nostoja, eivät yhdistetyn
- *      merkin jäseniä;
+ *   a) sofia-korut (nosto ilman kohdetta) on kohdekerroksessa OMANA
+ *      merkkinään aihevaloineen — 31.8.2026 illan esityssiirron
+ *      jälkeen ne ovat kaupungin molemmin puolin ladottuja itsenäisiä
+ *      nostoja, eivät yhdistetyn merkin jäseniä;
  *   b) kastrin-kyla, olympoksen-huippu ja antikythera-kone (nostot
  *      joilla on kohde) EIVÄT piirrä omaa merkkiä, ja Delfoin
  *      tietoruudussa on Livian leikekirja -nappi, josta noston
  *      lunastuskortti aukeaa;
- *   c) kummankin lisälähteen merkin napautus avaa sen OMAN korttinsa.
+ *   c) lisälähteen merkin napautus avaa sen OMAN korttinsa.
+ *
+ * ATEENAN SYVENNYSTARINAT EIVÄT OLE ENÄÄ TÄSSÄ (v1419, kaupunkikatto):
+ * kolme ihmettä täyttää katon, joten kaikki kolme tarinaa jäävät
+ * kartalta pois. Väite kääntyi siksi toisin päin — merkkiä EI saa
+ * olla — ja sisältö vartioidaan lehden puolelta (osio 10c2).
  */
 await sivu.keyboard.press('Escape');
 await sivu.waitForTimeout(300);
@@ -1668,10 +1772,9 @@ const kohdemalli = await sivu.evaluate(() => {
     // Kohteeton nosto on kartalla omana merkkinään Ateenan ryppäässä.
     nostoOmaMerkki: Boolean(merkki('nosto-sofia-korut')),
     nostoValo: valo('nosto-sofia-korut'),
-    // Kolme Ateenan syvennystarinaa, kukin omana merkkinään.
+    // Ateenan kolme syvennystarinaa: kaupunkikatto pudotti ne kartalta.
     syvennysMerkkeja: ['syvennys-ateena-diogenes', 'syvennys-ateena-nike',
       'syvennys-ateena-schliemann'].filter((id) => merkki(id)).length,
-    syvennysValo: valo('syvennys-ateena-diogenes'),
     // Kuoria ei ole: yhdelläkään merkillä ei ole jäsenlistaa.
     kuoria: [...tiedot.keys()].filter((id) => osat(id).length > 1).length,
     // Nosto jolla on kohde ei luo omaa merkkiä (Raamatun sääntö).
@@ -1682,12 +1785,67 @@ const kohdemalli = await sivu.evaluate(() => {
 vaadi('nosto ilman kohdetta on kartalla omana kohdemerkkinään aihevaloineen',
   kohdemalli.nostoOmaMerkki && kohdemalli.nostoValo === 'skandaalit',
   JSON.stringify(kohdemalli));
-vaadi('Ateenan syvennystarinat ovat kartalla omina merkkeinään aihevaloineen',
-  kohdemalli.syvennysMerkkeja === 3 && kohdemalli.syvennysValo === 'historia'
-  && kohdemalli.kuoria === 0,
+vaadi('kaupunkikatto pudotti Ateenan syvennystarinat kartalta',
+  kohdemalli.syvennysMerkkeja === 0 && kohdemalli.kuoria === 0,
   JSON.stringify(kohdemalli));
 vaadi('nosto jolla on kohde ei luo omaa merkkiä',
   kohdemalli.kiinnitetyt === 0, `${kohdemalli.kiinnitetyt} tuplamerkkiä`);
+
+/* --- 10c2: PUDOTETTU SYVENNYSTARINA LÖYTYY KAUPUNKILEHDESTÄ -------
+ *
+ * Kaupunkinostojen katto (v1419) EI SAA HÄVITTÄÄ SISÄLTÖÄ: omistajan
+ * linjaus sanoo, että kartalta karsitut *"sisällytetään
+ * kaupunkilehtiin"*. Siirto tehtiin v1421:ssä (täkynostot ja
+ * syvennystarinat) ja täydennettiin tässä erässä; jokainen siirretty
+ * kohta on merkitty kaupunkilehden dataan lohkokommentilla, jossa
+ * lukee syvennystarinan TUNNUS. Väite lukee tuon tiedoston tekstinä ja
+ * vaatii jokaiselle katon pudottamalle tarinalle osoitteen lehdestä.
+ *
+ * MITTA ON KOKO MAAILMA eikä vain Kreikka, koska katto pudottaa
+ * syvennyksiä 19 maassa. Tämä on savukkeen ainoa selaimeton väite, ja
+ * se on tässä siksi, että katto ja sen jälkityö ovat sama asia: jos
+ * uusi tarina putoaa kartalta ilman lehtiosoitetta, se on kadonnut
+ * pelistä — eikä mikään muu vartija huomaisi sitä.
+ */
+const lehtiLahde = readFileSync(join(JUURI, 'js/packs/kulttuuri-kategoriat.js'), 'utf8');
+const pudotetutSyvennykset = [];
+for (const [iso, pohja] of Object.entries(FOKUS_POHJAT)) {
+  const bbox = pohja?.bbox;
+  const kaupungit = (peli.pack.cities ?? [])
+    .filter((k) => peli.pack.map.cityCountry?.[k.id] === iso);
+  if (!bbox || !kaupungit.length) continue;
+  const alla = (x, y) => x >= bbox.x && x <= bbox.x + bbox.w
+    && y >= bbox.y && y <= bbox.y + bbox.h;
+  const syvennykset = syvennysKarttarivit(iso, peli.pack.id, peli.pack.map.cityCountry);
+  const skandaalit = skandaaliKarttarivit(iso, peli.pack.id);
+  for (const kaupunki of kaupungit) {
+    const lisat = [...syvennykset, ...skandaalit];
+    for (const nosto of nostoKaupunginPooli(iso, kaupunki.id)) {
+      if (nosto.kohde) continue;
+      const oma = nosto.paikka?.laudat ? nosto.paikka.laudat[peli.pack.id] : nosto.paikka;
+      lisat.push({
+        kohde: { id: `nosto-${nosto.id}`, tyyppi: 'nosto' },
+        paikka: (Number.isFinite(oma?.x) && Number.isFinite(oma?.y))
+          ? { x: oma.x, y: oma.y } : { x: kaupunki.x, y: kaupunki.y },
+      });
+    }
+    const jaa = new Set(kohdeKarttarivit({
+      iso, lauta: peli.pack.id, kaupungit, pohjanAlla: alla, lisat,
+    }).map((r) => r.kohde.id));
+    for (const rivi of syvennykset) {
+      if (!alla(rivi.paikka.x, rivi.paikka.y) || jaa.has(rivi.kohde.id)) continue;
+      if (!pudotetutSyvennykset.includes(rivi.kohde.id)) {
+        pudotetutSyvennykset.push(rivi.kohde.id);
+      }
+    }
+  }
+}
+const ilmanLehtea = pudotetutSyvennykset.filter((id) => !lehtiLahde.includes(id));
+vaadi('katto pudottaa syvennystarinoita (muuten väite mittaisi tyhjää)',
+  pudotetutSyvennykset.length > 0, `${pudotetutSyvennykset.length} pudotettua`);
+vaadi('jokaisen pudotetun syvennystarinan sisältö on kaupunkilehdessä',
+  ilmanLehtea.length === 0,
+  `${pudotetutSyvennykset.length} pudotettua, ilman lehtiosoitetta: ${ilmanLehtea.join(',')}`);
 
 /* --- 10d: LISÄLÄHTEEN MERKKI AVAA OMAN KORTTINSA -------------------
  *
@@ -1697,10 +1855,16 @@ vaadi('nosto jolla on kohde ei luo omaa merkkiä',
  * jokainen lisälähde avaa OMAN korttinsa omine teksteineen ja
  * visoineen — nyt suoraan, ilman kuoren välikättä.
  *
- * Koekappaleet ovat kaksi eri lähdettä samasta ryppäästä: kohteeton
- * täkynosto (js/fokusnosto.js) ja syvennystarina (js/syvennys.js).
- * Molemmat ovat Ateenan laatan kyljessä, joten koe mittaa samalla
- * sen, että ryppääseen ladottu merkki on yhä napautettavissa.
+ * Koekappale on kohteeton täkynosto (js/fokusnosto.js) Ateenan laatan
+ * kyljessä, joten koe mittaa samalla sen, että ryppääseen ladottu
+ * merkki on yhä napautettavissa.
+ *
+ * SYVENNYSTARINAN NAPAUTUSTA EI ENÄÄ KOETETA (v1419, kaupunkikatto):
+ * Kreikan kaikki kolme tarinaa jäävät kartalta pois, eikä savuke saa
+ * hakea merkkiä, jota siellä ei ole — vanha koe kaatoi koko ajon
+ * ("merkki syvennys-ateena-diogenes ei ole ruudulla"). Kortin oma
+ * ladonta on datan puolella tests/nostolahteet.test.mjs:ssä, ja se,
+ * ettei sisältö katoa, osiossa 10c2.
  */
 await napauta('nosto-sofia-korut');
 const nostolehti = await sivu.evaluate(() => {
@@ -1713,20 +1877,6 @@ const nostolehti = await sivu.evaluate(() => {
 });
 vaadi('ryppääseen ladottu täkynosto avaa oman korttinsa',
   nostolehti && nostolehti.teksti > 200, JSON.stringify(nostolehti));
-await sivu.keyboard.press('Escape');
-await sivu.waitForTimeout(400);
-
-await napauta('syvennys-ateena-diogenes');
-const tarinalehti = await sivu.evaluate(() => {
-  const popup = document.querySelector('.fokuskohde-popup, .syvennys-kortti');
-  if (!popup) return null;
-  return {
-    teksti: (popup.textContent ?? '').length,
-    visoja: popup.querySelectorAll('.fokusvirta-visa-kysymys').length,
-  };
-});
-vaadi('ryppääseen ladottu syvennystarina avaa oman korttinsa visoineen',
-  tarinalehti && tarinalehti.teksti > 200, JSON.stringify(tarinalehti));
 await sivu.keyboard.press('Escape');
 await sivu.waitForTimeout(400);
 

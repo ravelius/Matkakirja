@@ -676,7 +676,7 @@ export const KULTTUURI_KATEGORIAT = {
     },
     /*
      * KARTALTA LEHTEEN (v1419 jälkityö): syvennystarinat
-     * `syvennys-lontoo-vuorovesi` ja `-hirvet` putosivat Lontoon
+     * `syvennys-lontoo-vuorovesi` ja `syvennys-lontoo-hirvet` putosivat Lontoon
      * nostoruuhkasta.
      */
     {
@@ -1673,7 +1673,8 @@ export const KULTTUURI_KATEGORIAT = {
     },
     /*
      * KARTALTA LEHTEEN (v1419 jälkityö, kaupunkinostojen katto):
-     * syvennystarinat `syvennys-praha-klementinum` ja `-przewalski`
+     * syvennystarinat `syvennys-praha-klementinum` ja
+     * `syvennys-praha-przewalski`
      * putosivat Prahan nostoruuhkasta.
      */
     {
@@ -2315,7 +2316,7 @@ export const KULTTUURI_KATEGORIAT = {
     /*
      * KARTALTA LEHTEEN (v1419 jälkityö). Wienin viereen kertyi viisi
      * nostomerkkiä yli katon. Tämän sivun jutut ovat syvennystarinoita
-     * `syvennys-wien-sahko` ja `-vesijohto` sekä täkynosto
+     * `syvennys-wien-sahko` ja `syvennys-wien-vesijohto` sekä täkynosto
      * `nosto-maailmannayttely-1873`.
      */
     {
@@ -5523,7 +5524,9 @@ export const KULTTUURI_KATEGORIAT = {
      * KARTALTA LEHTEEN (v1419 jälkityö). Kaupunkinostojen katto jättää
      * kohdekaupungin viereen enintään kolme merkkiä, ja Pariisissa yli
      * jäi kahdeksan. Tämän sivun kolme ensimmäistä juttua ovat
-     * syvennystarinoita (`syvennys-pariisi-*`) ja neljäs täkynosto
+     * syvennystarinoita (`syvennys-pariisi-tuileriat`,
+     * `syvennys-pariisi-kyyhkyposti`, `syvennys-pariisi-impressionistit`)
+     * ja neljäs täkynosto
      * (`nosto-kirahvin-kavelymatka`) — samat faktat, lehtimittaan
      * kirjoitettuina.
      */
@@ -6106,7 +6109,8 @@ export const KULTTUURI_KATEGORIAT = {
     /*
      * KARTALTA LEHTEEN (v1419 jälkityö). Ateenan viereen kertyi kuusi
      * nostomerkkiä yli katon; nämä kolme ovat syvennystarinoita
-     * (`syvennys-ateena-nike`, `-diogenes`, `-schliemann`) lehtimittaan
+     * (`syvennys-ateena-nike`, `syvennys-ateena-diogenes`,
+     * `syvennys-ateena-schliemann`) lehtimittaan
      * kirjoitettuina.
      */
     {
@@ -6683,6 +6687,15 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       nostot: [
+        /*
+         * KARTALTA LEHTEEN (v1419 jälkityö, kaupunkinostojen katto):
+         * syvennystarina `syvennys-istanbul-kissat` putoaa Istanbulin
+         * nostoruuhkasta, mutta sitä EI tarvinnut siirtää — sen tarina
+         * on ollut tässä nostossa jo ennen kattoa: sama katukissojen
+         * määrä, sama asema korttelin yhteisenä lemmikkinä. Merkintä on
+         * tässä, jotta pudotetun merkin sisällölle löytyy lehdestä
+         * osoite (v1421:n lohkokommenttikäytäntö).
+         */
         {
           otsikko: 'Kadun kissat ovat kaikkien kissoja',
           tiedosto: 'Hagia Sophia Cat Gli.png',
@@ -7106,7 +7119,7 @@ export const KULTTUURI_KATEGORIAT = {
          * kuusi nostomerkkiä yli katon. Nämä neljä ovat karsittujen
          * merkkien omaa sisältöä: kohteet `kapalicarsi` ja `dolmabahce`
          * sekä syvennystarinat `syvennys-istanbul-kaarmepylvas` ja
-         * `-camondo`.
+         * `syvennys-istanbul-camondo`.
          */
         {
           otsikko: 'Kapalıçarşı — kuusikymmentäyksi katettua katua',
@@ -7642,7 +7655,8 @@ export const KULTTUURI_KATEGORIAT = {
     },
     /*
      * KARTALTA LEHTEEN (v1419 jälkityö, kaupunkinostojen katto):
-     * syvennystarinat `syvennys-dublin-vuokrakirja` ja `-leijona`
+     * syvennystarinat `syvennys-dublin-vuokrakirja` ja
+     * `syvennys-dublin-leijona`
      * putosivat Dublinin nostoruuhkasta.
      */
     {
@@ -8822,7 +8836,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         /*
          * KARTALTA LEHTEEN (v1419 jälkityö, kaupunkinostojen katto):
-         * syvennystarinat `syvennys-lissabon-calcada` ja `-severa`
+         * syvennystarinat `syvennys-lissabon-calcada` ja
+         * `syvennys-lissabon-severa`
          * putosivat Lissabonin nostoruuhkasta.
          */
         {
@@ -10835,7 +10850,7 @@ export const KULTTUURI_KATEGORIAT = {
      * karsituissa kahdesti (`syvennys-rooma-kissat` ja täkynosto
      * `nosto-kissat`, sama tarina ja sama kuva), joten se on tässä
      * yhtenä juttuna; muut ovat syvennystarinoita
-     * `syvennys-rooma-vatikaani` ja `-avaimenreika`.
+     * `syvennys-rooma-vatikaani` ja `syvennys-rooma-avaimenreika`.
      */
     {
       id: 'historia',
@@ -14248,7 +14263,8 @@ export const KULTTUURI_KATEGORIAT = {
     },
     /*
      * KARTALTA LEHTEEN (v1419 jälkityö, kaupunkinostojen katto):
-     * syvennystarinat `syvennys-moskova-elaintarha` ja `-nayttely1872`
+     * syvennystarinat `syvennys-moskova-elaintarha` ja
+     * `syvennys-moskova-nayttely1872`
      * putosivat Moskovan nostoruuhkasta. Ne kuuluvat yhteen: molempien
      * takana oli yliopiston professorien seura.
      */
@@ -25085,6 +25101,49 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Rutschebanen on vuodelta 1914, ja sen junassa istuu '
             + 'jarrumies, joka hidastaa vauhtia alamäissä.',
           lahde: 'Stefan Scheer, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        /*
+         * KARTALTA LEHTEEN (v1419 jälkityö, kaupunkinostojen katto):
+         * syvennystarina `syvennys-kobenhavn-tivoli` putosi Kööpenhaminan
+         * nostoruuhkasta — kaupungin viereen kertyi kolme skandaalia, ja
+         * ne täyttävät katon. Juttu tulee TÄLLE sivulle eikä omalle
+         * aiheelleen, koska Tivoli on jo tämän sivun aihe eikä sama
+         * tarina saa toistua kahdessa aiheessa (docs/moduulit/
+         * kaupunkilehti.md). Edellinen nosto kertoo Andersenista ja
+         * vuoristoradasta, tämä puiston luvasta ja paikasta — samat
+         * faktat kuin syvennystarinassa, lehtimittaan tiivistettyinä.
+         * Minivisa EI siirtynyt: sivulla on jo oma minitehtävänsä
+         * (tehtava on sivukohtainen), sama ratkaisu kuin v1421:n muissa
+         * olemassa olevalle sivulle siirretyissä jutuissa.
+         *
+         * KUVA on syvennystarinan sijaan oma: tarinan oma kuva
+         * (`Tivoli at night - Tivoli Søen.JPG`) on jo tässä lehdessä
+         * matkailijan Ilta-jaksossa, eikä sama kuva saa esiintyä
+         * kaupungissa kahdesti. Commons 1.9.2026: 1389×1024,
+         * public domain (PD-old-100), Detroit Publishing Companyn
+         * fotokromi n. 1890–1900, Library of Congress / World Digital
+         * Library. SILMÄTARKISTUS tehty: Tivolin pääportin kaari, jossa
+         * lukee TIVOLI, hevosomnibussi ja ajan kulkijoita — ei
+         * tunnistettavia kasvoja.
+         */
+        {
+          otsikko: 'Lupa huvipuistolle annettiin viideksi vuodeksi kerrallaan',
+          tiedosto: 'The Tivoli Park Entrance, Copenhagen, Denmark WDL2604.png',
+          teksti: 'Luvan huvipuistolle antoi kuningas Christian VIII viideksi '
+            + 'vuodeksi kerrallaan. Perustaja Georg Carstensen sai luvan '
+            + 'perustelemalla asian suoraan: kun kansa huvittelee, se ei '
+            + 'ajattele politiikkaa. Puisto rakennettiin kaupungin '
+            + 'linnoitusvallin ulkopuolelle noin kuudenkymmenenyhden tuhannen '
+            + 'neliömetrin alalle, ja 1850-luvulle asti sinne mentiin '
+            + 'Vesterportin eli länsiportin kautta. Puiston järvi ei ole '
+            + 'koriste vaan jäänne vanhasta vallihaudasta, ja ilotulitukset '
+            + 'heijastuivat siitä. Pimeän tultua puutarha valaistiin '
+            + 'värillisillä lampuilla, ja musiikista vastasi kolmenkymmenen '
+            + 'vuoden ajan Hans Christian Lumbye, jota sanottiin Pohjolan '
+            + 'Straussiksi.',
+          selite: 'Tivolin pääportti johtaa puistoon, joka rakennettiin '
+            + 'kaupungin vanhan linnoitusvallin ulkopuolelle.',
+          lahde: 'Detroit Publishing Company, Wikimedia Commons (PD)',
         },
       ],
     },
