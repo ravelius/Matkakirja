@@ -589,6 +589,52 @@ test('helmi ei mahdu katkoon eikä helminauhaa synny', () => {
   assert.ok(232 - ulkohalkaisija > 190, 'helmet alkavat muodostaa nauhaa');
 });
 
+test('maareitti on yhtenäinen, ohuempi ja himmeämpi veto — meri jää katkoviivaksi', () => {
+  /*
+   * OMISTAJA 1.9.2026 ilta, sanatarkasti: *"ohjasin sinua myös
+   * väärään suuntaan noissa reittiviivojen tekemisessä. vedessä
+   * katkoviivat näyttävät hyvältä mutta maalla täytyy ehkä palata
+   * yhtenäiseen viivaan joka on hiukan ohuempi ja vielä himmeämpi.
+   * samalla pienennä askelpisteitä reitillä (saman paksuinen viiva
+   * kuin pienennetty reittiviiva ja vähän pienempi ympyrä)."*
+   *
+   * Tämä KUMOAA maareittien osalta 31.8.2026 hyväksytyn linjan
+   * *"Kaikki reitit saavat olla piirretty katkoviivalla"* — muut
+   * lajit eivät muutu, joten koe vartioi molempia suuntia: maa on
+   * yhtenäinen ja meri on yhä katkoviivaa.
+   */
+  assert.ok(REITTITYYLI.maaViiva < REITTITYYLI.viiva,
+    `maaviiva ${REITTITYYLI.maaViiva} ei ole meren vetoa `
+    + `(${REITTITYYLI.viiva}) ohuempi`);
+  assert.ok(REITTITYYLI.maaViiva >= 0.55 * REITTITYYLI.viiva
+    && REITTITYYLI.maaViiva <= 0.75 * REITTITYYLI.viiva,
+    `maaviiva ${REITTITYYLI.maaViiva} ei ole "hiukan ohuempi" vaan `
+    + 'eri viiva — hyväksytty haarukka on 55–75 % meren vedosta');
+  assert.equal(REITTITYYLI.kehä, REITTITYYLI.maaViiva,
+    'helmen kehä ei ole "saman paksuinen viiva kuin pienennetty reittiviiva"');
+  assert.ok(REITTITYYLI.helmi <= 12,
+    `helmi ${REITTITYYLI.helmi} R — omistaja tilasi "vähän pienemmän ympyrän"`);
+
+  const runko = PIIRTO.slice(PIIRTO.indexOf('export function piirraReititKankaalle'));
+  assert.match(runko, /laji === 'maa'[\s\S]{0,600}yhtenaPolku\(ctx, r, d \* px\)/,
+    'maareitti ei kulje yhtenäisen veton läpi');
+  assert.match(runko, /katkoPolku\(ctx, r, d \* px, leveys\)/,
+    'merireitti ei enää piirry katkoviivana');
+
+  /*
+   * MUSTE: maan alfa laskee ja on merta himmeämpi. Luetaan
+   * MUSTEET-taulukosta lähdetekstinä, koska se on funktion sisäinen
+   * vakio — sama tapa kuin pyöreiden päiden kokeessa.
+   */
+  const maa = runko.match(/maa: \{ viiva: 'rgba\(\d+,\d+,\d+,([\d.]+)\)'/);
+  const meri = runko.match(/meri: \{ viiva: 'rgba\(\d+,\d+,\d+,([\d.]+)\)'/);
+  assert.ok(maa && meri, 'reittien musteita ei löydy MUSTEET-taulukosta');
+  assert.ok(Number(maa[1]) < 0.24,
+    `maan muste ${maa[1]} ei laskenut — omistaja pyysi "vielä himmeämpi"`);
+  assert.ok(Number(maa[1]) < Number(meri[1]),
+    'maan muste ei ole merta himmeämpi');
+});
+
 test('viivan päät ovat pyöreät — piirretty viiva, ei tekninen tikku', () => {
   const alku = PIIRTO.indexOf('export function piirraReititKankaalle');
   const runko = PIIRTO.slice(alku, PIIRTO.indexOf('\n/**', alku + 10));

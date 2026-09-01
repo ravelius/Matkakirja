@@ -851,23 +851,31 @@ function lisaaJana(joukko, mitat, ax, ay, bx, by, m) {
  * REITTITYYLI): veto, katkon heitto ja helmi kasvoivat, ja vapina on
  * uusi.
  *
- *   reitti  solmuheitto 0,60 + vapina 0,35 + katkon sivu 0,55
+ * PÄIVITETTY UUDESTAAN (omistaja 1.9.2026 ilta, ks. maailmapiirto.js
+ * REITTITYYLI "MAA PALAA YHTENÄISEEN VIIVAAN"): helmi 15 -> 10 ja
+ * kehä 9,0 -> 6,0, ja maantie on yhtenäinen 6,0:n veto. Molemmat
+ * ulottumat siis KUTISTUVAT — mutta ne lasketaan yhä lajien
+ * YLÄRAJASTA, eli meren katkoviivasta ja meren helmen ankkurista:
+ *
+ *   reitti  MERI: solmuheitto 0,60 + vapina 0,35 + katkon sivu 0,55
  *           + kaari 0,95 + puoli veton leveyttä
  *           (9,0 · 1,12 / 2 = 5,04)                          = 7,49
- *           MUTTA helmi ankkuroituu katkon keskelle VIIVALLE
- *           (maailmapiirto.js "HELMI KATKON KESKELLE"), joten
+ *           MAA: solmuheitto 0,60 + vapina 0,35 + puoli veton
+ *           leveyttä (6,0 · 1,12 / 2 = 3,36)                  = 4,31
+ *           MUTTA helmi on kummallakin lajilla VIIVALLA, joten
  *           korridorin on katettava myös helmen ulottuma
- *           säde 15 + puoli kehää (9,0 / 2 = 4,5)            = 19,5
- *   helmi   ankkuri voi siirtää helmen jopa puoli jaksoa
+ *           säde 10 + puoli kehää (6,0 / 2 = 3,0)             = 13,0
+ *   helmi   MERELLÄ ankkuri voi siirtää helmen jopa puoli jaksoa
  *           (190 / 2 = 95) pitkin viivaa raakapaikastaan:
- *           19,5 + 95                                        = 114,5
- *   raja    puoli veton leveyttä (1,8 / 2)                   = 0,90
+ *           13,0 + 95                                         = 108,0
+ *           (maalla ankkuria ei ole, joten siellä riittää 13,0)
+ *   raja    puoli veton leveyttä (1,8 / 2)                    = 0,90
  *
  * LENTOREITTEJÄ EI OLE ENÄÄ LISTASSA: ne eivät ole viivatasolla
  * lainkaan (ks. LENNOT EIVÄT OLE VIIVATASOLLA).
  */
 const ULOTTUMA = {
-  reitti: 19.7, helmi: 115, raja: 1.0,
+  reitti: 13.2, helmi: 108.5, raja: 1.0,
 };
 /** Patinan musteen ulottuma laatan reunan yli (sama kuin nostolla). */
 const VIIVA_MARGINAALI_PX = NOSTO_MARGINAALI_PX;

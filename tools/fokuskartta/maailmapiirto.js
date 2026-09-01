@@ -2154,11 +2154,48 @@ export function piirraErikoispiiritKankaalle(ctx, mitta) {
  * (lyhin = pisin): tasainen rytmi oli nimenomainen tilaus, ja käsin
  * piirretty jälki tulee tussiprofiilista, sivusta ja kaaresta.
  */
+/*
+ * === MAA PALAA YHTENÄISEEN VIIVAAN (omistaja 1.9.2026 ilta) =========
+ *
+ * Sanatarkasti: *"ohjasin sinua myös väärään suuntaan noissa
+ * reittiviivojen tekemisessä. vedessä katkoviivat näyttävät hyvältä
+ * mutta maalla täytyy ehkä palata yhtenäiseen viivaan joka on hiukan
+ * ohuempi ja vielä himmeämpi. samalla pienennä askelpisteitä reitillä
+ * (saman paksuinen viiva kuin pienennetty reittiviiva ja vähän
+ * pienempi ympyrä)."*
+ *
+ * TÄMÄ KUMOAA MAAREITTIEN OSALTA aamun linjan *"Kaikki reitit saavat
+ * olla piirretty katkoviivalla"* (31.8.2026). Sääntö kaventuu, se ei
+ * katoa: **katkoviiva on MEREN ja LENNON merkki, maantie on yhtenäinen
+ * veto** — ja silloin muste ei ole enää ainoa, mikä erottaa lajit,
+ * vaan viivan laji kertoo kulkutavan jo kaukaa. Helmet jäävät
+ * molemmille lajeille (ne kertovat askelmat), lennolla niitä ei ole.
+ *
+ * MITAT, JA JOKAISELLA OMISTAJAN PERUSTE:
+ *
+ *   MAAVIIVA 6,0    *"hiukan ohuempi"* — 2/3 meren katkotussista
+ *                   (9,0). Yhtenäinen veto peittää matkasta 100 %,
+ *                   katkoviiva 30 %: samalla leveydellä maantie
+ *                   näyttäisi kolme kertaa raskaammalta kuin
+ *                   meriväylä, ja juuri sitä *"vielä himmeämpi"*
+ *                   vastustaa. 2/3 leveys ja alempi alfa (alla)
+ *                   vievät maantien musteen alle meren keskitason.
+ *   HELMI 15 -> 10  *"vähän pienempi ympyrä"*. Molemmilla lajeilla
+ *                   sama helmi: askelma on sama pelin asia meressä
+ *                   ja maalla. Vanhat kaksi rajaa pitävät yhä:
+ *                   helmen halkaisija 20 R mahtuu katkoon (57 R) ja
+ *                   helminauhaa ei synny (lyhin askelväli 232 R,
+ *                   ulkohalkaisija kehineen 26 R).
+ *   KEHÄ 9,0 -> 6,0 *"saman paksuinen viiva kuin pienennetty
+ *                   reittiviiva"* — kehä ei siis ole enää sidottu
+ *                   meren katkotussiin vaan MAAVIIVAan.
+ */
 export const REITTITYYLI = Object.freeze({
-  viiva: 9.0,    // veton leveys (kerrotaan vielä kynänpaineella)
+  viiva: 9.0,    // meren katkotussin leveys (kerrotaan kynänpaineella)
+  maaViiva: 6.0, // maantien yhtenäisen veton leveys (omistaja 1.9.2026)
   jakso: 190,    // katko + väli
-  helmi: 15,     // askelhelmen säde (omistaja 1.9.2026: "tee ympyrästä isompi")
-  kehä: 9.0,     // askelhelmen kehä = katkon tussinpaksuus (omistaja 1.9.2026)
+  helmi: 10,     // askelhelmen säde (omistaja 1.9.2026: "vähän pienempi ympyrä")
+  kehä: 6.0,     // askelhelmen kehä = MAAVIIVA (omistaja 1.9.2026)
   lento: 2.5,    // lentoreitin veton leveys (ei enää poltossa, ks. LENNOT)
   /*
    * KATKON OMA MUOTO. Nämä olivat ennen funktion sisäisiä vakioita;
@@ -2195,6 +2232,14 @@ export const REITTITYYLI = Object.freeze({
  * ja merireitillä on lisäksi helmet, lennolla ei, koska lento
  * siirtää nappulan suoraan perille eikä sillä ole askelmia
  * (js/game.js `actionMannerLento`, ks. sisalto.mjs).
+ *
+ * TÄMÄ SÄÄNTÖ ON SITTEMMIN KAVENTUNUT MAAN OSALTA (omistaja
+ * 1.9.2026 ilta: *"vedessä katkoviivat näyttävät hyvältä mutta
+ * maalla täytyy ehkä palata yhtenäiseen viivaan"*). Voimassa oleva
+ * muoto on REITTITYYLIn osiossa "MAA PALAA YHTENÄISEEN VIIVAAN":
+ * katkoviiva on MEREN ja LENNON merkki, maantie on yhtenäinen
+ * ohuempi ja himmeämpi veto. Kaikki muu tässä kappaleessa pätee
+ * yhä — myös se, että helmet kertovat askelmat.
  *
  * HELMI ON SILLOIN AINOA ASIA, JOKA EROTTAA LAJIT MUUTEN KUIN
  * VÄRILLÄ. Siksi katkon mitta on valittu niin, ettei helmi voi
@@ -2308,9 +2353,37 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
      * samalla musteella. Kirkas RGB-sininen tekisi kartasta
      * tietokonegrafiikkaa yhdellä viivalla — se raja ei liiku.
      */
+    /*
+     * MAAN MUSTE LASKEE VIELÄ (omistaja 1.9.2026 ilta: yhtenäinen
+     * maaviiva *"hiukan ohuempi ja vielä himmeämpi"*; ks. REITTITYYLI
+     * "MAA PALAA YHTENÄISEEN VIIVAAN"). 0,24 -> 0,17 ja kehä samassa
+     * suhteessa 0,32 -> 0,23. Sävy ei muutu, vain kynän paine.
+     *
+     * MIKSI JUURI TÄHÄN — silmän kokema tummuus on alfan ja PEITON
+     * tulo, ja peitto muuttui katkoviivan mukana:
+     *
+     *   ennen (katko)     0,24 alfaa · 30 % matkasta · leveys 9,0
+     *   nyt   (yhtenä)    0,17 alfaa · 100 % matkasta · leveys 6,0
+     *
+     * Yksittäinen piste viivalla on nyt 29 % vaaleampi (0,17 vs
+     * 0,24) — juuri se, mitä *"vielä himmeämpi"* tarkoittaa — ja
+     * viivan pinta-ala matkayksikköä kohti kasvaa 2,7 -> 6,0, koska
+     * yhtenäisessä viivassa ei ole reikiä. Maantie ei siis katoa
+     * vaan muuttuu kevyeksi jatkuvaksi jäljeksi, ja meri jää
+     * tummemmaksi katkojaksi — lajit erottuvat kaukaakin.
+     */
     const MUSTEET = {
-      // Paksumpi tussi, kevyempi muste (omistaja 1.9.2026).
-      maa: { viiva: 'rgba(120,88,54,0.24)', kehä: 'rgba(120,88,54,0.32)' },
+      /*
+       * Ohuempi ja himmeämpi yhtenäinen veto (omistaja 1.9.2026 ilta).
+       * SÄVY LÄMPENI (omistajan hyväksyntäpäätös 1.9.2026, vedosten
+       * jälkeen: "Hyväksy + lämmitä maantietä"): (120,88,54) oli
+       * käytännössä sama sävy kuin valtionrajan muste (96,74,46),
+       * joten ohut tie ja piste-raja sekosivat toisiinsa. Uusi sävy
+       * on terrakotan suuntaan (152,92,44) — selvästi lämpimämpi kuin
+       * raja mutta kaukana lennon sinooperista (150,54,40), ettei
+       * tietä lueta lennoksi. Alfat ennallaan.
+       */
+      maa: { viiva: 'rgba(152,92,44,0.17)', kehä: 'rgba(152,92,44,0.23)' },
       meri: { viiva: 'rgba(32,60,98,0.26)', kehä: 'rgba(32,60,98,0.34)' },
     };
     const helmiTaytto = 'rgba(246,239,220,0.92)';
@@ -2328,6 +2401,7 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
      */
     const sade = TYYLI.helmi * R;
     const VIIVA = TYYLI.viiva * R;
+    const MAAVIIVA = (TYYLI.maaViiva ?? TYYLI.viiva) * R;
 
     /*
      * === KÄSIN PIIRRETTY JÄLKI — JA MIKSI SE EI TEE SAUMAA =========
@@ -2552,7 +2626,25 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
          */
         const helmet = [];
         const ohita = new Set();
-        if (r.askelmat?.length) {
+        /*
+         * MAAREITILLÄ EI ANKKUROIDA (omistaja 1.9.2026 ilta,
+         * ks. REITTITYYLI "MAA PALAA YHTENÄISEEN VIIVAAN").
+         * Ankkurointi on katkoviivan palvelija: se vetää helmen
+         * lähimmän katkon keskelle ja jättää sen katkon
+         * piirtämättä, jotta viiva ei kulje pisteen läpi.
+         * Yhtenäisellä maaviivalla ei ole katkoa, johon ankkuroida
+         * — siirto veisi helmen jopa puoli jaksoa (95 R) väärään
+         * kohtaan reittiä, eikä siirrosta olisi mitään hyötyä.
+         * Maalla helmi jää siis omalle askelmapaikalleen, ja
+         * paperinvärinen täyttö puhkaisee viivan sen kohdalta
+         * (piirtojärjestys: viivat ensin, helmet päälle).
+         */
+        const yhtena = r.laji === 'maa';
+        if (r.askelmat?.length && yhtena) {
+          for (const [bx, by] of r.askelmat) {
+            helmet.push([lautaKuvaX(bx), lautaKuvaY(by)]);
+          }
+        } else if (r.askelmat?.length) {
           const T = KATKO.jakso * R;
           /*
            * === HELMEN JAKSO SEN OMASTA KAARENPITUUDESTA ===========
@@ -2647,6 +2739,62 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
     const NX1 = GX + W + MARGINAALI;
     const NY0 = GY - MARGINAALI;
     const NY1 = GY + H + MARGINAALI;
+
+    /**
+     * MAANTIEN YHTENÄINEN VETO polkuun (omistaja 1.9.2026 ilta,
+     * ks. REITTITYYLI "MAA PALAA YHTENÄISEEN VIIVAAN").
+     *
+     * Sama käyrä, samat käsin piirretyt kerrokset kuin katkoviivalla
+     * — solmuheitto ja vapina ovat jo `arkilla`n `xs`/`ys`:ssä, joten
+     * maantie huojuu kuin käsi eikä ole viivoittimen jälki. Erona on
+     * vain se, että jälki ei katkea: katkon oma muoto (tussiprofiili,
+     * sivu, kaari) on katkoviivan asia eikä yhtenäisellä vedolla ole
+     * sille paikkaa.
+     *
+     * KAKSI ASIAA, JOTKA EIVÄT SAA MUUTTUA katkoviivaan nähden:
+     *
+     *   PIIRTOVÄLIT  `r.piirtoValit` rajaa tämänkin veton (sama
+     *                lista ohjaa peitettä, ks. `katkoPolku`), joten
+     *                rinnakkaiskarsinta toimii maalla kuten merellä.
+     *   SAUMA        `uusi[i]` katkaisee viivan siellä, missä
+     *                murtoviiva hyppää laudan sauman yli — muuten
+     *                yhtenäinen veto piirtäisi koko arkin levyisen
+     *                vaakaviivan (katkoviivalla saman teki se, ettei
+     *                kaarenpituus kertynyt hypyn yli).
+     *
+     * Piirretään `stroke`lla eikä `fill`illä: leveys tulee kynästä
+     * (`ctx.lineWidth`) ja pyöreät päät `lineCap`ista, jotka ovat jo
+     * paikallaan tämän funktion kutsujassa.
+     */
+    const yhtenaPolku = (g, r, dx) => {
+      const a = arkilla(r);
+      if (a.x1 + dx < NX0 || a.x0 + dx > NX1 || a.y1 < NY0 || a.y0 > NY1) return;
+      const { xs, ys, uusi } = a;
+      const n = xs.length;
+      const valit = r.piirtoValit ?? [[0, n - 1]];
+      for (const [v0, v1] of valit) {
+        let auki = false;
+        for (let i = v0; i <= v1; i += 1) {
+          if (!auki || uusi[i]) { g.moveTo(xs[i] + dx, ys[i]); auki = true; continue; }
+          g.lineTo(xs[i] + dx, ys[i]);
+        }
+      }
+      /*
+       * Liittymäsillat samalla yhtenäisellä vedolla: silta on osa
+       * samaa viivaa (reittikarsinta.mjs LIITTYMÄSILLAT), joten
+       * maalla se on suora yhtenäinen veto eikä katko.
+       */
+      for (const [bax, bay, bbx, bby] of r.liittymat ?? []) {
+        const x0 = lautaKuvaX(bax);
+        const y0 = lautaKuvaY(bay);
+        const x1 = lautaKuvaX(bbx);
+        const y1 = lautaKuvaY(bby);
+        if (Math.max(x0, x1) + dx < NX0 || Math.min(x0, x1) + dx > NX1
+          || Math.max(y0, y1) < NY0 || Math.min(y0, y1) > NY1) continue;
+        g.moveTo(x0 + dx, y0);
+        g.lineTo(x1 + dx, y1);
+      }
+    };
 
     /**
      * Yksi katkoviiva polkuun: reitti `r` siirrettynä `dx` pikseliä.
@@ -2820,6 +2968,22 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
       for (let k = 0; k < KYNIA; k += 1) {
         const kynalla = osa.filter((r) => { heitot(r); return r.__kyna === k; });
         if (!kynalla.length) continue;
+        if (laji === 'maa') {
+          /*
+           * MAANTIE ON YHTENÄINEN VETO (omistaja 1.9.2026 ilta;
+           * ks. REITTITYYLI "MAA PALAA YHTENÄISEEN VIIVAAN").
+           * Kynänpaineen porras säilyy — se on käsin piirretyn
+           * jäljen toinen kerros — mutta se annetaan `lineWidth`inä
+           * eikä katkon täyttöleveytenä.
+           */
+          ctx.lineWidth = MAAVIIVA * (0.88 + 0.06 * k);
+          for (const d of siirrot) {
+            ctx.beginPath();
+            for (const r of kynalla) yhtenaPolku(ctx, r, d * px);
+            ctx.stroke();
+          }
+          continue;
+        }
         const leveys = VIIVA * (0.88 + 0.06 * k);
         for (const d of siirrot) {
           ctx.beginPath();
@@ -2836,11 +3000,14 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
        * lohkoa kohti olisi turhaa työtä, kun sama polku kelpaa
        * kaikille. Ruudun ulkopuoliset karsitaan ennen polkua.
        *
-       * HELMET PIIRRETÄÄN VIIVAN PÄÄLLE JA VIIMEISENÄ. Kun kaikki
-       * kolme lajia ovat katkoviivaa, helmi on ainoa asia joka
-       * erottaa maa- ja merireitin lennosta muuten kuin värillä —
-       * ja paperinvärinen täyttö puhkaisee katkon, jolloin helmi ei
-       * voi näyttää katkolta eikä katko helmeltä.
+       * HELMET PIIRRETÄÄN VIIVAN PÄÄLLE JA VIIMEISENÄ, ja se on nyt
+       * kahdesta syystä pakko: merellä paperinvärinen täyttö
+       * puhkaisee katkon, jolloin helmi ei voi näyttää katkolta
+       * eikä katko helmeltä, ja maalla sama täyttö puhkaisee
+       * YHTENÄISEN viivan (omistaja 1.9.2026 ilta: *"viiva ei saisi
+       * osua pisteen kohdalle"*) — maareitillä ei ole katkoa, johon
+       * helmi ankkuroitaisiin, joten aukko syntyy vain tästä
+       * järjestyksestä.
        */
       ctx.beginPath();
       for (const r of osa) {
