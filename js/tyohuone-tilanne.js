@@ -10,7 +10,7 @@
  */
 
 export const TILANNE = {
-  paivitetty: '1.9.2026 ilta — v1423–v1428, polttoketju 01e/01f/01g valmis (patina=ei)',
+  paivitetty: '1.9.2026 myohaisilta — v1429–v1434, piirit pois, siirtoviivat, nopanheiton kamera, merkit nakyvissa eleissa',
   tavoite: 'Kartta yhtenaiseksi ja teravyys arvioitavaksi. Mainissa: '
     + 'maareitit yhtenaisena lamminna viivana ja meri katkoina (v1423), '
     + 'noston teksti kokonaan napautettava (v1424), rajat samaa reittia '
@@ -20,20 +20,32 @@ export const TILANNE = {
     + 'savuke katon mukainen (v1427). Nostokuvat FOTOREALISTISINA '
     + '(Raamattu 1.9.). Polttoketju PATINATTA VALMIS (1.9. klo 18:36 UTC): '
     + 'pohja 2026-09-01e -> nosto 01f -> viiva 01g; omistaja katsoo '
-    + 'patinattoman version ja paattaa patinasta.',
+    + 'patinattoman version ja paattaa patinasta. ILLAN ERA (v1429-v1434): '
+    + 'pituus- ja leveyspiirit pois viivatasolta (01i/01j), merireitit '
+    + 'kapeammiksi ja tiheammiksi, kompassi ja merten nimet z3:lle (pohjan '
+    + 'paikkaus 01k), nostojen siirtoviivat takaisin (nostotaso poltetaan '
+    + 'uudestaan), nopanheitossa zoomi ensin ja nappula hitaammin, kaikki '
+    + 'merkit nakyvissa eleiden ajan, tummennuskytkin kehittajalle. '
+    + 'Historian hetket -kuvasarja tilattu (H1, 56 promptia). Live 1-'
+    + 'kaariminuutin varjostuskerros kokeiluna tyon alla.',
   rivit: [
     {
       tekija: 'Fable',
       rooli: 'paatoimittaja',
       tila: 'tyossa',
-      tehtava: 'Postikierros tunneittain: yleiskuvitussession K1-kuittaus '
-        + '(fotorealistinen pohja) ja K2-skandaalikuvat (7 kpl) R2:een. '
-        + 'BIH:n ja TUR:n uusien elaintakyjen tilaus (kuva + kaanoniteksti).',
-      seuraavaksi: 'Kun K2-kuvat ovat R2:ssa: 7 skandaalin lehtisiirto '
-        + 'v1421-mallilla + julkaisu. Vanhojen haarojen ja worktreiden siivous.',
+      tehtava: 'Illan tilauserän julkaisu Opus-agenteilla (v1429-v1434) ja '
+        + 'poltot: viivataso 01j, pohjan paikkaus 01k (kompassi z3), nostotaso '
+        + 'uusiksi siirtoviivoineen. Postikierros tunneittain: K1/K2/E1/H1-'
+        + 'kuittaukset yleiskuvitussessiolta.',
+      seuraavaksi: 'Live 1-kaariminuutin varjostuskerros (kokeilu) julkaisuun; '
+        + 'sitten koko pohjan uusintapoltto 1 kaariminuutin korkeusdatalla '
+        + 'omistajan ohjeiden mukaan. K2 -> 7 skandaalin lehtisiirto, E1 -> '
+        + 'BIH/TUR elaintakyt, H1 -> Historian hetki -nostolaji.',
     },
   ],
   odottaaPaatosta: [
+    'Nopanheiton ennakkozoomin maara (nyt 1,5x Ateenassa, katto 3,5 x lahin porras) - tiukempi vai lempeampi?',
+    'Historian hetket: 10 kuvan pilotti ensin vai kaikki 56 kerralla; sijoitus (nostolaji + maalehti)',
     'Kasvokuvaerä Driveen (nuoremmat kasvot) → kohtaamiskortit',
     'fin-pieni-kuva uusiksi (prompti annettu)',
     'Bergenin kohdekartta (Overpass)',
@@ -49,6 +61,11 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1434: MERKIT NAKYVISSA ELEISSA + TUMMENNUSKYTKIN - eleen aikainen piilotus purettu kokonaan (mitattu nopeammaksi: panorointi 767 -> 357 ms), nimikerros napsahtaa kokoonsa eleen lopussa (hyvaksytty hinta). Kehittajavalikossa rivi "tummennus" (oletus paalla). Panoroi ja nipista Kreikassa: mikaan ei katoa. Kytke tummennus pois kehittajavalikosta.',
+  'v1433: NOPANHEITTO - kamera zoomaa ensin (760 ms) nappulan ja reitin alun ympärille, nappula lahtee vasta sitten, askel 640 -> 860 ms, kamera jaa siirtozoomiin. Heita noppa Ateenassa ja katso jarjestys ja vauhti.',
+  'v1432: SIIRTOVIIVAT TAKAISIN - ohut himmea katkoviiva siirretysta nostomerkista kaupunkiin (107 viivaa). Nakyy heti elavana; laatoissa vasta uuden nostotasopolton jalkeen. Katso Ateena.',
+  'v1431: MERIREITIT KAPEAMMIKSI JA TIHEAMMIKSI (viiva 7,5, jakso 150; viivataso 01j) + kompassiruusu ja merten nimet myos z3:lla (pohjan paikkaus 01k). Zoomaa toiseksi uloimmalle tasolle Tyynenmeren etelaosaan.',
+  'v1429-v1430: PITUUS- JA LEVEYSPIIRIT POIS - paivantasaaja, kaantopiirit, napapiiri ja nollameridiaani eivat enaa piirry (viivataso 01i/01j, luettelo piirit=false). Reunojen astelukemat jaavat. Katso Guineanlahti ja Ecuador.',
   'v1428: KAKSOISKAPPALEET POIS - omistajan paatos 1.9.: Vanin kissa (kohde) ja Livnon villihevoset (Sarajevon syvennys) jaavat, niiden paallekkaiset elaintakyt (TUR vankissa, BIH villihevosvarsa) poistettu kartalta. Elaintakyja nyt 27 maassa; BIH ja TUR saavat uudet elaimet kun kuvat on tehty. Savuke-elaintaky 23/23 lukee maiden maaran aineistosta. Tarkista, ettei Vanjarvella ja Livnossa ole enaa kahta merkkia vierekkain.',
   'v1427: PUDOTETUT SYVENNYSTARINAT LEHDISSA - kaupunkikatto pudottaa kartalta 40 syvennystarinaa 22 kaupungissa; 38 oli jo lehdissa v1421:n myota, nyt myos Koopenhaminan Tivoli (uusi juttu Tivoli-sivulle, Detroit Publishingin portti-fotokromi) ja Istanbulin kissat (sisalto oli jo lehdessa, osoite merkitty). Savuke-fokuskohteet mittaa nyt katon JALKEISTA tilaa pelin omalla karsintapassilla (110/110, ennen 89 + 6 FAIL + kaatuminen). Avaa Koopenhaminan lehden Tivoli-sivu.',
   'v1426: ELAINTAKY EI VARASTA NAPAUTUSTA - elainmerkki, kohdemerkki ja kaupungin laatta kilpailevat samassa lahin keskipiste voittaa -ratkaisussa (QA loysi 3 vaarin auennutta korttia 168:sta). Napauta kohdemerkkia elainmerkin vierella.',
