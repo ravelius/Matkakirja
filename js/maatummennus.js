@@ -151,6 +151,8 @@
  * ilmoitusta. Sama koskee maata, jolle aineistossa ei ole polygonia.
  */
 
+import { kehittajaTilaPaalla, kehittajaTummennusPaalla } from './ui-apurit.js';
+
 const TUMMENNUS_NS = 'http://www.w3.org/2000/svg';
 
 /**
@@ -418,6 +420,22 @@ export function paivitaMaatummennus(ui) {
  * kerrosta.
  */
 function tunniste(ui) {
+  /*
+   * KEHITTÄJÄN KYTKIN (omistaja 1.9.2026 ilta, sanatarkasti: *"kartan
+   * tummennuksen voisi ottaa pois päältä kehittäjä tilassa."*).
+   *
+   * Ehto on TÄSSÄ eikä piirtäjässä, koska tämä on kerroksen ainoa
+   * näkyvyysehto: null tyhjentää kerroksen samalla polulla kuin
+   * zoomirajan ylitys tai maaton näkymä, eikä kytkimelle tarvita omaa
+   * purkukoodia. Kytkimen vaihto ajaa kuitenkin nollauksen käsin
+   * (js/ui.js paivitaKehittajaTummennus), koska avain ei muutu maan
+   * pysyessä samana.
+   *
+   * PELAAJAAN KYTKIN EI VAIKUTA: ilman kehittäjätilaa avainta ei edes
+   * lueta, joten laitteelle jäänyt vanha '0' ei voi sammuttaa
+   * tummennusta pelin normaalissa käytössä.
+   */
+  if (kehittajaTilaPaalla() && !kehittajaTummennusPaalla()) return null;
   const iso = ui.fokuskarttaAvain;
   if (!iso) return null;
   const raja = ui.kartta?.pelaajanUloinSkaala?.();

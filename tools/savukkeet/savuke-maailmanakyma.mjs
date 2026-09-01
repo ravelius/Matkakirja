@@ -17,11 +17,11 @@
  *
  * Juurisyy on solmumäärä: maailmanäkymä ohittaa käymättömien maiden
  * piilotuksen, jolloin kartalla on KOKO laudan kaupunkikerros — 602
- * näkyvää solmua. Eleenaikainen piilotus (js/kartta.js piilotaMerkit,
- * body.kartta-merkit-piilossa) kattaa polttamattomat sisältökerrokset —
- * fokuskohteet, fokuspisteet, nostosymbolit, eläintäyt ja
- * paikannimikerroksen — mutta EI kaupunkikerrosta, joka on pelitilaa
- * (laatat, nimilaput, porttikehät). Kustannus on
+ * näkyvää solmua. Eleen ajaksi ei enää piiloteta MITÄÄN (omistaja
+ * 1.9.2026 ilta: *"kaikki elementit pitää pysyä päällä kun karttaa
+ * liikutetaan tai zoomataan vaikka niitä ei olisi poltettu."*; purku
+ * js/kartta.js asennaPanorointi), joten näkymärajaus on ainoa asia,
+ * joka pitää solmumäärän kurissa liikkeen aikana. Kustannus on
  * lineaarinen näkyvissä solmuissa (varmistettu kloonikokeella), koska
  * kartan CSS-muunnos pakottaa selaimen pilkkomaan koko SVG:n uudestaan
  * maalipaloihin joka kehyksellä.
@@ -293,22 +293,21 @@ console.log(`      mitattu: maatummennus ${panTila.tummennusSolmut} solmua,`
 console.log(`      mitattu: näkyviä kaupunkiosia ${panTila.citiesNakyvia}`
   + ` / ${panTila.citiesSolmut} (rajattuja ${panTila.rajattuja})`);
 
-/* --- 1b/1c: MAATUMMENNUS PYSYY MOLEMMISSA ELEISSÄ -------------------
+/* --- 1b/1c: KAIKKI ELÄVÄ SISÄLTÖ PYSYY MOLEMMISSA ELEISSÄ -----------
  *
- * Omistaja 1.9.2026 aamu: *"Kartan tummennus voisi pysyä panoroitaessa
- * päällä."* — ja saman päivän iltana zoomauksesta: *"jos ympärivaltoiden
- * tummennus on mahdollista pitää zoomatessa päällä (paitsi jos menee
- * rajan yli missä poistuu), niin sen voisi kytkeä päälle."*
+ * Omistaja 1.9.2026 ilta, sanatarkasti: *"kaikki elementit pitää pysyä
+ * päällä kun karttaa liikutetaan tai zoomataan vaikka niitä ei olisi
+ * poltettu."* Saman päivän aamuna panoroinnista: *"Kartan tummennus
+ * voisi pysyä panoroitaessa päällä."*
  *
- * Kerros oli 31.8.2026 illasta lähtien samassa display:none-joukossa
- * kuin merkkikerrokset (koko ele), sitten päivän ajan piilossa vain
- * nipistyksessä. Nyt ei kummassakaan, ja mittaus vei piilotukselta
- * perustelun: nipistys on kameran CSS-muunnos eikä uusi viewBox, joten
- * varjopolku skaalautuu kompositorissa (luvut js/kartta.js
- * piilotaMerkit). Väite 1c kääntyi siis päinvastaiseksi.
+ * Väitteet vartioivat siis KOLMEA asiaa kesken eleen: runkoon ei tule
+ * piilotusluokkaa, maatummennus näkyy ja kohdemerkkien kerros näkyy.
+ * Kaksi ensimmäistä olivat voimassa jo ennen tätä; kolmas kääntyi
+ * päinvastaiseksi, kun eleenaikainen piilotus purettiin kokonaan
+ * (js/kartta.js asennaPanorointi — perustelu ja mitatut luvut siellä).
  *
- * TILA LUETAAN KESKEN ELEEN, ei sen jälkeen: eleen jälkeen kerros on
- * takaisin näkyvissä kummallakin tavalla, joten levossa mitattu luku ei
+ * TILA LUETAAN KESKEN ELEEN, ei sen jälkeen: eleen jälkeen kaikki on
+ * näkyvissä kummallakin tavalla, joten levossa mitattu luku ei
  * erottaisi korjausta mistään. Ele katkaistaan siksi puoliväliin ja
  * luetaan siitä.
  */
@@ -341,7 +340,10 @@ const eleenAikainenTila = async (nipistys) => {
   const tulos = await sivu.evaluate(() => {
     const kerros = window.matkakirja.ui.svg.querySelector('.maatummennus');
     return {
-      merkitPiilossa: document.body.classList.contains('kartta-merkit-haipyy'),
+      // Purettujen luokkien nimet luetaan yhä: jos jokin polku
+      // kirjoittaisi ne takaisin, väite kaatuu heti.
+      merkitPiilossa: document.body.classList.contains('kartta-merkit-haipyy')
+        || document.body.classList.contains('kartta-merkit-piilossa'),
       tummennusNakyy: kerros ? getComputedStyle(kerros).display !== 'none' : null,
       kohteetNakyy: (() => {
         const k = window.matkakirja.ui.svg.querySelector('.fokuskohteet');
@@ -355,17 +357,21 @@ const eleenAikainenTila = async (nipistys) => {
 };
 
 const panEle = await eleenAikainenTila(false);
-console.log(`      mitattu: panoroinnin aikana merkit piilossa ${panEle.merkitPiilossa},`
-  + ` tummennus näkyvissä ${panEle.tummennusNakyy}`);
-vaadi('1b maatummennus pysyy näkyvissä panoroinnin ajan',
-  panEle.merkitPiilossa && panEle.tummennusNakyy === true && panEle.kohteetNakyy === false,
+console.log(`      mitattu: panoroinnin aikana piilotusluokka ${panEle.merkitPiilossa},`
+  + ` tummennus näkyvissä ${panEle.tummennusNakyy},`
+  + ` kohdemerkit näkyvissä ${panEle.kohteetNakyy}`);
+vaadi('1b elävä karttasisältö pysyy näkyvissä panoroinnin ajan',
+  panEle.merkitPiilossa === false && panEle.tummennusNakyy === true
+    && panEle.kohteetNakyy === true,
   JSON.stringify(panEle));
 
 const zoomEle = await eleenAikainenTila(true);
-console.log(`      mitattu: nipistyksen aikana merkit piilossa ${zoomEle.merkitPiilossa},`
-  + ` tummennus näkyvissä ${zoomEle.tummennusNakyy}`);
-vaadi('1c maatummennus pysyy näkyvissä myös nipistyksen ajan',
-  zoomEle.merkitPiilossa && zoomEle.tummennusNakyy === true,
+console.log(`      mitattu: nipistyksen aikana piilotusluokka ${zoomEle.merkitPiilossa},`
+  + ` tummennus näkyvissä ${zoomEle.tummennusNakyy},`
+  + ` kohdemerkit näkyvissä ${zoomEle.kohteetNakyy}`);
+vaadi('1c elävä karttasisältö pysyy näkyvissä myös nipistyksen ajan',
+  zoomEle.merkitPiilossa === false && zoomEle.tummennusNakyy === true
+    && zoomEle.kohteetNakyy === true,
   JSON.stringify(zoomEle));
 
 /*
@@ -378,6 +384,46 @@ vaadi('1 eleen asetuttua kartalla on vain näkymän merkit',
   `näkyviä ${panTila.citiesNakyvia} / ${panTila.citiesSolmut}`);
 vaadi('2 rajaus on oikeasti piilottanut osan kerroksesta',
   panTila.rajattuja > 100, `rajattuja ${panTila.rajattuja}`);
+
+/* --- 2b: KEHITTÄJÄN TUMMENNUSKYTKIN --------------------------------
+ *
+ * Omistaja 1.9.2026 ilta, sanatarkasti: *"kartan tummennuksen voisi
+ * ottaa pois päältä kehittäjä tilassa."*
+ *
+ * Kytkinrivi on hammasratasvalikossa (index.html
+ * #kehittaja-tummennus-btn) ja kulkee viiden tiedoston läpi. Lähdepään
+ * ketjun vartioi tests/rules.test.mjs; tämä väite mittaa sen, mitä
+ * lähdekoodista ei näe: KERROS TYHJENEE JA PALAA HETI, ilman
+ * sivulatausta. Nappia klikataan suoraan DOMista, koska valikon avaus
+ * ei kuulu mitattavaan asiaan.
+ *
+ * Tila luetaan vasta pienen odotuksen jälkeen: paluu latoo polun
+ * uudelleen ja aineisto voi olla vielä matkalla (js/maatummennus.js
+ * lataaMaapolygonit).
+ */
+const tummennusPois = await sivu.evaluate(async () => {
+  document.getElementById('kehittaja-tummennus-btn')?.click();
+  return document.getElementById('kehittaja-tummennus-btn')?.getAttribute('aria-pressed');
+});
+await sivu.waitForTimeout(600);
+const poisTummennus = await tila();
+console.log(`      mitattu: tummennus pois -> ${poisTummennus.tummennusSolmut} solmua`
+  + ` (rivin tila aria-pressed=${tummennusPois})`);
+vaadi('2b kehittäjän kytkin ottaa maatummennuksen pois heti',
+  tummennusPois === 'false' && poisTummennus.tummennusSolmut === 0,
+  `solmuja ${poisTummennus.tummennusSolmut}, aria-pressed ${tummennusPois}`);
+
+const tummennusPaalle = await sivu.evaluate(async () => {
+  document.getElementById('kehittaja-tummennus-btn')?.click();
+  return document.getElementById('kehittaja-tummennus-btn')?.getAttribute('aria-pressed');
+});
+await sivu.waitForTimeout(900);
+const paalleTummennus = await tila();
+console.log(`      mitattu: tummennus takaisin -> ${paalleTummennus.tummennusSolmut} solmua`
+  + ` (rivin tila aria-pressed=${tummennusPaalle})`);
+vaadi('2c kytkin palauttaa tummennuksen ilman sivulatausta',
+  tummennusPaalle === 'true' && paalleTummennus.tummennusSolmut > 0,
+  `solmuja ${paalleTummennus.tummennusSolmut}, aria-pressed ${tummennusPaalle}`);
 // Tällä savukkeella mitattu: ennen 389 ms / 7 taskia, jälkeen 215 / 4.
 // (Omistajan omalla A/B-ajolla, jossa naapurilehti on kartalla, sama
 // ero on 799 → 475 ms.) Raja 350 kaatuu korjauksen katoamiseen mutta

@@ -396,21 +396,25 @@ function elaintakyPaivitaNakyvyys(ui, kerros) {
  */
 function elaintakyAsetaMittakaava(ui, suhde) {
   /*
-   * ELEEN AIKANA EI ASEMOIDA NÄKYMÄTÖNTÄ. Merkkikerrokset häivytetään
-   * eleen alussa ja ovat sen jälkeen `display: none` (js/kartta.js
-   * piilotaMerkit, css/styles.css kartta-merkit-haipyy ja
-   * kartta-merkit-piilossa) — lippu `merkitPiilossa` on ylhäällä
-   * kummankin vaiheen ajan, ja häivyvää kerrosta ei kannata asemoida
-   * sen enempää kuin näkymätöntäkään. Tämä kerros on
-   * kolmesta rekisteröidystä ylivoimaisesti isoin: 29 maata
-   * kertaa kaksi kiertokohtaa on 58 ryhmää, kun vihreitä pisteitä on
-   * yksi. Sata turhaa määrekirjoitusta joka kehyksellä on juuri se
-   * hukka, jonka v1277 mittasi vastaskaalaajista pois. Eleen
-   * PÄÄTTÄVÄ kutsu tulee suhteella 1 (vastaskaalaaMerkit(1)) ja
-   * menee läpi, joten mittakaava on oikea siinä hetkessä, kun merkit
-   * palaavat näkyviin.
+   * ELEEN AIKANA ASEMOIDAAN NYT MYÖS TÄMÄ KERROS (omistaja 1.9.2026:
+   * *"kaikki elementit pitää pysyä päällä kun karttaa liikutetaan tai
+   * zoomataan vaikka niitä ei olisi poltettu."*).
+   *
+   * Tässä oli vahti `if (ui.merkitPiilossa && suhde !== 1) return;`:
+   * kun kerros oli eleen ajaksi `display: none`, sen mittakaavaa ei
+   * kannattanut kirjoittaa joka kehyksellä, ja oikea mitta tuli eleen
+   * päättävästä kutsusta `vastaskaalaaMerkit(1)`. Piilotusta ei enää
+   * ole (js/kartta.js asennaPanorointi), joten näkyvä merkki tarvitsee
+   * vastaskaalansa jokaisella kehyksellä — muuten se venyisi eleen
+   * mukana ja napsahtaisi kokoonsa vasta lopussa.
+   *
+   * HINTA ON RAJATTU SIIHEN, MISSÄ SE ON PAKKO MAKSAA: koko silmukka
+   * ajetaan vain lehdettömällä varapolulla, joka on yhä ruutumitassa
+   * (js/kartta.js vastaskaalaaMerkit palaa heti vakioskaalassa). Kerros
+   * on kolmesta rekisteröidystä ylivoimaisesti isoin — 29 maata kertaa
+   * kaksi kiertokohtaa on 58 ryhmää, kun vihreitä pisteitä on yksi —
+   * joten juuri tästä v1277 mittasi hukan pois fokusnäkymässä.
    */
-  if (ui.merkitPiilossa && suhde !== 1) return;
   const s = ui.fokusMerkkiSkaalaKartalle?.(suhde) ?? ui.fokusMerkkiSkaala?.(suhde);
   // Ilman mitattavaa näkymää muunnos jätetään entiselleen: väärä
   // mittakaava olisi pahempi kuin yhden kehyksen viive.
