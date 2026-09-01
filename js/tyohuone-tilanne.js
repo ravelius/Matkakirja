@@ -55,6 +55,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1408: NOSTOJEN RUUTUKATTO + NIMIOKYLJET + TUMMENNUS PANOROINTIIN - nostonimio ei koskaan kaupunginnimea isompi (syva zoomi 2,4x -> 1,0x), nimio loytaa nyt myos yla- ja alapuolen (Madara, Rila), ja maatummennus pysyy nakyvissa panoroitaessa. HUOM: poltettu nostotaso on piilossa uusintapolttoon asti - nostot piirtyvat elavina.',
   'v1407: MERI EI ENAA TUMMENE - maatummennus maalaa varjon vain naapurimaihin; Egeanmeri jaa kirkkaaksi. Zoomaa Kreikkaan ja katso meri seka maaraja.',
   'v1406: MAATUMMENNUS - lahizoomilla naapurimaat tummenevat 25 % ja nykyisen maan aariviiva paksunee; ele piilottaa valittomasti, paluu feidaa. Zoomaa maahan ja panoroi.',
   'v1405: NOSTOT ILMAN SIIRTOVIIVOJA - nostomerkit asettuvat kaupungin molemmin puolin omina merkkeinaan; katkoviivat poistuivat. Avaa Kreikka tai Bulgaria ja katso kaupungin ymparys.',
