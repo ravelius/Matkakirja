@@ -55,6 +55,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1414: KUVAVINKIT + HAVAINNEKUVASELITE - hampurilaisvalikosta voi lahettaa kuvavinkin paikasta (oikeusvakuutus + kayttolupa pakollisia; pro-tunnus tunnistetaan), ja jokainen Matkakirjan havainnekuva/kuvitus -lahderivi on pisteviivalla: napautus avaa selitepopupin palautenapilla (ihmekuvilla oma teksti). Kokeile lahderivia ja valikon Vinkkaa paikasta kuvalla.',
   'v1413: KOHTAAMISKORTTI UUSIKSI - aarrekohtaamisen kuva nakyy nyt kortin levyisena, alla kuvateksti kursiivilla ja Matkakirjan kuvitus -lahderivi; napautus suurentaa. Kuvaton kohtaaminen ennallaan. Avaa kohtaaminen esim. Madridissa tai Dublinissa.',
   'v1412: VESISTOTARINAT + KOROSTUSVARTIJA - jaetut merikortit saivat yhteisen tarinan ja maakohtaisen hannan (Itameren laivamato ja Vasa, Perameren maankohoaminen, latimeria), Corvinin linna 182 -> 883 mrk, ja 48 rikkinaista korostusta korjattu uudella vartiotestilla. Avaa Itameri Virossa ja Ruotsissa ja vertaa hantia.',
   'v1411: MAASTOKORTIT TARINOIKSI - 60 maastonoston kortti kirjoitettu tarinaksi (mm. Aneton kirottu vuori, Kemijoen uitto, Hombori Tondon jyrkanteet) ja 13 elaintakyn faktat korjattu lahteisiin (mm. Viron kansalliselain on susi). Avaa vuori- tai jokinosto ja lue kortti.',
