@@ -1,5 +1,6 @@
 /*
- * ELÄINTÄKYT — 29 maan eläin kartalla, kortti ja pieni punlöytö.
+ * ELÄINTÄKYT — 27 maan eläin kartalla, kortti ja pieni punlöytö
+ * (29 maasta BIH ja TUR odottavat uutta eläintä, ks. huomautus alla).
  *
  * Omistajan tilaus 29.8.2026: *"Eläintäky kartalle — eläin ilmestyy
  * maan kartalle täkynä: klikkaus avaa kuvan + lyhyen faktatekstin +
@@ -296,15 +297,20 @@ export const ELAINTAKYT = {
     lon: 15.9,
     lat: 44.3,
   },
-  BIH: {
-    elain: 'villihevosvarsa',
-    otsikko: 'Vuoriston vapaat',
-    teksti: 'Livnon ylängöllä Bosniassa laiduntaa satoja villihevosia — työhevosten jälkeläisiä, jotka päästettiin vapaiksi koneiden tultua tiloille. Vuosikymmenten mittaan niistä kasvoi aidosti villi kanta, ja varsat syntyvät nyt vapauteen, jota niiden esivanhemmat eivät tunteneet.',
-    lahde: 'en-Wikipedia "Feral horse". Tarkistettu 1.9.2026.',
-    kuva: 'assets/elaimet/elain-bih.jpg',
-    lon: 17.05,
-    lat: 43.83,
-  },
+  /*
+   * BIH ja TUR POISTETTU 1.9.2026 (omistajan päätös): Livnon
+   * villihevoset olivat jo Sarajevon kaanonin syvennys
+   * (js/packs/syvennyspaikat.js villihevoset, js/packs/fokusvirta-
+   * sarajevo.js) ja Vanin kissa oma fokuskohteensa
+   * (js/packs/fokuskohteet-tur.js 'Vanin kissa'). Kaksi merkkiä samasta
+   * eläimestä vierekkäin oli QA:n napautusvika (v1426) ja sisällön
+   * kaksoiskappale; omistaja valitsi: kohde/syvennys jää, eläintäky
+   * pois. Kummallekin maalle tilataan UUSI eläin omine kuvineen
+   * (posti/fable-vanha.md 1.9.2026) — kunnes se on toimitettu, näillä
+   * mailla ei ole eläintäkyä ja tests/elaintakyt.test.mjs laskee 27.
+   * Vanhat kuvat assets/elaimet/elain-bih.jpg ja elain-tur.jpg jäävät
+   * repoon odottamaan korvaajaa (samannimiseksi vietävä).
+   */
   GRC: {
     elain: 'kilpikonnanpoikaset',
     /*
@@ -323,15 +329,6 @@ export const ELAINTAKYT = {
     kuva: 'assets/elaimet/elain-grc.jpg',
     lon: 21.9,
     lat: 37.4,
-  },
-  TUR: {
-    elain: 'vankissa',
-    otsikko: 'Järven uimari',
-    teksti: 'Vanin kissa on Vanjärven seudun oma rotu: lumivalkoinen turkki ja usein kaksi eriväristä silmää, toinen meripihkaa ja toinen jäätä. Toisin kuin kissat yleensä, se menee veteen omasta tahdostaan — paikalliset kutsuvat sitä järven uimariksi.',
-    lahde: 'en-Wikipedia "Van cat". Tarkistettu 1.9.2026.',
-    kuva: 'assets/elaimet/elain-tur.jpg',
-    lon: 43,
-    lat: 38.5,
   },
   RUS: {
     elain: 'eremitaasinkissa',

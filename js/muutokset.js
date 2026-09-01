@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1428, teksti: 'Kaksoiskappaleet pois: BIH:n ja TUR:n eläintäyt' },
   { v: 1427, teksti: 'Pudotetut syvennystarinat lehdissä, savuke katon mukainen' },
   { v: 1426, teksti: 'Eläintäky ei enää varasta naapurimerkin napautusta' },
   { v: 1425, teksti: 'Rajat tarkasti, tummennus pysyy, uudet nimikoot' },
