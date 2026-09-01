@@ -293,12 +293,19 @@ console.log(`      mitattu: maatummennus ${panTila.tummennusSolmut} solmua,`
 console.log(`      mitattu: näkyviä kaupunkiosia ${panTila.citiesNakyvia}`
   + ` / ${panTila.citiesSolmut} (rajattuja ${panTila.rajattuja})`);
 
-/* --- 1b: MAATUMMENNUS PYSYY PANOROINNISSA, VÄISTYY NIPISTYKSESSÄ ---
+/* --- 1b/1c: MAATUMMENNUS PYSYY MOLEMMISSA ELEISSÄ -------------------
  *
  * Omistaja 1.9.2026 aamu: *"Kartan tummennus voisi pysyä panoroitaessa
- * päällä."* Kerros oli siihen asti samassa display:none-joukossa kuin
- * merkkikerrokset, eli piilossa koko eleen ajan (js/kartta.js
- * piilotaMerkit, css/styles.css).
+ * päällä."* — ja saman päivän iltana zoomauksesta: *"jos ympärivaltoiden
+ * tummennus on mahdollista pitää zoomatessa päällä (paitsi jos menee
+ * rajan yli missä poistuu), niin sen voisi kytkeä päälle."*
+ *
+ * Kerros oli 31.8.2026 illasta lähtien samassa display:none-joukossa
+ * kuin merkkikerrokset (koko ele), sitten päivän ajan piilossa vain
+ * nipistyksessä. Nyt ei kummassakaan, ja mittaus vei piilotukselta
+ * perustelun: nipistys on kameran CSS-muunnos eikä uusi viewBox, joten
+ * varjopolku skaalautuu kompositorissa (luvut js/kartta.js
+ * piilotaMerkit). Väite 1c kääntyi siis päinvastaiseksi.
  *
  * TILA LUETAAN KESKEN ELEEN, ei sen jälkeen: eleen jälkeen kerros on
  * takaisin näkyvissä kummallakin tavalla, joten levossa mitattu luku ei
@@ -357,8 +364,8 @@ vaadi('1b maatummennus pysyy näkyvissä panoroinnin ajan',
 const zoomEle = await eleenAikainenTila(true);
 console.log(`      mitattu: nipistyksen aikana merkit piilossa ${zoomEle.merkitPiilossa},`
   + ` tummennus näkyvissä ${zoomEle.tummennusNakyy}`);
-vaadi('1c maatummennus väistyy nipistyksen ajaksi',
-  zoomEle.merkitPiilossa && zoomEle.tummennusNakyy === false,
+vaadi('1c maatummennus pysyy näkyvissä myös nipistyksen ajan',
+  zoomEle.merkitPiilossa && zoomEle.tummennusNakyy === true,
   JSON.stringify(zoomEle));
 
 /*

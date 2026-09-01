@@ -635,6 +635,41 @@ test('maareitti on yhtenäinen, ohuempi ja himmeämpi veto — meri jää katkov
     'maan muste ei ole merta himmeämpi');
 });
 
+/*
+ * PELAAJAN KAUPUNKI ON ASKELHELMEN KOKOINEN (omistaja 1.9.2026 ilta,
+ * kuvakaappaus Bulgarian lehtinäkymästä, sanatarkasti: *"se kaupunki
+ * jossa pelaaja on pitäisi olla saman kokoinen ympyrä kuin askelpisteet
+ * ovat (pienennyksen jälkeen)."*).
+ *
+ * Luku on kahdessa paikassa eikä sitä voi tuoda: askelhelmi on
+ * laattageneraattorin puolella (REITTITYYLI.helmi) ja kaupungin ympyrä
+ * pelin puolella (js/ui.js FOKUS_LAATTA_R), eikä js/ saa tuoda
+ * tools/-moduulia — yhden tiedoston versio ketjuttaa vain js/:n
+ * (tools/build-standalone.mjs). Tämä testi on se vahti, jonka takia
+ * kopio on sallittu: kun helmi joskus pienenee, tämä kaatuu, ellei
+ * kaupungin ympyrä pienene samassa erässä.
+ *
+ * VÄITE ON HAARUKKA EIKÄ YHTÄSUURUUS, ja se on omistajan oma sanamuoto:
+ * *"pienennyksen jälkeen"*. Helmi on tätä kirjoitettaessa 15 R ja
+ * pienenemässä, kaupungin ympyrä on jo 12 R. Ehdoton yläraja on, ettei
+ * kaupunki ole koskaan helmeä isompi.
+ */
+test('pelaajan kaupungin ympyrä on askelhelmen mittaluokassa', () => {
+  const UI = readFileSync(join(JUURI, 'js', 'ui.js'), 'utf8');
+  const sade = Number(/const FOKUS_LAATTA_R = ([\d.]+);/.exec(UI)?.[1]);
+  const yksikko = /const REITTIYKSIKKO_LAUDALLA = 1 \/ ([\d.]+);/.exec(UI)?.[1];
+  assert.ok(sade > 0, 'js/ui.js FOKUS_LAATTA_R ei löytynyt');
+  assert.equal(yksikko, '7.2',
+    'reittiyksikkö ei ole enää 1/7,2 lautayksikköä — maailmapiirto.js SYVIN_TIHEYS');
+  assert.match(PIIRTO, /const SYVIN_TIHEYS = 7\.2;/,
+    'SYVIN_TIHEYS muuttui: js/ui.js REITTIYKSIKKO_LAUDALLA on nyt väärin');
+  assert.ok(sade <= REITTITYYLI.helmi,
+    `kaupungin ympyrä ${sade} R on askelhelmeä (${REITTITYYLI.helmi} R) isompi`);
+  assert.ok(sade >= REITTITYYLI.helmi * 0.6,
+    `kaupungin ympyrä ${sade} R ei ole enää helmen (${REITTITYYLI.helmi} R) `
+    + 'mittaluokassa — pieneniko helmi ilman että ympyrä seurasi?');
+});
+
 test('viivan päät ovat pyöreät — piirretty viiva, ei tekninen tikku', () => {
   const alku = PIIRTO.indexOf('export function piirraReititKankaalle');
   const runko = PIIRTO.slice(alku, PIIRTO.indexOf('\n/**', alku + 10));

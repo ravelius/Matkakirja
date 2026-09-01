@@ -20,16 +20,50 @@
  * ulkona: jos joskus halutaan koko maailma, kasvatetaan tätä listaa
  * eikä piirtäjää.
  *
- * === LÄHDE =========================================================
+ * === LÄHDE ON SAMA KUIN POLTETULLA RAJALLA (omistaja 1.9.2026) ======
  *
- * Natural Earth admin-0 countries, 50m (public domain):
+ * Sanatarkasti, kuvakaappaus Bulgarian lehtinäkymästä: *"saako nuo
+ * rajat korjattua, että tummennus ja maan rajan vahvistus menisi samaa
+ * reittiä kuin raja kartassa?"*
+ *
+ * Vika oli KAHDESSA LÄHTEESSÄ, ei piirtäjässä. Laattoihin poltettu
+ * rajaviiva tulee Natural Earthin **10m** aineistosta
+ * (tools/hae-maiden-rajat.mjs, `ne_10m_admin_0_boundary_lines_land`,
+ * harvennus 0,006°), ja rantaviiva samoin 10m:stä (maailma.mjs
+ * `meriRenkaat`, sama 0,006°). Tämä tiedosto tehtiin **50m**
+ * aineistosta ja yksinkertaistettiin vielä yhden lautayksikön
+ * Douglas–Peuckerilla — eli KAHDESTI karkeampi kuin se viiva, jonka
+ * päälle se piirtyy.
+ *
+ * MITATTU 1.9.2026 (poltetun rajaviivan kärkipisteiden etäisyys tämän
+ * tiedoston renkaan reunasta, vain ne pisteet jotka ovat aidosti maan
+ * omalla rajalla; lautayksikkö on noin 3,3 km, ja syvimmällä
+ * pyramiditasolla noin 7 kuvapikseliä):
+ *
+ *     aineisto        Bulgaria (730 pistettä)   Kreikka (586)
+ *     50m + DP 1      med. 0,46  max 1,43       med. 0,42  max 1,67
+ *     10m + DP 1      med. 0,16  max 1,00       med. 0,19  max 0,99
+ *     10m + DP 0,5    med. 0,10  max 0,50       med. 0,09  max 0,50
+ *     10m + DP 0,2    med. 0,02  max 0,20       med. 0,02  max 0,20
+ *
+ * Luvut kertovat kaksi asiaa. Ensinnäkin 10m-polygonin reuna ja
+ * 10m-rajaviivasto ovat SAMA GEOMETRIA: virhe on täsmälleen
+ * yksinkertaistuksen toleranssi eikä aineistojen ero, joten
+ * toleranssin valinta on koko kysymys. Toiseksi vanha 50m-lähde oli
+ * tyypillisesti puolen lautayksikön eli puolentoista kilometrin
+ * sivussa — lähikuvassa kolme, neljä pikseliä, ja juuri se näkyi
+ * omistajan kuvassa kahtena viivana.
+ *
+ * Lähde (public domain):
  *   https://raw.githubusercontent.com/nvkelso/natural-earth-vector/
- *     master/geojson/ne_50m_admin_0_countries.geojson
+ *     master/geojson/ne_10m_admin_0_countries.geojson
  *
- * Sama aineisto on jo repossa (ne50.geojson), ja sitä käytetään jos se
- * löytyy — verkkohaku on vain varareitti tyhjälle työkopiolle. Muut
- * maatyökalut (tools/asia-countries.mjs, tools/africa-borders.mjs)
- * lukevat saman tiedoston, joten maiden muodot ovat kaikkialla samat.
+ * TIEDOSTOA EI SÄILYTETÄ REPOSSA. Se on 13 Mt, ja sama linja kuin
+ * rajasettien hakijalla (tools/hae-maiden-rajat.mjs): AJO on käsin
+ * ajettava ja verkosta hakeva, TULOS on repossa. Nouto tallennetaan
+ * välimuistiin `.nevalimuisti/` (.gitignore), jotta toleranssia voi
+ * kokeilla ilman uutta latausta. Repon `ne50.geojson` jää muiden
+ * maatyökalujen käyttöön — se on karkea maalista, ei rajageometria.
  *
  * === PROJEKTIO EI OLE OMA — SE TUODAAN ============================
  *
@@ -75,21 +109,46 @@
  * silmukka (js/maatummennus.js `puraMaa`).
  */
 
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import {
+  readFileSync, writeFileSync, existsSync, mkdirSync,
+} from 'node:fs';
 import { laudanProjektio } from './fokuskartta/piirto.js';
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
 
 const LAHDE = 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector'
-  + '/master/geojson/ne_50m_admin_0_countries.geojson';
-const PAIKALLINEN = new URL('../ne50.geojson', import.meta.url);
+  + '/master/geojson/ne_10m_admin_0_countries.geojson';
+/*
+ * Noudon välimuisti, EI repon aineistoa (.gitignore `.nevalimuisti/`).
+ * Ks. tiedoston alku: 13 megatavun lähdettä ei säilytetä repossa, mutta
+ * toleranssikokeiluja ei myöskään ajeta kymmentä latausta.
+ */
+const PAIKALLINEN = new URL('../.nevalimuisti/ne_10m_admin_0_countries.geojson',
+  import.meta.url);
 const KOHDE = new URL('../assets/data/maapolygonit.json', import.meta.url);
 
 const LEVEYS = MAAILMANKARTTA.map.width;
 const KORKEUS = MAAILMANKARTTA.map.height;
 const PROJEKTIO = { tyyppi: 'miller', leveys: LEVEYS, lon0: -175, pohjoinen: 76 };
 
-/** Douglas–Peuckerin toleranssi lautayksikköinä (~3,3 km/yksikkö). */
-const TOLERANSSI = 1;
+/**
+ * Douglas–Peuckerin toleranssi lautayksikköinä (~3,3 km/yksikkö).
+ *
+ * 0,2 EI OLE MAKUASIA VAAN POLTON OMA KYNNYS. Rannikko ja rajaviivat
+ * harvennetaan laattoihin 0,006 asteen askeleella (maailma.mjs
+ * `meriRenkaat`, tools/hae-maiden-rajat.mjs), ja päiväntasaajalla
+ * 0,006° on laudalla 0,006 / 360 × 12000 = 0,2 lautayksikköä. Sama luku
+ * siis, eri menetelmällä: poltto pudottaa liian lähelle osuvat pisteet,
+ * tämä pudottaa pisteet, jotka ovat liian lähellä NAAPUREIDENSA
+ * VÄLISTÄ JANAA — jälkimmäinen säilyttää muodon paremmin samalla
+ * pistemäärällä. Kummankin virhe on korkeintaan 0,2 yksikköä eli
+ * syvimmällä pyramiditasolla runsas kuvapikseli, joten viivat osuvat
+ * päällekkäin joka zoomilla.
+ *
+ * TÄTÄ TIUKEMPI EI OSTAISI MITÄÄN: poltettu viiva on itsekin 0,2:n
+ * tarkkuudella, joten 0,1:n toleranssi tavoittelisi tarkkuutta, jota
+ * vertailukohdassa ei ole — ja maksaisi kolmanneksen lisää pisteitä.
+ */
+const TOLERANSSI = 0.2;
 /** Tätä pienemmät saaret pudotetaan (rajauslaatikon suurempi sivu). */
 const MIN_KOKO = 3;
 /** Talletustarkkuus: kymmenesosa lautayksikköä eli noin 330 metriä. */
@@ -133,13 +192,15 @@ function todennaProjektio(p) {
 
 async function lueLahde() {
   if (existsSync(PAIKALLINEN)) {
-    console.log(`Lähde: ${PAIKALLINEN.pathname} (repon oma kopio)`);
+    console.log(`Lähde: ${PAIKALLINEN.pathname} (välimuisti)`);
     return JSON.parse(readFileSync(PAIKALLINEN, 'utf8'));
   }
   console.log(`Lähde: ${LAHDE}`);
   const vastaus = await fetch(LAHDE);
   if (!vastaus.ok) throw new Error(`Natural Earth ${vastaus.status}`);
   const data = await vastaus.json();
+  // Välimuisti on .gitignoressa; kansio voi puuttua tyhjästä työkopiosta.
+  mkdirSync(new URL('.', PAIKALLINEN), { recursive: true });
   writeFileSync(PAIKALLINEN, JSON.stringify(data));
   return data;
 }
@@ -328,7 +389,8 @@ const ulos = {
    * Nämä kentät ovat lukijalle JA piirtäjälle: js/maatummennus.js
    * tarkistaa tarkkuuden ja laudan mitat aineistosta eikä oleta niitä.
    */
-  lahde: 'Natural Earth 50m admin-0 countries (public domain)',
+  lahde: 'Natural Earth 10m admin-0 countries (public domain) — sama '
+    + 'aineisto kuin laattoihin poltetulla rajaviivalla',
   komento: 'node tools/generoi-maapolygonit.mjs',
   projektio: PROJEKTIO,
   tarkkuus: TARKKUUS,

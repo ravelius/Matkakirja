@@ -3156,10 +3156,8 @@ export class Kartta {
       cancelAnimationFrame(this.ui.merkkiPaluuKehys ?? 0);
       this.ui.merkkiPaluuKehys = 0;
       this.ui.merkitPiilossa = false;
-      this.ui.merkkiZoomEle = false;
       document.body.classList.remove('kartta-merkit-piilossa');
       document.body.classList.remove('kartta-merkit-haipyy');
-      document.body.classList.remove('kartta-tummennus-piilossa');
     };
     // Kentäksi asti: ui.js:n jumivahti ja destroy siivoavat luokat ja
     // ajastimet silloinkin, kun ele ei pääse omaan loppuunsa.
@@ -3180,13 +3178,10 @@ export class Kartta {
       // Ensin takaisin maalikierrokseen — yhä läpinäkyvänä…
       document.body.classList.remove('kartta-merkit-piilossa');
       /*
-       * MAATUMMENNUS SAMASSA KEHYKSESSÄ (1.9.2026). Kerros on piilossa
-       * vain zoom-eleessä, ja sen paluu on ANIMAATIO joka käynnistyy
-       * siitä hetkestä kun display muuttuu — siis tästä. Panoroinnissa
-       * luokkaa ei koskaan asetettu, joten tämä on silloin tyhjä työ.
+       * MAATUMMENNUS EI OLE TÄSSÄ JOUKOSSA LAINKAAN (1.9.2026): se ei
+       * väisty enää kummassakaan eleessä, joten sillä ei ole paluutakaan
+       * (ks. piilotaMerkit alla ja js/maatummennus.js "ELEKÄYTÖS").
        */
-      this.ui.merkkiZoomEle = false;
-      document.body.classList.remove('kartta-tummennus-piilossa');
       cancelAnimationFrame(this.ui.merkkiPaluuKehys ?? 0);
       // …ja vasta seuraavassa kehyksessä peittävyys ylös, jolloin
       // selain näkee arvon muuttuvan ja tekee siirtymän.
@@ -3210,49 +3205,61 @@ export class Kartta {
     /**
      * Ele on aidosti käynnissä: polttamaton karttasisältö väistyy.
      *
-     * === MAATUMMENNUS JÄÄ PANOROINNISSA NÄKYVIIN ====================
+     * === MAATUMMENNUS EI VÄISTY KUMMASSAKAAN ELEESSÄ ================
      *
-     * Omistaja 1.9.2026 aamu, sanatarkasti: *"Kartan tummennus voisi
-     * pysyä panoroitaessa päällä."* Kerros oli 31.8.2026 illasta lähtien
-     * samassa display:none-joukossa kuin merkkikerrokset, eli piilossa
-     * KOKO eleen ajan.
+     * Kaksi tilausta samalta päivältä, ja jälkimmäinen vie ensimmäisen
+     * loppuun. Aamulla panorointi, sanatarkasti: *"Kartan tummennus
+     * voisi pysyä panoroitaessa päällä."* Illalla zoomaus, sanatarkasti:
+     * *"jos ympärivaltoiden tummennus on mahdollista pitää zoomatessa
+     * päällä (paitsi jos menee rajan yli missä poistuu), niin sen voisi
+     * kytkeä päälle."*
      *
-     * ELEEN LAJI RATKAISEE, ja vain kartta tietää sen: panorointi ei
-     * muuta mittakaavaa, joten varjo — staattinen SVG-polku emoryhmän
-     * siirtoryhmässä — liikkuu kompositorilla laatan mukana ilman
-     * yhtäkään uudelleenladontaa. Nipistyksessä se skaalautuu joka
-     * kehyksellä, ja juuri siitä piilotus alun perin tuli
-     * (js/maatummennus.js "ELEKÄYTÖS"), joten `zoomaa` asettaa oman
-     * luokkansa ja kerros katoaa kuten ennenkin.
+     * Kerros oli 31.8.2026 illasta lähtien samassa display:none-joukossa
+     * kuin merkkikerrokset (koko ele), sitten 1.9.2026 aamusta vain
+     * nipistyksessä (`kartta-tummennus-piilossa`). Nyt ei kummassakaan:
+     * luokkaa ei ole enää olemassa, eikä tämä passi erottele eleen
+     * lajia maatummennuksen osalta.
      *
-     * MITATTU (tools/savukkeet/savuke-maailmanakyma.mjs, Chromium
-     * 390x844 dpr3, 4x kuristus; kuusi pyyhkäisyä ja neljä nipistystä
-     * Kreikan fokusnäkymässä, tummennus kartalla — kuusi ajoa ennen,
-     * viisi jälkeen, longtaskien summa per ajo):
+     * OMISTAJAN SULKEISHUOMAUTUS ON JO TOTEUTUNUT. *"Paitsi jos menee
+     * rajan yli missä poistuu"* on tummennuksen oma näkyvyysehto
+     * (js/maatummennus.js `tunniste`): kerros on olemassa vain pelaajan
+     * omasta uloimmasta zoomista sisäänpäin ja vain nykyiselle maalle.
+     * Kun kuva loitonnetaan rajan yli tai maa vaihtuu, kerros joko
+     * katoaa tai piirtyy uudelle maalle näkymän asetuttua — se on
+     * näkyvyysehto eikä ele-ehto, eikä se kuulu tähän passiin.
      *
-     *   panorointi  ennen   114 / 106 / 102 / 76 / 55 / 0 ms  (med. 89)
-     *              jälkeen  161 / 121 / 107 / 53 / 52 ms      (med. 107)
-     *   nipistys    ennen   686 / 670 / 621 / 618 / 561 / 558 (med. 620)
-     *              jälkeen  693 / 636 / 602 / 592 / 537       (med. 602)
+     * MITATTU (Chromium 390x844 dpr3, 4x kuristus, kehittäjän
+     * maailmanäkymä Ateenan lähikuvassa; neljä nipistystä ja kuusi
+     * pyyhkäisyä per ajo, neljä ajoa per variantti, lämmittelykierros
+     * pois ja variantit VUOROTELLEN — longtaskien summa per ajo):
      *
-     * Panorointi ei siis kallistunut ajokohinaa enempää: sarjat menevät
-     * päällekkäin ja mediaanien ero on 18 ms KUUDEN pyyhkäisyn yli eli
-     * kolme millisekuntia elettä kohti. Nipistys on ennallaan, koska
-     * siinä kerros piiloutuu kuten ennenkin.
+     *   kerros piilossa  nipistys  845 / 1387 / 1023 / 1101 (med. 1101)
+     *                    panor.    779 /  795 /  629 /  455 (med.  779)
+     *   kerros näkyvissä nipistys 1152 / 1125 /  848 / 1041 (med. 1125)
+     *                    panor.    901 /  686 /  616 /  563 (med.  686)
      *
-     * ZOOM-LUOKKA VOI TULLA KESKEN PIILON: panorointi piilottaa merkit
-     * ensin, ja jos sormia tulee toinen ja mittakaava alkaa muuttua,
-     * tämä ajetaan uudestaan lipun `merkitPiilossa` ollessa jo tosi.
-     * Zoom-haara on siksi ENNEN sitä varhaista paluuta.
+     * Sarjat menevät päällekkäin kummassakin eleessä: nipistyksen
+     * mediaaniero on 24 ms NELJÄN nipistyksen yli eli kuusi
+     * millisekuntia elettä kohti, ja panoroinnissa näkyvä kerros on
+     * mediaanilta jopa halvempi. Syy on kartan omassa
+     * zoomitoteutuksessa: nipistys on kameran CSS-muunnos
+     * (`translate3d(...) scale(...)`, ks. touchmove alempana), ei uusi
+     * viewBox, joten varjopolku skaalautuu kompositorissa eikä sitä
+     * ladota uudelleen kertaakaan eleen aikana. Mittaus on tehty
+     * 1.9.2026 UUDELLA, kuusi kertaa tiheämmällä varjopolulla (3,29
+     * miljoonaa merkkiä `d`-määreessä, ks. tools/generoi-maapolygonit.mjs)
+     * — vanhalla polulla luvut olivat samat kohinan sisällä
+     * (nipistys med. 1283 piilossa vs. 1149 näkyvissä).
      *
      * @param {boolean} zoomaa tosi, kun eleen mittakaava muuttuu
+     *   (jää kutsujien tiedoksi; tämä passi ei enää käytä sitä)
      */
     const piilotaMerkit = (zoomaa = false) => {
       if (this.ui.fokuskohdeAuki) return;
-      if (zoomaa && !this.ui.merkkiZoomEle) {
-        this.ui.merkkiZoomEle = true;
-        document.body.classList.add('kartta-tummennus-piilossa');
-      }
+      // `zoomaa` on jäljellä kutsujissa (nipistys kertoo sillä eleen
+      // lajin), mutta tämä passi ei enää erottele: maatummennus jää
+      // näkyviin kummassakin eleessä (ks. yllä).
+      void zoomaa;
       if (this.ui.merkitPiilossa) return;
       clearTimeout(this.ui.merkkiPaluuAjastin);
       this.ui.merkkiPaluuAjastin = 0;
