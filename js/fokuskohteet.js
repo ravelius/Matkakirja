@@ -1718,11 +1718,17 @@ function asetaKohdeMittakaava(ui, suhde) {
    * väistää ryppääseen ladottuja merkkejä eikä toisin päin, joten sen
    * on nähtävä kasauksen tulos.
    *
-   * KASAUSPASSI EI ENÄÄ KYSY MITÄÄN TÄLTÄ KERROKSELTA. Se kysyi ennen,
-   * onko merkki poltettu, koska se ei saanut piirtää yhdysviivaa
-   * merkille, jonka viiva on jo laatassa. Viivat poistuivat
-   * (js/fokusniput.js sääntö 6), ja sen mukana `ui.nostoPoltettu`.
+   * KASAUSPASSI KYSYY TÄLTÄ KERROKSELTA, ONKO MERKKI POLTETTU
+   * (palautettu 1.9.2026 ilta siirtoviivojen mukana, omistajan tilaus
+   * *"otetaan siirtoviivat takaisin karttanostoille (esim. ateena)"*):
+   * se ei saa piirtää siirtoviivaa merkille, jonka viiva on jo
+   * laatassa, eikä js/fokusniput.js tunne luetteloa. Kysymys esitetään
+   * merkin lopullisesta paikasta, jonka passi itse juuri asettaa —
+   * ryppääseen ladotun merkin erottelusiirto on nolla
+   * (eritteleKohdeRyhmat), joten vastaus on sama ennen ja jälkeen
+   * erottelun.
    */
+  ui.nostoPoltettu = (r) => kohdeOnPoltettu(ui, r);
   niputaFokusmerkit(ui, s);
   eritteleKohdeRyhmat(ui, s);
   /*
