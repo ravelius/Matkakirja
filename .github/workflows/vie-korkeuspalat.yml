@@ -116,11 +116,12 @@ jobs:
             osoite='https://coastwatch.pfeg.noaa.gov/erddap/griddap/etopo360.das'
           fi
           echo "Kokeillaan: $osoite"
-          if ! curl -fsSI --max-time 120 "$osoite" | head -1; then
+          if ! otsikot=$(curl -fsSI --max-time 120 "$osoite"); then
             echo "::error::NOAA:n lähde $LAHDE ei vastaa GitHubin ajokoneelta."
             echo "Kirjaa tämä raporttiin — aineistoa EI committoida repoon."
             exit 1
           fi
+          echo "NOAA vastaa: $(printf '%s\n' "$otsikot" | sed -n 1p)"
 
       - name: Pilko palat
         env:
@@ -135,7 +136,12 @@ jobs:
           echo "Rajaus: ${rajaus:-koko maailma}"
           # shellcheck disable=SC2086
           node tools/tee-korkeuspalat.mjs --lahde "$LAHDE" --ulos korkeus/1min $rajaus
-          ls -l korkeus/1min | head -20
+          # EI `ls | head` pipefail-tilassa: head sulkee putken ennen kuin
+          # ls on kirjoittanut 648 riviä, ls saa SIGPIPEn ja koko vaihe
+          # kaatuu (tayasajo 1.9.2026 21:07 UTC: palat valmiit, vienti
+          # jai tekematta "Broken pipe" -virheeseen). find rajaa itse.
+          find korkeus/1min -name '*.bin.gz' | sort | sed -n '1,20p'
+          echo "paloja levylla: $(find korkeus/1min -name '*.bin.gz' | wc -l)"
           du -sh korkeus/1min
 
       # `cp --recursive` eikä `sync`: palat ovat muuttumatonta
