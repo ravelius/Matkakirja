@@ -1,237 +1,194 @@
-# Sijaispäätoimittaja → Fable, päätoimittaja: siirto 31.8.2026
+# Opus (kartta) → Fable: kolme omistajan asiaa 1.9.2026 illalta
 
-Omistaja siirtää kartan viimeistelyn sinulle. Tässä on kaikki, mitä
-tarvitset. Kaikki luvut ovat mitattuja, ei arvioita; lähteet on
-merkitty, jotta voit tarkistaa ne itse.
+Haara `worktree-agent-aa3cebc155a1c873b`, kaksi committia. En nostanut
+versiota enkä avannut PR:ää — julkaisu on sinun.
 
-## 1. Missä mennään
+Kaikki alla olevat luvut on mitattu tässä kontissa (Chromium
+`/opt/pw-browsers/chromium`, 390×844 dpr3, 4× CPU-kuristus). Kone on
+hitaampi kuin aiempien mittausten kone, joten VERTAA VAIN SARAKKEITA
+KESKENÄÄN, älä aiempiin absoluuttilukuihin.
 
-Laattapyramidi on pelin ainoa maailmankartta. Ajo **2026-08-31b** on
-ämpärissä (kaikki kahdeksan tasoa, patina hillitty) ja siinä
-**karttanostot on poltettu laattoihin**: 413 merkkiä 624:stä.
-Luettelo `julisteet/pyramidi/pyramidi.json` kantaa kentät
-`versio: 2026-08-31b`, `nimiot: false` ja `nostot` (id → FNV-1a).
+## 1. "Kaikki elementit pitää pysyä päällä kun karttaa liikutetaan tai zoomataan"
 
-Mainissa: v1380 symbolit, v1381 reitit ja joet karttavakioiksi,
-v1382 kategoria per kaupunki ja pilkkulista, v1383 rullazoomin
-korjaus, v1384 poltto, v1385 vaienneet nimiöt.
+Commit `2c39728c`. Eleenaikainen piilotus on purettu KOKONAAN — ei
+kuollutta koodia eikä kytkinvakiota jäljelle.
 
-**Avoin PR:**
-[#1831 v1386 "Piste vain nimen kanssa"](https://github.com/ravelius/Matkakirja/pull/1831),
-haara `claude/piste-vain-nimen-kanssa`. CI oli kesken siirron
-hetkellä; kun vihreä, squash-merge. Kaupungin piste piirtyy vain jos
-sen nimi (tai maastoparin nimi) oikeasti piirtyy. Mitattu: mittakaavalla
-0,11…0,15 kaupunkimerkkejä 62 → 0, 0,22…0,30 273 → 74, lähikuvassa
-nimettömät 19 / 11 / 6 → 0, eikä yksikään nimi kadonnut.
+Poistettu: `js/kartta.js` `piilotaMerkit` / `naytaMerkit` /
+`merkitEsiin` / `paljastaMerkit` ja koko niiden tilakone (paluuviive,
+uusi yritys liikeluokkien takia, odotuksen katto, häivytysajastin ja
+sen varareitti taustavälilehdelle, kehysvaraus, `merkitPiilossa`);
+runkoluokat `kartta-merkit-haipyy` / `kartta-merkit-piilossa` ja
+nimikerroksen opacity-siirtymä (`css/styles.css`); paluupolut
+`js/ui.js`:n destroysta ja jumivahdista (eleKesken).
 
-Siirron kirjoittamisen jälkeen mainiin meni vielä **v1388: kartan
-puolikas laudan sauman kohdalla** (ks. kohta 4) — se on korjattu ja
-mergattu, ei enää sinun listallasi.
+Vastaskaala: `js/elaintaky.js`:stä poistettiin oikotie
+`if (ui.merkitPiilossa && suhde !== 1) return;`. Nyt lehdettömän
+varapolun ruutumittaiset kerrokset vastaskaalataan JOKA KEHYS koko
+eleen ajan, ei vain eleen päättävässä `vastaskaalaaMerkit(1)`
+-kutsussa. Fokusnäkymässä (vakioskaala) silmukkaa ei ajeta lainkaan,
+kuten ennenkin — merkit kasvavat kartan mukana.
 
-## 2. Omistajan uusimmat linjaukset — työn kärki
+**Mitattu** (`tools/savukkeet/savuke-maailmanakyma.mjs`, kehittäjän
+maailmanäkymä Kreikassa = raskain tapaus; longtaskien summa per ajo,
+6 pyyhkäisyä + 4 nipistystä per ajo):
 
-Sanatarkasti 31.8.2026:
+| variantti | panorointi | nipistys |
+| --- | --- | --- |
+| piilotus päällä (3 ajoa) | 724 / 840 / 767 ms (med. **767**) | 1203 / 1412 / 1420 ms (med. **1412**) |
+| piilotus poissa (5 ajoa) | 313 / 422 / 492 / 254 / 357 ms (med. **357**) | 925 / 1070 / 1104 / 1135 / 857 ms (med. **1070**) |
 
-> "Kaikki elementit mitä ei ole poltettu pitää poistua näkyvistä kun
-> karttaa zoomataan, mutten tulee ikävä hyppäys"
->
-> "Kaupungin pisteet eivät saa muuttaa kokoa suhteessa karttaan.
-> Niiden koko pitää olla sama kuin ne olisivat poltettu karttaan"
->
-> "Mustat merkit ovat siis kaupunkeja"
+Purku on siis myös NOPEAMPI, ja sarjat eivät mene panoroinnissa
+päällekkäin lainkaan. Syy on kirjattu koodiin: piilotus vaihtoi eleen
+molemmissa päissä runkoluokan, joka pakotti koko dokumentin
+tyylinlaskun ja otti kuusi SVG-kerrosta ulos asettelusta ja takaisin
+sisään — juuri niissä kehyksissä, joissa nykäys tuntuu.
 
-Kolmas lause on vastaus omistajan omaan kysymykseen "miksi nuo mustat
-kaupungit näkyvät noin isolla" — hän vahvisti, että kyse on
-kaupungeista. Mittaus (kohta 3) kertoo, mistä kerroksesta.
+**Hinta, joka omistajan on hyvä tietää:** polttamattomat kerrokset
+(erityisesti `js/karttanimet.js`) ladotaan RUUTUAVARUUDESSA, joten ne
+skaalautuvat nipistyksen aikana laudan mukana ja asettuvat omaan
+kokoonsa vasta eleen jälkeen. Sen napsahduksen piilotus aikanaan
+peitti (31.8. linjaus "kaikki poltamaton pois zoomatessa"); nyt se on
+näkyvissä. Uusi linjaus kumoaa vanhan — Raamatun päivitys on sinun.
 
-**Ensimmäinen linjaus** on yleinen: poltettu jälki liikkuu
-kompositorilla laatan mukana, elävä ruutuavaruuden ladonta ei — siitä
-tulee hyppäys. Eleen ajaksi piilotetaan siis kaikki polttamaton:
-elävät karttanostot, kaupunkien nimet ja pisteet, maastonimet,
-nostoviivat. Vastaava koneisto on jo olemassa (`js/kartta.js`
-MERKKIEN_PALUU_MS, `js/fokusmitat.js` LEPO_MS) — kyse on sen
-laajentamisesta, ei uudesta rakenteesta. Pelitila (vilkkuvat valot,
-nappula, vuororengas, korostuslaatta, kohtaamispiste) jäi omistajan
-sanoissa mainitsematta; jos ne hyppäävät, kysy kortilla.
+Savukkeen väitteet 1b/1c on käännetty: elävä sisältö (tummennus JA
+kohdemerkit) on näkyvissä kesken eleen.
 
-**Toisessa linjauksessa on ristiriita, joka pitää purkaa omistajan
-kanssa ennen toteutusta.** "Ei saa muuttaa kokoa suhteessa karttaan"
-tarkoittaa karttavakiota eli lautayksikköä: merkki kutistuu kartan
-mukana kuten rantaviiva. "Sama kuin poltettuna" tarkoittaa
-paperivakiota: pyramidin laatoissa kaikki painojälki on `paperiS: 1`
-eli sama määrä ULOSTULOPIKSELEITÄ joka tasolla, jolloin poltettu
-piste olisi ruudulla aina saman kokoinen — eli täsmälleen se, mitä
-nykyinen kerros jo tekee. Nämä kaksi eivät voi olla yhtä aikaa totta.
+## 2. "Kartan tummennuksen voisi ottaa pois päältä kehittäjä tilassa"
 
-Luultava tarkoitus on karttavakio, ja "kuin poltettuna" kertoo
-KOON eikä yksikön: piste on lautayksiköissä sen kokoinen, jonka se
-saisi polttohetkellä. Silloin jää valittavaksi VIITETASO, jolta koko
-otetaan (z7:llä 7,2 px/lautayksikkö, ja jokainen taso ylöspäin
-puolittaa). Tee tästä kysymyskortti — sama kortti kannattaa esittää
-yhdessä nostojen kertoimen kanssa (kohta 5), koska kysymys on sama.
+Commit `8951a587`. Uusi kytkinrivi **tummennus** hammasratasvalikkoon,
+oletus **päällä**.
 
-## 3. Mitattu: mistä "mustat kaupungit" tulevat
+- `index.html`: `#kehittaja-tummennus-btn` maailma/mittari/kysymykset
+  -rivien joukkoon, sama `kehittaja-kytkin`-muotti.
+- `js/ui-apurit.js`: avain `matkakirja-kehittaja-tummennus`,
+  KÄÄNTEINEN muihin nähden (puuttuva avain = päällä, levylle
+  kirjoitetaan vain poiskytkentä `'0'`), muisti mukana
+  `unohdaKehittajaKytkimet`-joukossa ja siten storage-tapahtumassa.
+- `js/maatummennus.js` `tunniste()`: `kehittajaTilaPaalla() &&
+  !kehittajaTummennusPaalla()` → `null`. Ehto on siellä, koska se on
+  kerroksen ainoa näkyvyysehto: kytkin käyttää samaa purkupolkua kuin
+  zoomirajan ylitys. **Pelaajaan kytkin ei vaikuta** — avainta ei edes
+  lueta ilman kehittäjätilaa.
+- `js/ui.js` `paivitaKehittajaTummennus()`: `nollaaMaatummennus` +
+  `paivitaMaatummennus`. Nollaus on pakko, koska kerroksen tunniste on
+  pelkkä maa eikä muutu kytkimen vaihdosta.
+- `js/main.js`: napin kytkentä, tilarivi, title-tekstit, vihjerivi.
 
-Poltetut kaupunkipisteet **poistettiin laatoista** (maailmapiirto.js
-luku 8b, omistajan päätös 30.8.), ja ne piirtää nyt elävä kerros
-`js/karttanimet.js`. Se latoo RUUTUpikseleissä
-(`laudalle = cssPx / nakyva.skaala`), joten ne eivät kutistu kartan
-mukana. Mitattu oikeaa ämpärilaattaa vasten, ruutu 900×1200, dpr 1:
+**Vartijat:** `tests/rules.test.mjs` tarkistaa ketjun viisi lenkkiä
+erikseen (rivi, avain+oletus, muistin nollaus, kytkentä, näkyvyysehto,
+nollausjärjestys). `savuke-maailmanakyma` sai väitteet 2b/2c: mitattu
+selaimessa 2 solmua → 0 → 2 ilman sivulatausta.
 
-| kerros | yksikkö | 500 km | 1000 km | 2000 km | 5000 km |
-|---|---|---|---|---|---|
-| `.karttamerkki-piste` | **ruutu** | 4,0 / 5,2 px | 4,0 / 5,2 | 4,0 / 5,2 | pudotettu |
-| `.karttamerkki-rengas` | **ruutu** | 9,2 px | 9,2 | 9,2 | pudotettu |
-| `.karttamerkki-vuori` | **ruutu** | 8,0 / 10,0 px | sama | sama | pudotettu |
-| `.city`-laatta (ui.js) | **lauta** | 15,8 px | 8,3 px | 4,1 px | 1,7 px |
-| `.fokuskohde` RUS | **lauta** | 169 px | 134 px | 67 px | 27 px |
+## 3. "Saako kartan skrollausta jotenkin paremmalla koodilla sujuvammaksi?" — ARVIO
 
-Lautayksiköissä piste kasvaa ulos zoomatessa 4,6 → 8,6 → **17,3** ja
-rengas 10,5 → 19,9 → **39,8**; maastossa rengas peittää 28 km:stä
-**115 km:iin**. Ratkaiseva yksityiskohta: 500 km:llä kermanvalkoinen
-`.city`-ellipsi (15,8 px) ympäröi tummaa pistettä, mutta 1000–2000
-km:llä ellipsi kutistuu **renkaan alle** (8,3 → 4,1 px) ja merkki
-romahtaa yhdeksi umpimustaksi nastaksi (`fill: rgba(58,40,25,0.9)`).
-2000 km:n näkymässä ruudulla on 120 pistettä ja 26 rengasta, ja ne
-ovat kartan ainoat mustat elementit — juuri se pippuri, jonka
-omistaja näkee.
+Ei toteutettu, kuten pyydettiin. Profiloin pelaajan näkymän (ei
+kehittäjän maailmanäkymää) Ateenan lähikuvassa: 6 pyyhkäisyä, 4×
+kuristus, CDP-näytteistys 100 µs + longtaskit ikkunoitiin erikseen
+sormen ollessa ruudulla ja sormen irrotessa.
 
-**`js/ui.js drawCities` ei ole vika:** sen kaupunkilaatat ovat jo
-karttavakio (18 lautayksikköä joka zoomilla). Korjattava kerros on
-`js/karttanimet.js` MERKKI-taulu (`pisteIso: 2.6, piste: 2.0,
-rengasIso: 4.6, vuoriIso: 5, vuori: 4`).
+**Ratkaiseva luku:**
 
-Kuvat (tämän session scratchpad, kopioi talteen jos tarvitset):
-`mitta-venaja-500km.png`, `mitta-kreikka-500km.png`,
-`mitta-eurooppa-afrikka-1000km.png`, `mitta-eurooppa-afrikka-2000km.png`,
-`mitta-maailma-5000km.png`, `mitta-mustat-kaupungit-lahikuva.png`,
-`mitta-kerroinvertailu-pietari-z6.png`.
+    longtaskit  sormi ruudulla    107 ms (2 kpl)
+                sormen irrotessa  510 ms (6 kpl)   ← 83 % ja tasan
+                                                     yksi per pyyhkäisy
 
-## 4. Toinen bugi: kartta piirtyy vain ruudun vasempaan puolikkaaseen
+Eli **per-kehys-työ eleen aikana on jo kunnossa** (`asetaPan` 26 ms ja
+`rajaaKasinPan` 25 ms 70 kutsulla = ~0,7 ms/kehys 4× kuristuksella),
+ja koko tökkiminen on YHDESSÄ ~85 ms:n tehtävässä, joka laukeaa
+sormen irrotessa. Kokonaisajat samasta ajosta:
 
-Omistajan kuvakaappaus: terävä PYSTYSAUMA keskellä ruutua, oikea
-puolisko tyhjää pergamenttia. Näkymä Tyynenmeren / Kamtšatkan yllä,
-jana 1000 km. Tämä ei ole v1379:ssä korjattu "kartta ei piirry
-ollenkaan" -vika: raja on puhdas pystysauma eikä tasonvaihdon aukko.
+    306 ms  paata            @ kartta.js   (pointerup-käsittelijä)
+    297 ms   └ taydennaTaide @ ui.js
+    250 ms      └ paivitaMaastonimet @ ui.js
+     64 ms          └ paivitaFokuskohteet @ fokuskohteet.js
+    259 ms  ajaFokusmitat    @ fokusmitat.js  (mikrotehtävä perään)
+    206 ms   └ paivitaNappipaikka (yksi getBoundingClientRect)
+    253 ms  getBoundingClientRect (koko ajon itseaika)
+    421 ms  roskienkeruu
 
-**KORJATTU JA MERGATTU (v1388).** Juurisyy oli laudan kierto:
-kiertävällä laudalla koko sisältö on olemassa kahdesti — juuriryhmä
-kattaa välin [0, 12000) ja sen `<use>`-kopio välin [12000, 24000) —
-ja kopio on juuriryhmän PÄÄLLÄ läpinäkymättömine paperinpohjineen.
-Laattapyramidi piirsi sauman takaiset laatat kierroksittain arkin
-oikealle puolelle, oikeille paikoilleen ja ladattuina, ja kopion
-pergamentti maalasi ne piiloon. Vika oli paikassa, ei ajassa.
+Ehdotukset paremmuusjärjestyksessä:
 
-Korjaus: laatta piirretään arkille kerran omalle paikalleen, ja kierron
-hoitaa laudan kopio; näkyvyys kysytään kiertäen (`osuuKiertaen`).
-Mitattu: arkin ulkopuolella olevia laattoja 12/30 → 0/30, vaakapeitto
-100 % molemmissa, ruudulla vasen puolikas → koko ruutu.
+**1. Eleen jälkeinen ladonta pois yhdestä tehtävästä (ENSIMMÄINEN
+KOKEILTAVA).** Tänään `paata` ajaa synkronisesti koko ketjun
+pyramidista karttanimiin ja fokusmittoihin. Jaa se kehyksille
+prioriteettijärjestyksessä — laatat → kohdemerkit → karttanimet →
+tummennus/eläintäyt/selite → fokusmitat — yksi askel per
+`requestAnimationFrame` (tai `scheduler.postTask`, jos saa nojata
+siihen). Perustelu: 510/617 ms longtaskeista on täsmälleen tässä, ja
+silmä ei ehdi nähdä välitilaa, jos järjestys on tärkeysjärjestys.
+Odotettu hyöty: ~85 ms:n tehtävä pilkkoutuu alle 16 ms:n paloihin →
+sormen irrotessa ei pudotettuja kehyksiä. Riski: hetkellinen
+epäjohdonmukaisuus kerrosten välillä; rajattavissa siihen, että
+mittakaavasta riippuvat kerrokset (kohdemerkit, karttanimet) menevät
+samaan askeleeseen.
 
-Huomionarvoista jatkoa varten: savuke `P5` lupasi otsikossaan panoroida
-sauman yli mutta **ei siirtänyt kameraa lainkaan**, joten se ei voinut
-nähdä vikaa. Se on nyt kirjoitettu uusiksi ja kaatuu korjaamattomalla
-koodilla.
+**2. Yksi asettelunluku eleen lopussa, ja se ENSIN.** `ajaFokusmitat`
+lukee asettelua (`mittaaPerusta`, `kalusteLaatikot`,
+`paivitaNappipaikka`) VASTA sen jälkeen kun `paivitaMaastonimet` on
+kirjoittanut DOMiin — siksi yksi `getBoundingClientRect`
+(`paivitaNappipaikka`) kantaa 206 ms:n laskun koko pakotetusta
+uudelleenasettelusta. Sama resepti kuin `paivitaKehittajaMaailma`
+-metodissa jo on ("KAIKKI ASETTELUNLUVUT ENSIN"): nosta luvut ketjun
+alkuun. Lisäksi `--fokus-nappipaikka` riippuu vain kartuutsin
+tekstistä ja ruudun leveydestä — se voi jäädä väliin, kun kumpikaan ei
+ole muuttunut. Halpa ja lähes riskitön; tekee osan 1:n hyödystä
+näkyväksi heti.
 
-## 5. Poltettujen nostojen mittakaava on maakohtainen — ja siksi väärä
+**3. Näkymärajaus myös elävälle merkkikerrokselle.** `ui.js`
+`paivitaMaailmanRajaus` rajaa vain `.cities`-kerroksen (mitattu
+aikanaan 602 → 90 solmua). Nyt kun mikään ei enää piiloudu eleen
+ajaksi (kohta 1 yllä), sama ikkunarajaus kannattaa ulottaa
+kerroksiin `.fokuskohteet`, `.fokusnosto-symbolit` ja `.elaintakyt`.
+Kompositorin kustannus on lineaarinen NÄKYVISSÄ solmuissa, joten
+hyöty on suoraan verrannollinen ruudun ulkopuolelle jäävään osaan.
+Tämä on eleenaikaisen piilotuksen oikea korvaaja: se ei piilota
+mitään, mitä pelaaja voisi nähdä.
 
-`js/nostoladonta.js`: `nostoladontaSkaala(rajaus) = 2,0 × rajaus.w /
-1600`, ja `rajaus` on MAAN OMAN fokuslehden rajaus
-(`js/packs/fokus-grc.js` FOKUS_POHJAT). Kaava oli oikea silloin, kun
-jokainen lehti katsottiin erikseen ruudulle sovitettuna; yhdellä
-yhteisellä pyramidikartalla se ei ole.
+**4. Pointer-tapahtumien coalescing ja transformin kirjoitus vain
+rAF:ssa.** `pointermove` kirjoittaa `style.transform`in synkronisesti
+joka tapahtumalla. 120 Hz:n iPadilla tapahtumia tulee kehyksiä
+tiheämmin, jolloin sama kehys mitätöidään monta kertaa. Lue
+`e.getCoalescedEvents()`-jonon viimeinen piste ja kirjoita muunnos
+kerran kehyksessä. JS-hyöty on pieni (mitattu ~0,7 ms/kehys), joten
+tämä on vasta 1–3:n jälkeen — mutta se on halpa ja poistaa
+kirjoituksia, joita kukaan ei näe.
 
-Mitattu: `nimiörivi = 5,762·s` ja `symboli = 6,810·s` lautayksikköä,
-1 lautayksikkö = 3,34 km · cos(lat).
+**5. Elävä merkkikerros omalle kompositorikerrokselleen.** Koko SVG on
+yhden `will-change: transform` -kerroksen sisällä (`.kartta-kuori`),
+joten jokainen merkkiin tehty määrekirjoitus rasteroi uudelleen sen
+kerroksen palan — myös laatat. Ensimmäinen halpa askel on nostaa
+merkkikerros omaksi kerroksekseen (oma `will-change` / `translateZ`),
+jolloin pohja pysyy rasteroituna. Tämä on sama suunta kuin Raamatun
+"MERKKIKERROKSEN RASTEROINTI ELEEN AJAKSI", mutta ilman bittikarttaa.
+Mitattava savukkeella ennen ja jälkeen; riski on iOS:n muisti ja se,
+ettei SVG-ryhmän kerrosnosto ole taattu.
 
-| maa | s | nimiö km | nimiö px z3 / z5 / z7 |
-|---|---|---|---|
-| RUS | 7,215 | 58 | 18,7 / 74,8 / **299** |
-| CAN | 4,681 | 36 | 12,1 / 48,5 / 194 |
-| USA | 3,273 | 50 | 8,5 / 33,9 / 136 |
-| JPN | 1,297 | 20 | 3,4 / 13,5 / 54 |
-| FRA | 0,833 | 11 | 2,2 / 8,6 / 35 |
-| GRC | 0,585 | 9 | 1,5 / 6,1 / 24 |
-| mediaani (PRY) | 0,476 | 8 | 1,2 / 4,9 / 20 |
-| SHN | 0,056 | — | — |
+**6. Vanhan laattatason purku vasta levossa.** Laattoja ei kiinnitetä
+kesken eleen (`!kartanRaahaus`), mutta laatan `load` voi laueta kesken
+SEURAAVAN eleen, ja sen käsittelijä ajaa `kaikkiRuudullaLadattu` +
+`poistaVanhaTaso` eli DOM-poistoja sormen alla. Siirrä purku samaan
+lepohetkeen kuin muukin jälkityö. Pieni, turvallinen, poistaa
+satunnaisen nykäyksen jota mittaus ei toista.
 
-134 maata, hajonta **129-kertainen**. Toisinnus vahvistaa: Venäjän
-nostot ovat 500 km:n janalla 24,4 px kun kartan omat paikannimet ovat
-10,5 px; Kreikan samalla janalla 3,0 px. Ero 12-kertainen.
+## Testit ja portit
 
-Korjaus on yksi globaali vakio koko laudalle. Kolme mitattua
-vaihtoehtoa (vertailukohtina laattojen omat painojäljet:
-kaupunkipiste 4,0/5,2 px, pääkaupunkirengas 9,2 px, vuorikolmio
-8–10 px, paikannimi 10,5 px):
+- `node --test tests/*.test.mjs` → **1147 pass, 0 fail** (1 skipped)
+- `node tools/tarkista-kaksoisavaimet.mjs` → ei kaksoisavaimia
+- `node tools/tarkista-niputus.mjs` → 298 moduulia, ei törmäyksiä
+- `node tools/build-standalone.mjs` + `savuke-dist` → `{"peli":true}`,
+  ei virheitä
+- `tools/savuke-kartan-sujuvuus.mjs` → 40/40 (sama ennen ja jälkeen)
+- `tools/savukkeet/savuke-panorointi.mjs` → 11/11
+- `tools/savukkeet/savuke-elaintaky.mjs` → 23/23
+- `tools/savukkeet/savuke-maailmanakyma.mjs` → 18/20. Kaksi kaatuvaa
+  väitettä (3a panoroinnin longtask-summa > 350 ms, 4 nipistys > 750
+  ms) kaatuivat **myös ennen muutosta** tässä kontissa (724–840 ms ja
+  1203–1420 ms) — rajat on viritetty nopeammalle koneelle. Muutos
+  paransi molempia lukuja; rajojen säätö on oma päätöksensä eikä
+  kuulunut tähän toimeksiantoon.
 
-| s | nimiö px z5 / z6 / z7 | luettava kun jana ≈ | GRC / RUS muutos |
-|---|---|---|---|
-| **0,60** | 6,2 / 12,4 / 24,9 | 200 km | ×1,03 / ÷12,0 |
-| **0,48** | 5,0 / 10,0 / 19,9 | 100–200 km | ÷1,22 / ÷15,0 |
-| **0,25** | 2,6 / 5,2 / 10,4 | 50 km | ÷2,34 / ÷28,9 |
+## Mitä EN koskenut
 
-- **0,60 — "Kreikan mitta koko maailmalle".** Ainoa arvo, joka jättää
-  omistajan jo hyväksymät maat (GRC, FIN, ITA, EGY) käytännössä
-  ennalleen ja kutistaa vain jättiläiset. z6:lla nimiö ≈ kartan oma
-  paikannimi. Valituksen näkymissä nimiö olisi 2,0 px (Venäjä 500 km)
-  ja 0,8 px (2000 km) — ongelma katoaa. Haitta: z7:llä 2,4 × kartan
-  oma nimi.
-- **0,48 — mediaanimaa.** Puhtain typografinen osuma z6:lla.
-- **0,25 — syvän tason identiteetti.** z7:llä täsmälleen kartan oman
-  nimen kokoinen, mutta merkit ovat olemassa vain lähikuvassa.
-
-**Rakenteellinen huomio, joka kannattaa kertoa omistajalle:** koska
-nosto on karttavakio, mikään yksittäinen s ei tee siitä luettavaa
-sekä 500 km:n janalla ETTÄ z7:n lähikuvassa. Se on sama syy, jonka
-takia paikannimet siirrettiin laatoista elävään ruutumittaiseen
-kerrokseen. Jos nimiöiden pitää olla luettavia myös kaukaa, ratkaisu
-on siirtää NIMIÖ eläväksi ruutumitaksi (`KOKO.kohde` 10,5 on jo
-olemassa `js/karttanimet.js`:ssä) ja jättää laattaan vain symboli.
-
-**Kertoimen muutos vaatii uuden pyramidiajon** — eli omistajan luvan.
-Hän on ollut tässä nimenomainen: "Aja pyramidit vasta sitten kun saat
-minulta luvan. Kysy siis ensin minulta."
-
-## 6. Omistajan pysyvät ohjeet
-
-- Kompakti sanamuoto chatissa; ei työvaiheiden selostusta.
-- **Kysymyskortti aina**, kun omistajan pitää vastata johonkin.
-- Agenttiparvet sallittuja ja toivottuja aina kun ne nopeuttavat.
-- Älä poista mitään lopullisesti — ota pois vain pelistä, jota
-  pelataan.
-- Pyramidiajo vain luvalla.
-- **Toinen sessio työskentelee samassa työpuussa** ja työstää kuvia.
-  Älä vaihda repon juuren haaraa äläkä siivoa tuntemattomia
-  untracked-tiedostoja; tee julkaisutyö omassa worktreessa.
-- Kontissa `NODE_USE_ENV_PROXY=1`; Chromium `/opt/pw-browsers/chromium`
-  (Playwright konfiguroitu, ÄLÄ aja `playwright install`).
-
-## 7. Muut avoimet asiat
-
-- Punaisia savukkeita mainissa: `savuke-pro-tuottaja` (todennäköisesti
-  aito bugi — `POST /pro-tarkista` onnistuu mutta virheilmoitus ei
-  tule näkyviin), `savuke-nappula` 7b/7c (nappularyhmä 12,73 leveämpi
-  kuin laatta 12,09), `savuke-kehittajalehti`, `savuke-fokusvirta`,
-  `savuke-maailmanakyma` longtask-budjetit (kontin varianssi 2,4×,
-  tarkoituksella löysäämättä).
-- iPhonella 8 vaiennutta merkkiä jäljellä (rakenteellinen).
-- Vuorikolmio voi yhä jäädä kartalle ilman nimeä. Kerroin omistajalle
-  v1386:n yhteydessä; hän ei ole ottanut kantaa.
-- Poltosta jäi ulos 211/624 merkkiä: 7 maata (BGR, BIH, ESP, GBR, ITA,
-  ROU, UKR), joiden täkyjoukko ei ole vakaa, ja 78 monimaista
-  maastokohdetta. Viisi `paikka`-kentän korjausta nostaisi luvun
-  noin 500:aan.
-- Helenan korujen sijoitus on anakronismi (Iliou Melathron 1878–80,
-  paljastus 1873–74; ainoa lähdevarmistettu paikka on Troija).
-- Olympieionin desimaali on ristiriidassa oman kommenttinsa kanssa;
-  Iliou Melathronilla on pelissä kaksi eri koordinaattia.
-- Vanhempia velkoja: aikataulumekaniikan purku, PR #1455:n sulkeminen,
-  Kaljazinin RT-64:n sisältö.
-
-## 8. Oppi, joka kannattaa pitää mielessä
-
-Kolme agenttia ohitti punaisen savukkeen merkinnällä "ennestään rikki,
-ei tästä". Yksittäin oikein, mutta se piilotti aidon pelivian
-puolentoista päivän ajaksi. **Jos sama savuke raportoidaan rikki
-toistamiseen, se tutkitaan.** Ja savukeajon tuloste luetaan loppuun
-asti eikä grepitä — sijaispäätoimittaja päästi kerran
-`ReferenceError`in päähaaraan juuri siksi.
+Nostojen ladonta (`js/fokusniput.js`, `js/nostoladonta.js`),
+reittityyli (`tools/fokuskartta/maailmapiirto.js`), nappulan
+siirtoanimaatio ja kameran seuranta nopanheitossa.
