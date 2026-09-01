@@ -1889,6 +1889,13 @@ const palvelin = createServer((req, res) => {
      * `mapart.js` tulee mukana, koska kirjasto tuo siitä `el`/`maare`
      * elävää varapolkuaan varten.
      */
+    /*
+     * maailmapiirto.js tuo ruutukaton kaavan suoraan pelin
+     * moduulista (v1408 nostoladontaKattoPorras), ja selain pyytaa
+     * sen polusta /js/nostoladonta.js — ilman valkolistariviä pyyntö
+     * sai 404:n ja koko aineiston lataus kaatui (ajo 13, 1.9.2026).
+     */
+    '/js/nostoladonta.js': join(JUURI, 'js', 'nostoladonta.js'),
     '/fokusnosto-symbolit.js': join(JUURI, 'js', 'fokusnosto-symbolit.js'),
     '/mapart.js': join(JUURI, 'js', 'mapart.js'),
     '/korkeus.bin': join(tyokansio, 'korkeus.bin'),
