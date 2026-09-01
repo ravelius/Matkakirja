@@ -16,11 +16,13 @@
  *   2. SAATTAVA KAMERA. Matkan aikana kamera-ajo on käynnissä, kartan
  *      keskipiste siirtyy JA näkymä menee selvästi lähemmäs (omistajan
  *      pelitesti 27.8.2026: *"pitäisi olla ainakin lähempänä jotta
- *      lauta liikkuisi enemmän"*) — ja saattozoomi purkautuu perillä
- *      takaisin lähtökertoimeen.
+ *      lauta liikkuisi enemmän"*). ZOOMI ON OMA VAIHEENSA JA TULEE
+ *      ENSIN, ja kamera jää perillä siihen minne se ajettiin
+ *      (omistajan tilaus 1.9.2026 ilta, ks. 2d ja 2e).
  *   3. ELE VOITTAA. Sormi kartalle kesken matkan pysäyttää saattamisen,
  *      eikä ajo herää uudelleen matkan loppuosalla.
- *   4. MATKAN ÄÄNI. Oma äänilippu on päällä matkan ajan ja laskeutuu
+ *   4. MATKAN ÄÄNI. Oma äänilippu nousee vasta nappulan liikkeen
+ *      kanssa (ei ennakkozoomissa), on päällä matkan ajan ja laskeutuu
  *      viimeisellä askeleella, jotta määränpään maisema saa nousta.
  *   5. MAATAULU. Auki ollessaan se piilottaa Matkusta-napin ja piirtää
  *      alleen sumennuskerroksen; sulkeutuessa nappi palaa ja sumennus
@@ -240,44 +242,73 @@ const matka = await sivu.evaluate(async () => {
     return alkuperainenAjaKamera(kohde, valinnat);
   };
   ui.doMove(avain);
+  /*
+   * NÄYTTEISSÄ ON MUKANA KELLO JA NAPPULAN OLEMASSAOLO (1.9.2026).
+   * Uusi siirtoketju on kaksivaiheinen — ennakkozoomi ensin, nappula
+   * vasta sitten — ja juuri sitä ei voi mitata pelkästä kestosta:
+   * on tiedettävä, MILLOIN liikkuva nappula ilmestyi laudalle ja mikä
+   * zoomikerroin oli jo silloin voimassa.
+   */
   const naytteet = [];
   const kello = setInterval(() => {
     naytteet.push({
+      t: performance.now() - alkuhetki,
       ajossa: ui.kartta.kameraAjossa(),
       aani: Boolean(ui.jalkamatkanAani),
       kerroin: ui.kartta.zoomiKerroin,
       nappula: document.querySelector('.pawn-moving')?.style.transform ?? null,
     });
-  }, 60);
-  while (document.querySelector('.pawn-moving') || performance.now() - alkuhetki < 400) {
-    await new Promise((r) => setTimeout(r, 60));
-    if (performance.now() - alkuhetki > 12000) break;
+  }, 40);
+  /*
+   * ODOTETAAN NAPPULAN ILMESTYMISTÄ JA KATOAMISTA, ei kiinteää
+   * alkuviivettä: siirto alkaa nyt ennakkozoomilla, joten kiinteä
+   * 400 ms lopettaisi mittauksen ennen kuin nappula on edes laudalla.
+   */
+  let nahtiin = false;
+  for (;;) {
+    const laudalla = Boolean(document.querySelector('.pawn-moving'));
+    if (laudalla) nahtiin = true;
+    if (nahtiin && !laudalla) break;
+    if (performance.now() - alkuhetki > 15000) break;
+    await new Promise((r) => setTimeout(r, 40));
   }
   clearInterval(kello);
-  const kesto = performance.now() - alkuhetki;
   const matkanKerroin = Math.max(...naytteet.map((n) => n.kerroin));
-  // Paluuajo lähtee heti viimeisen laskeutumisen jälkeen.
-  await new Promise((r) => setTimeout(r, 300));
+  // Mahdollinen paluuajo lähtisi heti viimeisen laskeutumisen jälkeen.
+  await new Promise((r) => setTimeout(r, 400));
   const loppuNakyma = ui.nakyvaAlue();
   ui.kartta.ajaKamera = alkuperainenAjaKamera;
+  const liikkuvat = naytteet.filter((n) => n.nappula !== null);
+  const ensimmainen = liikkuvat[0];
+  const viimeinen = liikkuvat.at(-1);
   return {
     askeleet: siirto.path.length,
-    kesto: Math.round(kesto),
+    // Nappulan OMA kesto: ennakkozoomi ei kuulu askeltahtiin.
+    kesto: ensimmainen && viimeinen ? Math.round(viimeinen.t - ensimmainen.t) : 0,
+    // Milloin nappula ilmestyi laudalle — eli milloin liike alkoi.
+    liikeAlkoi: ensimmainen ? Math.round(ensimmainen.t) : null,
+    // Zoomikerroin sillä hetkellä kun nappula lähti liikkeelle.
+    kerroinLiikkeenAlussa: ensimmainen ? +ensimmainen.kerroin.toFixed(4) : null,
     aaniPaalla: naytteet.filter((n) => n.aani).length,
+    // Kuului ennen liikettä? Äänen on määrä nousta vasta askelten kanssa.
+    aaniEnnenLiiketta: naytteet.some((n) => n.nappula === null && n.aani),
     aaniLopuksi: Boolean(ui.jalkamatkanAani),
     ajossa: naytteet.filter((n) => n.ajossa).length,
-    nappulapaikkoja: new Set(naytteet.map((n) => n.nappula)).size,
+    nappulapaikkoja: new Set(liikkuvat.map((n) => n.nappula)).size,
     siirtyma: +Math.hypot(
       loppuNakyma.x - alkuNakyma.x, loppuNakyma.y - alkuNakyma.y,
     ).toFixed(1),
     kerroinEnnen: +kerroinEnnen.toFixed(4),
     kerroinMatkalla: +matkanKerroin.toFixed(4),
+    kerroinLopuksi: +ui.kartta.zoomiKerroin.toFixed(4),
     ajot,
-    kerroinEnnenAjo: ajot[0]?.kerroin ? +ajot[0].kerroin.toFixed(4) : null,
-    // Paluu on saattoajon JÄLKEEN pyydetty ajo, jolla on oma kestonsa
-    // (SAATON_PALUU_MS); saapumisen maanvaihdos ajaa rajauslaatikkoon
-    // eikä kertoimeen, joten se erottuu tästä.
-    paluuKerroin: ajot.slice(1).find((a) => a.kerroin)?.kerroin ?? null,
+    // Ennakkozoomi on ENSIMMÄINEN ajo, ja ainoa jolle annetaan kerroin:
+    // saatto panoroi nykyisellä mittakaavalla ja saapumisajot rajaavat
+    // laatikkoon. Kertoimellisten ajojen määrä on siis suoraan vartio
+    // sille, ettei paluuajo ole hiipinyt takaisin.
+    ennakonKerroin: ajot[0]?.kerroin ? +ajot[0].kerroin.toFixed(4) : null,
+    ennakonKesto: ajot[0]?.kesto ?? null,
+    kertoimellisiaAjoja: ajot.filter((a) => a.kerroin).length,
   };
 });
 // Vertailukohta: sama määrä askelia lennon tahdilla (STEP_MS 190).
@@ -305,12 +336,47 @@ vaadi('2b kartta siirtyi uuteen kohteeseen', matka.siirtyma > 5, String(matka.si
 vaadi('2c kamera meni matkan ajaksi lähemmäs',
   matka.kerroinMatkalla > matka.kerroinEnnen * 1.2,
   JSON.stringify([matka.kerroinEnnen, matka.kerroinMatkalla]));
-vaadi('2d saattozoomi purkautui perillä lähtökertoimeen',
-  matka.paluuKerroin !== null
-  && Math.abs(matka.paluuKerroin - matka.kerroinEnnen) < 0.02 * matka.kerroinEnnen,
-  JSON.stringify({ ennen: matka.kerroinEnnen, ajot: matka.ajot }));
+/*
+ * 2d KORVATTU (omistaja 1.9.2026 ilta): ennen tässä vaadittiin, että
+ * saattozoomi PURKAUTUU perillä lähtökertoimeen. Tilaus kääntyi:
+ * *"kartta saisi zoomautua lähemmäksi ensin ja sitten vasta pelaaja
+ * alkaisi liikkua"* — ja kun zoomi on oma, katsottu vaiheensa, sen
+ * kumoaminen heti perillä on nykäisy eikä palautus. Kamera jää siis
+ * sinne minne se ajettiin; kylläytymisen estää siirtozoomin
+ * absoluuttinen katto (js/kartta.js siirtoZoomiKerroin), ei paluuajo.
+ */
+vaadi('2d kamera EI palaa perillä lähtökertoimeen',
+  matka.kertoimellisiaAjoja === 1
+  && matka.kerroinLopuksi > matka.kerroinEnnen * 1.2,
+  JSON.stringify({
+    ennen: matka.kerroinEnnen, lopuksi: matka.kerroinLopuksi, ajot: matka.ajot,
+  }));
+/*
+ * 2e ZOOMI ENSIN, NAPPULA VASTA SITTEN — tilauksen ydin. Liikkuva
+ * nappula (.pawn-moving) ilmestyy laudalle vasta ennakkoajon jälkeen,
+ * ja sillä hetkellä zoomikerroin on jo ennakon tavoitteessa. Kaksi
+ * erillistä mittausta, koska yksinään kumpikin voi valehdella:
+ * pelkkä viive voisi tulla mistä tahansa odotuksesta, ja pelkkä
+ * kerroin olisi voimassa myös vanhassa yhtaikaisessa toteutuksessa.
+ */
+vaadi('2e ennakkozoomi ajettiin ennen nappulan liikettä',
+  matka.ennakonKerroin !== null
+  && matka.ennakonKerroin > matka.kerroinEnnen * 1.2
+  && matka.liikeAlkoi >= matka.ennakonKesto * 0.7
+  && matka.kerroinLiikkeenAlussa >= matka.ennakonKerroin * 0.98,
+  JSON.stringify({
+    ennakonKerroin: matka.ennakonKerroin,
+    ennakonKesto: matka.ennakonKesto,
+    liikeAlkoi: matka.liikeAlkoi,
+    kerroinLiikkeenAlussa: matka.kerroinLiikkeenAlussa,
+    kerroinEnnen: matka.kerroinEnnen,
+  }));
 vaadi('4a matkan äänilippu oli päällä matkan ajan', matka.aaniPaalla > 3, String(matka.aaniPaalla));
 vaadi('4b äänilippu laski ennen saapumista', matka.aaniLopuksi === false);
+// Ääni kuuluu nappulan liikkeeseen eikä zoomaukseen: ennakkozoomin
+// aikana soi yhä lähtökaupungin oma maisema (js/ui.js animatePawnSisalla).
+vaadi('4c matkan ääni ei alkanut jo ennakkozoomin aikana',
+  matka.aaniEnnenLiiketta === false, JSON.stringify(matka.aaniEnnenLiiketta));
 
 /* --- 3. ele keskeyttää saattamisen -------------------------------- */
 await sivu.waitForFunction(() => !window.matkakirja.ui.busy, null, { timeout: 20000 });
@@ -329,7 +395,17 @@ const keskeytys = await sivu.evaluate(async () => {
     .sort((a, b) => b[1].path.length - a[1].path.length)[0];
   ui.mannerZoom = true;
   ui.doMove(avain);
-  await new Promise((r) => setTimeout(r, 400));
+  /*
+   * ELE VASTA KUN NAPPULA ON LIIKKEELLÄ (1.9.2026). Ennen tässä
+   * odotettiin kiinteät 400 ms, mutta siirto alkaa nyt ennakkozoomilla
+   * (js/ui.js ENNAKKOZOOMIN_MS) eikä nappula ole silloin vielä
+   * laudalla — vartio 3b mittaisi tyhjää. Odotetaan siis liikkuvaa
+   * nappulaa ja annetaan matkan päästä alkuun.
+   */
+  for (let i = 0; i < 60 && !document.querySelector('.pawn-moving'); i++) {
+    await new Promise((r) => setTimeout(r, 50));
+  }
+  await new Promise((r) => setTimeout(r, 300));
   const ennen = ui.kartta.kameraAjossa();
   const nakymaEnnen = ui.nakyvaAlue();
   const pane = ui.mapPane;

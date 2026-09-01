@@ -377,11 +377,50 @@ const HYPYN_KORKEUS_MAX = 30;
  * 640 ms on se aika, jossa silmä ehtii seurata yhden hypyn kaaren
  * alusta loppuun ja liike lukee käden siirroksi eikä lentoradaksi.
  *
- * Kuuden askeleen täysi heitto kestää nyt 6 × 640 + 5 × 190 ≈ 4,8 s
- * (ennen 1,9 s), ja juuri se on se matka, jonka ajan saattava kamera
- * ehtii ajaa lähemmäs, kuljettaa laudan uuteen kohteeseen ja palata.
+ * VIELÄ HITAAMPI, MUTTA PORRASTETTUNA (omistajan tilaus 1.9.2026 ilta:
+ * *"pelaajan nappulat saisi edetä vähän hitaammin"*).
+ *
+ * 640 → 860 ms eli 1,34×. "Vähän hitaammin" on tässä juuri se ero,
+ * jonka silmä lukee rauhallisuudeksi eikä hitaudeksi: kaari nousee ja
+ * laskee näkyvästi omassa ajassaan, mutta askel ei ala tuntua
+ * pysähdykseltä. Tauko (HYPYN_TAUKO_MS) pysyy ennallaan — se on
+ * käden hengähdys, ei vauhdin säädin.
+ *
+ * PORRASTUS ON PAKKO OLLA. Kuutosella hyppyjä on kuusi, ja pelkkä
+ * kertoiminen tekisi matkasta 6 × 860 + 5 × 190 ≈ 6,1 s odottelua —
+ * ja sen PÄÄLLE tulee vielä ennakkozoomi (ENNAKKOZOOMIN_MS). Siksi
+ * askel lyhenee sitä mukaa kuin heitto pitenee: matkan hyppyihin ja
+ * taukoihin varataan enintään JALKAMATKAN_KATTO_MS, ja pitkän heiton
+ * askel kutistuu kattoon mahtuvaksi.
+ *
+ * ALARAJA ON VANHA ASKEL. Kutistus ei koskaan vie nopeammaksi kuin
+ * ennen tätä muutosta (JALKAMATKAN_STEP_LYHIN_MS = 640), joten myös
+ * pisin heitto on omistajan mittapuulla hitaampi kuin v1400-sarjan
+ * peli — ei nopeampi. Käytännön luvut (tauko 190 ms):
+ *
+ *   1 askel  860 ms → matka 0,9 s
+ *   3 askelta 860 ms → matka 3,0 s
+ *   5 askelta 860 ms → matka 5,1 s
+ *   6 askelta 708 ms → matka 5,2 s   (katto puree vasta tässä)
  */
-const JALKAMATKAN_STEP_MS = 640;
+const JALKAMATKAN_STEP_MS = 860;
+const JALKAMATKAN_STEP_LYHIN_MS = 640;
+const JALKAMATKAN_KATTO_MS = 5200;
+
+/**
+ * Yhden hypyn lentoaika jalkamatkalla, kun matkassa on `askelia` hyppyä.
+ *
+ * Puhdas funktio ja tarkoituksella oma nimensä: tämä on se yksi paikka,
+ * jossa askeltahdin porrastus lasketaan (ks. JALKAMATKAN_STEP_MS), ja
+ * tests/siirtoajoitus.test.mjs vartioi sitä lukuina eikä lähdetekstinä.
+ */
+export function jalkamatkanAskel(askelia) {
+  const n = Math.max(1, Math.round(askelia || 1));
+  // Taukoja on yksi vähemmän kuin hyppyjä; katto koskee koko matkaa.
+  const varattu = JALKAMATKAN_KATTO_MS - (n - 1) * HYPYN_TAUKO_MS;
+  const mahtuva = varattu / n;
+  return Math.round(Math.max(JALKAMATKAN_STEP_LYHIN_MS, Math.min(JALKAMATKAN_STEP_MS, mahtuva)));
+}
 /*
  * SAATTAVA KAMERA (omistajan tilaus #96: *"Kartta voisi samalla myös
  * hitaasti siirtyä uuteen kohteeseen ja paljastaa sitä näkyviin sitä
@@ -405,30 +444,76 @@ const JALKAMATKAN_STEP_MS = 640;
  * seuraamisena. Lähikuvassa sama matka on ruudullinen liikettä, ja
  * juuri se on "kartta siirtyy uuteen kohteeseen".
  *
- * SAATTOZOOMI on kerroin nykyiseen zoomiin: 1,7× vie kartan selvästi
- * lähemmäs mutta ei niin lähelle, että pelaaja kadottaisi paikkansa.
- * Katon hoitaa kamera-ajo itse (kartta.zoomiRajat), joten valmiiksi
- * lähellä oleva näkymä ei kiristy yli portaikon.
+ * === ZOOMI ENSIN, VASTA SITTEN NAPPULA (omistajan tilaus 1.9.2026
+ * ilta: *"kartta saisi zoomautua lähemmäksi ensin ja sitten vasta
+ * pelaaja alkaisi liikkua"*) =======================================
  *
- * JA PALAA. Perillä kamera ajaa takaisin siihen kertoimeen, josta
- * matka alkoi — nopeammin kuin meno, koska paluu ei ole kohtaus vaan
- * asennon palautus. Uuteen MAAHAN saavuttaessa fokuskartan oma ajo
- * ehtii ensin ja korvaa paluun; se on oikein, koska maanvaihdoksen
- * rajaus on tarkempi kuin vanha kerroin.
+ * Vanha ketju teki molemmat yhtä aikaa: yksi ajo, joka sekä zoomasi
+ * että siirsi keskipisteen, ja nappula lähti samalla kehyksellä.
+ * Silloin zoomi kilpaili nappulan kanssa katseesta eikä kumpikaan
+ * lukenut selvästi. Nyt siirto on KAKSI PERÄKKÄISTÄ VAIHETTA:
+ *
+ *   1. ENNAKKOZOOMI (ennakoiSiirtoZoomi). Kamera ajaa lähemmäs
+ *      nappulan ja reitin ensimmäisten askelten ympärille. Ajoa
+ *      ODOTETAAN — nappulaa ei edes poimita laudalta ennen kuin zoomi
+ *      on perillä, ja perään jää lyhyt hengähdys, jotta vaiheet
+ *      erottuvat toisistaan eivätkä sula yhdeksi liikkeeksi.
+ *   2. SAATTO (aloitaSaattavaKamera). Kamera liukuu määränpäähän
+ *      nappulan tahdissa PITÄEN ennakkozoomin mittakaavan. Tämä on se
+ *      vanha tilaus #96 sellaisenaan: uutta maastoa tulee näkyviin
+ *      ruudun reunasta sitä mukaa kuin nappula etenee.
+ *
+ * SIIRTOZOOMIN MÄÄRÄ on kerroin nykyiseen zoomiin: 1,7× (portaikon
+ * askel on 1,5, joten tämä on runsas yksi porras ja alle kahden). Ylä-
+ * rajat hoitaa kartta.siirtoZoomiKerroin — se ei mene lähemmäs kuin
+ * pelaajan sallittu lähin porras EIKÄ lähemmäs kuin siirtonäkymän oma
+ * katto, eikä se koskaan zoomaa ULOS pelaajan omasta lähikuvasta.
+ *
+ * EI PALUUTA — KAMERA JÄÄ SINNE (sama tilaus). Aiemmin perillä ajettiin
+ * takaisin lähtökertoimeen (SAATON_PALUU_MS 900), ja sille oli yksi
+ * oikea syy: saattozoomi oli SUHTEELLINEN, joten ilman paluuta jokainen
+ * heitto olisi kertonut zoomin uudelleen 1,7:llä ja kolmen siirron
+ * jälkeen kartta olisi ollut portaikon pohjassa. Syy poistui, kun
+ * katosta tuli absoluuttinen (kartta.siirtoZoomiKerroin): tavoite
+ * kylläänty muutamassa siirrossa siirtonäkymän kattoon eikä nouse siitä
+ * enää, joten kamera saa jäädä sinne minne se ajettiin. Samalla katosi
+ * se nykäisy, jossa juuri katsottu lähikuva loittoni heti perillä.
  *
  * Pehmennys on smoothstep eikä kamera-ajon oma kuutiokäyrä: kuutio
  * seisoo lähes paikallaan matkan ensimmäisen neljänneksen, ja kamera
  * jäisi jälkeen ja kirisi lopussa. Smoothstep lähtee ja pysähtyy
- * pehmeästi mutta kulkee välillä lähes nappulan tahtia.
+ * pehmeästi mutta kulkee välillä lähes nappulan tahtia. Ennakkozoomi
+ * käyttää kamera-ajon omaa kuutiokäyrää: se on kohtaus eikä seuranta,
+ * ja Raamatun KAMERA-AJOT-linjaus haluaa siihen kiihdytyksen ja
+ * jarrutuksen.
  *
  * ELE VOITTAA: ajon keskeyttää sormi kartalla, nipistys, rulla tai
  * zoomipainike (kartta.pysaytaKameraAjo), ja kartta jää siihen mihin
  * ajo ehti. Sitä ei yritetä jatkaa — pelaajan oma ele on viimeinen
- * sana kartan paikasta, eikä keskeytetty matka aja paluutakaan.
+ * sana kartan paikasta. Keskeytetty ennakkozoomi ei myöskään estä
+ * nappulaa lähtemästä: matka jatkuu siitä näkymästä, jonka pelaaja
+ * itse valitsi.
  */
 const SAATON_PEHMENNYS = (t) => t * t * (3 - 2 * t);
-const SAATON_LAHENNYS = 1.7;
-const SAATON_PALUU_MS = 900;
+const SIIRTOZOOMIN_LAHENNYS = 1.7;
+/*
+ * Ennakkozoomin kesto ja sen jälkeinen hengähdys.
+ *
+ * 760 ms on lyhyempi kuin kartan muut ajot (kartta.js AJO_MS 2000,
+ * saapuminen): tämä toistuu joka heitolla, joten se saa olla ripeä
+ * ele eikä kohtaus. Hengähdys on tarkoituksellisen lyhyt — se erottaa
+ * vaiheet toisistaan (*"ja sitten vasta pelaaja alkaisi liikkua"*)
+ * ilman että peli tuntuu jumittuvan.
+ */
+const ENNAKKOZOOMIN_MS = 760;
+const ENNAKON_HENGAHDYS_MS = 120;
+/*
+ * Montako reitin ensimmäistä askelta ennakkozoomi ottaa rajaukseensa
+ * nappulan lisäksi. Kaksi askelta kertoo katsojalle SUUNNAN — mihin
+ * päin nappula on lähdössä — mutta ei vielä vedä kameraa määränpäähän,
+ * joka on saaton oma tehtävä.
+ */
+const ENNAKON_ASKELIA = 2;
 /*
  * Alle tämän jäävää siirtoa ei ajeta lainkaan: kohde on jo käytännössä
  * ruudun keskellä, ja pikkuliike näyttäisi vain siltä että kartta
@@ -16734,10 +16819,16 @@ export class UI {
      * milloin null, milloin seuraavan vuoron tapa.
      */
     const maitse = game.travelMode === 'land';
+    /*
+     * ASKELTAHTI PORRASTETAAN HEITON PITUUDEN MUKAAN (omistaja
+     * 1.9.2026 ilta: *"pelaajan nappulat saisi edetä vähän
+     * hitaammin"*). Yhden askeleen matka saa täyden rauhan, kuutonen
+     * kutistuu kattoon mahtuvaksi — kaava ja luvut jalkamatkanAskelissa.
+     */
     this.run(() => game.actionMove(key), {
       after: () => this.animatePawn(
         player, from, path,
-        maitse ? JALKAMATKAN_STEP_MS : STEP_MS,
+        maitse ? jalkamatkanAskel(path.length) : STEP_MS,
         { saatto: true, maitse },
       ),
     });
@@ -18196,6 +18287,50 @@ export class UI {
   }
 
   /**
+   * ENNAKKOZOOMI: kamera lähemmäs ENNEN kuin nappula lähtee liikkeelle
+   * (omistajan tilaus 1.9.2026 ilta: *"kartta saisi zoomautua
+   * lähemmäksi ensin ja sitten vasta pelaaja alkaisi liikkua"*).
+   *
+   * Palauttaa lupauksen, jota siirto ODOTTAA. Tämä on koko tilauksen
+   * ydin: nappulaa ei poimita laudalta ennen kuin ajo on perillä.
+   *
+   * KOLME EHTOA, samat kuin saatolla. (1) Liikeherkkyys ohittaa: silloin
+   * nappulakaan ei liiku vaan hyppää perille, eikä zoomausta ole.
+   * (2) Kartan on jo oltava LÄHIKUVASSA — yleiskuvasta ajo pakottaisi
+   * mannerZoomin päälle laudalla, jolla saapumiszoomia ei ajeta
+   * lainkaan (kartta.mannerZoomTarpeen), ja veisi liikeherkän pelaajan
+   * näkymän pois hänen tahtomattaan. (3) Kohteen on oltava tiedossa.
+   *
+   * RAJAUS ON NAPPULA JA REITIN ALKU, ei määränpää: keskipisteeksi
+   * otetaan lähtöruudun ja ENNAKON_ASKELIA:n päässä olevan askeleen
+   * puoliväli. Näin ruudulla on lähtiessä sekä nappula että se suunta,
+   * johon se on menossa — määränpään hakeminen on saaton työtä, ja jos
+   * ennakko tekisi senkin, koko matka olisi ohi ennen ensimmäistä
+   * hyppyä.
+   *
+   * HENGÄHDYS PERÄÄN. Ilman sitä zoomin pysähdys ja ensimmäinen hyppy
+   * osuisivat samaan kehykseen ja lukisivat yhtenä liikkeenä; tilaus
+   * on nimenomaan kaksi peräkkäistä tapahtumaa.
+   */
+  async ennakoiSiirtoZoomi(from, path) {
+    if (this.reducedMotion || this.dead) return;
+    const kartta = this.kartta;
+    if (!kartta?.ajaKamera || !this.mannerZoom) return;
+    const board = this.game.board;
+    const lahto = pixelOf(board, from);
+    // Askel, joka kertoo suunnan: ENNAKON_ASKELIA:s tai lyhyellä
+    // matkalla viimeinen. Yhden askeleen matkalla tämä on määränpää.
+    const suunta = path[Math.min(ENNAKON_ASKELIA, path.length) - 1];
+    if (!lahto || !suunta) return;
+    const kohti = pixelOf(board, suunta);
+    const kohta = { x: (lahto.x + kohti.x) / 2, y: (lahto.y + kohti.y) / 2 };
+    const kerroin = kartta.siirtoZoomiKerroin(SIIRTOZOOMIN_LAHENNYS);
+    await kartta.ajaKamera({ x: kohta.x, y: kohta.y, kerroin }, { kesto: ENNAKKOZOOMIN_MS });
+    if (this.dead) return;
+    await this.wait(ENNAKON_HENGAHDYS_MS);
+  }
+
+  /**
    * Käynnistää saattavan kamera-ajon matkan ajaksi (#96).
    *
    * KOLME EHTOA. (1) Liikeherkkyys ohittaa: silloin nappulakaan ei
@@ -18206,14 +18341,18 @@ export class UI {
    *
    * KOHDE ON MATKAN PÄÄTEPISTE eikä kaupungin muotolaatikko: kerrointa
    * ei anneta, joten kamera pitää nykyisen mittakaavansa ja pelkkä
-   * keskipiste siirtyy. Näin nappulan käänteisskaalaus (kerroin
-   * animatePawnSisalla) pysyy voimassa koko matkan ajan.
+   * keskipiste siirtyy. MITTAKAAVAN ON ASETTANUT ENNAKKOZOOMI, joka
+   * ajettiin juuri ennen tätä — saatto ei enää zoomaa itse, koska
+   * kaksi mittakaavaa samassa ajossa on täsmälleen se sekamelska,
+   * jonka omistaja pyysi purkamaan. Näin myös nappulan
+   * käänteisskaalaus (kerroin animatePawnSisalla) pysyy voimassa koko
+   * matkan ajan.
    *
    * Lupausta ei odoteta: ajo saa jäädä pyörimään saapumisen yli, ja
-   * ele saa keskeyttää sen milloin tahansa.
+   * ele saa keskeyttää sen milloin tahansa. Perillä kamera JÄÄ SIIHEN
+   * (ks. osion johdanto: paluuajo poistettiin 1.9.2026).
    */
   aloitaSaattavaKamera(path, kesto) {
-    this.saatonPaluuKerroin = null;
     if (this.reducedMotion || this.dead) return;
     const kartta = this.kartta;
     if (!kartta?.ajaKamera || !this.mannerZoom) return;
@@ -18223,65 +18362,17 @@ export class UI {
     const nyt = kartta.kameranTila?.();
     if (!nyt) return;
     /*
-     * LÄHEMMÄS ON EHTO, EI KORISTE. Ajo tehdään myös silloin kun matka
-     * on ruudulla lyhyt, koska zoomi yksinään liikuttaa lautaa —
-     * SAATON_VAHIN_PX torjuu vain sen tapauksen, jossa EIKÄ kohde siirry
-     * EIKÄ mittakaava muutu (kamera on jo lähikuvan katossa kohteen
-     * päällä).
+     * SIIRTYMÄ ON NYT AINOA EHTO. Ennen tässä katsottiin myös, meneekö
+     * ajo lähemmäs — koska saatto zoomasi itse. Nyt zoomin on hoitanut
+     * ennakko, joten jäljellä on pelkkä panorointi: jos määränpää on jo
+     * käytännössä ruudun keskellä, ajo näyttäisi vain siltä että kartta
+     * värähtää nappulan lähtiessä.
      */
-    const lahtoKerroin = kartta.zoomiKerroin;
-    const kerroin = lahtoKerroin * SAATON_LAHENNYS;
     const matka = Math.hypot(kohta.x - nyt.x, kohta.y - nyt.y) * nyt.skaala;
-    const lahenee = kartta.kameranKohde?.(
-      { x: kohta.x, y: kohta.y, kerroin },
-      this.mapPane?.clientWidth ?? 0,
-      this.mapPane?.clientHeight ?? 0,
-    );
-    const zoomaa = lahenee ? Math.abs(lahenee.kerroin / lahtoKerroin - 1) > 0.02 : false;
-    if (!(matka > SAATON_VAHIN_PX) && !zoomaa) return;
-    /*
-     * Paluu tarvitsee kaksi asiaa, ja molemmat katoavat matkan aikana:
-     * LÄHTÖKERTOIMEN (ajo kirjoittaa zoomiVapaan uuteen arvoonsa) ja
-     * tiedon siitä, PÄÄSIKÖ AJO PERILLE — lupaus ratkeaa arvolla false,
-     * jos ele keskeytti sen.
-     */
-    this.saatonPaluuKerroin = lahtoKerroin;
-    this.saatonAjo = kartta.ajaKamera(
-      { x: kohta.x, y: kohta.y, kerroin },
+    if (!(matka > SAATON_VAHIN_PX)) return;
+    void kartta.ajaKamera(
+      { x: kohta.x, y: kohta.y },
       { kesto, pehmennys: SAATON_PEHMENNYS },
-    );
-  }
-
-  /**
-   * Saattozoomi purkautuu perillä (#96 + omistajan pelitesti
-   * 27.8.2026): kamera palaa siihen kertoimeen, josta matka alkoi, ja
-   * jää nappulan kohdalle.
-   *
-   * EI AJETA, JOS SAATTO KESKEYTYI. Keskeytys tarkoittaa, että pelaaja
-   * otti kartan omaan käteensä (kartta.pysaytaKameraAjo kirjaa
-   * välivaiheen oikeaksi kameratilaksi) — silloin paluu olisi toinen
-   * ohjastus samaan karttaan ja veisi sen pois siitä kohdasta, jonka
-   * pelaaja juuri valitsi.
-   *
-   * Lupausta ei odoteta: saapumisen kortit, kuplat ja mahdollinen
-   * maanvaihdoksen oma ajo saavat alkaa heti.
-   */
-  async puraSaattavaKamera(path) {
-    const kerroin = this.saatonPaluuKerroin;
-    const ajo = this.saatonAjo;
-    this.saatonPaluuKerroin = null;
-    this.saatonAjo = null;
-    if (!kerroin || !ajo || this.reducedMotion || this.dead) return;
-    // Menoajon lupaus on tässä kohtaa jo ratkennut (kesto = matkan
-    // kesto); false tarkoittaa, että ele keskeytti sen.
-    const perille = await ajo;
-    if (!perille || this.dead || !this.kartta?.ajaKamera) return;
-    const maali = path[path.length - 1];
-    if (!maali) return;
-    const kohta = pixelOf(this.game.board, maali);
-    void this.kartta.ajaKamera(
-      { x: kohta.x, y: kohta.y, kerroin },
-      { kesto: SAATON_PALUU_MS },
     );
   }
 
@@ -18364,6 +18455,23 @@ export class UI {
   async animatePawnSisalla(player, from, path, stepMs = STEP_MS, { saatto = false, maitse = false } = {}) {
     if (!path || path.length === 0) return;
     const { board } = this.game;
+
+    /*
+     * === 1. ENNAKKOZOOMI, JA VASTA SITTEN NAPPULA ==================
+     *
+     * Omistajan tilaus 1.9.2026 ilta: *"kartta saisi zoomautua
+     * lähemmäksi ensin ja sitten vasta pelaaja alkaisi liikkua."*
+     *
+     * Ajoa ODOTETAAN, ja se tehdään ENNEN kuin nappula poimitaan
+     * laudalta. Järjestys on tarkka: `movingPlayerId` piilottaa
+     * paikallaan olevan nappulan ja korvaa sen liikkuvalla kopiolla,
+     * ja jos se tehtäisiin ensin, nappula katoaisi kartalta koko
+     * zoomauksen ajaksi. Nyt zoomin ajan ruudulla on tavallinen
+     * nappula, joka skaalautuu kartan mukana kuten aina.
+     */
+    if (saatto) await this.ennakoiSiirtoZoomi(from, path);
+    if (this.dead) return;
+
     this.movingPlayerId = player.id;
     this.drawPawns();
     const g = this.pawnShape(this.pawnLayer, player, false);
@@ -18372,16 +18480,23 @@ export class UI {
     const varjo = g.querySelector('.pawn-varjo');
 
     /*
-     * MATKAN LISÄT LAUDALLA (#96) ENNEN MITOITUSTA. Kesto lasketaan
-     * tässä, koska sekä kamera että ääni tarvitsevat saman luvun:
-     * hyppyjä on path.length ja taukoja yksi vähemmän.
+     * === 2. MATKAN LISÄT LAUDALLA (#96) ENNEN MITOITUSTA ===========
+     *
+     * Kesto lasketaan tässä, koska sekä kamera että ääni tarvitsevat
+     * saman luvun: hyppyjä on path.length ja taukoja yksi vähemmän.
      *
      * JÄRJESTYS ON OLEELLINEN. Saattoajo vie näkymän lopulliseen
-     * mittakaavaansa heti (kartta.ajaKamera → fitViewBox) ja piirtää
+     * rajaukseensa heti (kartta.ajaKamera → fitViewBox) ja piirtää
      * matkan sen päälle kuoren muunnoksena. Nappulan käänteisskaalaus
      * on siis luettava VASTA ajon jälkeen — muuten se olisi lähtötilan
      * mittakaavasta ja nappula jäisi perillä väärän kokoiseksi siihen
      * asti, kunnes seuraava piirto korjaa sen.
+     *
+     * ÄÄNI KUULUU NAPPULAN LIIKKEESEEN, EI ZOOMAUKSEEN. Jalkamatkan
+     * äänimaisema nousee vasta tässä — ennakkozoomin aikana kuuluu
+     * yhä lähtökaupungin oma maisema, koska matka ei ole vielä
+     * alkanut. Sama sääntö kuin määränpään ambienssilla, joka lähtee
+     * nousemaan viimeisellä askeleella eikä siirron lopussa.
      */
     if (saatto) {
       const kokonaiskesto = path.length * stepMs
@@ -18401,8 +18516,8 @@ export class UI {
      * paikka on TYYLISSÄ (hyppy kirjoittaa sen joka kehyksellä), ja
      * tyyli voittaa transform-määreen — fokusnäkymän käänteisskaalaus
      * on siksi kirjoitettava tähän samaan merkkijonoon eikä
-     * paivitaFokusMerkkiMitatiin. Kerroin luetaan kerran, saattoajon
-     * asettamasta lopullisesta mittakaavasta (ks. yllä).
+     * paivitaFokusMerkkiMitatiin. Kerroin luetaan kerran, ennakko- ja
+     * saattoajon asettamasta lopullisesta mittakaavasta (ks. yllä).
      */
     const kerroin = this.fokusNappulaKerroin();
     const koko = Math.abs(kerroin - 1) < 0.0005 ? '' : ` scale(${kerroin.toFixed(4)})`;
@@ -18459,9 +18574,14 @@ export class UI {
      * edellisen heiton noppa on tehnyt tehtävänsä.
      */
     if (path[path.length - 1]?.type === 'city') this.piilotaNoppa();
-    // Saattozoomi auki: kamera palaa lähtökertoimeensa nappulan
-    // kohdalle (ei odoteta — saapuminen saa jatkua sen päällä).
-    if (saatto) await this.puraSaattavaKamera(path);
+    /*
+     * KAMERA JÄÄ SINNE MINNE SE AJETTIIN (omistaja 1.9.2026 ilta).
+     * Tässä oli ennen paluuajo lähtökertoimeen (puraSaattavaKamera);
+     * se poistettiin, kun siirtozoomille tuli absoluuttinen katto —
+     * perustelu kokonaisuudessaan osiossa SAATTAVA KAMERA. Uuteen
+     * MAAHAN saavuttaessa fokuskartan oma ajo rajaa näkymän kuten
+     * ennenkin, joten maanvaihdos ei jää siirtozoomin varaan.
+     */
   }
 
   /** Nopanheitto: noppa lentää nappulan vierestä laudalle ja jää siihen. */
