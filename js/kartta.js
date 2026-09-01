@@ -3008,289 +3008,78 @@ export class Kartta {
     let liikkui = false;
 
     /*
-     * --- MERKKIKERROKSET PIILOON ELEEN AJAKSI ------------------------
+     * --- KAIKKI ELÄVÄT ELEMENTIT PYSYVÄT NÄKYVISSÄ KOKO ELEEN AJAN ---
      *
-     * v1277 vei nipistyksen SKRIPTIajan alas 58 %, ja jäljelle jäi se,
-     * mitä profiili kutsuu layerize-kustannukseksi: kartan CSS-muunnos
-     * pakottaa selaimen jakamaan koko SVG:n uudestaan maalipaloihin
-     * joka kehyksellä, ja merkkikerrokset ovat siinä kalleimmat —
-     * kymmeniä pieniä ryhmiä, joilla kullakin on oma muunnos, ympyrät,
-     * glyyfit ja nimiöt. Kartta itse on yksi iso kuva, merkit ovat
-     * kymmeniä pieniä. Omistajan ennakkomittaus: merkkiryhmien
-     * piilotus `display: none`-tyylillä eleen ajaksi pudottaa paintin
-     * noin 22-kertaisesti.
+     * Omistajan linjaus 1.9.2026 ilta, sanatarkasti: *"kaikki elementit
+     * pitää pysyä päällä kun karttaa liikutetaan tai zoomataan vaikka
+     * niitä ei olisi poltettu."*
      *
-     * DISPLAY, EI OPACITY tai visibility — ITSE PIILONA. Vain
-     * `display: none` ottaa solmut pois maalikierroksesta kokonaan;
-     * läpinäkyväkin kerros pilkotaan ja maalataan. (Nimikerroksen
-     * häivytys eleen alussa on siirtymä piiloon eikä piilo, ks. alempi
-     * osio "PIILO ON HÄIVYTYS, EI KATOAMINEN".) Sama keino on jo
-     * käytössä samoilla kerroksilla toisesta syystä (js/fokuskohteet.js
-     * .fokuskohteet-piilossa yleiskuvassa), joten paluu on koeteltu:
-     * merkit ovat SVG-ryhmiä, joiden paikka on muunnosmääreessä eikä
-     * asettelussa — piilotus ei siirrä mitään, ja esiin tullessaan
-     * jokainen on pikselilleen siinä missä oli.
+     * KUMOAA ELEENAIKAISEN PIILOTUKSEN KOKONAAN. Tässä oli 31.8.2026
+     * asti pari `piilotaMerkit` / `naytaMerkit`, runkoluokat
+     * `kartta-merkit-haipyy` ja `kartta-merkit-piilossa` (css/styles.css
+     * samanniminen lohko) sekä niiden paluupolut ui.js:n jumivahdissa ja
+     * destroyssa. Se oli edellisen linjauksen — *"Kaikki elementit mitä
+     * ei ole poltettu pitää poistua näkyvistä kun karttaa zoomataan"* —
+     * toteutus. Uusi linjaus on sen vastakohta, joten mekanismia ei
+     * hienosäädetä vaan se on purettu.
      *
-     * ENNAKKOTAPAUS on asteikkojen entinen käytös (js/fokusmitat.js):
-     * mitta, joka ei voi olla oikeassa liikkeen aikana, väistyy eleen
-     * ajaksi ja palaa pienen levon jälkeen. Merkeillä syy on toinen —
-     * ne OVAT oikeassa, mutta maksavat liikaa — mutta oppi sama.
+     * MIKSI KOKO MEKANISMI POIS EIKÄ VAKIO NOLLAKSI. Piilotus ei ollut
+     * yksi luokanvaihto vaan tilakone: paluuviive, uusi yritys niin
+     * kauan kuin runko kantaa liikeluokkaa, katto sille odottelulle,
+     * häivytyksen oma ajastin ja sen varareitti taustavälilehdelle,
+     * kehysvaraus peittävyyden nostoon, lippukenttä `merkitPiilossa` ja
+     * kaksi ulkopuolista siivouspolkua. Kuollut tilakone olisi jäänyt
+     * lukijalle arvoitukseksi ja jumivahdille turhaksi haaraksi, joten
+     * mitään siitä ei jätetty roikkumaan. Jos piilotus joskus palaa, se
+     * palaa mittausten kanssa uudelleen kirjoitettuna — ei
+     * kommentoituna.
      *
-     * KAKSI KYNNYSTÄ, ETTEI RÄPSY. Napautus ja mikroliike eivät saa
-     * vilauttaa merkkejä pois:
-     *   - panoroinnissa piilotus on saman 6 pikselin kynnyksen takana,
-     *     joka muutenkin erottaa napautuksen raahauksesta (liikkui)
-     *   - nipistyksessä kahden sormen kosketus ei vielä riitä, vaan
-     *     mittakaavan on oikeasti muututtava (MERKKIPIILON_KYNNYS)
+     * MITATTU ENNEN JA JÄLKEEN — JA PURKU ON MYÖS NOPEAMPI
+     * (tools/savukkeet/savuke-maailmanakyma.mjs, Chromium 390x844 dpr3,
+     * kehittäjän maailmanäkymä Kreikan lähikuvassa; se on RASKAIN
+     * mahdollinen tapaus, koska maailmanäkymä ohittaa käymättömien
+     * maiden piilotuksen. Kuusi pyyhkäisyä ja neljä nipistystä per ajo,
+     * longtaskien summa per ajo):
      *
-     * PALUU ON VIIVEEN TAKANA (MERKKIEN_PALUU_MS) samasta syystä kuin
-     * asteikoilla: eleen loppuun kuuluu vielä liuku, fitViewBox ja
-     * bittikartan täydennys, eikä merkkejä kannata maalata takaisin
-     * kesken sen. Uusi kosketus kuitenkin tuo ne heti (ks.
-     * pointerdown): merkki on napautuskohde, ja osumatesti — sekä
-     * selaimen oma että moduulin ruutulaatikkovertailu
-     * (js/fokuskohteet.js lahinKohde) — vaatii näkyvän solmun.
+     *   piilotus päällä (3 ajoa)
+     *     panorointi   724 / 840 / 767 ms                (med. 767)
+     *     nipistys    1203 / 1412 / 1420 ms              (med. 1412)
+     *   piilotus poissa (5 ajoa)
+     *     panorointi   313 / 422 / 492 / 254 / 357 ms    (med. 357)
+     *     nipistys     925 / 1070 / 1104 / 1135 / 857 ms (med. 1070)
      *
-     * AUKI OLEVA KORTTI ESTÄÄ PIILOTUKSEN: kortti seuraa merkkinsä
-     * ruutupaikkaa (js/fokuskohteet.js asetaKohteenPaikka), ja
-     * piilotetun merkin laatikko on nollissa — kortti hyppäisi ruudun
-     * nurkkaan. Kortti on auki harvoin ja silloin karttaa harvoin
-     * nipistetään, joten hinta on olematon.
+     * Sarjat eivät mene päällekkäin panoroinnissa lainkaan: mediaani
+     * putosi 767 -> 357 ms ja nipistyksessä 1412 -> 1070 ms. Odotus oli
+     * päinvastainen, ja syy paljastuu siitä, mitä piilotus todella teki:
+     * se vaihtoi eleen molemmissa päissä runkoluokan, joka pakotti koko
+     * dokumentin tyylinlaskun ja otti kuusi SVG-kerrosta ulos
+     * asettelusta ja takaisin sisään — eleen alussa ja lopussa, eli
+     * juuri niissä kehyksissä, joissa nykäys tuntuu. Se, mitä
+     * maalikierroksesta säästyi eleen keskellä, maksettiin
+     * kalliimpana sen päissä. Piilotukselle ei siis jäänyt perustelua
+     * edes nopeudesta — vain omistajan uusi linjaus, ja ne osoittavat
+     * samaan suuntaan.
      *
-     * KEHYSSILMUKKA EI SAA TUOTTAA ROSKAA (js/fokusmitat.js): tässä
-     * kirjoitetaan kaksi luokkaa eleen alussa ja poistetaan ne eleen
-     * jälkeen — ei mitään per kehys, ei yhtään uutta oliota.
+     * MITÄ TÄMÄ MAKSAA MUUTA KUIN AIKAA. Polttamattomat kerrokset
+     * LADOTAAN RUUTUAVARUUDESSA (js/karttanimet.js: `laudalle = cssPx /
+     * skaala`), joten ne skaalautuvat nipistyksen aikana laudan mukana
+     * ja asettuvat omaan kokoonsa vasta eleen jälkeisessä
+     * uudelleenladonnassa. Juuri sen napsahduksen piilotus aikanaan
+     * peitti; nyt se on näkyvissä, koska omistaja pitää katoamista
+     * pahempana. Poltettu jälki ei kuulu tähän lainkaan: se on osa
+     * laatan kuvaa ja liikkuu kompositorilla laatan mukana.
+     *
+     * VASTASKAALA ON NYT VOIMASSA KOKO ELEEN AJAN. Kun merkit olivat
+     * piilossa, ruutumittaiset kerrokset saivat ohittaa
+     * mittakaavakirjoituksensa eleen ajaksi (`merkitPiilossa` -vahti
+     * js/elaintaky.js:ssä) ja ottivat oikean mitan vasta eleen
+     * päättävästä kutsusta `vastaskaalaaMerkit(1)`. Näkyvällä merkillä
+     * sitä oikotietä ei ole: vahti on poistettu, ja lehdettömän
+     * varapolun kerrokset vastaskaalataan joka kehyksellä kuten ennen
+     * v1277:ää. Fokusnäkymässä (vakioskaala) silmukkaa ei ajeta
+     * lainkaan — merkit kasvavat kartan mukana, mikä on juuri se mitä
+     * pyydettiin (ks. vastaskaalaaMerkit alempana).
      */
-    /*
-     * === PIILO ON HÄIVYTYS, EI KATOAMINEN (omistaja 31.8.2026) =======
-     *
-     * Omistajan linjaus sanatarkasti: *"Kaikki elementit mitä ei ole
-     * poltettu pitää poistua näkyvistä kun karttaa zoomataan, mutten
-     * tulee ikävä hyppäys."*
-     *
-     * KAKSI ASIAA, JOTKA TÄMÄ RATKAISEE. Ensimmäinen on se, mitä
-     * piilotetaan: piilo koski ennen vain kohdemerkkejä ja niiden
-     * seuralaisia, mutta ajossa 2026-08-31b karttanostoista poltettiin
-     * laattoihin 413/624 — loput 211 sekä koko paikannimikerros
-     * (js/karttanimet.js: kaupunkien nimet ja pisteet, maastonimet,
-     * nostoviivat) ovat yhä elävää DOMia, joka LADOTAAN
-     * RUUTUAVARUUDESSA. Ruutuavaruudessa ladottu kerros skaalautuu
-     * eleen aikana laudan mukana ja napsahtaa oikeaan kokoonsa vasta
-     * eleen jälkeisessä uudelleenladonnassa — juuri se on omistajan
-     * näkemä hyppäys. Piilossa tehty ladonta ei hyppää, koska sitä ei
-     * nähdä. Poltettu jälki ei kuulu tähän lainkaan: se on osa laatan
-     * kuvaa ja liikkuu kompositorilla laatan mukana.
-     *
-     * Toinen on itse piilotus. `display: none` päälle ja pois on
-     * halvin mahdollinen tapa, mutta se on myös nykäys: kerros katoaa
-     * ja ilmestyy yhdellä kehyksellä. Siksi piilo on kaksivaiheinen
-     * (css/styles.css, sama pari luokkia):
-     *
-     *   1. `kartta-merkit-haipyy` heti — nimikerros häipyy
-     *      MERKKIEN_HAIPYMA_MS:ssä, merkkikerrokset katoavat samassa
-     *      silmänräpäyksessä
-     *   2. `kartta-merkit-piilossa` häivytyksen jälkeen — display none
-     *      kaikille, eli maalikierroksesta pois lopuksi eleeksi
-     *
-     * Paluussa järjestys on käänteinen ja peittävyys nostetaan vasta
-     * SEURAAVASSA KEHYKSESSÄ: selain tekee siirtymän vain, jos se ehtii
-     * nähdä lähtöarvon näkyvässä kerroksessa.
-     *
-     * HÄIVYTYS VAIN NIMIKERROKSELLE, JA SE ON MITATTU. Peittävyys
-     * väliltä 0–1 pakottaa selaimen tekemään ryhmästä oman
-     * läpinäkyvyystasonsa ja maalaamaan sen joka kehyksellä — ja
-     * merkkikerroksissa on kymmeniä ryhmiä, joissa kussakin on ympyrä,
-     * glyyfi ja nimiö. Mitattu tools/savukkeet/savuke-maailmanakyma.mjs
-     * -savukkeella (kolme ajoa per variantti): pitkien tehtävien summa
-     * kuudessa pyyhkäisyssä oli ilman häivytystä 0–124 ms, häivytys
-     * kaikille kerroksille 446–661 ms ja häivytys vain nimikerrokselle
-     * 0–83 ms. Nimikerros on se, jonka LADONTA eleen aikana muuttuu,
-     * joten hyöty on siellä ja hinta jää maksamatta. Luvut ja koko
-     * taulukko: css/styles.css samassa lohkossa.
-     *
-     * KUSTANNUS EI SIIS PALANNUT. `display: none` on yhä ainoa keino,
-     * joka oikeasti poistaa kerroksen kierroksesta (läpinäkyväkin
-     * kerros pilkotaan ja maalataan), ja merkkikerroksilla se on
-     * voimassa eleen ensimmäisestä kehyksestä alkaen kuten ennenkin.
-     *
-     * === PALUU VAATII AIDON LEVON (js/fokusmitat.js LEPO_MS -malli) ==
-     *
-     * Ajastin yksin ei riitä: eleen loppuun kuuluu vielä liuku,
-     * fitViewBox, laattojen täydennys ja uusi ladonta, ja niiden
-     * kestoa ei tiedä kello. Sama vastaus kuin viivaimilla: jos runko
-     * yhä kantaa liikeluokkaa, paluuta siirretään eteenpäin
-     * (MERKKIEN_UUSI_YRITYS_MS). Lista on sama kuin viivaimilla ja
-     * ui.js:n tarkkuusodotuksella — sama kysymys, sama vastaus.
-     *
-     * ODOTUKSELLA ON KATTO, toisin kuin viivaimilla: merkki on
-     * napautuskohde, eikä sitä saa jäädä pois jos jokin liikeluokka
-     * jää roikkumaan. Katon jälkeen kerrokset palaavat vaikka kartta
-     * väittäisi liikkuvansa.
-     */
-    const MERKKIEN_PALUU_MS = 320;
-    /** Häivytyksen kesto — sama luku css/styles.css transitionissa. */
-    const MERKKIEN_HAIPYMA_MS = 140;
-    /** Uusi yritys, kun kartta on paluuhetkellä yhä liikkeessä. */
-    const MERKKIEN_UUSI_YRITYS_MS = 140;
-    /** Katto odottelulle: merkit ovat napautuskohteita (ks. yllä). */
-    const MERKKIEN_LEPO_KATTO_MS = 1600;
-    /** Nipistyksen mittakaava saa heilahtaa tämän verran ilman piiloa. */
-    const MERKKIPIILON_KYNNYS = 0.03;
-    /*
-     * Rungon luokat, jotka tarkoittavat "kuva liikkuu VIELÄ" — sama
-     * lista ja sama perustelu kuin js/fokusmitat.js LIIKELUOKAT:
-     * mukaan kelpaavat vain luokat, jotka jokin ajastin tai eleen
-     * loppu ottaa varmasti pois (tilaluokka ei ole liikeluokka).
-     */
-    const MERKKIEN_LIIKELUOKAT = [
-      'kartta-raahaus', 'zoom-kaynnissa', 'manner-odottaa', 'flight-active',
-    ];
-    const kartanLiike = () => MERKKIEN_LIIKELUOKAT
-      .some((l) => document.body.classList.contains(l));
-    /** Kaikki eleen jäljet pois kerralla: ajastimet, kehys ja luokat. */
-    const merkitEsiin = () => {
-      clearTimeout(this.ui.merkkiPaluuAjastin);
-      this.ui.merkkiPaluuAjastin = 0;
-      clearTimeout(this.ui.merkkiHaipymaAjastin);
-      this.ui.merkkiHaipymaAjastin = 0;
-      cancelAnimationFrame(this.ui.merkkiPaluuKehys ?? 0);
-      this.ui.merkkiPaluuKehys = 0;
-      this.ui.merkitPiilossa = false;
-      document.body.classList.remove('kartta-merkit-piilossa');
-      document.body.classList.remove('kartta-merkit-haipyy');
-    };
-    // Kentäksi asti: ui.js:n jumivahti ja destroy siivoavat luokat ja
-    // ajastimet silloinkin, kun ele ei pääse omaan loppuunsa.
-    this.merkitEsiin = merkitEsiin;
-    /** Lepo tuli: kerrokset takaisin maalikierrokseen ja häivytys auki. */
-    const paljastaMerkit = (odotusAlkoi) => {
-      this.ui.merkkiPaluuAjastin = 0;
-      if (kartanLiike() && performance.now() - odotusAlkoi < MERKKIEN_LEPO_KATTO_MS) {
-        this.ui.merkkiPaluuAjastin = setTimeout(
-          () => paljastaMerkit(odotusAlkoi), MERKKIEN_UUSI_YRITYS_MS);
-        return;
-      }
-      clearTimeout(this.ui.merkkiHaipymaAjastin);
-      this.ui.merkkiHaipymaAjastin = 0;
-      // Lippu alas jo tässä: piilotus saa keskeyttää paluun kesken
-      // kehyksen (se peruu alla varatun kehyksen).
-      this.ui.merkitPiilossa = false;
-      // Ensin takaisin maalikierrokseen — yhä läpinäkyvänä…
-      document.body.classList.remove('kartta-merkit-piilossa');
-      /*
-       * MAATUMMENNUS EI OLE TÄSSÄ JOUKOSSA LAINKAAN (1.9.2026): se ei
-       * väisty enää kummassakaan eleessä, joten sillä ei ole paluutakaan
-       * (ks. piilotaMerkit alla ja js/maatummennus.js "ELEKÄYTÖS").
-       */
-      cancelAnimationFrame(this.ui.merkkiPaluuKehys ?? 0);
-      // …ja vasta seuraavassa kehyksessä peittävyys ylös, jolloin
-      // selain näkee arvon muuttuvan ja tekee siirtymän.
-      const nostaPeittavyys = () => {
-        clearTimeout(this.ui.merkkiHaipymaAjastin);
-        this.ui.merkkiHaipymaAjastin = 0;
-        cancelAnimationFrame(this.ui.merkkiPaluuKehys ?? 0);
-        this.ui.merkkiPaluuKehys = 0;
-        document.body.classList.remove('kartta-merkit-haipyy');
-      };
-      this.ui.merkkiPaluuKehys = requestAnimationFrame(nostaPeittavyys);
-      /*
-       * VARAREITTI TAUSTALLE. Piilossa olevalla sivulla kehyspyyntö ei
-       * laukea lainkaan, ja ilman tätä nimikerros jäisi läpinäkyväksi
-       * siihen asti kun sivu palaa esiin — eikä jumivahti sitä siivoa,
-       * koska sen mielestä piilo on jo purettu. Kumpi ehtii ensin,
-       * siivoaa toisen.
-       */
-      this.ui.merkkiHaipymaAjastin = setTimeout(nostaPeittavyys, MERKKIEN_HAIPYMA_MS);
-    };
-    /**
-     * Ele on aidosti käynnissä: polttamaton karttasisältö väistyy.
-     *
-     * === MAATUMMENNUS EI VÄISTY KUMMASSAKAAN ELEESSÄ ================
-     *
-     * Kaksi tilausta samalta päivältä, ja jälkimmäinen vie ensimmäisen
-     * loppuun. Aamulla panorointi, sanatarkasti: *"Kartan tummennus
-     * voisi pysyä panoroitaessa päällä."* Illalla zoomaus, sanatarkasti:
-     * *"jos ympärivaltoiden tummennus on mahdollista pitää zoomatessa
-     * päällä (paitsi jos menee rajan yli missä poistuu), niin sen voisi
-     * kytkeä päälle."*
-     *
-     * Kerros oli 31.8.2026 illasta lähtien samassa display:none-joukossa
-     * kuin merkkikerrokset (koko ele), sitten 1.9.2026 aamusta vain
-     * nipistyksessä (`kartta-tummennus-piilossa`). Nyt ei kummassakaan:
-     * luokkaa ei ole enää olemassa, eikä tämä passi erottele eleen
-     * lajia maatummennuksen osalta.
-     *
-     * OMISTAJAN SULKEISHUOMAUTUS ON JO TOTEUTUNUT. *"Paitsi jos menee
-     * rajan yli missä poistuu"* on tummennuksen oma näkyvyysehto
-     * (js/maatummennus.js `tunniste`): kerros on olemassa vain pelaajan
-     * omasta uloimmasta zoomista sisäänpäin ja vain nykyiselle maalle.
-     * Kun kuva loitonnetaan rajan yli tai maa vaihtuu, kerros joko
-     * katoaa tai piirtyy uudelle maalle näkymän asetuttua — se on
-     * näkyvyysehto eikä ele-ehto, eikä se kuulu tähän passiin.
-     *
-     * MITATTU (Chromium 390x844 dpr3, 4x kuristus, kehittäjän
-     * maailmanäkymä Ateenan lähikuvassa; neljä nipistystä ja kuusi
-     * pyyhkäisyä per ajo, neljä ajoa per variantti, lämmittelykierros
-     * pois ja variantit VUOROTELLEN — longtaskien summa per ajo):
-     *
-     *   kerros piilossa  nipistys  845 / 1387 / 1023 / 1101 (med. 1101)
-     *                    panor.    779 /  795 /  629 /  455 (med.  779)
-     *   kerros näkyvissä nipistys 1152 / 1125 /  848 / 1041 (med. 1125)
-     *                    panor.    901 /  686 /  616 /  563 (med.  686)
-     *
-     * Sarjat menevät päällekkäin kummassakin eleessä: nipistyksen
-     * mediaaniero on 24 ms NELJÄN nipistyksen yli eli kuusi
-     * millisekuntia elettä kohti, ja panoroinnissa näkyvä kerros on
-     * mediaanilta jopa halvempi. Syy on kartan omassa
-     * zoomitoteutuksessa: nipistys on kameran CSS-muunnos
-     * (`translate3d(...) scale(...)`, ks. touchmove alempana), ei uusi
-     * viewBox, joten varjopolku skaalautuu kompositorissa eikä sitä
-     * ladota uudelleen kertaakaan eleen aikana. Mittaus on tehty
-     * 1.9.2026 UUDELLA, kuusi kertaa tiheämmällä varjopolulla (3,29
-     * miljoonaa merkkiä `d`-määreessä, ks. tools/generoi-maapolygonit.mjs)
-     * — vanhalla polulla luvut olivat samat kohinan sisällä
-     * (nipistys med. 1283 piilossa vs. 1149 näkyvissä).
-     *
-     * @param {boolean} zoomaa tosi, kun eleen mittakaava muuttuu
-     *   (jää kutsujien tiedoksi; tämä passi ei enää käytä sitä)
-     */
-    const piilotaMerkit = (zoomaa = false) => {
-      if (this.ui.fokuskohdeAuki) return;
-      // `zoomaa` on jäljellä kutsujissa (nipistys kertoo sillä eleen
-      // lajin), mutta tämä passi ei enää erottele: maatummennus jää
-      // näkyviin kummassakin eleessä (ks. yllä).
-      void zoomaa;
-      if (this.ui.merkitPiilossa) return;
-      clearTimeout(this.ui.merkkiPaluuAjastin);
-      this.ui.merkkiPaluuAjastin = 0;
-      // Kesken oleva paluu perutaan: kerros ei saa nousta esiin
-      // uuden eleen alta.
-      cancelAnimationFrame(this.ui.merkkiPaluuKehys ?? 0);
-      this.ui.merkkiPaluuKehys = 0;
-      this.ui.merkitPiilossa = true;
-      document.body.classList.add('kartta-merkit-haipyy');
-      clearTimeout(this.ui.merkkiHaipymaAjastin);
-      this.ui.merkkiHaipymaAjastin = setTimeout(() => {
-        this.ui.merkkiHaipymaAjastin = 0;
-        // Ele saattoi ehtiä loppua häivytyksen aikana; silloin
-        // maalikierroksesta ei enää poisteta mitään.
-        if (this.ui.merkitPiilossa) {
-          document.body.classList.add('kartta-merkit-piilossa');
-        }
-      }, MERKKIEN_HAIPYMA_MS);
-    };
-    /** Ele ohi: kerrokset takaisin — heti vain uuden kosketuksen alta. */
-    const naytaMerkit = (heti = false) => {
-      if (!this.ui.merkitPiilossa) return;
-      clearTimeout(this.ui.merkkiPaluuAjastin);
-      if (heti) { merkitEsiin(); return; }
-      const odotusAlkoi = performance.now();
-      this.ui.merkkiPaluuAjastin = setTimeout(
-        () => paljastaMerkit(odotusAlkoi), MERKKIEN_PALUU_MS);
-    };
-    // Kentäksi asti: ui.js:n jumivahti ja destroy palauttavat merkit
-    // silloinkin, kun ele ei pääse omaan loppuunsa.
-    this.naytaMerkit = naytaMerkit;
 
     /*
      * --- KARTAN PÄÄLLÄ KELLUVA UI EI OLE KARTTA ----------------------
@@ -3622,9 +3411,8 @@ export class Kartta {
       if (!Number.isFinite(tx) || !Number.isFinite(ty)) return;
       this.kuori.style.transform =
         `translate3d(${tx.toFixed(1)}px, ${ty.toFixed(1)}px, 0) scale(${nipistys.suhde.toFixed(4)})`;
-      // Kahden sormen kosketus ei vielä ole ele: merkit väistyvät vasta
-      // kun mittakaava oikeasti muuttuu (ks. MERKKIPIILON_KYNNYS).
-      if (Math.abs(nipistys.suhde - 1) > MERKKIPIILON_KYNNYS) piilotaMerkit(true);
+      // Ruutumittaiset kerrokset pysyvät oikean kokoisina koko eleen
+      // ajan: vastaskaala ajetaan joka kehyksellä (ks. yllä).
       vastaskaalaaMerkit(nipistys.suhde);
     };
 
@@ -3673,9 +3461,6 @@ export class Kartta {
       document.body.classList.remove('kartta-raahaus');
       this.kuori.style.transform = '';
       vastaskaalaaMerkit(1);
-      // Merkit takaisin vasta kun eleen loppuun kuuluva sovitus,
-      // ankkurointi ja bittikartan täydennys on tehty (naytaMerkit).
-      naytaMerkit();
       // Napautus eleen jälkeen ei saa valita kaupunkia.
       this.ui.raahattiin = true;
       setTimeout(() => { this.ui.raahattiin = false; }, 0);
@@ -3826,7 +3611,6 @@ export class Kartta {
       // lähikuvissa), joten eleen jälki pyyhitään ensin käsin.
       this.kuori.style.transform = '';
       vastaskaalaaMerkit(1);
-      naytaMerkit();
       this.fitViewBox();
     };
     // Kentäksi asti: ui.js:n jumivahti (eleKesken) ja taustapaluun
@@ -3937,7 +3721,6 @@ export class Kartta {
       if (tila !== 'panorointi') return;
       this.ui.kartanRaahaus = false;
       document.body.classList.remove('kartta-raahaus');
-      naytaMerkit();
       this.ui.merkitseKartanEle();
       // Ele ohi: lava ikkunoidaan tarvittaessa uudelleen (LAVAIKKUNA).
       this.ikkunoiLava();
@@ -3965,7 +3748,6 @@ export class Kartta {
         document.body.classList.remove('kartta-raahaus');
         this.ui.taideOdottaa = true;
       }
-      naytaMerkit();
       rullanEle = null;
     };
     // Kentäksi asti: ui.js:n jumivahti ja destroy purkavat eleen tästä.
@@ -3995,9 +3777,6 @@ export class Kartta {
       const dy = this.ui.panVaraY ? -e.deltaY : 0;
       const rajattu = this.rajaaKasinPan((this.ui.panX ?? 0) + dx, (this.ui.panY ?? 0) + dy);
       this.asetaPan(rajattu.x, rajattu.y);
-      // Trackpadin vieritys on jatkuva virta eikä napautus: ele on
-      // käynnissä heti ensimmäisestä deltasta (ks. merkkien piilotus).
-      piilotaMerkit();
       ajastaRullanLoppu();
     };
 
@@ -4236,9 +4015,6 @@ export class Kartta {
       liuku = null;
       this.ui.kartanRaahaus = false;
       document.body.classList.remove('kartta-raahaus');
-      // Liuku on samaa elettä kuin raahaus, joten merkit palaavat vasta
-      // sen loputtua — eivät sormen irrotessa.
-      naytaMerkit();
       if (keskeytys) this.ui.taideOdottaa = true;
     };
     // Laudan nollaus ja zoomipainikkeet pysäyttävät liu'un tästä.
@@ -4343,15 +4119,6 @@ export class Kartta {
       // tarttuu hiireen: viimeistellään se heti, ettei uusi veto jää
       // odottamaan debouncea (rullaele varaa nipistys-tilan).
       if (rullanEle) paataRullanEle();
-      /*
-       * UUSI KOSKETUS TUO MERKIT HETI. Paluuviive (MERKKIEN_PALUU_MS)
-       * on eleen jälkihoitoa varten, mutta merkki on napautuskohde:
-       * piilotettuna sitä ei osu selaimen osumatesti eikä moduulin oma
-       * ruutulaatikkovertailu (js/fokuskohteet.js lahinKohde). Kesken
-       * elettä ei kuitenkaan paljasteta — toinen sormi ruudulla ei saa
-       * räpsäyttää merkkejä esiin nipistyksen keskellä.
-       */
-      if (!nipistetaan() && !alku) naytaMerkit(true);
       if (nipistetaan()) return;
       // Kortin, kuplan tai suurennoksen päältä alkava veto jää kortin
       // omaksi vieritykseksi — kartta ei liiku (ks. KELLUVA_UI).
@@ -4391,9 +4158,6 @@ export class Kartta {
         // peruuntua (iOS peruu osoittimet oman eleensä alta) — raahaus
         // toimii silloinkin, kaappaus vain jää tekemättä.
         try { pane.setPointerCapture?.(e.pointerId); } catch { /* ei kaappausta */ }
-        // Sama kynnys erottaa napautuksen raahauksesta myös merkeille:
-        // vasta tässä ele on aidosti käynnissä (ks. MERKKIEN_PALUU_MS).
-        piilotaMerkit();
         /*
          * Päiväkirja yhdelle riville heti kun kartta lähtee liikkeelle
          * — ja vain kerran eleen aikana (omistajan toive: kortti ei saa
@@ -4435,7 +4199,6 @@ export class Kartta {
       if (salliLiuku && liikkui && aloitaLiuku()) return;
       // Sykähdykset palaavat heti kun sormi irtoaa.
       document.body.classList.remove('kartta-raahaus');
-      naytaMerkit();
       /*
        * Bittikartta täydennetään VAIN tässä: heti kun sormi irtoaa
        * (tai liukuAskeleessa, kun liuku on pysähtynyt — se on saman

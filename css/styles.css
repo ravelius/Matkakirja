@@ -1243,114 +1243,22 @@ body.kartta-raahaus .target-ring,
 body.kartta-raahaus .target-halo,
 body.kartta-raahaus .fokuslaatta-syke { animation-play-state: paused; }
 
-/* POLTTAMATON KARTTASISÄLTÖ POIS ELEEN AJAKSI (js/kartta.js
-   piilotaMerkit — koko perustelu ja mittausluvut siellä).
+/* ELÄVÄ KARTTASISÄLTÖ EI VÄISTY ELEEN AJAKSI (omistaja 1.9.2026 ilta,
+   sanatarkasti: *"kaikki elementit pitää pysyä päällä kun karttaa
+   liikutetaan tai zoomataan vaikka niitä ei olisi poltettu."*).
 
-   Kartan CSS-muunnos pakottaa selaimen pilkkomaan koko SVG:n uudestaan
-   maalipaloihin joka kehyksellä, ja kymmenet pienet merkkiryhmät ovat
-   siinä kalleimmat. `display: none` on ainoa keino, joka oikeasti
-   poistaa ne kierroksesta: läpinäkyväkin kerros pilkotaan ja maalataan.
+   Tässä oli luokkapari `kartta-merkit-haipyy` / `kartta-merkit-piilossa`,
+   joka häivytti nimikerroksen ja otti merkkikerrokset `display: none`
+   -tyylillä pois maalikierroksesta eleen ajaksi, sekä nimikerroksen
+   oma opacity-siirtymä ja sen liikeherkkyyspoikkeus. Koko mekanismi on
+   purettu — perustelu, mitatut luvut ennen ja jälkeen sekä se, mitä
+   purku maksaa (ruutuavaruudessa ladotun nimikerroksen napsahdus eleen
+   lopussa), ovat js/kartta.js asennaPanorointi -metodin ensimmäisessä
+   lohkossa.
 
-   Luokka on rungossa vain sen ajan, kun ele on aidosti käynnissä, ja
-   merkkien paikat ovat muunnosmääreissä eivätkä asettelussa — piilo ei
-   siirrä mitään, ja jokainen merkki palaa pikselilleen entiselleen.
-
-   === MITÄ PIILO KATTAA (laajennettu 31.8.2026) ====================
-
-   KAIKEN, MITÄ EI OLE POLTETTU LAATTAAN. Omistajan linjaus 31.8.2026:
-   *"Kaikki elementit mitä ei ole poltettu pitää poistua näkyvistä kun
-   karttaa zoomataan, mutten tulee ikävä hyppäys."*
-
-   Poltettu jälki on osa laatan kuvaa ja liikkuu kompositorilla laatan
-   mukana — se saa ja sen pitää näkyä koko eleen ajan. Polttamattomat
-   kerrokset sen sijaan LADOTAAN RUUTUAVARUUDESSA (js/karttanimet.js:
-   `laudalle = cssPx / skaala`), joten ne skaalautuvat eleen aikana
-   laudan mukana ja napsahtaisivat oikeaan kokoonsa vasta eleen
-   jälkeisessä uudelleenladonnassa — juuri se on omistajan näkemä
-   hyppäys. Kun ladonta tapahtuu piilossa, hyppäystä ei ole olemassa.
-
-     .fokuskohteet .fokusnosto-symbolit  elävät karttanostot (ne, joita
-                                         pyramidi.json ei tunne)
-     .fokuspisteet .elaintakyt           samat kerrokset kuin ennenkin
-     .karttanimet                        kaupunkien nimet ja pisteet,
-                                         maastonimet ja nostoviivat
-     .maastonimet                        katselutilan manterelautojen
-                                         oma nimikerros
-
-   PELITILAAN EI KOSKETA (nappula, vuororengas, kohdelaatat, aihe- ja
-   vilkkuvalot, vihreä kohtaamispiste): ne ovat pelin tilaa eivätkä
-   kartan sisältöä, ja niiden näkyvyys on oma päätöksensä.
-
-   === HÄIVYTYS VAIN NIMIKERROKSELLE — JA SE ON MITATTU ==============
-
-   Häivytys on kaksivaiheinen ja luokkia siksi kaksi:
-
-     .kartta-merkit-haipyy    ele alkoi (opacity 0 tai display none)
-     .kartta-merkit-piilossa  häivytys ohi: display none kaikille
-
-   Nimikerros saa siirtymän; MERKKIKERROKSET EIVÄT. Ero ei ole
-   makuasia vaan mittaustulos (tools/savukkeet/savuke-maailmanakyma.mjs,
-   kehittäjän maailmanäkymä, Chromium 834x1112 dpr2, kolme ajoa per
-   variantti — kuusi pyyhkäisyä ja neljä nipistystä):
-
-     variantti                        panoroinnin lt   nipistyksen lt
-     ei häivytystä (lähtötilanne)        0–124 ms         359–394 ms
-     häivytys KAIKILLE kerroksille     446–661 ms         710–845 ms
-     häivytys vain nimikerrokselle       0– 83 ms         328–404 ms
-
-   Syy on se, joka on kirjattu tämän lohkon alkuun: peittävyys 0–1
-   pakottaa selaimen tekemään ryhmästä oman läpinäkyvyystasonsa ja
-   maalaamaan sen joka kehyksellä. Merkkikerroksissa on kymmeniä
-   ryhmiä, joissa kussakin on ympyrä, glyyfi ja nimiö (mitattuna 74 + 58
-   + 18 solmua); nimikerroksessa on kourallinen tekstisolmuja. Sama
-   siirtymä maksaa siis kerroksesta riippuen kertaluokan eri verran —
-   ja hyöty on nimikerroksessa, koska juuri sen ladonta muuttuu eleen
-   aikana. Jos merkkikerroksille joskus halutaan häivytys, se vaatii
-   ensin toisen keinon kuin `opacity` tässä SVG:ssä.
-
-   Paluussa järjestys on käänteinen: `display` takaisin ensin, ja
-   peittävyys nostetaan vasta seuraavassa kehyksessä, jolloin selain
-   näkee arvon muuttuvan ja tekee siirtymän. */
-.karttanimet,
-.maastonimet {
-  /* Sama luku kuin js/kartta.js MERKKIEN_HAIPYMA_MS. */
-  transition: opacity 140ms ease-out;
-}
-body.kartta-merkit-haipyy .fokuskohteet,
-body.kartta-merkit-haipyy .fokuspisteet,
-body.kartta-merkit-haipyy .fokusnosto-symbolit,
-body.kartta-merkit-haipyy .elaintakyt { display: none; }
-body.kartta-merkit-haipyy .karttanimet,
-body.kartta-merkit-haipyy .maastonimet { opacity: 0; }
-body.kartta-merkit-piilossa .fokuskohteet,
-body.kartta-merkit-piilossa .fokuspisteet,
-body.kartta-merkit-piilossa .fokusnosto-symbolit,
-body.kartta-merkit-piilossa .elaintakyt,
-body.kartta-merkit-piilossa .karttanimet,
-body.kartta-merkit-piilossa .maastonimet { display: none; }
-/* MAATUMMENNUS EI OLE YLLÄ OLEVISSA LISTOISSA — se ei väisty
-   kummassakaan eleessä (omistaja 1.9.2026 ilta, sanatarkasti: *"jos
-   ympärivaltoiden tummennus on mahdollista pitää zoomatessa päällä
-   (paitsi jos menee rajan yli missä poistuu), niin sen voisi kytkeä
-   päälle."* — ja saman päivän aamuna panoroinnista: *"Kartan tummennus
-   voisi pysyä panoroitaessa päällä."*).
-
-   Luokkaa `kartta-tummennus-piilossa` EI OLE ENÄÄ OLEMASSA. Se oli
-   olemassa yhden päivän ajan nipistystä varten, ja mittaus vei siltä
-   perustelun: nipistys on kameran CSS-muunnos eikä uusi viewBox, joten
-   varjopolku skaalautuu kompositorissa eikä sitä ladota eleen aikana
-   kertaakaan. Luvut ja koko perustelu: js/kartta.js piilotaMerkit.
-
-   Omistajan sulkeishuomautus *"paitsi jos menee rajan yli missä
-   poistuu"* on kerroksen oma näkyvyysehto (js/maatummennus.js
-   `tunniste`) eikä ele-ehto: tummennus on olemassa vain pelaajan
-   uloimmasta zoomista sisäänpäin ja vain nykyiselle maalle. */
-
-@media (prefers-reduced-motion: reduce) {
-  /* Liikeherkkyys: nimikerros väistyy kerralla ilman häivytystä. */
-  .karttanimet,
-  .maastonimet { transition: none; }
-}
+   MAATUMMENNUS ei väistynyt kummassakaan eleessä jo ennen tätä
+   (omistaja 1.9.2026 aamu ja ilta); nyt sama sääntö koskee kaikkea
+   muutakin elävää kerrosta. */
 
 /* NYKYISEN MAAN TUMMENNUS JA ÄÄRIVIIVA (js/maatummennus.js —
    omistajan tilaus 31.8.2026: *"lähemmillä zoomtasoilla ympäröivät
@@ -1360,7 +1268,9 @@ body.kartta-merkit-piilossa .maastonimet { display: none; }
 
    KATOAMISTA EI ENÄÄ OLE (1.9.2026 ilta): kerros ei väisty eleen
    ajaksi kummassakaan eleessä, joten sillä ei ole eleen jälkeistä
-   paluutakaan. Ks. yllä oleva lohko ja js/kartta.js piilotaMerkit.
+   paluutakaan — eikä sama päivä jättänyt piilotusta millekään muullekaan
+   elävälle kerrokselle. Ks. yllä oleva lohko ja js/kartta.js
+   asennaPanorointi.
 
    FEIDAUS ON SIIRTYNYT SIIHEN HETKEEN, JOSSA VARJO SYNTYY: maa vaihtuu
    tai näkyvyysehto aukeaa, ja js/maatummennus.js `piirra` käynnistää

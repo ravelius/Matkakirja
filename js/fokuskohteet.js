@@ -1122,9 +1122,10 @@ function lahinKohde(ui, tapahtuma) {
  * avaajalle (ui.avaaElaintakyMerkki). ILMAN AVAAJAA EI KILPAILLA:
  * merkkiä, jota ei voisi avata, ei saa päästää voittamaan.
  *
- * Piilossa oleva kerros (elaintakyt-piilossa, kartta-merkit-piilossa)
- * on `display: none`, jolloin ruutulaatikot ovat nollan kokoisia eikä
- * yksikään merkki mittaa — sama vaikutus kuin selaimen osumatestissä.
+ * Piilossa oleva kerros (elaintakyt-piilossa) on `display: none`,
+ * jolloin ruutulaatikot ovat nollan kokoisia eikä yksikään merkki
+ * mittaa — sama vaikutus kuin selaimen osumatestissä. Eleen ajaksi
+ * mitään ei enää piiloteta (js/kartta.js asennaPanorointi).
  *
  * @returns {{merkki: ?Element, etaisyys: number}}
  */
@@ -2293,8 +2294,7 @@ function paivitaRasteriporras(ui, skaala) {
  * ajan menossa takaisin toiseen suuntaan, eikä yksikään näistä
  * portaista ehtinyt näkyä.
  *
- * VIIVE ON SAMA HENKI KUIN MERKKIEN PALUULLA (js/kartta.js
- * MERKKIEN_PALUU_MS) ja asteikoilla (js/fokusmitat.js LEPO_MS): eleen
+ * VIIVE ON SAMA HENKI KUIN asteikoilla (js/fokusmitat.js LEPO_MS): eleen
  * loppuun kuuluu vielä liuku ja näkymän asettuminen, eikä kalleinta
  * työtä kannata tehdä sen keskellä. Väliaikana merkit ovat edellisen
  * portaan tarkkuudella — sama KOKO, vain karkeampi kuva (rasterin
