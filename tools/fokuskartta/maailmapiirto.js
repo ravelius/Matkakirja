@@ -1838,7 +1838,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
  * *"Voisiko nämä nostot polttaa erilliselle läpinäkyvälle
  * rasteritasolle? Jaksaako pyörittää? Voisi poistaa näkyvistä
  * kauemmilla zoom tasoilla"*): karttanostot — symboli, nimiö ja
- * ja nimiö — poltetaan OMAAN läpinäkyvään laattapyramidiin, ei
+ * siirtoviiva — poltetaan OMAAN läpinäkyvään laattapyramidiin, ei
  * pohjaan. Päähyöty on nopea uusintapoltto: kun maailmaan tulee uusia
  * nostoja, vain nostotaso ajetaan uudestaan (minuutteja, ei tunteja),
  * ja pohja pysyy ikuisessa välimuistissaan.
@@ -1880,13 +1880,36 @@ export function piirraNostotKankaalle(ctx, nostot, piirraNosto, mitta) {
     const mx = lautaKuvaX(m.x);
     const my = lautaKuvaY(m.y);
     /*
-     * NOSTOVIIVAA EI PIIRRETÄ, KOSKA SITÄ EI OLE (omistaja 31.8.2026,
-     * esityssiirto). Tässä oli katkoviiva merkistä kaupunkiin, päät
-     * laskettuna pelin omalla funktiolla; nostot latoutuvat nyt
-     * kaupungin kylkeen omiksi nostoikseen ilman siirtoviivoja
-     * (js/fokusniput.js sääntö 6), eikä merkki kanna enää
-     * `viiva`-kenttää lainkaan.
+     * SIIRTOVIIVA ENSIN, merkin alle — sama järjestys kuin pelissä,
+     * jossa viivakerros menee laattakerroksen eteen (js/fokusniput.js
+     * nippuViivakerros). Päät on laskettu valmiiksi pelin omalla
+     * funktiolla (nippuViivanJana), joten tässä ei ole yhtäkään
+     * ladonnan lukua — vain skaalaus laatan kuvapikseleiksi.
+     *
+     * PALAUTETTU 1.9.2026 ILTA (omistaja, sanatarkasti: *"otetaan
+     * siirtoviivat takaisin karttanostoille (esim. ateena)"*); viivat
+     * olivat poissa yhden vuorokauden ajan.
+     *
+     * VIIVA EI OTA RUUTUKATTOA (alempana, nostoladontaKattoPorras).
+     * Katto on nimiön luettavuutta varten — se estää nimiötä ohittamasta
+     * kartan omaa paikannimeä syvillä tasoilla — ja viivan päät ovat jo
+     * laudan koordinaateissa: jos katto purisi niihin, poltettu viiva
+     * irtoaisi merkistä juuri niillä tasoilla, joilla se on suurin.
      */
+    const v = m.viiva;
+    if (v) {
+      ctx.save();
+      ctx.strokeStyle = v.vari;
+      ctx.globalAlpha = v.himmeys;
+      ctx.lineCap = 'round';
+      ctx.lineWidth = Math.max(0.2, v.leveys * px);
+      ctx.setLineDash([v.katko * px, v.katko * px]);
+      ctx.beginPath();
+      ctx.moveTo(lautaKuvaX(v.x1), lautaKuvaY(v.y1));
+      ctx.lineTo(lautaKuvaX(v.x2), lautaKuvaY(v.y2));
+      ctx.stroke();
+      ctx.restore();
+    }
     ctx.save();
     ctx.translate(mx, my);
     /*
