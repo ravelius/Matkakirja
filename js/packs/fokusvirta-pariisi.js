@@ -636,6 +636,151 @@ export const FOKUSVIRTA_PARIISI = {
         },
       },
     },
+    {
+      /*
+       * ── SIIRRETTY ESPANJASTA (1.9.2026, nostojen sisältöaudit) ────
+       *
+       * Tämä nosto asui 29.8.2026 alkaen Sevillan paketissa
+       * (js/packs/fokusvirta-sevilla.js) ja oli auditin ainoa
+       * vahvistettu väärän maan tarina: jokainen kortin tapahtuma on
+       * Pariisissa, ja Sevilla on vain se kaupunki, johon ooppera
+       * sijoittuu. Tunnus, Commons-kuva ja aihe ovat samat; TEKSTI ON
+       * KIRJOITETTU UUDELLEEN Ranska-kontekstiin, koska kortin
+       * näkökulma vaihtui teoksen tapahtumapaikasta sen ensi-illan
+       * taloon. Sevilla mainitaan yhä — siinä roolissa, joka sille
+       * kuuluu.
+       *
+       * KOLMANTENA EIKÄ ENSIMMÄISENÄ: poolin kärki on maan kuplatäky
+       * (ks. lohkon alku), eikä sitä siirretä uuden rivin takia.
+       *
+       * FAKTAT (haettu 1.9.2026 en-Wikipedian rajapinnasta artikkeli
+       * ja osio kerrallaan):
+       *   - "Carmen (opera)", johdanto: kantaesitys Opéra-Comiquessa
+       *     Pariisissa 3.3.1875; sopimusten rikkominen järkytti
+       *     ensiyleisöä; Bizet kuoli 33. esityksen jälkeen; Pariisissa
+       *     teos otettiin uudelleen ohjelmistoon vasta 1883;
+       *   - sama artikkeli, osio "Background": talon kaksi johtajaa
+       *     riitautuivat teoksesta, ja Adolphe de Leuven vastusti
+       *     jyrkästi *"niin uskaliaan tarinan"* esittämistä talossa,
+       *     jota hän piti perheteatterina; hänelle luvattiin, että
+       *     Carmenin luonnetta pehmennetään, romanihahmot esitetään
+       *     koomisina ja lopun kuolema jää kulkueiden, balettien ja
+       *     riemufanfaarien varjoon; de Leuven erosi silti
+       *     alkuvuodesta 1874. Sävellystyö alkoi tammikuun tienoilla
+       *     1873, ja ensimmäinen näytös oli valmis kesään mennessä;
+       *   - osio nimiroolin etsimisestä: Marie Roze kieltäytyi
+       *     roolista kuultuaan, että hänen olisi kuoltava lavalla;
+       *     rooli meni Célestine Galli-Mariélle;
+       *   - osio ensi-illasta ja vastaanotosta: salissa olivat mm.
+       *     Massenet, Offenbach, Delibes ja Gounod; ensimmäinen näytös
+       *     otettiin hyvin vastaan, toreadorin laulun jälkeen tuli
+       *     libretisti Halévyn muistiinpanon mukaan "kylmyys" ja
+       *     viimeinen näytös oli "jäinen ensimmäisestä viimeiseen";
+       *     seuraavan päivän arviot vaihtelivat pettymyksestä raivoon,
+       *     ja yksi kriitikko kutsui Galli-Marién tulkintaa "paheen
+       *     ruumiillistumaksi"; taloa ei saatu täyteen edes jakamalla
+       *     lippuja ilmaiseksi;
+       *   - sama osio: Bizet kuoli 3. kesäkuuta 1875 sydäntautiin
+       *     36-vuotiaana, hääpäivänsä vuosipäivänä, ja sen illan
+       *     esitys peruttiin;
+       *   - osio myöhemmästä esityshistoriasta: Wien 1875, Bryssel
+       *     1876, Lontoo 1878, New York 23.10.1878 — maine syntyi
+       *     Ranskan ulkopuolella;
+       *   - "Salle Favart", osio "Background": ensi-illan talo oli
+       *     toinen Salle Favart (avattu 16.5.1840), joka paloi
+       *     25.5.1887; nykyinen kolmas talo rakennettiin 1893–1898
+       *     samalle paikalle Place Boïeldieun varrelle.
+       *
+       * IKÄSOPIVUUS (13+): oopperan juonen väkivaltaa ei kuvata, vaan
+       * kortti kertoo siitä, mitä lavalla tapahtuvasta kuolemasta
+       * SANOTTIIN — se on koko skandaalin ydin.
+       */
+      id: 'carmenin-ensi-ilta',
+      nimio: 'Carmenin ensi-ilta',
+      otsikko: 'Teatterin johtaja vastusti oopperaa niin kiivaasti, '
+        + 'että erosi — ja ensi-illan jälkeen näytti siltä, että hän '
+        + 'oli ollut oikeassa',
+      lunastus: [
+        'Georges Bizet aloitti Carmenin säveltämisen tammikuun tienoilla '
+          + '1873, ja ensimmäinen näytös oli valmis siihen kesään '
+          + 'mennessä, jona isoisäsi oli matkalla. Sitten työ pysähtyi. '
+          + 'Opéra-Comique oli valtion rahoittama talo, johon vietiin '
+          + 'perhe, ja sen kahdesta johtajasta Adolphe de Leuven '
+          + 'vastusti koko ajatusta: näin uskaliasta tarinaa ei esitetä '
+          + 'täällä, yleisö pelästyy pois. Hänelle luvattiin, että '
+          + 'nimihenkilön luonnetta pehmennetään, että romanihahmot '
+          + 'esitetään koomisina ja että lopun kuolema jää kulkueiden, '
+          + 'balettien ja riemufanfaarien varjoon. Lupaukset eivät '
+          + 'riittäneet, ja de Leuven erosi teatterista alkuvuodesta '
+          + '1874. Nimiroolikin oli vaikea täyttää: Marie Roze '
+          + 'kieltäytyi kuultuaan, että hänen olisi kuoltava lavalla.',
+        'Ensi-ilta oli 3. maaliskuuta 1875, ja salissa istui puoli '
+          + 'musiikki-Pariisia — Massenet, Offenbach, Delibes, Gounod. '
+          + 'Ensimmäinen näytös meni hyvin. Toreadorin laulun jälkeen '
+          + 'tuli kylmyys, ja viimeinen näytös oli libretisti Halévyn '
+          + 'sanoin jäinen ensimmäisestä viimeiseen. Seuraavan päivän '
+          + 'arviot vaihtelivat pettymyksestä raivoon: nimihenkilö oli '
+          + 'hyveellisen naisen sijaan moraaliton viettelijä, ja yksi '
+          + 'kriitikko kutsui pääosan tulkintaa paheen '
+          + 'ruumiillistumaksi. Taloa ei saatu täyteen edes jakamalla '
+          + 'lippuja ilmaiseksi. Bizet kuoli 3. kesäkuuta 1875, '
+          + 'kolmannenkymmenennenkolmannen esityksen jälkeen, '
+          + '36-vuotiaana ja hääpäivänsä vuosipäivänä. Maine tuli '
+          + 'muualta: Wien 1875, Bryssel 1876, Lontoo ja New York 1878 '
+          + '— Pariisiin ooppera palasi vasta 1883. Se sijoittuu '
+          + 'Sevillaan, mutta kaikki tämä tapahtui täällä, Place '
+          + 'Boïeldieun varrella. Sekin sali paloi 1887; paikalla '
+          + 'seisoo nyt kolmas samanniminen teatteri.',
+      ],
+      lahde: 'en-Wikipedia "Carmen (opera)" (johdanto sekä osiot '
+        + 'taustasta, nimiroolin etsimisestä, ensi-illasta ja '
+        + 'vastaanotosta sekä myöhemmästä esityshistoriasta), '
+        + '"Georges Bizet" (osiot Carmenista sekä sairaudesta ja '
+        + 'kuolemasta) ja "Salle Favart" (osio "Background"); '
+        + 'tarkistettu 1.9.2026.',
+      /*
+       * Commons 29.8.2026: 6536×8944, public domain, Prudent-Louis Leray
+       * (1820–1879), restaurointi Adam Cuerden, päiväys 1875, kuvaus
+       * "1875 lithographic poster for the première of Georges Bizet's
+       * Carmen". Restrictions tyhjä. SILMÄTARKISTUS tehty: litografoitu
+       * juliste, ei valokuvattuja ihmisiä. Rivi on siirretty Sevillan
+       * paketista sanasta sanaan.
+       */
+      kuva: {
+        tiedosto: "Prudent-Louis Leray - Poster for the première of Georges Bizet's Carmen.jpg",
+        selite: 'Prudent-Louis Lerayn litografia on Carmenin ensi-illan '
+          + 'juliste vuodelta 1875 — samasta esityksestä, jonka '
+          + 'säveltäjä uskoi epäonnistuneen.',
+        lahde: 'Prudent-Louis Leray 1875, Wikimedia Commons (public domain)',
+      },
+      kysymykset: [
+        'Miksi Opéra-Comiquen johto piti Carmenia sopimattomana?',
+        'Miten ooppera nousi epäonnistumisesta maailmanmaineeseen?',
+        'Millainen oopperatalo Opéra-Comique oli 1870-luvulla?',
+      ],
+      /*
+       * OMAT KOORDINAATIT, JOTTA MERKKI ON OIKEASSA MAASSA JA MAAN VOI
+       * YHÄ POLTTAA. Espanjassa nostolla ei ollut `paikka`-kenttää
+       * lainkaan, joten merkki seurasi pelaajaa kaupungista toiseen
+       * (js/fokusnosto.js nostonPaikka) — juuri se vika, jonka audit
+       * nosti esiin.
+       *
+       * 48,8709 N / 2,3378 E — en-Wikipedia "Salle Favart",
+       * prop=coordinates (haettu 1.9.2026). Piste on TONTTI eikä
+       * rakennus: ensi-illan talo paloi 1887, ja nykyinen kolmas
+       * Salle Favart seisoo samalla paikalla, joten koordinaatti on
+       * oikea kummallekin. Sama kaava ja samat vakiot kuin muillakin
+       * nostoilla (js/fokusnosto.js, PAIKKA LAUDALLA): maailmankartta
+       * Millerin lieriönä, europe tasavälinä.
+       */
+      paikka: {
+        nimi: 'Opéra-Comique',
+        laudat: {
+          maailmankartta: { x: 5911.3, y: 1439 },
+          europe: { x: 256.1, y: 608.3 },
+        },
+      },
+    },
   ],
 
   /*
