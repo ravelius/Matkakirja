@@ -403,6 +403,7 @@ export const FOKUSVIRTA_SOFIA = {
         + 'talvena kuin isoisäsi sulki matkalaukkunsa Lontoossa. Sillä '
         + 'kohdalla seisoo nyt kolmentoista metrin muistomerkki harmaata '
         + 'balkanilaista graniittia. Hautaa ei ole löydetty.',
+      lahde: 'en-Wikipedia "Vasil Levski". Tarkistettu 1.9.2026.',
       /*
        * Commons 25.8.2026: 509×344, CC0, "unknown photographers, 1879",
        * kuvaus "Old Turkish dungeon where Vasil Levski was kept prisoner,
@@ -456,6 +457,7 @@ export const FOKUSVIRTA_SOFIA = {
         + 'löytyi kivilaatta, joka aikoinaan mainosti täkäläisiä '
         + 'taisteluja: siihen on kuvattu krokotiileja, karhuja, härkiä ja '
         + 'villikissoja.',
+      lahde: 'en-Wikipedia "Amphitheatre of Serdica". Tarkistettu 1.9.2026.',
       /*
        * Commons 25.8.2026: 1185×822, CC BY-SA 4.0, Epaunov72, kuvaus
        * "General view of the Amphitheatre of Serdica, from north."
@@ -505,6 +507,7 @@ export const FOKUSVIRTA_SOFIA = {
         + '2000, ja se on nimetty kaupungin mukaan — kaupunki taas on '
         + 'nimetty Pyhän Sofian kirkosta, jonka nimi tarkoittaa kreikaksi '
         + 'Pyhää Viisautta. Minulla ei ole tähän mitään lisättävää.',
+      lahde: 'en-Wikipedia "Statue of Sofia". Tarkistettu 1.9.2026.',
       /*
        * Commons 25.8.2026: 2356×3141, CC BY-SA 4.0, Matti Blume, kuvattu
        * 11.11.2018, kuvaus "Sofia statue, Sofia, Bulgaria". Sama tiedosto,
@@ -549,6 +552,7 @@ export const FOKUSVIRTA_SOFIA = {
         + 'lahjoitti eläintarhalle uuden maa-alueen entisen '
         + 'kasvitieteellisen puutarhan paikalta. Sinne se jäi, runsaan '
         + 'neljän kilometrin päähän keskustasta etelään.',
+      lahde: 'en-Wikipedia "Sofia Zoo". Tarkistettu 1.9.2026.',
       /*
        * Commons 25.8.2026: 4160×3120, CC BY-SA 4.0, tekijä Κλυτίος,
        * kuvattu 24.6.2025, kuvaus "Азиатски слон в софийската

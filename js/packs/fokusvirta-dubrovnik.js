@@ -219,6 +219,8 @@ export const FOKUSVIRTA_DUBROVNIK = {
         + 'Minčetan pyöreä torni, jonka muuri on paikoin kuusi metriä '
         + 'paksu — ja jonka alta on löydetty yli viisisataa vuotta vanha '
         + 'tykkivalimo.',
+      lahde: 'en-Wikipedia "Walls of Dubrovnik" ja hr-Wikipedia "Dubrovačke '
+        + 'gradske zidine". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 3264×2448, CC BY-SA 2.0, Ramón from Llanera,
        * España, kuvattu 26.9.2011, kuvaus "Fortress Minčeta and Walls,
@@ -305,6 +307,8 @@ export const FOKUSVIRTA_DUBROVNIK = {
         + 'eteläpäässä on lisäksi pieni suolajärvi, jota sanotaan '
         + 'Kuolleeksimereksi — se saa vetensä Adrianmereltä '
         + 'vedenalaisten luolien kautta.',
+      lahde: 'en-Wikipedia "Lokrum", hr-Wikipedia "Lokrum", fr-Wikipedia '
+        + '"Lokrum" ja it-Wikipedia "Lacroma". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 3264×2448, CC BY-SA 3.0, Bizutage, kuvattu
        * 18.5.2013, kuvaus "Peacock roaming ruins of a Benedictan
@@ -381,6 +385,7 @@ export const FOKUSVIRTA_DUBROVNIK = {
         + 'käsikirjoitusnidettä ja noin satatuhatta yksittäistä '
         + 'asiakirjaa, vanhin vuodelta 1022. Tasavalta ehti kadota, '
         + 'mutta sen kirjat eivät.',
+      lahde: 'en-Wikipedia "Sponza Palace". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 5970×3954, CC BY 2.0, Richard Mortel,
        * kuvattu 8.9.2016, kuvaus "Sponza Palace, Dubrovnik, 16th

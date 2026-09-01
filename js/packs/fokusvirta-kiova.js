@@ -302,6 +302,7 @@ export const FOKUSVIRTA_KIOVA = {
         + 'kansanperinteeseen, Taras Ševtšenkon teoksiin ja Ivan '
         + 'Aivazovskin maalauksiin — ja Linnunradan nimeen, joka ei ole '
         + 'muuttunut.',
+      lahde: 'en-Wikipedia "Chumak". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 2064×1300, public domain, Ivan Aivazovsky,
        * päiväys 1885, Restrictions tyhjä. SILMÄTARKISTUS TEHTY (960 px):
@@ -391,6 +392,7 @@ export const FOKUSVIRTA_KIOVA = {
         + 'nimesi, mistä se syntyy — ilmastosta, kasvillisuudesta, '
         + 'kalliosta, maanpinnan muodosta ja ajasta. Viisi tekijää, ja '
         + 'yksi niistä on pelkkää kärsivällisyyttä.',
+      lahde: 'en-Wikipedia "Chernozem". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 802×3008, CC BY-SA 3.0, Rockwurm, kuvattu
        * 2.11.2012, kuvaus "Soil profile of a Chernozem". Restrictions
@@ -488,6 +490,9 @@ export const FOKUSVIRTA_KIOVA = {
         + 'hänet myös haudattiin. Kylässä seisoo hänen muistomerkkinsä, '
         + 'ja Ukrainan mehiläishoidon tutkimuslaitos kantaa hänen '
         + 'nimeään.',
+      lahde: 'en-Wikipedia "Petro Prokopovych"; pelin oma tarkistettu '
+        + 'aineisto js/packs/paikallisaarteet.js (UKR/pieni). Tarkistettu '
+        + '1.9.2026.',
       /*
        * Commons 30.8.2026: 861×684, public domain, tekijä L. Moll,
        * kuvaus "Sorte de ruche de la fin du 19e siècle", tiedostonimi

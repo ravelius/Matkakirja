@@ -350,6 +350,10 @@ export const FOKUSVIRTA_KRAKOVA = {
         + '1800-luvun taiteen galleria, joka on siellä yhä. Isoisäsi käveli '
         + 'siis hallin ohi kuusi vuotta liian aikaisin — ja näki sen '
         + 'sellaisena kuin sitä ei enää voi nähdä kukaan.',
+      lahde: 'en-Wikipedia "Kraków Cloth Hall" ja pl-Wikipedia "Sukiennice w '
+        + 'Krakowie"; pelin oma tarkistettu aineisto '
+        + 'js/packs/kulttuuri-kategoriat.js (krakova/kaupunki). Tarkistettu '
+        + '1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto krakova/ennenNyt,
        * js/packs/kulttuuri-kategoriat.js) — siis jo kertaalleen
@@ -488,6 +492,9 @@ export const FOKUSVIRTA_KRAKOVA = {
         + 'Guinnessin kirjaan: 11. kesäkuuta 2000 sen soitti yhtä aikaa '
         + 'lähes kaksituhatta torvensoittajaa eri puolilta maailmaa, nuorin '
         + 'kahdeksanvuotias ja vanhin 79.',
+      lahde: 'en-Wikipedia "St. Mary\'s Trumpet Call"; pelin oma tarkistettu '
+        + 'aineisto js/packs/kulttuuri-kategoriat.js (krakova/kaupunki). '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto krakova/kaupunki,
        * js/packs/kulttuuri-kategoriat.js) — jo kertaalleen tarkistettu ja
@@ -613,6 +620,9 @@ export const FOKUSVIRTA_KRAKOVA = {
         + '— yli kolme ja puoli miljoonaa kävijää vuonna 2025 — ja se '
         + 'pääsi 1978 osana vanhaakaupunkia ensimmäiseen erään Unescon '
         + 'maailmanperintöluetteloa.',
+      lahde: 'en-Wikipedia "Wawel Castle"; pelin oma tarkistettu aineisto '
+        + 'js/packs/kulttuuri-kategoriat.js (krakova/avauskuvat). Tarkistettu '
+        + '1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto
        * krakova/avauskuvat, js/packs/kulttuuri-kategoriat.js) — jo

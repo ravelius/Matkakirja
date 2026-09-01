@@ -321,6 +321,7 @@ export const FOKUSVIRTA_BUKAREST = {
         + 'muistoksi; se on kadonnut. Vuoden 1802 maanjäristys pudotti '
         + 'tornin huipun ja kellon, ja kun torni 1888 purettiin kokonaan, '
         + 'sen 1 700 kilon kello vietiin Sinaian luostariin.',
+      lahde: 'en-Wikipedia "Turnul Colței". Tarkistettu 1.9.2026.',
       /*
        * Commons 25.8.2026: 2707×1786, public domain, Amedeo Preziosi,
        * päiväys 1868, Category:Turnul Colței. Akvarelli on viisi vuotta
@@ -368,6 +369,7 @@ export const FOKUSVIRTA_BUKAREST = {
         + 'kuvansa kuningatar Victorialle Osbornessa, jolta sai '
         + 'kultamitalin. Vuodesta 1863 hän oli hovin virallinen maalari ja '
         + 'valokuvaaja.',
+      lahde: 'en-Wikipedia "Carol Szathmari". Tarkistettu 1.9.2026.',
       /*
        * "PIDETÄÄN", EI "OLI" — raportin nimenomainen ohje: lähde itse
        * muotoilee asian "is considered the world's first combat
@@ -426,6 +428,7 @@ export const FOKUSVIRTA_BUKAREST = {
         + 'ruskeakarhusanktuaari, ja sinne pääsee vain opastetulle '
         + 'kierrokselle, tiistaista sunnuntaihin — eikä alle viisivuotiaita '
         + 'päästetä sisään lainkaan.',
+      lahde: 'en-Wikipedia "Wildlife of Romania". Tarkistettu 1.9.2026.',
       /*
        * Commons 25.8.2026: 2048×1536, CC0, Costin Costan, kuvattu
        * 1.9.2017, kuvaus "Close encounter with Carpathian brown bear".
@@ -670,6 +673,8 @@ export const FOKUSVIRTA_BUKAREST = {
         + 'Moldavian historiasta ja kopioi kirjasta alaviitteen "Dracula '
         + 'means devil". Vlad Seivästäjää ei mainita muistiinpanoissa '
         + 'lainkaan.',
+      lahde: 'en-Wikipedia "Bram Stoker", en-Wikipedia "Dracula" ja '
+        + 'en-Wikipedia "Vlad the Impaler". Tarkistettu 1.9.2026.',
       /*
        * PÄÄKUVAKSI HAVAINNEKUVA (28.8.2026, sama malli kuin Sofian
        * areenalla ja Kreikan kahdella nostolla): repon oma generoitu

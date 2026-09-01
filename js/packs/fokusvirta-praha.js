@@ -254,6 +254,10 @@ export const FOKUSVIRTA_PRAHA = {
         + 'aurinkoa soikiota pitkin — ja siitä tuli yksi luonnontieteen '
         + 'käännekohdista. Tycho itse on haudattu Tynin kirkkoon, sadan '
         + 'metrin päähän kellosta.',
+      lahde: 'en-Wikipedia "Tycho Brahe" ja en-Wikipedia "Rudolf II, Holy '
+        + 'Roman Emperor"; pelin oma tarkistettu aineisto '
+        + 'js/packs/kulttuuri-kategoriat.js (praha/avauskuvat). Tarkistettu '
+        + '1.9.2026.',
       /*
        * Commons 29.8.2026: 3072×4080, CC0, käyttäjä Arpasevan, kuvattu
        * 28.5.2026, kuvaus "Tycho Brahe's Tomb in Prague's Týn Church".
@@ -341,6 +345,7 @@ export const FOKUSVIRTA_PRAHA = {
         + 'säänmittaus alkoi Klementinumissa vuonna 1775, ja se jatkuu '
         + 'yhä. Isoisäsi lukemat mahtuisivat siihen sarjaan yhtenä '
         + 'lokakuisena rivinä.',
+      lahde: 'en-Wikipedia "Clementinum". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 6000×4000, CC BY-SA 4.0, Václav Jiroušek,
        * kuvattu 12.4.2024, kuvaus "Baroque Library Hall located in the
@@ -422,6 +427,9 @@ export const FOKUSVIRTA_PRAHA = {
         + '1990-luvulta lähtien hevosia on palautettu Mongolian aroille, '
         + 'ja Prahan eläintarha on kuljettanut niitä sinne useassa '
         + 'erässä, muun muassa Tšekin ilmavoimien koneilla.',
+      lahde: 'en-Wikipedia "Przewalski\'s horse", cs-Wikipedia "Chov koně '
+        + 'Převalského v Zoo Praha" ja en-Wikipedia "Rudolf II, Holy Roman '
+        + 'Emperor". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 2200×1567, CC BY-SA 2.5, tšekkiläinen
        * Wikipedia-käyttäjä Packa, kuvattu 1.9.2007, kuvaus

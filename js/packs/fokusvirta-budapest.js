@@ -237,6 +237,8 @@ export const FOKUSVIRTA_BUDAPEST = {
         + 'kaksikymmentäviisisataa vuotta myöhemmin laskettuna '
         + 'viisikymmentäkaksi, neljässä rivissä. Osa katosi toisessa '
         + 'maailmansodassa; noin kolmesataa osaa on yhä tallella.',
+      lahde: 'en-Wikipedia "Aquincum", en-Wikipedia "Pipe organ" ja '
+        + 'hu-Wikipedia "Aquincumi víziorgona". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 3488×2616, CC BY-SA 2.0, Jerzy Kociatkiewicz,
        * kuvattu 20.8.2007, kuvaus kertoo suoraan kuvan olevan
@@ -311,6 +313,9 @@ export const FOKUSVIRTA_BUDAPEST = {
         + 'kristallien peittämä luola, joka on syntynyt 300 000–500 000 '
         + 'vuotta sitten — kauan ennen kuin kukaan asettui joen rannalle '
         + 'kiistelemään kaupungin nimestä.',
+      lahde: 'en-Wikipedia "Tourism in Hungary", en-Wikipedia "List of World '
+        + 'Heritage Sites in Hungary" ja en-Wikipedia "Gellért Hill". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 1200×798, CC BY-SA 3.0, VinceB, kuvattu
        * 10.4.2012, kuvaus "Pál-völgy Cave, Budapest, Hungary".
@@ -386,6 +391,9 @@ export const FOKUSVIRTA_BUDAPEST = {
         + 'raiteilla. Keisari Franz Joseph vihki radan toukokuussa 1896. '
         + 'Sama neljän ja puolen kilometrin rata yhdentoista asemineen '
         + 'kulkee yhä.',
+      lahde: 'en-Wikipedia "Metro Line M1 (Budapest Metro)"; pelin oma '
+        + 'tarkistettu aineisto js/packs/maa-kategoriat.js (GBR/historia). '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 1021×799, public domain, tekijä tuntematon,
        * vuosi 1896, kuvaus "Andrássy út in Budapest, Hungary, showing an
