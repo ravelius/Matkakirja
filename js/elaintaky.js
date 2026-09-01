@@ -81,7 +81,9 @@
 import { taytaLahderivi } from './tekijakortti.js';
 import { html, jaaKappaleiksi, nielaiseSulkevaNapautus, TOAST_MS } from './ui-apurit.js';
 import { el, maare } from './mapart.js';
-import { avaaKohdeSuurennos, suljeKohdeSuurennos } from './fokuskohteet.js';
+import {
+  avaaKohdeSuurennos, elainmerkinNapautusLuovutettu, suljeKohdeSuurennos,
+} from './fokuskohteet.js';
 import { nostosymKortinYlarivi, piirraNostosymKartalle } from './fokusnosto-symbolit.js';
 import { piirraKarttavalo } from './karttavalot.js';
 import { projisoiLaudalle } from './fokusmitat.js';
@@ -251,6 +253,14 @@ function elaintakyNimio(taky) {
 /** Yksi merkki: näkymätön osuma-alue, viivamerkki ja nimiö. */
 function elaintakyPiirraMerkki(ui, ryhma, tieto) {
   const g = el('g', { class: 'elaintaky-merkki' }, ryhma);
+  /*
+   * MAAKOODI SOLMUUN (QA 1.9.2026): kohdekerros ratkoo limittäiset
+   * napautukset kaikkien merkkien kesken (js/fokuskohteet.js
+   * merkkiNapautuksenVoittaja) ja tuntee tämän kerroksen vain DOMin
+   * kautta — tuonti toisin päin olisi kehä. Määre kertoo voittaneen
+   * merkin eläimen, ja ui.avaaElaintakyMerkki panee voiton täytäntöön.
+   */
+  g.dataset.elaintaky = tieto.iso;
   g.setAttribute('role', 'button');
   g.setAttribute('tabindex', '0');
   g.setAttribute('aria-label', `${elaintakyMaanNimi(ui, tieto.iso)}: ${tieto.taky.elain}`);
@@ -283,6 +293,17 @@ function elaintakyPiirraMerkki(ui, ryhma, tieto) {
   const avaa = (tapahtuma) => {
     tapahtuma.stopPropagation();
     tapahtuma.preventDefault();
+    /*
+     * LÄHIN KESKIPISTE VOITTAA — MYÖS TOISESTA KERROKSESTA (QA-ajo
+     * 1.9.2026, kolme väärin auennutta korttia). Tämä kerros piirtyy
+     * kohdekerroksen päälle, joten selain antoi limittäisen napautuksen
+     * aina eläimelle, vaikka kohdemerkin keskipiste oli lähempänä.
+     * Kilpailu käydään yhdessä paikassa (js/fokuskohteet.js
+     * merkkiNapautuksenVoittaja); jos voitto meni muualle, työ on jo
+     * tehty siellä. Kysytään ENNEN kiireen estoa, jotta luovutettu
+     * napautus kulkee samalla tavalla kuin kohdemerkiltä.
+     */
+    if (elainmerkinNapautusLuovutettu(ui, tapahtuma, g)) return;
     // Kesken animaation (nopan pyörähdys, siirtymä) kartta ottaa yhä
     // napautuksia vastaan — sama kiireen esto kuin kaupungin laatalla.
     if (ui.busy) return;
@@ -310,6 +331,22 @@ export function paivitaElaintakyt(ui) {
   if (typeof document === 'undefined') return;
   const kerros = elaintakyVarmistaKerros(ui);
   if (!kerros) return;
+  /*
+   * VOITON TÄYTÄNTÖÖNPANO KOHDEKERROKSELLE (QA 1.9.2026). Kun kilpailun
+   * (js/fokuskohteet.js merkkiNapautuksenVoittaja) voittaa eläinmerkki,
+   * kortin avaa tämä kerros — kohdekerros ei voi tuoda tätä moduulia
+   * (kehä), joten se saa avaajan ui:n kautta. Kiireen esto on tässä
+   * samasta syystä kuin merkin omassa kuuntelijassa.
+   *
+   * KERRAN PER UI: tämä ajetaan joka piirrossa, eikä sulkeumaa kannata
+   * luoda uudestaan joka kehyksellä (sama tapa kuin vastaskaalaajalla
+   * alempana).
+   */
+  ui.avaaElaintakyMerkki ??= (merkki) => {
+    const iso = merkki?.dataset?.elaintaky;
+    if (!iso || ui.busy) return;
+    avaaElaintaky(ui, iso);
+  };
   const takyt = elaintakyLaudalla(ui);
   const lunastetut = takyt.filter((t) => ui.game?.elaintakyLunastettu?.(t.iso)).length;
   const avain = takyt.length

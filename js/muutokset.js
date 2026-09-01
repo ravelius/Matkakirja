@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1426, teksti: 'Eläintäky ei enää varasta naapurimerkin napautusta' },
   { v: 1425, teksti: 'Rajat tarkasti, tummennus pysyy, uudet nimikoot' },
   { v: 1424, teksti: 'Karttanoston teksti on kokonaan napautettava' },
   { v: 1423, teksti: 'Maareitit yhtenäiseen lämpimään vetoon, helmet pienemmiksi' },
