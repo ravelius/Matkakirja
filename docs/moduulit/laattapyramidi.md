@@ -489,13 +489,39 @@ Peli katsoo valittua tasoa noin 1:1 **laitepikseleinä**
 on puhelimella 1 170 ja työpöydällä 1 440–3 024 laitepikseliä leveä.
 Tasolla z2 jokainen nimetty meri mahtuu näkymään kaikilla näillä
 laitteilla; z3:lla Tyynimeri ja Jäämeri ovat jo kaksi ruudullista.
-**Raja kulkee siis z2:n ja z3:n välissä**, ja se on koodissa samassa
-yksikössä kuin muutkin yleistyskynnykset (kuvapikseliä lautayksikköä
-kohti): `KALUSTEIDEN_YLARAJA = 0,3`, kun z2 on 0,225 ja z3 on 0,45.
+**Raja kulki siis aluksi z2:n ja z3:n välissä**, ja se on koodissa
+samassa yksikössä kuin muut yleistyskynnykset (kuvapikseliä
+lautayksikköä kohti): `KALUSTEIDEN_YLARAJA = 0,3`, kun z2 on 0,225 ja
+z3 on 0,45.
 
 Sama luku on generoi-laattapyramidi.mjs:ssä umpimeren karsintaa varten
 (`umpimeriSavy` ehto 4 koskee vain kalustetasoja) — kaksi kopiota, ja
 ne on pidettävä samana.
+
+#### Kynnys nousi z3:lle (omistaja 1.9.2026 illalla)
+
+Sanatarkasti: *"toiseksi uloin zoomtaso saisi sisältää samat
+lisämerkinnät karttaan kuin uloin taso. tai ainakin sen ison
+ilmansuunta symbolin meren päällä."* Sama taso ja sama pari
+kaappauksia kuin saman päivän aamun kalustepyynnössä (5000 km = z2,
+2000 km = z3): aamun korjaus vei marginaalin kalusteet z3:lle, joten
+z3:lle jäi arkki, jossa on otsikko ja painajanrivi mutta ei yhtään
+valtameren nimeä eikä kompassiruusua.
+
+**Kynnys 0,3 → 0,5**, eli nimet ja ruusu piirtyvät tasoille z0–z3
+(z4:n 0,90 jää yhä ulkopuolelle). Alkuperäinen mittaus ei kumoudu:
+kriteeri *"koko meri on näkyvissä"* oli oikea kysymys nimen
+**sijoittelulle**, ei sen olemassaololle. Nimi ja meri ovat molemmat
+kartan mittakaavassa (`S`), joten nimen osuus altaastaan on joka
+tasolla sama — z3:lla ATLANTIN VALTAMERI on 564 px ja sen allas
+1 239 px, sama suhde kuin z2:n 282 / 619. Yksikään taulukon
+täyttöasteista ei siis muutu; ainoa muutos on, ettei Tyynenmeren nimeä
+näe enää yhdellä silmäyksellä koko altaansa kanssa — ja omistaja pyysi
+tätä nähtyään juuri sen näkymän.
+
+Kynnys on kahdessa paikassa (piirto ja karsinta), ja molemmat
+nostettiin; tests/viivataso.test.mjs vartioi sekä haarukkaa (z3:n ja
+z4:n välissä) että kopioiden yhtäsuuruutta.
 
 ### Koot mitoitettiin uudestaan sen mukaan, missä ne piirretään
 
@@ -533,7 +559,7 @@ vie kehän 13,8°:een eli juuri avoveden sisään; 1,9 veisi sen
 | z0 | 675 | 3,4 px | 71 px | 52 px | kyllä |
 | z1 | 1 350 | 6,8 px | 141 px | 104 px | kyllä |
 | z2 | 2 700 | **13,5 px** | **282 px** | **207 px** | kyllä |
-| z3 | 5 400 | (27,0) | (564) | (414) | **ei** |
+| z3 | 5 400 | 27,0 px | 564 px | 414 px | **kyllä** (1.9.2026 illasta) |
 | z4–z7 | 10 800–86 400 | (54–432) | (1 128–9 026) | (829–6 629) | **ei** |
 
 Katsottu: z2 on nyt luettava maailmankartta, jossa jokainen meri on

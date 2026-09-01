@@ -164,7 +164,8 @@ const TASOJA = 8;
  * Marginaali, kaksoisviiva, kartussi, mittajana ja painajanrivi elävät
  * arkin reunassa ja ovat joka tasolla. Valtamerten nimet ja
  * kompassiruusu ovat kartan ALALLA, ja ne piirretään vain uloimmille
- * tasoille (omistaja 30.8.2026) — ks. MERET ja KOMPASSI alempana.
+ * tasoille (omistaja 30.8.2026; z0–z3 1.9.2026 illasta alkaen) —
+ * ks. MERET ja KOMPASSI alempana.
  */
 const KEHYS = {
   yla: 232,
@@ -215,8 +216,16 @@ const MERET = [
 /*
  * Kynnys on moottorin oma (maailmapiirto.js KALUSTEIDEN_YLARAJA); tämä
  * on sen kopio umpimeren karsintaa varten, ja ne on pidettävä samana.
+ *
+ * NOSTETTU 0,3 -> 0,5 (omistaja 1.9.2026 illalla: *"toiseksi uloin
+ * zoomtaso saisi sisältää samat lisämerkinnät karttaan kuin uloin
+ * taso. tai ainakin sen ison ilmansuunta symbolin meren päällä."*).
+ * Nimet ja ruusu piirtyvät nyt myös z3:lle (0,45), ja karsinnan on
+ * tiedettävä se: muuten se hylkäisi umpimeren laattoina juuri ne
+ * laatat, joihin piirto kirjoittaa nimen tai ruusun. Perustelut
+ * kokonaisuudessaan maailmapiirto.js:n osiossa 7.
  */
-const KALUSTEIDEN_YLARAJA = 0.3;
+const KALUSTEIDEN_YLARAJA = 0.5;
 
 /*
  * TASON 0 LEVEYS johdetaan syvimmästä: 86 400 / 2^7 = 675 px.
@@ -874,19 +883,26 @@ function lisaaJana(joukko, mitat, ax, ay, bx, by, m) {
  * REITTITYYLI "MAA PALAA YHTENÄISEEN VIIVAAN"): helmi 15 -> 10 ja
  * kehä 9,0 -> 6,0, ja maantie on yhtenäinen 6,0:n veto. Molemmat
  * ulottumat siis KUTISTUVAT — mutta ne lasketaan yhä lajien
- * YLÄRAJASTA, eli meren katkoviivasta ja meren helmen ankkurista:
+ * YLÄRAJASTA, eli meren katkoviivasta ja meren helmen ankkurista.
+ *
+ * JA VIELÄ KERRAN (omistaja 1.9.2026 myöhään illalla, ks. REITTITYYLI
+ * "MERI KAPENEE JA TIHENEE"): meren veto 9,0 -> 7,5 ja jakso
+ * 190 -> 150. Veton kaventuminen ei näy `reitti`-ulottumassa
+ * lainkaan, koska sen määrää helmi eikä veto; JAKSON lyhentyminen sen
+ * sijaan kutistaa `helmi`-ulottuman, koska ankkurin suurin siirtymä on
+ * puoli jaksoa:
  *
  *   reitti  MERI: solmuheitto 0,60 + vapina 0,35 + katkon sivu 0,55
  *           + kaari 0,95 + puoli veton leveyttä
- *           (9,0 · 1,12 / 2 = 5,04)                          = 7,49
+ *           (7,5 · 1,12 / 2 = 4,20)                          = 6,65
  *           MAA: solmuheitto 0,60 + vapina 0,35 + puoli veton
  *           leveyttä (6,0 · 1,12 / 2 = 3,36)                  = 4,31
  *           MUTTA helmi on kummallakin lajilla VIIVALLA, joten
  *           korridorin on katettava myös helmen ulottuma
  *           säde 10 + puoli kehää (6,0 / 2 = 3,0)             = 13,0
  *   helmi   MERELLÄ ankkuri voi siirtää helmen jopa puoli jaksoa
- *           (190 / 2 = 95) pitkin viivaa raakapaikastaan:
- *           13,0 + 95                                         = 108,0
+ *           (150 / 2 = 75) pitkin viivaa raakapaikastaan:
+ *           13,0 + 75                                         = 88,0
  *           (maalla ankkuria ei ole, joten siellä riittää 13,0)
  *   raja    puoli veton leveyttä (1,8 / 2)                    = 0,90
  *
@@ -894,7 +910,7 @@ function lisaaJana(joukko, mitat, ax, ay, bx, by, m) {
  * lainkaan (ks. LENNOT EIVÄT OLE VIIVATASOLLA).
  */
 const ULOTTUMA = {
-  reitti: 13.2, helmi: 108.5, raja: 1.0,
+  reitti: 13.2, helmi: 88.5, raja: 1.0,
 };
 /** Patinan musteen ulottuma laatan reunan yli (sama kuin nostolla). */
 const VIIVA_MARGINAALI_PX = NOSTO_MARGINAALI_PX;
@@ -1381,10 +1397,10 @@ function umpimeriSavy(mitat, sarake, rivi, syyt = null) {
    * kallis: se hylkäisi tuhansia laattoja, joissa ei ole mitään.
    *
    * EHTO KOSKEE VAIN NIITÄ TASOJA, JOILLA KALUSTEET PIIRRETÄÄN
-   * (omistaja 30.8.2026, ks. MERET yllä). Syvemmillä tasoilla arkilla
-   * ei ole merennimeä eikä ruusua, joten niiden varaama ala olisi
-   * varaus tyhjästä — ja juuri syvät tasot ovat ne, joilla karsittavia
-   * laattoja on tuhansia.
+   * (omistaja 30.8.2026, ks. MERET yllä; kynnys nousi z3:lle 1.9.2026
+   * illalla). Syvemmillä tasoilla arkilla ei ole merennimeä eikä
+   * ruusua, joten niiden varaama ala olisi varaus tyhjästä — ja juuri
+   * syvät tasot ovat ne, joilla karsittavia laattoja on tuhansia.
    */
   const YKS_PER_VIITE = LAUTA.projektio.leveys / 6400;
   const ASTE = LAUTA.projektio.leveys / 360;
