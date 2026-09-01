@@ -202,7 +202,15 @@ function nostoladontaMerkit({
        * TIETUEESEEN ENNEN SOLMUEHTOA").
        */
       nimioNakyy: Boolean(r.nimi) && r.nimioNakyy !== false,
-      nimioVasemmalle: Boolean(r.nimioVasemmalle),
+      /*
+       * NIMIÖN KYLKI, NELJÄSTÄ (1.9.2026): oikea, vasen, ylä tai ala —
+       * sama joukko kuin kartan omilla paikannimillä (js/karttanimet.js)
+       * ja sama, jonka väistö juuri päätti. Kenttä oli 1.9.2026 asti
+       * totuusarvo `nimioVasemmalle`, ja kaksi kylkeä pudotti 55 nimiötä
+       * pelkkien symbolitörmäysten takia (ks. js/fokuskohteet.js
+       * KOHDE_NIMIO_PUOLET).
+       */
+      nimioPuoli: r.nimioPuoli ?? 'oikea',
       /*
        * KARTAN 18 MERKIN SÄÄNTÖ KOSKEE JOKAISTA NIMIÖTÄ (31.8.2026).
        * Poikkeus oli yhdistetyn merkin pilkkulista, joka oli jo ladottu
@@ -250,7 +258,7 @@ function nostoladontaMerkit({
  * }}
  *
  * Merkin kentät ovat laudan yksiköitä ja valmiiksi ladottuja:
- * `x`, `y`, `symboli`, `laji`, `nimio`, `nimioNakyy`, `nimioVasemmalle`,
+ * `x`, `y`, `symboli`, `laji`, `nimio`, `nimioNakyy`, `nimioPuoli`,
  * `nimioRajaton` ja `s` (maan merkkiskaala). Piirtäjä
  * (tools/fokuskartta/maailmapiirto.js) ei laske niistä mitään
  * uudelleen — se vain skaalaa ne laatan kuvapikseleiksi.

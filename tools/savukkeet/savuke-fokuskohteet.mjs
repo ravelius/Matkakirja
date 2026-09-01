@@ -57,7 +57,7 @@ import { FOKUSVIRRAT } from '../../js/packs/fokusvirrat.js';
 import { MAASTOKOHTEET } from '../../js/packs/maastokohteet.js';
 import { SYVENNYSPAIKAT } from '../../js/packs/syvennyspaikat.js';
 import { SKANDAALIT } from '../../js/packs/skandaalit.js';
-import { nostosymTekstinLeveys } from '../../js/fokusnosto-symbolit.js';
+import { NOSTOSYM_MINI_RUUTU, nostosymTekstinLeveys } from '../../js/fokusnosto-symbolit.js';
 
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
 const paketti = await import('playwright')
@@ -701,36 +701,54 @@ vaadi('kaupunkimerkki jättää nimiön lehden painojäljelle',
  * (erottelupassin lupaus), joten koe koskee vain KAISTOJA: kaista ei
  * saa mennä toisen merkin neliön eikä toisen kaistan päälle.
  *
- * KAISTA VOI OLLA KUMMALLA PUOLELLA TAHANSA (v1218): väistö kääntää
- * nimiön merkin vasemmalle, jos oikea kylki on tukossa. Neliön paikka
- * luetaan siksi merkin OMASTA keskipisteestä (osuma-ympyrä) eikä
- * kuvan vasemmasta reunasta — muuten koe mittaisi peilatulla merkillä
- * nimiökaistan tilalla symbolia ja päinvastoin.
+ * KAISTA VOI OLLA MILLÄ KYLJELLÄ TAHANSA (v1218, neljä kylkeä
+ * 1.9.2026): väistö siirtää nimiön vasemmalle, ylös tai alas, jos
+ * oikea kylki on tukossa. Merkin NELIÖ on aina ryhmän origossa eli
+ * osuma-ympyrän keskellä, ja rasterin loppu on nimiön kaista — kylki
+ * luetaan rasterin omasta `data-puoli`-määreestä, koska pystykyljellä
+ * kuva ei ole enää neliön korkuinen eikä sitä voi päätellä mitoista.
+ * Ilman sitä koe mittaisi pystynimiön kohdalla symbolin paikalla
+ * tekstiä ja päinvastoin.
  */
-const nimioLimitys = await sivu.evaluate(() => {
+const nimioLimitys = await sivu.evaluate((RUUTU) => {
   const merkit = [...document.querySelectorAll('.fokuskohde')].map((g) => {
-    const r = g.querySelector('.fokuskohde-glyyfi')?.getBoundingClientRect();
+    const glyyfi = g.querySelector('.fokuskohde-glyyfi');
+    const r = glyyfi?.getBoundingClientRect();
     const o = g.querySelector('.fokuskohde-osuma')?.getBoundingClientRect();
     if (!r || !(r.height > 0) || !o) return null;
-    const keski = o.left + o.width / 2;
-    const puolikas = r.height / 2;
+    const keskiX = o.left + o.width / 2;
+    const keskiY = o.top + o.height / 2;
+    /*
+     * RUUTUPIKSELIÄ KIRJASTON YKSIKKÖÄ KOHTI luetaan rasterin omasta
+     * leveydestä: <image> saa mittansa kirjaston yksiköissä
+     * (nostosymRasteroi), ja sen ruutulaatikko on saman kuvan mitta
+     * skaalattuna. Näin merkin neliö saadaan tarkasti myös silloin,
+     * kun kuva on nimiön takia neliötä leveämpi TAI korkeampi.
+     */
+    const kuva = glyyfi.querySelector('image.nostosym-rasteri');
+    const leveysYksikoissa = Number(kuva?.getAttribute('width')) || 0;
+    const px = leveysYksikoissa > 0 ? r.width / leveysYksikoissa : r.height / (RUUTU * 2);
+    const puolikas = RUUTU * px;
     const sym = {
-      x1: keski - puolikas, x2: keski + puolikas, y1: r.top, y2: r.bottom,
+      x1: keskiX - puolikas, x2: keskiX + puolikas,
+      y1: keskiY - puolikas, y2: keskiY + puolikas,
     };
-    // Neliön ulkopuolelle jäävä osa on nimiön kaista, kummalla puolella
-    // tahansa; ilman nimiötä sitä ei ole.
-    const vasen = sym.x1 - r.left > 0.5;
-    const oikea = r.right - sym.x2 > 0.5;
-    return {
-      id: g.dataset.kohde,
-      sym,
-      kaista: vasen || oikea ? {
-        x1: vasen ? r.left : sym.x2,
-        x2: vasen ? sym.x1 : r.right,
-        y1: r.top,
-        y2: r.bottom,
-      } : null,
-    };
+    const puoli = kuva?.dataset.puoli ?? 'oikea';
+    const onNimio = kuva ? Boolean(kuva.dataset.nimio) : r.width - puolikas * 2 > 0.5;
+    // Neliön ulkopuolelle jäävä osa on nimiön kaista sillä kyljellä,
+    // jonka väistö valitsi; ilman nimiötä sitä ei ole.
+    let kaista = null;
+    if (onNimio && puoli === 'vasen') {
+      kaista = { x1: r.left, x2: sym.x1, y1: sym.y1, y2: sym.y2 };
+    } else if (onNimio && puoli === 'yla') {
+      kaista = { x1: r.left, x2: r.right, y1: r.top, y2: sym.y1 };
+    } else if (onNimio && puoli === 'ala') {
+      kaista = { x1: r.left, x2: r.right, y1: sym.y2, y2: r.bottom };
+    } else if (onNimio) {
+      kaista = { x1: sym.x2, x2: r.right, y1: sym.y1, y2: sym.y2 };
+    }
+    if (kaista && (kaista.x2 - kaista.x1 <= 0.5 || kaista.y2 - kaista.y1 <= 0.5)) kaista = null;
+    return { id: g.dataset.kohde, sym, kaista };
   }).filter(Boolean);
   // Puolen pikselin vara: pyöristys ei saa tehdä kosketuksesta osumaa.
   const yli = (a, b) => a.x1 < b.x2 - 0.5 && b.x1 < a.x2 - 0.5
@@ -749,7 +767,7 @@ const nimioLimitys = await sivu.evaluate(() => {
     }
   }
   return { osumat: [...new Set(osumat)], kaistoja: merkit.filter((m) => m.kaista).length };
-});
+}, NOSTOSYM_MINI_RUUTU);
 vaadi('ladottu nimiö ei mene naapurin symbolin eikä nimiön päälle',
   nimioLimitys.kaistoja > 0 && nimioLimitys.osumat.length === 0,
   nimioLimitys.osumat.join(', '));
