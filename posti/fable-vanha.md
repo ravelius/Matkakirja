@@ -1,3 +1,270 @@
+## 1.9.2026 20:40 UTC — KUVATILAUS H1 yleiskuvitussessiolle: HISTORIAN HETKET (uusi sarja, oma kolmas sivusto)
+
+Omistajan tilaus tänään (sanatarkasti): *"peliin voisi tehdä
+havainnekuvina myös historiallisia hetkiä, esim. kolumbus lähdössä
+ensimmäiselle amerikan purjehdukselle tai trafalgarin taistelut tai
+marie curie työskentelemässä jne. … voisitko tehdä pitkän promptilistan
+ja välittää sen kuvaputkeen ja pyytää että perustaa vielä kolmannen
+sivuston mihin tämäntyyppiset kuvat kerätään erikseen."* Ja: *"kaikki
+mitä olen nähnyt historian kirjoissa on ollut suht etäisiä piirroksia
+jotka eivät ole vieneet mielikuvitusta siihen hetkeen"* — se on tämän
+sarjan mitta: katsoja on PAIKALLA, silmien korkeudella, hetkessä.
+
+### Pyyntö 1: kolmas sivusto
+
+Kuvajonon ja Kuvaraadin rinnalle oma sivusto **"Historian hetket"**,
+johon tämän sarjan kuvat kerätään erikseen (sama katselmointimalli:
+omistaja hyväksyy sivustolla, kuittaus postiin). Peliin ne tulevat
+vasta hyväksynnän jälkeen; sijoitus päätetään omistajan kanssa
+(vaihtoehdot: oma nostolaji "Historian hetki" kartalle kohtaan, jossa
+hetki tapahtui, ja/tai maalehden Historia-osioon). Fable kirjoittaa
+tekstit ja lähderivit; kuvassa ei tekstiä.
+
+### Tyyli (yhteinen kaikille)
+
+- K1-tyylipohja FOTOREALISTISENA (linjaus 1.9. 17:39): kuin valokuva
+  paikan päältä, luonnollinen valo, ei maalauksellista sumua, ei
+  "epic"-kiiltoa, ei tekstiä, ei vesileimoja.
+- VOIMAKAS KUVA (omistaja 1.9. 20:35: *"historiakuvat saisivat olla
+  visuaalisesti ja tunnelmaltaan voimakkaita"*): jokaisessa kuvassa on
+  yksi hallitseva valo ja sää (matala aurinko, myrskypilvi, kynttilät,
+  savu, sumu, tuhkasade), voimakas syvyys ja mittakaava (iso alus tai
+  rakennus vs. pienet ihmiset), ja hetken jännite kasvoissa ja
+  asennoissa — kuva siitä sekunnista, jolloin jotain on juuri
+  tapahtumassa. Fotorealismi ei tarkoita laimeaa: valokuvaajan
+  dramaattinen valo ja rajaus, ei tasapaksua dokumentointia.
+- Silmien korkeus, katsoja hetken sisällä (ei lintuperspektiiviä, ei
+  muotokuvaa studiossa). Kasvot saavat olla tunnistettavan näköisiä
+  historiallisten kuvien mukaan, mutta ei karikatyyriä.
+- Ajanmukaiset vaatteet, työkalut, alukset, rakennukset — jokaisen
+  promptin yksityiskohdat on tarkistettu, älä "paranna" niitä
+  nykyaikaisilla esineillä. Ei anakronismeja (ei lasikuituja, ei
+  moderneja köysiä, ei sähkövaloa ennen 1880-lukua).
+- Vaakakuva 3:2, 1536×1024 JPEG sRGB (sopii sekä nostokorttiin että
+  lehteen). Yksi versio per kuva; tunnus = tiedostonimi.
+- Havainnekuva-merkintä kuten linjattu (peli näyttää selitteen
+  "havainnekuva, tekoälyllä tuotettu rekonstruktio").
+
+### Promptilista (56 hetkeä; tunnus — paikka, aika — kohtaus)
+
+MERI JA LÖYTÖRETKET
+1. hetki-kolumbus-palos-1492 — Palos de la Frontera, Espanja, aamu
+   3.8.1492. Santa María (nao, ~25 m, pyöreä runko, kolme mastoa,
+   punaiset ristit purjeissa), Pinta ja Niña (karavelit) Río Tinton
+   suistossa; miehistö vetää ankkuria, laiturilla munkkeja La Rábidan
+   luostarista, naisia ja lapsia; Kolumbus (41 v, punertava tukka,
+   tumma viitta) peräkannella. Matala aamuaurinko, laskuvesi.
+2. hetki-magalhaes-sanlucar-1519 — Sanlúcar de Barrameda 20.9.1519.
+   Viisi laivaa (Trinidad, San Antonio, Concepción, Victoria, Santiago)
+   Guadalquivirin suussa; Magalhães ontuen (vanha polvivamma) laivan
+   kannella; espanjalaiset ja baskimerimiehet, lastia sipulia ja
+   viiniä.
+3. hetki-vasco-da-gama-restelo-1497 — Lissabon, Restelon ranta 8.7.1497.
+   Kolme laivaa (São Gabriel, São Rafael, Bérrio), rukoushetki rannalla
+   ennen lähtöä, Manuel I:n hovi, kukkuloilla Belémin alue ilman
+   myöhempää luostaria.
+4. hetki-cook-endeavour-plymouth-1768 — Plymouth 26.8.1768. HM Bark
+   Endeavour (entinen hiililaiva, kömpelö, kolme mastoa) lähtee;
+   kannella Joseph Banks luonnontutkijoineen ja kasvilaatikoineen,
+   Cook (39 v) univormussa.
+5. hetki-trafalgar-victory-1805 — Cape Trafalgar 21.10.1805 n. klo 12.
+   HMS Victoryn peräkansi: Nelson (yksi käsivarsi, tähdet takissa)
+   ja Hardy kävelevät; ympärillä savua, Redoutablen keula lähellä,
+   tykistön miehistöt paljain yläruumiin, kannella hiekkaa. Ei kuolin-
+   hetkeä — hetki ENNEN laukausta.
+6. hetki-darwin-galapagos-1835 — San Cristóbal (Chatham), Galápagos,
+   syyskuu 1835. Darwin (26 v) nuorena, mustassa takissa, tarkastelee
+   jättiläiskilpikonnaa laavakivikolla; taustalla HMS Beagle ankkurissa
+   ja veneessä miehiä; mustat laavarannat, punaiset rapuja.
+7. hetki-nansen-fram-1893 — Kristiania (Oslo) 24.6.1893. Fram (pyöreä-
+   pohjainen, matala) lähtee vuonolta; Nansen kannella vaaleassa
+   villapaidassa, rannat täynnä hattuja heiluttavaa väkeä.
+8. hetki-amundsen-etelanapa-1911 — Etelänapa 14.12.1911. Viisi miestä
+   (Amundsen, Bjaaland, Hanssen, Hassel, Wisting) turkishupuissa,
+   Norjan lippu keihäänvarressa, koirat ja reet, loputon valkea
+   tasanko, matala aurinko, hengityshöyry.
+9. hetki-titanic-southampton-1912 — Southampton 10.4.1912 keskipäivä.
+   RMS Titanic (neljä savupiippua, musta runko) irtoaa laiturista;
+   laiturilla väkijoukko, autoja ja hevosvaunuja, hinaajat, lokit.
+10. hetki-viikinkilaiva-roskilde-1000 — Roskildenvuono n. v. 1000.
+    Pitkälaiva (30 m, 60 airoa) lähtee laskuveden aikaan; miehet
+    villapaidoissa, kilvet laidassa, raidallinen villapurje; ei
+    sarvikypäriä.
+
+TIEDE JA KEKSINNÖT
+11. hetki-marie-curie-hangaari-1898 — Pariisi, rue Lhomond, École de
+    physique et chimie, vuotava puuvaja ("hangar") talvella 1898.
+    Marie Curie (31 v, tumma mekko, hiukset kiinni) sekoittaa
+    rautasauvalla pikivälkkeen (pechblende) liuosta suuressa
+    valurautapadassa; höyryä, likaisia pulloja, Pierre pöydän ääressä
+    elektrometrin kanssa; kylmä harmaa valo ikkunasta.
+12. hetki-galilei-kaukoputki-1610 — Padova, tammikuu 1610, yö. Galilei
+    (45 v, parta) katsoo puutarhassa pitkällä, ohuella kaukoputkella
+    (paperi- ja puuputki) Jupiteria; pöydällä kynttilä ja muistiinpanot
+    neljästä pisteestä.
+13. hetki-newton-prisma-1666 — Woolsthorpe Manor, kesä 1666. Newton
+    (23 v) pimennetyssä huoneessa, ikkunaluukun reiästä valonsäde
+    lasiprisman läpi seinälle kirjoksi; puinen lattia, pölyä valossa.
+14. hetki-franklin-leija-1752 — Philadelphia, kesäkuu 1752, ukkosilta.
+    Franklin ja poikansa William pellolla, silkkileija, hamppunaru,
+    avain narussa; taustalla peltoja ja synkkä taivas. (Ei salamaa
+    naruun — historiallinen epävarmuus; ukkonen etäällä.)
+15. hetki-lavoisier-laboratorio-1780 — Pariisi, Arsenalin laboratorio
+    n. 1780. Lavoisier ja Marie-Anne Paulze Lavoisier (hän kirjaa)
+    kaasumittalaitteiden, lasikellojen ja elohopeavatien keskellä.
+16. hetki-jenner-rokotus-1796 — Berkeley, Gloucestershire 14.5.1796.
+    Jenner rokottaa 8-vuotiaan James Phippsin käsivarteen lehmärokkoa
+    lypsäjä Sarah Nelmesin rakkulasta; maalaistalo, ikkunasta valoa.
+17. hetki-faraday-luento-1830 — Lontoo, Royal Institution, luentosali
+    n. 1830. Faraday demonstroi sähkömagneettista induktiota käämien
+    ja galvanometrin kanssa; puolikaaren muotoinen katsomo täynnä
+    hatullisia herroja ja naisia, kaasuvalaistus.
+18. hetki-pasteur-pullot-1862 — Pariisi, École normale supérieure,
+    laboratorio 1862. Pasteur (40 v) joutsenkaulapullojensa
+    (col de cygne) äärellä, mikroskooppi, spriilamppu.
+19. hetki-mendelejev-kortit-1869 — Pietari, helmikuu 1869. Mendelejev
+    työhuoneessaan latoo alkuainekortteja pöydälle kuin pasianssia;
+    pitkä tukka ja parta, samovaari, paperikasoja.
+20. hetki-edison-lamppu-1879 — Menlo Park, New Jersey 22.10.1879, yö.
+    Edison ja apulaiset (Batchelor, Upton) hehkulampun (hiilettynyt
+    puuvillalanka) ympärillä; lamppu palaa lasikuvussa, ympärillä
+    tyhjiöpumppu, pöydällä pattereita.
+21. hetki-rontgen-kasi-1895 — Würzburg 22.12.1895. Röntgen kuvaa
+    vaimonsa Anna Berthan kättä; pimeä laboratorio, Crookesin putki
+    hehkuu vihreänä, mustaa pahvia, valokuvalevy.
+22. hetki-wright-kitty-hawk-1903 — Kill Devil Hills 17.12.1903
+    klo 10.35. Orville makaa Flyerin siivellä, Wilbur juoksee siiven
+    kärjessä, kone irtoaa kiskolta, John T. Daniels kameran takana;
+    hiekkadyynit, kylmä tuuli, viisi todistajaa.
+23. hetki-einstein-patenttitoimisto-1905 — Bern, patenttitoimisto
+    1905. Einstein (26 v, viikset, tumma puku) korkealla jakkaralla
+    kirjoituspöydän ääressä, patenttihakemuksia ja omia paperilappuja;
+    kaasuvalo, viereisiä virkailijoita.
+25. hetki-fleming-malja-1928 — Lontoo, St Mary's Hospital 3.9.1928.
+    Fleming palaa lomalta ja katsoo petrimaljaa, jossa homepilkku ja
+    ympärillä bakteeriton kehä; sotkuinen laboratorio, ikkuna Praed
+    Streetille.
+26. hetki-gutenberg-paino-1454 — Mainz 1454. Gutenbergin paja:
+    puuruuvipuristin, ladelmakehys, painomuste pallotupoilla, kaksi
+    apulaista, Raamatun arkki ripustettuna kuivumaan.
+
+KAUPUNGIT JA RAKENTAMINEN
+27. hetki-eiffel-torni-1888 — Pariisi, kevät 1888. Eiffel-tornin
+    toinen kerros valmis, nostokurjet, niittaajat (nelimiehiset
+    ryhmät, hehkuvat niitit) teräksellä; alhaalla Champ de Mars
+    hevosvaunuineen.
+28. hetki-brunel-thames-tunnel-1827 — Lontoo, Thamesin tunneli 1827.
+    Brunelin tunnelikilpi (suuret valurautakehykset, kaivajat
+    lokeroissa), lyhdyt, märkä savi, nuori Isambard valvomassa.
+29. hetki-suezin-kanava-avajaiset-1869 — Port Said 17.11.1869.
+    Keisarinna Eugénien jahti L'Aigle johtaa laivaletkaa kanavaan;
+    rannoilla egyptiläisiä, eurooppalaisia, lippuja, hiekkaa.
+30. hetki-brooklyn-bridge-1883 — New York 24.5.1883. Brooklynin
+    silta avataan; Emily Roebling vaunuissa kukko sylissään
+    (perimätieto — jätä kukko pois, jos epävarmaa), väkijoukko,
+    ilotulitus illalla.
+31. hetki-pietari-perustus-1703 — Jänissaari 27.5.1703. Pietari I
+    (2,03 m, yksinkertainen takki) mittaa linnoituksen paikkaa
+    suolla; sotilaita, lapioita, Nevan harmaa vesi, hyttysiä.
+32. hetki-vesuvius-pompeji-79 — Pompeji 24.8.79 (tai lokakuu),
+    aamupäivä. Forumilla ihmisiä katsomassa Vesuviuksen pinjapuun
+    muotoista tuhkapatsasta; tuhkaa alkaa sataa, kauppiaat sulkevat
+    puoteja.
+33. hetki-konstantinopoli-1453 — Konstantinopoli 29.5.1453 aamu.
+    Theodosiuksen muurit, osmanien tykki (Orbanin jättitykki), savu,
+    janitsaarit, muurin harjalla viimeiset puolustajat. Ei gorea.
+34. hetki-lontoon-palo-1666 — Lontoo 4.9.1666, yö. Thamesin rannalta:
+    St Paulin vanha katedraali liekeissä, veneitä täynnä tavaraa,
+    Samuel Pepys -tyyppinen herra katsomassa.
+35. hetki-berliinin-muuri-1961 — Berliini, Bernauer Straße 13.8.1961.
+    Kansanpoliisi ja rakennusmiehet vetävät piikkilankaa katua pitkin,
+    aamu, hämmentyneitä asukkaita ikkunoissa.
+
+TAITEET, MUSIIKKI, AATTEET
+36. hetki-michelangelo-sikstus-1510 — Vatikaani 1510. Michelangelo
+    telineillä selällään/seisten maalaamassa kattoa, maali tippuu
+    partaan, kynttilät, apulainen sekoittaa kalkkia.
+37. hetki-beethoven-yhdeksas-1824 — Wien, Kärntnertortheater 7.5.1824.
+    Beethoven (kuuro) seisoo orkesterin edessä selkä yleisöön,
+    kontraaltosolisti kääntää hänet katsomaan suosionosoituksia.
+38. hetki-shakespeare-globe-1599 — Lontoo, Globe 1599. Iltapäivänäytös,
+    pyöreä katsomo, seisova "groundlings"-yleisö, näyttelijät
+    (miehiä naisrooleissa), lippu tornissa.
+39. hetki-mozart-wien-1786 — Wien, Burgtheater 1.5.1786. Figaron
+    häiden ensi-ilta, Mozart cembalon ääressä johtaa, kynttiläkruunut.
+40. hetki-luther-wittenberg-1517 — Wittenberg 31.10.1517. Luther
+    (munkinkaapu) naulaa/kiinnittää teesipaperin linnankirkon oveen;
+    syksyinen katu, opiskelijoita.
+41. hetki-ranskan-vallankumous-bastilji-1789 — Pariisi 14.7.1789
+    iltapäivä. Bastiljin portit auki, väkijoukko musketteineen ja
+    peitsineen, savua, vallankumouskokardit.
+42. hetki-olympia-ateena-1896 — Ateena, Panathinaikon stadion
+    10.4.1896. Spyridon Louis saapuu maratonin voittajana marmori-
+    stadionille, kuningas Yrjö nousee seisomaan, 60 000 katsojaa.
+43. hetki-sibelius-finlandia-1899 — Helsinki, Ruotsalainen teatteri
+    4.11.1899 (Sanomalehdistön päivien juhla). Sibelius (34 v)
+    johtaa; koristeellinen sali, kaasuvalo, säätyläisyleisö.
+44. hetki-lumiere-elokuva-1895 — Pariisi, Grand Café, Salon indien
+    28.12.1895. Ensimmäinen maksullinen elokuvanäytös: 33 katsojaa,
+    valkokangas, kinematografi, hämmästyneitä kasvoja.
+
+ARKEOLOGIA JA LÖYDÖT
+45. hetki-carter-tutankhamon-1922 — Kuninkaiden laakso 26.11.1922.
+    Carter kynttilä kädessä kurkistaa reiästä hautakammioon, Carnarvon
+    ja tytär vieressä, kultaisten esineiden kiiltoa pimeässä.
+46. hetki-schliemann-troija-1873 — Hisarlık 31.5.1873. Schliemann ja
+    Sophia kaivoshaudassa, "Priamoksen aarteen" kultaesineitä
+    kuparikattilassa; Sophia kultaisessa otsakorussa (myöhempi kuva,
+    voi jättää).
+47. hetki-rosettan-kivi-1799 — Rashid (Rosetta), heinäkuu 1799.
+    Ranskalaiset pioneerit löytävät mustan kiven linnoitustyömaalta;
+    upseeri Bouchard tarkastelee kirjoitusta, Niili taustalla.
+48. hetki-machu-picchu-bingham-1911 — Machu Picchu 24.7.1911. Hiram
+    Bingham ja paikallinen opas Melchor Arteaga raivaavat kasvillisuutta
+    terassien päältä, sumua, pilviä Huayna Picchun ympärillä.
+
+SUOMI JA POHJOLA (pelin kotiseutu)
+49. hetki-kalevala-lonnrot-1835 — Kajaani 28.2.1835. Lönnrot
+    kirjoittaa Kalevalan esipuhetta; talvi-ilta, talikynttilä,
+    runonkeräysvihkoja, sukset seinällä.
+50. hetki-helsinki-paakaupunki-1812 — Helsinki 1812. Engel ja Ehrenström
+    Senaatintorin tyhjällä tontilla piirustusten kanssa, matalat
+    puutalot, palaneita raunioita 1808 palosta.
+51. hetki-nordenskiold-vega-1878 — Karlskrona/Tromssa kesä 1878.
+    Vega lähtee Koillisväylälle; Nordenskiöld kannella, jäänsuojattu
+    keula.
+52. hetki-nobel-testamentti-1895 — Pariisi, Ruotsalais-norjalainen
+    klubi 27.11.1895. Nobel allekirjoittaa testamenttinsa neljän
+    todistajan läsnä ollessa; ei asianajajaa.
+
+ITÄ JA ETELÄ
+53. hetki-marco-polo-kublai-1275 — Shangdu (Xanadu) 1275. Marco Polo
+    (21 v) isänsä ja setänsä kanssa polvistuu Kublai-kaanin edessä
+    kesäpalatsin puutarhassa; mongolihovi, silkkiä, kurjenmiekkoja.
+54. hetki-zheng-he-laivasto-1405 — Nanjing/Liujiagang 1405. Zheng Hen
+    aarrelaivasto (jättiläisjunkit, useita mastoja, punaiset purjeet)
+    lähtee; sotilaita, virkamiehiä, suitsuketta.
+55. hetki-gandhi-suolamarssi-1930 — Dandi 6.4.1930 aamu. Gandhi
+    kumartuu poimimaan suolaa rannalta, satoja seuraajia valkoisissa
+    khadi-vaatteissa, Arabianmeri.
+56. hetki-perry-edo-1853 — Uraga 8.7.1853. Perryn mustat höyryfregatit
+    (Susquehanna, Mississippi) savuavat lahdella, japanilaisia
+    vartioveneitä, samuraita rannalla katsomassa.
+57. hetki-livingstone-stanley-1871 — Ujiji, Tanganjikajärvi
+    10.11.1871. Stanley (kypärä, Yhdysvaltain lippu kantajalla)
+    kohtaa harmaantuneen Livingstonen mangopuiden alla.
+
+(Numero 24 jätetty väliin; listassa 56 kuvaa. Jos jokin hetki tuntuu
+liian väkivaltaiselta tai epävarmalta kuvitettavaksi, jätä pois ja
+kerro — mieluummin 50 varmaa kuin 56, joista kaksi on arvailua.)
+
+### Toimitus
+
+Kuvat R2:een polkuun, jonka yleiskuvitussessio valitsee (ehdotus
+kuvat/hetket/<tunnus>.jpg), lista poluista ja hyväksytyt tunnukset
+postiin. Fable tekee sijoituksen peliin erikseen omistajan päätöksen
+mukaan (nostolaji tai maalehti) — ei vielä koodia tässä erässä.
+
 ## 1.9.2026 18:55 UTC — FABLEN TILANNEMUISTIO (reset 2 jatkuu) + KUVATILAUS E1: kaksi uutta eläintäkyä
 
 TILANNE: origin/main = v1428 (fd02e043). Tänä iltana julkaistu v1427
