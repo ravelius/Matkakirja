@@ -22,7 +22,30 @@ Linjat (omistajan päätökset 31.8.–1.9.2026):
   TÄMÄ ERÄ (K1) KUULUU JÄLKIMMÄISELLE eli yleiskuvitussessiolle;
   aarrekohtaamissessio ei käytä tätä listaa.
 
-Jokaiseen promptiin liitetään sama tyylipohja:
+Jokaiseen promptiin liitetään sama tyylipohja.
+
+**TYYLIPOHJA VAIHTUI FOTOREALISTISEKSI (omistajan päätös 1.9.2026
+ilta, Kuvajonon Wien-erän katselmoinnista; kirjattu Raamattuun
+"NOSTOKUVAT FOTOREALISTISINA").** Rehellisyys hoituu pelin
+havainnekuva-/Matkakirjan kuvitus -selitteellä, ei tyylillä. Jo
+hyväksytyt 3 Wien-kuvaa (shakkiturkkilainen, klimtin-tiedekuntamaalaukset,
+salieran-varkaus) generoidaan uusiksi tällä pohjalla. Vanha
+kaiverrospohja jää alle historiaksi — sitä EI enää käytetä.
+
+```
+STYLE = "photorealistic cinematic photograph, natural or period-accurate
+lighting, rich authentic detail, atmospheric depth of field, muted
+timeless color grade, no text, no lettering, no borders or frames,
+no watermarks, no recognizable real person's face (figures small,
+from behind or in shadow), 4:3 landscape"
+```
+
+Historiallisissa kohtauksissa lisätään promptiin aikakauden tarkenne
+(esim. "staged as if photographed on large-format film in 1903") —
+kuva saa näyttää lavastetulta rekonstruktiolta, ei nykypäivän
+uutiskuvalta.
+
+<details><summary>Vanha kaiverrospohja (käytöstä poistettu 1.9.2026)</summary>
 
 ```
 STYLE = "1870s hand-tinted steel engraving from a Victorian travel atlas,
@@ -32,6 +55,8 @@ no text, no lettering, no borders drawn as frames, no modern objects,
 no recognizable real person's face (figures small, from behind or in
 shadow), 4:3 landscape"
 ```
+
+</details>
 
 ## Skandaalit (kaikki 83 kuvattomia; 20 ensimmäistä)
 

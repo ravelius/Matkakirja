@@ -2283,6 +2283,20 @@ export const RAAMATTU = {
           + '(generoi-ihmeet.yml) jää varakanavaksi. Kuvissa ei '
           + 'tekstiä eikä vesileimaa, ja lähteeksi merkitään '
           + 'Matkakirjan havainnekuva.',
+        'NOSTOKUVAT FOTOREALISTISINA (omistaja 1.9.2026 ilta, '
+          + 'Kuvajonon Wien-eran katselmoinnista: "onhan peli taynna '
+          + 'generoituja havainnekuvia. Mikseivat namakin voisi '
+          + 'olla?"): nostojen generoidut kuvat (K1-era ja jatko, '
+          + 'myos maastokohteet) tehdaan fotorealistisina '
+          + 'havainnekuvina, EI kaiverrostyylilla — kumoaa K1:n '
+          + 'alkuperaisen 1870-terasKaiverrus-tyylipohjan; jo '
+          + 'hyvaksytyt 3 Wien-kuvaa generoidaan uusiksi. Ehdot '
+          + 'sailyvat: havainnekuva-/Matkakirjan kuvitus -selite '
+          + 'AINA nakyvissa (rehellisyys hoituu selitteella, ei '
+          + 'tyylilla), ei tunnistettavia oikeiden henkiloiden '
+          + 'kasvoja, ei tekstia kuvaan, aito Commons-kuva aina '
+          + 'ensisijainen jos kelvollinen loytyy. Aidon valokuvan '
+          + 'ja havainnekuvan eron kertoo pelissa selite.',
       ],
     },
     {
