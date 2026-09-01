@@ -98,8 +98,8 @@ export const MAASTOKOHTEET_FIN = [
     nimi: 'Kemijoki',
     tyyppi: 'joki',
     kysymykset: [
-      'Miksi Kemijoella uitettiin tukkeja?',
-      'Mikä Ounasjoki on?',
+      'Miksi Ounasjoki rauhoitettiin?',
+      'Milloin Kemijoen uitto loppui?',
     ],
     korostukset: ['Ounasjoki|Ounasjoki'],
     nappi: 'Suomen pisin joki',
@@ -108,10 +108,16 @@ export const MAASTOKOHTEET_FIN = [
       maailmankartta: { x: 6686.7, y: 589.5 },
       europe: { x: 702.7, y: 147.3 },
     },
-    teksti: 'Kemijoki on 550 kilometrin pituinen ja Suomen pisin joki. Se virtaa etelään Kemijärven '
-      + 'ja Rovaniemen kautta ja laskee Pohjanlahteen Kemissä. Rovaniemen kohdalla siihen yhtyy '
-      + 'Ounasjoki.',
-    lahde: 'en-Wikipedia "Kemijoki", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Isoisäsi aikaan Kemijoella oli juuri alkanut uitto: tukit lähtivät ensimmäisen kerran '
+      + 'alas 1860-luvulla, ja viimeiset uitettiin kesällä 1991 — satakolmekymmentä vuotta '
+      + 'samaa työtä, kunnes auto ja juna veivät sen. Uiton rinnalle tuli toinen käyttö. '
+      + 'Ensimmäinen voimalaitos rakennettiin Isohaaraan 1946, ja vähitellen Suomen pisimpään '
+      + 'jokeen ja sen valuma-alueelle nousi 21 laitosta, jotka tuottavat yli kolmanneksen maan '
+      + 'vesivoimasta. Yksi iso haara jätettiin rauhaan: Ounasjoki, joka yhtyy Kemijokeen '
+      + 'Rovaniemellä, rauhoitettiin lailla 1983, eikä siihen rakennettu yhtään voimalaa. '
+      + 'Kemijoki itse on 550 kilometriä pitkä ja laskee Pohjanlahteen Kemissä.',
+    lahde: 'fi-Wikipedia "Kemijoki", johdanto-osa sekä osiot "Kemijoen vesistön voimalaitokset" ja '
+      + '"Kemijoen uitto" (tarkistettu 1.9.2026).',
   },
 ];
 

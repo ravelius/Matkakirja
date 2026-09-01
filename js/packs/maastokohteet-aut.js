@@ -56,19 +56,27 @@ export const MAASTOKOHTEET_AUT = [
     nimi: 'Wildspitze',
     tyyppi: 'vuori',
     kysymykset: [
-      'Mitä topografinen dominanssi tarkoittaa?',
-      'Millainen on Ötztalin Alppien jäätikkö?',
+      'Miksi vuoren korkein huippu vaihtui?',
+      'Kuka oli Leander Klotz?',
     ],
+    korostukset: ['Ötztalin Alpit|Ötztalin Alppien'],
     nappi: 'Ötztalin Alppien katto',
     // 10.8672 E / 46.8853 N — en-Wikipedia "Wildspitze"
     laudat: {
       maailmankartta: { x: 6195.6, y: 1523.3 },
       europe: { x: 419.9, y: 660.5 },
     },
-    teksti: 'Wildspitze on Ötztalin Alppien ja Pohjois-Tirolin korkein vuori sekä Itävallan '
-      + 'toiseksi korkein heti Großglocknerin jälkeen. Topografiselta dominanssiltaan — 2 261 '
-      + 'metriä — se on Alppien neljäs ja koko Euroopan viidestoista huippu.',
-    lahde: 'en-Wikipedia "Wildspitze", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Wildspitzellä on kaksi huippua, ja se kumpi niistä on korkeampi, on vaihtunut kesken '
+      + 'kaiken. Kalliosta koostuva eteläinen huippu nousee 3 768 metriin, ja pohjoinen oli '
+      + 'pitkään sitä korkeampi — 1800-luvulla se mitattiin 11 947 wieniläisen jalan '
+      + 'korkuiseksi. Mutta pohjoinen huippu on lunta ja jäätä, ja sulaminen madalsi sen '
+      + '1900-luvun loppuun mennessä noin 3 765 metriin. Niinpä korkein kohta on nykyään '
+      + 'etelässä, ja samalla ensinousun vuodeksi vaihtui 1848, jolloin Rofenin laakson '
+      + 'karjatilallinen ja opas Leander Klotz nousi sinne nimettömän naapurinsa kanssa. Vuori '
+      + 'on Ötztalin Alppien ja Pohjois-Tirolin korkein sekä Itävallan toiseksi korkein '
+      + 'Großglocknerin jälkeen.',
+    lahde: 'en-Wikipedia "Wildspitze", johdanto-osa sekä osiot "Location" ja "Early ascents" '
+      + '(tarkistettu 1.9.2026).',
   },
   {
     id: 'tonava',

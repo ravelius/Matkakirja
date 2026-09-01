@@ -97,19 +97,27 @@ export const MAASTOKOHTEET_POL = [
     nimi: 'Veiksel',
     tyyppi: 'joki',
     kysymykset: [
+      'Miksi Veikselin suu siirrettiin?',
       'Miksi Krakova ja Varsova ovat molemmat Veikselin varrella?',
-      'Mihin kolmeen muuhun maahan valuma-alue ulottuu?',
     ],
+    korostukset: ['Kuollut Veiksel|Kuolleeksi Veikseliksi'],
     nappi: 'Puolan pisin joki',
     // 18.6 E / 53.01 N — Toruń joen keskijuoksulla; artikkelin koordinaatti 18,952 / 54,362 on suistossa
     laudat: {
       maailmankartta: { x: 6453.3, y: 1256.8 },
       europe: { x: 568.3, y: 499.4 },
     },
-    teksti: 'Veiksel eli puolaksi Wisła on Puolan pisin joki ja pisin Itämereen laskeva joki: 1 047 '
-      + 'kilometriä. Sen valuma-alue on 193 960 neliökilometriä ja ulottuu Puolan lisäksi '
-      + 'kolmeen muuhun maahan, mutta 168 868 neliökilometriä siitä on Puolan puolella.',
-    lahde: 'en-Wikipedia "Vistula", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Veiksel vaihtoi suunsa kahdesti puolessa vuosisadassa. Vuonna 1840 jääpato nosti '
+      + 'tulvan, joka mursi hiekan läpi uuden uoman mereen muutaman kilometrin päähän '
+      + 'Danzigista itään; sitä alettiin kutsua Rohkeaksi Veikseliksi, ja vanha uoma menetti '
+      + 'virtansa ja jäi Kuolleeksi Veikseliksi. Kun tulvat silti jatkuivat, Preussin hallitus '
+      + 'kaivoi vuosina 1889—1895 kaksitoista kilometriä kaupungista itään suoran keinouoman, '
+      + 'jotta joki huuhtoisi jäälauttansa suoraan Itämereen ennen kuin ne ehtivät padota. Se '
+      + 'on nykyään joen pääsuu — ja se ohittaa Gdańskin kokonaan. Veiksel on Puolan pisin joki '
+      + 'ja pisin Itämereen laskeva joki, 1 047 kilometriä, ja se kulkee sekä Krakovan että '
+      + 'Varsovan halki.',
+    lahde: 'en-Wikipedia "Vistula", johdanto-osa sekä osiot "Delta" ja "Channel changes" '
+      + '(tarkistettu 1.9.2026).',
   },
   {
     id: 'odra',

@@ -77,18 +77,26 @@ export const MAASTOKOHTEET_CZE = [
     tyyppi: 'joki',
     kysymykset: [
       'Miksi Vltavaa sanotaan kansallisjoeksi?',
-      'Kuinka moneen mutkaan joki kiertyy Českýn Krumlovissa?',
+      'Mikä oli Pyhän Johanneksen koski?',
     ],
+    korostukset: ['Kaarlensilta|Kaarlensiltaa'],
     nappi: 'Tšekin kansallisjoki',
     // 14.32 E / 48.81 N — Český Krumlov joen yläjuoksulla; artikkelin koordinaatti 14,475 / 50,341 on yhtymäkohdassa Elbeen
     laudat: {
       maailmankartta: { x: 6310.7, y: 1441.6 },
       europe: { x: 486.1, y: 609.9 },
     },
-    teksti: 'Vltava on Tšekin pisin joki ja Elben vasen sivujoki. Se virtaa ensin kaakkoon Böömin '
-      + 'metsän suuntaisesti ja kääntyy sitten pohjoiseen Böömin halki Českýn Krumlovin, České '
-      + 'Budějovicen ja Prahan kautta. Sitä kutsutaan yleisesti Tšekin kansallisjoeksi.',
-    lahde: 'en-Wikipedia "Vltava", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Vltavan nimi tarkoittaa villiä vettä. Sekä tšekin Vltava että saksan Moldau juontuvat '
+      + 'vanhasta germaanisesta sanaparista wilt ahwa, ja 1100-luvun Böömin kronikassa joki '
+      + 'esiintyy muodossa Wlitaua. Villiys on sittemmin kesytetty: 1930-luvulta alkaen Prahan '
+      + 'eteläpuolelle on rakennettu yhdeksän vesivoimapatoa, ja niiden altaiden alle jäi muun '
+      + 'muassa Pyhän Johanneksen koski. Kansallisjoeksi Vltavaa kutsutaan syystä: Bedřich '
+      + 'Smetana hahmotteli samannimistä sinfonista runoaan vuosina 1872—1874, ja se on Má '
+      + 'vlast -sarjan ainoa osa, joka ehti lähes valmiiksi ennen kuin säveltäjä kesällä 1874 '
+      + 'menetti kuulonsa. Elokuussa 2002 tulva vei ihmishenkiä ja heikensi Kaarlensiltaa niin '
+      + 'pahoin, että korjaukset kestivät vuosia.',
+    lahde: 'en-Wikipedia "Vltava", osiot "Etymology", "Dams", "Floods" ja "References in culture '
+      + 'and science", sekä en-Wikipedia "Má vlast" (tarkistettu 1.9.2026).',
   },
 ];
 
