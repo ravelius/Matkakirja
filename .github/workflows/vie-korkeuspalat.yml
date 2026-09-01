@@ -1,0 +1,169 @@
+# Vie ETOPO1:n 1′-korkeuspalat R2-ämpäriin.
+#
+# Omistajan kokeilu 1.9.2026: peli laskee tarkan rinnevarjon
+# reaaliajassa ETOPO1:n natiivista yhden kaariminuutin ruudukosta
+# (js/korkeuskerros.js). Ruudukko on 466 Mt raakana, joten se pilkotaan
+# 10° × 10° -paloihin (tools/tee-korkeuspalat.mjs) ja peli noutaa vain
+# näkyvän alueen palat.
+#
+# AINEISTOA EI COMMITOIDA — sama sääntö kuin dist/-kansiolla: historia
+# paisuisi eikä sitä saisi enää pieneksi. Siksi tämä ajo noutaa
+# aineiston NOAA:lta AJOKONEELLA ja vie tuloksen suoraan ämpäriin.
+# Palat päätyvät polkuun `julisteet/korkeus/1min/`, jonka julkinen
+# osoite on
+# https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/julisteet/korkeus/1min/
+# (js/media.js korkeuspalaUrl).
+#
+# === NOAA:N TAVOITETTAVUUS ON TÄMÄN AJON AINOA RISKI ================
+#
+# Laattapyramidin ensimmäinen CI-koeajo kaatui siihen, ettei NOAA:n
+# ERDDAP vastannut GitHubin ajokoneelta lainkaan ("fetch failed", ei
+# HTTP-statusta), vaikka kehityskontista sama osoite vastaa
+# sekunnissa (tools/korkeusaineisto/LUEMINUT.md). NCEI:n binäärilähdettä
+# EI ollut siihen aikaan kokeiltu ajokoneelta.
+#
+# Siksi lähde on syöte eikä vakio, ja siksi KOEAJO on oma lippunsa:
+# kolme palaa kertoo minuutissa vastaako lähde, ennen kuin kukaan
+# odottaa 322 Mt:n latausta ja 648 palaa. Jos kumpikaan lähde ei vastaa
+# ajokoneelta, se kirjataan — aineistoa EI kierretä committoimalla.
+#
+# Salaisuudet ovat tämän repon Actions-asetuksissa eivätkä koskaan
+# täällä:
+#   R2_ACCOUNT_ID  R2_ACCESS_KEY_ID  R2_SECRET_ACCESS_KEY  R2_BUCKET
+
+name: Vie korkeuspalat R2:een
+
+on:
+  workflow_dispatch:
+    inputs:
+      lahde:
+        description: 'Mistä ETOPO1 1′ noudetaan'
+        type: choice
+        default: 'ncei'
+        options: ['ncei', 'erddap']
+      koeajo:
+        description: 'Koeajo: vain kolme palaa (Alpit, Kreikka, Andit)'
+        type: boolean
+        default: true
+      palat:
+        description: 'Vain nämä palat, pilkuin (esim. N40E000,N30E020). Ohittaa koeajon.'
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+
+# Yksi ajo kerrallaan: kaksi rinnakkaista kirjoittaisi samoihin
+# tiedostoihin ja luettelo menisi sekaisin.
+concurrency:
+  group: vie-korkeuspalat
+  cancel-in-progress: false
+
+jobs:
+  vie:
+    runs-on: ubuntu-latest
+    # Täysajo lataa 322 Mt, purkaa 466 Mt ja kirjoittaa 648 palaa.
+    # Koeajo on minuutteja; katto on täysajoa varten.
+    timeout-minutes: 180
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      # R2 ei hyväksy AWS:n uudempia tarkistussummaotsakkeita, jotka
+      # aws-cli 2.23:sta alkaen lähtevät oletuksena mukaan.
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Puuttuva salaisuus tulee muuten vastaan vasta aws-clin virheenä
+      # "Invalid endpoint: https://.r2.cloudflarestorage.com", josta ei
+      # arvaa mistä on kyse. Arvoja ei tulosteta, vain onko ne asetettu.
+      - name: Tarkista että salaisuudet ovat tallessa
+        env:
+          TILI: ${{ secrets.R2_ACCOUNT_ID }}
+          AVAIN: ${{ secrets.R2_ACCESS_KEY_ID }}
+          SALAISUUS: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AMPARI: ${{ secrets.R2_BUCKET }}
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "$TILI" ]      || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "$AVAIN" ]     || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "$SALAISUUS" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "$AMPARI" ]    || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Näitä salaisuuksia ei löydy tästä reposta:$puuttuu"
+            exit 1
+          fi
+          echo "Kaikki neljä salaisuutta löytyvät."
+
+      # Tavoitettavuus mitataan ENNEN kuin mitään ladataan. Jos NOAA ei
+      # vastaa ajokoneelta, ajo kaatuu tähän yhdellä selkeällä rivillä
+      # eikä 20 minuutin päästä keskeneräiseen latausvirheeseen.
+      - name: Vastaako NOAA ajokoneelta?
+        env:
+          LAHDE: ${{ inputs.lahde }}
+        run: |
+          set -euo pipefail
+          if [ "$LAHDE" = "ncei" ]; then
+            osoite='https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO1/data/ice_surface/grid_registered/binary/etopo1_ice_g_i2.zip'
+          else
+            osoite='https://coastwatch.pfeg.noaa.gov/erddap/griddap/etopo360.das'
+          fi
+          echo "Kokeillaan: $osoite"
+          if ! curl -fsSI --max-time 120 "$osoite" | head -1; then
+            echo "::error::NOAA:n lähde $LAHDE ei vastaa GitHubin ajokoneelta."
+            echo "Kirjaa tämä raporttiin — aineistoa EI committoida repoon."
+            exit 1
+          fi
+
+      - name: Pilko palat
+        env:
+          LAHDE: ${{ inputs.lahde }}
+          KOEAJO: ${{ inputs.koeajo }}
+          PALAT: ${{ inputs.palat }}
+        run: |
+          set -euo pipefail
+          rajaus=""
+          if [ -n "$PALAT" ]; then rajaus="--palat $PALAT"
+          elif [ "$KOEAJO" = "true" ]; then rajaus="--koeajo"; fi
+          echo "Rajaus: ${rajaus:-koko maailma}"
+          # shellcheck disable=SC2086
+          node tools/tee-korkeuspalat.mjs --lahde "$LAHDE" --ulos korkeus/1min $rajaus
+          ls -l korkeus/1min | head -20
+          du -sh korkeus/1min
+
+      # `cp --recursive` eikä `sync`: palat ovat muuttumatonta
+      # lähtöaineistoa, ja osittainen ajo (koeajo, yksittäiset palat) ei
+      # saa poistaa ämpäristä sitä, mitä se ei tällä kertaa tuottanut.
+      - name: Vie ämpäriin
+        env:
+          KOEAJO: ${{ inputs.koeajo }}
+          PALAT: ${{ inputs.palat }}
+        run: |
+          set -euo pipefail
+          aws s3 cp --recursive korkeus/1min \
+            "s3://${{ secrets.R2_BUCKET }}/julisteet/korkeus/1min" \
+            --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+            --exclude '*' --include '*.bin.gz' \
+            --content-type application/gzip --no-progress
+          # LUETTELO VAIN TÄYSAJOSTA. Osittaisen ajon luettelossa on
+          # vain sen omat palat, ja ämpäriin vietynä se väittäisi, ettei
+          # muita ole olemassa. Peli ei tarvitse luetteloa piirtääkseen
+          # (puuttuva pala on 404 = ei varjoa), joten se on aineiston
+          # oma sisällysluettelo eikä pelin riippuvuus.
+          if [ -z "$PALAT" ] && [ "$KOEAJO" != "true" ]; then
+            aws s3 cp korkeus/1min/luettelo.json \
+              "s3://${{ secrets.R2_BUCKET }}/julisteet/korkeus/1min/luettelo.json" \
+              --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+              --content-type application/json --no-progress
+          else
+            echo "Osittainen ajo: luettelo.json jätettiin ämpärissä ennalleen."
+          fi
+          echo "Viety $(ls korkeus/1min/*.bin.gz | wc -l) palaa."
+          echo "Julkinen juuri: https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/julisteet/korkeus/1min/"
