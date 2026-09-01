@@ -78,6 +78,7 @@
  * (tools/tarkista-niputus.mjs), joten kaikki top-level-nimet alkavat
  * ELAINTAKY_/elaintaky-etuliitteellä.
  */
+import { taytaLahderivi } from './tekijakortti.js';
 import { html, jaaKappaleiksi, nielaiseSulkevaNapautus, TOAST_MS } from './ui-apurit.js';
 import { el, maare } from './mapart.js';
 import { avaaKohdeSuurennos, suljeKohdeSuurennos } from './fokuskohteet.js';
@@ -453,7 +454,9 @@ export function avaaElaintaky(ui, iso) {
    * sama luokka `fokusnosto-lahde` ja sama paikka — tekstin jälkeen,
    * ennen lunastusta — kuin js/fokusnosto.js piirraNostonSisus.
    */
-  if (taky.lahde) sisalto.appendChild(html('p', 'fokusnosto-lahde', taky.lahde));
+  if (taky.lahde) {
+    sisalto.appendChild(taytaLahderivi(html('p', 'fokusnosto-lahde'), taky.lahde, taky));
+  }
   sisalto.appendChild(elaintakyLunasta(ui, iso));
 
   kortti.appendChild(sisalto);
@@ -551,8 +554,8 @@ function elaintakyPiirraKuva(ui, kohde, taky, maa) {
    * Jos jokin täky saa joskus Commons-kuvan, sen oma `lahde`-kenttä
    * voittaa vakiorivin.
    */
-  teksti.appendChild(html('span', 'fokusnosto-kuvalahde',
-    taky.lahde ?? 'Matkakirjan havainnekuva'));
+  teksti.appendChild(taytaLahderivi(html('span', 'fokusnosto-kuvalahde'),
+    taky.lahde ?? 'Matkakirjan havainnekuva', taky));
   kehys.appendChild(teksti);
   kohde.appendChild(kehys);
 }

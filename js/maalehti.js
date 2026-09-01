@@ -939,7 +939,7 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
       if (eka.selite || eka.lahde) {
         const teksti = html('figcaption', 'vinkki-hero-teksti');
         if (eka.selite) teksti.appendChild(html('span', 'vinkki-hero-selite', eka.selite));
-        if (eka.lahde) teksti.appendChild(html('span', 'lahde', eka.lahde));
+        if (eka.lahde) teksti.appendChild(taytaLahderivi(html('span', 'lahde'), eka.lahde, eka));
         hero.appendChild(teksti);
       }
       // Hero johdannon perään, ennen ryhmiä.

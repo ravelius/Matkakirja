@@ -28,6 +28,7 @@
  */
 
 import { EHDOTUS_OSOITE, ehdotusKaytossa } from './ehdotukset.js';
+import { merkitseHavainnekuva } from './havainnekuva.js';
 import { html } from './ui-apurit.js';
 
 /*
@@ -179,6 +180,13 @@ export function avaaTekijaKortti(id, nimi = '') {
  * tämä on siis turvallinen korvaaja `el.textContent = lahde`:lle
  * kaikkialla, missä lähderivi piirretään.
  *
+ * KAKSI ASIAA SAMASSA APURISSA. Tekijänapin lisäksi tämä on se yksi
+ * paikka, jossa "Matkakirjan havainnekuva" -maininta muuttuu
+ * painettavaksi selitteeksi (js/havainnekuva.js). Molemmat koskevat
+ * lähderiviä, molemmat pitää tehdä joka piirtokerralla, ja
+ * kutsupaikkoja on yli kymmenen — siksi ne ovat täällä eivätkä
+ * hajallaan renderöijissä.
+ *
  * @param {HTMLElement} el lähderivin elementti (tyhjennetään)
  * @param {string} lahde lähderivin teksti
  * @param {object} kohde kuva tai nosto, josta luetaan tekijaId ja tekija
@@ -189,7 +197,7 @@ export function taytaLahderivi(el, lahde, kohde = {}) {
   const id = kohde?.tekijaId;
   if (!id || !ehdotusKaytossa()) {
     el.textContent = teksti;
-    return el;
+    return merkitseHavainnekuva(el, teksti, kohde);
   }
 
   const avaa = (nappiTeksti) => {
@@ -217,5 +225,5 @@ export function taytaLahderivi(el, lahde, kohde = {}) {
     if (teksti) el.appendChild(document.createTextNode(`${teksti} `));
     el.appendChild(avaa('Tekijästä'));
   }
-  return el;
+  return merkitseHavainnekuva(el, teksti, kohde);
 }

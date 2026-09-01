@@ -112,6 +112,7 @@ import {
 } from './pollo.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
 import { sfx } from './sound.js';
+import { taytaLahderivi } from './tekijakortti.js';
 
 /*
  * MINIVISAN PALKKIO. Raamatun osio "Aarteet ja eteneminen" antaa pienen
@@ -1117,7 +1118,7 @@ function piirraKuva(ui, kohde, kuva, luokka = 'fokusvirta-viite') {
   nappi.addEventListener('click', () => avaaSuurennos(ui, [kuva], 0, () => nappi));
   kuvateksti.append(
     html('span', 'fokusvirta-kuvaselite', kuva.selite ?? ''),
-    html('span', 'fokusvirta-kuvalahde', kuva.lahde ?? ''),
+    taytaLahderivi(html('span', 'fokusvirta-kuvalahde'), kuva.lahde ?? '', kuva),
   );
   viite.append(nappi, kuvateksti);
   kohde.appendChild(viite);
@@ -1271,7 +1272,10 @@ function avaaSuurennos(ui, lista, alku, ankkuri) {
     }, { once: true });
     iso.src = kuvanSuurennos(kuva);
     selite.textContent = kuva.selite ?? '';
-    lahde.textContent = kuva.lahde ?? '';
+    // Lähderivi kirjoitetaan uudestaan joka kuvanvaihdossa, joten
+    // havainnekuvaselite on rakennettava samalla — taytaLahderivi
+    // tyhjentää elementin ja kokoaa sen uudelleen.
+    taytaLahderivi(lahde, kuva.lahde ?? '', kuva);
     laskuri.textContent = lista.length > 1 ? `${i + 1} / ${lista.length}` : '';
   };
   nayta();

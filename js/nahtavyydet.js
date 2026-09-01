@@ -1333,7 +1333,8 @@ export function piirraMatkailijalle(ui, kohde) {
       const teksti = html('figcaption', 'kuvateksti', tiedot.kuva.selite);
       if (tiedot.kuva.lahde) {
         // Väli tulee CSS:stä (ks. "LÄHDERIVI KUVATEKSTIN JATKEEKSI").
-        teksti.appendChild(html('span', 'lehti-kuvalahde', tiedot.kuva.lahde));
+        teksti.appendChild(taytaLahderivi(html('span', 'lehti-kuvalahde'),
+          tiedot.kuva.lahde, tiedot.kuva));
       }
       kotelo.appendChild(teksti);
     }
