@@ -1,5 +1,7 @@
 /*
- * ELÄINTÄKYJEN AINEISTO — 29 maata, 29 kuvaa, 29 paikkaa kartalla.
+ * ELÄINTÄKYJEN AINEISTO — 27 maata, 27 kuvaa, 27 paikkaa kartalla
+ * (BIH ja TUR poistettu 1.9.2026 kaksoiskappaleina, ks.
+ * js/packs/elaintakyt.js; palaavat uusina eläiminä).
  *
  * Merkin paikka on tässä pelissä sisältöä siinä missä teksti: väärään
  * kohtaan piirretty eläin väittää jotain maantieteestä. Paikkoja ei voi
@@ -57,7 +59,7 @@ const paikat = new Map(ELAINTAKY_MAAT.map((iso) => {
 }));
 
 test('jokaisella eläintäyllä on kaanoniteksti, kuva ja paikka', () => {
-  assert.equal(ELAINTAKY_MAAT.length, 29, 'eläintäkyjä on 29 maassa');
+  assert.equal(ELAINTAKY_MAAT.length, 27, 'eläintäkyjä on 27 maassa (29 − BIH − TUR)');
   for (const iso of ELAINTAKY_MAAT) {
     const taky = ELAINTAKYT[iso];
     assert.match(iso, /^[A-Z]{3}$/, `${iso}: avain on kolmikirjaiminen maatunnus`);

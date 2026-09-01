@@ -36,6 +36,12 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { ELAINTAKY_PALKKIO } from '../../js/elaintaky.js';
+import { ELAINTAKY_MAAT } from '../../js/packs/elaintakyt.js';
+
+// Kiertävä lauta piirtää joka merkin kahteen kiertokohtaan. Maiden määrä
+// luetaan aineistosta (27 maata 1.9.2026 illasta: BIH ja TUR poistettiin
+// kaksoiskappaleina, ks. js/packs/elaintakyt.js).
+const SOLMUJA = ELAINTAKY_MAAT.length * 2;
 
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
 const paketti = await import('playwright')
@@ -172,9 +178,9 @@ const rahat = (sivu) => sivu.evaluate(() => window.matkakirja.ui.game.player.mon
  * koko lauta oli kerralla näkyvissä. Lauta poistui (Raamattu 30.8.2026,
  * "erillislaudasta luovutaan"), joten sama koe tehdään pelin oikealla
  * laudalla: maailmankartta on kiertävä, joten jokainen merkki piirtyy
- * kahteen kiertokohtaan — 29 maata, 58 solmua. Kaikki 29 mahtuvat
- * laudalle, myös Vanjärvi (lon 43) ja Islanti (lon −19,4), jotka
- * vanhalta laudalta jäivät pois.
+ * kahteen kiertokohtaan — SOLMUJA solmua (2 × maat). Kaikki mahtuvat
+ * laudalle, myös Islanti (lon −19,4), joka
+ * vanhalta laudalta jäi pois.
  */
 const eu = await avaaSivu('maailmankartta', 'helsinki');
 /*
@@ -207,11 +213,12 @@ await eu.evaluate(() => {
 await eu.waitForTimeout(4200);
 const kartalla = await merkit(eu);
 vaadi('eläinmerkit ovat kartan omassa kerroksessa',
-  kartalla.rivit.length === 58 && !kartalla.piilossa,
+  kartalla.rivit.length === SOLMUJA && !kartalla.piilossa,
   `${kartalla.rivit.length} merkkiä, piilossa=${kartalla.piilossa}`);
 vaadi('myös vanhan laudan ulkopuoliset täyt piirtyvät',
-  kartalla.rivit.some((m) => /Turkki/.test(m.nimi))
-  && kartalla.rivit.some((m) => /Islanti/.test(m.nimi)),
+  // Turkin täky (Vanjärvi) poistui 1.9.2026 kaksoiskappaleena; Islanti
+  // on jäljellä oleva vanhan Euroopan laudan ulkopuolinen merkki.
+  kartalla.rivit.some((m) => /Islanti/.test(m.nimi)),
   JSON.stringify([...new Set(kartalla.rivit.map((m) => m.nimi))].slice(0, 6)));
 vaadi('jokaisella merkillä on kaiverrettu eläinsymboli',
   kartalla.rivit.every((m) => m.symboleita > 0),
@@ -323,11 +330,11 @@ await maailma.waitForTimeout(900);
 const lahikuva = await merkit(maailma);
 /*
  * Maailmankartta on KIERTÄVÄ lauta, joten jokainen merkki piirretään
- * kahteen kiertokohtaan (ui.kiertoKohdat) — 29 maata, 58 solmua.
- * Kaikki 29 mahtuvat laudalle, myös Vanjärvi ja Islanti.
+ * kahteen kiertokohtaan (ui.kiertoKohdat) — SOLMUJA solmua (2 × maat).
+ * Kaikki mahtuvat laudalle, myös Islanti.
  */
 vaadi('lähennettäessä merkit palaavat kartalle',
-  !lahikuva.piilossa && lahikuva.rivit.length === 58,
+  !lahikuva.piilossa && lahikuva.rivit.length === SOLMUJA,
   `piilossa=${lahikuva.piilossa}, ${lahikuva.rivit.length} merkkiä`);
 await maailma.screenshot({ path: join(KAAPPAUKSET, 'elaintaky-kartta.png') });
 await maailma.context().close();

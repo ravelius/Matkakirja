@@ -10,7 +10,7 @@
  */
 
 export const TILANNE = {
-  paivitetty: '1.9.2026 ilta — v1423–v1427, polttoketju 01e/01f/01g kaynnissa',
+  paivitetty: '1.9.2026 ilta — v1423–v1428, polttoketju 01e/01f/01g valmis (patina=ei)',
   tavoite: 'Kartta yhtenaiseksi ja teravyys arvioitavaksi. Mainissa: '
     + 'maareitit yhtenaisena lamminna viivana ja meri katkoina (v1423), '
     + 'noston teksti kokonaan napautettava (v1424), rajat samaa reittia '
@@ -18,25 +18,22 @@ export const TILANNE = {
     + 'halo pois (v1425), elaintaky ei varasta naapurimerkin napautusta '
     + '(v1426), kaupunkikaton pudottamat syvennystarinat lehdissa ja '
     + 'savuke katon mukainen (v1427). Nostokuvat FOTOREALISTISINA '
-    + '(Raamattu 1.9.). Polttoketju PATINATTA: pohja 2026-09-01e -> '
-    + 'nosto 01f -> viiva 01g; omistaja katsoo patinattoman version.',
+    + '(Raamattu 1.9.). Polttoketju PATINATTA VALMIS (1.9. klo 18:36 UTC): '
+    + 'pohja 2026-09-01e -> nosto 01f -> viiva 01g; omistaja katsoo '
+    + 'patinattoman version ja paattaa patinasta.',
   rivit: [
     {
       tekija: 'Fable',
       rooli: 'paatoimittaja',
       tila: 'tyossa',
-      tehtava: 'Polttoketjun ajo ja todennus (01e pohja R2-throttlen '
-        + 'jalkeen uusintana, sitten nosto 01f ja viiva 01g patina=ei). '
-        + 'Postikierros tunneittain: yleiskuvitussession K1-kuittaus ja '
-        + 'K2-skandaalikuvat (7 kpl) R2:een.',
+      tehtava: 'Postikierros tunneittain: yleiskuvitussession K1-kuittaus '
+        + '(fotorealistinen pohja) ja K2-skandaalikuvat (7 kpl) R2:een. '
+        + 'BIH:n ja TUR:n uusien elaintakyjen tilaus (kuva + kaanoniteksti).',
       seuraavaksi: 'Kun K2-kuvat ovat R2:ssa: 7 skandaalin lehtisiirto '
-        + 'v1421-mallilla + julkaisu. Sofia z7 -tarkistus poltosta ja '
-        + 'raportti omistajalle. Vanhojen haarojen ja worktreiden siivous.',
+        + 'v1421-mallilla + julkaisu. Vanhojen haarojen ja worktreiden siivous.',
     },
   ],
   odottaaPaatosta: [
-    'Sisaltoduplikaatit: Vanin kissa (kohde + elaintaky) ja Livnon '
-      + 'villihevoset (syvennys + elaintaky) — yhdistetaanko vai pidetaanko',
     'Kasvokuvaerä Driveen (nuoremmat kasvot) → kohtaamiskortit',
     'fin-pieni-kuva uusiksi (prompti annettu)',
     'Bergenin kohdekartta (Overpass)',
@@ -52,6 +49,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1428: KAKSOISKAPPALEET POIS - omistajan paatos 1.9.: Vanin kissa (kohde) ja Livnon villihevoset (Sarajevon syvennys) jaavat, niiden paallekkaiset elaintakyt (TUR vankissa, BIH villihevosvarsa) poistettu kartalta. Elaintakyja nyt 27 maassa; BIH ja TUR saavat uudet elaimet kun kuvat on tehty. Savuke-elaintaky 23/23 lukee maiden maaran aineistosta. Tarkista, ettei Vanjarvella ja Livnossa ole enaa kahta merkkia vierekkain.',
   'v1427: PUDOTETUT SYVENNYSTARINAT LEHDISSA - kaupunkikatto pudottaa kartalta 40 syvennystarinaa 22 kaupungissa; 38 oli jo lehdissa v1421:n myota, nyt myos Koopenhaminan Tivoli (uusi juttu Tivoli-sivulle, Detroit Publishingin portti-fotokromi) ja Istanbulin kissat (sisalto oli jo lehdessa, osoite merkitty). Savuke-fokuskohteet mittaa nyt katon JALKEISTA tilaa pelin omalla karsintapassilla (110/110, ennen 89 + 6 FAIL + kaatuminen). Avaa Koopenhaminan lehden Tivoli-sivu.',
   'v1426: ELAINTAKY EI VARASTA NAPAUTUSTA - elainmerkki, kohdemerkki ja kaupungin laatta kilpailevat samassa lahin keskipiste voittaa -ratkaisussa (QA loysi 3 vaarin auennutta korttia 168:sta). Napauta kohdemerkkia elainmerkin vierella.',
   'v1425: RAJAT JA NIMIKOOT - maatummennus ja rajanvahvistus kulkevat samaa reittia kuin poltettu raja, raja paksumpi, tummennus pysyy zoomatessa (pois vain rajanylityksessa); kaupunkinimet nostonimia isommat, nostoteksteista valkoinen halo pois, pelaajan kaupunki askelhelmen kokoinen ympyra + harvennetut kapiteelit. Zoomaa rajalle ja katso tummennus.',
