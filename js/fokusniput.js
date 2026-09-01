@@ -33,6 +33,29 @@
  *      kertoo saman kahdesti — ja se oli juuri se sotkuisuus, josta
  *      omistaja halusi eroon.
  *
+ * ── SIIRTOVIIVAT TAKAISIN (omistaja 1.9.2026 ilta) ─────────────────
+ *
+ * Sanatarkka tilaus: *"otetaan siirtoviivat takaisin karttanostoille
+ * (esim. ateena)"*.
+ *
+ * Kohdan 3 päätös eli yhden vuorokauden. Kaksi saraketta jäävät —
+ * omistaja ei pyytänyt vanhaa yhtä pitkää saraketta takaisin, vaan
+ * VIIVAN — joten tässä erässä palautuu vain se: jokaisesta siirretystä
+ * merkistä ohut, himmeä katkoviiva merkin reunalta sen omalle
+ * paikalle eli kaupungin pisteeseen. Ladonta, etäisyydet ja rivivälit
+ * ovat bitilleen samat kuin ennen tätä erää.
+ *
+ * MIKÄ MUUTTUI VIIVASSA ITSESSÄÄN (ks. sääntö 6): ennen viiva alkoi
+ * KAUPUNGIN näkyvän merkinnän reunalta ja päättyi merkin aluslaatan
+ * reunaan, koska sarake oli 26 pikselin päässä ja väliin mahtui pätkä.
+ * Nyt sarake on 15,6 pikselin päässä, ja samoilla päillä laskettuna
+ * Ateenaan ei tulisi yhtäkään viivaa (mitattu: 15,6 ja 20,8 pikselin
+ * etäisyydet, viivalle jäisi 0,0 ja 5,2). Viiva on siksi käännetty
+ * toisin päin: se alkaa MERKIN reunasta ja päättyy ANKKURIPISTEESEEN.
+ * Kaupungin oma merkintä peittää sisimmän pätkän — viivakerros on
+ * laattojen alla — eikä viivan pituus enää riipu siitä, minkä
+ * kokoisena laatta sattuu tällä ruudulla piirtymään.
+ *
  * ── MITÄ TÄMÄ TIEDOSTO ON ──────────────────────────────────────────
  *
  * Yksi yhteinen kasauspassi KAHDELLE merkkikerrokselle: kartan
@@ -102,34 +125,55 @@
  *    sarakkeensa, ja saman merkin kopiot saavat saman rivin, koska
  *    jono järjestetään merkin omista koordinaateista.
  *
- * 6. EI YHDYSVIIVOJA (omistajan päätös 31.8.2026, ks. tiedoston alku).
+ * 6. SIIRTOVIIVA ANKKURIIN — VAALEA KATKOVIIVA LAATTOJEN ALLA.
  *
- *    Tämä kohta on kirjoitettu kolmesti, ja se on koko nipun historia
+ *    OMISTAJAN TILAUS 1.9.2026 ILTA, sanatarkasti: *"otetaan
+ *    siirtoviivat takaisin karttanostoille (esim. ateena)"*.
+ *
+ *    Tämä kohta on kirjoitettu neljästi, ja se on koko nipun historia
  *    pienoiskoossa. Ensin se luki "EI UUSIA ELEMENTTEJÄ": viiva
  *    harkittiin ja jätettiin pois, koska sarake on kiinni kaupungissa
  *    ja yhteys siksi ilmeinen. OMISTAJAN PELITESTI 27.8.2026 KUMOSI
  *    SEN: *"ateenan lisäpisteisiin sen oikealla puolella saisi tulla
  *    pienet vaaleat katkoviivat, jotta tajuaa niiden olevan oikeasti
- *    ateenassa"* — koska sarake oli silloin kymmenen riviä pitkä ja sen
- *    päät olivat kaukana laatasta.
+ *    ateenassa"*. Kolmannella kerralla (31.8.2026) viivat poistettiin
+ *    kokonaan, koska kaksi saraketta toi merkit laatan kylkeen ja
+ *    viivan pääteltiin kertovan saman kahdesti. NELJÄS KERTA ON
+ *    OMISTAJAN OMA MITTAUS PELISTÄ: se ei kerro samaa kahdesti.
+ *    Merkki laatan kyljessä on yhä OMAN NÄKÖISENSÄ piste kartalla, ja
+ *    juuri sen erottaminen — tämä kuuluu Ateenaan, tämä ei — on se
+ *    työ, jota viiva tekee.
  *
- *    NYT SYY ON POISSA. Kahdella sarakkeella (sääntö 2) rypäs on
- *    puolet matalampi ja puolet lähempänä, eikä yksikään merkki ole
- *    enää niin kaukana laatasta, että se näyttäisi omalta pisteeltään.
- *    Omistajan sanoin: nosto viedään *"hieman kaupungin viereen
- *    puhtaasti omaksi nostokseen ilman siirtoviivoja"*. Kaikki viivan
- *    mitat, sen oma kerros ja jananlaskenta on poistettu tästä
- *    tiedostosta; poltettu merkki ei myöskään enää kanna `viiva`-kenttää
- *    (tools/fokuskartta/nostot.mjs).
+ *    VIIVA ON KARTAN KEVYTTÄ APUVIIVASTOA EIKÄ NUOLI: ohut,
+ *    haalistunut muste, lyhyet katkot, ei nuolenpäitä (mitat ja sävy
+ *    alempana, NIPPU_VIIVA_*; ne ovat omistajan 30.8.2026 hyväksymät
+ *    luvut sellaisinaan). Kerros on LAATTOJEN ALLA
+ *    (nippuViivakerros) eikä ota napautuksia vastaan, joten kaupungin
+ *    sormialue säilyy koskemattomana — juuri se oli koko nipun
+ *    alkuperäinen tilaus.
  *
- *    MITATTU: 120 nostoviivaa → 0.
+ *    PÄÄT: MERKIN REUNASTA ANKKURIPISTEESEEN. Viiva alkaa merkin oman
+ *    aluslaatan reunasta (NIPPU_KOHDE_R + NIPPU_VIIVA_RAKO, merkin
+ *    omassa mitassa) ja päättyy siihen pisteeseen, johon merkki
+ *    kuuluu — kaupungin keskipisteeseen. Vanha järjestys oli toisin
+ *    päin (kaupungin näkyvän merkinnän reunalta merkin aluslaattaan),
+ *    ja se toimi 26 pikselin sarakkeella; nykyisellä 15,6 pikselin
+ *    sarakkeella (NIPPU_DX) sillä ei tulisi Ateenaan yhtäkään viivaa.
+ *    Sisin pätkä jää kaupungin oman merkinnän alle, ja se on tarkoitus:
+ *    laatan koko elää ruudun mukana, viivan ei tarvitse.
+ *
+ *    VAIN SIIRRETYSTÄ MERKISTÄ. Viiva on siirron jälki, joten se
+ *    piirretään vain sille merkille, jonka kasauspassi oikeasti
+ *    siirsi — ja vasta kun jäljelle jää oikeaa viivaa vähintään
+ *    NIPPU_VIIVA_MIN:n verran. Paikallaan pysyvä merkki ei saa viivaa
+ *    eikä `viiva`-kenttää (tools/fokuskartta/nostot.mjs).
  *
  *    Siirto itse on yhä ESITYSTÄ, EI DATAA — sama sopimus kuin
  *    kohtaamispisteellä (js/fokuspiste.js PISTE_ERO_MIN) ja
  *    kohdemerkkien erottelulla (js/fokuskohteet.js
  *    eritteleKohdeRyhmat): pakettien koordinaatit jäävät koskematta, ja
  *    osuma-alueet seuraavat merkkiä, koska ne ovat saman ankkuriryhmän
- *    lapsia.
+ *    lapsia. Viiva on saman esityksen jälki eikä uutta tietoa.
  *
  * 7. SARAKE MAHTUU AINA LEHDEN IKKUNAAN — NYT ITSESTÄÄN.
  *
@@ -175,7 +219,10 @@
  *      sRuutu  KATTAMATON skaala eli sormen mitta lehden perustasolla.
  *              Sillä lasketaan sarakkeiden etäisyys (NIPPU_DX), joka
  *              EI saa kutistua merkin mukana, koska laatta itse
- *              piirretään samassa kattamattomassa mitassa. (Vihreän
+ *              piirretään samassa kattamattomassa mitassa. SIIRTOVIIVA
+ *              EI OLE TÄSSÄ MITASSA (sääntö 6): se alkaa merkin omasta
+ *              aluslaatasta ja päättyy pisteeseen, jolla ei ole kokoa,
+ *              joten kumpikin pää on katetussa mitassa `s`. (Vihreän
  *              pisteen väistövara oli tässä 31.8.2026 asti; se poistui
  *              polton myötä — ks. SARAKE ON LAUDAN ASIA, EI VUORON.)
  *
@@ -263,6 +310,7 @@
  * (tools/tarkista-niputus.mjs), joten kaikki top-level-nimet alkavat
  * NIPPU_/nippu-etuliitteellä.
  */
+import { el, maare } from './mapart.js';
 
 /*
  * MITAT RUUDUN PIKSELEINÄ LEHDEN PERUSTASOLLA (ks. sääntö 3).
@@ -282,11 +330,13 @@ const NIPPU_KOHDE_R = 5.6;
  * siitä lasketaan sekä se, onko merkki "kaupungin päällä" (sääntö 10),
  * että se, kuinka kauas sarakkeet asetetaan (NIPPU_DX).
  *
- * SYKEKEHÄN SÄDE (js/ui.js FOKUS_LAATTA_SYKE_PX = 12) POISTUI
- * 31.8.2026. Sitä tarvittiin vain yhdysviivan alkupäähän, ja viivat
- * poistuivat (sääntö 6). Sarakkeen etäisyys mitataan kiekosta, koska
- * kiekko on se, mitä merkki voisi peittää; kehä on läpikuultava syke
- * eikä peittyvää merkintää.
+ * SYKEKEHÄN SÄDE (js/ui.js FOKUS_LAATTA_SYKE_PX) POISTUI 31.8.2026,
+ * EIKÄ SE PALANNUT VIIVAN MUKANA 1.9.2026. Sitä tarvittiin vain
+ * yhdysviivan ALKUPÄÄHÄN, ja kun viiva palasi, se palasi toisin päin:
+ * se alkaa merkin reunasta ja päättyy ankkuripisteeseen (sääntö 6),
+ * joten kaupungin pään mitalle ei ole enää käyttöä. Sarakkeen etäisyys
+ * mitataan kiekosta, koska kiekko on se, mitä merkki voisi peittää;
+ * kehä on läpikuultava syke eikä peittyvää merkintää.
  *
  * Kaupungin näkymätön SORMIALUE (js/ui.js FOKUS_LAATTA_OSUMA_PX / 2 =
  * 24) ei ole yhdessäkään tämän tiedoston laskussa: napautusten
@@ -350,6 +400,59 @@ const NIPPU_DX = NIPPU_KIEKKO_R + NIPPU_KOHDE_R + NIPPU_VALI_RAKO;
  * samalla: 14,2 ON se alaraja, johon se ennen puristi.
  */
 const NIPPU_VALI = 2 * NIPPU_KOHDE_R + NIPPU_VALI_RAKO;
+
+/*
+ * SIIRTOVIIVAN MITAT JA SÄVY (ks. sääntö 6).
+ *
+ * Mitat ovat samaa ruutupikselimittaa lehden perustasolla kuin
+ * sarakkeen omat luvut, ja ne kerrotaan samalla vakioskaalalla s —
+ * viivan paksuus ja katkojen pituus elävät siis kartan mukana
+ * täsmälleen kuten merkit, eikä viiva voi paksuuntua tikuksi
+ * loitonnettaessa.
+ *
+ * Sävy on kartan haalistunutta mustetta (vrt. css/fokuskohteet.css
+ * .fokuskohde-rengas #5d3f0f) vaaleampana ja läpikuultavana: viiva on
+ * apuviivastoa, ei merkintä. Väri, himmeys ja katkot kirjoitetaan
+ * määreinä eikä tyylitiedostosta, koska kerros syntyy tässä moduulissa
+ * eikä saa olla riippuvainen siitä, kumpi merkkikerros sattui lataamaan
+ * oman tyylinsä — ja koska laattageneraattori piirtää saman viivan
+ * canvasille, jossa tyylitiedostoa ei ole lainkaan.
+ *
+ * LUVUT PALAAVAT SELLAISINAAN (1.9.2026 ilta). Ne ovat omistajan
+ * 30.8.2026 pelitestissään hyväksymät — *"Myös tuo katkoviiva saisi
+ * olla kevyempi."* — eli paksuus 1,2 -> 0,8, himmeys 0,42 -> 0,3 ja
+ * katko 2,6 -> 2,0, jotta ohuempi kynä ei muutu pisteriviksi. Kun
+ * omistaja pyysi viivat takaisin, hän ei pyytänyt uutta ulkoasua,
+ * joten yhtäkään lukua ei viritetty uudestaan.
+ */
+const NIPPU_VIIVA_LEVEYS = 0.8;
+const NIPPU_VIIVA_KATKO = 2;
+const NIPPU_VIIVA_VARI = '#8a6a2c';
+const NIPPU_VIIVA_HIMMEYS = 0.3;
+
+/*
+ * Pieni rako merkin aluslaatan reunaan, jottei viiva näytä kasvavan
+ * merkistä kiinni. Sama luku kuin merkintöjen välinen rako
+ * (NIPPU_VALI_RAKO), mutta OMANA VAKIONAAN: tuo luku on LADONNAN
+ * mitta — jos sitä joskus viritetään, sarake liikkuu, eikä viivan
+ * hiusrako saa liikkua sen mukana kysymättä.
+ */
+const NIPPU_VIIVA_RAKO = 2.5;
+
+/*
+ * LYHIN PIIRRETTÄVÄ PÄTKÄ — ja samalla se "pieni kynnys", jolla
+ * ratkaistaan, onko merkki oikeasti siirretty ankkuristaan (sääntö 6).
+ * Tätä lyhyempi pätkä ei ole viiva vaan roska: kaksi katkoa
+ * (NIPPU_VIIVA_KATKO) on vähin, josta silmä lukee katkoviivan eikä
+ * pölyhiukkasta.
+ *
+ * MITATTU ATEENASTA (1.9.2026, tools/fokuskartta/nostot.mjs -ladonta):
+ * ryppään merkit ovat 15,6 ja 20,8 perustason pikselin päässä
+ * kaupungista, joten viivaa jää 7,5 ja 12,7 pikseliä. Kynnys 4 päästää
+ * kummankin läpi selvällä marginaalilla eikä sitä ole viritetty
+ * juuri niiden mukaan — se on kaksi katkoa.
+ */
+const NIPPU_VIIVA_MIN = 4;
 
 /**
  * Kerrosten ankkuriryhmätietueet yhtenä jonona.
@@ -534,6 +637,131 @@ function nippuAseta(ryhma, nippu, vasemmalle, s) {
     `translate(${x.toFixed(2)} ${y.toFixed(2)}) scale(${s.toFixed(4)})`);
 }
 
+/* ============ SIIRTOVIIVA (sääntö 6) ==============================
+ *
+ * Kolme palvelua: kerros, yhden viivan jana ja piirto. Jana on ULOSPÄIN
+ * VIETY, koska laattageneraattori laskee sillä poltettavan viivan
+ * (tools/fokuskartta/nostot.mjs) — Raamatun ehto 31.8.2026: *"Poltetun
+ * ladonnan ja selaimen osumamuotojen on tultava SAMASTA lähteestä,
+ * ettei kahta ladontaa pääse eriytymään."* Jos päiden laskenta olisi
+ * generaattorissa omanaan, poltettu viiva alkaisi eri kohdasta kuin
+ * pelin piirtämä.
+ */
+
+/**
+ * Siirtoviivojen kerros LAATTOJEN ALLE (ks. sääntö 6).
+ *
+ * Kerros menee laudan juureen laattakerroksen (ui.tokenLayer) ETEEN,
+ * jolloin kaupungin kultainen laatta ja pelin muut merkit piirtyvät sen
+ * päälle — viiva on kartan pintaa, ei pelikerrosta. Juuri se tekee
+ * viivan sisimmästä pätkästä näkymättömän ilman yhtäkään leikkuria.
+ * Kerros ei myöskään ota napautuksia vastaan (pointer-events), joten se
+ * ei voi varastaa kaupungin sormialuetta; juuri sen suojeleminen on
+ * koko nipun syy.
+ *
+ * Uusi lauta rakentaa uuden juuren, jolloin vanha kerros jää irralleen —
+ * sama isConnected-tarkistus kuin muillakin kerroksilla (vrt.
+ * js/fokuskohteet.js varmistaKohdekerros) rakentaa sen silloin uusiksi.
+ *
+ * ILMAN DOMIA (laattageneraattori) TÄMÄ PALAUTTAA NULLIN eikä piirrä
+ * mitään: generaattori lukee janat paluuarvosta ja polttaa ne itse.
+ */
+function nippuViivakerros(ui) {
+  const laatat = ui?.tokenLayer;
+  const juuri = laatat?.parentNode;
+  if (!juuri) return null;
+  const vanha = ui.nippuViivaKerros;
+  if (!vanha?.isConnected || vanha.parentNode !== juuri) {
+    const kerros = el('g', { class: 'nippuviivat', 'pointer-events': 'none' });
+    juuri.insertBefore(kerros, laatat);
+    ui.nippuViivaKerros = kerros;
+  }
+  return ui.nippuViivaKerros;
+}
+
+/**
+ * YHDEN SIIRTOVIIVAN JANA LAUDAN KOORDINAATEISSA — tai null, jos
+ * viivaa ei piirretä lainkaan.
+ *
+ * ALKUPÄÄ ON MERKIN REUNA ja loppupää ANKKURIPISTE (sääntö 6). Päät
+ * olivat 31.8.2026 asti toisin päin — kaupungin näkyvän merkinnän
+ * reunalta merkin aluslaattaan — ja se toimi niin kauan kuin sarake
+ * oli 26 pikselin päässä. Nykyisellä 15,6 pikselin sarakkeella
+ * (NIPPU_DX) viivalle jäisi Ateenassa 0,0 ja 5,2 pikseliä eli
+ * käytännössä ei mitään, joten kaupungin pään mitta on jätetty pois
+ * kokonaan: viiva menee ankkuriin asti ja kaupungin oma merkintä
+ * peittää sen sisimmän pätkän, koska kerros on laattojen alla.
+ *
+ * MOLEMMAT PÄÄT OVAT KATETUSSA MITASSA `s` (sääntö 8): merkin
+ * aluslaatta on merkin omaa mittaa, ja ankkuripisteellä ei ole kokoa
+ * lainkaan. Siksi tässä ei ole enää `sRuutu`-parametria — se oli
+ * olemassa vain kaupungin päätä varten.
+ *
+ * @param {{cx:number, cy:number, x:number, y:number, sade:number}} v
+ *   ankkuripiste, merkin nippupaikka ja merkin aluslaatan säde
+ *   perustason pikseleinä.
+ * @param {number} s  merkkien vakioskaala.
+ */
+export function nippuViivanJana(v, s) {
+  const dx = v.x - v.cx;
+  const dy = v.y - v.cy;
+  const pituus = Math.hypot(dx, dy);
+  if (!(pituus > 0)) return null;
+  // Merkin reuna: aluslaatan säde ja hiusrako sen ulkopuolelle.
+  const alku = pituus - (v.sade + NIPPU_VIIVA_RAKO) * s;
+  // Siirtämätön merkki (tai roskaksi jäävä pätkä) ei saa viivaa.
+  if (alku < NIPPU_VIIVA_MIN * s) return null;
+  const yx = dx / pituus;
+  const yy = dy / pituus;
+  return {
+    x1: v.cx + yx * alku,
+    y1: v.cy + yy * alku,
+    x2: v.cx,
+    y2: v.cy,
+    leveys: NIPPU_VIIVA_LEVEYS * s,
+    katko: NIPPU_VIIVA_KATKO * s,
+    vari: NIPPU_VIIVA_VARI,
+    himmeys: NIPPU_VIIVA_HIMMEYS,
+  };
+}
+
+/**
+ * Piirtää katkoviivat nipun merkeistä niiden ankkuripisteisiin.
+ *
+ * SOLMUT KIERRÄTETÄÄN eikä pureta ja rakenneta uudestaan: passi ajetaan
+ * jokaisella asemoinnilla (myös panoroinnin ja nipistyksen aikana), ja
+ * määreetkin kirjoitetaan vain muutoksessa (js/mapart.js maare) — sama
+ * sääntö ja sama syy kuin kohdemerkkien muunnoksilla.
+ *
+ * @param {object} ui
+ * @param {Array} viivat  { cx, cy, x, y, sade } laudan koordinaateissa
+ * @param {number} s      merkkien vakioskaala.
+ */
+function nippuPiirraViivat(ui, viivat, s) {
+  const kerros = nippuViivakerros(ui);
+  if (!kerros) return;
+  let i = 0;
+  for (const v of viivat) {
+    const jana = nippuViivanJana(v, s);
+    if (!jana) continue;
+    const solmu = kerros.childNodes[i] ?? el('line', {
+      class: 'nippuviiva',
+      stroke: jana.vari,
+      opacity: jana.himmeys,
+      'stroke-linecap': 'round',
+    }, kerros);
+    maare(solmu, 'x1', jana.x1.toFixed(2));
+    maare(solmu, 'y1', jana.y1.toFixed(2));
+    maare(solmu, 'x2', jana.x2.toFixed(2));
+    maare(solmu, 'y2', jana.y2.toFixed(2));
+    maare(solmu, 'stroke-width', jana.leveys.toFixed(3));
+    const katko = jana.katko.toFixed(3);
+    maare(solmu, 'stroke-dasharray', `${katko} ${katko}`);
+    i += 1;
+  }
+  while (kerros.childNodes.length > i) kerros.lastChild.remove();
+}
+
 /* ============ SARAKE ON LAUDAN ASIA, EI VUORON (31.8.2026) =========
  *
  * POLTON EHTO (Raamattu, KARTTANOSTOT POLTETAAN LAATTOIHIN; omistajan
@@ -595,9 +823,15 @@ function nippuAseta(ryhma, nippu, vasemmalle, s) {
  *
  * Työ on muutaman merkin lajittelu ilman yhtäkään mittausta, joten
  * passin voi ajaa huoletta joka kutsulla.
+ *
+ * @returns {Array} siirtoviivat laudan koordinaateissa ({ cx, cy, x, y,
+ *   sade, id, ryhma }) — sama lista, joka juuri piirrettiin. Paluuarvo
+ *   palasi 1.9.2026 viivojen mukana: laattageneraattori lukee sen
+ *   (js/nostoladonta.js, tools/fokuskartta/nostot.mjs), koska poltettu
+ *   siirtoviiva ei saa tulla toisesta laskennasta kuin selaimen oma.
  */
 export function niputaFokusmerkit(ui, s, sRuutu = s) {
-  if (!ui || !(s > 0)) return;
+  if (!ui || !(s > 0)) return [];
   /*
    * SARAKKEET OVAT LEHDEN MITASSA (omistaja 31.8.2026, Raamattu
    * KARTTANOSTOT POLTETAAN LAATTOIHIN). Kutsuja antaa nykyään VAIN
@@ -608,11 +842,20 @@ export function niputaFokusmerkit(ui, s, sRuutu = s) {
    */
   const ruutu = sRuutu > 0 ? sRuutu : s;
   const merkit = nippuMerkit(ui);
-  if (!merkit.length) return;
+  /*
+   * TYHJÄ KERROS MYÖS SILLOIN, KUN RYVÄSTÄ EI OLE: vanhat viivat eivät
+   * saa jäädä kartalle merkkien lähdettyä (ks. sääntö 6). Molemmat
+   * varhaiset paluut käyvät siis piirron kautta.
+   */
+  if (!merkit.length) {
+    nippuPiirraViivat(ui, [], s);
+    return [];
+  }
   const kaupungit = nippuKaupungit(ui);
   if (!kaupungit.length) {
     for (const { ryhma } of merkit) nippuAseta(ryhma, null, false, s);
-    return;
+    nippuPiirraViivat(ui, [], s);
+    return [];
   }
   /*
    * Kiertävällä laudalla kaupunki on kartalla kahdesti; jokainen
@@ -652,6 +895,8 @@ export function niputaFokusmerkit(ui, s, sRuutu = s) {
     jold.jono.push({ merkki, jono });
     niput.set(avain, jold);
   });
+  // Siirtoviivat kerätään samassa silmukassa ja piirretään kerralla.
+  const viivat = [];
   for (const { cx, cy, jono } of niput.values()) {
     jono.sort((a, b) => (a.merkki.ryhma.y - b.merkki.ryhma.y)
       || (a.merkki.ryhma.x - b.merkki.ryhma.x)
@@ -680,11 +925,48 @@ export function niputaFokusmerkit(ui, s, sRuutu = s) {
       // Parillinen oikealle, pariton vasemmalle (sääntö 2).
       const vasemmalle = indeksi % 2 === 1;
       const porras = Math.floor(indeksi / 2);
-      nippuAseta(merkki.ryhma, {
-        x: cx + (vasemmalle ? -dx : dx),
-        y: riviY(porras),
-      }, vasemmalle, s);
+      const x = cx + (vasemmalle ? -dx : dx);
+      const y = riviY(porras);
+      nippuAseta(merkki.ryhma, { x, y }, vasemmalle, s);
       indeksi += 1;
+      /*
+       * SIIRTOVIIVA SAMASTA LASKENNASTA (ks. sääntö 6). Piilotetun
+       * merkkikerroksen riviä ei piirretä: yleiskuvassa kohdemerkit ovat
+       * poissa (css .fokuskohteet-piilossa), ja viiva jäisi osoittamaan
+       * tyhjää.
+       *
+       * LUOKAN ON OLTAVA TUORE. Tämä lukee DOMista tilan, jonka
+       * js/fokuskohteet.js paivitaNakyvyys kirjoittaa — ja se kutsutaan
+       * siksi ENNEN asemointia, ei sen jälkeen. Jäljessä oleva luokka
+       * näkyi savukkeessa suoraan: yleiskuvasta lähennettäessä viivoja
+       * ei piirretty lainkaan ennen seuraavaa kartan liikahdusta.
+       *
+       * ILMAN DOMIA (laattageneraattori) EHTO ON TOSI, koska silloin ei
+       * ole kerrosta joka voisi olla piilossa — poltettava viiva on aina
+       * mukana.
+       */
+      if (!merkki.ryhma.g?.parentNode?.classList?.contains('fokuskohteet-piilossa')) {
+        viivat.push({
+          cx, cy, x, y, sade: merkki.sade, id: merkki.ryhma.id, ryhma: merkki.ryhma,
+        });
+      }
     }
   }
+  /*
+   * POLTETUN MERKIN VIIVA ON JO LAATASSA (Raamattu 31.8.2026,
+   * KARTTANOSTOT POLTETAAN LAATTOIHIN): *"koko nosto eli symboli,
+   * teksti ja nostoviiva menee laattoihin."* Se suodatetaan siis pois
+   * PIIRROSTA mutta ei paluuarvosta — laattageneraattori tarvitsee
+   * juuri sen viivan, jota peli ei piirrä, ja kysymyksen esittää
+   * kohdekerros (js/fokuskohteet.js), joka tuntee luettelon.
+   *
+   * SUODATUS ON VASTA TÄSSÄ, koska vastaus lasketaan merkin
+   * LOPULLISESTA paikasta: silmukka yllä on juuri asettanut sen
+   * jokaiselle riville.
+   */
+  const piirrettavat = ui.nostoPoltettu
+    ? viivat.filter((v) => !ui.nostoPoltettu(v.ryhma))
+    : viivat;
+  nippuPiirraViivat(ui, piirrettavat, s);
+  return viivat;
 }

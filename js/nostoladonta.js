@@ -21,7 +21,7 @@
  * tools/fokuskartta/nostot.mjs:ssä, ja passit ovat nämä:
  *
  *   merkkirivit         js/fokuskohteet.js  kohdeKarttarivit
- *   kasaus kaupunkeihin js/fokusniput.js    niputaFokusmerkit
+ *   kasaus ja viivat    js/fokusniput.js    niputaFokusmerkit
  *   erottelusiirto      js/fokuskohteet.js  eritteleKohdeRyhmat
  *   nimioiden vaisto    js/fokuskohteet.js  paivitaKohdeNimiot
  *   nimion mitta        js/fokusnosto-symbolit.js  nostosymNimioMitta
@@ -342,8 +342,24 @@ export function nostoladontaKattoPorras(porras, ruutuPx) {
  * versiokorotusta luettelo väittäisi v3-laattoja tuoreiksi ja peli
  * vaikenisi merkeistä, jotka laatassa ovat väärän kokoisia ja väärin
  * ladottuja. Sama syy kuin v3:ssa — ks. lohkon johdanto.
+ *
+ * v5 (omistaja 1.9.2026 ilta, sanatarkasti: *"otetaan siirtoviivat
+ * takaisin karttanostoille (esim. ateena)"*): jokainen siirretty
+ * karttanosto saa taas ohuen katkoviivan merkin reunalta sen omalle
+ * paikalle (js/fokusniput.js sääntö 6), ja viiva poltetaan laattaan
+ * merkin ja nimiön kanssa samaan kuvaan
+ * (tools/fokuskartta/maailmapiirto.js piirraNostotKankaalle).
+ *
+ * VIIVA EI OLE TIIVISTEEN SYÖTETTÄ, JA JUURI SIKSI TÄMÄ NOSTO ON
+ * PAKOLLINEN. Viiva on funktio merkin lopullisesta paikasta ja sen
+ * ankkurista, ja paikka on jo tiivisteessä — mutta v4-laatoissa on
+ * merkki ILMAN viivaa täsmälleen samassa pisteessä, joten jokainen
+ * tiiviste täsmäisi ja peli vaikenisi merkeistä, joiden viiva ei ole
+ * missään. Nostettuna luettelo ei kelpaa lainkaan (js/laattapyramidi.js
+ * `nt.saanto !== NOSTOLADONTA_SAANTO`), peli piirtää nostot elävinä
+ * viivoineen, ja seuraava nostotason poltto tekee niistä taas laattaa.
  */
-export const NOSTOLADONTA_SAANTO = 'v4';
+export const NOSTOLADONTA_SAANTO = 'v5';
 
 export function nostoladontaTiiviste(merkki) {
   const osat = [

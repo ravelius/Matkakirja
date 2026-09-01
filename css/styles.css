@@ -1271,6 +1271,9 @@ body.kartta-raahaus .fokuslaatta-syke { animation-play-state: paused; }
 
      .fokuskohteet .fokusnosto-symbolit  elävät karttanostot (ne, joita
                                          pyramidi.json ei tunne)
+     .nippuviivat                        elävien nostojen siirtoviivat
+                                         (js/fokusniput.js sääntö 6;
+                                         palautettu 1.9.2026 illalla)
      .fokuspisteet .elaintakyt           samat kerrokset kuin ennenkin
      .karttanimet                        kaupunkien nimet ja pisteet,
                                          maastonimet ja nostoviivat
@@ -1319,13 +1322,15 @@ body.kartta-raahaus .fokuslaatta-syke { animation-play-state: paused; }
 body.kartta-merkit-haipyy .fokuskohteet,
 body.kartta-merkit-haipyy .fokuspisteet,
 body.kartta-merkit-haipyy .fokusnosto-symbolit,
-body.kartta-merkit-haipyy .elaintakyt { display: none; }
+body.kartta-merkit-haipyy .elaintakyt,
+body.kartta-merkit-haipyy .nippuviivat { display: none; }
 body.kartta-merkit-haipyy .karttanimet,
 body.kartta-merkit-haipyy .maastonimet { opacity: 0; }
 body.kartta-merkit-piilossa .fokuskohteet,
 body.kartta-merkit-piilossa .fokuspisteet,
 body.kartta-merkit-piilossa .fokusnosto-symbolit,
 body.kartta-merkit-piilossa .elaintakyt,
+body.kartta-merkit-piilossa .nippuviivat,
 body.kartta-merkit-piilossa .karttanimet,
 body.kartta-merkit-piilossa .maastonimet { display: none; }
 /* MAATUMMENNUS EI OLE YLLÄ OLEVISSA LISTOISSA — se ei väisty

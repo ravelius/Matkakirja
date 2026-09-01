@@ -1121,28 +1121,49 @@ if (nimiOsuma?.ruudulla) {
   await parnassosSuljettu();
 }
 
-/* --- 1c: EI YHDYSVIIVOJA (omistajan päätös 31.8.2026) --------------
+/* --- 1c: SIIRTOVIIVAT (omistajan tilaus 1.9.2026 ilta) -------------
  *
- * Tässä vartioitiin 27.8. alkaen kolmea lupausta katkoviivasta, joka
- * kertoi ryppään merkkien olevan *"oikeasti ateenassa"*: viivoja yhtä
- * monta kuin nipussa merkkejä, kerros laattojen alla, ja viiva irti
- * kummastakin päästä. Viivat poistettiin kokonaan, kun rypäs tuli
- * laatan kylkeen molemmin puolin (js/fokusniput.js sääntö 6) —
- * omistajan sanoin *"puhtaasti omaksi nostokseen ilman siirtoviivoja"*.
+ * Sanatarkasti: *"otetaan siirtoviivat takaisin karttanostoille (esim.
+ * ateena)"*. Tässä vartioitiin 27.8. alkaen kolmea lupausta
+ * katkoviivasta, joka kertoo ryppään merkkien olevan *"oikeasti
+ * ateenassa"*; 31.8. viivat poistettiin ja väitteestä tuli niiden
+ * puuttuminen; 1.9. illalla ne palasivat, ja väite on taas se, mitä
+ * se oli — mutta yhdellä muutoksella.
  *
- * VÄITE ON NYT SEN PUUTTUMINEN, eikä se ole muodollisuus: viivakerros
- * syntyi laudan juureen laattojen eteen, ja jos jokin polku sen vielä
- * rakentaisi, kartalle jäisi tyhjä kerros ottamaan tilaa — tai
- * pahempaa, vanhoja viivoja osoittamaan paikkoihin, joissa merkkejä ei
- * enää ole.
+ * PÄÄT OVAT KÄÄNTYNEET. Viiva alkaa nyt MERKIN reunasta ja päättyy
+ * ANKKURIPISTEESEEN eli kaupungin keskipisteeseen (js/fokusniput.js
+ * sääntö 6), joten "irti kummastakin päästä" ei ole enää tosi eikä
+ * tavoiteltavaa: kaupungin pää menee laatan alle, ja juuri siksi
+ * kerroksen on oltava laattojen ALLA. Kolme väitettä siis:
+ * viivoja on, ne ovat omassa kerroksessaan laattakerroksen edellä,
+ * ja jokainen niistä on oikeasti mitallinen jana.
+ *
+ * VIIVOJA ON KORKEINTAAN YHTÄ MONTA KUIN NIPUSSA MERKKEJÄ: poltettu
+ * merkki kantaa viivansa laatassa eikä sitä piirretä kahdesti, ja
+ * liian lyhyt pätkä jää piirtämättä (NIPPU_VIIVA_MIN).
  */
-const viivakerros = await sivu.evaluate(() => ({
-  kerros: Boolean(document.querySelector('.nippuviivat')),
-  rivit: document.querySelectorAll('line.nippuviiva').length,
-  nipussa: (window.matkakirja.ui.fokuskohdeRyhmat ?? []).filter((r) => r.nippu).length,
-}));
-vaadi('rypäs on ladottu, mutta yhtäkään yhdysviivaa ei piirretä',
-  viivakerros.nipussa > 0 && viivakerros.kerros === false && viivakerros.rivit === 0,
+const viivakerros = await sivu.evaluate(() => {
+  const kerros = document.querySelector('.nippuviivat');
+  const rivit = [...document.querySelectorAll('line.nippuviiva')];
+  const laatat = document.querySelector('g.tokens');
+  return {
+    kerros: Boolean(kerros),
+    rivit: rivit.length,
+    // Kerros on laattakerroksen EDELLÄ samassa juuressa: viiva jää
+    // kaupungin merkinnän alle eikä varasta sen napautusta.
+    laattojenAlla: Boolean(kerros && laatat && kerros.parentNode === laatat.parentNode
+      && (kerros.compareDocumentPosition(laatat) & Node.DOCUMENT_POSITION_FOLLOWING) !== 0),
+    lyhin: rivit.length ? Math.min(...rivit.map((r) => Math.hypot(
+      r.x2.baseVal.value - r.x1.baseVal.value,
+      r.y2.baseVal.value - r.y1.baseVal.value,
+    ))) : 0,
+    nipussa: (window.matkakirja.ui.fokuskohdeRyhmat ?? []).filter((r) => r.nippu).length,
+  };
+});
+vaadi('ryppään merkeistä lähtee siirtoviiva omassa kerroksessaan laattojen alla',
+  viivakerros.nipussa > 0 && viivakerros.kerros === true
+  && viivakerros.rivit > 0 && viivakerros.rivit <= viivakerros.nipussa
+  && viivakerros.laattojenAlla === true && viivakerros.lyhin > 1,
   JSON.stringify(viivakerros));
 
 /* --- 2: merkki elää kartan mukana --- */

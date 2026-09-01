@@ -10,9 +10,10 @@
  * Raamattu (omistaja 31.8.2026, KARTTANOSTOT POLTETAAN LAATTOIHIN):
  * *"mikään karttanostoista ei kuulu kadota laudalta missään vaiheessa
  * peliä, joten ne voidaan aivan hyvin polttaa suoraan karttaan."* —
- * kohdemerkit, niiden symbolit ja nimiöt ovat pysyvää sisältöä eivätkä
- * pelitilaa. (Nostoviivat kuuluivat samaan luetteloon 31.8.2026 asti;
- * ne poistuivat kartalta kokonaan, ks. js/fokusniput.js sääntö 6.)
+ * kohdemerkit, niiden symbolit, nimiöt ja siirtoviivat ovat pysyvää
+ * sisältöä eivätkä pelitilaa. (Siirtoviivat olivat poissa kartalta
+ * yhden vuorokauden ajan 31.8.2026; omistaja pyysi ne takaisin
+ * 1.9.2026 illalla, ks. js/fokusniput.js sääntö 6.)
  *
  * === TÄMÄ EI LASKE LADONTAA ========================================
  *
@@ -21,7 +22,7 @@
  * niille tyngän `ui`-oliosta laudan datasta:
  *
  *   merkkirivit         js/fokuskohteet.js  kohdeKarttarivit
- *   kasaus kaupunkeihin js/fokusniput.js    niputaFokusmerkit
+ *   kasaus ja viivat    js/fokusniput.js    niputaFokusmerkit
  *   erottelusiirto      js/fokuskohteet.js  eritteleKohdeRyhmat
  *   nimiöiden väistö    js/fokuskohteet.js  paivitaKohdeNimiot
  *   mittakaava ja tiiviste  js/nostoladonta.js
@@ -63,7 +64,7 @@ import {
   KOHDE_SYMBOLI_SKAALA, eritteleKohdeRyhmat, kohdeKarttarivit, kohdeMerkinLadonta,
   paivitaKohdeNimiot,
 } from '../../js/fokuskohteet.js';
-import { niputaFokusmerkit } from '../../js/fokusniput.js';
+import { nippuViivanJana, niputaFokusmerkit } from '../../js/fokusniput.js';
 import { nostoladontaSkaala, nostoladontaTiiviste } from '../../js/nostoladonta.js';
 import { FOKUS_POHJAT } from '../../js/packs/fokus-grc.js';
 import { nostoKarttarivit, nostoKaupunginPooli } from '../../js/fokusnosto.js';
@@ -181,11 +182,20 @@ function nostoladontaMerkit({
    * ryppääseen ladottuja merkkejä (31.8.2026) ja väistö lukee
    * merkkien LOPULLISET paikat.
    */
-  niputaFokusmerkit(ui, s);
+  const viivat = niputaFokusmerkit(ui, s);
   eritteleKohdeRyhmat(ui, s);
   paivitaKohdeNimiot(ui, s);
+  /*
+   * SIIRTOVIIVAT KASAUSPASSIN OMASTA PALUUARVOSTA (1.9.2026 ilta,
+   * omistaja: *"otetaan siirtoviivat takaisin karttanostoille (esim.
+   * ateena)"*). Janan päät laskee js/fokusniput.js nippuViivanJana —
+   * sama funktio, jolla peli piirtää oman viivansa. Ilman sitä
+   * poltettu viiva alkaisi eri kohdasta kuin elävä.
+   */
+  const viivaTunnuksittain = new Map((viivat ?? []).map((v) => [v.id, v]));
   const merkit = [];
   for (const r of ui.fokuskohdeRyhmat) {
+    const viiva = viivaTunnuksittain.get(r.id) ?? null;
     const merkki = {
       tunnus: r.id,
       x: r.nippu?.x ?? r.x + (r.sx ?? 0),
@@ -226,11 +236,20 @@ function nostoladontaMerkit({
        */
       porras: KOHDE_SYMBOLI_SKAALA * s,
       /*
-       * NOSTOVIIVAA EI OLE (omistaja 31.8.2026, esityssiirto): merkit
-       * latoutuvat kaupungin kylkeen omiksi nostoikseen ilman
-       * siirtoviivoja, ks. js/fokusniput.js sääntö 6. Kenttä `viiva`
-       * poistui merkeistä kokonaan.
+       * SIIRTOVIIVA VALMIINA JANANA — tai null, jos merkkiä ei
+       * siirretty ankkuristaan tai pätkä jäisi roskaksi
+       * (js/fokusniput.js NIPPU_VIIVA_MIN). Piirtäjä
+       * (tools/fokuskartta/maailmapiirto.js piirraNostotKankaalle) ei
+       * laske päistä mitään uudelleen — se vain skaalaa ne laatan
+       * kuvapikseleiksi.
+       *
+       * KENTTÄ EI OLE TIIVISTEESSÄ (nostoladontaTiiviste), eikä sen
+       * tarvitse olla: viiva on funktio merkin lopullisesta paikasta ja
+       * ankkurista, ja paikka ON tiivisteessä. Piirtosäännön muutos —
+       * eli tämä erä — huomataan js/nostoladonta.js
+       * NOSTOLADONTA_SAANTO -nostosta.
        */
+      viiva: viiva ? nippuViivanJana(viiva, s) : null,
       /*
        * MAA PALAA KOKONAAN TAI EI LAINKAAN (ks. tiedoston alku,
        * TÄKYNOSTOT). Sarakekohtainen esto ei riitä: täky ei siirrä
@@ -259,7 +278,7 @@ function nostoladontaMerkit({
  *
  * Merkin kentät ovat laudan yksiköitä ja valmiiksi ladottuja:
  * `x`, `y`, `symboli`, `laji`, `nimio`, `nimioNakyy`, `nimioPuoli`,
- * `nimioRajaton` ja `s` (maan merkkiskaala). Piirtäjä
+ * `nimioRajaton`, `viiva` ja `s` (maan merkkiskaala). Piirtäjä
  * (tools/fokuskartta/maailmapiirto.js) ei laske niistä mitään
  * uudelleen — se vain skaalaa ne laatan kuvapikseleiksi.
  */
