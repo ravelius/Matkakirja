@@ -2164,6 +2164,151 @@ export const KULTTUURI_KATEGORIAT = {
           + 'soittama kappale.',
       },
     },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö). Wienin viereen kertyi viisi
+     * nostomerkkiä yli katon. Tämän sivun jutut ovat syvennystarinoita
+     * `syvennys-wien-sahko` ja `-vesijohto` sekä täkynosto
+     * `nosto-maailmannayttely-1873`.
+     */
+    {
+      id: 'tiede',
+      nimi: 'Tiede ja tekniikka',
+      johdanto: 'Isoisän matkavuonna Wien avasi maailmannäyttelyn ja '
+        + 'vuoristovesijohdon. Näyttelyhallissa sattui myös vahinko, joka '
+        + 'muutti tehtaat: kone pyörähti väärään suuntaan.',
+      nostot: [
+        {
+          otsikko: 'Kone, joka pyörähti väärään suuntaan',
+          tiedosto: 'Machine Gramme.jpg',
+          teksti: 'Maailmannäyttelyn kupolin alla oli 800 metriä pitkä '
+            + 'konehalli. Belgialainen Zénobe Gramme oli rakentanut '
+            + 'parannellun tasavirtageneraattorin, ja hänen '
+            + 'yhtiökumppaninsa, ranskalainen insinööri Hippolyte Fontaine, '
+            + 'toi koneen Wieniin. Siellä he huomasivat vahingossa, että '
+            + 'laite toimii myös toisin päin: kun siihen johdettiin '
+            + 'tasavirtaa, se ei tuottanut sähköä vaan alkoi pyöriä. Niin '
+            + 'syntyi ensimmäinen teollisesti käyttökelpoinen sähkömoottori '
+            + '— sitä ennen sähkömoottorit olivat leluja ja laboratorion '
+            + 'kuriositeetteja. Samalla näyttelyllä Fontaine osoitti, että '
+            + 'sähkön voi siirtää kahden kilometrin päähän kuparijohtoa '
+            + 'pitkin.',
+          selite: 'Gramme-kone vuodelta 1873; samanlainen laite pyörähti '
+            + 'Wienin näyttelyssä ensimmäiseksi kunnolliseksi '
+            + 'sähkömoottoriksi.',
+          lahde: 'Icone5, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Vuoristovesi ratkaisi talojen korkeuden',
+          tiedosto: 'Aquädukt Liesing- Teil der 1. Wiener Hochquellenleitung 1.jpg',
+          teksti: 'Wienin ensimmäinen vuoristovesijohto avattiin 24. '
+            + 'lokakuuta 1873. Se on 95 kilometriä pitkä ja kulkee '
+            + 'kokonaan painovoiman varassa Rax- ja Schneeberg-vuorten '
+            + 'lähteiltä kaupunkiin — juuri siksi Wienin rakennusjärjestykset '
+            + 'rajoittivat talojen korkeuden noin kahteenkymmeneenviiteen '
+            + 'metriin: sitä korkeammalle vesi ei olisi noussut itsestään. '
+            + 'Matkalla on 30 akveduktia ja muuta laaksonylitystä, ja ne '
+            + 'kaikki ovat nykyään suojeltuja. Urakoitsija Antonio '
+            + 'Gabrielli tarjoutui itse, että hänen palkkiostaan '
+            + 'vähennettäisiin yksi prosentti, kunnes kasaan tulisi 100 000 '
+            + 'guldenia — ja niillä rahoilla rakennettiin suihkulähde, '
+            + 'Hochstrahlbrunnen, joka avattiin samana päivänä.',
+          selite: 'Ensimmäinen vuoristovesijohto tuo yhä yli puolet Wienin '
+            + 'juomavedestä, ja vesi kulkee koko 95 kilometrin matkan '
+            + 'painovoiman varassa.',
+          lahde: 'Anna Saini, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kahdeksan päivää avajaisista pörssi suljettiin',
+          tiedosto: 'Weltausstellungsgelände-Wien-1873.jpg',
+          teksti: 'Keisari Franz Joseph avasi maailmannäyttelyn 1. '
+            + 'toukokuuta 1873 sanoen, että Itävalta-Unkari on kaikin puolin '
+            + 'ilahduttavassa nousussa. Kupla oli jo puhkeamassa: maan '
+            + 'suurin pankki oli juuri irtisanonut pörssitalletukset. '
+            + 'Yhdeksäntenä toukokuuta ilmoitti maksukyvyttömyydestään '
+            + 'meklari Adolf Petschek, samana aamupäivänä kaatui 120 muuta '
+            + 'pankkia, ja kello 13 poliisi sulki pörssin. Romahdus levisi '
+            + 'Berliiniin ja syyskuussa New Yorkiin. Näyttelylle odotettiin '
+            + '20 miljoonaa kävijää; tuli 7,25 miljoonaa, ja tappiota '
+            + 'kertyi noin 15 miljoonaa guldenia.',
+          selite: 'Maailmannäyttelyn alue Praterissa vuonna 1873.',
+          lahde: 'Historisches Museum der Stadt Wien 1873, Wikimedia Commons (public domain)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Wienissä ei saanut 1800-luvulla rakentaa noin '
+          + 'kahtakymmentäviittä metriä korkeampia taloja?',
+        vaihtoehdot: [
+          'keisari halusi nähdä Stephansdomin joka kadulta',
+          'palokunnan tikkaat eivät yltäneet ylemmäs',
+          'vuoristovesi ei olisi noussut ylemmäs ilman pumppuja',
+          'kaupungin savu ei olisi noussut korkeampien talojen yli',
+        ],
+        oikea: 2,
+        fakta: 'Sama vesijohto tuo yhä yli puolet Wienin juomavedestä, ja sen '
+          + '30 akveduktia ovat nykyään suojeltuja rakennuksia.',
+      },
+    },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö): syvennystarina
+     * `syvennys-wien-kauriit` ja täkynosto `nosto-kirahvimuoti`.
+     */
+    {
+      id: 'luonto',
+      nimi: 'Eläimet kaupungissa',
+      johdanto: 'Wienin keskushautausmaalla laiduntaa parikymmentä kaurista, '
+        + 'ja kaupungin eläintarhaan tuotu kirahvi muutti aikoinaan '
+        + 'kampaukset, kankaat ja seuraelämän.',
+      nostot: [
+        {
+          otsikko: 'Kauriit vanhalla hautausmaalla',
+          tiedosto: 'Capreolus capreolus Wien Zentralfriedhof 20221021 01.jpg',
+          teksti: 'Wienin keskushautausmaa on kaksi ja puoli neliökilometriä '
+            + 'ja siihen on haudattu noin kolme miljoonaa ihmistä — enemmän '
+            + 'kuin kaupungissa nykyään asuu. Koon ja tiheän puuston takia '
+            + 'se on myös luontoalue. Näkyvimpiä asukkaita ovat oravat, '
+            + 'joita wieniläiset kutsuvat nimellä Hansi. Suurimpia ovat '
+            + 'kuitenkin noin kaksikymmentä kaurista, jotka viihtyvät '
+            + 'mieluiten vanhan juutalaisen hautausmaan alueella, koska '
+            + 'vanhojen hautakivien ympärillä kasvaa ikivihreitä kasveja. '
+            + '1980-luvun puoliväliin asti alue oli virallinen '
+            + 'metsästysalue; nykyään osa siitä jätetään tarkoituksella '
+            + 'villiintymään.',
+          selite: 'Kauriit viihtyvät parhaiten keskushautausmaan vanhalla '
+            + 'juutalaisella osalla.',
+          lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Yksi kirahvi muutti koko kaupungin muodin',
+          tiedosto: 'Eduard Gurk - Die erste Giraffe im Schönbrunner Tiergarten - 1828.jpeg',
+          teksti: 'Schönbrunnin eläintarha sai ensimmäisen kirahvinsa vuonna '
+            + '1828 lahjaksi Egyptin varakuninkaalta. Eläin herätti '
+            + 'sellaisen innostuksen, että se levisi muotiin, käsitöihin ja '
+            + 'seuraelämään: kirahvikuvioita ilmestyi vaatteisiin, kenkiin '
+            + 'ja käyttöesineisiin, ja kirahvin innoittamina keksittiin '
+            + 'uusia kampauksia, hajuvesi, näytelmä ja kaksi sävellystä. '
+            + 'Tarha itse oli tuolloin yhä keisariperheen yksityisomaisuutta, '
+            + 'ja se pysyi sellaisena aina Itävalta-Unkarin hajoamiseen 1918 '
+            + 'asti.',
+          selite: 'Schönbrunnin ensimmäinen kirahvi Eduard Gurkin '
+            + 'maalauksessa samalta vuodelta, jona se saapui.',
+          lahde: 'Eduard Gurk 1828, Wikimedia Commons (public domain)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi kauriit pysyttelevät mieluiten keskushautausmaan '
+          + 'vanhimmalla osalla?',
+        vaihtoehdot: [
+          'siellä niitä ruokitaan',
+          'siellä on hiljaisinta',
+          'siellä kasvaa ikivihreitä kasveja hautakivien ympärillä',
+          'siellä aita on matalin',
+        ],
+        oikea: 2,
+        fakta: 'Hautausmaa oli virallinen metsästysalue 1980-luvun '
+          + 'puoliväliin asti. Nykyään osa alueesta jätetään tarkoituksella '
+          + 'villiintymään.',
+      },
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E2 (Raamattu, "TEKSTIEN PAINOPISTE"):
@@ -4955,8 +5100,8 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'musiikki',
       nimi: 'Musiikki',
       johdanto: 'Kaksi muusikkoa aloitti Pariisin kaduilta ja kaupungin laidan '
-        + 'asuntovaunuleiriltä — ja teki lauluja, joita soitetaan yhä '
-        + 'kaikkialla maailmassa.',
+        + 'asuntovaunuleiriltä — ja yksi ooppera kaatui täällä ensi-illassaan '
+        + 'ennen kuin se nousi maineeseen muualla.',
       nostot: [
         {
           otsikko: 'Édith Piaf lauloi ensin kadulla',
@@ -4997,6 +5142,32 @@ export const KULTTUURI_KATEGORIAT = {
           musiikki: 'https://music.apple.com/fi/search?term=django%20reinhardt%20minor%20swing',
           musiikkiNimi: 'Django Reinhardt Apple Musicissa',
         },
+        /*
+         * Siirretty kartalta lehteen (v1419 jälkityö, kaupunkinostojen
+         * katto): Pariisin kohdalle kertyi enemmän nostomerkkejä kuin
+         * kolme, ja karsinta pudotti tämän. Sisältö on täkynoston oma
+         * (`nosto-carmenin-ensi-ilta`) tiivistettynä lehtimittaan.
+         */
+        {
+          otsikko: 'Carmen kaatui ensi-illassaan',
+          tiedosto: 'Prudent-Louis Leray - Poster for the première of Georges Bizet\'s Carmen.jpg',
+          teksti: 'Georges Bizet aloitti Carmenin säveltämisen alkuvuodesta '
+            + '1873. Opéra-Comique oli valtion rahoittama perheteatteri, ja '
+            + 'sen kahdesta johtajasta Adolphe de Leuven vastusti koko '
+            + 'ajatusta: näin uskaliasta tarinaa ei esitetä täällä. Hänelle '
+            + 'luvattiin pehmennyksiä, mutta lupaukset eivät riittäneet, ja '
+            + 'hän erosi alkuvuodesta 1874. Ensi-ilta oli 3. maaliskuuta '
+            + '1875, ja viimeinen näytös oli libretisti Halévyn sanoin jäinen '
+            + 'ensimmäisestä viimeiseen. Bizet kuoli kolme kuukautta '
+            + 'myöhemmin 36-vuotiaana. Maine tuli muualta: Wien 1875, '
+            + 'Bryssel 1876, Lontoo ja New York 1878 — Pariisiin ooppera '
+            + 'palasi vasta 1883.',
+          selite: 'Carmenin ensi-ilta pidettiin Opéra-Comiquessa 3. '
+            + 'maaliskuuta 1875, ja säveltäjä ehti pitää sitä epäonnistumisena.',
+          lahde: 'Prudent-Louis Leray 1875, Wikimedia Commons (public domain)',
+          musiikki: 'https://music.apple.com/fi/search?term=bizet%20carmen',
+          musiikkiNimi: 'Bizet’n Carmen Apple Musicissa',
+        },
       ],
       tehtava: {
         kysymys: 'Mikä sytytti tulipalon Djangon perheen asuntovaunussa?',
@@ -5009,6 +5180,111 @@ export const KULTTUURI_KATEGORIAT = {
         oikea: 2,
         fakta: 'Palo alkoi lokakuussa 1928, kun kynttilä kaatui selluloidista '
           + 'tehtyjen kukkien päälle Djangon perheen asuntovaunussa.',
+      },
+    },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö). Kaupunkinostojen katto jättää
+     * kohdekaupungin viereen enintään kolme merkkiä, ja Pariisissa yli
+     * jäi kahdeksan. Tämän sivun kolme ensimmäistä juttua ovat
+     * syvennystarinoita (`syvennys-pariisi-*`) ja neljäs täkynosto
+     * (`nosto-kirahvin-kavelymatka`) — samat faktat, lehtimittaan
+     * kirjoitettuina.
+     */
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Isoisän matkavuoden Pariisi oli yhä piirityksen ja palon '
+        + 'jäljiltä auki. Samat vuodet jättivät kaupunkiin kyyhkypostin, '
+        + 'palatsin rauniot ja maalaussuunnan, jonka nimi oli alun perin '
+        + 'pilkkaa.',
+      nostot: [
+        {
+          otsikko: 'Tuileriain rauniot seisoivat yksitoista vuotta',
+          tiedosto: 'Vue des Tuileries après l\'incendie de 1871, PH83415.jpg',
+          teksti: 'Palatsin runko jäi Louvren länsipäähän seisomaan vuoden '
+            + '1871 palon jälkeen: katto ja sisustus olivat poissa, mutta '
+            + 'kivimuurit seisoivat ehjinä. Kaupungintalo, joka paloi '
+            + 'samoina päivinä, rakennettiin uudelleen jo 1870-luvulla. '
+            + 'Tuileriat sen sijaan jäivät paikoilleen, ja purkupäätöksen '
+            + 'teki kolmas tasavalta vasta 1882; vastaan olivat muun muassa '
+            + 'Georges-Eugène Haussmann ja joukko historioitsijoita. Purku '
+            + 'alkoi helmikuussa 1883 ja päättyi saman vuoden syyskuun 30. '
+            + 'päivänä. Kivet ja marmorit myytiin matkamuistoiksi, ja osista '
+            + 'rakennettiin Korsikalle kokonainen palatsi.',
+          selite: 'Tuileriain palatsi paloi vuonna 1871, ja sen runko seisoi '
+            + 'Louvren länsipäässä yksitoista vuotta ennen purkamista.',
+          lahde: 'Godefroy, Henri Emile Cimarosa, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Piiritetyn kaupungin posti kulki kyyhkyillä',
+          tiedosto: 'Pellicule du Journal Pigeons Voyageurs, Souvenir du Siège de Paris, 1870-1871. PH20110 (15 of 20).jpg',
+          teksti: 'Kun preussilaiset sulkivat Pariisin syyskuussa 1870, '
+            + 'viimeiset lennätinlangat katkaistiin kuukauden 19. päivänä ja '
+            + 'Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin '
+            + '27. päivänä. Kaupunkiin päin ainoa toimiva reitti oli '
+            + 'kirjekyyhky. Kyyhkyt vietiin ulos kuumailmapalloilla, ja '
+            + 'valokuvaaja René Dagron, mikrofilmin patentin haltija vuodesta '
+            + '1859, tarjoutui pienentämään viestit: sopimus allekirjoitettiin '
+            + '11. marraskuuta 1870 hintaan viisitoista frangia tuhatta '
+            + 'merkkiä kohti. Yksi filmi painoi noin viisi sadasosagrammaa, ja '
+            + 'yksi kyyhky kantoi niitä jopa kaksikymmentä pyrstösulkiin '
+            + 'sidotussa putkessa. Perillä filmi heijastettiin taikalyhdyllä '
+            + 'seinälle ja viestit kirjoitettiin puhtaaksi.',
+          selite: 'Piiritetystä Pariisista lähetetty mikrofilmi on noin viisi '
+            + 'senttiä kolme senttiä.',
+          lahde: 'Dagron, Prudent René-Patrice, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Nimi, joka oli alun perin pilkkaa',
+          tiedosto: 'Monet - Impression, Sunrise.jpg',
+          teksti: 'Ranskalaista taide-elämää hallitsi Salon: valitsematta '
+            + 'jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille '
+            + 'oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 '
+            + 'Monet, Renoir, Pissarro, Sisley, Cézanne, Berthe Morisot ja '
+            + 'Degas perustivat oman yhdistyksen esittääkseen työnsä itse, ja '
+            + 'jäseneksi liittyvän oli luovuttava Salonista kokonaan. '
+            + 'Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja '
+            + 'Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. '
+            + 'Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, '
+            + 'soleil levant ja otsikoi juttunsa impressionistien näyttelyksi. '
+            + 'Pilkkanimi jäi — ja taiteilijat ottivat sen itse käyttöön.',
+          selite: 'Claude Monet’n Impression, soleil levant vuodelta 1872 '
+            + 'antoi nimen koko suunnalle.',
+          lahde: 'Claude Monet 1872, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Kirahvi käveli Marseillesta Pariisiin',
+          tiedosto: 'Nicolas Hüet, the Younger - Study of the Giraffe Given to Charles X by the Viceroy of Egypt - Google Art Project.jpg',
+          teksti: 'Egyptin varakuningas lähetti kirahvin Ranskan kuninkaalle '
+            + 'Kaarle X:lle. Eläin saapui laivalla Marseilleen 31. lokakuuta '
+            + '1826 — kannessa oli sahattu reikä, josta kaula mahtui ulos. '
+            + 'Merimatkaa Atlantin ympäri pidettiin liian vaarallisena, joten '
+            + 'päätettiin, että kirahvi kävelee Pariisiin. Luonnontieteilijä '
+            + 'Étienne Geoffroy Saint-Hilaire käveli mukana ja teetti '
+            + 'eläimelle kaksiosaisen keltaisen takin ja kengät. Matka kesti '
+            + '41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja Pariisissa '
+            + 'kirahvia kävi katsomassa yli 100 000 — joka kahdeksas '
+            + 'kaupunkilainen. Hiukset kammattiin torneiksi, kankaisiin '
+            + 'ilmestyi täpliä, ja eläin eli Jardin des Plantes’ssa 18 vuotta.',
+          selite: 'Kaarle X:lle lähetetty kirahvi Nicolas Hüet nuoremman '
+            + 'tutkielmassa vuodelta 1827.',
+          lahde: 'Nicolas Hüet nuorempi 1827, Wikimedia Commons (public domain)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten kokonaisten sanomalehtien verran viestejä saatiin '
+          + 'yhden kyyhkyn kannettavaksi?',
+        vaihtoehdot: [
+          'ne kirjoitettiin silkkipaperille lyijykynällä',
+          'ne kuvattiin mikrofilmille',
+          'ne lyhennettiin salakielisiksi numeroiksi',
+          'ne painettiin ohuelle metallifoliolle',
+        ],
+        oikea: 1,
+        fakta: 'René Dagron sai kuvat pienenemään niin pieniksi, että yksi '
+          + 'filmi painoi noin viisi sadasosagrammaa. Perillä filmi '
+          + 'heijastettiin taikalyhdyllä seinälle ja viestit kirjoitettiin '
+          + 'puhtaaksi.',
       },
     },
   ],
@@ -5488,6 +5764,80 @@ export const KULTTUURI_KATEGORIAT = {
         fakta: 'Ateenalaiseen souvlaki-kääreeseen menee lihan, tomaatin, sipulin '
           + 'ja tzatzikin lisäksi ranskalaiset, ja koko kääre kiedotaan '
           + 'paperiin syötäväksi kävellen.',
+      },
+    },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö). Ateenan viereen kertyi kuusi
+     * nostomerkkiä yli katon; nämä kolme ovat syvennystarinoita
+     * (`syvennys-ateena-nike`, `-diogenes`, `-schliemann`) lehtimittaan
+     * kirjoitettuina.
+     */
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Akropoliin lounaiskulmassa on temppeli, jonka voitolta '
+        + 'riisuttiin siivet, torin laidalla filosofin saviastia — ja kadun '
+        + 'varrella palatsi, jonka rakennutti Troijan kullan löytäjä.',
+      nostot: [
+        {
+          otsikko: 'Temppeli, jolta leikattiin siivet',
+          tiedosto: 'Acròpoli d\'Atenes - Temple de Nike Àptera.JPG',
+          teksti: 'Propylaian ohi Akropoliin lounaiskulmaan noustaan '
+            + 'kallion pienimmän temppelin luo: Athena Niken pyhäkköön. Sen '
+            + 'kaidetta koristi aikoinaan marmoripatsas voitonjumalattaresta '
+            + '— mutta kuvanveistäjä oli jättänyt siltä siivet pois. '
+            + 'Myöhemmät ateenalaiset selittivät asian omalla tavallaan: '
+            + 'Voitto ei koskaan saisi lentää pois heidän kaupungistaan, '
+            + 'joten sen siivet piti riisua. Temppelin toinen nimi, Nike '
+            + 'Aptera, tarkoittaa juuri siivetöntä Voittoa.',
+          selite: 'Athena Niken temppeli seisoo Akropoliin lounaiskulmassa, '
+            + 'ja se on kallion pienin temppeli.',
+          lahde: 'Joanbanjo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Diogenes ja hänen astiansa',
+          tiedosto: 'At Wikimedia Hackathon Athens (MP) 2023 365.jpg',
+          teksti: 'Agoran laidalla kannattaa kuvitella vanha saviastia — '
+            + 'pithos, sellainen jossa säilytettiin viljaa. Filosofi '
+            + 'Diogenes majaili juuri sellaisessa talvisin, koska ei '
+            + 'välittänyt mukavuuksista eikä katoista. Kun eräs nuorukainen '
+            + 'kerran rikkoi hänen astiansa, ateenalaiset eivät suuttuneet '
+            + 'vaan hankkivat uuden tilalle. Se oli omituista kunnioitusta '
+            + 'miehelle, joka kulki torilla päivällä lyhty kädessä ja väitti '
+            + 'etsivänsä rehellistä ihmistä — ikään kuin kirkkainkaan valo '
+            + 'ei siihen riittäisi.',
+          selite: 'Diogenes asui talvisin viljan säilytykseen tarkoitetussa '
+            + 'saviastiassa eli pithoksessa.',
+          lahde: 'Mike Peel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Iliou Melathron — Troijan palatsi',
+          tiedosto: 'Heinrich Schliemann\'s house..tif',
+          teksti: 'Kesäkuussa 1873, kaivauksen viimeisenä päivänä, Heinrich '
+            + 'Schliemann löysi Hisarlikin kummulta kultaa, jonka uskoi '
+            + 'kuningas Priamoksen aarteeksi. Muutamaa vuotta myöhemmin hän '
+            + 'rakennutti Ateenaan kadun varteen komean palatsin, Iliou '
+            + 'Melathronin — Troijan palatsin. Se seisoo paikallaan yhä: '
+            + 'nykyään talossa lasketaan vanhoja kolikoita, sillä se on '
+            + 'numismaattinen museo. Talon friisissä Schliemann kaivaa '
+            + 'ikuisesti, lapio kädessä.',
+          selite: 'Schliemannin kotipalatsissa Iliou Melathronissa toimii '
+            + 'nykyään Ateenan numismaattinen museo.',
+          lahde: 'athenswalk, Wikimedia Commons (CC0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Athena Niken patsaalta oli myöhempien ateenalaisten '
+          + 'selityksen mukaan riisuttu siivet?',
+        vaihtoehdot: [
+          'jotta Voitto ei voisi koskaan lentää pois kaupungista',
+          'kuvanveistäjä ei ehtinyt tehdä niitä ajoissa',
+          'patsas kuvasi alun perin miestä eikä jumalatarta',
+          'siivet olivat pudonneet maanjäristyksessä',
+        ],
+        oikea: 0,
+        fakta: 'Temppelin toinen nimi Nike Aptera tarkoittaa siivetöntä '
+          + 'Voittoa. Pyhäkkö on Akropoliin pienin temppeli.',
       },
     },
   ],
@@ -6413,6 +6763,81 @@ export const KULTTUURI_KATEGORIAT = {
             + 'on jäljellä 921 metriä.',
           lahde: 'Laima Gūtmane, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Akvedukti',
+        },
+        /*
+         * KARTALTA LEHTEEN (v1419 jälkityö). Istanbulin viereen kertyi
+         * kuusi nostomerkkiä yli katon. Nämä neljä ovat karsittujen
+         * merkkien omaa sisältöä: kohteet `kapalicarsi` ja `dolmabahce`
+         * sekä syvennystarinat `syvennys-istanbul-kaarmepylvas` ja
+         * `-camondo`.
+         */
+        {
+          otsikko: 'Kapalıçarşı — kuusikymmentäyksi katettua katua',
+          tiedosto: 'Bayezid Gate of the Grand Bazaar (AP4M2098 1PS) (28796761060).jpg',
+          teksti: 'Istanbulin katettu basaari eli Kapalıçarşı on maailman '
+            + 'suurimpia ja vanhimpia katettuja kauppapaikkoja: 61 katettua '
+            + 'katua ja yli 4 000 myymälää, joissa käy satojatuhansia '
+            + 'ihmisiä päivässä. Sen ydin rakennettiin talvella 1455–56 '
+            + 'pian Konstantinopolin valloituksen jälkeen, kun sulttaani '
+            + 'Mehmed II pystytti kankaiden ja jalokivien kaupalle oman '
+            + 'hallin. Isoisä kulki samojen holvien alla kuin nykypäivän '
+            + 'kävijä — basaaria sanotaan usein yhdeksi maailman '
+            + 'ensimmäisistä kauppakeskuksista.',
+          selite: 'Kapalıçarşın Beyazıtin portin kaaressa on medaljongissa '
+            + 'sulttaanin tughra eli nimikirjoitusmerkki.',
+          lahde: 'Alexandru Panoiu, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Käärmepylväs ja kadonneet päät',
+          tiedosto: 'Snake column Hippodrome Constantinople 2007.jpg',
+          teksti: 'Sultanahmetin aukion pronssipylväs ei ole tästä '
+            + 'kaupungista. Se pystytettiin Delfoihin vuonna 478 eaa. '
+            + 'voitonlahjaksi Apollonille sen jälkeen, kun kreikkalaiset '
+            + 'kaupunkivaltiot olivat lyöneet persialaiset Plataian '
+            + 'taistelussa, ja Konstantinus Suuri siirsi sen uuteen '
+            + 'pääkaupunkiinsa vuonna 324. Kolme käärmeenpäätä pysyivät '
+            + 'paikoillaan 1600-luvun loppuun asti, ja lopulta kaikki kolme '
+            + 'putosivat samana päivänä lokakuussa 1700. Vuonna 1855 pylvään '
+            + 'jalusta kaivettiin esiin, ja kierteistä paljastui kaiverrus: '
+            + 'kolmenkymmenenyhden kreikkalaisen kaupungin nimet.',
+          selite: 'Käärmepylväs on seissyt kaupungissa vuodesta 324, ja se '
+            + 'tuotiin sinne Delfoista.',
+          lahde: 'Gryffindor, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Kreivi Camondo ja köyhien koulu',
+          tiedosto: 'Abraham Salomon de Camondo.jpg',
+          teksti: 'Kreivi Abraham Salomon Camondo oli Istanbulin juutalaisen '
+            + 'yhteisön patriarkka ja ottomaanihallituksen pankkiiri jo '
+            + 'ennen kuin Ottoman Bank oli olemassa. Vuonna 1858 hän perusti '
+            + 'koulun Peri Paşaan, pääkaupungin köyhimpään ja tiheimmin '
+            + 'asuttuun kaupunginosaan — ja osa rabbeista julisti hänet '
+            + 'siitä hyvästä pannaan. Koulu toimi silti kolmekymmentäkaksi '
+            + 'vuotta ja koulutti valtaosan valtakunnan juutalaisista '
+            + 'virkamiehistä. Camondo kuoli 92-vuotiaana Pariisissa 30. '
+            + 'maaliskuuta 1873, ja hänet tuotiin toiveensa mukaan takaisin '
+            + 'haudattavaksi Hasköyn hautausmaalle. Galatassa nousevat yhä '
+            + 'hänen mukaansa nimetyt portaat.',
+          selite: 'Abraham Salomon Camondo oli ottomaanihallituksen pankkiiri '
+            + 'ja kaupungin juutalaisen yhteisön patriarkka.',
+          lahde: 'Tuntematon tekijä n. 1860, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Läimäys Dolmabahçen palatsissa',
+          tiedosto: 'Franz Xaver Winterhalter Empress Eugenie.jpg',
+          teksti: 'Vuonna 1868 sulttaani Abdülaziz vei vieraansa, Ranskan '
+            + 'keisarinna Eugénien, tapaamaan äitiään Dolmabahçen '
+            + 'palatsiin. Pertevniyal Sultan piti vieraan naisen läsnäoloa '
+            + 'omissa yksityisissä huoneissaan loukkauksena, ja hänen '
+            + 'kerrotaan läimäisseen keisarinnaa kasvoihin — tilanne oli '
+            + 'lähellä kansainvälistä selkkausta. Toisen kertomuksen mukaan '
+            + 'hän suuttui siitä, että Eugénie tarttui hänen poikaansa '
+            + 'käsivarresta, ja läimäisi tätä vatsaan muistutuksena siitä, '
+            + 'ettei oltu Ranskassa. Hovista vuoti kaksi eri huhua siitä, '
+            + 'mihin sulttaanin äiti löi.',
+          selite: 'Keisarinna Eugénie Franz Xaver Winterhalterin '
+            + 'muotokuvassa vuodelta 1852.',
+          lahde: 'Franz Xaver Winterhalter 1852, Wikimedia Commons (public domain)',
         },
       ],
       tehtava: {
@@ -13447,6 +13872,27 @@ export const KULTTUURI_KATEGORIAT = {
           musiikki: 'https://music.apple.com/fi/search?term=bulgarian%20folk%20gaida',
           musiikkiNimi: 'Bulgarialaista kansanmusiikkia Apple Musicissa',
         },
+        /*
+         * Kartalta lehteen (v1419 jälkityö, kaupunkinostojen katto):
+         * syvennystarina `syvennys-sofia-pollopatsas` putosi Sofian
+         * ruuhkasta, ja sen sisältö on tässä lehtimittaan kirjoitettuna.
+         */
+        {
+          otsikko: 'Kaupungin kaimalla on pöllö kruunussa',
+          tiedosto: 'Sofia statue, Sofia (P1070773).jpg',
+          teksti: 'Nezavisimost-aukiolla, samalla jalustalla jolla ennen '
+            + 'seisoi Lenin, kohoaa nyt kahdeksanmetrinen kuparinen '
+            + 'naishahmo kuudentoista metrin korkuisella pylväällä. '
+            + 'Kuvanveistäjä antoi hänelle vallan tunnuksen, kruunun, ja '
+            + 'maineen tunnuksen, seppeleen. Kolmanneksi hän tarvitsi '
+            + 'viisauden tunnuksen ja valitsi pöllön. Patsas pystytettiin '
+            + 'joulukuun lopulla vuonna 2000 ja nimettiin kaupungin mukaan — '
+            + 'ja kaupunki taas on nimetty Pyhän Sofian kirkosta, jonka nimi '
+            + 'tarkoittaa kreikaksi Pyhää Viisautta.',
+          selite: 'Sofia-patsas seisoo Nezavisimost-aukiolla: kuparinen '
+            + 'hahmo on kahdeksan metriä korkea ja jalusta kuusitoista.',
+          lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
+        },
       ],
           /*
        * AVAUSKUVAT (19.8.2026): kolme etäisyyttä. Ilmasta auringon
@@ -13571,6 +14017,142 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Banitsa',
         },
       ],
+    },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö). Sofian viereen kertyi seitsemän
+     * nostomerkkiä yli katon. Tämän sivun jutut ovat karsittujen merkkien
+     * omaa sisältöä: `nosto-areena` (täkynosto, sama tarina kuin
+     * syvennystarinalla `syvennys-sofia-areena`), `boyana` ja `moskeijat`
+     * (maan kohteet).
+     */
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupungin alla on roomalainen areena, sen laidalla 1200-luvun '
+        + 'freskot ja sen keskustassa aukko siinä, mihin seitsemän moskeijaa '
+        + 'seisoi vielä isoisän matkavuonna.',
+      nostot: [
+        {
+          otsikko: 'Areena löytyi hotellin perustuksista',
+          tiedosto: 'Amphitheatre of Serdica - General view.jpg',
+          teksti: 'Vuonna 1919 kaivautui Sofian keskustasta esiin kivilaatta, '
+            + 'johon oli kuvattu amfiteatterin julkisivu ja sen ohjelma: '
+            + 'krokotiileja, karhuja, härkiä ja villikissoja. Laatta oli '
+            + 'aikoinaan seissyt roomalaisen Serdican portilla '
+            + 'mainostauluna. Sen jälkeen tiedettiin, että kaupungissa oli '
+            + 'täytynyt olla areena — mutta ei sitä, missä. Vastaus tuli '
+            + 'vasta 2004, kun keskustassa kaivettiin hotellin perustuksia. '
+            + 'Maasta nousivat portit liukuovineen, karhun ja villisian '
+            + 'luita ja satoja pronssikolikoita. Katsomoon oli mitoitettu '
+            + 'yli kahdellekymmenelletuhannelle. Kuudesosa areenasta '
+            + 'liitettiin hotellin pohjakerrokseen, ja sinne pääsee päivisin '
+            + 'maksutta.',
+          selite: 'Serdican amfiteatterista on jäljellä kuudesosa, ja se '
+            + 'sijaitsee hotellin pohjakerroksessa keskellä Sofiaa.',
+          lahde: 'Epaunov72, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kasvot, jotka maalattiin 1259',
+          tiedosto: 'Boyana Church 2 TB.JPG',
+          teksti: 'Sofian laidalla, Vitošan juurella, seisoo pieni Boyanan '
+            + 'kirkko — Unescon maailmanperintökohde vuodesta 1979. Kirkko '
+            + 'rakennettiin kolmessa vaiheessa 300 vuoden aikana, ja sen '
+            + 'kuuluisimmat freskot ovat vuodelta 1259: seinillä on 89 '
+            + 'kohtausta ja 240 ihmishahmoa. Lahjoittajaparin, '
+            + 'sebastokraattori Kaloyanin ja hänen vaimonsa Desislavan, '
+            + 'muotokuvia pidetään kirkon elävimpinä ja vaikuttavimpina '
+            + 'maalauksina.',
+          selite: 'Boyanan kirkko nousi Vitošan juurella kolmessa vaiheessa '
+            + '300 vuoden aikana.',
+          lahde: 'Todor Bozhinov, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Ukkosmyrsky peitti yön, jona seitsemän moskeijaa räjähti',
+          tiedosto: 'Banya bashi dhzamiya 19 vek.jpg',
+          teksti: 'Joulukuussa 1878, viisi vuotta isoisän käynnin jälkeen, '
+            + 'venäläiset sotilasinsinöörit räjäyttivät seitsemän Sofian '
+            + 'moskeijaa samana yönä; ukkosmyrsky peitti räjähdysten äänen. '
+            + 'Suurin osa kaupungin moskeijoista tuhoutui sodassa, ja suurin '
+            + 'osa muslimiväestöstä lähti kaupungista sen jälkeen. Jäljelle '
+            + 'jäi Banja Bashi, kaupungin ainoa yhä toimiva moskeija, joka '
+            + 'seisoo kuumien lähteiden päällä keskellä samaa korttelia kuin '
+            + 'synagoga ja kaksi kirkkoa.',
+          selite: 'Banja Bashi on Sofian ainoa yhä toimiva moskeija, ja se '
+            + 'valmistui vuonna 1566.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (public domain)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä toi Serdican amfiteatterin takaisin päivänvaloon '
+          + 'vuonna 2004?',
+        vaihtoehdot: [
+          'Perlovska-joen tulva',
+          'keskustan maanjäristys',
+          'hotellin perustustyöt',
+          'metrotunnelin louhinta',
+        ],
+        oikea: 2,
+        fakta: 'Löytöä ei peitetty: kuudesosa areenasta liitettiin hotellin '
+          + 'pohjakerrokseen, ja se on päivisin vapaasti katsottavissa.',
+      },
+    },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö): kohde `vitosa` ja syvennystarina
+     * `syvennys-sofia-elaintarha` putosivat samasta ruuhkasta.
+     */
+    {
+      id: 'luonto',
+      nimi: 'Vuori ja eläintarha',
+      johdanto: 'Sofian etelälaidalla vuori alkaa viimeisen bussipysäkin '
+        + 'takaa, ja neljän kilometrin päässä keskustasta on Kaakkois-Euroopan '
+        + 'vanhin eläintarha, joka alkoi yhdestä ainoasta linnusta.',
+      nostot: [
+        {
+          otsikko: 'Vuori bussipysäkin takana',
+          tiedosto: 'Mount Vitosha (1) (37642153771).jpg',
+          teksti: 'Vitoša kohoaa aivan Sofian kupeessa ja on kaupungin '
+            + 'tunnetuin maamerkki — lähin retkeily-, kiipeily- ja '
+            + 'hiihtokohde, jonne pääsee bussilla ja hissillä keskustasta. '
+            + 'Vuori syntyi tulivuoritoiminnasta ja on muotoutunut '
+            + 'vuosimiljoonien poimutuksissa neljäksi toisiinsa liittyväksi '
+            + 'osaksi. Sen huippu Cherni Vrah, musta huippu, kohoaa 2 290 '
+            + 'metriin. Vitošan luonnonpuisto perustettiin 1934, ja se oli '
+            + 'Balkanin ensimmäinen laatuaan.',
+          selite: 'Vitošan luonnonpuisto perustettiin 1934 ensimmäisenä koko '
+            + 'Balkanilla.',
+          lahde: 'Hans Birger Nilsen, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Eläintarha, joka alkoi yhdestä linnusta',
+          tiedosto: 'Азиатски слон.jpg',
+          teksti: 'Kaakkois-Euroopan vanhin ja suurin eläintarha ei alkanut '
+            + 'leijonista. Kuninkaallinen asetus perusti sen 1. toukokuuta '
+            + '1888, ja aluksi se sijaitsi kuninkaanpalatsin puistossa. Koko '
+            + 'kokoelma oli tuolloin yksi asukas: Bulgariasta pyydystetty '
+            + 'musta korppikotka, joka istui häkissään puutarhassa. Vasta '
+            + 'kun karhupari ei enää mahtunut vanhoihin tiloihin, tsaari '
+            + 'Ferdinand lahjoitti tarhalle uuden maa-alueen entisen '
+            + 'kasvitieteellisen puutarhan paikalta. Sinne se jäi, runsaan '
+            + 'neljän kilometrin päähän keskustasta etelään.',
+          selite: 'Sofian eläintarha on Kaakkois-Euroopan vanhin ja suurin, '
+            + 'ja se perustettiin 1. toukokuuta 1888.',
+          lahde: 'Κλυτίος, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä eläin muodosti yksinään koko Sofian eläintarhan sen '
+          + 'ensimmäisenä vuonna?',
+        vaihtoehdot: [
+          'kaksi Balkanvuorilta tuotua karhua',
+          'tsaarin lahjoittama norsu',
+          'Bulgariasta pyydystetty korppikotka',
+          'kuninkaanpalatsin puistossa asunut kettu',
+        ],
+        oikea: 2,
+        fakta: 'Eläintarha perustettiin kuninkaallisella asetuksella 1. '
+          + 'toukokuuta 1888. Nykyiselle paikalleen se muutti vasta, kun '
+          + 'karhupari ei enää mahtunut palatsin puistoon.',
+      },
     },
   ],
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
