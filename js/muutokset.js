@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1423, teksti: 'Maareitit yhtenäiseen lämpimään vetoon, helmet pienemmiksi' },
   { v: 1422, teksti: 'Saapuminen kuvapinokaupunkiin ei enää kaada peliä' },
   { v: 1421, teksti: 'Kaupunkiruuhkan pudottamat nostot kaupunkilehtiin' },
   { v: 1420, teksti: 'Reittien katkotyyli valmis, urat yhdistyvät silloin' },
