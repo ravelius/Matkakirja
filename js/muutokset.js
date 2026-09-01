@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1416, teksti: 'Reitit lautapelityyliin, lennot elaviksi, kalusteet z3' },
   { v: 1415, teksti: 'Kysymysvaihe pelkistyy, viimeisen yrityksen varoitus' },
   { v: 1414, teksti: 'Kuvavinkit peliin ja havainnekuvien selite' },
   { v: 1413, teksti: 'Kohtaamiskortti: aarrekuva isona ja kuvateksti alle' },
