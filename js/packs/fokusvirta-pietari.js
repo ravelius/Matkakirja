@@ -369,6 +369,8 @@ export const FOKUSVIRTA_PIETARI = {
         + 'keittiöön. Vuosia myöhemmin hän luki lehdestä kadonneesta '
         + 'munasta. Se oli sama muna, ja arvoksi arvioitiin '
         + 'kolmekymmentäkolme miljoonaa dollaria.',
+      lahde: 'en-Wikipedia "Fabergé egg" ja en-Wikipedia "Peter Carl '
+        + 'Fabergé". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 1759×1169, CC BY-SA 4.0, Mihail Ovtšinnikov
        * (Михаил Овчинников), kuvattu 16.9.2013, kuvaus "Императорское
@@ -481,6 +483,7 @@ export const FOKUSVIRTA_PIETARI = {
         + 'rakennettiin sitä varten oma proomu, jota kannatteli '
         + 'kummaltakin puolelta täysikokoinen sotalaiva. Kivi oli '
         + 'perillä 1770, ja saapumisesta lyötiin muistomitali.',
+      lahde: 'en-Wikipedia "Bronze Horseman". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 703×418, public domain, I. F. Schleyn
        * kaiverrus J. M. Feltenin piirroksesta 1770, kuvaus "The
@@ -582,6 +585,8 @@ export const FOKUSVIRTA_PIETARI = {
         + 'siinä on kaksisataakuusikymmentäviisi mittauspistettä. '
         + 'Silloin se kulki kolmen maan halki. Nykyään samat pisteet '
         + 'ovat kymmenessä maassa, eikä yksikään niistä liikkunut.',
+      lahde: 'en-Wikipedia "Pulkovo Observatory" ja en-Wikipedia "Struve '
+        + 'Geodetic Arc". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 1087×757, public domain, Jev. Bernardski
        * (1819–1889), päiväys 1855, kuvaus "Pulkovo Observatory in 1855".

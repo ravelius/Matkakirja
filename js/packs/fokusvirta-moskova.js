@@ -351,6 +351,8 @@ export const FOKUSVIRTA_MOSKOVA = {
         + 'Hevosvetoinen teekuljetus loppui 1905, karavaanit 1925 — ja '
         + 'Kyahta, joka oli aikoinaan rakennuttanut oman teepörssinsä, '
         + 'jäi paikaksi, jonka läpi ei enää kulje mitään.',
+      lahde: 'en-Wikipedia "Russian tea culture" ja en-Wikipedia "Kyakhta". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 1680×1120, public domain, Nicolas Louis de
        * Lespinasse, päiväys 1783, kuvaus "Кяхта (Histoire physique,
@@ -448,6 +450,8 @@ export const FOKUSVIRTA_MOSKOVA = {
         + 'vaihdettiin remontin yhteydessä johonkin sopuisampaan, '
         + 'työntekijät ja kävijät kirjoittivat vetoomuksen, ja manuli '
         + 'palautettiin vuonna 2019 tarhan 155-vuotispäiväksi.',
+      lahde: 'ru-Wikipedia "Московский зоопарк" ja en-Wikipedia "Moscow Zoo". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 1732×1137, public domain, tekijä tuntematon,
        * Credit "Почтовая открытка", DateTimeOriginal 1913-03-06, kuvaus
@@ -542,6 +546,9 @@ export const FOKUSVIRTA_MOSKOVA = {
         + 'pelkää hevosia mutta ei myrskyjä, saapui siis kaupunkiin, '
         + 'jossa hevoset oli juuri pantu kulkemaan kiskoja pitkin '
         + 'aikataulun mukaan.',
+      lahde: 'ru-Wikipedia "Политехнический музей", en-Wikipedia "Polytechnic '
+        + 'Museum", ru-Wikipedia "Московский трамвай" ja en-Wikipedia "Moscow '
+        + 'tram". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 1443×1803, public domain, tekijä tuntematon,
        * päiväys 1872, Credit "Альбом Видов. Составлен по распоряжению

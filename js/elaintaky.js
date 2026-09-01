@@ -448,6 +448,12 @@ export function avaaElaintaky(ui, iso) {
     teksti.appendChild(html('p', '', kappale));
   }
   sisalto.appendChild(teksti);
+  /*
+   * LÄHDERIVI ON SAMA RIVI KUIN TÄKYNOSTOLLA (1.9.2026, nostoaudit):
+   * sama luokka `fokusnosto-lahde` ja sama paikka — tekstin jälkeen,
+   * ennen lunastusta — kuin js/fokusnosto.js piirraNostonSisus.
+   */
+  if (taky.lahde) sisalto.appendChild(html('p', 'fokusnosto-lahde', taky.lahde));
   sisalto.appendChild(elaintakyLunasta(ui, iso));
 
   kortti.appendChild(sisalto);

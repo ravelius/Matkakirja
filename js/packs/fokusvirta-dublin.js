@@ -319,6 +319,8 @@ export const FOKUSVIRTA_DUBLIN = {
         + 'sen siis aivan laillisesti, vaikka häntä katsottiinkin nurjasti. '
         + 'Nykyään esillä on yksi nide neljästä, kaksi sivua kerrallaan, ja '
         + 'sivu käännetään noin kahdentoista viikon välein.',
+      lahde: 'en-Wikipedia "Book of Kells" ja en-Wikipedia "Cumdach". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 1123×1558, public domain, Restrictions tyhjä.
        * Folio 34r eli khi-rho-monogrammi, kirjan tunnetuin sivu.
@@ -397,6 +399,8 @@ export const FOKUSVIRTA_DUBLIN = {
         + 'täyteen: yhtiö osti tontin lopulta omakseen, ja sopimus '
         + 'raukesi. Se on epäromanttisin mahdollinen tapa päättää '
         + 'yhdeksäntuhannen vuoden sopimus.',
+      lahde: 'en-Wikipedia "Guinness Brewery" ja en-Wikipedia "Guinness". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 4896×3264, CC BY 2.0, Metro Centric, kuvaus
        * "Guinness brewery, Dublin". Restrictions tyhjä. SILMÄTARKISTUS
@@ -480,6 +484,8 @@ export const FOKUSVIRTA_DUBLIN = {
         + 'karjaise. Slats kuoli 1936 seitsemäntoistavuotiaana, ja hänen '
         + 'kouluttajansa hautasi hänet omalle tilalleen tavallisen '
         + 'graniittilohkareen alle — ilman nimeä, ilman vuosilukuja.',
+      lahde: 'en-Wikipedia "Dublin Zoo" ja en-Wikipedia "Leo the Lion (MGM)". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 1432×1078, public domain, tekijä
        * Metro-Goldwyn-Mayer, kuvaus "1080p quality screencap of 1926

@@ -305,6 +305,8 @@ export const FOKUSVIRTA_EDINBURGH = {
         + 'jäivät. Vesi kaivosta katkaistiin 1957. Kuono kiiltää, koska '
         + 'sitä hierotaan, ja kaupunki pyytää lakkaamaan, koska '
         + 'hierominen syö pronssia.',
+      lahde: 'en-Wikipedia "Greyfriars Bobby" ja en-Wikipedia "Greyfriars '
+        + 'Bobby Fountain". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 319×426, public domain, National Galleries
        * of Scotland, kuvaus "about 1865 ... Medium: albumen print,
@@ -413,6 +415,7 @@ export const FOKUSVIRTA_EDINBURGH = {
         + 'ne ovat Skotlannin kansallismuseossa Chambers Streetillä — '
         + 'saman korttelin kulmalla kuin se juomakaivo, jolla koira '
         + 'seisoo.',
+      lahde: 'en-Wikipedia "Arthur\'s Seat coffins". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 640×464, CC BY-SA 2.0, kim traynor, kuvattu
        * 10.4.2011, kuvaus "Arthur's Seat coffins, Chambers Street".
@@ -502,6 +505,8 @@ export const FOKUSVIRTA_EDINBURGH = {
         + 'kirjoittivat siitä syyttävään sävyyn. Torni on siis '
         + 'kirjailijan muistomerkki, jonka jokainen yksityiskohta '
         + 'muistuttaa jostakusta muusta.',
+      lahde: 'en-Wikipedia "Scott Monument" ja en-Wikipedia "George Meikle '
+        + 'Kemp". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 2472×4465, CC BY-SA 3.0, Daniel Kraft,
        * kuvattu 19.10.2021, kuvaus "The Scott monument in Edinburgh,

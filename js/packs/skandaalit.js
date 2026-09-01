@@ -54,6 +54,7 @@ export const SKANDAALIT = {
         + 'kaapissa istui ihminen. Napoleonkin hävisi puisennäköiselle '
         + 'turkkilaiselle. Paras huijaus on se, jonka kaikki aavistavat eikä '
         + 'kukaan pysty osoittamaan.',
+      lahde: 'en-Wikipedia "Mechanical Turk". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miten shakkiturkkilainen todellisuudessa pelasi?',
         vaihtoehdot: [
@@ -81,6 +82,8 @@ export const SKANDAALIT = {
         + 'mielestä skandaali. Maalauksia ei ripustettu koskaan, ja lopulta '
         + 'sota poltti koko kiistan kohteen. Jäljelle jäivät mustavalkoiset '
         + 'valokuvat ja opetus tilaustöiden vaaroista.',
+      lahde: 'en-Wikipedia "Klimt University of Vienna Ceiling Paintings". '
+        + 'Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mikä oli Klimtin tiedekuntamaalausten lopullinen kohtalo?',
         vaihtoehdot: [
@@ -107,6 +110,7 @@ export const SKANDAALIT = {
         + 'Kolme vuotta kultainen Cellini makasi lyijyarkussa metsässä. '
         + 'Museovartioinnin oppikirjat saivat uuden luvun; suola pysyi koko '
         + 'ajan turvassa.',
+      lahde: 'en-Wikipedia "Cellini Salt Cellar". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mistä Saliera löytyi vuonna 2006?',
         vaihtoehdot: [
@@ -135,6 +139,7 @@ export const SKANDAALIT = {
         + 'runomitassa. Keräilijä uskoi joka säkeen ja julkaisi kaksi paksua '
         + 'nidettä. Euroopan oppineet lukivat, ihastuivat ja sitten laskivat, '
         + 'montako sattumaa on liikaa.',
+      lahde: 'en-Wikipedia "Veda Slovena". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Kuka Veda Slovenan laulut tutkijoiden enemmistön mukaan '
           + 'todellisuudessa sepitti?',
@@ -162,6 +167,7 @@ export const SKANDAALIT = {
         + 'ehti vielä palata — mutta huomasi, että kaapattua kruunua on vaikea '
         + 'pitää päässä. Palatsissa katsellaan nykyään tauluja, mikä on kaikin '
         + 'puolin rauhallisempaa.',
+      lahde: 'en-Wikipedia "Alexander of Battenberg". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Ketkä pakottivat ruhtinas Aleksander Battenbergin luopumaan '
           + 'kruunusta 1886?',
@@ -190,6 +196,8 @@ export const SKANDAALIT = {
         + 'opettajat erotettuina. Harvoin on yksi vihellyskonsertti tullut '
         + 'valtiolle näin kalliiksi. Teatteri sentään jäi pystyyn, ja se on yhä '
         + 'kaupungin komeimpia.',
+      lahde: 'en-Wikipedia "Sofia University" ja en-Wikipedia "Ivan Vazov '
+        + 'National Theatre". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miten hallitus rankaisi ylioppilaita, jotka viheltivät ruhtinas '
           + 'Ferdinandille kansallisteatterin avajaisissa 1907?',
@@ -223,6 +231,8 @@ export const SKANDAALIT = {
         + 'ja keksityt vaakunat päätyivät vuosisadoiksi ihan oikeiden '
         + 'historiankirjojen kuvitukseksi. Fojnican luostarissa säilynyt '
         + 'kappale on väärennös, josta tuli itsestään aito aarre.',
+      lahde: 'en-Wikipedia "Fojnica Armorial" ja en-Wikipedia '
+        + '"Korjenić-Neorić Armorial". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miksi amiraali Petar Ohmučević teetti vaakunakirjan keksittyine '
           + 'vaakunoineen?',
@@ -250,6 +260,7 @@ export const SKANDAALIT = {
         + 'huomasi maksaneensa tyhjästä. Euroopan lehdet saivat skandaalinsa, '
         + 'diplomaatit harmaita hiuksia — ja historia varoituksen siitä, mitä '
         + 'salaisista sopimuksista seuraa.',
+      lahde: 'en-Wikipedia "Bosnian Crisis". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mitä Venäjän ulkoministeri tavoitteli Buchlaun salaisissa '
           + 'neuvotteluissa 1908 vastineeksi Bosnian liittämisestä?',
@@ -279,6 +290,7 @@ export const SKANDAALIT = {
         + 'tapaukselle sanan, joka jäi kieleen: oikeusmurha. Virallinen '
         + 'anteeksipyyntö ehti perille 226 vuotta myöhässä — parempi sekin kuin '
         + 'ei koskaan.',
+      lahde: 'en-Wikipedia "Anna Göldi". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Milloin Glarusin kantoni palautti Anna Göldin maineen '
           + 'virallisesti?',
@@ -306,6 +318,7 @@ export const SKANDAALIT = {
         + 'miestä vuosikausia vuorilla, joilla jokainen paimen katsoi toiseen '
         + 'suuntaan. Nykyään väärentäjällä on oma museo ja viinitarha; '
         + 'keskuspankeilla ei kummassakaan sananvaltaa.',
+      lahde: 'fr-Wikipedia "Joseph-Samuel Farinet". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miksi Valais\'n kansa suojeli rahanväärentäjä Farinet\'ta?',
         vaihtoehdot: [
@@ -332,6 +345,7 @@ export const SKANDAALIT = {
         + 'Cuvier katsoi samaa kiveä ja näki jättiläissalamanterin. Kivi ei '
         + 'ollut muuttunut — katsoja oli. Lajin tieteellinen nimi ikuistaa '
         + 'kohteliaasti sekä erehdyksen että erehtyjän.',
+      lahde: 'en-Wikipedia "Andrias scheuchzeri". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mikä Scheuchzerin \'vedenpaisumuksen todistaja\' todellisuudessa '
           + 'oli?',
@@ -361,6 +375,8 @@ export const SKANDAALIT = {
         + 'tuoreelta. Masaryk kysyi — ja hänestä tuli hetkeksi Böömin vihatuin '
         + 'mies. Myöhemmin hänestä tuli presidentti, mikä kertoo jotain '
         + 'lohdullista totuuden pitkästä matkasta.',
+      lahde: 'en-Wikipedia "Manuscripts of Dvůr Králové and Zelená Hora". '
+        + 'Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Kuka johti taistelua käsikirjoitusten paljastamiseksi '
           + 'väärennöksiksi 1886?',
@@ -389,6 +405,7 @@ export const SKANDAALIT = {
         + 'vaiheessa, kun keisari alkoi odottaa toimitusta linnanmuurien kera. '
         + 'Alkemistin ura päättyi tornihuoneeseen, josta paraskaan tinktuura ei '
         + 'auttanut ulos.',
+      lahde: 'en-Wikipedia "Edward Kelley". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miksi keisari Rudolf II vangitutti alkemisti Edward Kelleyn?',
         vaihtoehdot: [
@@ -417,6 +434,7 @@ export const SKANDAALIT = {
         + 'kuolinsyy oli kohtalokas kohteliaisuus pitopöydässä. Sivutuotteena '
         + 'selvisi, että legendaarinen hopeanenä oli messinkiä. Huhut kestävät '
         + 'huonosti punnitusta.',
+      lahde: 'en-Wikipedia "Tycho Brahe". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mitä Tycho Brahen vuoden 2010 haudanavaus paljasti '
           + 'myrkytyshuhuista?',
@@ -446,6 +464,7 @@ export const SKANDAALIT = {
         + 'sitä, ettei kukaan muu ollut sattunut samalle kukkulalle. Kollegat '
         + 'olivat veistäneet joka ikisen. Kirja ehti painoon ennen kuin kukaan '
         + 'kehtasi kertoa.',
+      lahde: 'en-Wikipedia "Beringer\'s Lying Stones". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Ketkä olivat kätkeneet väärennetyt \'fossiilit\' Beringerin '
           + 'löydettäviksi?',
@@ -472,6 +491,7 @@ export const SKANDAALIT = {
         + 'hoiti loput: sotilaat tottelivat, pormestari antautui, kassa aukesi. '
         + 'Kukaan ei pyytänyt papereita — takki riitti. Keisarikin nauroi, '
         + 'tosin vasta armahduspaperit allekirjoitettuaan.',
+      lahde: 'en-Wikipedia "Wilhelm Voigt". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mihin \'Köpenickin kapteenin\' vallankäyttö perustui?',
         vaihtoehdot: [
@@ -498,6 +518,7 @@ export const SKANDAALIT = {
         + 'tarkistus tilattiin vasta lehdistötilaisuuden jälkeen — järjestys, '
         + 'jota toimitusopit eivät suosittele. Väärentäjä istui tuomionsa ja '
         + 'jatkoi sitten uraa myymällä \'aitoja Kujau-väärennöksiä\'.',
+      lahde: 'en-Wikipedia "Hitler Diaries". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miten Hitlerin päiväkirjat lopulta paljastuivat väärennöksiksi?',
         vaihtoehdot: [
@@ -526,6 +547,8 @@ export const SKANDAALIT = {
         + 'virkamiehet ehtivät niitä lukea. Lääkäri hallitsi Tanskaa kaksi '
         + 'vuotta ilman että osasi kunnolla tanskaa — se ei kaatanut häntä, '
         + 'mutta kuningattaren sydän kaatoi.',
+      lahde: 'en-Wikipedia "Johann Friedrich Struensee". Tarkistettu '
+        + '1.9.2026.',
       visa: {
         kysymys: 'Mikä oli Johann Friedrich Struenseen virallinen tehtävä Tanskan '
           + 'hovissa?',
@@ -552,6 +575,8 @@ export const SKANDAALIT = {
         + 'tammikuussa 1813 ja osoitti väitteen vääräksi. Setelien omistajat '
         + 'saivat pitää paperinsa — arvosta suurin osa vain oli kadonnut, ja '
         + 'luottamuksen paluuta saatiin odottaa pidempään kuin rauhaa.',
+      lahde: 'en-Wikipedia "Danish state bankruptcy of 1813". Tarkistettu '
+        + '1.9.2026.',
       visa: {
         kysymys: 'Mikä ajoi Tanskan valtion vararikkoon vuonna 1813?',
         vaihtoehdot: [
@@ -577,6 +602,7 @@ export const SKANDAALIT = {
         + 'ilmiannon, tunnustuksen ja syyllisen kiinnioton samalla '
         + 'asiointikerralla. Poliisin työksi jäi lähinnä kirjata summa — 18 '
         + 'miljoonaa kruunua — ja tarkistaa, ettei nollia puutu.',
+      lahde: 'en-Wikipedia "Peter Adler Alberti". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miten oikeusministeri Albertin kavallukset paljastuivat '
           + 'lopullisesti vuonna 1908?',
@@ -606,6 +632,7 @@ export const SKANDAALIT = {
         + 'lähes sata vuotta. Rooma tarvitsi neljä vuosikymmentä ja yhden '
         + 'inkvisition todetakseen ilmeisen. Väärennös oli huono, mutta toive '
         + 'oli vahva.',
+      lahde: 'en-Wikipedia "Lead Books of Sacromonte". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mistä materiaalista Sacromonten \'muinaiset kirjat\' oli tehty?',
         vaihtoehdot: [
@@ -632,6 +659,7 @@ export const SKANDAALIT = {
         + 'Järjestelmä toimi täydellisesti — niin kauan kuin uusia jonottajia '
         + 'riitti. Menetelmä sai myöhemmin nimensä eräältä herra Ponzilta, joka '
         + 'keksi saman pyörän uudestaan.',
+      lahde: 'es-Wikipedia "Baldomera Larra". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miten Baldomera Larran \'talletuskassa\' maksoi luvatut suuret '
           + 'korot?',
@@ -660,6 +688,8 @@ export const SKANDAALIT = {
         + 'patsaita alkaa merkillisesti riittää. Kansallismuseon kokoelmiin '
         + 'päätyi aitojen iberiveistosten sekaan tuoreita — ja tutkijat '
         + 'lajittelevat perintöä yhä. Kysyntä loi tarjontaa jo 1800-luvulla.',
+      lahde: 'en-Wikipedia "Cerro de los Santos" ja es-Wikipedia "Cerro de '
+        + 'los Santos". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miksi Cerro de los Santosin löytöjen joukkoon ilmestyi '
           + 'väärennöksiä 1800-luvulla?',
@@ -693,6 +723,7 @@ export const SKANDAALIT = {
         + 'ei tullut, mutta tarina jäi: \'valkea laiva\' tarkoittaa yhä toivoa, '
         + 'joka on liian kaunis saapuakseen. Profeetta itse palasi lopulta '
         + 'arkisempaan ammattiin — kaupankäyntiin.',
+      lahde: 'en-Wikipedia "Juhan Leinberg". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mitä maltsvetilaiset odottivat Lasnamäen kalliolla 1861?',
         vaihtoehdot: [
@@ -721,6 +752,7 @@ export const SKANDAALIT = {
         + 'yhtä tehokkaasti — tai kastellut yhtä montaa oppituntia. '
         + 'Vastaanottava ranta oli Suomen — sama tarina jatkuu Helsingin '
         + 'Kauppatorilla.',
+      lahde: 'fi-Wikipedia "Kieltolaki (Suomi)". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mistä pirtu pääosin salakuljetettiin Suomeen kieltolain '
           + 'alkuvuosina?',
@@ -749,6 +781,7 @@ export const SKANDAALIT = {
         + 'lehdet keksivät hänelle ulkomaisia rosvonimiä, kun kotimainen suosio '
         + 'kiusasi. Legendan viimeinen temppu oli paras: kukaan ei varmasti '
         + 'tiedä, missä ja milloin hän kuoli.',
+      lahde: 'et-Wikipedia "Rummu Jüri". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miten Rummu Jüri pakeni Toompean lossivankilasta?',
         vaihtoehdot: [
@@ -778,6 +811,8 @@ export const SKANDAALIT = {
         + 'Jälkipolvet ovat äänestäneet toisin — teilatusta kirjasta tuli '
         + 'kansalliskirjallisuuden kulmakivi, ja arvostelu muistetaan lähinnä '
         + 'varoittavana esimerkkinä.',
+      lahde: 'fi-Wikipedia "Seitsemän veljestä" ja fi-Wikipedia "August '
+        + 'Ahlqvist". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mitä Seitsemän veljeksen tyrmäävästä arvostelusta seurasi vuonna '
           + '1870?',
@@ -808,6 +843,8 @@ export const SKANDAALIT = {
         + 'maajoukkuejalkapalloilija. Lopulta äänestäjät ratkaisivat ottelun '
         + 'lain tappioksi. Lastien lähtöranta oli Viron — sama tarina alkaa '
         + 'Tallinnan satamasta.',
+      lahde: 'fi-Wikipedia "Kieltolaki (Suomi)" ja fi-Wikipedia "Algoth '
+        + 'Niska". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Kuinka kauan Suomen kieltolaki oli voimassa?',
         vaihtoehdot: [
@@ -834,6 +871,8 @@ export const SKANDAALIT = {
         + 'ei radalla: kaksi päivää ennen avajaisia kokous päätti, ettei Nurmi '
         + 'juokse. Kysymys kuului, oliko juoksija ottanut matkoistaan rahaa — '
         + 'vastausta ei virallisesti annettu koskaan, mutta maratonhaave jäi.',
+      lahde: 'en-Wikipedia "Paavo Nurmi" ja fi-Wikipedia "Paavo Nurmi". '
+        + 'Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miksi Paavo Nurmi ei saanut kilpailla Los Angelesin '
           + 'olympialaisissa 1932?',
@@ -863,6 +902,7 @@ export const SKANDAALIT = {
         + 'odotti sankarin mainetta Italiassa — sai sellin ja jälkimaailmalta '
         + 'sivuosan taulun tarinassa. Taulu sen sijaan sai varkaudesta '
         + 'lopullisen maailmanmaineensa.',
+      lahde: 'en-Wikipedia "Vincenzo Peruggia". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Missä kaupungissa Mona Lisa löytyi yli kaksi vuotta varkauden '
           + 'jälkeen?',
@@ -890,6 +930,8 @@ export const SKANDAALIT = {
         + 'timanttikaulanauhan kuningattarelle, eikä kuningatar tiennyt asiasta '
         + 'mitään. Kun lasku erääntyi, kaulanauha oli jo pilkottu myyntiin. '
         + 'Maksajaksi jäi lopulta koko kuningaskunta — maineessa mitattuna.',
+      lahde: 'en-Wikipedia "Affair of the Diamond Necklace". Tarkistettu '
+        + '1.9.2026.',
       visa: {
         kysymys: 'Kenen nimissä huijari Jeanne de la Motte sai kardinaali de Rohanin '
           + 'ostamaan timanttikaulanauhan?',
@@ -917,6 +959,7 @@ export const SKANDAALIT = {
         + 'perään 27 000 muuta. Kansallisylpeys teki ostajasta sokean: olihan '
         + 'kirjeissä todiste, että painovoima keksittiin Ranskassa. '
         + 'Tiedeakatemia ei ollut aivan yhtä ilahtunut.',
+      lahde: 'en-Wikipedia "Denis Vrain-Lucas". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mikä paljasti järkevälle lukijalle Vrain-Lucasin \'Kleopatran '
           + 'kirjeet\' väärennöksiksi?',
@@ -946,6 +989,7 @@ export const SKANDAALIT = {
         + 'neljäksikymmeneksi vuodeksi — kukaan ei tullut kysyneeksi, miksi '
         + 'luut oli värjätty. Löytäjä halusi kuuluisaksi, ja tulikin: '
         + 'väärentäjänä.',
+      lahde: 'en-Wikipedia "Piltdown Man". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mistä Piltdownin ihminen oli oikeasti koottu?',
         vaihtoehdot: [
@@ -974,6 +1018,7 @@ export const SKANDAALIT = {
         + 'joka vain nousi — kunnes ei enää noussut. Lontoo oppi vuonna 1720 '
         + 'sanan \'kupla\' kalleimmalla mahdollisella tavalla. '
         + 'Konttorirakennuksen nimi seisoo yhä Threadneedle Streetin kulmassa.',
+      lahde: 'en-Wikipedia "South Sea Company". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miksi South Sea Companyn luvattu Etelä-Amerikan kauppa ei koskaan '
           + 'tuottanut voittoa?',
@@ -1001,6 +1046,7 @@ export const SKANDAALIT = {
         + 'ei ollut olemassa lainkaan. Poyaisilla oli lippu, obligaatiot ja '
         + 'opaskirjakin; puuttui vain itse valtio. Laivat purjehtivat kartalta '
         + 'löytymättömään satamaan täydessä lastissa.',
+      lahde: 'en-Wikipedia "Gregor MacGregor". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mitä Poyaisiin purjehtineet siirtolaiset löysivät perille '
           + 'päästyään?',
@@ -1029,6 +1075,7 @@ export const SKANDAALIT = {
         + 'ole vieläkään palannut. Lupapaperista kiistellään kohta kolmatta '
         + 'vuosisataa — harvasta kuitista on väännetty näin pitkään. Ateenassa '
         + 'marmoreille on varattu museosali valmiiksi, varmuuden vuoksi.',
+      lahde: 'en-Wikipedia "Elgin Marbles". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Missä suurin osa Parthenonin irrotetuista veistoksista on nykyään?',
         vaihtoehdot: [
@@ -1055,6 +1102,7 @@ export const SKANDAALIT = {
         + 'tehneensä senkin itse. Mies väärensi urallaan niin paljon, että '
         + 'väärensi lopulta oman kuolemansakin. Paleografia sai hänestä sekä '
         + 'painajaisensa että parhaan mainoksensa.',
+      lahde: 'en-Wikipedia "Constantine Simonides". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Minkä kuuluisan aidon käsikirjoituksen Simonides väitti '
           + 'kirjoittaneensa itse?',
@@ -1084,6 +1132,8 @@ export const SKANDAALIT = {
         + 'hurrata kreikkalaista kolmoisvoittoa kokonaisen illan. Opetus kesti '
         + 'pidempään kuin pronssi — perässä tuleva unkarilainen näet laski, '
         + 'montako juoksijaa hänet ohitti.',
+      lahde: 'en-Wikipedia "Athletics at the 1896 Summer Olympics – Men\'s '
+        + 'marathon" ja en-Wikipedia "Spyridon Belokas". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miten Spyridon Belokas eteni osan vuoden 1896 olympiamaratonista?',
         vaihtoehdot: [
@@ -1114,6 +1164,8 @@ export const SKANDAALIT = {
         + 'satamakaupunki vaihtoi hallitsijaa paperiliuskan hinnalla. '
         + 'Alkuperäinen teksti kuultaa lapun alta yhä — historian ohuin '
         + 'peittely on kestänyt valoa huonosti.',
+      lahde: 'hr-Wikipedia "Riječka krpica" ja en-Wikipedia '
+        + '"Croatian–Hungarian Settlement". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miten Kroatian ja Unkarin sovintosopimuksen Rijekaa koskeva '
           + 'artikla muutettiin 1868?',
@@ -1141,6 +1193,7 @@ export const SKANDAALIT = {
         + 'kappale on parisataa vuotta väitettyä sopimusta nuorempi. Aito tai '
         + 'ei, paperi teki töitä 800 vuotta valtio-opin raskaassa sarjassa. '
         + 'Historioitsijat väittelevät yhä; pergamentti vaikenee.',
+      lahde: 'en-Wikipedia "Pacta conventa (Croatia)". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miksi osa historioitsijoista epäilee vuoden 1102 Pacta conventaa '
           + 'väärennökseksi?',
@@ -1169,6 +1222,7 @@ export const SKANDAALIT = {
         + 'kassaan. Salaliitto epäonnistui perusteellisesti, mutta muistona se '
         + 'on menestynyt: kaksikon nimet ovat Kroatiassa yhä katukylttien '
         + 'vakiokalustoa.',
+      lahde: 'en-Wikipedia "Magnate conspiracy". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mitä Zrinskin ja Frankopanin sukujen maaomaisuuksille tapahtui '
           + 'salaliiton kukistuttua 1671?',
@@ -1198,6 +1252,7 @@ export const SKANDAALIT = {
         + 'kruununperimyksen tehokkaammin kuin yksikään armeija. Jos joskus '
         + 'näet Pyhän Tapanin kruunun vinon ristin, tiedät nyt, että se taipui '
         + 'pakoreessä jäätyneellä Tonavalla.',
+      lahde: 'en-Wikipedia "Helene Kottanner". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Missä Unkarin pyhä kruunu piilotettiin, kun se varastettiin '
           + 'Visegrádista 1440?',
@@ -1225,6 +1280,7 @@ export const SKANDAALIT = {
         + 'senkin. Hänestä kirjan kirjoittanut mies jäi pian itse kiinni '
         + 'väärennetyistä muistelmista, mikä lienee alan täydellisin oppitunti: '
         + 'väärentäjän ympärillä kaikki alkaa olla vähän väärennettyä.',
+      lahde: 'en-Wikipedia "Elmyr de Hory". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Minkä taiteilijoiden tyyliin Elmyr de Hory erityisesti väärensi '
           + 'teoksia?',
@@ -1252,6 +1308,7 @@ export const SKANDAALIT = {
         + 'todisti toista: lautaseen oli kaiverrettu Balatonin roomalainen '
         + 'nimi. Esine voi valehdella alkuperänsä vain, jos kukaan ei lue mitä '
         + 'siihen on kirjoitettu.',
+      lahde: 'en-Wikipedia "Seuso Treasure". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mikä kaiverrus tuki Unkarin väitettä Seuson aarteen alkuperästä?',
         vaihtoehdot: [
@@ -1280,6 +1337,8 @@ export const SKANDAALIT = {
         + 'kuuluisimman poliitikon — ja koko juttu kaatui yhteen väärin '
         + 'kirjoitettuun sanaan. Väärentäjä teki oikeussalissa saman virheen '
         + 'kuin paperilla. Oikoluku olisi kannattanut.',
+      lahde: 'en-Wikipedia "Richard Pigott" ja en-Wikipedia "Charles Stewart '
+        + 'Parnell". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miten Richard Pigottin väärennös paljastui erityistuomioistuimessa '
           + '1889?',
@@ -1307,6 +1366,7 @@ export const SKANDAALIT = {
         + 'puolueensa riitakysymys, ja Irlannin itsehallinto siirtyi '
         + 'sukupolvella eteenpäin. Historia tuntee harvoja kalliimpia '
         + 'yksityiselämän paljastuksia.',
+      lahde: 'en-Wikipedia "Charles Stewart Parnell". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mikä oli Parnellin vuoden 1890 skandaalin merkittävin poliittinen '
           + 'seuraus?',
@@ -1334,6 +1394,7 @@ export const SKANDAALIT = {
         + 'maksettiin — sitten koko komeus purjehti takaisin satamaan lasti '
         + 'täynnä. Kenelle kuuluu aarre, jonka omistajille on jo korvattu sen '
         + 'menetys? Dublin perusti kysymyksen ratkomiseen kokonaisen seuran.',
+      lahde: 'en-Wikipedia "Ouzel Galley". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mitä Ouzel Galleyn ylimääräiselle saalisrahalle tehtiin, kun '
           + 'omistajat ja vakuuttajat oli hyvitetty?',
@@ -1363,6 +1424,7 @@ export const SKANDAALIT = {
         + 'kuukauden päästä kuningaskunta oli ohi ja kuningas vankina laivassa. '
         + 'Islanti antoi hänelle arvonimen, jota yksikään hallitsija ei ole '
         + 'halunnut periä.',
+      lahde: 'en-Wikipedia "Jørgen Jørgensen". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miksi islantilaiset kutsuvat Jørgen Jørgenseniä \'koirapäivien '
           + 'kuninkaaksi\'?',
@@ -1389,6 +1451,7 @@ export const SKANDAALIT = {
         + 'maksoivat — ja sitä nopeammin se katosi. Viimeinen pari haettiin '
         + 'Eldeyn kalliolta tilaustyönä vuonna 1844. Kokoelma täydentyi; laji '
         + 'loppui.',
+      lahde: 'en-Wikipedia "Great auk". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miksi viimeiset siivettömät ruokit tapettiin Eldeyllä vuonna 1844?',
         vaihtoehdot: [
@@ -1418,6 +1481,7 @@ export const SKANDAALIT = {
         + 'opiskelijat näyttivät television katsojille videon, jolla päät '
         + 'syntyivät porakoneella. Asiantuntijat eivät itkeneet enää '
         + 'liikutuksesta.',
+      lahde: 'en-Wikipedia "Amedeo Modigliani". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Millä työkalulla opiskelijat paljastivat veistäneensä yhden '
           + 'Livornon kanavasta löytyneistä \'Modiglianin päistä\'?',
@@ -1444,6 +1508,7 @@ export const SKANDAALIT = {
         + 'samat numerot kahdesti — näin ajateltiin Banca Romanassa. Skandaali '
         + 'kaatoi hallituksen ja synnytti sivutuotteena Italian keskuspankin. '
         + 'Harva pankkikriisi on ollut näin tuottelias.',
+      lahde: 'en-Wikipedia "Banca Romana scandal". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mikä instituutio perustettiin Banca Romanan skandaalin '
           + 'seurauksena?',
@@ -1470,6 +1535,7 @@ export const SKANDAALIT = {
         + 'luki tulevaisuutta — ainakin omien sanojensa mukaan. Euroopan hovit '
         + 'uskoivat vuosikausia. Ura päättyi vuoristolinnoituksen selliin, '
         + 'josta edes suuri maagikko ei loihtinut itseään ulos.',
+      lahde: 'en-Wikipedia "Alessandro Cagliostro". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mikä oli \'kreivi Cagliostrona\' esiintyneen huijarin oikea nimi?',
         vaihtoehdot: [
@@ -1498,6 +1564,7 @@ export const SKANDAALIT = {
         + 'August valitsi Barboran ja piti valintansa — vaikka koko valtakunta, '
         + 'oma äiti etunenässä, oli toista mieltä. Myrkkyhuhut elävät Vilnassa '
         + 'yhä.',
+      lahde: 'en-Wikipedia "Barbara Radziwiłł". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Kuka vastusti kiivaimmin Sigismund Augustin ja Barbora Radvilaitėn '
           + 'avioliittoa?',
@@ -1525,6 +1592,7 @@ export const SKANDAALIT = {
         + 'jäivät lentämättä. Syytä ei koskaan selvitetty, ja juuri se piti '
         + 'tarinan hengissä: jokainen liettualainen tuntee Lituanican, ja moni '
         + 'tietää siitä oman versionsa.',
+      lahde: 'en-Wikipedia "Lituanica". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mihin Lituanican lento vuonna 1933 päättyi?',
         vaihtoehdot: [
@@ -1550,6 +1618,7 @@ export const SKANDAALIT = {
         + 'mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä '
         + '1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka '
         + 'on kestänyt pidempään kuin kolikon ostovoima.',
+      lahde: 'en-Wikipedia "Boratynka". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mistä boratynka-kolikko sai nimensä?',
         vaihtoehdot: [
@@ -1578,6 +1647,7 @@ export const SKANDAALIT = {
         + 'lisäsi, että hän on nimenomaan hyvien puolella, Jumalan koira, joka '
         + 'käy helvetissä hakemassa varastetun sadon takaisin. Tuomarit '
         + 'pyörittelivät papereitaan pitkään.',
+      lahde: 'en-Wikipedia "Thiess of Kaltenbrun". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miksi Thiess omien sanojensa mukaan muuttui ihmissudeksi?',
         vaihtoehdot: [
@@ -1603,6 +1673,7 @@ export const SKANDAALIT = {
         + '1584 pystyi: uusi kalenteri vei kaupungin vuosiksi sekasortoon, ja '
         + 'kun pöly laskeutui, Riika päätti pysyä vanhassa ajassa. Sinnikkyys '
         + 'kesti — kaupunki vaihtoi kalenteria vasta 335 vuotta myöhemmin.',
+      lahde: 'en-Wikipedia "Calendar riots in Riga". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Milloin Riika lopulta siirtyi gregoriaaniseen kalenteriin?',
         vaihtoehdot: [
@@ -1630,6 +1701,7 @@ export const SKANDAALIT = {
         + 'historian — paperilla, joka tuoksui vielä painomusteelta. Oppineet '
         + 'riitelivät vuosikymmenen ennen kuin sepite myönnettiin sepitteeksi. '
         + 'Väärennös on nyt arkistossa arvopaikalla: se on aito väärennös.',
+      lahde: 'en-Wikipedia "Oera Linda Book". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Millä kielellä Oera Linda -kirja oli kirjoitettu?',
         vaihtoehdot: [
@@ -1656,6 +1728,7 @@ export const SKANDAALIT = {
         + 'Vermeer. Göring oli maksanut omaisuuden taulusta, jota Vermeer ei '
         + 'ollut koskaan nähnyt. Hollanti sai sodanjälkeisen sankarin, jonka '
         + 'ammatti oli petos.',
+      lahde: 'en-Wikipedia "Han van Meegeren". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miksi van Meegeren tunnusti väärentäneensä \'Vermeerinsä\'?',
         vaihtoehdot: [
@@ -1683,6 +1756,7 @@ export const SKANDAALIT = {
         + 'kuningas. Kelloseppä hävisi jokaisen oikeusjutun ja voitti '
         + 'hautakirjoituksen. DNA ratkaisi kiistan vasta puolentoista '
         + 'vuosisadan päästä.',
+      lahde: 'en-Wikipedia "Karl Wilhelm Naundorff". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Kuka Karl Wilhelm Naundorff väitti olevansa?',
         vaihtoehdot: [
@@ -1712,6 +1786,7 @@ export const SKANDAALIT = {
         + 'elinkautisvanki kirjoitti sellissään omaelämäkerran, jossa varas on '
         + 'sankari, ja kansa osti tarinan mieluummin kuin viranomaisten '
         + 'version.',
+      lahde: 'en-Wikipedia "Gjest Baardsen". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mistä Gjest Baardsen tuli tunnetuksi rikostensa lisäksi?',
         vaihtoehdot: [
@@ -1738,6 +1813,7 @@ export const SKANDAALIT = {
         + 'kuuluisin kirkaisu vietiin tikapuilla, ja varkaiden jättämä '
         + 'kiitoskortti vartioinnista lienee lajissaan tylyimpiä '
         + 'asiakaspalautteita.',
+      lahde: 'en-Wikipedia "The Scream". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mitä Huudon varastaneet miehet jättivät jälkeensä vuonna 1994?',
         vaihtoehdot: [
@@ -1767,6 +1843,8 @@ export const SKANDAALIT = {
         + 'Kristiania oli pieni kaupunki ja romaanin henkilöt tunnistettavia. '
         + 'Mikään ei tee kirjasta kiinnostavampaa kuin takavarikko — sen '
         + 'tiesivät boheemitkin.',
+      lahde: 'no-Wikipedia "Fra Kristiania-Bohêmen" ja en-Wikipedia "Hans '
+        + 'Jæger". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mitä kirjailija Hans Jægerille tapahtui romaanin Fra '
           + 'Kristiania-Bohêmen ilmestyttyä?',
@@ -1797,6 +1875,7 @@ export const SKANDAALIT = {
         + '\'saksalaista miekkaa\' ja kuiskivat, että tuohan näyttää '
         + 'epäilyttävästi omalta kruunajaismiekalta. He olivat oikeassa; '
         + 'paluumatka kesti silti vielä viisikymmentä vuotta.',
+      lahde: 'en-Wikipedia "Szczerbiec". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miten kruunajaismiekka Szczerbiec palasi Puolaan vuonna 1928?',
         vaihtoehdot: [
@@ -1823,6 +1902,7 @@ export const SKANDAALIT = {
         + 'Kaivinkoneet löysivät kunnioitettavan määrän savea. Legenda ei tästä '
         + 'lannistunut — kadonneen aarteen paras piilopaikka on ihmisten '
         + 'mielikuvitus, jonne ei lapio yllä.',
+      lahde: 'en-Wikipedia "Nazi gold train". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mitä Wałbrzychin kultajunan kaivauksissa 2016 lopulta löytyi?',
         vaihtoehdot: [
@@ -1851,6 +1931,7 @@ export const SKANDAALIT = {
         + 'käsikirjoituksen. Opetus on kestänyt paremmin kuin kronikka: mitä '
         + 'mairittelevampi menneisyys, sitä tarkemmin kannattaa katsoa paperin '
         + 'ikää.',
+      lahde: 'pl-Wikipedia "Kronika Prokosza". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Kuka paljasti Prokoszin kronikan väärennökseksi?',
         vaihtoehdot: [
@@ -1879,6 +1960,7 @@ export const SKANDAALIT = {
         + 'kiersi kahdet aidot 500 escudon setelit, joista vain toiset oli '
         + 'tilattu. Suunnitelman ainoa vika oli, että sarjanumerotkin olivat '
         + 'aitoja: samat kahteen kertaan.',
+      lahde: 'en-Wikipedia "Alves dos Reis". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miksi Alves dos Reisin huijausseteleitä oli lähes mahdoton '
           + 'tunnistaa vääriksi?',
@@ -1907,6 +1989,8 @@ export const SKANDAALIT = {
         + 'paljon myöhemmin heräsi kysymys, oliko koko nunnaa olemassakaan. '
         + 'Bejassa näytetään silti yhä ikkunaa, josta häntä ei ehkä koskaan '
         + 'katsottu.',
+      lahde: 'en-Wikipedia "Letters of a Portuguese Nun". Tarkistettu '
+        + '1.9.2026.',
       visa: {
         kysymys: 'Kuka useimpien tutkijoiden mukaan todella kirjoitti '
           + '\'portugalilaisen nunnan\' kuuluisat rakkauskirjeet?',
@@ -1934,6 +2018,7 @@ export const SKANDAALIT = {
         + 'ja väri kuivui kokoon päivässä. Lissabonissa nöyryytys muistettiin '
         + 'pitkään, ja lasku lankesi lopulta kuningashuoneelle. Kartta on '
         + 'sentään tallessa.',
+      lahde: 'en-Wikipedia "1890 British Ultimatum". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mitä Portugalin \'vaaleanpunainen kartta\' esitti?',
         vaihtoehdot: [
@@ -1965,6 +2050,8 @@ export const SKANDAALIT = {
         + 'täsmällisesti toimiva osa. Nuori valtio oppi kalliisti '
         + 'kansainvälisen rahoituksen ensimmäisen säännön: lue paperi ennen '
         + 'kuin juna lähtee.',
+      lahde: 'ro-Wikipedia "Afacerea Strousberg" ja en-Wikipedia "Bethel '
+        + 'Henry Strousberg". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miten Strousbergin rautatiekonsessio Romaniassa päättyi?',
         vaihtoehdot: [
@@ -1994,6 +2081,8 @@ export const SKANDAALIT = {
         + 'paloiksi, ja muinainen teksti pelastui vain siksi, että joku oli '
         + 'sattunut valokuvaamaan sen Lontoossa. Kopio voi joskus olla aarteen '
         + 'tärkein osa.',
+      lahde: 'en-Wikipedia "Pietroasele Treasure" ja ro-Wikipedia "Tezaurul '
+        + 'de la Pietroasa". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miksi Pietroaselen aarteen riimukirjoitus voitiin rekonstruoida '
           + 'vuoden 1875 ryöstön jälkeen?',
@@ -2024,6 +2113,7 @@ export const SKANDAALIT = {
         + 'saanut. Taulussa hän hukkuu selliin tulvassa; todellisuus oli '
         + 'proosallisempi, mutta arvoitus jäi, ja arvoitus elää pidempään kuin '
         + 'tulva.',
+      lahde: 'en-Wikipedia "Princess Tarakanova". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miten \'prinsessa Tarakanova\' saatiin kiinni?',
         vaihtoehdot: [
@@ -2052,6 +2142,8 @@ export const SKANDAALIT = {
         + 'joku laskeutuu Kremlin kellareihin lyhty kädessä. Kirjaston '
         + 'sisällysluettelokin on kadonnut, mikä on etsijöiden kannalta '
         + 'suorastaan käytännöllistä.',
+      lahde: 'en-Wikipedia "Lost Library of Ivan the Terrible". Tarkistettu '
+        + '1.9.2026.',
       visa: {
         kysymys: 'Mistä Iivana Julman kirjaston arvokkaimpien käsikirjoitusten '
           + 'kerrotaan tulleen Moskovaan?',
@@ -2080,6 +2172,7 @@ export const SKANDAALIT = {
         + 'lavastus ja täydellinen ajoitus. Jalokivikauppias sai psykiatrilta '
         + 'diagnoosin, Sonja sai jalokivet. Laki sai hänet lopulta kiinni, '
         + 'mutta legenda karkasi Sahalinilta helpommin kuin hän itse.',
+      lahde: 'en-Wikipedia "Sonya Golden Hand". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Millä tempulla Sonja Kultakäsi huijasi moskovalaista '
           + 'jalokivikauppiasta 1883?',
@@ -2110,6 +2203,8 @@ export const SKANDAALIT = {
         + 'painaa enemmän kuin kassassa on katetta — vei keksijän vankilaan ja '
         + 'pankin nurin. Molemmat opetukset ovat pysyneet ajankohtaisina siitä '
         + 'asti.',
+      lahde: 'en-Wikipedia "Stockholms Banco" ja en-Wikipedia "Johan '
+        + 'Palmstruch". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miksi Stockholms Banco, Euroopan ensimmäinen setelipankki, kaatui?',
         vaihtoehdot: [
@@ -2138,6 +2233,7 @@ export const SKANDAALIT = {
         + 'Kustaa III oli saanut varoituskirjeenkin, mutta meni tanssiaisiin '
         + 'silti. Jälkimaailma sai aiheesta oopperan; Ruotsi sai '
         + 'perustuslakikriisin.',
+      lahde: 'en-Wikipedia "Gustav III". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Missä kuningas Kustaa III ammuttiin vuonna 1792?',
         vaihtoehdot: [
@@ -2166,6 +2262,7 @@ export const SKANDAALIT = {
         + 'tulitikkuihin. Kukaan ei kysynyt liian tarkkaan, mistä lainarahat '
         + 'tulivat — ennen kuin kevät 1932 vastasi kysymykseen kaikkien '
         + 'puolesta.',
+      lahde: 'en-Wikipedia "Ivar Kreuger". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mitä Ivar Kreuger pyysi valtioilta vastineeksi lainoistaan?',
         vaihtoehdot: [
@@ -2194,6 +2291,7 @@ export const SKANDAALIT = {
         + 'kerrotaan — ja juuri se on tämän kiven erikoisuus: kukaan ei tiedä, '
         + 'mistä se tuli. Aarrekammiossa kiiltää 86 karaattia todistetta siitä, '
         + 'että paraskaan tarina ei tarvitse kuittia.',
+      lahde: 'en-Wikipedia "Spoonmaker\'s Diamond". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mihin hintaan legendan köyhä löytäjä luopui myöhemmin '
           + 'Lusikantekijän timanttina tunnetusta kivestä?',
@@ -2226,6 +2324,8 @@ export const SKANDAALIT = {
         + 'imperiumin verot. Velkojien konttorissa oli lopulta enemmän väkeä '
         + 'kuin sulttaanin valtiovarainministeriössä. Suurvallan arvokkuudelle '
         + 'tämä oli kova kolaus, kirjanpidolle kuulemma erinomainen.',
+      lahde: 'en-Wikipedia "Ottoman Public Debt Administration". Tarkistettu '
+        + '1.9.2026.',
       visa: {
         kysymys: 'Mitä eurooppalaisten velkojien johtama OPDA sai tehdä '
           + 'Osmanivaltiossa vuodesta 1881?',
@@ -2253,6 +2353,7 @@ export const SKANDAALIT = {
         + 'vaihtoi sen kuuluisimman soljen väärennökseen. Paikalliset syyttivät '
         + 'haudan vanhaa kirousta, tuomioistuin pelivelkoja. Aarre on nyt '
         + 'esillä Uşakissa, ja sitä vahditaan tarkemmin kuin koskaan.',
+      lahde: 'en-Wikipedia "Karun Treasure". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miten New Yorkin Metropolitan-museon ja Turkin kiista '
           + 'Karun-aarteesta päättyi 1993?',
@@ -2282,6 +2383,7 @@ export const SKANDAALIT = {
         + 'matkalla mukana. Potemkin toki maalautti ja koristeli minkä ehti, '
         + 'mutta teki sen kaikkien nähden. Sana jäi silti elämään — julkisivuja '
         + 'rakennetaan yhä, ja harvoin näin rehellisesti.',
+      lahde: 'en-Wikipedia "Potemkin village". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mitä nykyhistorioitsijat sanovat Potemkinin kulissikylistä?',
         vaihtoehdot: [
@@ -2310,6 +2412,7 @@ export const SKANDAALIT = {
         + 'ennen kuin hän takoi uuden palan tiaaraa siinä paikassa. Harvinainen '
         + 'huijaus, jossa ainoa täysin rehellinen osapuoli oli väärennöksen '
         + 'tekijä.',
+      lahde: 'en-Wikipedia "Tiara of Saitaferne". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Miten kultaseppä Rouhomovski todisti Louvrelle tehneensä '
           + '\'muinaisen\' tiaaran?',
@@ -2337,6 +2440,7 @@ export const SKANDAALIT = {
         + 'sopivasti sodan jalkoihin. Kieli paljasti loput — muinaisteksti oli '
         + 'kirjoitettu kieliopilla, jota ei ole ollut millään vuosisadalla. '
         + 'Väärennös ei silti kuollut faktoihin; hyvä tarina harvoin kuolee.',
+      lahde: 'en-Wikipedia "Book of Veles". Tarkistettu 1.9.2026.',
       visa: {
         kysymys: 'Mikä paljastaa tutkijoiden mukaan Velesin kirjan väärennökseksi?',
         vaihtoehdot: [

@@ -363,6 +363,7 @@ export const FOKUSVIRTA_VENETSIA = {
         + 'katsottaviksi alhaalta ylöspäin — ne on tehty seisomaan '
         + 'korkealla jossain, kauan ennen kuin kukaan tiesi mitään '
         + 'Venetsiasta.',
+      lahde: 'en-Wikipedia "Horses of Saint Mark". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 3859×2737, public domain, tekijä Tteske
        * (johdannainen: Morn), kuvattu 17.5.2011, kuvaus "Original
@@ -464,6 +465,8 @@ export const FOKUSVIRTA_VENETSIA = {
         + 'Venetsialaisnaiset lähettivät kuninkaalle kirjelmän, jossa he '
         + 'kirjoittivat, ettei heidän sukupuolensa ollut koskaan tuntenut '
         + 'lain katkeruutta syvemmin kuin sinä lokakuuna.',
+      lahde: 'en-Wikipedia "Plebiscite of Veneto of 1866" ja en-Wikipedia '
+        + '"Kingdom of Lombardy–Venetia". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 3000×2218, public domain, tekijät Gustave
        * Janet ja Raffaele Pontremoli, julkaistu Le Monde Illustré
@@ -561,6 +564,7 @@ export const FOKUSVIRTA_VENETSIA = {
         + 'roomalaiseen kolikkoon kauan ennen Venetsiaa, ja se on '
         + 'suunnilleen ainoa matkaohje, jota isoisäsi ei koskaan '
         + 'noudattanut.',
+      lahde: 'en-Wikipedia "Aldus Manutius". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 1211×2000, CC0, kuvaus "Page from the
        * pocket-sized edition of Virgil printed by Aldus Manutius, the

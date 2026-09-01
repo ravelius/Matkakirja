@@ -424,6 +424,9 @@ export const FOKUSVIRTA_ODESSA = {
         + 'vaihdu: heinäkuussa 2015 Euroopan elokuva-akatemia kiinnitti '
         + 'portaisiin muistolaatan, jonka mukaan tämä on eurooppalaisen '
         + 'elokuvan aarre.',
+      lahde: 'en-Wikipedia "Potemkin Stairs", uk-Wikipedia "Потьомкінські '
+        + 'сходи", en-Wikipedia "Battleship Potemkin" ja uk-Wikipedia '
+        + '"Одеса". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 5018×3165, image/jpeg, CC BY-SA 4.0, tekijä
        * Oleksandr Malyon, kuvattu 16.8.2020, kuvaus "Potemkin Stairs in
@@ -561,6 +564,10 @@ export const FOKUSVIRTA_ODESSA = {
         + 'nestemäistä lasia 1950-luvulla, ja vuonna 2007 valmistuneessa '
         + 'restauroinnissa sen alle ajettiin tuhat kahdeksansataa paalua. '
         + 'Kaupunki on korjannut tätä taloa pidempään kuin se odotti sitä.',
+      lahde: 'en-Wikipedia "Odesa Opera and Ballet Theatre" ja ru-Wikipedia '
+        + '"Одесский театр оперы и балета"; pelin oma tarkistettu aineisto '
+        + 'js/packs/kulttuuri-kategoriat.js (odessa/kaupunki). Tarkistettu '
+        + '1.9.2026.',
       /*
        * Commons 30.8.2026: 3717×3808, image/jpeg, CC BY-SA 3.0, tekijä
        * Alex Levitsky & Dmitry Shamatazhi, kuvattu 29.1.2013, kuvaus
@@ -684,6 +691,8 @@ export const FOKUSVIRTA_ODESSA = {
         + 'kylpylä perustettiin vuonna 1834, eli isoisäsi käydessä se oli '
         + 'jo kolmenkymmenenyhdeksän vuoden ikäinen laitos. Vuoden 2022 '
         + 'alusta koko lahti ympäristöineen on ollut kansallispuistoa.',
+      lahde: 'uk-Wikipedia "Куяльницький лиман" ja ru-Wikipedia "Куяльницкий '
+        + 'лиман". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 2592×1944, image/jpeg, CC BY-SA 3.0, tekijä
        * Yuriy Kvach, kuvattu 5.8.2013, kuvaus "Солева пустеля у

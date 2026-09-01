@@ -296,6 +296,8 @@ export const FOKUSVIRTA_AMSTERDAM = {
         + 'Vuonna 1894 juuri nämä työläiset perustivat maan ensimmäisen '
         + 'suuren ammattiliiton. Boasin tehdas seisoo yhä '
         + 'Uilenburgerstraatilla, ja siellä hiotaan edelleen timantteja.',
+      lahde: 'nl-Wikipedia "Algemene Nederlandse Diamantbewerkersbond" ja '
+        + 'nl-Wikipedia "Diamantslijperij Boas". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 2629×2029, CC0, Willem van de Poll, kuvattu
        * 1.1.1932, kuvaus "Slijpen van de diamant bij Van Moppes in
@@ -399,6 +401,8 @@ export const FOKUSVIRTA_AMSTERDAM = {
         + 'lintu, joka isoisäsi aikaan väisti ihmistä puolen '
         + 'peninkulman päähän, katsoo nyt hänen jälkeläistään silmiin '
         + 'sillankaiteelta.',
+      lahde: 'en-Wikipedia "Grey heron" ja nl-Wikipedia "Blauwe reiger". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 2048×1536, CC BY-SA 3.0, Apus apus, kuvattu
        * 21.11.2010, kuvaus "Grey heron (Ardea cinerea) on an Amsterdam
@@ -505,6 +509,8 @@ export const FOKUSVIRTA_AMSTERDAM = {
         + 'tai sen kokoinen kopio, jonka neljäsataa vapaaehtoista '
         + 'rakensi vuosina 1982–1990. Se on merimuseon laiturissa, ja '
         + 'sinne pääsee kävelemään kuivin jaloin.',
+      lahde: 'nl-Wikipedia "Amsterdam (schip, 1748)" ja en-Wikipedia '
+        + '"Amsterdam (1748 ship)". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 5027×3352, CC BY-SA 2.0, Adrian Diack
        * (geograph.org.uk), kuvaus "The wreck of the Amsterdam in the

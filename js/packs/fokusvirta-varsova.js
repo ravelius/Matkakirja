@@ -367,6 +367,8 @@ export const FOKUSVIRTA_VARSOVA = {
         + 'takaisin niitä luettiin kuin piirustuksia: ikkunarivit, '
         + 'listat, kattojen kaltevuudet. Mies oli maalannut muotokuvan '
         + 'kaupungista tietämättä, että kaupunki tarvitsisi sitä.',
+      lahde: 'en-Wikipedia "Bernardo Bellotto" ja pl-Wikipedia "Bernardo '
+        + 'Bellotto". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 4000×3150, public domain, Bernardo Bellotto,
        * päiväys 1777, Google Art Project. Restrictions tyhjä.
@@ -510,6 +512,10 @@ export const FOKUSVIRTA_VARSOVA = {
         + 'yksi asia, jota mies, joka pelkäsi hevosia enemmän kuin '
         + 'myrskyjä, ei olisi halunnut kuulla: junasta junaan pääsi vain '
         + 'hevosen perässä.',
+      lahde: 'en-Wikipedia "Warsaw–Vienna railway", pl-Wikipedia "Dworzec '
+        + 'Wiedeński w Warszawie", pl-Wikipedia "Most Kierbedzia" ja '
+        + 'en-Wikipedia "Saint Petersburg–Warsaw Railway". Tarkistettu '
+        + '1.9.2026.',
       /*
        * Commons 30.8.2026: 4234×3007, public domain, Konrad Brandel
        * (1838–1920), päiväys noin 1890, kuvaus "Warsaw. Vienna Railway
@@ -647,6 +653,9 @@ export const FOKUSVIRTA_VARSOVA = {
         + 'Viimeisen kirjatun yksilön kallo lähti 1600-luvun sotavuosina '
         + 'Ruotsiin, ja se on Tukholmassa yhä. Metsään jäi vuonna 1972 '
         + 'kivi, johon on hakattu vuosiluku.',
+      lahde: 'pl-Wikipedia "Tur leśny", pl-Wikipedia "Puszcza Jaktorowska", '
+        + 'en-Wikipedia "Aurochs" ja en-Wikipedia "Jaktorów". Tarkistettu '
+        + '1.9.2026.',
       /*
        * Commons 30.8.2026: 800×600, CC BY-SA 3.0, Tomasz Kuran (alias
        * Meteor2017), kuvattu 1.5.2005, kuvaus nimeää muistomerkin

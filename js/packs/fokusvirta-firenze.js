@@ -351,6 +351,9 @@ export const FOKUSVIRTA_FIRENZE = {
         + 'härkäparilla pronssinen jäljennös Davidista. Se seisoo '
         + 'siellä yhä ja katsoo kaupunkia, joka rakennettiin '
         + 'pääkaupungiksi kuudeksi vuodeksi.',
+      lahde: 'it-Wikipedia "Risanamento di Firenze", it-Wikipedia "Piazzale '
+        + 'Michelangelo", en-Wikipedia "David (Michelangelo)" ja it-Wikipedia '
+        + '"Firenze capitale". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 3456×2736, CC0, Rijksmuseum, päiväys "ca.
        * 1870 – ca. 1890", Restrictions tyhjä. SILMÄTARKISTUS tehty
@@ -451,6 +454,7 @@ export const FOKUSVIRTA_FIRENZE = {
         + 'paikalleen 2008; Taccan oma pronssi on suojassa museossa '
         + 'joen toisella puolella. Kopiota hangataan tarkalleen yhtä '
         + 'ahkerasti.',
+      lahde: 'en-Wikipedia "Il Porcellino". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 1817×2726, CC BY-SA 2.5, tekijä Thermos,
        * kuvattu 9.6.2006, kuvaus nimeää Taccan ja kertoo veistoksen
@@ -546,6 +550,8 @@ export const FOKUSVIRTA_FIRENZE = {
         + 'mailia liian lähelle. Kaksi mittausta, sata vuotta '
         + 'käytännön kokemusta, ja toinen niistä pahasti pielessä — '
         + 'ja juuri se väärä oli se, jonka mukaan lähdettiin.',
+      lahde: 'en-Wikipedia "Paolo dal Pozzo Toscanelli" ja it-Wikipedia '
+        + '"Paolo dal Pozzo Toscanelli". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 1990×1215, public domain, tekijä John
        * George Bartholomew, päiväys 1884, kuvaus "The map of the

@@ -253,6 +253,9 @@ export const FOKUSVIRTA_RIIKA = {
         + 'Euroopassa. Se on legenda eikä todennettu tapahtuma — ja juuri '
         + 'sellaiset tarinat myyvät pulloja vielä kahden ja puolen '
         + 'vuosisadan päästä.',
+      lahde: 'en-Wikipedia "Riga Black Balsam"; pelin oma tarkistettu '
+        + 'aineisto js/packs/kulttuuri-kategoriat.js (riika/kaupunki). '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 2852×4279, CC BY-SA 2.5, Fanny Schertzer,
        * kuvaus "Herbal liquor of Latvia", otettu elokuussa 2009.
@@ -336,6 +339,10 @@ export const FOKUSVIRTA_RIIKA = {
         + 'yhdessä, ketään ei voitu pidättää. Unesco tunnusti Baltian '
         + 'laulujuhlat vuonna 2003 ja liitti ne aineettoman '
         + 'kulttuuriperinnön luetteloon 2008.',
+      lahde: 'lv-Wikipedia "Vispārējie latviešu dziesmu un deju svētki" ja '
+        + 'en-Wikipedia "Latvian Song and Dance Festival"; pelin oma '
+        + 'tarkistettu aineisto js/packs/maa-kategoriat.js (LVA/tavat). '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto LVA/tavat,
        * js/packs/maa-kategoriat.js) — siis jo kertaalleen tarkistettu ja
@@ -415,6 +422,9 @@ export const FOKUSVIRTA_RIIKA = {
         + 'poikansa Sergei Eisenstein tuli maailmalla kuuluisaksi '
         + 'elokuvaohjaajana. Isä teki kadulle kasvoja, jotka eivät '
         + 'liikahda; poika teki kuvia, jotka eivät tee mitään muuta.',
+      lahde: 'en-Wikipedia "Mikhail Eisenstein" ja en-Wikipedia "Art Nouveau '
+        + 'architecture in Riga"; pelin oma tarkistettu aineisto '
+        + 'js/packs/maa-kategoriat.js (LVA/tavat). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto LVA/tavat,
        * js/packs/maa-kategoriat.js) — jo tarkistettu ja hyväksytty.

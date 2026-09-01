@@ -355,6 +355,8 @@ export const FOKUSVIRTA_MARSEILLE = {
         + '1985, mutta maalaukset huomattiin vasta heinäkuussa 1991. '
         + 'Yleisölle sinne ei pääse: sisäänkäynti on suljettu, ja '
         + 'Marseillen satamassa on sen sijaan jäljennös.',
+      lahde: 'fr-Wikipedia "Grotte Cosquer" ja en-Wikipedia "Cosquer Cave". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 4000×3000, image/jpeg, CC BY-SA 4.0, tekijä
        * Lu-xin, kuvattu 1.12.2017, kuvaus "Cap Morgiou with old
@@ -466,6 +468,9 @@ export const FOKUSVIRTA_MARSEILLE = {
         + 'vettä kolmekymmentä kertaa enemmän henkeä kohti kuin ennen '
         + 'kanavaa. Veden tuloa juhlittiin rakentamalla sille palatsi: '
         + 'Palais Longchamp, vihittiin elokuussa 1869.',
+      lahde: 'fr-Wikipedia "Aqueduc de Roquefavour", en-Wikipedia '
+        + '"Roquefavour Aqueduct", fr-Wikipedia "Canal de Marseille" ja '
+        + 'fr-Wikipedia "Histoire de Marseille". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 4000×2672, image/jpeg, CC BY-SA 3.0, tekijä
        * Borvan53, kuvattu 19.10.2013, kuvaus "View of the Roquefavour
@@ -577,6 +582,9 @@ export const FOKUSVIRTA_MARSEILLE = {
         + 'kiitoslaatat on kiinnitetty ulos terassien seiniin. Kirkko on '
         + 'siis kaupungin ainoa arkisto, jonka jokainen rivi on jonkun '
         + 'oma ja jonka jokainen tarina päättyy hyvin.',
+      lahde: 'fr-Wikipedia "Basilique Notre-Dame-de-la-Garde"; pelin oma '
+        + 'tarkistettu aineisto js/packs/maa-kategoriat.js (FRA/arki). '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 4546×3410, image/jpeg, CC BY-SA 4.0, tekijä
        * Zairon, kuvattu 29.9.2021, kuvaus "Ex-Votos at the Basilica of

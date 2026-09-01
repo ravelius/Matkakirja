@@ -334,6 +334,8 @@ export const FOKUSVIRTA_OSLO = {
         + 'kaksi vuotta ennen kuin isoisäsi kuunteli ylioppilaita. '
         + 'Ensimmäinen läpikuvitettu laitos tuli 1879, ja siitä alkoi se '
         + 'kuvasto, jonka moni tuntee tarinoita paremmin.',
+      lahde: 'en-Wikipedia "Norwegian Folktales" ja no-Wikipedia "Norske '
+        + 'Folkeeventyr". Tarkistettu 1.9.2026.',
       /*
        * UUSI KUVA (ei pelidatassa ennestään). Commons 29.8.2026:
        * 10031×6701, public domain, Theodor Kittelsen, päiväys 1904,
@@ -456,6 +458,8 @@ export const FOKUSVIRTA_OSLO = {
         + 'että kolme peräkkäistä suurkäräjää ehti hyväksyä sen. Laki tuli '
         + 'voimaan ilman kuninkaan vahvistusta joulukuussa 1898, ja '
         + 'kauppalipun kannosta merkki katosi vuoden 1899 lopussa.',
+      lahde: 'en-Wikipedia "Flag of Norway" ja no-Wikipedia "Norges flagg". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * UUSI KUVA (ei pelidatassa ennestään). Commons 29.8.2026:
        * 1140×513, CC BY-SA 4.0, Henri-Georges Chartier (1859–1924),
@@ -575,6 +579,8 @@ export const FOKUSVIRTA_OSLO = {
         + 'japanilainen elintarvikeyhtiö Nichirei sopivat yhteistyöstä. '
         + 'Se lohinigiri, jota nykyään pidetään japanilaisena, on siis '
         + 'osittain norjalainen.',
+      lahde: 'en-Wikipedia "Aquaculture of salmonids", no-Wikipedia '
+        + '"Lakseoppdrett" ja en-Wikipedia "Sushi". Tarkistettu 1.9.2026.',
       /*
        * UUSI KUVA (ei pelidatassa ennestään). Commons 29.8.2026:
        * 7035×4690, CC BY-SA 4.0, Diego Delso, kuvaus "Salmon floating

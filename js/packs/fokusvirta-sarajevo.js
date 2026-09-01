@@ -321,6 +321,7 @@ export const FOKUSVIRTA_SARAJEVO = {
         + 'kuća, Uhmatalo. Kuulet siitä vielä toisenkin version, jossa mies '
         + 'vaati korvaukseksi kultarahan jokaista tiiltä kohti. Sitä minä '
         + 'en toista: se ei ole lähteissäni.',
+      lahde: 'en-Wikipedia "Spite house". Tarkistettu 1.9.2026.',
       /*
        * Sama tarkistettu tiedosto kuin pöllön huomiolla — sama talo,
        * eri kuvateksti: vaihe 2 näyttää talon, täky kertoo tontin.
@@ -381,6 +382,7 @@ export const FOKUSVIRTA_SARAJEVO = {
         + 'Vuosikymmeniä myöhemmin, iäkkäänä naisena Israelissa, Mira Papo '
         + 'huolehti siitä, että Korkutin tytär oli turvassa. Kirja itse '
         + 'siirrettiin 1992 keskuspankin holviin ja odotti siellä.',
+      lahde: 'en-Wikipedia "Sarajevo Haggadah". Tarkistettu 1.9.2026.',
       /*
        * Commons 25.8.2026: 723×1000, public domain (PD-old-100-expired),
        * tekijä tuntematon, ajoitus 1350, kategoria Sarajevo Haggadah,
@@ -431,6 +433,7 @@ export const FOKUSVIRTA_SARAJEVO = {
         + 'suojeltu vuodesta 2010. Ympärillä leviää Livanjsko polje, '
         + 'maailman suurin karstikenttä — 458,7 neliökilometriä — ja se on '
         + 'kuulunut Ramsarin kosteikkoluetteloon vuodesta 2008.',
+      lahde: 'en-Wikipedia "Feral horse". Tarkistettu 1.9.2026.',
       /*
        * Commons 25.8.2026: 1600×1200, CC BY 2.0, Brian Eager, kuvattu
        * 19.7.2012, kategoria Wild horses of Livno. Kuvaajan oma
@@ -691,6 +694,7 @@ export const FOKUSVIRTA_SARAJEVO = {
         + 'kutsutaan julmaksi huijaukseksi, jolla ei ole sijaa aidon '
         + 'tieteen maailmassa. Kukkulan päällä on samaan aikaan aito '
         + 'keskiaikainen Bosnian kuninkaallinen linnoitus.',
+      lahde: 'en-Wikipedia "Bosnian pyramid claims". Tarkistettu 1.9.2026.',
       /*
        * Tälle nostolle ei ole omaa täkyä tässä tiedostossa, joten `avaa`
        * puuttuu tarkoituksella — lunastus kannattelee noston yksinään.

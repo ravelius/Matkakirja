@@ -362,6 +362,7 @@ export const FOKUSVIRTA_ISTANBUL = {
         + 'Vuonna 1855 pylvään jalusta kaivettiin esiin, ja kierteistä '
         + 'paljastui kaiverrus: kolmenkymmenenyhden kreikkalaisen '
         + 'kaupungin nimet.',
+      lahde: 'en-Wikipedia "Serpent Column". Tarkistettu 1.9.2026.',
       /*
        * Commons (takyt-istanbul.md, täky 1, varmennettu 25.8.2026):
        * 1521×3061, public domain, Gryffindor. Pystykuva pylväästä
@@ -415,6 +416,8 @@ export const FOKUSVIRTA_ISTANBUL = {
         + 'nousevat yhä hänen mukaansa nimetyt, 1870-luvulla rakennetut '
         + 'portaat siltä kadulta, jolla hän asui, sille kadulle, jolla '
         + 'hän teki työnsä.',
+      lahde: 'en-Wikipedia "Abraham Salomon Camondo" ja en-Wikipedia "Camondo '
+        + 'Stairs". Tarkistettu 1.9.2026.',
       /*
        * Commons (takyt-istanbul.md, täky 7, varmennettu 25.8.2026):
        * 2565×2388, public domain, muotokuva noin vuodelta 1860 — eli
@@ -473,6 +476,7 @@ export const FOKUSVIRTA_ISTANBUL = {
         + 'kunnalla on kissoille oma eläinlääkintäosastonsa ja ilmainen '
         + 'sterilointi, ja kun yksityisklinikka hoitaa katukissan '
         + 'alennushintaan, naapurit jakavat laskun keskenään.',
+      lahde: 'en-Wikipedia "Cats in Istanbul". Tarkistettu 1.9.2026.',
       /*
        * Commons (takyt-istanbul.md, täky 16, varmennettu 25.8.2026):
        * 4000×3000, CC BY-SA 4.0, Matti Blume, 2019. Saman kuvaajan

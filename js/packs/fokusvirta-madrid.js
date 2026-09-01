@@ -220,6 +220,7 @@ export const FOKUSVIRTA_MADRID = {
         + 'Campoon, ja vanhoihin eläinsuojiin avattiin 2013 '
         + 'kaupunginkirjasto — sen seinissä ovat yhä ne kalterit, '
         + 'joiden läpi pedoille heitettiin ruokaa yläkerrasta.',
+      lahde: 'es-Wikipedia "Casa de Fieras del Retiro". Tarkistettu 1.9.2026.',
       /*
        * PÄÄKUVAKSI LOISTOAIKA (29.8.2026, aalto 1). Sama malli kuin
        * täkynostoilla v1307:stä alkaen: repon oma generoitu
@@ -299,6 +300,7 @@ export const FOKUSVIRTA_MADRID = {
         + 'onttoa etuosaa. Ensimmäistä savimallia kuningas ei '
         + 'hyväksynyt: hän ei tunnistanut omia kasvojaan, ja pää '
         + 'jouduttiin teettämään uudelleen — sen teki Taccan poika.',
+      lahde: 'es-Wikipedia "Monumento a Felipe IV". Tarkistettu 1.9.2026.',
       /*
        * Commons 28.8.2026: 1536×2048, CC0, Zarateman, kuvattu
        * 16.11.2018. Restrictions tyhjä. SILMÄTARKISTUS tehty: kuvassa
@@ -358,6 +360,8 @@ export const FOKUSVIRTA_MADRID = {
         + 'Manuel Pavía vaati edustajia tyhjentämään talon viidessä '
         + 'minuutissa. Osa heistä hyppäsi ikkunoista, ja Pavía kysyi '
         + 'hämmästyneenä, miksi ikkunasta, kun ovesta pääsee ulos.',
+      lahde: 'en-Wikipedia "First Spanish Republic" ja en-Wikipedia "Nicolás '
+        + 'Salmerón". Tarkistettu 1.9.2026.',
       /*
        * Commons 28.8.2026: 959×1298, public domain, litografia Juan
        * Vazquez, julkaistu La Flaca -lehdessä 6.3.1873. Restrictions

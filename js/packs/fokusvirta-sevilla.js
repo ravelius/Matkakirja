@@ -306,6 +306,7 @@ export const FOKUSVIRTA_SEVILLA = {
         + 'kadonnut siksi, että laiva oli kiertänyt maapallon länteen, '
         + 'samaan suuntaan kuin aurinko näyttää kulkevan taivaalla. Sitä '
         + 'ei ollut osannut odottaa kukaan.',
+      lahde: 'en-Wikipedia "Magellan expedition". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 4001×2771, public domain, Abraham Ortelius,
        * päiväys 1589, Restrictions tyhjä. SILMÄTARKISTUS tehty: painettu
@@ -390,6 +391,7 @@ export const FOKUSVIRTA_SEVILLA = {
         + 'herrasväen mailla vuosisatoja; kansallispuisto siitä tuli '
         + 'vasta 1969. Sen suojissa elää yhä yksi Euroopan '
         + 'harvinaisimmista kissaeläimistä.',
+      lahde: 'en-Wikipedia "Doñana National Park". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 4896×2760, CC BY-SA 4.0, tekijä "Birding In
        * Spain", kuvattu 26.10.2018, kuvaus "Coto Doñana marshes after
@@ -468,6 +470,7 @@ export const FOKUSVIRTA_SEVILLA = {
         + 'viikoissa. Isoisäsi käveli täällä huhtikuussa, kun messut '
         + 'olivat jo kuudenkolmatta vuoden ikäiset, eikä kirjoittanut '
         + 'niistä riviäkään. Hän katsoi tehdasta ja tornia.',
+      lahde: 'en-Wikipedia "Seville Fair". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 4500×3583, public domain, Andrés Cortés y
        * Aguilar (1810–1879), päiväys "1800-luvun puoliväli", omistaja

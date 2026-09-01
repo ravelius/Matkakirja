@@ -207,6 +207,7 @@ export const FOKUSVIRTA_ATEENA = {
         + 'mainita tätä matkakirjassaan — hän kirjoitti enemmän toreista '
         + 'kuin temppeleistä — mutta veikkaan, että hänkin pysähtyi tähän '
         + 'kulmaan hetkeksi.',
+      lahde: 'en-Wikipedia "Temple of Athena Nike". Tarkistettu 1.9.2026.',
       /*
        * Commons 24.8.2026: 3450×2405, CC BY-SA 3.0, Joanbanjo,
        * kategoria "Temple of Athena Nike (Athens)". Tiedoston oma nimi
@@ -236,6 +237,7 @@ export const FOKUSVIRTA_ATEENA = {
         + 'ihmistä", ikään kuin kirkkainkaan valo ei siihen riittäisi. '
         + 'Isoisäsi mainitsee torin tingittyine oliiveineen — hänkin olisi '
         + 'kävellyt Diogeneen astian ohi tietämättään.',
+      lahde: 'en-Wikipedia "Diogenes". Tarkistettu 1.9.2026.',
       /*
        * Fablen päätös 1: ohutta Category:Diogenes -pääkategoriaa EI
        * käytetä, vaan aito pithos-astia. Commons 24.8.2026: 4640×6960,
@@ -291,6 +293,7 @@ export const FOKUSVIRTA_ATEENA = {
         + 'Se seisoo paikallaan yhä: nykyään talossa lasketaan vanhoja '
         + 'kolikoita, sillä se on numismaattinen museo, ja sen friisissä '
         + 'Schliemann kaivaa ikuisesti, lapio kädessä.',
+      lahde: 'en-Wikipedia "Heinrich Schliemann". Tarkistettu 1.9.2026.',
       /*
        * Commons 24.8.2026: 1920×3166, CC0, athenswalk, kuvaus "The main
        * entrance of archaeologist and entrepreneur Heinrich Schliemann's
