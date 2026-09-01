@@ -198,6 +198,7 @@ export const FOKUSVIRTA_BERLIINI = {
         + 'vuosina 1938–39 se siirrettiin Großer Sternille ja '
         + 'korotettiin samalla kuudella ja puolella metrillä, kun '
         + 'keskustaa suunniteltiin uusiksi.',
+      lahde: 'en-Wikipedia "Berlin Victory Column". Tarkistettu 1.9.2026.',
       /*
        * PÄÄKUVAKSI HAVAINNEKUVA (29.8.2026, aalto 1). Sama malli kuin
        * täkynostoilla v1307:stä alkaen: repon oma generoitu kuva, jolla
@@ -283,6 +284,7 @@ export const FOKUSVIRTA_BERLIINI = {
         + 'viimeinen valmistui 1893. Samalta mieheltä tilattiin sen '
         + 'jälkeen viemärit kolmeenkymmeneen saksalaiseen kaupunkiin '
         + 'sekä Moskovaan, Tokioon ja Kairoon.',
+      lahde: 'en-Wikipedia "James Hobrecht". Tarkistettu 1.9.2026.',
       /*
        * Commons 28.8.2026: 3600×2945, public domain, James Hobrecht,
        * 1884, kuvaus: lehti 10 Berliinin viemäröinnin atlaksesta,
@@ -342,6 +344,7 @@ export const FOKUSVIRTA_BERLIINI = {
         + 'Viimeinen kaupunginkarhu Schnute lopetettiin vaikean '
         + 'nivelrikon takia lokakuussa 2015, ja tarhasta tehtiin 2017 '
         + 'taidetila.',
+      lahde: 'de-Wikipedia "Berliner Bär". Tarkistettu 1.9.2026.',
       /*
        * Commons 28.8.2026: 6000×4000, CC0, Singlespeedfahrer, kuvattu
        * 21.8.2022, kuvaus "Bear sculpture in Köllnischer Park in

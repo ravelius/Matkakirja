@@ -202,6 +202,7 @@ export const FOKUSVIRTA_WIEN = {
         + 'sähkön voi siirtää kahden kilometrin päähän kuparijohtoa '
         + 'pitkin. Kaksi vuotta myöhemmin nuori Nikola Tesla näki '
         + 'saman koneen Grazin teknillisessä korkeakoulussa.',
+      lahde: 'en-Wikipedia "Hippolyte Fontaine". Tarkistettu 1.9.2026.',
       /*
        * Commons 28.8.2026: 2832×2128, CC BY-SA 4.0, Icone5, kuvaus
        * "Dynamo Gramme N°14 built by Mignon and Rouart in 1873" —
@@ -257,6 +258,8 @@ export const FOKUSVIRTA_WIEN = {
         + 'suihkulähde, joka avattaisiin samana päivänä kuin vesijohto. '
         + 'Niin syntyi Hochstrahlbrunnen. Vesijohto tuottaa yhä yli '
         + 'puolet kaupungin juomavedestä.',
+      lahde: 'de-Wikipedia "I. Wiener Hochquellenleitung". Tarkistettu '
+        + '1.9.2026.',
       /*
        * Commons 28.8.2026: 4032×3024, CC BY-SA 4.0, Anna Saini,
        * kuvattu 19.9.2019, kuvaus "Teil der 1. Wiener
@@ -309,6 +312,7 @@ export const FOKUSVIRTA_WIEN = {
         + 'virallinen metsästysalue ja riistakantaa hoiti palkattu '
         + 'metsästäjä; nykyään tasapainoa pidetään ilman aseita, ja osa '
         + 'alueesta jätetään tarkoituksella villiintymään.',
+      lahde: 'de-Wikipedia "Wiener Zentralfriedhof". Tarkistettu 1.9.2026.',
       /*
        * Commons 28.8.2026: 5822×3881, CC BY-SA 4.0, Uoaei1, kuvattu
        * 21.10.2022, kuvaus "Roe deer in the old Israelite section of

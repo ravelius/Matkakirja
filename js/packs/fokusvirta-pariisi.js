@@ -226,6 +226,7 @@ export const FOKUSVIRTA_PARIISI = {
         + 'viety varastoon, kun sota alkoi 1870. Vuonna 2003 '
         + 'perustettiin komitea, joka esittää palatsin rakentamista '
         + 'takaisin.',
+      lahde: 'en-Wikipedia "Tuileries Palace". Tarkistettu 1.9.2026.',
       /*
        * PÄÄKUVAKSI HAVAINNEKUVA (29.8.2026, aalto 1). Sama malli kuin
        * täkynostoilla v1307:stä alkaen: repon oma generoitu kuva, jolla
@@ -320,6 +321,7 @@ export const FOKUSVIRTA_PARIISI = {
         + 'kirjoitettiin puhtaaksi. Saksalaiset kouluttivat haukkoja '
         + 'pysäyttämään kyyhkyjä. Minulla ei ole tähän mitään '
         + 'lisättävää.',
+      lahde: 'en-Wikipedia "René Dagron". Tarkistettu 1.9.2026.',
       /*
        * Commons 28.8.2026: 5047×8008, CC0, René Dagron, kuvattu
        * 1870–1871, kuvaus "Pellicule montée" — Dagronin oma
@@ -375,6 +377,7 @@ export const FOKUSVIRTA_PARIISI = {
         + 'soleil levant ja otsikoi juttunsa "Impressionistien '
         + 'näyttely". Pilkkanimi jäi — ja taiteilijat ottivat sen itse '
         + 'käyttöön.',
+      lahde: 'en-Wikipedia "Impressionism". Tarkistettu 1.9.2026.',
       /*
        * Commons 28.8.2026: 5773×4478, public domain, Claude Monet,
        * päiväys 1872. Restrictions tyhjä. Maalaus on siis tehty ennen

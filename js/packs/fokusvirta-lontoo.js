@@ -228,6 +228,8 @@ export const FOKUSVIRTA_LONTOO = {
         + 'mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta '
         + 'vanhat löydöt on ilmoitettava Lontoon museolle — joki antaa, '
         + 'mutta se mitä se antaa, ei aina jää löytäjälle.',
+      lahde: 'pelin oma tarkistettu aineisto js/packs/maa-kategoriat.js '
+        + '(GBR/luonto). Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 5184×3456, CC BY 2.0, Tim Sheerman-Chase,
        * kuvattu 23.9.2023, kuvaus "Mudlarks by Millennium Bridge".
@@ -288,6 +290,8 @@ export const FOKUSVIRTA_LONTOO = {
         + '1876 puistosta lähetettiin kuusipeuroja laivalla '
         + 'Uuteen-Seelantiin, ja ne olivat koko maan ensimmäiset '
         + 'kuusipeurat.',
+      lahde: 'pelin oma tarkistettu aineisto js/packs/maa-kategoriat.js '
+        + '(GBR/luonto). Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 1600×1430, CC BY-SA 2.0, Russel Wills,
        * kuvattu 5.10.2013, kuvaus "Red deer stag roaring in Richmond
@@ -363,6 +367,7 @@ export const FOKUSVIRTA_LONTOO = {
         + 'ollut talo paloi Lontoon suurpalossa syyskuussa 1666. Jossain '
         + 'noiden kahden päivän välissä joku kaivoi laatikon lattiaansa '
         + 'eikä koskaan palannut hakemaan sitä.',
+      lahde: 'en-Wikipedia "Cheapside Hoard". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 4252×2329, CC0, Vassil, kuvattu 11.4.2019,
        * kuvaus "Necklace with interlinking lovers knots, gold with
