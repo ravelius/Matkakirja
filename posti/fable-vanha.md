@@ -1,3 +1,71 @@
+## 1.9.2026 14:30 UTC — FABLEN TILANNEMUISTIO JA JATKOPROMPTI (resetointia varten)
+
+Omistaja tilasi muistin tyhjennyksen tokenien säästämiseksi. Tämä muistio
++ Raamattu + CLAUDE.md + docs/roolitus.md riittävät jatkamiseen. UUDET
+PYSYVÄT LINJAUKSET (kirjattu Raamatun alkuun): agenttiajoissa AINA
+korkeintaan Opus (rutiini Sonnetilla; Fable-agentti vain todella vaikeaan
+ongelmaan omistajalta kysyen — Fable kulutti 1,4M tokenia agenteissa) ja
+Fable ehdottaa itse resetointia kun konteksti paisuu (muistio tänne ensin).
+
+### JATKOPROMPTI (aja järjestyksessä resetin jälkeen)
+
+1. NOSTOPOLTON TODENNUS: ajastettu herätys trig_01BAZKnWhUobMsDnWWEDpZwX
+   (14:46 UTC) hoitaa — nostoversio 2026-09-01d (saanto v3, katto 3),
+   versio=2026-09-01c, viivaversio=2026-09-01a. Jos herätys meni ohi,
+   tarkista actions_list + pyramidi.json + Sofia z7 -laatta ja raportoi
+   omistajalle että kartta on testattavissa.
+2. REITTITYO (#126, worktree scratchpad/tyo-katko, haara tyo/katkorytmi,
+   EI committoitu): katkotyyli valmis (REITTITYYLI viiva 9/jakso 190/
+   katko 0,30/helmi 15/keha 9; helmi ankkuroituu katkon keskelle ja se
+   katko jää piirtämättä — viiva ei koskaan osu pisteeseen), reittien
+   osuusyhdistäminen liittymäsilloilla + pudotus 90 % piirretystä
+   musteesta + uraVahin 200 + astevartija; testit 30/30. Opus-agentti
+   korjaa kahta parvilöydöstä (dakar-kaksoislähtö, sumatra|yangon-aukko).
+   Kun agentti valmis: aja tarkistusvedokset, LÄHETÄ OMISTAJALLE
+   KOKONAISVEDOS (Italia z6 16/39 1400x1050 pohjakomposiitilla:
+   scratchpad/pohjakooste-meta.json + pohja-z6-*.webp + tyo/vedos.mjs +
+   PIL multiply out=base*clip(over/p85)) — omistaja EI ole vielä
+   hyväksynyt lopullista tyyliä. Hyväksynnän jälkeen: julkaise v142x
+   (kopioi tyo-katkosta maailmapiirto.js, reittikarsinta.mjs,
+   generoi-laattapyramidi.mjs ULOTTUMA, tests/viivataso.test.mjs;
+   päivitä Raamatun REITIT LAUTAPELITYYLIIN -mitat) ja polta viivataso
+   (viivaversio 2026-09-01e; MUISTA versio+nostoversio syötteet AINA).
+3. KLIKATTAVUUSTARKISTUS (omistajan tilaus): jokainen karttamerkki
+   klikattavissa ja avaa hyvälaatuisen sisällön — Sonnet/Opus-agentti,
+   Playwright, kaikki maat otoksina.
+4. LEHTILISÄYKSET (omistajan tilaus, taustatyö): kaupunkikaton alle
+   jääneet nostot (Sofia 6, Ateena 7, Istanbul 6, Bukarest 2 + muut
+   maat mitataan tyo/laske-kaupunkinostot.mjs-skriptillä) kaupunkilehtien
+   sisällöksi mahdollisuuksien mukaan. JATKOSSA nostoja kerätään vain
+   muista kuin kohdekaupungeista (Raamattu-kirjaus jo tehty v1419:ssä).
+5. Kysy omistajalta nostotason ja viivatason yhteispoltosta jos
+   viivatyyli hyväksytään ennen kuin 01d-poltto valmis.
+
+### TILANNE (julkaistu tänään v1408-v1419, kaikki mainissa)
+
+- v1417 nostokortin kuva contain+42vh, kortti 88vh, visapalkkiorivi
+  (syvennys+skandaali). v1418 uloszoom-lattia peittoZoomMinimi (cover,
+  +0,5 % vara; kehittäjän maailmanappi ja katselu ohittavat). v1419
+  kaupunkinostojen katto 3 (karsiKaupunkiruuhka, säde 8 yks, prioriteetti
+  ihme>skandaali>syvennys>täkynosto>muu; NOSTOLADONTA_SAANTO v3).
+- Ämpäri: pohja 2026-09-01c (kartussi+painajanrivi z3, ei sävyhyppyä),
+  nostotaso 01d polttumassa, viivataso 01a (vanhenee kun uusi poltetaan).
+- Postilaatikko: kuvatoimitussessiot x2 tekevät kuvia (yksi versio/kuva,
+  omistaja katselmoi Kuvajonossa; K1-promptit yleiskuvitussessiolle:
+  docs/mantereet-tyoaineisto/nostorikastus/kuvapromptit-k1.md).
+- Avoimet taskit: #121 (nostojen sisältöremontti-jäännökset: köyhien
+  maiden täydennys docs/mantereet-tyoaineisto/takynostot-*.md, ESP/GBR-
+  rakenne, kuvaerä K1), #126 (reitit, yllä), #44/#72/#41 + vanhat.
+- Rutiinit: postikierros tunneittain trig_01PVJLUsK6F9L92HR7hUCaQN;
+  julkaisukaava docs/roolitus.md (worktree origin/mainista, uusi-versio,
+  TESTATTAVAA, testit+vartijat+build-standalone, PR, CI-poll unauth REST,
+  squash, force-with-lease-synkka; dist EI committoida).
+- Työkalut scratchpadissa: tyo/vedos.mjs (viivatasovedos), tyo/
+  tunnista-reitit2.mjs, tyo/mittaa-urapeitto.mjs, tyo/listaa-pudotetut.mjs,
+  tyo/laske-kaupunkinostot.mjs, tyo/koe-peittozoom.mjs. HUOM: scratchpad
+  katoaa jos kontti kierrätetään — tyo-katko-muutokset ovat VAIN siellä,
+  julkaise ne ripeästi hyväksynnän jälkeen.
+
 # Fable (vanha sessio, session_018vkp...scSan)
 
 ## 2026-09-01 07:50 UTC — Kuvatyon tarkennukset: yksi versio, K1 yleiskuvitukselle
