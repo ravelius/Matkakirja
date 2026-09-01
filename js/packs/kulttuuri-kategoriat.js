@@ -553,6 +553,29 @@ export const KULTTUURI_KATEGORIAT = {
             + '(CC BY 2.0)',
           wiki: 'Lontoon metro',
         },
+        /*
+         * Kartalta lehteen (v1419 jälkityö, kaupunkinostojen katto):
+         * syvennystarina `syvennys-lontoo-cheapside` putosi Lontoon
+         * ruuhkasta, ja sen sisältö on tässä lehtimittaan kirjoitettuna.
+         */
+        {
+          otsikko: 'Kellarin lattian alta tuli neljäsataa korua',
+          tiedosto: 'Victoria and Albert Museum Jewellery 11042019 Necklace Enamelled gold Lovers knots Cheapside Hoard 3037.jpg',
+          teksti: 'Vuonna 1912 työmiehet hakkasivat hakulla kellarin lattiaa '
+            + 'osoitteessa 30–32 Cheapside, ja lattian alta tuli puinen '
+            + 'laatikko. Sen sisällä oli yli neljäsataa korukappaletta: '
+            + 'sormuksia, rintaneuloja, ketjuja, hajuvesipulloja ja '
+            + 'kameoita. Kivet olivat ympäri maailmaa — smaragdi '
+            + 'Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini '
+            + 'Burmasta, turkoosi Persiasta. Oudoin esine on omenan kokoinen '
+            + 'smaragdi, joka oli koverrettu ontoksi ja jonka sisään oli '
+            + 'sovitettu noin vuoden 1600 sveitsiläinen kellokoneisto. Yksi '
+            + 'sinettikivi ajoittaa kätkennän marraskuun 1640 ja Lontoon '
+            + 'suurpalon syyskuun 1666 väliin.',
+          selite: 'Cheapsiden kätköstä löytynyt kaulaketju on kultaa ja '
+            + 'valkoista emalia, tehty Englannissa 1590–1620.',
+          lahde: 'Vassil, Wikimedia Commons (CC0)',
+        },
       ],
     },
     {
@@ -649,6 +672,70 @@ export const KULTTUURI_KATEGORIAT = {
         fakta: 'Turbiinihallin lattialle levitettiin sata miljoonaa käsin '
           + 'muotoiltua posliinikappaletta, joista jokainen näytti '
           + 'auringonkukan siemeneltä.',
+      },
+    },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö): syvennystarinat
+     * `syvennys-lontoo-vuorovesi` ja `-hirvet` putosivat Lontoon
+     * nostoruuhkasta.
+     */
+    {
+      id: 'luonto',
+      nimi: 'Joki ja puisto',
+      johdanto: 'Thames on vuorovesijoki, ja laskuveden aikaan sen kivinen '
+        + 'ranta paljastuu keskellä miljoonakaupunkia. Kulman takana on '
+        + 'toinen maailma: aidattu puisto, jossa kulkee vapaana lauma '
+        + 'hirviä.',
+      nostot: [
+        {
+          otsikko: 'Laskuvesi paljastaa rannan keskellä kaupunkia',
+          tiedosto: 'Mudlarks by Millennium Bridge.jpg',
+          teksti: 'Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi '
+            + 'nousee ja laskee kahdesti vuorokaudessa, keskustassa '
+            + 'parhaimmillaan noin seitsemän metriä. Laskuveden aikaan '
+            + 'kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne '
+            + 'lasketaan portaita pitkin etsimään savipiippuja ja '
+            + 'astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi. Ranta ei '
+            + 'silti ole vapaata riistaa: lupa on ostettava '
+            + 'satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, '
+            + 'myynti keskeytettiin vuonna 2022. Yli kolmesataa vuotta '
+            + 'vanhat löydöt on ilmoitettava Lontoon museolle.',
+          selite: 'Thamesin kivinen ranta paljastuu laskuveden aikaan '
+            + 'kahdesti vuorokaudessa aivan Millennium Bridgen kohdalla.',
+          lahde: 'Tim Sheerman-Chase, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Richmond Parkin lauma',
+          tiedosto: 'Red deer stag roaring in Richmond Park - geograph.org.uk - 3711560.jpg',
+          teksti: 'Richmond Park on Lontoon kuninkaallisista puistoista '
+            + 'suurin, ja sen kolmentoista kilometrin tiiliaidan sisällä '
+            + 'kulkee vapaana noin 630 saksanhirveä ja kuusipeuraa. Kuningas '
+            + 'Kaarle I aitasi alueen hirvenmetsästystä varten vuonna 1637, '
+            + 'ja aita seisoo yhä. Syys-lokakuussa urokset karjuvat '
+            + 'kiima-aikaan niin, että ääni kuuluu puiston laidalle asti. '
+            + 'Marraskuussa ja helmikuussa laumasta kaadetaan noin '
+            + 'kaksisataa eläintä, jotta laidun riittää lopuille. Vuosina '
+            + '1867 ja 1876 puistosta lähetettiin kuusipeuroja laivalla '
+            + 'Uuteen-Seelantiin, ja ne olivat koko maan ensimmäiset '
+            + 'kuusipeurat.',
+          selite: 'Richmond Parkin aidatussa laumassa on noin 630 '
+            + 'saksanhirveä ja kuusipeuraa.',
+          lahde: 'Russel Wills, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka paljon veden pinta vaihtelee Thamesissa Lontoon '
+          + 'keskustan kohdalla?',
+        vaihtoehdot: [
+          'noin puoli metriä',
+          'parhaimmillaan noin seitsemän metriä',
+          'vesi ei vaihtele lainkaan kaupungin kohdalla',
+          'parhaimmillaan noin kaksikymmentä metriä',
+        ],
+        oikea: 1,
+        fakta: 'Vuorovesi ulottuu Teddingtonin sulkuun asti. Rannalla saa '
+          + 'etsiä vain satamaviranomaisen luvalla, ja yli kolmesataa vuotta '
+          + 'vanhat löydöt on ilmoitettava Lontoon museolle.',
       },
     },
   ],
@@ -3436,6 +3523,107 @@ export const KULTTUURI_KATEGORIAT = {
         fakta: 'Maailmankellon alumiinirumpuun on jyrsitty 146 paikannimeä, ja '
           + 'rummun kaksikymmentäneljä sivua vastaavat maapallon '
           + 'aikavyöhykkeitä.',
+      },
+    },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö). Berliinin viereen kertyi neljä
+     * nostomerkkiä yli kaupunkinostojen katon: kohde
+     * `brandenburgin-portti`, syvennystarina `syvennys-berliini-karhu`
+     * sekä täkynostot `nosto-kopenickin-kapteeni` ja
+     * `nosto-archaeopteryx`. Sisältö on niiden omaa, lehtimittaan
+     * kirjoitettuna.
+     */
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Portti, josta alkaa Unter den Linden, sinetin karhu vuodelta '
+        + '1280, univormu joka valtasi kaupungintalon — ja kivilaatta, josta '
+        + 'museo maksoi 20 000 kultamarkkaa.',
+      nostot: [
+        {
+          otsikko: 'Portista alkaa Unter den Linden',
+          tiedosto: 'Berlin, Brandenburger Tor -- 2013 -- 4589.jpg',
+          teksti: 'Brandenburgin portti on 1700-luvun klassistinen monumentti '
+            + 'Berliinin keskustassa. Se pystytettiin vanhan kaupunginportin '
+            + 'paikalle — siitä alkoi tie Brandenburg an der Haveliin, '
+            + 'Brandenburgin markkreivikunnan entiseen pääkaupunkiin. '
+            + 'Nykyinen rakennus valmistui 1788–1791 Preussin kuninkaan '
+            + 'Fredrik Vilhelm II:n käskystä, ja sen piirsi hovin arkkitehti '
+            + 'Carl Gotthard Langhans. Katolla ajaa pronssinen kvadriga eli '
+            + 'nelivaljakko, kuvanveistäjä Johann Gottfried Schadowin työ. '
+            + 'Portista alkaa Unter den Linden, bulevardi, joka vie suoraan '
+            + 'vanhalle kaupunginlinnalle.',
+          selite: 'Brandenburgin portti valmistui 1788–1791, ja sen katolla '
+            + 'ajaa Johann Gottfried Schadowin veistämä nelivaljakko.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Karhu on ollut sinetissä vuodesta 1280',
+          tiedosto: 'Sculpture bear Köllnischer Park Berlin-Mitte.jpg',
+          teksti: 'Berliinin sinetissä on ollut karhu yhtäjaksoisesti 22. '
+            + 'maaliskuuta 1280 lähtien: ensimmäinen todistettu sinetti on '
+            + 'turkkurien kiltakirjeessä. Vitsi on siinä, ettei karhulla '
+            + 'todennäköisesti ole kaupungin nimen kanssa mitään tekemistä — '
+            + 'tutkijoiden pääsääntöisen käsityksen mukaan paikannimi on '
+            + 'slaavilaista perua sanasta berl, suo, ja karhu on '
+            + 'kansanetymologiaa eli puhuva vaakuna. Kaupunki otti asian '
+            + 'silti kirjaimellisesti: 17. elokuuta 1939 se sai neljä elävää '
+            + 'karhua, jotka asetettiin Köllnischer Parkiin lämmitettävään '
+            + 'tarhaan. Viimeinen kaupunginkarhu Schnute lopetettiin '
+            + 'lokakuussa 2015, ja tarhasta tehtiin 2017 taidetila.',
+          selite: 'Köllnischer Park on sama puisto, jossa kaupungin elävät '
+            + 'karhut asuivat vuodesta 1939 vuoteen 2015.',
+          lahde: 'Singlespeedfahrer, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Univormu, joka valtasi kaupungintalon',
+          tiedosto: 'Wilhelm Voigt 1906 10 26.jpg',
+          teksti: 'Wilhelm Voigt oli istunut elämänsä aikana yhteensä 25 '
+            + 'vuoden edestä tuomioita ja päässyt vapaaksi helmikuussa 1906. '
+            + 'Elokuussa Berliinin poliisi karkotti hänet kaupungista '
+            + 'pelkästään siksi, että hän oli entinen vanki. Lokakuun 16. '
+            + 'päivänä hän puki ylleen preussilaisen kaartinkapteenin '
+            + 'univormun, jonka oli ostanut palasina eri kaupoista. Hän '
+            + 'pysäytti kadulla joukon sotilaita, vei heidät junalla '
+            + 'Köpenickiin, miehitti kaupungintalon, pidätytti pormestarin '
+            + 'ja takavarikoi kassasta 4 002 markkaa ja 37 penniä — antaen '
+            + 'kuitin, jonka allekirjoitti entisen vanginvartijansa nimellä. '
+            + 'Keisari Wilhelm II armahti hänet 1908.',
+          selite: 'Wilhelm Voigt poliisin kuvassa kymmenen päivää tempun '
+            + 'jälkeen.',
+          lahde: 'Preussin poliisi 1906, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Fossiilin hinta oli yksi lehmä',
+          tiedosto: 'Berlin Archaeopteryx.jpg',
+          teksti: 'Berliinin luonnontieteellisessä museossa on lasin alla '
+            + 'kivilaatta, jossa näkyy pieni hampaallinen olento siipineen, '
+            + 'kynsineen ja pitkine liskomaisine häntineen — ja höyhenten '
+            + 'painaumat kivessä. Se on Archaeopteryxin Berliinin yksilö, '
+            + 'lajin löydetyistä yksilöistä täydellisin ja ensimmäinen, '
+            + 'jolla on kokonainen pää. Löytäjä oli maanviljelijä Jakob '
+            + 'Niemeyer Eichstättin lähellä. Vuonna 1876 hän myi fossiilin '
+            + 'majatalonpitäjä Johann Dörrille saadakseen rahat lehmän '
+            + 'ostoon. Lopulta Berliinin museo osti sen 20 000 '
+            + 'kultamarkalla, ja kaupan rahoitti Ernst Werner von Siemens.',
+          selite: 'Archaeopteryxin Berliinin yksilössä näkyvät höyhenten '
+            + 'painaumat kivessä.',
+          lahde: 'Emily Willoughby, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä kaupungin nimi tarkoittaa tutkijoiden pääsääntöisen '
+          + 'käsityksen mukaan?',
+        vaihtoehdot: [
+          'karhunpentua',
+          'suota',
+          'kahlaamoa',
+          'markkinapaikkaa',
+        ],
+        oikea: 1,
+        fakta: 'Karhu on siis puhuva vaakuna: kuva, joka selittää nimen '
+          + 'väärin mutta ymmärrettävästi. Sinetissä se on ollut vuodesta '
+          + '1280.',
       },
     },
   ],
@@ -10332,6 +10520,92 @@ export const KULTTUURI_KATEGORIAT = {
           ],
         },
       ],
+    },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö). Rooman viereen kertyi neljä
+     * nostomerkkiä yli kaupunkinostojen katon. Kissapyhäkkö oli
+     * karsituissa kahdesti (`syvennys-rooma-kissat` ja täkynosto
+     * `nosto-kissat`, sama tarina ja sama kuva), joten se on tässä
+     * yhtenä juttuna; muut ovat syvennystarinoita
+     * `syvennys-rooma-vatikaani` ja `-avaimenreika`.
+     */
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Paavi jäi Vatikaaniin vangiksi kolme vuotta ennen isoisän '
+        + 'käyntiä, Aventinuksella katsotaan avaimenreiästä kolmen valtion '
+        + 'läpi, ja Caesarin murhapaikalla asuu kissalauma.',
+      nostot: [
+        {
+          otsikko: 'Vatikaanin vanki',
+          tiedosto: 'Pius IX, by Adolphe Braun, 1875.jpg',
+          teksti: 'Rooman valtaus kesti yhden aamupäivän. Italian tykistö '
+            + 'aloitti tulen kello viideltä 20. syyskuuta 1870, ja '
+            + 'muutaman tunnin päästä Aurelianuksen muuriin oli ammuttu '
+            + 'aukko Porta Pian viereen. Paaville tarjottiin omaa '
+            + 'pikkuvaltiota Vatikaanin kukkulalla, ja Pius IX kieltäytyi. '
+            + 'Vuoden 1871 takuulaki olisi antanut hänelle kuninkaan '
+            + 'arvoiset kunnianosoitukset ja oikeuden lähettää lähettiläitä, '
+            + 'mutta hän ei hyväksynyt sitäkään: lain voisi kumota sama '
+            + 'valta, joka sen antoi. Niinpä hän jäi Vatikaanin palatsiin '
+            + 'eikä poistunut sieltä — ei hän eikä yksikään hänen '
+            + 'seuraajistaan ennen vuotta 1929.',
+          selite: 'Pius IX vuonna 1875; hän oli tuolloin ollut viisi vuotta '
+            + 'poistumatta Vatikaanista.',
+          lahde: 'Adolphe Braun 1875, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Avaimenreikä, josta näkee kolmen valtion läpi',
+          tiedosto: 'Knights of Malta Keyhole, Aventine Hill, Rome (cropped).jpg',
+          teksti: 'Aventinuksen kukkulalla on pieni aukio, jonka toisella '
+            + 'laidalla on Maltan ritarikunnan villa. Sen portin keskellä on '
+            + 'avaimenreikä, ja siitä katsoo kolmen valtion läpi kerralla: '
+            + 'heti reiän takana on ritarikunnan puutarha, jolla on '
+            + 'Italiassa eksterritoriaalinen asema, puutarhan läpi kulkee '
+            + 'sypressien rajaama käytävä, ja käytävän päässä on '
+            + 'täydellisesti rajautuneena Pietarinkirkon kupoli '
+            + 'Vatikaanissa. Portin suunnitteli vuonna 1765 Giovanni '
+            + 'Battista Piranesi, kuparipiirrostaiteilija, joka piti itseään '
+            + 'ennen kaikkea arkkitehtina. Puutarha sai '
+            + 'eksterritoriaalisen asemansa 1869.',
+          selite: 'Maltan ritarikunnan portin avaimenreiästä avautuu '
+            + 'sypressikäytävä ja sen päässä Pietarinkirkon kupoli.',
+          lahde: 'Galen Crout, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Kissalauma asuu temppelissä',
+          tiedosto: 'Cat Sanctuary, Cats, Largo di Torre Argentina, Rome - 398 (19257774921).jpg',
+          teksti: 'Kun Roomaa rakennettiin uusiksi ja korttelia purettiin '
+            + 'vuonna 1927, maasta tuli esiin jättiläispatsaan pää ja '
+            + 'käsivarret. Alta löytyi neljä tasavallan ajan temppeliä ja '
+            + 'pala Pompeiuksen teatteria — ja se paikka, jossa Julius '
+            + 'Caesarin uskotaan tulleen murhatuksi. Kaivauskuoppaan alkoi '
+            + 'kerääntyä kulkukissoja, ja ne asuvat siellä yhä: temppeli '
+            + 'D:n kohdalla toimii kissasuoja, jota on 1950-luvulta lähtien '
+            + 'pidetty yllä avaimella, joka on kulkenut näyttelijältä '
+            + 'toiselle. Vuonna 2012 arkeologiviranomaiset vaativat suojan '
+            + 'häätöä; vetoomukseen kerättiin yli 30 000 nimeä, ja kissat '
+            + 'jäivät.',
+          selite: 'Largo di Torre Argentinan kuopan pohjalla on neljä '
+            + 'tasavallan ajan temppeliä, ja niiden raunioissa asuu '
+            + 'kissasuoja.',
+          lahde: 'Andy Rusch, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten Largo di Torre Argentinan kissasuojan hoito siirtyi '
+          + '1950-luvulta lähtien ihmiseltä toiselle?',
+        vaihtoehdot: [
+          'tehtävä kuului aina raunioiden vartijalle',
+          'kaupunki nimitti hoitajan joka vuosi',
+          'avain kulki näyttelijältä toiselle',
+          'hoitaja arvottiin korttelin asukkaista',
+        ],
+        oikea: 2,
+        fakta: 'Suoja toimii temppeli D:n kohdalla. Vuonna 2012 sitä '
+          + 'vaadittiin häädettäväksi raunioiden suojelemiseksi, mutta '
+          + 'vetoomukseen kerättiin yli 30 000 nimeä.',
+      },
     },
   ],
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa:
