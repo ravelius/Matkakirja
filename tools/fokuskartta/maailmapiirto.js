@@ -993,16 +993,54 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * (js/laattapyramidi.js valitseTaso), joten näkymän leveys on
    * puhelimella 1170 ja työpöydällä 1440-3024 laitepikseliä. Tasolla
    * z2 jokainen nimetty meri mahtuu näkymään; z3:lla Tyynimeri ja
-   * Jäämeri ovat jo kaksi ruudullista. Raja kulkee siis z2:n ja z3:n
-   * välissä, ja se kirjataan tähän samassa yksikössä kuin muutkin
+   * Jäämeri ovat jo kaksi ruudullista. Raja kulki siksi aluksi z2:n ja
+   * z3:n välissä (0,3), ja se kirjataan samassa yksikössä kuin muutkin
    * yleistyskynnykset (kuvapikseliä lautayksikköä kohti): z2 on 0,225
    * ja z3 on 0,45.
    *
    * (Eteläinen jäämeri on kehämeri eikä mahdu näkymään millään
    * tasolla; se seuraa muita, koska sen nimi kulkee kartan alalaidassa
    * vyönä eikä rajatun altaan sisällä.)
+   *
+   * === KYNNYS NOUSEE Z3:LLE (omistaja 1.9.2026 illalla) =============
+   *
+   * Sanatarkasti: *"toiseksi uloin zoomtaso saisi sisältää samat
+   * lisämerkinnät karttaan kuin uloin taso. tai ainakin sen ison
+   * ilmansuunta symbolin meren päällä."*
+   *
+   * TÄMÄ ON SAMA PYYNTÖ KUIN AAMULLA, ERI KALUSTEISTA. Aamulla omistaja
+   * pyysi kartussin ja painajanrivin näkyviin *"toiseksi laajimmalle
+   * zoom tasolle"*, ja se mitattiin z3:ksi (omistajan kaappaukset
+   * olivat mittajanoiltaan 5000 km ja 2000 km eli z2 ja z3; ks.
+   * KALUSTEET_YLARAJA alla). Pelaajan laajin näkymä osuu z1:een tai
+   * z2:een ja seuraava porras z3:een — sama pari. Aamun korjaus koski
+   * VAIN marginaalin kalusteita, joten z3:lle jäi arkki, jossa on
+   * otsikko ja painajanrivi mutta ei yhtään valtameren nimeä eikä
+   * kompassiruusua. Juuri se ero on omistajan *"samat lisämerkinnät"*.
+   *
+   * MIKSI ALKUPERÄINEN MITTAUS SILTI PITÄÄ. Kriteeri *"koko meri on
+   * näkyvissä"* oli oikea kysymys nimen SIJOITTELULLE, ei sen
+   * olemassaololle: nimi ja meri ovat molemmat kartan mittakaavassa
+   * (S), joten nimen osuus altaastaan on JOKA TASOLLA SAMA — z3:lla
+   * ATLANTIN VALTAMERI on 564 px ja sen allas 1 239 px, täsmälleen
+   * sama suhde kuin z2:lla (282 / 619). Nimi ei siis voi z3:lla
+   * törmätä rantaan sen enempää kuin z2:lla, eikä yksikään mitattu
+   * täyttöaste muutu. Ainoa muutos on, ettei Tyynenmeren nimeä näe
+   * enää yhdellä silmäyksellä koko altaansa kanssa — ja omistaja pyysi
+   * tätä nähtyään juuri sen näkymän.
+   *
+   * 0,5 ON SAMA LUKU KUIN MARGINAALIN KALUSTEILLA, mutta vakio pysyy
+   * omanaan: kriteerit ovat eri (allas vs. arkki), ja jos omistaja
+   * joskus haluaa nimet pois z3:lta jättäen otsikon paikalleen, vain
+   * tämä luku liikkuu. Raja kulkee z3:n (0,45) ja z4:n (0,90) välissä,
+   * eli 1000 km:n näkymässä kartta on taas nimetön kuten ennenkin.
+   *
+   * KYNNYS ON KAHDESSA PAIKASSA. Sama luku on
+   * tools/generoi-laattapyramidi.mjs:ssä umpimeren karsintaa varten
+   * (`umpimeriSavy` ehto 4): jos ne eroaisivat, karsinta heittäisi
+   * pois juuri sen laatan, johon piirto on kirjoittamassa nimen.
    */
-  const KALUSTEIDEN_YLARAJA = 0.3;
+  const KALUSTEIDEN_YLARAJA = 0.5;
   const merinimetNakyvat = px <= KALUSTEIDEN_YLARAJA;
   /*
    * === MARGINAALIN KALUSTEILLA ON OMA KYNNYS (omistaja 1.9.2026) =====
@@ -2131,10 +2169,12 @@ export function piirraErikoispiiritKankaalle(ctx, mitta) {
  * KAKSI VANHAA RAJAA PITÄVÄT YHÄ, ja ne on tarkistettu uusilla
  * luvuilla:
  *
- *   HELMI EI MAHDU KATKOON. Helmen halkaisija on 30 R ja katko
- *   0,30 · 190 = 57 R — katko on yhä selvästi pitkänomainen.
+ *   HELMI EI MAHDU KATKOON. Helmen halkaisija on 20 R ja katko
+ *   0,30 · 150 = 45 R — katko on yhä selvästi pitkänomainen.
  *   HELMINAUHAA EI SYNNY. Lyhin askelväli on 232 R ja helmen
- *   ulkohalkaisija kehineen 39 R, joten väliin jää yli 190 R.
+ *   ulkohalkaisija kehineen 26 R, joten väliin jää yli 200 R.
+ *   (Luvut on päivitetty 1.9.2026 illan eriin: helmi 15 -> 10 ja
+ *   jakso 190 -> 150; molemmat rajat pitävät uusillakin mitoilla.)
  *
  * Luvut ovat R:ssä eli KARTTAVAKIOITA (ks. piirraMaailma osio 8b):
  * ne kutistuvat kartan mukana, joten muutos näkyy joka tasolla samana
@@ -2190,10 +2230,51 @@ export function piirraErikoispiiritKankaalle(ctx, mitta) {
  *                   reittiviiva"* — kehä ei siis ole enää sidottu
  *                   meren katkotussiin vaan MAAVIIVAan.
  */
+/*
+ * === MERI KAPENEE JA TIHENEE (omistaja 1.9.2026 myöhään illalla) ====
+ *
+ * Sanatarkasti: *"kavenna hieman meren noppareittiviivoja ja tee
+ * niistä vähän tiheämmät."*
+ *
+ * TILAUS KOSKEE VAIN MERTA. Maantie (`maaViiva` 6,0, yhtenäinen veto),
+ * askelhelmi (`helmi` 10) ja sen kehä (6,0) EIVÄT muutu — helmet ovat
+ * nopan askelmia eivätkä tyyliä, ja maantien omistaja oli hyväksynyt
+ * saman illan aikaisemmasta vedoksesta (*"Hyväksy + lämmitä
+ * maantietä"*). Muutos on siis kaksi lukua:
+ *
+ *   viiva  9,0 -> 7,5   *"kavenna hieman"* (−17 %)
+ *   jakso  190 -> 150   *"vähän tiheämmät"* (−21 %, katkoja on 1,27x)
+ *
+ * KATKON OSUUS PYSYY 0,30:SSA, ja se on tarkoituksellista eikä
+ * unohdus. Osuus on suhdeluku, joten se pitää sekä katkon MUODON että
+ * omistajan aiemman vedosvaatimuksen *"väli on yli kaksi kertaa
+ * katkon mitta"* voimassa uudessakin rytmissä:
+ *
+ *   ennen  0,30 · 190 = 57 R katkoa, 133 R väliä; katko/viiva 6,3
+ *   nyt    0,30 · 150 = 45 R katkoa, 105 R väliä; katko/viiva 6,0
+ *
+ * Katkon ja veton SUHDE siis säilyy melkein sellaisenaan (6,3 -> 6,0),
+ * eli katko on yhä selvästi pitkänomainen tussinveto eikä pyöreä
+ * piste — juuri se ero, jonka takia osuutta ei nostettu kaventamisen
+ * kompensaatioksi. Jos osuus olisi pidetty katkon PITUUDESSA (57 R)
+ * eikä suhdeluvussa, väli olisi kutistunut 93 R:ään ja rytmi olisi
+ * mennyt "tiheämmän" ohi tikutukseksi.
+ *
+ * HELMET EIVÄT SIIRRY, VAIKKA JAKSO LYHENEE. Merihelmi ankkuroidaan
+ * lähimmän katkojakson keskelle (ks. `arkilla`), joten sen suurin
+ * siirtymä raakapaikastaan on puoli jaksoa: 95 R -> 75 R. Tiheämpi
+ * rytmi vie helmen siis LÄHEMMÄS omaa askelmaansa, ei kauemmas — ja
+ * se on MITATTU koko laudalta (350 merihelmeä): suurin siirtymä oli
+ * ennen 95 px ja on nyt 74 px z7:llä, eikä yksikään helmi ylitä
+ * palautusrajaa 0,75 · jakso kummallakaan mitalla. Helmi ei siis voi
+ * jäädä raakapaikalleen niin, että sen jakso silti jätettäisiin
+ * piirtämättä (se oli 1.9.2026 korjattu vika *"osa laivareiteistä
+ * jännästi katkeaa välissä"*).
+ */
 export const REITTITYYLI = Object.freeze({
-  viiva: 9.0,    // meren katkotussin leveys (kerrotaan kynänpaineella)
+  viiva: 7.5,    // meren katkotussin leveys (omistaja 1.9.2026: "kavenna hieman"; oli 9,0)
   maaViiva: 6.0, // maantien yhtenäisen veton leveys (omistaja 1.9.2026)
-  jakso: 190,    // katko + väli
+  jakso: 150,    // katko + väli (omistaja 1.9.2026: "vähän tiheämmät"; oli 190)
   helmi: 10,     // askelhelmen säde (omistaja 1.9.2026: "vähän pienempi ympyrä")
   kehä: 6.0,     // askelhelmen kehä = MAAVIIVA (omistaja 1.9.2026)
   lento: 2.5,    // lentoreitin veton leveys (ei enää poltossa, ks. LENNOT)
@@ -2365,9 +2446,15 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
      *   ennen (katko)     0,24 alfaa · 30 % matkasta · leveys 9,0
      *   nyt   (yhtenä)    0,17 alfaa · 100 % matkasta · leveys 6,0
      *
+     * (Meren veto kaventui saman illan myöhemmässä erässä 7,5:een —
+     * ks. REITTITYYLI "MERI KAPENEE JA TIHENEE" — jolloin maantie on
+     * 80 % meren tussista eikä enää 2/3. Musteen määrä ratkaisee, ja
+     * se ei muuttunut suunnaltaan: meri peittää matkasta 30 %,
+     * maantie 100 %, ja maantien alfa on kolmanneksen matalampi.)
+     *
      * Yksittäinen piste viivalla on nyt 29 % vaaleampi (0,17 vs
      * 0,24) — juuri se, mitä *"vielä himmeämpi"* tarkoittaa — ja
-     * viivan pinta-ala matkayksikköä kohti kasvaa 2,7 -> 6,0, koska
+     * viivan pinta-ala matkayksikköä kohti kasvaa 2,25 -> 6,0, koska
      * yhtenäisessä viivassa ei ole reikiä. Maantie ei siis katoa
      * vaan muuttuu kevyeksi jatkuvaksi jäljeksi, ja meri jää
      * tummemmaksi katkojaksi — lajit erottuvat kaukaakin.
@@ -2394,8 +2481,9 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
      * askelvälistä, ja se sääntö kulkee mukana mittakaavassa: kun
      * helmi kutistuu kartan mukana, askelvälin ja helmen suhde on JOKA
      * TASOLLA sama kuin z7:llä. Mitattuna lyhin askelväli on 232 R ja
-     * helmen ulkohalkaisija kehineen 39 R, joten helmien väliin jää
-     * joka tasolla yli 190 R — helminauhaa ei voi syntyä (se oli
+     * helmen ulkohalkaisija kehineen 26 R (helmi 10 + kehä 6), joten
+     * helmien väliin jää joka tasolla yli 200 R — helminauhaa ei voi
+     * syntyä (se oli
      * edellisen erän tunnettu rajatapaus z2:lla, ja tämä päätös
      * poistaa sen rakenteellisesti).
      */
@@ -2517,22 +2605,24 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
      * === KATKON MITAT (reittiyksikköä R) ==========================
      *
      * `jakso` on yhden katkon ja sitä seuraavan välin yhteismitta.
-     * 40 yksikköä (REITTITYYLI; omistaja 1.9.2026 *"katkoviivat saisi
-     * olla harvempia"*) on valittu kahdesta rajasta, ja kumpikin on
-     * MITTAKAAVASTA RIIPPUMATON, koska helmi ja katko kutistuvat samaa
-     * tahtia:
+     * 150 yksikköä (REITTITYYLI; omistaja 1.9.2026 illalla *"tee
+     * niistä vähän tiheämmät"*, ennen 190) on valittu kahdesta
+     * rajasta, ja kumpikin on MITTAKAAVASTA RIIPPUMATON, koska helmi
+     * ja katko kutistuvat samaa tahtia:
      *
-     *   ALARAJA  helmi on halkaisijaltaan 30 R. Jos katko olisi
+     *   ALARAJA  helmi on halkaisijaltaan 20 R. Jos katko olisi
      *            samaa kokoluokkaa, katko ja helmi näyttäisivät
      *            käyttökoossa samalta merkiltä. Katko
-     *            (0,30 · 190 = 57 R) on selvästi pidempi kuin
-     *            helmi on leveä.
+     *            (0,30 · 150 = 45 R) on selvästi pidempi kuin
+     *            helmi on leveä — ja pidempi myös suhteessa
+     *            kaventuneeseen vetoon (45 / 7,5 = 6,0).
      *   YLÄRAJA  askelvälille on mahduttava katkorytmiä: mitattuna
      *            lyhin askelväli on 232 R ja mediaani 595 R, eli
-     *            jakso 190 antaa mediaanivälille kolme jaksoa.
-     *            Lyhimmällä välillä joka jaksossa on helmi ja rytmi
-     *            harvenee — omistaja 1.9.2026: *"Ei haittaa, jos
-     *            pistetiheys muuttuu suuntaan tai toiseen."*
+     *            jakso 150 antaa mediaanivälille neljä jaksoa ja
+     *            lyhimmällekin puolitoista. Lyhimmällä välillä joka
+     *            jaksossa on helmi ja rytmi harvenee — omistaja
+     *            1.9.2026: *"Ei haittaa, jos pistetiheys muuttuu
+     *            suuntaan tai toiseen."*
      *
      * SEURAUS, JOKA KANNATTAA TIETÄÄ: kun jakso skaalautuu kartan
      * mukana, KATKOJEN LUKUMÄÄRÄ reittiä kohti on sama joka
@@ -2633,7 +2723,7 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
          * lähimmän katkon keskelle ja jättää sen katkon
          * piirtämättä, jotta viiva ei kulje pisteen läpi.
          * Yhtenäisellä maaviivalla ei ole katkoa, johon ankkuroida
-         * — siirto veisi helmen jopa puoli jaksoa (95 R) väärään
+         * — siirto veisi helmen jopa puoli jaksoa (75 R) väärään
          * kohtaan reittiä, eikä siirrosta olisi mitään hyötyä.
          * Maalla helmi jää siis omalle askelmapaikalleen, ja
          * paperinvärinen täyttö puhkaisee viivan sen kohdalta

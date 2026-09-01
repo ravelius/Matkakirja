@@ -561,11 +561,29 @@ test('katkorytmi on harvempi ja veto paksumpi kuin edellisessä erässä', () =>
    * välit ja … viivan leveys vielä paksumpi"*, *"Tee viivoista ja
    * viivojen väleistä vielä pidempiä"* — hyväksytyt mitat viiva 9,
    * jakso 190 ja katko-osuus 0,30 (väli on yli kaksi kertaa katko).
+   *
+   * MERI KAPENI JA TIHENI SAMANA ILTANA (omistaja 1.9.2026:
+   * *"kavenna hieman meren noppareittiviivoja ja tee niistä vähän
+   * tiheämmät."*): viiva 9 -> 7,5 ja jakso 190 -> 150. Haarukat
+   * seuraavat mukana, mutta pysyvät HAARUKKOINA eivätkä lukuina:
+   * koe vartioi sitä, ettei ilme karkaa takaisin tekniseksi
+   * piirustukseksi (ohut tiheä tikutus) eikä paisu sarjakuvaksi.
    */
-  assert.ok(REITTITYYLI.viiva >= 8 && REITTITYYLI.viiva <= 10,
-    `veto ${REITTITYYLI.viiva} ei ole hyväksytyssä haarukassa 8–10`);
-  assert.ok(REITTITYYLI.jakso >= 150 && REITTITYYLI.jakso <= 250,
-    `jakso ${REITTITYYLI.jakso} ei ole hyväksytyssä haarukassa 150–250`);
+  assert.ok(REITTITYYLI.viiva >= 6.5 && REITTITYYLI.viiva <= 9,
+    `veto ${REITTITYYLI.viiva} ei ole hyväksytyssä haarukassa 6,5–9`);
+  assert.ok(REITTITYYLI.jakso >= 120 && REITTITYYLI.jakso <= 200,
+    `jakso ${REITTITYYLI.jakso} ei ole hyväksytyssä haarukassa 120–200`);
+  /*
+   * KATKO PYSYY PITKÄNOMAISENA. Kaventuminen ja tihentyminen vetävät
+   * molemmat samaan suuntaan — kohti pistemäistä katkoa — ja juuri se
+   * olisi eri ilme kuin omistajan hyväksymä. Suhde katkon pituuden ja
+   * veton leveyden välillä oli hyväksytyillä mitoilla 6,3 (57 / 9) ja
+   * on nyt 6,0 (45 / 7,5).
+   */
+  const katkoSuhde = (REITTITYYLI.lyhin * REITTITYYLI.jakso) / REITTITYYLI.viiva;
+  assert.ok(katkoSuhde >= 4.5,
+    `katko on vain ${katkoSuhde.toFixed(1)} kertaa veton levyinen — `
+    + 'katkoviiva muuttuu pisteriviksi');
   assert.equal(REITTITYYLI.lyhin, REITTITYYLI.pisin,
     'katkon pituus arpoo — omistajan tilaus oli tasainen rytmi');
   assert.ok(REITTITYYLI.lyhin <= 0.35,
@@ -606,10 +624,18 @@ test('maareitti on yhtenäinen, ohuempi ja himmeämpi veto — meri jää katkov
   assert.ok(REITTITYYLI.maaViiva < REITTITYYLI.viiva,
     `maaviiva ${REITTITYYLI.maaViiva} ei ole meren vetoa `
     + `(${REITTITYYLI.viiva}) ohuempi`);
+  /*
+   * HAARUKKA VÄLJENI 55–85 %:IIN (omistaja 1.9.2026 illalla kavensi
+   * MEREN vetoa 9,0 -> 7,5 eikä koskenut maantiehen, jolloin suhde
+   * nousi 2/3:sta 0,80:aan). Sääntö on yhä sama — maantie on meren
+   * katkotussia ohuempi mutta samaa viivaperhettä — ja musteen määrä
+   * pitää lajit erillään kuten ennenkin: meri peittää matkasta 30 %,
+   * maantie 100 % matalammalla alfalla.
+   */
   assert.ok(REITTITYYLI.maaViiva >= 0.55 * REITTITYYLI.viiva
-    && REITTITYYLI.maaViiva <= 0.75 * REITTITYYLI.viiva,
+    && REITTITYYLI.maaViiva <= 0.85 * REITTITYYLI.viiva,
     `maaviiva ${REITTITYYLI.maaViiva} ei ole "hiukan ohuempi" vaan `
-    + 'eri viiva — hyväksytty haarukka on 55–75 % meren vedosta');
+    + 'eri viiva — hyväksytty haarukka on 55–85 % meren vedosta');
   assert.equal(REITTITYYLI.kehä, REITTITYYLI.maaViiva,
     'helmen kehä ei ole "saman paksuinen viiva kuin pienennetty reittiviiva"');
   assert.ok(REITTITYYLI.helmi <= 12,
@@ -677,20 +703,48 @@ test('viivan päät ovat pyöreät — piirretty viiva, ei tekninen tikku', () =
     'katkoviivan päät eivät ole pyöreät');
 });
 
-test('marginaalin kalusteilla on oma kynnys, joka kattaa z3:n', () => {
+test('kalusteet, merten nimet ja kompassi näkyvät kaikki z3:lla asti', () => {
   /*
-   * OMISTAJA 1.9.2026: *"Toiseksi laajimmalla zoom tasolla saisi näkyä
-   * paperin päälle ladottu matkakirja ja alhaalla myös muut
-   * vastaavat"*. z3:n tiheys on 0,45 px/lautayksikkö ja z4:n 0,90;
-   * kalustekynnyksen on siis oltava niiden välissä. Merten nimet ja
-   * kompassi ovat kartan alalla ja pitävät oman kynnyksensä (0,3).
+   * KAKSI OMISTAJAN PYYNTÖÄ SAMASTA TASOSTA, 1.9.2026:
+   *
+   *   aamu  *"Toiseksi laajimmalla zoom tasolla saisi näkyä paperin
+   *         päälle ladottu matkakirja ja alhaalla myös muut
+   *         vastaavat"* — marginaalin kalusteet z3:lle.
+   *   ilta  *"toiseksi uloin zoomtaso saisi sisältää samat
+   *         lisämerkinnät karttaan kuin uloin taso. tai ainakin sen
+   *         ison ilmansuunta symbolin meren päällä."* — valtamerten
+   *         nimet ja kompassiruusu samalle tasolle.
+   *
+   * z3:n tiheys on 0,45 px/lautayksikkö ja z4:n 0,90, joten molempien
+   * kynnysten on oltava niiden VÄLISSÄ: alempi jättäisi z3:n paljaaksi
+   * ja korkeampi veisi kalusteet 1000 km:n näkymään, jossa arkin reuna
+   * ei ole enää ruudulla.
+   *
+   * VAKIOT PYSYVÄT ERILLÄÄN, VAIKKA LUKU ON SAMA: kalusteiden kysymys
+   * on *"onko arkki kokonaisena katsottavana"* ja nimien *"mahtuuko
+   * allas näkymään"*, ja jos omistaja joskus erottaa ne taas, vain
+   * toinen luku liikkuu. Koe vartioi siksi molempia haarukkana eikä
+   * niiden yhtäsuuruutta.
    */
   const nimet = /const KALUSTEIDEN_YLARAJA = ([\d.]+);/.exec(PIIRTO);
   const kalusteet = /const KALUSTEET_YLARAJA = ([\d.]+);/.exec(PIIRTO);
   assert.ok(nimet && kalusteet, 'kynnysvakioita ei löydy');
-  assert.equal(Number(nimet[1]), 0.3, 'merten nimien kynnys muuttui');
+  assert.ok(Number(nimet[1]) > 0.45 && Number(nimet[1]) < 0.9,
+    `merten nimien ja kompassin kynnys ${nimet[1]} ei osu z3:n (0,45) ja `
+    + 'z4:n (0,90) väliin — omistaja tilasi ne toiseksi uloimmalle tasolle');
   assert.ok(Number(kalusteet[1]) > 0.45 && Number(kalusteet[1]) < 0.9,
     `kalustekynnys ${kalusteet[1]} ei osu z3:n (0,45) ja z4:n (0,90) väliin`);
+  /*
+   * KARSINNAN KOPIO ON SAMA LUKU. Jos generaattorin kynnys jäisi
+   * matalammaksi kuin piirron, umpimeren karsinta hylkäisi juuri ne
+   * laatat, joihin piirto kirjoittaa nimen tai ruusun — ja vika
+   * näkyisi vasta poltetussa pyramidissa tyhjänä merenä.
+   */
+  const generaattori = readFileSync(GENERAATTORI, 'utf8');
+  const karsinta = /const KALUSTEIDEN_YLARAJA = ([\d.]+);/.exec(generaattori);
+  assert.ok(karsinta, 'generaattorin kynnyskopiota ei löydy');
+  assert.equal(Number(karsinta[1]), Number(nimet[1]),
+    'karsinnan ja piirron kynnykset eroavat — laattoja katoaisi nimien alta');
   const kehysLohko = PIIRTO.slice(
     PIIRTO.indexOf('9. ATLASKEHYS'), PIIRTO.indexOf('---------------------------------------------------- kartussi'),
   );
@@ -698,6 +752,14 @@ test('marginaalin kalusteilla on oma kynnys, joka kattaa z3:n', () => {
     'kartussi ja painajanrivi eivät käytä kalusteiden omaa kynnystä');
   assert.ok(!/if \(merinimetNakyvat\) \{/.test(kehysLohko),
     'kehyksen kalusteet roikkuvat yhä merten nimien kynnyksessä');
+  /*
+   * KOMPASSI KULKEE NIMIEN KYNNYKSELLÄ. Omistaja pyysi *"ainakin sen
+   * ison ilmansuunta symbolin"*, joten ruusu ei saa jäädä oman
+   * ehtonsa varaan: jos se joskus irrotetaan nimistä, se on tehtävä
+   * näkyvästi eikä vahingossa.
+   */
+  assert.match(PIIRTO, /if \(tyyli\.kompassi && merinimetNakyvat\) \{/,
+    'kompassiruusu ei enää seuraa merten nimien kynnystä');
 });
 
 test('viivataso on neljäs kerros eikä sitä häivytetä', () => {
