@@ -1255,7 +1255,19 @@ export const RAAMATTU = {
           + 'kaytannossa ilmaista; rasterin uusinta vain kun merkit '
           + 'muuttuvat, ei kesken eleen. Toteutus syvennystarinaeran '
           + 'jalkeen (sama merkkikerros). Tama on samalla askel kohti '
-          + 'laattapyramidin ohutta pelitilakerrosta.',
+          + 'laattapyramidin ohutta pelitilakerrosta. KUMOTTU 1.9.2026 '
+          + 'ILTA yhdessa 31.8. piilotuslinjauksen ("kaikki elementit '
+          + 'mita ei ole poltettu pitaa poistua nakyvista kun karttaa '
+          + 'zoomataan") kanssa - omistaja sanatarkasti: "kaikki '
+          + 'elementit pitaa pysya paalla kun karttaa liikutetaan tai '
+          + 'zoomataan vaikka niita ei olisi poltettu." Elepiilotus '
+          + 'purettu kokonaan (v1434), ei kytkinvakiota: mittaus '
+          + '(savuke-maailmanakyma, Kreikan maailmanakyma) panorointi '
+          + 'med. 767 -> 357 ms, nipistys 1412 -> 1070 ms longtaskeja - '
+          + 'piilotus oli itse kalliimpi kuin nakyvat kerrokset. '
+          + 'Ruutuavaruudessa ladottu nimikerros napsahtaa kokoonsa '
+          + 'eleen lopussa; se on hyvaksytty hinta, ei bugi. '
+          + 'Rasterointia ei tehda.',
         'YKSI MAAILMANBITTIKARTTA - MAALEHDISTA LUOVUTAAN (omistaja '
           + '30.8.2026 aamu, sanatarkka: "onhan tarkoitus etta koko '
           + 'maailma on kokoajan yksi iso bittikartta josta vain '
@@ -2908,9 +2920,6 @@ export const RAAMATTU = {
           + 'peruutusehto.',
         'CONTRIBUTING.md — avoin lähdekoodi + tekniset periaatteet. '
           + 'README.md — esittely.',
-        'docs/viesti-fable.md — viestikanava, ei ohje. docs/arkisto/ '
-          + 'ja docs/raportit/ — ei ohjeita; vanhentunut tilannekuva '
-          + 'arkistoidaan heti.',
         'TYÖSESSIOIDEN SPEKSIOPPI (omistajan havainto 16.8.2026): '
           + 'tarkasti rajattu toimeksianto tuottaa Opukselta '
           + 'erinomaista jälkeä; väljä rajaus johtaa turhien asioiden '

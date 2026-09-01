@@ -1177,11 +1177,13 @@ const KEHITTAJA_AVAIN = 'matkakirja-kehittaja';
  */
 let kehittajaMuisti = null;
 let kehittajaMaailmaMuisti = null;
+let kehittajaTummennusMuisti = null;
 
 /** Kytkinten muisti tyhjäksi: seuraava kysyjä lukee levyltä. */
 export function unohdaKehittajaKytkimet() {
   kehittajaMuisti = null;
   kehittajaMaailmaMuisti = null;
+  kehittajaTummennusMuisti = null;
 }
 
 try {
@@ -1343,6 +1345,53 @@ export function asetaKehittajaMaailma(paalla) {
     /* yksityinen selaus: tila jää vain tälle istunnolle */
   }
   siivoaVanhatKehittajaAvaimet();
+}
+
+/*
+ * ============ MAATUMMENNUKSEN KEHITTÄJÄKYTKIN (1.9.2026) ===========
+ *
+ * Omistaja 1.9.2026 ilta, sanatarkasti: *"kartan tummennuksen voisi
+ * ottaa pois päältä kehittäjä tilassa."*
+ *
+ * KYTKIN KOSKEE VAIN KEHITTÄJÄÄ. Maatummennus (js/maatummennus.js) on
+ * pelaajalle aina päällä; tämä avain luetaan vasta kun kehittäjätila on
+ * päällä (ks. js/maatummennus.js `tunniste`). Pelaajan laitteelle
+ * avainta ei voi edes syntyä, koska kytkinrivi on hammasratasvalikossa,
+ * joka on piilossa ilman kehittäjätilaa.
+ *
+ * OLETUS ON PÄÄLLÄ, ja siksi tämä avain on käänteinen muihin nähden:
+ * puuttuva avain tarkoittaa "päällä" ja levylle kirjoitetaan vain
+ * poiskytkentä ('0'). Näin oletus on sama tyhjällä laitteella ja
+ * yksityisessä selauksessa, jossa kirjoitus ei mene läpi lainkaan.
+ *
+ * MUISTI ON SAMASSA JOUKOSSA kuin muillakin kytkimillä
+ * (unohdaKehittajaKytkimet): levyltä ei lueta kehyssilmukassa, ja
+ * toisen välilehden `storage`-tapahtuma mitätöi muistin. Tummennuksen
+ * oma lukija ei tosin ole kehyssilmukassa (tunniste ajetaan näkymän
+ * asetuttua), mutta sääntö on yhteinen eikä siitä poiketa yhden
+ * kytkimen takia.
+ */
+const KEHITTAJA_TUMMENNUS_AVAIN = 'matkakirja-kehittaja-tummennus';
+
+/** Tummentaako kartta käymättömät maat? Oletus: kyllä. */
+export function kehittajaTummennusPaalla() {
+  if (kehittajaTummennusMuisti !== null) return kehittajaTummennusMuisti;
+  try {
+    kehittajaTummennusMuisti = localStorage.getItem(KEHITTAJA_TUMMENNUS_AVAIN) !== '0';
+  } catch {
+    kehittajaTummennusMuisti = true; // yksityinen selaus: oletus
+  }
+  return kehittajaTummennusMuisti;
+}
+
+export function asetaKehittajaTummennus(paalla) {
+  unohdaKehittajaKytkimet();
+  try {
+    if (paalla) localStorage.removeItem(KEHITTAJA_TUMMENNUS_AVAIN);
+    else localStorage.setItem(KEHITTAJA_TUMMENNUS_AVAIN, '0');
+  } catch {
+    /* yksityinen selaus: tila jää vain tälle istunnolle */
+  }
 }
 
 /*

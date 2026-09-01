@@ -3737,22 +3737,14 @@ export class UI {
     // ei saa viimeistellä elettä kuolleessa pelissä.
     clearTimeout(this.rullanEleAjastin);
     /*
-     * Eleen ajaksi piilotetut merkkikerrokset (kartta.js piilotaMerkit)
-     * palautetaan tässä eikä ajastimen varassa: kuolleen pelin ajastin
-     * ei laukea, ja runkoon jäänyt luokka piilottaisi seuraavan pelin
-     * merkit heti alkuun.
+     * MERKKIEN ELEENAIKAISTA PIILOTUSTA EI ENÄÄ OLE, joten sen paluuta
+     * ei myöskään siivota täältä (omistaja 1.9.2026: *"kaikki elementit
+     * pitää pysyä päällä kun karttaa liikutetaan tai zoomataan vaikka
+     * niitä ei olisi poltettu."* — koko mekanismin purku js/kartta.js
+     * asennaPanorointi, ks. sen ensimmäinen lohko). Kuolleeseen peliin
+     * ei siis voi jäädä merkkejä piilottavaa runkoluokkaa eikä
+     * ajastinta, joka kirjoittaisi sellaisen takaisin.
      */
-    clearTimeout(this.merkkiPaluuAjastin);
-    this.merkkiPaluuAjastin = 0;
-    // Häivytyksen oma ajastin ja paluun kehysvaraus samasta syystä:
-    // kumpikin voisi kirjoittaa luokan takaisin kuolleen pelin päälle.
-    clearTimeout(this.merkkiHaipymaAjastin);
-    this.merkkiHaipymaAjastin = 0;
-    cancelAnimationFrame(this.merkkiPaluuKehys ?? 0);
-    this.merkkiPaluuKehys = 0;
-    this.merkitPiilossa = false;
-    document.body.classList.remove('kartta-merkit-piilossa');
-    document.body.classList.remove('kartta-merkit-haipyy');
     // Lehden avauksen mittavarmistuksen jälkitarkistukset samoin.
     clearTimeout(this.lehtitila.lehtiMittaAjastin);
     clearTimeout(this.lehtitila.lehtiMittaJalkiajastin);
@@ -4240,20 +4232,12 @@ export class UI {
         this.taideOdottaa = true;
       }
       /*
-       * Eleen ajaksi piilotetut merkkikerrokset (kartta.js
-       * piilotaMerkit) palaavat samalla: jumiin jäänyt ele ei saa
-       * jättää karttaa merkittömäksi lopuksi istunnoksi — merkit ovat
-       * napautuskohteita.
+       * MERKKIEN PALUUTA EI TARVITSE ENÄÄ PAKOTTAA. Jumiin jäänyt ele
+       * ei voi jättää karttaa merkittömäksi, koska merkkejä ei
+       * piiloteta eleen ajaksi lainkaan (omistaja 1.9.2026; purku
+       * js/kartta.js asennaPanorointi). Napautuskohteet ovat siis
+       * paikoillaan riippumatta siitä, pääsikö ele omaan loppuunsa.
        */
-      if (this.merkitPiilossa) {
-        // merkitEsiin siivoaa luokat, ajastimet ja kehysvarauksen
-        // kerralla; varapolku vanhalle kartalle jää naytaMerkkiin.
-        if (this.kartta?.merkitEsiin) this.kartta.merkitEsiin();
-        else this.kartta?.naytaMerkit?.(true);
-        document.body.classList.remove('kartta-merkit-piilossa');
-        document.body.classList.remove('kartta-merkit-haipyy');
-        this.merkitPiilossa = false;
-      }
     }
     return Boolean(this.osoitinKartalla || this.kartanRaahaus);
   }
@@ -6995,6 +6979,29 @@ export class UI {
     this.kartta?.tarkistaFokusZoom?.();
   }
 
+  /**
+   * MAATUMMENNUKSEN KEHITTÄJÄKYTKIN päälle tai pois ilman sivulatausta.
+   *
+   * Omistaja 1.9.2026 ilta, sanatarkasti: *"kartan tummennuksen voisi
+   * ottaa pois päältä kehittäjä tilassa."*
+   *
+   * KAKSI KUTSUA, JA JÄRJESTYS ON EHTO. `paivitaMaatummennus` tekee
+   * työtä vain kun kerroksen tunniste muuttuu (js/maatummennus.js
+   * `tunniste`), ja tunniste on pelkkä maa — kytkimen vaihto ei
+   * muuta sitä, kun maa pysyy samana. `nollaaMaatummennus` tyhjentää
+   * siksi ensin sekä kerroksen että avaimen, jolloin seuraava kutsu
+   * joko latoo varjon uudelleen tai jättää sen pois sen mukaan, mitä
+   * kytkin sanoo.
+   *
+   * Muisti unohdetaan samasta syystä kuin maailmakytkimellä: savuke
+   * voi kirjoittaa avaimen suoraan levylle ja kutsua tätä perään.
+   */
+  paivitaKehittajaTummennus() {
+    unohdaKehittajaKytkimet();
+    nollaaMaatummennus(this);
+    paivitaMaatummennus(this);
+  }
+
   /* --- MERKKIKERROSTEN NÄKYMÄRAJAUS (mitattu 29.8.2026) ------------- */
 
   /**
@@ -7005,10 +7012,10 @@ export class UI {
    * Kehittäjän maailmanäkymä (paivitaKehittajaMaailma) ohittaa
    * käymättömien maiden piilotuksen, jotta omistaja voi siirtyä maasta
    * toiseen. Sen hintana kartalla on KOKO laudan kaupunkikerros: 602
-   * näkyvää solmua siinä missä pelissä on muutama kymmenen. Eleen
-   * aikainen piilotus (js/kartta.js piilotaMerkit,
-   * body.kartta-merkit-piilossa) ei kata niitä lainkaan — se koskee
-   * fokuskohteita, fokuspisteitä ja nostosymboleita.
+   * näkyvää solmua siinä missä pelissä on muutama kymmenen. Kerroksia
+   * ei enää piiloteta eleen ajaksi lainkaan (omistaja 1.9.2026; purku
+   * js/kartta.js asennaPanorointi), joten tämä rajaus on ainoa asia,
+   * joka pitää maailmanäkymän solmumäärän kurissa liikkeen aikana.
    *
    * Mitattuna sama Kreikan-sisäinen ele nappi pois vs. päällä:
    *
