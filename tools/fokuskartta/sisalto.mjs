@@ -43,12 +43,22 @@
  * kuin laattojen bbox. Mitään ei projisoida uudelleen — juuri siksi
  * viivat osuvat laattoihin pikselilleen.
  */
+import { karsiRinnakkaiset } from './reittikarsinta.mjs';
+
 /**
  * Kokoaa pysyvän sisällön laudalta.
  *
  * @param {object} pack js/packs/maailmankartta.js:n MAAILMANKARTTA
  */
-export async function keraaSisalto(pack, packkikansio, juuri = `${packkikansio}/../..`) {
+export async function keraaSisalto(
+  pack, packkikansio, juuri = `${packkikansio}/../..`, asetukset = {},
+) {
+  /*
+   * `karsinta: false` jättää rinnakkaiskarsinnan pois. Sitä käyttää
+   * vain vertailuvedos, joka renderöi saman näkymän ennen ja jälkeen;
+   * tuotannossa karsinta on aina päällä.
+   */
+  const { karsinta: karsintaPaalla = true } = asetukset;
   const nimet = await import(`${packkikansio}/maailmankartta-nimet.js`)
     .then((m) => m.MAAILMANKARTAN_NIMET)
     .catch(() => ({ joet: [] }));
@@ -181,6 +191,25 @@ export async function keraaSisalto(pack, packkikansio, juuri = `${packkikansio}/
     console.log(`  VAROITUS: ${poikkeamat} reitin solmuja ei tunnistettu — `
       + 'niiden viiva piirtyy ilman käsin piirretyn heittoa '
       + '(tarkista rules.js densify perSpan).');
+  }
+
+  /*
+   * === SAMA KORRIDORI PIIRRETÄÄN KERRAN (omistaja 1.9.2026) =========
+   *
+   * *"Laivareittejä näyttää menemään liikaa."* Karsinta on
+   * tools/fokuskartta/reittikarsinta.mjs, ja se merkitsee jokaiselle
+   * reitille `piirtoValit` — ne murtoviivan osuudet, jotka poltetaan.
+   * Verkko itse ei muutu: `poly`, `steps` ja pelin kävelemä käyrä ovat
+   * entiset, ja karsinta koskee vain kuvaa. Peite (generoi-
+   * laattapyramidi.mjs viivatasonPeite) lukee samat välit, joten
+   * työlista ja piirto ovat samaa mieltä.
+   */
+  if (karsintaPaalla) {
+    const karsinta = karsiRinnakkaiset(reitit);
+    console.log(`  reittikarsinta: ${karsinta.katkottuja} reittiä lyhenee, `
+      + `${(100 * karsinta.karsittu / karsinta.pituus).toFixed(1)} % viivasta ja `
+      + `${karsinta.karsitutAskelmat}/${karsinta.askelmat} askelhelmeä jää polttamatta `
+      + '(sama korridori piirretään kerran)');
   }
 
   const paikka = new Map((pack.cities ?? []).map((c) => [c.id, c]));
