@@ -12723,6 +12723,74 @@ button.lukija-nappi.lukee,
   .quiz-kohtaaminen-kuvio { margin-bottom: 0.55rem; }
 }
 
+/*
+ * KYSYMYSSIVUN PELKISTYS (omistajan tilaus 1.9.2026: *"kuvan voi
+ * pienentää ja voi jättää edellisellä sivulla näkyneet tekstit pois,
+ * niin jää selvemmin pelkkä kysymys näkyviin"*).
+ *
+ * Kohtaamiskortilla on kaksi sivua. Tervehdyssivulla kuva on iso
+ * (säännöt yllä). Kun pelaaja painaa Aloita peli, js/visa.js lisää
+ * dialogille luokan `kysymysvaihe`: tervehdys, kuvateksti ja varoitus
+ * piilotetaan (js), ja kuva kutistuu tässä pieneksi pyöristetyksi
+ * neliöksi. Näin kysymys + kaikki vaihtoehdot + tiimalasi mahtuvat
+ * iPhonen 390 × 844 ruudulle ilman rullausta.
+ *
+ * Pieni neliö rajataan (`object-fit: cover`) eikä sulauteta vinjetillä:
+ * maski söisi tässä koossa liikaa kuvasta, ja pyöristetty reuna lukee
+ * tunnisteena — kuva on tässä muistutus siitä, kuka kysyy, ei taulu.
+ */
+.quiz.kysymysvaihe .quiz-kohtaaminen-kuvio {
+  margin: 0 0 0.45rem;
+}
+
+.quiz.kysymysvaihe .quiz-kohtaaminen-kuva {
+  width: 104px;
+  height: 104px;
+  max-height: none;
+  object-fit: cover;
+  border-radius: 12px;
+  mix-blend-mode: normal;
+  -webkit-mask-image: none;
+  mask-image: none;
+  box-shadow: 0 1px 6px rgba(52, 36, 16, 0.28);
+}
+
+/*
+ * VIIMEISEN YRITYKSEN VAROITUS tervehdyssivulla: pelin oma ääni, ei
+ * järjestelmäilmoitus — sama kirjan kursiivi kuin tervehdyksessä,
+ * mutta tummemmalla ja ohuen punaruskean viivan takana, jotta se
+ * erottuu hahmon puheesta.
+ */
+.quiz-varoitus {
+  margin: 0.5rem 0 0.15rem;
+  padding: 0.45rem 0.7rem;
+  border-left: 3px solid rgba(150, 58, 34, 0.75);
+  background: rgba(150, 58, 34, 0.08);
+  border-radius: 0 6px 6px 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-style: italic;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: rgba(112, 42, 24, 0.95);
+}
+
+.quiz-varoitus[hidden] { display: none; }
+
+/*
+ * VIELÄ YKSI YRITYS -ohjaus väärän vastauksen tuloskortilla: pelaaja
+ * ei saa luulla, että aarre on jo menetetty. Sama punaruskea ääni kuin
+ * varoituksessa, mutta ilman laatikkoa — tuloskortilla on jo kehys.
+ */
+.quiz-uusi-yritys {
+  display: block;
+  margin: 0.4rem 0 0.1rem;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: rgba(112, 42, 24, 0.95);
+}
+
 /* Kätkökuva laatattoman löydön tuloskortissa: löytö näkyy, ei vain
  * rivi tekstiä. */
 .katko-kuva {

@@ -46,6 +46,62 @@ function drawPuzzle(svg, id, data) {
 const QUIZ_TYPE_MS = 95;
 const QUIZ_PAUSE_MS = 700;
 
+/*
+ * KOHTAAMISEN KAKSI SIVUA (omistajan tilaus 1.9.2026: *"kuvan voi
+ * pienentää ja voi jättää edellisellä sivulla näkyneet tekstit pois,
+ * niin jää selvemmin pelkkä kysymys näkyviin … edellisellä sivulla
+ * pitäisi olla kysymys, mikäli ensimmäinen vastauskerta on mennyt
+ * väärin … jos vastaus menee väärin, niin pelaajaa voi ohjeistaa että
+ * voi vielä yhden kerran yrittää uudestaan"*).
+ *
+ * SIVU 1 (tervehdys): iso kohtaamiskuva, kuvateksti lähderiveineen,
+ * hahmon tervehdys ja Aloita peli -nappi. Toisella yrityksellä napin
+ * ylle nousee varoitus.
+ *
+ * SIVU 2 (kysymys): kaikki edellisen sivun tekstit poistuvat ja kuva
+ * kutistuu pieneksi tunnisteeksi — näkyviin jää pelkkä kysymys,
+ * vaihtoehdot ja tiimalasi. Kutistus on css/styles.css:n luokassa
+ * `.quiz.kysymysvaihe`; tekstit piilotetaan tässä, jotta piilotus
+ * kestää myös renderQuizin uusinta-ajot.
+ */
+const VIIMEISEN_YRITYKSEN_VAROITUS = 'Tämä on viimeinen mahdollisuutesi. '
+  + 'Jos vastaus menee nyt väärin, aarre jää ikuisiksi ajoiksi piiloon.';
+const VIIMEISEN_YRITYKSEN_NAPPI = 'Yritä viimeistä kertaa';
+const UUSI_YRITYS_OHJE = 'Yksi yritys on vielä jäljellä: voit tavata hänet '
+  + 'uudelleen. Jos toinenkin vastaus menee väärin, aarre jää ikuisiksi '
+  + 'ajoiksi piiloon.';
+
+/**
+ * Kysymyssivun pelkistys päälle tai pois. Päällä kortilta katoavat
+ * tervehdys, kuvateksti ja varoitus, ja luokka `kysymysvaihe` kutistaa
+ * kohtaamiskuvan pieneksi neliöksi.
+ */
+/**
+ * KÄTKÖ SULKEUTUI -rivi (omistajan pelitestipalaute v1119: toisen
+ * väärän vastauksen jälkeen *"kohtaamiskortti/laatta näyttää menetetyn
+ * tilan (lyhyt toteava teksti)"*). Sanamuoto on ennallaan; rivi vain
+ * jaettiin omaksi apurikseen, koska se tarvitaan sekä tuomiossa että
+ * lopullisella tuloskortilla — ennen se vilahti vain tuomion ajan.
+ *
+ * Rivi on toteamus eikä moite: peli jatkuu, matka jatkuu, mutta tämä
+ * kätkö jäi. Henkilön nimi tulee kaaridatasta, jotta lause on
+ * kaupungin oma eikä yleinen.
+ */
+function lukkoRivi(quiz) {
+  const nimi = TARINAKAARI[quiz.cityId]?.nimi;
+  return html('span', 'quiz-lukko', nimi
+    ? `Aarre jäi löytymättä — ${nimi} ei kerro enempää.`
+    : 'Aarre jäi löytymättä — kätkö sulkeutui.');
+}
+
+function pelkistaKysymysvaihe(ui, paalle) {
+  ui.quizDialog.classList.toggle('kysymysvaihe', paalle);
+  if (!paalle) return;
+  ui.quizKohtaaminen.hidden = true;
+  if (ui.quizVaroitus) ui.quizVaroitus.hidden = true;
+  if (ui.quizKohtaaminenKuvateksti) ui.quizKohtaaminenKuvateksti.hidden = true;
+}
+
 export function renderQuiz(ui) {
   if (ui.dead) return; // kesken jäänyt animaatioketju voi kutsua tätä vielä destroyn jälkeen
   const { game } = ui;
@@ -76,6 +132,14 @@ export function renderQuiz(ui) {
    * heti perään toisessa visassa.
    */
   const kaariTarina = quiz.kaari ? (TARINAKAARI[quiz.cityId] ?? null) : null;
+  /*
+   * MONESKO YRITYS (game.kaariYritysLuku): luku näkyy otsikkorivillä
+   * ("yritys 2/2") ja ratkaisee, nouseeko tervehdyssivulle viimeisen
+   * yrityksen varoitus. Yritys kirjataan kysymystä avattaessa, joten
+   * `nyt` on jo tämän yrityksen numero.
+   */
+  const yritysLuku = kaariTarina ? (game.kaariYritysLuku?.(quiz.cityId) ?? null) : null;
+  const viimeinenYritys = Boolean(yritysLuku && yritysLuku.nyt >= yritysLuku.kaikki);
   const tervehdys = kaariTarina
     ? kaariTarina.kohtaaminen
     : (kohtaaminen && !ui.kohtaamisetNahty.has(tervehdysAvain)
@@ -146,8 +210,7 @@ export function renderQuiz(ui) {
      * kaupungin aarre lukittuu pysyvästi (js/game.js lukitseAarre) —
      * pelaajan on tiedettävä, kumpi yritys on menossa.
      */
-    const luku = game.kaariYritysLuku?.(quiz.cityId);
-    const yritys = luku ? ` · yritys ${luku.nyt}/${luku.kaikki}` : '';
+    const yritys = yritysLuku ? ` · yritys ${yritysLuku.nyt}/${yritysLuku.kaikki}` : '';
     otsikko = `${city.name} — kohtaaminen${yritys}:${hardTag}`;
   } else if (kohtaaminen) {
     // Tarinallinen kohtaaminen (omistajan toive 5.8.2026): nimetty
@@ -168,7 +231,12 @@ export function renderQuiz(ui) {
     ui.quizStage = 0;
     // Edellisen kysymyksen mahdollinen aloitusportti pois.
     ui.quizAloita.hidden = true;
+    ui.quizAloita.textContent = 'Aloita peli';
+    if (ui.quizVaroitus) ui.quizVaroitus.hidden = true;
     ui.jatkaKysymykseen = null;
+    // Uusi kortti alkaa aina tervehdyssivulta: edellisen kysymyksen
+    // pelkistys ei saa kutistaa tämän kohtaamisen kuvaa.
+    pelkistaKysymysvaihe(ui, false);
     sfx.play('quizOpen');
     startQuizMusic(ui.game.pack.id);
     ui.quizQuestion.textContent = '';
@@ -216,6 +284,12 @@ export function renderQuiz(ui) {
     const kysymys = () => {
       if (ui.dead || ui.typedQuizFor !== quiz) return;
       ui.quizStage = 1;
+      /*
+       * KYSYMYSSIVU: tervehdyssivun tekstit pois ja kuva pieneksi,
+       * jotta kysymys, vaihtoehdot ja tiimalasi mahtuvat puhelimen
+       * ruudulle ilman rullausta (omistajan tilaus 1.9.2026).
+       */
+      pelkistaKysymysvaihe(ui, true);
       ui.typeText(ui.quizQuestion, quiz.question, 'quiz', () => {
         ui.typeTimers.quiz = setTimeout(vaihtoehdot, QUIZ_PAUSE_MS);
       }, QUIZ_TYPE_MS);
@@ -247,6 +321,18 @@ export function renderQuiz(ui) {
           ui.typeTimers.quiz = setTimeout(kysymys, QUIZ_PAUSE_MS);
           return;
         }
+        /*
+         * VIIMEISEN YRITYKSEN VAROITUS (omistajan tilaus 1.9.2026):
+         * ensimmäisellä yrityksellä nappi on tuttu "Aloita peli" ilman
+         * varoitusta; toisella yrityksellä kerrotaan suoraan, mitä
+         * väärä vastaus nyt maksaa, ja nappi myöntää sen ääneen.
+         */
+        if (ui.quizVaroitus) {
+          ui.quizVaroitus.textContent = viimeinenYritys ? VIIMEISEN_YRITYKSEN_VAROITUS : '';
+          ui.quizVaroitus.hidden = !viimeinenYritys;
+        }
+        ui.quizAloita.textContent = viimeinenYritys
+          ? VIIMEISEN_YRITYKSEN_NAPPI : 'Aloita peli';
         ui.jatkaKysymykseen = kysymys;
         ui.quizAloita.hidden = false;
       }, QUIZ_TYPE_MS);
@@ -319,12 +405,7 @@ export function renderQuiz(ui) {
        * tämä kätkö jäi. Henkilön nimi tulee kaaridatasta, jotta lause
        * on kaupungin oma eikä yleinen.
        */
-      if (quiz.aarreLukittui) {
-        const nimi = TARINAKAARI[quiz.cityId]?.nimi;
-        ui.quizResult.appendChild(html('span', 'quiz-lukko', nimi
-          ? `Aarre jäi löytymättä — ${nimi} ei kerro enempää.`
-          : 'Aarre jäi löytymättä — kätkö sulkeutui.'));
-      }
+      if (quiz.aarreLukittui) ui.quizResult.appendChild(lukkoRivi(quiz));
     } else {
       const found = quiz.found ? game.aarreTyyppi(quiz.found, quiz.cityId) : null;
       const body = html('div');
@@ -385,6 +466,29 @@ export function renderQuiz(ui) {
         body.appendChild(
           html('strong', '', `${lead}Oikea vastaus oli "${quiz.options[quiz.correct]}".`),
         );
+        /*
+         * VIELÄ YKSI YRITYS (omistajan tilaus 1.9.2026: *"jos vastaus
+         * menee väärin, niin pelaajaa voi ohjeistaa että voi vielä
+         * yhden kerran yrittää uudestaan ennenkuin aarre jää ikuisiksi
+         * ajoiksi piiloon"*).
+         *
+         * Ehto on kohtaamisen oma: ensimmäinen väärä vastaus jättää
+         * yhden yrityksen (game.js KAARI_YRITYKSET), ja toisen jälkeen
+         * `aarreLukittui` on tosi — silloin näkyy tuomion vieressä jo
+         * lopullinen menetys eikä tähän kuulu enää mitään lupausta.
+         */
+        if (quiz.kaari && !quiz.aarreLukittui) {
+          body.appendChild(html('span', 'quiz-uusi-yritys', UUSI_YRITYS_OHJE));
+        } else if (quiz.aarreLukittui) {
+          /*
+           * Lopullinen menetys myös TULOSKORTILLE. Ennen rivi näkyi
+           * vain tuomion ajan (~0,9 s) ja katosi paljastuksen myötä,
+           * jolloin viimeinen näkymä ei kertonut mitään menetyksestä —
+           * nyt "vielä yksi yritys" ja "kätkö sulkeutui" ovat saman
+           * kortin kaksi vaihtoehtoista loppua.
+           */
+          body.appendChild(lukkoRivi(quiz));
+        }
         body.appendChild(
           html('span', 'muted', 'Vuoro vaihtuu — seuraavalla vuorolla saat uuden kysymyksen.'),
         );
@@ -444,6 +548,12 @@ export function renderDuel(ui) {
   // ja kohtaamiskuva eivät saa jäädä kortille.
   ui.quizKohtaaminen.hidden = true;
   ui.naytaKohtaamiskuva(null);
+  // Kaksintaistelu on ennallaan: edellisen kohtaamisen kysymyssivun
+  // pelkistys ei saa jäädä päälle (kuvaa ei ole, mutta luokka ohjaisi
+  // myös muita kortin osia).
+  pelkistaKysymysvaihe(ui, false);
+  if (ui.quizVaroitus) ui.quizVaroitus.hidden = true;
+  ui.quizAloita.hidden = true;
   ui.quizCity.textContent = `Rosvon kaksintaistelu — ${p.name}`;
   // Kaksintaistelu ei käytä vaiheittaista paljastusta: vaihtoehdot ovat
   // heti esillä, eikä edellisen kortin piilotus saa jäädä päälle.
