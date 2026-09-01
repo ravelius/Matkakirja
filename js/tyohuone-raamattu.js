@@ -33,6 +33,15 @@ export const RAAMATTU = {
           + 'agenttina vain todella vaikeaan ongelmaan ja '
           + 'lähtökohtaisesti omistajalta kysyen. Fable itse tekee '
           + 'päätoimittajatyön omassa istunnossaan.',
+        'FABLE EHDOTTAA ITSE RESETOINTIA (omistaja 1.9.2026: '
+          + '"Tuosta resetoinnista voisi ottaa jatkuvan tavan. Eli '
+          + 'jos itse pystyt huomioimaan, kun konteksti alkaa kasvaa '
+          + 'liian suureksi, niin voit itse jo ehdottaa '
+          + 'resetointia"): kun istunnon konteksti paisuu, Fable '
+          + 'tallettaa tilannemuistion ja jatkopromptin '
+          + 'postilaatikkoon (posti/fable-vanha.md) ja ehdottaa '
+          + 'omistajalle muistin tyhjennysta — tokenit saastyvat ja '
+          + 'tyo jatkuu resetin jalkeen muistiosta katkotta.',
         'Suomenkielinen selainseikkailu: Foggin perillinen kiertää '
           + 'maailman isoisänsä 1873-päiväkirjan jäljillä ja etsii '
           + 'Aarnin luettelon unohdettuja aarteita.',

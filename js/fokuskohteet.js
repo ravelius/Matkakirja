@@ -474,7 +474,7 @@ function nykyinenIso(ui) {
  * (peli ja laattageneraattori) eikä sen poisto kuulu tähän erään.
  */
 export function kohdeKarttarivit({
-  iso, lauta, pohjanAlla, lisat = [],
+  iso, lauta, kaupungit = [], pohjanAlla, lisat = [],
 }) {
   const lista = (iso && KOHDE_MAAT[iso]) || [];
   const kohteet = lista.map((kohde) => ({ kohde, paikka: kohde.laudat?.[lauta] }));
@@ -488,7 +488,7 @@ export function kohdeKarttarivit({
    * omistajan mielestä väärä hinta. Ahtaus ratkeaa nyt ladonnassa
    * (js/fokusniput.js sääntö 2) eikä sisällössä.
    */
-  return kohteet
+  const rivit = kohteet
     .filter(({ paikka }) => Number.isFinite(paikka?.x) && Number.isFinite(paikka?.y))
     /*
      * Vain lehden alueella olevat. Lehti on maan ikkuna, ja sen
@@ -496,6 +496,64 @@ export function kohdeKarttarivit({
      * pelaajalle se näyttäisi merkiltä ilman karttaa.
      */
     .filter(({ paikka }) => pohjanAlla(paikka.x, paikka.y));
+  return karsiKaupunkiruuhka(rivit, kaupungit);
+}
+
+/*
+ * === KAUPUNKINOSTOJEN KATTO (omistaja 1.9.2026, sanatarkasti) ======
+ *
+ * *"Karttanostot pitäisi periaatteessa olla nimenomaan nostoja muista
+ * paikoista kuin kohdekaupungeista. Tehdään niin, että lisätään nuo
+ * mahdollisuuksien mukaan kaupunkilehden sisältöön ja jätetään
+ * maksimissaan kolme nostoa per kohdekaupunki näkyville. Ja ne, mitä
+ * priorisoidaan, ovat joko ihmeitä tai skandaaleja. Kaikki muut
+ * sisällytetään kaupunkilehtiin. Ja kun jatkossa tehdään nostoja, niin
+ * kerätään niitä vain muista kuin kohdekaupungeista."*
+ *
+ * Kaupungin viereen osuvista riveistä (koordinaatittomat syvennykset,
+ * skandaalit ja täkynostot ladotaan kaupunkiin 0–3 yksikön päähän, ja
+ * kaupungin sisäiset nähtävyydet istuvat parin yksikön säteellä)
+ * kartalle jää enintään KATTO kappaletta, prioriteetilla ihme >
+ * skandaali > syvennys > täkynosto > muu. Pudotettu rivi EI katoa
+ * pelistä: sisältö siirretään kaupunkilehteen (erillinen erä).
+ *
+ * SÄDE 8 yksikköä (~27 km): kattaa ladotut ja kaupungin sisäiset,
+ * muttei naapurikohteita (Pernik 10, Vitosa 5 — Vitosa on rypästä).
+ * Sääntö on osa nostoladontaa: sama karsinta ajaa pelissä ja
+ * poltossa (NOSTOLADONTA_SAANTO v3), joten elävä kerros ja laatat
+ * eivät voi erota.
+ */
+const KAUPUNKIKATON_SADE = 8;
+const KAUPUNKINOSTOJEN_KATTO = 3;
+
+function nostonPrioriteetti(kohde) {
+  if (kohde?.ihme) return 0;
+  const id = String(kohde?.id ?? '');
+  if (id.startsWith('skandaali-')) return 1;
+  if (id.startsWith('syvennys-')) return 2;
+  if (id.startsWith('nosto-')) return 3;
+  return 4;
+}
+
+function karsiKaupunkiruuhka(rivit, kaupungit) {
+  if (!kaupungit?.length) return rivit;
+  const pois = new Set();
+  for (const c of kaupungit) {
+    const ruuhka = [];
+    rivit.forEach((r, i) => {
+      if (r.kohde?.tyyppi === 'kaupunki') return; // kaupunkikohde on oma laattansa vieressä
+      if (Math.hypot(r.paikka.x - c.x, r.paikka.y - c.y) <= KAUPUNKIKATON_SADE) {
+        ruuhka.push({ r, i });
+      }
+    });
+    if (ruuhka.length <= KAUPUNKINOSTOJEN_KATTO) continue;
+    // Vakaa järjestys: prioriteettiluokka, tasapelissä alkuperäinen
+    // rivijärjestys — sama syöte antaa saman kartan joka ajolla.
+    ruuhka.sort((a, b) => (nostonPrioriteetti(a.r.kohde) - nostonPrioriteetti(b.r.kohde))
+      || (a.i - b.i));
+    for (const { i } of ruuhka.slice(KAUPUNKINOSTOJEN_KATTO)) pois.add(i);
+  }
+  return pois.size ? rivit.filter((_, i) => !pois.has(i)) : rivit;
 }
 
 function nykyisenMaanKohteet(ui) {

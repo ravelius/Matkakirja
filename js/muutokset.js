@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1419, teksti: 'Kaupunkinostojen katto 3: ihmeet ja skandaalit ensin' },
   { v: 1418, teksti: 'Uloszoom rajattu: tyhjaa tilaa ei nay, pystyruutu panoroi' },
   { v: 1417, teksti: 'Nostokortti: kuva kokonaan, korkeampi kortti, visapalkkio' },
   { v: 1416, teksti: 'Reitit lautapelityyliin, lennot elaviksi, kalusteet z3' },

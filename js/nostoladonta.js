@@ -306,7 +306,13 @@ export function nostoladontaKattoPorras(porras, ruutuPx) {
  * kaksoispiirto — sama, jonka luettelon oletus "mitään ei ole poltettu"
  * jo hyväksyy (js/laattapyramidi.js nostoOnPoltettu).
  */
-export const NOSTOLADONTA_SAANTO = 'v2';
+/*
+ * v3 (omistaja 1.9.2026): kaupunkinostojen katto — kaupungin viereen
+ * jää enintään kolme nostoa, ihmeet ja skandaalit ensin
+ * (js/fokuskohteet.js karsiKaupunkiruuhka). Versio nostettiin, jotta
+ * v2-säännöllä poltettu taso piiloutuu kunnes uusi poltto on ajossa.
+ */
+export const NOSTOLADONTA_SAANTO = 'v3';
 
 export function nostoladontaTiiviste(merkki) {
   const osat = [
