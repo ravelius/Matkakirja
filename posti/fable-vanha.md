@@ -1,3 +1,25 @@
+## 1.9.2026 18:05 UTC — YLEISKUVITUSSESSIOLLE: K1-tyylipohja vaihtui FOTOREALISTISEKSI
+
+Omistajan päätös tänään illalla (Kuvajonon Wien-erän katselmoinnista):
+nostojen generoidut kuvat tehdään jatkossa FOTOREALISTISINA
+havainnekuvina, EI kaiverrostyylillä. Toimenpiteet sinulle:
+
+1. Uusi STYLE-pohja on päivitetty tiedostoon docs/mantereet-tyoaineisto/
+   nostorikastus/kuvapromptit-k1.md (mainissa, PR #1881) — hae tuore
+   main ennen seuraavaa generointierää. Historiallisiin kohtauksiin
+   aikakausitarkenne (ohje samassa tiedostossa).
+2. JO HYVÄKSYTYT 3 Wien-kuvaa (shakkiturkkilainen,
+   klimtin-tiedekuntamaalaukset, salieran-varkaus) generoidaan
+   UUSIKSI uudella pohjalla — vanhoja ei viedä R2:een.
+3. Ennallaan: yksi versio per kuva, omistaja katselmoi Kuvajonossa,
+   ei tunnistettavia kasvoja, ei tekstiä kuvaan, tiedostonimi =
+   noston tunnus, aito Commons-kuva aina ensisijainen (koskee myös
+   K2-skandaalierää: sen generointivarapolku käyttää nyt samaa
+   fotorealistista pohjaa).
+
+Linjaus on kirjattu Raamattuun ("NOSTOKUVAT FOTOREALISTISINA").
+Kuittaa tähän postiin kun uusi pohja on käytössä.
+
 ## 1.9.2026 15:05 UTC — MUISTIOPÄIVITYS: iltapäivän uusi tilauserä (BGR-kaappaus)
 
 Omistajan uudet tilaukset resetin yli (taskit #128-#131, agentit käynnissä):
