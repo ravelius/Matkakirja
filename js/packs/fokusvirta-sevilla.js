@@ -1112,7 +1112,8 @@ export const FOKUSVIRTA_SEVILLA = {
       ],
       lahde: 'en-Wikipedia "Diego Velázquez", osiot syntymästä, '
         + 'oppivuosista, varhaisista töistä ja hovimaalariksi '
-        + 'pääsemisestä; tarkistettu 29.8.2026.',
+        + 'pääsemisestä (tarkistettu 29.8.2026); kastekirkon sijainti '
+        + 'en-Wikipedia "Church of San Pedro" (tarkistettu 1.9.2026).',
       /*
        * Commons 29.8.2026: 2371×3200, public domain, Diego Velázquez,
        * päiväys "circa 1620". Restrictions tyhjä. SILMÄTARKISTUS tehty:
@@ -1131,9 +1132,31 @@ export const FOKUSVIRTA_SEVILLA = {
         'Mitä Velázquez maalasi Madridissa?',
       ],
       /*
-       * PAIKKAA EI OLE: syntymä- ja oppivuodet ovat tässä kaupungissa,
-       * joten piste ottaa paikakseen kaupungin (nostonPaikka).
+       * PAIKKA LISÄTTIIN 1.9.2026 (nostojen sisältöaudit). Kenttä
+       * puuttui, koska "tässä kaupungissa" tuntui riittävän — mutta
+       * ilman sitä merkki asettuu siihen kaupunkiin, jossa pelaaja
+       * seisoo (js/fokusnosto.js nostonPaikka), eikä sellaista merkkiä
+       * voi polttaa laattaan lainkaan (tools/fokuskartta/nostot.mjs,
+       * TÄKYN EHTO). Kortin oma tarina alkaa yhdestä dokumentoidusta
+       * pisteestä, joten pistettä ei tarvinnut arvata.
+       *
+       * 37,39283611 N / −5,99138889 E — en-Wikipedia "Church of San
+       * Pedro", prop=coordinates (haettu 1.9.2026). Sama artikkeli
+       * sanoo johdannossaan suoraan, että Diego Velázquez kastettiin
+       * juuri siellä vuonna 1599 — se on tämän kortin ensimmäinen
+       * virke. Kirkko seisoo San Pedron aukiolla Sevillassa.
+       *
+       * Sama kaava ja samat vakiot kuin muillakin nostoilla
+       * (js/fokusnosto.js, PAIKKA LAUDALLA): maailmankartta Millerin
+       * lieriönä, europe tasavälinä.
        */
+      paikka: {
+        nimi: 'San Pedron kirkko',
+        laudat: {
+          maailmankartta: { x: 5633.6, y: 1904.2 },
+          europe: { x: 96.2, y: 910.2 },
+        },
+      },
     },
   ],
 
