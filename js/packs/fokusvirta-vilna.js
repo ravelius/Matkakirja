@@ -299,6 +299,10 @@ export const FOKUSVIRTA_VILNA = {
         + 'hyvin harjoitellut vastarinta. Kirjankantajan päivää vietetään '
         + '16. maaliskuuta, kuuluisimman kantajan Jurgis Bielinisin '
         + 'syntymäpäivänä.',
+      lahde: 'en-Wikipedia "Knygnešys" ja en-Wikipedia "Lithuanian press '
+        + 'ban"; pelin oma tarkistettu aineisto '
+        + 'js/packs/kulttuuri-kategoriat.js (vilna/oppi). Tarkistettu '
+        + '1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto vilna/oppi,
        * js/packs/kulttuuri-kategoriat.js) — siis jo kertaalleen
@@ -392,6 +396,9 @@ export const FOKUSVIRTA_VILNA = {
         + 'kivelle ja halkaisi sen — mistä kaupungissa riitti puhetta '
         + 'pitkäksi aikaa. Kivi on nykyään nostettu pääoven viereen '
         + 'seinälle.',
+      lahde: 'en-Wikipedia "Church of St. Peter and St. Paul, Vilnius"; pelin '
+        + 'oma tarkistettu aineisto js/packs/kulttuuri-kategoriat.js '
+        + '(vilna/avauskuvat). Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 5679×3775, CC BY-SA 4.0, Scotch Mist, kuvattu
        * 7.6.2018, osa saman kuvaajan Vilna-sarjaa. Restrictions tyhjä.
@@ -501,6 +508,9 @@ export const FOKUSVIRTA_VILNA = {
         + 'kolme ja puoli kiloa painava möhkäle, Euroopan kolmanneksi '
         + 'suurin. Se on varastettu museosta kahdesti ja palautettu '
         + 'kahdesti.',
+      lahde: 'en-Wikipedia "Amber" ja en-Wikipedia "Palanga Amber Museum"; '
+        + 'pelin oma tarkistettu aineisto js/packs/maa-kategoriat.js '
+        + '(LTU/luonto). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto LTU/luonto,
        * js/packs/maa-kategoriat.js) — jo kertaalleen tarkistettu ja

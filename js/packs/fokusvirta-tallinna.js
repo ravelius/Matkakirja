@@ -212,6 +212,8 @@ export const FOKUSVIRTA_TALLINNA = {
         + 'moneen suuntaan. Nykyään siitä vatkataan myös jälkiruokavaahtoa, '
         + 'mikä on saman aineen toinen ura: eväästä tuli jälkiruoka, kun '
         + 'kukaan ei enää tarvinnut evästä.',
+      lahde: 'et-Wikipedia "Kama"; pelin oma tarkistettu aineisto '
+        + 'js/packs/maa-kategoriat.js (EST/arki). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto EST/arki,
        * js/packs/maa-kategoriat.js). Commons 29.8.2026: CC BY-SA 3.0,
@@ -276,6 +278,9 @@ export const FOKUSVIRTA_TALLINNA = {
         + 'koskaan paikalla. Se on sama vanha hansa-ajatus uudessa '
         + 'muodossa: kaupankäynti ei vaadi läsnäoloa, se vaatii vain '
         + 'luotettavan tavan todistaa, kuka olet.',
+      lahde: 'en-Wikipedia "e-Residency of Estonia" ja en-Wikipedia '
+        + '"Electronic voting in Estonia"; pelin oma tarkistettu aineisto '
+        + 'js/packs/maa-kategoriat.js (EST/arki). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto EST).
        * Commons 29.8.2026: CC BY 2.0, Masayuki (Yuki) Kawagishi.
@@ -336,6 +341,8 @@ export const FOKUSVIRTA_TALLINNA = {
         + 'Tornia on siksi kutsuttu Epäluulon torniksi. Kahden eripituisen '
         + 'jalan takia Tallinnaa sanotaan leikillään ontuvaksi '
         + 'kaupungiksi.',
+      lahde: 'pelin oma tarkistettu aineisto js/packs/kulttuuri-kategoriat.js '
+        + '(tallinna/historia). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto
        * tallinna/historia). Commons 29.8.2026: CC BY-SA 3.0, NOSSER.

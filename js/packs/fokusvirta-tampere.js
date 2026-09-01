@@ -374,6 +374,8 @@ export const FOKUSVIRTA_TAMPERE = {
         + 'vuotta, eli kaupunki on kosken rinnalla eilinen. Ja maa nousee '
         + 'yhä: Tampereella noin viisi millimetriä vuodessa. Isoisäsi '
         + 'olisi mitannut sen ja kirjannut lukeman ylös.',
+      lahde: 'fi-Wikipedia "Tammerkoski" ja fi-Wikipedia "Tampere". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 1654×1209, public domain, Magnus von Wright,
        * päiväys 1861, Kansallisgallerian kokoelma (A I 36:2),
@@ -482,6 +484,8 @@ export const FOKUSVIRTA_TAMPERE = {
         + 'punatiilisen kirkon, ja siellä aloitettiin vuoden ensimmäinen '
         + 'työpäivä jumalanpalveluksella aina 1970-luvulle asti. Kirkko '
         + 'annettiin seurakunnalle 1981 — yhdellä ehdolla: nimi pysyy.',
+      lahde: 'fi-Wikipedia "Finlaysonin tehdasalue", fi-Wikipedia "Tampere" '
+        + 'ja fi-Wikipedia "Finlaysonin kirkko". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 2272×1704, CC BY 2.0, tekijä Museokeskus
        * Vapriikki, kuvaaja Heli Haavisto, kuvattu 21.2.2013,
@@ -573,6 +577,7 @@ export const FOKUSVIRTA_TAMPERE = {
         + 'poistettu. Nykyään ne ovat suomalaisen symbolismin '
         + 'mestariteoksia, ja käärme katsoo alas kirkkosaliin siipien '
         + 'keskeltä kuin mitään ei olisi tapahtunut.',
+      lahde: 'fi-Wikipedia "Tampereen tuomiokirkko". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 4272×2848, public domain (tekijä Hugo Simberg,
        * kuollut 1917; kuvaus "Snake fresco by Hugo Simberg in Tampere

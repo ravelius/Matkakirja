@@ -223,6 +223,9 @@ export const FOKUSVIRTA_HELSINKI = {
         + 'välillä, ja uinti kestää harvoin minuuttia kauempaa — '
         + 'tarkoitus ei ole uida vaan kääntyä ympäri ja nousta ylös. '
         + 'Harrastajia on yli satatuhatta.',
+      lahde: 'fi-Wikipedia "Kotiharjun sauna" ja en-Wikipedia "Sauna"; pelin '
+        + 'oma tarkistettu aineisto js/packs/maa-kategoriat.js (FIN/arki). '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto FIN/arki,
        * js/packs/maa-kategoriat.js). Commons 29.8.2026: CC BY-SA 4.0,
@@ -287,6 +290,8 @@ export const FOKUSVIRTA_HELSINKI = {
         + 'yhdessä viron kandlen, latvian kokleen ja liettuan kanklėsin '
         + 'kanssa. Meren toisella puolella soi siis sama soitin toisella '
         + 'nimellä.',
+      lahde: 'fi-Wikipedia "Kantele"; pelin oma tarkistettu aineisto '
+        + 'js/packs/maa-kategoriat.js (FIN/savel). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto FIN/savel).
        * Commons 29.8.2026: CC BY-SA 4.0, R.o.t. SILMÄTARKISTUS tehty:
@@ -351,6 +356,8 @@ export const FOKUSVIRTA_HELSINKI = {
         + 'Nimen Finlandia teos sai vasta vuonna 1900. Se kestää noin '
         + 'kahdeksan minuuttia, ja siinä ajassa se ehti tehdä sen, mitä '
         + 'yksikään puhe ei olisi saanut tehdä ääneen.',
+      lahde: 'fi-Wikipedia "Jean Sibelius"; pelin oma tarkistettu aineisto '
+        + 'js/packs/maa-kategoriat.js (FIN/savel). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto FIN/savel).
        * Commons 29.8.2026: public domain. SILMÄTARKISTUS tehty:

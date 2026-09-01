@@ -225,6 +225,9 @@ export const FOKUSVIRTA_KOBENHAVN = {
         + 'Puisto on maailman toiseksi vanhin yhä toimiva huvipuisto; '
         + 'vanhin on Dyrehavsbakken, joka on samassa maassa muutaman '
         + 'kilometrin päässä.',
+      lahde: 'en-Wikipedia "Tivoli Gardens"; pelin oma tarkistettu aineisto '
+        + 'js/packs/kulttuuri-kategoriat.js (kobenhavn/sadut). Tarkistettu '
+        + '1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto kobenhavn/sadut,
        * js/packs/kulttuuri-kategoriat.js). Commons 29.8.2026: CC BY-SA
@@ -300,6 +303,8 @@ export const FOKUSVIRTA_KOBENHAVN = {
         + 'kivestä antoi nimen langattomalle yhteydelle: Bluetooth on '
         + 'Harald Sinihammas, koska hän yhdisti heimoja kuten yhteys '
         + 'yhdistää laitteita.',
+      lahde: 'en-Wikipedia "Jelling stones"; pelin oma tarkistettu aineisto '
+        + 'js/packs/maa-kategoriat.js (DNK/historia). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto DNK/historia).
        * Commons 29.8.2026: CC BY-SA 3.0, Ajepbah. SILMÄTARKISTUS tehty:
@@ -366,6 +371,8 @@ export const FOKUSVIRTA_KOBENHAVN = {
         + 'kannattaa lukea kahdesti: kuudesta samanlaisesta kahdeksan '
         + 'nystyn palikasta saa yli yhdeksänsataa miljoonaa erilaista '
         + 'yhdistelmää.',
+      lahde: 'en-Wikipedia "Lego"; pelin oma tarkistettu aineisto '
+        + 'js/packs/maa-kategoriat.js (DNK/keksinnot). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto DNK/keksinnot).
        * Commons 29.8.2026: CC0, Ziongarage. SILMÄTARKISTUS tehty:

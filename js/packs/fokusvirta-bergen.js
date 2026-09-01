@@ -286,6 +286,9 @@ export const FOKUSVIRTA_BERGEN = {
         + 'viikinkilaivojen keulassa, ja puu on suojattu tervaamalla — '
         + 'siitä tulee sen musta väri. Keskiajalla tällaisia kirkkoja oli '
         + 'Norjassa yli tuhat. Nyt niitä on 28.',
+      lahde: 'en-Wikipedia "Borgund Stave Church" ja en-Wikipedia "Stave '
+        + 'church"; pelin oma tarkistettu aineisto js/packs/maa-kategoriat.js '
+        + '(NOR/historia). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto NOR/historia,
        * js/packs/maa-kategoriat.js) — siis jo kertaalleen tarkistettu ja
@@ -366,6 +369,8 @@ export const FOKUSVIRTA_BERGEN = {
         + 'sitä ei kannata mennä koettelemaan: retkeilijöitä kehotetaan '
         + 'pysymään kahdensadan metrin päässä, koska eläin on rauhallinen '
         + 'mutta nopea suuttumaan.',
+      lahde: 'en-Wikipedia "Muskox"; pelin oma tarkistettu aineisto '
+        + 'js/packs/maa-kategoriat.js (NOR/luonto). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto NOR/luonto).
        * Commons 29.8.2026: 4322×2882, CC BY-SA 4.0, Charles J. Sharp,
@@ -452,6 +457,8 @@ export const FOKUSVIRTA_BERGEN = {
         + 'Blomberg, ja niitä on kunnostettu talkoilla. Vastarannoilla '
         + 'putoaa kaksi koskea vastakkain: Seitsemän sisarta ja sitä vastapäätä '
         + 'Kosija, jonka sanotaan kosiskelevan sisaria siinä onnistumatta.',
+      lahde: 'en-Wikipedia "Geirangerfjord"; pelin oma tarkistettu aineisto '
+        + 'js/packs/maa-kategoriat.js (NOR/luonto). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto NOR/luonto).
        * Commons 29.8.2026: 6520×3660, CC BY-SA 3.0, Ximonic (Simo

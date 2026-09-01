@@ -390,6 +390,8 @@ export const FOKUSVIRTA_TUKHOLMA = {
         + '— eikä sitä koskaan haettu pois. Löytäjät saivat palkkioksi '
         + 'miljoona kaksisataakuusikymmentäkolmetuhatta kruunua, ja se on '
         + 'löydön arvosta se pienin puoli.',
+      lahde: 'sv-Wikipedia "Spillingsskatten"; pelin oma tarkistettu aineisto '
+        + 'js/packs/maa-kategoriat.js (SWE/historia). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto SWE/historia,
        * js/packs/maa-kategoriat.js) — siis jo kertaalleen tarkistettu ja
@@ -449,6 +451,8 @@ export const FOKUSVIRTA_TUKHOLMA = {
         + 'pääsevät nousemaan järveen asti. Keskellä miljoonakaupunkia '
         + 'seisoo siis mies onki kädessä siinä samassa virrassa, jonka '
         + 'yli parlamentti katsoo ikkunastaan.',
+      lahde: 'pelin oma tarkistettu aineisto js/packs/maa-kategoriat.js '
+        + '(SWE/elaimet). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto SWE/elaimet).
        * Commons 29.8.2026: CC BY 3.0, Bengt Nyman. SILMÄTARKISTUS tehty:
@@ -523,6 +527,9 @@ export const FOKUSVIRTA_TUKHOLMA = {
         + 'teki Jacob Heinrich Elbfas. Alkuperäinen on kadonnut, eikä '
         + 'kukaan tiedä minne. Kaupungin vanhin kuva on siis kuva '
         + 'kuvasta, jota ei enää ole.',
+      lahde: 'sv-Wikipedia "Vädersolstavlan" ja sv-Wikipedia "Storkyrkan"; '
+        + 'pelin oma tarkistettu aineisto js/packs/maa-kategoriat.js '
+        + '(SWE/historia). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto SWE/historia).
        * Commons 29.8.2026: public domain. SILMÄTARKISTUS tehty: maalaus,
