@@ -165,24 +165,67 @@ export const FOKUSVIRTA_PARIISI = {
        * "Tuileries Palace", osiot "Destruction" ja "Demolition").
        * IKÄSOPIVUUS (13+): sytyttäminen kerrotaan tapahtumana, ei
        * kuvauksena; uhreista lähde ei puhu eikä täky keksi niitä.
+       *
+       * ── AVAUS KIRJOITETTU UUSIKSI 1.9.2026 (nostojen sisältöaudit) ─
+       *
+       * Sama palatsi, sama vuoden 1871 palo ja sama piste kartalla oli
+       * kahdessa kortissa: tässä ja fokuskohteessa `tuileries`
+       * (js/packs/fokuskohteet-fra.js). Kumpaakaan ei poistettu, vaan
+       * TYÖNJAKO SELVITETTIIN:
+       *
+       *   fokuskohde `tuileries` = PALATSI. Mikä se oli: Katariina de
+       *     Medicin rakennuttama 1564, 266 metrin julkisivu,
+       *     hallitsijoiden koti, ja miten se poltettiin. Ei muutettu —
+       *     sen oma kysymysrivi ja kadonneen ihmeen kortti nojaavat
+       *     siihen tekstiin.
+       *   tämä syvennys = RAUNIO. Se yksitoista vuotta, jotka isoisä
+       *     näki, ja se mihin palatsi lopulta hajosi. Palon reseptiä
+       *     (petroli, terva, tärpätti, 48 tuntia) ei enää toisteta
+       *     täällä, koska se on kohteen kortissa.
+       *
+       * UUTTA AINEISTOA EI HAETTU MUUALTA: kaikki lisätty on samasta
+       * artikkelista, osiot vain luettiin loppuun asti (en-Wikipedia
+       * "Tuileries Palace", osiot "Destruction during the Paris
+       * Commune", "Demolition" ja "Proposed reconstruction"; haettu
+       * 1.9.2026):
+       *   - kommunardien polttamia muita muistomerkkejä, kuten
+       *     kaupungintalo, rakennettiin uudelleen jo 1870-luvulla;
+       *   - purkupäätöksen teki 1882 kolmas tasavalta, joka oli
+       *     armahtanut maanpakoon lähteneet kommunardit; vastaan
+       *     olivat Georges-Eugène Haussmann ja historioitsijat;
+       *   - keskuspaviljongin päätykolmio on Pariisin Square Georges
+       *     Cainissa, muita paloja Louvressa, Trocadéron puutarhassa,
+       *     Berliinin Schwanenwerderissä, Italian Bordigherassa ja
+       *     Quiton Palacio de Carondeletissa;
+       *   - huonekalut ja maalaukset oli viety varastoon sodan
+       *     alkaessa 1870, ja vuonna 2003 perustettiin komitea, joka
+       *     esittää palatsin rakentamista takaisin.
        */
       id: 'tuileriat',
       nappi: 'Palatsi, joka jäi seisomaan poltettuna',
       otsikko: 'Tuileriain rauniot',
-      teksti: 'Se rauniorivi, jonka ohi sinä kävelit, oli Ranskan '
-        + 'hallitsijoiden Pariisin-asunto Henrik IV:stä Napoleon '
-        + 'III:een. Palatsi sytytettiin 23. toukokuuta 1871 petrolilla, '
-        + 'tervalla ja tärpätillä; tuli paloi 48 tuntia ja kupoli '
-        + 'räjäytettiin. Seinät jäivät silti pystyyn, ja katto oli '
-        + 'poissa mutta kivimuurit ehjät — kunnostaminen olisi ollut '
-        + 'täysin mahdollista. Niin rauniot seisoivat Louvren '
-        + 'länsipäässä yksitoista vuotta, ja isoisäsi näki tyhjät '
-        + 'ikkuna-aukot taivasta vasten. Vuonna 1882 päätettiin purkaa. '
-        + 'Purku alkoi helmikuussa 1883 ja päättyi 30. syyskuuta samana '
-        + 'vuonna, ja kivet myytiin: yrittäjä Achille Picart kaupitteli '
-        + 'niitä matkamuistoina, ja osista rakennettiin Korsikalle '
-        + 'kokonainen palatsi, Château de la Punta. Paloja on nykyään '
-        + 'Berliinissä, Italiassa ja Quitossa asti.',
+      teksti: 'Se rauniorivi, jonka ohi sinä kävelit, olisi voitu '
+        + 'korjata. Palo oli vienyt katon ja koko sisustan, mutta '
+        + 'kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka '
+        + 'kommunardit polttivat niin ikään, rakennettiin uudelleen jo '
+        + '1870-luvulla. Tuileriat jäivät sen sijaan paikoilleen '
+        + 'Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki '
+        + 'tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki '
+        + '1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon '
+        + 'lähteneet kommunardit; vastaan olivat muun muassa '
+        + 'Georges-Eugène Haussmann ja joukko historioitsijoita. Purku '
+        + 'alkoi helmikuussa 1883 ja päättyi 30. syyskuuta samana '
+        + 'vuonna. Sitten palatsi levisi ympäri maailman: yrittäjä '
+        + 'Achille Picart myi kiviä ja marmoria matkamuistoina, ja '
+        + 'osista rakennettiin Korsikalle Ajaccion lähelle kokonainen '
+        + 'palatsi, Château de la Punta. Keskuspaviljongin päätykolmio '
+        + 'seisoo Pariisissa Square Georges Cainissa, ja paloja on '
+        + 'Louvressa, Trocadéron puutarhassa, Berliinissä, Italian '
+        + 'Bordigherassa ja Quiton presidentinpalatsissa asti. '
+        + 'Huonekalut ja maalaukset olivat koko ajan tallessa: ne oli '
+        + 'viety varastoon, kun sota alkoi 1870. Vuonna 2003 '
+        + 'perustettiin komitea, joka esittää palatsin rakentamista '
+        + 'takaisin.',
       /*
        * PÄÄKUVAKSI HAVAINNEKUVA (29.8.2026, aalto 1). Sama malli kuin
        * täkynostoilla v1307:stä alkaen: repon oma generoitu kuva, jolla
@@ -233,9 +276,18 @@ export const FOKUSVIRTA_PARIISI = {
           'Matkamuistoiksi ja Korsikalle rakennettuun palatsiin',
         ],
         oikea: 2,
-        fakta: 'Rauniot seisoivat paikallaan yksitoista vuotta, ja '
-          + 'kunnostaminen olisi ollut mahdollista: seinät olivat ehjät. '
-          + 'Purkupäätös tehtiin vasta 1882.',
+        /*
+         * FAKTARIVI PÄIVITETTY 1.9.2026: vanha rivi ("rauniot seisoivat
+         * yksitoista vuotta, kunnostaminen olisi ollut mahdollista")
+         * toistaa nyt sanasta sanaan syvennystekstin avauksen, koska
+         * teksti kirjoitettiin uusiksi juuri siitä näkökulmasta. Tilalla
+         * on saman artikkelin osion "Proposed reconstruction" tieto,
+         * jota teksti ei sano loppuun asti.
+         */
+        fakta: 'Uudelleenrakentamista esittävät vetoavat yhä siihen, '
+          + 'että suuri osa palatsin alkuperäisistä huonekaluista ja '
+          + 'maalauksista on tallella: ne vietiin varastoon, kun sota '
+          + 'alkoi 1870, eivätkä ne olleet talossa palon aikaan.',
       },
     },
     {
