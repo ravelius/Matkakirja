@@ -350,6 +350,15 @@ export const FOKUSVIRTA_ROOMA = {
        * kirjoiteta (en-artikkelit sanovat 350 ja 150), ja Caesarin
        * murhapaikasta sanotaan "uskotaan", koska lähde itse sanoo "is
        * believed to have been".
+       *
+       * TYÖNJAKO TÄKYNOSTON KANSSA (1.9.2026, nostojen sisältöaudit):
+       * tämä syvennys kertoo KAIVAUKSEN JA HOITAJAT — sen minivisan
+       * vastaus on avain, joka kulki näyttelijältä toiselle, joten
+       * tekstiä ei ole muutettu. Saman aiheen täkynosto
+       * (`takynostot`, tunnus 'kissat') oli tähän asti tämän kortin
+       * tiivistelmä samassa kartan pisteessä; se kirjoitettiin uusiksi
+       * ja kertoo nyt TEMPPELIN JA LAIN eli sen, missä suoja seisoo ja
+       * millä oikeudella kissat siellä ovat.
        */
       teksti: 'Kun Roomaa rakennettiin uusiksi Italian yhdistymisen '
         + 'jälkeen ja korttelia purettiin vuonna 1927, maasta tuli '
@@ -646,16 +655,70 @@ export const FOKUSVIRTA_ROOMA = {
       id: 'kissat',
       // Kartan nimiö täkypisteen kylkeen (päätoimittaja 28.8.2026).
       nimio: 'Caesarin kissat',
-      /* Kaanon, kohta 6, nosto 1 (eläin). */
-      otsikko: 'Kissat asuvat paikassa, jossa Caesar murhattiin — ja '
-        + 'arkeologit yrittivät häätää ne',
-      /* Faktat: takynostot-italia.md, ehdokas 1 (VARMA). */
-      lunastus: 'Vuoden 1927 purkutöissä Largo di Torre Argentinasta '
-        + 'paljastui neljä tasavallan ajan temppeliä ja se paikka, jossa '
-        + 'Caesarin uskotaan tulleen murhatuksi — ja kuoppaan muutti '
-        + 'kissalauma. Vuonna 2012 arkeologiviranomaiset vaativat '
-        + 'kissasuojan häätöä; vetoomukseen kerättiin yli 30 000 nimeä, '
-        + 'ja kissat jäivät.',
+      /*
+       * OTSIKKO JA LUNASTUS KIRJOITETTU UUSIKSI 1.9.2026 (nostojen
+       * sisältöaudit). Kortti oli tähän asti saman tiedoston
+       * syvennystäyn 'kissat' tiivistelmä: sama aukio, sama piste,
+       * samat kaksi käännettä (1927 purkutyöt ja vuoden 2012 häätöyritys
+       * 30 000 nimen vetoomuksineen) lyhyempinä. Kumpaakaan korttia ei
+       * poistettu, vaan TYÖNJAKO SELVITETTIIN:
+       *
+       *   syvennys 'kissat' = KAIVAUS JA HOITAJAT. Miten kuoppa
+       *     syntyi, miten kissat sinne tulivat, miten avain kulki
+       *     näyttelijältä toiselle (sen minivisan vastaus) ja miten
+       *     häätöyritys kaatui. Ei muutettu.
+       *   tämä täkynosto = TEMPPELI JA LAKI. Missä suoja oikeastaan
+       *     seisoo ja millä oikeudella kissat siellä ovat.
+       *
+       * FAKTAT (en-Wikipedia "Largo di Torre Argentina", osiot "Roman
+       * temples" ja "Cat shelter"; haettu 1.9.2026):
+       *   - temppeli D on neljästä suurin, 100-luvulta eaa.; sen lupasi
+       *     pretori Lucius Aemilius Regillus kesken meritaistelua
+       *     Antiokhos Suuren laivastoa vastaan vuonna 190 eaa., ja
+       *     M. Aemilius Lepidus vihki sen sensorina 22.12.179 eaa.
+       *     merenkulkijoita suojeleville Lares Permarini -jumalille;
+       *     temppelistä on kaivettu esiin vain pieni osa, koska katu
+       *     peittää suurimman osan siitä;
+       *   - kissasuoja sijaitsee juuri temppeli D:n kohdalla, se
+       *     perustettiin 1993 ja toimii tappamattomana Italian
+       *     parlamentin vuonna 1991 säätämän lain numero 281 nojalla;
+       *     laki antoi kissoille oikeuden elää vapaana ja turvassa ja
+       *     teki kissojen hoitajista virallisen instituution; suoja
+       *     tekee sterilointi- ja adoptiotyötä ja jatkaa toimintaansa
+       *     arkeologien vastustuksesta huolimatta;
+       *   - Caesarin murhapaikasta lähde sanoo "uskotaan", ja niin
+       *     sanoo tämäkin kortti.
+       *
+       * KISSOJEN LUKUMÄÄRÄÄ EI KIRJOITETA — sama rajaus kuin
+       * syvennystäyllä, koska en-artikkelit antavat eri luvut.
+       */
+      otsikko: 'Rooman kuuluisin kissalauma asuu temppelissä, joka '
+        + 'luvattiin merenkulkijoiden jumalille kesken meritaistelua',
+      lunastus: [
+        'Kissasuoja ei ole raunion vieressä vaan raunion sisällä. Se '
+          + 'toimii temppeli D:n kohdalla — Largo di Torre Argentinan '
+          + 'neljästä temppelistä suurimman, jonka pretori Lucius '
+          + 'Aemilius Regillus lupasi rakentaa kesken meritaistelua '
+          + 'Antiokhos Suuren laivastoa vastaan vuonna 190 eaa. '
+          + 'Temppeli vihittiin yhdentoista vuoden kuluttua, 22. '
+          + 'joulukuuta 179 eaa., merenkulkijoita suojeleville Lares '
+          + 'Permarini -jumalille. Siitä on kaivettu esiin vain pieni '
+          + 'osa: loput ovat yhä kadun alla. Saman aukion laidalla on '
+          + 'se kohta, jossa Caesarin uskotaan tulleen murhatuksi.',
+        'Kissojen oikeus jäädä ei ole tunneasia vaan lakikysymys. '
+          + 'Italian parlamentti sääti vuonna 1991 lain numero 281, joka '
+          + 'antoi kulkukissoille oikeuden elää vapaana ja turvassa ja '
+          + 'teki niiden hoitajista virallisen instituution. Suoja '
+          + 'perustettiin kaksi vuotta myöhemmin ja toimii sen lain '
+          + 'nojalla tappamattomana: kissat steriloidaan ja niille '
+          + 'etsitään koti, mutta yhtäkään ei lopeteta. Arkeologit ovat '
+          + 'vaatineet suojan purkamista kaivauksen suojelemiseksi. '
+          + 'Suoja on yhä siellä.',
+      ],
+      lahde: 'en-Wikipedia "Largo di Torre Argentina", osiot "Roman '
+        + 'temples" ja "Cat shelter" (tarkistettu 1.9.2026; sama '
+        + 'faktapohja kuin docs/mantereet-tyoaineisto/'
+        + 'takynostot-italia.md, ehdokas 1).',
       avaa: 'kissat',
       /*
        * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin Sofian
