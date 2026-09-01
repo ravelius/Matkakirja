@@ -220,7 +220,11 @@ export function avaaSyvennys(ui, cityId, taky, tiedot) {
 }
 
 /**
- * TARINAN SISUS — otsikko, kuva, teksti ja minivisa.
+ * TARINAN SISUS — otsikko, kuva, teksti, lähde ja minivisa.
+ *
+ * LÄHDERIVI ON SAMA RIVI KUIN TÄKYNOSTOLLA (1.9.2026, nostoaudit):
+ * sama luokka `fokusnosto-lahde` ja sama paikka — tekstin jälkeen,
+ * ennen visaa — kuin js/fokusnosto.js piirraNostonSisus.
  *
  * Erotettu omaksi funktiokseen 31.8.2026 (kategoria per kaupunki):
  * sama sisus latoutuu joko oman kortin ylärivin alle tai osiona
@@ -240,6 +244,7 @@ function piirraSyvennysSisus(ui, sailio, cityId, taky) {
     teksti.appendChild(html('p', '', kappale));
   }
   sailio.appendChild(teksti);
+  if (taky.lahde) sailio.appendChild(html('p', 'fokusnosto-lahde', taky.lahde));
   piirraSyvennysVisa(ui, sailio, cityId, taky);
 }
 
