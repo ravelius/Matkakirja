@@ -12,8 +12,15 @@ Linjat (omistajan päätökset 31.8.–1.9.2026):
 - Media R2:een, EI repoon. Tiedostonimi = noston tunnus:
   `julisteet/nostot/<tunnus>.webp`.
 - Kuvaan ei tekstiä eikä piirrettyjä kehyksiä — peli kehystää itse.
-- Työnkulku: 4 varianttia/prompt → Kuvajono/Kuvaraati → hyväksytyt
-  R2:een tarkistetun kuvatoimitusputken kautta.
+- Työnkulku (omistajan tarkennus 1.9.2026): **YKSI versio per
+  prompt** — ei varianttinippuja. Omistaja katselmoi kuvat itse
+  Kuvajono-sivulla ja pyytää uusinnan sieltä (Generoi uudelleen,
+  valinnaisella lisäohjeella). Hyväksytyt R2:een tarkistetun
+  kuvatoimitusputken kautta.
+- TYÖNJAKO (omistaja 1.9.2026): kuvatoimitussessioita on KAKSI —
+  toinen tekee VAIN aarrekohtaamiset, toinen kaiken muun kuvituksen.
+  TÄMÄ ERÄ (K1) KUULUU JÄLKIMMÄISELLE eli yleiskuvitussessiolle;
+  aarrekohtaamissessio ei käytä tätä listaa.
 
 Jokaiseen promptiin liitetään sama tyylipohja:
 
