@@ -980,7 +980,7 @@ export class Kartta {
     const suurin = tasot.at(-1) ?? MANNER_ZOOM;
     const portaanPohja = tasot[0] ?? 1;
     return {
-      pienin: Math.min(suurin, Math.max(portaanPohja, this.fokusZoomMinimi())),
+      pienin: Math.min(suurin, Math.max(portaanPohja, this.zoomPohja())),
       suurin,
     };
   }
@@ -988,7 +988,7 @@ export class Kartta {
 
   /** Onko yleiskuva (porras 0) juuri nyt sallittu määränpää? */
   yleiskuvaSallittu() {
-    return this.fokusZoomMinimi() <= (this.zoomiTasot()[0] ?? 1) * 1.001;
+    return this.zoomPohja() <= (this.zoomiTasot()[0] ?? 1) * 1.001;
   }
 
   /**
@@ -1063,7 +1063,7 @@ export class Kartta {
      * pohjaan (alempi ehto). Loitonnusraja ei siis löysty pykälääkään.
      */
     const porrasNyt = tasot[this.zoomiIndeksi] ?? 0;
-    const pohjaNyt = this.fokusZoomMinimi();
+    const pohjaNyt = this.zoomPohja();
     const vapaa = this.ui.zoomiVapaa
       || (pohjaNyt > 0 && porrasNyt > 0 && porrasNyt < pohjaNyt * 0.999 ? pohjaNyt : 0);
     const nykyinen = vapaa
@@ -2728,6 +2728,54 @@ export class Kartta {
    * Yläraja on portaikon tihein porras — rajaus ei saa koskaan viedä
    * lähemmäs kuin mihin pelaaja pääsee omin käsin.
    */
+  /**
+   * Pienin sallittu zoomikerroin, jolla kartta PEITTÄÄ koko ruudun
+   * (omistaja 1.9.2026: *"Ulos zoomia voisi rajoittaa niin, että
+   * tyhjää tilaa ei voi tulla näkyville"*). Yleiskuvan kerroin 1 on
+   * contain-sovitus, ja pystyruudulla se jättää kartan ylä- ja
+   * alapuolelle tyhjää — siksi pohja on cover/contain-suhde: kartta
+   * täyttää ruudun molemmissa suunnissa, ja pystynäytöllä koko
+   * maailmaa ei näe kerralla vaan sivuille jää panoroitavaa (omistajan
+   * sanamuoto). Vaakanäytöllä suhde on lähellä ykköstä, joten muutos
+   * tuntuu juuri siellä missä tyhjä tila näkyi.
+   *
+   * KEHITTÄJÄN VAPAA MAAILMANÄKYMÄ OHITTAA POHJAN samalla napilla,
+   * joka vapauttaa panoroinnin (panorointiVapaa; omistaja 31.8.2026:
+   * kehittäjätilassa kauas zoomaus on sallittu). Katselutila samoin:
+   * se on koko laudan esittelyä, ei pelaamista.
+   */
+  peittoZoomMinimi() {
+    if (this.ui.katselu) return 0;
+    if (kehittajaTilaPaalla() && kehittajaMaailmaPaalla()) return 0;
+    const pane = this.ui.mapPane;
+    if (!pane) return 0;
+    const { w: paneW, h: paneH } = this.paneMitat(pane);
+    if (!paneW || !paneH) return 0;
+    const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
+    const yleis = Math.min(paneW / box.w, paneH / box.h);
+    const peitto = Math.max(paneW / box.w, paneH / box.h);
+    if (!(yleis > 0) || !(peitto > 0)) return 0;
+    // Puoli prosenttia yli tarkan peiton: sovituksen pyöristykset
+    // (fitViewBox pyöristää mitat pikseleiksi) jättivät täsmäpohjalla
+    // parin pikselin tyhjän kaistan ruudun laitaan (mitattu 390x844:
+    // svg 771 px, ruutu 773 px).
+    const vara = 1.005;
+    // Sama katto kuin fokusZoomMinimillä: pohja ei saa koskaan viedä
+    // lähemmäs kuin mihin pelaaja pääsee omin käsin.
+    const tasot = this.zoomiTasot();
+    return Math.min(tasot.at(-1) ?? MANNER_ZOOM, (peitto / yleis) * vara);
+  }
+
+  /**
+   * Loitonnuksen yhteinen pohja: fokusikkunan ja ruudun peiton
+   * tiukempi. Jokainen loitonnusreitti (portaat, nipistys, kamera-ajo)
+   * kulkee zoomiRajat-pohjan kautta, ja tämä on se yksi luku, jonka
+   * zoomiRajat, yleiskuvaSallittu ja porraslasku lukevat.
+   */
+  zoomPohja() {
+    return Math.max(this.fokusZoomMinimi(), this.peittoZoomMinimi());
+  }
+
   fokusZoomMinimi() {
     const rajat = this.fokusRajaukset();
     if (!rajat) return 0;
@@ -2784,7 +2832,7 @@ export class Kartta {
 
   /** Sama pohja portaikon indeksinä: loitonnus pysähtyy tähän. */
   fokusPorrasMinimi() {
-    const pohja = this.fokusZoomMinimi();
+    const pohja = this.zoomPohja();
     if (!(pohja > 0)) return 0;
     const tasot = this.zoomiTasot();
     const i = tasot.findIndex((t) => t >= pohja * 0.999);
