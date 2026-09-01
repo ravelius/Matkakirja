@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1433, teksti: 'Nopanheitto: zoomi ensin, nappula hitaammin, kamera jää' },
   { v: 1432, teksti: 'Nostojen siirtoviivat takaisin (ladonta v5)' },
   { v: 1431, teksti: 'Merireitit kapeammiksi, kompassi z3:lle, piirit pois' },
   { v: 1430, teksti: 'Työnkulku: --eipiirit myös luetteloon (01h korjaus)' },

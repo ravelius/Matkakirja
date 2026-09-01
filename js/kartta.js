@@ -123,6 +123,30 @@ const ZOOMI_LAHIN_KAPEA = 58;
 const KAPEAN_RAJA = 700;
 
 /*
+ * SIIRTONÄKYMÄN KATTO (omistajan tilaus 1.9.2026 ilta: *"kartta saisi
+ * zoomautua lähemmäksi ensin ja sitten vasta pelaaja alkaisi
+ * liikkua"*; ks. js/ui.js ennakoiSiirtoZoomi).
+ *
+ * Nopanheiton ennakkozoomi on SUHTEELLINEN (1,7× nykyisestä), ja koska
+ * kamera jää perillä siihen minne se ajettiin, pelkkä kerroin
+ * kylläisi kartan muutamassa heitossa portaikon pohjaan: lähin porras
+ * näyttää yhden kaupungin ympäristön (ZOOMI_LAHIN 88 lautayksikköä),
+ * ja siinä näkymässä YKSI askel täyttää ruudun eikä pelaaja enää näe
+ * mihin on menossa. Siksi siirtonäkymällä on oma kattonsa.
+ *
+ * MITTA ON ASKELVÄLI, EI PORRASNUMERO. Laudan maareittien askelväli on
+ * mediaanina noin 71 lautayksikköä (mitattu js/packs/maailmankartta.js:n
+ * kaarista 1.9.2026: 408 kaarta, mediaanikaari 245 yksikköä). Kun
+ * ruudulla on 3,5 × lähimmän portaan näkymä, kaistalle mahtuu neljä–
+ * viisi askelhelmeä ja nappula — siis se, mitä omistaja pyysi
+ * ("askelhelmet ja nappula näkyvät selvästi") — mutta myös reitin
+ * jatko. Kerroin kulkee kapean ruudun portaan (ZOOMI_LAHIN_KAPEA)
+ * mukana, joten puhelimella katto on samassa suhteessa tiukempi kuin
+ * työpöydällä, aivan kuten portaikkokin.
+ */
+const SIIRTONAKYMAN_LAHIN_KERROIN = 3.5;
+
+/*
  * ULOSZOOMAUKSEN LÖYSENNYS (omistajan päätös 30.8.2026): *"Raja pysyy,
  * mutta uloszoomaus sallitaan esimerkiksi kolminkertaiseen maan
  * ikkunaan. Näet maan ja sen naapurit, mutta et koko maailmaa.
@@ -949,6 +973,38 @@ export class Kartta {
       if (Math.abs(leveys / tasot[i] - tavoite) < Math.abs(leveys / tasot[paras] - tavoite)) paras = i;
     }
     return paras;
+  }
+
+  /**
+   * Nopanheiton siirtonäkymän zoomikerroin (js/ui.js ennakoiSiirtoZoomi).
+   *
+   * KOLME RAJAA SAMASSA LUVUSSA, ja tarkoituksella tässä eikä
+   * kutsujassa — siirtozoomin sääntö on kartan sääntö:
+   *
+   *   1. LÄHENNYS on kutsujan asia (js/ui.js SIIRTOZOOMIN_LAHENNYS):
+   *      montako kertaa lähemmäs nykyisestä ylipäätään pyritään.
+   *   2. SIIRTONÄKYMÄN KATTO (SIIRTONAKYMAN_LAHIN_KERROIN) pysäyttää
+   *      kylläytymisen: koska kamera jää perillä paikalleen, pelkkä
+   *      kerroin veisi muutamassa heitossa portaikon pohjaan.
+   *   3. PELAAJAN OMA LÄHIKUVA VOITTAA KATON. Jos pelaaja on itse
+   *      zoomannut kattoa lähemmäs, siirto EI vedä häntä kauemmas —
+   *      `Math.max(nyt, katto)` on juuri se ehto. Ennakkozoomi saa
+   *      lähentää, ei koskaan loitontaa.
+   *
+   * Lopuksi zoomiRajat, kuten kaikilla muillakin mittakaavoilla: ajo ei
+   * saa viedä lähemmäs kuin mihin pelaaja pääsee omin käsin eikä
+   * kauemmas kuin fokusikkuna sallii.
+   */
+  siirtoZoomiKerroin(lahennys = 1) {
+    const nyt = this.zoomiKerroin;
+    const leveys = this.ui.contentBox?.w ?? 1000;
+    const kapea = this.paneMitat(this.ui.mapPane).w < KAPEAN_RAJA;
+    const lahin = kapea ? ZOOMI_LAHIN_KAPEA : ZOOMI_LAHIN;
+    // Katto kertoimena: montako kertaa lauta mahtuu siirtonäkymään.
+    const katto = leveys / (lahin * SIIRTONAKYMAN_LAHIN_KERROIN);
+    const tavoite = Math.min(nyt * lahennys, Math.max(nyt, katto));
+    const { pienin, suurin } = this.zoomiRajat();
+    return Math.min(suurin, Math.max(pienin, tavoite));
   }
 
   /** Zoomikerroin, jolla sovitaMannerZoom laskee lähikuvan mitat. */

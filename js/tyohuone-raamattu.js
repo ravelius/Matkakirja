@@ -1117,6 +1117,18 @@ export const RAAMATTU = {
           + 'saman tiheyden (6 tasoa suhteella 1,5) ja on jaettu '
           + 'kolmen kayttajan kesken - vaihto tehdaan vasta jos '
           + 'laitemittaus sita vaatii.',
+        'NOPANHEITON KAMERA: ZOOMI ENSIN, NAPPULA VASTA SITTEN (omistaja '
+          + '1.9.2026 ilta, sanatarkasti: "kartta saisi zoomautua '
+          + 'lahemmaksi ensin ja sitten vasta pelaaja alkaisi liikkua. '
+          + 'pelaajan nappulat saisi edeta vahan hitaammin"): siirto '
+          + 'alkaa ennakkozoomilla nappulan ja reitin kahden ensimmaisen '
+          + 'askeleen ympärille (SIIRTOZOOMIN_LAHENNYS 1,7, katto '
+          + 'SIIRTONAKYMAN_LAHIN_KERROIN 3,5 x lahin porras), nappula '
+          + 'lahtee vasta zoomin perilla; askel 640 -> 860 ms, kuutosen '
+          + 'matka porrastettuna alle 5,2 s; KAMERA JAA SIIRTOZOOMIIN '
+          + '(paluuajo poistettu - syy paluulle katosi absoluuttisen '
+          + 'katon myota). Aanimaisema ja luennat alkavat nappulan '
+          + 'liikkeesta, eivat zoomista. Lento ennallaan (v1433).',
         'KARTTASELITEVALIKKO JA AIHEVALOT (omistaja 29.8.2026 ilta, '
           + 'sanatarkka idea): kartan oikeaan ylakulmaan popup-valikko, '
           + 'josta rullautuu alas KARTTASELITTEET - mita mikin symboli '
