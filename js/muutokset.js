@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1430, teksti: 'Työnkulku: --eipiirit myös luetteloon (01h korjaus)' },
   { v: 1429, teksti: 'Viivataso ilman piirejä: --eipiirit ja työnkulun vipu' },
   { v: 1428, teksti: 'Kaksoiskappaleet pois: BIH:n ja TUR:n eläintäyt' },
   { v: 1427, teksti: 'Pudotetut syvennystarinat lehdissä, savuke katon mukainen' },

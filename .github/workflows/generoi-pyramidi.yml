@@ -621,6 +621,7 @@ jobs:
           SYOTE_VIIVAVERSIO: ${{ inputs.viivaversio || inputs.versio }}
           SYOTE_LAATU: ${{ inputs.laatu }}
           SYOTE_PATINA: ${{ inputs.patina }}
+          SYOTE_PIIRIT: ${{ inputs.piirit || 'kylla' }}
           SYOTE_TASOT: ${{ inputs.tasot == 'koeajo-z0-z3' && '0-3' || '0-7' }}
           PAIKKAUS: ${{ inputs.tasot == 'paikkaus' && 'true' || '' }}
         run: |
@@ -639,6 +640,11 @@ jobs:
           if [ -n "$PAIKKAUS" ]; then
             LISA="--paikkaus $LAHDEVERSIO --alue $ALUE --muoto $MUOTO --laatta $LAATTA"
           fi
+          # SAMA PIIRIKYTKIN KUIN LAATTASHARDILLA: luettelon bittikartta
+          # lasketaan tässä uudestaan, ja ilman lippua se lupaisi piirien
+          # kaistan laattoja, joita viivatasoshardi ei polttanut (ajo
+          # 2026-09-01h kirjasi piirit: true vaikka laatat olivat puhtaat).
+          if [ "${SYOTE_PIIRIT}" = "ei" ]; then LISA="$LISA --eipiirit"; fi
           node tools/generoi-laattapyramidi.mjs luettelo-ulos \
             --tasot "$TASOT" --versio "$VERSIO" --nostoversio "$NOSTOVERSIO" \
             --viivaversio "$VIIVAVERSIO" \
