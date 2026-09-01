@@ -1064,7 +1064,20 @@ export function kohdeMerkinLadonta(ui, kohde) {
  *
  * KAUPUNGIN LAATTA ON MUKANA SAMASSA RATKONNASSA (omistajan päätös
  * 28.8.2026, ks. js/fokusniput.js sääntö 9): kilpailijoita ei ole enää
- * kaksi lajia vaan yksi mitta. Ks. kohdeNapautuksenVoittaja alla.
+ * kaksi lajia vaan yksi mitta. Ks. merkkiNapautuksenVoittaja alla.
+ *
+ * ELÄINTÄKYMERKKI ON KOLMAS KILPAILIJA (QA-ajo 1.9.2026, 168
+ * napautusta): eläinkerros (js/elaintaky.js .elaintaky-merkki) piirtyy
+ * kohdekerroksen PÄÄLLE, joten selain antoi limittäisen napautuksen
+ * aina eläimelle — täsmälleen sama vika kuin v1217:n Parnassóksella,
+ * vain kerrosten välillä. QA:n kolme tapausta: Bulgarian
+ * skandaali-veda-slovena (23,73E/41,57N) avasi pelastuskarhun
+ * (23,6/41,6), Turkin vanin-kissa avasi Vanin kissan eläintäyn ja
+ * Bosnian syvennys-sarajevo-villihevoset (17,06/43,90) avasi
+ * villihevosvarsan (17,05/43,83). Nyt kummankin kerroksen merkit
+ * mitataan samalla mittatikulla ja voitto käy KUMPAANKIN suuntaan:
+ * eläinmerkki voittaa kohdemerkin silloin kun se on lähempänä.
+ * Ks. lahinElaintaky ja merkkiNapautuksenVoittaja alla.
  *
  * @returns {{kohde: ?object, etaisyys: number}} lähin kohde ja sen
  *   keskipisteen etäisyys napautuksesta ruudun pikseleinä (Infinity,
@@ -1094,6 +1107,50 @@ function lahinKohde(ui, tapahtuma) {
 }
 
 /**
+ * LÄHIN ELÄINTÄKYMERKKI — sama mitta, toinen kerros (QA 1.9.2026).
+ *
+ * Eläintäkymerkit (js/elaintaky.js) ovat kartan omassa kerroksessaan
+ * eivätkä kohdekerroksessa, mutta niiden osuma-alue on sama sormen
+ * ympyrä (ELAINTAKY_OSUMA_R = 22) ja ne asettuvat kohdemerkkien
+ * sekaan. Ilman tätä hakua ne eivät kilpailleet lainkaan, vaan veivät
+ * napautuksen piirtojärjestyksellä — sillä samalla tavalla, jonka
+ * v1218 poisti kohdemerkkien väliltä.
+ *
+ * MITTA LUETAAN DOMISTA EIKÄ MODUULISTA. Eläinkerros tuo tämän
+ * moduulin (avaaKohdeSuurennos), joten tuonti toisin päin olisi kehä;
+ * kerroksen solmut riittävät, kun voiton täytäntöönpano jää sen omalle
+ * avaajalle (ui.avaaElaintakyMerkki). ILMAN AVAAJAA EI KILPAILLA:
+ * merkkiä, jota ei voisi avata, ei saa päästää voittamaan.
+ *
+ * Piilossa oleva kerros (elaintakyt-piilossa, kartta-merkit-piilossa)
+ * on `display: none`, jolloin ruutulaatikot ovat nollan kokoisia eikä
+ * yksikään merkki mittaa — sama vaikutus kuin selaimen osumatestissä.
+ *
+ * @returns {{merkki: ?Element, etaisyys: number}}
+ */
+function lahinElaintaky(ui, tapahtuma) {
+  const tyhja = { merkki: null, etaisyys: Infinity };
+  const x = tapahtuma?.clientX;
+  const y = tapahtuma?.clientY;
+  if (!Number.isFinite(x) || !Number.isFinite(y)) return tyhja;
+  if (typeof ui?.avaaElaintakyMerkki !== 'function') return tyhja;
+  const kerros = ui.elaintakyKerros;
+  if (!kerros?.isConnected) return tyhja;
+  let paras = null;
+  let lyhin = Infinity;
+  for (const muoto of kerros.querySelectorAll('.elaintaky-osuma')) {
+    const r = muoto.getBoundingClientRect();
+    if (!(r.width > 0) || !(r.height > 0)) continue;
+    if (x < r.left || x > r.right || y < r.top || y > r.bottom) continue;
+    const etaisyys = Math.hypot(x - (r.left + r.width / 2), y - (r.top + r.height / 2));
+    // Ympyrän laatikko on sen neliö: nurkat eivät kuulu alueeseen.
+    if (etaisyys > r.width / 2) continue;
+    if (etaisyys < lyhin) { lyhin = etaisyys; paras = muoto.closest('.elaintaky-merkki'); }
+  }
+  return { merkki: paras, etaisyys: lyhin };
+}
+
+/**
  * Merkin OMAN osumamuodon keskipisteen etäisyys napautuksesta.
  *
  * Varapolku sille pikselin murto-osan levyiselle reunakaistalle, jossa
@@ -1101,13 +1158,17 @@ function lahinKohde(ui, tapahtuma) {
  * ruutulaatikkomatematiikka hylkää sen (lahinKohde vertaa etäisyyttä
  * laatikon puolikkaaseen). Ilman tätä kilpailu jäisi käymättä ja
  * kaupunki voittaisi kaistalla aina, vaikka merkki oli sormen alla.
+ *
+ * Valitsin on parametri, koska sama varapolku koskee eläintäkymerkkiä
+ * (QA 1.9.2026): sen osumamuodolla on oma luokkansa, mutta mitta ja
+ * syy ovat samat.
  */
-function omanMerkinEtaisyys(g, tapahtuma) {
+function omanMerkinEtaisyys(g, tapahtuma, valitsin = '.fokuskohde-osuma') {
   const x = tapahtuma?.clientX;
   const y = tapahtuma?.clientY;
   if (!Number.isFinite(x) || !Number.isFinite(y)) return Infinity;
   let lyhin = Infinity;
-  for (const muoto of g?.querySelectorAll?.('.fokuskohde-osuma') ?? []) {
+  for (const muoto of g?.querySelectorAll?.(valitsin) ?? []) {
     const r = muoto.getBoundingClientRect();
     if (!(r.width > 0) || !(r.height > 0)) continue;
     const etaisyys = Math.hypot(x - (r.left + r.width / 2), y - (r.top + r.height / 2));
@@ -1117,7 +1178,7 @@ function omanMerkinEtaisyys(g, tapahtuma) {
 }
 
 /**
- * NAPAUTUKSEN VOITTAJA: lähin kohde vai kaupungin laatta?
+ * NAPAUTUKSEN VOITTAJA: lähin kohde, eläintäky vai kaupungin laatta?
  *
  * Merkkikerrokset piirtyvät laattakerroksen päälle, joten selain antaa
  * limittäisen napautuksen aina merkille. Omistajan päätös 28.8.2026
@@ -1126,24 +1187,87 @@ function omanMerkinEtaisyys(g, tapahtuma) {
  * lähempänä kuin yhdenkään merkin, työ luovutetaan laatalle. Juuri tämä
  * sallii nipun asettua kaupungin viereen (NIPPU_DX 48 -> 37).
  *
+ * SAMA KOSKEE ELÄINTÄKYKERROSTA (QA 1.9.2026, ks. LÄHIN VOITTAA
+ * yllä). Kumpi tahansa merkkikerros voi saada tapahtuman ensin, ja
+ * kumpi tahansa voi voittaa — ratkaisu on aina lähin keskipiste.
+ *
  * TASATILANTEESSA VOITTAA MERKKI (`<` eikä `<=`): merkki on laattaa
  * pienempi ja sitä hankalampi osua, ja kaupunki on tavoitettavissa myös
- * ilman merkkien kanssa kilpailua koko laatan alalta.
+ * ilman merkkien kanssa kilpailua koko laatan alalta. Merkkien kesken
+ * tasan menevän voittaa kohdemerkki (`<=`) — kartan pääkerros ensin,
+ * jotta järjestys on deterministinen eikä kerrosten piirtojärjestyksen
+ * varassa.
  *
- * @param {object} oma  merkki, jonka kuuntelija tapahtuman sai.
+ * VARAPOLKU ON SEN KERROKSEN, JOKA TAPAHTUMAN SAI. Reunakaistalla (ks.
+ * omanMerkinEtaisyys) oma kerros mittaa itsensä, ja toinen kerros jää
+ * Infinityyn — muuten napautus karkaisi naapurikerrokselle juuri siinä
+ * kaistassa, jossa selain oli jo valinnut merkin.
+ *
+ * @param {?object} oma kohde, jonka kuuntelija tapahtuman sai — null,
+ *   kun kysyjä on eläintäkykerros.
  * @param {Element} g   saman merkin ryhmä — varapolun mitta (ks.
  *   omanMerkinEtaisyys) ja se merkki, joka voittaa ilman napautuskohtaa
  *   (näppäimistön Enter).
- * @returns {?object} voittanut kohde, tai null kun kaupunki voitti.
+ * @returns {{laji: string, kohde: ?object, merkki: ?Element}} voittaja:
+ *   `kohde` (kohdemerkki), `elain` (eläintäkymerkki) tai `kaupunki`.
  */
-function kohdeNapautuksenVoittaja(ui, tapahtuma, oma, g) {
+function merkkiNapautuksenVoittaja(ui, tapahtuma, oma, g) {
   const osuma = lahinKohde(ui, tapahtuma);
   // Jos yksikään muoto ei mitannut, kilpailijaksi tulee se merkki, jonka
   // kuuntelija tapahtuman sai — ei Infinity, joka antaisi voiton
   // laatalle ilman kilpailua.
-  const kohde = osuma.kohde ?? oma;
-  const etaisyys = osuma.kohde ? osuma.etaisyys : omanMerkinEtaisyys(g, tapahtuma);
-  return nippuLaatanEtaisyys(ui, tapahtuma) < etaisyys ? null : kohde;
+  const kohde = osuma.kohde ?? oma ?? null;
+  let kohdeEtaisyys = Infinity;
+  if (osuma.kohde) kohdeEtaisyys = osuma.etaisyys;
+  else if (oma) kohdeEtaisyys = omanMerkinEtaisyys(g, tapahtuma);
+  const elain = lahinElaintaky(ui, tapahtuma);
+  const merkki = elain.merkki ?? (oma ? null : g ?? null);
+  let elainEtaisyys = Infinity;
+  if (elain.merkki) elainEtaisyys = elain.etaisyys;
+  else if (!oma) elainEtaisyys = omanMerkinEtaisyys(g, tapahtuma, '.elaintaky-osuma');
+  if (nippuLaatanEtaisyys(ui, tapahtuma) < Math.min(kohdeEtaisyys, elainEtaisyys)) {
+    return { laji: 'kaupunki', kohde: null, merkki: null };
+  }
+  if (kohde && kohdeEtaisyys <= elainEtaisyys) return { laji: 'kohde', kohde, merkki: null };
+  if (merkki) return { laji: 'elain', kohde: null, merkki };
+  return { laji: 'kohde', kohde, merkki: null };
+}
+
+/**
+ * Kohdemerkin napautuksen työ: auki, tai kiinni jos se oli jo auki.
+ * Yhdessä paikassa, koska sen tekee myös eläinkerrokselta luovutettu
+ * napautus (QA 1.9.2026).
+ */
+function avaaTaiSuljeKohde(ui, kohde) {
+  if (!kohde) return;
+  if (ui.fokuskohdeAuki?.id === kohde.id) suljeFokuskohde(ui);
+  else avaaFokuskohde(ui, kohde);
+}
+
+/**
+ * ELÄINTÄKYMERKIN NAPAUTUS SAMAAN KILPAILUUN (QA 1.9.2026).
+ *
+ * Eläinkerros kysyy tätä ennen oman korttinsa avaamista — sama
+ * sopimus kuin kaupungin laatalla (js/fokusniput.js sääntö 9), vain
+ * kolmella kilpailijalla. Työ tehdään täällä, koska kilpailun tuntee
+ * tämä moduuli; eläinkerros tarvitsee vain tiedon, jäikö sille mitään.
+ *
+ * @param {Element} g eläintäkymerkin ryhmä (.elaintaky-merkki).
+ * @returns {boolean} true kun napautus kuului toiselle merkille tai
+ *   kaupungille ja se on jo hoidettu; false kun kysyjä itse voitti.
+ */
+export function elainmerkinNapautusLuovutettu(ui, tapahtuma, g) {
+  const voittaja = merkkiNapautuksenVoittaja(ui, tapahtuma, null, g);
+  // Laatta voitti: napautus on kaupungin, myös silloin kun kaupunkia ei
+  // juuri nyt voi avata (kiire, ei tutkittavaa) — sama kuin kohdemerkillä.
+  if (voittaja.laji === 'kaupunki') { nippuAvaaKaupunki(ui); return true; }
+  if (voittaja.laji === 'kohde') { avaaTaiSuljeKohde(ui, voittaja.kohde); return true; }
+  // Eläinkerros voitti — mutta voittaja voi olla naapurimerkki.
+  if (voittaja.merkki && voittaja.merkki !== g) {
+    ui.avaaElaintakyMerkki?.(voittaja.merkki);
+    return true;
+  }
+  return false;
 }
 
 function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
@@ -1268,12 +1392,12 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
     tapahtuma.preventDefault();
     // Osuma-alueet limittyvät (KOHDE_OSUMA_R on sormen mitta, ei
     // merkin): voittajan valitsee etäisyys eikä piirtojärjestys.
-    // Null = kaupungin laatta oli lähempänä, ja napautus kuuluu sille
-    // (omistaja 28.8.2026, js/fokusniput.js sääntö 9).
-    const valittu = kohdeNapautuksenVoittaja(ui, tapahtuma, kohde, g);
-    if (!valittu) { nippuAvaaKaupunki(ui); return; }
-    if (ui.fokuskohdeAuki?.id === valittu.id) suljeFokuskohde(ui);
-    else avaaFokuskohde(ui, valittu);
+    // Kaupungin laatta (omistaja 28.8.2026, js/fokusniput.js sääntö 9)
+    // ja eläintäkymerkki (QA 1.9.2026) ovat samassa kilpailussa.
+    const voittaja = merkkiNapautuksenVoittaja(ui, tapahtuma, kohde, g);
+    if (voittaja.laji === 'kaupunki') { nippuAvaaKaupunki(ui); return; }
+    if (voittaja.laji === 'elain') { ui.avaaElaintakyMerkki?.(voittaja.merkki); return; }
+    avaaTaiSuljeKohde(ui, voittaja.kohde);
   };
   g.addEventListener('click', avaa);
   g.addEventListener('keydown', (tapahtuma) => {
