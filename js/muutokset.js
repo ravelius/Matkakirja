@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1436, teksti: 'Tarkka varjo: 1′-korkeusvarjostus livenä (kokeilu)' },
   { v: 1435, teksti: 'Tilannetaulu: illan erä v1429–v1434 ja poltot' },
   { v: 1434, teksti: 'Merkit näkyvissä eleissä; tummennuskytkin kehittäjälle' },
   { v: 1433, teksti: 'Nopanheitto: zoomi ensin, nappula hitaammin, kamera jää' },
