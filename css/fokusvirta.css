@@ -285,6 +285,14 @@
   line-height: 1.5;
 }
 
+/* Palkkiorivi kysymyksen alla (omistaja 1.9.2026: "lopussa oleva
+   kysymys ei mainitse, mitä siitä voi voittaa"). */
+.fokusvirta-visa-palkkio {
+  margin: -0.35rem 0 0.55rem;
+  font-size: 0.82rem;
+  color: rgba(33, 29, 24, 0.72);
+}
+
 .fokusvirta-vaihtoehdot {
   display: flex;
   flex-direction: column;

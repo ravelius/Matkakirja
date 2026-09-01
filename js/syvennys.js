@@ -220,11 +220,7 @@ export function avaaSyvennys(ui, cityId, taky, tiedot) {
 }
 
 /**
- * TARINAN SISUS — otsikko, kuva, teksti, lähde ja minivisa.
- *
- * LÄHDERIVI ON SAMA RIVI KUIN TÄKYNOSTOLLA (1.9.2026, nostoaudit):
- * sama luokka `fokusnosto-lahde` ja sama paikka — tekstin jälkeen,
- * ennen visaa — kuin js/fokusnosto.js piirraNostonSisus.
+ * TARINAN SISUS — otsikko, kuva, teksti ja minivisa.
  *
  * Erotettu omaksi funktiokseen 31.8.2026 (kategoria per kaupunki):
  * sama sisus latoutuu joko oman kortin ylärivin alle tai osiona
@@ -244,7 +240,6 @@ function piirraSyvennysSisus(ui, sailio, cityId, taky) {
     teksti.appendChild(html('p', '', kappale));
   }
   sailio.appendChild(teksti);
-  if (taky.lahde) sailio.appendChild(html('p', 'fokusnosto-lahde', taky.lahde));
   piirraSyvennysVisa(ui, sailio, cityId, taky);
 }
 
@@ -268,6 +263,11 @@ function piirraSyvennysVisa(ui, sisalto, cityId, taky) {
     sisalto.appendChild(laatikko);
     return;
   }
+  // Palkkio näkyviin ennen vastaamista, mutta ei enää maksetulle
+  // visalle (omistaja 1.9.2026: "lopussa oleva kysymys ei mainitse,
+  // mitä siitä voi voittaa").
+  laatikko.appendChild(html('p', 'fokusvirta-visa-palkkio',
+    `Oikeasta vastauksesta saat ${TAKY_PALKKIO} puntaa.`));
   const vaihtoehdot = html('div', 'fokusvirta-vaihtoehdot');
   visa.vaihtoehdot.forEach((tekstiRivi, i) => {
     const nap = html('button', '', tekstiRivi);

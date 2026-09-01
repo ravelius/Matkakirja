@@ -60,7 +60,10 @@
   display: flex;
   flex-direction: column;
   width: min(34rem, 100%);
-  max-height: min(80vh, 44rem);
+  /* Omistaja 1.9.2026 (Sofia-patsaan kortti): "pitäisikö pop-up-lehti
+     olla vähän korkeampi?" — katto ylös, jotta pystykuva ja teksti
+     mahtuvat samaan näkymään ilman että kuvaa tarvitsee leikata. */
+  max-height: min(88vh, 52rem);
   padding: 0.7rem 0.8rem 0.75rem;
   border-radius: 12px;
   border: 1px solid rgba(122, 85, 20, 0.32);
@@ -158,11 +161,21 @@
 
 .fokusnosto-kuva img {
   display: block;
-  width: 100%;
-  max-height: 34vh;
+  /*
+   * KUVA NÄKYY AINA KOKONAAN (omistaja 1.9.2026, Sofia-patsaan
+   * kortti: "Kuva pitää näkyä kokonaan" — cover leikkasi pystykuvalta
+   * pään). Vaakakuva täyttää leveyden kuten ennenkin; pystykuva
+   * pysähtyy korkeuskattoon ja kapenee keskelle, ja "sivuille jää
+   * tyhjää" on omistajan sanoin juuri tarkoitus — näin iso kuva ei
+   * vie koko sivua.
+   */
+  width: auto;
+  max-width: 100%;
+  max-height: 42vh;
+  margin: 0 auto;
   border-radius: 6px;
   border: 1px solid rgba(122, 85, 20, 0.3);
-  object-fit: cover;
+  object-fit: contain;
   background: rgba(122, 85, 20, 0.1);
 }
 
@@ -515,7 +528,10 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
   display: flex;
   flex-direction: column;
   width: min(34rem, 100%);
-  max-height: min(80vh, 44rem);
+  /* Omistaja 1.9.2026 (Sofia-patsaan kortti): "pitäisikö pop-up-lehti
+     olla vähän korkeampi?" — katto ylös, jotta pystykuva ja teksti
+     mahtuvat samaan näkymään ilman että kuvaa tarvitsee leikata. */
+  max-height: min(88vh, 52rem);
   padding: 0.7rem 0.8rem 0.75rem;
   border-radius: 12px;
   border: 1px solid rgba(122, 85, 20, 0.32);
@@ -596,7 +612,10 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
   display: flex;
   flex-direction: column;
   width: min(34rem, 100%);
-  max-height: min(80vh, 44rem);
+  /* Omistaja 1.9.2026 (Sofia-patsaan kortti): "pitäisikö pop-up-lehti
+     olla vähän korkeampi?" — katto ylös, jotta pystykuva ja teksti
+     mahtuvat samaan näkymään ilman että kuvaa tarvitsee leikata. */
+  max-height: min(88vh, 52rem);
   padding: 0.7rem 0.8rem 0.75rem;
   border-radius: 12px;
   border: 1px solid rgba(122, 85, 20, 0.32);
