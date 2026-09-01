@@ -88,6 +88,7 @@ import { lueRajaviivasto, rajatLaudalle, RAJASETIT } from './fokuskartta/rajat.m
 import { RESEPTIT, TAUSTA, patinoiSelaimessa } from './patina.mjs';
 import { laudanProjektio, SYVYYS } from './fokuskartta/piirto.js';
 import { nostosymPolttoLaatikko } from '../js/fokusnosto-symbolit.js';
+import { NOSTOLADONTA_SAANTO } from '../js/nostoladonta.js';
 
 const TAALLA = dirname(fileURLToPath(import.meta.url));
 const JUURI = join(TAALLA, '..');
@@ -2271,6 +2272,17 @@ function teeLuettelo() {
     for (const m of omat) laatastot[m.z] = nostotasoBase64(m, nostotasonPeite(m));
     return {
       versio: NOSTOVERSIO,
+      /*
+       * PIIRTOSÄÄNNÖN TUNNUS (1.9.2026, js/nostoladonta.js
+       * NOSTOLADONTA_SAANTO). Tiiviste kertoo, onko YKSI merkki
+       * muuttunut; tämä kertoo, onko koko taso piirretty vanhalla
+       * säännöllä. Ero on käytännön ero: kun sääntö vaihtuu, jokainen
+       * tiiviste eroaa eikä yhtään merkkiä vaienneta — mutta laatoissa
+       * oleva vanha muste jäisi silti elävän merkin alle
+       * kaksoiskuvaksi. Peli piilottaa koko nostotason, kun tunnus ei
+       * ole sen oma (js/laattapyramidi.js nostotasonTasot).
+       */
+      saanto: NOSTOLADONTA_SAANTO,
       tasot: omat.map((m) => m.z),
       nostot: nostot.luettelo,
       laatastot,

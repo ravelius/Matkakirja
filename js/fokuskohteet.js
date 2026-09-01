@@ -139,7 +139,7 @@ import {
   nippuLaattaEsteet,
 } from './fokusniput.js';
 import { nostoOnPoltettu } from './laattapyramidi.js';
-import { nostoladontaTiiviste } from './nostoladonta.js';
+import { nostoladontaKattoPorras, nostoladontaTiiviste } from './nostoladonta.js';
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
 
@@ -1482,8 +1482,30 @@ function asetaKohdeMittakaava(ui, suhde) {
   const s = ui.fokusMerkkiSkaalaPohja?.()
     || ui.fokusMerkkiSkaalaKartalle?.(suhde) || ui.fokusMerkkiSkaala?.(suhde);
   if (!(s > 0)) return;
+  /*
+   * PIIRTOMITTA ON KATOLLA, LADONTA EI (omistaja 1.9.2026: *"Tee max
+   * sama koko kuin kohdekaupungin koko"* — js/nostoladonta.js
+   * nostoladontaKattoPorras). Katto lasketaan merkin KIRJASTON mitassa,
+   * koska nimiön kirjasinkoko on siinä yksikössä, ja jaetaan takaisin
+   * ryhmän mittaan — sama kaava kuin laattageneraattorilla, vain
+   * mittakaava on eri lähteestä (näkymän oma, ei tason).
+   *
+   * KATTAMATON `s` JÄÄ LADONNAKSI: kasaus, erottelusiirto ja
+   * nimiöväistö on laskettava samalla luvulla kuin laattaan, tai
+   * poltettu ja elävä merkki eivät olisi samassa pisteessä.
+   */
+  const nakyvaSkaala = ui.nakyvaAlue?.()?.skaala;
+  const sPiirto = nostoladontaKattoPorras(KOHDE_SYMBOLI_SKAALA * s, nakyvaSkaala)
+    / KOHDE_SYMBOLI_SKAALA;
   const sRuutu = ui.fokusMerkkiSkaala?.(suhde) ?? s;
-  const osumaR = KOHDE_OSUMA_R * (sRuutu > 0 ? sRuutu / s : 1);
+  /*
+   * OSUMASÄDE LASKETAAN PIIRTOMITASTA, EI LADONNASTA. Ympyrä on ryhmän
+   * lapsi ja skaalautuu sen mukana, joten sormen 44 px säilyy vain jos
+   * säde jaetaan sillä samalla luvulla, jolla ryhmä piirretään — katon
+   * purressa ryhmä on pienempi ja säde siis suurempi. Sama sääntö kuin
+   * typografiakatolla (js/ui.js fokusMerkkiOsumaKerroin).
+   */
+  const osumaR = KOHDE_OSUMA_R * (sRuutu > 0 && sPiirto > 0 ? sRuutu / sPiirto : 1);
   /*
    * OSUMAMUODOT TULEVAT SAMASTA LADONNASTA kuin merkki: sama passi
    * kirjoittaa ryhmän paikan, ja osuma-ympyrä on sen lapsi. Vain
@@ -1509,7 +1531,7 @@ function asetaKohdeMittakaava(ui, suhde) {
    * paikan, jonka kaksi edellistä passia juuri asettivat.
    */
   merkitsePoltetutNostot(ui);
-  const zoom = s.toFixed(4);
+  const zoom = sPiirto.toFixed(4);
   for (const ryhma of ui.fokuskohdeRyhmat ?? []) {
     if (ryhma.osuma) maare(ryhma.osuma, 'r', osumaR.toFixed(2));
     const px = ryhma.nippu?.x ?? ryhma.x + (ryhma.sx ?? 0);
@@ -1527,10 +1549,12 @@ function asetaKohdeMittakaava(ui, suhde) {
     if (!laatikko || !ryhma.nimiOsuma) continue;
     const dx = ryhma.x - px;
     const dy = ryhma.y - py;
-    maare(ryhma.nimiOsuma, 'x', ((laatikko.x1 + dx) / s).toFixed(2));
-    maare(ryhma.nimiOsuma, 'y', ((laatikko.y1 + dy) / s).toFixed(2));
-    maare(ryhma.nimiOsuma, 'width', ((laatikko.x2 - laatikko.x1) / s).toFixed(2));
-    maare(ryhma.nimiOsuma, 'height', ((laatikko.y2 - laatikko.y1) / s).toFixed(2));
+    // Laatikko on LAUDAN yksiköissä ja ryhmä piirretään sPiirrolla:
+    // jakaja on siis se, jolla ryhmä on skaalattu (ei ladonnan s).
+    maare(ryhma.nimiOsuma, 'x', ((laatikko.x1 + dx) / sPiirto).toFixed(2));
+    maare(ryhma.nimiOsuma, 'y', ((laatikko.y1 + dy) / sPiirto).toFixed(2));
+    maare(ryhma.nimiOsuma, 'width', ((laatikko.x2 - laatikko.x1) / sPiirto).toFixed(2));
+    maare(ryhma.nimiOsuma, 'height', ((laatikko.y2 - laatikko.y1) / sPiirto).toFixed(2));
   }
 }
 
@@ -1882,7 +1906,15 @@ function paivitaRasteriporras(ui, skaala) {
     || ui.fokusMerkkiSkaalaKartalle?.() || ui.fokusMerkkiSkaala?.();
   if (!(perus > 0) || !(skaala > 0)) return false;
   const tiheys = typeof window === 'undefined' ? 1 : (window.devicePixelRatio || 1);
-  return nostosymAsetaPorras(KOHDE_SYMBOLI_SKAALA * skaala * perus * Math.min(tiheys, 3));
+  /*
+   * RUUTUKATTO KUULUU TÄHÄNKIN (1.9.2026). Rasterin tarve on merkin
+   * NÄKYVÄ koko, ja katon purressa merkki piirretään pienempänä kuin
+   * kattamaton mitta lupaisi (asetaKohdeMittakaava sPiirto) — ilman
+   * kattoa syvä zoomi tilaisi kolminkertaisen rasterin siitä musteesta,
+   * joka ruudulle päätyy.
+   */
+  const porras = nostoladontaKattoPorras(KOHDE_SYMBOLI_SKAALA * perus, skaala);
+  return nostosymAsetaPorras(porras * skaala * Math.min(tiheys, 3));
 }
 
 /**

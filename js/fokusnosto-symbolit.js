@@ -1533,7 +1533,7 @@ const NOSTOSYM_KUVAT = Object.fromEntries(
  * poltetun vuorennimen koko: `koko: 11`. Aiempi 13,5 oli neljänneksen
  * isompi kuin lehden oma ladonta, ja se näkyi.
  */
-const NOSTOSYM_NIMIO_KOKO = 11;
+export const NOSTOSYM_NIMIO_KOKO = 11;
 
 /**
  * NIMIÖN ASUT — samat kaksi kuin lehteen poltetuilla nimillä.

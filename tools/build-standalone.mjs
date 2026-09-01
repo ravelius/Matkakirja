@@ -528,6 +528,16 @@ const MODULES = [
    * arkki on kameran maailma. Tuo vain mapartin ja median, jotka ovat
    * yllä.
    */
+  /*
+   * Nostojen ladonnan mittakaava, ruutukatto ja tiiviste. LEHTIMODUULI,
+   * joka ei tuo mitään — ja siksi se voi olla näin varhain.
+   * js/fokuskohteet.js kysyy siltä, onko merkki poltettu laattaan,
+   * js/ui.js merkkien mittakaavan, js/karttanimet.js merkin
+   * karttavakion (v1394) ja js/laattapyramidi.js piirtosäännön tunnuksen
+   * (1.9.2026) — siksi TÄMÄN on oltava ennen laattapyramidia.
+   * Laattageneraattori laskee saman tiivisteen Nodessa.
+   */
+  'js/nostoladonta.js',
   'js/laattapyramidi.js',
   // M7a: laudan kamera ennen ui:ta (ui tuo Kartan; kartta tuo äänet ja
   // luennan, jotka ovat yllä).
@@ -539,15 +549,6 @@ const MODULES = [
   // Fokusmoodin maakohtainen topografiapohja ennen ui:ta (ui tuo sen;
   // se itse tuo mapartin, median ja lisänimet, jotka ovat yllä).
   'js/packs/fokus-grc.js',
-  /*
-   * Nostojen ladonnan mittakaava ja tiiviste. LEHTIMODUULI, joka ei tuo
-   * mitään — ja siksi se voi olla näin varhain. js/fokuskohteet.js
-   * kysyy siltä, onko merkki poltettu laattaan, js/ui.js merkkien
-   * mittakaavan ja js/karttanimet.js merkin karttavakion (v1394);
-   * laattageneraattori laskee saman tiivisteen Nodessa. Ennen
-   * karttanimiä, koska karttanimet tuo tämän.
-   */
-  'js/nostoladonta.js',
   // Ruutuavaruudessa ladotut paikannimet ennen ui:ta (ui tuo sen). Tuo
   // mapartin, laattapyramidin, nimipaketin ja nostoladonnan, jotka
   // ovat yllä.
