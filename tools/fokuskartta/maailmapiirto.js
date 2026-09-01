@@ -86,6 +86,7 @@ import {
   ASTEIKKO, KOHINA, KOHINA2, MUSTE, PAPERI,
   fbm, laudanProjektio, lerpSyvyys, lerpVari, mulberry32,
 } from './piirto.js';
+import { varjostusPisteessa } from '../../js/maastovarjo.js';
 import {
   NOSTOLADONTA_POLTON_TIHEYS, nostoladontaKattoPorras,
 } from '../../js/nostoladonta.js';
@@ -559,22 +560,15 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * kuin maalehdellä; liioittelu on hitusen maltillisempi, koska
    * yleislehden ruudukko on kolme kaariminuuttia eikä yksi — samalla
    * kertoimella rinteet olisivat kaukozoomissa rakeisia.
+   *
+   * KAAVA ITSE ASUU MUUALLA (js/maastovarjo.js). Se
+   * siirtyi omaksi moduulikseen 1.9.2026, kun omistajan 1′-kokeilu
+   * (js/korkeuskerros.js) alkoi laskea SAMAA varjoa selaimessa: kaksi
+   * kopiota olisi ehtinyt eriytyä ensimmäisessä hienosäädössä, ja ero
+   * olisi näkynyt juuri siinä mitä kokeilulla mitataan. Tässä on enää
+   * moottorin oma askel — ruudukon väli — ja sen sulkeuma.
    */
-  const M_PER_AST = 111320;
-  const varjostus = (lon, lat) => {
-    const d = DLON;
-    const dzdx = (korkeus(lon + d, lat) - korkeus(lon - d, lat))
-      / (2 * d * M_PER_AST * Math.cos(lat * Math.PI / 180));
-    const dzdy = (korkeus(lon, lat + d) - korkeus(lon, lat - d)) / (2 * d * M_PER_AST);
-    if (!Number.isFinite(dzdx) || !Number.isFinite(dzdy)) return 0.5;
-    const z = 2.6;
-    const nx = -dzdx * z; const ny = -dzdy * z; const nz = 1;
-    const len = Math.hypot(nx, ny, nz);
-    const az = 315 * Math.PI / 180; const alt = 42 * Math.PI / 180;
-    const lx = Math.cos(alt) * Math.sin(az); const ly = Math.cos(alt) * Math.cos(az);
-    const lz = Math.sin(alt);
-    return Math.max(0, (nx * lx + ny * ly + nz * lz) / len);
-  };
+  const varjostus = (lon, lat) => varjostusPisteessa(korkeus, lon, lat, DLON);
 
   /* ================================================== 1-3. PINTA
    *

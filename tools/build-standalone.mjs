@@ -558,6 +558,21 @@ const MODULES = [
    * Laattageneraattori laskee saman tiivisteen Nodessa.
    */
   'js/nostoladonta.js',
+  /*
+   * Lautaprojektiot ennen niiden lukijoita. Paketti ei tuo mitään, ja
+   * se siirtyi tähän 1.9.2026: js/korkeuskerros.js lukee laudan
+   * Miller-vakiot moduulitasolla, ja se taas on ennen laattapyramidia,
+   * joka tuo sen. (Aiemmin paketti oli vasta js/ui.js:n edellä,
+   * koska ui oli sen ainoa tuoja.)
+   */
+  'js/packs/fokus-grc.js',
+  /*
+   * Kehittäjän tarkka varjo (1′-korkeusvarjostus) ennen
+   * laattapyramidia, joka tuo sen: kerros piirretään laattojen päälle
+   * samassa päivityksessä. Tuo mapartin, median, lautaprojektiot ja
+   * ui-apurit, jotka ovat yllä.
+   */
+  'js/korkeuskerros.js',
   'js/laattapyramidi.js',
   // M7a: laudan kamera ennen ui:ta (ui tuo Kartan; kartta tuo äänet ja
   // luennan, jotka ovat yllä).
@@ -566,9 +581,6 @@ const MODULES = [
   'js/karttamittari.js',
   // Lavan pohjakerrosten kooste ennen ui:ta (ui tuo sen). Ei tuo itse
   // mitään: geometria luetaan svg:stä ja lehdet DOMista.
-  // Fokusmoodin maakohtainen topografiapohja ennen ui:ta (ui tuo sen;
-  // se itse tuo mapartin, median ja lisänimet, jotka ovat yllä).
-  'js/packs/fokus-grc.js',
   // Ruutuavaruudessa ladotut paikannimet ennen ui:ta (ui tuo sen). Tuo
   // mapartin, laattapyramidin, nimipaketin ja nostoladonnan, jotka
   // ovat yllä.
