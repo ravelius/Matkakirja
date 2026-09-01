@@ -1226,6 +1226,13 @@ function lado(data, px) {
     if (!asetettu) { pudotettu += 1; continue; }
     nimiot.push({
       laji: 'kohde',
+      /*
+       * TUNNUS KULKEE PIIRTOON ASTI (omistaja 1.9.2026 ilta, tekstit
+       * kokonaan klikattaviksi): piirto kirjoittaa sen data-kohde-
+       * määreeksi, ja kerroksen napautus avaa kohteen kortin
+       * (js/fokuskohteet.js ui.kohdenimenNapautus).
+       */
+      id: k.id,
       teksti: asetettu.teksti,
       x: laudalle(asetettu.kx),
       y: laudalle(asetettu.ky),
@@ -1367,6 +1374,25 @@ export function karttanimetLatovat(ui) {
 export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
   const kerros = ui?.karttanimiKerros;
   if (!kerros) return 0;
+  /*
+   * YKSI KUUNTELIJA KOKO KERROKSELLE (omistaja 1.9.2026 ilta, tekstit
+   * kokonaan klikattaviksi). Nimisolmut syntyvät ja kuolevat joka
+   * ladonnassa, joten kuuntelija on kerroksessa eikä solmuissa; vain
+   * data-kohde-merkityt tekstit ottavat tapahtumia vastaan
+   * (css/styles.css). Avaus delegoituu kohdekerrokselle
+   * (js/fokuskohteet.js ui.kohdenimenNapautus) — riippuvuus osoittaa
+   * yhteen suuntaan kuten asetaKohdenimet-ilmoittautumisessa.
+   */
+  if (!kerros.dataset.kohdenapautus) {
+    kerros.dataset.kohdenapautus = '1';
+    kerros.addEventListener('click', (tapahtuma) => {
+      const solmu = tapahtuma.target?.closest?.('[data-kohde]');
+      if (!solmu) return;
+      tapahtuma.stopPropagation();
+      tapahtuma.preventDefault();
+      ui.kohdenimenNapautus?.(solmu.getAttribute('data-kohde'));
+    });
+  }
   const tyhjenna = () => {
     if (kerros.firstChild) kerros.textContent = '';
     ui.karttanimiAvain = null;
@@ -1509,6 +1535,13 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
   for (const { n, x } of nakyvat) {
     el('text', {
       class: `karttanimi karttanimi-${n.laji}`,
+      /*
+       * KOHTEEN NIMI ON NAPAUTETTAVA KOKONAAN (omistaja 1.9.2026 ilta).
+       * Kerros on pointer-events: none; tämä määre sytyttää tapahtumat
+       * juuri kohdenimille (css/styles.css [data-kohde]) ja kantaa
+       * tunnuksen kerroksen yhteiselle kuuntelijalle alla.
+       */
+      ...(n.laji === 'kohde' && n.id ? { 'data-kohde': n.id } : null),
       x,
       y: n.y,
       'font-size': laudalle(n.koko),
