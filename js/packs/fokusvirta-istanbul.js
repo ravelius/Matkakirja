@@ -714,6 +714,25 @@ export const FOKUSVIRTA_ISTANBUL = {
         + 'Schliemann oli yksityisesti samaa mieltä. Hän ei koskaan '
         + 'julkaissut sitä.',
       /*
+       * LÄHDERIVI LISÄTTY 1.9.2026 (nostojen sisältöaudit). Kortti oli
+       * yksi viidestä täkynostosta ilman `lahde`-riviä, vaikka
+       * faktapohja oli tarkistettu työaineistoon asti — Perustuslain
+       * totuudellisuuspilari edellyttää, että pelaaja näkee lähteen.
+       * Väitteet ja niiden osiot: kaivausmenetelmien arvostelu jo
+       * omana aikanaan ("Heinrich Schliemann"), Troija III–V:n
+       * tuhoutuminen dokumentoimatta ("Troy III–V") ja Dörpfeldin
+       * Troija VI sekä Schliemannin yksityinen myöntyminen, jota hän
+       * ei julkaissut ("Wilhelm Dörpfeld").
+       *
+       * TYÖNJAKO KAHDEN KREIKAN SCHLIEMANN-KORTIN KANSSA: tämä on
+       * KAIVAUS, Ateenan syvennystäky on TALO ja Kreikan täkynosto
+       * `sofia-korut` on SEURAUKSET (js/fokusnosto.js NOSTO_MAAT.GRC).
+       */
+      lahde: 'en-Wikipedia "Troy", osiot "Heinrich Schliemann", '
+        + '"Troy III–V" ja "Wilhelm Dörpfeld" (tarkistettu 25.8.2026 '
+        + 'työaineistoon docs/mantereet-tyoaineisto/takynostot-turkki.md, '
+        + 'ehdokas 6; lähderivi kirjattu korttiin 1.9.2026).',
+      /*
        * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin Sofian
        * areenalla ja Kreikan kahdella nostolla): repon oma generoitu
        * havainnekuva, jolla ei ole Commons-nimeä eikä varareittiä,
