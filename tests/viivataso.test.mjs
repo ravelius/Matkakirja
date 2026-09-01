@@ -758,3 +758,18 @@ test('generaattori välittää piirikytkimen jokaiseen viivatason piirtoon', () 
     assert.match(k, /piirit: PIIRIT/, `piirtokutsu ilman piirikytkintä: ${k}`);
   }
 });
+
+test('työnkulku välittää piirikytkimen sekä laattashardille että luettelolle', () => {
+  /*
+   * Ajo 2026-09-01h: laattashardi sai --eipiirit, luettelovaihe ei —
+   * laatat olivat puhtaat, mutta luettelo lupasi piirien kaistan
+   * laattoja, joita ei ollut. Peite ja luettelo lasketaan samasta
+   * funktiosta, joten lipun on kuljettava molempiin komentoihin.
+   */
+  const tyonkulku = readFileSync(join(JUURI, '.github', 'workflows', 'generoi-pyramidi.yml'), 'utf8');
+  const lisaykset = tyonkulku.match(/LISA="\$LISA --eipiirit"/g) ?? [];
+  assert.equal(lisaykset.length, 2,
+    `--eipiirit lisätään ${lisaykset.length} kohdassa — pitää olla laattashardi JA luettelo`);
+  assert.match(tyonkulku, /SYOTE_PIIRIT: \$\{\{ inputs\.piirit \|\| 'kylla' \}\}\n(.*\n){0,6}.*SYOTE_TASOT/,
+    'luettelovaiheen env ei sisällä SYOTE_PIIRIT-muuttujaa');
+});
