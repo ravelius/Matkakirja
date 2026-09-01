@@ -68,7 +68,7 @@ export const MAASTOKOHTEET_UZB = [
       'Minne kokonainen järvi voi kadota?',
       'Mitä järven paljastuneelta pohjalta löytyy?',
     ],
-    korostukset: ['Karakalpakstan|Karakalpakstanin'],
+    korostukset: ['suolajärvi'],
     nappi: 'Järvi joka katosi',
     // 58.5 E / 44.3 N — eteläisen Araljärven läntinen allas Karakalpakstanin puolella; artikkelin oma keskipiste 60 / 45 on suurelta osin kuivunutta pohjaa
     laudat: {

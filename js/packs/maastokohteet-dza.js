@@ -38,7 +38,7 @@ export const MAASTOKOHTEET_DZA = [
       'Keitä tuaregit ovat?',
       'Mitä Tassili n\'Ajjerin kalliomaalaukset esittävät?',
     ],
-    korostukset: ['Sahara|Saharan'],
+    korostukset: ['Sahara|Saharaa'],
     nappi: 'Saharan tuliperäinen huippu',
     // 5.5336 E / 23.2889 N — en-Wikipedia "Mount Tahat"
     laudat: {

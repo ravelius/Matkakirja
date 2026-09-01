@@ -232,7 +232,7 @@ export const FOKUSKOHTEET_DEU = [
       'Mikä on Brockenin haamu?',
       'Miksi Goethe sijoitti noidat juuri tälle vuorelle?',
     ],
-    korostukset: ['Brockenin haamu', 'Faust|Faustissa'],
+    korostukset: ['Brockenin haamu', 'Faust|Faustiinsa'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Noitien vuori Harzilla',
     // 10,6156 E / 51,7994 N — maat.mjs FOKUSMAAT.DEU.vuoret.
@@ -412,7 +412,7 @@ export const FOKUSKOHTEET_DEU = [
       'Mistä Elbe saa vetensä?',
       'Miksi Hampuri rakennettiin niin kauas merestä?',
     ],
-    korostukset: ['Vltava|Vltavan'],
+    korostukset: ['Vltava'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Joki, joka tulee Böömistä',
     // 11,75 E / 53,05 N — Elben uoma Wendlandin mutkassa Dömitzin luona.
@@ -589,7 +589,7 @@ export const FOKUSKOHTEET_DEU = [
       'Millainen hallitsija Fredrik Suuri oli?',
       'Mitä rokokoo tarkoittaa rakennuksessa?',
     ],
-    korostukset: ['rokokoo|rokokootyylinen'],
+    korostukset: ['rokokoo|rokokootyylisenä'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Linna nimeltä "ilman huolia"',
     // 13,0387 E / 52,4004 N — en-Wikipedia "Sanssouci".
@@ -624,7 +624,7 @@ export const FOKUSKOHTEET_DEU = [
       'Mikä Hansaliitto oli ja miksi se päättyi?',
       'Miksi Hampuri oli oma valtionsa?',
     ],
-    korostukset: ['Hansaliitto|Hansaliiton', 'Elbe|Elben'],
+    korostukset: ['Hansaliitto|Hansaliittoon', 'Elbe|Elben'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Vapaa hansakaupunki',
     // 9,9937 E / 53,5511 N — en-Wikipedia "Hamburg".
@@ -696,7 +696,7 @@ export const FOKUSKOHTEET_DEU = [
       'Keitä Wittelsbachit olivat?',
       'Miksi München pysyi katolisena uskonpuhdistuksessa?',
     ],
-    korostukset: ['Wittelsbach|Wittelsbachin suku', 'Isar|Isarin'],
+    korostukset: ['Wittelsbach|Wittelsbachin suku', 'Isar|Isar-joen'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Baijerin kuningaskunnan pääkaupunki',
     // 11,5755 E / 48,1372 N — en-Wikipedia "Munich".
@@ -730,7 +730,7 @@ export const FOKUSKOHTEET_DEU = [
       'Miksi Dresdeniä sanotaan Elben Firenzeksi?',
       'Millaista maastoa Elben laakso Dresdenin kohdalla on?',
     ],
-    korostukset: ['Elbe|Elben', 'Lusatia|Lusatiaan'],
+    korostukset: ['Elbe|Elben', 'Lusatia|Länsi-Lusatian'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Saksin pääkaupunki Elben varrella',
     // 13,7373 E / 51,0504 N — en-Wikipedia "Dresden".

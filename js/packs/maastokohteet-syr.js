@@ -61,7 +61,7 @@ export const MAASTOKOHTEET_SYR = [
       'Kuinka kapea Gibraltarinsalmi todella on?',
       'Miksi Syyrian rannikkoa kutsutaan Levantiksi?',
     ],
-    korostukset: ['Levantti|Levantin'],
+    korostukset: ['Levantti|Levantiksi'],
     nappi: 'Meri kolmen maanosan välissä',
     // 35.35 E / 35.3 N — ulappa Latakian edustalla; artikkelin oma keskipiste on 18 / 35
     laudat: {

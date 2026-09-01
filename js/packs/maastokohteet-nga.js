@@ -84,7 +84,7 @@ export const MAASTOKOHTEET_NGA = [
       'Miksi Niger virtaa puolikuun muotoisen kaaren?',
       'Mikä on Nigerin suisto?',
     ],
-    korostukset: ['Benue|Benuen'],
+    korostukset: ['Benue'],
     nappi: 'Länsi-Afrikan pääjoki',
     // 6.74 E / 7.8 N — Lokoja, jossa Benue yhtyy Nigeriin; artikkelin koordinaatti 6,469 / 5,322 on suistossa
     laudat: {

@@ -67,10 +67,18 @@ export const MAASTOKOHTEET_SWE = [
       maailmankartta: { x: 6453.3, y: 1052.7 },
       europe: { x: 568.3, y: 384 },
     },
-    teksti: 'Itämeri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, '
-      + 'Liettua, Puola, Venäjä ja Ruotsi. Maantieteellisesti se jää Skandinavian niemimaan '
-      + 'sekä Pohjois- ja Keski-Euroopan tasangon väliin. Se on maailman suurin murtovesiallas.',
-    lahde: 'en-Wikipedia "Baltic Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja '
+      + 'niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät '
+      + 'täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se '
+      + 'kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se '
+      + 'nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, '
+      + 'jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja '
+      + 'Ruotsi, ja se on maailman suurin murtovesiallas. Gotlanti keskellä merta oli niin '
+      + 'arvokas paikka, että merirosvojoukko Vitaaliveljet piti sitä 1300-luvulla hallussaan; '
+      + 'merirosvous oli Itämerellä arkea 700-luvulta 1300-luvulle. Ruotsi vei merta myöten '
+      + 'varhaiskeskiajalta asti rautaa ja hopeaa.',
+    lahde: 'en-Wikipedia "Baltic Sea", johdanto-osa sekä osiot "Storms and storm floods", '
+      + '"Middle Ages"; laivan osalta "Vasa (ship)", johdanto-osa (tarkistettu 1.9.2026).',
   },
   {
     id: 'pohjanlahti',
@@ -80,17 +88,25 @@ export const MAASTOKOHTEET_SWE = [
       'Mikä Merenkurkku on?',
       'Miksi Pohjanlahden rannat nousevat?',
     ],
-    korostukset: ['Merenkurkku|Merenkurkku'],
+    korostukset: ['Merenkurkku|Merenkurkussa'],
     nappi: 'Itämeren pohjoisin haara',
     // 19.6 E / 62.6 N — ulappa Selkämeren pohjoisosassa; artikkelin oma keskipiste on 20 / 63
     laudat: {
       maailmankartta: { x: 6486.7, y: 793.5 },
       europe: { x: 587.5, y: 247.2 },
     },
-    teksti: 'Pohjanlahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin '
-      + 'itärannikon välissä. Se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden '
-      + 'eteläosassa on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä.',
-    lahde: 'en-Wikipedia "Gulf of Bothnia", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi '
+      + 'sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa '
+      + 'melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan '
+      + 'yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo '
+      + 'pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven '
+      + 'viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja '
+      + 'Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja '
+      + 'Selkämereen. Ruotsin puolella Luleå lastaa laivoihin rautamalmipellettejä ja Gävle on '
+      + 'maan kolmanneksi suurin konttisatama; muita satamia ovat Skellefteå, Umeå ja '
+      + 'Sundsvall.',
+    lahde: 'en-Wikipedia "Gulf of Bothnia", johdanto-osa sekä osiot "Geography" ja "Economy" '
+      + '(tarkistettu 1.9.2026).',
   },
   {
     id: 'gotaalv',

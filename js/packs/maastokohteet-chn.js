@@ -38,7 +38,7 @@ export const MAASTOKOHTEET_CHN = [
       'Mitkä ovat Kiinan viisi pyhää vuorta?',
       'Miksi keisarit nousivat juuri tälle vuorelle?',
     ],
-    korostukset: ['Shandong|Shandongin'],
+    korostukset: ['Kiinan viisi pyhää vuorta|viidestä pyhästä vuoresta'],
     nappi: 'Vuori, jota on palvottu 3 000 vuotta',
     // 117.1075 E / 36.2558 N — en-Wikipedia "Mount Tai"
     laudat: {

@@ -497,7 +497,7 @@ export const FOKUSKOHTEET_HUN = [
       'Miten puszta syntyi?',
       'Millaista karjaa aroilla laidunnetaan?',
     ],
-    korostukset: ['puszta|pusztan'],
+    korostukset: ['puszta|pusztaksi'],
     // 21,0500 E / 47,6000 N — en-Wikipedia "Hortobágy National Park",
     // puiston keskiosa Hortobágyn kylän seudulla.
     laudat: {
