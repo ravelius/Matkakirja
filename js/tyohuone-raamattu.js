@@ -2920,9 +2920,6 @@ export const RAAMATTU = {
           + 'peruutusehto.',
         'CONTRIBUTING.md — avoin lähdekoodi + tekniset periaatteet. '
           + 'README.md — esittely.',
-        'docs/viesti-fable.md — viestikanava, ei ohje. docs/arkisto/ '
-          + 'ja docs/raportit/ — ei ohjeita; vanhentunut tilannekuva '
-          + 'arkistoidaan heti.',
         'TYÖSESSIOIDEN SPEKSIOPPI (omistajan havainto 16.8.2026): '
           + 'tarkasti rajattu toimeksianto tuottaa Opukselta '
           + 'erinomaista jälkeä; väljä rajaus johtaa turhien asioiden '
