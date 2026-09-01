@@ -199,20 +199,13 @@ export function avaaSkandaali(ui, iso, skandaali) {
 }
 
 /**
- * SKANDAALIN SISUS — otsikko, paikka–vuosi-rivi, tarina, lähde ja
- * minivisa.
+ * SKANDAALIN SISUS — otsikko, paikka–vuosi-rivi, tarina ja minivisa.
  *
  * Erotettu omaksi funktiokseen 31.8.2026 (kategoria per kaupunki):
  * sama sisus latoutuu joko oman kortin ylärivin alle tai osiona
  * yhdistetyllä lehdellä (js/fokuskohteet.js piirraRyhmanOsiot). Tyyli
  * ladataan tässä samasta syystä kuin syvennystarinalla — osiona
  * kutsuttaessa korttia ei avata lainkaan.
- *
- * LÄHDERIVI ON SAMA RIVI KUIN TÄKYNOSTOLLA (1.9.2026, nostoaudit):
- * sama luokka `fokusnosto-lahde` ja sama paikka — tekstin jälkeen,
- * ennen visaa — kuin js/fokusnosto.js piirraNostonSisus. Kortin
- * yläreunan `paikka · vuosi` on metarivi eikä lähde, vaikka se lainaa
- * samaa tyyliä; siksi rivejä on nyt kaksi ja lähde on alempi.
  */
 function piirraSkandaalinSisus(ui, sailio, iso, skandaali) {
   skandaaliLataaTyyli();
@@ -224,7 +217,6 @@ function piirraSkandaalinSisus(ui, sailio, iso, skandaali) {
     teksti.appendChild(html('p', '', kappale));
   }
   sailio.appendChild(teksti);
-  if (skandaali.lahde) sailio.appendChild(html('p', 'fokusnosto-lahde', skandaali.lahde));
   piirraSkandaaliVisa(ui, sailio, iso, skandaali);
 }
 
@@ -246,6 +238,11 @@ function piirraSkandaaliVisa(ui, sisalto, iso, skandaali) {
     sisalto.appendChild(laatikko);
     return;
   }
+  // Palkkio näkyviin ennen vastaamista, kuten syvennysvisassa
+  // (omistaja 1.9.2026: "lopussa oleva kysymys ei mainitse, mitä
+  // siitä voi voittaa").
+  laatikko.appendChild(html('p', 'fokusvirta-visa-palkkio',
+    `Oikeasta vastauksesta saat ${TAKY_PALKKIO} puntaa.`));
   const vaihtoehdot = html('div', 'fokusvirta-vaihtoehdot');
   visa.vaihtoehdot.forEach((tekstiRivi, i) => {
     const nap = html('button', '', tekstiRivi);
