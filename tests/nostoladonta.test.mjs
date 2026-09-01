@@ -26,16 +26,34 @@ test('nimiön kirjasinkoko on sama luku kuin symbolikirjastossa', () => {
 
 test('katto on kartan oman kohdenimen ruutukoko', () => {
   assert.equal(NOSTOLADONTA_NIMIO_KATTO, KARTTANIMI_KOOT.kohde);
-  // Ja se on myös kaupungin nimen koko — omistajan "max sama koko kuin
-  // kohdekaupungin koko" (1.9.2026).
-  assert.equal(NOSTOLADONTA_NIMIO_KATTO, KARTTANIMI_KOOT.kaupunki);
+});
+
+/*
+ * OMISTAJA 1.9.2026 ilta, kuvakaappaus Bulgarian lehtinäkymästä,
+ * sanatarkasti: *"kaupunkien nimet pitäisi olla isommalla (suurenna)
+ * kuin karttanostojen nimet joita voi pienentää"*.
+ *
+ * Tämä KUMOAA saman päivän aamun väitteen "katto on myös kaupungin
+ * nimen koko" (*"max sama koko kuin kohdekaupungin koko"*). Aamun
+ * sääntö oli yläraja — nosto ei saa olla kaupunkia isompi — ja se
+ * pätee yhä; illan tilaus tekee siitä AIDON eron eikä tasapeliä.
+ * Väite on siksi epäyhtälö eikä yhtäsuuruus: se kaatuu, jos nostot
+ * joskus kasvavat kaupunkien tasolle takaisin.
+ */
+test('nostonimiö on selvästi kaupungin nimeä pienempi', () => {
+  assert.ok(NOSTOLADONTA_NIMIO_KATTO < KARTTANIMI_KOOT.kaupunki,
+    `nosto ${NOSTOLADONTA_NIMIO_KATTO} px, kaupunki ${KARTTANIMI_KOOT.kaupunki} px`);
+  assert.ok(KARTTANIMI_KOOT.kaupunki / NOSTOLADONTA_NIMIO_KATTO >= 1.3,
+    `suhde vain ${(KARTTANIMI_KOOT.kaupunki / NOSTOLADONTA_NIMIO_KATTO).toFixed(2)}`);
+  // Ja kartan porras pysyy: pääkaupunki on tavallista kaupunkia isompi.
+  assert.ok(KARTTANIMI_KOOT.isoKaupunki > KARTTANIMI_KOOT.kaupunki);
 });
 
 test('katto ei pure loitolla eikä keskizoomilla', () => {
   const porras = KOHDE_SYMBOLI_SKAALA * NOSTOLADONTA_S;
   // z5-vastaava (1,8 CSS-px / lautayksikkö) ja z6-vastaava (3,6):
-  // nimiö on 6,2 ja 12,4 px, joten katto (10,5) puree vasta z6:n
-  // yläpuolella.
+  // nimiö on 6,2 ja 12,4 px, joten katto (8,5) puree z5:n ja z6:n
+  // välissä — z5 jää yhä koskematta.
   assert.equal(nostoladontaKattoPorras(porras, 1.8), porras);
   assert.ok(nostoladontaKattoPorras(porras, 3.6) < porras);
   const kynnys = NOSTOLADONTA_NIMIO_KATTO / (NOSTOLADONTA_NIMIO_KOKO * porras);

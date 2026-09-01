@@ -1328,30 +1328,23 @@ body.kartta-merkit-piilossa .fokusnosto-symbolit,
 body.kartta-merkit-piilossa .elaintakyt,
 body.kartta-merkit-piilossa .karttanimet,
 body.kartta-merkit-piilossa .maastonimet { display: none; }
-/* MAATUMMENNUS VÄISTYY VAIN ZOOMISSA (omistaja 1.9.2026: *"Kartan
-   tummennus voisi pysyä panoroitaessa päällä."*).
+/* MAATUMMENNUS EI OLE YLLÄ OLEVISSA LISTOISSA — se ei väisty
+   kummassakaan eleessä (omistaja 1.9.2026 ilta, sanatarkasti: *"jos
+   ympärivaltoiden tummennus on mahdollista pitää zoomatessa päällä
+   (paitsi jos menee rajan yli missä poistuu), niin sen voisi kytkeä
+   päälle."* — ja saman päivän aamuna panoroinnista: *"Kartan tummennus
+   voisi pysyä panoroitaessa päällä."*).
 
-   Kerros oli 31.8.2026 illasta lähtien yllä olevissa listoissa, eli
-   piilossa koko eleen ajan. Ero panoroinnin ja nipistyksen välillä on
-   maalikierroksessa eikä maussa: panoroinnissa varjo on STAATTINEN
-   polku, jonka emoryhmän siirto liikuttaa kompositorilla, kun taas
-   nipistys skaalaa sen joka kehyksellä — ja juuri nipistyksen
-   longtaskit olivat piilotuksen syy. Luokan asettaa js/kartta.js
-   piilotaMerkit(true) vain silloin kun eleen mittakaava muuttuu.
+   Luokkaa `kartta-tummennus-piilossa` EI OLE ENÄÄ OLEMASSA. Se oli
+   olemassa yhden päivän ajan nipistystä varten, ja mittaus vei siltä
+   perustelun: nipistys on kameran CSS-muunnos eikä uusi viewBox, joten
+   varjopolku skaalautuu kompositorissa eikä sitä ladota eleen aikana
+   kertaakaan. Luvut ja koko perustelu: js/kartta.js piilotaMerkit.
 
-   MITATTU (savuke-maailmanakyma, 390x844 dpr3, 4x kuristus; kuusi
-   ajoa ennen, viisi jälkeen, longtaskien summa per ajo):
-
-     panorointi  ennen   114 / 106 / 102 / 76 / 55 / 0 ms   (med.  89)
-                jälkeen  161 / 121 / 107 / 53 / 52 ms       (med. 107)
-     nipistys    ennen   686 / 670 / 621 / 618 / 561 / 558  (med. 620)
-                jälkeen  693 / 636 / 602 / 592 / 537        (med. 602)
-
-   Panorointi ei siis kallistu tummennuksen jäädessä näkyviin: sarjat
-   menevät päällekkäin ja mediaanien ero on 18 ms kuuden pyyhkäisyn
-   yli. Savukkeen väitteet 1b ja 1c lukevat kerroksen tilan KESKEN
-   eleen — levossa kumpikin toteutus näyttäisi samalta. */
-body.kartta-tummennus-piilossa .maatummennus { display: none; }
+   Omistajan sulkeishuomautus *"paitsi jos menee rajan yli missä
+   poistuu"* on kerroksen oma näkyvyysehto (js/maatummennus.js
+   `tunniste`) eikä ele-ehto: tummennus on olemassa vain pelaajan
+   uloimmasta zoomista sisäänpäin ja vain nykyiselle maalle. */
 
 @media (prefers-reduced-motion: reduce) {
   /* Liikeherkkyys: nimikerros väistyy kerralla ilman häivytystä. */
@@ -1365,17 +1358,16 @@ body.kartta-tummennus-piilossa .maatummennus { display: none; }
    piirtää hieman paksummalla. nämä voisivat hävitä välittömästi
    siirron alkaessa ja tulla feidaten sisään."*).
 
-   KATOAMINEN on yllä olevassa display:none-joukossa: kerros poistuu
-   maalikierroksesta eleen ENSIMMÄISESSÄ kehyksessä, kuten kaikki muukin
-   polttamaton karttasisältö.
+   KATOAMISTA EI ENÄÄ OLE (1.9.2026 ilta): kerros ei väisty eleen
+   ajaksi kummassakaan eleessä, joten sillä ei ole eleen jälkeistä
+   paluutakaan. Ks. yllä oleva lohko ja js/kartta.js piilotaMerkit.
 
-   PALUU ON ANIMAATIO EIKÄ SIIRTYMÄ, ja se on tarkoituksellinen ero
-   nimikerrokseen. Siirtymä ei laukea, kun elementti tulee esiin
-   `display: none`sta — selain ei näe lähtöarvoa piilotetusta
-   kerroksesta. CSS-animaatio sen sijaan LUODAAN UUDELLEEN ja käynnistyy
-   alusta juuri silloin kun elementti alkaa taas piirtyä, eli sillä
-   hetkellä kun js/kartta.js paljastaMerkit ottaa luokan pois. Sama
-   feidaus tulee siis ilman yhtäkään riviä ajastuskoodia.
+   FEIDAUS ON SIIRTYNYT SIIHEN HETKEEN, JOSSA VARJO SYNTYY: maa vaihtuu
+   tai näkyvyysehto aukeaa, ja js/maatummennus.js `piirra` käynnistää
+   tämän animaation uudelleen (`animation: none` -> pakotettu tyylin
+   luku -> takaisin). Animaatio on yhä ANIMAATIO EIKÄ SIIRTYMÄ, koska
+   se on ainoa, joka voidaan käynnistää alusta ilman lähtöarvoa —
+   siirtymä tarvitsisi kaksi kehystä ja rivin ajastuskoodia.
 
    === FEIDAUS ON PERITTY fill/stroke-opacity, EI RYHMÄN opacity —
        JA SE ON PORTAIKKO ===========================================
@@ -1424,9 +1416,11 @@ body.kartta-tummennus-piilossa .maatummennus { display: none; }
 
    SÄVY ON HIMMEÄ MUSTE EIKÄ TÄYSI --map-ink, ja alfa on värissä eikä
    `stroke-opacity`-ominaisuudessa. Omistajan kuvapalaute 31.8.2026 oli,
-   että ero maahan pitää tehdä pinnalla eikä reunuksella; reunus on nyt
-   yksi ruutupikseli 60 %:n musteella, jolloin se lukee saattajana eikä
-   rajapyykkinä. Omaa `stroke-opacity`-arvoa EI saa antaa: se katkaisisi
+   että ero maahan pitää tehdä pinnalla eikä reunuksella; reunus on
+   1.9.2026 alkaen kaksi ruutupikseliä 60 %:n musteella (*"paksunna maan
+   rajaa myös hieman"*), jolloin se lukee korostuksena mutta ei
+   rajapyykkinä — leveys ja sen perustelu js/maatummennus.js
+   TUMMENNUS_VIIVA. Omaa `stroke-opacity`-arvoa EI saa antaa: se katkaisisi
    perinnän ryhmästä, ja juuri perittyä stroke-opacityä yllä oleva
    portaikkofeidaus animoi (ks. mittaustaulukko). Värin alfa kertautuu
    feidauksen kanssa, joten viiva feidaa sisään siinä missä varjokin. */
@@ -21794,19 +21788,29 @@ body.maataulu-auki .toimintorivi .monitoimi-nappi {
  * pieni kursiivi antiikva)"*).
  *
  * Luvut ovat suoraan tools/fokuskartta/piirto.js:n kohdasta 8e
- * (poltettu vuorennimi): kursiivi antiikva, muste rgba(74,52,33,0.92)
- * ja pergamenttihalo rgba(232,220,188,0.85) leveydellä 3,2. Kaunokäsiala
- * (--font-kauno) oli tässä 27.8.2026 asti, ja juuri se erotti pelin
- * nimiöt lehden omista nimistä yhdellä silmäyksellä.
+ * (poltettu vuorennimi): kursiivi antiikva ja muste rgba(74,52,33,0.92).
+ * Kaunokäsiala (--font-kauno) oli tässä 27.8.2026 asti, ja juuri se
+ * erotti pelin nimiöt lehden omista nimistä yhdellä silmäyksellä.
+ *
+ * PERGAMENTTIHALO POISTUI 1.9.2026 (omistaja, kuvakaappaus Bulgarian
+ * lehtinäkymästä, sanatarkasti: *"otetaan pois karttanostojen
+ * teksteistä valkoinen ääriviiva, eli tekstit pelkällä tummalla"*).
+ * Halo on poltetun VUORENNIMEN keino: siellä nimi kirjoitetaan keskelle
+ * kirjavaa rinnettä. Karttanoston nimiö on merkkinsä vieressä oleva
+ * lippu, ja merkillä on jo oma laattansa — kolmas vaalea reunus teki
+ * nimistä sumeita. `paint-order` jää pois samalla: ilman strokea sillä
+ * ei ole mitään järjestettävää.
+ *
+ * SAMA LUKU ON CANVASILLA (js/fokusnosto-symbolit.js
+ * NOSTOSYM_NIMIO_ASUT `haloLeveys: 0`), koska poltettu ladonta ei voi
+ * odottaa CSS:ää. Kaupunkien ja maaston nimet (.karttanimi) eivät kuulu
+ * tähän sääntöön eivätkä muutu.
  */
 .nostosym-nimio {
   font-family: var(--font-atlas);
   font-style: italic;
   fill: rgba(74, 52, 33, 0.92);
-  paint-order: stroke;
-  stroke: rgba(232, 220, 188, 0.85);
-  stroke-width: 3.1px;
-  stroke-linejoin: round;
+  stroke: none;
   pointer-events: none;
 }
 

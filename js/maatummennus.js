@@ -15,8 +15,8 @@
  *   ON — säädin on yksi vakio, ja sitä säädetään kuvavedoksista.
  *
  *   ÄÄRIVIIVA on nykyisen maan renkaat viivana himmeällä kartan
- *   musteella, yhden ruutupikselin levyisenä. Se on saattaja: nykyisen
- *   maan raja — ei naapureiden, ei kaikkien maiden.
+ *   musteella, kahden ruutupikselin levyisenä (`TUMMENNUS_VIIVA`). Se
+ *   on nykyisen maan raja — ei naapureiden, ei kaikkien maiden.
  *
  * === MERI EI OLE NAAPURI (omistajan kaappaus 31.8.2026 yöllä, v1406)
  *
@@ -72,33 +72,45 @@
  * täällä: kun kartta on loitonnettu pelaajan rajaa kauemmas, tummennus
  * jää pois.
  *
- * === ELEKÄYTÖS (v1395:n kaksivaiheinen koneisto) ===================
+ * === ELEKÄYTÖS: KERROS EI VÄISTY LAINKAAN ==========================
  *
- * KERROS VÄISTYY VAIN ZOOMISSA (omistaja 1.9.2026 aamu, sanatarkasti:
- * *"Kartan tummennus voisi pysyä panoroitaessa päällä."*). Kerros oli
- * 31.8.2026 illasta lähtien samassa display:none-joukossa kuin
- * merkkikerrokset, eli piilossa KOKO eleen ajan; nyt sillä on oma
- * luokkansa `.kartta-tummennus-piilossa`, jonka js/kartta.js
- * piilotaMerkit asettaa vain kun eleen MITTAKAAVA muuttuu.
+ * Omistaja 1.9.2026, kaksi tilausta samana päivänä. Aamulla:
+ * *"Kartan tummennus voisi pysyä panoroitaessa päällä."* Illalla,
+ * kuvakaappaus Bulgarian lehtinäkymästä: *"jos ympärivaltoiden
+ * tummennus on mahdollista pitää zoomatessa päällä (paitsi jos menee
+ * rajan yli missä poistuu), niin sen voisi kytkeä päälle."*
  *
- * Ero on maalikierroksessa eikä maussa. Panoroinnissa varjo on
- * staattinen polku, jonka emoryhmän siirto liikuttaa kompositorilla —
- * ei ladontaa, ei uudelleenmaalausta. Nipistyksessä se skaalataan joka
- * kehyksellä, ja juuri nipistyksen longtaskit olivat koko piilotuksen
- * syy (taulukko alempana). Mitattu 1.9.2026 samalla savukkeella (kuusi
- * ajoa ennen, viisi jälkeen): panoroinnin longtaskit
- * 114/106/102/76/55/0 ms -> 161/121/107/53/52 ms (mediaani 89 -> 107)
- * ja nipistyksen 686/670/621/618/561/558 -> 693/636/602/592/537
- * (mediaani 620 -> 602). Panorointi ei siis kallistunut ajokohinaa
- * enempää.
+ * Kerros oli 31.8.2026 illasta lähtien samassa display:none-joukossa
+ * kuin merkkikerrokset (piilossa koko eleen ajan), sitten päivän
+ * ajan piilossa vain nipistyksessä. Nyt ei kummassakaan: luokkaa
+ * `.kartta-tummennus-piilossa` ei ole enää olemassa missään.
  *
- * Zoom-eleen paluu feidaa: kerroksella on `animation`, ei `transition`,
- * koska display:none → näkyvä ei laukaise siirtymää mutta KÄYNNISTÄÄ
- * animaation alusta. Kaksivaiheinen koneisto tuo kerroksen takaisin
- * vasta levon jälkeen (js/kartta.js paljastaMerkit), jolloin feidaus
- * alkaa siitä hetkestä. Nauhoitettu 31.8.2026: kerros katosi 13 ms:ssä
- * eleen alusta ja palasi 0 → 1 noin 320 ms:ssä levon jälkeen.
- * Panoroinnissa feidausta ei ole, koska kerros ei koskaan katoa.
+ * PIILOTUKSEN PERUSTELU KAATUI MITTAUKSEEN. Piilotus tehtiin, koska
+ * nipistyksen oletettiin skaalaavan varjopolun joka kehyksellä. Kartan
+ * nipistys on kuitenkin kameran CSS-muunnos (js/kartta.js touchmove:
+ * `translate3d(...) scale(...)`) eikä uusi viewBox, joten polku
+ * skaalautuu kompositorissa eikä sitä ladota eleen aikana kertaakaan.
+ * Mitattu 1.9.2026 (Chromium 390x844 dpr3, 4x kuristus, kehittäjän
+ * maailmanäkymä Ateenan lähikuvassa; neljä nipistystä ja kuusi
+ * pyyhkäisyä per ajo, neljä ajoa per variantti VUOROTELLEN,
+ * lämmittelykierros pois; longtaskien summa per ajo):
+ *
+ *     kerros piilossa   nipistys med. 1101 ms   panorointi med. 779 ms
+ *     kerros näkyvissä  nipistys med. 1125 ms   panorointi med. 686 ms
+ *
+ * Ero on ajojen omaa hajontaa kummassakin eleessä — ja mittaus on tehty
+ * UUDELLA, kuusi kertaa tiheämmällä polulla (ks. seuraava luku).
+ *
+ * *"PAITSI JOS MENEE RAJAN YLI MISSÄ POISTUU"* on jo olemassa, ja se on
+ * NÄKYVYYSEHTO EIKÄ ELE-EHTO: `tunniste` antaa kerroksen vain pelaajan
+ * omasta uloimmasta zoomista sisäänpäin ja vain nykyiselle maalle.
+ * Loitonnus rajan yli tyhjentää kerroksen ja maanvaihto latoo sen
+ * uudelle maalle — kumpikin näkymän ASETUTTUA, ei eleen aikana.
+ *
+ * FEIDAUS SEURAA VARJON SYNTYÄ EIKÄ ELETTÄ. Kerroksella on `animation`
+ * eikä `transition`, ja `piirra` käynnistää sen uudelleen aina kun
+ * varjo rakennetaan — se on nyt ainoa hetki, jossa kerros ilmestyy
+ * tyhjästä. Eleen jälkeistä paluuta ei ole, koska katoamistakaan ei ole.
  *
  * FEIDATTAVA OMINAISUUS ON PERITTY `fill-opacity` / `stroke-opacity`
  * EIKÄ RYHMÄN `opacity`, ja animaatio on PORTAIKKO. Kumpikin on
@@ -111,8 +123,24 @@
  * muoto mutta pienempi pinta, ja mitattu ero on ajojen hajonnan
  * kokoinen (ks. `muidenPolku`).
  *
- * ELEIDEN VÄLISSÄ KERROS ON STAATTINEN. Polut lasketaan vain kun maa
- * vaihtuu tai näkyvyys kytkeytyy — ei kehystä kohti, ei näkymää kohti.
+ * KERROS ON STAATTINEN. Polut lasketaan vain kun maa vaihtuu tai
+ * näkyvyys kytkeytyy — ei kehystä kohti, ei näkymää kohti, ei eleen
+ * aikana.
+ *
+ * === AINEISTO ON POLTON OMA (1.9.2026) =============================
+ *
+ * Omistaja, sama kuvakaappaus: *"saako nuo rajat korjattua, että
+ * tummennus ja maan rajan vahvistus menisi samaa reittiä kuin raja
+ * kartassa? paksunna maan rajaa myös hieman"*.
+ *
+ * Kysymys ei ollut piirtäjän vaan LÄHTEEN: tämä kerros piirsi Natural
+ * Earthin 50m-polygoneista, kun laattoihin poltettu rajaviiva ja
+ * rantaviiva tulevat 10m-aineistosta. Aineisto tehdään nyt samasta
+ * 10m-lähteestä ja samalla 0,006 asteen kynnyksellä kuin poltto, joten
+ * varjon reuna ja vahvistusviiva kulkevat poltetun rajan päällä
+ * (mittaukset: tools/generoi-maapolygonit.mjs). Hinta on kuusi kertaa
+ * tiheämpi polku — 240 000 kärkipistettä ja 3,29 miljoonaa merkkiä
+ * `d`-määreessä — eikä se näkynyt kehysmittauksissa (ks. ELEKÄYTÖS).
  *
  * === AINEISTO ON LAISKA (sama malli kuin js/maakayrat.js) ==========
  *
@@ -182,12 +210,27 @@ const TUMMENNUS_MUSTE = `rgba(58, 40, 25, ${TUMMENNUS_VOIMA})`;
  * täydellä musteella, ja omistaja katsoi kuvat 31.8.2026: *"Kevyt
  * ääriviiva mutta muut valtiot saisi tummentaa enemmän."* Ero maahan
  * tehdään siis PINNALLA (`TUMMENNUS_VOIMA`) eikä reunuksella, ja reunus
- * kevennetään yhteen ruutupikseliin — se on nyt hitusen ohuempi kuin
- * poltettu rantaviiva, joten Egeanmeren pikkusaari ei lue lähizoomissa
+ * kevennettiin yhteen ruutupikseliin — hitusen ohuemmaksi kuin
+ * poltettu rantaviiva, jottei Egeanmeren pikkusaari lue lähizoomissa
  * tummana renkaana eikä pieni maa kaukonäkymässä raskaana könttänä.
  * Sävy himmennetään samassa hengessä css/styles.css:ssä.
+ *
+ * 1 -> 2 PIKSELIÄ (omistaja 1.9.2026, sama kuvakaappaus Bulgarian
+ * lehdestä kuin rajojen osuvuudessa, sanatarkasti: *"paksunna maan
+ * rajaa myös hieman"*). Kaksi ruutupikseliä on runsas puolitoista
+ * kertaa poltettu rantaviiva (piirto.js osio 7: `1,35 * S`), eli maan
+ * oma raja erottuu nyt naapurinsa rannikosta ilman että siitä tulee
+ * tolppa — se on juuri se, mitä *"hieman"* tarkoittaa. Yhden pikselin
+ * viiva näytti samalta kuin rantaviiva sen alla, ja pyynnön syy oli
+ * siinä: viivaa ei erottanut korostukseksi.
+ *
+ * PAKSUNNUS ON MAHDOLLINEN VASTA NYT. Niin kauan kuin viiva kulki eri
+ * geometriaa kuin poltettu raja (ks. tools/generoi-maapolygonit.mjs
+ * "LÄHDE ON SAMA KUIN POLTETULLA RAJALLA"), paksumpi viiva olisi vain
+ * tehnyt eron näkyvämmäksi. Samalla reunalla se peittää poltetun viivan
+ * kuten korostuksen kuuluukin.
  */
-const TUMMENNUS_VIIVA = 1;
+const TUMMENNUS_VIIVA = 2;
 
 let polygoniLupaus = null;
 
@@ -281,10 +324,13 @@ function maanPolkuMuistista(data, iso, tarkkuus, leveys) {
  * KAIKKIEN MUIDEN MAIDEN renkaat yhtenä polkuna — tummennuksen muoto.
  *
  * KOKO MAAILMA EIKÄ NÄKYMÄN YMPÄRISTÖ, ja se on mittaustulos. Polku on
- * iso — Kreikassa 133 maata, 1193 rengasta, 38 517 pistettä ja 536 662
- * merkkiä `d`-määreessä, kun vanha suorakaide oli 6 856 — mutta se
- * ladotaan VAIN maan vaihtuessa ja on eleiden välissä staattinen, ja
- * eleen ajan koko kerros on display:none. Mitattu Kreikan lähikuvassa
+ * iso — Kreikassa 133 maata, noin 2 550 rengasta, 239 000 pistettä ja
+ * 3 286 148 merkkiä `d`-määreessä (10m-aineisto 1.9.2026; sitä ennen
+ * 1 193 rengasta ja 536 662 merkkiä, ja alkuperäinen suorakaide 6 856)
+ * — mutta se ladotaan VAIN maan vaihtuessa ja on muuten staattinen.
+ * Alla olevat luvut on mitattu 50m-aineistolla; kehysmittaus uudella
+ * polulla on tiedoston alussa (ELEKÄYTÖS), eikä se erottunut
+ * kohinasta. Mitattu Kreikan lähikuvassa
  * (Chromium 390x844 dpr3, scratch-mitta 31.8.2026; ladonta = avain
  * nollille ja uusi piirto, feidaus = kerros piiloon ja takaisin,
  * kolmesti):
@@ -425,6 +471,21 @@ function piirra(ui, data, tila) {
   viiva.setAttribute('stroke-width', String(TUMMENNUS_VIIVA));
   kerros.appendChild(viiva);
   ui.maatummennusAvain = tila.avain;
+  /*
+   * FEIDAUS ALKAA TÄSTÄ HETKESTÄ (1.9.2026). Kerros ei enää katoa eleen
+   * ajaksi, joten `display: none` → näkyvä ei enää käynnistä
+   * css/styles.css:n `maatummennus-esiin`-animaatiota. Varjo ilmestyy
+   * nyt vain silloin kun se rakennetaan — maanvaihdossa tai
+   * näkyvyysehdon auetessa — ja animaatio käynnistetään siinä käsin.
+   *
+   * `animation: none` + pakotettu tyylin luku + takaisin on selaimen
+   * oma tapa nollata käynnissä oleva animaatio. Luku maksaa yhden
+   * tyylilaskennan, ja se tehdään korkeintaan kerran maanvaihtoa
+   * kohti — ei näkymää eikä kehystä kohti.
+   */
+  kerros.style.animation = 'none';
+  void getComputedStyle(kerros).animationName;
+  kerros.style.animation = '';
 }
 
 /** Lauta vaihtui tai peli purettiin: kerros ja avain nollille. */

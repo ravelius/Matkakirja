@@ -952,6 +952,51 @@ const FOKUS_KUVAN_REUNA = [0.16, 0.28, 0.42, 0.62, 1];
  * (23 -> 19 -> 15 -> 10,5).
  */
 const FOKUS_LAATTA_PX = 10.5;
+/* ===== PELAAJAN OMA KAUPUNKI ON ASKELHELMEN KOKOINEN YMPYRÄ ========
+ *
+ * OMISTAJA 1.9.2026 ilta, kuvakaappaus Bulgarian lehtinäkymästä,
+ * sanatarkasti: *"se kaupunki jossa pelaaja on pitäisi olla saman
+ * kokoinen ympyrä kuin askelpisteet ovat (pienennyksen jälkeen)."*
+ *
+ * ── MIKSI TÄMÄ ON OMA MITTANSA ────────────────────────────────────
+ *
+ * FOKUS_LAATTA_PX on RUUDUN mitta lehden perustasolla, ja sen päällä on
+ * kasvukatto (fokusKasvukatto), joka lukitsee laatan ruutukoon
+ * maanäkymän kokoon. Askelhelmi taas on KARTTAVAKIO: se poltetaan
+ * laattoihin reittiyksiköissä (tools/fokuskartta/maailmapiirto.js
+ * REITTITYYLI.helmi) ja kasvaa ruudulla zoomin mukana. Kaksi eri
+ * mittajärjestelmää eivät voi olla samankokoisia kuin yhdellä
+ * zoomitasolla — juuri sen omistaja luki lähikuvasta.
+ *
+ * Pelaajan oma kaupunki saa siksi KARTTAVAKION: säde reittiyksiköinä,
+ * täsmälleen niin kuin helmi. Muut kaupungit jäävät entiseen yhteiseen
+ * ruutumittaansa kattoineen — ne olivat 31.8.2026 se, mikä näkyi
+ * *"hervottoman isona"*, eikä tämä tilaus koske niitä.
+ *
+ * ── KYTKÖS ON PIDETTÄVÄ KÄSIN ─────────────────────────────────────
+ *
+ * Reittityyli asuu laattageneraattorin puolella, eikä js/ saa tuoda
+ * tools/-moduulia (yhden tiedoston versio ketjuttaa vain js/:n).
+ * Vartija on siksi testi: tests/viivataso.test.mjs vertaa tätä lukua
+ * REITTITYYLI.helmiin ja kaatuu, jos helmi muuttuu eikä tämä seuraa.
+ * KUN HELMI PIENENEE, TÄMÄ PIENENEE SAMASSA ERÄSSÄ.
+ *
+ * 12 on omistajan *"pienennyksen jälkeen"*: helmi on tätä kirjoitettaessa
+ * 15 R ja pienenemässä, ja 12 R on se luokka, johon se on menossa.
+ * Laatta ei siis ole koskaan helmeä isompi.
+ */
+const FOKUS_LAATTA_R = 12;
+/*
+ * REITTIYKSIKKÖ (R) LAUDAN YKSIKÖINÄ.
+ *
+ * R on määritelty pyramidin syvimmän tason tiheydestä
+ * (maailmapiirto.js: `R = (px / SYVIN_TIHEYS) * paperiS`, SYVIN_TIHEYS
+ * 7,2 ja paperiS 1), joten yksi R on 1/7,2 lautayksikköä JOKA TASOLLA —
+ * se on koko idea: reittimerkinnät ovat karttavakioita.
+ */
+const REITTIYKSIKKO_LAUDALLA = 1 / 7.2;
+/** Pelaajan kaupungin ympyrän säde laudan yksiköinä (= askelhelmi). */
+const FOKUS_LAATTA_SADE = FOKUS_LAATTA_R * REITTIYKSIKKO_LAUDALLA;
 /*
  * LEHDEN OMA PROTOTYYPPILEVEYS PIKSELEINÄ (tools/fokuskartta/piirto.js
  * `S`): lehden kaikki ladonta — kirjainkoot, viivanleveydet,
@@ -3619,11 +3664,8 @@ export class UI {
     cancelAnimationFrame(this.merkkiPaluuKehys ?? 0);
     this.merkkiPaluuKehys = 0;
     this.merkitPiilossa = false;
-    this.merkkiZoomEle = false;
     document.body.classList.remove('kartta-merkit-piilossa');
     document.body.classList.remove('kartta-merkit-haipyy');
-    // Zoom-eleen oma luokka (maatummennus) samasta syystä.
-    document.body.classList.remove('kartta-tummennus-piilossa');
     // Lehden avauksen mittavarmistuksen jälkitarkistukset samoin.
     clearTimeout(this.lehtitila.lehtiMittaAjastin);
     clearTimeout(this.lehtitila.lehtiMittaJalkiajastin);
@@ -4123,9 +4165,7 @@ export class UI {
         else this.kartta?.naytaMerkit?.(true);
         document.body.classList.remove('kartta-merkit-piilossa');
         document.body.classList.remove('kartta-merkit-haipyy');
-        document.body.classList.remove('kartta-tummennus-piilossa');
         this.merkitPiilossa = false;
-        this.merkkiZoomEle = false;
       }
     }
     return Boolean(this.osoitinKartalla || this.kartanRaahaus);
@@ -7709,10 +7749,27 @@ export class UI {
         vanha.classList.remove('nappulan-alla');
       }
     }
-    for (const osa of osat) this.asetaLaatanKoko(osa, kerroin);
     this.fokusLaattaOsat = osat;
     // Sama mitta koskee KAIKKIA kaupunkeja (ks. alla).
     this.paivitaMaailmanLaattaKoot(kerroin);
+    /*
+     * PELAAJAN OMA KAUPUNKI VIIMEISENÄ JA OMALLA MITALLAAN
+     * (FOKUS_LAATTA_SADE, omistaja 1.9.2026: *"saman kokoinen ympyrä
+     * kuin askelpisteet"*).
+     *
+     * JÄRJESTYS ON EHTO, EI TYYLISEIKKA: paivitaMaailmanLaattaKoot käy
+     * läpi kerroksen KAIKKI lapset, myös pelaajan omat osat, ja
+     * kirjoittaisi niihin yhteisen kertoimen. Oma mitta on siksi sen
+     * jälkeen — ja joka kerta, koska maailmapassi voi ohittaa itsensä
+     * tunnisteella mutta oma laatta ei saa jäädä väärään kokoon.
+     *
+     * Säde on laudan yksiköitä, joten kerroin ei riipu mittakaavasta
+     * lainkaan: ympyrä kasvaa ja kutistuu kartan mukana kuten helmi.
+     */
+    const omaKerroin = Number.isFinite(rx) && rx > 0
+      ? FOKUS_LAATTA_SADE / rx
+      : kerroin;
+    for (const osa of osat) this.asetaLaatanKoko(osa, omaKerroin);
     /*
      * MERKINTÄ SIITÄ, ETTÄ NAPPULA SEISOO TÄMÄN LAATAN PÄÄLLÄ.
      *

@@ -54,3 +54,9 @@ worker/sahke/wrangler.toml
 # vahingossa lisattyna ne menevat committiin upotettuna repona
 # (nain kavi kerran 23.8.2026, korjattu amendilla).
 .claude/worktrees/
+
+# Natural Earthin 10m-lähdetiedostot, joita tools/generoi-maapolygonit.mjs
+# noutaa. Kolmetoista megatavua raaka-ainetta: AJO hakee verkosta, TULOS
+# (assets/data/maapolygonit.json) on repossa. Sama linja kuin
+# rajasettien hakijalla (tools/hae-maiden-rajat.mjs).
+.nevalimuisti/
