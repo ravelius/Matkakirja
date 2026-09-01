@@ -20,6 +20,19 @@ export const RAAMATTU = {
       kohdat: [
         'LAATU ON AINA TÄRKEIN PRIORITEETTI. Laatu voittaa vauhdin, '
           + 'määrän ja kustannuksen. Vähemmän ja viimeisteltyä.',
+        'AGENTTIAJOISSA KORKEINTAAN OPUS (omistaja 1.9.2026, '
+          + 'sanatarkasti: "älä käytä fablea agenttiajossa. se on '
+          + 'kiellettyä. käytä aina opus tai sonnet", "fable '
+          + 'kuluttaa aivan liikaa tokeneita" ja "käytä muutenkin '
+          + 'aina korkeintaan opusta agenttitehtävissä. ainoastaan '
+          + 'jos on oikeasti todella vaikea ongelma niin voit '
+          + 'käyttää fablea, mutta sekin kannattaa kysyä minulta"): '
+          + 'ali-agentit, parvet ja workflow-ajot ajetaan AINA '
+          + 'korkeintaan Opuksella — rutiinityö Sonnetilla, vaativa '
+          + 'koodi ja katselmointi Opuksella. Fablea saa käyttää '
+          + 'agenttina vain todella vaikeaan ongelmaan ja '
+          + 'lähtökohtaisesti omistajalta kysyen. Fable itse tekee '
+          + 'päätoimittajatyön omassa istunnossaan.',
         'Suomenkielinen selainseikkailu: Foggin perillinen kiertää '
           + 'maailman isoisänsä 1873-päiväkirjan jäljillä ja etsii '
           + 'Aarnin luettelon unohdettuja aarteita.',
