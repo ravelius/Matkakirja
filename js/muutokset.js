@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1411, teksti: 'Maastokortit tarinoiksi - 60 uusiksi, 13 elaintakya' },
   { v: 1410, teksti: 'Lahderivi jokaiselle nostolle - 232 uutta, 3 perhetta' },
   { v: 1409, teksti: 'Nostojen faktakorjaukset: Carmen Pariisiin, korut Mykeneen' },
   { v: 1408, teksti: 'Nostojen ruutukatto, nimiökyljet, tummennus panorointiin' },

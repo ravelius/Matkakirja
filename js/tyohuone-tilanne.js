@@ -55,6 +55,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1411: MAASTOKORTIT TARINOIKSI - 60 maastonoston kortti kirjoitettu tarinaksi (mm. Aneton kirottu vuori, Kemijoen uitto, Hombori Tondon jyrkanteet) ja 13 elaintakyn faktat korjattu lahteisiin (mm. Viron kansalliselain on susi). Avaa vuori- tai jokinosto ja lue kortti.',
   'v1410: LAHDERIVI JOKAISELLE NOSTOLLE - syvennykset, skandaalit, elaintayt ja takynostot nayttavat nyt lahteensa kortin lopussa (232 uutta lahderivia, koneellisesti tarkistettu). Avaa mika tahansa syvennys- tai skandaalikortti ja katso lahde tekstin lopusta.',
   'v1409: NOSTOJEN FAKTAKORJAUKSET - Carmenin ensi-ilta on nyt Pariisissa (Salle Favart), Sofian korut Mykenessa, Madridin papukaijat ja Velazquez omilla pisteillaan, ja Sofian areenan, Rooman kissojen ja Tuileriain kaksoistekstit erotettu. Avaa Ranska ja Kreikka ja lue kortit.',
   'v1408: NOSTOJEN RUUTUKATTO + NIMIOKYLJET + TUMMENNUS PANOROINTIIN - nostonimio ei koskaan kaupunginnimea isompi (syva zoomi 2,4x -> 1,0x), nimio loytaa nyt myos yla- ja alapuolen (Madara, Rila), ja maatummennus pysyy nakyvissa panoroitaessa. HUOM: poltettu nostotaso on piilossa uusintapolttoon asti - nostot piirtyvat elavina.',
